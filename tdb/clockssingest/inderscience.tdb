@@ -5688,7 +5688,7 @@
       au < deepCrawl ; exists ; 2016 ; International Journal of Materials and Product Technology Volume 52 ; 52 ; >
       au < deepCrawl ; exists ; 2016 ; International Journal of Materials and Product Technology Volume 53 ; 53 ; >
       au < manifest ; exists ; 2017 ; International Journal of Materials and Product Technology Volume 54 ; 54 ; >
-      au < expected ; exists ; 2017 ; International Journal of Materials and Product Technology Volume 55 ; 55 ; >
+      au < manifest ; exists ; 2017 ; International Journal of Materials and Product Technology Volume 55 ; 55 ; >
 
     }
 
@@ -6380,7 +6380,7 @@
       au < finished ; finished ; 2014 ; International Journal of Nuclear Energy Science and Technology Volume 8 ; 8 ; >
       au < finished ; finished ; 2015 ; International Journal of Nuclear Energy Science and Technology Volume 9 ; 9 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2016 ; International Journal of Nuclear Energy Science and Technology Volume 10 ; 10 ; >
-      au < expected ; exists ; 2017 ; International Journal of Nuclear Energy Science and Technology Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2017 ; International Journal of Nuclear Energy Science and Technology Volume 11 ; 11 ; >
 
     }
 
@@ -7676,7 +7676,7 @@
       param[journal_id] = ijshc
 
       au < doNotProcess ; doNotProcess ; 2008-2012 ; International Journal of Social and Humanistic Computing Volume 1 ; 1 ; >
-      au < exists ; exists ; 2013-2017 ; International Journal of Social and Humanistic Computing Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2013-2017 ; International Journal of Social and Humanistic Computing Volume 2 ; 2 ; >
 
     }
 
@@ -9371,8 +9371,8 @@
 
       param[journal_id] = emjm
 
-      au < exists ; exists ; 2005 ; EuroMed Journal of Management Volume 1 ; 1 ;  >
-      au < exists ; exists ; 2006 ; EuroMed Journal of Management Volume 2 ; 2 ;  >
+      au < manifest ; exists ; 2005 ; EuroMed Journal of Management Volume 1 ; 1 ;  >
+      au < manifest ; exists ; 2006 ; EuroMed Journal of Management Volume 2 ; 2 ;  >
       au < exists ; exists ; 2007 ; EuroMed Journal of Management Volume 3 ; 3 ;  >
       au < exists ; exists ; 2008 ; EuroMed Journal of Management Volume 4 ; 4 ;  >
       au < exists ; exists ; 2009 ; EuroMed Journal of Management Volume 5 ; 5 ;  >
@@ -9397,9 +9397,9 @@
 
       param[journal_id] = ajmsa
 
-      au < exists ; exists ; 2013 ; Asian Journal of Management Science and Applications Volume 1 ; 1 ;  >
-      au < exists ; exists ; 2014 ; Asian Journal of Management Science and Applications Volume 2 ; 2 ;  >
-      au < exists ; exists ; 2015 ; Asian Journal of Management Science and Applications Volume 3 ; 3 ;  >
+      au < manifest ; exists ; 2013 ; Asian Journal of Management Science and Applications Volume 1 ; 1 ;  >
+      au < manifest ; exists ; 2014 ; Asian Journal of Management Science and Applications Volume 2 ; 2 ;  >
+      au < manifest ; exists ; 2015 ; Asian Journal of Management Science and Applications Volume 3 ; 3 ;  >
       au < exists ; exists ; 2016 ; Asian Journal of Management Science and Applications Volume 4 ; 4 ;  >
       au < expected ; exists ; 2017 ; Asian Journal of Management Science and Applications Volume 5 ; 5 ;  >
 
@@ -9415,9 +9415,9 @@
 
       param[journal_id] = ijbd
 
-      au < exists ; exists ; 2013 ; International Journal of Bonds and Derivatives Volume 1 ; 1 ;  >
-      au < exists ; exists ; 2014 ; International Journal of Bonds and Derivatives Volume 2 ; 2 ;  >
-      au < exists ; exists ; 2015 ; International Journal of Bonds and Derivatives Volume 3 ; 3 ;  >
+      au < manifest ; exists ; 2013 ; International Journal of Bonds and Derivatives Volume 1 ; 1 ;  >
+      au < manifest ; exists ; 2014 ; International Journal of Bonds and Derivatives Volume 2 ; 2 ;  >
+      au < manifest ; exists ; 2015 ; International Journal of Bonds and Derivatives Volume 3 ; 3 ;  >
       au < exists ; exists ; 2016 ; International Journal of Bonds and Derivatives Volume 4 ; 4 ;  >
       au < expected ; exists ; 2017 ; International Journal of Bonds and Derivatives Volume 5 ; 5 ;  >
 
@@ -9433,8 +9433,8 @@
 
       param[journal_id] = ijcad
 
-      au < exists ; exists ; 2013 ; International Journal of Circuits and Architecture Design Volume 1 ; 1 ;  >
-      au < exists ; exists ; 2014 ; International Journal of Circuits and Architecture Design Volume 2 ; 2 ;  >
+      au < manifest ; exists ; 2013 ; International Journal of Circuits and Architecture Design Volume 1 ; 1 ;  >
+      au < manifest ; exists ; 2014 ; International Journal of Circuits and Architecture Design Volume 2 ; 2 ;  >
       au < exists ; exists ; 2015 ; International Journal of Circuits and Architecture Design Volume 3 ; 3 ;  >
       au < exists ; exists ; 2016 ; International Journal of Circuits and Architecture Design Volume 4 ; 4 ;  >
       au < expected ; exists ; 2017 ; International Journal of Circuits and Architecture Design Volume 5 ; 5 ;  >
@@ -9451,8 +9451,8 @@
 
       param[journal_id] = ijqrs
 
-      au < exists ; exists ; 2013 ; International Journal of Qualitative Research in Services Volume 1 ; 1 ;  >
-      au < exists ; exists ; 2014 ; International Journal of Qualitative Research in Services Volume 2 ; 2 ;  >
+      au < manifest ; exists ; 2013 ; International Journal of Qualitative Research in Services Volume 1 ; 1 ;  >
+      au < manifest ; exists ; 2014 ; International Journal of Qualitative Research in Services Volume 2 ; 2 ;  >
       au < exists ; exists ; 2015 ; International Journal of Qualitative Research in Services Volume 3 ; 3 ;  >
       au < exists ; exists ; 2016 ; International Journal of Qualitative Research in Services Volume 4 ; 4 ;  >
       au < expected ; exists ; 2017 ; International Journal of Qualitative Research in Services Volume 5 ; 5 ;  >
@@ -9469,10 +9469,10 @@
 
       param[journal_id] = ijsmile
 
-      au < exists ; exists ; 2013 ; International Journal of Social Media and Interactive Learning Environments Volume 1 ; 1 ;  >
-      au < exists ; exists ; 2014 ; International Journal of Social Media and Interactive Learning Environments Volume 2 ; 2 ;  >
-      au < exists ; exists ; 2015 ; International Journal of Social Media and Interactive Learning Environments Volume 3 ; 3 ;  >
-      au < exists ; exists ; 2016 ; International Journal of Social Media and Interactive Learning Environments Volume 4 ; 4 ;  >
+      au < manifest ; exists ; 2013 ; International Journal of Social Media and Interactive Learning Environments Volume 1 ; 1 ;  >
+      au < manifest ; exists ; 2014 ; International Journal of Social Media and Interactive Learning Environments Volume 2 ; 2 ;  >
+      au < manifest ; exists ; 2015 ; International Journal of Social Media and Interactive Learning Environments Volume 3 ; 3 ;  >
+      au < manifest ; exists ; 2016 ; International Journal of Social Media and Interactive Learning Environments Volume 4 ; 4 ;  >
       au < expected ; exists ; 2017 ; International Journal of Social Media and Interactive Learning Environments Volume 5 ; 5 ;  >
 
   }
@@ -9487,10 +9487,10 @@
 
       param[journal_id] = mejm
 
-      au < exists ; exists ; 2013 ; Middle East Journal of Management Volume 1 ; 1 ;  >
-      au < exists ; exists ; 2014 ; Middle East Journal of Management Volume 2 ; 2 ;  >
-      au < exists ; exists ; 2015 ; Middle East Journal of Management Volume 3 ; 3 ;  >
-      au < exists ; exists ; 2016 ; Middle East Journal of Management Volume 4 ; 4 ;  >
+      au < manifest ; exists ; 2013 ; Middle East Journal of Management Volume 1 ; 1 ;  >
+      au < manifest ; exists ; 2014 ; Middle East Journal of Management Volume 2 ; 2 ;  >
+      au < manifest ; exists ; 2015 ; Middle East Journal of Management Volume 3 ; 3 ;  >
+      au < manifest ; exists ; 2016 ; Middle East Journal of Management Volume 4 ; 4 ;  >
       au < expected ; exists ; 2017 ; Middle East Journal of Management Volume 5 ; 5 ;  >
 
   }
@@ -9505,11 +9505,11 @@
 
       param[journal_id] = ijhrcs
 
-      au < exists ; exists ; 2013 ; International Journal of Human Rights and Constitutional Studies Volume 1 ; 1 ;  >
-      au < exists ; exists ; 2014 ; International Journal of Human Rights and Constitutional Studies Volume 2 ; 2 ;  >
-      au < exists ; exists ; 2015 ; International Journal of Human Rights and Constitutional Studies Volume 3 ; 3 ;  >
-      au < exists ; exists ; 2016 ; International Journal of Human Rights and Constitutional Studies Volume 4 ; 4 ;  >
-      au < expected ; exists ; 2017 ; International Journal of Human Rights and Constitutional Studies Volume 5 ; 5 ;  >
+      au < manifest ; exists ; 2013 ; International Journal of Human Rights and Constitutional Studies Volume 1 ; 1 ;  >
+      au < manifest ; exists ; 2014 ; International Journal of Human Rights and Constitutional Studies Volume 2 ; 2 ;  >
+      au < manifest ; exists ; 2015 ; International Journal of Human Rights and Constitutional Studies Volume 3 ; 3 ;  >
+      au < manifest ; exists ; 2016 ; International Journal of Human Rights and Constitutional Studies Volume 4 ; 4 ;  >
+      au < manifest ; exists ; 2017 ; International Journal of Human Rights and Constitutional Studies Volume 5 ; 5 ;  >
 
   }
 
@@ -9523,8 +9523,8 @@
 
       param[journal_id] = ijautoc
 
-      au < exists ; exists ; 2014 ; International Journal of Automotive Composites Volume 1 ; 1 ;  >
-      au < exists ; exists ; 2015 ; International Journal of Automotive Composites Volume 2 ; 2 ;  >
+      au < manifest ; exists ; 2014 ; International Journal of Automotive Composites Volume 1 ; 1 ;  >
+      au < manifest ; exists ; 2015 ; International Journal of Automotive Composites Volume 2 ; 2 ;  >
       au < exists ; exists ; 2016 ; International Journal of Automotive Composites Volume 3 ; 3 ;  >
       au < expected ; exists ; 2017 ; International Journal of Automotive Composites Volume 4 ; 4 ;  >
 
@@ -9540,7 +9540,7 @@
 
       param[journal_id] = ijhem
 
-      au < exists ; exists ; 2014 ; International Journal of Hospitality and Event Management Volume 1 ; 1 ;  >
+      au < manifest ; exists ; 2014 ; International Journal of Hospitality and Event Management Volume 1 ; 1 ;  >
       au < exists ; exists ; 2015 ; International Journal of Hospitality and Event Management Volume 2 ; 2 ;  >
       au < exists ; exists ; 2016 ; International Journal of Hospitality and Event Management Volume 3 ; 3 ;  >
       au < expected ; exists ; 2017 ; International Journal of Hospitality and Event Management Volume 4 ; 4 ;  >
@@ -9557,8 +9557,8 @@
 
       param[journal_id] = ijscor
 
-      au < exists ; exists ; 2014 ; International Journal of Supply Chain and Operations Resilience Volume 1 ; 1 ;  >
-      au < exists ; exists ; 2015 ; International Journal of Supply Chain and Operations Resilience Volume 2 ; 2 ;  >
+      au < manifest ; exists ; 2014 ; International Journal of Supply Chain and Operations Resilience Volume 1 ; 1 ;  >
+      au < manifest ; exists ; 2015 ; International Journal of Supply Chain and Operations Resilience Volume 2 ; 2 ;  >
       au < exists ; exists ; 2016 ; International Journal of Supply Chain and Operations Resilience Volume 3 ; 3 ;  >
       au < expected ; exists ; 2017 ; International Journal of Supply Chain and Operations Resilience Volume 4 ; 4 ;  >
 
@@ -9574,8 +9574,8 @@
 
       param[journal_id] = ijsa
 
-      au < exists ; exists ; 2014 ; International Journal of Sustainable Aviation Volume 1 ; 1 ;  >
-      au < exists ; exists ; 2015 ; International Journal of Sustainable Aviation Volume 2 ; 2 ;  >
+      au < manifest ; exists ; 2014 ; International Journal of Sustainable Aviation Volume 1 ; 1 ;  >
+      au < manifest ; exists ; 2015 ; International Journal of Sustainable Aviation Volume 2 ; 2 ;  >
       au < exists ; exists ; 2016 ; International Journal of Sustainable Aviation Volume 3 ; 3 ;  >
       au < expected ; exists ; 2017 ; International Journal of Sustainable Aviation Volume 4 ; 4 ;  >
 
@@ -9591,8 +9591,8 @@
 
       param[journal_id] = ijdss
 
-      au < exists ; exists ; 2015 ; International Journal of Decision Support Systems Volume 1 ; 1 ;  >
-      au < exists ; exists ; 2016 ; International Journal of Decision Support Systems Volume 2 ; 2 ;  >
+      au < manifest ; exists ; 2015 ; International Journal of Decision Support Systems Volume 1 ; 1 ;  >
+      au < manifest ; exists ; 2016 ; International Journal of Decision Support Systems Volume 2 ; 2 ;  >
       au < expected ; exists ; 2017 ; International Journal of Decision Support Systems Volume 3 ; 3 ;  >
 
   }
@@ -9607,7 +9607,7 @@
 
       param[journal_id] = ijhes
 
-      au < exists ; exists ; 2015 ; International Journal of Higher Education and Sustainability Volume 1 ; 1 ;  >
+      au < manifest ; exists ; 2015 ; International Journal of Higher Education and Sustainability Volume 1 ; 1 ;  >
       au < exists ; exists ; 2016 ; International Journal of Higher Education and Sustainability Volume 2 ; 2 ;  >
       au < expected ; exists ; 2017 ; International Journal of Higher Education and Sustainability Volume 3 ; 3 ;  >
 
@@ -9623,8 +9623,8 @@
 
       param[journal_id] = ijmabs
 
-      au < exists ; exists ; 2015 ; International Journal of Markets and Business Systems Volume 1 ; 1 ;  >
-      au < exists ; exists ; 2016 ; International Journal of Markets and Business Systems Volume 2 ; 2 ;  >
+      au < manifest ; exists ; 2015 ; International Journal of Markets and Business Systems Volume 1 ; 1 ;  >
+      au < manifest ; exists ; 2016 ; International Journal of Markets and Business Systems Volume 2 ; 2 ;  >
       au < expected ; exists ; 2017 ; International Journal of Markets and Business Systems Volume 3 ; 3 ;  >
 
   }
@@ -9639,7 +9639,7 @@
 
       param[journal_id] = ijscim
 
-      au < exists ; exists ; 2015 ; International Journal of Supply Chain and Inventory Management Volume 1 ; 1 ;  >
+      au < manifest ; exists ; 2015 ; International Journal of Supply Chain and Inventory Management Volume 1 ; 1 ;  >
       au < exists ; exists ; 2016 ; International Journal of Supply Chain and Inventory Management Volume 2 ; 2 ;  >
       au < expected ; exists ; 2017 ; International Journal of Supply Chain and Inventory Management Volume 3 ; 3 ;  >
 
@@ -9655,9 +9655,9 @@
 
       param[journal_id] = ijsami
 
-      au < exists ; exists ; 2015 ; International Journal of Sustainable Agricultural Management and Informatics Volume 1 ; 1 ;  >
-      au < exists ; exists ; 2016 ; International Journal of Sustainable Agricultural Management and Informatics Volume 2 ; 2 ;  >
-      au < expected ; exists ; 2017 ; International Journal of Sustainable Agricultural Management and Informatics Volume 3 ; 3 ;  >
+      au < manifest ; exists ; 2015 ; International Journal of Sustainable Agricultural Management and Informatics Volume 1 ; 1 ;  >
+      au < manifest ; exists ; 2016 ; International Journal of Sustainable Agricultural Management and Informatics Volume 2 ; 2 ;  >
+      au < manifest ; exists ; 2017 ; International Journal of Sustainable Agricultural Management and Informatics Volume 3 ; 3 ;  >
 
   }
 
@@ -9671,8 +9671,8 @@
 
       param[journal_id] = ijtmcp
 
-      au < exists ; exists ; 2015 ; International Journal of Telemedicine and Clinical Practices Volume 1 ; 1 ;  >
-      au < exists ; exists ; 2016 ; International Journal of Telemedicine and Clinical Practices Volume 2 ; 2 ;  >
+      au < manifest ; exists ; 2015 ; International Journal of Telemedicine and Clinical Practices Volume 1 ; 1 ;  >
+      au < manifest ; exists ; 2016 ; International Journal of Telemedicine and Clinical Practices Volume 2 ; 2 ;  >
       au < expected ; exists ; 2017 ; International Journal of Telemedicine and Clinical Practices Volume 3 ; 3 ;  >
 
   }
@@ -9687,7 +9687,7 @@
 
       param[journal_id] = ijbise
 
-      au < exists ; exists ; 2016 ; International Journal of Business Intelligence and Systems Engineering Volume 1 ; 1 ;  >
+      au < manifest ; exists ; 2016 ; International Journal of Business Intelligence and Systems Engineering Volume 1 ; 1 ;  >
       au < expected ; exists ; 2017 ; International Journal of Business Intelligence and Systems Engineering Volume 2 ; 2 ;  >
 
   }
@@ -9702,7 +9702,7 @@
 
       param[journal_id] = ijc
 
-      au < exists ; exists ; 2016 ; International Journal of Competitiveness Volume 1 ; 1 ;  >
+      au < manifest ; exists ; 2016 ; International Journal of Competitiveness Volume 1 ; 1 ;  >
       au < expected ; exists ; 2017 ; International Journal of Competitiveness Volume 2 ; 2 ;  >
 
   }
@@ -9717,7 +9717,7 @@
 
       param[journal_id] = ijcssr
 
-      au < exists ; exists ; 2016 ; International Journal of Corporate Strategy and Social Responsibility Volume 1 ; 1 ;  >
+      au < manifest ; exists ; 2016 ; International Journal of Corporate Strategy and Social Responsibility Volume 1 ; 1 ;  >
       au < expected ; exists ; 2017 ; International Journal of Corporate Strategy and Social Responsibility Volume 2 ; 2 ;  >
 
   }
@@ -9732,7 +9732,7 @@
 
       param[journal_id] = ijexportm
 
-      au < exists ; exists ; 2016 ; International Journal of Export Marketing Volume 1 ; 1 ;  >
+      au < manifest ; exists ; 2016 ; International Journal of Export Marketing Volume 1 ; 1 ;  >
       au < expected ; exists ; 2017 ; International Journal of Export Marketing Volume 2 ; 2 ;  >
 
   }
@@ -9747,7 +9747,7 @@
 
       param[journal_id] = ijmcs
 
-      au < exists ; exists ; 2016 ; International Journal of Multinational Corporation Strategy Volume 1 ; 1 ;  >
+      au < manifest ; exists ; 2016 ; International Journal of Multinational Corporation Strategy Volume 1 ; 1 ;  >
       au < expected ; exists ; 2017 ; International Journal of Multinational Corporation Strategy Volume 2 ; 2 ;  >
 
   }
@@ -9762,7 +9762,7 @@
 
       param[journal_id] = ijmda
 
-      au < exists ; exists ; 2016 ; International Journal of Multivariate Data Analysis Volume 1 ; 1 ;  >
+      au < manifest ; exists ; 2016 ; International Journal of Multivariate Data Analysis Volume 1 ; 1 ;  >
       au < expected ; exists ; 2017 ; International Journal of Multivariate Data Analysis Volume 2 ; 2 ;  >
 
   }
@@ -9777,7 +9777,7 @@
 
       param[journal_id] = ijsggc
 
-      au < exists ; exists ; 2016 ; International Journal of Smart Grid and Green Communications Volume 1 ; 1 ;  >
+      au < manifest ; exists ; 2016 ; International Journal of Smart Grid and Green Communications Volume 1 ; 1 ;  >
       au < expected ; exists ; 2017 ; International Journal of Smart Grid and Green Communications Volume 2 ; 2 ;  >
 
   }
@@ -9792,7 +9792,7 @@
 
       param[journal_id] = ijsmarttl
 
-      au < exists ; exists ; 2016 ; International Journal of Smart Technology and Learning Volume 1 ; 1 ;  >
+      au < manifest ; exists ; 2016 ; International Journal of Smart Technology and Learning Volume 1 ; 1 ;  >
       au < expected ; exists ; 2017 ; International Journal of Smart Technology and Learning Volume 2 ; 2 ;  >
 
   }
@@ -9807,7 +9807,7 @@
 
       param[journal_id] = ijscn
 
-      au < exists ; exists ; 2016 ; International Journal of Soft Computing and Networking Volume 1 ; 1 ;  >
+      au < manifest ; exists ; 2016 ; International Journal of Soft Computing and Networking Volume 1 ; 1 ;  >
       au < expected ; exists ; 2017 ; International Journal of Soft Computing and Networking Volume 2 ; 2 ;  >
 
   }
@@ -9822,7 +9822,7 @@
 
       param[journal_id] = ijstmis
 
-      au < exists ; exists ; 2016 ; International Journal of Spatial, Temporal and Multimedia Information Systems Volume 1 ; 1 ;  >
+      au < manifest ; exists ; 2016 ; International Journal of Spatial, Temporal and Multimedia Information Systems Volume 1 ; 1 ;  >
       au < expected ; exists ; 2017 ; International Journal of Spatial, Temporal and Multimedia Information Systems Volume 2 ; 2 ;  >
 
   }
@@ -9837,8 +9837,8 @@
 
       param[journal_id] = ijeie
 
-      au < exists ; exists ; 2016 ; International Journal of Earthquake and Impact Engineering Volume 1 ; 1 ;  >
-      au < expected ; exists ; 2017 ; International Journal of Earthquake and Impact Engineering Volume 2 ; 2 ;  >
+      au < manifest ; exists ; 2016 ; International Journal of Earthquake and Impact Engineering Volume 1 ; 1 ;  >
+      au < manifest ; exists ; 2017 ; International Journal of Earthquake and Impact Engineering Volume 2 ; 2 ;  >
 
   }
 
@@ -9852,7 +9852,7 @@
 
       param[journal_id] = ijfib
 
-      au < exists ; exists ; 2016 ; International Journal of Financial Innovation in Banking Volume 1 ; 1 ;  >
+      au < manifest ; exists ; 2016 ; International Journal of Financial Innovation in Banking Volume 1 ; 1 ;  >
       au < expected ; exists ; 2017 ; International Journal of Financial Innovation in Banking Volume 2 ; 2 ;  >
 
   }
@@ -9867,7 +9867,7 @@
 
       param[journal_id] = ijasmm
 
-      au < expected ; exists ; 2017 ; International Journal of Additive and Subtractive Materials Manufacturing Volume 1 ; 1 ;  >
+      au < manifest ; exists ; 2017 ; International Journal of Additive and Subtractive Materials Manufacturing Volume 1 ; 1 ;  >
 
   }
 
@@ -9881,7 +9881,7 @@
 
       param[journal_id] = ijbbm
 
-      au < expected ; exists ; 2017 ; International Journal of Bibliometrics in Business and Management Volume 1 ; 1 ;  >
+      au < manifest ; exists ; 2017 ; International Journal of Bibliometrics in Business and Management Volume 1 ; 1 ;  >
 
   }
 
@@ -9895,7 +9895,7 @@
 
       param[journal_id] = ijric
 
-      au < expected ; exists ; 2017 ; International Journal of Research, Innovation and Commercialisation Volume 1 ; 1 ;  >
+      au < manifest ; exists ; 2017 ; International Journal of Research, Innovation and Commercialisation Volume 1 ; 1 ;  >
 
   }
 
@@ -9909,7 +9909,7 @@
 
       param[journal_id] = ijsrece
 
-      au < expected ; exists ; 2017 ; International Journal of Sustainable Real Estate and Construction Economics Volume 1 ; 1 ;  >
+      au < manifest ; exists ; 2017 ; International Journal of Sustainable Real Estate and Construction Economics Volume 1 ; 1 ;  >
 
   }
 
@@ -9923,7 +9923,7 @@
 
       param[journal_id] = ijisdc
 
-      au < expected ; exists ; 2017 ; International Journal of Intelligent Systems Design and Computing Volume 1 ; 1 ;  >
+      au < manifest ; exists ; 2017 ; International Journal of Intelligent Systems Design and Computing Volume 1 ; 1 ;  >
 
   }
   
