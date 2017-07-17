@@ -19,7 +19,7 @@
       attr[journal_id] = 42
 
         au < ready ; 1955 ; Civil War History Volume 1 [1955] ; 6847 >
-        au < testing ; 1955-1959 ; Civil War History Cumulative Index, Volumes I-V, 1955-1959 ; 6862 >
+        au < doesNotExist ; 1955-1959 ; Civil War History Cumulative Index, Volumes I-V, 1955-1959 ; 6862 >
         au < ready ; 1956 ; Civil War History Volume 2 [1956] ; 6846 >
         au < ready ; 1957 ; Civil War History Volume 3 [1957] ; 6845 >
         au < ready ; 1958 ; Civil War History Volume 4 [1958] ; 6844 >
@@ -69,7 +69,7 @@
         au < released ; 2002 ; Civil War History Volume 48 [2002] ; 150 >
         au < released ; 2003 ; Civil War History Volume 49 [2003] ; 822 >
         au < released ; 2004 ; Civil War History Volume 50 [2004] ; 1787 >
-        au < testing ; 2005 ; Civil War History Volume 51 [2005] ; 2675 >
+        au < ready ; 2005 ; Civil War History Volume 51 [2005] ; 2675 >
         au < released ; 2006 ; Civil War History Volume 52 [2006] ; 2954 >
         au < released ; 2007 ; Civil War History Volume 53 [2007] ; 3467 >
         au < released ; 2008 ; Civil War History Volume 54 [2008] ; 3630 >
