@@ -340,7 +340,7 @@
     au < manifest ; exists ; 2009 ; Journal of Hydrometeorology Volume 10 ; 10 ; >
     au < manifest ; exists ; 2010 ; Journal of Hydrometeorology Volume 11 ; 11 ; >
     au < manifest ; exists ; 2011 ; Journal of Hydrometeorology Volume 12 ; 12 ; >
-    au < notReady ; exists ; 2012 ; Journal of Hydrometeorology Volume 13 ; 13 ; >
+    au < ready ; exists ; 2012 ; Journal of Hydrometeorology Volume 13 ; 13 ; >
     au < frozen ; exists ; 2013 ; Journal of Hydrometeorology Volume 14 ; 14 ; >
     au < finished ; finished ; 2014 ; Journal of Hydrometeorology Volume 15 ; 15 ; >
     au < frozen ; exists ; 2015 ; Journal of Hydrometeorology Volume 16 ; 16 ; >
@@ -684,7 +684,7 @@
     au < finished ; finished ; 2014 ; Monthly Weather Review Volume 142 ; 142 ; >
     au < frozen ; exists ; 2015 ; Monthly Weather Review Volume 143 ; 143 ; >
     au < deepCrawl ; exists ; 2016 ; Monthly Weather Review Volume 144 ; 144 ; >
-    au < testing ; exists ; 2017 ; Monthly Weather Review Volume 145 ; 145 ; >
+    au < ready ; exists ; 2017 ; Monthly Weather Review Volume 145 ; 145 ; >
     
   }
 
