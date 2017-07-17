@@ -67,7 +67,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; JAMA Facial Plastic Surgery Volume 16 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; JAMA Facial Plastic Surgery Volume 17 ; 2015 ; >
     au < finished ; crawling ; 2016 ; JAMA Facial Plastic Surgery Volume 18 ; 2016 ; reingest2.clockss.org:8085 >
-    au < ready ; exists ; 2017 ; JAMA Facial Plastic Surgery Volume 19 ; 2017 ; >
+    au < crawling ; exists ; 2017 ; JAMA Facial Plastic Surgery Volume 19 ; 2017 ; >
   
   }
 
@@ -109,7 +109,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; JAMA Neurology Volume 71 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; JAMA Neurology Volume 72 ; 2015 ; >
     au < finished ; crawling ; 2016 ; JAMA Neurology Volume 73 ; 2016 ; reingest5.clockss.org:8082 >
-    au < ready ; exists ; 2017 ; JAMA Neurology Volume 74 ; 2017 ; >
+    au < crawling ; exists ; 2017 ; JAMA Neurology Volume 74 ; 2017 ; >
   
   }
 
@@ -148,7 +148,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; JAMA Ophthalmology Volume 132 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; JAMA Ophthalmology Volume 133 ; 2015 ; >
     au < finished ; crawling ; 2016 ; JAMA Ophthalmology Volume 134 ; 2016 ; reingest1.clockss.org:8082 >
-    au < ready ; exists ; 2017 ; JAMA Ophthalmology Volume 135 ; 2017 ; >
+    au < crawling ; exists ; 2017 ; JAMA Ophthalmology Volume 135 ; 2017 ; >
     
   }
 
