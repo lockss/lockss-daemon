@@ -544,14 +544,14 @@
       eissn = 2050-1315
    >
     
-      param[base_url] = http://qir.bmj.com/
+      param[base_url] = http://bmjopenquality.bmj.com/
 
-      au < HighWirePressH20Plugin ; exists ; 2012 ; BMJ Quality Improvement Reports Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; released ; 2013-2014 ; BMJ Quality Improvement Reports Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; exists ; 2014 ; BMJ Quality Improvement Reports Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; exists ; 2015 ; BMJ Quality Improvement Reports Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; released ; 2016 ; BMJ Quality Improvement Reports Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; exists ; 2017 ; BMJ Quality Improvement Reports Volume 6 ; 6 >
+      au < bmj.BMJDrupalPlugin ; exists ; 2012 ; BMJ Quality Improvement Reports Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; down ; 2013-2014 ; BMJ Quality Improvement Reports Volume 2 ; 2 >
+      au < bmj.BMJDrupalPlugin ; exists ; 2014 ; BMJ Quality Improvement Reports Volume 3 ; 3 >
+      au < bmj.BMJDrupalPlugin ; exists ; 2015 ; BMJ Quality Improvement Reports Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; down ; 2016 ; BMJ Quality Improvement Reports Volume 5 ; 5 >
+      au < bmj.BMJDrupalPlugin ; exists ; 2017 ; BMJ Quality Improvement Reports Volume 6 ; 6 >
       
     }
 
