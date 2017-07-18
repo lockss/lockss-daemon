@@ -22,7 +22,7 @@ else
 fi
 
 git checkout master
-git checkout `git rev-list -n 1 --before="2016-10-01 00:00" master`
+git checkout `git rev-list -n 1 --before="2017-07-03 00:00" master`
 ant jar-lockss
 ./scripts/tdb/tdbout -t auid,status tdb/clockssingest/*.tdb | grep -v SourcePlugin | grep -v warcfiles | sort -u > ~/tmp/file1.txt
 git checkout master
