@@ -543,17 +543,30 @@
       name = BMJ Quality Improvement Reports ;
       eissn = 2050-1315
    >
+    {
+     param[base_url] = http://qir.bmj.com/
+
+      au < HighWirePressH20Plugin ; doNotProcess ; 2012 ; BMJ Quality Improvement Reports Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; down ; 2013-2014 ; BMJ Quality Improvement Reports Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; BMJ Quality Improvement Reports Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; BMJ Quality Improvement Reports Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; down ; 2016 ; BMJ Quality Improvement Reports Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2017 ; BMJ Quality Improvement Reports Volume 6 ; 6 >
+ 
+    }
     
+    {
       param[base_url] = http://bmjopenquality.bmj.com/
 
       au < bmj.BMJDrupalPlugin ; exists ; 2012 ; BMJ Quality Improvement Reports Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; down ; 2013-2014 ; BMJ Quality Improvement Reports Volume 2 ; 2 >
+      au < bmj.BMJDrupalPlugin ; doNotProcess ; 2013-2014 ; BMJ Quality Improvement Reports Volume 2 ; 2 >
       au < bmj.BMJDrupalPlugin ; exists ; 2014 ; BMJ Quality Improvement Reports Volume 3 ; 3 >
       au < bmj.BMJDrupalPlugin ; exists ; 2015 ; BMJ Quality Improvement Reports Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; down ; 2016 ; BMJ Quality Improvement Reports Volume 5 ; 5 >
+      au < bmj.BMJDrupalPlugin ; doNotProcess ; 2016 ; BMJ Quality Improvement Reports Volume 5 ; 5 >
       au < bmj.BMJDrupalPlugin ; exists ; 2017 ; BMJ Quality Improvement Reports Volume 6 ; 6 >
-      
     }
+      
+  }
 
   {
     title <
