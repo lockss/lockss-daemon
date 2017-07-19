@@ -22,6 +22,7 @@
     {
       
       param[base_url] = http://crl.acrl.org/
+      param[journal_id] = crl
   
       au < exists ; 1939 ; College & Research Libraries Volume 1 ; 1939 >
       au < exists ; 1940 ; College & Research Libraries Volume 1-2 ; 1940 >
@@ -118,6 +119,7 @@
     {
 
       param[base_url] = http://crln.acrl.org/
+      param[journal_id] = crln
 
       au < doNotProcess ; 2004 ; College & Research Libraries News Volume 65 ; 2004 >
       au < doNotProcess ; 2005 ; College & Research Libraries News Volume 66 ; 2005 >
@@ -149,6 +151,7 @@
     {
 
       param[base_url] = http://rbm.acrl.org/
+      param[journal_id] = rbm
 
       au < doNotProcess ; 2000 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 1 ; 2000 >
       au < doNotProcess ; 2001 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 2 ; 2001 >
