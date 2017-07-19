@@ -38,6 +38,18 @@
       param[base_url] = https://earlytheatre.org/
       param[journal_id] = earlytheatre
 
+      au < exists ; exists ; 1998 ; Early Theatre Volume 1 ; 1 ; 1998 ; > 
+      au < exists ; exists ; 1999 ; Early Theatre Volume 2 ; 2 ; 1999 ; > 
+      au < exists ; exists ; 2000 ; Early Theatre Volume 3 ; 3 ; 2000 ; > 
+      au < exists ; exists ; 2001 ; Early Theatre Volume 4 ; 4 ; 2001 ; > 
+      au < exists ; exists ; 2002 ; Early Theatre Volume 5 ; 5 ; 2002 ; > 
+      au < exists ; exists ; 2003 ; Early Theatre Volume 6 ; 6 ; 2003 ; > 
+      au < exists ; exists ; 2004 ; Early Theatre Volume 7 ; 7 ; 2004 ; > 
+      au < exists ; exists ; 2005 ; Early Theatre Volume 8 ; 8 ; 2005 ; > 
+      au < exists ; exists ; 2006 ; Early Theatre Volume 9 ; 9 ; 2006 ; > 
+      au < exists ; exists ; 2007 ; Early Theatre Volume 10 ; 10 ; 2007 ; > 
+      au < exists ; exists ; 2008 ; Early Theatre Volume 11 ; 11 ; 2008 ; > 
+      au < exists ; exists ; 2009 ; Early Theatre Volume 12 ; 12 ; 2009 ; > 
       au < manifest ; exists ; 2010 ; Early Theatre Volume 13 ; 13 ; 2010 ; > 
       au < manifest ; exists ; 2011 ; Early Theatre Volume 14 ; 14 ; 2011 ; > 
       au < manifest ; exists ; 2012 ; Early Theatre Volume 15 ; 15 ; 2012 ; > 
@@ -59,6 +71,22 @@
       param[base_url] = https://energystudiesreview.ca/
       param[journal_id] = esr
 
+      au < exists ; exists ; 1989 ; Energy Studies Review Volume 1 ; 1 ; 1989 ; > 
+      au < exists ; exists ; 1990 ; Energy Studies Review Volume 2 ; 2 ; 1990 ; > 
+      au < exists ; exists ; 1991 ; Energy Studies Review Volume 3 ; 3 ; 1991 ; > 
+      au < exists ; exists ; 1992 ; Energy Studies Review Volume 4 ; 4 ; 1992 ; > 
+      au < exists ; exists ; 1993 ; Energy Studies Review Volume 5 ; 5 ; 1993 ; > 
+      au < exists ; exists ; 1994 ; Energy Studies Review Volume 6 ; 6 ; 1994 ; > 
+      au < exists ; exists ; 1995 ; Energy Studies Review Volume 7 ; 7 ; 1995 ; > 
+      au < exists ; exists ; 1996 ; Energy Studies Review Volume 8 ; 8 ; 1996 ; > 
+      au < exists ; exists ; 1999 ; Energy Studies Review Volume 9 ; 9 ; 1999 ; > 
+      au < exists ; exists ; 2002 ; Energy Studies Review Volume 10 ; 10 ; 2002 ; > 
+      au < exists ; exists ; 2003 ; Energy Studies Review Volume 11 ; 11 ; 2003 ; > 
+      au < exists ; exists ; 2004 ; Energy Studies Review Volume 12 ; 12 ; 2004 ; > 
+      au < exists ; exists ; 2005 ; Energy Studies Review Volume 13 ; 13 ; 2005 ; > 
+      au < exists ; exists ; 2006 ; Energy Studies Review Volume 14 ; 14 ; 2006 ; > 
+      au < exists ; exists ; 2007 ; Energy Studies Review Volume 15 ; 15 ; 2007 ; > 
+      au < exists ; exists ; 2009 ; Energy Studies Review Volume 16 ; 16 ; 2009 ; > 
       au < manifest ; exists ; 2010 ; Energy Studies Review Volume 17 ; 17 ; 2010 ; > 
       au < manifest ; exists ; 2011 ; Energy Studies Review Volume 18 ; 18 ; 2011 ; > 
       au < manifest ; exists ; 2012 ; Energy Studies Review Volume 19 ; 19 ; 2012 ; > 
@@ -151,6 +179,7 @@
       #appears that all journals are going into a single volume "0"
       #see https://mulpress.mcmaster.ca/jpc/gateway/lockss
       #see https://mulpress.mcmaster.ca/jpc/gateway/lockss?year=0
+      # there are 5 volume as at 2017-07-19
 
       au < manifest ; exists ; 9999 ; Journal of Professional Communication Volume 0 ; 0 ; 0 ; > 
 
@@ -168,11 +197,52 @@
       param[journal_id] = russelljournal
       #V35-36 Redirected to login page: https://mulpress.mcmaster.ca/russelljournal/login?source=%2Frusselljourna
 
-      au < frozen ; exists ; 2012 ; Russell: the Journal of Bertrand Russell Studies Volume 32 ; 32 ; 2012 ; > 
-      au < frozen ; exists ; 2013 ; Russell: the Journal of Bertrand Russell Studies Volume 33 ; 33 ; 2013 ; > 
-      au < frozen ; exists ; 2014 ; Russell: the Journal of Bertrand Russell Studies Volume 34 ; 34 ; 2014 ; > 
-      au < frozen ; exists ; 2015 ; Russell: the Journal of Bertrand Russell Studies Volume 35 ; 35 ; 2015 ; > 
-      au < frozen ; exists ; 2016 ; Russell: the Journal of Bertrand Russell Studies Volume 36 ; 36 ; 2016 ; > 
+      au < exists ; exists ; 1971 ; Russell: the Journal of Bertrand Russell Studies Number 1-4 ; 1-4 ; 1971 ; >
+      au < exists ; exists ; 1972 ; Russell: the Journal of Bertrand Russell Studies Number 5-8 ; 5-8 ; 1972 ; >
+      au < exists ; exists ; 1973 ; Russell: the Journal of Bertrand Russell Studies Number 9-12 ; 9-12 ; 1973 ; >
+      au < exists ; exists ; 1974 ; Russell: the Journal of Bertrand Russell Studies Number 13-16 ; 13-16 ; 1974 ; >
+      au < exists ; exists ; 1975 ; Russell: the Journal of Bertrand Russell Studies Number 17-20 ; 17-20 ; 1975 ; >
+      au < exists ; exists ; 1976 ; Russell: the Journal of Bertrand Russell Studies Number 21-24 ; 21-24 ; 1976 ; >
+      au < exists ; exists ; 1977 ; Russell: the Journal of Bertrand Russell Studies Number 25-28 ; 25-28 ; 1977 ; >
+      au < exists ; exists ; 1978 ; Russell: the Journal of Bertrand Russell Studies Number 29-32 ; 29-32 ; 1978 ; >
+      au < exists ; exists ; 1979 ; Russell: the Journal of Bertrand Russell Studies Number 33-36 ; 33-36 ; 1979 ; >
+      au < exists ; exists ; 1980 ; Russell: the Journal of Bertrand Russell Studies Number 37-40 ; 37-40 ; 1980 ; >
+      au < exists ; exists ; 1981 ; Russell: the Journal of Bertrand Russell Studies Volume 1 ; 1 ; 1981 ; >
+      au < exists ; exists ; 1982 ; Russell: the Journal of Bertrand Russell Studies Volume 2 ; 2 ; 1982 ; >
+      au < exists ; exists ; 1983 ; Russell: the Journal of Bertrand Russell Studies Volume 3 ; 3 ; 1983 ; >
+      au < exists ; exists ; 1984 ; Russell: the Journal of Bertrand Russell Studies Volume 4 ; 4 ; 1984 ; >
+      au < exists ; exists ; 1985 ; Russell: the Journal of Bertrand Russell Studies Volume 5 ; 5 ; 1985 ; >
+      au < exists ; exists ; 1986 ; Russell: the Journal of Bertrand Russell Studies Volume 6 ; 6 ; 1986 ; >
+      au < exists ; exists ; 1987 ; Russell: the Journal of Bertrand Russell Studies Volume 7 ; 7 ; 1987 ; >
+      au < exists ; exists ; 1988 ; Russell: the Journal of Bertrand Russell Studies Volume 8 ; 8 ; 1988 ; >
+      au < exists ; exists ; 1989 ; Russell: the Journal of Bertrand Russell Studies Volume 9 ; 9 ; 1989 ; >
+      au < exists ; exists ; 1990 ; Russell: the Journal of Bertrand Russell Studies Volume 10 ; 10 ; 1990 ; >
+      au < exists ; exists ; 1991 ; Russell: the Journal of Bertrand Russell Studies Volume 11 ; 11 ; 1991 ; >
+      au < exists ; exists ; 1992 ; Russell: the Journal of Bertrand Russell Studies Volume 12 ; 12 ; 1992 ; >
+      au < exists ; exists ; 1993 ; Russell: the Journal of Bertrand Russell Studies Volume 13 ; 13 ; 1993 ; >
+      au < exists ; exists ; 1994 ; Russell: the Journal of Bertrand Russell Studies Volume 14 ; 14 ; 1994 ; >
+      au < exists ; exists ; 1995 ; Russell: the Journal of Bertrand Russell Studies Volume 15 ; 15 ; 1995 ; >
+      au < exists ; exists ; 1996 ; Russell: the Journal of Bertrand Russell Studies Volume 16 ; 16 ; 1996 ; >
+      au < exists ; exists ; 1997 ; Russell: the Journal of Bertrand Russell Studies Volume 17 ; 17 ; 1997 ; >
+      au < exists ; exists ; 1998 ; Russell: the Journal of Bertrand Russell Studies Volume 18 ; 18 ; 1998 ; >
+      au < exists ; exists ; 1999 ; Russell: the Journal of Bertrand Russell Studies Volume 19 ; 19 ; 1999 ; >
+      au < exists ; exists ; 2000 ; Russell: the Journal of Bertrand Russell Studies Volume 20 ; 20 ; 2000 ; >
+      au < exists ; exists ; 2001 ; Russell: the Journal of Bertrand Russell Studies Volume 21 ; 21 ; 2001 ; >
+      au < exists ; exists ; 2002 ; Russell: the Journal of Bertrand Russell Studies Volume 22 ; 22 ; 2002 ; >
+      au < exists ; exists ; 2003 ; Russell: the Journal of Bertrand Russell Studies Volume 23 ; 23 ; 2003 ; >
+      au < exists ; exists ; 2004 ; Russell: the Journal of Bertrand Russell Studies Volume 24 ; 24 ; 2004 ; >
+      au < exists ; exists ; 2005 ; Russell: the Journal of Bertrand Russell Studies Volume 25 ; 25 ; 2005 ; >
+      au < exists ; exists ; 2006 ; Russell: the Journal of Bertrand Russell Studies Volume 26 ; 26 ; 2006 ; >
+      au < exists ; exists ; 2007 ; Russell: the Journal of Bertrand Russell Studies Volume 27 ; 27 ; 2007 ; >
+      au < exists ; exists ; 2008 ; Russell: the Journal of Bertrand Russell Studies Volume 28 ; 28 ; 2008 ; >
+      au < exists ; exists ; 2009 ; Russell: the Journal of Bertrand Russell Studies Volume 29 ; 29 ; 2009 ; >
+      au < exists ; exists ; 2010 ; Russell: the Journal of Bertrand Russell Studies Volume 30 ; 30 ; 2010 ; >
+      au < exists ; exists ; 2011 ; Russell: the Journal of Bertrand Russell Studies Volume 31 ; 31 ; 2011 ; >
+      au < frozen ; exists ; 2012 ; Russell: the Journal of Bertrand Russell Studies Volume 32 ; 32 ; 2012 ; >
+      au < frozen ; exists ; 2013 ; Russell: the Journal of Bertrand Russell Studies Volume 33 ; 33 ; 2013 ; >
+      au < frozen ; exists ; 2014 ; Russell: the Journal of Bertrand Russell Studies Volume 34 ; 34 ; 2014 ; >
+      au < frozen ; exists ; 2015 ; Russell: the Journal of Bertrand Russell Studies Volume 35 ; 35 ; 2015 ; >
+      au < frozen ; exists ; 2016 ; Russell: the Journal of Bertrand Russell Studies Volume 36 ; 36 ; 2016 ; >
       au < expected ; exists ; 2017 ; Russell: the Journal of Bertrand Russell Studies Volume 37 ; 37 ; 2017 ; > 
 
     }
