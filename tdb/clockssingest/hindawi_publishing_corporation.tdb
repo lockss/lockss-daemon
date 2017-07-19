@@ -362,7 +362,7 @@
     au < finished ; finished ; 2014 ; Advances in Chemistry Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Advances in Chemistry Volume 2015 ; 2015 ; 2015 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; Advances in Chemistry Volume 2016 ; 2016 ; 2016 ; >
-    au < ready ; exists ; 2017 ; Advances in Chemistry Volume 2017 ; 2017 ; 2017 ; >
+    au < crawling ; exists ; 2017 ; Advances in Chemistry Volume 2017 ; 2017 ; 2017 ; >
 
   }
 
@@ -726,7 +726,7 @@
     au < frozen ; exists ; 2014 ; Advances in High Energy Physics Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; finished ; 2015 ; Advances in High Energy Physics Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2016 ; Advances in High Energy Physics Volume 2016 ; 2016 ; 2016 ; >
-    au < ready ; exists ; 2017 ; Advances in High Energy Physics Volume 2017 ; 2017 ; 2017 ; >
+    au < crawling ; exists ; 2017 ; Advances in High Energy Physics Volume 2017 ; 2017 ; 2017 ; >
 
   }
 
@@ -893,7 +893,7 @@
     au < finished ; finished ; 2014 ; Advances in Multimedia Volume 2014 ; 2014 ; 2014 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Advances in Multimedia Volume 2015 ; 2015 ; 2015 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; Advances in Multimedia Volume 2016 ; 2016 ; 2016 ; >
-    au < ready ; exists ; 2017 ; Advances in Multimedia Volume 2017 ; 2017 ; 2017 ; >
+    au < crawling ; exists ; 2017 ; Advances in Multimedia Volume 2017 ; 2017 ; 2017 ; >
 
   }
 
@@ -947,7 +947,7 @@
     au < deepCrawl ; exists ; 2014 ; Advances in Numerical Analysis Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; finished ; 2015 ; Advances in Numerical Analysis Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2016 ; Advances in Numerical Analysis Volume 2016 ; 2016 ; 2016 ; >
-    au < ready ; exists ; 2017 ; Advances in Numerical Analysis Volume 2017 ; 2017 ; 2017 ; >
+    au < crawling ; exists ; 2017 ; Advances in Numerical Analysis Volume 2017 ; 2017 ; 2017 ; >
 
   }
 
