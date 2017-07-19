@@ -153,7 +153,7 @@ public class TestRSCBooksPlugin extends LockssTestCase {
     assertNull(plugin.getHashFilterFactory("BogusFilterFactory"));
     // no hash filtering
     assertNull(plugin.getHashFilterFactory("application/pdf"));
-    assertNull(plugin.getHashFilterFactory("text/html"));
+    assertNotNull(plugin.getHashFilterFactory("text/html"));
   }
   public void testGetArticleIteratorFactory() {
     assertTrue(WrapperUtil.unwrap(plugin.getArticleIteratorFactory())
