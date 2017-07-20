@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>3</string>
   </entry>
   <entry>
     <!-- support for guessing at encoding, setting provider -->
@@ -49,6 +49,7 @@
     <list>
       <string>4,"^%s", base_url</string>
       <string>2,"^%s%d/.*;O=[AD]$", base_url, year</string>
+      <string>4,"^%s%d/%s/CLKSJ200300100078A.tar", base_url, year, directory</string>
       <string>1,"^%s%d/%s", base_url, year, directory</string>
     </list>
   </entry>
