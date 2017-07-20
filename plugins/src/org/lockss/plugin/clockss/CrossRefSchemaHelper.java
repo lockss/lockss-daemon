@@ -212,6 +212,7 @@ implements SourceXmlSchemaHelper {
     cookMap.put(pub_issue, MetadataField.FIELD_ISSUE);
     cookMap.put(pub_year, MetadataField.FIELD_DATE);
     cookMap.put(art_title, MetadataField.FIELD_ARTICLE_TITLE);
+    cookMap.put(art_doi, MetadataField.FIELD_DOI);
     cookMap.put(art_sp, MetadataField.FIELD_START_PAGE);
     cookMap.put(art_lp, MetadataField.FIELD_END_PAGE);
     cookMap.put(art_contrib, MetadataField.FIELD_AUTHOR);
