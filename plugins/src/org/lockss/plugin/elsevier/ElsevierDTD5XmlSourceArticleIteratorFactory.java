@@ -134,7 +134,7 @@ implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
     // no need to limit to ROOT_TEMPLATE
     SubTreeArticleIterator.Spec theSpec = builder.newSpec();
     theSpec.setTarget(target);
-    theSpec.setPatternTemplate(TOP_METADATA_PATTERN_TEMPLATE, 
+    theSpec.setPatternTemplate(getTopPatternTemplate(),
         Pattern.CASE_INSENSITIVE);
     //do not descend in to any underlying archives
     theSpec.setExcludeSubTreePattern(NESTED_ARCHIVE_PATTERN); 
@@ -157,6 +157,11 @@ implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
       ElsevierDeferredArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
   }
 
+  // NOTE - for a child to create their own version of this
+  // allow the delivered version of this plugin to override
+  protected String getTopPatternTemplate() {
+    return TOP_METADATA_PATTERN_TEMPLATE;
+  }
   
   /*
    * An extended version of an ArticleFiles object. It adds an additional
