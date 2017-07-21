@@ -56,14 +56,14 @@
       au < crawling ; exists ; 2016 ; eLife September 2016 ; 2016/09 ; >
       au < crawling ; exists ; 2016 ; eLife October 2016 ; 2016/10 ; >
       au < crawling ; exists ; 2016 ; eLife November 2016 ; 2016/11 ; >
-      au < testing ; exists ; 2016 ; eLife December 2016 ; 2016/12 ; >
+      au < notReady ; exists ; 2016 ; eLife December 2016 ; 2016/12 ; > #See LXQ-569.
 
-      au < expected ; exists ; 2017 ; eLife January 2017 ; 2017/01 ; >
-      au < expected ; exists ; 2017 ; eLife February 2017 ; 2017/02 ; >
-      au < expected ; exists ; 2017 ; eLife March 2017 ; 2017/03 ; >
-      au < expected ; exists ; 2017 ; eLife April 2017 ; 2017/04 ; >
-      au < expected ; exists ; 2017 ; eLife May 2017 ; 2017/05 ; >
-      au < expected ; exists ; 2017 ; eLife June 2017 ; 2017/06 ; >
+      au < exists ; exists ; 2017 ; eLife January 2017 ; 2017/01 ; >
+      au < exists ; exists ; 2017 ; eLife February 2017 ; 2017/02 ; >
+      au < exists ; exists ; 2017 ; eLife March 2017 ; 2017/03 ; >
+      au < exists ; exists ; 2017 ; eLife April 2017 ; 2017/04 ; >
+      au < exists ; exists ; 2017 ; eLife May 2017 ; 2017/05 ; >
+      au < exists ; exists ; 2017 ; eLife June 2017 ; 2017/06 ; >
       au < expected ; exists ; 2017 ; eLife July 2017 ; 2017/07 ; >
       au < expected ; exists ; 2017 ; eLife August 2017 ; 2017/08 ; >
       au < expected ; exists ; 2017 ; eLife September 2017 ; 2017/09 ; >
