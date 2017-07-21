@@ -15,7 +15,7 @@
       eissn = 1529-7268
     >
 
-    plugin = org.lockss.plugin.silverchair.oup.OupSilverchairPlugin
+    plugin = org.lockss.plugin.silverchair.oup.ClockssOupSilverchairPlugin
     implicit < status ; status2 ; year ; name ; param[year] ; hidden[proxy] >
     param[base_url] = https://academic.oup.com/
     #param[base_url] = http://www.biolreprod.org/
