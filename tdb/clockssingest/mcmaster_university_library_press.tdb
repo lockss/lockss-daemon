@@ -3,6 +3,7 @@
   publisher <
     name = McMaster University Library Press ;
     info[contract] = 2017 ;
+    info[back] = 2015 ;
     info[tester] = 8 ;
     info[poller] = 8
   >
@@ -55,8 +56,8 @@
       au < manifest ; exists ; 2012 ; Early Theatre Volume 15 ; 15 ; 2012 ; > 
       au < manifest ; exists ; 2013 ; Early Theatre Volume 16 ; 16 ; 2013 ; > 
       au < manifest ; exists ; 2014 ; Early Theatre Volume 17 ; 17 ; 2014 ; > 
-      au < manifest ; exists ; 2015 ; Early Theatre Volume 18 ; 18 ; 2015 ; > 
-      au < testing ; exists ; 2016 ; Early Theatre Volume 19 ; 19 ; 2016 ; > 
+      au < notReady ; exists ; 2015 ; Early Theatre Volume 18 ; 18 ; 2015 ; > #clockss permission page missing index.php
+      au < notReady ; exists ; 2016 ; Early Theatre Volume 19 ; 19 ; 2016 ; > #clockss permission page missing index.php
       au < manifest ; exists ; 2017 ; Early Theatre Volume 20 ; 20 ; 2017 ; > 
 
     }
@@ -161,8 +162,8 @@
       au < manifest ; exists ; 2012 ; Journal for the History of Analytical Philosophy Volume 2 ; 2 ; 2012 ; > 
       au < manifest ; exists ; 2013 ; Journal for the History of Analytical Philosophy Volume 3 ; 3 ; 2013 ; > 
       au < manifest ; exists ; 2014 ; Journal for the History of Analytical Philosophy Volume 4 ; 4 ; 2014 ; > 
-      au < manifest ; exists ; 2015 ; Journal for the History of Analytical Philosophy Volume 5 ; 5 ; 2015 ; > 
-      au < testing ; exists ; 2016 ; Journal for the History of Analytical Philosophy Volume 6 ; 6 ; 2016 ; > 
+      au < notReady ; exists ; 2015 ; Journal for the History of Analytical Philosophy Volume 5 ; 5 ; 2015 ; >  #clockss permission page missing index.php
+      au < notReady ; exists ; 2016 ; Journal for the History of Analytical Philosophy Volume 6 ; 6 ; 2016 ; >  #clockss permission page missing index.php
       au < manifest ; exists ; 2017 ; Journal for the History of Analytical Philosophy Volume 7 ; 7 ; 2017 ; > 
 
     }
