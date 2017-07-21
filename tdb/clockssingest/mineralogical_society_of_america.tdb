@@ -64,7 +64,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; American Mineralogist Volume 99 ; 99 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; American Mineralogist Volume 100 ; 100 ; reingest5.clockss.org:8082 >
       au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 2016 ; American Mineralogist Volume 101 ; 101 ; >
-      au < gsw.ClockssGSWDrupalPlugin ; testing ; exists ; 2017 ; American Mineralogist Volume 102 ; 102 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; ready ; exists ; 2017 ; American Mineralogist Volume 102 ; 102 ; >
 
     }
 
@@ -95,7 +95,7 @@
     au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2015 ; Elements Volume 11 [superseded] ; 11 ; >
     au < gsw.ClockssGSWDrupalPlugin ; finished ; finished ; 2015 ; Elements Volume 11 ; 11 ; reingest1.clockss.org:8082 >
     au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 2016 ; Elements Volume 12 ; 12 ; >
-    au < gsw.ClockssGSWDrupalPlugin ; testing ; exists ; 2017 ; Elements Volume 13 ; 13 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; ready ; exists ; 2017 ; Elements Volume 13 ; 13 ; >
 
   }
   
@@ -171,7 +171,7 @@
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Reviews in Mineralogy and Geochemistry Volume 79 ; 79 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Reviews in Mineralogy and Geochemistry Volume 80 ; 80 ; reingest5.clockss.org:8082 >
     au < gsw.ClockssGSWDrupalPlugin ; finished ; manifest ; 2016 ; Reviews in Mineralogy and Geochemistry Volume 81 ; 81 ; reingest5.clockss.org:8082 >
-    au < gsw.ClockssGSWDrupalPlugin ; testing ; exists ; 2017 ; Reviews in Mineralogy and Geochemistry Volume 82 ; 82 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; ready ; exists ; 2017 ; Reviews in Mineralogy and Geochemistry Volume 82 ; 82 ; >
 
   }
   
