@@ -17,10 +17,10 @@
       param[base_url] = https://bop.unibe.ch/
       param[journal_id] = iw
 
-      au < ready ; 2010 ; 1 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2010 ; 2010 ; >
-      au < ready ; 2012 ; 3 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2012 ; 2012 ; >
-      au < ready ; 2014 ; 5 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2014 ; 2014 ; >
-      au < ready ; 2016 ; 7 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2016 ; 2016 ; >
+      au < releasing ; 2010 ; 1 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2010 ; 2010 ; >
+      au < releasing ; 2012 ; 3 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2012 ; 2012 ; >
+      au < releasing ; 2014 ; 5 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2014 ; 2014 ; >
+      au < releasing ; 2016 ; 7 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2016 ; 2016 ; >
       au < expected ; 2017 ; 8 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2017 ; 2017 ; >
 
   }
@@ -36,8 +36,8 @@
       param[base_url] = https://bop.unibe.ch/
       param[journal_id] = itwid
 
-      au < ready ; 2015 ; 1 ; itw : im dialog -- Forschungen zum Gegenwartstheater Volume 2015 ; 2015 ; >
-      au < ready ; 2016 ; 2 ; itw : im dialog -- Forschungen zum Gegenwartstheater Volume 2016 ; 2016 ; >
+      au < releasing ; 2015 ; 1 ; itw : im dialog -- Forschungen zum Gegenwartstheater Volume 2015 ; 2015 ; >
+      au < releasing ; 2016 ; 2 ; itw : im dialog -- Forschungen zum Gegenwartstheater Volume 2016 ; 2016 ; >
       au < expected ; 2017 ; 3 ; itw : im dialog -- Forschungen zum Gegenwartstheater Volume 2017 ; 2017 ; >
 
   }
@@ -68,10 +68,10 @@
       param[base_url] = https://bop.unibe.ch/
       param[journal_id] = JEMR
 
-      au < ready ; 2013 ; 1 ; Journal of Eye Movement Research Volume 2013 ; 2013 ; >
-      au < ready ; 2014 ; 2 ; Journal of Eye Movement Research Volume 2014 ; 2014 ; >
-      au < ready ; 2015 ; 3 ; Journal of Eye Movement Research Volume 2015 ; 2015 ; >
-      au < ready ; 2016 ; 4 ; Journal of Eye Movement Research Volume 2016 ; 2016 ; >
+      au < releasing ; 2013 ; 1 ; Journal of Eye Movement Research Volume 2013 ; 2013 ; >
+      au < releasing ; 2014 ; 2 ; Journal of Eye Movement Research Volume 2014 ; 2014 ; >
+      au < releasing ; 2015 ; 3 ; Journal of Eye Movement Research Volume 2015 ; 2015 ; >
+      au < releasing ; 2016 ; 4 ; Journal of Eye Movement Research Volume 2016 ; 2016 ; >
       au < manifest ; 2017 ; 5 ; Journal of Eye Movement Research Volume 2017 ; 2017 ; >
 
   }

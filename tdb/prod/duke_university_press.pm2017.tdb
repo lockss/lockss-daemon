@@ -473,10 +473,10 @@
 
       attr[journal_id] = 140
 
-        au < ready ; 2000 ; Nepantla: Views from South Volume 1 [2000] ; 468 >
-        au < ready ; 2001 ; Nepantla: Views from South Volume 2 [2001] ; 469 >
-        au < ready ; 2002 ; Nepantla: Views from South Volume 3 [2002] ; 470 >
-        au < ready ; 2003 ; Nepantla: Views from South Volume 4 [2003] ; 845 >
+        au < releasing ; 2000 ; Nepantla: Views from South Volume 1 [2000] ; 468 >
+        au < releasing ; 2001 ; Nepantla: Views from South Volume 2 [2001] ; 469 >
+        au < releasing ; 2002 ; Nepantla: Views from South Volume 3 [2002] ; 470 >
+        au < releasing ; 2003 ; Nepantla: Views from South Volume 4 [2003] ; 845 >
 
     }
     {
@@ -708,35 +708,35 @@
 
       attr[journal_id] = 520
 
-        au < ready ; 1973 ; Minnesota Review Number 1 [Fall 1973 (New Series)] ; 7087 >
-        au < ready ; 1975 ; Minnesota Review Number 4 [Spring 1975 (New Series)] ; 7068 >
-        au < ready ; 1975 ; Minnesota Review Number 5 [Fall 1975 (New Series)] ; 7088 >
-        au < ready ; 1976 ; Minnesota Review Number 6 [Spring 1976 (New Series)] ; 7093 >
-        au < ready ; 1976 ; Minnesota Review Number 7 [Fall 1976 (New Series)] ; 7094 >
-        au < ready ; 1977 ; Minnesota Review Number 8 [Spring 1977 (New Series)] ; 7095 >
-        au < ready ; 1978 ; Minnesota Review Number 10 [Spring 1978 (New Series)] ; 7097 >
-        au < ready ; 1978 ; Minnesota Review Number 11 [Fall 1978 (New Series)] ; 7098 >
-        au < ready ; 1979 ; Minnesota Review Number 12 [Spring 1979 (New Series)] ; 7099 >
-        au < ready ; 1979 ; Minnesota Review Number 13 [Fall 1979 (New Series)] ; 7100 >
-        au < ready ; 1980 ; Minnesota Review Number 14 [Spring 1980 (New Series)] ; 7089 >
-        au < ready ; 1980 ; Minnesota Review Number 15 [Fall 1980 (New Series)] ; 7090 >
-        au < ready ; 1981 ; Minnesota Review Number 16 [Spring 1981 (New Series)] ; 7091 >
-        au < ready ; 1981 ; Minnesota Review Number 17 [Fall 1981 (New Series)] ; 7092 >
-        au < ready ; 1982 ; Minnesota Review Number 18 [Spring 1982 (New Series)] ; 7101 >
-        au < ready ; 1982 ; Minnesota Review Number 19 [Fall 1982 (New Series)] ; 7102 >
-        au < ready ; 1983 ; Minnesota Review Number 20 [Spring 1983 (New Series)] ; 7103 >
-        au < ready ; 1983 ; Minnesota Review Number 21 [Fall 1983 (New Series)] ; 7104 >
-        au < ready ; 1984 ; Minnesota Review Number 23 [Fall 1984 (New Series)] ; 7107 >
-        au < ready ; 1984 ; Minnesota Review Number 22 [Spring 1984 (New Series)] ; 7521 >
-        au < ready ; 1985 ; Minnesota Review Number 24 [Spring 1985 (New Series)] ; 7108 >
-        au < ready ; 1985 ; Minnesota Review Number 25 [Fall 1985 (New Series)] ; 7109 >
-        au < ready ; 1986 ; Minnesota Review Number 26 [Spring 1986 (New Series)] ; 7110 >
-        au < ready ; 1986 ; Minnesota Review Number 27 [Fall 1986 (New Series)] ; 7111 >
-        au < ready ; 1987 ; Minnesota Review Number 28 [Spring 1987 (New Series)] ; 7112 >
-        au < ready ; 1987 ; Minnesota Review Number 29 [Fall 1987 (New Series)] ; 7113 >
-        au < ready ; 1988 ; Minnesota Review Number 30-31 [Spring/Fall 1988 (New Series)] ; 7114 >
-        au < ready ; 1989 ; Minnesota Review Number 33 [Fall 1989 (New Series)] ; 7115 >
-        au < ready ; 1989 ; Minnesota Review Number 32 [Spring 1989 (New Series)] ; 7123 >
+        au < releasing ; 1973 ; Minnesota Review Number 1 [Fall 1973 (New Series)] ; 7087 >
+        au < releasing ; 1975 ; Minnesota Review Number 4 [Spring 1975 (New Series)] ; 7068 >
+        au < releasing ; 1975 ; Minnesota Review Number 5 [Fall 1975 (New Series)] ; 7088 >
+        au < releasing ; 1976 ; Minnesota Review Number 6 [Spring 1976 (New Series)] ; 7093 >
+        au < releasing ; 1976 ; Minnesota Review Number 7 [Fall 1976 (New Series)] ; 7094 >
+        au < releasing ; 1977 ; Minnesota Review Number 8 [Spring 1977 (New Series)] ; 7095 >
+        au < releasing ; 1978 ; Minnesota Review Number 10 [Spring 1978 (New Series)] ; 7097 >
+        au < releasing ; 1978 ; Minnesota Review Number 11 [Fall 1978 (New Series)] ; 7098 >
+        au < releasing ; 1979 ; Minnesota Review Number 12 [Spring 1979 (New Series)] ; 7099 >
+        au < releasing ; 1979 ; Minnesota Review Number 13 [Fall 1979 (New Series)] ; 7100 >
+        au < releasing ; 1980 ; Minnesota Review Number 14 [Spring 1980 (New Series)] ; 7089 >
+        au < releasing ; 1980 ; Minnesota Review Number 15 [Fall 1980 (New Series)] ; 7090 >
+        au < releasing ; 1981 ; Minnesota Review Number 16 [Spring 1981 (New Series)] ; 7091 >
+        au < releasing ; 1981 ; Minnesota Review Number 17 [Fall 1981 (New Series)] ; 7092 >
+        au < releasing ; 1982 ; Minnesota Review Number 18 [Spring 1982 (New Series)] ; 7101 >
+        au < releasing ; 1982 ; Minnesota Review Number 19 [Fall 1982 (New Series)] ; 7102 >
+        au < releasing ; 1983 ; Minnesota Review Number 20 [Spring 1983 (New Series)] ; 7103 >
+        au < releasing ; 1983 ; Minnesota Review Number 21 [Fall 1983 (New Series)] ; 7104 >
+        au < releasing ; 1984 ; Minnesota Review Number 23 [Fall 1984 (New Series)] ; 7107 >
+        au < releasing ; 1984 ; Minnesota Review Number 22 [Spring 1984 (New Series)] ; 7521 >
+        au < releasing ; 1985 ; Minnesota Review Number 24 [Spring 1985 (New Series)] ; 7108 >
+        au < releasing ; 1985 ; Minnesota Review Number 25 [Fall 1985 (New Series)] ; 7109 >
+        au < releasing ; 1986 ; Minnesota Review Number 26 [Spring 1986 (New Series)] ; 7110 >
+        au < releasing ; 1986 ; Minnesota Review Number 27 [Fall 1986 (New Series)] ; 7111 >
+        au < releasing ; 1987 ; Minnesota Review Number 28 [Spring 1987 (New Series)] ; 7112 >
+        au < releasing ; 1987 ; Minnesota Review Number 29 [Fall 1987 (New Series)] ; 7113 >
+        au < releasing ; 1988 ; Minnesota Review Number 30-31 [Spring/Fall 1988 (New Series)] ; 7114 >
+        au < releasing ; 1989 ; Minnesota Review Number 33 [Fall 1989 (New Series)] ; 7115 >
+        au < releasing ; 1989 ; Minnesota Review Number 32 [Spring 1989 (New Series)] ; 7123 >
         au < released ; 1990 ; Minnesota Review Number 34-35 [Spring/Fall 1990 (New Series)] ; 7124 >
         au < released ; 1991 ; Minnesota Review Number 36 [Spring 1991 (New Series)] ; 7125 >
         au < released ; 1991 ; Minnesota Review Number 37 [Fall 1991 (New Series)] ; 7126 >
