@@ -34,7 +34,7 @@
     au < deepCrawl ; exists ; 2014 ; Acta Pharmacologica Sinica Volume 35 ; 2014 ; 35 ; >
     au < deepCrawl ; exists ; 2015 ; Acta Pharmacologica Sinica Volume 36 ; 2015 ; 36 ; >
     au < deepCrawl ; exists ; 2016 ; Acta Pharmacologica Sinica Volume 37 ; 2016 ; 37 ; >
-    au < ready ; exists ; 2017 ; Acta Pharmacologica Sinica Volume 38 ; 2017 ; 38 ; >
+    au < crawling ; exists ; 2017 ; Acta Pharmacologica Sinica Volume 38 ; 2017 ; 38 ; >
 
   }
 
@@ -69,7 +69,7 @@
     au < finished ; finished ; 2014 ; American Journal of Gastroenterology Volume 109 ; 2014 ; 109 ; >
     au < deepCrawl ; exists ; 2015 ; American Journal of Gastroenterology Volume 110 ; 2015 ; 110 ; >
     au < deepCrawl ; exists ; 2016 ; American Journal of Gastroenterology Volume 111 ; 2016 ; 111 ; >
-    au < ready ; exists ; 2017 ; American Journal of Gastroenterology Volume 112 ; 2017 ; 112 ; >
+    au < crawling ; exists ; 2017 ; American Journal of Gastroenterology Volume 112 ; 2017 ; 112 ; >
 
   }
 
@@ -146,7 +146,7 @@
     au < finished ; finished ; 2014 ; Blood Cancer Journal Volume 4 ; 2014 ; 4 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Blood Cancer Journal Volume 5 ; 2015 ; 5 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; Blood Cancer Journal Volume 6 ; 2016 ; 6 ; >
-    au < ready ; exists ; 2017 ; Blood Cancer Journal Volume 7 ; 2017 ; 7 ; >
+    au < crawling ; exists ; 2017 ; Blood Cancer Journal Volume 7 ; 2017 ; 7 ; >
 
   }
 
@@ -304,8 +304,8 @@
     au < frozen ; exists ; 2015 ; British Dental Journal Volume 219 ; 2015 ; 219 ; >
     au < deepCrawl ; exists ; 2016 ; British Dental Journal Volume 220 ; 2016 ; 220 ; >
     au < frozen ; exists ; 2016 ; British Dental Journal Volume 221 ; 2016 ; 221 ; >
-    au < ready ; exists ; 2017 ; British Dental Journal Volume 222 ; 2017 ; 222 ; >
-    au < ready ; exists ; 2017 ; British Dental Journal Volume 223 ; 2017 ; 223 ; >
+    au < crawling ; exists ; 2017 ; British Dental Journal Volume 222 ; 2017 ; 222 ; >
+    au < crawling ; exists ; 2017 ; British Dental Journal Volume 223 ; 2017 ; 223 ; >
 
   }
 
@@ -435,8 +435,8 @@
     au < deepCrawl ; exists ; 2015 ; British Journal of Cancer Volume 113 ; 2015 ; 113 ; >
     au < deepCrawl ; exists ; 2016 ; British Journal of Cancer Volume 114 ; 2016 ; 114 ; >
     au < deepCrawl ; exists ; 2016 ; British Journal of Cancer Volume 115 ; 2016 ; 115 ; >
-    au < ready ; exists ; 2017 ; British Journal of Cancer Volume 116 ; 2017 ; 116 ; >
-    au < ready ; exists ; 2017 ; British Journal of Cancer Volume 117 ; 2017 ; 117 ; >
+    au < crawling ; exists ; 2017 ; British Journal of Cancer Volume 116 ; 2017 ; 116 ; >
+    au < crawling ; exists ; 2017 ; British Journal of Cancer Volume 117 ; 2017 ; 117 ; >
 
   }
 
@@ -505,7 +505,7 @@
     au < finished ; finished ; 2014 ; Cell Death and Differentiation Volume 21 ; 2014 ; 21 ; >
     au < deepCrawl ; exists ; 2015 ; Cell Death and Differentiation Volume 22 ; 2015 ; 22 ; >
     au < deepCrawl ; exists ; 2016 ; Cell Death and Differentiation Volume 23 ; 2016 ; 23 ; >
-    au < ready ; exists ; 2017 ; Cell Death and Differentiation Volume 24 ; 2017 ; 24 ; >
+    au < crawling ; exists ; 2017 ; Cell Death and Differentiation Volume 24 ; 2017 ; 24 ; >
 
   }
 
@@ -525,7 +525,7 @@
     au < finished ; finished ; 2014 ; Cell Death & Disease Volume 5 ; 2014 ; 5 ; >
     au < deepCrawl ; exists ; 2015 ; Cell Death & Disease Volume 6 ; 2015 ; 6 ; >
     au < deepCrawl ; exists ; 2016 ; Cell Death & Disease Volume 7 ; 2016 ; 7 ; >
-    au < ready ; exists ; 2017 ; Cell Death & Disease Volume 8 ; 2017 ; 8 ; >
+    au < crawling ; exists ; 2017 ; Cell Death & Disease Volume 8 ; 2017 ; 8 ; >
 
     }
 
@@ -559,7 +559,7 @@
     au < finished ; finished ; 2014 ; Cell Research Volume 24 ; 2014 ; 24 ; >
     au < finished ; finished ; 2015 ; Cell Research Volume 25 ; 2015 ; 25 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; Cell Research Volume 26 ; 2016 ; 26 ; >
-    au < ready ; exists ; 2017 ; Cell Research Volume 27 ; 2017 ; 27 ; >
+    au < crawling ; exists ; 2017 ; Cell Research Volume 27 ; 2017 ; 27 ; >
 
   }
 
@@ -583,7 +583,7 @@
     au < finished ; finished ; 2014 ; Cellular & Molecular Immunology Volume 11 ; 2014 ; 11 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2015 ; Cellular & Molecular Immunology Volume 12 ; 2015 ; 12 ; >
     au < deepCrawl ; exists ; 2016 ; Cellular & Molecular Immunology Volume 13 ; 2016 ; 13 ; >
-    au < ready ; exists ; 2017 ; Cellular & Molecular Immunology Volume 14 ; 2017 ; 14 ; >
+    au < crawling ; exists ; 2017 ; Cellular & Molecular Immunology Volume 14 ; 2017 ; 14 ; >
 
   }
 
@@ -604,7 +604,7 @@
     au < deepCrawl ; exists ; 2014 ; Clinical and Translational Gastroenterology Volume 5 ; 2014 ; 5 ; >
     au < deepCrawl ; exists ; 2015 ; Clinical and Translational Gastroenterology Volume 6 ; 2015 ; 6 ; >
     au < deepCrawl ; exists ; 2016 ; Clinical and Translational Gastroenterology Volume 7 ; 2016 ; 7 ; >
-    au < ready ; exists ; 2017 ; Clinical and Translational Gastroenterology Volume 8 ; 2017 ; 8 ; >
+    au < crawling ; exists ; 2017 ; Clinical and Translational Gastroenterology Volume 8 ; 2017 ; 8 ; >
 
   }
 
@@ -649,7 +649,7 @@
     au < finished ; finished ; 2014 ; Clinical & Translational Immunology Volume 3 ; 2014 ; 3 ; >
     au < finished ; finished ; 2015 ; Clinical & Translational Immunology Volume 4 ; 2015 ; 4 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; Clinical & Translational Immunology Volume 5 ; 2016 ; 5 ; >
-    au < ready ; exists ; 2017 ; Clinical & Translational Immunology Volume 6 ; 2017 ; 6 ; >
+    au < crawling ; exists ; 2017 ; Clinical & Translational Immunology Volume 6 ; 2017 ; 6 ; >
 
   }
 
@@ -708,7 +708,7 @@
     au < finished ; finished ; 2014 ; Emerging Microbes & Infections Volume 3 ; 2014 ; 3 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; Emerging Microbes & Infections Volume 4 ; 2015 ; 4 ; >
     au < deepCrawl ; exists ; 2016 ; Emerging Microbes & Infections Volume 5 ; 2016 ; 5 ; >
-    au < ready ; exists ; 2017 ; Emerging Microbes & Infections Volume 6 ; 2017 ; 6 ; >
+    au < crawling ; exists ; 2017 ; Emerging Microbes & Infections Volume 6 ; 2017 ; 6 ; >
 
   }
 
@@ -801,7 +801,7 @@
     au < deepCrawl ; exists ; 2014 ; Evidence-Based Dentistry Volume 15 ; 2014 ; 15 ; >
     au < frozen ; exists ; 2015 ; Evidence-Based Dentistry Volume 16 ; 2015 ; 16 ; >
     au < deepCrawl ; exists ; 2016 ; Evidence-Based Dentistry Volume 17 ; 2016 ; 17 ; >
-    au < ready ; exists ; 2017 ; Evidence-Based Dentistry Volume 18 ; 2017 ; 18 ; >
+    au < crawling ; exists ; 2017 ; Evidence-Based Dentistry Volume 18 ; 2017 ; 18 ; >
 
   }
 
@@ -869,7 +869,7 @@
     au < finished ; finished ; 2014 ; Eye Volume 28 ; 2014 ; 28 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; Eye Volume 29 ; 2015 ; 29 ; >
     au < deepCrawl ; exists ; 2016 ; Eye Volume 30 ; 2016 ; 30 ; >
-    au < ready ; exists ; 2017 ; Eye Volume 31 ; 2017 ; 31 ; >
+    au < crawling ; exists ; 2017 ; Eye Volume 31 ; 2017 ; 31 ; >
 
   }
 
@@ -1091,8 +1091,8 @@
     au < frozen ; exists ; 2015 ; Heredity Volume 115 ; 2015 ; 115 ; >
     au < deepCrawl ; exists ; 2016 ; Heredity Volume 116 ; 2016 ; 116 ; >
     au < deepCrawl ; exists ; 2016 ; Heredity Volume 117 ; 2016 ; 117 ; >
-    au < ready ; exists ; 2017 ; Heredity Volume 118 ; 2017 ; 118 ; >
-    au < ready ; exists ; 2017 ; Heredity Volume 119 ; 2017 ; 119 ; >
+    au < crawling ; exists ; 2017 ; Heredity Volume 118 ; 2017 ; 118 ; >
+    au < crawling ; exists ; 2017 ; Heredity Volume 119 ; 2017 ; 119 ; >
 
   }
 
@@ -1119,7 +1119,7 @@
     au < deepCrawl ; exists ; 2014 ; Hypertension Research Volume 37 ; 2014 ; 37 ; >
     au < deepCrawl ; exists ; 2015 ; Hypertension Research Volume 38 ; 2015 ; 38 ; >
     au < deepCrawl ; exists ; 2016 ; Hypertension Research Volume 39 ; 2016 ; 39 ; >
-    au < ready ; exists ; 2017 ; Hypertension Research Volume 40 ; 2017 ; 40 ; >
+    au < crawling ; exists ; 2017 ; Hypertension Research Volume 40 ; 2017 ; 40 ; >
  
   }
 
@@ -1229,7 +1229,7 @@
     au < finished ; finished ; 2014 ; Immunology & Cell Biology Volume 92 ; 2014 ; 92 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2015 ; Immunology & Cell Biology Volume 93 ; 2015 ; 93 ; >
     au < deepCrawl ; exists ; 2016 ; Immunology & Cell Biology Volume 94 ; 2016 ; 94 ; >
-    au < ready ; exists ; 2017 ; Immunology & Cell Biology Volume 95 ; 2017 ; 95 ; >
+    au < crawling ; exists ; 2017 ; Immunology & Cell Biology Volume 95 ; 2017 ; 95 ; >
 
   }
 
@@ -1342,7 +1342,7 @@
     au < finished ; finished ; 2014 ; International Journal of Oral Science Volume 6 ; 2014 ; 6 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; International Journal of Oral Science Volume 7 ; 2015 ; 7 ; >
     au < deepCrawl ; exists ; 2016 ; International Journal of Oral Science Volume 8 ; 2016 ; 8 ; >
-    au < ready ; exists ; 2017 ; International Journal of Oral Science Volume 9 ; 2017 ; 9 ; >
+    au < crawling ; exists ; 2017 ; International Journal of Oral Science Volume 9 ; 2017 ; 9 ; >
 
   }
 
@@ -1367,7 +1367,7 @@
     au < finished ; finished ; 2014 ; The ISME Journal Volume 8 ; 2014 ; 8 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; The ISME Journal Volume 9 ; 2015 ; 9 ; >
     au < deepCrawl ; exists ; 2016 ; The ISME Journal Volume 10 ; 2016 ; 10 ; >
-    au < ready ; exists ; 2017 ; The ISME Journal Volume 11 ; 2017 ; 11 ; >
+    au < crawling ; exists ; 2017 ; The ISME Journal Volume 11 ; 2017 ; 11 ; >
 
   }
 
@@ -1415,7 +1415,7 @@
     au < finished ; finished ; 2014 ; The Journal of Antibiotics Volume 67 ; 2014 ; 67 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; The Journal of Antibiotics Volume 68 ; 2015 ; 68 ; >
     au < deepCrawl ; exists ; 2016 ; The Journal of Antibiotics Volume 69 ; 2016 ; 69 ; >
-    au < ready ; exists ; 2017 ; The Journal of Antibiotics Volume 70 ; 2017 ; 70 ; >
+    au < crawling ; exists ; 2017 ; The Journal of Antibiotics Volume 70 ; 2017 ; 70 ; >
 
   }
 
@@ -1491,7 +1491,7 @@
     au < finished ; finished ; 2014 ; Journal of Exposure Science and Environmental Epidemiology Volume 24 ; 2014 ; 24 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2015 ; Journal of Exposure Science and Environmental Epidemiology Volume 25 ; 2015 ; 25 ; >
     au < deepCrawl ; exists ; 2016 ; Journal of Exposure Science and Environmental Epidemiology Volume 26 ; 2016 ; 26 ; >
-    au < ready ; exists ; 2017 ; Journal of Exposure Science and Environmental Epidemiology Volume 27 ; 2017 ; 27 ; >
+    au < crawling ; exists ; 2017 ; Journal of Exposure Science and Environmental Epidemiology Volume 27 ; 2017 ; 27 ; >
 
   }
 
@@ -1546,7 +1546,7 @@
     au < finished ; finished ; 2014 ; Journal of Human Genetics Volume 59 ; 2014 ; 59 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2015 ; Journal of Human Genetics Volume 60 ; 2015 ; 60 ; >
     au < deepCrawl ; exists ; 2016 ; Journal of Human Genetics Volume 61 ; 2016 ; 61 ; >
-    au < ready ; exists ; 2017 ; Journal of Human Genetics Volume 62 ; 2017 ; 62 ; >
+    au < crawling ; exists ; 2017 ; Journal of Human Genetics Volume 62 ; 2017 ; 62 ; >
 
   }
 
@@ -1764,7 +1764,7 @@
     au < finished ; finished ; 2014 ; Journal of Perinatology Volume 34 ; 2014 ; 34 ; >
     au < deepCrawl ; exists ; 2015 ; Journal of Perinatology Volume 35 ; 2015 ; 35 ; >
     au < deepCrawl ; exists ; 2016 ; Journal of Perinatology Volume 36 ; 2016 ; 36 ; >
-    au < ready ; exists ; 2017 ; Journal of Perinatology Volume 37 ; 2017 ; 37 ; >
+    au < crawling ; exists ; 2017 ; Journal of Perinatology Volume 37 ; 2017 ; 37 ; >
  
   }
 
@@ -1858,7 +1858,7 @@
     au < finished ; finished ; 2014 ; Laboratory Investigation Volume 94 ; 2014 ; 94 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; Laboratory Investigation Volume 95 ; 2015 ; 95 ; >
     au < deepCrawl ; exists ; 2016 ; Laboratory Investigation Volume 96 ; 2016 ; 96 ; >
-    au < ready ; exists ; 2017 ; Laboratory Investigation Volume 97 ; 2017 ; 97 ; >
+    au < crawling ; exists ; 2017 ; Laboratory Investigation Volume 97 ; 2017 ; 97 ; >
 
   }
 
@@ -1928,7 +1928,7 @@
     au < finished ; finished ; 2014 ; Light: Science & Applications Volume 3 ; 2014 ; 3 ; >
     au < deepCrawl ; exists ; 2015 ; Light: Science & Applications Volume 4 ; 2015 ; 4 ; >
     au < deepCrawl ; exists ; 2016 ; Light: Science & Applications Volume 5 ; 2016 ; 5 ; >
-    au < ready ; exists ; 2017 ; Light: Science & Applications Volume 6 ; 2017 ; 6 ; >
+    au < crawling ; exists ; 2017 ; Light: Science & Applications Volume 6 ; 2017 ; 6 ; >
 
   }
 
@@ -1961,7 +1961,7 @@
     au < finished ; finished ; 2014 ; Modern Pathology Volume 27 ; 2014 ; 27 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2015 ; Modern Pathology Volume 28 ; 2015 ; 28 ; >
     au < deepCrawl ; exists ; 2016 ; Modern Pathology Volume 29 ; 2016 ; 29 ; >
-    au < ready ; exists ; 2017 ; Modern Pathology Volume 30 ; 2017 ; 30 ; >
+    au < crawling ; exists ; 2017 ; Modern Pathology Volume 30 ; 2017 ; 30 ; >
 
   }
 
@@ -1996,7 +1996,7 @@
     au < finished ; finished ; 2014 ; Molecular Psychiatry Volume 19 ; 2014 ; 19 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2015 ; Molecular Psychiatry Volume 20 ; 2015 ; 20 ; >
     au < deepCrawl ; exists ; 2016 ; Molecular Psychiatry Volume 21 ; 2016 ; 21 ; >
-    au < ready ; exists ; 2017 ; Molecular Psychiatry Volume 22 ; 2017 ; 22 ; >
+    au < crawling ; exists ; 2017 ; Molecular Psychiatry Volume 22 ; 2017 ; 22 ; >
 
   }
 
@@ -3108,7 +3108,7 @@
     au < finished ; finished ; 2014 ; Nature Reviews Cardiology Volume 11 ; 2014 ; 11 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; Nature Reviews Cardiology Volume 12 ; 2015 ; 12 ; >
     au < deepCrawl ; exists ; 2016 ; Nature Reviews Cardiology Volume 13 ; 2016 ; 13 ; >
-    au < ready ; exists ; 2017 ; Nature Reviews Cardiology Volume 14 ; 2017 ; 14 ; >
+    au < crawling ; exists ; 2017 ; Nature Reviews Cardiology Volume 14 ; 2017 ; 14 ; >
 
   }
 
