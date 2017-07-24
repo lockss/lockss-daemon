@@ -1257,7 +1257,7 @@
       au < deepCrawl ; exists ; 2016 ; International Journal of Business and Globalisation Volume 16 ; 16 ; >
       au < deepCrawl ; exists ; 2016 ; International Journal of Business and Globalisation Volume 17 ; 17 ; >
       au < testing ; exists ; 2017 ; International Journal of Business and Globalisation Volume 18 ; 18 ; >
-      au < expected ; exists ; 2017 ; International Journal of Business and Globalisation Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2017 ; International Journal of Business and Globalisation Volume 19 ; 19 ; >
 
     }
 
@@ -1415,7 +1415,7 @@
       au < finished ; finished ; 2014 ; International Journal of Business Governance and Ethics Volume 9 ; 9 ; >
       au < finished ; finished ; 2015 ; International Journal of Business Governance and Ethics Volume 10 ; 10 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2016 ; International Journal of Business Governance and Ethics Volume 11 ; 11 ; >
-      au < expected ; exists ; 2017 ; International Journal of Business Governance and Ethics Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2017 ; International Journal of Business Governance and Ethics Volume 12 ; 12 ; >
 
     }
 
@@ -2186,7 +2186,7 @@
       au < finished ; finished ; 2014 ; International Journal of Corporate Governance Volume 5 ; 5 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2015 ; International Journal of Corporate Governance Volume 6 ; 6 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2016 ; International Journal of Corporate Governance Volume 7 ; 7 ; >
-      au < expected ; exists ; 2017 ; International Journal of Corporate Governance Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2017 ; International Journal of Corporate Governance Volume 8 ; 8 ; >
 
     }
 
@@ -3989,7 +3989,7 @@
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of High Performance Systems Architecture Volume 4 ; 4 ; >
       au < finished ; finished ; 2014-2015 ; International Journal of High Performance Systems Architecture Volume 5 ; 5 ; >
       au < testing ; exists ; 2016 ; International Journal of High Performance Systems Architecture Volume 6 ; 6 ; >
-      au < exists ; exists ; 2017 ; International Journal of High Performance Systems Architecture Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2017 ; International Journal of High Performance Systems Architecture Volume 7 ; 7 ; >
 
     }
 
@@ -6173,7 +6173,7 @@
       au < finished ; finished ; 2014 ; International Journal of Multicriteria Decision Making Volume 4 ; 4 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2015 ; International Journal of Multicriteria Decision Making Volume 5 ; 5 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2016 ; International Journal of Multicriteria Decision Making Volume 6 ; 6 ; >
-      au < expected ; exists ; 2017 ; International Journal of Multicriteria Decision Making Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2017 ; International Journal of Multicriteria Decision Making Volume 7 ; 7 ; >
 
     }
 
@@ -8447,7 +8447,7 @@
 
       au < finished ; finished ; 2012-2014 ; International Journal of Technology Policy and Law Volume 1 ; 1 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; down ; 2015-2016 ; International Journal of Technology Policy and Law Volume 2 ; 2 ; reingest2.clockss.org:8085 >
-      au < expected ; exists ; 2017 ; International Journal of Technology Policy and Law Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2017 ; International Journal of Technology Policy and Law Volume 3 ; 3 ; >
 
     }
 
@@ -9746,7 +9746,7 @@
       param[journal_id] = ijmcs
 
       au < manifest ; exists ; 2016 ; International Journal of Multinational Corporation Strategy Volume 1 ; 1 ;  >
-      au < expected ; exists ; 2017 ; International Journal of Multinational Corporation Strategy Volume 2 ; 2 ;  >
+      au < manifest ; exists ; 2017 ; International Journal of Multinational Corporation Strategy Volume 2 ; 2 ;  >
 
   }
 
