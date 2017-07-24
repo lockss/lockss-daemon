@@ -15185,15 +15185,15 @@
   
         #param[base_url] = http://jhd.sagepub.com/
   
-        au < exists ; 2007 ; Indian Journal of Human Development Volume 1 ; 1 ; jhda >
-        au < exists ; 2008 ; Indian Journal of Human Development Volume 2 ; 2 ; jhda >
-        au < exists ; 2009 ; Indian Journal of Human Development Volume 3 ; 3 ; jhda >
-        au < exists ; 2010 ; Indian Journal of Human Development Volume 4 ; 4 ; jhda >
-        au < exists ; 2011 ; Indian Journal of Human Development Volume 5 ; 5 ; jhda >
-        au < exists ; 2012 ; Indian Journal of Human Development Volume 6 ; 6 ; jhda >
-        au < exists ; 2013 ; Indian Journal of Human Development Volume 7 ; 7 ; jhda >
-        au < exists ; 2014 ; Indian Journal of Human Development Volume 8 ; 8 ; jhda >
-        au < exists ; 2015 ; Indian Journal of Human Development Volume 9 ; 9 ; jhda >
+        au < manifest ; 2007 ; Indian Journal of Human Development Volume 1 ; 1 ; jhda >
+        au < manifest ; 2008 ; Indian Journal of Human Development Volume 2 ; 2 ; jhda >
+        au < manifest ; 2009 ; Indian Journal of Human Development Volume 3 ; 3 ; jhda >
+        au < manifest ; 2010 ; Indian Journal of Human Development Volume 4 ; 4 ; jhda >
+        au < manifest ; 2011 ; Indian Journal of Human Development Volume 5 ; 5 ; jhda >
+        au < manifest ; 2012 ; Indian Journal of Human Development Volume 6 ; 6 ; jhda >
+        au < manifest ; 2013 ; Indian Journal of Human Development Volume 7 ; 7 ; jhda >
+        au < manifest ; 2014 ; Indian Journal of Human Development Volume 8 ; 8 ; jhda >
+        au < manifest ; 2015 ; Indian Journal of Human Development Volume 9 ; 9 ; jhda >
         au < released ; 2016 ; Indian Journal of Human Development Volume 10 ; 10 ; jhda >
     }
 
@@ -17734,7 +17734,7 @@
       au < doNotProcess ; 2014 ; Jadavpur Journal of International Relations Volume 18 ; 18 ; jnra >
       au < doNotProcess ; 2015 ; Jadavpur Journal of International Relations Volume 19 ; 19 ; jnra >
       au < released ; 2016 ; Jadavpur Journal of International Relations Volume 20 ; 20 ; jnra >
-      au < expected ; 2017 ; Jadavpur Journal of International Relations Volume 21 ; 21 ; jnra >
+      au < manifest ; 2017 ; Jadavpur Journal of International Relations Volume 21 ; 21 ; jnra >
 
     }
 
@@ -24111,7 +24111,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       #param[base_url] = http://pal.sagepub.com/
 
       au < released ; 2015 ; Journal of Palliative Care Volume 31 ; 31 ; pala >
-      au < exists ; 2017 ; Journal of Palliative Care Volume 32 ; 32 ; pala >
+      au < manifest ; 2017 ; Journal of Palliative Care Volume 32 ; 32 ; pala >
 
   }
 
@@ -29893,12 +29893,12 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
       #param[base_url] = http://nqh.sagepub.com/
 
-      au < exists ; 2008 ; Netherlands Quarterly of Human Rights Volume 26 ; 26 ; nqha >
-      au < exists ; 2009 ; Netherlands Quarterly of Human Rights Volume 27 ; 27 ; nqha >
-      au < exists ; 2010 ; Netherlands Quarterly of Human Rights Volume 28 ; 28 ; nqha >
-      au < exists ; 2011 ; Netherlands Quarterly of Human Rights Volume 29 ; 29 ; nqha >
-      au < exists ; 2012 ; Netherlands Quarterly of Human Rights Volume 30 ; 30 ; nqha >
-      au < exists ; 2013 ; Netherlands Quarterly of Human Rights Volume 31 ; 31 ; nqha >
+      au < manifest ; 2008 ; Netherlands Quarterly of Human Rights Volume 26 ; 26 ; nqha >
+      au < manifest ; 2009 ; Netherlands Quarterly of Human Rights Volume 27 ; 27 ; nqha >
+      au < manifest ; 2010 ; Netherlands Quarterly of Human Rights Volume 28 ; 28 ; nqha >
+      au < manifest ; 2011 ; Netherlands Quarterly of Human Rights Volume 29 ; 29 ; nqha >
+      au < manifest ; 2012 ; Netherlands Quarterly of Human Rights Volume 30 ; 30 ; nqha >
+      au < manifest ; 2013 ; Netherlands Quarterly of Human Rights Volume 31 ; 31 ; nqha >
       au < manifest ; 2014 ; Netherlands Quarterly of Human Rights Volume 32 ; 32 ; nqha >
       au < manifest ; 2015 ; Netherlands Quarterly of Human Rights Volume 33 ; 33 ; nqha >
       au < released ; 2016 ; Netherlands Quarterly of Human Rights Volume 34 ; 34 ; nqha >
