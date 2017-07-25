@@ -12637,7 +12637,7 @@
         au < HighWireStrVolPlugin ; down ; 2004 ; European Journal of Archaeology Volume 7 ; 7 >
         au < HighWireStrVolPlugin ; down ; 2006 ; European Journal of Archaeology Volume 9 ; 9 >
         au < HighWireStrVolPlugin ; down ; 2007 ; European Journal of Archaeology Volume 10 ; 10 >
-        au < HighWirePressPlugin ; down ; 2008 ; European Journal of Archaeology Volume 11 ; 11 >
+        au < HighWirePressPlugin ; superseded ; 2008 ; European Journal of Archaeology Volume 11 [superseded] ; 11 >
 
       }
 
@@ -12658,8 +12658,8 @@
         au < doNotProcess ; 2006 ; European Journal of Archaeology Volume 9 ; 9 >
         au < doNotProcess ; 2007 ; European Journal of Archaeology Volume 10 ; 10 >
         au < doNotProcess ; 2008 ; European Journal of Archaeology Volume 11 ; 11 >
-        au < down ; 2009 ; European Journal of Archaeology Volume 12 ; 12 >
-        au < down ; 2010 ; European Journal of Archaeology Volume 13 ; 13 >
+        au < superseded ; 2009 ; European Journal of Archaeology Volume 12 [superseded] ; 12 >
+        au < superseded ; 2010 ; European Journal of Archaeology Volume 13 [superseded] ; 13 >
 
       }
 
