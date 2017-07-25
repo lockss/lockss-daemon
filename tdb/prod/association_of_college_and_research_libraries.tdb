@@ -119,7 +119,7 @@
     {
 
       param[base_url] = http://crln.acrl.org/
-      param[journal_id] = crln
+      param[journal_id] = crlnews
 
       au < doNotProcess ; 2004 ; College & Research Libraries News Volume 65 ; 2004 >
       au < doNotProcess ; 2005 ; College & Research Libraries News Volume 66 ; 2005 >
