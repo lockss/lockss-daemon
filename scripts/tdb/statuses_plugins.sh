@@ -52,22 +52,22 @@ grep -r -A 1 --include "*.xml" "<string>plugin_version</string>" plugins/src | g
 grep -rL --include "*.xml" "<string>plugin_version</string>" plugins/src | sed 's/plugins\/src\/\(.*\).xml/\1,!/' >> $tpath/foo08.txt
 
 #To get the plugins on and not on the content machines 9-16 (gln testing)
-sh scripts/tdb/statuses_plugins_content_9-16.sh | grep -i plugin | sed 's/\t/,/' > $tpath/foo09.txt
+sh ~/scripts/statuses_plugins_content_9-16.sh | grep -i plugin | sed 's/\t/,/' > $tpath/foo09.txt
 cat $tpath/foo09.txt | sed 's/,.*//' | sort -t, -k 1,1 > $tpath/bar.txt
 diff $tpath/bar.txt $tpath/AllPlugins.txt | grep ">" | sed 's/..//' | sed 's/\(.*\)/\1,!/' >> $tpath/foo09.txt
 
 #To get the plugins on and not on the ingest machines
-sh scripts/tdb/statuses_plugins_ingest.sh | grep -i plugin | sed 's/\t/,/' > $tpath/foo10.txt
+sh ~/scripts/statuses_plugins_ingest.sh | grep -i plugin | sed 's/\t/,/' > $tpath/foo10.txt
 cat $tpath/foo10.txt | sed 's/,.*//' | sort -t, -k 1,1 > $tpath/bar.txt
 diff $tpath/bar.txt $tpath/AllPlugins.txt | grep ">" | sed 's/..//' | sed 's/\(.*\)/\1,!/' >> $tpath/foo10.txt
 
 #To get the plugins on and not on the delta machines
-sh scripts/tdb/statuses_plugins_delta.sh | grep -i plugin | sed 's/\t/,/' > $tpath/foo11.txt
+sh ~/scripts/statuses_plugins_delta.sh | grep -i plugin | sed 's/\t/,/' > $tpath/foo11.txt
 cat $tpath/foo11.txt | sed 's/,.*//' | sort -t, -k 1,1 > $tpath/bar.txt
 diff $tpath/bar.txt $tpath/AllPlugins.txt | grep ">" | sed 's/..//' | sed 's/\(.*\)/\1,!/' >> $tpath/foo11.txt
 
 #To get the plugins on and not on the content machines 1-4 (clockss testing)
-sh scripts/tdb/statuses_plugins_content_1-4.sh | grep -i plugin | sed 's/\t/,/' > $tpath/foo12.txt
+sh ~/scripts/statuses_plugins_content_1-4.sh | grep -i plugin | sed 's/\t/,/' > $tpath/foo12.txt
 cat $tpath/foo12.txt | sed 's/,.*//' | sort -t, -k 1,1 > $tpath/bar.txt
 diff $tpath/bar.txt $tpath/AllPlugins.txt | grep ">" | sed 's/..//' | sed 's/\(.*\)/\1,!/' >> $tpath/foo12.txt
 
