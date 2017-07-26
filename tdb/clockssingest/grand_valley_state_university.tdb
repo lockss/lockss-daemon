@@ -71,7 +71,7 @@
     param[journal_abbr] = jti
     implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
 
-    au < crawling ; exists ; 2011 ; The Journal of Tourism Insights Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2011 ; The Journal of Tourism Insights Volume 1 ; 1 ; >
     au < testing ; exists ; 2011 ; The Journal of Tourism Insights Volume 2 ; 2 ; >
     au < finished ; finished ; 2012 ; The Journal of Tourism Insights Volume 3 ; 3 ; >
     au < finished ; manifest ; 2013 ; The Journal of Tourism Insights Volume 4 ; 4 ; reingest1.clockss.org:8082 >
@@ -94,17 +94,17 @@
     param[journal_abbr] = orpc
     implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
 
-    au < crawling ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 1 ; 1 ; >
     au < frozen ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 2 ; 2 ; >
     au < crawling ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 3 ; 3 ; >
     au < crawling ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 5 ; 5 ; >
     au < frozen ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 6 ; 6 ; >
     au < frozen ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 7 ; 7 ; >
     au < crawling ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 8 ; 8 ; >
     au < crawling ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 9 ; 9 ; >
     au < crawling ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 11 ; 11 ; >
 
   }
 }
