@@ -22,12 +22,12 @@
 
       param[base_url] = http://muse.jhu.edu/
 
-      au < down ; 2010 ; Labour / Le Travail Volume 66 ; 66 >
-      au < down ; 2011 ; Labour / Le Travail Volume 67 ; 67 >
-      au < down ; 2011 ; Labour / Le Travail Volume 68 ; 68 >
-      au < down ; 2012 ; Labour / Le Travail Volume 69 ; 69 >
-      au < down ; 2012 ; Labour / Le Travail Volume 70 ; 70 >
-      au < down ; 2013 ; Labour / Le Travail Volume 71 ; 71 >
+      au < superseded ; 2010 ; Labour / Le Travail Volume 66 [superseded] ; 66 >
+      au < superseded ; 2011 ; Labour / Le Travail Volume 67 [superseded] ; 67 >
+      au < superseded ; 2011 ; Labour / Le Travail Volume 68 [superseded] ; 68 >
+      au < superseded ; 2012 ; Labour / Le Travail Volume 69 [superseded] ; 69 >
+      au < superseded ; 2012 ; Labour / Le Travail Volume 70 [superseded] ; 70 >
+      au < superseded ; 2013 ; Labour / Le Travail Volume 71 [superseded] ; 71 >
 
     }
 
@@ -35,11 +35,11 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < down ; 2013 ; Labour / Le Travail Volume 72 ; 72 >
-      au < down ; 2014 ; Labour / Le Travail Volume 73 ; 73 >
-      au < down ; 2014 ; Labour / Le Travail Volume 74 ; 74 >
-      au < down ; 2015 ; Labour / Le Travail Volume 75 ; 75 >
-      au < down ; 2015 ; Labour / Le Travail Volume 76 ; 76 >
+      au < superseded ; 2013 ; Labour / Le Travail Volume 72 [superseded] ; 72 >
+      au < superseded ; 2014 ; Labour / Le Travail Volume 73 [superseded] ; 73 >
+      au < superseded ; 2014 ; Labour / Le Travail Volume 74 [superseded] ; 74 >
+      au < superseded ; 2015 ; Labour / Le Travail Volume 75 [superseded] ; 75 >
+      au < superseded ; 2015 ; Labour / Le Travail Volume 76 [superseded] ; 76 >
       au < doNotProcess ; 2016 ; Labour / Le Travail Volume 77 ; 77 >
       au < doNotProcess ; 2016 ; Labour / Le Travail Volume 78 ; 78 >
 
