@@ -159,21 +159,22 @@
     plugin = org.lockss.plugin.highwire.jbjs.JBJSDrupalPlugin 
     param[base_url] = http://surgicaltechniques.jbjs.org/
     implicit < status ; year ; name ; param[volume_name] >
+    #Unable to fetch probe permission page
 
-    au < testing ; 2004 ; JBJS Essential Surgical Techniques Volume os-86 ; os-86 >
-    au < testing ; 2005 ; JBJS Essential Surgical Techniques Volume os-87 ; os-87 >
-    au < testing ; 2006 ; JBJS Essential Surgical Techniques Volume os-88 ; os-88 >
-    au < testing ; 2007 ; JBJS Essential Surgical Techniques Volume os-89 ; os-89 >
-    au < testing ; 2008 ; JBJS Essential Surgical Techniques Volume os-90 ; os-90 >
-    au < testing ; 2009 ; JBJS Essential Surgical Techniques Volume os-91 ; os-91 >
-    au < testing ; 2010 ; JBJS Essential Surgical Techniques Volume os-92 ; os-92 >
-    au < testing ; 2011 ; JBJS Essential Surgical Techniques Volume os-93 ; os-93 >
-    au < testing ; 2011 ; JBJS Essential Surgical Techniques Volume 1 ; 1 >
-    au < testing ; 2012 ; JBJS Essential Surgical Techniques Volume 2 ; 2 >
-    au < testing ; 2013 ; JBJS Essential Surgical Techniques Volume 3 ; 3 >
-    au < testing ; 2014 ; JBJS Essential Surgical Techniques Volume 4 ; 4 >
-    au < testing ; 2015 ; JBJS Essential Surgical Techniques Volume 5 ; 5 >
-    au < testing ; 2016 ; JBJS Essential Surgical Techniques Volume 6 ; 6 >
+    au < notReady ; 2004 ; JBJS Essential Surgical Techniques Volume os-86 ; os-86 >
+    au < notReady ; 2005 ; JBJS Essential Surgical Techniques Volume os-87 ; os-87 >
+    au < notReady ; 2006 ; JBJS Essential Surgical Techniques Volume os-88 ; os-88 >
+    au < notReady ; 2007 ; JBJS Essential Surgical Techniques Volume os-89 ; os-89 >
+    au < notReady ; 2008 ; JBJS Essential Surgical Techniques Volume os-90 ; os-90 >
+    au < notReady ; 2009 ; JBJS Essential Surgical Techniques Volume os-91 ; os-91 >
+    au < notReady ; 2010 ; JBJS Essential Surgical Techniques Volume os-92 ; os-92 >
+    au < notReady ; 2011 ; JBJS Essential Surgical Techniques Volume os-93 ; os-93 >
+    au < notReady ; 2011 ; JBJS Essential Surgical Techniques Volume 1 ; 1 >
+    au < notReady ; 2012 ; JBJS Essential Surgical Techniques Volume 2 ; 2 >
+    au < notReady ; 2013 ; JBJS Essential Surgical Techniques Volume 3 ; 3 >
+    au < notReady ; 2014 ; JBJS Essential Surgical Techniques Volume 4 ; 4 >
+    au < notReady ; 2015 ; JBJS Essential Surgical Techniques Volume 5 ; 5 >
+    au < notReady ; 2016 ; JBJS Essential Surgical Techniques Volume 6 ; 6 >
     au < manifest ; 2017 ; JBJS Essential Surgical Techniques Volume 7 ; 7 >
 
   }
