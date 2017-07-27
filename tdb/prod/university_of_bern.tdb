@@ -76,4 +76,21 @@
 
   }
 
+  {
+
+      title <
+        name = BAF-Online: Proceedings of the Berner Altorientalisches Forum ;
+        eissn = 2504-2076
+      >
+
+      comment[publisher] = University of Bern
+      param[base_url] = https://bop.unibe.ch/
+      param[journal_id] = baf
+      #Can we preserve with video content? See LXQ-631
+
+      au < doNotProcess ; 2016 ; 1 ; BAF-Online: Proceedings of the Berner Altorientalisches Forum Volume 2016 ; 2016 ; >
+      au < doNotProcess ; 2017 ; 2 ; Journal of Eye Movement Research Volume 2017 ; 2017 ; >
+
+  }
+
 }
