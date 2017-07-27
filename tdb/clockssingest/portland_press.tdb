@@ -604,9 +604,9 @@
     au < manifest ; exists ; 2011 ; Bioscience Reports Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Bioscience Reports Volume 32 ; 32 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Bioscience Reports Volume 33 ; 33 ; >
-    au < frozen ; exists ; 2014 ; Bioscience Reports Volume 34 ; 34 ; >
-    au < frozen ; exists ; 2015 ; Bioscience Reports Volume 35 ; 35 ; >
-    au < testing ; exists ; 2016 ; Bioscience Reports Volume 36 ; 36 ; >
+    au < frozen ; exists ; 2014 ; Bioscience Reports Volume 34 ; 34 ; reingest1.clockss.org:8082 >
+    au < frozen ; exists ; 2015 ; Bioscience Reports Volume 35 ; 35 ; reingest2.clockss.org:8085 >
+    au < ready ; exists ; 2016 ; Bioscience Reports Volume 36 ; 36 ; reingest1.clockss.org:8082 >
     au < manifest ; exists ; 2017 ; Bioscience Reports Volume 37 ; 37 ; >
 
   }
@@ -649,15 +649,15 @@
     au < manifest ; exists ; 2010 ; Clinical Science Volume 119 ; 119 ; >
     au < manifest ; exists ; 2011 ; Clinical Science Volume 120 ; 120 ; >
     au < manifest ; exists ; 2011 ; Clinical Science Volume 121 ; 121 ; >
-    au < frozen ; exists ; 2012 ; Clinical Science Volume 122 ; 122 ; >
-    au < frozen ; exists ; 2012 ; Clinical Science Volume 123 ; 123 ; >
-    au < frozen ; exists ; 2013 ; Clinical Science Volume 124 ; 124 ; >
-    au < crawling ; exists ; 2013 ; Clinical Science Volume 125 ; 125 ; >
+    au < frozen ; exists ; 2012 ; Clinical Science Volume 122 ; 122 ; reingest1.clockss.org:8082 >
+    au < frozen ; exists ; 2012 ; Clinical Science Volume 123 ; 123 ; reingest2.clockss.org:8085 >
+    au < frozen ; exists ; 2013 ; Clinical Science Volume 124 ; 124 ; reingest1.clockss.org:8082 >
+    au < crawling ; exists ; 2013 ; Clinical Science Volume 125 ; 125 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Clinical Science Volume 126 ; 126 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Clinical Science Volume 127 ; 127 ; >
-    au < manifest ; exists ; 2015 ; Clinical Science Volume 128 ; 128 ; >
-    au < manifest ; exists ; 2015 ; Clinical Science Volume 129 ; 129 ; >
-    au < crawling ; exists ; 2016 ; Clinical Science Volume 130 ; 130 ; >
+    au < ready ; exists ; 2015 ; Clinical Science Volume 128 ; 128 ; reingest1.clockss.org:8082 >
+    au < ready ; exists ; 2015 ; Clinical Science Volume 129 ; 129 ; reingest2.clockss.org:8085 >
+    au < crawling ; exists ; 2016 ; Clinical Science Volume 130 ; 130 ; reingest1.clockss.org:8082 >
     au < manifest ; exists ; 2017 ; Clinical Science Volume 131 ; 131 ; >
 
   }
