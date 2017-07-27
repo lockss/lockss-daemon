@@ -6,7 +6,6 @@
 
   comment[platform] = Atypon publisher
   
-  attr[EncodingMatchRange]=200
   plugin = org.lockss.plugin.atypon.americanmeteorologicalsociety.AMetSocPlugin  
   implicit < status ; year ; name ; param[volume_name] >
   param[base_url] = http://journals.ametsoc.org/
