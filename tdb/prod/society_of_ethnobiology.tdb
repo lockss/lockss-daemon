@@ -4,10 +4,6 @@
     name = Society of Ethnobiology
   >
 
-    plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
-    implicit < status ; year ; name ; param[volume_name] >
-    param[base_url] = http://www.bioone.org/
-
   {
 
     title <
@@ -16,6 +12,10 @@
       issnl = 2159-8126
     >
 
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+    param[base_url] = http://ojs.ethnobiology.org/
+
     param[journal_id] = ebl
     
     au < exists ; 2010 ; Ethnobiology Letters Volume 1 ; 1 >
@@ -23,6 +23,9 @@
     au < exists ; 2012 ; Ethnobiology Letters Volume 3 ; 3 >
     au < exists ; 2013 ; Ethnobiology Letters Volume 4 ; 4 >
     au < exists ; 2014 ; Ethnobiology Letters Volume 5 ; 5 >
+    au < exists ; 2015 ; Ethnobiology Letters Volume 6 ; 6 >
+    au < exists ; 2016 ; Ethnobiology Letters Volume 7 ; 7 >
+    au < exists ; 2017 ; Ethnobiology Letters Volume 8 ; 8 >
  
 
   }
@@ -34,6 +37,10 @@
       issn = 0278-0771 ;
       issnl = 0278-0771
     >
+
+    plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+    implicit < status ; year ; name ; param[volume_name] >
+    param[base_url] = http://www.bioone.org/
 
     param[journal_id] = etbi
     
@@ -51,6 +58,7 @@
     au < released ; 2014 ; Journal of Ethnobiology Volume 34 ; 34 >
     au < released ; 2015 ; Journal of Ethnobiology Volume 35 ; 35 >
     au < released ; 2016 ; Journal of Ethnobiology Volume 36 ; 36 >
+    au < expected ; 2017 ; Journal of Ethnobiology Volume 37 ; 37 >
  
 
   }
