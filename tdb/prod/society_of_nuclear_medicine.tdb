@@ -70,6 +70,7 @@
       au < released ; 2014 ; Journal of Nuclear Medicine Volume 55 ; 55 >
       au < released ; 2015 ; Journal of Nuclear Medicine Volume 56 ; 56 >
       au < released ; 2016 ; Journal of Nuclear Medicine Volume 57 ; 57 >
+      au < expected ; 2017 ; Journal of Nuclear Medicine Volume 58 ; 58 >
 
     }
 
@@ -88,10 +89,6 @@
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://tech.snmjournals.org/
       implicit < status ; year ; name ; param[volume_name] >
-      comment[37] = found a login page
-      comment[38] = found a login page
-      comment[39] = no permission
-      comment[login] = logins resolved
 
       {
 
@@ -118,6 +115,7 @@
       au < released ; 2014 ; Journal of Nuclear Medicine Technology Volume 42 ; 42 >
       au < released ; 2015 ; Journal of Nuclear Medicine Technology Volume 43 ; 43 >
       au < released ; 2016 ; Journal of Nuclear Medicine Technology Volume 44 ; 44 >
+      au < expected ; 2017 ; Journal of Nuclear Medicine Technology Volume 45 ; 45 >
 
     }
 
