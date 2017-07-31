@@ -13,7 +13,9 @@ echo "###Ready Atypon 2016" > $t/tmp_Atypon
 echo "###Ready Atypon not 2016" >> $t/tmp_Atypon
 ./scripts/tdb/tdbout -Y -a -Q 'plugin ~ "typon" and year is not "2016" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | shuf >> $t/tmp_Atypon
 #Manifest
-echo "###Manifest Sage 2016" >> $t/tmp_Atypon
+#echo "###Manifest Sage 2017" >> $t/tmp_Atypon
+#./scripts/tdb/tdbout -MT -a -Q 'year ~ "2017$" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/sage_publications.atypon.tdb | shuf >> $t/tmp_Atypon
+echo "###Manifest Sage 2017" >> $t/tmp_Atypon
 ./scripts/tdb/tdbout -MT -a -Q 'year ~ "2016$" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/sage_publications.atypon.tdb | shuf >> $t/tmp_Atypon
 echo "###Manifest Sage 2015" >> $t/tmp_Atypon
 ./scripts/tdb/tdbout -MT -a -Q 'year ~ "2015$" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/sage_publications.atypon.tdb | shuf >> $t/tmp_Atypon
