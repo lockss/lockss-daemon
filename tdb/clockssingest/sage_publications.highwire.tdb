@@ -17410,12 +17410,12 @@
 
       param[base_url] = http://hde.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
+      #ceased publication after 2015
 
       au < doNotProcess ; exists ; 2012 ; International Journal of Heritage in the Digital Era Volume 1 ; 1 ; >
       au < doNotProcess ; exists ; 2013 ; International Journal of Heritage in the Digital Era Volume 2 ; 2 ; >
       au < finished ; finished ; 2014 ; International Journal of Heritage in the Digital Era Volume 3 ; 3 ; >
       au < finished ; finished ; 2015 ; International Journal of Heritage in the Digital Era Volume 4 ; 4 ; reingest2.clockss.org:8085 >
-      au < doNotProcess ; exists ; 2016 ; International Journal of Heritage in the Digital Era Volume 5 ; 5 ; >
 
   }
 

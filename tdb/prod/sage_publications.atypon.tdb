@@ -16151,9 +16151,9 @@
      au < manifest ; 2006 ; International Journal of Electrical Engineering Education Volume 43 ; 43 ; ijea >
      au < manifest ; 2007 ; International Journal of Electrical Engineering Education Volume 44 ; 44 ; ijea >
      au < released ; 2008 ; International Journal of Electrical Engineering Education Volume 45 ; 45 ; ijea >
-     au < manifest ; 2009 ; International Journal of Electrical Engineering Education Volume 46 ; 46 ; ijea >
-     au < manifest ; 2010 ; International Journal of Electrical Engineering Education Volume 47 ; 47 ; ijea >
-     au < manifest ; 2011 ; International Journal of Electrical Engineering Education Volume 48 ; 48 ; ijea >
+     au < ready ; 2009 ; International Journal of Electrical Engineering Education Volume 46 ; 46 ; ijea >
+     au < ready ; 2010 ; International Journal of Electrical Engineering Education Volume 47 ; 47 ; ijea >
+     au < ready ; 2011 ; International Journal of Electrical Engineering Education Volume 48 ; 48 ; ijea >
      au < released ; 2012 ; International Journal of Electrical Engineering Education Volume 49 ; 49 ; ijea >
      au < released ; 2013 ; International Journal of Electrical Engineering Education Volume 50 ; 50 ; ijea >
      au < doNotProcess ; 2014 ; International Journal of Electrical Engineering Education Volume 51 ; 51 ; ijea >
@@ -16287,13 +16287,12 @@
     >
 
       #param[base_url] = http://hde.sagepub.com/
+      #ceased publication after 2015.
 
       au < released ; 2012 ; International Journal of Heritage in the Digital Era Volume 1 ; 1 ; hdea >
       au < released ; 2013 ; International Journal of Heritage in the Digital Era Volume 2 ; 2 ; hdea >
       au < doNotProcess ; 2014 ; International Journal of Heritage in the Digital Era Volume 3 ; 3 ; hdea >
       au < doNotProcess ; 2015 ; International Journal of Heritage in the Digital Era Volume 4 ; 4 ; hdea >
-      au < expected ; 2016 ; International Journal of Heritage in the Digital Era Volume 5 ; 5 ; hdea >
-      au < expected ; 2017 ; International Journal of Heritage in the Digital Era Volume 6 ; 6 ; hdea >
 
   }
 
@@ -16429,9 +16428,9 @@
       au < manifest ; 2006 ; International Journal of Mechanical Engineering Education Volume 34 ; 34 ; ijja >
       au < manifest ; 2007 ; International Journal of Mechanical Engineering Education Volume 35 ; 35 ; ijja >
       au < released ; 2008 ; International Journal of Mechanical Engineering Education Volume 36 ; 36 ; ijja >
-      au < manifest ; 2009 ; International Journal of Mechanical Engineering Education Volume 37 ; 37 ; ijja >
-      au < manifest ; 2010 ; International Journal of Mechanical Engineering Education Volume 38 ; 38 ; ijja >
-      au < manifest ; 2011 ; International Journal of Mechanical Engineering Education Volume 39 ; 39 ; ijja >
+      au < ready ; 2009 ; International Journal of Mechanical Engineering Education Volume 37 ; 37 ; ijja >
+      au < ready ; 2010 ; International Journal of Mechanical Engineering Education Volume 38 ; 38 ; ijja >
+      au < ready ; 2011 ; International Journal of Mechanical Engineering Education Volume 39 ; 39 ; ijja >
       au < released ; 2012 ; International Journal of Mechanical Engineering Education Volume 40 ; 40 ; ijja >
       au < released ; 2013 ; International Journal of Mechanical Engineering Education Volume 41 ; 41 ; ijja >
       au < doNotProcess ; 2014 ; International Journal of Mechanical Engineering Education Volume 42 ; 42 ; ijja >
@@ -16825,8 +16824,8 @@
       au < manifest ; 2007 ; International Journal of Space Structures Volume 22 ; 22 ; spsa >
       au < released ; 2008 ; International Journal of Space Structures Volume 23 ; 23 ; spsa >
       au < released ; 2009 ; International Journal of Space Structures Volume 24 ; 24 ; spsa >
-      au < manifest ; 2010 ; International Journal of Space Structures Volume 25 ; 25 ; spsa >
-      au < manifest ; 2011 ; International Journal of Space Structures Volume 26 ; 26 ; spsa >
+      au < ready ; 2010 ; International Journal of Space Structures Volume 25 ; 25 ; spsa >
+      au < ready ; 2011 ; International Journal of Space Structures Volume 26 ; 26 ; spsa >
       au < ready ; 2012 ; International Journal of Space Structures Volume 27 ; 27 ; spsa >
       au < released ; 2013 ; International Journal of Space Structures Volume 28 ; 28 ; spsa >
       au < doNotProcess ; 2014 ; International Journal of Space Structures Volume 29 ; 29 ; spsa >

@@ -19694,12 +19694,12 @@
       param[base_url] = http://hde.sagepub.com/
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
+      #ceased publication after 2015
 
       au < doNotProcess ; 2012 ; International Journal of Heritage in the Digital Era Volume 1 ; 1 >
       au < doNotProcess ; 2013 ; International Journal of Heritage in the Digital Era Volume 2 ; 2 >
       au < down ; 2014 ; International Journal of Heritage in the Digital Era Volume 3 ; 3 >
       au < down ; 2015 ; International Journal of Heritage in the Digital Era Volume 4 ; 4 >
-      au < doNotProcess ; 2016 ; International Journal of Heritage in the Digital Era Volume 5 ; 5 >
 
   }
 
