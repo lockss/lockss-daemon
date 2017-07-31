@@ -319,7 +319,7 @@
     }
     
     {
-    plugin = need.plugin 
+    plugin = needs.plugin 
     param[base_url] = http://journals.lww.com/
     param[journal_id] = jbjsjournal
     implicit < status ; year ; name ; param[volume_name] >
