@@ -928,6 +928,45 @@ while (my $line = <>) {
       }
         sleep(4);
 
+  } elsif (($plugin =~ m/SourcePlugin/) || 
+           ($plugin =~ m/WarcPlugin/)) {
+      if ($plugin =~ m/DeliveredSourcePlugin/) {
+	  $url = sprintf("%s%d/%s/",
+			 $param{base_url}, $param{year}, $param{directory});
+      } else {
+	  $url = sprintf("%s%d/",
+		 $param{base_url}, $param{year});
+      }
+      $man_url = uri_unescape($url);
+      my $req = HTTP::Request->new(GET, $man_url);
+      my $resp = $ua->request($req);
+      if ($resp->is_success) {
+          my $man_contents = $resp->content;
+	  #allow for newlines
+	  my $alt_clockss_tag = "CLOCKSS(\n)? (\n)?system(\n)? (\n)?has(\n)? (\n)?permission(\n)? (\n)?to(\n)? (\n)?ingest,(\n)? (\n)?preserve,(\n)? (\n)?and(\n)? (\n)?serve(\n)? (\n)?this(\n)? (\n)?Archival(\n)? (\n)?Unit";
+          if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+	  #does it have even one link on the page? then we have contents
+          } elsif (defined($man_contents) && (($man_contents =~ m/$alt_clockss_tag/) && 
+					      ($man_contents =~ m/a href=\"/))) {
+              if ($man_contents =~ m/<title>\s*(.*)\s*<\/title>/si) {
+                  $vol_title = $1;
+                  $vol_title =~ s/\s*\n\s*/ /g;
+                  $vol_title =~ s/ &amp\; / & /;
+                  if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+                      $vol_title = "\"" . $vol_title . "\"";
+                  }
+              }
+              $result = "Manifest";
+          } else {
+              $result = "--"
+          }
+      } else {
+      $result = "--"
+  }
+        sleep(4);
+
 #  } elsif ($plugin eq "EdinburghUniversityPressPlugin") {
 #    $url = sprintf("%slockss/%s/%s/index.html",
 #      $param{base_url}, $param{journal_id}, $param{volume_name});
