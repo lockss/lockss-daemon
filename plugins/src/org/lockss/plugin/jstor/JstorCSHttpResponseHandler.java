@@ -47,7 +47,7 @@ public class JstorCSHttpResponseHandler implements CacheResultHandler {
   //http://www.jstor.org/px/client/main.min.js,"503 Service Unavailable
 
   protected static final Pattern NON_FATAL_PAT = 
-      Pattern.compile("\\.js$");
+      Pattern.compile("\\.(js|css|gif)$");
     
   private static final Logger logger = Logger.getLogger(JstorCSHttpResponseHandler.class);
 
@@ -62,10 +62,18 @@ public class JstorCSHttpResponseHandler implements CacheResultHandler {
                                      String url,
                                      int responseCode) {
     logger.debug2(url);
+    Matcher mat;
     switch (responseCode) {
+      case 403:
+        mat = NON_FATAL_PAT.matcher(url);
+        if (mat.find()) {
+          return new CacheException.NoRetryDeadLinkException("403 Foridden (non-fatal)");
+        } else {
+          return new CacheException.PermissionException("403 Forbidden");
+        }
       case 503:
         // Do not fail the crawl for 503 errors at URLs like the one below should not be fatal
-        Matcher mat = NON_FATAL_PAT.matcher(url);
+        mat = NON_FATAL_PAT.matcher(url);
         if (mat.find()) {
           return new CacheException.NoRetryDeadLinkException("503 Service Unavailable (non-fatal)");
         } else {

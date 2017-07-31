@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>down. no access</string>
+    <string>ready</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>9</string>
+    <string>10</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -133,6 +133,7 @@
   <entry>
     <string>plugin_cache_result_list</string>
     <list>
+      <string>403=org.lockss.plugin.jstor.JstorCSHttpResponseHandler</string>
       <string>503=org.lockss.plugin.jstor.JstorCSHttpResponseHandler</string>
     </list>
   </entry>  
