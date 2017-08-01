@@ -11,16 +11,18 @@
 
 # This active script is for creating a table for clockss, for all harvest content, from Oct 1 of the previous year to the present.
 
-req_year=$1
-cur_year=`date +%Y`
+#option to get info by year.
+#req_year=$1
+#cur_year=`date +%Y`
 #if $req_year > 1900 and $req_year < $cur_year then use the year, otherwise use all content.
-if [ $req_year > 1900 && $req_year < $cur_year ]
-then
-    req = "-t auid,status -Q 'year ~ "'$req_year'"' tdb/clockssingest/*.tdb"
-else
-    req = "-t auid,status tdb/clockssingest/*.tdb"
-fi
+#if [ $req_year > 1900 && $req_year < $cur_year ]
+#then
+#    req = "-t auid,status -Q 'year ~ "'$req_year'"' tdb/clockssingest/*.tdb"
+#else
+#    req = "-t auid,status tdb/clockssingest/*.tdb"
+#fi
 
+cd ~/lockss-daemon
 git checkout master
 git checkout `git rev-list -n 1 --before="2017-07-03 00:00" master`
 ant jar-lockss
