@@ -5458,7 +5458,7 @@
     #param[base_url] = http://cmm.sagepub.com/
 
       au < manifest ; exists ; 2010 ; Cell Medicine Volume 1 ; 1 ; cmma ; >
-      au < manifest ; exists ; 2011 ; Cell Medicine Volume 2 ; 2 ; cmma ; >
+      au < crawling ; exists ; 2011 ; Cell Medicine Volume 2 ; 2 ; cmma ; >
       au < frozen ; exists ; 2012 ; Cell Medicine Volume 3 ; 3 ; cmma ; >
       au < frozen ; exists ; 2012 ; Cell Medicine Volume 4 ; 4 ; cmma ; >
       au < frozen ; exists ; 2013 ; Cell Medicine Volume 5 ; 5 ; cmma ; >
@@ -6031,7 +6031,7 @@
         au < manifest ; exists ; 2007 ; Citizenship, Social and Economics Education Volume 7 ; 7 ; csea ; >
         au < manifest ; exists ; 2009 ; Citizenship, Social and Economics Education Volume 8 ; 8 ; csea ; >
         au < manifest ; exists ; 2010 ; Citizenship, Social and Economics Education Volume 9 ; 9 ; csea ; >
-        au < manifest ; exists ; 2011 ; Citizenship, Social and Economics Education Volume 10 ; 10 ; csea ; >
+        au < crawling ; exists ; 2011 ; Citizenship, Social and Economics Education Volume 10 ; 10 ; csea ; >
         au < frozen ; exists ; 2012 ; Citizenship, Social and Economics Education Volume 11 ; 11 ; csea ; >
         au < frozen ; exists ; 2013 ; Citizenship, Social and Economics Education Volume 12 ; 12 ; csea ; >
         au < doNotProcess ; doNotProcess ; 2014 ; Citizenship, Social and Economics Education Volume 13 ; 13 ; csea ; >
@@ -20339,7 +20339,7 @@
     au < frozen ; exists ; 2008 ; The Journal of Criminal Law Volume 72 ; 72 ; clja ; >
     au < manifest ; exists ; 2009 ; The Journal of Criminal Law Volume 73 ; 73 ; clja ; >
     au < manifest ; exists ; 2010 ; The Journal of Criminal Law Volume 74 ; 74 ; clja ; >
-    au < manifest ; exists ; 2011 ; The Journal of Criminal Law Volume 75 ; 75 ; clja ; >
+    au < crawling ; exists ; 2011 ; The Journal of Criminal Law Volume 75 ; 75 ; clja ; >
     au < frozen ; exists ; 2012 ; The Journal of Criminal Law Volume 76 ; 76 ; clja ; >
     au < frozen ; exists ; 2013 ; The Journal of Criminal Law Volume 77 ; 77 ; clja ; >
     au < doNotProcess ; doNotProcess ; 2014 ; The Journal of Criminal Law Volume 78 ; 78 ; clja ; >
@@ -34921,7 +34921,7 @@
       au < manifest ; exists ; 2010 ; Research in Education Volume 83 ; 83 ; riea ; >
       au < manifest ; exists ; 2010 ; Research in Education Volume 84 ; 84 ; riea ; >
       au < crawling ; exists ; 2011 ; Research in Education Volume 85 ; 85 ; riea ; >
-      au < manifest ; exists ; 2011 ; Research in Education Volume 86 ; 86 ; riea ; >
+      au < crawling ; exists ; 2011 ; Research in Education Volume 86 ; 86 ; riea ; >
       au < frozen ; exists ; 2012 ; Research in Education Volume 87 ; 87 ; riea ; >
       au < frozen ; exists ; 2012 ; Research in Education Volume 88 ; 88 ; riea ; >
       au < frozen ; exists ; 2013 ; Research in Education Volume 89 ; 89 ; riea ; >
@@ -36287,7 +36287,7 @@
 
     au < frozen ; exists ; 2009 ; Shoulder & Elbow Volume 1 ; 1 ; sela ; >
     au < manifest ; exists ; 2010 ; Shoulder & Elbow Volume 2 ; 2 ; sela ; >
-    au < manifest ; exists ; 2011 ; Shoulder & Elbow Volume 3 ; 3 ; sela ; >
+    au < crawling ; exists ; 2011 ; Shoulder & Elbow Volume 3 ; 3 ; sela ; >
     au < frozen ; exists ; 2012 ; Shoulder & Elbow Volume 4 ; 4 ; sela ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Shoulder & Elbow Volume 5 ; 5 ; sela ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Shoulder & Elbow Volume 6 ; 6 ; sela ; >
@@ -45192,7 +45192,7 @@
       au < frozen ; exists ; 2008 ; Women's Health Volume 4 ; 4 ; whea ; >
       au < manifest ; exists ; 2009 ; Women's Health Volume 5 ; 5 ; whea ; >
       au < manifest ; exists ; 2010 ; Women's Health Volume 6 ; 6 ; whea ; >
-      au < manifest ; exists ; 2011 ; Women's Health Volume 7 ; 7 ; whea ; >
+      au < crawling ; exists ; 2011 ; Women's Health Volume 7 ; 7 ; whea ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Women's Health Volume 8 ; 8 ; whea ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Women's Health Volume 9 ; 9 ; whea ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Women's Health Volume 10 ; 10 ; whea ; >
