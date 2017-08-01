@@ -17,13 +17,13 @@
     
     param[journal_id] = ahe
 
-    au < exists ; 2005 ; Aging Health Volume 1 ; 1 ; https://www.futuremedicine.com/ >
-    au < exists ; 2006 ; Aging Health Volume 2 ; 2 ; https://www.futuremedicine.com/ >
-    au < exists ; 2007 ; Aging Health Volume 3 ; 3 ; https://www.futuremedicine.com/ >
-    au < exists ; 2008 ; Aging Health Volume 4 ; 4 ; https://www.futuremedicine.com/ >
-    au < exists ; 2009 ; Aging Health Volume 5 ; 5 ; https://www.futuremedicine.com/ >
-    au < exists ; 2010 ; Aging Health Volume 6 ; 6 ; https://www.futuremedicine.com/ >
-    au < exists ; 2011 ; Aging Health Volume 7 ; 7 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2005 ; Aging Health Volume 1 ; 1 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2006 ; Aging Health Volume 2 ; 2 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2007 ; Aging Health Volume 3 ; 3 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2008 ; Aging Health Volume 4 ; 4 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2009 ; Aging Health Volume 5 ; 5 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2010 ; Aging Health Volume 6 ; 6 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2011 ; Aging Health Volume 7 ; 7 ; https://www.futuremedicine.com/ >
     au < released ; 2012 ; Aging Health Volume 8 ; 8 ; http://www.futuremedicine.com/ >
     au < released ; 2013 ; Aging Health Volume 9 ; 9 ; http://www.futuremedicine.com/ >
 
@@ -38,17 +38,17 @@
     
     param[journal_id] = bmm
 
-    au < exists ; 2007 ; Biomarkers in Medicine Volume 1 ; 1 ; https://www.futuremedicine.com/ >
-    au < exists ; 2008 ; Biomarkers in Medicine Volume 2 ; 2 ; https://www.futuremedicine.com/ >
-    au < exists ; 2009 ; Biomarkers in Medicine Volume 3 ; 3 ; https://www.futuremedicine.com/ >
-    au < exists ; 2010 ; Biomarkers in Medicine Volume 4 ; 4 ; https://www.futuremedicine.com/ >
-    au < exists ; 2011 ; Biomarkers in Medicine Volume 5 ; 5 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2007 ; Biomarkers in Medicine Volume 1 ; 1 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2008 ; Biomarkers in Medicine Volume 2 ; 2 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2009 ; Biomarkers in Medicine Volume 3 ; 3 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2010 ; Biomarkers in Medicine Volume 4 ; 4 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2011 ; Biomarkers in Medicine Volume 5 ; 5 ; https://www.futuremedicine.com/ >
     au < released ; 2012 ; Biomarkers in Medicine Volume 6 ; 6 ; http://www.futuremedicine.com/ >
     au < released ; 2013 ; Biomarkers in Medicine Volume 7 ; 7 ; http://www.futuremedicine.com/ >
     au < released ; 2014 ; Biomarkers in Medicine Volume 8 ; 8 ; http://www.futuremedicine.com/ >
     au < released ; 2015 ; Biomarkers in Medicine Volume 9 ; 9 ; http://www.futuremedicine.com/ >
     au < released ; 2016 ; Biomarkers in Medicine Volume 10 ; 10 ; http://www.futuremedicine.com/ >
-    au < exists ; 2017 ; Biomarkers in Medicine Volume 11 ; 11 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2017 ; Biomarkers in Medicine Volume 11 ; 11 ; https://www.futuremedicine.com/ >
 
   }
 
@@ -137,7 +137,7 @@
     au < released ; 2014 ; CNS Oncology Volume 3 ; 3 ; http://www.futuremedicine.com/ >
     au < released ; 2015 ; CNS Oncology Volume 4 ; 4 ; http://www.futuremedicine.com/ >
     au < released ; 2016 ; CNS Oncology Volume 5 ; 5 ; http://www.futuremedicine.com/ >
-    au < exists ; 2017 ; CNS Oncology Volume 6 ; 6 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2017 ; CNS Oncology Volume 6 ; 6 ; https://www.futuremedicine.com/ >
 
   }
 
@@ -169,7 +169,7 @@
     param[journal_id] = cnc
 
     au < released ; 2016 ; Concussion Volume 1 ; 1 ; http://www.futuremedicine.com/ >
-    au < expected ; 2017 ; Concussion Volume 2 ; 2 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2017 ; Concussion Volume 2 ; 2 ; https://www.futuremedicine.com/ >
 
   }
 
@@ -200,15 +200,15 @@
     
     param[journal_id] = epi
 
-    au < exists ; 2009 ; Epigenomics Volume 1 ; 1 ; https://www.futuremedicine.com/ >
-    au < exists ; 2010 ; Epigenomics Volume 2 ; 2 ; https://www.futuremedicine.com/ >
-    au < exists ; 2011 ; Epigenomics Volume 3 ; 3 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2009 ; Epigenomics Volume 1 ; 1 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2010 ; Epigenomics Volume 2 ; 2 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2011 ; Epigenomics Volume 3 ; 3 ; https://www.futuremedicine.com/ >
     au < released ; 2012 ; Epigenomics Volume 4 ; 4 ; http://www.futuremedicine.com/ >
     au < released ; 2013 ; Epigenomics Volume 5 ; 5 ; http://www.futuremedicine.com/ >
     au < released ; 2014 ; Epigenomics Volume 6 ; 6 ; http://www.futuremedicine.com/ >
     au < released ; 2015 ; Epigenomics Volume 7 ; 7 ; http://www.futuremedicine.com/ >
     au < released ; 2016 ; Epigenomics Volume 8 ; 8 ; http://www.futuremedicine.com/ >
-    au < exists ; 2017 ; Epigenomics Volume 9 ; 9 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2017 ; Epigenomics Volume 9 ; 9 ; https://www.futuremedicine.com/ >
 
   }
 
@@ -222,19 +222,19 @@
     
     param[journal_id] = fca
 
-    au < exists ; 2005 ; Future Cardiology Volume 1 ; 1 ; https://www.futuremedicine.com/ >
-    au < exists ; 2006 ; Future Cardiology Volume 2 ; 2 ; https://www.futuremedicine.com/ >
-    au < exists ; 2007 ; Future Cardiology Volume 3 ; 3 ; https://www.futuremedicine.com/ >
-    au < exists ; 2008 ; Future Cardiology Volume 4 ; 4 ; https://www.futuremedicine.com/ >
-    au < exists ; 2009 ; Future Cardiology Volume 5 ; 5 ; https://www.futuremedicine.com/ >
-    au < exists ; 2010 ; Future Cardiology Volume 6 ; 6 ; https://www.futuremedicine.com/ >
-    au < exists ; 2011 ; Future Cardiology Volume 7 ; 7 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2005 ; Future Cardiology Volume 1 ; 1 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2006 ; Future Cardiology Volume 2 ; 2 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2007 ; Future Cardiology Volume 3 ; 3 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2008 ; Future Cardiology Volume 4 ; 4 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2009 ; Future Cardiology Volume 5 ; 5 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2010 ; Future Cardiology Volume 6 ; 6 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2011 ; Future Cardiology Volume 7 ; 7 ; https://www.futuremedicine.com/ >
     au < released ; 2012 ; Future Cardiology Volume 8 ; 8 ; http://www.futuremedicine.com/ >
     au < released ; 2013 ; Future Cardiology Volume 9 ; 9 ; http://www.futuremedicine.com/ >
     au < released ; 2014 ; Future Cardiology Volume 10 ; 10 ; http://www.futuremedicine.com/ >
     au < released ; 2015 ; Future Cardiology Volume 11 ; 11 ; http://www.futuremedicine.com/ >
     au < released ; 2016 ; Future Cardiology Volume 12 ; 12 ; http://www.futuremedicine.com/ >
-    au < exists ; 2017 ; Future Cardiology Volume 13 ; 13 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2017 ; Future Cardiology Volume 13 ; 13 ; https://www.futuremedicine.com/ >
 
   }
 
@@ -247,18 +247,18 @@
     
     param[journal_id] = fmb
 
-    au < exists ; 2006 ; Future Microbiology Volume 1 ; 1 ; https://www.futuremedicine.com/ >
-    au < exists ; 2007 ; Future Microbiology Volume 2 ; 2 ; https://www.futuremedicine.com/ >
-    au < exists ; 2008 ; Future Microbiology Volume 3 ; 3 ; https://www.futuremedicine.com/ >
-    au < exists ; 2009 ; Future Microbiology Volume 4 ; 4 ; https://www.futuremedicine.com/ >
-    au < exists ; 2010 ; Future Microbiology Volume 5 ; 5 ; https://www.futuremedicine.com/ >
-    au < exists ; 2011 ; Future Microbiology Volume 6 ; 6 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2006 ; Future Microbiology Volume 1 ; 1 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2007 ; Future Microbiology Volume 2 ; 2 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2008 ; Future Microbiology Volume 3 ; 3 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2009 ; Future Microbiology Volume 4 ; 4 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2010 ; Future Microbiology Volume 5 ; 5 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2011 ; Future Microbiology Volume 6 ; 6 ; https://www.futuremedicine.com/ >
     au < released ; 2012 ; Future Microbiology Volume 7 ; 7 ; http://www.futuremedicine.com/ >
     au < released ; 2013 ; Future Microbiology Volume 8 ; 8 ; http://www.futuremedicine.com/ >
     au < released ; 2014 ; Future Microbiology Volume 9 ; 9 ; http://www.futuremedicine.com/ >
     au < released ; 2015 ; Future Microbiology Volume 10 ; 10 ; http://www.futuremedicine.com/ >
     au < released ; 2016 ; Future Microbiology Volume 11 ; 11 ; http://www.futuremedicine.com/ >
-    au < exists ; 2017 ; Future Microbiology Volume 12 ; 12 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2017 ; Future Microbiology Volume 12 ; 12 ; https://www.futuremedicine.com/ >
 
   }
 
@@ -272,18 +272,18 @@
     
     param[journal_id] = fnl
 
-    au < exists ; 2006 ; Future Neurology Volume 1 ; 1 ; https://www.futuremedicine.com/ >
-    au < exists ; 2007 ; Future Neurology Volume 2 ; 2 ; https://www.futuremedicine.com/ >
-    au < exists ; 2008 ; Future Neurology Volume 3 ; 3 ; https://www.futuremedicine.com/ >
-    au < exists ; 2009 ; Future Neurology Volume 4 ; 4 ; https://www.futuremedicine.com/ >
-    au < exists ; 2010 ; Future Neurology Volume 5 ; 5 ; https://www.futuremedicine.com/ >
-    au < exists ; 2011 ; Future Neurology Volume 6 ; 6 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2006 ; Future Neurology Volume 1 ; 1 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2007 ; Future Neurology Volume 2 ; 2 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2008 ; Future Neurology Volume 3 ; 3 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2009 ; Future Neurology Volume 4 ; 4 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2010 ; Future Neurology Volume 5 ; 5 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2011 ; Future Neurology Volume 6 ; 6 ; https://www.futuremedicine.com/ >
     au < released ; 2012 ; Future Neurology Volume 7 ; 7 ; http://www.futuremedicine.com/ >
     au < released ; 2013 ; Future Neurology Volume 8 ; 8 ; http://www.futuremedicine.com/ >
     au < released ; 2014 ; Future Neurology Volume 9 ; 9 ; http://www.futuremedicine.com/ >
     au < released ; 2015 ; Future Neurology Volume 10 ; 10 ; http://www.futuremedicine.com/ >
     au < released ; 2016 ; Future Neurology Volume 11 ; 11 ; http://www.futuremedicine.com/ >
-    au < exists ; 2017 ; Future Neurology Volume 12 ; 12 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2017 ; Future Neurology Volume 12 ; 12 ; https://www.futuremedicine.com/ >
 
   }
 
@@ -297,19 +297,19 @@
     
     param[journal_id] = fon
 
-    au < exists ; 2005 ; Future Oncology Volume 1 ; 1 ; https://www.futuremedicine.com/ >
-    au < exists ; 2006 ; Future Oncology Volume 2 ; 2 ; https://www.futuremedicine.com/ >
-    au < exists ; 2007 ; Future Oncology Volume 3 ; 3 ; https://www.futuremedicine.com/ >
-    au < exists ; 2008 ; Future Oncology Volume 4 ; 4 ; https://www.futuremedicine.com/ >
-    au < exists ; 2009 ; Future Oncology Volume 5 ; 5 ; https://www.futuremedicine.com/ >
-    au < exists ; 2010 ; Future Oncology Volume 6 ; 6 ; https://www.futuremedicine.com/ >
-    au < exists ; 2011 ; Future Oncology Volume 7 ; 7 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2005 ; Future Oncology Volume 1 ; 1 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2006 ; Future Oncology Volume 2 ; 2 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2007 ; Future Oncology Volume 3 ; 3 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2008 ; Future Oncology Volume 4 ; 4 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2009 ; Future Oncology Volume 5 ; 5 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2010 ; Future Oncology Volume 6 ; 6 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2011 ; Future Oncology Volume 7 ; 7 ; https://www.futuremedicine.com/ >
     au < released ; 2012 ; Future Oncology Volume 8 ; 8 ; http://www.futuremedicine.com/ >
     au < released ; 2013 ; Future Oncology Volume 9 ; 9 ; http://www.futuremedicine.com/ >
     au < released ; 2014 ; Future Oncology Volume 10 ; 10 ; http://www.futuremedicine.com/ >
     au < released ; 2015 ; Future Oncology Volume 11 ; 11 ; http://www.futuremedicine.com/ >
     au < released ; 2016 ; Future Oncology Volume 12 ; 12 ; http://www.futuremedicine.com/ >
-    au < exists ; 2017 ; Future Oncology Volume 13 ; 13 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2017 ; Future Oncology Volume 13 ; 13 ; https://www.futuremedicine.com/ >
 
   }
 
@@ -323,18 +323,18 @@
     
     param[journal_id] = fvl
 
-    au < exists ; 2006 ; Future Virology Volume 1 ; 1 ; https://www.futuremedicine.com/ >
-    au < exists ; 2007 ; Future Virology Volume 2 ; 2 ; https://www.futuremedicine.com/ >
-    au < exists ; 2008 ; Future Virology Volume 3 ; 3 ; https://www.futuremedicine.com/ >
-    au < exists ; 2009 ; Future Virology Volume 4 ; 4 ; https://www.futuremedicine.com/ >
-    au < exists ; 2010 ; Future Virology Volume 5 ; 5 ; https://www.futuremedicine.com/ >
-    au < exists ; 2011 ; Future Virology Volume 6 ; 6 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2006 ; Future Virology Volume 1 ; 1 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2007 ; Future Virology Volume 2 ; 2 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2008 ; Future Virology Volume 3 ; 3 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2009 ; Future Virology Volume 4 ; 4 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2010 ; Future Virology Volume 5 ; 5 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2011 ; Future Virology Volume 6 ; 6 ; https://www.futuremedicine.com/ >
     au < released ; 2012 ; Future Virology Volume 7 ; 7 ; http://www.futuremedicine.com/ >
     au < released ; 2013 ; Future Virology Volume 8 ; 8 ; http://www.futuremedicine.com/ >
     au < released ; 2014 ; Future Virology Volume 9 ; 9 ; http://www.futuremedicine.com/ >
     au < released ; 2015 ; Future Virology Volume 10 ; 10 ; http://www.futuremedicine.com/ >
     au < released ; 2016 ; Future Virology Volume 11 ; 11 ; http://www.futuremedicine.com/ >
-    au < exists ; 2017 ; Future Virology Volume 12 ; 12 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2017 ; Future Virology Volume 12 ; 12 ; https://www.futuremedicine.com/ >
 
   }
 
@@ -380,8 +380,8 @@
     param[journal_id] = hiv
     comment[continues] = 1746-9600
 
-    au < exists ; 2009 ; HIV Therapy Volume 3 ; 3 ; https://www.futuremedicine.com/ >
-    au < exists ; 2010 ; HIV Therapy Volume 4 ; 4 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2009 ; HIV Therapy Volume 3 ; 3 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2010 ; HIV Therapy Volume 4 ; 4 ; https://www.futuremedicine.com/ >
     
   }
 
@@ -411,15 +411,15 @@
     
     param[journal_id] = imt
 
-    au < exists ; 2009 ; Immunotherapy Volume 1 ; 1 ; https://www.futuremedicine.com/ >
-    au < exists ; 2010 ; Immunotherapy Volume 2 ; 2 ; https://www.futuremedicine.com/ >
-    au < exists ; 2011 ; Immunotherapy Volume 3 ; 3 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2009 ; Immunotherapy Volume 1 ; 1 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2010 ; Immunotherapy Volume 2 ; 2 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2011 ; Immunotherapy Volume 3 ; 3 ; https://www.futuremedicine.com/ >
     au < released ; 2012 ; Immunotherapy Volume 4 ; 4 ; http://www.futuremedicine.com/ >
     au < released ; 2013 ; Immunotherapy Volume 5 ; 5 ; http://www.futuremedicine.com/ >
     au < released ; 2014 ; Immunotherapy Volume 6 ; 6 ; http://www.futuremedicine.com/ >
-    au < exists ; 2015 ; Immunotherapy Volume 7 ; 7 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2015 ; Immunotherapy Volume 7 ; 7 ; https://www.futuremedicine.com/ >
     au < released ; 2016 ; Immunotherapy Volume 8 ; 8 ; http://www.futuremedicine.com/ >
-    au < exists ; 2017 ; Immunotherapy Volume 9 ; 9 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2017 ; Immunotherapy Volume 9 ; 9 ; https://www.futuremedicine.com/ >
 
   }
 
@@ -454,7 +454,7 @@
     au < released ; 2014 ; International Journal of Endocrine Oncology Volume 1 ; 1 ; http://www.futuremedicine.com/ >
     au < released ; 2015 ; International Journal of Endocrine Oncology Volume 2 ; 2 ; http://www.futuremedicine.com/ >
     au < released ; 2016 ; International Journal of Endocrine Oncology Volume 3 ; 3 ; http://www.futuremedicine.com/ >
-    au < exists ; 2017 ; International Journal of Endocrine Oncology Volume 4 ; 4 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2017 ; International Journal of Endocrine Oncology Volume 4 ; 4 ; https://www.futuremedicine.com/ >
 
   }
 
@@ -472,7 +472,7 @@
     au < released ; 2014 ; International Journal of Hematologic Oncology Volume 3 ; 3 ; http://www.futuremedicine.com/ >
     au < released ; 2015 ; International Journal of Hematologic Oncology Volume 4 ; 4 ; http://www.futuremedicine.com/ >
     au < released ; 2016 ; International Journal of Hematologic Oncology Volume 5 ; 5 ; http://www.futuremedicine.com/ >
-    au < expected ; 2017 ; International Journal of Hematologic Oncology Volume 6 ; 6 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2017 ; International Journal of Hematologic Oncology Volume 6 ; 6 ; https://www.futuremedicine.com/ >
 
   }
 
@@ -503,7 +503,7 @@
     
     param[journal_id] = 3dp
 
-    au < exists ; 2017 ; Journal of 3D Printing in Medicine Volume 1 ; 1 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2017 ; Journal of 3D Printing in Medicine Volume 1 ; 1 ; https://www.futuremedicine.com/ >
 
   }
 
@@ -521,7 +521,7 @@
     au < released ; 2014 ; Journal of Comparative Effectiveness Research Volume 3 ; 3 ; http://www.futuremedicine.com/ >
     au < released ; 2015 ; Journal of Comparative Effectiveness Research Volume 4 ; 4 ; http://www.futuremedicine.com/ >
     au < released ; 2016 ; Journal of Comparative Effectiveness Research Volume 5 ; 5 ; http://www.futuremedicine.com/ >
-    au < exists ; 2017 ; Journal of Comparative Effectiveness Research Volume 6 ; 6 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2017 ; Journal of Comparative Effectiveness Research Volume 6 ; 6 ; https://www.futuremedicine.com/ >
 
   }
 
@@ -539,7 +539,7 @@
     au < released ; 2014 ; Lung Cancer Management Volume 3 ; 3 ; http://www.futuremedicine.com/ >
     au < released ; 2015 ; Lung Cancer Management Volume 4 ; 4 ; http://www.futuremedicine.com/ >
     au < released ; 2016 ; Lung Cancer Management Volume 5 ; 5 ; http://www.futuremedicine.com/ >
-    au < expected ; 2017 ; Lung Cancer Management Volume 6 ; 6 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2017 ; Lung Cancer Management Volume 6 ; 6 ; https://www.futuremedicine.com/ >
 
   }
 
@@ -556,7 +556,7 @@
     au < released ; 2014 ; Melanoma Management Volume 1 ; 1 ; http://www.futuremedicine.com/ >
     au < released ; 2015 ; Melanoma Management Volume 2 ; 2 ; http://www.futuremedicine.com/ >
     au < released ; 2016 ; Melanoma Management Volume 3 ; 3 ; http://www.futuremedicine.com/ >
-    au < exists ; 2017 ; Melanoma Management Volume 4 ; 4 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2017 ; Melanoma Management Volume 4 ; 4 ; https://www.futuremedicine.com/ >
 
   }
 
@@ -570,18 +570,18 @@
     
     param[journal_id] = nnm
 
-    au < exists ; 2006 ; Nanomedicine Volume 1 ; 1 ; https://www.futuremedicine.com/ >
-    au < exists ; 2007 ; Nanomedicine Volume 2 ; 2 ; https://www.futuremedicine.com/ >
-    au < exists ; 2008 ; Nanomedicine Volume 3 ; 3 ; https://www.futuremedicine.com/ >
-    au < exists ; 2009 ; Nanomedicine Volume 4 ; 4 ; https://www.futuremedicine.com/ >
-    au < exists ; 2010 ; Nanomedicine Volume 5 ; 5 ; https://www.futuremedicine.com/ >
-    au < exists ; 2011 ; Nanomedicine Volume 6 ; 6 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2006 ; Nanomedicine Volume 1 ; 1 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2007 ; Nanomedicine Volume 2 ; 2 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2008 ; Nanomedicine Volume 3 ; 3 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2009 ; Nanomedicine Volume 4 ; 4 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2010 ; Nanomedicine Volume 5 ; 5 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2011 ; Nanomedicine Volume 6 ; 6 ; https://www.futuremedicine.com/ >
     au < released ; 2012 ; Nanomedicine Volume 7 ; 7 ; http://www.futuremedicine.com/ >
     au < released ; 2013 ; Nanomedicine Volume 8 ; 8 ; http://www.futuremedicine.com/ >
     au < released ; 2014 ; Nanomedicine Volume 9 ; 9 ; http://www.futuremedicine.com/ >
     au < released ; 2015 ; Nanomedicine Volume 10 ; 10 ; http://www.futuremedicine.com/ >
     au < released ; 2016 ; Nanomedicine Volume 11 ; 11 ; http://www.futuremedicine.com/ >
-    au < exists ; 2017 ; Nanomedicine Volume 12 ; 12 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2017 ; Nanomedicine Volume 12 ; 12 ; https://www.futuremedicine.com/ >
 
   }
 
@@ -595,13 +595,13 @@
     
     param[journal_id] = nmt
 
-    au < exists ; 2011 ; Neurodegenerative Disease Management Volume 1 ; 1 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2011 ; Neurodegenerative Disease Management Volume 1 ; 1 ; https://www.futuremedicine.com/ >
     au < released ; 2012 ; Neurodegenerative Disease Management Volume 2 ; 2 ; http://www.futuremedicine.com/ >
     au < released ; 2013 ; Neurodegenerative Disease Management Volume 3 ; 3 ; http://www.futuremedicine.com/ >
     au < released ; 2014 ; Neurodegenerative Disease Management Volume 4 ; 4 ; http://www.futuremedicine.com/ >
     au < released ; 2015 ; Neurodegenerative Disease Management Volume 5 ; 5 ; http://www.futuremedicine.com/ >
     au < released ; 2016 ; Neurodegenerative Disease Management Volume 6 ; 6 ; http://www.futuremedicine.com/ >
-    au < exists ; 2017 ; Neurodegenerative Disease Management Volume 7 ; 7 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2017 ; Neurodegenerative Disease Management Volume 7 ; 7 ; https://www.futuremedicine.com/ >
 
   }
 
@@ -630,13 +630,13 @@
     
     param[journal_id] = pmt
 
-    au < exists ; 2011 ; Pain Management Volume 1 ; 1 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2011 ; Pain Management Volume 1 ; 1 ; https://www.futuremedicine.com/ >
     au < released ; 2012 ; Pain Management Volume 2 ; 2 ; http://www.futuremedicine.com/ >
     au < released ; 2013 ; Pain Management Volume 3 ; 3 ; http://www.futuremedicine.com/ >
     au < released ; 2014 ; Pain Management Volume 4 ; 4 ; http://www.futuremedicine.com/ >
     au < released ; 2015 ; Pain Management Volume 5 ; 5 ; http://www.futuremedicine.com/ >
     au < released ; 2016 ; Pain Management Volume 6 ; 6 ; http://www.futuremedicine.com/ >
-    au < exists ; 2017 ; Pain Management Volume 7 ; 7 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2017 ; Pain Management Volume 7 ; 7 ; https://www.futuremedicine.com/ >
 
   }
 
@@ -650,10 +650,10 @@
     
     param[journal_id] = phe
 
-    au < exists ; 2007 ; Pediatric Health Volume 1 ; 1 ; https://www.futuremedicine.com/ >
-    au < exists ; 2008 ; Pediatric Health Volume 2 ; 2 ; https://www.futuremedicine.com/ >
-    au < exists ; 2009 ; Pediatric Health Volume 3 ; 3 ; https://www.futuremedicine.com/ >
-    au < exists ; 2010 ; Pediatric Health Volume 4 ; 4 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2007 ; Pediatric Health Volume 1 ; 1 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2008 ; Pediatric Health Volume 2 ; 2 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2009 ; Pediatric Health Volume 3 ; 3 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2010 ; Pediatric Health Volume 4 ; 4 ; https://www.futuremedicine.com/ >
    
   }
 
@@ -667,20 +667,20 @@
     
     param[journal_id] = pme
 
-    au < exists ; 2004 ; Personalized Medicine Volume 1 ; 1 ; https://www.futuremedicine.com/ >
-    au < exists ; 2005 ; Personalized Medicine Volume 2 ; 2 ; https://www.futuremedicine.com/ >
-    au < exists ; 2006 ; Personalized Medicine Volume 3 ; 3 ; https://www.futuremedicine.com/ >
-    au < exists ; 2007 ; Personalized Medicine Volume 4 ; 4 ; https://www.futuremedicine.com/ >
-    au < exists ; 2008 ; Personalized Medicine Volume 5 ; 5 ; https://www.futuremedicine.com/ >
-    au < exists ; 2009 ; Personalized Medicine Volume 6 ; 6 ; https://www.futuremedicine.com/ >
-    au < exists ; 2010 ; Personalized Medicine Volume 7 ; 7 ; https://www.futuremedicine.com/ >
-    au < exists ; 2011 ; Personalized Medicine Volume 8 ; 8 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2004 ; Personalized Medicine Volume 1 ; 1 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2005 ; Personalized Medicine Volume 2 ; 2 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2006 ; Personalized Medicine Volume 3 ; 3 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2007 ; Personalized Medicine Volume 4 ; 4 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2008 ; Personalized Medicine Volume 5 ; 5 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2009 ; Personalized Medicine Volume 6 ; 6 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2010 ; Personalized Medicine Volume 7 ; 7 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2011 ; Personalized Medicine Volume 8 ; 8 ; https://www.futuremedicine.com/ >
     au < released ; 2012 ; Personalized Medicine Volume 9 ; 9 ; http://www.futuremedicine.com/ >
     au < released ; 2013 ; Personalized Medicine Volume 10 ; 10 ; http://www.futuremedicine.com/ >
     au < released ; 2014 ; Personalized Medicine Volume 11 ; 11 ; http://www.futuremedicine.com/ >
     au < released ; 2015 ; Personalized Medicine Volume 12 ; 12 ; http://www.futuremedicine.com/ >
     au < released ; 2016 ; Personalized Medicine Volume 13 ; 13 ; http://www.futuremedicine.com/ >
-    au < exists ; 2017 ; Personalized Medicine Volume 14 ; 14 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2017 ; Personalized Medicine Volume 14 ; 14 ; https://www.futuremedicine.com/ >
 
   }
 
@@ -694,24 +694,24 @@
     
     param[journal_id] = pgs
 
-    au < exists ; 2000 ; Pharmacogenomics Volume 1 ; 1 ; https://www.futuremedicine.com/ >
-    au < exists ; 2001 ; Pharmacogenomics Volume 2 ; 2 ; https://www.futuremedicine.com/ >
-    au < exists ; 2002 ; Pharmacogenomics Volume 3 ; 3 ; https://www.futuremedicine.com/ >
-    au < exists ; 2003 ; Pharmacogenomics Volume 4 ; 4 ; https://www.futuremedicine.com/ >
-    au < exists ; 2004 ; Pharmacogenomics Volume 5 ; 5 ; https://www.futuremedicine.com/ >
-    au < exists ; 2005 ; Pharmacogenomics Volume 6 ; 6 ; https://www.futuremedicine.com/ >
-    au < exists ; 2006 ; Pharmacogenomics Volume 7 ; 7 ; https://www.futuremedicine.com/ >
-    au < exists ; 2007 ; Pharmacogenomics Volume 8 ; 8 ; https://www.futuremedicine.com/ >
-    au < exists ; 2008 ; Pharmacogenomics Volume 9 ; 9 ; https://www.futuremedicine.com/ >
-    au < exists ; 2009 ; Pharmacogenomics Volume 10 ; 10 ; https://www.futuremedicine.com/ >
-    au < exists ; 2010 ; Pharmacogenomics Volume 11 ; 11 ; https://www.futuremedicine.com/ >
-    au < exists ; 2011 ; Pharmacogenomics Volume 12 ; 12 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2000 ; Pharmacogenomics Volume 1 ; 1 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2001 ; Pharmacogenomics Volume 2 ; 2 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2002 ; Pharmacogenomics Volume 3 ; 3 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2003 ; Pharmacogenomics Volume 4 ; 4 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2004 ; Pharmacogenomics Volume 5 ; 5 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2005 ; Pharmacogenomics Volume 6 ; 6 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2006 ; Pharmacogenomics Volume 7 ; 7 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2007 ; Pharmacogenomics Volume 8 ; 8 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2008 ; Pharmacogenomics Volume 9 ; 9 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2009 ; Pharmacogenomics Volume 10 ; 10 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2010 ; Pharmacogenomics Volume 11 ; 11 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2011 ; Pharmacogenomics Volume 12 ; 12 ; https://www.futuremedicine.com/ >
     au < released ; 2012 ; Pharmacogenomics Volume 13 ; 13 ; http://www.futuremedicine.com/ >
     au < released ; 2013 ; Pharmacogenomics Volume 14 ; 14 ; http://www.futuremedicine.com/ >
     au < released ; 2014 ; Pharmacogenomics Volume 15 ; 15 ; http://www.futuremedicine.com/ >
     au < released ; 2015 ; Pharmacogenomics Volume 16 ; 16 ; http://www.futuremedicine.com/ >
     au < released ; 2016 ; Pharmacogenomics Volume 17 ; 17 ; http://www.futuremedicine.com/ >
-    au < exists ; 2017 ; Pharmacogenomics Volume 18 ; 18 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2017 ; Pharmacogenomics Volume 18 ; 18 ; https://www.futuremedicine.com/ >
 
   }
 
@@ -725,18 +725,18 @@
     
     param[journal_id] = rme
 
-    au < exists ; 2006 ; Regenerative Medicine Volume 1 ; 1 ; https://www.futuremedicine.com/ >
-    au < exists ; 2007 ; Regenerative Medicine Volume 2 ; 2 ; https://www.futuremedicine.com/ >
-    au < exists ; 2008 ; Regenerative Medicine Volume 3 ; 3 ; https://www.futuremedicine.com/ >
-    au < exists ; 2009 ; Regenerative Medicine Volume 4 ; 4 ; https://www.futuremedicine.com/ >
-    au < exists ; 2010 ; Regenerative Medicine Volume 5 ; 5 ; https://www.futuremedicine.com/ >
-    au < exists ; 2011 ; Regenerative Medicine Volume 6 ; 6 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2006 ; Regenerative Medicine Volume 1 ; 1 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2007 ; Regenerative Medicine Volume 2 ; 2 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2008 ; Regenerative Medicine Volume 3 ; 3 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2009 ; Regenerative Medicine Volume 4 ; 4 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2010 ; Regenerative Medicine Volume 5 ; 5 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2011 ; Regenerative Medicine Volume 6 ; 6 ; https://www.futuremedicine.com/ >
     au < released ; 2012 ; Regenerative Medicine Volume 7 ; 7 ; http://www.futuremedicine.com/ >
     au < released ; 2013 ; Regenerative Medicine Volume 8 ; 8 ; http://www.futuremedicine.com/ >
     au < released ; 2014 ; Regenerative Medicine Volume 9 ; 9 ; http://www.futuremedicine.com/ >
     au < released ; 2015 ; Regenerative Medicine Volume 10 ; 10 ; http://www.futuremedicine.com/ >
     au < released ; 2016 ; Regenerative Medicine Volume 11 ; 11 ; http://www.futuremedicine.com/ >
-    au < exists ; 2017 ; Regenerative Medicine Volume 12 ; 12 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2017 ; Regenerative Medicine Volume 12 ; 12 ; https://www.futuremedicine.com/ >
 
   }
 
