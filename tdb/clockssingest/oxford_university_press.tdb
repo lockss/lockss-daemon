@@ -10325,12 +10325,11 @@
 
   }
 
-  #Publisher and previous TDB differ on issn - 0022-2858 vs 0022-2585 
   {
 
     title <
       name = Journal of Medical Entomology ;
-      issn = 0022-2858 ;
+      issn = 0022-2585 ;
       eissn = 1938-2928 ;
       issnl = 0022-2585
     >
@@ -10805,7 +10804,7 @@
       name = Journal of Professions and Organization ;
       issn = 2051-8803 ;
       eissn = 2051-8811 ;
-      issnl = 2051-8811
+      issnl = 2051-8803
     >
 
     param[journal_id] = jpo
@@ -18350,7 +18349,7 @@
     title <
       name = The British Journal of Social Work ;
       issn = 0045-3102 ;
-      eissn = 1468-263 ;
+      eissn = 1468-263X ;
       issnl = 0045-3102
     >
 
