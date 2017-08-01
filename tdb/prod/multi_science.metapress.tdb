@@ -339,9 +339,9 @@
 
     param[journal_issn] = 2041-4196
 
-    au < down ; 2010 ; International Journal of Protective Structures Volume 1 ; 1 >
-    au < down ; 2011 ; International Journal of Protective Structures Volume 2 ; 2 >
-    au < down ; 2012 ; International Journal of Protective Structures Volume 3 ; 3 >
+    au < superseded ; 2010 ; International Journal of Protective Structures Volume 1 [superseded] ; 1 >
+    au < superseded ; 2011 ; International Journal of Protective Structures Volume 2 [superseded] ; 2 >
+    au < superseded ; 2012 ; International Journal of Protective Structures Volume 3 [superseded] ; 3 >
     au < doNotProcess ; 2013 ; International Journal of Protective Structures Volume 4 ; 4 >
 
   }
@@ -410,9 +410,9 @@
     param[journal_issn] = 1756-8277
 
     au < doNotProcess ; 2009 ; International Journal of Spray and Combustion Dynamics Volume 1 ; 1 >
-    au < down ; 2010 ; International Journal of Spray and Combustion Dynamics Volume 2 ; 2 >
-    au < down ; 2011 ; International Journal of Spray and Combustion Dynamics Volume 3 ; 3 >
-    au < down ; 2012 ; International Journal of Spray and Combustion Dynamics Volume 4 ; 4 >
+    au < superseded ; 2010 ; International Journal of Spray and Combustion Dynamics Volume 2 [superseded] ; 2 >
+    au < superseded ; 2011 ; International Journal of Spray and Combustion Dynamics Volume 3 [superseded] ; 3 >
+    au < superseded ; 2012 ; International Journal of Spray and Combustion Dynamics Volume 4 [superseded] ; 4 >
     au < doNotProcess ; 2013 ; International Journal of Spray and Combustion Dynamics Volume 5 ; 5 >
     au < doNotProcess ; 2014 ; International Journal of Spray and Combustion Dynamics Volume 6 ; 6 >
     au < doNotProcess ; 2015 ; International Journal of Spray and Combustion Dynamics Volume 7 ; 7 >
@@ -494,9 +494,9 @@
     au < doNotProcess ; 2007 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 26 ; 26 >
     au < doNotProcess ; 2008 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 27 ; 27 >
     au < doNotProcess ; 2009 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 28 ; 28 >
-    au < down ; 2010 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 29 ; 29 >
-    au < down ; 2011 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 30 ; 30 >
-    au < down ; 2012 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 31 ; 31 >
+    au < superseded ; 2010 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 29 [superseded] ; 29 >
+    au < superseded ; 2011 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 30 [superseded] ; 30 >
+    au < superseded ; 2012 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 31 [superseded] ; 31 >
     au < doNotProcess ; 2013 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 32 ; 32 >
     au < doNotProcess ; 2014 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 33 ; 33 >
     au < doNotProcess ; 2015 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 34 ; 34 >
@@ -596,9 +596,9 @@
     param[journal_issn] = 1757-482X
 
     au < doNotProcess ; 2009 ; The Journal of Computational Multiphase Flows Volume 1 ; 1 >
-    au < down ; 2010 ; The Journal of Computational Multiphase Flows Volume 2 ; 2 >
-    au < down ; 2011 ; The Journal of Computational Multiphase Flows Volume 3 ; 3 >
-    au < down ; 2012 ; The Journal of Computational Multiphase Flows Volume 4 ; 4 >
+    au < superseded ; 2010 ; The Journal of Computational Multiphase Flows Volume 2 [superseded] ; 2 >
+    au < superseded ; 2011 ; The Journal of Computational Multiphase Flows Volume 3 [superseded] ; 3 >
+    au < superseded ; 2012 ; The Journal of Computational Multiphase Flows Volume 4 [superseded] ; 4 >
     au < doNotProcess ; 2013 ; The Journal of Computational Multiphase Flows Volume 5 ; 5 >
 
   }
@@ -623,8 +623,8 @@
     au < doNotProcess ; 2007 ; Wind Engineering Volume 31 ; 31 >
     au < doNotProcess ; 2008 ; Wind Engineering Volume 32 ; 32 >
     au < doNotProcess ; 2009 ; Wind Engineering Volume 33 ; 33 >
-    au < down ; 2010 ; Wind Engineering Volume 34 ; 34 >
-    au < down ; 2011 ; Wind Engineering Volume 35 ; 35 >
+    au < superseded ; 2010 ; Wind Engineering Volume 34 [superseded] ; 34 >
+    au < superseded ; 2011 ; Wind Engineering Volume 35 [superseded] ; 35 >
     au < superseded ; 2012 ; Wind Engineering Volume 36 [superseded] ; 36 >
     au < doNotProcess ; 2013 ; Wind Engineering Volume 37 ; 37 >
     au < doNotProcess ; 2014 ; Wind Engineering Volume 38 ; 38 >
