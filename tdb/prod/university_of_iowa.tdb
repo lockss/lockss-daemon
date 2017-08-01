@@ -27,6 +27,7 @@
       au < released ; 2014 ; Annals at Iowa Volume 73 ; 73 >
       au < released ; 2015 ; Annals at Iowa Volume 74 ; 74 >
       au < released ; 2016 ; Annals at Iowa Volume 75 ; 75 >
+      au < expected ; 2017 ; Annals at Iowa Volume 76 ; 76 >
 
     }
     
@@ -78,7 +79,6 @@
       au < exists ; 2013 ; B Sides Volume 2013 ; 2013 >
       au < exists ; 2014 ; B Sides Volume 2014 ; 2014 >
       au < exists ; 2015 ; B Sides Volume 2015 ; 2015 >
-      au < exists ; 2016 ; B Sides Volume 2016 ; 2016 >
 
     }
     
@@ -94,13 +94,27 @@
       param[journal_abbr] = dadasur
       implicit < status ; year ; name ; param[volume] >
 
+      au < exists ; 1971 ; Dada/Surrealism Volume 1 ; 1 >
+      au < exists ; 1972 ; Dada/Surrealism Volume 2 ; 2 >
+      au < exists ; 1973 ; Dada/Surrealism Volume 3 ; 3 >
+      au < exists ; 1974 ; Dada/Surrealism Volume 4 ; 4 >
+      au < exists ; 1975 ; Dada/Surrealism Volume 5 ; 5 >
+      au < exists ; 1976 ; Dada/Surrealism Volume 6 ; 6 >
+      au < exists ; 1977 ; Dada/Surrealism Volume 7 ; 7 >
+      au < exists ; 1978 ; Dada/Surrealism Volume 8 ; 8 >
+      au < exists ; 1979 ; Dada/Surrealism Volume 9 ; 9 >
+      au < exists ; 1982 ; Dada/Surrealism Volume 10 ; 10 >
+      au < doesNotExist ; 0 ; Dada/Surrealism Volume 11 ; 11 >
+      au < exists ; 1983 ; Dada/Surrealism Volume 12 ; 12 >
+      au < exists ; 1984 ; Dada/Surrealism Volume 13 ; 13 >
+      au < exists ; 1985 ; Dada/Surrealism Volume 14 ; 14 >
+      au < exists ; 1986 ; Dada/Surrealism Volume 15 ; 15 >
+      au < exists ; 1987 ; Dada/Surrealism Volume 16 ; 16 >
       au < manifest ; 1988 ; Dada/Surrealism Volume 17 ; 17 >
       au < manifest ; 1990 ; Dada/Surrealism Volume 18 ; 18 >
       au < released ; 2013 ; Dada/Surrealism Volume 19 ; 19 >
-      au < released ; 2014 ; Dada/Surrealism Volume 20 ; 20 >
-      au < manifest ; 2014 ; Dada/Surrealism Volume 21 ; 21 >
-      au < exists ; 2015 ; Dada/Surrealism Volume 22 ; 22 >
-      au < exists ; 2016 ; Dada/Surrealism Volume 23 ; 23 >
+      au < released ; 2015 ; Dada/Surrealism Volume 20 ; 20 >
+      au < manifest ; 2017 ; Dada/Surrealism Volume 21 ; 21 >
 
     }
     
@@ -131,6 +145,7 @@
       au < released ; 2014 ; Electronic Journal of Africana Bibliography Volume 14 ; 14 >
       au < released ; 2015 ; Electronic Journal of Africana Bibliography Volume 15 ; 15 >
       au < released ; 2016 ; Electronic Journal of Africana Bibliography Volume 16 ; 16 >
+      au < expected ; 2017 ; Electronic Journal of Africana Bibliography Volume 17 ; 17 >
 
     }
     
@@ -167,6 +182,7 @@
       au < released ; 2013-2014 ; Iowa Historical Review Volume 4 ; 4 >
       au < released ; 2015 ; Iowa Historical Review Volume 5 ; 5 >
       au < released ; 2016 ; Iowa Historical Review Volume 6 ; 6 >
+      au < expected ; 2017 ; Iowa Historical Review Volume 7 ; 7 >
 
     }
     
@@ -208,6 +224,7 @@
       au < released ; 2014 ; Iowa Journal of Cultural Studies Volume 15 ; 15 >
       au < released ; 2015 ; Iowa Journal of Cultural Studies Volume 16 ; 16 >
       au < manifest ; 2016 ; Iowa Journal of Cultural Studies Volume 17 ; 17 >
+      au < expected ; 2017 ; Iowa Journal of Cultural Studies Volume 18 ; 18 >
 
     }
     
@@ -234,7 +251,6 @@
       au < released ; 1988 ; Iowa Journal of Literary Studies Volume 9 ; 9 >
       au < released ; 1989 ; Iowa Journal of Literary Studies Volume 10 ; 10 >
       au < released ; 1991 ; Iowa Journal of Literary Studies Volume 11 ; 11 >
-      au < expected ; 2014 ; Iowa Journal of Literary Studies Volume 12 ; 12 >
 
     }
     
@@ -252,9 +268,8 @@
       au < released ; 2011 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 1 ; 1 >
       au < released ; 2012 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 2 ; 2 >
       au < released ; 2013 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 3 ; 3 >
-      au < released ; 2014 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 4 ; 4 >
-      au < released ; 2015 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 5 ; 5 >
-      au < expected ; 2016 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 6 ; 6 >
+      au < released ; 2015 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 4 ; 4 >
+      au < released ; 2016 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 5 ; 5 >
 
     }
     
@@ -278,6 +293,7 @@
       au < released ; 2014 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2014 ; 2014 >
       au < released ; 2015 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2015 ; 2015 >
       au < released ; 2016 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2016 ; 2016 >
+      au < expected ; 2017 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2017 ; 2017 >
 
     }
     
@@ -345,6 +361,7 @@
       au < released ; 2014 ; Medieval Feminist Forum Volume 50 ; 50 >
       au < released ; 2015 ; Medieval Feminist Forum Volume 51 ; 51 >
       au < released ; 2016 ; Medieval Feminist Forum Volume 52 ; 52 >
+      au < expected ; 2017 ; Medieval Feminist Forum Volume 53 ; 53 >
 
     }
     
@@ -371,6 +388,7 @@
       au < released ; 2014 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 10 ; 10 >
       au < released ; 2015 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 11 ; 11 >
       au < released ; 2016 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 12 ; 12 >
+      au < expected ; 2017 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 13 ; 13 >
 
     }
     
@@ -391,6 +409,7 @@
       au < released ; 2014 ; Proceedings in Obstetrics and Gynecology Volume 4 ; 4 >
       au < released ; 2015 ; Proceedings in Obstetrics and Gynecology Volume 5 ; 5 >
       au < released ; 2016 ; Proceedings in Obstetrics and Gynecology Volume 6 ; 6 >
+      au < expected ; 2017 ; Proceedings in Obstetrics and Gynecology Volume 7 ; 7 >
 
     }
     
@@ -504,6 +523,7 @@
       au < released ; 2014-2015 ; Walt Whitman Quarterly Review Volume 32 ; 32 >
       au < released ; 2015-2016 ; Walt Whitman Quarterly Review Volume 33 ; 33 >
       au < manifest ; 2016-2017 ; Walt Whitman Quarterly Review Volume 34 ; 34 >
+      au < expected ; 2017-2018 ; Walt Whitman Quarterly Review Volume 35 ; 35 >
 
     }
     
