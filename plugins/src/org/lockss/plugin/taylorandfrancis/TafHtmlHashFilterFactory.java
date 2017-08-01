@@ -88,8 +88,8 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
             // KEEP popup window content area [showPopup]
             HtmlNodeFilters.tagWithAttribute("body", "class", "popupBody"),
             // New skin 2017 - re-examining all aspects from scratch
-            // TOC
-            HtmlNodeFilters.tagWithAttribute("div", "class","tocArticleEntry"),
+            // TOC (now Regex, to catch class= with multiple entries
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class","tocArticleEntry"),
             // Abstract
             // Full text html - used doi/(full|abs)/10.1080/01650424.2016.1167222
             HtmlNodeFilters.tagWithAttribute("div", "class","publicationContentTitle"),
