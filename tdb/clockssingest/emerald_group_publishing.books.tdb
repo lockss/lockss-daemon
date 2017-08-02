@@ -90,10 +90,10 @@
 
       #param[journal_issn] = 1877-6361
 
-      au < testing ; exists ; 2009 ;  ; 9781848558328 ; 9781848558328 ; Advanced Series in Management Volume 6 ; >
-      au < testing ; exists ; 2010 ;  ; 9780857240064 ; 9780857240064 ; Relational Practices, Participative Organizing Volume 7 ; >
-      au < testing ; exists ; 2011 ;  ; 9780857249739 ; 9780857249739 ; Electronic HRM in Theory and Practice Volume 8 ; >
-      au < testing ; exists ; 2012 ;  ; 9781780526744 ; 9781780526744 ; Commercial Diplomacy and International Business: A Conceptual and Empirical Exploration Volume 9 ; >
+      au < manifest ; exists ; 2009 ;  ; 9781848558328 ; 9781848558328 ; Advanced Series in Management Volume 6 ; >
+      au < manifest ; exists ; 2010 ;  ; 9780857240064 ; 9780857240064 ; Relational Practices, Participative Organizing Volume 7 ; >
+      au < manifest ; exists ; 2011 ;  ; 9780857249739 ; 9780857249739 ; Electronic HRM in Theory and Practice Volume 8 ; >
+      au < manifest ; exists ; 2012 ;  ; 9781780526744 ; 9781780526744 ; Commercial Diplomacy and International Business: A Conceptual and Empirical Exploration Volume 9 ; >
 
   }
 
@@ -112,14 +112,14 @@
       au < doNotProcess ; doNotProcess ; 2001 ;  ; 9780762307845 ; 9780762307845 ; Advances in Accounting Behavioral Research Volume 4 ; > #RT7387 incorrect article links
       au < doNotProcess ; doNotProcess ; 2002 ;  ; 9780762309535 ; 9780762309535 ; Advances in Accounting Behavioral Research Volume 5 ; > #RT7387 incorrect article links
       au < doNotProcess ; doNotProcess ; 2003 ;  ; 9780762310470 ; 9780762310470 ; Advances in Accounting Behavioral Research Volume 6 ; > #RT7387 incorrect article links
-      au < testing ; exists ; 2004 ;  ; 9780762311170 ; 9780762311170 ; Advances in Accounting Behavioral Research Volume 7 ; >
-      au < testing ; exists ; 2005 ;  ; 9780762312184 ; 9780762312184 ; Advances in Accounting Behavioral Research Volume 8 ; >
-      au < testing ; exists ; 2006 ;  ; 9780762313532 ; 9780762313532 ; Advances in Accounting Behavioral Research Volume 9 ; >
-      au < testing ; exists ; 2008 ;  ; 9781846639609 ; 9781846639609 ; Advances in Accounting Behavioral Research Volume 11 ; >
-      au < testing ; exists ; 2009 ;  ; 9781848557383 ; 9781848557383 ; Advances in Accounting Behavioral Research Volume 12 ; >
-      au < testing ; exists ; 2010 ;  ; 9780857241375 ; 9780857241375 ; Advances in Accounting Behavioral Research Volume 13 ; >
-      au < testing ; exists ; 2011 ;  ; 9781780520865 ; 9781780520865 ; Advances in Accounting Behavioral Research Volume 14 ; >
-      au < testing ; exists ; 2012 ;  ; 9781780527581 ; 9781780527581 ; Advances in Accounting Behavioral Research Volume 15 ; >
+      au < manifest ; exists ; 2004 ;  ; 9780762311170 ; 9780762311170 ; Advances in Accounting Behavioral Research Volume 7 ; >
+      au < manifest ; exists ; 2005 ;  ; 9780762312184 ; 9780762312184 ; Advances in Accounting Behavioral Research Volume 8 ; >
+      au < manifest ; exists ; 2006 ;  ; 9780762313532 ; 9780762313532 ; Advances in Accounting Behavioral Research Volume 9 ; >
+      au < manifest ; exists ; 2008 ;  ; 9781846639609 ; 9781846639609 ; Advances in Accounting Behavioral Research Volume 11 ; >
+      au < manifest ; exists ; 2009 ;  ; 9781848557383 ; 9781848557383 ; Advances in Accounting Behavioral Research Volume 12 ; >
+      au < manifest ; exists ; 2010 ;  ; 9780857241375 ; 9780857241375 ; Advances in Accounting Behavioral Research Volume 13 ; >
+      au < manifest ; exists ; 2011 ;  ; 9781780520865 ; 9781780520865 ; Advances in Accounting Behavioral Research Volume 14 ; >
+      au < manifest ; exists ; 2012 ;  ; 9781780527581 ; 9781780527581 ; Advances in Accounting Behavioral Research Volume 15 ; >
 
   }
 
