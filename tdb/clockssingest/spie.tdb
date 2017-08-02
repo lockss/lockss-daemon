@@ -8,6 +8,7 @@
     info[poller] = 3
   >
 
+  #SPIE is no longer participating. Do not process any content after 2016
     plugin = org.lockss.plugin.silverchair.ClockssSilverchairJournalsPlugin
     implicit < status ; status2 ; year ; name ; param[year] ; hidden[proxy] >
 
