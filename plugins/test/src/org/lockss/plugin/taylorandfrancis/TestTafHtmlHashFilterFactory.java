@@ -174,10 +174,39 @@ public class TestTafHtmlHashFilterFactory extends LockssTestCase {
   
   private static final String withoutTocArticleEntry = " Hello Article Hello World ";
   
-  private static final String withTocArticleList = "<div class=\"articleList\"> Hello Article" +
-  "<div class=\"art_title\"> Hello Kitty </div> </div>";
-  
-  private static final String withoutTocArticleList = " Hello Article Hello Kitty ";
+  private static final String hasBulletList =
+  "    <div class=\"overview borderedmodule-last\">Hello World" +
+  "The following aspects undergo changes: " +
+  "<table class=\"listgroup\" border=\"0\" width=\"95%\" list-type=\"bullet\">" +
+  "<tr class=\"li1\"><td valign=\"top\" class=\"list-td\">•</td><td colspan=\"5\" valign=\"top\">" +
+  "<p>view and interpretation of the history of building, art, and culture</p></td></tr>" +
+  "<tr class=\"li1\"><td valign=\"top\" class=\"list-td\">•</td><td colspan=\"5\" valign=\"top\">" +
+  "<p>theories and practices of preservation, as well as</p></td></tr>" +
+  "<tr class=\"li1\"><td valign=\"top\" class=\"list-td\">•</td><td colspan=\"5\" valign=\"top\">" +
+  "<p>‘archival taxonomies’, " +
+  "</p></td></tr></table></div>";
+  private static final String hasNoBulletList =
+      "    <div class=\"overview borderedmodule-last\">Hello World" +
+      "The following aspects undergo changes: " +
+      "<table class=\"listgroup\" border=\"0\" width=\"95%\" list-type=\"bullet\">" +
+      "<tr class=\"li1\"><td valign=\"top\" class=\"list-td\">X</td><td colspan=\"5\" valign=\"top\">" +
+      "<p>view and interpretation of the history of building, art, and culture</p></td></tr>" +
+      "<tr class=\"li1\"><td valign=\"top\" class=\"list-td\">X</td><td colspan=\"5\" valign=\"top\">" +
+      "<p>theories and practices of preservation, as well as</p></td></tr>" +
+      "<tr class=\"li1\"><td valign=\"top\" class=\"list-td\">X</td><td colspan=\"5\" valign=\"top\">" +
+      "<p>‘archival taxonomies’, " +
+      "</p></td></tr></table></div>";
+  private static final String noBulletList =
+  "    <div class=\"overview borderedmodule-last\">Hello World" +
+  "The following aspects undergo changes: " +
+  "<table class=\"listgroup\" border=\"0\" width=\"95%\" list-type=\"bullet\">" +
+  "<tr class=\"li1\"><td valign=\"top\" class=\"list-td\"><ul class=\"listLabel\"><li></li></ul></td><td colspan=\"5\" valign=\"top\">" +
+  "<p>view and interpretation of the history of building, art, and culture</p></td></tr>" +
+  "<tr class=\"li1\"><td valign=\"top\" class=\"list-td\"><ul class=\"listLabel\"><li></li></ul></td><td colspan=\"5\" valign=\"top\">" +
+  "<p>theories and practices of preservation, as well as</p></td></tr>" +
+  "<tr class=\"li1\"><td valign=\"top\" class=\"list-td\"><ul class=\"listLabel\"><li></li></ul></td><td colspan=\"5\" valign=\"top\">" +
+  "<p>‘archival taxonomies’, " +
+  "</p></td></tr></table></div>";
 
 
   /*
@@ -221,10 +250,4 @@ public class TestTafHtmlHashFilterFactory extends LockssTestCase {
     assertEquals(withoutTocArticleEntry, StringUtil.fromInputStream(actIn));
   }
   
-  public void testTocArticleList() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau,
-        new StringInputStream(withTocArticleList), Constants.DEFAULT_ENCODING);
-    System.out.println("[" + StringUtil.fromInputStream(actIn) + "]");
-    //assertEquals(withoutTocArticleList, StringUtil.fromInputStream(actIn));
-  }
 }

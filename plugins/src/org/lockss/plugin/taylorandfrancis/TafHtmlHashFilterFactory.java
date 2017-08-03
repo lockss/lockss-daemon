@@ -99,8 +99,6 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
             HtmlNodeFilters.tagWithAttribute("div","class","figuresContent"),
             // showCitFormats form page 
             HtmlNodeFilters.tagWithAttribute("div","class","downloadCitation"),
-            // 2017 showCitFormats page for http://www.inderscienceonline.com/action/showCitFormats?doi=10.1504%2FIJBSR.2017.080831
-            HtmlNodeFilters.tagWithAttribute("div","class","articleList"),
             // an article with suppl and in-line video plus zip
             //doi/suppl/10.1080/11263504.2013.877535
             //and one with multiple downloadable files
