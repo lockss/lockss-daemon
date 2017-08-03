@@ -96,6 +96,23 @@ public class TestBaseAtyponHtmlHashFilterFactory extends LockssTestCase {
           + "</div>"
           + "</div>";
   
+  // this line within a script tag section messed up the parser
+  // as it couldn't handle the unpaired quote, double-quote ordering
+  // jtitle = jtitle.replace(/([\'])/g,"\\'");
+  // now we strip out all "<script" to "<script>" before parsing
+  private static final String beastScript = 
+      "<div class=\"one\">" +
+          "<script>" +
+          "           jtitle = jtitle.replace(/([\\'])/g,\"\\\\'\");" +
+          "</script>" +
+          "<div class=\"two\"  >FOO</div>" +
+          "</div>";
+
+  private static final String beastScriptFiltered = 
+      "<div class=\"one\">" +
+          "<div class=\"two\"  >FOO</div>" +
+          "</div>";
+
   private static final String withoutHeader =
       "<div class=\"block\"></div>";
       
@@ -348,6 +365,12 @@ public class TestBaseAtyponHtmlHashFilterFactory extends LockssTestCase {
         Constants.DEFAULT_ENCODING);
     assertEquals(cys_fileSize_filtered, StringUtil.fromInputStream(actIn));    
 
+  }
+  
+  public void testBeastScript() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(beastScript), Constants.DEFAULT_ENCODING);
+    assertEquals(beastScriptFiltered, StringUtil.fromInputStream(actIn));
   }
   
   private static final String htmlTagWithId = 

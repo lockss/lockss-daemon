@@ -378,7 +378,22 @@ public class TestEmeraldGroupHtmlFilterFactory extends LockssTestCase {
           "}" +
           "</style>";
   private static final String styleBlockFiltered = "";
-    
+  
+  // this line within a script tag section messed up the parser
+  // as it couldn't handle the unpaired quote, double-quote ordering
+  // jtitle = jtitle.replace(/([\'])/g,"\\'");
+  // now we strip out all "<script" to "<script>" before parsing
+  private static final String beastScript = 
+      "<div class=\"one\">" +
+          "<script>" +
+          "           jtitle = jtitle.replace(/([\\'])/g,\"\\\\'\");" +
+          "</script>" +
+          "<div class=\"literatumPublicationContentWidget\"  >FOO</div>" +
+          "</div>";
+
+  private static final String beastScriptFiltered = 
+          " <div class=\"literatumPublicationContentWidget\" >FOO </div>";
+
   protected ArchivalUnit createAu()
       throws ArchivalUnit.ConfigurationException {
     return PluginTestUtil.createAndStartAu(PLUGIN_ID,  emeraldAuConfig());
@@ -457,8 +472,11 @@ public class TestEmeraldGroupHtmlFilterFactory extends LockssTestCase {
           nonManifestList2FilteredStr);
       doFilterTest(eau, variantFact, styleBlock, 
           styleBlockFiltered);
+      doFilterTest(eau, variantFact, beastScript,beastScriptFiltered);
      }
+     
   }
+
   
   public static Test suite() {
     return variantSuites(new Class[] {

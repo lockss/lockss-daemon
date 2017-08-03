@@ -34,6 +34,7 @@ package org.lockss.plugin.atypon;
 
 import java.io.IOException;
 
+import java.io.BufferedInputStream;
 import java.io.InputStream;
 import java.io.Reader;
 import java.util.Arrays;
@@ -80,6 +81,7 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
   private static final Pattern SIZE_PATTERN = Pattern.compile(SIZE_REGEX, Pattern.CASE_INSENSITIVE);  
   protected static final Pattern CITED_BY_PATTERN =
       Pattern.compile("Cited by", Pattern.CASE_INSENSITIVE);
+  
 
   protected static NodeFilter[] baseAtyponFilters = new NodeFilter[] {
     // 7/22/2013 starting to use a more aggressive hashing policy-
@@ -256,6 +258,11 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
     if (moreNodes != null) {
       bothFilters = addTo(moreNodes);
     }
+
+    // Remove script tags that can confuse the parser with " and ' out of match order (even if escaped)
+    in = new BufferedInputStream(new ReaderInputStream(
+        new HtmlTagFilter(FilterUtil.getReader(in, encoding), new TagPair("<script","</script>"))));    
+    
     InputStream combinedFiltered;
     if (doTagIDFiltering()) {
       combinedFiltered = new HtmlFilterInputStream(in, encoding,
@@ -320,6 +327,11 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
     }   
     // combine baseAtyponFilters and excludeNodes
     allExcludeNodes = addTo(excludeNodes);
+    
+    // Remove script tags that can confuse the parser with " and ' out of match order (even if escaped)
+    in = new BufferedInputStream(new ReaderInputStream(
+        new HtmlTagFilter(FilterUtil.getReader(in, encoding), new TagPair("<script","</script>"))));    
+
     InputStream combinedFiltered;
     // xform_allIDs filters out all "id" attributes and
     // also removes pdf(plus) file sizes
