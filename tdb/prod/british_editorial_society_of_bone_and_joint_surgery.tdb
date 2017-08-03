@@ -23,6 +23,7 @@
     au < besbjs.BESBJSDrupalPlugin ; notReady ; 2014 ; Bone & Joint 360 Volume 3 ; 3 > #Unable to fetch probe permission page
     au < besbjs.BESBJSDrupalPlugin ; notReady ; 2015 ; Bone & Joint 360 Volume 4 ; 4 > #Unable to fetch probe permission page
     au < besbjs.BESBJSDrupalPlugin ; notReady ; 2016 ; Bone & Joint 360 Volume 5 ; 5 > #Unable to fetch probe permission page
+    au < besbjs.BESBJSDrupalPlugin ; exists ; 2017 ; Bone & Joint 360 Volume 6 ; 6 >
     
   }
   
