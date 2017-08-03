@@ -476,9 +476,27 @@
 
       }
 
-
     }
 
+  }
+
+  {
+
+    title <
+      name = Film-Philosophy ;
+      eissn = 1466-4615 ;
+      issnl = 1466-4615 
+     >
+     
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      param[journal_id] = film
+      implicit < status ; year ; name ; param[volume_name] >
+      #move from Open Humanities Press
+    
+     au < exists ; 2016 ; Film-Philosophy Volume 20 ; 20 >
+     au < exists ; 2017 ; Film-Philosophy Volume 21 ; 21 >
+    
   }
 
   {
