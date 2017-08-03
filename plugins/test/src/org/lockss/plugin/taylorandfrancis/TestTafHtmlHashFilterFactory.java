@@ -173,6 +173,11 @@ public class TestTafHtmlHashFilterFactory extends LockssTestCase {
   "<div class=\"tocArticleEntry include-metrics-panel\"> Hello World </div>";
   
   private static final String withoutTocArticleEntry = " Hello Article Hello World ";
+  
+  private static final String withTocArticleList = "<div class=\"articleList\"> Hello Article" +
+  "<div class=\"art_title\"> Hello World </div> </div>";
+  
+  private static final String withoutTocArticleList = " Hello Article <div class=\"art_title\"> Hello World </div> ";
 
 
   /*
@@ -213,7 +218,12 @@ public class TestTafHtmlHashFilterFactory extends LockssTestCase {
   public void testTocArticleEntry() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(withTocArticleEntry), Constants.DEFAULT_ENCODING);
-
+    assertEquals(withoutTocArticleEntry, StringUtil.fromInputStream(actIn));
+  }
+  
+  public void testTocArticleList() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(withTocArticleEntry), Constants.DEFAULT_ENCODING);
     assertEquals(withoutTocArticleEntry, StringUtil.fromInputStream(actIn));
   }
 }
