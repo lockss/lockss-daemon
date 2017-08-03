@@ -1,6 +1,6 @@
 /* $Id:$
  
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -31,7 +31,6 @@ package org.lockss.plugin.pub2web.ms;
 import java.io.InputStream;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.*;
-import org.htmlparser.tags.CompositeTag;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 

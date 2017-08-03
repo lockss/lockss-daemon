@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -63,6 +63,9 @@ public class MsHtmlCrawlFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttribute("ol",  "class", "breadcrumb"),
     HtmlNodeFilters.tagWithAttributeRegex("a",  "class", "banner-container journal-banner"),
     HtmlNodeFilters.tagWithAttribute("nav",  "class", "pillscontainer"),
+    
+    HtmlNodeFilters.tagWithAttribute("div",  "id", "sign-in"),
+    HtmlNodeFilters.tagWithAttribute("div",  "id", "share-nav"),
     //remove the TOC navigation links except the full TOC pdf
     
     //remove the stuff on the right column, except the citation export
