@@ -91,6 +91,9 @@ public class InderscienceHtmlHashFilterFactory
         //                     showCitFormats?doi=10.1504%2FAJAAF.2014.065176
         HtmlNodeFilters.tagWithAttributeRegex("section", "class", 
                                               "downloadCitationsWidget"),
+        // early 2017- changed to <div class                                      
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
+                                              "downloadCitationsWidget"),                                              
     };
     
     

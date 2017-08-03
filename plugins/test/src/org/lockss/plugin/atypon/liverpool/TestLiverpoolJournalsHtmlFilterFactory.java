@@ -188,6 +188,33 @@ public class TestLiverpoolJournalsHtmlFilterFactory extends LockssTestCase {
           "</li>" +
           "</ul>";
   private static final String nonManifestList2FilteredStr = "";
+  
+  private static final String newShowCit = 
+      "<div class=\"widget downloadCitationsWidget none  widget-none\" id=\"ca8\"  >" +
+      "<div class=\"wrapped \" >" +
+      "<h1 class=\"widget-header header-none \">Download Citations</h1>" +
+      "<div class=\"widget-body body body-none \"><div class=\"citationFormats\">" +
+      "<p>" +
+      "instructions go here.<br /><br />" +
+      "get help at <a href=\"/help?context=citationDownload\" class=\"help\">Help menu</a>." +
+      "</p>" +
+      "<!-- download options -->" +
+      "<form action=\"/action/downloadCitation\" name=\"frmCitmgr\" method=\"post\" target=\"_self\">" +
+      "</form>" +
+      "</div></div></div></div>";
+
+  private static final String newShowCitFiltered = 
+      " <div class=\"widget downloadCitationsWidget none widget-none\" >" +
+      " <div class=\"wrapped \" >" +
+      " <h1 class=\"widget-header header-none \">Download Citations </h1>" +
+      " <div class=\"widget-body body body-none \"> <div class=\"citationFormats\">" +
+      " <p>" +
+      "instructions go here. <br /> <br />" +
+      "get help at <a href=\"/help?context=citationDownload\" class=\"help\">Help menu </a>." +
+      " </p>" +
+      " <form action=\"/action/downloadCitation\" name=\"frmCitmgr\" method=\"post\" target=\"_self\">" +
+      " </form>" +
+      " </div> </div> </div> </div>";  
     
   protected ArchivalUnit createAu()
       throws ArchivalUnit.ConfigurationException {
@@ -255,7 +282,9 @@ public class TestLiverpoolJournalsHtmlFilterFactory extends LockssTestCase {
       doFilterTest(lau, variantFact, nonManifestList1, 
                    nonManifestList1FilteredStr);
       doFilterTest(lau, variantFact, nonManifestList2, 
-                   nonManifestList2FilteredStr);
+          nonManifestList2FilteredStr);
+      doFilterTest(lau, variantFact, newShowCit, 
+          newShowCitFiltered);
     }
   }
   

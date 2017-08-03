@@ -92,6 +92,9 @@ public class WageningenJournalsHtmlHashFilterFactory
         //                          showCitFormats?doi=10.3920%2FBM2012.0069
         HtmlNodeFilters.tagWithAttributeRegex("section", "class", 
                                               "downloadCitationsWidget"),
+        // early 2017- changed to <div class                                      
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
+                                              "downloadCitationsWidget"),
                                                                   
     };
     

@@ -89,6 +89,9 @@ public class LiverpoolHtmlHashFilterFactory
         //                           showCitFormats?doi=10.3828%2Fbjcs.2013.3                                      
         HtmlNodeFilters.tagWithAttributeRegex("section", "class", 
                                               "downloadCitationsWidget"),
+        // early 2017- changed to <div class                                      
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
+                                              "downloadCitationsWidget"),                                              
                                                                                                                 
     };
     

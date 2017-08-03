@@ -370,6 +370,34 @@ public class TestWageningenJournalsHtmlFilterFactory extends LockssTestCase {
           "</div>" +
           "</div>" +
           "</div>";
+  
+  private static final String newShowCit = 
+      "<div class=\"widget downloadCitationsWidget none  widget-none\" id=\"ca8\"  >" +
+      "<div class=\"wrapped \" >" +
+      "<h1 class=\"widget-header header-none \">Download Citations</h1>" +
+      "<div class=\"widget-body body body-none \"><div class=\"citationFormats\">" +
+      "<p>" +
+      "instructions go here.<br /><br />" +
+      "get help at <a href=\"/help?context=citationDownload\" class=\"help\">Help menu</a>." +
+      "</p>" +
+      "<!-- download options -->" +
+      "<form action=\"/action/downloadCitation\" name=\"frmCitmgr\" method=\"post\" target=\"_self\">" +
+      "</form>" +
+      "</div></div></div></div>";
+
+  private static final String newShowCitFiltered = 
+      " <div class=\"widget downloadCitationsWidget none widget-none\" >" +
+      " <div class=\"wrapped \" >" +
+      " <h1 class=\"widget-header header-none \">Download Citations </h1>" +
+      " <div class=\"widget-body body body-none \"> <div class=\"citationFormats\">" +
+      " <p>" +
+      "instructions go here. <br /> <br />" +
+      "get help at <a href=\"/help?context=citationDownload\" class=\"help\">Help menu </a>." +
+      " </p>" +
+      " <form action=\"/action/downloadCitation\" name=\"frmCitmgr\" method=\"post\" target=\"_self\">" +
+      " </form>" +
+      " </div> </div> </div> </div>";
+
 
 // ?? use this block when manifest pages are up  
 //    private static final String manifestList =
@@ -471,6 +499,7 @@ public class TestWageningenJournalsHtmlFilterFactory extends LockssTestCase {
       doFilterTest(wau, variantFact, withArticleToolsExceptDownloadCitation2, 
                    articleToolsFilteredStr2);
       doFilterTest(wau, variantFact, tooltipHtml, tooltipFiltered);
+      doFilterTest(wau, variantFact, newShowCit, newShowCitFiltered);
 //      doFilterTest(eau, variantFact, manifestList, 
 //                   manifestListFilteredStr);
 //      doFilterTest(eau, variantFact, nonManifestList1, 
