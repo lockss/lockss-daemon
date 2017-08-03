@@ -7,27 +7,7 @@
     info[poller] = 6
   >
 
-  {
-  
-    title <
-      name = Biology of Reproduction ;
-      issn = 0006-3363 ;
-      eissn = 1529-7268
-    >
-
-    plugin = org.lockss.plugin.silverchair.oup.ClockssOupSilverchairPlugin
-    implicit < status ; status2 ; year ; name ; param[year] ; hidden[proxy] >
-    param[base_url] = https://academic.oup.com/
-    #param[base_url] = http://www.biolreprod.org/
-    #moved to OUP
-
-    param[journal_id] = biolreprod
-
-    au < exists ; exists ; 2015 ; Biology of Reproduction Volume 92-93 ; 2015 ; >
-    au < exists ; exists ; 2016 ; Biology of Reproduction Volume 94-95 ; 2016 ; >
-    au < expected ; exists ; 2017 ; Biology of Reproduction Volume 96-97 ; 2017 ; >
-
-  }
+# Moved to OUP
 
   {
   
@@ -137,9 +117,7 @@
     au < frozen ; exists ; 2015 ; Biology of Reproduction Volume 93 ; 93 ; >
     au < frozen ; exists ; 2016 ; Biology of Reproduction Volume 94 ; 94 ; >
     au < frozen ; exists ; 2016 ; Biology of Reproduction Volume 95 ; 95 ; >
-    au < expected ; exists ; 2017 ; Biology of Reproduction Volume 96 ; 96 ; >
-    au < expected ; exists ; 2017 ; Biology of Reproduction Volume 97 ; 97 ; >
-
+    #moved to OUP
   }
 
 }
