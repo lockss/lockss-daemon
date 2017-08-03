@@ -7,6 +7,7 @@
     info[poller] = 3
     
   >
+  ###### Access inconsistant on ingest3 and ingest4. 20170803.
 
   {
     title <
@@ -34,9 +35,9 @@
       au < manifest ; exists ; 2012 ; Current Herpetology Volume 31 ; 31 ; >
       au < finished ; finished ; 2013 ; Current Herpetology Volume 32 ; 32 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Current Herpetology Volume 33 ; 33 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2015 ; Current Herpetology Volume 34 ; 34 ; >
-      au < deepCrawl ; exists ; 2016 ; Current Herpetology Volume 35 ; 35 ; >
-      au < testing ; exists ; 2017 ; Current Herpetology Volume 36 ; 36 ; >
+      au < frozen ; exists ; 2015 ; Current Herpetology Volume 34 ; 34 ; reingest1.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2016 ; Current Herpetology Volume 35 ; 35 ; reingest2.clockss.org:8085 >
+      au < ready ; exists ; 2017 ; Current Herpetology Volume 36 ; 36 ; reingest1.clockss.org:8082 >
       
     }
 
@@ -75,11 +76,11 @@
       au < manifest ; exists ; 2010 ; Journal of Mammalian Ova Research Volume 27 ; 27 ; >
       au < manifest ; exists ; 2011 ; Journal of Mammalian Ova Research Volume 28 ; 28 ; >
       au < manifest ; exists ; 2012 ; Journal of Mammalian Ova Research Volume 29 ; 29 ; >
-      au < deepCrawl ; exists ; 2013 ; Journal of Mammalian Ova Research Volume 30 ; 30 ; >
+      au < deepCrawl ; exists ; 2013 ; Journal of Mammalian Ova Research Volume 30 ; 30 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Journal of Mammalian Ova Research Volume 31 ; 31 ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2015 ; Journal of Mammalian Ova Research Volume 32 ; 32 ; >
-      au < frozen ; exists ; 2016 ; Journal of Mammalian Ova Research Volume 33 ; 33 ; >
-      au < testing ; exists ; 2017 ; Journal of Mammalian Ova Research Volume 34 ; 34 ; >
+      au < frozen ; exists ; 2015 ; Journal of Mammalian Ova Research Volume 32 ; 32 ; reingest1.clockss.org:8082 >
+      au < frozen ; exists ; 2016 ; Journal of Mammalian Ova Research Volume 33 ; 33 ; reingest2.clockss.org:8085 >
+      au < ready ; exists ; 2017 ; Journal of Mammalian Ova Research Volume 34 ; 34 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -118,11 +119,11 @@
       au < manifest ; exists ; 2010 ; Mammal Study Volume 35 ; 35 ; >
       au < manifest ; exists ; 2011 ; Mammal Study Volume 36 ; 36 ; >
       au < manifest ; exists ; 2012 ; Mammal Study Volume 37 ; 37 ; >
-      au < deepCrawl ; exists ; 2013 ; Mammal Study Volume 38 ; 38 ; >
-      au < frozen ; exists ; 2014 ; Mammal Study Volume 39 ; 39 ; >
-      au < frozen ; exists ; 2015 ; Mammal Study Volume 40 ; 40 ; >
-      au < deepCrawl ; exists ; 2016 ; Mammal Study Volume 41 ; 41 ; >
-      au < testing ; exists ; 2017 ; Mammal Study Volume 42 ; 42 ; >
+      au < deepCrawl ; exists ; 2013 ; Mammal Study Volume 38 ; 38 ; reingest1.clockss.org:8082 >
+      au < frozen ; exists ; 2014 ; Mammal Study Volume 39 ; 39 ; reingest2.clockss.org:8085 >
+      au < frozen ; exists ; 2015 ; Mammal Study Volume 40 ; 40 ; reingest1.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2016 ; Mammal Study Volume 41 ; 41 ; reingest2.clockss.org:8085 >
+      au < ready ; exists ; 2017 ; Mammal Study Volume 42 ; 42 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -160,11 +161,11 @@
       au < manifest ; exists ; 2010 ; Ornithological Science Volume 9 ; 9 ; >
       au < manifest ; exists ; 2011 ; Ornithological Science Volume 10 ; 10 ; >
       au < manifest ; exists ; 2012 ; Ornithological Science Volume 11 ; 11 ; >
-      au < deepCrawl ; exists ; 2013 ; Ornithological Science Volume 12 ; 12 ; >
+      au < deepCrawl ; exists ; 2013 ; Ornithological Science Volume 12 ; 12 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Ornithological Science Volume 13 ; 13 ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2015 ; Ornithological Science Volume 14 ; 14 ; >
-      au < deepCrawl ; exists ; 2016 ; Ornithological Science Volume 15 ; 15 ; >
-      au < testing ; exists ; 2017 ; Ornithological Science Volume 16 ; 16 ; >
+      au < frozen ; exists ; 2015 ; Ornithological Science Volume 14 ; 14 ; reingest1.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2016 ; Ornithological Science Volume 15 ; 15 ; reingest2.clockss.org:8085 >
+      au < ready ; exists ; 2017 ; Ornithological Science Volume 16 ; 16 ; reingest1.clockss.org:8082 >
 
     }
     
@@ -205,11 +206,11 @@
       au < manifest ; exists ; 2010 ; Paleontological Research Volume 14 ; 14 ; >
       au < manifest ; exists ; 2011 ; Paleontological Research Volume 15 ; 15 ; >
       au < manifest ; exists ; 2012 ; Paleontological Research Volume 16 ; 16 ; >
-      au < deepCrawl ; exists ; 2013 ; Paleontological Research Volume 17 ; 17 ; >
+      au < deepCrawl ; exists ; 2013 ; Paleontological Research Volume 17 ; 17 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Paleontological Research Volume 18 ; 18 ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2015 ; Paleontological Research Volume 19 ; 19 ; >
-      au < deepCrawl ; exists ; 2016 ; Paleontological Research Volume 20 ; 20 ; >
-      au < testing ; exists ; 2017 ; Paleontological Research Volume 21 ; 21 ; >
+      au < frozen ; exists ; 2015 ; Paleontological Research Volume 19 ; 19 ; reingest1.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2016 ; Paleontological Research Volume 20 ; 20 ; reingest2.clockss.org:8085 >
+      au < ready ; exists ; 2017 ; Paleontological Research Volume 21 ; 21 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -257,11 +258,11 @@
       au < manifest ; exists ; 2010 ; Zoological Science Volume 27 ; 27 ; >
       au < manifest ; exists ; 2011 ; Zoological Science Volume 28 ; 28 ; >
       au < manifest ; exists ; 2012 ; Zoological Science Volume 29 ; 29 ; >
-      au < deepCrawl ; exists ; 2013 ; Zoological Science Volume 30 ; 30 ; >
+      au < deepCrawl ; exists ; 2013 ; Zoological Science Volume 30 ; 30 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Zoological Science Volume 31 ; 31 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2015 ; Zoological Science Volume 32 ; 32 ; >
-      au < deepCrawl ; exists ; 2016 ; Zoological Science Volume 33 ; 33 ; >
-      au < testing ; exists ; 2017 ; Zoological Science Volume 34 ; 34 ; >
+      au < frozen ; exists ; 2015 ; Zoological Science Volume 32 ; 32 ; reingest1.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2016 ; Zoological Science Volume 33 ; 33 ; reingest2.clockss.org:8085 >
+      au < ready ; exists ; 2017 ; Zoological Science Volume 34 ; 34 ; reingest1.clockss.org:8082 >
 
     }
 
