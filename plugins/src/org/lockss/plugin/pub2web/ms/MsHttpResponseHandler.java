@@ -50,7 +50,6 @@ public class MsHttpResponseHandler implements CacheResultHandler {
   protected static final Pattern NON_FATAL_PAT = Pattern.compile("/supp-?data");
   
   @Override
-  @Deprecated
   public void init(final CacheResultMap map) throws PluginException {
     log.warning("Unexpected call to init()");
     throw new UnsupportedOperationException("Unexpected call to MsHtmlHttpResponseHandler.init()");
@@ -58,10 +57,10 @@ public class MsHttpResponseHandler implements CacheResultHandler {
   
   @Override
   public CacheException handleResult(final ArchivalUnit au, final String url, final int code) throws PluginException {
-    log.debug(code + ": " + url);
-    Matcher mat = NON_FATAL_PAT.matcher(url);
+    log.debug2(code + ": " + url);
     switch (code) {
       case 500:
+        Matcher mat = NON_FATAL_PAT.matcher(url);
         //Do not fail the crawl for 500 errors at URLs like the one below should not be fatal
         if (mat.find()) {
           return new CacheException.NoRetryDeadLinkException("500 Internal server (non-fatal)");
