@@ -15,63 +15,63 @@
     
     {
 
-    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://sjg.lyellcollection.org/
-    implicit < status ; year ; name ; param[volume_name] >
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < released ; 1965 ; Scottish Journal of Geology Volume 1 ; 1 >
-    au < released ; 1966 ; Scottish Journal of Geology Volume 2 ; 2 >
-    au < released ; 1967 ; Scottish Journal of Geology Volume 3 ; 3 >
-    au < released ; 1968 ; Scottish Journal of Geology Volume 4 ; 4 >
-    au < released ; 1969 ; Scottish Journal of Geology Volume 5 ; 5 >
-    au < released ; 1970 ; Scottish Journal of Geology Volume 6 ; 6 >
-    au < released ; 1971 ; Scottish Journal of Geology Volume 7 ; 7 >
-    au < released ; 1972 ; Scottish Journal of Geology Volume 8 ; 8 >
-    au < released ; 1973 ; Scottish Journal of Geology Volume 9 ; 9 >
-    au < released ; 1974 ; Scottish Journal of Geology Volume 10 ; 10 >
-    au < released ; 1975 ; Scottish Journal of Geology Volume 11 ; 11 >
-    au < released ; 1976 ; Scottish Journal of Geology Volume 12 ; 12 >
-    au < released ; 1977 ; Scottish Journal of Geology Volume 13 ; 13 >
-    au < released ; 1978 ; Scottish Journal of Geology Volume 14 ; 14 >
-    au < released ; 1979 ; Scottish Journal of Geology Volume 15 ; 15 >
-    au < released ; 1980 ; Scottish Journal of Geology Volume 16 ; 16 >
-    au < released ; 1981 ; Scottish Journal of Geology Volume 17 ; 17 >
-    au < released ; 1982 ; Scottish Journal of Geology Volume 18 ; 18 >
-    au < released ; 1983 ; Scottish Journal of Geology Volume 19 ; 19 >
-    au < released ; 1984 ; Scottish Journal of Geology Volume 20 ; 20 >
-    au < released ; 1985 ; Scottish Journal of Geology Volume 21 ; 21 >
-    au < released ; 1986 ; Scottish Journal of Geology Volume 22 ; 22 >
-    au < released ; 1987 ; Scottish Journal of Geology Volume 23 ; 23 >
-    au < released ; 1988 ; Scottish Journal of Geology Volume 24 ; 24 >
-    au < released ; 1989 ; Scottish Journal of Geology Volume 25 ; 25 >
-    au < released ; 1990 ; Scottish Journal of Geology Volume 26 ; 26 >
-    au < released ; 1991 ; Scottish Journal of Geology Volume 27 ; 27 >
-    au < released ; 1992 ; Scottish Journal of Geology Volume 28 ; 28 >
-    au < released ; 1993 ; Scottish Journal of Geology Volume 29 ; 29 >
-    au < released ; 1994 ; Scottish Journal of Geology Volume 30 ; 30 >
-    au < released ; 1995 ; Scottish Journal of Geology Volume 31 ; 31 >
-    au < released ; 1996 ; Scottish Journal of Geology Volume 32 ; 32 >
-    au < released ; 1997 ; Scottish Journal of Geology Volume 33 ; 33 >
-    au < released ; 1998 ; Scottish Journal of Geology Volume 34 ; 34 >
-    au < released ; 1999 ; Scottish Journal of Geology Volume 35 ; 35 >
-    au < released ; 2000 ; Scottish Journal of Geology Volume 36 ; 36 >
-    au < released ; 2001 ; Scottish Journal of Geology Volume 37 ; 37 >
-    au < released ; 2002 ; Scottish Journal of Geology Volume 38 ; 38 >
-    au < released ; 2003 ; Scottish Journal of Geology Volume 39 ; 39 >
-    au < released ; 2004 ; Scottish Journal of Geology Volume 40 ; 40 >
-    au < released ; 2005 ; Scottish Journal of Geology Volume 41 ; 41 >
-    au < released ; 2006 ; Scottish Journal of Geology Volume 42 ; 42 >
-    au < released ; 2007 ; Scottish Journal of Geology Volume 43 ; 43 >
-    au < released ; 2008 ; Scottish Journal of Geology Volume 44 ; 44 >
-    au < released ; 2009 ; Scottish Journal of Geology Volume 45 ; 45 >
-    au < released ; 2010 ; Scottish Journal of Geology Volume 46 ; 46 >
-    au < released ; 2011 ; Scottish Journal of Geology Volume 47 ; 47 >
-    au < released ; 2012 ; Scottish Journal of Geology Volume 48 ; 48 >
-    au < released ; 2013 ; Scottish Journal of Geology Volume 49 ; 49 >
-    au < released ; 2014 ; Scottish Journal of Geology Volume 50 ; 50 >
-    au < released ; 2015 ; Scottish Journal of Geology Volume 51 ; 51 >
-    au < released ; 2016 ; Scottish Journal of Geology Volume 52 ; 52 >
-    au < expected ; 2017 ; Scottish Journal of Geology Volume 53 ; 53 >
+    au < HighWirePressH20Plugin ; released ; 1965 ; Scottish Journal of Geology Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; released ; 1966 ; Scottish Journal of Geology Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; released ; 1967 ; Scottish Journal of Geology Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; released ; 1968 ; Scottish Journal of Geology Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; released ; 1969 ; Scottish Journal of Geology Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; released ; 1970 ; Scottish Journal of Geology Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; released ; 1971 ; Scottish Journal of Geology Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; released ; 1972 ; Scottish Journal of Geology Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; released ; 1973 ; Scottish Journal of Geology Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; released ; 1974 ; Scottish Journal of Geology Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; released ; 1975 ; Scottish Journal of Geology Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; released ; 1976 ; Scottish Journal of Geology Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; released ; 1977 ; Scottish Journal of Geology Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; released ; 1978 ; Scottish Journal of Geology Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; released ; 1979 ; Scottish Journal of Geology Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; released ; 1980 ; Scottish Journal of Geology Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; released ; 1981 ; Scottish Journal of Geology Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; released ; 1982 ; Scottish Journal of Geology Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; released ; 1983 ; Scottish Journal of Geology Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; released ; 1984 ; Scottish Journal of Geology Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; released ; 1985 ; Scottish Journal of Geology Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; released ; 1986 ; Scottish Journal of Geology Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; released ; 1987 ; Scottish Journal of Geology Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; released ; 1988 ; Scottish Journal of Geology Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; released ; 1989 ; Scottish Journal of Geology Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; released ; 1990 ; Scottish Journal of Geology Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; released ; 1991 ; Scottish Journal of Geology Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; released ; 1992 ; Scottish Journal of Geology Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; released ; 1993 ; Scottish Journal of Geology Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; released ; 1994 ; Scottish Journal of Geology Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; released ; 1995 ; Scottish Journal of Geology Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; released ; 1996 ; Scottish Journal of Geology Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; released ; 1997 ; Scottish Journal of Geology Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; released ; 1998 ; Scottish Journal of Geology Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; released ; 1999 ; Scottish Journal of Geology Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; released ; 2000 ; Scottish Journal of Geology Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; released ; 2001 ; Scottish Journal of Geology Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; released ; 2002 ; Scottish Journal of Geology Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; released ; 2003 ; Scottish Journal of Geology Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; released ; 2004 ; Scottish Journal of Geology Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; released ; 2005 ; Scottish Journal of Geology Volume 41 ; 41 >
+    au < HighWirePressH20Plugin ; released ; 2006 ; Scottish Journal of Geology Volume 42 ; 42 >
+    au < HighWirePressH20Plugin ; released ; 2007 ; Scottish Journal of Geology Volume 43 ; 43 >
+    au < HighWirePressH20Plugin ; released ; 2008 ; Scottish Journal of Geology Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; released ; 2009 ; Scottish Journal of Geology Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; Scottish Journal of Geology Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; released ; 2011 ; Scottish Journal of Geology Volume 47 ; 47 >
+    au < HighWirePressH20Plugin ; released ; 2012 ; Scottish Journal of Geology Volume 48 ; 48 >
+    au < HighWirePressH20Plugin ; released ; 2013 ; Scottish Journal of Geology Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; released ; 2014 ; Scottish Journal of Geology Volume 50 ; 50 >
+    au < HighWirePressH20Plugin ; released ; 2015 ; Scottish Journal of Geology Volume 51 ; 51 >
+    au < HighWirePressH20Plugin ; released ; 2016 ; Scottish Journal of Geology Volume 52 ; 52 >
+    au < gsl.GSLDrupalPlugin ; expected ; 2017 ; Scottish Journal of Geology Volume 53 ; 53 >
     
     }
     

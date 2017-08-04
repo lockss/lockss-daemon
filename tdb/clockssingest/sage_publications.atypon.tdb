@@ -14885,12 +14885,14 @@
 
     title <
       name = The Indian Economic Journal ;
-      issn = 0019-4662
+      eissn = 0019-4662
     >
 
       #param[base_url] = http://iej.sagepub.com/
 
-      au < expected ; exists ; 2017 ; The Indian Economic Journal Volume 65 ; 65 ; ieja ; >
+      au < exists ; exists ; 2010-2011 ; The Indian Economic Journal Volume 58 ; 58 ; ieja ; >
+      au < exists ; exists ; 2011-2012 ; The Indian Economic Journal Volume 59 ; 59 ; ieja ; >
+      au < exists ; exists ; 2012-2013 ; The Indian Economic Journal Volume 60 ; 60 ; ieja ; >
 
   }
 
