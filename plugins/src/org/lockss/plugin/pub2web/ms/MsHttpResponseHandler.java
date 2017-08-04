@@ -50,6 +50,7 @@ public class MsHttpResponseHandler implements CacheResultHandler {
   protected static final Pattern NON_FATAL_PAT = Pattern.compile("/supp-?data");
   
   @Override
+  @Deprecated
   public void init(final CacheResultMap map) throws PluginException {
     log.warning("Unexpected call to init()");
     throw new UnsupportedOperationException("Unexpected call to MsHtmlHttpResponseHandler.init()");
