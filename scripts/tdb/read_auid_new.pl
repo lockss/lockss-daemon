@@ -2219,6 +2219,43 @@ while (my $line = <>) {
       $result = "--REQ_FAIL--"
     }
     sleep(4);
+  } elsif ($plugin eq "OupSilverchairPlugin") {
+    $url = sprintf("%s%s/list-of-issues/%d",
+      $param{base_url}, $param{journal_id}, $param{year});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    if ($resp->is_success) {
+      my $man_contents = $resp->content;
+      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
+        $result = "Manifest"
+      } else {
+        $result = "--NO_TAG--"
+      }
+    } else {
+      $result = "--REQ_FAIL--"
+    }
+    sleep(4);
+
+  } elsif (($plugin eq "ClockssOupSilverchairPlugin")) {
+    $url = sprintf("%s%s/list-of-issues/%d",
+      $param{base_url}, $param{journal_id}, $param{year});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    #printf("resp is %s\n",$resp->status_line);
+    if ($resp->is_success) {
+      my $man_contents = $resp->content;
+      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
+        $result = "Manifest"
+      } else {
+        $result = "--NO_TAG--"
+      }
+    } else {
+      $result = "--REQ_FAIL--"
+    }
+    sleep(4);
+        
   } elsif ($plugin eq "ClockssJstorCurrentScholarshipPlugin"){
       $url = sprintf("%sclockss-manifest/%s/%s",
       $param{base_url}, $param{journal_id}, $param{year});
