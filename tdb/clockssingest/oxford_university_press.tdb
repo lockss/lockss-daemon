@@ -124,35 +124,37 @@
 
     param[journal_id] = afraf
 
-    au < exists ; exists ; 1901-1902 ; African Affairs Volume 1 ; 1 ;  >
-    au < exists ; exists ; 1902-1903 ; African Affairs Volume 2 ; 2 ;  >
-    au < exists ; exists ; 1903-1904 ; African Affairs Volume 3 ; 3 ;  >
-    au < exists ; exists ; 1904-1905 ; African Affairs Volume 4 ; 4 ;  >
-    au < exists ; exists ; 1905-1906 ; African Affairs Volume 5 ; 5 ;  >
-    au < exists ; exists ; 1906-1907 ; African Affairs Volume VI ; VI ;  >
-    au < exists ; exists ; 1907-1908 ; African Affairs Volume VII ; VII ;  >
-    au < exists ; exists ; 1908-1909 ; African Affairs Volume VIII ; VIII ;  >
-    au < exists ; exists ; 1909-1910 ; African Affairs Volume IX ; IX ;  >
-    au < exists ; exists ; 1910-1911 ; African Affairs Volume X ; X ;  >
-    au < exists ; exists ; 1911-1912 ; African Affairs Volume XI ; XI ;  >
-    au < exists ; exists ; 1912-1913 ; African Affairs Volume XII ; XII ;  >
-    au < exists ; exists ; 1913-1914 ; African Affairs Volume XIII ; XIII ;  >
-    au < exists ; exists ; 1914-1915 ; African Affairs Volume XIV ; XIV ;  >
-    au < exists ; exists ; 1915-1916 ; African Affairs Volume XV ; XV ;  >
-    au < exists ; exists ; 1916-1917 ; African Affairs Volume XVI ; XVI ;  >
-    au < exists ; exists ; 1917-1918 ; African Affairs Volume XVII ; XVII ;  >
-    au < exists ; exists ; 1918-1919 ; African Affairs Volume XVIII ; XVIII ;  >
-    au < exists ; exists ; 1919-1920 ; African Affairs Volume XIX ; XIX ;  >
-    au < exists ; exists ; 1920-1921 ; African Affairs Volume XX ; XX ;  >
-    au < exists ; exists ; 1921-1922 ; African Affairs Volume XXI ; XXI ;  >
-    au < exists ; exists ; 1922-1923 ; African Affairs Volume XXII ; XXII ;  >
-    au < exists ; exists ; 1923-1924 ; African Affairs Volume XXIII ; XXIII ;  >
-    au < exists ; exists ; 1924-1925 ; African Affairs Volume XXIV ; XXIV ;  >
-    au < exists ; exists ; 1925-1926 ; African Affairs Volume XXV ; XXV ;  >
-    au < exists ; exists ; 1926-1927 ; African Affairs Volume XXVI ; XXVI ;  >
-    au < exists ; exists ; 1927-1928 ; African Affairs Volume XXVII ; XXVII ;  >
-    au < exists ; exists ; 1928-1929 ; African Affairs Volume XXVIII ; XXVIII ;  >
-    au < exists ; exists ; 1929-1930 ; African Affairs Volume XXIX ; XXIX ;  >
+    au < exists ; exists ; 1901 ; African Affairs Volume 1 ; 1 ;  >
+    au < exists ; exists ; 1902 ; African Affairs Volume 1-2 ; 1-2 ;  >
+    au < exists ; exists ; 1903 ; African Affairs Volume 2-3 ; 2-3 ;  >
+    au < exists ; exists ; 1904 ; African Affairs Volume 3-4 ; 3-4 ;  >
+    au < exists ; exists ; 1905 ; African Affairs Volume 4-5 ; 4-5 ;  >
+    au < exists ; exists ; 1906 ; African Affairs Volume 5-6 ; 5-6 ;  >
+    au < exists ; exists ; 1907 ; African Affairs Volume 6-7 ; 6-7 ;  >
+    au < exists ; exists ; 1908 ; African Affairs Volume 7-8 ; 7-8 ;  >
+    au < exists ; exists ; 1909 ; African Affairs Volume 8-9 ; 8-9 ;  >
+    #adjust years and volumes. Year is the parameter. volume is not.
+    au < exists ; exists ; 1910 ; African Affairs Volume 9-10 ; 9-10 ;  >
+    au < exists ; exists ; 1911 ; African Affairs Volume 10-11 ; 10-11 ;  >
+    au < exists ; exists ; 1912 ; African Affairs Volume 11-12 ; 11-12 ;  >
+#    au < exists ; exists ; 1912-1913 ; African Affairs Volume XII ; XII ;  >
+#    au < exists ; exists ; 1913-1914 ; African Affairs Volume XIII ; XIII ;  >
+#    au < exists ; exists ; 1914-1915 ; African Affairs Volume XIV ; XIV ;  >
+#    au < exists ; exists ; 1915-1916 ; African Affairs Volume XV ; XV ;  >
+#    au < exists ; exists ; 1916-1917 ; African Affairs Volume XVI ; XVI ;  >
+#    au < exists ; exists ; 1917-1918 ; African Affairs Volume XVII ; XVII ;  >
+#    au < exists ; exists ; 1918-1919 ; African Affairs Volume XVIII ; XVIII ;  >
+#    au < exists ; exists ; 1919-1920 ; African Affairs Volume XIX ; XIX ;  >
+#    au < exists ; exists ; 1920-1921 ; African Affairs Volume XX ; XX ;  >
+#    au < exists ; exists ; 1921-1922 ; African Affairs Volume XXI ; XXI ;  >
+#    au < exists ; exists ; 1922-1923 ; African Affairs Volume XXII ; XXII ;  >
+#    au < exists ; exists ; 1923-1924 ; African Affairs Volume XXIII ; XXIII ;  >
+#    au < exists ; exists ; 1924-1925 ; African Affairs Volume XXIV ; XXIV ;  >
+#    au < exists ; exists ; 1925-1926 ; African Affairs Volume XXV ; XXV ;  >
+#    au < exists ; exists ; 1926-1927 ; African Affairs Volume XXVI ; XXVI ;  >
+#    au < exists ; exists ; 1927-1928 ; African Affairs Volume XXVII ; XXVII ;  >
+#    au < exists ; exists ; 1928-1929 ; African Affairs Volume XXVIII ; XXVIII ;  >
+#    au < exists ; exists ; 1929-1930 ; African Affairs Volume XXIX ; XXIX ;  >
     au < exists ; exists ; 1931 ; African Affairs Volume XXX ; XXX ;  >
     au < exists ; exists ; 1932 ; African Affairs Volume XXXI ; XXXI ;  >
     au < exists ; exists ; 1933 ; African Affairs Volume XXXII ; XXXII ;  >
@@ -314,8 +316,11 @@
 
     param[journal_id] = alcalc
 
-    au < exists ; exists ; 1963-1964 ; Alcohol and Alcoholism Volume 1 ; 1 ;  >
-    au < exists ; exists ; 1965-1967 ; Alcohol and Alcoholism Volume 2 ; 2 ;  >
+    au < exists ; exists ; 1963 ; Alcohol and Alcoholism Volume 1 [1963] ; 1 ;  >
+    au < exists ; exists ; 1964 ; Alcohol and Alcoholism Volume 1 [1964] ; 1 ;  >
+    au < exists ; exists ; 1965 ; Alcohol and Alcoholism Volume 2 [1965] ; 2 ;  >
+    au < exists ; exists ; 1966 ; Alcohol and Alcoholism Volume 2 [1966] ; 2 ;  >
+    au < exists ; exists ; 1967 ; Alcohol and Alcoholism Volume 2 [1967] ; 2 ;  >
     au < exists ; exists ; 1968 ; Alcohol and Alcoholism Volume 3 ; 3 ;  >
     au < exists ; exists ; 1969 ; Alcohol and Alcoholism Volume 4 ; 4 ;  >
     au < exists ; exists ; 1970 ; Alcohol and Alcoholism Volume 5 ; 5 ;  >
@@ -812,43 +817,43 @@
 
     param[journal_id] = analysis
 
-    au < exists ; exists ; 1933-1934 ; Analysis Volume 1 ; 1 ;  >
-    au < exists ; exists ; 1934-1935 ; Analysis Volume 2 ; 2 ;  >
-    au < exists ; exists ; 1935-1936 ; Analysis Volume 3 ; 3 ;  >
-    au < exists ; exists ; 1936-1937 ; Analysis Volume 4 ; 4 ;  >
-    au < exists ; exists ; 1937-1938 ; Analysis Volume 5 ; 5 ;  >
-    au < exists ; exists ; 1938-1939 ; Analysis Volume 6 ; 6 ;  >
+#    au < exists ; exists ; 1933-1934 ; Analysis Volume 1 ; 1 ;  >
+#    au < exists ; exists ; 1934-ists ; exists ; 1934-1935 ; Analysis Volume 2 ; 2 ;  >
+#    au < exists ; exists ; 1935-1936 ; Analysis Volume 3 ; 3 ;  >
+#    au < exists ; exists ; 1936-1937 ; Analysis Volume 4 ; 4 ;  >
+#    au < exists ; exists ; 1937-1938 ; Analysis Volume 5 ; 5 ;  >
+#    au < exists ; exists ; 1938-1939 ; Analysis Volume 6 ; 6 ;  >
     au < exists ; exists ; 1940 ; Analysis Volume 7 ; 7 ;  >
-    au < exists ; exists ; 1947-1948 ; Analysis Volume 8 ; 8 ;  >
-    au < exists ; exists ; 1948-1949 ; Analysis Volume 9 ; 9 ;  >
-    au < exists ; exists ; 1949-1950 ; Analysis Volume 10 ; 10 ;  >
-    au < exists ; exists ; 1950-1951 ; Analysis Volume 11 ; 11 ;  >
-    au < exists ; exists ; 1951-1952 ; Analysis Volume 12 ; 12 ;  >
-    au < exists ; exists ; 1952-1953 ; Analysis Volume 13 ; 13 ;  >
-    au < exists ; exists ; 1953-1954 ; Analysis Volume 14 ; 14 ;  >
-    au < exists ; exists ; 1954-1955 ; Analysis Volume 15 ; 15 ;  >
-    au < exists ; exists ; 1955-1956 ; Analysis Volume 16 ; 16 ;  >
-    au < exists ; exists ; 1956-1957 ; Analysis Volume 17 ; 17 ;  >
-    au < exists ; exists ; 1957-1958 ; Analysis Volume 18 ; 18 ;  >
-    au < exists ; exists ; 1958-1959 ; Analysis Volume 19 ; 19 ;  >
-    au < exists ; exists ; 1959-1960 ; Analysis Volume 20 ; 20 ;  >
-    au < exists ; exists ; 1960-1961 ; Analysis Volume 21 ; 21 ;  >
-    au < exists ; exists ; 1961-1962 ; Analysis Volume 22 ; 22 ;  >
-    au < exists ; exists ; 1962-1963 ; Analysis Volume 23 ; 23 ;  >
-    au < exists ; exists ; 1963-1964 ; Analysis Volume 24 ; 24 ;  >
-    au < exists ; exists ; 1964-1965 ; Analysis Volume 25 ; 25 ;  >
-    au < exists ; exists ; 1965-1966 ; Analysis Volume 26 ; 26 ;  >
-    au < exists ; exists ; 1966-1967 ; Analysis Volume 27 ; 27 ;  >
-    au < exists ; exists ; 1967-1968 ; Analysis Volume 28 ; 28 ;  >
-    au < exists ; exists ; 1968-1969 ; Analysis Volume 29 ; 29 ;  >
-    au < exists ; exists ; 1969-1970 ; Analysis Volume 30 ; 30 ;  >
-    au < exists ; exists ; 1970-1971 ; Analysis Volume 31 ; 31 ;  >
-    au < exists ; exists ; 1971-1972 ; Analysis Volume 32 ; 32 ;  >
-    au < exists ; exists ; 1972-1973 ; Analysis Volume 33 ; 33 ;  >
-    au < exists ; exists ; 1973-1974 ; Analysis Volume 34 ; 34 ;  >
-    au < exists ; exists ; 1974-1975 ; Analysis Volume 35 ; 35 ;  >
-    au < exists ; exists ; 1975-1976 ; Analysis Volume 36 ; 36 ;  >
-    au < exists ; exists ; 1976-1977 ; Analysis Volume 37 ; 37 ;  >
+#    au < exists ; exists ; 1947-1948 ; Analysis Volume 8 ; 8 ;  >
+#    au < exists ; exists ; 1948-1949 ; Analysis Volume 9 ; 9 ;  >
+#    au < exists ; exists ; 1949-1950 ; Analysis Volume 10 ; 10 ;  >
+#    au < exists ; exists ; 1950-1951 ; Analysis Volume 11 ; 11 ;  >
+#    au < exists ; exists ; 1951-1952 ; Analysis Volume 12 ; 12 ;  >
+#    au < exists ; exists ; 1952-1953 ; Analysis Volume 13 ; 13 ;  >
+#    au < exists ; exists ; 1953-1954 ; Analysis Volume 14 ; 14 ;  >
+#    au < exists ; exists ; 1954-1955 ; Analysis Volume 15 ; 15 ;  >
+#    au < exists ; exists ; 1955-1956 ; Analysis Volume 16 ; 16 ;  >
+#    au < exists ; exists ; 1956-1957 ; Analysis Volume 17 ; 17 ;  >
+#    au < exists ; exists ; 1957-1958 ; Analysis Volume 18 ; 18 ;  >
+#    au < exists ; exists ; 1958-1959 ; Analysis Volume 19 ; 19 ;  >
+#    au < exists ; exists ; 1959-1960 ; Analysis Volume 20 ; 20 ;  >
+#    au < exists ; exists ; 1960-1961 ; Analysis Volume 21 ; 21 ;  >
+#    au < exists ; exists ; 1961-1962 ; Analysis Volume 22 ; 22 ;  >
+#    au < exists ; exists ; 1962-1963 ; Analysis Volume 23 ; 23 ;  >
+#    au < exists ; exists ; 1963-1964 ; Analysis Volume 24 ; 24 ;  >
+#    au < exists ; exists ; 1964-1965 ; Analysis Volume 25 ; 25 ;  >
+#    au < exists ; exists ; 1965-1966 ; Analysis Volume 26 ; 26 ;  >
+#    au < exists ; exists ; 1966-1967 ; Analysis Volume 27 ; 27 ;  >
+#    au < exists ; exists ; 1967-1968 ; Analysis Volume 28 ; 28 ;  >
+#    au < exists ; exists ; 1968-1969 ; Analysis Volume 29 ; 29 ;  >
+#    au < exists ; exists ; 1969-1970 ; Analysis Volume 30 ; 30 ;  >
+#    au < exists ; exists ; 1970-1971 ; Analysis Volume 31 ; 31 ;  >
+#    au < exists ; exists ; 1971-1972 ; Analysis Volume 32 ; 32 ;  >
+#    au < exists ; exists ; 1972-1973 ; Analysis Volume 33 ; 33 ;  >
+#    au < exists ; exists ; 1973-1974 ; Analysis Volume 34 ; 34 ;  >
+#    au < exists ; exists ; 1974-1975 ; Analysis Volume 35 ; 35 ;  >
+#    au < exists ; exists ; 1975-1976 ; Analysis Volume 36 ; 36 ;  >
+#    au < exists ; exists ; 1976-1977 ; Analysis Volume 37 ; 37 ;  >
     au < exists ; exists ; 1978 ; Analysis Volume 38 ; 38 ;  >
     au < exists ; exists ; 1979 ; Analysis Volume 39 ; 39 ;  >
     au < exists ; exists ; 1980 ; Analysis Volume 40 ; 40 ;  >
@@ -902,11 +907,11 @@
 
     param[journal_id] = aob
 
-    au < exists ; exists ; 1887-1888 ; Annals of Botany Volume os-1 ; os-1 ;  >
-    au < exists ; exists ; 1888-1889 ; Annals of Botany Volume os-2 ; os-2 ;  >
+#    au < exists ; exists ; 1887-1888 ; Annals of Botany Volume os-1 ; os-1 ;  >
+#    au < exists ; exists ; 1888-1889 ; Annals of Botany Volume os-2 ; os-2 ;  >
     au < exists ; exists ; 1889 ; Annals of Botany Volume os-3 ; os-3 ;  >
     au < exists ; exists ; 1890 ; Annals of Botany Volume os-4 ; os-4 ;  >
-    au < exists ; exists ; 1890-1891 ; Annals of Botany Volume os-5 ; os-5 ;  >
+#    au < exists ; exists ; 1890-1891 ; Annals of Botany Volume os-5 ; os-5 ;  >
     au < exists ; exists ; 1892 ; Annals of Botany Volume os-6 ; os-6 ;  >
     au < exists ; exists ; 1893 ; Annals of Botany Volume os-7 ; os-7 ;  >
     au < exists ; exists ; 1894 ; Annals of Botany Volume os-8 ; os-8 ;  >
@@ -1538,27 +1543,27 @@
 
     param[journal_id] = bja
 
-    au < exists ; exists ; 1923-1924 ; BJA: British Journal of Anaesthesia Volume 1 ; 1 ;  >
-    au < exists ; exists ; 1924-1925 ; BJA: British Journal of Anaesthesia Volume 2 ; 2 ;  >
-    au < exists ; exists ; 1925-1926 ; BJA: British Journal of Anaesthesia Volume 3 ; 3 ;  >
-    au < exists ; exists ; 1926-1927 ; BJA: British Journal of Anaesthesia Volume 4 ; 4 ;  >
-    au < exists ; exists ; 1927-1928 ; BJA: British Journal of Anaesthesia Volume 5 ; 5 ;  >
-    au < exists ; exists ; 1928-1929 ; BJA: British Journal of Anaesthesia Volume 6 ; 6 ;  >
-    au < exists ; exists ; 1929-1930 ; BJA: British Journal of Anaesthesia Volume 7 ; 7 ;  >
-    au < exists ; exists ; 1930-1931 ; BJA: British Journal of Anaesthesia Volume 8 ; 8 ;  >
-    au < exists ; exists ; 1931-1932 ; BJA: British Journal of Anaesthesia Volume 9 ; 9 ;  >
-    au < exists ; exists ; 1932-1933 ; BJA: British Journal of Anaesthesia Volume 10 ; 10 ;  >
-    au < exists ; exists ; 1933-1934 ; BJA: British Journal of Anaesthesia Volume 11 ; 11 ;  >
-    au < exists ; exists ; 1934-1935 ; BJA: British Journal of Anaesthesia Volume 12 ; 12 ;  >
-    au < exists ; exists ; 1935-1936 ; BJA: British Journal of Anaesthesia Volume 13 ; 13 ;  >
-    au < exists ; exists ; 1936-1937 ; BJA: British Journal of Anaesthesia Volume 14 ; 14 ;  >
-    au < exists ; exists ; 1937-1938 ; BJA: British Journal of Anaesthesia Volume 15 ; 15 ;  >
-    au < exists ; exists ; 1938-1939 ; BJA: British Journal of Anaesthesia Volume 16 ; 16 ;  >
-    au < exists ; exists ; 1939-1941 ; BJA: British Journal of Anaesthesia Volume 17 ; 17 ;  >
-    au < exists ; exists ; 1941-1942 ; BJA: British Journal of Anaesthesia Volume 18 ; 18 ;  >
-    au < exists ; exists ; 1942-1945 ; BJA: British Journal of Anaesthesia Volume 19 ; 19 ;  >
-    au < exists ; exists ; 1946-1947 ; BJA: British Journal of Anaesthesia Volume 20 ; 20 ;  >
-    au < exists ; exists ; 1948-1949 ; BJA: British Journal of Anaesthesia Volume 21 ; 21 ;  >
+#    au < exists ; exists ; 1923-1924 ; BJA: British Journal of Anaesthesia Volume 1 ; 1 ;  >
+#    au < exists ; exists ; 1924-1925 ; BJA: British Journal of Anaesthesia Volume 2 ; 2 ;  >
+#    au < exists ; exists ; 1925-1926 ; BJA: British Journal of Anaesthesia Volume 3 ; 3 ;  >
+#    au < exists ; exists ; 1926-1927 ; BJA: British Journal of Anaesthesia Volume 4 ; 4 ;  >
+#    au < exists ; exists ; 1927-1928 ; BJA: British Journal of Anaesthesia Volume 5 ; 5 ;  >
+#    au < exists ; exists ; 1928-1929 ; BJA: British Journal of Anaesthesia Volume 6 ; 6 ;  >
+#    au < exists ; exists ; 1929-1930 ; BJA: British Journal of Anaesthesia Volume 7 ; 7 ;  >
+#    au < exists ; exists ; 1930-1931 ; BJA: British Journal of Anaesthesia Volume 8 ; 8 ;  >
+#    au < exists ; exists ; 1931-1932 ; BJA: British Journal of Anaesthesia Volume 9 ; 9 ;  >
+#    au < exists ; exists ; 1932-1933 ; BJA: British Journal of Anaesthesia Volume 10 ; 10 ;  >
+#    au < exists ; exists ; 1933-1934 ; BJA: British Journal of Anaesthesia Volume 11 ; 11 ;  >
+#    au < exists ; exists ; 1934-1935 ; BJA: British Journal of Anaesthesia Volume 12 ; 12 ;  >
+#    au < exists ; exists ; 1935-1936 ; BJA: British Journal of Anaesthesia Volume 13 ; 13 ;  >
+#    au < exists ; exists ; 1936-1937 ; BJA: British Journal of Anaesthesia Volume 14 ; 14 ;  >
+#    au < exists ; exists ; 1937-1938 ; BJA: British Journal of Anaesthesia Volume 15 ; 15 ;  >
+#    au < exists ; exists ; 1938-1939 ; BJA: British Journal of Anaesthesia Volume 16 ; 16 ;  >
+#    au < exists ; exists ; 1939-1941 ; BJA: British Journal of Anaesthesia Volume 17 ; 17 ;  >
+#    au < exists ; exists ; 1941-1942 ; BJA: British Journal of Anaesthesia Volume 18 ; 18 ;  >
+#    au < exists ; exists ; 1942-1945 ; BJA: British Journal of Anaesthesia Volume 19 ; 19 ;  >
+#    au < exists ; exists ; 1946-1947 ; BJA: British Journal of Anaesthesia Volume 20 ; 20 ;  >
+#    au < exists ; exists ; 1948-1949 ; BJA: British Journal of Anaesthesia Volume 21 ; 21 ;  >
     au < exists ; exists ; 1950 ; BJA: British Journal of Anaesthesia Volume 22 ; 22 ;  >
     au < exists ; exists ; 1951 ; BJA: British Journal of Anaesthesia Volume 23 ; 23 ;  >
     au < exists ; exists ; 1952 ; BJA: British Journal of Anaesthesia Volume 24 ; 24 ;  >
@@ -1965,20 +1970,20 @@
 
     param[journal_id] = biomet
 
-    au < exists ; exists ; 1901-1902 ; Biometrika Volume 1 ; 1 ;  >
-    au < exists ; exists ; 1902-1903 ; Biometrika Volume 2 ; 2 ;  >
+#    au < exists ; exists ; 1901-1902 ; Biometrika Volume 1 ; 1 ;  >
+#    au < exists ; exists ; 1902-1903 ; Biometrika Volume 2 ; 2 ;  >
     au < exists ; exists ; 1904 ; Biometrika Volume 3 ; 3 ;  >
-    au < exists ; exists ; 1905-1906 ; Biometrika Volume 4 ; 4 ;  >
+#    au < exists ; exists ; 1905-1906 ; Biometrika Volume 4 ; 4 ;  >
     au < exists ; exists ; 1907 ; Biometrika Volume 5 ; 5 ;  >
-    au < exists ; exists ; 1908-1909 ; Biometrika Volume 6 ; 6 ;  >
-    au < exists ; exists ; 1909-1910 ; Biometrika Volume 7 ; 7 ;  >
-    au < exists ; exists ; 1911-1912 ; Biometrika Volume 8 ; 8 ;  >
+#    au < exists ; exists ; 1908-1909 ; Biometrika Volume 6 ; 6 ;  >
+#    au < exists ; exists ; 1909-1910 ; Biometrika Volume 7 ; 7 ;  >
+#    au < exists ; exists ; 1911-1912 ; Biometrika Volume 8 ; 8 ;  >
     au < exists ; exists ; 1913 ; Biometrika Volume 9 ; 9 ;  >
-    au < exists ; exists ; 1914-1915 ; Biometrika Volume 10 ; 10 ;  >
-    au < exists ; exists ; 1915-1917 ; Biometrika Volume 11 ; 11 ;  >
-    au < exists ; exists ; 1918-1919 ; Biometrika Volume 12 ; 12 ;  >
-    au < exists ; exists ; 1920-1921 ; Biometrika Volume 13 ; 13 ;  >
-    au < exists ; exists ; 1922-1923 ; Biometrika Volume 14 ; 14 ;  >
+#    au < exists ; exists ; 1914-1915 ; Biometrika Volume 10 ; 10 ;  >
+#    au < exists ; exists ; 1915-1917 ; Biometrika Volume 11 ; 11 ;  >
+#    au < exists ; exists ; 1918-1919 ; Biometrika Volume 12 ; 12 ;  >
+#    au < exists ; exists ; 1920-1921 ; Biometrika Volume 13 ; 13 ;  >
+#    au < exists ; exists ; 1922-1923 ; Biometrika Volume 14 ; 14 ;  >
     au < exists ; exists ; 1923 ; Biometrika Volume 15 ; 15 ;  >
     au < exists ; exists ; 1924 ; Biometrika Volume 16 ; 16 ;  >
     au < exists ; exists ; 1925 ; Biometrika Volume 17 ; 17 ;  >
@@ -1993,11 +1998,11 @@
     au < exists ; exists ; 1934 ; Biometrika Volume 26 ; 26 ;  >
     au < exists ; exists ; 1935 ; Biometrika Volume 27 ; 27 ;  >
     au < exists ; exists ; 1936 ; Biometrika Volume 28 ; 28 ;  >
-    au < exists ; exists ; 1937-1938 ; Biometrika Volume 29 ; 29 ;  >
-    au < exists ; exists ; 1938-1939 ; Biometrika Volume 30 ; 30 ;  >
-    au < exists ; exists ; 1939-1940 ; Biometrika Volume 31 ; 31 ;  >
-    au < exists ; exists ; 1941-1942 ; Biometrika Volume 32 ; 32 ;  >
-    au < exists ; exists ; 1943-1946 ; Biometrika Volume 33 ; 33 ;  >
+#    au < exists ; exists ; 1937-1938 ; Biometrika Volume 29 ; 29 ;  >
+#    au < exists ; exists ; 1938-1939 ; Biometrika Volume 30 ; 30 ;  >
+#    au < exists ; exists ; 1939-1940 ; Biometrika Volume 31 ; 31 ;  >
+#    au < exists ; exists ; 1941-1942 ; Biometrika Volume 32 ; 32 ;  >
+#    au < exists ; exists ; 1943-1946 ; Biometrika Volume 33 ; 33 ;  >
     au < exists ; exists ; 1947 ; Biometrika Volume 34 ; 34 ;  >
     au < exists ; exists ; 1948 ; Biometrika Volume 35 ; 35 ;  >
     au < exists ; exists ; 1949 ; Biometrika Volume 36 ; 36 ;  >
@@ -2175,17 +2180,17 @@
     param[journal_id] = brain
 
     au < exists ; exists ; 1878 ; Brain Volume 1 ; 1 ;  >
-    au < exists ; exists ; 1879-1880 ; Brain Volume 2 ; 2 ;  >
-    au < exists ; exists ; 1880-1881 ; Brain Volume 3 ; 3 ;  >
-    au < exists ; exists ; 1881-1882 ; Brain Volume 4 ; 4 ;  >
-    au < exists ; exists ; 1882-1883 ; Brain Volume 5 ; 5 ;  >
-    au < exists ; exists ; 1883-1884 ; Brain Volume 6 ; 6 ;  >
-    au < exists ; exists ; 1884-1885 ; Brain Volume 7 ; 7 ;  >
-    au < exists ; exists ; 1885-1886 ; Brain Volume 8 ; 8 ;  >
-    au < exists ; exists ; 1886-1887 ; Brain Volume 9 ; 9 ;  >
-    au < exists ; exists ; 1887-1888 ; Brain Volume 10 ; 10 ;  >
-    au < exists ; exists ; 1888-1889 ; Brain Volume 11 ; 11 ;  >
-    au < exists ; exists ; 1889-1890 ; Brain Volume 12 ; 12 ;  >
+#    au < exists ; exists ; 1879-1880 ; Brain Volume 2 ; 2 ;  >
+#    au < exists ; exists ; 1880-1881 ; Brain Volume 3 ; 3 ;  >
+#    au < exists ; exists ; 1881-1882 ; Brain Volume 4 ; 4 ;  >
+#    au < exists ; exists ; 1882-1883 ; Brain Volume 5 ; 5 ;  >
+#    au < exists ; exists ; 1883-1884 ; Brain Volume 6 ; 6 ;  >
+#    au < exists ; exists ; 1884-1885 ; Brain Volume 7 ; 7 ;  >
+#    au < exists ; exists ; 1885-1886 ; Brain Volume 8 ; 8 ;  >
+#    au < exists ; exists ; 1886-1887 ; Brain Volume 9 ; 9 ;  >
+#    au < exists ; exists ; 1887-1888 ; Brain Volume 10 ; 10 ;  >
+#    au < exists ; exists ; 1888-1889 ; Brain Volume 11 ; 11 ;  >
+#    au < exists ; exists ; 1889-1890 ; Brain Volume 12 ; 12 ;  >
     au < exists ; exists ; 1890 ; Brain Volume 13 ; 13 ;  >
     au < exists ; exists ; 1891 ; Brain Volume 14 ; 14 ;  >
     au < exists ; exists ; 1892 ; Brain Volume 15 ; 15 ;  >
@@ -2408,10 +2413,10 @@
     au < exists ; exists ; 1944 ; British Medical Bulletin Volume 2 ; 2 ;  >
     au < exists ; exists ; 1945 ; British Medical Bulletin Volume 3 ; 3 ;  >
     au < exists ; exists ; 1946 ; British Medical Bulletin Volume 4 ; 4 ;  >
-    au < exists ; exists ; 1947-1948 ; British Medical Bulletin Volume 5 ; 5 ;  >
-    au < exists ; exists ; 1949-1950 ; British Medical Bulletin Volume 6 ; 6 ;  >
-    au < exists ; exists ; 1950-1951 ; British Medical Bulletin Volume 7 ; 7 ;  >
-    au < exists ; exists ; 1951-1952 ; British Medical Bulletin Volume 8 ; 8 ;  >
+#    au < exists ; exists ; 1947-1948 ; British Medical Bulletin Volume 5 ; 5 ;  >
+#    au < exists ; exists ; 1949-1950 ; British Medical Bulletin Volume 6 ; 6 ;  >
+#    au < exists ; exists ; 1950-1951 ; British Medical Bulletin Volume 7 ; 7 ;  >
+#    au < exists ; exists ; 1951-1952 ; British Medical Bulletin Volume 8 ; 8 ;  >
     au < exists ; exists ; 1953 ; British Medical Bulletin Volume 9 ; 9 ;  >
     au < exists ; exists ; 1954 ; British Medical Bulletin Volume 10 ; 10 ;  >
     au < exists ; exists ; 1955 ; British Medical Bulletin Volume 11 ; 11 ;  >
@@ -2866,8 +2871,8 @@
 
     param[journal_id] = chemse
 
-    au < exists ; exists ; 1974-1975 ; Chemical Senses Volume 1 ; 1 ;  >
-    au < exists ; exists ; 1976-1977 ; Chemical Senses Volume 2 ; 2 ;  >
+#    au < exists ; exists ; 1974-1975 ; Chemical Senses Volume 1 ; 1 ;  >
+#    au < exists ; exists ; 1976-1977 ; Chemical Senses Volume 2 ; 2 ;  >
     au < exists ; exists ; 1978 ; Chemical Senses Volume 3 ; 3 ;  >
     au < exists ; exists ; 1979 ; Chemical Senses Volume 4 ; 4 ;  >
     au < exists ; exists ; 1980 ; Chemical Senses Volume 5 ; 5 ;  >
@@ -2922,18 +2927,18 @@
 
     param[journal_id] = cs
 
-    au < exists ; exists ; 1978-1979 ; Children & Schools Volume 1 ; 1 ;  >
-    au < exists ; exists ; 1979-1980 ; Children & Schools Volume 2 ; 2 ;  >
-    au < exists ; exists ; 1980-1981 ; Children & Schools Volume 3 ; 3 ;  >
-    au < exists ; exists ; 1981-1982 ; Children & Schools Volume 4 ; 4 ;  >
-    au < exists ; exists ; 1982-1983 ; Children & Schools Volume 5 ; 5 ;  >
-    au < exists ; exists ; 1983-1984 ; Children & Schools Volume 6 ; 6 ;  >
-    au < exists ; exists ; 1984-1985 ; Children & Schools Volume 7 ; 7 ;  >
-    au < exists ; exists ; 1985-1986 ; Children & Schools Volume 8 ; 8 ;  >
-    au < exists ; exists ; 1986-1987 ; Children & Schools Volume 9 ; 9 ;  >
-    au < exists ; exists ; 1987-1988 ; Children & Schools Volume 10 ; 10 ;  >
-    au < exists ; exists ; 1988-1989 ; Children & Schools Volume 11 ; 11 ;  >
-    au < exists ; exists ; 1990-1991 ; Children & Schools Volume 13 ; 13 ;  >
+#    au < exists ; exists ; 1978-1979 ; Children & Schools Volume 1 ; 1 ;  >
+#    au < exists ; exists ; 1979-1980 ; Children & Schools Volume 2 ; 2 ;  >
+#    au < exists ; exists ; 1980-1981 ; Children & Schools Volume 3 ; 3 ;  >
+#    au < exists ; exists ; 1981-1982 ; Children & Schools Volume 4 ; 4 ;  >
+#    au < exists ; exists ; 1982-1983 ; Children & Schools Volume 5 ; 5 ;  >
+#    au < exists ; exists ; 1983-1984 ; Children & Schools Volume 6 ; 6 ;  >
+#    au < exists ; exists ; 1984-1985 ; Children & Schools Volume 7 ; 7 ;  >
+#    au < exists ; exists ; 1985-1986 ; Children & Schools Volume 8 ; 8 ;  >
+#    au < exists ; exists ; 1986-1987 ; Children & Schools Volume 9 ; 9 ;  >
+#    au < exists ; exists ; 1987-1988 ; Children & Schools Volume 10 ; 10 ;  >
+#    au < exists ; exists ; 1988-1989 ; Children & Schools Volume 11 ; 11 ;  >
+#    au < exists ; exists ; 1990-1991 ; Children & Schools Volume 13 ; 13 ;  >
     au < exists ; exists ; 1992 ; Children & Schools Volume 14 ; 14 ;  >
     au < exists ; exists ; 1993 ; Children & Schools Volume 15 ; 15 ;  >
     au < exists ; exists ; 1994 ; Children & Schools Volume 16 ; 16 ;  >
@@ -3079,7 +3084,7 @@
     au < exists ; exists ; 1990 ; Clinical Infectious Diseases Volume 12 ; 12 ;  >
     au < exists ; exists ; 1991 ; Clinical Infectious Diseases Volume 13 ; 13 ;  >
     au < exists ; exists ; 1992 ; Clinical Infectious Diseases Volume 14 ; 14 ;  >
-    au < exists ; exists ; 1992-1993 ; Clinical Infectious Diseases Volume 15 ; 15 ;  >
+#    au < exists ; exists ; 1992-1993 ; Clinical Infectious Diseases Volume 15 ; 15 ;  >
     au < exists ; exists ; 1993 ; Clinical Infectious Diseases Volume 16-17 ; 16-17 ;  >
     au < exists ; exists ; 1994 ; Clinical Infectious Diseases Volume 18-19 ; 18-19 ;  >
     au < exists ; exists ; 1995 ; Clinical Infectious Diseases Volume 20-21 ; 20-21 ;  >
@@ -3616,42 +3621,42 @@
 
     param[journal_id] = eltj
 
-    au < exists ; exists ; 1946-1947 ; ELT Journal Volume 1 ; 1 ;  >
-    au < exists ; exists ; 1947-1948 ; ELT Journal Volume II ; II ;  >
-    au < exists ; exists ; 1948-1949 ; ELT Journal Volume III ; III ;  >
-    au < exists ; exists ; 1949-1950 ; ELT Journal Volume IV ; IV ;  >
-    au < exists ; exists ; 1950-1951 ; ELT Journal Volume V ; V ;  >
-    au < exists ; exists ; 1951-1952 ; ELT Journal Volume VI ; VI ;  >
-    au < exists ; exists ; 1952-1953 ; ELT Journal Volume VII ; VII ;  >
-    au < exists ; exists ; 1953-1954 ; ELT Journal Volume VIII ; VIII ;  >
-    au < exists ; exists ; 1954-1955 ; ELT Journal Volume IX ; IX ;  >
-    au < exists ; exists ; 1955-1956 ; ELT Journal Volume X ; X ;  >
-    au < exists ; exists ; 1956-1957 ; ELT Journal Volume XI ; XI ;  >
-    au < exists ; exists ; 1957-1958 ; ELT Journal Volume XII ; XII ;  >
-    au < exists ; exists ; 1958-1959 ; ELT Journal Volume XIII ; XIII ;  >
-    au < exists ; exists ; 1959-1960 ; ELT Journal Volume XIV ; XIV ;  >
-    au < exists ; exists ; 1960-1961 ; ELT Journal Volume XV ; XV ;  >
-    au < exists ; exists ; 1961-1962 ; ELT Journal Volume XVI ; XVI ;  >
-    au < exists ; exists ; 1962-1963 ; ELT Journal Volume XVII ; XVII ;  >
-    au < exists ; exists ; 1963-1964 ; ELT Journal Volume XVIII ; XVIII ;  >
-    au < exists ; exists ; 1964-1965 ; ELT Journal Volume XIX ; XIX ;  >
-    au < exists ; exists ; 1965-1966 ; ELT Journal Volume XX ; XX ;  >
-    au < exists ; exists ; 1966-1967 ; ELT Journal Volume XXI ; XXI ;  >
-    au < exists ; exists ; 1967-1968 ; ELT Journal Volume XXII ; XXII ;  >
-    au < exists ; exists ; 1968-1969 ; ELT Journal Volume XXIII ; XXIII ;  >
-    au < exists ; exists ; 1969-1970 ; ELT Journal Volume XXIV ; XXIV ;  >
-    au < exists ; exists ; 1970-1971 ; ELT Journal Volume XXV ; XXV ;  >
-    au < exists ; exists ; 1971-1972 ; ELT Journal Volume XXVI ; XXVI ;  >
-    au < exists ; exists ; 1972-1973 ; ELT Journal Volume XXVII ; XXVII ;  >
-    au < exists ; exists ; 1973-1974 ; ELT Journal Volume XXVIII ; XXVIII ;  >
-    au < exists ; exists ; 1974-1975 ; ELT Journal Volume XXIX ; XXIX ;  >
-    au < exists ; exists ; 1975-1976 ; ELT Journal Volume XXX ; XXX ;  >
-    au < exists ; exists ; 1976-1977 ; ELT Journal Volume XXXI ; XXXI ;  >
-    au < exists ; exists ; 1977-1978 ; ELT Journal Volume XXXII ; XXXII ;  >
-    au < exists ; exists ; 1978-1979 ; ELT Journal Volume XXXIII ; XXXIII ;  >
-    au < exists ; exists ; 1979-1980 ; ELT Journal Volume 34 ; 34 ;  >
-    au < exists ; exists ; 1980-1981 ; ELT Journal Volume XXXV ; XXXV ;  >
-    au < exists ; exists ; 1981-1982 ; ELT Journal Volume 36 ; 36 ;  >
+#    au < exists ; exists ; 1946-1947 ; ELT Journal Volume 1 ; 1 ;  >
+#    au < exists ; exists ; 1947-1948 ; ELT Journal Volume II ; II ;  >
+#    au < exists ; exists ; 1948-1949 ; ELT Journal Volume III ; III ;  >
+#    au < exists ; exists ; 1949-1950 ; ELT Journal Volume IV ; IV ;  >
+#    au < exists ; exists ; 1950-1951 ; ELT Journal Volume V ; V ;  >
+#    au < exists ; exists ; 1951-1952 ; ELT Journal Volume VI ; VI ;  >
+#    au < exists ; exists ; 1952-1953 ; ELT Journal Volume VII ; VII ;  >
+#    au < exists ; exists ; 1953-1954 ; ELT Journal Volume VIII ; VIII ;  >
+#    au < exists ; exists ; 1954-1955 ; ELT Journal Volume IX ; IX ;  >
+#    au < exists ; exists ; 1955-1956 ; ELT Journal Volume X ; X ;  >
+#    au < exists ; exists ; 1956-1957 ; ELT Journal Volume XI ; XI ;  >
+#    au < exists ; exists ; 1957-1958 ; ELT Journal Volume XII ; XII ;  >
+#    au < exists ; exists ; 1958-1959 ; ELT Journal Volume XIII ; XIII ;  >
+#    au < exists ; exists ; 1959-1960 ; ELT Journal Volume XIV ; XIV ;  >
+#    au < exists ; exists ; 1960-1961 ; ELT Journal Volume XV ; XV ;  >
+#    au < exists ; exists ; 1961-1962 ; ELT Journal Volume XVI ; XVI ;  >
+#    au < exists ; exists ; 1962-1963 ; ELT Journal Volume XVII ; XVII ;  >
+#    au < exists ; exists ; 1963-1964 ; ELT Journal Volume XVIII ; XVIII ;  >
+#    au < exists ; exists ; 1964-1965 ; ELT Journal Volume XIX ; XIX ;  >
+#    au < exists ; exists ; 1965-1966 ; ELT Journal Volume XX ; XX ;  >
+#    au < exists ; exists ; 1966-1967 ; ELT Journal Volume XXI ; XXI ;  >
+#    au < exists ; exists ; 1967-1968 ; ELT Journal Volume XXII ; XXII ;  >
+#    au < exists ; exists ; 1968-1969 ; ELT Journal Volume XXIII ; XXIII ;  >
+#    au < exists ; exists ; 1969-1970 ; ELT Journal Volume XXIV ; XXIV ;  >
+#    au < exists ; exists ; 1970-1971 ; ELT Journal Volume XXV ; XXV ;  >
+#    au < exists ; exists ; 1971-1972 ; ELT Journal Volume XXVI ; XXVI ;  >
+#    au < exists ; exists ; 1972-1973 ; ELT Journal Volume XXVII ; XXVII ;  >
+#    au < exists ; exists ; 1973-1974 ; ELT Journal Volume XXVIII ; XXVIII ;  >
+#    au < exists ; exists ; 1974-1975 ; ELT Journal Volume XXIX ; XXIX ;  >
+#    au < exists ; exists ; 1975-1976 ; ELT Journal Volume XXX ; XXX ;  >
+#    au < exists ; exists ; 1976-1977 ; ELT Journal Volume XXXI ; XXXI ;  >
+#    au < exists ; exists ; 1977-1978 ; ELT Journal Volume XXXII ; XXXII ;  >
+#    au < exists ; exists ; 1978-1979 ; ELT Journal Volume XXXIII ; XXXIII ;  >
+#    au < exists ; exists ; 1979-1980 ; ELT Journal Volume 34 ; 34 ;  >
+#    au < exists ; exists ; 1980-1981 ; ELT Journal Volume XXXV ; XXXV ;  >
+#    au < exists ; exists ; 1981-1982 ; ELT Journal Volume 36 ; 36 ;  >
     au < exists ; exists ; 1983 ; ELT Journal Volume 37 ; 37 ;  >
     au < exists ; exists ; 1984 ; ELT Journal Volume 38 ; 38 ;  >
     au < exists ; exists ; 1985 ; ELT Journal Volume 39 ; 39 ;  >
@@ -3814,7 +3819,7 @@
 
     param[journal_id] = economicpolicy
 
-    au < exists ; exists ; 1985-1986 ; Economic Policy Volume 1 ; 1 ;  >
+#    au < exists ; exists ; 1985-1986 ; Economic Policy Volume 1 ; 1 ;  >
     au < exists ; exists ; 1987 ; Economic Policy Volume 2 ; 2 ;  >
     au < exists ; exists ; 1988 ; Economic Policy Volume 3 ; 3 ;  >
     au < exists ; exists ; 1989 ; Economic Policy Volume 4 ; 4 ;  >
@@ -3934,22 +3939,22 @@
 
     param[journal_id] = english
 
-    au < exists ; exists ; 1936-1937 ; English: Journal of the English Association Volume 1 ; 1 ;  >
-    au < exists ; exists ; 1938-1939 ; English: Journal of the English Association Volume 2 ; 2 ;  >
-    au < exists ; exists ; 1940-1941 ; English: Journal of the English Association Volume 3 ; 3 ;  >
-    au < exists ; exists ; 1942-1943 ; English: Journal of the English Association Volume 4 ; 4 ;  >
-    au < exists ; exists ; 1944-1945 ; English: Journal of the English Association Volume 5 ; 5 ;  >
-    au < exists ; exists ; 1946-1947 ; English: Journal of the English Association Volume 6 ; 6 ;  >
-    au < exists ; exists ; 1948-1949 ; English: Journal of the English Association Volume 7 ; 7 ;  >
-    au < exists ; exists ; 1950-1951 ; English: Journal of the English Association Volume 8 ; 8 ;  >
-    au < exists ; exists ; 1952-1953 ; English: Journal of the English Association Volume 9 ; 9 ;  >
-    au < exists ; exists ; 1954-1955 ; English: Journal of the English Association Volume 10 ; 10 ;  >
-    au < exists ; exists ; 1956-1957 ; English: Journal of the English Association Volume 11 ; 11 ;  >
-    au < exists ; exists ; 1958-1959 ; English: Journal of the English Association Volume 12 ; 12 ;  >
-    au < exists ; exists ; 1960-1961 ; English: Journal of the English Association Volume 13 ; 13 ;  >
-    au < exists ; exists ; 1962-1963 ; English: Journal of the English Association Volume 14 ; 14 ;  >
-    au < exists ; exists ; 1964-1965 ; English: Journal of the English Association Volume 15 ; 15 ;  >
-    au < exists ; exists ; 1966-1967 ; English: Journal of the English Association Volume 16 ; 16 ;  >
+#    au < exists ; exists ; 1936-1937 ; English: Journal of the English Association Volume 1 ; 1 ;  >
+#    au < exists ; exists ; 1938-1939 ; English: Journal of the English Association Volume 2 ; 2 ;  >
+#    au < exists ; exists ; 1940-1941 ; English: Journal of the English Association Volume 3 ; 3 ;  >
+#    au < exists ; exists ; 1942-1943 ; English: Journal of the English Association Volume 4 ; 4 ;  >
+#    au < exists ; exists ; 1944-1945 ; English: Journal of the English Association Volume 5 ; 5 ;  >
+#    au < exists ; exists ; 1946-1947 ; English: Journal of the English Association Volume 6 ; 6 ;  >
+#    au < exists ; exists ; 1948-1949 ; English: Journal of the English Association Volume 7 ; 7 ;  >
+#    au < exists ; exists ; 1950-1951 ; English: Journal of the English Association Volume 8 ; 8 ;  >
+#    au < exists ; exists ; 1952-1953 ; English: Journal of the English Association Volume 9 ; 9 ;  >
+#    au < exists ; exists ; 1954-1955 ; English: Journal of the English Association Volume 10 ; 10 ;  >
+#    au < exists ; exists ; 1956-1957 ; English: Journal of the English Association Volume 11 ; 11 ;  >
+#    au < exists ; exists ; 1958-1959 ; English: Journal of the English Association Volume 12 ; 12 ;  >
+#    au < exists ; exists ; 1960-1961 ; English: Journal of the English Association Volume 13 ; 13 ;  >
+#    au < exists ; exists ; 1962-1963 ; English: Journal of the English Association Volume 14 ; 14 ;  >
+#    au < exists ; exists ; 1964-1965 ; English: Journal of the English Association Volume 15 ; 15 ;  >
+#    au < exists ; exists ; 1966-1967 ; English: Journal of the English Association Volume 16 ; 16 ;  >
     au < exists ; exists ; 1968 ; English: Journal of the English Association Volume 17 ; 17 ;  >
     au < exists ; exists ; 1969 ; English: Journal of the English Association Volume 18 ; 18 ;  >
     au < exists ; exists ; 1970 ; English: Journal of the English Association Volume 19 ; 19 ;  >
@@ -4124,9 +4129,9 @@
 
     param[journal_id] = envihistrevi
 
-    au < exists ; exists ; 1976-1977 ; Environmental History Review Volume 1 ; 1 ;  >
-    au < exists ; exists ; 1977-1978 ; Environmental History Review Volume 2 ; 2 ;  >
-    au < exists ; exists ; 1978-1979 ; Environmental History Review Volume 3 ; 3 ;  >
+#    au < exists ; exists ; 1976-1977 ; Environmental History Review Volume 1 ; 1 ;  >
+#    au < exists ; exists ; 1977-1978 ; Environmental History Review Volume 2 ; 2 ;  >
+#    au < exists ; exists ; 1978-1979 ; Environmental History Review Volume 3 ; 3 ;  >
     au < exists ; exists ; 1980 ; Environmental History Review Volume 4 ; 4 ;  >
     au < exists ; exists ; 1981 ; Environmental History Review Volume 5 ; 5 ;  >
     au < exists ; exists ; 1982 ; Environmental History Review Volume 6 ; 6 ;  >
@@ -4814,11 +4819,11 @@
     au < exists ; exists ; 1989 ; FEMS Microbiology Ecology Volume 5 ; 5 ;  >
     au < exists ; exists ; 1990 ; FEMS Microbiology Ecology Volume 6-7 ; 6-7 ;  >
     au < exists ; exists ; 1991 ; FEMS Microbiology Ecology Volume 8 ; 8 ;  >
-    au < exists ; exists ; 1991-1992 ; FEMS Microbiology Ecology Volume 9 ; 9 ;  >
+#    au < exists ; exists ; 1991-1992 ; FEMS Microbiology Ecology Volume 9 ; 9 ;  >
     au < exists ; exists ; 1992 ; FEMS Microbiology Ecology Volume 10 ; 10 ;  >
-    au < exists ; exists ; 1992-1993 ; FEMS Microbiology Ecology Volume 11 ; 11 ;  >
+#    au < exists ; exists ; 1992-1993 ; FEMS Microbiology Ecology Volume 11 ; 11 ;  >
     au < exists ; exists ; 1993 ; FEMS Microbiology Ecology Volume 12 ; 12 ;  >
-    au < exists ; exists ; 1993-1994 ; FEMS Microbiology Ecology Volume 13 ; 13 ;  >
+#    au < exists ; exists ; 1993-1994 ; FEMS Microbiology Ecology Volume 13 ; 13 ;  >
     au < exists ; exists ; 1994 ; FEMS Microbiology Ecology Volume 14-15 ; 14-15 ;  >
     au < exists ; exists ; 1995 ; FEMS Microbiology Ecology Volume 16-18 ; 16-18 ;  >
     au < exists ; exists ; 1996 ; FEMS Microbiology Ecology Volume 19-21 ; 19-21 ;  >
@@ -4826,12 +4831,12 @@
     au < exists ; exists ; 1998 ; FEMS Microbiology Ecology Volume 25-27 ; 25-27 ;  >
     au < exists ; exists ; 1999 ; FEMS Microbiology Ecology Volume 28-30 ; 28-30 ;  >
     au < exists ; exists ; 2000 ; FEMS Microbiology Ecology Volume 31-33 ; 31-33 ;  >
-    au < exists ; exists ; 2000-2001 ; FEMS Microbiology Ecology Volume 34 ; 34 ;  >
+#    au < exists ; exists ; 2000-2001 ; FEMS Microbiology Ecology Volume 34 ; 34 ;  >
     au < exists ; exists ; 2001 ; FEMS Microbiology Ecology Volume 35-38 ; 35-38 ;  >
     au < exists ; exists ; 2002 ; FEMS Microbiology Ecology Volume 39-42 ; 39-42 ;  >
     au < exists ; exists ; 2003 ; FEMS Microbiology Ecology Volume 43-46 ; 43-46 ;  >
     au < exists ; exists ; 2004 ; FEMS Microbiology Ecology Volume 47-50 ; 47-50 ;  >
-    au < exists ; exists ; 2004-2005 ; FEMS Microbiology Ecology Volume 51 ; 51 ;  >
+#    au < exists ; exists ; 2004-2005 ; FEMS Microbiology Ecology Volume 51 ; 51 ;  >
     au < exists ; exists ; 2005 ; FEMS Microbiology Ecology Volume 52-54 ; 52-54 ;  >
     au < exists ; exists ; 2006 ; FEMS Microbiology Ecology Volume 55-58 ; 55-58 ;  >
     au < exists ; exists ; 2007 ; FEMS Microbiology Ecology Volume 59-62 ; 59-62 ;  >
@@ -4926,26 +4931,26 @@
 
     param[journal_id] = femsre
 
-    au < exists ; exists ; 1985-1986 ; FEMS Microbiology Reviews Volume 1 ; 1 ;  >
+#    au < exists ; exists ; 1985-1986 ; FEMS Microbiology Reviews Volume 1 ; 1 ;  >
     au < exists ; exists ; 1986 ; FEMS Microbiology Reviews Volume 2 ; 2 ;  >
     au < exists ; exists ; 1987 ; FEMS Microbiology Reviews Volume 3 ; 3 ;  >
     au < exists ; exists ; 1988 ; FEMS Microbiology Reviews Volume 4 ; 4 ;  >
     au < exists ; exists ; 1989 ; FEMS Microbiology Reviews Volume 5 ; 5 ;  >
     au < exists ; exists ; 1990 ; FEMS Microbiology Reviews Volume 6-7 ; 6-7 ;  >
-    au < exists ; exists ; 1991-1992 ; FEMS Microbiology Reviews Volume 8 ; 8 ;  >
+#    au < exists ; exists ; 1991-1992 ; FEMS Microbiology Reviews Volume 8 ; 8 ;  >
     au < exists ; exists ; 1992 ; FEMS Microbiology Reviews Volume 9 ; 9 ;  >
     au < exists ; exists ; 1993 ; FEMS Microbiology Reviews Volume 10-12 ; 10-12 ;  >
     au < exists ; exists ; 1994 ; FEMS Microbiology Reviews Volume 13-15 ; 13-15 ;  >
     au < exists ; exists ; 1995 ; FEMS Microbiology Reviews Volume 16-17 ; 16-17 ;  >
     au < exists ; exists ; 1996 ; FEMS Microbiology Reviews Volume 18 ; 18 ;  >
-    au < exists ; exists ; 1996-1997 ; FEMS Microbiology Reviews Volume 19 ; 19 ;  >
+#    au < exists ; exists ; 1996-1997 ; FEMS Microbiology Reviews Volume 19 ; 19 ;  >
     au < exists ; exists ; 1997 ; FEMS Microbiology Reviews Volume 20 ; 20 ;  >
-    au < exists ; exists ; 1997-1998 ; FEMS Microbiology Reviews Volume 21 ; 21 ;  >
+#    au < exists ; exists ; 1997-1998 ; FEMS Microbiology Reviews Volume 21 ; 21 ;  >
     au < exists ; exists ; 1998 ; FEMS Microbiology Reviews Volume 22 ; 22 ;  >
     au < exists ; exists ; 1999 ; FEMS Microbiology Reviews Volume 23 ; 23 ;  >
     au < exists ; exists ; 2000 ; FEMS Microbiology Reviews Volume 24 ; 24 ;  >
     au < exists ; exists ; 2001 ; FEMS Microbiology Reviews Volume 25 ; 25 ;  >
-    au < exists ; exists ; 2002-2003 ; FEMS Microbiology Reviews Volume 26 ; 26 ;  >
+#    au < exists ; exists ; 2002-2003 ; FEMS Microbiology Reviews Volume 26 ; 26 ;  >
     au < exists ; exists ; 2003 ; FEMS Microbiology Reviews Volume 27 ; 27 ;  >
     au < exists ; exists ; 2004 ; FEMS Microbiology Reviews Volume 28 ; 28 ;  >
     au < exists ; exists ; 2005 ; FEMS Microbiology Reviews Volume 29 ; 29 ;  >
@@ -4975,11 +4980,11 @@
 
     param[journal_id] = femsyr
 
-    au < exists ; exists ; 2001-2002 ; FEMS Yeast Research Volume 1 ; 1 ;  >
+#    au < exists ; exists ; 2001-2002 ; FEMS Yeast Research Volume 1 ; 1 ;  >
     au < exists ; exists ; 2002 ; FEMS Yeast Research Volume 2 ; 2 ;  >
-    au < exists ; exists ; 2003-2004 ; FEMS Yeast Research Volume 4 ; 4 ;  >
-    au < exists ; exists ; 2003-2006 ; FEMS Yeast Research Volume 3 ; 3 ;  >
-    au < exists ; exists ; 2004-2005 ; FEMS Yeast Research Volume 5 ; 5 ;  >
+#    au < exists ; exists ; 2003-2004 ; FEMS Yeast Research Volume 4 ; 4 ;  >
+#    au < exists ; exists ; 2003-2006 ; FEMS Yeast Research Volume 3 ; 3 ;  >
+#    au < exists ; exists ; 2004-2005 ; FEMS Yeast Research Volume 5 ; 5 ;  >
     au < exists ; exists ; 2006 ; FEMS Yeast Research Volume 6 ; 6 ;  >
     au < exists ; exists ; 2007 ; FEMS Yeast Research Volume 7 ; 7 ;  >
     au < doNotProcess ; doNotProcess ; 2008 ; FEMS Yeast Research Volume 8 ; 8 ;  >
@@ -5757,7 +5762,7 @@
 
     param[journal_id] = glycob
 
-    au < exists ; exists ; 1990-1991 ; Glycobiology Volume 1 ; 1 ;  >
+#    au < exists ; exists ; 1990-1991 ; Glycobiology Volume 1 ; 1 ;  >
     au < exists ; exists ; 1992 ; Glycobiology Volume 2 ; 2 ;  >
     au < exists ; exists ; 1993 ; Glycobiology Volume 3 ; 3 ;  >
     au < exists ; exists ; 1994 ; Glycobiology Volume 4 ; 4 ;  >
@@ -6052,7 +6057,7 @@
     au < exists ; exists ; 1988 ; Holocaust and Genocide Studies Volume 3 ; 3 ;  >
     au < exists ; exists ; 1989 ; Holocaust and Genocide Studies Volume 4 ; 4 ;  >
     au < exists ; exists ; 1990 ; Holocaust and Genocide Studies Volume 5 ; 5 ;  >
-    au < exists ; exists ; 1991-1992 ; Holocaust and Genocide Studies Volume 6 ; 6 ;  >
+#    au < exists ; exists ; 1991-1992 ; Holocaust and Genocide Studies Volume 6 ; 6 ;  >
     au < exists ; exists ; 1993 ; Holocaust and Genocide Studies Volume 7 ; 7 ;  >
     au < exists ; exists ; 1994 ; Holocaust and Genocide Studies Volume 8 ; 8 ;  >
     au < exists ; exists ; 1995 ; Holocaust and Genocide Studies Volume 9 ; 9 ;  >
@@ -6261,7 +6266,7 @@
 
     param[journal_id] = icesjms
 
-    au < exists ; exists ; 1903-1926 ; ICES Journal of Marine Science Volume s1 ; s1 ;  >
+#    au < exists ; exists ; 1903-1926 ; ICES Journal of Marine Science Volume s1 ; s1 ;  >
     au < exists ; exists ; 1926 ; ICES Journal of Marine Science Volume 1 ; 1 ;  >
     au < exists ; exists ; 1927 ; ICES Journal of Marine Science Volume 2 ; 2 ;  >
     au < exists ; exists ; 1928 ; ICES Journal of Marine Science Volume 3 ; 3 ;  >
@@ -6276,40 +6281,40 @@
     au < exists ; exists ; 1937 ; ICES Journal of Marine Science Volume 12 ; 12 ;  >
     au < exists ; exists ; 1938 ; ICES Journal of Marine Science Volume 13 ; 13 ;  >
     au < exists ; exists ; 1939 ; ICES Journal of Marine Science Volume 14 ; 14 ;  >
-    au < exists ; exists ; 1947-1948 ; ICES Journal of Marine Science Volume 15 ; 15 ;  >
-    au < exists ; exists ; 1949-1950 ; ICES Journal of Marine Science Volume 16 ; 16 ;  >
-    au < exists ; exists ; 1950-1951 ; ICES Journal of Marine Science Volume 17 ; 17 ;  >
-    au < exists ; exists ; 1952-1953 ; ICES Journal of Marine Science Volume 18 ; 18 ;  >
-    au < exists ; exists ; 1953-1954 ; ICES Journal of Marine Science Volume 19 ; 19 ;  >
-    au < exists ; exists ; 1954-1955 ; ICES Journal of Marine Science Volume 20 ; 20 ;  >
-    au < exists ; exists ; 1955-1956 ; ICES Journal of Marine Science Volume 21 ; 21 ;  >
-    au < exists ; exists ; 1956-1957 ; ICES Journal of Marine Science Volume 22 ; 22 ;  >
+#    au < exists ; exists ; 1947-1948 ; ICES Journal of Marine Science Volume 15 ; 15 ;  >
+#    au < exists ; exists ; 1949-1950 ; ICES Journal of Marine Science Volume 16 ; 16 ;  >
+#    au < exists ; exists ; 1950-1951 ; ICES Journal of Marine Science Volume 17 ; 17 ;  >
+#    au < exists ; exists ; 1952-1953 ; ICES Journal of Marine Science Volume 18 ; 18 ;  >
+#    au < exists ; exists ; 1953-1954 ; ICES Journal of Marine Science Volume 19 ; 19 ;  >
+#    au < exists ; exists ; 1954-1955 ; ICES Journal of Marine Science Volume 20 ; 20 ;  >
+#    au < exists ; exists ; 1955-1956 ; ICES Journal of Marine Science Volume 21 ; 21 ;  >
+#    au < exists ; exists ; 1956-1957 ; ICES Journal of Marine Science Volume 22 ; 22 ;  >
     au < exists ; exists ; 1958 ; ICES Journal of Marine Science Volume 23 ; 23 ;  >
-    au < exists ; exists ; 1958-1959 ; ICES Journal of Marine Science Volume 24 ; 24 ;  >
-    au < exists ; exists ; 1959-1960 ; ICES Journal of Marine Science Volume 25 ; 25 ;  >
-    au < exists ; exists ; 1960-1961 ; ICES Journal of Marine Science Volume 26 ; 26 ;  >
+#    au < exists ; exists ; 1958-1959 ; ICES Journal of Marine Science Volume 24 ; 24 ;  >
+#    au < exists ; exists ; 1959-1960 ; ICES Journal of Marine Science Volume 25 ; 25 ;  >
+#    au < exists ; exists ; 1960-1961 ; ICES Journal of Marine Science Volume 26 ; 26 ;  >
     au < exists ; exists ; 1962 ; ICES Journal of Marine Science Volume 27 ; 27 ;  >
-    au < exists ; exists ; 1963-1964 ; ICES Journal of Marine Science Volume 28 ; 28 ;  >
-    au < exists ; exists ; 1964-1965 ; ICES Journal of Marine Science Volume 29 ; 29 ;  >
-    au < exists ; exists ; 1965-1966 ; ICES Journal of Marine Science Volume 30 ; 30 ;  >
-    au < exists ; exists ; 1967-1968 ; ICES Journal of Marine Science Volume 31 ; 31 ;  >
-    au < exists ; exists ; 1968-1969 ; ICES Journal of Marine Science Volume 32 ; 32 ;  >
-    au < exists ; exists ; 1969-1971 ; ICES Journal of Marine Science Volume 33 ; 33 ;  >
-    au < exists ; exists ; 1971-1972 ; ICES Journal of Marine Science Volume 34 ; 34 ;  >
-    au < exists ; exists ; 1973-1974 ; ICES Journal of Marine Science Volume 35 ; 35 ;  >
-    au < exists ; exists ; 1974-1976 ; ICES Journal of Marine Science Volume 36 ; 36 ;  >
-    au < exists ; exists ; 1976-1977 ; ICES Journal of Marine Science Volume 37 ; 37 ;  >
-    au < exists ; exists ; 1978-1979 ; ICES Journal of Marine Science Volume 38 ; 38 ;  >
-    au < exists ; exists ; 1980-1981 ; ICES Journal of Marine Science Volume 39 ; 39 ;  >
+#    au < exists ; exists ; 1963-1964 ; ICES Journal of Marine Science Volume 28 ; 28 ;  >
+#    au < exists ; exists ; 1964-1965 ; ICES Journal of Marine Science Volume 29 ; 29 ;  >
+#    au < exists ; exists ; 1965-1966 ; ICES Journal of Marine Science Volume 30 ; 30 ;  >
+#    au < exists ; exists ; 1967-1968 ; ICES Journal of Marine Science Volume 31 ; 31 ;  >
+#    au < exists ; exists ; 1968-1969 ; ICES Journal of Marine Science Volume 32 ; 32 ;  >
+#    au < exists ; exists ; 1969-1971 ; ICES Journal of Marine Science Volume 33 ; 33 ;  >
+#    au < exists ; exists ; 1971-1972 ; ICES Journal of Marine Science Volume 34 ; 34 ;  >
+#    au < exists ; exists ; 1973-1974 ; ICES Journal of Marine Science Volume 35 ; 35 ;  >
+#    au < exists ; exists ; 1974-1976 ; ICES Journal of Marine Science Volume 36 ; 36 ;  >
+#    au < exists ; exists ; 1976-1977 ; ICES Journal of Marine Science Volume 37 ; 37 ;  >
+#    au < exists ; exists ; 1978-1979 ; ICES Journal of Marine Science Volume 38 ; 38 ;  >
+#    au < exists ; exists ; 1980-1981 ; ICES Journal of Marine Science Volume 39 ; 39 ;  >
     au < exists ; exists ; 1982 ; ICES Journal of Marine Science Volume 40 ; 40 ;  >
-    au < exists ; exists ; 1983-1984 ; ICES Journal of Marine Science Volume 41 ; 41 ;  >
-    au < exists ; exists ; 1985-1986 ; ICES Journal of Marine Science Volume 42 ; 42 ;  >
-    au < exists ; exists ; 1986-1987 ; ICES Journal of Marine Science Volume 43 ; 43 ;  >
-    au < exists ; exists ; 1987-1988 ; ICES Journal of Marine Science Volume 44 ; 44 ;  >
-    au < exists ; exists ; 1988-1989 ; ICES Journal of Marine Science Volume 45 ; 45 ;  >
-    au < exists ; exists ; 1989-1990 ; ICES Journal of Marine Science Volume 46 ; 46 ;  >
-    au < exists ; exists ; 1990-1991 ; ICES Journal of Marine Science Volume 47 ; 47 ;  >
-    au < exists ; exists ; 1991-1992 ; ICES Journal of Marine Science Volume 48 ; 48 ;  >
+#    au < exists ; exists ; 1983-1984 ; ICES Journal of Marine Science Volume 41 ; 41 ;  >
+#    au < exists ; exists ; 1985-1986 ; ICES Journal of Marine Science Volume 42 ; 42 ;  >
+#    au < exists ; exists ; 1986-1987 ; ICES Journal of Marine Science Volume 43 ; 43 ;  >
+#    au < exists ; exists ; 1987-1988 ; ICES Journal of Marine Science Volume 44 ; 44 ;  >
+#    au < exists ; exists ; 1988-1989 ; ICES Journal of Marine Science Volume 45 ; 45 ;  >
+#    au < exists ; exists ; 1989-1990 ; ICES Journal of Marine Science Volume 46 ; 46 ;  >
+#    au < exists ; exists ; 1990-1991 ; ICES Journal of Marine Science Volume 47 ; 47 ;  >
+#    au < exists ; exists ; 1991-1992 ; ICES Journal of Marine Science Volume 48 ; 48 ;  >
     au < exists ; exists ; 1992 ; ICES Journal of Marine Science Volume 49 ; 49 ;  >
     au < exists ; exists ; 1993 ; ICES Journal of Marine Science Volume 50 ; 50 ;  >
     au < exists ; exists ; 1994 ; ICES Journal of Marine Science Volume 51 ; 51 ;  >
@@ -6520,7 +6525,7 @@
     param[journal_id] = imaman
 
     au < exists ; exists ; 1986 ; IMA Journal of Management Mathematics Volume 1 ; 1 ;  >
-    au < exists ; exists ; 1988-1989 ; IMA Journal of Management Mathematics Volume 2 ; 2 ;  >
+#    au < exists ; exists ; 1988-1989 ; IMA Journal of Management Mathematics Volume 2 ; 2 ;  >
     au < exists ; exists ; 1991 ; IMA Journal of Management Mathematics Volume 3 ; 3 ;  >
     au < exists ; exists ; 1992 ; IMA Journal of Management Mathematics Volume 4 ; 4 ;  >
     au < exists ; exists ; 1993 ; IMA Journal of Management Mathematics Volume 5 ; 5 ;  >
@@ -6629,7 +6634,7 @@
     param[journal_id] = isle
 
     au < exists ; exists ; 1993 ; ISLE: Interdisciplinary Studies in Literature and Environment Volume 1 ; 1 ;  >
-    au < exists ; exists ; 1994-1996 ; ISLE: Interdisciplinary Studies in Literature and Environment Volume 2 ; 2 ;  >
+#    au < exists ; exists ; 1994-1996 ; ISLE: Interdisciplinary Studies in Literature and Environment Volume 2 ; 2 ;  >
     au < exists ; exists ; 1996 ; ISLE: Interdisciplinary Studies in Literature and Environment Volume 3 ; 3 ;  >
     au < exists ; exists ; 1997 ; ISLE: Interdisciplinary Studies in Literature and Environment Volume 4 ; 4 ;  >
     au < exists ; exists ; 1998 ; ISLE: Interdisciplinary Studies in Literature and Environment Volume 5 ; 5 ;  >
@@ -8125,9 +8130,9 @@
     au < exists ; exists ; 1979 ; Journal of Antimicrobial Chemotherapy Volume 5 ; 5 ;  >
     au < exists ; exists ; 1980 ; Journal of Antimicrobial Chemotherapy Volume 6 ; 6 ;  >
     au < exists ; exists ; 1981 ; Journal of Antimicrobial Chemotherapy Volume 7 ; 7 ;  >
-    au < exists ; exists ; 1981-1982 ; Journal of Antimicrobial Chemotherapy Volume 8 ; 8 ;  >
+#    au < exists ; exists ; 1981-1982 ; Journal of Antimicrobial Chemotherapy Volume 8 ; 8 ;  >
     au < exists ; exists ; 1982 ; Journal of Antimicrobial Chemotherapy Volume 10 ; 10 ;  >
-    au < exists ; exists ; 1982-1983 ; Journal of Antimicrobial Chemotherapy Volume 9 ; 9 ;  >
+#    au < exists ; exists ; 1982-1983 ; Journal of Antimicrobial Chemotherapy Volume 9 ; 9 ;  >
     au < exists ; exists ; 1983 ; Journal of Antimicrobial Chemotherapy Volume 11-12 ; 11-12 ;  >
     au < exists ; exists ; 1984 ; Journal of Antimicrobial Chemotherapy Volume 13-14 ; 13-14 ;  >
     au < exists ; exists ; 1985 ; Journal of Antimicrobial Chemotherapy Volume 15-16 ; 15-16 ;  >
@@ -8419,49 +8424,49 @@
 
     param[journal_id] = jcr
 
-    au < exists ; exists ; 1974-1975 ; Journal of Consumer Research Volume 1 ; 1 ;  >
-    au < exists ; exists ; 1975-1976 ; Journal of Consumer Research Volume 2 ; 2 ;  >
-    au < exists ; exists ; 1976-1977 ; Journal of Consumer Research Volume 3 ; 3 ;  >
-    au < exists ; exists ; 1977-1978 ; Journal of Consumer Research Volume 4 ; 4 ;  >
-    au < exists ; exists ; 1978-1979 ; Journal of Consumer Research Volume 5 ; 5 ;  >
-    au < exists ; exists ; 1979-1980 ; Journal of Consumer Research Volume 6 ; 6 ;  >
-    au < exists ; exists ; 1980-1981 ; Journal of Consumer Research Volume 7 ; 7 ;  >
-    au < exists ; exists ; 1981-1982 ; Journal of Consumer Research Volume 8 ; 8 ;  >
-    au < exists ; exists ; 1982-1983 ; Journal of Consumer Research Volume 9 ; 9 ;  >
-    au < exists ; exists ; 1983-1984 ; Journal of Consumer Research Volume 10 ; 10 ;  >
-    au < exists ; exists ; 1984-1985 ; Journal of Consumer Research Volume 11 ; 11 ;  >
-    au < exists ; exists ; 1985-1986 ; Journal of Consumer Research Volume 12 ; 12 ;  >
-    au < exists ; exists ; 1986-1987 ; Journal of Consumer Research Volume 13 ; 13 ;  >
-    au < exists ; exists ; 1987-1988 ; Journal of Consumer Research Volume 14 ; 14 ;  >
-    au < exists ; exists ; 1988-1989 ; Journal of Consumer Research Volume 15 ; 15 ;  >
-    au < exists ; exists ; 1989-1990 ; Journal of Consumer Research Volume 16 ; 16 ;  >
-    au < exists ; exists ; 1990-1991 ; Journal of Consumer Research Volume 17 ; 17 ;  >
-    au < exists ; exists ; 1991-1992 ; Journal of Consumer Research Volume 18 ; 18 ;  >
-    au < exists ; exists ; 1992-1993 ; Journal of Consumer Research Volume 19 ; 19 ;  >
-    au < exists ; exists ; 1993-1994 ; Journal of Consumer Research Volume 20 ; 20 ;  >
-    au < exists ; exists ; 1994-1995 ; Journal of Consumer Research Volume 21 ; 21 ;  >
-    au < exists ; exists ; 1995-1996 ; Journal of Consumer Research Volume 22 ; 22 ;  >
-    au < exists ; exists ; 1996-1997 ; Journal of Consumer Research Volume 23 ; 23 ;  >
-    au < exists ; exists ; 1997-1998 ; Journal of Consumer Research Volume 24 ; 24 ;  >
-    au < exists ; exists ; 1998-1999 ; Journal of Consumer Research Volume 25 ; 25 ;  >
-    au < exists ; exists ; 1999-2000 ; Journal of Consumer Research Volume 26 ; 26 ;  >
-    au < exists ; exists ; 2000-2001 ; Journal of Consumer Research Volume 27 ; 27 ;  >
-    au < exists ; exists ; 2001-2002 ; Journal of Consumer Research Volume 28 ; 28 ;  >
-    au < exists ; exists ; 2002-2003 ; Journal of Consumer Research Volume 29 ; 29 ;  >
-    au < exists ; exists ; 2003-2004 ; Journal of Consumer Research Volume 30 ; 30 ;  >
-    au < exists ; exists ; 2004-2005 ; Journal of Consumer Research Volume 31 ; 31 ;  >
-    au < exists ; exists ; 2005-2006 ; Journal of Consumer Research Volume 32 ; 32 ;  >
-    au < exists ; exists ; 2006-2007 ; Journal of Consumer Research Volume 33 ; 33 ;  >
+#    au < exists ; exists ; 1974-1975 ; Journal of Consumer Research Volume 1 ; 1 ;  >
+#    au < exists ; exists ; 1975-1976 ; Journal of Consumer Research Volume 2 ; 2 ;  >
+#    au < exists ; exists ; 1976-1977 ; Journal of Consumer Research Volume 3 ; 3 ;  >
+#    au < exists ; exists ; 1977-1978 ; Journal of Consumer Research Volume 4 ; 4 ;  >
+#    au < exists ; exists ; 1978-1979 ; Journal of Consumer Research Volume 5 ; 5 ;  >
+#    au < exists ; exists ; 1979-1980 ; Journal of Consumer Research Volume 6 ; 6 ;  >
+#    au < exists ; exists ; 1980-1981 ; Journal of Consumer Research Volume 7 ; 7 ;  >
+#    au < exists ; exists ; 1981-1982 ; Journal of Consumer Research Volume 8 ; 8 ;  >
+#    au < exists ; exists ; 1982-1983 ; Journal of Consumer Research Volume 9 ; 9 ;  >
+#    au < exists ; exists ; 1983-1984 ; Journal of Consumer Research Volume 10 ; 10 ;  >
+#    au < exists ; exists ; 1984-1985 ; Journal of Consumer Research Volume 11 ; 11 ;  >
+#    au < exists ; exists ; 1985-1986 ; Journal of Consumer Research Volume 12 ; 12 ;  >
+#    au < exists ; exists ; 1986-1987 ; Journal of Consumer Research Volume 13 ; 13 ;  >
+#    au < exists ; exists ; 1987-1988 ; Journal of Consumer Research Volume 14 ; 14 ;  >
+#    au < exists ; exists ; 1988-1989 ; Journal of Consumer Research Volume 15 ; 15 ;  >
+#    au < exists ; exists ; 1989-1990 ; Journal of Consumer Research Volume 16 ; 16 ;  >
+#    au < exists ; exists ; 1990-1991 ; Journal of Consumer Research Volume 17 ; 17 ;  >
+#    au < exists ; exists ; 1991-1992 ; Journal of Consumer Research Volume 18 ; 18 ;  >
+#    au < exists ; exists ; 1992-1993 ; Journal of Consumer Research Volume 19 ; 19 ;  >
+#    au < exists ; exists ; 1993-1994 ; Journal of Consumer Research Volume 20 ; 20 ;  >
+#    au < exists ; exists ; 1994-1995 ; Journal of Consumer Research Volume 21 ; 21 ;  >
+#    au < exists ; exists ; 1995-1996 ; Journal of Consumer Research Volume 22 ; 22 ;  >
+#    au < exists ; exists ; 1996-1997 ; Journal of Consumer Research Volume 23 ; 23 ;  >
+#    au < exists ; exists ; 1997-1998 ; Journal of Consumer Research Volume 24 ; 24 ;  >
+#    au < exists ; exists ; 1998-1999 ; Journal of Consumer Research Volume 25 ; 25 ;  >
+#    au < exists ; exists ; 1999-2000 ; Journal of Consumer Research Volume 26 ; 26 ;  >
+#    au < exists ; exists ; 2000-2001 ; Journal of Consumer Research Volume 27 ; 27 ;  >
+#    au < exists ; exists ; 2001-2002 ; Journal of Consumer Research Volume 28 ; 28 ;  >
+#    au < exists ; exists ; 2002-2003 ; Journal of Consumer Research Volume 29 ; 29 ;  >
+#    au < exists ; exists ; 2003-2004 ; Journal of Consumer Research Volume 30 ; 30 ;  >
+#    au < exists ; exists ; 2004-2005 ; Journal of Consumer Research Volume 31 ; 31 ;  >
+#    au < exists ; exists ; 2005-2006 ; Journal of Consumer Research Volume 32 ; 32 ;  >
+#    au < exists ; exists ; 2006-2007 ; Journal of Consumer Research Volume 33 ; 33 ;  >
     au < doNotProcess ; doNotProcess ; 2007-2008 ; Journal of Consumer Research Volume 34 ; 34 ;  >
     au < doNotProcess ; doNotProcess ; 2008-2009 ; Journal of Consumer Research Volume 35 ; 35 ;  >
     au < doNotProcess ; doNotProcess ; 2009-2010 ; Journal of Consumer Research Volume 36 ; 36 ;  >
     au < doNotProcess ; doNotProcess ; 2010-2011 ; Journal of Consumer Research Volume 37 ; 37 ;  >
     au < doNotProcess ; doNotProcess ; 2011-2012 ; Journal of Consumer Research Volume 38 ; 38 ;  >
-    au < exists ; exists ; 2012-2013 ; Journal of Consumer Research Volume 39 ; 39 ;  >
+#    au < exists ; exists ; 2012-2013 ; Journal of Consumer Research Volume 39 ; 39 ;  >
     au < doNotProcess ; doNotProcess ; 2013-2014 ; Journal of Consumer Research Volume 40 ; 40 ;  >
     au < doNotProcess ; doNotProcess ; 2014-2015 ; Journal of Consumer Research Volume 41 ; 41 ;  >
-    au < exists ; exists ; 2015-2016 ; Journal of Consumer Research Volume 42 ; 42 ;  >
-    au < exists ; exists ; 2016-2017 ; Journal of Consumer Research Volume 43 ; 43 ;  >
+#    au < exists ; exists ; 2015-2016 ; Journal of Consumer Research Volume 42 ; 42 ;  >
+#    au < exists ; exists ; 2016-2017 ; Journal of Consumer Research Volume 43 ; 43 ;  >
 
   }
 
@@ -9220,7 +9225,7 @@
 
     param[journal_id] = jiplp
 
-    au < exists ; exists ; 2005-2006 ; Journal of Intellectual Property Law & Practice Volume 1 ; 1 ;  >
+#    au < exists ; exists ; 2005-2006 ; Journal of Intellectual Property Law & Practice Volume 1 ; 1 ;  >
     au < exists ; exists ; 2007 ; Journal of Intellectual Property Law & Practice Volume 2 ; 2 ;  >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Intellectual Property Law & Practice Volume 3 ; 3 ;  >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Intellectual Property Law & Practice Volume 4 ; 4 ;  >
@@ -9425,7 +9430,7 @@
 
     param[journal_id] = logcom
 
-    au < exists ; exists ; 1990-1991 ; Journal of Logic and Computation Volume 1 ; 1 ;  >
+#    au < exists ; exists ; 1990-1991 ; Journal of Logic and Computation Volume 1 ; 1 ;  >
     au < exists ; exists ; 1992 ; Journal of Logic and Computation Volume 2 ; 2 ;  >
     au < exists ; exists ; 1993 ; Journal of Logic and Computation Volume 3 ; 3 ;  >
     au < exists ; exists ; 1994 ; Journal of Logic and Computation Volume 4 ; 4 ;  >
@@ -9569,47 +9574,47 @@
 
     param[journal_id] = mollus
 
-    au < exists ; exists ; 1893-1895 ; Journal of Molluscan Studies Volume 1 ; 1 ;  >
-    au < exists ; exists ; 1896-1897 ; Journal of Molluscan Studies Volume 2 ; 2 ;  >
-    au < exists ; exists ; 1898-1899 ; Journal of Molluscan Studies Volume 3 ; 3 ;  >
-    au < exists ; exists ; 1900-1901 ; Journal of Molluscan Studies Volume 4 ; 4 ;  >
-    au < exists ; exists ; 1902-1903 ; Journal of Molluscan Studies Volume 5 ; 5 ;  >
-    au < exists ; exists ; 1904-1905 ; Journal of Molluscan Studies Volume 6 ; 6 ;  >
-    au < exists ; exists ; 1906-1907 ; Journal of Molluscan Studies Volume 7 ; 7 ;  >
-    au < exists ; exists ; 1908-1909 ; Journal of Molluscan Studies Volume 8 ; 8 ;  >
-    au < exists ; exists ; 1910-1911 ; Journal of Molluscan Studies Volume 9 ; 9 ;  >
-    au < exists ; exists ; 1912-1913 ; Journal of Molluscan Studies Volume 10 ; 10 ;  >
-    au < exists ; exists ; 1914-1915 ; Journal of Molluscan Studies Volume 11 ; 11 ;  >
-    au < exists ; exists ; 1916-1917 ; Journal of Molluscan Studies Volume 12 ; 12 ;  >
-    au < exists ; exists ; 1918-1919 ; Journal of Molluscan Studies Volume 13 ; 13 ;  >
-    au < exists ; exists ; 1920-1921 ; Journal of Molluscan Studies Volume 14 ; 14 ;  >
-    au < exists ; exists ; 1922-1923 ; Journal of Molluscan Studies Volume 15 ; 15 ;  >
-    au < exists ; exists ; 1924-1925 ; Journal of Molluscan Studies Volume 16 ; 16 ;  >
-    au < exists ; exists ; 1926-1927 ; Journal of Molluscan Studies Volume 17 ; 17 ;  >
-    au < exists ; exists ; 1928-1929 ; Journal of Molluscan Studies Volume 18 ; 18 ;  >
-    au < exists ; exists ; 1930-1931 ; Journal of Molluscan Studies Volume 19 ; 19 ;  >
-    au < exists ; exists ; 1932-1933 ; Journal of Molluscan Studies Volume 20 ; 20 ;  >
-    au < exists ; exists ; 1934-1935 ; Journal of Molluscan Studies Volume 21 ; 21 ;  >
-    au < exists ; exists ; 1936-1937 ; Journal of Molluscan Studies Volume 22 ; 22 ;  >
-    au < exists ; exists ; 1938-1939 ; Journal of Molluscan Studies Volume 23 ; 23 ;  >
-    au < exists ; exists ; 1940-1941 ; Journal of Molluscan Studies Volume 24 ; 24 ;  >
-    au < exists ; exists ; 1942-1943 ; Journal of Molluscan Studies Volume 25 ; 25 ;  >
-    au < exists ; exists ; 1944-1945 ; Journal of Molluscan Studies Volume 26 ; 26 ;  >
-    au < exists ; exists ; 1946-1947 ; Journal of Molluscan Studies Volume 27 ; 27 ;  >
-    au < exists ; exists ; 1948-1949 ; Journal of Molluscan Studies Volume 28 ; 28 ;  >
-    au < exists ; exists ; 1950-1951 ; Journal of Molluscan Studies Volume 29 ; 29 ;  >
-    au < exists ; exists ; 1952-1953 ; Journal of Molluscan Studies Volume 30 ; 30 ;  >
-    au < exists ; exists ; 1954-1955 ; Journal of Molluscan Studies Volume 31 ; 31 ;  >
-    au < exists ; exists ; 1956-1957 ; Journal of Molluscan Studies Volume 32 ; 32 ;  >
-    au < exists ; exists ; 1958-1959 ; Journal of Molluscan Studies Volume 33 ; 33 ;  >
-    au < exists ; exists ; 1960-1961 ; Journal of Molluscan Studies Volume 34 ; 34 ;  >
-    au < exists ; exists ; 1962-1963 ; Journal of Molluscan Studies Volume 35 ; 35 ;  >
-    au < exists ; exists ; 1964-1965 ; Journal of Molluscan Studies Volume 36 ; 36 ;  >
-    au < exists ; exists ; 1966-1967 ; Journal of Molluscan Studies Volume 37 ; 37 ;  >
-    au < exists ; exists ; 1968-1969 ; Journal of Molluscan Studies Volume 38 ; 38 ;  >
-    au < exists ; exists ; 1970-1971 ; Journal of Molluscan Studies Volume 39 ; 39 ;  >
-    au < exists ; exists ; 1972-1973 ; Journal of Molluscan Studies Volume 40 ; 40 ;  >
-    au < exists ; exists ; 1974-1975 ; Journal of Molluscan Studies Volume 41 ; 41 ;  >
+#    au < exists ; exists ; 1893-1895 ; Journal of Molluscan Studies Volume 1 ; 1 ;  >
+#    au < exists ; exists ; 1896-1897 ; Journal of Molluscan Studies Volume 2 ; 2 ;  >
+#    au < exists ; exists ; 1898-1899 ; Journal of Molluscan Studies Volume 3 ; 3 ;  >
+#    au < exists ; exists ; 1900-1901 ; Journal of Molluscan Studies Volume 4 ; 4 ;  >
+#    au < exists ; exists ; 1902-1903 ; Journal of Molluscan Studies Volume 5 ; 5 ;  >
+#    au < exists ; exists ; 1904-1905 ; Journal of Molluscan Studies Volume 6 ; 6 ;  >
+#    au < exists ; exists ; 1906-1907 ; Journal of Molluscan Studies Volume 7 ; 7 ;  >
+#    au < exists ; exists ; 1908-1909 ; Journal of Molluscan Studies Volume 8 ; 8 ;  >
+#    au < exists ; exists ; 1910-1911 ; Journal of Molluscan Studies Volume 9 ; 9 ;  >
+#    au < exists ; exists ; 1912-1913 ; Journal of Molluscan Studies Volume 10 ; 10 ;  >
+#    au < exists ; exists ; 1914-1915 ; Journal of Molluscan Studies Volume 11 ; 11 ;  >
+#    au < exists ; exists ; 1916-1917 ; Journal of Molluscan Studies Volume 12 ; 12 ;  >
+#    au < exists ; exists ; 1918-1919 ; Journal of Molluscan Studies Volume 13 ; 13 ;  >
+#    au < exists ; exists ; 1920-1921 ; Journal of Molluscan Studies Volume 14 ; 14 ;  >
+#    au < exists ; exists ; 1922-1923 ; Journal of Molluscan Studies Volume 15 ; 15 ;  >
+#    au < exists ; exists ; 1924-1925 ; Journal of Molluscan Studies Volume 16 ; 16 ;  >
+#    au < exists ; exists ; 1926-1927 ; Journal of Molluscan Studies Volume 17 ; 17 ;  >
+#    au < exists ; exists ; 1928-1929 ; Journal of Molluscan Studies Volume 18 ; 18 ;  >
+#    au < exists ; exists ; 1930-1931 ; Journal of Molluscan Studies Volume 19 ; 19 ;  >
+#    au < exists ; exists ; 1932-1933 ; Journal of Molluscan Studies Volume 20 ; 20 ;  >
+#    au < exists ; exists ; 1934-1935 ; Journal of Molluscan Studies Volume 21 ; 21 ;  >
+#    au < exists ; exists ; 1936-1937 ; Journal of Molluscan Studies Volume 22 ; 22 ;  >
+#    au < exists ; exists ; 1938-1939 ; Journal of Molluscan Studies Volume 23 ; 23 ;  >
+#    au < exists ; exists ; 1940-1941 ; Journal of Molluscan Studies Volume 24 ; 24 ;  >
+#    au < exists ; exists ; 1942-1943 ; Journal of Molluscan Studies Volume 25 ; 25 ;  >
+#    au < exists ; exists ; 1944-1945 ; Journal of Molluscan Studies Volume 26 ; 26 ;  >
+#    au < exists ; exists ; 1946-1947 ; Journal of Molluscan Studies Volume 27 ; 27 ;  >
+#    au < exists ; exists ; 1948-1949 ; Journal of Molluscan Studies Volume 28 ; 28 ;  >
+#    au < exists ; exists ; 1950-1951 ; Journal of Molluscan Studies Volume 29 ; 29 ;  >
+#    au < exists ; exists ; 1952-1953 ; Journal of Molluscan Studies Volume 30 ; 30 ;  >
+#    au < exists ; exists ; 1954-1955 ; Journal of Molluscan Studies Volume 31 ; 31 ;  >
+#    au < exists ; exists ; 1956-1957 ; Journal of Molluscan Studies Volume 32 ; 32 ;  >
+#    au < exists ; exists ; 1958-1959 ; Journal of Molluscan Studies Volume 33 ; 33 ;  >
+#    au < exists ; exists ; 1960-1961 ; Journal of Molluscan Studies Volume 34 ; 34 ;  >
+#    au < exists ; exists ; 1962-1963 ; Journal of Molluscan Studies Volume 35 ; 35 ;  >
+#    au < exists ; exists ; 1964-1965 ; Journal of Molluscan Studies Volume 36 ; 36 ;  >
+#    au < exists ; exists ; 1966-1967 ; Journal of Molluscan Studies Volume 37 ; 37 ;  >
+#    au < exists ; exists ; 1968-1969 ; Journal of Molluscan Studies Volume 38 ; 38 ;  >
+#    au < exists ; exists ; 1970-1971 ; Journal of Molluscan Studies Volume 39 ; 39 ;  >
+#    au < exists ; exists ; 1972-1973 ; Journal of Molluscan Studies Volume 40 ; 40 ;  >
+#    au < exists ; exists ; 1974-1975 ; Journal of Molluscan Studies Volume 41 ; 41 ;  >
     au < exists ; exists ; 1976 ; Journal of Molluscan Studies Volume 42 ; 42 ;  >
     au < exists ; exists ; 1977 ; Journal of Molluscan Studies Volume 43 ; 43 ;  >
     au < exists ; exists ; 1978 ; Journal of Molluscan Studies Volume 44 ; 44 ;  >
@@ -10286,47 +10291,47 @@
 
     param[journal_id] = jsh
 
-    au < exists ; exists ; 1967-1968 ; Journal of Social History Volume 1 ; 1 ;  >
-    au < exists ; exists ; 1968-1969 ; Journal of Social History Volume 2 ; 2 ;  >
-    au < exists ; exists ; 1969-1970 ; Journal of Social History Volume 3 ; 3 ;  >
-    au < exists ; exists ; 1970-1971 ; Journal of Social History Volume 4 ; 4 ;  >
-    au < exists ; exists ; 1971-1972 ; Journal of Social History Volume 5 ; 5 ;  >
-    au < exists ; exists ; 1972-1973 ; Journal of Social History Volume 6 ; 6 ;  >
-    au < exists ; exists ; 1973-1974 ; Journal of Social History Volume 7 ; 7 ;  >
-    au < exists ; exists ; 1974-1975 ; Journal of Social History Volume 8 ; 8 ;  >
-    au < exists ; exists ; 1975-1976 ; Journal of Social History Volume 9 ; 9 ;  >
-    au < exists ; exists ; 1976-1977 ; Journal of Social History Volume 10 ; 10 ;  >
-    au < exists ; exists ; 1977-1978 ; Journal of Social History Volume 11 ; 11 ;  >
-    au < exists ; exists ; 1978-1979 ; Journal of Social History Volume 12 ; 12 ;  >
-    au < exists ; exists ; 1979-1980 ; Journal of Social History Volume 13 ; 13 ;  >
-    au < exists ; exists ; 1980-1981 ; Journal of Social History Volume 14 ; 14 ;  >
-    au < exists ; exists ; 1981-1982 ; Journal of Social History Volume 15 ; 15 ;  >
-    au < exists ; exists ; 1982-1983 ; Journal of Social History Volume 16 ; 16 ;  >
-    au < exists ; exists ; 1983-1984 ; Journal of Social History Volume 17 ; 17 ;  >
-    au < exists ; exists ; 1984-1985 ; Journal of Social History Volume 18 ; 18 ;  >
-    au < exists ; exists ; 1985-1986 ; Journal of Social History Volume 19 ; 19 ;  >
-    au < exists ; exists ; 1986-1987 ; Journal of Social History Volume 20 ; 20 ;  >
-    au < exists ; exists ; 1987-1988 ; Journal of Social History Volume 21 ; 21 ;  >
-    au < exists ; exists ; 1988-1989 ; Journal of Social History Volume 22 ; 22 ;  >
-    au < exists ; exists ; 1989-1990 ; Journal of Social History Volume 23 ; 23 ;  >
-    au < exists ; exists ; 1990-1991 ; Journal of Social History Volume 24 ; 24 ;  >
-    au < exists ; exists ; 1991-1992 ; Journal of Social History Volume 25 ; 25 ;  >
-    au < exists ; exists ; 1992-1993 ; Journal of Social History Volume 26 ; 26 ;  >
-    au < exists ; exists ; 1993-1994 ; Journal of Social History Volume 27 ; 27 ;  >
-    au < exists ; exists ; 1994-1995 ; Journal of Social History Volume 28 ; 28 ;  >
-    au < exists ; exists ; 1995-1996 ; Journal of Social History Volume 29 ; 29 ;  >
-    au < exists ; exists ; 1996-1997 ; Journal of Social History Volume 30 ; 30 ;  >
-    au < exists ; exists ; 1997-1998 ; Journal of Social History Volume 31 ; 31 ;  >
-    au < exists ; exists ; 1998-1999 ; Journal of Social History Volume 32 ; 32 ;  >
-    au < exists ; exists ; 1999-2000 ; Journal of Social History Volume 33 ; 33 ;  >
-    au < exists ; exists ; 2000-2001 ; Journal of Social History Volume 34 ; 34 ;  >
-    au < exists ; exists ; 2001-2002 ; Journal of Social History Volume 35 ; 35 ;  >
-    au < exists ; exists ; 2002-2003 ; Journal of Social History Volume 36 ; 36 ;  >
-    au < exists ; exists ; 2003-2004 ; Journal of Social History Volume 37 ; 37 ;  >
-    au < exists ; exists ; 2004-2005 ; Journal of Social History Volume 38 ; 38 ;  >
-    au < exists ; exists ; 2005-2006 ; Journal of Social History Volume 39 ; 39 ;  >
-    au < exists ; exists ; 2006-2007 ; Journal of Social History Volume 40 ; 40 ;  >
-    au < exists ; exists ; 2007-2008 ; Journal of Social History Volume 41 ; 41 ;  >
+#    au < exists ; exists ; 1967-1968 ; Journal of Social History Volume 1 ; 1 ;  >
+#    au < exists ; exists ; 1968-1969 ; Journal of Social History Volume 2 ; 2 ;  >
+#    au < exists ; exists ; 1969-1970 ; Journal of Social History Volume 3 ; 3 ;  >
+#    au < exists ; exists ; 1970-1971 ; Journal of Social History Volume 4 ; 4 ;  >
+#    au < exists ; exists ; 1971-1972 ; Journal of Social History Volume 5 ; 5 ;  >
+#    au < exists ; exists ; 1972-1973 ; Journal of Social History Volume 6 ; 6 ;  >
+#    au < exists ; exists ; 1973-1974 ; Journal of Social History Volume 7 ; 7 ;  >
+#    au < exists ; exists ; 1974-1975 ; Journal of Social History Volume 8 ; 8 ;  >
+#    au < exists ; exists ; 1975-1976 ; Journal of Social History Volume 9 ; 9 ;  >
+#    au < exists ; exists ; 1976-1977 ; Journal of Social History Volume 10 ; 10 ;  >
+#    au < exists ; exists ; 1977-1978 ; Journal of Social History Volume 11 ; 11 ;  >
+#    au < exists ; exists ; 1978-1979 ; Journal of Social History Volume 12 ; 12 ;  >
+#    au < exists ; exists ; 1979-1980 ; Journal of Social History Volume 13 ; 13 ;  >
+#    au < exists ; exists ; 1980-1981 ; Journal of Social History Volume 14 ; 14 ;  >
+#    au < exists ; exists ; 1981-1982 ; Journal of Social History Volume 15 ; 15 ;  >
+#    au < exists ; exists ; 1982-1983 ; Journal of Social History Volume 16 ; 16 ;  >
+#    au < exists ; exists ; 1983-1984 ; Journal of Social History Volume 17 ; 17 ;  >
+#    au < exists ; exists ; 1984-1985 ; Journal of Social History Volume 18 ; 18 ;  >
+#    au < exists ; exists ; 1985-1986 ; Journal of Social History Volume 19 ; 19 ;  >
+#    au < exists ; exists ; 1986-1987 ; Journal of Social History Volume 20 ; 20 ;  >
+#    au < exists ; exists ; 1987-1988 ; Journal of Social History Volume 21 ; 21 ;  >
+#    au < exists ; exists ; 1988-1989 ; Journal of Social History Volume 22 ; 22 ;  >
+#    au < exists ; exists ; 1989-1990 ; Journal of Social History Volume 23 ; 23 ;  >
+#    au < exists ; exists ; 1990-1991 ; Journal of Social History Volume 24 ; 24 ;  >
+#    au < exists ; exists ; 1991-1992 ; Journal of Social History Volume 25 ; 25 ;  >
+#    au < exists ; exists ; 1992-1993 ; Journal of Social History Volume 26 ; 26 ;  >
+#    au < exists ; exists ; 1993-1994 ; Journal of Social History Volume 27 ; 27 ;  >
+#    au < exists ; exists ; 1994-1995 ; Journal of Social History Volume 28 ; 28 ;  >
+#    au < exists ; exists ; 1995-1996 ; Journal of Social History Volume 29 ; 29 ;  >
+#    au < exists ; exists ; 1996-1997 ; Journal of Social History Volume 30 ; 30 ;  >
+#    au < exists ; exists ; 1997-1998 ; Journal of Social History Volume 31 ; 31 ;  >
+#    au < exists ; exists ; 1998-1999 ; Journal of Social History Volume 32 ; 32 ;  >
+#    au < exists ; exists ; 1999-2000 ; Journal of Social History Volume 33 ; 33 ;  >
+#    au < exists ; exists ; 2000-2001 ; Journal of Social History Volume 34 ; 34 ;  >
+#    au < exists ; exists ; 2001-2002 ; Journal of Social History Volume 35 ; 35 ;  >
+#    au < exists ; exists ; 2002-2003 ; Journal of Social History Volume 36 ; 36 ;  >
+#    au < exists ; exists ; 2003-2004 ; Journal of Social History Volume 37 ; 37 ;  >
+#    au < exists ; exists ; 2004-2005 ; Journal of Social History Volume 38 ; 38 ;  >
+#    au < exists ; exists ; 2005-2006 ; Journal of Social History Volume 39 ; 39 ;  >
+#    au < exists ; exists ; 2006-2007 ; Journal of Social History Volume 40 ; 40 ;  >
+#    au < exists ; exists ; 2007-2008 ; Journal of Social History Volume 41 ; 41 ;  >
     au < doNotProcess ; doNotProcess ; 2008-2009 ; Journal of Social History Volume 42 ; 42 ;  >
     au < doNotProcess ; doNotProcess ; 2009-2010 ; Journal of Social History Volume 43 ; 43 ;  >
     au < doNotProcess ; doNotProcess ; 2010-2011 ; Journal of Social History Volume 44 ; 44 ;  >
@@ -10334,8 +10339,8 @@
     au < doNotProcess ; doNotProcess ; 2012-2013 ; Journal of Social History Volume 46 ; 46 ;  >
     au < doNotProcess ; doNotProcess ; 2013-2014 ; Journal of Social History Volume 47 ; 47 ;  >
     au < doNotProcess ; doNotProcess ; 2014-2015 ; Journal of Social History Volume 48 ; 48 ;  >
-    au < exists ; exists ; 2015-2016 ; Journal of Social History Volume 49 ; 49 ;  >
-    au < exists ; exists ; 2016-2017 ; Journal of Social History Volume 50 ; 50 ;  >
+#    au < exists ; exists ; 2015-2016 ; Journal of Social History Volume 49 ; 49 ;  >
+#    au < exists ; exists ; 2016-2017 ; Journal of Social History Volume 50 ; 50 ;  >
 
   }
 
@@ -11756,7 +11761,7 @@
 
     param[journal_id] = mbe
 
-    au < exists ; exists ; 1983-1984 ; Molecular Biology and Evolution Volume 1 ; 1 ;  >
+#    au < exists ; exists ; 1983-1984 ; Molecular Biology and Evolution Volume 1 ; 1 ;  >
     au < exists ; exists ; 1985 ; Molecular Biology and Evolution Volume 2 ; 2 ;  >
     au < exists ; exists ; 1986 ; Molecular Biology and Evolution Volume 3 ; 3 ;  >
     au < exists ; exists ; 1987 ; Molecular Biology and Evolution Volume 4 ; 4 ;  >
@@ -11991,13 +11996,13 @@
     au < exists ; exists ; 1983 ; Music Therapy Volume 3 ; 3 ;  >
     au < exists ; exists ; 1984 ; Music Therapy Volume 4 ; 4 ;  >
     au < exists ; exists ; 1985 ; Music Therapy Volume 5 ; 5 ;  >
-    au < exists ; exists ; 1986-1987 ; Music Therapy Volume 6 ; 6 ;  >
+#    au < exists ; exists ; 1986-1987 ; Music Therapy Volume 6 ; 6 ;  >
     au < exists ; exists ; 1988 ; Music Therapy Volume 7 ; 7 ;  >
     au < exists ; exists ; 1989 ; Music Therapy Volume 8 ; 8 ;  >
     au < exists ; exists ; 1990 ; Music Therapy Volume 9 ; 9 ;  >
     au < exists ; exists ; 1991 ; Music Therapy Volume 10 ; 10 ;  >
     au < exists ; exists ; 1992 ; Music Therapy Volume 11 ; 11 ;  >
-    au < exists ; exists ; 1993-1994 ; Music Therapy Volume 12 ; 12 ;  >
+#    au < exists ; exists ; 1993-1994 ; Music Therapy Volume 12 ; 12 ;  >
     au < exists ; exists ; 1995 ; Music Therapy Volume 13 ; 13 ;  >
     au < exists ; exists ; 1996 ; Music Therapy Volume 14 ; 14 ;  >
 
@@ -12015,7 +12020,7 @@
 
     param[journal_id] = mtp
 
-    au < exists ; exists ; 1982-1984 ; Music Therapy Perspectives Volume 1 ; 1 ;  >
+#    au < exists ; exists ; 1982-1984 ; Music Therapy Perspectives Volume 1 ; 1 ;  >
     au < exists ; exists ; 1984 ; Music Therapy Perspectives Volume 2 ; 2 ;  >
     au < exists ; exists ; 1985 ; Music Therapy Perspectives Volume 3 ; 3 ;  >
     au < exists ; exists ; 1986 ; Music Therapy Perspectives Volume 4 ; 4 ;  >
@@ -12470,7 +12475,7 @@
 
     param[journal_id] = nq
 
-    au < exists ; exists ; 1849-1850 ; Notes and Queries Volume s1-I ; s1-I ;  >
+#    au < exists ; exists ; 1849-1850 ; Notes and Queries Volume s1-I ; s1-I ;  >
     au < exists ; exists ; 1850 ; Notes and Queries Volume s1-II ; s1-II ;  >
     au < exists ; exists ; 1851 ; Notes and Queries Volume s1-III-s1-IV ; s1-III-s1-IV ;  >
     au < exists ; exists ; 1852 ; Notes and Queries Volume s1-V-s1-VI ; s1-V-s1-VI ;  >
@@ -12808,23 +12813,23 @@
     param[journal_id] = maghis
 
     au < exists ; exists ; 1985 ; OAH Magazine of History Volume 1 ; 1 ;  >
-    au < exists ; exists ; 1986-1987 ; OAH Magazine of History Volume 2 ; 2 ;  >
+#    au < exists ; exists ; 1986-1987 ; OAH Magazine of History Volume 2 ; 2 ;  >
     au < exists ; exists ; 1988 ; OAH Magazine of History Volume 3 ; 3 ;  >
-    au < exists ; exists ; 1989-1990 ; OAH Magazine of History Volume 4 ; 4 ;  >
-    au < exists ; exists ; 1990-1991 ; OAH Magazine of History Volume 5 ; 5 ;  >
-    au < exists ; exists ; 1991-1992 ; OAH Magazine of History Volume 6 ; 6 ;  >
-    au < exists ; exists ; 1992-1993 ; OAH Magazine of History Volume 7 ; 7 ;  >
-    au < exists ; exists ; 1993-1994 ; OAH Magazine of History Volume 8 ; 8 ;  >
-    au < exists ; exists ; 1994-1995 ; OAH Magazine of History Volume 9 ; 9 ;  >
-    au < exists ; exists ; 1995-1996 ; OAH Magazine of History Volume 10 ; 10 ;  >
-    au < exists ; exists ; 1996-1997 ; OAH Magazine of History Volume 11 ; 11 ;  >
+#    au < exists ; exists ; 1989-1990 ; OAH Magazine of History Volume 4 ; 4 ;  >
+#    au < exists ; exists ; 1990-1991 ; OAH Magazine of History Volume 5 ; 5 ;  >
+#    au < exists ; exists ; 1991-1992 ; OAH Magazine of History Volume 6 ; 6 ;  >
+#    au < exists ; exists ; 1992-1993 ; OAH Magazine of History Volume 7 ; 7 ;  >
+#    au < exists ; exists ; 1993-1994 ; OAH Magazine of History Volume 8 ; 8 ;  >
+#    au < exists ; exists ; 1994-1995 ; OAH Magazine of History Volume 9 ; 9 ;  >
+#    au < exists ; exists ; 1995-1996 ; OAH Magazine of History Volume 10 ; 10 ;  >
+#    au < exists ; exists ; 1996-1997 ; OAH Magazine of History Volume 11 ; 11 ;  >
     au < exists ; exists ; 1998 ; OAH Magazine of History Volume 12 ; 12 ;  >
-    au < exists ; exists ; 1998-1999 ; OAH Magazine of History Volume 13 ; 13 ;  >
-    au < exists ; exists ; 1999-2000 ; OAH Magazine of History Volume 14 ; 14 ;  >
-    au < exists ; exists ; 2000-2001 ; OAH Magazine of History Volume 15 ; 15 ;  >
-    au < exists ; exists ; 2001-2002 ; OAH Magazine of History Volume 16 ; 16 ;  >
-    au < exists ; exists ; 2002-2003 ; OAH Magazine of History Volume 17 ; 17 ;  >
-    au < exists ; exists ; 2003-2004 ; OAH Magazine of History Volume 18 ; 18 ;  >
+#    au < exists ; exists ; 1998-1999 ; OAH Magazine of History Volume 13 ; 13 ;  >
+#    au < exists ; exists ; 1999-2000 ; OAH Magazine of History Volume 14 ; 14 ;  >
+#    au < exists ; exists ; 2000-2001 ; OAH Magazine of History Volume 15 ; 15 ;  >
+#    au < exists ; exists ; 2001-2002 ; OAH Magazine of History Volume 16 ; 16 ;  >
+#    au < exists ; exists ; 2002-2003 ; OAH Magazine of History Volume 17 ; 17 ;  >
+#    au < exists ; exists ; 2003-2004 ; OAH Magazine of History Volume 18 ; 18 ;  >
     au < exists ; exists ; 2005 ; OAH Magazine of History Volume 19 ; 19 ;  >
     au < exists ; exists ; 2006 ; OAH Magazine of History Volume 20 ; 20 ;  >
     au < exists ; exists ; 2007 ; OAH Magazine of History Volume 21 ; 21 ;  >
@@ -12848,16 +12853,16 @@
 
     param[journal_id] = occmed
 
-    au < exists ; exists ; 1948-1949 ; Occupational Medicine Volume os-1 ; os-1 ;  >
-    au < exists ; exists ; 1951-1952 ; Occupational Medicine Volume 1 ; 1 ;  >
-    au < exists ; exists ; 1952-1953 ; Occupational Medicine Volume 2 ; 2 ;  >
-    au < exists ; exists ; 1953-1954 ; Occupational Medicine Volume 3 ; 3 ;  >
-    au < exists ; exists ; 1954-1955 ; Occupational Medicine Volume 4 ; 4 ;  >
-    au < exists ; exists ; 1955-1956 ; Occupational Medicine Volume 5 ; 5 ;  >
-    au < exists ; exists ; 1956-1957 ; Occupational Medicine Volume 6 ; 6 ;  >
-    au < exists ; exists ; 1957-1958 ; Occupational Medicine Volume 7 ; 7 ;  >
-    au < exists ; exists ; 1958-1959 ; Occupational Medicine Volume 8 ; 8 ;  >
-    au < exists ; exists ; 1959-1960 ; Occupational Medicine Volume 9 ; 9 ;  >
+#    au < exists ; exists ; 1948-1949 ; Occupational Medicine Volume os-1 ; os-1 ;  >
+#    au < exists ; exists ; 1951-1952 ; Occupational Medicine Volume 1 ; 1 ;  >
+#    au < exists ; exists ; 1952-1953 ; Occupational Medicine Volume 2 ; 2 ;  >
+#    au < exists ; exists ; 1953-1954 ; Occupational Medicine Volume 3 ; 3 ;  >
+#    au < exists ; exists ; 1954-1955 ; Occupational Medicine Volume 4 ; 4 ;  >
+#    au < exists ; exists ; 1955-1956 ; Occupational Medicine Volume 5 ; 5 ;  >
+#    au < exists ; exists ; 1956-1957 ; Occupational Medicine Volume 6 ; 6 ;  >
+#    au < exists ; exists ; 1957-1958 ; Occupational Medicine Volume 7 ; 7 ;  >
+#    au < exists ; exists ; 1958-1959 ; Occupational Medicine Volume 8 ; 8 ;  >
+#    au < exists ; exists ; 1959-1960 ; Occupational Medicine Volume 9 ; 9 ;  >
     au < exists ; exists ; 1960 ; Occupational Medicine Volume 10 ; 10 ;  >
     au < exists ; exists ; 1961 ; Occupational Medicine Volume 11 ; 11 ;  >
     au < exists ; exists ; 1962 ; Occupational Medicine Volume 12 ; 12 ;  >
@@ -13320,8 +13325,8 @@
 
     param[journal_id] = pa
 
-    au < exists ; exists ; 1947-1948 ; Parliamentary Affairs Volume I ; I ;  >
-    au < exists ; exists ; 1948-1949 ; Parliamentary Affairs Volume II ; II ;  >
+#    au < exists ; exists ; 1947-1948 ; Parliamentary Affairs Volume I ; I ;  >
+#    au < exists ; exists ; 1948-1949 ; Parliamentary Affairs Volume II ; II ;  >
     au < exists ; exists ; 1949 ; Parliamentary Affairs Volume III ; III ;  >
     au < exists ; exists ; 1950 ; Parliamentary Affairs Volume IV ; IV ;  >
     au < exists ; exists ; 1951 ; Parliamentary Affairs Volume V ; V ;  >
@@ -13332,21 +13337,21 @@
     au < exists ; exists ; 1956 ; Parliamentary Affairs Volume X ; X ;  >
     au < exists ; exists ; 1957 ; Parliamentary Affairs Volume XI ; XI ;  >
     au < exists ; exists ; 1958 ; Parliamentary Affairs Volume XII ; XII ;  >
-    au < exists ; exists ; 1959-1960 ; Parliamentary Affairs Volume XIII ; XIII ;  >
+#    au < exists ; exists ; 1959-1960 ; Parliamentary Affairs Volume XIII ; XIII ;  >
     au < exists ; exists ; 1960 ; Parliamentary Affairs Volume XIV ; XIV ;  >
     au < exists ; exists ; 1961 ; Parliamentary Affairs Volume XV ; XV ;  >
     au < exists ; exists ; 1962 ; Parliamentary Affairs Volume XVI ; XVI ;  >
-    au < exists ; exists ; 1963-1964 ; Parliamentary Affairs Volume XVII ; XVII ;  >
+#    au < exists ; exists ; 1963-1964 ; Parliamentary Affairs Volume XVII ; XVII ;  >
     au < exists ; exists ; 1964 ; Parliamentary Affairs Volume XVIII ; XVIII ;  >
-    au < exists ; exists ; 1965-1966 ; Parliamentary Affairs Volume 19 ; 19 ;  >
-    au < exists ; exists ; 1966-1967 ; Parliamentary Affairs Volume 20 ; 20 ;  >
-    au < exists ; exists ; 1967-1968 ; Parliamentary Affairs Volume 21 ; 21 ;  >
-    au < exists ; exists ; 1968-1969 ; Parliamentary Affairs Volume 22 ; 22 ;  >
-    au < exists ; exists ; 1969-1970 ; Parliamentary Affairs Volume 23 ; 23 ;  >
-    au < exists ; exists ; 1970-1971 ; Parliamentary Affairs Volume 24 ; 24 ;  >
-    au < exists ; exists ; 1971-1972 ; Parliamentary Affairs Volume 25 ; 25 ;  >
-    au < exists ; exists ; 1972-1973 ; Parliamentary Affairs Volume 26 ; 26 ;  >
-    au < exists ; exists ; 1973-1974 ; Parliamentary Affairs Volume 27 ; 27 ;  >
+#    au < exists ; exists ; 1965-1966 ; Parliamentary Affairs Volume 19 ; 19 ;  >
+#    au < exists ; exists ; 1966-1967 ; Parliamentary Affairs Volume 20 ; 20 ;  >
+#    au < exists ; exists ; 1967-1968 ; Parliamentary Affairs Volume 21 ; 21 ;  >
+#    au < exists ; exists ; 1968-1969 ; Parliamentary Affairs Volume 22 ; 22 ;  >
+#    au < exists ; exists ; 1969-1970 ; Parliamentary Affairs Volume 23 ; 23 ;  >
+#    au < exists ; exists ; 1970-1971 ; Parliamentary Affairs Volume 24 ; 24 ;  >
+#    au < exists ; exists ; 1971-1972 ; Parliamentary Affairs Volume 25 ; 25 ;  >
+#    au < exists ; exists ; 1972-1973 ; Parliamentary Affairs Volume 26 ; 26 ;  >
+#    au < exists ; exists ; 1973-1974 ; Parliamentary Affairs Volume 27 ; 27 ;  >
     au < exists ; exists ; 1974 ; Parliamentary Affairs Volume 28 ; 28 ;  >
     au < exists ; exists ; 1976 ; Parliamentary Affairs Volume XXIX ; XXIX ;  >
     au < exists ; exists ; 1977 ; Parliamentary Affairs Volume XXX ; XXX ;  >
@@ -13638,7 +13643,7 @@
 
     param[journal_id] = pcp
 
-    au < exists ; exists ; 1959-1960 ; Plant and Cell Physiology Volume 1 ; 1 ;  >
+#    au < exists ; exists ; 1959-1960 ; Plant and Cell Physiology Volume 1 ; 1 ;  >
     au < exists ; exists ; 1961 ; Plant and Cell Physiology Volume 2 ; 2 ;  >
     au < exists ; exists ; 1962 ; Plant and Cell Physiology Volume 3 ; 3 ;  >
     au < exists ; exists ; 1963 ; Plant and Cell Physiology Volume 4 ; 4 ;  >
@@ -13751,23 +13756,23 @@
     param[journal_id] = ps
 
     au < exists ; exists ; 1908 ; Poultry Science Volume 1-1 ; 1-1 ;  >
-    au < exists ; exists ; 1914-1915 ; Poultry Science Volume 2-1 ; 2-1 ;  >
+#    au < exists ; exists ; 1914-1915 ; Poultry Science Volume 2-1 ; 2-1 ;  >
     au < exists ; exists ; 1916 ; Poultry Science Volume 2-2 ; 2-2 ;  >
-    au < exists ; exists ; 1916-1917 ; Poultry Science Volume 2-3 ; 2-3 ;  >
-    au < exists ; exists ; 1917-1918 ; Poultry Science Volume 2-4 ; 2-4 ;  >
-    au < exists ; exists ; 1918-1919 ; Poultry Science Volume 2-5 ; 2-5 ;  >
-    au < exists ; exists ; 1919-1920 ; Poultry Science Volume 2-6 ; 2-6 ;  >
-    au < exists ; exists ; 1920-1921 ; Poultry Science Volume 2-7 ; 2-7 ;  >
-    au < exists ; exists ; 1921-1922 ; Poultry Science Volume 1 ; 1 ;  >
-    au < exists ; exists ; 1922-1923 ; Poultry Science Volume 2 ; 2 ;  >
-    au < exists ; exists ; 1923-1924 ; Poultry Science Volume 3 ; 3 ;  >
-    au < exists ; exists ; 1924-1925 ; Poultry Science Volume 4 ; 4 ;  >
-    au < exists ; exists ; 1925-1926 ; Poultry Science Volume 5 ; 5 ;  >
-    au < exists ; exists ; 1926-1927 ; Poultry Science Volume 6 ; 6 ;  >
-    au < exists ; exists ; 1927-1928 ; Poultry Science Volume 7 ; 7 ;  >
-    au < exists ; exists ; 1928-1929 ; Poultry Science Volume 8 ; 8 ;  >
-    au < exists ; exists ; 1929-1930 ; Poultry Science Volume 9 ; 9 ;  >
-    au < exists ; exists ; 1930-1931 ; Poultry Science Volume 10 ; 10 ;  >
+#    au < exists ; exists ; 1916-1917 ; Poultry Science Volume 2-3 ; 2-3 ;  >
+#    au < exists ; exists ; 1917-1918 ; Poultry Science Volume 2-4 ; 2-4 ;  >
+#    au < exists ; exists ; 1918-1919 ; Poultry Science Volume 2-5 ; 2-5 ;  >
+#    au < exists ; exists ; 1919-1920 ; Poultry Science Volume 2-6 ; 2-6 ;  >
+#    au < exists ; exists ; 1920-1921 ; Poultry Science Volume 2-7 ; 2-7 ;  >
+#    au < exists ; exists ; 1921-1922 ; Poultry Science Volume 1 ; 1 ;  >
+#    au < exists ; exists ; 1922-1923 ; Poultry Science Volume 2 ; 2 ;  >
+#    au < exists ; exists ; 1923-1924 ; Poultry Science Volume 3 ; 3 ;  >
+#    au < exists ; exists ; 1924-1925 ; Poultry Science Volume 4 ; 4 ;  >
+#    au < exists ; exists ; 1925-1926 ; Poultry Science Volume 5 ; 5 ;  >
+#    au < exists ; exists ; 1926-1927 ; Poultry Science Volume 6 ; 6 ;  >
+#    au < exists ; exists ; 1927-1928 ; Poultry Science Volume 7 ; 7 ;  >
+#    au < exists ; exists ; 1928-1929 ; Poultry Science Volume 8 ; 8 ;  >
+#    au < exists ; exists ; 1929-1930 ; Poultry Science Volume 9 ; 9 ;  >
+#    au < exists ; exists ; 1930-1931 ; Poultry Science Volume 10 ; 10 ;  >
     au < exists ; exists ; 1932 ; Poultry Science Volume 11 ; 11 ;  >
     au < exists ; exists ; 1933 ; Poultry Science Volume 12 ; 12 ;  >
     au < exists ; exists ; 1934 ; Poultry Science Volume 13 ; 13 ;  >
@@ -14289,10 +14294,10 @@
 
     param[journal_id] = ppar
 
-    au < exists ; exists ; 1998-1999 ; Public Policy & Aging Report Volume 9 ; 9 ;  >
-    au < exists ; exists ; 1999-2000 ; Public Policy & Aging Report Volume 10 ; 10 ;  >
-    au < exists ; exists ; 2000-2001 ; Public Policy & Aging Report Volume 11 ; 11 ;  >
-    au < exists ; exists ; 2001-2002 ; Public Policy & Aging Report Volume 12 ; 12 ;  >
+#    au < exists ; exists ; 1998-1999 ; Public Policy & Aging Report Volume 9 ; 9 ;  >
+#    au < exists ; exists ; 1999-2000 ; Public Policy & Aging Report Volume 10 ; 10 ;  >
+#    au < exists ; exists ; 2000-2001 ; Public Policy & Aging Report Volume 11 ; 11 ;  >
+#    au < exists ; exists ; 2001-2002 ; Public Policy & Aging Report Volume 12 ; 12 ;  >
     au < exists ; exists ; 2003 ; Public Policy & Aging Report Volume 13 ; 13 ;  >
     au < exists ; exists ; 2004 ; Public Policy & Aging Report Volume 14 ; 14 ;  >
     au < exists ; exists ; 2005 ; Public Policy & Aging Report Volume 15 ; 15 ;  >
@@ -14419,30 +14424,30 @@
 
     param[journal_id] = qjmed
 
-    au < exists ; exists ; 1907-1908 ; QJM: An International Journal of Medicine Volume os1 ; os1 ;  >
-    au < exists ; exists ; 1908-1909 ; QJM: An International Journal of Medicine Volume os2 ; os2 ;  >
-    au < exists ; exists ; 1909-1910 ; QJM: An International Journal of Medicine Volume os3 ; os3 ;  >
-    au < exists ; exists ; 1910-1911 ; QJM: An International Journal of Medicine Volume os4 ; os4 ;  >
-    au < exists ; exists ; 1911-1912 ; QJM: An International Journal of Medicine Volume os5 ; os5 ;  >
-    au < exists ; exists ; 1912-1913 ; QJM: An International Journal of Medicine Volume os6 ; os6 ;  >
+#    au < exists ; exists ; 1907-1908 ; QJM: An International Journal of Medicine Volume os1 ; os1 ;  >
+#    au < exists ; exists ; 1908-1909 ; QJM: An International Journal of Medicine Volume os2 ; os2 ;  >
+#    au < exists ; exists ; 1909-1910 ; QJM: An International Journal of Medicine Volume os3 ; os3 ;  >
+#    au < exists ; exists ; 1910-1911 ; QJM: An International Journal of Medicine Volume os4 ; os4 ;  >
+#    au < exists ; exists ; 1911-1912 ; QJM: An International Journal of Medicine Volume os5 ; os5 ;  >
+#    au < exists ; exists ; 1912-1913 ; QJM: An International Journal of Medicine Volume os6 ; os6 ;  >
     au < doesNotExist ; doesNotExist ; 1913-1914 ; QJM: An International Journal of Medicine Volume os7 ; os7 ;  >
-    au < exists ; exists ; 1914-1915 ; QJM: An International Journal of Medicine Volume os-8 ; os-8 ;  >
-    au < exists ; exists ; 1915-1916 ; QJM: An International Journal of Medicine Volume os-9 ; os-9 ;  >
-    au < exists ; exists ; 1916-1917 ; QJM: An International Journal of Medicine Volume os-10 ; os-10 ;  >
-    au < exists ; exists ; 1917-1918 ; QJM: An International Journal of Medicine Volume os-11 ; os-11 ;  >
-    au < exists ; exists ; 1918-1919 ; QJM: An International Journal of Medicine Volume os-12 ; os-12 ;  >
-    au < exists ; exists ; 1919-1920 ; QJM: An International Journal of Medicine Volume os-13 ; os-13 ;  >
-    au < exists ; exists ; 1920-1921 ; QJM: An International Journal of Medicine Volume os-14 ; os-14 ;  >
-    au < exists ; exists ; 1921-1922 ; QJM: An International Journal of Medicine Volume os-15 ; os-15 ;  >
-    au < exists ; exists ; 1922-1923 ; QJM: An International Journal of Medicine Volume os-16 ; os-16 ;  >
-    au < exists ; exists ; 1923-1924 ; QJM: An International Journal of Medicine Volume os-17 ; os-17 ;  >
-    au < exists ; exists ; 1924-1925 ; QJM: An International Journal of Medicine Volume os-18 ; os-18 ;  >
-    au < exists ; exists ; 1925-1926 ; QJM: An International Journal of Medicine Volume os-19 ; os-19 ;  >
-    au < exists ; exists ; 1926-1927 ; QJM: An International Journal of Medicine Volume os-20 ; os-20 ;  >
-    au < exists ; exists ; 1927-1928 ; QJM: An International Journal of Medicine Volume os-21 ; os-21 ;  >
+#    au < exists ; exists ; 1914-1915 ; QJM: An International Journal of Medicine Volume os-8 ; os-8 ;  >
+#    au < exists ; exists ; 1915-1916 ; QJM: An International Journal of Medicine Volume os-9 ; os-9 ;  >
+#    au < exists ; exists ; 1916-1917 ; QJM: An International Journal of Medicine Volume os-10 ; os-10 ;  >
+#    au < exists ; exists ; 1917-1918 ; QJM: An International Journal of Medicine Volume os-11 ; os-11 ;  >
+#    au < exists ; exists ; 1918-1919 ; QJM: An International Journal of Medicine Volume os-12 ; os-12 ;  >
+#    au < exists ; exists ; 1919-1920 ; QJM: An International Journal of Medicine Volume os-13 ; os-13 ;  >
+#    au < exists ; exists ; 1920-1921 ; QJM: An International Journal of Medicine Volume os-14 ; os-14 ;  >
+#    au < exists ; exists ; 1921-1922 ; QJM: An International Journal of Medicine Volume os-15 ; os-15 ;  >
+#    au < exists ; exists ; 1922-1923 ; QJM: An International Journal of Medicine Volume os-16 ; os-16 ;  >
+#    au < exists ; exists ; 1923-1924 ; QJM: An International Journal of Medicine Volume os-17 ; os-17 ;  >
+#    au < exists ; exists ; 1924-1925 ; QJM: An International Journal of Medicine Volume os-18 ; os-18 ;  >
+#    au < exists ; exists ; 1925-1926 ; QJM: An International Journal of Medicine Volume os-19 ; os-19 ;  >
+#    au < exists ; exists ; 1926-1927 ; QJM: An International Journal of Medicine Volume os-20 ; os-20 ;  >
+#    au < exists ; exists ; 1927-1928 ; QJM: An International Journal of Medicine Volume os-21 ; os-21 ;  >
     au < doesNotExist ; doesNotExist ; 1928 ; QJM: An International Journal of Medicine Volume os-22 ; os-22 ;  >
-    au < exists ; exists ; 1929-1930 ; QJM: An International Journal of Medicine Volume os-23 ; os-23 ;  >
-    au < exists ; exists ; 1930-1931 ; QJM: An International Journal of Medicine Volume os-24 ; os-24 ;  >
+#    au < exists ; exists ; 1929-1930 ; QJM: An International Journal of Medicine Volume os-23 ; os-23 ;  >
+#    au < exists ; exists ; 1930-1931 ; QJM: An International Journal of Medicine Volume os-24 ; os-24 ;  >
     au < exists ; exists ; 1932 ; QJM: An International Journal of Medicine Volume 1 ; 1 ;  >
     au < exists ; exists ; 1933 ; QJM: An International Journal of Medicine Volume 2 ; 2 ;  >
     au < exists ; exists ; 1934 ; QJM: An International Journal of Medicine Volume 3 ; 3 ;  >
@@ -14818,22 +14823,22 @@
 
     param[journal_id] = rheumatology
 
-    au < exists ; exists ; 1952-1953 ; Rheumatology Volume 1 ; 1 ;  >
-    au < exists ; exists ; 1954-1955 ; Rheumatology Volume 2 ; 2 ;  >
+#    au < exists ; exists ; 1952-1953 ; Rheumatology Volume 1 ; 1 ;  >
+#    au < exists ; exists ; 1954-1955 ; Rheumatology Volume 2 ; 2 ;  >
     au < exists ; exists ; 1956 ; Rheumatology Volume 3-III ; 3-III ;  >
     au < exists ; exists ; 1957 ; Rheumatology Volume 4 ; 4 ;  >
-    au < exists ; exists ; 1957-1958 ; Rheumatology Volume IV ; IV ;  >
-    au < exists ; exists ; 1959-1960 ; Rheumatology Volume 5 ; 5 ;  >
+#    au < exists ; exists ; 1957-1958 ; Rheumatology Volume IV ; IV ;  >
+#    au < exists ; exists ; 1959-1960 ; Rheumatology Volume 5 ; 5 ;  >
     au < exists ; exists ; 1960 ; Rheumatology Volume V ; V ;  >
-    au < exists ; exists ; 1961-1962 ; Rheumatology Volume 6 ; 6 ;  >
-    au < exists ; exists ; 1963-1964 ; Rheumatology Volume 7 ; 7 ;  >
+#    au < exists ; exists ; 1961-1962 ; Rheumatology Volume 6 ; 6 ;  >
+#    au < exists ; exists ; 1963-1964 ; Rheumatology Volume 7 ; 7 ;  >
     au < exists ; exists ; 1964 ; Rheumatology Volume VII ; VII ;  >
-    au < exists ; exists ; 1965-1966 ; Rheumatology Volume 8 ; 8 ;  >
+#    au < exists ; exists ; 1965-1966 ; Rheumatology Volume 8 ; 8 ;  >
     au < exists ; exists ; 1966 ; Rheumatology Volume VIII ; VIII ;  >
-    au < exists ; exists ; 1967-1968 ; Rheumatology Volume 9 ; 9 ;  >
-    au < exists ; exists ; 1969-1970 ; Rheumatology Volume 10 ; 10 ;  >
+#    au < exists ; exists ; 1967-1968 ; Rheumatology Volume 9 ; 9 ;  >
+#    au < exists ; exists ; 1969-1970 ; Rheumatology Volume 10 ; 10 ;  >
     au < exists ; exists ; 1970 ; Rheumatology Volume X ; X ;  >
-    au < exists ; exists ; 1971-1972 ; Rheumatology Volume 11 ; 11 ;  >
+#    au < exists ; exists ; 1971-1972 ; Rheumatology Volume 11 ; 11 ;  >
     au < exists ; exists ; 1973 ; Rheumatology Volume 12-XII ; 12-XII ;  >
     au < exists ; exists ; 1974 ; Rheumatology Volume 13 ; 13 ;  >
     au < exists ; exists ; 1975 ; Rheumatology Volume 14 ; 14 ;  >
@@ -14906,7 +14911,7 @@
 
     param[journal_id] = schizophreniabulletin
 
-    au < exists ; exists ; 1969-1975 ; Schizophrenia Bulletin Volume 1 ; 1 ;  >
+#    au < exists ; exists ; 1969-1975 ; Schizophrenia Bulletin Volume 1 ; 1 ;  >
     au < exists ; exists ; 1976 ; Schizophrenia Bulletin Volume 2 ; 2 ;  >
     au < exists ; exists ; 1977 ; Schizophrenia Bulletin Volume 3 ; 3 ;  >
     au < exists ; exists ; 1978 ; Schizophrenia Bulletin Volume 4 ; 4 ;  >
@@ -15918,81 +15923,81 @@
 
     param[journal_id] = ahr
 
-    au < exists ; exists ; 1895-1896 ; The American Historical Review Volume 1 ; 1 ;  >
-    au < exists ; exists ; 1896-1897 ; The American Historical Review Volume 2 ; 2 ;  >
-    au < exists ; exists ; 1897-1898 ; The American Historical Review Volume 3 ; 3 ;  >
-    au < exists ; exists ; 1898-1899 ; The American Historical Review Volume 4 ; 4 ;  >
-    au < exists ; exists ; 1899-1900 ; The American Historical Review Volume 5 ; 5 ;  >
-    au < exists ; exists ; 1900-1901 ; The American Historical Review Volume 6 ; 6 ;  >
-    au < exists ; exists ; 1901-1902 ; The American Historical Review Volume 7 ; 7 ;  >
-    au < exists ; exists ; 1902-1903 ; The American Historical Review Volume 8 ; 8 ;  >
-    au < exists ; exists ; 1903-1904 ; The American Historical Review Volume 9 ; 9 ;  >
-    au < exists ; exists ; 1904-1905 ; The American Historical Review Volume 10 ; 10 ;  >
-    au < exists ; exists ; 1905-1906 ; The American Historical Review Volume 11 ; 11 ;  >
-    au < exists ; exists ; 1906-1907 ; The American Historical Review Volume 12 ; 12 ;  >
-    au < exists ; exists ; 1907-1908 ; The American Historical Review Volume 13 ; 13 ;  >
-    au < exists ; exists ; 1908-1909 ; The American Historical Review Volume 14 ; 14 ;  >
-    au < exists ; exists ; 1909-1910 ; The American Historical Review Volume 15 ; 15 ;  >
-    au < exists ; exists ; 1910-1911 ; The American Historical Review Volume 16 ; 16 ;  >
-    au < exists ; exists ; 1911-1912 ; The American Historical Review Volume 17 ; 17 ;  >
-    au < exists ; exists ; 1912-1913 ; The American Historical Review Volume 18 ; 18 ;  >
-    au < exists ; exists ; 1913-1914 ; The American Historical Review Volume 19 ; 19 ;  >
-    au < exists ; exists ; 1914-1915 ; The American Historical Review Volume 20 ; 20 ;  >
-    au < exists ; exists ; 1915-1916 ; The American Historical Review Volume 21 ; 21 ;  >
-    au < exists ; exists ; 1916-1917 ; The American Historical Review Volume 22 ; 22 ;  >
-    au < exists ; exists ; 1917-1918 ; The American Historical Review Volume 23 ; 23 ;  >
-    au < exists ; exists ; 1918-1919 ; The American Historical Review Volume 24 ; 24 ;  >
-    au < exists ; exists ; 1919-1920 ; The American Historical Review Volume 25 ; 25 ;  >
-    au < exists ; exists ; 1920-1921 ; The American Historical Review Volume 26 ; 26 ;  >
-    au < exists ; exists ; 1921-1922 ; The American Historical Review Volume 27 ; 27 ;  >
-    au < exists ; exists ; 1922-1923 ; The American Historical Review Volume 28 ; 28 ;  >
-    au < exists ; exists ; 1923-1924 ; The American Historical Review Volume 29 ; 29 ;  >
-    au < exists ; exists ; 1924-1925 ; The American Historical Review Volume 30 ; 30 ;  >
-    au < exists ; exists ; 1925-1926 ; The American Historical Review Volume 31 ; 31 ;  >
-    au < exists ; exists ; 1926-1927 ; The American Historical Review Volume 32 ; 32 ;  >
-    au < exists ; exists ; 1927-1928 ; The American Historical Review Volume 33 ; 33 ;  >
-    au < exists ; exists ; 1928-1929 ; The American Historical Review Volume 34 ; 34 ;  >
-    au < exists ; exists ; 1929-1930 ; The American Historical Review Volume 35 ; 35 ;  >
-    au < exists ; exists ; 1930-1931 ; The American Historical Review Volume 36 ; 36 ;  >
-    au < exists ; exists ; 1931-1932 ; The American Historical Review Volume 37 ; 37 ;  >
-    au < exists ; exists ; 1932-1933 ; The American Historical Review Volume 38 ; 38 ;  >
-    au < exists ; exists ; 1933-1934 ; The American Historical Review Volume 39 ; 39 ;  >
-    au < exists ; exists ; 1934-1935 ; The American Historical Review Volume 40 ; 40 ;  >
-    au < exists ; exists ; 1935-1936 ; The American Historical Review Volume 41 ; 41 ;  >
-    au < exists ; exists ; 1936-1937 ; The American Historical Review Volume 42 ; 42 ;  >
-    au < exists ; exists ; 1937-1938 ; The American Historical Review Volume 43 ; 43 ;  >
-    au < exists ; exists ; 1938-1939 ; The American Historical Review Volume 44 ; 44 ;  >
-    au < exists ; exists ; 1939-1940 ; The American Historical Review Volume 45 ; 45 ;  >
-    au < exists ; exists ; 1940-1941 ; The American Historical Review Volume 46 ; 46 ;  >
-    au < exists ; exists ; 1941-1942 ; The American Historical Review Volume 47 ; 47 ;  >
-    au < exists ; exists ; 1942-1943 ; The American Historical Review Volume 48 ; 48 ;  >
-    au < exists ; exists ; 1943-1944 ; The American Historical Review Volume 49 ; 49 ;  >
-    au < exists ; exists ; 1944-1945 ; The American Historical Review Volume 50 ; 50 ;  >
-    au < exists ; exists ; 1945-1946 ; The American Historical Review Volume 51 ; 51 ;  >
-    au < exists ; exists ; 1946-1947 ; The American Historical Review Volume 52 ; 52 ;  >
-    au < exists ; exists ; 1947-1948 ; The American Historical Review Volume 53 ; 53 ;  >
-    au < exists ; exists ; 1948-1949 ; The American Historical Review Volume 54 ; 54 ;  >
-    au < exists ; exists ; 1949-1950 ; The American Historical Review Volume 55 ; 55 ;  >
-    au < exists ; exists ; 1950-1951 ; The American Historical Review Volume 56 ; 56 ;  >
-    au < exists ; exists ; 1951-1952 ; The American Historical Review Volume 57 ; 57 ;  >
-    au < exists ; exists ; 1952-1953 ; The American Historical Review Volume 58 ; 58 ;  >
-    au < exists ; exists ; 1953-1954 ; The American Historical Review Volume 59 ; 59 ;  >
-    au < exists ; exists ; 1954-1955 ; The American Historical Review Volume 60 ; 60 ;  >
-    au < exists ; exists ; 1955-1956 ; The American Historical Review Volume 61 ; 61 ;  >
-    au < exists ; exists ; 1956-1957 ; The American Historical Review Volume 62 ; 62 ;  >
-    au < exists ; exists ; 1957-1958 ; The American Historical Review Volume 63 ; 63 ;  >
-    au < exists ; exists ; 1958-1959 ; The American Historical Review Volume 64 ; 64 ;  >
-    au < exists ; exists ; 1959-1960 ; The American Historical Review Volume 65 ; 65 ;  >
-    au < exists ; exists ; 1960-1961 ; The American Historical Review Volume 66 ; 66 ;  >
-    au < exists ; exists ; 1961-1962 ; The American Historical Review Volume 67 ; 67 ;  >
-    au < exists ; exists ; 1962-1963 ; The American Historical Review Volume 68 ; 68 ;  >
-    au < exists ; exists ; 1963-1964 ; The American Historical Review Volume 69 ; 69 ;  >
-    au < exists ; exists ; 1964-1965 ; The American Historical Review Volume 70 ; 70 ;  >
-    au < exists ; exists ; 1965-1966 ; The American Historical Review Volume 71 ; 71 ;  >
-    au < exists ; exists ; 1966-1967 ; The American Historical Review Volume 72 ; 72 ;  >
-    au < exists ; exists ; 1967-1968 ; The American Historical Review Volume 73 ; 73 ;  >
-    au < exists ; exists ; 1968-1969 ; The American Historical Review Volume 74 ; 74 ;  >
-    au < exists ; exists ; 1969-1970 ; The American Historical Review Volume 75 ; 75 ;  >
+#    au < exists ; exists ; 1895-1896 ; The American Historical Review Volume 1 ; 1 ;  >
+#    au < exists ; exists ; 1896-1897 ; The American Historical Review Volume 2 ; 2 ;  >
+#    au < exists ; exists ; 1897-1898 ; The American Historical Review Volume 3 ; 3 ;  >
+#    au < exists ; exists ; 1898-1899 ; The American Historical Review Volume 4 ; 4 ;  >
+#    au < exists ; exists ; 1899-1900 ; The American Historical Review Volume 5 ; 5 ;  >
+#    au < exists ; exists ; 1900-1901 ; The American Historical Review Volume 6 ; 6 ;  >
+#    au < exists ; exists ; 1901-1902 ; The American Historical Review Volume 7 ; 7 ;  >
+#    au < exists ; exists ; 1902-1903 ; The American Historical Review Volume 8 ; 8 ;  >
+#    au < exists ; exists ; 1903-1904 ; The American Historical Review Volume 9 ; 9 ;  >
+#    au < exists ; exists ; 1904-1905 ; The American Historical Review Volume 10 ; 10 ;  >
+#    au < exists ; exists ; 1905-1906 ; The American Historical Review Volume 11 ; 11 ;  >
+#    au < exists ; exists ; 1906-1907 ; The American Historical Review Volume 12 ; 12 ;  >
+#    au < exists ; exists ; 1907-1908 ; The American Historical Review Volume 13 ; 13 ;  >
+#    au < exists ; exists ; 1908-1909 ; The American Historical Review Volume 14 ; 14 ;  >
+#    au < exists ; exists ; 1909-1910 ; The American Historical Review Volume 15 ; 15 ;  >
+#    au < exists ; exists ; 1910-1911 ; The American Historical Review Volume 16 ; 16 ;  >
+#    au < exists ; exists ; 1911-1912 ; The American Historical Review Volume 17 ; 17 ;  >
+#    au < exists ; exists ; 1912-1913 ; The American Historical Review Volume 18 ; 18 ;  >
+#    au < exists ; exists ; 1913-1914 ; The American Historical Review Volume 19 ; 19 ;  >
+#    au < exists ; exists ; 1914-1915 ; The American Historical Review Volume 20 ; 20 ;  >
+#    au < exists ; exists ; 1915-1916 ; The American Historical Review Volume 21 ; 21 ;  >
+#    au < exists ; exists ; 1916-1917 ; The American Historical Review Volume 22 ; 22 ;  >
+#    au < exists ; exists ; 1917-1918 ; The American Historical Review Volume 23 ; 23 ;  >
+#    au < exists ; exists ; 1918-1919 ; The American Historical Review Volume 24 ; 24 ;  >
+#    au < exists ; exists ; 1919-1920 ; The American Historical Review Volume 25 ; 25 ;  >
+#    au < exists ; exists ; 1920-1921 ; The American Historical Review Volume 26 ; 26 ;  >
+#    au < exists ; exists ; 1921-1922 ; The American Historical Review Volume 27 ; 27 ;  >
+#    au < exists ; exists ; 1922-1923 ; The American Historical Review Volume 28 ; 28 ;  >
+#    au < exists ; exists ; 1923-1924 ; The American Historical Review Volume 29 ; 29 ;  >
+#    au < exists ; exists ; 1924-1925 ; The American Historical Review Volume 30 ; 30 ;  >
+#    au < exists ; exists ; 1925-1926 ; The American Historical Review Volume 31 ; 31 ;  >
+#    au < exists ; exists ; 1926-1927 ; The American Historical Review Volume 32 ; 32 ;  >
+#    au < exists ; exists ; 1927-1928 ; The American Historical Review Volume 33 ; 33 ;  >
+#    au < exists ; exists ; 1928-1929 ; The American Historical Review Volume 34 ; 34 ;  >
+#    au < exists ; exists ; 1929-1930 ; The American Historical Review Volume 35 ; 35 ;  >
+#    au < exists ; exists ; 1930-1931 ; The American Historical Review Volume 36 ; 36 ;  >
+#    au < exists ; exists ; 1931-1932 ; The American Historical Review Volume 37 ; 37 ;  >
+#    au < exists ; exists ; 1932-1933 ; The American Historical Review Volume 38 ; 38 ;  >
+#    au < exists ; exists ; 1933-1934 ; The American Historical Review Volume 39 ; 39 ;  >
+#    au < exists ; exists ; 1934-1935 ; The American Historical Review Volume 40 ; 40 ;  >
+#    au < exists ; exists ; 1935-1936 ; The American Historical Review Volume 41 ; 41 ;  >
+#    au < exists ; exists ; 1936-1937 ; The American Historical Review Volume 42 ; 42 ;  >
+#    au < exists ; exists ; 1937-1938 ; The American Historical Review Volume 43 ; 43 ;  >
+#    au < exists ; exists ; 1938-1939 ; The American Historical Review Volume 44 ; 44 ;  >
+#    au < exists ; exists ; 1939-1940 ; The American Historical Review Volume 45 ; 45 ;  >
+#    au < exists ; exists ; 1940-1941 ; The American Historical Review Volume 46 ; 46 ;  >
+#    au < exists ; exists ; 1941-1942 ; The American Historical Review Volume 47 ; 47 ;  >
+#    au < exists ; exists ; 1942-1943 ; The American Historical Review Volume 48 ; 48 ;  >
+#    au < exists ; exists ; 1943-1944 ; The American Historical Review Volume 49 ; 49 ;  >
+#    au < exists ; exists ; 1944-1945 ; The American Historical Review Volume 50 ; 50 ;  >
+#    au < exists ; exists ; 1945-1946 ; The American Historical Review Volume 51 ; 51 ;  >
+#    au < exists ; exists ; 1946-1947 ; The American Historical Review Volume 52 ; 52 ;  >
+#    au < exists ; exists ; 1947-1948 ; The American Historical Review Volume 53 ; 53 ;  >
+#    au < exists ; exists ; 1948-1949 ; The American Historical Review Volume 54 ; 54 ;  >
+#    au < exists ; exists ; 1949-1950 ; The American Historical Review Volume 55 ; 55 ;  >
+#    au < exists ; exists ; 1950-1951 ; The American Historical Review Volume 56 ; 56 ;  >
+#    au < exists ; exists ; 1951-1952 ; The American Historical Review Volume 57 ; 57 ;  >
+#    au < exists ; exists ; 1952-1953 ; The American Historical Review Volume 58 ; 58 ;  >
+#    au < exists ; exists ; 1953-1954 ; The American Historical Review Volume 59 ; 59 ;  >
+#    au < exists ; exists ; 1954-1955 ; The American Historical Review Volume 60 ; 60 ;  >
+#    au < exists ; exists ; 1955-1956 ; The American Historical Review Volume 61 ; 61 ;  >
+#    au < exists ; exists ; 1956-1957 ; The American Historical Review Volume 62 ; 62 ;  >
+#    au < exists ; exists ; 1957-1958 ; The American Historical Review Volume 63 ; 63 ;  >
+#    au < exists ; exists ; 1958-1959 ; The American Historical Review Volume 64 ; 64 ;  >
+#    au < exists ; exists ; 1959-1960 ; The American Historical Review Volume 65 ; 65 ;  >
+#    au < exists ; exists ; 1960-1961 ; The American Historical Review Volume 66 ; 66 ;  >
+#    au < exists ; exists ; 1961-1962 ; The American Historical Review Volume 67 ; 67 ;  >
+#    au < exists ; exists ; 1962-1963 ; The American Historical Review Volume 68 ; 68 ;  >
+#    au < exists ; exists ; 1963-1964 ; The American Historical Review Volume 69 ; 69 ;  >
+#    au < exists ; exists ; 1964-1965 ; The American Historical Review Volume 70 ; 70 ;  >
+#    au < exists ; exists ; 1965-1966 ; The American Historical Review Volume 71 ; 71 ;  >
+#    au < exists ; exists ; 1966-1967 ; The American Historical Review Volume 72 ; 72 ;  >
+#    au < exists ; exists ; 1967-1968 ; The American Historical Review Volume 73 ; 73 ;  >
+#    au < exists ; exists ; 1968-1969 ; The American Historical Review Volume 74 ; 74 ;  >
+#    au < exists ; exists ; 1969-1970 ; The American Historical Review Volume 75 ; 75 ;  >
     au < exists ; exists ; 1971 ; The American Historical Review Volume 76 ; 76 ;  >
     au < exists ; exists ; 1972 ; The American Historical Review Volume 77 ; 77 ;  >
     au < exists ; exists ; 1973 ; The American Historical Review Volume 78 ; 78 ;  >
@@ -16165,25 +16170,25 @@
 
     param[journal_id] = bjps
 
-    au < exists ; exists ; 1950-1951 ; The British Journal for the Philosophy of Science Volume I ; I ;  >
-    au < exists ; exists ; 1951-1952 ; The British Journal for the Philosophy of Science Volume II ; II ;  >
-    au < exists ; exists ; 1952-1953 ; The British Journal for the Philosophy of Science Volume III ; III ;  >
+#    au < exists ; exists ; 1950-1951 ; The British Journal for the Philosophy of Science Volume I ; I ;  >
+#    au < exists ; exists ; 1951-1952 ; The British Journal for the Philosophy of Science Volume II ; II ;  >
+#    au < exists ; exists ; 1952-1953 ; The British Journal for the Philosophy of Science Volume III ; III ;  >
     au < exists ; exists ; 1953 ; The British Journal for the Philosophy of Science Volume IV ; IV ;  >
-    au < exists ; exists ; 1954-1955 ; The British Journal for the Philosophy of Science Volume V ; V ;  >
-    au < exists ; exists ; 1955-1956 ; The British Journal for the Philosophy of Science Volume VI ; VI ;  >
-    au < exists ; exists ; 1956-1957 ; The British Journal for the Philosophy of Science Volume VII ; VII ;  >
-    au < exists ; exists ; 1957-1958 ; The British Journal for the Philosophy of Science Volume VIII ; VIII ;  >
-    au < exists ; exists ; 1958-1959 ; The British Journal for the Philosophy of Science Volume IX ; IX ;  >
-    au < exists ; exists ; 1959-1960 ; The British Journal for the Philosophy of Science Volume X ; X ;  >
-    au < exists ; exists ; 1960-1961 ; The British Journal for the Philosophy of Science Volume XI ; XI ;  >
-    au < exists ; exists ; 1961-1962 ; The British Journal for the Philosophy of Science Volume XII ; XII ;  >
-    au < exists ; exists ; 1962-1963 ; The British Journal for the Philosophy of Science Volume XIII ; XIII ;  >
-    au < exists ; exists ; 1963-1964 ; The British Journal for the Philosophy of Science Volume XIV ; XIV ;  >
-    au < exists ; exists ; 1964-1965 ; The British Journal for the Philosophy of Science Volume XV ; XV ;  >
-    au < exists ; exists ; 1965-1966 ; The British Journal for the Philosophy of Science Volume XVI ; XVI ;  >
-    au < exists ; exists ; 1966-1967 ; The British Journal for the Philosophy of Science Volume 17 ; 17 ;  >
-    au < exists ; exists ; 1967-1968 ; The British Journal for the Philosophy of Science Volume 18 ; 18 ;  >
-    au < exists ; exists ; 1968-1969 ; The British Journal for the Philosophy of Science Volume 19 ; 19 ;  >
+#    au < exists ; exists ; 1954-1955 ; The British Journal for the Philosophy of Science Volume V ; V ;  >
+#    au < exists ; exists ; 1955-1956 ; The British Journal for the Philosophy of Science Volume VI ; VI ;  >
+#    au < exists ; exists ; 1956-1957 ; The British Journal for the Philosophy of Science Volume VII ; VII ;  >
+#    au < exists ; exists ; 1957-1958 ; The British Journal for the Philosophy of Science Volume VIII ; VIII ;  >
+#    au < exists ; exists ; 1958-1959 ; The British Journal for the Philosophy of Science Volume IX ; IX ;  >
+#    au < exists ; exists ; 1959-1960 ; The British Journal for the Philosophy of Science Volume X ; X ;  >
+#    au < exists ; exists ; 1960-1961 ; The British Journal for the Philosophy of Science Volume XI ; XI ;  >
+#    au < exists ; exists ; 1961-1962 ; The British Journal for the Philosophy of Science Volume XII ; XII ;  >
+#    au < exists ; exists ; 1962-1963 ; The British Journal for the Philosophy of Science Volume XIII ; XIII ;  >
+#    au < exists ; exists ; 1963-1964 ; The British Journal for the Philosophy of Science Volume XIV ; XIV ;  >
+#    au < exists ; exists ; 1964-1965 ; The British Journal for the Philosophy of Science Volume XV ; XV ;  >
+#    au < exists ; exists ; 1965-1966 ; The British Journal for the Philosophy of Science Volume XVI ; XVI ;  >
+#    au < exists ; exists ; 1966-1967 ; The British Journal for the Philosophy of Science Volume 17 ; 17 ;  >
+#    au < exists ; exists ; 1967-1968 ; The British Journal for the Philosophy of Science Volume 18 ; 18 ;  >
+#    au < exists ; exists ; 1968-1969 ; The British Journal for the Philosophy of Science Volume 19 ; 19 ;  >
     au < exists ; exists ; 1969 ; The British Journal for the Philosophy of Science Volume 20 ; 20 ;  >
     au < exists ; exists ; 1970 ; The British Journal for the Philosophy of Science Volume 21 ; 21 ;  >
     au < exists ; exists ; 1971 ; The British Journal for the Philosophy of Science Volume 22 ; 22 ;  >
@@ -16247,7 +16252,7 @@
 
     param[journal_id] = bjaesthetics
 
-    au < exists ; exists ; 1960-1961 ; The British Journal of Aesthetics Volume 1 ; 1 ;  >
+#    au < exists ; exists ; 1960-1961 ; The British Journal of Aesthetics Volume 1 ; 1 ;  >
     au < exists ; exists ; 1962 ; The British Journal of Aesthetics Volume 2 ; 2 ;  >
     au < exists ; exists ; 1963 ; The British Journal of Aesthetics Volume 3 ; 3 ;  >
     au < exists ; exists ; 1964 ; The British Journal of Aesthetics Volume 4 ; 4 ;  >
@@ -16319,10 +16324,10 @@
 
     param[journal_id] = bjc
 
-    au < exists ; exists ; 1960-1961 ; The British Journal of Criminology Volume 1 ; 1 ;  >
-    au < exists ; exists ; 1961-1962 ; The British Journal of Criminology Volume 2 ; 2 ;  >
-    au < exists ; exists ; 1962-1963 ; The British Journal of Criminology Volume 3 ; 3 ;  >
-    au < exists ; exists ; 1963-1964 ; The British Journal of Criminology Volume 4 ; 4 ;  >
+#    au < exists ; exists ; 1960-1961 ; The British Journal of Criminology Volume 1 ; 1 ;  >
+#    au < exists ; exists ; 1961-1962 ; The British Journal of Criminology Volume 2 ; 2 ;  >
+#    au < exists ; exists ; 1962-1963 ; The British Journal of Criminology Volume 3 ; 3 ;  >
+#    au < exists ; exists ; 1963-1964 ; The British Journal of Criminology Volume 4 ; 4 ;  >
     au < exists ; exists ; 1965 ; The British Journal of Criminology Volume 5 ; 5 ;  >
     au < exists ; exists ; 1966 ; The British Journal of Criminology Volume 6 ; 6 ;  >
     au < exists ; exists ; 1967 ; The British Journal of Criminology Volume 7 ; 7 ;  >
@@ -16453,17 +16458,17 @@
     param[journal_id] = camqtly
 
     au < exists ; exists ; 1965 ; The Cambridge Quarterly Volume I ; I ;  >
-    au < exists ; exists ; 1966-1967 ; The Cambridge Quarterly Volume II ; II ;  >
-    au < exists ; exists ; 1967-1968 ; The Cambridge Quarterly Volume III ; III ;  >
-    au < exists ; exists ; 1968-1969 ; The Cambridge Quarterly Volume IV ; IV ;  >
-    au < exists ; exists ; 1970-1971 ; The Cambridge Quarterly Volume V ; V ;  >
-    au < exists ; exists ; 1972-1975 ; The Cambridge Quarterly Volume VI ; VI ;  >
-    au < exists ; exists ; 1976-1977 ; The Cambridge Quarterly Volume VII ; VII ;  >
-    au < exists ; exists ; 1978-1979 ; The Cambridge Quarterly Volume VIII ; VIII ;  >
-    au < exists ; exists ; 1979-1980 ; The Cambridge Quarterly Volume IX ; IX ;  >
-    au < exists ; exists ; 1981-1982 ; The Cambridge Quarterly Volume X ; X ;  >
-    au < exists ; exists ; 1982-1983 ; The Cambridge Quarterly Volume XI ; XI ;  >
-    au < exists ; exists ; 1983-1984 ; The Cambridge Quarterly Volume XII ; XII ;  >
+#    au < exists ; exists ; 1966-1967 ; The Cambridge Quarterly Volume II ; II ;  >
+#    au < exists ; exists ; 1967-1968 ; The Cambridge Quarterly Volume III ; III ;  >
+#    au < exists ; exists ; 1968-1969 ; The Cambridge Quarterly Volume IV ; IV ;  >
+#    au < exists ; exists ; 1970-1971 ; The Cambridge Quarterly Volume V ; V ;  >
+#    au < exists ; exists ; 1972-1975 ; The Cambridge Quarterly Volume VI ; VI ;  >
+#    au < exists ; exists ; 1976-1977 ; The Cambridge Quarterly Volume VII ; VII ;  >
+#    au < exists ; exists ; 1978-1979 ; The Cambridge Quarterly Volume VIII ; VIII ;  >
+#    au < exists ; exists ; 1979-1980 ; The Cambridge Quarterly Volume IX ; IX ;  >
+#    au < exists ; exists ; 1981-1982 ; The Cambridge Quarterly Volume X ; X ;  >
+#    au < exists ; exists ; 1982-1983 ; The Cambridge Quarterly Volume XI ; XI ;  >
+#    au < exists ; exists ; 1983-1984 ; The Cambridge Quarterly Volume XII ; XII ;  >
     au < exists ; exists ; 1984 ; The Cambridge Quarterly Volume XIII ; XIII ;  >
     au < exists ; exists ; 1985 ; The Cambridge Quarterly Volume XIV ; XIV ;  >
     au < exists ; exists ; 1986 ; The Cambridge Quarterly Volume XV ; XV ;  >
@@ -16530,7 +16535,7 @@
 
     param[journal_id] = cjip
 
-    au < exists ; exists ; 2006-2007 ; The Chinese Journal of International Politics Volume 1 ; 1 ;  >
+#    au < exists ; exists ; 2006-2007 ; The Chinese Journal of International Politics Volume 1 ; 1 ;  >
     au < doNotProcess ; doNotProcess ; 2008-2009 ; The Chinese Journal of International Politics Volume 2 ; 2 ;  >
     au < doNotProcess ; doNotProcess ; 2010-2011 ; The Chinese Journal of International Politics Volume 3 ; 3 ;  >
     au < doNotProcess ; doNotProcess ; 2011 ; The Chinese Journal of International Politics Volume 4 ; 4 ;  >
@@ -16554,17 +16559,17 @@
 
     param[journal_id] = comjnl
 
-    au < exists ; exists ; 1958-1959 ; The Computer Journal Volume 1 ; 1 ;  >
-    au < exists ; exists ; 1959-1960 ; The Computer Journal Volume 2 ; 2 ;  >
-    au < exists ; exists ; 1960-1961 ; The Computer Journal Volume 3 ; 3 ;  >
-    au < exists ; exists ; 1961-1962 ; The Computer Journal Volume 4 ; 4 ;  >
-    au < exists ; exists ; 1962-1963 ; The Computer Journal Volume 5 ; 5 ;  >
-    au < exists ; exists ; 1963-1964 ; The Computer Journal Volume 6 ; 6 ;  >
-    au < exists ; exists ; 1964-1965 ; The Computer Journal Volume 7 ; 7 ;  >
-    au < exists ; exists ; 1965-1966 ; The Computer Journal Volume 8 ; 8 ;  >
-    au < exists ; exists ; 1966-1967 ; The Computer Journal Volume 9 ; 9 ;  >
-    au < exists ; exists ; 1967-1968 ; The Computer Journal Volume 10 ; 10 ;  >
-    au < exists ; exists ; 1968-1969 ; The Computer Journal Volume 11 ; 11 ;  >
+#    au < exists ; exists ; 1958-1959 ; The Computer Journal Volume 1 ; 1 ;  >
+#    au < exists ; exists ; 1959-1960 ; The Computer Journal Volume 2 ; 2 ;  >
+#    au < exists ; exists ; 1960-1961 ; The Computer Journal Volume 3 ; 3 ;  >
+#    au < exists ; exists ; 1961-1962 ; The Computer Journal Volume 4 ; 4 ;  >
+#    au < exists ; exists ; 1962-1963 ; The Computer Journal Volume 5 ; 5 ;  >
+#    au < exists ; exists ; 1963-1964 ; The Computer Journal Volume 6 ; 6 ;  >
+#    au < exists ; exists ; 1964-1965 ; The Computer Journal Volume 7 ; 7 ;  >
+#    au < exists ; exists ; 1965-1966 ; The Computer Journal Volume 8 ; 8 ;  >
+#    au < exists ; exists ; 1966-1967 ; The Computer Journal Volume 9 ; 9 ;  >
+#    au < exists ; exists ; 1967-1968 ; The Computer Journal Volume 10 ; 10 ;  >
+#    au < exists ; exists ; 1968-1969 ; The Computer Journal Volume 11 ; 11 ;  >
     au < exists ; exists ; 1969 ; The Computer Journal Volume 12 ; 12 ;  >
     au < exists ; exists ; 1970 ; The Computer Journal Volume 13 ; 13 ;  >
     au < exists ; exists ; 1971 ; The Computer Journal Volume 14 ; 14 ;  >
@@ -16886,19 +16891,19 @@
     param[journal_id] = jb
 
     au < exists ; exists ; 1922 ; The Journal of Biochemistry Volume 1 ; 1 ;  >
-    au < exists ; exists ; 1922-1923 ; The Journal of Biochemistry Volume 2 ; 2 ;  >
-    au < exists ; exists ; 1923-1924 ; The Journal of Biochemistry Volume 3 ; 3 ;  >
-    au < exists ; exists ; 1924-1925 ; The Journal of Biochemistry Volume 4 ; 4 ;  >
+#    au < exists ; exists ; 1922-1923 ; The Journal of Biochemistry Volume 2 ; 2 ;  >
+#    au < exists ; exists ; 1923-1924 ; The Journal of Biochemistry Volume 3 ; 3 ;  >
+#    au < exists ; exists ; 1924-1925 ; The Journal of Biochemistry Volume 4 ; 4 ;  >
     au < exists ; exists ; 1925 ; The Journal of Biochemistry Volume 5 ; 5 ;  >
     au < exists ; exists ; 1926 ; The Journal of Biochemistry Volume 6 ; 6 ;  >
     au < exists ; exists ; 1927 ; The Journal of Biochemistry Volume 7 ; 7 ;  >
-    au < exists ; exists ; 1927-1928 ; The Journal of Biochemistry Volume 8 ; 8 ;  >
+#    au < exists ; exists ; 1927-1928 ; The Journal of Biochemistry Volume 8 ; 8 ;  >
     au < exists ; exists ; 1928 ; The Journal of Biochemistry Volume 9 ; 9 ;  >
-    au < exists ; exists ; 1928-1929 ; The Journal of Biochemistry Volume 10 ; 10 ;  >
-    au < exists ; exists ; 1929-1930 ; The Journal of Biochemistry Volume 11 ; 11 ;  >
+#    au < exists ; exists ; 1928-1929 ; The Journal of Biochemistry Volume 10 ; 10 ;  >
+#    au < exists ; exists ; 1929-1930 ; The Journal of Biochemistry Volume 11 ; 11 ;  >
     au < exists ; exists ; 1930 ; The Journal of Biochemistry Volume 12 ; 12 ;  >
-    au < exists ; exists ; 1930-1931 ; The Journal of Biochemistry Volume 13 ; 13 ;  >
-    au < exists ; exists ; 1931-1932 ; The Journal of Biochemistry Volume 14 ; 14 ;  >
+#    au < exists ; exists ; 1930-1931 ; The Journal of Biochemistry Volume 13 ; 13 ;  >
+#    au < exists ; exists ; 1931-1932 ; The Journal of Biochemistry Volume 14 ; 14 ;  >
     au < exists ; exists ; 1932 ; The Journal of Biochemistry Volume 15-16 ; 15-16 ;  >
     au < exists ; exists ; 1933 ; The Journal of Biochemistry Volume 17-18 ; 17-18 ;  >
     au < exists ; exists ; 1934 ; The Journal of Biochemistry Volume 19-20 ; 19-20 ;  >
@@ -17309,39 +17314,39 @@
 
     param[journal_id] = jts
 
-    au < exists ; exists ; 1899-1900 ; The Journal of Theological Studies Volume os-I ; os-I ;  >
-    au < exists ; exists ; 1900-1901 ; The Journal of Theological Studies Volume os-II ; os-II ;  >
-    au < exists ; exists ; 1901-1902 ; The Journal of Theological Studies Volume os-III ; os-III ;  >
-    au < exists ; exists ; 1902-1903 ; The Journal of Theological Studies Volume os-IV ; os-IV ;  >
-    au < exists ; exists ; 1903-1904 ; The Journal of Theological Studies Volume os-V ; os-V ;  >
-    au < exists ; exists ; 1904-1905 ; The Journal of Theological Studies Volume os-VI ; os-VI ;  >
-    au < exists ; exists ; 1905-1906 ; The Journal of Theological Studies Volume os-VII ; os-VII ;  >
-    au < exists ; exists ; 1906-1907 ; The Journal of Theological Studies Volume os-VIII ; os-VIII ;  >
-    au < exists ; exists ; 1907-1908 ; The Journal of Theological Studies Volume os-IX ; os-IX ;  >
-    au < exists ; exists ; 1908-1909 ; The Journal of Theological Studies Volume os-X ; os-X ;  >
-    au < exists ; exists ; 1909-1910 ; The Journal of Theological Studies Volume os-XI ; os-XI ;  >
-    au < exists ; exists ; 1910-1911 ; The Journal of Theological Studies Volume os-XII ; os-XII ;  >
-    au < exists ; exists ; 1911-1912 ; The Journal of Theological Studies Volume os-XIII ; os-XIII ;  >
-    au < exists ; exists ; 1912-1913 ; The Journal of Theological Studies Volume os-XIV ; os-XIV ;  >
-    au < exists ; exists ; 1913-1914 ; The Journal of Theological Studies Volume os-XV ; os-XV ;  >
-    au < exists ; exists ; 1914-1915 ; The Journal of Theological Studies Volume os-XVI ; os-XVI ;  >
-    au < exists ; exists ; 1915-1916 ; The Journal of Theological Studies Volume os-XVII ; os-XVII ;  >
-    au < exists ; exists ; 1916-1917 ; The Journal of Theological Studies Volume os-XVIII ; os-XVIII ;  >
-    au < exists ; exists ; 1917-1918 ; The Journal of Theological Studies Volume os-XIX ; os-XIX ;  >
-    au < exists ; exists ; 1918-1919 ; The Journal of Theological Studies Volume os-XX ; os-XX ;  >
-    au < exists ; exists ; 1919-1920 ; The Journal of Theological Studies Volume os-XXI ; os-XXI ;  >
-    au < exists ; exists ; 1920-1921 ; The Journal of Theological Studies Volume os-XXII ; os-XXII ;  >
-    au < exists ; exists ; 1921-1922 ; The Journal of Theological Studies Volume os-XXIII ; os-XXIII ;  >
-    au < exists ; exists ; 1922-1923 ; The Journal of Theological Studies Volume os-XXIV ; os-XXIV ;  >
-    au < exists ; exists ; 1923-1924 ; The Journal of Theological Studies Volume os-XXV ; os-XXV ;  >
-    au < exists ; exists ; 1924-1925 ; The Journal of Theological Studies Volume os-XXVI ; os-XXVI ;  >
-    au < exists ; exists ; 1925-1926 ; The Journal of Theological Studies Volume os-XXVII ; os-XXVII ;  >
-    au < exists ; exists ; 1926-1927 ; The Journal of Theological Studies Volume os-XXVIII ; os-XXVIII ;  >
-    au < exists ; exists ; 1927-1928 ; The Journal of Theological Studies Volume os-XXIX ; os-XXIX ;  >
-    au < exists ; exists ; 1928-1929 ; The Journal of Theological Studies Volume os-XXX ; os-XXX ;  >
-    au < exists ; exists ; 1929-1930 ; The Journal of Theological Studies Volume os-XXXI ; os-XXXI ;  >
-    au < exists ; exists ; 1930-1931 ; The Journal of Theological Studies Volume os-XXXII ; os-XXXII ;  >
-    au < exists ; exists ; 1931-1932 ; The Journal of Theological Studies Volume os-XXXIII ; os-XXXIII ;  >
+#    au < exists ; exists ; 1899-1900 ; The Journal of Theological Studies Volume os-I ; os-I ;  >
+#    au < exists ; exists ; 1900-1901 ; The Journal of Theological Studies Volume os-II ; os-II ;  >
+#    au < exists ; exists ; 1901-1902 ; The Journal of Theological Studies Volume os-III ; os-III ;  >
+#    au < exists ; exists ; 1902-1903 ; The Journal of Theological Studies Volume os-IV ; os-IV ;  >
+#    au < exists ; exists ; 1903-1904 ; The Journal of Theological Studies Volume os-V ; os-V ;  >
+#    au < exists ; exists ; 1904-1905 ; The Journal of Theological Studies Volume os-VI ; os-VI ;  >
+#    au < exists ; exists ; 1905-1906 ; The Journal of Theological Studies Volume os-VII ; os-VII ;  >
+#    au < exists ; exists ; 1906-1907 ; The Journal of Theological Studies Volume os-VIII ; os-VIII ;  >
+#    au < exists ; exists ; 1907-1908 ; The Journal of Theological Studies Volume os-IX ; os-IX ;  >
+#    au < exists ; exists ; 1908-1909 ; The Journal of Theological Studies Volume os-X ; os-X ;  >
+#    au < exists ; exists ; 1909-1910 ; The Journal of Theological Studies Volume os-XI ; os-XI ;  >
+#    au < exists ; exists ; 1910-1911 ; The Journal of Theological Studies Volume os-XII ; os-XII ;  >
+#    au < exists ; exists ; 1911-1912 ; The Journal of Theological Studies Volume os-XIII ; os-XIII ;  >
+#    au < exists ; exists ; 1912-1913 ; The Journal of Theological Studies Volume os-XIV ; os-XIV ;  >
+#    au < exists ; exists ; 1913-1914 ; The Journal of Theological Studies Volume os-XV ; os-XV ;  >
+#    au < exists ; exists ; 1914-1915 ; The Journal of Theological Studies Volume os-XVI ; os-XVI ;  >
+#    au < exists ; exists ; 1915-1916 ; The Journal of Theological Studies Volume os-XVII ; os-XVII ;  >
+#    au < exists ; exists ; 1916-1917 ; The Journal of Theological Studies Volume os-XVIII ; os-XVIII ;  >
+#    au < exists ; exists ; 1917-1918 ; The Journal of Theological Studies Volume os-XIX ; os-XIX ;  >
+#    au < exists ; exists ; 1918-1919 ; The Journal of Theological Studies Volume os-XX ; os-XX ;  >
+#    au < exists ; exists ; 1919-1920 ; The Journal of Theological Studies Volume os-XXI ; os-XXI ;  >
+#    au < exists ; exists ; 1920-1921 ; The Journal of Theological Studies Volume os-XXII ; os-XXII ;  >
+#    au < exists ; exists ; 1921-1922 ; The Journal of Theological Studies Volume os-XXIII ; os-XXIII ;  >
+#    au < exists ; exists ; 1922-1923 ; The Journal of Theological Studies Volume os-XXIV ; os-XXIV ;  >
+#    au < exists ; exists ; 1923-1924 ; The Journal of Theological Studies Volume os-XXV ; os-XXV ;  >
+#    au < exists ; exists ; 1924-1925 ; The Journal of Theological Studies Volume os-XXVI ; os-XXVI ;  >
+#    au < exists ; exists ; 1925-1926 ; The Journal of Theological Studies Volume os-XXVII ; os-XXVII ;  >
+#    au < exists ; exists ; 1926-1927 ; The Journal of Theological Studies Volume os-XXVIII ; os-XXVIII ;  >
+#    au < exists ; exists ; 1927-1928 ; The Journal of Theological Studies Volume os-XXIX ; os-XXIX ;  >
+#    au < exists ; exists ; 1928-1929 ; The Journal of Theological Studies Volume os-XXX ; os-XXX ;  >
+#    au < exists ; exists ; 1929-1930 ; The Journal of Theological Studies Volume os-XXXI ; os-XXXI ;  >
+#    au < exists ; exists ; 1930-1931 ; The Journal of Theological Studies Volume os-XXXII ; os-XXXII ;  >
+#    au < exists ; exists ; 1931-1932 ; The Journal of Theological Studies Volume os-XXXIII ; os-XXXIII ;  >
     au < exists ; exists ; 1933 ; The Journal of Theological Studies Volume os-XXXIV ; os-XXXIV ;  >
     au < exists ; exists ; 1934 ; The Journal of Theological Studies Volume os-XXXV ; os-XXXV ;  >
     au < exists ; exists ; 1935 ; The Journal of Theological Studies Volume os-XXXVI ; os-XXXVI ;  >
@@ -17674,40 +17679,40 @@
     au < exists ; exists ; 1915 ; The Library Volume s3-VI ; s3-VI ;  >
     au < exists ; exists ; 1916 ; The Library Volume s3-VII ; s3-VII ;  >
     au < exists ; exists ; 1917 ; The Library Volume TBS-14-s3-VIII ; TBS-14-s3-VIII ;  >
-    au < exists ; exists ; 1917-1919 ; The Library Volume TBS-15 ; TBS-15 ;  >
+#    au < exists ; exists ; 1917-1919 ; The Library Volume TBS-15 ; TBS-15 ;  >
     au < exists ; exists ; 1918 ; The Library Volume s3-IX ; s3-IX ;  >
     au < exists ; exists ; 1919 ; The Library Volume s3-X ; s3-X ;  >
     au < exists ; exists ; 1920 ; The Library Volume s4-I ; s4-I ;  >
-    au < exists ; exists ; 1921-1922 ; The Library Volume s4-II ; s4-II ;  >
-    au < exists ; exists ; 1922-1923 ; The Library Volume s4-III ; s4-III ;  >
-    au < exists ; exists ; 1923-1924 ; The Library Volume s4-IV ; s4-IV ;  >
-    au < exists ; exists ; 1924-1925 ; The Library Volume s4-V ; s4-V ;  >
-    au < exists ; exists ; 1925-1926 ; The Library Volume s4-VI ; s4-VI ;  >
-    au < exists ; exists ; 1926-1927 ; The Library Volume s4-VII ; s4-VII ;  >
-    au < exists ; exists ; 1927-1928 ; The Library Volume s4-VIII ; s4-VIII ;  >
+#    au < exists ; exists ; 1921-1922 ; The Library Volume s4-II ; s4-II ;  >
+#    au < exists ; exists ; 1922-1923 ; The Library Volume s4-III ; s4-III ;  >
+#    au < exists ; exists ; 1923-1924 ; The Library Volume s4-IV ; s4-IV ;  >
+#    au < exists ; exists ; 1924-1925 ; The Library Volume s4-V ; s4-V ;  >
+#    au < exists ; exists ; 1925-1926 ; The Library Volume s4-VI ; s4-VI ;  >
+#    au < exists ; exists ; 1926-1927 ; The Library Volume s4-VII ; s4-VII ;  >
+#    au < exists ; exists ; 1927-1928 ; The Library Volume s4-VIII ; s4-VIII ;  >
     au < exists ; exists ; 1928 ; The Library Volume s4-IX ; s4-IX ;  >
-    au < exists ; exists ; 1929-1930 ; The Library Volume s4-X ; s4-X ;  >
-    au < exists ; exists ; 1930-1931 ; The Library Volume s4-XI ; s4-XI ;  >
-    au < exists ; exists ; 1931-1932 ; The Library Volume s4-XII ; s4-XII ;  >
-    au < exists ; exists ; 1932-1933 ; The Library Volume s4-XIII ; s4-XIII ;  >
-    au < exists ; exists ; 1933-1934 ; The Library Volume s4-XIV ; s4-XIV ;  >
-    au < exists ; exists ; 1934-1935 ; The Library Volume s4-XV ; s4-XV ;  >
-    au < exists ; exists ; 1935-1936 ; The Library Volume s4-XVI ; s4-XVI ;  >
-    au < exists ; exists ; 1936-1937 ; The Library Volume s4-XVII ; s4-XVII ;  >
-    au < exists ; exists ; 1937-1938 ; The Library Volume s4-XVIII ; s4-XVIII ;  >
-    au < exists ; exists ; 1938-1939 ; The Library Volume s4-XIX ; s4-XIX ;  >
-    au < exists ; exists ; 1939-1940 ; The Library Volume s4-XX ; s4-XX ;  >
+#    au < exists ; exists ; 1929-1930 ; The Library Volume s4-X ; s4-X ;  >
+#    au < exists ; exists ; 1930-1931 ; The Library Volume s4-XI ; s4-XI ;  >
+#    au < exists ; exists ; 1931-1932 ; The Library Volume s4-XII ; s4-XII ;  >
+#    au < exists ; exists ; 1932-1933 ; The Library Volume s4-XIII ; s4-XIII ;  >
+#    au < exists ; exists ; 1933-1934 ; The Library Volume s4-XIV ; s4-XIV ;  >
+#    au < exists ; exists ; 1934-1935 ; The Library Volume s4-XV ; s4-XV ;  >
+#    au < exists ; exists ; 1935-1936 ; The Library Volume s4-XVI ; s4-XVI ;  >
+#    au < exists ; exists ; 1936-1937 ; The Library Volume s4-XVII ; s4-XVII ;  >
+#    au < exists ; exists ; 1937-1938 ; The Library Volume s4-XVIII ; s4-XVIII ;  >
+#    au < exists ; exists ; 1938-1939 ; The Library Volume s4-XIX ; s4-XIX ;  >
+#    au < exists ; exists ; 1939-1940 ; The Library Volume s4-XX ; s4-XX ;  >
     au < exists ; exists ; 1940 ; The Library Volume s4-XXI ; s4-XXI ;  >
-    au < exists ; exists ; 1941-1942 ; The Library Volume s4-XXII ; s4-XXII ;  >
+#    au < exists ; exists ; 1941-1942 ; The Library Volume s4-XXII ; s4-XXII ;  >
     au < exists ; exists ; 1942 ; The Library Volume s4-XXIII ; s4-XXIII ;  >
-    au < exists ; exists ; 1943-1944 ; The Library Volume s4-XXIV ; s4-XXIV ;  >
+#    au < exists ; exists ; 1943-1944 ; The Library Volume s4-XXIV ; s4-XXIV ;  >
     au < exists ; exists ; 1944 ; The Library Volume s4-XXV ; s4-XXV ;  >
     au < exists ; exists ; 1945 ; The Library Volume s4-XXVI ; s4-XXVI ;  >
     au < exists ; exists ; 1946 ; The Library Volume s5-I ; s5-I ;  >
     au < exists ; exists ; 1947 ; The Library Volume s5-II ; s5-II ;  >
-    au < exists ; exists ; 1948-1949 ; The Library Volume s5-III ; s5-III ;  >
-    au < exists ; exists ; 1949-1950 ; The Library Volume s5-IV ; s5-IV ;  >
-    au < exists ; exists ; 1950-1951 ; The Library Volume s5-V ; s5-V ;  >
+#    au < exists ; exists ; 1948-1949 ; The Library Volume s5-III ; s5-III ;  >
+#    au < exists ; exists ; 1949-1950 ; The Library Volume s5-IV ; s5-IV ;  >
+#    au < exists ; exists ; 1950-1951 ; The Library Volume s5-V ; s5-V ;  >
     au < exists ; exists ; 1951 ; The Library Volume s5-VI ; s5-VI ;  >
     au < exists ; exists ; 1952 ; The Library Volume s5-VII ; s5-VII ;  >
     au < exists ; exists ; 1953 ; The Library Volume s5-VIII ; s5-VIII ;  >
@@ -17942,15 +17947,15 @@
     au < exists ; exists ; 1985 ; The Opera Quarterly Volume 3 ; 3 ;  >
     au < exists ; exists ; 1986 ; The Opera Quarterly Volume 4 ; 4 ;  >
     au < exists ; exists ; 1987 ; The Opera Quarterly Volume 5 ; 5 ;  >
-    au < exists ; exists ; 1988-1989 ; The Opera Quarterly Volume 6 ; 6 ;  >
+#    au < exists ; exists ; 1988-1989 ; The Opera Quarterly Volume 6 ; 6 ;  >
     au < exists ; exists ; 1990 ; The Opera Quarterly Volume 7 ; 7 ;  >
     au < exists ; exists ; 1991 ; The Opera Quarterly Volume 8 ; 8 ;  >
-    au < exists ; exists ; 1992-1993 ; The Opera Quarterly Volume 9 ; 9 ;  >
-    au < exists ; exists ; 1993-1994 ; The Opera Quarterly Volume 10 ; 10 ;  >
-    au < exists ; exists ; 1994-1995 ; The Opera Quarterly Volume 11 ; 11 ;  >
-    au < exists ; exists ; 1995-1996 ; The Opera Quarterly Volume 12 ; 12 ;  >
-    au < exists ; exists ; 1996-1997 ; The Opera Quarterly Volume 13 ; 13 ;  >
-    au < exists ; exists ; 1997-1998 ; The Opera Quarterly Volume 14 ; 14 ;  >
+#    au < exists ; exists ; 1992-1993 ; The Opera Quarterly Volume 9 ; 9 ;  >
+#    au < exists ; exists ; 1993-1994 ; The Opera Quarterly Volume 10 ; 10 ;  >
+#    au < exists ; exists ; 1994-1995 ; The Opera Quarterly Volume 11 ; 11 ;  >
+#    au < exists ; exists ; 1995-1996 ; The Opera Quarterly Volume 12 ; 12 ;  >
+#    au < exists ; exists ; 1996-1997 ; The Opera Quarterly Volume 13 ; 13 ;  >
+#    au < exists ; exists ; 1997-1998 ; The Opera Quarterly Volume 14 ; 14 ;  >
     au < exists ; exists ; 1999 ; The Opera Quarterly Volume 15 ; 15 ;  >
     au < exists ; exists ; 2000 ; The Opera Quarterly Volume 16 ; 16 ;  >
     au < exists ; exists ; 2001 ; The Opera Quarterly Volume 17 ; 17 ;  >
@@ -18041,7 +18046,7 @@
 
     param[journal_id] = pq
 
-    au < exists ; exists ; 1950-1951 ; The Philosophical Quarterly Volume 1 ; 1 ;  >
+#    au < exists ; exists ; 1950-1951 ; The Philosophical Quarterly Volume 1 ; 1 ;  >
     au < exists ; exists ; 1952 ; The Philosophical Quarterly Volume 2 ; 2 ;  >
     au < exists ; exists ; 1953 ; The Philosophical Quarterly Volume 3 ; 3 ;  >
     au < exists ; exists ; 1954 ; The Philosophical Quarterly Volume 4 ; 4 ;  >
@@ -18496,7 +18501,7 @@
     param[journal_id] = restud
 
     au < exists ; exists ; 1933 ; The Review of Economic Studies Volume 1 ; 1 ;  >
-    au < exists ; exists ; 1933-1958 ; The Review of Economic Studies Volume 1-25 ; 1-25 ;  >
+#    au < exists ; exists ; 1933-1958 ; The Review of Economic Studies Volume 1-25 ; 1-25 ;  >
     au < exists ; exists ; 1934 ; The Review of Economic Studies Volume 2 ; 2 ;  >
     au < exists ; exists ; 1935 ; The Review of Economic Studies Volume 3 ; 3 ;  >
     au < exists ; exists ; 1936 ; The Review of Economic Studies Volume 4 ; 4 ;  >
@@ -18743,7 +18748,7 @@
 
     param[journal_id] = wber
 
-    au < exists ; exists ; 1986-1987 ; The World Bank Economic Review Volume 1 ; 1 ;  >
+#    au < exists ; exists ; 1986-1987 ; The World Bank Economic Review Volume 1 ; 1 ;  >
     au < exists ; exists ; 1988 ; The World Bank Economic Review Volume 2 ; 2 ;  >
     au < exists ; exists ; 1989 ; The World Bank Economic Review Volume 3 ; 3 ;  >
     au < exists ; exists ; 1990 ; The World Bank Economic Review Volume 4 ; 4 ;  >
@@ -18999,7 +19004,7 @@
     au < exists ; exists ; 2000 ; Toxicological Sciences Volume 53-57 ; 53-57 ;  >
     au < exists ; exists ; 2001 ; Toxicological Sciences Volume 58-64 ; 58-64 ;  >
     au < exists ; exists ; 2002 ; Toxicological Sciences Volume 65-69 ; 65-69 ;  >
-    au < exists ; exists ; 2002-2003 ; Toxicological Sciences Volume 70 ; 70 ;  >
+#    au < exists ; exists ; 2002-2003 ; Toxicological Sciences Volume 70 ; 70 ;  >
     au < exists ; exists ; 2003 ; Toxicological Sciences Volume 71-76 ; 71-76 ;  >
     au < exists ; exists ; 2004 ; Toxicological Sciences Volume 77-82 ; 77-82 ;  >
     au < exists ; exists ; 2005 ; Toxicological Sciences Volume 83-88 ; 83-88 ;  >
@@ -19030,50 +19035,50 @@
     param[journal_id] = trstmh
 
     au < exists ; exists ; 1908 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 1 ; 1 ;  >
-    au < exists ; exists ; 1908-1909 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 2 ; 2 ;  >
-    au < exists ; exists ; 1909-1910 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 3 ; 3 ;  >
-    au < exists ; exists ; 1910-1911 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 4 ; 4 ;  >
-    au < exists ; exists ; 1911-1912 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 5 ; 5 ;  >
-    au < exists ; exists ; 1912-1913 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 6 ; 6 ;  >
-    au < exists ; exists ; 1913-1914 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 7 ; 7 ;  >
-    au < exists ; exists ; 1914-1915 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 8 ; 8 ;  >
-    au < exists ; exists ; 1915-1916 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 9 ; 9 ;  >
-    au < exists ; exists ; 1916-1917 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 10 ; 10 ;  >
-    au < exists ; exists ; 1917-1918 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 11 ; 11 ;  >
-    au < exists ; exists ; 1918-1919 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 12 ; 12 ;  >
-    au < exists ; exists ; 1919-1920 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 13 ; 13 ;  >
-    au < exists ; exists ; 1920-1921 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 14 ; 14 ;  >
-    au < exists ; exists ; 1921-1922 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 15 ; 15 ;  >
-    au < exists ; exists ; 1922-1923 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 16 ; 16 ;  >
-    au < exists ; exists ; 1923-1924 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 17 ; 17 ;  >
-    au < exists ; exists ; 1924-1925 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 18 ; 18 ;  >
-    au < exists ; exists ; 1925-1926 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 19 ; 19 ;  >
-    au < exists ; exists ; 1926-1927 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 20 ; 20 ;  >
-    au < exists ; exists ; 1928-1928 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 21 ; 21 ;  >
-    au < exists ; exists ; 1929-1929 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 22 ; 22 ;  >
-    au < exists ; exists ; 1929-1930 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 23 ; 23 ;  >
-    au < exists ; exists ; 1930-1931 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 24 ; 24 ;  >
-    au < exists ; exists ; 1931-1932 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 25 ; 25 ;  >
-    au < exists ; exists ; 1932-1933 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 26 ; 26 ;  >
-    au < exists ; exists ; 1933-1934 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 27 ; 27 ;  >
-    au < exists ; exists ; 1934-1935 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 28 ; 28 ;  >
-    au < exists ; exists ; 1935-1936 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 29 ; 29 ;  >
-    au < exists ; exists ; 1936-1937 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 30 ; 30 ;  >
-    au < exists ; exists ; 1938-1938 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 31 ; 31 ;  >
-    au < exists ; exists ; 1939-1939 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 32 ; 32 ;  >
-    au < exists ; exists ; 1939-1940 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 33 ; 33 ;  >
-    au < exists ; exists ; 1940-1941 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 34 ; 34 ;  >
-    au < exists ; exists ; 1941-1942 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 35 ; 35 ;  >
-    au < exists ; exists ; 1942-1943 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 36 ; 36 ;  >
-    au < exists ; exists ; 1943-1944 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 37 ; 37 ;  >
-    au < exists ; exists ; 1944-1945 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 38 ; 38 ;  >
-    au < exists ; exists ; 1945-1946 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 39 ; 39 ;  >
-    au < exists ; exists ; 1946-1947 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 40 ; 40 ;  >
-    au < exists ; exists ; 1948-1948 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 41 ; 41 ;  >
-    au < exists ; exists ; 1949-1949 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 42 ; 42 ;  >
-    au < exists ; exists ; 1949-1950 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 43 ; 43 ;  >
-    au < exists ; exists ; 1950-1951 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 44 ; 44 ;  >
-    au < exists ; exists ; 1951-1952 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 45 ; 45 ;  >
+#    au < exists ; exists ; 1908-1909 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 2 ; 2 ;  >
+#    au < exists ; exists ; 1909-1910 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 3 ; 3 ;  >
+#    au < exists ; exists ; 1910-1911 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 4 ; 4 ;  >
+#    au < exists ; exists ; 1911-1912 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 5 ; 5 ;  >
+#    au < exists ; exists ; 1912-1913 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 6 ; 6 ;  >
+#    au < exists ; exists ; 1913-1914 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 7 ; 7 ;  >
+#    au < exists ; exists ; 1914-1915 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 8 ; 8 ;  >
+#    au < exists ; exists ; 1915-1916 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 9 ; 9 ;  >
+#    au < exists ; exists ; 1916-1917 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 10 ; 10 ;  >
+#    au < exists ; exists ; 1917-1918 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 11 ; 11 ;  >
+#    au < exists ; exists ; 1918-1919 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 12 ; 12 ;  >
+#    au < exists ; exists ; 1919-1920 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 13 ; 13 ;  >
+#    au < exists ; exists ; 1920-1921 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 14 ; 14 ;  >
+#    au < exists ; exists ; 1921-1922 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 15 ; 15 ;  >
+#    au < exists ; exists ; 1922-1923 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 16 ; 16 ;  >
+#    au < exists ; exists ; 1923-1924 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 17 ; 17 ;  >
+#    au < exists ; exists ; 1924-1925 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 18 ; 18 ;  >
+#    au < exists ; exists ; 1925-1926 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 19 ; 19 ;  >
+#    au < exists ; exists ; 1926-1927 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 20 ; 20 ;  >
+#    au < exists ; exists ; 1928-1928 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 21 ; 21 ;  >
+#    au < exists ; exists ; 1929-1929 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 22 ; 22 ;  >
+#    au < exists ; exists ; 1929-1930 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 23 ; 23 ;  >
+#    au < exists ; exists ; 1930-1931 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 24 ; 24 ;  >
+#    au < exists ; exists ; 1931-1932 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 25 ; 25 ;  >
+#    au < exists ; exists ; 1932-1933 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 26 ; 26 ;  >
+#    au < exists ; exists ; 1933-1934 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 27 ; 27 ;  >
+#    au < exists ; exists ; 1934-1935 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 28 ; 28 ;  >
+#    au < exists ; exists ; 1935-1936 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 29 ; 29 ;  >
+#    au < exists ; exists ; 1936-1937 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 30 ; 30 ;  >
+#    au < exists ; exists ; 1938-1938 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 31 ; 31 ;  >
+#    au < exists ; exists ; 1939-1939 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 32 ; 32 ;  >
+#    au < exists ; exists ; 1939-1940 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 33 ; 33 ;  >
+#    au < exists ; exists ; 1940-1941 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 34 ; 34 ;  >
+#    au < exists ; exists ; 1941-1942 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 35 ; 35 ;  >
+#    au < exists ; exists ; 1942-1943 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 36 ; 36 ;  >
+#    au < exists ; exists ; 1943-1944 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 37 ; 37 ;  >
+#    au < exists ; exists ; 1944-1945 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 38 ; 38 ;  >
+#    au < exists ; exists ; 1945-1946 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 39 ; 39 ;  >
+#    au < exists ; exists ; 1946-1947 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 40 ; 40 ;  >
+#    au < exists ; exists ; 1948-1948 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 41 ; 41 ;  >
+#    au < exists ; exists ; 1949-1949 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 42 ; 42 ;  >
+#    au < exists ; exists ; 1949-1950 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 43 ; 43 ;  >
+#    au < exists ; exists ; 1950-1951 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 44 ; 44 ;  >
+#    au < exists ; exists ; 1951-1952 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 45 ; 45 ;  >
     au < exists ; exists ; 1952 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 46 ; 46 ;  >
     au < exists ; exists ; 1953 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 47 ; 47 ;  >
     au < exists ; exists ; 1954 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 48 ; 48 ;  >
@@ -19208,18 +19213,18 @@
 
     param[journal_id] = tandt
 
-    au < exists ; exists ; 1994-1995 ; Trusts & Trustees Volume 1 ; 1 ;  >
-    au < exists ; exists ; 1995-1996 ; Trusts & Trustees Volume 2 ; 2 ;  >
-    au < exists ; exists ; 1996-1997 ; Trusts & Trustees Volume 3 ; 3 ;  >
-    au < exists ; exists ; 1997-1998 ; Trusts & Trustees Volume 4 ; 4 ;  >
-    au < exists ; exists ; 1998-1999 ; Trusts & Trustees Volume 5 ; 5 ;  >
-    au < exists ; exists ; 1999-2000 ; Trusts & Trustees Volume 6 ; 6 ;  >
-    au < exists ; exists ; 2000-2001 ; Trusts & Trustees Volume 7 ; 7 ;  >
-    au < exists ; exists ; 2001-2002 ; Trusts & Trustees Volume 8 ; 8 ;  >
-    au < exists ; exists ; 2002-2003 ; Trusts & Trustees Volume 9 ; 9 ;  >
-    au < exists ; exists ; 2003-2004 ; Trusts & Trustees Volume 10 ; 10 ;  >
-    au < exists ; exists ; 2004-2005 ; Trusts & Trustees Volume 11 ; 11 ;  >
-    au < exists ; exists ; 2005-2006 ; Trusts & Trustees Volume 12 ; 12 ;  >
+#    au < exists ; exists ; 1994-1995 ; Trusts & Trustees Volume 1 ; 1 ;  >
+#    au < exists ; exists ; 1995-1996 ; Trusts & Trustees Volume 2 ; 2 ;  >
+#    au < exists ; exists ; 1996-1997 ; Trusts & Trustees Volume 3 ; 3 ;  >
+#    au < exists ; exists ; 1997-1998 ; Trusts & Trustees Volume 4 ; 4 ;  >
+#    au < exists ; exists ; 1998-1999 ; Trusts & Trustees Volume 5 ; 5 ;  >
+#    au < exists ; exists ; 1999-2000 ; Trusts & Trustees Volume 6 ; 6 ;  >
+#    au < exists ; exists ; 2000-2001 ; Trusts & Trustees Volume 7 ; 7 ;  >
+#    au < exists ; exists ; 2001-2002 ; Trusts & Trustees Volume 8 ; 8 ;  >
+#    au < exists ; exists ; 2002-2003 ; Trusts & Trustees Volume 9 ; 9 ;  >
+#    au < exists ; exists ; 2003-2004 ; Trusts & Trustees Volume 10 ; 10 ;  >
+#    au < exists ; exists ; 2004-2005 ; Trusts & Trustees Volume 11 ; 11 ;  >
+#    au < exists ; exists ; 2005-2006 ; Trusts & Trustees Volume 12 ; 12 ;  >
     au < exists ; exists ; 2007 ; Trusts & Trustees Volume 13 ; 13 ;  >
     au < doNotProcess ; doNotProcess ; 2008 ; Trusts & Trustees Volume 14 ; 14 ;  >
     au < doNotProcess ; doNotProcess ; 2009 ; Trusts & Trustees Volume 15 ; 15 ;  >
@@ -19456,7 +19461,7 @@
     au < exists ; exists ; 1996 ; Yearbook of European Law Volume 16 ; 16 ;  >
     au < exists ; exists ; 1997 ; Yearbook of European Law Volume 17 ; 17 ;  >
     au < exists ; exists ; 1998 ; Yearbook of European Law Volume 18 ; 18 ;  >
-    au < exists ; exists ; 1999-2000 ; Yearbook of European Law Volume 19 ; 19 ;  >
+#    au < exists ; exists ; 1999-2000 ; Yearbook of European Law Volume 19 ; 19 ;  >
     au < exists ; exists ; 2001 ; Yearbook of European Law Volume 20 ; 20 ;  >
     au < exists ; exists ; 2002 ; Yearbook of European Law Volume 21 ; 21 ;  >
     au < exists ; exists ; 2003 ; Yearbook of European Law Volume 22 ; 22 ;  >
