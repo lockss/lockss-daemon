@@ -470,7 +470,7 @@
     au < finished ; finished ; 2014 ; Journal of Receptor, Ligand and Channel Research Volume 7 ; 7 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2015 ; Journal of Receptor, Ligand and Channel Research Volume 8 ; 8 ; 2015 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2016 ; Journal of Receptor, Ligand and Channel Research Volume 9 ; 9 ; 2016 ; reingest5.clockss.org:8082 >
-    au < testing ; exists ; 2017 ; Journal of Receptor, Ligand and Channel Research Volume 10 ; 10 ; 2017 ; >
+    au < expected ; exists ; 2017 ; Journal of Receptor, Ligand and Channel Research Volume 10 ; 10 ; 2017 ; >
     
   }
 
@@ -852,6 +852,7 @@
     >
     
     param[journal_id] = 48
+    #ceased publishing in July 2016
 
     au < finished ; finished ; 2009 ; International Journal of Interferon, Cytokine and Mediator Research Volume 1 ; 1 ; 2009 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2010 ; International Journal of Interferon, Cytokine and Mediator Research Volume 2 ; 2 ; 2010 ; reingest2.clockss.org:8085 >
@@ -861,7 +862,6 @@
     au < finished ; finished ; 2014 ; International Journal of Interferon, Cytokine and Mediator Research Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; International Journal of Interferon, Cytokine and Mediator Research Volume 7 ; 7 ; 2015 ; >
     au < finished ; manifest ; 2016 ; International Journal of Interferon, Cytokine and Mediator Research Volume 8 ; 8 ; 2016 ; reingest1.clockss.org:8082 >
-    au < testing ; exists ; 2017 ; International Journal of Interferon, Cytokine and Mediator Research Volume 9 ; 9 ; 2017 ; >
     
   }
 
@@ -1065,6 +1065,7 @@
     >
     
     param[journal_id] = 58
+    #ceased publishing in September 2016
 
     au < finished ; finished ; 2009 ; Cell Health and Cytoskeleton Volume 1 ; 1 ; 2009 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2010 ; Cell Health and Cytoskeleton Volume 2 ; 2 ; 2010 ; reingest4.clockss.org:8082 >
@@ -1074,7 +1075,6 @@
     au < finished ; finished ; 2014 ; Cell Health and Cytoskeleton Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Cell Health and Cytoskeleton Volume 7 ; 7 ; 2015 ; >
     au < finished ; manifest ; 2016 ; Cell Health and Cytoskeleton Volume 8 ; 8 ; 2016 ; reingest1.clockss.org:8082 >
-    au < testing ; exists ; 2017 ; Cell Health and Cytoskeleton Volume 9 ; 9 ; 2017 ; >
     
   }
 
@@ -1149,10 +1149,10 @@
     >
 
     param[journal_id] = 62
+    #ceased publishing in July 2016
 
     au < finished ; finished ; 2015 ; International Journal of High Throughput Screening Volume 5 ; 5 ; 2015 ; >
     au < finished ; crawling ; 2016 ; International Journal of High Throughput Screening Volume 6 ; 6 ; 2016 ; reingest1.clockss.org:8082 >
-    au < testing ; exists ; 2017 ; International Journal of High Throughput Screening Volume 7 ; 7 ; 2017 ; >
 
   }
 
@@ -1351,6 +1351,7 @@
     >
     
     param[journal_id] = 75
+    #ceased publishing in November 2016
 
     au < finished ; finished ; 2009 ; Neurobehavioral HIV Medicine Volume 1 ; 1 ; 2009 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2010 ; Neurobehavioral HIV Medicine Volume 2 ; 2 ; 2010 ; reingest5.clockss.org:8082 >
@@ -1360,7 +1361,6 @@
     au < doesNotExist ; doesNotExist ; 2014 ; Neurobehavioral HIV Medicine Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Neurobehavioral HIV Medicine Volume 7 ; 7 ; 2015 ; >
     au < finished ; manifest ; 2016 ; Neurobehavioral HIV Medicine Volume 8 ; 8 ; 2016 ; reingest5.clockss.org:8082 >
-    au < testing ; exists ; 2017 ; Neurobehavioral HIV Medicine Volume 9 ; 9 ; 2017 ; >
     
   }
 
@@ -1435,6 +1435,7 @@
     >
     
     param[journal_id] = 81
+    #ceased publishing in May 2016
 
     au < finished ; crawling ; 2009 ; Open Access Bioinformatics Volume 1 ; 1 ; 2009 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2010 ; Open Access Bioinformatics Volume 2 ; 2 ; 2010 ; reingest1.clockss.org:8082 >
@@ -1444,7 +1445,6 @@
     au < finished ; finished ; 2014 ; Open Access Bioinformatics Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Open Access Bioinformatics Volume 7 ; 7 ; 2015 ; >
     au < finished ; manifest ; 2016 ; Open Access Bioinformatics Volume 8 ; 8 ; 2016 ; reingest1.clockss.org:8082 >
-    au < testing ; exists ; 2017 ; Open Access Bioinformatics Volume 9 ; 9 ; 2017 ; >
     
   }
 
@@ -1537,6 +1537,7 @@
     >
     
     param[journal_id] = 86
+    #ceased publishing in July 2016
 
     au < finished ; finished ; 2009 ; Open Access Insect Physiology Volume 1 ; 1 ; 2009 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2010 ; Open Access Insect Physiology Volume 2 ; 2 ; 2010 ; reingest3.clockss.org:8083 >
@@ -1546,7 +1547,6 @@
     au < doesNotExist ; doesNotExist ; 2014 ; Open Access Insect Physiology Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Open Access Insect Physiology Volume 7 ; 7 ; 2015 ; >
     au < finished ; manifest ; 2016 ; Open Access Insect Physiology Volume 8 ; 8 ; 2016 ; reingest1.clockss.org:8082 >
-    au < testing ; exists ; 2017 ; Open Access Insect Physiology Volume 9 ; 9 ; 2017 ; >
     
   }
 
@@ -1558,6 +1558,7 @@
     >
     
     param[journal_id] = 87
+    #ceased publishing in September 2016
 
     au < finished ; crawling ; 2010 ; Open Access Animal Physiology Volume 1 ; 1 ; 2010 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2011 ; Open Access Animal Physiology Volume 2 ; 2 ; 2011 ; reingest4.clockss.org:8082 >
@@ -1566,7 +1567,6 @@
     au < finished ; finished ; 2014 ; Open Access Animal Physiology Volume 5 ; 5 ; 2014 ; >
     au < finished ; finished ; 2015 ; Open Access Animal Physiology Volume 6 ; 6 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Open Access Animal Physiology Volume 7 ; 7 ; 2016 ; reingest2.clockss.org:8085 >
-    au < testing ; exists ; 2017 ; Open Access Animal Physiology Volume 8 ; 8 ; 2017 ; >
     
   }
 
@@ -1624,6 +1624,7 @@
     >
     
     param[journal_id] = 90
+    #ceased publishing in November 2016
 
     au < finished ; finished ; 2009 ; Patient Intelligence Volume 1 ; 1 ; 2009 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2010 ; Patient Intelligence Volume 2 ; 2 ; 2010 ; reingest5.clockss.org:8082 >
@@ -1633,7 +1634,6 @@
     au < finished ; finished ; 2014 ; Patient Intelligence Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Patient Intelligence Volume 7 ; 7 ; 2015 ; >
     au < finished ; manifest ; 2016 ; Patient Intelligence Volume 8 ; 8 ; 2016 ; reingest1.clockss.org:8082 >
-    au < testing ; exists ; 2017 ; Patient Intelligence Volume 9 ; 9 ; 2017 ; >
     
   }
 
@@ -1920,6 +1920,7 @@
     >
     
     param[journal_id] = 105
+    #ceased publishing in January 2017
 
     au < finished ; finished ; 2011 ; Clinical Oncology in Adolescents and Young Adults Volume 1 ; 1 ; 2011 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2012 ; Clinical Oncology in Adolescents and Young Adults Volume 2 ; 2 ; 2012 ; reingest4.clockss.org:8082 >
@@ -1927,7 +1928,6 @@
     au < finished ; finished ; 2014 ; Clinical Oncology in Adolescents and Young Adults Volume 4 ; 4 ; 2014 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Clinical Oncology in Adolescents and Young Adults Volume 5 ; 5 ; 2015 ; >
     au < finished ; manifest ; 2016 ; Clinical Oncology in Adolescents and Young Adults Volume 6 ; 6 ; 2016 ; reingest1.clockss.org:8082 >
-    au < testing ; exists ; 2017 ; Clinical Oncology in Adolescents and Young Adults Volume 7 ; 7 ; 2017 ; >
    
   }
 
@@ -1939,6 +1939,7 @@
     >
     
     param[journal_id] = 106
+    #ceased publishing in October 2016
 
     au < finished ; finished ; 2011 ; Botanics: Targets and Therapy Volume 1 ; 1 ; 2011 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2012 ; Botanics: Targets and Therapy Volume 2 ; 2 ; 2012 ; reingest5.clockss.org:8082 >
@@ -1946,7 +1947,6 @@
     au < finished ; finished ; 2014 ; Botanics: Targets and Therapy Volume 4 ; 4 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Botanics: Targets and Therapy Volume 5 ; 5 ; 2015 ; >
     au < finished ; manifest ; 2016 ; Botanics: Targets and Therapy Volume 6 ; 6 ; 2016 ; reingest4.clockss.org:8082 >
-    au < testing ; exists ; 2017 ; Botanics: Targets and Therapy Volume 7 ; 7 ; 2017 ; >
    
   }
 
@@ -1997,6 +1997,7 @@
     >
     
     param[journal_id] = 109
+    #ceased publishing in July 2016
 
     au < finished ; finished ; 2011 ; Research and Reports in Nuclear Medicine Volume 1 ; 1 ; 2011 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2012 ; Research and Reports in Nuclear Medicine Volume 2 ; 2 ; 2012 ; reingest3.clockss.org:8083 >
@@ -2004,7 +2005,6 @@
     au < finished ; finished ; 2014 ; Research and Reports in Nuclear Medicine Volume 4 ; 4 ; 2014 ; >
     au < finished ; finished ; 2015 ; Research and Reports in Nuclear Medicine Volume 5 ; 5 ; 2015 ; >
     au < finished ; manifest ; 2016 ; Research and Reports in Nuclear Medicine Volume 6 ; 6 ; 2016 ; reingest2.clockss.org:8085 >
-    au < testing ; exists ; 2017 ; Research and Reports in Nuclear Medicine Volume 7 ; 7 ; 2017 ; >
    
   }
 
@@ -2016,6 +2016,7 @@
     >
     
     param[journal_id] = 110
+    #ceased publishing in November 2016
 
     au < finished ; crawling ; 2011 ; Research and Reports in Endocrine Disorders Volume 1 ; 1 ; 2011 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2012 ; Research and Reports in Endocrine Disorders Volume 2 ; 2 ; 2012 ; reingest4.clockss.org:8082 >
@@ -2023,7 +2024,6 @@
     au < finished ; finished ; 2014 ; Research and Reports in Endocrine Disorders Volume 4 ; 4 ; 2014 ; >
     au < finished ; finished ; 2015 ; Research and Reports in Endocrine Disorders Volume 5 ; 5 ; 2015 ; >
     au < finished ; manifest ; 2016 ; Research and Reports in Endocrine Disorders Volume 6 ; 6 ; 2016 ; reingest1.clockss.org:8082 >
-    au < testing ; exists ; 2017 ; Research and Reports in Endocrine Disorders Volume 7 ; 7 ; 2017 ; >
    
   }
 
@@ -2073,6 +2073,7 @@
     >
     
     param[journal_id] = 113
+    #ceased publishing in October 2016
 
     au < finished ; finished ; 2011 ; Biosimilars Volume 1 ; 1 ; 2011 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Biosimilars Volume 2 ; 2 ; 2012 ; reingest2.clockss.org:8085 >
@@ -2080,7 +2081,6 @@
     au < finished ; finished ; 2014 ; Biosimilars Volume 4 ; 4 ; 2014 ; >
     au < finished ; finished ; 2015 ; Biosimilars Volume 5 ; 5 ; 2015 ; >
     au < finished ; manifest ; 2016 ; Biosimilars Volume 6 ; 6 ; 2016 ; reingest5.clockss.org:8082 >
-    au < testing ; exists ; 2017 ; Biosimilars Volume 7 ; 7 ; 2017 ; >
    
   }
 
@@ -2111,13 +2111,13 @@
     >
     
     param[journal_id] = 115
+    #ceased publishing in July 2016
 
     au < finished ; finished ; 2011 ; Research and Reports in Biodiversity Studies Volume 1 ; 1 ; 2011 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2012 ; Research and Reports in Biodiversity Studies Volume 2 ; 2 ; 2012 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2013 ; Research and Reports in Biodiversity Studies Volume 3 ; 3 ; 2013 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Research and Reports in Biodiversity Studies Volume 4 ; 4 ; 2015 ; >
     au < finished ; manifest ; 2016 ; Research and Reports in Biodiversity Studies Volume 5 ; 5 ; 2016 ; reingest1.clockss.org:8082 >
-    au < testing ; exists ; 2017 ; Research and Reports in Biodiversity Studies Volume 6 ; 6 ; 2017 ; >
    
   }
 
@@ -2136,7 +2136,7 @@
     au < finished ; finished ; 2014 ; Current Biomarker Findings Volume 4 ; 4 ; 2014 ; >
     au < finished ; finished ; 2015 ; Current Biomarker Findings Volume 5 ; 5 ; 2015 ; >
     au < finished ; manifest ; 2016 ; Current Biomarker Findings Volume 6 ; 6 ; 2016 ; reingest4.clockss.org:8082 >
-    au < testing ; exists ; 2017 ; Current Biomarker Findings Volume 7 ; 7 ; 2017 ; >
+    au < expected ; exists ; 2017 ; Current Biomarker Findings Volume 7 ; 7 ; 2017 ; >
    
   }
 
@@ -2167,6 +2167,7 @@
     >
     
     param[journal_id] = 118
+    #ceased publishing in December 2016
 
     au < finished ; crawling ; 2011 ; Research and Reports in Biochemistry Volume 1 ; 1 ; 2011 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2012 ; Research and Reports in Biochemistry Volume 2 ; 2 ; 2012 ; reingest2.clockss.org:8085 >
@@ -2174,7 +2175,6 @@
     au < finished ; finished ; 2014 ; Research and Reports in Biochemistry Volume 4 ; 4 ; 2014 ; >
     au < finished ; finished ; 2015 ; Research and Reports in Biochemistry Volume 5 ; 5 ; 2015 ; >
     au < finished ; manifest ; 2016 ; Research and Reports in Biochemistry Volume 6 ; 6 ; 2016 ; reingest5.clockss.org:8082 >
-    au < testing ; exists ; 2017 ; Research and Reports in Biochemistry Volume 7 ; 7 ; 2017 ; >
    
   }
 
@@ -2186,6 +2186,7 @@
     >
     
     param[journal_id] = 119
+    #ceased publishing in September 2016
 
     au < finished ; crawling ; 2011 ; Antibody Technology Journal Volume 1 ; 1 ; 2011 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2012 ; Antibody Technology Journal Volume 2 ; 2 ; 2012 ; reingest3.clockss.org:8083 >
@@ -2193,7 +2194,6 @@
     au < finished ; finished ; 2014 ; Antibody Technology Journal Volume 4 ; 4 ; 2014 ; >
     au < finished ; finished ; 2015 ; Antibody Technology Journal Volume 5 ; 5 ; 2015 ; >
     au < finished ; manifest ; 2016 ; Antibody Technology Journal Volume 6 ; 6 ; 2016 ; reingest2.clockss.org:8085 >
-    au < testing ; exists ; 2017 ; Antibody Technology Journal Volume 7 ; 7 ; 2017 ; >
    
   }
 
@@ -2261,6 +2261,7 @@
     >
     
     param[journal_id] = 127
+    #ceased publishing in November 2016
 
     au < finished ; crawling ; 2011 ; Reports in Electrochemistry Volume 1 ; 1 ; 2011 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2012 ; Reports in Electrochemistry Volume 2 ; 2 ; 2012 ; reingest3.clockss.org:8083 >
@@ -2268,7 +2269,6 @@
     au < finished ; finished ; 2014 ; Reports in Electrochemistry Volume 4 ; 4 ; 2014 ; >
     au < finished ; finished ; 2015 ; Reports in Electrochemistry Volume 5 ; 5 ; 2015 ; >
     au < finished ; manifest ; 2016 ; Reports in Electrochemistry Volume 6 ; 6 ; 2016 ; reingest5.clockss.org:8082 >
-    au < testing ; exists ; 2017 ; Reports in Electrochemistry Volume 7 ; 7 ; 2017 ; >
    
   }
 
@@ -2280,12 +2280,12 @@
     >
     
     param[journal_id] = 129
+    #ceased publishing in July 2016
 
     au < finished ; finished ; 2012 ; Reports in Theoretical Chemistry Volume 1 ; 1 ; 2012 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Reports in Theoretical Chemistry Volume 2 ; 2 ; 2013 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Reports in Theoretical Chemistry Volume 3 ; 3 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Reports in Theoretical Chemistry Volume 4 ; 4 ; 2016 ; reingest1.clockss.org:8082 >
-    au < testing ; exists ; 2017 ; Reports in Theoretical Chemistry Volume 5 ; 5 ; 2017 ; >
    
   }
 
@@ -2316,6 +2316,7 @@
     >
     
     param[journal_id] = 133
+    #ceased publishing in July 2016
 
     au < finished ; crawling ; 2011 ; Research and Reports in Medicinal Chemistry Volume 1 ; 1 ; 2011 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Research and Reports in Medicinal Chemistry Volume 2 ; 2 ; 2012 ; reingest1.clockss.org:8082 >
@@ -2323,7 +2324,6 @@
     au < finished ; finished ; 2014 ; Research and Reports in Medicinal Chemistry Volume 4 ; 4 ; 2014 ; >
     au < finished ; finished ; 2015 ; Research and Reports in Medicinal Chemistry Volume 5 ; 5 ; 2015 ; >
     au < finished ; manifest ; 2016 ; Research and Reports in Medicinal Chemistry Volume 6 ; 6 ; 2016 ; reingest1.clockss.org:8082 >
-    au < testing ; exists ; 2017 ; Research and Reports in Medicinal Chemistry Volume 7 ; 7 ; 2017 ; >
    
   }
 
@@ -2335,6 +2335,7 @@
     >
     
     param[journal_id] = 134
+    #ceased publishing in November 2016
 
     au < finished ; crawling ; 2011 ; Reports in Organic Chemistry Volume 1 ; 1 ; 2011 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2012 ; Reports in Organic Chemistry Volume 2 ; 2 ; 2012 ; reingest2.clockss.org:8085 >
@@ -2342,7 +2343,6 @@
     au < finished ; finished ; 2014 ; Reports in Organic Chemistry Volume 4 ; 4 ; 2014 ; >
     au < finished ; finished ; 2015 ; Reports in Organic Chemistry Volume 5 ; 5 ; 2015 ; >
     au < finished ; manifest ; 2016 ; Reports in Organic Chemistry Volume 6 ; 6 ; 2016 ; reingest4.clockss.org:8082 >
-    au < testing ; exists ; 2017 ; Reports in Organic Chemistry Volume 7 ; 7 ; 2017 ; >
    
   }
 
@@ -2391,13 +2391,13 @@
     >
     
     param[journal_id] = 137
+    #ceased publishing in July 2016
 
     au < finished ; finished ; 2012 ; Nanobiosensors in Disease Diagnosis Volume 1 ; 1 ; 2012 ; reingest5.clockss.org:8082 >
     au < doesNotExist ; doesNotExist ; 2013 ; Nanobiosensors in Disease Diagnosis Volume 2 ; 2 ; 2013 ; >
     au < finished ; finished ; 2014 ; Nanobiosensors in Disease Diagnosis Volume 3 ; 3 ; 2014 ; >
     au < finished ; finished ; 2015 ; Nanobiosensors in Disease Diagnosis Volume 4 ; 4 ; 2015 ; >
     au < finished ; manifest ; 2016 ; Nanobiosensors in Disease Diagnosis Volume 5 ; 5 ; 2016 ; reingest2.clockss.org:8085 >
-    au < testing ; exists ; 2017 ; Nanobiosensors in Disease Diagnosis Volume 6 ; 6 ; 2017 ; >
    
   }
 
@@ -2461,13 +2461,13 @@
     >
     
     param[journal_id] = 142
+    #ceased publishing in July 2016
 
     au < finished ; finished ; 2012 ; Research and Reports in Transdermal Drug Delivery Volume 1 ; 1 ; 2012 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Research and Reports in Transdermal Drug Delivery Volume 2 ; 2 ; 2013 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Research and Reports in Transdermal Drug Delivery Volume 3 ; 3 ; 2014 ; >
     au < finished ; finished ; 2015 ; Research and Reports in Transdermal Drug Delivery Volume 4 ; 4 ; 2015 ; >
     au < finished ; manifest ; 2016 ; Research and Reports in Transdermal Drug Delivery Volume 5 ; 5 ; 2016 ; reingest1.clockss.org:8082 >
-    au < testing ; exists ; 2017 ; Research and Reports in Transdermal Drug Delivery Volume 6 ; 6 ; 2017 ; >
    
   }
 
@@ -2514,12 +2514,12 @@
     >
     
     param[journal_id] = 145
+    #ceased publishing in December 2016
 
     au < finished ; crawling ; 2013 ; Research and Reports in Focused Ultrasound Volume 1 ; 1 ; 2013 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Research and Reports in Focused Ultrasound Volume 2 ; 2 ; 2014 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; Research and Reports in Focused Ultrasound Volume 3 ; 3 ; 2015 ; >
     au < finished ; manifest ; 2016 ; Research and Reports in Focused Ultrasound Volume 4 ; 4 ; 2016 ; reingest2.clockss.org:8085 >
-    au < testing ; exists ; 2017 ; Research and Reports in Focused Ultrasound Volume 5 ; 5 ; 2017 ; >
    
   }
 
@@ -2681,11 +2681,11 @@
     >
     
     param[journal_id] = 155
+    #ceased publishing in November 2016
 
     au < finished ; finished ; 2014 ; Ambulatory Anesthesia Volume 1 ; 1 ; 2014 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Ambulatory Anesthesia Volume 2 ; 2 ; 2015 ; >
     au < finished ; manifest ; 2016 ; Ambulatory Anesthesia Volume 3 ; 3 ; 2016 ; reingest1.clockss.org:8082 >
-    au < testing ; exists ; 2017 ; Ambulatory Anesthesia Volume 4 ; 4 ; 2017 ; >
    
   }
 
