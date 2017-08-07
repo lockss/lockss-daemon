@@ -8507,7 +8507,7 @@
       au < doNotProcess ; 2014-2015 ; A Current Bibliography on African Affairs Volume 47 ; 47 ; cbaa >
       au < manifest ; 2015-2016 ; A Current Bibliography on African Affairs Volume 48 ; 48 ; cbaa >
       au < manifest ; 2016-2017 ; A Current Bibliography on African Affairs Volume 49 ; 49 ; cbaa >
-      au < expected ; 2017-2018 ; A Current Bibliography on African Affairs Volume 50 ; 50 ; cbaa >
+      au < manifest ; 2017-2018 ; A Current Bibliography on African Affairs Volume 50 ; 50 ; cbaa >
 
   }
 
@@ -22218,8 +22218,8 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 1992 ; Journal of Histochemistry and Cytochemistry Volume 40 ; 40 ; jhca >
         au < manifest ; 1993 ; Journal of Histochemistry and Cytochemistry Volume 41 ; 41 ; jhca >
         au < manifest ; 1994 ; Journal of Histochemistry and Cytochemistry Volume 42 ; 42 ; jhca >
-        au < exists ; 1995 ; Journal of Histochemistry and Cytochemistry Volume 43 ; 43 ; jhca >
-        au < exists ; 1996 ; Journal of Histochemistry and Cytochemistry Volume 44 ; 44 ; jhca >
+        au < manifest ; 1995 ; Journal of Histochemistry and Cytochemistry Volume 43 ; 43 ; jhca >
+        au < manifest ; 1996 ; Journal of Histochemistry and Cytochemistry Volume 44 ; 44 ; jhca >
         au < manifest ; 1997 ; Journal of Histochemistry and Cytochemistry Volume 45 ; 45 ; jhca >
         au < manifest ; 1998 ; Journal of Histochemistry and Cytochemistry Volume 46 ; 46 ; jhca >
         au < manifest ; 1999 ; Journal of Histochemistry and Cytochemistry Volume 47 ; 47 ; jhca >
@@ -37284,7 +37284,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2014 ; State and Local Government Review Volume 46 ; 46 ; slgb >
         au < doNotProcess ; 2015 ; State and Local Government Review Volume 47 ; 47 ; slgb >
         au < released ; 2016 ; State and Local Government Review Volume 48 ; 48 ; slgb >
-        au < expected ; 2017 ; State and Local Government Review Volume 49 ; 49 ; slgb >
+        au < manifest ; 2017 ; State and Local Government Review Volume 49 ; 49 ; slgb >
 
       }
 
@@ -42490,7 +42490,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
     au < doNotProcess ; 2014 ; Jindal Journal of Business Research Volume 3 ; 3 ; brja >
     au < ready ; 2016 ; Jindal Journal of Business Research Volume 4 ; 4 ; brja >
     au < released ; 2016 ; Jindal Journal of Business Research Volume 5 ; 5 ; brja >
-    au < expected ; 2017 ; Jindal Journal of Business Research Volume 6 ; 6 ; brja >
+    au < manifest ; 2017 ; Jindal Journal of Business Research Volume 6 ; 6 ; brja >
 
     }
 
@@ -44729,7 +44729,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       #param[base_url] = http://urb.sagepub.com/
 
       au < released ; 2016 ; Urbanisation Volume 1 ; 1 ; urba >
-      au < expected ; 2017 ; Urbanisation Volume 2 ; 2 ; urba >
+      au < manifest ; 2017 ; Urbanisation Volume 2 ; 2 ; urba >
 
     }
 
