@@ -77,6 +77,7 @@
       au < frozen ; exists ; 2004 ; 978-0-08-044108-5 ; 978-1-61583-253-8 ; 9781615832538 ; Handbook of Transport Geography and Spatial Systems (978-1-61583-253-8) ; >
       au < notReady ; exists ; 2005 ; 978-0-08-044115-3 ; 978-0-08-045604-1 ; 9780080456041 ; Handbook of Transport Strategy, Policy and Institutions (978-0-08-045604-1) ; >
       au < notReady ; exists ; 2007 ; 978-0-08-045376-7 ; 978-0-85724-567-0 ; 9780857245670 ; Handbook of Transport Modelling: 2nd Edition (978-0-85724-567-0) ; >
+      au < exists ; exists ; 2008 ; 978-0-08-043593-0 ; 978-0-85724-563-2 ; 9780080435930 ; Handbook of Logistics and Supply-Chain Management (978-0-85724-563-2) ; >
 
   }
   
@@ -90,10 +91,11 @@
 
       #param[journal_issn] = 1877-6361
 
-      au < manifest ; exists ; 2009 ;  ; 9781848558328 ; 9781848558328 ; Advanced Series in Management Volume 6 ; >
-      au < manifest ; exists ; 2010 ;  ; 9780857240064 ; 9780857240064 ; Relational Practices, Participative Organizing Volume 7 ; >
-      au < manifest ; exists ; 2011 ;  ; 9780857249739 ; 9780857249739 ; Electronic HRM in Theory and Practice Volume 8 ; >
-      au < manifest ; exists ; 2012 ;  ; 9781780526744 ; 9781780526744 ; Commercial Diplomacy and International Business: A Conceptual and Empirical Exploration Volume 9 ; >
+      au < manifest ; exists ; 2009 ; 978-1-84855-832-8 ; 978-1-84855-833-5 ; 9781848558335 ; Advanced Series in Management Volume 6 ; >
+      au < manifest ; exists ; 2010 ; 978-0-85724-006-4 ; 978-0-85724-007-1 ; 9780857240071 ; Relational Practices, Participative Organizing Volume 7 ; >
+      au < manifest ; exists ; 2011 ; 978-0-85724-973-9 ; 978-0-85724-973-9 ; 9780857249739 ; Electronic HRM in Theory and Practice Volume 8 ; >
+      au < manifest ; exists ; 2012 ; 978-1-78052-674-4 ; 978-1-78052-675-1 ; 9781780526751 ; Commercial Diplomacy and International Business: A Conceptual and Empirical Exploration Volume 9 ; >
+      au < exists ; exists ; 2013 ; 978-1-78190-601-9 ; 978-1-78190-602-6 ; 9781781906026 ; (Dis)Honesty in Management Volume 10 ; >
 
   }
 
