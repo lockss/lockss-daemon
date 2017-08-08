@@ -206,7 +206,7 @@
     implicit < status ; year ; volume ; name ; param[volume] >
     
     au < released ; 2016 ; 1 ; Journal of Practitioner Research Volume 1 ; 1 >
-    au < expected ; 2017 ; 2 ; Journal of Practitioner Research Volume 2 ; 2 >
+    au < manifest ; 2017 ; 2 ; Journal of Practitioner Research Volume 2 ; 2 >
   
   }
 
