@@ -96,6 +96,13 @@
       au < manifest ; exists ; 2011 ; 978-0-85724-973-9 ; 978-0-85724-973-9 ; 9780857249739 ; Electronic HRM in Theory and Practice Volume 8 ; >
       au < manifest ; exists ; 2012 ; 978-1-78052-674-4 ; 978-1-78052-675-1 ; 9781780526751 ; Commercial Diplomacy and International Business: A Conceptual and Empirical Exploration Volume 9 ; >
       au < exists ; exists ; 2013 ; 978-1-78190-601-9 ; 978-1-78190-602-6 ; 9781781906026 ; (Dis)Honesty in Management Volume 10 ; >
+      au < exists ; exists ; 2013 ; 978-1-78190-898-3 ; 978-1-78190-899-0 ; 9781781908990 ; Social Media in Strategic Management Volume 11 ; >
+      au < exists ; exists ; 2013 ; 978-1-78190-900-3 ; 978-1-78190-901-0 ; 9781781909010 ; Social Media in Human Resources Management Volume 12 ; >
+      au < exists ; exists ; 2014 ; 978-1-78350-535-7 ; 978-1-78350-536-4 ; 9781783505364 ; Shared Services as a New Organizational Form Volume 13 ; >
+      au < exists ; exists ; 2014 ; 978-1-78441-130-5 ; 978-1-78441-129-9 ; 9781784411299 ; Human Resource Management, Social Innovation and Technology Volume 14 ; >
+      au < exists ; exists ; 2016 ; 978-1-78635-314-6 ; 978-1-78635-313-9 ; 9781786353139 ; Dead Firms: Causes and Effects of Cross-border Corporate Insolvency Volume 15 ; >
+      au < exists ; exists ; 2016 ; 978-1-78560-303-7 ; 978-1-78560-302-0 ; 9781785603020 ; New Ways of Working Practices: Antecedents and Outcomes Volume 16 ; >
+      au < exists ; exists ; 2017 ; 978-1-78743-074-7 ; 978-1-78743-073-0 ; 9781787430730 ; Age Diversity in the Workplace: An Organizational Perspective Volume 17 ; >
 
   }
 
@@ -110,18 +117,22 @@
       #param[journal_issn] = 1475-1488
       #In 2015, found that issn associated with volume 3-6 for articles is different from the toc. Resulting in no substance. See RT7387
 
-      au < doNotProcess ; doNotProcess ; 2000 ;  ; 9780762306688 ; 9780762306688 ; Advances in Accounting Behavioral Research Volume 3 ; > #RT7387 incorrect article links
-      au < doNotProcess ; doNotProcess ; 2001 ;  ; 9780762307845 ; 9780762307845 ; Advances in Accounting Behavioral Research Volume 4 ; > #RT7387 incorrect article links
-      au < doNotProcess ; doNotProcess ; 2002 ;  ; 9780762309535 ; 9780762309535 ; Advances in Accounting Behavioral Research Volume 5 ; > #RT7387 incorrect article links
-      au < doNotProcess ; doNotProcess ; 2003 ;  ; 9780762310470 ; 9780762310470 ; Advances in Accounting Behavioral Research Volume 6 ; > #RT7387 incorrect article links
-      au < manifest ; exists ; 2004 ;  ; 9780762311170 ; 9780762311170 ; Advances in Accounting Behavioral Research Volume 7 ; >
-      au < manifest ; exists ; 2005 ;  ; 9780762312184 ; 9780762312184 ; Advances in Accounting Behavioral Research Volume 8 ; >
-      au < manifest ; exists ; 2006 ;  ; 9780762313532 ; 9780762313532 ; Advances in Accounting Behavioral Research Volume 9 ; >
-      au < manifest ; exists ; 2008 ;  ; 9781846639609 ; 9781846639609 ; Advances in Accounting Behavioral Research Volume 11 ; >
-      au < manifest ; exists ; 2009 ;  ; 9781848557383 ; 9781848557383 ; Advances in Accounting Behavioral Research Volume 12 ; >
-      au < manifest ; exists ; 2010 ;  ; 9780857241375 ; 9780857241375 ; Advances in Accounting Behavioral Research Volume 13 ; >
-      au < manifest ; exists ; 2011 ;  ; 9781780520865 ; 9781780520865 ; Advances in Accounting Behavioral Research Volume 14 ; >
-      au < manifest ; exists ; 2012 ;  ; 9781780527581 ; 9781780527581 ; Advances in Accounting Behavioral Research Volume 15 ; >
+      au < doNotProcess ; doNotProcess ; 2000 ; 978-0-7623-0668-8 ; 978-1-84950-055-5 ; 9781849500555 ; Advances in Accounting Behavioral Research Volume 3 ; > #RT7387 incorrect article links
+      au < doNotProcess ; doNotProcess ; 2001 ; 978-0-7623-0784-5 ; 978-1-84950-104-0 ; 9781849501040 ; Advances in Accounting Behavioral Research Volume 4 ; > #RT7387 incorrect article links
+      au < doNotProcess ; doNotProcess ; 2002 ; 978-0-7623-0953-5 ; 978-1-84950-169-9 ; 9781849501699 ; Advances in Accounting Behavioral Research Volume 5 ; > #RT7387 incorrect article links
+      au < doNotProcess ; doNotProcess ; 2003 ; 978-0-7623-1047-0 ; 978-1-84950-231-3 ; 9781849502313 ; Advances in Accounting Behavioral Research Volume 6 ; > #RT7387 incorrect article links
+      au < manifest ; exists ; 2004 ; 978-0-7623-1117-0 ; 978-1-84950-280-1 ; 9781849502801 ; Advances in Accounting Behavioral Research Volume 7 ; >
+      au < manifest ; exists ; 2005 ; 978-0-7623-1218-4 ; 978-1-84950-348-8 ; 9781849503488 ; Advances in Accounting Behavioral Research Volume 8 ; >
+      au < manifest ; exists ; 2006 ; 978-0-7623-1353-2 ; 978-1-84950-448-5 ; 9781849504485 ; Advances in Accounting Behavioral Research Volume 9 ; >
+      au < manifest ; exists ; 2008 ; 978-1-84663-960-9 ; 978-1-84663-961-6 ; 9781846639616 ; Advances in Accounting Behavioral Research Volume 11 ; >
+      au < manifest ; exists ; 2009 ; 978-1-84855-738-3 ; 978-1-84855-739-0 ; 9781848557390 ; Advances in Accounting Behavioral Research Volume 12 ; >
+      au < manifest ; exists ; 2010 ; 978-0-85724-137-5 ; 978-0-85724-138-2 ; 9780857241382 ; Advances in Accounting Behavioral Research Volume 13 ; >
+      au < manifest ; exists ; 2011 ; 978-1-78052-086-5 ; 978-1-78052-087-2 ; 9781780520872 ; Advances in Accounting Behavioral Research Volume 14 ; >
+      au < manifest ; exists ; 2012 ; 978-1-78052-758-1 ; 978-1-78052-759-8 ; 9781780527598 ; Advances in Accounting Behavioral Research Volume 15 ; >
+      au < exists ; exists ; 2013 ; 978-1-78190-838-9 ; 978-1-78190-839-6 ; 9781781908396 ; Advances in Accounting Behavioral Research Volume 16 ; >
+      au < exists ; exists ; 2014 ; 978-1-78350-445-9 ; 978-1-78350-446-6 ; 9781783504466 ; Advances in Accounting Behavioral Research Volume 17 ; >
+      au < exists ; exists ; 2015 ; 978-1-78441-636-2 ; 978-1-78441-635-5 ; 9781784416355 ; Advances in Accounting Behavioral Research Volume 18 ; >
+      au < exists ; exists ; 2016 ; 978-1-78560-978-7 ; 978-1-78560-977-0 ; 9781785609770 ; Advances in Accounting Behavioral Research Volume 19 ; >
 
   }
 
@@ -135,18 +146,25 @@
 
       #param[journal_issn] = 1085-4622
 
-      au < manifest ; exists ; 2000 ;  ; 9780762305155 ; 9780762305155 ; Advances in Accounting Education Teaching and Curriculum Innovations Volume 2 ; >
-      au < manifest ; exists ; 2000 ;  ; 9780762307586 ; 9780762307586 ; Advances in Accounting Education Teaching and Curriculum Innovations Volume 3 ; >
-      au < manifest ; exists ; 2002 ;  ; 9780762308569 ; 9780762308569 ; Advances in Accounting Education Teaching and Curriculum Innovations Volume 4 ; >
-      au < manifest ; exists ; 2003 ;  ; 9780762310357 ; 9780762310357 ; Advances in Accounting Education Teaching and Curriculum Innovations Volume 5 ; >
-      au < manifest ; exists ; 2004 ;  ; 9780762311439 ; 9780762311439 ; Advances in Accounting Education Teaching and Curriculum Innovations Volume 6 ; >
-      au < manifest ; exists ; 2005 ;  ; 9780762312696 ; 9780762312696 ; Advances in Accounting Education: Teaching and Curriculum Innovations Volume 7 ; >
-      au < manifest ; exists ; 2007 ;  ; 9780762314478 ; 9780762314478 ; Advances in Accounting Education Teaching and Curriculum Innovations Volume 8 ; >
-      au < manifest ; exists ; 2008 ;  ; 9780762314584 ; 9780762314584 ; Advances in Accounting Education Volume 9 ; >
-      au < manifest ; exists ; 2009 ;  ; 9781848558823 ; 9781848558823 ; Advances in Accounting Education Volume 10 ; >
-      au < manifest ; exists ; 2010 ;  ; 9780857242914 ; 9780857242914 ; Advances in Accounting Education Volume 11 ; >
-      au < manifest ; exists ; 2011 ;  ; 9781780522227 ; 9781780522227 ; Advances in Accounting Education: Teaching and Curriculum Innovations Volume 12 ; >
-      au < manifest ; exists ; 2012 ;  ; 9781780527567 ; 9781780527567 ; Advances in Accounting Education: Teaching and Curriculum Innovations Volume 13 ; >
+      au < manifest ; exists ; 2000 ; 978-0-7623-0515-5 ; 978-1-84950-872-8 ; 9781849508728 ; Advances in Accounting Education Teaching and Curriculum Innovations Volume 2 ; >
+      au < manifest ; exists ; 2000 ; 978-0-7623-0758-6 ; 978-1-84950-871-1 ; 9781849508711 ; Advances in Accounting Education Teaching and Curriculum Innovations Volume 3 ; >
+      au < manifest ; exists ; 2002 ; 978-0-7623-0856-9 ; 978-0-85724-052-1 ; 9780857240521 ; Advances in Accounting Education Teaching and Curriculum Innovations Volume 4 ; >
+      au < manifest ; exists ; 2003 ; 978-0-7623-1035-7 ; 978-1-84950-870-4 ; 9781849508704 ; Advances in Accounting Education Teaching and Curriculum Innovations Volume 5 ; >
+      au < manifest ; exists ; 2004 ; 978-0-7623-1143-9 ; 978-1-84950-868-1 ; 9781849508681 ; Advances in Accounting Education Teaching and Curriculum Innovations Volume 6 ; >
+      au < manifest ; exists ; 2005 ; 978-0-7623-1269-6 ; 978-1-84950-869-8 ; 9781849508698 ; Advances in Accounting Education: Teaching and Curriculum Innovations Volume 7 ; >
+      au < manifest ; exists ; 2007 ; 978-0-7623-1447-8 ; 978-1-84950-867-4 ; 9781849508674 ; Advances in Accounting Education Teaching and Curriculum Innovations Volume 8 ; >
+      au < manifest ; exists ; 2008 ; 978-0-7623-1458-4 ; 978-1-84950-519-2 ; 9781849505192 ; Advances in Accounting Education Volume 9 ; >
+      au < manifest ; exists ; 2009 ; 978-1-84855-882-3 ; 978-1-84855-883-0 ; 9781848558830 ; Advances in Accounting Education Volume 10 ; >
+      au < manifest ; exists ; 2010 ; 978-0-85724-291-4 ; 978-0-85724-292-1 ; 9780857242921 ; Advances in Accounting Education Volume 11 ; >
+      au < manifest ; exists ; 2011 ; 978-1-78052-222-7 ; 978-1-78052-223-4 ; 9781780522234 ; Advances in Accounting Education: Teaching and Curriculum Innovations Volume 12 ; >
+      au < manifest ; exists ; 2012 ; 978-1-78052-756-7 ; 978-1-78052-757-4 ; 9781780527574 ; Advances in Accounting Education: Teaching and Curriculum Innovations Volume 13 ; >
+      au < exists ; exists ; 2013 ; 978-1-78190-840-2 ; 978-1-78190-841-9 ; 9781781908419 ; Advances in Accounting Education: Teaching and Curriculum Innovations Volume 14 ; >
+      au < exists ; exists ; 2014 ; 978-1-78350-851-8 ; 978-1-78350-848-8 ; 9781783508488 ; Advances in Accounting Education: Teaching and Curriculum Innovations Volume 15 ; >
+      au < exists ; exists ; 2015 ; 978-1-78441-588-4 ; 978-1-78441-587-7 ; 9781784415877 ; Advances in Accounting Education: Teaching and Curriculum Innovations Volume 16 ; >
+      au < exists ; exists ; 2015 ; 978-1-78441-646-1 ; 978-1-78441-645-4 ; 9781784416454 ; Advances in Accounting Education: Teaching and Curriculum Innovations Volume 17 ; >
+      au < exists ; exists ; 2016 ; 978-1-78560-767-7 ; 978-1-78560-766-0 ; 9781785607660 ; Advances in Accounting Education: Teaching and Curriculum Innovations Volume 18 ; >
+      au < exists ; exists ; 2016 ; 978-1-78560-970-1 ; 978-1-78560-969-5 ; 9781785609695 ; Advances in Accounting Education: Teaching and Curriculum Innovations Volume 19 ; >
+      au < exists ; exists ; 2017 ; 978-1-78714-181-0 ; 978-1-78714-180-3 ; 9781787141803 ; Advances in Accounting Education: Teaching and Curriculum Innovations Volume 20 ; >
 
   }
 
@@ -160,8 +178,8 @@
 
       #param[journal_issn] = 1569-4933
 
-      au < manifest ; exists ; 2000 ;  ; 9780762306121 ; 9780762306121 ; New Frontiers in Agricultural History Volume 1 ; >
-      au < manifest ; exists ; 2003 ;  ; 9780762310012 ; 9780762310012 ; Advances in Agricultural Economic History Volume 2 ; >
+      au < manifest ; exists ; 2000 ; 978-0-7623-0612-1 ; 978-1-84950-039-5 ; 9781849500395 ; New Frontiers in Agricultural History Volume 1 ; >
+      au < manifest ; exists ; 2003 ; 978-0-7623-1001-2 ; 978-1-84950-199-6 ; 9781849501996 ; Advances in Agricultural Economic History Volume 2 ; >
 
   }
 
@@ -175,7 +193,9 @@
 
       #param[journal_issn] = 2212-1609
 
-      au < manifest ; exists ; 2012 ;  ; 9781780524689 ; 9781780524689 ; Pricing Behavior and Non-Price Characteristics in the Airline Industry Volume 3 ; >
+      au < manifest ; exists ; 2012 ; 978-1-78052-468-9 ; 978-1-78052-469-6 ; 9781780524696 ; Pricing Behavior and Non-Price Characteristics in the Airline Industry Volume 3 ; >
+      au < exists ; exists ; 2014 ; 978-1-78350-639-2 ; 978-1-78350-640-8 ; 9781783506408 ; The Economics of International Airline Transport Volume 4 ; >
+      au < exists ; exists ; 2016 ; 978-1-78560-940-4 ; 978-1-78560-939-8 ; 9781785609398 ; Airline Efficiency Volume 5 ; >
 
   }
 
