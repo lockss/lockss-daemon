@@ -209,12 +209,12 @@
 
       #param[journal_issn] = 0749-6826
 
-      au < manifest ; exists ; 2005 ;  ; 9780762311682 ; 9780762311682 ; Competence Perspective on Managing Internal Process Volume 7 ; >
-      au < manifest ; exists ; 2005 ;  ; 9780762311699 ; 9780762311699 ; Competence Perspectives on Managing Interfirm Interactions Volume 8 ; >
-      au < manifest ; exists ; 2005 ;  ; 9780762311705 ; 9780762311705 ; Competence Perspectives on Resources, Stakeholders and Renewal Volume 9 ; >
-      au < manifest ; exists ; 2008 ;  ; 9780762314720 ; 9780762314720 ; Advances in Applied Business Strategy Volume 10 ; >
-      au < manifest ; exists ; 2008 ;  ; 9780762314669 ; 9780762314669 ; Competence Building and Leveraging in Interorganizational Relations Volume 11 ; >
-      au < manifest ; exists ; 2010 ;  ; 9781848558762 ; 9781848558762 ; Enhancing Competences for Competitive Advantage Volume 12 ; >
+      au < manifest ; exists ; 2005 ; 978-0-7623-1168-2 ; 978-1-84950-320-4 ; 9781849503204 ; Competence Perspective on Managing Internal Process Volume 7 ; >
+      au < manifest ; exists ; 2005 ; 978-0-7623-1169-9 ; 978-1-84950-321-1 ; 9781849503211 ; Competence Perspectives on Managing Interfirm Interactions Volume 8 ; >
+      au < manifest ; exists ; 2005 ; 978-0-7623-1170-5 ; 978-1-84950-322-8 ; 9781849503228 ; Competence Perspectives on Resources, Stakeholders and Renewal Volume 9 ; >
+      au < manifest ; exists ; 2008 ; 978-0-7623-1472-0 ; 978-1-84950-520-8 ; 9781849505208 ; Advances in Applied Business Strategy Volume 10 ; >
+      au < manifest ; exists ; 2008 ; 978-0-7623-1466-9 ; 978-1-84950-521-5 ; 9781849505215 ; Competence Building and Leveraging in Interorganizational Relations Volume 11 ; >
+      au < manifest ; exists ; 2010 ; 978-1-84855-876-2 ; 978-1-84855-877-9 ; 9781848558779 ; Enhancing Competences for Competitive Advantage Volume 12 ; >
 
   }
 
@@ -228,13 +228,13 @@
 
       #param[journal_issn] = 0278-0984
 
-      au < manifest ; exists ; 2000 ;  ; 9780762305766 ; 9780762305766 ; Advances in Applied Microeconomics Volume 8 ; >
-      au < manifest ; exists ; 2000 ;  ; 9780762306879 ; 9780762306879 ; Industrial Organization Volume 9 ; >
-      au < manifest ; exists ; 2001 ;  ; 9780762308231 ; 9780762308231 ; Advertising and Differentiated Products Volume 10 ; >
-      au < manifest ; exists ; 2002 ;  ; 9780762309719 ; 9780762309719 ; The Economics of the Internet and E-commerce Volume 11 ; >
-      au < manifest ; exists ; 2003 ;  ; 9780762310814 ; 9780762310814 ; Organizing the New Industrial Economy Volume 12 ; >
-      au < manifest ; exists ; 2005 ;  ; 9780762311941 ; 9780762311941 ; Experimental and Behavioral Economics Volume 13 ; >
-      au < manifest ; exists ; 2006 ;  ; 9780762313518 ; 9780762313518 ; Improving School Accountability Volume 14 ; >
+      au < manifest ; exists ; 2000 ; 978-0-7623-0576-6 ; 978-1-84950-037-1 ; 9781849500371 ; Advances in Applied Microeconomics Volume 8 ; >
+      au < manifest ; exists ; 2000 ; 978-0-7623-0687-9 ; 978-1-84950-064-7 ; 9781849500647 ; Industrial Organization Volume 9 ; >
+      au < manifest ; exists ; 2001 ; 978-0-7623-0823-1 ; 978-1-84950-124-8 ; 9781849501248 ; Advertising and Differentiated Products Volume 10 ; >
+      au < manifest ; exists ; 2002 ; 978-0-7623-0971-9 ; 978-1-84950-182-8 ; 9781849501828 ; The Economics of the Internet and E-commerce Volume 11 ; >
+      au < manifest ; exists ; 2003 ; 978-0-7623-1081-4 ; 978-1-84950-254-2 ; 9781849502542 ; Organizing the New Industrial Economy Volume 12 ; >
+      au < manifest ; exists ; 2005 ; 978-0-7623-1194-1 ; 978-1-84950-337-2 ; 9781849503372 ; Experimental and Behavioral Economics Volume 13 ; >
+      au < manifest ; exists ; 2006 ; 978-0-7623-1351-8 ; 978-1-84950-446-1 ; 9781849504461 ; Improving School Accountability Volume 14 ; >
 
   }
 
@@ -248,9 +248,10 @@
 
       #param[journal_issn] = 1475-9152
 
-      au < manifest ; exists ; 2004 ;  ; 9780762308927 ; 9780762308927 ; Constructive Discourse and Human Organization Volume 1 ; >
-      au < manifest ; exists ; 2007 ;  ; 9780762312870 ; 9780762312870 ; Designing Information and Organizations with a Positive Lens Volume 2 ; >
-      au < manifest ; exists ; 2010 ;  ; 9780857243690 ; 9780857243690 ; Positive Design and Appreciative Construction: From Sustainable Development to Sustainable Value Volume 3 ; >
+      au < manifest ; exists ; 2004 ; 978-0-7623-0892-7 ; 978-1-84950-159-0 ; 9781849501590 ; Constructive Discourse and Human Organization Volume 1 ; >
+      au < manifest ; exists ; 2007 ; 978-0-7623-1287-0 ; 978-1-84950-398-3 ; 9781849503983 ; Designing Information and Organizations with a Positive Lens Volume 2 ; >
+      au < manifest ; exists ; 2010 ; 978-0-85724-369-0 ; 978-0-85724-370-6 ; 9780857243706 ; Positive Design and Appreciative Construction: From Sustainable Development to Sustainable Value Volume 3 ; >
+      au < exists ; exists ; 2013 ; 978-1-84855-488-7 ; 978-1-84855-489-4 ; 9781848554894 ; Organizational Generativity: The Appreciative Inquiry Summit and a Scholarship of Transformation Volume 4 ; >
 
   }
 
@@ -264,21 +265,26 @@
 
       #param[journal_issn] = 1529-2134
 
-      au < manifest ; exists ; 1995 ;  ; 9781559385312 ; 9781559385312 ; Advances in Austrian Economics Volume 2 Part 2 ; >
-      au < manifest ; exists ; 1996 ;  ; 9780762300556 ; 9780762300556 ; Advances in Austrian Economics Volume 3 ; >
-      au < manifest ; exists ; 1997 ;  ; 9780762301980 ; 9780762301980 ; Advances in Austrian Economics Volume 4 ; >
-      au < manifest ; exists ; 2003 ;  ; 9780762310418 ; 9780762310418 ; Austrian Economics and Entrepreneurial Studies Volume 6 ; >
-      au < manifest ; exists ; 2004 ;  ; 9780762310531 ; 9780762310531 ; The Dynamics of Intervention: Regulation and Redistribution in the Mixed Economy Volume 8 ; >
-      au < manifest ; exists ; 2005 ;  ; 9781849502948 ; 9781849502948 ; Evolutionary Psychology and Economic Theory Volume 7 ; >
-      au < manifest ; exists ; 2006 ;  ; 9780762313785 ; 9780762313785 ; Cognition and Economics Volume 9 ; >
-      au < manifest ; exists ; 2007 ;  ; 9780762314522 ; 9780762314522 ; The Evolution of Consumption: Theories and Practices Volume 10 ; >
-      au < manifest ; exists ; 2008 ;  ; 9781848553309 ; 9781848553309 ; Explorations in Austrian Economics Volume 11 ; >
-      au < manifest ; exists ; 2009 ;  ; 9781848559981 ; 9781848559981 ; Unexplored Dimensions: Karl Mengeron Economics and Philosophy (1923-1938) Volume 12 ; >
-      au < manifest ; exists ; 2010 ;  ; 9781849509749 ; 9781849509749 ; The Social Science of Hayek's 'The Sensory Order' Volume 13 ; >
-      au < manifest ; exists ; 2010 ;  ; 9780857242617 ; 9780857242617 ; What is so Austrian about Austrian Economics? Volume 14 ; >
-      au < manifest ; exists ; 2011 ;  ; 9781780523989 ; 9781780523989 ; Hayek in Mind: Hayek's Philosophical Psychology Volume 15 ; >
-      au < manifest ; exists ; 2012 ;  ; 9781781900062 ; 9781781900062 ; The Spatial Market Process Volume 16 ; >
-      au < manifest ; exists ; 2012 ;  ; 9781781902165 ; 9781781902165 ; Experts and Epistemic Monopolies Volume 17 ; >
+      au < manifest ; exists ; 1995 ; 978-1-55938-531-2 ; 978-1-84950-516-1 ; 978-1-84950-516-1 ; Advances in Austrian Economics Volume 2 Part 2 ; >
+      au < manifest ; exists ; 1996 ; 978-0-7623-0055-6 ; 978-1-84950-019-7 ; 978-1-84950-019-7 ; Advances in Austrian Economics Volume 3 ; >
+      au < manifest ; exists ; 1997 ; 978-0-7623-0198-0 ; 978-1-84950-020-3 ; 978-1-84950-020-3 ; Advances in Austrian Economics Volume 4 ; >
+      au < manifest ; exists ; 2003 ; 978-0-7623-1041-8 ; 978-1-84950-226-9 ; 978-1-84950-226-9 ; Austrian Economics and Entrepreneurial Studies Volume 6 ; >
+      au < manifest ; exists ; 2004 ; 978-0-7623-1053-1 ; 978-1-84950-237-5 ; 978-1-84950-237-5 ; The Dynamics of Intervention: Regulation and Redistribution in the Mixed Economy Volume 8 ; >
+      au < manifest ; exists ; 2005 ; 978-0-7623-1138-5 ; 978-1-84950-294-8 ; 978-1-84950-294-8 ; Evolutionary Psychology and Economic Theory Volume 7 ; >
+      au < manifest ; exists ; 2006 ; 978-0-7623-1378-5 ; 978-1-84950-465-2 ; 978-1-84950-465-2 ; Cognition and Economics Volume 9 ; >
+      au < manifest ; exists ; 2007 ; 978-0-7623-1452-2 ; 978-1-84950-509-3 ; 978-1-84950-509-3 ; The Evolution of Consumption: Theories and Practices Volume 10 ; >
+      au < manifest ; exists ; 2008 ; 978-1-84855-330-9 ; 978-1-84855-331-6 ; 978-1-84855-331-6 ; Explorations in Austrian Economics Volume 11 ; >
+      au < manifest ; exists ; 2009 ; 978-1-84855-998-1 ; 978-1-84855-999-8 ; 978-1-84855-999-8 ; Unexplored Dimensions: Karl Mengeron Economics and Philosophy (1923-1938) Volume 12 ; >
+      au < manifest ; exists ; 2010 ; 978-1-84950-974-9 ; 978-1-84950-975-6 ; 978-1-84950-975-6 ; The Social Science of Hayek's 'The Sensory Order' Volume 13 ; >
+      au < manifest ; exists ; 2010 ; 978-0-85724-261-7 ; 978-0-85724-262-4 ; 978-0-85724-262-4 ; What is so Austrian about Austrian Economics? Volume 14 ; >
+      au < manifest ; exists ; 2011 ; 978-1-78052-398-9 ; 978-1-78052-399-6 ; 978-1-78052-399-6 ; Hayek in Mind: Hayek's Philosophical Psychology Volume 15 ; >
+      au < manifest ; exists ; 2012 ; 978-1-78190-006-2 ; 978-1-78190-007-9 ; 978-1-78190-007-9 ; The Spatial Market Process Volume 16 ; >
+      au < manifest ; exists ; 2012 ; 978-1-78190-216-5 ; 978-1-78190-217-2 ; 978-1-78190-217-2 ; Experts and Epistemic Monopolies Volume 17 ; >
+
+      au < exists ; exists ; 2014 ; 978-1-78441-102-2 ; 978-1-78441-101-5 ; 978-1-78441-101-5 ; Entangled Political Economy Volume 18 ; >
+      au < exists ; exists ; 2015 ; 978-1-78560-137-8 ; 978-1-78560-136-1 ; 978-1-78560-136-1 ; New Thinking in Austrian Political Economy Volume 19 ; >
+      au < exists ; exists ; 2016 ; 978-1-78635-274-3 ; 978-1-78635-273-6 ; 978-1-78635-273-6 ; Studies in Austrian Macroeconomics Volume 20 ; >
+      au < exists ; exists ; 2016 ; 978-1-78560-988-6 ; 978-1-78560-987-9 ; 978-1-78560-987-9 ; Revisiting Hayek’s Political Economy Volume 21 ; >
 
   }
 
