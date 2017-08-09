@@ -34,6 +34,7 @@ package org.lockss.plugin.clockss.nature;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Pattern;
 
 import org.lockss.util.*;
 import org.lockss.daemon.*;
@@ -45,7 +46,7 @@ import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 
 public class NpgXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
   private static final Logger log = Logger.getLogger(NpgXmlMetadataExtractorFactory.class);
-  
+    
   private static SourceXmlSchemaHelper NPGHelper = null;
   
   @Override
@@ -86,12 +87,22 @@ public class NpgXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFa
         ArticleMetadata oneAM) {
       
       String url_string = cu.getUrl();
-      /* use the same basename */
       String pdfFileName = url_string.substring(0,url_string.length() - 3) + "pdf";
       /* if there was a subdirectory within the archive, replace xml with pdf */
-      String pdfUrl = pdfFileName.replace("zip!/xml","zip!/pdf");
+      String pdfUrl = pdfFileName.replace("/xml","/pdf");
       ArrayList<String> returnList = new ArrayList<String>();
       returnList.add(pdfUrl); /* the pdf file in its likely location */
+      // This extractor is used both by source plugin and by resulting triggered content harvest
+      // If this isn't the zip (source plugin) then there will be an abstract html
+      // that would be preferred as access_url
+      if (!(url_string.contains("zip!"))) {
+        String absFileName = url_string.substring(0,url_string.length() - 3) + "html";
+        // if there was a subdirectory before the filename, eg "/xml_temp/foo.xml" --> /foo.xml
+        absFileName = absFileName.replace("/xml_temp/","/");
+        //or
+        absFileName = absFileName.replace("/xml/","/");
+        returnList.add(absFileName);
+      }
       returnList.add(url_string); /* the xml file itself */
       return returnList;
     }    
