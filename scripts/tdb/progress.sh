@@ -14,11 +14,11 @@ do
   #echo $OutputX
 done
 OutputX=$OutputX,$countother
-if [ ! -f /scripts/tdb/progress_out.txt ]
+if [ ! -f scripts/tdb/progress_out.txt ]
 then
-  echo "date,doesNotExist,expected,exists,manifest,doNotProcess,testing,notReady,ready,released,down,superseded,other" > ./scripts/tdb/progress_out.txt
+  echo "date,doesNotExist,expected,exists,manifest,doNotProcess,testing,notReady,ready,released,down,superseded,other" > scripts/tdb/progress_out.txt
 fi
-echo $OutputX >> ./scripts/tdb/progress_out.txt
-cat ./scripts/tdb/progress_out.txt
+echo $OutputX >> scripts/tdb/progress_out.txt
+cat scripts/tdb/progress_out.txt
 exit 0
 
