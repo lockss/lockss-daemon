@@ -25,8 +25,7 @@
     {
      
       param[base_url] = https://academic.oup.com/
-      #param[journal_id] = edrv
-      param[resource_id] = edrv
+      param[journal_id] = edrv
 
       au < exists ; exists ; 1980 ; Endocrine Reviews Volume 1 ; 1980 ; >
       au < exists ; exists ; 1981 ; Endocrine Reviews Volume 2 ; 1981 ; >
@@ -83,8 +82,7 @@
     {
 
       param[base_url] = https://academic.oup.com/
-      #param[journal_id] = endo
-      param[resource_id] = endo
+      param[journal_id] = endo
 
       au < exists ; exists ; 1917 ; Endocrinology Volume 1 ; 1917 ; >
       au < exists ; exists ; 1918 ; Endocrinology Volume 2 ; 1918 ; >
@@ -204,8 +202,7 @@
     {
 
       param[base_url] = https://academic.oup.com/
-      #param[journal_id] = jcem
-      param[resource_id] = jcem
+      param[journal_id] = jcem
 
       au < exists ; exists ; 1941 ; Journal of Clinical Endocrinology & Metabolism Volume 1 ; 1941 ; >
       au < exists ; exists ; 1942 ; Journal of Clinical Endocrinology & Metabolism Volume 2 ; 1942 ; >
@@ -301,8 +298,7 @@
     {
 
       param[base_url] = https://academic.oup.com/
-      #param[journal_id] = mend
-      param[resource_id] = mend
+      param[journal_id] = mend
 
       au < doNotProcess ; doNotProcess ; 1987 ; Molecular Endocrinology Volume 1 ; 1987 ; >
       au < doNotProcess ; doNotProcess ; 1988 ; Molecular Endocrinology Volume 2 ; 1988 ; >
