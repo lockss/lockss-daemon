@@ -53,9 +53,9 @@
 
       param[base_url] = http://muse.jhu.edu/
 
-      au < down ; 2011 ; Women in French Studies Volume 19 ; 19 >
-      au < down ; 2012 ; Women in French Studies Volume 20 ; 20 >
-      au < down ; 2013 ; Women in French Studies Volume 21 ; 21 >
+      au < superseded ; 2011 ; Women in French Studies Volume 19 [superseded] ; 19 >
+      au < superseded ; 2012 ; Women in French Studies Volume 20 [superseded] ; 20 >
+      au < superseded ; 2013 ; Women in French Studies Volume 21 [superseded] ; 21 >
 
     }
 
@@ -63,10 +63,10 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < down ; 2012 ; Women in French Studies Special Issue 2012 ; 2012 >
-      au < down ; 2014 ; Women in French Studies Volume 22 ; 22 >
-      au < down ; 2014 ; Women in French Studies Special Issue 2014 ; 2014 >
-      au < down ; 2015 ; Women in French Studies Volume 23 ; 23 >
+      au < superseded ; 2012 ; Women in French Studies Special Issue 2012 [superseded] ; 2012 >
+      au < superseded ; 2014 ; Women in French Studies Volume 22 [superseded] ; 22 >
+      au < superseded ; 2014 ; Women in French Studies Special Issue 2014 [superseded] ; 2014 >
+      au < superseded ; 2015 ; Women in French Studies Volume 23 [superseded] ; 23 >
       au < doNotProcess ; 2016 ; Women in French Studies Volume 24 ; 24 >
       au < doNotProcess ; 2016 ; Women in French Studies Special Issue 2016 ; 2016 >
 

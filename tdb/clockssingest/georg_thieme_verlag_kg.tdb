@@ -1860,6 +1860,7 @@
     >
     param[journal_id] = 10.1055/s-00000177
     comment[years] = 2011-current
+    #no longer published by Thieme after 2016, but still online 8/11/2017
 
    au < finished ; finished ; 2011 ; 2011 ; Global Spine Journal Volume 1 ; 1 ; >
    au < finished ; finished ; 2012 ; 2012 ; Global Spine Journal Volume 2 ; 2 ; reingest1.clockss.org:8082 >
@@ -1867,7 +1868,6 @@
    au < finished ; finished ; 2014 ; 2014 ; Global Spine Journal Volume 4 ; 4 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; Global Spine Journal Volume 5 ; 5 ; reingest4.clockss.org:8082 >
    au < finished ; manifest ; 2016 ; 2016 ; Global Spine Journal Volume 6 ; 6 ; reingest5.clockss.org:8082 >
-   au < expected ; exists ; 2017 ; 2017 ; Global Spine Journal Volume 7 ; 7 ; >
 
   }
 

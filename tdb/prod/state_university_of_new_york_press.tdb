@@ -152,9 +152,9 @@
 
       param[base_url] = http://muse.jhu.edu/
 
-      au < down ; 2011 ; philoSOPHIA Volume 1 ; 1 >
-      au < down ; 2012 ; philoSOPHIA Volume 2 ; 2 >
-      au < down ; 2013 ; philoSOPHIA Volume 3 ; 3 >
+      au < superseded ; 2011 ; philoSOPHIA Volume 1 [superseded] ; 1 >
+      au < superseded ; 2012 ; philoSOPHIA Volume 2 [superseded] ; 2 >
+      au < superseded ; 2013 ; philoSOPHIA Volume 3 [superseded] ; 3 >
 
     }
 
@@ -162,8 +162,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < down ; 2014 ; philoSOPHIA Volume 4 ; 4 >
-      au < down ; 2015 ; philoSOPHIA Volume 5 ; 5 >
+      au < superseded ; 2014 ; philoSOPHIA Volume 4 [superseded] ; 4 >
+      au < superseded ; 2015 ; philoSOPHIA Volume 5 [superseded] ; 5 >
       au < doNotProcess ; 2016 ; philoSOPHIA Volume 6 ; 6 >
 
     }
