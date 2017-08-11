@@ -1478,6 +1478,7 @@
     au < manifest ; exists ; 1956 ; Canadian Journal of Agricultural Science Volume 36 ; 36 ; >
 
     }
+  
     
     {
     
@@ -1492,6 +1493,36 @@
     au < frozen ; exists ; 2015 ; Arctic Science Volume 1 ; 1 ; >
     au < frozen ; exists ; 2016 ; Arctic Science Volume 2 ; 2 ; >
     au < crawling ; exists ; 2017 ; Arctic Science Volume 3 ; 3 ; >
+
+    }
+}
+
+{
+
+  publisher <
+    name = NRC Research Press ;
+    info[contract] = 2012 ;
+    info[tester] = 8 ;
+    info[poller] = 6
+  >
+
+  comment[platform] = Atypon
+  
+  plugin = org.lockss.plugin.atypon.nrcresearchpress.ClockssNRCResearchPressPlugin
+  param[base_url] = http://www.facetsjournal.com/
+  implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
+    
+    {
+    
+    title < 
+      name = FACETS ;
+      eissn = 2368-7460
+      >
+     
+    param[journal_id] = facets
+
+    au < exists ; exists ; 2017 ; FACETS Volume 1 ; 1 ; >
+    au < exists ; exists ; 2017 ; FACETS Volume 2 ; 2 ; >
 
     }
     
