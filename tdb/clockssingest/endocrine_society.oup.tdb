@@ -9,9 +9,9 @@
   
   #######**** When Endocrine Society moves to OUP, do not change publisher.
 
-  plugin = org.lockss.plugin.silverchair.ClockssSilverchairJournalsPlugin
+  plugin = org.lockss.plugin.silverchair.oup.ClockssOupSilverchairPlugin
   implicit < status ; status2 ; year ; name ; param[year] ; hidden[proxy] >
-  #param[base_url] = http://press.endocrine.org/
+  #param[base_url] = https://academic.oup.com/
 
   {
 
