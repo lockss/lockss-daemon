@@ -27,26 +27,26 @@
       param[base_url] = https://academic.oup.com/
       param[journal_id] = edrv
 
-      au < exists ; exists ; 1980 ; Endocrine Reviews Volume 1 ; 1980 ; >
-      au < exists ; exists ; 1981 ; Endocrine Reviews Volume 2 ; 1981 ; >
-      au < exists ; exists ; 1982 ; Endocrine Reviews Volume 3 ; 1982 ; >
-      au < exists ; exists ; 1983 ; Endocrine Reviews Volume 4 ; 1983 ; >
-      au < exists ; exists ; 1984 ; Endocrine Reviews Volume 5 ; 1984 ; >
-      au < exists ; exists ; 1985 ; Endocrine Reviews Volume 6 ; 1985 ; >
-      au < exists ; exists ; 1986 ; Endocrine Reviews Volume 7 ; 1986 ; >
-      au < exists ; exists ; 1987 ; Endocrine Reviews Volume 8 ; 1987 ; >
-      au < exists ; exists ; 1988 ; Endocrine Reviews Volume 9 ; 1988 ; >
-      au < exists ; exists ; 1989 ; Endocrine Reviews Volume 10 ; 1989 ; >
-      au < exists ; exists ; 1990 ; Endocrine Reviews Volume 11 ; 1990 ; >
-      au < exists ; exists ; 1991 ; Endocrine Reviews Volume 12 ; 1991 ; >
-      au < exists ; exists ; 1992 ; Endocrine Reviews Volume 13 ; 1992 ; >
-      au < exists ; exists ; 1993 ; Endocrine Reviews Volume 14 ; 1993 ; >
-      au < exists ; exists ; 1994 ; Endocrine Reviews Volume 15 ; 1994 ; >
-      au < exists ; exists ; 1995 ; Endocrine Reviews Volume 16 ; 1995 ; >
-      au < exists ; exists ; 1996 ; Endocrine Reviews Volume 17 ; 1996 ; >
-      au < exists ; exists ; 1997 ; Endocrine Reviews Volume 18 ; 1997 ; >
-      au < exists ; exists ; 1998 ; Endocrine Reviews Volume 19 ; 1998 ; >
-      au < exists ; exists ; 1999 ; Endocrine Reviews Volume 20 ; 1999 ; >
+      au < doNotProcess ; exists ; 1980 ; Endocrine Reviews Volume 1 ; 1980 ; >
+      au < doNotProcess ; exists ; 1981 ; Endocrine Reviews Volume 2 ; 1981 ; >
+      au < doNotProcess ; exists ; 1982 ; Endocrine Reviews Volume 3 ; 1982 ; >
+      au < doNotProcess ; exists ; 1983 ; Endocrine Reviews Volume 4 ; 1983 ; >
+      au < doNotProcess ; exists ; 1984 ; Endocrine Reviews Volume 5 ; 1984 ; >
+      au < doNotProcess ; exists ; 1985 ; Endocrine Reviews Volume 6 ; 1985 ; >
+      au < doNotProcess ; exists ; 1986 ; Endocrine Reviews Volume 7 ; 1986 ; >
+      au < doNotProcess ; exists ; 1987 ; Endocrine Reviews Volume 8 ; 1987 ; >
+      au < doNotProcess ; exists ; 1988 ; Endocrine Reviews Volume 9 ; 1988 ; >
+      au < doNotProcess ; exists ; 1989 ; Endocrine Reviews Volume 10 ; 1989 ; >
+      au < doNotProcess ; exists ; 1990 ; Endocrine Reviews Volume 11 ; 1990 ; >
+      au < doNotProcess ; exists ; 1991 ; Endocrine Reviews Volume 12 ; 1991 ; >
+      au < doNotProcess ; exists ; 1992 ; Endocrine Reviews Volume 13 ; 1992 ; >
+      au < doNotProcess ; exists ; 1993 ; Endocrine Reviews Volume 14 ; 1993 ; >
+      au < doNotProcess ; exists ; 1994 ; Endocrine Reviews Volume 15 ; 1994 ; >
+      au < doNotProcess ; exists ; 1995 ; Endocrine Reviews Volume 16 ; 1995 ; >
+      au < doNotProcess ; exists ; 1996 ; Endocrine Reviews Volume 17 ; 1996 ; >
+      au < doNotProcess ; exists ; 1997 ; Endocrine Reviews Volume 18 ; 1997 ; >
+      au < doNotProcess ; exists ; 1998 ; Endocrine Reviews Volume 19 ; 1998 ; >
+      au < doNotProcess ; exists ; 1999 ; Endocrine Reviews Volume 20 ; 1999 ; >
       au < exists ; exists ; 2000 ; Endocrine Reviews Volume 21 ; 2000 ; >
       au < exists ; exists ; 2001 ; Endocrine Reviews Volume 22 ; 2001 ; >
       au < exists ; exists ; 2002 ; Endocrine Reviews Volume 23 ; 2002 ; >
@@ -57,14 +57,14 @@
       au < exists ; exists ; 2007 ; Endocrine Reviews Volume 28 ; 2007 ; >
       au < exists ; exists ; 2008 ; Endocrine Reviews Volume 29 ; 2008 ; >
       au < exists ; exists ; 2009 ; Endocrine Reviews Volume 30 ; 2009 ; >
-      au < exists ; exists ; 2010 ; Endocrine Reviews Volume 31 ; 2010 ; >
-      au < exists ; exists ; 2011 ; Endocrine Reviews Volume 32 ; 2011 ; >
+      au < manifest ; exists ; 2010 ; Endocrine Reviews Volume 31 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; Endocrine Reviews Volume 32 ; 2011 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Endocrine Reviews Volume 33 ; 2012 ; >
-      au < exists ; exists ; 2013 ; Endocrine Reviews Volume 34 ; 2013 ; >
+      au < manifest ; exists ; 2013 ; Endocrine Reviews Volume 34 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Endocrine Reviews Volume 35 ; 2014 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Endocrine Reviews Volume 36 ; 2015 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; Endocrine Reviews Volume 37 ; 2016 ; >
-      au < exists ; exists ; 2017 ; Endocrine Reviews Volume 38 ; 2017 ; >
+      au < manifest ; exists ; 2017 ; Endocrine Reviews Volume 38 ; 2017 ; >
 
     }
 
@@ -84,89 +84,89 @@
       param[base_url] = https://academic.oup.com/
       param[journal_id] = endo
 
-      au < exists ; exists ; 1917 ; Endocrinology Volume 1 ; 1917 ; >
-      au < exists ; exists ; 1918 ; Endocrinology Volume 2 ; 1918 ; >
-      au < exists ; exists ; 1919 ; Endocrinology Volume 3 ; 1919 ; >
-      au < exists ; exists ; 1920 ; Endocrinology Volume 4 ; 1920 ; >
-      au < exists ; exists ; 1921 ; Endocrinology Volume 5 ; 1921 ; >
-      au < exists ; exists ; 1922 ; Endocrinology Volume 6 ; 1922 ; >
-      au < exists ; exists ; 1923 ; Endocrinology Volume 7 ; 1923 ; >
-      au < exists ; exists ; 1924 ; Endocrinology Volume 8 ; 1924 ; >
-      au < exists ; exists ; 1925 ; Endocrinology Volume 9 ; 1925 ; >
-      au < exists ; exists ; 1926 ; Endocrinology Volume 10 ; 1926 ; >
-      au < exists ; exists ; 1927 ; Endocrinology Volume 11 ; 1927 ; >
-      au < exists ; exists ; 1928 ; Endocrinology Volume 12 ; 1928 ; >
-      au < exists ; exists ; 1929 ; Endocrinology Volume 13 ; 1929 ; >
-      au < exists ; exists ; 1930 ; Endocrinology Volume 14 ; 1930 ; >
-      au < exists ; exists ; 1931 ; Endocrinology Volume 15 ; 1931 ; >
-      au < exists ; exists ; 1932 ; Endocrinology Volume 16 ; 1932 ; >
-      au < exists ; exists ; 1933 ; Endocrinology Volume 17 ; 1933 ; >
-      au < exists ; exists ; 1934 ; Endocrinology Volume 18 ; 1934 ; >
-      au < exists ; exists ; 1935 ; Endocrinology Volume 19 ; 1935 ; >
-      au < exists ; exists ; 1936 ; Endocrinology Volume 20 ; 1936 ; >
-      au < exists ; exists ; 1937 ; Endocrinology Volume 21 ; 1937 ; >
-      au < exists ; exists ; 1938 ; Endocrinology Volume 22-23 ; 1938 ; >
-      au < exists ; exists ; 1939 ; Endocrinology Volume 24-25 ; 1939 ; >
-      au < exists ; exists ; 1940 ; Endocrinology Volume 26-27 ; 1940 ; >
-      au < exists ; exists ; 1941 ; Endocrinology Volume 28-29 ; 1941 ; >
-      au < exists ; exists ; 1942 ; Endocrinology Volume 30-31 ; 1942 ; >
-      au < exists ; exists ; 1943 ; Endocrinology Volume 32-33 ; 1943 ; >
-      au < exists ; exists ; 1944 ; Endocrinology Volume 34-35 ; 1944 ; >
-      au < exists ; exists ; 1945 ; Endocrinology Volume 36-37 ; 1945 ; >
-      au < exists ; exists ; 1946 ; Endocrinology Volume 38-39 ; 1946 ; >
-      au < exists ; exists ; 1947 ; Endocrinology Volume 40-41 ; 1947 ; >
-      au < exists ; exists ; 1948 ; Endocrinology Volume 42-43 ; 1948 ; >
-      au < exists ; exists ; 1949 ; Endocrinology Volume 44-45 ; 1949 ; >
-      au < exists ; exists ; 1950 ; Endocrinology Volume 46-47 ; 1950 ; >
-      au < exists ; exists ; 1951 ; Endocrinology Volume 48-49 ; 1951 ; >
-      au < exists ; exists ; 1952 ; Endocrinology Volume 50-51 ; 1952 ; >
-      au < exists ; exists ; 1953 ; Endocrinology Volume 52-53 ; 1953 ; >
-      au < exists ; exists ; 1954 ; Endocrinology Volume 54-55 ; 1954 ; >
-      au < exists ; exists ; 1955 ; Endocrinology Volume 56-57 ; 1955 ; >
-      au < exists ; exists ; 1956 ; Endocrinology Volume 58-59 ; 1956 ; >
-      au < exists ; exists ; 1957 ; Endocrinology Volume 60-61 ; 1957 ; >
-      au < exists ; exists ; 1958 ; Endocrinology Volume 62-63 ; 1958 ; >
-      au < exists ; exists ; 1959 ; Endocrinology Volume 64-65 ; 1959 ; >
-      au < exists ; exists ; 1960 ; Endocrinology Volume 66-67 ; 1960 ; >
-      au < exists ; exists ; 1961 ; Endocrinology Volume 68-69 ; 1961 ; >
-      au < exists ; exists ; 1962 ; Endocrinology Volume 70-71 ; 1962 ; >
-      au < exists ; exists ; 1963 ; Endocrinology Volume 72-73 ; 1963 ; >
-      au < exists ; exists ; 1964 ; Endocrinology Volume 74-75 ; 1964 ; >
-      au < exists ; exists ; 1965 ; Endocrinology Volume 76-77 ; 1965 ; >
-      au < exists ; exists ; 1966 ; Endocrinology Volume 78-79 ; 1966 ; >
-      au < exists ; exists ; 1967 ; Endocrinology Volume 80-81 ; 1967 ; >
-      au < exists ; exists ; 1968 ; Endocrinology Volume 82-83 ; 1968 ; >
-      au < exists ; exists ; 1969 ; Endocrinology Volume 84-85 ; 1969 ; >
-      au < exists ; exists ; 1970 ; Endocrinology Volume 86-87 ; 1970 ; >
-      au < exists ; exists ; 1971 ; Endocrinology Volume 88-89 ; 1971 ; >
-      au < exists ; exists ; 1972 ; Endocrinology Volume 90-91 ; 1972 ; >
-      au < exists ; exists ; 1973 ; Endocrinology Volume 92-93 ; 1973 ; >
-      au < exists ; exists ; 1974 ; Endocrinology Volume 94-95 ; 1974 ; >
-      au < exists ; exists ; 1975 ; Endocrinology Volume 96-97 ; 1975 ; >
-      au < exists ; exists ; 1976 ; Endocrinology Volume 98-99 ; 1976 ; >
-      au < exists ; exists ; 1977 ; Endocrinology Volume 100-101 ; 1977 ; >
-      au < exists ; exists ; 1978 ; Endocrinology Volume 102-103 ; 1978 ; >
-      au < exists ; exists ; 1979 ; Endocrinology Volume 104-105 ; 1979 ; >
-      au < exists ; exists ; 1980 ; Endocrinology Volume 106-107 ; 1980 ; >
-      au < exists ; exists ; 1981 ; Endocrinology Volume 108-109 ; 1981 ; >
-      au < exists ; exists ; 1982 ; Endocrinology Volume 110-111 ; 1982 ; >
-      au < exists ; exists ; 1983 ; Endocrinology Volume 112-113 ; 1983 ; >
-      au < exists ; exists ; 1984 ; Endocrinology Volume 114-115 ; 1984 ; >
-      au < exists ; exists ; 1985 ; Endocrinology Volume 116-117 ; 1985 ; >
-      au < exists ; exists ; 1986 ; Endocrinology Volume 118-119 ; 1986 ; >
-      au < exists ; exists ; 1987 ; Endocrinology Volume 120-121 ; 1987 ; >
-      au < exists ; exists ; 1988 ; Endocrinology Volume 122-123 ; 1988 ; >
-      au < exists ; exists ; 1989 ; Endocrinology Volume 124-125 ; 1989 ; >
-      au < exists ; exists ; 1990 ; Endocrinology Volume 126-127 ; 1990 ; >
-      au < exists ; exists ; 1991 ; Endocrinology Volume 128-129 ; 1991 ; >
-      au < exists ; exists ; 1992 ; Endocrinology Volume 130-131 ; 1992 ; >
-      au < exists ; exists ; 1993 ; Endocrinology Volume 132-133 ; 1993 ; >
-      au < exists ; exists ; 1994 ; Endocrinology Volume 134-135 ; 1994 ; >
-      au < exists ; exists ; 1995 ; Endocrinology Volume 136 ; 1995 ; >
-      au < exists ; exists ; 1996 ; Endocrinology Volume 137 ; 1996 ; >
-      au < exists ; exists ; 1997 ; Endocrinology Volume 138 ; 1997 ; >
-      au < exists ; exists ; 1998 ; Endocrinology Volume 139 ; 1998 ; >
-      au < exists ; exists ; 1999 ; Endocrinology Volume 140 ; 1999 ; >
+      au < doNotProcess ; exists ; 1917 ; Endocrinology Volume 1 ; 1917 ; >
+      au < doNotProcess ; exists ; 1918 ; Endocrinology Volume 2 ; 1918 ; >
+      au < doNotProcess ; exists ; 1919 ; Endocrinology Volume 3 ; 1919 ; >
+      au < doNotProcess ; exists ; 1920 ; Endocrinology Volume 4 ; 1920 ; >
+      au < doNotProcess ; exists ; 1921 ; Endocrinology Volume 5 ; 1921 ; >
+      au < doNotProcess ; exists ; 1922 ; Endocrinology Volume 6 ; 1922 ; >
+      au < doNotProcess ; exists ; 1923 ; Endocrinology Volume 7 ; 1923 ; >
+      au < doNotProcess ; exists ; 1924 ; Endocrinology Volume 8 ; 1924 ; >
+      au < doNotProcess ; exists ; 1925 ; Endocrinology Volume 9 ; 1925 ; >
+      au < doNotProcess ; exists ; 1926 ; Endocrinology Volume 10 ; 1926 ; >
+      au < doNotProcess ; exists ; 1927 ; Endocrinology Volume 11 ; 1927 ; >
+      au < doNotProcess ; exists ; 1928 ; Endocrinology Volume 12 ; 1928 ; >
+      au < doNotProcess ; exists ; 1929 ; Endocrinology Volume 13 ; 1929 ; >
+      au < doNotProcess ; exists ; 1930 ; Endocrinology Volume 14 ; 1930 ; >
+      au < doNotProcess ; exists ; 1931 ; Endocrinology Volume 15 ; 1931 ; >
+      au < doNotProcess ; exists ; 1932 ; Endocrinology Volume 16 ; 1932 ; >
+      au < doNotProcess ; exists ; 1933 ; Endocrinology Volume 17 ; 1933 ; >
+      au < doNotProcess ; exists ; 1934 ; Endocrinology Volume 18 ; 1934 ; >
+      au < doNotProcess ; exists ; 1935 ; Endocrinology Volume 19 ; 1935 ; >
+      au < doNotProcess ; exists ; 1936 ; Endocrinology Volume 20 ; 1936 ; >
+      au < doNotProcess ; exists ; 1937 ; Endocrinology Volume 21 ; 1937 ; >
+      au < doNotProcess ; exists ; 1938 ; Endocrinology Volume 22-23 ; 1938 ; >
+      au < doNotProcess ; exists ; 1939 ; Endocrinology Volume 24-25 ; 1939 ; >
+      au < doNotProcess ; exists ; 1940 ; Endocrinology Volume 26-27 ; 1940 ; >
+      au < doNotProcess ; exists ; 1941 ; Endocrinology Volume 28-29 ; 1941 ; >
+      au < doNotProcess ; exists ; 1942 ; Endocrinology Volume 30-31 ; 1942 ; >
+      au < doNotProcess ; exists ; 1943 ; Endocrinology Volume 32-33 ; 1943 ; >
+      au < doNotProcess ; exists ; 1944 ; Endocrinology Volume 34-35 ; 1944 ; >
+      au < doNotProcess ; exists ; 1945 ; Endocrinology Volume 36-37 ; 1945 ; >
+      au < doNotProcess ; exists ; 1946 ; Endocrinology Volume 38-39 ; 1946 ; >
+      au < doNotProcess ; exists ; 1947 ; Endocrinology Volume 40-41 ; 1947 ; >
+      au < doNotProcess ; exists ; 1948 ; Endocrinology Volume 42-43 ; 1948 ; >
+      au < doNotProcess ; exists ; 1949 ; Endocrinology Volume 44-45 ; 1949 ; >
+      au < doNotProcess ; exists ; 1950 ; Endocrinology Volume 46-47 ; 1950 ; >
+      au < doNotProcess ; exists ; 1951 ; Endocrinology Volume 48-49 ; 1951 ; >
+      au < doNotProcess ; exists ; 1952 ; Endocrinology Volume 50-51 ; 1952 ; >
+      au < doNotProcess ; exists ; 1953 ; Endocrinology Volume 52-53 ; 1953 ; >
+      au < doNotProcess ; exists ; 1954 ; Endocrinology Volume 54-55 ; 1954 ; >
+      au < doNotProcess ; exists ; 1955 ; Endocrinology Volume 56-57 ; 1955 ; >
+      au < doNotProcess ; exists ; 1956 ; Endocrinology Volume 58-59 ; 1956 ; >
+      au < doNotProcess ; exists ; 1957 ; Endocrinology Volume 60-61 ; 1957 ; >
+      au < doNotProcess ; exists ; 1958 ; Endocrinology Volume 62-63 ; 1958 ; >
+      au < doNotProcess ; exists ; 1959 ; Endocrinology Volume 64-65 ; 1959 ; >
+      au < doNotProcess ; exists ; 1960 ; Endocrinology Volume 66-67 ; 1960 ; >
+      au < doNotProcess ; exists ; 1961 ; Endocrinology Volume 68-69 ; 1961 ; >
+      au < doNotProcess ; exists ; 1962 ; Endocrinology Volume 70-71 ; 1962 ; >
+      au < doNotProcess ; exists ; 1963 ; Endocrinology Volume 72-73 ; 1963 ; >
+      au < doNotProcess ; exists ; 1964 ; Endocrinology Volume 74-75 ; 1964 ; >
+      au < doNotProcess ; exists ; 1965 ; Endocrinology Volume 76-77 ; 1965 ; >
+      au < doNotProcess ; exists ; 1966 ; Endocrinology Volume 78-79 ; 1966 ; >
+      au < doNotProcess ; exists ; 1967 ; Endocrinology Volume 80-81 ; 1967 ; >
+      au < doNotProcess ; exists ; 1968 ; Endocrinology Volume 82-83 ; 1968 ; >
+      au < doNotProcess ; exists ; 1969 ; Endocrinology Volume 84-85 ; 1969 ; >
+      au < doNotProcess ; exists ; 1970 ; Endocrinology Volume 86-87 ; 1970 ; >
+      au < doNotProcess ; exists ; 1971 ; Endocrinology Volume 88-89 ; 1971 ; >
+      au < doNotProcess ; exists ; 1972 ; Endocrinology Volume 90-91 ; 1972 ; >
+      au < doNotProcess ; exists ; 1973 ; Endocrinology Volume 92-93 ; 1973 ; >
+      au < doNotProcess ; exists ; 1974 ; Endocrinology Volume 94-95 ; 1974 ; >
+      au < doNotProcess ; exists ; 1975 ; Endocrinology Volume 96-97 ; 1975 ; >
+      au < doNotProcess ; exists ; 1976 ; Endocrinology Volume 98-99 ; 1976 ; >
+      au < doNotProcess ; exists ; 1977 ; Endocrinology Volume 100-101 ; 1977 ; >
+      au < doNotProcess ; exists ; 1978 ; Endocrinology Volume 102-103 ; 1978 ; >
+      au < doNotProcess ; exists ; 1979 ; Endocrinology Volume 104-105 ; 1979 ; >
+      au < doNotProcess ; exists ; 1980 ; Endocrinology Volume 106-107 ; 1980 ; >
+      au < doNotProcess ; exists ; 1981 ; Endocrinology Volume 108-109 ; 1981 ; >
+      au < doNotProcess ; exists ; 1982 ; Endocrinology Volume 110-111 ; 1982 ; >
+      au < doNotProcess ; exists ; 1983 ; Endocrinology Volume 112-113 ; 1983 ; >
+      au < doNotProcess ; exists ; 1984 ; Endocrinology Volume 114-115 ; 1984 ; >
+      au < doNotProcess ; exists ; 1985 ; Endocrinology Volume 116-117 ; 1985 ; >
+      au < doNotProcess ; exists ; 1986 ; Endocrinology Volume 118-119 ; 1986 ; >
+      au < doNotProcess ; exists ; 1987 ; Endocrinology Volume 120-121 ; 1987 ; >
+      au < doNotProcess ; exists ; 1988 ; Endocrinology Volume 122-123 ; 1988 ; >
+      au < doNotProcess ; exists ; 1989 ; Endocrinology Volume 124-125 ; 1989 ; >
+      au < doNotProcess ; exists ; 1990 ; Endocrinology Volume 126-127 ; 1990 ; >
+      au < doNotProcess ; exists ; 1991 ; Endocrinology Volume 128-129 ; 1991 ; >
+      au < doNotProcess ; exists ; 1992 ; Endocrinology Volume 130-131 ; 1992 ; >
+      au < doNotProcess ; exists ; 1993 ; Endocrinology Volume 132-133 ; 1993 ; >
+      au < doNotProcess ; exists ; 1994 ; Endocrinology Volume 134-135 ; 1994 ; >
+      au < doNotProcess ; exists ; 1995 ; Endocrinology Volume 136 ; 1995 ; >
+      au < doNotProcess ; exists ; 1996 ; Endocrinology Volume 137 ; 1996 ; >
+      au < doNotProcess ; exists ; 1997 ; Endocrinology Volume 138 ; 1997 ; >
+      au < doNotProcess ; exists ; 1998 ; Endocrinology Volume 139 ; 1998 ; >
+      au < doNotProcess ; exists ; 1999 ; Endocrinology Volume 140 ; 1999 ; >
       au < exists ; exists ; 2000 ; Endocrinology Volume 141 ; 2000 ; >
       au < exists ; exists ; 2001 ; Endocrinology Volume 142 ; 2001 ; >
       au < exists ; exists ; 2002 ; Endocrinology Volume 143 ; 2002 ; >
@@ -177,14 +177,14 @@
       au < exists ; exists ; 2007 ; Endocrinology Volume 148 ; 2007 ; >
       au < exists ; exists ; 2008 ; Endocrinology Volume 149 ; 2008 ; >
       au < exists ; exists ; 2009 ; Endocrinology Volume 150 ; 2009 ; >
-      au < exists ; exists ; 2010 ; Endocrinology Volume 151 ; 2010 ; >
+      au < manifest ; exists ; 2010 ; Endocrinology Volume 151 ; 2010 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Endocrinology Volume 152 ; 2011 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Endocrinology Volume 153 ; 2012 ; >
-      au < exists ; exists ; 2013 ; Endocrinology Volume 154 ; 2013 ; >
+      au < manifest ; exists ; 2013 ; Endocrinology Volume 154 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Endocrinology Volume 155 ; 2014 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Endocrinology Volume 156 ; 2015 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; Endocrinology Volume 157 ; 2016 ; >
-      au < exists ; exists ; 2017 ; Endocrinology Volume 158 ; 2017 ; >
+      au < manifest ; exists ; 2017 ; Endocrinology Volume 158 ; 2017 ; >
 
     }
 
@@ -204,65 +204,65 @@
       param[base_url] = https://academic.oup.com/
       param[journal_id] = jcem
 
-      au < exists ; exists ; 1941 ; Journal of Clinical Endocrinology & Metabolism Volume 1 ; 1941 ; >
-      au < exists ; exists ; 1942 ; Journal of Clinical Endocrinology & Metabolism Volume 2 ; 1942 ; >
-      au < exists ; exists ; 1943 ; Journal of Clinical Endocrinology & Metabolism Volume 3 ; 1943 ; >
-      au < exists ; exists ; 1944 ; Journal of Clinical Endocrinology & Metabolism Volume 4 ; 1944 ; >
-      au < exists ; exists ; 1945 ; Journal of Clinical Endocrinology & Metabolism Volume 5 ; 1945 ; >
-      au < exists ; exists ; 1946 ; Journal of Clinical Endocrinology & Metabolism Volume 6 ; 1946 ; >
-      au < exists ; exists ; 1947 ; Journal of Clinical Endocrinology & Metabolism Volume 7 ; 1947 ; >
-      au < exists ; exists ; 1948 ; Journal of Clinical Endocrinology & Metabolism Volume 8 ; 1948 ; >
-      au < exists ; exists ; 1949 ; Journal of Clinical Endocrinology & Metabolism Volume 9 ; 1949 ; >
-      au < exists ; exists ; 1950 ; Journal of Clinical Endocrinology & Metabolism Volume 10 ; 1950 ; >
-      au < exists ; exists ; 1951 ; Journal of Clinical Endocrinology & Metabolism Volume 11 ; 1951 ; >
-      au < exists ; exists ; 1952 ; Journal of Clinical Endocrinology & Metabolism Volume 12 ; 1952 ; >
-      au < exists ; exists ; 1953 ; Journal of Clinical Endocrinology & Metabolism Volume 13 ; 1953 ; >
-      au < exists ; exists ; 1954 ; Journal of Clinical Endocrinology & Metabolism Volume 14 ; 1954 ; >
-      au < exists ; exists ; 1955 ; Journal of Clinical Endocrinology & Metabolism Volume 15 ; 1955 ; >
-      au < exists ; exists ; 1956 ; Journal of Clinical Endocrinology & Metabolism Volume 16 ; 1956 ; >
-      au < exists ; exists ; 1957 ; Journal of Clinical Endocrinology & Metabolism Volume 17 ; 1957 ; >
-      au < exists ; exists ; 1958 ; Journal of Clinical Endocrinology & Metabolism Volume 18 ; 1958 ; >
-      au < exists ; exists ; 1959 ; Journal of Clinical Endocrinology & Metabolism Volume 19 ; 1959 ; >
-      au < exists ; exists ; 1960 ; Journal of Clinical Endocrinology & Metabolism Volume 20 ; 1960 ; >
-      au < exists ; exists ; 1961 ; Journal of Clinical Endocrinology & Metabolism Volume 21 ; 1961 ; >
-      au < exists ; exists ; 1962 ; Journal of Clinical Endocrinology & Metabolism Volume 22 ; 1962 ; >
-      au < exists ; exists ; 1963 ; Journal of Clinical Endocrinology & Metabolism Volume 23 ; 1963 ; >
-      au < exists ; exists ; 1964 ; Journal of Clinical Endocrinology & Metabolism Volume 24 ; 1964 ; >
-      au < exists ; exists ; 1965 ; Journal of Clinical Endocrinology & Metabolism Volume 25 ; 1965 ; >
-      au < exists ; exists ; 1966 ; Journal of Clinical Endocrinology & Metabolism Volume 26 ; 1966 ; >
-      au < exists ; exists ; 1967 ; Journal of Clinical Endocrinology & Metabolism Volume 27 ; 1967 ; >
-      au < exists ; exists ; 1968 ; Journal of Clinical Endocrinology & Metabolism Volume 28 ; 1968 ; >
-      au < exists ; exists ; 1969 ; Journal of Clinical Endocrinology & Metabolism Volume 29 ; 1969 ; >
-      au < exists ; exists ; 1970 ; Journal of Clinical Endocrinology & Metabolism Volume 30-31 ; 1970 ; >
-      au < exists ; exists ; 1971 ; Journal of Clinical Endocrinology & Metabolism Volume 32-33 ; 1971 ; >
-      au < exists ; exists ; 1972 ; Journal of Clinical Endocrinology & Metabolism Volume 34-35 ; 1972 ; >
-      au < exists ; exists ; 1973 ; Journal of Clinical Endocrinology & Metabolism Volume 36-37 ; 1973 ; >
-      au < exists ; exists ; 1974 ; Journal of Clinical Endocrinology & Metabolism Volume 38-39 ; 1974 ; >
-      au < exists ; exists ; 1975 ; Journal of Clinical Endocrinology & Metabolism Volume 40-41 ; 1975 ; >
-      au < exists ; exists ; 1976 ; Journal of Clinical Endocrinology & Metabolism Volume 42-43 ; 1976 ; >
-      au < exists ; exists ; 1977 ; Journal of Clinical Endocrinology & Metabolism Volume 44-45 ; 1977 ; >
-      au < exists ; exists ; 1978 ; Journal of Clinical Endocrinology & Metabolism Volume 46-47 ; 1978 ; >
-      au < exists ; exists ; 1979 ; Journal of Clinical Endocrinology & Metabolism Volume 48-49 ; 1979 ; >
-      au < exists ; exists ; 1980 ; Journal of Clinical Endocrinology & Metabolism Volume 50-51 ; 1980 ; >
-      au < exists ; exists ; 1981 ; Journal of Clinical Endocrinology & Metabolism Volume 52-53 ; 1981 ; >
-      au < exists ; exists ; 1982 ; Journal of Clinical Endocrinology & Metabolism Volume 54-55 ; 1982 ; >
-      au < exists ; exists ; 1983 ; Journal of Clinical Endocrinology & Metabolism Volume 56-57 ; 1983 ; >
-      au < exists ; exists ; 1984 ; Journal of Clinical Endocrinology & Metabolism Volume 58-59 ; 1984 ; >
-      au < exists ; exists ; 1985 ; Journal of Clinical Endocrinology & Metabolism Volume 60-61 ; 1985 ; >
-      au < exists ; exists ; 1986 ; Journal of Clinical Endocrinology & Metabolism Volume 62-63 ; 1986 ; >
-      au < exists ; exists ; 1987 ; Journal of Clinical Endocrinology & Metabolism Volume 64-65 ; 1987 ; >
-      au < exists ; exists ; 1988 ; Journal of Clinical Endocrinology & Metabolism Volume 66-67 ; 1988 ; >
-      au < exists ; exists ; 1989 ; Journal of Clinical Endocrinology & Metabolism Volume 68-69 ; 1989 ; >
-      au < exists ; exists ; 1990 ; Journal of Clinical Endocrinology & Metabolism Volume 70-71 ; 1990 ; >
-      au < exists ; exists ; 1991 ; Journal of Clinical Endocrinology & Metabolism Volume 72-73 ; 1991 ; >
-      au < exists ; exists ; 1992 ; Journal of Clinical Endocrinology & Metabolism Volume 74-75 ; 1992 ; >
-      au < exists ; exists ; 1993 ; Journal of Clinical Endocrinology & Metabolism Volume 76-77 ; 1993 ; >
-      au < exists ; exists ; 1994 ; Journal of Clinical Endocrinology & Metabolism Volume 78-79 ; 1994 ; >
-      au < exists ; exists ; 1995 ; Journal of Clinical Endocrinology & Metabolism Volume 80 ; 1995 ; >
-      au < exists ; exists ; 1996 ; Journal of Clinical Endocrinology & Metabolism Volume 81 ; 1996 ; >
-      au < exists ; exists ; 1997 ; Journal of Clinical Endocrinology & Metabolism Volume 82 ; 1997 ; >
-      au < exists ; exists ; 1998 ; Journal of Clinical Endocrinology & Metabolism Volume 83 ; 1998 ; >
-      au < exists ; exists ; 1999 ; Journal of Clinical Endocrinology & Metabolism Volume 84 ; 1999 ; >
+      au < doNotProcess ; exists ; 1941 ; Journal of Clinical Endocrinology & Metabolism Volume 1 ; 1941 ; >
+      au < doNotProcess ; exists ; 1942 ; Journal of Clinical Endocrinology & Metabolism Volume 2 ; 1942 ; >
+      au < doNotProcess ; exists ; 1943 ; Journal of Clinical Endocrinology & Metabolism Volume 3 ; 1943 ; >
+      au < doNotProcess ; exists ; 1944 ; Journal of Clinical Endocrinology & Metabolism Volume 4 ; 1944 ; >
+      au < doNotProcess ; exists ; 1945 ; Journal of Clinical Endocrinology & Metabolism Volume 5 ; 1945 ; >
+      au < doNotProcess ; exists ; 1946 ; Journal of Clinical Endocrinology & Metabolism Volume 6 ; 1946 ; >
+      au < doNotProcess ; exists ; 1947 ; Journal of Clinical Endocrinology & Metabolism Volume 7 ; 1947 ; >
+      au < doNotProcess ; exists ; 1948 ; Journal of Clinical Endocrinology & Metabolism Volume 8 ; 1948 ; >
+      au < doNotProcess ; exists ; 1949 ; Journal of Clinical Endocrinology & Metabolism Volume 9 ; 1949 ; >
+      au < doNotProcess ; exists ; 1950 ; Journal of Clinical Endocrinology & Metabolism Volume 10 ; 1950 ; >
+      au < doNotProcess ; exists ; 1951 ; Journal of Clinical Endocrinology & Metabolism Volume 11 ; 1951 ; >
+      au < doNotProcess ; exists ; 1952 ; Journal of Clinical Endocrinology & Metabolism Volume 12 ; 1952 ; >
+      au < doNotProcess ; exists ; 1953 ; Journal of Clinical Endocrinology & Metabolism Volume 13 ; 1953 ; >
+      au < doNotProcess ; exists ; 1954 ; Journal of Clinical Endocrinology & Metabolism Volume 14 ; 1954 ; >
+      au < doNotProcess ; exists ; 1955 ; Journal of Clinical Endocrinology & Metabolism Volume 15 ; 1955 ; >
+      au < doNotProcess ; exists ; 1956 ; Journal of Clinical Endocrinology & Metabolism Volume 16 ; 1956 ; >
+      au < doNotProcess ; exists ; 1957 ; Journal of Clinical Endocrinology & Metabolism Volume 17 ; 1957 ; >
+      au < doNotProcess ; exists ; 1958 ; Journal of Clinical Endocrinology & Metabolism Volume 18 ; 1958 ; >
+      au < doNotProcess ; exists ; 1959 ; Journal of Clinical Endocrinology & Metabolism Volume 19 ; 1959 ; >
+      au < doNotProcess ; exists ; 1960 ; Journal of Clinical Endocrinology & Metabolism Volume 20 ; 1960 ; >
+      au < doNotProcess ; exists ; 1961 ; Journal of Clinical Endocrinology & Metabolism Volume 21 ; 1961 ; >
+      au < doNotProcess ; exists ; 1962 ; Journal of Clinical Endocrinology & Metabolism Volume 22 ; 1962 ; >
+      au < doNotProcess ; exists ; 1963 ; Journal of Clinical Endocrinology & Metabolism Volume 23 ; 1963 ; >
+      au < doNotProcess ; exists ; 1964 ; Journal of Clinical Endocrinology & Metabolism Volume 24 ; 1964 ; >
+      au < doNotProcess ; exists ; 1965 ; Journal of Clinical Endocrinology & Metabolism Volume 25 ; 1965 ; >
+      au < doNotProcess ; exists ; 1966 ; Journal of Clinical Endocrinology & Metabolism Volume 26 ; 1966 ; >
+      au < doNotProcess ; exists ; 1967 ; Journal of Clinical Endocrinology & Metabolism Volume 27 ; 1967 ; >
+      au < doNotProcess ; exists ; 1968 ; Journal of Clinical Endocrinology & Metabolism Volume 28 ; 1968 ; >
+      au < doNotProcess ; exists ; 1969 ; Journal of Clinical Endocrinology & Metabolism Volume 29 ; 1969 ; >
+      au < doNotProcess ; exists ; 1970 ; Journal of Clinical Endocrinology & Metabolism Volume 30-31 ; 1970 ; >
+      au < doNotProcess ; exists ; 1971 ; Journal of Clinical Endocrinology & Metabolism Volume 32-33 ; 1971 ; >
+      au < doNotProcess ; exists ; 1972 ; Journal of Clinical Endocrinology & Metabolism Volume 34-35 ; 1972 ; >
+      au < doNotProcess ; exists ; 1973 ; Journal of Clinical Endocrinology & Metabolism Volume 36-37 ; 1973 ; >
+      au < doNotProcess ; exists ; 1974 ; Journal of Clinical Endocrinology & Metabolism Volume 38-39 ; 1974 ; >
+      au < doNotProcess ; exists ; 1975 ; Journal of Clinical Endocrinology & Metabolism Volume 40-41 ; 1975 ; >
+      au < doNotProcess ; exists ; 1976 ; Journal of Clinical Endocrinology & Metabolism Volume 42-43 ; 1976 ; >
+      au < doNotProcess ; exists ; 1977 ; Journal of Clinical Endocrinology & Metabolism Volume 44-45 ; 1977 ; >
+      au < doNotProcess ; exists ; 1978 ; Journal of Clinical Endocrinology & Metabolism Volume 46-47 ; 1978 ; >
+      au < doNotProcess ; exists ; 1979 ; Journal of Clinical Endocrinology & Metabolism Volume 48-49 ; 1979 ; >
+      au < doNotProcess ; exists ; 1980 ; Journal of Clinical Endocrinology & Metabolism Volume 50-51 ; 1980 ; >
+      au < doNotProcess ; exists ; 1981 ; Journal of Clinical Endocrinology & Metabolism Volume 52-53 ; 1981 ; >
+      au < doNotProcess ; exists ; 1982 ; Journal of Clinical Endocrinology & Metabolism Volume 54-55 ; 1982 ; >
+      au < doNotProcess ; exists ; 1983 ; Journal of Clinical Endocrinology & Metabolism Volume 56-57 ; 1983 ; >
+      au < doNotProcess ; exists ; 1984 ; Journal of Clinical Endocrinology & Metabolism Volume 58-59 ; 1984 ; >
+      au < doNotProcess ; exists ; 1985 ; Journal of Clinical Endocrinology & Metabolism Volume 60-61 ; 1985 ; >
+      au < doNotProcess ; exists ; 1986 ; Journal of Clinical Endocrinology & Metabolism Volume 62-63 ; 1986 ; >
+      au < doNotProcess ; exists ; 1987 ; Journal of Clinical Endocrinology & Metabolism Volume 64-65 ; 1987 ; >
+      au < doNotProcess ; exists ; 1988 ; Journal of Clinical Endocrinology & Metabolism Volume 66-67 ; 1988 ; >
+      au < doNotProcess ; exists ; 1989 ; Journal of Clinical Endocrinology & Metabolism Volume 68-69 ; 1989 ; >
+      au < doNotProcess ; exists ; 1990 ; Journal of Clinical Endocrinology & Metabolism Volume 70-71 ; 1990 ; >
+      au < doNotProcess ; exists ; 1991 ; Journal of Clinical Endocrinology & Metabolism Volume 72-73 ; 1991 ; >
+      au < doNotProcess ; exists ; 1992 ; Journal of Clinical Endocrinology & Metabolism Volume 74-75 ; 1992 ; >
+      au < doNotProcess ; exists ; 1993 ; Journal of Clinical Endocrinology & Metabolism Volume 76-77 ; 1993 ; >
+      au < doNotProcess ; exists ; 1994 ; Journal of Clinical Endocrinology & Metabolism Volume 78-79 ; 1994 ; >
+      au < doNotProcess ; exists ; 1995 ; Journal of Clinical Endocrinology & Metabolism Volume 80 ; 1995 ; >
+      au < doNotProcess ; exists ; 1996 ; Journal of Clinical Endocrinology & Metabolism Volume 81 ; 1996 ; >
+      au < doNotProcess ; exists ; 1997 ; Journal of Clinical Endocrinology & Metabolism Volume 82 ; 1997 ; >
+      au < doNotProcess ; exists ; 1998 ; Journal of Clinical Endocrinology & Metabolism Volume 83 ; 1998 ; >
+      au < doNotProcess ; exists ; 1999 ; Journal of Clinical Endocrinology & Metabolism Volume 84 ; 1999 ; >
       au < exists ; exists ; 2000 ; Journal of Clinical Endocrinology & Metabolism Volume 85 ; 2000 ; >
       au < exists ; exists ; 2001 ; Journal of Clinical Endocrinology & Metabolism Volume 86 ; 2001 ; >
       au < exists ; exists ; 2002 ; Journal of Clinical Endocrinology & Metabolism Volume 87 ; 2002 ; >
@@ -273,14 +273,14 @@
       au < exists ; exists ; 2007 ; Journal of Clinical Endocrinology & Metabolism Volume 92 ; 2007 ; >
       au < exists ; exists ; 2008 ; Journal of Clinical Endocrinology & Metabolism Volume 93 ; 2008 ; >
       au < exists ; exists ; 2009 ; Journal of Clinical Endocrinology & Metabolism Volume 94 ; 2009 ; >
-      au < exists ; exists ; 2010 ; Journal of Clinical Endocrinology & Metabolism Volume 95 ; 2010 ; >
+      au < manifest ; exists ; 2010 ; Journal of Clinical Endocrinology & Metabolism Volume 95 ; 2010 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Journal of Clinical Endocrinology & Metabolism Volume 96 ; 2011 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Journal of Clinical Endocrinology & Metabolism Volume 97 ; 2012 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Journal of Clinical Endocrinology & Metabolism Volume 98 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Clinical Endocrinology & Metabolism Volume 99 ; 2014 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Clinical Endocrinology & Metabolism Volume 100 ; 2015 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; Journal of Clinical Endocrinology & Metabolism Volume 101 ; 2016 ; >
-      au < exists ; exists ; 2017 ; Journal of Clinical Endocrinology & Metabolism Volume 102 ; 2017 ; >
+      au < manifest ; exists ; 2017 ; Journal of Clinical Endocrinology & Metabolism Volume 102 ; 2017 ; >
 
     }
 
