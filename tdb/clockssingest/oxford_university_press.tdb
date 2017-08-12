@@ -907,19 +907,19 @@
 
     param[journal_id] = aob
 
-#    au < exists ; exists ; 1887-1888 ; Annals of Botany Volume os-1 ; os-1 ;  >
-#    au < exists ; exists ; 1888-1889 ; Annals of Botany Volume os-2 ; os-2 ;  >
-    au < exists ; exists ; 1889 ; 1889 ; Annals of Botany Volume os-3 ; os-3 ;  >
-    au < exists ; exists ; 1890 ; 1890 ; Annals of Botany Volume os-4 ; os-4 ;  >
-#    au < exists ; exists ; 1890-1891 ; Annals of Botany Volume os-5 ; os-5 ;  >
-    au < exists ; exists ; 1892 ; 1892 ; Annals of Botany Volume os-6 ; os-6 ;  >
-    au < exists ; exists ; 1893 ; 1893 ; Annals of Botany Volume os-7 ; os-7 ;  >
-    au < exists ; exists ; 1894 ; 1894 ; Annals of Botany Volume os-8 ; os-8 ;  >
-    au < exists ; exists ; 1895 ; 1895 ; Annals of Botany Volume os-9 ; os-9 ;  >
-    au < exists ; exists ; 1896 ; 1896 ; Annals of Botany Volume os-10 ; os-10 ;  >
-    au < exists ; exists ; 1897 ; 1897 ; Annals of Botany Volume os-11 ; os-11 ;  >
-    au < exists ; exists ; 1898 ; 1898 ; Annals of Botany Volume os-12 ; os-12 ;  >
-    au < exists ; exists ; 1899 ; 1899 ; Annals of Botany Volume os-13 ; os-13 ;  >
+#    au < doNotProcess ; exists ; 1887-1888 ; Annals of Botany Volume os-1 ; os-1 ;  >
+#    au < doNotProcess ; exists ; 1888-1889 ; Annals of Botany Volume os-2 ; os-2 ;  >
+    au < doNotProcess ; exists ; 1889 ; 1889 ; Annals of Botany Volume os-3 ; os-3 ;  >
+    au < doNotProcess ; exists ; 1890 ; 1890 ; Annals of Botany Volume os-4 ; os-4 ;  >
+#    au < doNotProcess ; exists ; 1890-1891 ; Annals of Botany Volume os-5 ; os-5 ;  >
+    au < doNotProcess ; exists ; 1892 ; 1892 ; Annals of Botany Volume os-6 ; os-6 ;  >
+    au < doNotProcess ; exists ; 1893 ; 1893 ; Annals of Botany Volume os-7 ; os-7 ;  >
+    au < doNotProcess ; exists ; 1894 ; 1894 ; Annals of Botany Volume os-8 ; os-8 ;  >
+    au < doNotProcess ; exists ; 1895 ; 1895 ; Annals of Botany Volume os-9 ; os-9 ;  >
+    au < doNotProcess ; exists ; 1896 ; 1896 ; Annals of Botany Volume os-10 ; os-10 ;  >
+    au < doNotProcess ; exists ; 1897 ; 1897 ; Annals of Botany Volume os-11 ; os-11 ;  >
+    au < doNotProcess ; exists ; 1898 ; 1898 ; Annals of Botany Volume os-12 ; os-12 ;  >
+    au < doNotProcess ; exists ; 1899 ; 1899 ; Annals of Botany Volume os-13 ; os-13 ;  >
     au < doNotProcess ; exists ; 1900 ; 1900 ; Annals of Botany Volume os-14 ; os-14 ;  >
     au < doNotProcess ; exists ; 1901 ; 1901 ; Annals of Botany Volume os-15 ; os-15 ;  >
     au < doNotProcess ; exists ; 1902 ; 1902 ; Annals of Botany Volume os-16 ; os-16 ;  >
@@ -2179,28 +2179,28 @@
 
     param[journal_id] = brain
 
-    au < exists ; exists ; 1878 ; 1878 ; Brain Volume 1 ; 1 ;  >
-#    au < exists ; exists ; 1879-1880 ; Brain Volume 2 ; 2 ;  >
-#    au < exists ; exists ; 1880-1881 ; Brain Volume 3 ; 3 ;  >
-#    au < exists ; exists ; 1881-1882 ; Brain Volume 4 ; 4 ;  >
-#    au < exists ; exists ; 1882-1883 ; Brain Volume 5 ; 5 ;  >
-#    au < exists ; exists ; 1883-1884 ; Brain Volume 6 ; 6 ;  >
-#    au < exists ; exists ; 1884-1885 ; Brain Volume 7 ; 7 ;  >
-#    au < exists ; exists ; 1885-1886 ; Brain Volume 8 ; 8 ;  >
-#    au < exists ; exists ; 1886-1887 ; Brain Volume 9 ; 9 ;  >
-#    au < exists ; exists ; 1887-1888 ; Brain Volume 10 ; 10 ;  >
-#    au < exists ; exists ; 1888-1889 ; Brain Volume 11 ; 11 ;  >
-#    au < exists ; exists ; 1889-1890 ; Brain Volume 12 ; 12 ;  >
-    au < exists ; exists ; 1890 ; 1890 ; Brain Volume 13 ; 13 ;  >
-    au < exists ; exists ; 1891 ; 1891 ; Brain Volume 14 ; 14 ;  >
-    au < exists ; exists ; 1892 ; 1892 ; Brain Volume 15 ; 15 ;  >
-    au < exists ; exists ; 1893 ; 1893 ; Brain Volume 16 ; 16 ;  >
-    au < exists ; exists ; 1894 ; 1894 ; Brain Volume 17 ; 17 ;  >
-    au < exists ; exists ; 1895 ; 1895 ; Brain Volume 18 ; 18 ;  >
-    au < exists ; exists ; 1896 ; 1896 ; Brain Volume 19 ; 19 ;  >
-    au < exists ; exists ; 1897 ; 1897 ; Brain Volume 20 ; 20 ;  >
-    au < exists ; exists ; 1898 ; 1898 ; Brain Volume 21 ; 21 ;  >
-    au < exists ; exists ; 1899 ; 1899 ; Brain Volume 22 ; 22 ;  >
+    au < doNotProcess ; exists ; 1878 ; 1878 ; Brain Volume 1 ; 1 ;  >
+#    au < doNotProcess ; exists ; 1879-1880 ; Brain Volume 2 ; 2 ;  >
+#    au < doNotProcess ; exists ; 1880-1881 ; Brain Volume 3 ; 3 ;  >
+#    au < doNotProcess ; exists ; 1881-1882 ; Brain Volume 4 ; 4 ;  >
+#    au < doNotProcess ; exists ; 1882-1883 ; Brain Volume 5 ; 5 ;  >
+#    au < doNotProcess ; exists ; 1883-1884 ; Brain Volume 6 ; 6 ;  >
+#    au < doNotProcess ; exists ; 1884-1885 ; Brain Volume 7 ; 7 ;  >
+#    au < doNotProcess ; exists ; 1885-1886 ; Brain Volume 8 ; 8 ;  >
+#    au < doNotProcess ; exists ; 1886-1887 ; Brain Volume 9 ; 9 ;  >
+#    au < doNotProcess ; exists ; 1887-1888 ; Brain Volume 10 ; 10 ;  >
+#    au < doNotProcess ; exists ; 1888-1889 ; Brain Volume 11 ; 11 ;  >
+#    au < doNotProcess ; exists ; 1889-1890 ; Brain Volume 12 ; 12 ;  >
+    au < doNotProcess ; exists ; 1890 ; 1890 ; Brain Volume 13 ; 13 ;  >
+    au < doNotProcess ; exists ; 1891 ; 1891 ; Brain Volume 14 ; 14 ;  >
+    au < doNotProcess ; exists ; 1892 ; 1892 ; Brain Volume 15 ; 15 ;  >
+    au < doNotProcess ; exists ; 1893 ; 1893 ; Brain Volume 16 ; 16 ;  >
+    au < doNotProcess ; exists ; 1894 ; 1894 ; Brain Volume 17 ; 17 ;  >
+    au < doNotProcess ; exists ; 1895 ; 1895 ; Brain Volume 18 ; 18 ;  >
+    au < doNotProcess ; exists ; 1896 ; 1896 ; Brain Volume 19 ; 19 ;  >
+    au < doNotProcess ; exists ; 1897 ; 1897 ; Brain Volume 20 ; 20 ;  >
+    au < doNotProcess ; exists ; 1898 ; 1898 ; Brain Volume 21 ; 21 ;  >
+    au < doNotProcess ; exists ; 1899 ; 1899 ; Brain Volume 22 ; 22 ;  >
     au < doNotProcess ; exists ; 1900 ; 1900 ; Brain Volume 23 ; 23 ;  >
     au < doNotProcess ; exists ; 1901 ; 1901 ; Brain Volume 24 ; 24 ;  >
     au < doNotProcess ; exists ; 1902 ; 1902 ; Brain Volume 25 ; 25 ;  >
@@ -3002,7 +3002,7 @@
   {
 
     title <
-      name = Christian bioethics: Non-Ecumenical Studies in Medical Morality ;
+      name = Christian Bioethics: Non-Ecumenical Studies in Medical Morality ;
       issn = 1380-3603 ;
       eissn = 1744-4195 ;
       issnl = 1380-3603
@@ -3854,79 +3854,52 @@
 
   }
 
-  {
-
-    title <
-      name = Endocrine Reviews ;
-      issn = 0163-769X ;
-      eissn = 1945-7189
-    >
-
-    param[journal_id] = edrv
-
-    #this title was ONLY in the publisher listing
-    au < doNotProcess ; exists ; 1980 ; 1980 ; Endocrine Reviews Volume 1 ; 1 ;  >
-    au < doNotProcess ; exists ; 1981 ; 1981 ; Endocrine Reviews Volume 2 ; 2 ;  >
-    au < doNotProcess ; exists ; 1982 ; 1982 ; Endocrine Reviews Volume 3 ; 3 ;  >
-    au < doNotProcess ; exists ; 1983 ; 1983 ; Endocrine Reviews Volume 4 ; 4 ;  >
-    au < doNotProcess ; exists ; 1984 ; 1984 ; Endocrine Reviews Volume 5 ; 5 ;  >
-    au < doNotProcess ; exists ; 1985 ; 1985 ; Endocrine Reviews Volume 6 ; 6 ;  >
-    au < doNotProcess ; exists ; 1986 ; 1986 ; Endocrine Reviews Volume 7 ; 7 ;  >
-    au < doNotProcess ; exists ; 1987 ; 1987 ; Endocrine Reviews Volume 8 ; 8 ;  >
-    au < doNotProcess ; exists ; 1988 ; 1988 ; Endocrine Reviews Volume 9 ; 9 ;  >
-    au < doNotProcess ; exists ; 1989 ; 1989 ; Endocrine Reviews Volume 10 ; 10 ;  >
-    au < doNotProcess ; exists ; 1990 ; 1990 ; Endocrine Reviews Volume 11 ; 11 ;  >
-    au < doNotProcess ; exists ; 1991 ; 1991 ; Endocrine Reviews Volume 12 ; 12 ;  >
-    au < doNotProcess ; exists ; 1992 ; 1992 ; Endocrine Reviews Volume 13 ; 13 ;  >
-    au < doNotProcess ; exists ; 1993 ; 1993 ; Endocrine Reviews Volume 14 ; 14 ;  >
-    au < doNotProcess ; exists ; 1994 ; 1994 ; Endocrine Reviews Volume 15 ; 15 ;  >
-    au < doNotProcess ; exists ; 1995 ; 1995 ; Endocrine Reviews Volume 16 ; 16 ;  >
-    au < doNotProcess ; exists ; 1996 ; 1996 ; Endocrine Reviews Volume 17 ; 17 ;  >
-    au < doNotProcess ; exists ; 1997 ; 1997 ; Endocrine Reviews Volume 18 ; 18 ;  >
-    au < doNotProcess ; exists ; 1998 ; 1998 ; Endocrine Reviews Volume 19 ; 19 ;  >
-    au < doNotProcess ; exists ; 1999 ; 1999 ; Endocrine Reviews Volume 20 ; 20 ;  >
-    au < doNotProcess ; exists ; 2000 ; 2000 ; Endocrine Reviews Volume 21 ; 21 ;  >
-    au < doNotProcess ; exists ; 2001 ; 2001 ; Endocrine Reviews Volume 22 ; 22 ;  >
-    au < doNotProcess ; exists ; 2002 ; 2002 ; Endocrine Reviews Volume 23 ; 23 ;  >
-    au < doNotProcess ; exists ; 2003 ; 2003 ; Endocrine Reviews Volume 24 ; 24 ;  >
-    au < doNotProcess ; exists ; 2004 ; 2004 ; Endocrine Reviews Volume 25 ; 25 ;  >
-    au < doNotProcess ; exists ; 2005 ; 2005 ; Endocrine Reviews Volume 26 ; 26 ;  >
-    au < doNotProcess ; exists ; 2006 ; 2006 ; Endocrine Reviews Volume 27 ; 27 ;  >
-    au < doNotProcess ; exists ; 2007 ; 2007 ; Endocrine Reviews Volume 28 ; 28 ;  >
-    au < exists ; exists ; 2008 ; 2008 ; Endocrine Reviews Volume 29 ; 29 ;  >
-    au < exists ; exists ; 2009 ; 2009 ; Endocrine Reviews Volume 30 ; 30 ;  >
-    au < exists ; exists ; 2010 ; 2010 ; Endocrine Reviews Volume 31 ; 31 ;  >
-    au < exists ; exists ; 2011 ; 2011 ; Endocrine Reviews Volume 32 ; 32 ;  >
-    au < exists ; exists ; 2012 ; 2012 ; Endocrine Reviews Volume 33 ; 33 ;  >
-    au < exists ; exists ; 2013 ; 2013 ; Endocrine Reviews Volume 34 ; 34 ;  >
-    au < exists ; exists ; 2014 ; 2014 ; Endocrine Reviews Volume 35 ; 35 ;  >
-    au < exists ; exists ; 2015 ; 2015 ; Endocrine Reviews Volume 36 ; 36 ;  >
-    au < exists ; exists ; 2016 ; 2016 ; Endocrine Reviews Volume 37 ; 37 ;  >
-    au < exists ; exists ; 2017 ; 2017 ; Endocrine Reviews Volume 38 ; 38 ;  >
-
-  }
-
-  {
-
-    title <
-      name = Endocrinology ;
-      issn = 0013-7227 ;
-      eissn = 1945-7170
-    >
-
-    param[journal_id] = endo
-
-    #this title was ONLY in the publisher listing
-    au < exists ; exists ; 2010 ; 2010 ; Endocrinology Volume 151 ; 151 ;  >
-    au < exists ; exists ; 2011 ; 2011 ; Endocrinology Volume 152 ; 152 ;  >
-    au < exists ; exists ; 2012 ; 2012 ; Endocrinology Volume 153 ; 153 ;  >
-    au < exists ; exists ; 2013 ; 2013 ; Endocrinology Volume 154 ; 154 ;  >
-    au < exists ; exists ; 2014 ; 2014 ; Endocrinology Volume 155 ; 155 ;  >
-    au < exists ; exists ; 2015 ; 2015 ; Endocrinology Volume 156 ; 156 ;  >
-    au < exists ; exists ; 2016 ; 2016 ; Endocrinology Volume 157 ; 157 ;  >
-    au < exists ; exists ; 2017 ; 2017 ; Endocrinology Volume 158 ; 158 ;  >
-
-  }
+#  {
+#
+#    title <
+#      name = Endocrine Reviews ;
+#      issn = 0163-769X ;
+#      eissn = 1945-7189
+#    >
+#
+#    param[journal_id] = edrv
+#    #This journal is included in the Endocrine Society tdb file.
+#
+#    au < exists ; exists ; 2008 ; 2008 ; Endocrine Reviews Volume 29 ; 29 ;  >
+#    au < exists ; exists ; 2009 ; 2009 ; Endocrine Reviews Volume 30 ; 30 ;  >
+#    au < exists ; exists ; 2010 ; 2010 ; Endocrine Reviews Volume 31 ; 31 ;  >
+#    au < exists ; exists ; 2011 ; 2011 ; Endocrine Reviews Volume 32 ; 32 ;  >
+#    au < exists ; exists ; 2012 ; 2012 ; Endocrine Reviews Volume 33 ; 33 ;  >
+#    au < exists ; exists ; 2013 ; 2013 ; Endocrine Reviews Volume 34 ; 34 ;  >
+#    au < exists ; exists ; 2014 ; 2014 ; Endocrine Reviews Volume 35 ; 35 ;  >
+#    au < exists ; exists ; 2015 ; 2015 ; Endocrine Reviews Volume 36 ; 36 ;  >
+#    au < exists ; exists ; 2016 ; 2016 ; Endocrine Reviews Volume 37 ; 37 ;  >
+#    au < exists ; exists ; 2017 ; 2017 ; Endocrine Reviews Volume 38 ; 38 ;  >
+#
+#  }
+#
+#  {
+#
+#    title <
+#      name = Endocrinology ;
+#      issn = 0013-7227 ;
+#      eissn = 1945-7170
+#    >
+#
+#    param[journal_id] = endo
+#    #This journal is included in the Endocrine Society tdb file.
+#
+#    #this title was ONLY in the publisher listing
+#    au < exists ; exists ; 2010 ; 2010 ; Endocrinology Volume 151 ; 151 ;  >
+#    au < exists ; exists ; 2011 ; 2011 ; Endocrinology Volume 152 ; 152 ;  >
+#    au < exists ; exists ; 2012 ; 2012 ; Endocrinology Volume 153 ; 153 ;  >
+#    au < exists ; exists ; 2013 ; 2013 ; Endocrinology Volume 154 ; 154 ;  >
+#    au < exists ; exists ; 2014 ; 2014 ; Endocrinology Volume 155 ; 155 ;  >
+#    au < exists ; exists ; 2015 ; 2015 ; Endocrinology Volume 156 ; 156 ;  >
+#    au < exists ; exists ; 2016 ; 2016 ; Endocrinology Volume 157 ; 157 ;  >
+#    au < exists ; exists ; 2017 ; 2017 ; Endocrinology Volume 158 ; 158 ;  >
+#
+#  }
 
   {
 
@@ -8417,15 +8390,15 @@
 
     param[journal_id] = jcr
 
-    au < doNotProcess ; doNotProcess ; 2007 ; 2007 ; Journal of Consumer Research Volume 34-35 ; 34-35 ;  >
-    au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; Journal of Consumer Research Volume 35-36 ; 35-36 ;  >
-    au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Journal of Consumer Research Volume 36-37 ; 36-37 ;  >
-    au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Journal of Consumer Research Volume 37-38 ; 37-38 ;  >
-    au < exists ; exists ; 2011 ; 2011 ; Journal of Consumer Research Volume 38-39 ; 38-39 ;  >
-    au < exists ; exists ; 2012 ; 2012 ; Journal of Consumer Research Volume 39-40 ; 39-40 ;  >
-    au < exists ; exists ; 2013 ; 2013 ; Journal of Consumer Research Volume 40-41 ; 40-41 ;  >
-    au < exists ; exists ; 2014 ; 2014 ; Journal of Consumer Research Volume 41-42 ; 41-42 ;  >
-    au < exists ; exists ; 2015 ; 2015 ; Journal of Consumer Research Volume 42-43 ; 42-43 ;  >
+    au < doNotProcess ; doNotProcess ; 2007 ; 2007 ; Journal of Consumer Research Volume 33-34 ; 33-34 ;  >
+    au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; Journal of Consumer Research Volume 34-35 ; 34-35 ;  >
+    au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Journal of Consumer Research Volume 35-36 ; 35-36 ;  >
+    au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Journal of Consumer Research Volume 36-37 ; 36-37 ;  >
+    au < exists ; exists ; 2011 ; 2011 ; Journal of Consumer Research Volume 37-38 ; 37-38 ;  >
+    au < exists ; exists ; 2012 ; 2012 ; Journal of Consumer Research Volume 38-39 ; 38-39 ;  >
+    au < exists ; exists ; 2013 ; 2013 ; Journal of Consumer Research Volume 39-40 ; 39-40 ;  >
+    au < exists ; exists ; 2014 ; 2014 ; Journal of Consumer Research Volume 40-41 ; 40-41 ;  >
+    au < exists ; exists ; 2015 ; 2015 ; Journal of Consumer Research Volume 41-42 ; 41-42 ;  >
     au < exists ; exists ; 2016 ; 2016 ; Journal of Consumer Research Volume 42-43 ; 42-43 ;  >
     au < exists ; exists ; 2017 ; 2017 ; Journal of Consumer Research Volume 43-44 ; 43-44 ;  >
 
@@ -9536,9 +9509,9 @@
 
     param[journal_id] = mollus
 
-#    au < exists ; exists ; 1893-1895 ; Journal of Molluscan Studies Volume 1 ; 1 ;  >
-#    au < exists ; exists ; 1896-1897 ; Journal of Molluscan Studies Volume 2 ; 2 ;  >
-#    au < exists ; exists ; 1898-1899 ; Journal of Molluscan Studies Volume 3 ; 3 ;  >
+#    au < doNotProcess ; exists ; 1893-1895 ; Journal of Molluscan Studies Volume 1 ; 1 ;  >
+#    au < doNotProcess ; exists ; 1896-1897 ; Journal of Molluscan Studies Volume 2 ; 2 ;  >
+#    au < doNotProcess ; exists ; 1898-1899 ; Journal of Molluscan Studies Volume 3 ; 3 ;  >
 #    au < doNotProcess ; exists ; 1900-1901 ; Journal of Molluscan Studies Volume 4 ; 4 ;  >
 #    au < doNotProcess ; exists ; 1902-1903 ; Journal of Molluscan Studies Volume 5 ; 5 ;  >
 #    au < doNotProcess ; exists ; 1904-1905 ; Journal of Molluscan Studies Volume 6 ; 6 ;  >
@@ -11476,30 +11449,30 @@
 
     param[journal_id] = mind
 
-    au < exists ; exists ; 1876 ; 1876 ; Mind Volume os-1 ; os-1 ;  >
-    au < exists ; exists ; 1877 ; 1877 ; Mind Volume os-2 ; os-2 ;  >
-    au < exists ; exists ; 1878 ; 1878 ; Mind Volume os-3 ; os-3 ;  >
-    au < exists ; exists ; 1879 ; 1879 ; Mind Volume os-4 ; os-4 ;  >
-    au < exists ; exists ; 1880 ; 1880 ; Mind Volume os-V ; os-V ;  >
-    au < exists ; exists ; 1881 ; 1881 ; Mind Volume os-VI ; os-VI ;  >
-    au < exists ; exists ; 1882 ; 1882 ; Mind Volume os-VII ; os-VII ;  >
-    au < exists ; exists ; 1883 ; 1883 ; Mind Volume os-VIII ; os-VIII ;  >
-    au < exists ; exists ; 1884 ; 1884 ; Mind Volume os-IX ; os-IX ;  >
-    au < exists ; exists ; 1885 ; 1885 ; Mind Volume os-X ; os-X ;  >
-    au < exists ; exists ; 1886 ; 1886 ; Mind Volume os-XI ; os-XI ;  >
-    au < exists ; exists ; 1887 ; 1887 ; Mind Volume os-12 ; os-12 ;  >
-    au < exists ; exists ; 1888 ; 1888 ; Mind Volume os-XIII ; os-XIII ;  >
-    au < exists ; exists ; 1889 ; 1889 ; Mind Volume os-XIV ; os-XIV ;  >
-    au < exists ; exists ; 1890 ; 1890 ; Mind Volume os-XV ; os-XV ;  >
-    au < exists ; exists ; 1891 ; 1891 ; Mind Volume os-XVI ; os-XVI ;  >
-    au < exists ; exists ; 1892 ; 1892 ; Mind Volume 1 ; 1 ;  >
-    au < exists ; exists ; 1893 ; 1893 ; Mind Volume II ; II ;  >
-    au < exists ; exists ; 1894 ; 1894 ; Mind Volume III ; III ;  >
-    au < exists ; exists ; 1895 ; 1895 ; Mind Volume IV ; IV ;  >
-    au < exists ; exists ; 1896 ; 1896 ; Mind Volume V ; V ;  >
-    au < exists ; exists ; 1897 ; 1897 ; Mind Volume VI ; VI ;  >
-    au < exists ; exists ; 1898 ; 1898 ; Mind Volume VII ; VII ;  >
-    au < exists ; exists ; 1899 ; 1899 ; Mind Volume VIII ; VIII ;  >
+    au < doNotProcess ; exists ; 1876 ; 1876 ; Mind Volume os-1 ; os-1 ;  >
+    au < doNotProcess ; exists ; 1877 ; 1877 ; Mind Volume os-2 ; os-2 ;  >
+    au < doNotProcess ; exists ; 1878 ; 1878 ; Mind Volume os-3 ; os-3 ;  >
+    au < doNotProcess ; exists ; 1879 ; 1879 ; Mind Volume os-4 ; os-4 ;  >
+    au < doNotProcess ; exists ; 1880 ; 1880 ; Mind Volume os-V ; os-V ;  >
+    au < doNotProcess ; exists ; 1881 ; 1881 ; Mind Volume os-VI ; os-VI ;  >
+    au < doNotProcess ; exists ; 1882 ; 1882 ; Mind Volume os-VII ; os-VII ;  >
+    au < doNotProcess ; exists ; 1883 ; 1883 ; Mind Volume os-VIII ; os-VIII ;  >
+    au < doNotProcess ; exists ; 1884 ; 1884 ; Mind Volume os-IX ; os-IX ;  >
+    au < doNotProcess ; exists ; 1885 ; 1885 ; Mind Volume os-X ; os-X ;  >
+    au < doNotProcess ; exists ; 1886 ; 1886 ; Mind Volume os-XI ; os-XI ;  >
+    au < doNotProcess ; exists ; 1887 ; 1887 ; Mind Volume os-12 ; os-12 ;  >
+    au < doNotProcess ; exists ; 1888 ; 1888 ; Mind Volume os-XIII ; os-XIII ;  >
+    au < doNotProcess ; exists ; 1889 ; 1889 ; Mind Volume os-XIV ; os-XIV ;  >
+    au < doNotProcess ; exists ; 1890 ; 1890 ; Mind Volume os-XV ; os-XV ;  >
+    au < doNotProcess ; exists ; 1891 ; 1891 ; Mind Volume os-XVI ; os-XVI ;  >
+    au < doNotProcess ; exists ; 1892 ; 1892 ; Mind Volume 1 ; 1 ;  >
+    au < doNotProcess ; exists ; 1893 ; 1893 ; Mind Volume II ; II ;  >
+    au < doNotProcess ; exists ; 1894 ; 1894 ; Mind Volume III ; III ;  >
+    au < doNotProcess ; exists ; 1895 ; 1895 ; Mind Volume IV ; IV ;  >
+    au < doNotProcess ; exists ; 1896 ; 1896 ; Mind Volume V ; V ;  >
+    au < doNotProcess ; exists ; 1897 ; 1897 ; Mind Volume VI ; VI ;  >
+    au < doNotProcess ; exists ; 1898 ; 1898 ; Mind Volume VII ; VII ;  >
+    au < doNotProcess ; exists ; 1899 ; 1899 ; Mind Volume VIII ; VIII ;  >
     au < doNotProcess ; exists ; 1900 ; 1900 ; Mind Volume IX ; IX ;  >
     au < doNotProcess ; exists ; 1901 ; 1901 ; Mind Volume X ; X ;  >
     au < doNotProcess ; exists ; 1902 ; 1902 ; Mind Volume XI ; XI ;  >
@@ -11721,49 +11694,50 @@
 
   }
 
-  {
-
-    title <
-      name = Molecular Endocrinology ;
-      issn = 0888-8809 ;
-      eissn = 1944-9917
-    >
-
-    param[journal_id] = mend
-
-    #this title was ONLY in the publisher listing
-    au < doNotProcess ; exists ; 1987 ; 1987 ; Molecular Endocrinology Volume 1 ; 1 ;  >
-    au < doNotProcess ; exists ; 1988 ; 1988 ; Molecular Endocrinology Volume 2 ; 2 ;  >
-    au < doNotProcess ; exists ; 1989 ; 1989 ; Molecular Endocrinology Volume 3 ; 3 ;  >
-    au < doNotProcess ; exists ; 1990 ; 1990 ; Molecular Endocrinology Volume 4 ; 4 ;  >
-    au < doNotProcess ; exists ; 1991 ; 1991 ; Molecular Endocrinology Volume 5 ; 5 ;  >
-    au < doNotProcess ; exists ; 1992 ; 1992 ; Molecular Endocrinology Volume 6 ; 6 ;  >
-    au < doNotProcess ; exists ; 1993 ; 1993 ; Molecular Endocrinology Volume 7 ; 7 ;  >
-    au < doNotProcess ; exists ; 1994 ; 1994 ; Molecular Endocrinology Volume 8 ; 8 ;  >
-    au < doNotProcess ; exists ; 1995 ; 1995 ; Molecular Endocrinology Volume 9 ; 9 ;  >
-    au < doNotProcess ; exists ; 1996 ; 1996 ; Molecular Endocrinology Volume 10 ; 10 ;  >
-    au < doNotProcess ; exists ; 1997 ; 1997 ; Molecular Endocrinology Volume 11 ; 11 ;  >
-    au < doNotProcess ; exists ; 1998 ; 1998 ; Molecular Endocrinology Volume 12 ; 12 ;  >
-    au < doNotProcess ; exists ; 1999 ; 1999 ; Molecular Endocrinology Volume 13 ; 13 ;  >
-    au < doNotProcess ; exists ; 2000 ; 2000 ; Molecular Endocrinology Volume 14 ; 14 ;  >
-    au < doNotProcess ; exists ; 2001 ; 2001 ; Molecular Endocrinology Volume 15 ; 15 ;  >
-    au < doNotProcess ; exists ; 2002 ; 2002 ; Molecular Endocrinology Volume 16 ; 16 ;  >
-    au < doNotProcess ; exists ; 2003 ; 2003 ; Molecular Endocrinology Volume 17 ; 17 ;  >
-    au < doNotProcess ; exists ; 2004 ; 2004 ; Molecular Endocrinology Volume 18 ; 18 ;  >
-    au < doNotProcess ; exists ; 2005 ; 2005 ; Molecular Endocrinology Volume 19 ; 19 ;  >
-    au < doNotProcess ; exists ; 2006 ; 2006 ; Molecular Endocrinology Volume 20 ; 20 ;  >
-    au < doNotProcess ; exists ; 2007 ; 2007 ; Molecular Endocrinology Volume 21 ; 21 ;  >
-    au < exists ; exists ; 2008 ; 2008 ; Molecular Endocrinology Volume 22 ; 22 ;  >
-    au < exists ; exists ; 2009 ; 2009 ; Molecular Endocrinology Volume 23 ; 23 ;  >
-    au < exists ; exists ; 2010 ; 2010 ; Molecular Endocrinology Volume 24 ; 24 ;  >
-    au < exists ; exists ; 2011 ; 2011 ; Molecular Endocrinology Volume 25 ; 25 ;  >
-    au < exists ; exists ; 2012 ; 2012 ; Molecular Endocrinology Volume 26 ; 26 ;  >
-    au < exists ; exists ; 2013 ; 2013 ; Molecular Endocrinology Volume 27 ; 27 ;  >
-    au < exists ; exists ; 2014 ; 2014 ; Molecular Endocrinology Volume 28 ; 28 ;  >
-    au < exists ; exists ; 2015 ; 2015 ; Molecular Endocrinology Volume 29 ; 29 ;  >
-    au < exists ; exists ; 2016 ; 2016 ; Molecular Endocrinology Volume 30 ; 30 ;  >
-
-  }
+#  {
+#
+#    title <
+#      name = Molecular Endocrinology ;
+#      issn = 0888-8809 ;
+#      eissn = 1944-9917
+#    >
+#
+#    param[journal_id] = mend
+#    #This journal is included in the Endocrine Society tdb file.
+#
+#    #this title was ONLY in the publisher listing
+#    au < doNotProcess ; exists ; 1987 ; 1987 ; Molecular Endocrinology Volume 1 ; 1 ;  >
+#    au < doNotProcess ; exists ; 1988 ; 1988 ; Molecular Endocrinology Volume 2 ; 2 ;  >
+#    au < doNotProcess ; exists ; 1989 ; 1989 ; Molecular Endocrinology Volume 3 ; 3 ;  >
+#    au < doNotProcess ; exists ; 1990 ; 1990 ; Molecular Endocrinology Volume 4 ; 4 ;  >
+#    au < doNotProcess ; exists ; 1991 ; 1991 ; Molecular Endocrinology Volume 5 ; 5 ;  >
+#    au < doNotProcess ; exists ; 1992 ; 1992 ; Molecular Endocrinology Volume 6 ; 6 ;  >
+#    au < doNotProcess ; exists ; 1993 ; 1993 ; Molecular Endocrinology Volume 7 ; 7 ;  >
+#    au < doNotProcess ; exists ; 1994 ; 1994 ; Molecular Endocrinology Volume 8 ; 8 ;  >
+#    au < doNotProcess ; exists ; 1995 ; 1995 ; Molecular Endocrinology Volume 9 ; 9 ;  >
+#    au < doNotProcess ; exists ; 1996 ; 1996 ; Molecular Endocrinology Volume 10 ; 10 ;  >
+#    au < doNotProcess ; exists ; 1997 ; 1997 ; Molecular Endocrinology Volume 11 ; 11 ;  >
+#    au < doNotProcess ; exists ; 1998 ; 1998 ; Molecular Endocrinology Volume 12 ; 12 ;  >
+#    au < doNotProcess ; exists ; 1999 ; 1999 ; Molecular Endocrinology Volume 13 ; 13 ;  >
+#    au < doNotProcess ; exists ; 2000 ; 2000 ; Molecular Endocrinology Volume 14 ; 14 ;  >
+#    au < doNotProcess ; exists ; 2001 ; 2001 ; Molecular Endocrinology Volume 15 ; 15 ;  >
+#    au < doNotProcess ; exists ; 2002 ; 2002 ; Molecular Endocrinology Volume 16 ; 16 ;  >
+#    au < doNotProcess ; exists ; 2003 ; 2003 ; Molecular Endocrinology Volume 17 ; 17 ;  >
+#    au < doNotProcess ; exists ; 2004 ; 2004 ; Molecular Endocrinology Volume 18 ; 18 ;  >
+#    au < doNotProcess ; exists ; 2005 ; 2005 ; Molecular Endocrinology Volume 19 ; 19 ;  >
+#    au < doNotProcess ; exists ; 2006 ; 2006 ; Molecular Endocrinology Volume 20 ; 20 ;  >
+#    au < doNotProcess ; exists ; 2007 ; 2007 ; Molecular Endocrinology Volume 21 ; 21 ;  >
+#    au < exists ; exists ; 2008 ; 2008 ; Molecular Endocrinology Volume 22 ; 22 ;  >
+#    au < exists ; exists ; 2009 ; 2009 ; Molecular Endocrinology Volume 23 ; 23 ;  >
+#    au < exists ; exists ; 2010 ; 2010 ; Molecular Endocrinology Volume 24 ; 24 ;  >
+#    au < exists ; exists ; 2011 ; 2011 ; Molecular Endocrinology Volume 25 ; 25 ;  >
+#    au < exists ; exists ; 2012 ; 2012 ; Molecular Endocrinology Volume 26 ; 26 ;  >
+#    au < exists ; exists ; 2013 ; 2013 ; Molecular Endocrinology Volume 27 ; 27 ;  >
+#    au < exists ; exists ; 2014 ; 2014 ; Molecular Endocrinology Volume 28 ; 28 ;  >
+#    au < exists ; exists ; 2015 ; 2015 ; Molecular Endocrinology Volume 29 ; 29 ;  >
+#    au < exists ; exists ; 2016 ; 2016 ; Molecular Endocrinology Volume 30 ; 30 ;  >
+#
+#  }
 
   {
 
@@ -12398,57 +12372,57 @@
 
     param[journal_id] = nq
 
-#    au < exists ; exists ; 1849-1850 ; Notes and Queries Volume s1-I ; s1-I ;  >
-    au < exists ; exists ; 1850 ; 1850 ; Notes and Queries Volume s1-II ; s1-II ;  >
-    au < exists ; exists ; 1851 ; 1851 ; Notes and Queries Volume s1-III-s1-IV ; s1-III-s1-IV ;  >
-    au < exists ; exists ; 1852 ; 1852 ; Notes and Queries Volume s1-V-s1-VI ; s1-V-s1-VI ;  >
-    au < exists ; exists ; 1853 ; 1853 ; Notes and Queries Volume s1-VII-s1-VIII ; s1-VII-s1-VIII ;  >
-    au < exists ; exists ; 1854 ; 1854 ; Notes and Queries Volume s1-IX-s1-X ; s1-IX-s1-X ;  >
-    au < exists ; exists ; 1855 ; 1855 ; Notes and Queries Volume s1-XI-s1-XII ; s1-XI-s1-XII ;  >
-    au < exists ; exists ; 1856 ; 1856 ; Notes and Queries Volume s2-I-s2-II ; s2-I-s2-II ;  >
-    au < exists ; exists ; 1857 ; 1857 ; Notes and Queries Volume s2-III-s2-IV ; s2-III-s2-IV ;  >
-    au < exists ; exists ; 1858 ; 1858 ; Notes and Queries Volume s2-V-s2-VI ; s2-V-s2-VI ;  >
-    au < exists ; exists ; 1859 ; 1859 ; Notes and Queries Volume s2-VII-s2-VIII ; s2-VII-s2-VIII ;  >
-    au < exists ; exists ; 1860 ; 1860 ; Notes and Queries Volume s2-IX-s2-X ; s2-IX-s2-X ;  >
-    au < exists ; exists ; 1861 ; 1861 ; Notes and Queries Volume s2-XI-s2-XII ; s2-XI-s2-XII ;  >
-    au < exists ; exists ; 1862 ; 1862 ; Notes and Queries Volume s3-I-s3-II ; s3-I-s3-II ;  >
-    au < exists ; exists ; 1863 ; 1863 ; Notes and Queries Volume s3-III-s3-IV ; s3-III-s3-IV ;  >
-    au < exists ; exists ; 1864 ; 1864 ; Notes and Queries Volume s3-V-s3-VI ; s3-V-s3-VI ;  >
-    au < exists ; exists ; 1865 ; 1865 ; Notes and Queries Volume s3-VII-s3-VIII ; s3-VII-s3-VIII ;  >
-    au < exists ; exists ; 1866 ; 1866 ; Notes and Queries Volume s3-IX-s3-X ; s3-IX-s3-X ;  >
-    au < exists ; exists ; 1867 ; 1867 ; Notes and Queries Volume s3-XI-s3-XII ; s3-XI-s3-XII ;  >
-    au < exists ; exists ; 1868 ; 1868 ; Notes and Queries Volume s4-I-s4-II ; s4-I-s4-II ;  >
+#    au < doNotProcess ; exists ; 1849-1850 ; Notes and Queries Volume s1-I ; s1-I ;  >
+    au < doNotProcess ; exists ; 1850 ; 1850 ; Notes and Queries Volume s1-II ; s1-II ;  >
+    au < doNotProcess ; exists ; 1851 ; 1851 ; Notes and Queries Volume s1-III-s1-IV ; s1-III-s1-IV ;  >
+    au < doNotProcess ; exists ; 1852 ; 1852 ; Notes and Queries Volume s1-V-s1-VI ; s1-V-s1-VI ;  >
+    au < doNotProcess ; exists ; 1853 ; 1853 ; Notes and Queries Volume s1-VII-s1-VIII ; s1-VII-s1-VIII ;  >
+    au < doNotProcess ; exists ; 1854 ; 1854 ; Notes and Queries Volume s1-IX-s1-X ; s1-IX-s1-X ;  >
+    au < doNotProcess ; exists ; 1855 ; 1855 ; Notes and Queries Volume s1-XI-s1-XII ; s1-XI-s1-XII ;  >
+    au < doNotProcess ; exists ; 1856 ; 1856 ; Notes and Queries Volume s2-I-s2-II ; s2-I-s2-II ;  >
+    au < doNotProcess ; exists ; 1857 ; 1857 ; Notes and Queries Volume s2-III-s2-IV ; s2-III-s2-IV ;  >
+    au < doNotProcess ; exists ; 1858 ; 1858 ; Notes and Queries Volume s2-V-s2-VI ; s2-V-s2-VI ;  >
+    au < doNotProcess ; exists ; 1859 ; 1859 ; Notes and Queries Volume s2-VII-s2-VIII ; s2-VII-s2-VIII ;  >
+    au < doNotProcess ; exists ; 1860 ; 1860 ; Notes and Queries Volume s2-IX-s2-X ; s2-IX-s2-X ;  >
+    au < doNotProcess ; exists ; 1861 ; 1861 ; Notes and Queries Volume s2-XI-s2-XII ; s2-XI-s2-XII ;  >
+    au < doNotProcess ; exists ; 1862 ; 1862 ; Notes and Queries Volume s3-I-s3-II ; s3-I-s3-II ;  >
+    au < doNotProcess ; exists ; 1863 ; 1863 ; Notes and Queries Volume s3-III-s3-IV ; s3-III-s3-IV ;  >
+    au < doNotProcess ; exists ; 1864 ; 1864 ; Notes and Queries Volume s3-V-s3-VI ; s3-V-s3-VI ;  >
+    au < doNotProcess ; exists ; 1865 ; 1865 ; Notes and Queries Volume s3-VII-s3-VIII ; s3-VII-s3-VIII ;  >
+    au < doNotProcess ; exists ; 1866 ; 1866 ; Notes and Queries Volume s3-IX-s3-X ; s3-IX-s3-X ;  >
+    au < doNotProcess ; exists ; 1867 ; 1867 ; Notes and Queries Volume s3-XI-s3-XII ; s3-XI-s3-XII ;  >
+    au < doNotProcess ; exists ; 1868 ; 1868 ; Notes and Queries Volume s4-I-s4-II ; s4-I-s4-II ;  >
     au < doesNotExist ; doesNotExist ; 1869 ; 1869 ; Notes and Queries Volume s4-III-s4-IV ; s4-III-s4-IV ;  >
-    au < exists ; exists ; 1870 ; 1870 ; Notes and Queries Volume s4-V-s4-VI ; s4-V-s4-VI ;  >
-    au < exists ; exists ; 1871 ; 1871 ; Notes and Queries Volume s4-VII-s4-VIII ; s4-VII-s4-VIII ;  >
-    au < exists ; exists ; 1872 ; 1872 ; Notes and Queries Volume s4-IX-s4-X ; s4-IX-s4-X ;  >
-    au < exists ; exists ; 1873 ; 1873 ; Notes and Queries Volume s4-XI-s4-XII ; s4-XI-s4-XII ;  >
-    au < exists ; exists ; 1874 ; 1874 ; Notes and Queries Volume s5-I-s5-II ; s5-I-s5-II ;  >
-    au < exists ; exists ; 1875 ; 1875 ; Notes and Queries Volume s5-III-s5-IV ; s5-III-s5-IV ;  >
-    au < exists ; exists ; 1876 ; 1876 ; Notes and Queries Volume s5-V-s5-VI ; s5-V-s5-VI ;  >
-    au < exists ; exists ; 1877 ; 1877 ; Notes and Queries Volume s5-VII-s5-VIII ; s5-VII-s5-VIII ;  >
-    au < exists ; exists ; 1878 ; 1878 ; Notes and Queries Volume s5-IX-s5-X ; s5-IX-s5-X ;  >
-    au < exists ; exists ; 1879 ; 1879 ; Notes and Queries Volume s5-XI-s5-XII ; s5-XI-s5-XII ;  >
-    au < exists ; exists ; 1880 ; 1880 ; Notes and Queries Volume s6-I-s6-II ; s6-I-s6-II ;  >
-    au < exists ; exists ; 1881 ; 1881 ; Notes and Queries Volume s6-III-s6-IV ; s6-III-s6-IV ;  >
-    au < exists ; exists ; 1882 ; 1882 ; Notes and Queries Volume s6-V-s6-VI ; s6-V-s6-VI ;  >
-    au < exists ; exists ; 1883 ; 1883 ; Notes and Queries Volume s6-VII-s6-VIII ; s6-VII-s6-VIII ;  >
-    au < exists ; exists ; 1884 ; 1884 ; Notes and Queries Volume s6-IX-s6-X ; s6-IX-s6-X ;  >
-    au < exists ; exists ; 1885 ; 1885 ; Notes and Queries Volume s6-XI-s6-XII ; s6-XI-s6-XII ;  >
-    au < exists ; exists ; 1886 ; 1886 ; Notes and Queries Volume s7-I-s7-II ; s7-I-s7-II ;  >
-    au < exists ; exists ; 1887 ; 1887 ; Notes and Queries Volume s7-III-s7-IV ; s7-III-s7-IV ;  >
-    au < exists ; exists ; 1888 ; 1888 ; Notes and Queries Volume s7-V-s7-VI ; s7-V-s7-VI ;  >
-    au < exists ; exists ; 1889 ; 1889 ; Notes and Queries Volume s7-VII-s7-VIII ; s7-VII-s7-VIII ;  >
-    au < exists ; exists ; 1890 ; 1890 ; Notes and Queries Volume s7-IX-s7-X ; s7-IX-s7-X ;  >
-    au < exists ; exists ; 1891 ; 1891 ; Notes and Queries Volume s7-XI-s7-XII ; s7-XI-s7-XII ;  >
-    au < exists ; exists ; 1892 ; 1892 ; Notes and Queries Volume s8-I-s8-II ; s8-I-s8-II ;  >
-    au < exists ; exists ; 1893 ; 1893 ; Notes and Queries Volume s8-III-s8-IV ; s8-III-s8-IV ;  >
-    au < exists ; exists ; 1894 ; 1894 ; Notes and Queries Volume s8-V-s8-VI ; s8-V-s8-VI ;  >
-    au < exists ; exists ; 1895 ; 1895 ; Notes and Queries Volume s8-VII-s8-VIII ; s8-VII-s8-VIII ;  >
-    au < exists ; exists ; 1896 ; 1896 ; Notes and Queries Volume s8-IX-s8-X ; s8-IX-s8-X ;  >
-    au < exists ; exists ; 1897 ; 1897 ; Notes and Queries Volume s8-XI-s8-XII ; s8-XI-s8-XII ;  >
-    au < exists ; exists ; 1898 ; 1898 ; Notes and Queries Volume s9-I-s9-II ; s9-I-s9-II ;  >
-    au < exists ; exists ; 1899 ; 1899 ; Notes and Queries Volume s9-III-s9-IV ; s9-III-s9-IV ;  >
+    au < doNotProcess ; exists ; 1870 ; 1870 ; Notes and Queries Volume s4-V-s4-VI ; s4-V-s4-VI ;  >
+    au < doNotProcess ; exists ; 1871 ; 1871 ; Notes and Queries Volume s4-VII-s4-VIII ; s4-VII-s4-VIII ;  >
+    au < doNotProcess ; exists ; 1872 ; 1872 ; Notes and Queries Volume s4-IX-s4-X ; s4-IX-s4-X ;  >
+    au < doNotProcess ; exists ; 1873 ; 1873 ; Notes and Queries Volume s4-XI-s4-XII ; s4-XI-s4-XII ;  >
+    au < doNotProcess ; exists ; 1874 ; 1874 ; Notes and Queries Volume s5-I-s5-II ; s5-I-s5-II ;  >
+    au < doNotProcess ; exists ; 1875 ; 1875 ; Notes and Queries Volume s5-III-s5-IV ; s5-III-s5-IV ;  >
+    au < doNotProcess ; exists ; 1876 ; 1876 ; Notes and Queries Volume s5-V-s5-VI ; s5-V-s5-VI ;  >
+    au < doNotProcess ; exists ; 1877 ; 1877 ; Notes and Queries Volume s5-VII-s5-VIII ; s5-VII-s5-VIII ;  >
+    au < doNotProcess ; exists ; 1878 ; 1878 ; Notes and Queries Volume s5-IX-s5-X ; s5-IX-s5-X ;  >
+    au < doNotProcess ; exists ; 1879 ; 1879 ; Notes and Queries Volume s5-XI-s5-XII ; s5-XI-s5-XII ;  >
+    au < doNotProcess ; exists ; 1880 ; 1880 ; Notes and Queries Volume s6-I-s6-II ; s6-I-s6-II ;  >
+    au < doNotProcess ; exists ; 1881 ; 1881 ; Notes and Queries Volume s6-III-s6-IV ; s6-III-s6-IV ;  >
+    au < doNotProcess ; exists ; 1882 ; 1882 ; Notes and Queries Volume s6-V-s6-VI ; s6-V-s6-VI ;  >
+    au < doNotProcess ; exists ; 1883 ; 1883 ; Notes and Queries Volume s6-VII-s6-VIII ; s6-VII-s6-VIII ;  >
+    au < doNotProcess ; exists ; 1884 ; 1884 ; Notes and Queries Volume s6-IX-s6-X ; s6-IX-s6-X ;  >
+    au < doNotProcess ; exists ; 1885 ; 1885 ; Notes and Queries Volume s6-XI-s6-XII ; s6-XI-s6-XII ;  >
+    au < doNotProcess ; exists ; 1886 ; 1886 ; Notes and Queries Volume s7-I-s7-II ; s7-I-s7-II ;  >
+    au < doNotProcess ; exists ; 1887 ; 1887 ; Notes and Queries Volume s7-III-s7-IV ; s7-III-s7-IV ;  >
+    au < doNotProcess ; exists ; 1888 ; 1888 ; Notes and Queries Volume s7-V-s7-VI ; s7-V-s7-VI ;  >
+    au < doNotProcess ; exists ; 1889 ; 1889 ; Notes and Queries Volume s7-VII-s7-VIII ; s7-VII-s7-VIII ;  >
+    au < doNotProcess ; exists ; 1890 ; 1890 ; Notes and Queries Volume s7-IX-s7-X ; s7-IX-s7-X ;  >
+    au < doNotProcess ; exists ; 1891 ; 1891 ; Notes and Queries Volume s7-XI-s7-XII ; s7-XI-s7-XII ;  >
+    au < doNotProcess ; exists ; 1892 ; 1892 ; Notes and Queries Volume s8-I-s8-II ; s8-I-s8-II ;  >
+    au < doNotProcess ; exists ; 1893 ; 1893 ; Notes and Queries Volume s8-III-s8-IV ; s8-III-s8-IV ;  >
+    au < doNotProcess ; exists ; 1894 ; 1894 ; Notes and Queries Volume s8-V-s8-VI ; s8-V-s8-VI ;  >
+    au < doNotProcess ; exists ; 1895 ; 1895 ; Notes and Queries Volume s8-VII-s8-VIII ; s8-VII-s8-VIII ;  >
+    au < doNotProcess ; exists ; 1896 ; 1896 ; Notes and Queries Volume s8-IX-s8-X ; s8-IX-s8-X ;  >
+    au < doNotProcess ; exists ; 1897 ; 1897 ; Notes and Queries Volume s8-XI-s8-XII ; s8-XI-s8-XII ;  >
+    au < doNotProcess ; exists ; 1898 ; 1898 ; Notes and Queries Volume s9-I-s9-II ; s9-I-s9-II ;  >
+    au < doNotProcess ; exists ; 1899 ; 1899 ; Notes and Queries Volume s9-III-s9-IV ; s9-III-s9-IV ;  >
     au < doNotProcess ; exists ; 1900 ; 1900 ; Notes and Queries Volume s9-V-s9-VI ; s9-V-s9-VI ;  >
     au < doNotProcess ; exists ; 1901 ; 1901 ; Notes and Queries Volume s9-VII-s9-VIII ; s9-VII-s9-VIII ;  >
     au < doNotProcess ; exists ; 1902 ; 1902 ; Notes and Queries Volume s9-IX-s9-X ; s9-IX-s9-X ;  >
@@ -15757,11 +15731,11 @@
 
     param[journal_id] = ahr
 
-#    au < exists ; exists ; 1895-1896 ; The American Historical Review Volume 1 ; 1 ;  >
-#    au < exists ; exists ; 1896-1897 ; The American Historical Review Volume 2 ; 2 ;  >
-#    au < exists ; exists ; 1897-1898 ; The American Historical Review Volume 3 ; 3 ;  >
-#    au < exists ; exists ; 1898-1899 ; The American Historical Review Volume 4 ; 4 ;  >
-#    au < exists ; exists ; 1899-1900 ; The American Historical Review Volume 5 ; 5 ;  >
+#    au < doNotProcess ; exists ; 1895-1896 ; The American Historical Review Volume 1 ; 1 ;  >
+#    au < doNotProcess ; exists ; 1896-1897 ; The American Historical Review Volume 2 ; 2 ;  >
+#    au < doNotProcess ; exists ; 1897-1898 ; The American Historical Review Volume 3 ; 3 ;  >
+#    au < doNotProcess ; exists ; 1898-1899 ; The American Historical Review Volume 4 ; 4 ;  >
+#    au < doNotProcess ; exists ; 1899-1900 ; The American Historical Review Volume 5 ; 5 ;  >
 #    au < doNotProcess ; exists ; 1900-1901 ; The American Historical Review Volume 6 ; 6 ;  >
 #    au < doNotProcess ; exists ; 1901-1902 ; The American Historical Review Volume 7 ; 7 ;  >
 #    au < doNotProcess ; exists ; 1902-1903 ; The American Historical Review Volume 8 ; 8 ;  >
@@ -16150,7 +16124,7 @@
   {
 
     title <
-      name = The British Journal of Criminology ;
+      name = British Journal of Criminology ;
       issn = 0007-0955 ;
       eissn = 1464-3529 ;
       issnl = 0007-0955
@@ -16457,11 +16431,10 @@
 
   }
 
-  #Publisher and previous TDB differ on title - The English Historical Review vs English Historical Review 
   {
 
     title <
-      name = The English Historical Review ;
+      name = English Historical Review ;
       issn = 0013-8266 ;
       eissn = 1477-4534 ;
       issnl = 0013-8266
@@ -16469,20 +16442,20 @@
 
     param[journal_id] = ehr
 
-    au < exists ; exists ; 1886 ; 1886 ; The English Historical Review Volume I ; I ;  >
-    au < exists ; exists ; 1887 ; 1887 ; The English Historical Review Volume II ; II ;  >
-    au < exists ; exists ; 1888 ; 1888 ; The English Historical Review Volume III ; III ;  >
-    au < exists ; exists ; 1889 ; 1889 ; The English Historical Review Volume IV ; IV ;  >
-    au < exists ; exists ; 1890 ; 1890 ; The English Historical Review Volume V ; V ;  >
-    au < exists ; exists ; 1891 ; 1891 ; The English Historical Review Volume VI ; VI ;  >
-    au < exists ; exists ; 1892 ; 1892 ; The English Historical Review Volume VII ; VII ;  >
-    au < exists ; exists ; 1893 ; 1893 ; The English Historical Review Volume VIII ; VIII ;  >
-    au < exists ; exists ; 1894 ; 1894 ; The English Historical Review Volume IX ; IX ;  >
-    au < exists ; exists ; 1895 ; 1895 ; The English Historical Review Volume X ; X ;  >
-    au < exists ; exists ; 1896 ; 1896 ; The English Historical Review Volume XI ; XI ;  >
-    au < exists ; exists ; 1897 ; 1897 ; The English Historical Review Volume XII ; XII ;  >
-    au < exists ; exists ; 1898 ; 1898 ; The English Historical Review Volume XIII ; XIII ;  >
-    au < exists ; exists ; 1899 ; 1899 ; The English Historical Review Volume XIV ; XIV ;  >
+    au < doNotProcess ; exists ; 1886 ; 1886 ; The English Historical Review Volume I ; I ;  >
+    au < doNotProcess ; exists ; 1887 ; 1887 ; The English Historical Review Volume II ; II ;  >
+    au < doNotProcess ; exists ; 1888 ; 1888 ; The English Historical Review Volume III ; III ;  >
+    au < doNotProcess ; exists ; 1889 ; 1889 ; The English Historical Review Volume IV ; IV ;  >
+    au < doNotProcess ; exists ; 1890 ; 1890 ; The English Historical Review Volume V ; V ;  >
+    au < doNotProcess ; exists ; 1891 ; 1891 ; The English Historical Review Volume VI ; VI ;  >
+    au < doNotProcess ; exists ; 1892 ; 1892 ; The English Historical Review Volume VII ; VII ;  >
+    au < doNotProcess ; exists ; 1893 ; 1893 ; The English Historical Review Volume VIII ; VIII ;  >
+    au < doNotProcess ; exists ; 1894 ; 1894 ; The English Historical Review Volume IX ; IX ;  >
+    au < doNotProcess ; exists ; 1895 ; 1895 ; The English Historical Review Volume X ; X ;  >
+    au < doNotProcess ; exists ; 1896 ; 1896 ; The English Historical Review Volume XI ; XI ;  >
+    au < doNotProcess ; exists ; 1897 ; 1897 ; The English Historical Review Volume XII ; XII ;  >
+    au < doNotProcess ; exists ; 1898 ; 1898 ; The English Historical Review Volume XIII ; XIII ;  >
+    au < doNotProcess ; exists ; 1899 ; 1899 ; The English Historical Review Volume XIV ; XIV ;  >
     au < doNotProcess ; exists ; 1900 ; 1900 ; The English Historical Review Volume XV ; XV ;  >
     au < doNotProcess ; exists ; 1901 ; 1901 ; The English Historical Review Volume XVI ; XVI ;  >
     au < doNotProcess ; exists ; 1902 ; 1902 ; The English Historical Review Volume XVII ; XVII ;  >
@@ -16822,33 +16795,33 @@
 
   }
 
+#  {
+#
+#    title <
+#      name = Journal of Clinical Endocrinology & Metabolism ;
+#      issn = 0021-972X ;
+#      eissn = 1945-7197
+#    >
+#
+#    param[journal_id] = jcem
+#    #This journal is included in the Endocrine Society tdb file.
+#
+#    #this title was ONLY in the publisher listing
+#    au < exists ; exists ; 2010 ; 2010 ; Journal of Clinical Endocrinology & Metabolism Volume 95 ; 95 ;  >
+#    au < exists ; exists ; 2011 ; 2011 ; Journal of Clinical Endocrinology & Metabolism Volume 96 ; 96 ;  >
+#    au < exists ; exists ; 2012 ; 2012 ; Journal of Clinical Endocrinology & Metabolism Volume 97 ; 97 ;  >
+#    au < exists ; exists ; 2013 ; 2013 ; Journal of Clinical Endocrinology & Metabolism Volume 98 ; 98 ;  >
+#    au < exists ; exists ; 2014 ; 2014 ; Journal of Clinical Endocrinology & Metabolism Volume 99 ; 99 ;  >
+#    au < exists ; exists ; 2015 ; 2015 ; Journal of Clinical Endocrinology & Metabolism Volume 100 ; 100 ;  >
+#    au < exists ; exists ; 2016 ; 2016 ; Journal of Clinical Endocrinology & Metabolism Volume 101 ; 101 ;  >
+#    au < exists ; exists ; 2017 ; 2017 ; Journal of Clinical Endocrinology & Metabolism Volume 102 ; 102 ;  >
+#
+#  }
+
   {
 
     title <
-      name = The Journal of Clinical Endocrinology & Metabolism ;
-      issn = 0021-972X ;
-      eissn = 1945-7197
-    >
-
-    param[journal_id] = jcem
-
-    #this title was ONLY in the publisher listing
-    au < exists ; exists ; 2010 ; 2010 ; The Journal of Clinical Endocrinology & Metabolism Volume 95 ; 95 ;  >
-    au < exists ; exists ; 2011 ; 2011 ; The Journal of Clinical Endocrinology & Metabolism Volume 96 ; 96 ;  >
-    au < exists ; exists ; 2012 ; 2012 ; The Journal of Clinical Endocrinology & Metabolism Volume 97 ; 97 ;  >
-    au < exists ; exists ; 2013 ; 2013 ; The Journal of Clinical Endocrinology & Metabolism Volume 98 ; 98 ;  >
-    au < exists ; exists ; 2014 ; 2014 ; The Journal of Clinical Endocrinology & Metabolism Volume 99 ; 99 ;  >
-    au < exists ; exists ; 2015 ; 2015 ; The Journal of Clinical Endocrinology & Metabolism Volume 100 ; 100 ;  >
-    au < exists ; exists ; 2016 ; 2016 ; The Journal of Clinical Endocrinology & Metabolism Volume 101 ; 101 ;  >
-    au < exists ; exists ; 2017 ; 2017 ; The Journal of Clinical Endocrinology & Metabolism Volume 102 ; 102 ;  >
-
-  }
-
-  #Publisher and previous TDB differ on title - The Journal of Deaf Studies and Deaf Education vs Journal of Deaf Studies and Deaf Education 
-  {
-
-    title <
-      name = The Journal of Deaf Studies and Deaf Education ;
+      name = Journal of Deaf Studies and Deaf Education ;
       issn = 1081-4159 ;
       eissn = 1465-7325 ;
       issnl = 1081-4159
@@ -16905,11 +16878,10 @@
 
   }
 
-  #Publisher and previous TDB differ on title - The Journal of Infectious Diseases vs Journal of Infectious Diseases 
   {
 
     title <
-      name = The Journal of Infectious Diseases ;
+      name = Journal of Infectious Diseases ;
       issn = 0022-1899 ;
       eissn = 1537-6613 ;
       issnl = 0022-1899
@@ -17034,11 +17006,10 @@
 
   }
 
-  #Publisher and previous TDB differ on title - The Journal of Law, Economics, and Organization vs Journal of Law, Economics, and Organization 
   {
 
     title <
-      name = The Journal of Law, Economics, and Organization ;
+      name = Journal of Law, Economics, and Organization ;
       issn = 8756-6222 ;
       eissn = 1465-7341 ;
       issnl = 1465-7341
@@ -17149,7 +17120,7 @@
 
     param[journal_id] = jts
 
-#    au < exists ; exists ; 1899-1900 ; The Journal of Theological Studies Volume os-I ; os-I ;  >
+#    au < doNotProcess ; exists ; 1899-1900 ; The Journal of Theological Studies Volume os-I ; os-I ;  >
 #    au < doNotProcess ; exists ; 1900-1901 ; The Journal of Theological Studies Volume os-II ; os-II ;  >
 #    au < doNotProcess ; exists ; 1901-1902 ; The Journal of Theological Studies Volume os-III ; os-III ;  >
 #    au < doNotProcess ; exists ; 1902-1903 ; The Journal of Theological Studies Volume os-IV ; os-IV ;  >
@@ -17398,11 +17369,10 @@
 
   }
 
-  #Publisher and previous TDB differ on title - The Leo Baeck Institute Year Book vs The Leo Baeck Institute Yearbook 
   {
 
     title <
-      name = The Leo Baeck Institute Year Book ;
+      name = Leo Baeck Institute Year Book ;
       issn = 0075-8744 ;
       eissn = 1758-437X ;
       issnl = 0075-8744
@@ -17478,7 +17448,7 @@
   {
 
     title <
-      name = The Library ;
+      name = The Library: The Transactions of the Bibliographical Society ;
       issn = 0024-2160 ;
       eissn = 1744-8581 ;
       issnl = 0024-2160
@@ -17486,17 +17456,17 @@
 
     param[journal_id] = library
 
-    au < exists ; exists ; 1889 ; 1889 ; The Library Volume s1-1 ; s1-1 ;  >
-    au < exists ; exists ; 1890 ; 1890 ; The Library Volume s1-2 ; s1-2 ;  >
-    au < exists ; exists ; 1891 ; 1891 ; The Library Volume s1-3 ; s1-3 ;  >
-    au < exists ; exists ; 1892 ; 1892 ; The Library Volume s1-4 ; s1-4 ;  >
-    au < exists ; exists ; 1893 ; 1893 ; The Library Volume TBS-1-s1-V ; TBS-1-s1-V ;  >
-    au < exists ; exists ; 1894 ; 1894 ; The Library Volume s1-6 ; s1-6 ;  >
-    au < exists ; exists ; 1895 ; 1895 ; The Library Volume TBS-2-s1-VII ; TBS-2-s1-VII ;  >
-    au < exists ; exists ; 1896 ; 1896 ; The Library Volume TBS-3-8 ; TBS-3-8 ;  >
-    au < exists ; exists ; 1897 ; 1897 ; The Library Volume s1-9 ; s1-9 ;  >
-    au < exists ; exists ; 1898 ; 1898 ; The Library Volume TBS-4-s1-X ; TBS-4-s1-X ;  >
-    au < exists ; exists ; 1899 ; 1899 ; The Library Volume s2-I ; s2-I ;  >
+    au < doNotProcess ; exists ; 1889 ; 1889 ; The Library Volume s1-1 ; s1-1 ;  >
+    au < doNotProcess ; exists ; 1890 ; 1890 ; The Library Volume s1-2 ; s1-2 ;  >
+    au < doNotProcess ; exists ; 1891 ; 1891 ; The Library Volume s1-3 ; s1-3 ;  >
+    au < doNotProcess ; exists ; 1892 ; 1892 ; The Library Volume s1-4 ; s1-4 ;  >
+    au < doNotProcess ; exists ; 1893 ; 1893 ; The Library Volume TBS-1-s1-V ; TBS-1-s1-V ;  >
+    au < doNotProcess ; exists ; 1894 ; 1894 ; The Library Volume s1-6 ; s1-6 ;  >
+    au < doNotProcess ; exists ; 1895 ; 1895 ; The Library Volume TBS-2-s1-VII ; TBS-2-s1-VII ;  >
+    au < doNotProcess ; exists ; 1896 ; 1896 ; The Library Volume TBS-3-8 ; TBS-3-8 ;  >
+    au < doNotProcess ; exists ; 1897 ; 1897 ; The Library Volume s1-9 ; s1-9 ;  >
+    au < doNotProcess ; exists ; 1898 ; 1898 ; The Library Volume TBS-4-s1-X ; TBS-4-s1-X ;  >
+    au < doNotProcess ; exists ; 1899 ; 1899 ; The Library Volume s2-I ; s2-I ;  >
     au < doNotProcess ; exists ; 1901 ; 1901 ; The Library Volume TBS-5-s2-II ; TBS-5-s2-II ;  >
     au < doNotProcess ; exists ; 1902 ; 1902 ; The Library Volume TBS-7-s2-III ; TBS-7-s2-III ;  >
     au < doNotProcess ; exists ; 1903 ; 1903 ; The Library Volume s2-IV ; s2-IV ;  >
@@ -17951,31 +17921,30 @@
 
   }
 
-  #Publisher and previous TDB differ on title - The Quarterly Journal of Economics vs Quarterly Journal of Economics 
   {
 
     title <
-      name = The Quarterly Journal of Economics ;
+      name = Quarterly Journal of Economics ;
       issn = 0033-5533 ;
       eissn = 1531-4650
     >
 
     param[journal_id] = qje
 
-    au < exists ; exists ; 1886 ; 1886 ; The Quarterly Journal of Economics Volume 1 ; 1 ;  >
-    au < exists ; exists ; 1887 ; 1887 ; The Quarterly Journal of Economics Volume 2 ; 2 ;  >
-    au < exists ; exists ; 1888 ; 1888 ; The Quarterly Journal of Economics Volume 3 ; 3 ;  >
-    au < exists ; exists ; 1889 ; 1889 ; The Quarterly Journal of Economics Volume 4 ; 4 ;  >
-    au < exists ; exists ; 1890 ; 1890 ; The Quarterly Journal of Economics Volume 5 ; 5 ;  >
-    au < exists ; exists ; 1891 ; 1891 ; The Quarterly Journal of Economics Volume 6 ; 6 ;  >
-    au < exists ; exists ; 1892 ; 1892 ; The Quarterly Journal of Economics Volume 7 ; 7 ;  >
-    au < exists ; exists ; 1893 ; 1893 ; The Quarterly Journal of Economics Volume 8 ; 8 ;  >
-    au < exists ; exists ; 1894 ; 1894 ; The Quarterly Journal of Economics Volume 9 ; 9 ;  >
-    au < exists ; exists ; 1895 ; 1895 ; The Quarterly Journal of Economics Volume 10 ; 10 ;  >
-    au < exists ; exists ; 1896 ; 1896 ; The Quarterly Journal of Economics Volume 11 ; 11 ;  >
-    au < exists ; exists ; 1897 ; 1897 ; The Quarterly Journal of Economics Volume 12 ; 12 ;  >
-    au < exists ; exists ; 1898 ; 1898 ; The Quarterly Journal of Economics Volume 13 ; 13 ;  >
-    au < exists ; exists ; 1899 ; 1899 ; The Quarterly Journal of Economics Volume 14 ; 14 ;  >
+    au < doNotProcess ; exists ; 1886 ; 1886 ; The Quarterly Journal of Economics Volume 1 ; 1 ;  >
+    au < doNotProcess ; exists ; 1887 ; 1887 ; The Quarterly Journal of Economics Volume 2 ; 2 ;  >
+    au < doNotProcess ; exists ; 1888 ; 1888 ; The Quarterly Journal of Economics Volume 3 ; 3 ;  >
+    au < doNotProcess ; exists ; 1889 ; 1889 ; The Quarterly Journal of Economics Volume 4 ; 4 ;  >
+    au < doNotProcess ; exists ; 1890 ; 1890 ; The Quarterly Journal of Economics Volume 5 ; 5 ;  >
+    au < doNotProcess ; exists ; 1891 ; 1891 ; The Quarterly Journal of Economics Volume 6 ; 6 ;  >
+    au < doNotProcess ; exists ; 1892 ; 1892 ; The Quarterly Journal of Economics Volume 7 ; 7 ;  >
+    au < doNotProcess ; exists ; 1893 ; 1893 ; The Quarterly Journal of Economics Volume 8 ; 8 ;  >
+    au < doNotProcess ; exists ; 1894 ; 1894 ; The Quarterly Journal of Economics Volume 9 ; 9 ;  >
+    au < doNotProcess ; exists ; 1895 ; 1895 ; The Quarterly Journal of Economics Volume 10 ; 10 ;  >
+    au < doNotProcess ; exists ; 1896 ; 1896 ; The Quarterly Journal of Economics Volume 11 ; 11 ;  >
+    au < doNotProcess ; exists ; 1897 ; 1897 ; The Quarterly Journal of Economics Volume 12 ; 12 ;  >
+    au < doNotProcess ; exists ; 1898 ; 1898 ; The Quarterly Journal of Economics Volume 13 ; 13 ;  >
+    au < doNotProcess ; exists ; 1899 ; 1899 ; The Quarterly Journal of Economics Volume 14 ; 14 ;  >
     au < doNotProcess ; exists ; 1900 ; 1900 ; The Quarterly Journal of Economics Volume 15 ; 15 ;  >
     au < doNotProcess ; exists ; 1901 ; 1901 ; The Quarterly Journal of Economics Volume 16 ; 16 ;  >
     au < doNotProcess ; exists ; 1902 ; 1902 ; The Quarterly Journal of Economics Volume 17 ; 17 ;  >
@@ -18285,7 +18254,7 @@
   {
 
     title <
-      name = The Review of Asset Pricing Studies ;
+      name = Review of Asset Pricing Studies ;
       issn = 2045-9920 ;
       eissn = 2045-9939 ;
       issnl = 2045-9920
@@ -18303,11 +18272,10 @@
 
   }
 
-  #Publisher and previous TDB differ on title - The Review of Corporate Finance Studies vs Review of Corporate Finance Studies 
   {
 
     title <
-      name = The Review of Corporate Finance Studies ;
+      name = Review of Corporate Finance Studies ;
       issn = 2046-9128 ;
       eissn = 2046-9136 ;
       issnl = 2046-9128
