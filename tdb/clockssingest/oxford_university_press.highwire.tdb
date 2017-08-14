@@ -2874,7 +2874,7 @@
   {
 
     title <
-      name = British Journal of Anaesthesia ;
+      name = BJA: British Journal of Anaesthesia ;
       alt_title = BJA ;
       issn = 0007-0912 ;
       eissn = 1471-6771 ;
@@ -2886,10 +2886,10 @@
     param[base_url] = http://bja.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < superseded ; down ; 2008 ; British Journal of Anaesthesia Volume 100 [superseded] ; 100 ; >
-    au < superseded ; down ; 2008 ; British Journal of Anaesthesia Volume 101 [superseded] ; 101 ; >
-    au < superseded ; down ; 2009 ; British Journal of Anaesthesia Volume 102 [superseded] ; 102 ; reingest2.clockss.org:8085 >
-    au < superseded ; down ; 2009 ; British Journal of Anaesthesia Volume 103 [superseded] ; 103 ; reingest2.clockss.org:8085 >
+    au < superseded ; down ; 2008 ; BJA: British Journal of Anaesthesia Volume 100 [superseded] ; 100 ; >
+    au < superseded ; down ; 2008 ; BJA: British Journal of Anaesthesia Volume 101 [superseded] ; 101 ; >
+    au < superseded ; down ; 2009 ; BJA: British Journal of Anaesthesia Volume 102 [superseded] ; 102 ; reingest2.clockss.org:8085 >
+    au < superseded ; down ; 2009 ; BJA: British Journal of Anaesthesia Volume 103 [superseded] ; 103 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -2898,123 +2898,123 @@
     param[base_url] = http://bja.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < doNotProcess ; exists ; 1923-1924 ; British Journal of Anaesthesia Volume 1 ; 1 ; >
-    au < doNotProcess ; exists ; 1924-1925 ; British Journal of Anaesthesia Volume 2 ; 2 ; >
-    au < doNotProcess ; exists ; 1925-1926 ; British Journal of Anaesthesia Volume 3 ; 3 ; >
-    au < doNotProcess ; exists ; 1926-1927 ; British Journal of Anaesthesia Volume 4 ; 4 ; >
-    au < doNotProcess ; exists ; 1927-1928 ; British Journal of Anaesthesia Volume 5 ; 5 ; >
-    au < doNotProcess ; exists ; 1928-1929 ; British Journal of Anaesthesia Volume 6 ; 6 ; >
-    au < doNotProcess ; exists ; 1929-1930 ; British Journal of Anaesthesia Volume 7 ; 7 ; >
-    au < doNotProcess ; exists ; 1930-1931 ; British Journal of Anaesthesia Volume 8 ; 8 ; >
-    au < doNotProcess ; exists ; 1931-1932 ; British Journal of Anaesthesia Volume 9 ; 9 ; >
-    au < doNotProcess ; exists ; 1932-1933 ; British Journal of Anaesthesia Volume 10 ; 10 ; >
-    au < doNotProcess ; exists ; 1933-1934 ; British Journal of Anaesthesia Volume 11 ; 11 ; >
-    au < doNotProcess ; exists ; 1934-1935 ; British Journal of Anaesthesia Volume 12 ; 12 ; >
-    au < doNotProcess ; exists ; 1935-1936 ; British Journal of Anaesthesia Volume 13 ; 13 ; >
-    au < doNotProcess ; exists ; 1936-1937 ; British Journal of Anaesthesia Volume 14 ; 14 ; >
-    au < doNotProcess ; exists ; 1937-1938 ; British Journal of Anaesthesia Volume 15 ; 15 ; >
-    au < doNotProcess ; exists ; 1938-1939 ; British Journal of Anaesthesia Volume 16 ; 16 ; >
-    au < doNotProcess ; exists ; 1939-1941 ; British Journal of Anaesthesia Volume 17 ; 17 ; >
-    au < doNotProcess ; exists ; 1941-1942 ; British Journal of Anaesthesia Volume 18 ; 18 ; >
-    au < doNotProcess ; exists ; 1942-1945 ; British Journal of Anaesthesia Volume 19 ; 19 ; >
-    au < doNotProcess ; exists ; 1946-1947 ; British Journal of Anaesthesia Volume 20 ; 20 ; >
-    au < doNotProcess ; exists ; 1948-1949 ; British Journal of Anaesthesia Volume 21 ; 21 ; >
-    au < doNotProcess ; exists ; 1950 ; British Journal of Anaesthesia Volume 22 ; 22 ; >
-    au < doNotProcess ; exists ; 1951 ; British Journal of Anaesthesia Volume 23 ; 23 ; >
-    au < doNotProcess ; exists ; 1952 ; British Journal of Anaesthesia Volume 24 ; 24 ; >
-    au < doNotProcess ; exists ; 1953 ; British Journal of Anaesthesia Volume 25 ; 25 ; >
-    au < doNotProcess ; exists ; 1954 ; British Journal of Anaesthesia Volume 26 ; 26 ; >
-    au < doNotProcess ; exists ; 1955 ; British Journal of Anaesthesia Volume 27 ; 27 ; >
-    au < doNotProcess ; exists ; 1956 ; British Journal of Anaesthesia Volume 28 ; 28 ; >
-    au < doNotProcess ; exists ; 1957 ; British Journal of Anaesthesia Volume 29 ; 29 ; >
-    au < doNotProcess ; exists ; 1958 ; British Journal of Anaesthesia Volume 30 ; 30 ; >
-    au < doNotProcess ; exists ; 1959 ; British Journal of Anaesthesia Volume 31 ; 31 ; >
-    au < doNotProcess ; exists ; 1960 ; British Journal of Anaesthesia Volume 32 ; 32 ; >
-    au < doNotProcess ; exists ; 1961 ; British Journal of Anaesthesia Volume 33 ; 33 ; >
-    au < doNotProcess ; exists ; 1962 ; British Journal of Anaesthesia Volume 34 ; 34 ; >
-    au < doNotProcess ; exists ; 1963 ; British Journal of Anaesthesia Volume 35 ; 35 ; >
-    au < doNotProcess ; exists ; 1964 ; British Journal of Anaesthesia Volume 36 ; 36 ; >
-    au < doNotProcess ; exists ; 1965 ; British Journal of Anaesthesia Volume 37 ; 37 ; >
-    au < doNotProcess ; exists ; 1966 ; British Journal of Anaesthesia Volume 38 ; 38 ; >
-    au < doNotProcess ; exists ; 1967 ; British Journal of Anaesthesia Volume 39 ; 39 ; >
-    au < doNotProcess ; exists ; 1968 ; British Journal of Anaesthesia Volume 40 ; 40 ; >
-    au < doNotProcess ; exists ; 1969 ; British Journal of Anaesthesia Volume 41 ; 41 ; >
-    au < doNotProcess ; exists ; 1970 ; British Journal of Anaesthesia Volume 42 ; 42 ; >
-    au < doNotProcess ; exists ; 1971 ; British Journal of Anaesthesia Volume 43 ; 43 ; >
-    au < doNotProcess ; exists ; 1972 ; British Journal of Anaesthesia Volume 44 ; 44 ; >
-    au < doNotProcess ; exists ; 1973 ; British Journal of Anaesthesia Volume 45 ; 45 ; >
-    au < doNotProcess ; exists ; 1974 ; British Journal of Anaesthesia Volume 46 ; 46 ; >
-    au < doNotProcess ; exists ; 1975 ; British Journal of Anaesthesia Volume 47 ; 47 ; >
-    au < doNotProcess ; exists ; 1976 ; British Journal of Anaesthesia Volume 48 ; 48 ; >
-    au < doNotProcess ; exists ; 1977 ; British Journal of Anaesthesia Volume 49 ; 49 ; >
-    au < doNotProcess ; exists ; 1978 ; British Journal of Anaesthesia Volume 50 ; 50 ; >
-    au < doNotProcess ; exists ; 1979 ; British Journal of Anaesthesia Volume 51 ; 51 ; >
-    au < doNotProcess ; exists ; 1980 ; British Journal of Anaesthesia Volume 52 ; 52 ; >
-    au < doNotProcess ; exists ; 1981 ; British Journal of Anaesthesia Volume 53 ; 53 ; >
-    au < doNotProcess ; exists ; 1982 ; British Journal of Anaesthesia Volume 54 ; 54 ; >
-    au < doNotProcess ; exists ; 1983 ; British Journal of Anaesthesia Volume 55 ; 55 ; >
-    au < doNotProcess ; exists ; 1984 ; British Journal of Anaesthesia Volume 56 ; 56 ; >
-    au < doNotProcess ; exists ; 1985 ; British Journal of Anaesthesia Volume 57 ; 57 ; >
-    au < doNotProcess ; exists ; 1986 ; British Journal of Anaesthesia Volume 58 ; 58 ; >
-    au < doNotProcess ; exists ; 1987 ; British Journal of Anaesthesia Volume 59 ; 59 ; >
-    au < doNotProcess ; exists ; 1988 ; British Journal of Anaesthesia Volume 60 ; 60 ; >
-    au < doNotProcess ; exists ; 1988 ; British Journal of Anaesthesia Volume 61 ; 61 ; >
-    au < doNotProcess ; exists ; 1989 ; British Journal of Anaesthesia Volume 62 ; 62 ; >
-    au < doNotProcess ; exists ; 1989 ; British Journal of Anaesthesia Volume 63 ; 63 ; >
-    au < doNotProcess ; exists ; 1990 ; British Journal of Anaesthesia Volume 64 ; 64 ; >
-    au < doNotProcess ; exists ; 1990 ; British Journal of Anaesthesia Volume 65 ; 65 ; >
-    au < doNotProcess ; exists ; 1991 ; British Journal of Anaesthesia Volume 66 ; 66 ; >
-    au < doNotProcess ; exists ; 1991 ; British Journal of Anaesthesia Volume 67 ; 67 ; >
-    au < doNotProcess ; exists ; 1992 ; British Journal of Anaesthesia Volume 68 ; 68 ; >
-    au < doNotProcess ; exists ; 1992 ; British Journal of Anaesthesia Volume 69 ; 69 ; >
-    au < doNotProcess ; exists ; 1993 ; British Journal of Anaesthesia Volume 70 ; 70 ; >
-    au < doNotProcess ; exists ; 1993 ; British Journal of Anaesthesia Volume 71 ; 71 ; >
-    au < doNotProcess ; exists ; 1994 ; British Journal of Anaesthesia Volume 72 ; 72 ; >
-    au < doNotProcess ; exists ; 1994 ; British Journal of Anaesthesia Volume 73 ; 73 ; >
-    au < doNotProcess ; exists ; 1995 ; British Journal of Anaesthesia Volume 74 ; 74 ; >
-    au < doNotProcess ; exists ; 1995 ; British Journal of Anaesthesia Volume 75 ; 75 ; >
-    au < doNotProcess ; exists ; 1996 ; British Journal of Anaesthesia Volume 76 ; 76 ; >
-    au < doNotProcess ; exists ; 1996 ; British Journal of Anaesthesia Volume 77 ; 77 ; >
-    au < doNotProcess ; exists ; 1997 ; British Journal of Anaesthesia Volume 78 ; 78 ; >
-    au < doNotProcess ; exists ; 1997 ; British Journal of Anaesthesia Volume 79 ; 79 ; >
-    au < doNotProcess ; exists ; 1998 ; British Journal of Anaesthesia Volume 80 ; 80 ; >
-    au < doNotProcess ; exists ; 1998 ; British Journal of Anaesthesia Volume 81 ; 81 ; >
-    au < doNotProcess ; exists ; 1999 ; British Journal of Anaesthesia Volume 82 ; 82 ; >
-    au < doNotProcess ; exists ; 1999 ; British Journal of Anaesthesia Volume 83 ; 83 ; >
-    au < doNotProcess ; exists ; 2000 ; British Journal of Anaesthesia Volume 84 ; 84 ; >
-    au < doNotProcess ; exists ; 2000 ; British Journal of Anaesthesia Volume 85 ; 85 ; >
-    au < doNotProcess ; exists ; 2001 ; British Journal of Anaesthesia Volume 86 ; 86 ; >
-    au < doNotProcess ; exists ; 2001 ; British Journal of Anaesthesia Volume 87 ; 87 ; >
-    au < doNotProcess ; exists ; 2002 ; British Journal of Anaesthesia Volume 88 ; 88 ; >
-    au < doNotProcess ; exists ; 2002 ; British Journal of Anaesthesia Volume 89 ; 89 ; >
-    au < doNotProcess ; exists ; 2003 ; British Journal of Anaesthesia Volume 90 ; 90 ; >
-    au < doNotProcess ; exists ; 2003 ; British Journal of Anaesthesia Volume 91 ; 91 ; >
-    au < doNotProcess ; exists ; 2004 ; British Journal of Anaesthesia Volume 92 ; 92 ; >
-    au < doNotProcess ; exists ; 2004 ; British Journal of Anaesthesia Volume 93 ; 93 ; >
-    au < doNotProcess ; exists ; 2005 ; British Journal of Anaesthesia Volume 94 ; 94 ; >
-    au < doNotProcess ; exists ; 2005 ; British Journal of Anaesthesia Volume 95 ; 95 ; >
-    au < doNotProcess ; exists ; 2006 ; British Journal of Anaesthesia Volume 96 ; 96 ; >
-    au < doNotProcess ; exists ; 2006 ; British Journal of Anaesthesia Volume 97 ; 97 ; >
-    au < doNotProcess ; exists ; 2007 ; British Journal of Anaesthesia Volume 98 ; 98 ; >
-    au < doNotProcess ; exists ; 2007 ; British Journal of Anaesthesia Volume 99 ; 99 ; >
-    au < frozen ; exists ; 2008 ; British Journal of Anaesthesia Volume 100 ; 100 ; >
-    au < finished ; frozen ; 2008 ; British Journal of Anaesthesia Volume 101 ; 101 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 2009 ; British Journal of Anaesthesia Volume 102 ; 102 ; >
-    au < finished ; finished ; 2009 ; British Journal of Anaesthesia Volume 103 ; 103 ; >
-    au < finished ; finished ; 2010 ; British Journal of Anaesthesia Volume 104 ; 104 ; >
-    au < finished ; finished ; 2010 ; British Journal of Anaesthesia Volume 105 ; 105 ; >
-    au < finished ; finished ; 2011 ; British Journal of Anaesthesia Volume 106 ; 106 ; >
-    au < finished ; finished ; 2011 ; British Journal of Anaesthesia Volume 107 ; 107 ; >
-    au < finished ; frozen ; 2012 ; British Journal of Anaesthesia Volume 108 ; 108 ; >
-    au < finished ; frozen ; 2012 ; British Journal of Anaesthesia Volume 109 ; 109 ; >
-    au < finished ; finished ; 2013 ; British Journal of Anaesthesia Volume 110 ; 110 ; >
-    au < finished ; finished ; 2013 ; British Journal of Anaesthesia Volume 111 ; 111 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 2014 ; British Journal of Anaesthesia Volume 112 ; 112 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 2014 ; British Journal of Anaesthesia Volume 113 ; 113 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 2015 ; British Journal of Anaesthesia Volume 114 ; 114 ; reingest3.clockss.org:8083 >
-    au < finished ; finished ; 2015 ; British Journal of Anaesthesia Volume 115 ; 115 ; reingest1.clockss.org:8082 >
-    au < superseded ; exists ; 2016 ; British Journal of Anaesthesia Volume 116 [superseded] ; 116 ; reingest1.clockss.org:8082 >
-    au < doNotProcess ; exists ; 2016 ; British Journal of Anaesthesia Volume 117 ; 117 ; >
+    au < doNotProcess ; exists ; 1923-1924 ; BJA: British Journal of Anaesthesia Volume 1 ; 1 ; >
+    au < doNotProcess ; exists ; 1924-1925 ; BJA: British Journal of Anaesthesia Volume 2 ; 2 ; >
+    au < doNotProcess ; exists ; 1925-1926 ; BJA: British Journal of Anaesthesia Volume 3 ; 3 ; >
+    au < doNotProcess ; exists ; 1926-1927 ; BJA: British Journal of Anaesthesia Volume 4 ; 4 ; >
+    au < doNotProcess ; exists ; 1927-1928 ; BJA: British Journal of Anaesthesia Volume 5 ; 5 ; >
+    au < doNotProcess ; exists ; 1928-1929 ; BJA: British Journal of Anaesthesia Volume 6 ; 6 ; >
+    au < doNotProcess ; exists ; 1929-1930 ; BJA: British Journal of Anaesthesia Volume 7 ; 7 ; >
+    au < doNotProcess ; exists ; 1930-1931 ; BJA: British Journal of Anaesthesia Volume 8 ; 8 ; >
+    au < doNotProcess ; exists ; 1931-1932 ; BJA: British Journal of Anaesthesia Volume 9 ; 9 ; >
+    au < doNotProcess ; exists ; 1932-1933 ; BJA: British Journal of Anaesthesia Volume 10 ; 10 ; >
+    au < doNotProcess ; exists ; 1933-1934 ; BJA: British Journal of Anaesthesia Volume 11 ; 11 ; >
+    au < doNotProcess ; exists ; 1934-1935 ; BJA: British Journal of Anaesthesia Volume 12 ; 12 ; >
+    au < doNotProcess ; exists ; 1935-1936 ; BJA: British Journal of Anaesthesia Volume 13 ; 13 ; >
+    au < doNotProcess ; exists ; 1936-1937 ; BJA: British Journal of Anaesthesia Volume 14 ; 14 ; >
+    au < doNotProcess ; exists ; 1937-1938 ; BJA: British Journal of Anaesthesia Volume 15 ; 15 ; >
+    au < doNotProcess ; exists ; 1938-1939 ; BJA: British Journal of Anaesthesia Volume 16 ; 16 ; >
+    au < doNotProcess ; exists ; 1939-1941 ; BJA: British Journal of Anaesthesia Volume 17 ; 17 ; >
+    au < doNotProcess ; exists ; 1941-1942 ; BJA: British Journal of Anaesthesia Volume 18 ; 18 ; >
+    au < doNotProcess ; exists ; 1942-1945 ; BJA: British Journal of Anaesthesia Volume 19 ; 19 ; >
+    au < doNotProcess ; exists ; 1946-1947 ; BJA: British Journal of Anaesthesia Volume 20 ; 20 ; >
+    au < doNotProcess ; exists ; 1948-1949 ; BJA: British Journal of Anaesthesia Volume 21 ; 21 ; >
+    au < doNotProcess ; exists ; 1950 ; BJA: British Journal of Anaesthesia Volume 22 ; 22 ; >
+    au < doNotProcess ; exists ; 1951 ; BJA: British Journal of Anaesthesia Volume 23 ; 23 ; >
+    au < doNotProcess ; exists ; 1952 ; BJA: British Journal of Anaesthesia Volume 24 ; 24 ; >
+    au < doNotProcess ; exists ; 1953 ; BJA: British Journal of Anaesthesia Volume 25 ; 25 ; >
+    au < doNotProcess ; exists ; 1954 ; BJA: British Journal of Anaesthesia Volume 26 ; 26 ; >
+    au < doNotProcess ; exists ; 1955 ; BJA: British Journal of Anaesthesia Volume 27 ; 27 ; >
+    au < doNotProcess ; exists ; 1956 ; BJA: British Journal of Anaesthesia Volume 28 ; 28 ; >
+    au < doNotProcess ; exists ; 1957 ; BJA: British Journal of Anaesthesia Volume 29 ; 29 ; >
+    au < doNotProcess ; exists ; 1958 ; BJA: British Journal of Anaesthesia Volume 30 ; 30 ; >
+    au < doNotProcess ; exists ; 1959 ; BJA: British Journal of Anaesthesia Volume 31 ; 31 ; >
+    au < doNotProcess ; exists ; 1960 ; BJA: British Journal of Anaesthesia Volume 32 ; 32 ; >
+    au < doNotProcess ; exists ; 1961 ; BJA: British Journal of Anaesthesia Volume 33 ; 33 ; >
+    au < doNotProcess ; exists ; 1962 ; BJA: British Journal of Anaesthesia Volume 34 ; 34 ; >
+    au < doNotProcess ; exists ; 1963 ; BJA: British Journal of Anaesthesia Volume 35 ; 35 ; >
+    au < doNotProcess ; exists ; 1964 ; BJA: British Journal of Anaesthesia Volume 36 ; 36 ; >
+    au < doNotProcess ; exists ; 1965 ; BJA: British Journal of Anaesthesia Volume 37 ; 37 ; >
+    au < doNotProcess ; exists ; 1966 ; BJA: British Journal of Anaesthesia Volume 38 ; 38 ; >
+    au < doNotProcess ; exists ; 1967 ; BJA: British Journal of Anaesthesia Volume 39 ; 39 ; >
+    au < doNotProcess ; exists ; 1968 ; BJA: British Journal of Anaesthesia Volume 40 ; 40 ; >
+    au < doNotProcess ; exists ; 1969 ; BJA: British Journal of Anaesthesia Volume 41 ; 41 ; >
+    au < doNotProcess ; exists ; 1970 ; BJA: British Journal of Anaesthesia Volume 42 ; 42 ; >
+    au < doNotProcess ; exists ; 1971 ; BJA: British Journal of Anaesthesia Volume 43 ; 43 ; >
+    au < doNotProcess ; exists ; 1972 ; BJA: British Journal of Anaesthesia Volume 44 ; 44 ; >
+    au < doNotProcess ; exists ; 1973 ; BJA: British Journal of Anaesthesia Volume 45 ; 45 ; >
+    au < doNotProcess ; exists ; 1974 ; BJA: British Journal of Anaesthesia Volume 46 ; 46 ; >
+    au < doNotProcess ; exists ; 1975 ; BJA: British Journal of Anaesthesia Volume 47 ; 47 ; >
+    au < doNotProcess ; exists ; 1976 ; BJA: British Journal of Anaesthesia Volume 48 ; 48 ; >
+    au < doNotProcess ; exists ; 1977 ; BJA: British Journal of Anaesthesia Volume 49 ; 49 ; >
+    au < doNotProcess ; exists ; 1978 ; BJA: British Journal of Anaesthesia Volume 50 ; 50 ; >
+    au < doNotProcess ; exists ; 1979 ; BJA: British Journal of Anaesthesia Volume 51 ; 51 ; >
+    au < doNotProcess ; exists ; 1980 ; BJA: British Journal of Anaesthesia Volume 52 ; 52 ; >
+    au < doNotProcess ; exists ; 1981 ; BJA: British Journal of Anaesthesia Volume 53 ; 53 ; >
+    au < doNotProcess ; exists ; 1982 ; BJA: British Journal of Anaesthesia Volume 54 ; 54 ; >
+    au < doNotProcess ; exists ; 1983 ; BJA: British Journal of Anaesthesia Volume 55 ; 55 ; >
+    au < doNotProcess ; exists ; 1984 ; BJA: British Journal of Anaesthesia Volume 56 ; 56 ; >
+    au < doNotProcess ; exists ; 1985 ; BJA: British Journal of Anaesthesia Volume 57 ; 57 ; >
+    au < doNotProcess ; exists ; 1986 ; BJA: British Journal of Anaesthesia Volume 58 ; 58 ; >
+    au < doNotProcess ; exists ; 1987 ; BJA: British Journal of Anaesthesia Volume 59 ; 59 ; >
+    au < doNotProcess ; exists ; 1988 ; BJA: British Journal of Anaesthesia Volume 60 ; 60 ; >
+    au < doNotProcess ; exists ; 1988 ; BJA: British Journal of Anaesthesia Volume 61 ; 61 ; >
+    au < doNotProcess ; exists ; 1989 ; BJA: British Journal of Anaesthesia Volume 62 ; 62 ; >
+    au < doNotProcess ; exists ; 1989 ; BJA: British Journal of Anaesthesia Volume 63 ; 63 ; >
+    au < doNotProcess ; exists ; 1990 ; BJA: British Journal of Anaesthesia Volume 64 ; 64 ; >
+    au < doNotProcess ; exists ; 1990 ; BJA: British Journal of Anaesthesia Volume 65 ; 65 ; >
+    au < doNotProcess ; exists ; 1991 ; BJA: British Journal of Anaesthesia Volume 66 ; 66 ; >
+    au < doNotProcess ; exists ; 1991 ; BJA: British Journal of Anaesthesia Volume 67 ; 67 ; >
+    au < doNotProcess ; exists ; 1992 ; BJA: British Journal of Anaesthesia Volume 68 ; 68 ; >
+    au < doNotProcess ; exists ; 1992 ; BJA: British Journal of Anaesthesia Volume 69 ; 69 ; >
+    au < doNotProcess ; exists ; 1993 ; BJA: British Journal of Anaesthesia Volume 70 ; 70 ; >
+    au < doNotProcess ; exists ; 1993 ; BJA: British Journal of Anaesthesia Volume 71 ; 71 ; >
+    au < doNotProcess ; exists ; 1994 ; BJA: British Journal of Anaesthesia Volume 72 ; 72 ; >
+    au < doNotProcess ; exists ; 1994 ; BJA: British Journal of Anaesthesia Volume 73 ; 73 ; >
+    au < doNotProcess ; exists ; 1995 ; BJA: British Journal of Anaesthesia Volume 74 ; 74 ; >
+    au < doNotProcess ; exists ; 1995 ; BJA: British Journal of Anaesthesia Volume 75 ; 75 ; >
+    au < doNotProcess ; exists ; 1996 ; BJA: British Journal of Anaesthesia Volume 76 ; 76 ; >
+    au < doNotProcess ; exists ; 1996 ; BJA: British Journal of Anaesthesia Volume 77 ; 77 ; >
+    au < doNotProcess ; exists ; 1997 ; BJA: British Journal of Anaesthesia Volume 78 ; 78 ; >
+    au < doNotProcess ; exists ; 1997 ; BJA: British Journal of Anaesthesia Volume 79 ; 79 ; >
+    au < doNotProcess ; exists ; 1998 ; BJA: British Journal of Anaesthesia Volume 80 ; 80 ; >
+    au < doNotProcess ; exists ; 1998 ; BJA: British Journal of Anaesthesia Volume 81 ; 81 ; >
+    au < doNotProcess ; exists ; 1999 ; BJA: British Journal of Anaesthesia Volume 82 ; 82 ; >
+    au < doNotProcess ; exists ; 1999 ; BJA: British Journal of Anaesthesia Volume 83 ; 83 ; >
+    au < doNotProcess ; exists ; 2000 ; BJA: British Journal of Anaesthesia Volume 84 ; 84 ; >
+    au < doNotProcess ; exists ; 2000 ; BJA: British Journal of Anaesthesia Volume 85 ; 85 ; >
+    au < doNotProcess ; exists ; 2001 ; BJA: British Journal of Anaesthesia Volume 86 ; 86 ; >
+    au < doNotProcess ; exists ; 2001 ; BJA: British Journal of Anaesthesia Volume 87 ; 87 ; >
+    au < doNotProcess ; exists ; 2002 ; BJA: British Journal of Anaesthesia Volume 88 ; 88 ; >
+    au < doNotProcess ; exists ; 2002 ; BJA: British Journal of Anaesthesia Volume 89 ; 89 ; >
+    au < doNotProcess ; exists ; 2003 ; BJA: British Journal of Anaesthesia Volume 90 ; 90 ; >
+    au < doNotProcess ; exists ; 2003 ; BJA: British Journal of Anaesthesia Volume 91 ; 91 ; >
+    au < doNotProcess ; exists ; 2004 ; BJA: British Journal of Anaesthesia Volume 92 ; 92 ; >
+    au < doNotProcess ; exists ; 2004 ; BJA: British Journal of Anaesthesia Volume 93 ; 93 ; >
+    au < doNotProcess ; exists ; 2005 ; BJA: British Journal of Anaesthesia Volume 94 ; 94 ; >
+    au < doNotProcess ; exists ; 2005 ; BJA: British Journal of Anaesthesia Volume 95 ; 95 ; >
+    au < doNotProcess ; exists ; 2006 ; BJA: British Journal of Anaesthesia Volume 96 ; 96 ; >
+    au < doNotProcess ; exists ; 2006 ; BJA: British Journal of Anaesthesia Volume 97 ; 97 ; >
+    au < doNotProcess ; exists ; 2007 ; BJA: British Journal of Anaesthesia Volume 98 ; 98 ; >
+    au < doNotProcess ; exists ; 2007 ; BJA: British Journal of Anaesthesia Volume 99 ; 99 ; >
+    au < frozen ; exists ; 2008 ; BJA: British Journal of Anaesthesia Volume 100 ; 100 ; >
+    au < finished ; frozen ; 2008 ; BJA: British Journal of Anaesthesia Volume 101 ; 101 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2009 ; BJA: British Journal of Anaesthesia Volume 102 ; 102 ; >
+    au < finished ; finished ; 2009 ; BJA: British Journal of Anaesthesia Volume 103 ; 103 ; >
+    au < finished ; finished ; 2010 ; BJA: British Journal of Anaesthesia Volume 104 ; 104 ; >
+    au < finished ; finished ; 2010 ; BJA: British Journal of Anaesthesia Volume 105 ; 105 ; >
+    au < finished ; finished ; 2011 ; BJA: British Journal of Anaesthesia Volume 106 ; 106 ; >
+    au < finished ; finished ; 2011 ; BJA: British Journal of Anaesthesia Volume 107 ; 107 ; >
+    au < finished ; frozen ; 2012 ; BJA: British Journal of Anaesthesia Volume 108 ; 108 ; >
+    au < finished ; frozen ; 2012 ; BJA: British Journal of Anaesthesia Volume 109 ; 109 ; >
+    au < finished ; finished ; 2013 ; BJA: British Journal of Anaesthesia Volume 110 ; 110 ; >
+    au < finished ; finished ; 2013 ; BJA: British Journal of Anaesthesia Volume 111 ; 111 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; BJA: British Journal of Anaesthesia Volume 112 ; 112 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; BJA: British Journal of Anaesthesia Volume 113 ; 113 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; BJA: British Journal of Anaesthesia Volume 114 ; 114 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2015 ; BJA: British Journal of Anaesthesia Volume 115 ; 115 ; reingest1.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; BJA: British Journal of Anaesthesia Volume 116 [superseded] ; 116 ; reingest1.clockss.org:8082 >
+    au < doNotProcess ; exists ; 2016 ; BJA: British Journal of Anaesthesia Volume 117 ; 117 ; >
 
     }
 
@@ -3023,7 +3023,7 @@
   {
 
     title <
-        name = The British Journal of Criminology: An International Review of Crime and Society ;
+        name = The British Journal of Criminology ;
         issn = 0007-0955 ;
         eissn = 1464-3529 ;
         issnl = 0007-0955
@@ -3034,8 +3034,8 @@
     param[base_url] = http://bjc.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < zapped ; finished ; 2008 ; The British Journal of Criminology: An International Review of Crime and Society Volume 48 ; 48 ; >
-    au < zapped ; finished ; 2009 ; The British Journal of Criminology: An International Review of Crime and Society Volume 49 ; 49 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 2008 ; The British Journal of Criminology Volume 48 ; 48 ; >
+    au < zapped ; finished ; 2009 ; The British Journal of Criminology Volume 49 ; 49 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -7607,7 +7607,7 @@
   {
 
     title <
-      name = French Studies: A Quarterly Review ;
+      name = French Studies ;
       issn = 0016-1128 ;
       eissn = 1468-2931 ;
       issnl = 0016-1128
@@ -7618,8 +7618,8 @@
     param[base_url] = http://fs.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < zapped ; finished ; 2008 ; French Studies: A Quarterly Review Volume 62 ; 62 ; >
-    au < zapped ; finished ; 2009 ; French Studies: A Quarterly Review Volume 63 ; 63 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 2008 ; French Studies Volume 62 ; 62 ; >
+    au < zapped ; finished ; 2009 ; French Studies Volume 63 ; 63 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -7628,76 +7628,76 @@
     param[base_url] = http://fs.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < doNotProcess ; exists ; 1947 ; French Studies: A Quarterly Review Volume 1 ; 1 ; >
-    au < doNotProcess ; exists ; 1948 ; French Studies: A Quarterly Review Volume 2 ; 2 ; >
-    au < doNotProcess ; exists ; 1949 ; French Studies: A Quarterly Review Volume 3 ; 3 ; >
-    au < doNotProcess ; exists ; 1950 ; French Studies: A Quarterly Review Volume 4 ; 4 ; >
-    au < doNotProcess ; exists ; 1951 ; French Studies: A Quarterly Review Volume 5 ; 5 ; >
-    au < doNotProcess ; exists ; 1952 ; French Studies: A Quarterly Review Volume 6 ; 6 ; >
-    au < doNotProcess ; exists ; 1953 ; French Studies: A Quarterly Review Volume 7 ; 7 ; >
-    au < doNotProcess ; exists ; 1954 ; French Studies: A Quarterly Review Volume 8 ; 8 ; >
-    au < doNotProcess ; exists ; 1955 ; French Studies: A Quarterly Review Volume 9 ; 9 ; >
-    au < doNotProcess ; exists ; 1956 ; French Studies: A Quarterly Review Volume 10 ; 10 ; >
-    au < doNotProcess ; exists ; 1957 ; French Studies: A Quarterly Review Volume 11 ; 11 ; >
-    au < doNotProcess ; exists ; 1958 ; French Studies: A Quarterly Review Volume 12 ; 12 ; >
-    au < doNotProcess ; exists ; 1959 ; French Studies: A Quarterly Review Volume 13 ; 13 ; >
-    au < doNotProcess ; exists ; 1960 ; French Studies: A Quarterly Review Volume 14 ; 14 ; >
-    au < doNotProcess ; exists ; 1961 ; French Studies: A Quarterly Review Volume 15 ; 15 ; >
-    au < doNotProcess ; exists ; 1962 ; French Studies: A Quarterly Review Volume 16 ; 16 ; >
-    au < doNotProcess ; exists ; 1963 ; French Studies: A Quarterly Review Volume 17 ; 17 ; >
-    au < doNotProcess ; exists ; 1964 ; French Studies: A Quarterly Review Volume 18 ; 18 ; >
-    au < doNotProcess ; exists ; 1965 ; French Studies: A Quarterly Review Volume 19 ; 19 ; >
-    au < doNotProcess ; exists ; 1966 ; French Studies: A Quarterly Review Volume 20 ; 20 ; >
-    au < doNotProcess ; exists ; 1967 ; French Studies: A Quarterly Review Volume 21 ; 21 ; >
-    au < doNotProcess ; exists ; 1968 ; French Studies: A Quarterly Review Volume 22 ; 22 ; >
-    au < doNotProcess ; exists ; 1969 ; French Studies: A Quarterly Review Volume 23 ; 23 ; >
-    au < doNotProcess ; exists ; 1970 ; French Studies: A Quarterly Review Volume 24 ; 24 ; >
-    au < doNotProcess ; exists ; 1971 ; French Studies: A Quarterly Review Volume 25 ; 25 ; >
-    au < doNotProcess ; exists ; 1972 ; French Studies: A Quarterly Review Volume 26 ; 26 ; >
-    au < doNotProcess ; exists ; 1973 ; French Studies: A Quarterly Review Volume 27 ; 27 ; >
-    au < doNotProcess ; exists ; 1974 ; French Studies: A Quarterly Review Volume 28 ; 28 ; >
-    au < doNotProcess ; exists ; 1975 ; French Studies: A Quarterly Review Volume 29 ; 29 ; >
-    au < doNotProcess ; exists ; 1976 ; French Studies: A Quarterly Review Volume 30 ; 30 ; >
-    au < doNotProcess ; exists ; 1977 ; French Studies: A Quarterly Review Volume 31 ; 31 ; >
-    au < doNotProcess ; exists ; 1978 ; French Studies: A Quarterly Review Volume 32 ; 32 ; >
-    au < doNotProcess ; exists ; 1979 ; French Studies: A Quarterly Review Volume 33 ; 33 ; >
-    au < doNotProcess ; exists ; 1980 ; French Studies: A Quarterly Review Volume 34 ; 34 ; >
-    au < doNotProcess ; exists ; 1981 ; French Studies: A Quarterly Review Volume 35 ; 35 ; >
-    au < doNotProcess ; exists ; 1982 ; French Studies: A Quarterly Review Volume 36 ; 36 ; >
-    au < doNotProcess ; exists ; 1983 ; French Studies: A Quarterly Review Volume 37 ; 37 ; >
-    au < doNotProcess ; exists ; 1984 ; French Studies: A Quarterly Review Volume 38 ; 38 ; >
-    au < doNotProcess ; exists ; 1985 ; French Studies: A Quarterly Review Volume 39 ; 39 ; >
-    au < doNotProcess ; exists ; 1986 ; French Studies: A Quarterly Review Volume 40 ; 40 ; >
-    au < doNotProcess ; exists ; 1987 ; French Studies: A Quarterly Review Volume 41 ; 41 ; >
-    au < doNotProcess ; exists ; 1988 ; French Studies: A Quarterly Review Volume 42 ; 42 ; >
-    au < doNotProcess ; exists ; 1989 ; French Studies: A Quarterly Review Volume 43 ; 43 ; >
-    au < doNotProcess ; exists ; 1990 ; French Studies: A Quarterly Review Volume 44 ; 44 ; >
-    au < doNotProcess ; exists ; 1991 ; French Studies: A Quarterly Review Volume 45 ; 45 ; >
-    au < doNotProcess ; exists ; 1992 ; French Studies: A Quarterly Review Volume 46 ; 46 ; >
-    au < doNotProcess ; exists ; 1993 ; French Studies: A Quarterly Review Volume 47 ; 47 ; >
-    au < doNotProcess ; exists ; 1994 ; French Studies: A Quarterly Review Volume 48 ; 48 ; >
-    au < doNotProcess ; exists ; 1995 ; French Studies: A Quarterly Review Volume 49 ; 49 ; >
-    au < doNotProcess ; exists ; 1996 ; French Studies: A Quarterly Review Volume 50 ; 50 ; >
-    au < doNotProcess ; exists ; 1997 ; French Studies: A Quarterly Review Volume 51 ; 51 ; >
-    au < doNotProcess ; exists ; 1998 ; French Studies: A Quarterly Review Volume 52 ; 52 ; >
-    au < doNotProcess ; exists ; 1999 ; French Studies: A Quarterly Review Volume 53 ; 53 ; >
-    au < doNotProcess ; exists ; 2000 ; French Studies: A Quarterly Review Volume 54 ; 54 ; >
-    au < doNotProcess ; exists ; 2001 ; French Studies: A Quarterly Review Volume 55 ; 55 ; >
-    au < doNotProcess ; exists ; 2002 ; French Studies: A Quarterly Review Volume 56 ; 56 ; >
-    au < doNotProcess ; exists ; 2003 ; French Studies: A Quarterly Review Volume 57 ; 57 ; >
-    au < doNotProcess ; exists ; 2004 ; French Studies: A Quarterly Review Volume 58 ; 58 ; >
-    au < doNotProcess ; exists ; 2005 ; French Studies: A Quarterly Review Volume 59 ; 59 ; >
-    au < doNotProcess ; exists ; 2006 ; French Studies: A Quarterly Review Volume 60 ; 60 ; >
-    au < doNotProcess ; exists ; 2007 ; French Studies: A Quarterly Review Volume 61 ; 61 ; >
-    au < doNotProcess ; doNotProcess ; 2008 ; French Studies: A Quarterly Review Volume 62 ; 62 ; >
-    au < finished ; frozen ; 2009 ; French Studies: A Quarterly Review Volume 63 ; 63 ; >
-    au < finished ; finished ; 2010 ; French Studies: A Quarterly Review Volume 64 ; 64 ; >
-    au < finished ; finished ; 2011 ; French Studies: A Quarterly Review Volume 65 ; 65 ; >
-    au < finished ; finished ; 2012 ; French Studies: A Quarterly Review Volume 66 ; 66 ; >
-    au < finished ; finished ; 2013 ; French Studies: A Quarterly Review Volume 67 ; 67 ; >
-    au < finished ; finished ; 2014 ; French Studies: A Quarterly Review Volume 68 ; 68 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 2015 ; French Studies: A Quarterly Review Volume 69 ; 69 ; reingest4.clockss.org:8082 >
-    au < doNotProcess ; exists ; 2016 ; French Studies: A Quarterly Review Volume 70 ; 70 ; >
+    au < doNotProcess ; exists ; 1947 ; French Studies Volume 1 ; 1 ; >
+    au < doNotProcess ; exists ; 1948 ; French Studies Volume 2 ; 2 ; >
+    au < doNotProcess ; exists ; 1949 ; French Studies Volume 3 ; 3 ; >
+    au < doNotProcess ; exists ; 1950 ; French Studies Volume 4 ; 4 ; >
+    au < doNotProcess ; exists ; 1951 ; French Studies Volume 5 ; 5 ; >
+    au < doNotProcess ; exists ; 1952 ; French Studies Volume 6 ; 6 ; >
+    au < doNotProcess ; exists ; 1953 ; French Studies Volume 7 ; 7 ; >
+    au < doNotProcess ; exists ; 1954 ; French Studies Volume 8 ; 8 ; >
+    au < doNotProcess ; exists ; 1955 ; French Studies Volume 9 ; 9 ; >
+    au < doNotProcess ; exists ; 1956 ; French Studies Volume 10 ; 10 ; >
+    au < doNotProcess ; exists ; 1957 ; French Studies Volume 11 ; 11 ; >
+    au < doNotProcess ; exists ; 1958 ; French Studies Volume 12 ; 12 ; >
+    au < doNotProcess ; exists ; 1959 ; French Studies Volume 13 ; 13 ; >
+    au < doNotProcess ; exists ; 1960 ; French Studies Volume 14 ; 14 ; >
+    au < doNotProcess ; exists ; 1961 ; French Studies Volume 15 ; 15 ; >
+    au < doNotProcess ; exists ; 1962 ; French Studies Volume 16 ; 16 ; >
+    au < doNotProcess ; exists ; 1963 ; French Studies Volume 17 ; 17 ; >
+    au < doNotProcess ; exists ; 1964 ; French Studies Volume 18 ; 18 ; >
+    au < doNotProcess ; exists ; 1965 ; French Studies Volume 19 ; 19 ; >
+    au < doNotProcess ; exists ; 1966 ; French Studies Volume 20 ; 20 ; >
+    au < doNotProcess ; exists ; 1967 ; French Studies Volume 21 ; 21 ; >
+    au < doNotProcess ; exists ; 1968 ; French Studies Volume 22 ; 22 ; >
+    au < doNotProcess ; exists ; 1969 ; French Studies Volume 23 ; 23 ; >
+    au < doNotProcess ; exists ; 1970 ; French Studies Volume 24 ; 24 ; >
+    au < doNotProcess ; exists ; 1971 ; French Studies Volume 25 ; 25 ; >
+    au < doNotProcess ; exists ; 1972 ; French Studies Volume 26 ; 26 ; >
+    au < doNotProcess ; exists ; 1973 ; French Studies Volume 27 ; 27 ; >
+    au < doNotProcess ; exists ; 1974 ; French Studies Volume 28 ; 28 ; >
+    au < doNotProcess ; exists ; 1975 ; French Studies Volume 29 ; 29 ; >
+    au < doNotProcess ; exists ; 1976 ; French Studies Volume 30 ; 30 ; >
+    au < doNotProcess ; exists ; 1977 ; French Studies Volume 31 ; 31 ; >
+    au < doNotProcess ; exists ; 1978 ; French Studies Volume 32 ; 32 ; >
+    au < doNotProcess ; exists ; 1979 ; French Studies Volume 33 ; 33 ; >
+    au < doNotProcess ; exists ; 1980 ; French Studies Volume 34 ; 34 ; >
+    au < doNotProcess ; exists ; 1981 ; French Studies Volume 35 ; 35 ; >
+    au < doNotProcess ; exists ; 1982 ; French Studies Volume 36 ; 36 ; >
+    au < doNotProcess ; exists ; 1983 ; French Studies Volume 37 ; 37 ; >
+    au < doNotProcess ; exists ; 1984 ; French Studies Volume 38 ; 38 ; >
+    au < doNotProcess ; exists ; 1985 ; French Studies Volume 39 ; 39 ; >
+    au < doNotProcess ; exists ; 1986 ; French Studies Volume 40 ; 40 ; >
+    au < doNotProcess ; exists ; 1987 ; French Studies Volume 41 ; 41 ; >
+    au < doNotProcess ; exists ; 1988 ; French Studies Volume 42 ; 42 ; >
+    au < doNotProcess ; exists ; 1989 ; French Studies Volume 43 ; 43 ; >
+    au < doNotProcess ; exists ; 1990 ; French Studies Volume 44 ; 44 ; >
+    au < doNotProcess ; exists ; 1991 ; French Studies Volume 45 ; 45 ; >
+    au < doNotProcess ; exists ; 1992 ; French Studies Volume 46 ; 46 ; >
+    au < doNotProcess ; exists ; 1993 ; French Studies Volume 47 ; 47 ; >
+    au < doNotProcess ; exists ; 1994 ; French Studies Volume 48 ; 48 ; >
+    au < doNotProcess ; exists ; 1995 ; French Studies Volume 49 ; 49 ; >
+    au < doNotProcess ; exists ; 1996 ; French Studies Volume 50 ; 50 ; >
+    au < doNotProcess ; exists ; 1997 ; French Studies Volume 51 ; 51 ; >
+    au < doNotProcess ; exists ; 1998 ; French Studies Volume 52 ; 52 ; >
+    au < doNotProcess ; exists ; 1999 ; French Studies Volume 53 ; 53 ; >
+    au < doNotProcess ; exists ; 2000 ; French Studies Volume 54 ; 54 ; >
+    au < doNotProcess ; exists ; 2001 ; French Studies Volume 55 ; 55 ; >
+    au < doNotProcess ; exists ; 2002 ; French Studies Volume 56 ; 56 ; >
+    au < doNotProcess ; exists ; 2003 ; French Studies Volume 57 ; 57 ; >
+    au < doNotProcess ; exists ; 2004 ; French Studies Volume 58 ; 58 ; >
+    au < doNotProcess ; exists ; 2005 ; French Studies Volume 59 ; 59 ; >
+    au < doNotProcess ; exists ; 2006 ; French Studies Volume 60 ; 60 ; >
+    au < doNotProcess ; exists ; 2007 ; French Studies Volume 61 ; 61 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; French Studies Volume 62 ; 62 ; >
+    au < finished ; frozen ; 2009 ; French Studies Volume 63 ; 63 ; >
+    au < finished ; finished ; 2010 ; French Studies Volume 64 ; 64 ; >
+    au < finished ; finished ; 2011 ; French Studies Volume 65 ; 65 ; >
+    au < finished ; finished ; 2012 ; French Studies Volume 66 ; 66 ; >
+    au < finished ; finished ; 2013 ; French Studies Volume 67 ; 67 ; >
+    au < finished ; finished ; 2014 ; French Studies Volume 68 ; 68 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; French Studies Volume 69 ; 69 ; reingest4.clockss.org:8082 >
+    au < doNotProcess ; exists ; 2016 ; French Studies Volume 70 ; 70 ; >
 
     }
 
@@ -15064,8 +15064,8 @@
   {
     title <
       name = Journal of Social History ;
-      issn = 1527-1897 ;
-      eissn = 0022-4529 ;
+      issn = 0022-4529 ;
+      eissn = 1527-1897 ;
       issnl = 0022-4529
     >
 
@@ -17443,6 +17443,7 @@
     title <
       name = Journal of Music Therapy ;
       issn = 0022-2917 ;
+      eissn = 2053-7395 ;
       issnl = 0022-2917
     >
 
