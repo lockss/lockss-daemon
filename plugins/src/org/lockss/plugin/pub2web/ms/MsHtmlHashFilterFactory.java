@@ -54,6 +54,7 @@ public class MsHtmlHashFilterFactory implements FilterFactory {
   };
   protected static NodeFilter[] xfilters = new NodeFilter[] {
     
+    HtmlNodeFilters.tag("nav"),
     HtmlNodeFilters.tag("script"),
     HtmlNodeFilters.tag("noscript"),
     
@@ -72,6 +73,7 @@ public class MsHtmlHashFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttribute("li",  "class", "nextLinkContainer"),
 
     //TODO - these came from ASM, must look at MS more closely
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(citations|references|relatedContent)"),
 
     HtmlNodeFilters.tagWithAttribute("div", "class", "hiddenjsdiv metricsEndDate"),
     HtmlNodeFilters.tagWithAttributeRegex("div",  "class",  "^metrics "),
