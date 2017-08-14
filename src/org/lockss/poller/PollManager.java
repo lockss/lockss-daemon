@@ -137,9 +137,9 @@ public class PollManager
   static final List DEFAULT_POLL_PRIORITY_AUID_MAP = null;
 
   /** Maps AU patterns to poll weight.  Keys are XPath expressions (see
-   * {@link org.lockss.util.AuXpathMatcher).  If set, AU's poll weight is
+   * {@link org.lockss.util.AuXpathMatcher}.  If set, AU's poll weight is
    * multiplied by the weight of the first matching XPath..
-   * Weight should be a flost. */
+   * Weight should be a float. */
   static final String PARAM_POLL_PRIORITY_AU_MAP =
     PREFIX + "pollWeightAuMap";
   static final List DEFAULT_POLL_PRIORITY_AU_MAP = null;
