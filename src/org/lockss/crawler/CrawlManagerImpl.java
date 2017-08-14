@@ -561,11 +561,12 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 					      DEFAULT_CONCURRENT_CRAWL_LIMIT_MAP));
 	resetCrawlPoolSizes();
       }
-      if (changedKeys.contains(PARAM_START_CRAWLS_INTERVAL)) {
+      if (changedKeys.contains(PARAM_START_CRAWLS_INTERVAL) ||
+	  changedKeys.contains(PARAM_CRAWL_STARTER_ENABLED)) {
 	paramStartCrawlsInterval =
 	  config.getTimeInterval(PARAM_START_CRAWLS_INTERVAL,
 				 DEFAULT_START_CRAWLS_INTERVAL);
-	if (paramStartCrawlsInterval > 0) {
+	if (crawlStarterEnabled && paramStartCrawlsInterval > 0) {
 	  if (theApp.isAppRunning()) {
 	    enableCrawlStarter();
 	  }
