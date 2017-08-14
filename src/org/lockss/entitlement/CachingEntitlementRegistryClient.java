@@ -1,4 +1,4 @@
-package org.lockss.safenet;
+package org.lockss.entitlement;
 
 import java.io.IOException;
 import java.util.Collections;
@@ -7,7 +7,7 @@ import java.util.Map;
 import org.apache.commons.collections.map.LRUMap;
 import org.apache.commons.collections.map.MultiKeyMap;
 
-import org.lockss.app.BaseLockssManager;
+import org.lockss.app.BaseLockssDaemonManager;
 import org.lockss.app.ConfigurableManager;
 import org.lockss.config.Configuration;
 
@@ -15,21 +15,23 @@ import org.lockss.config.Configuration;
  * A very basic cache which just stores the results of the last 100 calls to the Entitlement Registry.
  * There's a strong chance this will need to become something more complicated down the line.
  */
-public class CachingEntitlementRegistryClient extends BaseLockssManager implements EntitlementRegistryClient, ConfigurableManager {
-  private BaseEntitlementRegistryClient client;
+public class CachingEntitlementRegistryClient extends BaseLockssDaemonManager implements EntitlementRegistryClient, ConfigurableManager {
+  public static final String PREFIX = Configuration.PREFIX + "entitlement.cache.";
+  public static final String PARAM_CACHE_SIZE = PREFIX + "size";
+  static final int DEFAULT_CACHE_SIZE = 100;
+  private EntitlementRegistryClient client;
   private MultiKeyMap cache;
 
-  public CachingEntitlementRegistryClient() {
-      this(new BaseEntitlementRegistryClient(), 100);
-  }
-
-  protected CachingEntitlementRegistryClient(BaseEntitlementRegistryClient client, int size) {
-      this.client = client;
-      this.cache = MultiKeyMap.decorate(new LRUMap(size));
+  public void startService() {
+    super.startService();
+    this.client = getDaemon().getEntitlementRegistryClient();
   }
 
   public void setConfig(Configuration config, Configuration oldConfig, Configuration.Differences diffs) {
-    client.setConfig(config, oldConfig, diffs);
+    if (diffs.contains(PREFIX)) {
+      int size = config.getInt(PARAM_CACHE_SIZE, DEFAULT_CACHE_SIZE);
+      this.cache = MultiKeyMap.decorate(new LRUMap(size));
+    }
   }
 
   public boolean isUserEntitled(String issn, String institution, String start, String end) throws IOException {

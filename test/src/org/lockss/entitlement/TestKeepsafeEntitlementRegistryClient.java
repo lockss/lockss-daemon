@@ -1,4 +1,4 @@
-package org.lockss.safenet;
+package org.lockss.entitlement;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -16,7 +16,6 @@ import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.message.BasicNameValuePair;
 import org.mockito.Mockito;
 
-import org.lockss.safenet.PublisherWorkflow;
 import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockLockssDaemon;
@@ -24,9 +23,9 @@ import org.lockss.test.MockLockssUrlConnection;
 import org.lockss.test.StringInputStream;
 import org.lockss.util.urlconn.LockssUrlConnection;
 
-public class TestEntitlementRegistryClient extends LockssTestCase {
-  private static final String ER_URI = "http://dev-safenet.edina.ac.uk";
-  private BaseEntitlementRegistryClient client;
+public class TestKeepsafeEntitlementRegistryClient extends LockssTestCase {
+  private static final String ER_URI = "http://keepsafe.org";
+  private KeepsafeEntitlementRegistryClient client;
 
   private Map<String,String> validEntitlementParams;
   private Map<String,String> validResponseParams;
@@ -34,13 +33,13 @@ public class TestEntitlementRegistryClient extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    client = Mockito.spy(new BaseEntitlementRegistryClient());
+    client = Mockito.spy(new KeepsafeEntitlementRegistryClient());
     MockLockssDaemon daemon = getMockLockssDaemon();
     daemon.setEntitlementRegistryClient(client);
     daemon.setDaemonInited(true);
     Properties p = new Properties();
-    p.setProperty(BaseEntitlementRegistryClient.PARAM_ER_URI, ER_URI);
-    p.setProperty(BaseEntitlementRegistryClient.PARAM_ER_APIKEY, "00000000-0000-0000-0000-000000000000");
+    p.setProperty(KeepsafeEntitlementRegistryClient.PARAM_ER_URI, ER_URI);
+    p.setProperty(KeepsafeEntitlementRegistryClient.PARAM_ER_APIKEY, "00000000-0000-0000-0000-000000000000");
     ConfigurationUtil.setCurrentConfigFromProps(p);
     client.initService(daemon);
     client.startService();
@@ -62,7 +61,7 @@ public class TestEntitlementRegistryClient extends LockssTestCase {
   }
 
   public void testEntitlementRegistryError() throws Exception {
-    String url = url("/entitlements", BaseEntitlementRegistryClient.mapToPairs(validEntitlementParams));
+    String url = url("/entitlements", KeepsafeEntitlementRegistryClient.mapToPairs(validEntitlementParams));
     Mockito.doReturn(connection(url, 500, "Internal server error")).when(client).openConnection(url);
 
     try {
@@ -76,7 +75,7 @@ public class TestEntitlementRegistryClient extends LockssTestCase {
   }
 
   public void testEntitlementRegistryInvalidResponse() throws Exception {
-    String url = url("/entitlements", BaseEntitlementRegistryClient.mapToPairs(validEntitlementParams));
+    String url = url("/entitlements", KeepsafeEntitlementRegistryClient.mapToPairs(validEntitlementParams));
     Mockito.doReturn(connection(url, 200, "[]")).when(client).openConnection(url);
 
     assertFalse(client.isUserEntitled("0123-456X", "11111111-1111-1111-1111-111111111111", "20120101", "20151231"));
@@ -84,7 +83,7 @@ public class TestEntitlementRegistryClient extends LockssTestCase {
   }
 
   public void testEntitlementRegistryInvalidJson() throws Exception {
-    String url = url("/entitlements", BaseEntitlementRegistryClient.mapToPairs(validEntitlementParams));
+    String url = url("/entitlements", KeepsafeEntitlementRegistryClient.mapToPairs(validEntitlementParams));
     Mockito.doReturn(connection(url, 200, "[{\"this\": isn't, JSON}]")).when(client).openConnection(url);
 
     try {
@@ -98,7 +97,7 @@ public class TestEntitlementRegistryClient extends LockssTestCase {
   }
 
   public void testEntitlementRegistryUnexpectedJson() throws Exception {
-    String url = url("/entitlements", BaseEntitlementRegistryClient.mapToPairs(validEntitlementParams));
+    String url = url("/entitlements", KeepsafeEntitlementRegistryClient.mapToPairs(validEntitlementParams));
     Mockito.doReturn(connection(url, 200, "{\"surprise\": \"object\"}")).when(client).openConnection(url);
 
     assertFalse(client.isUserEntitled("0123-456X", "11111111-1111-1111-1111-111111111111", "20120101", "20151231"));
@@ -106,7 +105,7 @@ public class TestEntitlementRegistryClient extends LockssTestCase {
   }
 
   public void testUserEntitled() throws Exception {
-    String url = url("/entitlements", BaseEntitlementRegistryClient.mapToPairs(validEntitlementParams));
+    String url = url("/entitlements", KeepsafeEntitlementRegistryClient.mapToPairs(validEntitlementParams));
     Mockito.doReturn(connection(url, 200, "[" + mapToJson(validResponseParams) + "]")).when(client).openConnection(url);
 
     assertTrue(client.isUserEntitled("0123-456X", "11111111-1111-1111-1111-111111111111", "20120101", "20151231"));
@@ -114,7 +113,7 @@ public class TestEntitlementRegistryClient extends LockssTestCase {
   }
 
   public void testUserNotEntitled() throws Exception {
-    String url = url("/entitlements", BaseEntitlementRegistryClient.mapToPairs(validEntitlementParams));
+    String url = url("/entitlements", KeepsafeEntitlementRegistryClient.mapToPairs(validEntitlementParams));
     Mockito.doReturn(connection(url, 204, "")).when(client).openConnection(url);
 
     assertFalse(client.isUserEntitled("0123-456X", "11111111-1111-1111-1111-111111111111", "20120101", "20151231"));
@@ -129,7 +128,7 @@ public class TestEntitlementRegistryClient extends LockssTestCase {
     institution.put("name", "University of Edinburgh");
     institution.put("scope", "ed.ac.uk");
 
-    String url = url("/institutions", BaseEntitlementRegistryClient.mapToPairs(queryParams));
+    String url = url("/institutions", KeepsafeEntitlementRegistryClient.mapToPairs(queryParams));
     Mockito.doReturn(connection(url, 200, "[" + mapToJson(institution) + "]")).when(client).openConnection(url);
     assertEquals("11111111-0000-0000-0000-000000000000", client.getInstitution("ed.ac.uk"));
 
@@ -140,7 +139,7 @@ public class TestEntitlementRegistryClient extends LockssTestCase {
     Map<String, String> queryParams = new HashMap<String, String>();
     queryParams.put("scope", "ed.ac.uk");
 
-    String url = url("/institutions", BaseEntitlementRegistryClient.mapToPairs(queryParams));
+    String url = url("/institutions", KeepsafeEntitlementRegistryClient.mapToPairs(queryParams));
     Mockito.doReturn(connection(url, 200, "[]")).when(client).openConnection(url);
     try {
       client.getInstitution("ed.ac.uk");
@@ -165,7 +164,7 @@ public class TestEntitlementRegistryClient extends LockssTestCase {
     institution2.put("name", "University of Edinburgh 2");
     institution2.put("scope", "ed.ac.uk");
 
-    String url = url("/institutions", BaseEntitlementRegistryClient.mapToPairs(queryParams));
+    String url = url("/institutions", KeepsafeEntitlementRegistryClient.mapToPairs(queryParams));
     Mockito.doReturn(connection(url, 200, "[" + mapToJson(institution1) + "," + mapToJson(institution2) + "]")).when(client).openConnection(url);
     try {
       client.getInstitution("ed.ac.uk");
@@ -179,7 +178,7 @@ public class TestEntitlementRegistryClient extends LockssTestCase {
   }
 
   public void testGetPublisher() throws Exception {
-    String url = url("/entitlements", BaseEntitlementRegistryClient.mapToPairs(validEntitlementParams));
+    String url = url("/entitlements", KeepsafeEntitlementRegistryClient.mapToPairs(validEntitlementParams));
     Mockito.doReturn(connection(url, 200, "[" + mapToJson(validResponseParams) + "]")).when(client).openConnection(url);
 
     assertEquals("33333333-0000-0000-0000-000000000000", client.getPublisher("0123-456X", "11111111-1111-1111-1111-111111111111", "20120101", "20151231"));
@@ -187,7 +186,7 @@ public class TestEntitlementRegistryClient extends LockssTestCase {
   }
 
   public void testGetPublisherNotEntitled() throws Exception {
-    String url = url("/entitlements", BaseEntitlementRegistryClient.mapToPairs(validEntitlementParams));
+    String url = url("/entitlements", KeepsafeEntitlementRegistryClient.mapToPairs(validEntitlementParams));
     Mockito.doReturn(connection(url, 204, "")).when(client).openConnection(url);
 
     assertEquals(null, client.getPublisher("0123-456X", "11111111-1111-1111-1111-111111111111", "20120101", "20151231"));
@@ -196,11 +195,11 @@ public class TestEntitlementRegistryClient extends LockssTestCase {
 
   public void testGetPublisherWorkflow() throws Exception {
     Map<String, String> responseParams = new HashMap<String,String>(validPublisherParams);
-    responseParams.put("workflow", "primary_safenet");
+    responseParams.put("workflow", "primary_lockss");
     String url = url("/publishers/33333333-0000-0000-0000-000000000000");
     Mockito.doReturn(connection(url, 200, mapToJson(responseParams))).when(client).openConnection(url);
 
-    assertEquals(PublisherWorkflow.PRIMARY_SAFENET, client.getPublisherWorkflow("33333333-0000-0000-0000-000000000000"));
+    assertEquals(PublisherWorkflow.PRIMARY_LOCKSS, client.getPublisherWorkflow("33333333-0000-0000-0000-000000000000"));
     Mockito.verify(client).openConnection(url);
   }
 
@@ -209,7 +208,7 @@ public class TestEntitlementRegistryClient extends LockssTestCase {
     String url = url("/publishers/33333333-0000-0000-0000-000000000000");
     Mockito.doReturn(connection(url, 200, mapToJson(responseParams))).when(client).openConnection(url);
 
-    assertEquals(PublisherWorkflow.PRIMARY_SAFENET, client.getPublisherWorkflow("33333333-0000-0000-0000-000000000000"));
+    assertEquals(PublisherWorkflow.PRIMARY_LOCKSS, client.getPublisherWorkflow("33333333-0000-0000-0000-000000000000"));
     Mockito.verify(client).openConnection(url);
   }
 
@@ -236,7 +235,7 @@ public class TestEntitlementRegistryClient extends LockssTestCase {
   private String url(String endpoint, List<NameValuePair> params) {
     URIBuilder builder = new URIBuilder();
     builder.setScheme("http");
-    builder.setHost("dev-safenet.edina.ac.uk");
+    builder.setHost("keepsafe.org");
     builder.setPath(endpoint);
     if(params != null) {
       builder.setParameters(params);

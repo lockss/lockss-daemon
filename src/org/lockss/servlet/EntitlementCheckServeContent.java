@@ -54,22 +54,22 @@ import org.lockss.exporter.counter.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.PluginManager.CuContentReq;
-import org.lockss.safenet.EntitlementRegistryClient;
-import org.lockss.safenet.PublisherWorkflow;
+import org.lockss.entitlement.EntitlementRegistryClient;
+import org.lockss.entitlement.PublisherWorkflow;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.mortbay.html.*;
 import org.mortbay.http.*;
 
 @SuppressWarnings("serial")
-public class SafeNetServeContent extends ServeContent {
+public class EntitlementCheckServeContent extends ServeContent {
 
-  private static final Logger log = Logger.getLogger(SafeNetServeContent.class);
+  private static final Logger log = Logger.getLogger(EntitlementCheckServeContent.class);
 
   // If true, scope can be 'mocked' from the URL parameters. This is for testing purposes, and should never be true in production
-  public static final String PARAM_EDIAUTH_MOCK_SCOPE = PREFIX + "mockScope";
+  public static final String PARAM_MOCK_SCOPE = PREFIX + "mockScope";
 
-  private static final String INSTITUTION_HEADER = "X-SafeNet-Institution";
+  private static final String INSTITUTION_HEADER = "X-Lockss-Institution";
 
   public static final String INSTITUTION_SCOPE_SESSION_KEY = "scope";
 
@@ -95,7 +95,7 @@ public class SafeNetServeContent extends ServeContent {
   public void init(ServletConfig config) throws ServletException {
     super.init(config);
     LockssDaemon daemon = getLockssDaemon();
-    entitlementRegistry = daemon.getEntitlementRegistryClient();
+    entitlementRegistry = daemon.getCachedEntitlementRegistryClient();
   }
 
   /** Called by ServletUtil.setConfig() */
@@ -104,12 +104,12 @@ public class SafeNetServeContent extends ServeContent {
                         Configuration.Differences diffs) {
       ServeContent.setConfig(config, oldConfig, diffs);
     if (diffs.contains(PREFIX)) {
-      mockScope = config.getBoolean(PARAM_EDIAUTH_MOCK_SCOPE, false);
+      mockScope = config.getBoolean(PARAM_MOCK_SCOPE, false);
     }
   }
 
   protected boolean isNeverProxyForAu(ArchivalUnit au) {
-    return super.isNeverProxyForAu(au) || workflow == PublisherWorkflow.PRIMARY_SAFENET;
+    return super.isNeverProxyForAu(au) || workflow == PublisherWorkflow.PRIMARY_LOCKSS;
   }
 
   /**
@@ -232,8 +232,7 @@ public class SafeNetServeContent extends ServeContent {
 
 
   void updateInstitution() throws IOException {
-      //This is currently called in lockssHandleRequest, it needs to be called from wherever we do the SAML authentication
-      institutionScope = "ed.ac.uk";
+      String institutionScope = (String) this.getSession().getAttribute(INSTITUTION_SCOPE_SESSION_KEY);
       institution = entitlementRegistry.getInstitution(institutionScope);
   }
 

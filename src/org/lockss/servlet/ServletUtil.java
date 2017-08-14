@@ -373,8 +373,8 @@ public class ServletUtil {
   public static void setConfig(Configuration config,
 			       Configuration oldConfig,
 			       Configuration.Differences diffs) {
-    if (diffs.contains(SafeNetServeContent.PREFIX)) {
-      SafeNetServeContent.setConfig(config, oldConfig, diffs);
+    if (diffs.contains(EntitlementCheckServeContent.PREFIX)) {
+      EntitlementCheckServeContent.setConfig(config, oldConfig, diffs);
     }
     if (diffs.contains(ServeContent.PREFIX)) {
       ServeContent.setConfig(config, oldConfig, diffs);

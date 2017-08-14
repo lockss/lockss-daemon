@@ -1,4 +1,4 @@
-package org.lockss.safenet;
+package org.lockss.entitlement;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -25,11 +25,11 @@ import org.lockss.util.Logger;
 import org.lockss.util.UrlUtil;
 import org.lockss.util.urlconn.LockssUrlConnection;
 
-public class BaseEntitlementRegistryClient extends BaseLockssManager implements EntitlementRegistryClient, ConfigurableManager {
+public class KeepsafeEntitlementRegistryClient extends BaseLockssManager implements EntitlementRegistryClient, ConfigurableManager {
 
-  private static final Logger log = Logger.getLogger(BaseEntitlementRegistryClient.class);
+  private static final Logger log = Logger.getLogger(KeepsafeEntitlementRegistryClient.class);
 
-  public static final String PREFIX = Configuration.PREFIX + "safenet.";
+  public static final String PREFIX = Configuration.PREFIX + "entitlement.keepsafe.";
   public static final String PARAM_ER_URI = PREFIX + "registryUri";
   static final String DEFAULT_ER_URI = "";
   public static final String PARAM_ER_APIKEY = PREFIX + "apiKey";
@@ -40,7 +40,7 @@ public class BaseEntitlementRegistryClient extends BaseLockssManager implements 
   private String erUri;
   private String apiKey;
 
-  public BaseEntitlementRegistryClient() {
+  public KeepsafeEntitlementRegistryClient() {
     this.objectMapper = new ObjectMapper();
   }
 
@@ -130,8 +130,8 @@ public class BaseEntitlementRegistryClient extends BaseLockssManager implements 
           }
         }
         else {
-            log.warning("No workflow set for publisher, defaulting to PRIMARY_SAFENET");
-            return PublisherWorkflow.PRIMARY_SAFENET;
+            log.warning("No workflow set for publisher, defaulting to PRIMARY_LOCKSS");
+            return PublisherWorkflow.PRIMARY_LOCKSS;
         }
       }
     }

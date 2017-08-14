@@ -112,10 +112,6 @@ public class ContentServletManager
   public static final String PARAM_CONTENT_ONLY = PREFIX + "contentOnly";
   public static final boolean DEFAULT_CONTENT_ONLY = false;
 
-  /** Use the SafeNet Content server  */
-  public static final String PARAM_SAFENET = PREFIX + "safenet";
-  public static final boolean DEFAULT_SAFENET = false;
-
   static final String COMPRESSOR_PREFIX = PREFIX + "compressor.";
 
   public static final String PARAM_COMPRESSOR_ENABLED =
@@ -143,10 +139,11 @@ public class ContentServletManager
                      "Serve Content",
                      ServletDescr.NO_NAV_TABLE);
 
-  public static final ServletDescr SERVLET_SERVE_CONTENT_SAFENET =
+  public static final ServletDescr SERVLET_ENTITLEMENT_CHECK_SERVE_CONTENT =
     new ServletDescr("ServeContent",
-		     SafeNetServeContent.class,
+		     EntitlementCheckServeContent.class,
                      "Serve Content",
+                     "ServeContent",
                      ServletDescr.NO_NAV_TABLE);
 
   public static final ServletDescr SERVLET_SERVE_CONTENT =
@@ -202,8 +199,8 @@ public class ContentServletManager
     SERVLET_SERVE_CONTENT_NO_NAV,
   };
 
-  static final ServletDescr servletDescrsSafeNet[] = {
-    SERVLET_SERVE_CONTENT_SAFENET,
+  static final ServletDescr servletDescrsKeepsafe[] = {
+    SERVLET_ENTITLEMENT_CHECK_SERVE_CONTENT,
   };
 
   // All servlets must be listed here (even if not in nav table).
@@ -217,8 +214,8 @@ public class ContentServletManager
   };
 
   public ServletDescr[] getServletDescrs() {
-    if (LockssDaemon.getLockssDaemon().isSafenet()) {
-      return servletDescrsSafeNet;
+    if (LockssDaemon.getLockssDaemon().isKeepsafe()) {
+      return servletDescrsKeepsafe;
     } else if (CurrentConfig.getBooleanParam(PARAM_CONTENT_ONLY,
 				      DEFAULT_CONTENT_ONLY)) {
       return servletDescrsNoNav;

@@ -63,7 +63,7 @@ import org.lockss.state.*;
 import org.lockss.subscription.SubscriptionManager;
 import org.lockss.util.*;
 import org.lockss.clockss.*;
-import org.lockss.safenet.*;
+import org.lockss.entitlement.*;
 
 public class MockLockssDaemon extends LockssDaemon {
   private static Logger log = Logger.getLogger("MockLockssDaemon");
@@ -863,7 +863,16 @@ public class MockLockssDaemon extends LockssDaemon {
    */
   public void setEntitlementRegistryClient(EntitlementRegistryClient entitlementRegistryClient) {
     this.entitlementRegistryClient = entitlementRegistryClient;
-    managerMap.put(LockssDaemon.SAFENET_MANAGER, entitlementRegistryClient);
+    managerMap.put(LockssDaemon.ENTITLEMENT_REGISTRY_CLIENT, entitlementRegistryClient);
+  }
+
+  /**
+   * Set the EntitlementRegistryClient
+   * @param pluginMan the new manager
+   */
+  public void setCachedEntitlementRegistryClient(EntitlementRegistryClient entitlementRegistryClient) {
+    this.entitlementRegistryClient = entitlementRegistryClient;
+    managerMap.put(LockssDaemon.CACHED_ENTITLEMENT_REGISTRY_CLIENT, entitlementRegistryClient);
   }
 
   // AU managers

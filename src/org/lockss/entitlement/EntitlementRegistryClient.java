@@ -1,4 +1,4 @@
-package org.lockss.safenet;
+package org.lockss.entitlement;
 
 import java.io.IOException;
 
