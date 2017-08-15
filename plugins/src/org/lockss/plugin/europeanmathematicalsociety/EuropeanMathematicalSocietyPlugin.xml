@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -141,6 +141,11 @@
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.europeanmathematicalsociety.EuropeanMathematicalSocietyHtmlCrawlFilterFactory</string>
   </entry  -->
+  <entry>
+    <!-- start to issue TOC page -->
+    <string>au_refetch_depth</string>
+    <int>2</int>
+  </entry>
   <entry>
     <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
          org.lockss.crawler.allowedPluginPermittedHosts -->
