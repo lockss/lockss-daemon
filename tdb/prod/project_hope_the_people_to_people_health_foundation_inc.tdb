@@ -16,6 +16,8 @@
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://content.healthaffairs.org/
     implicit < status ; year ; name ; param[volume_name] >
+    
+    #Moving to Atypon on October 11, 2017
 
     au < released ; 1981 ; Health Affairs Volume 1 ; 1 >
     au < released ; 1983 ; Health Affairs Volume 2 ; 2 >
@@ -52,7 +54,7 @@
     au < released ; 2014 ; Health Affairs Volume 33 ; 33 >
     au < released ; 2015 ; Health Affairs Volume 34 ; 34 >
     au < released ; 2016 ; Health Affairs Volume 35 ; 35 >
-    au < manifest ; 2017 ; Health Affairs Volume 36 ; 36 >
+    au < doNotProcess ; 2017 ; Health Affairs Volume 36 ; 36 >
 
   }
 
