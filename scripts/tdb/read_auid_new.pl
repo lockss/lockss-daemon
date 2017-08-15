@@ -663,8 +663,9 @@ while (my $line = <>) {
             my $man_contents = $resp->content;
             #no lockss permission statement on start page. Permission statement is here: https://www.thieme-connect.de/lockss.txt
             if (defined($man_contents) && ($man_contents =~ m/products\/ebooks\/pdf/)) {
-                 if ($man_contents =~ m/<h1 class="productTitle">(.*)\S*<\/h1>/si) {               
-                    $vol_title = $1
+                 if ($man_contents =~ m/<h1 class="productTitle">(.*)\s*<\/h1>/si) {               
+                    $vol_title = $1;
+                    $vol_title =~ s/\s*\n\s*/ /g;
                 }
                 $result = "Manifest"
             } else {
@@ -685,8 +686,9 @@ while (my $line = <>) {
         if ($resp->is_success) {
             my $man_contents = $resp->content;
             if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/products\/ebooks\/pdf/)) {
-                if ($man_contents =~ m/<h1 class="productTitle">(.*)\S*<\/h1>/si) {               
-                    $vol_title = $1
+                if ($man_contents =~ m/<h1 class="productTitle">(.*)\s*<\/h1>/si) {               
+                    $vol_title = $1;
+                    $vol_title =~ s/\s*\n\s*/ /g;
                 }
                 $result = "Manifest"
             } else {
