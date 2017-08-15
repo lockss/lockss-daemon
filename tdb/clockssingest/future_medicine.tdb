@@ -8,7 +8,7 @@
   >
 
   plugin = org.lockss.plugin.atypon.futurescience.ClockssFutureSciencePlugin
-  #param[base_url] = http://www.futuremedicine.com/           #moved to https
+  #moved to https
   implicit < status ; status2 ; year ; name ; param[volume_name] ; param[base_url] ; hidden[proxy] >
 
   {
