@@ -78,7 +78,7 @@
       au < HighWirePressH20Plugin ; down ; 2014 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 34 ; 34 >
       au < HighWirePressH20Plugin ; down ; 2015 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 35 ; 35 >
       au < aha.AHADrupalPlugin ; manifest ; 2016 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 36 ; 36 >
-      au < aha.AHADrupalPlugin ; exists ; 2017 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 37 ; 37 >
+      au < aha.AHADrupalPlugin ; manifest ; 2017 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 37 ; 37 >
 
     }
 
@@ -558,40 +558,40 @@
       param[base_url] = http://hyper.ahajournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < aha.AHADrupalPlugin ; exists ; 1979 ; Hypertension Volume 1 ; 1 >
-      au < aha.AHADrupalPlugin ; exists ; 1980 ; Hypertension Volume 2 ; 2 >
-      au < aha.AHADrupalPlugin ; exists ; 1981 ; Hypertension Volume 3 ; 3 >
-      au < aha.AHADrupalPlugin ; exists ; 1982 ; Hypertension Volume 4 ; 4 >
-      au < aha.AHADrupalPlugin ; exists ; 1983 ; Hypertension Volume 5 ; 5 >
-      au < aha.AHADrupalPlugin ; exists ; 1984 ; Hypertension Volume 6 ; 6 >
-      au < aha.AHADrupalPlugin ; exists ; 1985 ; Hypertension Volume 7 ; 7 >
-      au < aha.AHADrupalPlugin ; exists ; 1986 ; Hypertension Volume 8 ; 8 >
-      au < aha.AHADrupalPlugin ; exists ; 1987 ; Hypertension Volume 9 ; 9 >
-      au < aha.AHADrupalPlugin ; exists ; 1987 ; Hypertension Volume 10 ; 10 >
-      au < aha.AHADrupalPlugin ; exists ; 1988 ; Hypertension Volume 11 ; 11 >
-      au < aha.AHADrupalPlugin ; exists ; 1988 ; Hypertension Volume 12 ; 12 >
-      au < aha.AHADrupalPlugin ; exists ; 1989 ; Hypertension Volume 13 ; 13 >
-      au < aha.AHADrupalPlugin ; exists ; 1989 ; Hypertension Volume 14 ; 14 >
-      au < aha.AHADrupalPlugin ; exists ; 1990 ; Hypertension Volume 15 ; 15 >
-      au < aha.AHADrupalPlugin ; exists ; 1990 ; Hypertension Volume 16 ; 16 >
-      au < aha.AHADrupalPlugin ; exists ; 1991 ; Hypertension Volume 17 ; 17 >
-      au < aha.AHADrupalPlugin ; exists ; 1991 ; Hypertension Volume 18 ; 18 >
-      au < aha.AHADrupalPlugin ; exists ; 1992 ; Hypertension Volume 19 ; 19 >
-      au < aha.AHADrupalPlugin ; exists ; 1992 ; Hypertension Volume 20 ; 20 >
-      au < aha.AHADrupalPlugin ; exists ; 1993 ; Hypertension Volume 21 ; 21 >
-      au < aha.AHADrupalPlugin ; exists ; 1993 ; Hypertension Volume 22 ; 22 >
-      au < aha.AHADrupalPlugin ; exists ; 1994 ; Hypertension Volume 23 ; 23 >
-      au < aha.AHADrupalPlugin ; exists ; 1994 ; Hypertension Volume 24 ; 24 >
-      au < aha.AHADrupalPlugin ; exists ; 1995 ; Hypertension Volume 25 ; 25 >
-      au < aha.AHADrupalPlugin ; exists ; 1995 ; Hypertension Volume 26 ; 26 >
-      au < aha.AHADrupalPlugin ; exists ; 1996 ; Hypertension Volume 27 ; 27 >
-      au < aha.AHADrupalPlugin ; exists ; 1996 ; Hypertension Volume 28 ; 28 >
-      au < aha.AHADrupalPlugin ; exists ; 1997 ; Hypertension Volume 29 ; 29 >
-      au < aha.AHADrupalPlugin ; exists ; 1997 ; Hypertension Volume 30 ; 30 >
-      au < aha.AHADrupalPlugin ; exists ; 1998 ; Hypertension Volume 31 ; 31 >
-      au < aha.AHADrupalPlugin ; exists ; 1998 ; Hypertension Volume 32 ; 32 >
-      au < aha.AHADrupalPlugin ; exists ; 1999 ; Hypertension Volume 33 ; 33 >
-      au < aha.AHADrupalPlugin ; exists ; 1999 ; Hypertension Volume 34 ; 34 >
+      au < aha.AHADrupalPlugin ; manifest ; 1979 ; Hypertension Volume 1 ; 1 >
+      au < aha.AHADrupalPlugin ; manifest ; 1980 ; Hypertension Volume 2 ; 2 >
+      au < aha.AHADrupalPlugin ; manifest ; 1981 ; Hypertension Volume 3 ; 3 >
+      au < aha.AHADrupalPlugin ; manifest ; 1982 ; Hypertension Volume 4 ; 4 >
+      au < aha.AHADrupalPlugin ; manifest ; 1983 ; Hypertension Volume 5 ; 5 >
+      au < aha.AHADrupalPlugin ; manifest ; 1984 ; Hypertension Volume 6 ; 6 >
+      au < aha.AHADrupalPlugin ; manifest ; 1985 ; Hypertension Volume 7 ; 7 >
+      au < aha.AHADrupalPlugin ; manifest ; 1986 ; Hypertension Volume 8 ; 8 >
+      au < aha.AHADrupalPlugin ; manifest ; 1987 ; Hypertension Volume 9 ; 9 >
+      au < aha.AHADrupalPlugin ; manifest ; 1987 ; Hypertension Volume 10 ; 10 >
+      au < aha.AHADrupalPlugin ; manifest ; 1988 ; Hypertension Volume 11 ; 11 >
+      au < aha.AHADrupalPlugin ; manifest ; 1988 ; Hypertension Volume 12 ; 12 >
+      au < aha.AHADrupalPlugin ; manifest ; 1989 ; Hypertension Volume 13 ; 13 >
+      au < aha.AHADrupalPlugin ; manifest ; 1989 ; Hypertension Volume 14 ; 14 >
+      au < aha.AHADrupalPlugin ; manifest ; 1990 ; Hypertension Volume 15 ; 15 >
+      au < aha.AHADrupalPlugin ; manifest ; 1990 ; Hypertension Volume 16 ; 16 >
+      au < aha.AHADrupalPlugin ; manifest ; 1991 ; Hypertension Volume 17 ; 17 >
+      au < aha.AHADrupalPlugin ; manifest ; 1991 ; Hypertension Volume 18 ; 18 >
+      au < aha.AHADrupalPlugin ; manifest ; 1992 ; Hypertension Volume 19 ; 19 >
+      au < aha.AHADrupalPlugin ; manifest ; 1992 ; Hypertension Volume 20 ; 20 >
+      au < aha.AHADrupalPlugin ; manifest ; 1993 ; Hypertension Volume 21 ; 21 >
+      au < aha.AHADrupalPlugin ; manifest ; 1993 ; Hypertension Volume 22 ; 22 >
+      au < aha.AHADrupalPlugin ; manifest ; 1994 ; Hypertension Volume 23 ; 23 >
+      au < aha.AHADrupalPlugin ; manifest ; 1994 ; Hypertension Volume 24 ; 24 >
+      au < aha.AHADrupalPlugin ; manifest ; 1995 ; Hypertension Volume 25 ; 25 >
+      au < aha.AHADrupalPlugin ; manifest ; 1995 ; Hypertension Volume 26 ; 26 >
+      au < aha.AHADrupalPlugin ; manifest ; 1996 ; Hypertension Volume 27 ; 27 >
+      au < aha.AHADrupalPlugin ; manifest ; 1996 ; Hypertension Volume 28 ; 28 >
+      au < aha.AHADrupalPlugin ; manifest ; 1997 ; Hypertension Volume 29 ; 29 >
+      au < aha.AHADrupalPlugin ; manifest ; 1997 ; Hypertension Volume 30 ; 30 >
+      au < aha.AHADrupalPlugin ; manifest ; 1998 ; Hypertension Volume 31 ; 31 >
+      au < aha.AHADrupalPlugin ; manifest ; 1998 ; Hypertension Volume 32 ; 32 >
+      au < aha.AHADrupalPlugin ; manifest ; 1999 ; Hypertension Volume 33 ; 33 >
+      au < aha.AHADrupalPlugin ; manifest ; 1999 ; Hypertension Volume 34 ; 34 >
       au < HighWirePressH20Plugin ; down ; 2000 ; Hypertension Volume 35 ; 35 >
       au < HighWirePressH20Plugin ; down ; 2000 ; Hypertension Volume 36 ; 36 >
       au < HighWirePressH20Plugin ; down ; 2001 ; Hypertension Volume 37 ; 37 >
@@ -624,10 +624,10 @@
       au < HighWirePressH20Plugin ; down ; 2014 ; Hypertension Volume 64 ; 64 >
       au < HighWirePressH20Plugin ; down ; 2015 ; Hypertension Volume 65 ; 65 >
       au < HighWirePressH20Plugin ; down ; 2015 ; Hypertension Volume 66 ; 66 >
-      au < aha.AHADrupalPlugin ; exists ; 2016 ; Hypertension Volume 67 ; 67 >
-      au < aha.AHADrupalPlugin ; exists ; 2016 ; Hypertension Volume 68 ; 68 >
-      au < aha.AHADrupalPlugin ; expected ; 2017 ; Hypertension Volume 69 ; 69 >
-      au < aha.AHADrupalPlugin ; expected ; 2017 ; Hypertension Volume 70 ; 70 >
+      au < aha.AHADrupalPlugin ; manifest ; 2016 ; Hypertension Volume 67 ; 67 >
+      au < aha.AHADrupalPlugin ; manifest ; 2016 ; Hypertension Volume 68 ; 68 >
+      au < aha.AHADrupalPlugin ; manifest ; 2017 ; Hypertension Volume 69 ; 69 >
+      au < aha.AHADrupalPlugin ; manifest ; 2017 ; Hypertension Volume 70 ; 70 >
 
     }
 
@@ -646,36 +646,36 @@
       param[base_url] = http://stroke.ahajournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < aha.AHADrupalPlugin ; exists ; 1970 ; Stroke Volume 1 ; 1 >
-      au < aha.AHADrupalPlugin ; exists ; 1971 ; Stroke Volume 2 ; 2 >
-      au < aha.AHADrupalPlugin ; exists ; 1972 ; Stroke Volume 3 ; 3 >
-      au < aha.AHADrupalPlugin ; exists ; 1973 ; Stroke Volume 4 ; 4 >
-      au < aha.AHADrupalPlugin ; exists ; 1974 ; Stroke Volume 5 ; 5 >
-      au < aha.AHADrupalPlugin ; exists ; 1975 ; Stroke Volume 6 ; 6 >
-      au < aha.AHADrupalPlugin ; exists ; 1976 ; Stroke Volume 7 ; 7 >
-      au < aha.AHADrupalPlugin ; exists ; 1977 ; Stroke Volume 8 ; 8 >
-      au < aha.AHADrupalPlugin ; exists ; 1978 ; Stroke Volume 9 ; 9 >
-      au < aha.AHADrupalPlugin ; exists ; 1979 ; Stroke Volume 10 ; 10 >
-      au < aha.AHADrupalPlugin ; exists ; 1980 ; Stroke Volume 11 ; 11 >
-      au < aha.AHADrupalPlugin ; exists ; 1981 ; Stroke Volume 12 ; 12 >
-      au < aha.AHADrupalPlugin ; exists ; 1982 ; Stroke Volume 13 ; 13 >
-      au < aha.AHADrupalPlugin ; exists ; 1983 ; Stroke Volume 14 ; 14 >
-      au < aha.AHADrupalPlugin ; exists ; 1984 ; Stroke Volume 15 ; 15 >
-      au < aha.AHADrupalPlugin ; exists ; 1985 ; Stroke Volume 16 ; 16 >
-      au < aha.AHADrupalPlugin ; exists ; 1986 ; Stroke Volume 17 ; 17 >
-      au < aha.AHADrupalPlugin ; exists ; 1987 ; Stroke Volume 18 ; 18 >
-      au < aha.AHADrupalPlugin ; exists ; 1988 ; Stroke Volume 19 ; 19 >
-      au < aha.AHADrupalPlugin ; exists ; 1989 ; Stroke Volume 20 ; 20 >
-      au < aha.AHADrupalPlugin ; exists ; 1980 ; Stroke Volume 21 ; 21 >
-      au < aha.AHADrupalPlugin ; exists ; 1981 ; Stroke Volume 22 ; 22 >
-      au < aha.AHADrupalPlugin ; exists ; 1982 ; Stroke Volume 23 ; 23 >
-      au < aha.AHADrupalPlugin ; exists ; 1983 ; Stroke Volume 24 ; 24 >
-      au < aha.AHADrupalPlugin ; exists ; 1984 ; Stroke Volume 25 ; 25 >
-      au < aha.AHADrupalPlugin ; exists ; 1985 ; Stroke Volume 26 ; 26 >
-      au < aha.AHADrupalPlugin ; exists ; 1986 ; Stroke Volume 27 ; 27 >
-      au < aha.AHADrupalPlugin ; exists ; 1987 ; Stroke Volume 28 ; 28 >
-      au < aha.AHADrupalPlugin ; exists ; 1988 ; Stroke Volume 29 ; 29 >
-      au < aha.AHADrupalPlugin ; exists ; 1999 ; Stroke Volume 30 ; 30 >
+      au < aha.AHADrupalPlugin ; manifest ; 1970 ; Stroke Volume 1 ; 1 >
+      au < aha.AHADrupalPlugin ; manifest ; 1971 ; Stroke Volume 2 ; 2 >
+      au < aha.AHADrupalPlugin ; manifest ; 1972 ; Stroke Volume 3 ; 3 >
+      au < aha.AHADrupalPlugin ; manifest ; 1973 ; Stroke Volume 4 ; 4 >
+      au < aha.AHADrupalPlugin ; manifest ; 1974 ; Stroke Volume 5 ; 5 >
+      au < aha.AHADrupalPlugin ; manifest ; 1975 ; Stroke Volume 6 ; 6 >
+      au < aha.AHADrupalPlugin ; manifest ; 1976 ; Stroke Volume 7 ; 7 >
+      au < aha.AHADrupalPlugin ; manifest ; 1977 ; Stroke Volume 8 ; 8 >
+      au < aha.AHADrupalPlugin ; manifest ; 1978 ; Stroke Volume 9 ; 9 >
+      au < aha.AHADrupalPlugin ; manifest ; 1979 ; Stroke Volume 10 ; 10 >
+      au < aha.AHADrupalPlugin ; manifest ; 1980 ; Stroke Volume 11 ; 11 >
+      au < aha.AHADrupalPlugin ; manifest ; 1981 ; Stroke Volume 12 ; 12 >
+      au < aha.AHADrupalPlugin ; manifest ; 1982 ; Stroke Volume 13 ; 13 >
+      au < aha.AHADrupalPlugin ; manifest ; 1983 ; Stroke Volume 14 ; 14 >
+      au < aha.AHADrupalPlugin ; manifest ; 1984 ; Stroke Volume 15 ; 15 >
+      au < aha.AHADrupalPlugin ; manifest ; 1985 ; Stroke Volume 16 ; 16 >
+      au < aha.AHADrupalPlugin ; manifest ; 1986 ; Stroke Volume 17 ; 17 >
+      au < aha.AHADrupalPlugin ; manifest ; 1987 ; Stroke Volume 18 ; 18 >
+      au < aha.AHADrupalPlugin ; manifest ; 1988 ; Stroke Volume 19 ; 19 >
+      au < aha.AHADrupalPlugin ; manifest ; 1989 ; Stroke Volume 20 ; 20 >
+      au < aha.AHADrupalPlugin ; manifest ; 1980 ; Stroke Volume 21 ; 21 >
+      au < aha.AHADrupalPlugin ; manifest ; 1981 ; Stroke Volume 22 ; 22 >
+      au < aha.AHADrupalPlugin ; manifest ; 1982 ; Stroke Volume 23 ; 23 >
+      au < aha.AHADrupalPlugin ; manifest ; 1983 ; Stroke Volume 24 ; 24 >
+      au < aha.AHADrupalPlugin ; manifest ; 1984 ; Stroke Volume 25 ; 25 >
+      au < aha.AHADrupalPlugin ; manifest ; 1985 ; Stroke Volume 26 ; 26 >
+      au < aha.AHADrupalPlugin ; manifest ; 1986 ; Stroke Volume 27 ; 27 >
+      au < aha.AHADrupalPlugin ; manifest ; 1987 ; Stroke Volume 28 ; 28 >
+      au < aha.AHADrupalPlugin ; manifest ; 1988 ; Stroke Volume 29 ; 29 >
+      au < aha.AHADrupalPlugin ; manifest ; 1999 ; Stroke Volume 30 ; 30 >
       au < HighWirePressH20Plugin ; down ; 2000 ; Stroke Volume 31 ; 31 >
       au < HighWirePressH20Plugin ; down ; 2001 ; Stroke Volume 32 ; 32 >
       au < HighWirePressH20Plugin ; down ; 2002 ; Stroke Volume 33 ; 33 >
@@ -692,8 +692,8 @@
       au < HighWirePressH20Plugin ; down ; 2013 ; Stroke Volume 44 ; 44 >
       au < HighWirePressH20Plugin ; down ; 2014 ; Stroke Volume 45 ; 45 >
       au < HighWirePressH20Plugin ; down ; 2015 ; Stroke Volume 46 ; 46 >
-      au < aha.AHADrupalPlugin ; exists ; 2016 ; Stroke Volume 47 ; 47 >
-      au < aha.AHADrupalPlugin ; expected ; 2017 ; Stroke Volume 48 ; 48 >
+      au < aha.AHADrupalPlugin ; manifest ; 2016 ; Stroke Volume 47 ; 47 >
+      au < aha.AHADrupalPlugin ; manifest ; 2017 ; Stroke Volume 48 ; 48 >
 
     }
 
