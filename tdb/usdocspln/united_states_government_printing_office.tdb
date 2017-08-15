@@ -247,9 +247,34 @@
     >
 
     param[collection_id] = GPO
+    #see for example https://www.gpo.gov/smap/fdsys/sitemap_1961/1961_GPO_sitemap.xml
 
     au < released ; 1907 ; Additional Government Publications 1907 ; http://www.gpo.gov/ ; 1907 >
     au < released ; 1936 ; Additional Government Publications 1936 ; http://www.gpo.gov/ ; 1936 >
+    au < exists ; 1941 ; Additional Government Publications 1941 ; https://www.gpo.gov/ ; 1941 >
+    au < exists ; 1942 ; Additional Government Publications 1942 ; https://www.gpo.gov/ ; 1942 >
+    au < exists ; 1943 ; Additional Government Publications 1943 ; https://www.gpo.gov/ ; 1943 >
+    au < exists ; 1944 ; Additional Government Publications 1944 ; https://www.gpo.gov/ ; 1944 >
+    au < exists ; 1945 ; Additional Government Publications 1945 ; https://www.gpo.gov/ ; 1945 >
+    au < exists ; 1946 ; Additional Government Publications 1946 ; https://www.gpo.gov/ ; 1946 >
+    au < exists ; 1947 ; Additional Government Publications 1947 ; https://www.gpo.gov/ ; 1947 >
+    au < exists ; 1948 ; Additional Government Publications 1948 ; https://www.gpo.gov/ ; 1948 >
+    au < exists ; 1949 ; Additional Government Publications 1949 ; https://www.gpo.gov/ ; 1949 >
+    au < exists ; 1950 ; Additional Government Publications 1950 ; https://www.gpo.gov/ ; 1950 >
+    au < exists ; 1951 ; Additional Government Publications 1951 ; https://www.gpo.gov/ ; 1951 >
+    au < exists ; 1952 ; Additional Government Publications 1952 ; https://www.gpo.gov/ ; 1952 >
+    au < exists ; 1953 ; Additional Government Publications 1953 ; https://www.gpo.gov/ ; 1953 >
+    au < exists ; 1954 ; Additional Government Publications 1954 ; https://www.gpo.gov/ ; 1954 >
+    au < exists ; 1955 ; Additional Government Publications 1955 ; https://www.gpo.gov/ ; 1955 >
+    au < exists ; 1956 ; Additional Government Publications 1956 ; https://www.gpo.gov/ ; 1956 >
+    au < exists ; 1957 ; Additional Government Publications 1957 ; https://www.gpo.gov/ ; 1957 >
+    au < exists ; 1956 ; Additional Government Publications 1956 ; https://www.gpo.gov/ ; 1956 >
+    au < exists ; 1957 ; Additional Government Publications 1957 ; https://www.gpo.gov/ ; 1957 >
+    au < exists ; 1958 ; Additional Government Publications 1958 ; https://www.gpo.gov/ ; 1958 >
+    au < exists ; 1959 ; Additional Government Publications 1959 ; https://www.gpo.gov/ ; 1959 >
+    au < exists ; 1960 ; Additional Government Publications 1960 ; https://www.gpo.gov/ ; 1960 >
+    au < exists ; 1961 ; Additional Government Publications 1961 ; https://www.gpo.gov/ ; 1961 >
+    au < exists ; 1962 ; Additional Government Publications 1962 ; https://www.gpo.gov/ ; 1962 >
     au < released ; 1963 ; Additional Government Publications 1963 ; https://www.gpo.gov/ ; 1963 >
     au < released ; 1964 ; Additional Government Publications 1964 ; https://www.gpo.gov/ ; 1964 >
     au < released ; 1965 ; Additional Government Publications 1965 ; https://www.gpo.gov/ ; 1965 >
