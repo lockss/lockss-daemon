@@ -768,7 +768,7 @@
       au < aps.ClockssAPSDrupalPlugin ; finished ; manifest ; 2016 ; American Journal of Physiology - Cell Physiology Volume 310 ; 310 ; reingest5.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; finished ; manifest ; 2016 ; American Journal of Physiology - Cell Physiology Volume 311 ; 311 ; reingest1.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2017 ; American Journal of Physiology - Cell Physiology Volume 312 ; 312 ; >
-      au < aps.ClockssAPSDrupalPlugin ; expected ; exists ; 2017 ; American Journal of Physiology - Cell Physiology Volume 313 ; 313 ; >
+      au < aps.ClockssAPSDrupalPlugin ; manifest ; exists ; 2017 ; American Journal of Physiology - Cell Physiology Volume 313 ; 313 ; >
 
     }
 
@@ -1297,7 +1297,7 @@
       au < aps.ClockssAPSDrupalPlugin ; finished ; manifest ; 2016 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 310 ; 310 ; reingest2.clockss.org:8085 >
       au < aps.ClockssAPSDrupalPlugin ; finished ; manifest ; 2016 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 311 ; 311 ; reingest5.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2017 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 312 ; 312 ; >
-      au < aps.ClockssAPSDrupalPlugin ; expected ; exists ; 2017 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 313 ; 313 ; >
+      au < aps.ClockssAPSDrupalPlugin ; manifest ; exists ; 2017 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 313 ; 313 ; >
 
     }
 

@@ -8545,7 +8545,7 @@
       au < doNotProcess ; doNotProcess ; 2014-2015 ; A Current Bibliography on African Affairs Volume 47 ; 47 ; cbaa ; >
       au < doNotProcess ; doNotProcess ; 2015-2016 ; A Current Bibliography on African Affairs Volume 48 ; 48 ; cbaa ; >
       au < manifest ; exists ; 2016-2017 ; A Current Bibliography on African Affairs Volume 49 ; 49 ; cbaa ; >
-      au < expected ; exists ; 2017-2018 ; A Current Bibliography on African Affairs Volume 50 ; 50 ; cbaa ; >
+      au < manifest ; exists ; 2017-2018 ; A Current Bibliography on African Affairs Volume 50 ; 50 ; cbaa ; >
 
   }
 
@@ -14890,9 +14890,9 @@
 
       #param[base_url] = http://iej.sagepub.com/
 
-      au < exists ; exists ; 2010-2011 ; The Indian Economic Journal Volume 58 ; 58 ; ieja ; >
-      au < exists ; exists ; 2011-2012 ; The Indian Economic Journal Volume 59 ; 59 ; ieja ; >
-      au < exists ; exists ; 2012-2013 ; The Indian Economic Journal Volume 60 ; 60 ; ieja ; >
+      au < manifest ; exists ; 2010-2011 ; The Indian Economic Journal Volume 58 ; 58 ; ieja ; >
+      au < manifest ; exists ; 2011-2012 ; The Indian Economic Journal Volume 59 ; 59 ; ieja ; >
+      au < manifest ; exists ; 2012-2013 ; The Indian Economic Journal Volume 60 ; 60 ; ieja ; >
 
   }
 
@@ -17799,7 +17799,7 @@
       au < doNotProcess ; doNotProcess ; 2014-2015 ; Intervention in School and Clinic Volume 50 ; 50 ; iscc ; >
       au < doNotProcess ; doNotProcess ; 2015-2016 ; Intervention in School and Clinic Volume 51 ; 51 ; iscc ; >
       au < manifest ; exists ; 2016-2017 ; Intervention in School and Clinic Volume 52 ; 52 ; iscc ; >
-      au < expected ; exists ; 2017-2018 ; Intervention in School and Clinic Volume 53 ; 53 ; iscc ; >
+      au < manifest ; exists ; 2017-2018 ; Intervention in School and Clinic Volume 53 ; 53 ; iscc ; >
 
     }
 
@@ -21184,7 +21184,7 @@
       au < doNotProcess ; doNotProcess ; 2014-2015 ; Journal of Educational Technology Systems Volume 43 ; 43 ; etsa ; >
       au < doNotProcess ; doNotProcess ; 2015-2016 ; Journal of Educational Technology Systems Volume 44 ; 44 ; etsa ; >
       au < crawling ; exists ; 2016-2017 ; Journal of Educational Technology Systems Volume 45 ; 45 ; etsa ; >
-      au < expected ; exists ; 2017-2018 ; Journal of Educational Technology Systems Volume 46 ; 46 ; etsa ; >
+      au < manifest ; exists ; 2017-2018 ; Journal of Educational Technology Systems Volume 46 ; 46 ; etsa ; >
 
   }
 
@@ -22395,8 +22395,8 @@
       au < manifest ; exists ; 1992 ; Journal of Histochemistry and Cytochemistry Volume 40 ; 40 ; jhca ; >
       au < manifest ; exists ; 1993 ; Journal of Histochemistry and Cytochemistry Volume 41 ; 41 ; jhca ; >
       au < manifest ; exists ; 1994 ; Journal of Histochemistry and Cytochemistry Volume 42 ; 42 ; jhca ; >
-      au < exists ; exists ; 1995 ; Journal of Histochemistry and Cytochemistry Volume 43 ; 43 ; jhca ; >
-      au < exists ; exists ; 1996 ; Journal of Histochemistry and Cytochemistry Volume 44 ; 44 ; jhca ; >
+      au < manifest ; exists ; 1995 ; Journal of Histochemistry and Cytochemistry Volume 43 ; 43 ; jhca ; >
+      au < manifest ; exists ; 1996 ; Journal of Histochemistry and Cytochemistry Volume 44 ; 44 ; jhca ; >
       au < manifest ; exists ; 1997 ; Journal of Histochemistry and Cytochemistry Volume 45 ; 45 ; jhca ; >
       au < manifest ; exists ; 1998 ; Journal of Histochemistry and Cytochemistry Volume 46 ; 46 ; jhca ; >
       au < manifest ; exists ; 1999 ; Journal of Histochemistry and Cytochemistry Volume 47 ; 47 ; jhca ; >
@@ -26055,7 +26055,7 @@
 
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Strategic Contracting and Negotiation Volume 1 ; 1 ; jsca ; >
       au < frozen ; exists ; 2016 ; Journal of Strategic Contracting and Negotiation Volume 2 ; 2 ; jsca ; >
-      au < expected ; exists ; 2017 ; Journal of Strategic Contracting and Negotiation Volume 3 ; 3 ; jsca ; >
+      au < manifest ; exists ; 2017 ; Journal of Strategic Contracting and Negotiation Volume 3 ; 3 ; jsca ; >
 
   }
 
@@ -28648,7 +28648,7 @@
       au < frozen ; exists ; 2016 ; Media International Australia Volume 161 ; 161 ; miad ; >
       au < manifest ; exists ; 2017 ; Media International Australia Volume 162 ; 162 ; miad ; >
       au < manifest ; exists ; 2017 ; Media International Australia Volume 163 ; 163 ; miad ; >
-      au < expected ; exists ; 2017 ; Media International Australia Volume 164 ; 164 ; miad ; >
+      au < manifest ; exists ; 2017 ; Media International Australia Volume 164 ; 164 ; miad ; >
       au < expected ; exists ; 2017 ; Media International Australia Volume 165 ; 165 ; miad ; >
 
   }
@@ -29946,7 +29946,7 @@
       au < frozen ; exists ; 2016 ; National Institute Economic Review Volume 238 ; 238 ; nera ; >
       au < manifest ; exists ; 2017 ; National Institute Economic Review Volume 239 ; 239 ; nera ; >
       au < manifest ; exists ; 2017 ; National Institute Economic Review Volume 240 ; 240 ; nera ; >
-      au < expected ; exists ; 2017 ; National Institute Economic Review Volume 241 ; 241 ; nera ; >
+      au < manifest ; exists ; 2017 ; National Institute Economic Review Volume 241 ; 241 ; nera ; >
       au < expected ; exists ; 2017 ; National Institute Economic Review Volume 242 ; 242 ; nera ; >
 
     }
@@ -37614,7 +37614,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; State and Local Government Review Volume 46 ; 46 ; slgb ; >
       au < doNotProcess ; doNotProcess ; 2015 ; State and Local Government Review Volume 47 ; 47 ; slgb ; >
       au < frozen ; exists ; 2016 ; State and Local Government Review Volume 48 ; 48 ; slgb ; >
-      au < expected ; exists ; 2017 ; State and Local Government Review Volume 49 ; 49 ; slgb ; >
+      au < manifest ; exists ; 2017 ; State and Local Government Review Volume 49 ; 49 ; slgb ; >
 
     }
 
@@ -41227,7 +41227,7 @@
       #param[base_url] = http://waf.sagepub.com/
 
       au < frozen ; exists ; 2016 ; World Affairs Volume 179 ; 179 ; wafj ; >
-      au < expected ; exists ; 2017 ; World Affairs Volume 180 ; 180 ; wafj ; >
+      au < manifest ; exists ; 2017 ; World Affairs Volume 180 ; 180 ; wafj ; >
 
   }
 
@@ -42902,7 +42902,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Jindal Journal of Business Research Volume 3 ; 3 ; brja ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Jindal Journal of Business Research Volume 4 ; 4 ; brja ; >
     au < frozen ; exists ; 2016 ; Jindal Journal of Business Research Volume 5 ; 5 ; brja ; >
-    au < expected ; exists ; 2017 ; Jindal Journal of Business Research Volume 6 ; 6 ; brja ; >
+    au < manifest ; exists ; 2017 ; Jindal Journal of Business Research Volume 6 ; 6 ; brja ; >
 
     }
 
@@ -45146,7 +45146,7 @@
       #param[base_url] = http://urb.sagepub.com/
 
       au < frozen ; exists ; 2016 ; Urbanisation Volume 1 ; 1 ; urba ; >
-      au < expected ; exists ; 2017 ; Urbanisation Volume 2 ; 2 ; urba ; >
+      au < manifest ; exists ; 2017 ; Urbanisation Volume 2 ; 2 ; urba ; >
 
     }
 
