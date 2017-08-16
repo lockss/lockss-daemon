@@ -22,10 +22,10 @@
       type = bookSeries
     >
       
-      au < frozen ; exists ; 1997 ; 978-0-08-042785-0 ; 978-0-585-47530-1 ; 9780585475301 ; Fundamentals of Transportation and Traffic Operations (978-0-58547-530-1) ; >
-      au < frozen ; exists ; 1997 ; 978-0-585-47441-0 ; 978-0-08-042764-5 ; 9780585474410 ; Strategic Airport Planning (978-0-58547-441-0) ; >
-      au < frozen ; exists ; 1998 ; 978-0-08-043071-3 ; 978-0-585-47400-7 ; 9780585474007 ; Funding Transport Systems (978-0-58547-400-7) ; >
-      au < finished ; finished ; 1998 ; 978-0-08-043430-8 ; 978-0-585-47418-2 ; 9780585474182 ; Mathematics in Transport Planning and Control (978-0-58547-418-2) ; >
+      au < frozen ; exists ; 1997 ; 9780080427850 ; 9780585475301 ; 9780585475301 ; Fundamentals of Transportation and Traffic Operations (9780585475301) ; >
+      au < frozen ; exists ; 1997 ; 9780585474410 ; 9780080427645 ; 9780585474410 ; Strategic Airport Planning (9780585474410) ; >
+      au < frozen ; exists ; 1998 ; 9780080430713 ; 9780585474007 ; 9780585474007 ; Funding Transport Systems (9780585474007) ; >
+      au < finished ; finished ; 1998 ; 9780080434308 ; 9780585474182 ; 9780585474182 ; Mathematics in Transport Planning and Control (9780585474182) ; >
       au < frozen ; exists ; 2000 ; 978-0-08-043061-4 ; 978-0-08-051801-5 ; 9780080518015 ; Structural Road Accident Models (978-0-08051-801-5) ; >
       au < finished ; finished ; 2001 ; 978-0-08-043903-7 ; 978-0-585-47384-0 ; 9780585473840 ; City Logistics (978-0-58547-384-0) ; >
       au < frozen ; exists ; 2002 ; 978-0-08-043926-6 ; 978-0-585-47460-1 ; 9780585474601 ; Transportation and Traffic Theory in the 21 (978-0-58547-460-1) ; >
@@ -72,12 +72,12 @@
       >
       # notReady: 9780080456041 9780857245670 hashing issues outside our control.
 
-      au < frozen ; exists ; 2001 ; 978-0-08-043595-4 ; 978-1-61583-246-0 ; 9781615832460 ; Handbook of Transport Systems and Traffic Control (978-1-61583-246-0) ; >
-      au < frozen ; exists ; 2003 ; 978-0-08-044103-0 ; 978-1-78635-969-8 ; 9781786359698 ; Handbook of Transport and the Environment (978-1-78635-969-8) ; >
-      au < frozen ; exists ; 2004 ; 978-0-08-044108-5 ; 978-1-61583-253-8 ; 9781615832538 ; Handbook of Transport Geography and Spatial Systems (978-1-61583-253-8) ; >
-      au < notReady ; exists ; 2005 ; 978-0-08-044115-3 ; 978-0-08-045604-1 ; 9780080456041 ; Handbook of Transport Strategy, Policy and Institutions (978-0-08-045604-1) ; >
-      au < notReady ; exists ; 2007 ; 978-0-08-045376-7 ; 978-0-85724-567-0 ; 9780857245670 ; Handbook of Transport Modelling: 2nd Edition (978-0-85724-567-0) ; >
-      au < exists ; exists ; 2008 ; 978-0-08-043593-0 ; 978-0-85724-563-2 ; 9780080435930 ; Handbook of Logistics and Supply-Chain Management (978-0-85724-563-2) ; >
+      au < frozen ; exists ; 2001 ; 9780080435954 ; 9781615832460 ; 9781615832460 ; Handbook of Transport Systems and Traffic Control (9781615832460) ; >
+      au < frozen ; exists ; 2003 ; 9780080441030 ; 9781786359698 ; 9781786359698 ; Handbook of Transport and the Environment (9781786359698) ; >
+      au < frozen ; exists ; 2004 ; 9780080441085 ; 9781615832538 ; 9781615832538 ; Handbook of Transport Geography and Spatial Systems (9781615832538) ; >
+      au < notReady ; exists ; 2005 ; 9780080441153 ; 9780080456041 ; 9780080456041 ; Handbook of Transport Strategy, Policy and Institutions (9780080456041) ; >
+      au < notReady ; exists ; 2007 ; 9780080453767 ; 9780857245670 ; 9780857245670 ; Handbook of Transport Modelling: 2nd Edition (9780857245670) ; >
+      au < exists ; exists ; 2008 ; 9780080435930 ; 9780857245632 ; 9780080435930 ; Handbook of Logistics and Supply-Chain Management (9780857245632) ; >
 
   }
   
@@ -115,7 +115,6 @@
       >
 
       #param[journal_issn] = 1475-1488
-      #In 2015, found that issn associated with volume 3-6 for articles is different from the toc. Resulting in no substance. See RT7387
 
       au < doNotProcess ; doNotProcess ; 2000 ; 978-0-7623-0668-8 ; 978-1-84950-055-5 ; 9781849500555 ; Advances in Accounting Behavioral Research Volume 3 ; > #RT7387 incorrect article links
       au < doNotProcess ; doNotProcess ; 2001 ; 978-0-7623-0784-5 ; 978-1-84950-104-0 ; 9781849501040 ; Advances in Accounting Behavioral Research Volume 4 ; > #RT7387 incorrect article links
@@ -283,7 +282,7 @@
       au < exists ; exists ; 2014 ; 978-1-78441-102-2 ; 978-1-78441-101-5 ; 9781784411015 ; Entangled Political Economy Volume 18 ; >
       au < exists ; exists ; 2015 ; 978-1-78560-137-8 ; 978-1-78560-136-1 ; 9781785601361 ; New Thinking in Austrian Political Economy Volume 19 ; >
       au < exists ; exists ; 2016 ; 978-1-78635-274-3 ; 978-1-78635-273-6 ; 9781786352736 ; Studies in Austrian Macroeconomics Volume 20 ; >
-      au < exists ; exists ; 2016 ; 978-1-78560-988-6 ; 978-1-78560-987-9 ; 9781785609879 ; Revisiting Hayek’s Political Economy Volume 21 ; >
+      au < exists ; exists ; 2016 ; 978-1-78560-988-6 ; 978-1-78560-987-9 ; 9781785609879 ; Revisiting Hayek's Political Economy Volume 21 ; >
 
   }
 
@@ -367,18 +366,18 @@
 
       #param[journal_issn] = 1871-3173
 
-      au < manifest ; exists ; 2008 ; 978-0-7623-1451-5 ; 978-1-84950-522-2 ; 978-1-84950-522-2 ; Advances in Culture, Tourism and Hospitality Research Volume 2 ; >
-      au < manifest ; exists ; 2009 ; 978-1-84950-603-8 ; 978-1-84950-604-5 ; 978-1-84950-604-5 ; Perspectives on Cross-Cultural, Ethnographic, Brand Image, Storytelling, Unconscious Needs, and Hospitality Guest Research Volume 3 ; >
-      au < manifest ; exists ; 2010 ; 978-1-84950-900-8 ; 978-1-84950-901-5 ; 978-1-84950-901-5 ; Tourism-Marketing Performance Metrics and Usefulness Auditing of Destination Websites Volume 4 ; >
-      au < manifest ; exists ; 2011 ; 978-0-85724-853-4 ; 978-0-85724-854-1 ; 978-0-85724-854-1 ; Tourism Sensemaking: Strategies to Give Meaning to Experience Volume 5 ; >
-      au < manifest ; exists ; 2012 ; 978-1-78052-742-0 ; 978-1-78052-743-7 ; 978-1-78052-743-7 ; Field Guide to Case Study Research in Tourism, Hospitality and Leisure Volume 6 ; >
-      au < manifest ; exists ; 2013 ; 978-1-78190-210-3 ; 978-1-78190-211-0 ; 978-1-78190-211-0 ; Luxury Fashion and Culture Volume 7 ; >
-      au < exists ; exists ; 2014 ; 978-1-78350-618-7 ; 978-1-78350-617-0 ; 978-1-78350-617-0 ; Tourists’ Perceptions and Assessments Volume 8 ; >
-      au < exists ; exists ; 2014 ; 978-1-78441-172-5 ; 978-1-78441-171-8 ; 978-1-78441-171-8 ; Tourists’ Behaviors and Evaluations Volume 9 ; >
-      au < exists ; exists ; 2015 ; 978-1-78441-940-0 ; 978-1-78441-939-4 ; 978-1-78441-939-4 ; Marketing Places and Spaces Volume 10 ; >
-      au < exists ; exists ; 2016 ; 978-1-78560-217-7 ; 978-1-78560-216-0 ; 978-1-78560-216-0 ; Storytelling-Case Archetype Decoding and Assignment Manual (SCADAM) Volume 11 ; >
-      au < exists ; exists ; 2016 ; 978-1-78635-714-4 ; 978-1-78635-713-7 ; 978-1-78635-713-7 ; Tourism and Hospitality Management Volume 12 ; >
-      au < exists ; exists ; 2017 ; 978-1-78714-691-4 ; 978-1-78714-690-7 ; 978-1-78714-690-7 ; Consumer Behavior in Tourism and Hospitality Research Volume 13 ; >
+      au < manifest ; exists ; 2008 ; 978-0-7623-1451-5 ; 978-1-84950-522-2 ; 9781849505222 ; Advances in Culture, Tourism and Hospitality Research Volume 2 ; >
+      au < manifest ; exists ; 2009 ; 978-1-84950-603-8 ; 978-1-84950-604-5 ; 9781849506045 ; Perspectives on Cross-Cultural, Ethnographic, Brand Image, Storytelling, Unconscious Needs, and Hospitality Guest Research Volume 3 ; >
+      au < manifest ; exists ; 2010 ; 978-1-84950-900-8 ; 978-1-84950-901-5 ; 9781849509015 ; Tourism-Marketing Performance Metrics and Usefulness Auditing of Destination Websites Volume 4 ; >
+      au < manifest ; exists ; 2011 ; 978-0-85724-853-4 ; 978-0-85724-854-1 ; 9780857248541 ; Tourism Sensemaking: Strategies to Give Meaning to Experience Volume 5 ; >
+      au < manifest ; exists ; 2012 ; 978-1-78052-742-0 ; 978-1-78052-743-7 ; 9781780527437 ; Field Guide to Case Study Research in Tourism, Hospitality and Leisure Volume 6 ; >
+      au < manifest ; exists ; 2013 ; 978-1-78190-210-3 ; 978-1-78190-211-0 ; 9781781902110 ; Luxury Fashion and Culture Volume 7 ; >
+      au < exists ; exists ; 2014 ; 978-1-78350-618-7 ; 978-1-78350-617-0 ; 9781783506170 ; Tourists' Perceptions and Assessments Volume 8 ; >
+      au < exists ; exists ; 2014 ; 978-1-78441-172-5 ; 978-1-78441-171-8 ; 9781784411718 ; Tourists' Behaviors and Evaluations Volume 9 ; >
+      au < exists ; exists ; 2015 ; 978-1-78441-940-0 ; 978-1-78441-939-4 ; 9781784419394 ; Marketing Places and Spaces Volume 10 ; >
+      au < exists ; exists ; 2016 ; 978-1-78560-217-7 ; 978-1-78560-216-0 ; 9781785602160 ; Storytelling-Case Archetype Decoding and Assignment Manual (SCADAM) Volume 11 ; >
+      au < exists ; exists ; 2016 ; 978-1-78635-714-4 ; 978-1-78635-713-7 ; 9781786357137 ; Tourism and Hospitality Management Volume 12 ; >
+      au < exists ; exists ; 2017 ; 978-1-78714-691-4 ; 978-1-78714-690-7 ; 9781787146907 ; Consumer Behavior in Tourism and Hospitality Research Volume 13 ; >
 
   }
 
@@ -435,7 +434,7 @@
       au < manifest ; exists ; 2012 ; 978-1-78190-307-0 ; 978-1-78190-308-7 ; 9781781903087 ; Essays in Honor of Jerry Hausman Volume 29 ; >
       au < manifest ; exists ; 2012 ; 978-1-78190-309-4 ; 978-1-78190-310-0 ; 9781781903100 ; 30th Anniversary Edition Volume 30 ; >
       au < exists ; exists ; 2013 ; 978-1-78350-052-9 ; 978-1-78350-053-6 ; 9781783500536 ; Structural Econometric Models Volume 31 ; >
-      au < exists ; exists ; 2013 ; 978-1-78190-752-8 ; 978-1-78190-753-5 ; 9781781907535 ; VAR Models in Macroeconomics – New Developments and Applications: Essays in Honor of Christopher A. Sims Volume 32 ; >
+      au < exists ; exists ; 2013 ; 978-1-78190-752-8 ; 978-1-78190-753-5 ; 9781781907535 ; VAR Models in Macroeconomics - New Developments and Applications: Essays in Honor of Christopher A. Sims Volume 32 ; >
       au < exists ; exists ; 2014 ; 978-1-78441-183-1 ; 978-1-78441-182-4 ; 9781784411824 ; Essays in Honor of Peter C. B. Phillips Volume 33 ; >
       au < exists ; exists ; 2014 ; 978-1-78441-185-5 ; 978-1-78441-184-8 ; 9781784411848 ; Bayesian Model Comparison Volume 34 ; >
       au < exists ; exists ; 2016 ; 978-1-78560-353-2 ; 978-1-78560-352-5 ; 9781785603525 ; Dynamic Factor Models Volume 35 ; >

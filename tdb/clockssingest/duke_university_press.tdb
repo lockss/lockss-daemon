@@ -569,6 +569,7 @@
       au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2016 ; Environmental Humanities Volume 8 ; 8 ; >
       au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2016 ; Environmental Humanities Volume 9 ; 9 ; >
       au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2017 ; Environmental Humanities Volume 10 ; 10 ; >
+      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2017 ; Environmental Humanities Volume 11 ; 11 ; >
 
   }
 
@@ -830,7 +831,8 @@
 
      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Journal of Chinese Literature and Culture Volume 1 ; 1 ; >
      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2015 ; Journal of Chinese Literature and Culture Volume 2 ; 2 ; >
-     au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2016 ; Journal of Chinese Literature and Culture Volume 3 ; 3 ; >
+     au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2016 ; Journal of Chinese Literature and Culture Volume 3 ; 3 ; >
+     au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2017 ; Journal of Chinese Literature and Culture Volume 4 ; 4 ; >
 
   }
 
@@ -937,7 +939,8 @@
       implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
       au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2015 ; Journal of Middle East Women's Studies Volume 11 ; 11 ; >
-      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2016 ; Journal of Middle East Women's Studies Volume 12 ; 12 ; >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2016 ; Journal of Middle East Women's Studies Volume 12 ; 12 ; >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2017 ; Journal of Middle East Women's Studies Volume 13 ; 13 ; >
 
    }
 
@@ -1806,7 +1809,8 @@
       implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
       au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2015 ; Twentieth-Century Literature Volume 61 ; 61 ; >
-      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2016 ; Twentieth-Century Literature Volume 62 ; 62 ; >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2016 ; Twentieth-Century Literature Volume 62 ; 62 ; >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2017 ; Twentieth-Century Literature Volume 63 ; 63 ; >
 
      }
 
@@ -1841,7 +1845,8 @@
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2013 ; World Policy Journal Volume 30 ; 30 ; >
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2014 ; World Policy Journal Volume 31 ; 31 ; >
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2015 ; World Policy Journal Volume 32 ; 32 ; >
-      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2016 ; World Policy Journal Volume 33 ; 33 ; >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2016 ; World Policy Journal Volume 33 ; 33 ; >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2017 ; World Policy Journal Volume 34 ; 34 ; >
 
   }
   
