@@ -32406,7 +32406,7 @@
       param[base_url] = http://nab.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < frozen ; exists ; 2014 ; Nanobiomedicine Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2014 ; Nanobiomedicine Volume 1 ; 1 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2015 ; Nanobiomedicine Volume 2 ; 2 ; >
       au < doNotProcess ; exists ; 2016 ; Nanobiomedicine Volume 3 ; 3 ; >
 
@@ -32422,9 +32422,9 @@
       param[base_url] = http://nax.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < frozen ; exists ; 2011 ; Nanomaterials and Nanotechnology Volume 1 ; 1 ; >
-      au < frozen ; exists ; 2012 ; Nanomaterials and Nanotechnology Volume 2 ; 2 ; >
-      au < frozen ; exists ; 2013 ; Nanomaterials and Nanotechnology Volume 3 ; 3 ; >
+      au < superseded ; exists ; 2011 ; Nanomaterials and Nanotechnology Volume 1 [superseded] ; 1 ; >
+      au < frozen ; exists ; 2012 ; Nanomaterials and Nanotechnology Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+      au < frozen ; exists ; 2013 ; Nanomaterials and Nanotechnology Volume 3 ; 3 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2014 ; Nanomaterials and Nanotechnology Volume 4 ; 4 ; >
       au < frozen ; exists ; 2015 ; Nanomaterials and Nanotechnology Volume 5 ; 5 ; >
       au < doNotProcess ; exists ; 2016 ; Nanomaterials and Nanotechnology Volume 6 ; 6 ; >
@@ -33213,7 +33213,7 @@
       au < doNotProcess ; exists ; 2012 ; Nineteenth Century Theatre and Film Volume 39 ; 39 ; >
       au < doNotProcess ; exists ; 2013 ; Nineteenth Century Theatre and Film Volume 40 ; 40 ; >
       au < finished ; finished ; 2014 ; Nineteenth Century Theatre and Film Volume 41 ; 41 ; >
-      au < frozen ; exists ; 2015 ; Nineteenth Century Theatre and Film Volume 42 ; 42 ; >
+      au < superseded ; exists ; 2015 ; Nineteenth Century Theatre and Film Volume 42 [superseded] ; 42 ; >
 
   }
 
@@ -43330,12 +43330,12 @@
       au < doNotProcess ; exists ; 2007 ; Tourism Economics Volume 13 [Sage] ; 13 ; >
       au < doNotProcess ; exists ; 2008 ; Tourism Economics Volume 14 [Sage] ; 14 ; >
       au < doNotProcess ; exists ; 2009 ; Tourism Economics Volume 15 [Sage] ; 15 ; >
-      au < frozen ; exists ; 2010 ; Tourism Economics Volume 16 [Sage] ; 16 ; >
-      au < frozen ; exists ; 2011 ; Tourism Economics Volume 17 [Sage] ; 17 ; >
-      au < frozen ; exists ; 2012 ; Tourism Economics Volume 18 [Sage] ; 18 ; >
-      au < frozen ; exists ; 2013 ; Tourism Economics Volume 19 [Sage] ; 19 ; >
-      au < frozen ; exists ; 2014 ; Tourism Economics Volume 20 [Sage] ; 20 ; >
-      au < frozen ; exists ; 2015 ; Tourism Economics Volume 21 [Sage] ; 21 ; >
+      au < superseded ; exists ; 2010 ; Tourism Economics Volume 16 [superseded] ; 16 ; >
+      au < superseded ; exists ; 2011 ; Tourism Economics Volume 17 [superseded] ; 17 ; >
+      au < frozen ; exists ; 2012 ; Tourism Economics Volume 18 [Sage] ; 18 ; reingest1.clockss.org:8082 >
+      au < frozen ; exists ; 2013 ; Tourism Economics Volume 19 [Sage] ; 19 ; reingest1.clockss.org:8082 >
+      au < superseded ; exists ; 2014 ; Tourism Economics Volume 20 [superseded] ; 20 ; >
+      au < superseded ; exists ; 2015 ; Tourism Economics Volume 21 [superseded] ; 21 ; >
       au < frozen ; exists ; 2016 ; Tourism Economics Volume 22 [Sage] ; 22 ; >
 
   }
@@ -44000,9 +44000,9 @@
       au < doNotProcess ; exists ; 2008 ; Tropical Conservation Science Volume 1 ; 1 ; >
       au < doNotProcess ; exists ; 2009 ; Tropical Conservation Science Volume 2 ; 2 ; >
       au < doNotProcess ; exists ; 2010 ; Tropical Conservation Science Volume 3 ; 3 ; >
-      au < frozen ; exists ; 2011 ; Tropical Conservation Science Volume 4 ; 4 ; >
+      au < superseded ; exists ; 2011 ; Tropical Conservation Science Volume 4 [superseded] ; 4 ; >
       au < frozen ; exists ; 2012 ; Tropical Conservation Science Volume 5 ; 5 ; >
-      au < frozen ; exists ; 2013 ; Tropical Conservation Science Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2013 ; Tropical Conservation Science Volume 6 ; 6 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2014 ; Tropical Conservation Science Volume 7 ; 7 ; >
       au < frozen ; exists ; 2015 ; Tropical Conservation Science Volume 8 ; 8 ; >
       au < doNotProcess ; exists ; 2016 ; Tropical Conservation Science Volume 9 ; 9 ; >

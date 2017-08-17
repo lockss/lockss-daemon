@@ -29526,7 +29526,7 @@
 
       #param[base_url] = http://nax.sagepub.com/
 
-      au < doNotProcess ; doNotProcess ; 2011 ; Nanomaterials and Nanotechnology Volume 1 ; 1 ; naxa ; >
+      au < exists ; exists ; 2011 ; Nanomaterials and Nanotechnology Volume 1 ; 1 ; naxa ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Nanomaterials and Nanotechnology Volume 2 ; 2 ; naxa ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Nanomaterials and Nanotechnology Volume 3 ; 3 ; naxa ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Nanomaterials and Nanotechnology Volume 4 ; 4 ; naxa ; >
@@ -30276,20 +30276,22 @@
 
       #param[base_url] = http://nct.sagepub.com/
 
-      au < exists ; exists ; 2002 ; Nineteenth Century Theatre and Film Volume 29 ; 29 ; nctc ; >
-      au < exists ; exists ; 2003 ; Nineteenth Century Theatre and Film Volume 30 ; 30 ; nctc ; >
-      au < exists ; exists ; 2004 ; Nineteenth Century Theatre and Film Volume 31 ; 31 ; nctc ; >
-      au < exists ; exists ; 2005 ; Nineteenth Century Theatre and Film Volume 32 ; 32 ; nctc ; >
-      au < exists ; exists ; 2006 ; Nineteenth Century Theatre and Film Volume 33 ; 33 ; nctc ; >
-      au < exists ; exists ; 2007 ; Nineteenth Century Theatre and Film Volume 34 ; 34 ; nctc ; >
-      au < exists ; exists ; 2008 ; Nineteenth Century Theatre and Film Volume 35 ; 35 ; nctc ; >
-      au < exists ; exists ; 2009 ; Nineteenth Century Theatre and Film Volume 36 ; 36 ; nctc ; >
-      au < exists ; exists ; 2010 ; Nineteenth Century Theatre and Film Volume 37 ; 37 ; nctc ; >
-      au < exists ; exists ; 2011 ; Nineteenth Century Theatre and Film Volume 38 ; 38 ; nctc ; >
-      au < exists ; exists ; 2012 ; Nineteenth Century Theatre and Film Volume 39 ; 39 ; nctc ; >
-      au < exists ; exists ; 2013 ; Nineteenth Century Theatre and Film Volume 40 ; 40 ; nctc ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; Nineteenth Century Theatre and Film Volume 41 ; 41 ; nctc ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; Nineteenth Century Theatre and Film Volume 42 ; 42 ; nctc ; >
+      au < exists ; exists ; 1999 ; Nineteenth Century Theatre and Film Volume 27 ; 27 ; nctc ; >
+      au < exists ; exists ; 2000 ; Nineteenth Century Theatre and Film Volume 28 ; 28 ; nctc ; >
+      au < exists ; exists ; 2002 ; Nineteenth Century Theatre and Film Volume 29 ; 29 ; nctd ; >
+      au < exists ; exists ; 2003 ; Nineteenth Century Theatre and Film Volume 30 ; 30 ; nctd ; >
+      au < exists ; exists ; 2004 ; Nineteenth Century Theatre and Film Volume 31 ; 31 ; nctd ; >
+      au < exists ; exists ; 2005 ; Nineteenth Century Theatre and Film Volume 32 ; 32 ; nctd ; >
+      au < exists ; exists ; 2006 ; Nineteenth Century Theatre and Film Volume 33 ; 33 ; nctd ; >
+      au < exists ; exists ; 2007 ; Nineteenth Century Theatre and Film Volume 34 ; 34 ; nctd ; >
+      au < exists ; exists ; 2008 ; Nineteenth Century Theatre and Film Volume 35 ; 35 ; nctd ; >
+      au < exists ; exists ; 2009 ; Nineteenth Century Theatre and Film Volume 36 ; 36 ; nctd ; >
+      au < exists ; exists ; 2010 ; Nineteenth Century Theatre and Film Volume 37 ; 37 ; nctd ; >
+      au < exists ; exists ; 2011 ; Nineteenth Century Theatre and Film Volume 38 ; 38 ; nctd ; >
+      au < exists ; exists ; 2012 ; Nineteenth Century Theatre and Film Volume 39 ; 39 ; nctd ; >
+      au < exists ; exists ; 2013 ; Nineteenth Century Theatre and Film Volume 40 ; 40 ; nctd ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; Nineteenth Century Theatre and Film Volume 41 ; 41 ; nctd ; >
+      au < exists ; exists ; 2015 ; Nineteenth Century Theatre and Film Volume 42 ; 42 ; nctd ; >
 
   }
 
@@ -40222,7 +40224,7 @@
       au < frozen ; exists ; 2008 ; Tropical Conservation Science Volume 1 ; 1 ; trca ; >
       au < manifest ; exists ; 2009 ; Tropical Conservation Science Volume 2 ; 2 ; trca ; >
       au < frozen ; exists ; 2010 ; Tropical Conservation Science Volume 3 ; 3 ; trca ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; Tropical Conservation Science Volume 4 ; 4 ; trca ; >
+      au < exists ; exists ; 2011 ; Tropical Conservation Science Volume 4 ; 4 ; trca ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Tropical Conservation Science Volume 5 ; 5 ; trca ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Tropical Conservation Science Volume 6 ; 6 ; trca ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Tropical Conservation Science Volume 7 ; 7 ; trca ; >
@@ -45695,11 +45697,11 @@
     au < frozen ; exists ; 2008 ; Tourism Economics Volume 14 ; 14 ; teua ; >
     au < manifest ; exists ; 2009 ; Tourism Economics Volume 15 ; 15 ; teua ; >
     au < manifest ; exists ; 2010 ; Tourism Economics Volume 16 ; 16 ; teua ; >
-    au < doNotProcess ; doNotProcess ; 2011 ; Tourism Economics Volume 17 ; 17 ; teua ; >
+    au < exists ; exists ; 2011 ; Tourism Economics Volume 17 ; 17 ; teua ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Tourism Economics Volume 18 ; 18 ; teua ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Tourism Economics Volume 19 ; 19 ; teua ; >
-    au < doNotProcess ; doNotProcess ; 2014 ; Tourism Economics Volume 20 ; 20 ; teua ; >
-    au < doNotProcess ; doNotProcess ; 2015 ; Tourism Economics Volume 21 ; 21 ; teua ; >
+    au < exists ; exists ; 2014 ; Tourism Economics Volume 20 ; 20 ; teua ; >
+    au < exists ; exists ; 2015 ; Tourism Economics Volume 21 ; 21 ; teua ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Tourism Economics Volume 22 ; 22 ; teua ; >
     au < ready ; exists ; 2017 ; Tourism Economics Volume 23 ; 23 ; teua ; >
 
