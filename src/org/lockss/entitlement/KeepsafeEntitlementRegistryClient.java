@@ -20,10 +20,12 @@ import org.apache.http.message.BasicNameValuePair;
 import org.lockss.app.BaseLockssManager;
 import org.lockss.app.ConfigurableManager;
 import org.lockss.config.Configuration;
+import org.lockss.util.Constants;
 import org.lockss.util.IOUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.UrlUtil;
 import org.lockss.util.urlconn.LockssUrlConnection;
+import org.lockss.util.urlconn.LockssUrlConnectionPool;
 
 public class KeepsafeEntitlementRegistryClient extends BaseLockssManager implements EntitlementRegistryClient, ConfigurableManager {
 
@@ -34,20 +36,35 @@ public class KeepsafeEntitlementRegistryClient extends BaseLockssManager impleme
   static final String DEFAULT_ER_URI = "";
   public static final String PARAM_ER_APIKEY = PREFIX + "apiKey";
   static final String DEFAULT_ER_APIKEY = "";
+  public static final String PARAM_CONNECT_TIMEOUT = PREFIX + "timeout.connect";
+  static final long DEFAULT_CONNECT_TIMEOUT = 30 * Constants.SECOND;
+  public static final String PARAM_DATA_TIMEOUT = PREFIX + "timeout.data";
+  static final long DEFAULT_DATA_TIMEOUT = 120 * Constants.SECOND;
+  public static final String PARAM_CLOSE_IDLE_CONNECTION_IDLE_TIME = PREFIX + "closeIdleConnections.idleTime";
+  static final long DEFAULT_CLOSE_IDLE_CONNECTION_IDLE_TIME = 10 * Constants.MINUTE;
+
   private static final FastDateFormat dateFormat = FastDateFormat.getInstance("yyyyMMdd");
 
+  private LockssUrlConnectionPool connectionPool;
+  private long paramCloseIdleConnectionsIdleTime = DEFAULT_CLOSE_IDLE_CONNECTION_IDLE_TIME;
   private ObjectMapper objectMapper;
   private String erUri;
   private String apiKey;
 
   public KeepsafeEntitlementRegistryClient() {
     this.objectMapper = new ObjectMapper();
+    this.connectionPool = new LockssUrlConnectionPool();
   }
 
   public void setConfig(Configuration config, Configuration oldConfig, Configuration.Differences diffs) {
     if (diffs.contains(PREFIX)) {
       erUri = config.get(PARAM_ER_URI, DEFAULT_ER_URI);
       apiKey = config.get(PARAM_ER_APIKEY, DEFAULT_ER_APIKEY);
+      long connectTimeout = config.getTimeInterval(PARAM_CONNECT_TIMEOUT, DEFAULT_CONNECT_TIMEOUT);
+      long dataTimeout = config.getTimeInterval(PARAM_DATA_TIMEOUT, DEFAULT_DATA_TIMEOUT);
+      paramCloseIdleConnectionsIdleTime = config.getTimeInterval(PARAM_CLOSE_IDLE_CONNECTION_IDLE_TIME, DEFAULT_CLOSE_IDLE_CONNECTION_IDLE_TIME);
+      connectionPool.setConnectTimeout(connectTimeout);
+      connectionPool.setDataTimeout(dataTimeout);
     }
   }
 
@@ -198,12 +215,13 @@ public class KeepsafeEntitlementRegistryClient extends BaseLockssManager impleme
       if(connection != null) {
         IOUtil.safeRelease(connection);
       }
+      connectionPool.closeIdleConnections(paramCloseIdleConnectionsIdleTime);
     }
   }
 
   // protected so that it can be overriden with mock connections in tests
   protected LockssUrlConnection openConnection(String url) throws IOException {
-    return UrlUtil.openConnection(url);
+    return UrlUtil.openConnection(url, connectionPool);
   }
 
   protected static List<NameValuePair> mapToPairs(Map<String, String> params) {
