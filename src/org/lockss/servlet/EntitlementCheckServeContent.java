@@ -167,11 +167,6 @@ public class EntitlementCheckServeContent extends ServeContent {
   }
 
 
-  protected void handleOpenUrlInfo(OpenUrlInfo info) throws IOException {
-    setBibInfoFromOpenUrl(info);
-    super.handleOpenUrlInfo(info);
-  }
-
   /**
    * Handle request for content that belongs to one of our AUs, whether or not
    * we have content for that URL.  If this request contains a version param,
@@ -237,21 +232,13 @@ public class EntitlementCheckServeContent extends ServeContent {
   }
 
   boolean isUserEntitled(ArchivalUnit au) throws IOException, IllegalArgumentException {
-      setBibInfoFromMetadataDB(cu);
-      setBibInfoFromCu(cu, au);
-      setBibInfoFromTdb(au);
-      setBibInfoFromArticleFiles(au, cu);
-      validateBibInfo();
+      validateBibInfo(cu, au);
 
       return entitlementRegistry.isUserEntitled(issn, institution, start, end);
   }
 
   PublisherWorkflow getPublisherWorkflow(ArchivalUnit au) throws IOException, IllegalArgumentException {
-      setBibInfoFromMetadataDB(cu);
-      setBibInfoFromCu(cu, au);
-      setBibInfoFromTdb(au);
-      setBibInfoFromArticleFiles(au, cu);
-      validateBibInfo();
+      validateBibInfo(cu, au);
 
       String publisher = entitlementRegistry.getPublisher(issn, institution, start, end);
       if(StringUtil.isNullString(publisher)) {
@@ -259,22 +246,6 @@ public class EntitlementCheckServeContent extends ServeContent {
       }
 
       return entitlementRegistry.getPublisherWorkflow(publisher);
-  }
-
-  private void setBibInfoFromOpenUrl(OpenUrlInfo info) throws IllegalArgumentException {
-    log.debug2("Setting bib info from OpenURL");
-    if(!StringUtil.isNullString(issn) && !StringUtil.isNullString(start) && !StringUtil.isNullString(end)) {
-      log.debug2("Bib info already set");
-      return;
-    }
-
-    if(info == null) {
-      log.debug2("No OpenUrlInfo");
-      return;
-    }
-
-    BibliographicItem item = info.getBibliographicItem();
-    setBibInfoFromBibliographicItem(item);
   }
 
   private void setBibInfoFromBibliographicItem(BibliographicItem item) {
@@ -326,72 +297,6 @@ public class EntitlementCheckServeContent extends ServeContent {
     setBibInfoFromBibliographicItem(item);
   }
 
-  private void setBibInfoFromArticleFiles(ArchivalUnit au, final CachedUrl cu) throws IllegalArgumentException {
-    log.debug2("Setting bib info from TDB");
-    if(!StringUtil.isNullString(issn) && !StringUtil.isNullString(start) && !StringUtil.isNullString(end)) {
-      log.debug2("Bib info already set");
-      return;
-    }
-
-    if(au == null) {
-      log.debug2("No ArchivalUnit");
-      return;
-    }
-    if(cu == null) {
-      log.debug2("No CachedUrl");
-      return;
-    }
-
-    Plugin plugin = au.getPlugin();
-    if(plugin == null) {
-      log.debug2("No Plugin");
-      return;
-    }
-
-    MetadataTarget target = new MetadataTarget(MetadataTarget.PURPOSE_OPENURL);
-    Iterator<ArticleFiles> afs = au.getArticleIterator();
-    ArticleMetadataExtractor mdExtractor = plugin.getArticleMetadataExtractor(target, au);
-
-    if(afs == null) {
-      log.debug2("No ArticleIterator");
-      return;
-    }
-    if(mdExtractor == null) {
-      log.debug2("No ArticleMetadataExtractor");
-      return;
-    }
-
-    ArticleMetadataExtractor.Emitter emitter = new ArticleMetadataExtractor.Emitter() {
-      public void emitMetadata(ArticleFiles af2, ArticleMetadata md) {
-        String mdUrl = md.get("access.url");
-        String cuUrl = cu.getUrl();
-        log.debug3("Comparing " + mdUrl + " to " + cuUrl);
-        if(mdUrl.equals(cuUrl)) {
-          log.debug2("Found matching URL");
-          setBibInfoFromMetadata(md);
-        }
-      }
-    };
-
-    while(afs.hasNext()) {
-      ArticleFiles af = afs.next();
-      try {
-        mdExtractor.extract(target, af, emitter);
-      }
-      catch(IOException e) {
-        log.error("Error extracting article metadata", e);
-      }
-      catch(PluginException e) {
-        log.error("Error extracting article metadata", e);
-      }
-
-      if(!StringUtil.isNullString(issn) && !StringUtil.isNullString(start) && !StringUtil.isNullString(end)) {
-        log.debug2("Bib info already set");
-        return;
-      }
-    }
-  }
-
   private void setBibInfoFromTdb(ArchivalUnit au) throws IllegalArgumentException {
     log.debug2("Setting bib info from TDB");
     if(!StringUtil.isNullString(issn) && !StringUtil.isNullString(start) && !StringUtil.isNullString(end)) {
@@ -429,52 +334,6 @@ public class EntitlementCheckServeContent extends ServeContent {
           end += "1231";
       }
       log.debug("Setting end to " + end);
-    }
-  }
-
-  private void setBibInfoFromCu(CachedUrl cu, ArchivalUnit au) {
-    log.debug2("Setting bib info from CU");
-    if(!StringUtil.isNullString(issn) && !StringUtil.isNullString(start) && !StringUtil.isNullString(end)) {
-      log.debug2("Bib info already set");
-      return;
-    }
-
-    if(au == null) {
-      log.debug2("No ArchivalUnit");
-      return;
-    }
-    if(cu == null) {
-      log.debug2("No CachedUrl");
-      return;
-    }
-
-    Plugin plugin = au.getPlugin();
-    if(plugin == null) {
-      log.debug2("No Plugin");
-      return;
-    }
-
-
-    MetadataTarget target = new MetadataTarget(MetadataTarget.PURPOSE_OPENURL);
-    FileMetadataExtractor mdExtractor = plugin.getFileMetadataExtractor(target, cu.getContentType(), au);
-    if(mdExtractor == null) {
-      log.debug2("No FileMetadataExtractor");
-      return;
-    }
-    FileMetadataExtractor.Emitter emitter = new FileMetadataExtractor.Emitter() {
-      public void emitMetadata(CachedUrl cu, ArticleMetadata md) {
-        log.debug2("ArticleMetadata found");
-        setBibInfoFromMetadata(md);
-      }
-    };
-    try {
-      mdExtractor.extract(target, cu, emitter);
-    }
-    catch(IOException e) {
-      log.error("Error extracting CU metadata", e);
-    }
-    catch(PluginException e) {
-      log.error("Error extracting CU metadata", e);
     }
   }
 
@@ -560,7 +419,10 @@ public class EntitlementCheckServeContent extends ServeContent {
     }
   }
 
-  private void validateBibInfo() {
+  private void validateBibInfo(CachedUrl cu, ArchivalUnit au) {
+     setBibInfoFromMetadataDB(cu);
+     setBibInfoFromTdb(au);
+
      if(StringUtil.isNullString(issn)) {
        throw new IllegalArgumentException("ArchivalUnit has no ISSN");
      }
