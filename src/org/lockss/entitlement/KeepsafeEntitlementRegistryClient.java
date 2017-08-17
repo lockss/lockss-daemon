@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.text.DateFormat;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -13,6 +12,7 @@ import java.util.Map;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.JsonNode;
+import org.apache.commons.lang3.time.FastDateFormat;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.message.BasicNameValuePair;
@@ -34,7 +34,7 @@ public class KeepsafeEntitlementRegistryClient extends BaseLockssManager impleme
   static final String DEFAULT_ER_URI = "";
   public static final String PARAM_ER_APIKEY = PREFIX + "apiKey";
   static final String DEFAULT_ER_APIKEY = "";
-  private static final DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
+  private static final FastDateFormat dateFormat = FastDateFormat.getInstance("yyyyMMdd");
 
   private ObjectMapper objectMapper;
   private String erUri;

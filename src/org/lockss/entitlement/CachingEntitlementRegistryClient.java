@@ -13,7 +13,8 @@ import org.lockss.config.Configuration;
 
 /*
  * A very basic cache which just stores the results of the last 100 calls to the Entitlement Registry.
- * There's a strong chance this will need to become something more complicated down the line.
+ * There's a strong chance this will need to become something more complicated down the line if performance isn't acceptable.
+ * In this case though, it would probably be best to replace it with something like Guava's caching, rather than building something custom.
  */
 public class CachingEntitlementRegistryClient extends BaseLockssDaemonManager implements EntitlementRegistryClient, ConfigurableManager {
   public static final String PREFIX = Configuration.PREFIX + "entitlement.cache.";
@@ -34,7 +35,7 @@ public class CachingEntitlementRegistryClient extends BaseLockssDaemonManager im
     }
   }
 
-  public boolean isUserEntitled(String issn, String institution, String start, String end) throws IOException {
+  public synchronized boolean isUserEntitled(String issn, String institution, String start, String end) throws IOException {
     Object result = this.cache.get("isUserEntitled", issn, institution, start, end);
     if(result == null) {
         result = this.client.isUserEntitled(issn, institution, start, end);
@@ -43,7 +44,7 @@ public class CachingEntitlementRegistryClient extends BaseLockssDaemonManager im
     return (Boolean) result;
   }
 
-  public String getPublisher(String issn, String institution, String start, String end) throws IOException {
+  public synchronized String getPublisher(String issn, String institution, String start, String end) throws IOException {
     Object result = this.cache.get("getPublisher", issn, institution, start, end);
     if(result == null) {
         result = this.client.getPublisher(issn, institution, start, end);
@@ -52,7 +53,7 @@ public class CachingEntitlementRegistryClient extends BaseLockssDaemonManager im
     return (String) result;
   }
 
-  public PublisherWorkflow getPublisherWorkflow(String publisherName) throws IOException {
+  public synchronized PublisherWorkflow getPublisherWorkflow(String publisherName) throws IOException {
     Object result = this.cache.get("getPublisherWorkflow", publisherName);
     if(result == null) {
         result = this.client.getPublisherWorkflow(publisherName);
@@ -61,7 +62,7 @@ public class CachingEntitlementRegistryClient extends BaseLockssDaemonManager im
     return (PublisherWorkflow) result;
   }
 
-  public String getInstitution(String scope) throws IOException {
+  public synchronized String getInstitution(String scope) throws IOException {
     Object result = this.cache.get("getInstitution", scope);
     if(result == null) {
         result = this.client.getInstitution(scope);
@@ -69,6 +70,5 @@ public class CachingEntitlementRegistryClient extends BaseLockssDaemonManager im
     }
     return (String) result;
   }
-
 }
 
