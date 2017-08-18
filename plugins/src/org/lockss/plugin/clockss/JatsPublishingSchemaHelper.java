@@ -308,8 +308,8 @@ implements SourceXmlSchemaHelper {
   
   public static String JATS_copydate = JATS_ameta + "/permissions/copyright-year";
   // The date could be identified by new or by older tag attributes
-  // as a backup
-  private static String pubdate_attr_options = "@date-type = \"pub\" or @pub-type = \"ppub\"" +
+  // as a backup with correct attribute or no type attribute
+  private static String pubdate_attr_options = "@date-type = \"pub\" or @pub-type = \"ppub\" or not(@pub-type)" +
       " or @pub-type = \"pub\"";
   private static String epubdate_attr_options = "@pub-type = \"epub\" or @pub-type = \"epub-ppub\"";
 
@@ -317,6 +317,7 @@ implements SourceXmlSchemaHelper {
   public static String JATS_edate = JATS_ameta + "/pub-date[" + epubdate_attr_options +"]";
   /* extra level for westernized version of chinese character names */
   private static String JATS_contrib = JATS_ameta + "/contrib-group/contrib/name | " + JATS_ameta + "/contrib-group/contrib/name-alternatives/name[@name-style = \"western\"]";
+  private static String JATS_string_contrib = JATS_ameta + "/contrib-group/contrib/string-name";
   
   /*
    *  The following 3 variables are needed to construct the XPathXmlMetadataParser
@@ -349,6 +350,8 @@ implements SourceXmlSchemaHelper {
     JATS_articleMap.put(JATS_edate, JATS_DATE_VALUE);
     JATS_articleMap.put(JATS_copydate, XmlDomMetadataExtractor.TEXT_VALUE); 
     JATS_articleMap.put(JATS_contrib, JATS_AUTHOR_VALUE);
+    // fall back (used by PSOT)
+    JATS_articleMap.put(JATS_string_contrib, XmlDomMetadataExtractor.TEXT_VALUE);
 
   }
 
