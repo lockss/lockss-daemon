@@ -58,8 +58,12 @@ public class TestCopernicusArchivalUnit extends LockssTestCase {
   static final String HOME_URL_KEY = "home_url";
   static final String VOL_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
   static final String YEAR_KEY = ConfigParamDescr.YEAR.getKey();
-  static final String ROOT_URL = "http://www.test-cop.com/"; //this is not a real url
-  static final String ROOT_HOME_URL = "http://www.TestCopernicus.com/"; //this is not a real url
+
+  static final String BASE_HOST = "www.test-cop.com"; //this is not a real url
+  static final String HOME_HOST = "www.TestCopernicus.com"; //this is not a real url
+  
+  static final String ROOT_URL = "http://" + BASE_HOST + "/"; //this is not a real url
+  static final String ROOT_HOME_URL = "http://" + HOME_HOST + "/"; //this is not a real url
   
   static Logger log = Logger.getLogger(TestCopernicusArchivalUnit.class);
   
@@ -70,14 +74,16 @@ public class TestCopernicusArchivalUnit extends LockssTestCase {
   // call on the returning strings calls it (but only on the base/home_url params)
   static final String baseRepairList[] =
     {
-        "^"+Perl5Compiler.quotemeta(ROOT_URL)+"inc/[^/]+/[^/]+\\.(gif|png|css|js)$",
-        "^"+Perl5Compiler.quotemeta(ROOT_HOME_URL)+"[^/]+\\.(gif|jpe?g|png|tif?f|css|js)$",
+    "^https?://(contentmanager|cdn)\\.copernicus\\.org/",
+    "^https?://" + Perl5Compiler.quotemeta(BASE_HOST) + "/inc/[^/]+/[^/]+\\.(gif|png|css|js)$",
+    "^https?://" + Perl5Compiler.quotemeta(HOME_HOST) + "/[^/]+\\.(gif|jpe?g|png|tif?f|css|js)$",
     };
   
   static final String journalRepairList[] =
     {
-        "^"+Perl5Compiler.quotemeta(ROOT_URL)+"inc/[^/]+/[^/]+\\.(gif|png|css|js)$",
-        "^"+Perl5Compiler.quotemeta(ROOT_HOME_URL)+"[^/]+\\.(gif|jpe?g|png|tif?f|css|js)$",
+    "^https?://(contentmanager|cdn)\\.copernicus\\.org/",
+    "^https?://" + Perl5Compiler.quotemeta(BASE_HOST) + "/inc/[^/]+/[^/]+\\.(gif|png|css|js)$",
+    "^https?://" + Perl5Compiler.quotemeta(HOME_HOST) + "/[^/]+\\.(gif|jpe?g|png|tif?f|css|js)$",
     };
 
   public void setUp() throws Exception {
@@ -218,11 +224,13 @@ public class TestCopernicusArchivalUnit extends LockssTestCase {
     
     Pattern p0 = Pattern.compile(baseRepairList[0]);
     Pattern p1 = Pattern.compile(baseRepairList[1]);
-    Matcher m0, m1;
+    Pattern p2 = Pattern.compile(baseRepairList[2]);
+    Matcher m0, m1, m2;
     for (String urlString : repairList) {
       m0 = p0.matcher(urlString);
       m1 = p1.matcher(urlString);
-      assertEquals(urlString, true, m0.find() || m1.find());
+      m2 = p2.matcher(urlString);
+      assertEquals(urlString, true, m0.find() || m1.find() || m2.find());
     }
     
     //and this one should fail - it needs to be weighted correctly and repaired from publisher if possible
