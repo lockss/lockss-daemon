@@ -18,7 +18,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>18</string>
+    <string>19</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -42,21 +42,26 @@
     <string>"Copernicus Publications Plugin, Base URL %s, Home URL %s, Year %d, Volume %s", base_url, home_url, year, volume_name</string>
   </entry>
   <entry>
+  <!--  support migration to https for active AUs -->
     <string>au_start_url</string>
-    <string>"%s%s/index.html", base_url, volume_name</string>
+    <list>
+      <string>"%s%s/index.html", base_url, volume_name</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_permission_url</string>
+      <list>
+        <string>"%svolumes.html",to_http(base_url)</string>
+        <string>"%svolumes.html",to_https(base_url)</string>
+        <string>"%sindex.html",to_http(home_url)</string> 
+        <string>"%sindex.html",to_https(home_url)</string> 
+      </list>
   </entry>
   <entry>
   <!-- manifest lists issue toc's, which list articles -->
     <string>au_refetch_depth</string>
     <int>2</int>
-  </entry>  
-  <entry>
-    <string>au_permission_url</string>
-      <list>
-        <string>"%sindex.html",base_url</string>
-        <string>"%sindex.html",home_url</string> 
-      </list>
-  </entry>
+  </entry>    
   <entry>
     <string>au_feature_urls</string>
     <map>
@@ -80,15 +85,19 @@
     <string>au_crawlrules</string>
     <list>
       <string>1,"^https?://(%s|%s).*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", url_host(base_url), url_host(home_url)</string>
+      <!--  two CDN that contain style information -->
+      <string>1,"^https?://(contentmanager|cdn)\.copernicus\.org/."</string>
 <!--  article level metrics live at <filename>-metrics.html -->      
-      <string>2,"^%s%s/.*-metrics.html$",base_url,volume_name</string>
+      <string>2,"^https?://%s/%s/.*-metrics.html$",url_host(base_url),volume_name</string>
 <!--  related articles live at <filename>-relations.html -->      
-      <string>2,"^%s%s/.*-relations.html$",base_url,volume_name</string>
+      <string>2,"^https?://%s/%s/.*-relations.html$",url_host(base_url),volume_name</string>
 <!--  article level discussions/"peer review" live at <filename>-discussion.html -->
-      <string>2,"^%s%s/.*-discussion.html$",base_url,volume_name</string>
+      <string>2,"^https?://%s/%s/.*-discussion.html$",url_host(base_url),volume_name</string>
 <!--article at <base_url>/14/4/2012/<filename>.(html|.pdf|.xml|.ris|.bib) -->
 <!--issue TOC at <base_url>/14/index.html or <base_url>/68/issue2.html -->
-      <string>1,"^%s%s/",base_url,volume_name</string>
+      <string>1,"^https?://%s/%s/",url_host(base_url),volume_name</string>
+<!--  this used to be one of the permission urls; leave it in for AUs that already have it-->      
+      <string>1,"^https?://%s/index.html",url_host(base_url),volume_name</string>
 <!--  anything not explicitly collected is inherently excluded so you don't need a statement-->
     </list>
   </entry>
@@ -155,6 +164,20 @@
       </entry>
     </map>
   </entry>
+<!--  support http to https transition for existing AUs -->  
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.base.HttpToHttpsUrlConsumerFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_url_fetcher_factory</string>
+    <string>org.lockss.plugin.base.HttpToHttpsUrlFetcherFactory</string>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.BaseUrlHttpHttpsUrlNormalizer</string>
+  </entry> 
+<!--  end http to https transition specific support  -->
   <entry>
      <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.copernicus.CopernicusHtmlFilterFactory</string>
@@ -199,20 +222,33 @@
    </entry>
   </map>
   </entry>
+  <!-- au_permitted_host_pattern:
+       Necessary for using global hosts (eg cdn) (instead of using base_url2),
+       Until unwieldy, confine these settings to BaseAtyponParent
+       Also, au_permitted_host_pattern must find match in lockss-daemon config (eg):
+       org.lockss.crawler.allowedPluginPermittedHosts =cdn\.nejm\.org -->
+  <entry>
+    <string>au_permitted_host_pattern</string>
+    <list>
+      <string>"(contentmanager|cdn)\.copernicus\.org"</string>
+    </list>
+  </entry>  
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
     <list>
       <!-- -->
-      <string>"^%sinc/[^/]+/[^/]+\.(gif|png|css|js)$", base_url</string>  <!-- short form -->
-      <string>"^%s[^/]+\.(gif|jpe?g|png|tif?f|css|js)$", home_url</string>  <!-- long form -->   
+      <string>"^https?://(contentmanager|cdn)\.copernicus\.org/"</string>  <!-- anything from the cdns -->
+      <string>"^https?://%s/inc/[^/]+/[^/]+\.(gif|png|css|js)$", url_host(base_url)</string>  <!-- short form -->
+      <string>"^https?://%s/[^/]+\.(gif|jpe?g|png|tif?f|css|js)$", url_host(home_url)</string>  <!-- long form -->   
     </list>
   </entry>
   <entry>
     <!-- these will not count towards poll results but will replicate from peer if above 1.69.5 -->
     <string>au_url_poll_result_weight</string>
     <list>
-      <string>"^%sinc/[^/]+/[^/]+\.(gif|png|css|js)$", base_url, 0</string>
-      <string>"%s[^/]+\.(gif|jpe?g|png|tif?f|css|js)$", home_url, 0</string>
+      <string>"^https?://(contentmanager|cdn)\.copernicus\.org/", 0</string>  <!-- anything from the cdns -->
+      <string>"^https?://%s/inc/[^/]+/[^/]+\.(gif|png|css|js)$", url_host(base_url), 0</string>
+      <string>"^https?://%s/[^/]+\.(gif|jpe?g|png|tif?f|css|js)$", url_host(home_url), 0</string>
     </list> 
   </entry> 
   <entry>
