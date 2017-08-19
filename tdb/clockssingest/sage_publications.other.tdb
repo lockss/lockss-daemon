@@ -31,6 +31,21 @@
   {
   
     title <
+      name = SAGE Publications Books Source Content
+    >
+ 
+    plugin = org.lockss.plugin.clockss.sage.ClockssSageBooksSourcePlugin
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/sagebooks-released/
+    hidden[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[year] >
+    
+    au < testing ; exists ; 2017 ; SAGE Publications BBooks Source Content 2017 ; 2017 >
+
+  }  
+  
+  {
+  
+    title <
       name =  MD Conference Express WARC Content
     >
     
