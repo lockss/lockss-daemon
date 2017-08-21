@@ -1296,8 +1296,8 @@
       au < manifest ; exists ; 2006-2007 ; American Journal of Health Promotion Volume 21 ; 21 ; ahpa ; >
       au < manifest ; exists ; 2007-2008 ; American Journal of Health Promotion Volume 22 ; 22 ; ahpa ; >
       au < frozen ; exists ; 2008-2009 ; American Journal of Health Promotion Volume 23 ; 23 ; ahpa ; >
-      au < exists ; exists ; 2009-2010 ; American Journal of Health Promotion Volume 24 ; 24 ; ahpa ; >
-      au < exists ; exists ; 2010-2011 ; American Journal of Health Promotion Volume 25 ; 25 ; ahpa ; >
+      au < manifest ; exists ; 2009-2010 ; American Journal of Health Promotion Volume 24 ; 24 ; ahpa ; >
+      au < manifest ; exists ; 2010-2011 ; American Journal of Health Promotion Volume 25 ; 25 ; ahpa ; >
       au < doNotProcess ; doNotProcess ; 2011-2012 ; American Journal of Health Promotion Volume 26 ; 26 ; ahpa ; >
       au < doNotProcess ; doNotProcess ; 2012-2013 ; American Journal of Health Promotion Volume 27 ; 27 ; ahpa ; >
       au < doNotProcess ; doNotProcess ; 2013-2014 ; American Journal of Health Promotion Volume 28 ; 28 ; ahpa ; >
@@ -12580,7 +12580,7 @@
       au < doNotProcess ; doNotProcess ; 2014-2015 ; General Music Today Volume 28 ; 28 ; gmtb ; >
       au < doNotProcess ; doNotProcess ; 2015-2016 ; General Music Today Volume 29 ; 29 ; gmtb ; >
       au < manifest ; exists ; 2016-2017 ; General Music Today Volume 30 ; 30 ; gmtb ; >
-      au < expected ; exists ; 2017-2018 ; General Music Today Volume 31 ; 31 ; gmtb ; >
+      au < manifest ; exists ; 2017-2018 ; General Music Today Volume 31 ; 31 ; gmtb ; >
 
     }
 
@@ -14670,7 +14670,7 @@
       au < doNotProcess ; doNotProcess ; 2014-2015 ; Imagination, Cognition and Personality Volume 34 ; 34 ; icaa ; >
       au < doNotProcess ; doNotProcess ; 2015-2016 ; Imagination, Cognition and Personality Volume 35 ; 35 ; icaa ; >
       au < manifest ; exists ; 2016-2017 ; Imagination, Cognition and Personality Volume 36 ; 36 ; icaa ; >
-      au < expected ; exists ; 2017-2018 ; Imagination, Cognition and Personality Volume 37 ; 37 ; icaa ; >
+      au < manifest ; exists ; 2017-2018 ; Imagination, Cognition and Personality Volume 37 ; 37 ; icaa ; >
 
   }
 
@@ -15501,7 +15501,7 @@
       au < frozen ; exists ; 2008 ; International Journal of Advanced Robotic Systems Volume 5 ; 5 ; arxa ; >
       au < frozen ; exists ; 2009 ; International Journal of Advanced Robotic Systems Volume 6 ; 6 ; arxa ; >
       au < frozen ; exists ; 2010 ; International Journal of Advanced Robotic Systems Volume 7 ; 7 ; arxa ; >
-      au < exists ; exists ; 2011 ; International Journal of Advanced Robotic Systems Volume 8 ; 8 ; arxa ; >
+      au < manifest ; exists ; 2011 ; International Journal of Advanced Robotic Systems Volume 8 ; 8 ; arxa ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Advanced Robotic Systems Volume 9 ; 9 ; arxa ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Advanced Robotic Systems Volume 10 ; 10 ; arxa ; >
       au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Advanced Robotic Systems Volume 11 ; 11 ; arxa ; >
@@ -16006,7 +16006,7 @@
         au < frozen ; exists ; 2008 ; International Journal of Distributed Sensor Networks Volume 4 ; 4 ; dsna ; >
         au < manifest ; exists ; 2009 ; International Journal of Distributed Sensor Networks Volume 5 ; 5 ; dsna ; >
         au < manifest ; exists ; 2010 ; International Journal of Distributed Sensor Networks Volume 6 ; 6 ; dsna ; >
-        au < exists ; exists ; 2011 ; International Journal of Distributed Sensor Networks Volume 7 ; 7 ; dsna ; >
+        au < manifest ; exists ; 2011 ; International Journal of Distributed Sensor Networks Volume 7 ; 7 ; dsna ; >
         au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Distributed Sensor Networks Volume 8 ; 8 ; dsna ; >
         au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Distributed Sensor Networks Volume 9 ; 9 ; dsna ; >
         au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Distributed Sensor Networks Volume 10 ; 10 ; dsna ; >
@@ -16094,7 +16094,7 @@
 
       au < manifest ; exists ; 2009 ; International Journal of Engineering Business Management Volume 1 ; 1 ; enba ; >
       au < manifest ; exists ; 2010 ; International Journal of Engineering Business Management Volume 2 ; 2 ; enba ; >
-      au < exists ; exists ; 2011 ; International Journal of Engineering Business Management Volume 3 ; 3 ; enba ; >
+      au < manifest ; exists ; 2011 ; International Journal of Engineering Business Management Volume 3 ; 3 ; enba ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Engineering Business Management Volume 4 ; 4 ; enba ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Engineering Business Management Volume 5 ; 5 ; enba ; >
       au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Engineering Business Management Volume 6 ; 6 ; enba ; >
@@ -17728,7 +17728,7 @@
       au < doNotProcess ; doNotProcess ; 2010 ; International Studies Volume 47 ; 47 ; isqa ; >
       au < doNotProcess ; doNotProcess ; 2011 ; International Studies Volume 48 ; 48 ; isqa ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Studies Volume 49 ; 49 ; isqa ; >
-      au < exists ; exists ; 2013 ; International Studies Volume 50 ; 50 ; isqa ; >
+      au < manifest ; exists ; 2013 ; International Studies Volume 50 ; 50 ; isqa ; >
 
     }
 
@@ -29079,9 +29079,9 @@
       au < manifest ; exists ; 2007 ; Metamorphosis Volume 6 ; 6 ; meta ; >
       au < frozen ; exists ; 2008 ; Metamorphosis Volume 7 ; 7 ; meta ; >
       au < manifest ; exists ; 2009 ; Metamorphosis Volume 8 ; 8 ; meta ; >
-      au < exists ; exists ; 2010 ; Metamorphosis Volume 9 ; 9 ; meta ; >
-      au < exists ; exists ; 2011 ; Metamorphosis Volume 10 ; 10 ; meta ; >
-      au < exists ; exists ; 2012 ; Metamorphosis Volume 11 ; 11 ; meta ; >
+      au < manifest ; exists ; 2010 ; Metamorphosis Volume 9 ; 9 ; meta ; >
+      au < manifest ; exists ; 2011 ; Metamorphosis Volume 10 ; 10 ; meta ; >
+      au < manifest ; exists ; 2012 ; Metamorphosis Volume 11 ; 11 ; meta ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Metamorphosis Volume 12 ; 12 ; meta ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Metamorphosis Volume 13 ; 13 ; meta ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Metamorphosis Volume 14 ; 14 ; meta ; >
@@ -29526,7 +29526,7 @@
 
       #param[base_url] = http://nax.sagepub.com/
 
-      au < exists ; exists ; 2011 ; Nanomaterials and Nanotechnology Volume 1 ; 1 ; naxa ; >
+      au < manifest ; exists ; 2011 ; Nanomaterials and Nanotechnology Volume 1 ; 1 ; naxa ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Nanomaterials and Nanotechnology Volume 2 ; 2 ; naxa ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Nanomaterials and Nanotechnology Volume 3 ; 3 ; naxa ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Nanomaterials and Nanotechnology Volume 4 ; 4 ; naxa ; >
@@ -30276,22 +30276,22 @@
 
       #param[base_url] = http://nct.sagepub.com/
 
-      au < exists ; exists ; 1999 ; Nineteenth Century Theatre and Film Volume 27 ; 27 ; nctc ; >
-      au < exists ; exists ; 2000 ; Nineteenth Century Theatre and Film Volume 28 ; 28 ; nctc ; >
-      au < exists ; exists ; 2002 ; Nineteenth Century Theatre and Film Volume 29 ; 29 ; nctd ; >
-      au < exists ; exists ; 2003 ; Nineteenth Century Theatre and Film Volume 30 ; 30 ; nctd ; >
-      au < exists ; exists ; 2004 ; Nineteenth Century Theatre and Film Volume 31 ; 31 ; nctd ; >
-      au < exists ; exists ; 2005 ; Nineteenth Century Theatre and Film Volume 32 ; 32 ; nctd ; >
-      au < exists ; exists ; 2006 ; Nineteenth Century Theatre and Film Volume 33 ; 33 ; nctd ; >
-      au < exists ; exists ; 2007 ; Nineteenth Century Theatre and Film Volume 34 ; 34 ; nctd ; >
-      au < exists ; exists ; 2008 ; Nineteenth Century Theatre and Film Volume 35 ; 35 ; nctd ; >
-      au < exists ; exists ; 2009 ; Nineteenth Century Theatre and Film Volume 36 ; 36 ; nctd ; >
-      au < exists ; exists ; 2010 ; Nineteenth Century Theatre and Film Volume 37 ; 37 ; nctd ; >
-      au < exists ; exists ; 2011 ; Nineteenth Century Theatre and Film Volume 38 ; 38 ; nctd ; >
-      au < exists ; exists ; 2012 ; Nineteenth Century Theatre and Film Volume 39 ; 39 ; nctd ; >
-      au < exists ; exists ; 2013 ; Nineteenth Century Theatre and Film Volume 40 ; 40 ; nctd ; >
+      au < manifest ; exists ; 1999 ; Nineteenth Century Theatre and Film Volume 27 ; 27 ; nctc ; >
+      au < manifest ; exists ; 2000 ; Nineteenth Century Theatre and Film Volume 28 ; 28 ; nctc ; >
+      au < manifest ; exists ; 2002 ; Nineteenth Century Theatre and Film Volume 29 ; 29 ; nctd ; >
+      au < manifest ; exists ; 2003 ; Nineteenth Century Theatre and Film Volume 30 ; 30 ; nctd ; >
+      au < manifest ; exists ; 2004 ; Nineteenth Century Theatre and Film Volume 31 ; 31 ; nctd ; >
+      au < manifest ; exists ; 2005 ; Nineteenth Century Theatre and Film Volume 32 ; 32 ; nctd ; >
+      au < manifest ; exists ; 2006 ; Nineteenth Century Theatre and Film Volume 33 ; 33 ; nctd ; >
+      au < manifest ; exists ; 2007 ; Nineteenth Century Theatre and Film Volume 34 ; 34 ; nctd ; >
+      au < manifest ; exists ; 2008 ; Nineteenth Century Theatre and Film Volume 35 ; 35 ; nctd ; >
+      au < manifest ; exists ; 2009 ; Nineteenth Century Theatre and Film Volume 36 ; 36 ; nctd ; >
+      au < manifest ; exists ; 2010 ; Nineteenth Century Theatre and Film Volume 37 ; 37 ; nctd ; >
+      au < manifest ; exists ; 2011 ; Nineteenth Century Theatre and Film Volume 38 ; 38 ; nctd ; >
+      au < manifest ; exists ; 2012 ; Nineteenth Century Theatre and Film Volume 39 ; 39 ; nctd ; >
+      au < manifest ; exists ; 2013 ; Nineteenth Century Theatre and Film Volume 40 ; 40 ; nctd ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Nineteenth Century Theatre and Film Volume 41 ; 41 ; nctd ; >
-      au < exists ; exists ; 2015 ; Nineteenth Century Theatre and Film Volume 42 ; 42 ; nctd ; >
+      au < manifest ; exists ; 2015 ; Nineteenth Century Theatre and Film Volume 42 ; 42 ; nctd ; >
 
   }
 
@@ -34937,7 +34937,7 @@
       au < frozen ; exists ; 2016 ; Research in Education Volume 95 ; 95 ; riea ; >
       au < frozen ; exists ; 2016 ; Research in Education Volume 96 ; 96 ; riea ; >
       au < manifest ; exists ; 2017 ; Research in Education Volume 97 ; 97 ; riea ; >
-      au < expected ; exists ; 2017 ; Research in Education Volume 98 ; 98 ; riea ; >
+      au < manifest ; exists ; 2017 ; Research in Education Volume 98 ; 98 ; riea ; >
 
   }
 
@@ -39533,7 +39533,7 @@
       au < manifest ; exists ; 2017 ; Thesis Eleven Volume 138 ; 138 ; thea ; >
       au < manifest ; exists ; 2017 ; Thesis Eleven Volume 139 ; 139 ; thea ; >
       au < manifest ; exists ; 2017 ; Thesis Eleven Volume 140 ; 140 ; thea ; >
-      au < expected ; exists ; 2017 ; Thesis Eleven Volume 141 ; 141 ; thea ; >
+      au < manifest ; exists ; 2017 ; Thesis Eleven Volume 141 ; 141 ; thea ; >
       au < expected ; exists ; 2017 ; Thesis Eleven Volume 142 ; 142 ; thea ; >
       au < expected ; exists ; 2017 ; Thesis Eleven Volume 143 ; 143 ; thea ; >
 
@@ -40224,7 +40224,7 @@
       au < frozen ; exists ; 2008 ; Tropical Conservation Science Volume 1 ; 1 ; trca ; >
       au < manifest ; exists ; 2009 ; Tropical Conservation Science Volume 2 ; 2 ; trca ; >
       au < frozen ; exists ; 2010 ; Tropical Conservation Science Volume 3 ; 3 ; trca ; >
-      au < exists ; exists ; 2011 ; Tropical Conservation Science Volume 4 ; 4 ; trca ; >
+      au < manifest ; exists ; 2011 ; Tropical Conservation Science Volume 4 ; 4 ; trca ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Tropical Conservation Science Volume 5 ; 5 ; trca ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Tropical Conservation Science Volume 6 ; 6 ; trca ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Tropical Conservation Science Volume 7 ; 7 ; trca ; >
@@ -45697,11 +45697,11 @@
     au < frozen ; exists ; 2008 ; Tourism Economics Volume 14 ; 14 ; teua ; >
     au < manifest ; exists ; 2009 ; Tourism Economics Volume 15 ; 15 ; teua ; >
     au < manifest ; exists ; 2010 ; Tourism Economics Volume 16 ; 16 ; teua ; >
-    au < exists ; exists ; 2011 ; Tourism Economics Volume 17 ; 17 ; teua ; >
+    au < manifest ; exists ; 2011 ; Tourism Economics Volume 17 ; 17 ; teua ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Tourism Economics Volume 18 ; 18 ; teua ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Tourism Economics Volume 19 ; 19 ; teua ; >
-    au < exists ; exists ; 2014 ; Tourism Economics Volume 20 ; 20 ; teua ; >
-    au < exists ; exists ; 2015 ; Tourism Economics Volume 21 ; 21 ; teua ; >
+    au < manifest ; exists ; 2014 ; Tourism Economics Volume 20 ; 20 ; teua ; >
+    au < manifest ; exists ; 2015 ; Tourism Economics Volume 21 ; 21 ; teua ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Tourism Economics Volume 22 ; 22 ; teua ; >
     au < ready ; exists ; 2017 ; Tourism Economics Volume 23 ; 23 ; teua ; >
 
