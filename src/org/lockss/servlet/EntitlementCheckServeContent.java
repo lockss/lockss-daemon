@@ -205,14 +205,16 @@ public class EntitlementCheckServeContent extends ServeContent {
     super.handleAuRequest();
   }
 
-  protected LockssUrlConnection doOpenConnection(String url, LockssUrlConnectionPool pool) throws IOException {
-    return super.openConnection(url, pool);
-  }
-
+  @Override
   protected LockssUrlConnection openConnection(String url, LockssUrlConnectionPool pool) throws IOException {
     LockssUrlConnection conn = doOpenConnection(url, pool);
     conn.addRequestProperty(INSTITUTION_HEADER, (String) getSession().getAttribute(INSTITUTION_SCOPE_SESSION_KEY));
     return conn;
+  }
+
+  // Extracted out so that the connection can be mocked in test classes
+  protected LockssUrlConnection doOpenConnection(String url, LockssUrlConnectionPool pool) throws IOException {
+    return super.openConnection(url, pool);
   }
 
   protected void handleEntitlementRegistryErrorUrlRequest(String missingUrl)
