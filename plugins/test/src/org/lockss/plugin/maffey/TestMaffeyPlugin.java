@@ -139,7 +139,9 @@ public class TestMaffeyPlugin extends LockssPluginTestCase {
 	    // internal should not crawl
 	    assertShouldCache(BASE_URL + "analytical-chemistry-insights-journal-j1", false, au, cus);
 	    assertShouldCache(BASE_URL + "testimonials.php", false, au, cus);
-	    assertShouldCache(BASE_URL + "bibliography.php?article_id=5", false, au, cus);
+
+            assertShouldCache(BASE_URL + "bibliography.php?article_id=5", true, au, cus);
+            assertShouldCache(BASE_URL + "bibliography.php?pa=bibtex&article_id=5", true, au, cus);
 	    
 	    // facebook
 	    assertShouldCache("http://www.facebook.com/pages/IGI-Global/138206739534176?ref=sgm", false, au, cus);

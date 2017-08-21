@@ -15,7 +15,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>15</string>
+    <string>16</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -52,6 +52,8 @@
       <string>1,"^%sredirect_file\.php\?.*fileType=pdf.*$", base_url</string>
       <!--  this is not the same as the start_url; it is for articles -->
       <string>1,"^%slockss\.php\?(t=[c]?lockss&amp;)?pa=article&amp;i_id=[0-9]+$", base_url</string>
+      <!--  allow collection of ris and bibtex -->
+      <string>1,"^%sbibliography\.php\?(pa=bibtex&amp;)?article_id", base_url</string>
       <string>1,"^%s[^/]+-article-a[0-9]+$", base_url</string>
     </list>
   </entry>
