@@ -46,12 +46,13 @@ from threading import Thread
 import HasherServiceImplService_client
 from wsutil import zsiauth
 
-def hash_au(host, auth, auid):
+def hash_au(host, auth, auid, include_weight=False):
   '''Returns the full hash of the given AU
   '''
   req = HasherServiceImplService_client.hash()
   req.HasherParams = req.new_hasherParams()
   req.HasherParams.AuId = auid
+  req.HasherParams.IncludeWeight = include_weight
   return _ws_port(host, auth).hash(req).Return
 
 def hash_au_url(host, auth, auid, url):
@@ -66,12 +67,13 @@ def hash_au_url(host, auth, auid, url):
   req.HasherParams.RecordFilteredStream = "True"
   return _ws_port(host, auth, sys.stdout).hash(req).Return
 
-def hash_asynchronously_au(host, auth, auid):
+def hash_asynchronously_au(host, auth, auid, include_weight=False):
   '''Returns a request id for a asychrounous hash of the given AU
   '''
   req = HasherServiceImplService_client.hashAsynchronously()
   req.HasherParams = req.new_hasherParams()
   req.HasherParams.AuId = auid
+  req.HasherParams.IncludeWeight = include_weight
   try: return _ws_port(host, auth).hashAsynchronously(req).Return.RequestId
   except AttributeError: return None
 
