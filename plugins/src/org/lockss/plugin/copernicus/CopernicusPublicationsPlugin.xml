@@ -85,7 +85,7 @@
     <string>au_crawlrules</string>
     <list>
       <string>1,"^https?://(%s|%s).*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", url_host(base_url), url_host(home_url)</string>
-      <!--  two CDN that contain style information -->
+      <!--  two CDN that contain style information and small supporting images-->
       <string>1,"^https?://(contentmanager|cdn)\.copernicus\.org/."</string>
 <!--  article level metrics live at <filename>-metrics.html -->      
       <string>2,"^https?://%s/%s/.*-metrics.html$",url_host(base_url),volume_name</string>
