@@ -98,7 +98,7 @@ public class TestEntitlementCheckServeContent extends LockssServletTestCase {
     pluginMgr.initService(theDaemon);
     pluginMgr.startService();
 
-    ConfigurationUtil.addFromArgs(ConfigManager.PARAM_PLATFORM_PROJECT, "keepsafe");
+    ConfigurationUtil.addFromArgs(LockssDaemon.PARAM_KEEPSAFE_ENABLED, "true");
     ConfigurationUtil.addFromArgs(EntitlementCheckServeContent.PARAM_MISSING_FILE_ACTION, "Redirect");
     ConfigurationUtil.addFromArgs(EntitlementCheckServeContent.PARAM_MOCK_SCOPE, "true");
     //ConfigurationUtil.addFromArgs("org.lockss.log.default.level", "debug3");

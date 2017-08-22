@@ -103,6 +103,9 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   static final long DEFAULT_DAEMON_DEADLINE_REASONABLE_FUTURE =
     20 * Constants.WEEK;
 
+  public static final String PARAM_KEEPSAFE_ENABLED = Configuration.PREFIX + "entitlement.keepsafe.enabled";
+  static final boolean DEFAULT_KEEPSAFE_ENABLED = false;
+
   /** List of local IP addresses to which to bind listen sockets for
    * servers (admin ui, content, proxy).  If not set, servers listen on all
    * interfaces.  Does not affect the port on which various servers listen.
@@ -991,7 +994,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     testingMode = config.get(PARAM_TESTING_MODE);
     String proj = ConfigManager.getPlatformProject();
     isClockss = "clockss".equalsIgnoreCase(proj);
-    isKeepsafe = "keepsafe".equalsIgnoreCase(proj);
+    isKeepsafe = config.getBoolean(PARAM_KEEPSAFE_ENABLED, DEFAULT_KEEPSAFE_ENABLED);
 
     super.setConfig(config, prevConfig, changedKeys);
   }
