@@ -215,7 +215,7 @@ diff $tpath/AllTitlesC.txt $tpath/TitlesWAUsC.txt | grep "< " | grep -v "Springe
 echo "---------------------"
 echo "---------------------"
 echo "Missing Slashes"
-grep "param\[base_url\]" tdb/*/*.tdb | grep "http.*://" | grep -v "/\s*$" | grep -v "\/clockss\/"
+grep "param\[base_url\]" tdb/*/*.tdb | grep "http.*://" | grep -v "/\s*$"
 echo "---------------------"
 echo "---------------------"
 
