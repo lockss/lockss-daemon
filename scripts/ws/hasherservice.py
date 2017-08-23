@@ -142,6 +142,7 @@ class _HasherServiceOptions(object):
     group.add_option('--long-text-line', action='store_true', help='replace each space with a newline')
     group.add_option('--threads', type='int', help='maximum number of parallel jobs allowed (default: no limit)')
     group.add_option('--wait', type='int', help='seconds to wait between asynchronous checks (default: 10 with --url, 30 without)')
+    group.add_option('--include-weight', action='store_true', help='include hash weights in full tree hash')
     parser.add_option_group(group)
     return parser
 
@@ -167,6 +168,9 @@ class _HasherServiceOptions(object):
       parser.error('--long-html-line, --long-text-line only apply to --url')
     if opts.long_html_line and opts.long_text_line:
       parser.error('--long-html-line, --long-text-line are incompatible')
+    if opts.include_weight and self.url:
+        parser.error('--include-weight not compatible with --url')
+    self.include_weight = opts.include_weight
     self.long_html_line = opts.long_html_line
     self.long_text_line = opts.long_text_line
     if opts.wait is None: self.wait = 30 if self.url is None else 10
@@ -179,7 +183,7 @@ class _HasherServiceOptions(object):
     self.auth = zsiauth(u, p)
 
 def _do_hash(options, host):
-  if options.url is None: reqid = hash_asynchronously_au(host, options.auth, options.auid)
+  if options.url is None: reqid = hash_asynchronously_au(host, options.auth, options.auid, options.include_weight)
   else: reqid = hash_asynchronously_au_url(host, options.auth, options.auid, options.url)
   if reqid is None: return host, False
   while True:
