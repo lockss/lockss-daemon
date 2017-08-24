@@ -29,13 +29,13 @@
       au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2007 ; Clinical Diabetes Volume 25 ; 25 ; >
       au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2008 ; Clinical Diabetes Volume 26 ; 26 ; >
       au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2009 ; Clinical Diabetes Volume 27 ; 27 ; >
-      au < ada.ClockssADADrupalPlugin ; finished ; manifest ; 2010 ; Clinical Diabetes Volume 28 ; 28 ; reingest5.clockss.org:8082 >
-      au < ada.ClockssADADrupalPlugin ; finished ; manifest ; 2011 ; Clinical Diabetes Volume 29 ; 29 ; reingest5.clockss.org:8082 >
+      au < ada.ClockssADADrupalPlugin ; finished ; crawling ; 2010 ; Clinical Diabetes Volume 28 ; 28 ; reingest5.clockss.org:8082 >
+      au < ada.ClockssADADrupalPlugin ; finished ; crawling ; 2011 ; Clinical Diabetes Volume 29 ; 29 ; reingest5.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Clinical Diabetes Volume 30 ; 30 ; >
       au < ClockssHighWirePressH20Plugin ; deepCrawl ; exists ; 2013 ; Clinical Diabetes Volume 31 ; 31 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Clinical Diabetes Volume 32 ; 32 ; >
       au < ClockssHighWirePressH20Plugin ; deepCrawl ; exists ; 2015 ; Clinical Diabetes Volume 33 ; 33 ; >
-      au < ada.ClockssADADrupalPlugin ; finished ; manifest ; 2016 ; Clinical Diabetes Volume 34 ; 34 ; reingest2.clockss.org:8085 >
+      au < ada.ClockssADADrupalPlugin ; finished ; crawling ; 2016 ; Clinical Diabetes Volume 34 ; 34 ; reingest2.clockss.org:8085 >
       au < ada.ClockssADADrupalPlugin ; crawling ; exists ; 2017 ; Clinical Diabetes Volume 35 ; 35 ; >
     
     }
@@ -117,7 +117,7 @@
         au < ClockssHighWirePressH20Plugin ; deepCrawl ; exists ; 2013 ; Diabetes Volume 62 ; 62 ; >
         au < ClockssHighWirePressH20Plugin ; deepCrawl ; exists ; 2014 ; Diabetes Volume 63 ; 63 ; >
         au < ClockssHighWirePressH20Plugin ; deepCrawl ; exists ; 2015 ; Diabetes Volume 64 ; 64 ; >
-        au < ada.ClockssADADrupalPlugin ; finished ; manifest ; 2016 ; Diabetes Volume 65 ; 65 ; reingest2.clockss.org:8085 >
+        au < ada.ClockssADADrupalPlugin ; finished ; crawling ; 2016 ; Diabetes Volume 65 ; 65 ; reingest2.clockss.org:8085 >
         au < ada.ClockssADADrupalPlugin ; crawling ; exists ; 2017 ; Diabetes Volume 66 ; 66 ; >
 
       }
@@ -173,13 +173,13 @@
         au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2007 ; Diabetes Care Volume 30 ; 30 ; >
         au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2008 ; Diabetes Care Volume 31 ; 31 ; >
         au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2009 ; Diabetes Care Volume 32 ; 32 ; >
-        au < ada.ClockssADADrupalPlugin ; finished ; manifest ; 2010 ; Diabetes Care Volume 33 ; 33 ; reingest5.clockss.org:8082 >
-        au < ada.ClockssADADrupalPlugin ; finished ; manifest ; 2011 ; Diabetes Care Volume 34 ; 34 ; reingest3.clockss.org:8083 >
+        au < ada.ClockssADADrupalPlugin ; finished ; crawling ; 2010 ; Diabetes Care Volume 33 ; 33 ; reingest5.clockss.org:8082 >
+        au < ada.ClockssADADrupalPlugin ; finished ; crawling ; 2011 ; Diabetes Care Volume 34 ; 34 ; reingest3.clockss.org:8083 >
         au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2012 ; Diabetes Care Volume 35 ; 35 ; >
         au < ClockssHighWirePressH20Plugin ; deepCrawl ; exists ; 2013 ; Diabetes Care Volume 36 ; 36 ; >
         au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Diabetes Care Volume 37 ; 37 ; reingest4.clockss.org:8082 >
         au < ClockssHighWirePressH20Plugin ; deepCrawl ; exists ; 2015 ; Diabetes Care Volume 38 ; 38 ; >
-        au < ada.ClockssADADrupalPlugin ; finished ; manifest ; 2016 ; Diabetes Care Volume 39 ; 39 ; reingest4.clockss.org:8082 >
+        au < ada.ClockssADADrupalPlugin ; finished ; crawling ; 2016 ; Diabetes Care Volume 39 ; 39 ; reingest4.clockss.org:8082 >
         au < ada.ClockssADADrupalPlugin ; crawling ; exists ; 2017 ; Diabetes Care Volume 40 ; 40 ; >
 
       }
@@ -205,13 +205,13 @@
       au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2007 ; Diabetes Spectrum Volume 20 ; 20 ; >
       au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2008 ; Diabetes Spectrum Volume 21 ; 21 ; >
       au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2009 ; Diabetes Spectrum Volume 22 ; 22 ; >
-      au < ada.ClockssADADrupalPlugin ; finished ; manifest ; 2010 ; Diabetes Spectrum Volume 23 ; 23 ; reingest5.clockss.org:8082 >
-      au < ada.ClockssADADrupalPlugin ; finished ; manifest ; 2011 ; Diabetes Spectrum Volume 24 ; 24 ; reingest5.clockss.org:8082 >
+      au < ada.ClockssADADrupalPlugin ; finished ; crawling ; 2010 ; Diabetes Spectrum Volume 23 ; 23 ; reingest5.clockss.org:8082 >
+      au < ada.ClockssADADrupalPlugin ; finished ; crawling ; 2011 ; Diabetes Spectrum Volume 24 ; 24 ; reingest5.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Diabetes Spectrum Volume 25 ; 25 ; >
       au < ClockssHighWirePressH20Plugin ; deepCrawl ; exists ; 2013 ; Diabetes Spectrum Volume 26 ; 26 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Diabetes Spectrum Volume 27 ; 27 ; >
       au < ClockssHighWirePressH20Plugin ; deepCrawl ; exists ; 2015 ; Diabetes Spectrum Volume 28 ; 28 ; >
-      au < ada.ClockssADADrupalPlugin ; finished ; manifest ; 2016 ; Diabetes Spectrum Volume 29 ; 29 ; reingest4.clockss.org:8082 >
+      au < ada.ClockssADADrupalPlugin ; finished ; crawling ; 2016 ; Diabetes Spectrum Volume 29 ; 29 ; reingest4.clockss.org:8082 >
       au < ada.ClockssADADrupalPlugin ; crawling ; exists ; 2017 ; Diabetes Spectrum Volume 30 ; 30 ; >
 
     }

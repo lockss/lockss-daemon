@@ -72,10 +72,10 @@
       au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2015 ; AAP Grand Rounds Volume 33 [superseded] ; 33 ; >
       au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2015 ; AAP Grand Rounds Volume 34 [superseded] ; 34 ; >
 
-      au < aap.ClockssAAPDrupalPlugin ; finished ; manifest ; 2015 ; AAP Grand Rounds Volume 33 ; 33 ; reingest3.clockss.org:8083 >
-      au < aap.ClockssAAPDrupalPlugin ; finished ; manifest ; 2015 ; AAP Grand Rounds Volume 34 ; 34 ; reingest5.clockss.org:8082 >
-      au < aap.ClockssAAPDrupalPlugin ; finished ; manifest ; 2016 ; AAP Grand Rounds Volume 35 ; 35 ; reingest1.clockss.org:8082 >
-      au < aap.ClockssAAPDrupalPlugin ; finished ; manifest ; 2016 ; AAP Grand Rounds Volume 36 ; 36 ; reingest2.clockss.org:8085 >
+      au < aap.ClockssAAPDrupalPlugin ; finished ; crawling ; 2015 ; AAP Grand Rounds Volume 33 ; 33 ; reingest3.clockss.org:8083 >
+      au < aap.ClockssAAPDrupalPlugin ; finished ; crawling ; 2015 ; AAP Grand Rounds Volume 34 ; 34 ; reingest5.clockss.org:8082 >
+      au < aap.ClockssAAPDrupalPlugin ; finished ; crawling ; 2016 ; AAP Grand Rounds Volume 35 ; 35 ; reingest1.clockss.org:8082 >
+      au < aap.ClockssAAPDrupalPlugin ; finished ; crawling ; 2016 ; AAP Grand Rounds Volume 36 ; 36 ; reingest2.clockss.org:8085 >
       au < aap.ClockssAAPDrupalPlugin ; crawling ; exists ; 2017 ; AAP Grand Rounds Volume 37 ; 37 ; >
       au < aap.ClockssAAPDrupalPlugin ; crawling ; exists ; 2017 ; AAP Grand Rounds Volume 38 ; 38 ; >
 
@@ -167,8 +167,8 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Hospital Pediatrics Volume 3 ; 3 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Hospital Pediatrics Volume 4 ; 4 ; >
       au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2015 ; Hospital Pediatrics Volume 5 [superseded] ; 5 ; >
-      au < aap.ClockssAAPDrupalPlugin ; finished ; manifest ; 2015 ; Hospital Pediatrics Volume 5 ; 5 ; reingest1.clockss.org:8082 >
-      au < aap.ClockssAAPDrupalPlugin ; finished ; manifest ; 2016 ; Hospital Pediatrics Volume 6 ; 6 ; reingest4.clockss.org:8082 >
+      au < aap.ClockssAAPDrupalPlugin ; finished ; crawling ; 2015 ; Hospital Pediatrics Volume 5 ; 5 ; reingest1.clockss.org:8082 >
+      au < aap.ClockssAAPDrupalPlugin ; finished ; crawling ; 2016 ; Hospital Pediatrics Volume 6 ; 6 ; reingest4.clockss.org:8082 >
       au < aap.ClockssAAPDrupalPlugin ; crawling ; exists ; 2017 ; Hospital Pediatrics Volume 7 ; 7 ; >
 
   }
@@ -214,8 +214,8 @@
       au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2013 ; NeoReviews Volume 14 ; 14 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; NeoReviews Volume 15 ; 15 ; reingest5.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2015 ; NeoReviews Volume 16 [superseded] ; 16 ; >
-      au < aap.ClockssAAPDrupalPlugin ; finished ; manifest ; 2015 ; NeoReviews Volume 16 ; 16 ; reingest1.clockss.org:8082 >
-      au < aap.ClockssAAPDrupalPlugin ; finished ; manifest ; 2016 ; NeoReviews Volume 17 ; 17 ; reingest1.clockss.org:8082 >
+      au < aap.ClockssAAPDrupalPlugin ; finished ; crawling ; 2015 ; NeoReviews Volume 16 ; 16 ; reingest1.clockss.org:8082 >
+      au < aap.ClockssAAPDrupalPlugin ; finished ; crawling ; 2016 ; NeoReviews Volume 17 ; 17 ; reingest1.clockss.org:8082 >
       au < aap.ClockssAAPDrupalPlugin ; crawling ; exists ; 2017 ; NeoReviews Volume 18 ; 18 ; >
 
     }
@@ -387,9 +387,9 @@
       au < aap.ClockssAAPDrupalPlugin ; ingNotReady ; exists ; 2014 ; Pediatrics Volume 134 ; 134 ; > #probe link outside of crawl spec
       au < aap.ClockssAAPDrupalPlugin ; finished ; finished ; 2015 ; Pediatrics Volume 135 ; 135 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2015 ; Pediatrics Volume 136 [superseded] ; 136 ; >
-      au < aap.ClockssAAPDrupalPlugin ; finished ; manifest ; 2015 ; Pediatrics Volume 136 ; 136 ; reingest1.clockss.org:8082 >
-      au < aap.ClockssAAPDrupalPlugin ; finished ; manifest ; 2016 ; Pediatrics Volume 137 ; 137 ; reingest5.clockss.org:8082 >
-      au < aap.ClockssAAPDrupalPlugin ; finished ; manifest ; 2016 ; Pediatrics Volume 138 ; 138 ; reingest2.clockss.org:8085 >
+      au < aap.ClockssAAPDrupalPlugin ; finished ; crawling ; 2015 ; Pediatrics Volume 136 ; 136 ; reingest1.clockss.org:8082 >
+      au < aap.ClockssAAPDrupalPlugin ; finished ; crawling ; 2016 ; Pediatrics Volume 137 ; 137 ; reingest5.clockss.org:8082 >
+      au < aap.ClockssAAPDrupalPlugin ; finished ; crawling ; 2016 ; Pediatrics Volume 138 ; 138 ; reingest2.clockss.org:8085 >
       au < aap.ClockssAAPDrupalPlugin ; crawling ; exists ; 2017 ; Pediatrics Volume 139 ; 139 ; >
       au < aap.ClockssAAPDrupalPlugin ; crawling ; exists ; 2017 ; Pediatrics Volume 140 ; 140 ; >
 
@@ -458,8 +458,8 @@
       au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2013 ; Pediatrics in Review Volume 34 ; 34 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Pediatrics in Review Volume 35 ; 35 ; >
       au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2015 ; Pediatrics in Review Volume 36 [superseded] ; 36 ; >
-      au < aap.ClockssAAPDrupalPlugin ; finished ; manifest ; 2015 ; Pediatrics in Review Volume 36 ; 36 ; reingest1.clockss.org:8082 >
-      au < aap.ClockssAAPDrupalPlugin ; finished ; manifest ; 2016 ; Pediatrics in Review Volume 37 ; 37 ; reingest5.clockss.org:8082 > #pdf stamping problem
+      au < aap.ClockssAAPDrupalPlugin ; finished ; crawling ; 2015 ; Pediatrics in Review Volume 36 ; 36 ; reingest1.clockss.org:8082 >
+      au < aap.ClockssAAPDrupalPlugin ; finished ; crawling ; 2016 ; Pediatrics in Review Volume 37 ; 37 ; reingest5.clockss.org:8082 > #pdf stamping problem
       au < aap.ClockssAAPDrupalPlugin ; crawling ; exists ; 2017 ; Pediatrics in Review Volume 38 ; 38 ; >
 
     }
