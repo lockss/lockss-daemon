@@ -34,7 +34,7 @@ echo " "
 # Find all reingest
 echo "---------------------"
 echo "---------------------"
-echo "1:8082, 2:8085, 3:8083, 4:8082, 5:8082"
+echo "reingest: 1:8082, 2:8085, 3:8083, 4:8082, 5:8082"
 scripts/tdb/tdbout -F -t "au:hidden[proxy]" -Q 'status2 is "manifest"' tdb/clockssingest/*.tdb | sort | uniq -c
 echo " "
 #
