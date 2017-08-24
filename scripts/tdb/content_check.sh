@@ -31,6 +31,13 @@ scripts/tdb/tdbout -t plugin tdb/*/*.tdb | sort -u | sed 's/\./\//g' > $tpath/ac
 diff $tpath/ab.txt $tpath/ac.txt | grep "^> "
 echo " "
 #
+# Find all reingest
+echo "---------------------"
+echo "---------------------"
+echo "1:8082, 2:8085, 3:8083, 4:8082, 5:8082"
+scripts/tdb/tdbout -F -t "au:hidden[proxy]" -Q 'status2 is "manifest"' tdb/clockssingest/*.tdb | sort | uniq -c
+echo " "
+#
 # Find duplicate auids in the gln title database
 echo "---------------------"
 echo "---------------------"
