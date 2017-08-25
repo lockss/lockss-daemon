@@ -9,18 +9,18 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>12</string>
+    <string>13</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Substance</string>
-        <string>5</string>
+        <string>6</string>
       </entry>
       <entry>
         <string>Poll</string>
-        <string>6</string>
+        <string>7</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -47,7 +47,7 @@
   </entry>
   <entry>
     <string>au_permission_url</string>
-    <string>"%s", base_url</string>
+    <string>"%s", to_https(base_url)</string>
   </entry>
   <entry>
     <string>au_additional_url_stems</string>
@@ -65,6 +65,7 @@
     <list>
       <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?v=.*)?$", url_host(base_url)</string>
       <string>1,"^https?://%s/(articles|article_preview)\.php\?id=[0-9]+$", url_host(base_url)</string>
+      <string>1,"^https?://%s/article/[0-9]+/$", url_host(base_url)</string>
       <string>1,"^https?://%s/auid=.*$", url_host(base_url)</string>
       <string>1,"^https?://%s/lib/ajax_srv/article_elements_srv\.php\?action=download_pdf&amp;item_id=[0-9]+$", url_host(base_url)</string>
       <string>1,"^https?://%s/lib/ajax_srv/generate_pdf\.php\?document_id=[0-9]+&amp;(readonly_preview=1)?$", url_host(base_url)</string>
@@ -112,18 +113,6 @@
     </list>
   </entry>
   <entry>
-    <string>plugin_url_consumer_factory</string>
-    <string>org.lockss.plugin.base.HttpToHttpsUrlConsumerFactory</string>
-  </entry>
-  <entry>
-    <string>plugin_url_fetcher_factory</string>
-    <string>org.lockss.plugin.base.HttpToHttpsUrlFetcherFactory</string>
-  </entry>
-  <entry>
-    <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.BaseUrlHttpHttpsUrlNormalizer</string>
-  </entry>
-  <entry>
     <string>plugin_crawl_seed_factory</string>
     <string>org.lockss.plugin.pensoft.oai.PensoftOaiCrawlSeedFactory</string>
   </entry>
@@ -133,7 +122,11 @@
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.pensoft.oai.PensoftOaiHtmlFilterFactory</string>
+    <string>org.lockss.plugin.pensoft.oai.PensoftOaiHtmlHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.pensoft.oai.PensoftOaiHtmlCrawlFilterFactory</string>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
@@ -165,6 +158,7 @@
     <list>
       <string>"[.](css|js|svg)([?].+)?$", 0</string>
       <string>"/auid=.*$", 0</string>
+      <string>"^http://[^/.]+\.pensoft\.net/", 0</string>
     </list>
   </entry>
 </map>

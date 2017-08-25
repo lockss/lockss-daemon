@@ -43,7 +43,7 @@ import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.util.ReaderInputStream;
 
-public class PensoftOaiHtmlFilterFactory implements FilterFactory {
+public class PensoftOaiHtmlHashFilterFactory implements FilterFactory {
 
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,

@@ -90,6 +90,9 @@ public class PensoftOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
   @Override
   protected Collection<String> getRecordList(ListRecordsParameters params)
 		  throws ConfigurationException, IOException {
+      if(UrlUtil.isHttpUrl(baseUrl)) {
+        baseUrl = UrlUtil.replaceScheme(baseUrl, "http", "https");
+      }
       String storeUrl = baseUrl + "auid=" + UrlUtil.encodeUrl(au.getAuId());
       String link;
       Boolean error = false;
