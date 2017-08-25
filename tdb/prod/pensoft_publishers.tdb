@@ -5,11 +5,11 @@
   >
 
     rights = openaccess
-    implicit < status ; year ; volume ; name ; param[au_oai_date] >
+    implicit < status ; year ; volume ; name ; param[au_oai_date] ; param[base_url] >
     #implicit < status ; year ; param[au_oai_date] ; name ; volume >
     comment[old_plugin] = org.lockss.plugin.pensoft.PensoftPlugin
     plugin = org.lockss.plugin.pensoft.oai.PensoftOaiPlugin
-    # param[base_url] = http://www.pensoft.net/
+#    # param[base_url] = http://www.pensoft.net/
 
    {
      title <
@@ -20,13 +20,13 @@
      >
 
     param[au_oai_set] = bdj
-    param[base_url] = http://bdj.pensoft.net/
+#    param[base_url] = http://bdj.pensoft.net/
 
-    au < released ; 2013 ; 1 ; Biodiversity Data Journal Volume 2013 ; 2013 >
-    au < released ; 2014 ; 2 ; Biodiversity Data Journal Volume 2014 ; 2014 >
-    au < released ; 2015 ; 3 ; Biodiversity Data Journal Volume 2015 ; 2015 >
-    au < manifest ; 2016 ; 4 ; Biodiversity Data Journal Volume 2016 ; 2016 >
-    au < expected ; 2017 ; 5 ; Biodiversity Data Journal Volume 2017 ; 2017 >
+    au < released ; 2013 ; 1 ; Biodiversity Data Journal Volume 2013 ; 2013 ; http://bdj.pensoft.net/ >
+    au < released ; 2014 ; 2 ; Biodiversity Data Journal Volume 2014 ; 2014 ; http://bdj.pensoft.net/ >
+    au < released ; 2015 ; 3 ; Biodiversity Data Journal Volume 2015 ; 2015 ; http://bdj.pensoft.net/ >
+    au < manifest ; 2016 ; 4 ; Biodiversity Data Journal Volume 2016 ; 2016 ; https://bdj.pensoft.net/ >
+    au < expected ; 2017 ; 5 ; Biodiversity Data Journal Volume 2017 ; 2017 ; https://bdj.pensoft.net/ >
 
    }
 
@@ -39,18 +39,18 @@
      >
 
     param[au_oai_set] = biorisk
-    param[base_url] = http://biorisk.pensoft.net/
+#    param[base_url] = http://biorisk.pensoft.net/
 
-    au < doNotProcess ; 2008 ; 1 ; BioRisk Volume 2008 ; 2008 >
-    au < doNotProcess ; 2009 ; 2-3 ; BioRisk Volume 2009 ; 2009 >
-    au < doNotProcess ; 2010 ; 4-5 ; BioRisk Volume 2010 ; 2010 >
-    au < doNotProcess ; 2011 ; 6 ; BioRisk Volume 2011 ; 2011 >
-    au < doNotProcess ; 2012 ; 7 ; BioRisk Volume 2012 ; 2012 >
-    au < released ; 2013 ; 8 ; BioRisk Volume 2013 ; 2013 >
-    au < released ; 2014 ; 9 ; BioRisk Volume 2014 ; 2014 >
-    au < manifest ; 2015 ; 10 ; BioRisk Volume 2015 ; 2015 >
-    au < manifest ; 2016 ; 11 ; BioRisk Volume 2016 ; 2016 >
-    au < expected ; 2017 ; 12 ; BioRisk Volume 2017 ; 2017 >
+    au < doNotProcess ; 2008 ; 1 ; BioRisk Volume 2008 ; 2008 ; https://biorisk.pensoft.net/ >
+    au < doNotProcess ; 2009 ; 2-3 ; BioRisk Volume 2009 ; 2009 ; https://biorisk.pensoft.net/ >
+    au < doNotProcess ; 2010 ; 4-5 ; BioRisk Volume 2010 ; 2010 ; https://biorisk.pensoft.net/ >
+    au < doNotProcess ; 2011 ; 6 ; BioRisk Volume 2011 ; 2011 ; https://biorisk.pensoft.net/ >
+    au < doNotProcess ; 2012 ; 7 ; BioRisk Volume 2012 ; 2012 ; https://biorisk.pensoft.net/ >
+    au < released ; 2013 ; 8 ; BioRisk Volume 2013 ; 2013 ; http://biorisk.pensoft.net/ >
+    au < released ; 2014 ; 9 ; BioRisk Volume 2014 ; 2014 ; http://biorisk.pensoft.net/ >
+    au < manifest ; 2015 ; 10 ; BioRisk Volume 2015 ; 2015 ; https://biorisk.pensoft.net/ >
+    au < manifest ; 2016 ; 11 ; BioRisk Volume 2016 ; 2016 ; https://biorisk.pensoft.net/ >
+    au < expected ; 2017 ; 12 ; BioRisk Volume 2017 ; 2017 ; https://biorisk.pensoft.net/ >
 
    }
 
@@ -63,17 +63,17 @@
     >
 
     param[au_oai_set] = compcytogen
-    param[base_url] = http://compcytogen.pensoft.net/
+#    param[base_url] = http://compcytogen.pensoft.net/
 
-    au < doNotProcess ; 2009 ; 3 ; Comparative Cytogenetics Volume 2009 ; 2009 >
-    au < doNotProcess ; 2010 ; 4 ; Comparative Cytogenetics Volume 2010 ; 2010 >
-    au < doNotProcess ; 2011 ; 5 ; Comparative Cytogenetics Volume 2011 ; 2011 >
-    au < doNotProcess ; 2012 ; 6 ; Comparative Cytogenetics Volume 2012 ; 2012 >
-    au < manifest ; 2013 ; 7 ; Comparative Cytogenetics Volume 2013 ; 2013 >
-    au < released ; 2014 ; 8 ; Comparative Cytogenetics Volume 2014 ; 2014 >
-    au < released ; 2015 ; 9 ; Comparative Cytogenetics Volume 2015 ; 2015 >
-    au < manifest ; 2016 ; 10 ; Comparative Cytogenetics Volume 2016 ; 2016 >
-    au < expected ; 2017 ; 11 ; Comparative Cytogenetics Volume 2017 ; 2017 >
+    au < doNotProcess ; 2009 ; 3 ; Comparative Cytogenetics Volume 2009 ; 2009 ; https://compcytogen.pensoft.net/ >
+    au < doNotProcess ; 2010 ; 4 ; Comparative Cytogenetics Volume 2010 ; 2010 ; https://compcytogen.pensoft.net/ >
+    au < doNotProcess ; 2011 ; 5 ; Comparative Cytogenetics Volume 2011 ; 2011 ; https://compcytogen.pensoft.net/ >
+    au < doNotProcess ; 2012 ; 6 ; Comparative Cytogenetics Volume 2012 ; 2012 ; https://compcytogen.pensoft.net/ >
+    au < manifest ; 2013 ; 7 ; Comparative Cytogenetics Volume 2013 ; 2013 ; https://compcytogen.pensoft.net/ >
+    au < released ; 2014 ; 8 ; Comparative Cytogenetics Volume 2014 ; 2014 ; http://compcytogen.pensoft.net/ >
+    au < released ; 2015 ; 9 ; Comparative Cytogenetics Volume 2015 ; 2015 ; http://compcytogen.pensoft.net/ >
+    au < manifest ; 2016 ; 10 ; Comparative Cytogenetics Volume 2016 ; 2016 ; https://compcytogen.pensoft.net/ >
+    au < expected ; 2017 ; 11 ; Comparative Cytogenetics Volume 2017 ; 2017 ; https://compcytogen.pensoft.net/ >
 
    }
 
@@ -86,12 +86,12 @@
      >
      
      param[au_oai_set] = dez
-     param[base_url] = http://dez.pensoft.net/
+#     param[base_url] = http://dez.pensoft.net/
 
-     au < released ; 2014 ; 61 ; Deutsche Entomologische Zeitschrift Volume 2014 ; 2014 >
-     au < released ; 2015 ; 62 ; Deutsche Entomologische Zeitschrift Volume 2015 ; 2015 >
-     au < manifest ; 2016 ; 63 ; Deutsche Entomologische Zeitschrift Volume 2016 ; 2016 >
-     au < expected ; 2017 ; 64 ; Deutsche Entomologische Zeitschrift Volume 2017 ; 2017 >
+     au < released ; 2014 ; 61 ; Deutsche Entomologische Zeitschrift Volume 2014 ; 2014 ; http://dez.pensoft.net/ >
+     au < released ; 2015 ; 62 ; Deutsche Entomologische Zeitschrift Volume 2015 ; 2015 ; http://dez.pensoft.net/ >
+     au < manifest ; 2016 ; 63 ; Deutsche Entomologische Zeitschrift Volume 2016 ; 2016 ; https://dez.pensoft.net/ >
+     au < expected ; 2017 ; 64 ; Deutsche Entomologische Zeitschrift Volume 2017 ; 2017 ; https://dez.pensoft.net/ >
 
    }
    
@@ -105,10 +105,10 @@
     >
 
     param[au_oai_set] = ijm
-    param[base_url] = http://ijm.pensoft.net/
+#    param[base_url] = http://ijm.pensoft.net/
 
-    au < doNotProcess ; 2011 ; 4-6 ; International Journal of Myriapodology Volume 2011 ; 2011 >
-    au < doNotProcess ; 2012 ; 7 ; International Journal of Myriapodology Volume 2012 ; 2012 >
+    au < doNotProcess ; 2011 ; 4-6 ; International Journal of Myriapodology Volume 2011 ; 2011 ; https://ijm.pensoft.net/ >
+    au < doNotProcess ; 2012 ; 7 ; International Journal of Myriapodology Volume 2012 ; 2012 ; https://ijm.pensoft.net/ >
 
    }
 
@@ -122,15 +122,15 @@
     >
 
     param[au_oai_set] = jhr
-    param[base_url] = http://jhr.pensoft.net/
+#    param[base_url] = http://jhr.pensoft.net/
 
-    au < doNotProcess ; 2011 ; 20-23 ; Journal of Hymenoptera Research Volume 2011 ; 2011 >
-    au < doNotProcess ; 2012 ; 24-29 ; Journal of Hymenoptera Research Volume 2012 ; 2012 >
-    au < manifest ; 2013 ; 30-35 ; Journal of Hymenoptera Research Volume 2013 ; 2013 >
-    au < released ; 2014 ; 36-41 ; Journal of Hymenoptera Research Volume 2014 ; 2014 >
-    au < manifest ; 2015 ; 42-47 ; Journal of Hymenoptera Research Volume 2015 ; 2015 >
-    au < manifest ; 2016 ; 48-53 ; Journal of Hymenoptera Research Volume 2016 ; 2016 >
-    au < exists ; 2017 ; 54-69 ; Journal of Hymenoptera Research Volume 2017 ; 2017 >
+    au < doNotProcess ; 2011 ; 20-23 ; Journal of Hymenoptera Research Volume 2011 ; 2011 ; https://jhr.pensoft.net/ >
+    au < doNotProcess ; 2012 ; 24-29 ; Journal of Hymenoptera Research Volume 2012 ; 2012 ; https://jhr.pensoft.net/ >
+    au < manifest ; 2013 ; 30-35 ; Journal of Hymenoptera Research Volume 2013 ; 2013 ; https://jhr.pensoft.net/ >
+    au < released ; 2014 ; 36-41 ; Journal of Hymenoptera Research Volume 2014 ; 2014 ; http://jhr.pensoft.net/ >
+    au < manifest ; 2015 ; 42-47 ; Journal of Hymenoptera Research Volume 2015 ; 2015 ; https://jhr.pensoft.net/ >
+    au < manifest ; 2016 ; 48-53 ; Journal of Hymenoptera Research Volume 2016 ; 2016 ; https://jhr.pensoft.net/ >
+    au < exists ; 2017 ; 54-69 ; Journal of Hymenoptera Research Volume 2017 ; 2017 ; https://jhr.pensoft.net/ >
 
    }
 
@@ -144,15 +144,15 @@
     >
 
     param[au_oai_set] = mycokeys
-    param[base_url] = http://mycokeys.pensoft.net/
+#    param[base_url] = http://mycokeys.pensoft.net/
 
-    au < doNotProcess ; 2011 ; 1 ; MycoKeys Volume 2011 ; 2011 >
-    au < doNotProcess ; 2012 ; 2-5 ; MycoKeys Volume 2012 ; 2012 >
-    au < released ; 2013 ; 6-7 ; MycoKeys Volume 2013 ; 2013 >
-    au < released ; 2014 ; 8 ; MycoKeys Volume 2014 ; 2014 >
-    au < manifest ; 2015 ; 9-11 ; MycoKeys Volume 2015 ; 2015 >
-    au < manifest ; 2016 ; 12-18 ; MycoKeys Volume 2016 ; 2016 >
-    au < exists ; 2017 ; 19-25 ; MycoKeys Volume 2017 ; 2017 >
+    au < doNotProcess ; 2011 ; 1 ; MycoKeys Volume 2011 ; 2011 ; https://mycokeys.pensoft.net/ >
+    au < doNotProcess ; 2012 ; 2-5 ; MycoKeys Volume 2012 ; 2012 ; https://mycokeys.pensoft.net/ >
+    au < released ; 2013 ; 6-7 ; MycoKeys Volume 2013 ; 2013 ; http://mycokeys.pensoft.net/ >
+    au < released ; 2014 ; 8 ; MycoKeys Volume 2014 ; 2014 ; http://mycokeys.pensoft.net/ >
+    au < manifest ; 2015 ; 9-11 ; MycoKeys Volume 2015 ; 2015 ; https://mycokeys.pensoft.net/ >
+    au < manifest ; 2016 ; 12-18 ; MycoKeys Volume 2016 ; 2016 ; https://mycokeys.pensoft.net/ >
+    au < exists ; 2017 ; 19-25 ; MycoKeys Volume 2017 ; 2017 ; https://mycokeys.pensoft.net/ >
 
    }
 
@@ -164,14 +164,14 @@
     >
 
     param[au_oai_set] = natureconservation
-    param[base_url] = http://natureconservation.pensoft.net/
+#    param[base_url] = http://natureconservation.pensoft.net/
 
-    au < doNotProcess ; 2012 ; 1-3 ; Nature Conservation Volume 2012 ; 2012 >
-    au < manifest ; 2013 ; 4-6 ; Nature Conservation Volume 2013 ; 2013 >
-    au < released ; 2014 ; 7-9 ; Nature Conservation Volume 2014 ; 2014 >
-    au < released ; 2015 ; 10-13 ; Nature Conservation Volume 2015 ; 2015 >
-    au < exists ; 2016 ; 14-16 ; Nature Conservation Volume 2016 ; 2016 >
-    au < exists ; 2017 ; 17-19 ; Nature Conservation Volume 2017 ; 2017 >
+    au < doNotProcess ; 2012 ; 1-3 ; Nature Conservation Volume 2012 ; 2012 ; https://natureconservation.pensoft.net/ >
+    au < manifest ; 2013 ; 4-6 ; Nature Conservation Volume 2013 ; 2013 ; https://natureconservation.pensoft.net/ >
+    au < released ; 2014 ; 7-9 ; Nature Conservation Volume 2014 ; 2014 ; http://natureconservation.pensoft.net/ >
+    au < released ; 2015 ; 10-13 ; Nature Conservation Volume 2015 ; 2015 ; http://natureconservation.pensoft.net/ >
+    au < exists ; 2016 ; 14-16 ; Nature Conservation Volume 2016 ; 2016 ; https://natureconservation.pensoft.net/ >
+    au < exists ; 2017 ; 17-19 ; Nature Conservation Volume 2017 ; 2017 ; https://natureconservation.pensoft.net/ >
 
    }
 
@@ -185,15 +185,15 @@
     >
 
     param[au_oai_set] = neobiota
-    param[base_url] = http://neobiota.pensoft.net/
+#    param[base_url] = http://neobiota.pensoft.net/
     
-    au < doNotProcess ; 2011 ; 9-11 ; NeoBiota Volume 2011 ; 2011 >
-    au < doNotProcess ; 2012 ; 12-15 ; NeoBiota Volume 2012 ; 2012 >
-    au < released ; 2013 ; 16-19 ; NeoBiota Volume 2013 ; 2013 >
-    au < released ; 2014 ; 20-23 ; NeoBiota Volume 2014 ; 2014 >
-    au < released ; 2015 ; 24-27 ; NeoBiota Volume 2015 ; 2015 >
-    au < manifest ; 2016 ; 28-31 ; NeoBiota Volume 2016 ; 2016 >
-    au < exists ; 2017 ; 32-36 ; NeoBiota Volume 2017 ; 2017 >
+    au < doNotProcess ; 2011 ; 9-11 ; NeoBiota Volume 2011 ; 2011 ; https://neobiota.pensoft.net/ >
+    au < doNotProcess ; 2012 ; 12-15 ; NeoBiota Volume 2012 ; 2012 ; https://neobiota.pensoft.net/ >
+    au < released ; 2013 ; 16-19 ; NeoBiota Volume 2013 ; 2013 ; http://neobiota.pensoft.net/ >
+    au < released ; 2014 ; 20-23 ; NeoBiota Volume 2014 ; 2014 ; http://neobiota.pensoft.net/ >
+    au < released ; 2015 ; 24-27 ; NeoBiota Volume 2015 ; 2015 ; http://neobiota.pensoft.net/ >
+    au < manifest ; 2016 ; 28-31 ; NeoBiota Volume 2016 ; 2016 ; https://neobiota.pensoft.net/ >
+    au < exists ; 2017 ; 32-36 ; NeoBiota Volume 2017 ; 2017 ; https://neobiota.pensoft.net/ >
 
    }
 
@@ -207,12 +207,12 @@
     >
     
     param[au_oai_set] = nl
-    param[base_url] = http://nl.pensoft.net/
+#    param[base_url] = http://nl.pensoft.net/
 
-    au < manifest ; 2014 ; 37 ; Nota Lepidopterologica Volume 2014 ; 2014 >
-    au < manifest ; 2015 ; 38 ; Nota Lepidopterologica Volume 2015 ; 2015 >
-    au < manifest ; 2016 ; 39 ; Nota Lepidopterologica Volume 2016 ; 2016 >
-    au < expected ; 2017 ; 40 ; Nota Lepidopterologica Volume 2017 ; 2017 >
+    au < manifest ; 2014 ; 37 ; Nota Lepidopterologica Volume 2014 ; 2014 ; https://nl.pensoft.net/ >
+    au < manifest ; 2015 ; 38 ; Nota Lepidopterologica Volume 2015 ; 2015 ; https://nl.pensoft.net/ >
+    au < manifest ; 2016 ; 39 ; Nota Lepidopterologica Volume 2016 ; 2016 ; https://nl.pensoft.net/ >
+    au < expected ; 2017 ; 40 ; Nota Lepidopterologica Volume 2017 ; 2017 ; https://nl.pensoft.net/ >
     
    }
 
@@ -226,16 +226,16 @@
     >
 
     param[au_oai_set] = phytokeys
-    param[base_url] = http://phytokeys.pensoft.net/
+#    param[base_url] = http://phytokeys.pensoft.net/
 
-    au < doNotProcess ; 2010 ; 1 ; PhytoKeys Volume 2010 ; 2010 >
-    au < doNotProcess ; 2011 ; 2-7 ; PhytoKeys Volume 2011 ; 2011 >
-    au < doNotProcess ; 2012 ; 8-19 ; PhytoKeys Volume 2012 ; 2012 >
-    au < manifest ; 2013 ; 20-32 ; PhytoKeys Volume 2013 ; 2013 >
-    au < manifest ; 2014 ; 33-43 ; PhytoKeys Volume 2014 ; 2014 >
-    au < manifest ; 2015 ; 44-57 ; PhytoKeys Volume 2015 ; 2015 >
-    au < manifest ; 2016 ; 58-75 ; PhytoKeys Volume 2016 ; 2016 >
-    au < exists ; 2017 ; 76-83 ; PhytoKeys Volume 2017 ; 2017 >
+    au < doNotProcess ; 2010 ; 1 ; PhytoKeys Volume 2010 ; 2010 ; https://phytokeys.pensoft.net/ >
+    au < doNotProcess ; 2011 ; 2-7 ; PhytoKeys Volume 2011 ; 2011 ; https://phytokeys.pensoft.net/ >
+    au < doNotProcess ; 2012 ; 8-19 ; PhytoKeys Volume 2012 ; 2012 ; https://phytokeys.pensoft.net/ >
+    au < manifest ; 2013 ; 20-32 ; PhytoKeys Volume 2013 ; 2013 ; https://phytokeys.pensoft.net/ >
+    au < manifest ; 2014 ; 33-43 ; PhytoKeys Volume 2014 ; 2014 ; https://phytokeys.pensoft.net/ >
+    au < manifest ; 2015 ; 44-57 ; PhytoKeys Volume 2015 ; 2015 ; https://phytokeys.pensoft.net/ >
+    au < manifest ; 2016 ; 58-75 ; PhytoKeys Volume 2016 ; 2016 ; https://phytokeys.pensoft.net/ >
+    au < exists ; 2017 ; 76-83 ; PhytoKeys Volume 2017 ; 2017 ; https://phytokeys.pensoft.net/ >
 
    }
 
@@ -250,14 +250,14 @@
 
     # no issue in 2012
     param[au_oai_set] = subtbiol
-    param[base_url] = http://subtbiol.pensoft.net/
+#    param[base_url] = http://subtbiol.pensoft.net/
 
-    au < doNotProcess ; 2011 ; 8-9 ; Subterranean Biology Volume 2011 ; 2011 >
-    au < released ; 2013 ; 10-12 ; Subterranean Biology Volume 2013 ; 2013 >
-    au < released ; 2014 ; 13-14 ; Subterranean Biology Volume 2014 ; 2014 >
-    au < released ; 2015 ; 15-16 ; Subterranean Biology Volume 2015 ; 2015 >
-    au < manifest ; 2016 ; 17-20 ; Subterranean Biology Volume 2016 ; 2016 >
-    au < exists ; 2017 ; 21-24 ; Subterranean Biology Volume 2017 ; 2017 >
+    au < doNotProcess ; 2011 ; 8-9 ; Subterranean Biology Volume 2011 ; 2011 ; https://subtbiol.pensoft.net/ >
+    au < released ; 2013 ; 10-12 ; Subterranean Biology Volume 2013 ; 2013 ; http://subtbiol.pensoft.net/ >
+    au < released ; 2014 ; 13-14 ; Subterranean Biology Volume 2014 ; 2014 ; http://subtbiol.pensoft.net/ >
+    au < released ; 2015 ; 15-16 ; Subterranean Biology Volume 2015 ; 2015 ; http://subtbiol.pensoft.net/ >
+    au < manifest ; 2016 ; 17-20 ; Subterranean Biology Volume 2016 ; 2016 ; https://subtbiol.pensoft.net/ >
+    au < exists ; 2017 ; 21-24 ; Subterranean Biology Volume 2017 ; 2017 ; https://subtbiol.pensoft.net/ >
 
    }
 
@@ -271,18 +271,18 @@
     >
     
     param[au_oai_set] = zookeys
-    param[base_url] = http://zookeys.pensoft.net/
+#    param[base_url] = http://zookeys.pensoft.net/
 
-    au < doNotProcess ; 2008 ; 1-4 ; ZooKeys Volume 2008 ; 2008 >
-    au < doNotProcess ; 2009 ; 5-31 ; ZooKeys Volume 2009 ; 2009 >
-    au < manifest ; 2010 ; 32-73 ; ZooKeys Volume 2010 ; 2010 >
-    au < manifest ; 2011 ; 74-160 ; ZooKeys Volume 2011 ; 2011 >
-    au < manifest ; 2012 ; 161-255 ; ZooKeys Volume 2012 ; 2012 >
-    au < manifest ; 2013 ; 256-366 ; ZooKeys Volume 2013 ; 2013 >
-    au < manifest ; 2014 ; 367-468 ; ZooKeys Volume 2014 ; 2014 >
-    au < manifest ; 2015 ; 469-548 ; ZooKeys Volume 2015 ; 2015 >
-    au < manifest ; 2016 ; 549-641 ; ZooKeys Volume 2016 ; 2016 >
-    au < exists ; 2017 ; 642-685 ; ZooKeys Volume 2017 ; 2017 >
+    au < doNotProcess ; 2008 ; 1-4 ; ZooKeys Volume 2008 ; 2008 ; https://zookeys.pensoft.net/ >
+    au < doNotProcess ; 2009 ; 5-31 ; ZooKeys Volume 2009 ; 2009 ; https://zookeys.pensoft.net/ >
+    au < manifest ; 2010 ; 32-73 ; ZooKeys Volume 2010 ; 2010 ; https://zookeys.pensoft.net/ >
+    au < manifest ; 2011 ; 74-160 ; ZooKeys Volume 2011 ; 2011 ; https://zookeys.pensoft.net/ >
+    au < manifest ; 2012 ; 161-255 ; ZooKeys Volume 2012 ; 2012 ; https://zookeys.pensoft.net/ >
+    au < manifest ; 2013 ; 256-366 ; ZooKeys Volume 2013 ; 2013 ; https://zookeys.pensoft.net/ >
+    au < manifest ; 2014 ; 367-468 ; ZooKeys Volume 2014 ; 2014 ; https://zookeys.pensoft.net/ >
+    au < manifest ; 2015 ; 469-548 ; ZooKeys Volume 2015 ; 2015 ; https://zookeys.pensoft.net/ >
+    au < manifest ; 2016 ; 549-641 ; ZooKeys Volume 2016 ; 2016 ; https://zookeys.pensoft.net/ >
+    au < exists ; 2017 ; 642-685 ; ZooKeys Volume 2017 ; 2017 ; https://zookeys.pensoft.net/ >
 
    }
    
@@ -296,12 +296,12 @@
     >
 
     param[au_oai_set] = zse
-    param[base_url] = http://zse.pensoft.net/
+#    param[base_url] = http://zse.pensoft.net/
 
-    au < released ; 2014 ; 90 ; Zoosystematics and Evolution Volume 2014 ; 2014 >
-    au < manifest ; 2015 ; 91 ; Zoosystematics and Evolution Volume 2015 ; 2015 >
-    au < manifest ; 2016 ; 92 ; Zoosystematics and Evolution Volume 2016 ; 2016 >
-    au < exists ; 2017 ; 93 ; Zoosystematics and Evolution Volume 2017 ; 2017 >
+    au < released ; 2014 ; 90 ; Zoosystematics and Evolution Volume 2014 ; 2014 ; http://zse.pensoft.net/ >
+    au < manifest ; 2015 ; 91 ; Zoosystematics and Evolution Volume 2015 ; 2015 ; https://zse.pensoft.net/ >
+    au < manifest ; 2016 ; 92 ; Zoosystematics and Evolution Volume 2016 ; 2016 ; https://zse.pensoft.net/ >
+    au < exists ; 2017 ; 93 ; Zoosystematics and Evolution Volume 2017 ; 2017 ; https://zse.pensoft.net/ >
 
     }
 
