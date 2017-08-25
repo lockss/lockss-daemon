@@ -46,6 +46,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.lockss.daemon.Crawler.CrawlerFacade;
+import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.UrlCacher;
@@ -88,11 +89,18 @@ public class PensoftOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
   }
   
   @Override
+  protected void initialize() 
+      throws PluginException, ConfigurationException, IOException {
+    super.initialize();
+    if(UrlUtil.isHttpUrl(baseUrl)) {
+      baseUrl = UrlUtil.replaceScheme(baseUrl, "http", "https");
+    }
+    
+  }
+  
+  @Override
   protected Collection<String> getRecordList(ListRecordsParameters params)
 		  throws ConfigurationException, IOException {
-      if(UrlUtil.isHttpUrl(baseUrl)) {
-        baseUrl = UrlUtil.replaceScheme(baseUrl, "http", "https");
-      }
       String storeUrl = baseUrl + "auid=" + UrlUtil.encodeUrl(au.getAuId());
       String link;
       Boolean error = false;
@@ -152,7 +160,7 @@ public class PensoftOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
     List<String> idTags = recSearcher.findAll(DEFAULT_IDENTIFIER_TAG);
     if(idTags != null && !idTags.isEmpty()) {
       for(String value : idTags) {
-        if (AuUtil.normalizeHttpHttpsFromBaseUrl(au, value).startsWith(baseUrl)) {
+        if (value.startsWith(baseUrl)) {
           logger.debug("To Follow: " + value);
           return value;
         }
