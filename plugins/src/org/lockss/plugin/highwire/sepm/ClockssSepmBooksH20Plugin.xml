@@ -22,7 +22,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -33,7 +33,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -172,5 +172,17 @@
         </list>
       </entry>
     </map>
+  </entry>
+  <!--  based off H20 au_url_poll_result_weight as of Aug 25 2017 -->
+  <entry>
+    <!-- these will not count towards poll results but will replicate from peer if above -->
+    <string>au_url_poll_result_weight</string>
+    <list>
+      <string>"[.](css|js)$", 0</string>
+      <string>"://[^/]+(?!.*/content/)(/[^/]+)+[.](gif|png)$", 0</string>
+      <string>"://[^/]+(/shared/img/).*[.](gif|png)$", 0</string>
+      <string>"/search\?submit=yes(?!(&amp;sortspec=[^&amp;]+)?&amp;tocsectionid=)", 0</string>
+      <string>"/citmgr\?type=(medlars)", 0</string>
+    </list>
   </entry>
 </map>
