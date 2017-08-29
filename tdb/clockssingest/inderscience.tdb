@@ -1282,7 +1282,7 @@
       au < finished ; finished ; 2014 ; International Journal of Business and Systems Research Volume 8 ; 8 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; International Journal of Business and Systems Research Volume 9 ; 9 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2016 ; International Journal of Business and Systems Research Volume 10 ; 10 ; >
-      au < ready ; exists ; 2017 ; International Journal of Business and Systems Research Volume 11 ; 11 ; >
+      au < crawling ; exists ; 2017 ; International Journal of Business and Systems Research Volume 11 ; 11 ; >
 
     }
 
@@ -1371,7 +1371,7 @@
       au < finished ; finished ; 2015 ; International Journal of Business Excellence Volume 8 ; 8 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2016 ; International Journal of Business Excellence Volume 9 ; 9 ; >
       au < deepCrawl ; exists ; 2016 ; International Journal of Business Excellence Volume 10 ; 10 ; >
-      au < ready ; exists ; 2017 ; International Journal of Business Excellence Volume 11 ; 11 ; >
+      au < crawling ; exists ; 2017 ; International Journal of Business Excellence Volume 11 ; 11 ; >
       au < crawling ; exists ; 2017 ; International Journal of Business Excellence Volume 12 ; 12 ; >
 
     }
@@ -1737,7 +1737,7 @@
       au < deepCrawl ; exists ; 2016 ; International Journal of Communication Networks and Distributed Systems Volume 16 ; 16 ; >
       au < deepCrawl ; exists ; 2016 ; International Journal of Communication Networks and Distributed Systems Volume 17 ; 17 ; >
       au < ready ; exists ; 2017 ; International Journal of Communication Networks and Distributed Systems Volume 18 ; 18 ; >
-      au < ready ; exists ; 2017 ; International Journal of Communication Networks and Distributed Systems Volume 19 ; 19 ; >
+      au < crawling ; exists ; 2017 ; International Journal of Communication Networks and Distributed Systems Volume 19 ; 19 ; >
 
     }
 
@@ -1793,7 +1793,7 @@
       au < finished ; finished ; 2014 ; International Journal of Computational Biology and Drug Design Volume 7 ; 7 ; >
       au < finished ; finished ; 2015 ; International Journal of Computational Biology and Drug Design Volume 8 ; 8 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2016 ; International Journal of Computational Biology and Drug Design Volume 9 ; 9 ; >
-      au < ready ; exists ; 2017 ; International Journal of Computational Biology and Drug Design Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2017 ; International Journal of Computational Biology and Drug Design Volume 10 ; 10 ; >
 
     }
 
@@ -2536,7 +2536,7 @@
       au < finished ; finished ; 2014 ; International Journal of Economic Policy in Emerging Economies Volume 7 ; 7 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; International Journal of Economic Policy in Emerging Economies Volume 8 ; 8 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2016 ; International Journal of Economic Policy in Emerging Economies Volume 9 ; 9 ; >
-      au < ready ; exists ; 2017 ; International Journal of Economic Policy in Emerging Economies Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2017 ; International Journal of Economic Policy in Emerging Economies Volume 10 ; 10 ; >
 
     }
 
@@ -3750,7 +3750,7 @@
       au < finished ; finished ; 2013-2014 ; International Journal of Global Environmental Issues Volume 13 ; 13 ; >
       au < finished ; finished ; 2015 ; International Journal of Global Environmental Issues Volume 14 ; 14 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2016 ; International Journal of Global Environmental Issues Volume 15 ; 15 ; >
-      au < ready ; exists ; 2017 ; International Journal of Global Environmental Issues Volume 16 ; 16 ; >
+      au < crawling ; exists ; 2017 ; International Journal of Global Environmental Issues Volume 16 ; 16 ; >
 
     }
 
@@ -3775,7 +3775,7 @@
       au < finished ; finished ; 2015 ; International Journal of Global Warming Volume 8 ; 8 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2016 ; International Journal of Global Warming Volume 9 ; 9 ; >
       au < deepCrawl ; exists ; 2016 ; International Journal of Global Warming Volume 10 ; 10 ; >
-      au < ready ; exists ; 2017 ; International Journal of Global Warming Volume 11 ; 11 ; >
+      au < crawling ; exists ; 2017 ; International Journal of Global Warming Volume 11 ; 11 ; >
       au < ready ; exists ; 2017 ; International Journal of Global Warming Volume 12 ; 12 ; >
 
     }
@@ -4728,7 +4728,7 @@
       au < finished ; finished ; 2014 ; International Journal of Intelligent Systems Technologies and Applications Volume 13 ; 13 ; >
       au < finished ; finished ; 2015 ; International Journal of Intelligent Systems Technologies and Applications Volume 14 ; 14 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2016 ; International Journal of Intelligent Systems Technologies and Applications Volume 15 ; 15 ; >
-      au < ready ; exists ; 2017 ; International Journal of Intelligent Systems Technologies and Applications Volume 16 ; 16 ; >
+      au < crawling ; exists ; 2017 ; International Journal of Intelligent Systems Technologies and Applications Volume 16 ; 16 ; >
 
     }
 
@@ -6050,7 +6050,7 @@
       au < finished ; finished ; 2013-2014 ; International Journal of Mobile Network Design and Innovation Volume 5 ; 5 ; reingest2.clockss.org:8085 >
       # below au was incorrectly moved to production too early - take it down until year span over
       au < deepCrawl ; down ; 2015-2016 ; International Journal of Mobile Network Design and Innovation Volume 6 ; 6 ; >
-      au < ready ; exists ; 2017 ; International Journal of Mobile Network Design and Innovation Volume 7 ; 7 ; >
+      au < crawling ; exists ; 2017 ; International Journal of Mobile Network Design and Innovation Volume 7 ; 7 ; >
 
     }
 
@@ -6111,7 +6111,7 @@
       au < finished ; finished ; 2015 ; International Journal of Modelling, Identification and Control Volume 24 ; 24 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2016 ; International Journal of Modelling, Identification and Control Volume 25 ; 25 ; >
       au < deepCrawl ; exists ; 2016 ; International Journal of Modelling, Identification and Control Volume 26 ; 26 ; >
-      au < ready ; exists ; 2017 ; International Journal of Modelling, Identification and Control Volume 27 ; 27 ; >
+      au < crawling ; exists ; 2017 ; International Journal of Modelling, Identification and Control Volume 27 ; 27 ; >
       au < ready ; exists ; 2017 ; International Journal of Modelling, Identification and Control Volume 28 ; 28 ; >
 
     }
@@ -6811,7 +6811,7 @@
       au < finished ; finished ; 2014 ; International Journal of Process Management and Benchmarking Volume 4 ; 4 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2015 ; International Journal of Process Management and Benchmarking Volume 5 ; 5 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2016 ; International Journal of Process Management and Benchmarking Volume 6 ; 6 ; >
-      au < ready ; exists ; 2017 ; International Journal of Process Management and Benchmarking Volume 7 ; 7 ; >
+      au < crawling ; exists ; 2017 ; International Journal of Process Management and Benchmarking Volume 7 ; 7 ; >
 
     }
 
@@ -7373,7 +7373,7 @@
       au < deepCrawl ; exists ; 2016 ; International Journal of Sensor Networks Volume 20 ; 20 ; >
       au < deepCrawl ; exists ; 2016 ; International Journal of Sensor Networks Volume 21 ; 21 ; >
       au < deepCrawl ; exists ; 2016 ; International Journal of Sensor Networks Volume 22 ; 22 ; >
-      au < ready ; exists ; 2017 ; International Journal of Sensor Networks Volume 23 ; 23 ; >
+      au < crawling ; exists ; 2017 ; International Journal of Sensor Networks Volume 23 ; 23 ; >
       au < ready ; exists ; 2017 ; International Journal of Sensor Networks Volume 24 ; 24 ; >
       au < expected ; exists ; 2017 ; International Journal of Sensor Networks Volume 25 ; 25 ; >
 
@@ -7746,7 +7746,7 @@
       au < finished ; finished ; 2014 ; International Journal of Society Systems Science Volume 6 ; 6 ; >
       au < finished ; finished ; 2015 ; International Journal of Society Systems Science Volume 7 ; 7 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2016 ; International Journal of Society Systems Science Volume 8 ; 8 ; >
-      au < ready ; exists ; 2017 ; International Journal of Society Systems Science Volume 9 ; 9 ; >
+      au < crawling ; exists ; 2017 ; International Journal of Society Systems Science Volume 9 ; 9 ; >
 
     }
 
@@ -9865,7 +9865,7 @@
 
       param[journal_id] = ijasmm
 
-      au < ready ; exists ; 2017 ; International Journal of Additive and Subtractive Materials Manufacturing Volume 1 ; 1 ;  >
+      au < crawling ; exists ; 2017 ; International Journal of Additive and Subtractive Materials Manufacturing Volume 1 ; 1 ;  >
 
   }
 
