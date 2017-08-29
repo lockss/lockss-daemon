@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE book PUBLIC "-//Atypon//DTD Atypon Systems NCBI Book DTD Suite v3.0.3 20110903//EN" "atypon-book3.dtd">
+<book content-type="conference-proceedings" xml:lang="en">
+	<book-series-meta>
+		<book-id pub-id-type="doi">10.2514/BOOKSERIES</book-id>
+	</book-series-meta>
+	<book-meta>
+		<book-id pub-id-type="doi">10.2514/BOOK</book-id>
+		<book-title-group>
+			<book-title>International Conference</book-title>
+		</book-title-group>
+		<publisher>
+			<publisher-name>American Institute of Aeronautics and Astronautics</publisher-name>
+			<publisher-loc>Reston, Virginia</publisher-loc>
+		</publisher>
+		<isbn pub-type="epub" content-type="online" primary="yes">978-1-11111-111-1</isbn>
+		<pub-date>
+			<day>9</day>
+			<month>January</month>
+			<year>2017</year>
+			<string-date>9 - 13 January 2017</string-date>
+		</pub-date>
+		<custom-meta-group>
+			<custom-meta>
+				<meta-name>conf-name</meta-name>
+				<meta-value>International Conference</meta-value>
+			</custom-meta>
+			<custom-meta>
+				<meta-name>conf-loc</meta-name>
+				<meta-value>Grapevine, Texas</meta-value>
+			</custom-meta>
+		</custom-meta-group>
+	</book-meta>
+	<body>
+		<book-part book-part-type="book-toc-page-order">
+			<body>
+				<book-part>
+					<book-part-meta>
+						<title-group>
+							<title><abbrev>DE-02: </abbrev>TOC Information</title>
+						</title-group>
+					</book-part-meta>
+					<body>
+						<book-part>
+							<book-part-meta>
+								<title-group>
+									<title>Tuesday, 10 January 2017</title>
+								</title-group>
+							</book-part-meta>
+							<body>
+								<book-part>
+									<book-part-meta>
+										<title-group>
+											<title>0930 hrs</title>
+										</title-group>
+									</book-part-meta>
+									<body>
+										<book-part>
+											<book-part-meta>
+												<book-part-id pub-id-type="doi">10.2514/6.2017-chapter</book-part-id>
+												<title-group>
+													<title>Automated Presentation</title>
+												</title-group>
+											</book-part-meta>
+										</book-part>
+									</body>
+								</book-part>
+							</body>
+						</book-part>
+					</body>
+				</book-part>
+			</body>
+		</book-part>
+	</body>
+</book>

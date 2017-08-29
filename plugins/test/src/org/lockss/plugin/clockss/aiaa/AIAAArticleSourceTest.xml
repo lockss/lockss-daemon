@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//Atypon//DTD Atypon Systems NCBI Book DTD Suite v3.0.3 20110903//EN" "atypon-book3.dtd">
+<book xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oasis="http://docs.oasis-open.org/ns/oasis-exchange/table" xml:lang="en" dtd-version="3.0">
+    <book-series-meta>
+        <book-id pub-id-type="doi">10.2514/BOOKSERIES</book-id>
+    </book-series-meta>
+    <book-meta>
+        <book-id pub-id-type="bookset-doi">10.2514/BOOK</book-id>
+        <book-id pub-id-type="doi">10.2514/BOOK</book-id>
+        <book-id pub-id-type="other">2003-6092</book-id>
+        <book-title-group>
+            <book-title>International Conference</book-title>
+        </book-title-group>
+    </book-meta>
+    <body>
+        <book-part book-part-type="chapter" indexed="true" xlink:type="simple">
+            <book-part-meta>
+                <book-part-id pub-id-type="doi">10.2514/6.2003-chapter</book-part-id>
+                <book-part-categories>
+                    <subj-group subj-group-type="conference-session">
+                        <subject>Summary: Session Title</subject>
+                    </subj-group>
+                     <subj-group subj-group-type="mproc-paper-type">
+                        <subject code="bestpaper">Best Paper</subject>
+                    </subj-group>
+                </book-part-categories>
+                <title-group>
+                    <title>Presentation Title</title>
+                </title-group>
+                <contrib-group>
+                    <contrib contrib-type="author" xlink:type="simple">
+                        <string-name>
+                            <given-names>Jonathan</given-names> 
+                            <surname>Writer</surname>
+                        </string-name>
+                        <x xml:space="preserve">, </x>
+                        <aff>Techsburg</aff>
+                        <x xml:space="preserve">; </x>
+                    </contrib>
+                    <contrib contrib-type="author" xlink:type="simple">
+                        <string-name>
+                            <given-names>Other</given-names> 
+                            <surname>Author</surname>
+                        </string-name>
+                        <x xml:space="preserve">, </x>
+                        <aff>Techsburg</aff>
+                        <x xml:space="preserve">; </x>
+                    </contrib>
+                </contrib-group>
+                <elocation-id>6092</elocation-id>
+                <alternate-form alternate-form-type="pdf" xlink:href="6.2003-chapter.pdf" xlink:type="simple"></alternate-form>
+            </book-part-meta>
+        </book-part>
+    </body>
+</book>
