@@ -2950,12 +2950,13 @@
     >
 
     param[journal_id] = dpis
+    #Moved to archive
 
-    au < manifest ; exists ; 2013 ; Dataset Papers in Science Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2013 ; Dataset Papers in Science Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Dataset Papers in Science Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; finished ; 2015 ; Dataset Papers in Science Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2016 ; Dataset Papers in Science Volume 2016 ; 2016 ; 2016 ; >
-    au < testing ; exists ; 2017 ; Dataset Papers in Science Volume 2017 ; 2017 ; 2017 ; >
+    au < frozen ; exists ; 2016 ; Dataset Papers in Science Volume 2016 ; 2016 ; 2016 ; >
+    au < doNotProcess ; exists ; 2017 ; Dataset Papers in Science Volume 2017 ; 2017 ; 2017 ; >
 
   }
 
@@ -3701,12 +3702,13 @@
     >
 
     param[journal_id] = ijas
+    #Moved to archive
 
-    au < manifest ; exists ; 2013 ; International Journal of Atmospheric Sciences Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2013 ; International Journal of Atmospheric Sciences Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; International Journal of Atmospheric Sciences Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; International Journal of Atmospheric Sciences Volume 2015 ; 2015 ; 2015 ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2016 ; International Journal of Atmospheric Sciences Volume 2016 ; 2016 ; 2016 ; >
-    au < testing ; exists ; 2017 ; International Journal of Atmospheric Sciences Volume 2017 ; 2017 ; 2017 ; >
+    au < frozen ; exists ; 2016 ; International Journal of Atmospheric Sciences Volume 2016 ; 2016 ; 2016 ; >
+    au < doNotProcess ; exists ; 2017 ; International Journal of Atmospheric Sciences Volume 2017 ; 2017 ; 2017 ; >
 
   }
 
@@ -4438,12 +4440,13 @@
     >
 
     param[journal_id] = ijme
+    #Moved to archive
 
-    au < manifest ; exists ; 2013 ; International Journal of Manufacturing Engineering Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2013 ; International Journal of Manufacturing Engineering Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; International Journal of Manufacturing Engineering Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; International Journal of Manufacturing Engineering Volume 2015 ; 2015 ; 2015 ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2016 ; International Journal of Manufacturing Engineering Volume 2016 ; 2016 ; 2016 ; >
-    au < testing ; exists ; 2017 ; International Journal of Manufacturing Engineering Volume 2017 ; 2017 ; 2017 ; >
+    au < frozen ; exists ; 2016 ; International Journal of Manufacturing Engineering Volume 2016 ; 2016 ; 2016 ; >
+    au < doNotProcess ; exists ; 2017 ; International Journal of Manufacturing Engineering Volume 2017 ; 2017 ; 2017 ; >
 
   }
 
@@ -4546,11 +4549,11 @@
 
     param[journal_id] = ijmet
 
-    au < manifest ; exists ; 2013 ; International Journal of Metals Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2013 ; International Journal of Metals Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; International Journal of Metals Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; International Journal of Metals Volume 2015 ; 2015 ; 2015 ; reingest4.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2016 ; International Journal of Metals Volume 2016 ; 2016 ; 2016 ; >
-    au < testing ; exists ; 2017 ; International Journal of Metals Volume 2017 ; 2017 ; 2017 ; >
+    au < frozen ; exists ; 2016 ; International Journal of Metals Volume 2016 ; 2016 ; 2016 ; >
+    au < doNotProcess ; exists ; 2017 ; International Journal of Metals Volume 2017 ; 2017 ; 2017 ; >
 
   }
 
@@ -6463,11 +6466,12 @@
     >
 
     param[journal_id] = jfp
+    #Moved to archive
     
     au < finished ; finished ; 2014 ; Journal of Food Processing Volume 2014 ; 2014 ; 2014 ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2015 ; Journal of Food Processing Volume 2015 ; 2015 ; 2015 ; >
-    au < deepCrawl ; exists ; 2016 ; Journal of Food Processing Volume 2016 ; 2016 ; 2016 ; >
-    au < testing ; exists ; 2017 ; Journal of Food Processing Volume 2017 ; 2017 ; 2017 ; >
+    au < frozen ; exists ; 2015 ; Journal of Food Processing Volume 2015 ; 2015 ; 2015 ; >
+    au < frozen ; exists ; 2016 ; Journal of Food Processing Volume 2016 ; 2016 ; 2016 ; >
+    au < doNotProcess ; exists ; 2017 ; Journal of Food Processing Volume 2017 ; 2017 ; 2017 ; >
 
   }
 
@@ -6917,12 +6921,13 @@
     >
 
     param[journal_id] = jmy
+    #Moved to archive
     
-    au < manifest ; exists ; 2013 ; Journal of Mycology Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2013 ; Journal of Mycology Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Mycology Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; finished ; 2015 ; Journal of Mycology Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2016 ; Journal of Mycology Volume 2016 ; 2016 ; 2016 ; >
-    au < testing ; exists ; 2017 ; Journal of Mycology Volume 2017 ; 2017 ; 2017 ; >
+    au < frozen ; exists ; 2016 ; Journal of Mycology Volume 2016 ; 2016 ; 2016 ; >
+    au < doNotProcess ; exists ; 2017 ; Journal of Mycology Volume 2017 ; 2017 ; 2017 ; >
 
   }
 
