@@ -137,7 +137,7 @@
 
       au < finished ; finished ; 2015 ; 2015 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 1 ; 1 ; http://www.adv-stat-clim-meteorol-oceanogr.net/ ; http://www.advances-statistical-climatology-meteorology-oceanography.net/ ; >
       au < deepCrawl ; exists ; 2016 ; 2016 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 2 ; 2 ; http://www.adv-stat-clim-meteorol-oceanogr.net/ ; http://www.advances-statistical-climatology-meteorology-oceanography.net/ ; >
-      au < testing ; exists ; 2017 ; 2017 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 3 ; 3 ; https://www.adv-stat-clim-meteorol-oceanogr.net/ ; https://www.advances-statistical-climatology-meteorology-oceanography.net/ ; >
+      au < exists ; exists ; 2017 ; 2017 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 3 ; 3 ; https://www.adv-stat-clim-meteorol-oceanogr.net/ ; https://www.advances-statistical-climatology-meteorology-oceanography.net/ ; >
 
    }
 
@@ -1668,7 +1668,7 @@
 #      param[home_url] = http://www.wind-energy-science.net/
 
       au < manifest ; exists ; 2016 ; 2016 ; Wind Energy Science Volume 1 ; 1 ; https://www.wind-energ-sci.net/ ; https://www.wind-energy-science.net/ ; >
-      au < testing ; exists ; 2017 ; 2017 ; Wind Energy Science Volume 2 ; 2 ; https://www.wind-energ-sci.net/ ; https://www.wind-energy-science.net/ ; >
+      au < exists ; exists ; 2017 ; 2017 ; Wind Energy Science Volume 2 ; 2 ; https://www.wind-energ-sci.net/ ; https://www.wind-energy-science.net/ ; >
 
    }
 
