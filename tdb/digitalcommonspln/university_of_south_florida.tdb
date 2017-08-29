@@ -332,9 +332,9 @@
     param[journal_abbr] = siv
     implicit < status ; year ; volume ; name ; param[volume] >
     
-    au < released ; 2013-2014 ; 1 ; Statistics in Volcanology Volume 1 ; 1 >
-    au < released ; 2015 ; 2 ; Statistics in Volcanology Volume 2 ; 2 >
-    au < expected ; 2016 ; 3 ; Statistics in Volcanology Volume 3 ; 3 >
+    au < released ; 2013-2015 ; 1 ; Statistics in Volcanology Volume 1 ; 1 >
+    au < released ; 2016 ; 2 ; Statistics in Volcanology Volume 2 ; 2 >
+    au < manifest ; 2017 ; 3 ; Statistics in Volcanology Volume 3 ; 3 >
   
   }
 
