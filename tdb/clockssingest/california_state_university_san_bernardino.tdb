@@ -1,13 +1,14 @@
 {
 
   publisher <
-    name = California State University, San Bernardino ;
+    name = Literacy in Composition Studies ;
     info[contract] = 2017 ;
     info[back] = 2015 ;
     info[tester] = 8 ;
     info[poller] = 8
   >
 
+    #published by California State University, San Bernardino
     plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
     implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
 
