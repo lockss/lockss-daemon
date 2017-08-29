@@ -262,17 +262,17 @@
       param[base_url] = http://imaging.birjournals.org/
       # last published volume in 2009  
     
-      au < finished ; finished ; 1999 ; Imaging Volume 11 ; 11 ; >
-      au < superseded ; finished ; 2000 ; Imaging Volume 12 ; 12 ; >
-      au < superseded ; finished ; 2001 ; Imaging Volume 13 ; 13 ; >
-      au < superseded ; finished ; 2002 ; Imaging Volume 14 ; 14 ; >
-      au < superseded ; finished ; 2003 ; Imaging Volume 15 ; 15 ; >
-      au < superseded ; finished ; 2004 ; Imaging Volume 16 ; 16 ; >
-      au < superseded ; finished ; 2005 ; Imaging Volume 17 ; 17 ; >
-      au < superseded ; finished ; 2006 ; Imaging Volume 18 ; 18 ; >
-      au < superseded ; finished ; 2007 ; Imaging Volume 19 ; 19 ; >
-      au < superseded ; finished ; 2008 ; Imaging Volume 20 ; 20 ; >
-      au < superseded ; finished ; 2009 ; Imaging Volume 21 ; 21 ; >
+      au < superseded ; finished ; 1999 ; Imaging Volume 11 [superseded] ; 11 ; >
+      au < superseded ; finished ; 2000 ; Imaging Volume 12 [superseded] ; 12 ; >
+      au < superseded ; finished ; 2001 ; Imaging Volume 13 [superseded] ; 13 ; >
+      au < superseded ; finished ; 2002 ; Imaging Volume 14 [superseded] ; 14 ; > #not complete
+      au < superseded ; finished ; 2003 ; Imaging Volume 15 [superseded] ; 15 ; >
+      au < superseded ; finished ; 2004 ; Imaging Volume 16 [superseded] ; 16 ; >
+      au < superseded ; finished ; 2005 ; Imaging Volume 17 [superseded] ; 17 ; >
+      au < superseded ; finished ; 2006 ; Imaging Volume 18 [superseded] ; 18 ; >
+      au < superseded ; finished ; 2007 ; Imaging Volume 19 [superseded] ; 19 ; >
+      au < superseded ; finished ; 2008 ; Imaging Volume 20 [superseded] ; 20 ; >
+      au < superseded ; finished ; 2009 ; Imaging Volume 21 [superseded] ; 21 ; >
     
     }
 
@@ -285,16 +285,17 @@
       param[journal_id] = img
       # no issue in 2010-2012
 
-      au < exists ; doNotProcess ; 2000 ; Imaging Volume 12 ; 12 ; >
-      au < exists ; doNotProcess ; 2001 ; Imaging Volume 13 ; 13 ; >
-      au < exists ; doNotProcess ; 2002 ; Imaging Volume 14 ; 14 ; >
-      au < exists ; doNotProcess ; 2003 ; Imaging Volume 15 ; 15 ; >
-      au < exists ; doNotProcess ; 2004 ; Imaging Volume 16 ; 16 ; >
-      au < exists ; doNotProcess ; 2005 ; Imaging Volume 17 ; 17 ; >
-      au < exists ; doNotProcess ; 2006 ; Imaging Volume 18 ; 18 ; >
-      au < exists ; doNotProcess ; 2007 ; Imaging Volume 19 ; 19 ; >
-      au < exists ; doNotProcess ; 2008 ; Imaging Volume 20 ; 20 ; >
-      au < exists ; doNotProcess ; 2009 ; Imaging Volume 21 ; 21 ; >
+      au < testing ; exists ; 1999 ; Imaging Volume 11 ; 11 ; >
+      au < testing ; exists ; 2000 ; Imaging Volume 12 ; 12 ; >
+      au < testing ; exists ; 2001 ; Imaging Volume 13 ; 13 ; >
+      au < testing ; exists ; 2002 ; Imaging Volume 14 ; 14 ; >
+      au < testing ; exists ; 2003 ; Imaging Volume 15 ; 15 ; >
+      au < testing ; exists ; 2004 ; Imaging Volume 16 ; 16 ; >
+      au < testing ; exists ; 2005 ; Imaging Volume 17 ; 17 ; >
+      au < testing ; exists ; 2006 ; Imaging Volume 18 ; 18 ; >
+      au < testing ; exists ; 2007 ; Imaging Volume 19 ; 19 ; >
+      au < testing ; exists ; 2008 ; Imaging Volume 20 ; 20 ; >
+      au < testing ; exists ; 2009 ; Imaging Volume 21 ; 21 ; >
       au < frozen ; exists ; 2013 ; Imaging Volume 22 ; 22 ; >
       au < finished ; finished ; 2014 ; Imaging Volume 23 ; 23 ; reingest1.clockss.org:8082 >
     
