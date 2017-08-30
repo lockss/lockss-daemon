@@ -1,0 +1,33 @@
+{
+
+  publisher <
+    name = European Journal of Business Science and Technology ;
+    info[contract] = 9999 ; #2017
+    info[back] = 2015 ;
+    info[tester] = 8 ;
+    info[poller] = 8
+  >
+
+    plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
+    implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
+
+  {
+  
+    title < 
+      name = European Journal of Business Science and Technology ;
+      eissn = 2336-6494 
+    >
+
+    {
+      param[base_url] = https://www.ejobsat.cz/journal/
+      param[journal_id] = ejobsat
+
+      au < manifest ; exists ; 2015 ; Literacy in Composition Studies Volume 1 ; 1 ; 2015 ; > #passed testing.
+      au < manifest ; exists ; 2016 ; Literacy in Composition Studies Volume 2 ; 2 ; 2016 ; > #passed testing.
+      au < expected ; exists ; 2017 ; Literacy in Composition Studies Volume 3 ; 3 ; 2017 ; >
+
+    }
+    
+  }
+
+}
