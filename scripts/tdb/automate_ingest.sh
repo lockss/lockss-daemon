@@ -8,14 +8,14 @@ echo "###Ready highwire" > $t/tmp_HW
 
 #Atypon (not T&F), in order by year
 #Ready
-echo "###Ready Atypon 2016" > $t/tmp_Atypon
-./scripts/tdb/tdbout -Y -a -Q 'plugin ~ "typon" and year is "2016" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | shuf >> $t/tmp_Atypon
-echo "###Ready Atypon not 2016" >> $t/tmp_Atypon
-./scripts/tdb/tdbout -Y -a -Q 'plugin ~ "typon" and year is not "2016" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | shuf >> $t/tmp_Atypon
+echo "###Ready Atypon 2017" > $t/tmp_Atypon
+./scripts/tdb/tdbout -Y -a -Q 'plugin ~ "typon" and year is "2017" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | shuf >> $t/tmp_Atypon
+echo "###Ready Atypon not 2017" >> $t/tmp_Atypon
+./scripts/tdb/tdbout -Y -a -Q 'plugin ~ "typon" and year is not "2017" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | shuf >> $t/tmp_Atypon
 #Manifest
 #echo "###Manifest Sage 2017" >> $t/tmp_Atypon
 #./scripts/tdb/tdbout -MT -a -Q 'year ~ "2017$" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/sage_publications.atypon.tdb | shuf >> $t/tmp_Atypon
-echo "###Manifest Sage 2017" >> $t/tmp_Atypon
+echo "###Manifest Sage 2016" >> $t/tmp_Atypon
 ./scripts/tdb/tdbout -MT -a -Q 'year ~ "2016$" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/sage_publications.atypon.tdb | shuf >> $t/tmp_Atypon
 echo "###Manifest Sage 2015" >> $t/tmp_Atypon
 ./scripts/tdb/tdbout -MT -a -Q 'year ~ "2015$" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/sage_publications.atypon.tdb | shuf >> $t/tmp_Atypon
@@ -36,17 +36,17 @@ echo "###Manifest Sage 2008" >> $t/tmp_Atypon
 
 #Atypon T&F in order by year
 #Ready
-echo "###Ready T&F 2016" > $t/tmp_TnF
-./scripts/tdb/tdbout -Y -a -Q 'plugin ~ "ClockssTaylorAndFrancisPlugin" and year is "2016" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | shuf >> $t/tmp_TnF
-echo "###Ready T&F not 2016" >> $t/tmp_TnF
-./scripts/tdb/tdbout -Y -a -Q 'plugin ~ "ClockssTaylorAndFrancisPlugin" and year is not "2016" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | shuf >> $t/tmp_TnF
+echo "###Ready T&F 2017" > $t/tmp_TnF
+./scripts/tdb/tdbout -Y -a -Q 'plugin ~ "ClockssTaylorAndFrancisPlugin" and year is "2017" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | shuf >> $t/tmp_TnF
+echo "###Ready T&F not 2017" >> $t/tmp_TnF
+./scripts/tdb/tdbout -Y -a -Q 'plugin ~ "ClockssTaylorAndFrancisPlugin" and year is not "2017" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | shuf >> $t/tmp_TnF
 
 #Misc: all but Highwire, T&F, Atypon
 #Ready
-echo "###Ready Misc 2016" > $t/tmp_Misc
-./scripts/tdb/tdbout -Y -a -Q 'year is "2016" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | grep -v highwire | grep -v typon | grep -v ClockssTaylorAndFrancisPlugin | shuf >> $t/tmp_Misc
-echo "###Ready Misc not 2016" >> $t/tmp_Misc
-./scripts/tdb/tdbout -Y -a -Q 'year is not "2016" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | grep -v highwire | grep -v typon | grep -v ClockssTaylorAndFrancisPlugin | shuf >> $t/tmp_Misc
+echo "###Ready Misc 2017" > $t/tmp_Misc
+./scripts/tdb/tdbout -Y -a -Q 'year is "2017" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | grep -v highwire | grep -v typon | grep -v ClockssTaylorAndFrancisPlugin | shuf >> $t/tmp_Misc
+echo "###Ready Misc not 2017" >> $t/tmp_Misc
+./scripts/tdb/tdbout -Y -a -Q 'year is not "2017" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | grep -v highwire | grep -v typon | grep -v ClockssTaylorAndFrancisPlugin | shuf >> $t/tmp_Misc
 #Single Ingest Machines: all but Highwire, T&F
 echo "*********************" >> $t/tmp_Misc
 echo "###Ready Misc Ingest1" >> $t/tmp_Misc
