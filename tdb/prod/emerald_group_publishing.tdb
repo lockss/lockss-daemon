@@ -4580,12 +4580,13 @@
   {
     title <
       name = International Journal of Physical Distribution & Logistics Management ;
-      issn = 0960-0035 ;
-      issnl = 0960-0035
+      issn = 0020-7527 ;
+      issnl = 0020-7527
     >
 
-    comment[journal_issn] = 0960-0035
+    comment[journal_issn] = 0020-7527
     param[journal_id] = ijpd
+    #continued_by = 0269-8218
 
     au < doNotProcess ; 1971 ; International Journal of Physical Distribution & Logistics Management Volume 1 ; 1 >
     au < doNotProcess ; 1972 ; International Journal of Physical Distribution & Logistics Management Volume 2 ; 2 >
@@ -4594,6 +4595,21 @@
     au < doNotProcess ; 1975 ; International Journal of Physical Distribution & Logistics Management Volume 5 ; 5 >
     au < doNotProcess ; 1976 ; International Journal of Physical Distribution & Logistics Management Volume 6 ; 6 >
     au < doNotProcess ; 1977 ; International Journal of Physical Distribution & Logistics Management Volume 7 ; 7 >
+    
+  }
+
+  {
+    title <
+      name = International Journal of Physical Distribution & Materials Management ;
+      issn = 0269-8218 ;
+      issnl = 0269-8218
+    >
+
+    comment[journal_issn] = 0269-8218
+    param[journal_id] = ijpdmm
+    #continues = 0020-7527
+    #continued_by = 0960-0035
+
     au < doNotProcess ; 1978 ; International Journal of Physical Distribution & Logistics Management Volume 8 ; 8 >
     au < doNotProcess ; 1979 ; International Journal of Physical Distribution & Logistics Management Volume 9 ; 9 >
     au < doNotProcess ; 1980 ; International Journal of Physical Distribution & Logistics Management Volume 10 ; 10 >
@@ -4606,6 +4622,20 @@
     au < doNotProcess ; 1987 ; International Journal of Physical Distribution & Logistics Management Volume 17 ; 17 >
     au < doNotProcess ; 1988 ; International Journal of Physical Distribution & Logistics Management Volume 18 ; 18 >
     au < doNotProcess ; 1989 ; International Journal of Physical Distribution & Logistics Management Volume 19 ; 19 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Physical Distribution & Logistics Management ;
+      issn = 0960-0035 ;
+      issnl = 0960-0035
+    >
+
+    comment[journal_issn] = 0960-0035
+    param[journal_id] = ijpdlm
+    #continues = 0269-8218
+
     au < doNotProcess ; 1990 ; International Journal of Physical Distribution & Logistics Management Volume 20 ; 20 >
     au < doNotProcess ; 1991 ; International Journal of Physical Distribution & Logistics Management Volume 21 ; 21 >
     au < doNotProcess ; 1992 ; International Journal of Physical Distribution & Logistics Management Volume 22 ; 22 >
@@ -4631,6 +4661,9 @@
     au < doNotProcess ; 2012 ; International Journal of Physical Distribution & Logistics Management Volume 42 ; 42 >
     au < exists ; 2013 ; International Journal of Physical Distribution & Logistics Management Volume 43 ; 43 >
     au < exists ; 2014 ; International Journal of Physical Distribution & Logistics Management Volume 44 ; 44 >
+    au < exists ; 2015 ; International Journal of Physical Distribution & Logistics Management Volume 45 ; 45 >
+    au < exists ; 2016 ; International Journal of Physical Distribution & Logistics Management Volume 46 ; 46 >
+    au < exists ; 2017 ; International Journal of Physical Distribution & Logistics Management Volume 47 ; 47 >
 
   }
 

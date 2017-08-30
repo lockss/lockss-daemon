@@ -275,6 +275,7 @@
       param[journal_id] = img
       # no issue in 2010-2012
     
+      au < doNotProcess ; 1999 ; Imaging Volume 11 ; 11 >
       au < doNotProcess ; 2000 ; Imaging Volume 12 ; 12 >
       au < doNotProcess ; 2001 ; Imaging Volume 13 ; 13 >
       au < doNotProcess ; 2002 ; Imaging Volume 14 ; 14 >
