@@ -162,7 +162,8 @@ public class JstorCSUrlConsumerFactory implements UrlConsumerFactory {
     // We only go in to this routine if we know the content-type is set (not null) 
     private void correctContentTypeHeader() {
       String pub_ctype = (String)fud.headers.get(CachedUrl.PROPERTY_CONTENT_TYPE);
-      fud.headers.remove(CachedUrl.PROPERTY_CONTENT_TYPE);
+      fud.headers.remove("Content-Type"); //content-type
+      fud.headers.remove(CachedUrl.PROPERTY_CONTENT_TYPE); //x-lockss-content-type
       fud.headers.put(LOCKSS_ORIG_CONTENT_TYPE, pub_ctype);
     }
 
