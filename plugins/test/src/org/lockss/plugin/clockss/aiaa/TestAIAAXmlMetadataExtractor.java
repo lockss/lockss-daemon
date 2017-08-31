@@ -165,6 +165,7 @@ public class TestAIAAXmlMetadataExtractor extends LockssTestCase {
         mdRecord = (ArticleMetadata) mdIt.next();
         //log.info(mdRecord.ppString(2));
         assertEquals(mdRecord.get(MetadataField.FIELD_PUBLICATION_TITLE),"International Conference");
+        assertEquals(mdRecord.get(MetadataField.FIELD_ARTICLE_TITLE),"International Conference");
         assertEquals(mdRecord.get(MetadataField.FIELD_ISBN),"978-1-11111-111-1");
         assertEquals(mdRecord.get(MetadataField.FIELD_DOI),"10.2514/BOOK");
         assertEquals(mdRecord.get(MetadataField.FIELD_DATE),"January 9, 2017");
