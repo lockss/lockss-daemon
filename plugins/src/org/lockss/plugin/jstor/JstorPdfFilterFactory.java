@@ -151,7 +151,11 @@ public class JstorPdfFilterFactory extends ExtractingPdfFilterFactory {
       throws PdfException {
     pdfDocument.unsetModificationDate();
     pdfDocument.unsetMetadata();
-    PdfUtil.normalizeTrailerId(pdfDocument);
+    pdfDocument.unsetCreationDate();
+    pdfDocument.unsetCreator();
+    pdfDocument.unsetLanguage();
+    pdfDocument.unsetProducer();
+    pdfDocument.unsetKeywords();    
 
     JstorDownloadedFromWorker worker = new JstorDownloadedFromWorker();
     boolean firstPage = true;
@@ -171,6 +175,5 @@ public class JstorPdfFilterFactory extends ExtractingPdfFilterFactory {
     }
   }
   
-
 
 }
