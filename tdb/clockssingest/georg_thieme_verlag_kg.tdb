@@ -334,7 +334,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Aktuelle Urologie Volume 45 ; 45 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; Aktuelle Urologie Volume 46 ; 46 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; 2016 ; Aktuelle Urologie Volume 47 ; 47 ; >
-    au < manifest ; exists ; 2017 ; 2017 ; Aktuelle Urologie Volume 48 ; 48 ; >
+    au < ready ; exists ; 2017 ; 2017 ; Aktuelle Urologie Volume 48 ; 48 ; >
 
    }
 
@@ -654,7 +654,7 @@
       au < finished ; finished ; 2014 ; 2014 ; Balint Journal Volume 15 ; 15 ; >
       au < finished ; finished ; 2015 ; 2015 ; Balint Journal Volume 16 ; 16 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; 2016 ; Balint Journal Volume 17 ; 17 ; reingest3.clockss.org:8083 >
-      au < manifest ; exists ; 2017 ; 2017 ; Balint Journal Volume 18 ; 18 ; >
+      au < ready ; exists ; 2017 ; 2017 ; Balint Journal Volume 18 ; 18 ; >
 
   }
 
@@ -795,7 +795,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Deutsche Heilpraktiker-Zeitschrift Volume 9 ; 9 ; >
    au < finished ; finished ; 2015 ; 2015 ; Deutsche Heilpraktiker-Zeitschrift Volume 10 ; 10 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; Deutsche Heilpraktiker-Zeitschrift Volume 11 ; 11 ; reingest1.clockss.org:8082 >
-   au < manifest ; exists ; 2017 ; 2017 ; Deutsche Heilpraktiker-Zeitschrift Volume 12 ; 12 ; >
+   au < ready ; exists ; 2017 ; 2017 ; Deutsche Heilpraktiker-Zeitschrift Volume 12 ; 12 ; >
 
   }
 
@@ -884,7 +884,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Diabetes aktuell Volume 12 ; 12 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2015 ; 2015 ; Diabetes aktuell Volume 13 ; 13 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2016 ; 2016 ; Diabetes aktuell Volume 14 ; 14 ; >
-   au < manifest ; exists ; 2017 ; 2017 ; Diabetes aktuell Volume 15 ; 15 ; >
+   au < ready ; exists ; 2017 ; 2017 ; Diabetes aktuell Volume 15 ; 15 ; >
 
   }
 
@@ -1148,7 +1148,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Endo-Praxis Volume 30 ; 30 ; >
    au < finished ; finished ; 2015 ; 2015 ; Endo-Praxis Volume 31 ; 31 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2016 ; 2016 ; Endo-Praxis Volume 32 ; 32 ; >
-   au < manifest ; exists ; 2017 ; 2017 ; Endo-Praxis Volume 33 ; 33 ; >
+   au < ready ; exists ; 2017 ; 2017 ; Endo-Praxis Volume 33 ; 33 ; >
 
   }
 
@@ -1292,7 +1292,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Erfahrungsheilkunde Volume 63 ; 63 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2015 ; 2015 ; Erfahrungsheilkunde Volume 64 ; 64 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; Erfahrungsheilkunde Volume 65 ; 65 ; reingest2.clockss.org:8085 >
-   au < manifest ; exists ; 2017 ; 2017 ; Erfahrungsheilkunde Volume 66 ; 66 ; >
+   au < ready ; exists ; 2017 ; 2017 ; Erfahrungsheilkunde Volume 66 ; 66 ; >
 
   }
 
@@ -1316,7 +1316,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Ergopraxis Volume 7 ; 7 ; >
    au < finished ; finished ; 2015 ; 2015 ; Ergopraxis Volume 8 ; 8 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2016 ; 2016 ; Ergopraxis Volume 9 ; 9 ; >
-   au < manifest ; exists ; 2017 ; 2017 ; Ergopraxis Volume 10 ; 10 ; >
+   au < ready ; exists ; 2017 ; 2017 ; Ergopraxis Volume 10 ; 10 ; >
 
   }
 
@@ -1367,7 +1367,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Ernährung & Medizin Volume 29 ; 029 ; >
    au < finished ; finished ; 2015 ; 2015 ; Ernährung & Medizin Volume 30 ; 030 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; Ernährung & Medizin Volume 31 ; 31 ; reingest5.clockss.org:8082 >
-   au < manifest ; exists ; 2017 ; 2017 ; Ernährung & Medizin Volume 32 ; 32 ; >
+   au < ready ; exists ; 2017 ; 2017 ; Ernährung & Medizin Volume 32 ; 32 ; >
 
   }
 
@@ -1517,7 +1517,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Experimental and Clinical Endocrinology & Diabetes Volume 122 ; 122 ; >
    au < finished ; finished ; 2015 ; 2015 ; Experimental and Clinical Endocrinology & Diabetes Volume 123 ; 123 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2016 ; 2016 ; Experimental and Clinical Endocrinology & Diabetes Volume 124 ; 124 ; >
-   au < manifest ; exists ; 2017 ; 2017 ; Experimental and Clinical Endocrinology & Diabetes Volume 125 ; 125 ; >
+   au < ready ; exists ; 2017 ; 2017 ; Experimental and Clinical Endocrinology & Diabetes Volume 125 ; 125 ; >
 
   }
 
@@ -1583,7 +1583,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Facial Plastic Surgery Volume 30 ; 30 ; >
    au < finished ; finished ; 2015 ; 2015 ; Facial Plastic Surgery Volume 31 ; 31 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; Facial Plastic Surgery Volume 32 ; 32 ; reingest1.clockss.org:8082 >
-   au < manifest ; exists ; 2017 ; 2017 ; Facial Plastic Surgery Volume 33 ; 33 ; >
+   au < ready ; exists ; 2017 ; 2017 ; Facial Plastic Surgery Volume 33 ; 33 ; >
 
   }
 
@@ -1782,7 +1782,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Gefäßmedizin Scan Volume 1 ; 1 ; >
    au < finished ; finished ; 2015 ; 2015 ; Gefäßmedizin Scan Volume 2 ; 2 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; Gefäßmedizin Scan Volume 3 ; 3 ; reingest1.clockss.org:8082 >
-   au < manifest ; exists ; 2017 ; 2017 ; Gefäßmedizin Scan Volume 4 ; 4 ; >
+   au < ready ; exists ; 2017 ; 2017 ; Gefäßmedizin Scan Volume 4 ; 4 ; >
 
   }
 
@@ -1990,7 +1990,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Homoeopathic Links Volume 27 ; 27 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2015 ; 2015 ; Homoeopathic Links Volume 28 ; 28 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2016 ; 2016 ; Homoeopathic Links Volume 29 ; 29 ; reingest1.clockss.org:8082 >
-   au < manifest ; exists ; 2017 ; 2017 ; Homoeopathic Links Volume 30 ; 30 ; >
+   au < ready ; exists ; 2017 ; 2017 ; Homoeopathic Links Volume 30 ; 30 ; >
 
   }
 
@@ -2155,7 +2155,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Informationen aus Orthodontie & Kieferorthopädie Volume 46 ; 46 ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2015 ; 2015 ; Informationen aus Orthodontie & Kieferorthopädie Volume 47 ; 47 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; Informationen aus Orthodontie & Kieferorthopädie Volume 48 ; 48 ; reingest3.clockss.org:8083 >
-   au < manifest ; exists ; 2017 ; 2017 ; Informationen aus Orthodontie & Kieferorthopädie Volume 49 ; 49 ; >
+   au < ready ; exists ; 2017 ; 2017 ; Informationen aus Orthodontie & Kieferorthopädie Volume 49 ; 49 ; >
 
   }
 
@@ -2292,7 +2292,7 @@
     au < finished ; finished ; 2014 ; 2014 ; International Journal of Angiology Volume 23 ; 23 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; 2015 ; International Journal of Angiology Volume 24 ; 24 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; 2016 ; International Journal of Angiology Volume 25 ; 25 ; >
-    au < manifest ; exists ; 2017 ; 2017 ; International Journal of Angiology Volume 26 ; 26 ; >
+    au < ready ; exists ; 2017 ; 2017 ; International Journal of Angiology Volume 26 ; 26 ; >
 
   }
 
@@ -2485,7 +2485,7 @@
     #years = 2016-current
 
     au < finished ; crawling ; 2016 ; 2016 ; Journal of Hand and Microsurgery Volume 8 ; 8 ; reingest3.clockss.org:8083 >
-    au < manifest ; exists ; 2017 ; 2017 ; Journal of Hand and Microsurgery Volume 9 ; 9 ; >
+    au < ready ; exists ; 2017 ; 2017 ; Journal of Hand and Microsurgery Volume 9 ; 9 ; >
 
   }
 
@@ -2649,7 +2649,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Journal of Pediatric Epilepsy Volume 3 ; 3 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Journal of Pediatric Epilepsy Volume 4 ; 4 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Journal of Pediatric Epilepsy Volume 5 ; 5 ; reingest1.clockss.org:8082 >
-    au < manifest ; exists ; 2017 ; 2017 ; Journal of Pediatric Epilepsy Volume 6 ; 6 ; >
+    au < ready ; exists ; 2017 ; 2017 ; Journal of Pediatric Epilepsy Volume 6 ; 6 ; >
 
   }
 
