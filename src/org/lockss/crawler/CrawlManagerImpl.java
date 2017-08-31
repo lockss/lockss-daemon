@@ -51,15 +51,13 @@ import org.lockss.plugin.exploded.*;
 import org.lockss.plugin.AuEvent;
 
 /**
- * This is the interface for the object that will sit between the crawler
- * and the rest of the world.  It mediates the different crawl types.
+ * Manages crawl queues, starts crawls.
+ *
+ * @ParamCategory Crawler
+ *
+ * @ParamCategoryDoc Crawler Controls both the scheduling of crawls and
+ * the execution of individual crawls.
  */
-
-// ToDo:
-// 1)handle background crawls
-// 2)check for conflicting crawl types
-// 3)check crawl schedule rules
-
 public class CrawlManagerImpl extends BaseLockssDaemonManager
     implements CrawlManager, CrawlManager.StatusSource, ConfigurableManager {
 

@@ -59,7 +59,7 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
   static final Logger logger =
     Logger.getLogger("NodeFilterHtmlLinkRewriterFactory");
 
-  public static String PARAM_META_TAG_REWRITE_PREFIX =
+  public static final String PARAM_META_TAG_REWRITE_PREFIX =
     Configuration.PREFIX + "htmlRewriter.metaTagRewritePrefix";
   public static String DEFAULT_META_TAG_REWRITE_PREFIX = null;
 

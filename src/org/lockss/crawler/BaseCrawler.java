@@ -53,6 +53,7 @@ import org.lockss.clockss.*;
  * The base crawler extended by repair crawler and follow link crawler contains
  * proxy, retry and basic crawling logic.
  *
+ * @ParamCategory Crawler
  */
 public abstract class BaseCrawler implements Crawler {
   static Logger logger = Logger.getLogger(BaseCrawler.class);

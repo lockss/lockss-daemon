@@ -85,6 +85,9 @@ Args:
   -Duse=false              Exclude Class use info from javadoc.
   -Dversion=true           Include version info in javadoc.
   -Dscript=name            Script run by jdftp.  Default is lockss-jdftp.
+  -Dformat=name            for param-docs target, specifies whether params
+                           should be listed alphabetically (Alpha, the default),
+                           or grouped by Category or Relevance.
 
  Plugin targets (build-plugin, sign-plugin)
   -Dplugin-root=path       Path to root of plugin source or classes hierarchy.
@@ -2302,6 +2305,8 @@ published on the Web. http://www.lockss.org
   <target name="param-docs" depends="jar-tools,prepare-javadoc,-load-build-info"
    description="Generate an HTML summary of LOCKSS configuration parameters.">
     <!-- Write the HTML param doc into the doc tree -->
+    <property name="format" value="Alpha" />
+
     <javadoc sourcepath="${src}"
 	     packagenames="org.lockss.*"
 	     failonerror="true"
@@ -2310,6 +2315,7 @@ published on the Web. http://www.lockss.org
 	     classpathref="tools.run.classpath"
 	     access="private">
       <arg value="-J-Xmx512m"/>
+      <arg value="-f"/> <arg value="${format}"/>
       <arg value="-d"/> <arg value="${javadoc}"/>
       <arg value="-o"/> <arg value="paramdoc.html"/>
       <arg value="-h"/> <arg value="${javadoc.header}"/>

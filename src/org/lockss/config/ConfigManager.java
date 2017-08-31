@@ -60,6 +60,17 @@ import org.lockss.util.urlconn.*;
 /** ConfigManager loads and periodically reloads the LOCKSS configuration
  * parameters, and provides services for updating locally changeable
  * configuration.
+ *
+ * @ParamCategory Configuration
+ *
+ * @ParamCategoryDoc Configuration These parameters mostly pertain to the
+ * configuration mechanism itself.
+ *
+ * @ParamCategoryDoc Platform Parameters with the
+ * <code>org.lockss.config.platform prefix</code> are set by the
+ * system-dependent startup scripts, based on information gathered by
+ * running hostconfig.  They should generally not be set manually except in
+ * testing environments.
  */
 public class ConfigManager implements LockssManager {
   /** The common prefix string of all LOCKSS configuration parameters. */
@@ -70,28 +81,41 @@ public class ConfigManager implements LockssManager {
   public static final String DAEMON = Configuration.DAEMON;
 
   static final String MYPREFIX = PREFIX + "config.";
+
+  /** The interval at which the daemon checks the various configuration
+   * files, including title dbs, for changes.
+   * @ParamCategory Tuning
+   * @ParamRelevance Rare
+   */
   static final String PARAM_RELOAD_INTERVAL = MYPREFIX + "reloadInterval";
   static final long DEFAULT_RELOAD_INTERVAL = 30 * Constants.MINUTE;
 
-  /** host:port of proxy to use to fetch props (config); not set for direct
-   * connection.  */
+  /** If set to <i>hostname</i>:<i>port</i>, the configuration server will
+   * be accessed via the specified proxy.  Leave unset for direct
+   * connection.
+   * @ParamCategory Platform
+   */
   public static final String PARAM_PROPS_PROXY = PLATFORM + "propsProxy";
 
   /** If set, the authenticity of the config server will be checked using
    * this keystore.  The value is either an internal name designating a
    * resource (e.g. <tt>&quot;lockss-ca&quot;</tt>, to use the builtin
    * keystore containing the LOCKSS signing cert (see {@link
-   * #builtinServerAuthKeystores}), or the filename of a keystore Can only
-   * be set in platform config. */
+   * #builtinServerAuthKeystores}), or the filename of a keystore. Can only
+   * be set in platform config.
+   * @ParamCategory Platform
+   */
   public static final String PARAM_SERVER_AUTH_KEYSTORE_NAME =
     MYPREFIX + "serverAuthKeystore";
 
   /** If set, the daemon will authenticate itself to the config server
    * using this keystore.  The value is the name of the keystore (defined
-   * by additional <tt>org.lockss.keyMgr.keystore.&lt;id&gt;.xxx</tt>
+   * by additional <tt>org.lockss.keyMgr.keystore.&lt;id&gt;.<i>xxx</i></tt>
    * parameters (see {@link org.lockss.daemon.LockssKeyStoreManager}), or
    * <tt>&quot;lockss-ca&quot;</tt>, to use the builtin keystore containing
-   * the LOCKSS signing cert.  Can only be set in platform config. */
+   * the LOCKSS signing cert.  Can only be set in platform config.
+   * @ParamCategory Platform
+   */
   public static final String PARAM_CLIENT_AUTH_KEYSTORE_NAME =
     MYPREFIX + "clientAuthKeystore";
 
@@ -100,55 +124,83 @@ public class ConfigManager implements LockssManager {
   static Map<String,String> builtinServerAuthKeystores =
     MapUtil.map("lockss-ca", "org/lockss/config/lockss-ca.keystore");
 
+  /** Interval at which the regular GET request to the config server will
+   * include an {@value Constants.X_LOCKSS_INFO} with version and other
+   * information.  Used in conjunction with logging hooks on the server.
+   * @ParamRelevance Rare
+   */
   static final String PARAM_SEND_VERSION_EVERY = MYPREFIX + "sendVersionEvery";
   static final long DEFAULT_SEND_VERSION_EVERY = 1 * Constants.DAY;
 
   static final String WDOG_PARAM_CONFIG = "Config";
   static final long WDOG_DEFAULT_CONFIG = 2 * Constants.HOUR;
 
+  /** Path to local config directory, relative to entries on diskSpacePaths.
+   * @ParamRelevance Rare
+   */
   public static final String PARAM_CONFIG_PATH = MYPREFIX + "configFilePath";
   public static final String DEFAULT_CONFIG_PATH = "config";
 
-  /** When logging new or changed config, truncate val at this length */
+  /** When logging new or changed config, truncate val at this length.
+   * @ParamRelevance Rare
+   */
   static final String PARAM_MAX_LOG_VAL_LEN =
     MYPREFIX + "maxLogValLen";
   static final int DEFAULT_MAX_LOG_VAL_LEN = 2000;
 
-  /** Config param written to local config files to indicate file version */
+  /** Config param written to local config files to indicate file version.
+   * Not intended to be set manually.
+   * @ParamRelevance Rare
+   */
   static final String PARAM_CONFIG_FILE_VERSION =
     MYPREFIX + "fileVersion.<filename>";
 
-  /** Temporary param to enable new scheduler */
+  /** Set false to disable scheduler.  Used only for unit tests.
+   * @ParamRelevance Never
+   */
   public static final String PARAM_NEW_SCHEDULER =
     HashService.PREFIX + "use.scheduler";
   static final boolean DEFAULT_NEW_SCHEDULER = true;
 
   /** Maximum number of AU config changes to to save up during a batch add
-   * or remove operation, before writing them to au.txt  */
+   * or remove operation, before writing them to au.txt  
+   * @ParamRelevance Rare
+   */
   public static final String PARAM_MAX_DEFERRED_AU_BATCH_SIZE =
     MYPREFIX + "maxDeferredAuBatchSize";
   public static final int DEFAULT_MAX_DEFERRED_AU_BATCH_SIZE = 100;
 
-  /** Root of TitleDB definitions.  */
+  /** Root of TitleDB definitions.  This is not an actual parameter.
+   * @ParamRelevance Never
+   */
   public static final String PARAM_TITLE_DB = Configuration.PREFIX + "title";
   /** Prefix of TitleDB definitions.  */
   public static final String PREFIX_TITLE_DB = PARAM_TITLE_DB + ".";
 
-  /** List of URLs of title DBs locally set on cache from UI.  Do not set
-   * on prop server */
+  /** List of URLs of title DBs configured locally using UI.  Do not set
+   * manually
+   * @ParamRelevance Never
+   * @ParamAuto
+   */
   public static final String PARAM_USER_TITLE_DB_URLS =
     Configuration.PREFIX + "userTitleDbs";
 
-  /** List of URLs of title DBs */
+  /** List of URLs of title DBs to load.  Normally set in lockss.xml
+   * @ParamRelevance Common
+   */
   public static final String PARAM_TITLE_DB_URLS =
     Configuration.PREFIX + "titleDbs";
 
-  /** List of URLs of auxilliary config files */
+  /** List of URLs of auxilliary config files
+   * @ParamRelevance LessCommon
+   */
   public static final String PARAM_AUX_PROP_URLS =
     Configuration.PREFIX + "auxPropUrls";
 
   /** false disables SSL SNI name checking, compatible with Java 6 and
-   * misconfigured servers. */
+   * misconfigured servers.
+   * @ParamRelevance BackwardCompatibility
+   */
   public static final String PARAM_JSSE_ENABLESNIEXTENSION =
     PREFIX + "jsse.enableSNIExtension";
   static final boolean DEFAULT_JSSE_ENABLESNIEXTENSION = true;
@@ -159,80 +211,159 @@ public class ConfigManager implements LockssManager {
 		PARAM_TITLE_DB_URLS,
 		PARAM_AUX_PROP_URLS);
 
-  /** Tmp dir appropriate for platform.  If set, replaces java.io.tmpdir
-   * System property */
+  /** Place to put temporary files and directories.  If not set,
+   * java.io.tmpdir System property is used.  On a busy, capacious LOCKSS
+   * box, this should be a minimum of 50-100MB.
+   * @ParamCategory Platform
+   * @ParamRelevance Required
+   */
   public static final String PARAM_TMPDIR = PLATFORM + "tmpDir";
 
-  /** Daemon version string (i.e., 1.4.3, 1.5.0-test). */
+  /** Used only for testing.  The daemon version is normally loaded from a
+   * file created during the build process.  If that file is absent, the
+   * daemon version will be obtained from this param, if set.
+   * @ParamRelevance Never
+   */
   public static final String PARAM_DAEMON_VERSION = DAEMON + "version";
-  /** Platform version string as a 36-bit integer (i.e., 135a, 136, 137-test). */
+
+  /** Platform version string (<i>name</i>-<i>ver</i> or
+   * <i>name</i>-<i>ver</i>-<i>suffix</i> . <i>Eg</i>, Linux RPM-1).
+   * @ParamCategory Platform
+   * @ParamRelevance Common
+   */
   public static final String PARAM_PLATFORM_VERSION = PLATFORM + "version";
-  /** Platform host name (fqdn). */
+
+  /** Fully qualified host name (fqdn).  
+   * @ParamCategory Platform
+   */
   public static final String PARAM_PLATFORM_FQDN = PLATFORM + "fqdn";
 
-  /** Project name (CLOCKSS or LOCKSS) */
+  /** Project name (CLOCKSS or LOCKSS)
+   * @ParamCategory Platform
+   * @ParamRelevance Required
+   */
   public static final String PARAM_PLATFORM_PROJECT = PLATFORM + "project";
   public static final String DEFAULT_PLATFORM_PROJECT = "lockss";
 
-  /** Group names, for group= config file conditional */
+  /** Group names.  Boxes with at least one group in common will
+   * participate in each others' polls.  Also used to evaluate group=
+   * config file conditional,
+   * @ParamCategory Platform
+   * @ParamRelevance Required
+   */
   public static final String PARAM_DAEMON_GROUPS = DAEMON + "groups";
   public static final String DEFAULT_DAEMON_GROUP = "nogroup";
   public static final List DEFAULT_DAEMON_GROUP_LIST =
     ListUtil.list(DEFAULT_DAEMON_GROUP);
 
-  /** Local (routable) IP address, for lcap identity */
+  /** Local IP address
+   * @ParamCategory Platform
+   * @ParamRelevance Required
+   */
   public static final String PARAM_PLATFORM_IP_ADDRESS =
     PLATFORM + "localIPAddress";
 
-  /** Second IP address, for CLOCKSS subscription detection */
+  /** Second IP address, for CLOCKSS subscription detection
+   * @ParamCategory Platform
+   * @ParamRelevance Obsolescent
+   */
   public static final String PARAM_PLATFORM_SECOND_IP_ADDRESS =
     PLATFORM + "secondIP";
 
-  /** V3 identity string */
+  /** LCAP V3 identity string.  Of the form
+   * <code><i>proto</i>:[<i>ip-addr</i>:<i>port</i>]</code>; <i>eg</i>,
+   * <code>TCP:[10.33.44.55:9729]</code> or
+   * <code>tcp:[0:0:00:0000:0:0:0:1]:9729</code> .  Other boxes in the
+   * network must be able to reach this one by connecting to the specified
+   * host and port.  If behind NAT, this should be the external, routable,
+   * NAT address.
+   * @ParamCategory Platform
+   * @ParamRelevance Required
+   */
   public static final String PARAM_PLATFORM_LOCAL_V3_IDENTITY =
     PLATFORM + "v3.identity";
 
-  /** Local subnet set during config */
+  /** Initial value of ACL controlling access to the admin UI.  Normally
+   * set by hostconfig.  Once the access list is edited in the UI, that
+   * list takes precedence over this one.  However, any changes to this one
+   * after that point (<i>ie</i>, by rerunning hostconfig), will take
+   * effect and be reflected in the list visible in the UI.
+   * @ParamCategory Platform
+   * @ParamRelevance Common
+   */
   public static final String PARAM_PLATFORM_ACCESS_SUBNET =
     PLATFORM + "accesssubnet";
 
+  /** List of filesystem paths to space available to store content and
+   * other files
+   * @ParamCategory Platform
+   * @ParamRelevance Required
+   */
   public static final String PARAM_PLATFORM_DISK_SPACE_LIST =
     PLATFORM + "diskSpacePaths";
 
+  /** Email address to which various alerts, reports and backup file may be
+   * sent.
+   * @ParamCategory Platform
+   * @ParamRelevance Common
+   */
   public static final String PARAM_PLATFORM_ADMIN_EMAIL =
     PLATFORM + "sysadminemail";
   static final String PARAM_PLATFORM_LOG_DIR = PLATFORM + "logdirectory";
   static final String PARAM_PLATFORM_LOG_FILE = PLATFORM + "logfile";
 
+  /** SMTP relay host that will accept mail from this host.
+   * @ParamCategory Platform
+   * @ParamRelevance Common
+   */
   public static final String PARAM_PLATFORM_SMTP_HOST = PLATFORM + "smtphost";
+
+  /** SMTP relay port, if not the default
+   * @ParamCategory Platform
+   * @ParamRelevance Rare
+   */
   public static final String PARAM_PLATFORM_SMTP_PORT = PLATFORM + "smtpport";
-  static final String PARAM_PLATFORM_PIDFILE = PLATFORM + "pidfile";
 
   /** If true, local copies of remote config files will be maintained, to
-   * allow daemon to start when config server isn't available. */
+   * allow daemon to start when config server isn't available.
+   * @ParamCategory Platform
+   * @ParamRelevance Rare
+   */
   public static final String PARAM_REMOTE_CONFIG_FAILOVER = PLATFORM +
     "remoteConfigFailover";
   public static final boolean DEFAULT_REMOTE_CONFIG_FAILOVER = true;
 
-  /** Dir in which to store local copies of remote config files. */
+  /** Dir in which to store local copies of remote config files.
+   * @ParamCategory Platform
+   * @ParamRelevance Rare
+   */
   public static final String PARAM_REMOTE_CONFIG_FAILOVER_DIR = PLATFORM +
     "remoteConfigFailoverDir";
   public static final String DEFAULT_REMOTE_CONFIG_FAILOVER_DIR = "remoteCopy";
 
   /** Maximum acceptable age of a remote config failover file, specified as
    * an integer followed by h, d, w or y for hours, days, weeks and years.
-   * Zero means no age limit. */
+   * Zero means no age limit.
+   * @ParamCategory Platform
+   * @ParamRelevance Rare
+   */
   public static final String PARAM_REMOTE_CONFIG_FAILOVER_MAX_AGE = PLATFORM +
     "remoteConfigFailoverMaxAge";
   public static final long DEFAULT_REMOTE_CONFIG_FAILOVER_MAX_AGE = 0;
 
-  /** Checksum algorithm used to verify remote config failover file */
+  /** Checksum algorithm used to verify remote config failover file
+   * @ParamCategory Platform
+   * @ParamRelevance Rare
+   */
   public static final String PARAM_REMOTE_CONFIG_FAILOVER_CHECKSUM_ALGORITHM =
     PLATFORM + "remoteConfigFailoverChecksumAlgorithm";
   public static final String DEFAULT_REMOTE_CONFIG_FAILOVER_CHECKSUM_ALGORITHM =
     "SHA-256";
 
-  /** Failover file not accepted unled it has a checksum. */
+  /** Failover file not accepted unless it has a checksum.
+   * @ParamCategory Platform
+   * @ParamRelevance Rare
+   */
   public static final String PARAM_REMOTE_CONFIG_FAILOVER_CHECKSUM_REQUIRED =
     PLATFORM + "remoteConfigFailoverChecksumRequired";
   public static final boolean DEFAULT_REMOTE_CONFIG_FAILOVER_CHECKSUM_REQUIRED =
@@ -262,11 +393,18 @@ public class ConfigManager implements LockssManager {
     "remote_config_failover_info.xml";
 
   /** If set to a list of regexps, matching parameter names will be allowed
-   * to be set in expert config.  */
+   * to be set in expert config, and loaded from expert_config.txt
+   * @ParamRelevance Rare
+   */
   public static final String PARAM_EXPERT_ALLOW = MYPREFIX + "expert.allow";
   public static final List DEFAULT_EXPERT_ALLOW = null;
+
   /** If set to a list of regexps, matching parameter names will not be
-   * allowed to be set in expert config.  */
+   * allowed to be set in expert config, and loaded from expert_config.txt.
+   * The default prohibits using expert config to subvert platform
+   * settings, change passwords or keystores, or cause the daemon to exit
+   * @ParamRelevance Rare
+   */
   public static final String PARAM_EXPERT_DENY = MYPREFIX + "expert.deny";
   static String ODLD = "^org\\.lockss\\.";
   public static final List DEFAULT_EXPERT_DENY =
@@ -280,7 +418,6 @@ public class ConfigManager implements LockssManager {
 		  Perl5Compiler.quotemeta(IdentityManager.PARAM_LOCAL_V3_IDENTITY),
 		  Perl5Compiler.quotemeta(IdentityManager.PARAM_LOCAL_V3_PORT),
 		  Perl5Compiler.quotemeta(IpAccessControl.PARAM_ERROR_BELOW_BITS),
-		  Perl5Compiler.quotemeta(ExportContent.PARAM_ENABLE_EXPORT),
 		  Perl5Compiler.quotemeta(PARAM_EXPERT_ALLOW),
 		  Perl5Compiler.quotemeta(PARAM_EXPERT_DENY),
 		  Perl5Compiler.quotemeta(LockssDaemon.PARAM_TESTING_MODE)

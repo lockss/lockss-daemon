@@ -54,9 +54,9 @@ import org.lockss.util.*;
 import org.lockss.util.urlconn.CacheException;
 
 /**
- * A abstract class that implemented by NewContentCrawler and OaiCrawler
- * it has the follow link mechanism that used by NewContentCrawler
+ * Implements a link-following crawler, for both NewContentCrawler
  * and OaiCrawler.
+ * @ParamCategory Crawler
  */
 public class FollowLinkCrawler extends BaseCrawler {
 

@@ -49,6 +49,7 @@ import org.lockss.plugin.*;
  * fetched, and URL counters/sets (fetched, excluded, errors, etc.)  A
  * config param ({@link #PARAM_RECORD_URLS}) controls whether the sets/maps
  * of URLs are recorded and displayed in the UI, or merely counted.
+ * @ParamCategory Crawler
 */
 public class CrawlerStatus {
   

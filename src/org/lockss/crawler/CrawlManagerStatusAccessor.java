@@ -42,6 +42,9 @@ import org.lockss.plugin.*;
 import org.lockss.state.ArchivalUnitStatus;
 import org.lockss.util.*;
 
+/** Builds status info for CrawlManager 
+ * @ParamCategory Crawler
+ */
 public class CrawlManagerStatusAccessor implements StatusAccessor {
 
   /** If true, crawl status of deleted AUs will be included in table. */

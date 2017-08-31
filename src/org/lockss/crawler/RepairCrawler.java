@@ -67,6 +67,8 @@ import org.lockss.state.*;
  * ConfigurationUtil.setCurrentConfigFromProps(p); <br>
  * <br>
  * That will set the retry limit to 2.
+ *
+ * @ParamCategory Crawler
  */
 public class RepairCrawler extends BaseCrawler {
 

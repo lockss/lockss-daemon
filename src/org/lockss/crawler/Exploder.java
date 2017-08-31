@@ -52,6 +52,7 @@ import org.lockss.filter.StringFilter;
 /**
  * The abstract base class for exploders, which handle extracting files from
  * archives.
+ * @ParamCategory Crawler
  *
  * @author  David S. H. Rosenthal
  * @version 0.0
