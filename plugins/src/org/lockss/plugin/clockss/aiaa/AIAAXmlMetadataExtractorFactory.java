@@ -47,7 +47,19 @@ import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.lockss.util.Logger;
 
-
+/*
+ * Each zip delivers all the articles associated with a particular conference
+ * The zip has a "book" level xml file that contains publication information, including ISBN if
+ * it's available.  It contains time and title information about each talk (article)
+ * Each article is in its own subdirectory by DOI and contains a PDf and XML with the same
+ * name. The XML contains article level information and the publication title but not the 
+ * publication ISBN nor necessarily a publication date. 
+ * 
+ * We are going to emit for all items, including the BOOK_VOLUME even though it doesn't have a PDF.
+ * The idea is that the book_volume item and the book_chapter items will coalesce under the same 
+ * publication item and therefore get associated with the isbn when it is available.
+ * 
+ */
 
 public class AIAAXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
   private static final Logger log = Logger.getLogger(AIAAXmlMetadataExtractorFactory.class);
@@ -129,8 +141,11 @@ public class AIAAXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorF
         thisAM.put(MetadataField.FIELD_ARTICLE_TYPE,MetadataField.ARTICLE_TYPE_BOOKCHAPTER);
       } else {
         // this is publication level information only
-        //only set the book-level doi if we're emitting for the book volume and not a chapter
+        // only set the book-level doi if we're emitting for the book volume and not a chapter
+        // we don't have a PDF but we have an XML listing of the contents we could use in the 
+        // even of a trigger so that will be the access_url for this
         thisAM.put(MetadataField.FIELD_ARTICLE_TYPE,MetadataField.ARTICLE_TYPE_BOOKVOLUME);
+        thisAM.put(MetadataField.FIELD_ARTICLE_TITLE,thisAM.get(MetadataField.FIELD_PUBLICATION_TITLE));
         if (thisAM.getRaw(AtyponBooksXmlSchemaHelper.book_doi) != null) {
           thisAM.put(MetadataField.FIELD_DOI,thisAM.getRaw(AtyponBooksXmlSchemaHelper.book_doi));
         }

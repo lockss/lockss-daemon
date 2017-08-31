@@ -153,7 +153,7 @@ implements SourceXmlSchemaHelper {
   // from the /book top node
   private static final String book_meta = "book-meta/";
   public static final String book_doi = book_meta + "book-id[@pub-id-type = 'doi']";
-  private static final String book_title = book_meta + "book-title-group/book-title";
+  public static final String book_title = book_meta + "book-title-group/book-title";
   private static final String book_publisher = book_meta + "publisher/publisher-name";
   private static final String book_pub_date = book_meta + "pub-date";
   private static final String book_isbn = book_meta + "isbn";
