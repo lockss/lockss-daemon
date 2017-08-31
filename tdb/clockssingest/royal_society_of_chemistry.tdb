@@ -669,7 +669,7 @@
       au < frozen ; exists ; 2013 ; Physical Chemistry Chemical Physics Volume 15 ; 15 ; 2013 ; >
       au < deepCrawl ; exists ; 2014 ; Physical Chemistry Chemical Physics Volume 16 ; 16 ; 2014 ; >
       au < deepCrawl ; exists ; 2015 ; Physical Chemistry Chemical Physics Volume 17 ; 17 ; 2015 ; >
-      au < deepCrawl ; exists ; 2016 ; Physical Chemistry Chemical Physics Volume 18 ; 18 ; 2016 ; >
+      au < deepCrawl ; exists ; 2016 ; Physical Chemistry Chemical Physics Volume 18 ; 18 ; 2016 ; reingest4.clockss.org:8082 >
       au < manifest ; exists ; 2017 ; Physical Chemistry Chemical Physics Volume 19 ; 19 ; 2017 ; >
 
   }
@@ -1085,7 +1085,7 @@
       param[journal_code] = ew
 
       au < frozen ; exists ; 2015 ; Environmental Science: Water Research & Technology Volume 1 ; 1 ; 2015 ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2016 ; Environmental Science: Water Research & Technology Volume 2 ; 2 ; 2016 ; >
+      au < deepCrawl ; exists ; 2016 ; Environmental Science: Water Research & Technology Volume 2 ; 2 ; 2016 ; reingest1.clockss.org:8082 >
       au < manifest ; exists ; 2017 ; Environmental Science: Water Research & Technology Volume 3 ; 3 ; 2017 ; >
 
   }
@@ -1991,7 +1991,7 @@
       comment[years] = Published 2016-2016
       param[journal_code] = nh
 
-      au < deepCrawl ; exists ; 2016 ; Nanoscale Horizons Volume 1 ; 1 ; 2016 ; >
+      au < deepCrawl ; exists ; 2016 ; Nanoscale Horizons Volume 1 ; 1 ; 2016 ; reingest2.clockss.org:8085 >
       au < manifest ; exists ; 2017 ; Nanoscale Horizons Volume 2 ; 2 ; 2017 ; >
 
   }
@@ -2318,7 +2318,7 @@
       au < frozen ; exists ; 2013 ; RSC Advances Volume 3 ; 3 ; 2013 ; >
       au < frozen ; exists ; 2014 ; RSC Advances Volume 4 ; 4 ; 2014 ; >
       au < frozen ; exists ; 2015 ; RSC Advances Volume 5 ; 5 ; 2015 ; >
-      au < deepCrawl ; exists ; 2016 ; RSC Advances Volume 6 ; 6 ; 2016 ; >
+      au < deepCrawl ; exists ; 2016 ; RSC Advances Volume 6 ; 6 ; 2016 ; reingest4.clockss.org:8082 >
       au < manifest ; exists ; 2017 ; RSC Advances Volume 7 ; 7 ; 2017 ; >
 
   }
