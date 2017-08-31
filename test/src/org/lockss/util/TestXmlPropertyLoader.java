@@ -890,7 +890,52 @@ public class TestXmlPropertyLoader extends LockssTestCase {
     m_xmlPropertyLoader.loadProperties(props, istr);
     assertEquals("bar", props.getProperty("result"));
   }
-  
+
+  public void testEmptyList() throws Exception {
+    PropertyTree props = new PropertyTree();
+    InputStream istr;
+    String s;
+    StringBuilder sb;
+    Vector<String> vs;
+
+    sb = new StringBuilder();
+    sb.append("<lockss-config>\n");
+    sb.append("<property name=\"emptyList\">");
+    sb.append("  <list>");
+    sb.append("  </list>");
+    sb.append("</property>");
+    sb.append("</lockss-config>\n");
+
+    props = new PropertyTree();
+    istr = new ReaderInputStream(new StringReader(sb.toString()));
+    setVersions(null, null, null, "test");
+    m_xmlPropertyLoader.loadProperties(props, istr);
+
+    s = props.getProperty("emptyList");
+    assertEquals("", s);
+    List<String> lst = StringUtil.breakAt(s, ';', -1, true, true);
+    assertEmpty(lst);
+  }
+
+  public void testEmptyConfig() throws Exception {
+    PropertyTree props = new PropertyTree();
+    InputStream istr;
+    String s;
+    StringBuilder sb;
+    Vector<String> vs;
+
+    sb = new StringBuilder();
+    sb.append("<lockss-config>\n");
+    sb.append("</lockss-config>\n");
+
+    props = new PropertyTree();
+    istr = new ReaderInputStream(new StringReader(sb.toString()));
+    setVersions(null, null, null, "test");
+    m_xmlPropertyLoader.loadProperties(props, istr);
+
+    assertEmpty(props);
+  }
+
   /**
    * This is a negative test: We should not accept "<else>" without a "<then>", or
    * a "<then>" after an "<else>".
@@ -1295,7 +1340,7 @@ public class TestXmlPropertyLoader extends LockssTestCase {
     assertTrue(vs.contains("3"));
     assertTrue(vs.contains("4"));
   }
-  
+
   /**
    * Test loading title database information.
    */
