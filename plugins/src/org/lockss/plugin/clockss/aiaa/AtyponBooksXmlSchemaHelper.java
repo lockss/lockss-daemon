@@ -104,7 +104,11 @@ implements SourceXmlSchemaHelper {
     <year>2013</year>
     <string-date>July 14 - 17, 2013</string-date>
    </pub-date>
+   
+   * Format is inconsistent.  Month might be 08 or it might be July
+   * just get year
    */
+  
   static private final NodeValue DATE_VALUE = new NodeValue() {
     @Override
     public String getValue(Node node) {
@@ -117,12 +121,14 @@ implements SourceXmlSchemaHelper {
       for (int p = 0; p < nameChildren.getLength(); p++) {
         Node partNode = nameChildren.item(p);
         String partName = partNode.getNodeName();
-        if ("day".equals(partName)) {
-          day  = partNode.getTextContent();
+        if ("year".equals(partName)) {
+          year  = partNode.getTextContent();
+          /*
         } else if ("month".equals(partName)) {
           month = partNode.getTextContent();
-      } else if ("year".equals(partName)) {
-        year = partNode.getTextContent();
+      } else if ("day".equals(partName)) {
+        day = partNode.getTextContent();
+        */
       }
       }
       StringBuilder valbuilder = new StringBuilder();
@@ -130,9 +136,11 @@ implements SourceXmlSchemaHelper {
       if (StringUtils.isBlank(year)) {
         return null;
       }
+      /*
       if ((!StringUtils.isBlank(month) && (!StringUtils.isBlank(day)))) {
         valbuilder.append(month + " " + day + ", ");
       }
+      */
       valbuilder.append(year);
       return valbuilder.toString();
     }
