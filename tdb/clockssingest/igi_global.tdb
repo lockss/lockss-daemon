@@ -448,7 +448,7 @@
 
     param[journal_issn] = 2161-1610
     
-    au < deepCrawl ; exists ; 2012 ; International Journal of Biomedical and Clinical Engineering (IJBCE) Volume 1 ; 1 ; > 
+    au < frozen ; exists ; 2012 ; International Journal of Biomedical and Clinical Engineering (IJBCE) Volume 1 ; 1 ; > 
     au < deepCrawl ; exists ; 2013 ; International Journal of Biomedical and Clinical Engineering (IJBCE) Volume 2 ; 2 ; > 
     au < finished ; finished ; 2014 ; International Journal of Biomedical and Clinical Engineering (IJBCE) Volume 3 ; 3 ; reingest1.clockss.org:8082 > 
     au < finished ; finished ; 2015 ; International Journal of Biomedical and Clinical Engineering (IJBCE) Volume 4 ; 4 ; reingest5.clockss.org:8082 > 
@@ -1707,7 +1707,7 @@
     >
     param[journal_issn] = 1938-0232
 
-    au < deepCrawl ; exists ; 2010 ; International Journal of Information Technology Project Management (IJITPM) Volume 1 ; 1 ; > 
+    au < frozen ; exists ; 2010 ; International Journal of Information Technology Project Management (IJITPM) Volume 1 ; 1 ; > 
     au < finished ; crawling ; 2011 ; International Journal of Information Technology Project Management (IJITPM) Volume 2 ; 2 ; > 
     au < finished ; crawling ; 2012 ; International Journal of Information Technology Project Management (IJITPM) Volume 3 ; 3 ; > 
     au < deepCrawl ; exists ; 2013 ; International Journal of Information Technology Project Management (IJITPM) Volume 4 ; 4 ; > 
@@ -1728,7 +1728,7 @@
     >
     param[journal_issn] = 1947-8305
 
-    au < deepCrawl ; exists ; 2010 ; International Journal of Innovation in the Digital Economy (IJIDE) Volume 1 ; 1 ; > 
+    au < frozen ; exists ; 2010 ; International Journal of Innovation in the Digital Economy (IJIDE) Volume 1 ; 1 ; > 
     au < finished ; crawling ; 2011 ; International Journal of Innovation in the Digital Economy (IJIDE) Volume 2 ; 2 ; > 
     au < finished ; crawling ; 2012 ; International Journal of Innovation in the Digital Economy (IJIDE) Volume 3 ; 3 ; > 
     au < deepCrawl ; exists ; 2013 ; International Journal of Innovation in the Digital Economy (IJIDE) Volume 4 ; 4 ; > 
@@ -1812,8 +1812,8 @@
     >
     param[journal_issn] = 1941-8663
 
-    au < deepCrawl ; exists ; 2009 ; International Journal of Interdisciplinary Telecommunications and Networking (IJITN) Volume 1 ; 1 ; > 
-    au < deepCrawl ; exists ; 2010 ; International Journal of Interdisciplinary Telecommunications and Networking (IJITN) Volume 2 ; 2 ; > 
+    au < frozen ; exists ; 2009 ; International Journal of Interdisciplinary Telecommunications and Networking (IJITN) Volume 1 ; 1 ; > 
+    au < frozen ; exists ; 2010 ; International Journal of Interdisciplinary Telecommunications and Networking (IJITN) Volume 2 ; 2 ; > 
     au < finished ; crawling ; 2011 ; International Journal of Interdisciplinary Telecommunications and Networking (IJITN) Volume 3 ; 3 ; > 
     au < finished ; crawling ; 2012 ; International Journal of Interdisciplinary Telecommunications and Networking (IJITN) Volume 4 ; 4 ; > 
     au < deepCrawl ; exists ; 2013 ; International Journal of Interdisciplinary Telecommunications and Networking (IJITN) Volume 5 ; 5 ; > 
@@ -1860,7 +1860,7 @@
     >
     param[journal_issn] = 1947-9611
 
-    au < deepCrawl ; exists ; 2010 ; International Journal of IT/Business Alignment and Governance (IJITBAG) Volume 1 ; 1 ; > 
+    au < frozen ; exists ; 2010 ; International Journal of IT/Business Alignment and Governance (IJITBAG) Volume 1 ; 1 ; > 
     au < finished ; crawling ; 2011 ; International Journal of IT/Business Alignment and Governance (IJITBAG) Volume 2 ; 2 ; > 
     au < finished ; crawling ; 2012 ; International Journal of IT/Business Alignment and Governance (IJITBAG) Volume 3 ; 3 ; > 
     au < deepCrawl ; exists ; 2013 ; International Journal of IT/Business Alignment and Governance (IJITBAG) Volume 4 ; 4 ; > 
@@ -1948,7 +1948,7 @@
     >
     param[journal_issn] = 1947-8429
 
-    au < deepCrawl ; exists ; 2010 ; International Journal of Knowledge Society Research (IJKSR) Volume 1 ; 1 ; > 
+    au < frozen ; exists ; 2010 ; International Journal of Knowledge Society Research (IJKSR) Volume 1 ; 1 ; > 
     au < finished ; crawling ; 2011 ; International Journal of Knowledge Society Research (IJKSR) Volume 2 ; 2 ; > 
     au < finished ; crawling ; 2012 ; International Journal of Knowledge Society Research (IJKSR) Volume 3 ; 3 ; > 
     au < deepCrawl ; exists ; 2013 ; International Journal of Knowledge Society Research (IJKSR) Volume 4 ; 4 ; > 
@@ -2029,8 +2029,8 @@
     >
     param[journal_issn] = 1941-8647
 
-    au < deepCrawl ; exists ; 2009 ; International Journal of Mobile and Blended Learning (IJMBL) Volume 1 ; 1 ; > 
-    au < deepCrawl ; exists ; 2010 ; International Journal of Mobile and Blended Learning (IJMBL) Volume 2 ; 2 ; > 
+    au < frozen ; exists ; 2009 ; International Journal of Mobile and Blended Learning (IJMBL) Volume 1 ; 1 ; > 
+    au < frozen ; exists ; 2010 ; International Journal of Mobile and Blended Learning (IJMBL) Volume 2 ; 2 ; > 
     au < finished ; crawling ; 2011 ; International Journal of Mobile and Blended Learning (IJMBL) Volume 3 ; 3 ; > 
     au < finished ; crawling ; 2012 ; International Journal of Mobile and Blended Learning (IJMBL) Volume 4 ; 4 ; > 
     au < deepCrawl ; exists ; 2013 ; International Journal of Mobile and Blended Learning (IJMBL) Volume 5 ; 5 ; > 
@@ -2113,7 +2113,7 @@
     >
     param[journal_issn] = 1947-8534
 
-    au < deepCrawl ; exists ; 2010 ; International Journal of Multimedia Data Engineering and Management (IJMDEM) Volume 1 ; 1 ; > 
+    au < frozen ; exists ; 2010 ; International Journal of Multimedia Data Engineering and Management (IJMDEM) Volume 1 ; 1 ; > 
     au < finished ; crawling ; 2011 ; International Journal of Multimedia Data Engineering and Management (IJMDEM) Volume 2 ; 2 ; > 
     au < finished ; crawling ; 2012 ; International Journal of Multimedia Data Engineering and Management (IJMDEM) Volume 3 ; 3 ; > 
     au < deepCrawl ; exists ; 2013 ; International Journal of Multimedia Data Engineering and Management (IJMDEM) Volume 4 ; 4 ; > 
@@ -2136,7 +2136,7 @@
     # out of print
     
     au < manifest ; exists ; 2009 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 1 ; 1 ; > 
-    au < deepCrawl ; exists ; 2010 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 2 ; 2 ; > 
+    au < frozen ; exists ; 2010 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 2 ; 2 ; > 
     au < finished ; crawling ; 2011 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 3 ; 3 ; > 
 
   }
@@ -2151,7 +2151,7 @@
     param[journal_issn] = 1947-928X
 
     au < manifest ; exists ; 2010 ; International Journal of Natural Computing Research (IJNCR) Volume 1 ; 1 ; > 
-    au < deepCrawl ; exists ; 2011 ; International Journal of Natural Computing Research (IJNCR) Volume 2 ; 2 ; > 
+    au < frozen ; exists ; 2011 ; International Journal of Natural Computing Research (IJNCR) Volume 2 ; 2 ; > 
     au < finished ; crawling ; 2012 ; International Journal of Natural Computing Research (IJNCR) Volume 3 ; 3 ; > 
     au < finished ; finished ; 2014 ; International Journal of Natural Computing Research (IJNCR) Volume 4 ; 4 ; > 
     au < finished ; finished ; 2015 ; International Journal of Natural Computing Research (IJNCR) Volume 5 ; 5 ; reingest2.clockss.org:8085 > 
@@ -2501,7 +2501,7 @@
     >
     param[journal_issn] = 1947-8402
 
-    au < deepCrawl ; exists ; 2010 ; International Journal of Social Ecology and Sustainable Development (IJSESD) Volume 1 ; 1 ; > 
+    au < frozen ; exists ; 2010 ; International Journal of Social Ecology and Sustainable Development (IJSESD) Volume 1 ; 1 ; > 
     au < finished ; crawling ; 2011 ; International Journal of Social Ecology and Sustainable Development (IJSESD) Volume 2 ; 2 ; > 
     au < finished ; crawling ; 2012 ; International Journal of Social Ecology and Sustainable Development (IJSESD) Volume 3 ; 3 ; > 
     au < deepCrawl ; exists ; 2013 ; International Journal of Social Ecology and Sustainable Development (IJSESD) Volume 4 ; 4 ; > 
@@ -2600,7 +2600,7 @@
     >
     param[journal_issn] = 1947-8569
 
-    au < deepCrawl ; exists ; 2010 ; International Journal of Strategic Decision Sciences (IJSDS) Volume 1 ; 1 ; > 
+    au < frozen ; exists ; 2010 ; International Journal of Strategic Decision Sciences (IJSDS) Volume 1 ; 1 ; > 
     au < finished ; frozen ; 2011 ; International Journal of Strategic Decision Sciences (IJSDS) Volume 2 ; 2 ; > 
     au < finished ; frozen ; 2012 ; International Journal of Strategic Decision Sciences (IJSDS) Volume 3 ; 3 ; > 
     au < deepCrawl ; exists ; 2013 ; International Journal of Strategic Decision Sciences (IJSDS) Volume 4 ; 4 ; > 
@@ -2621,7 +2621,7 @@
     >
     param[journal_issn] = 1947-3095
 
-    au < deepCrawl ; exists ; 2010 ; International Journal of Strategic Information Technology and Applications (IJSITA) Volume 1 ; 1 ; > 
+    au < frozen ; exists ; 2010 ; International Journal of Strategic Information Technology and Applications (IJSITA) Volume 1 ; 1 ; > 
     au < finished ; crawling ; 2011 ; International Journal of Strategic Information Technology and Applications (IJSITA) Volume 2 ; 2 ; > 
     au < finished ; crawling ; 2012 ; International Journal of Strategic Information Technology and Applications (IJSITA) Volume 3 ; 3 ; > 
     au < deepCrawl ; exists ; 2013 ; International Journal of Strategic Information Technology and Applications (IJSITA) Volume 4 ; 4 ; > 
@@ -2680,7 +2680,7 @@
     >
     param[journal_issn] = 1947-9263
 
-    au < deepCrawl ; exists ; 2010 ; International Journal of Swarm Intelligence Research (IJSIR) Volume 1 ; 1 ; > 
+    au < frozen ; exists ; 2010 ; International Journal of Swarm Intelligence Research (IJSIR) Volume 1 ; 1 ; > 
     au < finished ; crawling ; 2011 ; International Journal of Swarm Intelligence Research (IJSIR) Volume 2 ; 2 ; > 
     au < finished ; frozen ; 2012 ; International Journal of Swarm Intelligence Research (IJSIR) Volume 3 ; 3 ; > 
     au < deepCrawl ; exists ; 2013 ; International Journal of Swarm Intelligence Research (IJSIR) Volume 4 ; 4 ; > 
@@ -2701,7 +2701,7 @@
     >
     param[journal_issn] = 1947-9093
 
-    au < deepCrawl ; exists ; 2010 ; International Journal of Synthetic Emotions (IJSE) Volume 1 ; 1 ; > 
+    au < frozen ; exists ; 2010 ; International Journal of Synthetic Emotions (IJSE) Volume 1 ; 1 ; > 
     au < finished ; crawling ; 2011 ; International Journal of Synthetic Emotions (IJSE) Volume 2 ; 2 ; > 
     au < finished ; finished ; 2012 ; International Journal of Synthetic Emotions (IJSE) Volume 3 ; 3 ; > 
     au < deepCrawl ; exists ; 2013 ; International Journal of Synthetic Emotions (IJSE) Volume 4 ; 4 ; > 
@@ -2741,7 +2741,7 @@
     >
     param[journal_issn] = 1947-3052
 
-    au < deepCrawl ; exists ; 2010 ; International Journal of Systems and Service-Oriented Engineering (IJSSOE) Volume 1 ; 1 ; > 
+    au < frozen ; exists ; 2010 ; International Journal of Systems and Service-Oriented Engineering (IJSSOE) Volume 1 ; 1 ; > 
     au < finished ; crawling ; 2011 ; International Journal of Systems and Service-Oriented Engineering (IJSSOE) Volume 2 ; 2 ; > 
     au < finished ; crawling ; 2012 ; International Journal of Systems and Service-Oriented Engineering (IJSSOE) Volume 3 ; 3 ; > 
     au < finished ; finished ; 2014 ; International Journal of Systems and Service-Oriented Engineering (IJSSOE) Volume 4 ; 4 ; > 
@@ -2779,7 +2779,7 @@
     >
     param[journal_issn] = 1947-3451
 
-    au < deepCrawl ; exists ; 2010 ; International Journal of Technoethics (IJT) Volume 1 ; 1 ; > 
+    au < frozen ; exists ; 2010 ; International Journal of Technoethics (IJT) Volume 1 ; 1 ; > 
     au < finished ; crawling ; 2011 ; International Journal of Technoethics (IJT) Volume 2 ; 2 ; > 
     au < finished ; crawling ; 2012 ; International Journal of Technoethics (IJT) Volume 3 ; 3 ; > 
     au < deepCrawl ; exists ; 2013 ; International Journal of Technoethics (IJT) Volume 4 ; 4 ; > 
@@ -2802,7 +2802,7 @@
 
     au < finished ; crawling ; 2011 ; International Journal of Technology and Educational Marketing (IJTEM) Volume 1 ; 1 ; > 
     au < finished ; frozen ; 2012 ; International Journal of Technology and Educational Marketing (IJTEM) Volume 2 ; 2 ; > 
-    au < deepCrawl ; exists ; 2013 ; International Journal of Technology and Educational Marketing (IJTEM) Volume 3 ; 3 ; > 
+    au < frozen ; exists ; 2013 ; International Journal of Technology and Educational Marketing (IJTEM) Volume 3 ; 3 ; > 
     au < finished ; finished ; 2014 ; International Journal of Technology and Educational Marketing (IJTEM) Volume 4 ; 4 ; reingest1.clockss.org:8082 > 
     au < finished ; finished ; 2015 ; International Journal of Technology and Educational Marketing (IJTEM) Volume 5 ; 5 ; reingest4.clockss.org:8082 > 
     au < deepCrawl ; exists ; 2016 ; International Journal of Technology and Educational Marketing (IJTEM) Volume 6 ; 6 ; > 
@@ -2846,7 +2846,7 @@
     >
     param[journal_issn] = 1947-9301
 
-    au < deepCrawl ; exists ; 2010 ; International Journal of Technology Diffusion (IJTD) Volume 1 ; 1 ; > 
+    au < frozen ; exists ; 2010 ; International Journal of Technology Diffusion (IJTD) Volume 1 ; 1 ; > 
     au < finished ; crawling ; 2011 ; International Journal of Technology Diffusion (IJTD) Volume 2 ; 2 ; > 
     au < finished ; crawling ; 2012 ; International Journal of Technology Diffusion (IJTD) Volume 3 ; 3 ; > 
     au < deepCrawl ; exists ; 2013 ; International Journal of Technology Diffusion (IJTD) Volume 4 ; 4 ; > 
@@ -2887,7 +2887,7 @@
     >
     param[journal_issn] = 1947-8518
 
-    au < deepCrawl ; exists ; 2010 ; International Journal of Virtual and Personal Learning Environments (IJVPLE) Volume 1 ; 1 ; > 
+    au < frozen ; exists ; 2010 ; International Journal of Virtual and Personal Learning Environments (IJVPLE) Volume 1 ; 1 ; > 
     au < finished ; crawling ; 2011 ; International Journal of Virtual and Personal Learning Environments (IJVPLE) Volume 2 ; 2 ; > 
     au < finished ; crawling ; 2012 ; International Journal of Virtual and Personal Learning Environments (IJVPLE) Volume 3 ; 3 ; > 
     au < deepCrawl ; exists ; 2013 ; International Journal of Virtual and Personal Learning Environments (IJVPLE) Volume 4 ; 4 ; > 
@@ -2907,8 +2907,8 @@
     >
     param[journal_issn] = 1942-9010
 
-    au < deepCrawl ; exists ; 2009 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 1 ; 1 ; > 
-    au < deepCrawl ; exists ; 2010 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 2 ; 2 ; > 
+    au < frozen ; exists ; 2009 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 1 ; 1 ; > 
+    au < frozen ; exists ; 2010 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 2 ; 2 ; > 
     au < finished ; crawling ; 2011 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 3 ; 3 ; > 
     au < finished ; finished ; 2012 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 4 ; 4 ; > 
     au < deepCrawl ; exists ; 2013 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 5 ; 5 ; > 
@@ -2929,8 +2929,8 @@
     >
     param[journal_issn] = 1938-0194
 
-    au < deepCrawl ; exists ; 2009 ; International Journal of Web Portals (IJWP) Volume 1 ; 1 ; > 
-    au < deepCrawl ; exists ; 2010 ; International Journal of Web Portals (IJWP) Volume 2 ; 2 ; > 
+    au < frozen ; exists ; 2009 ; International Journal of Web Portals (IJWP) Volume 1 ; 1 ; > 
+    au < frozen ; exists ; 2010 ; International Journal of Web Portals (IJWP) Volume 2 ; 2 ; > 
     au < finished ; frozen ; 2011 ; International Journal of Web Portals (IJWP) Volume 3 ; 3 ; > 
     au < finished ; crawling ; 2012 ; International Journal of Web Portals (IJWP) Volume 4 ; 4 ; > 
     au < deepCrawl ; exists ; 2013 ; International Journal of Web Portals (IJWP) Volume 5 ; 5 ; > 
