@@ -11440,6 +11440,21 @@
   {
 
     title <
+      name = Military Medicine ;
+      issn = 0026-4075 ;
+      eissn = 1930-613X ;
+      issnl = 0026-4075
+    >
+
+    param[journal_id] = milmed
+
+    au < expected ; exists ; 2017 ; 2017 ; Military Medicine Volume 1 ; 1 ;  >
+
+  }
+
+  {
+
+    title <
       name = Mind ;
       issn = 0026-4423 ;
       eissn = 1460-2113 ;
