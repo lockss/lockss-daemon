@@ -271,7 +271,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Active Learning in Higher Education Volume 15 ; 15 ; alha ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Active Learning in Higher Education Volume 16 ; 16 ; alha ; >
       au < frozen ; exists ; 2016 ; Active Learning in Higher Education Volume 17 ; 17 ; alha ; >
-      au < ready ; exists ; 2017 ; Active Learning in Higher Education Volume 18 ; 18 ; alha ; >
+      au < crawling ; exists ; 2017 ; Active Learning in Higher Education Volume 18 ; 18 ; alha ; >
 
     }
 
@@ -552,7 +552,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Adult Education Quarterly Volume 64 ; 64 ; aeqb ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Adult Education Quarterly Volume 65 ; 65 ; aeqb ; >
       au < frozen ; exists ; 2016 ; Adult Education Quarterly Volume 66 ; 66 ; aeqb ; >
-      au < ready ; exists ; 2017 ; Adult Education Quarterly Volume 67 ; 67 ; aeqb ; >
+      au < crawling ; exists ; 2017 ; Adult Education Quarterly Volume 67 ; 67 ; aeqb ; >
 
     }
 
@@ -674,7 +674,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Advances in Developing Human Resources Volume 16 ; 16 ; adha ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Advances in Developing Human Resources Volume 17 ; 17 ; adha ; >
       au < frozen ; exists ; 2016 ; Advances in Developing Human Resources Volume 18 ; 18 ; adha ; >
-      au < ready ; exists ; 2017 ; Advances in Developing Human Resources Volume 19 ; 19 ; adha ; >
+      au < crawling ; exists ; 2017 ; Advances in Developing Human Resources Volume 19 ; 19 ; adha ; >
 
     }
 
@@ -1104,7 +1104,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; American Educational Research Journal Volume 51 ; 51 ; aera ; >
       au < doNotProcess ; doNotProcess ; 2015 ; American Educational Research Journal Volume 52 ; 52 ; aera ; >
       au < frozen ; exists ; 2016 ; American Educational Research Journal Volume 53 ; 53 ; aera ; >
-      au < ready ; exists ; 2017 ; American Educational Research Journal Volume 54 ; 54 ; aera ; >
+      au < crawling ; exists ; 2017 ; American Educational Research Journal Volume 54 ; 54 ; aera ; >
 
     }
 
@@ -1830,7 +1830,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Animation Volume 9 ; 9 ; anma ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Animation Volume 10 ; 10 ; anma ; >
       au < frozen ; exists ; 2016 ; Animation Volume 11 ; 11 ; anma ; >
-      au < ready ; exists ; 2017 ; Animation Volume 12 ; 12 ; anma ; >
+      au < crawling ; exists ; 2017 ; Animation Volume 12 ; 12 ; anma ; >
 
     }
 
@@ -3050,7 +3050,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Asian Cardiovascular and Thoracic Annals Volume 22 ; 22 ; aana ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Asian Cardiovascular and Thoracic Annals Volume 23 ; 23 ; aana ; >
     au < frozen ; exists ; 2016 ; Asian Cardiovascular and Thoracic Annals Volume 24 ; 24 ; aana ; >
-    au < ready ; exists ; 2017 ; Asian Cardiovascular and Thoracic Annals Volume 25 ; 25 ; aana ; >
+    au < crawling ; exists ; 2017 ; Asian Cardiovascular and Thoracic Annals Volume 25 ; 25 ; aana ; >
 
   }
 
@@ -3663,7 +3663,7 @@
       #param[base_url] = http://dli.sagepub.com/
 
       au < frozen ; exists ; 2016 ; Autism & Developmental Language Impairments Volume 1 ; 1 ; dlia ; >
-      au < ready ; exists ; 2017 ; Autism & Developmental Language Impairments Volume 2 ; 2 ; dlia ; >
+      au < crawling ; exists ; 2017 ; Autism & Developmental Language Impairments Volume 2 ; 2 ; dlia ; >
 
   }
 
@@ -4100,7 +4100,7 @@
         au < frozen ; exists ; 2014 ; British Journal of Music Therapy Volume 28 ; 28 ; bjmb ; >
         au < doNotProcess ; doNotProcess ; 2015 ; British Journal of Music Therapy Volume 29 ; 29 ; bjmb ; >
         au < frozen ; exists ; 2016 ; British Journal of Music Therapy Volume 30 ; 30 ; bjmb ; >
-        au < ready ; exists ; 2017 ; British Journal of Music Therapy Volume 31 ; 31 ; bjmb ; >
+        au < crawling ; exists ; 2017 ; British Journal of Music Therapy Volume 31 ; 31 ; bjmb ; >
 
   }
 
@@ -5238,7 +5238,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Canadian Journal of School Psychology Volume 29 ; 29 ; cjsa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Canadian Journal of School Psychology Volume 30 ; 30 ; cjsa ; >
       au < frozen ; exists ; 2016 ; Canadian Journal of School Psychology Volume 31 ; 31 ; cjsa ; >
-      au < ready ; exists ; 2017 ; Canadian Journal of School Psychology Volume 32 ; 32 ; cjsa ; >
+      au < crawling ; exists ; 2017 ; Canadian Journal of School Psychology Volume 32 ; 32 ; cjsa ; >
 
     }
 
@@ -6151,7 +6151,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Clinical and Applied Thrombosis/Hemostasis Volume 20 ; 20 ; cata ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Clinical and Applied Thrombosis/Hemostasis Volume 21 ; 21 ; cata ; >
       au < frozen ; exists ; 2016 ; Clinical and Applied Thrombosis/Hemostasis Volume 22 ; 22 ; cata ; >
-      au < ready ; exists ; 2017  ; Clinical and Applied Thrombosis/Hemostasis Volume 23 ; 23 ; cata ; >
+      au < crawling ; exists ; 2017  ; Clinical and Applied Thrombosis/Hemostasis Volume 23 ; 23 ; cata ; >
 
     }
 
@@ -6770,7 +6770,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Community College Review Volume 42 ; 42 ; crwa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Community College Review Volume 43 ; 43 ; crwa ; >
       au < frozen ; exists ; 2016 ; Community College Review Volume 44 ; 44 ; crwa ; >
-      au < ready ; exists ; 2017  ; Community College Review Volume 45 ; 45 ; crwa ; >
+      au < crawling ; exists ; 2017  ; Community College Review Volume 45 ; 45 ; crwa ; >
 
     }
 
@@ -7047,7 +7047,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 19 ; 19 ; chpc ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 20 ; 20 ; chpc ; >
       au < frozen ; exists ; 2016 ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 21 ; 21 ; chpc ; >
-      au < ready ; exists ; 2017 ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 22 ; 22 ; chpc ; >
+      au < crawling ; exists ; 2017 ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 22 ; 22 ; chpc ; >
 
     }
 
@@ -11120,7 +11120,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; European Journal of International Relations Volume 20 ; 20 ; ejta ; >
       au < doNotProcess ; doNotProcess ; 2015 ; European Journal of International Relations Volume 21 ; 21 ; ejta ; >
       au < frozen ; exists ; 2016 ; European Journal of International Relations Volume 22 ; 22 ; ejta ; >
-      au < ready ; exists ; 2017 ; European Journal of International Relations Volume 23 ; 23 ; ejta ; >
+      au < crawling ; exists ; 2017 ; European Journal of International Relations Volume 23 ; 23 ; ejta ; >
 
     }
 
@@ -12283,7 +12283,7 @@
       au < frozen ; exists ; 2014 ; Food and Nutrition Bulletin Volume 35 ; 35 ; fnba ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Food and Nutrition Bulletin Volume 36 ; 36 ; fnba ; >
       au < frozen ; exists ; 2016 ; Food and Nutrition Bulletin Volume 37 ; 37 ; fnba ; >
-      au < ready ; exists ; 2017 ; Food and Nutrition Bulletin Volume 38 ; 38 ; fnba ; >
+      au < crawling ; exists ; 2017 ; Food and Nutrition Bulletin Volume 38 ; 38 ; fnba ; >
 
   }
 
@@ -15018,7 +15018,7 @@
 
       au < manifest ; exists ; 2005 ; Indian Journal of Public Administration Volume 51 ; 51 ; ipaa ; >
 
-      au < ready ; exists ; 2017 ; Indian Journal of Public Administration Volume 63 ; 63 ; ipaa ; >
+      au < crawling ; exists ; 2017 ; Indian Journal of Public Administration Volume 63 ; 63 ; ipaa ; >
 
   }
 
@@ -15115,7 +15115,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Information Development Volume 30 ; 30 ; idva ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Information Development Volume 31 ; 31 ; idva ; >
       au < frozen ; exists ; 2016 ; Information Development Volume 32 ; 32 ; idva ; >
-      au < ready ; exists ; 2017 ; Information Development Volume 33 ; 33 ; idva ; >
+      au < crawling ; exists ; 2017 ; Information Development Volume 33 ; 33 ; idva ; >
 
     }
 
@@ -15536,7 +15536,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Aeroacoustics Volume 13 ; 13 ; jaea ; >
       au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Aeroacoustics Volume 14 ; 14 ; jaea ; >
       au < frozen ; exists ; 2016 ; International Journal of Aeroacoustics Volume 15 ; 15 ; jaea ; >
-      au < ready ; exists ; 2017 ; International Journal of Aeroacoustics Volume 16 ; 16 ; jaea ; >
+      au < crawling ; exists ; 2017 ; International Journal of Aeroacoustics Volume 16 ; 16 ; jaea ; >
 
   }
 
@@ -16292,7 +16292,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; The International Journal of Lower Extremity Wounds Volume 13 ; 13 ; ijla ; >
       au < doNotProcess ; doNotProcess ; 2015 ; The International Journal of Lower Extremity Wounds Volume 14 ; 14 ; ijla ; >
       au < frozen ; exists ; 2016 ; The International Journal of Lower Extremity Wounds Volume 15 ; 15 ; ijla ; >
-      au < ready ; exists ; 2017 ; The International Journal of Lower Extremity Wounds Volume 16 ; 16 ; ijla ; >
+      au < crawling ; exists ; 2017 ; The International Journal of Lower Extremity Wounds Volume 16 ; 16 ; ijla ; >
 
     }
 
@@ -18499,7 +18499,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; The Journal of Applied Behavioral Science Volume 50 ; 50 ; jaba ; >
       au < doNotProcess ; doNotProcess ; 2015 ; The Journal of Applied Behavioral Science Volume 51 ; 51 ; jaba ; >
       au < frozen ; exists ; 2016 ; The Journal of Applied Behavioral Science Volume 52 ; 52 ; jaba ; >
-      au < ready ; exists ; 2017 ; The Journal of Applied Behavioral Science Volume 53 ; 53 ; jaba ; >
+      au < crawling ; exists ; 2017 ; The Journal of Applied Behavioral Science Volume 53 ; 53 ; jaba ; >
 
     }
 
@@ -18793,7 +18793,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Biological Rhythms Volume 29 ; 29 ; jbra ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Biological Rhythms Volume 30 ; 30 ; jbra ; >
       au < frozen ; exists ; 2016 ; Journal of Biological Rhythms Volume 31 ; 31 ; jbra ; >
-      au < ready ; exists ; 2017 ; Journal of Biological Rhythms Volume 32 ; 32 ; jbra ; >
+      au < crawling ; exists ; 2017 ; Journal of Biological Rhythms Volume 32 ; 32 ; jbra ; >
 
     }
 
@@ -24073,7 +24073,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Material Culture Volume 19 ; 19 ; mcua ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Material Culture Volume 20 ; 20 ; mcua ; >
       au < frozen ; exists ; 2016 ; Journal of Material Culture Volume 21 ; 21 ; mcua ; >
-      au < ready ; exists ; 2017 ; Journal of Material Culture Volume 22 ; 22 ; mcua ; >
+      au < crawling ; exists ; 2017 ; Journal of Material Culture Volume 22 ; 22 ; mcua ; >
 
     }
 
@@ -24712,7 +24712,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Planning Education and Research Volume 34 ; 34 ; jpea ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Planning Education and Research Volume 35 ; 35 ; jpea ; >
       au < frozen ; exists ; 2016 ; Journal of Planning Education and Research Volume 36 ; 36 ; jpea ; >
-      au < ready ; exists ; 2017 ; Journal of Planning Education and Research Volume 37 ; 37 ; jpea ; >
+      au < crawling ; exists ; 2017 ; Journal of Planning Education and Research Volume 37 ; 37 ; jpea ; >
 
     }
 
@@ -43426,7 +43426,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Missiology: An International Review Volume 42 ; 42 ; misb ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Missiology: An International Review Volume 43 ; 43 ; misb ; >
     au < frozen ; exists ; 2016 ; Missiology: An International Review Volume 44 ; 44 ; misb ; >
-    au < ready ; exists ; 2017 ; Missiology: An International Review Volume 45 ; 45 ; misb ; >
+    au < crawling ; exists ; 2017 ; Missiology: An International Review Volume 45 ; 45 ; misb ; >
 
     }
 
@@ -45703,7 +45703,7 @@
     au < manifest ; exists ; 2014 ; Tourism Economics Volume 20 ; 20 ; teua ; >
     au < manifest ; exists ; 2015 ; Tourism Economics Volume 21 ; 21 ; teua ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Tourism Economics Volume 22 ; 22 ; teua ; >
-    au < ready ; exists ; 2017 ; Tourism Economics Volume 23 ; 23 ; teua ; >
+    au < crawling ; exists ; 2017 ; Tourism Economics Volume 23 ; 23 ; teua ; >
 
   }
 }

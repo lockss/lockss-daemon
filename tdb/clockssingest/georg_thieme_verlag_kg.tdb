@@ -107,7 +107,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Aktuelle Dermatologie Volume 40 ; 40 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; 2015 ; Aktuelle Dermatologie Volume 41 ; 41 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2016 ; 2016 ; Aktuelle Dermatologie Volume 42 ; 42 ; reingest2.clockss.org:8085 >
-    au < ready ; exists ; 2017 ; 2017 ; Aktuelle Dermatologie Volume 43 ; 43 ; >
+    au < crawling ; exists ; 2017 ; 2017 ; Aktuelle Dermatologie Volume 43 ; 43 ; >
 
   }
 
@@ -158,7 +158,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Aktuelle Kardiologie Volume 3 ; 3 ; >
     au < finished ; finished ; 2015 ; 2015 ; Aktuelle Kardiologie Volume 4 ; 4 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Aktuelle Kardiologie Volume 5 ; 5 ; reingest4.clockss.org:8082 >
-    au < ready ; exists ; 2017 ; 2017 ; Aktuelle Kardiologie Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2017 ; 2017 ; Aktuelle Kardiologie Volume 6 ; 6 ; >
 
   }
 
@@ -421,7 +421,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Allgemein- und Viszeralchirurgie up2date Volume 8 ; 8 ; >
     au < finished ; finished ; 2015 ; 2015 ; Allgemein- und Viszeralchirurgie up2date Volume 9 ; 9 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Allgemein- und Viszeralchirurgie up2date Volume 10 ; 10 ; reingest1.clockss.org:8082 >
-    au < ready ; exists ; 2017 ; 2017 ; Allgemein- und Viszeralchirurgie up2date Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2017 ; 2017 ; Allgemein- und Viszeralchirurgie up2date Volume 11 ; 11 ; >
 
    }
 
@@ -470,7 +470,7 @@
     au < finished ; finished ; 2014 ; 2014 ; American Journal of Perinatology Volume 31 ; 31 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; American Journal of Perinatology Volume 32 ; 32 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; 2016 ; American Journal of Perinatology Volume 33 ; 33 ; >
-    au < ready ; exists ; 2017 ; 2017 ; American Journal of Perinatology Volume 34 ; 34 ; >
+    au < crawling ; exists ; 2017 ; 2017 ; American Journal of Perinatology Volume 34 ; 34 ; >
 
    }
 
@@ -753,7 +753,7 @@
     param[journal_id] = 10.1055/s-00032027
     #years = 2017-current
 
-    au < ready ; exists ; 2017 ; 2017 ; Craniomaxillofacial Trauma & Reconstruction Open Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2017 ; 2017 ; Craniomaxillofacial Trauma & Reconstruction Open Volume 1 ; 1 ; >
 
   }
 
@@ -844,7 +844,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Deutsche Zeitschrift für Onkologie Volume 46 ; 46 ; >
    au < finished ; finished ; 2015 ; 2015 ; Deutsche Zeitschrift für Onkologie Volume 47 ; 47 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; Deutsche Zeitschrift für Onkologie Volume 48 ; 48 ; reingest3.clockss.org:8083 >
-   au < ready ; exists ; 2017 ; 2017 ; Deutsche Zeitschrift für Onkologie Volume 49 ; 49 ; >
+   au < crawling ; exists ; 2017 ; 2017 ; Deutsche Zeitschrift für Onkologie Volume 49 ; 49 ; >
 
   }
 
@@ -1410,7 +1410,7 @@
    au < finished ; finished ; 2014 ; 2014 ; European Journal of Pediatric Surgery Volume 24 ; 24 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; European Journal of Pediatric Surgery Volume 25 ; 25 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2016 ; 2016 ; European Journal of Pediatric Surgery Volume 26 ; 26 ; >
-   au < ready ; exists ; 2017 ; 2017 ; European Journal of Pediatric Surgery Volume 27 ; 27 ; >
+   au < crawling ; exists ; 2017 ; 2017 ; European Journal of Pediatric Surgery Volume 27 ; 27 ; >
 
   }
 
@@ -1948,7 +1948,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Hebamme Die Volume 27 ; 27 ; >
    au < finished ; finished ; 2015 ; 2015 ; Hebamme Die Volume 28 ; 28 ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; Hebamme Die Volume 29 ; 29 ; reingest3.clockss.org:8083 >
-   au < ready ; exists ; 2017 ; 2017 ; Hebamme Die Volume 30 ; 30 ; >
+   au < crawling ; exists ; 2017 ; 2017 ; Hebamme Die Volume 30 ; 30 ; >
 
   }
 
@@ -2345,7 +2345,7 @@
     au < finished ; finished ; 2014 ; 2014 ; International Journal of Sports Medicine Volume 35 ; 35 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; International Journal of Sports Medicine Volume 36 ; 36 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; International Journal of Sports Medicine Volume 37 ; 37 ; reingest2.clockss.org:8085 >
-    au < ready ; exists ; 2017 ; 2017 ; International Journal of Sports Medicine Volume 38 ; 38 ; >
+    au < crawling ; exists ; 2017 ; 2017 ; International Journal of Sports Medicine Volume 38 ; 38 ; >
 
   }
 
@@ -2857,7 +2857,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Journal of Wrist Surgery Volume 3 ; 3 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; Journal of Wrist Surgery Volume 4 ; 4 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Journal of Wrist Surgery Volume 5 ; 5 ; reingest3.clockss.org:8083 >
-    au < ready ; exists ; 2017 ; 2017 ; Journal of Wrist Surgery Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2017 ; 2017 ; Journal of Wrist Surgery Volume 6 ; 6 ; >
 
   }
 
@@ -2905,7 +2905,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Kardiologie up2date Volume 10 ; 10 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; Kardiologie up2date Volume 11 ; 11 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Kardiologie up2date Volume 12 ; 12 ; reingest3.clockss.org:8083 >
-    au < ready ; exists ; 2017 ; 2017 ; Kardiologie up2date Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2017 ; 2017 ; Kardiologie up2date Volume 13 ; 13 ; >
 
   }
 
@@ -3065,7 +3065,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Klinische Neurophysiologie Volume 45 ; 45 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; Klinische Neurophysiologie Volume 46 ; 46 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Klinische Neurophysiologie Volume 47 ; 47 ; reingest4.clockss.org:8082 >
-    au < ready ; exists ; 2017 ; 2017 ; Klinische Neurophysiologie Volume 48 ; 48 ; >
+    au < crawling ; exists ; 2017 ; 2017 ; Klinische Neurophysiologie Volume 48 ; 48 ; >
 
   }
 
@@ -3117,7 +3117,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Klinische Pädiatrie Volume 226 ; 226 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Klinische Pädiatrie Volume 227 ; 227 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Klinische Pädiatrie Volume 228 ; 228 ; reingest1.clockss.org:8082 >
-    au < ready ; exists ; 2017 ; 2017 ; Klinische Pädiatrie Volume 229 ; 229 ; >
+    au < crawling ; exists ; 2017 ; 2017 ; Klinische Pädiatrie Volume 229 ; 229 ; >
 
   }
 
@@ -3245,7 +3245,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Laryngo-Rhino-Otologie Volume 93 ; 93 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Laryngo-Rhino-Otologie Volume 94 ; 94 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Laryngo-Rhino-Otologie Volume 95 ; 95 ; reingest3.clockss.org:8083 >
-    au < ready ; exists ; 2017 ; 2017 ; Laryngo-Rhino-Otologie Volume 96 ; 96 ; >
+    au < crawling ; exists ; 2017 ; 2017 ; Laryngo-Rhino-Otologie Volume 96 ; 96 ; >
 
   }
 
@@ -3294,7 +3294,7 @@
     au < finished ; finished ; 2014 ; 2014 ; manuelletherapie Volume 18 ; 18 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; manuelletherapie Volume 19 ; 19 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; manuelletherapie Volume 20 ; 20 ; reingest5.clockss.org:8082 >
-    au < ready ; exists ; 2017 ; 2017 ; manuelletherapie Volume 21 ; 21 ; >
+    au < crawling ; exists ; 2017 ; 2017 ; manuelletherapie Volume 21 ; 21 ; >
 
   }
 
@@ -3399,7 +3399,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Neonatologie Scan Volume 2 ; 2 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Neonatologie Scan Volume 3 ; 3 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; 2016 ; Neonatologie Scan Volume 4 ; 4 ; >
-    au < ready ; exists ; 2017 ; 2017 ; Neonatologie Scan Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2017 ; 2017 ; Neonatologie Scan Volume 5 ; 5 ; >
 
   }
 
@@ -3494,7 +3494,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Neuroradiologie Scan Volume 4 ; 4 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Neuroradiologie Scan Volume 5 ; 5 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Neuroradiologie Scan Volume 6 ; 6 ; reingest4.clockss.org:8082 >
-    au < ready ; exists ; 2017 ; 2017 ; Neuroradiologie Scan Volume 7 ; 7 ; >
+    au < crawling ; exists ; 2017 ; 2017 ; Neuroradiologie Scan Volume 7 ; 7 ; >
 
   }
 
@@ -3735,7 +3735,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Orthopädie und Unfallchirurgie up2date Volume 9 ; 9 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Orthopädie und Unfallchirurgie up2date Volume 10 ; 10 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; 2016 ; Orthopädie und Unfallchirurgie up2date Volume 11 ; 11 ; >
-    au < ready ; exists ; 2017 ; 2017 ; Orthopädie und Unfallchirurgie up2date Volume 12 ; 12 ; >
+    au < crawling ; exists ; 2017 ; 2017 ; Orthopädie und Unfallchirurgie up2date Volume 12 ; 12 ; >
 
   }
 
