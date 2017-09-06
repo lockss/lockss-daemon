@@ -16,14 +16,14 @@
       issnl = 2048-0105
     >
     
-    param[base_url] = http://www.bj360.boneandjoint.org.uk/
+    param[base_url] = http://bj360.boneandjoint.org.uk/
 
-    au < besbjs.BESBJSDrupalPlugin ; notReady ; 2012 ; Bone & Joint 360 Volume 1 ; 1 > #Unable to fetch probe permission page
-    au < besbjs.BESBJSDrupalPlugin ; notReady ; 2013 ; Bone & Joint 360 Volume 2 ; 2 > #Unable to fetch probe permission page
-    au < besbjs.BESBJSDrupalPlugin ; notReady ; 2014 ; Bone & Joint 360 Volume 3 ; 3 > #Unable to fetch probe permission page
-    au < besbjs.BESBJSDrupalPlugin ; notReady ; 2015 ; Bone & Joint 360 Volume 4 ; 4 > #Unable to fetch probe permission page
-    au < besbjs.BESBJSDrupalPlugin ; notReady ; 2016 ; Bone & Joint 360 Volume 5 ; 5 > #Unable to fetch probe permission page
-    au < besbjs.BESBJSDrupalPlugin ; exists ; 2017 ; Bone & Joint 360 Volume 6 ; 6 >
+    au < besbjs.BESBJSDrupalPlugin ; testing ; 2012 ; Bone & Joint 360 Volume 1 ; 1 >
+    au < besbjs.BESBJSDrupalPlugin ; testing ; 2013 ; Bone & Joint 360 Volume 2 ; 2 >
+    au < besbjs.BESBJSDrupalPlugin ; testing ; 2014 ; Bone & Joint 360 Volume 3 ; 3 >
+    au < besbjs.BESBJSDrupalPlugin ; testing ; 2015 ; Bone & Joint 360 Volume 4 ; 4 >
+    au < besbjs.BESBJSDrupalPlugin ; testing ; 2016 ; Bone & Joint 360 Volume 5 ; 5 >
+    au < besbjs.BESBJSDrupalPlugin ; testing ; 2017 ; Bone & Joint 360 Volume 6 ; 6 >
     
   }
   
