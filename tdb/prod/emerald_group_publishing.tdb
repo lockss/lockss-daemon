@@ -4173,9 +4173,23 @@
     au < doNotProcess ; 2012 ; The International Journal of Leadership in Public Services Volume 8 ; 8 >
     au < released ; 2013 ; The International Journal of Leadership in Public Services Volume 9 ; 9 >
     au < released ; 2014 ; The International Journal of Leadership in Public Services Volume 10 ; 10 >
-    au < manifest ; 2015 ; The International Journal of Leadership in Public Services Volume 11 ; 11 >
-    au < expected ; 2016 ; The International Journal of Leadership in Public Services Volume 12 ; 12 >
-    au < expected ; 2017 ; The International Journal of Leadership in Public Services Volume 13 ; 13 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Public Leadership ;
+      issn = 2056-4929 ;
+      issnl = 2056-4929
+    >
+
+    comment[journal_issn] = 2056-4929
+    param[journal_id] = ijpl
+    #continues = 1747-9886
+
+    au < exists ; 2015 ; International Journal of Public Leadership Volume 11 ; 11 >
+    au < expected ; 2016 ; International Journal of Public Leadership Volume 12 ; 12 >
+    au < expected ; 2017 ; International Journal of Public Leadership Volume 13 ; 13 >
 
   }
 
