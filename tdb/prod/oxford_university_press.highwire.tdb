@@ -4721,8 +4721,10 @@
 
     title <
       name = Contemporary Women's Writing ;
-      issn = 1754-1476 ;
-      eissn = 1754-1484 ;
+#      issn = 1754-1476 ;
+#      eissn = 1754-1484 ;
+      issn = 1754-1484 ;
+      eissn = 1754-1476 ;
       issnl = 1754-1476
     >
 
@@ -4902,7 +4904,8 @@
   {
 
     title <
-      name = Database: The Journal of Biological Databases and Curation ;
+#      name = Database: The Journal of Biological Databases and Curation ;
+      name = Database ;
       eissn = 1758-0463
     >
 
