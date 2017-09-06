@@ -2860,7 +2860,7 @@
   {
 
     title <
-      name = British Journal of Anaesthesia ;
+      name = BJA: British Journal of Anaesthesia ;
       alt_title = BJA ;
       issn = 0007-0912 ;
       eissn = 1471-6771 ;
@@ -3008,7 +3008,7 @@
   {
 
     title <
-        name = The British Journal of Criminology: An International Review of Crime and Society ;
+        name = The British Journal of Criminology ;
         issn = 0007-0955 ;
         eissn = 1464-3529 ;
         issnl = 0007-0955
@@ -7607,7 +7607,7 @@
   {
 
     title <
-      name = French Studies: A Quarterly Review ;
+      name = French Studies ;
       issn = 0016-1128 ;
       eissn = 1468-2931 ;
       issnl = 0016-1128
@@ -15251,8 +15251,10 @@
   {
     title <
       name = Journal of Social History  ;
-      issn = 1527-1897 ;
-      eissn = 0022-4529 ;
+#      issn = 1527-1897 ;
+#      eissn = 0022-4529 ;
+      issn = 0022-4529 ;
+      eissn = 1527-1897 ;
       issnl = 0022-4529
     >
 
@@ -17661,6 +17663,7 @@
     title <
       name = Journal of Music Therapy ;
       issn = 0022-2917 ;
+      eissn = 2053-7395 ;
       issnl = 0022-2917
     >
 
