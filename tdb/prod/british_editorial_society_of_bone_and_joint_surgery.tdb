@@ -34,17 +34,29 @@
       issn = 2046-3758 ;
       issnl = 2046-3758
     >
-    
-    param[base_url] = http://www.bjr.boneandjoint.org.uk/
     rights = openaccess
-
-    au < besbjs.BESBJSDrupalPlugin ; released ; 2012 ; Bone & Joint Research Volume 1 ; 1 >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 2013 ; Bone & Joint Research Volume 2 ; 2 >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 2014 ; Bone & Joint Research Volume 3 ; 3 >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 2015 ; Bone & Joint Research Volume 4 ; 4 >
-    au < besbjs.BESBJSDrupalPlugin ; manifest ; 2016 ; Bone & Joint Research Volume 5 ; 5 >
-    au < besbjs.BESBJSDrupalPlugin ; expected ; 2017 ; Bone & Joint Research Volume 6 ; 6 >
     
+    {
+    param[base_url] = http://bjr.boneandjoint.org.uk/
+    #base_url changed, removing www.
+
+    au < besbjs.BESBJSDrupalPlugin ; exists ; 2012 ; Bone & Joint Research Volume 1 ; 1 >
+    au < besbjs.BESBJSDrupalPlugin ; exists ; 2013 ; Bone & Joint Research Volume 2 ; 2 >
+    au < besbjs.BESBJSDrupalPlugin ; exists ; 2014 ; Bone & Joint Research Volume 3 ; 3 >
+    au < besbjs.BESBJSDrupalPlugin ; exists ; 2015 ; Bone & Joint Research Volume 4 ; 4 >
+    au < besbjs.BESBJSDrupalPlugin ; exists ; 2016 ; Bone & Joint Research Volume 5 ; 5 >
+    au < besbjs.BESBJSDrupalPlugin ; expected ; 2017 ; Bone & Joint Research Volume 6 ; 6 >
+    }
+    {
+    param[base_url] = http://www.bjr.boneandjoint.org.uk/
+
+    au < besbjs.BESBJSDrupalPlugin ; superseded ; 2012 ; Bone & Joint Research Volume 1 [superseded] ; 1 >
+    au < besbjs.BESBJSDrupalPlugin ; superseded ; 2013 ; Bone & Joint Research Volume 2 [superseded] ; 2 >
+    au < besbjs.BESBJSDrupalPlugin ; superseded ; 2014 ; Bone & Joint Research Volume 3 [superseded] ; 3 >
+    au < besbjs.BESBJSDrupalPlugin ; superseded ; 2015 ; Bone & Joint Research Volume 4 [superseded] ; 4 >
+    au < besbjs.BESBJSDrupalPlugin ; doNotProcess ; 2016 ; Bone & Joint Research Volume 5 ; 5 >
+    au < besbjs.BESBJSDrupalPlugin ; doNotProcess ; 2017 ; Bone & Joint Research Volume 6 ; 6 >
+    }
   }
   
   {
@@ -58,10 +70,10 @@
     
     comment[continued_by] = The Bone & Joint Journal, ISSN: 2049-4394, eISSN: 2049-4408 as of Jan 1 2013
     
-    param[base_url] = http://www.bjj.boneandjoint.org.uk/
+    {
+    param[base_url] = http://bjj.boneandjoint.org.uk/
+    #base_url changed, lost www.
     
-    comment[manifests] = all links go to base_url http://www.bjj.boneandjoint.org.uk/. journal homepage is at http://www.jbjs.boneandjoint.org.uk 
-
     au < besbjs.BESBJSDrupalPlugin ; exists ; 1948 ; Journal of Bone & Joint Surgery, British Volume Volume 30 ; 30-B >
     au < besbjs.BESBJSDrupalPlugin ; exists ; 1949 ; Journal of Bone & Joint Surgery, British Volume Volume 31 ; 31-B >
     au < besbjs.BESBJSDrupalPlugin ; exists ; 1950 ; Journal of Bone & Joint Surgery, British Volume Volume 32 ; 32-B >
@@ -118,16 +130,29 @@
     au < besbjs.BESBJSDrupalPlugin ; exists ; 2001 ; Journal of Bone & Joint Surgery, British Volume Volume 83 ; 83-B >
     au < besbjs.BESBJSDrupalPlugin ; exists ; 2002 ; Journal of Bone & Joint Surgery, British Volume Volume 84 ; 84-B >
     au < besbjs.BESBJSDrupalPlugin ; exists ; 2003 ; Journal of Bone & Joint Surgery, British Volume Volume 85 ; 85-B >
-    au < HighWirePressH20Plugin ; down ; 2004 ; Journal of Bone & Joint Surgery, British Volume Volume 86 ; 86-B >
-    au < HighWirePressH20Plugin ; down ; 2005 ; Journal of Bone & Joint Surgery, British Volume Volume 87 ; 87-B >
-    au < HighWirePressH20Plugin ; down ; 2006 ; Journal of Bone & Joint Surgery, British Volume Volume 88 ; 88-B >
-    au < HighWirePressH20Plugin ; down ; 2007 ; Journal of Bone & Joint Surgery, British Volume Volume 89 ; 89-B >
-    au < HighWirePressH20Plugin ; down ; 2008 ; Journal of Bone & Joint Surgery, British Volume Volume 90 ; 90-B >
-    au < HighWirePressH20Plugin ; down ; 2009 ; Journal of Bone & Joint Surgery, British Volume Volume 91 ; 91-B >
-    au < HighWirePressH20Plugin ; down ; 2010 ; Journal of Bone & Joint Surgery, British Volume Volume 92 ; 92-B >
-    au < HighWirePressH20Plugin ; down ; 2011 ; Journal of Bone & Joint Surgery, British Volume Volume 93 ; 93-B >
-    au < HighWirePressH20Plugin ; down ; 2012 ; Journal of Bone & Joint Surgery, British Volume Volume 94 ; 94-B >
-
+    au < besbjs.BESBJSDrupalPlugin ; exists ; 2004 ; Journal of Bone & Joint Surgery, British Volume Volume 86 ; 86-B >
+    au < besbjs.BESBJSDrupalPlugin ; exists ; 2005 ; Journal of Bone & Joint Surgery, British Volume Volume 87 ; 87-B >
+    au < besbjs.BESBJSDrupalPlugin ; exists ; 2006 ; Journal of Bone & Joint Surgery, British Volume Volume 88 ; 88-B >
+    au < besbjs.BESBJSDrupalPlugin ; exists ; 2007 ; Journal of Bone & Joint Surgery, British Volume Volume 89 ; 89-B >
+    au < besbjs.BESBJSDrupalPlugin ; exists ; 2008 ; Journal of Bone & Joint Surgery, British Volume Volume 90 ; 90-B >
+    au < besbjs.BESBJSDrupalPlugin ; exists ; 2009 ; Journal of Bone & Joint Surgery, British Volume Volume 91 ; 91-B >
+    au < besbjs.BESBJSDrupalPlugin ; exists ; 2010 ; Journal of Bone & Joint Surgery, British Volume Volume 92 ; 92-B >
+    au < besbjs.BESBJSDrupalPlugin ; exists ; 2011 ; Journal of Bone & Joint Surgery, British Volume Volume 93 ; 93-B >
+    au < besbjs.BESBJSDrupalPlugin ; exists ; 2012 ; Journal of Bone & Joint Surgery, British Volume Volume 94 ; 94-B >
+    }
+    {
+    param[base_url] = http://www.bjj.boneandjoint.org.uk/
+    
+    au < HighWirePressH20Plugin ; superseded ; 2004 ; Journal of Bone & Joint Surgery, British Volume Volume 86 [superseded] ; 86-B >
+    au < HighWirePressH20Plugin ; superseded ; 2005 ; Journal of Bone & Joint Surgery, British Volume Volume 87 [superseded] ; 87-B >
+    au < HighWirePressH20Plugin ; superseded ; 2006 ; Journal of Bone & Joint Surgery, British Volume Volume 88 [superseded] ; 88-B >
+    au < HighWirePressH20Plugin ; superseded ; 2007 ; Journal of Bone & Joint Surgery, British Volume Volume 89 [superseded] ; 89-B >
+    au < HighWirePressH20Plugin ; superseded ; 2008 ; Journal of Bone & Joint Surgery, British Volume Volume 90 [superseded] ; 90-B >
+    au < HighWirePressH20Plugin ; superseded ; 2009 ; Journal of Bone & Joint Surgery, British Volume Volume 91 [superseded] ; 91-B >
+    au < HighWirePressH20Plugin ; superseded ; 2010 ; Journal of Bone & Joint Surgery, British Volume Volume 92 [superseded] ; 92-B >
+    au < HighWirePressH20Plugin ; superseded ; 2011 ; Journal of Bone & Joint Surgery, British Volume Volume 93 [superseded] ; 93-B >
+    au < HighWirePressH20Plugin ; superseded ; 2012 ; Journal of Bone & Joint Surgery, British Volume Volume 94 [superseded] ; 94-B >
+    }
   }
 
   {
@@ -139,15 +164,25 @@
     >
     
     comment[continues] = Journal of Bone & Joint Surgery, British Volume, issn 0301-620X, eissn 2044-5377 as of Jan 1 2013
-    
+    {
+    param[base_url] = http://bjj.boneandjoint.org.uk/
+    #base_url changed, removing www.
+
+    au < besbjs.BESBJSDrupalPlugin ; exists ; 2013 ; The Bone & Joint Journal Volume 95 ; 95-B >
+    au < besbjs.BESBJSDrupalPlugin ; exists ; 2014 ; The Bone & Joint Journal Volume 96 ; 96-B >
+    au < besbjs.BESBJSDrupalPlugin ; exists ; 2015 ; The Bone & Joint Journal Volume 97 ; 97-B >
+    au < besbjs.BESBJSDrupalPlugin ; exists ; 2016 ; The Bone & Joint Journal Volume 98 ; 98-B >
+    au < besbjs.BESBJSDrupalPlugin ; expected ; 2017 ; The Bone & Joint Journal Volume 99 ; 99-B >
+    }
+    {
     param[base_url] = http://www.bjj.boneandjoint.org.uk/
 
-    au < HighWirePressH20Plugin ; down ; 2013 ; The Bone & Joint Journal Volume 95 ; 95-B >
-    au < HighWirePressH20Plugin ; down ; 2014 ; The Bone & Joint Journal Volume 96 ; 96-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 2015 ; The Bone & Joint Journal Volume 97 ; 97-B >
-    au < besbjs.BESBJSDrupalPlugin ; manifest ; 2016 ; The Bone & Joint Journal Volume 98 ; 98-B >
-    au < besbjs.BESBJSDrupalPlugin ; expected ; 2017 ; The Bone & Joint Journal Volume 99 ; 99-B >
-
+    au < HighWirePressH20Plugin ; superseded ; 2013 ; The Bone & Joint Journal Volume 95 [superseded] ; 95-B >
+    au < HighWirePressH20Plugin ; superseded ; 2014 ; The Bone & Joint Journal Volume 96 [superseded] ; 96-B >
+    au < besbjs.BESBJSDrupalPlugin ; superseded ; 2015 ; The Bone & Joint Journal Volume 97 [superseded] ; 97-B >
+    au < besbjs.BESBJSDrupalPlugin ; doNotProcess ; 2016 ; The Bone & Joint Journal Volume 98 ; 98-B >
+    au < besbjs.BESBJSDrupalPlugin ; doNotProcess ; 2017 ; The Bone & Joint Journal Volume 99 ; 99-B >
+    }
   }
 
 }
