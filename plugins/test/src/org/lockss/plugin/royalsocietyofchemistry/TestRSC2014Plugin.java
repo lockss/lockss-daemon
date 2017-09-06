@@ -63,7 +63,8 @@ public class TestRSC2014Plugin extends LockssTestCase {
   // <string>"%spubs-core/", graphics_url</string>
   // Note diff: the funky escaped chars, there is probably a call to do the conversion
   // if it changes in the plugin, you will likely need to change the test, so verify
-  static final String REPAIR_FROM_PEER_REGEXP = "http\\:\\/\\/sod\\-a\\.img\\-cdn\\.com\\/" + "pubs-core/";
+  static final String[] REPAIR_FROM_PEER_REGEXP = 
+      new String[] {"http\\:\\/\\/sod\\-a\\.img\\-cdn\\.com\\/" + "pubs-core/", "[.](css|js)($|\\?)"};
   
   
   private DefinablePlugin plugin;
@@ -192,6 +193,7 @@ public class TestRSC2014Plugin extends LockssTestCase {
   
   
   public void testPollSpecial() throws Exception {
+    Matcher m;
     Properties props = new Properties();
     props.setProperty(BASE_URL_KEY, "http://pubs.example.com/");
     props.setProperty(RESOLVER_URL_KEY, "http://xlink.example.com/");
@@ -215,14 +217,25 @@ public class TestRSC2014Plugin extends LockssTestCase {
         GRAPHICS_URL + "pubs-core/2017.0.57/content/NewImages/CCBY-NC.png",
         GRAPHICS_URL + "pubs-core/2016/js/9.3.2/lib/functional.min.js",
         GRAPHICS_URL + "pubs-core/2017.0.57/content/stylesheets/mobileStyle.css");
-    Pattern p = Pattern.compile(REPAIR_FROM_PEER_REGEXP);
+    Pattern p = Pattern.compile(REPAIR_FROM_PEER_REGEXP[0]);
     for (String urlString : repairList) {
-      Matcher m = p.matcher(urlString);
+      m = p.matcher(urlString);
+      assertEquals(urlString, true, m.find());
+    }
+    List <String> repairList2 = ListUtil.list(
+        GRAPHICS_URL + "pubs.rsc.org/content/stylesheets/mobileStyle.css?21.2.0.0",
+        GRAPHICS_URL + "pubs.rsc.org/content/js/mobileStyle.js",
+        GRAPHICS_URL + "pubs.rsc.orgcontent/stylesheets/mobileStyle.css");
+    Pattern p2 = Pattern.compile(REPAIR_FROM_PEER_REGEXP[1]);
+    for (String urlString : repairList2) {
+      m = p2.matcher(urlString);
       assertEquals(urlString, true, m.find());
     }
     //and this one should fail - it needs to be weighted correctly and repaired from publisher if possible
     String notString = "http://pubs.example.com/img/close-icon.png";
-    Matcher m = p.matcher(notString);
+    m = p.matcher(notString);
+    assertEquals(false, m.find());
+    m = p2.matcher(notString);
     assertEquals(false, m.find());
     
     PatternFloatMap urlPollResults = au.makeUrlPollResultWeightMap();
