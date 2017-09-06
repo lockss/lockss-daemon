@@ -31,7 +31,7 @@
     au < finished ; finished ; 2011 ; Acta Pharmacologica Sinica Volume 32 ; 2011 ; 32 ; >
     au < finished ; finished ; 2012 ; Acta Pharmacologica Sinica Volume 33 ; 2012 ; 33 ; >
     au < finished ; finished ; 2013 ; Acta Pharmacologica Sinica Volume 34 ; 2013 ; 34 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2014 ; Acta Pharmacologica Sinica Volume 35 ; 2014 ; 35 ; >
+    au < frozen ; exists ; 2014 ; Acta Pharmacologica Sinica Volume 35 ; 2014 ; 35 ; >
     au < deepCrawl ; exists ; 2015 ; Acta Pharmacologica Sinica Volume 36 ; 2015 ; 36 ; >
     au < deepCrawl ; exists ; 2016 ; Acta Pharmacologica Sinica Volume 37 ; 2016 ; 37 ; >
     au < crawling ; exists ; 2017 ; Acta Pharmacologica Sinica Volume 38 ; 2017 ; 38 ; >
@@ -601,7 +601,7 @@
     au < finished ; finished ; 2011 ; Clinical and Translational Gastroenterology Volume 2 ; 2011 ; 2 ; >
     au < finished ; finished ; 2012 ; Clinical and Translational Gastroenterology Volume 3 ; 2012 ; 3 ; >
     au < finished ; frozen ; 2013 ; Clinical and Translational Gastroenterology Volume 4 ; 2013 ; 4 ; >
-    au < deepCrawl ; exists ; 2014 ; Clinical and Translational Gastroenterology Volume 5 ; 2014 ; 5 ; >
+    au < frozen ; exists ; 2014 ; Clinical and Translational Gastroenterology Volume 5 ; 2014 ; 5 ; >
     au < deepCrawl ; exists ; 2015 ; Clinical and Translational Gastroenterology Volume 6 ; 2015 ; 6 ; >
     au < deepCrawl ; exists ; 2016 ; Clinical and Translational Gastroenterology Volume 7 ; 2016 ; 7 ; >
     au < crawling ; exists ; 2017 ; Clinical and Translational Gastroenterology Volume 8 ; 2017 ; 8 ; >
@@ -798,7 +798,7 @@
     au < finished ; frozen ; 2011 ; Evidence-Based Dentistry Volume 12 ; 2011 ; 12 ; >
     au < finished ; finished ; 2012 ; Evidence-Based Dentistry Volume 13 ; 2012 ; 13 ; >
     au < finished ; frozen ; 2013 ; Evidence-Based Dentistry Volume 14 ; 2013 ; 14 ; >
-    au < deepCrawl ; exists ; 2014 ; Evidence-Based Dentistry Volume 15 ; 2014 ; 15 ; >
+    au < frozen ; exists ; 2014 ; Evidence-Based Dentistry Volume 15 ; 2014 ; 15 ; >
     au < frozen ; exists ; 2015 ; Evidence-Based Dentistry Volume 16 ; 2015 ; 16 ; >
     au < deepCrawl ; exists ; 2016 ; Evidence-Based Dentistry Volume 17 ; 2016 ; 17 ; >
     au < crawling ; exists ; 2017 ; Evidence-Based Dentistry Volume 18 ; 2017 ; 18 ; >
@@ -1116,7 +1116,7 @@
     au < finished ; finished ; 2011 ; Hypertension Research Volume 34 ; 2011 ; 34 ; >
     au < finished ; frozen ; 2012 ; Hypertension Research Volume 35 ; 2012 ; 35 ; >
     au < finished ; finished ; 2013 ; Hypertension Research Volume 36 ; 2013 ; 36 ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2014 ; Hypertension Research Volume 37 ; 2014 ; 37 ; >
+    au < frozen ; exists ; 2014 ; Hypertension Research Volume 37 ; 2014 ; 37 ; >
     au < deepCrawl ; exists ; 2015 ; Hypertension Research Volume 38 ; 2015 ; 38 ; >
     au < deepCrawl ; exists ; 2016 ; Hypertension Research Volume 39 ; 2016 ; 39 ; >
     au < crawling ; exists ; 2017 ; Hypertension Research Volume 40 ; 2017 ; 40 ; >
@@ -1890,7 +1890,7 @@
     au < finished ; frozen ; 2011 ; Leukemia Volume 25 ; 2011 ; 25 ; >
     au < finished ; frozen ; 2012 ; Leukemia Volume 26 ; 2012 ; 26 ; >
     au < deepCrawl ; exists ; 2013 ; Leukemia Volume 27 ; 2013 ; 27 ; >
-    au < deepCrawl ; exists ; 2014 ; Leukemia Volume 28 ; 2014 ; 28 ; >
+    au < frozen ; exists ; 2014 ; Leukemia Volume 28 ; 2014 ; 28 ; >
     au < deepCrawl ; exists ; 2015 ; Leukemia Volume 29 ; 2015 ; 29 ; >
     au < deepCrawl ; exists ; 2016 ; Leukemia Volume 30 ; 2016 ; 30 ; >
     au < manifest ; exists ; 2017 ; Leukemia Volume 31 ; 2017 ; 31 ; >
@@ -2451,18 +2451,18 @@
     au < frozen ; exists ; 2013 ; Nature Volume 502 ; 2013 ; 502 ; >
     au < frozen ; exists ; 2013 ; Nature Volume 503 ; 2013 ; 503 ; >
     au < frozen ; exists ; 2013 ; Nature Volume 504 ; 2013 ; 504 ; >
-    au < deepCrawl ; exists ; 2014 ; Nature Volume 505 ; 2014 ; 505 ; >
-    au < deepCrawl ; exists ; 2014 ; Nature Volume 506 ; 2014 ; 506 ; >
-    au < deepCrawl ; exists ; 2014 ; Nature Volume 507 ; 2014 ; 507 ; >
+    au < frozen ; exists ; 2014 ; Nature Volume 505 ; 2014 ; 505 ; >
+    au < frozen ; exists ; 2014 ; Nature Volume 506 ; 2014 ; 506 ; >
+    au < frozen ; exists ; 2014 ; Nature Volume 507 ; 2014 ; 507 ; >
     au < finished ; finished ; 2014 ; Nature Volume 508 ; 2014 ; 508 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Nature Volume 509 ; 2014 ; 509 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Nature Volume 510 ; 2014 ; 510 ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2014 ; Nature Volume 511 ; 2014 ; 511 ; >
-    au < deepCrawl ; exists ; 2014 ; Nature Volume 512 ; 2014 ; 512 ; >
+    au < frozen ; exists ; 2014 ; Nature Volume 511 ; 2014 ; 511 ; >
+    au < frozen ; exists ; 2014 ; Nature Volume 512 ; 2014 ; 512 ; >
     au < finished ; finished ; 2014 ; Nature Volume 513 ; 2014 ; 513 ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2014 ; Nature Volume 514 ; 2014 ; 514 ; >
-    au < deepCrawl ; exists ; 2014 ; Nature Volume 515 ; 2014 ; 515 ; >
-    au < deepCrawl ; exists ; 2014 ; Nature Volume 516 ; 2014 ; 516 ; >
+    au < frozen ; exists ; 2014 ; Nature Volume 514 ; 2014 ; 514 ; >
+    au < frozen ; exists ; 2014 ; Nature Volume 515 ; 2014 ; 515 ; >
+    au < frozen ; exists ; 2014 ; Nature Volume 516 ; 2014 ; 516 ; >
     au < deepCrawl ; exists ; 2015 ; Nature Volume 517 ; 2015 ; 517 ; >
     au < deepCrawl ; exists ; 2015 ; Nature Volume 518 ; 2015 ; 518 ; >
     au < deepCrawl ; exists ; 2015 ; Nature Volume 519 ; 2015 ; 519 ; >
@@ -2544,7 +2544,7 @@
     au < finished ; frozen ; 2011 ; Nature Biotechnology Volume 29 ; 2011 ; 29 ; >
     au < deepCrawl ; exists ; 2012 ; Nature Biotechnology Volume 30 ; 2012 ; 30 ; >
     au < deepCrawl ; exists ; 2013 ; Nature Biotechnology Volume 31 ; 2013 ; 31 ; >
-    au < deepCrawl ; exists ; 2014 ; Nature Biotechnology Volume 32 ; 2014 ; 32 ; >
+    au < frozen ; exists ; 2014 ; Nature Biotechnology Volume 32 ; 2014 ; 32 ; >
     au < deepCrawl ; exists ; 2015 ; Nature Biotechnology Volume 33 ; 2015 ; 33 ; >
     au < deepCrawl ; exists ; 2016 ; Nature Biotechnology Volume 34 ; 2016 ; 34 ; >
     au < manifest ; exists ; 2017 ; Nature Biotechnology Volume 35 ; 2017 ; 35 ; >
@@ -2577,7 +2577,7 @@
     au < finished ; frozen ; 2011 ; Nature Cell Biology Volume 13 ; 2011 ; 13 ; >
     au < deepCrawl ; exists ; 2012 ; Nature Cell Biology Volume 14 ; 2012 ; 14 ; >
     au < deepCrawl ; exists ; 2013 ; Nature Cell Biology Volume 15 ; 2013 ; 15 ; >
-    au < deepCrawl ; exists ; 2014 ; Nature Cell Biology Volume 16 ; 2014 ; 16 ; >
+    au < frozen ; exists ; 2014 ; Nature Cell Biology Volume 16 ; 2014 ; 16 ; >
     au < deepCrawl ; exists ; 2015 ; Nature Cell Biology Volume 17 ; 2015 ; 17 ; >
     au < deepCrawl ; exists ; 2016 ; Nature Cell Biology Volume 18 ; 2016 ; 18 ; >
     au < manifest ; exists ; 2017 ; Nature Cell Biology Volume 19 ; 2017 ; 19 ; >
@@ -3589,7 +3589,7 @@
     au < finished ; frozen ; 2011 ; NPG Asia Materials Volume 3 ; 2011 ; 3 ; >
     au < finished ; finished ; 2012 ; NPG Asia Materials Volume 4 ; 2012 ; 4 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2013 ; NPG Asia Materials Volume 5 ; 2013 ; 5 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2014 ; NPG Asia Materials Volume 6 ; 2014 ; 6 ; >
+    au < frozen ; exists ; 2014 ; NPG Asia Materials Volume 6 ; 2014 ; 6 ; >
     au < deepCrawl ; exists ; 2015 ; NPG Asia Materials Volume 7 ; 2015 ; 7 ; >
     au < deepCrawl ; exists ; 2016 ; NPG Asia Materials Volume 8 ; 2016 ; 8 ; >
     au < manifest ; exists ; 2017 ; NPG Asia Materials Volume 9 ; 2017 ; 9 ; >
