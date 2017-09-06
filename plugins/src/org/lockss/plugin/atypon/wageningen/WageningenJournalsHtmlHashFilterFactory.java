@@ -72,6 +72,14 @@ public class WageningenJournalsHtmlHashFilterFactory
                   }
                 }
               }
+            } else if (HtmlNodeFilters.tagWithAttributeRegex("a", "href", 
+                "/doi/book/").accept(node)) {
+             // book manifest page has single doi/book ref whose parent is just the <body> element
+             // http://emeraldinsight.com/clockss/eisbn/9780080549910
+               Node liParent = node.getParent();
+               if (liParent instanceof BodyTag) {
+                 return true;
+               }  
             }
             return false;
           }
