@@ -709,7 +709,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Advances in Structural Engineering Volume 17 ; 17 ; asea ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Advances in Structural Engineering Volume 18 ; 18 ; asea ; >
       au < frozen ; exists ; 2016 ; Advances in Structural Engineering Volume 19 ; 19 ; asea ; >
-      au < ready ; exists ; 2017 ; Advances in Structural Engineering Volume 20 ; 20 ; asea ; >
+      au < crawling ; exists ; 2017 ; Advances in Structural Engineering Volume 20 ; 20 ; asea ; >
 
   }
 
@@ -999,7 +999,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; American Behavioral Scientist Volume 58 ; 58 ; absb ; >
       au < doNotProcess ; doNotProcess ; 2015 ; American Behavioral Scientist Volume 59 ; 59 ; absb ; >
       au < frozen ; exists ; 2016 ; American Behavioral Scientist Volume 60 ; 60 ; absb ; >
-      au < ready ; exists ; 2017 ; American Behavioral Scientist Volume 61 ; 61 ; absb ; >
+      au < crawling ; exists ; 2017 ; American Behavioral Scientist Volume 61 ; 61 ; absb ; >
 
     }
 
@@ -1712,7 +1712,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; American Sociological Review Volume 79 ; 79 ; asra ; >
       au < doNotProcess ; doNotProcess ; 2015 ; American Sociological Review Volume 80 ; 80 ; asra ; >
       au < frozen ; exists ; 2016 ; American Sociological Review Volume 81 ; 81 ; asra ; >
-      au < ready ; exists ; 2017 ; American Sociological Review Volume 82 ; 82 ; asra ; >
+      au < crawling ; exists ; 2017 ; American Sociological Review Volume 82 ; 82 ; asra ; >
 
     }
 
@@ -2520,7 +2520,7 @@
       au < frozen ; exists ; 2016 ; The Annals of the American Academy of Political and Social Science Volume 668 ; 668 ; anna ; >
       au < crawling ; exists ; 2017 ; The Annals of the American Academy of Political and Social Science Volume 669 ; 669 ; anna ; >
       au < ready ; exists ; 2017 ; The Annals of the American Academy of Political and Social Science Volume 670 ; 670 ; anna ; >
-      au < ready ; exists ; 2017 ; The Annals of the American Academy of Political and Social Science Volume 671 ; 671 ; anna ; >
+      au < crawling ; exists ; 2017 ; The Annals of the American Academy of Political and Social Science Volume 671 ; 671 ; anna ; >
       au < ready ; exists ; 2017 ; The Annals of the American Academy of Political and Social Science Volume 672 ; 672 ; anna ; >
       au < expected ; exists ; 2017 ; The Annals of the American Academy of Political and Social Science Volume 673 ; 673 ; anna ; >
       au < expected ; exists ; 2017 ; The Annals of the American Academy of Political and Social Science Volume 674 ; 674 ; anna ; >
@@ -2694,7 +2694,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; The Antitrust Bulletin Volume 59 ; 59 ; abxa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; The Antitrust Bulletin Volume 60 ; 60 ; abxa ; >
       au < frozen ; exists ; 2016 ; The Antitrust Bulletin Volume 61 ; 61 ; abxa ; >
-      au < ready ; exists ; 2017 ; The Antitrust Bulletin Volume 62 ; 62 ; abxa ; >
+      au < crawling ; exists ; 2017 ; The Antitrust Bulletin Volume 62 ; 62 ; abxa ; >
 
   }
 
@@ -3012,7 +3012,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Asian and Pacific Migration Journal Volume 23 ; 23 ; amja ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Asian and Pacific Migration Journal Volume 24 ; 24 ; amja ; >
       au < frozen ; exists ; 2016 ; Asian and Pacific Migration Journal Volume 25 ; 25 ; amja ; >
-      au < ready ; exists ; 2017 ; Asian and Pacific Migration Journal Volume 26 ; 26 ; amja ; >
+      au < crawling ; exists ; 2017 ; Asian and Pacific Migration Journal Volume 26 ; 26 ; amja ; >
 
   }
 
@@ -4651,7 +4651,7 @@
       au < frozen ; exists ; 2016 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 132 ; 132 ; bmsa ; >
       au < crawling ; exists ; 2017 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 133 ; 133 ; bmsa ; >
       au < ready ; exists ; 2017 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 134 ; 134 ; bmsa ; >
-      au < ready ; exists ; 2017 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 135 ; 135 ; bmsa ; >
+      au < crawling ; exists ; 2017 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 135 ; 135 ; bmsa ; >
       au < expected ; exists ; 2017 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 136 ; 136 ; bmsa ; >
 
     }
@@ -5830,7 +5830,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; China Report Volume 50 ; 50 ; chra ; >
       au < doNotProcess ; doNotProcess ; 2015 ; China Report Volume 51 ; 51 ; chra ; >
       au < frozen ; exists ; 2016 ; China Report Volume 52 ; 52 ; chra ; >
-      au < ready ; exists ; 2017 ; China Report Volume 53 ; 53 ; chra ; >
+      au < crawling ; exists ; 2017 ; China Report Volume 53 ; 53 ; chra ; >
 
     }
 
@@ -5863,7 +5863,7 @@
       #param[base_url] = http://csd.sagepub.com/
 
       au < frozen ; exists ; 2016 ; Chinese Sociological Dialogue Volume 1 ; 1 ; csda ; >
-      au < ready ; exists ; 2017 ; Chinese Sociological Dialogue Volume 2 ; 2 ; csda ; >
+      au < crawling ; exists ; 2017 ; Chinese Sociological Dialogue Volume 2 ; 2 ; csda ; >
 
   }
 
@@ -7310,7 +7310,7 @@
       au < frozen ; exists ; 2013 ; Contemporary Voice of Dalit Volume 6 ; 6 ; voda ; >
       au < frozen ; exists ; 2014 ; Contemporary Voice of Dalit Volume 7 ; 7 ; voda ; >
       au < frozen ; exists ; 2016 ; Contemporary Voice of Dalit Volume 8 ; 8 ; voda ; >
-      au < ready ; exists ; 2017 ; Contemporary Voice of Dalit Volume 9 ; 9 ; voda ; >
+      au < crawling ; exists ; 2017 ; Contemporary Voice of Dalit Volume 9 ; 9 ; voda ; >
 
   }
 
@@ -7911,7 +7911,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Criminal Justice Policy Review Volume 25 ; 25 ; cjpa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Criminal Justice Policy Review Volume 26 ; 26 ; cjpa ; >
       au < frozen ; exists ; 2016 ; Criminal Justice Policy Review Volume 27 ; 27 ; cjpa ; >
-      au < ready ; exists ; 2017 ; Criminal Justice Policy Review Volume 28 ; 28 ; cjpa ; >
+      au < crawling ; exists ; 2017 ; Criminal Justice Policy Review Volume 28 ; 28 ; cjpa ; >
 
     }
 
@@ -8008,7 +8008,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Criminology and Criminal Justice Volume 14 ; 14 ; crjb ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Criminology and Criminal Justice Volume 15 ; 15 ; crjb ; >
       au < frozen ; exists ; 2016 ; Criminology and Criminal Justice Volume 16 ; 16 ; crjb ; >
-      au < ready ; exists ; 2017 ; Criminology and Criminal Justice Volume 17 ; 17 ; crjb ; >
+      au < crawling ; exists ; 2017 ; Criminology and Criminal Justice Volume 17 ; 17 ; crjb ; >
 
     }
 
@@ -10939,7 +10939,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; European Journal of Communication Volume 29 ; 29 ; ejca ; >
       au < doNotProcess ; doNotProcess ; 2015 ; European Journal of Communication Volume 30 ; 30 ; ejca ; >
       au < frozen ; exists ; 2016 ; European Journal of Communication Volume 31 ; 31 ; ejca ; >
-      au < ready ; exists ; 2017 ; European Journal of Communication Volume 32 ; 32 ; ejca ; >
+      au < crawling ; exists ; 2017 ; European Journal of Communication Volume 32 ; 32 ; ejca ; >
 
     }
 
@@ -11011,7 +11011,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; European Journal of Cultural Studies Volume 17 ; 17 ; ecsa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; European Journal of Cultural Studies Volume 18 ; 18 ; ecsa ; >
       au < frozen ; exists ; 2016 ; European Journal of Cultural Studies Volume 19 ; 19 ; ecsa ; >
-      au < ready ; exists ; 2017 ; European Journal of Cultural Studies Volume 20 ; 20 ; ecsa ; >
+      au < crawling ; exists ; 2017 ; European Journal of Cultural Studies Volume 20 ; 20 ; ecsa ; >
 
     }
 
@@ -11053,7 +11053,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; European Journal of Industrial Relations Volume 20 ; 20 ; ejda ; >
       au < doNotProcess ; doNotProcess ; 2015 ; European Journal of Industrial Relations Volume 21 ; 21 ; ejda ; >
       au < frozen ; exists ; 2016 ; European Journal of Industrial Relations Volume 22 ; 22 ; ejda ; >
-      au < ready ; exists ; 2017 ; European Journal of Industrial Relations Volume 23 ; 23 ; ejda ; >
+      au < crawling ; exists ; 2017 ; European Journal of Industrial Relations Volume 23 ; 23 ; ejda ; >
 
     }
 
@@ -11212,7 +11212,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; European Journal of Probation Volume 6 ; 6 ; ejpa ; >
     au < doNotProcess ; doNotProcess ; 2015 ; European Journal of Probation Volume 7 ; 7 ; ejpa ; >
     au < frozen ; exists ; 2016 ; European Journal of Probation Volume 8 ; 8 ; ejpa ; >
-    au < ready ; exists ; 2017 ; European Journal of Probation Volume 9 ; 9 ; ejpa ; >
+    au < crawling ; exists ; 2017 ; European Journal of Probation Volume 9 ; 9 ; ejpa ; >
 
   }
 
@@ -11244,7 +11244,7 @@
       au < frozen ; exists ; 2014 ; European Journal of Social Security Volume 16 ; 16 ; ejsa ; >
       au < frozen ; exists ; 2015 ; European Journal of Social Security Volume 17 ; 17 ; ejsa ; >
       au < frozen ; exists ; 2016 ; European Journal of Social Security Volume 18 ; 18 ; ejsa ; >
-      au < ready ; exists ; 2017 ; European Journal of Social Security Volume 19 ; 19 ; ejsa ; >
+      au < crawling ; exists ; 2017 ; European Journal of Social Security Volume 19 ; 19 ; ejsa ; >
 
   }
 
@@ -13525,7 +13525,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Health Promotion Practice Volume 15 ; 15 ; hppa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Health Promotion Practice Volume 16 ; 16 ; hppa ; >
       au < frozen ; exists ; 2016 ; Health Promotion Practice Volume 17 ; 17 ; hppa ; >
-      au < ready ; exists ; 2017 ; Health Promotion Practice Volume 18 ; 18 ; hppa ; >
+      au < crawling ; exists ; 2017 ; Health Promotion Practice Volume 18 ; 18 ; hppa ; >
 
     }
 
@@ -14803,7 +14803,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; India Quarterly: A Journal of International Affairs Volume 70 ; 70 ; iqqa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; India Quarterly: A Journal of International Affairs Volume 71 ; 71 ; iqqa ; >
       au < frozen ; exists ; 2016 ; India Quarterly: A Journal of International Affairs Volume 72 ; 72 ; iqqa ; >
-      au < ready ; exists ; 2017 ; India Quarterly: A Journal of International Affairs Volume 73 ; 73 ; iqqa ; >
+      au < crawling ; exists ; 2017 ; India Quarterly: A Journal of International Affairs Volume 73 ; 73 ; iqqa ; >
 
     }
 
@@ -14987,7 +14987,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Indian Journal of Gender Studies Volume 21 ; 21 ; ijgb ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Indian Journal of Gender Studies Volume 22 ; 22 ; ijgb ; >
       au < frozen ; exists ; 2016 ; Indian Journal of Gender Studies Volume 23 ; 23 ; ijgb ; >
-      au < ready ; exists ; 2017 ; Indian Journal of Gender Studies Volume 24 ; 24 ; ijgb ; >
+      au < crawling ; exists ; 2017 ; Indian Journal of Gender Studies Volume 24 ; 24 ; ijgb ; >
 
     }
 
@@ -15300,7 +15300,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Innate Immunity Volume 20 ; 20 ; inib ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Innate Immunity Volume 21 ; 21 ; inib ; >
       au < frozen ; exists ; 2016 ; Innate Immunity Volume 22 ; 22 ; inib ; >
-      au < ready ; exists ; 2017 ; Innate Immunity Volume 23 ; 23 ; inib ; >
+      au < crawling ; exists ; 2017 ; Innate Immunity Volume 23 ; 23 ; inib ; >
 
     }
 
@@ -16100,7 +16100,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Engineering Business Management Volume 6 ; 6 ; enba ; >
       au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Engineering Business Management Volume 7 ; 7 ; enba ; >
       au < frozen ; exists ; 2016 ; International Journal of Engineering Business Management Volume 8 ; 8 ; enba ; >
-      au < ready ; exists ; 2017 ; International Journal of Engineering Business Management Volume 9 ; 9 ; enba ; >
+      au < crawling ; exists ; 2017 ; International Journal of Engineering Business Management Volume 9 ; 9 ; enba ; >
 
   }
 
@@ -16410,7 +16410,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Music Education Volume 32 ; 32 ; ijma ; >
       au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Music Education Volume 33 ; 33 ; ijma ; >
       au < frozen ; exists ; 2016 ; International Journal of Music Education Volume 34 ; 34 ; ijma ; >
-      au < ready ; exists ; 2017 ; International Journal of Music Education Volume 35 ; 35 ; ijma ; >
+      au < crawling ; exists ; 2017 ; International Journal of Music Education Volume 35 ; 35 ; ijma ; >
 
     }
 
@@ -17280,7 +17280,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; International Relations Volume 28 ; 28 ; ireb ; >
       au < doNotProcess ; doNotProcess ; 2015 ; International Relations Volume 29 ; 29 ; ireb ; >
       au < frozen ; exists ; 2016 ; International Relations Volume 30 ; 30 ; ireb ; >
-      au < ready ; exists ; 2017 ; International Relations Volume 31 ; 31 ; ireb ; >
+      au < crawling ; exists ; 2017 ; International Relations Volume 31 ; 31 ; ireb ; >
 
     }
 
@@ -17527,7 +17527,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; International Small Business Journal Volume 32 ; 32 ; isbb ; >
       au < doNotProcess ; doNotProcess ; 2015 ; International Small Business Journal Volume 33 ; 33 ; isbb ; >
       au < frozen ; exists ; 2016 ; International Small Business Journal Volume 34 ; 34 ; isbb ; >
-      au < ready ; exists ; 2017 ; International Small Business Journal Volume 35 ; 35 ; isbb ; >
+      au < crawling ; exists ; 2017 ; International Small Business Journal Volume 35 ; 35 ; isbb ; >
 
     }
 
@@ -17606,7 +17606,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; International Social Work Volume 57 ; 57 ; iswb ; >
       au < doNotProcess ; doNotProcess ; 2015 ; International Social Work Volume 58 ; 58 ; iswb ; >
       au < frozen ; exists ; 2016 ; International Social Work Volume 59 ; 59 ; iswb ; >
-      au < ready ; exists ; 2017 ; International Social Work Volume 60 ; 60 ; iswb ; >
+      au < crawling ; exists ; 2017 ; International Social Work Volume 60 ; 60 ; iswb ; >
 
     }
 
@@ -18287,7 +18287,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Adolescent Research Volume 29 ; 29 ; jara ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Adolescent Research Volume 30 ; 30 ; jara ; >
       au < frozen ; exists ; 2016 ; Journal of Adolescent Research Volume 31 ; 31 ; jara ; >
-      au < ready ; exists ; 2017 ; Journal of Adolescent Research Volume 32 ; 32 ; jara ; >
+      au < crawling ; exists ; 2017 ; Journal of Adolescent Research Volume 32 ; 32 ; jara ; >
 
     }
 
@@ -18554,7 +18554,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Applied Gerontology Volume 33 ; 33 ; jaga ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Applied Gerontology Volume 34 ; 34 ; jaga ; >
       au < frozen ; exists ; 2016 ; Journal of Applied Gerontology Volume 35 ; 35 ; jaga ; >
-      au < ready ; exists ; 2017  ; Journal of Applied Gerontology Volume 36 ; 36 ; jaga ; >
+      au < crawling ; exists ; 2017  ; Journal of Applied Gerontology Volume 36 ; 36 ; jaga ; >
 
     }
 
@@ -19012,7 +19012,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Black Studies Volume 45 ; 45 ; jbsa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Black Studies Volume 46 ; 46 ; jbsa ; >
       au < frozen ; exists ; 2016 ; Journal of Black Studies Volume 47 ; 47 ; jbsa ; >
-      au < ready ; exists ; 2017 ; Journal of Black Studies Volume 48 ; 48 ; jbsa ; >
+      au < crawling ; exists ; 2017 ; Journal of Black Studies Volume 48 ; 48 ; jbsa ; >
 
     }
 
@@ -19609,7 +19609,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Circulating Biomarkers Volume 3 ; 3 ; cbxb ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Circulating Biomarkers Volume 4 ; 4 ; cbxb ; >
       au < frozen ; exists ; 2016 ; Journal of Circulating Biomarkers Volume 5 ; 5 ; cbxb ; >
-      au < ready ; exists ; 2017 ; Journal of Circulating Biomarkers Volume 6 ; 6 ; cbxb ; >
+      au < crawling ; exists ; 2017 ; Journal of Circulating Biomarkers Volume 6 ; 6 ; cbxb ; >
 
   }
 
@@ -19643,7 +19643,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Classical Sociology Volume 14 ; 14 ; jcsa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Classical Sociology Volume 15 ; 15 ; jcsa ; >
       au < frozen ; exists ; 2016 ; Journal of Classical Sociology Volume 16 ; 16 ; jcsa ; >
-      au < ready ; exists ; 2017 ; Journal of Classical Sociology Volume 17 ; 17 ; jcsa ; >
+      au < crawling ; exists ; 2017 ; Journal of Classical Sociology Volume 17 ; 17 ; jcsa ; >
 
     }
 
@@ -20270,7 +20270,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Correctional Health Care Volume 20 ; 20 ; jcxa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Correctional Health Care Volume 21 ; 21 ; jcxa ; >
       au < frozen ; exists ; 2016 ; Journal of Correctional Health Care Volume 22 ; 22 ; jcxa ; >
-      au < ready ; exists ; 2017 ; Journal of Correctional Health Care Volume 23 ; 23 ; jcxa ; >
+      au < crawling ; exists ; 2017 ; Journal of Correctional Health Care Volume 23 ; 23 ; jcxa ; >
 
     }
 
@@ -20949,7 +20949,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Early Childhood Research Volume 12 ; 12 ; ecra ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Early Childhood Research Volume 13 ; 13 ; ecra ; >
       au < frozen ; exists ; 2016 ; Journal of Early Childhood Research Volume 14 ; 14 ; ecra ; >
-      au < ready ; exists ; 2017 ; Journal of Early Childhood Research Volume 15 ; 15 ; ecra ; >
+      au < crawling ; exists ; 2017 ; Journal of Early Childhood Research Volume 15 ; 15 ; ecra ; >
 
     }
 
@@ -26037,7 +26037,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Strain Analysis for Engineering Design Volume 49 ; 49 ; sdjb ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Strain Analysis for Engineering Design Volume 50 ; 50 ; sdjb ; >
       au < frozen ; exists ; 2016 ; Journal of Strain Analysis for Engineering Design Volume 51 ; 51 ; sdjb ; >
-      au < ready ; exists ; 2017 ; Journal of Strain Analysis for Engineering Design Volume 52 ; 52 ; sdjb ; >
+      au < crawling ; exists ; 2017 ; Journal of Strain Analysis for Engineering Design Volume 52 ; 52 ; sdjb ; >
 
     }
 
@@ -42478,7 +42478,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Ultrasonic Imaging Volume 36 ; 36 ; uixa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Ultrasonic Imaging Volume 37 ; 37 ; uixa ; >
       au < frozen ; exists ; 2016 ; Ultrasonic Imaging Volume 38 ; 38 ; uixa ; >
-      au < ready ; exists ; 2017 ; Ultrasonic Imaging Volume 39 ; 39 ; uixa ; >
+      au < crawling ; exists ; 2017 ; Ultrasonic Imaging Volume 39 ; 39 ; uixa ; >
 
     }
 
@@ -44166,7 +44166,7 @@
         au < doNotProcess ; doNotProcess ; 2014 ; Hand Therapy Volume 19 ; 19 ; hthb ; >
         au < doNotProcess ; doNotProcess ; 2015 ; Hand Therapy Volume 20 ; 20 ; hthb ; >
         au < frozen ; exists ; 2016 ; Hand Therapy Volume 21 ; 21 ; hthb ; >
-        au < ready ; exists ; 2017 ; Hand Therapy Volume 22 ; 22 ; hthb ; >
+        au < crawling ; exists ; 2017 ; Hand Therapy Volume 22 ; 22 ; hthb ; >
 
     }
 
