@@ -607,7 +607,7 @@ while (my $line = <>) {
   } elsif ($plugin eq "GeorgThiemeVerlagPlugin") {
         #Url with list of urls for issues
         #printf("%s\n",decode_entities($tmp));
-        $url = sprintf("%sejournals/issues/%s/%s",
+        $url = sprintf("%sproducts/ejournals/issues/%s/%s",
           $param{base_url}, $param{journal_id}, $param{volume_name});
         $man_url = uri_unescape($url);
         my $doi = uri_unescape($param{journal_id});
@@ -632,7 +632,7 @@ while (my $line = <>) {
   } elsif ($plugin eq "ClockssGeorgThiemeVerlagPlugin") {
         #Url with list of urls for issues
         #printf("%s\n",decode_entities($tmp));
-        $url = sprintf("%sejournals/issues/%s/%s",
+        $url = sprintf("%sproducts/ejournals/issues/%s/%s",
           $param{base_url}, $param{journal_id}, $param{volume_name});
         $man_url = uri_unescape($url);
         my $doi = uri_unescape($param{journal_id});
