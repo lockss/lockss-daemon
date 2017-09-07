@@ -366,7 +366,7 @@
       au < finished ; finished ; 2011 ; Green Chemistry Volume 13 ; 13 ; 2011 ; >
       au < finished ; frozen ; 2012 ; Green Chemistry Volume 14 ; 14 ; 2012 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2013 ; Green Chemistry Volume 15 ; 15 ; 2013 ; >
-      au < deepCrawl ; exists ; 2014 ; Green Chemistry Volume 16 ; 16 ; 2014 ; >
+      au < frozen ; exists ; 2014 ; Green Chemistry Volume 16 ; 16 ; 2014 ; >
       au < deepCrawl ; exists ; 2015 ; Green Chemistry Volume 17 ; 17 ; 2015 ; >
       au < deepCrawl ; exists ; 2016 ; Green Chemistry Volume 18 ; 18 ; 2016 ; >
       au < manifest ; exists ; 2017 ; Green Chemistry Volume 19 ; 19 ; 2017 ; >
@@ -388,7 +388,7 @@
       au < frozen ; exists ; 2011 ; Integrative Biology Volume 3 ; 3 ; 2011 ; >
       au < finished ; frozen ; 2012 ; Integrative Biology Volume 4 ; 4 ; 2012 ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2013 ; Integrative Biology Volume 5 ; 5 ; 2013 ; >
-      au < deepCrawl ; exists ; 2014 ; Integrative Biology Volume 6 ; 6 ; 2014 ; >
+      au < frozen ; exists ; 2014 ; Integrative Biology Volume 6 ; 6 ; 2014 ; >
       au < deepCrawl ; exists ; 2015 ; Integrative Biology Volume 7 ; 7 ; 2015 ; >
       au < deepCrawl ; exists ; 2016 ; Integrative Biology Volume 8 ; 8 ; 2016 ; >
       au < manifest ; exists ; 2017 ; Integrative Biology Volume 9 ; 9 ; 2017 ; >
@@ -556,7 +556,7 @@
       au < frozen ; exists ; 2011 ; Nanoscale Volume 3 ; 3 ; 2011 ; >
       au < frozen ; exists ; 2012 ; Nanoscale Volume 4 ; 4 ; 2012 ; >
       au < frozen ; exists ; 2013 ; Nanoscale Volume 5 ; 5 ; 2013 ; >
-      au < deepCrawl ; exists ; 2014 ; Nanoscale Volume 6 ; 6 ; 2014 ; >
+      au < frozen ; exists ; 2014 ; Nanoscale Volume 6 ; 6 ; 2014 ; >
       au < deepCrawl ; exists ; 2015 ; Nanoscale Volume 7 ; 7 ; 2015 ; >
       au < deepCrawl ; exists ; 2016 ; Nanoscale Volume 8 ; 8 ; 2016 ; >
       au < manifest ; exists ; 2017 ; Nanoscale Volume 9 ; 9 ; 2017 ; >
@@ -624,7 +624,7 @@
       au < frozen ; exists ; 2011 ; Organic & Biomolecular Chemistry Volume 9 ; 9 ; 2011 ; >
       au < frozen ; exists ; 2012 ; Organic & Biomolecular Chemistry Volume 10 ; 10 ; 2012 ; >
       au < frozen ; exists ; 2013 ; Organic & Biomolecular Chemistry Volume 11 ; 11 ; 2013 ; >
-      au < deepCrawl ; exists ; 2014 ; Organic & Biomolecular Chemistry Volume 12 ; 12 ; 2014 ; >
+      au < frozen ; exists ; 2014 ; Organic & Biomolecular Chemistry Volume 12 ; 12 ; 2014 ; >
       au < deepCrawl ; exists ; 2015 ; Organic & Biomolecular Chemistry Volume 13 ; 13 ; 2015 ; >
       au < deepCrawl ; exists ; 2016 ; Organic & Biomolecular Chemistry Volume 14 ; 14 ; 2016 ; >
       au < manifest ; exists ; 2017 ; Organic & Biomolecular Chemistry Volume 15 ; 15 ; 2017 ; >
@@ -667,7 +667,7 @@
       au < finished ; finished ; 2011 ; Physical Chemistry Chemical Physics Volume 13 ; 13 ; 2011 ; >
       au < frozen ; exists ; 2012 ; Physical Chemistry Chemical Physics Volume 14 ; 14 ; 2012 ; >
       au < frozen ; exists ; 2013 ; Physical Chemistry Chemical Physics Volume 15 ; 15 ; 2013 ; >
-      au < deepCrawl ; exists ; 2014 ; Physical Chemistry Chemical Physics Volume 16 ; 16 ; 2014 ; >
+      au < frozen ; exists ; 2014 ; Physical Chemistry Chemical Physics Volume 16 ; 16 ; 2014 ; >
       au < deepCrawl ; exists ; 2015 ; Physical Chemistry Chemical Physics Volume 17 ; 17 ; 2015 ; >
       au < deepCrawl ; exists ; 2016 ; Physical Chemistry Chemical Physics Volume 18 ; 18 ; 2016 ; reingest4.clockss.org:8082 >
       au < manifest ; exists ; 2017 ; Physical Chemistry Chemical Physics Volume 19 ; 19 ; 2017 ; >
@@ -688,7 +688,7 @@
       au < frozen ; exists ; 2011 ; Soft Matter Volume 7 ; 7 ; 2011 ; >
       au < frozen ; exists ; 2012 ; Soft Matter Volume 8 ; 8 ; 2012 ; >
       au < frozen ; exists ; 2013 ; Soft Matter Volume 9 ; 9 ; 2013 ; >
-      au < deepCrawl ; exists ; 2014 ; Soft Matter Volume 10 ; 10 ; 2014 ; >
+      au < frozen ; exists ; 2014 ; Soft Matter Volume 10 ; 10 ; 2014 ; >
       au < deepCrawl ; exists ; 2015 ; Soft Matter Volume 11 ; 11 ; 2015 ; >
       au < deepCrawl ; exists ; 2016 ; Soft Matter Volume 12 ; 12 ; 2016 ; >
       au < manifest ; exists ; 2017 ; Soft Matter Volume 13 ; 13 ; 2017 ; >
@@ -1066,7 +1066,7 @@
       param[journal_code] = em
 
       au < frozen ; exists ; 2013 ; Environmental Science: Processes & Impacts Volume 15 ; 15 ; 2013 ; >
-      au < deepCrawl ; exists ; 2014 ; Environmental Science: Processes & Impacts Volume 16 ; 16 ; 2014 ; >
+      au < frozen ; exists ; 2014 ; Environmental Science: Processes & Impacts Volume 16 ; 16 ; 2014 ; >
       au < deepCrawl ; exists ; 2015 ; Environmental Science: Processes & Impacts Volume 17 ; 17 ; 2015 ; >
       au < deepCrawl ; exists ; 2016 ; Environmental Science: Processes & Impacts Volume 18 ; 18 ; 2016 ; >
       au < manifest ; exists ; 2017 ; Environmental Science: Processes & Impacts Volume 19 ; 19 ; 2017 ; >
