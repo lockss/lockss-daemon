@@ -24,7 +24,7 @@
       au < frozen ; exists ; 2013 ; 2 ; Orbit: Writing Around Pynchon Volume 2013 ; 2013 ; >
       au < frozen ; exists ; 2014 ; 3 ; Orbit: Writing Around Pynchon Volume 2014 ; 2014 ; >
       au < frozen ; exists ; 2015 ; 4 ; Orbit: Writing Around Pynchon Volume 2015 ; 2015 ; >
-      au < deepCrawl ; exists ; 2016 ; 5 ; Orbit: Writing Around Pynchon Volume 2016 ; 2016 ; >
+      au < frozen ; exists ; 2016 ; 5 ; Orbit: Writing Around Pynchon Volume 2016 ; 2016 ; >
       au < crawling ; exists ; 2017 ; 6 ; Orbit: Writing Around Pynchon Volume 2017 ; 2017 ; >
 
   }
@@ -132,7 +132,7 @@
       param[base_url] = https://poetry.openlibhums.org/
 
       au < finished ; finished ; 2015 ; 1 ; Journal of British and Irish Innovative Poetry Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016 ; 2 ; Journal of British and Irish Innovative Poetry Volume 2016 ; 2016 ; >
+      au < frozen ; exists ; 2016 ; 2 ; Journal of British and Irish Innovative Poetry Volume 2016 ; 2016 ; >
       au < crawling ; exists ; 2017 ; 3 ; Journal of British and Irish Innovative Poetry Volume 2017 ; 2017 ; >
 
   }
@@ -148,7 +148,7 @@
       param[base_url] = https://olh.openlibhums.org/
 
       au < finished ; finished ; 2015 ; 1 ; Open Library of Humanities Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016 ; 2 ; Open Library of Humanities Volume 2016 ; 2016 ; >
+      au < frozen ; exists ; 2016 ; 2 ; Open Library of Humanities Volume 2016 ; 2016 ; >
       au < crawling ; exists ; 2017 ; 3 ; Open Library of Humanities Volume 2017 ; 2017 ; >
 
   }
@@ -1426,7 +1426,7 @@
       au < frozen ; exists ; 2013 ; 1 ; International Journal for History, Culture and Modernity Volume 2013 ; 2013 ; >
       au < frozen ; exists ; 2014 ; 2 ; International Journal for History, Culture and Modernity Volume 2014 ; 2014 ; >
       au < frozen ; exists ; 2015 ; 3 ; International Journal for History, Culture and Modernity Volume 2015 ; 2015 ; >
-      au < deepCrawl ; exists ; 2016 ; 4 ; International Journal for History, Culture and Modernity Volume 2016 ; 2016 ; >
+      au < frozen ; exists ; 2016 ; 4 ; International Journal for History, Culture and Modernity Volume 2016 ; 2016 ; >
       au < crawling ; exists ; 2017 ; 5 ; International Journal for History, Culture and Modernity Volume 2017 ; 2017 ; >
 
   }
@@ -1450,7 +1450,7 @@
       au < frozen ; exists ; 2013 ; 7 ; International Journal of the Commons Volume 2013 ; 2013 ; >
       au < frozen ; exists ; 2014 ; 8 ; International Journal of the Commons Volume 2014 ; 2014 ; >
       au < frozen ; exists ; 2015 ; 9 ; International Journal of the Commons Volume 2015 ; 2015 ; >
-      au < deepCrawl ; exists ; 2016 ; 10 ; International Journal of the Commons Volume 2016 ; 2016 ; >
+      au < frozen ; exists ; 2016 ; 10 ; International Journal of the Commons Volume 2016 ; 2016 ; >
       au < crawling ; exists ; 2017 ; 11 ; International Journal of the Commons Volume 2017 ; 2017 ; >
 
   }
@@ -1476,7 +1476,7 @@
       au < frozen ; exists ; 2013 ; 9 ; Journal of Social Intervention Volume 2013 ; 2013 ; >
       au < frozen ; exists ; 2014 ; 10 ; Journal of Social Intervention Volume 2014 ; 2014 ; >
       au < frozen ; exists ; 2015 ; 11 ; Journal of Social Intervention Volume 2015 ; 2015 ; >
-      au < deepCrawl ; exists ; 2016 ; 12 ; Journal of Social Intervention Volume 2016 ; 2016 ; >
+      au < frozen ; exists ; 2016 ; 12 ; Journal of Social Intervention Volume 2016 ; 2016 ; >
       au < crawling ; exists ; 2017 ; 13 ; Journal of Social Intervention Volume 2017 ; 2017 ; >
 
   }
@@ -1508,7 +1508,7 @@
       au < frozen ; exists ; 2013 ; 15 ; LIBER Quarterly Volume 2013 ; 2013 ; >
       au < frozen ; exists ; 2014 ; 16 ; LIBER Quarterly Volume 2014 ; 2014 ; >
       au < frozen ; exists ; 2015 ; 17 ; LIBER Quarterly Volume 2015 ; 2015 ; >
-      au < deepCrawl ; exists ; 2016 ; 18 ; LIBER Quarterly Volume 2016 ; 2016 ; >
+      au < frozen ; exists ; 2016 ; 18 ; LIBER Quarterly Volume 2016 ; 2016 ; >
       au < crawling ; exists ; 2017 ; 19 ; LIBER Quarterly Volume 2017 ; 2017 ; >
 
   }
@@ -1532,7 +1532,7 @@
       au < frozen ; exists ; 2013 ; 7 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2013 ; 2013 ; >
       au < frozen ; exists ; 2014 ; 8 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2014 ; 2014 ; >
       au < frozen ; exists ; 2015 ; 9 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2015 ; 2015 ; >
-      au < deepCrawl ; exists ; 2016 ; 10 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2016 ; 2016 ; >
+      au < frozen ; exists ; 2016 ; 10 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2016 ; 2016 ; >
       au < crawling ; exists ; 2017 ; 11 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2017 ; 2017 ; >
 
   }
@@ -1552,7 +1552,7 @@
       au < frozen ; exists ; 2013 ; 3 ; Religion and Gender Volume 2013 ; 2013 ; >
       au < frozen ; exists ; 2014 ; 4 ; Religion and Gender Volume 2014 ; 2014 ; >
       au < frozen ; exists ; 2015 ; 5 ; Religion and Gender Volume 2015 ; 2015 ; >
-      au < deepCrawl ; exists ; 2016 ; 6 ; Religion and Gender Volume 2016 ; 2016 ; >
+      au < frozen ; exists ; 2016 ; 6 ; Religion and Gender Volume 2016 ; 2016 ; >
       au < crawling ; exists ; 2017 ; 7 ; Religion and Gender Volume 2017 ; 2017 ; >
 
   }
@@ -1633,7 +1633,7 @@
       au < frozen ; exists ; 2013 ; 9 ; Utrecht Law Review Volume 2013 ; 2013 ; >
       au < frozen ; exists ; 2014 ; 10 ; Utrecht Law Review Volume 2014 ; 2014 ; >
       au < frozen ; exists ; 2015 ; 11 ; Utrecht Law Review Volume 2015 ; 2015 ; >
-      au < deepCrawl ; exists ; 2016 ; 12 ; Utrecht Law Review Volume 2016 ; 2016 ; >
+      au < frozen ; exists ; 2016 ; 12 ; Utrecht Law Review Volume 2016 ; 2016 ; >
       au < crawling ; exists ; 2017 ; 13 ; Utrecht Law Review Volume 2017 ; 2017 ; >
 
   }
