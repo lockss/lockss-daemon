@@ -3703,7 +3703,8 @@
   {
 
     title <
-      name = EP Europace ;
+#      name = EP Europace ;
+      name = Europace ;
       issn = 1099-5129 ;
       eissn = 1532-2092 ;
       issnl = 1099-5129
@@ -4101,7 +4102,7 @@
     title <
       name = Environmental History Review ;
       issn = 1053-4180 ;
-      eissn = 1053-4180
+      issnl = 1053-4180
     >
 
     param[journal_id] = envihistrevi
@@ -5065,7 +5066,6 @@
     title <
       name = Forest & Conservation History ;
       issn = 1046-7009 ;
-      eissn = 1046-7009 ;
       issnl = 1046-7009
     >
 
@@ -9435,7 +9435,8 @@
 
     title <
       name = Journal of Medical Entomology ;
-      issn = 0022-2858 ;
+#      issn = 0022-2858 ;
+      issn = 0022-2585 ;
       eissn = 1938-2928 ;
       issnl = 0022-2585
     >
