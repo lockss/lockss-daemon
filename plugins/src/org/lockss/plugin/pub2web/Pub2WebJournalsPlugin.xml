@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>18</string>
+    <string>19</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -79,6 +79,7 @@
   <entry>
     <string>au_crawlrules</string>
     <!-- examples
+    *Child IET has its own crawl rules*
   start url: 
     http://jmm.microbiologyresearch.org/content/journal/jmm/clockssissues?volume=64
     http://www.asmscience.org/content/journal/microbiolspec/clockssissues?volume=2
