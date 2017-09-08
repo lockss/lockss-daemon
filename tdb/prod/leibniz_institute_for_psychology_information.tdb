@@ -29,7 +29,7 @@
       au < down ; 2014 ; Europe's Journal of Psychology Volume 10 ; 10 ; 2014 ; http://ejop.psychopen.eu/ >
       au < down ; 2015 ; Europe's Journal of Psychology Volume 11 ; 11 ; 2015 ; http://ejop.psychopen.eu/ >
       au < down ; 2016 ; Europe's Journal of Psychology Volume 12 ; 12 ; 2016 ; http://ejop.psychopen.eu/ >
-      au < exists ; 2017 ; Europe's Journal of Psychology Volume 13 ; 13 ; 2017 ; https://ejop.psychopen.eu/ >
+      au < manifest ; 2017 ; Europe's Journal of Psychology Volume 13 ; 13 ; 2017 ; https://ejop.psychopen.eu/ >
 
   }
 
@@ -47,7 +47,7 @@
       au < down ; 2014 ; The European Journal of Counselling Psychology Volume 3 ; 3 ; 2014 ; http://ejcop.psychopen.eu/ >
       au < down ; 2015 ; The European Journal of Counselling Psychology Volume 4 ; 4 ; 2015 ; http://ejcop.psychopen.eu/ >
       au < down ; 2016 ; The European Journal of Counselling Psychology Volume 5 ; 5 ; 2016 ; http://ejcop.psychopen.eu/ >
-      au < exists ; 2017 ; The European Journal of Counselling Psychology Volume 6 ; 6 ; 2017 ; https://ejcop.psychopen.eu/ >
+      au < manifest ; 2017 ; The European Journal of Counselling Psychology Volume 6 ; 6 ; 2017 ; https://ejcop.psychopen.eu/ >
 
   }
 
@@ -70,7 +70,7 @@
       au < down ; 2014 ; Interpersona: An International Journal on Personal Relationships Volume 8 ; 8 ; 2014 ; http://interpersona.psychopen.eu/ >
       au < down ; 2015 ; Interpersona: An International Journal on Personal Relationships Volume 9 ; 9 ; 2015 ; http://interpersona.psychopen.eu/ >
       au < down ; 2016 ; Interpersona: An International Journal on Personal Relationships Volume 10 ; 10 ; 2016 ; http://interpersona.psychopen.eu/ >
-      au < exists ; 2017 ; Interpersona: An International Journal on Personal Relationships Volume 11 ; 11 ; 2017 ; https://interpersona.psychopen.eu/ >
+      au < manifest ; 2017 ; Interpersona: An International Journal on Personal Relationships Volume 11 ; 11 ; 2017 ; https://interpersona.psychopen.eu/ >
 
   }
 
@@ -87,7 +87,7 @@
       au < down ; 2014 ; Journal of Social and Political Psychology Volume 2 ; 2 ; 2014 ; http://jspp.psychopen.eu/ >
       au < down ; 2015 ; Journal of Social and Political Psychology Volume 3 ; 3 ; 2015 ; http://jspp.psychopen.eu/ >
       au < down ; 2016 ; Journal of Social and Political Psychology Volume 4 ; 4 ; 2016 ; http://jspp.psychopen.eu/ >
-      au < exists ; 2017 ; Journal of Social and Political Psychology Volume 5 ; 5 ; 2017 ; https://jspp.psychopen.eu/ >
+      au < manifest ; 2017 ; Journal of Social and Political Psychology Volume 5 ; 5 ; 2017 ; https://jspp.psychopen.eu/ >
 
   }
 
@@ -100,12 +100,12 @@
       #param[base_url] = http://psyct.psychopen.eu/
       param[journal_id] = psyct
   
-      au < down ; 2012 ; Psychological Thought Volume 5 ; 5 ; 2012 ; http://jspp.psychopen.eu/ >
-      au < down ; 2013 ; Psychological Thought Volume 6 ; 6 ; 2013 ; http://jspp.psychopen.eu/ >
-      au < down ; 2014 ; Psychological Thought Volume 7 ; 7 ; 2014 ; http://jspp.psychopen.eu/ >
-      au < down ; 2015 ; Psychological Thought Volume 8 ; 8 ; 2015 ; http://jspp.psychopen.eu/ >
-      au < down ; 2016 ; Psychological Thought Volume 9 ; 9 ; 2016 ; http://jspp.psychopen.eu/ >
-      au < exists ; 2017 ; Psychological Thought Volume 10 ; 10 ; 2017 ; https://jspp.psychopen.eu/ >
+      au < down ; 2012 ; Psychological Thought Volume 5 ; 5 ; 2012 ; http://psyct.psychopen.eu/ >
+      au < down ; 2013 ; Psychological Thought Volume 6 ; 6 ; 2013 ; http://psyct.psychopen.eu/ >
+      au < down ; 2014 ; Psychological Thought Volume 7 ; 7 ; 2014 ; http://psyct.psychopen.eu/ >
+      au < down ; 2015 ; Psychological Thought Volume 8 ; 8 ; 2015 ; http://psyct.psychopen.eu/ >
+      au < down ; 2016 ; Psychological Thought Volume 9 ; 9 ; 2016 ; http://psyct.psychopen.eu/ >
+      au < manifest ; 2017 ; Psychological Thought Volume 10 ; 10 ; 2017 ; http://psyct.psychopen.eu/ >
   
   }
 
@@ -123,7 +123,7 @@
       au < down ; 2014 ; Psychology, Community & Health Volume 3 ; 3 ; 2014 ; http://pch.psychopen.eu/ >
       au < down ; 2015 ; Psychology, Community & Health Volume 4 ; 4 ; 2015 ; http://pch.psychopen.eu/ >
       au < down ; 2016 ; Psychology, Community & Health Volume 5 ; 5 ; 2016 ; http://pch.psychopen.eu/ >
-      au < exists ; 2017 ; Psychology, Community & Health Volume 6 ; 6 ; 2017 ; https://pch.psychopen.eu/ >
+      au < manifest ; 2017 ; Psychology, Community & Health Volume 6 ; 6 ; 2017 ; https://pch.psychopen.eu/ >
 
   }
 
