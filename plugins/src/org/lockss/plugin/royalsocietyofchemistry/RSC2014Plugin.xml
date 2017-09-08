@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>24</string>
+    <string>25</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>16</string>
+        <string>17</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -226,6 +226,7 @@
     <list>
       <string>"%spubs-core/", graphics_url</string>
       <string>[.](css|js)($|\?)</string>
+      <string>"%s.*logo[.]png", graphics_url</string>
     </list>
   </entry>
   <entry>
@@ -234,6 +235,7 @@
     <list>
       <string>"%spubs-core/", graphics_url, 0</string>
       <string>"[.](css|js)($|\?)", 0</string>
+      <string>"%s.*logo[.]png", graphics_url, 0</string>
     </list>
     
   </entry>

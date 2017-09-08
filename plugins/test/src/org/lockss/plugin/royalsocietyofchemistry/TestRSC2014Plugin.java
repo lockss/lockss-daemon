@@ -64,7 +64,10 @@ public class TestRSC2014Plugin extends LockssTestCase {
   // Note diff: the funky escaped chars, there is probably a call to do the conversion
   // if it changes in the plugin, you will likely need to change the test, so verify
   static final String[] REPAIR_FROM_PEER_REGEXP = 
-      new String[] {"http\\:\\/\\/sod\\-a\\.img\\-cdn\\.com\\/" + "pubs-core/", "[.](css|js)($|\\?)"};
+      new String[] {
+          "http\\:\\/\\/sod\\-a\\.img\\-cdn\\.com\\/" + "pubs-core/",
+          "[.](css|js)($|\\?)",
+          "http\\:\\/\\/sod\\-a\\.img\\-cdn\\.com\\/" + ".*logo[.]png",};
   
   
   private DefinablePlugin plugin;
@@ -225,12 +228,17 @@ public class TestRSC2014Plugin extends LockssTestCase {
     List <String> repairList2 = ListUtil.list(
         GRAPHICS_URL + "pubs.rsc.org/content/stylesheets/mobileStyle.css?21.2.0.0",
         GRAPHICS_URL + "pubs.rsc.org/content/js/mobileStyle.js",
-        GRAPHICS_URL + "pubs.rsc.orgcontent/stylesheets/mobileStyle.css");
+        GRAPHICS_URL + "pubs.rsc.org/content/stylesheets/mobileStyle.css");
     Pattern p2 = Pattern.compile(REPAIR_FROM_PEER_REGEXP[1]);
     for (String urlString : repairList2) {
       m = p2.matcher(urlString);
       assertEquals(urlString, true, m.find());
     }
+    Pattern p3 = Pattern.compile(REPAIR_FROM_PEER_REGEXP[2]);
+    String lclString = GRAPHICS_URL + "pubs.rsc.org/NewImages/pubs-logo.png";
+    m = p3.matcher(lclString);
+    assertEquals(lclString, true, m.find());
+    
     //and this one should fail - it needs to be weighted correctly and repaired from publisher if possible
     String notString = "http://pubs.example.com/img/close-icon.png";
     m = p.matcher(notString);
