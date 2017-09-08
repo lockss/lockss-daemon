@@ -11813,7 +11813,8 @@
     title <
       name = Monthly Notices of the Royal Astronomical Society: Letters ;
       issn = 1745-3925 ;
-      eissn = 1745-3933
+      eissn = 1745-3933 ;
+      issnl = 1745-3925
     >
 
     param[journal_id] = mnrasl
@@ -11924,7 +11925,6 @@
 
   }
 
-  #Publisher and previous TDB differ on eissn - 2053-7387 vs 2053-7395 
   {
 
     title <
