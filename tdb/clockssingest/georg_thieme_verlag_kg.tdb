@@ -2075,7 +2075,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Im OP Volume 4 ; 4 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; Im OP Volume 5 ; 5 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; down ; 2016 ; 2016 ; Im OP Volume 6 ; 6 ;  >
-   au < ready ; exists ; 2017 ; 2017 ; Im OP Volume 7 ; 7 ; >
+   au < crawling ; exists ; 2017 ; 2017 ; Im OP Volume 7 ; 7 ; >
 
   }
 
@@ -2959,7 +2959,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Klinikarzt Der Volume 43 ; 43 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; Klinikarzt Der Volume 44 ; 44 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; 2016 ; Klinikarzt Der Volume 45 ; 45 ; >
-    au < ready ; exists ; 2017 ; 2017 ; Klinikarzt Der Volume 46 ; 46 ; >
+    au < crawling ; exists ; 2017 ; 2017 ; Klinikarzt Der Volume 46 ; 46 ; >
 
   }
 
@@ -3011,7 +3011,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Klinische Monatsblätter für Augenheilkunde Volume 231 ; 231 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; Klinische Monatsblätter für Augenheilkunde Volume 232 ; 232 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; 2016 ; Klinische Monatsblätter für Augenheilkunde Volume 233 ; 233 ; >
-    au < ready ; exists ; 2017 ; 2017 ; Klinische Monatsblätter für Augenheilkunde Volume 234 ; 234 ; >
+    au < crawling ; exists ; 2017 ; 2017 ; Klinische Monatsblätter für Augenheilkunde Volume 234 ; 234 ; >
 
   }
 
@@ -3627,7 +3627,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Notfallmedizin up2date Volume 9 ; 9 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Notfallmedizin up2date Volume 10 ; 10 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; 2016 ; Notfallmedizin up2date Volume 11 ; 11 ; >
-    au < ready ; exists ; 2017 ; 2017 ; Notfallmedizin up2date Volume 12 ; 12 ; >
+    au < crawling ; exists ; 2017 ; 2017 ; Notfallmedizin up2date Volume 12 ; 12 ; >
 
   }
 
