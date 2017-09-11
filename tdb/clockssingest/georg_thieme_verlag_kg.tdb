@@ -491,7 +491,7 @@
     au < finished ; finished ; 2014 ; 2014 ; American Journal of Perinatology Reports Volume 4 ; 4 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; American Journal of Perinatology Reports Volume 5 ; 5 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; 2016 ; American Journal of Perinatology Reports Volume 6 ; 6 ; >
-    au < manifest ; exists ; 2017 ; 2017 ; American Journal of Perinatology Reports Volume 7 ; 7 ; >
+    au < ready ; exists ; 2017 ; 2017 ; American Journal of Perinatology Reports Volume 7 ; 7 ; >
 
    }
 
@@ -574,7 +574,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Drug Research Volume 64 ; 64 ; >
     au < finished ; finished ; 2015 ; 2015 ; Drug Research Volume 65 ; 65 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; 2016 ; Drug Research Volume 66 ; 66 ; >
-    au < manifest ; exists ; 2017 ; 2017 ; Drug Research Volume 67 ; 67 ; >
+    au < ready ; exists ; 2017 ; 2017 ; Drug Research Volume 67 ; 67 ; >
 
    }
 
@@ -1122,7 +1122,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Deutsche Zeitschrift für Osteopathie Volume 12 ; 12 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; Deutsche Zeitschrift für Osteopathie Volume 13 ; 13 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; down ; 2016 ; 2016 ; Deutsche Zeitschrift für Osteopathie Volume 14 ; 14 ;  >
-   au < testing ; exists ; 2017 ; 2017 ; Deutsche Zeitschrift für Osteopathie Volume 15 ; 15 ; >
+   au < ready ; exists ; 2017 ; 2017 ; Deutsche Zeitschrift für Osteopathie Volume 15 ; 15 ; >
 
   }
 
@@ -1232,7 +1232,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Endoscopy international open Volume 2 ; 2 ; >
     au < frozen ; exists ; 2015 ; 2015 ; Endoscopy international open Volume 3 ; 3 ; >
     au < deepCrawl ; down ; 2016 ; 2016 ; Endoscopy international open Volume 4 ; 4 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Endoscopy international open Volume 5 ; 5 ; >
+    au < ready ; exists ; 2017 ; 2017 ; Endoscopy international open Volume 5 ; 5 ; >
 
   }
 
@@ -1608,7 +1608,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 21 ; 21 ; >
    au < finished ; finished ; 2015 ; 2015 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 22 ; 22 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; down ; 2016 ; 2016 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 23 ; 23 ;  >
-   au < manifest ; exists ; 2017 ; 2017 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 24 ; 24 ; >
+   au < ready ; exists ; 2017 ; 2017 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 24 ; 24 ; >
 
   }
 
@@ -2230,7 +2230,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Intensivmedizin up2date Volume 10 ; 10 ; >
     au < finished ; finished ; 2015 ; 2015 ; Intensivmedizin up2date Volume 11 ; 11 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; Intensivmedizin up2date Volume 12 ; 12 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Intensivmedizin up2date Volume 13 ; 13 ; >
+    au < ready ; exists ; 2017 ; 2017 ; Intensivmedizin up2date Volume 13 ; 13 ; >
 
   }
 
@@ -2251,7 +2251,7 @@
    au < finished ; finished ; 2014 ; 2014 ; International Archives of Otorhinolaryngology Volume 18 ; 18 ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2015 ; 2015 ; International Archives of Otorhinolaryngology Volume 19 ; 19 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; down ; 2016 ; 2016 ; International Archives of Otorhinolaryngology Volume 20 ; 20 ;  >
-   au < manifest ; exists ; 2017 ; 2017 ; International Archives of Otorhinolaryngology Volume 21 ; 21 ; >
+   au < ready ; exists ; 2017 ; 2017 ; International Archives of Otorhinolaryngology Volume 21 ; 21 ; >
 
   }
 
@@ -2386,7 +2386,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Journal Club AINS Volume 3 ; 3 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; Journal Club AINS Volume 4 ; 4 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; Journal Club AINS Volume 5 ; 5 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Journal Club AINS Volume 6 ; 6 ; >
+    au < ready ; exists ; 2017 ; 2017 ; Journal Club AINS Volume 6 ; 6 ; >
 
   }
 
@@ -2529,7 +2529,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Journal of Knee Surgery Volume 27 ; 27 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; 2015 ; Journal of Knee Surgery Volume 28 ; 28 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; 2016 ; Journal of Knee Surgery Volume 29 ; 29 ; >
-    au < manifest ; exists ; 2017 ; 2017 ; Journal of Knee Surgery Volume 30 ; 30 ; >
+    au < ready ; exists ; 2017 ; 2017 ; Journal of Knee Surgery Volume 30 ; 30 ; >
 
   }
 
@@ -2697,7 +2697,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Journal of Pediatric Infectious Diseases Volume 9 ; 9 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; Journal of Pediatric Infectious Diseases Volume 10 ; 10 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; down ; 2016 ; 2016 ; Journal of Pediatric Infectious Diseases Volume 11 ; 11 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Journal of Pediatric Infectious Diseases Volume 12 ; 12 ; >
+    au < ready ; exists ; 2017 ; 2017 ; Journal of Pediatric Infectious Diseases Volume 12 ; 12 ; >
 
   }
 
@@ -2836,7 +2836,7 @@
     comment[years] = 2016-current
 
     au < deepCrawl ; down ; 2016 ; 2016 ; Journal of Reconstructive Microsurgery Open Volume 1 ; 1 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Journal of Reconstructive Microsurgery Open Volume 2 ; 2 ; >
+    au < ready ; exists ; 2017 ; 2017 ; Journal of Reconstructive Microsurgery Open Volume 2 ; 2 ; >
 
   }
 
@@ -3472,7 +3472,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Neuropediatrics Volume 45 ; 45 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Neuropediatrics Volume 46 ; 46 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; Neuropediatrics Volume 47 ; 47 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Neuropediatrics Volume 48 ; 48 ; >
+    au < ready ; exists ; 2017 ; 2017 ; Neuropediatrics Volume 48 ; 48 ; >
 
   }
 
@@ -3550,7 +3550,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Notarzt Der Volume 30 ; 30 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Notarzt Der Volume 31 ; 31 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; 2016 ; Notarzt Der Volume 32 ; 32 ; >
-    au < manifest ; exists ; 2017 ; 2017 ; Notarzt Der Volume 33 ; 33 ; >
+    au < ready ; exists ; 2017 ; 2017 ; Notarzt Der Volume 33 ; 33 ; >
 
   }
 
@@ -3657,7 +3657,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Der Nuklearmediziner Volume 37 ; 37 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Der Nuklearmediziner Volume 38 ; 38 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; 2016 ; Der Nuklearmediziner Volume 39 ; 39 ; >
-    au < manifest ; exists ; 2017 ; 2017 ; Der Nuklearmediziner Volume 40 ; 40 ; >
+    au < ready ; exists ; 2017 ; 2017 ; Der Nuklearmediziner Volume 40 ; 40 ; >
 
   }
 
@@ -3867,7 +3867,7 @@
     au < finished ; finished ; 2014 ; 2014 ; pferde spiegel Volume 17 ; 17 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; pferde spiegel Volume 18 ; 18 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; pferde spiegel Volume 19 ; 19 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; pferde spiegel Volume 20 ; 20 ; >
+    au < ready ; exists ; 2017 ; 2017 ; pferde spiegel Volume 20 ; 20 ; >
 
   }
 
