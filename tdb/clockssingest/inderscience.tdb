@@ -2273,7 +2273,7 @@
       au < finished ; finished ; 2014 ; International Journal of Critical Infrascructures Volume 10 ; 10 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; International Journal of Critical Infrascructures Volume 11 ; 11 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2016 ; International Journal of Critical Infrascructures Volume 12 ; 12 ; >
-      au < ready ; exists ; 2017 ; International Journal of Critical Infrascructures Volume 13 ; 13 ; >
+      au < crawling ; exists ; 2017 ; International Journal of Critical Infrascructures Volume 13 ; 13 ; >
 
     }
 
@@ -2908,7 +2908,7 @@
       au < finished ; finished ; 2014 ; International Journal of Emergency Management Volume 10 ; 10 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; International Journal of Emergency Management Volume 11 ; 11 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2016 ; International Journal of Emergency Management Volume 12 ; 12 ; >
-      au < ready ; exists ; 2017 ; International Journal of Emergency Management Volume 13 ; 13 ; >
+      au < crawling ; exists ; 2017 ; International Journal of Emergency Management Volume 13 ; 13 ; >
 
     }
 
@@ -4242,7 +4242,7 @@
       au < finished ; finished ; 2015 ; International Journal of Information and Communication Technology Volume 7 ; 7 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2016 ; International Journal of Information and Communication Technology Volume 8 ; 8 ; >
       au < deepCrawl ; exists ; 2016 ; International Journal of Information and Communication Technology Volume 9 ; 9 ; >
-      au < ready ; exists ; 2017 ; International Journal of Information and Communication Technology Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2017 ; International Journal of Information and Communication Technology Volume 10 ; 10 ; >
       au < manifest ; exists ; 2017 ; International Journal of Information and Communication Technology Volume 11 ; 11 ; >
 
     }
@@ -6335,7 +6335,7 @@
       au < finished ; finished ; 2014 ; International Journal of Networking and Virtual Organisations Volume 14 ; 14 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2015 ; International Journal of Networking and Virtual Organisations Volume 15 ; 15 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2016 ; International Journal of Networking and Virtual Organisations Volume 16 ; 16 ; reingest5.clockss.org:8082 >
-      au < ready ; exists ; 2017 ; International Journal of Networking and Virtual Organisations Volume 17 ; 17 ; >
+      au < crawling ; exists ; 2017 ; International Journal of Networking and Virtual Organisations Volume 17 ; 17 ; >
 
     }
 
@@ -7374,7 +7374,7 @@
       au < deepCrawl ; exists ; 2016 ; International Journal of Sensor Networks Volume 21 ; 21 ; >
       au < deepCrawl ; exists ; 2016 ; International Journal of Sensor Networks Volume 22 ; 22 ; >
       au < crawling ; exists ; 2017 ; International Journal of Sensor Networks Volume 23 ; 23 ; >
-      au < ready ; exists ; 2017 ; International Journal of Sensor Networks Volume 24 ; 24 ; >
+      au < crawling ; exists ; 2017 ; International Journal of Sensor Networks Volume 24 ; 24 ; >
       au < expected ; exists ; 2017 ; International Journal of Sensor Networks Volume 25 ; 25 ; >
 
     }
@@ -8244,7 +8244,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Technological Learning, Innovation and Development Volume 6 ; 6 ; >
       au < finished ; finished ; 2014-2015 ; International Journal of Technological Learning, Innovation and Development Volume 7 ; 7 ; >
       au < manifest ; exists ; 2016 ; International Journal of Technological Learning, Innovation and Development Volume 8 ; 8 ; >
-      au < ready ; exists ; 2017 ; International Journal of Technological Learning, Innovation and Development Volume 9 ; 9 ; >
+      au < crawling ; exists ; 2017 ; International Journal of Technological Learning, Innovation and Development Volume 9 ; 9 ; >
 
     }
 

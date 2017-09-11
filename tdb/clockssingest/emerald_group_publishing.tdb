@@ -1884,7 +1884,7 @@
     au < finished ; finished ; 2014 ; Drugs and Alcohol Today Volume 14 ; 14 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Drugs and Alcohol Today Volume 15 ; 15 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2016 ; Drugs and Alcohol Today Volume 16 ; 16 ; >
-    au < ready ; exists ; 2017 ; Drugs and Alcohol Today Volume 17 ; 17 ; >
+    au < crawling ; exists ; 2017 ; Drugs and Alcohol Today Volume 17 ; 17 ; >
 
   }
 
@@ -2620,7 +2620,7 @@
     au < finished ; finished ; 2014 ; Gender in Management: An International Journal Volume 29 ; 29 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; Gender in Management: An International Journal Volume 30 ; 30 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; Gender in Management: An International Journal Volume 31 ; 31 ; >
-    au < ready ; exists ; 2017 ; Gender in Management: An International Journal Volume 32 ; 32 ; >
+    au < crawling ; exists ; 2017 ; Gender in Management: An International Journal Volume 32 ; 32 ; >
 
   }
 
@@ -5483,7 +5483,7 @@
     au < finished ; finished ; 2014 ; Journal of Agribusiness in Developing and Emerging Economies Volume 4 ; 4 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; Journal of Agribusiness in Developing and Emerging Economies Volume 5 ; 5 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2016 ; Journal of Agribusiness in Developing and Emerging Economies Volume 6 ; 6 ; >
-    au < ready ; exists ; 2017 ; Journal of Agribusiness in Developing and Emerging Economies Volume 7 ; 7 ; >
+    au < crawling ; exists ; 2017 ; Journal of Agribusiness in Developing and Emerging Economies Volume 7 ; 7 ; >
 
   }
 
@@ -6466,7 +6466,7 @@
     au < frozen ; exists ; 2014 ; Journal of Financial Crime Volume 21 ; 21 ; >
     au < finished ; finished ; 2015 ; Journal of Financial Crime Volume 22 ; 22 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2016 ; Journal of Financial Crime Volume 23 ; 23 ; >
-    au < ready ; exists ; 2017 ; Journal of Financial Crime Volume 24 ; 24 ; >
+    au < crawling ; exists ; 2017 ; Journal of Financial Crime Volume 24 ; 24 ; >
 
   }
 
@@ -9174,7 +9174,7 @@
     au < frozen ; exists ; 2014 ; Multidiscipline Modeling in Materials and Structures Volume 10 ; 10 ; >
     au < finished ; finished ; 2015 ; Multidiscipline Modeling in Materials and Structures Volume 11 ; 11 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Multidiscipline Modeling in Materials and Structures Volume 12 ; 12 ; reingest4.clockss.org:8082 >
-    au < ready ; exists ; 2017 ; Multidiscipline Modeling in Materials and Structures Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2017 ; Multidiscipline Modeling in Materials and Structures Volume 13 ; 13 ; >
 
   }
 
@@ -10608,7 +10608,7 @@
     au < finished ; finished ; 2014 ; Soldering & Surface Mount Technology Volume 26 ; 26 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Soldering & Surface Mount Technology Volume 27 ; 27 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2016 ; Soldering & Surface Mount Technology Volume 28 ; 28 ; >
-    au < ready ; exists ; 2017 ; Soldering & Surface Mount Technology Volume 29 ; 29 ; >
+    au < crawling ; exists ; 2017 ; Soldering & Surface Mount Technology Volume 29 ; 29 ; >
 
   }
 
