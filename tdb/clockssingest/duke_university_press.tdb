@@ -45,7 +45,8 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; American Literary Scholarship 2013 ; 2011 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; American Literary Scholarship 2014 ; 2012 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; American Literary Scholarship 2015 ; 2013 ; reingest1.clockss.org:8082 >
-      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2016 ; American Literary Scholarship 2016 ; 2014 ; >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2016 ; American Literary Scholarship 2016 ; 2014 ; >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2017 ; American Literary Scholarship 2017 ; 2015 ; >
 
     }
 
@@ -435,7 +436,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Cultural Politics Volume 10 ; 10 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Cultural Politics Volume 11 ; 11 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2016 ; Cultural Politics Volume 12 ; 12 ; >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2017 ; Cultural Politics Volume 13 ; 13 ; >
+      au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2017 ; Cultural Politics Volume 13 ; 13 ; >
 
     }
 
@@ -473,7 +474,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; differences: A Journal of Feminist Cultural Studies Volume 25 ; 25 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; differences: A Journal of Feminist Cultural Studies Volume 26 ; 26 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2016 ; differences: A Journal of Feminist Cultural Studies Volume 27 ; 27 ; >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2017 ; differences: A Journal of Feminist Cultural Studies Volume 28 ; 28 ; >
+      au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2017 ; differences: A Journal of Feminist Cultural Studies Volume 28 ; 28 ; >
 
     }
 
@@ -504,7 +505,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; East Asian Science, Technology and Society: An International Journal Volume 8 ; 8 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; East Asian Science, Technology and Society: An International Journal Volume 9 ; 9 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2016 ; East Asian Science, Technology and Society: An International Journal Volume 10 ; 10 ; >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2017 ; East Asian Science, Technology and Society: An International Journal Volume 11 ; 11 ; >
+      au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2017 ; East Asian Science, Technology and Society: An International Journal Volume 11 ; 11 ; >
 
     }
 
@@ -541,7 +542,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Eighteenth-Century Life Volume 38 ; 38 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Eighteenth-Century Life Volume 39 ; 39 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2016 ; Eighteenth-Century Life Volume 40 ; 40 ; >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2017 ; Eighteenth-Century Life Volume 41 ; 41 ; >
+      au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2017 ; Eighteenth-Century Life Volume 41 ; 41 ; >
 
     }
 
@@ -604,7 +605,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Ethnohistory Volume 61 ; 61 ; >
       au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2015 ; Ethnohistory Volume 62 ; 62 ; >
       au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2016 ; Ethnohistory Volume 63 ; 63 ; >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2017 ; Ethnohistory Volume 64 ; 64 ; >
+      au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2017 ; Ethnohistory Volume 64 ; 64 ; >
 
     }
 
@@ -642,7 +643,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; French Historical Studies Volume 37 ; 37 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; French Historical Studies Volume 38 ; 38 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2016 ; French Historical Studies Volume 39 ; 39 ; >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2017 ; French Historical Studies Volume 40 ; 40 ; >
+      au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2017 ; French Historical Studies Volume 40 ; 40 ; >
 
   }
 
@@ -678,7 +679,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Genre: Forms of Discourse and Culture Volume 47 ; 47 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Genre: Forms of Discourse and Culture Volume 48 ; 48 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2016 ; Genre: Forms of Discourse and Culture Volume 49 ; 49 ; >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2017 ; Genre: Forms of Discourse and Culture Volume 50 ; 50 ; >
+      au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2017 ; Genre: Forms of Discourse and Culture Volume 50 ; 50 ; >
 
   }
 
@@ -717,7 +718,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; GLQ: A Journal of Lesbian and Gay Studies Volume 20 ; 20 ; reingest5.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; GLQ: A Journal of Lesbian and Gay Studies Volume 21 ; 21 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2016 ; GLQ: A Journal of Lesbian and Gay Studies Volume 22 ; 22 ; >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2017 ; GLQ: A Journal of Lesbian and Gay Studies Volume 23 ; 23 ; >
+      au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2017 ; GLQ: A Journal of Lesbian and Gay Studies Volume 23 ; 23 ; >
 
     }
 
@@ -750,7 +751,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Hispanic American Historical Review Volume 94 ; 94 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Hispanic American Historical Review Volume 95 ; 95 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2016 ; Hispanic American Historical Review Volume 96 ; 96 ; >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2017 ; Hispanic American Historical Review Volume 97 ; 97 ; >
+      au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2017 ; Hispanic American Historical Review Volume 97 ; 97 ; >
 
     }
 
@@ -814,7 +815,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; History of Political Economy Volume 46 ; 46 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; History of Political Economy Volume 47 ; 47 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2016 ; History of Political Economy Volume 48 ; 48 ; >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2017 ; History of Political Economy Volume 49 ; 49 ; >
+      au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2017 ; History of Political Economy Volume 49 ; 49 ; >
 
     }
 
@@ -889,7 +890,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Journal of Health Politics, Policy and Law Volume 39 ; 39 ; >
       au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2015 ; Journal of Health Politics, Policy and Law Volume 40 ; 40 ; >
       au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2016 ; Journal of Health Politics, Policy and Law Volume 41 ; 41 ; >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2017 ; Journal of Health Politics, Policy and Law Volume 42 ; 42 ; >
+      au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2017 ; Journal of Health Politics, Policy and Law Volume 42 ; 42 ; >
 
     }
 
@@ -922,7 +923,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Journal of Medieval and Early Modern Studies Volume 44 ; 44 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Journal of Medieval and Early Modern Studies Volume 45 ; 45 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2016 ; Journal of Medieval and Early Modern Studies Volume 46 ; 46 ; >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2017 ; Journal of Medieval and Early Modern Studies Volume 47 ; 47 ; >
+      au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2017 ; Journal of Medieval and Early Modern Studies Volume 47 ; 47 ; >
 
    }
 
@@ -974,7 +975,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Journal of Music Theory Volume 58 ; 58 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Journal of Music Theory Volume 59 ; 59 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2016 ; Journal of Music Theory Volume 60 ; 60 ; >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2017 ; Journal of Music Theory Volume 61 ; 61 ; >
+      au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2017 ; Journal of Music Theory Volume 61 ; 61 ; >
 
     }
 
@@ -1003,7 +1004,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Labor: Studies in Working-Class History of the Americas Volume 11 ; 11 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Labor: Studies in Working-Class History of the Americas Volume 12 ; 12 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2016 ; Labor: Studies in Working-Class History of the Americas Volume 13 ; 13 ; >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2017 ; Labor: Studies in Working-Class History of the Americas Volume 14 ; 14 ; >
+      au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2017 ; Labor: Studies in Working-Class History of the Americas Volume 14 ; 14 ; >
 
     }
 
@@ -1055,7 +1056,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Mediterranean Quarterly Volume 25 ; 25 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Mediterranean Quarterly Volume 26 ; 26 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2016 ; Mediterranean Quarterly Volume 27 ; 27 ; >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2017 ; Mediterranean Quarterly Volume 28 ; 28 ; >
+      au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2017 ; Mediterranean Quarterly Volume 28 ; 28 ; >
 
      }
 
@@ -1083,7 +1084,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; The Minnesota Review Volume 2014 ; 2014 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; The Minnesota Review Volume 2015 ; 2015 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2016 ; The Minnesota Review Volume 2016 ; 2016 ; >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2017 ; The Minnesota Review Volume 2017 ; 2017 ; >
+      au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2017 ; The Minnesota Review Volume 2017 ; 2017 ; >
 
     }
 
@@ -1178,7 +1179,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; MLQ: Modern Language Quarterly Volume 75 ; 75 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; MLQ: Modern Language Quarterly Volume 76 ; 76 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2016 ; MLQ: Modern Language Quarterly Volume 77 ; 77 ; >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2017 ; MLQ: Modern Language Quarterly Volume 78 ; 78 ; >
+      au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2017 ; MLQ: Modern Language Quarterly Volume 78 ; 78 ; >
 
     }
 
@@ -1205,7 +1206,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; New German Critique Volume 41 ; 41 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; New German Critique Volume 42 ; 42 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2016 ; New German Critique Volume 43 ; 43 ; >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2017 ; New German Critique Volume 44 ; 44 ; >
+      au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2017 ; New German Critique Volume 44 ; 44 ; >
 
      }
 
