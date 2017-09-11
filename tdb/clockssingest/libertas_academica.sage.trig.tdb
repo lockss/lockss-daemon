@@ -26,7 +26,7 @@
 
     au < frozen ; exists ; 2009 ; Advances in Tumor Virology Volume 1 ; 1 ; 2009 ; >
     au < frozen ; exists ; 2011 ; Advances in Tumor Virology Volume 2 ; 2 ; 2011 ; >
-    au < crawling ; exists ; 2013 ; Advances in Tumor Virology Volume 3 ; 3 ; 2013 ; >
+    au < frozen ; exists ; 2013 ; Advances in Tumor Virology Volume 3 ; 3 ; 2013 ; >
     au < frozen ; exists ; 2014 ; Advances in Tumor Virology Volume 4 ; 4 ; 2014 ; >
     au < crawling ; exists ; 2015 ; Advances in Tumor Virology Volume 5 ; 5 ; 2015 ; >
     au < frozen ; exists ; 2016 ; Advances in Tumor Virology Volume 6 ; 6 ; 2016 ; >
@@ -50,8 +50,8 @@
     au < frozen ; exists ; 2010 ; Cell & Tissue Transplantation & Therapy Volume 3 ; 3 ; 2010 ; >
     au < frozen ; exists ; 2012 ; Cell & Tissue Transplantation & Therapy Volume 4 ; 4 ; 2012 ; >
     au < frozen ; exists ; 2013 ; Cell & Tissue Transplantation & Therapy Volume 5 ; 5 ; 2013 ; >
-    au < crawling ; exists ; 2014 ; Cell & Tissue Transplantation & Therapy Volume 6 ; 6 ; 2014 ; >
-    au < crawling ; exists ; 2015 ; Cell & Tissue Transplantation & Therapy Volume 7 ; 7 ; 2015 ; >
+    au < frozen ; exists ; 2014 ; Cell & Tissue Transplantation & Therapy Volume 6 ; 6 ; 2014 ; >
+    au < frozen ; exists ; 2015 ; Cell & Tissue Transplantation & Therapy Volume 7 ; 7 ; 2015 ; >
     au < frozen ; exists ; 2016 ; Cell & Tissue Transplantation & Therapy Volume 8 ; 8 ; 2016 ; >
 
   }
@@ -91,11 +91,11 @@
     # skips year 2012
     #Triggered by Sage
 
-    au < crawling ; exists ; 2008 ; Clinical Medicine Insights: Geriatrics Volume 1-2 ; 1-2 ; 2008 ; >
-    au < crawling ; exists ; 2009 ; Clinical Medicine Insights: Geriatrics Volume 3 ; 3 ; 2009 ; >
+    au < frozen ; exists ; 2008 ; Clinical Medicine Insights: Geriatrics Volume 1-2 ; 1-2 ; 2008 ; >
+    au < frozen ; exists ; 2009 ; Clinical Medicine Insights: Geriatrics Volume 3 ; 3 ; 2009 ; >
     au < frozen ; exists ; 2011 ; Clinical Medicine Insights: Geriatrics Volume 4 ; 4 ; 2011 ; >
     au < frozen ; exists ; 2013 ; Clinical Medicine Insights: Geriatrics Volume 6 ; 6 ; 2013 ; >
-    au < crawling ; exists ; 2014 ; Clinical Medicine Insights: Geriatrics Volume 7 ; 7 ; 2014 ; >
+    au < frozen ; exists ; 2014 ; Clinical Medicine Insights: Geriatrics Volume 7 ; 7 ; 2014 ; >
     au < frozen ; exists ; 2015 ; Clinical Medicine Insights: Geriatrics Volume 8 ; 8 ; 2015 ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Geriatrics Volume 9 ; 9 ; 2016 ; >
     au < crawling ; exists ; 2017 ; Clinical Medicine Insights: Geriatrics Volume 10 ; 10 ; 2017 ; >
@@ -116,7 +116,7 @@
     au < crawling ; exists ; 2009 ; Clinical Medicine Reviews in Cardiology Volume 1 ; 1 ; 2009 ; >
     au < frozen ; exists ; 2010 ; Clinical Medicine Reviews in Cardiology Volume 2 ; 2 ; 2010 ; >
     au < frozen ; exists ; 2014 ; Clinical Medicine Reviews in Cardiology Volume 3 ; 3 ; 2014 ; >
-    au < crawling ; exists ; 2016 ; Clinical Medicine Reviews in Cardiology Volume 4 ; 4 ; 2016 ; >
+    au < frozen ; exists ; 2016 ; Clinical Medicine Reviews in Cardiology Volume 4 ; 4 ; 2016 ; >
 
   }
 
@@ -131,7 +131,7 @@
     param[journal_id] = 163
     #Triggered by Sage
 
-    au < crawling ; exists ; 2009 ; Clinical Medicine Reviews in Oncology Volume 1 ; 1 ; 2009 ; >
+    au < frozen ; exists ; 2009 ; Clinical Medicine Reviews in Oncology Volume 1 ; 1 ; 2009 ; >
     au < frozen ; exists ; 2010 ; Clinical Medicine Reviews in Oncology Volume 2 ; 2 ; 2010 ; >
     au < crawling ; exists ; 2011 ; Clinical Medicine Reviews in Oncology Volume 3 ; 3 ; 2011 ; >
     au < crawling ; exists ; 2012 ; Clinical Medicine Reviews in Oncology Volume 4 ; 4 ; 2012 ; >
@@ -170,12 +170,12 @@
 
     au < frozen ; exists ; 2009 ; Clinical Medicine Reviews in Therapeutics Volume 1 ; 1 ; 2009 ; >
     au < crawling ; exists ; 2010 ; Clinical Medicine Reviews in Therapeutics Volume 2 ; 2 ; 2010 ; >
-    au < crawling ; exists ; 2011 ; Clinical Medicine Reviews in Therapeutics Volume 3 ; 3 ; 2011 ; >
-    au < crawling ; exists ; 2012 ; Clinical Medicine Reviews in Therapeutics Volume 4 ; 4 ; 2012 ; >
+    au < frozen ; exists ; 2011 ; Clinical Medicine Reviews in Therapeutics Volume 3 ; 3 ; 2011 ; >
+    au < frozen ; exists ; 2012 ; Clinical Medicine Reviews in Therapeutics Volume 4 ; 4 ; 2012 ; >
     au < frozen ; exists ; 2013 ; Clinical Medicine Reviews in Therapeutics Volume 5 ; 5 ; 2013 ; >
     au < frozen ; exists ; 2014 ; Clinical Medicine Reviews in Therapeutics Volume 6 ; 6 ; 2014 ; >
     au < frozen ; exists ; 2015 ; Clinical Medicine Reviews in Therapeutics Volume 7 ; 7 ; 2015 ; >
-    au < crawling ; exists ; 2016 ; Clinical Medicine Reviews in Therapeutics Volume 8 ; 8 ; 2016 ; >
+    au < frozen ; exists ; 2016 ; Clinical Medicine Reviews in Therapeutics Volume 8 ; 8 ; 2016 ; >
     au < crawling ; exists ; 2017 ; Clinical Medicine Reviews in Therapeutics Volume 9 ; 9 ; 2017 ; >
 
   }
@@ -218,7 +218,7 @@
     au < frozen ; exists ; 2010 ; Clinical Medicine Reviews in Women's Health Volume 2 ; 2 ; 2010 ; >
     au < frozen ; exists ; 2011 ; Clinical Medicine Reviews in Women's Health Volume 3 ; 3 ; 2011 ; >
     au < frozen ; exists ; 2012 ; Clinical Medicine Reviews in Women's Health Volume 4 ; 4 ; 2012 ; >
-    au < crawling ; exists ; 2015 ; Clinical Medicine Reviews in Women's Health Volume 5 ; 5 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Clinical Medicine Reviews in Women's Health Volume 5 ; 5 ; 2015 ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Reviews in Women's Health Volume 6 ; 6 ; 2016 ; >
 
   }
@@ -297,10 +297,10 @@
     param[journal_id] = 142
     #Triggered by Sage
 
-    au < crawling ; exists ; 2009 ; Human Parasitic Diseases Volume 1 ; 1 ; 2009 ; >
+    au < frozen ; exists ; 2009 ; Human Parasitic Diseases Volume 1 ; 1 ; 2009 ; >
     au < frozen ; exists ; 2010 ; Human Parasitic Diseases Volume 2 ; 2 ; 2010 ; >
     au < frozen ; exists ; 2011 ; Human Parasitic Diseases Volume 3 ; 3 ; 2011 ; >
-    au < crawling ; exists ; 2013 ; Human Parasitic Diseases Volume 5 ; 5 ; 2013 ; >
+    au < frozen ; exists ; 2013 ; Human Parasitic Diseases Volume 5 ; 5 ; 2013 ; >
     au < frozen ; exists ; 2014 ; Human Parasitic Diseases Volume 6 ; 6 ; 2014 ; >
     au < frozen ; exists ; 2015 ; Human Parasitic Diseases Volume 7 ; 7 ; 2015 ; >
     au < frozen ; exists ; 2016 ; Human Parasitic Diseases Volume 8 ; 8 ; 2016 ; >
@@ -342,7 +342,7 @@
     au < frozen ; exists ; 2010 ; Lymphona and Chronic Lymphocytic Leukemias Volume 2 ; 2 ; 2010 ; >
     au < frozen ; exists ; 2013 ; Lymphona and Chronic Lymphocytic Leukemias Volume 3 ; 3 ; 2013 ; >
     au < frozen ; exists ; 2014 ; Lymphona and Chronic Lymphocytic Leukemias Volume 4 ; 4 ; 2014 ; >
-    au < crawling ; exists ; 2015 ; Lymphona and Chronic Lymphocytic Leukemias Volume 5 ; 5 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Lymphona and Chronic Lymphocytic Leukemias Volume 5 ; 5 ; 2015 ; >
     au < frozen ; exists ; 2016 ; Lymphona and Chronic Lymphocytic Leukemias Volume 6 ; 6 ; 2016 ; >
     au < crawling ; exists ; 2017 ; Lymphona and Chronic Lymphocytic Leukemias Volume 7 ; 7 ; 2017 ; >
 
@@ -380,8 +380,8 @@
     #Triggered by Sage
 
     au < frozen ; exists ; 2009 ; Primary Prevention Insights Volume 1 ; 1 ; 2009 ; >
-    au < crawling ; exists ; 2010 ; Primary Prevention Insights Volume 2 ; 2 ; 2010 ; >
-    au < crawling ; exists ; 2012 ; Primary Prevention Insights Volume 3 ; 3 ; 2012 ; >
+    au < frozen ; exists ; 2010 ; Primary Prevention Insights Volume 2 ; 2 ; 2010 ; >
+    au < frozen ; exists ; 2012 ; Primary Prevention Insights Volume 3 ; 3 ; 2012 ; >
     au < crawling ; exists ; 2014 ; Primary Prevention Insights Volume 4 ; 4 ; 2014 ; >
     au < frozen ; exists ; 2015 ; Primary Prevention Insights Volume 5 ; 5 ; 2015 ; >
     au < frozen ; exists ; 2016 ; Primary Prevention Insights Volume 6 ; 6 ; 2016 ; >
@@ -424,11 +424,11 @@
     #Triggered by Sage
 
     au < frozen ; exists ; 2008 ; Retrovirology: Research and Treatment Volume 1-2 ; 1-2 ; 2008 ; >
-    au < crawling ; exists ; 2010 ; Retrovirology: Research and Treatment Volume 3 ; 3 ; 2010 ; >
+    au < frozen ; exists ; 2010 ; Retrovirology: Research and Treatment Volume 3 ; 3 ; 2010 ; >
     au < frozen ; exists ; 2012 ; Retrovirology: Research and Treatment Volume 4 ; 4 ; 2012 ; >
     au < frozen ; exists ; 2013 ; Retrovirology: Research and Treatment Volume 5 ; 5 ; 2013 ; >
     au < crawling ; exists ; 2014 ; Retrovirology: Research and Treatment Volume 6 ; 6 ; 2014 ; >
-    au < crawling ; exists ; 2015 ; Retrovirology: Research and Treatment Volume 7 ; 7 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Retrovirology: Research and Treatment Volume 7 ; 7 ; 2015 ; >
     au < crawling ; exists ; 2017 ; Retrovirology: Research and Treatment Volume 8 ; 8 ; 2017 ; >
 
   }
@@ -447,10 +447,10 @@
     au < frozen ; exists ; 2006 ; Translational Oncogenomics Volume 1 ; 1 ; 2006 ; >
     au < frozen ; exists ; 2007 ; Translational Oncogenomics Volume 2 ; 2 ; 2007 ; >
     au < frozen ; exists ; 2008 ; Translational Oncogenomics Volume 3 ; 3 ; 2008 ; >
-    au < crawling ; exists ; 2010 ; Translational Oncogenomics Volume 4 ; 4 ; 2010 ; >
+    au < frozen ; exists ; 2010 ; Translational Oncogenomics Volume 4 ; 4 ; 2010 ; >
     au < frozen ; exists ; 2012 ; Translational Oncogenomics Volume 5 ; 5 ; 2012 ; >
-    au < crawling ; exists ; 2014 ; Translational Oncogenomics Volume 6 ; 6 ; 2014 ; >
-    au < crawling ; exists ; 2015 ; Translational Oncogenomics Volume 7 ; 7 ; 2015 ; >
+    au < frozen ; exists ; 2014 ; Translational Oncogenomics Volume 6 ; 6 ; 2014 ; >
+    au < frozen ; exists ; 2015 ; Translational Oncogenomics Volume 7 ; 7 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Translational Oncogenomics Volume 8 ; 8 ; 2016 ; >
     au < crawling ; exists ; 2017 ; Translational Oncogenomics Volume 9 ; 9 ; 2017 ; >
 
