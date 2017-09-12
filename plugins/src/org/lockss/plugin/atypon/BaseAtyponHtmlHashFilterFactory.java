@@ -91,8 +91,8 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
     // filter out javascript
     HtmlNodeFilters.tag("script"),
     HtmlNodeFilters.tag("noscript"),
-    //filter out comments
-    HtmlNodeFilters.comment(),
+    //filter out comments after everything else so child plugins can use for filtering
+    //HtmlNodeFilters.comment(),
     
     HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
     HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
@@ -271,6 +271,8 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
       combinedFiltered = new HtmlFilterInputStream(in, encoding,
           new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(bothFilters)), xform_spanID));
     }
+    // a little inefficient but pull out comments after the child nodes are applied
+    combinedFiltered = filterComments(combinedFiltered,encoding);
     if (!doTagRemovalFiltering() && !doWS && !doHttpsConversion()) {
       // already done, return without converting back to a reader
       return combinedFiltered;
@@ -349,6 +351,8 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
             HtmlNodeFilterTransform.exclude(new OrFilter(allExcludeNodes)))
         );
     }
+    // a little inefficient but pull out comments after the child nodes are applied
+    combinedFiltered = filterComments(combinedFiltered,encoding);
     // as Atyon publishers move to https this will support them. 
     // It doesn't matter if it changes http to http unnecessarily for hash purposes
     Reader freader;
@@ -444,6 +448,13 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
    */
   public boolean doHttpsConversion() {
     return false;
+  }
+  
+ 
+  public InputStream filterComments(InputStream in,  String encoding) {
+    return new HtmlFilterInputStream(in, encoding,
+        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.comment()));
+
   }
 
 

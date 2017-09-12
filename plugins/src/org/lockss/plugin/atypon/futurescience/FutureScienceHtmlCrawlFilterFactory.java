@@ -3,7 +3,7 @@
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,7 +36,6 @@ import java.util.regex.Pattern;
 
 import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
-import org.htmlparser.filters.OrFilter;
 import org.htmlparser.tags.CompositeTag;
 import org.htmlparser.tags.LinkTag;
 import org.lockss.daemon.PluginException;
@@ -54,12 +53,14 @@ import org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory;
 public class FutureScienceHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory {
   protected static final Pattern prev_next = Pattern.compile("Prev. Article|Next Article", Pattern.CASE_INSENSITIVE);
   NodeFilter[] filters = new NodeFilter[] {
+      
+      /* 
+       * This first section is from < 2017
+       */
       // articles have a section "Users who read this also read..." which is tricky to isolate
       // It's a little scary, but <div class="full_text"> seems only to be used for this section (not to be confused with fulltext)
       // though I could verify that it is followed by <div class="header_divide"><h3>Users who read this article also read:</h3></div>
       HtmlNodeFilters.tagWithAttribute("div", "class", "full_text"),
-
-
       //overcrawling is an occasional issue with in-line references to "original article"
       //protect from further crawl by stopping "next/prev" article/TOC/issue
       //I cannot see an obvious way to stop next/prev issue on TOC, so just limit getting to wrong toc
@@ -72,6 +73,15 @@ public class FutureScienceHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilt
           return prev_next.matcher(allText).find();
         }
       },
+      /*
+       * This section is from 2017+ - skin change and massive overcrawling...
+       */
+      // TOC - links to all other issues
+      HtmlNodeFilters.tagWithAttribute("div",  "class", "loi__banner-list"),      
+      HtmlNodeFilters.tagWithAttribute("div",  "class", "loi tab"),
+      // Article landing - ajax tabs
+      HtmlNodeFilters.tagWithAttribute("li",  "id", "pane-pcw-Related"),
+      HtmlNodeFilters.tagWithAttribute("li",  "id", "pane-pcw-References"),
 
   };
 
