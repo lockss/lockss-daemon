@@ -242,16 +242,17 @@
     >
 
     param[journal_id] = aans
+    #Moved to archive
 
-    au < released ; 2009 ; Advances in Artificial Neural Systems Volume 2009 ; 2009 ; 2009 >
-    au < released ; 2010 ; Advances in Artificial Neural Systems Volume 2010 ; 2010 ; 2010 >
-    au < released ; 2011 ; Advances in Artificial Neural Systems Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Advances in Artificial Neural Systems Volume 2012 ; 2012 ; 2012 >
-    au < manifest ; 2013 ; Advances in Artificial Neural Systems Volume 2013 ; 2013 ; 2013 >
-    au < released ; 2014 ; Advances in Artificial Neural Systems Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Advances in Artificial Neural Systems Volume 2015 ; 2015 ; 2015 >
-    au < released ; 2016 ; Advances in Artificial Neural Systems Volume 2016 ; 2016 ; 2016 >
-    au < expected ; 2017 ; Advances in Artificial Neural Systems Volume 2017 ; 2017 ; 2017 >
+    au < down ; 2009 ; Advances in Artificial Neural Systems Volume 2009 ; 2009 ; 2009 >
+    au < down ; 2010 ; Advances in Artificial Neural Systems Volume 2010 ; 2010 ; 2010 >
+    au < down ; 2011 ; Advances in Artificial Neural Systems Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2012 ; Advances in Artificial Neural Systems Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2013 ; Advances in Artificial Neural Systems Volume 2013 ; 2013 ; 2013 >
+    au < down ; 2014 ; Advances in Artificial Neural Systems Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Advances in Artificial Neural Systems Volume 2015 ; 2015 ; 2015 >
+    au < down ; 2016 ; Advances in Artificial Neural Systems Volume 2016 ; 2016 ; 2016 >
+    au < doNotProcess ; 2017 ; Advances in Artificial Neural Systems Volume 2017 ; 2017 ; 2017 >
 
   }
 
@@ -269,7 +270,7 @@
     au < released ; 2009 ; Advances in Astronomy Volume 2009 ; 2009 ; 2009 >
     au < released ; 2010 ; Advances in Astronomy Volume 2010 ; 2010 ; 2010 >
     au < released ; 2011 ; Advances in Astronomy Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Advances in Astronomy Volume 2012 ; 2012 ; 2012 >
+    au < notReady ; 2012 ; Advances in Astronomy Volume 2012 ; 2012 ; 2012 > #502 upstream error.
     au < ready ; 2013 ; Advances in Astronomy Volume 2013 ; 2013 ; 2013 >
     au < released ; 2014 ; Advances in Astronomy Volume 2014 ; 2014 ; 2014 >
     au < released ; 2015 ; Advances in Astronomy Volume 2015 ; 2015 ; 2015 >
@@ -5247,16 +5248,17 @@
 
     {
     param[journal_id] = ijocean
+    #Moved to archive
 
-    au < manifest ; 2009 ; International Journal of Oceanography Volume 2009 ; 2009 ; 2009 >
-    au < manifest ; 2010 ; International Journal of Oceanography Volume 2010 ; 2010 ; 2010 >
-    au < manifest ; 2011 ; International Journal of Oceanography Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Oceanography Volume 2012 ; 2012 ; 2012 >
-    au < manifest ; 2013 ; International Journal of Oceanography Volume 2013 ; 2013 ; 2013 >
-    au < released ; 2014 ; International Journal of Oceanography Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; International Journal of Oceanography Volume 2015 ; 2015 ; 2015 >
-    au < released ; 2016 ; International Journal of Oceanography Volume 2016 ; 2016 ; 2016 >
-    au < manifest ; 2017 ; International Journal of Oceanography Volume 2017 ; 2017 ; 2017 >
+    au < doNotProcess ; 2009 ; International Journal of Oceanography Volume 2009 ; 2009 ; 2009 >
+    au < doNotProcess ; 2010 ; International Journal of Oceanography Volume 2010 ; 2010 ; 2010 >
+    au < doNotProcess ; 2011 ; International Journal of Oceanography Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2012 ; International Journal of Oceanography Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2013 ; International Journal of Oceanography Volume 2013 ; 2013 ; 2013 >
+    au < down ; 2014 ; International Journal of Oceanography Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; International Journal of Oceanography Volume 2015 ; 2015 ; 2015 >
+    au < down ; 2016 ; International Journal of Oceanography Volume 2016 ; 2016 ; 2016 >
+    au < doNotProcess ; 2017 ; International Journal of Oceanography Volume 2017 ; 2017 ; 2017 >
 
     }
 
@@ -7744,16 +7746,17 @@
     >
 
     param[journal_id] = jm
+    #Moved to archive
 
-    au < released ; 2009 ; Journal of Metallurgy Volume 2009 ; 2009 ; 2009 >
-    au < released ; 2010 ; Journal of Metallurgy Volume 2010 ; 2010 ; 2010 >
-    au < released ; 2011 ; Journal of Metallurgy Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Journal of Metallurgy Volume 2012 ; 2012 ; 2012 >
-    au < manifest ; 2013 ; Journal of Metallurgy Volume 2013 ; 2013 ; 2013 >
-    au < released ; 2014 ; Journal of Metallurgy Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Journal of Metallurgy Volume 2015 ; 2015 ; 2015 >
-    au < released ; 2016 ; Journal of Metallurgy Volume 2016 ; 2016 ; 2016 >
-    au < manifest ; 2017 ; Journal of Metallurgy Volume 2017 ; 2017 ; 2017 >
+    au < down ; 2009 ; Journal of Metallurgy Volume 2009 ; 2009 ; 2009 >
+    au < down ; 2010 ; Journal of Metallurgy Volume 2010 ; 2010 ; 2010 >
+    au < down ; 2011 ; Journal of Metallurgy Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2012 ; Journal of Metallurgy Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2013 ; Journal of Metallurgy Volume 2013 ; 2013 ; 2013 >
+    au < down ; 2014 ; Journal of Metallurgy Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Journal of Metallurgy Volume 2015 ; 2015 ; 2015 >
+    au < down ; 2016 ; Journal of Metallurgy Volume 2016 ; 2016 ; 2016 >
+    au < doNotProcess ; 2017 ; Journal of Metallurgy Volume 2017 ; 2017 ; 2017 >
 
   }
 
@@ -7905,12 +7908,13 @@
     >
 
     param[journal_id] = jndy
+    #Moved to archive
     
-    au < manifest ; 2013 ; Journal of Nonlinear Dynamics Volume 2013 ; 2013 ; 2013 >
-    au < released ; 2014 ; Journal of Nonlinear Dynamics Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Journal of Nonlinear Dynamics Volume 2015 ; 2015 ; 2015 >
-    au < released ; 2016 ; Journal of Nonlinear Dynamics Volume 2016 ; 2016 ; 2016 >
-    au < manifest ; 2017 ; Journal of Nonlinear Dynamics Volume 2017 ; 2017 ; 2017 >
+    au < doNotProcess ; 2013 ; Journal of Nonlinear Dynamics Volume 2013 ; 2013 ; 2013 >
+    au < down ; 2014 ; Journal of Nonlinear Dynamics Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Journal of Nonlinear Dynamics Volume 2015 ; 2015 ; 2015 >
+    au < down ; 2016 ; Journal of Nonlinear Dynamics Volume 2016 ; 2016 ; 2016 >
+    au < doNotProcess ; 2017 ; Journal of Nonlinear Dynamics Volume 2017 ; 2017 ; 2017 >
 
   }
 
@@ -8250,12 +8254,13 @@
     >
 
     param[journal_id] = jpe
+    #Moved to archive
     
-    au < manifest ; 2013 ; Journal of Petroleum Engineering Volume 2013 ; 2013 ; 2013 >
-    au < released ; 2014 ; Journal of Petroleum Engineering Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Journal of Petroleum Engineering Volume 2015 ; 2015 ; 2015 >
-    au < released ; 2016 ; Journal of Petroleum Engineering Volume 2016 ; 2016 ; 2016 >
-    au < manifest ; 2017 ; Journal of Petroleum Engineering Volume 2017 ; 2017 ; 2017 >
+    au < doNotProcess ; 2013 ; Journal of Petroleum Engineering Volume 2013 ; 2013 ; 2013 >
+    au < down ; 2014 ; Journal of Petroleum Engineering Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Journal of Petroleum Engineering Volume 2015 ; 2015 ; 2015 >
+    au < down ; 2016 ; Journal of Petroleum Engineering Volume 2016 ; 2016 ; 2016 >
+    au < doNotProcess ; 2017 ; Journal of Petroleum Engineering Volume 2017 ; 2017 ; 2017 >
 
   }
 
@@ -9437,10 +9442,11 @@
     >
 
     param[journal_id] = njos
+    #Moved to archive
 
-    au < released ; 2014 ; New Journal of Science Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2016 ; New Journal of Science Volume 2016 ; 2016 ; 2016 >
-    au < manifest ; 2017 ; New Journal of Science Volume 2017 ; 2017 ; 2017 >
+    au < down ; 2014 ; New Journal of Science Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2016 ; New Journal of Science Volume 2016 ; 2016 ; 2016 >
+    au < doNotProcess ; 2017 ; New Journal of Science Volume 2017 ; 2017 ; 2017 >
 
   }
 
@@ -10516,14 +10522,15 @@
     >
 
     param[journal_id] = smr
+    #Moved to archive
 
-    au < released ; 2011 ; Smart Materials Research Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Smart Materials Research Volume 2012 ; 2012 ; 2012 >
-    au < manifest ; 2013 ; Smart Materials Research Volume 2013 ; 2013 ; 2013 >
-    au < released ; 2014 ; Smart Materials Research Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Smart Materials Research Volume 2015 ; 2015 ; 2015 >
-    au < released ; 2016 ; Smart Materials Research Volume 2016 ; 2016 ; 2016 >
-    au < manifest ; 2017 ; Smart Materials Research Volume 2017 ; 2017 ; 2017 >
+    au < down ; 2011 ; Smart Materials Research Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2012 ; Smart Materials Research Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2013 ; Smart Materials Research Volume 2013 ; 2013 ; 2013 >
+    au < down ; 2014 ; Smart Materials Research Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Smart Materials Research Volume 2015 ; 2015 ; 2015 >
+    au < down ; 2016 ; Smart Materials Research Volume 2016 ; 2016 ; 2016 >
+    au < doNotProcess ; 2017 ; Smart Materials Research Volume 2017 ; 2017 ; 2017 >
 
   }
 

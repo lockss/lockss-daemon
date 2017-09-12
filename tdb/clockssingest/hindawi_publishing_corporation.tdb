@@ -34,8 +34,8 @@
     au < frozen ; exists ; 2003 ; Abstract and Applied Analysis Volume 2003 ; 2003 ; 2003 ; >
     au < frozen ; exists ; 2004 ; Abstract and Applied Analysis Volume 2004 ; 2004 ; 2004 ; >
     au < frozen ; exists ; 2005 ; Abstract and Applied Analysis Volume 2005 ; 2005 ; 2005 ; >
-    au < crawling ; exists ; 2006 ; Abstract and Applied Analysis Volume 2006 ; 2006 ; 2006 ; >
-    au < crawling ; exists ; 2007 ; Abstract and Applied Analysis Volume 2007 ; 2007 ; 2007 ; >
+    au < frozen ; exists ; 2006 ; Abstract and Applied Analysis Volume 2006 ; 2006 ; 2006 ; >
+    au < frozen ; exists ; 2007 ; Abstract and Applied Analysis Volume 2007 ; 2007 ; 2007 ; >
     au < frozen ; exists ; 2008 ; Abstract and Applied Analysis Volume 2008 ; 2008 ; 2008 ; >
     au < frozen ; exists ; 2009 ; Abstract and Applied Analysis Volume 2009 ; 2009 ; 2009 ; >
     au < frozen ; exists ; 2010 ; Abstract and Applied Analysis Volume 2010 ; 2010 ; 2010 ; >
@@ -89,11 +89,11 @@
     au < frozen ; exists ; 2000 ; Active and Passive Electronic Components Volume 22-23 (2000) ; 2000 ; 22-23 ; >
     au < crawling ; exists ; 2001 ; Active and Passive Electronic Components Volume 23-24 (2001) ; 2001 ; 23-24 ; >
     au < crawling ; exists ; 2002 ; Active and Passive Electronic Components Volume 25-26 (2002) ; 2002 ; 25-26 ; >
-    au < crawling ; exists ; 2003 ; Active and Passive Electronic Components Volume 26 (2003) ; 2003 ; 26 ; >
+    au < frozen ; exists ; 2003 ; Active and Passive Electronic Components Volume 26 (2003) ; 2003 ; 26 ; >
     au < frozen ; exists ; 2004 ; Active and Passive Electronic Components Volume 27 (2004) ; 2004 ; 27 ; >
-    au < crawling ; exists ; 2007 ; Active and Passive Electronic Components Volume 2007 ; 2007 ; 2007 ; >
+    au < frozen ; exists ; 2007 ; Active and Passive Electronic Components Volume 2007 ; 2007 ; 2007 ; >
     au < frozen ; exists ; 2008 ; Active and Passive Electronic Components Volume 2008 ; 2008 ; 2008 ; >
-    au < crawling ; exists ; 2009 ; Active and Passive Electronic Components Volume 2009 ; 2009 ; 2009 ; >
+    au < frozen ; exists ; 2009 ; Active and Passive Electronic Components Volume 2009 ; 2009 ; 2009 ; >
     au < frozen ; exists ; 2010 ; Active and Passive Electronic Components Volume 2010 ; 2010 ; 2010 ; >
     au < frozen ; exists ; 2011 ; Active and Passive Electronic Components Volume 2011 ; 2011 ; 2011 ; >
     au < frozen ; exists ; 2012 ; Active and Passive Electronic Components Volume 2012 ; 2012 ; 2012 ; >
@@ -223,9 +223,9 @@
     au < frozen ; exists ; 2008 ; Advances in Artificial Intelligence Volume 2008 ; 2008 ; 2008 ; >
     au < frozen ; exists ; 2009 ; Advances in Artificial Intelligence Volume 2009 ; 2009 ; 2009 ; >
     au < frozen ; exists ; 2010 ; Advances in Artificial Intelligence Volume 2010 ; 2010 ; 2010 ; >
-    au < crawling ; exists ; 2011 ; Advances in Artificial Intelligence Volume 2011 ; 2011 ; 2011 ; >
+    au < frozen ; exists ; 2011 ; Advances in Artificial Intelligence Volume 2011 ; 2011 ; 2011 ; >
     au < frozen ; exists ; 2012 ; Advances in Artificial Intelligence Volume 2012 ; 2012 ; 2012 ; >
-    au < crawling ; exists ; 2013 ; Advances in Artificial Intelligence Volume 2013 ; 2013 ; 2013 ; >
+    au < frozen ; exists ; 2013 ; Advances in Artificial Intelligence Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Advances in Artificial Intelligence Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; finished ; 2015 ; Advances in Artificial Intelligence Volume 2015 ; 2015 ; 2015 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; Advances in Artificial Intelligence Volume 2016 ; 2016 ; 2016 ; >
@@ -242,16 +242,17 @@
     >
 
     param[journal_id] = aans
+    #Moved to archive
 
-    au < testing ; exists ; 2009 ; Advances in Artificial Neural Systems Volume 2009 ; 2009 ; 2009 ; >
-    au < testing ; exists ; 2010 ; Advances in Artificial Neural Systems Volume 2010 ; 2010 ; 2010 ; >
-    au < testing ; exists ; 2011 ; Advances in Artificial Neural Systems Volume 2011 ; 2011 ; 2011 ; >
-    au < testing ; exists ; 2012 ; Advances in Artificial Neural Systems Volume 2012 ; 2012 ; 2012 ; >
-    au < testing ; exists ; 2013 ; Advances in Artificial Neural Systems Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2009 ; Advances in Artificial Neural Systems Volume 2009 ; 2009 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Advances in Artificial Neural Systems Volume 2010 ; 2010 ; 2010 ; >
+    au < doNotProcess ; exists ; 2011 ; Advances in Artificial Neural Systems Volume 2011 ; 2011 ; 2011 ; >
+    au < doNotProcess ; exists ; 2012 ; Advances in Artificial Neural Systems Volume 2012 ; 2012 ; 2012 ; >
+    au < doNotProcess ; exists ; 2013 ; Advances in Artificial Neural Systems Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Advances in Artificial Neural Systems Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; finished ; 2015 ; Advances in Artificial Neural Systems Volume 2015 ; 2015 ; 2015 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; Advances in Artificial Neural Systems Volume 2016 ; 2016 ; 2016 ; >
-    au < expected ; exists ; 2017 ; Advances in Artificial Neural Systems Volume 2017 ; 2017 ; 2017 ; >
+    au < doNotProcess ; exists ; 2017 ; Advances in Artificial Neural Systems Volume 2017 ; 2017 ; 2017 ; >
 
   }
 
@@ -266,10 +267,10 @@
     param[journal_id] = aa
 
     au < frozen ; exists ; 2008 ; Advances in Astronomy Volume 2008 ; 2008 ; 2008 ; >
-    au < crawling ; exists ; 2009 ; Advances in Astronomy Volume 2009 ; 2009 ; 2009 ; >
+    au < frozen ; exists ; 2009 ; Advances in Astronomy Volume 2009 ; 2009 ; 2009 ; >
     au < frozen ; exists ; 2010 ; Advances in Astronomy Volume 2010 ; 2010 ; 2010 ; >
-    au < crawling ; exists ; 2011 ; Advances in Astronomy Volume 2011 ; 2011 ; 2011 ; >
-    au < testing ; exists ; 2012 ; Advances in Astronomy Volume 2012 ; 2012 ; 2012 ; >
+    au < frozen ; exists ; 2011 ; Advances in Astronomy Volume 2011 ; 2011 ; 2011 ; >
+    au < notReady ; exists ; 2012 ; Advances in Astronomy Volume 2012 ; 2012 ; 2012 ; > #502 upstream error on http://downloads.hindawi.com/journals/aa/2012/923578.fl.mov
     au < frozen ; exists ; 2013 ; Advances in Astronomy Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Advances in Astronomy Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; finished ; 2015 ; Advances in Astronomy Volume 2015 ; 2015 ; 2015 ; reingest1.clockss.org:8082 >
@@ -288,10 +289,10 @@
 
     param[journal_id] = abi
 
-    au < crawling ; exists ; 2008 ; Advances in Bioinformatics Volume 2008 ; 2008 ; 2008 ; >
-    au < crawling ; exists ; 2009 ; Advances in Bioinformatics Volume 2009 ; 2009 ; 2009 ; >
+    au < frozen ; exists ; 2008 ; Advances in Bioinformatics Volume 2008 ; 2008 ; 2008 ; >
+    au < frozen ; exists ; 2009 ; Advances in Bioinformatics Volume 2009 ; 2009 ; 2009 ; >
     au < frozen ; exists ; 2010 ; Advances in Bioinformatics Volume 2010 ; 2010 ; 2010 ; >
-    au < crawling ; exists ; 2011 ; Advances in Bioinformatics Volume 2011 ; 2011 ; 2011 ; >
+    au < frozen ; exists ; 2011 ; Advances in Bioinformatics Volume 2011 ; 2011 ; 2011 ; >
     au < frozen ; exists ; 2012 ; Advances in Bioinformatics Volume 2012 ; 2012 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Advances in Bioinformatics Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Advances in Bioinformatics Volume 2014 ; 2014 ; 2014 ; >
@@ -629,7 +630,7 @@
     au < manifest ; exists ; 2011 ; Advances in Fuzzy Systems Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Fuzzy Systems Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Advances in Fuzzy Systems Volume 2013 ; 2013 ; 2013 ; >
-    au < deepCrawl ; exists ; 2014 ; Advances in Fuzzy Systems Volume 2014 ; 2014 ; 2014 ; >
+    au < frozen ; exists ; 2014 ; Advances in Fuzzy Systems Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; finished ; 2015 ; Advances in Fuzzy Systems Volume 2015 ; 2015 ; 2015 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; Advances in Fuzzy Systems Volume 2016 ; 2016 ; 2016 ; >
     au < crawling ; exists ; 2017 ; Advances in Fuzzy Systems Volume 2017 ; 2017 ; 2017 ; >
@@ -944,7 +945,7 @@
     au < manifest ; exists ; 2011 ; Advances in Numerical Analysis Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Numerical Analysis Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Advances in Numerical Analysis Volume 2013 ; 2013 ; 2013 ; >
-    au < deepCrawl ; exists ; 2014 ; Advances in Numerical Analysis Volume 2014 ; 2014 ; 2014 ; >
+    au < frozen ; exists ; 2014 ; Advances in Numerical Analysis Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; finished ; 2015 ; Advances in Numerical Analysis Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2016 ; Advances in Numerical Analysis Volume 2016 ; 2016 ; 2016 ; >
     au < crawling ; exists ; 2017 ; Advances in Numerical Analysis Volume 2017 ; 2017 ; 2017 ; >
@@ -1021,7 +1022,7 @@
     au < manifest ; exists ; 2011 ; Advances in Optical Technologies Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Optical Technologies Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Advances in Optical Technologies Volume 2013 ; 2013 ; 2013 ; >
-    au < deepCrawl ; exists ; 2014 ; Advances in Optical Technologies Volume 2014 ; 2014 ; 2014 ; >
+    au < frozen ; exists ; 2014 ; Advances in Optical Technologies Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; finished ; 2015 ; Advances in Optical Technologies Volume 2015 ; 2015 ; 2015 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2016 ; Advances in Optical Technologies Volume 2016 ; 2016 ; 2016 ; >
     au < crawling ; exists ; 2017 ; Advances in Optical Technologies Volume 2017 ; 2017 ; 2017 ; >
@@ -1200,7 +1201,7 @@
     au < manifest ; exists ; 2011 ; Advances in Power Electronics Volume 2011 (2011) ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Power Electronics Volume 2012 (2012) ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Advances in Power Electronics Volume 2013 (2013) ; 2013 ; 2013 ; >
-    au < deepCrawl ; exists ; 2014 ; Advances in Power Electronics Volume 2014 (2014) ; 2014 ; 2014 ; >
+    au < frozen ; exists ; 2014 ; Advances in Power Electronics Volume 2014 (2014) ; 2014 ; 2014 ; >
     au < finished ; finished ; 2015 ; Advances in Power Electronics Volume 2015 (2015) ; 2015 ; 2015 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; Advances in Power Electronics Volume 2016 (2016) ; 2016 ; 2016 ; >
     au < crawling ; exists ; 2017 ; Advances in Power Electronics Volume 2017 (2017) ; 2017 ; 2017 ; >
@@ -2155,7 +2156,7 @@
     au < manifest ; exists ; 2011 ; Case Reports in Gastrointestinal Medicine Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Gastrointestinal Medicine Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Case Reports in Gastrointestinal Medicine Volume 2013 ; 2013 ; 2013 ; >
-    au < deepCrawl ; exists ; 2014 ; Case Reports in Gastrointestinal Medicine Volume 2014 ; 2014 ; 2014 ; >
+    au < frozen ; exists ; 2014 ; Case Reports in Gastrointestinal Medicine Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; finished ; 2015 ; Case Reports in Gastrointestinal Medicine Volume 2015 ; 2015 ; 2015 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; Case Reports in Gastrointestinal Medicine Volume 2016 ; 2016 ; 2016 ; >
     au < crawling ; exists ; 2017 ; Case Reports in Gastrointestinal Medicine Volume 2017 ; 2017 ; 2017 ; >
@@ -2557,7 +2558,7 @@
     au < manifest ; exists ; 2011 ; Case Reports in Surgery Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Surgery Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Case Reports in Surgery Volume 2013 ; 2013 ; 2013 ; >
-    au < deepCrawl ; exists ; 2014 ; Case Reports in Surgery Volume 2014 ; 2014 ; 2014 ; >
+    au < frozen ; exists ; 2014 ; Case Reports in Surgery Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; finished ; 2015 ; Case Reports in Surgery Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2016 ; Case Reports in Surgery Volume 2016 ; 2016 ; 2016 ; >
     au < crawling ; exists ; 2017 ; Case Reports in Surgery Volume 2017 ; 2017 ; 2017 ; >
@@ -2658,7 +2659,7 @@
     au < manifest ; exists ; 2011 ; Chemotherapy Research and Practice Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Chemotherapy Research and Practice Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Chemotherapy Research and Practice Volume 2013 ; 2013 ; 2013 ; >
-    au < deepCrawl ; exists ; 2014 ; Chemotherapy Research and Practice Volume 2014 ; 2014 ; 2014 ; >
+    au < frozen ; exists ; 2014 ; Chemotherapy Research and Practice Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; finished ; 2015 ; Chemotherapy Research and Practice Volume 2015 ; 2015 ; 2015 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; Chemotherapy Research and Practice Volume 2016 ; 2016 ; 2016 ; >
     au < expected ; exists ; 2017 ; Chemotherapy Research and Practice Volume 2017 ; 2017 ; 2017 ; >
@@ -2678,7 +2679,7 @@
     au < manifest ; exists ; 2011 ; Child Development Research Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Child Development Research Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Child Development Reserach Volume 2013 ; 2013 ; 2013 ; >
-    au < deepCrawl ; exists ; 2014 ; Child Development Research Volume 2014 ; 2014 ; 2014 ; >
+    au < frozen ; exists ; 2014 ; Child Development Research Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; finished ; 2015 ; Child Development Research Volume 2015 ; 2015 ; 2015 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; Child Development Research Volume 2016 ; 2016 ; 2016 ; >
     au < crawling ; exists ; 2017 ; Child Development Research Volume 2017 ; 2017 ; 2017 ; >
@@ -2817,7 +2818,7 @@
     au < manifest ; exists ; 2011 ; Computational and Mathematical Methods in Medicine Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Computational and Mathematical Methods in Medicine Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Computational and Mathematical Methods in Medicine Volume 2013 ; 2013 ; 2013 ; >
-    au < deepCrawl ; exists ; 2014 ; Computational and Mathematical Methods in Medicine Volume 2014 ; 2014 ; 2014 ; >
+    au < frozen ; exists ; 2014 ; Computational and Mathematical Methods in Medicine Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; finished ; 2015 ; Computational and Mathematical Methods in Medicine Volume 2015 ; 2015 ; 2015 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; Computational and Mathematical Methods in Medicine Volume 2016 ; 2016 ; 2016 ; >
     au < crawling ; exists ; 2017 ; Computational and Mathematical Methods in Medicine Volume 2017 ; 2017 ; 2017 ; >
@@ -3115,7 +3116,7 @@
     au < manifest ; exists ; 2011 ; Disease Markers Volume 30-31 (2011) ; 2011 ; 30-31 ; >
     au < manifest ; exists ; 2012 ; Disease Markers Volume 32-33 (2012) ; 2012 ; 32-33 ; >
     au < manifest ; exists ; 2013 ; Disease Markers Volume 35 (2013) ; 2013 ; 35 ; >
-    au < deepCrawl ; exists ; 2014 ; Disease Markers Volume 2014 ; 2014 ; 2014 ; >
+    au < frozen ; exists ; 2014 ; Disease Markers Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; finished ; 2015 ; Disease Markers Volume 2015 ; 2015 ; 2015 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; Disease Markers Volume 2016 ; 2016 ; 2016 ; >
     au < crawling ; exists ; 2017 ; Disease Markers Volume 2017 ; 2017 ; 2017 ; >
@@ -4185,7 +4186,7 @@
     au < manifest ; exists ; 2011 ; International Journal of Endocrinology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; International Journal of Endocrinology Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; International Journal of Endocrinology Volume 2013 ; 2013 ; 2013 ; >
-    au < deepCrawl ; exists ; 2014 ; International Journal of Endocrinology Volume 2014 ; 2014 ; 2014 ; >
+    au < frozen ; exists ; 2014 ; International Journal of Endocrinology Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; finished ; 2015 ; International Journal of Endocrinology Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2016 ; International Journal of Endocrinology Volume 2016 ; 2016 ; 2016 ; >
     au < crawling ; exists ; 2017 ; International Journal of Endocrinology Volume 2017 ; 2017 ; 2017 ; >
@@ -4709,16 +4710,17 @@
     >
 
     param[journal_id] = ijocean
+    #Moved to archive
 
-    au < manifest ; exists ; 2009 ; International Journal of Oceanography Volume 2009 ; 2009 ; 2009 ; >
-    au < manifest ; exists ; 2010 ; International Journal of Oceanography Volume 2010 ; 2010 ; 2010 ; >
-    au < manifest ; exists ; 2011 ; International Journal of Oceanography Volume 2011 ; 2011 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; International Journal of Oceanography Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; International Journal of Oceanography Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2009 ; International Journal of Oceanography Volume 2009 ; 2009 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; International Journal of Oceanography Volume 2010 ; 2010 ; 2010 ; >
+    au < doNotProcess ; exists ; 2011 ; International Journal of Oceanography Volume 2011 ; 2011 ; 2011 ; >
+    au < doNotProcess ; exists ; 2012 ; International Journal of Oceanography Volume 2012 ; 2012 ; 2012 ; >
+    au < doNotProcess ; exists ; 2013 ; International Journal of Oceanography Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; International Journal of Oceanography Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; finished ; 2015 ; International Journal of Oceanography Volume 2015 ; 2015 ; 2015 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; International Journal of Oceanography Volume 2016 ; 2016 ; 2016 ; >
-    au < testing ; exists ; 2017 ; International Journal of Oceanography Volume 2017 ; 2017 ; 2017 ; >
+    au < doNotProcess ; exists ; 2017 ; International Journal of Oceanography Volume 2017 ; 2017 ; 2017 ; >
 
   }
 
@@ -6883,16 +6885,17 @@
     >
 
     param[journal_id] = jm
+    #Moved to archive
 
-    au < manifest ; exists ; 2009 ; Journal of Metallurgy Volume 2009 ; 2009 ; 2009 ; >
-    au < manifest ; exists ; 2010 ; Journal of Metallurgy Volume 2010 ; 2010 ; 2010 ; >
-    au < manifest ; exists ; 2011 ; Journal of Metallurgy Volume 2011 ; 2011 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; Journal of Metallurgy Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Journal of Metallurgy Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2009 ; Journal of Metallurgy Volume 2009 ; 2009 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Metallurgy Volume 2010 ; 2010 ; 2010 ; >
+    au < doNotProcess ; exists ; 2011 ; Journal of Metallurgy Volume 2011 ; 2011 ; 2011 ; >
+    au < doNotProcess ; exists ; 2012 ; Journal of Metallurgy Volume 2012 ; 2012 ; 2012 ; >
+    au < doNotProcess ; exists ; 2013 ; Journal of Metallurgy Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Metallurgy Volume 2014 ; 2014 ; 2014 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Journal of Metallurgy Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2016 ; Journal of Metallurgy Volume 2016 ; 2016 ; 2016 ; >
-    au < testing ; exists ; 2017 ; Journal of Metallurgy Volume 2017 ; 2017 ; 2017 ; >
+    au < doNotProcess ; exists ; 2017 ; Journal of Metallurgy Volume 2017 ; 2017 ; 2017 ; >
 
   }
 
@@ -7044,12 +7047,13 @@
     >
 
     param[journal_id] = jndy
+    #Moved to archive
     
-    au < manifest ; exists ; 2013 ; Journal of Nonlinear Dynamics Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2013 ; Journal of Nonlinear Dynamics Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Nonlinear Dynamics Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Journal of Nonlinear Dynamics Volume 2015 ; 2015 ; 2015 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; Journal of Nonlinear Dynamics Volume 2016 ; 2016 ; 2016 ; >
-    au < testing ; exists ; 2017 ; Journal of Nonlinear Dynamics Volume 2017 ; 2017 ; 2017 ; >
+    au < doNotProcess ; exists ; 2017 ; Journal of Nonlinear Dynamics Volume 2017 ; 2017 ; 2017 ; >
 
   }
 
@@ -7351,12 +7355,13 @@
     >
 
     param[journal_id] = jpe
+    #Moved to archive
     
-    au < manifest ; exists ; 2013 ; Journal of Petroleum Engineering Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2013 ; Journal of Petroleum Engineering Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Petroleum Engineering Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; Journal of Petroleum Engineering Volume 2015 ; 2015 ; 2015 ; >
     au < deepCrawl ; exists ; 2016 ; Journal of Petroleum Engineering Volume 2016 ; 2016 ; 2016 ; >
-    au < testing ; exists ; 2017 ; Journal of Petroleum Engineering Volume 2017 ; 2017 ; 2017 ; >
+    au < doNotProcess ; exists ; 2017 ; Journal of Petroleum Engineering Volume 2017 ; 2017 ; 2017 ; >
 
   }
 
@@ -8427,10 +8432,11 @@
     >
 
     param[journal_id] = njos
+    #Moved to archive
 
     au < finished ; finished ; 2014 ; New Journal of Science Volume 2014 ; 2014 ; 2014 ; >
     au < frozen ; exists ; 2016 ; New Journal of Science Volume 2016 ; 2016 ; 2016 ; >
-    au < testing ; exists ; 2017 ; New Journal of Science Volume 2017 ; 2017 ; 2017 ; >
+    au < doNotProcess ; exists ; 2017 ; New Journal of Science Volume 2017 ; 2017 ; 2017 ; >
 
   }
 
@@ -9186,14 +9192,15 @@
     >
 
     param[journal_id] = smr
+    #Moved to archive
 
-    au < manifest ; exists ; 2011 ; Smart Materials Research Volume 2011 ; 2011 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; Smart Materials Research Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Smart Materials Research Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2011 ; Smart Materials Research Volume 2011 ; 2011 ; 2011 ; >
+    au < doNotProcess ; exists ; 2012 ; Smart Materials Research Volume 2012 ; 2012 ; 2012 ; >
+    au < doNotProcess ; exists ; 2013 ; Smart Materials Research Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Smart Materials Research Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; finished ; 2015 ; Smart Materials Research Volume 2015 ; 2015 ; 2015 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; Smart Materials Research Volume 2016 ; 2016 ; 2016 ; >
-    au < testing ; exists ; 2017 ; Smart Materials Research Volume 2017 ; 2017 ; 2017 ; >
+    au < doNotProcess ; exists ; 2017 ; Smart Materials Research Volume 2017 ; 2017 ; 2017 ; >
 
   }
 
