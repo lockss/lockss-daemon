@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -62,6 +62,12 @@
     <string>au_substance_url_pattern</string>
     <list>
       <string>"^%scontent/journals?/[^/]+/[^/]+\?crawler=true&amp;mimetype=(application/)?pdf$", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <string>500=org.lockss.plugin.pub2web.iet.IetHttpResponseHandler</string>
     </list>
   </entry>
   <entry>
