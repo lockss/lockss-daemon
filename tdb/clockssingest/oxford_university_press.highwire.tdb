@@ -39,7 +39,7 @@
     au < doNotProcess ; exists ; 2006 ; Acta Biochimica et Biophysica Sinica Volume 38 ; 38 ; >
     au < doNotProcess ; exists ; 2007 ; Acta Biochimica et Biophysica Sinica Volume 39 ; 39 ; >
     au < doNotProcess ; exists ; 2008 ; Acta Biochimica et Biophysica Sinica Volume 40 ; 40 ; >
-    au < finished ; manifest ; 2009 ; Acta Biochimica et Biophysica Sinica Volume 41 ; 41 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2009 ; Acta Biochimica et Biophysica Sinica Volume 41 ; 41 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2010 ; Acta Biochimica et Biophysica Sinica Volume 42 ; 42 ; >
     au < finished ; finished ; 2011 ; Acta Biochimica et Biophysica Sinica Volume 43 ; 43 ; >
     au < finished ; finished ; 2012 ; Acta Biochimica et Biophysica Sinica Volume 44 ; 44 ; >
@@ -1028,7 +1028,7 @@
     au < doNotProcess ; exists ; 2006 ; American Journal of Hypertension Volume 19 ; 19 ; >
     au < doNotProcess ; exists ; 2007 ; American Journal of Hypertension Volume 20 ; 20 ; >
     au < doNotProcess ; exists ; 2008 ; American Journal of Hypertension Volume 21 ; 21 ; >
-    au < finished ; manifest ; 2009 ; American Journal of Hypertension Volume 22 ; 22 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2009 ; American Journal of Hypertension Volume 22 ; 22 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2010 ; American Journal of Hypertension Volume 23 ; 23 ; >
     au < finished ; finished ; 2011 ; American Journal of Hypertension Volume 24 ; 24 ; >
     au < frozen ; exists ; 2012 ; American Journal of Hypertension Volume 25 ; 25 ; >
@@ -1105,7 +1105,7 @@
     au < doNotProcess ; exists ; 2007 ; The American Journal of Jurisprudence Volume 52 ; 52 ; >
     au < doNotProcess ; exists ; 2008 ; The American Journal of Jurisprudence Volume 53 ; 53 ; >
     au < finished ; finished ; 2009 ; The American Journal of Jurisprudence Volume 54 ; 54 ; >
-    au < finished ; manifest ; 2010 ; The American Journal of Jurisprudence Volume 55 ; 55 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2010 ; The American Journal of Jurisprudence Volume 55 ; 55 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2011 ; The American Journal of Jurisprudence Volume 56 ; 56 ; >
     au < finished ; finished ; 2012 ; The American Journal of Jurisprudence Volume 57 ; 57 ; >
     au < finished ; finished ; 2013 ; The American Journal of Jurisprudence Volume 58 ; 58 ; >
@@ -1531,7 +1531,7 @@
     au < doNotProcess ; exists ; 2007 ; Annals of Botany Volume 99 ; 99 ; >
     au < doNotProcess ; exists ; 2007 ; Annals of Botany Volume 100 ; 100 ; >
     au < finished ; finished ; 2008 ; Annals of Botany Volume 101 ; 101 ; >
-    au < finished ; manifest ; 2008 ; Annals of Botany Volume 102 ; 102 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2008 ; Annals of Botany Volume 102 ; 102 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2009 ; Annals of Botany Volume 103 ; 103 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2009 ; Annals of Botany Volume 104 ; 104 ; >
     au < finished ; finished ; 2010 ; Annals of Botany Volume 105 ; 105 ; >
@@ -1729,7 +1729,7 @@
     au < doNotProcess ; exists ; 2005 ; Annals of Oncology Volume 16 ; 16 ; >
     au < doNotProcess ; exists ; 2006 ; Annals of Oncology Volume 17 ; 17 ; >
     au < doNotProcess ; exists ; 2007 ; Annals of Oncology Volume 18 ; 18 ; >
-    au < finished ; manifest ; 2008 ; Annals of Oncology Volume 19 ; 19 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2008 ; Annals of Oncology Volume 19 ; 19 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2009 ; Annals of Oncology Volume 20 ; 20 ; >
     au < finished ; finished ; 2010 ; Annals of Oncology Volume 21 ; 21 ; >
     au < finished ; frozen ; 2011 ; Annals of Oncology Volume 22 ; 22 ; >
@@ -2101,7 +2101,7 @@
     au < doNotProcess ; exists ; 2008 ; Astronomy & Geophysics Volume 49 ; 49 ; >
     au < finished ; finished ; 2009 ; Astronomy & Geophysics Volume 50 ; 50 ; >
     au < finished ; finished ; 2010 ; Astronomy & Geophysics Volume 51 ; 51 ; >
-    au < finished ; manifest ; 2011 ; Astronomy & Geophysics Volume 52 ; 52 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2011 ; Astronomy & Geophysics Volume 52 ; 52 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2012 ; Astronomy & Geophysics Volume 53 ; 53 ; >
     au < finished ; finished ; 2013 ; Astronomy & Geophysics Volume 54 ; 54 ; >
     au < finished ; finished ; 2014 ; Astronomy & Geophysics Volume 55 ; 55 ; >
@@ -3591,10 +3591,10 @@
     au < doNotProcess ; exists ; 2002 ; Bulletin of the London Mathematical Society Volume 34 ; 34 ; >
     au < doNotProcess ; exists ; 2003 ; Bulletin of the London Mathematical Society Volume 35 ; 35 ; >
     au < doNotProcess ; exists ; 2004 ; Bulletin of the London Mathematical Society Volume 36 ; 36 ; >
-    au < finished ; manifest ; 2005 ; Bulletin of the London Mathematical Society Volume 37 ; 37 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2006 ; Bulletin of the London Mathematical Society Volume 38 ; 38 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2007 ; Bulletin of the London Mathematical Society Volume 39 ; 39 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2008 ; Bulletin of the London Mathematical Society Volume 40 ; 40 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2005 ; Bulletin of the London Mathematical Society Volume 37 ; 37 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2006 ; Bulletin of the London Mathematical Society Volume 38 ; 38 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2007 ; Bulletin of the London Mathematical Society Volume 39 ; 39 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2008 ; Bulletin of the London Mathematical Society Volume 40 ; 40 ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2009 ; Bulletin of the London Mathematical Society Volume 41 ; 41 ; >
     au < finished ; finished ; 2010 ; Bulletin of the London Mathematical Society Volume 42 ; 42 ; >
     au < finished ; finished ; 2011 ; Bulletin of the London Mathematical Society Volume 43 ; 43 ; >
@@ -4527,8 +4527,8 @@
     au < doNotProcess ; exists ; 2006 ; Clinical Infectious Diseases Volume 43 ; 43 ; >
     au < doNotProcess ; exists ; 2007 ; Clinical Infectious Diseases Volume 44 ; 44 ; >
     au < doNotProcess ; exists ; 2007 ; Clinical Infectious Diseases Volume 45 ; 45 ; >
-    au < finished ; manifest ; 2008 ; Clinical Infectious Diseases Volume 46 ; 46 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2008 ; Clinical Infectious Diseases Volume 47 ; 47 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2008 ; Clinical Infectious Diseases Volume 46 ; 46 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2008 ; Clinical Infectious Diseases Volume 47 ; 47 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2009 ; Clinical Infectious Diseases Volume 48 ; 48 ; >
     au < finished ; finished ; 2009 ; Clinical Infectious Diseases Volume 49 ; 49 ; >
     au < finished ; finished ; 2010 ; Clinical Infectious Diseases Volume 50 ; 50 ; >
@@ -5022,7 +5022,7 @@
     au < finished ; finished ; 2009 ; Diplomatic History Volume 33 ; 33 ; >
     au < finished ; finished ; 2010 ; Diplomatic History Volume 34 ; 34 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2011 ; Diplomatic History Volume 35 ; 35 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2012 ; Diplomatic History Volume 36 ; 36 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2012 ; Diplomatic History Volume 36 ; 36 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; Diplomatic History Volume 37 ; 37 ; >
     au < finished ; finished ; 2014 ; Diplomatic History Volume 38 ; 38 ; >
     au < finished ; finished ; 2015 ; Diplomatic History Volume 39 ; 39 ; reingest2.clockss.org:8085 >
@@ -6401,7 +6401,7 @@
     au < finished ; finished ; 2010 ; European Journal of Orthodontics Volume 32 ; 32 ; >
     au < finished ; finished ; 2011 ; European Journal of Orthodontics Volume 33 ; 33 ; >
     au < finished ; finished ; 2012 ; European Journal of Orthodontics Volume 34 ; 34 ; >
-    au < finished ; manifest ; 2013 ; European Journal of Orthodontics Volume 35 ; 35 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2013 ; European Journal of Orthodontics Volume 35 ; 35 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -7995,10 +7995,10 @@
     au < doNotProcess ; exists ; 2008 ; Geophysical Journal International Volume 173 ; 173 ; >
     au < doNotProcess ; exists ; 2008 ; Geophysical Journal International Volume 174 ; 174 ; >
     au < doNotProcess ; exists ; 2008 ; Geophysical Journal International Volume 175 ; 175 ; >
-    au < finished ; manifest ; 2009 ; Geophysical Journal International Volume 176 ; 176 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2009 ; Geophysical Journal International Volume 177 ; 177 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2009 ; Geophysical Journal International Volume 178 ; 178 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2009 ; Geophysical Journal International Volume 179 ; 179 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2009 ; Geophysical Journal International Volume 176 ; 176 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2009 ; Geophysical Journal International Volume 177 ; 177 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2009 ; Geophysical Journal International Volume 178 ; 178 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2009 ; Geophysical Journal International Volume 179 ; 179 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2010 ; Geophysical Journal International Volume 180 ; 180 ; >
     au < finished ; finished ; 2010 ; Geophysical Journal International Volume 181 ; 181 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2010 ; Geophysical Journal International Volume 182 ; 182 ; >
@@ -8021,7 +8021,7 @@
     au < finished ; finished ; 2014 ; Geophysical Journal International Volume 199 ; 199 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Geophysical Journal International Volume 200 ; 200 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Geophysical Journal International Volume 201 ; 201 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2015 ; Geophysical Journal International Volume 202 ; 202 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2015 ; Geophysical Journal International Volume 202 ; 202 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Geophysical Journal International Volume 203 ; 203 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; exists ; 2016 ; Geophysical Journal International Volume 204 ; 204 ; >
     au < doNotProcess ; exists ; 2016 ; Geophysical Journal International Volume 205 ; 205 ; >
@@ -9829,7 +9829,7 @@
 
     au < finished ; finished ; 2009 ; International Health Volume 1 ; 1 ; >
     au < finished ; finished ; 2010 ; International Health Volume 2 ; 2 ; >
-    au < finished ; manifest ; 2011 ; International Health Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2011 ; International Health Volume 3 ; 3 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2012 ; International Health Volume 4 ; 4 ; >
     au < finished ; finished ; 2013 ; International Health Volume 5 ; 5 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; International Health Volume 6 ; 6 ; reingest1.clockss.org:8082 >
@@ -11368,7 +11368,7 @@
     au < finished ; finished ; 2009 ; The Journal of Applied Poultry Research Volume 18 ; 18 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2010 ; The Journal of Applied Poultry Research Volume 19 ; 19 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2011 ; The Journal of Applied Poultry Research Volume 20 ; 20 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2012 ; The Journal of Applied Poultry Research Volume 21 ; 21 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2012 ; The Journal of Applied Poultry Research Volume 21 ; 21 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2013 ; The Journal of Applied Poultry Research Volume 22 ; 22 ; >
     au < finished ; finished ; 2014 ; The Journal of Applied Poultry Research Volume 23 ; 23 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; The Journal of Applied Poultry Research Volume 24 ; 24 ; reingest4.clockss.org:8082 >
@@ -13922,13 +13922,13 @@
     au < doNotProcess ; exists ; 2003 ; Journal of the London Mathematical Society Volume 68 ; 68 ; >
     au < doNotProcess ; exists ; 2004 ; Journal of the London Mathematical Society Volume 69 ; 69 ; >
     au < doNotProcess ; exists ; 2004 ; Journal of the London Mathematical Society Volume 70 ; 70 ; >
-    au < finished ; manifest ; 2005 ; Journal of the London Mathematical Society Volume 71 ; 71 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2005 ; Journal of the London Mathematical Society Volume 72 ; 72 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2005 ; Journal of the London Mathematical Society Volume 71 ; 71 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2005 ; Journal of the London Mathematical Society Volume 72 ; 72 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2006 ; Journal of the London Mathematical Society Volume 73 ; 73 ; >
-    au < finished ; manifest ; 2006 ; Journal of the London Mathematical Society Volume 74 ; 74 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2007 ; Journal of the London Mathematical Society Volume 75 ; 75 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2007 ; Journal of the London Mathematical Society Volume 76 ; 76 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2008 ; Journal of the London Mathematical Society Volume 77 ; 77 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2006 ; Journal of the London Mathematical Society Volume 74 ; 74 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2007 ; Journal of the London Mathematical Society Volume 75 ; 75 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2007 ; Journal of the London Mathematical Society Volume 76 ; 76 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2008 ; Journal of the London Mathematical Society Volume 77 ; 77 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of the London Mathematical Society Volume 78 ; 78 ; >
     au < finished ; frozen ; 2009 ; Journal of the London Mathematical Society Volume 79 ; 79 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of the London Mathematical Society Volume 80 ; 80 ; >
@@ -15153,9 +15153,9 @@
     {
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < finished ; manifest ; 2010 ; Journal of Surgical Case Reports Volume 2010 ; 2010 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2010 ; Journal of Surgical Case Reports Volume 2010 ; 2010 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2011 ; Journal of Surgical Case Reports Volume 2011 ; 2011 ; >
-    au < finished ; manifest ; 2012 ; Journal of Surgical Case Reports Volume 2012 ; 2012 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2012 ; Journal of Surgical Case Reports Volume 2012 ; 2012 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2013 ; Journal of Surgical Case Reports Volume 2013 ; 2013 ; >
 
     }
@@ -16443,8 +16443,8 @@
     au < doNotProcess ; exists ; 2007 ; Medical Mycology Volume 45 ; 45 ; >
     au < doNotProcess ; exists ; 2008 ; Medical Mycology Volume 46 ; 46 ; >
     au < frozen ; exists ; 2009 ; Medical Mycology Volume 47 ; 47 ; >
-    au < finished ; manifest ; 2010 ; Medical Mycology Volume 48 ; 48 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2011 ; Medical Mycology Volume 49 ; 49 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2010 ; Medical Mycology Volume 48 ; 48 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2011 ; Medical Mycology Volume 49 ; 49 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Medical Mycology Volume 50 ; 50 ; >
     au < finished ; finished ; 2013 ; Medical Mycology Volume 51 ; 51 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Medical Mycology Volume 52 ; 52 ; reingest5.clockss.org:8082 >
@@ -17134,27 +17134,27 @@
     au < finished ; finished ; 2009 ; Monthly Notices of the Royal Astronomical Society Volume 399 ; 399 ; >
     au < finished ; finished ; 2009 ; Monthly Notices of the Royal Astronomical Society Volume 400 ; 400 ; >
     au < frozen ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 401 ; 401 ; >
-    au < finished ; manifest ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 402 ; 402 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 402 ; 402 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 403 ; 403 ; >
     au < frozen ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 404 ; 404 ; >
-    au < finished ; manifest ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 405 ; 405 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 406 ; 406 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 407 ; 407 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 408 ; 408 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 405 ; 405 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 406 ; 406 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 407 ; 407 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 408 ; 408 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 409 ; 409 ; >
     au < finished ; finished ; 2011 ; Monthly Notices of the Royal Astronomical Society Volume 410 ; 410 ; >
     au < finished ; finished ; 2011 ; Monthly Notices of the Royal Astronomical Society Volume 411 ; 411 ; >
-    au < finished ; manifest ; 2011 ; Monthly Notices of the Royal Astronomical Society Volume 412 ; 412 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2011 ; Monthly Notices of the Royal Astronomical Society Volume 413 ; 413 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2011 ; Monthly Notices of the Royal Astronomical Society Volume 412 ; 412 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2011 ; Monthly Notices of the Royal Astronomical Society Volume 413 ; 413 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2011 ; Monthly Notices of the Royal Astronomical Society Volume 414 ; 414 ; >
     au < finished ; finished ; 2011 ; Monthly Notices of the Royal Astronomical Society Volume 415 ; 415 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2011 ; Monthly Notices of the Royal Astronomical Society Volume 416 ; 416 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2011 ; Monthly Notices of the Royal Astronomical Society Volume 416 ; 416 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2011 ; Monthly Notices of the Royal Astronomical Society Volume 417 ; 417 ; >
     au < frozen ; exists ; 2011 ; Monthly Notices of the Royal Astronomical Society Volume 418 ; 418 ; >
     au < finished ; finished ; 2012 ; Monthly Notices of the Royal Astronomical Society Volume 419 ; 419 ; >
     au < finished ; finished ; 2012 ; Monthly Notices of the Royal Astronomical Society Volume 420 ; 420 ; >
-    au < finished ; manifest ; 2012 ; Monthly Notices of the Royal Astronomical Society Volume 421 ; 421 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2012 ; Monthly Notices of the Royal Astronomical Society Volume 422 ; 422 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2012 ; Monthly Notices of the Royal Astronomical Society Volume 421 ; 421 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2012 ; Monthly Notices of the Royal Astronomical Society Volume 422 ; 422 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Monthly Notices of the Royal Astronomical Society Volume 423 ; 423 ; >
     au < frozen ; exists ; 2012 ; Monthly Notices of the Royal Astronomical Society Volume 424 ; 424 ; >
     au < frozen ; exists ; 2012 ; Monthly Notices of the Royal Astronomical Society Volume 425 ; 425 ; >
@@ -17248,7 +17248,7 @@
     au < doNotProcess ; exists ; 2008 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 389 ; 389 ; >
     au < doNotProcess ; exists ; 2008 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 390 ; 390 ; >
     au < doNotProcess ; exists ; 2008 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 391 ; 391 ; >
-    au < finished ; manifest ; 2009 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 392 ; 392 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2009 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 392 ; 392 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2009 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 393 ; 393 ; >
     au < finished ; finished ; 2009 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 394 ; 394 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2009 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 395 ; 395 ; >
@@ -17258,21 +17258,21 @@
     au < finished ; finished ; 2009 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 399 ; 399 ; >
     au < finished ; finished ; 2009 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 400 ; 400 ; >
     au < finished ; finished ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 401 ; 401 ; >
-    au < finished ; manifest ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 402 ; 402 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 403 ; 403 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 402 ; 402 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 403 ; 403 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 404 ; 404 ; >
     au < finished ; finished ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 405 ; 405 ; >
     au < finished ; finished ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 406 ; 406 ; >
     au < finished ; finished ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 407 ; 407 ; >
     au < finished ; finished ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 408 ; 408 ; >
     au < finished ; finished ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 409 ; 409 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2011 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 410 ; 410 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2011 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 411 ; 411 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2011 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 412 ; 412 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2011 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 410 ; 410 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2011 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 411 ; 411 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2011 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 412 ; 412 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2011 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 413 ; 413 ; >
     au < finished ; finished ; 2011 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 414 ; 414 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2011 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 415 ; 415 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2011 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 416 ; 416 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2011 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 415 ; 415 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2011 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 416 ; 416 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2011 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 417 ; 417 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2011 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 418 ; 418 ; >
     au < finished ; finished ; 2012 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 419 ; 419 ; >
@@ -17442,7 +17442,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Music and Letters Volume 90 ; 90 ; >
     au < finished ; finished ; 2010 ; Music and Letters Volume 91 ; 91 ; >
     au < finished ; finished ; 2011 ; Music and Letters Volume 92 ; 92 ; >
-    au < finished ; manifest ; 2012 ; Music and Letters Volume 93 ; 93 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2012 ; Music and Letters Volume 93 ; 93 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Music and Letters Volume 94 ; 94 ; >
     au < finished ; finished ; 2014 ; Music and Letters Volume 95 ; 95 ; >
     au < finished ; finished ; 2015 ; Music and Letters Volume 96 ; 96 ; reingest1.clockss.org:8082 >
@@ -17624,7 +17624,7 @@
     au < finished ; finished ; 2009 ; Music Theory Spectrum Volume 31 ; 31 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2010 ; Music Theory Spectrum Volume 32 ; 32 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2011 ; Music Theory Spectrum Volume 33 ; 33 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2012 ; Music Theory Spectrum Volume 34 ; 34 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2012 ; Music Theory Spectrum Volume 34 ; 34 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Music Theory Spectrum Volume 35 ; 35 ; >
     au < finished ; finished ; 2014 ; Music Theory Spectrum Volume 36 ; 36 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; Music Theory Spectrum Volume 37 ; 37 ; reingest2.clockss.org:8085 >
@@ -17802,7 +17802,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Mutagenesis Volume 24 ; 24 ; >
     au < finished ; finished ; 2010 ; Mutagenesis Volume 25 ; 25 ; >
     au < finished ; finished ; 2011 ; Mutagenesis Volume 26 ; 26 ; >
-    au < finished ; manifest ; 2012 ; Mutagenesis Volume 27 ; 27 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2012 ; Mutagenesis Volume 27 ; 27 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; Mutagenesis Volume 28 ; 28 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Mutagenesis Volume 29 ; 29 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Mutagenesis Volume 30 ; 30 ; reingest2.clockss.org:8085 >
@@ -19749,7 +19749,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Plant and Cell Physiology Volume 50 ; 50 ; >
     au < finished ; frozen ; 2010 ; Plant and Cell Physiology Volume 51 ; 51 ; >
     au < finished ; finished ; 2011 ; Plant and Cell Physiology Volume 52 ; 52 ; >
-    au < finished ; manifest ; 2012 ; Plant and Cell Physiology Volume 53 ; 53 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2012 ; Plant and Cell Physiology Volume 53 ; 53 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Plant and Cell Physiology Volume 54 ; 54 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Plant and Cell Physiology Volume 55 ; 55 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Plant and Cell Physiology Volume 56 ; 56 ; reingest2.clockss.org:8085 >
@@ -20059,12 +20059,12 @@
     au < doNotProcess ; exists ; 2003 ; Proceedings of the London Mathematical Society Volume 87 ; 87 ; >
     au < doNotProcess ; exists ; 2004 ; Proceedings of the London Mathematical Society Volume 88 ; 88 ; >
     au < doNotProcess ; exists ; 2004 ; Proceedings of the London Mathematical Society Volume 89 ; 89 ; >
-    au < finished ; manifest ; 2005 ; Proceedings of the London Mathematical Society Volume 90 ; 90 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2005 ; Proceedings of the London Mathematical Society Volume 91 ; 91 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2006 ; Proceedings of the London Mathematical Society Volume 92 ; 92 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2006 ; Proceedings of the London Mathematical Society Volume 93 ; 93 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2007 ; Proceedings of the London Mathematical Society Volume 94 ; 94 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2007 ; Proceedings of the London Mathematical Society Volume 95 ; 95 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2005 ; Proceedings of the London Mathematical Society Volume 90 ; 90 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2005 ; Proceedings of the London Mathematical Society Volume 91 ; 91 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2006 ; Proceedings of the London Mathematical Society Volume 92 ; 92 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2006 ; Proceedings of the London Mathematical Society Volume 93 ; 93 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2007 ; Proceedings of the London Mathematical Society Volume 94 ; 94 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2007 ; Proceedings of the London Mathematical Society Volume 95 ; 95 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2008 ; Proceedings of the London Mathematical Society Volume 96 ; 96 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Proceedings of the London Mathematical Society Volume 97 ; 97 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Proceedings of the London Mathematical Society Volume 98 ; 98 ; >
@@ -20309,7 +20309,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Protein Engineering, Design & Selection : PEDS Volume 22 ; 22 ; >
     au < finished ; finished ; 2010 ; Protein Engineering, Design & Selection : PEDS Volume 23 ; 23 ; >
     au < finished ; finished ; 2011 ; Protein Engineering, Design & Selection : PEDS Volume 24 ; 24 ; >
-    au < finished ; manifest ; 2012 ; Protein Engineering, Design & Selection : PEDS Volume 25 ; 25 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2012 ; Protein Engineering, Design & Selection : PEDS Volume 25 ; 25 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2013 ; Protein Engineering, Design & Selection : PEDS Volume 26 ; 26 ; >
     au < finished ; finished ; 2014 ; Protein Engineering, Design & Selection : PEDS Volume 27 ; 27 ; >
     au < finished ; finished ; 2015 ; Protein Engineering, Design & Selection : PEDS Volume 28 ; 28 ; reingest2.clockss.org:8085 >
@@ -20344,7 +20344,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < doNotProcess ; exists ; 2008 ; Public Health Ethics Volume 1 ; 1 ; >
-    au < finished ; manifest ; 2009 ; Public Health Ethics Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2009 ; Public Health Ethics Volume 2 ; 2 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2010 ; Public Health Ethics Volume 3 ; 3 ; >
     au < finished ; finished ; 2011 ; Public Health Ethics Volume 4 ; 4 ; >
     au < finished ; finished ; 2012 ; Public Health Ethics Volume 5 ; 5 ; >
@@ -20526,7 +20526,7 @@
     au < doNotProcess ; exists ; 2008 ; Publications of the Astronomical Society of Japan Volume 60 ; 60 ; >
     au < frozen ; exists ; 2009 ; Publications of the Astronomical Society of Japan Volume 61 ; 61 ; >
     au < frozen ; exists ; 2010 ; Publications of the Astronomical Society of Japan Volume 62 ; 62 ; >
-    au < finished ; manifest ; 2011 ; Publications of the Astronomical Society of Japan Volume 63 ; 63 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2011 ; Publications of the Astronomical Society of Japan Volume 63 ; 63 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2012 ; Publications of the Astronomical Society of Japan Volume 64 ; 64 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Publications of the Astronomical Society of Japan Volume 65 ; 65 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Publications of the Astronomical Society of Japan Volume 66 ; 66 ; reingest1.clockss.org:8082 >
@@ -20888,7 +20888,7 @@
     au < doNotProcess ; exists ; 2006 ; The Quarterly Journal of Mathematics Volume 57 ; 57 ; >
     au < doNotProcess ; exists ; 2007 ; The Quarterly Journal of Mathematics Volume 58 ; 58 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; The Quarterly Journal of Mathematics Volume 59 ; 59 ; >
-    au < finished ; manifest ; 2009 ; The Quarterly Journal of Mathematics Volume 60 ; 60 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2009 ; The Quarterly Journal of Mathematics Volume 60 ; 60 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2010 ; The Quarterly Journal of Mathematics Volume 61 ; 61 ; >
     au < finished ; finished ; 2011 ; The Quarterly Journal of Mathematics Volume 62 ; 62 ; >
     au < finished ; finished ; 2012 ; The Quarterly Journal of Mathematics Volume 63 ; 63 ; >
@@ -20986,7 +20986,7 @@
     au < doNotProcess ; exists ; 2006 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 59 ; 59 ; >
     au < doNotProcess ; exists ; 2007 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 60 ; 60 ; >
     au < doNotProcess ; exists ; 2008 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 61 ; 61 ; >
-    au < finished ; manifest ; 2009 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 62 ; 62 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2009 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 62 ; 62 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2010 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 63 ; 63 ; >
     au < finished ; finished ; 2011 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 64 ; 64 ; >
     au < finished ; finished ; 2012 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 65 ; 65 ; >
@@ -21162,7 +21162,7 @@
     au < doNotProcess ; exists ; 2008 ; Radiation Protection Dosimetry Volume 131 ; 131 ; >
     au < doNotProcess ; exists ; 2008 ; Radiation Protection Dosimetry Volume 132 ; 132 ; >
     au < frozen ; exists ; 2009 ; Radiation Protection Dosimetry Volume 133 ; 133 ; >
-    au < finished ; manifest ; 2009 ; Radiation Protection Dosimetry Volume 134 ; 134 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2009 ; Radiation Protection Dosimetry Volume 134 ; 134 ; reingest3.clockss.org:8083 >
     au < zapped ; finished ; 2009 ; Radiation Protection Dosimetry Volume 135 ; 135 ; >
     au < finished ; frozen ; 2009 ; Radiation Protection Dosimetry Volume 136 ; 136 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2009 ; Radiation Protection Dosimetry Volume 137 ; 137 ; >
@@ -21177,8 +21177,8 @@
     au < finished ; finished ; 2011 ; Radiation Protection Dosimetry Volume 146 ; 146 ; >
     au < finished ; finished ; 2011 ; Radiation Protection Dosimetry Volume 147 ; 147 ; >
     au < finished ; finished ; 2012 ; Radiation Protection Dosimetry Volume 148 ; 148 ; >
-    au < finished ; manifest ; 2012 ; Radiation Protection Dosimetry Volume 149 ; 149 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2012 ; Radiation Protection Dosimetry Volume 150 ; 150 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2012 ; Radiation Protection Dosimetry Volume 149 ; 149 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2012 ; Radiation Protection Dosimetry Volume 150 ; 150 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2012 ; Radiation Protection Dosimetry Volume 151 ; 151 ; >
     au < finished ; finished ; 2012 ; Radiation Protection Dosimetry Volume 152 ; 152 ; >
     au < finished ; finished ; 2013 ; Radiation Protection Dosimetry Volume 153 ; 153 ; >
@@ -22082,7 +22082,7 @@
     au < zapped ; finished ; 2009 ; Screen Volume 50 ; 50 ; >
     au < finished ; finished ; 2010 ; Screen Volume 51 ; 51 ; >
     au < finished ; finished ; 2011 ; Screen Volume 52 ; 52 ; >
-    au < finished ; manifest ; 2012 ; Screen Volume 53 ; 53 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2012 ; Screen Volume 53 ; 53 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Screen Volume 54 ; 54 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Screen Volume 55 ; 55 ; >
     au < finished ; finished ; 2015 ; Screen Volume 56 ; 56 ; reingest3.clockss.org:8083 >
@@ -22122,7 +22122,7 @@
     au < zapped ; finished ; 2009 ; Social Cognitive and Affective Neuroscience Volume 4 ; 4 ; >
     au < finished ; finished ; 2010 ; Social Cognitive and Affective Neuroscience Volume 5 ; 5 ; >
     au < finished ; finished ; 2011 ; Social Cognitive and Affective Neuroscience Volume 6 ; 6 ; >
-    au < finished ; manifest ; 2012 ; Social Cognitive and Affective Neuroscience Volume 7 ; 7 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2012 ; Social Cognitive and Affective Neuroscience Volume 7 ; 7 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2013 ; Social Cognitive and Affective Neuroscience Volume 8 ; 8 ; >
     au < finished ; finished ; 2014 ; Social Cognitive and Affective Neuroscience Volume 9 ; 9 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Social Cognitive and Affective Neuroscience Volume 10 ; 10 ; reingest2.clockss.org:8085 >
@@ -22467,7 +22467,7 @@
     au < finished ; crawling ; 2009 ; Social Science Japan Journal Volume 12 ; 12 ; >
     au < finished ; finished ; 2010 ; Social Science Japan Journal Volume 13 ; 13 ; >
     au < finished ; finished ; 2011 ; Social Science Japan Journal Volume 14 ; 14 ; >
-    au < finished ; manifest ; 2012 ; Social Science Japan Journal Volume 15 ; 15 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2012 ; Social Science Japan Journal Volume 15 ; 15 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Social Science Japan Journal Volume 16 ; 16 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Social Science Japan Journal Volume 17 ; 17 ; >
     au < finished ; finished ; 2015 ; Social Science Japan Journal Volume 18 ; 18 ; reingest3.clockss.org:8083 >
@@ -23260,13 +23260,13 @@
     au < doNotProcess ; exists ; 2002 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 96 ; 96 ; >
     au < doNotProcess ; exists ; 2003 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 97 ; 97 ; >
     au < doNotProcess ; exists ; 2004 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 98 ; 98 ; >
-    au < finished ; manifest ; 2005 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 99 ; 99 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2005 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 99 ; 99 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2006 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 100 ; 100 ; >
-    au < finished ; manifest ; 2008 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 101 ; 101 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2008 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 101 ; 101 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2009 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 102 ; 102 ; >
-    au < finished ; manifest ; 2009 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 103 ; 103 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2010 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 104 ; 104 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2011 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 105 ; 105 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2009 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 103 ; 103 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2010 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 104 ; 104 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2011 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 105 ; 105 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2012 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 106 ; 106 ; >
     au < finished ; finished ; 2013 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 107 ; 107 ; >
     au < finished ; finished ; 2014 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 108 ; 108 ; reingest1.clockss.org:8082 >
@@ -23497,7 +23497,7 @@
     au < doNotProcess ; exists ; 2007 ; Uniform Law Review - Revue de droit uniforme Volume 12 ; 12 ; >
     au < doNotProcess ; exists ; 2008 ; Uniform Law Review - Revue de droit uniforme Volume 13 ; 13 ; >
     au < finished ; finished ; 2009 ; Uniform Law Review - Revue de droit uniforme Volume 14 ; 14 ; >
-    au < finished ; manifest ; 2010 ; Uniform Law Review - Revue de droit uniforme Volume 15 ; 15 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2010 ; Uniform Law Review - Revue de droit uniforme Volume 15 ; 15 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2011 ; Uniform Law Review - Revue de droit uniforme Volume 16 ; 16 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Uniform Law Review - Revue de droit uniforme Volume 17 ; 17 ; >
     au < finished ; finished ; 2013 ; Uniform Law Review - Revue de droit uniforme Volume 18 ; 18 ; reingest3.clockss.org:8083 >
@@ -24276,7 +24276,7 @@
     au < finished ; finished ; 2009 ; Progress of Theoretical Physics Supplement Volume 178 ; 178 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2009 ; Progress of Theoretical Physics Supplement Volume 179 ; 179 ; >
     au < finished ; finished ; 2009 ; Progress of Theoretical Physics Supplement Volume 180 ; 180 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2009 ; Progress of Theoretical Physics Supplement Volume 181 ; 181 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2009 ; Progress of Theoretical Physics Supplement Volume 181 ; 181 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2009 ; Progress of Theoretical Physics Supplement Volume 182 ; 182 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2010 ; Progress of Theoretical Physics Supplement Volume 183 ; 183 ; >
     au < finished ; finished ; 2010 ; Progress of Theoretical Physics Supplement Volume 184 ; 184 ; reingest1.clockss.org:8082 >
