@@ -4747,8 +4747,10 @@
 
     title <
       name = Contemporary Women's Writing ;
-      issn = 1754-1476 ;
-      eissn = 1754-1484 ;
+#      issn = 1754-1476 ;
+#      eissn = 1754-1484 ;
+      issn = 1754-1484 ;
+      eissn = 1754-1476 ;
       issnl = 1754-1476
     >
 
@@ -4934,7 +4936,8 @@
   {
 
     title <
-      name = Database: The Journal of Biological Databases and Curation ;
+#      name = Database: The Journal of Biological Databases and Curation ;
+      name = Database ;
       eissn = 1758-0463
     >
 
@@ -5657,7 +5660,8 @@
 
     title <
       name = Environmental History Review ;
-      eissn = 1053-4180
+      issn = 1053-4180 ;
+      issnl = 1053-4180
     >
 
     comment[continues] = Environmental Review: ER
@@ -6853,6 +6857,7 @@
 
     title <
       name = FEMS Microbiology Ecology ;
+      issn = 0168-6496 ;
       eissn = 1574-6941 ;
       issnl = 1574-6941
     >
@@ -6984,6 +6989,7 @@
 
     title <
       name = FEMS Microbiology Letters ;
+      issn = 0378-1097 ;
       eissn = 1574-6968 ;
       issnl = 1574-6968
     >
@@ -7184,6 +7190,7 @@
 
     title <
       name = FEMS Microbiology Reviews ;
+      issn = 0168-6445 ;
       eissn = 1574-6976 ;
       issnl = 1574-6976
     >
@@ -7296,7 +7303,7 @@
 
     title <
       name = Forest & Conservation History ;
-      eissn = 1046-7009 ;
+      issn = 1046-7009 ;
       issnl = 1046-7009
     >
 
@@ -8882,7 +8889,8 @@
   {
 
     title <
-      name = ICES Journal of Marine Science: Journal du Conseil ;
+#      name = ICES Journal of Marine Science: Journal du Conseil ;
+      name = ICES Journal of Marine Science ;
       issn = 1054-3139 ;
       eissn = 1095-9289 ;
       issnl = 1054-3139
@@ -9611,7 +9619,7 @@
   {
 
     title <
-      name = Interactive Cardiovascular and Thoracic Surgery ;
+      name = Interactive CardioVascular and Thoracic Surgery ;
       issn = 1569-9293 ;
       eissn = 1569-9285 ;
       issnl = 1569-9285
@@ -9736,7 +9744,8 @@
   {
 
     title <
-      name = Interdisciplinary Studies in Literature and Environment ;
+#      name = Interdisciplinary Studies in Literature and Environment ;
+      name = ISLE: Interdisciplinary Studies in Literature and Environment ;
       issn = 1076-0962 ;
       eissn = 1759-1090 ;
       issnl = 1076-0962
@@ -14682,8 +14691,10 @@
 
     title <
       name = Journal of Professions and Organization ;
-      issn = 2051-8811 ;
-      eissn = 2051-8803 ;
+#      issn = 2051-8811 ;
+#      eissn = 2051-8803 ;
+      issn = 2051-8803 ;
+      eissn = 2051-8811 ;
       issnl = 2051-8811
     >
 
@@ -16511,7 +16522,8 @@
   {
 
     title <
-      name = MELUS: Multi-Ethnic Literature of the U.S. ;
+#      name = MELUS: Multi-Ethnic Literature of the U.S. ;
+      name = MELUS ;
       issn = 0163-755X ;
       eissn = 1946-3170 ;
       issnl = 0163-755X
@@ -17192,7 +17204,9 @@
 
     title <
       name = Monthly Notices of the Royal Astronomical Society: Letters ;
-      eissn = 1745-3933
+      issn = 1745-3925 ;
+      eissn = 1745-3933 ;
+      issnl = 1745-3925
     >
 
     param[base_url] = http://mnrasl.oxfordjournals.org/
@@ -17515,7 +17529,7 @@
     title <
       name = Music Therapy Perspectives ;
       issn = 0734-6875 ;
-      eissn = 2053-7395 ;
+      eissn = 2053-7387 ;
       issnl = 0734-6875
     >
 
@@ -24779,7 +24793,10 @@
   {
 
     title <
-      name = Aristotelian Society Supplementary Volume 
+      name = Aristotelian Society Supplementary Volume ;
+      issn = 0309-7013 ;
+      eissn = 1467-8349 ;
+      issnl = 0309-7013
     >
 
       param[base_url] = http://aristoteliansupp.oxfordjournals.org/
