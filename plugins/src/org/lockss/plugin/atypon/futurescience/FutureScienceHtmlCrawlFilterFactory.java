@@ -80,8 +80,8 @@ public class FutureScienceHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilt
       HtmlNodeFilters.tagWithAttribute("div",  "class", "loi__banner-list"),      
       HtmlNodeFilters.tagWithAttribute("div",  "class", "loi tab"),
       // Article landing - ajax tabs
-      HtmlNodeFilters.tagWithAttribute("li",  "id", "pane-pcw-Related"),
-      HtmlNodeFilters.tagWithAttribute("li",  "id", "pane-pcw-References"),
+      HtmlNodeFilters.tagWithAttributeRegex("li",  "id", "pane-pcw-(R|r)elated"),
+      HtmlNodeFilters.tagWithAttributeRegex("li",  "id", "pane-pcw-(R|r)eferences"),
 
   };
 
