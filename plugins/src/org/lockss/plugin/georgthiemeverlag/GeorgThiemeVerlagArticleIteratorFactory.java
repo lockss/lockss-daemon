@@ -69,6 +69,10 @@ public class GeorgThiemeVerlagArticleIteratorFactory
       "/pdf/([^/]+/[^/?&.]+)[.]pdf$",
       Pattern.CASE_INSENSITIVE);
   
+  protected static final Pattern ABSTRACT_PATTERN = Pattern.compile(
+      "/abstract/([^/]+/[^/?&]+)$",
+      Pattern.CASE_INSENSITIVE);
+  
   // how to change from one form (aspect) of article to another
   protected static final String HTML_REPLACEMENT = "/html/$1";
   protected static final String PDF_REPLACEMENT = "/pdf/$1.pdf";
@@ -86,6 +90,8 @@ public class GeorgThiemeVerlagArticleIteratorFactory
     // set up fulltext, pdf, abstract to be aspects that will trigger an ArticleFiles
     // NOTE - for the moment this also means it is considered a FULL_TEXT_CU
     // until this fulltext concept is deprecated
+    // Making abstract also sufficient to be an ArticleFiles because meeting abstracts
+    // only have the one aspect yet they must be counted
     builder.addAspect(
         PDF_PATTERN, PDF_REPLACEMENT,
         ArticleFiles.ROLE_FULL_TEXT_PDF);
@@ -95,6 +101,7 @@ public class GeorgThiemeVerlagArticleIteratorFactory
         ArticleFiles.ROLE_FULL_TEXT_HTML);
     
     builder.addAspect(
+        ABSTRACT_PATTERN,
         ABSTRACT_REPLACEMENT,
         ArticleFiles.ROLE_ABSTRACT);
     
