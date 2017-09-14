@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>8</string>
+    <string>9</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -81,8 +81,11 @@
       <string>2,"^(%s|%s).*buy=yes$", script_url, base_url</string>
       <string>1,"^(%s|%s)[^/]+/issues/[^/]+/[^/]+/[^/]+/[^/]+/(.+\.pdf|index\.html|.+fig[0-9]+\.html)$", base_url, script_url</string>
       <string>1,"^(%s|%s)cgi-bin/paper\?[^/]+$", script_url, base_url</string>
+      <!-- IUCr has asked us not to download &Qmime=cif which is what requires the following -->
+      <string>2,"^(%s|%s)cgi-bin/(sendsupfiles|sendsup|sendcif)\?Qmime=cif$", script_url, base_url</string>
       <string>1,"^(%s|%s)cgi-bin/(sendsupfiles|sendsup|sendcif)\?.+$", script_url, base_url</string>
-      <string>1,"^http://publcif.iucr.org/cifmoldb/gui/cifjmol\.php\?cifid=[^/]+$"</string>
+      <!-- IUCr has asked us not to download &Qmime=cif which is what requires the following -->
+      <!-- <string>1,"^http://publcif.iucr.org/cifmoldb/gui/cifjmol\.php\?cifid=[^/]+$"</string> -->
     </list>
   </entry>
   <entry>
@@ -91,12 +94,12 @@
       <string>"^%s[^/]+/issues/[^/]+/[^/]+/[^/]+/[^/]+/.+\.pdf$", base_url</string>
     </list>
   </entry>
+<!--  this is no longer required; 3-d model not getting downloaded   
   <entry>
-    <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
-         org.lockss.crawler.allowedPluginPermittedHosts -->
     <string>au_permitted_host_pattern</string>
     <string>publcif\.iucr\.org</string>
   </entry>
+-->  
   <entry>
     <string>plugin_config_props</string>
     <list>
