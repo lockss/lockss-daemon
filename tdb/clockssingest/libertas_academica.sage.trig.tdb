@@ -69,12 +69,12 @@
 
     au < frozen ; exists ; 2008 ; Cell Communication Insights Volume 1 ; 1 ; 2008 ; >
     au < frozen ; exists ; 2009 ; Cell Communication Insights Volume 2 ; 2 ; 2009 ; >
-    au < crawling ; exists ; 2010 ; Cell Communication Insights Volume 3 ; 3 ; 2010 ; >
+    au < frozen ; exists ; 2010 ; Cell Communication Insights Volume 3 ; 3 ; 2010 ; >
     au < frozen ; exists ; 2012 ; Cell Communication Insights Volume 4 ; 4 ; 2012 ; >
     au < frozen ; exists ; 2013 ; Cell Communication Insights Volume 5 ; 5 ; 2013 ; >
     au < frozen ; exists ; 2014 ; Cell Communication Insights Volume 6 ; 6 ; 2014 ; >
     au < frozen ; exists ; 2015 ; Cell Communication Insights Volume 7 ; 7 ; 2015 ; >
-    au < crawling ; exists ; 2016 ; Cell Communication Insights Volume 8 ; 8 ; 2016 ; >
+    au < frozen ; exists ; 2016 ; Cell Communication Insights Volume 8 ; 8 ; 2016 ; >
     au < crawling ; exists ; 2017 ; Cell Communication Insights Volume 9 ; 9 ; 2017 ; >
 
   }
@@ -136,7 +136,7 @@
     au < crawling ; exists ; 2011 ; Clinical Medicine Reviews in Oncology Volume 3 ; 3 ; 2011 ; >
     au < frozen ; exists ; 2012 ; Clinical Medicine Reviews in Oncology Volume 4 ; 4 ; 2012 ; >
     au < frozen ; exists ; 2015 ; Clinical Medicine Reviews in Oncology Volume 5 ; 5 ; 2015 ; >
-    au < crawling ; exists ; 2016 ; Clinical Medicine Reviews in Oncology Volume 6 ; 6 ; 2016 ; >
+    au < frozen ; exists ; 2016 ; Clinical Medicine Reviews in Oncology Volume 6 ; 6 ; 2016 ; >
 
   }
 
@@ -169,7 +169,7 @@
     #Triggered by Sage
 
     au < frozen ; exists ; 2009 ; Clinical Medicine Reviews in Therapeutics Volume 1 ; 1 ; 2009 ; >
-    au < crawling ; exists ; 2010 ; Clinical Medicine Reviews in Therapeutics Volume 2 ; 2 ; 2010 ; >
+    au < frozen ; exists ; 2010 ; Clinical Medicine Reviews in Therapeutics Volume 2 ; 2 ; 2010 ; >
     au < frozen ; exists ; 2011 ; Clinical Medicine Reviews in Therapeutics Volume 3 ; 3 ; 2011 ; >
     au < frozen ; exists ; 2012 ; Clinical Medicine Reviews in Therapeutics Volume 4 ; 4 ; 2012 ; >
     au < frozen ; exists ; 2013 ; Clinical Medicine Reviews in Therapeutics Volume 5 ; 5 ; 2013 ; >
@@ -238,7 +238,7 @@
     au < frozen ; exists ; 2009 ; Gene Expression to Genetical Genomics Volume 2 ; 2 ; 2009 ; >
     au < frozen ; exists ; 2010 ; Gene Expression to Genetical Genomics Volume 3 ; 3 ; 2010 ; >
     au < frozen ; exists ; 2013 ; Gene Expression to Genetical Genomics Volume 6 ; 6 ; 2013 ; >
-    au < crawling ; exists ; 2014 ; Gene Expression to Genetical Genomics Volume 7 ; 7 ; 2014 ; >
+    au < frozen ; exists ; 2014 ; Gene Expression to Genetical Genomics Volume 7 ; 7 ; 2014 ; >
     au < crawling ; exists ; 2015 ; Gene Expression to Genetical Genomics Volume 8 ; 8 ; 2015 ; >
 
   }
