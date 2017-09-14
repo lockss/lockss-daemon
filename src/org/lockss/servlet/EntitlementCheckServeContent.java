@@ -52,6 +52,7 @@ import org.lockss.db.*;
 import org.lockss.exporter.biblio.*;
 import org.lockss.exporter.counter.*;
 import org.lockss.extractor.*;
+import org.lockss.metadata.MetadataManager;
 import org.lockss.plugin.*;
 import org.lockss.plugin.PluginManager.CuContentReq;
 import org.lockss.entitlement.EntitlementRegistryClient;
@@ -81,6 +82,7 @@ public class EntitlementCheckServeContent extends ServeContent {
   private String start;
   private String end;
   private EntitlementRegistryClient entitlementRegistry;
+  private MetadataManager metadataManager;
 
   // don't hold onto objects after request finished
   protected void resetLocals() {
@@ -96,6 +98,7 @@ public class EntitlementCheckServeContent extends ServeContent {
     super.init(config);
     LockssDaemon daemon = getLockssDaemon();
     entitlementRegistry = daemon.getCachedEntitlementRegistryClient();
+    metadataManager = daemon.getMetadataManager();
   }
 
   /** Called by ServletUtil.setConfig() */
@@ -351,72 +354,12 @@ public class EntitlementCheckServeContent extends ServeContent {
       return;
     }
 
-    Connection conn = null;
-    OpenUrlInfo resolved = null;
     try {
-      LockssDaemon daemon = getLockssDaemon();
-      conn = daemon.getDbManager().getConnection();
-
-      StringBuilder select = new StringBuilder("select distinct ");
-      StringBuilder from = new StringBuilder(" from ");
-      StringBuilder where = new StringBuilder(" where ");
-      ArrayList<String> args = new ArrayList<String>();
-
-      // return all related values for debugging purposes
-      select.append("mi1." + DATE_COLUMN);
-      select.append(",i." + ISSN_COLUMN);
-      select.append(",i." + ISSN_TYPE_COLUMN);
-
-      from.append(URL_TABLE + " u");
-      from.append(", " + MD_ITEM_TABLE + " mi1");              // publication md_item
-      from.append("," + MD_ITEM_TABLE + " mi2");        // article md_item
-      from.append("," + ISSN_TABLE + " i");
-
-      where.append("u." + URL_COLUMN + "= ?");
-      args.add(cachedUrl.getUrl());
-      where.append(" and u." + FEATURE_COLUMN + "='Access'");
-
-      where.append(" and u." + MD_ITEM_SEQ_COLUMN + "=");
-      where.append("mi1." + MD_ITEM_SEQ_COLUMN);
-
-      where.append(" and mi1." + PARENT_SEQ_COLUMN + "=");
-      where.append("mi2." + MD_ITEM_SEQ_COLUMN);
-
-      where.append(" and i." + MD_ITEM_SEQ_COLUMN + "=");
-      where.append("mi2." + MD_ITEM_SEQ_COLUMN);
-
-      String query = select.toString() + from.toString() + where.toString();
-
-      PreparedStatement stmt = daemon.getDbManager().prepareStatement(conn, query);
-
-      for (int i = 0; i < args.size(); i++) {
-        log.debug3("query arg:  " + args.get(i));
-        stmt.setString(i + 1, args.get(i));
+      BibliographicItem item = metadataManager.getCUBibliographicInfo(cachedUrl);
+      if ( item != null ) {
+        setBibInfoFromBibliographicItem(item);
       }
-
-      ResultSet resultSet = daemon.getDbManager().executeQuery(stmt);
-
-      BibliographicItemImpl item = new BibliographicItemImpl();
-      while ( resultSet.next() ) {
-        String year = resultSet.getString(1);
-        String issn = resultSet.getString(2);
-        String issnType = resultSet.getString(3);
-        item.setYear(year);
-        if(P_ISSN_TYPE.equals(issnType)){
-          item.setPrintIssn(issn);
-        }
-        else if(E_ISSN_TYPE.equals(issnType)){
-          item.setEissn(issn);
-        }
-        else if(L_ISSN_TYPE.equals(issnType)){
-          item.setIssnL(issn);
-        }
-      }
-      setBibInfoFromBibliographicItem(item);
-
     } catch (DbException e) {
-      log.error("Error fetching metadata", e);
-    } catch (SQLException e) {
       log.error("Error fetching metadata", e);
     }
   }
