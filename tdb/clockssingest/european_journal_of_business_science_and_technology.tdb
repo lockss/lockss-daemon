@@ -2,7 +2,7 @@
 
   publisher <
     name = European Journal of Business Science and Technology ;
-    info[contract] = 9999 ; #2017
+    info[contract] = 2017 ;
     info[back] = 2015 ;
     info[tester] = 8 ;
     info[poller] = 8
@@ -22,8 +22,8 @@
       param[base_url] = https://www.ejobsat.cz/journal/
       param[journal_id] = ejobsat
 
-      au < manifest ; exists ; 2015 ; European Journal of Business Science and Technology Volume 1 ; 1 ; 2015 ; > #passed testing.
-      au < manifest ; exists ; 2016 ; European Journal of Business Science and Technology Volume 2 ; 2 ; 2016 ; > #passed testing.
+      au < ready ; exists ; 2015 ; European Journal of Business Science and Technology Volume 1 ; 1 ; 2015 ; >
+      au < ready ; exists ; 2016 ; European Journal of Business Science and Technology Volume 2 ; 2 ; 2016 ; >
       au < expected ; exists ; 2017 ; European Journal of Business Science and Technology Volume 3 ; 3 ; 2017 ; >
 
     }
