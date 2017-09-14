@@ -122,7 +122,7 @@ public class TestMassachusettsMedicalSocietyArticleIteratorFactory extends Artic
     assertNotMatchesRE(PATTERN_FAIL_MSG, pat, BASE_URL + "//10.5339/nejm12315");
     //assertNotMatchesRE(PATTERN_FAIL_MSG, pat, BASE_URL + "doi/pdfplus/10.5339/nejm12315");
     assertNotMatchesRE(PATTERN_FAIL_MSG, pat, BASE_URL + "doi/ful/10.5339/nejm12315");
-    assertNotMatchesRE(PATTERN_FAIL_MSG, pat, BASE_URL + "doi/124/10.5339/nejm12315");
+    //assertNotMatchesRE(PATTERN_FAIL_MSG, pat, BASE_URL + "doi/124/10.5339/nejm12315"); // this is now allowed
     assertNotMatchesRE(PATTERN_FAIL_MSG, pat, "http://www.wrong.com/doi/pdf/10.5339/nejm12315");
     assertNotMatchesRE(PATTERN_FAIL_MSG, pat, BASE_URL + "dooi/pdf/10.5339/nejm12315");
     assertNotMatchesRE(PATTERN_FAIL_MSG, pat, BASE_URL + "/pdf/10.5339/nejm12315");
