@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,7 +35,6 @@ package org.lockss.plugin.atypon.americansocietyofcivilengineers;
 import java.io.InputStream;
 
 import org.htmlparser.NodeFilter;
-import org.htmlparser.filters.*;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory;
@@ -61,6 +60,9 @@ public class ASCEHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
       InputStream in, String encoding) {
     
     NodeFilter[] asceFilters = new NodeFilter[] {
+        /*
+         * This section is from < 2017
+         */
         // <header> filtered in BaseAtypon
 	HtmlNodeFilters.tagWithAttribute("div", "id", "issueNav"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", "tocTools"),
@@ -80,6 +82,20 @@ public class ASCEHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
         // the addition of "Abstract:" between authors and actual text, seems the only usage
         // oddly, it doesn't always show on the screen, but it's there
         HtmlNodeFilters.tagWithAttribute("h2", "class", "display"),
+        /*
+         * This section is for 2017+
+         */
+        // TOC - links to all other issues
+        HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "pageHeader"),      
+        HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "pageFooter"),      
+        HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "journalMetaBackground"),      
+        HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "literatumListOfIssuesResponsiveWidget"),      
+        HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "literatumContentItemDownloadCount"),      
+        // Article landing - ajax tabs
+        HtmlNodeFilters.tagWithAttributeRegex("div",  "id", "recommendedtabcontent"),
+        HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "editorialRelated"),
+
+        
 
     };
     

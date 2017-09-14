@@ -18,7 +18,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>80</string>
+    <string>81</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -96,6 +96,7 @@
     - exclude the "mlt" (related articles) page (see: http://www.tandfonline.com/toc/rama20/7/1)
 
     - include the article in all possible formats - which live under non-deterministic DOI path; do not terminate, could go deeper
+    - ASCE now uses the "doi/foo/blah" without an article type aspect - this may cause minimal redundancy elsewhere (abs and no type are the same)
     - use basic DOI pattern, to whit: PREFIX = one or more digits and dots [0-9.]+; SUFFIX = not a slash
     - The following may not be needed by all Atypon publishers, but won't hurt:
     - exclude the article ending with a suffix that is now normalized off to handle previously collected
@@ -118,9 +119,9 @@
       <string>1,"^https?://%s\.global\.prod\.fastly\.net/[^?]*\.(css|gif|jpe?g|js|png)$", url_host(base_url)</string>
       <string>1,"^https?://%s/na[0-9]+/home/literatum/publisher/[^/]+/journals/[^/]+/%s/", url_host(base_url), journal_id</string>   
       <string>1,"^https?://%s/toc/%s(\.[0-9]+)?/%s($|/)", url_host(base_url), journal_id, volume_name</string>
-      <string>2,"^https?://%s/doi/[^/]+/[0-9.]+/(null\?|[-.9]+$)", url_host(base_url)</string>
-      <string>2,"^https?://%s/doi/.*\?(prevSearch=|queryID=%%24%%7BresultBean.queryID%%7D|tab=permissions)", url_host(base_url)</string>  
-      <string>1,"^https?://%s/doi/(pdf|pdfplus|full|abs|ref|suppl|figure|video[^/]+)/[0-9.]+/", url_host(base_url)</string>
+      <string>2,"^https?://%s/doi/([^/]+/)?[0-9.]+/(null\?|[-.9]+$)", url_host(base_url)</string>
+      <string>2,"^https?://%s/doi/.*\?(prevSearch=|queryID=%%24%%7BresultBean.queryID%%7D|tab=permissions)", url_host(base_url)</string>
+      <string>1,"^https?://%s/doi/((pdf|pdfplus|full|abs|ref|suppl|figure|video[^/]+)/)?[0-9.]+/", url_host(base_url)</string>
       <string>2,"^https?://%s/action/showFullPopup\?doi=.*&amp;id=$", url_host(base_url)</string>          
       <string>1,"^https?://%s/action/downloadCitation\?doi=.*&amp;format=ris&amp;include=(cit|abs)$", url_host(base_url)</string> 
       <string>1,"^https?://%s/action/downloadTable\?(doi=.+&amp;id=[^&amp;]+|id=.+&amp;doi=[^&amp;]+)(&amp;downloadType=[^&amp;]+)?$", url_host(base_url)</string>

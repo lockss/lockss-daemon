@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -52,11 +52,27 @@ public class ASCEHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory
     // <div class="sessionViewed">
     // http://ascelibrary.org/toc/jaeied/18/4
     // http://ascelibrary.org/doi/full/10.1061/(ASCE)CO.1943-7862.0000372
+    
+    /*
+     * This section is from < 2017
+     */
     HtmlNodeFilters.tagWithAttribute("div", "class", "sessionViewed"),
 
     // on a book landing page the titleInfo leads back to the series of books and overcrawling
     // http://ascelibrary.org/doi/book/10.1061/9780784478820
     HtmlNodeFilters.tagWithAttribute("div", "class", "box-inner titleInfo"),
+    /*
+     * This section is from 2017+ - skin change
+     */
+    // TOC - links to all other issues
+    HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "literatumListOfIssuesResponsiveWidget"),      
+    // Article landing - ajax tabs
+    HtmlNodeFilters.tagWithAttributeRegex("div",  "id", "recommendedtabcontent"),
+    HtmlNodeFilters.tagWithAttributeRegex("div",  "id", "reftabcontent"),
+    HtmlNodeFilters.tagWithAttributeRegex("div",  "id", "infotabcontent"),
+    HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "editorialRelated"),
+    
+    
   };
 
   @Override

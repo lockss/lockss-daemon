@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -55,14 +55,20 @@ ArticleMetadataExtractorFactory {
   //arbitrary string is used in daemon for this  
   private static final String ABSTRACTS_ONLY = "abstracts";  
   private static final String ROLE_PDFPLUS = "PdfPlus";
+  private static final String ROLE_DOIHTML = "DOIHtml";
 
   private static final String ROOT_TEMPLATE = "\"%sdoi/\", base_url";
 
+  //2017+ ASCE provided only an aspect free link to article landing page
+  // http://ascelibrary.org/doi/10.1061/%28ASCE%29ME.1943-5479.0000092
+  // For now keep this as a unique iterator
+
+  
   // Only put the 'abs' in the pattern if used for primary; otherwise builder spews errors
   private static final String PATTERN_TEMPLATE_WITH_ABSTRACT = 
-      "\"^%sdoi/(abs|full|pdf|pdfplus)/[.0-9]+/\", base_url";
+      "\"^%sdoi/((abs|full|pdf|pdfplus)/)?[.0-9]+/\", base_url";
   private static final String PATTERN_TEMPLATE = 
-      "\"^%sdoi/(full|pdf|pdfplus)/[.0-9]+/\", base_url";
+      "\"^%sdoi/((full|pdf|pdfplus)/)?[.0-9]+/\", base_url";
 
   // various aspects of an article
   // DOI's can have "/"s in the suffix
@@ -70,6 +76,7 @@ ArticleMetadataExtractorFactory {
   private static final Pattern ABSTRACT_PATTERN = Pattern.compile("/doi/abs/([.0-9]+)/([^?&]+)$", Pattern.CASE_INSENSITIVE);
   private static final Pattern HTML_PATTERN = Pattern.compile("/doi/full/([.0-9]+)/([^?&]+)$", Pattern.CASE_INSENSITIVE);
   private static final Pattern PDFPLUS_PATTERN = Pattern.compile("/doi/pdfplus/([.0-9]+)/([^?&]+)$", Pattern.CASE_INSENSITIVE);
+  private static final Pattern DOI_PATTERN = Pattern.compile("/doi/([.0-9]+)/([^?&]+)$", Pattern.CASE_INSENSITIVE);
 
   // how to change from one form (aspect) of article to another
   private static final String HTML_REPLACEMENT = "/doi/full/$1/$2";
@@ -78,6 +85,7 @@ ArticleMetadataExtractorFactory {
   private static final String PDFPLUS_REPLACEMENT = "/doi/pdfplus/$1/$2";
   // in support of books, this is equivalent of full book abstract (landing page)
   private static final String BOOK_REPLACEMENT = "/doi/book/$1/$2";
+  private static final String DOI_REPLACEMENT = "/doi/$1/$2";
 
   // Things not an "article" but in support of an article
   private static final String REFERENCES_REPLACEMENT = "/doi/ref/$1/$2";
@@ -151,6 +159,13 @@ ArticleMetadataExtractorFactory {
         ArticleFiles.ROLE_FULL_TEXT_HTML,
         ArticleFiles.ROLE_ARTICLE_METADATA); // use for metadata if abstract doesn't exist
 
+    // set up full text html to be an aspect that will trigger an ArticleFiles
+    // for ASCE, this is the full-text HTML now
+    builder.addAspect(DOI_PATTERN,
+        DOI_REPLACEMENT,
+        ROLE_DOIHTML, // just a local name until we know what we have to chose from
+        ArticleFiles.ROLE_ARTICLE_METADATA); // use for metadata if abstract doesn't exist
+    
     if (isAbstractOnly(au)) {
       // When part of an abstract only AU, set up an abstract to be an aspect
       // that will trigger an articleFiles. 
@@ -187,6 +202,11 @@ ArticleMetadataExtractorFactory {
         RIS_REPLACEMENT, SECOND_RIS_REPLACEMENT),
         ArticleFiles.ROLE_CITATION_RIS);
 
+    // The order in which we want to define what a full text HTML 
+    builder.setRoleFromOtherRoles(ArticleFiles.ROLE_FULL_TEXT_HTML,
+        ArticleFiles.ROLE_FULL_TEXT_HTML,
+        ROLE_DOIHTML); // in ASCE it's the only full-text html we get
+
     // The order in which we want to define full_text_cu.  
     // First one that exists will get the job
     // For AUs that are all or partially abstract only, add in this option but
@@ -208,11 +228,12 @@ ArticleMetadataExtractorFactory {
         ArticleFiles.ROLE_FULL_TEXT_PDF,
         ROLE_PDFPLUS); // this should be ROLE_PDFPLUS when it's defined
 
+
     // set the ROLE_ARTICLE_METADATA to the first one that exists 
     builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA,
         ArticleFiles.ROLE_CITATION_RIS,
         ArticleFiles.ROLE_ABSTRACT,
-        ArticleFiles.ROLE_FULL_TEXT_HTML);
+        ArticleFiles.ROLE_FULL_TEXT_HTML); // this could be doi/full/xxx or doi/xxx
 
     return builder.getSubTreeArticleIterator();
   }
