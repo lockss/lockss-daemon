@@ -108,8 +108,8 @@ public class EntitlementCheckServeContent extends ServeContent {
     }
   }
 
-  protected boolean isNeverProxyForAu(ArchivalUnit au) {
-    return super.isNeverProxyForAu(au) || workflow == PublisherWorkflow.PRIMARY_LOCKSS;
+  protected boolean isNeverProxyForAu(ArchivalUnit archivalUnit) {
+    return super.isNeverProxyForAu(archivalUnit) || workflow == PublisherWorkflow.PRIMARY_LOCKSS;
   }
 
   /**
@@ -233,14 +233,14 @@ public class EntitlementCheckServeContent extends ServeContent {
       institution = entitlementRegistry.getInstitution(institutionScope);
   }
 
-  boolean isUserEntitled(ArchivalUnit au) throws IOException, IllegalArgumentException {
-      validateBibInfo(cu, au);
+  boolean isUserEntitled(ArchivalUnit archivalUnit) throws IOException, IllegalArgumentException {
+      validateBibInfo(cu, archivalUnit);
 
       return entitlementRegistry.isUserEntitled(issn, institution, start, end);
   }
 
-  PublisherWorkflow getPublisherWorkflow(ArchivalUnit au) throws IOException, IllegalArgumentException {
-      validateBibInfo(cu, au);
+  PublisherWorkflow getPublisherWorkflow(ArchivalUnit archivalUnit) throws IOException, IllegalArgumentException {
+      validateBibInfo(cu, archivalUnit);
 
       String publisher = entitlementRegistry.getPublisher(issn, institution, start, end);
       if(StringUtil.isNullString(publisher)) {
@@ -299,19 +299,19 @@ public class EntitlementCheckServeContent extends ServeContent {
     setBibInfoFromBibliographicItem(item);
   }
 
-  private void setBibInfoFromTdb(ArchivalUnit au) throws IllegalArgumentException {
+  private void setBibInfoFromTdb(ArchivalUnit archivalUnit) throws IllegalArgumentException {
     log.debug2("Setting bib info from TDB");
     if(!StringUtil.isNullString(issn) && !StringUtil.isNullString(start) && !StringUtil.isNullString(end)) {
       log.debug2("Bib info already set");
       return;
     }
 
-    if(au == null) {
+    if(archivalUnit == null) {
       log.debug2("No ArchivalUnit");
       return;
     }
 
-    TdbAu tdbAu = au.getTdbAu();
+    TdbAu tdbAu = archivalUnit.getTdbAu();
     if(tdbAu == null) {
       log.debug2("No TdbAu");
       return;
@@ -339,14 +339,14 @@ public class EntitlementCheckServeContent extends ServeContent {
     }
   }
 
-  private void setBibInfoFromMetadataDB(CachedUrl cu) {
+  private void setBibInfoFromMetadataDB(CachedUrl cachedUrl) {
     log.debug2("Setting bib info from database");
     if(!StringUtil.isNullString(issn) && !StringUtil.isNullString(start) && !StringUtil.isNullString(end)) {
       log.debug2("Bib info already set");
       return;
     }
 
-    if(cu == null) {
+    if(cachedUrl == null) {
       log.debug2("No CachedUrl");
       return;
     }
@@ -373,7 +373,7 @@ public class EntitlementCheckServeContent extends ServeContent {
       from.append("," + ISSN_TABLE + " i");
 
       where.append("u." + URL_COLUMN + "= ?");
-      args.add(cu.getUrl());
+      args.add(cachedUrl.getUrl());
       where.append(" and u." + FEATURE_COLUMN + "='Access'");
 
       where.append(" and u." + MD_ITEM_SEQ_COLUMN + "=");
@@ -421,9 +421,9 @@ public class EntitlementCheckServeContent extends ServeContent {
     }
   }
 
-  private void validateBibInfo(CachedUrl cu, ArchivalUnit au) {
-     setBibInfoFromMetadataDB(cu);
-     setBibInfoFromTdb(au);
+  private void validateBibInfo(CachedUrl cachedUrl, ArchivalUnit archivalUnit) {
+     setBibInfoFromMetadataDB(cachedUrl);
+     setBibInfoFromTdb(archivalUnit);
 
      if(StringUtil.isNullString(issn)) {
        throw new IllegalArgumentException("ArchivalUnit has no ISSN");
