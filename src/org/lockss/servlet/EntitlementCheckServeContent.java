@@ -137,7 +137,7 @@ public class EntitlementCheckServeContent extends ServeContent {
     if(cachedUrls != null && !cachedUrls.isEmpty()) {
       for(CachedUrl cachedUrl: cachedUrls) {
         try {
-          if(isUserEntitled(cachedUrl.getArchivalUnit())) {
+          if(isUserEntitled(cachedUrl, cachedUrl.getArchivalUnit())) {
             cu = cachedUrl;
             au = cu.getArchivalUnit();
             if (log.isDebug3()) log.debug("cu: " + cu + " au: " + au);
@@ -179,11 +179,11 @@ public class EntitlementCheckServeContent extends ServeContent {
    */
   protected void handleAuRequest() throws IOException {
     try {
-      if (!isUserEntitled(au)) {
+      if (!isUserEntitled(cu, au)) {
         handleUnauthorisedUrlRequest(url);
         return;
       }
-      workflow = getPublisherWorkflow(au);
+      workflow = getPublisherWorkflow(cu, au);
       if (workflow == PublisherWorkflow.LIBRARY_NOTIFICATION) {
         handleUnauthorisedUrlRequest(url);
         return;
@@ -233,14 +233,14 @@ public class EntitlementCheckServeContent extends ServeContent {
       institution = entitlementRegistry.getInstitution(institutionScope);
   }
 
-  boolean isUserEntitled(ArchivalUnit archivalUnit) throws IOException, IllegalArgumentException {
-      validateBibInfo(cu, archivalUnit);
+  boolean isUserEntitled(CachedUrl cachedUrl, ArchivalUnit archivalUnit) throws IOException, IllegalArgumentException {
+      validateBibInfo(cachedUrl, archivalUnit);
 
       return entitlementRegistry.isUserEntitled(issn, institution, start, end);
   }
 
-  PublisherWorkflow getPublisherWorkflow(ArchivalUnit archivalUnit) throws IOException, IllegalArgumentException {
-      validateBibInfo(cu, archivalUnit);
+  PublisherWorkflow getPublisherWorkflow(CachedUrl cachedUrl, ArchivalUnit archivalUnit) throws IOException, IllegalArgumentException {
+      validateBibInfo(cachedUrl, archivalUnit);
 
       String publisher = entitlementRegistry.getPublisher(issn, institution, start, end);
       if(StringUtil.isNullString(publisher)) {
