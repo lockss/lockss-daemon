@@ -53,7 +53,7 @@ public class MarkAllenHttpResponseHandler extends BaseAtyponHttpResponseHandler 
   private static final String MAG_ADD_ON = "doi/abs/[0-9.]+/[^/]+\\.CPD1$";
   // add parens to be sure to have the or work as desired
   protected static final Pattern MAG_NON_FATAL_PAT = 
-      Pattern.compile( "(" + DEFAULT_NON_FATAL_PAT.pattern() + ")|" + MAG_ADD_ON); 
+      Pattern.compile( "(" + DEFAULT_NON_FATAL_500_PAT.pattern() + ")|" + MAG_ADD_ON); 
     
   
   // Use a getter so that this can be overridden by a child plugin

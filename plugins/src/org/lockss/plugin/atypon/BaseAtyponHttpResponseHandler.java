@@ -56,9 +56,14 @@ public class BaseAtyponHttpResponseHandler implements CacheResultHandler {
   //     action/showPopup
   //
   // child can override through getter to extend or change the pattern
-  protected static final Pattern DEFAULT_NON_FATAL_PAT = 
+  protected static final Pattern DEFAULT_NON_FATAL_500_PAT = 
       Pattern.compile("action/(download(Table|Figures|PdfFig)|show(Popup|Cit))");
-    
+
+  // ASCE has suppl_data links that are returning 403 but should be 404
+  //http://ascelibrary.org/doi/suppl/10.1061/%28ASCE%29IR.1943-4774.0000983/suppl_file/Supplemental_Data_IR.1943-4774.0000983_Guerra1
+  protected static final Pattern DEFAULT_NON_FATAL_403_PAT = 
+      Pattern.compile("doi/suppl/.*/suppl_file/");
+  
   private static final Logger logger = Logger.getLogger(BaseAtyponHttpResponseHandler.class);
 
   @Override
@@ -74,18 +79,20 @@ public class BaseAtyponHttpResponseHandler implements CacheResultHandler {
     logger.debug2(url);
     switch (responseCode) {
       case 500:
-        // Do not fail the crawl for 500 errors at URLs like the one below should not be fatal
-        // http://www.tandfonline.com/action/downloadTable?id=T0001&doi=10.1080%2F15470148.2015.1034908&downloadType=PDF
-        // referrer: http://www.tandfonline.com/doi/full/10.1080/15470148.2015.1034908
-        // Currently full text html pages for articles that have tables sometimes
-        //  generate links to PDF format of tables that return a 500 and should probaby be 404 - keep going
-        // returns 500 error
         logger.debug2("500 - pattern is " + getNonFatal500Pattern().toString());
-        Matcher mat = getNonFatal500Pattern().matcher(url);
-        if (mat.find()) {
+        Matcher smat = getNonFatal500Pattern().matcher(url);
+        if (smat.find()) {
           return new CacheException.NoRetryDeadLinkException("500 Internal Server Error (non-fatal)");
         } else {
           return new CacheException.RetrySameUrlException("500 Internal Server Error");
+        }
+      case 403: 
+        logger.debug2("403 - pattern is " + getNonFatal403Pattern().toString());
+        Matcher fmat = getNonFatal403Pattern().matcher(url);
+        if (fmat.find()) {
+          return new CacheException.NoRetryDeadLinkException("403 Foridden (non-fatal)");
+        } else {
+          return new CacheException.RetrySameUrlException("403 Forbidden");
         }
       default:
         logger.warning("Unexpected responseCode (" + responseCode + ") in handleResult(): AU " + au.getName() + "; URL " + url);
@@ -109,7 +116,11 @@ public class BaseAtyponHttpResponseHandler implements CacheResultHandler {
   
   // Use a getter so that this can be overridden by a child plugin
   protected Pattern getNonFatal500Pattern() {    
-    return DEFAULT_NON_FATAL_PAT;   
+    return DEFAULT_NON_FATAL_500_PAT;   
+  }
+  // Use a getter so that this can be overridden by a child plugin
+  protected Pattern getNonFatal403Pattern() {    
+    return DEFAULT_NON_FATAL_403_PAT;   
   }
   
 }
