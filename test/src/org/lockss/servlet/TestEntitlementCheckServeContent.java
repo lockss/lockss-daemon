@@ -32,8 +32,12 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.servlet;
 
+import static org.lockss.db.SqlConstants.*;
+
 import java.io.IOException;
 import java.io.InputStream;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -52,12 +56,15 @@ import org.lockss.config.ConfigManager;
 import org.lockss.config.Tdb;
 import org.lockss.config.TdbAu;
 import org.lockss.daemon.TitleConfig;
+import org.lockss.db.DbManager;
+import org.lockss.entitlement.EntitlementRegistryClient;
+import org.lockss.entitlement.PublisherWorkflow;
+import org.lockss.extractor.MetadataField;
+import org.lockss.metadata.MetadataManager;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.Plugin;
 import org.lockss.plugin.PluginManager;
-import org.lockss.entitlement.EntitlementRegistryClient;
-import org.lockss.entitlement.PublisherWorkflow;
 import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.MockArchivalUnit;
 import org.lockss.test.MockCachedUrl;
@@ -66,6 +73,7 @@ import org.lockss.test.MockLockssUrlConnection;
 import org.lockss.test.MockNodeManager;
 import org.lockss.test.MockPlugin;
 import org.lockss.test.StringInputStream;
+import org.lockss.util.Logger;
 import org.lockss.util.urlconn.LockssUrlConnection;
 import org.lockss.util.urlconn.LockssUrlConnectionPool;
 
@@ -81,6 +89,8 @@ public class TestEntitlementCheckServeContent extends LockssServletTestCase {
 
   private MockPluginManager pluginMgr = null;
   private EntitlementRegistryClient entitlementRegistryClient = null;
+  private DbManager dbManager;
+  private MetadataManager metadataManager;
 
   public void setUp() throws Exception {
     super.setUp();
@@ -95,8 +105,13 @@ public class TestEntitlementCheckServeContent extends LockssServletTestCase {
     theDaemon.setAusStarted(true);
     theDaemon.getRemoteApi().startService();
 
+    dbManager = getTestDbManager(tempDirPath);
+
     pluginMgr.initService(theDaemon);
     pluginMgr.startService();
+
+    metadataManager = theDaemon.getMetadataManager();
+    metadataManager.startService();
 
     ConfigurationUtil.addFromArgs(LockssDaemon.PARAM_KEEPSAFE_ENABLED, "true");
     ConfigurationUtil.addFromArgs(EntitlementCheckServeContent.PARAM_MISSING_FILE_ACTION, "Redirect");
@@ -263,6 +278,44 @@ public class TestEntitlementCheckServeContent extends LockssServletTestCase {
     WebResponse resp1 = sClient.getResponse(request);
     assertEquals(403, resp1.getResponseCode());
     assertTrue(resp1.getText().contains("<p>You are not authorised to access the requested URL on this LOCKSS box. Select link<sup><font size=-1><a href=#foottag1>1</a></font></sup> to view it at the publisher:</p><a href=\"http://publisher.org/test_journal/\">http://publisher.org/test_journal/</a>"));
+  }
+
+  public void testCachedUrlIndexed() throws Exception {
+    initServletRunner();
+
+    Connection conn = dbManager.getConnection();
+    Long publisherSeq = dbManager.addPublisher(conn, "Wiley");
+    String proprietaryId = null;
+    Long mdItemTypeSeq = metadataManager.findMetadataItemType(conn, MetadataField.ARTICLE_TYPE_JOURNALARTICLE);
+    Long auMdSeq = null;
+    String date = "2014";
+    String coverage = null;
+    long fetchTime = 0;
+    Long parentSeq = metadataManager.findOrCreateJournal(conn, publisherSeq, "07402783", "07402783", "Air and Space", proprietaryId);
+    Long mdItemSeq = metadataManager.addMdItem(conn, parentSeq, mdItemTypeSeq, auMdSeq, date, coverage, fetchTime);
+    metadataManager.addMdItemUrl(conn, mdItemSeq, MetadataManager.ACCESS_URL_FEATURE, "http://publisher.org/test_journal/");
+    dbManager.commitOrRollback(conn, Logger.getLogger(DbManager.class));
+
+    Properties props = new Properties();
+    props.setProperty("issn", "");
+    props.setProperty("eissn", "");
+    props.setProperty("attributes.year", "");
+    pluginMgr.addAu(makeAu(props));
+    Mockito.when(entitlementRegistryClient.getInstitution("ed.ac.uk")).thenReturn("03bd5fc6-97f0-11e4-b270-8932ea886a12");
+    Mockito.when(entitlementRegistryClient.isUserEntitled("07402783", "03bd5fc6-97f0-11e4-b270-8932ea886a12", "2014", "2014")).thenReturn(true);
+    Mockito.when(entitlementRegistryClient.getPublisher("07402783", "03bd5fc6-97f0-11e4-b270-8932ea886a12", "2014", "2014")).thenReturn("33333333-0000-0000-0000-000000000000");
+    Mockito.when(entitlementRegistryClient.getPublisherWorkflow("33333333-0000-0000-0000-000000000000")).thenReturn(PublisherWorkflow.PRIMARY_PUBLISHER);
+    WebRequest request = new GetMethodWebRequest("http://null/EntitlementCheckServeContent?scope=ed.ac.uk&url=http%3A%2F%2Fpublisher.org%2Ftest_journal%2F" );
+    InvocationContext ic = sClient.newInvocation(request);
+    MockEntitlementCheckServeContent snsc = (MockEntitlementCheckServeContent) ic.getServlet();
+    LockssUrlConnection connection = mockConnection(200, "<html><head><title>Blah</title></head><body>Fetched content</body></html>");
+    snsc.expectRequest("http://publisher.org/test_journal/", connection);
+
+    WebResponse resp1 = sClient.getResponse(request);
+    assertResponseOk(resp1);
+    assertEquals("<html><head><title>Blah</title></head><body>Fetched content</body></html>", resp1.getText());
+    Mockito.verify(connection).addRequestProperty("X-Forwarded-For", "127.0.0.1");
+    Mockito.verify(connection).addRequestProperty("X-Lockss-Institution", "ed.ac.uk");
   }
 
   public void testUnauthorisedUrl() throws Exception {
