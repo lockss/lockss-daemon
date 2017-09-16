@@ -111,7 +111,7 @@
     au < rsp.ClockssRSPDrupalPlugin ; notReady ; exists ; 2014 ; Biology Letters Volume 10 ; 10 ; > #xml error: See http://rsbl.royalsocietypublishing.org/highwire/filestream/25839/field_highwire_adjunct_files/2/rsbl20140479supp3.xml
     au < rsp.ClockssRSPDrupalPlugin ; frozen ; exists ; 2015 ; Biology Letters Volume 11 ; 11 ; >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2016 ; Biology Letters Volume 12 ; 12 ; reingest1.clockss.org:8082 >
-    au < rsp.ClockssRSPDrupalPlugin ; manifest ; exists ; 2017 ; Biology Letters Volume 13 ; 13 ; >
+    au < rsp.ClockssRSPDrupalPlugin ; ready ; exists ; 2017 ; Biology Letters Volume 13 ; 13 ; >
 
   }
 
@@ -135,7 +135,7 @@
     au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2014 ; Interface Focus Volume 4 ; 4 ; reingest5.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2015 ; Interface Focus Volume 5 ; 5 ; reingest5.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2016 ; Interface Focus Volume 6 ; 6 ; reingest5.clockss.org:8082 >
-    au < rsp.ClockssRSPDrupalPlugin ; manifest ; exists ; 2017 ; Interface Focus Volume 7 ; 7 ; >
+    au < rsp.ClockssRSPDrupalPlugin ; ready ; exists ; 2017 ; Interface Focus Volume 7 ; 7 ; >
 
   }
   
@@ -691,7 +691,7 @@
     au < rsp.ClockssRSPDrupalPlugin ; frozen ; exists ; 2014 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 369 ; 369 ; >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2015 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 370 ; 370 ; reingest5.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2016 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 371 ; 371 ; reingest4.clockss.org:8082 >
-    au < rsp.ClockssRSPDrupalPlugin ; manifest ; exists ; 2017 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 372 ; 372 ; >
+    au < rsp.ClockssRSPDrupalPlugin ; ready ; exists ; 2017 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 372 ; 372 ; >
 
   }
 
@@ -1622,7 +1622,7 @@
     au < rsp.ClockssRSPDrupalPlugin ; frozen ; exists ; 2014 ; Royal Society Open Science Volume 1 ; 1 ; >
     au < rsp.ClockssRSPDrupalPlugin ; frozen ; exists ; 2015 ; Royal Society Open Science Volume 2 ; 2 ; >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2016 ; Royal Society Open Science Volume 3 ; 3 ; reingest1.clockss.org:8082 >
-    au < rsp.ClockssRSPDrupalPlugin ; manifest ; exists ; 2017 ; Royal Society Open Science Volume 4 ; 4 ; >
+    au < rsp.ClockssRSPDrupalPlugin ; ready ; exists ; 2017 ; Royal Society Open Science Volume 4 ; 4 ; >
 
   }
 
