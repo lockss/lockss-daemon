@@ -170,6 +170,7 @@ while (my $line = <>) {
            $plugin eq "APSDrupalPlugin" ||
            $plugin eq "ARFDrupalPlugin" ||
            $plugin eq "ASHDrupalPlugin" ||
+           $plugin eq "ASMDrupalPlugin" ||
            $plugin eq "ASPETDrupalPlugin" ||
            $plugin eq "BESBJSDrupalPlugin" ||
            $plugin eq "BiologistsDrupalPlugin" ||
@@ -198,6 +199,7 @@ while (my $line = <>) {
         my $resp = $ua->request($req);
         if ($resp->is_success) {
             my $man_contents = $resp->content;
+            # printf("%s\n",$man_contents);
             if ($req->url ne $resp->request->uri) {
               $result = "Redirected";
             } elsif (defined($man_contents) && (($man_contents =~ m/\/cgi\/reprint\/$param{volume_name}\//) || ($man_contents =~ m/$base_url_short" lockss-probe/))) {
