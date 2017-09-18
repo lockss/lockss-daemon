@@ -725,7 +725,7 @@
 
       au < doNotProcess ; doNotProcess ; 2008-2010 ; International Journal of Arab Culture, Management and Sustainable Development Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2011-2012 ; International Journal of Arab Culture, Management and Sustainable Development Volume 2 ; 2 ; >
-      au < exists ; exists ; 2017 ; International Journal of Arab Culture, Management and Sustainable Development Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2017 ; International Journal of Arab Culture, Management and Sustainable Development Volume 3 ; 3 ; >
 
     }
 
@@ -938,7 +938,7 @@
       au < finished ; finished ; 2013-2014 ; International Journal of Banking, Accounting and Finance Volume 5 ; 5 ; >
       au < finished ; finished ; 2015 ; International Journal of Banking, Accounting and Finance Volume 6 ; 6 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2016 ; International Journal of Banking, Accounting and Finance Volume 7 ; 7 ; >
-      au < exists ; exists ; 2017 ; International Journal of Banking, Accounting and Finance Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2017 ; International Journal of Banking, Accounting and Finance Volume 8 ; 8 ; >
 
     }
 
@@ -1047,7 +1047,7 @@
       au < finished ; finished ; 2015 ; International Journal of Bio-Inspired Computation Volume 7 ; 7 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2016 ; International Journal of Bio-Inspired Computation Volume 8 ; 8 ; >
       au < crawling ; exists ; 2017 ; International Journal of Bio-Inspired Computation Volume 9 ; 9 ; >
-      au < exists ; exists ; 2017 ; International Journal of Bio-Inspired Computation Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2017 ; International Journal of Bio-Inspired Computation Volume 10 ; 10 ; >
 
     }
 
@@ -1103,7 +1103,7 @@
       au < deepCrawl ; exists ; 2016 ; International Journal of Biomedical Engineering and Technology Volume 22 ; 22 ; >
       au < crawling ; exists ; 2017 ; International Journal of Biomedical Engineering and Technology Volume 23 ; 23 ; >
       au < crawling ; exists ; 2017 ; International Journal of Biomedical Engineering and Technology Volume 24 ; 24 ; >
-      au < expected ; exists ; 2017 ; International Journal of Biomedical Engineering and Technology Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2017 ; International Journal of Biomedical Engineering and Technology Volume 25 ; 25 ; >
 
     }
 
@@ -1376,7 +1376,7 @@
       au < deepCrawl ; exists ; 2016 ; International Journal of Business Excellence Volume 10 ; 10 ; >
       au < crawling ; exists ; 2017 ; International Journal of Business Excellence Volume 11 ; 11 ; >
       au < crawling ; exists ; 2017 ; International Journal of Business Excellence Volume 12 ; 12 ; >
-      au < exists ; exists ; 2017 ; International Journal of Business Excellence Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2017 ; International Journal of Business Excellence Volume 13 ; 13 ; >
 
     }
 
@@ -1487,7 +1487,7 @@
       au < deepCrawl ; exists ; 2016 ; International Journal of Business Innovation and Research Volume 11 ; 11 ; >
       au < crawling ; exists ; 2017 ; International Journal of Business Innovation and Research Volume 12 ; 12 ; >
       au < crawling ; exists ; 2017 ; International Journal of Business Innovation and Research Volume 13 ; 13 ; >
-      au < exists ; exists ; 2017 ; International Journal of Business Innovation and Research Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2017 ; International Journal of Business Innovation and Research Volume 14 ; 14 ; >
 
     }
 
@@ -2071,7 +2071,7 @@
       au < deepCrawl ; exists ; 2016 ; International Journal of Computer Applications in Technology Volume 53 ; 53 ; >
       au < deepCrawl ; exists ; 2016 ; International Journal of Computer Applications in Technology Volume 54 ; 54 ; >
       au < crawling ; exists ; 2017 ; International Journal of Computer Applications in Technology Volume 55 ; 55 ; >
-      au < expected ; exists ; 2017 ; International Journal of Computer Applications in Technology Volume 56 ; 56 ; >
+      au < manifest ; exists ; 2017 ; International Journal of Computer Applications in Technology Volume 56 ; 56 ; >
 
     }
 
@@ -3394,7 +3394,7 @@
       au < finished ; finished ; 2014 ; International Journal of Environmental Technology and Management Volume 17 ; 17 ; >
       au < finished ; finished ; 2015 ; International Journal of Environmental Technology and Management Volume 18 ; 18 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2016 ; International Journal of Environmental Technology and Management Volume 19 ; 19 ; >
-      au < expected ; exists ; 2017 ; International Journal of Environmental Technology and Management Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2017 ; International Journal of Environmental Technology and Management Volume 20 ; 20 ; >
 
     }
 
@@ -3622,7 +3622,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Foresight and Innovation Policy Volume 9 ; 9 ; >
       au < finished ; finished ; 2015 ; International Journal of Foresight and Innovation Policy Volume 10 ; 10 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016-2017 ; International Journal of Foresight and Innovation Policy Volume 11 ; 11 ; > 
-      au < exists ; exists ; 2017 ; International Journal of Foresight and Innovation Policy Volume 12 ; 12 ; > 
+      au < manifest ; exists ; 2017 ; International Journal of Foresight and Innovation Policy Volume 12 ; 12 ; > 
 
     }
 
@@ -3783,7 +3783,7 @@
       au < deepCrawl ; exists ; 2016 ; International Journal of Global Warming Volume 10 ; 10 ; >
       au < crawling ; exists ; 2017 ; International Journal of Global Warming Volume 11 ; 11 ; >
       au < crawling ; exists ; 2017 ; International Journal of Global Warming Volume 12 ; 12 ; >
-      au < exists ; exists ; 2017 ; International Journal of Global Warming Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2017 ; International Journal of Global Warming Volume 13 ; 13 ; >
 
     }
 
@@ -4540,7 +4540,7 @@
       au < finished ; finished ; 2013-2014 ; International Journal of Innovation in Education Volume 2 ; 2 ; >
       # below au was incorrectly moved to production too early - take it down until year span over
       au < deepCrawl ; down ; 2015-2016 ; International Journal of Innovation in Education Volume 3 ; 3 ; >
-      au < expected ; exists ; 2017 ; International Journal of Innovation in Education Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2017 ; International Journal of Innovation in Education Volume 4 ; 4 ; >
 
     }
 
@@ -7117,7 +7117,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Quantitative Research in Education Volume 1 ; 1 ; >
       au < finished ; finished ; 2014-2015 ; International Journal of Quantitative Research in Education Volume 2 ; 2 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; down ; 2016 ; International Journal of Quantitative Research in Education Volume 3 ; 3 ; reingest3.clockss.org:8083 >
-      au < expected ; exists ; 2017 ; International Journal of Quantitative Research in Education Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2017 ; International Journal of Quantitative Research in Education Volume 4 ; 4 ; >
 
     }
 
@@ -9530,7 +9530,7 @@
 
       au < manifest ; exists ; 2014 ; International Journal of Automotive Composites Volume 1 ; 1 ;  >
       au < manifest ; exists ; 2015 ; International Journal of Automotive Composites Volume 2 ; 2 ;  >
-      au < exists ; exists ; 2016 ; International Journal of Automotive Composites Volume 3 ; 3 ;  >
+      au < manifest ; exists ; 2016 ; International Journal of Automotive Composites Volume 3 ; 3 ;  >
       au < expected ; exists ; 2017 ; International Journal of Automotive Composites Volume 4 ; 4 ;  >
 
   }
