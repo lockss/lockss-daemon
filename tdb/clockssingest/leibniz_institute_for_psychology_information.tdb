@@ -21,10 +21,10 @@
       param[journal_id] = ejop
 
       au < crawling ; exists ; 2005 ; Europe's Journal of Psychology Volume 1 ; 1 ; 2005 ; https://ejop.psychopen.eu/ ; >
-      au < crawling ; exists ; 2006 ; Europe's Journal of Psychology Volume 2 ; 2 ; 2006 ; https://ejop.psychopen.eu/ ; >
-      au < crawling ; exists ; 2007 ; Europe's Journal of Psychology Volume 3 ; 3 ; 2007 ; https://ejop.psychopen.eu/ ; >
-      au < crawling ; exists ; 2008 ; Europe's Journal of Psychology Volume 4 ; 4 ; 2008 ; https://ejop.psychopen.eu/ ; >
-      au < crawling ; exists ; 2009 ; Europe's Journal of Psychology Volume 5 ; 5 ; 2009 ; https://ejop.psychopen.eu/ ; >
+      au < frozen ; exists ; 2006 ; Europe's Journal of Psychology Volume 2 ; 2 ; 2006 ; https://ejop.psychopen.eu/ ; >
+      au < frozen ; exists ; 2007 ; Europe's Journal of Psychology Volume 3 ; 3 ; 2007 ; https://ejop.psychopen.eu/ ; >
+      au < frozen ; exists ; 2008 ; Europe's Journal of Psychology Volume 4 ; 4 ; 2008 ; https://ejop.psychopen.eu/ ; >
+      au < frozen ; exists ; 2009 ; Europe's Journal of Psychology Volume 5 ; 5 ; 2009 ; https://ejop.psychopen.eu/ ; >
       au < ready ; exists ; 2010 ; Europe's Journal of Psychology Volume 6 ; 6 ; 2010 ; https://ejop.psychopen.eu/ ; >
       au < crawling ; exists ; 2011 ; Europe's Journal of Psychology Volume 7 ; 7 ; 2011 ; https://ejop.psychopen.eu/ ; >
       au < exists ; exists ; 2012 ; Europe's Journal of Psychology Volume 8 ; 8 ; 2012 ; https://ejop.psychopen.eu/ ; >
@@ -64,11 +64,11 @@
       param[journal_id] = interpersona
 
       au < crawling ; exists ; 2007 ; Interpersona: An International Journal on Personal Relationships Volume 1 ; 1 ; 2007 ; https://interpersona.psychopen.eu/ ; >
-      au < crawling ; exists ; 2008 ; Interpersona: An International Journal on Personal Relationships Volume 2 ; 2 ; 2008 ; https://interpersona.psychopen.eu/ ; >
-      au < crawling ; exists ; 2009 ; Interpersona: An International Journal on Personal Relationships Volume 3 ; 3 ; 2009 ; https://interpersona.psychopen.eu/ ; >
+      au < frozen ; exists ; 2008 ; Interpersona: An International Journal on Personal Relationships Volume 2 ; 2 ; 2008 ; https://interpersona.psychopen.eu/ ; >
+      au < frozen ; exists ; 2009 ; Interpersona: An International Journal on Personal Relationships Volume 3 ; 3 ; 2009 ; https://interpersona.psychopen.eu/ ; >
       au < ready ; exists ; 2010 ; Interpersona: An International Journal on Personal Relationships Volume 4 ; 4 ; 2010 ; https://interpersona.psychopen.eu/ ; >
       au < crawling ; exists ; 2011 ; Interpersona: An International Journal on Personal Relationships Volume 5 ; 5 ; 2011 ; https://interpersona.psychopen.eu/ ; >
-      au < crawling ; exists ; 2012 ; Interpersona: An International Journal on Personal Relationships Volume 6 ; 6 ; 2012 ; https://interpersona.psychopen.eu/ ; >
+      au < frozen ; exists ; 2012 ; Interpersona: An International Journal on Personal Relationships Volume 6 ; 6 ; 2012 ; https://interpersona.psychopen.eu/ ; >
       au < finished ; finished ; 2013 ; Interpersona: An International Journal on Personal Relationships Volume 7 ; 7 ; 2013 ; http://interpersona.psychopen.eu/ ; >
       au < finished ; finished ; 2014 ; Interpersona: An International Journal on Personal Relationships Volume 8 ; 8 ; 2014 ; http://interpersona.psychopen.eu/ ; >
       au < finished ; finished ; 2015 ; Interpersona: An International Journal on Personal Relationships Volume 9 ; 9 ; 2015 ; http://interpersona.psychopen.eu/ ; reingest2.clockss.org:8085 >
@@ -119,7 +119,7 @@
       #param[base_url] = http://psyct.psychopen.eu/
       param[journal_id] = psyct
 
-      au < crawling ; exists ; 2012 ; Psychological Thought Volume 5 ; 5 ; 2012 ; https://psyct.psychopen.eu/ ; >
+      au < frozen ; exists ; 2012 ; Psychological Thought Volume 5 ; 5 ; 2012 ; https://psyct.psychopen.eu/ ; >
       au < finished ; crawling ; 2013 ; Psychological Thought Volume 6 ; 6 ; 2013 ; http://psyct.psychopen.eu/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2014 ; Psychological Thought Volume 7 ; 7 ; 2014 ; http://psyct.psychopen.eu/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2015 ; Psychological Thought Volume 8 ; 8 ; 2015 ; http://psyct.psychopen.eu/ ; reingest1.clockss.org:8082 >
@@ -137,7 +137,7 @@
       #param[base_url] = http://pch.psychopen.eu/
       param[journal_id] = pch
 
-      au < crawling ; exists ; 2012 ; Psychology, Community & Health Volume 1 ; 1 ; 2012 ; https://pch.psychopen.eu/ ; >
+      au < frozen ; exists ; 2012 ; Psychology, Community & Health Volume 1 ; 1 ; 2012 ; https://pch.psychopen.eu/ ; >
       au < finished ; finished ; 2013 ; Psychology, Community & Health Volume 2 ; 2 ; 2013 ; http://pch.psychopen.eu/ ; >
       au < finished ; finished ; 2014 ; Psychology, Community & Health Volume 3 ; 3 ; 2014 ; http://pch.psychopen.eu/ ; >
       au < finished ; finished ; 2015 ; Psychology, Community & Health Volume 4 ; 4 ; 2015 ; http://pch.psychopen.eu/ ; reingest2.clockss.org:8085 >
