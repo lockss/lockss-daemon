@@ -768,7 +768,7 @@
     param[journal_id] = 10.1055/s-00032321
     #years = 2017-current
 
-    au < manifest ; exists ; 2017 ; 2017 ; Current Research: Concussion Volume 4 ; 4 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Current Research: Concussion Volume 4 ; 4 ; >
 
   }
 
@@ -4606,7 +4606,7 @@
     au < finished ; finished ; 2014 ; 2014 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 186 ; 186 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 187 ; 187 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 188 ; 188 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 189 ; 189 ; >
+    au < testing ; exists ; 2017 ; 2017 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 189 ; 189 ; >
 
   }
 
@@ -4656,7 +4656,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Seminars in Hearing Volume 35 ; 35 ; >
    au < finished ; finished ; 2015 ; 2015 ; Seminars in Hearing Volume 36 ; 36 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; down ; 2016 ; 2016 ; Seminars in Hearing Volume 37 ; 37 ;  >
-   au < manifest ; exists ; 2017 ; 2017 ; Seminars in Hearing Volume 38 ; 38 ; >
+   au < testing ; exists ; 2017 ; 2017 ; Seminars in Hearing Volume 38 ; 38 ; >
 
   }
 
@@ -4705,7 +4705,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Seminars in Interventional Radiology Volume 31 ; 31 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; Seminars in Interventional Radiology Volume 32 ; 32 ; reingest1.clockss.org:8082 >
    au < deepCrawl ; down ; 2016 ; 2016 ; Seminars in Interventional Radiology Volume 33 ; 33 ;  >
-   au < manifest ; exists ; 2017 ; 2017 ; Seminars in Interventional Radiology Volume 34 ; 34 ; >
+   au < testing ; exists ; 2017 ; 2017 ; Seminars in Interventional Radiology Volume 34 ; 34 ; >
 
   }
 
@@ -4757,7 +4757,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Seminars in Liver Disease Volume 34 ; 34 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2015 ; 2015 ; Seminars in Liver Disease Volume 35 ; 35 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; down ; 2016 ; 2016 ; Seminars in Liver Disease Volume 36 ; 36 ;  >
-   au < manifest ; exists ; 2017 ; 2017 ; Seminars in Liver Disease Volume 37 ; 37 ; >
+   au < testing ; exists ; 2017 ; 2017 ; Seminars in Liver Disease Volume 37 ; 37 ; >
 
   }
 
@@ -4793,7 +4793,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Seminars in Musculoskeletal Radiology Volume 18 ; 18 ; >
    au < finished ; finished ; 2015 ; 2015 ; Seminars in Musculoskeletal Radiology Volume 19 ; 19 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; down ; 2016 ; 2016 ; Seminars in Musculoskeletal Radiology Volume 20 ; 20 ;  >
-   au < manifest ; exists ; 2017 ; 2017 ; Seminars in Musculoskeletal Radiology Volume 21 ; 21 ; >
+   au < testing ; exists ; 2017 ; 2017 ; Seminars in Musculoskeletal Radiology Volume 21 ; 21 ; >
 
   }
 
@@ -4845,7 +4845,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Seminars in Neurology Volume 34 ; 34 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; Seminars in Neurology Volume 35 ; 35 ; reingest1.clockss.org:8082 >
    au < deepCrawl ; down ; 2016 ; 2016 ; Seminars in Neurology Volume 36 ; 36 ;  >
-   au < manifest ; exists ; 2017 ; 2017 ; Seminars in Neurology Volume 37 ; 37 ; >
+   au < testing ; exists ; 2017 ; 2017 ; Seminars in Neurology Volume 37 ; 37 ; >
 
   }
 
@@ -4896,7 +4896,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Seminars in Plastic Surgery Volume 28 ; 28 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; Seminars in Plastic Surgery Volume 29 ; 29 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; down ; 2016 ; 2016 ; Seminars in Plastic Surgery Volume 30 ; 30 ;  >
-   au < manifest ; exists ; 2017 ; 2017 ; Seminars in Plastic Surgery Volume 31 ; 31 ; >
+   au < testing ; exists ; 2017 ; 2017 ; Seminars in Plastic Surgery Volume 31 ; 31 ; >
 
   }
 
@@ -4960,7 +4960,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Seminars in Reproductive Medicine Volume 32 ; 32 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; Seminars in Reproductive Medicine Volume 33 ; 33 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; down ; 2016 ; 2016 ; Seminars in Reproductive Medicine Volume 34 ; 34 ;  >
-   au < manifest ; exists ; 2017 ; 2017 ; Seminars in Reproductive Medicine Volume 35 ; 35 ; >
+   au < testing ; exists ; 2017 ; 2017 ; Seminars in Reproductive Medicine Volume 35 ; 35 ; >
 
   }
 
@@ -4999,7 +4999,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Seminars in Respiratory and Critical Care Medicine Volume 35 ; 35 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; Seminars in Respiratory and Critical Care Medicine Volume 36 ; 36 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; down ; 2016 ; 2016 ; Seminars in Respiratory and Critical Care Medicine Volume 37 ; 37 ;  >
-   au < manifest ; exists ; 2017 ; 2017 ; Seminars in Respiratory and Critical Care Medicine Volume 38 ; 38 ; >
+   au < testing ; exists ; 2017 ; 2017 ; Seminars in Respiratory and Critical Care Medicine Volume 38 ; 38 ; >
 
   }
 
@@ -5048,7 +5048,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Seminars in Speech and Language Volume 35 ; 35 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Seminars in Speech and Language Volume 36 ; 36 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; down ; 2016 ; 2016 ; Seminars in Speech and Language Volume 37 ; 37 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Seminars in Speech and Language Volume 38 ; 38 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Seminars in Speech and Language Volume 38 ; 38 ; >
 
   }
 
@@ -5107,7 +5107,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Seminars in Thrombosis and Hemostasis Volume 40 ; 40 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Seminars in Thrombosis and Hemostasis Volume 41 ; 41 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; Seminars in Thrombosis and Hemostasis Volume 42 ; 42 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Seminars in Thrombosis and Hemostasis Volume 43 ; 43 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Seminars in Thrombosis and Hemostasis Volume 43 ; 43 ; >
 
   }
 
@@ -5156,7 +5156,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 11 ; 11 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 12 ; 12 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 13 ; 13 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 14 ; 14 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 14 ; 14 ; >
 
   }
 
@@ -5240,7 +5240,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Sportphysio Volume 2 ; 2 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Sportphysio Volume 3 ; 3 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; Sportphysio Volume 4 ; 4 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Sportphysio Volume 5 ; 5 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Sportphysio Volume 5 ; 5 ; >
 
   }
 
@@ -5301,7 +5301,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Sportverletzung - Sportschaden Volume 28 ; 28 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; Sportverletzung - Sportschaden Volume 29 ; 29 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; down ; 2016 ; 2016 ; Sportverletzung - Sportschaden Volume 30 ; 30 ;  >
-   au < manifest ; exists ; 2017 ; 2017 ; Sportverletzung - Sportschaden Volume 31 ; 31 ; >
+   au < testing ; exists ; 2017 ; 2017 ; Sportverletzung - Sportschaden Volume 31 ; 31 ; >
 
    }
 
@@ -5334,7 +5334,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Sprache Stimme Gehör Volume 38 ; 38 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; Sprache Stimme Gehör Volume 39 ; 39 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; down ; 2016 ; 2016 ; Sprache Stimme Gehör Volume 40 ; 40 ;  >
-   au < manifest ; exists ; 2017 ; 2017 ; Sprache Stimme Gehör Volume 41 ; 41 ; >
+   au < testing ; exists ; 2017 ; 2017 ; Sprache Stimme Gehör Volume 41 ; 41 ; >
 
   }
 
@@ -5367,7 +5367,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Suchttherapie Volume 15 ; 15 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; Suchttherapie Volume 16 ; 16 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; down ; 2016 ; 2016 ; Suchttherapie Volume 17 ; 17 ;  >
-   au < manifest ; exists ; 2017 ; 2017 ; Suchttherapie Volume 18 ; 18 ; >
+   au < testing ; exists ; 2017 ; 2017 ; Suchttherapie Volume 18 ; 18 ; >
 
   }
 
@@ -5385,7 +5385,7 @@
 
     au < finished ; finished ; 2015 ; 2015 ; The Surgery Journal Volume 1 ; 1 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; The Surgery Journal Volume 2 ; 2 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; The Surgery Journal Volume 3 ; 3 ; >
+    au < testing ; exists ; 2017 ; 2017 ; The Surgery Journal Volume 3 ; 3 ; >
 
   }
 
@@ -5413,7 +5413,7 @@
    au < finished ; finished ; 2014 ; 2014 ; SYNFACTS Volume 10 ; 10 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; SYNFACTS Volume 11 ; 11 ; reingest2.clockss.org:8085 >
    au < deepCrawl ; exists ; 2016 ; 2016 ; SYNFACTS Volume 12 ; 12 ; >
-   au < manifest ; exists ; 2017 ; 2017 ; SYNFACTS Volume 13 ; 13 ; >
+   au < testing ; exists ; 2017 ; 2017 ; SYNFACTS Volume 13 ; 13 ; >
 
   }
 
@@ -5457,7 +5457,7 @@
    au < finished ; finished ; 2014 ; 2014 ; SYNLETT Volume 25 ; 25 ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2015 ; 2015 ; SYNLETT Volume 26 ; 26 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; down ; 2016 ; 2016 ; SYNLETT Volume 27 ; 27 ;  >
-   au < manifest ; exists ; 2017 ; 2017 ; SYNLETT Volume 28 ; 28 ; >
+   au < testing ; exists ; 2017 ; 2017 ; SYNLETT Volume 28 ; 28 ; >
 
   }
 
@@ -5472,7 +5472,7 @@
     param[journal_id] = 10.1055/s-00032269
     #years = 2017-current
 
-    au < manifest ; exists ; 2017 ; 2017 ; SynOpen Volume 1 ; 1 ; >
+    au < testing ; exists ; 2017 ; 2017 ; SynOpen Volume 1 ; 1 ; >
 
   }
 
@@ -5516,7 +5516,7 @@
    au < finished ; finished ; 2014 ; 2014 ; SYNTHESIS Volume 46 ; 46 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2015 ; 2015 ; SYNTHESIS Volume 47 ; 47 ; reingest1.clockss.org:8082 >
    au < deepCrawl ; exists ; 2016 ; 2016 ; SYNTHESIS Volume 48 ; 48 ; >
-   au < manifest ; exists ; 2017 ; 2017 ; SYNTHESIS Volume 49 ; 49 ; >
+   au < testing ; exists ; 2017 ; 2017 ; SYNTHESIS Volume 49 ; 49 ; >
 
   }
 
@@ -5561,7 +5561,7 @@
    au < finished ; finished ; 2014 ; 2014 ; team-konkret Volume 10 ; 10 ; >
    au < finished ; finished ; 2015 ; 2015 ; team-konkret Volume 11 ; 11 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2016 ; 2016 ; team-konkret Volume 12 ; 12 ; >
-   au < manifest ; exists ; 2017 ; 2017 ; team-konkret Volume 13 ; 13 ; >
+   au < testing ; exists ; 2017 ; 2017 ; team-konkret Volume 13 ; 13 ; >
 
   }
 
@@ -5615,7 +5615,7 @@
     au < finished ; finished ; 2014 ; 2014 ; The Thoracic and Cardiovascular Surgeon Volume 62 ; 62 ; >
     au < finished ; finished ; 2015 ; 2015 ; The Thoracic and Cardiovascular Surgeon Volume 63 ; 63 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; The Thoracic and Cardiovascular Surgeon Volume 64 ; 64 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; The Thoracic and Cardiovascular Surgeon Volume 65 ; 65 ; >
+    au < testing ; exists ; 2017 ; 2017 ; The Thoracic and Cardiovascular Surgeon Volume 65 ; 65 ; >
 
   }
 
@@ -5637,7 +5637,7 @@
     au < finished ; finished ; 2014 ; 2014 ; The Thoracic and Cardiovascular Surgeon Reports Volume 3 ; 3 ; >
     au < finished ; finished ; 2015 ; 2015 ; The Thoracic and Cardiovascular Surgeon Reports Volume 4 ; 4 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; 2016 ; The Thoracic and Cardiovascular Surgeon Reports Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2017 ; 2017 ; The Thoracic and Cardiovascular Surgeon Reports Volume 6 ; 6 ; >
+    au < testing ; exists ; 2017 ; 2017 ; The Thoracic and Cardiovascular Surgeon Reports Volume 6 ; 6 ; >
 
   }
 
@@ -5677,7 +5677,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 4 ; 4 ; >
     au < finished ; finished ; 2015 ; 2015 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 5 ; 5 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 6 ; 6 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 7 ; 7 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 7 ; 7 ; >
 
   }
 
@@ -5710,7 +5710,7 @@
     au < finished ; finished ; 2014 ; 2014 ; TumorDiagnostik & Therapie Volume 37 ; 37 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; TumorDiagnostik & Therapie Volume 38 ; 38 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; TumorDiagnostik & Therapie Volume 39 ; 39 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; TumorDiagnostik & Therapie Volume 40 ; 40 ; >
+    au < testing ; exists ; 2017 ; 2017 ; TumorDiagnostik & Therapie Volume 40 ; 40 ; >
 
   }
 
@@ -5763,7 +5763,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 35 ; 35 ; >
     au < finished ; finished ; 2015 ; 2015 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 36 ; 36 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 37 ; 37 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 38 ; 38 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 38 ; 38 ; >
 
   }
 
@@ -5779,7 +5779,7 @@
 
    au < finished ; finished ; 2015 ; 2015 ; Ultrasound International Open Volume 1 ; 1 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; down ; 2016 ; 2016 ; Ultrasound International Open Volume 2 ; 2 ;  >
-   au < manifest ; exists ; 2017 ; 2017 ; Ultrasound International Open Volume 3 ; 3 ; >
+   au < testing ; exists ; 2017 ; 2017 ; Ultrasound International Open Volume 3 ; 3 ; >
 
   }
 
@@ -5827,7 +5827,7 @@
     au < finished ; finished ; 2014 ; 2014 ; veterinär spiegel Volume 24 ; 24 ; >
     au < finished ; finished ; 2015 ; 2015 ; veterinär spiegel Volume 25 ; 25 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; veterinär spiegel Volume 26 ; 26 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; veterinär spiegel Volume 27 ; 27 ; >
+    au < testing ; exists ; 2017 ; 2017 ; veterinär spiegel Volume 27 ; 27 ; >
 
   }
 
@@ -5891,7 +5891,7 @@
 
     au < finished ; finished ; 2015 ; 2015 ; VPT Magazin Volume 1 ; 1 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; VPT Magazin Volume 2 ; 2 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; VPT Magazin Volume 3 ; 3 ; >
+    au < testing ; exists ; 2017 ; 2017 ; VPT Magazin Volume 3 ; 3 ; >
 
   }
 
@@ -5935,7 +5935,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Zahnmedizin up2date Volume 8 ; 8 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Zahnmedizin up2date Volume 9 ; 9 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; Zahnmedizin up2date Volume 10 ; 10 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Zahnmedizin up2date Volume 11 ; 11 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Zahnmedizin up2date Volume 11 ; 11 ; >
 
   }
 
@@ -5961,7 +5961,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 28 ; 28 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 29 ; 29 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 30 ; 30 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 31 ; 31 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 31 ; 31 ; >
 
   }
 
@@ -5994,7 +5994,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Zeitschrift für Gastroenterologie Volume 52 ; 52 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; Zeitschrift für Gastroenterologie Volume 53 ; 53 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; 2016 ; Zeitschrift für Gastroenterologie Volume 54 ; 54 ; >
-    au < manifest ; exists ; 2017 ; 2017 ; Zeitschrift für Gastroenterologie Volume 55 ; 55 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Zeitschrift für Gastroenterologie Volume 55 ; 55 ; >
 
   }
 
@@ -6027,7 +6027,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 218 ; 218 ; >
     au < finished ; finished ; 2015 ; 2015 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 219 ; 219 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 220 ; 220 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 221 ; 221 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 221 ; 221 ; >
 
   }
 
@@ -6104,7 +6104,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Zeitschrift für Klassische Homöopathie Volume 58 ; 58 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Zeitschrift für Klassische Homöopathie Volume 59 ; 59 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; Zeitschrift für Klassische Homöopathie Volume 60 ; 60 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Zeitschrift für Klassische Homöopathie Volume 61 ; 61 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Zeitschrift für Klassische Homöopathie Volume 61 ; 61 ; >
 
   }
 
@@ -6128,7 +6128,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Zeitschrift für Komplementärmedizin Volume 6 ; 6 ; >
     au < finished ; finished ; 2015 ; 2015 ; Zeitschrift für Komplementärmedizin Volume 7 ; 7 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; Zeitschrift für Komplementärmedizin Volume 8 ; 8 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Zeitschrift für Komplementärmedizin Volume 9 ; 9 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Zeitschrift für Komplementärmedizin Volume 9 ; 9 ; >
 
   }
 
@@ -6154,7 +6154,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Zeitschrift für Orthomolekulare Medizin Volume 12 ; 12 ; >
     au < finished ; finished ; 2015 ; 2015 ; Zeitschrift für Orthomolekulare Medizin Volume 13 ; 13 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; Zeitschrift für Orthomolekulare Medizin Volume 14 ; 14 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Zeitschrift für Orthomolekulare Medizin Volume 15 ; 15 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Zeitschrift für Orthomolekulare Medizin Volume 15 ; 15 ; >
 
   }
 
@@ -6180,7 +6180,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 152 ; 152 ; >
     au < finished ; finished ; 2015 ; 2015 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 153 ; 153 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 154 ; 154 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 155 ; 155 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 155 ; 155 ; >
 
   }
 
@@ -6257,7 +6257,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Zeitschrift für Palliativmedizin Volume 15 ; 15 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Zeitschrift für Palliativmedizin Volume 16 ; 16 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; Zeitschrift für Palliativmedizin Volume 17 ; 17 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Zeitschrift für Palliativmedizin Volume 18 ; 18 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Zeitschrift für Palliativmedizin Volume 18 ; 18 ; >
 
   }
 
@@ -6285,7 +6285,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Zeitschrift für Phytotherapie Volume 35 ; 35 ; >
     au < finished ; finished ; 2015 ; 2015 ; Zeitschrift für Phytotherapie Volume 36 ; 36 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; Zeitschrift für Phytotherapie Volume 37 ; 37 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Zeitschrift für Phytotherapie Volume 38 ; 38 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Zeitschrift für Phytotherapie Volume 38 ; 38 ; >
 
   }
 
@@ -6317,7 +6317,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Zeitschrift für Sexualforschung Volume 27 ; 27 ; >
     au < finished ; finished ; 2015 ; 2015 ; Zeitschrift für Sexualforschung Volume 28 ; 28 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; Zeitschrift für Sexualforschung Volume 29 ; 29 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Zeitschrift für Sexualforschung Volume 30 ; 30 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Zeitschrift für Sexualforschung Volume 30 ; 30 ; >
 
   }
 
@@ -6350,7 +6350,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Zeitschrift für Chirurgie Volume 139 ; 139 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; Zeitschrift für Chirurgie Volume 140 ; 140 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; Zeitschrift für Chirurgie Volume 141 ; 141 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Zeitschrift für Chirurgie Volume 142 ; 142 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Zeitschrift für Chirurgie Volume 142 ; 142 ; >
 
   }
 
@@ -6468,7 +6468,7 @@
     au < finished ; finished ; 2014 ; 2014 ; ZWR - Das Deutsche Zahnärzteblatt Volume 123 ; 123 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; ZWR - Das Deutsche Zahnärzteblatt Volume 124 ; 124 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; 2016 ; ZWR - Das Deutsche Zahnärzteblatt Volume 125 ; 125 ; >
-    au < manifest ; exists ; 2017 ; 2017 ; ZWR - Das Deutsche Zahnärzteblatt Volume 126 ; 126 ; >
+    au < testing ; exists ; 2017 ; 2017 ; ZWR - Das Deutsche Zahnärzteblatt Volume 126 ; 126 ; >
 
   }
 
