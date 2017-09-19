@@ -3974,7 +3974,7 @@
         au < doNotProcess ; 2014 ; BioScope: South Asian Screen Studies Volume 5 ; 5 ; bioa >
         au < doNotProcess ; 2015 ; BioScope: South Asian Screen Studies Volume 6 ; 6 ; bioa >
         au < released ; 2016 ; BioScope: South Asian Screen Studies Volume 7 ; 7 ; bioa >
-        au < expected ; 2017 ; BioScope: South Asian Screen Studies Volume 8 ; 8 ; bioa >
+        au < manifest ; 2017 ; BioScope: South Asian Screen Studies Volume 8 ; 8 ; bioa >
 
       }
 
@@ -14407,24 +14407,24 @@
   
       #param[base_url] = http://hpx.sagepub.com/
   
-        au < exists ; 1999 ; Hospital Pharmacy Volume 34 ; 34 ; hpxa >
-        au < exists ; 2000 ; Hospital Pharmacy Volume 35 ; 35 ; hpxa >
-        au < exists ; 2001 ; Hospital Pharmacy Volume 36 ; 36 ; hpxa >
-        au < exists ; 2002 ; Hospital Pharmacy Volume 37 ; 37 ; hpxa >
-        au < exists ; 2003 ; Hospital Pharmacy Volume 38 ; 38 ; hpxa >
-        au < exists ; 2004 ; Hospital Pharmacy Volume 39 ; 39 ; hpxa >
-        au < exists ; 2005 ; Hospital Pharmacy Volume 40 ; 40 ; hpxa >
-        au < exists ; 2006 ; Hospital Pharmacy Volume 41 ; 41 ; hpxa >
-        au < exists ; 2007 ; Hospital Pharmacy Volume 42 ; 42 ; hpxa >
-        au < exists ; 2008 ; Hospital Pharmacy Volume 43 ; 43 ; hpxa >
-        au < exists ; 2009 ; Hospital Pharmacy Volume 44 ; 44 ; hpxa >
-        au < exists ; 2010 ; Hospital Pharmacy Volume 45 ; 45 ; hpxa >
-        au < exists ; 2011 ; Hospital Pharmacy Volume 46 ; 46 ; hpxa >
-        au < exists ; 2012 ; Hospital Pharmacy Volume 47 ; 47 ; hpxa >
-        au < exists ; 2013 ; Hospital Pharmacy Volume 48 ; 48 ; hpxa >
-        au < exists ; 2014 ; Hospital Pharmacy Volume 49 ; 49 ; hpxa >
-        au < exists ; 2015 ; Hospital Pharmacy Volume 50 ; 50 ; hpxa >
-        au < exists ; 2016 ; Hospital Pharmacy Volume 51 ; 51 ; hpxa >
+        au < manifest ; 1999 ; Hospital Pharmacy Volume 34 ; 34 ; hpxa >
+        au < manifest ; 2000 ; Hospital Pharmacy Volume 35 ; 35 ; hpxa >
+        au < manifest ; 2001 ; Hospital Pharmacy Volume 36 ; 36 ; hpxa >
+        au < manifest ; 2002 ; Hospital Pharmacy Volume 37 ; 37 ; hpxa >
+        au < manifest ; 2003 ; Hospital Pharmacy Volume 38 ; 38 ; hpxa >
+        au < manifest ; 2004 ; Hospital Pharmacy Volume 39 ; 39 ; hpxa >
+        au < manifest ; 2005 ; Hospital Pharmacy Volume 40 ; 40 ; hpxa >
+        au < manifest ; 2006 ; Hospital Pharmacy Volume 41 ; 41 ; hpxa >
+        au < manifest ; 2007 ; Hospital Pharmacy Volume 42 ; 42 ; hpxa >
+        au < manifest ; 2008 ; Hospital Pharmacy Volume 43 ; 43 ; hpxa >
+        au < manifest ; 2009 ; Hospital Pharmacy Volume 44 ; 44 ; hpxa >
+        au < manifest ; 2010 ; Hospital Pharmacy Volume 45 ; 45 ; hpxa >
+        au < manifest ; 2011 ; Hospital Pharmacy Volume 46 ; 46 ; hpxa >
+        au < manifest ; 2012 ; Hospital Pharmacy Volume 47 ; 47 ; hpxa >
+        au < manifest ; 2013 ; Hospital Pharmacy Volume 48 ; 48 ; hpxa >
+        au < manifest ; 2014 ; Hospital Pharmacy Volume 49 ; 49 ; hpxa >
+        au < manifest ; 2015 ; Hospital Pharmacy Volume 50 ; 50 ; hpxa >
+        au < manifest ; 2016 ; Hospital Pharmacy Volume 51 ; 51 ; hpxa >
         au < manifest ; 2017 ; Hospital Pharmacy Volume 52 ; 52 ; hpxa >
   
     }
@@ -22293,7 +22293,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < manifest ; 2014-2015 ; Journal of Historical Research in Music Education Volume 36 ; 36 ; jhrb >
       au < manifest ; 2015-2016 ; Journal of Historical Research in Music Education Volume 37 ; 37 ; jhrb >
       au < manifest ; 2016-2017 ; Journal of Historical Research in Music Education Volume 38 ; 38 ; jhrb >
-      au < expected ; 2017-2018 ; Journal of Historical Research in Music Education Volume 39 ; 39 ; jhrb >
+      au < manifest ; 2017-2018 ; Journal of Historical Research in Music Education Volume 39 ; 39 ; jhrb >
 
    }
 
@@ -29128,7 +29128,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2014 ; Millennium - Journal of International Studies Volume 43 ; 43 ; mila >
         au < doNotProcess ; 2015 ; Millennium - Journal of International Studies Volume 44 ; 44 ; mila >
         au < released ; 2016 ; Millennium - Journal of International Studies Volume 45 ; 45 ; mila >
-        au < expected ; 2017 ; Millennium - Journal of International Studies Volume 46 ; 46 ; mila >
+        au < manifest ; 2017 ; Millennium - Journal of International Studies Volume 46 ; 46 ; mila >
 
       }
 
@@ -30434,35 +30434,35 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
         #param[base_url] = http://nad.sagepub.com/
 
-        au < exists ; 1984 ; Nordic Studies on Alcohol and Drugs Volume 1 ; 1 ; nadb >
-        au < exists ; 1985 ; Nordic Studies on Alcohol and Drugs Volume 2 ; 2 ; nadb >
-        au < exists ; 1986 ; Nordic Studies on Alcohol and Drugs Volume 3 ; 3 ; nadb >
-        au < exists ; 1987 ; Nordic Studies on Alcohol and Drugs Volume 4 ; 4 ; nadb >
-        au < exists ; 1988 ; Nordic Studies on Alcohol and Drugs Volume 5 ; 5 ; nadb >
-        au < exists ; 1989 ; Nordic Studies on Alcohol and Drugs Volume 6 ; 6 ; nadb >
-        au < exists ; 1990 ; Nordic Studies on Alcohol and Drugs Volume 7 ; 7 ; nadb >
-        au < exists ; 1991 ; Nordic Studies on Alcohol and Drugs Volume 8 ; 8 ; nadc >
-        au < exists ; 1992 ; Nordic Studies on Alcohol and Drugs Volume 9 ; 9 ; nadc >
-        au < exists ; 1993 ; Nordic Studies on Alcohol and Drugs Volume 10 ; 10 ; nadc >
-        au < exists ; 1994 ; Nordic Studies on Alcohol and Drugs Volume 11 ; 11 ; nadc >
-        au < exists ; 1995 ; Nordic Studies on Alcohol and Drugs Volume 12 ; 12 ; nadc >
-        au < exists ; 1996 ; Nordic Studies on Alcohol and Drugs Volume 13 ; 13 ; nadc >
-        au < exists ; 1997 ; Nordic Studies on Alcohol and Drugs Volume 14 ; 14 ; nada >
-        au < exists ; 1998 ; Nordic Studies on Alcohol and Drugs Volume 15 ; 15 ; nada >
-        au < exists ; 1999 ; Nordic Studies on Alcohol and Drugs Volume 16 ; 16 ; nada >
-        au < exists ; 2000 ; Nordic Studies on Alcohol and Drugs Volume 17 ; 17 ; nada >
-        au < exists ; 2001 ; Nordic Studies on Alcohol and Drugs Volume 18 ; 18 ; nada >
-        au < exists ; 2002 ; Nordic Studies on Alcohol and Drugs Volume 19 ; 19 ; nada >
-        au < exists ; 2003 ; Nordic Studies on Alcohol and Drugs Volume 20 ; 20 ; nada >
-        au < exists ; 2004 ; Nordic Studies on Alcohol and Drugs Volume 21 ; 21 ; nada >
-        au < exists ; 2005 ; Nordic Studies on Alcohol and Drugs Volume 22 ; 22 ; nada >
-        au < exists ; 2006 ; Nordic Studies on Alcohol and Drugs Volume 23 ; 23 ; nada >
-        au < exists ; 2007 ; Nordic Studies on Alcohol and Drugs Volume 24 ; 24 ; nada >
-        au < exists ; 2008 ; Nordic Studies on Alcohol and Drugs Volume 25 ; 25 ; nada >
-        au < exists ; 2009 ; Nordic Studies on Alcohol and Drugs Volume 26 ; 26 ; nada >
-        au < exists ; 2010 ; Nordic Studies on Alcohol and Drugs Volume 27 ; 27 ; nada >
-        au < exists ; 2011 ; Nordic Studies on Alcohol and Drugs Volume 28 ; 28 ; nada >
-        au < exists ; 2012 ; Nordic Studies on Alcohol and Drugs Volume 29 ; 29 ; nada >
+        au < manifest ; 1984 ; Nordic Studies on Alcohol and Drugs Volume 1 ; 1 ; nadb >
+        au < manifest ; 1985 ; Nordic Studies on Alcohol and Drugs Volume 2 ; 2 ; nadb >
+        au < manifest ; 1986 ; Nordic Studies on Alcohol and Drugs Volume 3 ; 3 ; nadb >
+        au < manifest ; 1987 ; Nordic Studies on Alcohol and Drugs Volume 4 ; 4 ; nadb >
+        au < manifest ; 1988 ; Nordic Studies on Alcohol and Drugs Volume 5 ; 5 ; nadb >
+        au < manifest ; 1989 ; Nordic Studies on Alcohol and Drugs Volume 6 ; 6 ; nadb >
+        au < manifest ; 1990 ; Nordic Studies on Alcohol and Drugs Volume 7 ; 7 ; nadb >
+        au < manifest ; 1991 ; Nordic Studies on Alcohol and Drugs Volume 8 ; 8 ; nadc >
+        au < manifest ; 1992 ; Nordic Studies on Alcohol and Drugs Volume 9 ; 9 ; nadc >
+        au < manifest ; 1993 ; Nordic Studies on Alcohol and Drugs Volume 10 ; 10 ; nadc >
+        au < manifest ; 1994 ; Nordic Studies on Alcohol and Drugs Volume 11 ; 11 ; nadc >
+        au < manifest ; 1995 ; Nordic Studies on Alcohol and Drugs Volume 12 ; 12 ; nadc >
+        au < manifest ; 1996 ; Nordic Studies on Alcohol and Drugs Volume 13 ; 13 ; nadc >
+        au < manifest ; 1997 ; Nordic Studies on Alcohol and Drugs Volume 14 ; 14 ; nada >
+        au < manifest ; 1998 ; Nordic Studies on Alcohol and Drugs Volume 15 ; 15 ; nada >
+        au < manifest ; 1999 ; Nordic Studies on Alcohol and Drugs Volume 16 ; 16 ; nada >
+        au < manifest ; 2000 ; Nordic Studies on Alcohol and Drugs Volume 17 ; 17 ; nada >
+        au < manifest ; 2001 ; Nordic Studies on Alcohol and Drugs Volume 18 ; 18 ; nada >
+        au < manifest ; 2002 ; Nordic Studies on Alcohol and Drugs Volume 19 ; 19 ; nada >
+        au < manifest ; 2003 ; Nordic Studies on Alcohol and Drugs Volume 20 ; 20 ; nada >
+        au < manifest ; 2004 ; Nordic Studies on Alcohol and Drugs Volume 21 ; 21 ; nada >
+        au < manifest ; 2005 ; Nordic Studies on Alcohol and Drugs Volume 22 ; 22 ; nada >
+        au < manifest ; 2006 ; Nordic Studies on Alcohol and Drugs Volume 23 ; 23 ; nada >
+        au < manifest ; 2007 ; Nordic Studies on Alcohol and Drugs Volume 24 ; 24 ; nada >
+        au < manifest ; 2008 ; Nordic Studies on Alcohol and Drugs Volume 25 ; 25 ; nada >
+        au < manifest ; 2009 ; Nordic Studies on Alcohol and Drugs Volume 26 ; 26 ; nada >
+        au < manifest ; 2010 ; Nordic Studies on Alcohol and Drugs Volume 27 ; 27 ; nada >
+        au < manifest ; 2011 ; Nordic Studies on Alcohol and Drugs Volume 28 ; 28 ; nada >
+        au < manifest ; 2012 ; Nordic Studies on Alcohol and Drugs Volume 29 ; 29 ; nada >
         au < manifest ; 2013 ; Nordic Studies on Alcohol and Drugs Volume 30 ; 30 ; nada >
         au < released ; 2014 ; Nordic Studies on Alcohol and Drugs Volume 31 ; 31 ; nada >
         au < released ; 2015 ; Nordic Studies on Alcohol and Drugs Volume 32 ; 32 ; nada >
