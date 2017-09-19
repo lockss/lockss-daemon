@@ -51,7 +51,7 @@
     au < finished ; finished ; 2014 ; 2014 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 49 ; 49 ; >
     au < finished ; finished ; 2015 ; 2015 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 50 ; 50 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 51 ; 51 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 52 ; 52 ; >
+    au < crawling ; exists ; 2017 ; 2017 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 52 ; 52 ; >
 
   }
 
@@ -396,7 +396,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Allgemeine Homöopathische Zeitung Volume 259 ; 259 ; >
     au < finished ; finished ; 2015 ; 2015 ; Allgemeine Homöopathische Zeitung Volume 260 ; 260 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; Allgemeine Homöopathische Zeitung Volume 261 ; 261 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; Allgemeine Homöopathische Zeitung Volume 262 ; 262 ; >
+    au < crawling ; exists ; 2017 ; 2017 ; Allgemeine Homöopathische Zeitung Volume 262 ; 262 ; >
 
     }
 
@@ -595,7 +595,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Augenheilkunde up2date Volume 4 ; 4 ; >
     au < finished ; finished ; 2015 ; 2015 ; Augenheilkunde up2date Volume 5 ; 5 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2016 ; 2016 ; Augenheilkunde up2date Volume 6 ; 6 ; >
-    au < ready ; exists ; 2017 ; 2017 ; Augenheilkunde up2date Volume 7 ; 7 ; >
+    au < crawling ; exists ; 2017 ; 2017 ; Augenheilkunde up2date Volume 7 ; 7 ; >
 
   }
 
@@ -935,7 +935,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Dialyse aktuell Volume 9 ; 9 ; >
    au < finished ; finished ; 2015 ; 2015 ; Dialyse aktuell Volume 10 ; 10 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; exists ; 2016 ; 2016 ; Dialyse aktuell Volume 11 ; 11 ; >
-   au < ready ; exists ; 2017 ; 2017 ; Dialyse aktuell Volume 12 ; 12 ; >
+   au < crawling ; exists ; 2017 ; 2017 ; Dialyse aktuell Volume 12 ; 12 ; >
 
   }
 
@@ -1092,7 +1092,7 @@
    au < finished ; finished ; 2014 ; 2014 ; DMW - Deutsche Medizinische Wochenschrift Volume 140 ; 140 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; DMW - Deutsche Medizinische Wochenschrift Volume 141 ; 141 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; down ; 2016 ; 2016 ; DMW - Deutsche Medizinische Wochenschrift Volume 142 ; 142 ;  >
-   au < ready ; exists ; 2017 ; 2017 ; DMW - Deutsche Medizinische Wochenschrift Volume 143 ; 143 ; >
+   au < crawling ; exists ; 2017 ; 2017 ; DMW - Deutsche Medizinische Wochenschrift Volume 143 ; 143 ; >
 
   }
 
@@ -1660,7 +1660,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Fortschritte der Neurologie - Psychiatrie Volume 82 ; 82 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; Fortschritte der Neurologie - Psychiatrie Volume 83 ; 83 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; down ; 2016 ; 2016 ; Fortschritte der Neurologie - Psychiatrie Volume 84 ; 84 ;  >
-   au < ready ; exists ; 2017 ; 2017 ; Fortschritte der Neurologie - Psychiatrie Volume 85 ; 85 ; >
+   au < crawling ; exists ; 2017 ; 2017 ; Fortschritte der Neurologie - Psychiatrie Volume 85 ; 85 ; >
 
   }
 
@@ -1712,7 +1712,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Gastroenterologie up2dat Volume 10 ; 10 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; Gastroenterologie up2dat Volume 11 ; 11 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; down ; 2016 ; 2016 ; Gastroenterologie up2dat Volume 12 ; 12 ;  >
-   au < ready ; exists ; 2017 ; 2017 ; Gastroenterologie up2dat Volume 13 ; 13 ; >
+   au < crawling ; exists ; 2017 ; 2017 ; Gastroenterologie up2dat Volume 13 ; 13 ; >
 
   }
 
@@ -1813,7 +1813,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Gesundheitsökonomie & Qualitätsmanagement Volume 19 ; 19 ; >
    au < finished ; finished ; 2015 ; 2015 ; Gesundheitsökonomie & Qualitätsmanagement Volume 20 ; 20 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; exists ; 2016 ; 2016 ; Gesundheitsökonomie & Qualitätsmanagement Volume 21 ; 21 ; >
-   au < ready ; exists ; 2017 ; 2017 ; Gesundheitsökonomie & Qualitätsmanagement Volume 22 ; 22 ; >
+   au < crawling ; exists ; 2017 ; 2017 ; Gesundheitsökonomie & Qualitätsmanagement Volume 22 ; 22 ; >
 
   }
 
@@ -2609,7 +2609,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Journal of Neurological Surgery Reports Volume 75 ; 75 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; Journal of Neurological Surgery Reports Volume 76 ; 76 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; 2016 ; Journal of Neurological Surgery Reports Volume 77 ; 77 ; >
-    au < ready ; exists ; 2017 ; 2017 ; Journal of Neurological Surgery Reports Volume 78 ; 78 ; >
+    au < crawling ; exists ; 2017 ; 2017 ; Journal of Neurological Surgery Reports Volume 78 ; 78 ; >
 
   }
 
@@ -2751,7 +2751,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Journal of Pediatric Neurology Volume 12 ; 12 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Journal of Pediatric Neurology Volume 13 ; 13 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; Journal of Pediatric Neurology Volume 14 ; 14 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; Journal of Pediatric Neurology Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2017 ; 2017 ; Journal of Pediatric Neurology Volume 15 ; 15 ; >
 
   }
 
@@ -2821,7 +2821,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Journal of Reconstructive Microsurgery Volume 30 ; 30 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Journal of Reconstructive Microsurgery Volume 31 ; 31 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; 2016 ; Journal of Reconstructive Microsurgery Volume 32 ; 32 ; >
-    au < ready ; exists ; 2017 ; 2017 ; Journal of Reconstructive Microsurgery Volume 33 ; 33 ; >
+    au < crawling ; exists ; 2017 ; 2017 ; Journal of Reconstructive Microsurgery Volume 33 ; 33 ; >
 
   }
 
@@ -3148,7 +3148,7 @@
     au < finished ; finished ; 2014 ; 2014 ; kma - Das Gesundheitswirtschaftsmagazin Volume 19 ; 19 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; kma - Das Gesundheitswirtschaftsmagazin Volume 20 ; 20 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; kma - Das Gesundheitswirtschaftsmagazin Volume 21 ; 21 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; kma - Das Gesundheitswirtschaftsmagazin Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2017 ; 2017 ; kma - Das Gesundheitswirtschaftsmagazin Volume 22 ; 22 ; >
 
   }
 
@@ -3520,7 +3520,7 @@
     au < finished ; finished ; 2014 ; 2014 ; neuroreha Volume 6 ; 6 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; neuroreha Volume 7 ; 7 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; neuroreha Volume 8 ; 8 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; neuroreha Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2017 ; 2017 ; neuroreha Volume 9 ; 9 ; >
 
   }
 
@@ -3825,7 +3825,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Pädiatrie up2date Volume 9 ; 9 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Pädiatrie up2date Volume 10 ; 10 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; Pädiatrie up2date Volume 11 ; 11 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; Pädiatrie up2date Volume 12 ; 12 ; >
+    au < crawling ; exists ; 2017 ; 2017 ; Pädiatrie up2date Volume 12 ; 12 ; >
 
   }
 
