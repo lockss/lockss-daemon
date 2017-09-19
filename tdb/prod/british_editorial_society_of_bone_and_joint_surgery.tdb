@@ -136,9 +136,9 @@
     au < besbjs.BESBJSDrupalPlugin ; exists ; 2007 ; Journal of Bone & Joint Surgery, British Volume Volume 89 ; 89-B >
     au < besbjs.BESBJSDrupalPlugin ; exists ; 2008 ; Journal of Bone & Joint Surgery, British Volume Volume 90 ; 90-B >
     au < besbjs.BESBJSDrupalPlugin ; exists ; 2009 ; Journal of Bone & Joint Surgery, British Volume Volume 91 ; 91-B >
-    au < besbjs.BESBJSDrupalPlugin ; testing ; 2010 ; Journal of Bone & Joint Surgery, British Volume Volume 92 ; 92-B >
-    au < besbjs.BESBJSDrupalPlugin ; testing ; 2011 ; Journal of Bone & Joint Surgery, British Volume Volume 93 ; 93-B >
-    au < besbjs.BESBJSDrupalPlugin ; testing ; 2012 ; Journal of Bone & Joint Surgery, British Volume Volume 94 ; 94-B >
+    au < besbjs.BESBJSDrupalPlugin ; notReady ; 2010 ; Journal of Bone & Joint Surgery, British Volume Volume 92 ; 92-B >
+    au < besbjs.BESBJSDrupalPlugin ; notReady ; 2011 ; Journal of Bone & Joint Surgery, British Volume Volume 93 ; 93-B >
+    au < besbjs.BESBJSDrupalPlugin ; notReady ; 2012 ; Journal of Bone & Joint Surgery, British Volume Volume 94 ; 94-B >
     }
     {
     param[base_url] = http://www.bjj.boneandjoint.org.uk/
@@ -168,10 +168,10 @@
     param[base_url] = http://bjj.boneandjoint.org.uk/
     #base_url changed, removing www.
 
-    au < besbjs.BESBJSDrupalPlugin ; testing ; 2013 ; The Bone & Joint Journal Volume 95 ; 95-B >
-    au < besbjs.BESBJSDrupalPlugin ; testing ; 2014 ; The Bone & Joint Journal Volume 96 ; 96-B >
-    au < besbjs.BESBJSDrupalPlugin ; testing ; 2015 ; The Bone & Joint Journal Volume 97 ; 97-B >
-    au < besbjs.BESBJSDrupalPlugin ; testing ; 2016 ; The Bone & Joint Journal Volume 98 ; 98-B >
+    au < besbjs.BESBJSDrupalPlugin ; notReady ; 2013 ; The Bone & Joint Journal Volume 95 ; 95-B >
+    au < besbjs.BESBJSDrupalPlugin ; notReady ; 2014 ; The Bone & Joint Journal Volume 96 ; 96-B >
+    au < besbjs.BESBJSDrupalPlugin ; notReady ; 2015 ; The Bone & Joint Journal Volume 97 ; 97-B >
+    au < besbjs.BESBJSDrupalPlugin ; notReady ; 2016 ; The Bone & Joint Journal Volume 98 ; 98-B >
     au < besbjs.BESBJSDrupalPlugin ; manifest ; 2017 ; The Bone & Joint Journal Volume 99 ; 99-B >
     }
     {
