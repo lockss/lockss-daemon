@@ -212,6 +212,7 @@ while (my $line = <>) {
                     }
                 }
             } elsif (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && (($man_contents =~ m/\/content\/$param{volume_name}\//) || ($man_contents =~ m/\/content\/vol$param{volume_name}\//))) {
+                $result = "Manifest";
                 if ($man_contents =~ m/<title>\s*(.*)\s+C?LOCKSS\s+Manifest\s+Page.*<\/title>/si) {
                     $vol_title = $1;
                     $vol_title =~ s/\s*\n\s*/ /g;
@@ -219,7 +220,20 @@ while (my $line = <>) {
                         $vol_title = "\"" . $vol_title . "\"";
                     }
                 }
-                $result = "Manifest"
+                if ($man_contents =~ m/="([^"]*)" lockss-probe="true"/si) {
+                    my $pl_url = $1;
+                    my $req_pl = HTTP::Request->new(GET, $pl_url);
+                    my $resp_pl = $ua->request($req_pl);
+                    if ($resp_pl->is_success) {
+                        if ($req->url ne $resp->request->uri) {
+                            $result = "ProbeLinkRedirect";
+                        }
+                    } else {
+                        $result = "BadProbeLink-" . $resp_pl->code() . " " . $resp_pl->message();
+                    }
+                } else {
+                    $result = "MissingProbeLink";
+                }
             } else {
                 $result = "--"
             }
@@ -271,7 +285,21 @@ while (my $line = <>) {
                         $vol_title = "\"" . $vol_title . "\"";
                     }
                 }
-                $result = "Manifest"
+                $result = "Manifest";
+                if ($man_contents =~ m/="([^"]*)" lockss-probe="true"/si) {
+                    my $pl_url = $1;
+                    my $req_pl = HTTP::Request->new(GET, $pl_url);
+                    my $resp_pl = $ua->request($req_pl);
+                    if ($resp_pl->is_success) {
+                        if ($req->url ne $resp->request->uri) {
+                            $result = "ProbeLinkRedirect";
+                        }
+                    } else {
+                        $result = "BadProbeLink-" . $resp_pl->code() . " " . $resp_pl->message();
+                    }
+                } else {
+                    $result = "MissingProbeLink";
+                }
             } else {
                 $result = "--"
             }
@@ -935,25 +963,23 @@ while (my $line = <>) {
   } elsif (($plugin =~ m/\w+SourcePlugin/) || 
            ($plugin =~ m/\w+WarcPlugin/)) {
       if ($plugin =~ m/DeliveredSourcePlugin/) {
-	  $url = sprintf("%s%d/%s/",
-			 $param{base_url}, $param{year}, $param{directory});
+        $url = sprintf("%s%d/%s/", $param{base_url}, $param{year}, $param{directory});
       } else {
-	  $url = sprintf("%s%d/",
-		 $param{base_url}, $param{year});
+        $url = sprintf("%s%d/", $param{base_url}, $param{year});
       }
       $man_url = uri_unescape($url);
       my $req = HTTP::Request->new(GET, $man_url);
       my $resp = $ua->request($req);
       if ($resp->is_success) {
           my $man_contents = $resp->content;
-	  #allow for newlines
-	  my $alt_clockss_tag = "CLOCKSS(\n)? (\n)?system(\n)? (\n)?has(\n)? (\n)?permission(\n)? (\n)?to(\n)? (\n)?ingest,(\n)? (\n)?preserve,(\n)? (\n)?and(\n)? (\n)?serve(\n)? (\n)?this(\n)? (\n)?Archival(\n)? (\n)?Unit";
+          #allow for newlines
+          my $alt_clockss_tag = "CLOCKSS(\n)? (\n)?system(\n)? (\n)?has(\n)? (\n)?permission(\n)? (\n)?to(\n)? (\n)?ingest,(\n)? (\n)?preserve,(\n)? (\n)?and(\n)? (\n)?serve(\n)? (\n)?this(\n)? (\n)?Archival(\n)? (\n)?Unit";
           if ($req->url ne $resp->request->uri) {
               $vol_title = $resp->request->uri;
               $result = "Redirected";
-	  #does it have even one link on the page? then we have contents
+              #does it have even one link on the page? then we have contents
           } elsif (defined($man_contents) && (($man_contents =~ m/$alt_clockss_tag/) && 
-					      ($man_contents =~ m/a href=\"/))) {
+                   ($man_contents =~ m/a href=\"/))) {
               if ($man_contents =~ m/<title>\s*(.*)\s*<\/title>/si) {
                   $vol_title = $1;
                   $vol_title =~ s/\s*\n\s*/ /g;
@@ -967,9 +993,9 @@ while (my $line = <>) {
               $result = "--"
           }
       } else {
-      $result = "--"
-  }
-        sleep(4);
+          $result = "--"
+      }
+      sleep(4);
 
 #  } elsif ($plugin eq "EdinburghUniversityPressPlugin") {
 #    $url = sprintf("%slockss/%s/%s/index.html",
@@ -1044,6 +1070,30 @@ while (my $line = <>) {
       }
     } else {
       $result = "--"
+    }
+    sleep(4);
+
+  } elsif ($plugin eq "ClockssAmericanMathematicalSocietyBooksPlugin") {
+    $url = sprintf("%sclockssdata?p=%s", $param{base_url}, $param{collection_id});
+    $man_url = uri_unescape($url);
+    # printf("\nUrl: %s\n", $man_url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    if ($resp->is_success) {
+      my $man_contents = $resp->content;
+      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
+        $vol_title = $param{collection_id} . " " . $param{year_string};
+        if (($man_contents =~ m/\/$param{collection_id}\//) && ($man_contents =~ m/$param{year_string}/) &&
+            ($man_contents =~ m/\/books\/$param{collection_id}\/year\/$param{year_string}/)) {
+          $result = "Manifest";
+        } else {
+          $result = "--NO_URL--";
+        }
+      } else {
+        $result = "--"
+      }
+    } else {
+      $result = "--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
 
