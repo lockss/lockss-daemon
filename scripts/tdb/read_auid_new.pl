@@ -229,7 +229,7 @@ while (my $line = <>) {
                             $result = "ProbeLinkRedirect";
                         }
                     } else {
-                        $result = "BadProbeLink-" . $resp_pl->code() . " " . $resp_pl->message();
+                        $result = "BadProbeLink-" . $resp_pl->code();
                     }
                 } else {
                     $result = "MissingProbeLink";
@@ -295,7 +295,7 @@ while (my $line = <>) {
                             $result = "ProbeLinkRedirect";
                         }
                     } else {
-                        $result = "BadProbeLink-" . $resp_pl->code() . " " . $resp_pl->message();
+                        $result = "BadProbeLink-" . $resp_pl->code();
                     }
                 } else {
                     $result = "MissingProbeLink";
