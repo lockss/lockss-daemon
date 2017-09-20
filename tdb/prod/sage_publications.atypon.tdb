@@ -15094,8 +15094,15 @@
 
         #param[base_url] = http://iej.sagepub.com/
 
-        au < released ; 2016 ; The Indian Economic Journal Volume 64 ; 64 ; ieja >
-        au < expected ; 2017 ; The Indian Economic Journal Volume 65 ; 65 ; ieja >
+        au < exists ; 2006-2007 ; The Indian Economic Journal Volume 54 ; 54 ; ieja >
+        au < exists ; 2007-2008 ; The Indian Economic Journal Volume 55 ; 55 ; ieja >
+        au < exists ; 2008-2009 ; The Indian Economic Journal Volume 56 ; 56 ; ieja >
+        au < exists ; 2009-2010 ; The Indian Economic Journal Volume 57 ; 57 ; ieja >
+        au < exists ; 2010-2011 ; The Indian Economic Journal Volume 58 ; 58 ; ieja >
+        au < exists ; 2011-2012 ; The Indian Economic Journal Volume 59 ; 59 ; ieja >
+        au < exists ; 2012-2013 ; The Indian Economic Journal Volume 60 ; 60 ; ieja >
+
+        au < down ; 2016 ; The Indian Economic Journal Volume 64 ; 64 ; ieja >
 
     }
 
@@ -15212,8 +15219,10 @@
         au < manifest ; 2012 ; Indian Journal of Human Development Volume 6 ; 6 ; jhda >
         au < manifest ; 2013 ; Indian Journal of Human Development Volume 7 ; 7 ; jhda >
         au < released ; 2014 ; Indian Journal of Human Development Volume 8 ; 8 ; jhda >
-        au < released ; 2016 ; Indian Journal of Human Development Volume 9 ; 9 ; jhda >
+        au < released ; 2015 ; Indian Journal of Human Development Volume 9 ; 9 ; jhda >
         au < released ; 2016 ; Indian Journal of Human Development Volume 10 ; 10 ; jhda >
+        au < expected ; 2017 ; Indian Journal of Human Development Volume 11 ; 11 ; jhda >
+
     }
 
   {
@@ -20970,6 +20979,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
     >
 
       #param[base_url] = http://ega.sagepub.com/
+      #content available from 1914 volume 1 to 2006 volume 92
 
       au < manifest ; 2007 ; The Journal of Egyptian Archaeology Volume 93 ; 93 ; egaa >
       au < released ; 2008 ; The Journal of Egyptian Archaeology Volume 94 ; 94 ; egaa >
@@ -20981,6 +20991,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < released ; 2014 ; The Journal of Egyptian Archaeology Volume 100 ; 100 ; egaa >
       au < released ; 2015 ; The Journal of Egyptian Archaeology Volume 101 ; 101 ; egaa >
       au < released ; 2016 ; The Journal of Egyptian Archaeology Volume 102 ; 102 ; egaa >
+      au < expected ; 2017 ; The Journal of Egyptian Archaeology Volume 103 ; 103 ; egaa >
 
   }
 
@@ -30235,20 +30246,24 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
       #param[base_url] = http://nct.sagepub.com/
 
-      au < exists ; 2002 ; Nineteenth Century Theatre and Film Volume 29 ; 29 ; nctc >
-      au < exists ; 2003 ; Nineteenth Century Theatre and Film Volume 30 ; 30 ; nctc >
-      au < exists ; 2004 ; Nineteenth Century Theatre and Film Volume 31 ; 31 ; nctc >
-      au < exists ; 2005 ; Nineteenth Century Theatre and Film Volume 32 ; 32 ; nctc >
-      au < exists ; 2006 ; Nineteenth Century Theatre and Film Volume 33 ; 33 ; nctc >
-      au < exists ; 2007 ; Nineteenth Century Theatre and Film Volume 34 ; 34 ; nctc >
-      au < exists ; 2008 ; Nineteenth Century Theatre and Film Volume 35 ; 35 ; nctc >
-      au < exists ; 2009 ; Nineteenth Century Theatre and Film Volume 36 ; 36 ; nctc >
-      au < exists ; 2010 ; Nineteenth Century Theatre and Film Volume 37 ; 37 ; nctc >
-      au < exists ; 2011 ; Nineteenth Century Theatre and Film Volume 38 ; 38 ; nctc >
-      au < exists ; 2012 ; Nineteenth Century Theatre and Film Volume 39 ; 39 ; nctc >
-      au < exists ; 2013 ; Nineteenth Century Theatre and Film Volume 40 ; 40 ; nctc >
-      au < doNotProcess ; 2014 ; Nineteenth Century Theatre and Film Volume 41 ; 41 ; nctc >
-      au < exists ; 2015 ; Nineteenth Century Theatre and Film Volume 42 ; 42 ; nctc >
+      au < exists ; 1999 ; Nineteenth Century Theatre and Film Volume 27 ; 27 ; nctc >
+      au < exists ; 2000 ; Nineteenth Century Theatre and Film Volume 28 ; 28 ; nctc >
+      au < exists ; 2002 ; Nineteenth Century Theatre and Film Volume 29 ; 29 ; nctd >
+      au < exists ; 2003 ; Nineteenth Century Theatre and Film Volume 30 ; 30 ; nctd >
+      au < exists ; 2004 ; Nineteenth Century Theatre and Film Volume 31 ; 31 ; nctd >
+      au < exists ; 2005 ; Nineteenth Century Theatre and Film Volume 32 ; 32 ; nctd >
+      au < exists ; 2006 ; Nineteenth Century Theatre and Film Volume 33 ; 33 ; nctd >
+      au < exists ; 2007 ; Nineteenth Century Theatre and Film Volume 34 ; 34 ; nctd >
+      au < exists ; 2008 ; Nineteenth Century Theatre and Film Volume 35 ; 35 ; nctd >
+      au < exists ; 2009 ; Nineteenth Century Theatre and Film Volume 36 ; 36 ; nctd >
+      au < exists ; 2010 ; Nineteenth Century Theatre and Film Volume 37 ; 37 ; nctd >
+      au < exists ; 2011 ; Nineteenth Century Theatre and Film Volume 38 ; 38 ; nctd >
+      au < exists ; 2012 ; Nineteenth Century Theatre and Film Volume 39 ; 39 ; nctd >
+      au < exists ; 2013 ; Nineteenth Century Theatre and Film Volume 40 ; 40 ; nctd >
+      au < doNotProcess ; 2014 ; Nineteenth Century Theatre and Film Volume 41 ; 41 ; nctd >
+      au < exists ; 2015 ; Nineteenth Century Theatre and Film Volume 42 ; 42 ; nctd >
+      au < exists ; 2016 ; Nineteenth Century Theatre and Film Volume 43 ; 43 ; nctd >
+      au < expected ; 2017 ; Nineteenth Century Theatre and Film Volume 44 ; 44 ; nctd >
 
     }
 
@@ -33738,8 +33753,23 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
   
         #param[base_url] = http://phr.sagepub.com/
   
-        au < exists ; 2016 ; Public Health Reports Volume 131 ; 131 ; phrc >
-        au < expected ; 2017 ; Public Health Reports Volume 132 ; 132 ; phrc >
+        au < exists ; 2001 ; Public Health Reports Volume 116 ; 116 ; phrg >
+        au < exists ; 2002 ; Public Health Reports Volume 117 ; 117 ; phrg >
+        au < exists ; 2003 ; Public Health Reports Volume 118 ; 118 ; phrg >
+        au < exists ; 2004 ; Public Health Reports Volume 119 ; 119 ; phrg >
+        au < exists ; 2005 ; Public Health Reports Volume 120 ; 120 ; phrg >
+        au < exists ; 2006 ; Public Health Reports Volume 121 ; 121 ; phrg >
+        au < exists ; 2007 ; Public Health Reports Volume 122 ; 122 ; phrg >
+        au < exists ; 2008 ; Public Health Reports Volume 123 ; 123 ; phrg >
+        au < exists ; 2009 ; Public Health Reports Volume 124 ; 124 ; phrg >
+        au < exists ; 2010 ; Public Health Reports Volume 125 ; 125 ; phrg >
+        au < exists ; 2011 ; Public Health Reports Volume 126 ; 126 ; phrg >
+        au < exists ; 2012 ; Public Health Reports Volume 127 ; 127 ; phrg >
+        au < exists ; 2013 ; Public Health Reports Volume 128 ; 128 ; phrg >
+        au < exists ; 2014 ; Public Health Reports Volume 129 ; 129 ; phrg >
+        au < exists ; 2015 ; Public Health Reports Volume 130 ; 130 ; phrg >
+        au < exists ; 2016 ; Public Health Reports Volume 131 ; 131 ; phrg >
+        au < exists ; 2017 ; Public Health Reports Volume 132 ; 132 ; phrg >
   
     }
 

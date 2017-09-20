@@ -4975,8 +4975,9 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Cahiers Élisabéthains Volume 88 ; 88 ; caea ; >
       au < frozen ; exists ; 2016 ; Cahiers Élisabéthains Volume 89 ; 89 ; caea ; >
       au < frozen ; exists ; 2016 ; Cahiers Élisabéthains Volume 90 ; 90 ; caea ; >
-      au < crawling ; exists ; 2017 ; Cahiers Élisabéthains Volume 91 ; 91 ; caea ; >
+      au < crawling ; exists ; 2016 ; Cahiers Élisabéthains Volume 91 ; 91 ; caea ; >
       au < crawling ; exists ; 2017 ; Cahiers Élisabéthains Volume 92 ; 92 ; caea ; >
+      au < manifest ; exists ; 2017 ; Cahiers Élisabéthains Volume 93 ; 93 ; caea ; >
 
   }
 
@@ -14908,9 +14909,15 @@
 
       #param[base_url] = http://iej.sagepub.com/
 
+      au < exists ; exists ; 2006-2007 ; The Indian Economic Journal Volume 54 ; 54 ; ieja ; >
+      au < exists ; exists ; 2007-2008 ; The Indian Economic Journal Volume 55 ; 55 ; ieja ; >
+      au < exists ; exists ; 2008-2009 ; The Indian Economic Journal Volume 56 ; 56 ; ieja ; >
+      au < exists ; exists ; 2009-2010 ; The Indian Economic Journal Volume 57 ; 57 ; ieja ; >
       au < manifest ; exists ; 2010-2011 ; The Indian Economic Journal Volume 58 ; 58 ; ieja ; >
       au < manifest ; exists ; 2011-2012 ; The Indian Economic Journal Volume 59 ; 59 ; ieja ; >
       au < manifest ; exists ; 2012-2013 ; The Indian Economic Journal Volume 60 ; 60 ; ieja ; >
+
+      au < doNotProcess ; doNotProcess ; 2016 ; The Indian Economic Journal Volume 64 ; 64 ; ieja ; > #Never exists
 
   }
 
@@ -15020,6 +15027,15 @@
 
       #param[base_url] = http://jhd.sagepub.com/
 
+      au < exists ; exists ; 2007 ; Indian Journal of Human Development Volume 1 ; 1 ; jhda ; >
+      au < exists ; exists ; 2008 ; Indian Journal of Human Development Volume 2 ; 2 ; jhda ; >
+      au < exists ; exists ; 2009 ; Indian Journal of Human Development Volume 3 ; 3 ; jhda ; >
+      au < exists ; exists ; 2010 ; Indian Journal of Human Development Volume 4 ; 4 ; jhda ; >
+      au < exists ; exists ; 2011 ; Indian Journal of Human Development Volume 5 ; 5 ; jhda ; >
+      au < exists ; exists ; 2012 ; Indian Journal of Human Development Volume 6 ; 6 ; jhda ; >
+      au < exists ; exists ; 2013 ; Indian Journal of Human Development Volume 7 ; 7 ; jhda ; >
+      au < exists ; exists ; 2014 ; Indian Journal of Human Development Volume 8 ; 8 ; jhda ; >
+      au < exists ; exists ; 2015 ; Indian Journal of Human Development Volume 9 ; 9 ; jhda ; >
       au < frozen ; exists ; 2016 ; Indian Journal of Human Development Volume 10 ; 10 ; jhda ; >
       au < expected ; exists ; 2017 ; Indian Journal of Human Development Volume 11 ; 11 ; jhda ; >
 
@@ -21215,6 +21231,7 @@
     >
 
       #param[base_url] = http://ega.sagepub.com/
+      #content available from 1914 volume 1 to 2006 volume 92
 
       au < manifest ; exists ; 2007 ; The Journal of Egyptian Archaeology Volume 93 ; 93 ; egaa ; >
       au < frozen ; exists ; 2008 ; The Journal of Egyptian Archaeology Volume 94 ; 94 ; egaa ; >
@@ -21225,6 +21242,8 @@
       au < frozen ; exists ; 2013 ; The Journal of Egyptian Archaeology Volume 99 ; 99 ; egaa ; >
       au < frozen ; exists ; 2014 ; The Journal of Egyptian Archaeology Volume 100 ; 100 ; egaa ; >
       au < frozen ; exists ; 2015 ; The Journal of Egyptian Archaeology Volume 101 ; 101 ; egaa ; >
+      au < manifest ; exists ; 2016 ; The Journal of Egyptian Archaeology Volume 102 ; 102 ; egaa ; >
+      au < expected ; exists ; 2017 ; The Journal of Egyptian Archaeology Volume 103 ; 103 ; egaa ; >
 
   }
 
@@ -24361,6 +24380,7 @@
       #param[base_url] = http://pal.sagepub.com/
 
       au < frozen ; exists ; 2015 ; Journal of Palliative Care Volume 31 ; 31 ; pala ; >
+      au < manifest ; exists ; 2017 ; Journal of Palliative Care Volume 32 ; 32 ; pala ; >
 
   }
 
@@ -29981,6 +30001,14 @@
 
       #param[base_url] = http://nqh.sagepub.com/
 
+      au < exists ; exists ; 2008 ; Netherlands Quarterly of Human Rights Volume 26 ; 26 ; nqha ; >
+      au < exists ; exists ; 2009 ; Netherlands Quarterly of Human Rights Volume 27 ; 27 ; nqha ; >
+      au < exists ; exists ; 2010 ; Netherlands Quarterly of Human Rights Volume 28 ; 28 ; nqha ; >
+      au < exists ; exists ; 2011 ; Netherlands Quarterly of Human Rights Volume 29 ; 29 ; nqha ; >
+      au < exists ; exists ; 2012 ; Netherlands Quarterly of Human Rights Volume 30 ; 30 ; nqha ; >
+      au < exists ; exists ; 2013 ; Netherlands Quarterly of Human Rights Volume 31 ; 31 ; nqha ; >
+      au < exists ; exists ; 2014 ; Netherlands Quarterly of Human Rights Volume 32 ; 32 ; nqha ; >
+      au < exists ; exists ; 2016 ; Netherlands Quarterly of Human Rights Volume 33 ; 33 ; nqha ; >
       au < frozen ; exists ; 2016 ; Netherlands Quarterly of Human Rights Volume 34 ; 34 ; nqha ; >
       au < manifest ; exists ; 2017 ; Netherlands Quarterly of Human Rights Volume 35 ; 35 ; nqha ; >
 
@@ -30310,6 +30338,8 @@
       au < manifest ; exists ; 2013 ; Nineteenth Century Theatre and Film Volume 40 ; 40 ; nctd ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Nineteenth Century Theatre and Film Volume 41 ; 41 ; nctd ; >
       au < manifest ; exists ; 2015 ; Nineteenth Century Theatre and Film Volume 42 ; 42 ; nctd ; >
+      au < manifest ; exists ; 2016 ; Nineteenth Century Theatre and Film Volume 43 ; 43 ; nctd ; >
+      au < expected ; exists ; 2017 ; Nineteenth Century Theatre and Film Volume 44 ; 44 ; nctd ; >
 
   }
 
@@ -30690,6 +30720,7 @@
       au < doNotProcess ; doNotProcess ; 2009-2011 ; Nutrition and Health Volume 20 ; 20 ; naha ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Nutrition and Health Volume 21 ; 21 ; naha ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Nutrition and Health Volume 22 ; 22 ; naha ; >
+      au < manifest ; exists ; 2017 ; Nutrition and Health Volume 23 ; 23 ; naha ; >
 
     }
 
@@ -34017,6 +34048,15 @@
 
       #param[base_url] = http://phr.sagepub.com/
 
+      au < exists ; exists ; 2001 ; Public Health Reports Volume 116 ; 116 ; phrg ; >
+      au < exists ; exists ; 2002 ; Public Health Reports Volume 117 ; 117 ; phrg ; >
+      au < exists ; exists ; 2003 ; Public Health Reports Volume 118 ; 118 ; phrg ; >
+      au < exists ; exists ; 2004 ; Public Health Reports Volume 119 ; 119 ; phrg ; >
+      au < exists ; exists ; 2005 ; Public Health Reports Volume 120 ; 120 ; phrg ; >
+      au < exists ; exists ; 2006 ; Public Health Reports Volume 121 ; 121 ; phrg ; >
+      au < exists ; exists ; 2007 ; Public Health Reports Volume 122 ; 122 ; phrg ; >
+      au < exists ; exists ; 2008 ; Public Health Reports Volume 123 ; 123 ; phrg ; >
+      au < exists ; exists ; 2009 ; Public Health Reports Volume 124 ; 124 ; phrg ; >
       au < manifest ; exists ; 2010 ; Public Health Reports Volume 125 ; 125 ; phrg ; >
       au < frozen ; exists ; 2011 ; Public Health Reports Volume 126 ; 126 ; phrg ; >
       au < frozen ; exists ; 2012 ; Public Health Reports Volume 127 ; 127 ; phrg ; >
