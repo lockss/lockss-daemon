@@ -2793,17 +2793,21 @@ public class SubscriptionManagement extends LockssServlet {
 	    if (log.isDebug3()) log.debug3(DEBUG_HEADER
 		+ "oldPublisherSubscriptionSetting = "
 		+ oldPublisherSubscriptionSetting);
-
+	    
+	    String id = (PUBLISHER_SUBSCRIPTION_WIDGET_ID_PREFIX
+		+ publisherSubscription.getPublisher().getPublisherSeq())
+		.trim();
 	    Boolean newPublisherSubscriptionSetting = getTriBoxValue(
-		parameterMap,
-		PUBLISHER_SUBSCRIPTION_WIDGET_ID_PREFIX
-		+ publisherSubscription.getPublisher().getPublisherSeq());
+		parameterMap, id);
 	    if (log.isDebug3()) log.debug3(DEBUG_HEADER
 		+ "newPublisherSubscriptionSetting = "
 		+ newPublisherSubscriptionSetting);
 
-	    publisherSubscription
-	    .setSubscribed(newPublisherSubscriptionSetting);
+	    if(parameterMap
+		.get(id + TRI_STATE_WIDGET_HIDDEN_ID_SUFFIX) != null ){
+  	    	publisherSubscription
+  	    	.setSubscribed(newPublisherSubscriptionSetting);
+	    }
 
 	    // Get an indication of whether the publisher subscription has been
 	    // changed.
