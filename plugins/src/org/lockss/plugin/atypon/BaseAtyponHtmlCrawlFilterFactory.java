@@ -139,9 +139,17 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
     // related content near Erratum
     // http://press.endocrine.org/toc/endo/154/10       
     HtmlNodeFilters.tagWithAttribute("div", "class", "relatedLayer"),
-    
+  };
+  
+  protected static NodeFilter[] correctionsFilter = new NodeFilter[] {
     // Not all Atypon plugins necessarily need this but MANY do and it is
     // an insidious source of over crawling
+    // NOTE - cannot currently find an example of why it was needed - see tests for it in AmetSoc and ENdocrine...
+    // Example where this is needed:
+
+    // This has been in for a while, but now finding places where it's a problem, the link
+    // href SHOULD be crawled - it leads to the correction which is in this TOC
+    // http://ascelibrary.org/toc/jleed9/142/1
     new NodeFilter() {
       @Override public boolean accept(Node node) {
         if (!(node instanceof LinkTag)) return false;
@@ -161,6 +169,12 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
     return result;
   }
   
+  private NodeFilter[] combineNodes(NodeFilter[] orignodes, NodeFilter[] addnodes) {
+    NodeFilter[] result  = Arrays.copyOf(orignodes, orignodes.length + addnodes.length);
+    System.arraycopy(addnodes, 0, result, orignodes.length, addnodes.length);
+    return result;
+  }  
+  
   /** Create a FilteredInputStream that excludes the the atyponBaseFilters
    * @param au  The archival unit
    * @param in  Incoming input stream
@@ -168,9 +182,17 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
    */
   public InputStream createFilteredInputStream(ArchivalUnit au,
       InputStream in, String encoding) throws PluginException{
+    NodeFilter[] allFilters = baseAtyponFilters;
+    //This used to be in the baseAtyponFilters but in order to allow children to override
+    // a switch function had to be non-static, so pulled out and applied separately.
+    if (doFilterCorrectionsText()) {
+      allFilters = addTo(correctionsFilter);
+    }
 
     HtmlFilterInputStream hfis =  new HtmlFilterInputStream(in, encoding,
-        HtmlNodeFilterTransform.exclude(new OrFilter(baseAtyponFilters)));
+        HtmlNodeFilterTransform.exclude(new OrFilter(allFilters)));
+    
+
     // to handle errors like java.io.IOException: org.htmlparser.util.EncodingChangeException:
     // Unable to sync new encoding within range of +/- 100 chars
     // Allows the default of 100 to be overridden in tdb
@@ -197,7 +219,12 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
   public InputStream createFilteredInputStream(ArchivalUnit au,
               InputStream in, String encoding, NodeFilter[] moreNodes) 
     throws PluginException {
-    NodeFilter[] bothFilters = addTo(moreNodes);
+    NodeFilter[] allExtra = moreNodes;
+    if (doFilterCorrectionsText()) {
+      allExtra = combineNodes(moreNodes,correctionsFilter);
+    }    
+    NodeFilter[] bothFilters = addTo(allExtra);
+    
     HtmlFilterInputStream hfis =  new HtmlFilterInputStream(in, encoding,
         HtmlNodeFilterTransform.exclude(new OrFilter(bothFilters)));
     // to handle errors like java.io.IOException: org.htmlparser.util.EncodingChangeException:
@@ -214,5 +241,12 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
       } else {log.debug("tdbau was null");}
     } else {log.warning("au was null");}
     return hfis;
+  }
+  
+  /*
+   * Make this something a child can override tp turn off...
+   */
+  public boolean doFilterCorrectionsText() {
+    return true;
   }
 }

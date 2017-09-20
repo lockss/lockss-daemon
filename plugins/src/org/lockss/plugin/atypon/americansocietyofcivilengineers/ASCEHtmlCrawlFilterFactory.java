@@ -82,4 +82,12 @@ public class ASCEHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory
   throws PluginException{
     return super.createFilteredInputStream(au, in, encoding, filters);
   }
+  
+  /*
+   * do not do the filtering on the title corrigenda, errata, etc
+   */
+  @Override
+  public boolean doFilterCorrectionsText() {
+    return false;
+  }
 }
