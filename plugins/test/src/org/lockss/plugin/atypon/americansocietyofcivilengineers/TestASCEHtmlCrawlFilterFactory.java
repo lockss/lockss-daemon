@@ -41,41 +41,12 @@ public class TestASCEHtmlCrawlFilterFactory extends LockssTestCase {
       "<p align=\"center\" class=\"leftColumn\">"
       + "</p>";
   
-  //ASCE - we don't want to filter out "corrigenda" titles from the TOC
-  private static final String withCorrectionOnTOC =
-      "<div class=\"articleEntry\">" +
-          "<div>" +
-          "<div class=\"art_title linkable\">" +
-          "<a class=\"ref nowrap\" href=\"/doi/10.1061/%28ASCE%29EY.1943-7897.0000283\">" +
-          "<span class=\"hlFld-Title\">Improved Title</span>" +
-          "</a>" +
-          "</div>" +
-          "</div>" +
-          "</div>" +
-          "<subject>" +
-          "<h2 class=\"tocHeading\">Corrections</h2>" +
-          "</subject>" +
-          "<div class=\"articleEntry\">" +
-          "<div>" +
-          "<div class=\"art_title linkable\">" +
-          "<a class=\"ref nowrap\" href=\"/doi/10.1061/%28ASCE%29EY.1943-7897.0000258\">" +
-          "<span class=\"hlFld-Title\">Erratum for 'Other Article'</span>" +
-          "</a>" +
-          "</div>" +
-          "</div>" +
-          "</div>";
-  
   public void testFiltering() throws Exception {
     InputStream inStream;
     inStream = fact.createFilteredInputStream(mau,
                                               new StringInputStream(withSessionViewed),
                                               Constants.DEFAULT_ENCODING);
     assertEquals(withoutSessionViewed, StringUtil.fromInputStream(inStream));
-    // this shouldn't filter - we don't cull titles with "corrigenda" words for ASCE
-    inStream = fact.createFilteredInputStream(mau,
-        new StringInputStream(withCorrectionOnTOC),
-        Constants.DEFAULT_ENCODING);
-    assertEquals(withCorrectionOnTOC, StringUtil.fromInputStream(inStream));
   }
 
 }

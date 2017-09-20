@@ -60,7 +60,7 @@
     au < manifest ; exists ; 2006 ; American Journal of Gastroenterology Volume 101 ; 2006 ; 101 ; >
     au < manifest ; exists ; 2007 ; American Journal of Gastroenterology Volume 102 ; 2007 ; 102 ; >
     au < finished ; finished ; 2008 ; American Journal of Gastroenterology Volume 103 ; 2008 ; 103 ; >
-    au < finished ; finished ; 2009 ; American Journal of Gastroenterology Volume 104 ; 2009 ; 104 ; >
+    au < finished ; frozen ; 2009 ; American Journal of Gastroenterology Volume 104 ; 2009 ; 104 ; >
     au < finished ; frozen ; 2010 ; American Journal of Gastroenterology Volume 105 ; 2010 ; 105 ; >
     au < finished ; frozen ; 2011 ; American Journal of Gastroenterology Volume 106 ; 2011 ; 106 ; >
     au < finished ; frozen ; 2012 ; American Journal of Gastroenterology Volume 107 ; 2012 ; 107 ; >
@@ -464,7 +464,7 @@
     au < zapped ; finished ; 2009 ; Cancer Gene Therapy Volume 16 ; 2009 ; 16 ; >
     au < finished ; frozen ; 2010 ; Cancer Gene Therapy Volume 17 ; 2010 ; 17 ; >
     au < finished ; finished ; 2011 ; Cancer Gene Therapy Volume 18 ; 2011 ; 18 ; >
-    au < finished ; finished ; 2012 ; Cancer Gene Therapy Volume 19 ; 2012 ; 19 ; >
+    au < finished ; frozen ; 2012 ; Cancer Gene Therapy Volume 19 ; 2012 ; 19 ; >
     au < superseded ; exists ; 2013 ; Cancer Gene Therapy Volume 19 [to delete] ; 2013 ; 19 ; >
     au < finished ; frozen ; 2013 ; Cancer Gene Therapy Volume 20 ; 2013 ; 20 ; >
     au < finished ; finished ; 2014 ; Cancer Gene Therapy Volume 21 ; 2014 ; 21 ; >
@@ -553,7 +553,7 @@
     au < zapped ; finished ; 2009 ; Cell Research Volume 19 ; 2009 ; 19 ; >
     au < finished ; finished ; 2010 ; Cell Research Volume 20 ; 2010 ; 20 ; >
     au < finished ; finished ; 2011 ; Cell Research Volume 21 ; 2011 ; 21 ; >
-    au < finished ; finished ; 2012 ; Cell Research Volume 22 ; 2012 ; 22 ; >
+    au < finished ; frozen ; 2012 ; Cell Research Volume 22 ; 2012 ; 22 ; >
     au < superseded ; exists ; 2013 ; Cell Research Volume 22 [to delete] ; 2013 ; 22 ; >
     au < deepCrawl ; exists ; 2013 ; Cell Research Volume 23 ; 2013 ; 23 ; >
     au < finished ; finished ; 2014 ; Cell Research Volume 24 ; 2014 ; 24 ; >
@@ -574,7 +574,7 @@
 
     param[journal_id] = cmi
 
-    au < finished ; finished ; 2008 ; Cellular & Molecular Immunology Volume 5 ; 2008 ; 5 ; >
+    au < finished ; frozen ; 2008 ; Cellular & Molecular Immunology Volume 5 ; 2008 ; 5 ; >
     au < finished ; finished ; 2009 ; Cellular & Molecular Immunology Volume 6 ; 2009 ; 6 ; >
     au < finished ; finished ; 2010 ; Cellular & Molecular Immunology Volume 7 ; 2010 ; 7 ; >
     au < finished ; finished ; 2011 ; Cellular & Molecular Immunology Volume 8 ; 2011 ; 8 ; >
@@ -793,7 +793,7 @@
     param[journal_id] = ebd
 
     au < finished ; finished ; 2008 ; Evidence-Based Dentistry Volume 9 ; 2008 ; 9 ; >
-    au < finished ; finished ; 2009 ; Evidence-Based Dentistry Volume 10 ; 2009 ; 10 ; >
+    au < finished ; frozen ; 2009 ; Evidence-Based Dentistry Volume 10 ; 2009 ; 10 ; >
     au < finished ; finished ; 2010 ; Evidence-Based Dentistry Volume 11 ; 2010 ; 11 ; >
     au < finished ; frozen ; 2011 ; Evidence-Based Dentistry Volume 12 ; 2011 ; 12 ; >
     au < finished ; finished ; 2012 ; Evidence-Based Dentistry Volume 13 ; 2012 ; 13 ; >
@@ -927,7 +927,7 @@
     au < manifest ; exists ; 2005 ; Genes and Immunity Volume 6 ; 2005 ; 6 ; >
     au < manifest ; exists ; 2006 ; Genes and Immunity Volume 7 ; 2006 ; 7 ; >
     au < manifest ; exists ; 2007 ; Genes and Immunity Volume 8 ; 2007 ; 8 ; >
-    au < finished ; finished ; 2008 ; Genes and Immunity Volume 9 ; 2008 ; 9 ; >
+    au < finished ; frozen ; 2008 ; Genes and Immunity Volume 9 ; 2008 ; 9 ; >
     au < finished ; finished ; 2009 ; Genes and Immunity Volume 10 ; 2009 ; 10 ; >
     au < finished ; frozen ; 2010 ; Genes and Immunity Volume 11 ; 2010 ; 11 ; >
     au < finished ; finished ; 2011 ; Genes and Immunity Volume 12 ; 2011 ; 12 ; >
@@ -1410,7 +1410,7 @@
     au < zapped ; finished ; 2009 ; The Journal of Antibiotics Volume 62 ; 2009 ; 62 ; >
     au < finished ; frozen ; 2010 ; The Journal of Antibiotics Volume 63 ; 2010 ; 63 ; >
     au < finished ; frozen ; 2011 ; The Journal of Antibiotics Volume 64 ; 2011 ; 64 ; >
-    au < finished ; finished ; 2012 ; The Journal of Antibiotics Volume 65 ; 2012 ; 65 ; >
+    au < finished ; frozen ; 2012 ; The Journal of Antibiotics Volume 65 ; 2012 ; 65 ; >
     au < finished ; frozen ; 2013 ; The Journal of Antibiotics Volume 66 ; 2013 ; 66 ; >
     au < finished ; finished ; 2014 ; The Journal of Antibiotics Volume 67 ; 2014 ; 67 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; The Journal of Antibiotics Volume 68 ; 2015 ; 68 ; >
@@ -1541,7 +1541,7 @@
     au < zapped ; finished ; 2009 ; Journal of Human Genetics Volume 54 ; 2009 ; 54 ; >
     au < finished ; frozen ; 2010 ; Journal of Human Genetics Volume 55 ; 2010 ; 55 ; >
     au < finished ; frozen ; 2011 ; Journal of Human Genetics Volume 56 ; 2011 ; 56 ; >
-    au < finished ; finished ; 2012 ; Journal of Human Genetics Volume 57 ; 2012 ; 57 ; >
+    au < finished ; frozen ; 2012 ; Journal of Human Genetics Volume 57 ; 2012 ; 57 ; >
     au < deepCrawl ; exists ; 2013 ; Journal of Human Genetics Volume 58 ; 2013 ; 58 ; >
     au < finished ; finished ; 2014 ; Journal of Human Genetics Volume 59 ; 2014 ; 59 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2015 ; Journal of Human Genetics Volume 60 ; 2015 ; 60 ; >
@@ -3774,7 +3774,7 @@
     au < manifest ; exists ; 2007 ; Pediatric Research Volume 61 ; 2007 ; 61 ; >
     au < manifest ; exists ; 2007 ; Pediatric Research Volume 62 ; 2007 ; 62 ; >
     au < finished ; finished ; 2008 ; Pediatric Research Volume 63 ; 2008 ; 63 ; >
-    au < finished ; finished ; 2008 ; Pediatric Research Volume 64 ; 2008 ; 64 ; >
+    au < finished ; frozen ; 2008 ; Pediatric Research Volume 64 ; 2008 ; 64 ; >
     au < finished ; frozen ; 2009 ; Pediatric Research Volume 65 ; 2009 ; 65 ; >
     au < finished ; finished ; 2009 ; Pediatric Research Volume 66 ; 2009 ; 66 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2010 ; Pediatric Research Volume 67 ; 2010 ; 67 ; >

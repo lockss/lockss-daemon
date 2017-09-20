@@ -103,7 +103,7 @@
     au < finished ; finished ; 2010 ; 2010 ; Aktuelle Dermatologie Volume 36 ; 36 ; >
     au < finished ; finished ; 2011 ; 2011 ; Aktuelle Dermatologie Volume 37 ; 37 ; >
     au < finished ; finished ; 2012 ; 2012 ; Aktuelle Dermatologie Volume 38 ; 38 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 2013 ; 2013 ; Aktuelle Dermatologie Volume 39 ; 39 ; >
+    au < finished ; crawling ; 2013 ; 2013 ; Aktuelle Dermatologie Volume 39 ; 39 ; >
     au < finished ; finished ; 2014 ; 2014 ; Aktuelle Dermatologie Volume 40 ; 40 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; 2015 ; Aktuelle Dermatologie Volume 41 ; 41 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; down ; 2016 ; 2016 ; Aktuelle Dermatologie Volume 42 ; 42 ;  >
@@ -2118,12 +2118,12 @@
    au < manifest ; exists ; 2009 ; 2009 ; Indian Journal of Neurotrauma Volume 6 ; 6 ; >
    au < testing ; exists ; 2010 ; 2010 ; Indian Journal of Neurotrauma Volume 7 ; 7 ; >
    au < testing ; exists ; 2011 ; 2011 ; Indian Journal of Neurotrauma Volume 8 ; 8 ; >
-   au < crawling ; exists ; 2012 ; 2012 ; Indian Journal of Neurotrauma Volume 9 ; 9 ; >
-   au < ready ; exists ; 2013 ; 2013 ; Indian Journal of Neurotrauma Volume 10 ; 10 ; >
-   au < crawling ; exists ; 2014 ; 2014 ; Indian Journal of Neurotrauma Volume 11 ; 11 ; >
-   au < crawling ; exists ; 2015 ; 2015 ; Indian Journal of Neurotrauma Volume 12 ; 12 ; >
-   au < crawling ; exists ; 2016 ; 2016 ; Indian Journal of Neurotrauma Volume 13 ; 13 ; >
-   au < crawling ; exists ; 2017 ; 2017 ; Indian Journal of Neurotrauma Volume 14 ; 14 ; >
+   au < ready ; exists ; 2012 ; 2012 ; Indian Journal of Neurotrauma Volume 9 ; 9 ; >
+   au < testing ; exists ; 2013 ; 2013 ; Indian Journal of Neurotrauma Volume 10 ; 10 ; >
+   au < ready ; exists ; 2014 ; 2014 ; Indian Journal of Neurotrauma Volume 11 ; 11 ; >
+   au < ready ; exists ; 2015 ; 2015 ; Indian Journal of Neurotrauma Volume 12 ; 12 ; >
+   au < ready ; exists ; 2016 ; 2016 ; Indian Journal of Neurotrauma Volume 13 ; 13 ; >
+   au < ready ; exists ; 2017 ; 2017 ; Indian Journal of Neurotrauma Volume 14 ; 14 ; >
 
   }
 
@@ -2586,9 +2586,9 @@
     au < finished ; finished ; 2012 ; 2012 ; Journal of Neurological Surgery Part B : Skull Base Volume 73 ; 73 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; 2013 ; Journal of Neurological Surgery Part B : Skull Base Volume 74 ; 74 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; 2014 ; Journal of Neurological Surgery Part B : Skull Base Volume 75 ; 75 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2015 ; 2015 ; Journal of Neurological Surgery Part B : Skull Base Volume 76 ; 76 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; Journal of Neurological Surgery Part B : Skull Base Volume 77 ; 77 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; Journal of Neurological Surgery Part B : Skull Base Volume 78 ; 78 ; >
+    au < ready ; exists ; 2015 ; 2015 ; Journal of Neurological Surgery Part B : Skull Base Volume 76 ; 76 ; >
+    au < ready ; exists ; 2016 ; 2016 ; Journal of Neurological Surgery Part B : Skull Base Volume 77 ; 77 ; >
+    au < ready ; exists ; 2017 ; 2017 ; Journal of Neurological Surgery Part B : Skull Base Volume 78 ; 78 ; >
 
   }
 
@@ -3692,7 +3692,7 @@
     au < finished ; finished ; 2014 ; 2014 ; OP-Journal Volume 30 ; 30 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; OP-Journal Volume 31 ; 31 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; OP-Journal Volume 32 ; 32 ;  >
-    au < crawling ; exists ; 2017 ; 2017 ; OP-Journal Volume 33 ; 33 ; >
+    au < ready ; exists ; 2017 ; 2017 ; OP-Journal Volume 33 ; 33 ; >
 
   }
 
@@ -3935,7 +3935,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Pharmacopsychiatry Volume 47 ; 47 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; Pharmacopsychiatry Volume 48 ; 48 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; 2016 ; Pharmacopsychiatry Volume 49 ; 49 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; Pharmacopsychiatry Volume 50 ; 50 ; >
+    au < ready ; exists ; 2017 ; 2017 ; Pharmacopsychiatry Volume 50 ; 50 ; >
 
   }
 
@@ -3976,7 +3976,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 24 ; 24 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 25 ; 25 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; 2016 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 26 ; 26 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 27 ; 27 ; >
+    au < ready ; exists ; 2017 ; 2017 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 27 ; 27 ; >
 
   }
 
@@ -3998,7 +3998,7 @@
     au < finished ; finished ; 2014 ; 2014 ; physiopraxis Volume 12 ; 12 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2015 ; 2015 ; physiopraxis Volume 13 ; 13 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; physiopraxis Volume 14 ; 14 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; physiopraxis Volume 15 ; 15 ; >
+    au < testing ; exists ; 2017 ; 2017 ; physiopraxis Volume 15 ; 15 ; >
 
   }
 
@@ -4025,7 +4025,7 @@
     au < finished ; finished ; 2014 ; 2014 ; physioscience Volume 10 ; 10 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; physioscience Volume 11 ; 11 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; physioscience Volume 12 ; 12 ;  >
-    au < crawling ; exists ; 2017 ; 2017 ; physioscience Volume 13 ; 13 ; >
+    au < ready ; exists ; 2017 ; 2017 ; physioscience Volume 13 ; 13 ; >
 
   }
 
@@ -4057,7 +4057,7 @@
     au < finished ; finished ; 2014 ; 2014 ; PiD - Psychotherapie im Dialog Volume 15 ; 15 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; PiD - Psychotherapie im Dialog Volume 16 ; 16 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; PiD - Psychotherapie im Dialog Volume 17 ; 17 ;  >
-    au < crawling ; exists ; 2017 ; 2017 ; PiD - Psychotherapie im Dialog Volume 18 ; 18 ; >
+    au < ready ; exists ; 2017 ; 2017 ; PiD - Psychotherapie im Dialog Volume 18 ; 18 ; >
 
   }
 
@@ -4161,7 +4161,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Planta Medica Volume 80 ; 80 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; Planta Medica Volume 81 ; 81 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; down ; 2016 ; 2016 ; Planta Medica Volume 82 ; 82 ;  >
-   au < crawling ; exists ; 2017 ; 2017 ; Planta Medica Volume 83 ; 83 ; >
+   au < ready ; exists ; 2017 ; 2017 ; Planta Medica Volume 83 ; 83 ; >
 
   }
 
@@ -4176,7 +4176,7 @@
     comment[years] = 2016-current
 
    au < deepCrawl ; down ; 2016 ; 2016 ; Planta Medica International Open Volume 1 ; 1 ;  >
-   au < crawling ; exists ; 2017 ; 2017 ; Planta Medica International Open Volume 2 ; 2 ; >
+   au < ready ; exists ; 2017 ; 2017 ; Planta Medica International Open Volume 2 ; 2 ; >
 
   }
 
@@ -4226,7 +4226,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Pneumologie Volume 68 ; 68 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; Pneumologie Volume 69 ; 69 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2016 ; 2016 ; Pneumologie Volume 70 ; 70 ; >
-   au < crawling ; exists ; 2017 ; 2017 ; Pneumologie Volume 71 ; 71 ; >
+   au < ready ; exists ; 2017 ; 2017 ; Pneumologie Volume 71 ; 71 ; >
 
   }
 
@@ -4258,7 +4258,7 @@
    au < finished ; finished ; 2014 ; 2014 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 64 ; 64 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 65 ; 65 ; reingest1.clockss.org:8082 >
    au < deepCrawl ; down ; 2016 ; 2016 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 66 ; 66 ;  >
-   au < crawling ; exists ; 2017 ; 2017 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 67 ; 67 ; >
+   au < ready ; exists ; 2017 ; 2017 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 67 ; 67 ; >
 
   }
 
@@ -4278,7 +4278,7 @@
     au < finished ; finished ; 2014 ; 2014 ; PSYCH up2date Volume 8 ; 8 ; >
     au < finished ; finished ; 2015 ; 2015 ; PSYCH up2date Volume 9 ; 9 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; PSYCH up2date Volume 10 ; 10 ;  >
-    au < crawling ; exists ; 2017 ; 2017 ; PSYCH up2date Volume 11 ; 11 ; >
+    au < ready ; exists ; 2017 ; 2017 ; PSYCH up2date Volume 11 ; 11 ; >
 
   }
 
@@ -4309,7 +4309,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Psych Pflege Heute Volume 20 ; 20 ; >
    au < finished ; finished ; 2015 ; 2015 ; Psych Pflege Heute Volume 21 ; 21 ; reingest1.clockss.org:8082 >
    au < deepCrawl ; exists ; 2016 ; 2016 ; Psych Pflege Heute Volume 22 ; 22 ; >
-   au < crawling ; exists ; 2017 ; 2017 ; Psych Pflege Heute Volume 23 ; 23 ; >
+   au < ready ; exists ; 2017 ; 2017 ; Psych Pflege Heute Volume 23 ; 23 ; >
 
   }
 
@@ -4361,7 +4361,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Psychiatrische Praxis Volume 41 ; 41 ; >
    au < finished ; finished ; 2015 ; 2015 ; Psychiatrische Praxis Volume 42 ; 42 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2016 ; 2016 ; Psychiatrische Praxis Volume 43 ; 43 ; >
-   au < crawling ; exists ; 2017 ; 2017 ; Psychiatrische Praxis Volume 44 ; 44 ; >
+   au < ready ; exists ; 2017 ; 2017 ; Psychiatrische Praxis Volume 44 ; 44 ; >
 
   }
 
@@ -4428,7 +4428,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Radiologie up2date Volume 14 ; 14 ; >
    au < finished ; finished ; 2015 ; 2015 ; Radiologie up2date Volume 15 ; 15 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; down ; 2016 ; 2016 ; Radiologie up2date Volume 16 ; 16 ;  >
-   au < crawling ; exists ; 2017 ; 2017 ; Radiologie up2date Volume 17 ; 17 ; >
+   au < ready ; exists ; 2017 ; 2017 ; Radiologie up2date Volume 17 ; 17 ; >
 
   }
 
@@ -4452,7 +4452,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Radiopraxis Volume 7 ; 7 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2015 ; 2015 ; Radiopraxis Volume 8 ; 8 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; down ; 2016 ; 2016 ; Radiopraxis Volume 9 ; 9 ;  >
-   au < crawling ; exists ; 2017 ; 2017 ; Radiopraxis Volume 10 ; 10 ; >
+   au < ready ; exists ; 2017 ; 2017 ; Radiopraxis Volume 10 ; 10 ; >
 
   }
 
@@ -4484,7 +4484,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Rehabilitation Die Volume 53 ; 53 ; >
    au < finished ; finished ; 2015 ; 2015 ; Rehabilitation Die Volume 54 ; 54 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2016 ; 2016 ; Rehabilitation Die Volume 55 ; 55 ; >
-   au < crawling ; exists ; 2017 ; 2017 ; Rehabilitation Die Volume 56 ; 56 ; >
+   au < ready ; exists ; 2017 ; 2017 ; Rehabilitation Die Volume 56 ; 56 ; >
 
   }
 
@@ -4504,7 +4504,7 @@
    au < finished ; finished ; 2014 ; 2014 ; retten! Volume 3 ; 3 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; retten! Volume 4 ; 4 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; down ; 2016 ; 2016 ; retten! Volume 5 ; 5 ;  >
-   au < crawling ; exists ; 2017 ; 2017 ; retten! Volume 6 ; 6 ; >
+   au < ready ; exists ; 2017 ; 2017 ; retten! Volume 6 ; 6 ; >
 
   }
 
@@ -4522,7 +4522,7 @@
     # move from Scielo, May 2016
 
    au < deepCrawl ; down ; 2016 ; 2016 ; Revista Brasileira de Ginecologia e Obstetrícia Volume 38 ; 38 ;  >
-   au < crawling ; exists ; 2017 ; 2017 ; Revista Brasileira de Ginecologia e Obstetrícia Volume 39 ; 39 ; >
+   au < ready ; exists ; 2017 ; 2017 ; Revista Brasileira de Ginecologia e Obstetrícia Volume 39 ; 39 ; >
 
   }
 
@@ -4845,7 +4845,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Seminars in Neurology Volume 34 ; 34 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; Seminars in Neurology Volume 35 ; 35 ; reingest1.clockss.org:8082 >
    au < deepCrawl ; down ; 2016 ; 2016 ; Seminars in Neurology Volume 36 ; 36 ;  >
-   au < ready ; exists ; 2017 ; 2017 ; Seminars in Neurology Volume 37 ; 37 ; >
+   au < testing ; exists ; 2017 ; 2017 ; Seminars in Neurology Volume 37 ; 37 ; >
 
   }
 
@@ -5385,7 +5385,7 @@
 
     au < finished ; finished ; 2015 ; 2015 ; The Surgery Journal Volume 1 ; 1 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; The Surgery Journal Volume 2 ; 2 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; The Surgery Journal Volume 3 ; 3 ; >
+    au < testing ; exists ; 2017 ; 2017 ; The Surgery Journal Volume 3 ; 3 ; >
 
   }
 
@@ -5472,7 +5472,7 @@
     param[journal_id] = 10.1055/s-00032269
     #years = 2017-current
 
-    au < ready ; exists ; 2017 ; 2017 ; SynOpen Volume 1 ; 1 ; >
+    au < testing ; exists ; 2017 ; 2017 ; SynOpen Volume 1 ; 1 ; >
 
   }
 
@@ -5561,7 +5561,7 @@
    au < finished ; finished ; 2014 ; 2014 ; team-konkret Volume 10 ; 10 ; >
    au < finished ; finished ; 2015 ; 2015 ; team-konkret Volume 11 ; 11 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2016 ; 2016 ; team-konkret Volume 12 ; 12 ; >
-   au < ready ; exists ; 2017 ; 2017 ; team-konkret Volume 13 ; 13 ; >
+   au < testing ; exists ; 2017 ; 2017 ; team-konkret Volume 13 ; 13 ; >
 
   }
 
@@ -5935,7 +5935,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Zahnmedizin up2date Volume 8 ; 8 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Zahnmedizin up2date Volume 9 ; 9 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; Zahnmedizin up2date Volume 10 ; 10 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; Zahnmedizin up2date Volume 11 ; 11 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Zahnmedizin up2date Volume 11 ; 11 ; >
 
   }
 
@@ -6027,7 +6027,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 218 ; 218 ; >
     au < finished ; finished ; 2015 ; 2015 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 219 ; 219 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 220 ; 220 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 221 ; 221 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 221 ; 221 ; >
 
   }
 
@@ -6128,7 +6128,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Zeitschrift für Komplementärmedizin Volume 6 ; 6 ; >
     au < finished ; finished ; 2015 ; 2015 ; Zeitschrift für Komplementärmedizin Volume 7 ; 7 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; Zeitschrift für Komplementärmedizin Volume 8 ; 8 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; Zeitschrift für Komplementärmedizin Volume 9 ; 9 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Zeitschrift für Komplementärmedizin Volume 9 ; 9 ; >
 
   }
 
