@@ -229,6 +229,7 @@ while (my $line = <>) {
                             $result = "ProbeLinkRedirect";
                         }
                     } else {
+                        $vol_title = $pl_url;
                         $result = "BadProbeLink-" . $resp_pl->code();
                     }
                 } else {
@@ -295,6 +296,7 @@ while (my $line = <>) {
                             $result = "ProbeLinkRedirect";
                         }
                     } else {
+                        $vol_title = $pl_url;
                         $result = "BadProbeLink-" . $resp_pl->code();
                     }
                 } else {
