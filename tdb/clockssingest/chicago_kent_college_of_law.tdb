@@ -22,8 +22,8 @@
       param[base_url] = http://scholarship.kentlaw.iit.edu/
       param[journal_abbr] = seventhcircuitreview
 
-      au < manifest ; exists ; 2009-2010 ; Seventh Circuit Review Volume 5 ; 5 ; >
-      au < manifest ; exists ; 2010-2011 ; Seventh Circuit Review Volume 6 ; 6 ; >
+      au < ready ; exists ; 2009-2010 ; Seventh Circuit Review Volume 5 ; 5 ; >
+      au < ready ; exists ; 2010-2011 ; Seventh Circuit Review Volume 6 ; 6 ; >
       au < crawling ; exists ; 2011-2012 ; Seventh Circuit Review Volume 7 ; 7 ; >
       au < crawling ; exists ; 2012-2013 ; Seventh Circuit Review Volume 8 ; 8 ; >
       au < frozen ; exists ; 2013-2014 ; Seventh Circuit Review Volume 9 ; 9 ; >
@@ -66,20 +66,20 @@
       param[base_url] = http://scholarship.kentlaw.iit.edu/
       param[journal_abbr] = ckjicl
 
-      au < testing ; exists ; 2001 ; Journal of International and Comparative Law Volume 1 ; 1 ; >
+      au < ready ; exists ; 2001 ; Journal of International and Comparative Law Volume 1 ; 1 ; >
       au < crawling ; exists ; 2002 ; Journal of International and Comparative Law Volume 2 ; 2 ; >
       au < crawling ; exists ; 2003 ; Journal of International and Comparative Law Volume 3 ; 3 ; >
       au < crawling ; exists ; 2004 ; Journal of International and Comparative Law Volume 4 ; 4 ; >
-      au < testing ; exists ; 2005 ; Journal of International and Comparative Law Volume 5 ; 5 ; >
-      au < testing ; exists ; 2006 ; Journal of International and Comparative Law Volume 6 ; 6 ; >
+      au < ready ; exists ; 2005 ; Journal of International and Comparative Law Volume 5 ; 5 ; >
+      au < ready ; exists ; 2006 ; Journal of International and Comparative Law Volume 6 ; 6 ; >
       au < crawling ; exists ; 2007 ; Journal of International and Comparative Law Volume 7 ; 7 ; >
       au < crawling ; exists ; 2008 ; Journal of International and Comparative Law Volume 8 ; 8 ; >
       au < crawling ; exists ; 2009 ; Journal of International and Comparative Law Volume 9 ; 9 ; >
-      au < testing ; exists ; 2010 ; Journal of International and Comparative Law Volume 10 ; 10 ; >
+      au < ready ; exists ; 2010 ; Journal of International and Comparative Law Volume 10 ; 10 ; >
       au < crawling ; exists ; 2011 ; Journal of International and Comparative Law Volume 11 ; 11 ; >
       au < crawling ; exists ; 2012 ; Journal of International and Comparative Law Volume 12 ; 12 ; >
-      au < testing ; exists ; 2012-2013 ; Journal of International and Comparative Law Volume 13 ; 13 ; >
-      au < testing ; exists ; 2013-2014 ; Journal of International and Comparative Law Volume 14 ; 14 ; >
+      au < ready ; exists ; 2012-2013 ; Journal of International and Comparative Law Volume 13 ; 13 ; >
+      au < ready ; exists ; 2013-2014 ; Journal of International and Comparative Law Volume 14 ; 14 ; >
       au < crawling ; exists ; 2015 ; Journal of International and Comparative Law Volume 15 ; 15 ; >
       au < crawling ; exists ; 2016 ; Journal of International and Comparative Law Volume 16 ; 16 ; >
       au < frozen ; exists ; 2016 ; Journal of International and Comparative Law Volume 17 ; 17 ; >

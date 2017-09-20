@@ -111,7 +111,7 @@
       au < manifest ; exists ; 2012 ; Global Labour Journal Volume 3 ; 3 ; 2012 ; > 
       au < manifest ; exists ; 2013 ; Global Labour Journal Volume 4 ; 4 ; 2013 ; > 
       au < manifest ; exists ; 2014 ; Global Labour Journal Volume 5 ; 5 ; 2014 ; > 
-      au < manifest ; exists ; 2015 ; Global Labour Journal Volume 6 ; 6 ; 2015 ; > 
+      au < ready ; exists ; 2015 ; Global Labour Journal Volume 6 ; 6 ; 2015 ; > 
       au < frozen ; exists ; 2016 ; Global Labour Journal Volume 7 ; 7 ; 2016 ; > 
       au < crawling ; exists ; 2017 ; Global Labour Journal Volume 8 ; 8 ; 2017 ; > 
 
@@ -144,7 +144,7 @@
       param[base_url] = https://mulpress.mcmaster.ca/
       param[journal_id] = ijsap
 
-      au < manifest ; exists ; 2017 ; International Journal for Students as Partners Volume 1 ; 1 ; 2017 ; > 
+      au < ready ; exists ; 2017 ; International Journal for Students as Partners Volume 1 ; 1 ; 2017 ; > 
 
     }
 
@@ -244,7 +244,7 @@
       au < frozen ; exists ; 2014 ; Russell: the Journal of Bertrand Russell Studies Volume 34 ; 34 ; 2014 ; >
       au < frozen ; exists ; 2015 ; Russell: the Journal of Bertrand Russell Studies Volume 35 ; 35 ; 2015 ; >
       au < frozen ; exists ; 2016 ; Russell: the Journal of Bertrand Russell Studies Volume 36 ; 36 ; 2016 ; >
-      au < manifest ; exists ; 2017 ; Russell: the Journal of Bertrand Russell Studies Volume 37 ; 37 ; 2017 ; > 
+      au < ready ; exists ; 2017 ; Russell: the Journal of Bertrand Russell Studies Volume 37 ; 37 ; 2017 ; > 
 
     }
 
