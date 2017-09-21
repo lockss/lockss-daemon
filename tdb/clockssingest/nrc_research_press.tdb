@@ -1522,8 +1522,8 @@
      
     param[journal_id] = facets
 
-    au < manifest ; exists ; 2017 ; FACETS Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2017 ; FACETS Volume 2 ; 2 ; >
+    au < notReady ; exists ; 2017 ; FACETS Volume 1 ; 1 ; >#not really atypon. http://www.facetsjournal.com/clockss/facets/1/index.html
+    au < notReady ; exists ; 2017 ; FACETS Volume 2 ; 2 ; >#not really atypon. http://www.facetsjournal.com/clockss/facets/2/index.html
 
     }
     
