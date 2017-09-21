@@ -90,6 +90,7 @@
       >
 
       #param[journal_issn] = 1877-6361
+      #series = asm
 
       au < manifest ; exists ; 2009 ; 9781848558328 ; 9781848558335 ; 9781848558335 ; Advanced Series in Management Volume 6 ; >
       au < manifest ; exists ; 2010 ; 9780857240064 ; 9780857240071 ; 9780857240071 ; Relational Practices, Participative Organizing Volume 7 ; >
@@ -115,6 +116,7 @@
       >
 
       #param[journal_issn] = 1475-1488
+      #series = aabr
 
       au < doNotProcess ; doNotProcess ; 2000 ; 9780762306688 ; 9781849500555 ; 9781849500555 ; Advances in Accounting Behavioral Research Volume 3 ; > #RT7387 incorrect article links
       au < doNotProcess ; doNotProcess ; 2001 ; 9780762307845 ; 9781849501040 ; 9781849501040 ; Advances in Accounting Behavioral Research Volume 4 ; > #RT7387 incorrect article links
@@ -132,6 +134,7 @@
       au < exists ; exists ; 2014 ; 9781783504459 ; 9781783504466 ; 9781783504466 ; Advances in Accounting Behavioral Research Volume 17 ; >
       au < exists ; exists ; 2015 ; 9781784416362 ; 9781784416355 ; 9781784416355 ; Advances in Accounting Behavioral Research Volume 18 ; >
       au < exists ; exists ; 2016 ; 9781785609787 ; 9781785609770 ; 9781785609770 ; Advances in Accounting Behavioral Research Volume 19 ; >
+      au < exists ; exists ; 2017 ; 9781787145283 ; 9781787145276 ; 9781787145276 ; Advances in Accounting Behavioral Research Volume 20 ; >
 
   }
 
@@ -144,6 +147,7 @@
       >
 
       #param[journal_issn] = 1085-4622
+      #series = aae
 
       au < manifest ; exists ; 2000 ; 9780762305155 ; 9781849508728 ; 9781849508728 ; Advances in Accounting Education Teaching and Curriculum Innovations Volume 2 ; >
       au < manifest ; exists ; 2000 ; 9780762307586 ; 9781849508711 ; 9781849508711 ; Advances in Accounting Education Teaching and Curriculum Innovations Volume 3 ; >
@@ -164,6 +168,7 @@
       au < exists ; exists ; 2016 ; 9781785607677 ; 9781785607660 ; 9781785607660 ; Advances in Accounting Education: Teaching and Curriculum Innovations Volume 18 ; >
       au < exists ; exists ; 2016 ; 9781785609701 ; 9781785609695 ; 9781785609695 ; Advances in Accounting Education: Teaching and Curriculum Innovations Volume 19 ; >
       au < exists ; exists ; 2017 ; 9781787141810 ; 9781787141803 ; 9781787141803 ; Advances in Accounting Education: Teaching and Curriculum Innovations Volume 20 ; >
+      au < exists ; exists ; 2017 ; 9781787433441 ; 9781787433434 ; 9781787433434 ; Advances in Accounting Education: Teaching and Curriculum Innovations Volume 21 ; >
 
   }
 
@@ -176,6 +181,7 @@
       >
 
       #param[journal_issn] = 1569-4933
+      #series = aaeh
 
       au < manifest ; exists ; 2000 ; 9780762306121 ; 9781849500395 ; 9781849500395 ; New Frontiers in Agricultural History Volume 1 ; >
       au < manifest ; exists ; 2003 ; 9780762310012 ; 9781849501996 ; 9781849501996 ; Advances in Agricultural Economic History Volume 2 ; >
@@ -191,10 +197,12 @@
       >
 
       #param[journal_issn] = 2212-1609
+      #series = aiae
 
       au < manifest ; exists ; 2012 ; 9781780524689 ; 9781780524696 ; 9781780524696 ; Pricing Behavior and Non-Price Characteristics in the Airline Industry Volume 3 ; >
       au < exists ; exists ; 2014 ; 9781783506392 ; 9781783506408 ; 9781783506408 ; The Economics of International Airline Transport Volume 4 ; >
       au < exists ; exists ; 2016 ; 9781785609404 ; 9781785609398 ; 9781785609398 ; Airline Efficiency Volume 5 ; >
+      au < exists ; exists ; 2017 ; 9781787144989 ; 9781787144972 ; 9781787144972 ; The Economics of Airport Operations Volume 6 ; >
 
   }
 
@@ -207,6 +215,7 @@
       >
 
       #param[journal_issn] = 0749-6826
+      #series = aabs
 
       au < manifest ; exists ; 2005 ; 9780762311682 ; 9781849503204 ; 9781849503204 ; Competence Perspective on Managing Internal Process Volume 7 ; >
       au < manifest ; exists ; 2005 ; 9780762311699 ; 9781849503211 ; 9781849503211 ; Competence Perspectives on Managing Interfirm Interactions Volume 8 ; >
@@ -226,6 +235,7 @@
       >
 
       #param[journal_issn] = 0278-0984
+      #series = aame
 
       au < manifest ; exists ; 2000 ; 9780762305766 ; 9781849500371 ; 9781849500371 ; Advances in Applied Microeconomics Volume 8 ; >
       au < manifest ; exists ; 2000 ; 9780762306879 ; 9781849500647 ; 9781849500647 ; Industrial Organization Volume 9 ; >
@@ -246,6 +256,7 @@
       >
 
       #param[journal_issn] = 1475-9152
+      #series = aai
 
       au < manifest ; exists ; 2004 ; 9780762308927 ; 9781849501590 ; 9781849501590 ; Constructive Discourse and Human Organization Volume 1 ; >
       au < manifest ; exists ; 2007 ; 9780762312870 ; 9781849503983 ; 9781849503983 ; Designing Information and Organizations with a Positive Lens Volume 2 ; >
@@ -263,6 +274,7 @@
       >
 
       #param[journal_issn] = 1529-2134
+      #series = aaec
 
       au < manifest ; exists ; 1995 ; 9781559385312 ; 9781849505161 ; 9781849505161 ; Advances in Austrian Economics Volume 2 Part 2 ; >
       au < manifest ; exists ; 1996 ; 9780762300556 ; 9781849500197 ; 9781849500197 ; Advances in Austrian Economics Volume 3 ; >
@@ -295,6 +307,7 @@
       >
 
       #param[journal_issn] = 1479-3709
+      #series = aibi
 
       au < manifest ; exists ; 2001 ; 9780762307579 ; 9781849500913 ; 9781849500913 ; Postmodern Malpractice: A Medical Case Study in The Culture War Volume 6 ; >
       au < manifest ; exists ; 2001 ; 9780762307647 ; 9781849500968 ; 9781849500968 ; The Ethics of Organ Transplantation Volume 7 ; >
@@ -314,6 +327,7 @@
       >
 
       #param[journal_issn] = 1477-4070
+      #series = abmf
 
       au < manifest ; exists ; 2008 ; 9780762314782 ; 9780857247872 ; 9780857247872 ; Advances in Business and Management Forecasting Volume 5 ; >
       au < manifest ; exists ; 2009 ; 9781848555488 ; 9781848555495 ; 9781848555495 ; Advances in Business and Management Forecasting Volume 6 ; >
@@ -334,6 +348,7 @@
       >
 
       #param[journal_issn] = 1069-0964
+      #series = abmp 
 
       au < manifest ; exists ; 2000 ; 9780762306824 ; 9781849500609 ; 9781849500609 ; Designing winning products Volume 10 ; >
       au < manifest ; exists ; 2001 ; 9780762306336 ; 9781849500432 ; 9781849500432 ; Getting Better at Sensemaking Volume 9 ; >
@@ -365,6 +380,7 @@
       >
 
       #param[journal_issn] = 1871-3173
+      #series = acthr
 
       au < manifest ; exists ; 2008 ; 9780762314515 ; 9781849505222 ; 9781849505222 ; Advances in Culture, Tourism and Hospitality Research Volume 2 ; >
       au < manifest ; exists ; 2009 ; 9781849506038 ; 9781849506045 ; 9781849506045 ; Perspectives on Cross-Cultural, Ethnographic, Brand Image, Storytelling, Unconscious Needs, and Hospitality Guest Research Volume 3 ; >
@@ -390,6 +406,7 @@
       >
 
       #param[journal_issn] = 0270-4021
+      #series = aeedc
 
       au < manifest ; exists ; 2001 ; 9780762308101 ; 9781849501170 ; 9781849501170 ; Early Education and Care, and Reconceptualizing Play Volume 11 ; >
       au < manifest ; exists ; 2003 ; 9780762310630 ; 9781849502429 ; 9781849502429 ; Bridging the Gap Between Theory, Research and Practice: The Role of... Volume 12 ; >
@@ -412,6 +429,7 @@
       >
 
       #param[journal_issn] = 0731-9053
+      #seriese = aeco
 
       au < manifest ; exists ; 1997 ; 9780762301874 ; 9781849508247 ; 9781849508247 ; Applying Maximum Entropy to Econometric Problems Volume 12 ; >
       au < manifest ; exists ; 1999 ; 9780762303038 ; 9781849508230 ; 9781849508230 ; Messy Data Volume 13 ; >
@@ -452,6 +470,7 @@
       >
 
       #param[journal_issn] = 2041-806X
+      #series = ae
 
       au < manifest ; exists ; 2007 ; 9781780526669 ; 9781780526676 ; 9781780526676 ; Utopias, Ecotopias and Green Communities: Exploring the Activism, Settlements and Living Patterns of Green Idealists Volume 1 ; >
       au < manifest ; exists ; 2008 ; 9781780526683 ; 9781780526690 ; 9781780526690 ; Advances in Ecopolitics Volume 2 ; >
@@ -475,6 +494,7 @@
       >
 
       #param[journal_issn] = 1479-358X
+      #series = aedc
 
       au < manifest ; exists ; 2002 ; 9780762304288 ; 9781849500265 ; 9781849500265 ; Edmund W. Gordon: Producing Knowledge, Pursuing Understanding Volume 1 ; >
       au < manifest ; exists ; 2002 ; 9780762308293 ; 9781849501279 ; 9781849501279 ; African American Education: Race, Community, Inequality, and Achievement a Tribute to Edgar G. Epps Volume 2 ; >
@@ -487,6 +507,7 @@
       au < manifest ; exists ; 2012 ; 9781781901021 ; 9781781901038 ; 9781781901038 ; Health Disparities Among Under-served Populations: Implications for Research, Policy and Praxis Volume 9 ; >
       au < exists ; exists ; 2014 ; 9781783507092 ; 9781783507108 ; 9781783507108 ; The Obama Administration and Educational Reform Volume 10 ; >
       au < exists ; exists ; 2015 ; 9781785602917 ; 9781785602900 ; 9781785602900 ; Mitigating Inequality: Higher Education Research, Policy, and Practice in an Era of Massification and Stratification Volume 11 ; >
+      au < exists ; exists ; 2017 ; 9781783504619 ; 9781783504626 ; 9781783504626 ; The Power of Resistance Volume 12 ; >
 
   }
 
@@ -499,6 +520,7 @@
       >
 
       #param[journal_issn] = 1479-3660
+      #series = aead
 
       au < manifest ; exists ; 2002 ; 9780762304264 ; 9781849500258 ; 9781849500258 ; Challenges of Urban Education and Efficacy of School Reform Volume 6 ; >
       au < manifest ; exists ; 2004 ; 9780762311453 ; 9781849502986 ; 9781849502986 ; Administering Special Education: In Pursuit of Dignity and Autonomy Volume 7 ; >
@@ -534,18 +556,26 @@
       >
 
       #param[journal_issn] = 1074-7540
+      #series = aefeg
 
-      au < manifest ; exists ; 2001 ;  ; 9780762303250 ; 9780762303250 ; Databases for the Study of Entrepreneurship Volume 4 ; >
-      au < manifest ; exists ; 2002 ;  ; 9780762308774 ; 9780762308774 ; Managing People in Entrepreneurial Organizations Volume 5 ; >
-      au < manifest ; exists ; 2003 ;  ; 9780762310524 ; 9780762310524 ; Cognitive Approaches to Entrepreneurship Research Volume 6 ; >
-      au < manifest ; exists ; 2004 ;  ; 9780762311040 ; 9780762311040 ; Advances in Entrepreneurship, Firm Emergence and Growth Volume 7 ; >
-      au < manifest ; exists ; 2005 ;  ; 9780762312276 ; 9780762312276 ; International Entrepreneurship Volume 8 ; >
-      au < manifest ; exists ; 2006 ;  ; 9780762313297 ; 9780762313297 ; Entrepreneurship: Frameworks And Empirical Investigations From Forthcoming Leaders Of European Research Volume 9 ; >
-      au < manifest ; exists ; 2007 ;  ; 9780762314294 ; 9780762314294 ; Entrepreneurial Strategic Processes Volume 10 ; >
-      au < manifest ; exists ; 2009 ;  ; 9781848554221 ; 9781848554221 ; Entrepreneurial Strategic Content Volume 11 ; >
-      au < manifest ; exists ; 2010 ;  ; 9780857240972 ; 9780857240972 ; Entrepreneurship and Family Business Volume 12 ; >
-      au < manifest ; exists ; 2011 ;  ; 9781780520728 ; 9781780520728 ; Social and Sustainable Entrepreneurship Volume 13 ; >
-      au < manifest ; exists ; 2012 ;  ; 9781780529004 ; 9781780529004 ; Entrepreneurial Action Volume 14 ; >
+      au < exists ; exists ; 1992 ; 9781559385145 ;  ; 9781559385145 ; Advances in Entrepreneurship, Firm Emergence and Growth Volume 1 ; >
+      au < exists ; exists ; 1996 ; 9781559387132 ;  ; 9781559387132 ; Advances in Entrepreneurship, Firm Emergence and Growth Volume 2 ; >
+      au < exists ; exists ; 1998 ; 9780762300037 ;  ; 9780762300037 ; Advances in Entrepreneurship, Firm Emergence and Growth Volume 3 ; >
+      au < manifest ; exists ; 2001 ; 9780762303250 ;  ; 9780762303250 ; Databases for the Study of Entrepreneurship Volume 4 ; >
+      au < manifest ; exists ; 2002 ; 9780762308774 ;  ; 9780762308774 ; Managing People in Entrepreneurial Organizations Volume 5 ; >
+      au < manifest ; exists ; 2003 ; 9780762310524 ;  ; 9780762310524 ; Cognitive Approaches to Entrepreneurship Research Volume 6 ; >
+      au < manifest ; exists ; 2004 ; 9780762311040 ;  ; 9780762311040 ; Advances in Entrepreneurship, Firm Emergence and Growth Volume 7 ; >
+      au < manifest ; exists ; 2005 ; 9780762312276 ;  ; 9780762312276 ; International Entrepreneurship Volume 8 ; >
+      au < manifest ; exists ; 2006 ; 9780762313297 ;  ; 9780762313297 ; Entrepreneurship: Frameworks And Empirical Investigations From Forthcoming Leaders Of European Research Volume 9 ; >
+      au < manifest ; exists ; 2007 ; 9780762314294 ;  ; 9780762314294 ; Entrepreneurial Strategic Processes Volume 10 ; >
+      au < manifest ; exists ; 2009 ; 9781848554221 ;  ; 9781848554221 ; Entrepreneurial Strategic Content Volume 11 ; >
+      au < manifest ; exists ; 2010 ; 9780857240972 ;  ; 9780857240972 ; Entrepreneurship and Family Business Volume 12 ; >
+      au < manifest ; exists ; 2011 ; 9781780520728 ;  ; 9781780520728 ; Social and Sustainable Entrepreneurship Volume 13 ; >
+      au < manifest ; exists ; 2012 ; 9781780529004 ;  ; 9781780529004 ; Entrepreneurial Action Volume 14 ; >
+      au < exists ; exists ; 2013 ; 9781781900185 ;  ; 9781781900185 ; Entrepreneurial Resourcefulness: Competing with Constraints Volume 15 ; >
+      au < exists ; exists ; 2014 ; 9781783509843 ;  ; 9781783509843 ; Academic Entrepreneurship: Creating an Entrepreneurial Ecosystem Volume 16 ; >
+      au < exists ; exists ; 2015 ; 9781785600470 ;  ; 9781785600470 ; Entrepreneurial Growth: Individual, Firm, and Region Volume 17 ; >
+      au < exists ; exists ; 2016 ; 9781786354860 ;  ; 9781786354860 ; Models of Start-up Thinking and Action: Theoretical, Empirical, and Pedagogical Approaches Volume 18 ; >
 
   }
 
@@ -558,11 +588,14 @@
       >
 
       #param[journal_issn] = 1479-3598
+      #series = aeam
 
-      au < manifest ; exists ; 2000 ;  ; 9780762303342 ; 9780762303342 ; Advances in Environmental Accounting & Management Volume 1 ; >
-      au < manifest ; exists ; 2003 ;  ; 9780762310708 ; 9780762310708 ; Advances in Environmental Accounting & Management Volume 2 ; >
-      au < manifest ; exists ; 2006 ;  ; 9780762313662 ; 9780762313662 ; Environmental Accounting Volume 3 ; >
-      au < manifest ; exists ; 2010 ;  ; 9781849507646 ; 9781849507646 ; Sustainability, Environmental Performance and Disclosures Volume 4 ; >
+      au < manifest ; exists ; 2000 ; 9780762303342 ; 9781849500241 ; 9781849500241 ; Advances in Environmental Accounting & Management Volume 1 ; >
+      au < manifest ; exists ; 2003 ; 9780762310708 ; 9781849502481 ; 9781849502481 ; Advances in Environmental Accounting & Management Volume 2 ; >
+      au < manifest ; exists ; 2006 ; 9780762313662 ; 9781849504577 ; 9781849504577 ; Environmental Accounting Volume 3 ; >
+      au < manifest ; exists ; 2010 ; 9781849507646 ; 9781849507653 ; 9781849507653 ; Sustainability, Environmental Performance and Disclosures Volume 4 ; >
+      au < exists ; exists ; 2014 ; 9781781903032 ; 9781781903049 ; 9781781903049 ; Accounting for the Environment: More Talk and Little Progress Volume 5 ; >
+      au < exists ; exists ; 2017 ; 9781786353764 ; 9781786353757 ; 9781786353757 ; Advances in Environmental Accounting & Management: Social and Environmental Accounting in Brazil Volume 6 ; >
 
   }
 
@@ -575,17 +608,22 @@
       >
 
       #param[journal_issn] = 1569-3732
+      #series = afec
 
-      au < manifest ; exists ; 2001 ;  ; 9780762307135 ; 9780762307135 ; Advances in Financial Economics Volume 6 ; >
-      au < manifest ; exists ; 2002 ;  ; 9780762308972 ; 9780762308972 ; Innovations in Investments and Corporate Finance Volume 7 ; >
-      au < manifest ; exists ; 2003 ;  ; 9780762310272 ; 9780762310272 ; Advances in Financial Economics Volume 8 ; >
-      au < manifest ; exists ; 2004 ;  ; 9780762311330 ; 9780762311330 ; Advances in Financial Economics: Corporate Governance Volume 9 ; >
-      au < manifest ; exists ; 2004 ;  ; 9780762311378 ; 9780762311378 ; The Rise and Fall of Europe's New Stock Markets Volume 10 ; >
-      au < manifest ; exists ; 2005 ;  ; 9780762311873 ; 9780762311873 ; Advances in Financial Economics: Corporate Governance Volume 11 ; >
-      au < manifest ; exists ; 2007 ;  ; 9780762313730 ; 9780762313730 ; Issues in Corporate Governance and Finance Volume 12 ; >
-      au < manifest ; exists ; 2009 ;  ; 9781848555365 ; 9781848555365 ; Corporate Governance and Firm Performance Volume 13 ; >
-      au < manifest ; exists ; 2011 ;  ; 9780857249159 ; 9780857249159 ; International Corporate Governance Volume 14 ; >
-      au < manifest ; exists ; 2012 ;  ; 9781780527888 ; 9781780527888 ; Advances in Financial Economics Volume 15 ; >
+      au < manifest ; exists ; 2001 ; 9780762307135 ; 9781849500746 ; 9781849500746 ; Advances in Financial Economics Volume 6 ; >
+      au < manifest ; exists ; 2002 ; 9780762308972 ; 9781849501613 ; 9781849501613 ; Innovations in Investments and Corporate Finance Volume 7 ; >
+      au < manifest ; exists ; 2003 ; 9780762310272 ; 9781849502146 ; 9781849502146 ; Advances in Financial Economics Volume 8 ; >
+      au < manifest ; exists ; 2004 ; 9780762311330 ; 9781849502894 ; 9781849502894 ; Corporate Governance Volume 9 ; >
+      au < manifest ; exists ; 2004 ; 9780762311378 ; 9781849502931 ; 9781849502931 ; The Rise and Fall of Europe's New Stock Markets Volume 10 ; >
+      au < manifest ; exists ; 2005 ; 9780762311873 ; 9781849503334 ; 9781849503334 ; Corporate Governance Volume 11 ; >
+      au < manifest ; exists ; 2007 ; 9780762313730 ; 9781849504614 ; 9781849504614 ; Issues in Corporate Governance and Finance Volume 12 ; >
+      au < manifest ; exists ; 2009 ; 9781848555365 ; 9781848555372 ; 9781848555372 ; Corporate Governance and Firm Performance Volume 13 ; >
+      au < manifest ; exists ; 2011 ; 9780857249159 ; 9780857249166 ; 9780857249166 ; International Corporate Governance Volume 14 ; >
+      au < manifest ; exists ; 2012 ; 9781780527888 ; 9781780527895 ; 9781780527895 ; Advances in Financial Economics Volume 15 ; >
+      au < exists ; exists ; 2013 ; 9781783501205 ; 9781783501212 ; 9781783501212 ; Advances in Financial Economics Volume 16 ; >
+      au < exists ; exists ; 2014 ; 9781784412920 ; 9781784412913 ; 9781784412913 ; Corporate Governance in the US and Global Settings Volume 17 ; >
+      au < exists ; exists ; 2015 ; 9781785603556 ; 9781785603549 ; 9781785603549 ; International Corporate Governance Volume 18 ; >
+      au < exists ; exists ; 2017 ; 9781786351661 ; 9781786351654 ; 9781786351654 ; Global Corporate Governance Volume 19 ; >
 
   }
 
@@ -598,21 +636,28 @@
       >
 
       #param[journal_issn] = 1529-2126
+      #series = agr
 
-      au < manifest ; exists ; 1999 ;  ; 9780762305339 ; 9780762305339 ; Social Change for Women and Children Volume 4 ; >
-      au < doNotProcess ; exists ; 2001 ;  ; 9780762307203 ; 9780762307203 ; An International Feminist Challenge to Theory Volume 5 ; >
-      au < doNotProcess ; exists ; 2003 ;  ; 9780762310586 ; 9780762310586 ; Gender Perspectives on Health and Medicine Volume 7 ; >
-      au < doNotProcess ; exists ; 2004 ;  ; 9780762310883 ; 9780762310883 ; Gendered Perspectives on Reproduction and Sexuality Volume 8 ; >
-      au < doNotProcess ; exists ; 2005 ;  ; 9780762308200 ; 9780762308200 ; Gendered Sexualities Volume 6 ; >
-      au < doNotProcess ; exists ; 2005 ;  ; 9780762312146 ; 9780762312146 ; Gender Realities: Local and Global Volume 9 ; >
-      au < manifest ; exists ; 2006 ;  ; 9780762313129 ; 9780762313129 ; Gender and the Local-Global Nexus: Theory, Research, and Action Volume 10 ; >
-      au < manifest ; exists ; 2007 ;  ; 9780762314393 ; 9780762314393 ; Sustainable Feminisms Volume 11 ; >
-      au < manifest ; exists ; 2008 ;  ; 9781848550261 ; 9781848550261 ; Advancing Gender Research from the Nineteenth to the Twenty-First Centuries Volume 12 ; >
-      au < manifest ; exists ; 2009 ;  ; 9781848557529 ; 9781848557529 ; Perceiving Gender Locally, Globally, and Intersectionally Volume 13 ; >
-      au < manifest ; exists ; 2010 ;  ; 9781849509442 ; 9781849509442 ; Interactions and Intersections of Gendered Bodies at Work, at Home, and at Play Volume 14 ; >
-      au < manifest ; exists ; 2011 ;  ; 9780857247438 ; 9780857247438 ; Analyzing Gender, Intersectionality, and Multiple Inequalities: Global, Transnational and Local Contexts Volume 15 ; >
-      au < manifest ; exists ; 2012 ;  ; 9781780528748 ; 9781780528748 ; Social Production and Reproduction at the Interface of Public and Private Spheres Volume 16 ; >
-      au < manifest ; exists ; 2013 ;  ; 9781781905357 ; 9781781905357 ; Notions of Family: Intersectional Perspectives Volume 17 ; >
+      au < manifest ; exists ; 1999 ; 9780762305339 ; 9781849500326 ; 9781849500326 ; Social Change for Women and Children Volume 4 ; >
+      au < doNotProcess ; exists ; 2001 ; 9780762307203 ; 9781849500791 ; 9781849500791 ; An International Feminist Challenge to Theory Volume 5 ; >
+      au < doNotProcess ; exists ; 2003 ; 9780762310586 ; 9781849502399 ; 9781849502399 ; Gender Perspectives on Health and Medicine Volume 7 ; >
+      au < doNotProcess ; exists ; 2004 ; 9780762310883 ; 9781849502566 ; 9781849502566 ; Gendered Perspectives on Reproduction and Sexuality Volume 8 ; >
+      au < doNotProcess ; exists ; 2005 ; 9780762308200 ; 9781849501217 ; 9781849501217 ; Gendered Sexualities Volume 6 ; >
+      au < doNotProcess ; exists ; 2005 ; 9780762312146 ; 9781849503457 ; 9781849503457 ; Gender Realities: Local and Global Volume 9 ; >
+      au < manifest ; exists ; 2006 ; 9780762313129 ; 9781849504133 ; 9781849504133 ; Gender and the Local-Global Nexus: Theory, Research, and Action Volume 10 ; >
+      au < manifest ; exists ; 2007 ; 9780762314393 ; 9781849505024 ; 9781849505024 ; Sustainable Feminisms Volume 11 ; >
+      au < manifest ; exists ; 2008 ; 9781848550261 ; 9781848550278 ; 9781848550278 ; Advancing Gender Research from the Nineteenth to the Twenty-First Centuries Volume 12 ; >
+      au < manifest ; exists ; 2009 ; 9781848557529 ; 9781848557536 ; 9781848557536 ; Perceiving Gender Locally, Globally, and Intersectionally Volume 13 ; >
+      au < manifest ; exists ; 2010 ; 9781849509442 ; 9781849509459 ; 9781849509459 ; Interactions and Intersections of Gendered Bodies at Work, at Home, and at Play Volume 14 ; >
+      au < manifest ; exists ; 2011 ; 9780857247438 ; 9780857247445 ; 9780857247445 ; Analyzing Gender, Intersectionality, and Multiple Inequalities: Global, Transnational and Local Contexts Volume 15 ; >
+      au < manifest ; exists ; 2012 ; 9781780528748 ; 9781780528755 ; 9781780528755 ; Social Production and Reproduction at the Interface of Public and Private Spheres Volume 16 ; >
+      au < manifest ; exists ; 2013 ; 9781781905357 ; 9781781905364 ; 9781781905364 ; Notions of Family: Intersectional Perspectives Volume 17 ; >
+      au < exists ; exists ; 2013 ; 9781783501106 ; 9781783501113 ; 9781783501113 ; Gendered Perspectives on Conflict and Violence: Part A Volume 18A ; >
+      au < exists ; exists ; 2014 ; 9781783508938 ; 9781783508945 ; 9781783508945 ; Gendered Perspectives on Conflict and Violence: Part B Volume 18B ; >
+      au < exists ; exists ; 2014 ; 9781784410704 ; 9781784410698 ; 9781784410698 ; Gender Transformation in the Academy Volume 19 ; >
+      au < exists ; exists ; 2015 ; 9781785600791 ; 9781785600784 ; 9781785600784 ; At the Center: Feminism, Social Science and Knowledge Volume 20 ; >
+      au < exists ; exists ; 2016 ; 9781786350381 ; 9781786350374 ; 9781786350374 ; Gender and Race Matter: Global Perspectives on Being a Woman Volume 21 ; >
+      au < exists ; exists ; 2016 ; 9781786350541 ; 9781786350534 ; 9781786350534 ; Gender and Food: From Production to Consumption and After Volume 22 ; >
 
   }
 
@@ -625,13 +670,17 @@
       >
 
       #param[journal_issn] = 1535-1203
+      #series = agl
 
-      au < manifest ; exists ; 2001 ;  ; 9780762307234 ; 9780762307234 ; Advances in Global Leadership Volume 2 ; >
-      au < manifest ; exists ; 2003 ;  ; 9780762308668 ; 9780762308668 ; Advances in Global Leadership Volume 3 ; >
-      au < manifest ; exists ; 2005 ;  ; 9780762311606 ; 9780762311606 ; Advances in Global Leadership Volume 4 ; >
-      au < manifest ; exists ; 2009 ;  ; 9781848552562 ; 9781848552562 ; Advances in Global Leadership Volume 5 ; >
-      au < manifest ; exists ; 2011 ;  ; 9780857244673 ; 9780857244673 ; Advances in Global Leadership Volume 6 ; >
-      au < manifest ; exists ; 2012 ;  ; 9781780520025 ; 9781780520025 ; Advances in Global Leadership Volume 7 ; >
+      au < manifest ; exists ; 2001 ; 9780762307234 ; 9781849500821 ; 9781849500821 ; Advances in Global Leadership Volume 2 ; >
+      au < manifest ; exists ; 2003 ; 9780762308668 ; 9781849501460 ; 9781849501460 ; Advances in Global Leadership Volume 3 ; >
+      au < manifest ; exists ; 2005 ; 9780762311606 ; 9781849503129 ; 9781849503129 ; Advances in Global Leadership Volume 4 ; >
+      au < manifest ; exists ; 2009 ; 9781848552562 ; 9781848552579 ; 9781848552579 ; Advances in Global Leadership Volume 5 ; >
+      au < manifest ; exists ; 2011 ; 9780857244673 ; 9780857244680 ; 9780857244680 ; Advances in Global Leadership Volume 6 ; >
+      au < manifest ; exists ; 2012 ; 9781780520025 ; 9781780520032 ; 9781780520032 ; Advances in Global Leadership Volume 7 ; >
+      au < exists ; exists ; 2014 ; 9781783504794 ; 9781783504800 ; 9781783504800 ; Advances in Global Leadership Volume 8 ; >
+      au < exists ; exists ; 2016 ; 9781786351388 ; 9781786351371 ; 9781786351371 ; Advances in Global Leadership Volume 9 ; >
+      au < exists ; exists ; 2017 ; 9781787146990 ; 9781787146983 ; 9781787146983 ; Advances in Global Leadership Volume 10 ; >
 
   }
 
@@ -644,20 +693,26 @@
       >
 
       #param[journal_issn] = 0882-6145
+      #series = agp
 
-      au < manifest ; exists ; 2000 ;  ; 9780762306510 ; 9780762306510 ; Advances in Group Processes Volume 17 ; >
-      au < manifest ; exists ; 2001 ;  ; 9780762307678 ; 9780762307678 ; Advances in Group Processes Volume 18 ; >
-      au < manifest ; exists ; 2002 ;  ; 9780762308989 ; 9780762308989 ; Advances in Group Processes Volume 19 ; >
-      au < manifest ; exists ; 2003 ;  ; 9780762310302 ; 9780762310302 ; Power and Status Volume 20 ; >
-      au < manifest ; exists ; 2004 ;  ; 9780762311088 ; 9780762311088 ; Theory and Research on Human Emotions Volume 21 ; >
-      au < manifest ; exists ; 2005 ;  ; 9780762312238 ; 9780762312238 ; Social Identification in Groups Volume 22 ; >
-      au < manifest ; exists ; 2006 ;  ; 9780762313303 ; 9780762313303 ; Advances in Group Processes Volume 23 ; >
-      au < manifest ; exists ; 2007 ;  ; 9780762314300 ; 9780762314300 ; Social Psychology of Gender Volume 24 ; >
-      au < manifest ; exists ; 2008 ;  ; 9781848551046 ; 9781848551046 ; Justice Volume 25 ; >
-      au < manifest ; exists ; 2009 ;  ; 9781848555723 ; 9781848555723 ; Altruism and Prosocial Behavior in Groups Volume 26 ; >
-      au < manifest ; exists ; 2010 ;  ; 9780857243294 ; 9780857243294 ; Advances in Group Processes Volume 27 ; >
-      au < manifest ; exists ; 2011 ;  ; 9780857247735 ; 9780857247735 ; Advances in Group Processes Volume 28 ; >
-      au < manifest ; exists ; 2012 ;  ; 9781781902561 ; 9781781902561 ; Biosociology and Neurosociology Volume 29 ; >
+      au < manifest ; exists ; 2000 ; 9780762306510 ; 9781849500494 ; 9781849500494 ; Advances in Group Processes Volume 17 ; >
+      au < manifest ; exists ; 2001 ; 9780762307678 ; 9781849500982 ; 9781849500982 ; Advances in Group Processes Volume 18 ; >
+      au < manifest ; exists ; 2002 ; 9780762308989 ; 9781849501620 ; 9781849501620 ; Advances in Group Processes Volume 19 ; >
+      au < manifest ; exists ; 2003 ; 9780762310302 ; 9781849502177 ; 9781849502177 ; Power and Status Volume 20 ; >
+      au < manifest ; exists ; 2004 ; 9780762311088 ; 9781849502719 ; 9781849502719 ; Theory and Research on Human Emotions Volume 21 ; >
+      au < manifest ; exists ; 2005 ; 9780762312238 ; 9781849503525 ; 9781849503525 ; Social Identification in Groups Volume 22 ; >
+      au < manifest ; exists ; 2006 ; 9780762313303 ; 9781849504294 ; 9781849504294 ; Advances in Group Processes Volume 23 ; >
+      au < manifest ; exists ; 2007 ; 9780762314300 ; 9781849504966 ; 9781849504966 ; Social Psychology of Gender Volume 24 ; >
+      au < manifest ; exists ; 2008 ; 9781848551046 ; 9781848551053 ; 9781848551053 ; Justice Volume 25 ; >
+      au < manifest ; exists ; 2009 ; 9781848555723 ; 9781848555730 ; 9781848555730 ; Altruism and Prosocial Behavior in Groups Volume 26 ; >
+      au < manifest ; exists ; 2010 ; 9780857243294 ; 9780857243300 ; 9780857243300 ; Advances in Group Processes Volume 27 ; >
+      au < manifest ; exists ; 2011 ; 9780857247735 ; 9780857247742 ; 9780857247742 ; Advances in Group Processes Volume 28 ; >
+      au < manifest ; exists ; 2012 ; 9781781902561 ; 9781781902578 ; 9781781902578 ; Biosociology and Neurosociology Volume 29 ; >
+      au < exists ; exists ; 2013 ; 9781781909768 ; 9781781909775 ; 9781781909775 ; Advances in Group Processes Volume 30 ; >
+      au < exists ; exists ; 2014 ; 9781784410780 ; 9781784410773 ; 9781784410773 ; Advances in Group Processes Volume 31 ; >
+      au < exists ; exists ; 2015 ; 9781785600777 ; 9781785600760 ; 9781785600760 ; Advances in Group Processes Volume 32 ; >
+      au < exists ; exists ; 2016 ; 9781786350428 ; 9781786350411 ; 9781786350411 ; Advances in Group Processes Volume 33 ; >
+      au < exists ; exists ; 2017 ; 9781787431935 ; 9781787431928 ; 9781787431928 ; Advances in Group Processes Volume 34 ; >
 
   }
 
