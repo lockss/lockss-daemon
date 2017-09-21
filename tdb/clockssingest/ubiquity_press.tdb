@@ -8,7 +8,7 @@
 
     provider = Ubiquity Press
     plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
-    implicit < status ; status2 ; year ; volume ; name ; param[year] ; hidden[proxy] >
+    implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
 
   {
 
@@ -18,14 +18,14 @@
       >
 
       comment[publisher] = Martin Paul Eve
-      param[base_url] = https://www.pynchon.net/
+#      param[base_url] = https://www.pynchon.net/
 
-      au < frozen ; exists ; 2012 ; 1 ; Orbit: Writing Around Pynchon Volume 2012 ; 2012 ; >
-      au < frozen ; exists ; 2013 ; 2 ; Orbit: Writing Around Pynchon Volume 2013 ; 2013 ; >
-      au < frozen ; exists ; 2014 ; 3 ; Orbit: Writing Around Pynchon Volume 2014 ; 2014 ; >
-      au < frozen ; exists ; 2015 ; 4 ; Orbit: Writing Around Pynchon Volume 2015 ; 2015 ; >
-      au < frozen ; exists ; 2016 ; 5 ; Orbit: Writing Around Pynchon Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 6 ; Orbit: Writing Around Pynchon Volume 2017 ; 2017 ; >
+      au < frozen ; exists ; 2012 ; 1 ; Orbit: Writing Around Pynchon Volume 2012 ; 2012 ; https://www.pynchon.net/ ; >
+      au < frozen ; exists ; 2013 ; 2 ; Orbit: Writing Around Pynchon Volume 2013 ; 2013 ; https://www.pynchon.net/ ; >
+      au < frozen ; exists ; 2014 ; 3 ; Orbit: Writing Around Pynchon Volume 2014 ; 2014 ; https://www.pynchon.net/ ; >
+      au < frozen ; exists ; 2015 ; 4 ; Orbit: Writing Around Pynchon Volume 2015 ; 2015 ; https://www.pynchon.net/ ; >
+      au < frozen ; exists ; 2016 ; 5 ; Orbit: Writing Around Pynchon Volume 2016 ; 2016 ; https://www.pynchon.net/ ; >
+      au < crawling ; exists ; 2017 ; 6 ; Orbit: Writing Around Pynchon Volume 2017 ; 2017 ; https://www.pynchon.net/ ; >
 
   }
 
@@ -40,7 +40,7 @@
 
     provider = Ubiquity Press
     plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
-    implicit < status ; status2 ; year ; volume ; name ; param[year] ; hidden[proxy] >
+    implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
 
   {
 
@@ -50,21 +50,21 @@
       >
 
       comment[publisher] = Open Library of the Humanities
-      param[base_url] = http://www.19.bbk.ac.uk/
+#      param[base_url] = http://www.19.bbk.ac.uk/
 
-      au < manifest ; exists ; 2005 ; 1 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2005 ; 2005 ; >
-      au < manifest ; exists ; 2006 ; 2 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2006 ; 2006 ; >
-      au < manifest ; exists ; 2007 ; 3 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2007 ; 2007 ; >
-      au < manifest ; exists ; 2008 ; 4 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2008 ; 2008 ; >
-      au < manifest ; exists ; 2009 ; 5 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2009 ; 2009 ; >
-      au < frozen ; exists ; 2010 ; 6 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2010 ; 2010 ; >
-      au < frozen ; exists ; 2011 ; 7 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2011 ; 2011 ; >
-      au < frozen ; exists ; 2012 ; 8 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2012 ; 2012 ; >
-      au < frozen ; exists ; 2013 ; 9 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2013 ; 2013 ; >
-      au < frozen ; exists ; 2014 ; 10 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2014 ; 2014 ; >
-      au < frozen ; exists ; 2015 ; 11 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2015 ; 2015 ; >
-      au < deepCrawl ; exists ; 2016 ; 12 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 13 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2017 ; 2017 ; >
+      au < manifest ; exists ; 2005 ; 1 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2005 ; 2005 ; https://www.19.bbk.ac.uk/ ; >
+      au < manifest ; exists ; 2006 ; 2 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2006 ; 2006 ; https://www.19.bbk.ac.uk/ ; >
+      au < manifest ; exists ; 2007 ; 3 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2007 ; 2007 ; https://www.19.bbk.ac.uk/ ; >
+      au < manifest ; exists ; 2008 ; 4 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2008 ; 2008 ; https://www.19.bbk.ac.uk/ ; >
+      au < manifest ; exists ; 2009 ; 5 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2009 ; 2009 ; https://www.19.bbk.ac.uk/ ; >
+      au < frozen ; exists ; 2010 ; 6 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2010 ; 2010 ; http://www.19.bbk.ac.uk/ ; >
+      au < frozen ; exists ; 2011 ; 7 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2011 ; 2011 ; http://www.19.bbk.ac.uk/ ; >
+      au < frozen ; exists ; 2012 ; 8 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2012 ; 2012 ; http://www.19.bbk.ac.uk/ ; >
+      au < frozen ; exists ; 2013 ; 9 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2013 ; 2013 ; http://www.19.bbk.ac.uk/ ; >
+      au < frozen ; exists ; 2014 ; 10 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2014 ; 2014 ; http://www.19.bbk.ac.uk/ ; >
+      au < frozen ; exists ; 2015 ; 11 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2015 ; 2015 ; http://www.19.bbk.ac.uk/ ; >
+      au < deepCrawl ; exists ; 2016 ; 12 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2016 ; 2016 ; http://www.19.bbk.ac.uk/ ; >
+      au < crawling ; exists ; 2017 ; 13 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2017 ; 2017 ; http://www.19.bbk.ac.uk/ ; >
 
   }
 
@@ -76,18 +76,18 @@
       >
 
       comment[publisher] = Open Library of the Humanities
-      param[base_url] = http://www.asianetworkexchange.org/
+#      param[base_url] = http://www.asianetworkexchange.org/
 
-      au < manifest ; exists ; 2008 ; 16 ; ASIANetwork Exchange Volume 2008 ; 2008 ; >
-      au < manifest ; exists ; 2009 ; 16-17 ; ASIANetwork Exchange Volume 2009 ; 2009 ; >
-      au < frozen ; exists ; 2010 ; 17-18 ; ASIANetwork Exchange Volume 2010 ; 2010 ; >
-      au < frozen ; exists ; 2011 ; 18-19 ; ASIANetwork Exchange Volume 2011 ; 2011 ; >
-      au < frozen ; exists ; 2012 ; 19-20 ; ASIANetwork Exchange Volume 2012 ; 2012 ; >
-      au < frozen ; exists ; 2013 ; 20-21 ; ASIANetwork Exchange Volume 2013 ; 2013 ; >
-      au < finished ; finished ; 2014 ; 21-22 ; ASIANetwork Exchange Volume 2014 ; 2014 ; >
-      au < frozen ; exists ; 2015 ; 22 ; ASIANetwork Exchange Volume 2015 ; 2015 ; >
-      au < deepCrawl ; exists ; 2016 ; 23 ; ASIANetwork Exchange Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 24 ; ASIANetwork Exchange Volume 2017 ; 2017 ; >
+      au < manifest ; exists ; 2008 ; 16 ; ASIANetwork Exchange Volume 2008 ; 2008 ; https://www.asianetworkexchange.org/ ; >
+      au < manifest ; exists ; 2009 ; 16-17 ; ASIANetwork Exchange Volume 2009 ; 2009 ; https://www.asianetworkexchange.org/ ; >
+      au < frozen ; exists ; 2010 ; 17-18 ; ASIANetwork Exchange Volume 2010 ; 2010 ; http://www.asianetworkexchange.org/ ; >
+      au < frozen ; exists ; 2011 ; 18-19 ; ASIANetwork Exchange Volume 2011 ; 2011 ; http://www.asianetworkexchange.org/ ; >
+      au < frozen ; exists ; 2012 ; 19-20 ; ASIANetwork Exchange Volume 2012 ; 2012 ; http://www.asianetworkexchange.org/ ; >
+      au < frozen ; exists ; 2013 ; 20-21 ; ASIANetwork Exchange Volume 2013 ; 2013 ; http://www.asianetworkexchange.org/ ; >
+      au < finished ; finished ; 2014 ; 21-22 ; ASIANetwork Exchange Volume 2014 ; 2014 ; http://www.asianetworkexchange.org/ ; >
+      au < frozen ; exists ; 2015 ; 22 ; ASIANetwork Exchange Volume 2015 ; 2015 ; http://www.asianetworkexchange.org/ ; >
+      au < deepCrawl ; exists ; 2016 ; 23 ; ASIANetwork Exchange Volume 2016 ; 2016 ; http://www.asianetworkexchange.org/ ; >
+      au < crawling ; exists ; 2017 ; 24 ; ASIANetwork Exchange Volume 2017 ; 2017 ; http://www.asianetworkexchange.org/ ; >
 
   }
 
@@ -99,10 +99,10 @@
       >
 
       comment[publisher] = Open Library of the Humanities
-      param[base_url] = http://c21.openlibhums.org/
+#      param[base_url] = http://c21.openlibhums.org/
 
-      au < deepCrawl ; exists ; 2016 ; 1 ; C21 Literature: journal of 21st-century writings Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 2 ; C21 Literature: journal of 21st-century writings Volume 2017 ; 2017 ; >
+      au < deepCrawl ; exists ; 2016 ; 1 ; C21 Literature: journal of 21st-century writings Volume 2016 ; 2016 ; http://c21.openlibhums.org/ ; >
+      au < crawling ; exists ; 2017 ; 2 ; C21 Literature: journal of 21st-century writings Volume 2017 ; 2017 ; http://c21.openlibhums.org/ ; >
 
   }
 
@@ -114,10 +114,10 @@
       >
 
       comment[publisher] = Open Library of the Humanities
-      param[base_url] = http://www.glossa-journal.org/
+#      param[base_url] = http://www.glossa-journal.org/
 
-      au < deepCrawl ; exists ; 2016 ; 1 ; Glossa: a journal of general linguistics Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 2 ; Glossa: a journal of general linguistics Volume 2017 ; 2017 ; >
+      au < deepCrawl ; exists ; 2016 ; 1 ; Glossa: a journal of general linguistics Volume 2016 ; 2016 ; http://www.glossa-journal.org/ ; >
+      au < crawling ; exists ; 2017 ; 2 ; Glossa: a journal of general linguistics Volume 2017 ; 2017 ; http://www.glossa-journal.org/ ; >
 
   }
 
@@ -129,11 +129,11 @@
       >
 
       comment[publisher] = Open Library of the Humanities
-      param[base_url] = https://poetry.openlibhums.org/
+#      param[base_url] = https://poetry.openlibhums.org/
 
-      au < finished ; finished ; 2015 ; 1 ; Journal of British and Irish Innovative Poetry Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2016 ; 2 ; Journal of British and Irish Innovative Poetry Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 3 ; Journal of British and Irish Innovative Poetry Volume 2017 ; 2017 ; >
+      au < finished ; finished ; 2015 ; 1 ; Journal of British and Irish Innovative Poetry Volume 2015 ; 2015 ; https://poetry.openlibhums.org/ ; reingest5.clockss.org:8082 >
+      au < frozen ; exists ; 2016 ; 2 ; Journal of British and Irish Innovative Poetry Volume 2016 ; 2016 ; https://poetry.openlibhums.org/ ; >
+      au < crawling ; exists ; 2017 ; 3 ; Journal of British and Irish Innovative Poetry Volume 2017 ; 2017 ; https://poetry.openlibhums.org/ ; >
 
   }
 
@@ -145,11 +145,11 @@
       >
 
       comment[publisher] = Open Library of the Humanities
-      param[base_url] = https://olh.openlibhums.org/
+#      param[base_url] = https://olh.openlibhums.org/
 
-      au < finished ; finished ; 2015 ; 1 ; Open Library of Humanities Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2016 ; 2 ; Open Library of Humanities Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 3 ; Open Library of Humanities Volume 2017 ; 2017 ; >
+      au < finished ; finished ; 2015 ; 1 ; Open Library of Humanities Volume 2015 ; 2015 ; https://olh.openlibhums.org/ ; reingest5.clockss.org:8082 >
+      au < frozen ; exists ; 2016 ; 2 ; Open Library of Humanities Volume 2016 ; 2016 ; https://olh.openlibhums.org/ ; >
+      au < crawling ; exists ; 2017 ; 3 ; Open Library of Humanities Volume 2017 ; 2017 ; https://olh.openlibhums.org/ ; >
 
   }
 
@@ -161,17 +161,17 @@
       >
 
       comment[publisher] = Open Library of the Humanities
-      param[base_url] = http://www.mamsie.bbk.ac.uk/
+#      param[base_url] = http://www.mamsie.bbk.ac.uk/
 
-      au < manifest ; exists ; 2009 ; 1 ; Studies in the Maternal Volume 2009 ; 2009 ; >
-      au < frozen ; exists ; 2010 ; 2 ; Studies in the Maternal Volume 2010 ; 2010 ; >
-      au < frozen ; exists ; 2011 ; 3 ; Studies in the Maternal Volume 2011 ; 2011 ; >
-      au < frozen ; exists ; 2012 ; 4 ; Studies in the Maternal Volume 2012 ; 2012 ; >
-      au < frozen ; exists ; 2013 ; 5 ; Studies in the Maternal Volume 2013 ; 2013 ; >
-      au < finished ; finished ; 2014 ; 6 ; Studies in the Maternal Volume 2014 ; 2014 ; >
-      au < frozen ; exists ; 2015 ; 7 ; Studies in the Maternal Volume 2015 ; 2015 ; >
-      au < deepCrawl ; exists ; 2016 ; 8 ; Studies in the Maternal Volume 2016 ; 2016 ; >
-      au < manifest ; exists ; 2017 ; 9 ; Studies in the Maternal Volume 2017 ; 2017 ; >
+      au < manifest ; exists ; 2009 ; 1 ; Studies in the Maternal Volume 2009 ; 2009 ; https://www.mamsie.bbk.ac.uk/ ; >
+      au < frozen ; exists ; 2010 ; 2 ; Studies in the Maternal Volume 2010 ; 2010 ; http://www.mamsie.bbk.ac.uk/ ; >
+      au < frozen ; exists ; 2011 ; 3 ; Studies in the Maternal Volume 2011 ; 2011 ; http://www.mamsie.bbk.ac.uk/ ; >
+      au < frozen ; exists ; 2012 ; 4 ; Studies in the Maternal Volume 2012 ; 2012 ; http://www.mamsie.bbk.ac.uk/ ; >
+      au < frozen ; exists ; 2013 ; 5 ; Studies in the Maternal Volume 2013 ; 2013 ; http://www.mamsie.bbk.ac.uk/ ; >
+      au < finished ; finished ; 2014 ; 6 ; Studies in the Maternal Volume 2014 ; 2014 ; http://www.mamsie.bbk.ac.uk/ ; >
+      au < frozen ; exists ; 2015 ; 7 ; Studies in the Maternal Volume 2015 ; 2015 ; http://www.mamsie.bbk.ac.uk/ ; >
+      au < deepCrawl ; exists ; 2016 ; 8 ; Studies in the Maternal Volume 2016 ; 2016 ; http://www.mamsie.bbk.ac.uk/ ; >
+      au < manifest ; exists ; 2017 ; 9 ; Studies in the Maternal Volume 2017 ; 2017 ; https://www.mamsie.bbk.ac.uk/ ; >
 
   }
 
@@ -183,13 +183,13 @@
       >
 
       comment[publisher] = Open Library of the Humanities
-      param[base_url] = http://www.comicsgrid.com/
+#      param[base_url] = http://www.comicsgrid.com/
 
-      au < frozen ; exists ; 2013 ; 3 ; The Comics Grid: Journal of Comics Scholarship Volume 2013 ; 2013 ; >
-      au < finished ; finished ; 2014 ; 4 ; The Comics Grid: Journal of Comics Scholarship Volume 2014 ; 2014 ; >
-      au < finished ; finished ; 2015 ; 5 ; The Comics Grid: Journal of Comics Scholarship Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016 ; 6 ; The Comics Grid: Journal of Comics Scholarship Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 7 ; The Comics Grid: Journal of Comics Scholarship Volume 2017 ; 2017 ; >
+      au < frozen ; exists ; 2013 ; 3 ; The Comics Grid: Journal of Comics Scholarship Volume 2013 ; 2013 ; http://www.comicsgrid.com/ ; >
+      au < finished ; finished ; 2014 ; 4 ; The Comics Grid: Journal of Comics Scholarship Volume 2014 ; 2014 ; http://www.comicsgrid.com/ ; >
+      au < finished ; finished ; 2015 ; 5 ; The Comics Grid: Journal of Comics Scholarship Volume 2015 ; 2015 ; http://www.comicsgrid.com/ ; reingest5.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2016 ; 6 ; The Comics Grid: Journal of Comics Scholarship Volume 2016 ; 2016 ; http://www.comicsgrid.com/ ; >
+      au < crawling ; exists ; 2017 ; 7 ; The Comics Grid: Journal of Comics Scholarship Volume 2017 ; 2017 ; http://www.comicsgrid.com/ ; >
 
   }
 
@@ -204,7 +204,7 @@
 
     provider = Ubiquity Press
     plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
-    implicit < status ; status2 ; year ; volume ; name ; param[year] ; hidden[proxy] >
+    implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
 
   {
 
@@ -214,17 +214,17 @@
       >
 
       comment[publisher] = Stockholm University Press
-      param[base_url] = http://www.designsforlearning.nu/
+#      param[base_url] = http://www.designsforlearning.nu/
 
-      au < manifest ; exists ; 2008 ; 1 ; Designs for Learning Volume 2008 ; 2008 ; >
-      au < manifest ; exists ; 2009 ; 2 ; Designs for Learning Volume 2009 ; 2009 ; >
-      au < frozen ; exists ; 2010 ; 3 ; Designs for Learning Volume 2010 ; 2010 ; >
-      au < frozen ; exists ; 2011 ; 4 ; Designs for Learning Volume 2011 ; 2011 ; >
-      au < frozen ; exists ; 2012 ; 5 ; Designs for Learning Volume 2012 ; 2012 ; >
-      au < frozen ; exists ; 2013 ; 6 ; Designs for Learning Volume 2013 ; 2013 ; >
-      au < finished ; finished ; 2014 ; 7 ; Designs for Learning Volume 2014 ; 2014 ; >
-      au < deepCrawl ; exists ; 2016 ; 8 ; Designs for Learning Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 9 ; Designs for Learning Volume 2017 ; 2017 ; >
+      au < manifest ; exists ; 2008 ; 1 ; Designs for Learning Volume 2008 ; 2008 ; https://www.designsforlearning.nu/ ; >
+      au < manifest ; exists ; 2009 ; 2 ; Designs for Learning Volume 2009 ; 2009 ; https://www.designsforlearning.nu/ ; >
+      au < frozen ; exists ; 2010 ; 3 ; Designs for Learning Volume 2010 ; 2010 ; http://www.designsforlearning.nu/ ; >
+      au < frozen ; exists ; 2011 ; 4 ; Designs for Learning Volume 2011 ; 2011 ; http://www.designsforlearning.nu/ ; >
+      au < frozen ; exists ; 2012 ; 5 ; Designs for Learning Volume 2012 ; 2012 ; http://www.designsforlearning.nu/ ; >
+      au < frozen ; exists ; 2013 ; 6 ; Designs for Learning Volume 2013 ; 2013 ; http://www.designsforlearning.nu/ ; >
+      au < finished ; finished ; 2014 ; 7 ; Designs for Learning Volume 2014 ; 2014 ; http://www.designsforlearning.nu/ ; >
+      au < deepCrawl ; exists ; 2016 ; 8 ; Designs for Learning Volume 2016 ; 2016 ; http://www.designsforlearning.nu/ ; >
+      au < crawling ; exists ; 2017 ; 9 ; Designs for Learning Volume 2017 ; 2017 ; http://www.designsforlearning.nu/ ; >
 
   }
 
@@ -236,10 +236,10 @@
       >
 
       comment[publisher] = Stockholm University Press
-      param[base_url] = http://www.karib.no/
+#      param[base_url] = http://www.karib.no/
 
-      au < exists ; exists ; 2014 ; 1 ; Karib: Nordic Journal for Caribbean Studies Volume 2014 ; 2014 ; >
-      au < exists ; exists ; 2015 ; 2 ; Karib: Nordic Journal for Caribbean Studies Volume 2015 ; 2015 ; >
+      au < exists ; exists ; 2014 ; 1 ; Karib: Nordic Journal for Caribbean Studies Volume 2014 ; 2014 ; https://www.karib.no/ ; >
+      au < exists ; exists ; 2015 ; 2 ; Karib: Nordic Journal for Caribbean Studies Volume 2015 ; 2015 ; https://www.karib.no/ ; >
 
   }
 
@@ -251,12 +251,12 @@
       >
 
       comment[publisher] = Stockholm University Press
-      param[base_url] = http://www.rurallandscapesjournal.com/
+#      param[base_url] = http://www.rurallandscapesjournal.com/
 
-      au < finished ; finished ; 2014 ; 1 ; Rural Landscapes: Society, Environment, History Volume 2014 ; 2014 ; >
-      au < finished ; finished ; 2015 ; 2 ; Rural Landscapes: Society, Environment, History Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016 ; 3 ; Rural Landscapes: Society, Environment, History Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 4 ; Rural Landscapes: Society, Environment, History Volume 2017 ; 2017 ; >
+      au < finished ; finished ; 2014 ; 1 ; Rural Landscapes: Society, Environment, History Volume 2014 ; 2014 ; http://www.rurallandscapesjournal.com/ ; >
+      au < finished ; finished ; 2015 ; 2 ; Rural Landscapes: Society, Environment, History Volume 2015 ; 2015 ; http://www.rurallandscapesjournal.com/ ; reingest5.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2016 ; 3 ; Rural Landscapes: Society, Environment, History Volume 2016 ; 2016 ; http://www.rurallandscapesjournal.com/ ; >
+      au < crawling ; exists ; 2017 ; 4 ; Rural Landscapes: Society, Environment, History Volume 2017 ; 2017 ; http://www.rurallandscapesjournal.com/ ; >
 
   }
 
@@ -268,10 +268,10 @@
       >
 
       comment[publisher] = Stockholm University Press
-      param[base_url] = http://www.sjwop.com/
+#      param[base_url] = http://www.sjwop.com/
 
-      au < deepCrawl ; exists ; 2016 ; 1 ; Scandinavian Journal of Work and Organizational Psychology Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 2 ; Scandinavian Journal of Work and Organizational Psychology Volume 2017 ; 2017 ; >
+      au < deepCrawl ; exists ; 2016 ; 1 ; Scandinavian Journal of Work and Organizational Psychology Volume 2016 ; 2016 ; http://www.sjwop.com/ ; >
+      au < crawling ; exists ; 2017 ; 2 ; Scandinavian Journal of Work and Organizational Psychology Volume 2017 ; 2017 ; http://www.sjwop.com/ ; >
 
   }
 
@@ -286,7 +286,7 @@
 
     provider = Ubiquity Press
     plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
-    implicit < status ; status2 ; year ; volume ; name ; param[year] ; hidden[proxy] >
+    implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
 
   {
 
@@ -296,16 +296,16 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = http://www.ancient-asia-journal.com/
+#      param[base_url] = http://www.ancient-asia-journal.com/
 
-      au < manifest ; exists ; 2006 ; 1 ; Ancient Asia Volume 2006 ; 2006 ; >
-      au < frozen ; exists ; 2010 ; 2 ; Ancient Asia Volume 2010 ; 2010 ; >
-      au < doNotProcess ; exists ; 2012 ; 3 ; Ancient Asia Volume 2012 ; 2012 ; >
-      au < doNotProcess ; exists ; 2013 ; 4 ; Ancient Asia Volume 2013 ; 2013 ; >
-      au < doNotProcess ; exists ; 2014 ; 5 ; Ancient Asia Volume 2014 ; 2014 ; >
-      au < finished ; finished ; 2015 ; 6 ; Ancient Asia Volume 2015 ; 2015 ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016 ; 7 ; Ancient Asia Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 8 ; Ancient Asia Volume 2017 ; 2017 ; >
+      au < manifest ; exists ; 2006 ; 1 ; Ancient Asia Volume 2006 ; 2006 ; https://www.ancient-asia-journal.com/ ; >
+      au < frozen ; exists ; 2010 ; 2 ; Ancient Asia Volume 2010 ; 2010 ; http://www.ancient-asia-journal.com/ ; >
+      au < doNotProcess ; exists ; 2012 ; 3 ; Ancient Asia Volume 2012 ; 2012 ; https://www.ancient-asia-journal.com/ ; >
+      au < doNotProcess ; exists ; 2013 ; 4 ; Ancient Asia Volume 2013 ; 2013 ; https://www.ancient-asia-journal.com/ ; >
+      au < doNotProcess ; exists ; 2014 ; 5 ; Ancient Asia Volume 2014 ; 2014 ; https://www.ancient-asia-journal.com/ ; >
+      au < finished ; finished ; 2015 ; 6 ; Ancient Asia Volume 2015 ; 2015 ; http://www.ancient-asia-journal.com/ ; reingest4.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2016 ; 7 ; Ancient Asia Volume 2016 ; 2016 ; http://www.ancient-asia-journal.com/ ; >
+      au < crawling ; exists ; 2017 ; 8 ; Ancient Asia Volume 2017 ; 2017 ; http://www.ancient-asia-journal.com/ ; >
 
   }
 
@@ -317,21 +317,21 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = http://www.ai-journal.com/
+#      param[base_url] = http://www.ai-journal.com/
 
-      au < manifest ; exists ; 2003 ; 7 ; Archaeology International Volume 2003 ; 2003 ; >
-      au < manifest ; exists ; 2004 ; 8 ; Archaeology International Volume 2004 ; 2004 ; >
-      au < manifest ; exists ; 2005 ; 9 ; Archaeology International Volume 2005 ; 2005 ; >
-      au < exists ; exists ; 2006 ; 10 ; Archaeology International Volume 2006 ; 2006 ; >
-      au < manifest ; exists ; 2007 ; 11 ; Archaeology International Volume 2007 ; 2007 ; >
-      au < manifest ; exists ; 2008 ; 12 ; Archaeology International Volume 2008 ; 2008 ; >
-      au < manifest ; exists ; 2009 ; 13 ; Archaeology International Volume 2009 ; 2009 ; >
-      au < doNotProcess ; exists ; 2012 ; 15 ; Archaeology International Volume 2012 ; 2012 ; >
-      au < doNotProcess ; exists ; 2013 ; 16 ; Archaeology International Volume 2013 ; 2013 ; >
-      au < doNotProcess ; exists ; 2014 ; 17 ; Archaeology International Volume 2014 ; 2014 ; >
-      au < finished ; finished ; 2015 ; 18 ; Archaeology International Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2016 ; 11 ; Archaeology International Volume 2016 ; 2016 ; >
-      au < expected ; exists ; 2017 ; 12 ; Archaeology International Volume 2017 ; 2017 ; >
+      au < manifest ; exists ; 2003 ; 7 ; Archaeology International Volume 2003 ; 2003 ; https://www.ai-journal.com/ ; >
+      au < manifest ; exists ; 2004 ; 8 ; Archaeology International Volume 2004 ; 2004 ; https://www.ai-journal.com/ ; >
+      au < manifest ; exists ; 2005 ; 9 ; Archaeology International Volume 2005 ; 2005 ; https://www.ai-journal.com/ ; >
+      au < exists ; exists ; 2006 ; 10 ; Archaeology International Volume 2006 ; 2006 ; https://www.ai-journal.com/ ; >
+      au < manifest ; exists ; 2007 ; 11 ; Archaeology International Volume 2007 ; 2007 ; https://www.ai-journal.com/ ; >
+      au < manifest ; exists ; 2008 ; 12 ; Archaeology International Volume 2008 ; 2008 ; https://www.ai-journal.com/ ; >
+      au < manifest ; exists ; 2009 ; 13 ; Archaeology International Volume 2009 ; 2009 ; https://www.ai-journal.com/ ; >
+      au < doNotProcess ; exists ; 2012 ; 15 ; Archaeology International Volume 2012 ; 2012 ; https://www.ai-journal.com/ ; >
+      au < doNotProcess ; exists ; 2013 ; 16 ; Archaeology International Volume 2013 ; 2013 ; https://www.ai-journal.com/ ; >
+      au < doNotProcess ; exists ; 2014 ; 17 ; Archaeology International Volume 2014 ; 2014 ; https://www.ai-journal.com/ ; >
+      au < finished ; finished ; 2015 ; 18 ; Archaeology International Volume 2015 ; 2015 ; http://www.ai-journal.com/ ; reingest5.clockss.org:8082 >
+      au < frozen ; exists ; 2016 ; 11 ; Archaeology International Volume 2016 ; 2016 ; http://www.ai-journal.com/ ; >
+      au < expected ; exists ; 2017 ; 12 ; Archaeology International Volume 2017 ; 2017 ; https://www.ai-journal.com/ ; >
 
   }
 
@@ -343,13 +343,13 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = http://journal.eahn.org/
+#      param[base_url] = http://journal.eahn.org/
 
-      au < frozen ; exists ; 2013 ; 1 ; Architectural Histories Volume 2013 ; 2013 ; >
-      au < frozen ; exists ; 2014 ; 2 ; Architectural Histories Volume 2014 ; 2014 ; >
-      au < frozen ; exists ; 2015 ; 3 ; Architectural Histories Volume 2015 ; 2015 ; >
-      au < deepCrawl ; exists ; 2016 ; 4 ; Architectural Histories Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 5 ; Architectural Histories Volume 2017 ; 2017 ; >
+      au < frozen ; exists ; 2013 ; 1 ; Architectural Histories Volume 2013 ; 2013 ; http://journal.eahn.org/ ; >
+      au < frozen ; exists ; 2014 ; 2 ; Architectural Histories Volume 2014 ; 2014 ; http://journal.eahn.org/ ; >
+      au < frozen ; exists ; 2015 ; 3 ; Architectural Histories Volume 2015 ; 2015 ; http://journal.eahn.org/ ; >
+      au < deepCrawl ; exists ; 2016 ; 4 ; Architectural Histories Volume 2016 ; 2016 ; http://journal.eahn.org/ ; >
+      au < crawling ; exists ; 2017 ; 5 ; Architectural Histories Volume 2017 ; 2017 ; http://journal.eahn.org/ ; >
 
   }
 
@@ -361,10 +361,10 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = http://ajar.arena-architecture.eu/
+#      param[base_url] = http://ajar.arena-architecture.eu/
 
-      au < deepCrawl ; exists ; 2016 ; 1 ; ARENA Journal of Architectural Research Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 2 ; ARENA Journal of Architectural Research Volume 2017 ; 2017 ; >
+      au < deepCrawl ; exists ; 2016 ; 1 ; ARENA Journal of Architectural Research Volume 2016 ; 2016 ; http://ajar.arena-architecture.eu/ ; >
+      au < crawling ; exists ; 2017 ; 2 ; ARENA Journal of Architectural Research Volume 2017 ; 2017 ; http://ajar.arena-architecture.eu/ ; >
 
   }
 
@@ -377,35 +377,35 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = http://www.archaeologybulletin.org/
+#      param[base_url] = http://www.archaeologybulletin.org/
 
-      au < manifest ; exists ; 1991 ; 1 ; Bulletin of the History of Archaeology Volume 1991 ; 1991 ; >
-      au < manifest ; exists ; 1992 ; 2 ; Bulletin of the History of Archaeology Volume 1992 ; 1992 ; >
-      au < manifest ; exists ; 1993 ; 3 ; Bulletin of the History of Archaeology Volume 1993 ; 1993 ; >
-      au < manifest ; exists ; 1994 ; 4 ; Bulletin of the History of Archaeology Volume 1994 ; 1994 ; >
-      au < manifest ; exists ; 1995 ; 5 ; Bulletin of the History of Archaeology Volume 1995 ; 1995 ; >
-      au < manifest ; exists ; 1996 ; 6 ; Bulletin of the History of Archaeology Volume 1996 ; 1996 ; >
-      au < manifest ; exists ; 1997 ; 7 ; Bulletin of the History of Archaeology Volume 1997 ; 1997 ; >
-      au < manifest ; exists ; 1998 ; 8 ; Bulletin of the History of Archaeology Volume 1998 ; 1998 ; >
-      au < manifest ; exists ; 1999 ; 9 ; Bulletin of the History of Archaeology Volume 1999 ; 1999 ; >
-      au < manifest ; exists ; 2000 ; 10 ; Bulletin of the History of Archaeology Volume 2000 ; 2000 ; >
-      au < manifest ; exists ; 2001 ; 11 ; Bulletin of the History of Archaeology Volume 2001 ; 2001 ; >
-      au < manifest ; exists ; 2002 ; 12 ; Bulletin of the History of Archaeology Volume 2002 ; 2002 ; >
-      au < manifest ; exists ; 2003 ; 13 ; Bulletin of the History of Archaeology Volume 2003 ; 2003 ; >
-      au < manifest ; exists ; 2004 ; 14 ; Bulletin of the History of Archaeology Volume 2004 ; 2004 ; >
-      au < manifest ; exists ; 2005 ; 15 ; Bulletin of the History of Archaeology Volume 2005 ; 2005 ; >
-      au < manifest ; exists ; 2006 ; 16 ; Bulletin of the History of Archaeology Volume 2006 ; 2006 ; >
-      au < manifest ; exists ; 2007 ; 17 ; Bulletin of the History of Archaeology Volume 2007 ; 2007 ; >
-      au < manifest ; exists ; 2008 ; 18 ; Bulletin of the History of Archaeology Volume 2008 ; 2008 ; >
-      au < manifest ; exists ; 2009 ; 19 ; Bulletin of the History of Archaeology Volume 2009 ; 2009 ; >
-      au < frozen ; exists ; 2010 ; 20 ; Bulletin of the History of Archaeology Volume 2010 ; 2010 ; >
-      au < doNotProcess ; exists ; 2011 ; 21 ; Bulletin of the History of Archaeology Volume 2011 ; 2011 ; >
-      au < doNotProcess ; exists ; 2012 ; 22 ; Bulletin of the History of Archaeology Volume 2012 ; 2012 ; >
-      au < doNotProcess ; exists ; 2013 ; 23 ; Bulletin of the History of Archaeology Volume 2013 ; 2013 ; >
-      au < doNotProcess ; exists ; 2014 ; 24 ; Bulletin of the History of Archaeology Volume 2014 ; 2014 ; >
-      au < finished ; finished ; 2015 ; 25 ; Bulletin of the History of Archaeology Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016 ; 26 ; Bulletin of the History of Archaeology Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 27 ; Bulletin of the History of Archaeology Volume 2017 ; 2017 ; >
+      au < manifest ; exists ; 1991 ; 1 ; Bulletin of the History of Archaeology Volume 1991 ; 1991 ; https://www.archaeologybulletin.org/ ; >
+      au < manifest ; exists ; 1992 ; 2 ; Bulletin of the History of Archaeology Volume 1992 ; 1992 ; https://www.archaeologybulletin.org/ ; >
+      au < manifest ; exists ; 1993 ; 3 ; Bulletin of the History of Archaeology Volume 1993 ; 1993 ; https://www.archaeologybulletin.org/ ; >
+      au < manifest ; exists ; 1994 ; 4 ; Bulletin of the History of Archaeology Volume 1994 ; 1994 ; https://www.archaeologybulletin.org/ ; >
+      au < manifest ; exists ; 1995 ; 5 ; Bulletin of the History of Archaeology Volume 1995 ; 1995 ; https://www.archaeologybulletin.org/ ; >
+      au < manifest ; exists ; 1996 ; 6 ; Bulletin of the History of Archaeology Volume 1996 ; 1996 ; https://www.archaeologybulletin.org/ ; >
+      au < manifest ; exists ; 1997 ; 7 ; Bulletin of the History of Archaeology Volume 1997 ; 1997 ; https://www.archaeologybulletin.org/ ; >
+      au < manifest ; exists ; 1998 ; 8 ; Bulletin of the History of Archaeology Volume 1998 ; 1998 ; https://www.archaeologybulletin.org/ ; >
+      au < manifest ; exists ; 1999 ; 9 ; Bulletin of the History of Archaeology Volume 1999 ; 1999 ; https://www.archaeologybulletin.org/ ; >
+      au < manifest ; exists ; 2000 ; 10 ; Bulletin of the History of Archaeology Volume 2000 ; 2000 ; https://www.archaeologybulletin.org/ ; >
+      au < manifest ; exists ; 2001 ; 11 ; Bulletin of the History of Archaeology Volume 2001 ; 2001 ; https://www.archaeologybulletin.org/ ; >
+      au < manifest ; exists ; 2002 ; 12 ; Bulletin of the History of Archaeology Volume 2002 ; 2002 ; https://www.archaeologybulletin.org/ ; >
+      au < manifest ; exists ; 2003 ; 13 ; Bulletin of the History of Archaeology Volume 2003 ; 2003 ; https://www.archaeologybulletin.org/ ; >
+      au < manifest ; exists ; 2004 ; 14 ; Bulletin of the History of Archaeology Volume 2004 ; 2004 ; https://www.archaeologybulletin.org/ ; >
+      au < manifest ; exists ; 2005 ; 15 ; Bulletin of the History of Archaeology Volume 2005 ; 2005 ; https://www.archaeologybulletin.org/ ; >
+      au < manifest ; exists ; 2006 ; 16 ; Bulletin of the History of Archaeology Volume 2006 ; 2006 ; https://www.archaeologybulletin.org/ ; >
+      au < manifest ; exists ; 2007 ; 17 ; Bulletin of the History of Archaeology Volume 2007 ; 2007 ; https://www.archaeologybulletin.org/ ; >
+      au < manifest ; exists ; 2008 ; 18 ; Bulletin of the History of Archaeology Volume 2008 ; 2008 ; https://www.archaeologybulletin.org/ ; >
+      au < manifest ; exists ; 2009 ; 19 ; Bulletin of the History of Archaeology Volume 2009 ; 2009 ; https://www.archaeologybulletin.org/ ; >
+      au < frozen ; exists ; 2010 ; 20 ; Bulletin of the History of Archaeology Volume 2010 ; 2010 ; http://www.archaeologybulletin.org/ ; >
+      au < doNotProcess ; exists ; 2011 ; 21 ; Bulletin of the History of Archaeology Volume 2011 ; 2011 ; https://www.archaeologybulletin.org/ ; >
+      au < doNotProcess ; exists ; 2012 ; 22 ; Bulletin of the History of Archaeology Volume 2012 ; 2012 ; https://www.archaeologybulletin.org/ ; >
+      au < doNotProcess ; exists ; 2013 ; 23 ; Bulletin of the History of Archaeology Volume 2013 ; 2013 ; https://www.archaeologybulletin.org/ ; >
+      au < doNotProcess ; exists ; 2014 ; 24 ; Bulletin of the History of Archaeology Volume 2014 ; 2014 ; https://www.archaeologybulletin.org/ ; >
+      au < finished ; finished ; 2015 ; 25 ; Bulletin of the History of Archaeology Volume 2015 ; 2015 ; http://www.archaeologybulletin.org/ ; reingest5.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2016 ; 26 ; Bulletin of the History of Archaeology Volume 2016 ; 2016 ; http://www.archaeologybulletin.org/ ; >
+      au < crawling ; exists ; 2017 ; 27 ; Bulletin of the History of Archaeology Volume 2017 ; 2017 ; http://www.archaeologybulletin.org/ ; >
 
   }
 
@@ -417,10 +417,10 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = http://theoryandpractice.citizenscienceassociation.org/
+#      param[base_url] = http://theoryandpractice.citizenscienceassociation.org/
 
-      au < deepCrawl ; exists ; 2016 ; 1 ; Citizen Science: Theory and Practice Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 2 ; Citizen Science: Theory and Practice Volume 2017 ; 2017 ; >
+      au < deepCrawl ; exists ; 2016 ; 1 ; Citizen Science: Theory and Practice Volume 2016 ; 2016 ; http://theoryandpractice.citizenscienceassociation.org/ ; >
+      au < crawling ; exists ; 2017 ; 2 ; Citizen Science: Theory and Practice Volume 2017 ; 2017 ; http://theoryandpractice.citizenscienceassociation.org/ ; >
 
   }
 
@@ -432,24 +432,24 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = http://datascience.codata.org/
+#      param[base_url] = http://datascience.codata.org/
 
-      au < exists ; exists ; 2002 ; 1 ; Data Science Journal Volume 2002 ; 2002 ; >
-      au < manifest ; exists ; 2003 ; 2 ; Data Science Journal Volume 2003 ; 2003 ; >
-      au < exists ; exists ; 2004 ; 3 ; Data Science Journal Volume 2004 ; 2004 ; >
-      au < manifest ; exists ; 2005 ; 4 ; Data Science Journal Volume 2005 ; 2005 ; >
-      au < manifest ; exists ; 2006 ; 5 ; Data Science Journal Volume 2006 ; 2006 ; >
-      au < manifest ; exists ; 2007 ; 6 ; Data Science Journal Volume 2007 ; 2007 ; >
-      au < manifest ; exists ; 2008 ; 7 ; Data Science Journal Volume 2008 ; 2008 ; >
-      au < manifest ; exists ; 2009 ; 8 ; Data Science Journal Volume 2009 ; 2009 ; >
-      au < frozen ; exists ; 2010 ; 9 ; Data Science Journal Volume 2010 ; 2010 ; >
-      au < frozen ; exists ; 2011 ; 10 ; Data Science Journal Volume 2011 ; 2011 ; >
-      au < frozen ; exists ; 2012 ; 11 ; Data Science Journal Volume 2012 ; 2012 ; >
-      au < frozen ; exists ; 2013 ; 12 ; Data Science Journal Volume 2013 ; 2013 ; >
-      au < finished ; finished ; 2014 ; 13 ; Data Science Journal Volume 2014 ; 2014 ; >
-      au < finished ; finished ; 2015 ; 14 ; Data Science Journal Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016 ; 15 ; Data Science Journal Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 16 ; Data Science Journal Volume 2017 ; 2017 ; >
+      au < exists ; exists ; 2002 ; 1 ; Data Science Journal Volume 2002 ; 2002 ; https://datascience.codata.org/ ; >
+      au < manifest ; exists ; 2003 ; 2 ; Data Science Journal Volume 2003 ; 2003 ; https://datascience.codata.org/ ; >
+      au < exists ; exists ; 2004 ; 3 ; Data Science Journal Volume 2004 ; 2004 ; https://datascience.codata.org/ ; >
+      au < manifest ; exists ; 2005 ; 4 ; Data Science Journal Volume 2005 ; 2005 ; https://datascience.codata.org/ ; >
+      au < manifest ; exists ; 2006 ; 5 ; Data Science Journal Volume 2006 ; 2006 ; https://datascience.codata.org/ ; >
+      au < manifest ; exists ; 2007 ; 6 ; Data Science Journal Volume 2007 ; 2007 ; https://datascience.codata.org/ ; >
+      au < manifest ; exists ; 2008 ; 7 ; Data Science Journal Volume 2008 ; 2008 ; https://datascience.codata.org/ ; >
+      au < manifest ; exists ; 2009 ; 8 ; Data Science Journal Volume 2009 ; 2009 ; https://datascience.codata.org/ ; >
+      au < frozen ; exists ; 2010 ; 9 ; Data Science Journal Volume 2010 ; 2010 ; http://datascience.codata.org/ ; >
+      au < frozen ; exists ; 2011 ; 10 ; Data Science Journal Volume 2011 ; 2011 ; http://datascience.codata.org/ ; >
+      au < frozen ; exists ; 2012 ; 11 ; Data Science Journal Volume 2012 ; 2012 ; http://datascience.codata.org/ ; >
+      au < frozen ; exists ; 2013 ; 12 ; Data Science Journal Volume 2013 ; 2013 ; http://datascience.codata.org/ ; >
+      au < finished ; finished ; 2014 ; 13 ; Data Science Journal Volume 2014 ; 2014 ; http://datascience.codata.org/ ; >
+      au < finished ; finished ; 2015 ; 14 ; Data Science Journal Volume 2015 ; 2015 ; http://datascience.codata.org/ ; reingest5.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2016 ; 15 ; Data Science Journal Volume 2016 ; 2016 ; http://datascience.codata.org/ ; >
+      au < crawling ; exists ; 2017 ; 16 ; Data Science Journal Volume 2017 ; 2017 ; http://datascience.codata.org/ ; >
 
   }
 
@@ -461,11 +461,11 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = http://www.glocality.eu/
+#      param[base_url] = http://www.glocality.eu/
 
-      au < finished ; finished ; 2015 ; 1 ; Glocality: Undergraduate Academic Journal Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016 ; 2 ; Glocality: Undergraduate Academic Journal Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 3 ; Glocality: Undergraduate Academic Journal Volume 2017 ; 2017 ; >
+      au < finished ; finished ; 2015 ; 1 ; Glocality: Undergraduate Academic Journal Volume 2015 ; 2015 ; http://www.glocality.eu/ ; reingest5.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2016 ; 2 ; Glocality: Undergraduate Academic Journal Volume 2016 ; 2016 ; http://www.glocality.eu/ ; >
+      au < crawling ; exists ; 2017 ; 3 ; Glocality: Undergraduate Academic Journal Volume 2017 ; 2017 ; http://www.glocality.eu/ ; >
 
   }
 
@@ -477,12 +477,12 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = http://www.govafricajournal.org/
+#      param[base_url] = http://www.govafricajournal.org/
 
-      au < doNotProcess ; exists ; 2014 ; 1 ; Governance in Africa Volume 2014 ; 2014 ; >
-      au < finished ; finished ; 2015 ; 2 ; Governance in Africa Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016 ; 3 ; Governance in Africa Volume 2016 ; 2016 ; >
-      au < expected ; exists ; 2017 ; 4 ; Governance in Africa Volume 2017 ; 2017 ; >
+      au < doNotProcess ; exists ; 2014 ; 1 ; Governance in Africa Volume 2014 ; 2014 ; https://www.govafricajournal.org/ ; >
+      au < finished ; finished ; 2015 ; 2 ; Governance in Africa Volume 2015 ; 2015 ; http://www.govafricajournal.org/ ; reingest5.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2016 ; 3 ; Governance in Africa Volume 2016 ; 2016 ; http://www.govafricajournal.org/ ; >
+      au < expected ; exists ; 2017 ; 4 ; Governance in Africa Volume 2017 ; 2017 ; https://www.govafricajournal.org/ ; >
 
   }
 
@@ -494,26 +494,26 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = http://www.ijic.org/
+#      param[base_url] = http://www.ijic.org/
 
-      au < manifest ; exists ; 2000 ; 1 ; International Journal of Integrated Care Volume 2000 ; 2000 ; >
-      au < manifest ; exists ; 2001 ; 2 ; International Journal of Integrated Care Volume 2001 ; 2001 ; >
-      au < manifest ; exists ; 2002 ; 3 ; International Journal of Integrated Care Volume 2002 ; 2002 ; >
-      au < manifest ; exists ; 2003 ; 4 ; International Journal of Integrated Care Volume 2003 ; 2003 ; >
-      au < manifest ; exists ; 2004 ; 5 ; International Journal of Integrated Care Volume 2004 ; 2004 ; >
-      au < manifest ; exists ; 2005 ; 6 ; International Journal of Integrated Care Volume 2005 ; 2005 ; >
-      au < manifest ; exists ; 2006 ; 7 ; International Journal of Integrated Care Volume 2006 ; 2006 ; >
-      au < manifest ; exists ; 2007 ; 8 ; International Journal of Integrated Care Volume 2007 ; 2007 ; >
-      au < manifest ; exists ; 2008 ; 9 ; International Journal of Integrated Care Volume 2008 ; 2008 ; >
-      au < manifest ; exists ; 2009 ; 10 ; International Journal of Integrated Care Volume 2009 ; 2009 ; >
-      au < frozen ; exists ; 2010 ; 11 ; International Journal of Integrated Care Volume 2010 ; 2010 ; >
-      au < frozen ; exists ; 2011 ; 12 ; International Journal of Integrated Care Volume 2011 ; 2011 ; >
-      au < frozen ; exists ; 2012 ; 13 ; International Journal of Integrated Care Volume 2012 ; 2012 ; >
-      au < frozen ; exists ; 2013 ; 14 ; International Journal of Integrated Care Volume 2013 ; 2013 ; >
-      au < frozen ; exists ; 2014 ; 15 ; International Journal of Integrated Care Volume 2014 ; 2014 ; >
-      au < frozen ; exists ; 2015 ; 16 ; International Journal of Integrated Care Volume 2015 ; 2015 ; >
-      au < deepCrawl ; exists ; 2016 ; 17 ; International Journal of Integrated Care Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 18 ; International Journal of Integrated Care Volume 2017 ; 2017 ; >
+      au < manifest ; exists ; 2000 ; 1 ; International Journal of Integrated Care Volume 2000 ; 2000 ; https://www.ijic.org/ ; >
+      au < manifest ; exists ; 2001 ; 2 ; International Journal of Integrated Care Volume 2001 ; 2001 ; https://www.ijic.org/ ; >
+      au < manifest ; exists ; 2002 ; 3 ; International Journal of Integrated Care Volume 2002 ; 2002 ; https://www.ijic.org/ ; >
+      au < manifest ; exists ; 2003 ; 4 ; International Journal of Integrated Care Volume 2003 ; 2003 ; https://www.ijic.org/ ; >
+      au < manifest ; exists ; 2004 ; 5 ; International Journal of Integrated Care Volume 2004 ; 2004 ; https://www.ijic.org/ ; >
+      au < manifest ; exists ; 2005 ; 6 ; International Journal of Integrated Care Volume 2005 ; 2005 ; https://www.ijic.org/ ; >
+      au < manifest ; exists ; 2006 ; 7 ; International Journal of Integrated Care Volume 2006 ; 2006 ; https://www.ijic.org/ ; >
+      au < manifest ; exists ; 2007 ; 8 ; International Journal of Integrated Care Volume 2007 ; 2007 ; https://www.ijic.org/ ; >
+      au < manifest ; exists ; 2008 ; 9 ; International Journal of Integrated Care Volume 2008 ; 2008 ; https://www.ijic.org/ ; >
+      au < manifest ; exists ; 2009 ; 10 ; International Journal of Integrated Care Volume 2009 ; 2009 ; https://www.ijic.org/ ; >
+      au < frozen ; exists ; 2010 ; 11 ; International Journal of Integrated Care Volume 2010 ; 2010 ; http://www.ijic.org/ ; >
+      au < frozen ; exists ; 2011 ; 12 ; International Journal of Integrated Care Volume 2011 ; 2011 ; http://www.ijic.org/ ; >
+      au < frozen ; exists ; 2012 ; 13 ; International Journal of Integrated Care Volume 2012 ; 2012 ; http://www.ijic.org/ ; >
+      au < frozen ; exists ; 2013 ; 14 ; International Journal of Integrated Care Volume 2013 ; 2013 ; http://www.ijic.org/ ; >
+      au < frozen ; exists ; 2014 ; 15 ; International Journal of Integrated Care Volume 2014 ; 2014 ; http://www.ijic.org/ ; >
+      au < frozen ; exists ; 2015 ; 16 ; International Journal of Integrated Care Volume 2015 ; 2015 ; http://www.ijic.org/ ; >
+      au < deepCrawl ; exists ; 2016 ; 17 ; International Journal of Integrated Care Volume 2016 ; 2016 ; http://www.ijic.org/ ; >
+      au < crawling ; exists ; 2017 ; 18 ; International Journal of Integrated Care Volume 2017 ; 2017 ; http://www.ijic.org/ ; >
 
   }
 
@@ -525,10 +525,10 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = http://www.rips-irsp.com/
+#      param[base_url] = http://www.rips-irsp.com/
 
-      au < deepCrawl ; exists ; 2016 ; 1 ; International Review of Social Psychology Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 2 ; International Review of Social Psychology Volume 2017 ; 2017 ; >
+      au < deepCrawl ; exists ; 2016 ; 1 ; International Review of Social Psychology Volume 2016 ; 2016 ; http://www.rips-irsp.com/ ; >
+      au < crawling ; exists ; 2017 ; 2 ; International Review of Social Psychology Volume 2017 ; 2017 ; http://www.rips-irsp.com/ ; >
 
   }
 
@@ -540,23 +540,23 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = http://www.jcircadianrhythms.com/
+#      param[base_url] = http://www.jcircadianrhythms.com/
 
-      au < manifest ; exists ; 2003 ; 1 ; Journal of Circadian Rhythms Volume 2003 ; 2003 ; >
-      au < manifest ; exists ; 2004 ; 2 ; Journal of Circadian Rhythms Volume 2004 ; 2004 ; >
-      au < manifest ; exists ; 2005 ; 3 ; Journal of Circadian Rhythms Volume 2005 ; 2005 ; >
-      au < manifest ; exists ; 2006 ; 4 ; Journal of Circadian Rhythms Volume 2006 ; 2006 ; >
-      au < manifest ; exists ; 2007 ; 5 ; Journal of Circadian Rhythms Volume 2007 ; 2007 ; >
-      au < doNotProcess ; exists ; 2008 ; 6 ; Journal of Circadian Rhythms Volume 2008 ; 2008 ; >
-      au < doNotProcess ; exists ; 2009 ; 7 ; Journal of Circadian Rhythms Volume 2009 ; 2009 ; >
-      au < doNotProcess ; exists ; 2010 ; 8 ; Journal of Circadian Rhythms Volume 2010 ; 2010 ; >
-      au < doNotProcess ; exists ; 2011 ; 9 ; Journal of Circadian Rhythms Volume 2011 ; 2011 ; >
-      au < doNotProcess ; exists ; 2012 ; 10 ; Journal of Circadian Rhythms Volume 2012 ; 2012 ; >
-      au < doNotProcess ; exists ; 2013 ; 11 ; Journal of Circadian Rhythms Volume 2013 ; 2013 ; >
-      au < doNotProcess ; exists ; 2014 ; 12 ; Journal of Circadian Rhythms Volume 2014 ; 2014 ; >
-      au < finished ; finished ; 2015 ; 13 ; Journal of Circadian Rhythms Volume 2015 ; 2015 ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2016 ; 14 ; Journal of Circadian Rhythms Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 15 ; Journal of Circadian Rhythms Volume 2017 ; 2017 ; >
+      au < manifest ; exists ; 2003 ; 1 ; Journal of Circadian Rhythms Volume 2003 ; 2003 ; https://www.jcircadianrhythms.com/ ; >
+      au < manifest ; exists ; 2004 ; 2 ; Journal of Circadian Rhythms Volume 2004 ; 2004 ; https://www.jcircadianrhythms.com/ ; >
+      au < manifest ; exists ; 2005 ; 3 ; Journal of Circadian Rhythms Volume 2005 ; 2005 ; https://www.jcircadianrhythms.com/ ; >
+      au < manifest ; exists ; 2006 ; 4 ; Journal of Circadian Rhythms Volume 2006 ; 2006 ; https://www.jcircadianrhythms.com/ ; >
+      au < manifest ; exists ; 2007 ; 5 ; Journal of Circadian Rhythms Volume 2007 ; 2007 ; https://www.jcircadianrhythms.com/ ; >
+      au < doNotProcess ; exists ; 2008 ; 6 ; Journal of Circadian Rhythms Volume 2008 ; 2008 ; https://www.jcircadianrhythms.com/ ; >
+      au < doNotProcess ; exists ; 2009 ; 7 ; Journal of Circadian Rhythms Volume 2009 ; 2009 ; https://www.jcircadianrhythms.com/ ; >
+      au < doNotProcess ; exists ; 2010 ; 8 ; Journal of Circadian Rhythms Volume 2010 ; 2010 ; https://www.jcircadianrhythms.com/ ; >
+      au < doNotProcess ; exists ; 2011 ; 9 ; Journal of Circadian Rhythms Volume 2011 ; 2011 ; https://www.jcircadianrhythms.com/ ; >
+      au < doNotProcess ; exists ; 2012 ; 10 ; Journal of Circadian Rhythms Volume 2012 ; 2012 ; https://www.jcircadianrhythms.com/ ; >
+      au < doNotProcess ; exists ; 2013 ; 11 ; Journal of Circadian Rhythms Volume 2013 ; 2013 ; https://www.jcircadianrhythms.com/ ; >
+      au < doNotProcess ; exists ; 2014 ; 12 ; Journal of Circadian Rhythms Volume 2014 ; 2014 ; https://www.jcircadianrhythms.com/ ; >
+      au < finished ; finished ; 2015 ; 13 ; Journal of Circadian Rhythms Volume 2015 ; 2015 ; http://www.jcircadianrhythms.com/ ; reingest2.clockss.org:8085 >
+      au < deepCrawl ; exists ; 2016 ; 14 ; Journal of Circadian Rhythms Volume 2016 ; 2016 ; http://www.jcircadianrhythms.com/ ; >
+      au < crawling ; exists ; 2017 ; 15 ; Journal of Circadian Rhythms Volume 2017 ; 2017 ; http://www.jcircadianrhythms.com/ ; >
 
   }
 
@@ -568,21 +568,21 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = http://www.jcms-journal.com/
+#      param[base_url] = http://www.jcms-journal.com/
 
-      au < manifest ; exists ; 1996 ; 1 ; Journal of Conservation and Museum Studies Volume 1996 ; 1996 ; >
-      au < manifest ; exists ; 1997 ; 2-3 ; Journal of Conservation and Museum Studies Volume 1997 ; 1997 ; >
-      au < manifest ; exists ; 1998 ; 4-5 ; Journal of Conservation and Museum Studies Volume 1998 ; 1998 ; >
-      au < manifest ; exists ; 1999 ; 6 ; Journal of Conservation and Museum Studies Volume 1999 ; 1999 ; >
-      au < manifest ; exists ; 2001 ; 7 ; Journal of Conservation and Museum Studies Volume 2001 ; 2001 ; >
-      au < manifest ; exists ; 2002 ; 8 ; Journal of Conservation and Museum Studies Volume 2002 ; 2002 ; >
-      au < doNotProcess ; exists ; 2011 ; 9 ; Journal of Conservation and Museum Studies Volume 2011 ; 2011 ; >
-      au < doNotProcess ; exists ; 2012 ; 10 ; Journal of Conservation and Museum Studies Volume 2012 ; 2012 ; >
-      au < doNotProcess ; exists ; 2013 ; 11 ; Journal of Conservation and Museum Studies Volume 2013 ; 2013 ; >
-      au < doNotProcess ; exists ; 2014 ; 12 ; Journal of Conservation and Museum Studies Volume 2014 ; 2014 ; >
-      au < finished ; finished ; 2015 ; 13 ; Journal of Conservation and Museum Studies Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016 ; 14 ; Journal of Conservation and Museum Studies Volume 2016 ; 2016 ; >
-      au < expected ; exists ; 2017 ; 15 ; Journal of Conservation and Museum Studies Volume 2017 ; 2017 ; >
+      au < manifest ; exists ; 1996 ; 1 ; Journal of Conservation and Museum Studies Volume 1996 ; 1996 ; https://www.jcms-journal.com/ ; >
+      au < manifest ; exists ; 1997 ; 2-3 ; Journal of Conservation and Museum Studies Volume 1997 ; 1997 ; https://www.jcms-journal.com/ ; >
+      au < manifest ; exists ; 1998 ; 4-5 ; Journal of Conservation and Museum Studies Volume 1998 ; 1998 ; https://www.jcms-journal.com/ ; >
+      au < manifest ; exists ; 1999 ; 6 ; Journal of Conservation and Museum Studies Volume 1999 ; 1999 ; https://www.jcms-journal.com/ ; >
+      au < manifest ; exists ; 2001 ; 7 ; Journal of Conservation and Museum Studies Volume 2001 ; 2001 ; https://www.jcms-journal.com/ ; >
+      au < manifest ; exists ; 2002 ; 8 ; Journal of Conservation and Museum Studies Volume 2002 ; 2002 ; https://www.jcms-journal.com/ ; >
+      au < doNotProcess ; exists ; 2011 ; 9 ; Journal of Conservation and Museum Studies Volume 2011 ; 2011 ; https://www.jcms-journal.com/ ; >
+      au < doNotProcess ; exists ; 2012 ; 10 ; Journal of Conservation and Museum Studies Volume 2012 ; 2012 ; https://www.jcms-journal.com/ ; >
+      au < doNotProcess ; exists ; 2013 ; 11 ; Journal of Conservation and Museum Studies Volume 2013 ; 2013 ; https://www.jcms-journal.com/ ; >
+      au < doNotProcess ; exists ; 2014 ; 12 ; Journal of Conservation and Museum Studies Volume 2014 ; 2014 ; https://www.jcms-journal.com/ ; >
+      au < finished ; finished ; 2015 ; 13 ; Journal of Conservation and Museum Studies Volume 2015 ; 2015 ; http://www.jcms-journal.com/ ; reingest5.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2016 ; 14 ; Journal of Conservation and Museum Studies Volume 2016 ; 2016 ; http://www.jcms-journal.com/ ; >
+      au < expected ; exists ; 2017 ; 15 ; Journal of Conservation and Museum Studies Volume 2017 ; 2017 ; https://www.jcms-journal.com/ ; >
 
   }
 
@@ -594,17 +594,17 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = http://jeps.efpsa.org/
+#      param[base_url] = http://jeps.efpsa.org/
       #nothing published 2011
 
-      au < manifest ; exists ; 2009 ; 1 ; Journal of European Psychology Students Volume 2009 ; 2009 ; >
-      au < frozen ; exists ; 2010 ; 2 ; Journal of European Psychology Students Volume 2010 ; 2010 ; >
-      au < doNotProcess ; exists ; 2012 ; 3 ; Journal of European Psychology Students Volume 2012 ; 2012 ; >
-      au < doNotProcess ; exists ; 2013 ; 4 ; Journal of European Psychology Students Volume 2013 ; 2013 ; >
-      au < doNotProcess ; exists ; 2014 ; 5 ; Journal of European Psychology Students Volume 2014 ; 2014 ; >
-      au < finished ; finished ; 2015 ; 6 ; Journal of European Psychology Students Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016 ; 7 ; Journal of European Psychology Students Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 8 ; Journal of European Psychology Students Volume 2017 ; 2017 ; >
+      au < manifest ; exists ; 2009 ; 1 ; Journal of European Psychology Students Volume 2009 ; 2009 ; https://jeps.efpsa.org/ ; >
+      au < frozen ; exists ; 2010 ; 2 ; Journal of European Psychology Students Volume 2010 ; 2010 ; http://jeps.efpsa.org/ ; >
+      au < doNotProcess ; exists ; 2012 ; 3 ; Journal of European Psychology Students Volume 2012 ; 2012 ; https://jeps.efpsa.org/ ; >
+      au < doNotProcess ; exists ; 2013 ; 4 ; Journal of European Psychology Students Volume 2013 ; 2013 ; https://jeps.efpsa.org/ ; >
+      au < doNotProcess ; exists ; 2014 ; 5 ; Journal of European Psychology Students Volume 2014 ; 2014 ; https://jeps.efpsa.org/ ; >
+      au < finished ; finished ; 2015 ; 6 ; Journal of European Psychology Students Volume 2015 ; 2015 ; http://jeps.efpsa.org/ ; reingest5.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2016 ; 7 ; Journal of European Psychology Students Volume 2016 ; 2016 ; http://jeps.efpsa.org/ ; >
+      au < crawling ; exists ; 2017 ; 8 ; Journal of European Psychology Students Volume 2017 ; 2017 ; http://jeps.efpsa.org/ ; >
 
   }
 
@@ -616,28 +616,28 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = http://www-jime.open.ac.uk/
+#      param[base_url] = http://www-jime.open.ac.uk/
       #nothing published in 2011
 
-      au < manifest ; exists ; 1998 ; 1998 ; Journal of Interactive Media in Education Volume 1998 ; 1998 ; >
-      au < manifest ; exists ; 1999 ; 1999 ; Journal of Interactive Media in Education Volume 1999 ; 1999 ; >
-      au < manifest ; exists ; 2000 ; 2000 ; Journal of Interactive Media in Education Volume 2000 ; 2000 ; >
-      au < manifest ; exists ; 2001 ; 2001 ; Journal of Interactive Media in Education Volume 2001 ; 2001 ; >
-      au < manifest ; exists ; 2002 ; 2002 ; Journal of Interactive Media in Education Volume 2002 ; 2002 ; >
-      au < manifest ; exists ; 2003 ; 2003 ; Journal of Interactive Media in Education Volume 2003 ; 2003 ; >
-      au < manifest ; exists ; 2004 ; 2004 ; Journal of Interactive Media in Education Volume 2004 ; 2004 ; >
-      au < manifest ; exists ; 2005 ; 2005 ; Journal of Interactive Media in Education Volume 2005 ; 2005 ; >
-      au < manifest ; exists ; 2006 ; 2006 ; Journal of Interactive Media in Education Volume 2006 ; 2006 ; >
-      au < manifest ; exists ; 2007 ; 2007 ; Journal of Interactive Media in Education Volume 2007 ; 2007 ; >
-      au < manifest ; exists ; 2008 ; 2008 ; Journal of Interactive Media in Education Volume 2008 ; 2008 ; >
-      au < manifest ; exists ; 2009 ; 2009 ; Journal of Interactive Media in Education Volume 2009 ; 2009 ; >
-      au < frozen ; exists ; 2010 ; 2010 ; Journal of Interactive Media in Education Volume 2010 ; 2010 ; >
-      au < frozen ; exists ; 2012 ; 2012 ; Journal of Interactive Media in Education Volume 2012 ; 2012 ; >
-      au < frozen ; exists ; 2013 ; 2013 ; Journal of Interactive Media in Education Volume 2013 ; 2013 ; >
-      au < frozen ; exists ; 2014 ; 2014 ; Journal of Interactive Media in Education Volume 2014 ; 2014 ; >
-      au < frozen ; exists ; 2015 ; 2015 ; Journal of Interactive Media in Education Volume 2015 ; 2015 ; >
-      au < deepCrawl ; exists ; 2016 ; 2016 ; Journal of Interactive Media in Education Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 2017 ; Journal of Interactive Media in Education Volume 2017 ; 2017 ; >
+      au < manifest ; exists ; 1998 ; 1998 ; Journal of Interactive Media in Education Volume 1998 ; 1998 ; https://www-jime.open.ac.uk/ ; >
+      au < manifest ; exists ; 1999 ; 1999 ; Journal of Interactive Media in Education Volume 1999 ; 1999 ; https://www-jime.open.ac.uk/ ; >
+      au < manifest ; exists ; 2000 ; 2000 ; Journal of Interactive Media in Education Volume 2000 ; 2000 ; https://www-jime.open.ac.uk/ ; >
+      au < manifest ; exists ; 2001 ; 2001 ; Journal of Interactive Media in Education Volume 2001 ; 2001 ; https://www-jime.open.ac.uk/ ; >
+      au < manifest ; exists ; 2002 ; 2002 ; Journal of Interactive Media in Education Volume 2002 ; 2002 ; https://www-jime.open.ac.uk/ ; >
+      au < manifest ; exists ; 2003 ; 2003 ; Journal of Interactive Media in Education Volume 2003 ; 2003 ; https://www-jime.open.ac.uk/ ; >
+      au < manifest ; exists ; 2004 ; 2004 ; Journal of Interactive Media in Education Volume 2004 ; 2004 ; https://www-jime.open.ac.uk/ ; >
+      au < manifest ; exists ; 2005 ; 2005 ; Journal of Interactive Media in Education Volume 2005 ; 2005 ; https://www-jime.open.ac.uk/ ; >
+      au < manifest ; exists ; 2006 ; 2006 ; Journal of Interactive Media in Education Volume 2006 ; 2006 ; https://www-jime.open.ac.uk/ ; >
+      au < manifest ; exists ; 2007 ; 2007 ; Journal of Interactive Media in Education Volume 2007 ; 2007 ; https://www-jime.open.ac.uk/ ; >
+      au < manifest ; exists ; 2008 ; 2008 ; Journal of Interactive Media in Education Volume 2008 ; 2008 ; https://www-jime.open.ac.uk/ ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Journal of Interactive Media in Education Volume 2009 ; 2009 ; https://www-jime.open.ac.uk/ ; >
+      au < frozen ; exists ; 2010 ; 2010 ; Journal of Interactive Media in Education Volume 2010 ; 2010 ; http://www-jime.open.ac.uk/ ; >
+      au < frozen ; exists ; 2012 ; 2012 ; Journal of Interactive Media in Education Volume 2012 ; 2012 ; http://www-jime.open.ac.uk/ ; >
+      au < frozen ; exists ; 2013 ; 2013 ; Journal of Interactive Media in Education Volume 2013 ; 2013 ; http://www-jime.open.ac.uk/ ; >
+      au < frozen ; exists ; 2014 ; 2014 ; Journal of Interactive Media in Education Volume 2014 ; 2014 ; http://www-jime.open.ac.uk/ ; >
+      au < frozen ; exists ; 2015 ; 2015 ; Journal of Interactive Media in Education Volume 2015 ; 2015 ; http://www-jime.open.ac.uk/ ; >
+      au < deepCrawl ; exists ; 2016 ; 2016 ; Journal of Interactive Media in Education Volume 2016 ; 2016 ; http://www-jime.open.ac.uk/ ; >
+      au < crawling ; exists ; 2017 ; 2017 ; Journal of Interactive Media in Education Volume 2017 ; 2017 ; http://www-jime.open.ac.uk/ ; >
 
   }
 
@@ -649,20 +649,20 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = http://www.jmolecularsignaling.com/
+#      param[base_url] = http://www.jmolecularsignaling.com/
 
-      au < manifest ; exists ; 2006 ; 1 ; Journal of Molecular Signaling Volume 2006 ; 2006 ; >
-      au < manifest ; exists ; 2007 ; 2 ; Journal of Molecular Signaling Volume 2007 ; 2007 ; >
-      au < manifest ; exists ; 2008 ; 3 ; Journal of Molecular Signaling Volume 2008 ; 2008 ; >
-      au < manifest ; exists ; 2009 ; 4 ; Journal of Molecular Signaling Volume 2009 ; 2009 ; >
-      au < frozen ; exists ; 2010 ; 5 ; Journal of Molecular Signaling Volume 2010 ; 2010 ; >
-      au < frozen ; exists ; 2011 ; 6 ; Journal of Molecular Signaling Volume 2011 ; 2011 ; >
-      au < frozen ; exists ; 2012 ; 7 ; Journal of Molecular Signaling Volume 2012 ; 2012 ; >
-      au < frozen ; exists ; 2013 ; 8 ; Journal of Molecular Signaling Volume 2013 ; 2013 ; >
-      au < finished ; finished ; 2014 ; 9 ; Journal of Molecular Signaling Volume 2014 ; 2014 ; >
-      au < finished ; finished ; 2015 ; 10 ; Journal of Molecular Signaling Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016 ; 11 ; Journal of Molecular Signaling Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 12 ; Journal of Molecular Signaling Volume 2017 ; 2017 ; >
+      au < manifest ; exists ; 2006 ; 1 ; Journal of Molecular Signaling Volume 2006 ; 2006 ; https://www.jmolecularsignaling.com/ ; >
+      au < manifest ; exists ; 2007 ; 2 ; Journal of Molecular Signaling Volume 2007 ; 2007 ; https://www.jmolecularsignaling.com/ ; >
+      au < manifest ; exists ; 2008 ; 3 ; Journal of Molecular Signaling Volume 2008 ; 2008 ; https://www.jmolecularsignaling.com/ ; >
+      au < manifest ; exists ; 2009 ; 4 ; Journal of Molecular Signaling Volume 2009 ; 2009 ; https://www.jmolecularsignaling.com/ ; >
+      au < frozen ; exists ; 2010 ; 5 ; Journal of Molecular Signaling Volume 2010 ; 2010 ; http://www.jmolecularsignaling.com/ ; >
+      au < frozen ; exists ; 2011 ; 6 ; Journal of Molecular Signaling Volume 2011 ; 2011 ; http://www.jmolecularsignaling.com/ ; >
+      au < frozen ; exists ; 2012 ; 7 ; Journal of Molecular Signaling Volume 2012 ; 2012 ; http://www.jmolecularsignaling.com/ ; >
+      au < frozen ; exists ; 2013 ; 8 ; Journal of Molecular Signaling Volume 2013 ; 2013 ; http://www.jmolecularsignaling.com/ ; >
+      au < finished ; finished ; 2014 ; 9 ; Journal of Molecular Signaling Volume 2014 ; 2014 ; http://www.jmolecularsignaling.com/ ; >
+      au < finished ; finished ; 2015 ; 10 ; Journal of Molecular Signaling Volume 2015 ; 2015 ; http://www.jmolecularsignaling.com/ ; reingest5.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2016 ; 11 ; Journal of Molecular Signaling Volume 2016 ; 2016 ; http://www.jmolecularsignaling.com/ ; >
+      au < crawling ; exists ; 2017 ; 12 ; Journal of Molecular Signaling Volume 2017 ; 2017 ; http://www.jmolecularsignaling.com/ ; >
 
   }
 
@@ -674,14 +674,14 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = http://openarchaeologydata.metajnl.com/
+#      param[base_url] = http://openarchaeologydata.metajnl.com/
 
-      au < doNotProcess ; exists ; 2012 ; 1 ; Journal of Open Archaeology Data Volume 2012 ; 2012 ; >
-      au < doNotProcess ; exists ; 2013 ; 2 ; Journal of Open Archaeology Data Volume 2013 ; 2013 ; >
-      au < doNotProcess ; exists ; 2014 ; 3 ; Journal of Open Archaeology Data Volume 2014 ; 2014 ; >
-      au < finished ; finished ; 2015 ; 4 ; Journal of Open Archaeology Data Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016 ; 5 ; Journal of Open Archaeology Data Volume 2016 ; 2016 ; >
-      au < expected ; exists ; 2017 ; 6 ; Journal of Open Archaeology Data Volume 2017 ; 2017 ; >
+      au < doNotProcess ; exists ; 2012 ; 1 ; Journal of Open Archaeology Data Volume 2012 ; 2012 ; https://openarchaeologydata.metajnl.com/ ; >
+      au < doNotProcess ; exists ; 2013 ; 2 ; Journal of Open Archaeology Data Volume 2013 ; 2013 ; https://openarchaeologydata.metajnl.com/ ; >
+      au < doNotProcess ; exists ; 2014 ; 3 ; Journal of Open Archaeology Data Volume 2014 ; 2014 ; https://openarchaeologydata.metajnl.com/ ; >
+      au < finished ; finished ; 2015 ; 4 ; Journal of Open Archaeology Data Volume 2015 ; 2015 ; http://openarchaeologydata.metajnl.com/ ; reingest5.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2016 ; 5 ; Journal of Open Archaeology Data Volume 2016 ; 2016 ; http://openarchaeologydata.metajnl.com/ ; >
+      au < expected ; exists ; 2017 ; 6 ; Journal of Open Archaeology Data Volume 2017 ; 2017 ; https://openarchaeologydata.metajnl.com/ ; >
 
   }
 
@@ -693,13 +693,13 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = http://openhealthdata.metajnl.com/
+#      param[base_url] = http://openhealthdata.metajnl.com/
       # continues Journal of Open Public Health Data
 
-      au < finished ; finished ; 2014 ; 2 ; Journal of Open Health Data Volume 2014 ; 2014 ; >
-      au < finished ; finished ; 2015 ; 3 ; Journal of Open Health Data Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016 ; 4 ; Journal of Open Health Data Volume 2016 ; 2016 ; >
-      au < expected ; exists ; 2017 ; 5 ; Journal of Open Health Data Volume 2017 ; 2017 ; >
+      au < finished ; finished ; 2014 ; 2 ; Journal of Open Health Data Volume 2014 ; 2014 ; http://openhealthdata.metajnl.com/ ; >
+      au < finished ; finished ; 2015 ; 3 ; Journal of Open Health Data Volume 2015 ; 2015 ; http://openhealthdata.metajnl.com/ ; reingest5.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2016 ; 4 ; Journal of Open Health Data Volume 2016 ; 2016 ; http://openhealthdata.metajnl.com/ ; >
+      au < expected ; exists ; 2017 ; 5 ; Journal of Open Health Data Volume 2017 ; 2017 ; https://openhealthdata.metajnl.com/ ; >
 
   }
 
@@ -711,11 +711,11 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = http://openhumanitiesdata.metajnl.com/
+#      param[base_url] = http://openhumanitiesdata.metajnl.com/
 
-      au < finished ; finished ; 2015 ; 1 ; Journal of Open Humanities Data Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016 ; 2 ; Journal of Open Humanities Data Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 3 ; Journal of Open Humanities Data Volume 2017 ; 2017 ; >
+      au < finished ; finished ; 2015 ; 1 ; Journal of Open Humanities Data Volume 2015 ; 2015 ; http://openhumanitiesdata.metajnl.com/ ; reingest5.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2016 ; 2 ; Journal of Open Humanities Data Volume 2016 ; 2016 ; http://openhumanitiesdata.metajnl.com/ ; >
+      au < crawling ; exists ; 2017 ; 3 ; Journal of Open Humanities Data Volume 2017 ; 2017 ; http://openhumanitiesdata.metajnl.com/ ; >
 
   }
 
@@ -727,13 +727,13 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = http://openpsychologydata.metajnl.com/
+#      param[base_url] = http://openpsychologydata.metajnl.com/
 
-      au < doNotProcess ; exists ; 2013 ; 1 ; Journal of Open Psychology Data Volume 2013 ; 2013 ; >
-      au < doNotProcess ; exists ; 2014 ; 2 ; Journal of Open Psychology Data Volume 2014 ; 2014 ; >
-      au < finished ; finished ; 2015 ; 3 ; Journal of Open Psychology Data Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016 ; 4 ; Journal of Open Psychology Data Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 5 ; Journal of Open Psychology Data Volume 2017 ; 2017 ; >
+      au < doNotProcess ; exists ; 2013 ; 1 ; Journal of Open Psychology Data Volume 2013 ; 2013 ; https://openpsychologydata.metajnl.com/ ; >
+      au < doNotProcess ; exists ; 2014 ; 2 ; Journal of Open Psychology Data Volume 2014 ; 2014 ; https://openpsychologydata.metajnl.com/ ; >
+      au < finished ; finished ; 2015 ; 3 ; Journal of Open Psychology Data Volume 2015 ; 2015 ; http://openpsychologydata.metajnl.com/ ; reingest5.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2016 ; 4 ; Journal of Open Psychology Data Volume 2016 ; 2016 ; http://openpsychologydata.metajnl.com/ ; >
+      au < crawling ; exists ; 2017 ; 5 ; Journal of Open Psychology Data Volume 2017 ; 2017 ; http://openpsychologydata.metajnl.com/ ; >
 
   }
 
@@ -745,10 +745,10 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = http://openhealthdata.metajnl.com/
+#      param[base_url] = http://openhealthdata.metajnl.com/
       # continued by Journal of Open Health Data
 
-      au < doNotProcess ; exists ; 2013 ; 1 ; Journal of Open Public Health Data Volume 2013 ; 2013 ; >
+      au < doNotProcess ; exists ; 2013 ; 1 ; Journal of Open Public Health Data Volume 2013 ; 2013 ; https://openhealthdata.metajnl.com/ ; >
 
   }
 
@@ -760,13 +760,13 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = http://openresearchsoftware.metajnl.com/
+#      param[base_url] = http://openresearchsoftware.metajnl.com/
 
-      au < doNotProcess ; exists ; 2013 ; 1 ; Journal of Open Research Software Volume 2013 ; 2013 ; >
-      au < doNotProcess ; exists ; 2014 ; 2 ; Journal of Open Research Software Volume 2014 ; 2014 ; >
-      au < finished ; finished ; 2015 ; 3 ; Journal of Open Research Software Volume 2015 ; 2015 ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2016 ; 4 ; Journal of Open Research Software Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 5 ; Journal of Open Research Software Volume 2017 ; 2017 ; >
+      au < doNotProcess ; exists ; 2013 ; 1 ; Journal of Open Research Software Volume 2013 ; 2013 ; https://openresearchsoftware.metajnl.com/ ; >
+      au < doNotProcess ; exists ; 2014 ; 2 ; Journal of Open Research Software Volume 2014 ; 2014 ; https://openresearchsoftware.metajnl.com/ ; >
+      au < finished ; finished ; 2015 ; 3 ; Journal of Open Research Software Volume 2015 ; 2015 ; http://openresearchsoftware.metajnl.com/ ; reingest2.clockss.org:8085 >
+      au < deepCrawl ; exists ; 2016 ; 4 ; Journal of Open Research Software Volume 2016 ; 2016 ; http://openresearchsoftware.metajnl.com/ ; >
+      au < crawling ; exists ; 2017 ; 5 ; Journal of Open Research Software Volume 2017 ; 2017 ; http://openresearchsoftware.metajnl.com/ ; >
 
   }
 
@@ -779,11 +779,11 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = http://jpl.letras.ulisboa.pt/
+#      param[base_url] = http://jpl.letras.ulisboa.pt/
 
-      au < finished ; finished ; 2015 ; 1 ; Journal of Portuguese Linguistics Volume 2015 ; 2015 ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2016 ; 2 ; Journal of Portuguese Linguistics Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 3 ; Journal of Portuguese Linguistics Volume 2017 ; 2017 ; >
+      au < finished ; finished ; 2015 ; 1 ; Journal of Portuguese Linguistics Volume 2015 ; 2015 ; http://jpl.letras.ulisboa.pt/ ; reingest2.clockss.org:8085 >
+      au < deepCrawl ; exists ; 2016 ; 2 ; Journal of Portuguese Linguistics Volume 2016 ; 2016 ; http://jpl.letras.ulisboa.pt/ ; >
+      au < crawling ; exists ; 2017 ; 3 ; Journal of Portuguese Linguistics Volume 2017 ; 2017 ; http://jpl.letras.ulisboa.pt/ ; >
 
   }
 
@@ -795,16 +795,16 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = http://www.jbsr.be/
+#      param[base_url] = http://www.jbsr.be/
 
-      au < frozen ; exists ; 2010 ; 1 ; Journal of the Belgian Society of Radiology Volume 2010 ; 2010 ; >
-      au < frozen ; exists ; 2011 ; 2 ; Journal of the Belgian Society of Radiology Volume 2011 ; 2011 ; >
-      au < frozen ; exists ; 2012 ; 3 ; Journal of the Belgian Society of Radiology Volume 2012 ; 2012 ; >
-      au < frozen ; exists ; 2013 ; 4 ; Journal of the Belgian Society of Radiology Volume 2013 ; 2013 ; >
-      au < finished ; finished ; 2014 ; 5 ; Journal of the Belgian Society of Radiology Volume 2014 ; 2014 ; >
-      au < frozen ; exists ; 2015 ; 6 ; Journal of the Belgian Society of Radiology Volume 2015 ; 2015 ; >
-      au < deepCrawl ; exists ; 2016 ; 7 ; Journal of the Belgian Society of Radiology Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 8 ; Journal of the Belgian Society of Radiology Volume 2017 ; 2017 ; >
+      au < frozen ; exists ; 2010 ; 1 ; Journal of the Belgian Society of Radiology Volume 2010 ; 2010 ; http://www.jbsr.be/ ; >
+      au < frozen ; exists ; 2011 ; 2 ; Journal of the Belgian Society of Radiology Volume 2011 ; 2011 ; http://www.jbsr.be/ ; >
+      au < frozen ; exists ; 2012 ; 3 ; Journal of the Belgian Society of Radiology Volume 2012 ; 2012 ; http://www.jbsr.be/ ; >
+      au < frozen ; exists ; 2013 ; 4 ; Journal of the Belgian Society of Radiology Volume 2013 ; 2013 ; http://www.jbsr.be/ ; >
+      au < finished ; finished ; 2014 ; 5 ; Journal of the Belgian Society of Radiology Volume 2014 ; 2014 ; http://www.jbsr.be/ ; >
+      au < frozen ; exists ; 2015 ; 6 ; Journal of the Belgian Society of Radiology Volume 2015 ; 2015 ; http://www.jbsr.be/ ; >
+      au < deepCrawl ; exists ; 2016 ; 7 ; Journal of the Belgian Society of Radiology Volume 2016 ; 2016 ; http://www.jbsr.be/ ; >
+      au < crawling ; exists ; 2017 ; 8 ; Journal of the Belgian Society of Radiology Volume 2017 ; 2017 ; http://www.jbsr.be/ ; >
 
   }
 
@@ -816,10 +816,10 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = http://www.journal-labphon.org/
+#      param[base_url] = http://www.journal-labphon.org/
 
-      au < deepCrawl ; exists ; 2016 ; 1 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 2 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2017 ; 2017 ; >
+      au < deepCrawl ; exists ; 2016 ; 1 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2016 ; 2016 ; http://www.journal-labphon.org/ ; >
+      au < crawling ; exists ; 2017 ; 2 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2017 ; 2017 ; http://www.journal-labphon.org/ ; >
 
   }
 
@@ -831,10 +831,10 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = http://www.mahkuscript.com/
+#      param[base_url] = http://www.mahkuscript.com/
 
-      au < deepCrawl ; exists ; 2016 ; 1 ; MaHKUscript: Journal of Fine Art Research Volume 2016 ; 2016 ; >
-      au < expected ; exists ; 2017 ; 2 ; MaHKUscript: Journal of Fine Art Research Volume 2017 ; 2017 ; >
+      au < deepCrawl ; exists ; 2016 ; 1 ; MaHKUscript: Journal of Fine Art Research Volume 2016 ; 2016 ; http://www.mahkuscript.com/ ; >
+      au < expected ; exists ; 2017 ; 2 ; MaHKUscript: Journal of Fine Art Research Volume 2017 ; 2017 ; https://www.mahkuscript.com/ ; >
 
   }
 
@@ -846,12 +846,12 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = http://openbioresources.metajnl.com/
+#      param[base_url] = http://openbioresources.metajnl.com/
 
-      au < doNotProcess ; exists ; 2014 ; 1 ; Open Journal of Bioresources Volume 2014 ; 2014 ; >
-      au < finished ; finished ; 2015 ; 2 ; Open Journal of Bioresources Volume 2015 ; 2015 ; reingest3.clockss.org:8083 >
-      au < deepCrawl ; exists ; 2016 ; 3 ; Open Journal of Bioresources Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 4 ; Open Journal of Bioresources Volume 2017 ; 2017 ; >
+      au < doNotProcess ; exists ; 2014 ; 1 ; Open Journal of Bioresources Volume 2014 ; 2014 ; https://openbioresources.metajnl.com/ ; >
+      au < finished ; finished ; 2015 ; 2 ; Open Journal of Bioresources Volume 2015 ; 2015 ; http://openbioresources.metajnl.com/ ; reingest3.clockss.org:8083 >
+      au < deepCrawl ; exists ; 2016 ; 3 ; Open Journal of Bioresources Volume 2016 ; 2016 ; http://openbioresources.metajnl.com/ ; >
+      au < crawling ; exists ; 2017 ; 4 ; Open Journal of Bioresources Volume 2017 ; 2017 ; http://openbioresources.metajnl.com/ ; >
 
   }
 
@@ -863,11 +863,11 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = http://www.openquaternary.com/
+#      param[base_url] = http://www.openquaternary.com/
 
-      au < finished ; finished ; 2015 ; 1 ; Open Quaternary Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016 ; 2 ; Open Quaternary Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 3 ; Open Quaternary Volume 2017 ; 2017 ; >
+      au < finished ; finished ; 2015 ; 1 ; Open Quaternary Volume 2015 ; 2015 ; http://www.openquaternary.com/ ; reingest5.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2016 ; 2 ; Open Quaternary Volume 2016 ; 2016 ; http://www.openquaternary.com/ ; >
+      au < crawling ; exists ; 2017 ; 3 ; Open Quaternary Volume 2017 ; 2017 ; http://www.openquaternary.com/ ; >
 
   }
 
@@ -881,69 +881,69 @@
       comment[publisher] = Ubiquity Press
     {
       #no longer available at this url.
-      param[base_url] = http://www.pia-journal.co.uk/
+#      param[base_url] = http://www.pia-journal.co.uk/
 
-      au < doNotProcess ; exists ; 1990 ; 1 ; Papers from the Institute of Archaeology Volume 1990 ; 1990 ; >
-      au < doNotProcess ; exists ; 1991 ; 2 ; Papers from the Institute of Archaeology Volume 1991 ; 1991 ; >
-      au < doNotProcess ; exists ; 1992 ; 3 ; Papers from the Institute of Archaeology Volume 1992 ; 1992 ; >
-      au < doNotProcess ; exists ; 1993 ; 4 ; Papers from the Institute of Archaeology Volume 1993 ; 1993 ; >
-      au < doNotProcess ; exists ; 1994 ; 5 ; Papers from the Institute of Archaeology Volume 1994 ; 1994 ; >
-      au < doNotProcess ; exists ; 1995 ; 6 ; Papers from the Institute of Archaeology Volume 1995 ; 1995 ; >
-      au < doNotProcess ; exists ; 1996 ; 7 ; Papers from the Institute of Archaeology Volume 1996 ; 1996 ; >
-      au < doNotProcess ; exists ; 1997 ; 8 ; Papers from the Institute of Archaeology Volume 1997 ; 1997 ; >
-      au < doNotProcess ; exists ; 1998 ; 9 ; Papers from the Institute of Archaeology Volume 1998 ; 1998 ; >
-      au < doNotProcess ; exists ; 1999 ; 10 ; Papers from the Institute of Archaeology Volume 1999 ; 1999 ; >
-      au < doNotProcess ; exists ; 2000 ; 11 ; Papers from the Institute of Archaeology Volume 2000 ; 2000 ; >
-      au < doNotProcess ; exists ; 2001 ; 12 ; Papers from the Institute of Archaeology Volume 2001 ; 2001 ; >
-      au < doNotProcess ; exists ; 2002 ; 13 ; Papers from the Institute of Archaeology Volume 2002 ; 2002 ; >
-      au < doNotProcess ; exists ; 2003 ; 14 ; Papers from the Institute of Archaeology Volume 2003 ; 2003 ; >
-      au < doNotProcess ; exists ; 2004 ; 15 ; Papers from the Institute of Archaeology Volume 2004 ; 2004 ; >
-      au < doNotProcess ; exists ; 2005 ; 16 ; Papers from the Institute of Archaeology Volume 2005 ; 2005 ; >
-      au < doNotProcess ; exists ; 2006 ; 17 ; Papers from the Institute of Archaeology Volume 2006 ; 2006 ; >
-      au < doNotProcess ; exists ; 2007 ; 18 ; Papers from the Institute of Archaeology Volume 2007 ; 2007 ; >
-      au < doNotProcess ; exists ; 2008 ; 19 ; Papers from the Institute of Archaeology Volume 2008 ; 2008 ; >
-      au < doNotProcess ; exists ; 2009 ; 20 ; Papers from the Institute of Archaeology Volume 2009 ; 2009 ; >
-      au < frozen ; exists ; 2010 ; 21 ; Papers from the Institute of Archaeology Volume 2010 ; 2010 ; >
-      au < doNotProcess ; exists ; 2011 ; 22 ; Papers from the Institute of Archaeology Volume 2011 ; 2011 ; >
-      au < doNotProcess ; exists ; 2012 ; 23 ; Papers from the Institute of Archaeology Volume 2012 ; 2012 ; >
-      au < doNotProcess ; exists ; 2013 ; 24 ; Papers from the Institute of Archaeology Volume 2013 ; 2013 ; >
-      au < doNotProcess ; exists ; 2014 ; 25 ; Papers from the Institute of Archaeology Volume 2014 ; 2014 ; >
-      au < finished ; finished ; 2015 ; 26 ; Papers from the Institute of Archaeology Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
-      au < superseded ; exists ; 2016 ; 27 ; Papers from the Institute of Archaeology Volume 2016 [superseded] ; 2016 ; >
-      au < doNotProcess ; exists ; 2017 ; 28 ; Papers from the Institute of Archaeology Volume 2017 ; 2017 ; >
+      au < doNotProcess ; exists ; 1990 ; 1 ; Papers from the Institute of Archaeology Volume 1990 ; 1990 ; https://www.pia-journal.co.uk/ ; >
+      au < doNotProcess ; exists ; 1991 ; 2 ; Papers from the Institute of Archaeology Volume 1991 ; 1991 ; https://www.pia-journal.co.uk/ ; >
+      au < doNotProcess ; exists ; 1992 ; 3 ; Papers from the Institute of Archaeology Volume 1992 ; 1992 ; https://www.pia-journal.co.uk/ ; >
+      au < doNotProcess ; exists ; 1993 ; 4 ; Papers from the Institute of Archaeology Volume 1993 ; 1993 ; https://www.pia-journal.co.uk/ ; >
+      au < doNotProcess ; exists ; 1994 ; 5 ; Papers from the Institute of Archaeology Volume 1994 ; 1994 ; https://www.pia-journal.co.uk/ ; >
+      au < doNotProcess ; exists ; 1995 ; 6 ; Papers from the Institute of Archaeology Volume 1995 ; 1995 ; https://www.pia-journal.co.uk/ ; >
+      au < doNotProcess ; exists ; 1996 ; 7 ; Papers from the Institute of Archaeology Volume 1996 ; 1996 ; https://www.pia-journal.co.uk/ ; >
+      au < doNotProcess ; exists ; 1997 ; 8 ; Papers from the Institute of Archaeology Volume 1997 ; 1997 ; https://www.pia-journal.co.uk/ ; >
+      au < doNotProcess ; exists ; 1998 ; 9 ; Papers from the Institute of Archaeology Volume 1998 ; 1998 ; https://www.pia-journal.co.uk/ ; >
+      au < doNotProcess ; exists ; 1999 ; 10 ; Papers from the Institute of Archaeology Volume 1999 ; 1999 ; https://www.pia-journal.co.uk/ ; >
+      au < doNotProcess ; exists ; 2000 ; 11 ; Papers from the Institute of Archaeology Volume 2000 ; 2000 ; https://www.pia-journal.co.uk/ ; >
+      au < doNotProcess ; exists ; 2001 ; 12 ; Papers from the Institute of Archaeology Volume 2001 ; 2001 ; https://www.pia-journal.co.uk/ ; >
+      au < doNotProcess ; exists ; 2002 ; 13 ; Papers from the Institute of Archaeology Volume 2002 ; 2002 ; https://www.pia-journal.co.uk/ ; >
+      au < doNotProcess ; exists ; 2003 ; 14 ; Papers from the Institute of Archaeology Volume 2003 ; 2003 ; https://www.pia-journal.co.uk/ ; >
+      au < doNotProcess ; exists ; 2004 ; 15 ; Papers from the Institute of Archaeology Volume 2004 ; 2004 ; https://www.pia-journal.co.uk/ ; >
+      au < doNotProcess ; exists ; 2005 ; 16 ; Papers from the Institute of Archaeology Volume 2005 ; 2005 ; https://www.pia-journal.co.uk/ ; >
+      au < doNotProcess ; exists ; 2006 ; 17 ; Papers from the Institute of Archaeology Volume 2006 ; 2006 ; https://www.pia-journal.co.uk/ ; >
+      au < doNotProcess ; exists ; 2007 ; 18 ; Papers from the Institute of Archaeology Volume 2007 ; 2007 ; https://www.pia-journal.co.uk/ ; >
+      au < doNotProcess ; exists ; 2008 ; 19 ; Papers from the Institute of Archaeology Volume 2008 ; 2008 ; https://www.pia-journal.co.uk/ ; >
+      au < doNotProcess ; exists ; 2009 ; 20 ; Papers from the Institute of Archaeology Volume 2009 ; 2009 ; https://www.pia-journal.co.uk/ ; >
+      au < frozen ; exists ; 2010 ; 21 ; Papers from the Institute of Archaeology Volume 2010 ; 2010 ; http://www.pia-journal.co.uk/ ; >
+      au < doNotProcess ; exists ; 2011 ; 22 ; Papers from the Institute of Archaeology Volume 2011 ; 2011 ; https://www.pia-journal.co.uk/ ; >
+      au < doNotProcess ; exists ; 2012 ; 23 ; Papers from the Institute of Archaeology Volume 2012 ; 2012 ; https://www.pia-journal.co.uk/ ; >
+      au < doNotProcess ; exists ; 2013 ; 24 ; Papers from the Institute of Archaeology Volume 2013 ; 2013 ; https://www.pia-journal.co.uk/ ; >
+      au < doNotProcess ; exists ; 2014 ; 25 ; Papers from the Institute of Archaeology Volume 2014 ; 2014 ; https://www.pia-journal.co.uk/ ; >
+      au < finished ; finished ; 2015 ; 26 ; Papers from the Institute of Archaeology Volume 2015 ; 2015 ; http://www.pia-journal.co.uk/ ; reingest5.clockss.org:8082 >
+      au < superseded ; exists ; 2016 ; 27 ; Papers from the Institute of Archaeology Volume 2016 [superseded] ; 2016 ; http://www.pia-journal.co.uk/ ; >
+      au < doNotProcess ; exists ; 2017 ; 28 ; Papers from the Institute of Archaeology Volume 2017 ; 2017 ; https://www.pia-journal.co.uk/ ; >
     }
     {
       #journal moved to https and removed www.
-      param[base_url] = https://pia-journal.co.uk/
+#      param[base_url] = https://pia-journal.co.uk/
 
-      au < manifest ; exists ; 1990 ; 1 ; Papers from the Institute of Archaeology Volume 1990 ; 1990 ; >
-      au < manifest ; exists ; 1991 ; 2 ; Papers from the Institute of Archaeology Volume 1991 ; 1991 ; >
-      au < manifest ; exists ; 1992 ; 3 ; Papers from the Institute of Archaeology Volume 1992 ; 1992 ; >
-      au < manifest ; exists ; 1993 ; 4 ; Papers from the Institute of Archaeology Volume 1993 ; 1993 ; >
-      au < manifest ; exists ; 1994 ; 5 ; Papers from the Institute of Archaeology Volume 1994 ; 1994 ; >
-      au < manifest ; exists ; 1995 ; 6 ; Papers from the Institute of Archaeology Volume 1995 ; 1995 ; >
-      au < manifest ; exists ; 1996 ; 7 ; Papers from the Institute of Archaeology Volume 1996 ; 1996 ; >
-      au < manifest ; exists ; 1997 ; 8 ; Papers from the Institute of Archaeology Volume 1997 ; 1997 ; >
-      au < manifest ; exists ; 1998 ; 9 ; Papers from the Institute of Archaeology Volume 1998 ; 1998 ; >
-      au < manifest ; exists ; 1999 ; 10 ; Papers from the Institute of Archaeology Volume 1999 ; 1999 ; >
-      au < manifest ; exists ; 2000 ; 11 ; Papers from the Institute of Archaeology Volume 2000 ; 2000 ; >
-      au < manifest ; exists ; 2001 ; 12 ; Papers from the Institute of Archaeology Volume 2001 ; 2001 ; >
-      au < manifest ; exists ; 2002 ; 13 ; Papers from the Institute of Archaeology Volume 2002 ; 2002 ; >
-      au < manifest ; exists ; 2003 ; 14 ; Papers from the Institute of Archaeology Volume 2003 ; 2003 ; >
-      au < manifest ; exists ; 2004 ; 15 ; Papers from the Institute of Archaeology Volume 2004 ; 2004 ; >
-      au < manifest ; exists ; 2005 ; 16 ; Papers from the Institute of Archaeology Volume 2005 ; 2005 ; >
-      au < manifest ; exists ; 2006 ; 17 ; Papers from the Institute of Archaeology Volume 2006 ; 2006 ; >
-      au < manifest ; exists ; 2007 ; 18 ; Papers from the Institute of Archaeology Volume 2007 ; 2007 ; >
-      au < exists ; exists ; 2008 ; 19 ; Papers from the Institute of Archaeology Volume 2008 ; 2008 ; >
-      au < manifest ; exists ; 2009 ; 20 ; Papers from the Institute of Archaeology Volume 2009 ; 2009 ; >
-      au < doNotProcess ; exists ; 2010 ; 21 ; Papers from the Institute of Archaeology Volume 2010 ; 2010 ; >
-      au < doNotProcess ; exists ; 2011 ; 22 ; Papers from the Institute of Archaeology Volume 2011 ; 2011 ; >
-      au < doNotProcess ; exists ; 2012 ; 23 ; Papers from the Institute of Archaeology Volume 2012 ; 2012 ; >
-      au < doNotProcess ; exists ; 2013 ; 24 ; Papers from the Institute of Archaeology Volume 2013 ; 2013 ; >
-      au < doNotProcess ; exists ; 2014 ; 25 ; Papers from the Institute of Archaeology Volume 2014 ; 2014 ; >
-      au < doNotProcess ; exists ; 2015 ; 26 ; Papers from the Institute of Archaeology Volume 2015 ; 2015 ; >
-      au < manifest ; exists ; 2016 ; 27 ; Papers from the Institute of Archaeology Volume 2016 ; 2016 ; >
-      au < manifest ; exists ; 2017 ; 28 ; Papers from the Institute of Archaeology Volume 2017 ; 2017 ; >
+      au < manifest ; exists ; 1990 ; 1 ; Papers from the Institute of Archaeology Volume 1990 ; 1990 ; https://pia-journal.co.uk/ ; >
+      au < manifest ; exists ; 1991 ; 2 ; Papers from the Institute of Archaeology Volume 1991 ; 1991 ; https://pia-journal.co.uk/ ; >
+      au < manifest ; exists ; 1992 ; 3 ; Papers from the Institute of Archaeology Volume 1992 ; 1992 ; https://pia-journal.co.uk/ ; >
+      au < manifest ; exists ; 1993 ; 4 ; Papers from the Institute of Archaeology Volume 1993 ; 1993 ; https://pia-journal.co.uk/ ; >
+      au < manifest ; exists ; 1994 ; 5 ; Papers from the Institute of Archaeology Volume 1994 ; 1994 ; https://pia-journal.co.uk/ ; >
+      au < manifest ; exists ; 1995 ; 6 ; Papers from the Institute of Archaeology Volume 1995 ; 1995 ; https://pia-journal.co.uk/ ; >
+      au < manifest ; exists ; 1996 ; 7 ; Papers from the Institute of Archaeology Volume 1996 ; 1996 ; https://pia-journal.co.uk/ ; >
+      au < manifest ; exists ; 1997 ; 8 ; Papers from the Institute of Archaeology Volume 1997 ; 1997 ; https://pia-journal.co.uk/ ; >
+      au < manifest ; exists ; 1998 ; 9 ; Papers from the Institute of Archaeology Volume 1998 ; 1998 ; https://pia-journal.co.uk/ ; >
+      au < manifest ; exists ; 1999 ; 10 ; Papers from the Institute of Archaeology Volume 1999 ; 1999 ; https://pia-journal.co.uk/ ; >
+      au < manifest ; exists ; 2000 ; 11 ; Papers from the Institute of Archaeology Volume 2000 ; 2000 ; https://pia-journal.co.uk/ ; >
+      au < manifest ; exists ; 2001 ; 12 ; Papers from the Institute of Archaeology Volume 2001 ; 2001 ; https://pia-journal.co.uk/ ; >
+      au < manifest ; exists ; 2002 ; 13 ; Papers from the Institute of Archaeology Volume 2002 ; 2002 ; https://pia-journal.co.uk/ ; >
+      au < manifest ; exists ; 2003 ; 14 ; Papers from the Institute of Archaeology Volume 2003 ; 2003 ; https://pia-journal.co.uk/ ; >
+      au < manifest ; exists ; 2004 ; 15 ; Papers from the Institute of Archaeology Volume 2004 ; 2004 ; https://pia-journal.co.uk/ ; >
+      au < manifest ; exists ; 2005 ; 16 ; Papers from the Institute of Archaeology Volume 2005 ; 2005 ; https://pia-journal.co.uk/ ; >
+      au < manifest ; exists ; 2006 ; 17 ; Papers from the Institute of Archaeology Volume 2006 ; 2006 ; https://pia-journal.co.uk/ ; >
+      au < manifest ; exists ; 2007 ; 18 ; Papers from the Institute of Archaeology Volume 2007 ; 2007 ; https://pia-journal.co.uk/ ; >
+      au < exists ; exists ; 2008 ; 19 ; Papers from the Institute of Archaeology Volume 2008 ; 2008 ; https://pia-journal.co.uk/ ; >
+      au < manifest ; exists ; 2009 ; 20 ; Papers from the Institute of Archaeology Volume 2009 ; 2009 ; https://pia-journal.co.uk/ ; >
+      au < doNotProcess ; exists ; 2010 ; 21 ; Papers from the Institute of Archaeology Volume 2010 ; 2010 ; https://pia-journal.co.uk/ ; >
+      au < doNotProcess ; exists ; 2011 ; 22 ; Papers from the Institute of Archaeology Volume 2011 ; 2011 ; https://pia-journal.co.uk/ ; >
+      au < doNotProcess ; exists ; 2012 ; 23 ; Papers from the Institute of Archaeology Volume 2012 ; 2012 ; https://pia-journal.co.uk/ ; >
+      au < doNotProcess ; exists ; 2013 ; 24 ; Papers from the Institute of Archaeology Volume 2013 ; 2013 ; https://pia-journal.co.uk/ ; >
+      au < doNotProcess ; exists ; 2014 ; 25 ; Papers from the Institute of Archaeology Volume 2014 ; 2014 ; https://pia-journal.co.uk/ ; >
+      au < doNotProcess ; exists ; 2015 ; 26 ; Papers from the Institute of Archaeology Volume 2015 ; 2015 ; https://pia-journal.co.uk/ ; >
+      au < manifest ; exists ; 2016 ; 27 ; Papers from the Institute of Archaeology Volume 2016 ; 2016 ; https://pia-journal.co.uk/ ; >
+      au < manifest ; exists ; 2017 ; 28 ; Papers from the Institute of Archaeology Volume 2017 ; 2017 ; https://pia-journal.co.uk/ ; >
     }
   }
 
@@ -957,31 +957,31 @@
       comment[publisher] = Ubiquity Press
     {
       #no longer at this url.
-      param[base_url] = http://www.presentpasts.info/
+#      param[base_url] = http://www.presentpasts.info/
 
-      au < doNotProcess ; exists ; 2009 ; 1 ; Present Pasts Volume 2009 ; 2009 ; >
-      au < frozen ; exists ; 2010 ; 2 ; Present Pasts Volume 2010 ; 2010 ; >
-      au < doNotProcess ; exists ; 2011 ; 3 ; Present Pasts Volume 2011 ; 2011 ; >
-      au < doNotProcess ; exists ; 2012 ; 4 ; Present Pasts Volume 2012 ; 2012 ; >
-      au < doNotProcess ; exists ; 2013 ; 5 ; Present Pasts Volume 2013 ; 2013 ; >
-      au < doNotProcess ; exists ; 2014 ; 6 ; Present Pasts Volume 2014 ; 2014 ; >
-      au < finished ; finished ; 2015 ; 7 ; Present Pasts Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
-      au < superseded ; exists ; 2016 ; 8 ; Present Pasts Volume 2016 [superseded] ; 2016 ; >
-      au < doNotProcess ; exists ; 2017 ; 9 ; Present Pasts Volume 2017 ; 2017 ; >
+      au < doNotProcess ; exists ; 2009 ; 1 ; Present Pasts Volume 2009 ; 2009 ; https://www.presentpasts.info/ ; >
+      au < frozen ; exists ; 2010 ; 2 ; Present Pasts Volume 2010 ; 2010 ; http://www.presentpasts.info/ ; >
+      au < doNotProcess ; exists ; 2011 ; 3 ; Present Pasts Volume 2011 ; 2011 ; https://www.presentpasts.info/ ; >
+      au < doNotProcess ; exists ; 2012 ; 4 ; Present Pasts Volume 2012 ; 2012 ; https://www.presentpasts.info/ ; >
+      au < doNotProcess ; exists ; 2013 ; 5 ; Present Pasts Volume 2013 ; 2013 ; https://www.presentpasts.info/ ; >
+      au < doNotProcess ; exists ; 2014 ; 6 ; Present Pasts Volume 2014 ; 2014 ; https://www.presentpasts.info/ ; >
+      au < finished ; finished ; 2015 ; 7 ; Present Pasts Volume 2015 ; 2015 ; http://www.presentpasts.info/ ; reingest5.clockss.org:8082 >
+      au < superseded ; exists ; 2016 ; 8 ; Present Pasts Volume 2016 [superseded] ; 2016 ; http://www.presentpasts.info/ ; >
+      au < doNotProcess ; exists ; 2017 ; 9 ; Present Pasts Volume 2017 ; 2017 ; https://www.presentpasts.info/ ; >
     }
     {
       #Moved to https and removed www.
-      param[base_url] = https://presentpasts.info/
+#      param[base_url] = https://presentpasts.info/
 
-      au < exists ; exists ; 2009 ; 1 ; Present Pasts Volume 2009 ; 2009 ; >
-      au < doNotProcess ; exists ; 2010 ; 2 ; Present Pasts Volume 2010 ; 2010 ; >
-      au < doNotProcess ; exists ; 2011 ; 3 ; Present Pasts Volume 2011 ; 2011 ; >
-      au < doNotProcess ; exists ; 2012 ; 4 ; Present Pasts Volume 2012 ; 2012 ; >
-      au < doNotProcess ; exists ; 2013 ; 5 ; Present Pasts Volume 2013 ; 2013 ; >
-      au < doNotProcess ; exists ; 2014 ; 6 ; Present Pasts Volume 2014 ; 2014 ; >
-      au < doNotProcess ; exists ; 2015 ; 7 ; Present Pasts Volume 2015 ; 2015 ; >
-      au < manifest ; exists ; 2016 ; 8 ; Present Pasts Volume 2016 ; 2016 ; >
-      au < manifest ; exists ; 2017 ; 9 ; Present Pasts Volume 2017 ; 2017 ; >
+      au < exists ; exists ; 2009 ; 1 ; Present Pasts Volume 2009 ; 2009 ; https://presentpasts.info/ ; >
+      au < doNotProcess ; exists ; 2010 ; 2 ; Present Pasts Volume 2010 ; 2010 ; https://presentpasts.info/ ; >
+      au < doNotProcess ; exists ; 2011 ; 3 ; Present Pasts Volume 2011 ; 2011 ; https://presentpasts.info/ ; >
+      au < doNotProcess ; exists ; 2012 ; 4 ; Present Pasts Volume 2012 ; 2012 ; https://presentpasts.info/ ; >
+      au < doNotProcess ; exists ; 2013 ; 5 ; Present Pasts Volume 2013 ; 2013 ; https://presentpasts.info/ ; >
+      au < doNotProcess ; exists ; 2014 ; 6 ; Present Pasts Volume 2014 ; 2014 ; https://presentpasts.info/ ; >
+      au < doNotProcess ; exists ; 2015 ; 7 ; Present Pasts Volume 2015 ; 2015 ; https://presentpasts.info/ ; >
+      au < manifest ; exists ; 2016 ; 8 ; Present Pasts Volume 2016 ; 2016 ; https://presentpasts.info/ ; >
+      au < manifest ; exists ; 2017 ; 9 ; Present Pasts Volume 2017 ; 2017 ; https://presentpasts.info/ ; >
     }
   }
 
@@ -994,39 +994,39 @@
       comment[publisher] = Ubiquity Press
     {
       #no longer at this url
-      param[base_url] = http://www.psychologicabelgica.com/
+#      param[base_url] = http://www.psychologicabelgica.com/
 
-      au < doNotProcess ; exists ; 2005 ; 1 ; Psychologica Belgica Volume 2005 ; 2005 ; >
-      au < doNotProcess ; exists ; 2006 ; 2 ; Psychologica Belgica Volume 2006 ; 2006 ; >
-      au < doNotProcess ; exists ; 2007 ; 3 ; Psychologica Belgica Volume 2007 ; 2007 ; >
-      au < doNotProcess ; exists ; 2008 ; 4 ; Psychologica Belgica Volume 2008 ; 2008 ; >
-      au < doNotProcess ; exists ; 2009 ; 5 ; Psychologica Belgica Volume 2009 ; 2009 ; >
-      au < frozen ; exists ; 2010 ; 6 ; Psychologica Belgica Volume 2010 ; 2010 ; >
-      au < doNotProcess ; exists ; 2011 ; 7 ; Psychologica Belgica Volume 2011 ; 2011 ; >
-      au < doNotProcess ; exists ; 2012 ; 8 ; Psychologica Belgica Volume 2012 ; 2012 ; >
-      au < doNotProcess ; exists ; 2013 ; 9 ; Psychologica Belgica Volume 2013 ; 2013 ; >
-      au < doNotProcess ; exists ; 2014 ; 10 ; Psychologica Belgica Volume 2014 ; 2014 ; >
-      au < finished ; finished ; 2015 ; 11 ; Psychologica Belgica Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
-      au < superseded ; exists ; 2016 ; 12 ; Psychologica Belgica Volume 2016 [superseded] ; 2016 ; >
-      au < doNotProcess ; exists ; 2017 ; 13 ; Psychologica Belgica Volume 2017 ; 2017 ; >
+      au < doNotProcess ; exists ; 2005 ; 1 ; Psychologica Belgica Volume 2005 ; 2005 ; https://www.psychologicabelgica.com/ ; >
+      au < doNotProcess ; exists ; 2006 ; 2 ; Psychologica Belgica Volume 2006 ; 2006 ; https://www.psychologicabelgica.com/ ; >
+      au < doNotProcess ; exists ; 2007 ; 3 ; Psychologica Belgica Volume 2007 ; 2007 ; https://www.psychologicabelgica.com/ ; >
+      au < doNotProcess ; exists ; 2008 ; 4 ; Psychologica Belgica Volume 2008 ; 2008 ; https://www.psychologicabelgica.com/ ; >
+      au < doNotProcess ; exists ; 2009 ; 5 ; Psychologica Belgica Volume 2009 ; 2009 ; https://www.psychologicabelgica.com/ ; >
+      au < frozen ; exists ; 2010 ; 6 ; Psychologica Belgica Volume 2010 ; 2010 ; http://www.psychologicabelgica.com/ ; >
+      au < doNotProcess ; exists ; 2011 ; 7 ; Psychologica Belgica Volume 2011 ; 2011 ; https://www.psychologicabelgica.com/ ; >
+      au < doNotProcess ; exists ; 2012 ; 8 ; Psychologica Belgica Volume 2012 ; 2012 ; https://www.psychologicabelgica.com/ ; >
+      au < doNotProcess ; exists ; 2013 ; 9 ; Psychologica Belgica Volume 2013 ; 2013 ; https://www.psychologicabelgica.com/ ; >
+      au < doNotProcess ; exists ; 2014 ; 10 ; Psychologica Belgica Volume 2014 ; 2014 ; https://www.psychologicabelgica.com/ ; >
+      au < finished ; finished ; 2015 ; 11 ; Psychologica Belgica Volume 2015 ; 2015 ; http://www.psychologicabelgica.com/ ; reingest5.clockss.org:8082 >
+      au < superseded ; exists ; 2016 ; 12 ; Psychologica Belgica Volume 2016 [superseded] ; 2016 ; http://www.psychologicabelgica.com/ ; >
+      au < doNotProcess ; exists ; 2017 ; 13 ; Psychologica Belgica Volume 2017 ; 2017 ; https://www.psychologicabelgica.com/ ; >
     }
     { 
       #moved to https
-      param[base_url] = https://www.psychologicabelgica.com/
+#      param[base_url] = https://www.psychologicabelgica.com/
 
-      au < manifest ; exists ; 2005 ; 1 ; Psychologica Belgica Volume 2005 ; 2005 ; >
-      au < manifest ; exists ; 2006 ; 2 ; Psychologica Belgica Volume 2006 ; 2006 ; >
-      au < manifest ; exists ; 2007 ; 3 ; Psychologica Belgica Volume 2007 ; 2007 ; >
-      au < manifest ; exists ; 2008 ; 4 ; Psychologica Belgica Volume 2008 ; 2008 ; >
-      au < manifest ; exists ; 2009 ; 5 ; Psychologica Belgica Volume 2009 ; 2009 ; >
-      au < doNotProcess ; exists ; 2010 ; 6 ; Psychologica Belgica Volume 2010 ; 2010 ; >
-      au < doNotProcess ; exists ; 2011 ; 7 ; Psychologica Belgica Volume 2011 ; 2011 ; >
-      au < doNotProcess ; exists ; 2012 ; 8 ; Psychologica Belgica Volume 2012 ; 2012 ; >
-      au < doNotProcess ; exists ; 2013 ; 9 ; Psychologica Belgica Volume 2013 ; 2013 ; >
-      au < doNotProcess ; exists ; 2014 ; 10 ; Psychologica Belgica Volume 2014 ; 2014 ; >
-      au < doNotProcess ; exists ; 2015 ; 11 ; Psychologica Belgica Volume 2015 ; 2015 ; >
-      au < manifest ; exists ; 2016 ; 12 ; Psychologica Belgica Volume 2016 ; 2016 ; >
-      au < manifest ; exists ; 2017 ; 13 ; Psychologica Belgica Volume 2017 ; 2017 ; >
+      au < manifest ; exists ; 2005 ; 1 ; Psychologica Belgica Volume 2005 ; 2005 ; https://www.psychologicabelgica.com/ ; >
+      au < manifest ; exists ; 2006 ; 2 ; Psychologica Belgica Volume 2006 ; 2006 ; https://www.psychologicabelgica.com/ ; >
+      au < manifest ; exists ; 2007 ; 3 ; Psychologica Belgica Volume 2007 ; 2007 ; https://www.psychologicabelgica.com/ ; >
+      au < manifest ; exists ; 2008 ; 4 ; Psychologica Belgica Volume 2008 ; 2008 ; https://www.psychologicabelgica.com/ ; >
+      au < manifest ; exists ; 2009 ; 5 ; Psychologica Belgica Volume 2009 ; 2009 ; https://www.psychologicabelgica.com/ ; >
+      au < doNotProcess ; exists ; 2010 ; 6 ; Psychologica Belgica Volume 2010 ; 2010 ; https://www.psychologicabelgica.com/ ; >
+      au < doNotProcess ; exists ; 2011 ; 7 ; Psychologica Belgica Volume 2011 ; 2011 ; https://www.psychologicabelgica.com/ ; >
+      au < doNotProcess ; exists ; 2012 ; 8 ; Psychologica Belgica Volume 2012 ; 2012 ; https://www.psychologicabelgica.com/ ; >
+      au < doNotProcess ; exists ; 2013 ; 9 ; Psychologica Belgica Volume 2013 ; 2013 ; https://www.psychologicabelgica.com/ ; >
+      au < doNotProcess ; exists ; 2014 ; 10 ; Psychologica Belgica Volume 2014 ; 2014 ; https://www.psychologicabelgica.com/ ; >
+      au < doNotProcess ; exists ; 2015 ; 11 ; Psychologica Belgica Volume 2015 ; 2015 ; https://www.psychologicabelgica.com/ ; >
+      au < manifest ; exists ; 2016 ; 12 ; Psychologica Belgica Volume 2016 ; 2016 ; https://www.psychologicabelgica.com/ ; >
+      au < manifest ; exists ; 2017 ; 13 ; Psychologica Belgica Volume 2017 ; 2017 ; https://www.psychologicabelgica.com/ ; >
     }
   }
 
@@ -1040,25 +1040,25 @@
       comment[publisher] = Ubiquity Press
     {
       #no longer at this address.
-      param[base_url] = http://www.secularismandnonreligion.org/
+#      param[base_url] = http://www.secularismandnonreligion.org/
 
-      au < doNotProcess ; exists ; 2012 ; 1 ; Secularism and Nonreligion Volume 2012 ; 2012 ; >
-      au < doNotProcess ; exists ; 2013 ; 2 ; Secularism and Nonreligion Volume 2013 ; 2013 ; >
-      au < doNotProcess ; exists ; 2014 ; 3 ; Secularism and Nonreligion Volume 2014 ; 2014 ; >
-      au < finished ; finished ; 2015 ; 4 ; Secularism and Nonreligion Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
-      au < superseded ; exists ; 2016 ; 5 ; Secularism and Nonreligion Volume 2016 [superseded] ; 2016 ; >
-      au < doNotProcess ; exists ; 2017 ; 6 ; Secularism and Nonreligion Volume 2017 ; 2017 ; >
+      au < doNotProcess ; exists ; 2012 ; 1 ; Secularism and Nonreligion Volume 2012 ; 2012 ; https://www.secularismandnonreligion.org/ ; >
+      au < doNotProcess ; exists ; 2013 ; 2 ; Secularism and Nonreligion Volume 2013 ; 2013 ; https://www.secularismandnonreligion.org/ ; >
+      au < doNotProcess ; exists ; 2014 ; 3 ; Secularism and Nonreligion Volume 2014 ; 2014 ; https://www.secularismandnonreligion.org/ ; >
+      au < finished ; finished ; 2015 ; 4 ; Secularism and Nonreligion Volume 2015 ; 2015 ; http://www.secularismandnonreligion.org/ ; reingest5.clockss.org:8082 >
+      au < superseded ; exists ; 2016 ; 5 ; Secularism and Nonreligion Volume 2016 [superseded] ; 2016 ; http://www.secularismandnonreligion.org/ ; >
+      au < doNotProcess ; exists ; 2017 ; 6 ; Secularism and Nonreligion Volume 2017 ; 2017 ; https://www.secularismandnonreligion.org/ ; >
     }
     {
       #moved to https and lost www.
-      param[base_url] = https://secularismandnonreligion.org/
+#      param[base_url] = https://secularismandnonreligion.org/
 
-      au < doNotProcess ; exists ; 2012 ; 1 ; Secularism and Nonreligion Volume 2012 ; 2012 ; >
-      au < doNotProcess ; exists ; 2013 ; 2 ; Secularism and Nonreligion Volume 2013 ; 2013 ; >
-      au < doNotProcess ; exists ; 2014 ; 3 ; Secularism and Nonreligion Volume 2014 ; 2014 ; >
-      au < doNotProcess ; exists ; 2015 ; 4 ; Secularism and Nonreligion Volume 2015 ; 2015 ; >
-      au < manifest ; exists ; 2016 ; 5 ; Secularism and Nonreligion Volume 2016 ; 2016 ; >
-      au < manifest ; exists ; 2017 ; 6 ; Secularism and Nonreligion Volume 2017 ; 2017 ; >
+      au < doNotProcess ; exists ; 2012 ; 1 ; Secularism and Nonreligion Volume 2012 ; 2012 ; https://secularismandnonreligion.org/ ; >
+      au < doNotProcess ; exists ; 2013 ; 2 ; Secularism and Nonreligion Volume 2013 ; 2013 ; https://secularismandnonreligion.org/ ; >
+      au < doNotProcess ; exists ; 2014 ; 3 ; Secularism and Nonreligion Volume 2014 ; 2014 ; https://secularismandnonreligion.org/ ; >
+      au < doNotProcess ; exists ; 2015 ; 4 ; Secularism and Nonreligion Volume 2015 ; 2015 ; https://secularismandnonreligion.org/ ; >
+      au < manifest ; exists ; 2016 ; 5 ; Secularism and Nonreligion Volume 2016 ; 2016 ; https://secularismandnonreligion.org/ ; >
+      au < manifest ; exists ; 2017 ; 6 ; Secularism and Nonreligion Volume 2017 ; 2017 ; https://secularismandnonreligion.org/ ; >
     }
   }
 
@@ -1070,14 +1070,14 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = http://www.stabilityjournal.org/
+#      param[base_url] = http://www.stabilityjournal.org/
 
-      au < doNotProcess ; exists ; 2012 ; 1 ; Stability: International Journal of Security & Development Volume 2012 ; 2012 ; >
-      au < doNotProcess ; exists ; 2013 ; 2 ; Stability: International Journal of Security & Development Volume 2013 ; 2013 ; >
-      au < doNotProcess ; exists ; 2014 ; 3 ; Stability: International Journal of Security & Development Volume 2014 ; 2014 ; >
-      au < finished ; finished ; 2015 ; 4 ; Stability: International Journal of Security & Development Volume 2015 ; 2015 ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016 ; 5 ; Stability: International Journal of Security & Development Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 6 ; Stability: International Journal of Security & Development Volume 2017 ; 2017 ; >
+      au < doNotProcess ; exists ; 2012 ; 1 ; Stability: International Journal of Security & Development Volume 2012 ; 2012 ; https://www.stabilityjournal.org/ ; >
+      au < doNotProcess ; exists ; 2013 ; 2 ; Stability: International Journal of Security & Development Volume 2013 ; 2013 ; https://www.stabilityjournal.org/ ; >
+      au < doNotProcess ; exists ; 2014 ; 3 ; Stability: International Journal of Security & Development Volume 2014 ; 2014 ; https://www.stabilityjournal.org/ ; >
+      au < finished ; finished ; 2015 ; 4 ; Stability: International Journal of Security & Development Volume 2015 ; 2015 ; http://www.stabilityjournal.org/ ; reingest1.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2016 ; 5 ; Stability: International Journal of Security & Development Volume 2016 ; 2016 ; http://www.stabilityjournal.org/ ; >
+      au < crawling ; exists ; 2017 ; 6 ; Stability: International Journal of Security & Development Volume 2017 ; 2017 ; http://www.stabilityjournal.org/ ; >
 
   }
 
@@ -1091,29 +1091,29 @@
       comment[publisher] = Ubiquity Press
     {
       #no longer at this url
-      param[base_url] = http://www.utrechtjournal.org/
+#      param[base_url] = http://www.utrechtjournal.org/
 
-      au < frozen ; exists ; 2010 ; 1 ; Utrecht Journal of International and European Law Volume 2010 ; 2010 ; >
-      au < doNotProcess ; exists ; 2011 ; 2 ; Utrecht Journal of International and European Law Volume 2011 ; 2011 ; >
-      au < doNotProcess ; exists ; 2012 ; 3 ; Utrecht Journal of International and European Law Volume 2012 ; 2012 ; >
-      au < doNotProcess ; exists ; 2013 ; 4 ; Utrecht Journal of International and European Law Volume 2013 ; 2013 ; >
-      au < doNotProcess ; exists ; 2014 ; 5 ; Utrecht Journal of International and European Law Volume 2014 ; 2014 ; >
-      au < finished ; finished ; 2015 ; 6 ; Utrecht Journal of International and European Law Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
-      au < superseded ; exists ; 2016 ; 7 ; Utrecht Journal of International and European Law Volume 2016 [superseded] ; 2016 ; >
-      au < doNotProcess ; exists ; 2017 ; 8 ; Utrecht Journal of International and European Law Volume 2017 ; 2017 ; >
+      au < frozen ; exists ; 2010 ; 1 ; Utrecht Journal of International and European Law Volume 2010 ; 2010 ; http://www.utrechtjournal.org/ ; >
+      au < doNotProcess ; exists ; 2011 ; 2 ; Utrecht Journal of International and European Law Volume 2011 ; 2011 ; https://www.utrechtjournal.org/ ; >
+      au < doNotProcess ; exists ; 2012 ; 3 ; Utrecht Journal of International and European Law Volume 2012 ; 2012 ; https://www.utrechtjournal.org/ ; >
+      au < doNotProcess ; exists ; 2013 ; 4 ; Utrecht Journal of International and European Law Volume 2013 ; 2013 ; https://www.utrechtjournal.org/ ; >
+      au < doNotProcess ; exists ; 2014 ; 5 ; Utrecht Journal of International and European Law Volume 2014 ; 2014 ; https://www.utrechtjournal.org/ ; >
+      au < finished ; finished ; 2015 ; 6 ; Utrecht Journal of International and European Law Volume 2015 ; 2015 ; http://www.utrechtjournal.org/ ; reingest5.clockss.org:8082 >
+      au < superseded ; exists ; 2016 ; 7 ; Utrecht Journal of International and European Law Volume 2016 [superseded] ; 2016 ; http://www.utrechtjournal.org/ ; >
+      au < doNotProcess ; exists ; 2017 ; 8 ; Utrecht Journal of International and European Law Volume 2017 ; 2017 ; https://www.utrechtjournal.org/ ; >
     }
     {
       #moved to https and lost www.
-      param[base_url] = https://utrechtjournal.org/
+#      param[base_url] = https://utrechtjournal.org/
 
-      au < doNotProcess ; exists ; 2010 ; 1 ; Utrecht Journal of International and European Law Volume 2010 ; 2010 ; >
-      au < doNotProcess ; exists ; 2011 ; 2 ; Utrecht Journal of International and European Law Volume 2011 ; 2011 ; >
-      au < doNotProcess ; exists ; 2012 ; 3 ; Utrecht Journal of International and European Law Volume 2012 ; 2012 ; >
-      au < doNotProcess ; exists ; 2013 ; 4 ; Utrecht Journal of International and European Law Volume 2013 ; 2013 ; >
-      au < doNotProcess ; exists ; 2014 ; 5 ; Utrecht Journal of International and European Law Volume 2014 ; 2014 ; >
-      au < doNotProcess ; exists ; 2015 ; 6 ; Utrecht Journal of International and European Law Volume 2015 ; 2015 ; >
-      au < manifest ; exists ; 2016 ; 7 ; Utrecht Journal of International and European Law Volume 2016 ; 2016 ; >
-      au < manifest ; exists ; 2017 ; 8 ; Utrecht Journal of International and European Law Volume 2017 ; 2017 ; >
+      au < doNotProcess ; exists ; 2010 ; 1 ; Utrecht Journal of International and European Law Volume 2010 ; 2010 ; https://utrechtjournal.org/ ; >
+      au < doNotProcess ; exists ; 2011 ; 2 ; Utrecht Journal of International and European Law Volume 2011 ; 2011 ; https://utrechtjournal.org/ ; >
+      au < doNotProcess ; exists ; 2012 ; 3 ; Utrecht Journal of International and European Law Volume 2012 ; 2012 ; https://utrechtjournal.org/ ; >
+      au < doNotProcess ; exists ; 2013 ; 4 ; Utrecht Journal of International and European Law Volume 2013 ; 2013 ; https://utrechtjournal.org/ ; >
+      au < doNotProcess ; exists ; 2014 ; 5 ; Utrecht Journal of International and European Law Volume 2014 ; 2014 ; https://utrechtjournal.org/ ; >
+      au < doNotProcess ; exists ; 2015 ; 6 ; Utrecht Journal of International and European Law Volume 2015 ; 2015 ; https://utrechtjournal.org/ ; >
+      au < manifest ; exists ; 2016 ; 7 ; Utrecht Journal of International and European Law Volume 2016 ; 2016 ; https://utrechtjournal.org/ ; >
+      au < manifest ; exists ; 2017 ; 8 ; Utrecht Journal of International and European Law Volume 2017 ; 2017 ; https://utrechtjournal.org/ ; >
     }
   }
 
@@ -1128,7 +1128,7 @@
 
     provider = Ubiquity Press
     plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
-    implicit < status ; status2 ; year ; volume ; name ; param[year] ; hidden[proxy] >
+    implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
 
   {
 
@@ -1138,14 +1138,14 @@
       >
 
       comment[publisher] = United Kingdom Serials Group
-      param[base_url] = http://insights.uksg.org/
+#      param[base_url] = http://insights.uksg.org/
 
-      au < frozen ; exists ; 2012 ; 1 ; Insights: the UKSG journal Volume 2012 ; 2012 ; >
-      au < frozen ; exists ; 2013 ; 2 ; Insights: the UKSG journal Volume 2013 ; 2013 ; >
-      au < finished ; finished ; 2014 ; 3 ; Insights: the UKSG journal Volume 2014 ; 2014 ; >
-      au < finished ; finished ; 2015 ; 4 ; Insights: the UKSG journal Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016 ; 5 ; Insights: the UKSG journal Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 6 ; Insights: the UKSG journal Volume 2017 ; 2017 ; >
+      au < frozen ; exists ; 2012 ; 1 ; Insights: the UKSG journal Volume 2012 ; 2012 ; http://insights.uksg.org/ ; >
+      au < frozen ; exists ; 2013 ; 2 ; Insights: the UKSG journal Volume 2013 ; 2013 ; http://insights.uksg.org/ ; >
+      au < finished ; finished ; 2014 ; 3 ; Insights: the UKSG journal Volume 2014 ; 2014 ; http://insights.uksg.org/ ; >
+      au < finished ; finished ; 2015 ; 4 ; Insights: the UKSG journal Volume 2015 ; 2015 ; http://insights.uksg.org/ ; reingest5.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2016 ; 5 ; Insights: the UKSG journal Volume 2016 ; 2016 ; http://insights.uksg.org/ ; >
+      au < crawling ; exists ; 2017 ; 6 ; Insights: the UKSG journal Volume 2017 ; 2017 ; http://insights.uksg.org/ ; >
 
   }
 
@@ -1158,32 +1158,32 @@
       >
 
       comment[publisher] = United Kingdom Serials Group
-      param[base_url] = http://serials.uksg.org/
+#      param[base_url] = http://serials.uksg.org/
 
-      au < manifest ; exists ; 1988 ; 1 ; Serials: The Journal for the Serials Community Volume 1988 ; 1988 ; >
-      au < exists ; exists ; 1989 ; 2 ; Serials: The Journal for the Serials Community Volume 1989 ; 1989 ; >
-      au < exists ; exists ; 1990 ; 3 ; Serials: The Journal for the Serials Community Volume 1990 ; 1990 ; >
-      au < exists ; exists ; 1991 ; 4 ; Serials: The Journal for the Serials Community Volume 1991 ; 1991 ; >
-      au < exists ; exists ; 1992 ; 5 ; Serials: The Journal for the Serials Community Volume 1992 ; 1992 ; >
-      au < exists ; exists ; 1993 ; 6 ; Serials: The Journal for the Serials Community Volume 1993 ; 1993 ; >
-      au < exists ; exists ; 1994 ; 7 ; Serials: The Journal for the Serials Community Volume 1994 ; 1994 ; >
-      au < manifest ; exists ; 1995 ; 8 ; Serials: The Journal for the Serials Community Volume 1995 ; 1995 ; >
-      au < manifest ; exists ; 1996 ; 9 ; Serials: The Journal for the Serials Community Volume 1996 ; 1996 ; >
-      au < manifest ; exists ; 1997 ; 10 ; Serials: The Journal for the Serials Community Volume 1997 ; 1997 ; >
-      au < manifest ; exists ; 1998 ; 11 ; Serials: The Journal for the Serials Community Volume 1998 ; 1998 ; >
-      au < manifest ; exists ; 1999 ; 12 ; Serials: The Journal for the Serials Community Volume 1999 ; 1999 ; >
-      au < exists ; exists ; 2000 ; 13 ; Serials: The Journal for the Serials Community Volume 2000 ; 2000 ; >
-      au < manifest ; exists ; 2001 ; 14 ; Serials: The Journal for the Serials Community Volume 2001 ; 2001 ; >
-      au < exists ; exists ; 2002 ; 15 ; Serials: The Journal for the Serials Community Volume 2002 ; 2002 ; >
-      au < manifest ; exists ; 2003 ; 16 ; Serials: The Journal for the Serials Community Volume 2003 ; 2003 ; >
-      au < manifest ; exists ; 2004 ; 17 ; Serials: The Journal for the Serials Community Volume 2004 ; 2004 ; >
-      au < manifest ; exists ; 2005 ; 18 ; Serials: The Journal for the Serials Community Volume 2005 ; 2005 ; >
-      au < manifest ; exists ; 2006 ; 19 ; Serials: The Journal for the Serials Community Volume 2006 ; 2006 ; >
-      au < manifest ; exists ; 2007 ; 20 ; Serials: The Journal for the Serials Community Volume 2007 ; 2007 ; >
-      au < manifest ; exists ; 2008 ; 21 ; Serials: The Journal for the Serials Community Volume 2008 ; 2008 ; >
-      au < manifest ; exists ; 2009 ; 22 ; Serials: The Journal for the Serials Community Volume 2009 ; 2009 ; >
-      au < frozen ; exists ; 2010 ; 23 ; Serials: The Journal for the Serials Community Volume 2010 ; 2010 ; >
-      au < frozen ; exists ; 2011 ; 24 ; Serials: The Journal for the Serials Community Volume 2011 ; 2011 ; >
+      au < manifest ; exists ; 1988 ; 1 ; Serials: The Journal for the Serials Community Volume 1988 ; 1988 ; https://serials.uksg.org/ ; >
+      au < exists ; exists ; 1989 ; 2 ; Serials: The Journal for the Serials Community Volume 1989 ; 1989 ; https://serials.uksg.org/ ; >
+      au < exists ; exists ; 1990 ; 3 ; Serials: The Journal for the Serials Community Volume 1990 ; 1990 ; https://serials.uksg.org/ ; >
+      au < exists ; exists ; 1991 ; 4 ; Serials: The Journal for the Serials Community Volume 1991 ; 1991 ; https://serials.uksg.org/ ; >
+      au < exists ; exists ; 1992 ; 5 ; Serials: The Journal for the Serials Community Volume 1992 ; 1992 ; https://serials.uksg.org/ ; >
+      au < exists ; exists ; 1993 ; 6 ; Serials: The Journal for the Serials Community Volume 1993 ; 1993 ; https://serials.uksg.org/ ; >
+      au < exists ; exists ; 1994 ; 7 ; Serials: The Journal for the Serials Community Volume 1994 ; 1994 ; https://serials.uksg.org/ ; >
+      au < manifest ; exists ; 1995 ; 8 ; Serials: The Journal for the Serials Community Volume 1995 ; 1995 ; https://serials.uksg.org/ ; >
+      au < manifest ; exists ; 1996 ; 9 ; Serials: The Journal for the Serials Community Volume 1996 ; 1996 ; https://serials.uksg.org/ ; >
+      au < manifest ; exists ; 1997 ; 10 ; Serials: The Journal for the Serials Community Volume 1997 ; 1997 ; https://serials.uksg.org/ ; >
+      au < manifest ; exists ; 1998 ; 11 ; Serials: The Journal for the Serials Community Volume 1998 ; 1998 ; https://serials.uksg.org/ ; >
+      au < manifest ; exists ; 1999 ; 12 ; Serials: The Journal for the Serials Community Volume 1999 ; 1999 ; https://serials.uksg.org/ ; >
+      au < exists ; exists ; 2000 ; 13 ; Serials: The Journal for the Serials Community Volume 2000 ; 2000 ; https://serials.uksg.org/ ; >
+      au < manifest ; exists ; 2001 ; 14 ; Serials: The Journal for the Serials Community Volume 2001 ; 2001 ; https://serials.uksg.org/ ; >
+      au < exists ; exists ; 2002 ; 15 ; Serials: The Journal for the Serials Community Volume 2002 ; 2002 ; https://serials.uksg.org/ ; >
+      au < manifest ; exists ; 2003 ; 16 ; Serials: The Journal for the Serials Community Volume 2003 ; 2003 ; https://serials.uksg.org/ ; >
+      au < manifest ; exists ; 2004 ; 17 ; Serials: The Journal for the Serials Community Volume 2004 ; 2004 ; https://serials.uksg.org/ ; >
+      au < manifest ; exists ; 2005 ; 18 ; Serials: The Journal for the Serials Community Volume 2005 ; 2005 ; https://serials.uksg.org/ ; >
+      au < manifest ; exists ; 2006 ; 19 ; Serials: The Journal for the Serials Community Volume 2006 ; 2006 ; https://serials.uksg.org/ ; >
+      au < manifest ; exists ; 2007 ; 20 ; Serials: The Journal for the Serials Community Volume 2007 ; 2007 ; https://serials.uksg.org/ ; >
+      au < manifest ; exists ; 2008 ; 21 ; Serials: The Journal for the Serials Community Volume 2008 ; 2008 ; https://serials.uksg.org/ ; >
+      au < manifest ; exists ; 2009 ; 22 ; Serials: The Journal for the Serials Community Volume 2009 ; 2009 ; https://serials.uksg.org/ ; >
+      au < frozen ; exists ; 2010 ; 23 ; Serials: The Journal for the Serials Community Volume 2010 ; 2010 ; http://serials.uksg.org/ ; >
+      au < frozen ; exists ; 2011 ; 24 ; Serials: The Journal for the Serials Community Volume 2011 ; 2011 ; http://serials.uksg.org/ ; >
 
   }
 
@@ -1198,7 +1198,7 @@
 
     provider = Ubiquity Press
     plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
-    implicit < status ; status2 ; year ; volume ; name ; param[year] ; hidden[proxy] >
+    implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
 
   {
 
@@ -1208,23 +1208,23 @@
       >
 
       comment[publisher] = University of Westminster Press
-      param[base_url] = http://www.entsportslawjournal.com/
+#      param[base_url] = http://www.entsportslawjournal.com/
 
-      au < manifest ; exists ; 2002 ; 1 ; Entertainment and Sports Law Journal Volume 2002 ; 2002 ; >
-      au < manifest ; exists ; 2003 ; 2 ; Entertainment and Sports Law Journal Volume 2003 ; 2003 ; >
-      au < manifest ; exists ; 2005 ; 3 ; Entertainment and Sports Law Journal Volume 2005 ; 2005 ; >
-      au < manifest ; exists ; 2006 ; 4 ; Entertainment and Sports Law Journal Volume 2006 ; 2006 ; >
-      au < manifest ; exists ; 2007 ; 5 ; Entertainment and Sports Law Journal Volume 2007 ; 2007 ; >
-      au < manifest ; exists ; 2008 ; 6 ; Entertainment and Sports Law Journal Volume 2008 ; 2008 ; >
-      au < manifest ; exists ; 2009 ; 7 ; Entertainment and Sports Law Journal Volume 2009 ; 2009 ; >
-      au < frozen ; exists ; 2010 ; 8 ; Entertainment and Sports Law Journal Volume 2010 ; 2010 ; >
-      au < frozen ; exists ; 2011 ; 9 ; Entertainment and Sports Law Journal Volume 2011 ; 2011 ; >
-      au < frozen ; exists ; 2012 ; 10 ; Entertainment and Sports Law Journal Volume 2012 ; 2012 ; >
-      au < frozen ; exists ; 2013 ; 11 ; Entertainment and Sports Law Journal Volume 2013 ; 2013 ; >
-      au < finished ; finished ; 2014 ; 12 ; Entertainment and Sports Law Journal Volume 2014 ; 2014 ; >
-      au < finished ; finished ; 2015 ; 13 ; Entertainment and Sports Law Journal Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016 ; 14 ; Entertainment and Sports Law Journal Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 15 ; Entertainment and Sports Law Journal Volume 2017 ; 2017 ; >
+      au < manifest ; exists ; 2002 ; 1 ; Entertainment and Sports Law Journal Volume 2002 ; 2002 ; https://www.entsportslawjournal.com/ ; >
+      au < manifest ; exists ; 2003 ; 2 ; Entertainment and Sports Law Journal Volume 2003 ; 2003 ; https://www.entsportslawjournal.com/ ; >
+      au < manifest ; exists ; 2005 ; 3 ; Entertainment and Sports Law Journal Volume 2005 ; 2005 ; https://www.entsportslawjournal.com/ ; >
+      au < manifest ; exists ; 2006 ; 4 ; Entertainment and Sports Law Journal Volume 2006 ; 2006 ; https://www.entsportslawjournal.com/ ; >
+      au < manifest ; exists ; 2007 ; 5 ; Entertainment and Sports Law Journal Volume 2007 ; 2007 ; https://www.entsportslawjournal.com/ ; >
+      au < manifest ; exists ; 2008 ; 6 ; Entertainment and Sports Law Journal Volume 2008 ; 2008 ; https://www.entsportslawjournal.com/ ; >
+      au < manifest ; exists ; 2009 ; 7 ; Entertainment and Sports Law Journal Volume 2009 ; 2009 ; https://www.entsportslawjournal.com/ ; >
+      au < frozen ; exists ; 2010 ; 8 ; Entertainment and Sports Law Journal Volume 2010 ; 2010 ; http://www.entsportslawjournal.com/ ; >
+      au < frozen ; exists ; 2011 ; 9 ; Entertainment and Sports Law Journal Volume 2011 ; 2011 ; http://www.entsportslawjournal.com/ ; >
+      au < frozen ; exists ; 2012 ; 10 ; Entertainment and Sports Law Journal Volume 2012 ; 2012 ; http://www.entsportslawjournal.com/ ; >
+      au < frozen ; exists ; 2013 ; 11 ; Entertainment and Sports Law Journal Volume 2013 ; 2013 ; http://www.entsportslawjournal.com/ ; >
+      au < finished ; finished ; 2014 ; 12 ; Entertainment and Sports Law Journal Volume 2014 ; 2014 ; http://www.entsportslawjournal.com/ ; >
+      au < finished ; finished ; 2015 ; 13 ; Entertainment and Sports Law Journal Volume 2015 ; 2015 ; http://www.entsportslawjournal.com/ ; reingest5.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2016 ; 14 ; Entertainment and Sports Law Journal Volume 2016 ; 2016 ; http://www.entsportslawjournal.com/ ; >
+      au < crawling ; exists ; 2017 ; 15 ; Entertainment and Sports Law Journal Volume 2017 ; 2017 ; http://www.entsportslawjournal.com/ ; >
 
   }
 
@@ -1236,16 +1236,16 @@
       >
 
       comment[publisher] = University of Westminster Press
-      param[base_url] = http://www.westminsterpapers.org/
+#      param[base_url] = http://www.westminsterpapers.org/
 
-      au < manifest ; exists ; 2009 ; 6 ; Westminster Papers in Communication and Culture Volume 2009 ; 2009 ; >
-      au < frozen ; exists ; 2010 ; 7 ; Westminster Papers in Communication and Culture Volume 2010 ; 2010 ; >
-      au < frozen ; exists ; 2011 ; 8 ; Westminster Papers in Communication and Culture Volume 2011 ; 2011 ; >
-      au < frozen ; exists ; 2012 ; 9 ; Westminster Papers in Communication and Culture Volume 2012 ; 2012 ; >
-      au < frozen ; exists ; 2013 ; 9 ; Westminster Papers in Communication and Culture Volume 2013 ; 2013 ; >
-      au < finished ; finished ; 2015 ; 10 ; Westminster Papers in Communication and Culture Volume 2015 ; 2015 ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2016 ; 11 ; Westminster Papers in Communication and Culture Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 12 ; Westminster Papers in Communication and Culture Volume 2017 ; 2017 ; >
+      au < manifest ; exists ; 2009 ; 6 ; Westminster Papers in Communication and Culture Volume 2009 ; 2009 ; https://www.westminsterpapers.org/ ; >
+      au < frozen ; exists ; 2010 ; 7 ; Westminster Papers in Communication and Culture Volume 2010 ; 2010 ; http://www.westminsterpapers.org/ ; >
+      au < frozen ; exists ; 2011 ; 8 ; Westminster Papers in Communication and Culture Volume 2011 ; 2011 ; http://www.westminsterpapers.org/ ; >
+      au < frozen ; exists ; 2012 ; 9 ; Westminster Papers in Communication and Culture Volume 2012 ; 2012 ; http://www.westminsterpapers.org/ ; >
+      au < frozen ; exists ; 2013 ; 9 ; Westminster Papers in Communication and Culture Volume 2013 ; 2013 ; http://www.westminsterpapers.org/ ; >
+      au < finished ; finished ; 2015 ; 10 ; Westminster Papers in Communication and Culture Volume 2015 ; 2015 ; http://www.westminsterpapers.org/ ; reingest2.clockss.org:8085 >
+      au < deepCrawl ; exists ; 2016 ; 11 ; Westminster Papers in Communication and Culture Volume 2016 ; 2016 ; http://www.westminsterpapers.org/ ; >
+      au < crawling ; exists ; 2017 ; 12 ; Westminster Papers in Communication and Culture Volume 2017 ; 2017 ; http://www.westminsterpapers.org/ ; >
 
   }
 
@@ -1260,7 +1260,7 @@
 
     provider = Ubiquity Press
     plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
-    implicit < status ; status2 ; year ; volume ; name ; param[year] ; hidden[proxy] >
+    implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
 
   {
 
@@ -1270,56 +1270,56 @@
       >
 
       comment[publisher] = Utrecht University Library
-      param[base_url] = http://www.bmgn-lchr.nl/
+#      param[base_url] = http://www.bmgn-lchr.nl/
 
-      au < manifest ; exists ; 1970 ; 1 ; BMGN - Low Countries Historical Review Volume 1970 ; 1970 ; >
-      au < manifest ; exists ; 1971 ; 2 ; BMGN - Low Countries Historical Review Volume 1971 ; 1971 ; >
-      au < manifest ; exists ; 1972 ; 3 ; BMGN - Low Countries Historical Review Volume 1972 ; 1972 ; >
-      au < manifest ; exists ; 1973 ; 4 ; BMGN - Low Countries Historical Review Volume 1973 ; 1973 ; >
-      au < manifest ; exists ; 1974 ; 5 ; BMGN - Low Countries Historical Review Volume 1974 ; 1974 ; >
-      au < manifest ; exists ; 1975 ; 6 ; BMGN - Low Countries Historical Review Volume 1975 ; 1975 ; >
-      au < manifest ; exists ; 1976 ; 7 ; BMGN - Low Countries Historical Review Volume 1976 ; 1976 ; >
-      au < manifest ; exists ; 1977 ; 8 ; BMGN - Low Countries Historical Review Volume 1977 ; 1977 ; >
-      au < manifest ; exists ; 1978 ; 9 ; BMGN - Low Countries Historical Review Volume 1978 ; 1978 ; >
-      au < manifest ; exists ; 1979 ; 10 ; BMGN - Low Countries Historical Review Volume 1979 ; 1979 ; >
-      au < manifest ; exists ; 1980 ; 11 ; BMGN - Low Countries Historical Review Volume 1980 ; 1980 ; >
-      au < manifest ; exists ; 1981 ; 12 ; BMGN - Low Countries Historical Review Volume 1981 ; 1981 ; >
-      au < manifest ; exists ; 1982 ; 13 ; BMGN - Low Countries Historical Review Volume 1982 ; 1982 ; >
-      au < manifest ; exists ; 1983 ; 14 ; BMGN - Low Countries Historical Review Volume 1983 ; 1983 ; >
-      au < manifest ; exists ; 1984 ; 15 ; BMGN - Low Countries Historical Review Volume 1984 ; 1984 ; >
-      au < manifest ; exists ; 1985 ; 16 ; BMGN - Low Countries Historical Review Volume 1985 ; 1985 ; >
-      au < manifest ; exists ; 1986 ; 17 ; BMGN - Low Countries Historical Review Volume 1986 ; 1986 ; >
-      au < manifest ; exists ; 1987 ; 18 ; BMGN - Low Countries Historical Review Volume 1987 ; 1987 ; >
-      au < manifest ; exists ; 1988 ; 19 ; BMGN - Low Countries Historical Review Volume 1988 ; 1988 ; >
-      au < manifest ; exists ; 1989 ; 20 ; BMGN - Low Countries Historical Review Volume 1989 ; 1989 ; >
-      au < manifest ; exists ; 1990 ; 21 ; BMGN - Low Countries Historical Review Volume 1990 ; 1990 ; >
-      au < manifest ; exists ; 1991 ; 22 ; BMGN - Low Countries Historical Review Volume 1991 ; 1991 ; >
-      au < manifest ; exists ; 1992 ; 23 ; BMGN - Low Countries Historical Review Volume 1992 ; 1992 ; >
-      au < manifest ; exists ; 1993 ; 24 ; BMGN - Low Countries Historical Review Volume 1993 ; 1993 ; >
-      au < manifest ; exists ; 1994 ; 25 ; BMGN - Low Countries Historical Review Volume 1994 ; 1994 ; >
-      au < manifest ; exists ; 1995 ; 26 ; BMGN - Low Countries Historical Review Volume 1995 ; 1995 ; >
-      au < manifest ; exists ; 1996 ; 27 ; BMGN - Low Countries Historical Review Volume 1996 ; 1996 ; >
-      au < manifest ; exists ; 1997 ; 28 ; BMGN - Low Countries Historical Review Volume 1997 ; 1997 ; >
-      au < manifest ; exists ; 1998 ; 29 ; BMGN - Low Countries Historical Review Volume 1998 ; 1998 ; >
-      au < manifest ; exists ; 1999 ; 30 ; BMGN - Low Countries Historical Review Volume 1999 ; 1999 ; >
-      au < manifest ; exists ; 2000 ; 31 ; BMGN - Low Countries Historical Review Volume 2000 ; 2000 ; >
-      au < manifest ; exists ; 2001 ; 32 ; BMGN - Low Countries Historical Review Volume 2001 ; 2001 ; >
-      au < manifest ; exists ; 2002 ; 33 ; BMGN - Low Countries Historical Review Volume 2002 ; 2002 ; >
-      au < manifest ; exists ; 2003 ; 34 ; BMGN - Low Countries Historical Review Volume 2003 ; 2003 ; >
-      au < manifest ; exists ; 2004 ; 35 ; BMGN - Low Countries Historical Review Volume 2004 ; 2004 ; >
-      au < manifest ; exists ; 2005 ; 36 ; BMGN - Low Countries Historical Review Volume 2005 ; 2005 ; >
-      au < manifest ; exists ; 2006 ; 37 ; BMGN - Low Countries Historical Review Volume 2006 ; 2006 ; >
-      au < manifest ; exists ; 2007 ; 38 ; BMGN - Low Countries Historical Review Volume 2007 ; 2007 ; >
-      au < manifest ; exists ; 2008 ; 39 ; BMGN - Low Countries Historical Review Volume 2008 ; 2008 ; >
-      au < manifest ; exists ; 2009 ; 40 ; BMGN - Low Countries Historical Review Volume 2009 ; 2009 ; >
-      au < frozen ; exists ; 2010 ; 41 ; BMGN - Low Countries Historical Review Volume 2010 ; 2010 ; >
-      au < frozen ; exists ; 2011 ; 42 ; BMGN - Low Countries Historical Review Volume 2011 ; 2011 ; >
-      au < frozen ; exists ; 2012 ; 43 ; BMGN - Low Countries Historical Review Volume 2012 ; 2012 ; >
-      au < frozen ; exists ; 2013 ; 44 ; BMGN - Low Countries Historical Review Volume 2013 ; 2013 ; >
-      au < frozen ; exists ; 2014 ; 45 ; BMGN - Low Countries Historical Review Volume 2014 ; 2014 ; >
-      au < frozen ; exists ; 2015 ; 46 ; BMGN - Low Countries Historical Review Volume 2015 ; 2015 ; >
-      au < deepCrawl ; exists ; 2016 ; 47 ; BMGN - Low Countries Historical Review Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 48 ; BMGN - Low Countries Historical Review Volume 2017 ; 2017 ; >
+      au < manifest ; exists ; 1970 ; 1 ; BMGN - Low Countries Historical Review Volume 1970 ; 1970 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1971 ; 2 ; BMGN - Low Countries Historical Review Volume 1971 ; 1971 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1972 ; 3 ; BMGN - Low Countries Historical Review Volume 1972 ; 1972 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1973 ; 4 ; BMGN - Low Countries Historical Review Volume 1973 ; 1973 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1974 ; 5 ; BMGN - Low Countries Historical Review Volume 1974 ; 1974 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1975 ; 6 ; BMGN - Low Countries Historical Review Volume 1975 ; 1975 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1976 ; 7 ; BMGN - Low Countries Historical Review Volume 1976 ; 1976 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1977 ; 8 ; BMGN - Low Countries Historical Review Volume 1977 ; 1977 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1978 ; 9 ; BMGN - Low Countries Historical Review Volume 1978 ; 1978 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1979 ; 10 ; BMGN - Low Countries Historical Review Volume 1979 ; 1979 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1980 ; 11 ; BMGN - Low Countries Historical Review Volume 1980 ; 1980 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1981 ; 12 ; BMGN - Low Countries Historical Review Volume 1981 ; 1981 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1982 ; 13 ; BMGN - Low Countries Historical Review Volume 1982 ; 1982 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1983 ; 14 ; BMGN - Low Countries Historical Review Volume 1983 ; 1983 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1984 ; 15 ; BMGN - Low Countries Historical Review Volume 1984 ; 1984 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1985 ; 16 ; BMGN - Low Countries Historical Review Volume 1985 ; 1985 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1986 ; 17 ; BMGN - Low Countries Historical Review Volume 1986 ; 1986 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1987 ; 18 ; BMGN - Low Countries Historical Review Volume 1987 ; 1987 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1988 ; 19 ; BMGN - Low Countries Historical Review Volume 1988 ; 1988 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1989 ; 20 ; BMGN - Low Countries Historical Review Volume 1989 ; 1989 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1990 ; 21 ; BMGN - Low Countries Historical Review Volume 1990 ; 1990 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1991 ; 22 ; BMGN - Low Countries Historical Review Volume 1991 ; 1991 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1992 ; 23 ; BMGN - Low Countries Historical Review Volume 1992 ; 1992 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1993 ; 24 ; BMGN - Low Countries Historical Review Volume 1993 ; 1993 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1994 ; 25 ; BMGN - Low Countries Historical Review Volume 1994 ; 1994 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1995 ; 26 ; BMGN - Low Countries Historical Review Volume 1995 ; 1995 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1996 ; 27 ; BMGN - Low Countries Historical Review Volume 1996 ; 1996 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1997 ; 28 ; BMGN - Low Countries Historical Review Volume 1997 ; 1997 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1998 ; 29 ; BMGN - Low Countries Historical Review Volume 1998 ; 1998 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1999 ; 30 ; BMGN - Low Countries Historical Review Volume 1999 ; 1999 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 2000 ; 31 ; BMGN - Low Countries Historical Review Volume 2000 ; 2000 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 2001 ; 32 ; BMGN - Low Countries Historical Review Volume 2001 ; 2001 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 2002 ; 33 ; BMGN - Low Countries Historical Review Volume 2002 ; 2002 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 2003 ; 34 ; BMGN - Low Countries Historical Review Volume 2003 ; 2003 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 2004 ; 35 ; BMGN - Low Countries Historical Review Volume 2004 ; 2004 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 2005 ; 36 ; BMGN - Low Countries Historical Review Volume 2005 ; 2005 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 2006 ; 37 ; BMGN - Low Countries Historical Review Volume 2006 ; 2006 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 2007 ; 38 ; BMGN - Low Countries Historical Review Volume 2007 ; 2007 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 2008 ; 39 ; BMGN - Low Countries Historical Review Volume 2008 ; 2008 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 2009 ; 40 ; BMGN - Low Countries Historical Review Volume 2009 ; 2009 ; https://www.bmgn-lchr.nl/ ; >
+      au < frozen ; exists ; 2010 ; 41 ; BMGN - Low Countries Historical Review Volume 2010 ; 2010 ; http://www.bmgn-lchr.nl/ ; >
+      au < frozen ; exists ; 2011 ; 42 ; BMGN - Low Countries Historical Review Volume 2011 ; 2011 ; http://www.bmgn-lchr.nl/ ; >
+      au < frozen ; exists ; 2012 ; 43 ; BMGN - Low Countries Historical Review Volume 2012 ; 2012 ; http://www.bmgn-lchr.nl/ ; >
+      au < frozen ; exists ; 2013 ; 44 ; BMGN - Low Countries Historical Review Volume 2013 ; 2013 ; http://www.bmgn-lchr.nl/ ; >
+      au < frozen ; exists ; 2014 ; 45 ; BMGN - Low Countries Historical Review Volume 2014 ; 2014 ; http://www.bmgn-lchr.nl/ ; >
+      au < frozen ; exists ; 2015 ; 46 ; BMGN - Low Countries Historical Review Volume 2015 ; 2015 ; http://www.bmgn-lchr.nl/ ; >
+      au < deepCrawl ; exists ; 2016 ; 47 ; BMGN - Low Countries Historical Review Volume 2016 ; 2016 ; http://www.bmgn-lchr.nl/ ; >
+      au < crawling ; exists ; 2017 ; 48 ; BMGN - Low Countries Historical Review Volume 2017 ; 2017 ; http://www.bmgn-lchr.nl/ ; >
 
   }
 
@@ -1331,14 +1331,14 @@
       >
 
       comment[publisher] = Utrecht University Library
-      param[base_url] = https://www.de-zeventiende-eeuw.nl/
+#      param[base_url] = https://www.de-zeventiende-eeuw.nl/
 
-      au < frozen ; exists ; 2012 ; 28 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2012 ; 2012 ; >
-      au < frozen ; exists ; 2013 ; 29 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2013 ; 2013 ; >
-      au < frozen ; exists ; 2014 ; 30 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2014 ; 2014 ; >
-      au < frozen ; exists ; 2015 ; 31 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2015 ; 2015 ; >
-      au < notReady ; exists ; 2016 ; 32 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 33 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2017 ; 2017 ; >
+      au < frozen ; exists ; 2012 ; 28 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2012 ; 2012 ; https://www.de-zeventiende-eeuw.nl/ ; >
+      au < frozen ; exists ; 2013 ; 29 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2013 ; 2013 ; https://www.de-zeventiende-eeuw.nl/ ; >
+      au < frozen ; exists ; 2014 ; 30 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2014 ; 2014 ; https://www.de-zeventiende-eeuw.nl/ ; >
+      au < frozen ; exists ; 2015 ; 31 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2015 ; 2015 ; https://www.de-zeventiende-eeuw.nl/ ; >
+      au < notReady ; exists ; 2016 ; 32 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2016 ; 2016 ; https://www.de-zeventiende-eeuw.nl/ ; >
+      au < crawling ; exists ; 2017 ; 33 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2017 ; 2017 ; https://www.de-zeventiende-eeuw.nl/ ; >
 
   }
 
@@ -1350,23 +1350,23 @@
       >
 
       comment[publisher] = Utrecht University Library
-      param[base_url] = http://www.erlacs.org/
+#      param[base_url] = http://www.erlacs.org/
 
-      au < manifest ; exists ; 2003 ; 1 ; ERLACS Volume 2003 ; 2003 ; >
-      au < manifest ; exists ; 2004 ; 2 ; ERLACS Volume 2004 ; 2004 ; >
-      au < manifest ; exists ; 2005 ; 3 ; ERLACS Volume 2005 ; 2005 ; >
-      au < manifest ; exists ; 2006 ; 4 ; ERLACS Volume 2006 ; 2006 ; >
-      au < manifest ; exists ; 2007 ; 5 ; ERLACS Volume 2007 ; 2007 ; >
-      au < manifest ; exists ; 2008 ; 6 ; ERLACS Volume 2008 ; 2008 ; >
-      au < manifest ; exists ; 2009 ; 7 ; ERLACS Volume 2009 ; 2009 ; >
-      au < frozen ; exists ; 2010 ; 8 ; ERLACS Volume 2010 ; 2010 ; >
-      au < frozen ; exists ; 2011 ; 9 ; ERLACS Volume 2011 ; 2011 ; >
-      au < frozen ; exists ; 2012 ; 10 ; ERLACS Volume 2012 ; 2012 ; >
-      au < frozen ; exists ; 2013 ; 11 ; ERLACS Volume 2013 ; 2013 ; >
-      au < frozen ; exists ; 2014 ; 12 ; ERLACS Volume 2014 ; 2014 ; >
-      au < frozen ; exists ; 2015 ; 13 ; ERLACS Volume 2015 ; 2015 ; >
-      au < deepCrawl ; exists ; 2016 ; 14 ; ERLACS Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 15 ; ERLACS Volume 2017 ; 2017 ; >
+      au < manifest ; exists ; 2003 ; 1 ; ERLACS Volume 2003 ; 2003 ; https://www.erlacs.org/ ; >
+      au < manifest ; exists ; 2004 ; 2 ; ERLACS Volume 2004 ; 2004 ; https://www.erlacs.org/ ; >
+      au < manifest ; exists ; 2005 ; 3 ; ERLACS Volume 2005 ; 2005 ; https://www.erlacs.org/ ; >
+      au < manifest ; exists ; 2006 ; 4 ; ERLACS Volume 2006 ; 2006 ; https://www.erlacs.org/ ; >
+      au < manifest ; exists ; 2007 ; 5 ; ERLACS Volume 2007 ; 2007 ; https://www.erlacs.org/ ; >
+      au < manifest ; exists ; 2008 ; 6 ; ERLACS Volume 2008 ; 2008 ; https://www.erlacs.org/ ; >
+      au < manifest ; exists ; 2009 ; 7 ; ERLACS Volume 2009 ; 2009 ; https://www.erlacs.org/ ; >
+      au < frozen ; exists ; 2010 ; 8 ; ERLACS Volume 2010 ; 2010 ; http://www.erlacs.org/ ; >
+      au < frozen ; exists ; 2011 ; 9 ; ERLACS Volume 2011 ; 2011 ; http://www.erlacs.org/ ; >
+      au < frozen ; exists ; 2012 ; 10 ; ERLACS Volume 2012 ; 2012 ; http://www.erlacs.org/ ; >
+      au < frozen ; exists ; 2013 ; 11 ; ERLACS Volume 2013 ; 2013 ; http://www.erlacs.org/ ; >
+      au < frozen ; exists ; 2014 ; 12 ; ERLACS Volume 2014 ; 2014 ; http://www.erlacs.org/ ; >
+      au < frozen ; exists ; 2015 ; 13 ; ERLACS Volume 2015 ; 2015 ; http://www.erlacs.org/ ; >
+      au < deepCrawl ; exists ; 2016 ; 14 ; ERLACS Volume 2016 ; 2016 ; http://www.erlacs.org/ ; >
+      au < crawling ; exists ; 2017 ; 15 ; ERLACS Volume 2017 ; 2017 ; http://www.erlacs.org/ ; >
 
   }
 
@@ -1378,15 +1378,15 @@
       >
 
       comment[publisher] = Utrecht University Library
-      param[base_url] = http://www.rivista-incontri.nl/
+#      param[base_url] = http://www.rivista-incontri.nl/
 
-      au < frozen ; exists ; 2011 ; 1 ; Incontri. Rivista europea di studi italiani Volume 2011 ; 2011 ; >
-      au < frozen ; exists ; 2012 ; 2 ; Incontri. Rivista europea di studi italiani Volume 2012 ; 2012 ; >
-      au < frozen ; exists ; 2013 ; 3 ; Incontri. Rivista europea di studi italiani Volume 2013 ; 2013 ; >
-      au < frozen ; exists ; 2014 ; 4 ; Incontri. Rivista europea di studi italiani Volume 2014 ; 2014 ; >
-      au < frozen ; exists ; 2015 ; 5 ; Incontri. Rivista europea di studi italiani Volume 2015 ; 2015 ; >
-      au < deepCrawl ; exists ; 2016 ; 6 ; Incontri. Rivista europea di studi italiani Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 7 ; Incontri. Rivista europea di studi italiani Volume 2017 ; 2017 ; >
+      au < frozen ; exists ; 2011 ; 1 ; Incontri. Rivista europea di studi italiani Volume 2011 ; 2011 ; http://www.rivista-incontri.nl/ ; >
+      au < frozen ; exists ; 2012 ; 2 ; Incontri. Rivista europea di studi italiani Volume 2012 ; 2012 ; http://www.rivista-incontri.nl/ ; >
+      au < frozen ; exists ; 2013 ; 3 ; Incontri. Rivista europea di studi italiani Volume 2013 ; 2013 ; http://www.rivista-incontri.nl/ ; >
+      au < frozen ; exists ; 2014 ; 4 ; Incontri. Rivista europea di studi italiani Volume 2014 ; 2014 ; http://www.rivista-incontri.nl/ ; >
+      au < frozen ; exists ; 2015 ; 5 ; Incontri. Rivista europea di studi italiani Volume 2015 ; 2015 ; http://www.rivista-incontri.nl/ ; >
+      au < deepCrawl ; exists ; 2016 ; 6 ; Incontri. Rivista europea di studi italiani Volume 2016 ; 2016 ; http://www.rivista-incontri.nl/ ; >
+      au < crawling ; exists ; 2017 ; 7 ; Incontri. Rivista europea di studi italiani Volume 2017 ; 2017 ; http://www.rivista-incontri.nl/ ; >
 
   }
 
@@ -1398,18 +1398,18 @@
       >
 
       comment[publisher] = Utrecht University Library
-      param[base_url] = http://www.iacajournal.org/
+#      param[base_url] = http://www.iacajournal.org/
 
-      au < manifest ; exists ; 2008 ; 1 ; International Journal for Court Administration Volume 2008 ; 2008 ; >
-      au < manifest ; exists ; 2009 ; 2 ; International Journal for Court Administration Volume 2009 ; 2009 ; >
-      au < frozen ; exists ; 2010 ; 3 ; International Journal for Court Administration Volume 2010 ; 2010 ; >
-      au < frozen ; exists ; 2011 ; 4 ; International Journal for Court Administration Volume 2011 ; 2011 ; >
-      au < frozen ; exists ; 2012 ; 5 ; International Journal for Court Administration Volume 2012 ; 2012 ; >
-      au < frozen ; exists ; 2013 ; 6 ; International Journal for Court Administration Volume 2013 ; 2013 ; >
-      au < frozen ; exists ; 2014 ; 7 ; International Journal for Court Administration Volume 2014 ; 2014 ; >
-      au < frozen ; exists ; 2015 ; 8 ; International Journal for Court Administration Volume 2015 ; 2015 ; >
-      au < deepCrawl ; exists ; 2016 ; 9 ; International Journal for Court Administration Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 10 ; International Journal for Court Administration Volume 2017 ; 2017 ; >
+      au < manifest ; exists ; 2008 ; 1 ; International Journal for Court Administration Volume 2008 ; 2008 ; https://www.iacajournal.org/ ; >
+      au < manifest ; exists ; 2009 ; 2 ; International Journal for Court Administration Volume 2009 ; 2009 ; https://www.iacajournal.org/ ; >
+      au < frozen ; exists ; 2010 ; 3 ; International Journal for Court Administration Volume 2010 ; 2010 ; http://www.iacajournal.org/ ; >
+      au < frozen ; exists ; 2011 ; 4 ; International Journal for Court Administration Volume 2011 ; 2011 ; http://www.iacajournal.org/ ; >
+      au < frozen ; exists ; 2012 ; 5 ; International Journal for Court Administration Volume 2012 ; 2012 ; http://www.iacajournal.org/ ; >
+      au < frozen ; exists ; 2013 ; 6 ; International Journal for Court Administration Volume 2013 ; 2013 ; http://www.iacajournal.org/ ; >
+      au < frozen ; exists ; 2014 ; 7 ; International Journal for Court Administration Volume 2014 ; 2014 ; http://www.iacajournal.org/ ; >
+      au < frozen ; exists ; 2015 ; 8 ; International Journal for Court Administration Volume 2015 ; 2015 ; http://www.iacajournal.org/ ; >
+      au < deepCrawl ; exists ; 2016 ; 9 ; International Journal for Court Administration Volume 2016 ; 2016 ; http://www.iacajournal.org/ ; >
+      au < crawling ; exists ; 2017 ; 10 ; International Journal for Court Administration Volume 2017 ; 2017 ; http://www.iacajournal.org/ ; >
 
   }
 
@@ -1421,13 +1421,13 @@
       >
 
       comment[publisher] = Utrecht University Library
-      param[base_url] = https://www.history-culture-modernity.org/
+#      param[base_url] = https://www.history-culture-modernity.org/
 
-      au < frozen ; exists ; 2013 ; 1 ; International Journal for History, Culture and Modernity Volume 2013 ; 2013 ; >
-      au < frozen ; exists ; 2014 ; 2 ; International Journal for History, Culture and Modernity Volume 2014 ; 2014 ; >
-      au < frozen ; exists ; 2015 ; 3 ; International Journal for History, Culture and Modernity Volume 2015 ; 2015 ; >
-      au < frozen ; exists ; 2016 ; 4 ; International Journal for History, Culture and Modernity Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 5 ; International Journal for History, Culture and Modernity Volume 2017 ; 2017 ; >
+      au < frozen ; exists ; 2013 ; 1 ; International Journal for History, Culture and Modernity Volume 2013 ; 2013 ; https://www.history-culture-modernity.org/ ; >
+      au < frozen ; exists ; 2014 ; 2 ; International Journal for History, Culture and Modernity Volume 2014 ; 2014 ; https://www.history-culture-modernity.org/ ; >
+      au < frozen ; exists ; 2015 ; 3 ; International Journal for History, Culture and Modernity Volume 2015 ; 2015 ; https://www.history-culture-modernity.org/ ; >
+      au < frozen ; exists ; 2016 ; 4 ; International Journal for History, Culture and Modernity Volume 2016 ; 2016 ; https://www.history-culture-modernity.org/ ; >
+      au < crawling ; exists ; 2017 ; 5 ; International Journal for History, Culture and Modernity Volume 2017 ; 2017 ; https://www.history-culture-modernity.org/ ; >
 
   }
 
@@ -1439,19 +1439,19 @@
       >
 
       comment[publisher] = Utrecht University Library
-      param[base_url] = https://www.thecommonsjournal.org/
+#      param[base_url] = https://www.thecommonsjournal.org/
 
-      au < manifest ; exists ; 2007 ; 1 ; International Journal of the Commons Volume 2007 ; 2007 ; >
-      au < manifest ; exists ; 2008 ; 2 ; International Journal of the Commons Volume 2008 ; 2008 ; >
-      au < manifest ; exists ; 2009 ; 3 ; International Journal of the Commons Volume 2009 ; 2009 ; >
-      au < frozen ; exists ; 2010 ; 4 ; International Journal of the Commons Volume 2010 ; 2010 ; >
-      au < frozen ; exists ; 2011 ; 5 ; International Journal of the Commons Volume 2011 ; 2011 ; >
-      au < frozen ; exists ; 2012 ; 6 ; International Journal of the Commons Volume 2012 ; 2012 ; >
-      au < frozen ; exists ; 2013 ; 7 ; International Journal of the Commons Volume 2013 ; 2013 ; >
-      au < frozen ; exists ; 2014 ; 8 ; International Journal of the Commons Volume 2014 ; 2014 ; >
-      au < frozen ; exists ; 2015 ; 9 ; International Journal of the Commons Volume 2015 ; 2015 ; >
-      au < frozen ; exists ; 2016 ; 10 ; International Journal of the Commons Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 11 ; International Journal of the Commons Volume 2017 ; 2017 ; >
+      au < manifest ; exists ; 2007 ; 1 ; International Journal of the Commons Volume 2007 ; 2007 ; https://www.thecommonsjournal.org/ ; >
+      au < manifest ; exists ; 2008 ; 2 ; International Journal of the Commons Volume 2008 ; 2008 ; https://www.thecommonsjournal.org/ ; >
+      au < manifest ; exists ; 2009 ; 3 ; International Journal of the Commons Volume 2009 ; 2009 ; https://www.thecommonsjournal.org/ ; >
+      au < frozen ; exists ; 2010 ; 4 ; International Journal of the Commons Volume 2010 ; 2010 ; https://www.thecommonsjournal.org/ ; >
+      au < frozen ; exists ; 2011 ; 5 ; International Journal of the Commons Volume 2011 ; 2011 ; https://www.thecommonsjournal.org/ ; >
+      au < frozen ; exists ; 2012 ; 6 ; International Journal of the Commons Volume 2012 ; 2012 ; https://www.thecommonsjournal.org/ ; >
+      au < frozen ; exists ; 2013 ; 7 ; International Journal of the Commons Volume 2013 ; 2013 ; https://www.thecommonsjournal.org/ ; >
+      au < frozen ; exists ; 2014 ; 8 ; International Journal of the Commons Volume 2014 ; 2014 ; https://www.thecommonsjournal.org/ ; >
+      au < frozen ; exists ; 2015 ; 9 ; International Journal of the Commons Volume 2015 ; 2015 ; https://www.thecommonsjournal.org/ ; >
+      au < frozen ; exists ; 2016 ; 10 ; International Journal of the Commons Volume 2016 ; 2016 ; https://www.thecommonsjournal.org/ ; >
+      au < crawling ; exists ; 2017 ; 11 ; International Journal of the Commons Volume 2017 ; 2017 ; https://www.thecommonsjournal.org/ ; >
 
   }
 
@@ -1463,21 +1463,21 @@
       >
 
       comment[publisher] = Utrecht University Library
-      param[base_url] = https://www.journalsi.org/
+#      param[base_url] = https://www.journalsi.org/
 
-      au < manifest ; exists ; 2005 ; 1 ; Journal of Social Intervention Volume 2005 ; 2005 ; >
-      au < manifest ; exists ; 2006 ; 2 ; Journal of Social Intervention Volume 2006 ; 2006 ; >
-      au < manifest ; exists ; 2007 ; 3 ; Journal of Social Intervention Volume 2007 ; 2007 ; >
-      au < manifest ; exists ; 2008 ; 4 ; Journal of Social Intervention Volume 2008 ; 2008 ; >
-      au < manifest ; exists ; 2009 ; 5 ; Journal of Social Intervention Volume 2009 ; 2009 ; >
-      au < frozen ; exists ; 2010 ; 6 ; Journal of Social Intervention Volume 2010 ; 2010 ; >
-      au < frozen ; exists ; 2011 ; 7 ; Journal of Social Intervention Volume 2011 ; 2011 ; >
-      au < frozen ; exists ; 2012 ; 8 ; Journal of Social Intervention Volume 2012 ; 2012 ; >
-      au < frozen ; exists ; 2013 ; 9 ; Journal of Social Intervention Volume 2013 ; 2013 ; >
-      au < frozen ; exists ; 2014 ; 10 ; Journal of Social Intervention Volume 2014 ; 2014 ; >
-      au < frozen ; exists ; 2015 ; 11 ; Journal of Social Intervention Volume 2015 ; 2015 ; >
-      au < frozen ; exists ; 2016 ; 12 ; Journal of Social Intervention Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 13 ; Journal of Social Intervention Volume 2017 ; 2017 ; >
+      au < manifest ; exists ; 2005 ; 1 ; Journal of Social Intervention Volume 2005 ; 2005 ; https://www.journalsi.org/ ; >
+      au < manifest ; exists ; 2006 ; 2 ; Journal of Social Intervention Volume 2006 ; 2006 ; https://www.journalsi.org/ ; >
+      au < manifest ; exists ; 2007 ; 3 ; Journal of Social Intervention Volume 2007 ; 2007 ; https://www.journalsi.org/ ; >
+      au < manifest ; exists ; 2008 ; 4 ; Journal of Social Intervention Volume 2008 ; 2008 ; https://www.journalsi.org/ ; >
+      au < manifest ; exists ; 2009 ; 5 ; Journal of Social Intervention Volume 2009 ; 2009 ; https://www.journalsi.org/ ; >
+      au < frozen ; exists ; 2010 ; 6 ; Journal of Social Intervention Volume 2010 ; 2010 ; https://www.journalsi.org/ ; >
+      au < frozen ; exists ; 2011 ; 7 ; Journal of Social Intervention Volume 2011 ; 2011 ; https://www.journalsi.org/ ; >
+      au < frozen ; exists ; 2012 ; 8 ; Journal of Social Intervention Volume 2012 ; 2012 ; https://www.journalsi.org/ ; >
+      au < frozen ; exists ; 2013 ; 9 ; Journal of Social Intervention Volume 2013 ; 2013 ; https://www.journalsi.org/ ; >
+      au < frozen ; exists ; 2014 ; 10 ; Journal of Social Intervention Volume 2014 ; 2014 ; https://www.journalsi.org/ ; >
+      au < frozen ; exists ; 2015 ; 11 ; Journal of Social Intervention Volume 2015 ; 2015 ; https://www.journalsi.org/ ; >
+      au < frozen ; exists ; 2016 ; 12 ; Journal of Social Intervention Volume 2016 ; 2016 ; https://www.journalsi.org/ ; >
+      au < crawling ; exists ; 2017 ; 13 ; Journal of Social Intervention Volume 2017 ; 2017 ; https://www.journalsi.org/ ; >
 
   }
 
@@ -1489,27 +1489,27 @@
       >
 
       comment[publisher] = Utrecht University Library
-      param[base_url] = https://www.liberquarterly.eu/
+#      param[base_url] = https://www.liberquarterly.eu/
 
-      au < manifest ; exists ; 1999 ; 1 ; LIBER Quarterly Volume 1999 ; 1999 ; >
-      au < manifest ; exists ; 2000 ; 2 ; LIBER Quarterly Volume 2000 ; 2000 ; >
-      au < manifest ; exists ; 2001 ; 3 ; LIBER Quarterly Volume 2001 ; 2001 ; >
-      au < manifest ; exists ; 2002 ; 4 ; LIBER Quarterly Volume 2002 ; 2002 ; >
-      au < manifest ; exists ; 2003 ; 5 ; LIBER Quarterly Volume 2003 ; 2003 ; >
-      au < manifest ; exists ; 2004 ; 6 ; LIBER Quarterly Volume 2004 ; 2004 ; >
-      au < manifest ; exists ; 2005 ; 7 ; LIBER Quarterly Volume 2005 ; 2005 ; >
-      au < manifest ; exists ; 2006 ; 8 ; LIBER Quarterly Volume 2006 ; 2006 ; >
-      au < manifest ; exists ; 2007 ; 9 ; LIBER Quarterly Volume 2007 ; 2007 ; >
-      au < manifest ; exists ; 2008 ; 10 ; LIBER Quarterly Volume 2008 ; 2008 ; >
-      au < manifest ; exists ; 2009 ; 11 ; LIBER Quarterly Volume 2009 ; 2009 ; >
-      au < frozen ; exists ; 2010 ; 12 ; LIBER Quarterly Volume 2010 ; 2010 ; >
-      au < frozen ; exists ; 2011 ; 13 ; LIBER Quarterly Volume 2011 ; 2011 ; >
-      au < frozen ; exists ; 2012 ; 14 ; LIBER Quarterly Volume 2012 ; 2012 ; >
-      au < frozen ; exists ; 2013 ; 15 ; LIBER Quarterly Volume 2013 ; 2013 ; >
-      au < frozen ; exists ; 2014 ; 16 ; LIBER Quarterly Volume 2014 ; 2014 ; >
-      au < frozen ; exists ; 2015 ; 17 ; LIBER Quarterly Volume 2015 ; 2015 ; >
-      au < frozen ; exists ; 2016 ; 18 ; LIBER Quarterly Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 19 ; LIBER Quarterly Volume 2017 ; 2017 ; >
+      au < manifest ; exists ; 1999 ; 1 ; LIBER Quarterly Volume 1999 ; 1999 ; https://www.liberquarterly.eu/ ; >
+      au < manifest ; exists ; 2000 ; 2 ; LIBER Quarterly Volume 2000 ; 2000 ; https://www.liberquarterly.eu/ ; >
+      au < manifest ; exists ; 2001 ; 3 ; LIBER Quarterly Volume 2001 ; 2001 ; https://www.liberquarterly.eu/ ; >
+      au < manifest ; exists ; 2002 ; 4 ; LIBER Quarterly Volume 2002 ; 2002 ; https://www.liberquarterly.eu/ ; >
+      au < manifest ; exists ; 2003 ; 5 ; LIBER Quarterly Volume 2003 ; 2003 ; https://www.liberquarterly.eu/ ; >
+      au < manifest ; exists ; 2004 ; 6 ; LIBER Quarterly Volume 2004 ; 2004 ; https://www.liberquarterly.eu/ ; >
+      au < manifest ; exists ; 2005 ; 7 ; LIBER Quarterly Volume 2005 ; 2005 ; https://www.liberquarterly.eu/ ; >
+      au < manifest ; exists ; 2006 ; 8 ; LIBER Quarterly Volume 2006 ; 2006 ; https://www.liberquarterly.eu/ ; >
+      au < manifest ; exists ; 2007 ; 9 ; LIBER Quarterly Volume 2007 ; 2007 ; https://www.liberquarterly.eu/ ; >
+      au < manifest ; exists ; 2008 ; 10 ; LIBER Quarterly Volume 2008 ; 2008 ; https://www.liberquarterly.eu/ ; >
+      au < manifest ; exists ; 2009 ; 11 ; LIBER Quarterly Volume 2009 ; 2009 ; https://www.liberquarterly.eu/ ; >
+      au < frozen ; exists ; 2010 ; 12 ; LIBER Quarterly Volume 2010 ; 2010 ; https://www.liberquarterly.eu/ ; >
+      au < frozen ; exists ; 2011 ; 13 ; LIBER Quarterly Volume 2011 ; 2011 ; https://www.liberquarterly.eu/ ; >
+      au < frozen ; exists ; 2012 ; 14 ; LIBER Quarterly Volume 2012 ; 2012 ; https://www.liberquarterly.eu/ ; >
+      au < frozen ; exists ; 2013 ; 15 ; LIBER Quarterly Volume 2013 ; 2013 ; https://www.liberquarterly.eu/ ; >
+      au < frozen ; exists ; 2014 ; 16 ; LIBER Quarterly Volume 2014 ; 2014 ; https://www.liberquarterly.eu/ ; >
+      au < frozen ; exists ; 2015 ; 17 ; LIBER Quarterly Volume 2015 ; 2015 ; https://www.liberquarterly.eu/ ; >
+      au < frozen ; exists ; 2016 ; 18 ; LIBER Quarterly Volume 2016 ; 2016 ; https://www.liberquarterly.eu/ ; >
+      au < crawling ; exists ; 2017 ; 19 ; LIBER Quarterly Volume 2017 ; 2017 ; https://www.liberquarterly.eu/ ; >
 
   }
 
@@ -1521,19 +1521,19 @@
       >
 
       comment[publisher] = Utrecht University Library
-      param[base_url] = https://www.revue-relief.org/
+#      param[base_url] = https://www.revue-relief.org/
 
-      au < manifest ; exists ; 2007 ; 1 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2007 ; 2007 ; >
-      au < manifest ; exists ; 2008 ; 2 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2008 ; 2008 ; >
-      au < manifest ; exists ; 2009 ; 3 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2009 ; 2009 ; >
-      au < frozen ; exists ; 2010 ; 4 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2010 ; 2010 ; >
-      au < frozen ; exists ; 2011 ; 5 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2011 ; 2011 ; >
-      au < frozen ; exists ; 2012 ; 6 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2012 ; 2012 ; >
-      au < frozen ; exists ; 2013 ; 7 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2013 ; 2013 ; >
-      au < frozen ; exists ; 2014 ; 8 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2014 ; 2014 ; >
-      au < frozen ; exists ; 2015 ; 9 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2015 ; 2015 ; >
-      au < frozen ; exists ; 2016 ; 10 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 11 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2017 ; 2017 ; >
+      au < manifest ; exists ; 2007 ; 1 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2007 ; 2007 ; https://www.revue-relief.org/ ; >
+      au < manifest ; exists ; 2008 ; 2 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2008 ; 2008 ; https://www.revue-relief.org/ ; >
+      au < manifest ; exists ; 2009 ; 3 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2009 ; 2009 ; https://www.revue-relief.org/ ; >
+      au < frozen ; exists ; 2010 ; 4 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2010 ; 2010 ; https://www.revue-relief.org/ ; >
+      au < frozen ; exists ; 2011 ; 5 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2011 ; 2011 ; https://www.revue-relief.org/ ; >
+      au < frozen ; exists ; 2012 ; 6 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2012 ; 2012 ; https://www.revue-relief.org/ ; >
+      au < frozen ; exists ; 2013 ; 7 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2013 ; 2013 ; https://www.revue-relief.org/ ; >
+      au < frozen ; exists ; 2014 ; 8 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2014 ; 2014 ; https://www.revue-relief.org/ ; >
+      au < frozen ; exists ; 2015 ; 9 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2015 ; 2015 ; https://www.revue-relief.org/ ; >
+      au < frozen ; exists ; 2016 ; 10 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2016 ; 2016 ; https://www.revue-relief.org/ ; >
+      au < crawling ; exists ; 2017 ; 11 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2017 ; 2017 ; https://www.revue-relief.org/ ; >
 
   }
 
@@ -1545,15 +1545,15 @@
       >
 
       comment[publisher] = Utrecht University Library
-      param[base_url] = https://www.religionandgender.org/
+#      param[base_url] = https://www.religionandgender.org/
 
-      au < frozen ; exists ; 2011 ; 1 ; Religion and Gender Volume 2011 ; 2011 ; >
-      au < frozen ; exists ; 2012 ; 2 ; Religion and Gender Volume 2012 ; 2012 ; >
-      au < frozen ; exists ; 2013 ; 3 ; Religion and Gender Volume 2013 ; 2013 ; >
-      au < frozen ; exists ; 2014 ; 4 ; Religion and Gender Volume 2014 ; 2014 ; >
-      au < frozen ; exists ; 2015 ; 5 ; Religion and Gender Volume 2015 ; 2015 ; >
-      au < frozen ; exists ; 2016 ; 6 ; Religion and Gender Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 7 ; Religion and Gender Volume 2017 ; 2017 ; >
+      au < frozen ; exists ; 2011 ; 1 ; Religion and Gender Volume 2011 ; 2011 ; https://www.religionandgender.org/ ; >
+      au < frozen ; exists ; 2012 ; 2 ; Religion and Gender Volume 2012 ; 2012 ; https://www.religionandgender.org/ ; >
+      au < frozen ; exists ; 2013 ; 3 ; Religion and Gender Volume 2013 ; 2013 ; https://www.religionandgender.org/ ; >
+      au < frozen ; exists ; 2014 ; 4 ; Religion and Gender Volume 2014 ; 2014 ; https://www.religionandgender.org/ ; >
+      au < frozen ; exists ; 2015 ; 5 ; Religion and Gender Volume 2015 ; 2015 ; https://www.religionandgender.org/ ; >
+      au < frozen ; exists ; 2016 ; 6 ; Religion and Gender Volume 2016 ; 2016 ; https://www.religionandgender.org/ ; >
+      au < crawling ; exists ; 2017 ; 7 ; Religion and Gender Volume 2017 ; 2017 ; https://www.religionandgender.org/ ; >
 
   }
 
@@ -1565,18 +1565,18 @@
       >
 
       comment[publisher] = Utrecht University Library
-      param[base_url] = http://www.gewina-studium.nl/
+#      param[base_url] = http://www.gewina-studium.nl/
 
-      au < manifest ; exists ; 2008 ; 1 ; Studium Volume 2008 ; 2008 ; >
-      au < manifest ; exists ; 2009 ; 2 ; Studium Volume 2009 ; 2009 ; >
-      au < frozen ; exists ; 2010 ; 3 ; Studium Volume 2010 ; 2010 ; >
-      au < frozen ; exists ; 2011 ; 4 ; Studium Volume 2011 ; 2011 ; >
-      au < frozen ; exists ; 2012 ; 5 ; Studium Volume 2012 ; 2012 ; >
-      au < frozen ; exists ; 2013 ; 6 ; Studium Volume 2013 ; 2013 ; >
-      au < frozen ; exists ; 2014 ; 7 ; Studium Volume 2014 ; 2014 ; >
-      au < frozen ; exists ; 2015 ; 8 ; Studium Volume 2015 ; 2015 ; >
-      au < deepCrawl ; exists ; 2016 ; 9 ; Studium Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 10 ; Studium Volume 2017 ; 2017 ; >
+      au < manifest ; exists ; 2008 ; 1 ; Studium Volume 2008 ; 2008 ; https://www.gewina-studium.nl/ ; >
+      au < manifest ; exists ; 2009 ; 2 ; Studium Volume 2009 ; 2009 ; https://www.gewina-studium.nl/ ; >
+      au < frozen ; exists ; 2010 ; 3 ; Studium Volume 2010 ; 2010 ; http://www.gewina-studium.nl/ ; >
+      au < frozen ; exists ; 2011 ; 4 ; Studium Volume 2011 ; 2011 ; http://www.gewina-studium.nl/ ; >
+      au < frozen ; exists ; 2012 ; 5 ; Studium Volume 2012 ; 2012 ; http://www.gewina-studium.nl/ ; >
+      au < frozen ; exists ; 2013 ; 6 ; Studium Volume 2013 ; 2013 ; http://www.gewina-studium.nl/ ; >
+      au < frozen ; exists ; 2014 ; 7 ; Studium Volume 2014 ; 2014 ; http://www.gewina-studium.nl/ ; >
+      au < frozen ; exists ; 2015 ; 8 ; Studium Volume 2015 ; 2015 ; http://www.gewina-studium.nl/ ; >
+      au < deepCrawl ; exists ; 2016 ; 9 ; Studium Volume 2016 ; 2016 ; http://www.gewina-studium.nl/ ; >
+      au < crawling ; exists ; 2017 ; 10 ; Studium Volume 2017 ; 2017 ; http://www.gewina-studium.nl/ ; >
 
   }
 
@@ -1588,27 +1588,27 @@
       >
 
       comment[publisher] = Utrecht University Library
-      param[base_url] = https://www.tijdschriftstudies.nl/
+#      param[base_url] = https://www.tijdschriftstudies.nl/
 
-      au < finished ; finished ; 1997 ; 1 ; Tijdschrift voor Tijdschriftstudies Volume 1997 ; 1997 ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 1998 ; 2 ; Tijdschrift voor Tijdschriftstudies Volume 1998 ; 1998 ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 1999 ; 3 ; Tijdschrift voor Tijdschriftstudies Volume 1999 ; 1999 ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2000 ; 4 ; Tijdschrift voor Tijdschriftstudies Volume 2000 ; 2000 ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2001 ; 5 ; Tijdschrift voor Tijdschriftstudies Volume 2001 ; 2001 ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2002 ; 6 ; Tijdschrift voor Tijdschriftstudies Volume 2002 ; 2002 ; reingest5.clockss.org:8082 > #2 extra css files
-      au < finished ; finished ; 2003 ; 7 ; Tijdschrift voor Tijdschriftstudies Volume 2003 ; 2003 ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2004 ; 8 ; Tijdschrift voor Tijdschriftstudies Volume 2004 ; 2004 ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2005 ; 9 ; Tijdschrift voor Tijdschriftstudies Volume 2005 ; 2005 ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2006 ; 10 ; Tijdschrift voor Tijdschriftstudies Volume 2006 ; 2006 ; reingest1.clockss.org:8082 > #2 extra css files
-      au < finished ; finished ; 2007 ; 11 ; Tijdschrift voor Tijdschriftstudies Volume 2007 ; 2007 ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2008 ; 12 ; Tijdschrift voor Tijdschriftstudies Volume 2008 ; 2008 ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2009 ; 13 ; Tijdschrift voor Tijdschriftstudies Volume 2009 ; 2009 ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2010 ; 14 ; Tijdschrift voor Tijdschriftstudies Volume 2010 ; 2010 ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2011 ; 15 ; Tijdschrift voor Tijdschriftstudies Volume 2011 ; 2011 ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2012 ; 16 ; Tijdschrift voor Tijdschriftstudies Volume 2012 ; 2012 ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2013 ; 17 ; Tijdschrift voor Tijdschriftstudies Volume 2013 ; 2013 ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2014 ; 18 ; Tijdschrift voor Tijdschriftstudies Volume 2014 ; 2014 ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2015 ; 19 ; Tijdschrift voor Tijdschriftstudies Volume 2015 ; 2015 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 1997 ; 1 ; Tijdschrift voor Tijdschriftstudies Volume 1997 ; 1997 ; https://www.tijdschriftstudies.nl/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 1998 ; 2 ; Tijdschrift voor Tijdschriftstudies Volume 1998 ; 1998 ; https://www.tijdschriftstudies.nl/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1999 ; 3 ; Tijdschrift voor Tijdschriftstudies Volume 1999 ; 1999 ; https://www.tijdschriftstudies.nl/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2000 ; 4 ; Tijdschrift voor Tijdschriftstudies Volume 2000 ; 2000 ; https://www.tijdschriftstudies.nl/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2001 ; 5 ; Tijdschrift voor Tijdschriftstudies Volume 2001 ; 2001 ; https://www.tijdschriftstudies.nl/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2002 ; 6 ; Tijdschrift voor Tijdschriftstudies Volume 2002 ; 2002 ; https://www.tijdschriftstudies.nl/ ; reingest5.clockss.org:8082 > #2 extra css files
+      au < finished ; finished ; 2003 ; 7 ; Tijdschrift voor Tijdschriftstudies Volume 2003 ; 2003 ; https://www.tijdschriftstudies.nl/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2004 ; 8 ; Tijdschrift voor Tijdschriftstudies Volume 2004 ; 2004 ; https://www.tijdschriftstudies.nl/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2005 ; 9 ; Tijdschrift voor Tijdschriftstudies Volume 2005 ; 2005 ; https://www.tijdschriftstudies.nl/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2006 ; 10 ; Tijdschrift voor Tijdschriftstudies Volume 2006 ; 2006 ; https://www.tijdschriftstudies.nl/ ; reingest1.clockss.org:8082 > #2 extra css files
+      au < finished ; finished ; 2007 ; 11 ; Tijdschrift voor Tijdschriftstudies Volume 2007 ; 2007 ; https://www.tijdschriftstudies.nl/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2008 ; 12 ; Tijdschrift voor Tijdschriftstudies Volume 2008 ; 2008 ; https://www.tijdschriftstudies.nl/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; 13 ; Tijdschrift voor Tijdschriftstudies Volume 2009 ; 2009 ; https://www.tijdschriftstudies.nl/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; 14 ; Tijdschrift voor Tijdschriftstudies Volume 2010 ; 2010 ; https://www.tijdschriftstudies.nl/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2011 ; 15 ; Tijdschrift voor Tijdschriftstudies Volume 2011 ; 2011 ; https://www.tijdschriftstudies.nl/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2012 ; 16 ; Tijdschrift voor Tijdschriftstudies Volume 2012 ; 2012 ; https://www.tijdschriftstudies.nl/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2013 ; 17 ; Tijdschrift voor Tijdschriftstudies Volume 2013 ; 2013 ; https://www.tijdschriftstudies.nl/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2014 ; 18 ; Tijdschrift voor Tijdschriftstudies Volume 2014 ; 2014 ; https://www.tijdschriftstudies.nl/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; 19 ; Tijdschrift voor Tijdschriftstudies Volume 2015 ; 2015 ; https://www.tijdschriftstudies.nl/ ; reingest1.clockss.org:8082 >
 
   }
 
@@ -1620,21 +1620,21 @@
       >
 
       comment[publisher] = Utrecht University Library
-      param[base_url] = https://www.utrechtlawreview.org/
+#      param[base_url] = https://www.utrechtlawreview.org/
 
-      au < manifest ; exists ; 2005 ; 1 ; Utrecht Law Review Volume 2005 ; 2005 ; >
-      au < manifest ; exists ; 2006 ; 2 ; Utrecht Law Review Volume 2006 ; 2006 ; >
-      au < manifest ; exists ; 2007 ; 3 ; Utrecht Law Review Volume 2007 ; 2007 ; >
-      au < manifest ; exists ; 2008 ; 4 ; Utrecht Law Review Volume 2008 ; 2008 ; >
-      au < manifest ; exists ; 2009 ; 5 ; Utrecht Law Review Volume 2009 ; 2009 ; >
-      au < frozen ; exists ; 2010 ; 6 ; Utrecht Law Review Volume 2010 ; 2010 ; >
-      au < frozen ; exists ; 2011 ; 7 ; Utrecht Law Review Volume 2011 ; 2011 ; >
-      au < frozen ; exists ; 2012 ; 8 ; Utrecht Law Review Volume 2012 ; 2012 ; >
-      au < frozen ; exists ; 2013 ; 9 ; Utrecht Law Review Volume 2013 ; 2013 ; >
-      au < frozen ; exists ; 2014 ; 10 ; Utrecht Law Review Volume 2014 ; 2014 ; >
-      au < frozen ; exists ; 2015 ; 11 ; Utrecht Law Review Volume 2015 ; 2015 ; >
-      au < frozen ; exists ; 2016 ; 12 ; Utrecht Law Review Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 13 ; Utrecht Law Review Volume 2017 ; 2017 ; >
+      au < manifest ; exists ; 2005 ; 1 ; Utrecht Law Review Volume 2005 ; 2005 ; https://www.utrechtlawreview.org/ ; >
+      au < manifest ; exists ; 2006 ; 2 ; Utrecht Law Review Volume 2006 ; 2006 ; https://www.utrechtlawreview.org/ ; >
+      au < manifest ; exists ; 2007 ; 3 ; Utrecht Law Review Volume 2007 ; 2007 ; https://www.utrechtlawreview.org/ ; >
+      au < manifest ; exists ; 2008 ; 4 ; Utrecht Law Review Volume 2008 ; 2008 ; https://www.utrechtlawreview.org/ ; >
+      au < manifest ; exists ; 2009 ; 5 ; Utrecht Law Review Volume 2009 ; 2009 ; https://www.utrechtlawreview.org/ ; >
+      au < frozen ; exists ; 2010 ; 6 ; Utrecht Law Review Volume 2010 ; 2010 ; https://www.utrechtlawreview.org/ ; >
+      au < frozen ; exists ; 2011 ; 7 ; Utrecht Law Review Volume 2011 ; 2011 ; https://www.utrechtlawreview.org/ ; >
+      au < frozen ; exists ; 2012 ; 8 ; Utrecht Law Review Volume 2012 ; 2012 ; https://www.utrechtlawreview.org/ ; >
+      au < frozen ; exists ; 2013 ; 9 ; Utrecht Law Review Volume 2013 ; 2013 ; https://www.utrechtlawreview.org/ ; >
+      au < frozen ; exists ; 2014 ; 10 ; Utrecht Law Review Volume 2014 ; 2014 ; https://www.utrechtlawreview.org/ ; >
+      au < frozen ; exists ; 2015 ; 11 ; Utrecht Law Review Volume 2015 ; 2015 ; https://www.utrechtlawreview.org/ ; >
+      au < frozen ; exists ; 2016 ; 12 ; Utrecht Law Review Volume 2016 ; 2016 ; https://www.utrechtlawreview.org/ ; >
+      au < crawling ; exists ; 2017 ; 13 ; Utrecht Law Review Volume 2017 ; 2017 ; https://www.utrechtlawreview.org/ ; >
 
   }
 
