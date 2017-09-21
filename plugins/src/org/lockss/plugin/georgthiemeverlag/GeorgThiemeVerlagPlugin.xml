@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>26</string>
+    <string>27</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -111,8 +111,8 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%s(?:[^/]+/)?ejournals/html/10[.][0-9a-z]{4,6}/[.a-z0-9-]+$", base_url</string>
-      <string>"^%s(?:[^/]+/)?ejournals/pdf/10[.][0-9a-z]{4,6}/[.a-z0-9-]+[.]pdf$", base_url</string>
+      <string>"^%s(?:[^/]+/)?ejournals/html/10[.][0-9a-z]{4,6}/[^/?&amp;]+$", base_url</string>
+      <string>"^%s(?:[^/]+/)?ejournals/pdf/10[.][0-9a-z]{4,6}/[^/?&amp;]+[.]pdf$", base_url</string>
     </list>
   </entry>
   <entry>
