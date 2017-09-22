@@ -22,7 +22,7 @@
       param[base_url] = https://www.ejobsat.cz/journal/
       param[journal_id] = ejobsat
 
-      au < crawling ; exists ; 2015 ; European Journal of Business Science and Technology Volume 1 ; 1 ; 2015 ; >
+      au < frozen ; exists ; 2015 ; European Journal of Business Science and Technology Volume 1 ; 1 ; 2015 ; >
       au < frozen ; exists ; 2016 ; European Journal of Business Science and Technology Volume 2 ; 2 ; 2016 ; >
       au < expected ; exists ; 2017 ; European Journal of Business Science and Technology Volume 3 ; 3 ; 2017 ; >
 
