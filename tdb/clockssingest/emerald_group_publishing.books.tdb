@@ -807,14 +807,15 @@
       >
 
       #param[journal_issn] = 1479-3601
+      #series = ahpc
 
-      au < manifest ; exists ; 2001 ;  ; 9780762307487 ; 9780762307487 ; Advances in Human Performance and Cognitive Engineering Research Volume 1 ; >
-      au < manifest ; exists ; 2002 ;  ; 9780762308644 ; 9780762308644 ; Advances in Human Performance and Cognitive Engineering Research Volume 2 ; >
-      au < manifest ; exists ; 2003 ;  ; 9780762309863 ; 9780762309863 ; Advances in Human Performance and Cognitive Engineering Research Volume 3 ; >
-      au < manifest ; exists ; 2004 ;  ; 9780762310494 ; 9780762310494 ; Cultural Ergonomics Volume 4 ; >
-      au < manifest ; exists ; 2004 ;  ; 9780762311415 ; 9780762311415 ; The Science and Simulation of Human Performance Volume 5 ; >
-      au < manifest ; exists ; 2006 ;  ; 9780762312481 ; 9780762312481 ; Understanding Adaptability: A Prerequisite for Effective Performance within Complex Environments Volume 6 ; >
-      au < manifest ; exists ; 2006 ;  ; 9780762312474 ; 9780762312474 ; Human Factors of Remotely Operated Vehicles Volume 7 ; >
+      au < manifest ; exists ; 2001 ; 9780762307487 ; 9781849500876 ; 9781849500876 ; Advances in Human Performance and Cognitive Engineering Research Volume 1 ; >
+      au < manifest ; exists ; 2002 ; 9780762308644 ; 9781849501453 ; 9781849501453 ; Advances in Human Performance and Cognitive Engineering Research Volume 2 ; >
+      au < manifest ; exists ; 2003 ; 9780762309863 ; 9781849501910 ; 9781849501910 ; Advances in Human Performance and Cognitive Engineering Research Volume 3 ; >
+      au < manifest ; exists ; 2004 ; 9780762310494 ; 9781849505758 ; 9781849505758 ; Cultural Ergonomics Volume 4 ; >
+      au < manifest ; exists ; 2004 ; 9780762311415 ; 9781849502962 ; 9781849502962 ; The Science and Simulation of Human Performance Volume 5 ; >
+      au < manifest ; exists ; 2006 ; 9780762312481 ; 9781849503716 ; 9781849503716 ; Understanding Adaptability: A Prerequisite for Effective Performance within Complex Environments Volume 6 ; >
+      au < manifest ; exists ; 2006 ; 9780762312474 ; 9781849503709 ; 9781849503709 ; Human Factors of Remotely Operated Vehicles Volume 7 ; >
 
   }
 
@@ -827,18 +828,22 @@
       >
 
       #param[journal_issn] = 0742-6186
+      #series = ailr
 
-      au < manifest ; exists ; 2001 ;  ; 9780762307500 ; 9780762307500 ; New Research on Labor Relations and the Performance of University HR/IR Programs Volume 10 ; >
-      au < manifest ; exists ; 2002 ;  ; 9780762308538 ; 9780762308538 ; Advances in Industrial & Labor Relations Volume 11 ; >
-      au < manifest ; exists ; 2003 ;  ; 9780762310289 ; 9780762310289 ; Advances in Industrial & Labor Relations Volume 12 ; >
-      au < manifest ; exists ; 2004 ;  ; 9780762311521 ; 9780762311521 ; Advances in Industrial & Labor Relations Volume 13 ; >
-      au < manifest ; exists ; 2005 ;  ; 9780762312658 ; 9780762312658 ; Advances in Industrial & Labor Relations Volume 14 ; >
-      au < manifest ; exists ; 2006 ;  ; 9780762313860 ; 9780762313860 ; Advances in Industrial & Labor Relations Volume 15 ; >
-      au < manifest ; exists ; 2009 ;  ; 9781848553965 ; 9781848553965 ; Advances in Industrial & Labor Relations Volume 16 ; >
-      au < manifest ; exists ; 2010 ;  ; 9781849509329 ; 9781849509329 ; Advances in Industrial and Labor Relations Volume 17 ; >
-      au < manifest ; exists ; 2011 ;  ; 9780857249074 ; 9780857249074 ; Advances in Industrial and Labor Relations Volume 18 ; >
-      au < manifest ; exists ; 2012 ;  ; 9781780526621 ; 9781780526621 ; Rethinking Misbehavior and Resistance in Organizations Volume 19 ; >
-      au < manifest ; exists ; 2012 ;  ; 9781781903773 ; 9781781903773 ; Advances in Industrial and Labor Relations Volume 20 ; >
+      au < manifest ; exists ; 2001 ; 9780762307500 ; 9781849500883 ;  ; New Research on Labor Relations and the Performance of University HR/IR Programs Volume 10 ; >
+      au < manifest ; exists ; 2002 ; 9780762308538 ; 9781849501408 ;  ; Advances in Industrial & Labor Relations Volume 11 ; >
+      au < manifest ; exists ; 2003 ; 9780762310289 ; 9781849502153 ;  ; Advances in Industrial & Labor Relations Volume 12 ; >
+      au < manifest ; exists ; 2004 ; 9780762311521 ; 9781849503051 ;  ; Advances in Industrial & Labor Relations Volume 13 ; >
+      au < manifest ; exists ; 2005 ; 9780762312658 ; 9781849503822 ;  ; Advances in Industrial & Labor Relations Volume 14 ; >
+      au < manifest ; exists ; 2006 ; 9780762313860 ; 9781849504706 ;  ; Advances in Industrial & Labor Relations Volume 15 ; >
+      au < manifest ; exists ; 2009 ; 9781848553965 ; 9781848553972 ;  ; Advances in Industrial & Labor Relations Volume 16 ; >
+      au < manifest ; exists ; 2010 ; 9781849509329 ; 9781849509336 ;  ; Advances in Industrial and Labor Relations Volume 17 ; >
+      au < manifest ; exists ; 2011 ; 9780857249074 ; 9780857249081 ;  ; Advances in Industrial and Labor Relations Volume 18 ; >
+      au < manifest ; exists ; 2012 ; 9781780526621 ; 9781780526638 ;  ; Rethinking Misbehavior and Resistance in Organizations Volume 19 ; >
+      au < manifest ; exists ; 2012 ; 9781781903773 ; 9781781903780 ;  ; Advances in Industrial and Labor Relations Volume 20 ; >
+      au < exists ; exists ; 2015 ; 9781784413804 ; 9781784413798 ;  ; Advances in Industrial & Labor Relations Volume 21 ; >
+      au < exists ; exists ; 2016 ; 9781786350602 ; 9781786350596 ;  ; Managing and Resolving Workplace Conflict Volume 22 ; >
+      au < exists ; exists ; 2016 ; 9781786352408 ; 9781786352392 ;  ; Employee Voice in Emerging Economies Volume 23 ; >
 
   }
 
