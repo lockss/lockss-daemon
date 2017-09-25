@@ -856,13 +856,14 @@
       >
 
       #param[journal_issn] = 1572-0977
+      #series = aiswt
 
-      au < manifest ; exists ; 2000 ;  ; 9780762307470 ; 9780762307470 ; Advances in Interdisciplinary Studies of Work Teams Volume 7 ; >
-      au < manifest ; exists ; 2001 ;  ; 9780762308439 ; 9780762308439 ; Virtual teams Volume 8 ; >
-      au < manifest ; exists ; 2003 ;  ; 9780762309818 ; 9780762309818 ; Advances in Interdisciplinary Studies of Work Teams Volume 9 ; >
-      au < manifest ; exists ; 2004 ;  ; 9780762311323 ; 9780762311323 ; Complex Collaboration: Building the Capabilities for Working Across Boundaries Volume 10 ; >
-      au < manifest ; exists ; 2005 ;  ; 9780762312221 ; 9780762312221 ; Collaborative Capital: Creating Intangible Value Volume 11 ; >
-      au < manifest ; exists ; 2006 ;  ; 9780762313310 ; 9780762313310 ; Innovation through Collaboration Volume 12 ; >
+      au < manifest ; exists ; 2000 ; 9780762307470 ; 9781849500869 ; 9781849500869 ; Advances in Interdisciplinary Studies of Work Teams Volume 7 ; >
+      au < manifest ; exists ; 2001 ; 9780762308439 ; 9781849501354 ; 9781849501354 ; Virtual teams Volume 8 ; >
+      au < manifest ; exists ; 2003 ; 9780762309818 ; 9781849501880 ; 9781849501880 ; Advances in Interdisciplinary Studies of Work Teams Volume 9 ; >
+      au < manifest ; exists ; 2004 ; 9780762311323 ; 9781849502887 ; 9781849502887 ; Complex Collaboration: Building the Capabilities for Working Across Boundaries Volume 10 ; >
+      au < manifest ; exists ; 2005 ; 9780762312221 ; 9781849503518 ; 9781849503518 ; Collaborative Capital: Creating Intangible Value Volume 11 ; >
+      au < manifest ; exists ; 2006 ; 9780762313310 ; 9781849504300 ; 9781849504300 ; Innovation through Collaboration Volume 12 ; >
 
   }
 
@@ -875,18 +876,24 @@
       >
 
       #param[journal_issn] = 1571-5027
+      #series = aimnew
 
-      au < manifest ; exists ; 2003 ;  ; 9780762310500 ; 9780762310500 ; Managing Multinationals in a Knowledge Economy: Economics, Culture Volume 15 ; >
-      au < manifest ; exists ; 2004 ;  ; 9780762311262 ; 9780762311262 ; Theories of the Multinational Enterprise: Diversity, Complexity and Relevance Volume 16 ; >
-      au < manifest ; exists ; 2004 ;  ; 9780762311576 ; 9780762311576 ; Japanese Firms in Transition: Responding to the Globalization Challenge Volume 17 ; >
-      au < manifest ; exists ; 2005 ;  ; 9780762312191 ; 9780762312191 ; Managing Multinational Teams: Global Perspectives Volume 18 ; >
-      au < manifest ; exists ; 2007 ;  ; 9780762314027 ; 9780762314027 ; The Global Mindset Volume 19 ; >
-      au < manifest ; exists ; 2007 ;  ; 9780762313969 ; 9780762313969 ; Product and Market Development for Subsistence Marketplaces Volume 20 ; >
-      au < manifest ; exists ; 2008 ;  ; 9780762314010 ; 9780762314010 ; The Global Diffusion of Human Resource Practices: Institutional and Cultural Limits Volume 21 ; >
-      au < manifest ; exists ; 2009 ;  ; 9781848556669 ; 9781848556669 ; Managing, Subsidiary Dynamics: Headquarters Role, Capability Development, and China Strategy Volume 22 ; >
-      au < manifest ; exists ; 2010 ;  ; 9780857240859 ; 9780857240859 ; The Past, Present and Future of International Business & Management Volume 23 ; >
-      au < manifest ; exists ; 2011 ;  ; 9780857249913 ; 9780857249913 ; Dynamics of Globalization: Location-Specific Advantages or Liabilities of Foreignness? Volume 24 ; >
-      au < manifest ; exists ; 2012 ;  ; 9781780529080 ; 9781780529080 ; Institutional Theory in International Business and Management Volume 25 ; >
+      au < manifest ; exists ; 2003 ; 9780762310500 ; 9781849502344 ; 9781849502344 ; Managing Multinationals in a Knowledge Economy: Economics, Culture Volume 15 ; >
+      au < manifest ; exists ; 2004 ; 9780762311262 ; 9781849502856 ; 9781849502856 ; Theories of the Multinational Enterprise: Diversity, Complexity and Relevance Volume 16 ; >
+      au < manifest ; exists ; 2004 ; 9780762311576 ; 9781849503099 ; 9781849503099 ; Japanese Firms in Transition: Responding to the Globalization Challenge Volume 17 ; >
+      au < manifest ; exists ; 2005 ; 9780762312191 ; 9781849503495 ; 9781849503495 ; Managing Multinational Teams: Global Perspectives Volume 18 ; >
+      au < manifest ; exists ; 2007 ; 9780762314027 ; 9781849504799 ; 9781849504799 ; The Global Mindset Volume 19 ; >
+      au < manifest ; exists ; 2007 ; 9780762313969 ; 9781849504775 ; 9781849504775 ; Product and Market Development for Subsistence Marketplaces Volume 20 ; >
+      au < manifest ; exists ; 2008 ; 9780762314010 ; 9781849505260 ; 9781849505260 ; The Global Diffusion of Human Resource Practices: Institutional and Cultural Limits Volume 21 ; >
+      au < manifest ; exists ; 2009 ; 9781848556669 ; 9781848556676 ; 9781848556676 ; Managing, Subsidiary Dynamics: Headquarters Role, Capability Development, and China Strategy Volume 22 ; >
+      au < manifest ; exists ; 2010 ; 9780857240859 ; 9780857240866 ; 9780857240866 ; The Past, Present and Future of International Business & Management Volume 23 ; >
+      au < manifest ; exists ; 2011 ; 9780857249913 ; 9780857249920 ; 9780857249920 ; Dynamics of Globalization: Location-Specific Advantages or Liabilities of Foreignness? Volume 24 ; >
+      au < manifest ; exists ; 2012 ; 9781780529080 ; 9781780529097 ; 9781780529097 ; Institutional Theory in International Business and Management Volume 25 ; >
+      au < exists ; exists ; 2013 ; 9781781907122 ; 9781781907139 ; 9781781907139 ; Philosophy of Science and Meta-Knowledge in International Business and Management Volume 26 ; >
+      au < exists ; exists ; 2014 ; 9781783509539 ; 9781783509546 ; 9781783509546 ; Orchestration of the Global Network Organization Volume 27 ; >
+      au < exists ; exists ; 2015 ; 9781784417406 ; 9781784417390 ; 9781784417390 ; Emerging Economies and Multinational Enterprises Volume 28 ; >
+      au < exists ; exists ; 2016 ; 9781786354846 ; 9781786354839 ; 9781786354839 ; Global Entrepreneurship: Past, Present & Future Volume 29 ; >
+      au < exists ; exists ; 2017 ; 9781787430723 ; 9781787430716 ; 9781787430716 ; Breaking up the Global Value Chain Volume 30 ; >
 
   }
 
@@ -899,21 +906,25 @@
       >
 
       #param[journal_issn] = 1474-7979
+      #series = aim
 
-      au < manifest ; exists ; 2000 ;  ; 9780762306695 ; 9780762306695 ; Globalization, the Multinational Firm, and Emerging Economies Volume 10 ; >
-      au < manifest ; exists ; 2001 ;  ; 9780762307951 ; 9780762307951 ; Reassesing the Internationalization of the Firm Volume 11 ; >
-      au < manifest ; exists ; 2002 ;  ; 9780762309504 ; 9780762309504 ; New Directions in International Advertising Research Volume 12 ; >
-      au < manifest ; exists ; 2003 ;  ; 9780762309894 ; 9780762309894 ; Study Abroad Volume 13 ; >
-      au < manifest ; exists ; 2003 ;  ; 9780762310449 ; 9780762310449 ; Reviving Traditions in Research on International Market Entry Volume 14 ; >
-      au < manifest ; exists ; 2005 ;  ; 9780762311859 ; 9780762311859 ; Research on International Service Marketing: A state of the Art Volume 15 ; >
-      au < manifest ; exists ; 2006 ;  ; 9780762312863 ; 9780762312863 ; Relationship Between Exporters and Their Foreign Sales and Marketing Intermediaries Volume 16 ; >
-      au < manifest ; exists ; 2006 ;  ; 9780762313693 ; 9780762313693 ; International Marketing Research Volume 17 ; >
-      au < manifest ; exists ; 2007 ;  ; 9780762314126 ; 9780762314126 ; Cross-Cultural Buyer Behavior Volume 18 ; >
-      au < manifest ; exists ; 2009 ;  ; 9781848554405 ; 9781848554405 ; Michigan State University Contributions to International Business and Innovation Volume 19 ; >
-      au < manifest ; exists ; 2009 ;  ; 9781848554689 ; 9781848554689 ; New Challenges to International Marketing Volume 20 ; >
-      au < manifest ; exists ; 2011 ;  ; 9780857244475 ; 9780857244475 ; International Marketing Volume 21 ; >
-      au < manifest ; exists ; 2011 ;  ; 9781780520940 ; 9781780520940 ; Measurement and Research Methods in International Marketing Volume 22 ; >
-      au < manifest ; exists ; 2012 ;  ; 9781781900161 ; 9781781900161 ; Interdisciplinary Approaches to Product Design, Innovation, & Branding in International Marketing Volume 23 ; >
+      au < manifest ; exists ; 2000 ; 9780762306695 ; 9781849500562 ; 9781849500562 ; Globalization, the Multinational Firm, and Emerging Economies Volume 10 ; >
+      au < manifest ; exists ; 2001 ; 9780762307951 ; 9781849501101 ; 9781849501101 ; Reassesing the Internationalization of the Firm Volume 11 ; >
+      au < manifest ; exists ; 2002 ; 9780762309504 ; 9781849501675 ; 9781849501675 ; New Directions in International Advertising Research Volume 12 ; >
+      au < manifest ; exists ; 2003 ; 9780762309894 ; 9781849501927 ; 9781849501927 ; Study Abroad Volume 13 ; >
+      au < manifest ; exists ; 2003 ; 9780762310449 ; 9781849502283 ; 9781849502283 ; Reviving Traditions in Research on International Market Entry Volume 14 ; >
+      au < manifest ; exists ; 2005 ; 9780762311859 ; 9781849503310 ; 9781849503310 ; Research on International Service Marketing: A state of the Art Volume 15 ; >
+      au < manifest ; exists ; 2006 ; 9780762312863 ; 9781849503976 ; 9781849503976 ; Relationship Between Exporters and Their Foreign Sales and Marketing Intermediaries Volume 16 ; >
+      au < manifest ; exists ; 2006 ; 9780762313693 ; 9781849504584 ; 9781849504584 ; International Marketing Research Volume 17 ; >
+      au < manifest ; exists ; 2007 ; 9780762314126 ; 9781849504850 ; 9781849504850 ; Cross-Cultural Buyer Behavior Volume 18 ; >
+      au < manifest ; exists ; 2009 ; 9781848554405 ; 9781848554412 ; 9781848554412 ; Michigan State University Contributions to International Business and Innovation Volume 19 ; >
+      au < manifest ; exists ; 2009 ; 9781848554689 ; 9781848554696 ; 9781848554696 ; New Challenges to International Marketing Volume 20 ; >
+      au < manifest ; exists ; 2011 ; 9780857244475 ; 9780857244482 ; 9780857244482 ; International Marketing Volume 21 ; >
+      au < manifest ; exists ; 2011 ; 9781780520940 ; 9781780520957 ; 9781780520957 ; Measurement and Research Methods in International Marketing Volume 22 ; >
+      au < manifest ; exists ; 2012 ; 9781781900161 ; 9781781900178 ; 9781781900178 ; Interdisciplinary Approaches to Product Design, Innovation, & Branding in International Marketing Volume 23 ; >
+      au < exists ; exists ; 2013 ; 9781781908969 ; 9781781908976 ; 9781781908976 ;  	International Marketing in Rapidly Changing Environments Volume 24 ; >
+      au < exists ; exists ; 2015 ; 9781784414481 ; 9781784414474 ; 9781784414474 ; Entrepreneurship in International Marketing Volume 25 ; >
+      au < exists ; exists ; 2015 ; 9781785602337 ; 9781785602320 ; 9781785602320 ; International Marketing in the Fast Changing World Volume 26 ; >
 
   }
 
@@ -926,6 +937,7 @@
       >
 
       #param[journal_issn] = 0735-004X
+      #series = albd
 
       au < manifest ; exists ; 2001 ;  ; 9780762308156 ; 9780762308156 ; Technological Applications Volume 15 ; >
       au < manifest ; exists ; 2003 ;  ; 9780762310296 ; 9780762310296 ; Advances in Learning and Behavioral Disabilities Volume 16 ; >
