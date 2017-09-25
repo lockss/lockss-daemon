@@ -939,17 +939,21 @@
       #param[journal_issn] = 0735-004X
       #series = albd
 
-      au < manifest ; exists ; 2001 ;  ; 9780762308156 ; 9780762308156 ; Technological Applications Volume 15 ; >
-      au < manifest ; exists ; 2003 ;  ; 9780762310296 ; 9780762310296 ; Advances in Learning and Behavioral Disabilities Volume 16 ; >
-      au < manifest ; exists ; 2004 ;  ; 9780762311071 ; 9780762311071 ; Research in Secondary Schools Volume 17 ; >
-      au < manifest ; exists ; 2005 ;  ; 9780762312245 ; 9780762312245 ; Cognition and Learning in Diverse Settings Volume 18 ; >
-      au < manifest ; exists ; 2006 ;  ; 9780762312955 ; 9780762312955 ; Applications of Research Methodology Volume 19 ; >
-      au < manifest ; exists ; 2007 ;  ; 9780762314409 ; 9780762314409 ; International Perspectives Volume 20 ; >
-      au < manifest ; exists ; 2008 ;  ; 9781597492744 ; 9781597492744 ; Personnel Preparation Volume 21 ; >
-      au < manifest ; exists ; 2009 ;  ; 9781848553101 ; 9781848553101 ; Policy and Practice Volume 22 ; >
-      au < manifest ; exists ; 2010 ;  ; 9781849507769 ; 9781849507769 ; Literacy and Learning Volume 23 ; >
-      au < manifest ; exists ; 2011 ;  ; 9780857248299 ; 9780857248299 ; Assessment and Intervention Volume 24 ; >
-      au < manifest ; exists ; 2012 ;  ; 9781780529721 ; 9781780529721 ; Classroom Behavior, Contexts, and Interventions Volume 25 ; >
+      au < manifest ; exists ; 2001 ; 9780762308156 ; 9781849501194 ; 9781849501194 ; Technological Applications Volume 15 ; >
+      au < manifest ; exists ; 2003 ; 9780762310296 ; 9781849502160 ; 9781849502160 ; Advances in Learning and Behavioral Disabilities Volume 16 ; >
+      au < manifest ; exists ; 2004 ; 9780762311071 ; 9781849502702 ; 9781849502702 ; Research in Secondary Schools Volume 17 ; >
+      au < manifest ; exists ; 2005 ; 9780762312245 ; 9781849503532 ; 9781849503532 ; Cognition and Learning in Diverse Settings Volume 18 ; >
+      au < manifest ; exists ; 2006 ; 9780762312955 ; 9781849504010 ; 9781849504010 ; Applications of Research Methodology Volume 19 ; >
+      au < manifest ; exists ; 2007 ; 9780762314409 ; 9781849505031 ; 9781849505031 ; International Perspectives Volume 20 ; >
+      au < manifest ; exists ; 2008 ; 9781597492744 ; 9781849505277 ; 9781849505277 ; Personnel Preparation Volume 21 ; >
+      au < manifest ; exists ; 2009 ; 9781848553101 ; 9781848553118 ; 9781848553118 ; Policy and Practice Volume 22 ; >
+      au < manifest ; exists ; 2010 ; 9781849507769 ; 9781849507776 ; 9781849507776 ; Literacy and Learning Volume 23 ; >
+      au < manifest ; exists ; 2011 ; 9780857248299 ; 9780857248305 ; 9780857248305 ; Assessment and Intervention Volume 24 ; >
+      au < manifest ; exists ; 2012 ; 9781780529721 ; 9781780529738 ; 9781780529738 ; Classroom Behavior, Contexts, and Interventions Volume 25 ; >
+      au < exists ; exists ; 2013 ; 9781781904299 ; 9781781904305 ; 9781781904305 ; Evidence-Based Practices Volume 26 ; >
+      au < exists ; exists ; 2014 ; 9781783508358 ; 9781783508365 ; 9781783508365 ; Special Education Past, Present, and Future: Perspectives from the Field Volume 27 ; >
+      au < exists ; exists ; 2015 ; 9781784419349 ; 9781784419332 ; 9781784419332 ; Transition of Youth and Young Adults Volume 28 ; >
+      au < exists ; exists ; 2016 ; 9781786351265 ; 9781786351258 ; 9781786351258 ; Instructional Practices with and without Empirical Validity Volume 29 ; >
 
   }
 
@@ -962,28 +966,36 @@
       >
 
       #param[journal_issn] = 0065-2830
+      #series = ail
 
-      au < manifest ; exists ; 1991 ;  ; 9780120246151 ; 9780120246151 ; Advances in Librarianship Volume 15 ; >
-      au < manifest ; exists ; 1992 ;  ; 9780120246168 ; 9780120246168 ; Advances in Librarianship Volume 16 ; >
-      au < manifest ; exists ; 1993 ;  ; 9780120246175 ; 9780120246175 ; Advances in Librarianship Volume 17 ; >
-      au < manifest ; exists ; 1994 ;  ; 9780120246182 ; 9780120246182 ; Advances in Librarianship Volume 18 ; >
-      au < manifest ; exists ; 1995 ;  ; 9780120246199 ; 9780120246199 ; Advances in Librarianship Volume 19 ; >
-      au < manifest ; exists ; 1996 ;  ; 9780120246205 ; 9780120246205 ; Advances in Librarianship Volume 20 ; >
-      au < manifest ; exists ; 1997 ;  ; 9780120246212 ; 9780120246212 ; Advances in Librarianship Volume 21 ; >
-      au < manifest ; exists ; 1998 ;  ; 9780120246229 ; 9780120246229 ; Advances in Librarianship Volume 22 ; >
-      au < manifest ; exists ; 1999 ;  ; 9780120246236 ; 9780120246236 ; Advances in Librarianship Volume 23 ; >
-      au < manifest ; exists ; 2000 ;  ; 9780120246243 ; 9780120246243 ; Advances in Librarianship Volume 24 ; >
-      au < manifest ; exists ; 2001 ;  ; 9780120246250 ; 9780120246250 ; Advances in Librarianship Volume 25 ; >
-      au < manifest ; exists ; 2002 ;  ; 9780120246267 ; 9780120246267 ; Advances in Librarianship Volume 26 ; >
-      au < exists ; exists ; 2004 ;  ; 9780120246279 ; 9780120246279 ; Advances in Librarianship Volume 27 ; >
-      au < manifest ; exists ; 2004 ;  ; 9780120246281 ; 9780120246281 ; Advances in Librarianship Volume 28 ; >
-      au < manifest ; exists ; 2005 ;  ; 9780120246298 ; 9780120246298 ; Advances in Librarianship Volume 29 ; >
-      au < manifest ; exists ; 2006 ;  ; 9780120246304 ; 9780120246304 ; Advances in Librarianship Volume 30 ; >
-      au < manifest ; exists ; 2008 ;  ; 9781848553729 ; 9781848553729 ; Influence of Funding on Advances in Librarianship Volume 31 ; >
-      au < manifest ; exists ; 2010 ;  ; 9781849509787 ; 9781849509787 ; Advances in Librarianship Volume 32 ; >
-      au < manifest ; exists ; 2011 ;  ; 9780857247551 ; 9780857247551 ; Advances in Librarianship Volume 33 ; >
-      au < manifest ; exists ; 2011 ;  ; 9781780523903 ; 9781780523903 ; Librarianship in Times of Crisis Volume 34 ; >
-      au < manifest ; exists ; 2012 ;  ; 9781781900604 ; 9781781900604 ; Advances in Librarianship Volume 35 ; >
+      au < manifest ; exists ; 1991 ; 9780120246151 ; 9781849508834 ; 9781849508834 ; Advances in Librarianship Volume 15 ; >
+      au < manifest ; exists ; 1992 ; 9780120246168 ; 9781849508803 ; 9781849508803 ; Advances in Librarianship Volume 16 ; >
+      au < manifest ; exists ; 1993 ; 9780120246175 ; 9781849508827 ; 9781849508827 ; Advances in Librarianship Volume 17 ; >
+      au < manifest ; exists ; 1994 ; 9780120246182 ; 9781849508841 ; 9781849508841 ; Advances in Librarianship Volume 18 ; >
+      au < manifest ; exists ; 1995 ; 9780120246199 ; 9781849508810 ; 9781849508810 ; Advances in Librarianship Volume 19 ; >
+      au < manifest ; exists ; 1996 ; 9780120246205 ; 9781849508797 ; 9781849508797 ; Advances in Librarianship Volume 20 ; >
+      au < manifest ; exists ; 1997 ; 9780120246212 ; 9781849508780 ; 9781849508780 ; Advances in Librarianship Volume 21 ; >
+      au < manifest ; exists ; 1998 ; 9780120246229 ; 9781849508773 ; 9781849508773 ; Advances in Librarianship Volume 22 ; >
+      au < manifest ; exists ; 1999 ; 9780120246236 ; 9781849508766 ; 9781849508766 ; Advances in Librarianship Volume 23 ; >
+      au < manifest ; exists ; 2000 ; 9780120246243 ; 9781849500012 ; 9781849500012 ; Advances in Librarianship Volume 24 ; >
+      au < manifest ; exists ; 2001 ; 9780120246250 ; 9781849500029 ; 9781849500029 ; Advances in Librarianship Volume 25 ; >
+      au < manifest ; exists ; 2002 ; 9780120246267 ; 9781849500036 ; 9781849500036 ; Advances in Librarianship Volume 26 ; >
+      au < exists ; exists ; 2009 ; 9780120246274 ; 9781849500043 ; 9781849500043 ; Advances in Librarianship Volume 27 ; >
+      au < manifest ; exists ; 2004 ; 9780120246281 ; 9781849500050 ; 9781849500050 ; Advances in Librarianship Volume 28 ; >
+      au < manifest ; exists ; 2005 ; 9780120246298 ; 9781849500067 ; 9781849500067 ; Advances in Librarianship Volume 29 ; >
+      au < manifest ; exists ; 2006 ; 9780120246304 ; 9781849500074 ; 9781849500074 ; Advances in Librarianship Volume 30 ; >
+      au < manifest ; exists ; 2008 ; 9781848553729 ; 9781848553736 ; 9781848553736 ; Influence of Funding on Advances in Librarianship Volume 31 ; >
+      au < manifest ; exists ; 2010 ; 9781849509787 ; 9781849509794 ; 9781849509794 ; Advances in Librarianship Volume 32 ; >
+      au < manifest ; exists ; 2011 ; 9780857247551 ; 9780857247568 ; 9780857247568 ; Advances in Librarianship Volume 33 ; >
+      au < manifest ; exists ; 2011 ; 9781780523903 ; 9781780523910 ; 9781780523910 ; Librarianship in Times of Crisis Volume 34 ; >
+      au < manifest ; exists ; 2012 ; 9781781900604 ; 9781781900611 ; 9781781900611 ; Advances in Librarianship Volume 35 ; >
+      au < exists ; exists ; 2013 ; 9781781904794 ; 9781781904800 ; 9781781904800 ; Mergers and Alliances: The Wider View Volume 36 ; >
+      au < exists ; exists ; 2013 ; 9781783500543 ; 9781783500550 ; 9781783500550 ; Mergers and Alliances: The Operational View and Cases Volume 37 ; >
+      au < exists ; exists ; 2014 ; 9781783504695 ; 9781783504701 ; 9781783504701 ; Advances in Librarianship Volume 38 ; >
+      au < exists ; exists ; 2015 ; 9781784416386 ; 9781784416379 ; 9781784416379 ; Current Issues in Libraries, Information Science and Related Fields Volume 39 ; >
+      au < exists ; exists ; 2015 ; 9781785606533 ; 9781785606526 ; 9781785606526 ; Accessibility for Persons with Disabilities and the Inclusive Future of Libraries Volume 40 ; >
+      au < exists ; exists ; 2016 ; 9781786350589 ; 9781786350572 ; 9781786350572 ; Perspectives on Libraries as Institutions of Human Rights and Social Justice Volume 41 ; >
+      au < exists ; exists ; 2016 ; 9781786359339 ; 9781786359322 ; 9781786359322 ; Celebrating the James Partridge Award: Essays Toward the Development of a More Diverse, Inclusive, and Equitable Field of Library and Information Science Volume 42 ; >
 
   }
 
@@ -996,22 +1008,29 @@
       >
 
       #param[journal_issn] = 0732-0671
+      #series = alao
 
-      au < manifest ; exists ; 2000 ;  ; 9780762306473 ; 9780762306473 ; Advances in Library Administration and Organization Volume 17 ; >
-      au < manifest ; exists ; 2001 ;  ; 9780762307180 ; 9780762307180 ; Advances in Library Administration and Organization Volume 18 ; >
-      au < manifest ; exists ; 2002 ;  ; 9780762308682 ; 9780762308682 ; Advances in Library Administration and Organization Volume 19 ; >
-      au < manifest ; exists ; 2003 ;  ; 9780762310104 ; 9780762310104 ; Advances in Library Administration and Organization Volume 20 ; >
-      au < manifest ; exists ; 2004 ;  ; 9780762311217 ; 9780762311217 ; Advances in Library Administration and Organization Volume 21 ; >
-      au < manifest ; exists ; 2005 ;  ; 9780762311958 ; 9780762311958 ; Advances in Library Administration and Organization Volume 22 ; >
-      au < manifest ; exists ; 2006 ;  ; 9780762312979 ; 9780762312979 ; Advances in Library Administration and Organization Volume 23 ; >
-      au < manifest ; exists ; 2006 ;  ; 9780762314102 ; 9780762314102 ; Advances in Library Administration and Organization Volume 24 ; >
-      au < manifest ; exists ; 2007 ;  ; 9780762314119 ; 9780762314119 ; Advances in Library Administration and Organization Volume 25 ; >
-      au < manifest ; exists ; 2008 ;  ; 9780762314881 ; 9780762314881 ; Advances in Library Administration and Organization Volume 26 ; >
-      au < manifest ; exists ; 2009 ;  ; 9781848557109 ; 9781848557109 ; Advances in Library Administration and Organization Volume 27 ; >
-      au < manifest ; exists ; 2009 ;  ; 9781849505796 ; 9781849505796 ; Advances in Library Administration and Organization Volume 28 ; >
-      au < manifest ; exists ; 2010 ;  ; 9780857242877 ; 9780857242877 ; Advances in Library Administration and Organization Volume 29 ; >
-      au < manifest ; exists ; 2011 ;  ; 9781780520148 ; 9781780520148 ; Advances in Library Administration and Organization Volume 30 ; >
-      au < manifest ; exists ; 2012 ;  ; 9781781903131 ; 9781781903131 ; Advances in Library Administration and Organization Volume 31 ; >
+      au < manifest ; exists ; 2000 ; 9780762306473 ; 9781849500487 ; 9781849500487 ; Advances in Library Administration and Organization Volume 17 ; >
+      au < manifest ; exists ; 2001 ; 9780762307180 ; 9781849500784 ; 9781849500784 ; Advances in Library Administration and Organization Volume 18 ; >
+      au < manifest ; exists ; 2002 ; 9780762308682 ; 9781849501477 ; 9781849501477 ; Advances in Library Administration and Organization Volume 19 ; >
+      au < manifest ; exists ; 2003 ; 9780762310104 ; 9781849502061 ; 9781849502061 ; Advances in Library Administration and Organization Volume 20 ; >
+      au < manifest ; exists ; 2004 ; 9780762311217 ; 9781849502849 ; 9781849502849 ; Advances in Library Administration and Organization Volume 21 ; >
+      au < manifest ; exists ; 2005 ; 9780762311958 ; 9781849503389 ; 9781849503389 ; Advances in Library Administration and Organization Volume 22 ; >
+      au < manifest ; exists ; 2006 ; 9780762312979 ; 9781849504034 ; 9781849504034 ; Advances in Library Administration and Organization Volume 23 ; >
+      au < manifest ; exists ; 2006 ; 9780762314102 ; 9781849504836 ; 9781849504836 ; Advances in Library Administration and Organization Volume 24 ; >
+      au < manifest ; exists ; 2007 ; 9780762314119 ; 9781849504843 ; 9781849504843 ; Advances in Library Administration and Organization Volume 25 ; >
+      au < manifest ; exists ; 2008 ; 9780762314881 ; 9781849505284 ; 9781849505284 ; Advances in Library Administration and Organization Volume 26 ; >
+      au < manifest ; exists ; 2009 ; 9781848557109 ; 9781848557116 ; 9781848557116 ; Advances in Library Administration and Organization Volume 27 ; >
+      au < manifest ; exists ; 2009 ; 9781849505796 ; 9781849505802 ; 9781849505802 ; Advances in Library Administration and Organization Volume 28 ; >
+      au < manifest ; exists ; 2010 ; 9780857242877 ; 9780857242884 ; 9780857242884 ; Advances in Library Administration and Organization Volume 29 ; >
+      au < manifest ; exists ; 2011 ; 9781780520148 ; 9781780520155 ; 9781780520155 ; Advances in Library Administration and Organization Volume 30 ; >
+      au < manifest ; exists ; 2012 ; 9781781903131 ; 9781781903148 ; 9781781903148 ; Advances in Library Administration and Organization Volume 31 ; >
+      au < exists ; exists ; 2014 ; 9781781907443 ; 9781781907450 ; 9781781907450 ; Advances in Library Administration and Organization Volume 32 ; >
+      au < exists ; exists ; 2015 ; 9781784419103 ; 9781784419097 ; 9781784419097 ; Advances in Library Administration and Organization Volume 33 ; >
+      au < exists ; exists ; 2015 ; 9781785604997 ; 9781785604980 ; 9781785604980 ; Library Staffing for the Future Volume 34 ; >
+      au < exists ; exists ; 2016 ; 9781785607318 ; 9781785607301 ; 9781785607301 ; Innovation in Libraries and Information Services Volume 35 ; >
+      au < exists ; exists ; 2016 ; 9781786352705 ; 9781786352699 ; 9781786352699 ; The Future of Library Space Volume 36 ; >
+      au < exists ; exists ; 2017 ; 9781787430846 ; 9781787430839 ; 9781787430839 ; Emotion in the Library Workplace Volume 37 ; >
 
   }
 
@@ -1024,6 +1043,7 @@
       >
 
       #param[journal_issn] = 1474-7871
+      #series = advma
 
       au < manifest ; exists ; 2003 ;  ; 9780762310128 ; 9780762310128 ; Advances in Management Accounting Volume 11 ; >
       au < manifest ; exists ; 2004 ;  ; 9780762311187 ; 9780762311187 ; Advances in Management Accounting Volume 12 ; >
