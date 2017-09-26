@@ -932,7 +932,7 @@
       >
       param[base_url] = http://msphere.asm.org/
 
-      au < asm.ASMDrupalPlugin ; releasing ; 2016 ; mSphere Volume 1 ; 1 >
+      au < asm.ASMDrupalPlugin ; released ; 2016 ; mSphere Volume 1 ; 1 >
       au < asm.ASMDrupalPlugin ; manifest ; 2017 ; mSphere Volume 2 ; 2 >
 
     }
@@ -945,7 +945,7 @@
       >
       param[base_url] = http://msystems.asm.org/
 
-      au < asm.ASMDrupalPlugin ; releasing ; 2016 ; mSystems Volume 1 ; 1 >
+      au < asm.ASMDrupalPlugin ; released ; 2016 ; mSystems Volume 1 ; 1 >
       au < asm.ASMDrupalPlugin ; manifest ; 2017 ; mSystems Volume 2 ; 2 >
 
     }
