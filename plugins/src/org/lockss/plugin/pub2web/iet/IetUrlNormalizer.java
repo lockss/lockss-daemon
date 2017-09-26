@@ -40,22 +40,21 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.pub2web.Pub2WebUrlNormalizer;
 import org.lockss.util.Logger;
+import org.lockss.util.UrlUtil;;
 
 
 public class IetUrlNormalizer extends Pub2WebUrlNormalizer {
   protected static Logger log = 
       Logger.getLogger(IetUrlNormalizer.class);
 
-  protected static final String REPLACE_STRING = "&mimeType=html";
-  protected static final String FULLHTML_URL = "/docserver/fulltext";
+  protected static final String HTML_STRING = "&mimeType=html";
    
   @Override
   public String normalizeUrl(String url, ArchivalUnit au) throws PluginException {
-    String parentNormalized = super.normalizeUrl(url, au);
-    if(parentNormalized.contains(REPLACE_STRING)) {
-      parentNormalized = parentNormalized.substring(0,url.lastIndexOf("?"));;
+    if(url.contains(HTML_STRING)) {
+      url = UrlUtil.decodeUrl(url);
     }
-    return parentNormalized;
+    return super.normalizeUrl(url, au);
     
   }
 
