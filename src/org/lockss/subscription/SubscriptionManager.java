@@ -169,6 +169,22 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    */
   public static final boolean DEFAULT_TOTAL_SUBSCRIPTION_ENABLED = false;
 
+  /**
+   * Indication of whether a title is subscribable even if all of its Archival
+   * Units are down.
+   * <p />
+   * Defaults to false.
+   */
+  public static final String PARAM_DOWN_TITLE_IS_SUBSCRIBABLE =
+      PREFIX + "downTitleIsSubscribable";
+
+  /**
+   * Default value of subscribable down title configuration parameter.
+   * <p />
+   * <code>false</code> to disable, <code>true</code> to enable.
+   */
+  public static final boolean DEFAULT_DOWN_TITLE_IS_SUBSCRIBABLE = false;
+
   private static final String CANNOT_CONNECT_TO_DB_ERROR_MESSAGE =
       "Cannot connect to the database";
 
@@ -238,6 +254,8 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
   // regardless of other considerations.
   private SubscriptionStarter mustConfigureStarter = null;
   private Thread mustConfigureStarterThread = null;
+
+  private boolean isDownTitleSubscribable = false;
 
   // Sorter of publications.
   private static Comparator<SerialPublication> PUBLICATION_COMPARATOR =
@@ -465,6 +483,14 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	  && dbManager.isReady()) {
 	updateTotalSubscription(null, new SubscriptionOperationStatus());
       }
+    }
+
+    if (changedKeys.contains(PARAM_DOWN_TITLE_IS_SUBSCRIBABLE)) {
+      isDownTitleSubscribable =
+	  newConfig.getBoolean(PARAM_DOWN_TITLE_IS_SUBSCRIBABLE,
+			  DEFAULT_DOWN_TITLE_IS_SUBSCRIBABLE);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	  + "isDownTitleSubscribable = " + isDownTitleSubscribable);
     }
 
     // Check whether the handling of configuration changes should be done in a
@@ -1163,7 +1189,8 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 
       try {
 	// Check whether the archival unit is not down and it is configured.
-	if (!au.isDown() && configuredAus.contains(au)) {
+	if ((isDownTitleSubscribable || !au.isDown())
+		&& configuredAus.contains(au)) {
 	  // Yes: Get the provider.
 	  provider = au.getTdbProvider();
 	  if (log.isDebug3())
@@ -1679,13 +1706,20 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 
       // Yes: Check whether the TdbTitle is marked as a serial title.
       if (tdbTitle.isSerial()) {
-	// Yes: Loop through the title archival units.
-	for (TdbAu tdbAu : tdbTitle.getTdbAus()) {
-	  // Check whether this archival unit is not down.
-	  if (!tdbAu.isDown()) {
-	    // Yes: The TdbTitle is subscribable; no need to do anything more.
-	    result = true;
-	    break;
+	// Yes: Check whether subscriptions may be specified even for titles
+	// that are down.
+	if (isDownTitleSubscribable) {
+	  // Yes.
+	  result = true;
+	} else {
+	  // No: Loop through the title archival units.
+	  for (TdbAu tdbAu : tdbTitle.getTdbAus()) {
+	    // Check whether this archival unit is not down.
+	    if (!tdbAu.isDown()) {
+	      // Yes: The TdbTitle is subscribable; no need to do anything more.
+	      result = true;
+	      break;
+	    }
 	  }
 	}
 
