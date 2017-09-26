@@ -10,7 +10,11 @@
   plugin = org.lockss.plugin.maffey.ClockssMaffeyPlugin
   param[base_url] = http://www.la-press.com/
   implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
-  #move to SAGE Publishing
+  #move to SAGE Publishing, but not yet to Atypon. Will move "later this year" with the
+  #possible exception of Analytical Chemistry Insights,,1177-3901 Autism Insights,,1179-5964 Cell Biology Insights,,1178-6272 
+  #Clinical Medicine Insights: Dermatology,,1179-5492 Immunotherapy Insights,,1179-1756 Integrative Medicine Insights,,1177-3936
+  #Particle Physics Insights,,1178-640X
+  #See RT8675
 
   {
 
