@@ -890,12 +890,13 @@
       attr[journal_id] = GtES
 #      param[base_url] = http://www.geoth-energ-sci.net/
 #      param[home_url] = http://www.geothermal-energy-science.net/
+       #Moved to Springer
 
-      au < released ; 2013 ; 2013 ; Geothermal Energy Science Volume 1 ; 1 ; http://www.geoth-energ-sci.net/ ; http://www.geothermal-energy-science.net/ >
-      au < released ; 2014 ; 2014 ; Geothermal Energy Science Volume 2 ; 2 ; http://www.geoth-energ-sci.net/ ; http://www.geothermal-energy-science.net/ >
-      au < released ; 2015 ; 2015 ; Geothermal Energy Science Volume 3 ; 3 ; http://www.geoth-energ-sci.net/ ; http://www.geothermal-energy-science.net/ >
-      au < manifest ; 2016 ; 2016 ; Geothermal Energy Science Volume 4 ; 4 ; https://www.geoth-energ-sci.net/ ; https://www.geothermal-energy-science.net/ >
-      au < manifest ; 2017 ; 2017 ; Geothermal Energy Science Volume 5 ; 5 ; https://www.geoth-energ-sci.net/ ; https://www.geothermal-energy-science.net/ >
+      au < down ; 2013 ; 2013 ; Geothermal Energy Science Volume 1 ; 1 ; http://www.geoth-energ-sci.net/ ; http://www.geothermal-energy-science.net/ >
+      au < down ; 2014 ; 2014 ; Geothermal Energy Science Volume 2 ; 2 ; http://www.geoth-energ-sci.net/ ; http://www.geothermal-energy-science.net/ >
+      au < down ; 2015 ; 2015 ; Geothermal Energy Science Volume 3 ; 3 ; http://www.geoth-energ-sci.net/ ; http://www.geothermal-energy-science.net/ >
+      au < doNotProcess ; 2016 ; 2016 ; Geothermal Energy Science Volume 4 ; 4 ; https://www.geoth-energ-sci.net/ ; https://www.geothermal-energy-science.net/ >
+      au < doNotProcess ; 2017 ; 2017 ; Geothermal Energy Science Volume 5 ; 5 ; https://www.geoth-energ-sci.net/ ; https://www.geothermal-energy-science.net/ >
     
    }
     
