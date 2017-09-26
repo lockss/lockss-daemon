@@ -485,7 +485,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Aerodynamics Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Aerodynamics Volume 3 ; 3 ; >
       au < finished ; finished ; 2014 ; International Journal of Aerodynamics Volume 4 ; 4 ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; down ; 2015-2016 ; International Journal of Aerodynamics Volume 5 ; 5 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2015-2016 ; International Journal of Aerodynamics Volume 5 ; 5 ; reingest5.clockss.org:8082 >
       au < expected ; exists ; 2017 ; International Journal of Aerodynamics Volume 6 ; 6 ; >
 
     }
@@ -707,7 +707,7 @@
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Applied Systemic Studies Volume 3 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2011-2012 ; International Journal of Applied Systemic Studies Volume 4 ; 4 ; >
       au < finished ; finished ; 2013-2014 ; International Journal of Applied Systemic Studies Volume 5 ; 5 ; >
-      au < deepCrawl ; down ; 2015-2016 ; International Journal of Applied Systemic Studies Volume 6 ; 6 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2015-2016 ; International Journal of Applied Systemic Studies Volume 6 ; 6 ; reingest2.clockss.org:8085 >
       au < expected ; exists ; 2017 ; International Journal of Applied Systemic Studies Volume 7 ; 7 ; >
 
     }
@@ -1325,7 +1325,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Business Continuity and Risk Management Volume 3 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Business Continuity and Risk Management Volume 4 ; 4 ; >
       au < finished ; finished ; 2014 ; International Journal of Business Continuity and Risk Management Volume 5 ; 5 ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; down ; 2015-2016 ; International Journal of Business Continuity and Risk Management Volume 6 ; 6 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2015-2016 ; International Journal of Business Continuity and Risk Management Volume 6 ; 6 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2017 ; International Journal of Business Continuity and Risk Management Volume 7 ; 7 ; >
 
     }
@@ -1392,7 +1392,7 @@
       param[journal_id] = ijbfmi
 
       au < doNotProcess ; doNotProcess ; 2008-2010 ; International Journal of Business Forecasting and Marketing Intelligence Volume 1 ; 1 ; >
-      au < deepCrawl ; down ; 2015-2016 ; International Journal of Business Forecasting and Marketing Intelligence Volume 2 ; 2 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2015-2016 ; International Journal of Business Forecasting and Marketing Intelligence Volume 2 ; 2 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2017 ; International Journal of Business Forecasting and Marketing Intelligence Volume 3 ; 3 ; >
 
     }
@@ -1889,7 +1889,7 @@
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Computational Materials Science and Surface Engineering Volume 3 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Computational Materials Science and Surface Engineering Volume 4 ; 4 ; >
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Computational Materials Science and Surface Engineering Volume 5 ; 5 ; >
-      au < deepCrawl ; down ; 2014-2016 ; International Journal of Computational Materials Science and Surface Engineering Volume 6 ; 6 ; >
+      au < finished ; crawling ; 2014-2016 ; International Journal of Computational Materials Science and Surface Engineering Volume 6 ; 6 ; reingest2.clockss.org:8085 >
       au < expected ; exists ; 2017 ; International Journal of Computational Materials Science and Surface Engineering Volume 7 ; 7 ; >
 
     }
@@ -2409,7 +2409,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Decision Sciences, Risk and Management Volume 3 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Decision Sciences, Risk and Management Volume 4 ; 4 ; >
       au < finished ; finished ; 2013-2014 ; International Journal of Decision Sciences, Risk and Management Volume 5 ; 5 ; >
-      au < deepCrawl ; down ; 2015-2016 ; International Journal of Decision Sciences, Risk and Management Volume 6 ; 6 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2015-2016 ; International Journal of Decision Sciences, Risk and Management Volume 6 ; 6 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2017 ; International Journal of Decision Sciences, Risk and Management Volume 7 ; 7 ; >
 
     }
@@ -8650,7 +8650,7 @@
 
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Trust Management in Computing and Communications Volume 1 ; 1 ; >
       au < finished ; finished ; 2014 ; International Journal of Trust Management in Computing and Communications Volume 2 ; 2 ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; down ; 2015-2016 ; International Journal of Trust Management in Computing and Communications Volume 3 ; 3 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2015-2016 ; International Journal of Trust Management in Computing and Communications Volume 3 ; 3 ; reingest2.clockss.org:8085 >
       au < expected ; exists ; 2017 ; International Journal of Trust Management in Computing and Communications Volume 4 ; 4 ; >
 
     }
