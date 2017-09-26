@@ -37,7 +37,7 @@
       au < notReady ; exists ; 2014 ; The Chaucer Review Volume 2014 ; 2014 ; > #java.lang.UnsupportedOperationException
       au < frozen ; exists ; 2015 ; The Chaucer Review Volume 2015 ; 2015 ; >
       au < testing ; exists ; 2016 ; The Chaucer Review Volume 2016 ; 2016 ; >
-      au < ready ; exists ; 2017 ; The Chaucer Review Volume 2017 ; 2017 ; >
+      au < crawling ; exists ; 2017 ; The Chaucer Review Volume 2017 ; 2017 ; >
       
   }
   
@@ -55,11 +55,11 @@
       au < frozen ; exists ; 2010 ; Comparative Literature Studies Volume 47 ; 2010 ; >
       au < manifest ; exists ; 2011 ; Comparative Literature Studies Volume 48 ; 2011 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Comparative Literature Studies Volume 49 ; 2012 ; >
-      au < ready ; exists ; 2013 ; Comparative Literature Studies Volume 50 ; 2013 ; >
+      au < crawling ; exists ; 2013 ; Comparative Literature Studies Volume 50 ; 2013 ; >
       au < frozen ; exists ; 2014 ; Comparative Literature Studies Volume 51 ; 2014 ; >
       au < frozen ; exists ; 2015 ; Comparative Literature Studies Volume 52 ; 2015 ; >
       au < testing ; exists ; 2016 ; Comparative Literature Studies Volume 53 ; 2016 ; >
-      au < ready ; exists ; 2017 ; Comparative Literature Studies Volume 54 ; 2017 ; >
+      au < crawling ; exists ; 2017 ; Comparative Literature Studies Volume 54 ; 2017 ; >
       
   }
 
@@ -78,7 +78,7 @@
       au < frozen ; exists ; 2014 ; Critical Philosophy of Race Volume 2 ; 2014 ; >
       au < frozen ; exists ; 2015 ; Critical Philosophy of Race Volume 3 ; 2015 ; >
       au < testing ; exists ; 2016 ; Critical Philosophy of Race Volume 4 ; 2016 ; >
-      au < ready ; exists ; 2017 ; Critical Philosophy of Race Volume 5 ; 2017 ; >
+      au < crawling ; exists ; 2017 ; Critical Philosophy of Race Volume 5 ; 2017 ; >
       
   }
 
@@ -96,10 +96,10 @@
       au < manifest ; exists ; 2011 ; The Edgar Allan Poe Review Volume 12 ; 2011 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; The Edgar Allan Poe Review Volume 13 ; 2012 ; >
       au < frozen ; exists ; 2013 ; The Edgar Allan Poe Review Volume 14 ; 2013 ; >
-      au < ready ; exists ; 2014 ; The Edgar Allan Poe Review Volume 15 ; 2014 ; >
+      au < crawling ; exists ; 2014 ; The Edgar Allan Poe Review Volume 15 ; 2014 ; >
       au < frozen ; exists ; 2015 ; The Edgar Allan Poe Review Volume 16 ; 2015 ; >
       au < frozen ; exists ; 2016 ; The Edgar Allan Poe Review Volume 17 ; 2016 ; >
-      au < ready ; exists ; 2017 ; The Edgar Allan Poe Review Volume 18 ; 2017 ; >
+      au < crawling ; exists ; 2017 ; The Edgar Allan Poe Review Volume 18 ; 2017 ; >
 
   }
 
@@ -116,7 +116,7 @@
       au < manifest ; exists ; 2010 ; The Eugene O'Neill Review Volume 32 ; 2010 ; >
       au < frozen ; exists ; 2012 ; The Eugene O'Neill Review Volume 33 ; 2012 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; The Eugene O'Neill Review Volume 34 ; 2013 ; >
-      au < ready ; exists ; 2014 ; The Eugene O'Neill Review Volume 35 ; 2014 ; >
+      au < crawling ; exists ; 2014 ; The Eugene O'Neill Review Volume 35 ; 2014 ; >
       au < frozen ; exists ; 2015 ; The Eugene O'Neill Review Volume 36 ; 2015 ; >
       au < frozen ; exists ; 2016 ; The Eugene O'Neill Review Volume 37 ; 2016 ; >
       au < expected ; exists ; 2017 ; The Eugene O'Neill Review Volume 38 ; 2017 ; >
@@ -165,7 +165,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; The Good Society Volume 23 ; 2014 ; >
       au < frozen ; exists ; 2015 ; The Good Society Volume 24 ; 2015 ; >
       au < frozen ; exists ; 2016 ; The Good Society Volume 25 ; 2016 ; >
-      au < ready ; exists ; 2017 ; The Good Society Volume 26 ; 2017 ; >
+      au < crawling ; exists ; 2017 ; The Good Society Volume 26 ; 2017 ; >
       
   }
 
@@ -189,7 +189,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Interdisciplinary Literary Studies Volume 16 ; 2014 ; >
       au < frozen ; exists ; 2015 ; Interdisciplinary Literary Studies Volume 17 ; 2015 ; >
       au < ready ; exists ; 2016 ; Interdisciplinary Literary Studies Volume 18 ; 2016 ; >
-      au < ready ; exists ; 2017 ; Interdisciplinary Literary Studies Volume 19 ; 2017 ; >
+      au < crawling ; exists ; 2017 ; Interdisciplinary Literary Studies Volume 19 ; 2017 ; >
       
   }
 
@@ -204,11 +204,11 @@
 
       param[journal_id] = jafrireli
 
-      au < ready ; exists ; 2013 ; Journal of Africana Religions Volume 1-2 ; 2013 ; >
+      au < crawling ; exists ; 2013 ; Journal of Africana Religions Volume 1-2 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Africana Religions Volume 3 ; 2014 ; >
       au < frozen ; exists ; 2015 ; Journal of Africana Religions Volume 4 ; 2015 ; >
-      au < ready ; exists ; 2016 ; Journal of Africana Religions Volume 5 ; 2016 ; >
-      au < ready ; exists ; 2017 ; Journal of Africana Religions Volume 6 ; 2017 ; >
+      au < crawling ; exists ; 2016 ; Journal of Africana Religions Volume 5 ; 2016 ; >
+      au < crawling ; exists ; 2017 ; Journal of Africana Religions Volume 6 ; 2017 ; >
       
   }
 
@@ -229,7 +229,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Assessment and Institutional Effectiveness Volume 4 ; 2014 ; >
       au < frozen ; exists ; 2015 ; Journal of Assessment and Institutional Effectiveness Volume 5 ; 2015 ; >
       au < ready ; exists ; 2016 ; Journal of Assessment and Institutional Effectiveness Volume 6 ; 2016 ; >
-      au < ready ; exists ; 2017 ; Journal of Assessment and Institutional Effectiveness Volume 7 ; 2017 ; >
+      au < crawling ; exists ; 2017 ; Journal of Assessment and Institutional Effectiveness Volume 7 ; 2017 ; >
       
   }
 
@@ -245,12 +245,12 @@
       param[journal_id] = jaynrandstud
 
       au < manifest ; exists ; 2011 ; The Journal of Ayn Rand Studies Volume 11 ; 2011 ; >
-      au < ready ; exists ; 2012 ; The Journal of Ayn Rand Studies Volume 12 ; 2012 ; >
-      au < ready ; exists ; 2013 ; The Journal of Ayn Rand Studies Volume 13 ; 2013 ; >
+      au < crawling ; exists ; 2012 ; The Journal of Ayn Rand Studies Volume 12 ; 2012 ; >
+      au < crawling ; exists ; 2013 ; The Journal of Ayn Rand Studies Volume 13 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; The Journal of Ayn Rand Studies Volume 14 ; 2014 ; >
       au < frozen ; exists ; 2015 ; The Journal of Ayn Rand Studies Volume 15 ; 2015 ; >
       au < ready ; exists ; 2016 ; The Journal of Ayn Rand Studies Volume 16 ; 2016 ; >
-      au < ready ; exists ; 2017 ; The Journal of Ayn Rand Studies Volume 17 ; 2017 ; >
+      au < crawling ; exists ; 2017 ; The Journal of Ayn Rand Studies Volume 17 ; 2017 ; >
       
   }
 
@@ -269,7 +269,7 @@
       au < ready ; exists ; 2014 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 2 ; 2014 ; >
       au < frozen ; exists ; 2015 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 3 ; 2015 ; >
       au < manifest ; exists ; 2016 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 4 ; 2016 ; >
-      au < ready ; exists ; 2017 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 5 ; 2017 ; >
+      au < crawling ; exists ; 2017 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 5 ; 2017 ; >
 
   }
 
@@ -290,8 +290,8 @@
       au < doNotProcess ; doNotProcess ; 2013 ; The Journal of General Education Volume 62 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; The Journal of General Education Volume 63 ; 2014 ; >
       au < frozen ; exists ; 2015 ; The Journal of General Education Volume 64 ; 2015 ; >
-      au < ready ; exists ; 2016 ; The Journal of General Education Volume 65 ; 2016 ; >
-      au < ready ; exists ; 2017 ; The Journal of General Education Volume 66 ; 2017 ; >
+      au < crawling ; exists ; 2016 ; The Journal of General Education Volume 65 ; 2016 ; >
+      au < crawling ; exists ; 2017 ; The Journal of General Education Volume 66 ; 2017 ; >
       
   }
 
@@ -310,11 +310,11 @@
       au < manifest ; exists ; 2010 ; Journal of Medieval Religious Cultures Volume 36 ; 2010 ; >
       au < manifest ; exists ; 2011 ; Journal of Medieval Religious Cultures Volume 37 ; 2011 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Journal of Medieval Religious Cultures Volume 38 ; 2012 ; >
-      au < ready ; exists ; 2013 ; Journal of Medieval Religious Cultures Volume 39 ; 2013 ; >
+      au < crawling ; exists ; 2013 ; Journal of Medieval Religious Cultures Volume 39 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Medieval Religious Cultures Volume 40 ; 2014 ; >
       au < frozen ; exists ; 2015 ; Journal of Medieval Religious Cultures Volume 41 ; 2015 ; >
       au < ready ; exists ; 2016 ; Journal of Medieval Religious Cultures Volume 42 ; 2016 ; >
-      au < ready ; exists ; 2017 ; Journal of Medieval Religious Cultures Volume 43 ; 2017 ; >
+      au < crawling ; exists ; 2017 ; Journal of Medieval Religious Cultures Volume 43 ; 2017 ; >
       
   }
 
@@ -337,7 +337,7 @@
       au < doNotProcess ; doNotProcess ; 2014-2015 ; Journal of Modern Periodical Studies Volume 5 ; 5 ; >
       au < frozen ; exists ; 2015 ; Journal of Modern Periodical Studies Volume 2015 ; 2015 ; >
       au < ready ; exists ; 2016 ; Journal of Modern Periodical Studies Volume 2016 ; 2016 ; >
-      au < ready ; exists ; 2017 ; Journal of Modern Periodical Studies Volume 2017 ; 2017 ; >
+      au < crawling ; exists ; 2017 ; Journal of Modern Periodical Studies Volume 2017 ; 2017 ; >
       
   }
 
@@ -359,7 +359,7 @@
       au < ready ; exists ; 2014 ; Journal of Moravian History Volume 14 ; 2014 ; >
       au < frozen ; exists ; 2015 ; Journal of Moravian History Volume 15 ; 2015 ; >
       au < ready ; exists ; 2016 ; Journal of Moravian History Volume 16 ; 2016 ; >
-      au < ready ; exists ; 2017 ; Journal of Moravian History Volume 17 ; 2017 ; >
+      au < crawling ; exists ; 2017 ; Journal of Moravian History Volume 17 ; 2017 ; >
       
 
   }
@@ -381,7 +381,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; The Journal of Nietzsche Studies Volume 45 ; 2014 ; >
       au < frozen ; exists ; 2015 ; The Journal of Nietzsche Studies Volume 46 ; 2015 ; >
       au < ready ; exists ; 2016 ; The Journal of Nietzsche Studies Volume 47 ; 2016 ; >
-      au < ready ; exists ; 2017 ; The Journal of Nietzsche Studies Volume 48 ; 2017 ; >
+      au < crawling ; exists ; 2017 ; The Journal of Nietzsche Studies Volume 48 ; 2017 ; >
       
   }
 
@@ -403,7 +403,7 @@
       au < ready ; exists ; 2014 ; The Journal of Speculative Philosophy Volume 28 ; 2014 ; >
       au < frozen ; exists ; 2015 ; The Journal of Speculative Philosophy Volume 29 ; 2015 ; >
       au < ready ; exists ; 2016 ; The Journal of Speculative Philosophy Volume 30 ; 2016 ; >
-      au < ready ; exists ; 2017 ; The Journal of Speculative Philosophy Volume 31 ; 2017 ; >
+      au < crawling ; exists ; 2017 ; The Journal of Speculative Philosophy Volume 31 ; 2017 ; >
       
   }
 
@@ -445,12 +445,12 @@
       param[journal_id] = mediterraneanstu
 
       au < doNotProcess ; doNotProcess ; 2010 ; Mediterranean Studies Volume 19 ; 2010 ; >
-      au < ready ; exists ; 2012 ; Mediterranean Studies Volume 20 ; 2012 ; >
+      au < crawling ; exists ; 2012 ; Mediterranean Studies Volume 20 ; 2012 ; >
       au < ready ; exists ; 2013 ; Mediterranean Studies Volume 21 ; 2013 ; >
       au < ready ; exists ; 2014 ; Mediterranean Studies Volume 22 ; 2014 ; >
       au < frozen ; exists ; 2015 ; Mediterranean Studies Volume 23 ; 2015 ; >
-      au < ready ; exists ; 2016 ; Mediterranean Studies Volume 24 ; 2016 ; >
-      au < ready ; exists ; 2017 ; Mediterranean Studies Volume 25 ; 2017 ; >
+      au < crawling ; exists ; 2016 ; Mediterranean Studies Volume 24 ; 2016 ; >
+      au < crawling ; exists ; 2017 ; Mediterranean Studies Volume 25 ; 2017 ; >
       
   }
 
@@ -468,12 +468,12 @@
 
       au < exists ; exists ; 2010 ; Pacific Coast Philology Volume 45 ; 2010 ; >
       au < manifest ; exists ; 2011 ; Pacific Coast Philology Volume 46 ; 2011 ; >
-      au < ready ; exists ; 2012 ; Pacific Coast Philology Volume 47 ; 2012 ; >
+      au < crawling ; exists ; 2012 ; Pacific Coast Philology Volume 47 ; 2012 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Pacific Coast Philology Volume 48 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Pacific Coast Philology Volume 49 ; 2014 ; >
       au < frozen ; exists ; 2015 ; Pacific Coast Philology Volume 50 ; 2015 ; >
       au < ready ; exists ; 2016 ; Pacific Coast Philology Volume 51 ; 2016 ; >
-      au < ready ; exists ; 2017 ; Pacific Coast Philology Volume 52 ; 2017 ; >
+      au < crawling ; exists ; 2017 ; Pacific Coast Philology Volume 52 ; 2017 ; >
       
   }
 
@@ -494,7 +494,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 81 ; 2014 ; >
       au < frozen ; exists ; 2015 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 82 ; 2015 ; >
       au < ready ; exists ; 2016 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 83 ; 2016 ; >
-      au < ready ; exists ; 2017 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 84 ; 2017 ; >
+      au < crawling ; exists ; 2017 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 84 ; 2017 ; >
       
   }
 
@@ -515,8 +515,8 @@
       au < doNotProcess ; doNotProcess ; 2013 ; Philosophy and Rhetoric Volume 46 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Philosophy and Rhetoric Volume 47 ; 2014 ; >
       au < frozen ; exists ; 2015 ; Philosophy and Rhetoric Volume 48 ; 2015 ; >
-      au < ready ; exists ; 2016 ; Philosophy and Rhetoric Volume 49 ; 2016 ; >
-      au < ready ; exists ; 2017 ; Philosophy and Rhetoric Volume 50 ; 2017 ; >
+      au < crawling ; exists ; 2016 ; Philosophy and Rhetoric Volume 49 ; 2016 ; >
+      au < crawling ; exists ; 2017 ; Philosophy and Rhetoric Volume 50 ; 2017 ; >
       
   }
 
@@ -533,10 +533,10 @@
 
       au < ready ; exists ; 2012 ; Preternature: Critical and Historical Studies on the Preternatural Volume 1 ; 2012 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Preternature: Critical and Historical Studies on the Preternatural Volume 2 ; 2013 ; >
-      au < ready ; exists ; 2014 ; Preternature: Critical and Historical Studies on the Preternatural Volume 3 ; 2014 ; >
+      au < crawling ; exists ; 2014 ; Preternature: Critical and Historical Studies on the Preternatural Volume 3 ; 2014 ; >
       au < frozen ; exists ; 2015 ; Preternature: Critical and Historical Studies on the Preternatural Volume 4 ; 2015 ; >
       au < ready ; exists ; 2016 ; Preternature: Critical and Historical Studies on the Preternatural Volume 5 ; 2016 ; >
-      au < ready ; exists ; 2017 ; Preternature: Critical and Historical Studies on the Preternatural Volume 6 ; 2017 ; >
+      au < crawling ; exists ; 2017 ; Preternature: Critical and Historical Studies on the Preternatural Volume 6 ; 2017 ; >
 
   }
 
@@ -555,12 +555,12 @@
 
       au < manifest ; exists ; 2010 ; Reception: Texts, Readers, Audiences, History Volume 2 ; 2010 ; >
       au < manifest ; exists ; 2011 ; Reception: Texts, Readers, Audiences, History Volume 3 ; 2011 ; >
-      au < ready ; exists ; 2012 ; Reception: Texts, Readers, Audiences, History Volume 4 ; 2012 ; >
+      au < crawling ; exists ; 2012 ; Reception: Texts, Readers, Audiences, History Volume 4 ; 2012 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Reception: Texts, Readers, Audiences, History Volume 2013 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Reception: Texts, Readers, Audiences, History Volume 2014 ; 6 ; >
       au < frozen ; exists ; 2015 ; Reception: Texts, Readers, Audiences, History Volume 7 ; 2015 ; >
       au < ready ; exists ; 2016 ; Reception: Texts, Readers, Audiences, History Volume 8 ; 2016 ; >
-      au < ready ; exists ; 2017 ; Reception: Texts, Readers, Audiences, History Volume 9 ; 2017 ; >
+      au < crawling ; exists ; 2017 ; Reception: Texts, Readers, Audiences, History Volume 9 ; 2017 ; >
 
   }
 
@@ -582,8 +582,8 @@
       au < ready ; exists ; 2013 ; SHAW The Annual of Bernard Shaw Studies Volume 33 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; SHAW The Annual of Bernard Shaw Studies Volume 34 ; 2014 ; >
       au < frozen ; exists ; 2015 ; SHAW: The Journal of Bernard Shaw Studies Volume 35 ; 2015 ; >
-      au < ready ; exists ; 2016 ; SHAW: The Journal of Bernard Shaw Studies Volume 36 ; 2016 ; >
-      au < ready ; exists ; 2017 ; SHAW: The Journal of Bernard Shaw Studies Volume 37 ; 2017 ; >
+      au < crawling ; exists ; 2016 ; SHAW: The Journal of Bernard Shaw Studies Volume 36 ; 2016 ; >
+      au < crawling ; exists ; 2017 ; SHAW: The Journal of Bernard Shaw Studies Volume 37 ; 2017 ; >
       
   }
 
@@ -602,10 +602,10 @@
       au < manifest ; exists ; 2011 ; Soundings: An Interdisciplinary Journal Volume 94 ; 2011 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Soundings: An Interdisciplinary Journal Volume 95 ; 2012 ; >
       au < ready ; exists ; 2013 ; Soundings: An Interdisciplinary Journal Volume 96 ; 2013 ; >
-      au < ready ; exists ; 2014 ; Soundings: An Interdisciplinary Journal Volume 97 ; 2014 ; >
+      au < crawling ; exists ; 2014 ; Soundings: An Interdisciplinary Journal Volume 97 ; 2014 ; >
       au < frozen ; exists ; 2015 ; Soundings: An Interdisciplinary Journal Volume 98 ; 2015 ; >
       au < ready ; exists ; 2016 ; Soundings: An Interdisciplinary Journal Volume 99 ; 2016 ; >
-      au < ready ; exists ; 2017 ; Soundings: An Interdisciplinary Journal Volume 100 ; 2017 ; >
+      au < crawling ; exists ; 2017 ; Soundings: An Interdisciplinary Journal Volume 100 ; 2017 ; >
       
   }
 
@@ -622,12 +622,12 @@
 
       au < manifest ; exists ; 2010 ; Steinbeck Review Volume 7 ; 2010 ; >
       au < manifest ; exists ; 2011 ; Steinbeck Review Volume 8 ; 2011 ; >
-      au < ready ; exists ; 2012 ; Steinbeck Review Volume 9 ; 2012 ; >
+      au < crawling ; exists ; 2012 ; Steinbeck Review Volume 9 ; 2012 ; >
       au < ready ; exists ; 2013 ; Steinbeck Review Volume 10 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Steinbeck Review Volume 11 ; 2014 ; >
       au < frozen ; exists ; 2015 ; Steinbeck Review Volume 12 ; 2015 ; >
-      au < ready ; exists ; 2016 ; Steinbeck Review Volume 13 ; 2016 ; >
-      au < ready ; exists ; 2017 ; Steinbeck Review Volume 14 ; 2017 ; >
+      au < crawling ; exists ; 2016 ; Steinbeck Review Volume 13 ; 2016 ; >
+      au < crawling ; exists ; 2017 ; Steinbeck Review Volume 14 ; 2017 ; >
       
   }
 
@@ -645,11 +645,11 @@
       au < manifest ; exists ; 2010 ; Studies in American Jewish Literature Volume 29 ; 2010 ; >
       au < manifest ; exists ; 2011 ; Studies in American Jewish Literature Volume 30 ; 2011 ; >
       au < ready ; exists ; 2012 ; Studies in American Jewish Literature Volume 31 ; 2012 ; >
-      au < ready ; exists ; 2013 ; Studies in American Jewish Literature Volume 32 ; 2013 ; >
-      au < ready ; exists ; 2014 ; Studies in American Jewish Literature Volume 33 ; 2014 ; >
+      au < crawling ; exists ; 2013 ; Studies in American Jewish Literature Volume 32 ; 2013 ; >
+      au < crawling ; exists ; 2014 ; Studies in American Jewish Literature Volume 33 ; 2014 ; >
       au < frozen ; exists ; 2015 ; Studies in American Jewish Literature Volume 34 ; 2015 ; >
-      au < ready ; exists ; 2016 ; Studies in American Jewish Literature Volume 35 ; 2016 ; >
-      au < ready ; exists ; 2017 ; Studies in American Jewish Literature Volume 36 ; 2017 ; >
+      au < crawling ; exists ; 2016 ; Studies in American Jewish Literature Volume 35 ; 2016 ; >
+      au < crawling ; exists ; 2017 ; Studies in American Jewish Literature Volume 36 ; 2017 ; >
       
   }
 
@@ -666,12 +666,12 @@
 
       au < manifest ; exists ; 2010 ; Transportation Journal Volume 49 ; 2010 ; >
       au < manifest ; exists ; 2011 ; Transportation Journal Volume 50 ; 2011 ; >
-      au < ready ; exists ; 2012 ; Transportation Journal Volume 51 ; 2012 ; >
-      au < ready ; exists ; 2013 ; Transportation Journal Volume 52 ; 2013 ; >
+      au < crawling ; exists ; 2012 ; Transportation Journal Volume 51 ; 2012 ; >
+      au < crawling ; exists ; 2013 ; Transportation Journal Volume 52 ; 2013 ; >
       au < ready ; exists ; 2014 ; Transportation Journal Volume 53 ; 2014 ; >
       au < frozen ; exists ; 2015 ; Transportation Journal Volume 54 ; 2015 ; >
       au < ready ; exists ; 2016 ; Transportation Journal Volume 55 ; 2016 ; >
-      au < ready ; exists ; 2017 ; Transportation Journal Volume 56 ; 2017 ; >
+      au < crawling ; exists ; 2017 ; Transportation Journal Volume 56 ; 2017 ; >
       
   }
 
@@ -688,12 +688,12 @@
 
       au < manifest ; exists ; 2010 ; Utopian Studies Volume 21 ; 2010 ; >
       au < manifest ; exists ; 2011 ; Utopian Studies Volume 22 ; 2011 ; >
-      au < ready ; exists ; 2012 ; Utopian Studies Volume 23 ; 2012 ; >
+      au < crawling ; exists ; 2012 ; Utopian Studies Volume 23 ; 2012 ; >
       au < ready ; exists ; 2013 ; Utopian Studies Volume 24 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Utopian Studies Volume 25 ; 2014 ; >
       au < frozen ; exists ; 2015 ; Utopian Studies Volume 26 ; 2015 ; >
       au < ready ; exists ; 2016 ; Utopian Studies Volume 27 ; 2016 ; >
-      au < ready ; exists ; 2017 ; Utopian Studies Volume 28 ; 2017 ; >
+      au < crawling ; exists ; 2017 ; Utopian Studies Volume 28 ; 2017 ; >
       
   }
 
