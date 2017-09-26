@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
- Copyright (c) 2013-2016 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2017 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -1324,9 +1320,9 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     if (log.isDebug3())
       log.debug3(DEBUG_HEADER + "subscriptionSeq = " + subscriptionSeq);
 
-    // Delete all the subscribed ranges.
+    // Delete all the subscription ranges.
     int deletedRangesCount =
-	subManagerSql.deleteSubscriptionTypeRanges(conn, subscriptionSeq, true);
+	subManagerSql.deleteAllSubscriptionRanges(conn, subscriptionSeq);
     if (log.isDebug3())
       log.debug3(DEBUG_HEADER + "deletedRangesCount = " + deletedRangesCount);
 

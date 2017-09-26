@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
- Copyright (c) 2015 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2015-2017 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -41,6 +37,43 @@ import org.lockss.test.LockssTestCase;
  * @author Fernando Garcia-Loygorri
  */
 public class TestSubscriptionManagement extends LockssTestCase {
+
+  /**
+   * Check the behavior of getLiteralTriBoxValue().
+   */
+  public final void testGetLiteralTriBoxValue() {
+    SubscriptionManagement sm = new SubscriptionManagement();
+    assertNull(sm.getLiteralTriBoxValue(null, null));
+
+    Map<String,String> parameterMap = new HashMap<String, String>();
+    assertNull(sm.getLiteralTriBoxValue(parameterMap, null));
+    assertNull(sm.getLiteralTriBoxValue(parameterMap, ""));
+    assertNull(sm.getLiteralTriBoxValue(parameterMap, "   "));
+
+    String id = "testId";
+    assertNull(sm.getLiteralTriBoxValue(parameterMap, id));
+
+    parameterMap.put(id, null);
+    assertNull(sm.getLiteralTriBoxValue(parameterMap, id));
+
+    String hiddenId =
+	id + SubscriptionManagement.TRI_STATE_WIDGET_HIDDEN_ID_SUFFIX;
+
+    parameterMap.put(hiddenId, null);
+    assertNull(sm.getLiteralTriBoxValue(parameterMap, id));
+
+    parameterMap.put(hiddenId,
+	SubscriptionManagement.TRI_STATE_WIDGET_HIDDEN_ID_UNSET_VALUE);
+    assertEquals("unset", sm.getLiteralTriBoxValue(parameterMap, id));
+
+    parameterMap.put(hiddenId, Boolean.FALSE.toString());
+    assertEquals(Boolean.FALSE.toString(),
+		sm.getLiteralTriBoxValue(parameterMap, id));
+
+    parameterMap.put(hiddenId, Boolean.TRUE.toString());
+    assertEquals(Boolean.TRUE.toString(),
+		sm.getLiteralTriBoxValue(parameterMap, id));
+  }
 
   /**
    * Check the behavior of getTriBoxValue().
