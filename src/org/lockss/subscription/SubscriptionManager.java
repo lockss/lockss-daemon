@@ -185,6 +185,22 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    */
   public static final boolean DEFAULT_DOWN_TITLE_IS_SUBSCRIBABLE = false;
 
+  /**
+   * Indication of whether subscription synchronization will result in whole
+   * title subscriptions instead of range subscriptions.
+   * <p />
+   * Defaults to false.
+   */
+  public static final String PARAM_SYNCHRONIZE_WHOLE_TITLE =
+      PREFIX + "synchronizeWholeTitle";
+
+  /**
+   * Default value of whole title synchronization configuration parameter.
+   * <p />
+   * <code>false</code> to disable, <code>true</code> to enable.
+   */
+  public static final boolean DEFAULT_SYNCHRONIZE_WHOLE_TITLE = false;
+
   private static final String CANNOT_CONNECT_TO_DB_ERROR_MESSAGE =
       "Cannot connect to the database";
 
@@ -256,6 +272,8 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
   private Thread mustConfigureStarterThread = null;
 
   private boolean isDownTitleSubscribable = false;
+
+  private boolean isWholeTitleSynchronization = false;
 
   // Sorter of publications.
   private static Comparator<SerialPublication> PUBLICATION_COMPARATOR =
@@ -491,6 +509,14 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 			  DEFAULT_DOWN_TITLE_IS_SUBSCRIBABLE);
       if (log.isDebug3()) log.debug3(DEBUG_HEADER
 	  + "isDownTitleSubscribable = " + isDownTitleSubscribable);
+    }
+
+    if (changedKeys.contains(PARAM_SYNCHRONIZE_WHOLE_TITLE)) {
+      isWholeTitleSynchronization =
+	  newConfig.getBoolean(PARAM_SYNCHRONIZE_WHOLE_TITLE,
+			  DEFAULT_SYNCHRONIZE_WHOLE_TITLE);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	  + "isWholeTitleSynchronization = " + isWholeTitleSynchronization);
     }
 
     // Check whether the handling of configuration changes should be done in a
@@ -1195,6 +1221,16 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	  provider = au.getTdbProvider();
 	  if (log.isDebug3())
 	    log.debug3(DEBUG_HEADER + "provider = " + provider);
+
+	  // Check whether the subscription needs to be for the whole title, not
+	  // subscription ranges.
+	  if (isWholeTitleSynchronization) {
+	    // Yes: Specify a period that covers any time.
+	    periodsByProvider.put(provider,
+			Collections.singletonList(BibliographicPeriod.ALL_TIME_PERIOD));
+	    // No more processing to do for this Archival Unit.
+	    continue;
+	  }
 
 	  // Check whether there is a provider change.
 	  if (lastProvider != null && !lastProvider.equals(provider)) {
