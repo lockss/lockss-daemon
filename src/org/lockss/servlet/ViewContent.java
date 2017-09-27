@@ -298,20 +298,20 @@ public class ViewContent extends LockssServlet {
 	lnk.attribute("target", "CuMeta");
       }
       tbl.add(lnk);
+    }
 
-      CachedUrl cu = au.makeCachedUrl(url);
-      if (cu.hasContent()) {
-	if (au.getLinkExtractor(cu.getContentType()) != null) {
-	  tbl.newRow();
-	  tbl.newCell("align=left");
-	  Link extrlnk =
-	    new Link(srvURL(AdminServletManager.SERVLET_LIST_OBJECTS,
-			    PropUtil.fromArgs("type", "extracturls",
-					      "auid", au.getAuId(),
-					      "url", url)),
-		     "Extract URLs");
-	  tbl.add(extrlnk);
-	}
+    CachedUrl cu = au.makeCachedUrl(url);
+    if (cu.hasContent()) {
+      if (au.getLinkExtractor(cu.getContentType()) != null) {
+	tbl.newRow();
+	tbl.newCell("align=left");
+	Link extrlnk =
+	  new Link(srvURL(AdminServletManager.SERVLET_LIST_OBJECTS,
+			  PropUtil.fromArgs("type", "extracturls",
+					    "auid", au.getAuId(),
+					    "url", url)),
+		   "Extract URLs");
+	tbl.add(extrlnk);
       }
     }
 
