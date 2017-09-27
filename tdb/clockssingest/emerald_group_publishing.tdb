@@ -1453,6 +1453,7 @@
     comment[journal_issn] = 1477-7274
     param[journal_id] = cgij
     # online from 2003
+    #continued_by = 2059-4631
 
     au < manifest ; exists ; 2003 ; Clinical Governance: An International Journal Volume 8 ; 8 ; >
     au < manifest ; exists ; 2004 ; Clinical Governance: An International Journal Volume 9 ; 9 ; >
@@ -1467,6 +1468,21 @@
     au < manifest ; exists ; 2013 ; Clinical Governance: An International Journal Volume 18 ; 18 ; >
     au < frozen ; exists ; 2014 ; Clinical Governance: An International Journal Volume 19 ; 19 ; >
     au < frozen ; exists ; 2015 ; Clinical Governance: An International Journal Volume 20 ; 20 ; >
+
+  }
+
+  {
+    title <
+      name = International Journal of Health Governance ;
+      issn = 2059-4631 ;
+      issnl = 2059-4631
+    >
+
+    param[journal_id] = ijhg
+    #continues = 1477-7274
+
+    au < exists ; exists ; 2016 ; International Journal of Health Governance Volume 21 ; 21 ; >
+    au < exists ; exists ; 2017 ; International Journal of Health Governance Volume 22 ; 22 ; >
 
   }
 
@@ -1760,6 +1776,7 @@
 
     comment[journal_issn] = 1352-7606
     param[journal_id] = ccm
+    #continued_by = 2059-5794
 
     au < manifest ; exists ; 1994 ; Cross Cultural Management: An International Journal Volume 1 ; 1 ; >
     au < manifest ; exists ; 1995 ; Cross Cultural Management: An International Journal Volume 2 ; 2 ; >
@@ -1783,6 +1800,21 @@
     au < manifest ; exists ; 2013 ; Cross Cultural Management: An International Journal Volume 20 ; 20 ; >
     au < frozen ; exists ; 2014 ; Cross Cultural Management: An International Journal Volume 21 ; 21 ; >
     au < frozen ; exists ; 2015 ; Cross Cultural Management: An International Journal Volume 22 ; 22 ; >
+
+  }
+
+  {
+    title <
+      name = Cross Cultural & Strategic Management ;
+      issn = 2059-5794 ;
+      issnl = 2059-5794
+    >
+
+    param[journal_id] = ccsm
+    #continues = 1352-7606
+
+    au < exists ; exists ; 2016 ; Cross Cultural & Strategic Management Volume 23 ; 23 ; >
+    au < exists ; exists ; 2017 ; Cross Cultural & Strategic Management Volume 24 ; 24 ; >
 
   }
 
@@ -3640,6 +3672,21 @@
     au < manifest ; exists ; 2013 ; International Journal of Commerce and Management Volume 23 ; 23 ; >
     au < finished ; finished ; 2014 ; International Journal of Commerce and Management Volume 24 ; 24 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; International Journal of Commerce and Management Volume 25 ; 25 ; reingest3.clockss.org:8083 >
+
+  }
+
+  {
+    title <
+      name = Review of International Business and Strategy ;
+      issn = 2059-6014 ;
+      issnl = 2059-6014
+    >
+
+    param[journal_id] = ijcoma
+    #continued_by = 1056-9219
+
+    au < exists ; exists ; 2016 ; Review of International Business and Strategy Volume 26 ; 26 ; >
+    au < exists ; exists ; 2017 ; Review of International Business and Strategy Volume 27 ; 27 ; >
 
   }
 
