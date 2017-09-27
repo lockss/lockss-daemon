@@ -81,7 +81,8 @@
       au < HighWirePressH20Plugin ; released ; 2013 ; American Literary Scholarship 2013 ; 2011 >
       au < HighWirePressH20Plugin ; released ; 2014 ; American Literary Scholarship 2014 ; 2012 >
       au < HighWirePressH20Plugin ; released ; 2015 ; American Literary Scholarship 2015 ; 2013 >
-      au < HighWirePressH20Plugin ; expected ; 2016 ; American Literary Scholarship 2016 ; 2014 >
+      au < HighWirePressH20Plugin ; exists ; 2016 ; American Literary Scholarship 2016 ; 2014 >
+      au < HighWirePressH20Plugin ; exists ; 2017 ; American Literary Scholarship 2017 ; 2015 >
 
     }
 
@@ -895,7 +896,7 @@
 
   }
 
-  {
+  {6
     title <
       name = Environmental Humanities ;
       eissn = 2201-1919 ;
@@ -914,9 +915,7 @@
       au < HighWirePressH20Plugin ; released ; 2015 ; Environmental Humanities Volume 6 ; 6 >
       au < HighWirePressH20Plugin ; released ; 2015 ; Environmental Humanities Volume 7 ; 7 >
       au < HighWirePressH20Plugin ; released ; 2016 ; Environmental Humanities Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; manifest ; 2016 ; Environmental Humanities Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; expected ; 2017 ; Environmental Humanities Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; expected ; 2017 ; Environmental Humanities Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; manifest ; 2017 ; Environmental Humanities Volume 9 ; 9 >
 
   }
 
