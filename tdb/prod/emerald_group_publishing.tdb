@@ -502,14 +502,29 @@
 
     comment[journal_issn] = 2044-2084
     param[journal_id] = am
+    #continued_by = 2056-4945
+    #stopped publishing after volume 4.
 
     au < doNotProcess ; 2011 ; Arts Marketing: An International Journal Volume 1 ; 1 >
     au < doNotProcess ; 2012 ; Arts Marketing: An International Journal Volume 2 ; 2 >
     au < released ; 2013 ; Arts Marketing: An International Journal Volume 3 ; 3 >
     au < released ; 2014 ; Arts Marketing: An International Journal Volume 4 ; 4 >
-    au < manifest ; 2015 ; Arts Marketing: An International Journal Volume 5 ; 5 >
-    au < manifest ; 2016 ; Arts Marketing: An International Journal Volume 6 ; 6 >
-    au < manifest ; 2017 ; Arts Marketing: An International Journal Volume 7 ; 7 >
+
+  }
+
+  {
+    title <
+      name = Arts and the Market ;
+      issn = 2056-4945 ;
+      issnl = 2056-4945
+    >
+
+    param[journal_id] = aam
+    #continues = 2044-2084
+
+    au < manifest ; 2015 ; Arts and the Market Volume 5 ; 5 >
+    au < manifest ; 2016 ; Arts and the Market Volume 6 ; 6 >
+    au < manifest ; 2017 ; Arts and the Market Volume 7 ; 7 >
 
   }
 
