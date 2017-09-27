@@ -199,7 +199,7 @@
     au < finished ; finished ; 2014 ; British Journal of Midwifery Volume 22 ; 22 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; British Journal of Midwifery Volume 23 ; 23 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2016 ; British Journal of Midwifery Volume 24 ; 24 ; >
-    au < ready ; exists ; 2017 ; British Journal of Midwifery Volume 25 ; 25 ; >
+    au < crawling ; exists ; 2017 ; British Journal of Midwifery Volume 25 ; 25 ; >
 
   }
 
@@ -381,7 +381,7 @@
     au < finished ; finished ; 2014 ; International Journal of Palliative Nursing Volume 20 ; 20 ; >
     au < finished ; finished ; 2015 ; International Journal of Palliative Nursing Volume 21 ; 21 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; International Journal of Palliative Nursing Volume 22 ; 22 ; >
-    au < ready ; exists ; 2017 ; International Journal of Palliative Nursing Volume 23 ; 23 ; >
+    au < crawling ; exists ; 2017 ; International Journal of Palliative Nursing Volume 23 ; 23 ; >
 
   }
 
@@ -426,7 +426,7 @@
     au < finished ; finished ; 2014 ; International Paramedic Practice Volume 4 ; 4 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; International Paramedic Practice Volume 5 ; 5 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; International Paramedic Practice Volume 6 ; 6 ; >
-    au < ready ; exists ; 2017 ; International Paramedic Practice Volume 7 ; 7 ; >
+    au < crawling ; exists ; 2017 ; International Paramedic Practice Volume 7 ; 7 ; >
 
   }
 
@@ -478,7 +478,7 @@
     au < frozen ; exists ; 2014 ; Journal of Health Visiting Volume 2 ; 2 ; >
     au < finished ; finished ; 2015 ; Journal of Health Visiting Volume 3 ; 3 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; Journal of Health Visiting Volume 4 ; 4 ; >
-    au < ready ; exists ; 2017 ; Journal of Health Visiting Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2017 ; Journal of Health Visiting Volume 5 ; 5 ; >
 
   }
 
@@ -568,7 +568,7 @@
     au < finished ; finished ; 2014 ; Nurse Prescribing Volume 12 ; 12 ; >
     au < finished ; finished ; 2015 ; Nurse Prescribing Volume 13 ; 13 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2016 ; Nurse Prescribing Volume 14 ; 14 ; >
-    au < ready ; exists ; 2017 ; Nurse Prescribing Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2017 ; Nurse Prescribing Volume 15 ; 15 ; >
 
   }
 
@@ -658,7 +658,7 @@
     au < finished ; finished ; 2014 ; Equine Health Volume 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Equine Health Volume 2015 ; 2015 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; Equine Health Volume 2016 ; 2016 ; >
-    au < ready ; exists ; 2017 ; Equine Health Volume 2017 ; 2017 ; >
+    au < crawling ; exists ; 2017 ; Equine Health Volume 2017 ; 2017 ; >
 
   }
 
@@ -737,7 +737,7 @@
     au < finished ; finished ; 2014 ; Child Care Volume 11 ; 11 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Child Care Volume 12 ; 12 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; Child Care Volume 13 ; 13 ; >
-    au < ready ; exists ; 2017 ; Child Care Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2017 ; Child Care Volume 14 ; 14 ; >
 
   }
 
@@ -761,7 +761,7 @@
     au < finished ; finished ; 2015 ; Early Years Educator (EYE) Volume 16 ; 16 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; Early Years Educator (EYE) Volume 17 ; 17 ; >
     au < deepCrawl ; exists ; 2016 ; Early Years Educator (EYE) Volume 18 ; 18 ; >
-    au < ready ; exists ; 2017 ; Early Years Educator (EYE) Volume 19 ; 19 ; >
+    au < crawling ; exists ; 2017 ; Early Years Educator (EYE) Volume 19 ; 19 ; >
     au < expected ; exists ; 2017 ; Early Years Educator (EYE) Volume 20 ; 20 ; >
 
   }
@@ -868,7 +868,7 @@
     au < finished ; finished ; 2014 ; Primary Teacher Update Volume 2014 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Primary Teacher Update Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; Primary Teacher Update Volume 2016 ; 2016 ; >
-    au < ready ; exists ; 2017 ; Primary Teacher Update Volume 2017 ; 2017 ; >
+    au < crawling ; exists ; 2017 ; Primary Teacher Update Volume 2017 ; 2017 ; >
 
   }
 
@@ -890,7 +890,7 @@
     au < finished ; finished ; 2014 ; SecEd Volume 2014 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; SecEd Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; SecEd Volume 2016 ; 2016 ; >
-    au < ready ; exists ; 2017 ; SecEd Volume 2017 ; 2017 ; >
+    au < crawling ; exists ; 2017 ; SecEd Volume 2017 ; 2017 ; >
 
   }
 
