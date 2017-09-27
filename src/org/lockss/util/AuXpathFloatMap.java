@@ -122,15 +122,15 @@ public class AuXpathFloatMap {
 
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("[pm: ");
+    sb.append("[auxpathmap: ");
     if (patternMap.isEmpty()) {
       sb.append("EMPTY");
     } else {
       for (Iterator<Map.Entry<AuXpathMatcher,Float>> iter = patternMap.entrySet().iterator(); iter.hasNext(); ) {
 	Map.Entry<AuXpathMatcher,Float> ent = iter.next();
 	sb.append("[");
-	// sb.append(ent.getKey().getPattern());
-	// sb.append(": ");
+	sb.append(ent.getKey().getXpath());
+	sb.append(": ");
 	sb.append(ent.getValue());
 	sb.append("]");
 	if (iter.hasNext()) {

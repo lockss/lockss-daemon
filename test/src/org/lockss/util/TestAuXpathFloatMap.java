@@ -120,4 +120,9 @@ public class TestAuXpathFloatMap extends LockssTestCase {
     assertEquals(20.0f, map.getMatch(au2));
   }
 
+  public void testToString() {
+    assertEquals("[auxpathmap: [[tdbAu/attrs/year > 2012]: 10.0], [[tdbAu/attrs/year <= 2012]: 20.0]]",
+		 new AuXpathFloatMap(map1).toString());
+  }
+
 }

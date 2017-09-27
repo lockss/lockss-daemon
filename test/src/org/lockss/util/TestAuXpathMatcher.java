@@ -144,4 +144,8 @@ public class TestAuXpathMatcher extends LockssTestCase {
     assertNotMatch(au1, "[tdbAu/attrs/pollerhost = $myhost]");
   }
 
+  public void testToString() {
+    assertEquals("[AuXpath: [tdbAu/name='foo']]",
+		 AuXpathMatcher.create("[tdbAu/name='foo']").toString());
+  }
 }

@@ -38,16 +38,19 @@ import org.lockss.plugin.*;
 /**
  * Matches an AU against an XPath predicate.  The object to which the XPath
  * is applied is a restricted view of an AU, with the attributes
- * <code>name</code>, <code>auid</code>, and </code>tdbAu</code>, from which
+ * <code>name</code>, <code>auId</code>, and </code>tdbAu</code>, from which
  * the AU's config params, tdb attributes, title, publisher, etc. may be
  * accessed.  Examples:
  * <ul>
 
  * <li><code>[name='AuName']</code> - True if the AU name is "AuName"</li>
- * <li><code>[year >= 1996 and year <= 2005]</code> - True if the year (see
- * below) is between 1996 and 2005</li>
- * <li><code>[RE:isMatchRe(tdbAu/journalTitle, '^JAMA')]</code> - True if the journal title starts with "JAMA"</li>
- * <li><code>[RE:isMatchRe(tdbAu/params/base_url, '\.univ\.edu/(path1|path2)')]</code> - True if the base_url config param matches the regexp</li>
+ * <li><code>[tdbAu/year >= 1996 and tdbAu/year <= 2005]</code> - True if
+ * the year (see below) is between 1996 and 2005</li>
+ * <li><code>[RE:isMatchRe(tdbAu/journalTitle, '^JAMA')]</code> - True if
+ * the journal title starts with "JAMA"</li>
+ * <li><code>[RE:isMatchRe(tdbAu/params/base_url,
+ * '\.univ\.edu/(path1|path2)')]</code> - True if the base_url config param
+ * matches the regexp</li>
  * </ul><br>
  * Expressions may access the tdb attribute and AU config param maps,
  * various scalar data and a number of convenience accessors.  For a
@@ -55,7 +58,7 @@ import org.lockss.plugin.*;
 
  * <ul>
  * <li><code>name</code> - AU name</li>
- * <li><code>auid</code> - AUID</li>
+ * <li><code>auId</code> - AUID</li>
  * <li><code>tdbAu/name</code> - AU name in tdb</li>
  * <li><code>tdbAu/params/<i>param_name</i></code> - named AU config parameter</li>
  * <li><code>tdbAu/attrs/<i>attr_name</i></code> - named tdb attribute</li>
