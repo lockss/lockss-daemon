@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>11</string>
+    <string>12</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -17,7 +17,7 @@
   </entry>
    <entry>
     <string>plugin_parent_version</string>
-    <string>18</string>
+    <string>19</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -44,5 +44,9 @@
     <list>
       <string>500=org.lockss.plugin.pub2web.ms.MsHttpResponseHandler</string>
     </list>
+  </entry>
+  <entry>
+    <string>text/html_link_rewriter_factory</string>
+    <string>org.lockss.plugin.pub2web.ms.MsHtmlLinkRewriterFactory</string>
   </entry>
 </map>
