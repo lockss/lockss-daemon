@@ -43,7 +43,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpSession;
 import org.apache.commons.collections.FactoryUtils;
 import org.apache.commons.collections.map.MultiValueMap;
-import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.config.TdbPublisher;
 import org.lockss.config.TdbUtil;
@@ -167,8 +166,10 @@ public class SubscriptionManagement extends LockssServlet {
 
   private PluginManager pluginManager;
   private SubscriptionManager subManager;
-  private int maxSingleTabPublicationCount;
-  private int maxSingleTabPublisherCount;
+  private static int maxSingleTabPublicationCount =
+      DEFAULT_MAX_SINGLE_TAB_PUBLICATION_COUNT;
+  private static int maxSingleTabPublisherCount =
+      DEFAULT_MAX_SINGLE_TAB_PUBLISHER_COUNT;
 
   /**
    * Initializes the configuration when loaded.
@@ -182,16 +183,24 @@ public class SubscriptionManagement extends LockssServlet {
     super.init(config);
     pluginManager = getLockssDaemon().getPluginManager();
     subManager = getLockssDaemon().getSubscriptionManager();
-    configure();
+  }
+
+  /**
+   * Called by org.lockss.config.MiscConfig
+   */
+  public static void setConfig(Configuration config,
+			       Configuration oldConfig,
+			       Configuration.Differences diffs) {
+    if (diffs.contains(PREFIX)) {
+      setTabRequirementCounts(config);
+    }
   }
 
   /**
    * Handles configuration options.
    */
-  private void configure() {
-    final String DEBUG_HEADER = "config(): ";
-    Configuration config = ConfigManager.getCurrentConfig();
-
+  private static void setTabRequirementCounts(Configuration config) {
+    final String DEBUG_HEADER = "setTabRequirementCounts(): ";
     // Get the number of publications beyond which a multi-tabbed interface is
     // to be used.
     maxSingleTabPublicationCount =
