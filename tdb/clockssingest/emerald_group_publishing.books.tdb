@@ -1240,18 +1240,26 @@
       #param[journal_issn] = 0270-4013
       #series = ase
 
-      au < manifest ; exists ; 2001 ;  ; 9780762308187 ; 9780762308187 ; Autistic Spectrum Disorders: Educational and Clinical Interventions Volume 14 ; >
-      au < manifest ; exists ; 2003 ;  ; 9780762309757 ; 9780762309757 ; Effective Education for Learners with Exceptionalities Volume 15 ; >
-      au < manifest ; exists ; 2005 ;  ; 9780762311309 ; 9780762311309 ; Current Perspectives on Learning Disabilities Volume 16 ; >
-      au < manifest ; exists ; 2006 ;  ; 9780762313419 ; 9780762313419 ; Current Perspectives in Special Education Administration Volume 17 ; >
-      au < manifest ; exists ; 2008 ;  ; 9781848553569 ; 9781848553569 ; Autism and Developmental Disabilities: Current Practices and Issues Volume 18 ; >
-      au < manifest ; exists ; 2009 ;  ; 9781848556683 ; 9781848556683 ; Current Issues and Trends in Special Education: Identification, Assessment and Instruction Volume 19 ; >
-      au < manifest ; exists ; 2010 ;  ; 9781849509541 ; 9781849509541 ; Current Issues and Trends in Special Education: Research, Technology, and Teacher Preparation Volume 20 ; >
-      au < manifest ; exists ; 2011 ;  ; 9780857246295 ; 9780857246295 ; History of Special Education Volume 21 ; >
-      au < manifest ; exists ; 2012 ;  ; 9781780525044 ; 9781780525044 ; Behavioral Disorders: Identification, Assessment, and Instruction of Students with EBD Volume 22 ; >
-      au < manifest ; exists ; 2012 ;  ; 9781780525068 ; 9781780525068 ; Behavioral Disorders: Practice Concerns and Students with EBD Volume 23 ; >
-      au < manifest ; exists ; 2013 ;  ; 9781781904251 ; 9781781904251 ; Learning Disabilities: Identification, Assessment, and Instruction of Students with LD Volume 24 ; >
-      au < manifest ; exists ; 2013 ;  ; 9781781904275 ; 9781781904275 ; Learning Disabilities: Practice Concerns And Students With LD Volume 25 ; >
+      au < manifest ; exists ; 2001 ; 9780762308187 ; 9781849501200 ; 9781849501200 ; Autistic Spectrum Disorders: Educational and Clinical Interventions Volume 14 ; >
+      au < manifest ; exists ; 2003 ; 9780762309757 ; 9781849501866 ; 9781849501866 ; Effective Education for Learners with Exceptionalities Volume 15 ; >
+      au < manifest ; exists ; 2005 ; 9780762311309 ; 9781849502870 ; 9781849502870 ; Current Perspectives on Learning Disabilities Volume 16 ; >
+      au < manifest ; exists ; 2006 ; 9780762313419 ; 9781849504386 ; 9781849504386 ; Current Perspectives in Special Education Administration Volume 17 ; >
+      au < manifest ; exists ; 2008 ; 9781848553569 ; 9781848553576 ; 9781848553576 ; Autism and Developmental Disabilities: Current Practices and Issues Volume 18 ; >
+      au < manifest ; exists ; 2009 ; 9781848556683 ; 9781848556690 ; 9781848556690 ; Current Issues and Trends in Special Education: Identification, Assessment and Instruction Volume 19 ; >
+      au < manifest ; exists ; 2010 ; 9781849509541 ; 9781849509558 ; 9781849509558 ; Current Issues and Trends in Special Education: Research, Technology, and Teacher Preparation Volume 20 ; >
+      au < manifest ; exists ; 2011 ; 9780857246295 ; 9780857246301 ; 9780857246301 ; History of Special Education Volume 21 ; >
+      au < manifest ; exists ; 2012 ; 9781780525044 ; 9781780525051 ; 9781780525051 ; Behavioral Disorders: Identification, Assessment, and Instruction of Students with EBD Volume 22 ; >
+      au < manifest ; exists ; 2012 ; 9781780525068 ; 9781780525075 ; 9781780525075 ; Behavioral Disorders: Practice Concerns and Students with EBD Volume 23 ; >
+      au < manifest ; exists ; 2013 ; 9781781904251 ; 9781781904268 ; 9781781904268 ; Learning Disabilities: Identification, Assessment, and Instruction of Students with LD Volume 24 ; >
+      au < manifest ; exists ; 2013 ; 9781781904275 ; 9781781904282 ; 9781781904282 ; Learning Disabilities: Practice Concerns And Students With LD Volume 25 ; >
+      au < exists ; exists ; 2014 ; 9781783507412 ; 9781783507429 ; 9781783507429 ; Gifted Education: Current Perspectives and Issues Volume 26 ; >
+      au < exists ; exists ; 2014 ; 9781784410452 ; 9781784410445 ; 9781784410445 ; Special Education International Perspectives: Biopsychosocial, Cultural, and Disability Aspects Volume 27 ; >
+      au < exists ; exists ; 2014 ; 9781784410964 ; 9781784410957 ; 9781784410957 ; Special Education International Perspectives: Practices Across the Globe Volume 28 ; >
+      au < exists ; exists ; 2015 ; 9781784416584 ; 9781784416577 ; 9781784416577 ; The Broad Autism Phenotype Volume 29 ; >
+      au < exists ; exists ; 2015 ; 9781784416607 ; 9781784416591 ; 9781784416591 ; Interdisciplinary Connections to Special Education: Important Aspects to Consider Volume 30A ; >
+      au < exists ; exists ; 2015 ; 9781784416645 ; 9781784416638 ; 9781784416638 ; Interdisciplinary Connections to Special Education: Key Related Professionals Involved Volume 30B ; >
+      au < exists ; exists ; 2016 ; 9781786355423 ; 9781786355416 ; 9781786355416 ; General and Special Education Inclusion in an Age of Change: Impact on Students with Disabilities Volume 31 ; >
+      au < exists ; exists ; 2016 ; 9781786355447 ; 9781786355430 ; 9781786355430 ; General and Special Education Inclusion in an Age of Change: Roles of Professionals Involved Volume 32 ; >
 
   }
 
@@ -1264,20 +1272,29 @@
       >
 
       #param[journal_issn] = 0742-3322
+      #series = astm
 
-      au < manifest ; exists ; 2000 ;  ; 9780762306619 ; 9780762306619 ; Economics Meets Sociology in Strategic Management Volume 17 ; >
-      au < manifest ; exists ; 2001 ;  ; 9780762307210 ; 9780762307210 ; Multiunit Organization and Multimarket Strategy Volume 18 ; >
-      au < manifest ; exists ; 2002 ;  ; 9780762309030 ; 9780762309030 ; The New Institutionalism in Strategic Management Volume 19 ; >
-      au < manifest ; exists ; 2003 ;  ; 9780762310340 ; 9780762310340 ; Geography and Strategy Volume 20 ; >
-      au < manifest ; exists ; 2004 ;  ; 9780762311354 ; 9780762311354 ; Business Strategy over the Industry Lifecycle Volume 21 ; >
-      au < manifest ; exists ; 2005 ;  ; 9780762312009 ; 9780762312009 ; Strategy Process Volume 22 ; >
-      au < manifest ; exists ; 2006 ;  ; 9780762313389 ; 9780762313389 ; Ecology and Strategy Volume 23 ; >
-      au < manifest ; exists ; 2007 ;  ; 9780762314270 ; 9780762314270 ; Real Options Theory Volume 24 ; >
-      au < manifest ; exists ; 2008 ;  ; 9780762314423 ; 9780762314423 ; Network Strategy Volume 25 ; >
-      au < manifest ; exists ; 2009 ;  ; 9781848554863 ; 9781848554863 ; Economic Institutions of Strategy Volume 26 ; >
-      au < manifest ; exists ; 2010 ;  ; 9781849508988 ; 9781849508988 ; The Globalization of Strategy Research Volume 27 ; >
-      au < manifest ; exists ; 2011 ;  ; 9781780521923 ; 9781780521923 ; Project-Based Organizing and Strategic Management Volume 28 ; >
-      au < manifest ; exists ; 2012 ;  ; 9781781900246 ; 9781781900246 ; History and Strategy Volume 29 ; >
+      au < manifest ; exists ; 2000 ; 9780762306619 ; 9781849500517 ; 9781849500517 ; Economics Meets Sociology in Strategic Management Volume 17 ; >
+      au < manifest ; exists ; 2001 ; 9780762307210 ; 9781849500807 ; 9781849500807 ; Multiunit Organization and Multimarket Strategy Volume 18 ; >
+      au < manifest ; exists ; 2002 ; 9780762309030 ; 9781849501644 ; 9781849501644 ; The New Institutionalism in Strategic Management Volume 19 ; >
+      au < manifest ; exists ; 2003 ; 9780762310340 ; 9781849502214 ; 9781849502214 ; Geography and Strategy Volume 20 ; >
+      au < manifest ; exists ; 2004 ; 9780762311354 ; 9781849502917 ; 9781849502917 ; Business Strategy over the Industry Lifecycle Volume 21 ; >
+      au < manifest ; exists ; 2005 ; 9780762312009 ; 9781849503402 ; 9781849503402 ; Strategy Process Volume 22 ; >
+      au < manifest ; exists ; 2006 ; 9780762313389 ; 9781849504355 ; 9781849504355 ; Ecology and Strategy Volume 23 ; >
+      au < manifest ; exists ; 2007 ; 9780762314270 ; 9781849504942 ; 9781849504942 ; Real Options Theory Volume 24 ; >
+      au < manifest ; exists ; 2008 ; 9780762314423 ; 9781849505314 ; 9781849505314 ; Network Strategy Volume 25 ; >
+      au < manifest ; exists ; 2009 ; 9781848554863 ; 9781848554870 ; 9781848554870 ; Economic Institutions of Strategy Volume 26 ; >
+      au < manifest ; exists ; 2010 ; 9781849508988 ; 9781849508995 ; 9781849508995 ; The Globalization of Strategy Research Volume 27 ; >
+      au < manifest ; exists ; 2011 ; 9781780521923 ; 9781780521930 ; 9781780521930 ; Project-Based Organizing and Strategic Management Volume 28 ; >
+      au < manifest ; exists ; 2012 ; 9781781900246 ; 9781781900253 ; 9781781900253 ; History and Strategy Volume 29 ; >
+      au < exists ; exists ; 2013 ; 9781781908266 ; 9781781908273 ; 9781781908273 ; Collaboration and Competition in Business Ecosystems Volume 30 ; >
+      au < exists ; exists ; 2014 ; 9781783504930 ; 9781783504947 ; 9781783504947 ; Finance and Strategy Volume 31 ; >
+      au < exists ; exists ; 2015 ; 9781784419462 ; 9781784419455 ; 9781784419455 ; Cognition and Strategy Volume 32 ; >
+      au < exists ; exists ; 2015 ; 9781785604638 ; 9781785604621 ; 9781785604621 ; Business Models and Modelling Volume 33 ; >
+      au < exists ; exists ; 2016 ; 9781786350206 ; 9781786350190 ; 9781786350190 ; Strategy Beyond Markets Volume 34 ; >
+      au < exists ; exists ; 2016 ; 9781786355089 ; 9781786355072 ; 9781786355072 ; Resource Redeployment and Corporate Strategy Volume 35 ; >
+      au < exists ; exists ; 2017 ; 9781787142770 ; 9781787142763 ; 9781787142763 ; Geography, Location, and Strategy Volume 36 ; >
+      au < exists ; exists ; 2017 ; 9781787430808 ; 9781787430792 ; 9781787430792 ; Entrepreneurship, Innovation, and Platforms Volume 37 ; >
 
   }
 
@@ -1290,6 +1307,7 @@
       >
 
       #param[journal_issn] = 2051-5030
+      #series = asej
 
       au < manifest ; exists ; 2013 ;  ; 9781781906255 ; 9781781906255 ; International Business, Sustainability and Corporate Social Responsibility Volume 11 ; >
 
