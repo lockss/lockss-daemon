@@ -15857,25 +15857,27 @@
       #param[base_url] = http://ice.sagepub.com/
       comment[merged_into] = 2056-9971
       
-      au < frozen ; exists ; 1970 ; Journal of Education and Christian Belief Volume 13 ; 13 ; icea ; >
-      au < manifest ; exists ; 1971 ; Journal of Education and Christian Belief Volume 14 ; 14 ; icea ; >
-      au < manifest ; exists ; 1972 ; Journal of Education and Christian Belief Volume 15 ; 15 ; icea ; >
-      au < manifest ; exists ; 1973 ; Journal of Education and Christian Belief Volume 16 ; 16 ; icea ; >
+      au < exists ; exists ; 1997 ; Journal of Education and Christian Belief Volume 1 ; 1 ; icea ; >
+      au < exists ; exists ; 1998 ; Journal of Education and Christian Belief Volume 2 ; 2 ; icea ; >
+      au < exists ; exists ; 1999 ; Journal of Education and Christian Belief Volume 3 ; 3 ; icea ; >
+      au < exists ; exists ; 2000 ; Journal of Education and Christian Belief Volume 4 ; 4 ; icea ; >
+      au < exists ; exists ; 2001 ; Journal of Education and Christian Belief Volume 5 ; 5 ; icea ; >
+      au < exists ; exists ; 2002 ; Journal of Education and Christian Belief Volume 6 ; 6 ; icea ; >
+      au < exists ; exists ; 2003 ; Journal of Education and Christian Belief Volume 7 ; 7 ; icea ; >
+      au < exists ; exists ; 2004 ; Journal of Education and Christian Belief Volume 8 ; 8 ; icea ; >
+      au < exists ; exists ; 2005 ; Journal of Education and Christian Belief Volume 9 ; 9 ; icea ; >
+      au < exists ; exists ; 2006 ; Journal of Education and Christian Belief Volume 10 ; 10 ; icea ; >
+      au < exists ; exists ; 2007 ; Journal of Education and Christian Belief Volume 11 ; 11 ; icea ; >
+      au < exists ; exists ; 2008 ; Journal of Education and Christian Belief Volume 12 ; 12 ; icea ; >
+      au < frozen ; exists ; 2009 ; Journal of Education and Christian Belief Volume 13 ; 13 ; icea ; >
+      au < exists ; exists ; 2010 ; Journal of Education and Christian Belief Volume 14 ; 14 ; icea ; >
+      au < exists ; exists ; 2011 ; Journal of Education and Christian Belief Volume 15 ; 15 ; icea ; >
+      au < exists ; exists ; 2012 ; Journal of Education and Christian Belief Volume 16 ; 16 ; icea ; >
+      au < exists ; exists ; 2013 ; Journal of Education and Christian Belief Volume 17 ; 17 ; icea ; >
+      au < exists ; exists ; 2014 ; Journal of Education and Christian Belief Volume 18 ; 18 ; icea ; >
       
-      au < manifest ; exists ; 1999 ; Journal of Education and Christian Belief Volume 42 ; 42 ; icea ; >
-      au < manifest ; exists ; 2000 ; Journal of Education and Christian Belief Volume 43 ; 43 ; icea ; >
-      au < manifest ; exists ; 2001 ; Journal of Education and Christian Belief Volume 44 ; 44 ; icea ; >
-      au < manifest ; exists ; 2002 ; Journal of Education and Christian Belief Volume 45 ; 45 ; icea ; >
-      au < manifest ; exists ; 2003 ; Journal of Education and Christian Belief Volume 46 ; 46 ; icea ; >
-      au < manifest ; exists ; 2004 ; Journal of Education and Christian Belief Volume 47 ; 47 ; icea ; >
-      au < manifest ; exists ; 2005 ; Journal of Education and Christian Belief Volume 48 ; 48 ; icea ; >
-      au < manifest ; exists ; 2006 ; Journal of Education and Christian Belief Volume 49 ; 49 ; icea ; >
-      au < manifest ; exists ; 2007 ; Journal of Education and Christian Belief Volume 50 ; 50 ; icea ; >
-      au < testing ; exists ; 2008 ; Journal of Education and Christian Belief Volume 51 ; 51 ; icea ; >
-      au < manifest ; exists ; 2009 ; Journal of Education and Christian Belief Volume 52 ; 52 ; icea ; >
-      au < manifest ; exists ; 2010 ; Journal of Education and Christian Belief Volume 53 ; 53 ; icea ; >
-      au < frozen ; exists ; 2011 ; Journal of Education and Christian Belief Volume 54 ; 54 ; icea ; >
-      au < frozen ; exists ; 2012 ; Journal of Education and Christian Belief Volume 55 ; 55 ; icea ; >
+      au < superseded ; exists ; 2011 ; Journal of Education and Christian Belief Volume 54 [superseded] ; 54 ; icea ; >
+      au < superseded ; exists ; 2012 ; Journal of Education and Christian Belief Volume 55 [superseded] ; 55 ; icea ; >
       #became International Journal of Christianity and Education 
 
   }
@@ -30051,7 +30053,7 @@
       au < exists ; exists ; 2012 ; Netherlands Quarterly of Human Rights Volume 30 ; 30 ; nqha ; >
       au < exists ; exists ; 2013 ; Netherlands Quarterly of Human Rights Volume 31 ; 31 ; nqha ; >
       au < exists ; exists ; 2014 ; Netherlands Quarterly of Human Rights Volume 32 ; 32 ; nqha ; >
-      au < exists ; exists ; 2016 ; Netherlands Quarterly of Human Rights Volume 33 ; 33 ; nqha ; >
+      au < exists ; exists ; 2015 ; Netherlands Quarterly of Human Rights Volume 33 ; 33 ; nqha ; >
       au < frozen ; exists ; 2016 ; Netherlands Quarterly of Human Rights Volume 34 ; 34 ; nqha ; >
       au < crawling ; exists ; 2017 ; Netherlands Quarterly of Human Rights Volume 35 ; 35 ; nqha ; >
 
@@ -30861,11 +30863,11 @@
       au < frozen ; exists ; 2013 ; OMEGA - Journal of Death and Dying Volume 67 ; 67 ; omea ; >
       au < doNotProcess ; doNotProcess ; 2013-2014 ; OMEGA - Journal of Death and Dying Volume 68 ; 68 ; omea ; >
       au < doNotProcess ; doNotProcess ; 2014 ; OMEGA - Journal of Death and Dying Volume 69 ; 69 ; omea ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; OMEGA - Journal of Death and Dying Volume 70 ; 70 ; omea ; >
+      au < doNotProcess ; doNotProcess ; 2014-2015 ; OMEGA - Journal of Death and Dying Volume 70 ; 70 ; omea ; >
       au < doNotProcess ; doNotProcess ; 2015 ; OMEGA - Journal of Death and Dying Volume 71 ; 71 ; omea ; >
-      au < frozen ; exists ; 2016 ; OMEGA - Journal of Death and Dying Volume 72 ; 72 ; omea ; >
+      au < frozen ; exists ; 2015-2016 ; OMEGA - Journal of Death and Dying Volume 72 ; 72 ; omea ; >
       au < frozen ; exists ; 2016 ; OMEGA - Journal of Death and Dying Volume 73 ; 73 ; omea ; >
-      au < crawling ; exists ; 2017 ; OMEGA - Journal of Death and Dying Volume 74 ; 74 ; omea ; >
+      au < crawling ; exists ; 2016-2017 ; OMEGA - Journal of Death and Dying Volume 74 ; 74 ; omea ; >
       au < crawling ; exists ; 2017 ; OMEGA - Journal of Death and Dying Volume 75 ; 75 ; omea ; >
 
   }
@@ -32602,7 +32604,7 @@
       au < manifest ; exists ; 1988 ; The Prison Journal Volume 68 ; 68 ; tpjd ; >
       au < manifest ; exists ; 1989 ; The Prison Journal Volume 69 ; 69 ; tpjd ; >
       au < manifest ; exists ; 1990 ; The Prison Journal Volume 70 ; 70 ; tpjd ; >
-      au < doesNotExist ; doesNotExist ; 0 ; The Prison Journal Volume 71 ; 71 ; tpja ; >
+      au < doesNotExist ; doesNotExist ; 0 ; The Prison Journal Volume 71 ; 71 ; tpjd ; >
       au < manifest ; exists ; 1992 ; The Prison Journal Volume 72 ; 72 ; tpjd ; >
       au < manifest ; exists ; 1993 ; The Prison Journal Volume 73 ; 73 ; tpjd ; >
       au < manifest ; exists ; 1994 ; The Prison Journal Volume 74 ; 74 ; tpjd ; >
@@ -40391,15 +40393,15 @@
       au < manifest ; exists ; 1992-1993 ; Update: Applications of Research in Music Education Volume 11 ; 11 ; upda ; >
       au < manifest ; exists ; 1993-1994 ; Update: Applications of Research in Music Education Volume 12 ; 12 ; upda ; >
       au < manifest ; exists ; 1994-1995 ; Update: Applications of Research in Music Education Volume 13 ; 13 ; upda ; >
-      au < manifest ; exists ; 1995 ; Update: Applications of Research in Music Education Volume 14 ; 14 ; upda ; >
-      au < manifest ; exists ; 1996 ; Update: Applications of Research in Music Education Volume 15 ; 15 ; upda ; >
-      au < manifest ; exists ; 1997 ; Update: Applications of Research in Music Education Volume 16 ; 16 ; upda ; >
+      au < manifest ; exists ; 1995-1996 ; Update: Applications of Research in Music Education Volume 14 ; 14 ; upda ; >
+      au < manifest ; exists ; 1996-1997 ; Update: Applications of Research in Music Education Volume 15 ; 15 ; upda ; >
+      au < manifest ; exists ; 1997-1998 ; Update: Applications of Research in Music Education Volume 16 ; 16 ; upda ; >
       au < manifest ; exists ; 1998 ; Update: Applications of Research in Music Education Volume 17 ; 17 ; upda ; >
       au < manifest ; exists ; 1999-2000 ; Update: Applications of Research in Music Education Volume 18 ; 18 ; upda ; >
       au < manifest ; exists ; 2000-2001 ; Update: Applications of Research in Music Education Volume 19 ; 19 ; upda ; >
       au < manifest ; exists ; 2001-2002 ; Update: Applications of Research in Music Education Volume 20 ; 20 ; upda ; >
       au < manifest ; exists ; 2002 ; Update: Applications of Research in Music Education Volume 21 ; 21 ; upda ; >
-      au < manifest ; exists ; 2003-2004 ; Update: Applications of Research in Music Education Volume 22 ; 22 ; upda ; >
+      au < manifest ; exists ; 2002-2004 ; Update: Applications of Research in Music Education Volume 22 ; 22 ; upda ; >
       au < manifest ; exists ; 2004-2005 ; Update: Applications of Research in Music Education Volume 23 ; 23 ; upda ; >
       au < manifest ; exists ; 2005-2006 ; Update: Applications of Research in Music Education Volume 24 ; 24 ; upda ; >
       au < manifest ; exists ; 2006-2007 ; Update: Applications of Research in Music Education Volume 25 ; 25 ; upda ; >
@@ -40407,13 +40409,13 @@
       au < doNotProcess ; doNotProcess ; 2008-2009 ; Update: Applications of Research in Music Education Volume 27 ; 27 ; upda ; >
       au < doNotProcess ; doNotProcess ; 2009-2010 ; Update: Applications of Research in Music Education Volume 28 ; 28 ; upda ; >
       au < doNotProcess ; doNotProcess ; 2010-2011 ; Update: Applications of Research in Music Education Volume 29 ; 29 ; upda ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; Update: Applications of Research in Music Education Volume 30 ; 30 ; upda ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; Update: Applications of Research in Music Education Volume 31 ; 31 ; upda ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; Update: Applications of Research in Music Education Volume 32 ; 32 ; upda ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; Update: Applications of Research in Music Education Volume 33 ; 33 ; upda ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; Update: Applications of Research in Music Education Volume 34 ; 34 ; upda ; >
-      au < frozen ; exists ; 2016 ; Update: Applications of Research in Music Education Volume 35 ; 35 ; upda ; >
-      au < crawling ; exists ; 2017 ; Update: Applications of Research in Music Education Volume 36 ; 36 ; upda ; >
+      au < doNotProcess ; doNotProcess ; 2011-2012 ; Update: Applications of Research in Music Education Volume 30 ; 30 ; upda ; >
+      au < doNotProcess ; doNotProcess ; 2012-2013 ; Update: Applications of Research in Music Education Volume 31 ; 31 ; upda ; >
+      au < doNotProcess ; doNotProcess ; 2013-2014 ; Update: Applications of Research in Music Education Volume 32 ; 32 ; upda ; >
+      au < doNotProcess ; doNotProcess ; 2014-2015 ; Update: Applications of Research in Music Education Volume 33 ; 33 ; upda ; >
+      au < doNotProcess ; doNotProcess ; 2015-2016 ; Update: Applications of Research in Music Education Volume 34 ; 34 ; upda ; >
+      au < frozen ; exists ; 2016-2017 ; Update: Applications of Research in Music Education Volume 35 ; 35 ; upda ; >
+      au < crawling ; exists ; 2017-2018 ; Update: Applications of Research in Music Education Volume 36 ; 36 ; upda ; >
 
     }
 
@@ -44429,6 +44431,33 @@
     {
 
       title <
+        name = International Journal of Care Pathways ;
+        issn = 2040-4026 ;
+        eissn = 2040-4034 ;
+        issnl = 2040-4026
+      >
+
+        #param[base_url] = http://icp.sagepub.com/
+        comment[continued_by] = 2053-4354
+        # dooNotProcess, name changed after 2007
+
+        au < manifest ; exists ; 1997 ; International Journal of Care Pathways Volume 1 ; 1 ; icpa ; >
+        au < manifest ; exists ; 1998 ; International Journal of Care Pathways Volume 2 ; 2 ; icpb ; >
+        au < manifest ; exists ; 1999 ; International Journal of Care Pathways Volume 3 ; 3 ; icpb ; >
+        au < manifest ; exists ; 2000 ; International Journal of Care Pathways Volume 4 ; 4 ; icpb ; >
+        au < manifest ; exists ; 2001 ; International Journal of Care Pathways Volume 5 ; 5 ; icpc ; >
+        au < manifest ; exists ; 2002 ; International Journal of Care Pathways Volume 6 ; 6 ; icpc ; >
+        au < manifest ; exists ; 2003 ; International Journal of Care Pathways Volume 7 ; 7 ; icpc ; >
+        au < manifest ; exists ; 2004 ; International Journal of Care Pathways Volume 8 ; 8 ; icpc ; >
+        au < manifest ; exists ; 2005 ; International Journal of Care Pathways Volume 9 ; 9 ; icpc ; >
+        au < exists ; exists ; 2006 ; International Journal of Care Pathways Volume 10 ; 10 ; icpc ; >
+        au < manifest ; exists ; 2007 ; International Journal of Care Pathways Volume 11 ; 11 ; icpc ; >
+
+      }
+
+    {
+
+      title <
         name = International Journal of Care Coordination ;
         eissn = 2053-4353 ;
         issnl = 2053-4353
@@ -44446,42 +44475,6 @@
         au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Care Coordination Volume 18 ; 18 ; icpe ; >
         au < frozen ; exists ; 2016 ; International Journal of Care Coordination Volume 19 ; 19 ; icpe ; >
         au < manifest ; exists ; 2017 ; International Journal of Care Coordination Volume 20 ; 20 ; icpe ; >
-
-    }
-
-    {
-
-      title <
-        name = International Journal of Care Pathways ;
-        issn = 2040-4026 ;
-        eissn = 2040-4034 ;
-        issnl = 2040-4026
-      >
-
-      {
-
-        #param[base_url] = http://icp.sagepub.com/
-        comment[continued_by] = 2053-4354
-        # dooNotProcess, name changed after 2007
-
-        au < manifest ; exists ; 1997 ; International Journal of Care Pathways Volume 1 ; 1 ; icpa ; >
-        au < manifest ; exists ; 1998 ; International Journal of Care Pathways Volume 2 ; 2 ; icpb ; >
-        au < manifest ; exists ; 1999 ; International Journal of Care Pathways Volume 3 ; 3 ; icpb ; >
-        au < manifest ; exists ; 2000 ; International Journal of Care Pathways Volume 4 ; 4 ; icpb ; >
-        au < manifest ; exists ; 2001 ; International Journal of Care Pathways Volume 5 ; 5 ; icpc ; >
-        au < manifest ; exists ; 2002 ; International Journal of Care Pathways Volume 6 ; 6 ; icpc ; >
-        au < manifest ; exists ; 2003 ; International Journal of Care Pathways Volume 7 ; 7 ; icpc ; >
-        au < manifest ; exists ; 2004 ; International Journal of Care Pathways Volume 8 ; 8 ; icpc ; >
-        au < manifest ; exists ; 2005 ; International Journal of Care Pathways Volume 9 ; 9 ; icpc ; >
-        au < exists ; exists ; 2006 ; International Journal of Care Pathways Volume 10 ; 10 ; icpc ; >
-        au < manifest ; exists ; 2007 ; International Journal of Care Pathways Volume 11 ; 11 ; icpc ; >
-        #au < doNotProcess ; doNotProcess ; 2008 ; International Journal of Care Pathways Volume 12 ; 12 ; icpc ; >
-        #au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Care Pathways Volume 13 ; 13 ; icpc ; >
-        #au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Care Pathways Volume 14 ; 14 ; icpc ; >
-        #au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Care Pathways Volume 15 ; 15 ; icpc ; >
-        #au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Care Pathways Volume 16 ; 16 ; icpc ; >
-
-      }
 
     }
 
