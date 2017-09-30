@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -199,6 +199,12 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
     shouldCacheTest(ROOT_URL + "content/1/1/e123.2", true, au);
     shouldCacheTest(ROOT_URL + "content/1/1/e123.2.long", true, au);
     shouldCacheTest(ROOT_URL + "content/1/1/e123.2.data", true, au);
+    shouldCacheTest(ROOT_URL + "content/1/1/e123.2.full", false, au);
+    shouldCacheTest(ROOT_URL + "content/1/1/e123.2.full.txt", false, au);
+    shouldCacheTest(ROOT_URL + "content/1/1/e123.2.full.pdf", true, au);
+    shouldCacheTest(ROOT_URL + "content/1/1/e123.2.full.pdf+html", true, au);
+    shouldCacheTest(ROOT_URL + "content/1/1/e123.2.full-text.pdf+html", true, au);
+    shouldCacheTest(ROOT_URL + "content/1/Supplement_2/1234S2.1.full.pdf", true, au);
     
     shouldCacheTest(ROOT_URL + "content/os-86/1_suppl_2/2.abstract", false, au);
     shouldCacheTest(ROOT_URL + "content/os-86/1_suppl_2/2.long", true, au);
@@ -404,14 +410,15 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
         );
     
     
-    assert(au.makeSubstanceUrlPatterns().size() == 1);
+    assertTrue(au.makeSubstanceUrlPatterns().size() == 2);
     boolean found = false;
     
     // List<Pattern> pat_list = au.makeSubstanceUrlPatterns();
     // The above Pattern is org.apache.oro.text.regex.Pattern, not compatible with java.util.regex.Pattern
-    // <string>"^https?://%s/content(/[^/.]+)?/([^/.]+)(/[^/.]+)?/(((?:bmj\.)?[^/.]+?|\d+\.\d+))(\.(?:full([.]pdf)?)?)$",
+    // <string>"^https?://%s/content(/[^/.]+)?/([^/.]+)(/[^/.]+)?/(((?:(bmj|[ivx]+)\.)?[^/.]+?(\.\d+)?))(\.(?:full([.]pdf)?)?)$", url_host(base_url)</string>
+    // <string>"^https?://%s/content(/[^/.]+)?/([^/.]+)(/[^/.]+)?/((ENEURO|wpt)\.[0-9.-]+)(\.(?:full([.]pdf)?)?)$", url_host(base_url)</string>
     
-    String strPat = "^" + ROOT_URL + "content(/[^/.]+)?/([^/.]+)(/[^/.]+)?/(((?:bmj\\.)?[^/.]+?|\\d+\\.\\d+))(\\.(?:full([.]pdf)?)?)$";
+    String strPat = "^" + ROOT_URL + "content(/[^/.]+)?/([^/.]+)(/[^/.]+)?/(((?:(bmj|[ivx]+)\\.)?[^/.]+?(\\.\\d+)?))(\\.(?:full([.]pdf)?)?)$";
     Pattern thisPat = Pattern.compile(strPat);
     String lastUrl = "";
     

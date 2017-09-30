@@ -47,7 +47,6 @@ import org.lockss.app.LockssDaemon;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.base.DefaultUrlCacher;
-import org.lockss.plugin.ContentValidationException;
 import org.lockss.plugin.definable.*;
 
 public class TestMsResponseHandler extends LockssTestCase {
@@ -106,7 +105,7 @@ public class TestMsResponseHandler extends LockssTestCase {
     
     conn.setURL(suppl_url);
     exc = ((HttpResultMap)plugin.getCacheResultMap()).mapException(au, conn, 500, "foo");
-    assert(exc instanceof CacheException.RetryDeadLinkException);
+    assertTrue(exc instanceof CacheException.NoRetryDeadLinkException);
     
   }
   

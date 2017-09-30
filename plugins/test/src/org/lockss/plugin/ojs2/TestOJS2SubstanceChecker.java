@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -136,7 +136,7 @@ public class TestOJS2SubstanceChecker extends LockssTestCase {
   public void testCheckSubstanceRules() throws Exception {
     ArchivalUnit tau = makeAu(ROOT_URL, JOURNAL_ID, "2014");
        
-    assert(tau.makeSubstanceUrlPatterns().size() == 1);
+    assertTrue(tau.makeSubstanceUrlPatterns().size() == 1);
     boolean found = false;
     
     // <string>"^%s(?:index[.]php/)?(?:%s/)?article/(?:view(?:File)?|download)/[^/]+/[^/?#&amp;.]+([./]pdf)?$", base_url, journal_id</string>
