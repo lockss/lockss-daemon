@@ -87,7 +87,7 @@
       au < doNotProcess ; doNotProcess ; 2010-2011 ; American Journal of Finance and Accounting Volume 2 ; 2 ; >
       au < finished ; finished ; 2013 ; American Journal of Finance and Accounting Volume 3 ; 3 ; >
       au < finished ; crawling ; 2015-2016 ; American Journal of Finance and Accounting Volume 4 ; 4 ; reingest1.clockss.org:8082 >
-      au < testing ; exists ; 2017 ; American Journal of Finance and Accounting Volume 5 ; 5 ; >
+      au < ready ; exists ; 2017 ; American Journal of Finance and Accounting Volume 5 ; 5 ; >
 
     }
 
@@ -361,7 +361,7 @@
       au < frozen ; exists ; 2016 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 23 ; 23 ; >
       au < crawling ; exists ; 2017 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 24 ; 24 ; >
       au < crawling ; exists ; 2017 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 25 ; 25 ; >
-      au < testing ; exists ; 2017 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 26 ; 26 ; >
+      au < ready ; exists ; 2017 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 26 ; 26 ; >
 
     }
 
@@ -725,7 +725,7 @@
 
       au < doNotProcess ; doNotProcess ; 2008-2010 ; International Journal of Arab Culture, Management and Sustainable Development Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2011-2012 ; International Journal of Arab Culture, Management and Sustainable Development Volume 2 ; 2 ; >
-      au < testing ; exists ; 2017 ; International Journal of Arab Culture, Management and Sustainable Development Volume 3 ; 3 ; >
+      au < ready ; exists ; 2017 ; International Journal of Arab Culture, Management and Sustainable Development Volume 3 ; 3 ; >
 
     }
 
@@ -3142,7 +3142,7 @@
       au < deepCrawl ; exists ; 2016 ; International Journal of Entrepreneurship and Small Business Volume 29 ; 29 ; >
       au < crawling ; exists ; 2017 ; International Journal of Entrepreneurship and Small Business Volume 30 ; 30 ; >
       au < crawling ; exists ; 2017 ; International Journal of Entrepreneurship and Small Business Volume 31 ; 31 ; >
-      au < testing ; exists ; 2017 ; International Journal of Entrepreneurship and Small Business Volume 32 ; 32 ; >
+      au < ready ; exists ; 2017 ; International Journal of Entrepreneurship and Small Business Volume 32 ; 32 ; >
 
     }
 
@@ -3673,7 +3673,7 @@
       param[journal_id] = ijgsds
 
       au < deepCrawl ; exists ; 2015-2016 ; International Journal of Gender Studies in Developing Societies Volume 1 ; 1 ; >
-      au < testing ; exists ; 2017 ; International Journal of Gender Studies in Developing Societies Volume 2 ; 2 ; >
+      au < ready ; exists ; 2017 ; International Journal of Gender Studies in Developing Societies Volume 2 ; 2 ; >
 
     }
 
@@ -3784,7 +3784,7 @@
       au < deepCrawl ; exists ; 2016 ; International Journal of Global Warming Volume 10 ; 10 ; >
       au < crawling ; exists ; 2017 ; International Journal of Global Warming Volume 11 ; 11 ; >
       au < crawling ; exists ; 2017 ; International Journal of Global Warming Volume 12 ; 12 ; >
-      au < testing ; exists ; 2017 ; International Journal of Global Warming Volume 13 ; 13 ; >
+      au < ready ; exists ; 2017 ; International Journal of Global Warming Volume 13 ; 13 ; >
 
     }
 
@@ -4600,7 +4600,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Integrated Supply Management Volume 7 ; 7 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Integrated Supply Management Volume 8 ; 8 ; >
       au < finished ; finished ; 2014-2015 ; International Journal of Integrated Supply Management Volume 9 ; 9 ; >
-      au < manifest ; exists ; 2016 ; International Journal of Integrated Supply Management Volume 10 ; 10 ; >
+      au < testing ; exists ; 2016 ; International Journal of Integrated Supply Management Volume 10 ; 10 ; >
       au < crawling ; exists ; 2017 ; International Journal of Integrated Supply Management Volume 11 ; 11 ; >
 
     }
@@ -6582,7 +6582,7 @@
       au < doNotProcess ; doNotProcess ; 2010-2011 ; International Journal of Organisational Design and Engineering Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Organisational Design and Engineering Volume 2 ; 2 ; >
       au < finished ; finished ; 2013-2014 ; International Journal of Organisational Design and Engineering Volume 3 ; 3 ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 2016 ; International Journal of Organisational Design and Engineering Volume 4 ; 4 ; >
+      au < testing ; exists ; 2016 ; International Journal of Organisational Design and Engineering Volume 4 ; 4 ; >
       au < expected ; exists ; 2017 ; International Journal of Organisational Design and Engineering Volume 5 ; 5 ; >
 
     }
@@ -6599,7 +6599,7 @@
       param[journal_id] = ijpe
 
       au < finished ; finished ; 2014-2015 ; International Journal of Petroleum Engineering Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2016 ; International Journal of Petroleum Engineering Volume 2 ; 2 ; >
+      au < testing ; exists ; 2016 ; International Journal of Petroleum Engineering Volume 2 ; 2 ; >
       au < expected ; exists ; 2017 ; International Journal of Petroleum Engineering Volume 3 ; 3 ; >
 
     }
@@ -7267,7 +7267,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Revenue Management Volume 6 ; 6 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Revenue Management Volume 7 ; 7 ; >
       au < finished ; finished ; 2014-2015 ; International Journal of Revenue Management Volume 8 ; 8 ; reingest3.clockss.org:8083 >
-      au < manifest ; exists ; 2016 ; International Journal of Revenue Management Volume 9 ; 9 ; >
+      au < testing ; exists ; 2016 ; International Journal of Revenue Management Volume 9 ; 9 ; >
       au < crawling ; exists ; 2017 ; International Journal of Revenue Management Volume 10 ; 10 ; >
 
     }
@@ -8250,7 +8250,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Technological Learning, Innovation and Development Volume 5 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Technological Learning, Innovation and Development Volume 6 ; 6 ; >
       au < finished ; finished ; 2014-2015 ; International Journal of Technological Learning, Innovation and Development Volume 7 ; 7 ; >
-      au < manifest ; exists ; 2016 ; International Journal of Technological Learning, Innovation and Development Volume 8 ; 8 ; >
+      au < testing ; exists ; 2016 ; International Journal of Technological Learning, Innovation and Development Volume 8 ; 8 ; >
       au < crawling ; exists ; 2017 ; International Journal of Technological Learning, Innovation and Development Volume 9 ; 9 ; >
 
     }
@@ -9406,9 +9406,9 @@
 
       param[journal_id] = ijbd
 
-      au < manifest ; exists ; 2013-2015 ; International Journal of Bonds and Derivatives Volume 1 ; 1 ;  >
-      au < manifest ; exists ; 2016 ; International Journal of Bonds and Derivatives Volume 2 ; 2 ;  >
-      au < manifest ; exists ; 2017 ; International Journal of Bonds and Derivatives Volume 3 ; 3 ;  >
+      au < testing ; exists ; 2013-2015 ; International Journal of Bonds and Derivatives Volume 1 ; 1 ;  >
+      au < testing ; exists ; 2016 ; International Journal of Bonds and Derivatives Volume 2 ; 2 ;  >
+      au < testing ; exists ; 2017 ; International Journal of Bonds and Derivatives Volume 3 ; 3 ;  >
 
   }
 
