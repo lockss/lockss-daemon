@@ -53,6 +53,7 @@
     >
 
     param[base_url] = http://bjpo.rcpsych.org/
+    #move to Cambridge University Press in 2018
 
     au < rcpsych.RCPsychDrupalPlugin ; released ; 2015 ; BJPsych Open Volume 1 ; 1 >
     au < rcpsych.RCPsychDrupalPlugin ; released ; 2016 ; BJPsych Open Volume 2 ; 2 >
@@ -70,6 +71,7 @@
     >
 
     param[base_url] = http://bjp.rcpsych.org/
+    #move to Cambridge University Press in 2018
 
     au < rcpsych.RCPsychDrupalPlugin ; released ; 1855-1856 ; The British Journal of Psychiatry Volume 2 ; 2 >
     au < rcpsych.RCPsychDrupalPlugin ; released ; 1857 ; The British Journal of Psychiatry Volume 3 ; 3 >
