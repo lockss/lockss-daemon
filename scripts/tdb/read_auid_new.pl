@@ -2357,6 +2357,74 @@ while (my $line = <>) {
           $result = "--"
       }
       sleep(4);
+      
+  } elsif ($plugin eq "ClockssIUCrOaiPlugin") {
+    #permission is different from start
+    $url = sprintf("%se/issues/2010/lockss.html", $param{base_url});
+    $perm_url = uri_unescape($url);
+    #start_url for all OAI queries
+    $url = sprintf("%scgi-bin/oai?verb=ListRecords&set=%s&metadataPrefix=oai_dc",
+      $param{script_url}, $param{au_oai_set});
+    $man_url = uri_unescape($url);
+    my $req_p = HTTP::Request->new(GET, $perm_url);
+    my $resp_p = $ua->request($req_p);
+    my $req_s = HTTP::Request->new(GET, $man_url);
+    my $resp_s = $ua->request($req_s);
+    
+    if ($resp_p->is_success) {
+      my $perm_contents = $resp_p->content;
+      my $lcl_tag = $clockss_tag;
+      $lcl_tag =~ s/ /./g;
+      if (defined($perm_contents) && ($perm_contents =~ m/$lcl_tag/s)) {
+        if ($resp_s->is_success) {
+          $result = "Manifest";
+        } else {
+          #printf("URL: %s\n", $man_url);
+          $result = "--REQ_FAIL--"
+        }
+      } else {
+        #printf("URL: %s\n", $perm_url);
+        $result = "--NO_LOCKSS--"
+      }
+    } else {
+      #printf("URL: %s\n", $perm_url);
+      $result = "--PERM_REQ_FAIL--"
+    }
+    sleep(4);
+  } elsif ($plugin eq "IUCrOaiPlugin") {
+    #permission is different from start
+    $url = sprintf("%se/issues/2010/lockss.html", $param{base_url});
+    $perm_url = uri_unescape($url);
+    #start_url for all OAI queries
+    $url = sprintf("%scgi-bin/oai?verb=ListRecords&set=%s&metadataPrefix=oai_dc",
+      $param{script_url}, $param{au_oai_set});
+    $man_url = uri_unescape($url);
+    my $req_p = HTTP::Request->new(GET, $perm_url);
+    my $resp_p = $ua->request($req_p);
+    my $req_s = HTTP::Request->new(GET, $man_url);
+    my $resp_s = $ua->request($req_s);
+    
+    if ($resp_p->is_success) {
+      my $perm_contents = $resp_p->content;
+      my $lcl_tag = $lockss_tag;
+      $lcl_tag =~ s/ /./g;
+      if (defined($perm_contents) && ($perm_contents =~ m/$lcl_tag/s)) {
+        if ($resp_s->is_success) {
+          $result = "Manifest";
+        } else {
+          #printf("URL: %s\n", $man_url);
+          $result = "--REQ_FAIL--"
+        }
+      } else {
+        #printf("URL: %s\n", $perm_url);
+        $result = "--NO_LOCKSS--"
+      }
+    } else {
+      #printf("URL: %s\n", $perm_url);
+      $result = "--PERM_REQ_FAIL--"
+    }
+    sleep(4);
+    
   }
   
   if($result eq "Plugin Unknown") {
