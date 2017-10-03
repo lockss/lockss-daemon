@@ -36,16 +36,17 @@ import java.text.*;
 import java.util.*;
 import org.lockss.daemon.*;
 import org.lockss.test.LockssTestCase;
+import org.lockss.util.TimeZoneUtil;
 
 public class TestHighWirePressCrawlWindow extends LockssTestCase {
 
   public void testCrawlWindowCA() throws ParseException {
-    TimeZone.setDefault(TimeZone.getTimeZone("GMT"));
+    TimeZone.setDefault(TimeZoneUtil.getExactTimeZone("GMT"));
 
     HighWirePressCrawlWindow windowFactory = new HighWirePressCrawlWindow();
     CrawlWindow window = windowFactory.makeCrawlWindow();
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.S");
-    sdf.setTimeZone(TimeZone.getTimeZone("America/Los_Angeles"));
+    sdf.setTimeZone(TimeZoneUtil.getExactTimeZone("America/Los_Angeles"));
 
     assertTrue(window.canCrawl(sdf.parse("2006-06-19 04:59:00.0")));
     assertTrue(window.canCrawl(sdf.parse("2006-12-19 04:59:00.0")));
@@ -67,12 +68,12 @@ public class TestHighWirePressCrawlWindow extends LockssTestCase {
   }
 
   public void testCrawlWindowNY() throws ParseException {
-    TimeZone.setDefault(TimeZone.getTimeZone("GMT"));
+    TimeZone.setDefault(TimeZoneUtil.getExactTimeZone("GMT"));
 
     HighWirePressCrawlWindow windowFactory = new HighWirePressCrawlWindow();
     CrawlWindow window = windowFactory.makeCrawlWindow();
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.S");
-    sdf.setTimeZone(TimeZone.getTimeZone("America/New_York"));
+    sdf.setTimeZone(TimeZoneUtil.getExactTimeZone("America/New_York"));
 
     assertTrue(window.canCrawl(sdf.parse("2006-06-19 07:59:00.0")));
     assertTrue(window.canCrawl(sdf.parse("2006-12-19 07:59:00.0")));
@@ -90,7 +91,7 @@ public class TestHighWirePressCrawlWindow extends LockssTestCase {
   }
 
   public void testCrawlWindowDSTCheck() throws ParseException {
-    TimeZone.setDefault(TimeZone.getTimeZone("GMT"));
+    TimeZone.setDefault(TimeZoneUtil.getExactTimeZone("GMT"));
 
     HighWirePressCrawlWindow windowFactory = new HighWirePressCrawlWindow();
     CrawlWindow window = windowFactory.makeCrawlWindow();

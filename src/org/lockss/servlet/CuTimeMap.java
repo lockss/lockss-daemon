@@ -35,6 +35,7 @@ package org.lockss.servlet;
 import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.util.Logger;
+import org.lockss.util.TimeZoneUtil;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -59,7 +60,7 @@ public class CuTimeMap {
       new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss zzz");
 
   static {
-    formatter.setTimeZone(TimeZone.getTimeZone("GMT")); // section 2.1.1.1
+    formatter.setTimeZone(TimeZoneUtil.getExactTimeZone("GMT")); // section 2.1.1.1
   }
 
   /**

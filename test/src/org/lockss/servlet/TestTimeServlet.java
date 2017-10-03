@@ -4,6 +4,7 @@ import org.lockss.plugin.CachedUrl;
 import org.lockss.test.MockArchivalUnit;
 import org.lockss.test.MockCachedUrl;
 import org.lockss.util.Logger;
+import org.lockss.util.TimeZoneUtil;
 import org.lockss.util.UrlUtil;
 
 import javax.servlet.ServletException;
@@ -25,7 +26,7 @@ public class TestTimeServlet extends LockssServletTestCase {
       new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss zzz");
 
   static {
-    dateFormatter.setTimeZone(TimeZone.getTimeZone("GMT")); // section 2.1.1.1
+    dateFormatter.setTimeZone(TimeZoneUtil.getExactTimeZone("GMT")); // section 2.1.1.1
   }
 
   private MyTimeServlet serv;

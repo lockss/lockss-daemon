@@ -45,6 +45,7 @@ import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 import org.lockss.util.Logger;
+import org.lockss.util.TimeZoneUtil;
 
 import com.lyncode.xoai.model.oaipmh.Granularity;
 import com.lyncode.xoai.serviceprovider.ServiceProvider;
@@ -175,7 +176,7 @@ public abstract class BaseOaiPmhCrawlSeed extends BaseCrawlSeed {
    */
   protected void setDates(String from, String until)
       throws ConfigurationException {
-    TimeZone utc = TimeZone.getTimeZone("UTC");
+    TimeZone utc = TimeZoneUtil.getExactTimeZone("UTC");
     DateFormat df = new SimpleDateFormat(DATETIME_FORMAT);
     df.setTimeZone(utc);
     this.from = parseDate(from, df, "from");

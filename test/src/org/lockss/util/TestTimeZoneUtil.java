@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,19 +28,43 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 
+import java.util.Arrays;
 import java.util.TimeZone;
-import java.util.Locale;
-import org.apache.commons.lang3.time.FastDateFormat;
 
-/**
- * Date/Time utilities
- */
-public class DateTimeUtil {
+import org.lockss.test.LockssTestCase;
 
-  /** Thread-safe GMT date formatter.  Preferred date format according to
-   * RFC 2068(HTTP1.1), RFC 822 and RFC 1123 */
-  public static final FastDateFormat GMT_DATE_FORMATTER =
-    FastDateFormat.getInstance("EEE, dd MMM yyyy HH:mm:ss 'GMT'",
-                               TimeZoneUtil.getExactTimeZone("GMT"),
-			       Locale.US);
+public class TestTimeZoneUtil extends LockssTestCase {
+
+  public void testIsBasicTimeZoneDataAvailable() {
+    assertTrue(TimeZoneUtil.isBasicTimeZoneDataAvailable());
+  }
+  
+  public void testGoodTimeZones() throws Exception {
+    for (String id : TimeZoneUtil.BASIC_TIME_ZONES) {
+      TimeZone tz = TimeZoneUtil.getExactTimeZone(id);
+      assertEquals(id, tz.getID());
+      assertEquals("GMT".equals(id), "GMT".equals(tz.getID()));
+    }
+  }
+  
+  public void testBadTimeZones() throws Exception {
+    for (String id : Arrays.asList(null,
+                                   "Foo",
+                                   "America/Copenhagen",
+                                   "Europe/Tokyo")) {
+      try {
+        TimeZone tz = TimeZoneUtil.getExactTimeZone(id);
+        fail("Should have thrown IllegalArgumentException: " + id);
+      }
+      catch (IllegalArgumentException iae) {
+        if (id == null) {
+          assertEquals("Time zone identifier cannot be null", iae.getMessage());
+        }
+        else {
+          assertEquals("Unknown time zone identifier: " + id, iae.getMessage());
+        }
+      }
+    }
+  }
+  
 }

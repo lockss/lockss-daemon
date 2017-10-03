@@ -57,7 +57,7 @@ public class DisplayConverter {
   /** Local time date formatter. */
   public static final FastDateFormat TABLE_DATE_FORMATTER_GMT =
     FastDateFormat.getInstance("HH:mm:ss MM/dd/yy",
-			       TimeZone.getTimeZone("GMT"),
+                               TimeZoneUtil.getExactTimeZone("GMT"),
 			       Locale.US);
 
 

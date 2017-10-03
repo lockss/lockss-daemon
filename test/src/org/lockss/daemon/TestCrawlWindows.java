@@ -48,10 +48,10 @@ public class TestCrawlWindows extends LockssTestCase {
   Calendar end;
   Calendar testCal;
 
-  protected static final TimeZone GMT = TimeZone.getTimeZone("GMT");
-  protected static final TimeZone GMT_PLUS_1 = TimeZone.getTimeZone("GMT+1:00");
-  protected static final TimeZone EASTERN = TimeZone.getTimeZone("US/Eastern");
-  protected static final TimeZone PACIFIC = TimeZone.getTimeZone("US/Pacific");
+  protected static final TimeZone GMT = TimeZoneUtil.getExactTimeZone("GMT");
+  protected static final TimeZone GMT_PLUS_1 = TimeZoneUtil.getExactTimeZone("GMT+01:00");
+  protected static final TimeZone EASTERN = TimeZoneUtil.getExactTimeZone("US/Eastern");
+  protected static final TimeZone PACIFIC = TimeZoneUtil.getExactTimeZone("US/Pacific");
 
   public void setUp() throws Exception {
     super.setUp();
@@ -908,7 +908,7 @@ public class TestCrawlWindows extends LockssTestCase {
     assertNotEqualWin(winterval,
 		      new CrawlWindows.Interval(start, end,
 						CrawlWindows.DAY_OF_WEEK,
-						TimeZone.getTimeZone("PST")));
+						TimeZoneUtil.getExactTimeZone("PST")));
   }
   
   /** Utility */
@@ -941,4 +941,3 @@ public class TestCrawlWindows extends LockssTestCase {
   }
 
 }
-

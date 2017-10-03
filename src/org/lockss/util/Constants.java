@@ -58,7 +58,7 @@ public interface Constants {
   public static char LIST_DELIM_CHAR = ';';
 
   /** The default timezone, GMT */
-  public static final TimeZone DEFAULT_TIMEZONE = TimeZone.getTimeZone("GMT");
+  public static final TimeZone DEFAULT_TIMEZONE = TimeZoneUtil.getExactTimeZone("GMT");
 
   /** The line separator string on this system */
   public static String EOL = System.getProperty("line.separator");
@@ -177,6 +177,9 @@ public interface Constants {
   /** Exit code - critical keystore missing or not loadable (wrong
    * password, missing password file) */
   public static int EXIT_CODE_KEYSTORE_MISSING = 106;
+
+  /** Exit code - invalid time zone data */
+  public static int EXIT_INVALID_TIME_ZONE_DATA = 107;
 
   /** Regexp contexts.  Depending on the type of string a regexp will be
    * used to match against, printf arguments substituted into a pattern

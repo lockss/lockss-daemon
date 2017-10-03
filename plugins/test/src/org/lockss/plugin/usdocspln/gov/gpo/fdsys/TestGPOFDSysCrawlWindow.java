@@ -43,6 +43,7 @@ import org.lockss.plugin.base.BaseArchivalUnit;
 import org.lockss.plugin.definable.*;
 import org.lockss.test.*;
 import org.lockss.util.TimeBase;
+import org.lockss.util.TimeZoneUtil;
 
 /**
  * <p>
@@ -61,11 +62,11 @@ public class TestGPOFDSysCrawlWindow extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     // Set up date/time tools
-    TimeZone.setDefault(TimeZone.getTimeZone("GMT"));
+    TimeZone.setDefault(TimeZoneUtil.getExactTimeZone("GMT"));
     easternSdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-    easternSdf.setTimeZone(TimeZone.getTimeZone("US/Eastern"));
+    easternSdf.setTimeZone(TimeZoneUtil.getExactTimeZone("US/Eastern"));
     gmtSdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-    gmtSdf.setTimeZone(TimeZone.getTimeZone("GMT"));
+    gmtSdf.setTimeZone(TimeZoneUtil.getExactTimeZone("GMT"));
     // Set min fetch delay lower than the plugin's lowest, to test default
     ConfigurationUtil.addFromArgs(BaseArchivalUnit.PARAM_MIN_FETCH_DELAY, "123");
     Configuration config = ConfigurationUtil.fromArgs(ConfigParamDescr.BASE_URL.getKey(),

@@ -35,6 +35,7 @@ import java.util.*;
 
 import org.lockss.daemon.*;
 import org.lockss.util.Logger;
+import org.lockss.util.TimeZoneUtil;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -322,7 +323,7 @@ public class CrawlWindowEditor extends JDialog implements EDPEditor{
 	end.set(Calendar.HOUR_OF_DAY,endHour);
 	end.set(Calendar.MINUTE,Integer.parseInt(entry[TO_MINUTE].toString().substring(1)));
 
-	timezone = TimeZone.getTimeZone(entry[7].toString());
+	timezone = TimeZoneUtil.getExactTimeZone(entry[7].toString());
 
 	CrawlWindows.Interval window = new CrawlWindows.Interval(start,end,CrawlWindows.TIME,timezone);
 	if(crawl)

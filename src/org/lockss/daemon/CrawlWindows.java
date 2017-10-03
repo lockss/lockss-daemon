@@ -71,7 +71,7 @@ public class CrawlWindows {
   
   private static final Logger logger = Logger.getLogger(CrawlWindows.class);
 
-  static TimeZone GMT = TimeZone.getTimeZone("GMT");
+  static TimeZone GMT = TimeZoneUtil.getExactTimeZone("GMT");
 
   /**
    * Abstract base crawl window
@@ -117,7 +117,7 @@ public class CrawlWindows {
     public TimeZone getTimeZone() {
       if (tz == null) {
 	if (!StringUtil.isNullString(timeZoneId)) {
-	  tz = TimeZone.getTimeZone(timeZoneId);
+	  tz = TimeZoneUtil.getExactTimeZone(timeZoneId);
 	} else {
 	  tz = TimeZone.getDefault();
 	  timeZoneId = tz.getID();

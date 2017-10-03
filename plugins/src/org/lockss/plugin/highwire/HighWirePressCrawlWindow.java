@@ -56,7 +56,7 @@ public class HighWirePressCrawlWindow implements DefinableArchivalUnit.Configura
     CrawlWindow mon_thru_fri_5_to_11_am = new CrawlWindows.Interval(start_time,
                                                          end_time,
                                                          CrawlWindows.TIME,
-                                                         TimeZone.getTimeZone("America/Los_Angeles"));
+                                                         TimeZoneUtil.getExactTimeZone("America/Los_Angeles"));
     CrawlWindow not_mon_thru_fri_5_to_11_am = new CrawlWindows.Not(mon_thru_fri_5_to_11_am);
 
     // Allow crawls on Saturday and Sunday
@@ -68,7 +68,7 @@ public class HighWirePressCrawlWindow implements DefinableArchivalUnit.Configura
     CrawlWindow sat_thru_sun = new CrawlWindows.Interval(start_day,
                                                          end_day,
                                                          CrawlWindows.DAY_OF_WEEK,
-                                                         TimeZone.getTimeZone("America/Los_Angeles"));
+                                                         TimeZoneUtil.getExactTimeZone("America/Los_Angeles"));
 
     // Assemble with an Or (and add a description)
     return new CrawlWindows.Or(SetUtil.set(not_mon_thru_fri_5_to_11_am,

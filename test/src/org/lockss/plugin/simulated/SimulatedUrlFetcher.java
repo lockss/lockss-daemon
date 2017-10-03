@@ -62,7 +62,7 @@ public class SimulatedUrlFetcher extends BaseUrlFetcher {
   private static final SimpleDateFormat GMT_DATE_PARSER =
     new SimpleDateFormat ("EEE, dd MMM yyyy HH:mm:ss 'GMT'");
   static {
-    GMT_DATE_PARSER.setTimeZone(TimeZone.getTimeZone("GMT"));
+    GMT_DATE_PARSER.setTimeZone(TimeZoneUtil.getExactTimeZone("GMT"));
   }
 
   public SimulatedUrlFetcher(Crawler.CrawlerFacade crawlFacade, String url, String contentRoot) {

@@ -67,7 +67,7 @@ public class TestOaiPmhCrawlSeed extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     
-    TimeZone utc = TimeZone.getTimeZone("UTC");
+    TimeZone utc = TimeZoneUtil.getExactTimeZone("UTC");
     df = new SimpleDateFormat(BaseOaiPmhCrawlSeed.DATE_FORMAT);
     df.setTimeZone(utc);
 

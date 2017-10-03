@@ -335,7 +335,7 @@ public class TestEditableDefinablePlugin
     Calendar end   = Calendar.getInstance();
     start.set(Calendar.HOUR_OF_DAY,22);
     start.set(Calendar.MINUTE,52);
-    TimeZone timezone = TimeZone.getTimeZone("America/Los_Angeles");
+    TimeZone timezone = TimeZoneUtil.getExactTimeZone("America/Los_Angeles");
     CrawlWindow expWindow = new CrawlWindows.Interval(start,end,CrawlWindows.TIME,timezone);
     return expWindow;
   }

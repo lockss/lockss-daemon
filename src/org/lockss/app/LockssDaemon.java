@@ -1055,6 +1055,10 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
                          ", exiting.");
       System.exit(Constants.EXIT_CODE_JAVA_VERSION);
     }
+    if (!TimeZoneUtil.isBasicTimeZoneDataAvailable()) {
+      System.err.println("Basic time zone data unavailable, exiting.");
+      System.exit(Constants.EXIT_INVALID_TIME_ZONE_DATA);
+    }
 
     StartupOptions opts = getStartupOptions(args);
 

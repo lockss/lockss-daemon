@@ -45,6 +45,7 @@ import org.lockss.test.*;
 import org.lockss.util.CIProperties;
 import org.lockss.util.Logger;
 import org.lockss.util.TimeBase;
+import org.lockss.util.TimeZoneUtil;
 import org.lockss.util.urlconn.CacheException;
 
 import java.io.File;
@@ -58,7 +59,7 @@ public class TestScUrlFetcher extends LockssTestCase {
   private static final SimpleDateFormat GMT_DATE_PARSER =
     new SimpleDateFormat ("EEE, dd MMM yyyy HH:mm:ss 'GMT'");
   static {
-    GMT_DATE_PARSER.setTimeZone(TimeZone.getTimeZone("GMT"));
+    GMT_DATE_PARSER.setTimeZone(TimeZoneUtil.getExactTimeZone("GMT"));
   }
 
   MockCachedUrlSet mcus;
