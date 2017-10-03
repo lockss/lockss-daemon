@@ -1125,15 +1125,15 @@
         au < manifest ; 1993 ; American Journal of Alzheimer's Disease and Other Dementias Volume 8 ; 8 ; ajac >
         au < manifest ; 1994 ; American Journal of Alzheimer's Disease and Other Dementias Volume 9 ; 9 ; ajac >
         au < manifest ; 1995 ; American Journal of Alzheimer's Disease and Other Dementias Volume 10 ; 10 ; ajac >
-        au < exists ; 1996 ; American Journal of Alzheimer's Disease and Other Dementias Volume 11 ; 11 ; ajad >
-        au < exists ; 1997 ; American Journal of Alzheimer's Disease and Other Dementias Volume 12 ; 12 ; ajad >
-        au < exists ; 1998 ; American Journal of Alzheimer's Disease and Other Dementias Volume 13 ; 13 ; ajad >
-        au < exists ; 1999 ; American Journal of Alzheimer's Disease and Other Dementias Volume 14 ; 14 ; ajad >
-        au < exists ; 2000 ; American Journal of Alzheimer's Disease and Other Dementias Volume 15 ; 15 ; ajad >
-        au < exists ; 2001 ; American Journal of Alzheimer's Disease and Other Dementias Volume 16 ; 16 ; ajae >
-        au < exists ; 2002 ; American Journal of Alzheimer's Disease and Other Dementias Volume 17 ; 17 ; ajae >
-        au < exists ; 2003 ; American Journal of Alzheimer's Disease and Other Dementias Volume 18 ; 18 ; ajae >
-        au < exists ; 2004 ; American Journal of Alzheimer's Disease and Other Dementias Volume 19 ; 19 ; ajae >
+        au < manifest ; 1996 ; American Journal of Alzheimer's Disease and Other Dementias Volume 11 ; 11 ; ajad >
+        au < manifest ; 1997 ; American Journal of Alzheimer's Disease and Other Dementias Volume 12 ; 12 ; ajad >
+        au < manifest ; 1998 ; American Journal of Alzheimer's Disease and Other Dementias Volume 13 ; 13 ; ajad >
+        au < manifest ; 1999 ; American Journal of Alzheimer's Disease and Other Dementias Volume 14 ; 14 ; ajad >
+        au < manifest ; 2000 ; American Journal of Alzheimer's Disease and Other Dementias Volume 15 ; 15 ; ajad >
+        au < manifest ; 2001 ; American Journal of Alzheimer's Disease and Other Dementias Volume 16 ; 16 ; ajae >
+        au < manifest ; 2002 ; American Journal of Alzheimer's Disease and Other Dementias Volume 17 ; 17 ; ajae >
+        au < manifest ; 2003 ; American Journal of Alzheimer's Disease and Other Dementias Volume 18 ; 18 ; ajae >
+        au < manifest ; 2004 ; American Journal of Alzheimer's Disease and Other Dementias Volume 19 ; 19 ; ajae >
         au < doNotProcess ; 2005 ; American Journal of Alzheimer's Disease and Other Dementias Volume 20 ; 20 ; ajae >
         au < doNotProcess ; 2006 ; American Journal of Alzheimer's Disease and Other Dementias Volume 21 ; 21 ; ajae >
         au < doNotProcess ; 2007 ; American Journal of Alzheimer's Disease and Other Dementias Volume 22 ; 22 ; ajae >
@@ -1145,8 +1145,8 @@
         au < doNotProcess ; 2013 ; American Journal of Alzheimer's Disease and Other Dementias Volume 28 ; 28 ; ajae >
         au < doNotProcess ; 2014 ; American Journal of Alzheimer's Disease and Other Dementias Volume 29 ; 29 ; ajae >
         au < doNotProcess ; 2015 ; American Journal of Alzheimer's Disease and Other Dementias Volume 30 ; 30 ; ajae >
-        au < exists ; 2016 ; American Journal of Alzheimer's Disease and Other Dementias Volume 31 ; 31 ; ajae >
-        au < expected ; 2017 ; American Journal of Alzheimer's Disease and Other Dementias Volume 32 ; 32 ; ajae >
+        au < manifest ; 2016 ; American Journal of Alzheimer's Disease and Other Dementias Volume 31 ; 31 ; ajae >
+        au < manifest ; 2017 ; American Journal of Alzheimer's Disease and Other Dementias Volume 32 ; 32 ; ajae >
 
       }
 
@@ -2512,7 +2512,7 @@
         au < manifest ; 2017 ; The ANNALS of the American Academy of Political and Social Science Volume 670 ; 670 ; anna >
         au < manifest ; 2017 ; The ANNALS of the American Academy of Political and Social Science Volume 671 ; 671 ; anna >
         au < manifest ; 2017 ; The ANNALS of the American Academy of Political and Social Science Volume 672 ; 672 ; anna >
-        au < expected ; 2017 ; The ANNALS of the American Academy of Political and Social Science Volume 673 ; 673 ; anna >
+        au < manifest ; 2017 ; The ANNALS of the American Academy of Political and Social Science Volume 673 ; 673 ; anna >
         au < expected ; 2017 ; The ANNALS of the American Academy of Political and Social Science Volume 674 ; 674 ; anna >
 
       }
@@ -15094,13 +15094,13 @@
 
         #param[base_url] = http://iej.sagepub.com/
 
-        au < exists ; 2006-2007 ; The Indian Economic Journal Volume 54 ; 54 ; ieja >
-        au < exists ; 2007-2008 ; The Indian Economic Journal Volume 55 ; 55 ; ieja >
-        au < exists ; 2008-2009 ; The Indian Economic Journal Volume 56 ; 56 ; ieja >
-        au < exists ; 2009-2010 ; The Indian Economic Journal Volume 57 ; 57 ; ieja >
-        au < exists ; 2010-2011 ; The Indian Economic Journal Volume 58 ; 58 ; ieja >
-        au < exists ; 2011-2012 ; The Indian Economic Journal Volume 59 ; 59 ; ieja >
-        au < exists ; 2012-2013 ; The Indian Economic Journal Volume 60 ; 60 ; ieja >
+        au < manifest ; 2006-2007 ; The Indian Economic Journal Volume 54 ; 54 ; ieja >
+        au < manifest ; 2007-2008 ; The Indian Economic Journal Volume 55 ; 55 ; ieja >
+        au < manifest ; 2008-2009 ; The Indian Economic Journal Volume 56 ; 56 ; ieja >
+        au < manifest ; 2009-2010 ; The Indian Economic Journal Volume 57 ; 57 ; ieja >
+        au < manifest ; 2010-2011 ; The Indian Economic Journal Volume 58 ; 58 ; ieja >
+        au < manifest ; 2011-2012 ; The Indian Economic Journal Volume 59 ; 59 ; ieja >
+        au < manifest ; 2012-2013 ; The Indian Economic Journal Volume 60 ; 60 ; ieja >
 
         au < down ; 2016 ; The Indian Economic Journal Volume 64 ; 64 ; ieja >
 
@@ -21947,7 +21947,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < released ; 2014-2015 ; Journal of General Management Volume 40 ; 40 ; gema >
       au < released ; 2015-2016 ; Journal of General Management Volume 41 ; 41 ; gema >
       au < manifest ; 2016-2017 ; Journal of General Management Volume 42 ; 42 ; gema >
-      au < expected ; 2017-2018 ; Journal of General Management Volume 43 ; 43 ; gema >
+      au < manifest ; 2017-2018 ; Journal of General Management Volume 43 ; 43 ; gema >
 
   }
 
@@ -29348,7 +29348,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2014 ; Multiple Sclerosis Journal Volume 20 ; 20 ; msja >
         au < doNotProcess ; 2015 ; Multiple Sclerosis Journal Volume 21 ; 21 ; msja >
         au < released ; 2016 ; Multiple Sclerosis Journal Volume 22 ; 22 ; msja >
-        au < exists ; 2017 ; Multiple Sclerosis Journal Volume 23 ; 23 ; msja >
+        au < manifest ; 2017 ; Multiple Sclerosis Journal Volume 23 ; 23 ; msja >
 
       }
 
@@ -30302,23 +30302,23 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
       #param[base_url] = http://nct.sagepub.com/
 
-      au < exists ; 1999 ; Nineteenth Century Theatre and Film Volume 27 ; 27 ; nctc >
-      au < exists ; 2000 ; Nineteenth Century Theatre and Film Volume 28 ; 28 ; nctc >
-      au < exists ; 2002 ; Nineteenth Century Theatre and Film Volume 29 ; 29 ; nctd >
-      au < exists ; 2003 ; Nineteenth Century Theatre and Film Volume 30 ; 30 ; nctd >
-      au < exists ; 2004 ; Nineteenth Century Theatre and Film Volume 31 ; 31 ; nctd >
-      au < exists ; 2005 ; Nineteenth Century Theatre and Film Volume 32 ; 32 ; nctd >
-      au < exists ; 2006 ; Nineteenth Century Theatre and Film Volume 33 ; 33 ; nctd >
-      au < exists ; 2007 ; Nineteenth Century Theatre and Film Volume 34 ; 34 ; nctd >
-      au < exists ; 2008 ; Nineteenth Century Theatre and Film Volume 35 ; 35 ; nctd >
-      au < exists ; 2009 ; Nineteenth Century Theatre and Film Volume 36 ; 36 ; nctd >
-      au < exists ; 2010 ; Nineteenth Century Theatre and Film Volume 37 ; 37 ; nctd >
-      au < exists ; 2011 ; Nineteenth Century Theatre and Film Volume 38 ; 38 ; nctd >
-      au < exists ; 2012 ; Nineteenth Century Theatre and Film Volume 39 ; 39 ; nctd >
-      au < exists ; 2013 ; Nineteenth Century Theatre and Film Volume 40 ; 40 ; nctd >
+      au < manifest ; 1999 ; Nineteenth Century Theatre and Film Volume 27 ; 27 ; nctc >
+      au < manifest ; 2000 ; Nineteenth Century Theatre and Film Volume 28 ; 28 ; nctc >
+      au < manifest ; 2002 ; Nineteenth Century Theatre and Film Volume 29 ; 29 ; nctd >
+      au < manifest ; 2003 ; Nineteenth Century Theatre and Film Volume 30 ; 30 ; nctd >
+      au < manifest ; 2004 ; Nineteenth Century Theatre and Film Volume 31 ; 31 ; nctd >
+      au < manifest ; 2005 ; Nineteenth Century Theatre and Film Volume 32 ; 32 ; nctd >
+      au < manifest ; 2006 ; Nineteenth Century Theatre and Film Volume 33 ; 33 ; nctd >
+      au < manifest ; 2007 ; Nineteenth Century Theatre and Film Volume 34 ; 34 ; nctd >
+      au < manifest ; 2008 ; Nineteenth Century Theatre and Film Volume 35 ; 35 ; nctd >
+      au < manifest ; 2009 ; Nineteenth Century Theatre and Film Volume 36 ; 36 ; nctd >
+      au < manifest ; 2010 ; Nineteenth Century Theatre and Film Volume 37 ; 37 ; nctd >
+      au < manifest ; 2011 ; Nineteenth Century Theatre and Film Volume 38 ; 38 ; nctd >
+      au < manifest ; 2012 ; Nineteenth Century Theatre and Film Volume 39 ; 39 ; nctd >
+      au < manifest ; 2013 ; Nineteenth Century Theatre and Film Volume 40 ; 40 ; nctd >
       au < doNotProcess ; 2014 ; Nineteenth Century Theatre and Film Volume 41 ; 41 ; nctd >
-      au < exists ; 2015 ; Nineteenth Century Theatre and Film Volume 42 ; 42 ; nctd >
-      au < exists ; 2016 ; Nineteenth Century Theatre and Film Volume 43 ; 43 ; nctd >
+      au < manifest ; 2015 ; Nineteenth Century Theatre and Film Volume 42 ; 42 ; nctd >
+      au < manifest ; 2016 ; Nineteenth Century Theatre and Film Volume 43 ; 43 ; nctd >
       au < expected ; 2017 ; Nineteenth Century Theatre and Film Volume 44 ; 44 ; nctd >
 
     }
@@ -32288,76 +32288,76 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 1934 ; The Prison Journal Volume 14 ; 14 ; tpjc >
         au < manifest ; 1935 ; The Prison Journal Volume 15 ; 15 ; tpjc >
         au < manifest ; 1936 ; The Prison Journal Volume 16 ; 16 ; tpjc >
-        au < exists ; 1937 ; The Prison Journal Volume 17 ; 17 ; tpjd >
-        au < exists ; 1938 ; The Prison Journal Volume 18 ; 18 ; tpjd >
-        au < exists ; 1939 ; The Prison Journal Volume 19 ; 19 ; tpjd >
-        au < exists ; 1940 ; The Prison Journal Volume 20 ; 20 ; tpjd >
-        au < exists ; 1941 ; The Prison Journal Volume 21 ; 21 ; tpjd >
-        au < exists ; 1942 ; The Prison Journal Volume 22 ; 22 ; tpjd >
-        au < exists ; 1943 ; The Prison Journal Volume 23 ; 23 ; tpjd >
-        au < exists ; 1944 ; The Prison Journal Volume 24 ; 24 ; tpjd >
-        au < exists ; 1945 ; The Prison Journal Volume 25 ; 25 ; tpjd >
-        au < exists ; 1946 ; The Prison Journal Volume 26 ; 26 ; tpjd >
-        au < exists ; 1947 ; The Prison Journal Volume 27 ; 27 ; tpjd >
-        au < exists ; 1948 ; The Prison Journal Volume 28 ; 28 ; tpjd >
-        au < exists ; 1949 ; The Prison Journal Volume 29 ; 29 ; tpjd >
-        au < exists ; 1950 ; The Prison Journal Volume 30 ; 30 ; tpjd >
-        au < exists ; 1951 ; The Prison Journal Volume 31 ; 31 ; tpjd >
-        au < exists ; 1952 ; The Prison Journal Volume 32 ; 32 ; tpjd >
-        au < exists ; 1953 ; The Prison Journal Volume 33 ; 33 ; tpjd >
-        au < exists ; 1954 ; The Prison Journal Volume 34 ; 34 ; tpjd >
-        au < exists ; 1955 ; The Prison Journal Volume 35 ; 35 ; tpjd >
-        au < exists ; 1956 ; The Prison Journal Volume 36 ; 36 ; tpjd >
-        au < exists ; 1957 ; The Prison Journal Volume 37 ; 37 ; tpjd >
-        au < exists ; 1958 ; The Prison Journal Volume 38 ; 38 ; tpjd >
-        au < exists ; 1959 ; The Prison Journal Volume 39 ; 39 ; tpjd >
-        au < exists ; 1960 ; The Prison Journal Volume 40 ; 40 ; tpjd >
-        au < exists ; 1961 ; The Prison Journal Volume 41 ; 41 ; tpjd >
-        au < exists ; 1962 ; The Prison Journal Volume 42 ; 42 ; tpjd >
-        au < exists ; 1963 ; The Prison Journal Volume 43 ; 43 ; tpjd >
-        au < exists ; 1964 ; The Prison Journal Volume 44 ; 44 ; tpjd >
-        au < exists ; 1965 ; The Prison Journal Volume 45 ; 45 ; tpjd >
-        au < exists ; 1966 ; The Prison Journal Volume 46 ; 46 ; tpjd >
-        au < exists ; 1967 ; The Prison Journal Volume 47 ; 47 ; tpjd >
-        au < exists ; 1968 ; The Prison Journal Volume 48 ; 48 ; tpjd >
-        au < exists ; 1969 ; The Prison Journal Volume 49 ; 49 ; tpjd >
-        au < exists ; 1970 ; The Prison Journal Volume 50 ; 50 ; tpjd >
-        au < exists ; 1971 ; The Prison Journal Volume 51 ; 51 ; tpjd >
-        au < exists ; 1972 ; The Prison Journal Volume 52 ; 52 ; tpjd >
-        au < exists ; 1973 ; The Prison Journal Volume 53 ; 53 ; tpjd >
-        au < exists ; 1974 ; The Prison Journal Volume 54 ; 54 ; tpjd >
-        au < exists ; 1975 ; The Prison Journal Volume 55 ; 55 ; tpjd >
-        au < exists ; 1976 ; The Prison Journal Volume 56 ; 56 ; tpjd >
-        au < exists ; 1977 ; The Prison Journal Volume 57 ; 57 ; tpjd >
-        au < exists ; 1978 ; The Prison Journal Volume 58 ; 58 ; tpjd >
-        au < exists ; 1979 ; The Prison Journal Volume 59 ; 59 ; tpjd >
-        au < exists ; 1980 ; The Prison Journal Volume 60 ; 60 ; tpjd >
-        au < exists ; 1981 ; The Prison Journal Volume 61 ; 61 ; tpjd >
-        au < exists ; 1982 ; The Prison Journal Volume 62 ; 62 ; tpjd >
-        au < exists ; 1983 ; The Prison Journal Volume 63 ; 63 ; tpjd >
-        au < exists ; 1984 ; The Prison Journal Volume 64 ; 64 ; tpjd >
-        au < exists ; 1985 ; The Prison Journal Volume 65 ; 65 ; tpjd >
-        au < exists ; 1986 ; The Prison Journal Volume 66 ; 66 ; tpjd >
-        au < exists ; 1987 ; The Prison Journal Volume 67 ; 67 ; tpjd >
-        au < exists ; 1988 ; The Prison Journal Volume 68 ; 68 ; tpjd >
-        au < exists ; 1989 ; The Prison Journal Volume 69 ; 69 ; tpjd >
-        au < exists ; 1990 ; The Prison Journal Volume 70 ; 70 ; tpjd >
+        au < manifest ; 1937 ; The Prison Journal Volume 17 ; 17 ; tpjd >
+        au < manifest ; 1938 ; The Prison Journal Volume 18 ; 18 ; tpjd >
+        au < manifest ; 1939 ; The Prison Journal Volume 19 ; 19 ; tpjd >
+        au < manifest ; 1940 ; The Prison Journal Volume 20 ; 20 ; tpjd >
+        au < manifest ; 1941 ; The Prison Journal Volume 21 ; 21 ; tpjd >
+        au < manifest ; 1942 ; The Prison Journal Volume 22 ; 22 ; tpjd >
+        au < manifest ; 1943 ; The Prison Journal Volume 23 ; 23 ; tpjd >
+        au < manifest ; 1944 ; The Prison Journal Volume 24 ; 24 ; tpjd >
+        au < manifest ; 1945 ; The Prison Journal Volume 25 ; 25 ; tpjd >
+        au < manifest ; 1946 ; The Prison Journal Volume 26 ; 26 ; tpjd >
+        au < manifest ; 1947 ; The Prison Journal Volume 27 ; 27 ; tpjd >
+        au < manifest ; 1948 ; The Prison Journal Volume 28 ; 28 ; tpjd >
+        au < manifest ; 1949 ; The Prison Journal Volume 29 ; 29 ; tpjd >
+        au < manifest ; 1950 ; The Prison Journal Volume 30 ; 30 ; tpjd >
+        au < manifest ; 1951 ; The Prison Journal Volume 31 ; 31 ; tpjd >
+        au < manifest ; 1952 ; The Prison Journal Volume 32 ; 32 ; tpjd >
+        au < manifest ; 1953 ; The Prison Journal Volume 33 ; 33 ; tpjd >
+        au < manifest ; 1954 ; The Prison Journal Volume 34 ; 34 ; tpjd >
+        au < manifest ; 1955 ; The Prison Journal Volume 35 ; 35 ; tpjd >
+        au < manifest ; 1956 ; The Prison Journal Volume 36 ; 36 ; tpjd >
+        au < manifest ; 1957 ; The Prison Journal Volume 37 ; 37 ; tpjd >
+        au < manifest ; 1958 ; The Prison Journal Volume 38 ; 38 ; tpjd >
+        au < manifest ; 1959 ; The Prison Journal Volume 39 ; 39 ; tpjd >
+        au < manifest ; 1960 ; The Prison Journal Volume 40 ; 40 ; tpjd >
+        au < manifest ; 1961 ; The Prison Journal Volume 41 ; 41 ; tpjd >
+        au < manifest ; 1962 ; The Prison Journal Volume 42 ; 42 ; tpjd >
+        au < manifest ; 1963 ; The Prison Journal Volume 43 ; 43 ; tpjd >
+        au < manifest ; 1964 ; The Prison Journal Volume 44 ; 44 ; tpjd >
+        au < manifest ; 1965 ; The Prison Journal Volume 45 ; 45 ; tpjd >
+        au < manifest ; 1966 ; The Prison Journal Volume 46 ; 46 ; tpjd >
+        au < manifest ; 1967 ; The Prison Journal Volume 47 ; 47 ; tpjd >
+        au < manifest ; 1968 ; The Prison Journal Volume 48 ; 48 ; tpjd >
+        au < manifest ; 1969 ; The Prison Journal Volume 49 ; 49 ; tpjd >
+        au < manifest ; 1970 ; The Prison Journal Volume 50 ; 50 ; tpjd >
+        au < manifest ; 1971 ; The Prison Journal Volume 51 ; 51 ; tpjd >
+        au < manifest ; 1972 ; The Prison Journal Volume 52 ; 52 ; tpjd >
+        au < manifest ; 1973 ; The Prison Journal Volume 53 ; 53 ; tpjd >
+        au < manifest ; 1974 ; The Prison Journal Volume 54 ; 54 ; tpjd >
+        au < manifest ; 1975 ; The Prison Journal Volume 55 ; 55 ; tpjd >
+        au < manifest ; 1976 ; The Prison Journal Volume 56 ; 56 ; tpjd >
+        au < manifest ; 1977 ; The Prison Journal Volume 57 ; 57 ; tpjd >
+        au < manifest ; 1978 ; The Prison Journal Volume 58 ; 58 ; tpjd >
+        au < manifest ; 1979 ; The Prison Journal Volume 59 ; 59 ; tpjd >
+        au < manifest ; 1980 ; The Prison Journal Volume 60 ; 60 ; tpjd >
+        au < manifest ; 1981 ; The Prison Journal Volume 61 ; 61 ; tpjd >
+        au < manifest ; 1982 ; The Prison Journal Volume 62 ; 62 ; tpjd >
+        au < manifest ; 1983 ; The Prison Journal Volume 63 ; 63 ; tpjd >
+        au < manifest ; 1984 ; The Prison Journal Volume 64 ; 64 ; tpjd >
+        au < manifest ; 1985 ; The Prison Journal Volume 65 ; 65 ; tpjd >
+        au < manifest ; 1986 ; The Prison Journal Volume 66 ; 66 ; tpjd >
+        au < manifest ; 1987 ; The Prison Journal Volume 67 ; 67 ; tpjd >
+        au < manifest ; 1988 ; The Prison Journal Volume 68 ; 68 ; tpjd >
+        au < manifest ; 1989 ; The Prison Journal Volume 69 ; 69 ; tpjd >
+        au < manifest ; 1990 ; The Prison Journal Volume 70 ; 70 ; tpjd >
         au < doesNotExist ; 0 ; The Prison Journal Volume 71 ; 71 ; tpjd >
-        au < exists ; 1992 ; The Prison Journal Volume 72 ; 72 ; tpjd >
-        au < exists ; 1993 ; The Prison Journal Volume 73 ; 73 ; tpjd >
-        au < exists ; 1994 ; The Prison Journal Volume 74 ; 74 ; tpjd >
-        au < exists ; 1995 ; The Prison Journal Volume 75 ; 75 ; tpjd >
-        au < exists ; 1996 ; The Prison Journal Volume 76 ; 76 ; tpjd >
-        au < exists ; 1997 ; The Prison Journal Volume 77 ; 77 ; tpjd >
-        au < exists ; 1998 ; The Prison Journal Volume 78 ; 78 ; tpjd >
-        au < exists ; 1999 ; The Prison Journal Volume 79 ; 79 ; tpjd >
-        au < exists ; 2000 ; The Prison Journal Volume 80 ; 80 ; tpjd >
-        au < exists ; 2001 ; The Prison Journal Volume 81 ; 81 ; tpjd >
-        au < exists ; 2002 ; The Prison Journal Volume 82 ; 82 ; tpjd >
-        au < exists ; 2003 ; The Prison Journal Volume 83 ; 83 ; tpjd >
-        au < exists ; 2004 ; The Prison Journal Volume 84 ; 84 ; tpjd >
+        au < manifest ; 1992 ; The Prison Journal Volume 72 ; 72 ; tpjd >
+        au < manifest ; 1993 ; The Prison Journal Volume 73 ; 73 ; tpjd >
+        au < manifest ; 1994 ; The Prison Journal Volume 74 ; 74 ; tpjd >
+        au < manifest ; 1995 ; The Prison Journal Volume 75 ; 75 ; tpjd >
+        au < manifest ; 1996 ; The Prison Journal Volume 76 ; 76 ; tpjd >
+        au < manifest ; 1997 ; The Prison Journal Volume 77 ; 77 ; tpjd >
+        au < manifest ; 1998 ; The Prison Journal Volume 78 ; 78 ; tpjd >
+        au < manifest ; 1999 ; The Prison Journal Volume 79 ; 79 ; tpjd >
+        au < manifest ; 2000 ; The Prison Journal Volume 80 ; 80 ; tpjd >
+        au < manifest ; 2001 ; The Prison Journal Volume 81 ; 81 ; tpjd >
+        au < manifest ; 2002 ; The Prison Journal Volume 82 ; 82 ; tpjd >
+        au < manifest ; 2003 ; The Prison Journal Volume 83 ; 83 ; tpjd >
+        au < manifest ; 2004 ; The Prison Journal Volume 84 ; 84 ; tpjd >
         au < doNotProcess ; 2005 ; The Prison Journal Volume 85 ; 85 ; tpjd >
-        au < exists ; 2006 ; The Prison Journal Volume 86 ; 86 ; tpjd >
+        au < manifest ; 2006 ; The Prison Journal Volume 86 ; 86 ; tpjd >
         au < doNotProcess ; 2007 ; The Prison Journal Volume 87 ; 87 ; tpjd >
         au < doNotProcess ; 2008 ; The Prison Journal Volume 88 ; 88 ; tpjd >
         au < doNotProcess ; 2009 ; The Prison Journal Volume 89 ; 89 ; tpjd >
@@ -32367,8 +32367,8 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; The Prison Journal Volume 93 ; 93 ; tpjd >
         au < doNotProcess ; 2014 ; The Prison Journal Volume 94 ; 94 ; tpjd >
         au < doNotProcess ; 2015 ; The Prison Journal Volume 95 ; 95 ; tpjd >
-        au < exists ; 2016 ; The Prison Journal Volume 96 ; 96 ; tpjd >
-        au < expected ; 2017 ; The Prison Journal Volume 97 ; 97 ; tpjd >
+        au < manifest ; 2016 ; The Prison Journal Volume 96 ; 96 ; tpjd >
+        au < manifest ; 2017 ; The Prison Journal Volume 97 ; 97 ; tpjd >
 
       }
 
@@ -32486,21 +32486,21 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 1991 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 35 ; 35 ; prob >
         au < manifest ; 1992 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 36 [prob] ; 36 ; prob >
         au < manifest ; 1992 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 36 [proe] ; 36 ; proe >
-        au < exists ; 1993 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 37 ; 37 ; proe >
-        au < exists ; 1994 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 38 ; 38 ; proe >
-        au < exists ; 1995 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 39 ; 39 ; proe >
-        au < exists ; 1996 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 40 ; 40 ; proe >
-        au < exists ; 1997 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 41 ; 41 ; proe >
-        au < exists ; 1998 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 42 ; 42 ; proe >
-        au < exists ; 1999 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 43 ; 43 ; proe >
-        au < exists ; 2000 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 44 ; 44 ; proe >
-        au < exists ; 2001 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 45 ; 45 ; proe >
-        au < exists ; 2002 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 46 ; 46 ; proe >
-        au < exists ; 2003 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 47 ; 47 ; proe >
-        au < exists ; 2004 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 48 ; 48 ; proe >
-        au < exists ; 2005 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 49 ; 49 ; proe >
-        au < exists ; 2006 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 50 ; 50 ; proe >
-        au < exists ; 2007 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 51 ; 51 ; proe >
+        au < manifest ; 1993 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 37 ; 37 ; proe >
+        au < manifest ; 1994 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 38 ; 38 ; proe >
+        au < manifest ; 1995 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 39 ; 39 ; proe >
+        au < manifest ; 1996 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 40 ; 40 ; proe >
+        au < manifest ; 1997 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 41 ; 41 ; proe >
+        au < manifest ; 1998 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 42 ; 42 ; proe >
+        au < manifest ; 1999 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 43 ; 43 ; proe >
+        au < manifest ; 2000 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 44 ; 44 ; proe >
+        au < manifest ; 2001 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 45 ; 45 ; proe >
+        au < manifest ; 2002 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 46 ; 46 ; proe >
+        au < manifest ; 2003 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 47 ; 47 ; proe >
+        au < manifest ; 2004 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 48 ; 48 ; proe >
+        au < manifest ; 2005 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 49 ; 49 ; proe >
+        au < manifest ; 2006 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 50 ; 50 ; proe >
+        au < manifest ; 2007 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 51 ; 51 ; proe >
         au < doNotProcess ; 2008 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 52 ; 52 ; proe >
         au < doNotProcess ; 2009 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 53 ; 53 ; proe >
         au < doNotProcess ; 2010 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 54 ; 54 ; proe >
@@ -32509,8 +32509,8 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 57 ; 57 ; proe >
         au < doNotProcess ; 2014 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 58 ; 58 ; proe >
         au < doNotProcess ; 2015 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 59 ; 59 ; proe >
-        au < exists ; 2016 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 60 ; 60 ; proe >
-        au < expected ; 2017 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 61 ; 61 ; proe >
+        au < manifest ; 2016 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 60 ; 60 ; proe >
+        au < manifest ; 2017 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 61 ; 61 ; proe >
 
       }
 
@@ -33810,23 +33810,23 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
   
         #param[base_url] = http://phr.sagepub.com/
   
-        au < exists ; 2001 ; Public Health Reports Volume 116 ; 116 ; phrg >
-        au < exists ; 2002 ; Public Health Reports Volume 117 ; 117 ; phrg >
-        au < exists ; 2003 ; Public Health Reports Volume 118 ; 118 ; phrg >
-        au < exists ; 2004 ; Public Health Reports Volume 119 ; 119 ; phrg >
-        au < exists ; 2005 ; Public Health Reports Volume 120 ; 120 ; phrg >
-        au < exists ; 2006 ; Public Health Reports Volume 121 ; 121 ; phrg >
-        au < exists ; 2007 ; Public Health Reports Volume 122 ; 122 ; phrg >
-        au < exists ; 2008 ; Public Health Reports Volume 123 ; 123 ; phrg >
-        au < exists ; 2009 ; Public Health Reports Volume 124 ; 124 ; phrg >
-        au < exists ; 2010 ; Public Health Reports Volume 125 ; 125 ; phrg >
-        au < exists ; 2011 ; Public Health Reports Volume 126 ; 126 ; phrg >
-        au < exists ; 2012 ; Public Health Reports Volume 127 ; 127 ; phrg >
-        au < exists ; 2013 ; Public Health Reports Volume 128 ; 128 ; phrg >
-        au < exists ; 2014 ; Public Health Reports Volume 129 ; 129 ; phrg >
-        au < exists ; 2015 ; Public Health Reports Volume 130 ; 130 ; phrg >
-        au < exists ; 2016 ; Public Health Reports Volume 131 ; 131 ; phrg >
-        au < exists ; 2017 ; Public Health Reports Volume 132 ; 132 ; phrg >
+        au < manifest ; 2001 ; Public Health Reports Volume 116 ; 116 ; phrg >
+        au < manifest ; 2002 ; Public Health Reports Volume 117 ; 117 ; phrg >
+        au < manifest ; 2003 ; Public Health Reports Volume 118 ; 118 ; phrg >
+        au < manifest ; 2004 ; Public Health Reports Volume 119 ; 119 ; phrg >
+        au < manifest ; 2005 ; Public Health Reports Volume 120 ; 120 ; phrg >
+        au < manifest ; 2006 ; Public Health Reports Volume 121 ; 121 ; phrg >
+        au < manifest ; 2007 ; Public Health Reports Volume 122 ; 122 ; phrg >
+        au < manifest ; 2008 ; Public Health Reports Volume 123 ; 123 ; phrg >
+        au < manifest ; 2009 ; Public Health Reports Volume 124 ; 124 ; phrg >
+        au < manifest ; 2010 ; Public Health Reports Volume 125 ; 125 ; phrg >
+        au < manifest ; 2011 ; Public Health Reports Volume 126 ; 126 ; phrg >
+        au < manifest ; 2012 ; Public Health Reports Volume 127 ; 127 ; phrg >
+        au < manifest ; 2013 ; Public Health Reports Volume 128 ; 128 ; phrg >
+        au < manifest ; 2014 ; Public Health Reports Volume 129 ; 129 ; phrg >
+        au < manifest ; 2015 ; Public Health Reports Volume 130 ; 130 ; phrg >
+        au < manifest ; 2016 ; Public Health Reports Volume 131 ; 131 ; phrg >
+        au < manifest ; 2017 ; Public Health Reports Volume 132 ; 132 ; phrg >
   
     }
 
@@ -35772,38 +35772,38 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
         #param[base_url] = http://sth.sagepub.com/
 
-        au < exists ; 1976 ; Science, Technology & Human Values Volume 1 ; 1 ; sthd >
-        au < exists ; 1977 ; Science, Technology & Human Values Volume 2 ; 2 ; sthd >
-        au < exists ; 1978 ; Science, Technology & Human Values Volume 3 ; 3 ; sthd >
-        au < exists ; 1979 ; Science, Technology & Human Values Volume 4 ; 4 ; sthd >
-        au < exists ; 1980 ; Science, Technology & Human Values Volume 5 ; 5 ; sthd >
-        au < exists ; 1981 ; Science, Technology & Human Values Volume 6 ; 6 ; sthd >
-        au < exists ; 1982 ; Science, Technology & Human Values Volume 7 ; 7 ; sthd >
-        au < exists ; 1983 ; Science, Technology & Human Values Volume 8 ; 8 ; sthd >
-        au < exists ; 1984 ; Science, Technology & Human Values Volume 9 ; 9 ; sthd >
-        au < exists ; 1985 ; Science, Technology & Human Values Volume 10 ; 10 ; sthd >
-        au < exists ; 1986 ; Science, Technology & Human Values Volume 11 ; 11 ; sthd >
-        au < exists ; 1987 ; Science, Technology & Human Values Volume 12 ; 12 ; sthd >
+        au < manifest ; 1976 ; Science, Technology & Human Values Volume 1 ; 1 ; sthd >
+        au < manifest ; 1977 ; Science, Technology & Human Values Volume 2 ; 2 ; sthd >
+        au < manifest ; 1978 ; Science, Technology & Human Values Volume 3 ; 3 ; sthd >
+        au < manifest ; 1979 ; Science, Technology & Human Values Volume 4 ; 4 ; sthd >
+        au < manifest ; 1980 ; Science, Technology & Human Values Volume 5 ; 5 ; sthd >
+        au < manifest ; 1981 ; Science, Technology & Human Values Volume 6 ; 6 ; sthd >
+        au < manifest ; 1982 ; Science, Technology & Human Values Volume 7 ; 7 ; sthd >
+        au < manifest ; 1983 ; Science, Technology & Human Values Volume 8 ; 8 ; sthd >
+        au < manifest ; 1984 ; Science, Technology & Human Values Volume 9 ; 9 ; sthd >
+        au < manifest ; 1985 ; Science, Technology & Human Values Volume 10 ; 10 ; sthd >
+        au < manifest ; 1986 ; Science, Technology & Human Values Volume 11 ; 11 ; sthd >
+        au < manifest ; 1987 ; Science, Technology & Human Values Volume 12 ; 12 ; sthd >
         au < doesNotExist ; 0 ; Science, Technology & Human Values Volume 13 ; 13 ; sthd >
-        au < exists ; 1989 ; Science, Technology & Human Values Volume 14 ; 14 ; sthd >
-        au < exists ; 1990 ; Science, Technology & Human Values Volume 15 ; 15 ; sthd >
-        au < exists ; 1991 ; Science, Technology & Human Values Volume 16 ; 16 ; sthd >
-        au < exists ; 1992 ; Science, Technology & Human Values Volume 17 ; 17 ; sthd >
-        au < exists ; 1993 ; Science, Technology & Human Values Volume 18 ; 18 ; sthd >
-        au < exists ; 1994 ; Science, Technology & Human Values Volume 19 ; 19 ; sthd >
-        au < exists ; 1995 ; Science, Technology & Human Values Volume 20 ; 20 ; sthd >
-        au < exists ; 1996 ; Science, Technology & Human Values Volume 21 ; 21 ; sthd >
-        au < exists ; 1997 ; Science, Technology & Human Values Volume 22 ; 22 ; sthd >
-        au < exists ; 1998 ; Science, Technology & Human Values Volume 23 ; 23 ; sthd >
-        au < exists ; 1999 ; Science, Technology & Human Values Volume 24 ; 24 ; sthd >
-        au < exists ; 2000 ; Science, Technology & Human Values Volume 25 ; 25 ; sthd >
-        au < exists ; 2001 ; Science, Technology & Human Values Volume 26 ; 26 ; sthd >
-        au < exists ; 2002 ; Science, Technology & Human Values Volume 27 ; 27 ; sthd >
-        au < exists ; 2003 ; Science, Technology & Human Values Volume 28 ; 28 ; sthd >
-        au < exists ; 2004 ; Science, Technology & Human Values Volume 29 ; 29 ; sthd >
+        au < manifest ; 1989 ; Science, Technology & Human Values Volume 14 ; 14 ; sthd >
+        au < manifest ; 1990 ; Science, Technology & Human Values Volume 15 ; 15 ; sthd >
+        au < manifest ; 1991 ; Science, Technology & Human Values Volume 16 ; 16 ; sthd >
+        au < manifest ; 1992 ; Science, Technology & Human Values Volume 17 ; 17 ; sthd >
+        au < manifest ; 1993 ; Science, Technology & Human Values Volume 18 ; 18 ; sthd >
+        au < manifest ; 1994 ; Science, Technology & Human Values Volume 19 ; 19 ; sthd >
+        au < manifest ; 1995 ; Science, Technology & Human Values Volume 20 ; 20 ; sthd >
+        au < manifest ; 1996 ; Science, Technology & Human Values Volume 21 ; 21 ; sthd >
+        au < manifest ; 1997 ; Science, Technology & Human Values Volume 22 ; 22 ; sthd >
+        au < manifest ; 1998 ; Science, Technology & Human Values Volume 23 ; 23 ; sthd >
+        au < manifest ; 1999 ; Science, Technology & Human Values Volume 24 ; 24 ; sthd >
+        au < manifest ; 2000 ; Science, Technology & Human Values Volume 25 ; 25 ; sthd >
+        au < manifest ; 2001 ; Science, Technology & Human Values Volume 26 ; 26 ; sthd >
+        au < manifest ; 2002 ; Science, Technology & Human Values Volume 27 ; 27 ; sthd >
+        au < manifest ; 2003 ; Science, Technology & Human Values Volume 28 ; 28 ; sthd >
+        au < manifest ; 2004 ; Science, Technology & Human Values Volume 29 ; 29 ; sthd >
         au < doNotProcess ; 2005 ; Science, Technology & Human Values Volume 30 ; 30 ; sthd >
-        au < exists ; 2006 ; Science, Technology & Human Values Volume 31 ; 31 ; sthd >
-        au < exists ; 2007 ; Science, Technology & Human Values Volume 32 ; 32 ; sthd >
+        au < manifest ; 2006 ; Science, Technology & Human Values Volume 31 ; 31 ; sthd >
+        au < manifest ; 2007 ; Science, Technology & Human Values Volume 32 ; 32 ; sthd >
         au < doNotProcess ; 2008 ; Science, Technology & Human Values Volume 33 ; 33 ; sthd >
         au < doNotProcess ; 2009 ; Science, Technology & Human Values Volume 34 ; 34 ; sthd >
         au < doNotProcess ; 2010 ; Science, Technology & Human Values Volume 35 ; 35 ; sthd >
@@ -35812,8 +35812,8 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; Science, Technology & Human Values Volume 38 ; 38 ; sthd >
         au < doNotProcess ; 2014 ; Science, Technology & Human Values Volume 39 ; 39 ; sthd >
         au < doNotProcess ; 2015 ; Science, Technology & Human Values Volume 40 ; 40 ; sthd >
-        au < exists ; 2016 ; Science, Technology & Human Values Volume 41 ; 41 ; sthd >
-        au < expected ; 2017 ; Science, Technology & Human Values Volume 42 ; 42 ; sthd >
+        au < manifest ; 2016 ; Science, Technology & Human Values Volume 41 ; 41 ; sthd >
+        au < manifest ; 2017 ; Science, Technology & Human Values Volume 42 ; 42 ; sthd >
 
       }
 
@@ -36573,39 +36573,39 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
         au < doNotProcess ; 1983 ; Social Science Computer Review Volume 1 ; 1 ; ssca >
         au < manifest ; 1984 ; Social Science Computer Review Volume 2 ; 2 ; sscb >
-        au < exists ; 1985 ; Social Science Computer Review Volume 3 ; 3 ; sscd >
-        au < exists ; 1986 ; Social Science Computer Review Volume 4 ; 4 ; sscd >
-        au < exists ; 1987 ; Social Science Computer Review Volume 5 ; 5 ; sscd >
-        au < exists ; 1988 ; Social Science Computer Review Volume 6 ; 6 ; ssce >
-        au < exists ; 1989 ; Social Science Computer Review Volume 7 ; 7 ; ssce >
-        au < exists ; 1990 ; Social Science Computer Review Volume 8 ; 8 ; ssce >
-        au < exists ; 1991 ; Social Science Computer Review Volume 9 ; 9 ; ssce >
-        au < exists ; 1992 ; Social Science Computer Review Volume 10 ; 10 ; ssce >
-        au < exists ; 1993 ; Social Science Computer Review Volume 11 ; 11 ; ssce >
-        au < exists ; 1994 ; Social Science Computer Review Volume 12 ; 12 ; ssce >
-        au < exists ; 1995 ; Social Science Computer Review Volume 13 ; 13 ; ssce >
-        au < exists ; 1996 ; Social Science Computer Review Volume 14 ; 14 ; ssce >
-        au < exists ; 1997 ; Social Science Computer Review Volume 15 ; 15 ; ssce >
-        au < exists ; 1998 ; Social Science Computer Review Volume 16 ; 16 ; ssce >
-        au < exists ; 1999 ; Social Science Computer Review Volume 17 ; 17 ; ssce >
-        au < exists ; 2000 ; Social Science Computer Review Volume 18 ; 18 ; ssce >
-        au < exists ; 2001 ; Social Science Computer Review Volume 19 ; 19 ; ssce >
-        au < exists ; 2002 ; Social Science Computer Review Volume 20 ; 20 ; ssce >
-        au < exists ; 2003 ; Social Science Computer Review Volume 21 ; 21 ; ssce >
-        au < exists ; 2004 ; Social Science Computer Review Volume 22 ; 22 ; ssce >
-        au < exists ; 2005 ; Social Science Computer Review Volume 23 ; 23 ; ssce >
+        au < manifest ; 1985 ; Social Science Computer Review Volume 3 ; 3 ; sscd >
+        au < manifest ; 1986 ; Social Science Computer Review Volume 4 ; 4 ; sscd >
+        au < manifest ; 1987 ; Social Science Computer Review Volume 5 ; 5 ; sscd >
+        au < manifest ; 1988 ; Social Science Computer Review Volume 6 ; 6 ; ssce >
+        au < manifest ; 1989 ; Social Science Computer Review Volume 7 ; 7 ; ssce >
+        au < manifest ; 1990 ; Social Science Computer Review Volume 8 ; 8 ; ssce >
+        au < manifest ; 1991 ; Social Science Computer Review Volume 9 ; 9 ; ssce >
+        au < manifest ; 1992 ; Social Science Computer Review Volume 10 ; 10 ; ssce >
+        au < manifest ; 1993 ; Social Science Computer Review Volume 11 ; 11 ; ssce >
+        au < manifest ; 1994 ; Social Science Computer Review Volume 12 ; 12 ; ssce >
+        au < manifest ; 1995 ; Social Science Computer Review Volume 13 ; 13 ; ssce >
+        au < manifest ; 1996 ; Social Science Computer Review Volume 14 ; 14 ; ssce >
+        au < manifest ; 1997 ; Social Science Computer Review Volume 15 ; 15 ; ssce >
+        au < manifest ; 1998 ; Social Science Computer Review Volume 16 ; 16 ; ssce >
+        au < manifest ; 1999 ; Social Science Computer Review Volume 17 ; 17 ; ssce >
+        au < manifest ; 2000 ; Social Science Computer Review Volume 18 ; 18 ; ssce >
+        au < manifest ; 2001 ; Social Science Computer Review Volume 19 ; 19 ; ssce >
+        au < manifest ; 2002 ; Social Science Computer Review Volume 20 ; 20 ; ssce >
+        au < manifest ; 2003 ; Social Science Computer Review Volume 21 ; 21 ; ssce >
+        au < manifest ; 2004 ; Social Science Computer Review Volume 22 ; 22 ; ssce >
+        au < manifest ; 2005 ; Social Science Computer Review Volume 23 ; 23 ; ssce >
         au < doNotProcess ; 2006 ; Social Science Computer Review Volume 24 ; 24 ; ssce >
-        au < exists ; 2007 ; Social Science Computer Review Volume 25 ; 25 ; ssce >
+        au < manifest ; 2007 ; Social Science Computer Review Volume 25 ; 25 ; ssce >
         au < doNotProcess ; 2008 ; Social Science Computer Review Volume 26 ; 26 ; ssce >
-        au < exists ; 2009 ; Social Science Computer Review Volume 27 ; 27 ; ssce >
+        au < manifest ; 2009 ; Social Science Computer Review Volume 27 ; 27 ; ssce >
         au < doNotProcess ; 2010 ; Social Science Computer Review Volume 28 ; 28 ; ssce >
         au < doNotProcess ; 2011 ; Social Science Computer Review Volume 29 ; 29 ; ssce >
         au < doNotProcess ; 2012 ; Social Science Computer Review Volume 30 ; 30 ; ssce >
         au < doNotProcess ; 2013 ; Social Science Computer Review Volume 31 ; 31 ; ssce >
         au < doNotProcess ; 2014 ; Social Science Computer Review Volume 32 ; 32 ; ssce >
         au < doNotProcess ; 2015 ; Social Science Computer Review Volume 33 ; 33 ; ssce >
-        au < exists ; 2016 ; Social Science Computer Review Volume 34 ; 34 ; ssce >
-        au < expected ; 2017 ; Social Science Computer Review Volume 35 ; 35 ; ssce >
+        au < manifest ; 2016 ; Social Science Computer Review Volume 34 ; 34 ; ssce >
+        au < manifest ; 2017 ; Social Science Computer Review Volume 35 ; 35 ; ssce >
 
       }
 
@@ -39312,7 +39312,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2017 ; Thesis Eleven Volume 139 ; 139 ; thea >
         au < manifest ; 2017 ; Thesis Eleven Volume 140 ; 140 ; thea >
         au < manifest ; 2017 ; Thesis Eleven Volume 141 ; 141 ; thea >
-        au < expected ; 2017 ; Thesis Eleven Volume 142 ; 142 ; thea >
+        au < manifest ; 2017 ; Thesis Eleven Volume 142 ; 142 ; thea >
         au < expected ; 2017 ; Thesis Eleven Volume 143 ; 143 ; thea >
 
       }
@@ -39666,55 +39666,55 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 1966 ; Transcultural Psychiatry Volume 3 ; 3 ; tpsc >
         au < manifest ; 1967 ; Transcultural Psychiatry Volume 4 ; 4 ; tpsc >
         au < manifest ; 1968 ; Transcultural Psychiatry Volume 5 ; 5 ; tpsc >
-        au < exists ; 1969 ; Transcultural Psychiatry Volume 6 ; 6 ; tpsd >
-        au < exists ; 1970 ; Transcultural Psychiatry Volume 7 ; 7 ; tpsd >
-        au < exists ; 1971 ; Transcultural Psychiatry Volume 8 ; 8 ; tpsd >
-        au < exists ; 1972 ; Transcultural Psychiatry Volume 9 ; 9 ; tpsd >
-        au < exists ; 1973 ; Transcultural Psychiatry Volume 10 ; 10 ; tpsd >
-        au < exists ; 1974 ; Transcultural Psychiatry Volume 11 ; 11 ; tpsd >
-        au < exists ; 1975 ; Transcultural Psychiatry Volume 12 ; 12 ; tpsd >
-        au < exists ; 1976 ; Transcultural Psychiatry Volume 13 ; 13 ; tpsd >
-        au < exists ; 1977 ; Transcultural Psychiatry Volume 14 ; 14 ; tpsd >
-        au < exists ; 1978 ; Transcultural Psychiatry Volume 15 ; 15 ; tpsd >
-        au < exists ; 1979 ; Transcultural Psychiatry Volume 16 ; 16 ; tpsd >
-        au < exists ; 1980 ; Transcultural Psychiatry Volume 17 ; 17 ; tpsd >
-        au < exists ; 1981 ; Transcultural Psychiatry Volume 18 ; 18 ; tpsd >
-        au < exists ; 1982 ; Transcultural Psychiatry Volume 19 ; 19 ; tpsd >
-        au < exists ; 1983 ; Transcultural Psychiatry Volume 20 ; 20 ; tpsd >
-        au < exists ; 1984 ; Transcultural Psychiatry Volume 21 ; 21 ; tpsd >
-        au < exists ; 1985 ; Transcultural Psychiatry Volume 22 ; 22 ; tpsd >
-        au < exists ; 1986 ; Transcultural Psychiatry Volume 23 ; 23 ; tpsd >
-        au < exists ; 1987 ; Transcultural Psychiatry Volume 24 ; 24 ; tpsd >
-        au < exists ; 1988 ; Transcultural Psychiatry Volume 25 ; 25 ; tpsd >
-        au < exists ; 1989 ; Transcultural Psychiatry Volume 26 ; 26 ; tpsd >
-        au < exists ; 1990 ; Transcultural Psychiatry Volume 27 ; 27 ; tpsd >
-        au < exists ; 1991 ; Transcultural Psychiatry Volume 28 ; 28 ; tpsd >
-        au < exists ; 1992 ; Transcultural Psychiatry Volume 29 ; 29 ; tpsd >
-        au < exists ; 1993 ; Transcultural Psychiatry Volume 30 ; 30 ; tpsd >
-        au < exists ; 1994 ; Transcultural Psychiatry Volume 31 ; 31 ; tpsd >
-        au < exists ; 1995 ; Transcultural Psychiatry Volume 32 ; 32 ; tpsd >
-        au < exists ; 1996 ; Transcultural Psychiatry Volume 33 ; 33 ; tpse >
-        au < exists ; 1997 ; Transcultural Psychiatry Volume 34 ; 34 ; tpse >
-        au < exists ; 1998 ; Transcultural Psychiatry Volume 35 ; 35 ; tpse >
-        au < exists ; 1999 ; Transcultural Psychiatry Volume 36 ; 36 ; tpse >
-        au < exists ; 2000 ; Transcultural Psychiatry Volume 37 ; 37 ; tpse >
-        au < exists ; 2001 ; Transcultural Psychiatry Volume 38 ; 38 ; tpse >
-        au < exists ; 2002 ; Transcultural Psychiatry Volume 39 ; 39 ; tpse >
-        au < exists ; 2003 ; Transcultural Psychiatry Volume 40 ; 40 ; tpse >
-        au < exists ; 2004 ; Transcultural Psychiatry Volume 41 ; 41 ; tpse >
+        au < manifest ; 1969 ; Transcultural Psychiatry Volume 6 ; 6 ; tpsd >
+        au < manifest ; 1970 ; Transcultural Psychiatry Volume 7 ; 7 ; tpsd >
+        au < manifest ; 1971 ; Transcultural Psychiatry Volume 8 ; 8 ; tpsd >
+        au < manifest ; 1972 ; Transcultural Psychiatry Volume 9 ; 9 ; tpsd >
+        au < manifest ; 1973 ; Transcultural Psychiatry Volume 10 ; 10 ; tpsd >
+        au < manifest ; 1974 ; Transcultural Psychiatry Volume 11 ; 11 ; tpsd >
+        au < manifest ; 1975 ; Transcultural Psychiatry Volume 12 ; 12 ; tpsd >
+        au < manifest ; 1976 ; Transcultural Psychiatry Volume 13 ; 13 ; tpsd >
+        au < manifest ; 1977 ; Transcultural Psychiatry Volume 14 ; 14 ; tpsd >
+        au < manifest ; 1978 ; Transcultural Psychiatry Volume 15 ; 15 ; tpsd >
+        au < manifest ; 1979 ; Transcultural Psychiatry Volume 16 ; 16 ; tpsd >
+        au < manifest ; 1980 ; Transcultural Psychiatry Volume 17 ; 17 ; tpsd >
+        au < manifest ; 1981 ; Transcultural Psychiatry Volume 18 ; 18 ; tpsd >
+        au < manifest ; 1982 ; Transcultural Psychiatry Volume 19 ; 19 ; tpsd >
+        au < manifest ; 1983 ; Transcultural Psychiatry Volume 20 ; 20 ; tpsd >
+        au < manifest ; 1984 ; Transcultural Psychiatry Volume 21 ; 21 ; tpsd >
+        au < manifest ; 1985 ; Transcultural Psychiatry Volume 22 ; 22 ; tpsd >
+        au < manifest ; 1986 ; Transcultural Psychiatry Volume 23 ; 23 ; tpsd >
+        au < manifest ; 1987 ; Transcultural Psychiatry Volume 24 ; 24 ; tpsd >
+        au < manifest ; 1988 ; Transcultural Psychiatry Volume 25 ; 25 ; tpsd >
+        au < manifest ; 1989 ; Transcultural Psychiatry Volume 26 ; 26 ; tpsd >
+        au < manifest ; 1990 ; Transcultural Psychiatry Volume 27 ; 27 ; tpsd >
+        au < manifest ; 1991 ; Transcultural Psychiatry Volume 28 ; 28 ; tpsd >
+        au < manifest ; 1992 ; Transcultural Psychiatry Volume 29 ; 29 ; tpsd >
+        au < manifest ; 1993 ; Transcultural Psychiatry Volume 30 ; 30 ; tpsd >
+        au < manifest ; 1994 ; Transcultural Psychiatry Volume 31 ; 31 ; tpsd >
+        au < manifest ; 1995 ; Transcultural Psychiatry Volume 32 ; 32 ; tpsd >
+        au < manifest ; 1996 ; Transcultural Psychiatry Volume 33 ; 33 ; tpse >
+        au < manifest ; 1997 ; Transcultural Psychiatry Volume 34 ; 34 ; tpse >
+        au < manifest ; 1998 ; Transcultural Psychiatry Volume 35 ; 35 ; tpse >
+        au < manifest ; 1999 ; Transcultural Psychiatry Volume 36 ; 36 ; tpse >
+        au < manifest ; 2000 ; Transcultural Psychiatry Volume 37 ; 37 ; tpse >
+        au < manifest ; 2001 ; Transcultural Psychiatry Volume 38 ; 38 ; tpse >
+        au < manifest ; 2002 ; Transcultural Psychiatry Volume 39 ; 39 ; tpse >
+        au < manifest ; 2003 ; Transcultural Psychiatry Volume 40 ; 40 ; tpse >
+        au < manifest ; 2004 ; Transcultural Psychiatry Volume 41 ; 41 ; tpse >
         au < doNotProcess ; 2005 ; Transcultural Psychiatry Volume 42 ; 42 ; tpse >
         au < doNotProcess ; 2006 ; Transcultural Psychiatry Volume 43 ; 43 ; tpse >
         au < doNotProcess ; 2007 ; Transcultural Psychiatry Volume 44 ; 44 ; tpse >
         au < doNotProcess ; 2008 ; Transcultural Psychiatry Volume 45 ; 45 ; tpse >
-        au < exists ; 2009 ; Transcultural Psychiatry Volume 46 ; 46 ; tpse >
+        au < manifest ; 2009 ; Transcultural Psychiatry Volume 46 ; 46 ; tpse >
         au < doNotProcess ; 2010 ; Transcultural Psychiatry Volume 47 ; 47 ; tpse >
         au < doNotProcess ; 2011 ; Transcultural Psychiatry Volume 48 ; 48 ; tpse >
         au < doNotProcess ; 2012 ; Transcultural Psychiatry Volume 49 ; 49 ; tpse >
         au < doNotProcess ; 2013 ; Transcultural Psychiatry Volume 50 ; 50 ; tpse >
         au < doNotProcess ; 2014 ; Transcultural Psychiatry Volume 51 ; 51 ; tpse >
         au < doNotProcess ; 2015 ; Transcultural Psychiatry Volume 52 ; 52 ; tpse >
-        au < exists ; 2016 ; Transcultural Psychiatry Volume 53 ; 53 ; tpse >
-        au < expected ; 2017 ; Transcultural Psychiatry Volume 54 ; 54 ; tpse >
+        au < manifest ; 2016 ; Transcultural Psychiatry Volume 53 ; 53 ; tpse >
+        au < manifest ; 2017 ; Transcultural Psychiatry Volume 54 ; 54 ; tpse >
 
       }
 
@@ -39966,8 +39966,8 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; Trends in Amplification Volume 17 ; 17 ; tiaa >
         au < doNotProcess ; 2014 ; Trends in Amplification Volume 18 ; 18 ; tiab >
         au < doNotProcess ; 2015 ; Trends in Amplification Volume 19 ; 19 ; tiab >
-        au < expected ; 2016 ; Trends in Amplification Volume 20 ; 20 ; tiab >
-        au < expected ; 2017 ; Trends in Amplification Volume 21 ; 21 ; tiab >
+        au < manifest ; 2016 ; Trends in Amplification Volume 20 ; 20 ; tiab >
+        au < manifest ; 2017 ; Trends in Amplification Volume 21 ; 21 ; tiab >
 
       }
 
@@ -40965,8 +40965,8 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
   
       #param[base_url] = http://waf.sagepub.com/
   
-      au < exists ; 2016 ; World Affairs Volume 179 ; 179 ; wafj >
-      au < expected ; 2017 ; World Affairs Volume 180 ; 180 ; wafj >
+      au < manifest ; 2016 ; World Affairs Volume 179 ; 179 ; wafj >
+      au < manifest ; 2017 ; World Affairs Volume 180 ; 180 ; wafj >
   
     }
 
