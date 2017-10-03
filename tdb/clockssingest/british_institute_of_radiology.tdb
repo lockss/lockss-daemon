@@ -286,16 +286,16 @@
       # no issue in 2010-2012
 
       au < crawling ; exists ; 1999 ; Imaging Volume 11 ; 11 ; >
-      au < crawling ; exists ; 2000 ; Imaging Volume 12 ; 12 ; >
-      au < crawling ; exists ; 2001 ; Imaging Volume 13 ; 13 ; >
+      au < frozen ; exists ; 2000 ; Imaging Volume 12 ; 12 ; >
+      au < frozen ; exists ; 2001 ; Imaging Volume 13 ; 13 ; >
       au < crawling ; exists ; 2002 ; Imaging Volume 14 ; 14 ; >
       au < crawling ; exists ; 2003 ; Imaging Volume 15 ; 15 ; >
-      au < crawling ; exists ; 2004 ; Imaging Volume 16 ; 16 ; >
-      au < crawling ; exists ; 2005 ; Imaging Volume 17 ; 17 ; >
+      au < frozen ; exists ; 2004 ; Imaging Volume 16 ; 16 ; >
+      au < frozen ; exists ; 2005 ; Imaging Volume 17 ; 17 ; >
       au < crawling ; exists ; 2006 ; Imaging Volume 18 ; 18 ; >
-      au < crawling ; exists ; 2007 ; Imaging Volume 19 ; 19 ; >
+      au < frozen ; exists ; 2007 ; Imaging Volume 19 ; 19 ; >
       au < crawling ; exists ; 2008 ; Imaging Volume 20 ; 20 ; >
-      au < crawling ; exists ; 2009 ; Imaging Volume 21 ; 21 ; >
+      au < frozen ; exists ; 2009 ; Imaging Volume 21 ; 21 ; >
       au < frozen ; exists ; 2013 ; Imaging Volume 22 ; 22 ; >
       au < finished ; finished ; 2014 ; Imaging Volume 23 ; 23 ; reingest1.clockss.org:8082 >
     
