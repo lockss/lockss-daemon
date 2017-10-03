@@ -1,0 +1,61 @@
+{
+
+  publisher <
+    name = American Academy of Pediatric Dentistry ;
+    #info[back] = 2017 ;
+    #info[contract] = 2017 ;
+    info[contract] = 9999 ;
+    info[tester] = 5 ;
+    info[poller] = 6
+  >
+  
+  {
+
+    title <
+      name = Pediatric Dentistry ;
+      issn = 0164-1263
+    >
+
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
+    param[base_url] = http://www.ingentaconnect.com/
+    param[api_url] = http://api.ingentaconnect.com/
+    param[graphics_url] = http://graphics.ingentaconnect.com/
+    param[publisher_id] = aapd
+    param[journal_id] = pd 
+    param[journal_issn] = 0164-1263
+    implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
+    
+    
+    au < exists ; exists ; 2014 ; Pediatric Dentistry Volume 36 ; 36 ; >
+    au < exists ; exists ; 2015 ; Pediatric Dentistry Volume 37 ; 37 ; >
+    au < exists ; exists ; 2016 ; Pediatric Dentistry Volume 38 ; 38 ; >
+    au < exists ; exists ; 2017 ; Pediatric Dentistry Volume 39 ; 39 ; >
+    
+  }
+  
+  {
+
+    title <
+      name = Journal of Dentistry for Children ;
+      issn = 1551-8949 ;
+      eissn = 1935-5068
+    >
+
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
+    param[base_url] = http://www.ingentaconnect.com/
+    param[api_url] = http://api.ingentaconnect.com/
+    param[graphics_url] = http://graphics.ingentaconnect.com/
+    param[publisher_id] = aapd
+    param[journal_id] = jodc 
+    param[journal_issn] = 1551-8949
+    implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
+    
+    
+    au < exists ; exists ; 2014 ; Journal of Dentistry for Children Volume 81 ; 81 ; >
+    au < exists ; exists ; 2015 ; Journal of Dentistry for Children Volume 82 ; 82 ; >
+    au < exists ; exists ; 2016 ; Journal of Dentistry for Children Volume 83 ; 83 ; >
+    au < exists ; exists ; 2017 ; Journal of Dentistry for Children Volume 84 ; 84 ; >
+    
+  }
+  
+}
