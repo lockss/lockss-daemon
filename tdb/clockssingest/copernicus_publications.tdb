@@ -94,7 +94,7 @@
       au < finished ; finished ; 2014 ; 2014 ; Advances in Radio Science 2013 Volume 12 ; 12 ; http://www.adv-radio-sci.net/ ; http://www.advances-in-radio-science.net/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Advances in Radio Science 2014 Volume 13 ; 13 ; http://www.adv-radio-sci.net/ ; http://www.advances-in-radio-science.net/ ; >
       au < crawling ; exists ; 2016 ; 2016 ; Advances in Radio Science 2015 Volume 14 ; 14 ; https://www.adv-radio-sci.net/ ; https://www.advances-in-radio-science.net/ ; >
-      au < manifest ; exists ; 2017 ; 2017 ; Advances in Radio Science 2016 Volume 15 ; 15 ; https://www.adv-radio-sci.net/ ; https://www.advances-in-radio-science.net/ ; >
+      au < testing ; exists ; 2017 ; 2017 ; Advances in Radio Science 2016 Volume 15 ; 15 ; https://www.adv-radio-sci.net/ ; https://www.advances-in-radio-science.net/ ; >
 
    }
 
@@ -525,7 +525,7 @@
       au < finished ; finished ; 2014 ; 2014 ; Earth Surface Dynamics Volume 2 ; 2 ; http://www.earth-surf-dynam.net/ ; http://www.earth-surface-dynamics.net/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Earth Surface Dynamics Volume 3 ; 3 ; http://www.earth-surf-dynam.net/ ; http://www.earth-surface-dynamics.net/ ; >
       au < frozen ; exists ; 2016 ; 2016 ; Earth Surface Dynamics Volume 4 ; 4 ; http://www.earth-surf-dynam.net/ ; http://www.earth-surface-dynamics.net/ ; >
-      au < testing ; exists ; 2017 ; 2017 ; Earth Surface Dynamics Volume 5 ; 5 ; https://www.earth-surf-dynam.net/ ; https://www.earth-surface-dynamics.net/ ; >
+      au < ready ; exists ; 2017 ; 2017 ; Earth Surface Dynamics Volume 5 ; 5 ; https://www.earth-surf-dynam.net/ ; https://www.earth-surface-dynamics.net/ ; >
 
    }
 
@@ -603,7 +603,7 @@
       au < finished ; finished ; 2014 ; 2014 ; Earth System Science Data Volume 6 ; 6 ; http://www.earth-syst-sci-data.net/ ; http://www.earth-system-science-data.net/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Earth System Science Data Volume 7 ; 7 ; http://www.earth-syst-sci-data.net/ ; http://www.earth-system-science-data.net/ ; >
       au < frozen ; exists ; 2016 ; 2016 ; Earth System Science Data Volume 8 ; 8 ; http://www.earth-syst-sci-data.net/ ; http://www.earth-system-science-data.net/ ; >
-      au < testing ; exists ; 2017 ; 2017 ; Earth System Science Data Volume 9 ; 9 ; https://www.earth-syst-sci-data.net/ ; https://www.earth-system-science-data.net/ ; >
+      au < ready ; exists ; 2017 ; 2017 ; Earth System Science Data Volume 9 ; 9 ; https://www.earth-syst-sci-data.net/ ; https://www.earth-system-science-data.net/ ; >
 
    }
 
@@ -713,7 +713,7 @@
       au < finished ; finished ; 2014 ; 2014 ; Fossil Record Reports Volume 17 ; 17 ; http://www.foss-rec.net/ ; http://www.fossil-record.net/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Fossil Record Reports Volume 18 ; 18 ; http://www.foss-rec.net/ ; http://www.fossil-record.net/ ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2016 ; 2016 ; Fossil Record Reports Volume 19 ; 19 ; http://www.foss-rec.net/ ; http://www.fossil-record.net/ ; >
-      au < testing ; exists ; 2017 ; 2017 ; Fossil Record Reports Volume 20 ; 20 ; https://www.foss-rec.net/ ; https://www.fossil-record.net/ ; >
+      au < ready ; exists ; 2017 ; 2017 ; Fossil Record Reports Volume 20 ; 20 ; https://www.foss-rec.net/ ; https://www.fossil-record.net/ ; >
 
    }
 
@@ -799,8 +799,8 @@
       au < frozen ; exists ; 2013 ; 2013 ; Geographica Helvetica Volume 68 ; 68 ; http://www.geogr-helv.net/ ; http://www.geographica-helvetica.net/ ; >
       au < finished ; finished ; 2014 ; 2014 ; Geographica Helvetica Volume 69 ; 69 ; http://www.geogr-helv.net/ ; http://www.geographica-helvetica.net/ ; >
       au < finished ; finished ; 2015 ; 2015 ; Geographica Helvetica Volume 70 ; 70 ; http://www.geogr-helv.net/ ; http://www.geographica-helvetica.net/ ; >
-      au < testing ; exists ; 2016 ; 2016 ; Geographica Helvetica Volume 71 ; 71 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ ; >
-      au < testing ; exists ; 2017 ; 2017 ; Geographica Helvetica Volume 72 ; 72 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ ; >
+      au < ready ; exists ; 2016 ; 2016 ; Geographica Helvetica Volume 71 ; 71 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ ; >
+      au < ready ; exists ; 2017 ; 2017 ; Geographica Helvetica Volume 72 ; 72 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ ; >
 
    }
 
@@ -860,7 +860,7 @@
       au < finished ; finished ; 2014 ; 2014 ; Geoscientific Model Development Volume 7 ; 7 ; http://www.geosci-model-dev.net/ ; http://www.geoscientific-model-development.net/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2015 ; 2015 ; Geoscientific Model Development Volume 8 ; 8 ; http://www.geosci-model-dev.net/ ; http://www.geoscientific-model-development.net/ ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2016 ; 2016 ; Geoscientific Model Development Volume 9 ; 9 ; http://www.geosci-model-dev.net/ ; http://www.geoscientific-model-development.net/ ; >
-      au < testing ; exists ; 2017 ; 2017 ; Geoscientific Model Development Volume 10 ; 10 ; https://www.geosci-model-dev.net/ ; https://www.geoscientific-model-development.net/ ; >
+      au < ready ; exists ; 2017 ; 2017 ; Geoscientific Model Development Volume 10 ; 10 ; https://www.geosci-model-dev.net/ ; https://www.geoscientific-model-development.net/ ; >
 
    }
 
@@ -921,7 +921,7 @@
       au < finished ; finished ; 2014 ; 2014 ; History of Geo- and Space Sciences Volume 5 ; 5 ; http://www.hist-geo-space-sci.net/ ; http://www.history-of-geo-and-space-sciences.net/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; History of Geo- and Space Sciences Volume 6 ; 6 ; http://www.hist-geo-space-sci.net/ ; http://www.history-of-geo-and-space-sciences.net/ ; >
       au < frozen ; exists ; 2016 ; 2016 ; History of Geo- and Space Sciences Volume 7 ; 7 ; http://www.hist-geo-space-sci.net/ ; http://www.history-of-geo-and-space-sciences.net/ ; >
-      au < testing ; exists ; 2017 ; 2017 ; History of Geo- and Space Sciences Volume 8 ; 8 ; https://www.hist-geo-space-sci.net/ ; https://www.history-of-geo-and-space-sciences.net/ ; >
+      au < ready ; exists ; 2017 ; 2017 ; History of Geo- and Space Sciences Volume 8 ; 8 ; https://www.hist-geo-space-sci.net/ ; https://www.history-of-geo-and-space-sciences.net/ ; >
 
    }
 
@@ -955,7 +955,7 @@
       au < finished ; finished ; 2014 ; 2014 ; Hydrology and Earth System Sciences Volume 18 ; 18 ; http://www.hydrol-earth-syst-sci.net/ ; http://www.hydrology-and-earth-system-sciences.net/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Hydrology and Earth System Sciences Volume 19 ; 19 ; http://www.hydrol-earth-syst-sci.net/ ; http://www.hydrology-and-earth-system-sciences.net/ ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2016 ; 2016 ; Hydrology and Earth System Sciences Volume 20 ; 20 ; http://www.hydrol-earth-syst-sci.net/ ; http://www.hydrology-and-earth-system-sciences.net/ ; >
-      au < testing ; exists ; 2017 ; 2017 ; Hydrology and Earth System Sciences Volume 21 ; 21 ; https://www.hydrol-earth-syst-sci.net/ ; https://www.hydrology-and-earth-system-sciences.net/ ; >
+      au < ready ; exists ; 2017 ; 2017 ; Hydrology and Earth System Sciences Volume 21 ; 21 ; https://www.hydrol-earth-syst-sci.net/ ; https://www.hydrology-and-earth-system-sciences.net/ ; >
 
    }
 
@@ -1183,8 +1183,8 @@
       au < frozen ; exists ; 2013 ; 2013 ; Journal of Sensors and Sensor Systems Volume 2 ; 2 ; http://www.j-sens-sens-syst.net/ ; http://www.journal-of-sensors-and-sensor-systems.net/ ; >
       au < finished ; finished ; 2014 ; 2014 ; Journal of Sensors and Sensor Systems Volume 3 ; 3 ; http://www.j-sens-sens-syst.net/ ; http://www.journal-of-sensors-and-sensor-systems.net/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Journal of Sensors and Sensor Systems Volume 4 ; 4 ; http://www.j-sens-sens-syst.net/ ; http://www.journal-of-sensors-and-sensor-systems.net/ ; >
-      au < testing ; exists ; 2016 ; 2016 ; Journal of Sensors and Sensor Systems Volume 5 ; 5 ; https://www.j-sens-sens-syst.net/ ; https://www.journal-of-sensors-and-sensor-systems.net/ ; >
-      au < testing ; exists ; 2017 ; 2017 ; Journal of Sensors and Sensor Systems Volume 6 ; 6 ; https://www.j-sens-sens-syst.net/ ; https://www.journal-of-sensors-and-sensor-systems.net/ ; >
+      au < ready ; exists ; 2016 ; 2016 ; Journal of Sensors and Sensor Systems Volume 5 ; 5 ; https://www.j-sens-sens-syst.net/ ; https://www.journal-of-sensors-and-sensor-systems.net/ ; >
+      au < ready ; exists ; 2017 ; 2017 ; Journal of Sensors and Sensor Systems Volume 6 ; 6 ; https://www.j-sens-sens-syst.net/ ; https://www.journal-of-sensors-and-sensor-systems.net/ ; >
 
    }
 
@@ -1204,8 +1204,8 @@
       au < frozen ; exists ; 2013 ; 2013 ; Mechanical Sciences Volume 4 ; 4 ; http://www.mech-sci.net/ ; http://www.mechanical-sciences.net/ ; >
       au < finished ; finished ; 2014 ; 2014 ; Mechanical Sciences Volume 5 ; 5 ; http://www.mech-sci.net/ ; http://www.mechanical-sciences.net/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Mechanical Sciences Volume 6 ; 6 ; http://www.mech-sci.net/ ; http://www.mechanical-sciences.net/ ; >
-      au < testing ; exists ; 2016 ; 2016 ; Mechanical Sciences Volume 7 ; 7 ; https://www.mech-sci.net/ ; https://www.mechanical-sciences.net/ ; >
-      au < testing ; exists ; 2017 ; 2017 ; Mechanical Sciences Volume 8 ; 8 ; https://www.mech-sci.net/ ; https://www.mechanical-sciences.net/ ; >
+      au < ready ; exists ; 2016 ; 2016 ; Mechanical Sciences Volume 7 ; 7 ; https://www.mech-sci.net/ ; https://www.mechanical-sciences.net/ ; >
+      au < ready ; exists ; 2017 ; 2017 ; Mechanical Sciences Volume 8 ; 8 ; https://www.mech-sci.net/ ; https://www.mechanical-sciences.net/ ; >
 
    }
 
@@ -1234,8 +1234,8 @@
       au < frozen ; exists ; 2013 ; 2013 ; Natural Hazards and Earth System Sciences Volume 13 ; 13 ; http://www.nat-hazards-earth-syst-sci.net/ ; http://www.natural-hazards-and-earth-system-sciences.net/ ; >
       au < finished ; finished ; 2014 ; 2014 ; Natural Hazards and Earth System Sciences Volume 14 ; 14 ; http://www.nat-hazards-earth-syst-sci.net/ ; http://www.natural-hazards-and-earth-system-sciences.net/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Natural Hazards and Earth System Sciences Volume 15 ; 15 ; http://www.nat-hazards-earth-syst-sci.net/ ; http://www.natural-hazards-and-earth-system-sciences.net/ ; >
-      au < testing ; exists ; 2016 ; 2016 ; Natural Hazards and Earth System Sciences Volume 16 ; 16 ; https://www.nat-hazards-earth-syst-sci.net/ ; https://www.natural-hazards-and-earth-system-sciences.net/ ; >
-      au < testing ; exists ; 2017 ; 2017 ; Natural Hazards and Earth System Sciences Volume 17 ; 17 ; https://www.nat-hazards-earth-syst-sci.net/ ; https://www.natural-hazards-and-earth-system-sciences.net/ ; >
+      au < ready ; exists ; 2016 ; 2016 ; Natural Hazards and Earth System Sciences Volume 16 ; 16 ; https://www.nat-hazards-earth-syst-sci.net/ ; https://www.natural-hazards-and-earth-system-sciences.net/ ; >
+      au < ready ; exists ; 2017 ; 2017 ; Natural Hazards and Earth System Sciences Volume 17 ; 17 ; https://www.nat-hazards-earth-syst-sci.net/ ; https://www.natural-hazards-and-earth-system-sciences.net/ ; >
 
    }
 
@@ -1287,8 +1287,8 @@
       au < frozen ; exists ; 2013 ; 2013 ; Nonlinear Processes in Geophysics Volume 20 ; 20 ; http://www.nonlin-processes-geophys.net/ ; http://www.nonlinear-processes-in-geophysics.net/ ; >
       au < finished ; finished ; 2014 ; 2014 ; Nonlinear Processes in Geophysics Volume 21 ; 21 ; http://www.nonlin-processes-geophys.net/ ; http://www.nonlinear-processes-in-geophysics.net/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Nonlinear Processes in Geophysics Volume 22 ; 22 ; http://www.nonlin-processes-geophys.net/ ; http://www.nonlinear-processes-in-geophysics.net/ ; >
-      au < testing ; exists ; 2016 ; 2016 ; Nonlinear Processes in Geophysics Volume 23 ; 23 ; https://www.nonlin-processes-geophys.net/ ; https://www.nonlinear-processes-in-geophysics.net/ ; >
-      au < testing ; exists ; 2017 ; 2017 ; Nonlinear Processes in Geophysics Volume 24 ; 24 ; https://www.nonlin-processes-geophys.net/ ; https://www.nonlinear-processes-in-geophysics.net/ ; >
+      au < ready ; exists ; 2016 ; 2016 ; Nonlinear Processes in Geophysics Volume 23 ; 23 ; https://www.nonlin-processes-geophys.net/ ; https://www.nonlinear-processes-in-geophysics.net/ ; >
+      au < ready ; exists ; 2017 ; 2017 ; Nonlinear Processes in Geophysics Volume 24 ; 24 ; https://www.nonlin-processes-geophys.net/ ; https://www.nonlinear-processes-in-geophysics.net/ ; >
 
    }
 
@@ -1328,8 +1328,8 @@
       au < frozen ; exists ; 2013 ; 2013 ; Ocean Science Volume 9 ; 9 ; http://www.ocean-sci.net/ ; http://www.ocean-science.net/ ; >
       au < finished ; finished ; 2014 ; 2014 ; Ocean Science Volume 10 ; 10 ; http://www.ocean-sci.net/ ; http://www.ocean-science.net/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Ocean Science Volume 11 ; 11 ; http://www.ocean-sci.net/ ; http://www.ocean-science.net/ ; >
-      au < testing ; exists ; 2016 ; 2016 ; Ocean Science Volume 12 ; 12 ; https://www.ocean-sci.net/ ; https://www.ocean-science.net/ ; >
-      au < testing ; exists ; 2017 ; 2017 ; Ocean Science Volume 13 ; 13 ; https://www.ocean-sci.net/ ; https://www.ocean-science.net/ ; >
+      au < ready ; exists ; 2016 ; 2016 ; Ocean Science Volume 12 ; 12 ; https://www.ocean-sci.net/ ; https://www.ocean-science.net/ ; >
+      au < ready ; exists ; 2017 ; 2017 ; Ocean Science Volume 13 ; 13 ; https://www.ocean-sci.net/ ; https://www.ocean-science.net/ ; >
 
    }
 
@@ -1386,8 +1386,8 @@
 
       au < finished ; finished ; 2014 ; 2014 ; Primate Biology Volume 1 ; 1 ; http://www.primate-biol.net/ ; http://www.primate-biology.net/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Primate Biology Volume 2 ; 2 ; http://www.primate-biol.net/ ; http://www.primate-biology.net/ ; >
-      au < testing ; exists ; 2016 ; 2016 ; Primate Biology Volume 3 ; 3 ; https://www.primate-biol.net/ ; https://www.primate-biology.net/ ; >
-      au < testing ; exists ; 2017 ; 2017 ; Primate Biology Volume 4 ; 4 ; https://www.primate-biol.net/ ; https://www.primate-biology.net/ ; >
+      au < ready ; exists ; 2016 ; 2016 ; Primate Biology Volume 3 ; 3 ; https://www.primate-biol.net/ ; https://www.primate-biology.net/ ; >
+      au < ready ; exists ; 2017 ; 2017 ; Primate Biology Volume 4 ; 4 ; https://www.primate-biol.net/ ; https://www.primate-biology.net/ ; >
 
    }
 
@@ -1451,8 +1451,8 @@
       au < finished ; finished ; 2014 ; 2014 ; Scientific Drilling Volume 17 ; 17 ; http://www.sci-dril.net/ ; http://www.scientific-drilling.net/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014 ; 2014 ; Scientific Drilling Volume 18 ; 18 ; http://www.sci-dril.net/ ; http://www.scientific-drilling.net/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Scientific Drilling Volume 19 ; 19 ; http://www.sci-dril.net/ ; http://www.scientific-drilling.net/ ; >
-      au < testing ; exists ; 2016 ; 2016 ; Scientific Drilling Volume 20 ; 20 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ ; >
-      au < testing ; exists ; 2017 ; 2017 ; Scientific Drilling Volume 21 ; 21 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ ; >
+      au < ready ; exists ; 2016 ; 2016 ; Scientific Drilling Volume 20 ; 20 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ ; >
+      au < ready ; exists ; 2017 ; 2017 ; Scientific Drilling Volume 21 ; 21 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ ; >
 
    }
 
@@ -1489,7 +1489,7 @@
 
       au < finished ; finished ; 2015 ; 2015 ; SOIL Volume 1 ; 1 ; http://www.soil-journal.net/ ; http://www.soil-journal.net/ ; >
       au < frozen ; exists ; 2016 ; 2016 ; SOIL Volume 2 ; 2 ; http://www.soil-journal.net/ ; http://www.soil-journal.net/ ; >
-      au < testing ; exists ; 2017 ; 2017 ; SOIL Volume 3 ; 3 ; https://www.soil-journal.net/ ; https://www.soil-journal.net/ ; >
+      au < ready ; exists ; 2017 ; 2017 ; SOIL Volume 3 ; 3 ; https://www.soil-journal.net/ ; https://www.soil-journal.net/ ; >
 
    }
 
@@ -1525,7 +1525,7 @@
       au < finished ; finished ; 2014 ; 2014 ; Solid Earth Volume 5 ; 5 ; http://www.solid-earth.net/ ; http://www.solid-earth.net/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Solid Earth Volume 6 ; 6 ; http://www.solid-earth.net/ ; http://www.solid-earth.net/ ; >
       au < frozen ; exists ; 2016 ; 2016 ; Solid Earth Volume 7 ; 7 ; http://www.solid-earth.net/ ; http://www.solid-earth.net/ ; >
-      au < testing ; exists ; 2017 ; 2017 ; Solid Earth Volume 8 ; 8 ; https://www.solid-earth.net/ ; https://www.solid-earth.net/ ; >
+      au < ready ; exists ; 2017 ; 2017 ; Solid Earth Volume 8 ; 8 ; https://www.solid-earth.net/ ; https://www.solid-earth.net/ ; >
 
    }
 
@@ -1601,7 +1601,7 @@
       au < finished ; finished ; 2014 ; 2014 ; The Cryosphere Volume 8 ; 8 ; http://www.the-cryosphere.net/ ; http://www.the-cryosphere.net/ ; >
       au < finished ; finished ; 2015 ; 2015 ; The Cryosphere Volume 9 ; 9 ; http://www.the-cryosphere.net/ ; http://www.the-cryosphere.net/ ; >
       au < frozen ; exists ; 2016 ; 2016 ; The Cryosphere Volume 10 ; 10 ; http://www.the-cryosphere.net/ ; http://www.the-cryosphere.net/ ; >
-      au < testing ; exists ; 2017 ; 2017 ; The Cryosphere Volume 11 ; 11 ; https://www.the-cryosphere.net/ ; https://www.the-cryosphere.net/ ; >
+      au < ready ; exists ; 2017 ; 2017 ; The Cryosphere Volume 11 ; 11 ; https://www.the-cryosphere.net/ ; https://www.the-cryosphere.net/ ; >
 
    }
 
@@ -1653,7 +1653,7 @@
       au < frozen ; exists ; 2013 ; 2013 ; Web Ecology Volume 13 ; 13 ; http://www.web-ecol.net/ ; http://www.web-ecology.net/ ; >
       au < finished ; finished ; 2014 ; 2014 ; Web Ecology Volume 14 ; 14 ; http://www.web-ecol.net/ ; http://www.web-ecology.net/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Web Ecology Volume 15 ; 15 ; http://www.web-ecol.net/ ; http://www.web-ecology.net/ ; >
-      au < testing ; exists ; 2016 ; 2016 ; Web Ecology Volume 16 ; 16 ; https://www.web-ecol.net/ ; https://www.web-ecology.net/ ; >
+      au < ready ; exists ; 2016 ; 2016 ; Web Ecology Volume 16 ; 16 ; https://www.web-ecol.net/ ; https://www.web-ecology.net/ ; >
       au < testing ; exists ; 2017 ; 2017 ; Web Ecology Volume 17 ; 17 ; https://www.web-ecol.net/ ; https://www.web-ecology.net/ ; >
 
    }
@@ -1668,8 +1668,8 @@
 #      param[base_url] = http://www.wind-energ-sci.net/
 #      param[home_url] = http://www.wind-energy-science.net/
 
-      au < testing ; exists ; 2016 ; 2016 ; Wind Energy Science Volume 1 ; 1 ; https://www.wind-energ-sci.net/ ; https://www.wind-energy-science.net/ ; >
-      au < testing ; exists ; 2017 ; 2017 ; Wind Energy Science Volume 2 ; 2 ; https://www.wind-energ-sci.net/ ; https://www.wind-energy-science.net/ ; >
+      au < ready ; exists ; 2016 ; 2016 ; Wind Energy Science Volume 1 ; 1 ; https://www.wind-energ-sci.net/ ; https://www.wind-energy-science.net/ ; >
+      au < ready ; exists ; 2017 ; 2017 ; Wind Energy Science Volume 2 ; 2 ; https://www.wind-energ-sci.net/ ; https://www.wind-energy-science.net/ ; >
 
    }
 
