@@ -1,10 +1,10 @@
 /*
- * $Id: IdentifierListOaiPmhCrawlSeed.java 39864 2015-02-18 09:10:24Z thib_gc $
+ * $Id: $
  */
 
 /*
 
- Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2017 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,25 +35,19 @@ package org.lockss.plugin.internationalunionofcrystallography.oai;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
-import java.util.Map.Entry;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.lockss.config.Configuration;
-import org.lockss.config.Configuration.InvalidParam;
-import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.daemon.PluginException;
-import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 import org.lockss.util.Logger;
-import org.lockss.util.TypedEntryMap;
 
 import com.lyncode.xoai.model.oaipmh.Record;
 import com.lyncode.xoai.serviceprovider.exceptions.BadArgumentException;
+import com.lyncode.xoai.serviceprovider.exceptions.InvalidOAIResponse;
 import com.lyncode.xoai.serviceprovider.model.Context;
 import com.lyncode.xoai.serviceprovider.model.Context.KnownTransformer;
 import com.lyncode.xoai.serviceprovider.parameters.ListRecordsParameters;
@@ -157,6 +151,9 @@ public abstract class RecordFilteringOaiPmhCrawlSeed extends BaseOaiPmhCrawlSeed
         }
       }
       return idList;
+    } catch (InvalidOAIResponse e) {
+      // XXX not sure this catch is used
+      throw new IOException("InvalidOAIResponse", e);
     } catch (BadArgumentException e) {
       throw new ConfigurationException("Incorrectly formatted OAI parameter", e);
     }

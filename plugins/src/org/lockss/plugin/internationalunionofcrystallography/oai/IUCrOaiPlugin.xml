@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>9</string>
+    <string>10</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -45,7 +45,7 @@
     <!-- manifest to issue to articles -->
     <string>au_refetch_depth</string>
     <int>1</int>
-  </entry> 
+  </entry>
   http://scripts.iucr.org/cgi-bin/paper?S1600536805000310
   <entry>
     <string>au_name</string>
@@ -76,11 +76,11 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^https?://(%s|%s)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)$", url_host(base_url), url_host(script_url)</string>
+      <string>1,"^https?://(%s|%s|iucrdata\.iucr\.org)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)$", url_host(base_url), url_host(script_url)</string>
       <string>1,"^%sauid=.*$", script_url</string>
       <string>2,"^(%s|%s).*buy=yes$", script_url, base_url</string>
-      <string>1,"^(%s|%s)[^/]+/issues/[^/]+/[^/]+/[^/]+/[^/]+/(.+\.pdf|index\.html|.+fig[0-9]+\.html)$", base_url, script_url</string>
-      <string>1,"^(%s|%s)cgi-bin/paper\?[^/]+$", script_url, base_url</string>
+      <string>1,"^(%s|%s|iucrdata\.iucr\.org)[^/]+/issues/[^/]+/[^/]+/[^/]+/[^/]+/(.+\.pdf|index\.html|.+fig[0-9]+\.html)$", base_url, script_url</string>
+      <string>1,"^(%s|%s|iucrdata\.iucr\.org)cgi-bin/paper\?[^/]+$", script_url, base_url</string>
       <!-- IUCr has asked us not to download &Qmime=cif which is what requires the following -->
       <string>2,"^(%s|%s)cgi-bin/(sendsupfiles|sendsup|sendcif)\?Qmime=cif$", script_url, base_url</string>
       <string>1,"^(%s|%s)cgi-bin/(sendsupfiles|sendsup|sendcif)\?.+$", script_url, base_url</string>
@@ -94,12 +94,6 @@
       <string>"^%s[^/]+/issues/[^/]+/[^/]+/[^/]+/[^/]+/.+\.pdf$", base_url</string>
     </list>
   </entry>
-<!--  this is no longer required; 3-d model not getting downloaded   
-  <entry>
-    <string>au_permitted_host_pattern</string>
-    <string>publcif\.iucr\.org</string>
-  </entry>
--->  
   <entry>
     <string>plugin_config_props</string>
     <list>
@@ -148,7 +142,7 @@
   <entry>
     <string>plugin_access_url_factory</string>
     <string>org.lockss.plugin.internationalunionofcrystallography.oai.IUCrOaiFeatureUrlHelperFactory</string>
-  </entry>  
+  </entry>
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.internationalunionofcrystallography.oai.IUCrOaiHtmlHashFilterFactory</string>
@@ -173,5 +167,30 @@
         <string>org.lockss.plugin.internationalunionofcrystallography.oai.IUCrOaiHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <string>au_additional_url_stems</string>
+    <list>
+      <string>"http://iucrdata.iucr.org/"</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_permitted_host_pattern</string>
+    <string>iucrdata\.iucr\.org</string>
+  </entry>
+  <entry>
+    <string>au_repair_from_peer_if_missing_url_pattern</string>
+    <list>
+      <string>[.](css|js)$</string>
+      <!-- string>://[^/]+(?!.*/content/)(/[^/]+)+[.](gif|png)$</string> -->
+    </list>
+  </entry>
+  <entry>
+    <!-- these will not count towards poll results but will replicate from peer if above -->
+    <string>au_url_poll_result_weight</string>
+    <list>
+      <string>"[.](css|js)$", 0</string>
+      <!-- string>"://[^/]+(?!.*/content/)(/[^/]+)+[.](gif|png)$", 0</string> -->
+    </list>
   </entry>
 </map>

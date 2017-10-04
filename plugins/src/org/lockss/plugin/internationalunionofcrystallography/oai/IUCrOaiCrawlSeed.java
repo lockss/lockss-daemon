@@ -1,16 +1,11 @@
+
 package org.lockss.plugin.internationalunionofcrystallography.oai;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Calendar;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.Date;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
@@ -19,22 +14,17 @@ import java.util.regex.Pattern;
 
 import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.config.Configuration;
-import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.PluginException;
-import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.UrlCacher;
 import org.lockss.plugin.UrlData;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 import org.lockss.util.CIProperties;
 import org.lockss.util.Constants;
-import org.lockss.util.Interval;
-import org.lockss.util.ListUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.UrlUtil;
 
+import com.lyncode.xml.exceptions.XmlReaderException;
 import com.lyncode.xoai.model.oaipmh.Record;
-import com.lyncode.xoai.model.xoai.Element;
-import com.lyncode.xoai.model.xoai.Field;
 import com.lyncode.xoai.serviceprovider.exceptions.BadArgumentException;
 import com.lyncode.xoai.serviceprovider.exceptions.InvalidOAIResponse;
 import com.lyncode.xoai.serviceprovider.model.Context;
@@ -113,10 +103,14 @@ public class IUCrOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
 	    		  logger.debug("OAI result errored due to LOCKSS audit proxy. Trying alternate start Url", e);
 	    		  return null;
 	    	  } else {
-	    		  throw e;
+	    		  throw new IOException(e);
 	    	  }
 	    } catch (BadArgumentException e) {
 	      throw new ConfigurationException("Incorrectly formatted OAI parameter", e);
+        } catch(Exception e) {
+          //wasn't a correctly formatted date, so we ignore it
+          //log here
+          logger.siteWarning("Unexpected exception", e);
 	    }
 	  }
   
@@ -178,9 +172,14 @@ public class IUCrOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
               return true;
             }
           }
-        } catch(NumberFormatException|IllegalStateException ex) {
+        } catch(NumberFormatException|IllegalStateException|InvalidOAIResponse ex) {
           //wasn't a correctly formatted date, so we ignore it
           //log here
+          logger.siteWarning("Ignoring this record", ex);
+        } catch(Exception e) {
+          //wasn't a correctly formatted date, so we ignore it
+          //log here
+          logger.siteWarning("Unexpected exception", e);
         }
       }
     }
