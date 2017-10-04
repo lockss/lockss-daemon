@@ -111,6 +111,7 @@ public class IUCrOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
           //wasn't a correctly formatted date, so we ignore it
           //log here
           logger.siteWarning("Unexpected exception", e);
+          throw new IOException(e);
 	    }
 	  }
   
