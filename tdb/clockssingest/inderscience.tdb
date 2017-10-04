@@ -167,7 +167,7 @@
       au < doNotProcess ; doNotProcess ; 2009-2010 ; European Journal of Cross-Cultural Competence and Management Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2011-2012 ; European Journal of Cross-Cultural Competence and Management Volume 2 ; 2 ; >
       au < finished ; finished ; 2014-2015 ; European Journal of Cross-Cultural Competence and Management Volume 3 ; 3 ; >
-      au < ready ; exists ; 2016-2017 ; European Journal of Cross-Cultural Competence and Management Volume 4 ; 4 ; >
+      au < crawling ; exists ; 2016-2017 ; European Journal of Cross-Cultural Competence and Management Volume 4 ; 4 ; >
 
     }
 
@@ -4983,7 +4983,7 @@
       au < doNotProcess ; doNotProcess ; 2010-2011 ; International Journal of Knowledge Engineering and Data Mining Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Knowledge Engineering and Data Mining Volume 2 ; 2 ; >
       au < finished ; finished ; 2014-2015 ; International Journal of Knowledge Engineering and Data Mining Volume 3 ; 3 ; >
-      au < ready ; exists ; 2016-2017 ; International Journal of Knowledge Engineering and Data Mining Volume 4 ; 4 ; >
+      au < crawling ; exists ; 2016-2017 ; International Journal of Knowledge Engineering and Data Mining Volume 4 ; 4 ; >
 
     }
 
@@ -5056,7 +5056,7 @@
       param[journal_id] = ijler
 
       au < finished ; finished ; 2014-2015 ; International Journal of Lean Enterprise Research Volume 1 ; 1 ; reingest3.clockss.org:8083 >
-      au < ready ; exists ; 2016-2017 ; International Journal of Lean Enterprise Research Volume 2 ; 2 ; >
+      au < crawling ; exists ; 2016-2017 ; International Journal of Lean Enterprise Research Volume 2 ; 2 ; >
 
     }
 
@@ -6419,7 +6419,7 @@
 
       au < doNotProcess ; exists ; 2006-2008 ; International Journal of Nuclear Hydrogen Production and Applications Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2009-2013 ; International Journal of Nuclear Hydrogen Production and Applications Volume 2 ; 2 ; >
-      au < ready ; exists ; 2016-2017 ; International Journal of Nuclear Hydrogen Production and Applications Volume 3 ; 3 ; >
+      au < crawling ; exists ; 2016-2017 ; International Journal of Nuclear Hydrogen Production and Applications Volume 3 ; 3 ; >
 
     }
 
@@ -9333,7 +9333,7 @@
       au < doNotProcess ; doNotProcess ; 2010-2011 ; World Review of Intermodal Transportation Research Volume 3 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; World Review of Intermodal Transportation Research Volume 4 ; 4 ; >
       au < finished ; finished ; 2014-2015 ; World Review of Intermodal Transportation Research Volume 5 ; 5 ; >
-      au < ready ; exists ; 2016-2017 ; World Review of Intermodal Transportation Research Volume 6 ; 6 ; >
+      au < crawling ; exists ; 2016-2017 ; World Review of Intermodal Transportation Research Volume 6 ; 6 ; >
 
     }
 
@@ -9421,8 +9421,8 @@
 
       param[journal_id] = ijcad
 
-      au < ready ; exists ; 2013-2015 ; International Journal of Circuits and Architecture Design Volume 1 ; 1 ;  >
-      au < ready ; exists ; 2016-2017 ; International Journal of Circuits and Architecture Design Volume 2 ; 2 ;  >
+      au < crawling ; exists ; 2013-2015 ; International Journal of Circuits and Architecture Design Volume 1 ; 1 ;  >
+      au < crawling ; exists ; 2016-2017 ; International Journal of Circuits and Architecture Design Volume 2 ; 2 ;  >
 
   }
 
@@ -9703,7 +9703,7 @@
 
       param[journal_id] = ijexportm
 
-      au < ready ; exists ; 2016-2017 ; International Journal of Export Marketing Volume 1 ; 1 ;  >
+      au < crawling ; exists ; 2016-2017 ; International Journal of Export Marketing Volume 1 ; 1 ;  >
 
   }
 
