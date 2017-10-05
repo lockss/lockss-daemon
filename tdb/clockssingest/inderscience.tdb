@@ -5458,7 +5458,7 @@
 
       param[journal_id] = ijmd
 
-      au < testing ; exists ; 2011-2016 ; International Journal of Management Development Volume 1 ; 1 ; >
+      au < ready ; exists ; 2011-2016 ; International Journal of Management Development Volume 1 ; 1 ; >
       au < expected ; exists ; 2017 ; International Journal of Management Development Volume 2 ; 2 ; >
 
     }
@@ -7488,7 +7488,7 @@
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Services Operations and Informatics Volume 5 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Services Operations and Informatics Volume 6 ; 6 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Services Operations and Informatics Volume 7 ; 7 ; >
-      au < testing ; exists ; 2013-2017 ; International Journal of Services Operations and Informatics Volume 8 ; 8 ; >
+      au < ready ; exists ; 2013-2017 ; International Journal of Services Operations and Informatics Volume 8 ; 8 ; >
 
     }
 
@@ -7680,7 +7680,7 @@
       param[journal_id] = ijshc
 
       au < doNotProcess ; doNotProcess ; 2008-2012 ; International Journal of Social and Humanistic Computing Volume 1 ; 1 ; >
-      au < testing ; exists ; 2013-2017 ; International Journal of Social and Humanistic Computing Volume 2 ; 2 ; >
+      au < ready ; exists ; 2013-2017 ; International Journal of Social and Humanistic Computing Volume 2 ; 2 ; >
 
     }
 
@@ -9374,7 +9374,7 @@
 
       param[journal_id] = emjm
 
-      au < testing ; exists ; 2015-2016 ; EuroMed Journal of Management Volume 1 ; 1 ;  >
+      au < ready ; exists ; 2015-2016 ; EuroMed Journal of Management Volume 1 ; 1 ;  >
       au < manifest ; exists ; 2017-2018 ; EuroMed Journal of Management Volume 2 ; 2 ;  >
 
   }
@@ -9389,8 +9389,8 @@
 
       param[journal_id] = ajmsa
 
-      au < testing ; exists ; 2013-2014 ; Asian Journal of Management Science and Applications Volume 1 ; 1 ;  >
-      au < testing ; exists ; 2015-2016 ; Asian Journal of Management Science and Applications Volume 2 ; 2 ;  >
+      au < ready ; exists ; 2013-2014 ; Asian Journal of Management Science and Applications Volume 1 ; 1 ;  >
+      au < ready ; exists ; 2015-2016 ; Asian Journal of Management Science and Applications Volume 2 ; 2 ;  >
       au < manifest ; exists ; 2017-2018 ; Asian Journal of Management Science and Applications Volume 3 ; 3 ;  >
 
   }
@@ -9584,7 +9584,7 @@
 
       param[journal_id] = ijhes
 
-      au < testing ; exists ; 2015-2016 ; International Journal of Higher Education and Sustainability Volume 1 ; 1 ;  >
+      au < ready ; exists ; 2015-2016 ; International Journal of Higher Education and Sustainability Volume 1 ; 1 ;  >
       au < expected ; exists ; 2017 ; International Journal of Higher Education and Sustainability Volume 2 ; 2 ;  >
 
   }
@@ -9661,7 +9661,7 @@
 
       param[journal_id] = ijbise
 
-      au < testing ; exists ; 2016-2018 ; International Journal of Business Intelligence and Systems Engineering Volume 1 ; 1 ;  >
+      au < ready ; exists ; 2016-2018 ; International Journal of Business Intelligence and Systems Engineering Volume 1 ; 1 ;  >
 
   }
 
@@ -9675,7 +9675,7 @@
 
       param[journal_id] = ijc
 
-      au < testing ; exists ; 2016-2019 ; International Journal of Competitiveness Volume 1 ; 1 ;  >
+      au < ready ; exists ; 2016-2019 ; International Journal of Competitiveness Volume 1 ; 1 ;  >
 
   }
 
@@ -9689,7 +9689,7 @@
 
       param[journal_id] = ijcssr
 
-      au < testing ; exists ; 2016-2019 ; International Journal of Corporate Strategy and Social Responsibility Volume 1 ; 1 ;  >
+      au < ready ; exists ; 2016-2019 ; International Journal of Corporate Strategy and Social Responsibility Volume 1 ; 1 ;  >
 
   }
 
@@ -9732,7 +9732,7 @@
 
       param[journal_id] = ijmda
 
-      au < testing ; exists ; 2016-2019 ; International Journal of Multivariate Data Analysis Volume 1 ; 1 ;  >
+      au < ready ; exists ; 2016-2019 ; International Journal of Multivariate Data Analysis Volume 1 ; 1 ;  >
 
   }
 
