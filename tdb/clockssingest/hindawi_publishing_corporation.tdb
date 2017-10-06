@@ -314,8 +314,8 @@
 
     au < finished ; finished ; 2014 ; Advances in Biology Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Advances in Biology Volume 2015 ; 2015 ; 2015 ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2016 ; Advances in Biology Volume 2016 ; 2016 ; 2016 ; >
-    au < crawling ; exists ; 2017 ; Advances in Biology Volume 2017 ; 2017 ; 2017 ; >
+    au < finished ; manifest ; 2016 ; Advances in Biology Volume 2016 ; 2016 ; 2016 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2017 ; Advances in Biology Volume 2017 ; 2017 ; 2017 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -380,12 +380,12 @@
     au < frozen ; exists ; 2008 ; Advances in Civil Engineering Volume 2008 ; 2008 ; 2008 ; >
     au < frozen ; exists ; 2009 ; Advances in Civil Engineering Volume 2009 ; 2009 ; 2009 ; >
     au < testing ; exists ; 2010 ; Advances in Civil Engineering Volume 2010 ; 2010 ; 2010 ; >
-    au < testing ; exists ; 2011 ; Advances in Civil Engineering Volume 2011 ; 2011 ; 2011 ; >
+    au < ready ; exists ; 2011 ; Advances in Civil Engineering Volume 2011 ; 2011 ; 2011 ; >
     au < frozen ; exists ; 2012 ; Advances in Civil Engineering Volume 2012 ; 2012 ; 2012 ; >
     au < frozen ; exists ; 2013 ; Advances in Civil Engineering Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Advances in Civil Engineering Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Advances in Civil Engineering Volume 2015 ; 2015 ; 2015 ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2016 ; Advances in Civil Engineering Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2016 ; Advances in Civil Engineering Volume 2016 ; 2016 ; 2016 ; >
     au < crawling ; exists ; 2017 ; Advances in Civil Engineering Volume 2017 ; 2017 ; 2017 ; >
 
   }
@@ -420,7 +420,7 @@
     au < frozen ; exists ; 2008 ; Advances in Condensed Matter Physics Volume 2008 ; 2008 ; 2008 ; >
     au < frozen ; exists ; 2009 ; Advances in Condensed Matter Physics Volume 2009 ; 2009 ; 2009 ; >
     au < frozen ; exists ; 2010 ; Advances in Condensed Matter Physics Volume 2010 ; 2010 ; 2010 ; >
-    au < testing ; exists ; 2011 ; Advances in Condensed Matter Physics Volume 2011 ; 2011 ; 2011 ; >
+    au < ready ; exists ; 2011 ; Advances in Condensed Matter Physics Volume 2011 ; 2011 ; 2011 ; >
     au < frozen ; exists ; 2012 ; Advances in Condensed Matter Physics Volume 2012 ; 2012 ; 2012 ; >
     au < frozen ; exists ; 2013 ; Advances in Condensed Matter Physics Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Advances in Condensed Matter Physics Volume 2014 ; 2014 ; 2014 ; >
@@ -489,11 +489,12 @@
     >
 
     param[journal_id] = ae
+    #Moved to archive
 
     au < finished ; finished ; 2014 ; Advances in Ecology Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; crawling ; 2015 ; Advances in Ecology Volume 2015 ; 2015 ; 2015 ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2016 ; Advances in Ecology Volume 2016 ; 2016 ; 2016 ; >
-    au < crawling ; exists ; 2017 ; Advances in Ecology Volume 2017 ; 2017 ; 2017 ; >
+    au < finished ; manifest ; 2016 ; Advances in Ecology Volume 2016 ; 2016 ; 2016 ; reingest5.clockss.org:8082 >
+    au < superseded ; exists ; 2017 ; Advances in Ecology Volume 2017 [superseded] ; 2017 ; 2017 ; >#no substance. no articles.
 
   }
 
@@ -556,11 +557,12 @@
     >
 
     param[journal_id] = aen
+    #Moved to archive
 
     au < finished ; finished ; 2014 ; Advances in Endocrinology Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; finished ; 2015 ; Advances in Endocrinology Volume 2015 ; 2015 ; 2015 ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2016 ; Advances in Endocrinology Volume 2016 ; 2016 ; 2016 ; >
-    au < crawling ; exists ; 2017 ; Advances in Endocrinology Volume 2017 ; 2017 ; 2017 ; >
+    au < finished ; manifest ; 2016 ; Advances in Endocrinology Volume 2016 ; 2016 ; 2016 ; >
+    au < superseded ; exists ; 2017 ; Advances in Endocrinology Volume 2017 [superseded] ; 2017 ; 2017 ; >#no substance. no content.
 
   }
 
@@ -961,11 +963,12 @@
     >
 
     param[journal_id] = anurs
+    #Moved to archive
 
     au < finished ; finished ; 2014 ; Advances in Nursing Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Advances in Nursing Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2016 ; Advances in Nursing Volume 2016 ; 2016 ; 2016 ; >
-    au < crawling ; exists ; 2017 ; Advances in Nursing Volume 2017 ; 2017 ; 2017 ; >
+    au < finished ; manifest ; 2016 ; Advances in Nursing Volume 2016 ; 2016 ; 2016 ; reingest5.clockss.org:8082 >
+    au < superseded ; exists ; 2017 ; Advances in Nursing Volume 2017 [superseded] ; 2017 ; 2017 ; > #nothing collected. no articles
 
   }
 
@@ -2198,7 +2201,7 @@
     au < manifest ; exists ; 2013 ; Case Reports in Hematology Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Case Reports in Hematology Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; finished ; 2015 ; Case Reports in Hematology Volume 2015 ; 2015 ; 2015 ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2016 ; Case Reports in Hematology Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2016 ; Case Reports in Hematology Volume 2016 ; 2016 ; 2016 ; >
     au < crawling ; exists ; 2017 ; Case Reports in Hematology Volume 2017 ; 2017 ; 2017 ; >
 
   }
