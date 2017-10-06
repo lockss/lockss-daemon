@@ -1297,7 +1297,7 @@
       au < manifest ; exists ; 2007-2008 ; American Journal of Health Promotion Volume 22 ; 22 ; ahpa ; >
       au < frozen ; exists ; 2008-2009 ; American Journal of Health Promotion Volume 23 ; 23 ; ahpa ; >
       au < manifest ; exists ; 2009-2010 ; American Journal of Health Promotion Volume 24 ; 24 ; ahpa ; >
-      au < manifest ; exists ; 2010-2011 ; American Journal of Health Promotion Volume 25 ; 25 ; ahpa ; >
+      au < crawling ; exists ; 2010-2011 ; American Journal of Health Promotion Volume 25 ; 25 ; ahpa ; >
       au < doNotProcess ; doNotProcess ; 2011-2012 ; American Journal of Health Promotion Volume 26 ; 26 ; ahpa ; >
       au < doNotProcess ; doNotProcess ; 2012-2013 ; American Journal of Health Promotion Volume 27 ; 27 ; ahpa ; >
       au < doNotProcess ; doNotProcess ; 2013-2014 ; American Journal of Health Promotion Volume 28 ; 28 ; ahpa ; >
@@ -6570,7 +6570,7 @@
       au < manifest ; exists ; 2007 ; Common Law World Review Volume 36 ; 36 ; clwb ; >
       au < frozen ; exists ; 2008 ; Common Law World Review Volume 37 ; 37 ; clwb ; >
       au < manifest ; exists ; 2009 ; Common Law World Review Volume 38 ; 38 ; clwb ; >
-      au < manifest ; exists ; 2010 ; Common Law World Review Volume 39 ; 39 ; clwb ; >
+      au < crawling ; exists ; 2010 ; Common Law World Review Volume 39 ; 39 ; clwb ; >
       au < frozen ; exists ; 2011 ; Common Law World Review Volume 40 ; 40 ; clwb ; >
       au < frozen ; exists ; 2012 ; Common Law World Review Volume 41 ; 41 ; clwb ; >
       au < frozen ; exists ; 2013 ; Common Law World Review Volume 42 ; 42 ; clwb ; >
@@ -14144,9 +14144,9 @@
       au < manifest ; exists ; 2008 ; Hospital Pharmacy Volume 43 ; 43 ; hpxa ; >
       au < manifest ; exists ; 2009 ; Hospital Pharmacy Volume 44 ; 44 ; hpxa ; >
       au < manifest ; exists ; 2010 ; Hospital Pharmacy Volume 45 ; 45 ; hpxa ; >
-      au < manifest ; exists ; 2011 ; Hospital Pharmacy Volume 46 ; 46 ; hpxa ; >
-      au < manifest ; exists ; 2012 ; Hospital Pharmacy Volume 47 ; 47 ; hpxa ; >
-      au < manifest ; exists ; 2013 ; Hospital Pharmacy Volume 48 ; 48 ; hpxa ; >
+      au < crawling ; exists ; 2011 ; Hospital Pharmacy Volume 46 ; 46 ; hpxa ; >
+      au < crawling ; exists ; 2012 ; Hospital Pharmacy Volume 47 ; 47 ; hpxa ; >
+      au < crawling ; exists ; 2013 ; Hospital Pharmacy Volume 48 ; 48 ; hpxa ; >
       au < crawling ; exists ; 2014 ; Hospital Pharmacy Volume 49 ; 49 ; hpxa ; >
       au < crawling ; exists ; 2015 ; Hospital Pharmacy Volume 50 ; 50 ; hpxa ; >
       au < crawling ; exists ; 2016 ; Hospital Pharmacy Volume 51 ; 51 ; hpxa ; >
@@ -14913,9 +14913,9 @@
       au < manifest ; exists ; 2007-2008 ; The Indian Economic Journal Volume 55 ; 55 ; ieja ; >
       au < manifest ; exists ; 2008-2009 ; The Indian Economic Journal Volume 56 ; 56 ; ieja ; >
       au < manifest ; exists ; 2009-2010 ; The Indian Economic Journal Volume 57 ; 57 ; ieja ; >
-      au < manifest ; exists ; 2010-2011 ; The Indian Economic Journal Volume 58 ; 58 ; ieja ; >
-      au < manifest ; exists ; 2011-2012 ; The Indian Economic Journal Volume 59 ; 59 ; ieja ; >
-      au < manifest ; exists ; 2012-2013 ; The Indian Economic Journal Volume 60 ; 60 ; ieja ; >
+      au < crawling ; exists ; 2010-2011 ; The Indian Economic Journal Volume 58 ; 58 ; ieja ; >
+      au < crawling ; exists ; 2011-2012 ; The Indian Economic Journal Volume 59 ; 59 ; ieja ; >
+      au < crawling ; exists ; 2012-2013 ; The Indian Economic Journal Volume 60 ; 60 ; ieja ; >
 
       au < doNotProcess ; doNotProcess ; 2016 ; The Indian Economic Journal Volume 64 ; 64 ; ieja ; > #Never exists
 
@@ -15031,9 +15031,9 @@
       au < manifest ; exists ; 2008 ; Indian Journal of Human Development Volume 2 ; 2 ; jhda ; >
       au < manifest ; exists ; 2009 ; Indian Journal of Human Development Volume 3 ; 3 ; jhda ; >
       au < manifest ; exists ; 2010 ; Indian Journal of Human Development Volume 4 ; 4 ; jhda ; >
-      au < manifest ; exists ; 2011 ; Indian Journal of Human Development Volume 5 ; 5 ; jhda ; >
-      au < manifest ; exists ; 2012 ; Indian Journal of Human Development Volume 6 ; 6 ; jhda ; >
-      au < manifest ; exists ; 2013 ; Indian Journal of Human Development Volume 7 ; 7 ; jhda ; >
+      au < crawling ; exists ; 2011 ; Indian Journal of Human Development Volume 5 ; 5 ; jhda ; >
+      au < crawling ; exists ; 2012 ; Indian Journal of Human Development Volume 6 ; 6 ; jhda ; >
+      au < crawling ; exists ; 2013 ; Indian Journal of Human Development Volume 7 ; 7 ; jhda ; >
       au < crawling ; exists ; 2014 ; Indian Journal of Human Development Volume 8 ; 8 ; jhda ; >
       au < crawling ; exists ; 2015 ; Indian Journal of Human Development Volume 9 ; 9 ; jhda ; >
       au < frozen ; exists ; 2016 ; Indian Journal of Human Development Volume 10 ; 10 ; jhda ; >
@@ -15535,7 +15535,7 @@
       au < frozen ; exists ; 2008 ; International Journal of Advanced Robotic Systems Volume 5 ; 5 ; arxa ; >
       au < frozen ; exists ; 2009 ; International Journal of Advanced Robotic Systems Volume 6 ; 6 ; arxa ; >
       au < frozen ; exists ; 2010 ; International Journal of Advanced Robotic Systems Volume 7 ; 7 ; arxa ; >
-      au < manifest ; exists ; 2011 ; International Journal of Advanced Robotic Systems Volume 8 ; 8 ; arxa ; >
+      au < crawling ; exists ; 2011 ; International Journal of Advanced Robotic Systems Volume 8 ; 8 ; arxa ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Advanced Robotic Systems Volume 9 ; 9 ; arxa ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Advanced Robotic Systems Volume 10 ; 10 ; arxa ; >
       au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Advanced Robotic Systems Volume 11 ; 11 ; arxa ; >
@@ -16085,7 +16085,7 @@
         au < frozen ; exists ; 2008 ; International Journal of Distributed Sensor Networks Volume 4 ; 4 ; dsna ; >
         au < manifest ; exists ; 2009 ; International Journal of Distributed Sensor Networks Volume 5 ; 5 ; dsna ; >
         au < manifest ; exists ; 2010 ; International Journal of Distributed Sensor Networks Volume 6 ; 6 ; dsna ; >
-        au < manifest ; exists ; 2011 ; International Journal of Distributed Sensor Networks Volume 7 ; 7 ; dsna ; >
+        au < crawling ; exists ; 2011 ; International Journal of Distributed Sensor Networks Volume 7 ; 7 ; dsna ; >
         au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Distributed Sensor Networks Volume 8 ; 8 ; dsna ; >
         au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Distributed Sensor Networks Volume 9 ; 9 ; dsna ; >
         au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Distributed Sensor Networks Volume 10 ; 10 ; dsna ; >
@@ -16173,7 +16173,7 @@
 
       au < manifest ; exists ; 2009 ; International Journal of Engineering Business Management Volume 1 ; 1 ; enba ; >
       au < manifest ; exists ; 2010 ; International Journal of Engineering Business Management Volume 2 ; 2 ; enba ; >
-      au < manifest ; exists ; 2011 ; International Journal of Engineering Business Management Volume 3 ; 3 ; enba ; >
+      au < crawling ; exists ; 2011 ; International Journal of Engineering Business Management Volume 3 ; 3 ; enba ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Engineering Business Management Volume 4 ; 4 ; enba ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Engineering Business Management Volume 5 ; 5 ; enba ; >
       au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Engineering Business Management Volume 6 ; 6 ; enba ; >
@@ -17807,7 +17807,7 @@
       au < doNotProcess ; doNotProcess ; 2010 ; International Studies Volume 47 ; 47 ; isqa ; >
       au < doNotProcess ; doNotProcess ; 2011 ; International Studies Volume 48 ; 48 ; isqa ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Studies Volume 49 ; 49 ; isqa ; >
-      au < manifest ; exists ; 2013 ; International Studies Volume 50 ; 50 ; isqa ; >
+      au < crawling ; exists ; 2013 ; International Studies Volume 50 ; 50 ; isqa ; >
 
     }
 
@@ -28131,7 +28131,7 @@
       au < manifest ; exists ; 2007 ; Maastricht Journal of European and Comparative Law Volume 14 ; 14 ; maaa ; >
       au < frozen ; exists ; 2008 ; Maastricht Journal of European and Comparative Law Volume 15 ; 15 ; maaa ; >
       au < manifest ; exists ; 2009 ; Maastricht Journal of European and Comparative Law Volume 16 ; 16 ; maaa ; >
-      au < manifest ; exists ; 2010 ; Maastricht Journal of European and Comparative Law Volume 17 ; 17 ; maaa ; >
+      au < crawling ; exists ; 2010 ; Maastricht Journal of European and Comparative Law Volume 17 ; 17 ; maaa ; >
       au < frozen ; exists ; 2011 ; Maastricht Journal of European and Comparative Law Volume 18 ; 18 ; maaa ; >
       au < frozen ; exists ; 2012 ; Maastricht Journal of European and Comparative Law Volume 19 ; 19 ; maaa ; >
       au < frozen ; exists ; 2013 ; Maastricht Journal of European and Comparative Law Volume 20 ; 20 ; maaa ; >
@@ -29163,8 +29163,8 @@
       au < frozen ; exists ; 2008 ; Metamorphosis Volume 7 ; 7 ; meta ; >
       au < manifest ; exists ; 2009 ; Metamorphosis Volume 8 ; 8 ; meta ; >
       au < manifest ; exists ; 2010 ; Metamorphosis Volume 9 ; 9 ; meta ; >
-      au < manifest ; exists ; 2011 ; Metamorphosis Volume 10 ; 10 ; meta ; >
-      au < manifest ; exists ; 2012 ; Metamorphosis Volume 11 ; 11 ; meta ; >
+      au < crawling ; exists ; 2011 ; Metamorphosis Volume 10 ; 10 ; meta ; >
+      au < crawling ; exists ; 2012 ; Metamorphosis Volume 11 ; 11 ; meta ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Metamorphosis Volume 12 ; 12 ; meta ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Metamorphosis Volume 13 ; 13 ; meta ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Metamorphosis Volume 14 ; 14 ; meta ; >
@@ -29609,7 +29609,7 @@
 
       #param[base_url] = http://nax.sagepub.com/
 
-      au < manifest ; exists ; 2011 ; Nanomaterials and Nanotechnology Volume 1 ; 1 ; naxa ; >
+      au < crawling ; exists ; 2011 ; Nanomaterials and Nanotechnology Volume 1 ; 1 ; naxa ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Nanomaterials and Nanotechnology Volume 2 ; 2 ; naxa ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Nanomaterials and Nanotechnology Volume 3 ; 3 ; naxa ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Nanomaterials and Nanotechnology Volume 4 ; 4 ; naxa ; >
@@ -30049,8 +30049,8 @@
       au < manifest ; exists ; 2008 ; Netherlands Quarterly of Human Rights Volume 26 ; 26 ; nqha ; >
       au < manifest ; exists ; 2009 ; Netherlands Quarterly of Human Rights Volume 27 ; 27 ; nqha ; >
       au < manifest ; exists ; 2010 ; Netherlands Quarterly of Human Rights Volume 28 ; 28 ; nqha ; >
-      au < manifest ; exists ; 2011 ; Netherlands Quarterly of Human Rights Volume 29 ; 29 ; nqha ; >
-      au < manifest ; exists ; 2012 ; Netherlands Quarterly of Human Rights Volume 30 ; 30 ; nqha ; >
+      au < crawling ; exists ; 2011 ; Netherlands Quarterly of Human Rights Volume 29 ; 29 ; nqha ; >
+      au < crawling ; exists ; 2012 ; Netherlands Quarterly of Human Rights Volume 30 ; 30 ; nqha ; >
       au < crawling ; exists ; 2013 ; Netherlands Quarterly of Human Rights Volume 31 ; 31 ; nqha ; >
       au < crawling ; exists ; 2014 ; Netherlands Quarterly of Human Rights Volume 32 ; 32 ; nqha ; >
       au < crawling ; exists ; 2015 ; Netherlands Quarterly of Human Rights Volume 33 ; 33 ; nqha ; >
@@ -30346,7 +30346,7 @@
       au < manifest ; exists ; 2007 ; Newspaper Research Journal Volume 28 ; 28 ; nrja ; >
       au < frozen ; exists ; 2008 ; Newspaper Research Journal Volume 29 ; 29 ; nrja ; >
       au < manifest ; exists ; 2009 ; Newspaper Research Journal Volume 30 ; 30 ; nrja ; >
-      au < manifest ; exists ; 2010 ; Newspaper Research Journal Volume 31 ; 31 ; nrja ; >
+      au < crawling ; exists ; 2010 ; Newspaper Research Journal Volume 31 ; 31 ; nrja ; >
       au < frozen ; exists ; 2011 ; Newspaper Research Journal Volume 32 ; 32 ; nrja ; >
       au < frozen ; exists ; 2012 ; Newspaper Research Journal Volume 33 ; 33 ; nrja ; >
       au < frozen ; exists ; 2013 ; Newspaper Research Journal Volume 34 ; 34 ; nrja ; >
@@ -30378,8 +30378,8 @@
       au < manifest ; exists ; 2008 ; Nineteenth Century Theatre and Film Volume 35 ; 35 ; nctd ; >
       au < manifest ; exists ; 2009 ; Nineteenth Century Theatre and Film Volume 36 ; 36 ; nctd ; >
       au < manifest ; exists ; 2010 ; Nineteenth Century Theatre and Film Volume 37 ; 37 ; nctd ; >
-      au < manifest ; exists ; 2011 ; Nineteenth Century Theatre and Film Volume 38 ; 38 ; nctd ; >
-      au < manifest ; exists ; 2012 ; Nineteenth Century Theatre and Film Volume 39 ; 39 ; nctd ; >
+      au < crawling ; exists ; 2011 ; Nineteenth Century Theatre and Film Volume 38 ; 38 ; nctd ; >
+      au < crawling ; exists ; 2012 ; Nineteenth Century Theatre and Film Volume 39 ; 39 ; nctd ; >
       au < crawling ; exists ; 2013 ; Nineteenth Century Theatre and Film Volume 40 ; 40 ; nctd ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Nineteenth Century Theatre and Film Volume 41 ; 41 ; nctd ; >
       au < crawling ; exists ; 2015 ; Nineteenth Century Theatre and Film Volume 42 ; 42 ; nctd ; >
@@ -30595,9 +30595,9 @@
       au < manifest ; exists ; 2008 ; Nordic Studies on Alcohol and Drugs Volume 25 ; 25 ; nada ; >
       au < manifest ; exists ; 2009 ; Nordic Studies on Alcohol and Drugs Volume 26 ; 26 ; nada ; >
       au < manifest ; exists ; 2010 ; Nordic Studies on Alcohol and Drugs Volume 27 ; 27 ; nada ; >
-      au < manifest ; exists ; 2011 ; Nordic Studies on Alcohol and Drugs Volume 28 ; 28 ; nada ; >
-      au < manifest ; exists ; 2012 ; Nordic Studies on Alcohol and Drugs Volume 29 ; 29 ; nada ; >
-      au < manifest ; exists ; 2013 ; Nordic Studies on Alcohol and Drugs Volume 30 ; 30 ; nada ; >
+      au < crawling ; exists ; 2011 ; Nordic Studies on Alcohol and Drugs Volume 28 ; 28 ; nada ; >
+      au < crawling ; exists ; 2012 ; Nordic Studies on Alcohol and Drugs Volume 29 ; 29 ; nada ; >
+      au < crawling ; exists ; 2013 ; Nordic Studies on Alcohol and Drugs Volume 30 ; 30 ; nada ; >
       au < crawling ; exists ; 2014 ; Nordic Studies on Alcohol and Drugs Volume 31 ; 31 ; nada ; >
       au < frozen ; exists ; 2015 ; Nordic Studies on Alcohol and Drugs Volume 32 ; 32 ; nada ; >
       au < frozen ; exists ; 2016 ; Nordic Studies on Alcohol and Drugs Volume 33 ; 33 ; nada ; >
@@ -40358,7 +40358,7 @@
       au < frozen ; exists ; 2008 ; Tropical Conservation Science Volume 1 ; 1 ; trca ; >
       au < manifest ; exists ; 2009 ; Tropical Conservation Science Volume 2 ; 2 ; trca ; >
       au < frozen ; exists ; 2010 ; Tropical Conservation Science Volume 3 ; 3 ; trca ; >
-      au < manifest ; exists ; 2011 ; Tropical Conservation Science Volume 4 ; 4 ; trca ; >
+      au < crawling ; exists ; 2011 ; Tropical Conservation Science Volume 4 ; 4 ; trca ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Tropical Conservation Science Volume 5 ; 5 ; trca ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Tropical Conservation Science Volume 6 ; 6 ; trca ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Tropical Conservation Science Volume 7 ; 7 ; trca ; >
@@ -43011,7 +43011,7 @@
     au < manifest ; exists ; 2007 ; Sociological Perspectives Volume 50 ; 50 ; spxb ; >
     au < frozen ; exists ; 2008 ; Sociological Perspectives Volume 51 ; 51 ; spxb ; >
     au < manifest ; exists ; 2009 ; Sociological Perspectives Volume 52 ; 52 ; spxb ; >
-    au < manifest ; exists ; 2010 ; Sociological Perspectives Volume 53 ; 53 ; spxb ; >
+    au < crawling ; exists ; 2010 ; Sociological Perspectives Volume 53 ; 53 ; spxb ; >
     au < frozen ; exists ; 2011 ; Sociological Perspectives Volume 54 ; 54 ; spxb ; >
     au < frozen ; exists ; 2012 ; Sociological Perspectives Volume 55 ; 55 ; spxb ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Sociological Perspectives Volume 56 ; 56 ; spxb ; >
@@ -45822,7 +45822,7 @@
     au < frozen ; exists ; 2008 ; Tourism Economics Volume 14 ; 14 ; teua ; >
     au < manifest ; exists ; 2009 ; Tourism Economics Volume 15 ; 15 ; teua ; >
     au < manifest ; exists ; 2010 ; Tourism Economics Volume 16 ; 16 ; teua ; >
-    au < manifest ; exists ; 2011 ; Tourism Economics Volume 17 ; 17 ; teua ; >
+    au < crawling ; exists ; 2011 ; Tourism Economics Volume 17 ; 17 ; teua ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Tourism Economics Volume 18 ; 18 ; teua ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Tourism Economics Volume 19 ; 19 ; teua ; >
     au < crawling ; exists ; 2014 ; Tourism Economics Volume 20 ; 20 ; teua ; >
