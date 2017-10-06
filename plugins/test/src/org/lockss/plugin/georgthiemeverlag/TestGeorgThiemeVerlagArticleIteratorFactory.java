@@ -149,7 +149,7 @@ public class TestGeorgThiemeVerlagArticleIteratorFactory extends ArticleIterator
    * 
    * Abstract: https://www.thieme-connect.de/ejournals/abstract/10.1055/s-0029-1214947
    */
-  /*
+  
   public void testCreateArticleFiles() throws Exception {
     PluginTestUtil.crawlSimAu(sau);
     String[] urls = {
@@ -250,7 +250,14 @@ public class TestGeorgThiemeVerlagArticleIteratorFactory extends ArticleIterator
         null,
         null,
         null};
-    
+
+    // we now consider abstract only sufficient for an AF
+    String [] afabs = {
+        BASE_URL + "ejournals/abstract/10.1055/s-77",
+        null,
+        null,
+        BASE_URL + "ejournals/abstract/10.1055/s-77"};
+
     expStack.push(af7);
     expStack.push(af6);
     expStack.push(af5);
@@ -258,6 +265,7 @@ public class TestGeorgThiemeVerlagArticleIteratorFactory extends ArticleIterator
     expStack.push(af3);
     expStack.push(af2);
     expStack.push(af1);
+    expStack.push(afabs);
     String[] exp;
     
     for ( SubTreeArticleIterator artIter = createSubTreeIter(); artIter.hasNext(); ) 
@@ -283,5 +291,5 @@ public class TestGeorgThiemeVerlagArticleIteratorFactory extends ArticleIterator
     exp = expStack.pop();
     assertEquals("Did not find null end marker", exp, af7);
   }
-  */
+  
 }
