@@ -73,22 +73,22 @@ public class Pub2WebArticleIteratorFactory
 
   // the journal option also has an extra subdir (journal_id)
   protected static final String PATTERN_TEMPLATE =    
-    "\"%scontent/(book|journal/[^/]+)/[0-9]{2}\\.[0-9]{4}/[^/?]+(\\?crawler=true.*)?$\", base_url";
+    "\"%scontent/(book|journal/[^/]+|journals)/[0-9]{2}\\.[0-9]{4}/[^/?]+(\\?crawler=true.*)?$\", base_url";
 
   // Groups:
   // 1. book or "journal/jid"
   // 2. identifier (doi) portion of article/chapter/book url
   // don't need to be so explicit about doi syntax because PATTERN_TEMPLATE is restrictive
   protected Pattern PDF_PATTERN = 
-      Pattern.compile("/content/(book|journal/[^/]+)/([0-9.]+/[^/?]+)\\?crawler=true&mimetype=application/pdf", Pattern.CASE_INSENSITIVE);
+      Pattern.compile("/content/(book|journal/[^/]+|journals)/([0-9.]+/[^/?]+)\\?crawler=true&mimetype=application/pdf", Pattern.CASE_INSENSITIVE);
   protected static String PDF_REPLACEMENT = "/content/$1/$2?crawler=true&mimetype=application/pdf";
 
   protected Pattern HTML_PATTERN = 
-      Pattern.compile("/content/(book|journal/[^/]+)/([0-9.]+/[^/?]+)\\?crawler=true&mimetype=html", Pattern.CASE_INSENSITIVE);
+      Pattern.compile("/content/(book|journal/[^/]+||journals)/([0-9.]+/[^/?]+)\\?crawler=true&mimetype=html", Pattern.CASE_INSENSITIVE);
   protected static String HTML_REPLACEMENT = "/content/$1/$2?crawler=true&mimetype=html";
 
   protected Pattern LANDING_PATTERN = 
-      Pattern.compile("/content/(book|journal/[^/]+)/([0-9.]+/[^/?]+)$", Pattern.CASE_INSENSITIVE);
+      Pattern.compile("/content/(book|journal/[^/]+||journals)/([0-9.]+/[^/?]+)$", Pattern.CASE_INSENSITIVE);
   protected static String LANDING_REPLACEMENT = "/content/$1/$2";
 
   // secondary aspects, get from the others $1 = journal or book; $2 is the identifying inf

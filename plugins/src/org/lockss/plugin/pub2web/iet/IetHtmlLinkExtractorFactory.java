@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -46,16 +46,11 @@ import org.lockss.extractor.LinkExtractor.Callback;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.Logger;
 
-/* an implementation of JsoupHtmlLinkExtractor  */
 /* 
- * MS uses ajax in order to dynamically generate portions of the html
- * TOC 
- *  Unlike for ASM, we don't need to do an extraction for these as they are straight-up
- *  <a href=<url for portion here>
- *
- * Full-Text html link is extracted from the javascript so that button click will work
- *    it is then normalized to be the crawler-friendly url
- * PDF link is available as an href but is also normalized to a crawler friendly version   
+ * IET uses ajax in order to dynamically generate portions of the html
+ * 
+ * Identify the div that contains the text that is the Full Text link
+ * and extract that text
  */
 public class IetHtmlLinkExtractorFactory 
 implements LinkExtractorFactory {
@@ -66,8 +61,6 @@ implements LinkExtractorFactory {
   private static final String DIV_TAG = "div";
   private static final String ID_ATTR = "id";
 
-  //main journal article landing page - extract other information from tags here
-  //http://jgv.microbiologyresearch.org/content/journal/jgv/10.1099/vir.0.069286-0
   protected static final Pattern PATTERN_ARTICLE_LANDING_URL = Pattern.compile("^(https?://[^/]+)/content/journals?/([^/]+/)?[0-9]{2}\\.[0-9]{4}/[^/?&]+$", Pattern.CASE_INSENSITIVE); 
   protected static final String FULLTEXT_ID_VAL = "itemFullTextId";
   protected static final String AJAX_ATTR = "data-ajaxurl";
@@ -87,7 +80,6 @@ implements LinkExtractorFactory {
 
   public static class MsDivTagLinkExtractor extends SimpleTagLinkExtractor {
 
-    // nothing needed in the constructor - just call the parent
     public MsDivTagLinkExtractor(String attr) {
       super(attr);
     }
@@ -110,6 +102,7 @@ implements LinkExtractorFactory {
           String idVal = node.attr(ID_ATTR);
           if ( idVal!= null && FULLTEXT_ID_VAL.equals(idVal)) {
             for(Node childNode : node.childNodes()) {
+              //find children of the identified div that are plain text. That's our link
               if(childNode instanceof TextNode) {
                 String newUrl = base_url + ((TextNode)childNode).text();
                 log.debug3("create fulltext URL: " + newUrl);
@@ -118,10 +111,8 @@ implements LinkExtractorFactory {
               }
             }
           }
-        } //are we a div
-      } // are we on an article landing page?               
-      // Do NOT call super, only create a link for these <DIV> tags
-      // Sometimes a <DIV> tag is just a <DIV> tag.
+        } 
+      }
     }
       
   }

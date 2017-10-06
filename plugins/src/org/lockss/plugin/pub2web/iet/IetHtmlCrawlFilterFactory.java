@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -42,8 +42,11 @@ import org.lockss.plugin.*;
 public class IetHtmlCrawlFilterFactory implements FilterFactory {
   protected static NodeFilter[] filters = new NodeFilter[] {
     
-    HtmlNodeFilters.tagWithAttribute("div", "id", "sidebar_right"),
+    //footer
+    HtmlNodeFilters.tagWithAttribute("div", "class", "footercontainer"),
+    //banner
     HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
+    //Popular articles
     HtmlNodeFilters.tagWithAttribute("div", "id", "mostcited"),
     HtmlNodeFilters.tagWithAttribute("div", "id", "mostviewed"),
     HtmlNodeFilters.tagWithAttributeRegex("div", "id", "morelikethiscontentcontainer"),
@@ -58,16 +61,9 @@ public class IetHtmlCrawlFilterFactory implements FilterFactory {
     // they don't seem internal, but just to be safe, don't crawl links within reference containers
     HtmlNodeFilters.tagWithAttribute("div",  "class", "refcontainer"),
     
-    // shows earlier or later versions of the same article - see
-    // content/journal/ecosalplus/10.1128/(ecosalplus.5.5 & ecosalplus.ESP-0002-2013) 
+    //from other children just in case
     HtmlNodeFilters.tagWithAttribute("div",  "class", "consanguinityContainer"),
-    
-    //agh. In-line references to other articles from this journal
-    // content/journal/ecosalplus/10.1128/ecosalplus.ESP-0005-2013 - full text version
     HtmlNodeFilters.tagWithAttribute("a", "target", "xrefwindow"),
-    
-    //don't pick up cover images for books in "ASM recommends" and "Customers also bought"
-    //at the bottom of book landing page
     HtmlNodeFilters.tagWithAttribute("div", "class", "crossSelling"),
     
   };

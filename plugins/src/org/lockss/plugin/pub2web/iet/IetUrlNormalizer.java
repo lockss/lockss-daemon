@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,10 +32,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.pub2web.iet;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-import org.apache.commons.lang.StringUtils;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.pub2web.Pub2WebUrlNormalizer;
@@ -52,6 +48,8 @@ public class IetUrlNormalizer extends Pub2WebUrlNormalizer {
   @Override
   public String normalizeUrl(String url, ArchivalUnit au) throws PluginException {
     if(url.contains(HTML_STRING)) {
+      //Part of the URL query string that is used to build a crawler stable
+      //full text URL is unexpectedly URL encoded in IET, so decode cbefore passing to parent
       url = UrlUtil.decodeUrl(url);
     }
     return super.normalizeUrl(url, au);

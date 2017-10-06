@@ -23,9 +23,9 @@
       param[journal_id] = el
       #from Vol 1 in 1965
 
-      au < exists ; exists ; 2014 ; Electronics Letters Volume 50 ; 50 ; >
-      au < exists ; exists ; 2015 ; Electronics Letters Volume 51 ; 51 ; >
-      au < exists ; exists ; 2016 ; Electronics Letters Volume 52 ; 52 ; >
+      au < testing ; exists ; 2014 ; Electronics Letters Volume 50 ; 50 ; >
+      au < testing ; exists ; 2015 ; Electronics Letters Volume 51 ; 51 ; >
+      au < testing ; exists ; 2016 ; Electronics Letters Volume 52 ; 52 ; >
       au < exists ; exists ; 2017 ; Electronics Letters Volume 53 ; 53 ; >
 
     }
@@ -40,8 +40,8 @@
       >
       param[journal_id] = et
       
-      au < exists ; exists ; 2014 ; Engineering & Technology Volume 9 ; 9 ; >
-      au < exists ; exists ; 2015 ; Engineering & Technology Volume 10 ; 10 ; >
+      au < testing ; exists ; 2014 ; Engineering & Technology Volume 9 ; 9 ; >
+      au < testing ; exists ; 2015 ; Engineering & Technology Volume 10 ; 10 ; >
       au < exists ; exists ; 2016 ; Engineering & Technology Volume 11 ; 11 ; >
       au < exists ; exists ; 2017 ; Engineering & Technology Volume 12 ; 12 ; >
      
@@ -59,8 +59,8 @@
       param[journal_id] = iet-bmt
       
       au < exists ; exists ; 2014 ; IET Biometrics Volume 3 ; 3 ; >
-      au < exists ; exists ; 2015 ; IET Biometrics Volume 4 ; 4 ; >
-      au < exists ; exists ; 2016 ; IET Biometrics Volume 5 ; 5 ; >
+      au < testing ; exists ; 2015 ; IET Biometrics Volume 4 ; 4 ; >
+      au < testing ; exists ; 2016 ; IET Biometrics Volume 5 ; 5 ; >
       au < exists ; exists ; 2017 ; IET Biometrics Volume 6 ; 6 ; >
      
 
@@ -78,7 +78,7 @@
       
       au < exists ; exists ; 2014 ; IET Circuits, Devices and Systems Volume 8 ; 8 ; >    
       au < exists ; exists ; 2015 ; IET Circuits, Devices and Systems Volume 9 ; 9 ; >    
-      au < exists ; exists ; 2016 ; IET Circuits, Devices and Systems Volume 10 ; 10 ; >    
+      au < testing ; exists ; 2016 ; IET Circuits, Devices and Systems Volume 10 ; 10 ; >    
       au < exists ; exists ; 2017 ; IET Circuits, Devices and Systems Volume 11 ; 11 ; >    
 
     }
@@ -93,7 +93,7 @@
       >
       param[journal_id] = iet-com
       
-      au < exists ; exists ; 2014 ; IET Communications Volume 8 ; 8 ; > 
+      au < testing ; exists ; 2014 ; IET Communications Volume 8 ; 8 ; > 
       au < exists ; exists ; 2015 ; IET Communications Volume 9 ; 9 ; >  
       au < exists ; exists ; 2016 ; IET Communications Volume 10 ; 10 ; >
       au < exists ; exists ; 2017 ; IET Communications Volume 11 ; 11 ; >
@@ -380,7 +380,7 @@
       
       au < exists ; exists ; 2014 ; IET Renewable Power Generation Volume 8 ; 8 ; >      
       au < exists ; exists ; 2015 ; IET Renewable Power Generation Volume 9 ; 9 ; >        
-      au < exists ; exists ; 2016 ; IET Renewable Power Generation Volume 10 ; 10 ; >      
+      au < testing ; exists ; 2016 ; IET Renewable Power Generation Volume 10 ; 10 ; >      
       au < exists ; exists ; 2017 ; IET Renewable Power Generation Volume 11 ; 11 ; >      
      
 
@@ -415,7 +415,7 @@
       param[journal_id] = iet-spr
       
       au < exists ; exists ; 2014 ; IET Signal Processing Volume 8 ; 8 ; >      
-      au < exists ; exists ; 2015 ; IET Signal Processing Volume 9 ; 9 ; >        
+      au < testing ; exists ; 2015 ; IET Signal Processing Volume 9 ; 9 ; >        
       au < exists ; exists ; 2016 ; IET Signal Processing Volume 10 ; 10 ; >      
       au < exists ; exists ; 2017 ; IET Signal Processing Volume 11 ; 11 ; >      
      
@@ -434,7 +434,7 @@
       
       au < exists ; exists ; 2014 ; IET Software Volume 8 ; 8 ; >      
       au < testing ; exists ; 2015 ; IET Software Volume 9 ; 9 ; >        
-      au < exists ; exists ; 2016 ; IET Software Volume 10 ; 10 ; >      
+      au < testing ; exists ; 2016 ; IET Software Volume 10 ; 10 ; >      
       au < exists ; exists ; 2017 ; IET Software Volume 11 ; 11 ; >      
      
 
@@ -487,7 +487,7 @@
       
       au < testing ; exists ; 2014 ; Micro & Nano Letters Volume 9 ; 9 ; >      
       au < exists ; exists ; 2015 ; Micro & Nano Letters Volume 10 ; 10 ; >      
-      au < exists ; exists ; 2016 ; Micro & Nano Letters Volume 11 ; 11 ; >      
+      au < testing ; exists ; 2016 ; Micro & Nano Letters Volume 11 ; 11 ; >      
       au < exists ; exists ; 2017 ; Micro & Nano Letters Volume 12 ; 12 ; >      
      
 

@@ -1,6 +1,6 @@
 /* $Id:$
  
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -42,28 +42,30 @@ public class IetHtmlHashFilterFactory implements FilterFactory {
 	HtmlNodeFilters.tag("script"),
 	HtmlNodeFilters.tag("noscript"),
 	HtmlNodeFilters.tag("head"),
-	HtmlNodeFilters.tagWithAttribute("div", "id", "previewWrapper"),
+	
+	//More recent articles
 	HtmlNodeFilters.tagWithAttribute("a", "title", "Cited By"),
+	HtmlNodeFilters.tagWithAttribute("li",  "id", "cite"),
+	//copyright etc
+        HtmlNodeFilters.tagWithAttribute("div", "class", "footercontainer"),
+        //banner
         HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
+        //Keywords that change order
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "aboutthisarticle"),
+        //right nav bar
         HtmlNodeFilters.tagWithAttribute("div", "id", "sidebar_right"),
+        
+        //From other children to be safe
+        HtmlNodeFilters.tagWithAttribute("div", "id", "previewWrapper"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
-        HtmlNodeFilters.tagWithAttribute("div", "class", "crossSelling"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "pubtopright"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "hiddenjsdiv metricsEndDate"),
         HtmlNodeFilters.tagWithAttributeRegex("div",  "class",  "^metrics "),
-        //<input type="hidden" name="copyright" value="American Society For Microbiology &copy; Sat Apr 11 05:23:38 UTC 2015"/>
         HtmlNodeFilters.tagWithAttribute("input",  "name", "copyright"),
-        // take out the "ASM recommends" and "customers also bought" section at bottom of book landing
         HtmlNodeFilters.tagWithAttribute("div", "class", "crossSelling"),
-        //and similar on a journal article page
         HtmlNodeFilters.tagWithAttribute("div", "id", "related"),
-        //every now and then the order of the xml, html, pdf links are different - dynamically generated
         HtmlNodeFilters.tagWithAttribute("div",  "class", "contentTypeOptions"),
-        //every now and then the server fails to serve the next/prev link...what? - on journals
         HtmlNodeFilters.tagWithAttribute("div",  "class", "articlenav"),
-        // books don't have a top level div class for navigation
-        //must keep these in for books which don't have a top div for this navigator
         HtmlNodeFilters.tagWithAttribute("li",  "class", "previousLinkContainer"),
         HtmlNodeFilters.tagWithAttribute("li",  "class", "indexLinkContainer"),
         HtmlNodeFilters.tagWithAttribute("li",  "class", "nextLinkContainer"),
