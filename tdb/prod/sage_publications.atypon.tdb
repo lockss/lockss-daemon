@@ -7,7 +7,7 @@
 
   comment[moving] = Live on Atypon 1/1/2017.
 
-  attr[EncodingMatchRange]=200
+  attr[EncodingMatchRange]=2000
   plugin = org.lockss.plugin.atypon.sage.SageAtyponJournalsPlugin
   #plugin = org.lockss.plugin.atypon.GenericAtyponPlugin
   param[base_url] = http://journals.sagepub.com/
