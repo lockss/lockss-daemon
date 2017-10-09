@@ -379,7 +379,7 @@
 
     au < frozen ; exists ; 2008 ; Advances in Civil Engineering Volume 2008 ; 2008 ; 2008 ; >
     au < frozen ; exists ; 2009 ; Advances in Civil Engineering Volume 2009 ; 2009 ; 2009 ; >
-    au < testing ; exists ; 2010 ; Advances in Civil Engineering Volume 2010 ; 2010 ; 2010 ; >
+    au < ready ; exists ; 2010 ; Advances in Civil Engineering Volume 2010 ; 2010 ; 2010 ; >
     au < crawling ; exists ; 2011 ; Advances in Civil Engineering Volume 2011 ; 2011 ; 2011 ; >
     au < frozen ; exists ; 2012 ; Advances in Civil Engineering Volume 2012 ; 2012 ; 2012 ; >
     au < frozen ; exists ; 2013 ; Advances in Civil Engineering Volume 2013 ; 2013 ; 2013 ; >
@@ -2768,14 +2768,15 @@
     >
 
     param[journal_id] = cri
+    #Moved to archive
 
-    au < manifest ; exists ; 2011 ; Chromatography Research International Volume 2011 ; 2011 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; Chromatography Research International Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Chromatography Research International Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2011 ; Chromatography Research International Volume 2011 ; 2011 ; 2011 ; >
+    au < doNotProcess ; exists ; 2012 ; Chromatography Research International Volume 2012 ; 2012 ; 2012 ; >
+    au < doNotProcess ; exists ; 2013 ; Chromatography Research International Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Chromatography Research International Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; finished ; 2015 ; Chromatography Research International Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2016 ; Chromatography Research International Volume 2016 ; 2016 ; 2016 ; >
-    au < expected ; exists ; 2017 ; Chromatography Research International Volume 2017 ; 2017 ; 2017 ; >
+    au < finished ; manifest ; 2016 ; Chromatography Research International Volume 2016 ; 2016 ; 2016 ; reingest3.clockss.org:8083 >
+    au < doNotProcess ; exists ; 2017 ; Chromatography Research International Volume 2017 ; 2017 ; 2017 ; >
 
   }
 
