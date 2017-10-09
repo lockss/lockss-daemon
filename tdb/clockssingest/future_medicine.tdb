@@ -51,7 +51,7 @@
     au < finished ; finished ; 2014 ; Biomarkers in Medicine Volume 8 ; 8 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Biomarkers in Medicine Volume 9 ; 9 ; http://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Biomarkers in Medicine Volume 10 ; 10 ; http://www.futuremedicine.com/ ; >
-    au < ready ; exists ; 2017 ; Biomarkers in Medicine Volume 11 ; 11 ; https://www.futuremedicine.com/ ; >
+    au < crawling ; exists ; 2017 ; Biomarkers in Medicine Volume 11 ; 11 ; https://www.futuremedicine.com/ ; >
    
   }
 
@@ -174,7 +174,7 @@
     param[journal_id] = cnc
 
     au < deepCrawl ; exists ; 2016 ; Concussion Volume 1 ; 1 ; http://www.futuremedicine.com/ ; >
-    au < ready ; exists ; 2017 ; Concussion Volume 2 ; 2 ; https://www.futuremedicine.com/ ; >
+    au < crawling ; exists ; 2017 ; Concussion Volume 2 ; 2 ; https://www.futuremedicine.com/ ; >
 
   }
 
@@ -239,7 +239,7 @@
     au < finished ; finished ; 2014 ; Future Cardiology Volume 10 ; 10 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; Future Cardiology Volume 11 ; 11 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2016 ; Future Cardiology Volume 12 ; 12 ; http://www.futuremedicine.com/ ; >
-    au < ready ; exists ; 2017 ; Future Cardiology Volume 13 ; 13 ; https://www.futuremedicine.com/ ; >
+    au < crawling ; exists ; 2017 ; Future Cardiology Volume 13 ; 13 ; https://www.futuremedicine.com/ ; >
     
   }
 
@@ -288,7 +288,7 @@
     au < finished ; finished ; 2014 ; Future Neurology Volume 9 ; 9 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Future Neurology Volume 10 ; 10 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2016 ; Future Neurology Volume 11 ; 11 ; http://www.futuremedicine.com/ ; >
-    au < ready ; exists ; 2017 ; Future Neurology Volume 12 ; 12 ; https://www.futuremedicine.com/ ; >
+    au < crawling ; exists ; 2017 ; Future Neurology Volume 12 ; 12 ; https://www.futuremedicine.com/ ; >
     
   }
 
@@ -314,7 +314,7 @@
     au < finished ; finished ; 2014 ; Future Oncology Volume 10 ; 10 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Future Oncology Volume 11 ; 11 ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Future Oncology Volume 12 ; 12 ; http://www.futuremedicine.com/ ; >
-    au < ready ; exists ; 2017 ; Future Oncology Volume 13 ; 13 ; https://www.futuremedicine.com/ ; >
+    au < crawling ; exists ; 2017 ; Future Oncology Volume 13 ; 13 ; https://www.futuremedicine.com/ ; >
     
   }
 
@@ -371,7 +371,7 @@
     au < finished ; finished ; 2014 ; Hepatic Oncology Volume 1 ; 1 ; http://www.futuremedicine.com/ ; >
     au < finished ; finished ; 2015 ; Hepatic Oncology Volume 2 ; 2 ; http://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Hepatic Oncology Volume 3 ; 3 ; http://www.futuremedicine.com/ ; >
-    au < ready ; exists ; 2017 ; Hepatic Oncology Volume 4 ; 4 ; https://www.futuremedicine.com/ ; >
+    au < crawling ; exists ; 2017 ; Hepatic Oncology Volume 4 ; 4 ; https://www.futuremedicine.com/ ; >
     
   }
 
@@ -425,7 +425,7 @@
     au < finished ; finished ; 2014 ; Immunotherapy Volume 6 ; 6 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
     au < notReady ; exists ; 2015 ; Immunotherapy Volume 7 ; 7 ; http://www.futuremedicine.com/ ; > #500 Error. Waiting for Atypon to fix.
     au < frozen ; exists ; 2016 ; Immunotherapy Volume 8 ; 8 ; http://www.futuremedicine.com/ ; >
-    au < ready ; exists ; 2017 ; Immunotherapy Volume 9 ; 9 ; https://www.futuremedicine.com/ ; >
+    au < crawling ; exists ; 2017 ; Immunotherapy Volume 9 ; 9 ; https://www.futuremedicine.com/ ; >
     
   }
 
@@ -478,7 +478,7 @@
     au < frozen ; exists ; 2014 ; International Journal of Hematologic Oncology Volume 3 ; 3 ; http://www.futuremedicine.com/ ; >
     au < finished ; finished ; 2015 ; International Journal of Hematologic Oncology Volume 4 ; 4 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; International Journal of Hematologic Oncology Volume 5 ; 5 ; http://www.futuremedicine.com/ ; >
-    au < ready ; exists ; 2017 ; International Journal of Hematologic Oncology Volume 6 ; 6 ; https://www.futuremedicine.com/ ; >
+    au < crawling ; exists ; 2017 ; International Journal of Hematologic Oncology Volume 6 ; 6 ; https://www.futuremedicine.com/ ; >
     
   }
 
@@ -509,7 +509,7 @@
     
     param[journal_id] = 3dp
 
-    au < ready ; exists ; 2017 ; Journal of 3D Printing in Medicine Volume 1 ; 1 ; https://www.futuremedicine.com/ ; >
+    au < crawling ; exists ; 2017 ; Journal of 3D Printing in Medicine Volume 1 ; 1 ; https://www.futuremedicine.com/ ; >
 
   }
 
@@ -527,7 +527,7 @@
     au < frozen ; exists ; 2014 ; Journal of Comparative Effectiveness Research Volume 3 ; 3 ; http://www.futuremedicine.com/ ; >
     au < finished ; finished ; 2015 ; Journal of Comparative Effectiveness Research Volume 4 ; 4 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2016 ; Journal of Comparative Effectiveness Research Volume 5 ; 5 ; http://www.futuremedicine.com/ ; >
-    au < ready ; exists ; 2017 ; Journal of Comparative Effectiveness Research Volume 6 ; 6 ; https://www.futuremedicine.com/ ; >
+    au < crawling ; exists ; 2017 ; Journal of Comparative Effectiveness Research Volume 6 ; 6 ; https://www.futuremedicine.com/ ; >
     
   }
 
@@ -687,7 +687,7 @@
     au < finished ; finished ; 2014 ; Personalized Medicine Volume 11 ; 11 ; http://www.futuremedicine.com/ ; >
     au < frozen ; exists ; 2015 ; Personalized Medicine Volume 12 ; 12 ; http://www.futuremedicine.com/ ; >
     au < frozen ; exists ; 2016 ; Personalized Medicine Volume 13 ; 13 ; http://www.futuremedicine.com/ ; >
-    au < ready ; exists ; 2017 ; Personalized Medicine Volume 14 ; 14 ; https://www.futuremedicine.com/ ; >
+    au < crawling ; exists ; 2017 ; Personalized Medicine Volume 14 ; 14 ; https://www.futuremedicine.com/ ; >
     
   }
 
@@ -718,7 +718,7 @@
     au < finished ; finished ; 2014 ; Pharmacogenomics Volume 15 ; 15 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2015 ; Pharmacogenomics Volume 16 ; 16 ; http://www.futuremedicine.com/ ; >
     au < frozen ; exists ; 2016 ; Pharmacogenomics Volume 17 ; 17 ; http://www.futuremedicine.com/ ; >
-    au < ready ; exists ; 2017 ; Pharmacogenomics Volume 18 ; 18 ; https://www.futuremedicine.com/ ; >
+    au < crawling ; exists ; 2017 ; Pharmacogenomics Volume 18 ; 18 ; https://www.futuremedicine.com/ ; >
     
   }
 
@@ -743,7 +743,7 @@
     au < finished ; finished ; 2014 ; Regenerative Medicine Volume 9 ; 9 ; http://www.futuremedicine.com/ ; >
     au < finished ; finished ; 2015 ; Regenerative Medicine Volume 10 ; 10 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2016 ; Regenerative Medicine Volume 11 ; 11 ; http://www.futuremedicine.com/ ; >
-    au < ready ; exists ; 2017 ; Regenerative Medicine Volume 12 ; 12 ; https://www.futuremedicine.com/ ; >
+    au < crawling ; exists ; 2017 ; Regenerative Medicine Volume 12 ; 12 ; https://www.futuremedicine.com/ ; >
     
   }
 
