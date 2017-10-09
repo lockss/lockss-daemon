@@ -628,7 +628,7 @@
       au < frozen ; exists ; 2014 ; Organic & Biomolecular Chemistry Volume 12 ; 12 ; 2014 ; >
       au < deepCrawl ; exists ; 2015 ; Organic & Biomolecular Chemistry Volume 13 ; 13 ; 2015 ; >
       au < deepCrawl ; exists ; 2016 ; Organic & Biomolecular Chemistry Volume 14 ; 14 ; 2016 ; >
-      au < testing ; exists ; 2017 ; Organic & Biomolecular Chemistry Volume 15 ; 15 ; 2017 ; >
+      au < ready ; exists ; 2017 ; Organic & Biomolecular Chemistry Volume 15 ; 15 ; 2017 ; >
 
   }
 
@@ -692,7 +692,7 @@
       au < frozen ; exists ; 2014 ; Soft Matter Volume 10 ; 10 ; 2014 ; >
       au < deepCrawl ; exists ; 2015 ; Soft Matter Volume 11 ; 11 ; 2015 ; >
       au < deepCrawl ; exists ; 2016 ; Soft Matter Volume 12 ; 12 ; 2016 ; >
-      au < testing ; exists ; 2017 ; Soft Matter Volume 13 ; 13 ; 2017 ; >
+      au < ready ; exists ; 2017 ; Soft Matter Volume 13 ; 13 ; 2017 ; >
 
   }
 
@@ -705,7 +705,7 @@
 
       param[journal_code] = se
 
-      au < testing ; exists ; 2017 ; Sustainable Energy & Fuels Volume 1 ; 1 ; 2017 ; >
+      au < ready ; exists ; 2017 ; Sustainable Energy & Fuels Volume 1 ; 1 ; 2017 ; >
 
   }
 
