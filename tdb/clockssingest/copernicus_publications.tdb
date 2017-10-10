@@ -289,7 +289,7 @@
       au < finished ; finished ; 2014 ; 2014 ; Atmospheric Chemistry and Physics Volume 14 ; 14 ; http://www.atmos-chem-phys.net/ ; http://www.atmospheric-chemistry-and-physics.net/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Atmospheric Chemistry and Physics Volume 15 ; 15 ; http://www.atmos-chem-phys.net/ ; http://www.atmospheric-chemistry-and-physics.net/ ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2016 ; 2016 ; Atmospheric Chemistry and Physics Volume 16 ; 16 ; http://www.atmos-chem-phys.net/ ; http://www.atmospheric-chemistry-and-physics.net/ ; >
-      au < testing ; exists ; 2017 ; 2017 ; Atmospheric Chemistry and Physics Volume 17 ; 17 ; https://www.atmos-chem-phys.net/ ; https://www.atmospheric-chemistry-and-physics.net/ ; >
+      au < ready ; exists ; 2017 ; 2017 ; Atmospheric Chemistry and Physics Volume 17 ; 17 ; https://www.atmos-chem-phys.net/ ; https://www.atmospheric-chemistry-and-physics.net/ ; >
 
    }
 
@@ -340,7 +340,7 @@
       au < finished ; finished ; 2014 ; 2014 ; Atmospheric Measurement Techniques Volume 7 ; 7 ; http://www.atmos-meas-tech.net/ ; http://www.atmospheric-measurement-techniques.net/ ; >
       au < frozen ; exists ; 2015 ; 2015 ; Atmospheric Measurement Techniques Volume 8 ; 8 ; http://www.atmos-meas-tech.net/ ; http://www.atmospheric-measurement-techniques.net/ ; >
       au < frozen ; exists ; 2016 ; 2016 ; Atmospheric Measurement Techniques Volume 9 ; 9 ; http://www.atmos-meas-tech.net/ ; http://www.atmospheric-measurement-techniques.net/ ; >
-      au < testing ; exists ; 2017 ; 2017 ; Atmospheric Measurement Techniques Volume 10 ; 10 ; https://www.atmos-meas-tech.net/ ; https://www.atmospheric-measurement-techniques.net/ ; >
+      au < ready ; exists ; 2017 ; 2017 ; Atmospheric Measurement Techniques Volume 10 ; 10 ; https://www.atmos-meas-tech.net/ ; https://www.atmospheric-measurement-techniques.net/ ; >
 
    }
 
@@ -388,7 +388,7 @@
       au < finished ; finished ; 2014 ; 2014 ; Biogeosciences Volume 11 ; 11 ; http://www.biogeosciences.net/ ; http://www.biogeosciences.net/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Biogeosciences Volume 12 ; 12 ; http://www.biogeosciences.net/ ; http://www.biogeosciences.net/ ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2016 ; 2016 ; Biogeosciences Volume 13 ; 13 ; http://www.biogeosciences.net/ ; http://www.biogeosciences.net/ ; >
-      au < testing ; exists ; 2017 ; 2017 ; Biogeosciences Volume 14 ; 14 ; https://www.biogeosciences.net/ ; https://www.biogeosciences.net/ ; >
+      au < ready ; exists ; 2017 ; 2017 ; Biogeosciences Volume 14 ; 14 ; https://www.biogeosciences.net/ ; https://www.biogeosciences.net/ ; >
 
    }
 
@@ -439,7 +439,7 @@
       au < finished ; finished ; 2014 ; 2014 ; Climate of the Past Volume 10 ; 10 ; http://www.clim-past.net/ ; http://www.climate-of-the-past.net/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Climate of the Past Volume 11 ; 11 ; http://www.clim-past.net/ ; http://www.climate-of-the-past.net/ ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2016 ; 2016 ; Climate of the Past Volume 12 ; 12 ; http://www.clim-past.net/ ; http://www.climate-of-the-past.net/ ; >
-      au < testing ; exists ; 2017 ; 2017 ; Climate of the Past Volume 13 ; 13 ; https://www.clim-past.net/ ; https://www.climate-of-the-past.net/ ; >
+      au < ready ; exists ; 2017 ; 2017 ; Climate of the Past Volume 13 ; 13 ; https://www.clim-past.net/ ; https://www.climate-of-the-past.net/ ; >
 
    }
 
@@ -562,7 +562,7 @@
       au < finished ; finished ; 2014 ; 2014 ; Earth System Dynamics Volume 5 ; 5 ; http://www.earth-syst-dynam.net/ ; http://www.earth-system-dynamics.net/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Earth System Dynamics Volume 6 ; 6 ; http://www.earth-syst-dynam.net/ ; http://www.earth-system-dynamics.net/ ; >
       au < frozen ; exists ; 2016 ; 2016 ; Earth System Dynamics Volume 7 ; 7 ; http://www.earth-syst-dynam.net/ ; http://www.earth-system-dynamics.net/ ; >
-      au < testing ; exists ; 2017 ; 2017 ; Earth System Dynamics Volume 8 ; 8 ; https://www.earth-syst-dynam.net/ ; https://www.earth-system-dynamics.net/ ; >
+      au < ready ; exists ; 2017 ; 2017 ; Earth System Dynamics Volume 8 ; 8 ; https://www.earth-syst-dynam.net/ ; https://www.earth-system-dynamics.net/ ; >
 
    }
 
@@ -819,7 +819,7 @@
       au < finished ; finished ; 2014 ; 2014 ; Geoscientific Instrumentation, Methods and Data Systems Volume 3 ; 3 ; http://www.geosci-instrum-method-data-syst.net/ ; http://www.geoscientific-instrumentation-methods-and-data-systems.net/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Geoscientific Instrumentation, Methods and Data Systems Volume 4 ; 4 ; http://www.geosci-instrum-method-data-syst.net/ ; http://www.geoscientific-instrumentation-methods-and-data-systems.net/ ; >
       au < frozen ; exists ; 2016 ; 2016 ; Geoscientific Instrumentation, Methods and Data Systems Volume 5 ; 5 ; http://www.geosci-instrum-method-data-syst.net/ ; http://www.geoscientific-instrumentation-methods-and-data-systems.net/ ; >
-      au < testing ; exists ; 2017 ; 2017 ; Geoscientific Instrumentation, Methods and Data Systems Volume 6 ; 6 ; https://www.geosci-instrum-method-data-syst.net/ ; https://www.geoscientific-instrumentation-methods-and-data-systems.net/ ; >
+      au < ready ; exists ; 2017 ; 2017 ; Geoscientific Instrumentation, Methods and Data Systems Volume 6 ; 6 ; https://www.geosci-instrum-method-data-syst.net/ ; https://www.geoscientific-instrumentation-methods-and-data-systems.net/ ; >
 
    }
 
@@ -1654,7 +1654,7 @@
       au < finished ; finished ; 2014 ; 2014 ; Web Ecology Volume 14 ; 14 ; http://www.web-ecol.net/ ; http://www.web-ecology.net/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Web Ecology Volume 15 ; 15 ; http://www.web-ecol.net/ ; http://www.web-ecology.net/ ; >
       au < frozen ; exists ; 2016 ; 2016 ; Web Ecology Volume 16 ; 16 ; https://www.web-ecol.net/ ; https://www.web-ecology.net/ ; >
-      au < testing ; exists ; 2017 ; 2017 ; Web Ecology Volume 17 ; 17 ; https://www.web-ecol.net/ ; https://www.web-ecology.net/ ; >
+      au < ready ; exists ; 2017 ; 2017 ; Web Ecology Volume 17 ; 17 ; https://www.web-ecol.net/ ; https://www.web-ecology.net/ ; >
 
    }
 
