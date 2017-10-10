@@ -2205,7 +2205,7 @@
 
       param[journal_id] = ijcrc
 
-      au < frozen ; down ; 2013-2016 ; International Journal of Creative Computing Volume 1 ; 1 ; >
+      au < finished ; manifest ; 2013-2016 ; International Journal of Creative Computing Volume 1 ; 1 ; reingest2.clockss.org:8085 >
       au < expected ; exists ; 2017 ; International Journal of Creative Computing Volume 2 ; 2 ; >
 
     }
@@ -5078,7 +5078,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Learning and Change Volume 5 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Learning and Change Volume 6 ; 6 ; >
       au < finished ; finished ; 2013-2014 ; International Journal of Learning and Change Volume 7 ; 7 ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2015-2016 ; International Journal of Learning and Change Volume 8 ; 8 ; >
+      au < finished ; manifest ; 2015-2016 ; International Journal of Learning and Change Volume 8 ; 8 ; reingest4.clockss.org:8082 >
       au < manifest ; exists ; 2017-2018 ; International Journal of Learning and Change Volume 9 ; 9 ; >
 
     }
@@ -5418,7 +5418,7 @@
 
       au < doNotProcess ; exists ; 2008-2009 ; International Journal of Management and Network Economics Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2011-2012 ; International Journal of Management and Network Economics Volume 2 ; 2 ; >
-      au < frozen ; down ; 2013-2016 ; International Journal of Management and Network Economics Volume 3 ; 3 ; >
+      au < finished ; manifest ; 2013-2016 ; International Journal of Management and Network Economics Volume 3 ; 3 ; reingest3.clockss.org:8083 >
       au < expected ; exists ; 2017 ; International Journal of Management and Network Economics Volume 4 ; 4 ; >
 
     }
@@ -6215,7 +6215,7 @@
       au < doNotProcess ; doNotProcess ; 2010-2011 ; International Journal of Nano and Biomaterials Volume 3 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Nano and Biomaterials Volume 4 ; 4 ; >
       au < finished ; finished ; 2014 ; International Journal of Nano and Biomaterials Volume 5 ; 5 ; reingest1.clockss.org:8082 >
-      au < frozen ; down ; 2015-2016 ; International Journal of Nano and Biomaterials Volume 6 ; 6 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2015-2016 ; International Journal of Nano and Biomaterials Volume 6 ; 6 ; reingest3.clockss.org:8083 >
       au < expected ; exists ; 2017 ; International Journal of Nano and Biomaterials Volume 7 ; 7 ; >
 
     }
@@ -7060,7 +7060,7 @@
       param[journal_id] = ijpspm
 
       au < doNotProcess ; doNotProcess ; 2007-2010 ; International Journal of Public Sector Performance Management Volume 1 ; 1 ; >
-      au < frozen ; down ; 2012-2016 ; International Journal of Public Sector Performance Management Volume 2 ; 2 ; >
+      au < finished ; manifest ; 2012-2016 ; International Journal of Public Sector Performance Management Volume 2 ; 2 ; reingest5.clockss.org:8082 >
       au < manifest ; exists ; 2017-2018 ; International Journal of Public Sector Performance Management Volume 3 ; 3 ; >
 
     }
@@ -8068,7 +8068,7 @@
       param[journal_id] = ijsmss
 
       au < finished ; finished ; 2012-2014 ; International Journal of Sustainable Materials and Structural Systems Volume 1 ; 1 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2015-2016 ; International Journal of Sustainable Materials and Structural Systems Volume 2 ; 2 ; >
+      au < finished ; manifest ; 2015-2016 ; International Journal of Sustainable Materials and Structural Systems Volume 2 ; 2 ; reingest5.clockss.org:8082 >
       au < expected ; exists ; 2017 ; International Journal of Sustainable Materials and Structural Systems Volume 3 ; 3 ; >
 
     }
@@ -8687,7 +8687,7 @@
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Value Chain Management Volume 4 ; 4 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Value Chain Management Volume 5 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Value Chain Management Volume 6 ; 6 ; >
-      au < frozen ; down ; 2013-2016 ; International Journal of Value Chain Management Volume 7 ; 7 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2013-2016 ; International Journal of Value Chain Management Volume 7 ; 7 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2017 ; International Journal of Value Chain Management Volume 8 ; 8 ; >
 
     }
@@ -9073,7 +9073,7 @@
 
       param[journal_id] = ijwi
 
-      au < frozen ; down ; 2012-2016 ; International Journal of Work Innovation Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2012-2016 ; International Journal of Work Innovation Volume 1 ; 1 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2017 ; International Journal of Work Innovation Volume 2 ; 2 ; >
 
     }
@@ -9454,7 +9454,7 @@
 
       au < crawling ; exists ; 2013 ; International Journal of Social Media and Interactive Learning Environments Volume 1 ; 1 ;  >
       au < crawling ; exists ; 2014 ; International Journal of Social Media and Interactive Learning Environments Volume 2 ; 2 ;  >
-      au < frozen ; exists ; 2015 ; International Journal of Social Media and Interactive Learning Environments Volume 3 ; 3 ;  >
+      au < finished ; manifest ; 2015 ; International Journal of Social Media and Interactive Learning Environments Volume 3 ; 3 ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; International Journal of Social Media and Interactive Learning Environments Volume 4 ; 4 ;  >
       au < crawling ; exists ; 2017 ; International Journal of Social Media and Interactive Learning Environments Volume 5 ; 5 ;  >
 
@@ -9505,7 +9505,7 @@
 
       param[journal_id] = ijautoc
 
-      au < frozen ; exists ; 2014-2015 ; International Journal of Automotive Composites Volume 1 ; 1 ;  >
+      au < finished ; manifest ; 2014-2015 ; International Journal of Automotive Composites Volume 1 ; 1 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; International Journal of Automotive Composites Volume 2 ; 2 ;  >
       au < crawling ; exists ; 2017 ; International Journal of Automotive Composites Volume 3 ; 3 ;  >
 
@@ -9536,9 +9536,9 @@
 
       param[journal_id] = ijscor
 
-      au < frozen ; exists ; 2014-2015 ; International Journal of Supply Chain and Operations Resilience Volume 1 ; 1 ;  >
-      au < frozen ; exists ; 2016 ; International Journal of Supply Chain and Operations Resilience Volume 2 ; 2 ;  >
-      au < expected ; exists ; 2017 ; International Journal of Supply Chain and Operations Resilience Volume 3 ; 3 ;  >
+      au < finished ; manifest ; 2014-2015 ; International Journal of Supply Chain and Operations Resilience Volume 1 ; 1 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2016 ; International Journal of Supply Chain and Operations Resilience Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+      au < expected ; exists ; 2017 ; International Journal of Supply Chain and Operations Resilience Volume 3 ; 3 ; >
 
   }
 
@@ -9615,7 +9615,7 @@
 
       param[journal_id] = ijscim
 
-      au < frozen ; exists ; 2015-2016 ; International Journal of Supply Chain and Inventory Management Volume 1 ; 1 ;  >
+      au < finished ; manifest ; 2015-2016 ; International Journal of Supply Chain and Inventory Management Volume 1 ; 1 ; reingest1.clockss.org:8082 >
       au < manifest ; exists ; 2017-2018 ; International Journal of Supply Chain and Inventory Management Volume 2 ; 2 ;  >
 
   }
