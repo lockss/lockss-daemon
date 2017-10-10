@@ -204,10 +204,10 @@
 
       param[journal_id] = jafrireli
 
-      au < crawling ; exists ; 2013 ; Journal of Africana Religions Volume 1-2 ; 2013 ; >
+      au < frozen ; exists ; 2013 ; Journal of Africana Religions Volume 1-2 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Africana Religions Volume 3 ; 2014 ; >
       au < frozen ; exists ; 2015 ; Journal of Africana Religions Volume 4 ; 2015 ; >
-      au < crawling ; exists ; 2016 ; Journal of Africana Religions Volume 5 ; 2016 ; >
+      au < frozen ; exists ; 2016 ; Journal of Africana Religions Volume 5 ; 2016 ; >
       au < crawling ; exists ; 2017 ; Journal of Africana Religions Volume 6 ; 2017 ; >
       
   }
@@ -376,7 +376,7 @@
       param[journal_id] = jnietstud
 
       au < manifest ; exists ; 2011 ; The Journal of Nietzsche Studies Volume 41-42 ; 2011 ; >
-      au < crawling ; exists ; 2012 ; The Journal of Nietzsche Studies Volume 43 ; 2012 ; >
+      au < frozen ; exists ; 2012 ; The Journal of Nietzsche Studies Volume 43 ; 2012 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; The Journal of Nietzsche Studies Volume 44 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; The Journal of Nietzsche Studies Volume 45 ; 2014 ; >
       au < frozen ; exists ; 2015 ; The Journal of Nietzsche Studies Volume 46 ; 2015 ; >
@@ -402,7 +402,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; The Journal of Speculative Philosophy Volume 27 ; 2013 ; >
       au < frozen ; exists ; 2014 ; The Journal of Speculative Philosophy Volume 28 ; 2014 ; >
       au < frozen ; exists ; 2015 ; The Journal of Speculative Philosophy Volume 29 ; 2015 ; >
-      au < crawling ; exists ; 2016 ; The Journal of Speculative Philosophy Volume 30 ; 2016 ; >
+      au < frozen ; exists ; 2016 ; The Journal of Speculative Philosophy Volume 30 ; 2016 ; >
       au < crawling ; exists ; 2017 ; The Journal of Speculative Philosophy Volume 31 ; 2017 ; >
       
   }
@@ -446,7 +446,7 @@
 
       au < doNotProcess ; doNotProcess ; 2010 ; Mediterranean Studies Volume 19 ; 2010 ; >
       au < frozen ; exists ; 2012 ; Mediterranean Studies Volume 20 ; 2012 ; >
-      au < crawling ; exists ; 2013 ; Mediterranean Studies Volume 21 ; 2013 ; >
+      au < frozen ; exists ; 2013 ; Mediterranean Studies Volume 21 ; 2013 ; >
       au < frozen ; exists ; 2014 ; Mediterranean Studies Volume 22 ; 2014 ; >
       au < frozen ; exists ; 2015 ; Mediterranean Studies Volume 23 ; 2015 ; >
       au < frozen ; exists ; 2016 ; Mediterranean Studies Volume 24 ; 2016 ; >
@@ -472,7 +472,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; Pacific Coast Philology Volume 48 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Pacific Coast Philology Volume 49 ; 2014 ; >
       au < frozen ; exists ; 2015 ; Pacific Coast Philology Volume 50 ; 2015 ; >
-      au < crawling ; exists ; 2016 ; Pacific Coast Philology Volume 51 ; 2016 ; >
+      au < frozen ; exists ; 2016 ; Pacific Coast Philology Volume 51 ; 2016 ; >
       au < crawling ; exists ; 2017 ; Pacific Coast Philology Volume 52 ; 2017 ; >
       
   }
@@ -578,7 +578,7 @@
 
       au < frozen ; exists ; 2010 ; SHAW The Annual of Bernard Shaw Studies Volume 30 ; 2010 ; >
       au < manifest ; exists ; 2011 ; SHAW The Annual of Bernard Shaw Studies Volume 31 ; 2011 ; >
-      au < crawling ; exists ; 2012 ; SHAW The Annual of Bernard Shaw Studies Volume 32 ; 2012 ; >
+      au < frozen ; exists ; 2012 ; SHAW The Annual of Bernard Shaw Studies Volume 32 ; 2012 ; >
       au < frozen ; exists ; 2013 ; SHAW The Annual of Bernard Shaw Studies Volume 33 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; SHAW The Annual of Bernard Shaw Studies Volume 34 ; 2014 ; >
       au < frozen ; exists ; 2015 ; SHAW: The Journal of Bernard Shaw Studies Volume 35 ; 2015 ; >
@@ -622,7 +622,7 @@
 
       au < manifest ; exists ; 2010 ; Steinbeck Review Volume 7 ; 2010 ; >
       au < manifest ; exists ; 2011 ; Steinbeck Review Volume 8 ; 2011 ; >
-      au < crawling ; exists ; 2012 ; Steinbeck Review Volume 9 ; 2012 ; >
+      au < frozen ; exists ; 2012 ; Steinbeck Review Volume 9 ; 2012 ; >
       au < crawling ; exists ; 2013 ; Steinbeck Review Volume 10 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Steinbeck Review Volume 11 ; 2014 ; >
       au < frozen ; exists ; 2015 ; Steinbeck Review Volume 12 ; 2015 ; >
@@ -644,11 +644,11 @@
 
       au < manifest ; exists ; 2010 ; Studies in American Jewish Literature Volume 29 ; 2010 ; >
       au < manifest ; exists ; 2011 ; Studies in American Jewish Literature Volume 30 ; 2011 ; >
-      au < crawling ; exists ; 2012 ; Studies in American Jewish Literature Volume 31 ; 2012 ; >
+      au < frozen ; exists ; 2012 ; Studies in American Jewish Literature Volume 31 ; 2012 ; >
       au < crawling ; exists ; 2013 ; Studies in American Jewish Literature Volume 32 ; 2013 ; >
-      au < crawling ; exists ; 2014 ; Studies in American Jewish Literature Volume 33 ; 2014 ; >
+      au < frozen ; exists ; 2014 ; Studies in American Jewish Literature Volume 33 ; 2014 ; >
       au < frozen ; exists ; 2015 ; Studies in American Jewish Literature Volume 34 ; 2015 ; >
-      au < crawling ; exists ; 2016 ; Studies in American Jewish Literature Volume 35 ; 2016 ; >
+      au < frozen ; exists ; 2016 ; Studies in American Jewish Literature Volume 35 ; 2016 ; >
       au < crawling ; exists ; 2017 ; Studies in American Jewish Literature Volume 36 ; 2017 ; >
       
   }
@@ -688,7 +688,7 @@
 
       au < manifest ; exists ; 2010 ; Utopian Studies Volume 21 ; 2010 ; >
       au < manifest ; exists ; 2011 ; Utopian Studies Volume 22 ; 2011 ; >
-      au < crawling ; exists ; 2012 ; Utopian Studies Volume 23 ; 2012 ; >
+      au < frozen ; exists ; 2012 ; Utopian Studies Volume 23 ; 2012 ; >
       au < frozen ; exists ; 2013 ; Utopian Studies Volume 24 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Utopian Studies Volume 25 ; 2014 ; >
       au < frozen ; exists ; 2015 ; Utopian Studies Volume 26 ; 2015 ; >
