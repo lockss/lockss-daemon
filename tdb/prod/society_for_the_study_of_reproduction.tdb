@@ -17,18 +17,6 @@
 
     {
 
-      plugin = org.lockss.plugin.silverchair.SilverchairJournalsPlugin
-      param[base_url] = https://academic.oup.com/
-      param[resource_id] = XXX
-      param[journal_id] = biolreprod
-      implicit < status ; year ; name ; param[year] >
-
-      au < exists ; 2016 ; Biology of Reproduction Volume 94-95 ; 2016 >
-
-    }
-
-    {
-
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://www.biolreprod.org/
       implicit < status ; year ; name ; param[volume_name] >
