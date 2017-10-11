@@ -36,6 +36,8 @@ echo "---------------------"
 echo "---------------------"
 echo "reingest: 1:8082, 2:8085, 3:8083, 4:8082, 5:8082"
 scripts/tdb/tdbout -F -t "au:hidden[proxy]" -Q 'status2 is "manifest"' tdb/clockssingest/*.tdb | sort | uniq -c
+echo "No reingest set."
+scripts/tdb/tdbout -F -t "publisher,title" -Q 'status2 is "manifest" and au:hidden[proxy] is ""' tdb/clockssingest/*.tdb | sort | uniq -c
 echo " "
 #
 # Find duplicate auids in the gln title database
