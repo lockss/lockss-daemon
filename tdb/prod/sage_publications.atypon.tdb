@@ -12453,7 +12453,8 @@
       {
 
         #param[base_url] = http://gtd.sagepub.com/
-
+        #move to T&F in 2017
+        
         au < manifest ; 1997 ; Gender, Technology and Development Volume 1 ; 1 ; gtda >
         au < manifest ; 1998 ; Gender, Technology and Development Volume 2 ; 2 ; gtda >
         au < manifest ; 1999 ; Gender, Technology and Development Volume 3 ; 3 ; gtda >
@@ -12474,7 +12475,6 @@
         au < doNotProcess ; 2014 ; Gender, Technology and Development Volume 18 ; 18 ; gtda >
         au < doNotProcess ; 2015 ; Gender, Technology and Development Volume 19 ; 19 ; gtda >
         au < released ; 2016 ; Gender, Technology and Development Volume 20 ; 20 ; gtda >
-        au < expected ; 2017 ; Gender, Technology and Development Volume 21 ; 21 ; gtda >
 
       }
 

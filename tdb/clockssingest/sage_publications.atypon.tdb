@@ -12512,9 +12512,7 @@
 
     #param[base_url] = http://gtd.sagepub.com/
 
-    
-    {
-
+    { #move to T&F in 2017
 
       au < manifest ; exists ; 1997 ; Gender, Technology and Development Volume 1 ; 1 ; gtda ; >
       au < manifest ; exists ; 1998 ; Gender, Technology and Development Volume 2 ; 2 ; gtda ; >
@@ -12536,7 +12534,6 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Gender, Technology and Development Volume 18 ; 18 ; gtda ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Gender, Technology and Development Volume 19 ; 19 ; gtda ; >
       au < frozen ; exists ; 2016 ; Gender, Technology and Development Volume 20 ; 20 ; gtda ; >
-      au < expected ; exists ; 2017 ; Gender, Technology and Development Volume 21 ; 21 ; gtda ; >
 
     }
 
@@ -12551,10 +12548,8 @@
     >
 
     #param[base_url] = http://gmt.sagepub.com/
-
     
     {
-
 
       au < manifest ; exists ; 1991-1992 ; General Music Today Volume 5 ; 5 ; gmta ; >
       au < manifest ; exists ; 1992-1993 ; General Music Today Volume 6 ; 6 ; gmta ; >
