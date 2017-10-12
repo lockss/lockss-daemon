@@ -43,6 +43,8 @@ public class IetHtmlHashFilterFactory implements FilterFactory {
 	HtmlNodeFilters.tag("noscript"),
 	HtmlNodeFilters.tag("head"),
 	
+	//List of volumes and issues
+	HtmlNodeFilters.tagWithAttribute("div", "class", "issueBar"),
 	//More recent articles
 	HtmlNodeFilters.tagWithAttribute("a", "title", "Cited By"),
 	HtmlNodeFilters.tagWithAttribute("li",  "id", "cite"),
