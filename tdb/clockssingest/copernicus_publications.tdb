@@ -218,8 +218,9 @@
 #      param[base_url] = http://www.arch-anim-breed.net/
 
       au < finished ; finished ; 2015 ; 2015 ; Archives Animal Breeding Volume 58 ; 58 ; http://www.arch-anim-breed.net/ ; http://archives-animal-breeding.net/ ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2016 ; 2016 ; Archives Animal Breeding Volume 59 ; 59 ; http://www.arch-anim-breed.net/ ; http://archives-animal-breeding.net/ ; >
-      au < testing ; exists ; 2017 ; 2017 ; Archives Animal Breeding Volume 60 ; 60 ; https://www.arch-anim-breed.net/ ; https://archives-animal-breeding.net/ ; >
+      au < superseded ; exists ; 2016 ; 2016 ; Archives Animal Breeding Volume 59 [superseded] ; 59 ; http://www.arch-anim-breed.net/ ; http://archives-animal-breeding.net/ ; >
+      au < exists ; exists ; 2016 ; 2016 ; Archives Animal Breeding Volume 59 ; 59 ; https://www.arch-anim-breed.net/ ; https://www.archives-animal-breeding.net/ ; >
+      au < exists ; exists ; 2017 ; 2017 ; Archives Animal Breeding Volume 60 ; 60 ; https://www.arch-anim-breed.net/ ; https://www.archives-animal-breeding.net/ ; >
 
       }
 
@@ -1412,12 +1413,13 @@
       au < finished ; finished ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 370 ; 370 ; http://www.proc-iahs.net/ ; http://www.proceedings-international-association-of-hydrological-sciences.net/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 371 ; 371 ; http://www.proc-iahs.net/ ; http://www.proceedings-international-association-of-hydrological-sciences.net/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 372 ; 372 ; http://www.proc-iahs.net/ ; http://www.proceedings-international-association-of-hydrological-sciences.net/ ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016 ; 2016 ; Proceedings of the International Association of Hydrological Sciences Volume 373 ; 373 ; http://www.proc-iahs.net/ ; http://www.proceedings-international-association-of-hydrological-sciences.net/ ; >
-      au < testing ; exists ; 2016 ; 2016 ; Proceedings of the International Association of Hydrological Sciences Volume 374 ; 374 ; https://www.proc-iahs.net/ ; https://www.proceedings-international-association-of-hydrological-sciences.net/ ; >
-      au < testing ; exists ; 2016 ; 2016 ; Proceedings of the International Association of Hydrological Sciences Volume 375 ; 375 ; https://www.proc-iahs.net/ ; https://www.proceedings-international-association-of-hydrological-sciences.net/ ; >
-      au < expected ; exists ; 2017 ; 2017 ; Proceedings of the International Association of Hydrological Sciences Volume 376 ; 376 ; https://www.proc-iahs.net/ ; https://www.proceedings-international-association-of-hydrological-sciences.net/ ; >
-      au < expected ; exists ; 2017 ; 2017 ; Proceedings of the International Association of Hydrological Sciences Volume 377 ; 377 ; https://www.proc-iahs.net/ ; https://www.proceedings-international-association-of-hydrological-sciences.net/ ; >
-      au < expected ; exists ; 2017 ; 2017 ; Proceedings of the International Association of Hydrological Sciences Volume 378 ; 378 ; https://www.proc-iahs.net/ ; https://www.proceedings-international-association-of-hydrological-sciences.net/ ; >
+      au < superseded ; exists ; 2016 ; 2016 ; Proceedings of the International Association of Hydrological Sciences Volume 373 [superseded] ; 373 ; http://www.proc-iahs.net/ ; http://www.proceedings-international-association-of-hydrological-sciences.net/ ; >
+      au < exists ; exists ; 2016 ; 2016 ; Proceedings of the International Association of Hydrological Sciences Volume 373 ; 373 ; https://www.proc-iahs.net/ ; https://www.proceedings-iahs.net/index.html/ ; >
+      au < exists ; exists ; 2016 ; 2016 ; Proceedings of the International Association of Hydrological Sciences Volume 374 ; 374 ; https://www.proc-iahs.net/ ; https://www.proceedings-iahs.net/index.html/ ; >
+      au < exists ; exists ; 2016 ; 2016 ; Proceedings of the International Association of Hydrological Sciences Volume 375 ; 375 ; https://www.proc-iahs.net/ ; https://www.proceedings-iahs.net/index.html/ ; >
+      au < expected ; exists ; 2017 ; 2017 ; Proceedings of the International Association of Hydrological Sciences Volume 376 ; 376 ; https://www.proc-iahs.net/ ; https://www.proceedings-iahs.net/index.html/ ; >
+      au < expected ; exists ; 2017 ; 2017 ; Proceedings of the International Association of Hydrological Sciences Volume 377 ; 377 ; https://www.proc-iahs.net/ ; https://www.proceedings-iahs.net/index.html/ ; >
+      au < expected ; exists ; 2017 ; 2017 ; Proceedings of the International Association of Hydrological Sciences Volume 378 ; 378 ; https://www.proc-iahs.net/ ; https://www.proceedings-iahs.net/index.html/ ; >
 
    }
 
