@@ -1850,6 +1850,25 @@ while (my $line = <>) {
     }
     sleep(4);
 
+  } elsif ($plugin eq "ClockssIetJournalsPlugin") {
+# note plural on journals - unique among pub2web
+    $url = sprintf("%scontent/journals/%s/clockssissues?volume=%s",
+      $param{base_url}, $param{journal_id}, $param{volume_name});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    if ($resp->is_success) {
+      my $man_contents = $resp->content;
+      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
+        $result = "Manifest"
+      } else {
+        $result = "--NO_TAG--"
+      }
+    } else {
+      $result = "--REQ_FAIL--"
+    }
+    sleep(4);
+
   } elsif (($plugin eq "ClockssCopernicusPublicationsPlugin") ||
            ($plugin eq "CopernicusPublicationsPlugin"))  {
     $url_p = sprintf("%s",
