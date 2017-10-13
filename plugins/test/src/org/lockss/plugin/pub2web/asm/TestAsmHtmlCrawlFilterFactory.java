@@ -27,6 +27,14 @@ public class TestAsmHtmlCrawlFilterFactory extends LockssTestCase {
 "titlegoeshere</span></a>" +
 "</div></div>";
 
+  private static final String withArticleUpdateNew = "<div><div class=\"consanguinityContainer col-sm-3 \">" +
+"<div class=\"consanguinityTitleContainer\">" +
+"<h4>Article Version</h4>" +
+"</div><div class=\"consanguinityBlurbContainer\">" +
+"This article is an updated version of the following content:" +
+"</div><a href=\"/content/journal/ecosalplus/10.1128/ecosalplus.5.5\" title=\"\" >" +
+"titlegoeshere</span></a>" +
+"</div></div>";
   private static final String withArticleUpdateFiltered = 
       "<div></div>";  
 
@@ -95,6 +103,10 @@ public class TestAsmHtmlCrawlFilterFactory extends LockssTestCase {
     InputStream inStream;
     inStream = fact.createFilteredInputStream(mau,
         new StringInputStream(withArticleUpdate),
+        Constants.DEFAULT_ENCODING);
+    assertEquals(withArticleUpdateFiltered, StringUtil.fromInputStream(inStream));
+    inStream = fact.createFilteredInputStream(mau,
+        new StringInputStream(withArticleUpdateNew),
         Constants.DEFAULT_ENCODING);
     assertEquals(withArticleUpdateFiltered, StringUtil.fromInputStream(inStream));
   }

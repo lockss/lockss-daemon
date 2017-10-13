@@ -55,7 +55,7 @@ public class AsmHtmlCrawlFilterFactory implements FilterFactory {
     
     // shows earlier or later versions of the same article - see
     // content/journal/ecosalplus/10.1128/(ecosalplus.5.5 & ecosalplus.ESP-0002-2013) 
-    HtmlNodeFilters.tagWithAttribute("div",  "class", "consanguinityContainer"),
+    HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "^consanguinityContainer"),
     
     //agh. In-line references to other articles from this journal
     // content/journal/ecosalplus/10.1128/ecosalplus.ESP-0005-2013 - full text version
