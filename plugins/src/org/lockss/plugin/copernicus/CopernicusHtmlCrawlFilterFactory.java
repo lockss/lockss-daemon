@@ -53,7 +53,8 @@ public class CopernicusHtmlCrawlFilterFactory implements FilterFactory {
           // and not
           //     http://www.arch-anim-breed.net/58/335/2015/aab-58-335-2015.html
           // and we already have the article rom the volume/issue specific TOC
-          HtmlNodeFilters.tagWithAttribute("div", "id", "recent_paper"),
+          // use regex, was "recent_paper" and is now "recent_paper_viewport"
+          HtmlNodeFilters.tagWithAttributeRegex("div", "id", "recent_paper"),
 	  //On the permission page $home_url/index.html we need to filter out:
           // header: current cover photo
           HtmlNodeFilters.tagWithAttribute("div", "id", "w-head"),

@@ -87,17 +87,21 @@ public class CopernicusHtmlFilterFactory implements FilterFactory {
         // news section
         HtmlNodeFilters.tagWithAttribute("div","id","news"),
         // recent articles listing
-        HtmlNodeFilters.tagWithAttribute("div","id","recent_paper"),
+        HtmlNodeFilters.tagWithAttributeRegex("div","id","recent_paper"),
         // logos at the bottom
         HtmlNodeFilters.tagWithAttribute("div","id","essentential-logos-carousel"), 
         // date class id differs...
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "publishedDateAndMsType*"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "publishedDateAndMsType"),
         // list of received/revised/accepted dates sometimes present
         HtmlNodeFilters.tagWithAttribute("div", "class", "articleDates"),
         // The following exclude from the permission page, which we cannot crawl-exclude
         // but all the content is "current", so may differ from older volumes
         HtmlNodeFilters.tagWithAttribute("div","id","highlight_articles"),
         HtmlNodeFilters.tagWithAttribute("div","id","landing_page"),
+        // base_url/volumes.html is included now for permission - ever increasing
+        // actual issue article TOC is level2Toc
+        // okay not to crawl filter as the volume is in the crawl rules
+        HtmlNodeFilters.tagWithAttribute("div","class","level1Toc"),
 
     };
           

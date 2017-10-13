@@ -82,6 +82,14 @@ public class TestCopernicusHtmlCrawlFilterFactory extends LockssTestCase {
   private static final String withoutRecentPaper = 
       " <p> Recent Papers </p>";
 
+  private static final String withRecentPaper_new = 
+      "<div id=\"recent_paper_viewport\" class=\"cmsbox j-article j-article-section\">" +
+      "<h2 class=\"title\">Recent articles</h2>" +
+      "<div class=\"a-paper\">" +
+      "<div class=\"journal-type\"> ACME </div>" +
+      "</div>" +
+      "</div> <p> Recent Papers </p>";
+
   private static final String withHeaderCurrentCover = 
       "<div id=\"w-head\">" +
       "<a id=\"j-banner\" href=\"http://www.acme.net/index.html\">" +
@@ -160,6 +168,11 @@ public class TestCopernicusHtmlCrawlFilterFactory extends LockssTestCase {
 
     inStream = fact.createFilteredInputStream(mau,
         new StringInputStream(withRecentPaper),
+        Constants.DEFAULT_ENCODING);
+    assertEquals(withoutRecentPaper, StringUtil.fromInputStream(inStream));
+
+    inStream = fact.createFilteredInputStream(mau,
+        new StringInputStream(withRecentPaper_new),
         Constants.DEFAULT_ENCODING);
     assertEquals(withoutRecentPaper, StringUtil.fromInputStream(inStream));
 

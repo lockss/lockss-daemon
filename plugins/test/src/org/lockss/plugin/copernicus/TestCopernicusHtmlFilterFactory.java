@@ -312,6 +312,27 @@ private static final String extraneousDatesAfter=
 " <div id=\"page_content_container\">" +
 "Hello World </div>";
 
+private static final String volumes_toc=
+"<div class=\"CMSCONTAINER j-content edt-flag\" id=\"page_content_container\">" +
+"<div id=\"generator\" class=\"level1Toc\">" +
+   "<div class=\"grid-container\"></div>" +
+"</div></div>";
+
+private static final String volumes_toc_filtered=
+" <div id=\"page_content_container\">" +
+" </div>";
+
+private static final String issue_toc=
+"<div id=\"page_content_container\">" +
+    "<div id=\"generator\" class=\"level2Toc\">" +
+    "<div class=\"grid-container\"></div></div></div>";
+
+private static final String issue_toc_filtered=
+" <div id=\"page_content_container\">" +
+    " <div id=\"generator\" class=\"level2Toc\">" +
+    " <div class=\"grid-container\"> </div>" +
+ " </div> </div>";
+
   public void testHashFiltering() throws Exception {
     InputStream inA;
     InputStream inB;
@@ -366,6 +387,14 @@ private static final String extraneousDatesAfter=
     /* remove the div class="articleDates" */
     inA = hfact.createFilteredInputStream(mau, new StringInputStream(extraneousDatesBefore), ENC);
     assertEquals(extraneousDatesAfter,StringUtil.fromInputStream(inA));
+
+    /* remove the base_url/volumes.html volumes listing" */
+    inA = hfact.createFilteredInputStream(mau, new StringInputStream(volumes_toc), ENC);
+    assertEquals(volumes_toc_filtered,StringUtil.fromInputStream(inA));
+
+    /* don't remove the issue article toc */
+    inA = hfact.createFilteredInputStream(mau, new StringInputStream(issue_toc), ENC);
+    assertEquals(issue_toc_filtered,StringUtil.fromInputStream(inA));
     
   }
     
