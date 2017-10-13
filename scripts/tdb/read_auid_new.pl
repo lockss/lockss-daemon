@@ -737,7 +737,7 @@ while (my $line = <>) {
         $man_url = uri_unescape($url);
         my $req = HTTP::Request->new(GET, $man_url);
         my $resp = $ua->request($req);
-        if ($resp->is_success) {
+        if ($resp->is_success) { 
             my $man_contents = $resp->content;
             if (defined($man_contents)) {
 		#<h1>CLOCKSS - Published Issues: Biosimilars 2015</h1>
