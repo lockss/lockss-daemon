@@ -731,6 +731,28 @@ while (my $line = <>) {
         }
         sleep(4);        
 
+  } elsif ($plugin eq "ClockssDoveMedicalPressPlugin") {
+        $url = sprintf("%slockss.php?t=clockss&pa=issue&j_id=%s&year=%d",
+          $param{base_url}, $param{journal_id}, $param{year});
+        $man_url = uri_unescape($url);
+        my $req = HTTP::Request->new(GET, $man_url);
+        my $resp = $ua->request($req);
+        if ($resp->is_success) {
+            my $man_contents = $resp->content;
+            if (defined($man_contents)) {
+		#<h1>CLOCKSS - Published Issues: Biosimilars 2015</h1>
+                if ($man_contents =~ m/<h1>CLOCKSS - Published Issues: (.*) $param{year}<\/h1>/si) {
+                    $vol_title = $1
+                }
+                $result = "Manifest"
+            } else {
+                $result = "--"
+            }
+        } else {
+            $result = "--"
+        }
+        sleep(4);
+        
   } elsif (($plugin eq "TaylorAndFrancisPlugin") ||
            ($plugin eq "GenericAtyponPlugin") ||
            ($plugin eq "AIAAPlugin") ||
