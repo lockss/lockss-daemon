@@ -1871,32 +1871,43 @@ while (my $line = <>) {
 
   } elsif (($plugin eq "ClockssCopernicusPublicationsPlugin") ||
            ($plugin eq "CopernicusPublicationsPlugin"))  {
-    $url_p = sprintf("%s",
+    $url_p1 = sprintf("%sindex.html",
       $param{home_url});
+    $url_p2 = sprintf("%svolumes.html",
+      $param{base_url});
     $url_s = sprintf("%s%s/index.html",
       $param{base_url}, $param{volume_name});
+    #prefix for an article link
     $url_d = sprintf("%s%s/",
-      $param{base_url}, $param{volume_name});
-    $man_url = uri_unescape($url_s) . " + " . uri_unescape($url_p) ;
-    $man_url_p = uri_unescape($url_p);
-#    printf("*man_url_p: %s\n", $man_url_p);
+     $param{base_url}, $param{volume_name});
+#    $man_url = uri_unescape($url_s) . " + " . uri_unescape($url_p1) . " + " . uri_unescape($url_p2);
+    $man_url_p1 = uri_unescape($url_p1);
+    #printf("*man_url_p1: %s\n", $man_url_p1);
+    $man_url_p2 = uri_unescape($url_p2);
+    #printf("*man_url_p2: %s\n", $man_url_p2);
     $man_url_s = uri_unescape($url_s);
-#    printf("*man_url_s: %s\n", $man_url_s);
+    #printf("*man_url_s: %s\n", $man_url_s);
     my $article_prefix = uri_unescape($url_d);
-#    printf("*article_prefix: %s\n", $article_prefix);
-    my $req_p = HTTP::Request->new(GET, $man_url_p);
+    #printf("*article_prefix: %s\n", $article_prefix);
+    my $req_p1 = HTTP::Request->new(GET, $man_url_p1);
+    my $req_p2 = HTTP::Request->new(GET, $man_url_p2);
     my $req_s = HTTP::Request->new(GET, $man_url_s);
-    my $resp_p = $ua->request($req_p);
+    my $resp_p1 = $ua->request($req_p1);
+    my $resp_p2 = $ua->request($req_p2);
     my $resp_s = $ua->request($req_s);
-    if ($resp_p->is_success && $resp_s->is_success) {
-      my $perm_contents = $resp_p->content;
+    if ($resp_p1->is_success && $resp_p2->is_success && $resp_s->is_success) {
+      my $perm1_contents = $resp_p1->content;
+      my $perm2_contents = $resp_p2->content;
       my $start_contents = $resp_s->content;
-      if ((defined($perm_contents)) && 
+      if ((defined($perm1_contents)) && 
+          (defined($perm2_contents)) && 
           (defined($start_contents)) && 
           ($start_contents =~ m/$article_prefix/) && 
-          ($perm_contents =~ m/$cc_license_tag/) && 
-          ($perm_contents =~ m/$cc_license_url/)) {
-        if ($perm_contents =~ m/j-name.>\s*([^<]*)\s*<\//si) {
+          ($perm1_contents =~ m/$cc_license_tag/) && 
+          ($perm2_contents =~ m/$cc_license_tag/) && 
+          ($perm1_contents =~ m/$cc_license_url/) &&
+          ($perm2_contents =~ m/$cc_license_url/)) {
+        if ($perm1_contents =~ m/j-name.>\s*([^<]*)\s*<\//si) {
             $vol_title = $1;
           $vol_title =~ s/\s*\n\s*/ /g;
           if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
