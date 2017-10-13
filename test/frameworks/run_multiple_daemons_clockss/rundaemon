@@ -1,6 +1,7 @@
 #!/bin/sh
 
 TITLE_DBS=""
+HEAP_ARG=-Xmx512m
 
 if [ "X${PROJECT_DIR}" = "X" ]
 then
@@ -48,9 +49,9 @@ while true ; do
       export PATH
       echo JAVA_HOME="$JAVA_HOME"
       shift; continue;;
-    -Xmx* )
-      arg_mem="$1"
-      shift; continue;;
+    "-heap" )
+      HEAP_ARG="$2"
+      shift; shift; continue;;
   esac
   break;
 done
@@ -69,7 +70,7 @@ PROP_URL_LIST="../../common.xml ${TITLE_DBS} ../lockss.txt ../lockss.opt local.t
 echo running in `pwd` at `date`
 #echo CLASSPATH=$CLASSPATH
 if [ -z "$*" ]; then
-  JAVA_ARGS="-server -Xmx512m -Dorg.lockss.defaultLogLevel=DEBUG"
+  JAVA_ARGS="-server ${HEAP_ARG} -Dorg.lockss.defaultLogLevel=DEBUG"
  else
   JAVA_ARGS="$@"
 fi
