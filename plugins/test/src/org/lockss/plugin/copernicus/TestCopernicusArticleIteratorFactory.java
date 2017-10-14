@@ -126,6 +126,7 @@ public class TestCopernicusArticleIteratorFactory extends ArticleIteratorTestCas
     assertNotMatchesRE(pat, "http://www.clim-past.net/7/1/2012/cp-7-1-2012.html"); //wrong volume
     assertMatchesRE(pat, "http://www.clim-past.net/8/1/2012/cp-8-1-2012.pdf"); //pdf not abstract
     assertNotMatchesRE(pat, "http://www.clim-past.net/8/1/2012/cp-8-1-2012-supplement.pdf"); //supplement, not article
+    assertNotMatchesRE(pat, "http://www.clim-past.net/8/1/2012/cp-8-1-2012-corrigendum.pdf"); //corrigendum, not article
     assertNotMatchesRE(pat, "http://www.clim-past.net/8/1/2012/cp-8-1-2012-supplement.zip"); //zip not pdf
     assertMatchesRE(pat, "http://www.clim-past.net/8/1/2012/cp-8-1-2012.html");
     assertNotMatchesRE(pat, "http://www.clim-past.net/8/1/2012");
