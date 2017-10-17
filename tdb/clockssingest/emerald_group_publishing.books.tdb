@@ -1715,7 +1715,11 @@
       #param[journal_issn] = 2045-7944
       #series = cpipsm
 
-      au < manifest ; exists ; 2012 ;  ; 9780857249975 ; 9780857249975 ; Emerging and Potential Trends in Public Management: An Age of Austerity Volume 1 ; >
+      au < exists ; exists ; 2012 ; 9780857249975 ; 9780857249982 ; 9780857249982 ; Emerging and Potential Trends in Public Management: An Age of Austerity Volume 1 ; >
+      au < exists ; exists ; 2013 ; 9781781907245 ; 9781781907252 ; 9781781907252 ; Looking for Consensus?: Civil Society, Social Movements and Crises for Public Management Volume 2 ; >
+      au < exists ; exists ; 2014 ; 9781783509010 ; 9781783509027 ; 9781783509027 ; European Public Leadership in Crisis? Volume 3 ; >
+      au < exists ; exists ; 2015 ; 9781784418748 ; 9781784418731 ; 9781784418731 ; Multi-Level Governance: The Missing Linkages Volume 4 ; >
+      au < exists ; exists ; 2016 ; 9781786350800 ; 9781786350794 ; 9781786350794 ; Developing Public Managers for a Changing World Volume 5 ; >
 
   }
 
@@ -1728,11 +1732,19 @@
       >
 
       #param[journal_issn] = 2043-9059
+      #series = crgs
 
-      au < manifest ; exists ; 2010 ;  ; 9780857244550 ; 9780857244550 ; Reframing Corporate Social Responsibility: Lessons from the Global Financial Crisis Volume 1 ; >
-      au < manifest ; exists ; 2011 ;  ; 9781780520926 ; 9781780520926 ; Finance and Sustainability: Towards a New Paradigm? A Post-Crisis Agenda Volume 2 ; >
-      au < manifest ; exists ; 2011 ;  ; 9781780524382 ; 9781780524382 ; Business and Sustainability: Concepts, Strategies and Changes Volume 3 ; >
-      au < manifest ; exists ; 2012 ;  ; 9781780529981 ; 9781780529981 ; Corporate Social Irresponsibility: A Challenging Concept Volume 4 ; >
+      au < exists ; exists ; 2010 ; 9780857244550 ; 9780857244567 ; 9780857244567 ; Reframing Corporate Social Responsibility: Lessons from the Global Financial Crisis Volume 1 ; >
+      au < exists ; exists ; 2011 ; 9781780520926 ; 9781780520933 ; 9781780520933 ; Finance and Sustainability: Towards a New Paradigm? A Post-Crisis Agenda Volume 2 ; >
+      au < exists ; exists ; 2011 ; 9781780524382 ; 9781780524399 ; 9781780524399 ; Business and Sustainability: Concepts, Strategies and Changes Volume 3 ; >
+      au < exists ; exists ; 2012 ; 9781780529981 ; 9781780529998 ; 9781780529998 ; Corporate Social Irresponsibility: A Challenging Concept Volume 4 ; >
+      au < exists ; exists ; 2013 ; 9781781907702 ; 9781781907719 ; 9781781907719 ; Institutional Investors’ Power to Change Corporate Behavior: International Perspectives Volume 5 ; >
+      au < exists ; exists ; 2014 ; 9781783507955 ; 9781783507962 ; 9781783507962 ; Communicating Corporate Social Responsibility: Perspectives and Practice Volume 6 ; >
+      au < exists ; exists ; 2014 ; 9781783504671 ; 9781783504688 ; 9781783504688 ; Socially Responsible Investment in the 21st Century: Does it Make a Difference for Society? Volume 7 ; >
+      au < exists ; exists ; 2014 ; 9781784411527 ; 9781784411510 ; 9781784411510 ; Corporate Social Responsibility and Sustainability: Emerging Trends in Developing Economies Volume 8 ; >
+      au < exists ; exists ; 2015 ; 9781784415846 ; 9781784415839 ; 9781784415839 ; The Human Factor In Social Capital Management: The Owner-manager Perspective Volume 9 ; >
+      au < exists ; exists ; 2016 ; 9781785609800 ; 9781785609794 ; 9781785609794 ; Finance Reconsidered: New Perspectives for a Responsible and Sustainable Finance Volume 10 ; >
+      au < exists ; exists ; 2016 ; 9781786355102 ; 9781786355096 ; 9781786355096 ; Finance and Economy for Society: Integrating Sustainability Volume 11 ; >
 
   }
 
@@ -1745,17 +1757,23 @@
       >
 
       #param[journal_issn] = 0278-1204
+      #series = cpst
 
-      au < manifest ; exists ; 2002 ;  ; 9780762307623 ; 9780762307623 ; Bringing Capitalism Back for Critique by Social Theory Volume 21 ; >
-      au < manifest ; exists ; 2002 ;  ; 9780762309634 ; 9780762309634 ; Critical Theory: Diverse Objects, Diverse Subjects Volume 22 ; >
-      au < manifest ; exists ; 2005 ;  ; 9780762312368 ; 9780762312368 ; Social Theory as Politics in Knowledge Volume 23 ; >
-      au < manifest ; exists ; 2006 ;  ; 9780762313143 ; 9780762313143 ; Globalization between the Cold War and Neo-Imperialism Volume 24 ; >
-      au < manifest ; exists ; 2008 ;  ; 9780762314836 ; 9780762314836 ; No Social Science without Critical Theory Volume 25 ; >
-      au < manifest ; exists ; 2009 ;  ; 9781849506052 ; 9781849506052 ; Nature, Knowledge and Negation Volume 26 ; >
-      au < manifest ; exists ; 2010 ;  ; 9780857242235 ; 9780857242235 ; Theorizing the Dynamics of Social Processes Volume 27 ; >
-      au < manifest ; exists ; 2011 ;  ; 9780857247971 ; 9780857247971 ; The Vitality Of Critical Theory Volume 28 ; >
-      au < manifest ; exists ; 2011 ;  ; 9780857248213 ; 9780857248213 ; The Diversity of Social Theories Volume 29 ; >
-      au < manifest ; exists ; 2012 ;  ; 9781781900345 ; 9781781900345 ; Theorizing Modern Society as a Dynamic Process Volume 30 ; >
+      au < exists ; exists ; 2002 ; 9780762307623 ; 9781849500944 ; 9781849500944 ; Bringing Capitalism Back for Critique by Social Theory Volume 21 ; >
+      au < exists ; exists ; 2002 ; 9780762309634 ; 9781849501774 ; 9781849501774 ; Critical Theory: Diverse Objects, Diverse Subjects Volume 22 ; >
+      au < exists ; exists ; 2005 ; 9780762312368 ; 9781849503631 ; 9781849503631 ; Social Theory as Politics in Knowledge Volume 23 ; >
+      au < exists ; exists ; 2006 ; 9780762313143 ; 9781849504157 ; 9781849504157 ; Globalization between the Cold War and Neo-Imperialism Volume 24 ; >
+      au < exists ; exists ; 2008 ; 9780762314836 ; 9781849505383 ; 9781849505383 ; No Social Science without Critical Theory Volume 25 ; >
+      au < exists ; exists ; 2009 ; 9781849506052 ; 9781849506069 ; 9781849506069 ; Nature, Knowledge and Negation Volume 26 ; >
+      au < exists ; exists ; 2010 ; 9780857242235 ; 9780857242242 ; 9780857242242 ; Theorizing the Dynamics of Social Processes Volume 27 ; >
+      au < exists ; exists ; 2011 ; 9780857247971 ; 9780857247988 ; 9780857247988 ; The Vitality Of Critical Theory Volume 28 ; >
+      au < exists ; exists ; 2011 ; 9780857248213 ; 9780857248220 ; 9780857248220 ; The Diversity of Social Theories Volume 29 ; >
+      au < exists ; exists ; 2012 ; 9781781900345 ; 9781781900352 ; 9781781900352 ; Theorizing Modern Society as a Dynamic Process Volume 30 ; >
+      au < exists ; exists ; 2013 ; 9781783502189 ; 9781783502196 ; 9781783502196 ; Social Theories of History and Histories of Social Theory Volume 31 ; >
+      au < exists ; exists ; 2014 ; 9781784412234 ; 9781784412227 ; 9781784412227 ; Mediations of Social Life in the 21st Century Volume 32 ; >
+      au < exists ; exists ; 2015 ; 9781785602474 ; 9781785602467 ; 9781785602467 ; Globalization, Critique and Social Theory: Diagnoses and Challenges Volume 33 ; >
+      au < exists ; exists ; 2015 ; 9781785601811 ; 9781785601804 ; 9781785601804 ; States and Citizens: Accommodation, Facilitation and Resistance to Globalization Volume 34 ; >
+      au < exists ; exists ; 2016 ; 9781786354709 ; 9781786354693 ; 9781786354693 ; Reconstructing Social Theory, History and Practice Volume 35 ; >
 
   }
 
@@ -1768,6 +1786,7 @@
       >
 
       #param[journal_issn] = 1472-7870
+      #series = 
 
       au < exists ; exists ; 2011 ;  ; 9780857249098 ; 9780857249098 ; Making Semantics Pragmatic Volume 24 ; >
       au < exists ; exists ; 2011 ;  ; 9780857240934 ; 9780857240934 ; Procedural Meaning: Problems and Perspectives Volume 25 ; >
