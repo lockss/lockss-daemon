@@ -259,7 +259,16 @@ public class TestInderscienceHtmlFilterFactory extends LockssTestCase {
       " </p>" +
       " <form action=\"/action/downloadCitation\" name=\"frmCitmgr\" method=\"post\" target=\"_self\">" +
       " </form>" +
-      " </div> </div> </div> </div>";  
+      " </div> </div> </div> </div>"; 
+  
+  private static final String newShowPopup =
+      "<body class=\"popupBody\">" +
+      "Hello World" +
+      "</body>";
+  private static final String newShowPopupFiltered =
+      " <body class=\"popupBody\">" +
+      "Hello World" +
+      " </body>";
     
   protected ArchivalUnit createAu()
       throws ArchivalUnit.ConfigurationException {
@@ -336,6 +345,7 @@ public class TestInderscienceHtmlFilterFactory extends LockssTestCase {
           hrefAnchorFilteredStr);
       doFilterTest(iau, variantFact, newShowCit, 
           newShowCitFiltered);
+      doFilterTest(iau, variantFact, newShowPopup, newShowPopupFiltered);
     }
   }
   
