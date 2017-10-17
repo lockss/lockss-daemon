@@ -102,6 +102,10 @@ public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("input", "id", "__EVENTVALIDATION"),
         // Text includes number of reverse citations
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/referrers/$"),
+        //10/17/17  removeing /referrers link left <li></li> pair
+        // for hashing purposes, just remove entire seciotn with these links
+        //<ul class="selectors modeSelectors">" +         
+        HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "modeSelectors$"),
         
         // The end volume and year of a journal's coverage keeps moving forward
         // This needs to stay in for '/about' pages, it's not only in <div id="ContentSecondary">
