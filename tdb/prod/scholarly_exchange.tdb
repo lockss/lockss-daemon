@@ -4,8 +4,8 @@
     name = Pyramid Pharmaceutical Group, Inc
   >
 
-  plugin = org.lockss.plugin.ojs2.OJS2Plugin
-  implicit < status ; year ; name ; volume ; param[year] >
+  #plugin = org.lockss.plugin.ojs2.OJS2Plugin
+  #implicit < status ; year ; name ; volume ; param[year] >
   
   #For list of lockss enabled journals: http://scholarlyexchange.org/ojs/gateway/lockss
 
