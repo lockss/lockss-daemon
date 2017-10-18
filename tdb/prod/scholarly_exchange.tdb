@@ -1,7 +1,7 @@
 {
 
   publisher <
-    name = Scholarly Exchange
+    name = Pyramid Pharmaceutical Group, Inc
   >
 
   plugin = org.lockss.plugin.ojs2.OJS2Plugin
@@ -16,16 +16,27 @@
       eissn = 2152-7849
     >
     
-    param[base_url] = http://www.scholarlyexchange.org/
+    provider = Scholarly Exchange
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; name ; volume ; param[year] >
+    param[base_url] = http://www.ajpspharm.com/
     param[journal_id] = AJPSP
 
     au < exists ; 2010 ; African Journal of Pharmaceutical Sciences and Pharmacy Volume 1 ; 1 ; 2010 >
     au < exists ; 2011 ; African Journal of Pharmaceutical Sciences and Pharmacy Volume 2 ; 2 ; 2011 >
     au < exists ; 2012 ; African Journal of Pharmaceutical Sciences and Pharmacy Volume 3 ; 3 ; 2012 >
     au < exists ; 2013 ; African Journal of Pharmaceutical Sciences and Pharmacy Volume 4 ; 4 ; 2013 >
+    au < exists ; 2017 ; African Journal of Pharmaceutical Sciences and Pharmacy Volume 5 ; 5 ; 2017 >
     
   }
-  
+}  
+
+{
+
+  publisher <
+    name = Array
+  >
+
   {
   
     title < 
@@ -33,9 +44,11 @@
       eissn = 2163-8381
     >
     
+    provider = Scholarly Exchange
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; name ; volume ; param[year] >
     param[base_url] = http://ijms.nmdl.org/
-    param[journal_id] = ?
-    #Journal closed to new content. Last volume 2013.
+    param[journal_id] = MSJ
 
     au < exists ; 2010 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 1 ; 1 ; 2010 >
     au < exists ; 2011 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 2 ; 2 ; 2011 >
@@ -43,10 +56,17 @@
     au < exists ; 2013 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 4 ; 4 ; 2013 >
     au < exists ; 2015 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 5 ; 5 ; 2015 >
     au < exists ; 2016 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 6 ; 6 ; 2016 >
-    au < expected ; 2017 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 7 ; 7 ; 2017 >
+    au < exists ; 2017 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 7 ; 7 ; 2017 >
     
   }
-  
+}  
+
+{
+
+  publisher <
+    name = The International Journal of Infection Control
+  >
+
   {
   
     title < 
@@ -54,8 +74,11 @@
       eissn = 1996-9783 
     >
     
+    provider = Scholarly Exchange
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; name ; volume ; param[year] >
     param[base_url] = http://www.ijic.info/
-    param[journal_id] = ?
+    param[journal_id] = IJIC
 
     au < exists ; 2010 ; International Journal of Infection Control Volume 6 ; 6 ; 2010 >
     au < exists ; 2011 ; International Journal of Infection Control Volume 7 ; 7 ; 2011 >
@@ -64,10 +87,17 @@
     au < exists ; 2014 ; International Journal of Infection Control Volume 10 ; 10 ; 2014 >
     au < exists ; 2015 ; International Journal of Infection Control Volume 11 ; 11 ; 2015 >
     au < exists ; 2016 ; International Journal of Infection Control Volume 12 ; 12 ; 2016 >
-    au < expected ; 2017 ; International Journal of Infection Control Volume 13 ; 13 ; 2017 >
+    au < exists ; 2017 ; International Journal of Infection Control Volume 13 ; 13 ; 2017 >
     
   }
+}
   
+{
+
+  publisher <
+    name = European Association for Transactional Analysis
+  >
+
   {
   
     title < 
@@ -75,8 +105,11 @@
       eissn = 2218-3159 
     >
     
-    param[base_url] = http://ijtarp.org/
-    param[journal_id] = ?
+    provider = Scholarly Exchange
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; name ; volume ; param[year] >
+    param[base_url] = http://www.ijtarp.org/
+    param[journal_id] = IJTAR
 
     au < exists ; 2010 ; International Journal of Transactional Analysis Research Volume 1 ; 1 ; 2010 >
     au < exists ; 2011 ; International Journal of Transactional Analysis Research Volume 2 ; 2 ; 2011 >
@@ -88,7 +121,14 @@
     au < exists ; 2017 ; International Journal of Transactional Analysis Research Volume 8 ; 8 ; 2017 >
     
   }
+}
   
+{
+
+  publisher <
+    name = Intersticios
+  >
+
   {
   
     title < 
@@ -96,8 +136,11 @@
       eissn = 1887-3898 
     >
     
+    provider = Scholarly Exchange
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; name ; volume ; param[year] >
     param[base_url] = http://www.intersticios.es/
-    param[journal_id] = ?
+    param[journal_id] = InterSoc
 
     au < exists ; 2007 ; Intersticios Volume 1 ; 1 ; 2007 >
     au < exists ; 2008 ; Intersticios Volume 2 ; 2 ; 2008 >
@@ -112,7 +155,14 @@
     au < exists ; 2017 ; Intersticios Volume 11 ; 11 ; 2017 >
     
   }
+}
   
+{
+
+  publisher <
+    name = Investigative Sciences Journal
+  >
+
   {
   
     title < 
@@ -120,8 +170,11 @@
       eissn = 1942-7794 
     >
     
+    provider = Scholarly Exchange
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; name ; volume ; param[year] >
     param[base_url] = http://www.investigativesciencesjournal.org/
-    param[journal_id] = ?
+    param[journal_id] = ISJ
 
     au < exists ; 2009 ; Investigative Sciences Journal Volume 1 ; 1 ; 2009 >
     au < exists ; 2010 ; Investigative Sciences Journal Volume 2 ; 2 ; 2010 >
@@ -134,7 +187,14 @@
     au < exists ; 2017 ; Investigative Sciences Journal Volume 9 ; 9 ; 2017 >
     
   }
+}
   
+{
+
+  publisher <
+    name = Professional School of Business & Technology
+  >
+
   {
   
     title < 
@@ -142,8 +202,11 @@
       eissn = 2194-9522
     >
     
+    provider = Scholarly Exchange
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; name ; volume ; param[year] >
     param[base_url] = http://www.journal-alm.org/
-    param[journal_id] = ?
+    param[journal_id] = JALM
 
     au < exists ; 2012 ; Journal of Applied Leadership and Management Volume 2012 ; 2012 ; 2012 >
     au < exists ; 2013 ; Journal of Applied Leadership and Management Volume 2013 ; 2013 ; 2013 >
@@ -152,7 +215,14 @@
     au < exists ; 2015-2016 ; Journal of Applied Leadership and Management Volume 2016 ; 2016 ; 2016 >
     
   }
+}
   
+{
+
+  publisher <
+    name = The Sims Institute Press Ltd
+  >
+
   {
   
     title < 
@@ -160,8 +230,11 @@
       eissn = 1743-1050
     >
     
+    provider = Scholarly Exchange
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; name ; volume ; param[year] >
     param[base_url] = http://www.jexpclinassistreprod.com/
-    param[journal_id] = ?
+    param[journal_id] = JECAR
     #Journal closed to new content. Last volume 2011.
 
     au < exists ; 2004 ; Journal of Experimental & Clinical Assisted Reproduction Volume 1 ; 1 ; 2004 >
@@ -174,7 +247,14 @@
     au < exists ; 2011 ; Journal of Experimental & Clinical Assisted Reproduction Volume 8 ; 8 ; 2011 >
     
   }
+}
   
+{
+
+  publisher <
+    name = St Luke's-Roosevelt Hospital Center
+  >
+
   {
   
     title < 
@@ -182,6 +262,9 @@
       eissn = 2167-5597
     >
     
+    provider = Scholarly Exchange
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; name ; volume ; param[year] >
     param[base_url] = http://www.scholarlyexchange.org/
     param[journal_id] = JMEP
 
@@ -190,7 +273,14 @@
     au < exists ; 2014 ; Journal of Medical Education Perspectives Volume 3 ; 3 ; 2014 >
     
   }
+}
   
+{
+
+  publisher <
+    name = KCA University
+  >
+
   {
   
     title < 
@@ -199,8 +289,11 @@
       eissn = 2071-2162
     >
     
+    provider = Scholarly Exchange
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; name ; volume ; param[year] >
     param[base_url] = http://www.kcajournals.com/
-    param[journal_id] = ?
+    param[journal_id] = KCAJBM
 
     au < exists ; 2008 ; KCA Journal of Business Management Volume 1 ; 1 ; 2008 >
     au < exists ; 2009 ; KCA Journal of Business Management Volume 2 ; 2 ; 2009 >
@@ -211,7 +304,14 @@
     au < exists ; 2017 ; KCA Journal of Business Management Volume 8 ; 8 ; 2017 >
     
   }
+}
   
+{
+
+  publisher <
+    name = Khyber Medical University
+  >
+
   {
   
     title < 
@@ -220,8 +320,11 @@
       eissn = 2305-2651
     >
     
+    provider = Scholarly Exchange
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; name ; volume ; param[year] >
     param[base_url] = http://www.kmuj.kmu.edu.pk/
-    param[journal_id] = ?
+    param[journal_id] = KMJ
 
     au < exists ; 2009 ; Khyber Medical University Journal Volume 1 ; 1 ; 2009 >
     au < exists ; 2010 ; Khyber Medical University Journal Volume 2 ; 2 ; 2010 >
@@ -234,7 +337,14 @@
     au < exists ; 2017 ; Khyber Medical University Journal Volume 9 ; 9 ; 2017 >
     
   }
-  
+}  
+
+{
+
+  publisher <
+    name = Institute of Hematogy, Catholic University
+  >
+
   {
   
     title < 
@@ -242,6 +352,9 @@
       eissn = 2035-3006
     >
     
+    provider = Scholarly Exchange
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; name ; volume ; param[year] >
     param[base_url] = http://www.mjhid.org/
     param[journal_id] = mjhid
 
@@ -256,7 +369,14 @@
     au < manifest ; 2017 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 9 ; 9 ; 2017 >
     
   }
+}
   
+{
+
+  publisher <
+    name = Rhode Island College
+  >
+
   {
   
     title < 
@@ -264,6 +384,9 @@
       eissn = 2163-3177
     >
     
+    provider = Scholarly Exchange
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; name ; volume ; param[year] >
     param[base_url] = http://www.syllabusjournal.org/
     param[journal_id] = syllabus
 
@@ -275,7 +398,14 @@
     au < manifest ; 2017 ; Syllabus Volume 6 ; 6 ; 2017 >
     
   }
-  
+}  
+
+{
+
+  publisher <
+    name = University of Colorado at Colorado Springs
+  >
+
   {
   
     title < 
@@ -283,8 +413,11 @@
       eissn = 2152-1875
     >
     
+    provider = Scholarly Exchange
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; name ; volume ; param[year] >
     param[base_url] = http://www.wpcjournal.com/
-    param[journal_id] = ?
+    param[journal_id] = UDP
 
     au < exists ; 2010 ; Understanding and Dismantling Privilege Volume 1 ; 1 ; 2010 >
     au < exists ; 2012 ; Understanding and Dismantling Privilege Volume 2 ; 2 ; 2012 >
@@ -295,6 +428,5 @@
     au < exists ; 2017 ; Understanding and Dismantling Privilege Volume 7 ; 7 ; 2017 >
     
   }
-  
 }
 
