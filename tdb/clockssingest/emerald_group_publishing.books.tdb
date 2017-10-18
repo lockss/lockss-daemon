@@ -61,6 +61,9 @@
       au < finished ; finished ; 2012 ; 9781780523408 ; 9781780523415 ; 9781780523415 ; Maritime Logistics (9781780523415) ; >
       au < finished ; finished ; 2013 ; 9781781902851 ; 9781781902868 ; 9781781902868 ; Freight Transport Modelling (9781781902868) ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2013 ; 9781781902875 ; 9781781902882 ; 9781781902882 ; Transport Survey Methods: Best Practice for Decision Making (9781781902882) ; reingest1.clockss.org:8082 >
+
+      au < exists ; exists ; 2017 ; 9781786352224 ; 9781786352217 ; 9781786352217 ; Traffic Safety and Human Behavior (9781786352217) ; >
+
   }
   
   {
@@ -1786,7 +1789,7 @@
       >
 
       #param[journal_issn] = 1472-7870
-      #series = 
+      #series = ????
 
       au < exists ; exists ; 2011 ;  ; 9780857249098 ; 9780857249098 ; Making Semantics Pragmatic Volume 24 ; >
       au < exists ; exists ; 2011 ;  ; 9780857240934 ; 9780857240934 ; Procedural Meaning: Problems and Perspectives Volume 25 ; >
@@ -1802,19 +1805,22 @@
       >
 
       #param[journal_issn] = 2044-9968
+      #series = cthe
 
-      au < manifest ; exists ; 2011 ;  ; 9780857246493 ; 9780857246493 ; Educating Educators with Social Media Volume 1 ; >
-      au < manifest ; exists ; 2011 ;  ; 9780857246516 ; 9780857246516 ; Higher Education Administration with Social Media Volume 2 ; >
-      au < manifest ; exists ; 2011 ;  ; 9780857247810 ; 9780857247810 ; Teaching Arts and Science with the New Social Media Volume 3 ; >
-      au < manifest ; exists ; 2011 ;  ; 9781780520520 ; 9781780520520 ; Transforming Virtual World Learning Volume 4 ; >
-      au < manifest ; exists ; 2012 ;  ; 9781780524566 ; 9781780524566 ; Misbehavior Online in Higher Education Volume 5 ; >
-      au < manifest ; exists ; 2012 ;  ; 9781781902363 ; 9781781902363 ; Increasing Student Engagement and Retention Using Online Learning Activities Volume 6 Part A ; >
-      au < manifest ; exists ; 2012 ;  ; 9781781902387 ; 9781781902387 ; Increasing Student Engagement and Retention Using Social Technologies Volume 6 Part B ; >
-      au < manifest ; exists ; 2012 ;  ; 9781781902400 ; 9781781902400 ; Increasing Student Engagement and Retention Using Immersive Interfaces: Virtual Worlds, Gaming, and Simulation Volume 6 Part C ; >
-      au < manifest ; exists ; 2013 ;  ; 9781781905098 ; 9781781905098 ; Increasing Student Engagement and Retention Using Mobile Applications: Smartphones, Skype and Texting Technologies Volume 6 Part D ; >
-      au < manifest ; exists ; 2013 ;  ; 9781781905111 ; 9781781905111 ; Increasing Student Engagement and Retention Using Classroom Technologies: Classroom Response Systems and Mediated Discourse Technologies Volume 6 Part E ; >
-      au < manifest ; exists ; 2013 ;  ; 9781781905135 ; 9781781905135 ; Increasing Student Engagement and Retention using Multimedia Technologies: Video Annotation, Multimedia Applications, Videoconferencing and Transmedia Storytelling Volume 6 Part F ; >
-      au < manifest ; exists ; 2013 ;  ; 9781781905159 ; 9781781905159 ; Increasing Student Engagement and Retention in e-learning Environments: Web 2.0 and Blended Learning Technologies Volume 6 Part G ; >
+      au < exists ; exists ; 2011 ; 9780857246493 ; 9780857246509 ; 9780857246509 ; Educating Educators with Social Media Volume 1 ; >
+      au < exists ; exists ; 2011 ; 9780857246516 ; 9780857246523 ; 9780857246523 ; Higher Education Administration with Social Media Volume 2 ; >
+      au < exists ; exists ; 2011 ; 9780857247810 ; 9780857247827 ; 9780857247827 ; Teaching Arts and Science with the New Social Media Volume 3 ; >
+      au < exists ; exists ; 2011 ; 9781780520520 ; 9781780520537 ; 9781780520537 ; Transforming Virtual World Learning Volume 4 ; >
+      au < exists ; exists ; 2012 ; 9781780524566 ; 9781780524573 ; 9781780524573 ; Misbehavior Online in Higher Education Volume 5 ; >
+      au < exists ; exists ; 2012 ; 9781781902363 ; 9781781902370 ; 9781781902370 ; Increasing Student Engagement and Retention Using Online Learning Activities Volume 6 Part A ; >
+      au < exists ; exists ; 2012 ; 9781781902387 ; 9781781902394 ; 9781781902394 ; Increasing Student Engagement and Retention Using Social Technologies Volume 6 Part B ; >
+      au < exists ; exists ; 2012 ; 9781781902400 ; 9781781902417 ; 9781781902417 ; Increasing Student Engagement and Retention Using Immersive Interfaces: Virtual Worlds, Gaming, and Simulation Volume 6 Part C ; >
+      au < exists ; exists ; 2013 ; 9781781905098 ; 9781781905104 ; 9781781905104 ; Increasing Student Engagement and Retention Using Mobile Applications: Smartphones, Skype and Texting Technologies Volume 6 Part D ; >
+      au < exists ; exists ; 2013 ; 9781781905111 ; 9781781905128 ; 9781781905128 ; Increasing Student Engagement and Retention Using Classroom Technologies: Classroom Response Systems and Mediated Discourse Technologies Volume 6 Part E ; >
+      au < exists ; exists ; 2013 ; 9781781905135 ; 9781781905142 ; 9781781905142 ; Increasing Student Engagement and Retention using Multimedia Technologies: Video Annotation, Multimedia Applications, Videoconferencing and Transmedia Storytelling Volume 6 Part F ; >
+      au < exists ; exists ; 2013 ; 9781781905159 ; 9781781905166 ; 9781781905166 ; Increasing Student Engagement and Retention in e-learning Environments: Web 2.0 and Blended Learning Technologies Volume 6 Part G ; >
+      au < exists ; exists ; 2013 ; 9781781906880 ; 9781781906897 ; 9781781906897 ; Digital Humanities: Current Perspective, Practices, and Research Volume 7 ; >
+      au < exists ; exists ; 2013 ; 9781781906903 ; 9781781906910 ; 9781781906910 ; Redesigning Courses for Online Delivery Volume 8 ; >
 
   }
 
@@ -1827,11 +1833,20 @@
       >
 
       #param[journal_issn] = 2043-0523
+      #series = dcgr
 
-      au < manifest ; exists ; 2010 ;  ; 9780857242952 ; 9780857242952 ; NGOs and Social Responsibility Volume 1 ; >
-      au < manifest ; exists ; 2011 ;  ; 9780857248770 ; 9780857248770 ; Governance in the Business Environment Volume 2 ; >
-      au < manifest ; exists ; 2012 ;  ; 9781780527369 ; 9781780527369 ; Business Strategy and Sustainability Volume 3 ; >
-      au < manifest ; exists ; 2013 ;  ; 9781781905890 ; 9781781905890 ; Education and Corporate Social Responsibility International Perspectives Volume 4 ; >
+      au < exists ; exists ; 2010 ; 9780857242952 ; 9780857242969 ; 9780857242969 ; NGOs and Social Responsibility Volume 1 ; >
+      au < exists ; exists ; 2011 ; 9780857248770 ; 9780857248787 ; 9780857248787 ; Governance in the Business Environment Volume 2 ; >
+      au < exists ; exists ; 2012 ; 9781780527369 ; 9781780527376 ; 9781780527376 ; Business Strategy and Sustainability Volume 3 ; >
+      au < exists ; exists ; 2013 ; 9781781905890 ; 9781781905906 ; 9781781905906 ; Education and Corporate Social Responsibility International Perspectives Volume 4 ; >
+      au < exists ; exists ; 2013 ; 9781781907801 ; 9781781907818 ; 9781781907818 ; The Governance of Risk Volume 5 ; >
+      au < exists ; exists ; 2014 ; 9781783506736 ; 9781783506743 ; 9781783506743 ; Ethics, Governance and Corporate Crime: Challenges and Consequences Volume 6 ; >
+      au < exists ; exists ; 2015 ; 9781784415822 ; 9781784415815 ; 9781784415815 ; Corporate Social Responsibility in the Digital Age Volume 7 ; >
+      au < exists ; exists ; 2015 ; 9781785604454 ; 9781785604447 ; 9781785604447 ; Sustainability After Rio Volume 8 ; >
+      au < exists ; exists ; 2016 ; 9781786353849 ; 9781786353832 ; 9781786353832 ; Accountability and Social Responsibility: International Perspectives Volume 9 ; >
+      au < exists ; exists ; 2016 ; 9781786356260 ; 9781786356253 ; 9781786356253 ; Corporate Responsibility and Stakeholding Volume 10 ; >
+      au < exists ; exists ; 2017 ; 9781786356253 ; 9781787144118 ; 9781787144118 ; Corporate Social Responsibility and Corporate Governance Volume 11 ; >
+      au < exists ; exists ; 2017 ; 9781787146952 ; 9781787146945 ; 9781787146945 ; Modern Organisational Governance Volume 12 ; >
 
   }
 
@@ -1844,8 +1859,11 @@
       >
 
       #param[journal_issn] = 2046-6072
+      #series = dcms
 
-      au < manifest ; exists ; 2011 ;  ; 9781780522807 ; 9781780522807 ; The Third Sector Volume 1 ; >
+      au < exists ; exists ; 2011 ; 9781780522807 ; 9781780522814 ; 9781780522814 ; The Third Sector Volume 1 ; >
+      au < exists ; exists ; 2013 ; 9781781909546 ; 9781781909553 ; 9781781909553 ; Getting Things Done Volume 2 ; >
+      au < exists ; exists ; 2017 ; 9781786354983 ; 9781786354976 ; 9781786354976 ; Feminists and Queer Theorists Debate the Future of Critical Management Studies Volume 3 ; >
 
   }
 
@@ -1858,6 +1876,7 @@
       >
 
       #param[journal_issn] = 1479-3644
+      #series = dihe
 
       au < manifest ; exists ; 2005 ;  ; 9780762305629 ; 9780762305629 ; Beyond Small Numbers Volume 4 ; >
       au < manifest ; exists ; 2005 ;  ; 9780762312535 ; 9780762312535 ; Lessons in Leadership Volume 5 ; >
