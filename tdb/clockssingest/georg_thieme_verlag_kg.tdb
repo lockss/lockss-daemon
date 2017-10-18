@@ -5249,13 +5249,13 @@
     title <
       name = Sports Medicine International Open ;
       eissn = 2367-1890 ;
-      doi = 10.1055/s-007-33312
+      doi = 10.1055/s-00032056
 
     >
-    param[journal_id] = 10.1055/s-007-33312
+    param[journal_id] = 10.1055/s-00032056
     #years = 2017-current
 
-    au < exists ; exists ; 2017 ; 2017 ; Sports Medicine International Open Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2017 ; 2017 ; Sports Medicine International Open Volume 1 ; 1 ; >
 
   }
 
@@ -5797,7 +5797,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Urologie Scan Volume 1 ; 1 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; Urologie Scan Volume 2 ; 2 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; down ; 2016 ; 2016 ; Urologie Scan Volume 3 ; 3 ;  >
-   au < expected ; exists ; 2017 ; 2017 ; Urologie Scan Volume 4 ; 4 ; >
+   au < expected ; exists ; 2017 ; 2017 ; Urologie Scan Volume 4 ; 4 ; > 
 
   }
 
