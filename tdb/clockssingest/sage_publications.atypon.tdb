@@ -2709,7 +2709,7 @@
       #param[base_url] = http://avc.sagepub.com/
       #content available from 1990 volume 1 to 2008 volume 19
 
-      au < manifest ; exists ; 2008-2009 ; Antiviral Chemistry & Chemotherapy Volume 19 ; 19 ; avca ; >
+      au < crawling ; exists ; 2008-2009 ; Antiviral Chemistry & Chemotherapy Volume 19 ; 19 ; avca ; >
       au < frozen ; exists ; 2009-2010 ; Antiviral Chemistry & Chemotherapy Volume 20 ; 20 ; avca ; >
       au < frozen ; exists ; 2010-2011 ; Antiviral Chemistry & Chemotherapy Volume 21 ; 21 ; avca ; >
       au < frozen ; exists ; 2011-2012 ; Antiviral Chemistry & Chemotherapy Volume 22 ; 22 ; avca ; >
@@ -4960,7 +4960,7 @@
       au < frozen ; exists ; 2008 ; Cahiers Élisabéthains Volume 73 ; 73 ; caea ; >
       au < frozen ; exists ; 2008 ; Cahiers Élisabéthains Volume 74 ; 74 ; caea ; >
       au < crawling ; exists ; 2009 ; Cahiers Élisabéthains Volume 75 ; 75 ; caea ; >
-      au < manifest ; exists ; 2009 ; Cahiers Élisabéthains Volume 76 ; 76 ; caea ; >
+      au < crawling ; exists ; 2009 ; Cahiers Élisabéthains Volume 76 ; 76 ; caea ; >
       au < doNotProcess ; doNotProcess ; 2010 ; Cahiers Élisabéthains Volume 77 ; 77 ; caea ; >
       au < doNotProcess ; doNotProcess ; 2010 ; Cahiers Élisabéthains Volume 78 ; 78 ; caea ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Cahiers Élisabéthains Volume 79 ; 79 ; caea ; >
@@ -5050,7 +5050,7 @@
       au < manifest ; exists ; 2006 ; Calcutta Statistical Association Bulletin Volume 58 ; 58 ; csaa ; >
       au < manifest ; exists ; 2007 ; Calcutta Statistical Association Bulletin Volume 59 ; 59 ; csaa ; >
       au < frozen ; exists ; 2008 ; Calcutta Statistical Association Bulletin Volume 60 ; 60 ; csaa ; >
-      au < manifest ; exists ; 2009 ; Calcutta Statistical Association Bulletin Volume 61 ; 61 ; csaa ; >
+      au < crawling ; exists ; 2009 ; Calcutta Statistical Association Bulletin Volume 61 ; 61 ; csaa ; >
       au < doNotProcess ; doNotProcess ; 2010 ; Calcutta Statistical Association Bulletin Volume 62 ; 62 ; csaa ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Calcutta Statistical Association Bulletin Volume 63 ; 63 ; csaa ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Calcutta Statistical Association Bulletin Volume 64 ; 64 ; csaa ; >
@@ -6961,7 +6961,7 @@
       au < exists ; exists ; 2006 ; Competition and Regulation in Network Industries Volume 7 ; 7 ; crna ; >
       au < manifest ; exists ; 2007 ; Competition and Regulation in Network Industries Volume 8 ; 8 ; crna ; >
       au < frozen ; exists ; 2008 ; Competition and Regulation in Network Industries Volume 9 ; 9 ; crna ; >
-      au < manifest ; exists ; 2009 ; Competition and Regulation in Network Industries Volume 10 ; 10 ; crna ; >
+      au < crawling ; exists ; 2009 ; Competition and Regulation in Network Industries Volume 10 ; 10 ; crna ; >
       au < frozen ; exists ; 2010 ; Competition and Regulation in Network Industries Volume 11 ; 11 ; crna ; >
       au < frozen ; exists ; 2011 ; Competition and Regulation in Network Industries Volume 12 ; 12 ; crna ; >
       au < frozen ; exists ; 2012 ; Competition and Regulation in Network Industries Volume 13 ; 13 ; crna ; >
@@ -7206,7 +7206,7 @@
       au < manifest ; exists ; 2005-2006 ; Contemporary Education Dialogue Volume 3 ; 3 ; ceda ; >
       au < manifest ; exists ; 2006-2007 ; Contemporary Education Dialogue Volume 4 ; 4 ; ceda ; >
       au < manifest ; exists ; 2007-2008 ; Contemporary Education Dialogue Volume 5 ; 5 ; ceda ; >
-      au < manifest ; exists ; 2008-2009 ; Contemporary Education Dialogue Volume 6 ; 6 ; ceda ; >
+      au < crawling ; exists ; 2008-2009 ; Contemporary Education Dialogue Volume 6 ; 6 ; ceda ; >
       au < crawling ; exists ; 2010 ; Contemporary Education Dialogue Volume 7 ; 7 ; ceda ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Contemporary Education Dialogue Volume 8 ; 8 ; ceda ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Contemporary Education Dialogue Volume 9 ; 9 ; ceda ; >
@@ -7239,7 +7239,7 @@
       au < manifest ; exists ; 2006 ; Contemporary Issues in Early Childhood Volume 7 ; 7 ; ciea ; >
       au < manifest ; exists ; 2007 ; Contemporary Issues in Early Childhood Volume 8 ; 8 ; ciea ; >
       au < frozen ; exists ; 2008 ; Contemporary Issues in Early Childhood Volume 9 ; 9 ; ciea ; >
-      au < manifest ; exists ; 2009 ; Contemporary Issues in Early Childhood Volume 10 ; 10 ; ciea ; >
+      au < crawling ; exists ; 2009 ; Contemporary Issues in Early Childhood Volume 10 ; 10 ; ciea ; >
       au < frozen ; exists ; 2010 ; Contemporary Issues in Early Childhood Volume 11 ; 11 ; ciea ; >
       au < frozen ; exists ; 2011 ; Contemporary Issues in Early Childhood Volume 12 ; 12 ; ciea ; >
       au < frozen ; exists ; 2012 ; Contemporary Issues in Early Childhood Volume 13 ; 13 ; ciea ; >
@@ -7305,7 +7305,7 @@
       #param[base_url] = http://vod.sagepub.com/
 
       au < frozen ; exists ; 2008 ; Contemporary Voice of Dalit Volume 1 ; 1 ; voda ; >
-      au < manifest ; exists ; 2009 ; Contemporary Voice of Dalit Volume 2 ; 2 ; voda ; >
+      au < crawling ; exists ; 2009 ; Contemporary Voice of Dalit Volume 2 ; 2 ; voda ; >
       au < crawling ; exists ; 2010 ; Contemporary Voice of Dalit Volume 3 ; 3 ; voda ; >
       au < frozen ; exists ; 2011 ; Contemporary Voice of Dalit Volume 4 ; 4 ; voda ; >
       au < frozen ; exists ; 2012 ; Contemporary Voice of Dalit Volume 5 ; 5 ; voda ; >
@@ -8538,7 +8538,7 @@
       au < manifest ; exists ; 2005-2006 ; A Current Bibliography on African Affairs Volume 36 ; 36 ; cbaa ; >
       au < manifest ; exists ; 2006-2007 ; A Current Bibliography on African Affairs Volume 37 ; 37 ; cbaa ; >
       au < manifest ; exists ; 2007-2008 ; A Current Bibliography on African Affairs Volume 40 ; 40 ; cbaa ; >
-      au < manifest ; exists ; 2008-2009 ; A Current Bibliography on African Affairs Volume 41 ; 41 ; cbaa ; >
+      au < crawling ; exists ; 2008-2009 ; A Current Bibliography on African Affairs Volume 41 ; 41 ; cbaa ; >
       au < crawling ; exists ; 2009-2010 ; A Current Bibliography on African Affairs Volume 42 ; 42 ; cbaa ; >
       au < frozen ; exists ; 2010-2011 ; A Current Bibliography on African Affairs Volume 43 ; 43 ; cbaa ; >
       au < frozen ; exists ; 2011-2012 ; A Current Bibliography on African Affairs Volume 44 ; 44 ; cbaa ; >
@@ -9238,7 +9238,7 @@
       au < manifest ; exists ; 2006 ; The Downside Review Volume 124 ; 124 ; tdra ; >
       au < manifest ; exists ; 2007 ; The Downside Review Volume 125 ; 125 ; tdra ; >
       au < frozen ; exists ; 2008 ; The Downside Review Volume 126 ; 126 ; tdra ; >
-      au < manifest ; exists ; 2009 ; The Downside Review Volume 127 ; 127 ; tdra ; >
+      au < crawling ; exists ; 2009 ; The Downside Review Volume 127 ; 127 ; tdra ; >
       au < crawling ; exists ; 2010 ; The Downside Review Volume 128 ; 128 ; tdra ; >
       au < frozen ; exists ; 2011 ; The Downside Review Volume 129 ; 129 ; tdra ; >
       au < frozen ; exists ; 2012 ; The Downside Review Volume 130 ; 130 ; tdra ; >
@@ -10179,7 +10179,7 @@
       au < manifest ; exists ; 2006 ; Empirical Studies of the Arts Volume 24 ; 24 ; arta ; >
       au < manifest ; exists ; 2007 ; Empirical Studies of the Arts Volume 25 ; 25 ; arta ; >
       au < frozen ; exists ; 2008 ; Empirical Studies of the Arts Volume 26 ; 26 ; arta ; >
-      au < manifest ; exists ; 2009 ; Empirical Studies of the Arts Volume 27 ; 27 ; arta ; >
+      au < crawling ; exists ; 2009 ; Empirical Studies of the Arts Volume 27 ; 27 ; arta ; >
       au < frozen ; exists ; 2010 ; Empirical Studies of the Arts Volume 28 ; 28 ; arta ; >
       au < frozen ; exists ; 2011 ; Empirical Studies of the Arts Volume 29 ; 29 ; arta ; >
       au < frozen ; exists ; 2012 ; Empirical Studies of the Arts Volume 30 ; 30 ; arta ; >
@@ -11152,7 +11152,7 @@
       au < manifest ; exists ; 2006 ; European Journal of Mass Spectrometry Volume 12 ; 12 ; emsa ; >
       au < manifest ; exists ; 2007 ; European Journal of Mass Spectrometry Volume 13 ; 13 ; emsa ; >
       au < frozen ; exists ; 2008 ; European Journal of Mass Spectrometry Volume 14 ; 14 ; emsa ; >
-      au < manifest ; exists ; 2009 ; European Journal of Mass Spectrometry Volume 15 ; 15 ; emsa ; >
+      au < crawling ; exists ; 2009 ; European Journal of Mass Spectrometry Volume 15 ; 15 ; emsa ; >
       au < crawling ; exists ; 2010 ; European Journal of Mass Spectrometry Volume 16 ; 16 ; emsa ; >
       au < frozen ; exists ; 2011 ; European Journal of Mass Spectrometry Volume 17 ; 17 ; emsa ; >
       au < frozen ; exists ; 2012 ; European Journal of Mass Spectrometry Volume 18 ; 18 ; emsa ; >
@@ -12277,7 +12277,7 @@
       au < manifest ; exists ; 2006 ; Food and Nutrition Bulletin Volume 27 ; 27 ; fnba ; >
       au < manifest ; exists ; 2007 ; Food and Nutrition Bulletin Volume 28 ; 28 ; fnba ; >
       au < frozen ; exists ; 2008 ; Food and Nutrition Bulletin Volume 29 ; 29 ; fnba ; >
-      au < manifest ; exists ; 2009 ; Food and Nutrition Bulletin Volume 30 ; 30 ; fnba ; >
+      au < crawling ; exists ; 2009 ; Food and Nutrition Bulletin Volume 30 ; 30 ; fnba ; >
       au < crawling ; exists ; 2010 ; Food and Nutrition Bulletin Volume 31 ; 31 ; fnba ; >
       au < frozen ; exists ; 2011 ; Food and Nutrition Bulletin Volume 32 ; 32 ; fnba ; >
       au < frozen ; exists ; 2012 ; Food and Nutrition Bulletin Volume 33 ; 33 ; fnba ; >
@@ -13639,7 +13639,7 @@
       #param[base_url] = http://her.sagepub.com/
 
       au < manifest ; exists ; 2007-2008 ; HERD: Health Environments Research & Design Journal Volume 1 ; 1 ; hera ; >
-      au < manifest ; exists ; 2008-2009 ; HERD: Health Environments Research & Design Journal Volume 2 ; 2 ; hera ; >
+      au < crawling ; exists ; 2008-2009 ; HERD: Health Environments Research & Design Journal Volume 2 ; 2 ; hera ; >
       au < crawling ; exists ; 2009-2010 ; HERD: Health Environments Research & Design Journal Volume 3 ; 3 ; hera ; >
       au < frozen ; exists ; 2010-2011 ; HERD: Health Environments Research & Design Journal Volume 4 ; 4 ; hera ; >
       au < frozen ; exists ; 2011-2012 ; HERD: Health Environments Research & Design Journal Volume 5 ; 5 ; hera ; >
@@ -14675,7 +14675,7 @@
       au < manifest ; exists ; 2005-2006 ; Imagination, Cognition and Personality Volume 25 ; 25 ; icaa ; >
       au < manifest ; exists ; 2006-2007 ; Imagination, Cognition and Personality Volume 26 ; 26 ; icaa ; >
       au < manifest ; exists ; 2007-2008 ; Imagination, Cognition and Personality Volume 27 ; 27 ; icaa ; >
-      au < manifest ; exists ; 2008-2009 ; Imagination, Cognition and Personality Volume 28 ; 28 ; icaa ; >
+      au < crawling ; exists ; 2008-2009 ; Imagination, Cognition and Personality Volume 28 ; 28 ; icaa ; >
       au < crawling ; exists ; 2009-2010 ; Imagination, Cognition and Personality Volume 29 ; 29 ; icaa ; >
       au < frozen ; exists ; 2010-2011 ; Imagination, Cognition and Personality Volume 30 ; 30 ; icaa ; >
       au < frozen ; exists ; 2011-2012 ; Imagination, Cognition and Personality Volume 31 ; 31 ; icaa ; >
@@ -14906,7 +14906,7 @@
 
       au < manifest ; exists ; 2006-2007 ; The Indian Economic Journal Volume 54 ; 54 ; ieja ; >
       au < manifest ; exists ; 2007-2008 ; The Indian Economic Journal Volume 55 ; 55 ; ieja ; >
-      au < manifest ; exists ; 2008-2009 ; The Indian Economic Journal Volume 56 ; 56 ; ieja ; >
+      au < crawling ; exists ; 2008-2009 ; The Indian Economic Journal Volume 56 ; 56 ; ieja ; >
       au < crawling ; exists ; 2009-2010 ; The Indian Economic Journal Volume 57 ; 57 ; ieja ; >
       au < crawling ; exists ; 2010-2011 ; The Indian Economic Journal Volume 58 ; 58 ; ieja ; >
       au < crawling ; exists ; 2011-2012 ; The Indian Economic Journal Volume 59 ; 59 ; ieja ; >
@@ -14958,7 +14958,7 @@
       #param[base_url] = http://ijc.sagepub.com/
 
       au < frozen ; exists ; 2008 ; Indian Journal of Corporate Governance Volume 1 ; 1 ; ijca ; >
-      au < manifest ; exists ; 2009 ; Indian Journal of Corporate Governance Volume 2 ; 2 ; ijca ; >
+      au < crawling ; exists ; 2009 ; Indian Journal of Corporate Governance Volume 2 ; 2 ; ijca ; >
       au < crawling ; exists ; 2010 ; Indian Journal of Corporate Governance Volume 3 ; 3 ; ijca ; >
       au < frozen ; exists ; 2011 ; Indian Journal of Corporate Governance Volume 4 ; 4 ; ijca ; >
       au < frozen ; exists ; 2012 ; Indian Journal of Corporate Governance Volume 5 ; 5 ; ijca ; >
@@ -15598,7 +15598,7 @@
       au < manifest ; exists ; 2007 ; The International Journal of Aging and Human Development Volume 65 ; 65 ; ahdb ; >
       au < frozen ; exists ; 2008 ; The International Journal of Aging and Human Development Volume 66 ; 66 ; ahdb ; >
       au < frozen ; exists ; 2008 ; The International Journal of Aging and Human Development Volume 67 ; 67 ; ahdb ; >
-      au < manifest ; exists ; 2009 ; The International Journal of Aging and Human Development Volume 68 ; 68 ; ahdb ; >
+      au < crawling ; exists ; 2009 ; The International Journal of Aging and Human Development Volume 68 ; 68 ; ahdb ; >
       au < crawling ; exists ; 2009 ; The International Journal of Aging and Human Development Volume 69 ; 69 ; ahdb ; >
       au < crawling ; exists ; 2010 ; The International Journal of Aging and Human Development Volume 70 ; 70 ; ahdb ; >
       au < crawling ; exists ; 2010 ; The International Journal of Aging and Human Development Volume 71 ; 71 ; ahdb ; >
@@ -16325,7 +16325,7 @@
       au < manifest ; exists ; 2006 ; International Journal of Immunopathology and Pharmacology Volume 19 ; 19 ; ijia ; >
       au < manifest ; exists ; 2007 ; International Journal of Immunopathology and Pharmacology Volume 20 ; 20 ; ijia ; >
       au < frozen ; exists ; 2008 ; International Journal of Immunopathology and Pharmacology Volume 21 ; 21 ; ijia ; >
-      au < manifest ; exists ; 2009 ; International Journal of Immunopathology and Pharmacology Volume 22 ; 22 ; ijia ; >
+      au < crawling ; exists ; 2009 ; International Journal of Immunopathology and Pharmacology Volume 22 ; 22 ; ijia ; >
       au < frozen ; exists ; 2010 ; International Journal of Immunopathology and Pharmacology Volume 23 ; 23 ; ijia ; >
       au < frozen ; exists ; 2011 ; International Journal of Immunopathology and Pharmacology Volume 24 ; 24 ; ijia ; >
       au < frozen ; exists ; 2012 ; International Journal of Immunopathology and Pharmacology Volume 25 ; 25 ; ijia ; >
@@ -16604,7 +16604,7 @@
       au < manifest ; exists ; 2006 ; International Journal of Police Science & Management Volume 8 ; 8 ; psma ; >
       au < manifest ; exists ; 2007 ; International Journal of Police Science & Management Volume 9 ; 9 ; psma ; >
       au < frozen ; exists ; 2008 ; International Journal of Police Science & Management Volume 10 ; 10 ; psma ; >
-      au < manifest ; exists ; 2009 ; International Journal of Police Science & Management Volume 11 ; 11 ; psma ; >
+      au < crawling ; exists ; 2009 ; International Journal of Police Science & Management Volume 11 ; 11 ; psma ; >
       au < crawling ; exists ; 2010 ; International Journal of Police Science & Management Volume 12 ; 12 ; psma ; >
       au < frozen ; exists ; 2011 ; International Journal of Police Science & Management Volume 13 ; 13 ; psma ; >
       au < frozen ; exists ; 2012 ; International Journal of Police Science & Management Volume 14 ; 14 ; psma ; >
@@ -17002,7 +17002,7 @@
       au < manifest ; exists ; 2006 ; International Journal of Stroke Volume 1 ; 1 ; wsoa ; >
       au < manifest ; exists ; 2007 ; International Journal of Stroke Volume 2 ; 2 ; wsoa ; >
       au < frozen ; exists ; 2008 ; International Journal of Stroke Volume 3 ; 3 ; wsoa ; >
-      au < manifest ; exists ; 2009 ; International Journal of Stroke Volume 4 ; 4 ; wsoa ; >
+      au < crawling ; exists ; 2009 ; International Journal of Stroke Volume 4 ; 4 ; wsoa ; >
       au < crawling ; exists ; 2010 ; International Journal of Stroke Volume 5 ; 5 ; wsoa ; >
       au < frozen ; exists ; 2011 ; International Journal of Stroke Volume 6 ; 6 ; wsoa ; >
       au < frozen ; exists ; 2012 ; International Journal of Stroke Volume 7 ; 7 ; wsoa ; >
@@ -18074,7 +18074,7 @@
       au < manifest ; exists ; 2005 ; Jadavpur Journal of International Relations Volume 9 ; 9 ; jnra ; >
       au < manifest ; exists ; 2006 ; Jadavpur Journal of International Relations Volume 10 ; 10 ; jnra ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Jadavpur Journal of International Relations Volume 11-12 ; 11-12 ; jnra ; >
-      au < manifest ; exists ; 2009 ; Jadavpur Journal of International Relations Volume 13 ; 13 ; jnra ; >
+      au < crawling ; exists ; 2009 ; Jadavpur Journal of International Relations Volume 13 ; 13 ; jnra ; >
       au < crawling ; exists ; 2010 ; Jadavpur Journal of International Relations Volume 14 ; 14 ; jnra ; >
       au < frozen ; exists ; 2011 ; Jadavpur Journal of International Relations Volume 15 ; 15 ; jnra ; >
       au < frozen ; exists ; 2012 ; Jadavpur Journal of International Relations Volume 16 ; 16 ; jnra ; >
@@ -21249,7 +21249,7 @@
       au < manifest ; exists ; 2005-2006 ; Journal of Educational Technology Systems Volume 34 ; 34 ; etsa ; >
       au < manifest ; exists ; 2006-2007 ; Journal of Educational Technology Systems Volume 35 ; 35 ; etsa ; >
       au < manifest ; exists ; 2007-2008 ; Journal of Educational Technology Systems Volume 36 ; 36 ; etsa ; >
-      au < manifest ; exists ; 2008-2009 ; Journal of Educational Technology Systems Volume 37 ; 37 ; etsa ; >
+      au < crawling ; exists ; 2008-2009 ; Journal of Educational Technology Systems Volume 37 ; 37 ; etsa ; >
       au < crawling ; exists ; 2009-2010 ; Journal of Educational Technology Systems Volume 38 ; 38 ; etsa ; >
       au < frozen ; exists ; 2010-2011 ; Journal of Educational Technology Systems Volume 39 ; 39 ; etsa ; >
       au < frozen ; exists ; 2011-2012 ; Journal of Educational Technology Systems Volume 40 ; 40 ; etsa ; >
@@ -23293,7 +23293,7 @@
       au < manifest ; exists ; 2006 ; Journal of Interdisciplinary Economics Volume 17 ; 17 ; jiea ; >
       au < manifest ; exists ; 2007 ; Journal of Interdisciplinary Economics Volume 18 ; 18 ; jiea ; >
       au < manifest ; exists ; 2007-2008 ; Journal of Interdisciplinary Economics Volume 19 ; 19 ; jiea ; >
-      au < manifest ; exists ; 2009 ; Journal of Interdisciplinary Economics Volume 20 ; 20 ; jiea ; >
+      au < crawling ; exists ; 2009 ; Journal of Interdisciplinary Economics Volume 20 ; 20 ; jiea ; >
       au < crawling ; exists ; 2009-2010 ; Journal of Interdisciplinary Economics Volume 21 ; 21 ; jiea ; >
       au < crawling ; exists ; 2010 ; Journal of Interdisciplinary Economics Volume 22 ; 22 ; jiea ; >
       au < frozen ; exists ; 2010-2011 ; Journal of Interdisciplinary Economics Volume 23 ; 23 ; jiea ; >
@@ -24397,7 +24397,7 @@
       au < manifest ; exists ; 2006 ; Journal of Orthopaedic Surgery Volume 14 ; 14 ; osja ; >
       au < manifest ; exists ; 2007 ; Journal of Orthopaedic Surgery Volume 15 ; 15 ; osja ; >
       au < frozen ; exists ; 2008 ; Journal of Orthopaedic Surgery Volume 16 ; 16 ; osja ; >
-      au < manifest ; exists ; 2009 ; Journal of Orthopaedic Surgery Volume 17 ; 17 ; osja ; >
+      au < crawling ; exists ; 2009 ; Journal of Orthopaedic Surgery Volume 17 ; 17 ; osja ; >
       au < doNotProcess ; doNotProcess ; 2010 ; Journal of Orthopaedic Surgery Volume 18 ; 18 ; osja ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Journal of Orthopaedic Surgery Volume 19 ; 19 ; osja ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Journal of Orthopaedic Surgery Volume 20 ; 20 ; osja ; >
@@ -27074,7 +27074,7 @@
       au < manifest ; exists ; 2006 ; Journal of Veterinary Dentistry Volume 23 ; 23 ; jovb ; >
       au < manifest ; exists ; 2007 ; Journal of Veterinary Dentistry Volume 24 ; 24 ; jovb ; >
       au < frozen ; exists ; 2008 ; Journal of Veterinary Dentistry Volume 25 ; 25 ; jovb ; >
-      au < manifest ; exists ; 2009 ; Journal of Veterinary Dentistry Volume 26 ; 26 ; jovb ; >
+      au < crawling ; exists ; 2009 ; Journal of Veterinary Dentistry Volume 26 ; 26 ; jovb ; >
       au < crawling ; exists ; 2010 ; Journal of Veterinary Dentistry Volume 27 ; 27 ; jovb ; >
       au < frozen ; exists ; 2011 ; Journal of Veterinary Dentistry Volume 28 ; 28 ; jovb ; >
       au < frozen ; exists ; 2012 ; Journal of Veterinary Dentistry Volume 29 ; 29 ; jovb ; >
@@ -29331,7 +29331,7 @@
       au < manifest ; exists ; 2006 ; Molecular Imaging Volume 5 ; 5 ; mixa ; >
       au < manifest ; exists ; 2007 ; Molecular Imaging Volume 6 ; 6 ; mixa ; >
       au < frozen ; exists ; 2008 ; Molecular Imaging Volume 7 ; 7 ; mixa ; >
-      au < manifest ; exists ; 2009 ; Molecular Imaging Volume 8 ; 8 ; mixa ; >
+      au < crawling ; exists ; 2009 ; Molecular Imaging Volume 8 ; 8 ; mixa ; >
       au < doNotProcess ; doNotProcess ; 2010 ; Molecular Imaging Volume 9 ; 9 ; mixa ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Molecular Imaging Volume 10 ; 10 ; mixa ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Molecular Imaging Volume 11 ; 11 ; mixa ; >
@@ -30218,7 +30218,7 @@
 
       #param[base_url] = http://nje.sagepub.com/
 
-      au < manifest ; exists ; 2009 ; New Journal of European Criminal Law Volume 1a ; 1a ; njea ; >
+      au < crawling ; exists ; 2009 ; New Journal of European Criminal Law Volume 1a ; 1a ; njea ; >
       au < frozen ; exists ; 2010 ; New Journal of European Criminal Law Volume 1 ; 1 ; njea ; >
       au < frozen ; exists ; 2011 ; New Journal of European Criminal Law Volume 2 ; 2 ; njea ; >
       au < frozen ; exists ; 2012 ; New Journal of European Criminal Law Volume 3 ; 3 ; njea ; >
@@ -30308,7 +30308,7 @@
       au < manifest ; exists ; 2006 ; New Solutions Volume 16 ; 16 ; newa ; >
       au < manifest ; exists ; 2007 ; New Solutions Volume 17 ; 17 ; newa ; >
       au < frozen ; exists ; 2008 ; New Solutions Volume 18 ; 18 ; newa ; >
-      au < manifest ; exists ; 2009 ; New Solutions Volume 19 ; 19 ; newa ; >
+      au < crawling ; exists ; 2009 ; New Solutions Volume 19 ; 19 ; newa ; >
       au < crawling ; exists ; 2010 ; New Solutions Volume 20 ; 20 ; newa ; >
       au < frozen ; exists ; 2011 ; New Solutions Volume 21 ; 21 ; newa ; >
       au < frozen ; exists ; 2012 ; New Solutions Volume 22 ; 22 ; newa ; >
@@ -30846,7 +30846,7 @@
       au < manifest ; exists ; 2007 ; OMEGA - Journal of Death and Dying Volume 55 ; 55 ; omea ; >
       au < manifest ; exists ; 2007-2008 ; OMEGA - Journal of Death and Dying Volume 56 ; 56 ; omea ; >
       au < frozen ; exists ; 2008 ; OMEGA - Journal of Death and Dying Volume 57 ; 57 ; omea ; >
-      au < manifest ; exists ; 2008-2009 ; OMEGA - Journal of Death and Dying Volume 58 ; 58 ; omea ; >
+      au < crawling ; exists ; 2008-2009 ; OMEGA - Journal of Death and Dying Volume 58 ; 58 ; omea ; >
       au < manifest ; exists ; 2009 ; OMEGA - Journal of Death and Dying Volume 59 ; 59 ; omea ; >
       au < crawling ; exists ; 2009-2010 ; OMEGA - Journal of Death and Dying Volume 60 ; 60 ; omea ; >
       au < crawling ; exists ; 2010 ; OMEGA - Journal of Death and Dying Volume 61 ; 61 ; omea ; >
@@ -30906,7 +30906,7 @@
         au < manifest ; exists ; 2006 ; OTJR: Occupation, Participation and Health Volume 26 ; 26 ; otjb ; >
         au < manifest ; exists ; 2007 ; OTJR: Occupation, Participation and Health Volume 27 ; 27 ; otjb ; >
         au < frozen ; exists ; 2008 ; OTJR: Occupation, Participation and Health Volume 28 ; 28 ; otjb ; >
-        au < manifest ; exists ; 2009 ; OTJR: Occupation, Participation and Health Volume 29 ; 29 ; otjb ; >
+        au < crawling ; exists ; 2009 ; OTJR: Occupation, Participation and Health Volume 29 ; 29 ; otjb ; >
         au < frozen ; exists ; 2010 ; OTJR: Occupation, Participation and Health Volume 30 ; 30 ; otjb ; >
         au < frozen ; exists ; 2011 ; OTJR: Occupation, Participation and Health Volume 31 ; 31 ; otjb ; >
         au < frozen ; exists ; 2012 ; OTJR: Occupation, Participation and Health Volume 32 ; 32 ; otjb ; >
@@ -35899,7 +35899,7 @@
     au < manifest ; exists ; 2006 ; Scandinavian Journal of Surgery Volume 95 ; 95 ; sjsb ; >
     au < manifest ; exists ; 2007 ; Scandinavian Journal of Surgery Volume 96 ; 96 ; sjsb ; >
     au < frozen ; exists ; 2008 ; Scandinavian Journal of Surgery Volume 97 ; 97 ; sjsb ; >
-    au < manifest ; exists ; 2009 ; Scandinavian Journal of Surgery Volume 98 ; 98 ; sjsb ; >
+    au < crawling ; exists ; 2009 ; Scandinavian Journal of Surgery Volume 98 ; 98 ; sjsb ; >
     au < crawling ; exists ; 2010 ; Scandinavian Journal of Surgery Volume 99 ; 99 ; sjsb ; >
     au < frozen ; exists ; 2011 ; Scandinavian Journal of Surgery Volume 100 ; 100 ; sjsb ; >
     au < frozen ; exists ; 2012 ; Scandinavian Journal of Surgery Volume 101 ; 101 ; sjsb ; >
@@ -37274,7 +37274,7 @@
       au < manifest ; exists ; 2006 ; The Sociological Review Volume 54 ; 54 ; sora ; >
       au < manifest ; exists ; 2007 ; The Sociological Review Volume 55 ; 55 ; sora ; >
       au < frozen ; exists ; 2008 ; The Sociological Review Volume 56 ; 56 ; sora ; >
-      au < manifest ; exists ; 2009 ; The Sociological Review Volume 57 ; 57 ; sora ; >
+      au < crawling ; exists ; 2009 ; The Sociological Review Volume 57 ; 57 ; sora ; >
       au < frozen ; exists ; 2010 ; The Sociological Review Volume 58 ; 58 ; sora ; >
       au < frozen ; exists ; 2011 ; The Sociological Review Volume 59 ; 59 ; sora ; >
       au < frozen ; exists ; 2012 ; The Sociological Review Volume 60 ; 60 ; sora ; >
@@ -42829,7 +42829,7 @@
 
     #param[base_url] = http://asn.sagepub.com/
 
-    au < manifest ; exists ; 2009 ; ASN NEURO Volume 1 ; 1 ; asna ; >
+    au < crawling ; exists ; 2009 ; ASN NEURO Volume 1 ; 1 ; asna ; >
     au < crawling ; exists ; 2010 ; ASN NEURO Volume 2 ; 2 ; asna ; >
     au < frozen ; exists ; 2011 ; ASN NEURO Volume 3 ; 3 ; asna ; >
     au < frozen ; exists ; 2012 ; ASN NEURO Volume 4 ; 4 ; asna ; >
@@ -43339,7 +43339,7 @@
     au < manifest ; exists ; 2006 ; Forum Italicum: A Journal of Italian Studies Volume 40 ; 40 ; foia ; >
     au < manifest ; exists ; 2007 ; Forum Italicum: A Journal of Italian Studies Volume 41 ; 41 ; foia ; >
     au < frozen ; exists ; 2008 ; Forum Italicum: A Journal of Italian Studies Volume 42 ; 42 ; foia ; >
-    au < manifest ; exists ; 2009 ; Forum Italicum: A Journal of Italian Studies Volume 43 ; 43 ; foia ; >
+    au < crawling ; exists ; 2009 ; Forum Italicum: A Journal of Italian Studies Volume 43 ; 43 ; foia ; >
     au < crawling ; exists ; 2010 ; Forum Italicum: A Journal of Italian Studies Volume 44 ; 44 ; foia ; >
     au < frozen ; exists ; 2011 ; Forum Italicum: A Journal of Italian Studies Volume 45 ; 45 ; foia ; >
     au < frozen ; exists ; 2012 ; Forum Italicum: A Journal of Italian Studies Volume 46 ; 46 ; foia ; >
@@ -43610,7 +43610,7 @@
     au < manifest ; exists ; 2006 ; Pacifica: Australasian Theological Studies Volume 19 ; 19 ; paaa ; >
     au < manifest ; exists ; 2007 ; Pacifica: Australasian Theological Studies Volume 20 ; 20 ; paaa ; >
     au < frozen ; exists ; 2008 ; Pacifica: Australasian Theological Studies Volume 21 ; 21 ; paaa ; >
-    au < manifest ; exists ; 2009 ; Pacifica: Australasian Theological Studies Volume 22 ; 22 ; paaa ; >
+    au < crawling ; exists ; 2009 ; Pacifica: Australasian Theological Studies Volume 22 ; 22 ; paaa ; >
     au < crawling ; exists ; 2010 ; Pacifica: Australasian Theological Studies Volume 23 ; 23 ; paaa ; >
     au < frozen ; exists ; 2011 ; Pacifica: Australasian Theological Studies Volume 24 ; 24 ; paaa ; >
     au < frozen ; exists ; 2012 ; Pacifica: Australasian Theological Studies Volume 25 ; 25 ; paaa ; >
@@ -44287,7 +44287,7 @@
         au < manifest ; exists ; 2006 ; Hand Therapy Volume 11 ; 11 ; htha ; >
         au < manifest ; exists ; 2007 ; Hand Therapy Volume 12 ; 12 ; htha ; >
         au < frozen ; exists ; 2008 ; Hand Therapy Volume 13 ; 13 ; htha ; >
-        au < manifest ; exists ; 2009 ; Hand Therapy Volume 14 ; 14 ; hthb ; >
+        au < crawling ; exists ; 2009 ; Hand Therapy Volume 14 ; 14 ; hthb ; >
         au < frozen ; exists ; 2010 ; Hand Therapy Volume 15 ; 15 ; hthb ; >
         au < frozen ; exists ; 2011 ; Hand Therapy Volume 16 ; 16 ; hthb ; >
         au < doNotProcess ; doNotProcess ; 2012 ; Hand Therapy Volume 17 ; 17 ; hthb ; >
@@ -44320,7 +44320,7 @@
         au < manifest ; exists ; 2006 ; Health Services Management Research Volume 19 ; 19 ; hsma ; >
         au < manifest ; exists ; 2007 ; Health Services Management Research Volume 20 ; 20 ; hsma ; >
         au < frozen ; exists ; 2008 ; Health Services Management Research Volume 21 ; 21 ; hsma ; >
-        au < manifest ; exists ; 2009 ; Health Services Management Research Volume 22 ; 22 ; hsma ; >
+        au < crawling ; exists ; 2009 ; Health Services Management Research Volume 22 ; 22 ; hsma ; >
         au < crawling ; exists ; 2010 ; Health Services Management Research Volume 23 ; 23 ; hsma ; >
         au < frozen ; exists ; 2011 ; Health Services Management Research Volume 24 ; 24 ; hsma ; >
         au < doNotProcess ; doNotProcess ; 2012 ; Health Services Management Research Volume 25 ; 25 ; hsma ; >
@@ -45188,7 +45188,7 @@
       au < manifest ; exists ; 2006 ; Scottish Medical Journal Volume 51 ; 51 ; scma ; >
       au < manifest ; exists ; 2007 ; Scottish Medical Journal Volume 52 ; 52 ; scma ; >
       au < frozen ; exists ; 2008 ; Scottish Medical Journal Volume 53 ; 53 ; scma ; >
-      au < manifest ; exists ; 2009 ; Scottish Medical Journal Volume 54 ; 54 ; scma ; >
+      au < crawling ; exists ; 2009 ; Scottish Medical Journal Volume 54 ; 54 ; scma ; >
       au < frozen ; exists ; 2010 ; Scottish Medical Journal Volume 55 ; 55 ; scma ; >
       au < frozen ; exists ; 2011 ; Scottish Medical Journal Volume 56 ; 56 ; scma ; >
       au < frozen ; exists ; 2012 ; Scottish Medical Journal Volume 57 ; 57 ; scma ; >
@@ -45246,7 +45246,7 @@
         au < manifest ; exists ; 2006 ; Ultrasound Volume 14 ; 14 ; ultb ; >
         au < manifest ; exists ; 2007 ; Ultrasound Volume 15 ; 15 ; ultb ; >
         au < frozen ; exists ; 2008 ; Ultrasound Volume 16 ; 16 ; ultb ; >
-        au < manifest ; exists ; 2009 ; Ultrasound Volume 17 ; 17 ; ultb ; >
+        au < crawling ; exists ; 2009 ; Ultrasound Volume 17 ; 17 ; ultb ; >
         au < frozen ; exists ; 2010 ; Ultrasound Volume 18 ; 18 ; ultb ; >
         au < frozen ; exists ; 2011 ; Ultrasound Volume 19 ; 19 ; ultb ; >
         au < frozen ; exists ; 2012 ; Ultrasound Volume 20 ; 20 ; ultb ; >
@@ -45815,7 +45815,7 @@
     au < manifest ; exists ; 2006 ; Tourism Economics Volume 12 ; 12 ; teua ; >
     au < manifest ; exists ; 2007 ; Tourism Economics Volume 13 ; 13 ; teua ; >
     au < frozen ; exists ; 2008 ; Tourism Economics Volume 14 ; 14 ; teua ; >
-    au < manifest ; exists ; 2009 ; Tourism Economics Volume 15 ; 15 ; teua ; >
+    au < crawling ; exists ; 2009 ; Tourism Economics Volume 15 ; 15 ; teua ; >
     au < crawling ; exists ; 2010 ; Tourism Economics Volume 16 ; 16 ; teua ; >
     au < crawling ; exists ; 2011 ; Tourism Economics Volume 17 ; 17 ; teua ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Tourism Economics Volume 18 ; 18 ; teua ; >
