@@ -67,7 +67,7 @@ public class OJS2CrawlSeedFactory implements CrawlSeedFactory {
   static {
     noIndexBaseUrlHosts.add("mulpress.mcmaster.ca");
     noIndexBaseUrlHosts.add("ijms.nmdl.org");
-    noIndexBaseUrlHosts.add("www.ajpspharm.com/");
+    noIndexBaseUrlHosts.add("www.ajpspharm.com");
   }
   
   
