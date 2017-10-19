@@ -4218,6 +4218,7 @@
 
     comment[journal_issn] = 1747-9886
     param[journal_id] = ijlps
+    #continued_by = 2056-4929
 
     au < doNotProcess ; 2005 ; The International Journal of Leadership in Public Services Volume 1 ; 1 >
     au < doNotProcess ; 2006 ; The International Journal of Leadership in Public Services Volume 2 ; 2 >
@@ -9522,8 +9523,6 @@
     au < released ; 2013 ; OCLC Systems & Services Volume 29 ; 29 >
     au < released ; 2014 ; OCLC Systems & Services Volume 30 ; 30 >
     au < released ; 2015 ; OCLC Systems & Services Volume 31 ; 31 >
-    au < expected ; 2016 ; OCLC Systems & Services Volume 32 ; 32 >
-    au < expected ; 2017 ; OCLC Systems & Services Volume 33 ; 33 >
 
   }
 
@@ -11372,8 +11371,6 @@
     au < released ; 2013 ; VINE Volume 43 ; 43 >
     au < released ; 2014 ; VINE Volume 44 ; 44 >
     au < released ; 2015 ; VINE Volume 45 ; 45 >
-    au < expected ; 2016 ; VINE Volume 46 ; 46 >
-    au < expected ; 2017 ; VINE Volume 47 ; 47 >
 
   }
 
