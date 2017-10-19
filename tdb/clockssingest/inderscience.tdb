@@ -9661,7 +9661,7 @@
 
       param[journal_id] = ijbise
 
-      au < crawling ; exists ; 2016-2018 ; International Journal of Business Intelligence and Systems Engineering Volume 1 ; 1 ;  >
+      au < ingNotReady ; exists ; 2016-2018 ; International Journal of Business Intelligence and Systems Engineering Volume 1 ; 1 ;  > # issue 2, 3, 4 not online
 
   }
 
@@ -9675,7 +9675,7 @@
 
       param[journal_id] = ijc
 
-      au < crawling ; exists ; 2016-2019 ; International Journal of Competitiveness Volume 1 ; 1 ;  >
+      au < ingNotReady ; exists ; 2016-2019 ; International Journal of Competitiveness Volume 1 ; 1 ;  > # issue 3, 4 not online
 
   }
 
@@ -9689,7 +9689,7 @@
 
       param[journal_id] = ijcssr
 
-      au < crawling ; exists ; 2016-2019 ; International Journal of Corporate Strategy and Social Responsibility Volume 1 ; 1 ;  >
+      au < ingNotReady ; exists ; 2016-2019 ; International Journal of Corporate Strategy and Social Responsibility Volume 1 ; 1 ;  > # issue 3, 4 not online
 
   }
 
@@ -9703,7 +9703,7 @@
 
       param[journal_id] = ijexportm
 
-      au < crawling ; exists ; 2016-2017 ; International Journal of Export Marketing Volume 1 ; 1 ;  >
+      au < ingNotReady ; exists ; 2016-2017 ; International Journal of Export Marketing Volume 1 ; 1 ;  > # issue 4 not online
 
   }
 
@@ -9732,7 +9732,7 @@
 
       param[journal_id] = ijmda
 
-      au < crawling ; exists ; 2016-2019 ; International Journal of Multivariate Data Analysis Volume 1 ; 1 ;  >
+      au < ingNotReady ; exists ; 2016-2019 ; International Journal of Multivariate Data Analysis Volume 1 ; 1 ;  > # issue 2, 3, 4 not online
 
   }
 
