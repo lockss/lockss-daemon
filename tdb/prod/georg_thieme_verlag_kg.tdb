@@ -847,6 +847,36 @@
 
   {
     title <
+      name = Die Wirbelsäule ;
+      issn = 2509-8241 ;
+      eissn = 2509-825X ;
+      doi = 10.1055/s-00033104
+
+    >
+    param[journal_id] = 10.1055/s-00033104
+    comment[years] = 2017-current
+
+   au < exists ; 2017 ; 2017 ; Die Wirbelsäule Volume 1 ; 1 >
+
+  }
+
+  {
+    title <
+      name = Digestive Disease Interventions ;
+      issn = 2472-8721 ;
+      eissn = 2472-873X ;
+      doi = 10.1055/s-00032260
+
+    >
+    param[journal_id] = 10.1055/s-00032260
+    comment[years] = 2017-current
+
+   au < exists ; 2017 ; 2017 ; Digestive Disease Interventions Volume 1 ; 1 >
+
+  }
+
+  {
+    title <
       name = Zeitschrift für Onkologie ;
       issn = 1432-2919 ;
       doi = 10.1055/s-00000097
@@ -2363,6 +2393,22 @@
     au < released ; 2015 ; 2015 ; Interventionelle Radiologie Scan Volume 3 ; 3 >
     au < released ; 2016 ; 2016 ; Interventionelle Radiologie Scan Volume 4 ; 4 >
     au < expected ; 2017 ; 2017 ; Interventionelle Radiologie Scan Volume 5 ; 5 >
+
+  }
+
+  {
+
+    title <
+      name = Joints ;
+      issn = 2282-4324 ;
+      eissn = 2512-9090 ;
+      doi = 10.1055/s-00033766
+
+    >
+    param[journal_id] = 10.1055/s-00033766
+    comment[years] = 2017-current
+
+    au < exists ; 2017 ; 2017 ; Joints Volume 1 ; 1 >
 
   }
 
