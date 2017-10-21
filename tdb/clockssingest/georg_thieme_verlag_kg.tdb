@@ -2476,6 +2476,21 @@
   {
 
     title <
+      name = Journal of Academic Ophtalmology ;
+      eissn = 2475-4757 ;
+      doi = 10.1055/s-00033285
+
+    >
+    param[journal_id] = 10.1055/s-00033285
+    #years = 2017
+
+   au < exists ; exists ; 2017 ; 2017 ; Journal of Academic Ophtalmology Volume 9 ; 9 ; >
+
+  }
+
+  {
+
+    title <
       name = Journal of Brachial Plexus and Peripheral Nerve Injury ;
       eissn = 1749-7221 ;
       doi = 10.1055/s-00027212
@@ -2515,6 +2530,21 @@
 
     au < deepCrawl ; down ; 2016 ; 2016 ; Journal of Clinical & Academic Ophthalmology Volume 8 ; 8 ;  >
     au < expected ; exists ; 2017 ; 2017 ; Journal of Clinical & Academic Ophthalmology Volume 9 ; 9 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Clinical Interventional Radiology ;
+      eissn = 2456-4869 ;
+      doi =  10.1055/s-00033348
+    >
+
+    param[journal_id] = 10.1055/s-00033348 
+    #years = 2017-current
+
+    au < exists ; exists ; 2017 ; 2017 ; Journal of Clinical Interventional Radiology Volume 1 ; 1 ; >
 
   }
 
@@ -3469,6 +3499,21 @@
     au < finished ; finished ; 2015 ; 2015 ; Neurochirurgie Scan Volume 3 ; 3 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; 2016 ; Neurochirurgie Scan Volume 4 ; 4 ; >
     au < expected ; exists ; 2017 ; 2017 ; Neurochirurgie Scan Volume 5 ; 5 ; >
+
+  }
+
+  {
+
+    title <
+      name = Neurology International Open ;
+      eissn = 2511-1795 ;
+      doi = 10.1055/s-00033101
+
+    >
+    param[journal_id] = 10.1055/s-00033101
+    #years = 2017-current
+
+    au < exists ; exists ; 2017 ; 2017 ; Neurology International Open Volume 1 ; 1 ; >
 
   }
 
@@ -4569,6 +4614,20 @@
 
    au < deepCrawl ; down ; 2016 ; 2016 ; Revista Brasileira de Ginecologia e Obstetrícia Volume 38 ; 38 ;  >
    au < crawling ; exists ; 2017 ; 2017 ; Revista Brasileira de Ginecologia e Obstetrícia Volume 39 ; 39 ; >
+
+  }
+
+  {
+    title <
+      name = Revista Chilena de Ortopedia y Traumatología ;
+      eissn = 0716-4548 ;
+      doi = 10.1055/s-00033425
+
+    >
+    param[journal_id] = 10.1055/s-00033425
+    #years = 2017-current
+
+   au < exists ; exists ; 2017 ; 2017 ; Revista Chilena de Ortopedia y Traumatología Volume 1 ; 1 ; >
 
   }
 
