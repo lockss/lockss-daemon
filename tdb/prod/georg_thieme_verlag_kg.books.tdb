@@ -1431,7 +1431,7 @@
       >
 
     #series doi = 10.1055/b-00000027;Farbatlanten der Zahnmedizin;;
-    au < exists ; 2004 ; 9783136556030 ; 9783131834539 ; 10.1055/b-002-44923 ; Parodontologie (9783136556030) >
+    au < doNotProcess ; 2004 ; 9783136556030 ; 9783131834539 ; 10.1055/b-002-44923 ; Parodontologie (9783136556030) (duplicate) > #same doi, same eisbn, diff isbn & year.
     au < released ; 2008 ; 9783137257028 ; 9783131902122 ; 10.1055/b-002-11354 ; Endodontologie (9783131902122) >
     au < released ; 2009 ; 9783131004529 ; 9783131902221 ; 10.1055/b-001-38 ; Ästhetische Zahnmedizin (9783131902221) >
     au < released ; 2012 ; 9783137258018 ; 9783131834614 ; 10.1055/b-002-19444 ; Kieferorthopädie – Therapie Band 1 (9783131834614) >

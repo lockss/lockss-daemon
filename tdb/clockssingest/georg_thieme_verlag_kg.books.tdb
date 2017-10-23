@@ -1437,6 +1437,7 @@
       >
 
     #series doi = 10.1055/b-00000027;Farbatlanten der Zahnmedizin;;
+    au < doNotProcess ; doNotProcess ; 2004 ; 9783136556030 ; 9783131834539 ; 10.1055/b-002-44923 ; Parodontologie (9783131834539) (duplicate); > #same doi, same eisbn, diff isbn & year.
     au < finished ; finished ; 2008 ; 9783137257028 ; 9783131902122 ; 10.1055/b-002-11354 ; Endodontologie (9783131902122) ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2009 ; 9783131004529 ; 9783131902221 ; 10.1055/b-001-38 ; Ästhetische Zahnmedizin (9783131902221) ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2012 ; 9783137258018 ; 9783131834614 ; 10.1055/b-002-19444 ; Kieferorthopädie – Therapie Band 1 (9783131834614) ; reingest2.clockss.org:8085 >
@@ -2155,7 +2156,6 @@
     au < frozen ; exists ; 2003 ; 9783137463023 ; 9783131854728 ; 10.1055/b-002-15438 ; Normalwerte in Wachstum und Entwicklung (9783131854728) ; >
     au < frozen ; exists ; 2003 ; 9783131262219 ; 9783131916518 ; 10.1055/b-002-6231 ; Orthopädie und orthopädische Chirurgie: Becken, Hüfte (9783131916518) ; >
     au < finished ; crawling ; 2003 ; 9781588901699 ; 9781604064339 ; 10.1055/b-002-43894 ; Otosclerosis and Stapedectomy (9781604064339) ; reingest3.clockss.org:8083 >
-    au < doNotProcess ; doNotProcess ; 2003 ; 9783136556030 ; 9783131834539 ; 10.1055/b-002-44923 ; Parodontologie (9783131834539) (duplicate); > #same doi, same eisbn, diff isbn & year.
     au < finished ; crawling ; 2003 ; 9783131083425 ; 9783131875723 ; 10.1055/b-002-11353 ; Praktische Tropen- und Reisemedizin (9783131875723) ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2003 ; 9783135968063 ; 9783131914866 ; 10.1055/b-002-54090 ; Praxis der EKG-Auswertung (9783131914866) ; >
     au < frozen ; exists ; 2003 ; 9783131378620 ; 9783131859129 ; 10.1055/b-002-29661 ; Psoriasis auf einen Blick (9783131859129) ; >
