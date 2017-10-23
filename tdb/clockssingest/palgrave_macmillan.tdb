@@ -572,7 +572,7 @@
       au < frozen ; exists ; 2012 ; Journal of Brand Management Volume 19 (2012) ; 2012 ; 19 ; >
       au < finished ; finished ; 2012 ; Journal of Brand Management Volume 20 (2012) ; 2012 ; 20 ; >
       au < finished ; finished ; 2013 ; Journal of Brand Management Volume 20 (2013) ; 2013 ; 20 ; >
-      au < notReady ; exists ; 2014 ; Journal of Brand Management Volume 21 (2014) ; 2014 ; 21 ; > # manifest page malformed. has V22 url.
+      au < doNotProcess ; exists ; 2014 ; Journal of Brand Management Volume 21 (2014) ; 2014 ; 21 ; >
       au < frozen ; exists ; 2015 ; Journal of Brand Management Volume 22 (2015) ; 2015 ; 22 ; >
       au < doNotProcess ; exists ; 2016 ; Journal of Brand Management Volume 23 (2016) ; 2016 ; 23 ; >
 
@@ -1079,7 +1079,7 @@
 
       param[journal_id] = pmed
 
-      au < testing ; exists ; 2010 ; postmedieval Volume 1 ; 2010 ; 1 ; >
+      au < doNotProcess ; exists ; 2010 ; postmedieval Volume 1 ; 2010 ; 1 ; >
       au < doNotProcess ; exists ; 2011 ; postmedieval Volume 2 ; 2011 ; 2 ; >
       au < finished ; finished ; 2012 ; postmedieval Volume 3 ; 2012 ; 3 ; >
       au < finished ; finished ; 2013 ; postmedieval Volume 4 ; 2013 ; 4 ; >
