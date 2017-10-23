@@ -5458,7 +5458,7 @@
 
       param[journal_id] = ijmd
 
-      au < crawling ; exists ; 2011-2016 ; International Journal of Management Development Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2011-2016 ; International Journal of Management Development Volume 1 ; 1 ; >
       au < expected ; exists ; 2017 ; International Journal of Management Development Volume 2 ; 2 ; >
 
     }
@@ -8165,7 +8165,7 @@
 
       param[journal_id] = ijscip
 
-      au < crawling ; exists ; 2012-2015 ; International Journal of Systems Control and Information Processing Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2012-2015 ; International Journal of Systems Control and Information Processing Volume 1 ; 1 ; >
       au < crawling ; exists ; 2017 ; International Journal of Systems Control and Information Processing Volume 2 ; 2 ; >
 
     }
@@ -9374,7 +9374,7 @@
 
       param[journal_id] = emjm
 
-      au < crawling ; exists ; 2015-2016 ; EuroMed Journal of Management Volume 1 ; 1 ;  >
+      au < frozen ; exists ; 2015-2016 ; EuroMed Journal of Management Volume 1 ; 1 ;  >
       au < manifest ; exists ; 2017-2018 ; EuroMed Journal of Management Volume 2 ; 2 ;  >
 
   }
@@ -9437,7 +9437,7 @@
       param[journal_id] = ijqrs
 
       au < frozen ; exists ; 2013-2014 ; International Journal of Qualitative Research in Services Volume 1 ; 1 ;  >
-      au < crawling ; exists ; 2015-2016 ; International Journal of Qualitative Research in Services Volume 2 ; 2 ;  >
+      au < frozen ; exists ; 2015-2016 ; International Journal of Qualitative Research in Services Volume 2 ; 2 ;  >
       au < expected ; exists ; 2017 ; International Journal of Qualitative Research in Services Volume 3 ; 3 ;  >
 
   }
@@ -9453,7 +9453,7 @@
       param[journal_id] = ijsmile
 
       au < crawling ; exists ; 2013 ; International Journal of Social Media and Interactive Learning Environments Volume 1 ; 1 ;  >
-      au < crawling ; exists ; 2014 ; International Journal of Social Media and Interactive Learning Environments Volume 2 ; 2 ;  >
+      au < frozen ; exists ; 2014 ; International Journal of Social Media and Interactive Learning Environments Volume 2 ; 2 ;  >
       au < finished ; crawling ; 2015 ; International Journal of Social Media and Interactive Learning Environments Volume 3 ; 3 ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2016 ; International Journal of Social Media and Interactive Learning Environments Volume 4 ; 4 ;  >
       au < crawling ; exists ; 2017 ; International Journal of Social Media and Interactive Learning Environments Volume 5 ; 5 ;  >
@@ -9471,8 +9471,8 @@
       param[journal_id] = mejm
 
       au < frozen ; exists ; 2013-2014 ; Middle East Journal of Management Volume 1 ; 1 ;  >
-      au < crawling ; exists ; 2015 ; Middle East Journal of Management Volume 2 ; 2 ;  >
-      au < crawling ; exists ; 2016 ; Middle East Journal of Management Volume 3 ; 3 ;  >
+      au < frozen ; exists ; 2015 ; Middle East Journal of Management Volume 2 ; 2 ;  >
+      au < frozen ; exists ; 2016 ; Middle East Journal of Management Volume 3 ; 3 ;  >
       au < crawling ; exists ; 2017 ; Middle East Journal of Management Volume 4 ; 4 ;  >
 
   }
@@ -9487,10 +9487,10 @@
 
       param[journal_id] = ijhrcs
 
-      au < crawling ; exists ; 2013 ; International Journal of Human Rights and Constitutional Studies Volume 1 ; 1 ;  >
+      au < frozen ; exists ; 2013 ; International Journal of Human Rights and Constitutional Studies Volume 1 ; 1 ;  >
       au < frozen ; exists ; 2014 ; International Journal of Human Rights and Constitutional Studies Volume 2 ; 2 ;  >
       au < frozen ; exists ; 2015 ; International Journal of Human Rights and Constitutional Studies Volume 3 ; 3 ;  >
-      au < crawling ; exists ; 2016 ; International Journal of Human Rights and Constitutional Studies Volume 4 ; 4 ;  >
+      au < frozen ; exists ; 2016 ; International Journal of Human Rights and Constitutional Studies Volume 4 ; 4 ;  >
       au < crawling ; exists ; 2017 ; International Journal of Human Rights and Constitutional Studies Volume 5 ; 5 ;  >
 
   }
@@ -9568,7 +9568,7 @@
 
       param[journal_id] = ijdss
 
-      au < crawling ; exists ; 2015 ; International Journal of Decision Support Systems Volume 1 ; 1 ;  >
+      au < frozen ; exists ; 2015 ; International Journal of Decision Support Systems Volume 1 ; 1 ;  >
       au < frozen ; exists ; 2016 ; International Journal of Decision Support Systems Volume 2 ; 2 ;  >
       au < expected ; exists ; 2017 ; International Journal of Decision Support Systems Volume 3 ; 3 ;  >
 
@@ -9599,7 +9599,7 @@
 
       param[journal_id] = ijmabs
 
-      au < crawling ; exists ; 2015 ; International Journal of Markets and Business Systems Volume 1 ; 1 ;  >
+      au < frozen ; exists ; 2015 ; International Journal of Markets and Business Systems Volume 1 ; 1 ;  >
       au < crawling ; exists ; 2016 ; International Journal of Markets and Business Systems Volume 2 ; 2 ;  >
       au < expected ; exists ; 2017 ; International Journal of Markets and Business Systems Volume 3 ; 3 ;  >
 
@@ -9631,7 +9631,7 @@
       param[journal_id] = ijsami
 
       au < frozen ; exists ; 2015 ; International Journal of Sustainable Agricultural Management and Informatics Volume 1 ; 1 ;  >
-      au < crawling ; exists ; 2016 ; International Journal of Sustainable Agricultural Management and Informatics Volume 2 ; 2 ;  >
+      au < frozen ; exists ; 2016 ; International Journal of Sustainable Agricultural Management and Informatics Volume 2 ; 2 ;  >
       au < crawling ; exists ; 2017 ; International Journal of Sustainable Agricultural Management and Informatics Volume 3 ; 3 ;  >
 
   }

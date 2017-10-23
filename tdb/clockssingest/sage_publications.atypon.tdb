@@ -6903,7 +6903,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; Compensation & Benefits Review Volume 45 ; 45 ; cbrb ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Compensation & Benefits Review Volume 46 ; 46 ; cbrb ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Compensation & Benefits Review Volume 47 ; 47 ; cbrb ; >
-      au < crawling ; exists ; 2016 ; Compensation & Benefits Review Volume 48 ; 48 ; cbrb ; >
+      au < frozen ; exists ; 2016 ; Compensation & Benefits Review Volume 48 ; 48 ; cbrb ; >
       au < expected ; exists ; 2017 ; Compensation & Benefits Review Volume 49 ; 49 ; cbrb ; >
 
     }
@@ -21282,7 +21282,7 @@
       au < frozen ; exists ; 2013 ; The Journal of Egyptian Archaeology Volume 99 ; 99 ; egaa ; >
       au < frozen ; exists ; 2014 ; The Journal of Egyptian Archaeology Volume 100 ; 100 ; egaa ; >
       au < frozen ; exists ; 2015 ; The Journal of Egyptian Archaeology Volume 101 ; 101 ; egaa ; >
-      au < crawling ; exists ; 2016 ; The Journal of Egyptian Archaeology Volume 102 ; 102 ; egaa ; >
+      au < frozen ; exists ; 2016 ; The Journal of Egyptian Archaeology Volume 102 ; 102 ; egaa ; >
       au < expected ; exists ; 2017 ; The Journal of Egyptian Archaeology Volume 103 ; 103 ; egaa ; >
 
   }
@@ -43611,7 +43611,7 @@
     au < manifest ; exists ; 2007 ; Pacifica: Australasian Theological Studies Volume 20 ; 20 ; paaa ; >
     au < frozen ; exists ; 2008 ; Pacifica: Australasian Theological Studies Volume 21 ; 21 ; paaa ; >
     au < crawling ; exists ; 2009 ; Pacifica: Australasian Theological Studies Volume 22 ; 22 ; paaa ; >
-    au < crawling ; exists ; 2010 ; Pacifica: Australasian Theological Studies Volume 23 ; 23 ; paaa ; >
+    au < frozen ; exists ; 2010 ; Pacifica: Australasian Theological Studies Volume 23 ; 23 ; paaa ; >
     au < frozen ; exists ; 2011 ; Pacifica: Australasian Theological Studies Volume 24 ; 24 ; paaa ; >
     au < frozen ; exists ; 2012 ; Pacifica: Australasian Theological Studies Volume 25 ; 25 ; paaa ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Pacifica: Australasian Theological Studies Volume 26 ; 26 ; paaa ; >

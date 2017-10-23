@@ -527,7 +527,7 @@
     #continues = 2044-2084
 
     au < crawling ; exists ; 2015 ; Arts and the Market Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2016 ; Arts and the Market Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2016 ; Arts and the Market Volume 6 ; 6 ; >
     au < crawling ; exists ; 2017 ; Arts and the Market Volume 7 ; 7 ; >
 
   }
@@ -1813,7 +1813,7 @@
     param[journal_id] = ccsm
     #continues = 1352-7606
 
-    au < crawling ; exists ; 2016 ; Cross Cultural & Strategic Management Volume 23 ; 23 ; >
+    au < frozen ; exists ; 2016 ; Cross Cultural & Strategic Management Volume 23 ; 23 ; >
     au < crawling ; exists ; 2017 ; Cross Cultural & Strategic Management Volume 24 ; 24 ; >
 
   }

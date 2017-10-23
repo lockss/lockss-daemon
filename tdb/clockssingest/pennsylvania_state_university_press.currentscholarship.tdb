@@ -421,8 +421,8 @@
 
       au < manifest ; exists ; 2010 ; The Mark Twain Annual Volume 8 ; 2010 ; >
       au < manifest ; exists ; 2011 ; The Mark Twain Annual Volume 9 ; 2011 ; >
-      au < crawling ; exists ; 2012 ; The Mark Twain Annual Volume 10 ; 2012 ; >
-      au < crawling ; exists ; 2013 ; The Mark Twain Annual Volume 11 ; 2013 ; >
+      au < frozen ; exists ; 2012 ; The Mark Twain Annual Volume 10 ; 2012 ; >
+      au < frozen ; exists ; 2013 ; The Mark Twain Annual Volume 11 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; The Mark Twain Annual Volume 12 ; 2014 ; >
       au < frozen ; exists ; 2015 ; The Mark Twain Annual Volume 13 ; 2015 ; >
       au < frozen ; exists ; 2016 ; The Mark Twain Annual Volume 14 ; 2016 ; >
@@ -468,7 +468,7 @@
 
       au < exists ; exists ; 2010 ; Pacific Coast Philology Volume 45 ; 2010 ; >
       au < manifest ; exists ; 2011 ; Pacific Coast Philology Volume 46 ; 2011 ; >
-      au < crawling ; exists ; 2012 ; Pacific Coast Philology Volume 47 ; 2012 ; >
+      au < frozen ; exists ; 2012 ; Pacific Coast Philology Volume 47 ; 2012 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Pacific Coast Philology Volume 48 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Pacific Coast Philology Volume 49 ; 2014 ; >
       au < frozen ; exists ; 2015 ; Pacific Coast Philology Volume 50 ; 2015 ; >
@@ -582,7 +582,7 @@
       au < frozen ; exists ; 2013 ; SHAW The Annual of Bernard Shaw Studies Volume 33 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; SHAW The Annual of Bernard Shaw Studies Volume 34 ; 2014 ; >
       au < frozen ; exists ; 2015 ; SHAW: The Journal of Bernard Shaw Studies Volume 35 ; 2015 ; >
-      au < crawling ; exists ; 2016 ; SHAW: The Journal of Bernard Shaw Studies Volume 36 ; 2016 ; >
+      au < frozen ; exists ; 2016 ; SHAW: The Journal of Bernard Shaw Studies Volume 36 ; 2016 ; >
       au < crawling ; exists ; 2017 ; SHAW: The Journal of Bernard Shaw Studies Volume 37 ; 2017 ; >
       
   }
@@ -623,7 +623,7 @@
       au < manifest ; exists ; 2010 ; Steinbeck Review Volume 7 ; 2010 ; >
       au < manifest ; exists ; 2011 ; Steinbeck Review Volume 8 ; 2011 ; >
       au < frozen ; exists ; 2012 ; Steinbeck Review Volume 9 ; 2012 ; >
-      au < crawling ; exists ; 2013 ; Steinbeck Review Volume 10 ; 2013 ; >
+      au < frozen ; exists ; 2013 ; Steinbeck Review Volume 10 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Steinbeck Review Volume 11 ; 2014 ; >
       au < frozen ; exists ; 2015 ; Steinbeck Review Volume 12 ; 2015 ; >
       au < frozen ; exists ; 2016 ; Steinbeck Review Volume 13 ; 2016 ; >
