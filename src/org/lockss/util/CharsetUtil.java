@@ -56,6 +56,13 @@ public class CharsetUtil {
   public static final String PARAM_INFER_CHARSET = PREFIX + "inferCharset";
   public static final boolean DEFAULT_INFER_CHARSET = true;
 
+  /** Number of bytes from the stream that will be searched for an HTML or
+   * XML charset spec, or fed to CharsetDetector (which may not look at all
+   * of them). */
+  public static final String PARAM_INFER_CHARSET_BUFSIZE =
+    PREFIX + "inferCharsetBufSize";
+  public static final int DEFAULT_INFER_CHARSET_BUFSIZE = 8192;
+
   private static final String UTF8 = "UTF-8";
   private static final String UTF16BE = "UTF-16BE";
   private static final String UTF16LE = "UTF-16LE";
@@ -66,12 +73,16 @@ public class CharsetUtil {
   private static final String ISO_8859_1 = "ISO-8859-1";
 
   private static boolean inferCharset = DEFAULT_INFER_CHARSET;
+  private static int inferCharsetBufSize = DEFAULT_INFER_CHARSET_BUFSIZE;
 
   public static void setConfig(final org.lockss.config.Configuration config,
     final org.lockss.config.Configuration oldConfig,
     final org.lockss.config.Configuration.Differences diffs) {
     inferCharset =
       config.getBoolean(PARAM_INFER_CHARSET,DEFAULT_INFER_CHARSET);
+    inferCharsetBufSize =
+      config.getInt(PARAM_INFER_CHARSET_BUFSIZE,
+		    DEFAULT_INFER_CHARSET_BUFSIZE);
   }
 
   public static boolean inferCharset() {return inferCharset;}
@@ -88,8 +99,8 @@ public class CharsetUtil {
     if(!in.markSupported())
       throw new IllegalArgumentException("InputStream must support mark.");
     ByteArrayOutputStream buffered = new ByteArrayOutputStream();
-    byte[] buf = new byte[1024];
-    in.mark(2048);
+    byte[] buf = new byte[inferCharsetBufSize];
+    in.mark(inferCharsetBufSize + 1024);
     int len = in.read(buf);
     if (len <= 0) {
       return UTF8; // this is just a default for 0 len stream
@@ -161,11 +172,10 @@ public class CharsetUtil {
     }
     ByteArrayOutputStream buffered = new ByteArrayOutputStream();
     int len = 0;
-    byte[] buf = new byte[1024];
+    byte[] buf = new byte[inferCharsetBufSize];
     if(inStream != null) {
       len = inStream.read(buf);
     }
-
     if (len <= 0) {
       return new InputStreamAndCharset(inStream, expectedCharset);
     }

@@ -64,6 +64,19 @@ public class TestCharsetUtil extends LockssTestCase {
    static final byte[] UTF1_BOM =
      {(byte)0xF7,(byte)0x64,(byte)0x4C};
 
+  static final String  HTML_FRAGMENT =
+    "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n" +
+    "        \"http://www.w3.org/TR/html4/loose.dtd\">\n" +
+    "<HTML>\n" +
+    "\n" +
+    "<head>\n";
+
+  String metaTag(String charset) {
+    return "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=" +
+      charset + "\">\n";
+  }
+
+
   static final String  HTML_HEADER =
     "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n" +
     "        \"http://www.w3.org/TR/html4/loose.dtd\">\n" +
@@ -432,6 +445,13 @@ public class TestCharsetUtil extends LockssTestCase {
 						    "ISO-8859-1"));
   }
 
+  void assertStreamCharset(String expCharset, String str)
+      throws IOException {
+    InputStream is =  new ByteArrayInputStream(str.getBytes("ISO-8859-1"));
+    CharsetUtil.InputStreamAndCharset isc = CharsetUtil.getCharsetStream(is);
+    assertEquals(expCharset, isc.getCharset());
+  }
+
   public void testGetCharsetStream() throws Exception {
     assertStreamCharsetFromBOM("UTF-8", UTF8_BOM);
     assertStreamCharsetFromBOM("UTF-16LE", UTF16_BOM_LE);
@@ -451,6 +471,19 @@ public class TestCharsetUtil extends LockssTestCase {
     } else {
       assertStreamCharsetFromBOM("UTF-8", UTF1_BOM);
     }
+  }
+
+  public void testBufSize() throws Exception {
+    assertStreamCharset("ISO-8859-1", HTML_HEADER);
+    ConfigurationUtil.setFromArgs(CharsetUtil.PARAM_INFER_CHARSET_BUFSIZE, "4");
+    assertStreamCharset("ISO-8859-2", HTML_HEADER);
+
+    String u = HTML_FRAGMENT +
+      StringUtils.repeat("          ", 2000) + metaTag("UTF-8");
+    assertStreamCharset("ISO-8859-2", u);
+    ConfigurationUtil.setFromArgs(CharsetUtil.PARAM_INFER_CHARSET_BUFSIZE,
+				  "");
+    assertStreamCharset("UTF-8", u);
   }
 
    public void testHasUtf8BOM() throws Exception {
@@ -605,6 +638,10 @@ public class TestCharsetUtil extends LockssTestCase {
       String html = "<html>Hello, World!</html>";
       String xmlUtf8 = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" + html;
       assertCharset(xmlUtf8, xmlUtf8.getBytes("UTF-8"), "UTF-8");
+      ConfigurationUtil.setFromArgs(CharsetUtil.PARAM_INFER_CHARSET_BUFSIZE,
+				    "10");
+      assertCharset(xmlUtf8, xmlUtf8.getBytes("UTF-8"), "ISO-8859-1");
+      ConfigurationUtil.setFromArgs(CharsetUtil.PARAM_INFER_CHARSET_BUFSIZE, "");
       String xmlUtf16BE = "<?xml version=\"1.0\" encoding=\"UTF-16BE\"?>" + html;
       assertCharset(xmlUtf16BE, xmlUtf16BE.getBytes("UTF-16BE"), "UTF-16BE");
       String xmlUtf16LE = "<?xml version=\"1.0\" encoding=\"UTF-16LE\"?>" + html;
