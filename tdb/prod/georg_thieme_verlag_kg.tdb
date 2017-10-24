@@ -856,7 +856,7 @@
     param[journal_id] = 10.1055/s-00033104
     comment[years] = 2017-current
 
-   au < exists ; 2017 ; 2017 ; Die Wirbelsäule Volume 1 ; 1 >
+   au < manifest ; 2017 ; 2017 ; Die Wirbelsäule Volume 1 ; 1 >
 
   }
 
@@ -871,7 +871,7 @@
     param[journal_id] = 10.1055/s-00032260
     comment[years] = 2017-current
 
-   au < exists ; 2017 ; 2017 ; Digestive Disease Interventions Volume 1 ; 1 >
+   au < manifest ; 2017 ; 2017 ; Digestive Disease Interventions Volume 1 ; 1 >
 
   }
 
@@ -2408,7 +2408,7 @@
     param[journal_id] = 10.1055/s-00033766
     comment[years] = 2017-current
 
-    au < exists ; 2017 ; 2017 ; Joints Volume 1 ; 1 >
+    au < manifest ; 2017 ; 2017 ; Joints Volume 1 ; 1 >
 
   }
 
@@ -2481,7 +2481,7 @@
     param[journal_id] = 10.1055/s-00033285
     #years = 2017
 
-   au < exists ; 2017 ; 2017 ; Journal of Academic Ophtalmology Volume 9 ; 9 >
+   au < manifest ; 2017 ; 2017 ; Journal of Academic Ophtalmology Volume 9 ; 9 >
 
   }
 
@@ -2541,7 +2541,7 @@
     param[journal_id] = 10.1055/s-00033348 
     #years = 2017-current
 
-    au < exists ; 2017 ; 2017 ; Journal of Clinical Interventional Radiology Volume 1 ; 1 >
+    au < manifest ; 2017 ; 2017 ; Journal of Clinical Interventional Radiology Volume 1 ; 1 >
 
   }
 
@@ -3510,7 +3510,7 @@
     param[journal_id] = 10.1055/s-00033101
     #years = 2017-current
 
-    au < exists ; 2017 ; 2017 ; Neurology International Open Volume 1 ; 1 >
+    au < manifest ; 2017 ; 2017 ; Neurology International Open Volume 1 ; 1 >
 
   }
 
@@ -4625,7 +4625,7 @@
     param[journal_id] = 10.1055/s-00033425
     #years = 2017-current
 
-   au < exists ; 2017 ; 2017 ; Revista Chilena de Ortopedia y Traumatología Volume 1 ; 1 >
+   au < manifest ; 2017 ; 2017 ; Revista Chilena de Ortopedia y Traumatología Volume 1 ; 1 >
 
   }
 
@@ -5358,7 +5358,7 @@
     param[journal_id] = 10.1055/s-00032056
     #years = 2017-current
 
-    au < exists ; 2017 ; 2017 ; Sports Medicine International Open Volume 1 ; 1 >
+    au < manifest ; 2017 ; 2017 ; Sports Medicine International Open Volume 1 ; 1 >
 
   }
 

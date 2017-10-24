@@ -380,12 +380,12 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = http://www.ai-journal.com/
 
-      au < exists ; 2000 ; 4 ; Archaeology International Volume 2000 ; 2000 ; https://www.ai-journal.com/ >
-      au < exists ; 2001 ; 5 ; Archaeology International Volume 2001 ; 2001 ; https://www.ai-journal.com/ >
-      au < exists ; 2002 ; 6 ; Archaeology International Volume 2002 ; 2002 ; https://www.ai-journal.com/ >
-      au < exists ; 2003 ; 7 ; Archaeology International Volume 2003 ; 2003 ; https://www.ai-journal.com/ >
-      au < exists ; 2004 ; 8 ; Archaeology International Volume 2004 ; 2004 ; https://www.ai-journal.com/ >
-      au < exists ; 2005 ; 9 ; Archaeology International Volume 2005 ; 2005 ; https://www.ai-journal.com/ >
+      au < manifest ; 2000 ; 4 ; Archaeology International Volume 2000 ; 2000 ; https://www.ai-journal.com/ >
+      au < manifest ; 2001 ; 5 ; Archaeology International Volume 2001 ; 2001 ; https://www.ai-journal.com/ >
+      au < manifest ; 2002 ; 6 ; Archaeology International Volume 2002 ; 2002 ; https://www.ai-journal.com/ >
+      au < manifest ; 2003 ; 7 ; Archaeology International Volume 2003 ; 2003 ; https://www.ai-journal.com/ >
+      au < manifest ; 2004 ; 8 ; Archaeology International Volume 2004 ; 2004 ; https://www.ai-journal.com/ >
+      au < manifest ; 2005 ; 9 ; Archaeology International Volume 2005 ; 2005 ; https://www.ai-journal.com/ >
       au < exists ; 2006 ; 10 ; Archaeology International Volume 2006 ; 2006 ; https://www.ai-journal.com/ >
       au < released ; 2007 ; 11 ; Archaeology International Volume 2007 ; 2007 ; http://www.ai-journal.com/ >
       au < released ; 2008 ; 12 ; Archaeology International Volume 2008 ; 2008 ; http://www.ai-journal.com/ >

@@ -69,7 +69,7 @@
       au < released ; 2004 ; 9780080441085 ; 9781615832538 ; 9781615832538 ; Handbook of Transport Geography and Spatial Systems (9781615832538) >
       au < notReady ; 2005 ; 9780080441153 ; 9780080456041 ; 9780080456041 ; Handbook of Transport Strategy, Policy and Institutions (9780080456041) >
       au < notReady ; 2007 ; 9780080453767 ; 9780857245670 ; 9780857245670 ; Handbook of Transport Modelling: 2nd Edition (9780857245670) >
-      au < exists ; 2008 ; 9780080435930 ; 9780857245632 ; 9780080435930 ; Handbook of Logistics and Supply-Chain Management (9780857245632) >
+      au < manifest ; 2008 ; 9780080435930 ; 9780857245632 ; 9780080435930 ; Handbook of Logistics and Supply-Chain Management (9780857245632) >
 
   }
   
@@ -83,18 +83,18 @@
 
       #param[journal_issn] = 1877-6361
 
-      au < exists ; 2009 ; 978-1-84855-832-8 ; 978-1-84855-833-5 ; 9781848558335 ; Advanced Series in Management Volume 6 >
-      au < exists ; 2010 ; 978-0-85724-006-4 ; 978-0-85724-007-1 ; 9780857240071 ; Relational Practices, Participative Organizing Volume 7 >
-      au < exists ; 2011 ; 978-0-85724-973-9 ; 978-0-85724-973-9 ; 9780857249739 ; Electronic HRM in Theory and Practice Volume 8 >
-      au < exists ; 2012 ; 978-1-78052-674-4 ; 978-1-78052-675-1 ; 9781780526751 ; Commercial Diplomacy and International Business: A Conceptual and Empirical Exploration Volume 9 >
-      au < exists ; 2013 ; 978-1-78190-601-9 ; 978-1-78190-602-6 ; 9781781906026 ; (Dis)Honesty in Management Volume 10 >
-      au < exists ; 2013 ; 978-1-78190-898-3 ; 978-1-78190-899-0 ; 9781781908990 ; Social Media in Strategic Management Volume 11 >
-      au < exists ; 2013 ; 978-1-78190-900-3 ; 978-1-78190-901-0 ; 9781781909010 ; Social Media in Human Resources Management Volume 12 >
-      au < exists ; 2014 ; 978-1-78350-535-7 ; 978-1-78350-536-4 ; 9781783505364 ; Shared Services as a New Organizational Form Volume 13 >
-      au < exists ; 2014 ; 978-1-78441-130-5 ; 978-1-78441-129-9 ; 9781784411299 ; Human Resource Management, Social Innovation and Technology Volume 14 >
-      au < exists ; 2016 ; 978-1-78635-314-6 ; 978-1-78635-313-9 ; 9781786353139 ; Dead Firms: Causes and Effects of Cross-border Corporate Insolvency Volume 15 >
-      au < exists ; 2016 ; 978-1-78560-303-7 ; 978-1-78560-302-0 ; 9781785603020 ; New Ways of Working Practices: Antecedents and Outcomes Volume 16 >
-      au < exists ; 2017 ; 978-1-78743-074-7 ; 978-1-78743-073-0 ; 9781787430730 ; Age Diversity in the Workplace: An Organizational Perspective Volume 17 >
+      au < manifest ; 2009 ; 978-1-84855-832-8 ; 978-1-84855-833-5 ; 9781848558335 ; Advanced Series in Management Volume 6 >
+      au < manifest ; 2010 ; 978-0-85724-006-4 ; 978-0-85724-007-1 ; 9780857240071 ; Relational Practices, Participative Organizing Volume 7 >
+      au < manifest ; 2011 ; 978-0-85724-973-9 ; 978-0-85724-973-9 ; 9780857249739 ; Electronic HRM in Theory and Practice Volume 8 >
+      au < manifest ; 2012 ; 978-1-78052-674-4 ; 978-1-78052-675-1 ; 9781780526751 ; Commercial Diplomacy and International Business: A Conceptual and Empirical Exploration Volume 9 >
+      au < manifest ; 2013 ; 978-1-78190-601-9 ; 978-1-78190-602-6 ; 9781781906026 ; (Dis)Honesty in Management Volume 10 >
+      au < manifest ; 2013 ; 978-1-78190-898-3 ; 978-1-78190-899-0 ; 9781781908990 ; Social Media in Strategic Management Volume 11 >
+      au < manifest ; 2013 ; 978-1-78190-900-3 ; 978-1-78190-901-0 ; 9781781909010 ; Social Media in Human Resources Management Volume 12 >
+      au < manifest ; 2014 ; 978-1-78350-535-7 ; 978-1-78350-536-4 ; 9781783505364 ; Shared Services as a New Organizational Form Volume 13 >
+      au < manifest ; 2014 ; 978-1-78441-130-5 ; 978-1-78441-129-9 ; 9781784411299 ; Human Resource Management, Social Innovation and Technology Volume 14 >
+      au < manifest ; 2016 ; 978-1-78635-314-6 ; 978-1-78635-313-9 ; 9781786353139 ; Dead Firms: Causes and Effects of Cross-border Corporate Insolvency Volume 15 >
+      au < manifest ; 2016 ; 978-1-78560-303-7 ; 978-1-78560-302-0 ; 9781785603020 ; New Ways of Working Practices: Antecedents and Outcomes Volume 16 >
+      au < manifest ; 2017 ; 978-1-78743-074-7 ; 978-1-78743-073-0 ; 9781787430730 ; Age Diversity in the Workplace: An Organizational Perspective Volume 17 >
 
   }
 
@@ -112,18 +112,18 @@
       au < doNotProcess ; 2001 ; 978-0-7623-0784-5 ; 978-1-84950-104-0 ; 9781849501040 ; Advances in Accounting Behavioral Research Volume 4 > #RT7387 incorrect article links
       au < doNotProcess ; 2002 ; 978-0-7623-0953-5 ; 978-1-84950-169-9 ; 9781849501699 ; Advances in Accounting Behavioral Research Volume 5 > #RT7387 incorrect article links
       au < doNotProcess ; 2003 ; 978-0-7623-1047-0 ; 978-1-84950-231-3 ; 9781849502313 ; Advances in Accounting Behavioral Research Volume 6 > #RT7387 incorrect article links
-      au < exists ; 2004 ; 978-0-7623-1117-0 ; 978-1-84950-280-1 ; 9781849502801 ; Advances in Accounting Behavioral Research Volume 7 >
-      au < exists ; 2005 ; 978-0-7623-1218-4 ; 978-1-84950-348-8 ; 9781849503488 ; Advances in Accounting Behavioral Research Volume 8 >
-      au < exists ; 2006 ; 978-0-7623-1353-2 ; 978-1-84950-448-5 ; 9781849504485 ; Advances in Accounting Behavioral Research Volume 9 >
-      au < exists ; 2008 ; 978-1-84663-960-9 ; 978-1-84663-961-6 ; 9781846639616 ; Advances in Accounting Behavioral Research Volume 11 >
-      au < exists ; 2009 ; 978-1-84855-738-3 ; 978-1-84855-739-0 ; 9781848557390 ; Advances in Accounting Behavioral Research Volume 12 >
-      au < exists ; 2010 ; 978-0-85724-137-5 ; 978-0-85724-138-2 ; 9780857241382 ; Advances in Accounting Behavioral Research Volume 13 >
-      au < exists ; 2011 ; 978-1-78052-086-5 ; 978-1-78052-087-2 ; 9781780520872 ; Advances in Accounting Behavioral Research Volume 14 >
-      au < exists ; 2012 ; 978-1-78052-758-1 ; 978-1-78052-759-8 ; 9781780527598 ; Advances in Accounting Behavioral Research Volume 15 >
-      au < exists ; 2013 ; 978-1-78190-838-9 ; 978-1-78190-839-6 ; 9781781908396 ; Advances in Accounting Behavioral Research Volume 16 >
-      au < exists ; 2014 ; 978-1-78350-445-9 ; 978-1-78350-446-6 ; 9781783504466 ; Advances in Accounting Behavioral Research Volume 17 >
-      au < exists ; 2015 ; 978-1-78441-636-2 ; 978-1-78441-635-5 ; 9781784416355 ; Advances in Accounting Behavioral Research Volume 18 >
-      au < exists ; 2016 ; 978-1-78560-978-7 ; 978-1-78560-977-0 ; 9781785609770 ; Advances in Accounting Behavioral Research Volume 19 >
+      au < manifest ; 2004 ; 978-0-7623-1117-0 ; 978-1-84950-280-1 ; 9781849502801 ; Advances in Accounting Behavioral Research Volume 7 >
+      au < manifest ; 2005 ; 978-0-7623-1218-4 ; 978-1-84950-348-8 ; 9781849503488 ; Advances in Accounting Behavioral Research Volume 8 >
+      au < manifest ; 2006 ; 978-0-7623-1353-2 ; 978-1-84950-448-5 ; 9781849504485 ; Advances in Accounting Behavioral Research Volume 9 >
+      au < manifest ; 2008 ; 978-1-84663-960-9 ; 978-1-84663-961-6 ; 9781846639616 ; Advances in Accounting Behavioral Research Volume 11 >
+      au < manifest ; 2009 ; 978-1-84855-738-3 ; 978-1-84855-739-0 ; 9781848557390 ; Advances in Accounting Behavioral Research Volume 12 >
+      au < manifest ; 2010 ; 978-0-85724-137-5 ; 978-0-85724-138-2 ; 9780857241382 ; Advances in Accounting Behavioral Research Volume 13 >
+      au < manifest ; 2011 ; 978-1-78052-086-5 ; 978-1-78052-087-2 ; 9781780520872 ; Advances in Accounting Behavioral Research Volume 14 >
+      au < manifest ; 2012 ; 978-1-78052-758-1 ; 978-1-78052-759-8 ; 9781780527598 ; Advances in Accounting Behavioral Research Volume 15 >
+      au < manifest ; 2013 ; 978-1-78190-838-9 ; 978-1-78190-839-6 ; 9781781908396 ; Advances in Accounting Behavioral Research Volume 16 >
+      au < manifest ; 2014 ; 978-1-78350-445-9 ; 978-1-78350-446-6 ; 9781783504466 ; Advances in Accounting Behavioral Research Volume 17 >
+      au < manifest ; 2015 ; 978-1-78441-636-2 ; 978-1-78441-635-5 ; 9781784416355 ; Advances in Accounting Behavioral Research Volume 18 >
+      au < manifest ; 2016 ; 978-1-78560-978-7 ; 978-1-78560-977-0 ; 9781785609770 ; Advances in Accounting Behavioral Research Volume 19 >
 
   }
 
@@ -137,25 +137,25 @@
 
       #param[journal_issn] = 1085-4622
 
-      au < exists ; 2000 ; 978-0-7623-0515-5 ; 978-1-84950-872-8 ; 9781849508728 ; Advances in Accounting Education Teaching and Curriculum Innovations Volume 2 >
-      au < exists ; 2000 ; 978-0-7623-0758-6 ; 978-1-84950-871-1 ; 9781849508711 ; Advances in Accounting Education Teaching and Curriculum Innovations Volume 3 >
-      au < exists ; 2002 ; 978-0-7623-0856-9 ; 978-0-85724-052-1 ; 9780857240521 ; Advances in Accounting Education Teaching and Curriculum Innovations Volume 4 >
-      au < exists ; 2003 ; 978-0-7623-1035-7 ; 978-1-84950-870-4 ; 9781849508704 ; Advances in Accounting Education Teaching and Curriculum Innovations Volume 5 >
-      au < exists ; 2004 ; 978-0-7623-1143-9 ; 978-1-84950-868-1 ; 9781849508681 ; Advances in Accounting Education Teaching and Curriculum Innovations Volume 6 >
-      au < exists ; 2005 ; 978-0-7623-1269-6 ; 978-1-84950-869-8 ; 9781849508698 ; Advances in Accounting Education: Teaching and Curriculum Innovations Volume 7 >
-      au < exists ; 2007 ; 978-0-7623-1447-8 ; 978-1-84950-867-4 ; 9781849508674 ; Advances in Accounting Education Teaching and Curriculum Innovations Volume 8 >
-      au < exists ; 2008 ; 978-0-7623-1458-4 ; 978-1-84950-519-2 ; 9781849505192 ; Advances in Accounting Education Volume 9 >
-      au < exists ; 2009 ; 978-1-84855-882-3 ; 978-1-84855-883-0 ; 9781848558830 ; Advances in Accounting Education Volume 10 >
-      au < exists ; 2010 ; 978-0-85724-291-4 ; 978-0-85724-292-1 ; 9780857242921 ; Advances in Accounting Education Volume 11 >
-      au < exists ; 2011 ; 978-1-78052-222-7 ; 978-1-78052-223-4 ; 9781780522234 ; Advances in Accounting Education: Teaching and Curriculum Innovations Volume 12 >
-      au < exists ; 2012 ; 978-1-78052-756-7 ; 978-1-78052-757-4 ; 9781780527574 ; Advances in Accounting Education: Teaching and Curriculum Innovations Volume 13 >
-      au < exists ; 2013 ; 978-1-78190-840-2 ; 978-1-78190-841-9 ; 9781781908419 ; Advances in Accounting Education: Teaching and Curriculum Innovations Volume 14 >
-      au < exists ; 2014 ; 978-1-78350-851-8 ; 978-1-78350-848-8 ; 9781783508488 ; Advances in Accounting Education: Teaching and Curriculum Innovations Volume 15 >
-      au < exists ; 2015 ; 978-1-78441-588-4 ; 978-1-78441-587-7 ; 9781784415877 ; Advances in Accounting Education: Teaching and Curriculum Innovations Volume 16 >
-      au < exists ; 2015 ; 978-1-78441-646-1 ; 978-1-78441-645-4 ; 9781784416454 ; Advances in Accounting Education: Teaching and Curriculum Innovations Volume 17 >
-      au < exists ; 2016 ; 978-1-78560-767-7 ; 978-1-78560-766-0 ; 9781785607660 ; Advances in Accounting Education: Teaching and Curriculum Innovations Volume 18 >
-      au < exists ; 2016 ; 978-1-78560-970-1 ; 978-1-78560-969-5 ; 9781785609695 ; Advances in Accounting Education: Teaching and Curriculum Innovations Volume 19 >
-      au < exists ; 2017 ; 978-1-78714-181-0 ; 978-1-78714-180-3 ; 9781787141803 ; Advances in Accounting Education: Teaching and Curriculum Innovations Volume 20 >
+      au < manifest ; 2000 ; 978-0-7623-0515-5 ; 978-1-84950-872-8 ; 9781849508728 ; Advances in Accounting Education Teaching and Curriculum Innovations Volume 2 >
+      au < manifest ; 2000 ; 978-0-7623-0758-6 ; 978-1-84950-871-1 ; 9781849508711 ; Advances in Accounting Education Teaching and Curriculum Innovations Volume 3 >
+      au < manifest ; 2002 ; 978-0-7623-0856-9 ; 978-0-85724-052-1 ; 9780857240521 ; Advances in Accounting Education Teaching and Curriculum Innovations Volume 4 >
+      au < manifest ; 2003 ; 978-0-7623-1035-7 ; 978-1-84950-870-4 ; 9781849508704 ; Advances in Accounting Education Teaching and Curriculum Innovations Volume 5 >
+      au < manifest ; 2004 ; 978-0-7623-1143-9 ; 978-1-84950-868-1 ; 9781849508681 ; Advances in Accounting Education Teaching and Curriculum Innovations Volume 6 >
+      au < manifest ; 2005 ; 978-0-7623-1269-6 ; 978-1-84950-869-8 ; 9781849508698 ; Advances in Accounting Education: Teaching and Curriculum Innovations Volume 7 >
+      au < manifest ; 2007 ; 978-0-7623-1447-8 ; 978-1-84950-867-4 ; 9781849508674 ; Advances in Accounting Education Teaching and Curriculum Innovations Volume 8 >
+      au < manifest ; 2008 ; 978-0-7623-1458-4 ; 978-1-84950-519-2 ; 9781849505192 ; Advances in Accounting Education Volume 9 >
+      au < manifest ; 2009 ; 978-1-84855-882-3 ; 978-1-84855-883-0 ; 9781848558830 ; Advances in Accounting Education Volume 10 >
+      au < manifest ; 2010 ; 978-0-85724-291-4 ; 978-0-85724-292-1 ; 9780857242921 ; Advances in Accounting Education Volume 11 >
+      au < manifest ; 2011 ; 978-1-78052-222-7 ; 978-1-78052-223-4 ; 9781780522234 ; Advances in Accounting Education: Teaching and Curriculum Innovations Volume 12 >
+      au < manifest ; 2012 ; 978-1-78052-756-7 ; 978-1-78052-757-4 ; 9781780527574 ; Advances in Accounting Education: Teaching and Curriculum Innovations Volume 13 >
+      au < manifest ; 2013 ; 978-1-78190-840-2 ; 978-1-78190-841-9 ; 9781781908419 ; Advances in Accounting Education: Teaching and Curriculum Innovations Volume 14 >
+      au < manifest ; 2014 ; 978-1-78350-851-8 ; 978-1-78350-848-8 ; 9781783508488 ; Advances in Accounting Education: Teaching and Curriculum Innovations Volume 15 >
+      au < manifest ; 2015 ; 978-1-78441-588-4 ; 978-1-78441-587-7 ; 9781784415877 ; Advances in Accounting Education: Teaching and Curriculum Innovations Volume 16 >
+      au < manifest ; 2015 ; 978-1-78441-646-1 ; 978-1-78441-645-4 ; 9781784416454 ; Advances in Accounting Education: Teaching and Curriculum Innovations Volume 17 >
+      au < manifest ; 2016 ; 978-1-78560-767-7 ; 978-1-78560-766-0 ; 9781785607660 ; Advances in Accounting Education: Teaching and Curriculum Innovations Volume 18 >
+      au < manifest ; 2016 ; 978-1-78560-970-1 ; 978-1-78560-969-5 ; 9781785609695 ; Advances in Accounting Education: Teaching and Curriculum Innovations Volume 19 >
+      au < manifest ; 2017 ; 978-1-78714-181-0 ; 978-1-78714-180-3 ; 9781787141803 ; Advances in Accounting Education: Teaching and Curriculum Innovations Volume 20 >
 
   }
 
@@ -169,8 +169,8 @@
 
       #param[journal_issn] = 1569-4933
 
-      au < exists ; 2000 ; 978-0-7623-0612-1 ; 978-1-84950-039-5 ; 9781849500395 ; New Frontiers in Agricultural History Volume 1 >
-      au < exists ; 2003 ; 978-0-7623-1001-2 ; 978-1-84950-199-6 ; 9781849501996 ; Advances in Agricultural Economic History Volume 2 >
+      au < manifest ; 2000 ; 978-0-7623-0612-1 ; 978-1-84950-039-5 ; 9781849500395 ; New Frontiers in Agricultural History Volume 1 >
+      au < manifest ; 2003 ; 978-0-7623-1001-2 ; 978-1-84950-199-6 ; 9781849501996 ; Advances in Agricultural Economic History Volume 2 >
 
   }
 
@@ -184,9 +184,9 @@
 
       #param[journal_issn] = 2212-1609
 
-      au < exists ; 2012 ; 978-1-78052-468-9 ; 978-1-78052-469-6 ; 9781780524696 ; Pricing Behavior and Non-Price Characteristics in the Airline Industry Volume 3 >
-      au < exists ; 2014 ; 978-1-78350-639-2 ; 978-1-78350-640-8 ; 9781783506408 ; The Economics of International Airline Transport Volume 4 >
-      au < exists ; 2016 ; 978-1-78560-940-4 ; 978-1-78560-939-8 ; 9781785609398 ; Airline Efficiency Volume 5 >
+      au < manifest ; 2012 ; 978-1-78052-468-9 ; 978-1-78052-469-6 ; 9781780524696 ; Pricing Behavior and Non-Price Characteristics in the Airline Industry Volume 3 >
+      au < manifest ; 2014 ; 978-1-78350-639-2 ; 978-1-78350-640-8 ; 9781783506408 ; The Economics of International Airline Transport Volume 4 >
+      au < manifest ; 2016 ; 978-1-78560-940-4 ; 978-1-78560-939-8 ; 9781785609398 ; Airline Efficiency Volume 5 >
 
   }
 
@@ -200,12 +200,12 @@
 
       #param[journal_issn] = 0749-6826
 
-      au < exists ; 2005 ; 978-0-7623-1168-2 ; 978-1-84950-320-4 ; 9781849503204 ; Competence Perspective on Managing Internal Process Volume 7 >
-      au < exists ; 2005 ; 978-0-7623-1169-9 ; 978-1-84950-321-1 ; 9781849503211 ; Competence Perspectives on Managing Interfirm Interactions Volume 8 >
-      au < exists ; 2005 ; 978-0-7623-1170-5 ; 978-1-84950-322-8 ; 9781849503228 ; Competence Perspectives on Resources, Stakeholders and Renewal Volume 9 >
-      au < exists ; 2008 ; 978-0-7623-1472-0 ; 978-1-84950-520-8 ; 9781849505208 ; Advances in Applied Business Strategy Volume 10 >
-      au < exists ; 2008 ; 978-0-7623-1466-9 ; 978-1-84950-521-5 ; 9781849505215 ; Competence Building and Leveraging in Interorganizational Relations Volume 11 >
-      au < exists ; 2010 ; 978-1-84855-876-2 ; 978-1-84855-877-9 ; 9781848558779 ; Enhancing Competences for Competitive Advantage Volume 12 >
+      au < manifest ; 2005 ; 978-0-7623-1168-2 ; 978-1-84950-320-4 ; 9781849503204 ; Competence Perspective on Managing Internal Process Volume 7 >
+      au < manifest ; 2005 ; 978-0-7623-1169-9 ; 978-1-84950-321-1 ; 9781849503211 ; Competence Perspectives on Managing Interfirm Interactions Volume 8 >
+      au < manifest ; 2005 ; 978-0-7623-1170-5 ; 978-1-84950-322-8 ; 9781849503228 ; Competence Perspectives on Resources, Stakeholders and Renewal Volume 9 >
+      au < manifest ; 2008 ; 978-0-7623-1472-0 ; 978-1-84950-520-8 ; 9781849505208 ; Advances in Applied Business Strategy Volume 10 >
+      au < manifest ; 2008 ; 978-0-7623-1466-9 ; 978-1-84950-521-5 ; 9781849505215 ; Competence Building and Leveraging in Interorganizational Relations Volume 11 >
+      au < manifest ; 2010 ; 978-1-84855-876-2 ; 978-1-84855-877-9 ; 9781848558779 ; Enhancing Competences for Competitive Advantage Volume 12 >
 
   }
 
@@ -219,13 +219,13 @@
 
       #param[journal_issn] = 0278-0984
 
-      au < exists ; 2000 ; 978-0-7623-0576-6 ; 978-1-84950-037-1 ; 9781849500371 ; Advances in Applied Microeconomics Volume 8 >
-      au < exists ; 2000 ; 978-0-7623-0687-9 ; 978-1-84950-064-7 ; 9781849500647 ; Industrial Organization Volume 9 >
-      au < exists ; 2001 ; 978-0-7623-0823-1 ; 978-1-84950-124-8 ; 9781849501248 ; Advertising and Differentiated Products Volume 10 >
-      au < exists ; 2002 ; 978-0-7623-0971-9 ; 978-1-84950-182-8 ; 9781849501828 ; The Economics of the Internet and E-commerce Volume 11 >
-      au < exists ; 2003 ; 978-0-7623-1081-4 ; 978-1-84950-254-2 ; 9781849502542 ; Organizing the New Industrial Economy Volume 12 >
-      au < exists ; 2005 ; 978-0-7623-1194-1 ; 978-1-84950-337-2 ; 9781849503372 ; Experimental and Behavioral Economics Volume 13 >
-      au < exists ; 2006 ; 978-0-7623-1351-8 ; 978-1-84950-446-1 ; 9781849504461 ; Improving School Accountability Volume 14 >
+      au < manifest ; 2000 ; 978-0-7623-0576-6 ; 978-1-84950-037-1 ; 9781849500371 ; Advances in Applied Microeconomics Volume 8 >
+      au < manifest ; 2000 ; 978-0-7623-0687-9 ; 978-1-84950-064-7 ; 9781849500647 ; Industrial Organization Volume 9 >
+      au < manifest ; 2001 ; 978-0-7623-0823-1 ; 978-1-84950-124-8 ; 9781849501248 ; Advertising and Differentiated Products Volume 10 >
+      au < manifest ; 2002 ; 978-0-7623-0971-9 ; 978-1-84950-182-8 ; 9781849501828 ; The Economics of the Internet and E-commerce Volume 11 >
+      au < manifest ; 2003 ; 978-0-7623-1081-4 ; 978-1-84950-254-2 ; 9781849502542 ; Organizing the New Industrial Economy Volume 12 >
+      au < manifest ; 2005 ; 978-0-7623-1194-1 ; 978-1-84950-337-2 ; 9781849503372 ; Experimental and Behavioral Economics Volume 13 >
+      au < manifest ; 2006 ; 978-0-7623-1351-8 ; 978-1-84950-446-1 ; 9781849504461 ; Improving School Accountability Volume 14 >
 
   }
 
@@ -239,10 +239,10 @@
 
       #param[journal_issn] = 1475-9152
 
-      au < exists ; 2004 ; 978-0-7623-0892-7 ; 978-1-84950-159-0 ; 9781849501590 ; Constructive Discourse and Human Organization Volume 1 >
-      au < exists ; 2007 ; 978-0-7623-1287-0 ; 978-1-84950-398-3 ; 9781849503983 ; Designing Information and Organizations with a Positive Lens Volume 2 >
-      au < exists ; 2010 ; 978-0-85724-369-0 ; 978-0-85724-370-6 ; 9780857243706 ; Positive Design and Appreciative Construction: From Sustainable Development to Sustainable Value Volume 3 >
-      au < exists ; 2013 ; 978-1-84855-488-7 ; 978-1-84855-489-4 ; 9781848554894 ; Organizational Generativity: The Appreciative Inquiry Summit and a Scholarship of Transformation Volume 4 >
+      au < manifest ; 2004 ; 978-0-7623-0892-7 ; 978-1-84950-159-0 ; 9781849501590 ; Constructive Discourse and Human Organization Volume 1 >
+      au < manifest ; 2007 ; 978-0-7623-1287-0 ; 978-1-84950-398-3 ; 9781849503983 ; Designing Information and Organizations with a Positive Lens Volume 2 >
+      au < manifest ; 2010 ; 978-0-85724-369-0 ; 978-0-85724-370-6 ; 9780857243706 ; Positive Design and Appreciative Construction: From Sustainable Development to Sustainable Value Volume 3 >
+      au < manifest ; 2013 ; 978-1-84855-488-7 ; 978-1-84855-489-4 ; 9781848554894 ; Organizational Generativity: The Appreciative Inquiry Summit and a Scholarship of Transformation Volume 4 >
 
   }
 
@@ -256,25 +256,25 @@
 
       #param[journal_issn] = 1529-2134
 
-      au < exists ; 1995 ; 978-1-55938-531-2 ; 978-1-84950-516-1 ; 9781849505161 ; Advances in Austrian Economics Volume 2 Part 2 >
-      au < exists ; 1996 ; 978-0-7623-0055-6 ; 978-1-84950-019-7 ; 9781849500197 ; Advances in Austrian Economics Volume 3 >
-      au < exists ; 1997 ; 978-0-7623-0198-0 ; 978-1-84950-020-3 ; 9781849500203 ; Advances in Austrian Economics Volume 4 >
-      au < exists ; 2003 ; 978-0-7623-1041-8 ; 978-1-84950-226-9 ; 9781849502269 ; Austrian Economics and Entrepreneurial Studies Volume 6 >
-      au < exists ; 2004 ; 978-0-7623-1053-1 ; 978-1-84950-237-5 ; 9781849502375 ; The Dynamics of Intervention: Regulation and Redistribution in the Mixed Economy Volume 8 >
-      au < exists ; 2005 ; 978-0-7623-1138-5 ; 978-1-84950-294-8 ; 9781849502948 ; Evolutionary Psychology and Economic Theory Volume 7 >
-      au < exists ; 2006 ; 978-0-7623-1378-5 ; 978-1-84950-465-2 ; 9781849504652 ; Cognition and Economics Volume 9 >
-      au < exists ; 2007 ; 978-0-7623-1452-2 ; 978-1-84950-509-3 ; 9781849505093 ; The Evolution of Consumption: Theories and Practices Volume 10 >
-      au < exists ; 2008 ; 978-1-84855-330-9 ; 978-1-84855-331-6 ; 9781848553316 ; Explorations in Austrian Economics Volume 11 >
-      au < exists ; 2009 ; 978-1-84855-998-1 ; 978-1-84855-999-8 ; 9781848559998 ; Unexplored Dimensions: Karl Mengeron Economics and Philosophy (1923-1938) Volume 12 >
-      au < exists ; 2010 ; 978-1-84950-974-9 ; 978-1-84950-975-6 ; 9781849509756 ; The Social Science of Hayek's 'The Sensory Order' Volume 13 >
-      au < exists ; 2010 ; 978-0-85724-261-7 ; 978-0-85724-262-4 ; 9780857242624 ; What is so Austrian about Austrian Economics? Volume 14 >
-      au < exists ; 2011 ; 978-1-78052-398-9 ; 978-1-78052-399-6 ; 9781780523996 ; Hayek in Mind: Hayek's Philosophical Psychology Volume 15 >
-      au < exists ; 2012 ; 978-1-78190-006-2 ; 978-1-78190-007-9 ; 9781781900079 ; The Spatial Market Process Volume 16 >
-      au < exists ; 2012 ; 978-1-78190-216-5 ; 978-1-78190-217-2 ; 9781781902172 ; Experts and Epistemic Monopolies Volume 17 >
-      au < exists ; 2014 ; 978-1-78441-102-2 ; 978-1-78441-101-5 ; 9781784411015 ; Entangled Political Economy Volume 18 >
-      au < exists ; 2015 ; 978-1-78560-137-8 ; 978-1-78560-136-1 ; 9781785601361 ; New Thinking in Austrian Political Economy Volume 19 >
-      au < exists ; 2016 ; 978-1-78635-274-3 ; 978-1-78635-273-6 ; 9781786352736 ; Studies in Austrian Macroeconomics Volume 20 >
-      au < exists ; 2016 ; 978-1-78560-988-6 ; 978-1-78560-987-9 ; 9781785609879 ; Revisiting Hayek's Political Economy Volume 21 >
+      au < manifest ; 1995 ; 978-1-55938-531-2 ; 978-1-84950-516-1 ; 9781849505161 ; Advances in Austrian Economics Volume 2 Part 2 >
+      au < manifest ; 1996 ; 978-0-7623-0055-6 ; 978-1-84950-019-7 ; 9781849500197 ; Advances in Austrian Economics Volume 3 >
+      au < manifest ; 1997 ; 978-0-7623-0198-0 ; 978-1-84950-020-3 ; 9781849500203 ; Advances in Austrian Economics Volume 4 >
+      au < manifest ; 2003 ; 978-0-7623-1041-8 ; 978-1-84950-226-9 ; 9781849502269 ; Austrian Economics and Entrepreneurial Studies Volume 6 >
+      au < manifest ; 2004 ; 978-0-7623-1053-1 ; 978-1-84950-237-5 ; 9781849502375 ; The Dynamics of Intervention: Regulation and Redistribution in the Mixed Economy Volume 8 >
+      au < manifest ; 2005 ; 978-0-7623-1138-5 ; 978-1-84950-294-8 ; 9781849502948 ; Evolutionary Psychology and Economic Theory Volume 7 >
+      au < manifest ; 2006 ; 978-0-7623-1378-5 ; 978-1-84950-465-2 ; 9781849504652 ; Cognition and Economics Volume 9 >
+      au < manifest ; 2007 ; 978-0-7623-1452-2 ; 978-1-84950-509-3 ; 9781849505093 ; The Evolution of Consumption: Theories and Practices Volume 10 >
+      au < manifest ; 2008 ; 978-1-84855-330-9 ; 978-1-84855-331-6 ; 9781848553316 ; Explorations in Austrian Economics Volume 11 >
+      au < manifest ; 2009 ; 978-1-84855-998-1 ; 978-1-84855-999-8 ; 9781848559998 ; Unexplored Dimensions: Karl Mengeron Economics and Philosophy (1923-1938) Volume 12 >
+      au < manifest ; 2010 ; 978-1-84950-974-9 ; 978-1-84950-975-6 ; 9781849509756 ; The Social Science of Hayek's 'The Sensory Order' Volume 13 >
+      au < manifest ; 2010 ; 978-0-85724-261-7 ; 978-0-85724-262-4 ; 9780857242624 ; What is so Austrian about Austrian Economics? Volume 14 >
+      au < manifest ; 2011 ; 978-1-78052-398-9 ; 978-1-78052-399-6 ; 9781780523996 ; Hayek in Mind: Hayek's Philosophical Psychology Volume 15 >
+      au < manifest ; 2012 ; 978-1-78190-006-2 ; 978-1-78190-007-9 ; 9781781900079 ; The Spatial Market Process Volume 16 >
+      au < manifest ; 2012 ; 978-1-78190-216-5 ; 978-1-78190-217-2 ; 9781781902172 ; Experts and Epistemic Monopolies Volume 17 >
+      au < manifest ; 2014 ; 978-1-78441-102-2 ; 978-1-78441-101-5 ; 9781784411015 ; Entangled Political Economy Volume 18 >
+      au < manifest ; 2015 ; 978-1-78560-137-8 ; 978-1-78560-136-1 ; 9781785601361 ; New Thinking in Austrian Political Economy Volume 19 >
+      au < manifest ; 2016 ; 978-1-78635-274-3 ; 978-1-78635-273-6 ; 9781786352736 ; Studies in Austrian Macroeconomics Volume 20 >
+      au < manifest ; 2016 ; 978-1-78560-988-6 ; 978-1-78560-987-9 ; 9781785609879 ; Revisiting Hayek's Political Economy Volume 21 >
   }
 
   {
@@ -287,12 +287,12 @@
 
       #param[journal_issn] = 1479-3709
 
-      au < exists ; 2001 ; 978-0-7623-0757-9 ; 978-1-84950-091-3 ; 9781849500913 ; Postmodern Malpractice: A Medical Case Study in The Culture War Volume 6 >
-      au < exists ; 2001 ; 978-0-7623-0764-7 ; 978-1-84950-096-8 ; 9781849500968 ; The Ethics of Organ Transplantation Volume 7 >
-      au < exists ; 2005 ; 978-0-7623-1206-1 ; 978-1-84950-343-3 ; 9781849503433 ; Taking Life and Death Seriously - Bioethics from Japan Volume 8 >
-      au < exists ; 2006 ; 978-0-7623-1311-2 ; 978-1-84950-412-6 ; 9781849504126 ; Ethics and Epidemics Volume 9 >
-      au < exists ; 2006 ; 978-0-7623-1196-5 ; 978-1-84950-339-6 ; 9781849503396 ; Lost Virtue Volume 10 >
-      au < exists ; 2007 ; 978-0-7623-1266-5 ; 978-1-84950-383-9 ; 9781849503839 ; Empirical Methods for Bioethics: A Primer Volume 11 >
+      au < manifest ; 2001 ; 978-0-7623-0757-9 ; 978-1-84950-091-3 ; 9781849500913 ; Postmodern Malpractice: A Medical Case Study in The Culture War Volume 6 >
+      au < manifest ; 2001 ; 978-0-7623-0764-7 ; 978-1-84950-096-8 ; 9781849500968 ; The Ethics of Organ Transplantation Volume 7 >
+      au < manifest ; 2005 ; 978-0-7623-1206-1 ; 978-1-84950-343-3 ; 9781849503433 ; Taking Life and Death Seriously - Bioethics from Japan Volume 8 >
+      au < manifest ; 2006 ; 978-0-7623-1311-2 ; 978-1-84950-412-6 ; 9781849504126 ; Ethics and Epidemics Volume 9 >
+      au < manifest ; 2006 ; 978-0-7623-1196-5 ; 978-1-84950-339-6 ; 9781849503396 ; Lost Virtue Volume 10 >
+      au < manifest ; 2007 ; 978-0-7623-1266-5 ; 978-1-84950-383-9 ; 9781849503839 ; Empirical Methods for Bioethics: A Primer Volume 11 >
 
 
   }
@@ -307,13 +307,13 @@
 
       #param[journal_issn] = 1477-4070
 
-      au < exists ; 2008 ; 978-0-7623-1478-2 ; 978-0-85724-787-2 ; 9780857247872 ; Advances in Business and Management Forecasting Volume 5 >
-      au < exists ; 2009 ; 978-1-84855-548-8 ; 978-1-84855-549-5 ; 9781848555495 ; Advances in Business and Management Forecasting Volume 6 >
-      au < exists ; 2010 ; 978-0-85724-201-3 ; 978-0-85724-202-0 ; 9780857242020 ; Advances in Business and Management Forecasting Volume 7 >
-      au < exists ; 2011 ; 978-0-85724-959-3 ; 978-0-85724-960-9 ; 9780857249609 ; Advances in Business and Management Forecasting Volume 8 >
-      au < exists ; 2013 ; 978-1-78190-331-5 ; 978-1-78190-332-2 ; 9781781903322 ; Advances in Business and Management Forecasting Volume 9 >
-      au < exists ; 2014 ; 978-1-78441-209-8 ; 978-1-78441-208-1 ; 9781784412081 ; Advances in Business and Management Forecasting Volume 10 >
-      au < exists ; 2016 ; 978-1-78635-534-8 ; 978-1-78635-533-1 ; 9781786355331 ; Advances in Business and Management Forecasting Volume 11 >
+      au < manifest ; 2008 ; 978-0-7623-1478-2 ; 978-0-85724-787-2 ; 9780857247872 ; Advances in Business and Management Forecasting Volume 5 >
+      au < manifest ; 2009 ; 978-1-84855-548-8 ; 978-1-84855-549-5 ; 9781848555495 ; Advances in Business and Management Forecasting Volume 6 >
+      au < manifest ; 2010 ; 978-0-85724-201-3 ; 978-0-85724-202-0 ; 9780857242020 ; Advances in Business and Management Forecasting Volume 7 >
+      au < manifest ; 2011 ; 978-0-85724-959-3 ; 978-0-85724-960-9 ; 9780857249609 ; Advances in Business and Management Forecasting Volume 8 >
+      au < manifest ; 2013 ; 978-1-78190-331-5 ; 978-1-78190-332-2 ; 9781781903322 ; Advances in Business and Management Forecasting Volume 9 >
+      au < manifest ; 2014 ; 978-1-78441-209-8 ; 978-1-78441-208-1 ; 9781784412081 ; Advances in Business and Management Forecasting Volume 10 >
+      au < manifest ; 2016 ; 978-1-78635-534-8 ; 978-1-78635-533-1 ; 9781786355331 ; Advances in Business and Management Forecasting Volume 11 >
 
   }
 
@@ -327,24 +327,24 @@
 
       #param[journal_issn] = 1069-0964
 
-      au < exists ; 2000 ; 978-0-7623-0682-4 ; 978-1-84950-060-9 ; 9781849500609 ; Designing winning products Volume 10 >
-      au < exists ; 2001 ; 978-0-7623-0633-6 ; 978-1-84950-043-2 ; 9781849500432 ; Getting Better at Sensemaking Volume 9 >
-      au < exists ; 2002 ; 978-0-7623-0869-9 ; 978-1-84950-148-4 ; 9781849501484 ; Essays by Distinguished Marketing Scholars of the Society for Marketing Advances Volume 11 >
-      au < exists ; 2003 ; 978-0-7623-1046-3 ; 978-1-84950-230-6 ; 9781849502306 ; Evaluating Marketing Actions and Outcomes Volume 12 >
-      au < exists ; 2005 ; 978-0-7623-1159-0 ; 978-1-84950-311-2 ; 9781849503112 ; Managing Product Innovation Volume 13 >
-      au < exists ; 2008 ; 978-1-84855-172-5 ; 978-1-84855-173-2 ; 9781848551732 ; Creating and managing superior customer value Volume 14 >
-      au < exists ; 2009 ; 978-1-84855-670-6 ; 978-1-84855-671-3 ; 9781848556713 ; Business-To-Business Brand Management: Theory, Research and Executivecase Study Exercises Volume 15 >
-      au < exists ; 2010 ; 978-0-85724-305-8 ; 978-0-85724-306-5 ; 9780857243065 ; Organizational Culture, Business-to-Business Relationships, and Interfirm Networks Volume 16 >
-      au < exists ; 2011 ; 978-1-78052-024-7 ; 978-1-78052-025-4 ; 9781780520254 ; Interfirm Networks: Theory, Strategy, and Behavior Volume 17 >
-      au < exists ; 2012 ; 978-1-78052-576-1 ; 978-1-78052-577-8 ; 9781780525778 ; Business-to-Business Marketing Management: Strategies, Cases, and Solutions Volume 18 >
-      au < exists ; 2012 ; 978-1-78052-996-7 ; 978-1-78052-997-4 ; 9781780529974 ; Visionary Pricing: Reflections and Advances in Honor of Dan Nimer Volume 19 >
-      au < exists ; 2013 ; 978-1-78190-858-7 ; 978-1-78190-859-4 ; 9781781908594 ; Deep Knowledge of B2B Relationships Within and Across Borders Volume 20 >
-      au < exists ; 2014 ; 978-1-78441-080-3 ; 978-1-78441-079-7 ; 9781784410797 ; Field Guide to Case Study Research in Business-to-business Marketing and Purchasing Volume 21 >
-      au < exists ; 2015 ; 978-1-78441-764-2 ; 978-1-78441-763-5 ; 9781784417635 ; Sustaining Competitive Advantage Via Business Intelligence, Knowledge Management, and System Dynamics Volume 22A >
-      au < exists ; 2015 ; 978-1-78560-707-3 ; 978-1-78560-706-6 ; 9781785607066 ; Sustaining Competitive Advantage Via Business Intelligence, Knowledge Management, and System Dynamics Volume 22B >
-      au < exists ; 2015 ; 978-1-78560-325-9 ; 978-1-78560-324-2 ; 9781785603242 ; E-Services Adoption: Processes by Firms in Developing Nations Volume 23A >
-      au < exists ; 2015 ; 978-1-78560-709-7 ; 978-1-78560-708-0 ; 9781785607080 ; E-services Adoption: Processes by Firms in Developing Nations Volume 23B >
-      au < exists ; 2016 ; 978-1-78635-120-3 ; 978-1-78635-119-7 ; 9781786351197 ; Making Tough Decisions Well and Badly: Framing, Deciding, Implementing, Assessing Volume 24 >
+      au < manifest ; 2000 ; 978-0-7623-0682-4 ; 978-1-84950-060-9 ; 9781849500609 ; Designing winning products Volume 10 >
+      au < manifest ; 2001 ; 978-0-7623-0633-6 ; 978-1-84950-043-2 ; 9781849500432 ; Getting Better at Sensemaking Volume 9 >
+      au < manifest ; 2002 ; 978-0-7623-0869-9 ; 978-1-84950-148-4 ; 9781849501484 ; Essays by Distinguished Marketing Scholars of the Society for Marketing Advances Volume 11 >
+      au < manifest ; 2003 ; 978-0-7623-1046-3 ; 978-1-84950-230-6 ; 9781849502306 ; Evaluating Marketing Actions and Outcomes Volume 12 >
+      au < manifest ; 2005 ; 978-0-7623-1159-0 ; 978-1-84950-311-2 ; 9781849503112 ; Managing Product Innovation Volume 13 >
+      au < manifest ; 2008 ; 978-1-84855-172-5 ; 978-1-84855-173-2 ; 9781848551732 ; Creating and managing superior customer value Volume 14 >
+      au < manifest ; 2009 ; 978-1-84855-670-6 ; 978-1-84855-671-3 ; 9781848556713 ; Business-To-Business Brand Management: Theory, Research and Executivecase Study Exercises Volume 15 >
+      au < manifest ; 2010 ; 978-0-85724-305-8 ; 978-0-85724-306-5 ; 9780857243065 ; Organizational Culture, Business-to-Business Relationships, and Interfirm Networks Volume 16 >
+      au < manifest ; 2011 ; 978-1-78052-024-7 ; 978-1-78052-025-4 ; 9781780520254 ; Interfirm Networks: Theory, Strategy, and Behavior Volume 17 >
+      au < manifest ; 2012 ; 978-1-78052-576-1 ; 978-1-78052-577-8 ; 9781780525778 ; Business-to-Business Marketing Management: Strategies, Cases, and Solutions Volume 18 >
+      au < manifest ; 2012 ; 978-1-78052-996-7 ; 978-1-78052-997-4 ; 9781780529974 ; Visionary Pricing: Reflections and Advances in Honor of Dan Nimer Volume 19 >
+      au < manifest ; 2013 ; 978-1-78190-858-7 ; 978-1-78190-859-4 ; 9781781908594 ; Deep Knowledge of B2B Relationships Within and Across Borders Volume 20 >
+      au < manifest ; 2014 ; 978-1-78441-080-3 ; 978-1-78441-079-7 ; 9781784410797 ; Field Guide to Case Study Research in Business-to-business Marketing and Purchasing Volume 21 >
+      au < manifest ; 2015 ; 978-1-78441-764-2 ; 978-1-78441-763-5 ; 9781784417635 ; Sustaining Competitive Advantage Via Business Intelligence, Knowledge Management, and System Dynamics Volume 22A >
+      au < manifest ; 2015 ; 978-1-78560-707-3 ; 978-1-78560-706-6 ; 9781785607066 ; Sustaining Competitive Advantage Via Business Intelligence, Knowledge Management, and System Dynamics Volume 22B >
+      au < manifest ; 2015 ; 978-1-78560-325-9 ; 978-1-78560-324-2 ; 9781785603242 ; E-Services Adoption: Processes by Firms in Developing Nations Volume 23A >
+      au < manifest ; 2015 ; 978-1-78560-709-7 ; 978-1-78560-708-0 ; 9781785607080 ; E-services Adoption: Processes by Firms in Developing Nations Volume 23B >
+      au < manifest ; 2016 ; 978-1-78635-120-3 ; 978-1-78635-119-7 ; 9781786351197 ; Making Tough Decisions Well and Badly: Framing, Deciding, Implementing, Assessing Volume 24 >
 
   }
 
@@ -358,18 +358,18 @@
 
       #param[journal_issn] = 1871-3173
 
-      au < exists ; 2008 ; 978-0-7623-1451-5 ; 978-1-84950-522-2 ; 9781849505222 ; Advances in Culture, Tourism and Hospitality Research Volume 2 >
-      au < exists ; 2009 ; 978-1-84950-603-8 ; 978-1-84950-604-5 ; 9781849506045 ; Perspectives on Cross-Cultural, Ethnographic, Brand Image, Storytelling, Unconscious Needs, and Hospitality Guest Research Volume 3 >
-      au < exists ; 2010 ; 978-1-84950-900-8 ; 978-1-84950-901-5 ; 9781849509015 ; Tourism-Marketing Performance Metrics and Usefulness Auditing of Destination Websites Volume 4 >
-      au < exists ; 2011 ; 978-0-85724-853-4 ; 978-0-85724-854-1 ; 9780857248541 ; Tourism Sensemaking: Strategies to Give Meaning to Experience Volume 5 >
-      au < exists ; 2012 ; 978-1-78052-742-0 ; 978-1-78052-743-7 ; 9781780527437 ; Field Guide to Case Study Research in Tourism, Hospitality and Leisure Volume 6 >
-      au < exists ; 2013 ; 978-1-78190-210-3 ; 978-1-78190-211-0 ; 9781781902110 ; Luxury Fashion and Culture Volume 7 >
-      au < exists ; 2014 ; 978-1-78350-618-7 ; 978-1-78350-617-0 ; 9781783506170 ; Tourists' Perceptions and Assessments Volume 8 >
-      au < exists ; 2014 ; 978-1-78441-172-5 ; 978-1-78441-171-8 ; 9781784411718 ; Tourists' Behaviors and Evaluations Volume 9 >
-      au < exists ; 2015 ; 978-1-78441-940-0 ; 978-1-78441-939-4 ; 9781784419394 ; Marketing Places and Spaces Volume 10 >
-      au < exists ; 2016 ; 978-1-78560-217-7 ; 978-1-78560-216-0 ; 9781785602160 ; Storytelling-Case Archetype Decoding and Assignment Manual (SCADAM) Volume 11 >
-      au < exists ; 2016 ; 978-1-78635-714-4 ; 978-1-78635-713-7 ; 9781786357137 ; Tourism and Hospitality Management Volume 12 >
-      au < exists ; 2017 ; 978-1-78714-691-4 ; 978-1-78714-690-7 ; 9781787146907 ; Consumer Behavior in Tourism and Hospitality Research Volume 13 >
+      au < manifest ; 2008 ; 978-0-7623-1451-5 ; 978-1-84950-522-2 ; 9781849505222 ; Advances in Culture, Tourism and Hospitality Research Volume 2 >
+      au < manifest ; 2009 ; 978-1-84950-603-8 ; 978-1-84950-604-5 ; 9781849506045 ; Perspectives on Cross-Cultural, Ethnographic, Brand Image, Storytelling, Unconscious Needs, and Hospitality Guest Research Volume 3 >
+      au < manifest ; 2010 ; 978-1-84950-900-8 ; 978-1-84950-901-5 ; 9781849509015 ; Tourism-Marketing Performance Metrics and Usefulness Auditing of Destination Websites Volume 4 >
+      au < manifest ; 2011 ; 978-0-85724-853-4 ; 978-0-85724-854-1 ; 9780857248541 ; Tourism Sensemaking: Strategies to Give Meaning to Experience Volume 5 >
+      au < manifest ; 2012 ; 978-1-78052-742-0 ; 978-1-78052-743-7 ; 9781780527437 ; Field Guide to Case Study Research in Tourism, Hospitality and Leisure Volume 6 >
+      au < manifest ; 2013 ; 978-1-78190-210-3 ; 978-1-78190-211-0 ; 9781781902110 ; Luxury Fashion and Culture Volume 7 >
+      au < manifest ; 2014 ; 978-1-78350-618-7 ; 978-1-78350-617-0 ; 9781783506170 ; Tourists' Perceptions and Assessments Volume 8 >
+      au < manifest ; 2014 ; 978-1-78441-172-5 ; 978-1-78441-171-8 ; 9781784411718 ; Tourists' Behaviors and Evaluations Volume 9 >
+      au < manifest ; 2015 ; 978-1-78441-940-0 ; 978-1-78441-939-4 ; 9781784419394 ; Marketing Places and Spaces Volume 10 >
+      au < manifest ; 2016 ; 978-1-78560-217-7 ; 978-1-78560-216-0 ; 9781785602160 ; Storytelling-Case Archetype Decoding and Assignment Manual (SCADAM) Volume 11 >
+      au < manifest ; 2016 ; 978-1-78635-714-4 ; 978-1-78635-713-7 ; 9781786357137 ; Tourism and Hospitality Management Volume 12 >
+      au < manifest ; 2017 ; 978-1-78714-691-4 ; 978-1-78714-690-7 ; 9781787146907 ; Consumer Behavior in Tourism and Hospitality Research Volume 13 >
 
   }
 
@@ -383,16 +383,16 @@
 
       #param[journal_issn] = 0270-4021
 
-      au < exists ; 2001 ; 978-0-7623-0810-1 ; 978-1-84950-117-0 ; 9781849501170 ; Early Education and Care, and Reconceptualizing Play Volume 11 >
-      au < exists ; 2003 ; 978-0-7623-1063-0 ; 978-1-84950-242-9 ; 9781849502429 ; Bridging the Gap Between Theory, Research and Practice: The Role of... Volume 12 >
-      au < exists ; 2004 ; 978-0-7623-1146-0 ; 978-1-84950-299-3 ; 9781849502993 ; Social Contexts of Early Education, and Reconceptualizing Play (II) Volume 13 >
-      au < exists ; 2005 ; 978-0-7623-1238-2 ; 978-1-84950-364-8 ; 9781849503648 ; Practical Transformations and Transformational Practices: Globalization, Postmodernism, and Early Childhood Education Volume 14 >
-      au < exists ; 2011 ; 978-0-85724-279-2 ; 978-0-85724-280-8 ; 9780857242808 ; The Early Childhood Educator Professional Development Grant: Research and Practice Volume 15 >
-      au < exists ; 2012 ; 978-1-78190-074-1 ; 978-1-78190-075-8 ; 9781781900758 ; Early Education in a Global Context Volume 16 >
-      au < exists ; 2013 ; 978-1-78190-700-9 ; 978-1-78190-701-6 ; 9781781907016 ; Learning Across the Early Childhood Curriculum Volume 17 >
-      au < exists ; 2014 ; 978-1-78350-459-6 ; 978-1-78350-460-2 ; 9781783504602 ; Early Childhood and Special Education Volume 18 >
-      au < exists ; 2015 ; 978-1-78560-293-1 ; 978-1-78560-292-4 ; 9781785602924 ; Discussions on Sensitive Issues Volume 19 >
-      au < exists ; 2016 ; 978-1-78635-408-2 ; 978-1-78635-407-5 ; 9781786354075 ; Family Involvement in Early Education and Child Care Volume 20 >
+      au < manifest ; 2001 ; 978-0-7623-0810-1 ; 978-1-84950-117-0 ; 9781849501170 ; Early Education and Care, and Reconceptualizing Play Volume 11 >
+      au < manifest ; 2003 ; 978-0-7623-1063-0 ; 978-1-84950-242-9 ; 9781849502429 ; Bridging the Gap Between Theory, Research and Practice: The Role of... Volume 12 >
+      au < manifest ; 2004 ; 978-0-7623-1146-0 ; 978-1-84950-299-3 ; 9781849502993 ; Social Contexts of Early Education, and Reconceptualizing Play (II) Volume 13 >
+      au < manifest ; 2005 ; 978-0-7623-1238-2 ; 978-1-84950-364-8 ; 9781849503648 ; Practical Transformations and Transformational Practices: Globalization, Postmodernism, and Early Childhood Education Volume 14 >
+      au < manifest ; 2011 ; 978-0-85724-279-2 ; 978-0-85724-280-8 ; 9780857242808 ; The Early Childhood Educator Professional Development Grant: Research and Practice Volume 15 >
+      au < manifest ; 2012 ; 978-1-78190-074-1 ; 978-1-78190-075-8 ; 9781781900758 ; Early Education in a Global Context Volume 16 >
+      au < manifest ; 2013 ; 978-1-78190-700-9 ; 978-1-78190-701-6 ; 9781781907016 ; Learning Across the Early Childhood Curriculum Volume 17 >
+      au < manifest ; 2014 ; 978-1-78350-459-6 ; 978-1-78350-460-2 ; 9781783504602 ; Early Childhood and Special Education Volume 18 >
+      au < manifest ; 2015 ; 978-1-78560-293-1 ; 978-1-78560-292-4 ; 9781785602924 ; Discussions on Sensitive Issues Volume 19 >
+      au < manifest ; 2016 ; 978-1-78635-408-2 ; 978-1-78635-407-5 ; 9781786354075 ; Family Involvement in Early Education and Child Care Volume 20 >
 
   }
 
@@ -406,34 +406,34 @@
 
       #param[journal_issn] = 0731-9053
 
-      au < exists ; 1997 ; 978-0-7623-0187-4 ; 978-1-84950-824-7 ; 9781849508247 ; Applying Maximum Entropy to Econometric Problems Volume 12 >
-      au < exists ; 1999 ; 978-0-7623-0303-8 ; 978-1-84950-823-0 ; 9781849508230 ; Messy Data Volume 13 >
-      au < exists ; 2001 ; 978-0-7623-0688-6 ; 978-1-84950-065-4 ; 9781849500654 ; Nonstationary Panels, Panel Cointegration, and Dynamic Panels Volume 15 >
-      au < exists ; 2002 ; 978-0-7623-0857-6 ; 978-1-84950-142-2 ; 9781849501422 ; Advances in Econometrics Volume 16 >
-      au < exists ; 2003 ; 978-0-7623-1075-3 ; 978-1-84950-253-5 ; 9781849502535 ; Maximum Likelihood Estimation of Misspecified Models: Twenty Years Later Volume 17 >
-      au < exists ; 2004 ; 978-0-7623-1148-4 ; 978-1-84950-301-3 ; 9781849503013 ; Spatial and Spatiotemporal Econometrics Volume 18 >
-      au < exists ; 2004 ; 978-0-7623-1150-7 ; 978-1-84950-303-7 ; 9781849503037 ; Applications of Artificial Intelligence in Finance and Economics Volume 19 >
-      au < exists ; 2006 ; 978-0-7623-1274-0 ; 978-1-84950-389-1 ; 9781849503891 ; Econometric Analysis of Financial and Economic Time Series Volume 20 Part 1 >
-      au < exists ; 2006 ; 978-0-7623-1273-3 ; 978-1-84950-388-4 ; 9781849503884 ; Econometric Analysis of Financial and Economic Time Series Volume 20 Part 2 >
-      au < exists ; 2008 ; 978-0-7623-1380-8 ; 978-1-84950-523-9 ; 9781849505239 ; Modelling and Evaluating Treatment Effects in Econometrics Volume 21 >
-      au < exists ; 2008 ; 978-1-84855-196-1 ; 978-1-84855-197-8 ; 9781848551978 ; Econometrics and Risk Management Volume 22 >
-      au < exists ; 2008 ; 978-1-84855-308-8 ; 978-1-84855-309-5 ; 9781848553095 ; Bayesian Econometrics Volume 23 >
-      au < exists ; 2009 ; 978-1-84855-902-8 ; 978-1-84855-903-5 ; 9781848559035 ; Measurement Error: Consequences, Applications and Solutions Volume 24 >
-      au < exists ; 2009 ; 978-1-84950-623-6 ; 978-1-84950-624-3 ; 9781849506243 ; Nonparametric Econometric Methods Volume 25 >
-      au < exists ; 2010 ; 978-0-85724-149-8 ; 978-0-85724-150-4 ; 9780857241504 ; Maximum Simulated Likelihood Methods and Applications Volume 26 >
-      au < exists ; 2011 ; 978-1-78052-524-2 ; 978-1-78052-525-9 ; 9781780525259 ; Missing Data Methods: Cross-sectional Methods and Applications Volume 27 Part 1 >
-      au < exists ; 2011 ; 978-1-78052-526-6 ; 978-1-78052-527-3 ; 9781780525273 ; Missing Data Methods: Time-Series Methods and Applications Volume 27 Part 2 >
-      au < exists ; 2012 ; 978-1-78190-305-6 ; 978-1-78190-306-3 ; 9781781903063 ; DSGE Models in Macroeconomics: Estimation, Evaluation, and New Developments Volume 28 >
-      au < exists ; 2012 ; 978-1-78190-307-0 ; 978-1-78190-308-7 ; 9781781903087 ; Essays in Honor of Jerry Hausman Volume 29 >
-      au < exists ; 2012 ; 978-1-78190-309-4 ; 978-1-78190-310-0 ; 9781781903100 ; 30th Anniversary Edition Volume 30 >
-      au < exists ; 2013 ; 978-1-78350-052-9 ; 978-1-78350-053-6 ; 9781783500536 ; Structural Econometric Models Volume 31 >
-      au < exists ; 2013 ; 978-1-78190-752-8 ; 978-1-78190-753-5 ; 9781781907535 ; VAR Models in Macroeconomics - New Developments and Applications: Essays in Honor of Christopher A. Sims Volume 32 >
-      au < exists ; 2014 ; 978-1-78441-183-1 ; 978-1-78441-182-4 ; 9781784411824 ; Essays in Honor of Peter C. B. Phillips Volume 33 >
-      au < exists ; 2014 ; 978-1-78441-185-5 ; 978-1-78441-184-8 ; 9781784411848 ; Bayesian Model Comparison Volume 34 >
-      au < exists ; 2016 ; 978-1-78560-353-2 ; 978-1-78560-352-5 ; 9781785603525 ; Dynamic Factor Models Volume 35 >
-      au < exists ; 2016 ; 978-1-78560-787-5 ; 978-1-78560-786-8 ; 9781785607868 ; Essays in Honor of Aman Ullah Volume 36 >
-      au < exists ; 2016 ; 978-1-78560-986-2 ; 978-1-78560-985-5 ; 9781785609855 ; Spatial Econometrics: Qualitative and Limited Dependent Variables Volume 37 >
-      au < exists ; 2017 ; 978-1-78714-390-6 ; 978-1-78714-389-0 ; 9781787143890 ; Regression Discontinuity Designs: Theory and Applications Volume 38 >
+      au < manifest ; 1997 ; 978-0-7623-0187-4 ; 978-1-84950-824-7 ; 9781849508247 ; Applying Maximum Entropy to Econometric Problems Volume 12 >
+      au < manifest ; 1999 ; 978-0-7623-0303-8 ; 978-1-84950-823-0 ; 9781849508230 ; Messy Data Volume 13 >
+      au < manifest ; 2001 ; 978-0-7623-0688-6 ; 978-1-84950-065-4 ; 9781849500654 ; Nonstationary Panels, Panel Cointegration, and Dynamic Panels Volume 15 >
+      au < manifest ; 2002 ; 978-0-7623-0857-6 ; 978-1-84950-142-2 ; 9781849501422 ; Advances in Econometrics Volume 16 >
+      au < manifest ; 2003 ; 978-0-7623-1075-3 ; 978-1-84950-253-5 ; 9781849502535 ; Maximum Likelihood Estimation of Misspecified Models: Twenty Years Later Volume 17 >
+      au < manifest ; 2004 ; 978-0-7623-1148-4 ; 978-1-84950-301-3 ; 9781849503013 ; Spatial and Spatiotemporal Econometrics Volume 18 >
+      au < manifest ; 2004 ; 978-0-7623-1150-7 ; 978-1-84950-303-7 ; 9781849503037 ; Applications of Artificial Intelligence in Finance and Economics Volume 19 >
+      au < manifest ; 2006 ; 978-0-7623-1274-0 ; 978-1-84950-389-1 ; 9781849503891 ; Econometric Analysis of Financial and Economic Time Series Volume 20 Part 1 >
+      au < manifest ; 2006 ; 978-0-7623-1273-3 ; 978-1-84950-388-4 ; 9781849503884 ; Econometric Analysis of Financial and Economic Time Series Volume 20 Part 2 >
+      au < manifest ; 2008 ; 978-0-7623-1380-8 ; 978-1-84950-523-9 ; 9781849505239 ; Modelling and Evaluating Treatment Effects in Econometrics Volume 21 >
+      au < manifest ; 2008 ; 978-1-84855-196-1 ; 978-1-84855-197-8 ; 9781848551978 ; Econometrics and Risk Management Volume 22 >
+      au < manifest ; 2008 ; 978-1-84855-308-8 ; 978-1-84855-309-5 ; 9781848553095 ; Bayesian Econometrics Volume 23 >
+      au < manifest ; 2009 ; 978-1-84855-902-8 ; 978-1-84855-903-5 ; 9781848559035 ; Measurement Error: Consequences, Applications and Solutions Volume 24 >
+      au < manifest ; 2009 ; 978-1-84950-623-6 ; 978-1-84950-624-3 ; 9781849506243 ; Nonparametric Econometric Methods Volume 25 >
+      au < manifest ; 2010 ; 978-0-85724-149-8 ; 978-0-85724-150-4 ; 9780857241504 ; Maximum Simulated Likelihood Methods and Applications Volume 26 >
+      au < manifest ; 2011 ; 978-1-78052-524-2 ; 978-1-78052-525-9 ; 9781780525259 ; Missing Data Methods: Cross-sectional Methods and Applications Volume 27 Part 1 >
+      au < manifest ; 2011 ; 978-1-78052-526-6 ; 978-1-78052-527-3 ; 9781780525273 ; Missing Data Methods: Time-Series Methods and Applications Volume 27 Part 2 >
+      au < manifest ; 2012 ; 978-1-78190-305-6 ; 978-1-78190-306-3 ; 9781781903063 ; DSGE Models in Macroeconomics: Estimation, Evaluation, and New Developments Volume 28 >
+      au < manifest ; 2012 ; 978-1-78190-307-0 ; 978-1-78190-308-7 ; 9781781903087 ; Essays in Honor of Jerry Hausman Volume 29 >
+      au < manifest ; 2012 ; 978-1-78190-309-4 ; 978-1-78190-310-0 ; 9781781903100 ; 30th Anniversary Edition Volume 30 >
+      au < manifest ; 2013 ; 978-1-78350-052-9 ; 978-1-78350-053-6 ; 9781783500536 ; Structural Econometric Models Volume 31 >
+      au < manifest ; 2013 ; 978-1-78190-752-8 ; 978-1-78190-753-5 ; 9781781907535 ; VAR Models in Macroeconomics - New Developments and Applications: Essays in Honor of Christopher A. Sims Volume 32 >
+      au < manifest ; 2014 ; 978-1-78441-183-1 ; 978-1-78441-182-4 ; 9781784411824 ; Essays in Honor of Peter C. B. Phillips Volume 33 >
+      au < manifest ; 2014 ; 978-1-78441-185-5 ; 978-1-78441-184-8 ; 9781784411848 ; Bayesian Model Comparison Volume 34 >
+      au < manifest ; 2016 ; 978-1-78560-353-2 ; 978-1-78560-352-5 ; 9781785603525 ; Dynamic Factor Models Volume 35 >
+      au < manifest ; 2016 ; 978-1-78560-787-5 ; 978-1-78560-786-8 ; 9781785607868 ; Essays in Honor of Aman Ullah Volume 36 >
+      au < manifest ; 2016 ; 978-1-78560-986-2 ; 978-1-78560-985-5 ; 9781785609855 ; Spatial Econometrics: Qualitative and Limited Dependent Variables Volume 37 >
+      au < manifest ; 2017 ; 978-1-78714-390-6 ; 978-1-78714-389-0 ; 9781787143890 ; Regression Discontinuity Designs: Theory and Applications Volume 38 >
 
   }
 
@@ -447,16 +447,16 @@
 
       #param[journal_issn] = 2041-806X
 
-      au < exists ; 2007 ; 978-1-78052-666-9 ; 978-1-78052-667-6 ; 9781780526676 ; Utopias, Ecotopias and Green Communities: Exploring the Activism, Settlements and Living Patterns of Green Idealists Volume 1 >
-      au < exists ; 2008 ; 978-1-78052-668-3 ; 978-1-78052-669-0 ; 9781780526690 ; Advances in Ecopolitics Volume 2 >
-      au < exists ; 2009 ; 978-1-78052-670-6 ; 978-1-78052-671-3 ; 9781780526713 ; Special Edition: Financial Crisis - Environmental Crisis: What is the Link? Volume 3 >
-      au < exists ; 2009 ; 978-1-84950-641-0 ; 978-1-84950-642-7 ; 9781849506427 ; The Transition to Sustainable Living and Practice Volume 4 >
-      au < exists ; 2010 ; 978-1-84950-748-6 ; 978-1-84950-749-3 ; 9781849507493 ; Global Ecological Politics Volume 5 >
-      au < exists ; 2010 ; 978-0-85724-301-0 ; 978-0-85724-302-7 ; 9780857243027 ; Sustainable Justice and the Community Volume 6 >
-      au < exists ; 2011 ; 978-1-78052-380-4 ; 978-1-78052-381-1 ; 9781780523811 ; Community Campaigns for Sustainable Living: Health, Waste & Protest in Civil Society Volume 7 >
-      au < exists ; 2011 ; 978-0-85724-761-2 ; 978-0-85724-762-9 ; 9780857247629 ; Sustainable Politics and the Crisis of the Peripheries: Ireland and Greece Volume 8 >
-      au < exists ; 2012 ; 978-1-78052-484-9 ; 978-1-78052-485-6 ; 9781780524856 ; Enterprising Communities: Grassroots Sustainability Innovations Volume 9 >
-      au < exists ; 2012 ; 978-1-78052-202-9 ; 978-1-78052-203-6 ; 9781780522036 ; Transnational Migration, Gender and Rights Volume 10 >
+      au < manifest ; 2007 ; 978-1-78052-666-9 ; 978-1-78052-667-6 ; 9781780526676 ; Utopias, Ecotopias and Green Communities: Exploring the Activism, Settlements and Living Patterns of Green Idealists Volume 1 >
+      au < manifest ; 2008 ; 978-1-78052-668-3 ; 978-1-78052-669-0 ; 9781780526690 ; Advances in Ecopolitics Volume 2 >
+      au < manifest ; 2009 ; 978-1-78052-670-6 ; 978-1-78052-671-3 ; 9781780526713 ; Special Edition: Financial Crisis - Environmental Crisis: What is the Link? Volume 3 >
+      au < manifest ; 2009 ; 978-1-84950-641-0 ; 978-1-84950-642-7 ; 9781849506427 ; The Transition to Sustainable Living and Practice Volume 4 >
+      au < manifest ; 2010 ; 978-1-84950-748-6 ; 978-1-84950-749-3 ; 9781849507493 ; Global Ecological Politics Volume 5 >
+      au < manifest ; 2010 ; 978-0-85724-301-0 ; 978-0-85724-302-7 ; 9780857243027 ; Sustainable Justice and the Community Volume 6 >
+      au < manifest ; 2011 ; 978-1-78052-380-4 ; 978-1-78052-381-1 ; 9781780523811 ; Community Campaigns for Sustainable Living: Health, Waste & Protest in Civil Society Volume 7 >
+      au < manifest ; 2011 ; 978-0-85724-761-2 ; 978-0-85724-762-9 ; 9780857247629 ; Sustainable Politics and the Crisis of the Peripheries: Ireland and Greece Volume 8 >
+      au < manifest ; 2012 ; 978-1-78052-484-9 ; 978-1-78052-485-6 ; 9781780524856 ; Enterprising Communities: Grassroots Sustainability Innovations Volume 9 >
+      au < manifest ; 2012 ; 978-1-78052-202-9 ; 978-1-78052-203-6 ; 9781780522036 ; Transnational Migration, Gender and Rights Volume 10 >
 
   }
 
