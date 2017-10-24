@@ -62,7 +62,7 @@
       au < finished ; finished ; 2013 ; 9781781902851 ; 9781781902868 ; 9781781902868 ; Freight Transport Modelling (9781781902868) ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2013 ; 9781781902875 ; 9781781902882 ; 9781781902882 ; Transport Survey Methods: Best Practice for Decision Making (9781781902882) ; reingest1.clockss.org:8082 >
 
-      au < manifest ; exists ; 2017 ; 9781786352224 ; 9781786352217 ; 9781786352217 ; Traffic Safety and Human Behavior (9781786352217) ; >
+      au < testing ; exists ; 2017 ; 9781786352224 ; 9781786352217 ; 9781786352217 ; Traffic Safety and Human Behavior (9781786352217) ; >
 
   }
   
@@ -81,7 +81,7 @@
       au < frozen ; exists ; 2004 ; 9780080441085 ; 9781615832538 ; 9781615832538 ; Handbook of Transport Geography and Spatial Systems (9781615832538) ; >
       au < notReady ; exists ; 2005 ; 9780080441153 ; 9780080456041 ; 9780080456041 ; Handbook of Transport Strategy, Policy and Institutions (9780080456041) ; >
       au < notReady ; exists ; 2007 ; 9780080453767 ; 9780857245670 ; 9780857245670 ; Handbook of Transport Modelling: 2nd Edition (9780857245670) ; >
-      au < manifest ; exists ; 2008 ; 9780080435930 ; 9780857245632 ; 9780080435930 ; Handbook of Logistics and Supply-Chain Management (9780857245632) ; >
+      au < testing ; exists ; 2008 ; 9780080435930 ; 9780857245632 ; 9780080435930 ; Handbook of Logistics and Supply-Chain Management (9780857245632) ; >
 
   }
   
@@ -96,18 +96,18 @@
       #param[journal_issn] = 1877-6361
       #series = asm
 
-      au < manifest ; exists ; 2009 ; 9781848558328 ; 9781848558335 ; 9781848558335 ; Advanced Series in Management Volume 6 ; >
-      au < manifest ; exists ; 2010 ; 9780857240064 ; 9780857240071 ; 9780857240071 ; Relational Practices, Participative Organizing Volume 7 ; >
-      au < manifest ; exists ; 2011 ; 9780857249739 ; 9780857249739 ; 9780857249739 ; Electronic HRM in Theory and Practice Volume 8 ; >
-      au < manifest ; exists ; 2012 ; 9781780526744 ; 9781780526751 ; 9781780526751 ; Commercial Diplomacy and International Business: A Conceptual and Empirical Exploration Volume 9 ; >
-      au < manifest ; exists ; 2013 ; 9781781906019 ; 9781781906026 ; 9781781906026 ; (Dis)Honesty in Management Volume 10 ; >
-      au < manifest ; exists ; 2013 ; 9781781908983 ; 9781781908990 ; 9781781908990 ; Social Media in Strategic Management Volume 11 ; >
-      au < manifest ; exists ; 2013 ; 9781781909003 ; 9781781909010 ; 9781781909010 ; Social Media in Human Resources Management Volume 12 ; >
-      au < manifest ; exists ; 2014 ; 9781783505357 ; 9781783505364 ; 9781783505364 ; Shared Services as a New Organizational Form Volume 13 ; >
-      au < manifest ; exists ; 2014 ; 9781784411305 ; 9781784411299 ; 9781784411299 ; Human Resource Management, Social Innovation and Technology Volume 14 ; >
-      au < manifest ; exists ; 2016 ; 9781786353146 ; 9781786353139 ; 9781786353139 ; Dead Firms: Causes and Effects of Cross-border Corporate Insolvency Volume 15 ; >
-      au < manifest ; exists ; 2016 ; 9781785603037 ; 9781785603020 ; 9781785603020 ; New Ways of Working Practices: Antecedents and Outcomes Volume 16 ; >
-      au < manifest ; exists ; 2017 ; 9781787430747 ; 9781787430730 ; 9781787430730 ; Age Diversity in the Workplace: An Organizational Perspective Volume 17 ; >
+      au < testing ; exists ; 2009 ; 9781848558328 ; 9781848558335 ; 9781848558335 ; Advanced Series in Management Volume 6 ; >
+      au < testing ; exists ; 2010 ; 9780857240064 ; 9780857240071 ; 9780857240071 ; Relational Practices, Participative Organizing Volume 7 ; >
+      au < testing ; exists ; 2011 ; 9780857249739 ; 9780857249739 ; 9780857249739 ; Electronic HRM in Theory and Practice Volume 8 ; >
+      au < testing ; exists ; 2012 ; 9781780526744 ; 9781780526751 ; 9781780526751 ; Commercial Diplomacy and International Business: A Conceptual and Empirical Exploration Volume 9 ; >
+      au < testing ; exists ; 2013 ; 9781781906019 ; 9781781906026 ; 9781781906026 ; (Dis)Honesty in Management Volume 10 ; >
+      au < testing ; exists ; 2013 ; 9781781908983 ; 9781781908990 ; 9781781908990 ; Social Media in Strategic Management Volume 11 ; >
+      au < testing ; exists ; 2013 ; 9781781909003 ; 9781781909010 ; 9781781909010 ; Social Media in Human Resources Management Volume 12 ; >
+      au < testing ; exists ; 2014 ; 9781783505357 ; 9781783505364 ; 9781783505364 ; Shared Services as a New Organizational Form Volume 13 ; >
+      au < testing ; exists ; 2014 ; 9781784411305 ; 9781784411299 ; 9781784411299 ; Human Resource Management, Social Innovation and Technology Volume 14 ; >
+      au < testing ; exists ; 2016 ; 9781786353146 ; 9781786353139 ; 9781786353139 ; Dead Firms: Causes and Effects of Cross-border Corporate Insolvency Volume 15 ; >
+      au < testing ; exists ; 2016 ; 9781785603037 ; 9781785603020 ; 9781785603020 ; New Ways of Working Practices: Antecedents and Outcomes Volume 16 ; >
+      au < testing ; exists ; 2017 ; 9781787430747 ; 9781787430730 ; 9781787430730 ; Age Diversity in the Workplace: An Organizational Perspective Volume 17 ; >
 
   }
 
@@ -126,19 +126,19 @@
       au < doNotProcess ; doNotProcess ; 2001 ; 9780762307845 ; 9781849501040 ; 9781849501040 ; Advances in Accounting Behavioral Research Volume 4 ; > #RT7387 incorrect article links
       au < doNotProcess ; doNotProcess ; 2002 ; 9780762309535 ; 9781849501699 ; 9781849501699 ; Advances in Accounting Behavioral Research Volume 5 ; > #RT7387 incorrect article links
       au < doNotProcess ; doNotProcess ; 2003 ; 9780762310470 ; 9781849502313 ; 9781849502313 ; Advances in Accounting Behavioral Research Volume 6 ; > #RT7387 incorrect article links
-      au < manifest ; exists ; 2004 ; 9780762311170 ; 9781849502801 ; 9781849502801 ; Advances in Accounting Behavioral Research Volume 7 ; >
-      au < manifest ; exists ; 2005 ; 9780762312184 ; 9781849503488 ; 9781849503488 ; Advances in Accounting Behavioral Research Volume 8 ; >
-      au < manifest ; exists ; 2006 ; 9780762313532 ; 9781849504485 ; 9781849504485 ; Advances in Accounting Behavioral Research Volume 9 ; >
-      au < manifest ; exists ; 2008 ; 9781846639609 ; 9781846639616 ; 9781846639616 ; Advances in Accounting Behavioral Research Volume 11 ; >
-      au < manifest ; exists ; 2009 ; 9781848557383 ; 9781848557390 ; 9781848557390 ; Advances in Accounting Behavioral Research Volume 12 ; >
-      au < manifest ; exists ; 2010 ; 9780857241375 ; 9780857241382 ; 9780857241382 ; Advances in Accounting Behavioral Research Volume 13 ; >
-      au < manifest ; exists ; 2011 ; 9781780520865 ; 9781780520872 ; 9781780520872 ; Advances in Accounting Behavioral Research Volume 14 ; >
-      au < manifest ; exists ; 2012 ; 9781780527581 ; 9781780527598 ; 9781780527598 ; Advances in Accounting Behavioral Research Volume 15 ; >
-      au < manifest ; exists ; 2013 ; 9781781908389 ; 9781781908396 ; 9781781908396 ; Advances in Accounting Behavioral Research Volume 16 ; >
-      au < manifest ; exists ; 2014 ; 9781783504459 ; 9781783504466 ; 9781783504466 ; Advances in Accounting Behavioral Research Volume 17 ; >
-      au < manifest ; exists ; 2015 ; 9781784416362 ; 9781784416355 ; 9781784416355 ; Advances in Accounting Behavioral Research Volume 18 ; >
-      au < manifest ; exists ; 2016 ; 9781785609787 ; 9781785609770 ; 9781785609770 ; Advances in Accounting Behavioral Research Volume 19 ; >
-      au < manifest ; exists ; 2017 ; 9781787145283 ; 9781787145276 ; 9781787145276 ; Advances in Accounting Behavioral Research Volume 20 ; >
+      au < testing ; exists ; 2004 ; 9780762311170 ; 9781849502801 ; 9781849502801 ; Advances in Accounting Behavioral Research Volume 7 ; >
+      au < testing ; exists ; 2005 ; 9780762312184 ; 9781849503488 ; 9781849503488 ; Advances in Accounting Behavioral Research Volume 8 ; >
+      au < testing ; exists ; 2006 ; 9780762313532 ; 9781849504485 ; 9781849504485 ; Advances in Accounting Behavioral Research Volume 9 ; >
+      au < testing ; exists ; 2008 ; 9781846639609 ; 9781846639616 ; 9781846639616 ; Advances in Accounting Behavioral Research Volume 11 ; >
+      au < testing ; exists ; 2009 ; 9781848557383 ; 9781848557390 ; 9781848557390 ; Advances in Accounting Behavioral Research Volume 12 ; >
+      au < testing ; exists ; 2010 ; 9780857241375 ; 9780857241382 ; 9780857241382 ; Advances in Accounting Behavioral Research Volume 13 ; >
+      au < testing ; exists ; 2011 ; 9781780520865 ; 9781780520872 ; 9781780520872 ; Advances in Accounting Behavioral Research Volume 14 ; >
+      au < testing ; exists ; 2012 ; 9781780527581 ; 9781780527598 ; 9781780527598 ; Advances in Accounting Behavioral Research Volume 15 ; >
+      au < testing ; exists ; 2013 ; 9781781908389 ; 9781781908396 ; 9781781908396 ; Advances in Accounting Behavioral Research Volume 16 ; >
+      au < testing ; exists ; 2014 ; 9781783504459 ; 9781783504466 ; 9781783504466 ; Advances in Accounting Behavioral Research Volume 17 ; >
+      au < testing ; exists ; 2015 ; 9781784416362 ; 9781784416355 ; 9781784416355 ; Advances in Accounting Behavioral Research Volume 18 ; >
+      au < testing ; exists ; 2016 ; 9781785609787 ; 9781785609770 ; 9781785609770 ; Advances in Accounting Behavioral Research Volume 19 ; >
+      au < testing ; exists ; 2017 ; 9781787145283 ; 9781787145276 ; 9781787145276 ; Advances in Accounting Behavioral Research Volume 20 ; >
 
   }
 
