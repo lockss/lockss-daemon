@@ -68,6 +68,12 @@ public class OJS2CrawlSeedFactory implements CrawlSeedFactory {
     noIndexBaseUrlHosts.add("mulpress.mcmaster.ca");
     noIndexBaseUrlHosts.add("ijms.nmdl.org");
     noIndexBaseUrlHosts.add("www.ajpspharm.com");
+    noIndexBaseUrlHosts.add("www.ijic.info");
+    noIndexBaseUrlHosts.add("www.investigativesciencesjournal.org");
+    noIndexBaseUrlHosts.add("www.journal-alm.org");
+    noIndexBaseUrlHosts.add("www.ijtarp.org");
+    noIndexBaseUrlHosts.add("www.intersticios.es");
+
   }
   
   
