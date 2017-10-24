@@ -2162,22 +2162,26 @@
       #param[journal_issn] = 1876-0562
       #series = lis
 
-      au < manifest ; exists ; 1991 ;  ; 9780122870415 ; 9780122870415 ; Library Technical Services: Operations and Management Volume 91A ; >
-      au < manifest ; exists ; 1991 ;  ; 9780124245204 ; 9780124245204 ; Operations Research for Libraries and Information Agencies: Techniques for the Evaluation of Management Decision Alternatives Volume 91B ; >
-      au < manifest ; exists ; 1994 ;  ; 9780124650305 ; 9780124650305 ; Information Services for Innovative Organizations Volume 94A ; >
-      au < manifest ; exists ; 1994 ;  ; 9780122215704 ; 9780122215704 ; Using Subject Headings for Online Retrieval: Theory, Practice and Potential Volume 94B ; >
-      au < manifest ; exists ; 1996 ;  ; 9780120510405 ; 9780120510405 ; Information Tasks: Toward a User-centered Approach to Information Systems Volume 96 ; >
-      au < manifest ; exists ; 1997 ;  ; 9780122661709 ; 9780122661709 ; Automated Information Retrieval: Theory and Methods Volume 97A ; >
-      au < manifest ; exists ; 1997 ;  ; 9780124874152 ; 9780124874152 ; Communicating Research Volume 97B ; >
-      au < manifest ; exists ; 2001 ;  ; 9780123341518 ; 9780123341518 ; Models for Library Management, Decision Making and Planning Volume 01 ; >
-      au < manifest ; exists ; 2002 ;  ; 9780125877800 ; 9780125877800 ; Understanding Reference Transactions: Transforming an Art into a Science Volume 02 ; >
-      au < manifest ; exists ; 2004 ;  ; 9780120885534 ; 9780120885534 ; Link Analysis: An Information Science Approach Volume 04 ; >
-      au < manifest ; exists ; 2005 ;  ; 9780120887538 ; 9780120887538 ; Power Laws in the Information Production Process: Lotkaian Informetrics Volume 05 ; >
-      au < manifest ; exists ; 2011 ;  ; 9781780521701 ; 9781780521701 ; New Directions in Information Behaviour Volume 1 ; >
-      au < manifest ; exists ; 2012 ;  ; 9781780524702 ; 9781780524702 ; Library and Information Science Trends and Research: Asia-Oceania Volume 2 ; >
-      au < manifest ; exists ; 2012 ;  ; 9781780526362 ; 9781780526362 ; Web Search Engine Research Volume 4 ; >
-      au < manifest ; exists ; 2012 ;  ; 9781780528328 ; 9781780528328 ; Social Information Research Volume 5 ; >
-      au < manifest ; exists ; 2012 ;  ; 9781780527147 ; 9781780527147 ; Library and Information Science Trends and Research: Europe Volume 6 ; >
+      au < exists ; exists ; 1991 ; 9780122870415 ; 9781849507950 ; 9781849507950 ; Library Technical Services: Operations and Management Volume 91A ; >
+      au < exists ; exists ; 1991 ; 9780124245204 ; 9781849507967 ; 9781849507967 ; Operations Research for Libraries and Information Agencies: Techniques for the Evaluation of Management Decision Alternatives Volume 91B ; >
+      au < exists ; exists ; 1994 ; 9780124650305 ; 9781849507943 ; 9781849507943 ; Information Services for Innovative Organizations Volume 94A ; >
+      au < exists ; exists ; 1994 ; 9780122215704 ; 9781849508001 ; 9781849508001 ; Using Subject Headings for Online Retrieval: Theory, Practice and Potential Volume 94B ; >
+      au < exists ; exists ; 1996 ; 9780120510405 ; 9781849508018 ; 9781849508018 ; Information Tasks: Toward a User-centered Approach to Information Systems Volume 96 ; >
+      au < exists ; exists ; 1997 ; 9780122661709 ; 9781849507981 ; 9781849507981 ; Automated Information Retrieval: Theory and Methods Volume 97A ; >
+      au < exists ; exists ; 1997 ; 9780124874152 ; 9781849507998 ; 9781849507998 ; Communicating Research Volume 97B ; >
+      au < exists ; exists ; 2001 ; 9780123341518 ; 9781849507929 ; 9781849507929 ; Models for Library Management, Decision Making and Planning Volume 01 ; >
+      au < exists ; exists ; 2002 ; 9780125877800 ; 9781849507974 ; 9781849507974 ; Understanding Reference Transactions: Transforming an Art into a Science Volume 02 ; >
+      au < exists ; exists ; 2004 ; 9780120885534 ; 9781849507905 ; 9781849507905 ; Link Analysis: An Information Science Approach Volume 04 ; >
+      au < exists ; exists ; 2005 ; 9780120887538 ; 9781849508025 ; 9781849508025 ; Power Laws in the Information Production Process: Lotkaian Informetrics Volume 05 ; >
+      au < exists ; exists ; 2011 ; 9781780521701 ; 9781780521718 ; 9781780521718 ; New Directions in Information Behaviour Volume 1 ; >
+      au < exists ; exists ; 2012 ; 9781780524702 ; 9781780524719 ; 9781780524719 ; Library and Information Science Trends and Research: Asia-Oceania Volume 2 ; >
+      au < exists ; exists ; 2012 ; 9781780526362 ; 9781780526379 ; 9781780526379 ; Web Search Engine Research Volume 4 ; >
+      au < exists ; exists ; 2012 ; 9781780528328 ; 9781780528335 ; 9781780528335 ; Social Information Research Volume 5 ; >
+      au < exists ; exists ; 2012 ; 9781780527147 ; 9781780527154 ; 9781780527154 ; Library and Information Science Trends and Research: Europe Volume 6 ; >
+      au < exists ; exists ; 2013 ; 9781781905593 ; 9781781905609 ; 9781781905609 ; New Directions in Information Organization Volume 7 ; >
+      au < exists ; exists ; 2013 ; 9781781907665 ; 9781781907672 ; 9781781907672 ; Developing People’s Information Capabilities: Fostering Information Literacy in Educational, Workplace and Community Contexts Volume 8 ; >
+      au < exists ; exists ; 2014 ; 9781783508150 ; 9781783508167 ; 9781783508167 ; Information Experience: Approaches to Theory and Practice Volume 9 ; >
+      au < exists ; exists ; 2014 ; 9781783508136 ; 9781783508143 ; 9781783508143 ; New Directions in Children’s and Adolescents’ Information Behavior Research Volume 10 ; >
 
   }
 
@@ -2190,9 +2194,15 @@
       >
 
       #param[journal_issn] = 2048-0458
+      #series = lrpe
 
-      au < manifest ; exists ; 2012 ;  ; 9781780526300 ; 9781780526300 ; Using Informative Assessments towards Effective Literacy Instruction Volume 1 ; >
-      au < manifest ; exists ; 2013 ;  ; 9781781905036 ; 9781781905036 ; Advanced Literacy Practices Volume 2 ; >
+      au < exists ; exists ; 2012 ; 9781780526300 ; 9781780526317 ; 9781780526317 ; Using Informative Assessments towards Effective Literacy Instruction Volume 1 ; >
+      au < exists ; exists ; 2013 ; 9781781905036 ; 9781781905043 ; 9781781905043 ; Advanced Literacy Practices Volume 2 ; >
+      au < exists ; exists ; 2013 ; 9781781906965 ; 9781781906972 ; 9781781906972 ; School-Based Interventions for Struggling Readers, K-8 Volume 3 ; >
+      au < exists ; exists ; 2014 ; 9781783508211 ; 9781783508228 ; 9781783508228 ; Theoretical Models of Learning and Literacy Development Volume 4 ; >
+      au < exists ; exists ; 2015 ; 9781784416768 ; 9781784416751 ; 9781784416751 ; Video Reflection in Literacy Teacher Education and Development: Lessons from Research and Practice Volume 5 ; >
+      au < exists ; exists ; 2015 ; 9781784416782 ; 9781784416775 ; 9781784416775 ; Video Research in Disciplinary Literacies Volume 6 ; >
+      au < exists ; exists ; 2016 ; 9781786355263 ; 9781786355256 ; 9781786355256 ; Writing Instruction to Support Literacy Success Volume 7 ; >
 
   }
 
@@ -2205,8 +2215,13 @@
       >
 
       #param[journal_issn] = 1479-3571
+      #series = mlm
 
-      au < manifest ; exists ; 2007 ;  ; 9780762313327 ; 9780762313327 ; Being There Even When You Are Not Volume 4 ; >
+      au < manifest ; exists ; 2007 ; 9780762313327 ; 9780762313327 ; 9780762313327 ; Being There Even When You Are Not Volume 4 ; >
+      au < exists ; exists ; 2013 ; 9781781905999 ; 9781781906002 ; 9781781906002 ; Transformational and Charismatic Leadership: The Road Ahead 10th Anniversary Edition Volume 5 ; >
+      au < exists ; exists ; 2014 ; 9781784412906 ; 9781784412890 ; 9781784412890 ; The Physicality of Leadership: Gesture, Entanglement, Taboo, Possibilities Volume 6 ; >
+      au < exists ; exists ; 2015 ; 9781785604317 ; 9781785604300 ; 9781785604300 ; Organizational Neuroscience Volume 7 ; >
+      au < exists ; exists ; 2016 ; 9781785609428 ; 9781785609411 ; 9781785609411 ; Leadership Lessons from Compelling Contexts Volume 8 ; >
 
   }
 
@@ -2219,12 +2234,14 @@
       >
 
       #param[journal_issn] = 1876-0228
+      #series = ntbfnm
 
-      au < manifest ; exists ; 2008 ;  ; 9780080554488 ; 9780080554488 ; New Technology-Based Firms in the New Millenium Volume 6 ; >
-      au < manifest ; exists ; 2009 ;  ; 9781848557826 ; 9781848557826 ; New Technology-Based Firms in the New Millenium Volume 7 ; >
-      au < manifest ; exists ; 2010 ;  ; 9780857243737 ; 9780857243737 ; New Technology-Based Firms in the New Millennium Volume 8 ; >
-      au < manifest ; exists ; 2012 ;  ; 9781780521183 ; 9781780521183 ; New Technology-Based Firms in the New Millennium Volume 9 ; >
-      au < manifest ; exists ; 2013 ;  ; 9781781903155 ; 9781781903155 ; New Technology-Based Firms in the New Millennium Volume 10 ; >
+      au < exists ; exists ; 2008 ; 9780080554488 ; 9781849505444 ; 9781849505444 ; New Technology-Based Firms in the New Millenium Volume 6 ; >
+      au < exists ; exists ; 2009 ; 9781848557826 ; 9781848557833 ; 9781848557833 ; New Technology-Based Firms in the New Millenium Volume 7 ; >
+      au < exists ; exists ; 2010 ; 9780857243737 ; 9780857243744 ; 9780857243744 ; New Technology-Based Firms in the New Millennium Volume 8 ; >
+      au < exists ; exists ; 2012 ; 9781780521183 ; 9781780521190 ; 9781780521190 ; New Technology-Based Firms in the New Millennium Volume 9 ; >
+      au < exists ; exists ; 2013 ; 9781781903155 ; 9781781903162 ; 9781781903162 ; New Technology-Based Firms in the New Millennium Volume 10 ; >
+      au < exists ; exists ; 2015 ; 9781785600333 ; 9781785600326 ; 9781785600326 ; New Technology-Based Firms in the New Millennium Volume 11 ; >
 
   }
 
@@ -2237,9 +2254,13 @@
       >
 
       #param[journal_issn] = 2045-0605
+      #series = ose
 
-      au < manifest ; exists ; 2011 ;  ; 9780857245571 ; 9780857245571 ; Organizing for Sustainability Volume 1 ; >
-      au < manifest ; exists ; 2012 ;  ; 9781781900321 ; 9781781900321 ; Organizing for Sustainable Health Care Volume 2 ; >
+      au < exists ; exists ; 2011 ; 9780857245571 ; 9780857245588 ; 9780857245588 ; Organizing for Sustainability Volume 1 ; >
+      au < exists ; exists ; 2012 ; 9781781900321 ; 9781781900338 ; 9781781900338 ; Organizing for Sustainable Health Care Volume 2 ; >
+      au < exists ; exists ; 2013 ; 9781781908860 ; 9781781908877 ; 9781781908877 ; Building Networks and Partnerships Volume 3 ; >
+      au < exists ; exists ; 2014 ; 9781784410353 ; 9781784410346 ; 9781784410346 ; Reconfiguring the Ecosystem for Sustainable Healthcare Volume 4 ; >
+      au < exists ; exists ; 2016 ; 9781786354884 ; 9781786354877 ; 9781786354877 ; Organizing Supply Chain Processes for Sustainable Innovation in the Agri-Food Industry Volume 5 ; >
 
   }
 
@@ -2252,18 +2273,27 @@
       >
 
       #param[journal_issn] = 0198-8719
+      #series = ppst
 
-      au < manifest ; exists ; 2001 ;  ; 9780762307630 ; 9780762307630 ; Political Power and Social Theory Volume 14 ; >
-      au < manifest ; exists ; 2002 ;  ; 9780762308835 ; 9780762308835 ; Political Power and Social Theory Volume 15 ; >
-      au < manifest ; exists ; 2004 ;  ; 9780762310364 ; 9780762310364 ; Political Power and Social Theory Volume 16 ; >
-      au < manifest ; exists ; 2005 ;  ; 9780762311903 ; 9780762311903 ; Political Power and Social Theory Volume 17 ; >
-      au < manifest ; exists ; 2006 ;  ; 9780762313402 ; 9780762313402 ; Political Power and Social Theory Volume 18 ; >
-      au < manifest ; exists ; 2008 ;  ; 9780762314188 ; 9780762314188 ; Political Power and Social Theory Volume 19 ; >
-      au < manifest ; exists ; 2009 ;  ; 9781849506670 ; 9781849506670 ; Political Power and Social Theory Volume 20 ; >
-      au < manifest ; exists ; 2010 ;  ; 9780857243256 ; 9780857243256 ; Political Power and Social Theory Volume 21 ; >
-      au < manifest ; exists ; 2011 ;  ; 9780857249111 ; 9780857249111 ; Rethinking Obama Volume 22 ; >
-      au < manifest ; exists ; 2012 ;  ; 9781780528663 ; 9781780528663 ; Political Power and Social Theory Volume 23 ; >
-      au < manifest ; exists ; 2013 ;  ; 9781781906033 ; 9781781906033 ; Postcolonial Sociology Volume 24 ; >
+      au < exists ; exists ; 2001 ; 9780762307630 ; 9781849500951 ; 9781849500951 ; Political Power and Social Theory Volume 14 ; >
+      au < exists ; exists ; 2002 ; 9780762308835 ; 9781849501545 ; 9781849501545 ; Political Power and Social Theory Volume 15 ; >
+      au < exists ; exists ; 2004 ; 9780762310364 ; 9781849502221 ; 9781849502221 ; Political Power and Social Theory Volume 16 ; >
+      au < exists ; exists ; 2005 ; 9780762311903 ; 9781849503358 ; 9781849503358 ; Political Power and Social Theory Volume 17 ; >
+      au < exists ; exists ; 2006 ; 9780762313402 ; 9781849504379 ; 9781849504379 ; Political Power and Social Theory Volume 18 ; >
+      au < exists ; exists ; 2008 ; 9780762314188 ; 9781849505451 ; 9781849505451 ; Political Power and Social Theory Volume 19 ; >
+      au < exists ; exists ; 2009 ; 9781849506670 ; 9781849506687 ; 9781849506687 ; Political Power and Social Theory Volume 20 ; >
+      au < exists ; exists ; 2010 ; 9780857243256 ; 9780857243263 ; 9780857243263 ; Political Power and Social Theory Volume 21 ; >
+      au < exists ; exists ; 2011 ; 9780857249111 ; 9780857249128 ; 9780857249128 ; Rethinking Obama Volume 22 ; >
+      au < exists ; exists ; 2012 ; 9781780528663 ; 9781780528670 ; 9781780528670 ; Political Power and Social Theory Volume 23 ; >
+      au < exists ; exists ; 2013 ; 9781781906033 ; 9781781906040 ; 9781781906040 ; Postcolonial Sociology Volume 24 ; >
+      au < exists ; exists ; 2013 ; 9781781907269 ; 9781781907276 ; 9781781907276 ; Decentering Social Theory Volume 25 ; >
+      au < exists ; exists ; 2014 ; 9781783508297 ; 9781783508303 ; 9781783508303 ; The United States in Decline Volume 26 ; >
+      au < exists ; exists ; 2014 ; 9781783506682 ; 9781783506675 ; 9781783506675 ; Fields of Knowledge: Science, Politics and Publics in the Neoliberal Age Volume 27 ; >
+      au < exists ; exists ; 2015 ; 9781784417581 ; 9781784417574 ; 9781784417574 ; Patrimonial Capitalism and Empire Volume 28 ; >
+      au < exists ; exists ; 2015 ; 9781785600937 ; 9781785600920 ; 9781785600920 ; Chartering Capitalism: Organizing Markets, States, and Publics Volume 29 ; >
+      au < exists ; exists ; 2016 ; 9781786350749 ; 9781786350732 ; 9781786350732 ; Perverse Politics? Feminism, Anti-Imperialism, Multiplicity Volume 30 ; >
+      au < exists ; exists ; 2017 ; 9781787142671 ; 9781787142664 ; 9781787142664 ; International Origins of Social and Political Theory Volume 32 ; >
+      au < exists ; exists ; 2017 ; 9781787146556 ; 9781787146549 ; 9781787146549 ; Rethinking the Colonial State Volume 33 ; >
 
   }
 
@@ -2276,6 +2306,7 @@
       >
 
       #param[journal_issn] = 1745-8862
+      #series = pibr
 
       au < manifest ; exists ; 2008 ;  ; 9781848552784 ; 9781848552784 ; New Perspectives in International Business Research Volume 3 ; >
       au < manifest ; exists ; 2009 ;  ; 9781848559561 ; 9781848559561 ; Research on Knowledge, Innovation and Internationalization Volume 4 ; >
