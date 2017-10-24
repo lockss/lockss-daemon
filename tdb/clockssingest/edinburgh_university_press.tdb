@@ -404,7 +404,7 @@
     param[journal_id] = film
     #move from Open Humanities Press
     
-     au < ready ; exists ; 2016 ; Film-Philosophy Volume 20 ; 20 ; >
+     au < crawling ; exists ; 2016 ; Film-Philosophy Volume 20 ; 20 ; >
      au < ready ; exists ; 2017 ; Film-Philosophy Volume 21 ; 21 ; >
     
   }
