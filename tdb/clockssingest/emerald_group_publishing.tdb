@@ -24,7 +24,7 @@
     au < manifest ; exists ; 2013 ; Academia Revista Latinoamericana de Administración Volume 26 ; 26 ; >
     au < finished ; finished ; 2014 ; Academia Revista Latinoamericana de Administración Volume 27 ; 27 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Academia Revista Latinoamericana de Administración Volume 28 ; 28 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2016 ; Academia Revista Latinoamericana de Administración Volume 29 ; 29 ; >
+    au < frozen ; exists ; 2016 ; Academia Revista Latinoamericana de Administración Volume 29 ; 29 ; >
     au < testing ; exists ; 2017 ; Academia Revista Latinoamericana de Administración Volume 30 ; 30 ; >
 
   }
@@ -1761,7 +1761,7 @@
     au < manifest ; exists ; 2013 ; critical perspectives on international business Volume 9 ; 9 ; >
     au < finished ; finished ; 2014 ; critical perspectives on international business Volume 10 ; 10 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; critical perspectives on international business Volume 11 ; 11 ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2016 ; critical perspectives on international business Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2016 ; critical perspectives on international business Volume 12 ; 12 ; >
     au < testing ; exists ; 2017 ; critical perspectives on international business Volume 13 ; 13 ; >
 
   }
@@ -1901,7 +1901,7 @@
     au < manifest ; exists ; 2013 ; Disaster Prevention and Management Volume 22 ; 22 ; >
     au < frozen ; exists ; 2014 ; Disaster Prevention and Management Volume 23 ; 23 ; >
     au < finished ; finished ; 2015 ; Disaster Prevention and Management Volume 24 ; 24 ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2016 ; Disaster Prevention and Management Volume 25 ; 25 ; >
+    au < frozen ; exists ; 2016 ; Disaster Prevention and Management Volume 25 ; 25 ; >
     au < testing ; exists ; 2017 ; Disaster Prevention and Management Volume 26 ; 26 ; >
 
   }
@@ -2253,7 +2253,7 @@
     au < manifest ; exists ; 2013 ; Engineering, Construction and Architectural Management Volume 20 ; 20 ; >
     au < finished ; finished ; 2014 ; Engineering, Construction and Architectural Management Volume 21 ; 21 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; Engineering, Construction and Architectural Management Volume 22 ; 22 ; >
-    au < deepCrawl ; exists ; 2016 ; Engineering, Construction and Architectural Management Volume 23 ; 23 ; >
+    au < frozen ; exists ; 2016 ; Engineering, Construction and Architectural Management Volume 23 ; 23 ; >
     au < testing ; exists ; 2017 ; Engineering, Construction and Architectural Management Volume 24 ; 24 ; >
 
   }
@@ -2793,7 +2793,7 @@
     au < manifest ; exists ; 2013 ; Higher Education, Skills and Work-based Learning Volume 3 ; 3 ; >
     au < finished ; finished ; 2014 ; Higher Education, Skills and Work-based Learning Volume 4 ; 4 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Higher Education, Skills and Work-based Learning Volume 5 ; 5 ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2016 ; Higher Education, Skills and Work-based Learning Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2016 ; Higher Education, Skills and Work-based Learning Volume 6 ; 6 ; >
     au < testing ; exists ; 2017 ; Higher Education, Skills and Work-based Learning Volume 7 ; 7 ; >
 
   }
