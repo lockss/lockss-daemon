@@ -262,7 +262,7 @@
     provider = Scholarly Exchange
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
     implicit < status ; year ; name ; volume ; param[year] >
-    param[base_url] = http://www.scholarlyexchange.org/
+    param[base_url] = http://www.scholarlyexchange.org/ojs/
     param[journal_id] = JMEP
 
     au < testing ; 2012 ; Journal of Medical Education Perspectives Volume 1 ; 1 ; 2012 >
@@ -292,12 +292,12 @@
     param[base_url] = http://www.kcajournals.com/
     param[journal_id] = KCAJBM
 
-    au < exists ; 2008 ; KCA Journal of Business Management Volume 1 ; 1 ; 2008 >
-    au < exists ; 2009 ; KCA Journal of Business Management Volume 2 ; 2 ; 2009 >
-    au < exists ; 2011 ; KCA Journal of Business Management Volume 3 ; 3 ; 2011 >
-    au < exists ; 2012 ; KCA Journal of Business Management Volume 4-5 ; 4-5 ; 2012 >
-    au < exists ; 2014 ; KCA Journal of Business Management Volume 6 ; 6 ; 2014 >
-    au < exists ; 2015 ; KCA Journal of Business Management Volume 7 ; 7 ; 2015 >
+    au < testing ; 2008 ; KCA Journal of Business Management Volume 1 ; 1 ; 2008 >
+    au < testing ; 2009 ; KCA Journal of Business Management Volume 2 ; 2 ; 2009 >
+    au < testing ; 2011 ; KCA Journal of Business Management Volume 3 ; 3 ; 2011 >
+    au < testing ; 2012 ; KCA Journal of Business Management Volume 4-5 ; 4-5 ; 2012 >
+    au < testing ; 2014 ; KCA Journal of Business Management Volume 6 ; 6 ; 2014 >
+    au < testing ; 2015 ; KCA Journal of Business Management Volume 7 ; 7 ; 2015 >
     au < exists ; 2017 ; KCA Journal of Business Management Volume 8 ; 8 ; 2017 >
     
   }
@@ -323,14 +323,14 @@
     param[base_url] = http://www.kmuj.kmu.edu.pk/
     param[journal_id] = KMJ
 
-    au < exists ; 2009 ; Khyber Medical University Journal Volume 1 ; 1 ; 2009 >
-    au < exists ; 2010 ; Khyber Medical University Journal Volume 2 ; 2 ; 2010 >
-    au < exists ; 2011 ; Khyber Medical University Journal Volume 3 ; 3 ; 2011 >
-    au < exists ; 2012 ; Khyber Medical University Journal Volume 4 ; 4 ; 2012 >
-    au < exists ; 2013 ; Khyber Medical University Journal Volume 5 ; 5 ; 2013 >
-    au < exists ; 2014 ; Khyber Medical University Journal Volume 6 ; 6 ; 2014 >
-    au < exists ; 2015 ; Khyber Medical University Journal Volume 7 ; 7 ; 2015 >
-    au < exists ; 2016 ; Khyber Medical University Journal Volume 8 ; 8 ; 2016 >
+    au < testing ; 2009 ; Khyber Medical University Journal Volume 1 ; 1 ; 2009 >
+    au < testing ; 2010 ; Khyber Medical University Journal Volume 2 ; 2 ; 2010 >
+    au < testing ; 2011 ; Khyber Medical University Journal Volume 3 ; 3 ; 2011 >
+    au < testing ; 2012 ; Khyber Medical University Journal Volume 4 ; 4 ; 2012 >
+    au < testing ; 2013 ; Khyber Medical University Journal Volume 5 ; 5 ; 2013 >
+    au < testing ; 2014 ; Khyber Medical University Journal Volume 6 ; 6 ; 2014 >
+    au < testing ; 2015 ; Khyber Medical University Journal Volume 7 ; 7 ; 2015 >
+    au < testing ; 2016 ; Khyber Medical University Journal Volume 8 ; 8 ; 2016 >
     au < exists ; 2017 ; Khyber Medical University Journal Volume 9 ; 9 ; 2017 >
     
   }
@@ -416,12 +416,12 @@
     param[base_url] = http://www.wpcjournal.com/
     param[journal_id] = UDP
 
-    au < exists ; 2010 ; Understanding and Dismantling Privilege Volume 1 ; 1 ; 2010 >
-    au < exists ; 2012 ; Understanding and Dismantling Privilege Volume 2 ; 2 ; 2012 >
-    au < exists ; 2013 ; Understanding and Dismantling Privilege Volume 3 ; 3 ; 2013 >
-    au < exists ; 2014 ; Understanding and Dismantling Privilege Volume 4 ; 4 ; 2014 >
-    au < exists ; 2015 ; Understanding and Dismantling Privilege Volume 5 ; 5 ; 2015 >
-    au < exists ; 2016 ; Understanding and Dismantling Privilege Volume 6 ; 6 ; 2016 >
+    au < testing ; 2010 ; Understanding and Dismantling Privilege Volume 1 ; 1 ; 2010 >
+    au < testing ; 2012 ; Understanding and Dismantling Privilege Volume 2 ; 2 ; 2012 >
+    au < testing ; 2013 ; Understanding and Dismantling Privilege Volume 3 ; 3 ; 2013 >
+    au < testing ; 2014 ; Understanding and Dismantling Privilege Volume 4 ; 4 ; 2014 >
+    au < testing ; 2015 ; Understanding and Dismantling Privilege Volume 5 ; 5 ; 2015 >
+    au < testing ; 2016 ; Understanding and Dismantling Privilege Volume 6 ; 6 ; 2016 >
     au < exists ; 2017 ; Understanding and Dismantling Privilege Volume 7 ; 7 ; 2017 >
     
   }
