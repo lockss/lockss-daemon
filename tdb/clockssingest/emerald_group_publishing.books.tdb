@@ -3683,7 +3683,13 @@
       #param[journal_issn] = 2050-2060
       #series = simc
 
-      au < exists ; exists ; 2012 ;  ; 9781780529189 ; 9781780529189 ; School Shootings: Mediatized Violence in a Global Age Volume 7 ; >
+      au < exists ; exists ; 2012 ; 9781780529189 ; 9781780529196 ; 9781780529196 ; School Shootings: Mediatized Violence in a Global Age Volume 7 ; >
+      au < exists ; exists ; 2014 ; 9781783506293 ; 9781783505821 ; 9781783505821 ; Communication and Information Technologies Annual Volume 8 ; >
+      au < exists ; exists ; 2015 ; 9781784414542 ; 9781784414535 ; 9781784414535 ; Communication and Information Technologies Annual Volume 9 ; >
+      au < exists ; exists ; 2015 ; 9781785603815 ; 9781785603808 ; 9781785603808 ; Communication and Information Technologies Annual Volume 10 ; >
+      au < exists ; exists ; 2016 ; 9781785607851 ; 9781785607844 ; 9781785607844 ; Communication and Information Technologies Annual Volume 11 ; >
+      au < exists ; exists ; 2016 ; 9781786354822 ; 9781786354815 ; 9781786354815 ; Communication and Information Technologies Annual Volume 12 ; >
+      au < exists ; exists ; 2017 ; 9781786357861 ; 9781786357854 ; 9781786357854 ; Brazil: Media from the Country of the Future Volume 13 ; >
 
   }
 
@@ -3696,8 +3702,13 @@
       >
 
       #param[journal_issn] = 2051-6630
+      #series = spnpg
 
-      au < manifest ; exists ; 2013 ;  ; 9781781906576 ; 9781781906576 ; Conceptualizing and Researching Governance in Public and Non-Profit Organizations Volume 1 ; >
+      au < exists ; exists ; 2013 ; 9781781906576 ; 9781781906583 ; 9781781906583 ; Conceptualizing and Researching Governance in Public and Non-Profit Organizations Volume 1 ; >
+      au < exists ; exists ; 2014 ; 9781783507054 ; 9781783507054 ; 9781783507054 ; Mechanisms, Roles and Consequences of Governance: Emerging Issues Volume 22 ; >
+      au < exists ; exists ; 2014 ; 9781784410117 ; 9781784410100 ; 9781784410100 ; Public Value Management, Measurement and Reporting Volume 23 ; >
+      au < exists ; exists ; 2015 ; 9781785604294 ; 9781785604287 ; 9781785604287 ; Contingency, Behavioural and Evolutionary Perspectives on Public and Nonprofit Governance Volume 24 ; >
+      au < exists ; exists ; 2016 ; 9781786351081 ; 9781786351074 ; 9781786351074 ; Governance and Performance in Public and Non-Profit Organizations Volume 25 ; >
 
   }
 
@@ -3710,14 +3721,17 @@
       >
 
       #param[journal_issn] = 1042-3192
+      #series = sqm
 
-      au < manifest ; exists ; 2000 ;  ; 9780762300532 ; 9780762300532 ; Cross-Cultural Case Study Volume 6 ; >
-      au < manifest ; exists ; 2004 ;  ; 9780762310210 ; 9780762310210 ; Seeing is Believing? Approaches to Visual Research Volume 7 ; >
-      au < manifest ; exists ; 2007 ;  ; 9780762312832 ; 9780762312832 ; Negotiating Boundaries and Borders Volume 8 ; >
-      au < manifest ; exists ; 2008 ;  ; 9780762313686 ; 9780762313686 ; Qualitative Urban Analysis: An International Perspective Volume 9 ; >
-      au < manifest ; exists ; 2008 ;  ; 9781846639906 ; 9781846639906 ; Qualitative Housing Analysis: An International Perspective Volume 10 ; >
-      au < manifest ; exists ; 2010 ;  ; 9781849509428 ; 9781849509428 ; New Frontiers in Ethnography Volume 11 ; >
-      au < manifest ; exists ; 2012 ;  ; 9781780528786 ; 9781780528786 ; Ethics in Social Research Volume 12 ; >
+      au < exists ; exists ; 2000 ; 9780762300532 ; 9781849500180 ; 9781849500180 ; Cross-Cultural Case Study Volume 6 ; >
+      au < exists ; exists ; 2004 ; 9780762310210 ; 9781849502115 ; 9781849502115 ; Seeing is Believing? Approaches to Visual Research Volume 7 ; >
+      au < exists ; exists ; 2007 ; 9780762312832 ; 9781849503952 ; 9781849503952 ; Negotiating Boundaries and Borders Volume 8 ; >
+      au < exists ; exists ; 2008 ; 9780762313686 ; 9781849505635 ; 9781849505635 ; Qualitative Urban Analysis: An International Perspective Volume 9 ; >
+      au < exists ; exists ; 2008 ; 9781846639906 ; 9781846639913 ; 9781846639913 ; Qualitative Housing Analysis: An International Perspective Volume 10 ; >
+      au < exists ; exists ; 2010 ; 9781849509428 ; 9781849509435 ; 9781849509435 ; New Frontiers in Ethnography Volume 11 ; >
+      au < exists ; exists ; 2012 ; 9781780528786 ; 9781780528793 ; 9781780528793 ; Ethics in Social Research Volume 12 ; >
+      au < exists ; exists ; 2014 ; 9781784410513 ; 9781784410506 ; 9781784410506 ; Big Data? Qualitative Approaches to Digital Research Volume 13 ; >
+      au < exists ; exists ; 2016 ; 9781786350268 ; 9781786350251 ; 9781786350251 ; Gender Identity and Research Relationships Volume 14 ; >
 
   }
 
@@ -3730,24 +3744,35 @@
       >
 
       #param[journal_issn] = 0163-2396
+      #series = ssi
 
-      au < manifest ; exists ; 2000 ;  ; 9780762306398 ; 9780762306398 ; Studies in Symbolic Interaction Volume 23 ; >
-      au < manifest ; exists ; 2001 ;  ; 9780762307548 ; 9780762307548 ; Studies in Symbolic Interaction Volume 24 ; >
-      au < manifest ; exists ; 2002 ;  ; 9780762308514 ; 9780762308514 ; Studies in Symbolic Interaction Volume 25 ; >
-      au < manifest ; exists ; 2003 ;  ; 9780762310098 ; 9780762310098 ; Studies in Symbolic Interaction Volume 26 ; >
-      au < manifest ; exists ; 2004 ;  ; 9780762310968 ; 9780762310968 ; Studies in Symbolic Interaction Volume 27 ; >
-      au < manifest ; exists ; 2005 ;  ; 9780762311866 ; 9780762311866 ; Studies in Symbolic Interaction Volume 28 ; >
-      au < manifest ; exists ; 2006 ;  ; 9780762313259 ; 9780762313259 ; Studies in Symbolic Interaction Volume 29 ; >
-      au < manifest ; exists ; 2008 ;  ; 9781846639302 ; 9781846639302 ; Studies in Symbolic Interaction Volume 30 ; >
-      au < manifest ; exists ; 2008 ;  ; 9781848551244 ; 9781848551244 ; Studies in Symbolic Interaction Volume 31 ; >
-      au < manifest ; exists ; 2008 ;  ; 9781848551268 ; 9781848551268 ; Studies in Symbolic Interaction Volume 32 ; >
-      au < manifest ; exists ; 2009 ;  ; 9781848557840 ; 9781848557840 ; Studies in Symbolic Interaction Volume 33 ; >
-      au < manifest ; exists ; 2010 ;  ; 9781849509602 ; 9781849509602 ; Studies in Symbolic Interaction Volume 34 ; >
-      au < manifest ; exists ; 2010 ;  ; 9780857243614 ; 9780857243614 ; Studies in Symbolic Interaction Volume 35 ; >
-      au < manifest ; exists ; 2011 ;  ; 9780857247957 ; 9780857247957 ; Blue Ribbon Papers: Interactionism: The Emerging Landscape Volume 36 ; >
-      au < manifest ; exists ; 2011 ;  ; 9781780521565 ; 9781780521565 ; Studies in Symbolic Interaction Volume 37 ; >
-      au < manifest ; exists ; 2012 ;  ; 9781780527468 ; 9781780527468 ; Blue-Ribbon Papers: Behind the Professional Mask: The Autobiographies of Leading Symbolic Interactionists Volume 38 ; >
-      au < manifest ; exists ; 2012 ;  ; 9781781900567 ; 9781781900567 ; Studies in Symbolic Interaction Volume 39 ; >
+      au < exists ; exists ; 2000 ; 9780762306398 ; 9781849500463 ; 9781849500463 ; Studies in Symbolic Interaction Volume 23 ; >
+      au < exists ; exists ; 2001 ; 9780762307548 ; 9781849500906 ; 9781849500906 ; Studies in Symbolic Interaction Volume 24 ; >
+      au < exists ; exists ; 2002 ; 9780762308514 ; 9781849501392 ; 9781849501392 ; Studies in Symbolic Interaction Volume 25 ; >
+      au < exists ; exists ; 2003 ; 9780762310098 ; 9781849502054 ; 9781849502054 ; Studies in Symbolic Interaction Volume 26 ; >
+      au < exists ; exists ; 2004 ; 9780762310968 ; 9781849502610 ; 9781849502610 ; Studies in Symbolic Interaction Volume 27 ; >
+      au < exists ; exists ; 2005 ; 9780762311866 ; 9781849503327 ; 9781849503327 ; Studies in Symbolic Interaction Volume 28 ; >
+      au < exists ; exists ; 2006 ; 9780762313259 ; 9781849504249 ; 9781849504249 ; Studies in Symbolic Interaction Volume 29 ; >
+      au < exists ; exists ; 2008 ; 9781846639302 ; 9781846639319 ; 9781846639319 ; Studies in Symbolic Interaction Volume 30 ; >
+      au < exists ; exists ; 2008 ; 9781848551244 ; 9781848551251 ; 9781848551251 ; Studies in Symbolic Interaction Volume 31 ; >
+      au < exists ; exists ; 2008 ; 9781848551268 ; 9781848551275 ; 9781848551275 ; Studies in Symbolic Interaction Volume 32 ; >
+      au < exists ; exists ; 2009 ; 9781848557840 ; 9781848557857 ; 9781848557857 ; Studies in Symbolic Interaction Volume 33 ; >
+      au < exists ; exists ; 2010 ; 9781849509602 ; 9781849509619 ; 9781849509619 ; Studies in Symbolic Interaction Volume 34 ; >
+      au < exists ; exists ; 2010 ; 9780857243614 ; 9780857243621 ; 9780857243621 ; Studies in Symbolic Interaction Volume 35 ; >
+      au < exists ; exists ; 2011 ; 9780857247957 ; 9780857247964 ; 9780857247964 ; Blue Ribbon Papers: Interactionism: The Emerging Landscape Volume 36 ; >
+      au < exists ; exists ; 2011 ; 9781780521565 ; 9781780521572 ; 9781780521572 ; Studies in Symbolic Interaction Volume 37 ; >
+      au < exists ; exists ; 2012 ; 9781780527468 ; 9781780527475 ; 9781780527475 ; Blue-Ribbon Papers: Behind the Professional Mask: The Autobiographies of Leading Symbolic Interactionists Volume 38 ; >
+      au < exists ; exists ; 2012 ; 9781781900567 ; 9781781900574 ; 9781781900574 ; Studies in Symbolic Interaction Volume 39 ; >
+      au < exists ; exists ; 2013 ; 9781781907825 ; 9781781907832 ; 9781781907832 ; 40th Anniversary of Studies in Symbolic Interaction Volume 40 ; >
+      au < exists ; exists ; 2013 ; 9781781907849 ; 9781781907856 ; 9781781907856 ; Radical Interactionism on the Rise Volume 41 ; >
+      au < exists ; exists ; 2014 ; 9781783508372 ; 9781783508389 ; 9781783508389 ; Revisiting Symbolic Interaction in Music Studies and New Interpretive Works Volume 42 ; >
+      au < exists ; exists ; 2014 ; 9781783509331 ; 9781783509324 ; 9781783509324 ; Symbolic Interaction and New Social Media Volume 43 ; >
+      au < exists ; exists ; 2015 ; 9781784418540 ; 9781784418533 ; 9781784418533 ; Contributions from European Symbolic Interactionists: Reflections on Methods Volume 44 ; >
+      au < exists ; exists ; 2015 ; 9781784418564 ; 9781784418557 ; 9781784418557 ; Contributions from European Symbolic Interactionists: Conflict and Cooperation Volume 45 ; >
+      au < exists ; exists ; 2016 ; 9781786350367 ; 9781786350350 ; 9781786350350 ; The Astructural Bias Charge: Myth or Reality? Volume 46 ; >
+      au < exists ; exists ; 2016 ; 9781786350480 ; 9781786350473 ; 9781786350473 ; Symbolic Interactionist Takes on Music Volume 47 ; >
+      au < exists ; exists ; 2017 ; 9781787431683 ; 9781787431676 ; 9781787431676 ; Oppression and Resistance Volume 48 ; >
+      au < exists ; exists ; 2017 ; 9781787431669 ; 9781787431652 ; 9781787431652 ; Carl J. Couch and The Iowa School Volume 49 ; >
 
   }
 
@@ -3760,6 +3785,7 @@
       >
 
       #param[journal_issn] = 1572-6304
+      #series = siw
 
       au < exists ; exists ; 2006 ;  ; 9780080448633 ; 9780080448633 ; Writing and Digital Media Volume 17 ; >
       au < exists ; exists ; 2006 ;  ; 9780080453255 ; 9780080453255 ; Writing and Motivation Volume 19 ; >
@@ -3780,6 +3806,7 @@
       >
 
       #param[journal_issn] = 0092-4563
+      #series = synsem
 
       au < exists ; exists ; 1998 ;  ; 9780126135312 ; 9780126135312 ; Sentence Processing: A Crosslinguistic Perspective Volume 31 ; >
       au < exists ; exists ; 1999 ;  ; 9780126135329 ; 9780126135329 ; The Nature and Function of Syntatic Categories Volume 32 ; >
@@ -3801,10 +3828,14 @@
       >
 
       #param[journal_issn] = 1479-067X
+      #series = tiecs
 
-      au < manifest ; exists ; 2004 ;  ; 9780080444574 ; 9780080444574 ; Silicon Valley North Volume 9 ; >
-      au < manifest ; exists ; 2006 ;  ; 9780080453217 ; 9780080453217 ; Astute Competition Volume 11 ; >
-      au < manifest ; exists ; 2007 ;  ; 9780080450995 ; 9780080450995 ; The Take-off of Israeli High-Tech Entrepreneurship During the 1990s Volume 12 ; >
+      au < exists ; exists ; 2004 ; 9780080444574 ; 9781849508193 ; 9781849508193 ; Silicon Valley North Volume 9 ; >
+      au < exists ; exists ; 2006 ; 9780080453217 ; 9781849508186 ; 9781849508186 ; Astute Competition Volume 11 ; >
+      au < exists ; exists ; 2007 ; 9780080450995 ; 9781849508179 ; 9781849508179 ; The Take-off of Israeli High-Tech Entrepreneurship During the 1990s Volume 12 ; >
+      au < exists ; exists ; 2013 ; 9781781904893 ; 9781781904909 ; 9781781904909 ; Understanding the Relationship Between Networks and Technology, Creativity and Innovation Volume 13 ; >
+      au < exists ; exists ; 2014 ; 9781783506552 ; 9781783506569 ; 9781783506569 ; Exploration and Exploitation in Early Stage Ventures and SMEs Volume 14 ; >
+      au < exists ; exists ; 2016 ; 9781786353726 ; 9781786353719 ; 9781786353719 ; Mergers and Acquisitions, Entrepreneurship and Innovation Volume 15 ; >
 
   }
 
@@ -3817,8 +3848,15 @@
       >
 
       #param[journal_issn] = 1571-5043
+      #series = tsss
 
-      au < manifest ; exists ; 2012 ;  ; 9780857246837 ; 9780857246837 ; Culture and Society in Tourism Contexts Volume 17 ; >
+      au < exists ; exists ; 2012 ; 9780857246837 ; 9780857246844 ; 9780857246844 ; Culture and Society in Tourism Contexts Volume 17 ; >
+      au < exists ; exists ; 2013 ; 9781781902134 ; 9781781902622 ; 9781781902622 ; Tourism Social Media: Transformations in Identity, Community and Culture Volume 18 ; >
+      au < exists ; exists ; 2013 ; 9781781902127 ; 9781781902615 ; 9781781902615 ; Geographies of Tourism Volume 19 ; >
+      au < exists ; exists ; 2015 ; 9781783509935 ; 9781783509942 ; 9781783509942 ; Tourism Research Frontiers: Beyond the Boundaries of Knowledge Volume 20 ; >
+      au < exists ; exists ; 2015 ; 9781783509973 ; 9781783509980 ; 9781783509980 ; Tourism Education: Global Issues and Trends Volume 21 ; >
+      au < exists ; exists ; 2016 ; 9781783509294 ; 9781783509300 ; 9781783509300 ; Tourism Research Paradigms: Critical and Emergent Knowledges Volume 22 ; >
+      au < exists ; exists ; 2016 ; 9781784413569 ; 9781784413552 ; 9781784413552 ; Social Conflict and Harmony: Tourism in China’s Multi-Ethnic Communities Volume 23 ; >
 
   }
 
@@ -3831,10 +3869,17 @@
       >
 
       #param[journal_issn] = 2044-9941
+      #series = ts
 
-      au < manifest ; exists ; 2012 ;  ; 9781780522982 ; 9781780522982 ; Cycling and Sustainability Volume 1 ; >
-      au < manifest ; exists ; 2012 ;  ; 9781780524405 ; 9781780524405 ; Transport and Climate Change Volume 2 ; >
-      au < manifest ; exists ; 2012 ;  ; 9781781904756 ; 9781781904756 ; Sustainable Transport for Chinese Cities Volume 3 ; >
+      au < exists ; exists ; 2012 ; 9781780522982 ; 9781780522999 ; 9781780522999 ; Cycling and Sustainability Volume 1 ; >
+      au < exists ; exists ; 2012 ; 9781780524405 ; 9781780524412 ; 9781780524412 ; Transport and Climate Change Volume 2 ; >
+      au < exists ; exists ; 2012 ; 9781781904756 ; 9781781904763 ; 9781781904763 ; Sustainable Transport for Chinese Cities Volume 3 ; >
+      au < exists ; exists ; 2001 ; 9781781905951 ; 9781781905968 ; 9781781905968 ; Sustainable Aviation Futures Volume 4 ; >
+      au < exists ; exists ; 2005 ; 9781783509195 ; 9781783509201 ; 9781783509201 ; Parking Issues and Policies Volume 5 ; >
+      au < exists ; exists ; 2008 ; 9781784410629 ; 9781784410612 ; 9781784410612 ; Sustainable Logistics Volume 6 ; >
+      au < exists ; exists ; 2011 ; 9781784416164 ; 9781784416157 ; 9781784416157 ; Sustainable Urban Transport Volume 7 ; >
+      au < exists ; exists ; 2012 ; 9781786352262 ; 9781786352255 ; 9781786352255 ; Paratransit: Shaping the Flexible Transport Future Volume 8 ; >
+      au < exists ; exists ; 2012 ; 9781787146280 ; 9781787146273 ; 9781787146273 ; Walking: Connecting Sustainable Transport with Health Volume 9 ; >
 
   }
 }
