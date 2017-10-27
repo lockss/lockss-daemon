@@ -82,7 +82,7 @@
     param[journal_id] = cpe
     implicit < status ; status2 ; year ; param[year] ; name ; volume ; hidden[proxy] >
 
-    au < crawling ; exists ; 2006 ; 2006 ; Coactivity: Philology, Educology Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2006 ; 2006 ; Coactivity: Philology, Educology Volume 14 ; 14 ; >
     au < frozen ; exists ; 2007 ; 2007 ; Coactivity: Philology, Educology Volume 15 ; 15 ; >
     au < frozen ; exists ; 2008 ; 2008 ; Coactivity: Philology, Educology Volume 16 ; 16 ; >
     au < frozen ; exists ; 2009 ; 2009 ; Coactivity: Philology, Educology Volume 17 ; 17 ; >

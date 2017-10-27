@@ -69,7 +69,7 @@
     au < finished ; finished ; 2012 ; 978-1-78084-173-1 ; 978-1-78084-171-7 ; 9781780841717 ; Non-Hodgkin Lymphomas: Advanced Diagnostics & Personalized Therapies ; http://www.futuremedicine.com/ ; >
     au < finished ; finished ; 2012 ; 978-1-78084-176-2 ; 978-1-78084-174-8 ; 9781780841748 ; Polycystic Kidney Disease: from Bench to Bedside ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2012 ; 978-1-78084-118-2 ; 978-1-78084-036-9 ; 9781780840369 ; Stroke Prevention in Atrial Fibrillation ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2012 ; 978-1-78084-129-8 ; 978-1-78084-058-1 ; 9781780840581 ; New Oral Anticoagulants ; https://www.futuremedicine.com/ ; >
+    au < frozen ; exists ; 2012 ; 978-1-78084-129-8 ; 978-1-78084-058-1 ; 9781780840581 ; New Oral Anticoagulants ; https://www.futuremedicine.com/ ; >
     au < finished ; finished ; 2012 ; 978-1-78084-136-6 ; 978-1-78084-072-7 ; 9781780840727 ; Emerging Applications of Colloidal Noble Metals in Cancer Nanomedicine ; http://www.futuremedicine.com/ ; >
     au < finished ; finished ; 2013 ; 978-1-78084-158-8 ; 978-1-78084-156-4 ; 9781780841564 ; Contemporary Management of Overactive Bladder ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; 978-1-78084-170-0 ; 978-1-78084-168-7 ; 9781780841687 ; Osteoporosis ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
@@ -140,7 +140,7 @@
     au < finished ; finished ; 2014 ; 978-1-78084-314-8 ; 978-1-78084-312-4 ; 9781780843124 ; Novel Approaches in Immunoassays ; http://www.futuremedicine.com/ ; >
     au < finished ; finished ; 2014 ; 978-1-78084-338-4 ; 978-1-78084-336-0 ; 9781780843360 ; Clinical Insights: Probiotics, Prebiotics and Gut Health ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 978-1-78084-365-0 ; 978-1-78084-363-6 ; 9781780843636 ; Clinical Insights: Obesity and Childhood ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2014 ; 978-1-78084-380-3 ; 978-1-78084-378-0 ; 9781780843780 ; Clinical Insights: Mental Health in Adolescents: Bipolar Disorder ; https://www.futuremedicine.com/ ; > #Standard Atypon 500 error. Retest when resolved.
+    au < frozen ; exists ; 2014 ; 978-1-78084-380-3 ; 978-1-78084-378-0 ; 9781780843780 ; Clinical Insights: Mental Health in Adolescents: Bipolar Disorder ; https://www.futuremedicine.com/ ; > #Standard Atypon 500 error. Retest when resolved.
     au < finished ; finished ; 2014 ; 978-1-78084-386-5 ; 978-1-78084-384-1 ; 9781780843841 ; Clinical Insights: Dengue: Transmission, Diagnosis & Surveillance ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 978-1-78084-389-6 ; 978-1-78084-387-2 ; 9781780843872 ; Clinical Insights: Neoadjuvant Therapy in Breast Cancer ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; 978-1-78084-437-4 ; 978-1-78084-435-0 ; 9781780844350 ; Novel Insights into the Pathophysiology and Treatment of Fibromyalgia ; http://www.futuremedicine.com/ ; >
@@ -175,7 +175,7 @@
     au < finished ; finished ; 2015 ; 978-1-78084-581-4 ; 978-1-78084-579-1 ; 9781780845791 ; Hodgkin and Non-Hodgkin Lymphomas Seen through Their Microenvironment: Impact on Diagnosis, Prognosis and Innovative Therapy (Volume 1) ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 978-1-78084-584-5 ; 978-1-78084-582-1 ; 9781780845821 ; Hodgkin and Non-Hodgkin Lymphomas Seen through Their Microenvironment: Impact on Diagnosis, Prognosis and Innovative Therapy (Volume 2) ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2015 ;  ; 978-1-78084-423-7 ; 9781780844237 ; Advances in Bladder Cancer Management ; http://www.futuremedicine.com/ ; >
-    au < crawling ; exists ; 2016 ;  ; 978-1-78084-489-3 ; 9781780844893 ; Contemporary Approaches to Upper Respiratory Tract Infections ; https://www.futuremedicine.com/ ; >
+    au < frozen ; exists ; 2016 ;  ; 978-1-78084-489-3 ; 9781780844893 ; Contemporary Approaches to Upper Respiratory Tract Infections ; https://www.futuremedicine.com/ ; >
     #added in October 2017 per publisher request
     au < manifest ; exists ; 2015 ;  ; 978-1-78084-459-6 ; 9781780844596 ; Traumatic Brain Injury Rehabilitation Medicine ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2015 ;  ; 978-1-78084-396-4 ; 9781780843964 ; Clinical Insights: Optimal Therapy of Pediatric Medulloblastoma ; https://www.futuremedicine.com/ ; >
