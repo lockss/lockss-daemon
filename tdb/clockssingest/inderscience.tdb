@@ -1304,7 +1304,7 @@
       au < finished ; finished ; 2013-2014 ; International Journal of Business Competition and Growth Volume 3 ; 3 ; >
       au < finished ; finished ; 2015 ; International Journal of Business Competition and Growth Volume 4 ; 4 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; International Journal of Business Competition and Growth Volume 5 ; 5 ; reingest5.clockss.org:8082 >
-      au < manifest ; exists ; 2017 ; International Journal of Business Competition and Growth Volume 6 ; 6 ; >
+      au < testing ; exists ; 2017 ; International Journal of Business Competition and Growth Volume 6 ; 6 ; >
 
     }
 
@@ -3432,7 +3432,7 @@
       au < finished ; crawling ; 2016 ; International Journal of Exergy Volume 21 ; 21 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2017 ; International Journal of Exergy Volume 22 ; 22 ; >
       au < crawling ; exists ; 2017 ; International Journal of Exergy Volume 23 ; 23 ; >
-      au < manifest ; exists ; 2017 ; International Journal of Exergy Volume 24 ; 24 ; >
+      au < testing ; exists ; 2017 ; International Journal of Exergy Volume 24 ; 24 ; >
 
     }
 
@@ -4679,7 +4679,7 @@
       au < doNotProcess ; doNotProcess ; 2007-2012 ; International Journal of Intelligent Enterprise Volume 1 ; 1 ; >
       au < finished ; finished ; 2013-2014 ; International Journal of Intelligent Enterprise Volume 2 ; 2 ; >
       au < frozen ; exists ; 2015-2016 ; International Journal of Intelligent Enterprise Volume 3 ; 3 ; >
-      au < manifest ; exists ; 2017 ; International Journal of Intelligent Enterprise Volume 4 ; 4 ; >
+      au < testing ; exists ; 2017 ; International Journal of Intelligent Enterprise Volume 4 ; 4 ; >
 
     }
 
@@ -5716,7 +5716,7 @@
       au < finished ; finished ; 2014 ; International Journal of Materials and Structural Integrity Volume 8 ; 8 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; International Journal of Materials and Structural Integrity Volume 9 ; 9 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2016 ; International Journal of Materials and Structural Integrity Volume 10 ; 10 ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 2017 ; International Journal of Materials and Structural Integrity Volume 11 ; 11 ; >
+      au < testing ; exists ; 2017 ; International Journal of Materials and Structural Integrity Volume 11 ; 11 ; >
 
     }
 
@@ -5803,7 +5803,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Mechanisms and Robotic Systems Volume 1 ; 1 ; >
       au < finished ; finished ; 2014-2015 ; International Journal of Mechanisms and Robotic Systems Volume 2 ; 2 ; >
       au < crawling ; exists ; 2016-2017 ; International Journal of Mechanisms and Robotic Systems Volume 3 ; 3 ; >
-      au < manifest ; exists ; 2017 ; International Journal of Mechanisms and Robotic Systems Volume 4 ; 4 ; >
+      au < testing ; exists ; 2017 ; International Journal of Mechanisms and Robotic Systems Volume 4 ; 4 ; >
 
     }
 
@@ -7768,7 +7768,7 @@
       param[journal_id] = ijseta
 
       au < finished ; finished ; 2015 ; International Journal of Software Engineering, Technology and Applications Volume 1 ; 1 ; reingest3.clockss.org:8083 >
-      au < manifest ; exists ; 2017 ; International Journal of Software Engineering, Technology and Applications Volume 2 ; 2 ; >
+      au < testing ; exists ; 2017 ; International Journal of Software Engineering, Technology and Applications Volume 2 ; 2 ; >
 
     }
 
@@ -9058,7 +9058,7 @@
       au < finished ; crawling ; 2016 ; International Journal of Wireless and Mobile Computing Volume 10 ; 10 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; International Journal of Wireless and Mobile Computing Volume 11 ; 11 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2017 ; International Journal of Wireless and Mobile Computing Volume 12 ; 12 ; >
-      au < manifest ; exists ; 2017 ; International Journal of Wireless and Mobile Computing Volume 13 ; 13 ; >
+      au < testing ; exists ; 2017 ; International Journal of Wireless and Mobile Computing Volume 13 ; 13 ; >
 
     }
 
@@ -9538,7 +9538,7 @@
 
       au < finished ; crawling ; 2014-2015 ; International Journal of Supply Chain and Operations Resilience Volume 1 ; 1 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2016 ; International Journal of Supply Chain and Operations Resilience Volume 2 ; 2 ; reingest3.clockss.org:8083 >
-      au < manifest ; exists ; 2017 ; International Journal of Supply Chain and Operations Resilience Volume 3 ; 3 ; >
+      au < testing ; exists ; 2017 ; International Journal of Supply Chain and Operations Resilience Volume 3 ; 3 ; >
 
   }
 
