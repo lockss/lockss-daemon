@@ -60,6 +60,7 @@
     </list>
   </entry>
   <entry>
+    <!-- CRAWL RULES COPIED DOWN FROM PARENT on 10/27/17 to allow for simplification of parent -->
     <string>au_crawlrules</string>
     <list>
       <string>1,"^https?://%s/c?lockss-manifest/[^/.]*vol_%s_manifest.html", url_host(base_url), volume_name</string>
