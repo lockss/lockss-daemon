@@ -13639,7 +13639,7 @@
       #param[base_url] = http://her.sagepub.com/
 
       au < crawling ; exists ; 2007-2008 ; HERD: Health Environments Research & Design Journal Volume 1 ; 1 ; hera ; >
-      au < crawling ; exists ; 2008-2009 ; HERD: Health Environments Research & Design Journal Volume 2 ; 2 ; hera ; >
+      au < frozen ; exists ; 2008-2009 ; HERD: Health Environments Research & Design Journal Volume 2 ; 2 ; hera ; >
       au < crawling ; exists ; 2009-2010 ; HERD: Health Environments Research & Design Journal Volume 3 ; 3 ; hera ; >
       au < frozen ; exists ; 2010-2011 ; HERD: Health Environments Research & Design Journal Volume 4 ; 4 ; hera ; >
       au < frozen ; exists ; 2011-2012 ; HERD: Health Environments Research & Design Journal Volume 5 ; 5 ; hera ; >
@@ -15028,8 +15028,8 @@
       au < crawling ; exists ; 2010 ; Indian Journal of Human Development Volume 4 ; 4 ; jhda ; >
       au < crawling ; exists ; 2011 ; Indian Journal of Human Development Volume 5 ; 5 ; jhda ; >
       au < crawling ; exists ; 2012 ; Indian Journal of Human Development Volume 6 ; 6 ; jhda ; >
-      au < crawling ; exists ; 2013 ; Indian Journal of Human Development Volume 7 ; 7 ; jhda ; >
-      au < crawling ; exists ; 2014 ; Indian Journal of Human Development Volume 8 ; 8 ; jhda ; >
+      au < frozen ; exists ; 2013 ; Indian Journal of Human Development Volume 7 ; 7 ; jhda ; >
+      au < frozen ; exists ; 2014 ; Indian Journal of Human Development Volume 8 ; 8 ; jhda ; >
       au < crawling ; exists ; 2015 ; Indian Journal of Human Development Volume 9 ; 9 ; jhda ; >
       au < frozen ; exists ; 2016 ; Indian Journal of Human Development Volume 10 ; 10 ; jhda ; >
       au < manifest ; exists ; 2017 ; Indian Journal of Human Development Volume 11 ; 11 ; jhda ; >
@@ -29158,7 +29158,7 @@
       au < frozen ; exists ; 2008 ; Metamorphosis Volume 7 ; 7 ; meta ; >
       au < crawling ; exists ; 2009 ; Metamorphosis Volume 8 ; 8 ; meta ; >
       au < crawling ; exists ; 2010 ; Metamorphosis Volume 9 ; 9 ; meta ; >
-      au < crawling ; exists ; 2011 ; Metamorphosis Volume 10 ; 10 ; meta ; >
+      au < frozen ; exists ; 2011 ; Metamorphosis Volume 10 ; 10 ; meta ; >
       au < crawling ; exists ; 2012 ; Metamorphosis Volume 11 ; 11 ; meta ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Metamorphosis Volume 12 ; 12 ; meta ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Metamorphosis Volume 13 ; 13 ; meta ; >
@@ -30046,7 +30046,7 @@
       au < crawling ; exists ; 2010 ; Netherlands Quarterly of Human Rights Volume 28 ; 28 ; nqha ; >
       au < crawling ; exists ; 2011 ; Netherlands Quarterly of Human Rights Volume 29 ; 29 ; nqha ; >
       au < crawling ; exists ; 2012 ; Netherlands Quarterly of Human Rights Volume 30 ; 30 ; nqha ; >
-      au < crawling ; exists ; 2013 ; Netherlands Quarterly of Human Rights Volume 31 ; 31 ; nqha ; >
+      au < frozen ; exists ; 2013 ; Netherlands Quarterly of Human Rights Volume 31 ; 31 ; nqha ; >
       au < crawling ; exists ; 2014 ; Netherlands Quarterly of Human Rights Volume 32 ; 32 ; nqha ; >
       au < frozen ; exists ; 2015 ; Netherlands Quarterly of Human Rights Volume 33 ; 33 ; nqha ; >
       au < frozen ; exists ; 2016 ; Netherlands Quarterly of Human Rights Volume 34 ; 34 ; nqha ; >
@@ -37639,7 +37639,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; South Asian Survey Volume 18 ; 18 ; sasa ; >
       au < doNotProcess ; doNotProcess ; 2012 ; South Asian Survey Volume 19 ; 19 ; sasa ; >
       au < doNotProcess ; doNotProcess ; 2013 ; South Asian Survey Volume 20 ; 20 ; sasa ; >
-      au < crawling ; exists ; 2014 ; South Asian Survey Volume 21 ; 21 ; sasa ; >
+      au < frozen ; exists ; 2014 ; South Asian Survey Volume 21 ; 21 ; sasa ; >
       au < crawling ; exists ; 2015 ; South Asian Survey Volume 22 ; 22 ; sasa ; >
 
     }
