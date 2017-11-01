@@ -788,9 +788,9 @@ while (my $line = <>) {
               $vol_title = $resp->request->uri;
               $result = "Redirected";
           } elsif (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) && 
-                  (($man_contents =~ m/$param{journal_id}\/$param{volume_name}\//) || 
+                  (($man_contents =~ m/\/$param{journal_id}\/$param{volume_name}\//) || 
                   ($man_contents =~ m/\/toc\/$param{journal_id}\/*$param{volume_name}\"/) || 
-                  ($man_contents =~ m/$param{journal_id}\S*volume=$param{volume_name}/)))) {
+                  ($man_contents =~ m/\/$param{journal_id}\S*volume=$param{volume_name}/)))) {
               if ($man_contents =~ m/<title>\s*(.*) LOCKSS Manifest Page\s*<\/title>/si) {
                   $vol_title = $1;
                   $vol_title =~ s/\s*\n\s*/ /g;
