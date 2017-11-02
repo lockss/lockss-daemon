@@ -97,13 +97,10 @@
     param[journal_id] = clp
     #No longer published by Future Medicine
      
-    au < exists ; 2009 ; Clinical Lipidology Volume 4 ; 4 ; https://www.futuremedicine.com/ >
-    au < exists ; 2010 ; Clinical Lipidology Volume 5 ; 5 ; https://www.futuremedicine.com/ >
-    au < exists ; 2011 ; Clinical Lipidology Volume 6 ; 6 ; https://www.futuremedicine.com/ >
-    au < released ; 2012 ; Clinical Lipidology Volume 7 ; 7 ; http://www.futuremedicine.com/ >
-    au < released ; 2013 ; Clinical Lipidology Volume 8 ; 8 ; http://www.futuremedicine.com/ >
-    au < released ; 2014 ; Clinical Lipidology Volume 9 ; 9 ; http://www.futuremedicine.com/ >
-    au < released ; 2015 ; Clinical Lipidology Volume 10 ; 10 ; http://www.futuremedicine.com/ >
+    au < superseded ; 2012 ; Clinical Lipidology Volume 7 [superseded] ; 7 ; http://www.futuremedicine.com/ >
+    au < superseded ; 2013 ; Clinical Lipidology Volume 8 [superseded] ; 8 ; http://www.futuremedicine.com/ >
+    au < superseded ; 2014 ; Clinical Lipidology Volume 9 [superseded] ; 9 ; http://www.futuremedicine.com/ >
+    au < superseded ; 2015 ; Clinical Lipidology Volume 10 [superseded] ; 10 ; http://www.futuremedicine.com/ >
 
   }
 
