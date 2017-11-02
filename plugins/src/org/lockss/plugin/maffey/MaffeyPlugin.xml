@@ -15,7 +15,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>17</string>
+    <string>18</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -26,7 +26,7 @@
       </entry>
       <entry>
         <string>Substance</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -59,7 +59,10 @@
   </entry>
   <entry>
      <string>au_substance_url_pattern</string>
-     <string>"^%sredirect_file\.php\?.*fileType=pdf.*$", base_url</string>
+<!--  Only urls with printable ASCII chars should count as substance -->
+<!--  using "space to tilde" because ORO regex limits ways to indicate ascii -->     
+     <string>"^%sredirect_file\.php\?.*fileType=pdf[ -~]*$", base_url</string>
+     <!--  <string>"^%sredirect_file\.php\?.*fileType=pdf.*$", base_url</string>-->
   </entry>
   <entry>
     <string>plugin_config_props</string>
