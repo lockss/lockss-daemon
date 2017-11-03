@@ -5,7 +5,7 @@
   >
   
   comment[platform] = Atypon
-  plugin = org/lockss/plugin/atypon/GenericAtyponPlugin
+  plugin = org.lockss.plugin.atypon.GenericAtyponPlugin
   implicit < status ; year ; name ; param[volume_name] >
 
   {
