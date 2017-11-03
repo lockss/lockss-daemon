@@ -256,7 +256,7 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < down ; 2014 ; Comparative Literature Studies Volume 51 ; 51 >
+        au < superseded ; 2014 ; Comparative Literature Studies Volume 51 [superseded] ; 51 >
         au < superseded ; 2015 ; Comparative Literature Studies Volume 52 [superseded] ; 52 >
         au < doNotProcess ; 2016 ; Comparative Literature Studies Volume 53 ; 53 >
 
@@ -605,9 +605,9 @@
         au < down ; 2008 ; The Good Society Volume 17 ; 17 >
         au < down ; 2009 ; The Good Society Volume 18 ; 18 >
         au < superseded ; 2010 ; The Good Society Volume 19 [superseded] ; 19 >
-        au < down ; 2011 ; The Good Society Volume 20 ; 20 >
-        au < down ; 2012 ; The Good Society Volume 21 ; 21 >
-        au < down ; 2013 ; The Good Society Volume 22 ; 22 >
+        au < superseded ; 2011 ; The Good Society Volume 20 [superseded] ; 20 >
+        au < superseded ; 2012 ; The Good Society Volume 21 [superseded] ; 21 >
+        au < superseded ; 2013 ; The Good Society Volume 22 [superseded] ; 22 >
 
       }
 
@@ -615,7 +615,7 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < down ; 2014 ; The Good Society Volume 23 ; 23 >
+        au < superseded ; 2014 ; The Good Society Volume 23 [superseded] ; 23 >
         au < superseded ; 2015 ; The Good Society Volume 24 [superseded] ; 24 >
         au < doNotProcess ; 2016 ; The Good Society Volume 25 ; 25 >
 
