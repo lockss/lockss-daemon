@@ -1,0 +1,17 @@
+#!/bin/sh
+
+if which realpath &> /dev/null ; then
+  REALPATH=realpath
+elif which grealpath &> /dev/null ; then
+  REALPATH=grealpath
+else
+  echo "Core command line utility realpath (or grealpath) not found" >&2
+  exit 1
+fi
+if which python2 &> /dev/null ; then
+  PYTHON2=python2
+else
+  echo "Python 2 executable (or symbolic link) python2 not found" >&2
+  exit 1
+fi
+$PYTHON2 $(dirname $($REALPATH $0))/$(basename $0).py "$@"
