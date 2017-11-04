@@ -4380,7 +4380,7 @@
       au < manifest ; exists ; 2007 ; Building Acoustics Volume 14 ; 14 ; buaa ; >
       au < frozen ; exists ; 2008 ; Building Acoustics Volume 15 ; 15 ; buaa ; >
       au < crawling ; exists ; 2009 ; Building Acoustics Volume 16 ; 16 ; buaa ; >
-      au < crawling ; exists ; 2010 ; Building Acoustics Volume 17 ; 17 ; buaa ; >
+      au < frozen ; exists ; 2010 ; Building Acoustics Volume 17 ; 17 ; buaa ; >
       au < frozen ; exists ; 2011 ; Building Acoustics Volume 18 ; 18 ; buaa ; >
       au < frozen ; exists ; 2012 ; Building Acoustics Volume 19 ; 19 ; buaa ; >
       au < frozen ; exists ; 2013 ; Building Acoustics Volume 20 ; 20 ; buaa ; >
@@ -5935,7 +5935,7 @@
     au < manifest ; exists ; 2004-2005 ; Christianity & Literature Volume 54 ; 54 ; cala ; >
     au < manifest ; exists ; 2005-2006 ; Christianity & Literature Volume 55 ; 55 ; cala ; >
     au < manifest ; exists ; 2006-2007 ; Christianity & Literature Volume 56 ; 56 ; cala ; >
-    au < crawling ; exists ; 2007-2008 ; Christianity & Literature Volume 57 ; 57 ; cala ; >
+    au < frozen ; exists ; 2007-2008 ; Christianity & Literature Volume 57 ; 57 ; cala ; >
     au < crawling ; exists ; 2009 ; Christianity & Literature Volume 58 ; 58 ; cala ; >
     au < frozen ; exists ; 2009-2010 ; Christianity & Literature Volume 59 ; 59 ; cala ; >
     au < frozen ; exists ; 2010-2011 ; Christianity & Literature Volume 60 ; 60 ; cala ; >
@@ -7043,7 +7043,7 @@
 
     {
 
-      au < crawling ; exists ; 2010 ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 15 ; 15 ; chpb ; >
+      au < frozen ; exists ; 2010 ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 15 ; 15 ; chpb ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 16 ; 16 ; chpc ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 17 ; 17 ; chpc ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 18 ; 18 ; chpc ; >
@@ -11240,7 +11240,7 @@
       au < manifest ; exists ; 2007 ; European Journal of Social Security Volume 9 ; 9 ; ejsa ; >
       au < frozen ; exists ; 2008 ; European Journal of Social Security Volume 10 ; 10 ; ejsa ; >
       au < crawling ; exists ; 2009 ; European Journal of Social Security Volume 11 ; 11 ; ejsa ; >
-      au < crawling ; exists ; 2010 ; European Journal of Social Security Volume 12 ; 12 ; ejsa ; >
+      au < frozen ; exists ; 2010 ; European Journal of Social Security Volume 12 ; 12 ; ejsa ; >
       au < frozen ; exists ; 2011 ; European Journal of Social Security Volume 13 ; 13 ; ejsa ; >
       au < frozen ; exists ; 2012 ; European Journal of Social Security Volume 14 ; 14 ; ejsa ; >
       au < frozen ; exists ; 2013 ; European Journal of Social Security Volume 15 ; 15 ; ejsa ; >
@@ -15531,7 +15531,7 @@
       au < frozen ; exists ; 2008 ; International Journal of Advanced Robotic Systems Volume 5 ; 5 ; arxa ; >
       au < frozen ; exists ; 2009 ; International Journal of Advanced Robotic Systems Volume 6 ; 6 ; arxa ; >
       au < frozen ; exists ; 2010 ; International Journal of Advanced Robotic Systems Volume 7 ; 7 ; arxa ; >
-      au < crawling ; exists ; 2011 ; International Journal of Advanced Robotic Systems Volume 8 ; 8 ; arxa ; >
+      au < frozen ; exists ; 2011 ; International Journal of Advanced Robotic Systems Volume 8 ; 8 ; arxa ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Advanced Robotic Systems Volume 9 ; 9 ; arxa ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Advanced Robotic Systems Volume 10 ; 10 ; arxa ; >
       au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Advanced Robotic Systems Volume 11 ; 11 ; arxa ; >
@@ -15601,7 +15601,7 @@
       au < frozen ; exists ; 2008 ; The International Journal of Aging and Human Development Volume 67 ; 67 ; ahdb ; >
       au < crawling ; exists ; 2009 ; The International Journal of Aging and Human Development Volume 68 ; 68 ; ahdb ; >
       au < crawling ; exists ; 2009 ; The International Journal of Aging and Human Development Volume 69 ; 69 ; ahdb ; >
-      au < crawling ; exists ; 2010 ; The International Journal of Aging and Human Development Volume 70 ; 70 ; ahdb ; >
+      au < frozen ; exists ; 2010 ; The International Journal of Aging and Human Development Volume 70 ; 70 ; ahdb ; >
       au < crawling ; exists ; 2010 ; The International Journal of Aging and Human Development Volume 71 ; 71 ; ahdb ; >
       au < frozen ; exists ; 2011 ; The International Journal of Aging and Human Development Volume 72 ; 72 ; ahdb ; >
       au < frozen ; exists ; 2011 ; The International Journal of Aging and Human Development Volume 73 ; 73 ; ahdb ; >
@@ -16701,7 +16701,7 @@
       au < manifest ; exists ; 2007 ; The International Journal of Psychiatry in Medicine Volume 37 ; 37 ; ijpb ; >
       au < frozen ; exists ; 2008 ; The International Journal of Psychiatry in Medicine Volume 38 ; 38 ; ijpb ; >
       au < crawling ; exists ; 2009 ; The International Journal of Psychiatry in Medicine Volume 39 ; 39 ; ijpb ; >
-      au < crawling ; exists ; 2010 ; The International Journal of Psychiatry in Medicine Volume 40 ; 40 ; ijpb ; >
+      au < frozen ; exists ; 2010 ; The International Journal of Psychiatry in Medicine Volume 40 ; 40 ; ijpb ; >
       au < frozen ; exists ; 2011 ; The International Journal of Psychiatry in Medicine Volume 41 ; 41 ; ijpb ; >
       au < frozen ; exists ; 2011 ; The International Journal of Psychiatry in Medicine Volume 42 ; 42 ; ijpb ; >
       au < frozen ; exists ; 2012 ; The International Journal of Psychiatry in Medicine Volume 43 ; 43 ; ijpb ; >
@@ -16978,7 +16978,7 @@
 
       #param[base_url] = http://scd.sagepub.com/
 
-      au < crawling ; exists ; 2009 ; International Journal of Spray and Combustion Dynamics Volume 1 ; 1 ; scda ; >
+      au < frozen ; exists ; 2009 ; International Journal of Spray and Combustion Dynamics Volume 1 ; 1 ; scda ; >
       au < crawling ; exists ; 2010 ; International Journal of Spray and Combustion Dynamics Volume 2 ; 2 ; scda ; >
       au < frozen ; exists ; 2011 ; International Journal of Spray and Combustion Dynamics Volume 3 ; 3 ; scda ; >
       au < frozen ; exists ; 2012 ; International Journal of Spray and Combustion Dynamics Volume 4 ; 4 ; scda ; >
@@ -24504,7 +24504,7 @@
       au < manifest ; exists ; 2006 ; Journal of Pastoral Care & Counseling Volume 60 ; 60 ; pcca ; >
       au < manifest ; exists ; 2007 ; Journal of Pastoral Care & Counseling Volume 61 ; 61 ; pcca ; >
       au < frozen ; exists ; 2008 ; Journal of Pastoral Care & Counseling Volume 62 ; 62 ; pcca ; >
-      au < crawling ; exists ; 2009 ; Journal of Pastoral Care & Counseling Volume 63 ; 63 ; pcca ; >
+      au < frozen ; exists ; 2009 ; Journal of Pastoral Care & Counseling Volume 63 ; 63 ; pcca ; >
       au < crawling ; exists ; 2010 ; Journal of Pastoral Care & Counseling Volume 64 ; 64 ; pcca ; >
       au < frozen ; exists ; 2011 ; Journal of Pastoral Care & Counseling Volume 65 ; 65 ; pcca ; >
       au < frozen ; exists ; 2012 ; Journal of Pastoral Care & Counseling Volume 66 ; 66 ; pcca ; >
@@ -29332,7 +29332,7 @@
       au < manifest ; exists ; 2006 ; Molecular Imaging Volume 5 ; 5 ; mixa ; >
       au < manifest ; exists ; 2007 ; Molecular Imaging Volume 6 ; 6 ; mixa ; >
       au < frozen ; exists ; 2008 ; Molecular Imaging Volume 7 ; 7 ; mixa ; >
-      au < crawling ; exists ; 2009 ; Molecular Imaging Volume 8 ; 8 ; mixa ; >
+      au < frozen ; exists ; 2009 ; Molecular Imaging Volume 8 ; 8 ; mixa ; >
       au < doNotProcess ; doNotProcess ; 2010 ; Molecular Imaging Volume 9 ; 9 ; mixa ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Molecular Imaging Volume 10 ; 10 ; mixa ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Molecular Imaging Volume 11 ; 11 ; mixa ; >
@@ -30309,7 +30309,7 @@
       au < manifest ; exists ; 2006 ; New Solutions Volume 16 ; 16 ; newa ; >
       au < manifest ; exists ; 2007 ; New Solutions Volume 17 ; 17 ; newa ; >
       au < frozen ; exists ; 2008 ; New Solutions Volume 18 ; 18 ; newa ; >
-      au < crawling ; exists ; 2009 ; New Solutions Volume 19 ; 19 ; newa ; >
+      au < frozen ; exists ; 2009 ; New Solutions Volume 19 ; 19 ; newa ; >
       au < crawling ; exists ; 2010 ; New Solutions Volume 20 ; 20 ; newa ; >
       au < frozen ; exists ; 2011 ; New Solutions Volume 21 ; 21 ; newa ; >
       au < frozen ; exists ; 2012 ; New Solutions Volume 22 ; 22 ; newa ; >
@@ -30591,10 +30591,10 @@
       au < crawling ; exists ; 2008 ; Nordic Studies on Alcohol and Drugs Volume 25 ; 25 ; nada ; >
       au < crawling ; exists ; 2009 ; Nordic Studies on Alcohol and Drugs Volume 26 ; 26 ; nada ; >
       au < crawling ; exists ; 2010 ; Nordic Studies on Alcohol and Drugs Volume 27 ; 27 ; nada ; >
-      au < crawling ; exists ; 2011 ; Nordic Studies on Alcohol and Drugs Volume 28 ; 28 ; nada ; >
+      au < frozen ; exists ; 2011 ; Nordic Studies on Alcohol and Drugs Volume 28 ; 28 ; nada ; >
       au < crawling ; exists ; 2012 ; Nordic Studies on Alcohol and Drugs Volume 29 ; 29 ; nada ; >
       au < crawling ; exists ; 2013 ; Nordic Studies on Alcohol and Drugs Volume 30 ; 30 ; nada ; >
-      au < crawling ; exists ; 2014 ; Nordic Studies on Alcohol and Drugs Volume 31 ; 31 ; nada ; >
+      au < frozen ; exists ; 2014 ; Nordic Studies on Alcohol and Drugs Volume 31 ; 31 ; nada ; >
       au < frozen ; exists ; 2015 ; Nordic Studies on Alcohol and Drugs Volume 32 ; 32 ; nada ; >
       au < frozen ; exists ; 2016 ; Nordic Studies on Alcohol and Drugs Volume 33 ; 33 ; nada ; >
       au < crawling ; exists ; 2017 ; Nordic Studies on Alcohol and Drugs Volume 34 ; 34 ; nada ; >
@@ -34983,7 +34983,7 @@
 
 
       au < crawling ; exists ; 2009 ; Research Ethics Volume 5 ; 5 ; reab ; >
-      au < crawling ; exists ; 2010 ; Research Ethics Volume 6 ; 6 ; reab ; >
+      au < frozen ; exists ; 2010 ; Research Ethics Volume 6 ; 6 ; reab ; >
       au < frozen ; exists ; 2011 ; Research Ethics Volume 7 ; 7 ; reab ; >
       au < frozen ; exists ; 2012 ; Research Ethics Volume 8 ; 8 ; reab ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Research Ethics Volume 9 ; 9 ; reab ; >
@@ -44465,7 +44465,7 @@
 
         au < frozen ; exists ; 2008 ; International Journal of Care Coordination Volume 12 ; 12 ; icpc ; >
         au < crawling ; exists ; 2009 ; International Journal of Care Coordination Volume 13 ; 13 ; icpd ; >
-        au < crawling ; exists ; 2010 ; International Journal of Care Coordination Volume 14 ; 14 ; icpd ; >
+        au < frozen ; exists ; 2010 ; International Journal of Care Coordination Volume 14 ; 14 ; icpd ; >
         au < frozen ; exists ; 2011 ; International Journal of Care Coordination Volume 15 ; 15 ; icpd ; >
         au < frozen ; exists ; 2012 ; International Journal of Care Coordination Volume 16 ; 16 ; icpd ; >
         au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Care Coordination Volume 17 ; 17 ; icpe ; >
