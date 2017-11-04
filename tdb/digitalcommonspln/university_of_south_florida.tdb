@@ -219,7 +219,7 @@
     
     plugin = org.lockss.plugin.bepress.BePressPlugin
     param[base_url] = http://scholarcommons.usf.edu/
-    param[journal_abbr] = cba
+    param[journal_abbr] = mca
     implicit < status ; year ; volume ; name ; param[volume] >
     
     au < exists ; 2015 ; 1 ; Journal of Practitioner Research Volume 1 ; 1 >
@@ -661,6 +661,9 @@
     au < released ; 2012 ; University of South Florida Adult, Career, and Higher Education Faculty Publications 2012 [abstracts only] ; 2012 ; abstracts >
     au < released ; 2013 ; University of South Florida Adult, Career, and Higher Education Faculty Publications 2013 [abstracts only] ; 2013 ; abstracts >
     au < released ; 2014 ; University of South Florida Adult, Career, and Higher Education Faculty Publications 2014 [abstracts only] ; 2014 ; abstracts >
+    au < manifest ; 2015 ; University of South Florida Adult, Career, and Higher Education Faculty Publications 2015 [1 article of 6] ; 2015 ; fulltext >
+    au < manifest ; 2016 ; University of South Florida Adult, Career, and Higher Education Faculty Publications 2016 [1 article of 2] ; 2016 ; fulltext >
+    au < manifest ; 2017 ; University of South Florida Adult, Career, and Higher Education Faculty Publications 2017 [1 article of 4] ; 2017 ; fulltext >
 
   }
 
@@ -689,6 +692,8 @@
     au < released ; 2005 ; University of South Florida Anthropology Faculty Publications 2005 [abstracts only] ; 2005 ; abstracts >
     au < released ; 2006 ; University of South Florida Anthropology Faculty Publications 2006 ; 2006 ; fulltext >
     au < released ; 2011 ; University of South Florida Anthropology Faculty Publications 2011 [abstracts only] ; 2011 ; abstracts >
+    au < manifest ; 2014 ; University of South Florida Anthropology Faculty Publications 2014 ; 2014 ; fulltext >
+    au < manifest ; 2017 ; University of South Florida Anthropology Faculty Publications 2017 [abstracts only] ; 2017 ; abstracts >
 
   }
 
@@ -835,6 +840,7 @@
 
     au < released ; 2010 ; University of South Florida Civil and Environmental Engineering Faculty Publications 2010 ; 2010 >
     au < released ; 2011 ; University of South Florida Civil and Environmental Engineering Faculty Publications 2011 ; 2011 >
+    au < manifest ; 2014 ; University of South Florida Civil and Environmental Engineering Faculty Publications 2014 ; 2014 >
 
   }
 
@@ -863,6 +869,7 @@
     au < released ; 2011 ; University of South Florida College of Behavioral and Community Sciences Dean's Office Publications 2011 [abstracts only] ; 2011 ; abstracts >
     au < released ; 2012 ; University of South Florida College of Behavioral and Community Sciences Dean's Office Publications 2012 ; 2012 ; fulltext >
     au < released ; 2013 ; University of South Florida College of Behavioral and Community Sciences Dean's Office Publications 2013 [abstracts only] ; 2013 ; abstracts >
+    au < manifest ; 2015 ; University of South Florida College of Behavioral and Community Sciences Dean's Office Publications 2015 [abstracts only] ; 2015 ; abstracts >
 
   }
 
@@ -1030,6 +1037,10 @@
     au < released ; 2011 ; University of South Florida Communication Faculty Publications 2011 [abstracts only] ; 2011 ; abstracts >
     au < released ; 2012 ; University of South Florida Communication Faculty Publications 2012 ; 2012 ; fulltext >
     au < released ; 2013 ; University of South Florida Communication Faculty Publications 2013 [abstracts only] ; 2013 ; abstracts >
+    au < manifest ; 2014 ; University of South Florida Communication Faculty Publications 2014 [abstracts only] ; 2014 ; abstracts >
+    au < manifest ; 2015 ; University of South Florida Communication Faculty Publications 2015 [abstracts only] ; 2015 ; abstracts >
+    au < manifest ; 2016 ; University of South Florida Communication Faculty Publications 2016 [abstracts only] ; 2016 ; abstracts >
+    au < manifest ; 2017 ; University of South Florida Communication Faculty Publications 2017 [1 artilcle of 10] ; 2017 ; fulltext >
 
   }
 
@@ -1136,9 +1147,12 @@
     au < released ; 2008 ; University of South Florida English Faculty Publications 2008 ; 2008 ; fulltext >
     au < released ; 2009 ; University of South Florida English Faculty Publications 2009 [abstracts only] ; 2009 ; abstracts >
     au < released ; 2010 ; University of South Florida English Faculty Publications 2010 ; 2010 ; fulltext >
-    au < released ; 2011 ; University of South Florida English Faculty Publications 2011 [abstracts only]  ; 2011 ; abstracts >
+    au < released ; 2011 ; University of South Florida English Faculty Publications 2011 [abstracts only] ; 2011 ; abstracts >
     au < released ; 2012 ; University of South Florida English Faculty Publications 2012 ; 2012 ; fulltext >
     au < released ; 2013 ; University of South Florida English Faculty Publications 2013 ; 2013 ; fulltext >
+    au < manifest ; 2014 ; University of South Florida English Faculty Publications 2014 ; 2014 [abstracts only] ; abstracts >
+    au < manifest ; 2015 ; University of South Florida English Faculty Publications 2015 ; 2015 [abstracts only] ; abstracts >
+    au < manifest ; 2016 ; University of South Florida English Faculty Publications 2016 ; 2016 [abstracts only] ; abstracts >
 
   }
 
@@ -1390,6 +1404,8 @@
     au < released ; 2012 ; University of South Florida Graduate Theses and Dissertations 2012 ; 2012 >
     au < released ; 2013 ; University of South Florida Graduate Theses and Dissertations 2013 ; 2013 >
     au < released ; 2014 ; University of South Florida Graduate Theses and Dissertations 2014 ; 2014 >
+    au < manifest ; 2015 ; University of South Florida Graduate Theses and Dissertations 2015 ; 2015 >
+    au < manifest ; 2016 ; University of South Florida Graduate Theses and Dissertations 2016 ; 2016 >
 
   }
 
@@ -1422,11 +1438,25 @@
     param[base_url] = http://scholarcommons.usf.edu/
     param[collection_type] = ir_series
     param[collection] = hty_facpub
-    implicit < status ; year ; name ; param[collection_heading] >  
+    implicit < status ; year ; name ; param[collection_heading] ; attr[au_coverage_depth] >
 
-    attr[au_coverage_depth] = abstracts
-
-    au < released ; 2013 ; University of South Florida History Faculty Publications 2013 [abstracts only] ; 2013 >
+    au < manifest ; 1998 ; University of South Florida History Faculty Publications 1998 ; 1998 ; abstracts >
+    au < manifest ; 1999 ; University of South Florida History Faculty Publications 1999 ; 1999 ; abstracts >
+    au < manifest ; 2003 ; University of South Florida History Faculty Publications 2003 ; 2003 ; fulltext >
+    au < manifest ; 2004 ; University of South Florida History Faculty Publications 2004 ; 2004 ; abstracts >
+    au < manifest ; 2005 ; University of South Florida History Faculty Publications 2005 ; 2005 ; abstracts >
+    au < manifest ; 2006 ; University of South Florida History Faculty Publications 2006 ; 2006 ; fulltext >
+    au < manifest ; 2007 ; University of South Florida History Faculty Publications 2007 ; 2007 ; abstracts >
+    au < manifest ; 2008 ; University of South Florida History Faculty Publications 2008 ; 2008 ; abstracts >
+    au < manifest ; 2009 ; University of South Florida History Faculty Publications 2009 ; 2009 ; fulltext >
+    au < manifest ; 2010 ; University of South Florida History Faculty Publications 2010 ; 2010 ; fulltext >
+    au < manifest ; 2011 ; University of South Florida History Faculty Publications 2011 ; 2011 ; fulltext >
+    au < manifest ; 2012 ; University of South Florida History Faculty Publications 2012 ; 2012 ; fulltext >
+    au < released ; 2013 ; University of South Florida History Faculty Publications 2013 ; 2013 ; fulltext >
+    au < manifest ; 2014 ; University of South Florida History Faculty Publications 2014 ; 2014 ; abstracts >
+    au < manifest ; 2015 ; University of South Florida History Faculty Publications 2015 ; 2015 ; fulltext >
+    au < manifest ; 2016 ; University of South Florida History Faculty Publications 2016 ; 2016 ; fulltext >
+    au < manifest ; 2017 ; University of South Florida History Faculty Publications 2017 ; 2017 ; fulltext >
 
   }
 
@@ -1697,6 +1727,8 @@
     au < released ; 2009 ; University of South Florida Marine Science Faculty Publications 2009 ; 2009 ; fulltext >
     au < released ; 2010 ; University of South Florida Marine Science Faculty Publications 2010 ; 2010 ; fulltext >
     au < released ; 2014 ; University of South Florida Marine Science Faculty Publications 2014 ; 2014 ; fulltext >
+    au < manifest ; 2015 ; University of South Florida Marine Science Faculty Publications 2015 ; 2015 ; fulltext >
+    au < manifest ; 2016 ; University of South Florida Marine Science Faculty Publications 2016 [abstracts only] ; 2016 ; abstracts >
 
   }
 
@@ -1817,30 +1849,31 @@
     param[base_url] = http://scholarcommons.usf.edu/
     param[collection_type] = ir_series
     param[collection] = nur_facpub
-    implicit < status ; year ; name ; param[collection_heading] >  
+    implicit < status ; year ; name ; param[collection_heading] ; attr[au_coverage_depth] >  
 
-    attr[au_coverage_depth] = abstracts
-
-    au < released ; 1994 ; University of South Florida Nursing Faculty Publications 1994 [abstracts only] ; 1994 >
-    au < released ; 1995 ; University of South Florida Nursing Faculty Publications 1995 [abstracts only] ; 1995 >
-    au < released ; 1996 ; University of South Florida Nursing Faculty Publications 1996 [abstracts only] ; 1996 >
-    au < released ; 1998 ; University of South Florida Nursing Faculty Publications 1998 [abstracts only] ; 1998 >
-    au < released ; 1999 ; University of South Florida Nursing Faculty Publications 1999 [abstracts only] ; 1999 >
-    au < released ; 2000 ; University of South Florida Nursing Faculty Publications 2000 [abstracts only] ; 2000 >
-    au < released ; 2001 ; University of South Florida Nursing Faculty Publications 2001 [abstracts only] ; 2001 >
-    au < released ; 2002 ; University of South Florida Nursing Faculty Publications 2002 [abstracts only] ; 2002 >
-    au < released ; 2003 ; University of South Florida Nursing Faculty Publications 2003 [abstracts only] ; 2003 >
-    au < released ; 2004 ; University of South Florida Nursing Faculty Publications 2004 [abstracts only] ; 2004 >
-    au < released ; 2005 ; University of South Florida Nursing Faculty Publications 2005 [abstracts only] ; 2005 >
-    au < released ; 2006 ; University of South Florida Nursing Faculty Publications 2006 [abstracts only] ; 2006 >
-    au < released ; 2007 ; University of South Florida Nursing Faculty Publications 2007 [abstracts only] ; 2007 >
-    au < released ; 2008 ; University of South Florida Nursing Faculty Publications 2008 [abstracts only] ; 2008 >
-    au < released ; 2009 ; University of South Florida Nursing Faculty Publications 2009 [abstracts only] ; 2009 >
-    au < released ; 2010 ; University of South Florida Nursing Faculty Publications 2010 [abstracts only] ; 2010 >
-    au < released ; 2011 ; University of South Florida Nursing Faculty Publications 2011 [abstracts only] ; 2011 >
-    au < released ; 2012 ; University of South Florida Nursing Faculty Publications 2012 [abstracts only] ; 2012 >
-    au < released ; 2013 ; University of South Florida Nursing Faculty Publications 2013 [abstracts only] ; 2013 >
-    au < released ; 2014 ; University of South Florida Nursing Faculty Publications 2014 [abstracts only] ; 2014 >
+    au < released ; 1994 ; University of South Florida Nursing Faculty Publications 1994 [abstracts only] ; 1994 ; abstracts >
+    au < released ; 1995 ; University of South Florida Nursing Faculty Publications 1995 [abstracts only] ; 1995 ; abstracts >
+    au < released ; 1996 ; University of South Florida Nursing Faculty Publications 1996 [abstracts only] ; 1996 ; abstracts >
+    au < released ; 1998 ; University of South Florida Nursing Faculty Publications 1998 [abstracts only] ; 1998 ; abstracts >
+    au < released ; 1999 ; University of South Florida Nursing Faculty Publications 1999 [abstracts only] ; 1999 ; abstracts >
+    au < released ; 2000 ; University of South Florida Nursing Faculty Publications 2000 [abstracts only] ; 2000 ; abstracts >
+    au < released ; 2001 ; University of South Florida Nursing Faculty Publications 2001 [abstracts only] ; 2001 ; abstracts >
+    au < released ; 2002 ; University of South Florida Nursing Faculty Publications 2002 [abstracts only] ; 2002 ; abstracts >
+    au < released ; 2003 ; University of South Florida Nursing Faculty Publications 2003 [abstracts only] ; 2003 ; abstracts >
+    au < released ; 2004 ; University of South Florida Nursing Faculty Publications 2004 [abstracts only] ; 2004 ; abstracts >
+    au < released ; 2005 ; University of South Florida Nursing Faculty Publications 2005 [abstracts only] ; 2005 ; abstracts >
+    au < released ; 2006 ; University of South Florida Nursing Faculty Publications 2006 [abstracts only] ; 2006 ; abstracts >
+    au < released ; 2007 ; University of South Florida Nursing Faculty Publications 2007 [abstracts only] ; 2007 ; abstracts >
+    au < released ; 2008 ; University of South Florida Nursing Faculty Publications 2008 ; 2008 ; fulltext >
+    au < released ; 2009 ; University of South Florida Nursing Faculty Publications 2009 ; 2009 ; fulltext >
+    au < released ; 2010 ; University of South Florida Nursing Faculty Publications 2010 [abstracts only] ; 2010 ; abstracts >
+    au < released ; 2011 ; University of South Florida Nursing Faculty Publications 2011 [abstracts only] ; 2011 ; fulltext >
+    au < released ; 2012 ; University of South Florida Nursing Faculty Publications 2012 ; 2012 ; fulltext >
+    au < released ; 2013 ; University of South Florida Nursing Faculty Publications 2013 ; 2013 ; fulltext >
+    au < released ; 2014 ; University of South Florida Nursing Faculty Publications 2014 ; 2014 ; fulltext >
+    au < manifest ; 2015 ; University of South Florida. Nursing Faculty Publications 2015 ; 2015 ; fulltext >
+    au < manifest ; 2016 ; University of South Florida. Nursing Faculty Publications 2016 ; 2016 ; fulltext >
+    au < manifest ; 2017 ; University of South Florida. Nursing Faculty Publications 2017 [abstracts only] ; 2017 ; abstracts >
 
   }
 
@@ -2201,6 +2234,12 @@
     au < released ; 2008 ; University of South Florida School of Information Faculty Publications 2008 ; 2008 ; fulltext >
     au < released ; 2010 ; University of South Florida School of Information Faculty Publications 2010 ; 2010 ; fulltext >
     au < released ; 2011 ; University of South Florida School of Information Faculty Publications 2011 ; 2011 ; fulltext >
+    au < manifest ; 2012 ; University of South Florida School of Information Faculty Publications 2012 ; 2012 ; fulltext >
+    au < manifest ; 2013 ; University of South Florida School of Information Faculty Publications 2013 ; 2013 ; fulltext >
+    au < manifest ; 2014 ; University of South Florida School of Information Faculty Publications 2014 ; 2014 ; fulltext >
+    au < manifest ; 2015 ; University of South Florida School of Information Faculty Publications 2015 ; 2015 ; fulltext >
+    au < manifest ; 2016 ; University of South Florida School of Information Faculty Publications 2016 ; 2016 ; abstracts>
+    au < manifest ; 2017 ; University of South Florida School of Information Faculty Publications 2017 ; 2017 ; fulltext >
 
   }
 
@@ -2469,6 +2508,250 @@
     au < released ; 2015 ; University of South Florida WUSF Public Media First Choice Monthly Newsletter 2015 ; 2015 >
     au < released ; 2016 ; University of South Florida WUSF Public Media First Choice Monthly Newsletter 2016 ; 2016 >
     au < exists ; 2017 ; University of South Florida WUSF Public Media First Choice Monthly Newsletter 2017 ; 2017 >
+
+  }
+
+  {
+
+    title <
+      name = University of South Florida Patents
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://scholarcommons.usf.edu/
+    param[collection_type] = ir_series
+    param[collection] = usf_patents
+    implicit < status ; year ; name ; param[collection_heading] >
+
+    au < manifest ; 2000 ; University of South Florida Patents 2000 ; 2000 >
+    au < manifest ; 2001 ; University of South Florida Patents 2001 ; 2001 >
+    au < manifest ; 2002 ; University of South Florida Patents 2002 ; 2002 >
+    au < manifest ; 2003 ; University of South Florida Patents 2003 ; 2003 >
+    au < manifest ; 2004 ; University of South Florida Patents 2004 ; 2004 >
+    au < manifest ; 2005 ; University of South Florida Patents 2005 ; 2005 >
+    au < manifest ; 2006 ; University of South Florida Patents 2006 ; 2006 >
+    au < manifest ; 2007 ; University of South Florida Patents 2007 ; 2007 >
+    au < manifest ; 2008 ; University of South Florida Patents 2008 ; 2008 >
+    au < manifest ; 2009 ; University of South Florida Patents 2009 ; 2009 >
+    au < manifest ; 2010 ; University of South Florida Patents 2010 ; 2010 >
+    au < manifest ; 2011 ; University of South Florida Patents 2011 ; 2011 >
+    au < manifest ; 2012 ; University of South Florida Patents 2012 ; 2012 >
+    au < manifest ; 2013 ; University of South Florida Patents 2013 ; 2013 >
+    au < manifest ; 2014 ; University of South Florida Patents 2014 ; 2014 >
+    au < manifest ; 2015 ; University of South Florida Patents 2015 ; 2015 >
+    au < manifest ; 2016 ; University of South Florida Patents 2016 ; 2016 >
+    au < manifest ; 2017 ; University of South Florida Patents 2017 ; 2017 >
+
+  }
+
+  {
+
+    title <
+      name = University of South Florida School of Interdisciplinary Global Studies Faculty Publications
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://scholarcommons.usf.edu/
+    param[collection_type] = ir_series
+    param[collection] = sigs_facpub
+    implicit < status ; year ; name ; param[collection_heading] >
+
+    au < manifest ; 1975 ; University of South Florida School of Interdisciplinary Global Studies Faculty Publications 1975 ; 1975 >
+    au < manifest ; 1976 ; University of South Florida School of Interdisciplinary Global Studies Faculty Publications 1976 ; 1976 >
+    au < manifest ; 1978 ; University of South Florida School of Interdisciplinary Global Studies Faculty Publications 1978 ; 1978 >
+    au < manifest ; 1980 ; University of South Florida School of Interdisciplinary Global Studies Faculty Publications 1980 ; 1980 >
+    au < manifest ; 1982 ; University of South Florida School of Interdisciplinary Global Studies Faculty Publications 1982 ; 1982 >
+    au < manifest ; 1983 ; University of South Florida School of Interdisciplinary Global Studies Faculty Publications 1983 ; 1983 >
+    au < manifest ; 1985 ; University of South Florida School of Interdisciplinary Global Studies Faculty Publications 1985 ; 1985 >
+    au < manifest ; 1986 ; University of South Florida School of Interdisciplinary Global Studies Faculty Publications 1986 ; 1986 >
+    au < manifest ; 1987 ; University of South Florida School of Interdisciplinary Global Studies Faculty Publications 1987 ; 1987 >
+    au < manifest ; 1988 ; University of South Florida School of Interdisciplinary Global Studies Faculty Publications 1988 ; 1988 >
+    au < manifest ; 1989 ; University of South Florida School of Interdisciplinary Global Studies Faculty Publications 1989 ; 1989 >
+    au < manifest ; 1990 ; University of South Florida School of Interdisciplinary Global Studies Faculty Publications 1990 ; 1990 >
+    au < manifest ; 1991 ; University of South Florida School of Interdisciplinary Global Studies Faculty Publications 1991 ; 1991 >
+    au < manifest ; 1992 ; University of South Florida School of Interdisciplinary Global Studies Faculty Publications 1992 ; 1992 >
+    au < manifest ; 1993 ; University of South Florida School of Interdisciplinary Global Studies Faculty Publications 1993 ; 1993 >
+    au < manifest ; 1994 ; University of South Florida School of Interdisciplinary Global Studies Faculty Publications 1994 ; 1994 >
+    au < manifest ; 1995 ; University of South Florida School of Interdisciplinary Global Studies Faculty Publications 1995 ; 1995 >
+    au < manifest ; 1996 ; University of South Florida School of Interdisciplinary Global Studies Faculty Publications 1996 ; 1996 >
+    au < manifest ; 1997 ; University of South Florida School of Interdisciplinary Global Studies Faculty Publications 1997 ; 1997 >
+    au < manifest ; 1998 ; University of South Florida School of Interdisciplinary Global Studies Faculty Publications 1998 ; 1998 >
+    au < manifest ; 1999 ; University of South Florida School of Interdisciplinary Global Studies Faculty Publications 1999 ; 1999 >
+    au < manifest ; 2000 ; University of South Florida School of Interdisciplinary Global Studies Faculty Publications 2000 ; 2000 >
+    au < manifest ; 2001 ; University of South Florida School of Interdisciplinary Global Studies Faculty Publications 2001 ; 2001 >
+    au < manifest ; 2002 ; University of South Florida School of Interdisciplinary Global Studies Faculty Publications 2002 ; 2002 >
+    au < manifest ; 2003 ; University of South Florida School of Interdisciplinary Global Studies Faculty Publications 2003 ; 2003 >
+    au < manifest ; 2004 ; University of South Florida School of Interdisciplinary Global Studies Faculty Publications 2004 ; 2004 >
+    au < manifest ; 2005 ; University of South Florida School of Interdisciplinary Global Studies Faculty Publications 2005 ; 2005 >
+    au < manifest ; 2006 ; University of South Florida School of Interdisciplinary Global Studies Faculty Publications 2006 ; 2006 >
+    au < manifest ; 2007 ; University of South Florida School of Interdisciplinary Global Studies Faculty Publications 2007 ; 2007 >
+    au < manifest ; 2008 ; University of South Florida School of Interdisciplinary Global Studies Faculty Publications 2008 ; 2008 >
+    au < manifest ; 2009 ; University of South Florida School of Interdisciplinary Global Studies Faculty Publications 2009 ; 2009 >
+    au < manifest ; 2010 ; University of South Florida School of Interdisciplinary Global Studies Faculty Publications 2010 ; 2010 >
+    au < manifest ; 2011 ; University of South Florida School of Interdisciplinary Global Studies Faculty Publications 2011 ; 2011 >
+    au < manifest ; 2012 ; University of South Florida School of Interdisciplinary Global Studies Faculty Publications 2012 ; 2012 >
+    au < manifest ; 2013 ; University of South Florida School of Interdisciplinary Global Studies Faculty Publications 2013 ; 2013 >
+    au < manifest ; 2014 ; University of South Florida School of Interdisciplinary Global Studies Faculty Publications 2014 ; 2014 >
+    au < manifest ; 2015 ; University of South Florida School of Interdisciplinary Global Studies Faculty Publications 2015 ; 2015 >
+    au < manifest ; 2016 ; University of South Florida School of Interdisciplinary Global Studies Faculty Publications 2016 ; 2016 >
+    au < manifest ; 2017 ; University of South Florida School of Interdisciplinary Global Studies Faculty Publications 2017 ; 2017 >
+
+  }
+
+  {
+
+    title <
+      name = University of South Florida. QMaSC: A Handbook for Directors of Quantitative and Mathematics Support Centers
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://scholarcommons.usf.edu/
+    param[collection_type] = ir_series
+    param[collection] = qmasc_handbook
+    implicit < status ; year ; name ; param[collection_heading] >
+
+    au < manifest ; a_front_matter ; University of South Florida. QMaSC: A Handbook for Directors of Quantitative and Mathematics Support Centers a_front_matter ; a_front_matter >
+    au < manifest ; b_introduction ; University of South Florida. QMaSC: A Handbook for Directors of Quantitative and Mathematics Support Centers b_introduction ; b_introduction >
+    au < manifest ; c_center_leadership_management ; University of South Florida. QMaSC: A Handbook for Directors of Quantitative and Mathematics Support Centers c_center_leadership_management ; c_center_leadership_management >
+    au < manifest ; d_community_interactions ; University of South Florida. QMaSC: A Handbook for Directors of Quantitative and Mathematics Support Centers d_community_interactions ; d_community_interactions >
+    au < manifest ; e_staffing_hiring_training ; University of South Florida. QMaSC: A Handbook for Directors of Quantitative and Mathematics Support Centers e_staffing_hiring_training ; e_staffing_hiring_training >
+    au < manifest ; f_center_assessment ; University of South Florida. QMaSC: A Handbook for Directors of Quantitative and Mathematics Support Centers f_center_assessment ; f_center_assessment >
+    au < manifest ; g_starting_a_center ; University of South Florida. QMaSC: A Handbook for Directors of Quantitative and Mathematics Support Centers g_starting_a_center ; g_starting_a_center >
+    au < manifest ; h_case_studies ; University of South Florida. QMaSC: A Handbook for Directors of Quantitative and Mathematics Support Centers h_case_studies ; h_case_studies >
+
+  }
+
+  {
+
+    title <
+      name = University of South Florida. Physics Faculty Publications
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://scholarcommons.usf.edu/
+    param[collection_type] = ir_series
+    param[collection] = phy_facpub
+    implicit < status ; year ; name ; param[collection_heading] >
+
+    au < manifest ; 2014 ; University of South Florida. Physics Faculty Publications 2014 ; 2014 >
+
+  }
+
+  {
+
+    title <
+      name = University of South Florida. Philosophy Faculty Publications
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://scholarcommons.usf.edu/
+    param[collection_type] = ir_series
+    param[collection] = phi_facpub
+    implicit < status ; year ; name ; param[collection_heading] >
+
+    au < manifest ; 2014 ; University of South Florida. Philosophy Faculty Publications 2014 ; 2014 >
+
+  }
+
+  {
+
+    title <
+      name = University of South Florida. Service-Learning Syllabi
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://scholarcommons.usf.edu/
+    param[collection_type] = ir_series
+    param[collection] = ocep_sls
+    implicit < status ; year ; name ; param[collection_heading] >
+
+    au < manifest ; 2010 ; University of South Florida. Service-Learning Syllabi 2010 ; 2010 >
+    au < manifest ; 2013 ; University of South Florida. Service-Learning Syllabi 2013 ; 2013 >
+    au < manifest ; 2014 ; University of South Florida. Service-Learning Syllabi 2014 ; 2014 >
+    au < manifest ; 2015 ; University of South Florida. Service-Learning Syllabi 2015 ; 2015 >
+    au < manifest ; 2016 ; University of South Florida. Service-Learning Syllabi 2016 ; 2016 >
+    au < manifest ; 2017 ; University of South Florida. Service-Learning Syllabi 2017 ; 2017 >
+
+  }
+
+  {
+
+    title <
+      name = University of South Florida. Food and Gardening Working Group
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://scholarcommons.usf.edu/
+    param[collection_type] = ir_series
+    param[collection] = ocep_fg
+    implicit < status ; year ; name ; param[collection_heading] >
+
+    au < manifest ; 2015 ; University of South Florida. Food and Gardening Working Group 2015 ; 2015 >
+
+  }
+
+  {
+
+    title <
+      name = Introducción a la Antropología Biológica
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://scholarcommons.usf.edu/
+    param[collection_type] = ir_book
+    param[collection] = islac_alab_antropologia
+    implicit < status ; year ; name ; param[collection_heading] >
+
+    au < manifest ; 2016 ; Introducción a la Antropología Biológica 2016 ; 2016 >
+
+  }
+
+  {
+
+    title <
+      name = University of South Florida Library In-Service Day 2016
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryThemePlugin
+    param[base_url] = http://scholarcommons.usf.edu/
+    param[collection] = in_service_2016
+    implicit < status ; name ; param[collection_theme] >  
+
+    au < manifest ; University of South Florida Library In-Service Day 2016 program_2016 ; program_2016 >
+
+  }
+
+  {
+
+    title <
+      name = University of South Florida Humanities and Cultural Studies Faculty Publications
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://scholarcommons.usf.edu/
+    param[collection_type] = ir_series
+    param[collection] = hcs_facpub
+    implicit < status ; year ; name ; param[collection_heading] >
+
+    au < manifest ; 2008 ; University of South Florida Humanities and Cultural Studies Faculty Publications 2008 ; 2008 >
+    au < manifest ; 2009 ; University of South Florida Humanities and Cultural Studies Faculty Publications 2009 ; 2009 >
+    au < manifest ; 2012 ; University of South Florida Humanities and Cultural Studies Faculty Publications 2012 ; 2012 >
+
+  }
+
+  {
+
+    title <
+      name = University of South Florida. Aging Studies Faculty Publications
+    >
+
+    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
+    param[base_url] = http://scholarcommons.usf.edu/
+    param[collection_type] = ir_series
+    param[collection] = gey_facpub
+    implicit < status ; year ; name ; param[collection_heading] >
+
+    au < manifest ; 2014 ; University of South Florida. Aging Studies Faculty Publications 2014 ; 2014 >
 
   }
 
