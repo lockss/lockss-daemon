@@ -26518,11 +26518,11 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       #Before 2009, The Journal of the Royal Society for the Promotion of Health, issn:1466-4240
       #param[base_url] = http://rsh.sagepub.com/
 
-      au < manifest ; 2009 ; Perspectives in Public Health Volume 129 ; 129 ; rshi >
-      au < manifest ; 2010 ; Perspectives in Public Health Volume 130 ; 130 ; rshi >
-      au < manifest ; 2011 ; Perspectives in Public Health Volume 131 ; 131 ; rshi >
-      au < manifest ; 2012 ; Perspectives in Public Health Volume 132 ; 132 ; rshi >
-      au < manifest ; 2013 ; Perspectives in Public Health Volume 133 ; 133 ; rshi >
+      au < doNotProcess ; 2009 ; Perspectives in Public Health Volume 129 ; 129 ; rshi >
+      au < ready ; 2010 ; Perspectives in Public Health Volume 130 ; 130 ; rshi >
+      au < ready ; 2011 ; Perspectives in Public Health Volume 131 ; 131 ; rshi >
+      au < ready ; 2012 ; Perspectives in Public Health Volume 132 ; 132 ; rshi >
+      au < ready ; 2013 ; Perspectives in Public Health Volume 133 ; 133 ; rshi >
       au < released ; 2014 ; Perspectives in Public Health Volume 134 ; 134 ; rshi >
       au < released ; 2015 ; Perspectives in Public Health Volume 135 ; 135 ; rshi >
       au < released ; 2016 ; Perspectives in Public Health Volume 136 ; 136 ; rshi >
@@ -26874,11 +26874,11 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < manifest ; 2006-2007 ; Journal of Travel Research Volume 45 ; 45 ; jtrb >
       au < manifest ; 2007-2008 ; Journal of Travel Research Volume 46 ; 46 ; jtrb >
       au < manifest ; 2008-2009 ; Journal of Travel Research Volume 47 ; 47 ; jtrb >
-      au < manifest ; 2009 ; Journal of Travel Research Volume 48 ; 48 ; jtrb >
-      au < manifest ; 2010 ; Journal of Travel Research Volume 49 ; 49 ; jtrb >
-      au < manifest ; 2011 ; Journal of Travel Research Volume 50 ; 50 ; jtrb >
-      au < manifest ; 2012 ; Journal of Travel Research Volume 51 ; 51 ; jtrb >
-      au < manifest ; 2013 ; Journal of Travel Research Volume 52 ; 52 ; jtrb >
+      au < ready ; 2009 ; Journal of Travel Research Volume 48 ; 48 ; jtrb >
+      au < ready ; 2010 ; Journal of Travel Research Volume 49 ; 49 ; jtrb >
+      au < ready ; 2011 ; Journal of Travel Research Volume 50 ; 50 ; jtrb >
+      au < ready ; 2012 ; Journal of Travel Research Volume 51 ; 51 ; jtrb >
+      au < ready ; 2013 ; Journal of Travel Research Volume 52 ; 52 ; jtrb >
       au < released ; 2014 ; Journal of Travel Research Volume 53 ; 53 ; jtrb >
       au < released ; 2015 ; Journal of Travel Research Volume 54 ; 54 ; jtrb >
       au < released ; 2016 ; Journal of Travel Research Volume 55 ; 55 ; jtrb >
@@ -27943,10 +27943,10 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < manifest ; 2007 ; Literature & History Volume 16 ; 16 ; laha >
       au < manifest ; 2008 ; Literature & History Volume 17 ; 17 ; laha >
       au < manifest ; 2009 ; Literature & History Volume 18 ; 18 ; laha >
-      au < manifest ; 2010 ; Literature & History Volume 19 ; 19 ; laha >
+      au < ready ; 2010 ; Literature & History Volume 19 ; 19 ; laha >
       au < released ; 2011 ; Literature & History Volume 20 ; 20 ; laha >
       au < released ; 2012 ; Literature & History Volume 21 ; 21 ; laha >
-      au < manifest ; 2013 ; Literature & History Volume 22 ; 22 ; laha >
+      au < ready ; 2013 ; Literature & History Volume 22 ; 22 ; laha >
       au < released ; 2014 ; Literature & History Volume 23 ; 23 ; laha >
       au < released ; 2015 ; Literature & History Volume 24 ; 24 ; laha >
       au < released ; 2016 ; Literature & History Volume 25 ; 25 ; laha >
@@ -27987,7 +27987,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2005 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 20 ; 20 ; leca >
         au < manifest ; 2006 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 21 ; 21 ; leca >
         au < manifest ; 2007 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 22 ; 22 ; leca >
-        au < doNotProcess ; 2008 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 23 ; 23 ; leca >
+        au < doNotProcess ; 2008 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 23 [Sage] ; 23 ; leca >
         au < doNotProcess ; 2009 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 24 [Sage] ; 24 ; leca >
         au < doNotProcess ; 2010 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 25 [Sage] ; 25 ; leca >
         au < doNotProcess ; 2011 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 26 [Sage] ; 26 ; leca >
@@ -28492,16 +28492,16 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       {
 
         #param[base_url] = http://mec.sagepub.com/
+        #Moved to T&F as of 2017. Still available through 2016 as of 20171104
 
-        au < manifest ; 2009 ; Measurement and Evaluation in Counseling and Development Volume 42 ; 42 ; mecb >
+        au < doNotProcess ; 2009 ; Measurement and Evaluation in Counseling and Development Volume 42 ; 42 ; mecb >
         au < doNotProcess ; 2010 ; Measurement and Evaluation in Counseling and Development Volume 43 ; 43 ; mecb >
         au < doNotProcess ; 2011 ; Measurement and Evaluation in Counseling and Development Volume 44 ; 44 ; mecb >
         au < doNotProcess ; 2012 ; Measurement and Evaluation in Counseling and Development Volume 45 ; 45 ; mecb >
         au < doNotProcess ; 2013 ; Measurement and Evaluation in Counseling and Development Volume 46 ; 46 ; mecb >
         au < doNotProcess ; 2014 ; Measurement and Evaluation in Counseling and Development Volume 47 ; 47 ; mecb >
         au < doNotProcess ; 2015 ; Measurement and Evaluation in Counseling and Development Volume 48 ; 48 ; mecb >
-        au < released ; 2016 ; Measurement and Evaluation in Counseling and Development Volume 49 ; 49 ; mecb >
-        au < expected ; 2017 ; Measurement and Evaluation in Counseling and Development Volume 50 ; 50 ; mecb >
+        au < released ; 2016 ; Measurement and Evaluation in Counseling and Development Volume 49 [Sage] ; 49 ; mecb >
 
       }
 
@@ -41601,7 +41601,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       >
 
       #param[base_url] = http://pnz.sagepub.com/
-      #move to T&F 
+      #move to T&F. Backfiles available through 2016 as of 20171104.
 
       {
 
@@ -41656,14 +41656,14 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 1997 ; Political Science Volume 49 ; 49 ; pnzb >
         au < doNotProcess ; 1998 ; Political Science Volume 50 ; 50 ; pnzb >
         au < doNotProcess ; 1999 ; Political Science Volume 51 ; 51 ; pnzb >
-        au < manifest ; 2000 ; Political Science Volume 52 ; 52 ; pnzb >
-        au < manifest ; 2001 ; Political Science Volume 53 ; 53 ; pnzb >
-        au < manifest ; 2002 ; Political Science Volume 54 ; 54 ; pnzb >
-        au < manifest ; 2003 ; Political Science Volume 55 ; 55 ; pnzb >
-        au < manifest ; 2004 ; Political Science Volume 56 ; 56 ; pnzb >
-        au < manifest ; 2005 ; Political Science Volume 57 ; 57 ; pnzb >
-        au < manifest ; 2006 ; Political Science Volume 58 ; 58 ; pnzb >
-        au < manifest ; 2007 ; Political Science Volume 59 ; 59 ; pnzb >
+        au < doNotProcess ; 2000 ; Political Science Volume 52 ; 52 ; pnzb >
+        au < doNotProcess ; 2001 ; Political Science Volume 53 ; 53 ; pnzb >
+        au < doNotProcess ; 2002 ; Political Science Volume 54 ; 54 ; pnzb >
+        au < doNotProcess ; 2003 ; Political Science Volume 55 ; 55 ; pnzb >
+        au < doNotProcess ; 2004 ; Political Science Volume 56 ; 56 ; pnzb >
+        au < doNotProcess ; 2005 ; Political Science Volume 57 ; 57 ; pnzb >
+        au < doNotProcess ; 2006 ; Political Science Volume 58 ; 58 ; pnzb >
+        au < doNotProcess ; 2007 ; Political Science Volume 59 ; 59 ; pnzb >
         au < doNotProcess ; 2008 ; Political Science Volume 60 ; 60 ; pnzb >
         au < doNotProcess ; 2009 ; Political Science Volume 61 ; 61 ; pnzb >
         au < doNotProcess ; 2010 ; Political Science Volume 62 ; 62 ; pnzb >
@@ -41672,9 +41672,8 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; Political Science Volume 65 ; 65 ; pnzb >
         au < doNotProcess ; 2014 ; Political Science Volume 66 ; 66 ; pnzb >
         au < doNotProcess ; 2015 ; Political Science Volume 67 ; 67 ; pnzb >
-        au < released ; 2016 ; Political Science Volume 68 ; 68 ; pnzb >
-        au < expected ; 2017 ; Political Science Volume 69 ; 69 ; pnzb >
-
+        au < released ; 2016 ; Political Science Volume 68 [Sage] ; 68 ; pnzb >
+        #Moved to T&F
       }
 
     }
@@ -42593,19 +42592,19 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
     au < manifest ; 1998 ; Sociological Perspectives Volume 41 ; 41 ; spxb >
     au < manifest ; 1999 ; Sociological Perspectives Volume 42 ; 42 ; spxb >
     au < manifest ; 2000 ; Sociological Perspectives Volume 43 ; 43 ; spxb >
-    au < manifest ; 2001 ; Sociological Perspectives Volume 44 ; 44 ; spxb >
-    au < manifest ; 2002 ; Sociological Perspectives Volume 45 ; 45 ; spxb >
-    au < manifest ; 2003 ; Sociological Perspectives Volume 46 ; 46 ; spxb >
-    au < manifest ; 2004 ; Sociological Perspectives Volume 47 ; 47 ; spxb >
-    au < manifest ; 2005 ; Sociological Perspectives Volume 48 ; 48 ; spxb >
-    au < manifest ; 2006 ; Sociological Perspectives Volume 49 ; 49 ; spxb >
-    au < manifest ; 2007 ; Sociological Perspectives Volume 50 ; 50 ; spxb >
+    au < doNotProcess ; 2001 ; Sociological Perspectives Volume 44 ; 44 ; spxb >
+    au < doNotProcess ; 2002 ; Sociological Perspectives Volume 45 ; 45 ; spxb >
+    au < doNotProcess ; 2003 ; Sociological Perspectives Volume 46 ; 46 ; spxb >
+    au < doNotProcess ; 2004 ; Sociological Perspectives Volume 47 ; 47 ; spxb >
+    au < doNotProcess ; 2005 ; Sociological Perspectives Volume 48 ; 48 ; spxb >
+    au < doNotProcess ; 2006 ; Sociological Perspectives Volume 49 ; 49 ; spxb >
+    au < doNotProcess ; 2007 ; Sociological Perspectives Volume 50 ; 50 ; spxb >
     au < released ; 2008 ; Sociological Perspectives Volume 51 ; 51 ; spxb >
-    au < manifest ; 2009 ; Sociological Perspectives Volume 52 ; 52 ; spxb >
-    au < manifest ; 2010 ; Sociological Perspectives Volume 53 ; 53 ; spxb >
+    au < ready ; 2009 ; Sociological Perspectives Volume 52 ; 52 ; spxb >
+    au < ready ; 2010 ; Sociological Perspectives Volume 53 ; 53 ; spxb >
     au < released ; 2011 ; Sociological Perspectives Volume 54 ; 54 ; spxb >
     au < released ; 2012 ; Sociological Perspectives Volume 55 ; 55 ; spxb >
-    au < manifest ; 2013 ; Sociological Perspectives Volume 56 ; 56 ; spxb >
+    au < ready ; 2013 ; Sociological Perspectives Volume 56 ; 56 ; spxb >
     au < doNotProcess ; 2014 ; Sociological Perspectives Volume 57 ; 57 ; spxb >
     au < doNotProcess ; 2015 ; Sociological Perspectives Volume 58 ; 58 ; spxb >
     au < released ; 2016 ; Sociological Perspectives Volume 59 ; 59 ; spxb >
@@ -44264,7 +44263,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         issnl = 1357-633X
       >
 
-      comment[RSM] = from Royal Society of Medicine. http://jtt.rsmjournals.com/
+        comment[RSM] = from Royal Society of Medicine. http://jtt.rsmjournals.com/
         #param[base_url] = http://jtt.sagepub.com/
 
         au < manifest ; 1995 ; Journal of Telemedicine and Telecare Volume 1 ; 1 ; jtta >
@@ -44280,12 +44279,12 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2005 ; Journal of Telemedicine and Telecare Volume 11 ; 11 ; jtta >
         au < manifest ; 2006 ; Journal of Telemedicine and Telecare Volume 12 ; 12 ; jtta >
         au < manifest ; 2007 ; Journal of Telemedicine and Telecare Volume 13 ; 13 ; jtta >
-        au < manifest ; 2008 ; Journal of Telemedicine and Telecare Volume 14 ; 14 ; jtta >
-        au < manifest ; 2009 ; Journal of Telemedicine and Telecare Volume 15 ; 15 ; jtta >
-        au < manifest ; 2010 ; Journal of Telemedicine and Telecare Volume 16 ; 16 ; jtta >
-        au < manifest ; 2011 ; Journal of Telemedicine and Telecare Volume 17 ; 17 ; jtta >
-        au < manifest ; 2012 ; Journal of Telemedicine and Telecare Volume 18 ; 18 ; jtta >
-        au < manifest ; 2013 ; Journal of Telemedicine and Telecare Volume 19 ; 19 ; jtta >
+        au < ready ; 2008 ; Journal of Telemedicine and Telecare Volume 14 ; 14 ; jtta >
+        au < ready ; 2009 ; Journal of Telemedicine and Telecare Volume 15 ; 15 ; jtta >
+        au < ready ; 2010 ; Journal of Telemedicine and Telecare Volume 16 ; 16 ; jtta >
+        au < ready ; 2011 ; Journal of Telemedicine and Telecare Volume 17 ; 17 ; jtta >
+        au < ready ; 2012 ; Journal of Telemedicine and Telecare Volume 18 ; 18 ; jtta >
+        au < ready ; 2013 ; Journal of Telemedicine and Telecare Volume 19 ; 19 ; jtta >
         au < released ; 2014 ; Journal of Telemedicine and Telecare Volume 20 ; 20 ; jtta >
         au < released ; 2015 ; Journal of Telemedicine and Telecare Volume 21 ; 21 ; jtta >
         au < released ; 2016 ; Journal of Telemedicine and Telecare Volume 22 ; 22 ; jtta >
@@ -45301,10 +45300,10 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
         au < released ; 2008 ; Obstetric Medicine Volume 1 ; 1 ; obma >
         au < released ; 2009 ; Obstetric Medicine Volume 2 ; 2 ; obma >
-        au < manifest ; 2010 ; Obstetric Medicine Volume 3 ; 3 ; obma >
+        au < ready ; 2010 ; Obstetric Medicine Volume 3 ; 3 ; obma >
         au < released ; 2011 ; Obstetric Medicine Volume 4 ; 4 ; obma >
         au < released ; 2012 ; Obstetric Medicine Volume 5 ; 5 ; obma >
-        au < manifest ; 2013 ; Obstetric Medicine Volume 6 ; 6 ; obma >
+        au < ready ; 2013 ; Obstetric Medicine Volume 6 ; 6 ; obma >
         au < released ; 2014 ; Obstetric Medicine Volume 7 ; 7 ; obma >
         au < released ; 2015 ; Obstetric Medicine Volume 8 ; 8 ; obma >
         au < released ; 2016 ; Obstetric Medicine Volume 9 ; 9 ; obma >
