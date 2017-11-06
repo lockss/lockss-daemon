@@ -187,10 +187,10 @@
       au < down ; 2007 ; The Journal of Higher Education Volume 78 ; 78 >
       au < down ; 2008 ; The Journal of Higher Education Volume 79 ; 79 >
       au < down ; 2009 ; The Journal of Higher Education Volume 80 ; 80 >
-      au < down ; 2010 ; The Journal of Higher Education Volume 81 ; 81 >
-      au < down ; 2011 ; The Journal of Higher Education Volume 82 ; 82 >
-      au < down ; 2012 ; The Journal of Higher Education Volume 83 ; 83 >
-      au < down ; 2013 ; The Journal of Higher Education Volume 84 ; 84 >
+      au < superseded ; 2010 ; The Journal of Higher Education Volume 81 [superseded] ; 81 >
+      au < superseded ; 2011 ; The Journal of Higher Education Volume 82 [superseded] ; 82 >
+      au < superseded ; 2012 ; The Journal of Higher Education Volume 83 [superseded] ; 83 >
+      au < superseded ; 2013 ; The Journal of Higher Education Volume 84 [superseded] ; 84 >
 
     }
 
@@ -198,8 +198,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < down ; 2014 ; The Journal of Higher Education Volume 85 ; 85 >
-      au < down ; 2015 ; The Journal of Higher Education Volume 86 ; 86 >
+      au < superseded ; 2014 ; The Journal of Higher Education Volume 85 [superseded] ; 85 >
+      au < superseded ; 2015 ; The Journal of Higher Education Volume 86 [superseded] ; 86 >
       au < doNotProcess ; 2016 ; The Journal of Higher Education Volume 87 ; 87 >
 
     }
