@@ -63,13 +63,14 @@ diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
 #
 # Find duplicate released names in the gln title database
 echo "---------------------"
-scripts/tdb/tdbout -P -c name tdb/prod/*.tdb | sort > $tpath/allAUs
-uniq $tpath/allAUs > $tpath/dedupedAUs
-allAUs=`cat $tpath/allAUs | wc -l`
-uniqAUs=`cat $tpath/dedupedAUs | wc -l`
-echo "GLN. All Released names = $allAUs"
-echo "GLN. Released names without duplicates = $uniqAUs"
-diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
+echo "Duplicate Released Names. Commented out."
+#scripts/tdb/tdbout -P -c name tdb/prod/*.tdb | sort > $tpath/allAUs
+#uniq $tpath/allAUs > $tpath/dedupedAUs
+#allAUs=`cat $tpath/allAUs | wc -l`
+#uniqAUs=`cat $tpath/dedupedAUs | wc -l`
+#echo "GLN. All Released names = $allAUs"
+#echo "GLN. Released names without duplicates = $uniqAUs"
+#diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
 #
 # Find number of AUs ready for release in the prod title database
 echo "----------------------"
