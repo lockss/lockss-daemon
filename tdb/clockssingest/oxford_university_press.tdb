@@ -899,6 +899,21 @@
   {
 
     title <
+      name = Annals of Behavioral Medicine ;
+      issn = 0883-6612 ;
+      eissn = 1532-4796 ;
+      issnl = 0883-6612
+    >
+
+    param[journal_id] = abm
+
+    au < expected ; exists ; 2018 ; 2018 ; Annals of Behavioral Medicine Volume 1 ; 1 ;  >
+
+  }
+
+  {
+
+    title <
       name = Annals of Botany ;
       issn = 0305-7364 ;
       eissn = 1095-8290 ;
@@ -10520,6 +10535,21 @@
   {
 
     title <
+      name = Journal of Victorian Culture ;
+      issn = 1355-5502 ;
+      eissn = 1750-0133 ;
+      issnl = 1355-5502
+    >
+
+    param[journal_id] = jvc
+
+    au < expected ; exists ; 2018 ; 2018 ; Journal of Victorian Culture Volume 1 ; 1 ;  >
+
+  }
+
+  {
+
+    title <
       name = Journal of the American Academy of Religion ;
       issn = 0002-7189 ;
       eissn = 1477-4585 ;
@@ -19078,6 +19108,21 @@
     param[journal_id] = 
 
     #this title was ONLY in the previous TDB listing - suppressing AU generation 
+
+  }
+
+  {
+
+    title <
+      name = Translational Behavioral Medicine ;
+      issn = 1869-6716 ;
+      eissn = 1613-9860 ;
+      issnl = 1869-6716
+    >
+
+    param[journal_id] = tbm
+
+    au < expected ; exists ; 2018 ; 2018 ; Translational Behavioral Medicine Volume 1 ; 1 ;  >
 
   }
 

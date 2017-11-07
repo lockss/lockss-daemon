@@ -652,6 +652,21 @@
   {
 
     title <
+      name = Journal of Inklings Studies ;
+      issn = 2045-8797 ;
+      eissn = 2045-8800 ;
+      issnl = 2045-8797 
+     >
+     
+    param[journal_id] = ink
+
+    au < expected ; exists ; 2018 ; Journal of Inklings Studies Volume 1 ; 1 ; >
+
+  }
+
+  {
+
+    title <
       name = Journal of International Political Theory ;
       issn = 1755-0882 ;
       eissn = 1755-1722 ;
