@@ -222,8 +222,8 @@
     param[journal_abbr] = mca
     implicit < status ; year ; volume ; name ; param[volume] >
     
-    au < exists ; 2015 ; 1 ; Journal of Practitioner Research Volume 1 ; 1 >
-    au < expected ; 2016 ; 2 ; Journal of Practitioner Research Volume 2 ; 2 >
+    au < manifest ; 2015 ; 1 ; Journal of Practitioner Research Volume 1 ; 1 >
+    au < manifest ; 2016 ; 2 ; Journal of Practitioner Research Volume 2 ; 2 >
   
   }
 
