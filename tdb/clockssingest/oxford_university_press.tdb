@@ -6636,6 +6636,21 @@
 
   }
 
+  {
+
+    title <
+      name = Inflammatory Bowel Diseases ;
+      issn = 1078-0998 ;
+      eissn = 1536-4844 ;
+      issnl = 1078-0998
+    >
+
+    param[journal_id] = ibdjournal
+
+    au < expected ; exists ; 2018 ; 2018 ; Inflammatory Bowel Diseases Volume 1 ; 1 ;  >
+
+  }
+
   #Publisher and previous TDB differ on title - ISLE: Interdisciplinary Studies in Literature and Environment vs Interdisciplinary Studies in Literature and Environment 
   {
 
