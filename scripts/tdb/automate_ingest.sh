@@ -47,27 +47,27 @@ echo "###Ready Misc 2017" > $t/tmp_Misc
 ./scripts/tdb/tdbout -Y -a -Q 'year is "2017" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | grep -v highwire | grep -v typon | grep -v ClockssTaylorAndFrancisPlugin | shuf >> $t/tmp_Misc
 echo "###Ready Misc not 2017" >> $t/tmp_Misc
 ./scripts/tdb/tdbout -Y -a -Q 'year is not "2017" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | grep -v highwire | grep -v typon | grep -v ClockssTaylorAndFrancisPlugin | shuf >> $t/tmp_Misc
-#Single Ingest Machines: all but Highwire, T&F
+#Single Ingest Machines: all publishers
 echo "*********************" >> $t/tmp_Misc
 echo "###Ready Misc Ingest1" >> $t/tmp_Misc
-./scripts/tdb/tdbout -Y -a -Q 'au:hidden[proxy] is "reingest1.clockss.org:8082"' tdb/clockssingest/*.tdb | grep -v highwire | grep -v ClockssTaylorAndFrancisPlugin | shuf >> $t/tmp_Misc
+./scripts/tdb/tdbout -Y -a -Q 'au:hidden[proxy] is "reingest1.clockss.org:8082"' tdb/clockssingest/*.tdb | shuf >> $t/tmp_Misc
 echo "*********************" >> $t/tmp_Misc
 echo "###Ready Misc Ingest2" >> $t/tmp_Misc
-./scripts/tdb/tdbout -Y -a -Q 'au:hidden[proxy] is "reingest2.clockss.org:8085"' tdb/clockssingest/*.tdb | grep -v highwire | grep -v ClockssTaylorAndFrancisPlugin | shuf >> $t/tmp_Misc
+./scripts/tdb/tdbout -Y -a -Q 'au:hidden[proxy] is "reingest2.clockss.org:8085"' tdb/clockssingest/*.tdb | shuf >> $t/tmp_Misc
 echo "*********************" >> $t/tmp_Misc
 echo "###Ready Misc Ingest3" >> $t/tmp_Misc
-./scripts/tdb/tdbout -Y -a -Q 'au:hidden[proxy] is "reingest3.clockss.org:8083"' tdb/clockssingest/*.tdb | grep -v highwire | grep -v ClockssTaylorAndFrancisPlugin | shuf >> $t/tmp_Misc
+./scripts/tdb/tdbout -Y -a -Q 'au:hidden[proxy] is "reingest3.clockss.org:8083"' tdb/clockssingest/*.tdb | shuf >> $t/tmp_Misc
 echo "*********************" >> $t/tmp_Misc
 echo "###Ready Misc Ingest4" >> $t/tmp_Misc
-./scripts/tdb/tdbout -Y -a -Q 'au:hidden[proxy] is "reingest4.clockss.org:8082"' tdb/clockssingest/*.tdb | grep -v highwire | grep -v ClockssTaylorAndFrancisPlugin | shuf >> $t/tmp_Misc
+./scripts/tdb/tdbout -Y -a -Q 'au:hidden[proxy] is "reingest4.clockss.org:8082"' tdb/clockssingest/*.tdb | shuf >> $t/tmp_Misc
 echo "*********************" >> $t/tmp_Misc
 echo "###Ready Misc Ingest5" >> $t/tmp_Misc
-./scripts/tdb/tdbout -Y -a -Q 'au:hidden[proxy] is "reingest5.clockss.org:8082"' tdb/clockssingest/*.tdb | grep -v highwire | grep -v ClockssTaylorAndFrancisPlugin | shuf >> $t/tmp_Misc
+./scripts/tdb/tdbout -Y -a -Q 'au:hidden[proxy] is "reingest5.clockss.org:8082"' tdb/clockssingest/*.tdb | shuf >> $t/tmp_Misc
 
 head -n50 $t/tmp_HW | grep -v ClockssHWDrupalPlugin > $t/tmp_All
 head -n50 $t/tmp_Atypon >> $t/tmp_All
 head -n50 $t/tmp_TnF >> $t/tmp_All
-head -n100 $t/tmp_Misc >> $t/tmp_All
+head -n100 $t/tmp_Misc | grep -v ClockssHWDrupalPlugin >> $t/tmp_All
 
 exit 0
 
