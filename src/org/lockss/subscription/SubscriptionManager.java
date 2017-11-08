@@ -1033,6 +1033,28 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	// Create subscriptions for all the configured archival units of this
 	// title.
 	subscribePublicationConfiguredAus(title, conn, configuredAus, status);
+
+	// Check whether the subscription needs to be for the whole title, not
+	// subscription ranges.
+	if (isWholeTitleSynchronization) {
+	  // Yes: Configure any needed AUs covered by the subscription.
+	  if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	      + "Creating new 'must configure' SubscriptionStarter for title '"
+	      + title + "'...");
+	  mustConfigureStarter = new SubscriptionStarter(this,
+	      configureAuBatchSize, configureAuRateLimiter,
+	      title.tdbAuIterator(), true);
+
+	  mustConfigureStarterThread = new Thread(mustConfigureStarter);
+	  mustConfigureStarterThread.start();
+	  if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	      + "Created new 'must configure' SubscriptionStarter.");
+	} else {
+	  // No: If the subscription is forthe already configured AUs, no new
+	  // AUs will have to be added by definition.
+	  if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	      + "Not configured any new AUs for title '" + title + "'.");
+	}
       }
     } finally {
       DbManager.safeRollbackAndClose(conn);
