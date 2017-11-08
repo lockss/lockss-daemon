@@ -4,9 +4,6 @@
     name = Company of Biologists
   >
 
-  #plugin = needs.plugin
-  #PD-1554
-
   implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
   pluginPrefix = org.lockss.plugin.highwire.
 

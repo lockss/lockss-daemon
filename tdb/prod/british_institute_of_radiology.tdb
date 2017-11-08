@@ -268,7 +268,7 @@
     }
     
     {
-      plugin = needs.plugin
+      plugin = org.lockss.plugin.atypon.bir.BIRAtyponPlugin
       comment[platform] = Atypon
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.birpublications.org/
@@ -288,6 +288,7 @@
       au < doNotProcess ; 2009 ; Imaging Volume 21 ; 21 >
       au < exists ; 2013 ; Imaging Volume 22 ; 22 >
       au < exists ; 2014 ; Imaging Volume 23 ; 23 >
+      #no more volumes as of 20171107
       
     }
     

@@ -31,72 +31,72 @@ comment[fb3] = plugins should be simple so that publisher doesn't have to make a
     
     }
   
-    {
-    
-      plugin = needs.plugin
-      implicit < status ; year ; name ; volume ; param[issue_name] >
-      param[base_url] = http://www.failbetter.com/
-  
-      au < doNotProcess ; 2000 ; Failbetter Issue 1 ; 1 ; 1 >
-      au < doNotProcess ; 2001 ; Failbetter Issue 2 ; 2 ; 2 >
-      au < doNotProcess ; 2001 ; Failbetter Issue 3 ; 3 ; 3 >
-      au < doNotProcess ; 2001 ; Failbetter Issue 4 ; 4 ; 4 >
-      au < doNotProcess ; 2002 ; Failbetter Issue 5 ; 5 ; 5 >
-      au < doNotProcess ; 2002 ; Failbetter Issue 6 ; 6 ; 6 >
-      au < doNotProcess ; 2002 ; Failbetter Issue 7 ; 7 ; 7 >
-      au < doNotProcess ; 2002 ; Failbetter Issue 8 ; 8 ; 8 >
-      au < doNotProcess ; 2003 ; Failbetter Issue 9 ; 9 ; 9 >
-      au < doNotProcess ; 2003 ; Failbetter Issue 10 ; 10 ; 10 >
-      au < doNotProcess ; 2003 ; Failbetter Issue 11 ; 11 ; 11 >
-      au < doNotProcess ; 2003 ; Failbetter Issue 12 ; 12 ; 12 >
-      au < doNotProcess ; 2004 ; Failbetter Issue 13 ; 13 ; 13 >
-      au < doNotProcess ; 2004 ; Failbetter Issue 14 ; 14 ; 14 >
-      au < doNotProcess ; 2004 ; Failbetter Issue 15 ; 15 ; 15 >
-      au < exists ; 2005 ; Failbetter Issue 16 ; 16 ; 16 >
-      au < exists ; 2005 ; Failbetter Issue 17 ; 17 ; 17 >
-      au < exists ; 2005 ; Failbetter Issue 18 ; 18 ; 18 >
-      au < exists ; 2006 ; Failbetter Issue 19 ; 19 ; 19 >
-      au < exists ; 2006 ; Failbetter Issue 20 ; 20 ; 20 >
-      au < exists ; 2006 ; Failbetter Issue 21 ; 21 ; 21 >
-      au < exists ; 2006-2007 ; Failbetter Issue 22 ; 22 ; 22 >
-      au < exists ; 2007 ; Failbetter Issue 23 ; 23 ; 23 >
-      au < exists ; 2007 ; Failbetter Issue 24 ; 24 ; 24 >
-      au < exists ; 2007 ; Failbetter Issue 25 ; 25 ; 25 >
-      au < exists ; 2008 ; Failbetter Issue 26 ; 26 ; 26 >
-      au < exists ; 2008 ; Failbetter Issue 27 ; 27 ; 27 >
-      au < exists ; 2008 ; Failbetter Issue 28 ; 28 ; 28 >
-      au < exists ; 2008 ; Failbetter Issue 29 ; 29 ; 29 >
-      au < exists ; 2009 ; Failbetter Issue 30 ; 30 ; 30 >
-      au < exists ; 2009 ; Failbetter Issue 31 ; 31 ; 31 >
-      au < exists ; 2009 ; Failbetter Issue 32 ; 32 ; 32 >
-      au < exists ; 2009 ; Failbetter Issue 33 ; 33 ; 33 >
-      au < exists ; 2010 ; Failbetter Issue 34 ; 34 ; 34 >
-      au < exists ; 2010 ; Failbetter Issue 35 ; 35 ; 35 >
-      au < exists ; 2010 ; Failbetter Issue 36 ; 36 ; 36 >
-      au < exists ; 2010 ; Failbetter Issue 37 ; 37 ; 37 >
-      au < exists ; 2011 ; Failbetter Issue 38 ; 38 ; 38 >
-      au < exists ; 2011 ; Failbetter Issue 39 ; 39 ; 39 >
-      au < exists ; 2011 ; Failbetter Issue 40 ; 40 ; 40 >
-      au < exists ; 2011 ; Failbetter Issue 41 ; 41 ; 41 >
-      au < exists ; 2012 ; Failbetter Issue 42 ; 42 ; 42 >
-      au < exists ; 2012 ; Failbetter Issue 43 ; 43 ; 43 >
-      au < exists ; 2012 ; Failbetter Issue 44 ; 44 ; 44 >
-      au < exists ; 2012 ; Failbetter Issue 45 ; 45 ; 45 >
-      au < exists ; 2013 ; Failbetter Issue 46 ; 46 ; 46 >
-      au < exists ; 2013 ; Failbetter Issue 47 ; 47 ; 47 >
-      au < exists ; 2013 ; Failbetter Issue 48 ; 48 ; 48 >
-      au < exists ; 2013 ; Failbetter Issue 49 ; 49 ; 49 >
-      au < exists ; 2014 ; Failbetter Issue 50 ; 50 ; 50 >
-      au < exists ; 2014 ; Failbetter Issue 51 ; 51 ; 51 >
-      au < exists ; 2014 ; Failbetter Issue 52 ; 52 ; 52 >
-      au < exists ; 2014 ; Failbetter Issue 53 ; 53 ; 53 >
-      au < exists ; 2015 ; Failbetter Issue 54 ; 54 ; 54 >
-      au < expected ; 2015 ; Failbetter Issue 55 ; 55 ; 55 >
-      au < expected ; 2015 ; Failbetter Issue 56 ; 56 ; 56 >
-      au < expected ; 2015 ; Failbetter Issue 57 ; 57 ; 57 >
-    
-    }
-  
+#    {
+#    
+#      plugin = needs.plugin
+#      implicit < status ; year ; name ; volume ; param[issue_name] >
+#      param[base_url] = http://www.failbetter.com/
+#  
+#      au < doNotProcess ; 2000 ; Failbetter Issue 1 ; 1 ; 1 >
+#      au < doNotProcess ; 2001 ; Failbetter Issue 2 ; 2 ; 2 >
+#      au < doNotProcess ; 2001 ; Failbetter Issue 3 ; 3 ; 3 >
+#      au < doNotProcess ; 2001 ; Failbetter Issue 4 ; 4 ; 4 >
+#      au < doNotProcess ; 2002 ; Failbetter Issue 5 ; 5 ; 5 >
+#      au < doNotProcess ; 2002 ; Failbetter Issue 6 ; 6 ; 6 >
+#      au < doNotProcess ; 2002 ; Failbetter Issue 7 ; 7 ; 7 >
+#      au < doNotProcess ; 2002 ; Failbetter Issue 8 ; 8 ; 8 >
+#      au < doNotProcess ; 2003 ; Failbetter Issue 9 ; 9 ; 9 >
+#      au < doNotProcess ; 2003 ; Failbetter Issue 10 ; 10 ; 10 >
+#      au < doNotProcess ; 2003 ; Failbetter Issue 11 ; 11 ; 11 >
+#      au < doNotProcess ; 2003 ; Failbetter Issue 12 ; 12 ; 12 >
+#      au < doNotProcess ; 2004 ; Failbetter Issue 13 ; 13 ; 13 >
+#      au < doNotProcess ; 2004 ; Failbetter Issue 14 ; 14 ; 14 >
+#      au < doNotProcess ; 2004 ; Failbetter Issue 15 ; 15 ; 15 >
+#      au < exists ; 2005 ; Failbetter Issue 16 ; 16 ; 16 >
+#      au < exists ; 2005 ; Failbetter Issue 17 ; 17 ; 17 >
+#      au < exists ; 2005 ; Failbetter Issue 18 ; 18 ; 18 >
+#      au < exists ; 2006 ; Failbetter Issue 19 ; 19 ; 19 >
+#      au < exists ; 2006 ; Failbetter Issue 20 ; 20 ; 20 >
+#      au < exists ; 2006 ; Failbetter Issue 21 ; 21 ; 21 >
+#      au < exists ; 2006-2007 ; Failbetter Issue 22 ; 22 ; 22 >
+#      au < exists ; 2007 ; Failbetter Issue 23 ; 23 ; 23 >
+#      au < exists ; 2007 ; Failbetter Issue 24 ; 24 ; 24 >
+#      au < exists ; 2007 ; Failbetter Issue 25 ; 25 ; 25 >
+#      au < exists ; 2008 ; Failbetter Issue 26 ; 26 ; 26 >
+#      au < exists ; 2008 ; Failbetter Issue 27 ; 27 ; 27 >
+#      au < exists ; 2008 ; Failbetter Issue 28 ; 28 ; 28 >
+#      au < exists ; 2008 ; Failbetter Issue 29 ; 29 ; 29 >
+#      au < exists ; 2009 ; Failbetter Issue 30 ; 30 ; 30 >
+#      au < exists ; 2009 ; Failbetter Issue 31 ; 31 ; 31 >
+#      au < exists ; 2009 ; Failbetter Issue 32 ; 32 ; 32 >
+#      au < exists ; 2009 ; Failbetter Issue 33 ; 33 ; 33 >
+#      au < exists ; 2010 ; Failbetter Issue 34 ; 34 ; 34 >
+#      au < exists ; 2010 ; Failbetter Issue 35 ; 35 ; 35 >
+#      au < exists ; 2010 ; Failbetter Issue 36 ; 36 ; 36 >
+#      au < exists ; 2010 ; Failbetter Issue 37 ; 37 ; 37 >
+#      au < exists ; 2011 ; Failbetter Issue 38 ; 38 ; 38 >
+#      au < exists ; 2011 ; Failbetter Issue 39 ; 39 ; 39 >
+#      au < exists ; 2011 ; Failbetter Issue 40 ; 40 ; 40 >
+#      au < exists ; 2011 ; Failbetter Issue 41 ; 41 ; 41 >
+#      au < exists ; 2012 ; Failbetter Issue 42 ; 42 ; 42 >
+#      au < exists ; 2012 ; Failbetter Issue 43 ; 43 ; 43 >
+#      au < exists ; 2012 ; Failbetter Issue 44 ; 44 ; 44 >
+#      au < exists ; 2012 ; Failbetter Issue 45 ; 45 ; 45 >
+#      au < exists ; 2013 ; Failbetter Issue 46 ; 46 ; 46 >
+#      au < exists ; 2013 ; Failbetter Issue 47 ; 47 ; 47 >
+#      au < exists ; 2013 ; Failbetter Issue 48 ; 48 ; 48 >
+#      au < exists ; 2013 ; Failbetter Issue 49 ; 49 ; 49 >
+#      au < exists ; 2014 ; Failbetter Issue 50 ; 50 ; 50 >
+#      au < exists ; 2014 ; Failbetter Issue 51 ; 51 ; 51 >
+#      au < exists ; 2014 ; Failbetter Issue 52 ; 52 ; 52 >
+#      au < exists ; 2014 ; Failbetter Issue 53 ; 53 ; 53 >
+#      au < exists ; 2015 ; Failbetter Issue 54 ; 54 ; 54 >
+#      au < expected ; 2015 ; Failbetter Issue 55 ; 55 ; 55 >
+#      au < expected ; 2015 ; Failbetter Issue 56 ; 56 ; 56 >
+#      au < expected ; 2015 ; Failbetter Issue 57 ; 57 ; 57 >
+#    
+#    }
+#  
   }
   
 }
