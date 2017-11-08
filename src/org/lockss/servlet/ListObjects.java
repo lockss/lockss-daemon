@@ -831,12 +831,12 @@ public class ListObjects extends LockssServlet {
     }
 
     public void foundLink(String eurl) {
-      if (!BaseCrawler.isSupportedUrlProtocol(url)) {
+      if (!BaseCrawler.isSupportedUrlProtocol(eurl)) {
 	return;
       }
       try {
 	String normUrl = UrlUtil.normalizeUrl(eurl, au);
-	if (normUrl.equals(eurl)) {
+	if (normUrl.equals(url)) {
 	  if (log.isDebug3()) log.debug3("Self reference to " + url);
 	  return;
 	}
