@@ -73,6 +73,8 @@ public class OJS2CrawlSeedFactory implements CrawlSeedFactory {
     noIndexBaseUrlHosts.add("www.journal-alm.org");
     noIndexBaseUrlHosts.add("www.ijtarp.org");
     noIndexBaseUrlHosts.add("www.intersticios.es");
+    noIndexBaseUrlHosts.add("www.wpcjournal.com");
+    noIndexBaseUrlHosts.add("www.kcajournals.com");
 
   }
   
