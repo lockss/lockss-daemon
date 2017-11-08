@@ -33,7 +33,6 @@ comment[fb3] = plugins should be simple so that publisher doesn't have to make a
   
 #    {
 #    
-#      plugin = needs.plugin
 #      implicit < status ; year ; name ; volume ; param[issue_name] >
 #      param[base_url] = http://www.failbetter.com/
 #  
