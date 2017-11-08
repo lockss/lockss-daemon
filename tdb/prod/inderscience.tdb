@@ -3587,36 +3587,36 @@
 
     }
 
-    {
-
-      title <
-        name = International Journal of Forensic Engineering and Management ;
-        issn = 1478-1476 ;
-        eissn = 1479-3091 ;
-        issnl = 1478-1476
-      >
-
-    # no journal page on Apr 23, 2012. journal_id may be issn or eissn
-    # title is not yet published on 4/30/2014
-      param[journal_id] = ijfem
-
-    }
-
-    {
-
-      title <
-        name = International Journal of Forensic Software Engineering ;
-        issn = 1743-5099 ;
-        eissn = 1743-5102 ;
-        issnl = 1743-5099
-      >
-
-    # no journal page on Apr 23, 2012. journal_id may be issn or eissn
-    # title is not yet published on 4/30/2014
-      param[journal_id] = ijfse
-
-    }
-
+#    {
+#
+#      title <
+#        name = International Journal of Forensic Engineering and Management ;
+#        issn = 1478-1476 ;
+#        eissn = 1479-3091 ;
+#        issnl = 1478-1476
+#      >
+#
+#    # no journal page on Apr 23, 2012. journal_id may be issn or eissn
+#    # title is not yet published on 4/30/2014
+#      param[journal_id] = ijfem
+#
+#    }
+#
+#    {
+#
+#      title <
+#        name = International Journal of Forensic Software Engineering ;
+#        issn = 1743-5099 ;
+#        eissn = 1743-5102 ;
+#        issnl = 1743-5099
+#      >
+#
+#    # no journal page on Apr 23, 2012. journal_id may be issn or eissn
+#    # title is not yet published on 4/30/2014
+#      param[journal_id] = ijfse
+#
+#    }
+#
     {
 
       title <
