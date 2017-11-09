@@ -1,20 +1,20 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready. Moving to SC Fall 2017</string>
+    <string>testing - 2</string>
   </entry>
-  <!-- compare to ClockssGSWDrupalPlugin, the added entries should be in synch -->
+  <!-- compare to ClockssAAIDrupalPlugin, the added entries should be in synch -->
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.highwire.gsw.GSWDrupalPlugin</string>
+    <string>org.lockss.plugin.highwire.aai.AAIDrupalPlugin</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>GeoScienceWorld Plugin</string>
+    <string>American Association of Immunologists Plugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>8</string>
+    <string>1</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -33,20 +33,16 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>2</string>
+        <string>1</string>
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>5</string>
+        <string>1</string>
       </entry>
     </map>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"GeoScienceWorld Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
-  </entry>
-  <entry>
-    <string>text/html_link_extractor_factory</string>
-    <string>org.lockss.plugin.highwire.HighWireDrupalHtmlLinkExtractorFactory</string>
+    <string>"American Association of Immunologists Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
 </map>

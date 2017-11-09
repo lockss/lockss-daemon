@@ -14,7 +14,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>27</string>
+    <string>28</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -22,7 +22,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>68</string>
+    <string>69</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -44,6 +44,15 @@
   <entry>
     <string>au_name</string>
     <string>"BMJ Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_additional_url_stems</string>
+    <list>
+      <string>"%s", to_http(base_url)</string>
+      <string>"%s", to_https(base_url)</string>
+      <string>http://static.www.bmj.com/</string>
+      <string>https://static.www.bmj.com/</string>
+    </list>
   </entry>
   <entry>
     <!-- CRAWL RULES COPIED DOWN FROM PARENT on 10/27/17 to allow for simplification of parent -->

@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -48,6 +48,8 @@ public class BMJDrupalHtmlCrawlFilterFactory extends HighWireDrupalHtmlCrawlFilt
   
   protected static NodeFilter[] filters = new NodeFilter[] {
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pager"),
+    HtmlNodeFilters.tagWithAttributeRegex("span", "class", "prev"),
+    HtmlNodeFilters.tagWithAttributeRegex("span", "class", "next"),
     HtmlNodeFilters.tagWithAttribute("div", "class", "section notes"),
     HtmlNodeFilters.tagWithAttribute("div", "class", "section fn-group"),
     // leave data supplement links for pages like http://www.bmj.com/content/332/7532/11/related

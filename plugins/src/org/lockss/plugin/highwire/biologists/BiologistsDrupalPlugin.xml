@@ -14,7 +14,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>10</string>
+    <string>11</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -22,7 +22,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>67</string>
+    <string>69</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -44,13 +44,5 @@
   <entry>
     <string>au_name</string>
     <string>"Company of Biologists Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
-  </entry>
-  <entry>
-    <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.highwire.HighWireDrupalArticleIteratorVIPFactory</string>
-  </entry>
-  <entry>
-    <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.highwire.HighWireDrupalArticleIteratorVIPFactory</string>
   </entry>
 </map>

@@ -36,7 +36,7 @@
         gsw.GSWDrupalPlugin
         iwa.IWADrupalPlugin
         jbjs.JBJSDrupalPlugin
-        oup.OUPDrupalPlugin (Soon to be Deprecated)
+        oup.OUPDrupalPlugin (Deprecated)
         portlandpress.PortlandPressDrupalPlugin
         rcgp.RCGPDrupalPlugin
         rcpsych.RCPsychDrupalPlugin
@@ -51,7 +51,7 @@
    -->
   <entry>
     <string>plugin_version</string>
-    <string>68</string>
+    <string>69</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -109,8 +109,6 @@
     <list>
       <string>"%s", to_http(base_url)</string>
       <string>"%s", to_https(base_url)</string>
-      <string>http://static.www.bmj.com/</string>
-      <string>https://static.www.bmj.com/</string>
     </list>
   </entry>
   <entry>
@@ -150,21 +148,22 @@
       <string>1,"^https?://%s/content(/[^/]+)?/suppl/", url_host(base_url)</string>
       <string>2,"^https?://%s/content/(by/(year|volume)|current|.*/article-)", url_host(base_url)</string>
       <!-- after content is optional jcode, required vol, optional issue, optional .toc  -->
-      <string>1,"^https?://%s/content(/[^/.]+)?/([^/.]+)(/[^/.]+)?(\.toc)?$", url_host(base_url)</string>
+      <string>1,"^https?://%s/content(/[^/.]+)?/%s(/[^/.]+)?(\.toc)?$", url_host(base_url), volume_name</string>
       <!-- after content is required vol, optional issue, required page, then allowed extensions or EOL 
             page may also contain roman numerals, dot, & number (iii.2)  -->
-      <string>1,"^https?://%s/content/([^/.]+)(/[^/.]+)?/(((?:(bmj|[ivx]+)\.)?[^/.]+?(\.\d+)?))(/related|/tab-figures-data|\.(?:long|supplemental|data|figures-only)|)$", url_host(base_url)</string>
+      <string>1,"^https?://%s/content/%s(/[^/.]+)?/(((?:([ivx]+)\.)?[^/.]+?(\.\d+)?))(|/related|/tab-figures-data|\.(?:long|supplemental|data|figures-only))$", url_host(base_url), volume_name</string>
       <!-- http://msphere.asm.org/content/1/1/masthead.1-1 was excluded -->
-      <string>1,"^https?://%s/content/([^/.]+)(/[^/.]+)?/((ENEURO|wpt|masthead)\.[0-9.-]+)(|/related|/tab-figures-data|\.(?:long|supplemental|data|figures-only))$", url_host(base_url)</string>
+      <string>1,"^https?://%s/content/%s(/[^/.]+)?/((ENEURO|wpt|masthead)\.[0-9.-]+)(|/related|/tab-figures-data|\.(?:long|supplemental|data|figures-only))$", url_host(base_url), volume_name</string>
       <!-- after content is optional jcode, required vol, optional issue, required page, then allowed extensions -->
-      <string>1,"^https?://%s/content(/[^/.]+)?/([^/.]+)(/[^/.]+)?/(((?:(bmj|[ivx]+)\.)?[^/.]+?|\d+\.\d+))(\.(?:full(?:-text)?\.pdf(?:\+html)?))$", url_host(base_url)</string>
-      <string>1,"^https?://%s/content(/[^/.]+)?/([^/.]+)(/[^/.]+)?/((ENEURO|wpt|masthead)\.[0-9.-]+)(\.(?:full(?:-text)?\.pdf(?:\+html)?))$", url_host(base_url)</string>
+      <string>1,"^https?://%s/content(/[^/.]+)?/%s(/[^/.]+)?/(((?:([ivx]+)\.)?[^/.]+?(\.\d+)?))(\.(?:full(?:-text)?\.pdf(?:\+html)?))$", url_host(base_url), volume_name</string>
+      <string>1,"^https?://%s/content(/[^/.]+)?/%s(/[^/.]+)?/((ENEURO|wpt|masthead)\.[0-9.-]+)(\.(?:full(?:-text)?\.pdf(?:\+html)?))$", url_host(base_url), volume_name</string>
+      <string>1,"^https?://%s/search/volume[^/?]+?%s[^/?]+\?(page=[0-9]+&amp;)?facet.+toc-section-id", url_host(base_url), volume_name</string>
       <string>1,"^https?://%s/highwire/filestream/", url_host(base_url)</string>
       <string>1,"^https?://%s/[^/]+/(download-(pdf|suppl|video))/", url_host(base_url)</string>
       <!-- allow content like http://msphere.asm.org/content/msph/1/1/e00001-15/DC2/embed/inline-supplementary-material-2.pdf?download=true -->
       <string>1,"^https?://%s/[^?]+(/embed/inline-supplementary-)", url_host(base_url)</string>
-      <!-- otherwise, all content from glencoesoftware CDN and non-(js|css) from static BMJ -->
-      <string>1,"^https?://([^/]+\.glencoesoftware\.com/.|static\.www\.bmj\.com/.(?!.+\.(css|js)?))"</string>
+      <!-- otherwise, all content from glencoesoftware CDN -->
+      <string>1,"^https?://([^/]+\.glencoesoftware\.com/.)"</string>
     </list>
   </entry>
   <entry>
@@ -199,11 +198,11 @@
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.highwire.HighWireDrupalArticleIteratorFactory</string>
+    <string>org.lockss.plugin.highwire.HighWireDrupalArticleIteratorVIPFactory</string>
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.highwire.HighWireDrupalArticleIteratorFactory</string>
+    <string>org.lockss.plugin.highwire.HighWireDrupalArticleIteratorVIPFactory</string>
   </entry>
   <entry>
     <string>text/html_metadata_extractor_factory_map</string>
@@ -225,8 +224,8 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^https?://%s/content(/[^/.]+)?/([^/.]+)(/[^/.]+)?/(((?:(bmj|[ivx]+)\.)?[^/.]+?(\.\d+)?))(\.(?:full([.]pdf)?)?)$", url_host(base_url)</string>
-      <string>"^https?://%s/content(/[^/.]+)?/([^/.]+)(/[^/.]+)?/((ENEURO|wpt)\.[0-9.-]+)(\.(?:full([.]pdf)?)?)$", url_host(base_url)</string>
+      <string>"^https?://%s/content(/[^/.]+)?/%s(/[^/.]+)?/(((?:([ivx]+)\.)?[^/.]+?(\.\d+)?))(\.(?:full([.]pdf)?)?)$", url_host(base_url), volume_name</string>
+      <string>"^https?://%s/content(/[^/.]+)?/%s(/[^/.]+)?/((ENEURO|wpt)\.[0-9.-]+)(\.(?:full([.]pdf)?)?)$", url_host(base_url), volume_name</string>
     </list>
   </entry>
   <entry>

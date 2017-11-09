@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -154,7 +154,7 @@ public class TestHighWireDrupalHtmlCrawlFilterFactory extends LockssTestCase {
       "<span id=\"related-urls\"></span>\n" + 
       "</div>";
   
-  private static final String withSidebar = "<div id=\"page\">" +
+  private static final String withSidebar = "<div id=\"page\">\n" +
       "<div class=\"sidebar-right-wrapper grid-10 omega\">\n" +
       "      <div class=\"panel-panel panel-region-sidebar-right\">\n" +
       "        <div class=\"inside\"><div class=\"panel-pane pane-panels-mini\">\n" +
@@ -165,12 +165,14 @@ public class TestHighWireDrupalHtmlCrawlFilterFactory extends LockssTestCase {
       "</div>" +
       "     </div>" +
       "        </div></div>\n" +
-      "      </div>\n" +
+      "      </div><a href=\"/content/347/bmj.f52.full.pdf\" title=\"PDF\" class=\"pdf-link\">PDF</a>\n" +
       "</div>\n" +
       "</div>";
   
   private static final String withoutSidebar = "<div id=\"page\">" +
       "\n" +
+      "<div class=\"sidebar-right-wrapper grid-10 omega\">" +
+      "<a href=\"/content/347/bmj.f52.full.pdf\" title=\"PDF\" class=\"pdf-link\">PDF</a></div>\n" +
       "</div>";
   
   private static final String withPager = "<div id=\"page\">" +
@@ -227,7 +229,7 @@ public class TestHighWireDrupalHtmlCrawlFilterFactory extends LockssTestCase {
       " <a href=\"/\" class=\"\" data-icon-position=\"\" data-hide-link-title=\"0\">Home</a></li>\n" + 
       "<li class=\"menu-617 menuparent  menu-path-content-current  even\" role=\"menuitem\">" +
       " <a href=\"/content/current\" data-icon-position=\"\" data-hide-link-title=\"0\">Content</a></li>\n" + 
-      "</ul></nav>" +
+      "</ul></nav>\n" +
       "</div>";
   
   private static final String withoutNav = "<div id=\"page\">" +
@@ -268,7 +270,7 @@ public class TestHighWireDrupalHtmlCrawlFilterFactory extends LockssTestCase {
     inA = fact.createFilteredInputStream(mau, new StringInputStream(withPager),
         Constants.DEFAULT_ENCODING);
     a = StringUtil.fromInputStream(inA);
-    assertEquals(withoutPager, a);
+    // assertEquals(withoutPager, a); // XXX no longer filtering pager in Drupal parent class
     
     // aside
     inA = fact.createFilteredInputStream(mau, new StringInputStream(withAside),
@@ -281,6 +283,12 @@ public class TestHighWireDrupalHtmlCrawlFilterFactory extends LockssTestCase {
         Constants.DEFAULT_ENCODING);
     a = StringUtil.fromInputStream(inA);
     assertEquals(withoutBreadcrumb, a);
+    
+    // nav
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(withNav),
+        Constants.DEFAULT_ENCODING);
+    a = StringUtil.fromInputStream(inA);
+    assertEquals(withoutNav, a);
     
   }
   

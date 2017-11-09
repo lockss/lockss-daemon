@@ -1,33 +1,33 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>testing - 2</string>
   </entry>
-  <!-- compare to ADADrupalPlugin, the added entries should be in synch -->
+  <!-- compare to AAIDrupalPlugin, the added entries should be in synch -->
   <!-- also compare to ClockssHighWireDrupalPlugin for CLOCKSS specific entries -->
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.highwire.ada.ClockssADADrupalPlugin</string>
+    <string>org.lockss.plugin.highwire.aai.ClockssAAIDrupalPlugin</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>American Diabetes Association Plugin (CLOCKSS)</string>
+    <string>American Association of Immunologists Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>1</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
-    <string>org.lockss.plugin.highwire.ada.ADADrupalPlugin</string>
+    <string>org.lockss.plugin.highwire.aai.AAIDrupalPlugin</string>
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>6</string>
+    <string>1</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"American Diabetes Association Plugin (CLOCKSS), Base URL %s, Volume %s", base_url, volume_name</string>
+    <string>"American Association of Immunologists Plugin (CLOCKSS), Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
     <string>au_start_url</string>

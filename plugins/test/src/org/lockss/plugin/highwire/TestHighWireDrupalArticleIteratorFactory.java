@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -119,23 +119,23 @@ public class TestHighWireDrupalArticleIteratorFactory extends ArticleIteratorTes
     Pattern pat = getPattern(artIter);
     
     assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1");
+    assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1.1a");
     assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1.123");
     assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1.1234");
+    assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1.12345");
     // crawl rules don't included, but would work with ArticleIterator if they did
     assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/NP.1");
     // this matches but really not a valid page in this case (valid in other cases like 
     //     http://rsbm.royalsocietypublishing.org/content/roybiogmem/61/23.full.pdf
     assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1");
-    assertMatchesRE(pat, "http://ajpendo.physiology.org/content/ajpendo/1/1");
-    assertMatchesRE(pat, "http://ajpendo.physiology.org/content/99/1/1");
     // found roman_numeral.number in page
     assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/iii.2");
     // but not to ...
+    assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/ajpendo/1/1");
+    assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/99/1/1");
     assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/1.toc");
     assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1.toc");
-    assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1.1a");
     assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/ajpendo/1/1/1");
-    assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1.12345");
     assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1.full");
     assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1.full.pdf");
     assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1.full.pdf+html");

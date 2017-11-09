@@ -56,11 +56,12 @@ public class HighWireDrupalHtmlCrawlFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttribute("div", "class", "section ref-list"),
     // Title bar on toc with link to current issue
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "title-menu-and-about"),
-    // Right side and all other links to prev & next
-    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-right-wrapper"),
-    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pager"),
-    HtmlNodeFilters.tagWithAttributeRegex("span", "class", "prev"),
-    HtmlNodeFilters.tagWithAttributeRegex("span", "class", "next"),
+    // Right side except pdf linka
+    //  <a href="/content/347/bmj.f5250.full.pdf" title="PDF" class="pdf-link"></a>
+    //  <a href="/content/198/8/3045.full-text.pdf" target="_blank" class="link-icon"></a>
+    HtmlNodeFilters.allExceptSubtree(
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-right-wrapper"),
+        HtmlNodeFilters.tagWithAttributeRegex("a", "class", "(pdf-link|link-icon)")),
     // messages now contain correction lists
     // do not filter issue-toc-section issue-toc-section-messages-from-munich
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "messages(?!-from-)"),

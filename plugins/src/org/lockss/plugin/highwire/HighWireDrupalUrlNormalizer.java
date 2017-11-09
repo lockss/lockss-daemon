@@ -32,6 +32,9 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.highwire;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -39,6 +42,7 @@ import org.lockss.daemon.PluginException;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
+import org.lockss.util.UrlUtil;
 
 public class HighWireDrupalUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
   
@@ -73,6 +77,18 @@ public class HighWireDrupalUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
   protected static final String EXPAND_PARAM = "/expansion?";
   protected static final String ITOK_PARAM = "?itok=";
   protected static final String DOWNLOAD_PARAM = "?download=";
+  
+  protected static final String TOC_SEC_ID_PARAM = "facet[toc-section-id]";
+//  protected static final String VOL_PARAM = "volume";
+//  protected static final String ISSUE_PARAM = "issue";
+//  protected static final String PAGE_PARAM = "page";
+  
+//  protected static final Set<String> KNOWN_PARAMS = new HashSet<String>(Arrays.asList(
+//      TOC_SEC_ID_PARAM,
+//      VOL_PARAM,
+//      ISSUE_PARAM,
+//      PAGE_PARAM
+//    ));
   
   
   @Override
@@ -114,6 +130,13 @@ public class HighWireDrupalUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
     // http://ajpcell.physiology.org/highwire/citation/1814/zotero
     // to
     // http://ajpcell.physiology.org/highwire/citation/1814/ris
+    
+    if (url.contains(TOC_SEC_ID_PARAM)) {
+      log.debug3(url);
+    }
+    if (url.contains(UrlUtil.minimallyEncodeUrl(TOC_SEC_ID_PARAM))) {
+      log.debug3(url);
+    }
     
     if (url.contains(WEB_VIEWER)) { 
       url = url.replace(WEB_VIEWER, "/");

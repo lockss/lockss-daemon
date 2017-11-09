@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -59,10 +59,6 @@ public class HighWireDrupalHtmlLinkExtractorFactory implements LinkExtractorFact
   
   private static final Logger log = Logger.getLogger(HighWireDrupalHtmlLinkExtractorFactory.class);
   
-  private static final Pattern LPAGE =
-      Pattern.compile("content(/[^/.]+|(?=.*/bmj[.]))/([^/.]+)/([^/.]*?)((?:(bmj|[ivx]+)[.])?([^/.]+?|\\d+[.]\\d+))$");
-  private static final String FULL_PDF = ".full.pdf";
-  
   // Previously Thib deemed it acceptable that we collect pages that did not have the volume match 
   // due to articles not appearing in any other AU and not using the same volume name.
   // Now we find article links in the content of AAP that also do not match (in this case 137)
@@ -106,13 +102,6 @@ public class HighWireDrupalHtmlLinkExtractorFactory implements LinkExtractorFact
                                       }
                                     } else {
                                       log.warning("No config value for volume found");
-                                    }
-                                    
-                                    Matcher mat = LPAGE.matcher(url);
-                                    if (mat.find()) {
-                                      String purl = url + FULL_PDF;
-                                      purl = AuUtil.normalizeHttpHttpsFromBaseUrl(au, purl);
-                                      cb.foundLink(purl);
                                     }
                                   }
                                   url = AuUtil.normalizeHttpHttpsFromBaseUrl(au, url);

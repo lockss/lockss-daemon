@@ -160,7 +160,7 @@ http://msystems.asm.org/content/1/6/e00128-16.full.pdf
     // permission page/start url
     shouldCacheTest(ROOT_URL + "lockss-manifest/vol_3_manifest.html", true, au);
     shouldCacheTest(ROOT_URL + "clockss-manifest/vol_3_manifest.html", true, au);
-// FIXME    shouldCacheTest(ROOT_URL + "clockss-manifest/vol_123_manifest.html", false, au);
+    shouldCacheTest(ROOT_URL + "clockss-manifest/vol_123_manifest.html", false, au);
     shouldCacheTest(ROOT_URL + "manifest/year=2013", false, au);
     // vol and issue
     // shouldCacheTest(ROOT_URL + "content/3", false, au); changed crawl rule as there are some volume only tocs (iwa) so this test is true
@@ -192,8 +192,9 @@ http://msystems.asm.org/content/1/6/e00128-16.full.pdf
     shouldCacheTest(ROOT_URL + "lookup/external-ref?link_type=GEN", false, au);
     shouldCacheTest(ROOT_URL + "panels_ajax_tab/jnl_ex_tab_art/node:433/1", false, au);
     shouldCacheTest(ROOT_URL + "content/3/2/X3.article-info", false, au);
-    shouldCacheTest(ROOT_URL + "content/1/1/masthead.1-1", true, au);
-    shouldCacheTest(ROOT_URL + "content/1/1/masthead.1-1.full.pdf", true, au);
+    shouldCacheTest(ROOT_URL + "content/1/1/masthead.1-1", false, au);
+    shouldCacheTest(ROOT_URL + "content/3/1/masthead.1-1.full.pdf", true, au);
+    shouldCacheTest(ROOT_URL + "content/3/1/masthead.1-1", true, au);
     
     shouldCacheTest("http://cdn-site.elifesciences.org/content/elife/1/e00003/F1.medium.gif", false, au);
     shouldCacheTest("http://cdn.mathjax.org/mathjax/latest/MathJax.js", false, au);

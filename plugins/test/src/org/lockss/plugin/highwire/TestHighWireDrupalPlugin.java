@@ -154,8 +154,8 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
     
   }
   
-  // Test the crawl rules for eLife
-  public void testShouldCacheProperPages() throws Exception {
+  // Test the crawl rules for HW Drupal
+  public void testShouldCacheProperPages0() throws Exception {
     String ROOT_URL = "http://highwire.org/";
     Properties props = new Properties();
     props.setProperty(BASE_URL_KEY, ROOT_URL);
@@ -173,6 +173,8 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
     shouldCacheTest(ROOT_URL + "lockss-manifest/vol_2015_manifest.html", true, au);
     // new inclusive crawl_rule
     shouldCacheTest(ROOT_URL + "clockss-manifest/vol_2015_manifest.html", true, au);
+    shouldCacheTest(ROOT_URL + "clockss-manifest/vol_1_manifest.html", false, au);
+    shouldCacheTest(ROOT_URL + "lockss-manifest/vol_os-86_manifest.html", false, au);
     shouldCacheTest(ROOT_URL + "manifest/year=2015", false, au);
     // toc page for a volume only
     shouldCacheTest(ROOT_URL + "content/2015", true, au);
@@ -192,27 +194,6 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
     shouldCacheTest(ROOT_URL + "content/2015/1/2.full.pdf+html", true, au);
     shouldCacheTest(ROOT_URL + "content/2015/1/2.full-text.pdf+html", true, au);
     shouldCacheTest(ROOT_URL + "content/2015/1/DC1", true, au);
-    shouldCacheTest(ROOT_URL + "content/1/1/2005.0001", true, au);
-    shouldCacheTest(ROOT_URL + "content/1/1/2005.0001.full.pdf", true, au);
-    shouldCacheTest(ROOT_URL + "content/1/1/ivx.1", true, au);
-    shouldCacheTest(ROOT_URL + "content/1/1/ivx.1.full.pdf", true, au);
-    shouldCacheTest(ROOT_URL + "content/1/1/e123.2", true, au);
-    shouldCacheTest(ROOT_URL + "content/1/1/e123.2.long", true, au);
-    shouldCacheTest(ROOT_URL + "content/1/1/e123.2.data", true, au);
-    shouldCacheTest(ROOT_URL + "content/1/1/e123.2.full", false, au);
-    shouldCacheTest(ROOT_URL + "content/1/1/e123.2.full.txt", false, au);
-//    shouldCacheTest(ROOT_URL + "content/1/1/e123.2.full.pdf", true, au);
-//    shouldCacheTest(ROOT_URL + "content/1/1/e123.2.full.pdf+html", true, au);
-//    shouldCacheTest(ROOT_URL + "content/1/1/e123.2.full-text.pdf+html", true, au);
-//    shouldCacheTest(ROOT_URL + "content/1/Supplement_2/1234S2.1.full.pdf", true, au);
-    
-    shouldCacheTest(ROOT_URL + "content/os-86/1_suppl_2/2.abstract", false, au);
-    shouldCacheTest(ROOT_URL + "content/os-86/1_suppl_2/2.long", true, au);
-    shouldCacheTest(ROOT_URL + "content/os-86/1_suppl_2/2.extract", false, au);
-    shouldCacheTest(ROOT_URL + "content/os-86/1_suppl_2/2.full", false, au);
-    shouldCacheTest(ROOT_URL + "content/os-86/1_suppl_2/2.full.pdf", true, au);
-    shouldCacheTest(ROOT_URL + "content/os-86/1_suppl_2/2.full.pdf+html", true, au);
-    shouldCacheTest(ROOT_URL + "content/os-86/1_suppl_2/2.full-text.pdf+html", true, au);
     
     // full pdf article files with journal id
     shouldCacheTest(ROOT_URL + "content/jid/2015/1/2.full", false, au);
@@ -220,10 +201,6 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
     shouldCacheTest(ROOT_URL + "content/jid/2015/1/2.full.pdf+html", true, au);
     shouldCacheTest(ROOT_URL + "content/jid/2015/1/2.full-text.pdf+html", true, au);
     shouldCacheTest(ROOT_URL + "content/jid/2015/1/DC1", false, au);
-    shouldCacheTest(ROOT_URL + "content/jid/1/1/2005.0001", false, au);
-    shouldCacheTest(ROOT_URL + "content/jid/1/1/2005.0001.full.pdf", true, au);
-    shouldCacheTest(ROOT_URL + "content/jid/1/1/ivx.1", false, au);
-    shouldCacheTest(ROOT_URL + "content/jid/1/1/ivx.1.full.pdf", true, au);
     
     shouldCacheTest(ROOT_URL + "content/2015/1/2.print", false, au);
     shouldCacheTest(ROOT_URL + "content/2015/1/2.explore", false, au);
@@ -253,9 +230,9 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
     shouldCacheTest(ROOT_URL + "content/by/year", false, au);
     shouldCacheTest(ROOT_URL + "content/current", false, au);
     
-    shouldCacheTest(ROOT_URL + "content/213/11/2293/tab-figures-data", true, au);
-    shouldCacheTest(ROOT_URL + "content/213/11/2293/tab-article-info", false, au);
-    shouldCacheTest(ROOT_URL + "content/213/11/2293/tab-metrics", false, au);
+    shouldCacheTest(ROOT_URL + "content/2015/11/2293/tab-figures-data", true, au);
+    shouldCacheTest(ROOT_URL + "content/2015/11/2293/tab-article-info", false, au);
+    shouldCacheTest(ROOT_URL + "content/2015/11/2293/tab-metrics", false, au);
     shouldCacheTest("http://dzfiakl78wcmk.cloudfront.net/sites/all/modules/contrib/panels_ajax_tab/images/loading.gif", false, au);
     shouldCacheTest(ROOT_URL + "highwire/filestream/124406/field_highwire_adjunct_files/2/JEM_20160800_sm.pdf", true, au);
     shouldCacheTest(ROOT_URL + "highwire/filestream/124406/field_highwire_adjunct_files/0/JEM_20160800_V1.mp4", true, au);
@@ -263,8 +240,99 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
     shouldCacheTest("http://movie.rupress.org/video/10.1084/jem.20160800/video-1", false, au);
     shouldCacheTest("http://static-movie-usa.glencoesoftware.com/source/10.1084/255/99e5615849629455e656275ea23db2f09a4b4e9f/JEM_20160800_V1.mp4", true, au);
     
+    // search links on TOC page for meeting abstracts
+    shouldCacheTest(ROOT_URL + "search/volume%3A2015%20issue%3A1%2BSupplement?facet%5Btoc-section-id%5D%5B0%5D=Cell%20Division", true, au);
+    shouldCacheTest(ROOT_URL + "search/volume%3A2015%20issue%3A1%2BSupplement?page=1&facet%5Btoc-section-id%5D%5B0%5D=Cell%20Division", true, au);
+    
     // should not get crawled - LOCKSS
     shouldCacheTest("http://lockss.stanford.edu", false, au);
+    
+  }
+  
+  // Test the crawl rules for HW Drupal
+  public void testShouldCacheProperPages1() throws Exception {
+    String ROOT_URL = "http://highwire.org/";
+    Properties props = new Properties();
+    props.setProperty(BASE_URL_KEY, ROOT_URL);
+    props.setProperty(VOL_KEY, "1");
+    DefinableArchivalUnit au = null;
+    try {
+      au = makeAuFromProps(props);
+    }
+    catch (ConfigurationException ex) {
+    }
+    theDaemon.getLockssRepository(au);
+    
+    // Test for pages that should get crawled or not
+    // permission page/start url
+    shouldCacheTest(ROOT_URL + "lockss-manifest/vol_1_manifest.html", true, au);
+    // new inclusive crawl_rule
+    shouldCacheTest(ROOT_URL + "clockss-manifest/vol_1_manifest.html", true, au);
+    // toc page for a volume only
+    shouldCacheTest(ROOT_URL + "content/1", true, au);
+    shouldCacheTest(ROOT_URL + "content/1.toc", true, au);
+    // toc page for a volume, issue
+    shouldCacheTest(ROOT_URL + "content/1/1", true, au);
+    shouldCacheTest(ROOT_URL + "content/1/2.toc", true, au);
+    shouldCacheTest(ROOT_URL.replace("http:", "https:") + "content/1/2.toc", true, au);
+    // article files
+    shouldCacheTest(ROOT_URL + "content/1/1/2005.0001", true, au);
+    shouldCacheTest(ROOT_URL + "content/1/1/2005.0001.full.pdf", true, au);
+    shouldCacheTest(ROOT_URL + "content/1/1/ivx.1", true, au);
+    shouldCacheTest(ROOT_URL + "content/1/1/ivx.1.full.pdf", true, au);
+    shouldCacheTest(ROOT_URL + "content/1/1/e123.2", true, au);
+    shouldCacheTest(ROOT_URL + "content/1/1/e123.2.long", true, au);
+    shouldCacheTest(ROOT_URL + "content/1/1/e123.2.data", true, au);
+    shouldCacheTest(ROOT_URL + "content/1/1/e123.2.full", false, au);
+    shouldCacheTest(ROOT_URL + "content/1/1/e123.2.full.txt", false, au);
+    shouldCacheTest(ROOT_URL + "content/1/1/e123.2.full.pdf", true, au);
+    shouldCacheTest(ROOT_URL + "content/1/1/e123.2.full.pdf+html", true, au);
+    shouldCacheTest(ROOT_URL + "content/1/1/e123.2.full-text.pdf+html", true, au);
+    shouldCacheTest(ROOT_URL + "content/1/Supplement_2/1234S2.1.full.pdf", true, au);
+    
+    // full pdf article files with journal id
+    shouldCacheTest(ROOT_URL + "content/jid/1/1/2005.0001", false, au);
+    shouldCacheTest(ROOT_URL + "content/jid/1/1/2005.0001.full.pdf", true, au);
+    shouldCacheTest(ROOT_URL + "content/jid/1/1/ivx.1", false, au);
+    shouldCacheTest(ROOT_URL + "content/jid/1/1/ivx.1.full.pdf", true, au);
+    
+  }
+  
+  // Test the crawl rules for HW Drupal
+  public void testShouldCacheProperPages2() throws Exception {
+    String ROOT_URL = "http://highwire.org/";
+    Properties props = new Properties();
+    props.setProperty(BASE_URL_KEY, ROOT_URL);
+    props.setProperty(VOL_KEY, "os-86");
+    DefinableArchivalUnit au = null;
+    try {
+      au = makeAuFromProps(props);
+    }
+    catch (ConfigurationException ex) {
+    }
+    theDaemon.getLockssRepository(au);
+    
+    // Test for pages that should get crawled or not
+    // permission page/start url
+    shouldCacheTest(ROOT_URL + "lockss-manifest/vol_os-86_manifest.html", true, au);
+    // new inclusive crawl_rule
+    shouldCacheTest(ROOT_URL + "clockss-manifest/vol_os-86_manifest.html", true, au);
+    // toc page for a volume only
+    shouldCacheTest(ROOT_URL + "content/os-86", true, au);
+    shouldCacheTest(ROOT_URL + "content/os-86.toc", true, au);
+    // toc page for a volume, issue
+    shouldCacheTest(ROOT_URL + "content/os-86/1", true, au);
+    shouldCacheTest(ROOT_URL + "content/os-86/2.toc", true, au);
+    shouldCacheTest(ROOT_URL.replace("http:", "https:") + "content/os-86/2.toc", true, au);
+    // article files
+    shouldCacheTest(ROOT_URL + "content/os-86/1_suppl_2/2.abstract", false, au);
+    shouldCacheTest(ROOT_URL + "content/os-86/1_suppl_2/2.long", true, au);
+    shouldCacheTest(ROOT_URL + "content/os-86/1_suppl_2/2.extract", false, au);
+    shouldCacheTest(ROOT_URL + "content/os-86/1_suppl_2/2.full", false, au);
+    shouldCacheTest(ROOT_URL + "content/os-86/1_suppl_2/2.full.pdf", true, au);
+    shouldCacheTest(ROOT_URL + "content/os-86/1_suppl_2/2.full.pdf+html", true, au);
+    shouldCacheTest(ROOT_URL + "content/os-86/1_suppl_2/2.full-text.pdf+html", true, au);
+    
     
   }
   
@@ -415,10 +483,10 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
     
     // List<Pattern> pat_list = au.makeSubstanceUrlPatterns();
     // The above Pattern is org.apache.oro.text.regex.Pattern, not compatible with java.util.regex.Pattern
-    // <string>"^https?://%s/content(/[^/.]+)?/([^/.]+)(/[^/.]+)?/(((?:(bmj|[ivx]+)\.)?[^/.]+?(\.\d+)?))(\.(?:full([.]pdf)?)?)$", url_host(base_url)</string>
-    // <string>"^https?://%s/content(/[^/.]+)?/([^/.]+)(/[^/.]+)?/((ENEURO|wpt)\.[0-9.-]+)(\.(?:full([.]pdf)?)?)$", url_host(base_url)</string>
+    // <string>"^https?://%s/content(/[^/.]+){1,3}/(((?:([ivx]+)\.)?[^/.]+?(\.\d+)?))(\.(?:full([.]pdf)?)?)$", url_host(base_url)</string>
+    // <string>"^https?://%s/content(/[^/.]+){1,3}/((ENEURO|wpt)\.[0-9.-]+)(\.(?:full([.]pdf)?)?)$", url_host(base_url)</string>
     
-    String strPat = "^" + ROOT_URL + "content(/[^/.]+)?/([^/.]+)(/[^/.]+)?/(((?:(bmj|[ivx]+)\\.)?[^/.]+?(\\.\\d+)?))(\\.(?:full([.]pdf)?)?)$";
+    String strPat = "^" + ROOT_URL + "content(/[^/.]+){1,3}/(((?:([ivx]+)\\.)?[^/.]+?(\\.\\d+)?))(\\.(?:full([.]pdf)?)?)$";
     Pattern thisPat = Pattern.compile(strPat);
     String lastUrl = "";
     
