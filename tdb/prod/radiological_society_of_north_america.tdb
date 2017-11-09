@@ -78,10 +78,10 @@
       
       param[journal_id] = radiographics
 
-      au < exists ; 2013 ; RadioGraphics Volume 33 ; 33 >
-      au < exists ; 2014 ; RadioGraphics Volume 34 ; 34 >
-      au < exists ; 2015 ; RadioGraphics Volume 35 ; 35 >
-      au < exists ; 2016 ; RadioGraphics Volume 36 ; 36 >
+      au < manifest ; 2013 ; RadioGraphics Volume 33 ; 33 >
+      au < manifest ; 2014 ; RadioGraphics Volume 34 ; 34 >
+      au < manifest ; 2015 ; RadioGraphics Volume 35 ; 35 >
+      au < manifest ; 2016 ; RadioGraphics Volume 36 ; 36 >
       au < exists ; 2017 ; RadioGraphics Volume 37 ; 37 >
 
     }
@@ -394,22 +394,26 @@
       
       param[journal_id] = radiology
 
-      au < exists ; 2013 ; Radiology Volume 266 ; 266 >
-      au < exists ; 2013 ; Radiology Volume 267 ; 267 >
-      au < exists ; 2013 ; Radiology Volume 268 ; 268 >
-      au < exists ; 2013 ; Radiology Volume 269 ; 269 >
-      au < exists ; 2014 ; Radiology Volume 270 ; 270 >
-      au < exists ; 2014 ; Radiology Volume 271 ; 271 >
-      au < exists ; 2014 ; Radiology Volume 272 ; 272 >
-      au < exists ; 2014 ; Radiology Volume 273 ; 273 >
-      au < exists ; 2015 ; Radiology Volume 274 ; 274 >
-      au < exists ; 2015 ; Radiology Volume 275 ; 275 >
-      au < exists ; 2015 ; Radiology Volume 276 ; 276 >
-      au < exists ; 2015 ; Radiology Volume 277 ; 277 >
-      au < exists ; 2016 ; Radiology Volume 278 ; 278 >
-      au < exists ; 2016 ; Radiology Volume 279 ; 279 >
-      au < exists ; 2016 ; Radiology Volume 280 ; 280 >
+      au < manifest ; 2013 ; Radiology Volume 266 ; 266 >
+      au < manifest ; 2013 ; Radiology Volume 267 ; 267 >
+      au < manifest ; 2013 ; Radiology Volume 268 ; 268 >
+      au < manifest ; 2013 ; Radiology Volume 269 ; 269 >
+      au < manifest ; 2014 ; Radiology Volume 270 ; 270 >
+      au < manifest ; 2014 ; Radiology Volume 271 ; 271 >
+      au < manifest ; 2014 ; Radiology Volume 272 ; 272 >
+      au < manifest ; 2014 ; Radiology Volume 273 ; 273 >
+      au < manifest ; 2015 ; Radiology Volume 274 ; 274 >
+      au < manifest ; 2015 ; Radiology Volume 275 ; 275 >
+      au < manifest ; 2015 ; Radiology Volume 276 ; 276 >
+      au < manifest ; 2015 ; Radiology Volume 277 ; 277 >
+      au < manifest ; 2016 ; Radiology Volume 278 ; 278 >
+      au < manifest ; 2016 ; Radiology Volume 279 ; 279 >
+      au < manifest ; 2016 ; Radiology Volume 280 ; 280 >
       au < exists ; 2016 ; Radiology Volume 281 ; 281 >
+      au < exists ; 2017 ; Radiology Volume 282 ; 282 >
+      au < exists ; 2017 ; Radiology Volume 283 ; 283 >
+      au < exists ; 2017 ; Radiology Volume 284 ; 284 >
+      au < exists ; 2017 ; Radiology Volume 285 ; 285 >
 
     }
 
