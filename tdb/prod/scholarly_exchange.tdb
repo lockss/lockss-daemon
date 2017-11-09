@@ -19,10 +19,10 @@
     param[base_url] = http://www.ajpspharm.com/
     param[journal_id] = AJPSP
 
-    au < releasing ; 2010 ; African Journal of Pharmaceutical Sciences and Pharmacy Volume 1 ; 1 ; 2010 >
-    au < releasing ; 2011 ; African Journal of Pharmaceutical Sciences and Pharmacy Volume 2 ; 2 ; 2011 >
-    au < releasing ; 2012 ; African Journal of Pharmaceutical Sciences and Pharmacy Volume 3 ; 3 ; 2012 >
-    au < releasing ; 2013 ; African Journal of Pharmaceutical Sciences and Pharmacy Volume 4 ; 4 ; 2013 >
+    au < released ; 2010 ; African Journal of Pharmaceutical Sciences and Pharmacy Volume 1 ; 1 ; 2010 >
+    au < released ; 2011 ; African Journal of Pharmaceutical Sciences and Pharmacy Volume 2 ; 2 ; 2011 >
+    au < released ; 2012 ; African Journal of Pharmaceutical Sciences and Pharmacy Volume 3 ; 3 ; 2012 >
+    au < released ; 2013 ; African Journal of Pharmaceutical Sciences and Pharmacy Volume 4 ; 4 ; 2013 >
     au < exists ; 2017 ; African Journal of Pharmaceutical Sciences and Pharmacy Volume 5 ; 5 ; 2017 >
     
   }
@@ -47,12 +47,12 @@
     param[base_url] = http://ijms.nmdl.org/
     param[journal_id] = MSJ
 
-    au < releasing ; 2010 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 1 ; 1 ; 2010 >
-    au < releasing ; 2011 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 2 ; 2 ; 2011 >
-    au < releasing ; 2012 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 3 ; 3 ; 2012 >
-    au < releasing ; 2013 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 4 ; 4 ; 2013 >
-    au < releasing ; 2015 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 5 ; 5 ; 2015 >
-    au < releasing ; 2016 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 6 ; 6 ; 2016 >
+    au < released ; 2010 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 1 ; 1 ; 2010 >
+    au < released ; 2011 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 2 ; 2 ; 2011 >
+    au < released ; 2012 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 3 ; 3 ; 2012 >
+    au < released ; 2013 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 4 ; 4 ; 2013 >
+    au < released ; 2015 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 5 ; 5 ; 2015 >
+    au < released ; 2016 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 6 ; 6 ; 2016 >
     au < exists ; 2017 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 7 ; 7 ; 2017 >
     
   }
@@ -77,13 +77,13 @@
     param[base_url] = http://www.ijic.info/
     param[journal_id] = IJIC
 
-    au < releasing ; 2010 ; International Journal of Infection Control Volume 6 ; 6 ; 2010 >
-    au < releasing ; 2011 ; International Journal of Infection Control Volume 7 ; 7 ; 2011 >
-    au < releasing ; 2012 ; International Journal of Infection Control Volume 8 ; 8 ; 2012 >
-    au < releasing ; 2013 ; International Journal of Infection Control Volume 9 ; 9 ; 2013 >
-    au < releasing ; 2014 ; International Journal of Infection Control Volume 10 ; 10 ; 2014 >
-    au < releasing ; 2015 ; International Journal of Infection Control Volume 11 ; 11 ; 2015 >
-    au < releasing ; 2016 ; International Journal of Infection Control Volume 12 ; 12 ; 2016 >
+    au < released ; 2010 ; International Journal of Infection Control Volume 6 ; 6 ; 2010 >
+    au < released ; 2011 ; International Journal of Infection Control Volume 7 ; 7 ; 2011 >
+    au < released ; 2012 ; International Journal of Infection Control Volume 8 ; 8 ; 2012 >
+    au < released ; 2013 ; International Journal of Infection Control Volume 9 ; 9 ; 2013 >
+    au < released ; 2014 ; International Journal of Infection Control Volume 10 ; 10 ; 2014 >
+    au < released ; 2015 ; International Journal of Infection Control Volume 11 ; 11 ; 2015 >
+    au < released ; 2016 ; International Journal of Infection Control Volume 12 ; 12 ; 2016 >
     au < exists ; 2017 ; International Journal of Infection Control Volume 13 ; 13 ; 2017 >
     
   }
@@ -108,13 +108,13 @@
     param[base_url] = http://www.ijtarp.org/
     param[journal_id] = IJTAR
 
-    au < releasing ; 2010 ; International Journal of Transactional Analysis Research Volume 1 ; 1 ; 2010 >
-    au < releasing ; 2011 ; International Journal of Transactional Analysis Research Volume 2 ; 2 ; 2011 >
-    au < releasing ; 2012 ; International Journal of Transactional Analysis Research Volume 3 ; 3 ; 2012 >
-    au < releasing ; 2013 ; International Journal of Transactional Analysis Research Volume 4 ; 4 ; 2013 >
-    au < releasing ; 2014 ; International Journal of Transactional Analysis Research Volume 5 ; 5 ; 2014 >
-    au < releasing ; 2015 ; International Journal of Transactional Analysis Research Volume 6 ; 6 ; 2015 >
-    au < releasing ; 2016 ; International Journal of Transactional Analysis Research Volume 7 ; 7 ; 2016 >
+    au < released ; 2010 ; International Journal of Transactional Analysis Research Volume 1 ; 1 ; 2010 >
+    au < released ; 2011 ; International Journal of Transactional Analysis Research Volume 2 ; 2 ; 2011 >
+    au < released ; 2012 ; International Journal of Transactional Analysis Research Volume 3 ; 3 ; 2012 >
+    au < released ; 2013 ; International Journal of Transactional Analysis Research Volume 4 ; 4 ; 2013 >
+    au < released ; 2014 ; International Journal of Transactional Analysis Research Volume 5 ; 5 ; 2014 >
+    au < released ; 2015 ; International Journal of Transactional Analysis Research Volume 6 ; 6 ; 2015 >
+    au < released ; 2016 ; International Journal of Transactional Analysis Research Volume 7 ; 7 ; 2016 >
     au < exists ; 2017 ; International Journal of Transactional Analysis Research Volume 8 ; 8 ; 2017 >
     
   }
@@ -139,16 +139,16 @@
     param[base_url] = http://www.intersticios.es/
     param[journal_id] = InterSoc
 
-    au < releasing ; 2007 ; Intersticios Volume 1 ; 1 ; 2007 >
-    au < releasing ; 2008 ; Intersticios Volume 2 ; 2 ; 2008 >
-    au < releasing ; 2009 ; Intersticios Volume 3 ; 3 ; 2009 >
-    au < releasing ; 2010 ; Intersticios Volume 4 ; 4 ; 2010 >
-    au < releasing ; 2011 ; Intersticios Volume 5 ; 5 ; 2011 >
-    au < releasing ; 2012 ; Intersticios Volume 6 ; 6 ; 2012 >
-    au < releasing ; 2013 ; Intersticios Volume 7 ; 7 ; 2013 >
-    au < releasing ; 2014 ; Intersticios Volume 8 ; 8 ; 2014 >
-    au < releasing ; 2015 ; Intersticios Volume 9 ; 9 ; 2015 >
-    au < releasing ; 2016 ; Intersticios Volume 10 ; 10 ; 2016 >
+    au < released ; 2007 ; Intersticios Volume 1 ; 1 ; 2007 >
+    au < released ; 2008 ; Intersticios Volume 2 ; 2 ; 2008 >
+    au < released ; 2009 ; Intersticios Volume 3 ; 3 ; 2009 >
+    au < released ; 2010 ; Intersticios Volume 4 ; 4 ; 2010 >
+    au < released ; 2011 ; Intersticios Volume 5 ; 5 ; 2011 >
+    au < released ; 2012 ; Intersticios Volume 6 ; 6 ; 2012 >
+    au < released ; 2013 ; Intersticios Volume 7 ; 7 ; 2013 >
+    au < released ; 2014 ; Intersticios Volume 8 ; 8 ; 2014 >
+    au < released ; 2015 ; Intersticios Volume 9 ; 9 ; 2015 >
+    au < released ; 2016 ; Intersticios Volume 10 ; 10 ; 2016 >
     au < exists ; 2017 ; Intersticios Volume 11 ; 11 ; 2017 >
     
   }
@@ -173,14 +173,14 @@
     param[base_url] = http://www.investigativesciencesjournal.org/
     param[journal_id] = ISJ
 
-    au < releasing ; 2009 ; Investigative Sciences Journal Volume 1 ; 1 ; 2009 >
-    au < releasing ; 2010 ; Investigative Sciences Journal Volume 2 ; 2 ; 2010 >
-    au < releasing ; 2011 ; Investigative Sciences Journal Volume 3 ; 3 ; 2011 >
-    au < releasing ; 2012 ; Investigative Sciences Journal Volume 4 ; 4 ; 2012 >
-    au < releasing ; 2013 ; Investigative Sciences Journal Volume 5 ; 5 ; 2013 >
-    au < releasing ; 2014 ; Investigative Sciences Journal Volume 6 ; 6 ; 2014 >
-    au < releasing ; 2015 ; Investigative Sciences Journal Volume 7 ; 7 ; 2015 >
-    au < releasing ; 2016 ; Investigative Sciences Journal Volume 8 ; 8 ; 2016 >
+    au < released ; 2009 ; Investigative Sciences Journal Volume 1 ; 1 ; 2009 >
+    au < released ; 2010 ; Investigative Sciences Journal Volume 2 ; 2 ; 2010 >
+    au < released ; 2011 ; Investigative Sciences Journal Volume 3 ; 3 ; 2011 >
+    au < released ; 2012 ; Investigative Sciences Journal Volume 4 ; 4 ; 2012 >
+    au < released ; 2013 ; Investigative Sciences Journal Volume 5 ; 5 ; 2013 >
+    au < released ; 2014 ; Investigative Sciences Journal Volume 6 ; 6 ; 2014 >
+    au < released ; 2015 ; Investigative Sciences Journal Volume 7 ; 7 ; 2015 >
+    au < released ; 2016 ; Investigative Sciences Journal Volume 8 ; 8 ; 2016 >
     au < exists ; 2017 ; Investigative Sciences Journal Volume 9 ; 9 ; 2017 >
     
   }
@@ -205,11 +205,11 @@
     param[base_url] = http://www.journal-alm.org/
     param[journal_id] = JALM
 
-    au < releasing ; 2012 ; Journal of Applied Leadership and Management Volume 2012 ; 2012 ; 2012 >
-    au < releasing ; 2013 ; Journal of Applied Leadership and Management Volume 2013 ; 2013 ; 2013 >
-    au < releasing ; 2014 ; Journal of Applied Leadership and Management Volume 2014 ; 2014 ; 2014 >
-    au < releasing ; 2015-2016 ; Journal of Applied Leadership and Management Volume 2015 ; 2015 ; 2015 >
-    au < releasing ; 2015-2016 ; Journal of Applied Leadership and Management Volume 2016 ; 2016 ; 2016 >
+    au < released ; 2012 ; Journal of Applied Leadership and Management Volume 2012 ; 2012 ; 2012 >
+    au < released ; 2013 ; Journal of Applied Leadership and Management Volume 2013 ; 2013 ; 2013 >
+    au < released ; 2014 ; Journal of Applied Leadership and Management Volume 2014 ; 2014 ; 2014 >
+    au < released ; 2015-2016 ; Journal of Applied Leadership and Management Volume 2015 ; 2015 ; 2015 >
+    au < released ; 2015-2016 ; Journal of Applied Leadership and Management Volume 2016 ; 2016 ; 2016 >
     
   }
 }
@@ -265,9 +265,9 @@
     param[base_url] = http://www.scholarlyexchange.org/ojs/
     param[journal_id] = JMEP
 
-    au < releasing ; 2012 ; Journal of Medical Education Perspectives Volume 1 ; 1 ; 2012 >
-    au < releasing ; 2013 ; Journal of Medical Education Perspectives Volume 2 ; 2 ; 2013 >
-    au < releasing ; 2014 ; Journal of Medical Education Perspectives Volume 3 ; 3 ; 2014 >
+    au < released ; 2012 ; Journal of Medical Education Perspectives Volume 1 ; 1 ; 2012 >
+    au < released ; 2013 ; Journal of Medical Education Perspectives Volume 2 ; 2 ; 2013 >
+    au < released ; 2014 ; Journal of Medical Education Perspectives Volume 3 ; 3 ; 2014 >
     
   }
 }
