@@ -5497,7 +5497,7 @@
       au < manifest ; exists ; 2005 ; Cell Transplantation Volume 14 ; 14 ; clla ; >
       au < manifest ; exists ; 2006 ; Cell Transplantation Volume 15 ; 15 ; clla ; >
       au < manifest ; exists ; 2007 ; Cell Transplantation Volume 16 ; 16 ; clla ; >
-      au < crawling ; exists ; 2008 ; Cell Transplantation Volume 17 ; 17 ; clla ; >
+      au < frozen ; exists ; 2008 ; Cell Transplantation Volume 17 ; 17 ; clla ; >
       au < crawling ; exists ; 2009 ; Cell Transplantation Volume 18 ; 18 ; clla ; >
       au < crawling ; exists ; 2010 ; Cell Transplantation Volume 19 ; 19 ; clla ; >
       au < frozen ; exists ; 2011 ; Cell Transplantation Volume 20 ; 20 ; clla ; >
@@ -10180,7 +10180,7 @@
       au < manifest ; exists ; 2006 ; Empirical Studies of the Arts Volume 24 ; 24 ; arta ; >
       au < manifest ; exists ; 2007 ; Empirical Studies of the Arts Volume 25 ; 25 ; arta ; >
       au < frozen ; exists ; 2008 ; Empirical Studies of the Arts Volume 26 ; 26 ; arta ; >
-      au < crawling ; exists ; 2009 ; Empirical Studies of the Arts Volume 27 ; 27 ; arta ; >
+      au < frozen ; exists ; 2009 ; Empirical Studies of the Arts Volume 27 ; 27 ; arta ; >
       au < frozen ; exists ; 2010 ; Empirical Studies of the Arts Volume 28 ; 28 ; arta ; >
       au < frozen ; exists ; 2011 ; Empirical Studies of the Arts Volume 29 ; 29 ; arta ; >
       au < frozen ; exists ; 2012 ; Empirical Studies of the Arts Volume 30 ; 30 ; arta ; >
@@ -11078,7 +11078,7 @@
       au < manifest ; exists ; 2007 ; European Journal of Inflammation Volume 5 ; 5 ; ejia ; >
       au < frozen ; exists ; 2008 ; European Journal of Inflammation Volume 6 ; 6 ; ejia ; >
       au < exists ; exists ; 2009 ; European Journal of Inflammation Volume 7 ; 7 ; ejia ; >
-      au < crawling ; exists ; 2010 ; European Journal of Inflammation Volume 8 ; 8 ; ejia ; >
+      au < frozen ; exists ; 2010 ; European Journal of Inflammation Volume 8 ; 8 ; ejia ; >
       au < frozen ; exists ; 2011 ; European Journal of Inflammation Volume 9 ; 9 ; ejia ; >
       au < frozen ; exists ; 2012 ; European Journal of Inflammation Volume 10 ; 10 ; ejia ; >
       au < frozen ; exists ; 2013 ; European Journal of Inflammation Volume 11 ; 11 ; ejia ; >
@@ -14644,7 +14644,7 @@
       au < manifest ; exists ; 2006 ; Illness, Crisis & Loss Volume 14 ; 14 ; icla ; >
       au < manifest ; exists ; 2007 ; Illness, Crisis & Loss Volume 15 ; 15 ; icla ; >
       au < frozen ; exists ; 2008 ; Illness, Crisis & Loss Volume 16 ; 16 ; icla ; >
-      au < crawling ; exists ; 2009 ; Illness, Crisis & Loss Volume 17 ; 17 ; icla ; >
+      au < frozen ; exists ; 2009 ; Illness, Crisis & Loss Volume 17 ; 17 ; icla ; >
       au < frozen ; exists ; 2010 ; Illness, Crisis & Loss Volume 18 ; 18 ; icla ; >
       au < frozen ; exists ; 2011 ; Illness, Crisis & Loss Volume 19 ; 19 ; icla ; >
       au < frozen ; exists ; 2012 ; Illness, Crisis & Loss Volume 20 ; 20 ; icla ; >
@@ -14959,8 +14959,8 @@
       #param[base_url] = http://ijc.sagepub.com/
 
       au < frozen ; exists ; 2008 ; Indian Journal of Corporate Governance Volume 1 ; 1 ; ijca ; >
-      au < crawling ; exists ; 2009 ; Indian Journal of Corporate Governance Volume 2 ; 2 ; ijca ; >
-      au < crawling ; exists ; 2010 ; Indian Journal of Corporate Governance Volume 3 ; 3 ; ijca ; >
+      au < frozen ; exists ; 2009 ; Indian Journal of Corporate Governance Volume 2 ; 2 ; ijca ; >
+      au < frozen ; exists ; 2010 ; Indian Journal of Corporate Governance Volume 3 ; 3 ; ijca ; >
       au < frozen ; exists ; 2011 ; Indian Journal of Corporate Governance Volume 4 ; 4 ; ijca ; >
       au < frozen ; exists ; 2012 ; Indian Journal of Corporate Governance Volume 5 ; 5 ; ijca ; >
       au < frozen ; exists ; 2013 ; Indian Journal of Corporate Governance Volume 6 ; 6 ; ijca ; >
@@ -15031,7 +15031,7 @@
       au < crawling ; exists ; 2012 ; Indian Journal of Human Development Volume 6 ; 6 ; jhda ; >
       au < frozen ; exists ; 2013 ; Indian Journal of Human Development Volume 7 ; 7 ; jhda ; >
       au < frozen ; exists ; 2014 ; Indian Journal of Human Development Volume 8 ; 8 ; jhda ; >
-      au < crawling ; exists ; 2015 ; Indian Journal of Human Development Volume 9 ; 9 ; jhda ; >
+      au < frozen ; exists ; 2015 ; Indian Journal of Human Development Volume 9 ; 9 ; jhda ; >
       au < frozen ; exists ; 2016 ; Indian Journal of Human Development Volume 10 ; 10 ; jhda ; >
       au < crawling ; exists ; 2017 ; Indian Journal of Human Development Volume 11 ; 11 ; jhda ; >
 
@@ -15600,7 +15600,7 @@
       au < frozen ; exists ; 2008 ; The International Journal of Aging and Human Development Volume 66 ; 66 ; ahdb ; >
       au < frozen ; exists ; 2008 ; The International Journal of Aging and Human Development Volume 67 ; 67 ; ahdb ; >
       au < crawling ; exists ; 2009 ; The International Journal of Aging and Human Development Volume 68 ; 68 ; ahdb ; >
-      au < crawling ; exists ; 2009 ; The International Journal of Aging and Human Development Volume 69 ; 69 ; ahdb ; >
+      au < frozen ; exists ; 2009 ; The International Journal of Aging and Human Development Volume 69 ; 69 ; ahdb ; >
       au < frozen ; exists ; 2010 ; The International Journal of Aging and Human Development Volume 70 ; 70 ; ahdb ; >
       au < crawling ; exists ; 2010 ; The International Journal of Aging and Human Development Volume 71 ; 71 ; ahdb ; >
       au < frozen ; exists ; 2011 ; The International Journal of Aging and Human Development Volume 72 ; 72 ; ahdb ; >
@@ -16167,7 +16167,7 @@
 
     #param[base_url] = http://enb.sagepub.com/
 
-      au < crawling ; exists ; 2009 ; International Journal of Engineering Business Management Volume 1 ; 1 ; enba ; >
+      au < frozen ; exists ; 2009 ; International Journal of Engineering Business Management Volume 1 ; 1 ; enba ; >
       au < crawling ; exists ; 2010 ; International Journal of Engineering Business Management Volume 2 ; 2 ; enba ; >
       au < crawling ; exists ; 2011 ; International Journal of Engineering Business Management Volume 3 ; 3 ; enba ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Engineering Business Management Volume 4 ; 4 ; enba ; >
@@ -16417,7 +16417,7 @@
       #param[base_url] = http://mav.sagepub.com/
 
         au < frozen ; exists ; 2009 ; International Journal of Micro Air Vehicles Volume 1 ; 1 ; mava ; >
-        au < crawling ; exists ; 2010 ; International Journal of Micro Air Vehicles Volume 2 ; 2 ; mava ; >
+        au < frozen ; exists ; 2010 ; International Journal of Micro Air Vehicles Volume 2 ; 2 ; mava ; >
         au < frozen ; exists ; 2011 ; International Journal of Micro Air Vehicles Volume 3 ; 3 ; mava ; >
         au < frozen ; exists ; 2012 ; International Journal of Micro Air Vehicles Volume 4 ; 4 ; mava ; >
         au < frozen ; exists ; 2013 ; International Journal of Micro Air Vehicles Volume 5 ; 5 ; mava ; >
@@ -16932,7 +16932,7 @@
       au < manifest ; exists ; 2007 ; International Journal of Space Structures Volume 22 ; 22 ; spsa ; >
       au < frozen ; exists ; 2008 ; International Journal of Space Structures Volume 23 ; 23 ; spsa ; >
       au < frozen ; exists ; 2009 ; International Journal of Space Structures Volume 24 ; 24 ; spsa ; >
-      au < crawling ; exists ; 2010 ; International Journal of Space Structures Volume 25 ; 25 ; spsa ; >
+      au < frozen ; exists ; 2010 ; International Journal of Space Structures Volume 25 ; 25 ; spsa ; >
       au < frozen ; exists ; 2011 ; International Journal of Space Structures Volume 26 ; 26 ; spsa ; >
       au < frozen ; exists ; 2012 ; International Journal of Space Structures Volume 27 ; 27 ; spsa ; >
       au < frozen ; exists ; 2013 ; International Journal of Space Structures Volume 28 ; 28 ; spsa ; >
@@ -17905,7 +17905,7 @@
       au < manifest ; exists ; 2007 ; Interventional Neuroradiology Volume 13 ; 13 ; inea ; >
       au < frozen ; exists ; 2008 ; Interventional Neuroradiology Volume 14 ; 14 ; inea ; >
       au < crawling ; exists ; 2009 ; Interventional Neuroradiology Volume 15 ; 15 ; inea ; >
-      au < crawling ; exists ; 2010 ; Interventional Neuroradiology Volume 16 ; 16 ; inea ; >
+      au < frozen ; exists ; 2010 ; Interventional Neuroradiology Volume 16 ; 16 ; inea ; >
       au < frozen ; exists ; 2011 ; Interventional Neuroradiology Volume 17 ; 17 ; inea ; >
       au < frozen ; exists ; 2012 ; Interventional Neuroradiology Volume 18 ; 18 ; inea ; >
       au < frozen ; exists ; 2013 ; Interventional Neuroradiology Volume 19 ; 19 ; inea ; >
@@ -18075,7 +18075,7 @@
       au < manifest ; exists ; 2005 ; Jadavpur Journal of International Relations Volume 9 ; 9 ; jnra ; >
       au < manifest ; exists ; 2006 ; Jadavpur Journal of International Relations Volume 10 ; 10 ; jnra ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Jadavpur Journal of International Relations Volume 11-12 ; 11-12 ; jnra ; >
-      au < crawling ; exists ; 2009 ; Jadavpur Journal of International Relations Volume 13 ; 13 ; jnra ; >
+      au < frozen ; exists ; 2009 ; Jadavpur Journal of International Relations Volume 13 ; 13 ; jnra ; >
       au < frozen ; exists ; 2010 ; Jadavpur Journal of International Relations Volume 14 ; 14 ; jnra ; >
       au < frozen ; exists ; 2011 ; Jadavpur Journal of International Relations Volume 15 ; 15 ; jnra ; >
       au < frozen ; exists ; 2012 ; Jadavpur Journal of International Relations Volume 16 ; 16 ; jnra ; >
@@ -19993,8 +19993,8 @@
 
       #param[base_url] = http://cmf.sagepub.com/
 
-      au < crawling ; exists ; 2009 ; The Journal of Computational Multiphase Flows Volume 1 ; 1 ; cmfa ; >
-      au < crawling ; exists ; 2010 ; The Journal of Computational Multiphase Flows Volume 2 ; 2 ; cmfa ; >
+      au < frozen ; exists ; 2009 ; The Journal of Computational Multiphase Flows Volume 1 ; 1 ; cmfa ; >
+      au < frozen ; exists ; 2010 ; The Journal of Computational Multiphase Flows Volume 2 ; 2 ; cmfa ; >
       au < frozen ; exists ; 2011 ; The Journal of Computational Multiphase Flows Volume 3 ; 3 ; cmfa ; >
       au < frozen ; exists ; 2012 ; The Journal of Computational Multiphase Flows Volume 4 ; 4 ; cmfa ; >
       au < frozen ; exists ; 2013 ; The Journal of Computational Multiphase Flows Volume 5 ; 5 ; cmfa ; >
@@ -20415,7 +20415,7 @@
     au < manifest ; exists ; 2007 ; The Journal of Criminal Law Volume 71 ; 71 ; clja ; >
     au < frozen ; exists ; 2008 ; The Journal of Criminal Law Volume 72 ; 72 ; clja ; >
     au < crawling ; exists ; 2009 ; The Journal of Criminal Law Volume 73 ; 73 ; clja ; >
-    au < crawling ; exists ; 2010 ; The Journal of Criminal Law Volume 74 ; 74 ; clja ; >
+    au < frozen ; exists ; 2010 ; The Journal of Criminal Law Volume 74 ; 74 ; clja ; >
     au < frozen ; exists ; 2011 ; The Journal of Criminal Law Volume 75 ; 75 ; clja ; >
     au < frozen ; exists ; 2012 ; The Journal of Criminal Law Volume 76 ; 76 ; clja ; >
     au < frozen ; exists ; 2013 ; The Journal of Criminal Law Volume 77 ; 77 ; clja ; >
@@ -22110,7 +22110,7 @@
       au < manifest ; exists ; 2006-2007 ; Journal of General Management Volume 32 ; 32 ; gema ; >
       au < crawling ; exists ; 2007-2008 ; Journal of General Management Volume 33 ; 33 ; gema ; >
       au < crawling ; exists ; 2008-2009 ; Journal of General Management Volume 34 ; 34 ; gema ; >
-      au < crawling ; exists ; 2009-2010 ; Journal of General Management Volume 35 ; 35 ; gema ; >
+      au < frozen ; exists ; 2009-2010 ; Journal of General Management Volume 35 ; 35 ; gema ; >
       au < frozen ; exists ; 2010-2011 ; Journal of General Management Volume 36 ; 36 ; gema ; >
       au < frozen ; exists ; 2011-2012 ; Journal of General Management Volume 37 ; 37 ; gema ; >
       au < frozen ; exists ; 2012-2013 ; Journal of General Management Volume 38 ; 38 ; gema ; >
@@ -23823,7 +23823,7 @@
       au < manifest ; exists ; 2006 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 25 ; 25 ; lfna ; >
       au < manifest ; exists ; 2007 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 26 ; 26 ; lfna ; >
       au < frozen ; exists ; 2008 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 27 ; 27 ; lfna ; >
-      au < crawling ; exists ; 2009 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 28 ; 28 ; lfna ; >
+      au < frozen ; exists ; 2009 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 28 ; 28 ; lfna ; >
       au < crawling ; exists ; 2010 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 29 ; 29 ; lfna ; >
       au < frozen ; exists ; 2011 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 30 ; 30 ; lfna ; >
       au < frozen ; exists ; 2012 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 31 ; 31 ; lfna ; >
@@ -24215,7 +24215,7 @@
       au < manifest ; exists ; 2004-2005 ; The Journal of Men's Studies Volume 13 ; 13 ; mena ; >
       au < manifest ; exists ; 2005-2007 ; The Journal of Men's Studies Volume 14 ; 14 ; mena ; >
       au < crawling ; exists ; 2007-2008 ; The Journal of Men's Studies Volume 15 ; 15 ; mena ; >
-      au < crawling ; exists ; 2008-2009 ; The Journal of Men's Studies Volume 16 ; 16 ; mena ; >
+      au < frozen ; exists ; 2008-2009 ; The Journal of Men's Studies Volume 16 ; 16 ; mena ; >
       au < frozen ; exists ; 2009-2010 ; The Journal of Men's Studies Volume 17 ; 17 ; mena ; >
       au < crawling ; exists ; 2010 ; The Journal of Men's Studies Volume 18 ; 18 ; mena ; >
       au < frozen ; exists ; 2011 ; The Journal of Men's Studies Volume 19 ; 19 ; mena ; >
@@ -25943,7 +25943,7 @@
       au < manifest ; exists ; 1978 ; Journal of Special Education Technology Volume 1 ; 1 ; jsta ; >
       au < manifest ; exists ; 1978-1979 ; Journal of Special Education Technology Volume 2 ; 2 ; jsta ; >
 
-      au < crawling ; exists ; 2009 ; Journal of Special Education Technology Volume 24 ; 24 ; jsta ; >
+      au < frozen ; exists ; 2009 ; Journal of Special Education Technology Volume 24 ; 24 ; jsta ; >
       au < frozen ; exists ; 2010 ; Journal of Special Education Technology Volume 25 ; 25 ; jsta ; >
       au < frozen ; exists ; 2011 ; Journal of Special Education Technology Volume 26 ; 26 ; jsta ; >
       au < frozen ; exists ; 2012 ; Journal of Special Education Technology Volume 27 ; 27 ; jsta ; >
@@ -29160,7 +29160,7 @@
       au < crawling ; exists ; 2009 ; Metamorphosis Volume 8 ; 8 ; meta ; >
       au < frozen ; exists ; 2010 ; Metamorphosis Volume 9 ; 9 ; meta ; >
       au < frozen ; exists ; 2011 ; Metamorphosis Volume 10 ; 10 ; meta ; >
-      au < crawling ; exists ; 2012 ; Metamorphosis Volume 11 ; 11 ; meta ; >
+      au < frozen ; exists ; 2012 ; Metamorphosis Volume 11 ; 11 ; meta ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Metamorphosis Volume 12 ; 12 ; meta ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Metamorphosis Volume 13 ; 13 ; meta ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Metamorphosis Volume 14 ; 14 ; meta ; >
@@ -30341,7 +30341,7 @@
       au < manifest ; exists ; 2006 ; Newspaper Research Journal Volume 27 ; 27 ; nrja ; >
       au < manifest ; exists ; 2007 ; Newspaper Research Journal Volume 28 ; 28 ; nrja ; >
       au < frozen ; exists ; 2008 ; Newspaper Research Journal Volume 29 ; 29 ; nrja ; >
-      au < crawling ; exists ; 2009 ; Newspaper Research Journal Volume 30 ; 30 ; nrja ; >
+      au < frozen ; exists ; 2009 ; Newspaper Research Journal Volume 30 ; 30 ; nrja ; >
       au < crawling ; exists ; 2010 ; Newspaper Research Journal Volume 31 ; 31 ; nrja ; >
       au < frozen ; exists ; 2011 ; Newspaper Research Journal Volume 32 ; 32 ; nrja ; >
       au < frozen ; exists ; 2012 ; Newspaper Research Journal Volume 33 ; 33 ; nrja ; >
@@ -30372,7 +30372,7 @@
       au < manifest ; exists ; 2006 ; Nineteenth Century Theatre and Film Volume 33 ; 33 ; nctd ; >
       au < manifest ; exists ; 2007 ; Nineteenth Century Theatre and Film Volume 34 ; 34 ; nctd ; >
       au < crawling ; exists ; 2008 ; Nineteenth Century Theatre and Film Volume 35 ; 35 ; nctd ; >
-      au < crawling ; exists ; 2009 ; Nineteenth Century Theatre and Film Volume 36 ; 36 ; nctd ; >
+      au < frozen ; exists ; 2009 ; Nineteenth Century Theatre and Film Volume 36 ; 36 ; nctd ; >
       au < crawling ; exists ; 2010 ; Nineteenth Century Theatre and Film Volume 37 ; 37 ; nctd ; >
       au < crawling ; exists ; 2011 ; Nineteenth Century Theatre and Film Volume 38 ; 38 ; nctd ; >
       au < crawling ; exists ; 2012 ; Nineteenth Century Theatre and Film Volume 39 ; 39 ; nctd ; >
@@ -30592,7 +30592,7 @@
       au < crawling ; exists ; 2009 ; Nordic Studies on Alcohol and Drugs Volume 26 ; 26 ; nada ; >
       au < crawling ; exists ; 2010 ; Nordic Studies on Alcohol and Drugs Volume 27 ; 27 ; nada ; >
       au < frozen ; exists ; 2011 ; Nordic Studies on Alcohol and Drugs Volume 28 ; 28 ; nada ; >
-      au < crawling ; exists ; 2012 ; Nordic Studies on Alcohol and Drugs Volume 29 ; 29 ; nada ; >
+      au < frozen ; exists ; 2012 ; Nordic Studies on Alcohol and Drugs Volume 29 ; 29 ; nada ; >
       au < crawling ; exists ; 2013 ; Nordic Studies on Alcohol and Drugs Volume 30 ; 30 ; nada ; >
       au < frozen ; exists ; 2014 ; Nordic Studies on Alcohol and Drugs Volume 31 ; 31 ; nada ; >
       au < frozen ; exists ; 2015 ; Nordic Studies on Alcohol and Drugs Volume 32 ; 32 ; nada ; >
@@ -30621,8 +30621,8 @@
       au < manifest ; exists ; 2006 ; North American Archaeologist Volume 27 ; 27 ; naaa ; >
       au < manifest ; exists ; 2007 ; North American Archaeologist Volume 28 ; 28 ; naaa ; >
       au < frozen ; exists ; 2008 ; North American Archaeologist Volume 29 ; 29 ; naaa ; >
-      au < crawling ; exists ; 2009 ; North American Archaeologist Volume 30 ; 30 ; naaa ; >
-      au < crawling ; exists ; 2010 ; North American Archaeologist Volume 31 ; 31 ; naaa ; >
+      au < frozen ; exists ; 2009 ; North American Archaeologist Volume 30 ; 30 ; naaa ; >
+      au < frozen ; exists ; 2010 ; North American Archaeologist Volume 31 ; 31 ; naaa ; >
       au < frozen ; exists ; 2011 ; North American Archaeologist Volume 32 ; 32 ; naaa ; >
       au < frozen ; exists ; 2012 ; North American Archaeologist Volume 33 ; 33 ; naaa ; >
       au < frozen ; exists ; 2013 ; North American Archaeologist Volume 34 ; 34 ; naaa ; >
@@ -34097,7 +34097,7 @@
       au < manifest ; exists ; 2005 ; Public Health Reports Volume 120 ; 120 ; phrg ; >
       au < manifest ; exists ; 2006 ; Public Health Reports Volume 121 ; 121 ; phrg ; >
       au < manifest ; exists ; 2007 ; Public Health Reports Volume 122 ; 122 ; phrg ; >
-      au < crawling ; exists ; 2008 ; Public Health Reports Volume 123 ; 123 ; phrg ; >
+      au < frozen ; exists ; 2008 ; Public Health Reports Volume 123 ; 123 ; phrg ; >
       au < crawling ; exists ; 2009 ; Public Health Reports Volume 124 ; 124 ; phrg ; >
       au < frozen ; exists ; 2010 ; Public Health Reports Volume 125 ; 125 ; phrg ; >
       au < frozen ; exists ; 2011 ; Public Health Reports Volume 126 ; 126 ; phrg ; >
@@ -35053,7 +35053,7 @@
       au < frozen ; exists ; 2008 ; Research in Education Volume 80 ; 80 ; riea ; >
       au < crawling ; exists ; 2009 ; Research in Education Volume 81 ; 81 ; riea ; >
       au < crawling ; exists ; 2009 ; Research in Education Volume 82 ; 82 ; riea ; >
-      au < crawling ; exists ; 2010 ; Research in Education Volume 83 ; 83 ; riea ; >
+      au < frozen ; exists ; 2010 ; Research in Education Volume 83 ; 83 ; riea ; >
       au < crawling ; exists ; 2010 ; Research in Education Volume 84 ; 84 ; riea ; >
       au < frozen ; exists ; 2011 ; Research in Education Volume 85 ; 85 ; riea ; >
       au < frozen ; exists ; 2011 ; Research in Education Volume 86 ; 86 ; riea ; >
@@ -35760,7 +35760,7 @@
       au < manifest ; exists ; 2007 ; Rural Special Education Quarterly Volume 26 ; 26 ; rsqa ; >
       au < frozen ; exists ; 2008 ; Rural Special Education Quarterly Volume 27 ; 27 ; rsqa ; >
       au < frozen ; exists ; 2009 ; Rural Special Education Quarterly Volume 28 ; 28 ; rsqa ; >
-      au < crawling ; exists ; 2010 ; Rural Special Education Quarterly Volume 29 ; 29 ; rsqa ; >
+      au < frozen ; exists ; 2010 ; Rural Special Education Quarterly Volume 29 ; 29 ; rsqa ; >
       au < frozen ; exists ; 2011 ; Rural Special Education Quarterly Volume 30 ; 30 ; rsqa ; >
       au < frozen ; exists ; 2012 ; Rural Special Education Quarterly Volume 31 ; 31 ; rsqa ; >
       au < frozen ; exists ; 2013 ; Rural Special Education Quarterly Volume 32 ; 32 ; rsqa ; >
@@ -38304,7 +38304,7 @@
       au < manifest ; exists ; 2005-2006 ; TEACHING Exceptional Children Volume 38 ; 38 ; tcxa ; >
       au < manifest ; exists ; 2006-2007 ; TEACHING Exceptional Children Volume 39 ; 39 ; tcxa ; >
       au < crawling ; exists ; 2007-2008 ; TEACHING Exceptional Children Volume 40 ; 40 ; tcxa ; >
-      au < crawling ; exists ; 2008-2009 ; TEACHING Exceptional Children Volume 41 ; 41 ; tcxa ; >
+      au < frozen ; exists ; 2008-2009 ; TEACHING Exceptional Children Volume 41 ; 41 ; tcxa ; >
       au < crawling ; exists ; 2009-2010 ; TEACHING Exceptional Children Volume 42 ; 42 ; tcxa ; >
       au < frozen ; exists ; 2010-2011 ; TEACHING Exceptional Children Volume 43 ; 43 ; tcxa ; >
       au < frozen ; exists ; 2011-2012 ; TEACHING Exceptional Children Volume 44 ; 44 ; tcxa ; >
@@ -40879,7 +40879,7 @@
       au < manifest ; exists ; 2007 ; Vikalpa Volume 32 ; 32 ; vika ; >
       au < frozen ; exists ; 2008 ; Vikalpa Volume 33 ; 33 ; vika ; >
       au < crawling ; exists ; 2009 ; Vikalpa Volume 34 ; 34 ; vika ; >
-      au < crawling ; exists ; 2010 ; Vikalpa Volume 35 ; 35 ; vika ; >
+      au < frozen ; exists ; 2010 ; Vikalpa Volume 35 ; 35 ; vika ; >
       au < frozen ; exists ; 2011 ; Vikalpa Volume 36 ; 36 ; vika ; >
       au < frozen ; exists ; 2012 ; Vikalpa Volume 37 ; 37 ; vika ; >
       au < frozen ; exists ; 2013 ; Vikalpa Volume 38 ; 38 ; vika ; >
@@ -43750,7 +43750,7 @@
 
     #param[base_url] = http://wfr.sagepub.com/
 
-    au < crawling ; exists ; 2009 ; World Future Review Volume 1 ; 1 ; wfra ; >
+    au < frozen ; exists ; 2009 ; World Future Review Volume 1 ; 1 ; wfra ; >
     au < frozen ; exists ; 2010 ; World Future Review Volume 2 ; 2 ; wfra ; >
     au < frozen ; exists ; 2011 ; World Future Review Volume 3 ; 3 ; wfra ; >
     au < frozen ; exists ; 2012 ; World Future Review Volume 4 ; 4 ; wfra ; >
@@ -45130,7 +45130,7 @@
 
         au < frozen ; exists ; 2008 ; Obstetric Medicine Volume 1 ; 1 ; obma ; >
         au < frozen ; exists ; 2009 ; Obstetric Medicine Volume 2 ; 2 ; obma ; >
-        au < crawling ; exists ; 2010 ; Obstetric Medicine Volume 3 ; 3 ; obma ; >
+        au < frozen ; exists ; 2010 ; Obstetric Medicine Volume 3 ; 3 ; obma ; >
         au < frozen ; exists ; 2011 ; Obstetric Medicine Volume 4 ; 4 ; obma ; >
         au < frozen ; exists ; 2012 ; Obstetric Medicine Volume 5 ; 5 ; obma ; >
         au < doNotProcess ; doNotProcess ; 2013 ; Obstetric Medicine Volume 6 ; 6 ; obma ; >
@@ -45316,7 +45316,7 @@
       au < manifest ; exists ; 2006 ; Women's Health Volume 2 ; 2 ; whea ; >
       au < manifest ; exists ; 2007 ; Women's Health Volume 3 ; 3 ; whea ; >
       au < frozen ; exists ; 2008 ; Women's Health Volume 4 ; 4 ; whea ; >
-      au < crawling ; exists ; 2009 ; Women's Health Volume 5 ; 5 ; whea ; >
+      au < frozen ; exists ; 2009 ; Women's Health Volume 5 ; 5 ; whea ; >
       au < crawling ; exists ; 2010 ; Women's Health Volume 6 ; 6 ; whea ; >
       au < frozen ; exists ; 2011 ; Women's Health Volume 7 ; 7 ; whea ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Women's Health Volume 8 ; 8 ; whea ; >
@@ -45634,7 +45634,7 @@
     au < manifest ; exists ; 2006 ; Pediatric and Developmental Pathology Volume 9 ; 9 ; pdpa ; >
     au < manifest ; exists ; 2007 ; Pediatric and Developmental Pathology Volume 10 ; 10 ; pdpa ; >
     au < frozen ; exists ; 2008 ; Pediatric and Developmental Pathology Volume 11 ; 11 ; pdpa ; >
-    au < crawling ; exists ; 2009 ; Pediatric and Developmental Pathology Volume 12 ; 12 ; pdpa ; >
+    au < frozen ; exists ; 2009 ; Pediatric and Developmental Pathology Volume 12 ; 12 ; pdpa ; >
     au < crawling ; exists ; 2010 ; Pediatric and Developmental Pathology Volume 13 ; 13 ; pdpa ; >
     au < frozen ; exists ; 2011 ; Pediatric and Developmental Pathology Volume 14 ; 14 ; pdpa ; >
     au < frozen ; exists ; 2012 ; Pediatric and Developmental Pathology Volume 15 ; 15 ; pdpa ; >
@@ -45668,7 +45668,7 @@
     au < manifest ; exists ; 2006 ; Industry and Higher Education Volume 20 ; 20 ; ihea ; >
     au < manifest ; exists ; 2007 ; Industry and Higher Education Volume 21 ; 21 ; ihea ; >
     au < frozen ; exists ; 2008 ; Industry and Higher Education Volume 22 ; 22 ; ihea ; >
-    au < crawling ; exists ; 2009 ; Industry and Higher Education Volume 23 ; 23 ; ihea ; >
+    au < frozen ; exists ; 2009 ; Industry and Higher Education Volume 23 ; 23 ; ihea ; >
     au < crawling ; exists ; 2010 ; Industry and Higher Education Volume 24 ; 24 ; ihea ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Industry and Higher Education Volume 25 ; 25 ; ihea ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Industry and Higher Education Volume 26 ; 26 ; ihea ; >
@@ -45738,7 +45738,7 @@
     au < manifest ; exists ; 2007 ; Outlook on Agriculture Volume 36 ; 36 ; oaga ; >
     au < testing ; exists ; 2008 ; Outlook on Agriculture Volume 37 ; 37 ; oaga ; >
     au < frozen ; exists ; 2009 ; Outlook on Agriculture Volume 38 ; 38 ; oaga ; >
-    au < crawling ; exists ; 2010 ; Outlook on Agriculture Volume 39 ; 39 ; oaga ; >
+    au < frozen ; exists ; 2010 ; Outlook on Agriculture Volume 39 ; 39 ; oaga ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Outlook on Agriculture Volume 40 ; 40 ; oaga ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Outlook on Agriculture Volume 41 ; 41 ; oaga ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Outlook on Agriculture Volume 42 ; 42 ; oaga ; >
