@@ -26,339 +26,339 @@
 
     }   
 
-    {
-  
-    title < 
-      name = Circuits, devices and systems ;
-      type = bookSeries 
-      
-      >
-      # series string - /circuits/
-      
-      au < exists ; exists ; 1991 ; 9780863412592 ; 9781849193573 ; 9780863412592 ; 3 ; Analogue-digital ASICs: circuit techniques, design tools and applications ; >
-      au < exists ; exists ; 1992 ; 9780863412677 ; 9781849193580 ; 9780863412677 ; 4 ; Algorithmic and Knowledge-based CAD for VLSI ; >
-      au < exists ; exists ; 1993 ; 9780863412974 ; 9781849191647 ; 9780863412974 ; 5 ; Analogue IC Design: The Current-Mode Approach ; >
-
-    }   
-    
-    {
-  
-    title < 
-      name = Computing ;
-      type = bookSeries 
-      
-      >
-      # series string - /computing/
-      
-
-    }   
-    
-    {
-  
-    title < 
-      name = Control ;
-      type = bookSeries 
-      
-      >
-      # series string - /control/
-      
-
-    }   
-    
-    {
-  
-    title < 
-      name = Electrical measurement ;
-      type = bookSeries 
-      
-      >
-      # series string - /electrical/
-      
-
-    } 
-      
-    {
-  
-    title < 
-      name = Electromagnetic waves ;
-      type = bookSeries 
-      
-      >
-      # series string - /electro/
-      
-
-    }   
-        
-    {
-  
-    title < 
-      name = EMIS datareviews ;
-      type = bookSeries 
-      
-      >
-      # series string - /emis/
-      
-
-    }  
-     
-    {
-  
-    title < 
-      name = History of technology ;
-      type = bookSeries 
-      
-      >
-      # series string - /history/
-      
-
-    }   
-    
-    {
-  
-    title < 
-      name = Information technology ;
-      type = bookSeries 
-      
-      >
-      # series string - /it/
-      
-
-    }   
-    
-    {
-  
-    title < 
-      name = Management of technology ;
-      type = bookSeries 
-      
-      >
-      # series string - /man-tech/
-      
-
-    }   
-    
-    {
-  
-    title < 
-      name = Manufacturing ;
-      type = bookSeries 
-      
-      >
-      # series string - /manufac/
-      
-
-    }   
-    
-    {
-  
-    title < 
-      name = Model forms of general conditions of contract ;
-      type = bookSeries 
-      
-      >
-      # series string - /model/
-      
-
-    }  
-     
-    {
-  
-    title < 
-      name = Policy publications ;
-      type = bookSeries 
-      
-      >
-      # series string - /policy/
-      
-
-    }  
-     
-    {
-  
-    title < 
-      name = Power and energy ;
-      type = bookSeries 
-      
-      >
-      # series string - /pow-en/
-      
-
-    }   
-    
-    {
-  
-    title < 
-      name = Processing ;
-      type = bookSeries 
-      
-      >
-      # series string - /process/
-      
-
-    }   
-    
-    {
-  
-    title < 
-      name = Radar, sonar, navigation and avionics ;
-      type = bookSeries 
-      
-      >
-      # series string - /rsna/
-      
-
-    }   
-    
-    {
-  
-    title < 
-      name = Renewable energy ;
-      type = bookSeries 
-      
-      >
-      # series string - /renewable/
-      
-
-    }   
-    
-    {
-  
-    title < 
-      name = Telecommuncations ;
-      type = bookSeries 
-      
-      >
-      # series string - /telecom/
-      
-
-    }   
-    
-    {
-  
-    title < 
-      name = Wiring regulations ;
-      type = bookSeries 
-      
-      >
-      # series string - /wiring-regulations/
-      
-
-    }   
-        
-   {
-  
-    title < 
-      name = Adaptive Array Principles ;
-      isbn = 978-0-86341-247-9 ;
-      eisbn = 978-1-84919-374-0
-  
-      >
-     
-
-    }
-    
-    {
-    title < 
-      name = Advanced Control for Constrained Processes and Systems ;
-      isbn = 9781849192613 ;
-      eisbn = 9781849192620 
-  
-      >
-     
-
-   }
-    
-   {
-  
-    title < 
-      name = Aperture Antennas and Diffraction Theory ;
-      isbn = 978-0-90604-852-8 ;
-      eisbn = 978-1-84919-373-3
-  
-      >
-     
-
-    }
-    
-    {
-  
-    title < 
-      name = Construction: Health and Safety 2008/2009 
-  
-      >
-     
-
-    }
-    
-    {
-
-      title <
-        name = Developments in Control Theory towards Glocal Control ;
-        isbn =  978-1-84919-533-1 
-        >
-    }
-    
-    {
-  
-    title < 
-      name = Electrochemical Power Sources: primary and secondary batteries ;
-      isbn = 978-0-90604-826-9 ;
-      eisbn = 978-1-84919-368-9
-  
-      >
-     
-
-   }
-   
-   {
-  
-    title < 
-      name = Energy Storage for Power Systems, 2nd Edition ;
-      isbn = 9781849192194 ;
-      eisbn = 9781849192200 
-  
-      >
-     
-
-   }
-    
-   {
-  
-    title < 
-      name = Geometrical Theory of Diffraction for Electromagnetic Waves ;
-      isbn = 978-0-86341-062-8 ;
-      eisbn = 978-1-84919-372-6
-  
-      >
-     
-
-    }
-    
-    {
-  
-    title < 
-      name = Energy Storage for Power Systems, 2nd Edition ;
-      isbn = 9781849192194 ;
-      eisbn = 9781849192200
-  
-      >
-     
-    }
-    
-   {
-  
-    title < 
-      name = A History of Control Engineering 1800-1930 ;
-      isbn = 978-0-86341-047-5 ;
-      eisbn = 978-1-84919-332-0
-  
-      >
-     
-
-   }
-
- 
-      
+#    {
+#  
+#    title < 
+#      name = Circuits, devices and systems ;
+#      type = bookSeries 
+#      
+#      >
+#      # series string - /circuits/
+#      
+#      au < exists ; exists ; 1991 ; 9780863412592 ; 9781849193573 ; 9780863412592 ; 3 ; Analogue-digital ASICs: circuit techniques, design tools and applications ; >
+#      au < exists ; exists ; 1992 ; 9780863412677 ; 9781849193580 ; 9780863412677 ; 4 ; Algorithmic and Knowledge-based CAD for VLSI ; >
+#      au < exists ; exists ; 1993 ; 9780863412974 ; 9781849191647 ; 9780863412974 ; 5 ; Analogue IC Design: The Current-Mode Approach ; >
+#
+#    }   
+#    
+#    {
+#  
+#    title < 
+#      name = Computing ;
+#      type = bookSeries 
+#      
+#      >
+#      # series string - /computing/
+#      
+#
+#    }   
+#    
+#    {
+#  
+#    title < 
+#      name = Control ;
+#      type = bookSeries 
+#      
+#      >
+#      # series string - /control/
+#      
+#
+#    }   
+#    
+#    {
+#  
+#    title < 
+#      name = Electrical measurement ;
+#      type = bookSeries 
+#      
+#      >
+#      # series string - /electrical/
+#      
+#
+#    } 
+#      
+#    {
+#  
+#    title < 
+#      name = Electromagnetic waves ;
+#      type = bookSeries 
+#      
+#      >
+#      # series string - /electro/
+#      
+#
+#    }   
+#        
+#    {
+#  
+#    title < 
+#      name = EMIS datareviews ;
+#      type = bookSeries 
+#      
+#      >
+#      # series string - /emis/
+#      
+#
+#    }  
+#     
+#    {
+#  
+#    title < 
+#      name = History of technology ;
+#      type = bookSeries 
+#      
+#      >
+#      # series string - /history/
+#      
+#
+#    }   
+#    
+#    {
+#  
+#    title < 
+#      name = Information technology ;
+#      type = bookSeries 
+#      
+#      >
+#      # series string - /it/
+#      
+#
+#    }   
+#    
+#    {
+#  
+#    title < 
+#      name = Management of technology ;
+#      type = bookSeries 
+#      
+#      >
+#      # series string - /man-tech/
+#      
+#
+#    }   
+#    
+#    {
+#  
+#    title < 
+#      name = Manufacturing ;
+#      type = bookSeries 
+#      
+#      >
+#      # series string - /manufac/
+#      
+#
+#    }   
+#    
+#    {
+#  
+#    title < 
+#      name = Model forms of general conditions of contract ;
+#      type = bookSeries 
+#      
+#      >
+#      # series string - /model/
+#      
+#
+#    }  
+#     
+#    {
+#  
+#    title < 
+#      name = Policy publications ;
+#      type = bookSeries 
+#      
+#      >
+#      # series string - /policy/
+#      
+#
+#    }  
+#     
+#    {
+#  
+#    title < 
+#      name = Power and energy ;
+#      type = bookSeries 
+#      
+#      >
+#      # series string - /pow-en/
+#      
+#
+#    }   
+#    
+#    {
+#  
+#    title < 
+#      name = Processing ;
+#      type = bookSeries 
+#      
+#      >
+#      # series string - /process/
+#      
+#
+#    }   
+#    
+#    {
+#  
+#    title < 
+#      name = Radar, sonar, navigation and avionics ;
+#      type = bookSeries 
+#      
+#      >
+#      # series string - /rsna/
+#      
+#
+#    }   
+#    
+#    {
+#  
+#    title < 
+#      name = Renewable energy ;
+#      type = bookSeries 
+#      
+#      >
+#      # series string - /renewable/
+#      
+#
+#    }   
+#    
+#    {
+#  
+#    title < 
+#      name = Telecommuncations ;
+#      type = bookSeries 
+#      
+#      >
+#      # series string - /telecom/
+#      
+#
+#    }   
+#    
+#    {
+#  
+#    title < 
+#      name = Wiring regulations ;
+#      type = bookSeries 
+#      
+#      >
+#      # series string - /wiring-regulations/
+#      
+#
+#    }   
+#        
+#   {
+#  
+#    title < 
+#      name = Adaptive Array Principles ;
+#      isbn = 978-0-86341-247-9 ;
+#      eisbn = 978-1-84919-374-0
+#  
+#      >
+#     
+#
+#    }
+#    
+#    {
+#    title < 
+#      name = Advanced Control for Constrained Processes and Systems ;
+#      isbn = 9781849192613 ;
+#      eisbn = 9781849192620 
+#  
+#      >
+#     
+#
+#   }
+#    
+#   {
+#  
+#    title < 
+#      name = Aperture Antennas and Diffraction Theory ;
+#      isbn = 978-0-90604-852-8 ;
+#      eisbn = 978-1-84919-373-3
+#  
+#      >
+#     
+#
+#    }
+#    
+#    {
+#  
+#    title < 
+#      name = Construction: Health and Safety 2008/2009 
+#  
+#      >
+#     
+#
+#    }
+#    
+#    {
+#
+#      title <
+#        name = Developments in Control Theory towards Glocal Control ;
+#        isbn =  978-1-84919-533-1 
+#        >
+#    }
+#    
+#    {
+#  
+#    title < 
+#      name = Electrochemical Power Sources: primary and secondary batteries ;
+#      isbn = 978-0-90604-826-9 ;
+#      eisbn = 978-1-84919-368-9
+#  
+#      >
+#     
+#
+#   }
+#   
+#   {
+#  
+#    title < 
+#      name = Energy Storage for Power Systems, 2nd Edition ;
+#      isbn = 9781849192194 ;
+#      eisbn = 9781849192200 
+#  
+#      >
+#     
+#
+#   }
+#    
+#   {
+#  
+#    title < 
+#      name = Geometrical Theory of Diffraction for Electromagnetic Waves ;
+#      isbn = 978-0-86341-062-8 ;
+#      eisbn = 978-1-84919-372-6
+#  
+#      >
+#     
+#
+#    }
+#    
+#    {
+#  
+#    title < 
+#      name = Energy Storage for Power Systems, 2nd Edition ;
+#      isbn = 9781849192194 ;
+#      eisbn = 9781849192200
+#  
+#      >
+#     
+#    }
+#    
+#   {
+#  
+#    title < 
+#      name = A History of Control Engineering 1800-1930 ;
+#      isbn = 978-0-86341-047-5 ;
+#      eisbn = 978-1-84919-332-0
+#  
+#      >
+#     
+#
+#   }
+#
+# 
+#      
  }
  
 
