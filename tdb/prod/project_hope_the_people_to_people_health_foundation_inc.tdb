@@ -13,49 +13,58 @@
       issnl = 0278-2715
     >
 
+    #Moving to Atypon on October 11, 2017
+
+    {
+    plugin = org.lockss.plugin.atypon.GenericAtyponPlugin
+    param[base_url] = http://www.healthaffairs.org/
+    param[journal_id] = hlthaff
+    implicit < status ; year ; name ; param[volume_name] >
+    
+    au < exists ; 2017 ; Health Affairs Volume 36 ; 36 >
+    }
+
+    {
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://content.healthaffairs.org/
     implicit < status ; year ; name ; param[volume_name] >
     
-    #Moving to Atypon on October 11, 2017
-
-    au < released ; 1981 ; Health Affairs Volume 1 ; 1 >
-    au < released ; 1983 ; Health Affairs Volume 2 ; 2 >
-    au < released ; 1984 ; Health Affairs Volume 3 ; 3 >
-    au < released ; 1985 ; Health Affairs Volume 4 ; 4 >
-    au < released ; 1986 ; Health Affairs Volume 5 ; 5 >
-    au < released ; 1987 ; Health Affairs Volume 6 ; 6 >
-    au < released ; 1988 ; Health Affairs Volume 7 ; 7 >
-    au < released ; 1989 ; Health Affairs Volume 8 ; 8 >
-    au < released ; 1990 ; Health Affairs Volume 9 ; 9 >
-    au < released ; 1991 ; Health Affairs Volume 10 ; 10 >
-    au < released ; 1992 ; Health Affairs Volume 11 ; 11 >
-    au < released ; 1993 ; Health Affairs Volume 12 ; 12 >
-    au < released ; 1994 ; Health Affairs Volume 13 ; 13 >
-    au < released ; 1995 ; Health Affairs Volume 14 ; 14 >
-    au < released ; 1996 ; Health Affairs Volume 15 ; 15 >
-    au < released ; 1997 ; Health Affairs Volume 16 ; 16 >
-    au < released ; 1998 ; Health Affairs Volume 17 ; 17 >
-    au < released ; 1999 ; Health Affairs Volume 18 ; 18 >
-    au < released ; 2000 ; Health Affairs Volume 19 ; 19 >
-    au < released ; 2001 ; Health Affairs Volume 20 ; 20 >
-    au < released ; 2002 ; Health Affairs Volume 21 ; 21 >
-    au < released ; 2003 ; Health Affairs Volume 22 ; 22 >
-    au < released ; 2004 ; Health Affairs Volume 23 ; 23 >
-    au < released ; 2005 ; Health Affairs Volume 24 ; 24 >
-    au < released ; 2006 ; Health Affairs Volume 25 ; 25 >
-    au < released ; 2007 ; Health Affairs Volume 26 ; 26 >
-    au < released ; 2008 ; Health Affairs Volume 27 ; 27 >
-    au < released ; 2009 ; Health Affairs Volume 28 ; 28 >
-    au < released ; 2010 ; Health Affairs Volume 29 ; 29 >
-    au < released ; 2011 ; Health Affairs Volume 30 ; 30 >
-    au < released ; 2012 ; Health Affairs Volume 31 ; 31 >
-    au < released ; 2013 ; Health Affairs Volume 32 ; 32 >
-    au < released ; 2014 ; Health Affairs Volume 33 ; 33 >
-    au < released ; 2015 ; Health Affairs Volume 34 ; 34 >
-    au < released ; 2016 ; Health Affairs Volume 35 ; 35 >
-    au < doNotProcess ; 2017 ; Health Affairs Volume 36 ; 36 >
-
+    au < down ; 1981 ; Health Affairs Volume 1 ; 1 >
+    au < down ; 1983 ; Health Affairs Volume 2 ; 2 >
+    au < down ; 1984 ; Health Affairs Volume 3 ; 3 >
+    au < down ; 1985 ; Health Affairs Volume 4 ; 4 >
+    au < down ; 1986 ; Health Affairs Volume 5 ; 5 >
+    au < down ; 1987 ; Health Affairs Volume 6 ; 6 >
+    au < down ; 1988 ; Health Affairs Volume 7 ; 7 >
+    au < down ; 1989 ; Health Affairs Volume 8 ; 8 >
+    au < down ; 1990 ; Health Affairs Volume 9 ; 9 >
+    au < down ; 1991 ; Health Affairs Volume 10 ; 10 >
+    au < down ; 1992 ; Health Affairs Volume 11 ; 11 >
+    au < down ; 1993 ; Health Affairs Volume 12 ; 12 >
+    au < down ; 1994 ; Health Affairs Volume 13 ; 13 >
+    au < down ; 1995 ; Health Affairs Volume 14 ; 14 >
+    au < down ; 1996 ; Health Affairs Volume 15 ; 15 >
+    au < down ; 1997 ; Health Affairs Volume 16 ; 16 >
+    au < down ; 1998 ; Health Affairs Volume 17 ; 17 >
+    au < down ; 1999 ; Health Affairs Volume 18 ; 18 >
+    au < down ; 2000 ; Health Affairs Volume 19 ; 19 >
+    au < down ; 2001 ; Health Affairs Volume 20 ; 20 >
+    au < down ; 2002 ; Health Affairs Volume 21 ; 21 >
+    au < down ; 2003 ; Health Affairs Volume 22 ; 22 >
+    au < down ; 2004 ; Health Affairs Volume 23 ; 23 >
+    au < down ; 2005 ; Health Affairs Volume 24 ; 24 >
+    au < down ; 2006 ; Health Affairs Volume 25 ; 25 >
+    au < down ; 2007 ; Health Affairs Volume 26 ; 26 >
+    au < down ; 2008 ; Health Affairs Volume 27 ; 27 >
+    au < down ; 2009 ; Health Affairs Volume 28 ; 28 >
+    au < down ; 2010 ; Health Affairs Volume 29 ; 29 >
+    au < down ; 2011 ; Health Affairs Volume 30 ; 30 >
+    au < down ; 2012 ; Health Affairs Volume 31 ; 31 >
+    au < down ; 2013 ; Health Affairs Volume 32 ; 32 >
+    au < down ; 2014 ; Health Affairs Volume 33 ; 33 >
+    au < down ; 2015 ; Health Affairs Volume 34 ; 34 >
+    au < down ; 2016 ; Health Affairs Volume 35 ; 35 >
+    }
   }
 
 }

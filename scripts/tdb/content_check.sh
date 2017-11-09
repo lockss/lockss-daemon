@@ -209,9 +209,11 @@ scripts/tdb/tdbout -j tdb/prod/*.tdb | sort -u > $tpath/AllTitles.txt
 scripts/tdb/tdbout -c publisher,title,issn,eissn tdb/prod/*.tdb | sort -u > $tpath/TitlesWAUs.txt
 echo "Total Num Titles with no AUs"
 diff $tpath/AllTitles.txt $tpath/TitlesWAUs.txt | grep "< " | wc -l
-echo "Not incl Springer SBM, AIAA, Annual Reviews, or Medknow"
-diff $tpath/AllTitles.txt $tpath/TitlesWAUs.txt | grep "< " | grep -v "Springer Science+Business Media" | grep -v "American Institute of Aeronautics and Astronautics" | grep -v "Annual Reviews," | grep -v "Medknow Publications" | wc -l
-diff $tpath/AllTitles.txt $tpath/TitlesWAUs.txt | grep "< " | grep -v "Springer Science+Business Media" | grep -v "American Institute of Aeronautics and Astronautics" | grep -v "Annual Reviews," | grep -v "Medknow Publications" | head -n20
+echo "All titles"
+diff $tpath/AllTitles.txt $tpath/TitlesWAUs.txt | grep "< " | head -n20
+#echo "Not incl Springer SBM, AIAA, Annual Reviews, or Medknow"
+#diff $tpath/AllTitles.txt $tpath/TitlesWAUs.txt | grep "< " | grep -v "Springer Science+Business Media" | grep -v "American Institute of Aeronautics and Astronautics" | grep -v "Annual Reviews," | grep -v "Medknow Publications" | wc -l
+#diff $tpath/AllTitles.txt $tpath/TitlesWAUs.txt | grep "< " | grep -v "Springer Science+Business Media" | grep -v "American Institute of Aeronautics and Astronautics" | grep -v "Annual Reviews," | grep -v "Medknow Publications" | head -n20
 echo "---------------------"
 echo "---------------------"
 echo "CLOCKSS. Titles with no AUs"
