@@ -14,7 +14,7 @@
      param[base_url] = http://standardsingenomics.org/
      param[journal_id] = sigen
      implicit < status ; year ; param[year] ; name ; volume >
-     comment[moved] = journal moved to Springer. See http://www.standardsingenomics.com/
+     comment[moved] = journal moved. See http://standardsingenomics.com/
      
       au < down ; 2009 ; 2009 ; Standards in Genomic Sciences Volume 1 ; 1 >
       au < down ; 2010 ; 2010 ; Standards in Genomic Sciences Volume 2-3 ; 2-3 >
