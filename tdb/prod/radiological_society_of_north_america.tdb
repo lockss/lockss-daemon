@@ -71,7 +71,7 @@
     
     {
     
-      plugin = needs.plugin
+      plugin = org.lockss.plugin.atypon.GenericAtyponPlugin
       comment[platform] = Atypon
       param[base_url] = http://pubs.rsna.org/
       implicit < status ; year ; name ; param[volume_name] >
@@ -80,6 +80,9 @@
 
       au < exists ; 2013 ; RadioGraphics Volume 33 ; 33 >
       au < exists ; 2014 ; RadioGraphics Volume 34 ; 34 >
+      au < exists ; 2015 ; RadioGraphics Volume 35 ; 35 >
+      au < exists ; 2016 ; RadioGraphics Volume 36 ; 36 >
+      au < exists ; 2017 ; RadioGraphics Volume 37 ; 37 >
 
     }
 
@@ -384,7 +387,7 @@
 
     {
     
-      plugin = needs.plugin
+      plugin = org.lockss.plugin.atypon.GenericAtyponPlugin
       comment[platform] = Atypon
       param[base_url] = http://pubs.rsna.org/
       implicit < status ; year ; name ; param[volume_name] >
@@ -395,6 +398,18 @@
       au < exists ; 2013 ; Radiology Volume 267 ; 267 >
       au < exists ; 2013 ; Radiology Volume 268 ; 268 >
       au < exists ; 2013 ; Radiology Volume 269 ; 269 >
+      au < exists ; 2014 ; Radiology Volume 270 ; 270 >
+      au < exists ; 2014 ; Radiology Volume 271 ; 271 >
+      au < exists ; 2014 ; Radiology Volume 272 ; 272 >
+      au < exists ; 2014 ; Radiology Volume 273 ; 273 >
+      au < exists ; 2015 ; Radiology Volume 274 ; 274 >
+      au < exists ; 2015 ; Radiology Volume 275 ; 275 >
+      au < exists ; 2015 ; Radiology Volume 276 ; 276 >
+      au < exists ; 2015 ; Radiology Volume 277 ; 277 >
+      au < exists ; 2016 ; Radiology Volume 278 ; 278 >
+      au < exists ; 2016 ; Radiology Volume 279 ; 279 >
+      au < exists ; 2016 ; Radiology Volume 280 ; 280 >
+      au < exists ; 2016 ; Radiology Volume 281 ; 281 >
 
     }
 
