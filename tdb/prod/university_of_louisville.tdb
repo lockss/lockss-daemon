@@ -16,7 +16,23 @@
       param[journal_abbr] = jri
       implicit < status ; year ; name ; param[volume] >
     
-      au < manifest ; 2017 ; Journal of Respiratory Infections Volume 1 ; 1 >
+      au < testing ; 2017 ; Journal of Respiratory Infections Volume 1 ; 1 >
+
+  }
+  
+  {
+  
+    title <
+      name = Journal of Refugee & Global Health ;
+      eissn = 2473-0327 
+    >
+
+      plugin = org.lockss.plugin.bepress.BePressPlugin
+      param[base_url] = http://ir.library.louisville.edu/
+      param[journal_abbr] = rgh
+      implicit < status ; year ; name ; param[volume] >
+    
+      au < testing ; 2017 ; Journal of Refugee & Global Health Volume 1 ; 1 >
 
   }
   
