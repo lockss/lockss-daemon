@@ -457,6 +457,7 @@
     au < bmj.BMJDrupalPlugin ; released ; 2016 ; BMJ Volume 355 ; 355 >
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; BMJ Volume 356 ; 356 >
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; BMJ Volume 357 ; 357 >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; BMJ Volume 358 ; 358 >
 
   }
 
@@ -1042,6 +1043,9 @@
 
 comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
+    au < bmj.BMJDrupalPlugin ; manifest ; 1995-1996 ; Evidence-Based Medicine Volume 1 ; 1 >
+    au < bmj.BMJDrupalPlugin ; manifest ; 1997 ; Evidence-Based Medicine Volume 2 ; 2 >
+    au < bmj.BMJDrupalPlugin ; manifest ; 1998 ; Evidence-Based Medicine Volume 3 ; 3 >
     au < bmj.BMJDrupalPlugin ; manifest ; 1999 ; Evidence-Based Medicine Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; down ; 2000 ; Evidence-Based Medicine Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; down ; 2001 ; Evidence-Based Medicine Volume 6 ; 6 >
