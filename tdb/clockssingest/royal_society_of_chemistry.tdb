@@ -1936,7 +1936,7 @@
       au < frozen ; exists ; 2014 ; Materials Horizons Volume 1 ; 1 ; 2014 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2015 ; Materials Horizons Volume 2 ; 2 ; 2015 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2016 ; Materials Horizons Volume 3 ; 3 ; 2016 ; >
-      au < testing ; exists ; 2017 ; Materials Horizons Volume 4 ; 4 ; 2017 ; >
+      au < ready ; exists ; 2017 ; Materials Horizons Volume 4 ; 4 ; 2017 ; >
 
   }
 
@@ -1958,7 +1958,7 @@
       au < frozen ; exists ; 2014 ; MedChemComm Volume 5 ; 5 ; 2014 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2015 ; MedChemComm Volume 6 ; 6 ; 2015 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2016 ; MedChemComm Volume 7 ; 7 ; 2016 ; >
-      au < testing ; exists ; 2017 ; MedChemComm Volume 8 ; 8 ; 2017 ; >
+      au < ready ; exists ; 2017 ; MedChemComm Volume 8 ; 8 ; 2017 ; >
 
   }
 
@@ -1993,7 +1993,7 @@
       param[journal_code] = nh
 
       au < deepCrawl ; exists ; 2016 ; Nanoscale Horizons Volume 1 ; 1 ; 2016 ; reingest2.clockss.org:8085 >
-      au < testing ; exists ; 2017 ; Nanoscale Horizons Volume 2 ; 2 ; 2017 ; >
+      au < ready ; exists ; 2017 ; Nanoscale Horizons Volume 2 ; 2 ; 2017 ; >
 
   }
 
