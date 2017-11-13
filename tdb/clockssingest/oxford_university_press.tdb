@@ -2104,7 +2104,6 @@
 
     param[journal_id] = biohorizons
 
-    #this title was ONLY in the publisher listing
     au < manifest ; exists ; 2008 ; 2008 ; Bioscience Horizons: The International Journal of Student Research Volume 1 ; 1 ;  >
     au < manifest ; exists ; 2009 ; 2009 ; Bioscience Horizons: The International Journal of Student Research Volume 2 ; 2 ;  >
     au < manifest ; exists ; 2010 ; 2010 ; Bioscience Horizons: The International Journal of Student Research Volume 3 ; 3 ;  >
@@ -2115,20 +2114,6 @@
     au < manifest ; exists ; 2015 ; 2015 ; Bioscience Horizons: The International Journal of Student Research Volume 8 ; 8 ;  >
     au < manifest ; exists ; 2016 ; 2016 ; Bioscience Horizons: The International Journal of Student Research Volume 9 ; 9 ;  >
     au < manifest ; exists ; 2017 ; 2017 ; Bioscience Horizons: The International Journal of Student Research Volume 10 ; 10 ;  >
-
-  }
-
-  {
-
-    title <
-      name = Bioscience Horizons: The National Undergraduate Research Journal ;
-      eissn = 1754-7431 ;
-      issnl = 1754-7431
-    >
-
-    param[journal_id] = 
-
-    #this title was ONLY in the previous TDB listing - suppressing AU generation 
 
   }
 
@@ -5640,7 +5625,7 @@
   {
 
     title <
-      name = Geophysical Supplements to the Monthly Notices of the Royal Astronomical Society ;
+      name = Geophysical Supplements to the MNRAS ;
       issn = 2051-1965 ;
       eissn = 2051-1973
     >
@@ -5648,38 +5633,38 @@
     param[journal_id] = gsmnras
 
     #this title was ONLY in the publisher listing
-    au < doNotProcess ; exists ; 1922 ; 1922 ; Geophysical Supplements to the Monthly Notices of the Royal Astronomical Society Volume 1 [1922] ; 1 ;  >
-    au < doNotProcess ; exists ; 1923 ; 1923 ; Geophysical Supplements to the Monthly Notices of the Royal Astronomical Society Volume 1 [1923] ; 1 ;  >
-    au < doNotProcess ; exists ; 1924 ; 1924 ; Geophysical Supplements to the Monthly Notices of the Royal Astronomical Society Volume 1 [1924] ; 1 ;  >
-    au < doNotProcess ; exists ; 1925 ; 1925 ; Geophysical Supplements to the Monthly Notices of the Royal Astronomical Society Volume 1 [1925] ; 1 ;  >
-    au < doNotProcess ; exists ; 1926 ; 1926 ; Geophysical Supplements to the Monthly Notices of the Royal Astronomical Society Volume 1 [1926] ; 1 ;  >
-    au < doNotProcess ; exists ; 1927 ; 1927 ; Geophysical Supplements to the Monthly Notices of the Royal Astronomical Society Volume 1 [1927] ; 1 ;  >
-    au < doNotProcess ; exists ; 1928 ; 1928 ; Geophysical Supplements to the Monthly Notices of the Royal Astronomical Society Volume 1 [1928] ; 1 ;  >
-    au < doNotProcess ; exists ; 1929 ; 1929 ; Geophysical Supplements to the Monthly Notices of the Royal Astronomical Society Volume 2 [1929] ; 2 ;  >
-    au < doNotProcess ; exists ; 1930 ; 1930 ; Geophysical Supplements to the Monthly Notices of the Royal Astronomical Society Volume 2 [1930] ; 2 ;  >
-    au < doNotProcess ; exists ; 1931 ; 1931 ; Geophysical Supplements to the Monthly Notices of the Royal Astronomical Society Volume 2 [1931] ; 2 ;  >
-    au < doNotProcess ; exists ; 1932 ; 1932 ; Geophysical Supplements to the Monthly Notices of the Royal Astronomical Society Volume 3 [1932] ; 3 ;  >
-    au < doNotProcess ; exists ; 1934 ; 1934 ; Geophysical Supplements to the Monthly Notices of the Royal Astronomical Society Volume 3 [1934] ; 3 ;  >
-    au < doNotProcess ; exists ; 1935 ; 1935 ; Geophysical Supplements to the Monthly Notices of the Royal Astronomical Society Volume 3 [1935] ; 3 ;  >
-    au < doNotProcess ; exists ; 1936 ; 1936 ; Geophysical Supplements to the Monthly Notices of the Royal Astronomical Society Volume 3 [1936] ; 3 ;  >
-    au < doNotProcess ; exists ; 1937 ; 1937 ; Geophysical Supplements to the Monthly Notices of the Royal Astronomical Society Volume 4 [1937] ; 4 ;  >
-    au < doNotProcess ; exists ; 1938 ; 1938 ; Geophysical Supplements to the Monthly Notices of the Royal Astronomical Society Volume 4 [1938] ; 4 ;  >
-    au < doNotProcess ; exists ; 1939 ; 1939 ; Geophysical Supplements to the Monthly Notices of the Royal Astronomical Society Volume 4 [1939] ; 4 ;  >
-    au < doNotProcess ; exists ; 1940 ; 1940 ; Geophysical Supplements to the Monthly Notices of the Royal Astronomical Society Volume 4 [1940] ; 4 ;  >
-    au < doNotProcess ; exists ; 1941 ; 1941 ; Geophysical Supplements to the Monthly Notices of the Royal Astronomical Society Volume 5 [1941] ; 5 ;  >
-    au < doNotProcess ; exists ; 1942 ; 1942 ; Geophysical Supplements to the Monthly Notices of the Royal Astronomical Society Volume 5 [1942] ; 5 ;  >
-    au < doNotProcess ; exists ; 1943 ; 1943 ; Geophysical Supplements to the Monthly Notices of the Royal Astronomical Society Volume 5 [1943] ; 5 ;  >
-    au < doNotProcess ; exists ; 1945 ; 1945 ; Geophysical Supplements to the Monthly Notices of the Royal Astronomical Society Volume 5 [1945] ; 5 ;  >
-    au < doNotProcess ; exists ; 1947 ; 1947 ; Geophysical Supplements to the Monthly Notices of the Royal Astronomical Society Volume 5 [1947] ; 5 ;  >
-    au < doNotProcess ; exists ; 1948 ; 1948 ; Geophysical Supplements to the Monthly Notices of the Royal Astronomical Society Volume 5 [1948] ; 5 ;  >
-    au < doNotProcess ; exists ; 1949 ; 1949 ; Geophysical Supplements to the Monthly Notices of the Royal Astronomical Society Volume 5 [1949] ; 5 ;  >
-    au < doNotProcess ; exists ; 1951 ; 1951 ; Geophysical Supplements to the Monthly Notices of the Royal Astronomical Society Volume 6 [1951] ; 6 ;  >
-    au < doNotProcess ; exists ; 1952 ; 1952 ; Geophysical Supplements to the Monthly Notices of the Royal Astronomical Society Volume 6 [1952] ; 6 ;  >
-    au < doNotProcess ; exists ; 1953 ; 1953 ; Geophysical Supplements to the Monthly Notices of the Royal Astronomical Society Volume 6 [1953] ; 6 ;  >
-    au < doNotProcess ; exists ; 1954 ; 1954 ; Geophysical Supplements to the Monthly Notices of the Royal Astronomical Society Volume 6 [1954] ; 6 ;  >
-    au < doNotProcess ; exists ; 1955 ; 1955 ; Geophysical Supplements to the Monthly Notices of the Royal Astronomical Society Volume 7 [1955] ; 7 ;  >
-    au < doNotProcess ; exists ; 1956 ; 1956 ; Geophysical Supplements to the Monthly Notices of the Royal Astronomical Society Volume 7 [1956] ; 7 ;  >
-    au < doNotProcess ; exists ; 1957 ; 1957 ; Geophysical Supplements to the Monthly Notices of the Royal Astronomical Society Volume 7 [1957] ; 7 ;  >
+    au < doNotProcess ; exists ; 1922 ; 1922 ; Geophysical Supplements to the MNRAS Volume 1 [1922] ; 1 ;  >
+    au < doNotProcess ; exists ; 1923 ; 1923 ; Geophysical Supplements to the MNRAS Volume 1 [1923] ; 1 ;  >
+    au < doNotProcess ; exists ; 1924 ; 1924 ; Geophysical Supplements to the MNRAS Volume 1 [1924] ; 1 ;  >
+    au < doNotProcess ; exists ; 1925 ; 1925 ; Geophysical Supplements to the MNRAS Volume 1 [1925] ; 1 ;  >
+    au < doNotProcess ; exists ; 1926 ; 1926 ; Geophysical Supplements to the MNRAS Volume 1 [1926] ; 1 ;  >
+    au < doNotProcess ; exists ; 1927 ; 1927 ; Geophysical Supplements to the MNRAS Volume 1 [1927] ; 1 ;  >
+    au < doNotProcess ; exists ; 1928 ; 1928 ; Geophysical Supplements to the MNRAS Volume 1 [1928] ; 1 ;  >
+    au < doNotProcess ; exists ; 1929 ; 1929 ; Geophysical Supplements to the MNRAS Volume 2 [1929] ; 2 ;  >
+    au < doNotProcess ; exists ; 1930 ; 1930 ; Geophysical Supplements to the MNRAS Volume 2 [1930] ; 2 ;  >
+    au < doNotProcess ; exists ; 1931 ; 1931 ; Geophysical Supplements to the MNRAS Volume 2 [1931] ; 2 ;  >
+    au < doNotProcess ; exists ; 1932 ; 1932 ; Geophysical Supplements to the MNRAS Volume 3 [1932] ; 3 ;  >
+    au < doNotProcess ; exists ; 1934 ; 1934 ; Geophysical Supplements to the MNRAS Volume 3 [1934] ; 3 ;  >
+    au < doNotProcess ; exists ; 1935 ; 1935 ; Geophysical Supplements to the MNRAS Volume 3 [1935] ; 3 ;  >
+    au < doNotProcess ; exists ; 1936 ; 1936 ; Geophysical Supplements to the MNRAS Volume 3 [1936] ; 3 ;  >
+    au < doNotProcess ; exists ; 1937 ; 1937 ; Geophysical Supplements to the MNRAS Volume 4 [1937] ; 4 ;  >
+    au < doNotProcess ; exists ; 1938 ; 1938 ; Geophysical Supplements to the MNRAS Volume 4 [1938] ; 4 ;  >
+    au < doNotProcess ; exists ; 1939 ; 1939 ; Geophysical Supplements to the MNRAS Volume 4 [1939] ; 4 ;  >
+    au < doNotProcess ; exists ; 1940 ; 1940 ; Geophysical Supplements to the MNRAS Volume 4 [1940] ; 4 ;  >
+    au < doNotProcess ; exists ; 1941 ; 1941 ; Geophysical Supplements to the MNRAS Volume 5 [1941] ; 5 ;  >
+    au < doNotProcess ; exists ; 1942 ; 1942 ; Geophysical Supplements to the MNRAS Volume 5 [1942] ; 5 ;  >
+    au < doNotProcess ; exists ; 1943 ; 1943 ; Geophysical Supplements to the MNRAS Volume 5 [1943] ; 5 ;  >
+    au < doNotProcess ; exists ; 1945 ; 1945 ; Geophysical Supplements to the MNRAS Volume 5 [1945] ; 5 ;  >
+    au < doNotProcess ; exists ; 1947 ; 1947 ; Geophysical Supplements to the MNRAS Volume 5 [1947] ; 5 ;  >
+    au < doNotProcess ; exists ; 1948 ; 1948 ; Geophysical Supplements to the MNRAS Volume 5 [1948] ; 5 ;  >
+    au < doNotProcess ; exists ; 1949 ; 1949 ; Geophysical Supplements to the MNRAS Volume 5 [1949] ; 5 ;  >
+    au < doNotProcess ; exists ; 1951 ; 1951 ; Geophysical Supplements to the MNRAS Volume 6 [1951] ; 6 ;  >
+    au < doNotProcess ; exists ; 1952 ; 1952 ; Geophysical Supplements to the MNRAS Volume 6 [1952] ; 6 ;  >
+    au < doNotProcess ; exists ; 1953 ; 1953 ; Geophysical Supplements to the MNRAS Volume 6 [1953] ; 6 ;  >
+    au < doNotProcess ; exists ; 1954 ; 1954 ; Geophysical Supplements to the MNRAS Volume 6 [1954] ; 6 ;  >
+    au < doNotProcess ; exists ; 1955 ; 1955 ; Geophysical Supplements to the MNRAS Volume 7 [1955] ; 7 ;  >
+    au < doNotProcess ; exists ; 1956 ; 1956 ; Geophysical Supplements to the MNRAS Volume 7 [1956] ; 7 ;  >
+    au < doNotProcess ; exists ; 1957 ; 1957 ; Geophysical Supplements to the MNRAS Volume 7 [1957] ; 7 ;  >
 
   }
 
@@ -6377,46 +6362,45 @@
   {
 
     title <
-      name = ICSID Review - Foreign Investment Law Journal ;
+      name = ICSID Review: Foreign Investment Law Journal ;
       issn = 0258-3690 ;
       eissn = 2049-1999
     >
 
     param[journal_id] = icsidreview
 
-    #this title was ONLY in the publisher listing
-    au < doNotProcess ; exists ; 1986 ; 1986 ; ICSID Review - Foreign Investment Law Journal Volume 1 ; 1 ;  >
-    au < doNotProcess ; exists ; 1987 ; 1987 ; ICSID Review - Foreign Investment Law Journal Volume 2 ; 2 ;  >
-    au < doNotProcess ; exists ; 1988 ; 1988 ; ICSID Review - Foreign Investment Law Journal Volume 3 ; 3 ;  >
-    au < doNotProcess ; exists ; 1989 ; 1989 ; ICSID Review - Foreign Investment Law Journal Volume 4 ; 4 ;  >
-    au < doNotProcess ; exists ; 1990 ; 1990 ; ICSID Review - Foreign Investment Law Journal Volume 5 ; 5 ;  >
-    au < doNotProcess ; exists ; 1991 ; 1991 ; ICSID Review - Foreign Investment Law Journal Volume 6 ; 6 ;  >
-    au < doNotProcess ; exists ; 1992 ; 1992 ; ICSID Review - Foreign Investment Law Journal Volume 7 ; 7 ;  >
-    au < doNotProcess ; exists ; 1993 ; 1993 ; ICSID Review - Foreign Investment Law Journal Volume 8 ; 8 ;  >
-    au < doNotProcess ; exists ; 1994 ; 1994 ; ICSID Review - Foreign Investment Law Journal Volume 9 ; 9 ;  >
-    au < doNotProcess ; exists ; 1995 ; 1995 ; ICSID Review - Foreign Investment Law Journal Volume 10 ; 10 ;  >
-    au < doNotProcess ; exists ; 1996 ; 1996 ; ICSID Review - Foreign Investment Law Journal Volume 11 ; 11 ;  >
-    au < doNotProcess ; exists ; 1997 ; 1997 ; ICSID Review - Foreign Investment Law Journal Volume 12 ; 12 ;  >
-    au < doNotProcess ; exists ; 1998 ; 1998 ; ICSID Review - Foreign Investment Law Journal Volume 13 ; 13 ;  >
-    au < doNotProcess ; exists ; 1999 ; 1999 ; ICSID Review - Foreign Investment Law Journal Volume 14 ; 14 ;  >
-    au < doNotProcess ; exists ; 2000 ; 2000 ; ICSID Review - Foreign Investment Law Journal Volume 15 ; 15 ;  >
-    au < doNotProcess ; exists ; 2001 ; 2001 ; ICSID Review - Foreign Investment Law Journal Volume 16 ; 16 ;  >
-    au < doNotProcess ; exists ; 2002 ; 2002 ; ICSID Review - Foreign Investment Law Journal Volume 17 ; 17 ;  >
-    au < doNotProcess ; exists ; 2003 ; 2003 ; ICSID Review - Foreign Investment Law Journal Volume 18 ; 18 ;  >
-    au < doNotProcess ; exists ; 2004 ; 2004 ; ICSID Review - Foreign Investment Law Journal Volume 19 ; 19 ;  >
-    au < doNotProcess ; exists ; 2005 ; 2005 ; ICSID Review - Foreign Investment Law Journal Volume 20 ; 20 ;  >
-    au < doNotProcess ; exists ; 2006 ; 2006 ; ICSID Review - Foreign Investment Law Journal Volume 21 ; 21 ;  >
-    au < doNotProcess ; exists ; 2007 ; 2007 ; ICSID Review - Foreign Investment Law Journal Volume 22 ; 22 ;  >
-    au < manifest ; exists ; 2008 ; 2008 ; ICSID Review - Foreign Investment Law Journal Volume 23 ; 23 ;  >
-    au < manifest ; exists ; 2009 ; 2009 ; ICSID Review - Foreign Investment Law Journal Volume 24 ; 24 ;  >
-    au < manifest ; exists ; 2010 ; 2010 ; ICSID Review - Foreign Investment Law Journal Volume 25 ; 25 ;  >
-    au < manifest ; exists ; 2011 ; 2011 ; ICSID Review - Foreign Investment Law Journal Volume 26 ; 26 ;  >
-    au < manifest ; exists ; 2012 ; 2012 ; ICSID Review - Foreign Investment Law Journal Volume 27 ; 27 ;  >
-    au < manifest ; exists ; 2013 ; 2013 ; ICSID Review - Foreign Investment Law Journal Volume 28 ; 28 ;  >
-    au < manifest ; exists ; 2014 ; 2014 ; ICSID Review - Foreign Investment Law Journal Volume 29 ; 29 ;  >
-    au < manifest ; exists ; 2015 ; 2015 ; ICSID Review - Foreign Investment Law Journal Volume 30 ; 30 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; ICSID Review - Foreign Investment Law Journal Volume 31 ; 31 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; ICSID Review - Foreign Investment Law Journal Volume 32 ; 32 ;  >
+    au < doNotProcess ; exists ; 1986 ; 1986 ; ICSID Review: Foreign Investment Law Journal Volume 1 ; 1 ;  >
+    au < doNotProcess ; exists ; 1987 ; 1987 ; ICSID Review: Foreign Investment Law Journal Volume 2 ; 2 ;  >
+    au < doNotProcess ; exists ; 1988 ; 1988 ; ICSID Review: Foreign Investment Law Journal Volume 3 ; 3 ;  >
+    au < doNotProcess ; exists ; 1989 ; 1989 ; ICSID Review: Foreign Investment Law Journal Volume 4 ; 4 ;  >
+    au < doNotProcess ; exists ; 1990 ; 1990 ; ICSID Review: Foreign Investment Law Journal Volume 5 ; 5 ;  >
+    au < doNotProcess ; exists ; 1991 ; 1991 ; ICSID Review: Foreign Investment Law Journal Volume 6 ; 6 ;  >
+    au < doNotProcess ; exists ; 1992 ; 1992 ; ICSID Review: Foreign Investment Law Journal Volume 7 ; 7 ;  >
+    au < doNotProcess ; exists ; 1993 ; 1993 ; ICSID Review: Foreign Investment Law Journal Volume 8 ; 8 ;  >
+    au < doNotProcess ; exists ; 1994 ; 1994 ; ICSID Review: Foreign Investment Law Journal Volume 9 ; 9 ;  >
+    au < doNotProcess ; exists ; 1995 ; 1995 ; ICSID Review: Foreign Investment Law Journal Volume 10 ; 10 ;  >
+    au < doNotProcess ; exists ; 1996 ; 1996 ; ICSID Review: Foreign Investment Law Journal Volume 11 ; 11 ;  >
+    au < doNotProcess ; exists ; 1997 ; 1997 ; ICSID Review: Foreign Investment Law Journal Volume 12 ; 12 ;  >
+    au < doNotProcess ; exists ; 1998 ; 1998 ; ICSID Review: Foreign Investment Law Journal Volume 13 ; 13 ;  >
+    au < doNotProcess ; exists ; 1999 ; 1999 ; ICSID Review: Foreign Investment Law Journal Volume 14 ; 14 ;  >
+    au < doNotProcess ; exists ; 2000 ; 2000 ; ICSID Review: Foreign Investment Law Journal Volume 15 ; 15 ;  >
+    au < doNotProcess ; exists ; 2001 ; 2001 ; ICSID Review: Foreign Investment Law Journal Volume 16 ; 16 ;  >
+    au < doNotProcess ; exists ; 2002 ; 2002 ; ICSID Review: Foreign Investment Law Journal Volume 17 ; 17 ;  >
+    au < doNotProcess ; exists ; 2003 ; 2003 ; ICSID Review: Foreign Investment Law Journal Volume 18 ; 18 ;  >
+    au < doNotProcess ; exists ; 2004 ; 2004 ; ICSID Review: Foreign Investment Law Journal Volume 19 ; 19 ;  >
+    au < doNotProcess ; exists ; 2005 ; 2005 ; ICSID Review: Foreign Investment Law Journal Volume 20 ; 20 ;  >
+    au < doNotProcess ; exists ; 2006 ; 2006 ; ICSID Review: Foreign Investment Law Journal Volume 21 ; 21 ;  >
+    au < doNotProcess ; exists ; 2007 ; 2007 ; ICSID Review: Foreign Investment Law Journal Volume 22 ; 22 ;  >
+    au < manifest ; exists ; 2008 ; 2008 ; ICSID Review: Foreign Investment Law Journal Volume 23 ; 23 ;  >
+    au < manifest ; exists ; 2009 ; 2009 ; ICSID Review: Foreign Investment Law Journal Volume 24 ; 24 ;  >
+    au < manifest ; exists ; 2010 ; 2010 ; ICSID Review: Foreign Investment Law Journal Volume 25 ; 25 ;  >
+    au < manifest ; exists ; 2011 ; 2011 ; ICSID Review: Foreign Investment Law Journal Volume 26 ; 26 ;  >
+    au < manifest ; exists ; 2012 ; 2012 ; ICSID Review: Foreign Investment Law Journal Volume 27 ; 27 ;  >
+    au < manifest ; exists ; 2013 ; 2013 ; ICSID Review: Foreign Investment Law Journal Volume 28 ; 28 ;  >
+    au < manifest ; exists ; 2014 ; 2014 ; ICSID Review: Foreign Investment Law Journal Volume 29 ; 29 ;  >
+    au < manifest ; exists ; 2015 ; 2015 ; ICSID Review: Foreign Investment Law Journal Volume 30 ; 30 ;  >
+    au < manifest ; exists ; 2016 ; 2016 ; ICSID Review: Foreign Investment Law Journal Volume 31 ; 31 ;  >
+    au < manifest ; exists ; 2017 ; 2017 ; ICSID Review: Foreign Investment Law Journal Volume 32 ; 32 ;  >
 
   }
 
@@ -10930,7 +10914,7 @@
   {
 
     title <
-      name = Journal of the Law and the Biosciences ;
+      name = Journal of Law and the Biosciences ;
       eissn = 2053-9711
     >
 
@@ -14112,19 +14096,19 @@
   {
 
     title <
-      name = Progress of Theoretical and Experimental Physics ;
+      name = Progress of Theoretical and Experimental Physics (PTEP) ;
       eissn = 2050-3911 ;
       issnl = 2050-3911
     >
 
     param[journal_id] = ptep
 
-    au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Progress of Theoretical and Experimental Physics Volume 2012 ; 2012 ;  >
-    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Progress of Theoretical and Experimental Physics Volume 2013 ; 2013 ;  >
-    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Progress of Theoretical and Experimental Physics Volume 2014 ; 2014 ;  >
-    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Progress of Theoretical and Experimental Physics Volume 2015 ; 2015 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; Progress of Theoretical and Experimental Physics Volume 2016 ; 2016 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Progress of Theoretical and Experimental Physics Volume 2017 ; 2017 ;  >
+    au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2012 ; 2012 ;  >
+    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2013 ; 2013 ;  >
+    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2014 ; 2014 ;  >
+    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2015 ; 2015 ;  >
+    au < manifest ; exists ; 2016 ; 2016 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2016 ; 2016 ;  >
+    au < manifest ; exists ; 2017 ; 2017 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2017 ; 2017 ;  >
 
   }
 
@@ -19239,11 +19223,10 @@
 
   }
 
-  #Publisher and previous TDB differ on title - Uniform Law Review vs Uniform Law Review - Revue de droit uniforme 
   {
 
     title <
-      name = Uniform Law Review ;
+      name = Uniform Law Review - Revue de droit uniforme ;
       issn = 1124-3694 ;
       eissn = 2050-9065 ;
       issnl = 1124-3694
@@ -19251,48 +19234,48 @@
 
     param[journal_id] = ulr
 
-    au < doNotProcess ; exists ; 1973 ; 1973 ; Uniform Law Review Volume os-1 ; os-1 ;  >
-    au < doNotProcess ; exists ; 1974 ; 1974 ; Uniform Law Review Volume os-2 ; os-2 ;  >
-    au < doNotProcess ; exists ; 1975 ; 1975 ; Uniform Law Review Volume os-3 ; os-3 ;  >
-    au < doNotProcess ; exists ; 1976 ; 1976 ; Uniform Law Review Volume os-4 ; os-4 ;  >
-    au < doNotProcess ; exists ; 1978 ; 1978 ; Uniform Law Review Volume os-5 ; os-5 ;  >
-    au < doNotProcess ; exists ; 1979 ; 1979 ; Uniform Law Review Volume os-6-os-7 ; os-6-os-7 ;  >
-    au < doNotProcess ; exists ; 1980 ; 1980 ; Uniform Law Review Volume os-8 ; os-8 ;  >
-    au < doNotProcess ; exists ; 1981 ; 1981 ; Uniform Law Review Volume os-9 ; os-9 ;  >
-    au < doNotProcess ; exists ; 1982 ; 1982 ; Uniform Law Review Volume os-10 ; os-10 ;  >
-    au < doNotProcess ; exists ; 1983 ; 1983 ; Uniform Law Review Volume os-11 ; os-11 ;  >
-    au < doNotProcess ; exists ; 1984 ; 1984 ; Uniform Law Review Volume os-12 ; os-12 ;  >
-    au < doNotProcess ; exists ; 1985 ; 1985 ; Uniform Law Review Volume os-13 ; os-13 ;  >
-    au < doNotProcess ; exists ; 1986 ; 1986 ; Uniform Law Review Volume os-14 ; os-14 ;  >
-    au < doNotProcess ; exists ; 1988 ; 1988 ; Uniform Law Review Volume os-15 ; os-15 ;  >
-    au < doNotProcess ; exists ; 1989 ; 1989 ; Uniform Law Review Volume os-16-os-17 ; os-16-os-17 ;  >
-    au < doNotProcess ; exists ; 1990 ; 1990 ; Uniform Law Review Volume os-18 ; os-18 ;  >
-    au < doNotProcess ; exists ; 1991 ; 1991 ; Uniform Law Review Volume os-19 ; os-19 ;  >
-    au < doNotProcess ; exists ; 1992 ; 1992 ; Uniform Law Review Volume os-20 ; os-20 ;  >
-    au < doNotProcess ; exists ; 1993 ; 1993 ; Uniform Law Review Volume os-21 ; os-21 ;  >
-    au < doNotProcess ; exists ; 1994 ; 1994 ; Uniform Law Review Volume os-22 ; os-22 ;  >
-    au < doNotProcess ; exists ; 1996 ; 1996 ; Uniform Law Review Volume 1 ; 1 ;  >
-    au < doNotProcess ; exists ; 1997 ; 1997 ; Uniform Law Review Volume 2 ; 2 ;  >
-    au < doNotProcess ; exists ; 1998 ; 1998 ; Uniform Law Review Volume 3 ; 3 ;  >
-    au < doNotProcess ; exists ; 1999 ; 1999 ; Uniform Law Review Volume 4 ; 4 ;  >
-    au < doNotProcess ; exists ; 2000 ; 2000 ; Uniform Law Review Volume 5 ; 5 ;  >
-    au < doNotProcess ; exists ; 2001 ; 2001 ; Uniform Law Review Volume 6 ; 6 ;  >
-    au < doNotProcess ; exists ; 2002 ; 2002 ; Uniform Law Review Volume 7 ; 7 ;  >
-    au < doNotProcess ; exists ; 2003 ; 2003 ; Uniform Law Review Volume 8 ; 8 ;  >
-    au < doNotProcess ; exists ; 2004 ; 2004 ; Uniform Law Review Volume 9 ; 9 ;  >
-    au < doNotProcess ; exists ; 2005 ; 2005 ; Uniform Law Review Volume 10 ; 10 ;  >
-    au < doNotProcess ; exists ; 2006 ; 2006 ; Uniform Law Review Volume 11 ; 11 ;  >
-    au < doNotProcess ; exists ; 2007 ; 2007 ; Uniform Law Review Volume 12 ; 12 ;  >
-    au < manifest ; exists ; 2008 ; 2008 ; Uniform Law Review Volume 13 ; 13 ;  >
-    au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Uniform Law Review Volume 14 ; 14 ;  >
-    au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Uniform Law Review Volume 15 ; 15 ;  >
-    au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Uniform Law Review Volume 16 ; 16 ;  >
-    au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Uniform Law Review Volume 17 ; 17 ;  >
-    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Uniform Law Review Volume 18 ; 18 ;  >
-    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Uniform Law Review Volume 19 ; 19 ;  >
-    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Uniform Law Review Volume 20 ; 20 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; Uniform Law Review Volume 21 ; 21 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Uniform Law Review Volume 22 ; 22 ;  >
+    au < doNotProcess ; exists ; 1973 ; 1973 ; Uniform Law Review - Revue de droit uniforme Volume os-1 ; os-1 ;  >
+    au < doNotProcess ; exists ; 1974 ; 1974 ; Uniform Law Review - Revue de droit uniforme Volume os-2 ; os-2 ;  >
+    au < doNotProcess ; exists ; 1975 ; 1975 ; Uniform Law Review - Revue de droit uniforme Volume os-3 ; os-3 ;  >
+    au < doNotProcess ; exists ; 1976 ; 1976 ; Uniform Law Review - Revue de droit uniforme Volume os-4 ; os-4 ;  >
+    au < doNotProcess ; exists ; 1978 ; 1978 ; Uniform Law Review - Revue de droit uniforme Volume os-5 ; os-5 ;  >
+    au < doNotProcess ; exists ; 1979 ; 1979 ; Uniform Law Review - Revue de droit uniforme Volume os-6-os-7 ; os-6-os-7 ;  >
+    au < doNotProcess ; exists ; 1980 ; 1980 ; Uniform Law Review - Revue de droit uniforme Volume os-8 ; os-8 ;  >
+    au < doNotProcess ; exists ; 1981 ; 1981 ; Uniform Law Review - Revue de droit uniforme Volume os-9 ; os-9 ;  >
+    au < doNotProcess ; exists ; 1982 ; 1982 ; Uniform Law Review - Revue de droit uniforme Volume os-10 ; os-10 ;  >
+    au < doNotProcess ; exists ; 1983 ; 1983 ; Uniform Law Review - Revue de droit uniforme Volume os-11 ; os-11 ;  >
+    au < doNotProcess ; exists ; 1984 ; 1984 ; Uniform Law Review - Revue de droit uniforme Volume os-12 ; os-12 ;  >
+    au < doNotProcess ; exists ; 1985 ; 1985 ; Uniform Law Review - Revue de droit uniforme Volume os-13 ; os-13 ;  >
+    au < doNotProcess ; exists ; 1986 ; 1986 ; Uniform Law Review - Revue de droit uniforme Volume os-14 ; os-14 ;  >
+    au < doNotProcess ; exists ; 1988 ; 1988 ; Uniform Law Review - Revue de droit uniforme Volume os-15 ; os-15 ;  >
+    au < doNotProcess ; exists ; 1989 ; 1989 ; Uniform Law Review - Revue de droit uniforme Volume os-16-os-17 ; os-16-os-17 ;  >
+    au < doNotProcess ; exists ; 1990 ; 1990 ; Uniform Law Review - Revue de droit uniforme Volume os-18 ; os-18 ;  >
+    au < doNotProcess ; exists ; 1991 ; 1991 ; Uniform Law Review - Revue de droit uniforme Volume os-19 ; os-19 ;  >
+    au < doNotProcess ; exists ; 1992 ; 1992 ; Uniform Law Review - Revue de droit uniforme Volume os-20 ; os-20 ;  >
+    au < doNotProcess ; exists ; 1993 ; 1993 ; Uniform Law Review - Revue de droit uniforme Volume os-21 ; os-21 ;  >
+    au < doNotProcess ; exists ; 1994 ; 1994 ; Uniform Law Review - Revue de droit uniforme Volume os-22 ; os-22 ;  >
+    au < doNotProcess ; exists ; 1996 ; 1996 ; Uniform Law Review - Revue de droit uniforme Volume 1 ; 1 ;  >
+    au < doNotProcess ; exists ; 1997 ; 1997 ; Uniform Law Review - Revue de droit uniforme Volume 2 ; 2 ;  >
+    au < doNotProcess ; exists ; 1998 ; 1998 ; Uniform Law Review - Revue de droit uniforme Volume 3 ; 3 ;  >
+    au < doNotProcess ; exists ; 1999 ; 1999 ; Uniform Law Review - Revue de droit uniforme Volume 4 ; 4 ;  >
+    au < doNotProcess ; exists ; 2000 ; 2000 ; Uniform Law Review - Revue de droit uniforme Volume 5 ; 5 ;  >
+    au < doNotProcess ; exists ; 2001 ; 2001 ; Uniform Law Review - Revue de droit uniforme Volume 6 ; 6 ;  >
+    au < doNotProcess ; exists ; 2002 ; 2002 ; Uniform Law Review - Revue de droit uniforme Volume 7 ; 7 ;  >
+    au < doNotProcess ; exists ; 2003 ; 2003 ; Uniform Law Review - Revue de droit uniforme Volume 8 ; 8 ;  >
+    au < doNotProcess ; exists ; 2004 ; 2004 ; Uniform Law Review - Revue de droit uniforme Volume 9 ; 9 ;  >
+    au < doNotProcess ; exists ; 2005 ; 2005 ; Uniform Law Review - Revue de droit uniforme Volume 10 ; 10 ;  >
+    au < doNotProcess ; exists ; 2006 ; 2006 ; Uniform Law Review - Revue de droit uniforme Volume 11 ; 11 ;  >
+    au < doNotProcess ; exists ; 2007 ; 2007 ; Uniform Law Review - Revue de droit uniforme Volume 12 ; 12 ;  >
+    au < manifest ; exists ; 2008 ; 2008 ; Uniform Law Review - Revue de droit uniforme Volume 13 ; 13 ;  >
+    au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Uniform Law Review - Revue de droit uniforme Volume 14 ; 14 ;  >
+    au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Uniform Law Review - Revue de droit uniforme Volume 15 ; 15 ;  >
+    au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Uniform Law Review - Revue de droit uniforme Volume 16 ; 16 ;  >
+    au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Uniform Law Review - Revue de droit uniforme Volume 17 ; 17 ;  >
+    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Uniform Law Review - Revue de droit uniforme Volume 18 ; 18 ;  >
+    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Uniform Law Review - Revue de droit uniforme Volume 19 ; 19 ;  >
+    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Uniform Law Review - Revue de droit uniforme Volume 20 ; 20 ;  >
+    au < manifest ; exists ; 2016 ; 2016 ; Uniform Law Review - Revue de droit uniforme Volume 21 ; 21 ;  >
+    au < manifest ; exists ; 2017 ; 2017 ; Uniform Law Review - Revue de droit uniforme Volume 22 ; 22 ;  >
 
   }
 

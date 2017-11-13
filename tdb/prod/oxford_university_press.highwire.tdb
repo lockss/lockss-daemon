@@ -2325,7 +2325,7 @@
   {
 
     title <
-      name = Bioscience Horizons: The National Undergraduate Research Journal ;
+      name = Bioscience Horizons: The International Journal of Student Research ;
       eissn = 1754-7431 ;
       issnl = 1754-7431
     >
@@ -2336,15 +2336,15 @@
     param[base_url] = http://biohorizons.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; down ; 2010 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; down ; 2011 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; down ; 2012 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; down ; 2013 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; down ; 2014 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; down ; 2015 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2016 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; Bioscience Horizons: The International Journal of Student Research Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; Bioscience Horizons: The International Journal of Student Research Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; down ; 2010 ; Bioscience Horizons: The International Journal of Student Research Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; down ; 2011 ; Bioscience Horizons: The International Journal of Student Research Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; down ; 2012 ; Bioscience Horizons: The International Journal of Student Research Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; down ; 2013 ; Bioscience Horizons: The International Journal of Student Research Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; down ; 2014 ; Bioscience Horizons: The International Journal of Student Research Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; down ; 2015 ; Bioscience Horizons: The International Journal of Student Research Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2016 ; Bioscience Horizons: The International Journal of Student Research Volume 9 ; 9 >
 
     }
 
@@ -13935,7 +13935,7 @@
   {
 
     title <
-      name = Journal of the Law and the Biosciences ;
+      name = Journal of Law and the Biosciences ;
       eissn = 2053-9711
     >
 
@@ -13945,9 +13945,9 @@
     param[base_url] = http://jlb.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; down ; 2014 ; Journal of the Law and the Biosciences Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; down ; 2015 ; Journal of the Law and the Biosciences Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2016 ; Journal of the Law and the Biosciences Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; down ; 2014 ; Journal of Law and the Biosciences Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; down ; 2015 ; Journal of Law and the Biosciences Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2016 ; Journal of Law and the Biosciences Volume 3 ; 3 >
 
     }
 
@@ -15788,7 +15788,7 @@
   {
 
     title <
-      name = The Leo Baeck Institute Yearbook ;
+      name = The Leo Baeck Institute Year Book ;
       issn = 0075-8744 ;
       eissn = 1758-437X ;
       issnl = 0075-8744
@@ -15800,67 +15800,67 @@
     param[base_url] = http://leobaeck.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; doNotProcess ; 1956 ; The Leo Baeck Institute Yearbook Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1957 ; The Leo Baeck Institute Yearbook Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1958 ; The Leo Baeck Institute Yearbook Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1959 ; The Leo Baeck Institute Yearbook Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1960 ; The Leo Baeck Institute Yearbook Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1961 ; The Leo Baeck Institute Yearbook Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1962 ; The Leo Baeck Institute Yearbook Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1963 ; The Leo Baeck Institute Yearbook Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1964 ; The Leo Baeck Institute Yearbook Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1965 ; The Leo Baeck Institute Yearbook Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1966 ; The Leo Baeck Institute Yearbook Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1967 ; The Leo Baeck Institute Yearbook Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1968 ; The Leo Baeck Institute Yearbook Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1969 ; The Leo Baeck Institute Yearbook Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1970 ; The Leo Baeck Institute Yearbook Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1971 ; The Leo Baeck Institute Yearbook Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1972 ; The Leo Baeck Institute Yearbook Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1973 ; The Leo Baeck Institute Yearbook Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1974 ; The Leo Baeck Institute Yearbook Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1975 ; The Leo Baeck Institute Yearbook Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1976 ; The Leo Baeck Institute Yearbook Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1977 ; The Leo Baeck Institute Yearbook Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1978 ; The Leo Baeck Institute Yearbook Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1979 ; The Leo Baeck Institute Yearbook Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1980 ; The Leo Baeck Institute Yearbook Volume 25 ; 25 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1981 ; The Leo Baeck Institute Yearbook Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1982 ; The Leo Baeck Institute Yearbook Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1983 ; The Leo Baeck Institute Yearbook Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1984 ; The Leo Baeck Institute Yearbook Volume 29 ; 29 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1985 ; The Leo Baeck Institute Yearbook Volume 30 ; 30 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1986 ; The Leo Baeck Institute Yearbook Volume 31 ; 31 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1987 ; The Leo Baeck Institute Yearbook Volume 32 ; 32 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1988 ; The Leo Baeck Institute Yearbook Volume 33 ; 33 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1989 ; The Leo Baeck Institute Yearbook Volume 34 ; 34 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1990 ; The Leo Baeck Institute Yearbook Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1991 ; The Leo Baeck Institute Yearbook Volume 36 ; 36 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1992 ; The Leo Baeck Institute Yearbook Volume 37 ; 37 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1993 ; The Leo Baeck Institute Yearbook Volume 38 ; 38 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1994 ; The Leo Baeck Institute Yearbook Volume 39 ; 39 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1995 ; The Leo Baeck Institute Yearbook Volume 40 ; 40 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1996 ; The Leo Baeck Institute Yearbook Volume 41 ; 41 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1997 ; The Leo Baeck Institute Yearbook Volume 42 ; 42 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1998 ; The Leo Baeck Institute Yearbook Volume 43 ; 43 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1999 ; The Leo Baeck Institute Yearbook Volume 44 ; 44 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2000 ; The Leo Baeck Institute Yearbook Volume 45 ; 45 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; The Leo Baeck Institute Yearbook Volume 46 ; 46 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; The Leo Baeck Institute Yearbook Volume 47 ; 47 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2003 ; The Leo Baeck Institute Yearbook Volume 48 ; 48 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2004 ; The Leo Baeck Institute Yearbook Volume 49 ; 49 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; The Leo Baeck Institute Yearbook Volume 50 ; 50 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; The Leo Baeck Institute Yearbook Volume 51 ; 51 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2007 ; The Leo Baeck Institute Yearbook Volume 52 ; 52 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; The Leo Baeck Institute Yearbook Volume 53 ; 53 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; The Leo Baeck Institute Yearbook Volume 54 ; 54 >
-    au < HighWirePressH20Plugin ; down ; 2010 ; The Leo Baeck Institute Yearbook Volume 55 ; 55 >
-    au < HighWirePressH20Plugin ; down ; 2011 ; The Leo Baeck Institute Yearbook Volume 56 ; 56 >
-    au < HighWirePressH20Plugin ; down ; 2012 ; The Leo Baeck Institute Yearbook Volume 57 ; 57 >
-    au < HighWirePressH20Plugin ; down ; 2013 ; The Leo Baeck Institute Yearbook Volume 58 ; 58 >
-    au < HighWirePressH20Plugin ; down ; 2014 ; The Leo Baeck Institute Yearbook Volume 59 ; 59 >
-    au < HighWirePressH20Plugin ; down ; 2015 ; The Leo Baeck Institute Yearbook Volume 60 ; 60 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2016 ; The Leo Baeck Institute Yearbook Volume 61 ; 61 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1956 ; The Leo Baeck Institute Year Book Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1957 ; The Leo Baeck Institute Year Book Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1958 ; The Leo Baeck Institute Year Book Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1959 ; The Leo Baeck Institute Year Book Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1960 ; The Leo Baeck Institute Year Book Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1961 ; The Leo Baeck Institute Year Book Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1962 ; The Leo Baeck Institute Year Book Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1963 ; The Leo Baeck Institute Year Book Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1964 ; The Leo Baeck Institute Year Book Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1965 ; The Leo Baeck Institute Year Book Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1966 ; The Leo Baeck Institute Year Book Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1967 ; The Leo Baeck Institute Year Book Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1968 ; The Leo Baeck Institute Year Book Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1969 ; The Leo Baeck Institute Year Book Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1970 ; The Leo Baeck Institute Year Book Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1971 ; The Leo Baeck Institute Year Book Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1972 ; The Leo Baeck Institute Year Book Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1973 ; The Leo Baeck Institute Year Book Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1974 ; The Leo Baeck Institute Year Book Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1975 ; The Leo Baeck Institute Year Book Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1976 ; The Leo Baeck Institute Year Book Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1977 ; The Leo Baeck Institute Year Book Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1978 ; The Leo Baeck Institute Year Book Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1979 ; The Leo Baeck Institute Year Book Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1980 ; The Leo Baeck Institute Year Book Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1981 ; The Leo Baeck Institute Year Book Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1982 ; The Leo Baeck Institute Year Book Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1983 ; The Leo Baeck Institute Year Book Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1984 ; The Leo Baeck Institute Year Book Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1985 ; The Leo Baeck Institute Year Book Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1986 ; The Leo Baeck Institute Year Book Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1987 ; The Leo Baeck Institute Year Book Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1988 ; The Leo Baeck Institute Year Book Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1989 ; The Leo Baeck Institute Year Book Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1990 ; The Leo Baeck Institute Year Book Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1991 ; The Leo Baeck Institute Year Book Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1992 ; The Leo Baeck Institute Year Book Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1993 ; The Leo Baeck Institute Year Book Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1994 ; The Leo Baeck Institute Year Book Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1995 ; The Leo Baeck Institute Year Book Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1996 ; The Leo Baeck Institute Year Book Volume 41 ; 41 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1997 ; The Leo Baeck Institute Year Book Volume 42 ; 42 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1998 ; The Leo Baeck Institute Year Book Volume 43 ; 43 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1999 ; The Leo Baeck Institute Year Book Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2000 ; The Leo Baeck Institute Year Book Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; The Leo Baeck Institute Year Book Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; The Leo Baeck Institute Year Book Volume 47 ; 47 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2003 ; The Leo Baeck Institute Year Book Volume 48 ; 48 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2004 ; The Leo Baeck Institute Year Book Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; The Leo Baeck Institute Year Book Volume 50 ; 50 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; The Leo Baeck Institute Year Book Volume 51 ; 51 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2007 ; The Leo Baeck Institute Year Book Volume 52 ; 52 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; The Leo Baeck Institute Year Book Volume 53 ; 53 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; The Leo Baeck Institute Year Book Volume 54 ; 54 >
+    au < HighWirePressH20Plugin ; down ; 2010 ; The Leo Baeck Institute Year Book Volume 55 ; 55 >
+    au < HighWirePressH20Plugin ; down ; 2011 ; The Leo Baeck Institute Year Book Volume 56 ; 56 >
+    au < HighWirePressH20Plugin ; down ; 2012 ; The Leo Baeck Institute Year Book Volume 57 ; 57 >
+    au < HighWirePressH20Plugin ; down ; 2013 ; The Leo Baeck Institute Year Book Volume 58 ; 58 >
+    au < HighWirePressH20Plugin ; down ; 2014 ; The Leo Baeck Institute Year Book Volume 59 ; 59 >
+    au < HighWirePressH20Plugin ; down ; 2015 ; The Leo Baeck Institute Year Book Volume 60 ; 60 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2016 ; The Leo Baeck Institute Year Book Volume 61 ; 61 >
 
     }
 
