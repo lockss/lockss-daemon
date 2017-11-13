@@ -206,7 +206,7 @@ echo "---------------------"
 echo "---------------------"
 echo "GLN. Titles with no AUs"
 scripts/tdb/tdbout -j tdb/prod/*.tdb | sort -u > $tpath/AllTitles.txt
-scripts/tdb/tdbout -c publisher,title,issn,eissn tdb/prod/*.tdb | sort -u > $tpath/TitlesWAUs.txt
+scripts/tdb/tdbout --any-and-all -c publisher,title,issn,eissn tdb/prod/*.tdb | sort -u > $tpath/TitlesWAUs.txt
 echo "Total Num Titles with no AUs"
 diff $tpath/AllTitles.txt $tpath/TitlesWAUs.txt | grep "< " | wc -l
 echo "All titles"
@@ -218,7 +218,7 @@ echo "---------------------"
 echo "---------------------"
 echo "CLOCKSS. Titles with no AUs"
 scripts/tdb/tdbout -j tdb/clockssingest/*.tdb | sort -u > $tpath/AllTitlesC.txt
-scripts/tdb/tdbout -c publisher,title,issn,eissn tdb/clockssingest/*.tdb | sort -u > $tpath/TitlesWAUsC.txt
+scripts/tdb/tdbout --any-and-all -c publisher,title,issn,eissn tdb/clockssingest/*.tdb | sort -u > $tpath/TitlesWAUsC.txt
 echo "Total Num Titles with no AUs"
 diff $tpath/AllTitlesC.txt $tpath/TitlesWAUsC.txt | grep "< " | wc -l
 echo "Not incl Springer SBM, AIAA, Annual Reviews, or Medknow"
