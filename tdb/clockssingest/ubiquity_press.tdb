@@ -313,6 +313,11 @@
 
       #publisher = Stockholm University Press
 
+    au < doNotProcess ; doNotProcess ; 1999 ; 1 ; Scandinavian Journal of Disability Research Volume 1 ; 1999 ; https://www.sjdr.se/ ; >
+    au < doNotProcess ; doNotProcess ; 2000 ; 2 ; Scandinavian Journal of Disability Research Volume 2 ; 2000 ; https://www.sjdr.se/ ; >
+    au < doNotProcess ; doNotProcess ; 2001 ; 3 ; Scandinavian Journal of Disability Research Volume 3 ; 2001 ; https://www.sjdr.se/ ; >
+    au < doesNotExist ; doesNotExist ; 2002 ; 4 ; Scandinavian Journal of Disability Research Volume 4 ; 2002 ; https://www.sjdr.se/ ; >
+    au < doNotProcess ; doNotProcess ; 2003 ; 5 ; Scandinavian Journal of Disability Research Volume 5 ; 2003 ; https://www.sjdr.se/ ; >
     au < expected ; exists ; 2018 ; 20 ; Scandinavian Journal of Disability Research Volume 20 ; 2018 ; https://www.sjdr.se/ ; >
 
   }
