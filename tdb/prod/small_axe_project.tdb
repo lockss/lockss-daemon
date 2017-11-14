@@ -1,0 +1,29 @@
+{
+
+  publisher <
+    name = Small Axe Project
+  >
+
+  plugin = org.lockss.plugin.smallaxe.SmallAxePlugin
+  implicit < status ; year ; name ; param[issue] >
+  param[base_url] = http://smallaxe.net/
+
+
+  {
+    title <
+      name = SX Archipelagos ;
+      issn = 2473-2206
+    >
+    param[journal_id] = sxarchipelagos
+
+    {
+
+      au < testing ; 2016 ; SX Archipelagos Issue 01 ; 01 >
+      au < testing ; 2017 ; SX Archipelagos Issue 02 ; 02 >
+
+    }
+
+  }
+
+}
+

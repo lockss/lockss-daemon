@@ -1,0 +1,126 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>testing</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.smallaxe.SmallAxePlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Small Axe Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+    <string>1.65.0</string>
+  </entry>  
+  <entry>
+    <string>au_name</string>
+    <string>"Small Axe Plugin, Base URL %s, Journal ID %s, Issue %s", base_url, journal_id, issue</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%s%s/archive.html", base_url, journal_id</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"^%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(\?v=.+)?$", base_url</string>
+      <string>1,"^%s%s/issue%s\.html", base_url, journal_id, issue</string>
+      <!-- http://smallaxe.net/sxarchipelagos/issue01/scott-learning.html -->
+      <!-- http://smallaxe.net/sxarchipelagos/assets/issue02/intervening-in-french.pdf -->
+      <!-- http://smallaxe.net/sxarchipelagos/images/issue02/colonial-boxes.jpg -->
+      <string>1,"^%s%s/((assets|images)/)?issue%s/", base_url, journal_id, issue</string>
+      <!--  appendix - seems risky to count on specific issue in name, leave out -->
+      <!-- http://smallaxe.net/sxarchipelagos/assets/extras/issue01-bonilla-appendix.pdf -->
+      <string>1,"^%s%s/assets/extras/", base_url, journal_id</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_id</key>
+        <displayName>Journal ID</displayName>
+        <description>Journal Identifier</description>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>issue</key>
+        <displayName>Issue</displayName>
+        <description>Issue string</description>
+        <type>1</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>      
+    </list>
+  </entry>
+  <entry>
+     <string>au_substance_url_pattern</string>
+     <list>
+      <!-- http://smallaxe.net/sxarchipelagos/issue01/scott-learning.html -->
+      <!-- http://smallaxe.net/sxarchipelagos/assets/issue02/intervening-in-french.pdf -->
+        <string>1,"^%s%s/(assets/)?issue%s/[^/]+\.(pdf|html)$", base_url, journal_id, issue</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.smallaxe.SmallAxeArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.smallaxe.SmallAxeArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.smallaxe.SmallAxeHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>  
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+</map>
