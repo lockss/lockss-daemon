@@ -94,9 +94,9 @@
       >
       param[journal_id] = ital
       
-      au < exists ; 1981 ; Information Technology and Libraries Volume 14 ; 14 ; 1981 ; https://ejournals.bc.edu/ojs/ >
-      au < exists ; 2000 ; Information Technology and Libraries Volume 19 ; 19 ; 2000 ; https://ejournals.bc.edu/ojs/ >
-      au < exists ; 2004 ; Information Technology and Libraries Volume 23 ; 23 ; 2004 ; https://ejournals.bc.edu/ojs/ >
+      au < manifest ; 1981 ; Information Technology and Libraries Volume 14 ; 14 ; 1981 ; https://ejournals.bc.edu/ojs/ >
+      au < manifest ; 2000 ; Information Technology and Libraries Volume 19 ; 19 ; 2000 ; https://ejournals.bc.edu/ojs/ >
+      au < manifest ; 2004 ; Information Technology and Libraries Volume 23 ; 23 ; 2004 ; https://ejournals.bc.edu/ojs/ >
       au < released ; 2005 ; Information Technology and Libraries Volume 24 ; 24 ; 2005 ; http://ejournals.bc.edu/ojs/ >
       au < released ; 2006 ; Information Technology and Libraries Volume 25 ; 25 ; 2006 ; http://ejournals.bc.edu/ojs/ >
       au < released ; 2007 ; Information Technology and Libraries Volume 26 ; 26 ; 2007 ; http://ejournals.bc.edu/ojs/ >
@@ -372,9 +372,9 @@
 
       param[journal_id] = ijahe
 
-      au < exists ; 2014 ; International Journal of African Higher Education Volume 2014 ; 1 ; 2014 ; https://ejournals.bc.edu/ojs/ >
-      au < exists ; 2015 ; International Journal of African Higher Education Volume 2015 ; 2 ; 2015 ; https://ejournals.bc.edu/ojs/ >
-      au < exists ; 2016 ; International Journal of African Higher Education Volume 2016 ; 3 ; 2016 ; https://ejournals.bc.edu/ojs/ >
+      au < manifest ; 2014 ; International Journal of African Higher Education Volume 2014 ; 1 ; 2014 ; https://ejournals.bc.edu/ojs/ >
+      au < manifest ; 2015 ; International Journal of African Higher Education Volume 2015 ; 2 ; 2015 ; https://ejournals.bc.edu/ojs/ >
+      au < manifest ; 2016 ; International Journal of African Higher Education Volume 2016 ; 3 ; 2016 ; https://ejournals.bc.edu/ojs/ >
       au < manifest ; 2017 ; International Journal of African Higher Education Volume 2017 ; 4 ; 2017 ; https://ejournals.bc.edu/ojs/ >
 
   }
@@ -438,12 +438,12 @@
 
       param[journal_id] = jesuit
 
-      au < exists ; 2005 ; Studies in the Spirituality of Jesuits Volume 2005 ; 37 ; 2005 ; https://ejournals.bc.edu/ojs/ >
-      au < exists ; 2006 ; Studies in the Spirituality of Jesuits Volume 2006 ; 38 ; 2006 ; https://ejournals.bc.edu/ojs/ >
-      au < exists ; 2007 ; Studies in the Spirituality of Jesuits Volume 2007 ; 39 ; 2007 ; https://ejournals.bc.edu/ojs/ >
-      au < exists ; 2008 ; Studies in the Spirituality of Jesuits Volume 2008 ; 40 ; 2008 ; https://ejournals.bc.edu/ojs/ >
-      au < exists ; 2009 ; Studies in the Spirituality of Jesuits Volume 2009 ; 41 ; 2009 ; https://ejournals.bc.edu/ojs/ >
-      au < exists ; 2010 ; Studies in the Spirituality of Jesuits Volume 2010 ; 42 ; 2010 ; https://ejournals.bc.edu/ojs/ >
+      au < manifest ; 2005 ; Studies in the Spirituality of Jesuits Volume 2005 ; 37 ; 2005 ; https://ejournals.bc.edu/ojs/ >
+      au < manifest ; 2006 ; Studies in the Spirituality of Jesuits Volume 2006 ; 38 ; 2006 ; https://ejournals.bc.edu/ojs/ >
+      au < manifest ; 2007 ; Studies in the Spirituality of Jesuits Volume 2007 ; 39 ; 2007 ; https://ejournals.bc.edu/ojs/ >
+      au < manifest ; 2008 ; Studies in the Spirituality of Jesuits Volume 2008 ; 40 ; 2008 ; https://ejournals.bc.edu/ojs/ >
+      au < manifest ; 2009 ; Studies in the Spirituality of Jesuits Volume 2009 ; 41 ; 2009 ; https://ejournals.bc.edu/ojs/ >
+      au < manifest ; 2010 ; Studies in the Spirituality of Jesuits Volume 2010 ; 42 ; 2010 ; https://ejournals.bc.edu/ojs/ >
       au < testing ; 2011 ; Studies in the Spirituality of Jesuits Volume 2011 ; 43 ; 2011 ; https://ejournals.bc.edu/ojs/ >
       au < testing ; 2012 ; Studies in the Spirituality of Jesuits Volume 2012 ; 44 ; 2012 ; https://ejournals.bc.edu/ojs/ >
       au < testing ; 2013 ; Studies in the Spirituality of Jesuits Volume 2013 ; 45 ; 2013 ; https://ejournals.bc.edu/ojs/ >
