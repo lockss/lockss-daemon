@@ -8221,6 +8221,22 @@
   {
 
     title <
+      name = Journal of Burn Care & Research ;
+      issn = 1559-047X ;
+      eissn = 1559-0488 ;
+      issnl = 1559-047X
+    >
+
+    param[journal_id] = jbcr
+
+    au < expected ; exists ; 2017 ; 2017 ; Journal of Burn Care & Research Volume 38 ; 38 ;  >
+    au < expected ; exists ; 2018 ; 2018 ; Journal of Burn Care & Research Volume 39 ; 39 ;  >
+
+  }
+
+  {
+
+    title <
       name = Journal of Chromatographic Science ;
       issn = 0021-9665 ;
       eissn = 1945-239X ;
