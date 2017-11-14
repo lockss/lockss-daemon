@@ -18,7 +18,7 @@
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://aoj.uwpress.org/
       implicit < status ; year ; name ; param[volume_name] >
-      comment[notReady] = RT4567
+      #move to T&F in 2018
 
       au < released ; 2001 ; American Orthoptic Journal Volume 51 ; 51 >
       au < released ; 2002 ; American Orthoptic Journal Volume 52 ; 52 >
