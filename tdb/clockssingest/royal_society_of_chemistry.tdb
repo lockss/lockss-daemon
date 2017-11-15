@@ -367,7 +367,7 @@
       au < finished ; finished ; 2011 ; Green Chemistry Volume 13 ; 13 ; 2011 ; >
       au < finished ; frozen ; 2012 ; Green Chemistry Volume 14 ; 14 ; 2012 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2013 ; Green Chemistry Volume 15 ; 15 ; 2013 ; >
-      au < finished ; manifest ; 2014 ; Green Chemistry Volume 16 ; 16 ; 2014 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2014 ; Green Chemistry Volume 16 ; 16 ; 2014 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2015 ; Green Chemistry Volume 17 ; 17 ; 2015 ; >
       au < deepCrawl ; exists ; 2016 ; Green Chemistry Volume 18 ; 18 ; 2016 ; >
       au < crawling ; exists ; 2017 ; Green Chemistry Volume 19 ; 19 ; 2017 ; >
@@ -389,7 +389,7 @@
       au < frozen ; exists ; 2011 ; Integrative Biology Volume 3 ; 3 ; 2011 ; >
       au < finished ; frozen ; 2012 ; Integrative Biology Volume 4 ; 4 ; 2012 ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2013 ; Integrative Biology Volume 5 ; 5 ; 2013 ; >
-      au < finished ; manifest ; 2014 ; Integrative Biology Volume 6 ; 6 ; 2014 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2014 ; Integrative Biology Volume 6 ; 6 ; 2014 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2015 ; Integrative Biology Volume 7 ; 7 ; 2015 ; >
       au < deepCrawl ; exists ; 2016 ; Integrative Biology Volume 8 ; 8 ; 2016 ; >
       au < crawling ; exists ; 2017 ; Integrative Biology Volume 9 ; 9 ; 2017 ; >
@@ -478,7 +478,7 @@
       au < frozen ; exists ; 2011 ; Lab on a Chip Volume 11 ; 11 ; 2011 ; >
       au < frozen ; exists ; 2012 ; Lab on a Chip Volume 12 ; 12 ; 2012 ; >
       au < frozen ; exists ; 2013 ; Lab on a Chip Volume 13 ; 13 ; 2013 ; >
-      au < finished ; manifest ; 2014 ; Lab on a Chip Volume 14 ; 14 ; 2014 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2014 ; Lab on a Chip Volume 14 ; 14 ; 2014 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2015 ; Lab on a Chip Volume 15 ; 15 ; 2015 ; >
       au < deepCrawl ; exists ; 2016 ; Lab on a Chip Volume 16 ; 16 ; 2016 ; >
       au < crawling ; exists ; 2017 ; Lab on a Chip Volume 17 ; 17 ; 2017 ; >
@@ -2066,7 +2066,7 @@
       au < frozen ; exists ; 2011 ; Polymer Chemistry Volume 2 ; 2 ; 2011 ; >
       au < frozen ; exists ; 2012 ; Polymer Chemistry Volume 3 ; 3 ; 2012 ; >
       au < frozen ; exists ; 2013 ; Polymer Chemistry Volume 4 ; 4 ; 2013 ; >
-      au < finished ; manifest ; 2014 ; Polymer Chemistry Volume 5 ; 5 ; 2014 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2014 ; Polymer Chemistry Volume 5 ; 5 ; 2014 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2015 ; Polymer Chemistry Volume 6 ; 6 ; 2015 ; >
       au < deepCrawl ; exists ; 2016 ; Polymer Chemistry Volume 7 ; 7 ; 2016 ; >
       au < crawling ; exists ; 2017 ; Polymer Chemistry Volume 8 ; 8 ; 2017 ; >
@@ -2350,7 +2350,7 @@
 
       au < frozen ; exists ; 2012 ; Toxicology Research Volume 1 ; 1 ; 2012 ; >
       au < frozen ; exists ; 2013 ; Toxicology Research Volume 2 ; 2 ; 2013 ; >
-      au < finished ; manifest ; 2014 ; Toxicology Research Volume 3 ; 3 ; 2014 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2014 ; Toxicology Research Volume 3 ; 3 ; 2014 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2015 ; Toxicology Research Volume 4 ; 4 ; 2015 ; >
       au < frozen ; exists ; 2016 ; Toxicology Research Volume 5 ; 5 ; 2016 ; >
       au < crawling ; exists ; 2017 ; Toxicology Research Volume 6 ; 6 ; 2017 ; >
