@@ -141,15 +141,15 @@ public class TestTaylorAndFrancisArchivalUnit extends LockssTestCase {
   
   
   private static final String gln_user_msg = 
-      "Atypon Systems hosts this archival unit (AU) " +
-          "and requires that you <a " +
-          "href=\'http://www.tandfonline.com/action/institutionLockssIpChange\'>" +
-          "register the IP address of this LOCKSS box in your institutional account as" +
-          " a crawler</a> before allowing your LOCKSS box to harvest this AU." +
-          " Failure to comply with this publisher requirement may trigger crawler traps" + 
-          " on the Atypon Systems platform, and your LOCKSS box or your entire institution" +
-          " may be temporarily banned from accessing the site. You only need to register the IP " +
-          "address of your LOCKSS box once for all AUs published by Taylor & Francis.";
+      "Atypon Systems hosts this content and requires that you register " +
+      "the IP address of this LOCKSS box in your institutional account as a " +
+      "crawler before allowing your LOCKSS box to harvest this AU. " +
+      "Failure to comply with this publisher requirement may trigger crawler " +
+      "traps on the Atypon Systems platform, and your LOCKSS box or your entire " +
+      "institution may be temporarily banned from accessing the site. " +
+      "You only need to register the IP address of your LOCKSS box once for all " +
+      "AUs published by this publisher. Contact your publisher representative for " +
+      "information on how to register your LOCKSS box.";
 
 
   
