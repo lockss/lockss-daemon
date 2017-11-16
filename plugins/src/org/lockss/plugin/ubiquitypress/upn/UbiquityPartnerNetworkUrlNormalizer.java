@@ -40,6 +40,8 @@ import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.Logger;
 
+// subclass the BaseUrlHttpHttpsUrlNormalizer - which redirects protocol to that of declared base_url
+// and then does whatever specific "additionalNormalization that is specified
 public class UbiquityPartnerNetworkUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
   private static final Logger log = Logger.getLogger(UbiquityPartnerNetworkUrlNormalizer.class);
 
@@ -52,7 +54,7 @@ public class UbiquityPartnerNetworkUrlNormalizer extends BaseUrlHttpHttpsUrlNorm
   private static final String MANIFEST_PATH = "lockss/year/";
   
   @Override
-   public String normalizeUrl(String url,ArchivalUnit au)
+   public String additionalNormalization(String url,ArchivalUnit au)
       throws PluginException {
     if (url.endsWith("print/")) {
       return url.replace("print/", "");

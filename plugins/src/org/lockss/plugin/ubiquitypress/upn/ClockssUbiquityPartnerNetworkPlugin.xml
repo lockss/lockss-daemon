@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -17,11 +17,14 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>7</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>au_permission_url</string>
-    <string>"%sabout/", base_url</string>
+    <list>
+      <string>"%sabout/", to_http(base_url)</string>
+      <string>"%sabout/", to_https(base_url)</string>
+    </list>
   </entry>
   <entry>
     <string>plugin_name</string>

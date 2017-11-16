@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -30,7 +30,10 @@
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%slockss/year/%d", base_url, year</string>
+    <list>
+      <string>"%slockss/year/%d", to_http(base_url), year</string>
+      <string>"%slockss/year/%d", to_https(base_url), year</string>
+    </list>
   </entry>
   <entry>
     <string>au_crawlrules</string>
@@ -87,6 +90,17 @@
       </org.lockss.daemon.ConfigParamDescr>
     </list>
   </entry>
+  <!--  also for https conversion -->
+<!-- see also support in UrlNormalizer -->
+  <entry>
+    <string>plugin_url_fetcher_factory</string>
+    <string>org.lockss.plugin.base.HttpToHttpsUrlFetcherFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.base.HttpToHttpsUrlConsumerFactory</string>
+  </entry>  
+<!-- end changes for https conversion -->      
   <entry>
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkHtmlCrawlFilterFactory</string>
