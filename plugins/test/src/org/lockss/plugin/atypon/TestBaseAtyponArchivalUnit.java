@@ -526,53 +526,34 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     assertEquals(PluginName + ", Base URL http://www.apha.com/, Journal ID apha, Volume 24", au1.getName());
   }
 
-  private static final String gln_lockss_user_msg = 
-      "Atypon Systems hosts this archival unit (AU) " +
-          "and may require you to register the IP address "+
-          "of this LOCKSS box as a crawler. For more information, visit the <a " +
-          "href=\'http://www.lockss.org/support/use-a-lockss-box/adding-titles/publisher-ip-address-registration-contacts-for-global-lockss-network/\'>" +
-          "LOCKSS IP address registration page</a>.";
-
-  private static final String bq_msg = 
-      "Atypon Systems hosts this archival unit (AU) and may require you to register the IP address of " +
-          "this LOCKSS box as a crawler, by sending e-mail to <a href=\'mailto:pcoyne@qf.org.qa\'>Paul Coyne</a>. " +
-          "Failure to comply with this publisher requirement may trigger crawler traps on the Atypon Systems platform, " +
-          "and your LOCKSS box or your entire institution may be temporarily banned from accessing the site. " +
-          "You only need to register the IP address of your LOCKSS box once for all AUs published by Bloomsbury Qatar.";
-
-  private static final String default_msg_part1 = 
-      "Atypon Systems hosts this archival unit (AU) and requires " +
-          "that you <a href=\'";
-
-  private static final String default_msg_part2 =
-      "action/institutionLockssIpChange\'>register the " +
-          "IP address of this LOCKSS box in your institutional account as a " +
-          "crawler</a> before allowing your LOCKSS box to harvest this AU. " +
-          "Failure to comply with this publisher requirement may trigger crawler traps on the " +
-          "Atypon Systems platform, and your LOCKSS box or your entire institution may be " +
-          "temporarily banned from accessing the site. You only need to register the IP address " +
-          "of your LOCKSS box once for all AUs published by this publisher.";
-
-
+  private static final String GENERIC_MESSAGE = 
+      "Atypon Systems hosts this content and requires that you register " +
+      "the IP address of this LOCKSS box in your institutional account as a " +
+      "crawler before allowing your LOCKSS box to harvest this AU. " +
+      "Failure to comply with this publisher requirement may trigger crawler " +
+      "traps on the Atypon Systems platform, and your LOCKSS box or your entire " +
+      "institution may be temporarily banned from accessing the site. " +
+      "You only need to register the IP address of your LOCKSS box once for all " +
+      "AUs published by this publisher. Contact your publisher representative for " +
+      "information on how to register your LOCKSS box.";
 
   private static final String BASE_ATYPON_BASE = "http://www.BaseAtypon.org/";
-  /* test all the atypon child au_config_user_msgs
-   * by first checking the gln message either against a specific passed-in message
-   * or by making sure it contains the appropriate base-url and publisher name (to guard
-   * against cut-n-past errors
-   * and then checking that the clockss plugin has a null message
+  /* 11/15/17 - all messages have been consolidate in to one generic GLN message
+   * If GLN - use message; if CLOCKSS - should be null
+   * Leaves the option for future customization if necessary
    */
+
   public void testUserMsgs() throws Exception {
     // the default when a child doesn't set
-    testSpecificUserMsg(BASE_ATYPON_BASE, default_msg_part1 + BASE_ATYPON_BASE + default_msg_part2, 
+    testSpecificUserMsg(BASE_ATYPON_BASE, GENERIC_MESSAGE, 
        "org.lockss.plugin.atypon.BaseAtyponPlugin",
        null);
 
     //AMetSoc - points users at our web page with registration info
-    testSpecificUserMsg("http://journals.ametsoc.org/", gln_lockss_user_msg, 
+    testSpecificUserMsg("http://journals.ametsoc.org/", GENERIC_MESSAGE, 
         "org.lockss.plugin.atypon.americanmeteorologicalsociety.AMetSocPlugin",
         "org.lockss.plugin.atypon.americanmeteorologicalsociety.ClockssAMetSocPlugin");
-    // with a null msg it will verify that the message follows the form "<base_url>/action/institutionLockssIpChange"
+    // with a null msg it will verify that the message follows the GENERIC MESSAGE"
     testSpecificUserMsg("http://arc.aiaa.org/", null, 
         "org.lockss.plugin.atypon.aiaa.AIAAPlugin",
         "org.lockss.plugin.atypon.aiaa.ClockssAIAAPlugin");
@@ -591,18 +572,18 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     testSpecificUserMsg("http://ajph.aphapublications.org/", null, 
         "org.lockss.plugin.atypon.apha.AmPublicHealthAssocPlugin",
         null);
-    //arrs
-    testSpecificUserMsg("http://www.ajronline.org/", null, 
-        "org.lockss.plugin.atypon.arrs.ARRSPlugin",
-        null);
+    //arrs - deprecated
+    //testSpecificUserMsg("http://www.ajronline.org/", null, 
+    //  "org.lockss.plugin.atypon.arrs.ARRSPlugin",
+     //   null);
     //bir
     testSpecificUserMsg("http://www.birpublications.org/", null, 
         "org.lockss.plugin.atypon.bir.BIRAtyponPlugin",
         "org.lockss.plugin.atypon.bir.ClockssBIRAtyponPlugin");
-    //bloomsburyqatar - this one has a special message, which is breaking the build XXX
-//    testSpecificUserMsg("http://www.qscience.com/", bq_msg, 
-//        "org.lockss.plugin.atypon.bloomsburyqatar.BloomsburyQatarPlugin",
-//        "org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin");
+
+    testSpecificUserMsg("http://www.qscience.com/", null, 
+        "org.lockss.plugin.atypon.bloomsburyqatar.BloomsburyQatarPlugin",
+        "org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin");
     //emeraldgroup
     testSpecificUserMsg("http://www.emeraldinsight.com/", null, 
         "org.lockss.plugin.atypon.emeraldgroup.EmeraldGroupPlugin",
@@ -611,14 +592,14 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     testSpecificUserMsg("http://www.emeraldinsight.com/", null, 
         "org.lockss.plugin.atypon.emeraldgroup.EmeraldGroupBooksPlugin",
         "org.lockss.plugin.atypon.emeraldgroup.ClockssEmeraldGroupBooksPlugin");
-    //endocrine society
-    testSpecificUserMsg("http://press.endocrine.org/", null, 
-        "org.lockss.plugin.atypon.endocrinesociety.EndocrineSocietyPlugin",
-        "org.lockss.plugin.atypon.endocrinesociety.ClockssEndocrineSocietyPlugin");
-    //endocrine society
-    testSpecificUserMsg("http://press.endocrine.org/", null, 
-        "org.lockss.plugin.atypon.endocrinesociety.EndocrineSocietyBooksPlugin",
-        "org.lockss.plugin.atypon.endocrinesociety.ClockssEndocrineSocietyBooksPlugin");
+    //endocrine society - deprecated
+    //testSpecificUserMsg("http://press.endocrine.org/", null, 
+      //  "org.lockss.plugin.atypon.endocrinesociety.EndocrineSocietyPlugin",
+      //  "org.lockss.plugin.atypon.endocrinesociety.ClockssEndocrineSocietyPlugin");
+    //endocrine society - deprecated
+    //testSpecificUserMsg("http://press.endocrine.org/", null, 
+    //    "org.lockss.plugin.atypon.endocrinesociety.EndocrineSocietyBooksPlugin",
+    //    "org.lockss.plugin.atypon.endocrinesociety.ClockssEndocrineSocietyBooksPlugin");
     //futurescience
     testSpecificUserMsg("http://www.future-science.com/", null,
         "org.lockss.plugin.atypon.futurescience.FutureSciencePlugin",
@@ -639,24 +620,24 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     testSpecificUserMsg("http://online.liverpooluniversitypress.co.uk/", null, 
         "org.lockss.plugin.atypon.liverpool.LiverpoolBooksPlugin",
         "org.lockss.plugin.atypon.liverpool.ClockssLiverpoolBooksPlugin");
-    //maney
-    testSpecificUserMsg("http://www.maneyonline.com/", null, 
-        "org.lockss.plugin.atypon.maney.ManeyAtyponPlugin",
-        "org.lockss.plugin.atypon.maney.ClockssManeyAtyponPlugin");
+    //maney - deprecated
+    //testSpecificUserMsg("http://www.maneyonline.com/", null, 
+      //  "org.lockss.plugin.atypon.maney.ManeyAtyponPlugin",
+      //  "org.lockss.plugin.atypon.maney.ClockssManeyAtyponPlugin");
     //mark allen group
     testSpecificUserMsg("http://www.magonlinelibrary.com/", null, 
         "org.lockss.plugin.atypon.markallen.MarkAllenPlugin",
         "org.lockss.plugin.atypon.markallen.ClockssMarkAllenPlugin");
     
     //Massachusetts Medical - uses the BaseAtypon default with its base_url
-    testSpecificUserMsg("http://www.nejm.org/", default_msg_part1 + "http://www.nejm.org/" + default_msg_part2, 
+    testSpecificUserMsg("http://www.nejm.org/", GENERIC_MESSAGE, 
        "org.lockss.plugin.atypon.massachusettsmedicalsociety.MassachusettsMedicalSocietyPlugin",
        null);
     
-    //multiscience
-    testSpecificUserMsg("http://multi-science.atypon.com/", null, 
-        "org.lockss.plugin.atypon.multiscience.MultiSciencePlugin",
-        "org.lockss.plugin.atypon.multiscience.ClockssMultiSciencePlugin");    
+    //multiscience - deprecated
+    //testSpecificUserMsg("http://multi-science.atypon.com/", null, 
+      //  "org.lockss.plugin.atypon.multiscience.MultiSciencePlugin",
+      //  "org.lockss.plugin.atypon.multiscience.ClockssMultiSciencePlugin");    
     //nrcresearch
     testSpecificUserMsg("http://www.nrcresearchpress.com/", null, 
         null,
@@ -780,11 +761,9 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
       if (!StringUtils.isEmpty(full_msg)) {
         assertEquals(full_msg, gAU.getProperties().getString(DefinableArchivalUnit.KEY_AU_CONFIG_USER_MSG, null));
       } else {
-        // check that the message includes "<base_url>/action/institutionLockssIpChange" and publisher name 
+        // check that the message includes "<base_url>/action/institutionLockssIpChange" and publisher name
         String config_msg = gAU.getProperties().getString(DefinableArchivalUnit.KEY_AU_CONFIG_USER_MSG, null);
-        log.debug3("config msg: " + config_msg);
-        assertTrue(config_msg.contains(plugin_base_url + "action/institutionLockssIpChange"));
-        assertTrue(config_msg.contains(pluginPubMap.get(plugin_base_url)));
+        assertEquals(GENERIC_MESSAGE, config_msg);
       }
     }
 

@@ -18,7 +18,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>82</string>
+    <string>83</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -325,11 +325,11 @@
       <string>://[^/]+/na[0-9]+/home/(readonly|literatum)/publisher/.*(/covergifs/.*\.jpg|\.fp\.png(_v[0-9]+)?)$, 0</string>
     </list>
   </entry>
-  <!-- GLN children require a plugin_au_config_user_msg, which is a printf -->
-  <!-- Here is a default version, but plugins may need to customize -->
+  <!-- GLN children require a plugin_au_config_user_msg, which can be a printf -->
+  <!-- Here is a default version, but plugins may choose to customize -->
   <!-- CLOCKSS children must turn it off-->
   <entry>
     <string>plugin_au_config_user_msg</string>
-    <string>"Atypon Systems hosts this archival unit (AU) and requires that you &lt;a href=&apos;%saction/institutionLockssIpChange&apos;&gt;register the IP address of this LOCKSS box in your institutional account as a crawler&lt;/a&gt; before allowing your LOCKSS box to harvest this AU. Failure to comply with this publisher requirement may trigger crawler traps on the Atypon Systems platform, and your LOCKSS box or your entire institution may be temporarily banned from accessing the site. You only need to register the IP address of your LOCKSS box once for all AUs published by this publisher.", base_url</string>
+    <string>"Atypon Systems hosts this content and requires that you register the IP address of this LOCKSS box in your institutional account as a crawler before allowing your LOCKSS box to harvest this AU. Failure to comply with this publisher requirement may trigger crawler traps on the Atypon Systems platform, and your LOCKSS box or your entire institution may be temporarily banned from accessing the site. You only need to register the IP address of your LOCKSS box once for all AUs published by this publisher. Contact your publisher representative for information on how to register your LOCKSS box."</string>
   </entry>
 </map>

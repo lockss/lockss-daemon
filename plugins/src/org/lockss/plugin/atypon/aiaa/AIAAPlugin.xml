@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>27</string>
+    <string>28</string>
   </entry>
 <!--  updating out of sync with parent, must have own feature_version_map -->  
   <entry>
@@ -39,7 +39,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>78</string>
+    <string>83</string>
   </entry>
   <!--  override start url from parent to support http to https conversion -->
   <entry>
@@ -83,8 +83,4 @@
     <string>text/html_link_extractor_factory</string>
     <string>org.lockss.plugin.atypon.aiaa.AIAAHtmlLinkExtractorFactory</string>
   </entry> 
-  <entry>
-    <string>plugin_au_config_user_msg</string>
-    <string>Atypon Systems hosts this archival unit (AU) and requires that you &lt;a href=&apos;http://arc.aiaa.org/action/institutionLockssIpChange&apos;&gt;register the IP address of this LOCKSS box in your institutional account as a crawler&lt;/a&gt; before allowing your LOCKSS box to harvest this AU. Failure to comply with this publisher requirement may trigger crawler traps on the Atypon Systems platform, and your LOCKSS box or your entire institution may be temporarily banned from accessing the site. You only need to register the IP address of your LOCKSS box once for all AUs published by the American Institute of Aeronautics and Astronautics.</string>
-  </entry>
 </map>
