@@ -23,7 +23,7 @@
       param[journal_id] = el
       #from Vol 1 in 1965
 
-      au < crawling ; exists ; 2014 ; Electronics Letters Volume 50 ; 50 ; >
+      au < frozen ; exists ; 2014 ; Electronics Letters Volume 50 ; 50 ; >
       au < frozen ; exists ; 2015 ; Electronics Letters Volume 51 ; 51 ; >
       au < testing ; exists ; 2016 ; Electronics Letters Volume 52 ; 52 ; >
       au < crawling ; exists ; 2017 ; Electronics Letters Volume 53 ; 53 ; >
@@ -360,7 +360,7 @@
       >
       param[journal_id] = iet-rsn
       
-      au < crawling ; exists ; 2014 ; IET Radar, Sonar & Navigation Volume 8 ; 8 ; >      
+      au < frozen ; exists ; 2014 ; IET Radar, Sonar & Navigation Volume 8 ; 8 ; >      
       au < crawling ; exists ; 2015 ; IET Radar, Sonar & Navigation Volume 9 ; 9 ; >        
       au < manifest ; exists ; 2016 ; IET Radar, Sonar & Navigation Volume 10 ; 10 ; >      
       au < crawling ; exists ; 2017 ; IET Radar, Sonar & Navigation Volume 11 ; 11 ; >      
@@ -398,7 +398,7 @@
       
       au < manifest ; exists ; 2014 ; IET Science, Measurement & Technology Volume 8 ; 8 ; >      
       au < manifest ; exists ; 2015 ; IET Science, Measurement & Technology Volume 9 ; 9 ; >        
-      au < crawling ; exists ; 2016 ; IET Science, Measurement & Technology Volume 10 ; 10 ; >      
+      au < frozen ; exists ; 2016 ; IET Science, Measurement & Technology Volume 10 ; 10 ; >      
       au < manifest ; exists ; 2017 ; IET Science, Measurement & Technology Volume 11 ; 11 ; >      
      
 
@@ -452,7 +452,7 @@
       
       au < manifest ; exists ; 2014 ; IET Systems Biology Volume 8 ; 8 ; >      
       au < manifest ; exists ; 2015 ; IET Systems Biology Volume 9 ; 9 ; >        
-      au < crawling ; exists ; 2016 ; IET Systems Biology Volume 10 ; 10 ; >      
+      au < frozen ; exists ; 2016 ; IET Systems Biology Volume 10 ; 10 ; >      
       au < manifest ; exists ; 2017 ; IET Systems Biology Volume 11 ; 11 ; >      
      
 
@@ -470,7 +470,7 @@
       
       au < manifest ; exists ; 2014 ; IET Wireless Sensor Systems Volume 4 ; 4 ; >      
       au < crawling ; exists ; 2015 ; IET Wireless Sensor Systems Volume 5 ; 5 ; >      
-      au < crawling ; exists ; 2016 ; IET Wireless Sensor Systems Volume 6 ; 6 ; >      
+      au < frozen ; exists ; 2016 ; IET Wireless Sensor Systems Volume 6 ; 6 ; >      
       au < crawling ; exists ; 2017 ; IET Wireless Sensor Systems Volume 7 ; 7 ; >      
      
 
