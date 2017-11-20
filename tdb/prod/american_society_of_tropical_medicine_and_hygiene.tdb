@@ -13,7 +13,8 @@
       issnl = 0002-9637
     >
     {
-      plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+      #plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+      plugin = needs.plugin  #new ingenta platform
       param[base_url] = http://www.ingentaconnect.com/
       param[api_url] = http://api.ingentaconnect.com/
       param[graphics_url] = http://graphics.ingentaconnect.com/
