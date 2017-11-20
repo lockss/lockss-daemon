@@ -19,6 +19,7 @@
         issnl = 0066-4804
       >
       param[base_url] = http://aac.asm.org/
+      #still H20 2017/11/17
   
       au < HighWirePressH20Plugin ; released ; 1972 ; Antimicrobial Agents and Chemotherapy Volume 1 ; 1 >
       au < HighWirePressH20Plugin ; released ; 1972 ; Antimicrobial Agents and Chemotherapy Volume 2 ; 2 >
@@ -92,6 +93,7 @@
         issnl = 0099-2240
       >
       param[base_url] = http://aem.asm.org/
+      #still H20 2017/11/17
   
       au < HighWirePressH20Plugin ; released ; 1953 ; Applied Microbiology Volume 1 ; 1 >
       au < HighWirePressH20Plugin ; released ; 1954 ; Applied Microbiology Volume 2 ; 2 >
