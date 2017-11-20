@@ -5611,20 +5611,6 @@
   {
 
     title <
-      name = Geophysical Supplements to MNRAS ;
-      issn = 2051-1965 ;
-      eissn = 2051-1973
-    >
-
-    param[journal_id] = 
-
-    #this title was ONLY in the previous TDB listing - suppressing AU generation 
-
-  }
-
-  {
-
-    title <
       name = Geophysical Supplements to the MNRAS ;
       issn = 2051-1965 ;
       eissn = 2051-1973

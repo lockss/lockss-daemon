@@ -8,12 +8,14 @@
   
   plugin = org.lockss.plugin.clockss.warc.ClockssWarcPlugin
   hidden[proxy] = DIRECT
-  implicit < status ; status2 ; year ; name ; param[year] >      
+  implicit < status ; status2 ; year ; name ; param[year] >
 
   {
     title <
       name = Philosophy@LISBON WARC Content ;
-      issn = 2132-4371    
+      issn = 0872-4784 #platform gone. see https://www.researchgate.net/profile/Philosophica_Issn_0872-4784
+      #issn = 2132-4371 #original issn. malformed. check digit is incorrect.
+      #website gone? See http://www.centrodefilosofia.com/
     >
     
     param[base_url] = http://clockss-ingest.lockss.org/warcfiles/philosophy@lisbon-released/
