@@ -110,7 +110,9 @@
   {
     title <
       name = Journal of Leisure Research ;
-      issn = 0022-2216
+      issn = 0022-2216 ;
+      eissn = 2159-6417 ;
+      issnl = 0022-2216
     >
 
     param[journal_id] = jlr
@@ -226,34 +228,24 @@
   {
     title <
       name = SCHOLE: A Journal of Leisure Studies and Recreation Education ;
-      issn = 2162-4097
+      issn = 1937-156X ;
+      eissn = 2162-4097
     >
 
     param[journal_id] = schole
 
-    au < manifest ; 1995 ; 10 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 10 ; 1995 >
-    au < manifest ; 1996 ; 11 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 11 ; 1996 >
-    au < manifest ; 1997 ; 12 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 12 ; 1997 >
-    au < manifest ; 1998 ; 13 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 13 ; 1998 >
-    au < manifest ; 1999 ; 14 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 14 ; 1999 >
-    au < manifest ; 2000 ; 15 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 15 ; 2000 >
-    au < manifest ; 2001 ; 16 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 16 ; 2001 >
-    au < manifest ; 2002 ; 17 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 17 ; 2002 >
-    au < manifest ; 2003 ; 18 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 18 ; 2003 >
-    au < manifest ; 2004 ; 19 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 19 ; 2004 >
-    au < released ; 2005 ; 20 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 20 ; 2005 >
-    au < released ; 2006 ; 21 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 21 ; 2006 >
-    au < released ; 2007 ; 22 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 22 ; 2007 >
-    au < released ; 2008 ; 23 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 23 ; 2008 >
-    au < released ; 2009 ; 24 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 24 ; 2009 >
-    au < released ; 2010 ; 25 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 25 ; 2010 >
-    au < released ; 2011 ; 26 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 26 ; 2011 >
-    au < released ; 2012 ; 27 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 27 ; 2012 >
-    au < released ; 2013 ; 28 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 28 ; 2013 >
-    au < released ; 2014 ; 29 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 29 ; 2014 >
-    au < released ; 2015 ; 30 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 30 ; 2015 >
-    au < released ; 2016 ; 31 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 31 ; 2016 > #subscription needed?
-    au < expected ; 2017 ; 32 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 32 ; 2017 >
+    au < down ; 2005 ; 20 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 20 ; 2005 >
+    au < down ; 2006 ; 21 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 21 ; 2006 >
+    au < down ; 2007 ; 22 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 22 ; 2007 >
+    au < down ; 2008 ; 23 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 23 ; 2008 >
+    au < down ; 2009 ; 24 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 24 ; 2009 >
+    au < down ; 2010 ; 25 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 25 ; 2010 >
+    au < down ; 2011 ; 26 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 26 ; 2011 >
+    au < down ; 2012 ; 27 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 27 ; 2012 >
+    au < down ; 2013 ; 28 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 28 ; 2013 >
+    au < down ; 2014 ; 29 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 29 ; 2014 >
+    au < down ; 2015 ; 30 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 30 ; 2015 >
+    au < down ; 2016 ; 31 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 31 ; 2016 > #subscription needed?
   }
 
   {
