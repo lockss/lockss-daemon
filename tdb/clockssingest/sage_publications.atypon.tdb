@@ -1506,7 +1506,6 @@
 
     {
 
-
       au < manifest ; exists ; 1972-1973 ; The American Journal of Sports Medicine Volume 1 ; 1 ; ajsa ; >
       au < manifest ; exists ; 1974 ; The American Journal of Sports Medicine Volume 2 ; 2 ; ajsa ; >
       au < manifest ; exists ; 1975 ; The American Journal of Sports Medicine Volume 3 ; 3 ; ajsa ; >
@@ -1568,7 +1567,6 @@
     #param[base_url] = http://apr.sagepub.com/
 
     {
-
 
       au < manifest ; exists ; 1973 ; American Politics Research Volume 1 ; 1 ; apra ; >
       au < manifest ; exists ; 1974 ; American Politics Research Volume 2 ; 2 ; apra ; >
@@ -1632,7 +1630,6 @@
 
     
     {
-
 
       au < manifest ; exists ; 1967 ; The American Review of Public Administration Volume 1 ; 1 ; arpa ; >
       au < manifest ; exists ; 1968 ; The American Review of Public Administration Volume 2 ; 2 ; arpa ; >
@@ -1698,7 +1695,6 @@
 
     {
 
-
       au < manifest ; exists ; 2004 ; American Sociological Review Volume 69 ; 69 ; asra ; >
       au < manifest ; exists ; 2005 ; American Sociological Review Volume 70 ; 70 ; asra ; >
       au < manifest ; exists ; 2006 ; American Sociological Review Volume 71 ; 71 ; asra ; >
@@ -1721,6 +1717,32 @@
   {
 
     title <
+      name = American String Teacher ;
+      issn = 0003-1313 ;
+      eissn = 2515-4842
+    >
+
+    #journal_id = sta
+
+      au < exists ; exists ; 2002 ; American String Teacher Volume 52 ; 52 ; staa ; >
+      au < exists ; exists ; 2006 ; American String Teacher Volume 56 ; 56 ; staa ; >
+      au < exists ; exists ; 2007 ; American String Teacher Volume 57 ; 57 ; staa ; >
+      au < exists ; exists ; 2008 ; American String Teacher Volume 58 ; 58 ; staa ; >
+      au < exists ; exists ; 2009 ; American String Teacher Volume 59 ; 59 ; staa ; >
+      au < exists ; exists ; 2010 ; American String Teacher Volume 60 ; 60 ; staa ; >
+      au < exists ; exists ; 2011 ; American String Teacher Volume 61 ; 61 ; staa ; >
+      au < exists ; exists ; 2012 ; American String Teacher Volume 62 ; 62 ; staa ; >
+      au < exists ; exists ; 2013 ; American String Teacher Volume 63 ; 63 ; staa ; >
+      au < exists ; exists ; 2014 ; American String Teacher Volume 64 ; 64 ; staa ; >
+      au < exists ; exists ; 2015 ; American String Teacher Volume 65 ; 65 ; staa ; >
+      au < exists ; exists ; 2016 ; American String Teacher Volume 66 ; 66 ; staa ; >
+      au < exists ; exists ; 2017 ; American String Teacher Volume 67 ; 67 ; staa ; >
+
+  }
+
+  {
+
+    title <
       name = Angiology ;
       issn = 0003-3197 ;
       eissn = 1940-1574
@@ -1728,9 +1750,7 @@
 
     #param[base_url] = http://ang.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1950 ; Angiology Volume 1 ; 1 ; anga ; >
       au < manifest ; exists ; 1951 ; Angiology Volume 2 ; 2 ; anga ; >
@@ -37699,7 +37719,6 @@
 
     {
 
-
       au < doNotProcess ; doNotProcess ; 2009 ; Sports Health: A Multidisciplinary Approach Volume 1 ; 1 ; spha ; >
       au < doNotProcess ; doNotProcess ; 2010 ; Sports Health: A Multidisciplinary Approach Volume 2 ; 2 ; spha ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Sports Health: A Multidisciplinary Approach Volume 3 ; 3 ; spha ; >
@@ -37725,7 +37744,6 @@
     #param[base_url] = http://slg.sagepub.com/
 
     {
-
 
       au < manifest ; exists ; 1997 ; State and Local Government Review Volume 29 ; 29 ; slgb ; >
       au < manifest ; exists ; 1998 ; State and Local Government Review Volume 30 ; 30 ; slgb ; >
@@ -37765,7 +37783,6 @@
 
     {
 
-
       au < manifest ; exists ; 2001 ; State Politics & Policy Quarterly Volume 1 ; 1 ; spaa ; >
       au < manifest ; exists ; 2002 ; State Politics & Policy Quarterly Volume 2 ; 2 ; spaa ; >
       au < manifest ; exists ; 2003 ; State Politics & Policy Quarterly Volume 3 ; 3 ; spaa ; >
@@ -37798,9 +37815,7 @@
 
     #param[base_url] = http://smm.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1992 ; Statistical Methods in Medical Research Volume 1 ; 1 ; smma ; >
       au < manifest ; exists ; 1993 ; Statistical Methods in Medical Research Volume 2 ; 2 ; smma ; >
@@ -37843,9 +37858,7 @@
 
     #param[base_url] = http://smj.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 2001 ; Statistical Modelling Volume 1 ; 1 ; smja ; >
       au < manifest ; exists ; 2002 ; Statistical Modelling Volume 2 ; 2 ; smja ; >
@@ -37879,9 +37892,7 @@
 
     #param[base_url] = http://soq.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 2003 ; Strategic Organization Volume 1 ; 1 ; soqa ; >
       au < manifest ; exists ; 2004 ; Strategic Organization Volume 2 ; 2 ; soqa ; >
@@ -37906,6 +37917,27 @@
   {
 
     title <
+      name = String Research Journal ;
+      issn = 1948-4992 ;
+      eissn = 2164-0661
+    >
+
+    #journal_id = srj
+
+      au < exists ; exists ; 2010 ; String Research Journal Volume 1 ; 1 ; srja ; >
+      au < exists ; exists ; 2011 ; String Research Journal Volume 2 ; 2 ; srja ; >
+      au < exists ; exists ; 2012 ; String Research Journal Volume 3 ; 3 ; srja ; >
+      au < exists ; exists ; 2013 ; String Research Journal Volume 4 ; 4 ; srja ; >
+      au < exists ; exists ; 2014 ; String Research Journal Volume 5 ; 5 ; srja ; >
+      au < exists ; exists ; 2015 ; String Research Journal Volume 6 ; 6 ; srja ; >
+      au < exists ; exists ; 2016 ; String Research Journal Volume 7 ; 7 ; srja ; >
+      au < expected ; exists ; 2017 ; String Research Journal Volume 8 ; 8 ; srja ; >
+
+  }
+
+  {
+
+    title <
       name = Structural Health Monitoring ;
       issn = 1475-9217 ;
       eissn = 1741-3168
@@ -37913,9 +37945,7 @@
 
     #param[base_url] = http://shm.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 2002 ; Structural Health Monitoring Volume 1 ; 1 ; shma ; >
       au < manifest ; exists ; 2003 ; Structural Health Monitoring Volume 2 ; 2 ; shma ; >
@@ -40368,6 +40398,20 @@
   {
 
     title <
+      name = Tumor Biology ;
+      issn = 1010-4283 ;
+      eissn = 1423-0380
+    >
+
+      #journal_id = tub
+
+      au < exists ; exists ; 2017 ; Tumor Biology Volume 39 ; 39 ; tuba ; >
+
+  }
+
+  {
+
+    title <
       name = Update: Applications of Research in Music Education ;
       issn = 8755-1233 ;
       eissn = 1945-0109
@@ -40377,7 +40421,6 @@
 
     
     {
-
 
       au < manifest ; exists ; 1984-1985 ; Update: Applications of Research in Music Education Volume 3 ; 3 ; upda ; >
       au < exists ; exists ; 1985-1986 ; Update: Applications of Research in Music Education Volume 4 ; 4 ; upda ; >
@@ -42526,6 +42569,39 @@
 
     }
 
+  }
+
+  {
+
+    title <
+      name = Sociological Research Online ;
+      eissn = 1360-7804
+    >
+
+    #journal_id = sro
+
+      au < exists ; exists ; 1996 ; Sociological Research Online Volume 1 ; 1 ; sroa ; >
+      au < exists ; exists ; 1997 ; Sociological Research Online Volume 2 ; 2 ; sroa ; >
+      au < exists ; exists ; 1998 ; Sociological Research Online Volume 3 ; 3 ; sroa ; >
+      au < exists ; exists ; 1999 ; Sociological Research Online Volume 4 ; 4 ; sroa ; >
+      au < exists ; exists ; 2000 ; Sociological Research Online Volume 5 ; 5 ; sroa ; >
+      au < exists ; exists ; 2001 ; Sociological Research Online Volume 6 ; 6 ; sroa ; >
+      au < exists ; exists ; 2002 ; Sociological Research Online Volume 7 ; 7 ; sroa ; >
+      au < exists ; exists ; 2003 ; Sociological Research Online Volume 8 ; 8 ; sroa ; >
+      au < exists ; exists ; 2004 ; Sociological Research Online Volume 9 ; 9 ; sroa ; >
+      au < exists ; exists ; 2005 ; Sociological Research Online Volume 10 ; 10 ; sroa ; >
+      au < exists ; exists ; 2006 ; Sociological Research Online Volume 11 ; 11 ; sroa ; >
+      au < exists ; exists ; 2007 ; Sociological Research Online Volume 12 ; 12 ; sroa ; >
+      au < exists ; exists ; 2008 ; Sociological Research Online Volume 13 ; 13 ; sroa ; >
+      au < exists ; exists ; 2009 ; Sociological Research Online Volume 14 ; 14 ; sroa ; >
+      au < exists ; exists ; 2010 ; Sociological Research Online Volume 15 ; 15 ; sroa ; >
+      au < exists ; exists ; 2011 ; Sociological Research Online Volume 16 ; 16 ; sroa ; >
+      au < exists ; exists ; 2012 ; Sociological Research Online Volume 17 ; 17 ; sroa ; >
+      au < exists ; exists ; 2013 ; Sociological Research Online Volume 18 ; 18 ; sroa ; >
+      au < exists ; exists ; 2014 ; Sociological Research Online Volume 19 ; 19 ; sroa ; >
+      au < exists ; exists ; 2015 ; Sociological Research Online Volume 20 ; 20 ; sroa ; >
+      au < exists ; exists ; 2016 ; Sociological Research Online Volume 21 ; 21 ; sroa ; >
+      au < exists ; exists ; 2017 ; Sociological Research Online Volume 22 ; 22 ; sroa ; >
   }
 
   {

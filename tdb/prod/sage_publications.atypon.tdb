@@ -1708,6 +1708,32 @@
 
     }
 
+  {
+
+    title <
+      name = American String Teacher ;
+      issn = 0003-1313 ;
+      eissn = 2515-4842
+    >
+
+    #journal_id = sta
+
+      au < exists ; 2002 ; American String Teacher Volume 52 ; 52 ; staa >
+      au < exists ; 2006 ; American String Teacher Volume 56 ; 56 ; staa >
+      au < exists ; 2007 ; American String Teacher Volume 57 ; 57 ; staa >
+      au < exists ; 2008 ; American String Teacher Volume 58 ; 58 ; staa >
+      au < exists ; 2009 ; American String Teacher Volume 59 ; 59 ; staa >
+      au < exists ; 2010 ; American String Teacher Volume 60 ; 60 ; staa >
+      au < exists ; 2011 ; American String Teacher Volume 61 ; 61 ; staa >
+      au < exists ; 2012 ; American String Teacher Volume 62 ; 62 ; staa >
+      au < exists ; 2013 ; American String Teacher Volume 63 ; 63 ; staa >
+      au < exists ; 2014 ; American String Teacher Volume 64 ; 64 ; staa >
+      au < exists ; 2015 ; American String Teacher Volume 65 ; 65 ; staa >
+      au < exists ; 2016 ; American String Teacher Volume 66 ; 66 ; staa >
+      au < exists ; 2017 ; American String Teacher Volume 67 ; 67 ; staa >
+
+  }
+
     {
 
       title <
@@ -37573,6 +37599,27 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
     }
 
+  {
+
+    title <
+      name = String Research Journal ;
+      issn = 1948-4992 ;
+      eissn = 2164-0661
+    >
+
+    #journal_id = srj
+
+      au < exists ; 2010 ; String Research Journal Volume 1 ; 1 ; srja >
+      au < exists ; 2011 ; String Research Journal Volume 2 ; 2 ; srja >
+      au < exists ; 2012 ; String Research Journal Volume 3 ; 3 ; srja >
+      au < exists ; 2013 ; String Research Journal Volume 4 ; 4 ; srja >
+      au < exists ; 2014 ; String Research Journal Volume 5 ; 5 ; srja >
+      au < exists ; 2015 ; String Research Journal Volume 6 ; 6 ; srja >
+      au < exists ; 2016 ; String Research Journal Volume 7 ; 7 ; srja >
+      au < expected ; 2017 ; String Research Journal Volume 8 ; 8 ; srja >
+
+  }
+
     {
 
       title <
@@ -39997,6 +40044,20 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
     }
 
+  {
+
+    title <
+      name = Tumor Biology ;
+      issn = 1010-4283 ;
+      eissn = 1423-0380
+    >
+
+     #journal_id = tub
+
+      au < exists ; 2017 ; Tumor Biology Volume 39 ; 39 ; tuba >
+
+  }
+
     {
 
       title <
@@ -42025,7 +42086,6 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
       {
 
-
         au < manifest ; 2001 ; Social Change Volume 31 ; 31 ; scha >
         au < manifest ; 2002 ; Social Change Volume 32 ; 32 ; scha >
         au < manifest ; 2003 ; Social Change Volume 33 ; 33 ; scha >
@@ -42116,6 +42176,39 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
     }
 
+  {
+
+    title <
+      name = Sociological Research Online ;
+      eissn = 1360-7804
+    >
+
+    #journal_id = sro
+
+      au < exists ; 1996 ; Sociological Research Online Volume 1 ; 1 ; sroa >
+      au < exists ; 1997 ; Sociological Research Online Volume 2 ; 2 ; sroa >
+      au < exists ; 1998 ; Sociological Research Online Volume 3 ; 3 ; sroa >
+      au < exists ; 1999 ; Sociological Research Online Volume 4 ; 4 ; sroa >
+      au < exists ; 2000 ; Sociological Research Online Volume 5 ; 5 ; sroa >
+      au < exists ; 2001 ; Sociological Research Online Volume 6 ; 6 ; sroa >
+      au < exists ; 2002 ; Sociological Research Online Volume 7 ; 7 ; sroa >
+      au < exists ; 2003 ; Sociological Research Online Volume 8 ; 8 ; sroa >
+      au < exists ; 2004 ; Sociological Research Online Volume 9 ; 9 ; sroa >
+      au < exists ; 2005 ; Sociological Research Online Volume 10 ; 10 ; sroa >
+      au < exists ; 2006 ; Sociological Research Online Volume 11 ; 11 ; sroa >
+      au < exists ; 2007 ; Sociological Research Online Volume 12 ; 12 ; sroa >
+      au < exists ; 2008 ; Sociological Research Online Volume 13 ; 13 ; sroa >
+      au < exists ; 2009 ; Sociological Research Online Volume 14 ; 14 ; sroa >
+      au < exists ; 2010 ; Sociological Research Online Volume 15 ; 15 ; sroa >
+      au < exists ; 2011 ; Sociological Research Online Volume 16 ; 16 ; sroa >
+      au < exists ; 2012 ; Sociological Research Online Volume 17 ; 17 ; sroa >
+      au < exists ; 2013 ; Sociological Research Online Volume 18 ; 18 ; sroa >
+      au < exists ; 2014 ; Sociological Research Online Volume 19 ; 19 ; sroa >
+      au < exists ; 2015 ; Sociological Research Online Volume 20 ; 20 ; sroa >
+      au < exists ; 2016 ; Sociological Research Online Volume 21 ; 21 ; sroa >
+      au < exists ; 2017 ; Sociological Research Online Volume 22 ; 22 ; sroa >
+  }
+
     {
 
       title <
@@ -42127,7 +42220,6 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       #param[base_url] = http://stx.sagepub.com/
 
       {
-
 
         au < manifest ; 2006 ; Sociological Theory Volume 24 ; 24 ; stxa >
         au < manifest ; 2007 ; Sociological Theory Volume 25 ; 25 ; stxa >
