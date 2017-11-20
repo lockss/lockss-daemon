@@ -41,7 +41,7 @@
       param[journal_id] = et
       
       au < frozen ; exists ; 2014 ; Engineering & Technology Volume 9 ; 9 ; >
-      au < crawling ; exists ; 2015 ; Engineering & Technology Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2015 ; Engineering & Technology Volume 10 ; 10 ; >
       au < manifest ; exists ; 2016 ; Engineering & Technology Volume 11 ; 11 ; >
       au < crawling ; exists ; 2017 ; Engineering & Technology Volume 12 ; 12 ; >
      
@@ -59,7 +59,7 @@
       param[journal_id] = iet-bmt
       
       au < crawling ; exists ; 2014 ; IET Biometrics Volume 3 ; 3 ; >
-      au < crawling ; exists ; 2015 ; IET Biometrics Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2015 ; IET Biometrics Volume 4 ; 4 ; >
       au < crawling ; exists ; 2016 ; IET Biometrics Volume 5 ; 5 ; >
       au < crawling ; exists ; 2017 ; IET Biometrics Volume 6 ; 6 ; >
      
