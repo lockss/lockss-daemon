@@ -80,6 +80,9 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumListOfIssuesResponsiveWidget"),
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumOpenAccessWidget"),
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumBreadcrumbs"),
+    // seen in RSNA http://pubs.rsna.org/doi/abs/10.1148/rg.2016150233
+    // right column, related articles and other links out within pub
+    HtmlNodeFilters.tagWithAttributeRegex("div","class", "literatumRelatedArticles"),
    
     
     // Since overcrawling is a constant problem for Atypon, put common
