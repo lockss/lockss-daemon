@@ -50,8 +50,12 @@ import org.lockss.util.ReaderInputStream;
 public class ScHtmlHashFilterFactory implements FilterFactory {
 
   /*
-   * AMA = American Medical Association (http://jamanetwork.com/)
-   * SPIE = SPIE (http://spiedigitallibrary.org/)
+   * ASH - American Speech Language, Hearing (1 ex: http://lshss.pubs.asha.org/)
+   * AMA = American Medical Association (http://jamanetwork.com/) - deprecated!
+   *    new ama plugin uses it's own filters
+   * SPIE = SPIE (http://spiedigitallibrary.org/) - deprecated
+   *    we no longer support SPIE preservation
+   *    
    */
   private static final Logger log = Logger.getLogger(ScHtmlHashFilterFactory.class);
   
@@ -69,7 +73,7 @@ public class ScHtmlHashFilterFactory implements FilterFactory {
          * KEEP: throw out everything but main content areas
          */
         HtmlNodeFilterTransform.include(new OrFilter(new NodeFilter[] {
-            // KEEP manifest page content [AMA, SPIE]
+            // KEEP manifest page content [AMA, SPIE, ASH]                                                   
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-IssuesAndVolumeListManifest"),
             // KEEP main area of TOCs [AMA, SPIE]
             HtmlNodeFilters.tagWithAttribute("div", "class", "articleBodyContainer"),
@@ -79,6 +83,14 @@ public class ScHtmlHashFilterFactory implements FilterFactory {
             HtmlNodeFilters.tagWithAttribute("span", "class", "citationCopyPaste"),
          // KEEP proper citation of article [AMA]
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "content-section"),
+
+            //KEEP items for ASHA which is using vanilla Silverchair
+            // KEEP main area of TOC [ASHA]
+            HtmlNodeFilters.tagWithAttribute("div", "id", "ArticleList"),
+            // KEEP main area of article [ASHA - checked it was okay for others]
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "leftColumn"),
+            
+            
         })),
         /*
          * DROP: filter remaining content areas
@@ -138,6 +150,9 @@ public class ScHtmlHashFilterFactory implements FilterFactory {
             HtmlNodeFilters.tagWithAttribute("div", "class", "figurelinks"),
             //figures section changes
             HtmlNodeFilters.tagWithAttribute("div", "class", "abstractFigures"),
+            // ASHA - additions
+            
+            
         }))
       )
     );

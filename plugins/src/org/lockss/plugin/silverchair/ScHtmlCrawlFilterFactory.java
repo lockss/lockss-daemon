@@ -43,7 +43,7 @@ import org.lockss.plugin.*;
 public class ScHtmlCrawlFilterFactory implements FilterFactory {
 
   /*
-   * AMA = American Medical Association (http://jamanetwork.com/)
+   * AMA = American Medical Association (http://jamanetwork.com/) - deprecated plugin
    * Tabs 20151025
    * 1=extract/abstract/article
    * 2=discussion (w/i framework of article contents)
