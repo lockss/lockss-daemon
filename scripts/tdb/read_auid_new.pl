@@ -244,6 +244,7 @@ while (my $line = <>) {
         sleep(4);
 
   } elsif ($plugin eq "ClockssAAASDrupalPlugin" ||
+           $plugin eq "ClockssAAIDrupalPlugin" ||
            $plugin eq "ClockssAAPDrupalPlugin" ||
            $plugin eq "ClockssADADrupalPlugin" ||
            $plugin eq "ClockssAPSDrupalPlugin" ||
