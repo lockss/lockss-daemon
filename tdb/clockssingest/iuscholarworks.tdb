@@ -111,7 +111,7 @@
       au < frozen ; exists ; 2014 ; 2014 ; Hindsight: Journal of Optemetry History Volume 45 ; 45 ; https://scholarworks.iu.edu/journals/ ; >
       au < frozen ; exists ; 2015 ; 2015 ; Hindsight: Journal of Optemetry History Volume 46 ; 46 ; https://scholarworks.iu.edu/journals/ ; >
       au < frozen ; exists ; 2016 ; 2016 ; Hindsight: Journal of Optemetry History Volume 47 ; 47 ; https://scholarworks.iu.edu/journals/ ; >
-      au < expected ; exists ; 2017 ; 2017 ; Hindsight: Journal of Optemetry History Volume 48 ; 48 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2017 ; 2017 ; Hindsight: Journal of Optemetry History Volume 48 ; 48 ; https://scholarworks.iu.edu/journals/ ; >
 
   }
 
@@ -154,7 +154,7 @@
       au < finished ; finished ; 2014 ; 2014 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 12 ; 12 ; http://scholarworks.iu.edu/journals/ ; >
       au < finished ; finished ; 2015 ; 2015 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 13 ; 13 ; http://scholarworks.iu.edu/journals/ ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2016 ; 2016 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 14 ; 14 ; https://scholarworks.iu.edu/journals/ ; >
-      au < expected ; exists ; 2017 ; 2017 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 15 ; 15 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2017 ; 2017 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 15 ; 15 ; https://scholarworks.iu.edu/journals/ ; >
 
   }
 
@@ -220,7 +220,7 @@
       au < finished ; finished ; 2014 ; 2014 ; International Journal of Designs for Learning Volume 5 ; 5 ; http://scholarworks.iu.edu/journals/ ; >
       au < finished ; finished ; 2015 ; 2015 ; International Journal of Designs for Learning Volume 6 ; 6 ; http://scholarworks.iu.edu/journals/ ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2016 ; 2016 ; International Journal of Designs for Learning Volume 7 ; 7 ; https://scholarworks.iu.edu/journals/ ; >
-      au < expected ; exists ; 2017 ; 2017 ; International Journal of Designs for Learning Volume 8 ; 8 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2017 ; 2017 ; International Journal of Designs for Learning Volume 8 ; 8 ; https://scholarworks.iu.edu/journals/ ; >
 
   }
 
@@ -256,7 +256,7 @@
       au < finished ; finished ; 2014 ; 2014 ; InULA Notes: Indiana University Librarians Association Volume 26 ; 26 ; http://scholarworks.iu.edu/journals/ ; >
       au < finished ; finished ; 2015 ; 2015 ; InULA Notes: Indiana University Librarians Association Volume 27 ; 27 ; http://scholarworks.iu.edu/journals/ ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2016 ; 2016 ; InULA Notes: Indiana University Librarians Association Volume 28 ; 28 ; https://scholarworks.iu.edu/journals/ ; >
-      au < expected ; exists ; 2017 ; 2017 ; InULA Notes: Indiana University Librarians Association Volume 29 ; 29 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2017 ; 2017 ; InULA Notes: Indiana University Librarians Association Volume 29 ; 29 ; https://scholarworks.iu.edu/journals/ ; >
 
   }
 
@@ -273,7 +273,7 @@
       au < finished ; finished ; 2013 ; 2013 ; Journal of Teaching and Learning with Technology Volume 2 ; 2 ; http://jotlt.indiana.edu/ ; >
       au < finished ; finished ; 2014 ; 2014 ; Journal of Teaching and Learning with Technology Volume 3 ; 3 ; http://jotlt.indiana.edu/ ; >
       au < finished ; finished ; 2015 ; 2015 ; Journal of Teaching and Learning with Technology Volume 4 ; 4 ; http://jotlt.indiana.edu/ ; reingest1.clockss.org:8082 >
-      au < expected ; exists ; 2016 ; 2016 ; Journal of Teaching and Learning with Technology Volume 5 ; 5 ; https://jotlt.indiana.edu/ ; >
+      au < manifest ; exists ; 2016 ; 2016 ; Journal of Teaching and Learning with Technology Volume 5 ; 5 ; https://jotlt.indiana.edu/ ; >
 
   }
 
@@ -347,7 +347,7 @@
       au < finished ; finished ; 2014 ; 2014 ; Museum Anthropology Review Volume 8 ; 8 ; http://scholarworks.iu.edu/journals/ ; >
       au < frozen ; exists ; 2015 ; 2015 ; Museum Anthropology Review Volume 9 ; 9 ; http://scholarworks.iu.edu/journals/ ; >
       au < frozen ; exists ; 2016 ; 2016 ; Museum Anthropology Review Volume 10 ; 10 ; https://scholarworks.iu.edu/journals/ ; >
-      au < expected ; exists ; 2017 ; 2017 ; Museum Anthropology Review Volume 11 ; 11 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2017 ; 2017 ; Museum Anthropology Review Volume 11 ; 11 ; https://scholarworks.iu.edu/journals/ ; >
 
   }
 
@@ -411,43 +411,43 @@
       comment[publisher] = IUScholarWorks
       param[journal_id] = imh
 
-      au < exists ; exists ; 1905 ; 1905 ; Indiana Magazine of History Volume 1905 ; 1 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 1906 ; 1906 ; Indiana Magazine of History Volume 1906 ; 2 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 1907 ; 1907 ; Indiana Magazine of History Volume 1907 ; 3 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 1908 ; 1908 ; Indiana Magazine of History Volume 1908 ; 4 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 1909 ; 1909 ; Indiana Magazine of History Volume 1909 ; 5 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 1910 ; 1910 ; Indiana Magazine of History Volume 1910 ; 6 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 1911 ; 1911 ; Indiana Magazine of History Volume 1911 ; 7 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 1912 ; 1912 ; Indiana Magazine of History Volume 1912 ; 8 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 1913 ; 1913 ; Indiana Magazine of History Volume 1913 ; 9 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 1914 ; 1914 ; Indiana Magazine of History Volume 1914 ; 10 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 1915 ; 1915 ; Indiana Magazine of History Volume 1915 ; 11 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 1916 ; 1916 ; Indiana Magazine of History Volume 1916 ; 12 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 1917 ; 1917 ; Indiana Magazine of History Volume 1917 ; 13 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 1918 ; 1918 ; Indiana Magazine of History Volume 1918 ; 14 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 1919 ; 1919 ; Indiana Magazine of History Volume 1919 ; 15 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 1920 ; 1920 ; Indiana Magazine of History Volume 1920 ; 16 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 1921 ; 1921 ; Indiana Magazine of History Volume 1921 ; 17 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 1922 ; 1922 ; Indiana Magazine of History Volume 1922 ; 18 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 1923 ; 1923 ; Indiana Magazine of History Volume 1923 ; 19 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 1924 ; 1924 ; Indiana Magazine of History Volume 1924 ; 20 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 1925 ; 1925 ; Indiana Magazine of History Volume 1925 ; 21 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 1926 ; 1926 ; Indiana Magazine of History Volume 1926 ; 22 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 1927 ; 1927 ; Indiana Magazine of History Volume 1927 ; 23 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 1928 ; 1928 ; Indiana Magazine of History Volume 1928 ; 24 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 1929 ; 1929 ; Indiana Magazine of History Volume 1929 ; 25 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 1930 ; 1930 ; Indiana Magazine of History Volume 1930 ; 26 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 1931 ; 1931 ; Indiana Magazine of History Volume 1931 ; 27 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 1932 ; 1932 ; Indiana Magazine of History Volume 1932 ; 28 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 1933 ; 1933 ; Indiana Magazine of History Volume 1933 ; 29 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 1934 ; 1934 ; Indiana Magazine of History Volume 1934 ; 30 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 1935 ; 1935 ; Indiana Magazine of History Volume 1935 ; 31 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 1936 ; 1936 ; Indiana Magazine of History Volume 1936 ; 32 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 1937 ; 1937 ; Indiana Magazine of History Volume 1937 ; 33 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 1938 ; 1938 ; Indiana Magazine of History Volume 1938 ; 34 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 1939 ; 1939 ; Indiana Magazine of History Volume 1939 ; 35 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 1940 ; 1940 ; Indiana Magazine of History Volume 1940 ; 36 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 1941 ; 1941 ; Indiana Magazine of History Volume 1941 ; 37 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1905 ; 1905 ; Indiana Magazine of History Volume 1905 ; 1 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1906 ; 1906 ; Indiana Magazine of History Volume 1906 ; 2 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1907 ; 1907 ; Indiana Magazine of History Volume 1907 ; 3 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1908 ; 1908 ; Indiana Magazine of History Volume 1908 ; 4 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1909 ; 1909 ; Indiana Magazine of History Volume 1909 ; 5 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1910 ; 1910 ; Indiana Magazine of History Volume 1910 ; 6 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1911 ; 1911 ; Indiana Magazine of History Volume 1911 ; 7 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1912 ; 1912 ; Indiana Magazine of History Volume 1912 ; 8 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1913 ; 1913 ; Indiana Magazine of History Volume 1913 ; 9 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1914 ; 1914 ; Indiana Magazine of History Volume 1914 ; 10 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1915 ; 1915 ; Indiana Magazine of History Volume 1915 ; 11 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1916 ; 1916 ; Indiana Magazine of History Volume 1916 ; 12 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1917 ; 1917 ; Indiana Magazine of History Volume 1917 ; 13 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1918 ; 1918 ; Indiana Magazine of History Volume 1918 ; 14 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1919 ; 1919 ; Indiana Magazine of History Volume 1919 ; 15 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1920 ; 1920 ; Indiana Magazine of History Volume 1920 ; 16 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1921 ; 1921 ; Indiana Magazine of History Volume 1921 ; 17 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1922 ; 1922 ; Indiana Magazine of History Volume 1922 ; 18 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1923 ; 1923 ; Indiana Magazine of History Volume 1923 ; 19 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1924 ; 1924 ; Indiana Magazine of History Volume 1924 ; 20 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1925 ; 1925 ; Indiana Magazine of History Volume 1925 ; 21 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1926 ; 1926 ; Indiana Magazine of History Volume 1926 ; 22 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1927 ; 1927 ; Indiana Magazine of History Volume 1927 ; 23 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1928 ; 1928 ; Indiana Magazine of History Volume 1928 ; 24 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1929 ; 1929 ; Indiana Magazine of History Volume 1929 ; 25 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1930 ; 1930 ; Indiana Magazine of History Volume 1930 ; 26 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1931 ; 1931 ; Indiana Magazine of History Volume 1931 ; 27 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1932 ; 1932 ; Indiana Magazine of History Volume 1932 ; 28 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1933 ; 1933 ; Indiana Magazine of History Volume 1933 ; 29 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1934 ; 1934 ; Indiana Magazine of History Volume 1934 ; 30 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1935 ; 1935 ; Indiana Magazine of History Volume 1935 ; 31 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1936 ; 1936 ; Indiana Magazine of History Volume 1936 ; 32 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1937 ; 1937 ; Indiana Magazine of History Volume 1937 ; 33 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1938 ; 1938 ; Indiana Magazine of History Volume 1938 ; 34 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1939 ; 1939 ; Indiana Magazine of History Volume 1939 ; 35 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1940 ; 1940 ; Indiana Magazine of History Volume 1940 ; 36 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1941 ; 1941 ; Indiana Magazine of History Volume 1941 ; 37 ; https://scholarworks.iu.edu/journals/ ; >
       au < exists ; exists ; 1942 ; 1942 ; Indiana Magazine of History Volume 1942 ; 38 ; https://scholarworks.iu.edu/journals/ ; >
       au < exists ; exists ; 1943 ; 1943 ; Indiana Magazine of History Volume 1943 ; 39 ; https://scholarworks.iu.edu/journals/ ; >
       au < exists ; exists ; 1944 ; 1944 ; Indiana Magazine of History Volume 1944 ; 40 ; https://scholarworks.iu.edu/journals/ ; >
