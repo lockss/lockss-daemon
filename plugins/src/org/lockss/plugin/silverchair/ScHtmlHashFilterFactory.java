@@ -151,6 +151,8 @@ public class ScHtmlHashFilterFactory implements FilterFactory {
             //figures section changes
             HtmlNodeFilters.tagWithAttribute("div", "class", "abstractFigures"),
             // ASHA - additions
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-AltmetricLink"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-CitingArticles"),
             
             
         }))

@@ -102,6 +102,9 @@ public class ScHtmlCrawlFilterFactory implements FilterFactory {
           //ASHA
           //Related articles
           HtmlNodeFilters.tagWithAttribute("div", "id", "relatedContentWidgets"),
+          //jslhr.pubs.asha.org/article.aspx?articleid=2578594 - erratum
+          HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-ArticleLinks"),
+          
           //Prev Next
           HtmlNodeFilters.tagWithAttribute("header", "class", "article-nav"),
           //Issues
