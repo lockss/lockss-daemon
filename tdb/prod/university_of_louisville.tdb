@@ -16,7 +16,8 @@
       param[journal_abbr] = jri
       implicit < status ; year ; name ; param[volume] >
     
-      au < testing ; 2017 ; Journal of Respiratory Infections Volume 1 ; 1 >
+      au < ready ; 2017 ; Journal of Respiratory Infections Volume 1 ; 1 >
+      au < expected ; 2018 ; Journal of Respiratory Infections Volume 2 ; 2 >
 
   }
   
@@ -33,6 +34,7 @@
       implicit < status ; year ; name ; param[volume] >
     
       au < testing ; 2017 ; Journal of Refugee & Global Health Volume 1 ; 1 >
+      au < expected ; 2018 ; Journal of Refugee & Global Health Volume 2 ; 2 >
 
   }
   
