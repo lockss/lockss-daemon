@@ -81,7 +81,9 @@ public class AtsHtmlHashFilterFactory
                                           "literatumPublicationContentWidget"),
         // early 2017- changed to <div class                                      
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-                                              "downloadCitationsWidget"),                                              
+                                              "downloadCitationsWidget"),
+        // showPopup&citid=citart1
+        HtmlNodeFilters.tagWithAttributeRegex("body", "class", "popupBody")                                              
                                                                                                                 
     };
     
