@@ -518,8 +518,8 @@ while (my $line = <>) {
        #Url with permission statement
         $url_m = sprintf("%sindex.php/%s/about/editorialPolicies",
             $param{base_url}, $param{journal_id});
-        $man_url = uri_unescape($url_m);
-        my $req_m = HTTP::Request->new(GET, $man_url);
+        $man_url_x = uri_unescape($url_m);
+        my $req_m = HTTP::Request->new(GET, $man_url_x);
         my $resp_m = $ua->request($req_m);
        #Url with permission statement - Alternate. No index.php
         $url_m_alt = sprintf("%s%s/about/editorialPolicies",
@@ -541,7 +541,7 @@ while (my $line = <>) {
         my $resp_s_alt = $ua->request($req_s_alt);
        #For reporting at the end
         #================================= with index.php
-        $man_url = $start_url . " + " . $man_url ;
+        $man_url = $start_url . " + " . $man_url_x ;
         if (($resp_s->is_success) && ($resp_m->is_success)) {
             my $man_contents = $resp_m->content;
             my $start_contents = $resp_s->content;
@@ -566,26 +566,28 @@ while (my $line = <>) {
             $result = "--REQ_FAIL--";
         }
         #======================= w/o index.php
-        $man_url = $start_url_alt . " + " . $man_url_alt ;
-        if (($result eq "--REQ_FAIL--") && ($resp_s_alt->is_success) && ($resp_m_alt->is_success)) {
-            my $man_contents_alt = $resp_m_alt->content;
-            my $start_contents_alt = $resp_s_alt->content;
-            if (defined($man_contents_alt) && defined($start_contents_alt) && (($man_contents_alt =~ m/$clockss_tag/) || ($man_contents_alt =~ m/$oa_tag/)) && (($start_contents_alt =~ m/\($param{year}\)/) || ($start_contents_alt =~ m/: $param{year}/))) {
-                $result = "Manifest"
-            } else {
-                #$result = "--NO_TAG--"
-                if (!defined($man_contents_alt) || !defined($start_contents_alt)) {
-                    $result = "--NO_CONT--";
-                } elsif (($man_contents_alt !~ m/$lockss_tag/) && ($man_contents_alt !~ m/$oa_tag/)) {
-                    $result = "--NO_TAG--";
-                } elsif (($man_contents_alt !~ m/\($param{year}\)/) && ($man_contents_alt !~ m/: $param{year}/)) {
-                    $result = "--NO_YEAR--";
+        if ($result eq "--REQ_FAIL--") {
+            $man_url = $start_url_alt . " + " . $man_url_alt ;
+            if (($resp_s_alt->is_success) && ($resp_m_alt->is_success)) {
+                my $man_contents_alt = $resp_m_alt->content;
+                my $start_contents_alt = $resp_s_alt->content;
+                if (defined($man_contents_alt) && defined($start_contents_alt) && (($man_contents_alt =~ m/$clockss_tag/) || ($man_contents_alt =~ m/$oa_tag/)) && (($start_contents_alt =~ m/\($param{year}\)/) || ($start_contents_alt =~ m/: $param{year}/))) {
+                    $result = "Manifest"
                 } else {
-                    $result = "--MYST--";
+                    #$result = "--NO_TAG--"
+                    if (!defined($man_contents_alt) || !defined($start_contents_alt)) {
+                        $result = "--NO_CONT--";
+                    } elsif (($man_contents_alt !~ m/$lockss_tag/) && ($man_contents_alt !~ m/$oa_tag/)) {
+                        $result = "--NO_TAG--";
+                    } elsif (($man_contents_alt !~ m/\($param{year}\)/) && ($man_contents_alt !~ m/: $param{year}/)) {
+                        $result = "--NO_YEAR--";
+                    } else {
+                        $result = "--MYST--";
+                    }
                 }
+            } else {
+                $result = "--REQ_FAIL--";
             }
-        } else {
-            $result = "--REQ_FAIL--";
         }
         sleep(4);
 
