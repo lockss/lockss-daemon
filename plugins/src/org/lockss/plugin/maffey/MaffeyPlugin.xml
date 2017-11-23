@@ -15,7 +15,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>19</string>
+    <string>20</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -50,11 +50,12 @@
       <string>1,"^%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(\?[0-9]+)?$", base_url</string>
       <string>4,"^%s", base_url</string>
       <string>1,"^%sredirect_file\.php\?.*fileType=pdf.*$", base_url</string>
-      <!--  found additional formats during trigger preparation - need to collect -->
+      <!--  found additional formats during trigger preparation - need to collect, args go in varied order -->
       <!--  http://insights.sagepub.com/redirect_file.php?fileType=pdf&fileId=8380&filename=10.1177_1179565417695831.pdf -->
       <!--  http://insights.sagepub.com/redirect_file.php?fileType=xml&fileId=8381&filename=10.1177_1179565417695831.xml -->
       <!--  http://insights.sagepub.com/redirect_file.php?fileType=zip&fileId=8389&filename=Supplementary%20Data_38666 -->
-      <string>1,"^%sredirect_file\.php\?.*fileType=[^&amp;]+&amp;fileId=.*$", base_url</string>
+      <!--  this is redundant with pdf one above - for now leave it this way during experimentation -->
+      <string>1,"^%sredirect_file\.php\?.*fileType=[^&amp;]+.*$", base_url</string>
       <!--  this is not the same as the start_url; it is for articles -->
       <string>1,"^%slockss\.php\?(t=[c]?lockss&amp;)?pa=article&amp;i_id=[0-9]+$", base_url</string>
       <!--  allow collection of ris and bibtex -->
