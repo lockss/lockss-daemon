@@ -60,6 +60,7 @@ import org.lockss.util.UrlUtil;
  * PDF Full Text: http://www.la-press.com/redirect_file.php?fileType=pdf&fileId=4199&filename=3103-ACI-Holistic-Control-of-Herbal-Teas-and-Tinctures-Based-on-Sage-(Salvia-of.pdf&nocount=1
  * HTML Abstract: http://www.la-press.com/holistic-control-of-herbal-teas-and-tinctures-based-on-sage-salvia-off-article-a3103
  * Meta tag that is in the abstact html: <meta content="http://la-press.com/redirect_file.php?fileId=961&filename=ACI-1-Zayas(Pr)&fileType=pdf" name="citation_pdf_url">
+ * 
  */
 
 public class MaffeyArticleIteratorFactory implements ArticleIteratorFactory,
