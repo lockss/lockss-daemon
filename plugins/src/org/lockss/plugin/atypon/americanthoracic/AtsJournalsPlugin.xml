@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>  
   <entry>
     <string>plugin_name</string>
@@ -33,7 +33,7 @@
   </entry>
   <entry>
     <string>text/html_crawl_filter_factory</string> 
-    <string>org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory</string>
+    <string>org.lockss.plugin.atypon.americanthoracic.AtsHtmlCrawlFilterFactory</string>
   </entry>
   <entry>
     <string>application/pdf_filter_factory</string>
