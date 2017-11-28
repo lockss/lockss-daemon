@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>16</string>
+    <string>17</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -17,8 +17,8 @@
   </entry>
    <entry>
     <string>plugin_parent_version</string>
-    <string>16</string>
-  </entry>    
+    <string>17</string>
+  </entry>
   <entry>
     <string>plugin_name</string>
     <string>ASMscience Journals Plugin (CLOCKSS)</string>
@@ -31,7 +31,7 @@
     <string>au_start_url</string>
     <string>"%scontent/journal/%s/clockssissues?volume=%s", base_url, journal_id, volume_name</string>
   </entry>
-   <!--  for ingest to clockss-production -->      
+   <!--  for ingest to clockss-production -->
   <entry>
     <string>clockss_override</string>
     <map>
@@ -40,5 +40,5 @@
         <long>100</long>
      </entry>
     </map>
-  </entry>  
+  </entry>
 </map>
