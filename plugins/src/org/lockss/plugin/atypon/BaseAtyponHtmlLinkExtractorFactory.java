@@ -393,7 +393,17 @@ implements LinkExtractorFactory {
    *       content/amb/2013/amb.2013.60.issue-3/0002698013z.00000000033/production/\
    *       images/large/s3-g1.jpeg
    *   and so on, through all the listed images
-   *  
+   *   
+   *   variant seen in GLN-only AmericanThoracicSociety- tables and images
+   *  window.modalViewer={doi:'10.1165/rcmb.2016-0065MA',path:'/na101/home/foo',
+   *    modal:[{i:'tbl1',type:'table-wrap',g:[]}]}</script><script type="text/javascript">
+   *  window.modalViewer={doi:'10.1165/rcmb.2016-0065MA',path:'/na101/home/foo',
+   *    modal:[{i:'fig1',type:'fig',g:[{m:'rcmb.2016-0065ma_f1.gif',l:'rcmb.2016-0065ma_f1.jpeg',size:'524 KB'}]}
+   * which is the same as ASCO except using 
+   *    window.modalViewer in place of window.figureViewer
+   *  and 
+   *    modal: in place of figures
+   * 11/28/2017 - modifying regexp to support modal and figure...
    * @author Alexandra Ohlson
    */
   public static class BaseAtyponScriptTagLinkExtractor extends ScriptTagLinkExtractor {
@@ -424,10 +434,12 @@ implements LinkExtractorFactory {
      *  figures:[(figure data)]}
      *  
      *  For clarity - here is a version of the regexp without white space bits
-     * "window\\.figureViewer=\\{doi:'([^']+)',path:'([^']+)',figures:\\[(.*)\\]\\}" 
+     * "window\\.figureViewer=\\{doi:'([^']+)',path:'([^']+)',figures:\\[(.*)\\]\\}" or
+     * "window\\.modalViewer=\\{doi:'([^']+)',path:'([^']+)',modal:\\[(.*)\\]\\}"
+     * note that the figure|modal switches in the pattern are non-capturing so won't count for group numbering
      */
     protected static final Pattern PATTERN_FIGURE_VIEWER =
-        Pattern.compile("window\\.figureViewer=\\s*\\{\\s*doi\\s*:\\s*'([^']+)'\\s*,\\s*path\\s*:\\s*'([^']+)'\\s*,\\s*figures\\s*:\\s*\\[(.*)\\]\\s*\\}",
+        Pattern.compile("window\\.(?:figure|modal)Viewer=\\s*\\{\\s*doi\\s*:\\s*'([^']+)'\\s*,\\s*path\\s*:\\s*'([^']+)'\\s*,\\s*(?:figures|modal)\\s*:\\s*\\[(.*)\\]\\s*\\}",
             Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
     /* 
      * 2. Now match the information that represents ONE image

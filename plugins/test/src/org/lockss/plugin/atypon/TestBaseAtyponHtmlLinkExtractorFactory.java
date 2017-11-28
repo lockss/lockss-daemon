@@ -329,6 +329,29 @@ public class TestBaseAtyponHtmlLinkExtractorFactory extends LockssTestCase {
     "</div>" +
             "</body>" +
             "</html>";
+    
+    private static final String testModal_urlprefix = "na101/home/literatum/publisher/thoracic/journals/content/ajrcmb/2017/" +
+        "ajrcmb.2017.56.issue-3/rcmb.2016-0065ma/20170223";
+    private static final String testModal_figureLinksHtml = 
+        "<div class=\"holder\">" +
+            "<a title=\"Open Figure Viewer\" href=\"\" class=\"thumbnail showFiguresEEvent\" data-attr-fig-id=\"fig1\">" +
+            "<img alt=\"figure\" " +
+            "src=\"/" + testModal_urlprefix + "/images/medium/rcmb.2016-0065ma_f1.gif\" />" +
+            "</a>" +
+            "<script type=\"text/javascript\">" +
+            "      window.modalViewer={doi:'10.1165/rcmb.2016-0065MA'" +
+            "     ,path:'/" + testModal_urlprefix + "'" +
+            "  ,modal:[{i:'fig1',type:'fig',g:[{m:'rcmb.2016-0065ma_f1.gif',l:'rcmb.2016-0065ma_f1.jpeg',size:'524 KB'}]}" +
+            "   ,{i:'fig2',type:'fig',g:[{m:'rcmb.2016-0065ma_f2.gif',l:'rcmb.2016-0065ma_f2.jpeg',size:'396 KB'}]}" +
+            "   ,{i:'fig3',type:'fig',g:[{m:'rcmb.2016-0065ma_f3.gif',l:'rcmb.2016-0065ma_f3.jpeg',size:'498 KB'}]}" +
+            "   ,{i:'fig4',type:'fig',g:[{m:'rcmb.2016-0065ma_f4.gif',l:'rcmb.2016-0065ma_f4.jpeg',size:'410 KB'}]}" +
+            "   ,{i:'fig5',type:'fig',g:[{m:'rcmb.2016-0065ma_f5.gif',l:'rcmb.2016-0065ma_f5.jpeg',size:'410 KB'}]}" +
+            "   ]}</script>" +
+            "<div> END </div></div>" +
+            "</body>" +
+            "</html>";
+
+    
     /*
      * Now more complete html code to test that other links still work as expected
      * 
@@ -469,6 +492,32 @@ public class TestBaseAtyponHtmlLinkExtractorFactory extends LockssTestCase {
         log.debug3("URL: " + url);
         assertTrue(expectedUrls.contains(url));
       }
+    }
+
+    // 
+    public void testModalFigureLinks() throws Exception {
+
+      expectedUrls = SetUtil.set(
+          BASE_URL + testModal_urlprefix + "/images/medium/rcmb.2016-0065ma_f1.gif",
+          BASE_URL + testModal_urlprefix + "/images/large/rcmb.2016-0065ma_f1.jpeg",
+          BASE_URL + testModal_urlprefix + "/images/medium/rcmb.2016-0065ma_f2.gif",
+          BASE_URL + testModal_urlprefix + "/images/large/rcmb.2016-0065ma_f2.jpeg",
+          BASE_URL + testModal_urlprefix + "/images/medium/rcmb.2016-0065ma_f3.gif",
+          BASE_URL + testModal_urlprefix + "/images/large/rcmb.2016-0065ma_f3.jpeg",
+          BASE_URL + testModal_urlprefix + "/images/medium/rcmb.2016-0065ma_f4.gif",
+          BASE_URL + testModal_urlprefix + "/images/large/rcmb.2016-0065ma_f4.jpeg",
+          BASE_URL + testModal_urlprefix + "/images/medium/rcmb.2016-0065ma_f5.gif",
+          BASE_URL + testModal_urlprefix + "/images/large/rcmb.2016-0065ma_f5.jpeg");
+
+      Set<String> result_strings = parseSingleSource(testModal_figureLinksHtml, "full", null);
+
+      assertEquals(10, result_strings.size());
+      
+      for (String url : expectedUrls) {
+        log.debug3("URL: " + url);
+        assertTrue(result_strings.contains(url));
+      }
+
     }
     
     public void testNRCLinks() throws Exception {
