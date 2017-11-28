@@ -82,7 +82,9 @@ public class RsnaHtmlHashFilterFactory
                                           "literatumPublicationContentWidget"),
         // early 2017- changed to <div class                                      
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-                                              "downloadCitationsWidget"),                                              
+                                              "downloadCitationsWidget"),
+       //http://pubs.rsna.org/action/showPopup?citid=citart1&id=eq3&doi=10.1148%2Fradiol.2016151832
+        HtmlNodeFilters.tagWithAttributeRegex("body", "class", "popupBody"),
                                                                                                                 
     };
     
