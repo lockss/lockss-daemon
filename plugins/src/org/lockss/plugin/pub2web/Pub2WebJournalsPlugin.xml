@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>20</string>
+    <string>21</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -20,7 +20,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>16</string>
+        <string>17</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -36,7 +36,7 @@
     <!--  for the SimpleUrlConsumer -->
     <string>required_daemon_version</string>
     <string>1.67.5</string>
-  </entry>  
+  </entry>
   <entry>
     <string>plugin_config_props</string>
     <list>
@@ -105,10 +105,10 @@
     <otherbase>/docserver/ahah/fulltext/jmm/64/11/1270.html?expires=1455321894&id=id&accname=sgid025717&checksum=42B1AAC0FBAC08BB4EF42D7D0BED4696
     http://www.asmscience.org/docserver/fulltext/ecosalplus/6/1/ESP-0007-2013.pdf?expires=1461707510&id=id&accname=4398&checksum=4542D3794C6722983E7694ABD8C01AE0
   unexpected supplementary data doesn't use jid/vol in url
-        http://www.microbiologyresearch.org/docserver/fulltext/supplementary-figures_jmmcr.0.000015.pdf?expires=1472240991&id=id&accname=guest&checksum=434E9BA3F2CE85F29BD9C813F730F1AA    
+        http://www.microbiologyresearch.org/docserver/fulltext/supplementary-figures_jmmcr.0.000015.pdf?expires=1472240991&id=id&accname=guest&checksum=434E9BA3F2CE85F29BD9C813F730F1AA
   citation:
     http://jmm.microbiologyresearch.org/content/journal/jmm/10.1099/jmm.0.000171/cite/(bibtex, endnote, plaintext, refworks)
-    but don't pick up the citation links (which are bogus) at the toc level         
+    but don't pick up the citation links (which are bogus) at the toc level
      NO: http://jgv.microbiologyresearch.org/content/journal/jgv/96/3/cite/endnote
   supporting:
     http://jmm.microbiologyresearch.org/docserver/preview/fulltext/jmm/64/11/1261_jmm000171-1.gif
@@ -122,7 +122,7 @@
       <!-- treat Microbiology Society shared host as a cdn, but only for fulltext -->
       <!--  inconsistent for some supplementary data, doesn't use jid/volume, uses supplementary-data -->
       <string>2,"^%sjs/sgm/issue_toc_headings_ahah.js$", base_url</string>
-      <string>1,"^https?://www.microbiologyresearch.org/docserver(/ahah)?/fulltext/(supp|%s/%s/)", journal_id, volume_name</string>    
+      <string>1,"^https?://www.microbiologyresearch.org/docserver(/ahah)?/fulltext/(supp|%s/%s/)", journal_id, volume_name</string>
       <string>1,"^https?://(%s|cdn[.]mathjax[.]org|code[.]jquery[.]com)/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)(\?([0-9]+|config=|v=).*)?$", url_host(base_url)</string>
       <string>2,"^%scontent/journal/%s/%s/[^/]+/cite/", base_url, journal_id, volume_name</string>
       <!--  toc and subsections -->
@@ -167,23 +167,23 @@
     <int>3</int>
   </entry>
   <entry>
-    <!-- the au_permitted_host_pattern must also find match in lockss-daemon config                                                                                                                         
+    <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
          org.lockss.crawler.allowedPluginPermittedHosts
-         microbiologyresearch is a shared host for all Microbiology Society journals  
+         microbiologyresearch is a shared host for all Microbiology Society journals
          -->
     <string>au_permitted_host_pattern</string>
     <list>
       <string>www\.microbiologyresearch\.org</string>
       <string>.+\.mathjax\.org</string>
       <string>code\.jquery\.com</string>
-    </list>    
+    </list>
   </entry>
   <!-- repair from peer
       non-host (CDN) support files or
       css, js, fonts, support images, live in non-content directories just under base
       <base>/(cs|js|images|files|marketing)/.....//
       /docserver/preview/ is legacy for pickup of preview images of pdf 1st page, not very important
-  -->      
+  -->
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
     <list>
@@ -199,7 +199,7 @@
       <string>(.+\.mathjax\.org|code\.jquery\.com|://[^/]+/(css|files|images|js|marketing)/), 0</string>
       <string>/docserver/preview/.*\.gif$, 0</string>
     </list>
-  </entry>  
+  </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
     <long>1209600000</long>
@@ -219,12 +219,12 @@
   <entry>
     <string>application/pdf_filter_factory</string>
     <string>org.lockss.plugin.pub2web.Pub2WebPdfFilterFactory</string>
-  </entry>  
+  </entry>
   <entry>
     <string>au_url_normalizer</string>
     <string>org.lockss.plugin.pub2web.Pub2WebUrlNormalizer</string>
   </entry>
-<!--  child plugins should define their own crawl filter/html filter until we see patterns -->  
+<!--  child plugins should define their own crawl filter/html filter until we see patterns -->
 <!--  child plugins will also probably need their own link extractor  -->
   <entry>
     <string>plugin_article_iterator_factory</string>
@@ -242,5 +242,5 @@
         <string>org.lockss.plugin.pub2web.Pub2WebHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
-  </entry> 
+  </entry>
 </map>

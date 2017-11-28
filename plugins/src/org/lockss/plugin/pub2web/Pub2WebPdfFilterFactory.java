@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2017 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -60,6 +60,7 @@ public class Pub2WebPdfFilterFactory extends ExtractingPdfFilterFactory {
 
   private static final String DOWNLOAD_STRING = "Downloaded from ";
   private static final String ONDATE_STRING = "On: ";
+  private static final String IP_STRING = "IP: ";
   //private static final String temp= "^On: Sun, 12 Apr";
   
   private static void doBaseTransforms(PdfDocument pdfDocument) 
@@ -122,68 +123,79 @@ BT
 0 g
 ET
    */
+  
+/*
+ * Alternate version 
+ * 
+BT
+1 0 0 1 197.34 34 Tm
+/F1 8 Tf
+0.86275 0.86275 0.86275 rg
+(Downloaded from www.asmscience.org by)Tj
+0 g
+ET
+BT
+1 0 0 1 240.23 22 Tm
+/F1 8 Tf
+0.86275 0.86275 0.86275 rg
+(IP:  171.66.236.22)Tj
+0 g
+ET
+ */
 
   public static class Pub2WebDownloadedFromStateMachine extends PdfTokenStreamStateMachine {
 
 
     public Pub2WebDownloadedFromStateMachine() {
-      // the default direction is FORWARD, but make the logger the one for this class
-      super(log);
+      // Set the direction to BACKWARD and make the logger the one for this class
+      super(Direction.BACKWARD, log);
     }
     
     
     @Override
     public void state0() throws PdfException {
-      if (isBeginTextObject()) {
-        setBegin(getIndex());
+      if (isEndTextObject()) {
+        setEnd(getIndex());
         setState(1);
       }
     } 
-
+    
     // we are at a BT....if it's the "Downloaded by" then move to state 2, otherwise, keep looking...
     @Override
     public void state1() throws PdfException {
-      if (isShowTextStartsWith(DOWNLOAD_STRING)) {
-        log.debug3("state1 - we have a BT with the Downloaded by");
+      if (isShowTextStartsWith(ONDATE_STRING) ||
+          isShowTextStartsWith(IP_STRING)) {
+        log.debug3("state1 - we have a BT-ET with the IP: or On date");
         setState(2);
       }
       else if (isBeginTextObject()) { // not the initial BT-ET we were looking for
         setState(0);
       }
     }
-
-    // we have our BT - downloaded, now look at following BTs
+    
+    // we have our first text - now look at following BTs
     @Override
     public void state2() throws PdfException {
-      log.debug3("state2 - now looking for the next BT");
-      if (isBeginTextObject()) {  
+      log.debug3("state2 - we are checking download text");
+      if (isShowTextStartsWith(DOWNLOAD_STRING)) {
+        log.debug3("state3 - we have a BT with the Downloaded by");
         setState(3);
-      }      
-    }
-
-    // we're got a new BT, is this the final block
-    @Override
-    public void state3() throws PdfException {
-      log.debug3("state3 - we have a 2nd BT, checking text");
-      if (isShowTextStartsWith(ONDATE_STRING)) {
-        setState(4);
       }
       // otherwise just keep looking - may go over a BT-ET block set  
     }
-
+    
     // we found our final bit of text, now find the needed ET
     @Override
-    public void state4() throws PdfException {
-      log.debug3("state4 - we have all our text, looking for the next end");
-      if (isEndTextObject()) {  // we need to remove this BT-ET chunk
-        log.debug3("in state4 at final ET...prepare to remove");
-        setEnd(getIndex());
+    public void state3() throws PdfException {
+      log.debug3("state3 - we have all our text, looking for the next begin");
+      if (isBeginTextObject()) {
+        log.debug3("in state3 at final BT-ET...prepare to remove");
+        setBegin(getIndex());
         setResult(true);
         stop(); // found what we needed, stop processing this page
-      }      
+      }
     }
     
-
-  }  
+  }
 
 }
