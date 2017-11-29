@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>122</string>
+    <string>123</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -184,6 +184,11 @@
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.highwire.HighWirePressH20ArticleIteratorFactory</string>
   </entry>
+  <!-- don't extract links from XML file - due to some that aren't parseable -->
+  <entry>
+    <string>application/xml_link_extractor_factory</string>
+    <string>org.lockss.plugin.highwire.NullXmlLinkExtractorFactory</string>
+  </entry>  
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.highwire.HighWirePressH20ArticleIteratorFactory</string>
