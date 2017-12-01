@@ -12,7 +12,9 @@
     title <
       name = American Institute of Aeronautics and Astronautics Meeting Papers Source Content
     >
-    
+    #used to preserve older meeting papers that do not have eisbn for collection
+    #the later papers are preserved using the AIAABooksPlugin
+
     plugin = org.lockss.plugin.clockss.aiaa.ClockssAIAASourcePlugin
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/aiaa-released/
     hidden[proxy] = DIRECT
