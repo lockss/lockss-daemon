@@ -510,11 +510,12 @@
     >
 
     param[journal_id] = ae
+    #Moved to archive
 
     au < released ; 2014 ; Advances in Ecology Volume 2014 ; 2014 ; 2014 >
     au < released ; 2015 ; Advances in Ecology Volume 2015 ; 2015 ; 2015 >
     au < released ; 2016 ; Advances in Ecology Volume 2016 ; 2016 ; 2016 >
-    au < manifest ; 2017 ; Advances in Ecology Volume 2017 ; 2017 ; 2017 >
+    au < doNotProcess ; 2017 ; Advances in Ecology Volume 2017 ; 2017 ; 2017 >
 
   }
 
@@ -527,11 +528,12 @@
     >
 
     param[journal_id] = aee
+    #Moved to archive
 
-    au < released ; 2014 ; Advances in Electrical Engineering Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Advances in Electrical Engineering Volume 2015 ; 2015 ; 2015 >
-    au < released ; 2016 ; Advances in Electrical Engineering Volume 2016 ; 2016 ; 2016 >
-    au < manifest ; 2017 ; Advances in Electrical Engineering Volume 2017 ; 2017 ; 2017 >
+    au < down ; 2014 ; Advances in Electrical Engineering Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Advances in Electrical Engineering Volume 2015 ; 2015 ; 2015 >
+    au < down ; 2016 ; Advances in Electrical Engineering Volume 2016 ; 2016 ; 2016 >
+    au < doNotProcess ; 2017 ; Advances in Electrical Engineering Volume 2017 ; 2017 ; 2017 >
 
   }
 
@@ -577,11 +579,12 @@
     >
 
     param[journal_id] = aen
+    #Moved to archive
 
-    au < released ; 2014 ; Advances in Endocrinology Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Advances in Endocrinology Volume 2015 ; 2015 ; 2015 >
-    au < released ; 2016 ; Advances in Endocrinology Volume 2016 ; 2016 ; 2016 >
-    au < manifest ; 2017 ; Advances in Endocrinology Volume 2017 ; 2017 ; 2017 >
+    au < down ; 2014 ; Advances in Endocrinology Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Advances in Endocrinology Volume 2015 ; 2015 ; 2015 >
+    au < down ; 2016 ; Advances in Endocrinology Volume 2016 ; 2016 ; 2016 >
+    au < doNotProcess ; 2017 ; Advances in Endocrinology Volume 2017 ; 2017 ; 2017 >
 
   }
 
@@ -1000,11 +1003,12 @@
     >
 
     param[journal_id] = anurs
+    #Moved to archive
 
-    au < released ; 2014 ; Advances in Nursing Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Advances in Nursing Volume 2015 ; 2015 ; 2015 >
-    au < released ; 2016 ; Advances in Nursing Volume 2016 ; 2016 ; 2016 >
-    au < manifest ; 2017 ; Advances in Nursing Volume 2017 ; 2017 ; 2017 >
+    au < down ; 2014 ; Advances in Nursing Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Advances in Nursing Volume 2015 ; 2015 ; 2015 >
+    au < down ; 2016 ; Advances in Nursing Volume 2016 ; 2016 ; 2016 >
+    au < doNotProcess ; 2017 ; Advances in Nursing Volume 2017 ; 2017 ; 2017 >
 
   }
 
@@ -2921,14 +2925,15 @@
     >
 
     param[journal_id] = cri
+    #Moved to archive
 
-    au < released ; 2011 ; Chromatography Research International Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Chromatography Research International Volume 2012 ; 2012 ; 2012 >
-    au < manifest ; 2013 ; Chromatography Research International Volume 2013 ; 2013 ; 2013 >
-    au < released ; 2014 ; Chromatography Research International Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Chromatography Research International Volume 2015 ; 2015 ; 2015 >
-    au < released ; 2016 ; Chromatography Research International Volume 2016 ; 2016 ; 2016 >
-    au < expected ; 2017 ; Chromatography Research International Volume 2017 ; 2017 ; 2017 >
+    au < down ; 2011 ; Chromatography Research International Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2012 ; Chromatography Research International Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2013 ; Chromatography Research International Volume 2013 ; 2013 ; 2013 >
+    au < down ; 2014 ; Chromatography Research International Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Chromatography Research International Volume 2015 ; 2015 ; 2015 >
+    au < down ; 2016 ; Chromatography Research International Volume 2016 ; 2016 ; 2016 >
+    au < doNotProcess ; 2017 ; Chromatography Research International Volume 2017 ; 2017 ; 2017 >
 
   }
 
@@ -3163,12 +3168,13 @@
     >
 
     param[journal_id] = dpis
+    #Moved to archive
 
-    au < manifest ; 2013 ; Dataset Papers in Science Volume 2013 ; 2013 ; 2013 >
-    au < released ; 2014 ; Dataset Papers in Science Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Dataset Papers in Science Volume 2015 ; 2015 ; 2015 >
-    au < released ; 2016 ; Dataset Papers in Science Volume 2016 ; 2016 ; 2016 >
-    au < manifest ; 2017 ; Dataset Papers in Science Volume 2017 ; 2017 ; 2017 >
+    au < doNotProcess ; 2013 ; Dataset Papers in Science Volume 2013 ; 2013 ; 2013 >
+    au < down ; 2014 ; Dataset Papers in Science Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Dataset Papers in Science Volume 2015 ; 2015 ; 2015 >
+    au < down ; 2016 ; Dataset Papers in Science Volume 2016 ; 2016 ; 2016 >
+    au < doNotProcess ; 2017 ; Dataset Papers in Science Volume 2017 ; 2017 ; 2017 >
 
   }
 
@@ -4162,12 +4168,13 @@
     >
 
     param[journal_id] = ijas
+    #Moved to archive
 
-    au < manifest ; 2013 ; International Journal of Atmospheric Sciences Volume 2013 ; 2013 ; 2013 >
-    au < released ; 2014 ; International Journal of Atmospheric Sciences Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; International Journal of Atmospheric Sciences Volume 2015 ; 2015 ; 2015 >
-    au < released ; 2016 ; International Journal of Atmospheric Sciences Volume 2016 ; 2016 ; 2016 >
-    au < manifest ; 2017 ; International Journal of Atmospheric Sciences Volume 2017 ; 2017 ; 2017 >
+    au < doNotProcess ; 2013 ; International Journal of Atmospheric Sciences Volume 2013 ; 2013 ; 2013 >
+    au < down ; 2014 ; International Journal of Atmospheric Sciences Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; International Journal of Atmospheric Sciences Volume 2015 ; 2015 ; 2015 >
+    au < down ; 2016 ; International Journal of Atmospheric Sciences Volume 2016 ; 2016 ; 2016 >
+    au < doNotProcess ; 2017 ; International Journal of Atmospheric Sciences Volume 2017 ; 2017 ; 2017 >
 
   }
 
@@ -6377,13 +6384,11 @@
     >
 
     comment[continued_by] = 2314-8039
-    {
     param[journal_id] = jamop
 
     au < down ; 2009 ; Journal of Atomic, Molecular, and Optical Physics Volume 2009 [superseded] ; 2009 ; 2009 >
     au < down ; 2010 ; Journal of Atomic, Molecular, and Optical Physics Volume 2010 [superseded] ; 2010 ; 2010 >
     au < down ; 2011 ; Journal of Atomic, Molecular, and Optical Physics Volume 2011 [superseded] ; 2011 ; 2011 >
-    }
   }
 
   {
@@ -6398,11 +6403,6 @@
     comment[continues] = 1687-9228
     #Moved to archive
 
-    au < doNotProcess ; 2009 ; Journal of Atomic, Molecular, and Optical Physics Volume 2009 ; 2009 ; 2009 >
-    au < doNotProcess ; 2010 ; Journal of Atomic, Molecular, and Optical Physics Volume 2010 ; 2010 ; 2010 >
-    au < doNotProcess ; 2011 ; Journal of Atomic, Molecular, and Optical Physics Volume 2011 ; 2011 ; 2011 >
-    au < doNotProcess ; 2012 ; Journal of Atomic, Molecular, and Optical Physics Volume 2012 ; 2012 ; 2012 >
-    au < doNotProcess ; 2013 ; Journal of Atomic and Molecular Physics Volume 2013 ; 2013 ; 2013 >
     au < down ; 2014 ; Journal of Atomic and Molecular Physics Volume 2014 ; 2014 ; 2014 >
 
     }

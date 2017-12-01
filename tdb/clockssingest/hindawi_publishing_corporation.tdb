@@ -5647,6 +5647,23 @@
 
   {
     title <
+      name = Journal of Atomic, Molecular, and Optical Physics ;
+      issn = 1687-9228 ;
+      eissn = 1687-9236 ;
+      issnl = 1687-9228
+    >
+
+    comment[continued_by] = 2314-8039
+    param[journal_id] = jamop
+
+    au < doNotProcess ; exists ; 2009 ; Journal of Atomic, Molecular, and Optical Physics Volume 2009 ; 2009 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Atomic, Molecular, and Optical Physics Volume 2010 ; 2010 ; 2010 ; >
+    au < doNotProcess ; exists ; 2011 ; Journal of Atomic, Molecular, and Optical Physics Volume 2011 ; 2011 ; 2011 ; >
+
+  }
+
+  {
+    title <
       name = Journal of Atomic and Molecular Physics ;
       issn = 2314-8039 ;
       eissn = 2314-8020 ;
@@ -5657,11 +5674,6 @@
     comment[continues] = 1687-9228
     #Moved to archive
 
-    au < doNotProcess ; exists ; 2009 ; Journal of Atomic, Molecular, and Optical Physics Volume 2009 ; 2009 ; 2009 ; >
-    au < doNotProcess ; exists ; 2010 ; Journal of Atomic, Molecular, and Optical Physics Volume 2010 ; 2010 ; 2010 ; >
-    au < doNotProcess ; exists ; 2011 ; Journal of Atomic, Molecular, and Optical Physics Volume 2011 ; 2011 ; 2011 ; >
-    au < doNotProcess ; exists ; 2012 ; Journal of Atomic, Molecular, and Optical Physics Volume 2012 ; 2012 ; 2012 ; >
-    au < doNotProcess ; exists ; 2013 ; Journal of Atomic and Molecular Physics Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Atomic and Molecular Physics Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
 
   }
