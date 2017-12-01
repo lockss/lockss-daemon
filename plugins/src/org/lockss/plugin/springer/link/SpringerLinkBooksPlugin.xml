@@ -81,7 +81,7 @@
     <list>
       <string>"%slockss.txt", to_http(base_url)</string>
       <string>"%slockss.txt", to_https(base_url)</string>
-      <string>"%slockss.txt", download_url</string>
+      <!--<string>"%slockss.txt", download_url</string>-->
       <string>"https://api.springer.com/lockss.txt"</string>
     </list>
   </entry>
