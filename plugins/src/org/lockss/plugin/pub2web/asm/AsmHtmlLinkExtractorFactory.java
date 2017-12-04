@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -70,6 +70,7 @@ implements LinkExtractorFactory {
   //<div class="tocheadingarticlelisting retrieveTocheadingArticle hiddenjsdiv">/content/journal/microbiolspec/2/4/articles?fmt=ahah&tocHeading=http://asm.metastore.ingenta.com/content/journal/microbiolspec/reviewarticle</div>
   // Identify an article landing page from which all article aspect links originate
   protected static final Pattern PATTERN_TOC_LANDING_URL = Pattern.compile("^(https?://[^/]+)/content/journal/[^/]+/[0-9]+/[0-9]+$", Pattern.CASE_INSENSITIVE);
+  // XXX must match value used in AsmHtmlLinkRewriterFactory
   protected static final String ART_LISTING_CLASS = "tocheadingarticlelisting";
   protected static final String ARTICLES_URL_SNIPPET = "articles?fmt=ahah"; 
   
