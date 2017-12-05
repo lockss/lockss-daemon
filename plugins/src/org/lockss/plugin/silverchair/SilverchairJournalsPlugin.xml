@@ -190,8 +190,8 @@
   <entry>
     <string>plugin_cache_result_list</string>
     <list>
-      <string>405=org.lockss.plugin.silverchair.ScHtmlHttpResponseHandler</string>
-      <string>org.lockss.plugin.ContentValidationException$WrongLength=org.lockss.plugin.silverchair.ScHtmlHttpResponseHandler</string>
+<!--      <string>405=org.lockss.plugin.silverchair.ScHtmlHttpResponseHandler</string> -->
+      <string>org.lockss.plugin.ContentValidationException=org.lockss.plugin.silverchair.ScHtmlHttpResponseHandler</string>
     </list>
   </entry>
   <entry>
