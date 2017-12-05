@@ -116,6 +116,9 @@ public class Pub2WebHtmlMetadataExtractorFactory implements FileMetadataExtracto
       ArticleMetadata am =
           new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
       am.cook(tagMap);
+      if ((am.get(MetadataField.FIELD_DOI) == null) && (am.get(MetadataField.DC_FIELD_IDENTIFIER)!= null )){
+        am.put(MetadataField.FIELD_DOI,am.get(MetadataField.DC_FIELD_IDENTIFIER));
+      }
       // leave this method here in case we need to make modifications 
       // note that access.url isn't set to allow for default full_text_cu value (pdf)
       emitter.emitMetadata(cu, am);
