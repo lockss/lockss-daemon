@@ -493,7 +493,7 @@
     au < finished ; finished ; 2015 ; Biochemical Journal Volume 470 ; 470 ; >
     au < finished ; finished ; 2015 ; Biochemical Journal Volume 471 ; 471 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Biochemical Journal Volume 472 ; 472 ; reingest2.clockss.org:8085 >
-    au < crawling ; down ; 2016 ; Biochemical Journal Volume 473 ; 473 ; reingest1.clockss.org:8082 >
+    au < frozen ; down ; 2016 ; Biochemical Journal Volume 473 ; 473 ; reingest1.clockss.org:8082 >
     au < manifest ; exists ; 2017 ; Biochemical Journal Volume 474 ; 474 ; >
 
   }
@@ -654,7 +654,7 @@
     au < frozen ; exists ; 2013 ; Clinical Science Volume 124 ; 124 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2013 ; Clinical Science Volume 125 ; 125 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2014 ; Clinical Science Volume 126 ; 126 ; >
-    au < crawling ; exists ; 2014 ; Clinical Science Volume 127 ; 127 ; >
+    au < frozen ; exists ; 2014 ; Clinical Science Volume 127 ; 127 ; >
     au < crawling ; exists ; 2015 ; Clinical Science Volume 128 ; 128 ; >
     au < crawling ; exists ; 2015 ; Clinical Science Volume 129 ; 129 ; >
     au < frozen ; exists ; 2016 ; Clinical Science Volume 130 ; 130 ; reingest1.clockss.org:8082 >
