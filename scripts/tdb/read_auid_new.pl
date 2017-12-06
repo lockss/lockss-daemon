@@ -1787,15 +1787,49 @@ while (my $line = <>) {
 #      } else {
 #	print "no match -has chapters\n";
 #      }
-      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents !~ m/$has_no_chapters/)) {
-        if ($man_contents =~ m/<title>\s*ASMscience \|(.*)\s*<\/title>/si) {
-          $vol_title = $1;
-          $vol_title =~ s/\s*\n\s*/ /g;
-          if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
-            $vol_title = "\"" . $vol_title . "\"";
+      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
+        if ($man_contents !~ m/$has_no_chapters/) {
+          if ($man_contents =~ m/<title>\s*ASMscience \|(.*)\s*<\/title>/si) {
+            $vol_title = $1;
+            $vol_title =~ s/\s*\n\s*/ /g;
+            if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+              $vol_title = "\"" . $vol_title . "\"";
+            }
           }
+          $result = "Manifest"
+        } else {
+          $result = "--NO_CONT--";
         }
-        $result = "Manifest"
+      } else {
+        $result = "--NO_TAG--"
+      }
+    } else {
+      $result = "--REQ_FAIL--"
+    }
+    sleep(4);
+
+  } elsif ($plugin eq "ASMscienceBooksPlugin") {
+    $url = sprintf("%scontent/book/%s",
+      $param{base_url}, $param{doi});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    if ($resp->is_success) {
+      my $man_contents = $resp->content;
+      my $has_no_chapters = "Chapters \\(0\\)";
+      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
+        if ($man_contents !~ m/$has_no_chapters/) {
+          if ($man_contents =~ m/<title>\s*ASMscience \|(.*)\s*<\/title>/si) {
+            $vol_title = $1;
+            $vol_title =~ s/\s*\n\s*/ /g;
+            if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+              $vol_title = "\"" . $vol_title . "\"";
+            }
+          }
+          $result = "Manifest"
+        } else {
+          $result = "--NO_CONT--";
+        }
       } else {
         $result = "--NO_TAG--"
       }
@@ -1867,7 +1901,7 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
+      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
         $result = "Manifest"
       } else {
         $result = "--NO_TAG--"
