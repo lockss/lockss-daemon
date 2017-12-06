@@ -1917,7 +1917,7 @@
     au < manifest ; exists ; 2013 ; Canadian Journal of Gastroenterology and Hepatology Volume 27 (2013) ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Canadian Journal of Gastroenterology and Hepatology Volume 28 (2014) ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Canadian Journal of Gastroenterology and Hepatology Volume 29 (2015) ; 2015 ; 2015 ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2016 ; Canadian Journal of Gastroenterology and Hepatology Volume 2016 (2016) ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2016 ; Canadian Journal of Gastroenterology and Hepatology Volume 2016 (2016) ; 2016 ; 2016 ; >
     au < crawling ; exists ; 2017 ; Canadian Journal of Gastroenterology and Hepatology Volume 2017 (2017) ; 2017 ; 2017 ; >
         
   }
@@ -3225,14 +3225,14 @@
     >
 
     param[journal_id] = eri
+    #Moved to archive
 
-    au < manifest ; exists ; 2011 ; Epidemiology Research International Volume 2011 ; 2011 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; Epidemiology Research International Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Epidemiology Research International Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2011 ; Epidemiology Research International Volume 2011 ; 2011 ; 2011 ; >
+    au < doNotProcess ; exists ; 2012 ; Epidemiology Research International Volume 2012 ; 2012 ; 2012 ; >
+    au < doNotProcess ; exists ; 2013 ; Epidemiology Research International Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Epidemiology Research International Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Epidemiology Research International Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2016 ; Epidemiology Research International Volume 2016 ; 2016 ; 2016 ; >
-    au < expected ; exists ; 2017 ; Epidemiology Research International Volume 2017 ; 2017 ; 2017 ; >
+    au < finished ; manifest ; 2016 ; Epidemiology Research International Volume 2016 ; 2016 ; 2016 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -3279,7 +3279,7 @@
     au < manifest ; exists ; 2013 ; Evidence-based Complementary and Alternative Medicine Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Evidence-based Complementary and Alternative Medicine Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Evidence-based Complementary and Alternative Medicine Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2016 ; Evidence-based Complementary and Alternative Medicine Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2016 ; Evidence-based Complementary and Alternative Medicine Volume 2016 ; 2016 ; 2016 ; >
     au < crawling ; exists ; 2017 ; Evidence-based Complementary and Alternative Medicine Volume 2017 ; 2017 ; 2017 ; >
 
   }
@@ -3946,16 +3946,16 @@
     >
 
     param[journal_id] = ijcom
+    #Moved to archive
 
-    au < manifest ; exists ; 2009 ; International Journal of Combinatorics Volume 2009 ; 2009 ; 2009 ; >
-    au < manifest ; exists ; 2010 ; International Journal of Combinatorics Volume 2010 ; 2010 ; 2010 ; >
-    au < manifest ; exists ; 2011 ; International Journal of Combinatorics Volume 2011 ; 2011 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; International Journal of Combinatorics Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; International Journal of Combinatorics Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2009 ; International Journal of Combinatorics Volume 2009 ; 2009 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; International Journal of Combinatorics Volume 2010 ; 2010 ; 2010 ; >
+    au < doNotProcess ; exists ; 2011 ; International Journal of Combinatorics Volume 2011 ; 2011 ; 2011 ; >
+    au < doNotProcess ; exists ; 2012 ; International Journal of Combinatorics Volume 2012 ; 2012 ; 2012 ; >
+    au < doNotProcess ; exists ; 2013 ; International Journal of Combinatorics Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; International Journal of Combinatorics Volume 2014 ; 2014 ; 2014 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; International Journal of Combinatorics Volume 2015 ; 2015 ; 2015 ; reingest4.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2016 ; International Journal of Combinatorics Volume 2016 ; 2016 ; 2016 ; >
-    au < expected ; exists ; 2017 ; International Journal of Combinatorics Volume 2017 ; 2017 ; 2017 ; >
+    au < finished ; manifest ; 2016 ; International Journal of Combinatorics Volume 2016 ; 2016 ; 2016 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -4504,7 +4504,7 @@
     au < manifest ; exists ; 2013 ; International Journal of Mathematics and Mathematical Sciences Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; International Journal of Mathematics and Mathematical Sciences Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; International Journal of Mathematics and Mathematical Sciences Volume 2015 ; 2015 ; 2015 ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2016 ; International Journal of Mathematics and Mathematical Sciences Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2016 ; International Journal of Mathematics and Mathematical Sciences Volume 2016 ; 2016 ; 2016 ; >
     au < crawling ; exists ; 2017 ; International Journal of Mathematics and Mathematical Sciences Volume 2017 ; 2017 ; 2017 ; >
 
   }
@@ -4594,18 +4594,19 @@
     >
 
     param[journal_id] = ijmst
+    #Moved to archive
 
-    au < manifest ; exists ; 2007 ; International Journal of Microwave Science and Technology Volume 2007 ; 2007 ; 2007 ; >
-    au < manifest ; exists ; 2008 ; International Journal of Microwave Science and Technology Volume 2008 ; 2008 ; 2008 ; >
-    au < manifest ; exists ; 2009 ; International Journal of Microwave Science and Technology Volume 2009 ; 2009 ; 2009 ; >
-    au < manifest ; exists ; 2010 ; International Journal of Microwave Science and Technology Volume 2010 ; 2010 ; 2010 ; >
-    au < manifest ; exists ; 2011 ; International Journal of Microwave Science and Technology Volume 2011 ; 2011 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; International Journal of Microwave Science and Technology Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; International Journal of Microwave Science and Technology Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2007 ; International Journal of Microwave Science and Technology Volume 2007 ; 2007 ; 2007 ; >
+    au < doNotProcess ; exists ; 2008 ; International Journal of Microwave Science and Technology Volume 2008 ; 2008 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; International Journal of Microwave Science and Technology Volume 2009 ; 2009 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; International Journal of Microwave Science and Technology Volume 2010 ; 2010 ; 2010 ; >
+    au < doNotProcess ; exists ; 2011 ; International Journal of Microwave Science and Technology Volume 2011 ; 2011 ; 2011 ; >
+    au < doNotProcess ; exists ; 2012 ; International Journal of Microwave Science and Technology Volume 2012 ; 2012 ; 2012 ; >
+    au < doNotProcess ; exists ; 2013 ; International Journal of Microwave Science and Technology Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; International Journal of Microwave Science and Technology Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; International Journal of Microwave Science and Technology Volume 2015 ; 2015 ; 2015 ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2016 ; International Journal of Microwave Science and Technology Volume 2016 ; 2016 ; 2016 ; >
-    au < crawling ; exists ; 2017 ; International Journal of Microwave Science and Technology Volume 2017 ; 2017 ; 2017 ; >
+    au < finished ; manifest ; 2016 ; International Journal of Microwave Science and Technology Volume 2016 ; 2016 ; 2016 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2017 ; International Journal of Microwave Science and Technology Volume 2017 ; 2017 ; 2017 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -5411,16 +5412,17 @@
     >
 
     param[journal_id] = ja
+    #Moved to archive
 
-    au < manifest ; exists ; 2009 ; Journal of Allergy Volume 2009 ; 2009 ; 2009 ; >
-    au < manifest ; exists ; 2010 ; Journal of Allergy Volume 2010 ; 2010 ; 2010 ; >
-    au < manifest ; exists ; 2011 ; Journal of Allergy Volume 2011 ; 2011 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; Journal of Allergy Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Journal of Allergy Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2009 ; Journal of Allergy Volume 2009 ; 2009 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Allergy Volume 2010 ; 2010 ; 2010 ; >
+    au < doNotProcess ; exists ; 2011 ; Journal of Allergy Volume 2011 ; 2011 ; 2011 ; >
+    au < doNotProcess ; exists ; 2012 ; Journal of Allergy Volume 2012 ; 2012 ; 2012 ; >
+    au < doNotProcess ; exists ; 2013 ; Journal of Allergy Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Allergy Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; crawling ; 2015 ; Journal of Allergy Volume 2015 ; 2015 ; 2015 ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2016 ; Journal of Allergy Volume 2016 ; 2016 ; 2016 ; >
-    au < crawling ; exists ; 2017 ; Journal of Allergy Volume 2017 ; 2017 ; 2017 ; >
+    au < finished ; manifest ; 2016 ; Journal of Allergy Volume 2016 ; 2016 ; 2016 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2017 ; Journal of Allergy Volume 2017 ; 2017 ; 2017 ; reingest2.clockss.org:8085 >
 
   }
 
