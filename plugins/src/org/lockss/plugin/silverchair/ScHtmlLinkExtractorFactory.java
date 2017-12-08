@@ -85,6 +85,14 @@ public class ScHtmlLinkExtractorFactory implements LinkExtractorFactory {
 
   protected static final String PDF_QUERY_STRING_SPIE =
     "/volume.aspx/SetPDFLinkBasedOnAccess?";
+  /*
+   * <a class="al-link pdf pdfaccess pdf-link" 
+   * data-article-id="2533522" 
+   * data-article-url="/data/Journals/LSHSS/935447/LSHSS_47_3_181.pdf" 
+   * data-ajax-url="/Content/CheckPdfAccess">
+   */
+  protected static final String PDF_CANONICAL_STRING =
+      "";
 
   @Override
   public LinkExtractor createLinkExtractor(String mimeType) throws PluginException {
@@ -103,7 +111,8 @@ public class ScHtmlLinkExtractorFactory implements LinkExtractorFactory {
     extractor.registerTagExtractor(ANCHOR_TAG,
                                    new ScAnchorTagExtractor(new String[]{"href",
                                                                          "onclick",
-                                                                         "download"}));
+                                                                         "download",
+                                                                         "data-article-url"}));
     extractor.registerTagExtractor(IMG_TAG,
                                    new SimpleTagLinkExtractor(new String[]{"src", "longdesc",
                                                                            "data-original"
@@ -229,6 +238,12 @@ public class ScHtmlLinkExtractorFactory implements LinkExtractorFactory {
       // the 'download' attribute handler - the standard method for <a download
       if (node.hasAttr("download")) {
         JsoupHtmlLinkExtractor.checkLink(node, cb, "download");
+      }
+
+      // the 'data-article-url' attribute handler - the standard method for <a data-article-url
+      if (node.hasAttr("data-article-url")) {
+        // picks up both pdfLink and epdfLink, but the readcube version is excluded
+        JsoupHtmlLinkExtractor.checkLink(node, cb, "data-article-url");
       }
     }
 

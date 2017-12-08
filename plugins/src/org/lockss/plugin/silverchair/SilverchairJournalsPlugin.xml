@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>43</string>
+    <string>44</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -77,6 +77,14 @@
     <string>"%sLOCKSS/ListOfIssues.aspx?resourceId=%d&amp;year=%d", base_url, resource_id, year</string>
   </entry>
   <entry>
+  <!-- crawl examples
+  ASHA uses differet pdf and image download links
+  NO: base/epdf.aspx?doi=10.1044/2016_LSHSS-15-0063 - just readcube enabled access
+  NO: base/downloadimage.aspx?image=/path/foo.jpeg&sec=123429987&ar=2516861&imagename=  - powerpoint 
+  YES: base/data/Journals/LSHSS/935447/LSHSS_47_3_181.pdf
+  redirected to (consume):
+    YES:  base/pdfaccess.ashx?url=/data/journals/lshss/935254/lshss_47_2_123.pdf
+   -->
     <string>au_crawlrules</string>
     <list>
       <string>1,"^https?://([^.]+\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|ajax\.microsoft\.com)/"</string>
@@ -93,7 +101,7 @@
       <string>1,"^%scombres\.axd/", base_url</string>
       <string>1,"^%sissue\.aspx/SetArticlePDFLinkBasedOnAccess", base_url</string>
       <string>1,"^%svolume\.aspx/SetPDFLinkBasedOnAccess", base_url</string>
-      <string>1,"^%spdfaccess\.ashx\?ResourceID", base_url</string>
+      <string>1,"^%spdfaccess\.ashx\?(ResourceID|url)", base_url</string>
       <string>1,"^%sScriptResource\.axd\?d", base_url</string>
     </list>
   </entry>
@@ -109,6 +117,10 @@
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.silverchair.ScHtmlCrawlFilterFactory</string>
   </entry>
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.silverchair.ScUrlConsumerFactory</string>
+  </entry>  
   <entry>
     <string>au_url_normalizer</string>
     <string>org.lockss.plugin.silverchair.ScUrlNormalizer</string>
