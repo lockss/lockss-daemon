@@ -20,7 +20,7 @@
 
       {
         
-      param[base_url] = http://ajp.psychiatryonline.org/
+      param[base_url] = https://ajp.psychiatryonline.org/
       param[journal_id] = ajp
       # content starts from 1844 to current
 
@@ -60,7 +60,7 @@
       >
 
       {
-      param[base_url] = http://focus.psychiatryonline.org/
+      param[base_url] = https://focus.psychiatryonline.org/
       param[journal_id] = foc
 
       au < doNotProcess ; 2003 ; Focus Volume 1 ; 1 >
@@ -92,7 +92,7 @@
       >
 
       {
-      param[base_url] = http://neuro.psychiatryonline.org/
+      param[base_url] = https://neuro.psychiatryonline.org/
       param[journal_id] = jnp
       # content starts from 1989 to current
 
@@ -130,7 +130,7 @@
       >
 
       {
-      param[base_url] = http://ps.psychiatryonline.org/
+      param[base_url] = https://ps.psychiatryonline.org/
       param[journal_id] = ps
       # content starts from year 1950 to current
 
