@@ -35,6 +35,8 @@ import java.io.InputStream;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.htmlparser.Attribute;
 import org.htmlparser.Node;
@@ -68,6 +70,8 @@ public class MaffeyHtmlLinkRewriterFactory implements LinkRewriterFactory {
    * form elements with the appropriate PDF link.
    * We picked up the PDF file from the CLOCKSS TOC but want user to be able
    * to navigate to the PDF from this page.
+   * Also - take the TOC breadcrumb link at the top of each article page and 
+   * modify it to go to the only TOC we have, the CLOCKSS issue TOC
    * 
    */
   @Override
@@ -88,6 +92,10 @@ public class MaffeyHtmlLinkRewriterFactory implements LinkRewriterFactory {
   
   
   static class MaffeyPreFilter implements NodeFilter {
+    
+    // /journal.php?journal_id=142&tab=volume#issue934">  
+    protected static final Pattern TOC_PATTERN = 
+        Pattern.compile(".*/journal\\.php\\?journal_id=[0-9]+&tab=volume#issue([0-9]+)$", Pattern.CASE_INSENSITIVE);   
     private static final String FILE_ID_PARAM = "fileId"; 
     private static final String FILE_NAME_PARAM = "filename"; 
     // getting information from an early part of the DOM for use later
@@ -167,6 +175,19 @@ public class MaffeyHtmlLinkRewriterFactory implements LinkRewriterFactory {
             parentChildren.remove(node);
 
           }
+        }
+      //<a style="text-decoration: underline;" 
+      //  href="./journal.php?journal_id=142&tab=volume#issue934">2017:9</a>  
+      } else if (node instanceof LinkTag) {
+        String linkUrl = ((LinkTag) node).extractLink();
+        if (linkUrl == null) {
+          return false;
+        }
+        Matcher tocMat = TOC_PATTERN.matcher(linkUrl); 
+        if (tocMat.find()) {
+          String issueID = tocMat.group(1);
+          String newUrl = "lockss.php?t=clockss&pa=article&i_id=" + issueID;
+          ((LinkTag)node).setLink(newUrl);
         }
       }
       return false;
