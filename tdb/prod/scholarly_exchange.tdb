@@ -323,14 +323,14 @@
     param[base_url] = http://www.kmuj.kmu.edu.pk/
     param[journal_id] = KMJ
 
-    au < ready ; 2009 ; Khyber Medical University Journal Volume 1 ; 1 ; 2009 >
-    au < ready ; 2010 ; Khyber Medical University Journal Volume 2 ; 2 ; 2010 >
-    au < ready ; 2011 ; Khyber Medical University Journal Volume 3 ; 3 ; 2011 >
-    au < ready ; 2012 ; Khyber Medical University Journal Volume 4 ; 4 ; 2012 >
-    au < ready ; 2013 ; Khyber Medical University Journal Volume 5 ; 5 ; 2013 >
-    au < ready ; 2014 ; Khyber Medical University Journal Volume 6 ; 6 ; 2014 >
-    au < ready ; 2015 ; Khyber Medical University Journal Volume 7 ; 7 ; 2015 >
-    au < ready ; 2016 ; Khyber Medical University Journal Volume 8 ; 8 ; 2016 >
+    au < releasing ; 2009 ; Khyber Medical University Journal Volume 1 ; 1 ; 2009 >
+    au < releasing ; 2010 ; Khyber Medical University Journal Volume 2 ; 2 ; 2010 >
+    au < releasing ; 2011 ; Khyber Medical University Journal Volume 3 ; 3 ; 2011 >
+    au < releasing ; 2012 ; Khyber Medical University Journal Volume 4 ; 4 ; 2012 >
+    au < releasing ; 2013 ; Khyber Medical University Journal Volume 5 ; 5 ; 2013 >
+    au < releasing ; 2014 ; Khyber Medical University Journal Volume 6 ; 6 ; 2014 >
+    au < releasing ; 2015 ; Khyber Medical University Journal Volume 7 ; 7 ; 2015 >
+    au < releasing ; 2016 ; Khyber Medical University Journal Volume 8 ; 8 ; 2016 >
     au < exists ; 2017 ; Khyber Medical University Journal Volume 9 ; 9 ; 2017 >
     
   }
@@ -416,12 +416,12 @@
     param[base_url] = http://www.wpcjournal.com/
     param[journal_id] = UDP
 
-    au < ready ; 2010 ; Understanding and Dismantling Privilege Volume 1 ; 1 ; 2010 >
-    au < ready ; 2012 ; Understanding and Dismantling Privilege Volume 2 ; 2 ; 2012 >
-    au < ready ; 2013 ; Understanding and Dismantling Privilege Volume 3 ; 3 ; 2013 >
-    au < ready ; 2014 ; Understanding and Dismantling Privilege Volume 4 ; 4 ; 2014 >
-    au < ready ; 2015 ; Understanding and Dismantling Privilege Volume 5 ; 5 ; 2015 >
-    au < ready ; 2016 ; Understanding and Dismantling Privilege Volume 6 ; 6 ; 2016 >
+    au < releasing ; 2010 ; Understanding and Dismantling Privilege Volume 1 ; 1 ; 2010 >
+    au < releasing ; 2012 ; Understanding and Dismantling Privilege Volume 2 ; 2 ; 2012 >
+    au < releasing ; 2013 ; Understanding and Dismantling Privilege Volume 3 ; 3 ; 2013 >
+    au < releasing ; 2014 ; Understanding and Dismantling Privilege Volume 4 ; 4 ; 2014 >
+    au < releasing ; 2015 ; Understanding and Dismantling Privilege Volume 5 ; 5 ; 2015 >
+    au < releasing ; 2016 ; Understanding and Dismantling Privilege Volume 6 ; 6 ; 2016 >
     au < exists ; 2017 ; Understanding and Dismantling Privilege Volume 7 ; 7 ; 2017 >
     
   }
