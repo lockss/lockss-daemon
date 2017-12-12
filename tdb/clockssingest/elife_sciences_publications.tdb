@@ -9,6 +9,8 @@
   plugin = org.lockss.plugin.elifesciences.ClockssELifeSciencesPlugin
   implicit < status ; status2 ; year ; name ; param[year_month] ; hidden[proxy] >
   
+  comment[down] = Site redesign, needs new analysis 
+  
   {
     title <
       name = eLife ;
@@ -45,12 +47,12 @@
       au < finished ; finished ; 2015 ; eLife November 2015 ; 2015/11 ; reingest5.clockss.org:8082 >
       au < doesNotExist ; doesNotExist ; 2015 ; eLife December 2015 ; 2015/12 ; >
 
-      au < deepCrawl ; exists ; 2016 ; eLife January 2016 ; 2016/01 ; >
-      au < deepCrawl ; exists ; 2016 ; eLife February 2016 ; 2016/02 ; >
-      au < deepCrawl ; exists ; 2016 ; eLife March 2016 ; 2016/03 ; >
-      au < deepCrawl ; exists ; 2016 ; eLife April 2016 ; 2016/04 ; >
-      au < deepCrawl ; exists ; 2016 ; eLife May 2016 ; 2016/05 ; >
-      au < deepCrawl ; exists ; 2016 ; eLife June 2016 ; 2016/06 ; >
+      au < finished ; manifest ; 2016 ; eLife January 2016 ; 2016/01 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; eLife February 2016 ; 2016/02 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; eLife March 2016 ; 2016/03 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; eLife April 2016 ; 2016/04 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; eLife May 2016 ; 2016/05 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2016 ; eLife June 2016 ; 2016/06 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; eLife July 2016 ; 2016/07 ; >
       au < crawling ; exists ; 2016 ; eLife August 2016 ; 2016/08 ; >
       au < crawling ; exists ; 2016 ; eLife September 2016 ; 2016/09 ; >
