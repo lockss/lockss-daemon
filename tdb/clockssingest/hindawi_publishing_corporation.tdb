@@ -3845,16 +3845,17 @@
     >
 
     param[journal_id] = ijcc
+    #Moved to archive
 
-    au < manifest ; exists ; 2009 ; International Journal of Carbohydrate Chemistry Volume 2009 ; 2009 ; 2009 ; >
-    au < manifest ; exists ; 2010 ; International Journal of Carbohydrate Chemistry Volume 2010 ; 2010 ; 2010 ; >
-    au < manifest ; exists ; 2011 ; International Journal of Carbohydrate Chemistry Volume 2011 ; 2011 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; International Journal of Carbohydrate Chemistry Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; International Journal of Carbohydrate Chemistry Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2009 ; International Journal of Carbohydrate Chemistry Volume 2009 ; 2009 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; International Journal of Carbohydrate Chemistry Volume 2010 ; 2010 ; 2010 ; >
+    au < doNotProcess ; exists ; 2011 ; International Journal of Carbohydrate Chemistry Volume 2011 ; 2011 ; 2011 ; >
+    au < doNotProcess ; exists ; 2012 ; International Journal of Carbohydrate Chemistry Volume 2012 ; 2012 ; 2012 ; >
+    au < doNotProcess ; exists ; 2013 ; International Journal of Carbohydrate Chemistry Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; International Journal of Carbohydrate Chemistry Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; finished ; 2015 ; International Journal of Carbohydrate Chemistry Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2016 ; International Journal of Carbohydrate Chemistry Volume 2016 ; 2016 ; 2016 ; >
-    au < expected ; exists ; 2017 ; International Journal of Carbohydrate Chemistry Volume 2017 ; 2017 ; 2017 ; >
+    au < finished ; manifest ; 2016 ; International Journal of Carbohydrate Chemistry Volume 2016 ; 2016 ; 2016 ; reingest1.clockss.org:8082 >
+    au < doNotProcess ; exists ; 2017 ; International Journal of Carbohydrate Chemistry Volume 2017 ; 2017 ; 2017 ; >
 
   }
 
@@ -4099,20 +4100,21 @@
     >
 
     param[journal_id] = ijdsn
+    #Moved to Sage
 
-    au < manifest ; exists ; 2005 ; International Journal of Distributed Sensor Networks Volume 1 (2005) ; 2005 ; 1 ; >
-    au < manifest ; exists ; 2006 ; International Journal of Distributed Sensor Networks Volume 2 (2006) ; 2006 ; 2 ; >
-    au < manifest ; exists ; 2007 ; International Journal of Distributed Sensor Networks Volume 3 (2007) ; 2007 ; 3 ; >
-    au < manifest ; exists ; 2008 ; International Journal of Distributed Sensor Networks Volume 4 (2008) ; 2008 ; 4 ; >
-    au < manifest ; exists ; 2009 ; International Journal of Distributed Sensor Networks Volume 5 (2009) ; 2009 ; 5 ; >
-    au < manifest ; exists ; 2010 ; International Journal of Distributed Sensor Networks Volume 2010 ; 2010 ; 2010 ; >
-    au < manifest ; exists ; 2011 ; International Journal of Distributed Sensor Networks Volume 2011 ; 2011 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; International Journal of Distributed Sensor Networks Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; International Journal of Distributed Sensor Networks Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2005 ; International Journal of Distributed Sensor Networks Volume 1 (2005) ; 2005 ; 1 ; >
+    au < doNotProcess ; exists ; 2006 ; International Journal of Distributed Sensor Networks Volume 2 (2006) ; 2006 ; 2 ; >
+    au < doNotProcess ; exists ; 2007 ; International Journal of Distributed Sensor Networks Volume 3 (2007) ; 2007 ; 3 ; >
+    au < doNotProcess ; exists ; 2008 ; International Journal of Distributed Sensor Networks Volume 4 (2008) ; 2008 ; 4 ; >
+    au < doNotProcess ; exists ; 2009 ; International Journal of Distributed Sensor Networks Volume 5 (2009) ; 2009 ; 5 ; >
+    au < doNotProcess ; exists ; 2010 ; International Journal of Distributed Sensor Networks Volume 2010 ; 2010 ; 2010 ; >
+    au < doNotProcess ; exists ; 2011 ; International Journal of Distributed Sensor Networks Volume 2011 ; 2011 ; 2011 ; >
+    au < doNotProcess ; exists ; 2012 ; International Journal of Distributed Sensor Networks Volume 2012 ; 2012 ; 2012 ; >
+    au < doNotProcess ; exists ; 2013 ; International Journal of Distributed Sensor Networks Volume 2013 ; 2013 ; 2013 ; >
     au < frozen ; exists ; 2014 ; International Journal of Distributed Sensor Networks Volume 2014 ; 2014 ; 2014 ; >
     au < frozen ; exists ; 2015 ; International Journal of Distributed Sensor Networks Volume 2015 ; 2015 ; 2015 ; >
-    au < deepCrawl ; exists ; 2016 ; International Journal of Distributed Sensor Networks Volume 2016 ; 2016 ; 2016 ; >
-    au < expected ; exists ; 2017 ; International Journal of Distributed Sensor Networks Volume 2017 ; 2017 ; 2017 ; >
+    au < superseded ; exists ; 2016 ; International Journal of Distributed Sensor Networks Volume 2016 [superseded] ; 2016 ; 2016 ; >
+    au < doNotProcess ; exists ; 2017 ; International Journal of Distributed Sensor Networks Volume 2017 ; 2017 ; 2017 ; >
 
   }
 
@@ -4432,7 +4434,7 @@
     au < doNotProcess ; exists ; 2013 ; International Journal of Inorganic Chemistry Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; International Journal of Inorganic Chemistry Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; crawling ; 2015 ; International Journal of Inorganic Chemistry Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2016 ; International Journal of Inorganic Chemistry Volume 2016 ; 2016 ; 2016 ; >
+    au < finished ; manifest ; 2016 ; International Journal of Inorganic Chemistry Volume 2016 ; 2016 ; 2016 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; International Journal of Inorganic Chemistry Volume 2017 ; 2017 ; 2017 ; >
     
   }
@@ -4724,7 +4726,7 @@
     au < doNotProcess ; exists ; 2013 ; International Journal of Oceanography Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; International Journal of Oceanography Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; finished ; 2015 ; International Journal of Oceanography Volume 2015 ; 2015 ; 2015 ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2016 ; International Journal of Oceanography Volume 2016 ; 2016 ; 2016 ; >
+    au < finished ; manifest ; 2016 ; International Journal of Oceanography Volume 2016 ; 2016 ; 2016 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; exists ; 2017 ; International Journal of Oceanography Volume 2017 ; 2017 ; 2017 ; >
 
   }
