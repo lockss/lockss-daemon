@@ -13,14 +13,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>40</string>
+    <string>41</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>28</string>
+        <string>29</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -28,7 +28,7 @@
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>7</string>
+        <string>8</string>
       </entry>
     </map>
   </entry>
@@ -49,6 +49,7 @@
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
+	  <!-- WARNING: Download URL is no longer used on the SpringerLink platform -->
       <org.lockss.daemon.ConfigParamDescr>
         <key>download_url</key>
         <displayName>Download URL</displayName>
@@ -79,7 +80,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"SpringerLink Journals Plugin, Base URL %s, Download URL %s, eISSN %s, Volume %s", base_url, download_url, journal_eissn, volume_name</string>
+    <string>"SpringerLink Journals Plugin, Base URL %s, Download URL %s [Not Used], eISSN %s, Volume %s", base_url, download_url, journal_eissn, volume_name</string>
   </entry>
   <!-- CrawlSeed takes precedence but leave it in for safety in case daemon expects it somewhere -->
   <entry>
@@ -101,7 +102,6 @@
     <list>
       <string>"%slockss.txt", to_http(base_url)</string>
       <string>"%slockss.txt", to_https(base_url)</string>
-      <string>"%slockss.txt", download_url</string>
       <string>"https://api.springer.com/lockss.txt"</string>
     </list>
   </entry>
@@ -114,7 +114,8 @@
       <string>2,"^https?://%s/content/pdf/(bbm|bfm)",  url_host(base_url)</string>
       <string>1,"^https?://%s/download/epub/",  url_host(base_url)</string>
       <string>1,"^https?://%s/(content|article)/",  url_host(base_url)</string>
-      <string>1,"^https?://%s/(springerlink-)?static/", url_host(download_url)</string>
+      <string>1,"^https?://%s/(springerlink-)?static/", url_host(base_url)</string>
+      <string>1,"^https://static-content\.springer\.com/.*\.pdf$"</string>
     </list>
   </entry>
   <entry>
@@ -137,14 +138,6 @@
     <string>plugin_access_url_factory</string>
     <string>org.lockss.plugin.springer.link.SpringerLinkFeatureUrlHelperFactory</string>
   </entry>    
-  <entry>
-    <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.springer.link.SpringerLinkUrlNormalizer</string>
-  </entry>
-  <entry>
-    <string>plugin_url_consumer_factory</string>
-    <string>org.lockss.plugin.springer.link.SpringerLinkUrlConsumerFactory</string>
-  </entry>
   <entry>
     <string>plugin_url_fetcher_factory</string>
     <string>org.lockss.plugin.base.HttpToHttpsUrlFetcherFactory</string>

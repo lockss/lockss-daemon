@@ -57,128 +57,40 @@ import org.lockss.filter.html.HtmlTags.Section;
 import org.lockss.plugin.*;
 import org.lockss.util.ListUtil;
 import org.lockss.util.ReaderInputStream;
+import java.io.*;
+import java.util.Arrays;
+import org.apache.commons.io.IOUtils;
+import org.apache.commons.io.input.CountingInputStream;
+import org.htmlparser.NodeFilter;
+import org.htmlparser.filters.OrFilter;
+import org.lockss.daemon.PluginException;
+import org.lockss.filter.*;
+import org.lockss.filter.HtmlTagFilter.TagPair;
+import org.lockss.filter.html.*;
+import org.lockss.plugin.*;
+import org.lockss.util.Logger;
+import org.lockss.util.ReaderInputStream;
 
 public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
-  /**
-   * TODO - remove after 1.70 when the daemon recognizes this as an html composite tag
-   */
-	
-  private static final Pattern IMPACT_PATTERN = Pattern.compile("impact factor", Pattern.CASE_INSENSITIVE | Pattern.MULTILINE);
-  public static class MyButtonTag extends CompositeTag {
-    private static final String[] mIds = new String[] {"button"};
-    public String[] getIds() { return mIds; }
-  }
-  
-  private static final NodeFilter[] filters = new NodeFilter[] {
-      HtmlNodeFilters.tag("script"),
-      HtmlNodeFilters.tag("noscript"),
-      HtmlNodeFilters.tag("input"),
-      HtmlNodeFilters.tag("head"),
-      HtmlNodeFilters.tag("aside"),
-      HtmlNodeFilters.tag("footer"),
-      // filter out comments
-      HtmlNodeFilters.comment(),
-      // all meta and link tags - some have links with names that change
-      HtmlNodeFilters.tag("meta"),
-      HtmlNodeFilters.tag("link"),
-
-      //google iframes with weird ids
-      HtmlNodeFilters.tag("iframe"),
-      
-      //footer
-      HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
-      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "footer"),
-      
-      //more links to pdf and article
-      HtmlNodeFilters.tagWithAttribute("div", "class", "bar-dock"),
-      
-      //adds on the side
-      HtmlNodeFilters.tagWithAttribute("div", "class", "banner-advert"),
-      HtmlNodeFilters.tagWithAttribute("div", "id", "doubleclick-ad"),
-      
-      //header and search box
-      HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
-      HtmlNodeFilters.tagWithAttribute("div", "role", "banner"),
-      
-      //non essentials like metrics and related links
-      HtmlNodeFilters.tagWithAttribute("div", "role", "complementary"),
-      HtmlNodeFilters.tagWithAttribute("div", "class", "col-aside"),
-      HtmlNodeFilters.tagWithAttribute("div", "class", "document-aside"),
-      
-      //random divs floating around
-      HtmlNodeFilters.tagWithAttribute("div", "id", "MathJax_Message"),
-      HtmlNodeFilters.tagWithAttribute("div", "id", "web-trekk-abstract"),
-      HtmlNodeFilters.tagWithAttribute("div", "class", "look-inside-interrupt"),
-      HtmlNodeFilters.tagWithAttribute("div", "id", "colorbox"),
-      HtmlNodeFilters.tagWithAttribute("div", "id", "cboxOverlay"),
-      HtmlNodeFilters.tagWithAttribute("div", "id", "gimme-satisfaction"),
-      HtmlNodeFilters.tagWithAttribute("div", "class", "crossmark-tooltip"),
-      HtmlNodeFilters.tagWithAttribute("div", "id", "crossMark"),
-      HtmlNodeFilters.tagWithAttribute("div", "class", "banner"),
-      
-      HtmlNodeFilters.tagWithAttribute("p", "class", "skip-to-links"),
-
-      // button - let's get rid of all of them...
-      HtmlNodeFilters.tag("button"),
-     /*class="StickySideButton_left StickySideButton_left--feedback"*/
-      
-      HtmlNodeFilters.allExceptSubtree(HtmlNodeFilters.tag("div"),
-              new OrFilter(HtmlNodeFilters.tag("section"),
-            		  HtmlNodeFilters.tag("p"))),
-      
-      new NodeFilter() {
-          @Override public boolean accept(Node node) {
-            if (!(node instanceof Section)) return false;
-            if (!("features".equals(((CompositeTag)node).getAttribute("class")))) return false;
-            String allText = ((CompositeTag)node).toPlainTextString();
-            //using regex for case insensitive match on "Impact factor"
-            // the "i" is for case insensitivity; the "s" is for accepting newlines
-            return IMPACT_PATTERN.matcher(allText).matches();
-            }
-        }
-  };
-  
-  HtmlTransform xform = new HtmlTransform() {
-    @Override
-    public NodeList transform(NodeList nodeList) throws IOException {
-      try {
-        nodeList.visitAllNodesWith(new NodeVisitor() {
-          @Override
-          // the <body '<body class="company XYZ" data-name="XYZ"'>
-          // tag has changed to XYZ from abc- pruning those attributes
-          //the "rel" attribute on link tags are using variable named values
-          public void visitTag(Tag tag) {
-            if (tag instanceof BodyTag && tag.getAttribute("class") != null) {
-              tag.removeAttribute("class");
-            }
-            if (tag instanceof BodyTag && tag.getAttribute("data-name") != null) {
-              tag.removeAttribute("data-name");
-            }
-          }
-        });
-      } catch (ParserException pe) {
-        IOException ioe = new IOException();
-        ioe.initCause(pe);
-        throw ioe;
-      }
-      return nodeList;
-    }
-};
-
 
   public InputStream createFilteredInputStream(ArchivalUnit au,
       InputStream in, String encoding) {
-    
-    //HtmlFilterInputStream filteredStream = new HtmlFilterInputStream(in, encoding,
-      //  HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+
     HtmlFilterInputStream filteredStream = new HtmlFilterInputStream(in, encoding,
-      new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters)), xform));
-    filteredStream.registerTag(new MyButtonTag());
+            new HtmlCompoundTransform(
+            HtmlNodeFilterTransform.include(new OrFilter(new NodeFilter[] {
+                    HtmlNodeFilters.tagWithAttribute("p", "class", "Para")
+            })),
+        /*
+         * DROP: filter remaining content areas
+         */
+            HtmlNodeFilterTransform.exclude(new OrFilter(new NodeFilter[] {
+            }))));
     Reader filteredReader = FilterUtil.getReader(filteredStream, encoding);
-    Reader httpFilter = new StringFilter(filteredReader, "http:", "https:");
-    
-    // Remove white space
-    return new ReaderInputStream(new WhiteSpaceFilter(httpFilter));
+//    Reader noTagFilter = new HtmlTagFilter(new StringFilter(filteredReader, "<", " <"), new TagPair("<", ">"));
+
+      // Remove white space
+    return new ReaderInputStream(new WhiteSpaceFilter(filteredReader));
   }
   
 }

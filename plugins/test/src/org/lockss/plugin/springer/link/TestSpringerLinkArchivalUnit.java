@@ -132,8 +132,7 @@ public class TestSpringerLinkArchivalUnit extends LockssTestCase {
         new RangeCachedUrlSetSpec(base.toString()));
     // Test for pages that should get crawled
     //start page
-    shouldCacheTest(BASE_URL+"lockss.txt", true, ABAu, cus);    
-    shouldCacheTest(DOWNLOAD_URL+"lockss.txt", true, ABAu, cus);    
+    shouldCacheTest(BASE_URL+"lockss.txt", true, ABAu, cus);
 
     // articles - various allowed formats
     //BASE_URLcontent/pdf/10.1007%2Fs13238-012-2022-9.pdf
@@ -144,8 +143,6 @@ public class TestSpringerLinkArchivalUnit extends LockssTestCase {
     shouldCacheTest(BASE_URL+"article/10.1007/s13238-012-2927-3", true, ABAu, cus);
   //  shouldCacheTest(DOWNLOAD_URL+"article/10.1007/s13238-012-2927-3", true, ABAu, cus);
 
-    //download_url stuff
-    shouldCacheTest(DOWNLOAD_URL+"foo/blah/whatsit.css", true, ABAu, cus);
     
     // Now a couple that shouldn't get crawled
     // wrong volume
