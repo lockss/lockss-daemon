@@ -8976,6 +8976,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; Diogenes Volume 59 ; 59 ; dioa ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Diogenes Volume 60 ; 60 ; dioa ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Diogenes Volume 61 ; 61 ; dioa ; >
+      au < manifest ; exists ; 2015 ; Diogenes Volume 62 ; 62 ; dioa ; >
 
     }
 
@@ -17773,7 +17774,6 @@
     
     {
 
-
       au < manifest ; exists ; 1959 ; International Studies Volume 1 ; 1 ; isqa ; >
       au < manifest ; exists ; 1960 ; International Studies Volume 2 ; 2 ; isqa ; >
       au < manifest ; exists ; 1961 ; International Studies Volume 3 ; 3 ; isqa ; >
@@ -17824,6 +17824,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Studies Volume 48 ; 48 ; isqa ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Studies Volume 49 ; 49 ; isqa ; >
       au < frozen ; exists ; 2013 ; International Studies Volume 50 ; 50 ; isqa ; >
+      au < manifest ; exists ; 2014 ; International Studies Volume 51 ; 51 ; isqa ; >
 
     }
 
@@ -24189,7 +24190,6 @@
 
     {
 
-
       au < manifest ; exists ; 2001 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 1 ; 1 ; mmja ; >
       au < manifest ; exists ; 2002 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 2 ; 2 ; mmja ; >
       au < manifest ; exists ; 2003 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 3 ; 3 ; mmja ; >
@@ -24205,6 +24205,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 13 ; 13 ; mmja ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 14 ; 14 ; mmja ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 15 ; 15 ; mmja ; >
+      au < manifest ; exists ; 2017 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 16 ; 16 ; mmja ; >
 
     }
 
@@ -35089,6 +35090,7 @@
       au < frozen ; exists ; 2016 ; Research in Education Volume 96 ; 96 ; riea ; >
       au < crawling ; exists ; 2017 ; Research in Education Volume 97 ; 97 ; riea ; >
       au < crawling ; exists ; 2017 ; Research in Education Volume 98 ; 98 ; riea ; >
+      au < manifest ; exists ; 2017 ; Research in Education Volume 99 ; 99 ; riea ; >
 
   }
 
