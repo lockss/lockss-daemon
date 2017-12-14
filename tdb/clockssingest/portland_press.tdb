@@ -551,8 +551,8 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Biochemical Society Transactions Volume 40 ; 40 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Biochemical Society Transactions Volume 41 ; 41 ; >
     au < finished ; finished ; 2014 ; Biochemical Society Transactions Volume 42 ; 42 ; reingest1.clockss.org:8082 >
-    au < crawling ; down ; 2015 ; Biochemical Society Transactions Volume 43 ; 43 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2016 ; Biochemical Society Transactions Volume 44 ; 44 ; >
+    au < frozen ; down ; 2015 ; Biochemical Society Transactions Volume 43 ; 43 ; reingest1.clockss.org:8082 >
+    au < frozen ; exists ; 2016 ; Biochemical Society Transactions Volume 44 ; 44 ; >
     au < crawling ; exists ; 2017 ; Biochemical Society Transactions Volume 45 ; 45 ; >
     
   }
@@ -655,7 +655,7 @@
     au < frozen ; exists ; 2013 ; Clinical Science Volume 125 ; 125 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2014 ; Clinical Science Volume 126 ; 126 ; >
     au < frozen ; exists ; 2014 ; Clinical Science Volume 127 ; 127 ; >
-    au < crawling ; exists ; 2015 ; Clinical Science Volume 128 ; 128 ; >
+    au < frozen ; exists ; 2015 ; Clinical Science Volume 128 ; 128 ; >
     au < crawling ; exists ; 2015 ; Clinical Science Volume 129 ; 129 ; >
     au < frozen ; exists ; 2016 ; Clinical Science Volume 130 ; 130 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2017 ; Clinical Science Volume 131 ; 131 ; >
@@ -700,7 +700,7 @@
     au < finished ; finished ; 2014 ; Essays in Biochemistry Volume 57 ; 57 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Essays in Biochemistry Volume 58 ; 58 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Essays in Biochemistry Volume 59 ; 59 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2016 ; Essays in Biochemistry Volume 60 ; 60 ; >
+    au < frozen ; exists ; 2016 ; Essays in Biochemistry Volume 60 ; 60 ; >
     au < crawling ; exists ; 2017 ; Essays in Biochemistry Volume 61 ; 61 ; >
 
   }
