@@ -247,8 +247,10 @@ public class TestPub2WebArchivalUnit extends LockssTestCase {
              
     //supporting files with url args
     shouldCacheTest(REAL_ROOT + "css/asm/bespoke-fonts/OpenSans-BoldItalic-webfont.ttf", true, asmbau, cus);
+    shouldCacheTest(REAL_ROOT + "css/asm/bespoke-fonts/glyphicons-halflings-regular.woff2", true, asmbau, cus);
     shouldCacheTest(REAL_ROOT + "css/asm/bespoke-fonts/OpenSans-BoldItalic-webfont.ttf", true, asmbau, cus);
     shouldCacheTest(REAL_ROOT + "css/jp/ViewNLM.css", true, asmbau, cus);
+    shouldCacheTest(REAL_ROOT + "css/sgm/site.css?2", true, asmbau, cus);
     shouldCacheTest(REAL_ROOT + "files/2015_Fall_Catalog_Cover.gif", true, asmbau, cus);
 
   }
