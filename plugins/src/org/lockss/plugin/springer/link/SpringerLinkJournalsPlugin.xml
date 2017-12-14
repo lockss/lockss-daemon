@@ -85,7 +85,7 @@
   <!-- CrawlSeed takes precedence but leave it in for safety in case daemon expects it somewhere -->
   <entry>
     <string>au_start_url</string>
-    <string>"%s/lockss.txt", base_url</string>
+    <string>"%slockss.txt", base_url</string>
   </entry>
   <entry>
     <string>au_feature_urls</string>
@@ -115,7 +115,7 @@
       <string>1,"^https?://%s/download/epub/",  url_host(base_url)</string>
       <string>1,"^https?://%s/(content|article)/",  url_host(base_url)</string>
       <string>1,"^https?://%s/(springerlink-)?static/", url_host(base_url)</string>
-      <string>1,"^https://static-content\.springer\.com/.*\.pdf$"</string>
+      <string>1,"^https?://(%s|static-content\.springer\.com/).*\.pdf$", url_host(base_url)</string>
     </list>
   </entry>
   <entry>
