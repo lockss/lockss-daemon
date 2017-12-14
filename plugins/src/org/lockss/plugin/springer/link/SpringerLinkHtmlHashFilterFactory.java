@@ -79,7 +79,8 @@ public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
     HtmlFilterInputStream filteredStream = new HtmlFilterInputStream(in, encoding,
             new HtmlCompoundTransform(
             HtmlNodeFilterTransform.include(new OrFilter(new NodeFilter[] {
-                    HtmlNodeFilters.tagWithAttribute("p", "class", "Para")
+                    HtmlNodeFilters.tagWithAttribute("p", "class", "Para"),
+                    HtmlNodeFilters.tagWithAttribute("h1", "class", "ArticleTitle")
             })),
         /*
          * DROP: filter remaining content areas

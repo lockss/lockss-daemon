@@ -46,14 +46,12 @@ public class SpringerLinkUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
   public static final String SLASH = "/";
   public static final Pattern CHAPTER_DOI_PATTERN = Pattern.compile("(.+/chapter/.+)(_[0-9]+)(/fulltext.html)?");
   public static final Pattern CHAPTER_PDF_DOI_PATTERN = Pattern.compile("(.+/content/pdf/.+)(_[0-9]+)(\\.pdf)$");
-  public static final String DOWNLOAD_URL_KEY = "download_url";
   
   @Override
   public String additionalNormalization(String url, ArchivalUnit au) throws PluginException {
     
     String baseUrl = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
-    String downloadUrl = au.getConfiguration().get(DOWNLOAD_URL_KEY);
-    if(url.startsWith(baseUrl) || url.startsWith(downloadUrl)) {
+    if(url.startsWith(baseUrl)) {
       //Some slashes were encoded and some not. We set them all to non encoded
       if(!url.contains("pdf") && !url.contains("epub")) {
         url = StringUtil.replaceString(url, SLASH_ENCODED, SLASH);
