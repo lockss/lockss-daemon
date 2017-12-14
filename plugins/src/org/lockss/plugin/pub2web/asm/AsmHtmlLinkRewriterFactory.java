@@ -57,9 +57,6 @@ import org.lockss.util.Logger;
 public class AsmHtmlLinkRewriterFactory implements LinkRewriterFactory {
   
   protected static final String FULL_TEXT_ATTR = "data-fullTexturl";
-  protected static final String AJAX_ATTR = "data-ajaxurl";
-  protected static final String ID_ATTR = "id";
-  protected static final String FULLTEXT_ID_VAL = "itemFullTextId";
   // XXX must match value used in AsmHtmlLinkExtractorFactory
   protected static final String ART_LISTING_CLASS = "tocheadingarticlelisting";
   
@@ -86,7 +83,6 @@ public class AsmHtmlLinkRewriterFactory implements LinkRewriterFactory {
     NodeFilterHtmlLinkRewriterFactory fact =
       new NodeFilterHtmlLinkRewriterFactory();
     
-    // fact.addAttrToRewrite(AJAX_ATTR);
     fact.addAttrToRewrite(FULL_TEXT_ATTR);
     fact.addPostXform(new PostFilter());
     fact.addPreXform(new PreFilter());
@@ -118,13 +114,18 @@ public class AsmHtmlLinkRewriterFactory implements LinkRewriterFactory {
               ptag.setEndPosition(node.getEndPosition());
               children.add(ptag);
               
+              TagNode endTag = new TagNode();
+              endTag.setTagName("/a");
+              endTag.setParent(node);
+              endTag.setStartPosition(node.getEndPosition());
               LinkTag link = new LinkTag();
+              link.setTagName("a");
               link.setLink(url);
               link.setAttribute("target", "_blank");
               link.setParent(node);
               link.setStartPosition(node.getStartPosition());
-              link.setEndPosition(node.getEndPosition());
-              link.setChildren(new NodeList(new TextNode("\nList of articles")));
+              link.setChildren(new NodeList(new TextNode("List of articles")));
+              link.setEndTag(endTag);
               children.add(link);
             }
             node.setChildren(children);
@@ -147,7 +148,6 @@ public class AsmHtmlLinkRewriterFactory implements LinkRewriterFactory {
          * also, figure and table links open in a new window/tab
          */
         if (node instanceof LinkTag) {
-          String href = ((LinkTag)node).getLink();
           Attribute classAttr = ((TagNode)node).getAttributeEx("class");
           if (classAttr != null && classAttr.getValue().contains("media-link")) {
             ((LinkTag)node).setAttribute("target", "_blank");
@@ -156,7 +156,7 @@ public class AsmHtmlLinkRewriterFactory implements LinkRewriterFactory {
         else if (node instanceof Bullet) {
           Attribute classAttr = ((TagNode)node).getAttributeEx("class");
           if (classAttr != null && classAttr.getValue().contains("html")) {
-            ((Bullet) node).setAttribute("style", "display:block");
+            ((Bullet) node).setAttribute("style", "display: block");
           }
         }
       } catch (Throwable ex) {
