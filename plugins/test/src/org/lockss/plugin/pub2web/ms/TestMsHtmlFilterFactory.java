@@ -43,6 +43,18 @@ public class TestMsHtmlFilterFactory extends LockssTestCase {
           "</ul>" +
           "</main>";
   
+  private static final String mainContentOut =
+      "<main class=\"col-xs-12 col-sm-12 col-md-9 content main-content-container\">" +
+          "<ul class=\"togglecontent flat\">" +
+          "<h1>CLOCKSS system has permission to ingest, preserve, and serve this Archival Unit</h1>" +
+          "<li>" +
+          "<a href=\"/content/journal/jmm/64/12\" title=\"\" ><span class=\"issuenumber\">Issue 12</span><span class=\"issueyear\">, " +
+          "December" +
+          "</span></a>" +
+          "</li>" +
+          "</ul>" +
+          "</main>";
+  
   
   private static final String relatedcontentlist =
       "<div id=\"relatedcontent\" class=\"hidden-js-toggle related-content\">" +
@@ -74,7 +86,7 @@ public class TestMsHtmlFilterFactory extends LockssTestCase {
     inStream = hfact.createFilteredInputStream(mau,
         new StringInputStream(mainContent),
         Constants.DEFAULT_ENCODING);
-    assertEquals(mainContent, StringUtil.fromInputStream(inStream));
+    assertEquals(mainContentOut, StringUtil.fromInputStream(inStream));
 
   }
 

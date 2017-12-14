@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>11</string>
+    <string>12</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -102,7 +102,7 @@
           ?itemId=/content/book/10.1128/9781555817992.chap3&mimeType=html&fmt=ahah
     -->
     <list>
-      <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)$", url_host(base_url)</string>
+      <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff.?)(\?([0-9]+|config=|v=).*)?$", url_host(base_url)</string>
       <string>1,"^%scontent/book/%s", base_url, doi</string>
       <string>1,"^%scontent/%s", base_url, doi</string>
       <!--  the version we allow ends in '&fmt=ahah' -->

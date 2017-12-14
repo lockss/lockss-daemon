@@ -86,6 +86,9 @@ public class MsHtmlHashFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttribute("div",  "class", "articlenav"),
     HtmlNodeFilters.tagWithAttribute("div",  "id", "relatedcontent"), //tab contents, not the header
     HtmlNodeFilters.tagWithAttribute("div",  "id", "otherJournals"), // tab contents
+    
+    // <span class="access_icon_s keyicon accesskey-icon"
+    HtmlNodeFilters.tagWithAttributeRegex("span", "class", "access_icon"),
 
     };
 
