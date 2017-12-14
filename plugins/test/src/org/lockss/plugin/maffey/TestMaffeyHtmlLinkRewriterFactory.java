@@ -62,15 +62,15 @@ public class TestMaffeyHtmlLinkRewriterFactory extends LockssTestCase {
   static final String testTopFormNonLink =
       "<meta name=\"citation_lastpage\" content=\"3\">" +
           "<meta name=\"citation_pdf_url\" " +
-          "content=\"http://insights.sagepub.com/redirect_file.php?fileId=6960&filename=5207-CMRO-Jaundice-in-Gall-Bladder-Cancer-–-The-Yellow-Signal.pdf&fileType=pdf\">" +
+          "content=\"http://insights.sagepub.com/redirect_file.php?fileId=6960&filename=5207-CMRO-FOO.pdf&fileType=pdf\">" +
       "<div class=\"articlediv_outerleft\" style=\"padding: 0;width: 100%;\">" +
           "<div class=\"\" style=\"font: 12px\">" +
-          "<p class=\"article_authors_p\">Author name</p>" +
-          "<p><a href=\"journal-clinical-medicine-reviews-in-oncology-j163\" style=\"\" class=\"greenlink_article\">" +
-          "<em>Clinical Medicine Reviews in Oncology</em></a> <a" +
-          "href=\"./journal.php?journal_id=163&tab=volume#issue760\">2015:5</a>  1-3                " +
+          "<p class=\"article_authors_p\">AUTHOR</p>" +
+          "<p><a href=\"journal-clinical-foo-reviews\" style=\"\" class=\"greenlink_article\">" +
+          "<em>Clinical FOO Reviews</em></a> <a " +
+          "href=\"./journal.php?journal_id=000&tab=volume#issue000\">2015:5</a>  1-3                " +
           "</p>" +
-          "<p>DOI: <a style=\"\" href=\"http://dx.doi.org/10.4137/CMRO.S31252\">10.4137/CMRO.S31252</a>" +
+          "<p>DOI: <a style=\"\" href=\"http://dx.doi.org/10.4137/FOO\">10.4137/FOO</a>" +
           "</p>" +
           "</div><!-- files ends -->" +
           "<br/>" +
@@ -78,43 +78,47 @@ public class TestMaffeyHtmlLinkRewriterFactory extends LockssTestCase {
           "<form method=\"post\" action=\"shop_cart.php\" id=\"pay_per_view\"" +
           "style=\"margin-bottom:0px;padding:0px; margin-top: 0px\">" +
           "<input type=\"hidden\" name=\"pa\" value=\"add\"/>" +
-          "<input type=\"hidden\" name=\"article_title\" value=\"Jaundice in Gall Bladder Cancer &ndash; The Yellow Signal\"/>" +
+          "<input type=\"hidden\" name=\"article_title\" value=\"FOO\"/>" +
           "<input type=\"hidden\" name=\"base_price\" value=\"59\"/>" +
           "<input type=\"hidden\" name=\"article_id\" value=\"5207\"/>" +
           "<input type='image' src='img/article_pay_per_view_btn.gif' alt='Article Pay Per View'/>" +
           "</form>" +
           "</div><!-- articlediv_outerleft ends -->";
-  //This isn't testing full rewrite...the ServeContent is added to the relative link in the wild
+
+  //TODO - figure out why the <A HREF link that is created by the Maffey pre-filter
+  // isn't then also modified by the regular link rewriter to include the 
+  // ServeContent portion.  It works in the wild, but it's not clear what the test
+  // is doing differently.
   static final String testTopFormLink_expected =
       "<meta name=\"citation_lastpage\" content=\"3\">" +
           "<meta name=\"citation_pdf_url\" " +
-          "content=\"http://insights.sagepub.com/redirect_file.php?fileId=6960&filename=5207-CMRO-Jaundice-in-Gall-Bladder-Cancer-–-The-Yellow-Signal.pdf&fileType=pdf\">" +
+          "content=\"http://insights.sagepub.com/redirect_file.php?fileId=6960&filename=5207-CMRO-FOO.pdf&fileType=pdf\">" +
       "<div class=\"articlediv_outerleft\" style=\"padding: 0;width: 100%;\">" +
           "<div class=\"\" style=\"font: 12px\">" +
-          "<p class=\"article_authors_p\">Author name</p>" +
-          "<p><a href=\"http://www.foobar.org/ServeContent?url=http%3A%2F%2Fwww.xyz.com%2Ffoo%2Fjournal-clinical-medicine-reviews-in-oncology-j163\" style=\"\" class=\"greenlink_article\">" +
-          "<em>Clinical Medicine Reviews in Oncology</em></a> <a" +
-          "href=\"./journal.php?journal_id=163&tab=volume#issue760\">2015:5</a>  1-3                " +
+          "<p class=\"article_authors_p\">AUTHOR</p>" +
+          "<p><a href=\"http://www.foobar.org/ServeContent?url=http%3A%2F%2Fwww.xyz.com%2Ffoo%2Fjournal-clinical-foo-reviews\" style=\"\" class=\"greenlink_article\">" +
+          "<em>Clinical FOO Reviews</em></a> <a " +
+          "href=\"http://www.foobar.org/ServeContent?url=http%3A%2F%2Fwww.xyz.com%2Ffoo%2Flockss.php%3Ft%3Dclockss%26pa%3Darticle%26i_id%3D000\">2015:5</a>  1-3                " +
           "</p>" +
-          "<p>DOI: <a style=\"\" href=\"http://dx.doi.org/10.4137/CMRO.S31252\">10.4137/CMRO.S31252</a>" +
+          "<p>DOI: <a style=\"\" href=\"http://dx.doi.org/10.4137/FOO\">10.4137/FOO</a>" +
           "</p>" +
           "</div><!-- files ends -->" +
           "<br/>" +
           "Further metadata provided in PDF<br/><br/>" +
-          "<A HREF=\"redirect_file.php?fileType=pdf&fileId=6960&filename=5207-CMRO-Jaundice-in-Gall-Bladder-Cancer-–-The-Yellow-Signal.pdf\"" +
+          "<A HREF=\"redirect_file.php?fileType=pdf&fileId=6960&filename=5207-CMRO-FOO.pdf\"" +
           " target=_blank class=dwnload>\nDownload Article PDF</A>" +
           "</div><!-- articlediv_outerleft ends -->";  
 
   static final String testFormNonLink_downloadItem =
       "<meta name=\"citation_lastpage\" content=\"3\">" +
           "<meta name=\"citation_pdf_url\" " +
-          "content=\"http://insights.sagepub.com/redirect_file.php?fileId=6960&filename=5207-CMRO-Jaundice-in-Gall-Bladder-Cancer-–-The-Yellow-Signal.pdf&fileType=pdf\">" +
+          "content=\"http://insights.sagepub.com/redirect_file.php?fileId=6960&filename=5207-CMRO-FOO.pdf&fileType=pdf\">" +
       "<div class=\"abstract\" id='downloads'>" +
           "<strong><a name='downloads>'>Downloads</a></strong>" +
           "<div class='downloadsSegmentLeft'>" +
           "<form method=\"post\" action=\"shop_cart.php\" id=\"pay_per_view\" style=\"margin:0;\">" +
           "<input type=\"hidden\" name=\"pa\" value=\"add\"/>" +
-          "<input type=\"hidden\" name=\"article_title\" value=\"Jaundice in Gall Bladder Cancer &ndash; The Yellow Signal\"/>" +
+          "<input type=\"hidden\" name=\"article_title\" value=\"FOO\"/>" +
           "<input type=\"hidden\" name=\"base_price\" value=\"59\"/>" +
           "<input type=\"hidden\" name=\"article_id\" value=\"5207\"/>" +
           "<input type='image' src='./img/article_pay_per_view_btn.gif' alt='Article Pay Per View'/>" +
@@ -125,11 +129,11 @@ public class TestMaffeyHtmlLinkRewriterFactory extends LockssTestCase {
   static final String testDownloadItem_PdfLink =
       "<meta name=\"citation_lastpage\" content=\"3\">" +
           "<meta name=\"citation_pdf_url\" " +
-          "content=\"http://insights.sagepub.com/redirect_file.php?fileId=6960&filename=5207-CMRO-Jaundice-in-Gall-Bladder-Cancer-–-The-Yellow-Signal.pdf&fileType=pdf\">" +
+          "content=\"http://insights.sagepub.com/redirect_file.php?fileId=6960&filename=5207-CMRO-FOO.pdf&fileType=pdf\">" +
       "<div class=\"abstract\" id='downloads'>" +
           "<strong><a name='downloads>'>Downloads</a></strong>" +
           "<div class='downloadsSegmentLeft'>" +
-          "<A HREF=\"redirect_file.php?fileType=pdf&fileId=6960&filename=5207-CMRO-Jaundice-in-Gall-Bladder-Cancer-–-The-Yellow-Signal.pdf\"" +
+          "<A HREF=\"redirect_file.php?fileType=pdf&fileId=6960&filename=5207-CMRO-FOO.pdf\"" +
           " target=_blank class=dwnload>\nDownload Article PDF</A>" +
           "</div>" +
           "</div>";  
@@ -158,7 +162,6 @@ public class TestMaffeyHtmlLinkRewriterFactory extends LockssTestCase {
   public void testMaffeyRewritingSimple() throws Exception {
     MockArchivalUnit mockAu = makeAu();
 
-    //    InputStream in = new ByteArrayInputStream(testLinkInputRelPath1.getBytes());
     InputStream in = new ByteArrayInputStream(testLinkInputRelPath1.getBytes());
     ServletUtil.LinkTransform xfm = new ServletUtil.LinkTransform() {
       public String rewrite(String url) {
