@@ -126,32 +126,6 @@ public class TestMsHtmlLinkRewriterFactory extends LockssTestCase {
       "</ul>\n" + 
       "</div>\n";
   
-  static final String testMediaLinkInput =
-      "<a class=\"media-link\"" +
-      " href=\"/content/ecosalplus/10.1128/ecosalplus.ESP-0099-2016.f1\"" +
-      " id=\"/content/ecosalplus/10.1128/ecosalplus.ESP-0099-2016.f1\">\n" + 
-      "   <img src=\"/docserver/ahah/fulltext/ecosalplus/7/7/ecosalplus.ESP-0099-2016.f1_thmb.gif\"" +
-      " alt=\"FIGURE 1\" border=\"0\">\n" + 
-      "   <p>\n" + 
-      "      <span class=\"figure-duplicate-label\">\n" + 
-      "         <span class=\"label\">FIGURE 1</span>\n" + 
-      "      </span>Click to view\n" + 
-      "   </p>\n" + 
-      "</a>";
-  
-  static final String testMediaLinkOutput =
-      "<a class=\"media-link\"" +
-      " href=\"http://www.foobar.org/ServeContent?url=http%3A%2F%2Fwww.xyz.com%2Fcontent%2Fecosalplus%2F10.1128%2Fecosalplus.ESP-0099-2016.f1\"" +
-      " id=\"/content/ecosalplus/10.1128/ecosalplus.ESP-0099-2016.f1\" target=_blank>\n" + 
-      "   <img src=\"http://www.foobar.org/ServeContent?url=http%3A%2F%2Fwww.xyz.com%2Fdocserver%2Fahah%2Ffulltext%2Fecosalplus%2F7%2F7%2Fecosalplus.ESP-0099-2016.f1_thmb.gif\"" +
-      " alt=\"FIGURE 1\" border=\"0\">\n" + 
-      "   <p>\n" + 
-      "      <span class=\"figure-duplicate-label\">\n" + 
-      "         <span class=\"label\">FIGURE 1</span>\n" + 
-      "      </span>Click to view\n" + 
-      "   </p>\n" + 
-      "</a>";
-  
   static final String testRewriteInput =
       "<div class=\"access-options textoptionsFulltext\"><!-- FREE.TAG -->\n" + 
       "<div class=\"contentTypeOptions\">\n" +
