@@ -112,10 +112,6 @@
     <string>org.lockss.plugin.springer.link.SpringerLinkUrlNormalizer</string>
   </entry>
   <entry>
-    <string>plugin_url_consumer_factory</string>
-    <string>org.lockss.plugin.springer.link.SpringerLinkUrlConsumerFactory</string>
-  </entry>
-  <entry>
     <string>plugin_url_fetcher_factory</string>
     <string>org.lockss.plugin.base.HttpToHttpsUrlFetcherFactory</string>
   </entry>
