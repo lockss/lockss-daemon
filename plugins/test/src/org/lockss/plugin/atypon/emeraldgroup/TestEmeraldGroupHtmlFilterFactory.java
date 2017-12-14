@@ -393,6 +393,30 @@ public class TestEmeraldGroupHtmlFilterFactory extends LockssTestCase {
 
   private static final String beastScriptFiltered = 
           " <div class=\"literatumPublicationContentWidget\" >FOO </div>";
+  
+  
+  private static final String fullManifest =
+      "" +
+          "" +
+          "" +
+          "<!DOCTYPE html>" +
+          "<html>" +
+          "<head>" +
+          "    <title>Justice and Corrections Manifest Page</title>" +
+          "    <meta charset=\"UTF-8\" />" +
+          "</head>" +
+          "<body>" +
+          "<h1>Justice and Corrections  Manifest Page</h1>" +
+          "<a href=\"/doi/book/10.1108/S1474-sssss\">Justice and Corrections</a>" +
+          "<p>" +
+          "    <img src=\"http://www.lockss.org/images/LOCKSS-small.gif\" height=\"108\" width=\"108\" alt=\"LOCKSS logo\"/>" +
+          "    CLOCKSS system has permission to ingest, preserve, and serve this Archival Unit." +
+          "    </br>" +
+          "" +
+          "</p>" +
+          "</body>" +
+          "</html>";
+     
 
   protected ArchivalUnit createAu()
       throws ArchivalUnit.ConfigurationException {
@@ -446,6 +470,8 @@ public class TestEmeraldGroupHtmlFilterFactory extends LockssTestCase {
       doFilterTest(eau, variantFact, withDataPbDropzoneRight, filteredStr);      
       doFilterTest(eau, variantFact, withArticleOptionsExceptDownloadCitation1, 
           articleOptionsFilteredStr1);      
+      doFilterTest(eau, variantFact, fullManifest, 
+          fullManifest);      
     }    
   }
 

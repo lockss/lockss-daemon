@@ -62,7 +62,7 @@ import org.lockss.util.Logger;
 
 public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
   protected static Logger log = Logger.getLogger(BaseAtyponHtmlCrawlFilterFactory.class);
-  protected static final Pattern corrections = Pattern.compile("Original Article|Corrigendum|Correction|Errata|Erratum", Pattern.CASE_INSENSITIVE);
+  protected static final Pattern corrections = Pattern.compile("( |&nbsp;)*(Original Article|Corrigendum|Corrigenda|Correction(s)?|Errata|Erratum)( |&nbsp;)*", Pattern.CASE_INSENSITIVE);
   protected static NodeFilter[] baseAtyponFilters = new NodeFilter[] {
     
     HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
@@ -145,11 +145,13 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
     
     // Not all Atypon plugins necessarily need this but MANY do and it is
     // an insidious source of over crawling
+    // 12/13/17 - adding limitation to be "match" not "find" since a book title
+    // such as "Evaluating Corrections" would get excluded!
     new NodeFilter() {
       @Override public boolean accept(Node node) {
         if (!(node instanceof LinkTag)) return false;
         String allText = ((CompositeTag)node).toPlainTextString();
-        return corrections.matcher(allText).find();
+        return corrections.matcher(allText).matches();
       }
     },
   };
