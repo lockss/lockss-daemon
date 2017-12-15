@@ -165,6 +165,7 @@ while (my $line = <>) {
         sleep(4);
 
   } elsif ($plugin eq "AAPDrupalPlugin" ||
+           $plugin eq "AAPLDrupalPlugin" ||
            $plugin eq "ADADrupalPlugin" ||
            $plugin eq "AHADrupalPlugin" ||
            $plugin eq "APSDrupalPlugin" ||
@@ -246,6 +247,7 @@ while (my $line = <>) {
   } elsif ($plugin eq "ClockssAAASDrupalPlugin" ||
            $plugin eq "ClockssAAIDrupalPlugin" ||
            $plugin eq "ClockssAAPDrupalPlugin" ||
+           $plugin eq "ClockssAAPLDrupalPlugin" ||
            $plugin eq "ClockssADADrupalPlugin" ||
            $plugin eq "ClockssAPSDrupalPlugin" ||
            $plugin eq "ClockssASPETDrupalPlugin" ||
