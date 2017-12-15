@@ -317,7 +317,7 @@ implements SourceXmlSchemaHelper {
   public static String JATS_edate = JATS_ameta + "/pub-date[" + epubdate_attr_options +"]";
   /* extra level for westernized version of chinese character names */
   private static String JATS_contrib = JATS_ameta + "/contrib-group/contrib/name | " + JATS_ameta + "/contrib-group/contrib/name-alternatives/name[@name-style = \"western\"]";
-  private static String JATS_string_contrib = JATS_ameta + "/contrib-group/contrib/string-name";
+  public static String JATS_string_contrib = JATS_ameta + "/contrib-group/contrib/string-name";
   
   /*
    *  The following 3 variables are needed to construct the XPathXmlMetadataParser

@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -44,6 +44,7 @@ import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 
 import org.lockss.plugin.CachedUrl;
+import org.lockss.plugin.clockss.JatsPublishingSchemaHelper;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 
@@ -51,14 +52,18 @@ import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 public class TaylorAndFrancisSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
   private static final Logger log = Logger.getLogger(TaylorAndFrancisSourceXmlMetadataExtractorFactory.class);
   
+  // 2013 triggered content only - now deprecated - leave in for backwards compat
   private static SourceXmlSchemaHelper TandFHelper = null;
   private static SourceXmlSchemaHelper TandF16Helper = null;
-  
   // UACP_i_016_XXX_tandf.zip = tfdoc schema (volume 16 only)
   // otherwise use the regular article/unarticle schema
   private static final Pattern URL16_PATTERN = Pattern.compile("/UACP_i_016_[0-9sup]+_tandf\\.zip");
   private static final Pattern URL_UACP_PATTERN = Pattern.compile("/UACP_[^/]+\\.zip");
   private static final Pattern URL_WJPT_PATTERN = Pattern.compile("/WJPT_[^/]+\\.zip");
+  private static final Pattern URL_LEGACY_SOURCE = Pattern.compile("2013/(UACP|WJPT)/");
+
+  // 2017+ schema helper
+  private static SourceXmlSchemaHelper TandFAtyponHelper = null;
 
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
@@ -70,15 +75,34 @@ public class TaylorAndFrancisSourceXmlMetadataExtractorFactory extends SourceXml
   public class TaylorAndFrancisSourceXmlMetadataExtractor extends SourceXmlMetadataExtractor {
 
     
-    //In the bulk source we were given, for 2013/UACP and 2013/WJPT, the V16 of
+    // BACKWARDS COMPATABILILTY - for 2013 triggered content delivery
+    // In the bulk source we were given, for 2013/UACP and 2013/WJPT, the V16 of
     // UACP had xml files in a schema different from all the others! So this
     // setupSchema call matches the pattern of the URL and if it is UACP, V16
     // we return the necessary "tfdoc" schema, otherwise the "article/unarticle"
     // schema.
+    // For all OTHER zip formats - just default to the current Atypon schema
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
       // Once you have it created, just keep returning the same one. It won't change.
 
+      Matcher legacySource = URL_LEGACY_SOURCE.matcher(cu.getUrl());
+      if (legacySource.find()) {
+        return getLegacySourceSchema(cu);
+      }
+      
+      // Otherwise it's the standard case
+      if (TandFAtyponHelper!= null) {
+        return TandFAtyponHelper;
+      }
+      // This is very very much like JATS - but if it doesn't work exactly
+      // then create a new AtyponJats because you don't want to destabilize the
+      // standard
+      TandFAtyponHelper = new JatsPublishingSchemaHelper();
+      return TandFAtyponHelper;
+    }
+    
+    protected SourceXmlSchemaHelper getLegacySourceSchema(CachedUrl cu) {
       // First - are we processing volume 16 of UACP? - if so, use tfdoc schema
       Matcher V16Mat = URL16_PATTERN.matcher(cu.getUrl()); 
       if (V16Mat.find()) {
@@ -112,6 +136,7 @@ public class TaylorAndFrancisSourceXmlMetadataExtractorFactory extends SourceXml
       if (StringUtils.isEmpty(filenameValue)) {
         // just use the name of the XML file with ".pdf"
         // This will definitely happen in the case of V16 which uses diff schema
+        // and for all new content
        filenameValue = FilenameUtils.getBaseName(cu.getUrl()) + ".pdf";
       }
       String cuBase = FilenameUtils.getFullPath(cu.getUrl());
@@ -139,11 +164,18 @@ public class TaylorAndFrancisSourceXmlMetadataExtractorFactory extends SourceXml
           if (UrlMat.find()) {
             thisAM.putIfBetter(MetadataField.FIELD_PUBLICATION_TITLE, WJPT_TITLE);
           }
-          
+
         }
-        
+        // use the alternate way of declaring authors to set
+        List <String> altAuthList = null;
+        if (thisAM.get(MetadataField.FIELD_AUTHOR) == null &&
+            (altAuthList = thisAM.getRawList(JatsPublishingSchemaHelper.JATS_string_contrib)) != null) {
+          for(int i = 0; i < altAuthList.size(); i++) {
+            thisAM.put(MetadataField.FIELD_AUTHOR,altAuthList.get(i));
+          }
+        }
       }
-      log.debug3("in SourceXmlMetadataExtractor postEmitProcess");
+      log.debug3("in TFSourceXmlMetadataExtractor postEmitProcess");
     }
     
   }
