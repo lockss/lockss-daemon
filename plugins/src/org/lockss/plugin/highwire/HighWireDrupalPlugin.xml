@@ -16,7 +16,9 @@
         the child's plugin_parent_version number to match, then
         update the child's plugin_version number:
         aaas.ClockssAAASDrupalPlugin
+        aai.ClockssAAIDrupalPlugin
         aap.AAPDrupalPlugin
+        aapl.AAPLDrupalPlugin
         ada.ADADrupalPlugin
         aha.AHADrupalPlugin
         aps.APSDrupalPlugin
@@ -27,7 +29,7 @@
         besbjs.BESBJSDrupalPlugin
         biologists.BiologistsDrupalPlugin
         bmj.BMJDrupalPlugin
-        elife.ELifeDrupalPlugin (Deprecated)
+        elife.ClockssELifeDrupalPlugin (Deprecated)
         embo.EMBODrupalPlugin
         ers.ERSDrupalPlugin
         fsf.FSFDrupalPlugin
@@ -35,7 +37,7 @@
         gsl.GSLDrupalPlugin
         gsw.GSWDrupalPlugin
         iwa.IWADrupalPlugin
-        jbjs.JBJSDrupalPlugin
+        jbjs.JBJSDrupalPlugin (soon to be Deprecated)
         oup.OUPDrupalPlugin (Deprecated)
         portlandpress.PortlandPressDrupalPlugin
         rcgp.RCGPDrupalPlugin
