@@ -8215,7 +8215,7 @@
 
     param[journal_id] = jbcr
 
-    au < expected ; exists ; 2017 ; 2017 ; Journal of Burn Care & Research Volume 38 ; 38 ;  >
+    au < manifest ; exists ; 2017 ; 2017 ; Journal of Burn Care & Research Volume 38 ; 38 ;  >
     au < expected ; exists ; 2018 ; 2018 ; Journal of Burn Care & Research Volume 39 ; 39 ;  >
 
   }
