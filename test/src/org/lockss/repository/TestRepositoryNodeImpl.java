@@ -1049,7 +1049,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
 
     RepositoryNode top = repo.getNode(AuUrl.PROTOCOL_COLON);
     List<String> tree = getSubTreeUrls(top);
-    assertEquals(ListUtil.list(url), tree);
+    assertEquals(ListUtil.list(longUrl), tree);
   }
 
   public void testLongPath1() throws Exception {
