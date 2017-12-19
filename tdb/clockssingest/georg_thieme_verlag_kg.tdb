@@ -6587,7 +6587,7 @@
     param[journal_id] = 10.1055/s-00034447
     comment[years] = 2017-current
 
-    au < manifest ; exists ; 2017 ; 2017 ; ACI Open Volume 1 ; 1 ; >
+    au < testing ; exists ; 2017 ; 2017 ; ACI Open Volume 1 ; 1 ; >
 
   }
 
@@ -6603,7 +6603,7 @@
     param[journal_id] = 10.1055/s-00034923
     comment[years] = 2017-current
 
-    au < manifest ; exists ; 2017 ; 2017 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 11 ; 11 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 11 ; 11 ; >
 
   }
 
@@ -6618,7 +6618,7 @@
     param[journal_id] = 10.1055/s-00035026
     comment[years] = 2009-current
 
-    au < manifest ; exists ; 2010 ; 2010 ; Applied Clinical Informatics Volume 1 ; 1 ; >
+    au < testing ; exists ; 2010 ; 2010 ; Applied Clinical Informatics Volume 1 ; 1 ; >
 
   }
 
@@ -6634,7 +6634,7 @@
     param[journal_id] = 10.1055/s-00034922
     comment[years] = 2004-current
 
-    au < manifest ; exists ; 2017 ; 2017 ; Arthritis und Rheuma Volume 37 ; 37 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Arthritis und Rheuma Volume 37 ; 37 ; >
 
   }
 
@@ -6650,7 +6650,7 @@
     param[journal_id] = 10.1055/s-00033559
     comment[years] = 2017-current
 
-    au < manifest ; exists ; 2017 ; 2017 ; GGP - Fachzeitschrift für Geriatrische und Gerontologische Pflege Volume 1 ; 1 ; >
+    au < testing ; exists ; 2017 ; 2017 ; GGP - Fachzeitschrift für Geriatrische und Gerontologische Pflege Volume 1 ; 1 ; >
 
   }
 
@@ -6666,7 +6666,7 @@
     param[journal_id] = 10.1055/s-00034925
     comment[years] = 2000-current
 
-    au < manifest ; exists ; 2017 ; 2017 ; Hämostaseologie Volume 37 ; 37 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Hämostaseologie Volume 37 ; 37 ; >
 
   }
 
@@ -6681,7 +6681,7 @@
     param[journal_id] = 10.1055/s-00035300
     comment[years] = 2017-current
 
-    au < manifest ; exists ; 2017 ; 2017 ; Indian Journal of Cardiovascular Disease in Women WINCARS Volume 1 ; 1 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Indian Journal of Cardiovascular Disease in Women WINCARS Volume 1 ; 1 ; >
 
   }
 
@@ -6696,7 +6696,7 @@
     param[journal_id] = 10.1055/s-00034793
     comment[years] = 2017-current
 
-    au < manifest ; exists ; 2017 ; 2017 ; Journal of Cardiac Critical Care TSS Volume 1 ; 1 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Journal of Cardiac Critical Care TSS Volume 1 ; 1 ; >
 
   }
 
@@ -6711,7 +6711,7 @@
     param[journal_id] = 10.1055/s-00033103
     comment[years] = 2017-current
 
-    au < manifest ; exists ; 2017 ; 2017 ; Journal of Child Science Volume 7 ; 7 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Journal of Child Science Volume 7 ; 7 ; >
 
   }
 
@@ -6727,7 +6727,7 @@
     param[journal_id] = 10.1055/s-00034917
     comment[years] = 2003-current
 
-    au < manifest ; exists ; 2017 ; 2017 ; Kinder- und Jugendmedizin Volume 17 ; 17 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Kinder- und Jugendmedizin Volume 17 ; 17 ; >
 
   }
 
@@ -6743,7 +6743,7 @@
     param[journal_id] = 10.1055/s-00035037
     comment[years] = 1962-current
 
-    au < manifest ; exists ; 2016 ; 2016 ; Methods of Information in Medicine Volume 55 ; 55 ; >
+    au < testing ; exists ; 2016 ; 2016 ; Methods of Information in Medicine Volume 55 ; 55 ; >
     au < expected ; exists ; 2017 ; 2017 ; Methods of Information in Medicine Volume 56 ; 56 ; >
 
   }
@@ -6760,7 +6760,7 @@
     param[journal_id] = 10.1055/s-00034916
     comment[years] = 2003-current
 
-    au < manifest ; exists ; 2015 ; 2015 ; Nervenheilkunde Volume 34 ; 34 ; >
+    au < testing ; exists ; 2015 ; 2015 ; Nervenheilkunde Volume 34 ; 34 ; >
 
   }
 
@@ -6776,7 +6776,7 @@
     param[journal_id] = 10.1055/s-00034924
     comment[years] = 1961-current
 
-    au < manifest ; exists ; 2015 ; 2015 ; Nuklearmedizin Volume 54 ; 54 ; >
+    au < testing ; exists ; 2015 ; 2015 ; Nuklearmedizin Volume 54 ; 54 ; >
     au < expected ; exists ; 2016 ; 2016 ; Nuklearmedizin Volume 55 ; 55 ; >
     au < expected ; exists ; 2017 ; 2017 ; Nuklearmedizin Volume 56 ; 56 ; >
 
@@ -6794,9 +6794,9 @@
     param[journal_id] = 10.1055/s-00034915
     comment[years] = 2010-current
 
-    au < manifest ; exists ; 2015 ; 2015 ; Onkologische Welt Volume 6 ; 6 ; >
+    au < testing ; exists ; 2015 ; 2015 ; Onkologische Welt Volume 6 ; 6 ; >
     au < exists ; exists ; 2016 ; 2016 ; Onkologische Welt Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2017 ; 2017 ; Onkologische Welt Volume 8 ; 8 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Onkologische Welt Volume 8 ; 8 ; >
 
   }
 
@@ -6812,7 +6812,7 @@
     param[journal_id] = 10.1055/s-00034914
     comment[years] = 2008-current
 
-    au < manifest ; exists ; 2017 ; 2017 ; Osteologie Volume 26 ; 26 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Osteologie Volume 26 ; 26 ; >
 
   }
 
@@ -6828,7 +6828,7 @@
     param[journal_id] = 10.1055/s-00033423
     comment[years] = 2017-current
 
-    au < manifest ; exists ; 2017 ; 2017 ; osteopathisch - Fachzeitschrift für Osteopathen Volume 1 ; 1 ; >
+    au < testing ; exists ; 2017 ; 2017 ; osteopathisch - Fachzeitschrift für Osteopathen Volume 1 ; 1 ; >
 
   }
 
@@ -6853,7 +6853,7 @@
     au < exists ; exists ; 2014 ; 2014 ; Phlebologie Volume 43 ; 43 ; >
     au < exists ; exists ; 2015 ; 2015 ; Phlebologie Volume 44 ; 44 ; >
     au < exists ; exists ; 2016 ; 2016 ; Phlebologie Volume 45 ; 45 ; >
-    au < manifest ; exists ; 2017 ; 2017 ; Phlebologie Volume 46 ; 46 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Phlebologie Volume 46 ; 46 ; >
 
   }
 
@@ -6869,7 +6869,7 @@
     param[journal_id] = 10.1055/s-00033287
     comment[years] = 2017-current
 
-    au < manifest ; exists ; 2017 ; 2017 ; Revista Iberoamericana de Cirugía de la Mano Volume 45 ; 45 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Revista Iberoamericana de Cirugía de la Mano Volume 45 ; 45 ; >
 
   }
 
@@ -6885,7 +6885,7 @@
     param[journal_id] = 10.1055/s-00035148
     comment[years] = 2012-current
 
-    au < manifest ; exists ; 2017 ; 2017 ; Schlaf Volume 6 ; 6 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Schlaf Volume 6 ; 6 ; >
 
   }
 
@@ -6900,7 +6900,7 @@
     param[journal_id] = 10.1055/s-00033990
     comment[years] = 2017-current
 
-    au < manifest ; exists ; 2017 ; 2017 ; TH Open Volume 1 ; 1 ; >
+    au < testing ; exists ; 2017 ; 2017 ; TH Open Volume 1 ; 1 ; >
 
   }
 
@@ -6916,7 +6916,7 @@
     param[journal_id] = 10.1055/s-00034912
     comment[years] = 2003-current
 
-    au < manifest ; exists ; 2017 ; 2017 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 45 ; 45 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 45 ; 45 ; >
 
   }
 
@@ -6932,7 +6932,7 @@
     param[journal_id] = 10.1055/s-00034911
     comment[years] = 2003-current
 
-    au < manifest ; exists ; 2017 ; 2017 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 15 ; 15 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 15 ; 15 ; >
 
   }
 
@@ -6948,7 +6948,7 @@
     param[journal_id] = 10.1055/s-00034612
     comment[years] = 2017-current
 
-    au < manifest ; exists ; 2017 ; 2017 ; Yearbook of Medical Informatics Volume 26 ; 26 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Yearbook of Medical Informatics Volume 26 ; 26 ; >
 
   }
 
