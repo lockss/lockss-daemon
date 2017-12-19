@@ -19,7 +19,7 @@ mkdir -p $tpath
   diff $tpath/glnlist $tpath/notclockss | grep "< " | sed 's/..//' > $tpath/glnAndclockss
 
 #Report any AU in the gln marked notReady, wanted, or testing.
-scripts/tdb/tdbout -NWT -t auid,plugin,publisher:info[tester],status,year tdb/prod/*.tdb > $tpath/glntest_a
+#scripts/tdb/tdbout -NWT -t auid,plugin,publisher:info[tester],status,year tdb/prod/*.tdb > $tpath/glntest_a
 
 #Report any AU in the gln marked manifest that does not have a file in clockss.
 for file in `cat $tpath/notclockss`
