@@ -832,7 +832,7 @@
       param[journal_id] = ink
       implicit < status ; year ; name ; param[volume_name] >
 
-    au < expected ; 2018 ; Journal of Inklings Studies Volume 1 ; 1 >
+    au < manifest ; 2018 ; Journal of Inklings Studies Volume 1 ; 1 >
 
     }
   }

@@ -145,7 +145,7 @@
     au < HighWirePressH20Plugin ; down ; 2014 ; Annals of the Rheumatic Diseases Volume 74 ; 74 >
     au < HighWirePressH20Plugin ; down ; 2015 ; Annals of the Rheumatic Diseases Volume 75 ; 75 >
     au < bmj.BMJDrupalPlugin ; notReady ; 2016 ; Annals of the Rheumatic Diseases Volume 76 ; 76 > # Unable to fetch probe permission page
-    au < bmj.BMJDrupalPlugin ; exists ; 2017 ; Annals of the Rheumatic Diseases Volume 77 ; 77 >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Annals of the Rheumatic Diseases Volume 77 ; 77 >
 
   }
 
