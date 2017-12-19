@@ -4249,7 +4249,7 @@
     param[journal_id] = ijpl
     #continues = 1747-9886
 
-    au < frozen ; exists ; 2015 ; International Journal of Public Leadership Volume 11 ; 11 ; >
+    au < finished ; manifest ; 2015 ; International Journal of Public Leadership Volume 11 ; 11 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; International Journal of Public Leadership Volume 12 ; 12 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2017 ; International Journal of Public Leadership Volume 13 ; 13 ; >
 
@@ -4909,7 +4909,7 @@
     au < manifest ; exists ; 2013 ; International Journal of Quality and Service Sciences Volume 5 ; 5 ; >
     au < frozen ; exists ; 2014 ; International Journal of Quality and Service Sciences Volume 6 ; 6 ; >
     au < finished ; finished ; 2015 ; International Journal of Quality and Service Sciences Volume 7 ; 7 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2016 ; International Journal of Quality and Service Sciences Volume 8 ; 8 ; >
+    au < finished ; manifest ; 2016 ; International Journal of Quality and Service Sciences Volume 8 ; 8 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2017 ; International Journal of Quality and Service Sciences Volume 9 ; 9 ; >
 
   }
@@ -9104,7 +9104,7 @@
     au < manifest ; exists ; 2013 ; Mental Health and Social Inclusion Volume 17 ; 17 ; >
     au < finished ; finished ; 2014 ; Mental Health and Social Inclusion Volume 18 ; 18 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; Mental Health and Social Inclusion Volume 19 ; 19 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2016 ; Mental Health and Social Inclusion Volume 20 ; 20 ; >
+    au < finished ; manifest ; 2016 ; Mental Health and Social Inclusion Volume 20 ; 20 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2017 ; Mental Health and Social Inclusion Volume 21 ; 21 ; >
 
   }
@@ -9140,7 +9140,7 @@
     au < manifest ; exists ; 2013 ; Mental Health Review Journal: Research, Policy and Practice Volume 18 ; 18 ; >
     au < frozen ; exists ; 2014 ; Mental Health Review Journal: Research, Policy and Practice Volume 19 ; 19 ; >
     au < finished ; finished ; 2015 ; Mental Health Review Journal: Research, Policy and Practice Volume 20 ; 20 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2016 ; Mental Health Review Journal: Research, Policy and Practice Volume 21 ; 21 ; >
+    au < finished ; manifest ; 2016 ; Mental Health Review Journal: Research, Policy and Practice Volume 21 ; 21 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2017 ; Mental Health Review Journal: Research, Policy and Practice Volume 22 ; 22 ; >
 
   }
