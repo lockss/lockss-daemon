@@ -3447,7 +3447,7 @@
     au < manifest ; exists ; 2013 ; HPB Surgery Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; HPB Surgery Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; HPB Surgery Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2016 ; HPB Surgery Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2016 ; HPB Surgery Volume 2016 ; 2016 ; 2016 ; >
     au < crawling ; exists ; 2017 ; HPB Surgery Volume 2017 ; 2017 ; 2017 ; >
 
   }
@@ -5495,7 +5495,7 @@
     au < manifest ; exists ; 2013 ; Journal of Analytical Methods in Chemistry Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Analytical Methods in Chemistry Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Journal of Analytical Methods in Chemistry Volume 2015 ; 2015 ; 2015 ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2016 ; Journal of Analytical Methods in Chemistry Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2016 ; Journal of Analytical Methods in Chemistry Volume 2016 ; 2016 ; 2016 ; >
     au < crawling ; exists ; 2017 ; Journal of Analytical Methods in Chemistry Volume 2017 ; 2017 ; 2017 ; >
 
   }
@@ -5756,7 +5756,7 @@
     au < manifest ; exists ; 2013 ; Journal of Blood Transfusion Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Blood Transfusion Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; crawling ; 2015 ; Journal of Blood Transfusion Volume 2015 ; 2015 ; 2015 ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2016 ; Journal of Blood Transfusion Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2016 ; Journal of Blood Transfusion Volume 2016 ; 2016 ; 2016 ; >
     au < crawling ; exists ; 2017 ; Journal of Blood Transfusion Volume 2017 ; 2017 ; 2017 ; >
 
   }
@@ -5816,7 +5816,7 @@
     au < manifest ; exists ; 2013 ; Journal of Cancer Epidemiology Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Cancer Epidemiology Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Journal of Cancer Epidemiology Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2016 ; Journal of Cancer Epidemiology Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2016 ; Journal of Cancer Epidemiology Volume 2016 ; 2016 ; 2016 ; >
     au < crawling ; exists ; 2017 ; Journal of Cancer Epidemiology Volume 2017 ; 2017 ; 2017 ; >
 
   }
@@ -5883,7 +5883,7 @@
     au < manifest ; exists ; 2013 ; Journal of Ceramics Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Ceramics Volume 2014 ; 2014 ; 2014 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Journal of Ceramics Volume 2015 ; 2015 ; 2015 ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2016 ; Journal of Ceramics Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2016 ; Journal of Ceramics Volume 2016 ; 2016 ; 2016 ; >
     au < expected ; exists ; 2017 ; Journal of Ceramics Volume 2017 ; 2017 ; 2017 ; >
 
   }
@@ -5927,7 +5927,7 @@
     au < manifest ; exists ; 2013 ; Journal of Chemistry Volume 2013 ; 2013 ; 2013 ; >
     au < frozen ; exists ; 2014 ; Journal of Chemistry Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; crawling ; 2015 ; Journal of Chemistry Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2016 ; Journal of Chemistry Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2016 ; Journal of Chemistry Volume 2016 ; 2016 ; 2016 ; >
     au < crawling ; exists ; 2017 ; Journal of Chemistry Volume 2017 ; 2017 ; 2017 ; >
     
   }
@@ -6038,7 +6038,7 @@
     au < manifest ; exists ; 2013 ; Journal of Composites Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Composites Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2015 ; Journal of Composites Volume 2015 ; 2015 ; 2015 ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2016 ; Journal of Composites Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2016 ; Journal of Composites Volume 2016 ; 2016 ; 2016 ; >
     au < expected ; exists ; 2017 ; Journal of Composites Volume 2017 ; 2017 ; 2017 ; >
 
   }
@@ -6056,7 +6056,7 @@
     au < manifest ; exists ; 2013 ; Journal of Computational Engineering Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Computational Engineering Volume 2014 ; 2014 ; 2014 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Journal of Computational Engineering Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2016 ; Journal of Computational Engineering Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2016 ; Journal of Computational Engineering Volume 2016 ; 2016 ; 2016 ; >
     au < crawling ; exists ; 2017 ; Journal of Computational Engineering Volume 2017 ; 2017 ; 2017 ; >
 
   }
@@ -6130,7 +6130,7 @@
     au < manifest ; exists ; 2013 ; Journal of Computer Networks and Communications Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Computer Networks and Communications Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2015 ; Journal of Computer Networks and Communications Volume 2015 ; 2015 ; 2015 ; reingest4.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2016 ; Journal of Computer Networks and Communications Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2016 ; Journal of Computer Networks and Communications Volume 2016 ; 2016 ; 2016 ; >
     au < crawling ; exists ; 2017 ; Journal of Computer Networks and Communications Volume 2017 ; 2017 ; 2017 ; >
     
   }
@@ -6148,7 +6148,7 @@
     au < manifest ; exists ; 2013 ; Journal of Construction Engineering Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Construction Engineering Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; finished ; 2015 ; Journal of Construction Engineering Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2016 ; Journal of Construction Engineering Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2016 ; Journal of Construction Engineering Volume 2016 ; 2016 ; 2016 ; >
     au < crawling ; exists ; 2017 ; Journal of Construction Engineering Volume 2017 ; 2017 ; 2017 ; >
 
   }
@@ -6172,7 +6172,7 @@
     au < manifest ; exists ; 2013 ; Journal of Control Science and Engineering Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Control Science and Engineering Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2015 ; Journal of Control Science and Engineering Volume 2015 ; 2015 ; 2015 ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2016 ; Journal of Control Science and Engineering Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2016 ; Journal of Control Science and Engineering Volume 2016 ; 2016 ; 2016 ; >
     au < crawling ; exists ; 2017 ; Journal of Control Science and Engineering Volume 2017 ; 2017 ; 2017 ; >
 
   }
@@ -6422,7 +6422,7 @@
     au < manifest ; exists ; 2013 ; Journal of Engineering Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Engineering Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2015 ; Journal of Engineering Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2016 ; Journal of Engineering Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2016 ; Journal of Engineering Volume 2016 ; 2016 ; 2016 ; >
     au < crawling ; exists ; 2017 ; Journal of Engineering Volume 2017 ; 2017 ; 2017 ; >
 
   }
