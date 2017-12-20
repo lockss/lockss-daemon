@@ -105,8 +105,7 @@ public class BaseAtyponHtmlLinkRewriterFactory implements LinkRewriterFactory {
     fact.addPreXform(new AtyponPreFilter(au,url));
     return fact.createLinkRewriter(mimeType, au, in, encoding, url, xfm);
   }
-  
-  
+
   static class AtyponPreFilter implements NodeFilter {
     
     protected static final String SHOW_CIT_URL_SNIPPET =
@@ -125,25 +124,15 @@ public class BaseAtyponHtmlLinkRewriterFactory implements LinkRewriterFactory {
         // form tag with name="frmCitMgr" (see link extractor)
         String method = ((FormTag) node).getFormMethod();
         String f_name = ((FormTag) node).getFormName();
-        // hardwire it to the ris citation information as we always collect this
-        /*
-         * <form action="http://google.com">
-        /*   <input type="submit" value="Go to Google" />
-        /* </form>
-         */
+        // make the onclick use the ris citation information link we know we have
         if ("post".equalsIgnoreCase(method) && "frmCitmgr".equalsIgnoreCase(f_name)) {
-          String newUrl = html_url.replaceAll(SHOW_CITATION,DOWNLOAD_CITATION) + getCitationArgs();
+          String newUrl = html_url.replaceAll(SHOW_CITATION,DOWNLOAD_CITATION) + DEFAULT_CITATION_ARGS;
           InputTag buttonInput = ((FormTag) node).getInputTag("submit");
           buttonInput.setAttribute("onclick",newUrl);
           ((FormTag) node).setAttribute("action", newUrl);
         }
       }
       return false;
-    }
-
-    // In case a child plugin has a variant (such as no "include=cit")
-    protected static String getCitationArgs() {
-      return DEFAULT_CITATION_ARGS;
     }
 
   }
