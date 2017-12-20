@@ -1,0 +1,34 @@
+{
+  publisher <
+    name = Parenteral Drug Association ;
+    info[contract] = 2017 ;
+    info[back] = 2015 ;
+    info[tester] = 5 ;
+    info[poller] = 6
+  >
+
+      pluginPrefix = org.lockss.plugin.highwire.
+
+  {
+
+      title <
+        name = PDA Journal of Pharmaceutical Science and Technology ;
+        issn = 1079-7440 ;
+        eissn = 1948-2124 
+        
+    >
+
+      param[base_url] = http://journal.pda.org/
+      implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
+
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2012 ; Journal of the American Heart Association Volume 66 ; 66 ; >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2013 ; Journal of the American Heart Association Volume 67 ; 67 ; >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2014 ; Journal of the American Heart Association Volume 68 ; 68 ; >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2015 ; Journal of the American Heart Association Volume 69 ; 69 ; >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2016 ; Journal of the American Heart Association Volume 70 ; 70 ; >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2017 ; Journal of the American Heart Association Volume 71 ; 71 ; >
+
+  }
+
+}
+
