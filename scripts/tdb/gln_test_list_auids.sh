@@ -24,7 +24,7 @@ mkdir -p $tpath
 #Report any AU in the gln marked manifest that does not have a file in clockss.
 for file in `cat $tpath/notclockss`
 do
-  scripts/tdb/tdbout -M -t auid,plugin,publisher:info[tester],status,year tdb/prod/$file >> $tpath/glntest_a
+  scripts/tdb/tdbout -M -t auid,plugin,publisher:info[tester],status,year tdb/prod/$file > $tpath/glntest_a #clears the file.
 done
 
 #Report some AUs in the gln marked manifest that do not have an equivalent in clockss.
