@@ -438,7 +438,7 @@
     param[base_url] = http://scholarcommons.usf.edu/
     param[collection_type] = ir_series
     param[collection] = basgp_images
-    implicit < status ; year ; name ; param[collection_heading] >  
+    implicit < status ; year ; name ; param[collection_heading] >
 
     # Currently, all AUs are abstracts-only.
     attr[au_coverage_depth] = abstracts
