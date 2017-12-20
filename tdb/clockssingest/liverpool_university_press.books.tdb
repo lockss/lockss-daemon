@@ -20,6 +20,7 @@
         type = bookSeries
       >
     implicit < status ; status2 ; year ; volume ; isbn ; eisbn ; param[book_eisbn] ; name ; hidden[proxy] >
+    #series = tthe
 
     au < finished ; finished ; 1988 ; 1 ; 9780853233275 ;  ; 9780853233275 ; Gregory of Tours: Life of the Fathers (9780853233275) ; >
     au < finished ; finished ; 1989 ; 2 ; 9780853233763 ;  ; 9780853233763 ; The Emperor Julian (9780853233763) ; reingest2.clockss.org:8085 >
@@ -98,6 +99,7 @@
       >
 
     implicit < status ; status2 ; year ; volume ; isbn ; eisbn ; param[book_eisbn] ; name ; hidden[proxy] >
+    #series = lejc
 
    }
 
