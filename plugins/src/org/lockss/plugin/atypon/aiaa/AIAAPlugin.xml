@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>28</string>
+    <string>29</string>
   </entry>
 <!--  updating out of sync with parent, must have own feature_version_map -->  
   <entry>
@@ -39,7 +39,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>83</string>
+    <string>86</string>
   </entry>
   <!--  override start url from parent to support http to https conversion -->
   <entry>
@@ -82,5 +82,9 @@
   <entry>
     <string>text/html_link_extractor_factory</string>
     <string>org.lockss.plugin.atypon.aiaa.AIAAHtmlLinkExtractorFactory</string>
-  </entry> 
+  </entry>
+  <entry>
+    <string>text/html_link_rewriter_factory</string>
+    <string>org.lockss.plugin.atypon.aiaa.AIAAHtmlLinkRewriterFactory</string>
+  </entry>   
 </map>

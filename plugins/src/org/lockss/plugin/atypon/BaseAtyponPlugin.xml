@@ -18,7 +18,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>85</string>
+    <string>86</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -230,6 +230,10 @@
   <entry>
     <string>text/html_link_extractor_factory</string>
     <string>org.lockss.plugin.atypon.BaseAtyponHtmlLinkExtractorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_link_rewriter_factory</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponHtmlLinkRewriterFactory</string>
   </entry>
   <entry>
     <string>application/x-research-info-systems_filter_factory</string>
