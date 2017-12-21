@@ -25,7 +25,7 @@ echo "" > $tpath/glntest_a #clear the file.
 #Report any AU in the gln marked manifest that does not have a file in clockss.
 for file in `cat $tpath/notclockss`
 do
-  scripts/tdb/tdbout -M -t auid,plugin,publisher:info[tester],status,year tdb/prod/$file >> $tpath/glntest_a #don't clear the file in the loop
+  scripts/tdb/tdbout -M -t publisher,auid,publisher:info[tester],status,year tdb/prod/$file >> $tpath/glntest_a #don't clear the file in the loop
 done
 
 #Report some AUs in the gln marked manifest that do not have an equivalent in clockss.
@@ -33,7 +33,7 @@ for file in `cat $tpath/glnAndclockss`
 do
   if ! grep $file $tpath/glnfilter > /dev/null
   then
-    scripts/tdb/tdbout -M -t auid,plugin,publisher:info[tester],status,year -Q 'plugin ~ "ProjectMuse"' tdb/prod/$file >> $tpath/glntest_a # don't clear the file in the loop
+    scripts/tdb/tdbout -M -t publisher,auid,publisher:info[tester],status,year -Q 'plugin ~ "ProjectMuse"' tdb/prod/$file >> $tpath/glntest_a # don't clear the file in the loop
   fi
 done
 cat $tpath/glntest_a | sort | grep -v "needs.plugin"
