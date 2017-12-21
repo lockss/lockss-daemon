@@ -86,7 +86,7 @@
       au < manifest ; exists ; 2012 ;  IET Circuits, Devices and Systems Volume 6 ; 6 ; >
       au < manifest ; exists ; 2013 ;  IET Circuits, Devices and Systems Volume 7 ; 7 ; >
       au < crawling ; exists ; 2014 ; IET Circuits, Devices and Systems Volume 8 ; 8 ; >    
-      au < crawling ; exists ; 2015 ; IET Circuits, Devices and Systems Volume 9 ; 9 ; >    
+      au < frozen ; exists ; 2015 ; IET Circuits, Devices and Systems Volume 9 ; 9 ; >    
       au < frozen ; exists ; 2016 ; IET Circuits, Devices and Systems Volume 10 ; 10 ; >    
       au < crawling ; exists ; 2017 ; IET Circuits, Devices and Systems Volume 11 ; 11 ; >    
 
@@ -142,9 +142,9 @@
       
       au < manifest ; exists ; 2012 ;  IET Computer Vision Volume 6 ; 6 ; >
       au < manifest ; exists ; 2013 ;  IET Computer Vision Volume 7 ; 7 ; >
-      au < crawling ; exists ; 2014 ; IET Computer Vision Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2014 ; IET Computer Vision Volume 8 ; 8 ; >
       au < crawling ; exists ; 2015 ; IET Computer Vision Volume 9 ; 9 ; >  
-      au < crawling ; exists ; 2016 ; IET Computer Vision Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2016 ; IET Computer Vision Volume 10 ; 10 ; >
       au < crawling ; exists ; 2017 ; IET Computer Vision Volume 11 ; 11 ; >
 
     }
@@ -341,7 +341,7 @@
       
       au < manifest ; exists ; 2012 ;  IET Networks Volume 1 ; 1 ; >
       au < manifest ; exists ; 2013 ;  IET Networks Volume 2 ; 2 ; >
-      au < crawling ; exists ; 2014 ; IET Networks Volume 3 ; 3 ; >      
+      au < frozen ; exists ; 2014 ; IET Networks Volume 3 ; 3 ; >      
       au < manifest ; exists ; 2015 ; IET Networks Volume 4 ; 4 ; >      
       au < frozen ; exists ; 2016 ; IET Networks Volume 5 ; 5 ; >      
       au < crawling ; exists ; 2017 ; IET Networks Volume 6 ; 6 ; >      
@@ -403,7 +403,7 @@
       au < manifest ; exists ; 2013 ;  IET Radar, Sonar & Navigation Volume 7 ; 7 ; >
       au < frozen ; exists ; 2014 ; IET Radar, Sonar & Navigation Volume 8 ; 8 ; >      
       au < crawling ; exists ; 2015 ; IET Radar, Sonar & Navigation Volume 9 ; 9 ; >        
-      au < crawling ; exists ; 2016 ; IET Radar, Sonar & Navigation Volume 10 ; 10 ; >      
+      au < frozen ; exists ; 2016 ; IET Radar, Sonar & Navigation Volume 10 ; 10 ; >      
       au < crawling ; exists ; 2017 ; IET Radar, Sonar & Navigation Volume 11 ; 11 ; >      
      
 
@@ -421,7 +421,7 @@
       
       au < manifest ; exists ; 2012 ;  IET Renewable Power Generation Volume 6 ; 6 ; >
       au < manifest ; exists ; 2013 ;  IET Renewable Power Generation Volume 7 ; 7 ; >
-      au < crawling ; exists ; 2014 ; IET Renewable Power Generation Volume 8 ; 8 ; >      
+      au < frozen ; exists ; 2014 ; IET Renewable Power Generation Volume 8 ; 8 ; >      
       au < frozen ; exists ; 2015 ; IET Renewable Power Generation Volume 9 ; 9 ; >        
       au < frozen ; exists ; 2016 ; IET Renewable Power Generation Volume 10 ; 10 ; >      
       au < crawling ; exists ; 2017 ; IET Renewable Power Generation Volume 11 ; 11 ; >      

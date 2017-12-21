@@ -21,7 +21,7 @@
     #base_url changed upon move to Drupal.
     param[base_url] = http://jaapl.org/
 
-    au < aapl.ClockssAAPLDrupalPlugin ; crawling ; exists ; 2016 ; Journal of the American Academy of Psychiatry and the Law Online Volume 44 ; 44 ; >
+    au < aapl.ClockssAAPLDrupalPlugin ; frozen ; exists ; 2016 ; Journal of the American Academy of Psychiatry and the Law Online Volume 44 ; 44 ; >
     au < aapl.ClockssAAPLDrupalPlugin ; manifest ; exists ; 2017 ; Journal of the American Academy of Psychiatry and the Law Online Volume 45 ; 45 ; >
 
     }
