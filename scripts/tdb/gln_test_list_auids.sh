@@ -12,7 +12,8 @@ mkdir -p $tpath
 
   ls tdb/prod | grep .tdb > $tpath/glnlist
   ls tdb/clockssingest | grep .tdb > $tpath/clocksslist
-  diff $tpath/glnlist $tpath/clocksslist | grep "< " | sed 's/..//' > $tpath/notclockss
+  #do not look at Springer AUids.
+  diff $tpath/glnlist $tpath/clocksslist | grep "< " | sed 's/..//' | grep -v springer > $tpath/notclockss
   echo "american_medical_association.tdb" >> $tpath/notclockss
   echo "purdue_university_press.tdb" >> $tpath/notclockss
   echo "centro_de_filosofia_da_universidade_de_lisboa.tdb" >> $tpath/notclockss
@@ -25,7 +26,7 @@ echo "" > $tpath/glntest_a #clear the file.
 #Report any AU in the gln marked manifest that does not have a file in clockss.
 for file in `cat $tpath/notclockss`
 do
-  scripts/tdb/tdbout -M -t publisher,auid,publisher:info[tester],status,year tdb/prod/$file >> $tpath/glntest_a #don't clear the file in the loop
+  scripts/tdb/tdbout -M -t publisher,plugin,auid,publisher:info[tester],status,year tdb/prod/$file >> $tpath/glntest_a #don't clear the file in the loop
 done
 
 #Report some AUs in the gln marked manifest that do not have an equivalent in clockss.
@@ -33,7 +34,7 @@ for file in `cat $tpath/glnAndclockss`
 do
   if ! grep $file $tpath/glnfilter > /dev/null
   then
-    scripts/tdb/tdbout -M -t publisher,auid,publisher:info[tester],status,year -Q 'plugin ~ "ProjectMuse"' tdb/prod/$file >> $tpath/glntest_a # don't clear the file in the loop
+    scripts/tdb/tdbout -M -t publisher,plugin,auid,publisher:info[tester],status,year -Q 'plugin ~ "ProjectMuse"' tdb/prod/$file >> $tpath/glntest_a # don't clear the file in the loop
   fi
 done
 cat $tpath/glntest_a | sort | grep -v "needs.plugin"
