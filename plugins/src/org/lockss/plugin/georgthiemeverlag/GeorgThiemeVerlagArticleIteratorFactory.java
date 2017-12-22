@@ -52,32 +52,44 @@ public class GeorgThiemeVerlagArticleIteratorFactory
       "\"%s\", base_url";
   
   protected static final String PATTERN_TEMPLATE =
-      "\"^%s(?:[^/]+/)?(?:ejournals|ebooks)/(?:abstract|html|pdf)/10[.][0-9a-z]{4,6}/[^/?&.]+(?:[.]pdf|[?]issue=[^&]+)?$\"," +
+      "\"^%s(?:[^/]+/)?(?:ejournals|ebooks)/(?:abstract|html|pdf)/10[.][0-9a-z]{4,6}/[^/?&.]+(?:[.]pdf|[?]issue=[^&]+)?(?:\\?articleLanguage=.*)?$\"," +
       " base_url";
   
   // various aspects of an article
   // https://www.thieme-connect.de/products/ejournals/html/10.1055/s-0029-1214947
   // https://www.thieme-connect.de/ejournals/pdf/10.1055/s-0029-1214947.pdf
   // https://www.thieme-connect.de/ejournals/abstract/10.1055/s-0029-1214947
+  // optional language argument now (12/22/17) when an article has more than one language option
+  // TODO - rewrite this without using builder template to substitute variants to  
+  // count all languages as one aspect - hardcode to try both 'en' and 'de'
+  // FOR now - leave simple and just have the two languages be two different articles
+  // and the DOI should resolve them to one for publisher counts
+  // 
+  // https://www.thieme-connect.de/products/ejournals/abstract/10.1055/s-0037-1608741?articleLanguage=de
+  // https://www.thieme-connect.de/products/ejournals/ris/10.1055/s-0037-1608741/BIB?articleLanguage=de
+  // https://www.thieme-connect.de/products/ejournals/pdf/10.1055/s-0037-1608741.pdf?articleLanguage=de
+  // https://www.thieme-connect.de/products/ejournals/pdf/10.1055/s-0037-1608741.pdf?articleLanguage=en
   
-  // Identify groups in the pattern "/(html|pdf)(<doi>)(.pdf)?
+  // Identify groups in the pattern "/(html|pdf|abstract)(<doi>)(.pdf)(optional_lang_arg)
+  // NOTE the "or nothing" portion of the language group is to guarantee a group(2) which
+  // otherwise would lead to IndexOutOfBoundsException when it wasn't present
   protected static final Pattern HTML_PATTERN = Pattern.compile(
-      "/html/([^/]+/[^/?&]+)$",
+      "/html/([^/]+/[^/?&]+)(\\?articleLanguage=.*|$)",
       Pattern.CASE_INSENSITIVE);
   
   protected static final Pattern PDF_PATTERN = Pattern.compile(
-      "/pdf/([^/]+/[^/?&.]+)[.]pdf$",
+      "/pdf/([^/]+/[^/?&.]+)[.]pdf(\\?articleLanguage=.*|$)",
       Pattern.CASE_INSENSITIVE);
   
   protected static final Pattern ABSTRACT_PATTERN = Pattern.compile(
-      "/abstract/([^/]+/[^/?&]+)$",
+      "/abstract/([^/]+/[^/?&]+)(\\?articleLanguage=.*|$)",
       Pattern.CASE_INSENSITIVE);
   
   // how to change from one form (aspect) of article to another
-  protected static final String HTML_REPLACEMENT = "/html/$1";
-  protected static final String PDF_REPLACEMENT = "/pdf/$1.pdf";
-  protected static final String ABSTRACT_REPLACEMENT = "/abstract/$1";
-  protected static final String RIS_REPLACEMENT = "/ris/$1/BIB";
+  protected static final String HTML_REPLACEMENT = "/html/$1$2";
+  protected static final String PDF_REPLACEMENT = "/pdf/$1.pdf$2";
+  protected static final String ABSTRACT_REPLACEMENT = "/abstract/$1$2";
+  protected static final String RIS_REPLACEMENT = "/ris/$1/BIB$2";
   
   public Iterator<ArticleFiles> createArticleIterator(
       ArchivalUnit au, MetadataTarget target)
@@ -101,8 +113,7 @@ public class GeorgThiemeVerlagArticleIteratorFactory
         ArticleFiles.ROLE_FULL_TEXT_HTML);
     
     builder.addAspect(
-        ABSTRACT_PATTERN,
-        ABSTRACT_REPLACEMENT,
+        ABSTRACT_PATTERN, ABSTRACT_REPLACEMENT,
         ArticleFiles.ROLE_ABSTRACT);
     
     builder.addAspect(

@@ -32,8 +32,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.georgthiemeverlag;
 
-import java.io.InputStream;
-import java.util.Iterator;
 import java.util.Stack;
 import java.util.regex.Pattern;
 
@@ -42,7 +40,6 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.*;
 import org.lockss.test.*;
-import org.lockss.util.CIProperties;
 import org.lockss.util.Constants;
 import org.lockss.util.ListUtil;
 
@@ -109,7 +106,7 @@ public class TestGeorgThiemeVerlagArticleIteratorFactory extends ArticleIterator
   }
   
   //
-  // We are set up to match any of "<base_url>(html|pdf)/<doi_prefix/<doi_uid>(.pdf)?"
+  // We are set up to match any of "<base_url>(html|pdf|abstract)/<doi_prefix/<doi_uid>(.pdf)?((\\?articleLanguage=.*)?"
   //
   // various aspects of an article
   // https://www.thieme-connect.de/ejournals/abstract/10.1055/s-0029-1214947
@@ -118,18 +115,27 @@ public class TestGeorgThiemeVerlagArticleIteratorFactory extends ArticleIterator
   // https://www.thieme-connect.de/ejournals/pdf/10.1055/s-0029-1214947.pdf
   // https://www.thieme-connect.de/ejournals/pdf/10.1055/s-0029-1214947.pdf?issue=10.1055/s-003-25342
   // https://www.thieme-connect.de/ejournals/ris/10.1055/s-0031-1296349/BIB
-
+  // https://www.thieme-connect.de/products/ejournals/html/10.1055/s-0037-1608741?articleLanguage=en
+  // https://www.thieme-connect.de/products/ejournals/abstract/10.1055/s-0037-1608741?articleLanguage=en
+  // https://www.thieme-connect.de/products/ejournals/pdf/10.1055/s-0037-1608741.pdf?articleLanguage=de
+  // https://www.thieme-connect.de/products/ejournals/ris/10.1055/s-0037-1608741/BIB?articleLanguage=de
+  
   public void testUrls() throws Exception {
     SubTreeArticleIterator artIter = createSubTreeIter();
     Pattern pat = getPattern(artIter);
     
-    // we match to "%sejournals/(html|pdf)/%s/<doi_uid>", base_url, doi_prefix
+    // we match to "%sejournals/(html|pdf|abstract)/%s/<doi_uid>(?:\\?articleLanguage=.*)?", base_url, doi_prefix
     assertMatchesRE(PATTERN_FAIL_MSG, pat, "https://www.thieme-connect.de/ejournals/html/10.1055/s-0029-1214947");
     assertMatchesRE(PATTERN_FAIL_MSG, pat, "https://www.thieme-connect.de/ejournals/pdf/10.1055/s-0029-1214947.pdf");
     assertMatchesRE(PATTERN_FAIL_MSG, pat, "https://www.thieme-connect.de/ejournals/html/10.1055/s-0029-1214947?issue=10.1055/s-003-25342");
 
     // abstract is now good enough (meeting abstracts should be counted
     assertMatchesRE(PATTERN_FAIL_MSG, pat, "https://www.thieme-connect.de/ejournals/abstract/10.1055/s-0029-1214947");
+    // allow for language argument
+    assertMatchesRE(PATTERN_FAIL_MSG, pat, "https://www.thieme-connect.de/products/ejournals/html/10.1055/s-0037-1608741?articleLanguage=en");
+    assertMatchesRE(PATTERN_FAIL_MSG, pat, "https://www.thieme-connect.de/products/ejournals/abstract/10.1055/s-0037-1608741?articleLanguage=en");
+    assertMatchesRE(PATTERN_FAIL_MSG, pat, "https://www.thieme-connect.de/products/ejournals/pdf/10.1055/s-0037-1608741.pdf?articleLanguage=de");
+    assertMatchesRE(PATTERN_FAIL_MSG, pat, "https://www.thieme-connect.de/products/ejournals/abstract/10.1055/s-0029-1214947");    
     // but not to ...
     assertNotMatchesRE(PATTERN_FAIL_MSG, pat,  "http://www.thieme-connect.de/ejournals/html/10.1055/s-0029-1214947");
     assertNotMatchesRE(PATTERN_FAIL_MSG, pat, "https://www.thieme-connect.de/ejournals/html/10.1055/s-0029-1214947/foogood");
@@ -173,7 +179,15 @@ public class TestGeorgThiemeVerlagArticleIteratorFactory extends ArticleIterator
         BASE_URL + "ejournals/abstract/10.1055/s-77",
         BASE_URL + "ejournals/ris/10.1055/s-77/BIB",
         BASE_URL,
-        BASE_URL + "ejournals"
+        BASE_URL + "ejournals",
+        
+        BASE_URL + "ejournals/html/10.1055/s-99?articleLanguage=en",
+        BASE_URL + "ejournals/abstract/10.1055/s-99?articleLanguage=en",
+        BASE_URL + "ejournals/pdf/10.1055/s-99.pdf?articleLanguage=en",
+        BASE_URL + "ejournals/html/10.1055/s-99?articleLanguage=de",
+        BASE_URL + "ejournals/abstract/10.1055/s-99?articleLanguage=de",
+        BASE_URL + "ejournals/pdf/10.1055/s-99.pdf?articleLanguage=de",
+        
     };
     CachedUrl cuPdf = null;
     CachedUrl cuHtml = null;
@@ -244,6 +258,7 @@ public class TestGeorgThiemeVerlagArticleIteratorFactory extends ArticleIterator
         null,
         BASE_URL + "ejournals/pdf/10.1055/s-6.pdf",
         BASE_URL + "ejournals/pdf/10.1055/s-6.pdf"};
+
     
     String [] af7 = {
         null,
@@ -257,8 +272,27 @@ public class TestGeorgThiemeVerlagArticleIteratorFactory extends ArticleIterator
         null,
         null,
         BASE_URL + "ejournals/abstract/10.1055/s-77"};
+    
+    // for now leave languages as separate article files
+    // ultimately this will combine in to one aspect
+    String [] aflang1 = {
+        BASE_URL + "ejournals/pdf/10.1055/s-99.pdf?articleLanguage=en",
+        BASE_URL + "ejournals/html/10.1055/s-99?articleLanguage=en",
+        BASE_URL + "ejournals/pdf/10.1055/s-99.pdf?articleLanguage=en",
+        BASE_URL + "ejournals/abstract/10.1055/s-99?articleLanguage=en"};
+    
+    String [] aflang2 = {
+        BASE_URL + "ejournals/pdf/10.1055/s-99.pdf?articleLanguage=de",
+        BASE_URL + "ejournals/html/10.1055/s-99?articleLanguage=de",
+        BASE_URL + "ejournals/pdf/10.1055/s-99.pdf?articleLanguage=de",
+        BASE_URL + "ejournals/abstract/10.1055/s-99?articleLanguage=de"};    
 
+    // the order here matters - expecting the iterator to return AFs in reverse of this order
+    // the af7 has to come last - it is a null marker - 
+    // I did not originally write this - I don't know what is determining the order of the actual AFs
     expStack.push(af7);
+    expStack.push(aflang1);
+    expStack.push(aflang2);
     expStack.push(af6);
     expStack.push(af5);
     expStack.push(af4);
