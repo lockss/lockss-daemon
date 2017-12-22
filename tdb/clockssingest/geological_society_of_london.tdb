@@ -139,7 +139,7 @@
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Geological Society of London Memoirs Volume 44 ; 44 ; reingest1.clockss.org:8082 >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Geological Society of London Memoirs Volume 45 ; 45 ; reingest2.clockss.org:8085 >
     au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2016 ; Geological Society of London Memoirs Volume 46 ; 46 ; >
-    au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 2017 ; Geological Society of London Memoirs Volume 47 ; 47 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; ready ; exists ; 2017 ; Geological Society of London Memoirs Volume 47 ; 47 ; >
     au < gsl.ClockssGSLDrupalPlugin ; expected ; exists ; 2017 ; Geological Society of London Memoirs Volume 48 ; 48 ; >
 
   }
@@ -577,7 +577,7 @@
     au < ClockssHighWirePressH20Plugin ; finished ; manifest ; 2016 ; Geological Society of London Special Publications Volume 420 ; 420 ; reingest5.clockss.org:8082 >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Geological Society of London Special Publications Volume 421 ; 421 ; reingest2.clockss.org:8085 >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Geological Society of London Special Publications Volume 422 ; 422 ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 2016 ; Geological Society of London Special Publications Volume 423 ; 423 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; ready ; exists ; 2016 ; Geological Society of London Special Publications Volume 423 ; 423 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; manifest ; 2016 ; Geological Society of London Special Publications Volume 424 ; 424 ; reingest1.clockss.org:8082 >
     au < ClockssHighWirePressH20Plugin ; finished ; manifest ; 2016 ; Geological Society of London Special Publications Volume 425 ; 425 ; reingest2.clockss.org:8085 >
     au < ClockssHighWirePressH20Plugin ; finished ; manifest ; 2016 ; Geological Society of London Special Publications Volume 426 ; 426 ; reingest3.clockss.org:8083 >
@@ -704,7 +704,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Petroleum Geoscience Volume 20 ; 20 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Petroleum Geoscience Volume 21 ; 21 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2016 ; Petroleum Geoscience Volume 22 [superseded] ; 22 ; >
-      au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 2016 ; Petroleum Geoscience Volume 22 ; 22 ; >
+      au < gsl.ClockssGSLDrupalPlugin ; ready ; exists ; 2016 ; Petroleum Geoscience Volume 22 ; 22 ; >
       au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 2017 ; Petroleum Geoscience Volume 23 ; 23 ; >
     
   }
@@ -770,7 +770,7 @@
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 47 ; 47 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 48 ; 48 ; reingest1.clockss.org:8082 >
     au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2016 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 49 [superseded] ; 49 ; >
-    au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 2016 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 49 ; 49 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; ready ; exists ; 2016 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 49 ; 49 ; >
     au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 2017 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 50 ; 50 ; >
       
   }
