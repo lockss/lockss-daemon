@@ -9,14 +9,14 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>18</string>
+        <string>19</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>
         <map>
             <entry>
                 <string>Poll</string>
-                <string>25</string>
+                <string>26</string>
             </entry>
             <entry>
                 <string>Substance</string>
@@ -73,6 +73,7 @@
         <list>
             <string>1,"^https?://([^.]+\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|ajax\.microsoft\.com)/"</string>
             <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)$", url_host(base_url)</string>
+            <string>1,"^https?://%s/[^./]+\.axd/(file|script|stylesheet)/", url_host(base_url)</string>
             <string>1,"^https?://[^.]+\.(silverchair\.netdna-cdn|silverchaircdn)\.com/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$"</string>
             <string>1,"^https?://[^.]+\.(silverchair\.netdna-cdn|silverchaircdn)\.com/combres\.axd/"</string>
             <string>4,"^%s", base_url</string>
@@ -82,7 +83,7 @@
             <string>1,"^%scombres\.axd/", base_url</string>
             <string>1,"^%svolume\.aspx/SetPDFLinkBasedOnAccess", base_url</string>
             <string>1,"^%spdfaccess\.ashx\?ResourceID", base_url</string>
-            <string>1,"^%sScriptResource\.axd\?d", base_url</string>
+            <string>1,"^%s(Script|Web)Resource\.axd\?d", base_url</string>
             <string>1,"^%sCSS/book.less", base_url</string>
         </list>
     </entry>
@@ -101,6 +102,10 @@
     <entry>
         <string>au_url_normalizer</string>
         <string>org.lockss.plugin.silverchair.ScUrlNormalizer</string>
+    </entry>
+    <entry>
+        <string>text/html_link_rewriter_factory</string>
+        <string>org.lockss.plugin.silverchair.ScHtmlLinkRewriterFactory</string>
     </entry>
     <entry>
         <string>au_crawl_depth</string>

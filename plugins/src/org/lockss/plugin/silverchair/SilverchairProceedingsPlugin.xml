@@ -9,14 +9,14 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>24</string>
+        <string>25</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>
         <map>
             <entry>
                 <string>Poll</string>
-                <string>12</string>
+                <string>13</string>
             </entry>
             <entry>
                 <string>Substance</string>
@@ -72,7 +72,8 @@
         <list>
             <string>1,"^https?://([^.]+\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|ajax\.microsoft\.com)/"</string>
             <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)$", url_host(base_url)</string>
-      		<string>1,"^https?://[^.]+\.(silverchair\.netdna-cdn|silverchaircdn)\.com/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$"</string>
+            <string>1,"^https?://%s/[^./]+\.axd/(file|script|stylesheet)/", url_host(base_url)</string>
+            <string>1,"^https?://[^.]+\.(silverchair\.netdna-cdn|silverchaircdn)\.com/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$"</string>
             <string>1,"^https?://[^.]+\.(silverchair\.netdna-cdn|silverchaircdn)\.com/combres\.axd/"</string>
             <string>4,"^%s", base_url</string>
             <string>2,"__EVENTVALIDATION="</string>
@@ -82,7 +83,7 @@
             <string>1,"^%scombres\.axd/", base_url</string>
             <string>1,"^%svolume\.aspx/SetPDFLinkBasedOnAccess", base_url</string>
             <string>1,"^%spdfaccess\.ashx\?ResourceID", base_url</string>
-            <string>1,"^%sScriptResource\.axd\?d", base_url</string>
+            <string>1,"^%s(Script|Web)Resource\.axd\?d", base_url</string>
         </list>
     </entry>
     <entry>
@@ -100,6 +101,10 @@
     <entry>
         <string>au_url_normalizer</string>
         <string>org.lockss.plugin.silverchair.ScUrlNormalizer</string>
+    </entry>
+    <entry>
+        <string>text/html_link_rewriter_factory</string>
+        <string>org.lockss.plugin.silverchair.ScHtmlLinkRewriterFactory</string>
     </entry>
     <entry>
         <string>au_crawl_depth</string>
@@ -129,7 +134,7 @@
     <entry>
         <string>text/html_filter_factory</string>
         <string>org.lockss.plugin.silverchair.ScHtmlHashFilterFactory</string>
-    </entry>    
+    </entry>
     <entry>
         <string>au_substance_url_pattern</string>
         <list>
@@ -188,29 +193,31 @@
             <string>org.lockss.plugin.ContentValidationException$WrongLength=org.lockss.plugin.silverchair.ScHtmlHttpResponseHandler</string>
         </list>
     </entry>
-  <!-- The ScriptResource files have a hash in the url book,journals & proceedings -->    
+  <!-- The CSS, JS,fonts & Resource files have a hash in the url book,journals & proceedings -->
   <!-- base_url/ScriptResource.axd?d=8yhG95ORBCdFcnQMiG7SKCkD7fZE_-0QfrcOcMeSd0iByYMyQoN8n6P2Wockd7G3m_urLLH950OSn9bLbQ75XNXB2XfWbNDcxAGwQB7wJDBvcGPlDeYm-FLeqx7t2_Ae6wOe8Q2&t=6811d392 -->
-  <!-- don't count it in the poll, but do collect and share versions -->  
+  <!-- don't count it in the poll, but do collect and share versions -->
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
     <list>
-	  <string>/ScriptResource\.axd\?d=[^/]+$</string>
-      <string>/combres.axd/[^/]+-(js|css)/-?[0-9]+$</string>
-      <string>/multimediaPlayer.aspx\?</string>
-      <string>/errors/404\.aspx\?aspxerrorpath=</string>
-      <string>silverchaircdn\.com/(CSS|Images)/</string>
+      <string>"/(Script|Web)Resource\.axd\?d=</string>
+      <string>"/combres\.axd/[^/]+-(js|css)/-?[0-9]+$"</string>
+      <string>"/multimediaPlayer.aspx\?"</string>
+      <string>"/errors/404\.aspx\?aspxerrorpath="</string>
+      <string>"silverchaircdn\.com/(CSS|Images)/"</string>
       <string>"\?v=[0-9]+$"</string>
+      <string>"\.axd/(file|script|stylesheet)/"</string>
     </list>
   </entry>
   <entry>
     <string>au_url_poll_result_weight</string>
     <list>
-      <string>"/ScriptResource\.axd\?d=[^/]+$", 0</string>
-      <string>"/combres.axd/[^/]+-(js|css)/-?[0-9]+$", 0</string>
+      <string>"/(Script|Web)Resource\.axd\?d=", 0</string>
+      <string>"/combres\.axd/[^/]+-(js|css)/-?[0-9]+$", 0</string>
       <string>"/multimediaPlayer.aspx\?", 0</string>
       <string>"/errors/404\.aspx\?aspxerrorpath=", 0</string>
       <string>"silverchaircdn\.com/(CSS|Images)/", 0</string>
       <string>"\?v=[0-9]+$", 0</string>
+      <string>"\.axd/(file|script|stylesheet)/", 0</string>
     </list>
   </entry>
 </map>

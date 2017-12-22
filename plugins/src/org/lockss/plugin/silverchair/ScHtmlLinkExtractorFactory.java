@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,9 +32,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.silverchair;
 
-import org.apache.commons.httpclient.methods.StringRequestEntity;
-import org.apache.commons.httpclient.cookie.CookiePolicy;
-import org.apache.commons.io.IOUtils;
 import org.jsoup.nodes.Node;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
@@ -43,11 +40,7 @@ import org.lockss.extractor.LinkExtractor.Callback;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
-import org.lockss.util.UrlUtil;
-import org.lockss.util.urlconn.HttpClientUrlConnection;
-import org.lockss.util.urlconn.LockssUrlConnection;
 
-import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.regex.Matcher;
@@ -85,6 +78,10 @@ public class ScHtmlLinkExtractorFactory implements LinkExtractorFactory {
 
   protected static final String PDF_QUERY_STRING_SPIE =
     "/volume.aspx/SetPDFLinkBasedOnAccess?";
+  
+  // Should match value in ScHtmlLinkRewriterFactory
+  protected static final String DATA_ARTICLE_URL_ATTR = "data-article-url";
+  
   /*
    * <a class="al-link pdf pdfaccess pdf-link" 
    * data-article-id="2533522" 
@@ -112,7 +109,7 @@ public class ScHtmlLinkExtractorFactory implements LinkExtractorFactory {
                                    new ScAnchorTagExtractor(new String[]{"href",
                                                                          "onclick",
                                                                          "download",
-                                                                         "data-article-url"}));
+                                                                         DATA_ARTICLE_URL_ATTR}));
     extractor.registerTagExtractor(IMG_TAG,
                                    new SimpleTagLinkExtractor(new String[]{"src", "longdesc",
                                                                            "data-original"
@@ -241,9 +238,9 @@ public class ScHtmlLinkExtractorFactory implements LinkExtractorFactory {
       }
 
       // the 'data-article-url' attribute handler - the standard method for <a data-article-url
-      if (node.hasAttr("data-article-url")) {
+      if (node.hasAttr(DATA_ARTICLE_URL_ATTR)) {
         // picks up both pdfLink and epdfLink, but the readcube version is excluded
-        JsoupHtmlLinkExtractor.checkLink(node, cb, "data-article-url");
+        JsoupHtmlLinkExtractor.checkLink(node, cb, DATA_ARTICLE_URL_ATTR);
       }
     }
 
