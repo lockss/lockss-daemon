@@ -45,7 +45,7 @@
 
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; James Baldwin Journal Volume 1 ; 1 ; >
       au < frozen ; exists ; 2016 ; 2016 ; James Baldwin Journal Volume 2 ; 2 ; >
-      au < manifest ; exists ; 2017 ; 2017 ; James Baldwin Journal Volume 3 ; 3 ; >
+      au < testing ; exists ; 2017 ; 2017 ; James Baldwin Journal Volume 3 ; 3 ; >
       }
 
       {
@@ -68,7 +68,7 @@
       param[journal_id] = mmj
     
       au < frozen ; exists ; 2016 ; 2016 ; Manchester Medical Journal Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2017 ; 2017 ; Manchester Medical Journal Volume 2 ; 2 ; >
+      au < testing ; exists ; 2017 ; 2017 ; Manchester Medical Journal Volume 2 ; 2 ; >
 
   }
 
