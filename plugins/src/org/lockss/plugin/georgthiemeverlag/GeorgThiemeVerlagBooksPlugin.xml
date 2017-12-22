@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -60,7 +60,7 @@
       <string>4,"^%s.*/10[.][0-9a-z]{4,6}/", base_url</string>
       <string>2,"^%s.*/10[.][0-9a-z]{4,6}/www[.]", base_url</string>
       <string>2,"^%s(?:[^/]+/)?(?:rss/thieme|ebooks/(?:book|issues|sample|recommend|topten|linkout))", base_url</string>
-      <string>1,"^%s(?:[^/]+/)?ebooks/(?:book|abstract|html|pdf|ris)/10[.][0-9a-z]{4,6}/[^/?&amp;.]+(?:[.]pdf|/BIB)?$", base_url</string>
+      <string>1,"^%s(?:[^/]+/)?ebooks/(?:book|abstract|html|pdf|ris)/10[.][0-9a-z]{4,6}/[^/?&amp;.]+(?:[.]pdf|/BIB)?(\?articleLanguage=.*)?$", base_url</string>
     </list>
   </entry>
   <entry>
@@ -89,8 +89,8 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%s(?:[^/]+/)?ebooks/html/10[.][0-9a-z]{4,6}/[^/?&amp;.]+$", base_url</string>
-      <string>"^%s(?:[^/]+/)?ebooks/pdf/10[.][0-9a-z]{4,6}/[^/?&amp;.]+[.]pdf$", base_url</string>
+      <string>"^%s(?:[^/]+/)?ebooks/html/10[.][0-9a-z]{4,6}/[^/?&amp;.]+(\?articleLanguage=.*)?$", base_url</string>
+      <string>"^%s(?:[^/]+/)?ebooks/pdf/10[.][0-9a-z]{4,6}/[^/?&amp;.]+[.]pdf(\?articleLanguage=.*)?$", base_url</string>
     </list>
   </entry>
   <entry>
