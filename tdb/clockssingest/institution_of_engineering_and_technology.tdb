@@ -3,7 +3,7 @@
   publisher <
     name = Institution of Engineering and Technology (IET) ;
     info[contract] = 2012 ;
-	info[back] = 2012 ;    
+	info[back] = 2012 ;
     info[tester] = 8 ;
     info[poller] = 3
   >
@@ -14,13 +14,13 @@
     implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
      {
-  
-    title < 
+
+    title <
       name = Electronics Letters ;
       issn = 0013-5194 ;
       eissn = 1350-911X
     >
-    
+
       param[journal_id] = el
       #from Vol 1 in 1965
 
@@ -32,520 +32,520 @@
       au < crawling ; exists ; 2017 ; Electronics Letters Volume 53 ; 53 ; >
 
     }
-    
+
     {
-  
-    title < 
+
+    title <
       name = Engineering & Technology ;
       issn = 1750-9637 ;
       eissn = 1750-9645
-  
+
       >
       param[journal_id] = et
-      
+
       au < ready ; exists ; 2012 ;  Engineering & Technology Volume 7 ; 7 ; >
       au < ready ; exists ; 2013 ;  Engineering & Technology Volume 8 ; 8 ; >
       au < frozen ; exists ; 2014 ; Engineering & Technology Volume 9 ; 9 ; >
       au < frozen ; exists ; 2015 ; Engineering & Technology Volume 10 ; 10 ; >
-      au < testing ; exists ; 2016 ; Engineering & Technology Volume 11 ; 11 ; >
+      au < notReady ; exists ; 2016 ; Engineering & Technology Volume 11 ; 11 ; > #500 Error
       au < crawling ; exists ; 2017 ; Engineering & Technology Volume 12 ; 12 ; >
-     
+
 
     }
-    
+
     {
-  
-    title < 
+
+    title <
       name = IET Biometrics ;
       issn = 2047-4938 ;
       eissn = 2047-4946
-  
+
       >
       param[journal_id] = iet-bmt
-      
+
       au < ready ; exists ; 2012 ;  IET Biometrics Volume 1 ; 1 ; >
       au < ready ; exists ; 2013 ;  IET Biometrics Volume 2 ; 2 ; >
       au < crawling ; exists ; 2014 ; IET Biometrics Volume 3 ; 3 ; >
       au < frozen ; exists ; 2015 ; IET Biometrics Volume 4 ; 4 ; >
       au < frozen ; exists ; 2016 ; IET Biometrics Volume 5 ; 5 ; >
       au < crawling ; exists ; 2017 ; IET Biometrics Volume 6 ; 6 ; >
-     
+
 
     }
-    
+
     {
-  
-    title < 
+
+    title <
       name = IET Circuits, Devices and Systems ;
       issn = 1751-858X ;
       eissn = 1751-8598
-  
+
       >
        param[journal_id] = iet-cds
-      
+
       au < ready ; exists ; 2012 ;  IET Circuits, Devices and Systems Volume 6 ; 6 ; >
       au < ready ; exists ; 2013 ;  IET Circuits, Devices and Systems Volume 7 ; 7 ; >
-      au < crawling ; exists ; 2014 ; IET Circuits, Devices and Systems Volume 8 ; 8 ; >    
-      au < frozen ; exists ; 2015 ; IET Circuits, Devices and Systems Volume 9 ; 9 ; >    
-      au < frozen ; exists ; 2016 ; IET Circuits, Devices and Systems Volume 10 ; 10 ; >    
-      au < crawling ; exists ; 2017 ; IET Circuits, Devices and Systems Volume 11 ; 11 ; >    
+      au < crawling ; exists ; 2014 ; IET Circuits, Devices and Systems Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2015 ; IET Circuits, Devices and Systems Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2016 ; IET Circuits, Devices and Systems Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2017 ; IET Circuits, Devices and Systems Volume 11 ; 11 ; >
 
     }
-    
+
     {
-  
-    title < 
+
+    title <
       name = IET Communications ;
       issn = 1751-8628 ;
       eissn = 1751-8636
-  
+
       >
       param[journal_id] = iet-com
-      
-      au < testing ; exists ; 2012 ;  IET Communications Volume 6 ; 6 ; >
-      au < testing ; exists ; 2013 ;  IET Communications Volume 7 ; 7 ; >
-      au < frozen ; exists ; 2014 ; IET Communications Volume 8 ; 8 ; > 
-      au < crawling ; exists ; 2015 ; IET Communications Volume 9 ; 9 ; >  
+
+      au < notReady ; exists ; 2012 ;  IET Communications Volume 6 ; 6 ; > #500 Error
+      au < notReady ; exists ; 2013 ;  IET Communications Volume 7 ; 7 ; > #500 Error
+      au < frozen ; exists ; 2014 ; IET Communications Volume 8 ; 8 ; >
+      au < crawling ; exists ; 2015 ; IET Communications Volume 9 ; 9 ; >
       au < crawling ; exists ; 2016 ; IET Communications Volume 10 ; 10 ; >
       au < crawling ; exists ; 2017 ; IET Communications Volume 11 ; 11 ; >
-          
+
     }
-    
+
     {
-  
-    title < 
+
+    title <
       name = IET Computers & Digital Techniques ;
       issn = 1751-8601 ;
       eissn = 1751-861X
-  
+
       >
       param[journal_id] = iet-cdt
-      
+
       au < ready ; exists ; 2012 ;  IET Computers & Digital Techniques Volume 6 ; 6 ; >
       au < ready ; exists ; 2013 ;  IET Computers & Digital Techniques Volume 7 ; 7 ; >
-      au < crawling ; exists ; 2014 ; IET Computers & Digital Techniques Volume 8 ; 8 ; >      
-      au < crawling ; exists ; 2015 ; IET Computers & Digital Techniques Volume 9 ; 9 ; >        
-      au < crawling ; exists ; 2016 ; IET Computers & Digital Techniques Volume 10 ; 10 ; >      
-      au < crawling ; exists ; 2017 ; IET Computers & Digital Techniques Volume 11 ; 11 ; >      
+      au < crawling ; exists ; 2014 ; IET Computers & Digital Techniques Volume 8 ; 8 ; >
+      au < crawling ; exists ; 2015 ; IET Computers & Digital Techniques Volume 9 ; 9 ; >
+      au < crawling ; exists ; 2016 ; IET Computers & Digital Techniques Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2017 ; IET Computers & Digital Techniques Volume 11 ; 11 ; >
 
     }
-    
+
     {
-  
-    title < 
+
+    title <
       name = IET Computer Vision ;
       issn = 1751-9632 ;
       eissn = 1751-9640
-  
+
       >
       param[journal_id] = iet-cvi
-      
+
       au < ready ; exists ; 2012 ;  IET Computer Vision Volume 6 ; 6 ; >
       au < ready ; exists ; 2013 ;  IET Computer Vision Volume 7 ; 7 ; >
       au < frozen ; exists ; 2014 ; IET Computer Vision Volume 8 ; 8 ; >
-      au < crawling ; exists ; 2015 ; IET Computer Vision Volume 9 ; 9 ; >  
+      au < crawling ; exists ; 2015 ; IET Computer Vision Volume 9 ; 9 ; >
       au < frozen ; exists ; 2016 ; IET Computer Vision Volume 10 ; 10 ; >
       au < crawling ; exists ; 2017 ; IET Computer Vision Volume 11 ; 11 ; >
 
     }
-    
+
     {
-  
-    title < 
+
+    title <
       name = IET Control Theory & Applications ;
       issn = 1751-8644 ;
       eissn = 1751-8652
-  
+
       >
       param[journal_id] = iet-cta
-      
+
       au < ready ; exists ; 2012 ;  IET Control Theory & Applications Volume 6 ; 6 ; >
       au < ready ; exists ; 2013 ;  IET Control Theory & Applications Volume 7 ; 7 ; >
-      au < crawling ; exists ; 2014 ; IET Control Theory & Applications Volume 8 ; 8 ; >      
-      au < frozen ; exists ; 2015 ; IET Control Theory & Applications Volume 9 ; 9 ; >        
-      au < crawling ; exists ; 2016 ; IET Control Theory & Applications Volume 10 ; 10 ; >      
-      au < crawling ; exists ; 2017 ; IET Control Theory & Applications Volume 11 ; 11 ; >      
-     
+      au < crawling ; exists ; 2014 ; IET Control Theory & Applications Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2015 ; IET Control Theory & Applications Volume 9 ; 9 ; >
+      au < crawling ; exists ; 2016 ; IET Control Theory & Applications Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2017 ; IET Control Theory & Applications Volume 11 ; 11 ; >
+
 
     }
-    
+
     {
-  
-    title < 
+
+    title <
       name = IET Electric Power Applications ;
       issn = 1751-8660 ;
       eissn = 1751-8679
-  
+
       >
       param[journal_id] = iet-epa
-      
+
       au < ready ; exists ; 2012 ;  IET Electric Power Applications Volume 6 ; 6 ; >
       au < ready ; exists ; 2013 ;  IET Electric Power Applications Volume 7 ; 7 ; >
-      au < crawling ; exists ; 2014 ; IET Electric Power Applications Volume 8 ; 8 ; >      
-      au < frozen ; exists ; 2015 ; IET Electric Power Applications Volume 9 ; 9 ; >        
-      au < testing ; exists ; 2016 ; IET Electric Power Applications Volume 10 ; 10 ; >      
-      au < crawling ; exists ; 2017 ; IET Electric Power Applications Volume 11 ; 11 ; >      
-     
+      au < crawling ; exists ; 2014 ; IET Electric Power Applications Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2015 ; IET Electric Power Applications Volume 9 ; 9 ; >
+      au < testing ; exists ; 2016 ; IET Electric Power Applications Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2017 ; IET Electric Power Applications Volume 11 ; 11 ; >
+
 
     }
 
     {
-  
-    title < 
+
+    title <
       name = IET Electrical Systems in Transportation ;
       issn = 2042-9738 ;
       eissn = 2042-9746
-  
+
       >
       param[journal_id] = iet-est
-      
+
       au < ready ; exists ; 2012 ;  IET Electrical Systems in Transportation Volume 2 ; 2 ; >
       au < ready ; exists ; 2013 ;  IET Electrical Systems in Transportation Volume 3 ; 3 ; >
-      au < crawling ; exists ; 2014 ; IET Electrical Systems in Transportation Volume 4 ; 4 ; >      
-      au < crawling ; exists ; 2015 ; IET Electrical Systems in Transportation Volume 5 ; 5 ; >      
-      au < crawling ; exists ; 2016 ; IET Electrical Systems in Transportation Volume 6 ; 6 ; >      
-      au < crawling ; exists ; 2017 ; IET Electrical Systems in Transportation Volume 7 ; 7 ; >      
-     
+      au < crawling ; exists ; 2014 ; IET Electrical Systems in Transportation Volume 4 ; 4 ; >
+      au < crawling ; exists ; 2015 ; IET Electrical Systems in Transportation Volume 5 ; 5 ; >
+      au < crawling ; exists ; 2016 ; IET Electrical Systems in Transportation Volume 6 ; 6 ; >
+      au < crawling ; exists ; 2017 ; IET Electrical Systems in Transportation Volume 7 ; 7 ; >
+
 
     }
 
     {
-  
-    title < 
+
+    title <
       name = IET Generation, Transmission & Distribution ;
       issn = 1751-8687 ;
       eissn = 1751-8695
-  
+
       >
       param[journal_id] = iet-gtd
-      
+
       au < ready ; exists ; 2012 ;  IET Generation, Transmission & Distribution Volume 6 ; 6 ; >
       au < ready ; exists ; 2013 ;  IET Generation, Transmission & Distribution Volume 7 ; 7 ; >
-      au < crawling ; exists ; 2014 ; IET Generation, Transmission & Distribution Volume 8 ; 8 ; >      
-      au < frozen ; exists ; 2015 ; IET Generation, Transmission & Distribution Volume 9 ; 9 ; >       
-      au < frozen ; exists ; 2016 ; IET Generation, Transmission & Distribution Volume 10 ; 10 ; >     
-      au < crawling ; exists ; 2017 ; IET Generation, Transmission & Distribution Volume 11 ; 11 ; >     
-     
+      au < crawling ; exists ; 2014 ; IET Generation, Transmission & Distribution Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2015 ; IET Generation, Transmission & Distribution Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2016 ; IET Generation, Transmission & Distribution Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2017 ; IET Generation, Transmission & Distribution Volume 11 ; 11 ; >
 
-    }    
-    
+
+    }
+
     {
-  
-    title < 
+
+    title <
       name = IET Image Processing ;
       issn = 1751-9659 ;
       eissn = 1751-9667
-  
+
       >
       param[journal_id] = iet-ipr
-      
+
       au < testing ; exists ; 2012 ;  IET Image Processing Volume 6 ; 6 ; >
       au < ready ; exists ; 2013 ;  IET Image Processing Volume 7 ; 7 ; >
-      au < crawling ; exists ; 2014 ; IET Image Processing Volume 8 ; 8 ; >      
-      au < crawling ; exists ; 2015 ; IET Image Processing Volume 9 ; 9 ; >       
-      au < crawling ; exists ; 2016 ; IET Image Processing Volume 10 ; 10 ; >     
-      au < crawling ; exists ; 2017 ; IET Image Processing Volume 11 ; 11 ; >     
-     
+      au < crawling ; exists ; 2014 ; IET Image Processing Volume 8 ; 8 ; >
+      au < crawling ; exists ; 2015 ; IET Image Processing Volume 9 ; 9 ; >
+      au < crawling ; exists ; 2016 ; IET Image Processing Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2017 ; IET Image Processing Volume 11 ; 11 ; >
+
 
     }
-    
+
     {
-  
-    title < 
+
+    title <
       name = IET Information Security ;
       issn = 1751-8709 ;
       eissn = 1751-8717
-  
+
       >
       param[journal_id] = iet-ifs
-      
+
       au < ready ; exists ; 2012 ;  IET Information Security Volume 6 ; 6 ; >
       au < ready ; exists ; 2013 ;  IET Information Security Volume 7 ; 7 ; >
-      au < frozen ; exists ; 2014 ; IET Information Security Volume 8 ; 8 ; >      
-      au < frozen ; exists ; 2015 ; IET Information Security Volume 9 ; 9 ; >       
-      au < frozen ; exists ; 2016 ; IET Information Security Volume 10 ; 10 ; >     
-      au < crawling ; exists ; 2017 ; IET Information Security Volume 11 ; 11 ; >     
-     
+      au < frozen ; exists ; 2014 ; IET Information Security Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2015 ; IET Information Security Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2016 ; IET Information Security Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2017 ; IET Information Security Volume 11 ; 11 ; >
+
 
     }
 
     {
-  
-    title < 
+
+    title <
       name = IET Intelligent Transport Systems ;
       issn = 1751-956X ;
       eissn = 1751-9578
-  
+
       >
       param[journal_id] = iet-its
-      
+
       au < ready ; exists ; 2012 ;  IET Intelligent Transport Systems Volume 6 ; 6 ; >
       au < ready ; exists ; 2013 ;  IET Intelligent Transport Systems Volume 7 ; 7 ; >
-      au < crawling ; exists ; 2014 ; IET Intelligent Transport Systems Volume 8 ; 8 ; >      
-      au < frozen ; exists ; 2015 ; IET Intelligent Transport Systems Volume 9 ; 9 ; >       
-      au < frozen ; exists ; 2016 ; IET Intelligent Transport Systems Volume 10 ; 10 ; >     
-      au < crawling ; exists ; 2017 ; IET Intelligent Transport Systems Volume 11 ; 11 ; >     
-     
+      au < crawling ; exists ; 2014 ; IET Intelligent Transport Systems Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2015 ; IET Intelligent Transport Systems Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2016 ; IET Intelligent Transport Systems Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2017 ; IET Intelligent Transport Systems Volume 11 ; 11 ; >
+
 
     }
-    
+
     {
-  
-    title < 
+
+    title <
       name = IET  Microwaves, Antennas & Propagation ;
       issn = 1751-8725 ;
       eissn = 1751-8733
-  
+
       >
       param[journal_id] = iet-map
-      
+
       au < ready ; exists ; 2012 ;  IET  Microwaves, Antennas & Propagation Volume 6 ; 6 ; >
       au < ready ; exists ; 2013 ;  IET  Microwaves, Antennas & Propagation Volume 7 ; 7 ; >
-      au < frozen ; exists ; 2014 ; IET  Microwaves, Antennas & Propagation Volume 8 ; 8 ; >      
-      au < crawling ; exists ; 2015 ; IET  Microwaves, Antennas & Propagation Volume 9 ; 9 ; >        
-      au < frozen ; exists ; 2016 ; IET  Microwaves, Antennas & Propagation Volume 10 ; 10 ; >      
-      au < crawling ; exists ; 2017 ; IET  Microwaves, Antennas & Propagation Volume 11 ; 11 ; >      
-     
+      au < frozen ; exists ; 2014 ; IET  Microwaves, Antennas & Propagation Volume 8 ; 8 ; >
+      au < crawling ; exists ; 2015 ; IET  Microwaves, Antennas & Propagation Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2016 ; IET  Microwaves, Antennas & Propagation Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2017 ; IET  Microwaves, Antennas & Propagation Volume 11 ; 11 ; >
+
 
     }
-    
+
     {
-  
-    title < 
+
+    title <
       name = IET Nanobiotechnology ;
       issn = 1751-8741 ;
       eissn = 1751-875X
-  
+
       >
       param[journal_id] = iet-nbt
-      
+
       au < ready ; exists ; 2012 ;  IET Nanotechnology Volume 6 ; 6 ; >
       au < ready ; exists ; 2013 ;  IET Nanotechnology Volume 7 ; 7 ; >
-      au < crawling ; exists ; 2014 ; IET Nanotechnology Volume 8 ; 8 ; >      
-      au < frozen ; exists ; 2015 ; IET Nanotechnology Volume 9 ; 9 ; >        
-      au < frozen ; exists ; 2016 ; IET Nanotechnology Volume 10 ; 10 ; >      
-      au < crawling ; exists ; 2017 ; IET Nanotechnology Volume 11 ; 11 ; >      
-     
+      au < crawling ; exists ; 2014 ; IET Nanotechnology Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2015 ; IET Nanotechnology Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2016 ; IET Nanotechnology Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2017 ; IET Nanotechnology Volume 11 ; 11 ; >
+
 
     }
-    
+
     {
-  
-    title < 
+
+    title <
       name = IET Networks ;
       issn = 2047-4954 ;
       eissn = 2047-4962
-  
+
       >
       param[journal_id] = iet-net
-      
+
       au < ready ; exists ; 2012 ;  IET Networks Volume 1 ; 1 ; >
       au < ready ; exists ; 2013 ;  IET Networks Volume 2 ; 2 ; >
-      au < frozen ; exists ; 2014 ; IET Networks Volume 3 ; 3 ; >      
-      au < ready ; exists ; 2015 ; IET Networks Volume 4 ; 4 ; >      
-      au < frozen ; exists ; 2016 ; IET Networks Volume 5 ; 5 ; >      
-      au < crawling ; exists ; 2017 ; IET Networks Volume 6 ; 6 ; >      
-     
+      au < frozen ; exists ; 2014 ; IET Networks Volume 3 ; 3 ; >
+      au < ready ; exists ; 2015 ; IET Networks Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2016 ; IET Networks Volume 5 ; 5 ; >
+      au < crawling ; exists ; 2017 ; IET Networks Volume 6 ; 6 ; >
+
 
     }
-    
+
     {
-  
-    title < 
+
+    title <
       name = IET Optoelectronics ;
       issn = 1751-8768 ;
       eissn = 1751-8776
-  
+
       >
       param[journal_id] = iet-opt
-      
+
       au < ready ; exists ; 2012 ;  IET Optoelectronics Volume 6 ; 6 ; >
       au < ready ; exists ; 2013 ;  IET Optoelectronics Volume 7 ; 7 ; >
-      au < frozen ; exists ; 2014 ; IET Optoelectronics Volume 8 ; 8 ; >      
-      au < frozen ; exists ; 2015 ; IET Optoelectronics Volume 9 ; 9 ; >        
-      au < crawling ; exists ; 2016 ; IET Optoelectronics Volume 10 ; 10 ; >      
-      au < crawling ; exists ; 2017 ; IET Optoelectronics Volume 11 ; 11 ; >      
-     
+      au < frozen ; exists ; 2014 ; IET Optoelectronics Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2015 ; IET Optoelectronics Volume 9 ; 9 ; >
+      au < crawling ; exists ; 2016 ; IET Optoelectronics Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2017 ; IET Optoelectronics Volume 11 ; 11 ; >
+
 
     }
-    
+
     {
-  
-    title < 
+
+    title <
       name = IET Power Electronics ;
       issn = 1755-4535 ;
       eissn = 1755-4543
-  
+
       >
       param[journal_id] = iet-pel
-      
+
       au < ready ; exists ; 2012 ;  IET Power Electronics Volume 5 ; 5 ; >
       au < ready ; exists ; 2013 ;  IET Power Electronics Volume 6 ; 6 ; >
-      au < frozen ; exists ; 2014 ; IET Power Electronics Volume 7 ; 7 ; >      
-      au < crawling ; exists ; 2015 ; IET Power Electronics Volume 8 ; 8 ; >      
-      au < frozen ; exists ; 2016 ; IET Power Electronics Volume 9 ; 9 ; >      
-      au < crawling ; exists ; 2017 ; IET Power Electronics Volume 10 ; 10 ; >      
-     
+      au < frozen ; exists ; 2014 ; IET Power Electronics Volume 7 ; 7 ; >
+      au < crawling ; exists ; 2015 ; IET Power Electronics Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2016 ; IET Power Electronics Volume 9 ; 9 ; >
+      au < crawling ; exists ; 2017 ; IET Power Electronics Volume 10 ; 10 ; >
+
 
     }
-    
+
     {
-  
-    title < 
+
+    title <
       name = IET Radar, Sonar & Navigation ;
       issn = 1751-8784 ;
       eissn = 1751-8792
-  
+
       >
       param[journal_id] = iet-rsn
-      
+
       au < ready ; exists ; 2012 ;  IET Radar, Sonar & Navigation Volume 6 ; 6 ; >
       au < ready ; exists ; 2013 ;  IET Radar, Sonar & Navigation Volume 7 ; 7 ; >
-      au < frozen ; exists ; 2014 ; IET Radar, Sonar & Navigation Volume 8 ; 8 ; >      
-      au < frozen ; exists ; 2015 ; IET Radar, Sonar & Navigation Volume 9 ; 9 ; >        
-      au < frozen ; exists ; 2016 ; IET Radar, Sonar & Navigation Volume 10 ; 10 ; >      
-      au < crawling ; exists ; 2017 ; IET Radar, Sonar & Navigation Volume 11 ; 11 ; >      
-     
+      au < frozen ; exists ; 2014 ; IET Radar, Sonar & Navigation Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2015 ; IET Radar, Sonar & Navigation Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2016 ; IET Radar, Sonar & Navigation Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2017 ; IET Radar, Sonar & Navigation Volume 11 ; 11 ; >
+
 
     }
-    
+
     {
-  
-    title < 
+
+    title <
       name = IET Renewable Power Generation ;
       issn = 1752-1416 ;
       eissn = 1752-1424
-  
+
       >
       param[journal_id] = iet-rpg
-      
+
       au < ready ; exists ; 2012 ;  IET Renewable Power Generation Volume 6 ; 6 ; >
       au < ready ; exists ; 2013 ;  IET Renewable Power Generation Volume 7 ; 7 ; >
-      au < frozen ; exists ; 2014 ; IET Renewable Power Generation Volume 8 ; 8 ; >      
-      au < frozen ; exists ; 2015 ; IET Renewable Power Generation Volume 9 ; 9 ; >        
-      au < frozen ; exists ; 2016 ; IET Renewable Power Generation Volume 10 ; 10 ; >      
-      au < crawling ; exists ; 2017 ; IET Renewable Power Generation Volume 11 ; 11 ; >      
-     
+      au < frozen ; exists ; 2014 ; IET Renewable Power Generation Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2015 ; IET Renewable Power Generation Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2016 ; IET Renewable Power Generation Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2017 ; IET Renewable Power Generation Volume 11 ; 11 ; >
+
 
     }
-    
+
     {
-  
-    title < 
+
+    title <
       name = IET Science, Measurement & Technology ;
       issn = 1751-8822 ;
       eissn = 1751-8830
-  
+
       >
       param[journal_id] = iet-smt
-      
+
       au < ready ; exists ; 2012 ;  IET Science, Measurement & Technology Volume 6 ; 6 ; >
       au < ready ; exists ; 2013 ;  IET Science, Measurement & Technology Volume 7 ; 7 ; >
-      au < frozen ; exists ; 2014 ; IET Science, Measurement & Technology Volume 8 ; 8 ; >      
-      au < frozen ; exists ; 2015 ; IET Science, Measurement & Technology Volume 9 ; 9 ; >        
-      au < frozen ; exists ; 2016 ; IET Science, Measurement & Technology Volume 10 ; 10 ; >      
-      au < crawling ; exists ; 2017 ; IET Science, Measurement & Technology Volume 11 ; 11 ; >      
-     
+      au < frozen ; exists ; 2014 ; IET Science, Measurement & Technology Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2015 ; IET Science, Measurement & Technology Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2016 ; IET Science, Measurement & Technology Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2017 ; IET Science, Measurement & Technology Volume 11 ; 11 ; >
+
 
     }
-    
+
     {
-  
-    title < 
+
+    title <
       name = IET Signal Processing ;
       issn = 1751-9675 ;
       eissn = 1751-9683
-  
+
       >
       param[journal_id] = iet-spr
-      
+
       au < ready ; exists ; 2012 ;  IET Signal Processing Volume 6 ; 6 ; >
       au < ready ; exists ; 2013 ;  IET Signal Processing Volume 7 ; 7 ; >
-      au < frozen ; exists ; 2014 ; IET Signal Processing Volume 8 ; 8 ; >      
-      au < frozen ; exists ; 2015 ; IET Signal Processing Volume 9 ; 9 ; >        
-      au < crawling ; exists ; 2016 ; IET Signal Processing Volume 10 ; 10 ; >      
-      au < crawling ; exists ; 2017 ; IET Signal Processing Volume 11 ; 11 ; >      
-     
+      au < frozen ; exists ; 2014 ; IET Signal Processing Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2015 ; IET Signal Processing Volume 9 ; 9 ; >
+      au < crawling ; exists ; 2016 ; IET Signal Processing Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2017 ; IET Signal Processing Volume 11 ; 11 ; >
+
 
     }
-    
+
     {
-  
-    title < 
+
+    title <
       name = IET Software ;
       issn = 1751-8806 ;
       eissn = 1751-8814
-  
+
       >
       param[journal_id] = iet-sen
-      
+
       au < ready ; exists ; 2012 ;  IET Software Volume 6 ; 6 ; >
       au < ready ; exists ; 2013 ;  IET Software Volume 7 ; 7 ; >
-      au < crawling ; exists ; 2014 ; IET Software Volume 8 ; 8 ; >      
-      au < frozen ; exists ; 2015 ; IET Software Volume 9 ; 9 ; >        
-      au < frozen ; exists ; 2016 ; IET Software Volume 10 ; 10 ; >      
-      au < crawling ; exists ; 2017 ; IET Software Volume 11 ; 11 ; >      
-     
+      au < crawling ; exists ; 2014 ; IET Software Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2015 ; IET Software Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2016 ; IET Software Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2017 ; IET Software Volume 11 ; 11 ; >
+
 
     }
-    
+
     {
-  
-    title < 
+
+    title <
       name = IET Systems Biology ;
       issn = 1751-8849 ;
       eissn = 1751-8857
-  
+
       >
       param[journal_id] = iet-syb
-      
+
       au < ready ; exists ; 2012 ;  IET Systems Biology Volume 6 ; 6 ; >
       au < testing ; exists ; 2013 ;  IET Systems Biology Volume 7 ; 7 ; >
-      au < frozen ; exists ; 2014 ; IET Systems Biology Volume 8 ; 8 ; >      
-      au < frozen ; exists ; 2015 ; IET Systems Biology Volume 9 ; 9 ; >        
-      au < frozen ; exists ; 2016 ; IET Systems Biology Volume 10 ; 10 ; >      
-      au < crawling ; exists ; 2017 ; IET Systems Biology Volume 11 ; 11 ; >      
-     
+      au < frozen ; exists ; 2014 ; IET Systems Biology Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2015 ; IET Systems Biology Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2016 ; IET Systems Biology Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2017 ; IET Systems Biology Volume 11 ; 11 ; >
+
 
     }
-    
+
     {
-  
-    title < 
+
+    title <
       name = IET Wireless Sensor Systems ;
       issn = 2043-6386 ;
       eissn = 2043-6394
-  
+
       >
       param[journal_id] = iet-wss
-      
+
       au < ready ; exists ; 2012 ;  IET Wireless Sensor Systems Volume 2 ; 2 ; >
       au < ready ; exists ; 2013 ;  IET Wireless Sensor Systems Volume 3 ; 3 ; >
-      au < frozen ; exists ; 2014 ; IET Wireless Sensor Systems Volume 4 ; 4 ; >      
-      au < crawling ; exists ; 2015 ; IET Wireless Sensor Systems Volume 5 ; 5 ; >      
-      au < frozen ; exists ; 2016 ; IET Wireless Sensor Systems Volume 6 ; 6 ; >      
-      au < crawling ; exists ; 2017 ; IET Wireless Sensor Systems Volume 7 ; 7 ; >      
-     
+      au < frozen ; exists ; 2014 ; IET Wireless Sensor Systems Volume 4 ; 4 ; >
+      au < crawling ; exists ; 2015 ; IET Wireless Sensor Systems Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2016 ; IET Wireless Sensor Systems Volume 6 ; 6 ; >
+      au < crawling ; exists ; 2017 ; IET Wireless Sensor Systems Volume 7 ; 7 ; >
+
 
     }
-    
+
     {
-  
-    title < 
+
+    title <
       name = Micro & Nano Letters ;
       eissn = 1750-0443
-  
+
       >
       param[journal_id] = mnl
-      
+
       au < ready ; exists ; 2012 ;  Micro & Nano Letters Volume 7 ; 7 ; >
       au < ready ; exists ; 2013 ;  Micro & Nano Letters Volume 8 ; 8 ; >
-      au < frozen ; exists ; 2014 ; Micro & Nano Letters Volume 9 ; 9 ; >      
-      au < crawling ; exists ; 2015 ; Micro & Nano Letters Volume 10 ; 10 ; >      
-      au < frozen ; exists ; 2016 ; Micro & Nano Letters Volume 11 ; 11 ; >      
-      au < crawling ; exists ; 2017 ; Micro & Nano Letters Volume 12 ; 12 ; >      
-     
+      au < frozen ; exists ; 2014 ; Micro & Nano Letters Volume 9 ; 9 ; >
+      au < crawling ; exists ; 2015 ; Micro & Nano Letters Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2016 ; Micro & Nano Letters Volume 11 ; 11 ; >
+      au < crawling ; exists ; 2017 ; Micro & Nano Letters Volume 12 ; 12 ; >
+
 
     }
-    
+
 }
