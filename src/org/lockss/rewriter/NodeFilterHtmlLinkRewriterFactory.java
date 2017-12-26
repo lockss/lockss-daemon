@@ -103,6 +103,11 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
   // Matches protocol prefix of a URL (e.g. "http://")
   static final String protocolPrefixPat = "^" + protocolPat;
   
+  // Matches protocol prefix of a URL (e.g. "http://") OR ref ("#...")
+  // Used negated to find relative URLs, excluding those that are just a
+  // #ref
+  static final String protocolOrRefPrefixPat = "^(" + protocolPat + "|#)";
+
   // Matches HTML refresh attribute 
   static final String refreshPat = ";[ \\t\\n\\f\\r\\x0b]*url=";
 
@@ -157,7 +162,7 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
     @SuppressWarnings("serial")
     RelLinkRegexXform relLinkXforms[] = {
       // transforms site-relative link URLs
-      new RelLinkRegexXform(protocolPrefixPat, // negated, matches relative URL
+      new RelLinkRegexXform(protocolOrRefPrefixPat, // negated, matches relative URL
                             true, "^/", getAttrsToRewrite()) {
         /** Specify the "replace" property using the baseUrl param */
         public void setBaseUrl(String baseUrl)
@@ -165,7 +170,7 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
           setReplace(srvLink.rewrite(UrlUtil.getUrlPrefix(baseUrl)));
         }},
       // transforms path-relative link URLs
-      new RelLinkRegexXform(protocolPrefixPat, // negated, matches relative URL
+      new RelLinkRegexXform(protocolOrRefPrefixPat, // negated, matches relative URL
                             true, "^(" + relChar + ")", getAttrsToRewrite()) {
         /** Specify the "replace" property using the baseUrl param */
         public void setBaseUrl(String baseUrl)
