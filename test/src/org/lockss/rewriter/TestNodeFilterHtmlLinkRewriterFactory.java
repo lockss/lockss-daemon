@@ -803,6 +803,15 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
       }
     }
 
+  static final String bare_ref_orig =
+    "<html><head>\n" +
+    "<a href=\"#refref\">there</a>\n" +
+    "</head></html>\n";
+
+    public void testNoRewriteRef() throws Exception {
+      testRewriting("Abs", bare_ref_orig, ISO, bare_ref_orig, false);
+    }
+
     public void testPrePostTransform() throws Exception {
       NodeFilter pre1 = new LinkRegexXform("pre1", false,
 					 "example\\.com", "different.com",
