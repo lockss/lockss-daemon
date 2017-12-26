@@ -141,7 +141,7 @@
       param[journal_id] = iet-cvi
       
       au < ready ; exists ; 2012 ;  IET Computer Vision Volume 6 ; 6 ; >
-      au < testing ; exists ; 2013 ;  IET Computer Vision Volume 7 ; 7 ; >
+      au < ready ; exists ; 2013 ;  IET Computer Vision Volume 7 ; 7 ; >
       au < frozen ; exists ; 2014 ; IET Computer Vision Volume 8 ; 8 ; >
       au < crawling ; exists ; 2015 ; IET Computer Vision Volume 9 ; 9 ; >  
       au < frozen ; exists ; 2016 ; IET Computer Vision Volume 10 ; 10 ; >
@@ -160,7 +160,7 @@
       param[journal_id] = iet-cta
       
       au < ready ; exists ; 2012 ;  IET Control Theory & Applications Volume 6 ; 6 ; >
-      au < testing ; exists ; 2013 ;  IET Control Theory & Applications Volume 7 ; 7 ; >
+      au < ready ; exists ; 2013 ;  IET Control Theory & Applications Volume 7 ; 7 ; >
       au < crawling ; exists ; 2014 ; IET Control Theory & Applications Volume 8 ; 8 ; >      
       au < frozen ; exists ; 2015 ; IET Control Theory & Applications Volume 9 ; 9 ; >        
       au < crawling ; exists ; 2016 ; IET Control Theory & Applications Volume 10 ; 10 ; >      
@@ -180,7 +180,7 @@
       param[journal_id] = iet-epa
       
       au < ready ; exists ; 2012 ;  IET Electric Power Applications Volume 6 ; 6 ; >
-      au < testing ; exists ; 2013 ;  IET Electric Power Applications Volume 7 ; 7 ; >
+      au < ready ; exists ; 2013 ;  IET Electric Power Applications Volume 7 ; 7 ; >
       au < crawling ; exists ; 2014 ; IET Electric Power Applications Volume 8 ; 8 ; >      
       au < frozen ; exists ; 2015 ; IET Electric Power Applications Volume 9 ; 9 ; >        
       au < testing ; exists ; 2016 ; IET Electric Power Applications Volume 10 ; 10 ; >      
@@ -240,7 +240,7 @@
       param[journal_id] = iet-ipr
       
       au < testing ; exists ; 2012 ;  IET Image Processing Volume 6 ; 6 ; >
-      au < testing ; exists ; 2013 ;  IET Image Processing Volume 7 ; 7 ; >
+      au < ready ; exists ; 2013 ;  IET Image Processing Volume 7 ; 7 ; >
       au < crawling ; exists ; 2014 ; IET Image Processing Volume 8 ; 8 ; >      
       au < crawling ; exists ; 2015 ; IET Image Processing Volume 9 ; 9 ; >       
       au < crawling ; exists ; 2016 ; IET Image Processing Volume 10 ; 10 ; >     
@@ -342,7 +342,7 @@
       au < ready ; exists ; 2012 ;  IET Networks Volume 1 ; 1 ; >
       au < ready ; exists ; 2013 ;  IET Networks Volume 2 ; 2 ; >
       au < frozen ; exists ; 2014 ; IET Networks Volume 3 ; 3 ; >      
-      au < testing ; exists ; 2015 ; IET Networks Volume 4 ; 4 ; >      
+      au < ready ; exists ; 2015 ; IET Networks Volume 4 ; 4 ; >      
       au < frozen ; exists ; 2016 ; IET Networks Volume 5 ; 5 ; >      
       au < crawling ; exists ; 2017 ; IET Networks Volume 6 ; 6 ; >      
      
@@ -460,7 +460,7 @@
       param[journal_id] = iet-spr
       
       au < ready ; exists ; 2012 ;  IET Signal Processing Volume 6 ; 6 ; >
-      au < testing ; exists ; 2013 ;  IET Signal Processing Volume 7 ; 7 ; >
+      au < ready ; exists ; 2013 ;  IET Signal Processing Volume 7 ; 7 ; >
       au < frozen ; exists ; 2014 ; IET Signal Processing Volume 8 ; 8 ; >      
       au < frozen ; exists ; 2015 ; IET Signal Processing Volume 9 ; 9 ; >        
       au < crawling ; exists ; 2016 ; IET Signal Processing Volume 10 ; 10 ; >      
