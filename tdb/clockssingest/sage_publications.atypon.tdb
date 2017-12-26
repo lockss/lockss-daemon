@@ -1729,14 +1729,14 @@
       au < manifest ; exists ; 2007 ; American String Teacher Volume 57 ; 57 ; staa ; >
       au < manifest ; exists ; 2008 ; American String Teacher Volume 58 ; 58 ; staa ; >
       au < manifest ; exists ; 2009 ; American String Teacher Volume 59 ; 59 ; staa ; >
-      au < testing ; exists ; 2010 ; American String Teacher Volume 60 ; 60 ; staa ; >
-      au < testing ; exists ; 2011 ; American String Teacher Volume 61 ; 61 ; staa ; >
-      au < testing ; exists ; 2012 ; American String Teacher Volume 62 ; 62 ; staa ; >
+      au < ready ; exists ; 2010 ; American String Teacher Volume 60 ; 60 ; staa ; >
+      au < ready ; exists ; 2011 ; American String Teacher Volume 61 ; 61 ; staa ; >
+      au < ready ; exists ; 2012 ; American String Teacher Volume 62 ; 62 ; staa ; >
       au < testing ; exists ; 2013 ; American String Teacher Volume 63 ; 63 ; staa ; >
-      au < testing ; exists ; 2014 ; American String Teacher Volume 64 ; 64 ; staa ; >
-      au < testing ; exists ; 2015 ; American String Teacher Volume 65 ; 65 ; staa ; >
-      au < testing ; exists ; 2016 ; American String Teacher Volume 66 ; 66 ; staa ; >
-      au < testing ; exists ; 2017 ; American String Teacher Volume 67 ; 67 ; staa ; >
+      au < ready ; exists ; 2014 ; American String Teacher Volume 64 ; 64 ; staa ; >
+      au < ready ; exists ; 2015 ; American String Teacher Volume 65 ; 65 ; staa ; >
+      au < ready ; exists ; 2016 ; American String Teacher Volume 66 ; 66 ; staa ; >
+      au < ready ; exists ; 2017 ; American String Teacher Volume 67 ; 67 ; staa ; >
 
   }
 
@@ -2750,7 +2750,7 @@
       #param[base_url] = http://jws.sagepub.com/
 
       au < frozen ; exists ; 2016 ; ANTYAJAA: Indian Journal of Women and Social Change Volume 1 ; 1 ; jwsa ; >
-      au < testing ; exists ; 2017 ; ANTYAJAA: Indian Journal of Women and Social Change Volume 2 ; 2 ; jwsa ; >
+      au < ready ; exists ; 2017 ; ANTYAJAA: Indian Journal of Women and Social Change Volume 2 ; 2 ; jwsa ; >
 
   }
 
@@ -4518,7 +4518,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Bulletin of Science, Technology & Society Volume 34 ; 34 ; bsta ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Bulletin of Science, Technology & Society Volume 35 ; 35 ; bsta ; >
       au < frozen ; exists ; 2016 ; Bulletin of Science, Technology & Society Volume 36 ; 36 ; bsta ; >
-      au < testing ; exists ; 2017 ; Bulletin of Science, Technology & Society Volume 37 ; 37 ; bsta ; >
+      au < ready ; exists ; 2017 ; Bulletin of Science, Technology & Society Volume 37 ; 37 ; bsta ; >
 
     }
 
@@ -8976,7 +8976,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; Diogenes Volume 59 ; 59 ; dioa ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Diogenes Volume 60 ; 60 ; dioa ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Diogenes Volume 61 ; 61 ; dioa ; >
-      au < testing ; exists ; 2015 ; Diogenes Volume 62 ; 62 ; dioa ; >
+      au < ready ; exists ; 2015 ; Diogenes Volume 62 ; 62 ; dioa ; >
 
     }
 
@@ -17957,7 +17957,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Irish Economic and Social History Volume 41 ; 41 ; iesa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Irish Economic and Social History Volume 42 ; 42 ; iesa ; >
       au < frozen ; exists ; 2016 ; Irish Economic and Social History Volume 43 ; 43 ; iesa ; >
-      au < testing ; exists ; 2017 ; Irish Economic and Social History Volume 44 ; 44 ; iesa ; >
+      au < ready ; exists ; 2017 ; Irish Economic and Social History Volume 44 ; 44 ; iesa ; >
 
   }
 
@@ -21134,7 +21134,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Education for Sustainable Development Volume 8 ; 8 ; jsda ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Education for Sustainable Development Volume 9 ; 9 ; jsda ; >
       au < frozen ; exists ; 2016 ; Journal of Education for Sustainable Development Volume 10 ; 10 ; jsda ; >
-      au < testing ; exists ; 2017 ; Journal of Education for Sustainable Development Volume 11 ; 11 ; jsda ; >
+      au < ready ; exists ; 2017 ; Journal of Education for Sustainable Development Volume 11 ; 11 ; jsda ; >
 
     }
 
@@ -21305,7 +21305,7 @@
       au < frozen ; exists ; 2014 ; The Journal of Egyptian Archaeology Volume 100 ; 100 ; egaa ; >
       au < frozen ; exists ; 2015 ; The Journal of Egyptian Archaeology Volume 101 ; 101 ; egaa ; >
       au < frozen ; exists ; 2016 ; The Journal of Egyptian Archaeology Volume 102 ; 102 ; egaa ; >
-      au < testing ; exists ; 2017 ; The Journal of Egyptian Archaeology Volume 103 ; 103 ; egaa ; >
+      au < ready ; exists ; 2017 ; The Journal of Egyptian Archaeology Volume 103 ; 103 ; egaa ; >
 
   }
 
@@ -22400,7 +22400,7 @@
       #param[base_url] = http://hmj.sagepub.com/
 
       au < frozen ; exists ; 2016 ; Journal of Heritage Management Volume 1 ; 1 ; hmja ; >
-      au < testing ; exists ; 2017 ; Journal of Heritage Management Volume 2 ; 2 ; hmja ; >
+      au < ready ; exists ; 2017 ; Journal of Heritage Management Volume 2 ; 2 ; hmja ; >
 
   }
 
@@ -24205,7 +24205,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 13 ; 13 ; mmja ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 14 ; 14 ; mmja ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 15 ; 15 ; mmja ; >
-      au < testing ; exists ; 2017 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 16 ; 16 ; mmja ; >
+      au < ready ; exists ; 2017 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 16 ; 16 ; mmja ; >
 
     }
 
@@ -30401,7 +30401,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Nineteenth Century Theatre and Film Volume 41 ; 41 ; nctd ; >
       au < frozen ; exists ; 2015 ; Nineteenth Century Theatre and Film Volume 42 ; 42 ; nctd ; >
       au < frozen ; exists ; 2016 ; Nineteenth Century Theatre and Film Volume 43 ; 43 ; nctd ; >
-      au < testing ; exists ; 2017 ; Nineteenth Century Theatre and Film Volume 44 ; 44 ; nctd ; >
+      au < ready ; exists ; 2017 ; Nineteenth Century Theatre and Film Volume 44 ; 44 ; nctd ; >
 
   }
 
@@ -35090,7 +35090,7 @@
       au < frozen ; exists ; 2016 ; Research in Education Volume 96 ; 96 ; riea ; >
       au < crawling ; exists ; 2017 ; Research in Education Volume 97 ; 97 ; riea ; >
       au < crawling ; exists ; 2017 ; Research in Education Volume 98 ; 98 ; riea ; >
-      au < testing ; exists ; 2017 ; Research in Education Volume 99 ; 99 ; riea ; >
+      au < ready ; exists ; 2017 ; Research in Education Volume 99 ; 99 ; riea ; >
 
   }
 
@@ -35531,7 +35531,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Review of Market Integration Volume 6 ; 6 ; rmia ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Review of Market Integration Volume 7 ; 7 ; rmia ; >
       au < frozen ; exists ; 2016 ; Review of Market Integration Volume 8 ; 8 ; rmia ; >
-      au < testing ; exists ; 2017 ; Review of Market Integration Volume 9 ; 9 ; rmia ; >
+      au < ready ; exists ; 2017 ; Review of Market Integration Volume 9 ; 9 ; rmia ; >
 
     }
 
@@ -37926,13 +37926,13 @@
 
     #journal_id = srj
 
-      au < testing ; exists ; 2010 ; String Research Journal Volume 1 ; 1 ; srja ; >
-      au < testing ; exists ; 2011 ; String Research Journal Volume 2 ; 2 ; srja ; >
-      au < testing ; exists ; 2012 ; String Research Journal Volume 3 ; 3 ; srja ; >
-      au < testing ; exists ; 2013 ; String Research Journal Volume 4 ; 4 ; srja ; >
-      au < testing ; exists ; 2014 ; String Research Journal Volume 5 ; 5 ; srja ; >
-      au < testing ; exists ; 2015 ; String Research Journal Volume 6 ; 6 ; srja ; >
-      au < testing ; exists ; 2016 ; String Research Journal Volume 7 ; 7 ; srja ; >
+      au < ready ; exists ; 2010 ; String Research Journal Volume 1 ; 1 ; srja ; >
+      au < ready ; exists ; 2011 ; String Research Journal Volume 2 ; 2 ; srja ; >
+      au < ready ; exists ; 2012 ; String Research Journal Volume 3 ; 3 ; srja ; >
+      au < ready ; exists ; 2013 ; String Research Journal Volume 4 ; 4 ; srja ; >
+      au < ready ; exists ; 2014 ; String Research Journal Volume 5 ; 5 ; srja ; >
+      au < ready ; exists ; 2015 ; String Research Journal Volume 6 ; 6 ; srja ; >
+      au < ready ; exists ; 2016 ; String Research Journal Volume 7 ; 7 ; srja ; >
       au < expected ; exists ; 2017 ; String Research Journal Volume 8 ; 8 ; srja ; >
 
   }
@@ -39698,7 +39698,7 @@
       au < crawling ; exists ; 2017 ; Thesis Eleven Volume 140 ; 140 ; thea ; >
       au < crawling ; exists ; 2017 ; Thesis Eleven Volume 141 ; 141 ; thea ; >
       au < crawling ; exists ; 2017 ; Thesis Eleven Volume 142 ; 142 ; thea ; >
-      au < testing ; exists ; 2017 ; Thesis Eleven Volume 143 ; 143 ; thea ; >
+      au < ready ; exists ; 2017 ; Thesis Eleven Volume 143 ; 143 ; thea ; >
 
     }
 
@@ -40407,7 +40407,7 @@
 
       #journal_id = tub
 
-      au < testing ; exists ; 2017 ; Tumor Biology Volume 39 ; 39 ; tuba ; >
+      au < ready ; exists ; 2017 ; Tumor Biology Volume 39 ; 39 ; tuba ; >
 
   }
 
@@ -42596,11 +42596,11 @@
       au < manifest ; exists ; 2007 ; Sociological Research Online Volume 12 ; 12 ; sroa ; >
       au < manifest ; exists ; 2008 ; Sociological Research Online Volume 13 ; 13 ; sroa ; >
       au < manifest ; exists ; 2009 ; Sociological Research Online Volume 14 ; 14 ; sroa ; >
-      au < testing ; exists ; 2010 ; Sociological Research Online Volume 15 ; 15 ; sroa ; >
+      au < ready ; exists ; 2010 ; Sociological Research Online Volume 15 ; 15 ; sroa ; >
       au < testing ; exists ; 2011 ; Sociological Research Online Volume 16 ; 16 ; sroa ; >
       au < testing ; exists ; 2012 ; Sociological Research Online Volume 17 ; 17 ; sroa ; >
       au < testing ; exists ; 2013 ; Sociological Research Online Volume 18 ; 18 ; sroa ; >
-      au < testing ; exists ; 2014 ; Sociological Research Online Volume 19 ; 19 ; sroa ; >
+      au < ready ; exists ; 2014 ; Sociological Research Online Volume 19 ; 19 ; sroa ; >
       au < testing ; exists ; 2015 ; Sociological Research Online Volume 20 ; 20 ; sroa ; >
       au < testing ; exists ; 2016 ; Sociological Research Online Volume 21 ; 21 ; sroa ; >
       au < testing ; exists ; 2017 ; Sociological Research Online Volume 22 ; 22 ; sroa ; >
