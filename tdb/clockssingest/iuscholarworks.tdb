@@ -519,9 +519,9 @@
       au < manifest ; exists ; 2010 ; 2010 ; Indiana Magazine of History Volume 2010 ; 106 ; https://scholarworks.iu.edu/journals/ ; >
       au < manifest ; exists ; 2011 ; 2011 ; Indiana Magazine of History Volume 2011 ; 107 ; https://scholarworks.iu.edu/journals/ ; >
       au < manifest ; exists ; 2012 ; 2012 ; Indiana Magazine of History Volume 2012 ; 108 ; https://scholarworks.iu.edu/journals/ ; >
-      au < ready ; exists ; 2013 ; 2013 ; Indiana Magazine of History Volume 2013 ; 109 ; https://scholarworks.iu.edu/journals/ ; >
-      au < ready ; exists ; 2014 ; 2014 ; Indiana Magazine of History Volume 2014 ; 110 ; https://scholarworks.iu.edu/journals/ ; >
-      au < ready ; exists ; 2015 ; 2015 ; Indiana Magazine of History Volume 2015 ; 111 ; https://scholarworks.iu.edu/journals/ ; >
+      au < crawling ; exists ; 2013 ; 2013 ; Indiana Magazine of History Volume 2013 ; 109 ; https://scholarworks.iu.edu/journals/ ; >
+      au < crawling ; exists ; 2014 ; 2014 ; Indiana Magazine of History Volume 2014 ; 110 ; https://scholarworks.iu.edu/journals/ ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Indiana Magazine of History Volume 2015 ; 111 ; https://scholarworks.iu.edu/journals/ ; >
       au < expected ; exists ; 2016 ; 2016 ; Indiana Magazine of History Volume 2016 ; 112 ; https://scholarworks.iu.edu/journals/ ; >
       au < expected ; exists ; 2017 ; 2017 ; Indiana Magazine of History Volume 2017 ; 113 ; https://scholarworks.iu.edu/journals/ ; >
 
@@ -537,9 +537,9 @@
       comment[publisher] = IUScholarWorks
       param[journal_id] = iusbgrj
 
-      au < ready ; exists ; 2014 ; 2014 ; Indiana University South Bend Graduate Research Journal Volume 2014 ; 1 ; https://scholarworks.iu.edu/journals/ ; >
-      au < ready ; exists ; 2015 ; 2015 ; Indiana University South Bend Graduate Research Journal Volume 2015 ; 2 ; https://scholarworks.iu.edu/journals/ ; >
-      au < ready ; exists ; 2016 ; 2016 ; Indiana University South Bend Graduate Research Journal Volume 2016 ; 3 ; https://scholarworks.iu.edu/journals/ ; >
+      au < crawling ; exists ; 2014 ; 2014 ; Indiana University South Bend Graduate Research Journal Volume 2014 ; 1 ; https://scholarworks.iu.edu/journals/ ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Indiana University South Bend Graduate Research Journal Volume 2015 ; 2 ; https://scholarworks.iu.edu/journals/ ; >
+      au < crawling ; exists ; 2016 ; 2016 ; Indiana University South Bend Graduate Research Journal Volume 2016 ; 3 ; https://scholarworks.iu.edu/journals/ ; >
       au < expected ; exists ; 2017 ; 2017 ; Indiana University South Bend Graduate Research Journal Volume 2017 ; 4 ; https://scholarworks.iu.edu/journals/ ; >
 
   }
@@ -553,9 +553,9 @@
       comment[publisher] = IUScholarWorks
       param[journal_id] = iujur
 
-      au < ready ; exists ; 2015 ; 2015 ; IU South Bend Undergraduate Research Journal Volume 2015 ; 1 ; https://scholarworks.iu.edu/journals/ ; >
-      au < ready ; exists ; 2016 ; 2016 ; IU South Bend Undergraduate Research Journal Volume 2016 ; 2 ; https://scholarworks.iu.edu/journals/ ; >
-      au < ready ; exists ; 2017 ; 2017 ; IU South Bend Undergraduate Research Journal Volume 2017 ; 3 ; https://scholarworks.iu.edu/journals/ ; >
+      au < crawling ; exists ; 2015 ; 2015 ; IU South Bend Undergraduate Research Journal Volume 2015 ; 1 ; https://scholarworks.iu.edu/journals/ ; >
+      au < crawling ; exists ; 2016 ; 2016 ; IU South Bend Undergraduate Research Journal Volume 2016 ; 2 ; https://scholarworks.iu.edu/journals/ ; >
+      au < crawling ; exists ; 2017 ; 2017 ; IU South Bend Undergraduate Research Journal Volume 2017 ; 3 ; https://scholarworks.iu.edu/journals/ ; >
 
   }
 
@@ -589,11 +589,11 @@
       au < manifest ; exists ; 2010 ; 2010 ; The Medieval Review Volume 2010 ; 18 ; https://scholarworks.iu.edu/journals/ ; >
       au < manifest ; exists ; 2011 ; 2011 ; The Medieval Review Volume 2011 ; 19 ; https://scholarworks.iu.edu/journals/ ; >
       au < manifest ; exists ; 2012 ; 2012 ; The Medieval Review Volume 2012 ; 20 ; https://scholarworks.iu.edu/journals/ ; >
-      au < ready ; exists ; 2013 ; 2013 ; The Medieval Review Volume 2013 ; 21 ; https://scholarworks.iu.edu/journals/ ; >
-      au < ready ; exists ; 2014 ; 2014 ; The Medieval Review Volume 2014 ; 22 ; https://scholarworks.iu.edu/journals/ ; >
-      au < ready ; exists ; 2015 ; 2015 ; The Medieval Review Volume 2015 ; 23 ; https://scholarworks.iu.edu/journals/ ; >
-      au < ready ; exists ; 2016 ; 2016 ; The Medieval Review Volume 2016 ; 24 ; https://scholarworks.iu.edu/journals/ ; >
-      au < ready ; exists ; 2017 ; 2017 ; The Medieval Review Volume 2017 ; 25 ; https://scholarworks.iu.edu/journals/ ; >
+      au < crawling ; exists ; 2013 ; 2013 ; The Medieval Review Volume 2013 ; 21 ; https://scholarworks.iu.edu/journals/ ; >
+      au < crawling ; exists ; 2014 ; 2014 ; The Medieval Review Volume 2014 ; 22 ; https://scholarworks.iu.edu/journals/ ; >
+      au < crawling ; exists ; 2015 ; 2015 ; The Medieval Review Volume 2015 ; 23 ; https://scholarworks.iu.edu/journals/ ; >
+      au < crawling ; exists ; 2016 ; 2016 ; The Medieval Review Volume 2016 ; 24 ; https://scholarworks.iu.edu/journals/ ; >
+      au < crawling ; exists ; 2017 ; 2017 ; The Medieval Review Volume 2017 ; 25 ; https://scholarworks.iu.edu/journals/ ; >
 
   }
 
@@ -607,11 +607,11 @@
       comment[publisher] = IUScholarWorks
       param[journal_id] = pders
 
-      au < ready ; exists ; 2013 ; 2013 ; Physical Disabilities: Education and Related Services Volume 2013 ; 1 ; https://scholarworks.iu.edu/journals/ ; >
-      au < ready ; exists ; 2014 ; 2014 ; Physical Disabilities: Education and Related Services Volume 2014 ; 2 ; https://scholarworks.iu.edu/journals/ ; >
-      au < ready ; exists ; 2015 ; 2015 ; Physical Disabilities: Education and Related Services Volume 2015 ; 3 ; https://scholarworks.iu.edu/journals/ ; >
-      au < ready ; exists ; 2016 ; 2016 ; Physical Disabilities: Education and Related Services Volume 2016 ; 4 ; https://scholarworks.iu.edu/journals/ ; >
-      au < ready ; exists ; 2017 ; 2017 ; Physical Disabilities: Education and Related Services Volume 2017 ; 5 ; https://scholarworks.iu.edu/journals/ ; >
+      au < crawling ; exists ; 2013 ; 2013 ; Physical Disabilities: Education and Related Services Volume 2013 ; 1 ; https://scholarworks.iu.edu/journals/ ; >
+      au < crawling ; exists ; 2014 ; 2014 ; Physical Disabilities: Education and Related Services Volume 2014 ; 2 ; https://scholarworks.iu.edu/journals/ ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Physical Disabilities: Education and Related Services Volume 2015 ; 3 ; https://scholarworks.iu.edu/journals/ ; >
+      au < crawling ; exists ; 2016 ; 2016 ; Physical Disabilities: Education and Related Services Volume 2016 ; 4 ; https://scholarworks.iu.edu/journals/ ; >
+      au < crawling ; exists ; 2017 ; 2017 ; Physical Disabilities: Education and Related Services Volume 2017 ; 5 ; https://scholarworks.iu.edu/journals/ ; >
 
   }
 
@@ -630,11 +630,11 @@
       au < manifest ; exists ; 2010 ; 2010 ; Plath Profiles: An Interdisciplinary Journal for Sylvia Plath Studies Volume 2010 ; 3 ; https://scholarworks.iu.edu/journals/ ; >
       au < manifest ; exists ; 2011 ; 2011 ; Plath Profiles: An Interdisciplinary Journal for Sylvia Plath Studies Volume 2011 ; 4 ; https://scholarworks.iu.edu/journals/ ; >
       au < manifest ; exists ; 2012 ; 2012 ; Plath Profiles: An Interdisciplinary Journal for Sylvia Plath Studies Volume 2012 ; 5 ; https://scholarworks.iu.edu/journals/ ; >
-      au < ready ; exists ; 2013 ; 2013 ; Plath Profiles: An Interdisciplinary Journal for Sylvia Plath Studies Volume 2013 ; 6 ; https://scholarworks.iu.edu/journals/ ; >
-      au < ready ; exists ; 2014 ; 2014 ; Plath Profiles: An Interdisciplinary Journal for Sylvia Plath Studies Volume 2014 ; 7 ; https://scholarworks.iu.edu/journals/ ; >
-      au < ready ; exists ; 2015 ; 2015 ; Plath Profiles: An Interdisciplinary Journal for Sylvia Plath Studies Volume 2015 ; 8 ; https://scholarworks.iu.edu/journals/ ; >
+      au < crawling ; exists ; 2013 ; 2013 ; Plath Profiles: An Interdisciplinary Journal for Sylvia Plath Studies Volume 2013 ; 6 ; https://scholarworks.iu.edu/journals/ ; >
+      au < crawling ; exists ; 2014 ; 2014 ; Plath Profiles: An Interdisciplinary Journal for Sylvia Plath Studies Volume 2014 ; 7 ; https://scholarworks.iu.edu/journals/ ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Plath Profiles: An Interdisciplinary Journal for Sylvia Plath Studies Volume 2015 ; 8 ; https://scholarworks.iu.edu/journals/ ; >
       au < exists ; exists ; 2016 ; 2016 ; Plath Profiles: An Interdisciplinary Journal for Sylvia Plath Studies Volume 2016 ; 9 ; https://scholarworks.iu.edu/journals/ ; >
-      au < ready ; exists ; 2017 ; 2017 ; Plath Profiles: An Interdisciplinary Journal for Sylvia Plath Studies Volume 2017 ; 10 ; https://scholarworks.iu.edu/journals/ ; >
+      au < crawling ; exists ; 2017 ; 2017 ; Plath Profiles: An Interdisciplinary Journal for Sylvia Plath Studies Volume 2017 ; 10 ; https://scholarworks.iu.edu/journals/ ; >
 
   }
 
@@ -648,9 +648,9 @@
       comment[publisher] = IUScholarWorks
       param[journal_id] = textual
 
-      au < ready ; exists ; 2013 ; 2013 ; Textual Cultures: Texts, Contexts, Interpretation Volume 2013 ; 1 ; https://scholarworks.iu.edu/journals/ ; >
-      au < ready ; exists ; 2014 ; 2014 ; Textual Cultures: Texts, Contexts, Interpretation Volume 2014 ; 2 ; https://scholarworks.iu.edu/journals/ ; >
-      au < ready ; exists ; 2015 ; 2015 ; Textual Cultures: Texts, Contexts, Interpretation Volume 2015 ; 3 ; https://scholarworks.iu.edu/journals/ ; >
+      au < crawling ; exists ; 2013 ; 2013 ; Textual Cultures: Texts, Contexts, Interpretation Volume 2013 ; 1 ; https://scholarworks.iu.edu/journals/ ; >
+      au < crawling ; exists ; 2014 ; 2014 ; Textual Cultures: Texts, Contexts, Interpretation Volume 2014 ; 2 ; https://scholarworks.iu.edu/journals/ ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Textual Cultures: Texts, Contexts, Interpretation Volume 2015 ; 3 ; https://scholarworks.iu.edu/journals/ ; >
       au < expected ; exists ; 2016 ; 2016 ; Textual Cultures: Texts, Contexts, Interpretation Volume 2016 ; 4 ; https://scholarworks.iu.edu/journals/ ; >
       au < expected ; exists ; 2017 ; 2017 ; Textual Cultures: Texts, Contexts, Interpretation Volume 2017 ; 5 ; https://scholarworks.iu.edu/journals/ ; >
 
