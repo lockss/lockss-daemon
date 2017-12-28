@@ -439,7 +439,7 @@
       au < finished ; crawling ; 1999 ; 9780762303038 ; 9781849508230 ; 9781849508230 ; Messy Data Volume 13 ; reingest2.clockss.org:8085 >
       au < ready ; exists ; 2001 ; 9780762306886 ; 9781849500654 ; 9781849500654 ; Nonstationary Panels, Panel Cointegration, and Dynamic Panels Volume 15 ; >
       au < frozen ; exists ; 2002 ; 9780762308576 ; 9781849501422 ; 9781849501422 ; Advances in Econometrics Volume 16 ; >
-      au < crawling ; exists ; 2003 ; 9780762310753 ; 9781849502535 ; 9781849502535 ; Maximum Likelihood Estimation of Misspecified Models: Twenty Years Later Volume 17 ; >
+      au < frozen ; exists ; 2003 ; 9780762310753 ; 9781849502535 ; 9781849502535 ; Maximum Likelihood Estimation of Misspecified Models: Twenty Years Later Volume 17 ; >
       au < frozen ; exists ; 2004 ; 9780762311484 ; 9781849503013 ; 9781849503013 ; Spatial and Spatiotemporal Econometrics Volume 18 ; >
       au < ready ; exists ; 2004 ; 9780762311507 ; 9781849503037 ; 9781849503037 ; Applications of Artificial Intelligence in Finance and Economics Volume 19 ; >
       au < frozen ; exists ; 2006 ; 9780762312740 ; 9781849503891 ; 9781849503891 ; Econometric Analysis of Financial and Economic Time Series Volume 20 Part 1 ; >
@@ -642,7 +642,7 @@
       #param[journal_issn] = 1529-2126
       #series = agr
 
-      au < crawling ; exists ; 1999 ; 9780762305339 ; 9781849500326 ; 9781849500326 ; Social Change for Women and Children Volume 4 ; >
+      au < frozen ; exists ; 1999 ; 9780762305339 ; 9781849500326 ; 9781849500326 ; Social Change for Women and Children Volume 4 ; >
       au < doNotProcess ; exists ; 2001 ; 9780762307203 ; 9781849500791 ; 9781849500791 ; An International Feminist Challenge to Theory Volume 5 ; >
       au < doNotProcess ; exists ; 2003 ; 9780762310586 ; 9781849502399 ; 9781849502399 ; Gender Perspectives on Health and Medicine Volume 7 ; >
       au < doNotProcess ; exists ; 2004 ; 9780762310883 ; 9781849502566 ; 9781849502566 ; Gendered Perspectives on Reproduction and Sexuality Volume 8 ; >
@@ -1090,7 +1090,7 @@
       au < frozen ; exists ; 2011 ; 9781848558809 ; 9781848558816 ; 9781848558816 ; Sociological Reflections on the Neurosciences Volume 13 ; >
       au < crawling ; exists ; 2012 ; 9781780529301 ; 9781780529318 ; 9781780529318 ; Critical Perspectives on Addiction Volume 14 ; >
       au < frozen ; exists ; 2013 ; 9781781903230 ; 9781781903247 ; 9781781903247 ; Ecological Health: Society, Ecology and Health Volume 15 ; >
-      au < crawling ; exists ; 2015 ; 9781783505814 ; 9781783505685 ; 9781783505685 ; Genetics, Health and Society Volume 16 ; >
+      au < frozen ; exists ; 2015 ; 9781783505814 ; 9781783505685 ; 9781783505685 ; Genetics, Health and Society Volume 16 ; >
       au < frozen ; exists ; 2016 ; 9781785604034 ; 9781785604027 ; 9781785604027 ; 50 Years After Deinstitutionalization: Mental Illness in Contemporary Communities Volume 17 ; >
       au < crawling ; exists ; 2017 ; 9781786350923 ; 9781786350916 ; 9781786350916 ; Food Systems and Health Volume 18 ; >
 
@@ -1157,7 +1157,7 @@
       #series = ape
 
       au < ready ; exists ; 2001 ; 9780762307715 ; 9781849501019 ; 9781849501019 ; Vision of Quality: How Evaluators Define, Understand and Represent Program Quality Volume 7 ; >
-      au < crawling ; exists ; 2002 ; 9780762308613 ; 9781849501439 ; 9781849501439 ; School-Based Evaluation: An International Perspective Volume 8 ; >
+      au < frozen ; exists ; 2002 ; 9780762308613 ; 9781849501439 ; 9781849501439 ; School-Based Evaluation: An International Perspective Volume 8 ; >
       au < frozen ; exists ; 2004 ; 9780762311200 ; 9781849502832 ; 9781849502832 ; Evaluating the Upgrading of Technical Courses at Two-year Colleges: NSF's Advanced Technological Education Program Volume 9 ; >
       au < frozen ; exists ; 2004 ; 9780762310555 ; 9781849505307 ; 9781849505307 ; Assessing Teachers for Professional Certification: The First Decade of the National Board for Professional Teaching Standards Volume 11 ; >
       au < frozen ; exists ; 2007 ; 9780762313426 ; 9781849504393 ; 9781849504393 ; Dilemmas of Engagement: Evaluation and the New Public Management Volume 10 ; >
@@ -1253,13 +1253,13 @@
       au < ready ; exists ; 2010 ; 9781849509541 ; 9781849509558 ; 9781849509558 ; Current Issues and Trends in Special Education: Research, Technology, and Teacher Preparation Volume 20 ; >
       au < ready ; exists ; 2011 ; 9780857246295 ; 9780857246301 ; 9780857246301 ; History of Special Education Volume 21 ; >
       au < frozen ; exists ; 2012 ; 9781780525044 ; 9781780525051 ; 9781780525051 ; Behavioral Disorders: Identification, Assessment, and Instruction of Students with EBD Volume 22 ; >
-      au < crawling ; exists ; 2012 ; 9781780525068 ; 9781780525075 ; 9781780525075 ; Behavioral Disorders: Practice Concerns and Students with EBD Volume 23 ; >
+      au < frozen ; exists ; 2012 ; 9781780525068 ; 9781780525075 ; 9781780525075 ; Behavioral Disorders: Practice Concerns and Students with EBD Volume 23 ; >
       au < frozen ; exists ; 2013 ; 9781781904251 ; 9781781904268 ; 9781781904268 ; Learning Disabilities: Identification, Assessment, and Instruction of Students with LD Volume 24 ; >
       au < frozen ; exists ; 2013 ; 9781781904275 ; 9781781904282 ; 9781781904282 ; Learning Disabilities: Practice Concerns And Students With LD Volume 25 ; >
       au < ready ; exists ; 2014 ; 9781783507412 ; 9781783507429 ; 9781783507429 ; Gifted Education: Current Perspectives and Issues Volume 26 ; >
       au < frozen ; exists ; 2014 ; 9781784410452 ; 9781784410445 ; 9781784410445 ; Special Education International Perspectives: Biopsychosocial, Cultural, and Disability Aspects Volume 27 ; >
       au < frozen ; exists ; 2014 ; 9781784410964 ; 9781784410957 ; 9781784410957 ; Special Education International Perspectives: Practices Across the Globe Volume 28 ; >
-      au < crawling ; exists ; 2015 ; 9781784416584 ; 9781784416577 ; 9781784416577 ; The Broad Autism Phenotype Volume 29 ; >
+      au < frozen ; exists ; 2015 ; 9781784416584 ; 9781784416577 ; 9781784416577 ; The Broad Autism Phenotype Volume 29 ; >
       au < ready ; exists ; 2015 ; 9781784416607 ; 9781784416591 ; 9781784416591 ; Interdisciplinary Connections to Special Education: Important Aspects to Consider Volume 30A ; >
       au < frozen ; exists ; 2015 ; 9781784416645 ; 9781784416638 ; 9781784416638 ; Interdisciplinary Connections to Special Education: Key Related Professionals Involved Volume 30B ; >
       au < ready ; exists ; 2016 ; 9781786355423 ; 9781786355416 ; 9781786355416 ; General and Special Education Inclusion in an Age of Change: Impact on Students with Disabilities Volume 31 ; >
@@ -1280,7 +1280,7 @@
 
       au < ready ; exists ; 2000 ; 9780762306619 ; 9781849500517 ; 9781849500517 ; Economics Meets Sociology in Strategic Management Volume 17 ; >
       au < frozen ; exists ; 2001 ; 9780762307210 ; 9781849500807 ; 9781849500807 ; Multiunit Organization and Multimarket Strategy Volume 18 ; >
-      au < crawling ; exists ; 2002 ; 9780762309030 ; 9781849501644 ; 9781849501644 ; The New Institutionalism in Strategic Management Volume 19 ; >
+      au < frozen ; exists ; 2002 ; 9780762309030 ; 9781849501644 ; 9781849501644 ; The New Institutionalism in Strategic Management Volume 19 ; >
       au < frozen ; exists ; 2003 ; 9780762310340 ; 9781849502214 ; 9781849502214 ; Geography and Strategy Volume 20 ; >
       au < ready ; exists ; 2004 ; 9780762311354 ; 9781849502917 ; 9781849502917 ; Business Strategy over the Industry Lifecycle Volume 21 ; >
       au < frozen ; exists ; 2005 ; 9780762312009 ; 9781849503402 ; 9781849503402 ; Strategy Process Volume 22 ; >
@@ -1336,7 +1336,7 @@
       #param[journal_issn] = 1058-7497
       #series = at
 
-      au < crawling ; exists ; 2000 ; 9780762306701 ; 9781849500579 ; 9781849500579 ; Advances in Taxation Volume 12 ; >
+      au < frozen ; exists ; 2000 ; 9780762306701 ; 9781849500579 ; 9781849500579 ; Advances in Taxation Volume 12 ; >
       au < frozen ; exists ; 2001 ; 9780762307746 ; 9781849501033 ; 9781849501033 ; Advances in Taxation Volume 13 ; >
       au < frozen ; exists ; 2002 ; 9780762308897 ; 9781849501583 ; 9781849501583 ; Advances in Taxation Volume 14 ; >
       au < frozen ; exists ; 2003 ; 9780762310654 ; 9781849502443 ; 9781849502443 ; Advances in Taxation Volume 15 ; >
@@ -1365,7 +1365,7 @@
 
       au < frozen ; exists ; 2003 ; 9780762310005 ; 9781849501989 ; 9781849501989 ; Advances in the Economic Analysis of Participatory & Labor-Managed Firms Volume 7 ; >
       au < frozen ; exists ; 2004 ; 9780762311149 ; 9781849502771 ; 9781849502771 ; Employee Participation, Firm Performance and Survival Volume 8 ; >
-      au < crawling ; exists ; 2006 ; 9780762312788 ; 9781849503921 ; 9781849503921 ; Participation in the Age of Globalization and Information Volume 9 ; >
+      au < frozen ; exists ; 2006 ; 9780762312788 ; 9781849503921 ; 9781849503921 ; Participation in the Age of Globalization and Information Volume 9 ; >
       au < ready ; exists ; 2007 ; 9780762313891 ; 9781849504720 ; 9781849504720 ; Cooperative Firms in Global Markets Volume 10 ; >
       au < ready ; exists ; 2010 ; 9780857244536 ; 9780857244543 ; 9780857244543 ; Advances in the Economic Analysis of Participatory & Labor-Managed Firms Volume 11 ; >
       au < ready ; exists ; 2011 ; 9780857247599 ; 9780857247605 ; 9780857247605 ; Advances in the Economic Analysis of Participatory and Labor-Managed Firms Volume 12 ; >
@@ -1565,9 +1565,9 @@
       au < ready ; exists ; 2004 ; 9780762311163 ; 9781849502795 ; 9781849502795 ; Families in Eastern Europe Volume 5 ; >
       au < ready ; exists ; 2012 ; 9781780529783 ; 9781780529790 ; 9781780529790 ; Economic Stress and the Family Volume 6 ; >
       au < ready ; exists ; 2013 ; 9781783500284 ; 9781783500291 ; 9781783500291 ; Visions of the 21st Century Family: Transforming Structures and Identities Volume 7 ; >
-      au < crawling ; exists ; 2014 ; 9781784410155 ; 9781784410148 ; 9781784410148 ; Family Relationships and Familial Responses to Health Issues Volume 8A ; >
+      au < frozen ; exists ; 2014 ; 9781784410155 ; 9781784410148 ; 9781784410148 ; Family Relationships and Familial Responses to Health Issues Volume 8A ; >
       au < ready ; exists ; 2014 ; 9781784411268 ; 9781784411251 ; 9781784411251 ; Family and Health: Evolving Needs, Responsibilities, and Experiences Volume 8B ; >
-      au < crawling ; exists ; 2015 ; 9781785602634 ; 9781785602627 ; 9781785602627 ; Violence and Crime in the Family: Patterns, Causes, and Consequences Volume 9 ; >
+      au < frozen ; exists ; 2015 ; 9781785602634 ; 9781785602627 ; 9781785602627 ; Violence and Crime in the Family: Patterns, Causes, and Consequences Volume 9 ; >
       au < frozen ; exists ; 2016 ; 9781786352309 ; 9781786352293 ; 9781786352293 ; Divorce, Separation, and Remarriage: The Transformation of Family Volume 10 ; >
       au < crawling ; exists ; 2017 ; 9781787146105 ; 9781787146099 ; 9781787146099 ; Intimate Relationships and Social Change Volume 11 ; >
 
@@ -1629,7 +1629,7 @@
       au < ready ; exists ; 2010 ; 9780857240040 ; 9780857240057 ; 9780857240057 ; Economics of War and Peace: Economic, Legal, and Political Perspectives Volume 14 ; >
       au < frozen ; exists ; 2010 ; 9781849509725 ; 9781849509732 ; 9781849509732 ; Conflict, Complexity and Mathematical Social Science Volume 15 ; >
       au < ready ; exists ; 2011 ; 9780857247018 ; 9780857247025 ; 9780857247025 ; Frontiers of Peace Economics and Peace Science Volume 16 ; >
-      au < crawling ; exists ; 2011 ; 9781780521305 ; 9781780521312 ; 9781780521312 ; Ethnic Conflict, Civil War and Cost of Conflict Volume 17 ; >
+      au < frozen ; exists ; 2011 ; 9781780521305 ; 9781780521312 ; 9781780521312 ; Ethnic Conflict, Civil War and Cost of Conflict Volume 17 ; >
       au < ready ; exists ; 2011 ; 9780857248954 ; 9780857248961 ; 9780857248961 ; Governance, Development and Conflict Volume 18 ; >
       au < ready ; exists ; 2012 ; 9781780526386 ; 9781780526393 ; 9781780526393 ; New Wars, New Militaries, New Soldiers: Conflicts, the Armed Forces and the Soldierly Subject Volume 19 ; >
       au < ready ; exists ; 2012 ; 9781781903353 ; 9781781903360 ; 9781781903360 ; Cooperation for a Peaceful and Sustainable World Part 1 Volume 20 Part 1 ; >
@@ -1692,13 +1692,13 @@
       au < ready ; exists ; 2006 ; 9780444529688 ; 9781849508636 ; 9781849508636 ; Designing the New European Union Volume 279 ; >
       au < frozen ; exists ; 2006 ; 9780444522429 ; 9781849508629 ; 9781849508629 ; Cognitive Economics: New Trends Volume 280 ; >
       au < ready ; exists ; 2007 ; 9780444530516 ; 9781849508643 ; 9781849508643 ; Population Change, Labor Markets and Sustainable Growth: Towards a New Economic Paradigm Volume 281 ; >
-      au < crawling ; exists ; 2007 ; 9780444530936 ; 9781849508667 ; 9781849508667 ; The Political Economy of Antitrust Volume 282 ; >
+      au < frozen ; exists ; 2007 ; 9780444530936 ; 9781849508667 ; 9781849508667 ; The Political Economy of Antitrust Volume 282 ; >
       au < ready ; exists ; 2007 ; 9780444529992 ; 9781849508278 ; 9781849508278 ; European Union and the Euro Revolution Volume 283 ; >
       au < crawling ; exists ; 2007 ; 9780444529749 ; 9781849508575 ; 9781849508575 ; Fighting Corruption in the Public Sector Volume 284 ; >
       au < ready ; exists ; 2008 ; 9780444532534 ; 9781849505369 ; 9781849505369 ; Simulating an Ageing Population: A Microsimulation Approach Applied to Sweden Volume 285 ; >
-      au < crawling ; exists ; 2008 ; 9780444532558 ; 9781849505376 ; 9781849505376 ; The Economics of Innovation Volume 286 ; >
+      au < frozen ; exists ; 2008 ; 9780444532558 ; 9781849505376 ; 9781849505376 ; The Economics of Innovation Volume 286 ; >
       au < ready ; exists ; 2009 ; 9781848552609 ; 9781848552616 ; 9781848552616 ; The Asian Economy and Asian Money Volume 287 ; >
-      au < crawling ; exists ; 2009 ; 9781848553125 ; 9781848553132 ; 9781848553132 ; Quantifying Consumer Preferences Volume 288 ; >
+      au < frozen ; exists ; 2009 ; 9781848553125 ; 9781848553132 ; 9781848553132 ; Quantifying Consumer Preferences Volume 288 ; >
       au < ready ; exists ; 2010 ; 9780857241474 ; 9780857241481 ; 9780857241481 ; Transportation Indicators and Business Cycles Volume 289 ; >
       au < ready ; exists ; 2010 ; 9780857241559 ; 9780857241566 ; 9780857241566 ; Current Issues in Health Economics Volume 290 ; >
       au < frozen ; exists ; 2011 ; 9780857247216 ; 9780857247223 ; 9780857247223 ; Contributions to Economic Analysis Volume 291 ; >
@@ -1721,8 +1721,8 @@
       au < frozen ; exists ; 2012 ; 9780857249975 ; 9780857249982 ; 9780857249982 ; Emerging and Potential Trends in Public Management: An Age of Austerity Volume 1 ; >
       au < frozen ; exists ; 2013 ; 9781781907245 ; 9781781907252 ; 9781781907252 ; Looking for Consensus?: Civil Society, Social Movements and Crises for Public Management Volume 2 ; >
       au < frozen ; exists ; 2014 ; 9781783509010 ; 9781783509027 ; 9781783509027 ; European Public Leadership in Crisis? Volume 3 ; >
-      au < crawling ; exists ; 2015 ; 9781784418748 ; 9781784418731 ; 9781784418731 ; Multi-Level Governance: The Missing Linkages Volume 4 ; >
-      au < crawling ; exists ; 2016 ; 9781786350800 ; 9781786350794 ; 9781786350794 ; Developing Public Managers for a Changing World Volume 5 ; >
+      au < frozen ; exists ; 2015 ; 9781784418748 ; 9781784418731 ; 9781784418731 ; Multi-Level Governance: The Missing Linkages Volume 4 ; >
+      au < frozen ; exists ; 2016 ; 9781786350800 ; 9781786350794 ; 9781786350794 ; Developing Public Managers for a Changing World Volume 5 ; >
 
   }
 
@@ -1821,7 +1821,7 @@
 
       au < ready ; exists ; 2010 ; 9780857242952 ; 9780857242969 ; 9780857242969 ; NGOs and Social Responsibility Volume 1 ; >
       au < frozen ; exists ; 2011 ; 9780857248770 ; 9780857248787 ; 9780857248787 ; Governance in the Business Environment Volume 2 ; >
-      au < crawling ; exists ; 2012 ; 9781780527369 ; 9781780527376 ; 9781780527376 ; Business Strategy and Sustainability Volume 3 ; >
+      au < frozen ; exists ; 2012 ; 9781780527369 ; 9781780527376 ; 9781780527376 ; Business Strategy and Sustainability Volume 3 ; >
       au < frozen ; exists ; 2013 ; 9781781905890 ; 9781781905906 ; 9781781905906 ; Education and Corporate Social Responsibility International Perspectives Volume 4 ; >
       au < crawling ; exists ; 2013 ; 9781781907801 ; 9781781907818 ; 9781781907818 ; The Governance of Risk Volume 5 ; >
       au < frozen ; exists ; 2014 ; 9781783506736 ; 9781783506743 ; 9781783506743 ; Ethics, Governance and Corporate Crime: Challenges and Consequences Volume 6 ; >
@@ -1896,7 +1896,7 @@
       au < crawling ; exists ; 2007 ; 9780444527646 ; 9781849505390 ; 9781849505390 ; Intellectual Property, Growth and Trade Volume 2 ; >
       au < ready ; exists ; 2008 ; 9780444529428 ; 9781849505406 ; 9781849505406 ; Forecasting in the Presence of Structural Breaks and Model Uncertainty Volume 3 ; >
       au < ready ; exists ; 2008 ; 9780444531902 ; 9781849505413 ; 9781849505413 ; Contemporary and Emerging Issues in Trade Theory and Policy Volume 4 ; >
-      au < crawling ; exists ; 2008 ; 9781846639623 ; 9781846639630 ; 9781846639630 ; Globalization and Emerging Issues in Trade Theory and Policy Volume 5 ; >
+      au < frozen ; exists ; 2008 ; 9781846639623 ; 9781846639630 ; 9781846639630 ; Globalization and Emerging Issues in Trade Theory and Policy Volume 5 ; >
       au < frozen ; exists ; 2009 ; 9781848552067 ; 9781848552074 ; 9781848552074 ; Trade Disputes and the Dispute Settlement Understanding of the WTO: An Interdisciplinary Assessment Volume 6 ; >
       au < crawling ; exists ; 2010 ; 9780857241412 ; 9780857241429 ; 9780857241429 ; New Developments in Computable General Equilibrium Analysis for Trade Policy Volume 7 ; >
       au < frozen ; exists ; 2010 ; 9780857241535 ; 9780857241542 ; 9780857241542 ; Migration and Culture Volume 8 ; >
@@ -1963,7 +1963,7 @@
       au < crawling ; exists ; 2001 ; 9780762308309 ; 9781849501286 ; 9781849501286 ; International Finance Review Volume 2 ; >
       au < frozen ; exists ; 2002 ; 9780762309825 ; 9781849501897 ; 9781849501897 ; Global Risk Management: Financial, Operational, and Insurance Strategies Volume 3 ; >
       au < ready ; exists ; 2003 ; 9780762310685 ; 9781849502467 ; 9781849502467 ; The Japanese Finance: Corporate Finance and Capital Markets in ... Volume 4 ; >
-      au < crawling ; exists ; 2005 ; 9780762311637 ; 9781849503150 ; 9781849503150 ; Latin American Financial Markets: Developments in Financial Innovations Volume 5 ; >
+      au < frozen ; exists ; 2005 ; 9780762311637 ; 9781849503150 ; 9781849503150 ; Latin American Financial Markets: Developments in Financial Innovations Volume 5 ; >
       au < crawling ; exists ; 2006 ; 9780762312641 ; 9781849503815 ; 9781849503815 ; Emerging European Financial Markets: Independence and Integration Post-Enlargement Volume 6 ; >
       au < frozen ; exists ; 2006 ; 9780762313921 ; 9781849504751 ; 9781849504751 ; Value Creation in Multinational Enterprise Volume 7 ; >
       au < ready ; exists ; 2007 ; 9780762314713 ; 9781849505147 ; 9781849505147 ; Asia-Pacific Financial Markets: Integration, Innovation and Challenges Volume 8 ; >
@@ -1998,13 +1998,13 @@
       au < ready ; exists ; 2008 ; 9780762314874 ; 9781849505437 ; 9781849505437 ; The Worldwide Transformation of Higher Education Volume 9 ; >
       au < frozen ; exists ; 2009 ; 9781848550940 ; 9781848550957 ; 9781848550957 ; Gender, Equality and Education from International and Comparative Perspectives Volume 10 ; >
       au < frozen ; exists ; 2009 ; 9781849506458 ; 9781849506465 ; 9781849506465 ; Educational Leadership: Global Contexts and International Comparisons Volume 11 ; >
-      au < crawling ; exists ; 2010 ; 9780857243034 ; 9780857243041 ; 9780857243041 ; International Educational Governance Volume 12 ; >
+      au < frozen ; exists ; 2010 ; 9780857243034 ; 9780857243041 ; 9780857243041 ; International Educational Governance Volume 12 ; >
       au < frozen ; exists ; 2010 ; 9780857244499 ; 9780857244505 ; 9780857244505 ; The Impact of International Achievement Studies on National Education Policymaking Volume 13 ; >
       au < crawling ; exists ; 2010 ; 9780857244178 ; 9780857244185 ; 9780857244185 ; Post-Socialism is not Dead: (Re)Reading the Global in Comparative Education Volume 14 ; >
       au < frozen ; exists ; 2011 ; 9781780521862 ; 9781780521879 ; 9781780521879 ; The Impact and Transformation of Education Policy in China Volume 15 ; >
       au < frozen ; exists ; 2012 ; 9781780522760 ; 9781780522777 ; 9781780522777 ; Education Strategy in the Developing World: Revising the World Bank's Education Policy Volume 16 ; >
       au < frozen ; exists ; 2012 ; 9781781902301 ; 9781781902318 ; 9781781902318 ; Community Colleges Worldwide: Investigating the Global Phenomenon Volume 17 ; >
-      au < crawling ; exists ; 2012 ; 9781781902325 ; 9781781902332 ; 9781781902332 ; The Impact of HIV/AIDS on Education Worldwide Volume 18 ; >
+      au < frozen ; exists ; 2012 ; 9781781902325 ; 9781781902332 ; 9781781902332 ; The Impact of HIV/AIDS on Education Worldwide Volume 18 ; >
       au < ready ; exists ; 2013 ; 9781781906538 ; 9781781906545 ; 9781781906545 ; Teacher Reforms Around the World: Implementations and Outcomes Volume 19 ; >
       au < frozen ; exists ; 2013 ; 9781781906941 ; 9781781906958 ; 9781781906958 ; Annual Review of Comparative and International Education 2013 Volume 20 ; >
       au < frozen ; exists ; 2013 ; 9781781906989 ; 9781781906996 ; 9781781906996 ; The Development of Higher Education in Africa: Prospects and Challenges Volume 21 ; >
@@ -2061,7 +2061,7 @@
       #param[journal_issn] = 1479-3636
       #series = ipie
 
-      au < crawling ; exists ; 2001 ; 9780762307227 ; 9781849500814 ; 9781849500814 ; Emotional and Behavioural Difficulties in Mainstream Schools Volume 1 ; >
+      au < frozen ; exists ; 2001 ; 9780762307227 ; 9781849500814 ; 9781849500814 ; Emotional and Behavioural Difficulties in Mainstream Schools Volume 1 ; >
       au < frozen ; exists ; 2012 ; 9781780527109 ; 9781780527116 ; 9781780527116 ; Transforming Troubled Lives: Strategies and Interventions for Children with Social, Emotional and Behavioural Difficulties Volume 2 ; >
       au < frozen ; exists ; 2014 ; 9781784411466 ; 9781784411459 ; 9781784411459 ; Measuring Inclusive Education Volume 3 ; >
       au < frozen ; exists ; 2015 ; 9781784416126 ; 9781784416119 ; 9781784416119 ; Working with Teaching Assistants and Other Support Staff for Inclusive Education Volume 4 ; >
@@ -2107,7 +2107,7 @@
       au < crawling ; exists ; 2007 ; 9780444530059 ; 9781849508087 ; 9781849508087 ; Modelling Our Future: Population Ageing, Health and Aged Care Volume 16 ; >
       au < ready ; exists ; 2007 ; 9780444531377 ; 9781849508094 ; 9781849508094 ; Topics in Analytical Political Economy Volume 17 ; >
       au < ready ; exists ; 2007 ; 9780444530615 ; 9781849508131 ; 9781849508131 ; Functional Structure Inference Volume 18 ; >
-      au < crawling ; exists ; 2008 ; 9780444532435 ; 9781849508124 ; 9781849508124 ; Challenges of the Muslim World Volume 19 ; >
+      au < frozen ; exists ; 2008 ; 9780444532435 ; 9781849508124 ; 9781849508124 ; Challenges of the Muslim World Volume 19 ; >
       au < ready ; exists ; 2010 ; 9780857244895 ; 9780857244901 ; 9780857244901 ; Nonlinear Modeling of Economic and Financial Time-Series Volume 20 ; >
       au < frozen ; exists ; 2012 ; 9781781903995 ; 9781781904008 ; 9781781904008 ; Recent Developments in Alternative Finance: Empirical Assessments and Economic Implications Volume 22 ; >
       au < frozen ; exists ; 2014 ; 9781783507559 ; 9781783507566 ; 9781783507566 ; Macroeconomic Analysis and International Finance Volume 23 ; >
@@ -2137,7 +2137,7 @@
       au < ready ; exists ; 2002 ; 9780125877800 ; 9781849507974 ; 9781849507974 ; Understanding Reference Transactions: Transforming an Art into a Science Volume 02 ; >
       au < frozen ; exists ; 2004 ; 9780120885534 ; 9781849507905 ; 9781849507905 ; Link Analysis: An Information Science Approach Volume 04 ; >
       au < ready ; exists ; 2005 ; 9780120887538 ; 9781849508025 ; 9781849508025 ; Power Laws in the Information Production Process: Lotkaian Informetrics Volume 05 ; >
-      au < crawling ; exists ; 2011 ; 9781780521701 ; 9781780521718 ; 9781780521718 ; New Directions in Information Behaviour Volume 1 ; >
+      au < frozen ; exists ; 2011 ; 9781780521701 ; 9781780521718 ; 9781780521718 ; New Directions in Information Behaviour Volume 1 ; >
       au < frozen ; exists ; 2012 ; 9781780524702 ; 9781780524719 ; 9781780524719 ; Library and Information Science Trends and Research: Asia-Oceania Volume 2 ; >
       au < ready ; exists ; 2012 ; 9781780526362 ; 9781780526379 ; 9781780526379 ; Web Search Engine Research Volume 4 ; >
       au < ready ; exists ; 2012 ; 9781780528328 ; 9781780528335 ; 9781780528335 ; Social Information Research Volume 5 ; >
@@ -2181,7 +2181,7 @@
       #param[journal_issn] = 1479-3571
       #series = mlm
 
-      au < crawling ; exists ; 2007 ; 9780762313327 ; 9780762313327 ; 9780762313327 ; Being There Even When You Are Not Volume 4 ; >
+      au < frozen ; exists ; 2007 ; 9780762313327 ; 9780762313327 ; 9780762313327 ; Being There Even When You Are Not Volume 4 ; >
       au < frozen ; exists ; 2013 ; 9781781905999 ; 9781781906002 ; 9781781906002 ; Transformational and Charismatic Leadership: The Road Ahead 10th Anniversary Edition Volume 5 ; >
       au < ready ; exists ; 2014 ; 9781784412906 ; 9781784412890 ; 9781784412890 ; The Physicality of Leadership: Gesture, Entanglement, Taboo, Possibilities Volume 6 ; >
       au < frozen ; exists ; 2015 ; 9781785604317 ; 9781785604300 ; 9781785604300 ; Organizational Neuroscience Volume 7 ; >
@@ -2247,11 +2247,11 @@
       au < ready ; exists ; 2008 ; 9780762314188 ; 9781849505451 ; 9781849505451 ; Political Power and Social Theory Volume 19 ; >
       au < ready ; exists ; 2009 ; 9781849506670 ; 9781849506687 ; 9781849506687 ; Political Power and Social Theory Volume 20 ; >
       au < frozen ; exists ; 2010 ; 9780857243256 ; 9780857243263 ; 9780857243263 ; Political Power and Social Theory Volume 21 ; >
-      au < crawling ; exists ; 2011 ; 9780857249111 ; 9780857249128 ; 9780857249128 ; Rethinking Obama Volume 22 ; >
+      au < frozen ; exists ; 2011 ; 9780857249111 ; 9780857249128 ; 9780857249128 ; Rethinking Obama Volume 22 ; >
       au < ready ; exists ; 2012 ; 9781780528663 ; 9781780528670 ; 9781780528670 ; Political Power and Social Theory Volume 23 ; >
       au < ready ; exists ; 2013 ; 9781781906033 ; 9781781906040 ; 9781781906040 ; Postcolonial Sociology Volume 24 ; >
       au < ready ; exists ; 2013 ; 9781781907269 ; 9781781907276 ; 9781781907276 ; Decentering Social Theory Volume 25 ; >
-      au < crawling ; exists ; 2014 ; 9781783508297 ; 9781783508303 ; 9781783508303 ; The United States in Decline Volume 26 ; >
+      au < frozen ; exists ; 2014 ; 9781783508297 ; 9781783508303 ; 9781783508303 ; The United States in Decline Volume 26 ; >
       au < ready ; exists ; 2014 ; 9781783506682 ; 9781783506675 ; 9781783506675 ; Fields of Knowledge: Science, Politics and Publics in the Neoliberal Age Volume 27 ; >
       au < ready ; exists ; 2015 ; 9781784417581 ; 9781784417574 ; 9781784417574 ; Patrimonial Capitalism and Empire Volume 28 ; >
       au < ready ; exists ; 2015 ; 9781785600937 ; 9781785600920 ; 9781785600920 ; Chartering Capitalism: Organizing Markets, States, and Publics Volume 29 ; >
@@ -2389,10 +2389,10 @@
 
       au < frozen ; exists ; 2006 ; 9780762313044 ; 9781848559851 ; 9781848559851 ; Research in Consumer Behavior Volume 10 ; >
       au < ready ; exists ; 2007 ; 9780762314461 ; 9781848559844 ; 9781848559844 ; Consumer Culture Theory Volume 11 ; >
-      au < crawling ; exists ; 2010 ; 9780857244437 ; 9780857244444 ; 9780857244444 ; Research in Consumer Behavior Volume 12 ; >
+      au < frozen ; exists ; 2010 ; 9780857244437 ; 9780857244444 ; 9780857244444 ; Research in Consumer Behavior Volume 12 ; >
       au < ready ; exists ; 2011 ; 9781780521169 ; 9781780521176 ; 9781780521176 ; Research in Consumer Behavior Volume 13 ; >
       au < crawling ; exists ; 2012 ; 9781781900222 ; 9781781900239 ; 9781781900239 ; Research in Consumer Behavior Volume 14 ; >
-      au < crawling ; exists ; 2013 ; 9781781908105 ; 9781781908112 ; 9781781908112 ; Consumer Culture Theory Volume 15 ; >
+      au < frozen ; exists ; 2013 ; 9781781908105 ; 9781781908112 ; 9781781908112 ; Consumer Culture Theory Volume 15 ; >
       au < ready ; exists ; 2014 ; 9781784411589 ; 9781784411572 ; 9781784411572 ; Consumer Culture Theory Volume 16 ; >
       au < crawling ; exists ; 2015 ; 9781785603235 ; 9781785603228 ; 9781785603228 ; Consumer Culture Theory Volume 17 ; >
       au < ready ; exists ; 2016 ; 9781786354969 ; 9781786354952 ; 9781786354952 ; Consumer Culture Theory Volume 18 ; >
@@ -2416,7 +2416,7 @@
       au < frozen ; exists ; 2006 ; 9780762312252 ; 9781849503549 ; 9781849503549 ; Markets and Market Liberalization: Ethnographic Reflections Volume 24 ; >
       au < ready ; exists ; 2006 ; 9780762313754 ; 9781849504638 ; 9781849504638 ; Choice in Economic Contexts Volume 25 ; >
       au < frozen ; exists ; 2007 ; 9780762314218 ; 9781849504904 ; 9781849504904 ; The Economics of Health and Wellness: Anthropological Perspectives Volume 26 ; >
-      au < crawling ; exists ; 2008 ; 9780762314850 ; 9781849505468 ; 9781849505468 ; Dimensions of Ritual Economy Volume 27 ; >
+      au < frozen ; exists ; 2008 ; 9780762314850 ; 9781849505468 ; 9781849505468 ; Dimensions of Ritual Economy Volume 27 ; >
       au < frozen ; exists ; 2008 ; 9781848550582 ; 9781848550599 ; 9781848550599 ; Hidden Hands in the Market: Ethnographies of Fair Trade, Ethical Consumption, and Corporate Social Responsibility Volume 28 ; >
       au < frozen ; exists ; 2009 ; 9781848555426 ; 9781848555433 ; 9781848555433 ; Economic Development, Integration, and Morality in Asia and the Americas Volume 29 ; >
       au < crawling ; exists ; 2010 ; 9780857241177 ; 9780857241184 ; 9780857241184 ; Economic Action in Theory and Practice: Anthropological Investigations Volume 30 ; >
@@ -2425,7 +2425,7 @@
       au < ready ; exists ; 2013 ; 9781781905418 ; 9781781905425 ; 9781781905425 ; Engaging with Capitalism: Cases from Oceania Volume 33 ; >
       au < ready ; exists ; 2014 ; 9781784410568 ; 9781784410551 ; 9781784410551 ; Production, Consumption, Business and the Economy: Structural Ideals and Moral Realities Volume 34 ; >
       au < ready ; exists ; 2015 ; 9781785603617 ; 9781785603600 ; 9781785603600 ; Climate Change, Culture, and Economics: Anthropological Investigations Volume 35 ; >
-      au < crawling ; exists ; 2016 ; 9781786352286 ; 9781786352279 ; 9781786352279 ; The Economics of Ecology, Exchange, and Adaptation: Anthropological Explorations Volume 36 ; >
+      au < frozen ; exists ; 2016 ; 9781786352286 ; 9781786352279 ; 9781786352279 ; The Economics of Ecology, Exchange, and Adaptation: Anthropological Explorations Volume 36 ; >
       au < crawling ; exists ; 2017 ; 9781787431959 ; 9781787431942 ; 9781787431942 ; Anthropological Considerations of Production, Exchange, Vending and Tourism Volume 37 ; >
 
   }
@@ -2444,7 +2444,7 @@
       au < crawling ; exists ; 2001 ; 9780762308378 ; 9781849501323 ; 9781849501323 ; Research in Economic History Volume 20 ; >
       au < ready ; exists ; 2003 ; 9780762309931 ; 9781849501941 ; 9781849501941 ; Research in Economic History Volume 21 ; >
       au < frozen ; exists ; 2004 ; 9780762311194 ; 9781849502825 ; 9781849502825 ; Research in Economic History Volume 22 ; >
-      au < crawling ; exists ; 2006 ; 9780762312627 ; 9781849503792 ; 9781849503792 ; Research in Economic History Volume 23 ; >
+      au < frozen ; exists ; 2006 ; 9780762312627 ; 9781849503792 ; 9781849503792 ; Research in Economic History Volume 23 ; >
       au < frozen ; exists ; 2006 ; 9780762313440 ; 9781849504409 ; 9781849504409 ; Research in Economic History Volume 24 ; >
       au < frozen ; exists ; 2007 ; 9780762313709 ; 9781849504591 ; 9781849504591 ; Research in Economic History Volume 25 ; >
       au < frozen ; exists ; 2008 ; 9781848553361 ; 9781848553378 ; 9781848553378 ; Research in Economic History Volume 26 ; >
@@ -2505,7 +2505,7 @@
       au < ready ; exists ; 2006 ; 9780762313013 ; 9781849504065 ; 9781849504065 ; Experiments Investigating Fundraising and Charitable Contributors Volume 11 ; >
       au < ready ; exists ; 2008 ; 9780762313846 ; 9781849505475 ; 9781849505475 ; Risk Aversion in Experiments Volume 12 ; >
       au < frozen ; exists ; 2010 ; 9781849507684 ; 9781849507691 ; 9781849507691 ; Charity with Choice Volume 13 ; >
-      au < crawling ; exists ; 2011 ; 9780857247476 ; 9780857247483 ; 9780857247483 ; Experiments on Energy, the Environment, and Sustainability Volume 14 ; >
+      au < frozen ; exists ; 2011 ; 9780857247476 ; 9780857247483 ; 9780857247483 ; Experiments on Energy, the Environment, and Sustainability Volume 14 ; >
       au < ready ; exists ; 2012 ; 9781780527840 ; 9781780527857 ; 9781780527857 ; New Advances in Experimental Research on Corruption Volume 15 ; >
       au < crawling ; exists ; 2013 ; 9781783501403 ; 9781783501410 ; 9781783501410 ; Experiments in Financial Economics Volume 16 ; >
       au < frozen ; exists ; 2014 ; 9781784411954 ; 9781784411947 ; 9781784411947 ; Experiments in Macroeconomics Volume 17 ; >
@@ -2561,8 +2561,8 @@
       au < crawling ; exists ; 2003 ; 9780762310388 ; 9781849502245 ; 9781849502245 ; Leadership in International Business Education and Research Volume 8 ; >
       au < frozen ; exists ; 2003 ; 9780762309665 ; 9781849501798 ; 9781849501798 ; Multinationals, Environment and Global Competition Volume 9 ; >
       au < ready ; exists ; 2004 ; 9780762310944 ; 9781849502603 ; 9781849502603 ; North American Economic and Financial Integration Volume 10 ; >
-      au < crawling ; exists ; 2005 ; 9780762312207 ; 9781849503501 ; 9781849503501 ; Internalization, International Diversification and the Multinational Enterprise: Essays in Honor of Alan M. Rugman Volume 11 ; >
-      au < crawling ; exists ; 2006 ; 9780762312962 ; 9781849504027 ; 9781849504027 ; Regional Economic Integration Volume 12 ; >
+      au < frozen ; exists ; 2005 ; 9780762312207 ; 9781849503501 ; 9781849503501 ; Internalization, International Diversification and the Multinational Enterprise: Essays in Honor of Alan M. Rugman Volume 11 ; >
+      au < frozen ; exists ; 2006 ; 9780762312962 ; 9781849504027 ; 9781849504027 ; Regional Economic Integration Volume 12 ; >
       au < ready ; exists ; 2007 ; 9780762313952 ; 9781849504768 ; 9781849504768 ; Regional Aspects of Multinationality and Performance Volume 13 ; >
       au < crawling ; exists ; 2008 ; 9780762314706 ; 9781849505505 ; 9781849505505 ; International Business Scholarship: AIB Fellows on the First 50 Years and Beyond Volume 14 ; >
       au < frozen ; exists ; 2011 ; 9780857245557 ; 9780857245564 ; 9780857245564 ; The Future of Foreign Direct Investment and the Multinational Enterprise Volume 15 ; >
@@ -2585,7 +2585,7 @@
       au < frozen ; exists ; 2000 ; 9780762305292 ; 9781849500319 ; 9781849500319 ; The Economics of Disability Volume 13 ; >
       au < frozen ; exists ; 2001 ; 9780762306978 ; 9781849500708 ; 9781849500708 ; Investing in Health: The Social and Economic Benefits of Health Care Innovation Volume 14 ; >
       au < crawling ; exists ; 2004 ; 9780762311118 ; 9781849502740 ; 9781849502740 ; The Economics of Gender and Mental Illness Volume 15 ; >
-      au < crawling ; exists ; 2007 ; 9780762313464 ; 9781849505512 ; 9781849505512 ; The Value of Innovation: Impact on Health, Life Quality, Safety, and Regulatory Research Volume 16 ; >
+      au < frozen ; exists ; 2007 ; 9780762313464 ; 9781849505512 ; 9781849505512 ; The Value of Innovation: Impact on Health, Life Quality, Safety, and Regulatory Research Volume 16 ; >
 
   }
 
@@ -2606,7 +2606,7 @@
       au < frozen ; exists ; 2002 ; 9780762309603 ; 9781849501750 ; 9781849501750 ; The Economics of Skills Obsolescence Volume 21 ; >
       au < ready ; exists ; 2003 ; 9780762310265 ; 9781849502139 ; 9781849502139 ; Worker Well-Being and Public Policy Volume 22 ; >
       au < ready ; exists ; 2004 ; 9780762311101 ; 9781849502733 ; 9781849502733 ; Accounting for Worker Well-Being Volume 23 ; >
-      au < crawling ; exists ; 2006 ; 9780762312757 ; 9781849503907 ; 9781849503907 ; The Economics of Immigration and Social Diversity Volume 24 ; >
+      au < frozen ; exists ; 2006 ; 9780762312757 ; 9781849503907 ; 9781849503907 ; The Economics of Immigration and Social Diversity Volume 24 ; >
       au < frozen ; exists ; 2006 ; 9780762313471 ; 9781849504423 ; 9781849504423 ; Micro-Simulation in Action Volume 25 ; >
       au < ready ; exists ; 2007 ; 9780762313907 ; 9781849504737 ; 9781849504737 ; Aspects of Worker Well-Being Volume 26 ; >
       au < ready ; exists ; 2007 ; 9780762313914 ; 9781849504744 ; 9781849504744 ; Immigration Volume 27 ; >
@@ -2683,7 +2683,7 @@
       #series = rmli
 
       au < ready ; exists ; 2002 ; 9780762308057 ; 9781849501132 ; 9781849501132 ; The many faces of multi-level issues Volume 1 ; >
-      au < crawling ; exists ; 2003 ; 9780762310395 ; 9781849502252 ; 9781849502252 ; Multi-Level Issues in Organizational Behavior and Strategy Volume 2 ; >
+      au < frozen ; exists ; 2003 ; 9780762310395 ; 9781849502252 ; 9781849502252 ; Multi-Level Issues in Organizational Behavior and Strategy Volume 2 ; >
       au < crawling ; exists ; 2005 ; 9780762311064 ; 9781849502696 ; 9781849502696 ; Multi-level Issues in Organizational Behavior and Processes Volume 3 ; >
       au < crawling ; exists ; 2005 ; 9780762311842 ; 9781849503303 ; 9781849503303 ; Multi-Level Issues in Strategy and Methods Volume 4 ; >
       au < crawling ; exists ; 2006 ; 9780762313341 ; 9781849504324 ; 9781849504324 ; Multi-Level Issues in Social Systems Volume 5 ; >
@@ -2708,7 +2708,7 @@
       au < frozen ; exists ; 2002 ; 9780762309702 ; 9781849501811 ; 9781849501811 ; Historical and Current Perspectives on Stress and Health Volume 2 ; >
       au < frozen ; exists ; 2003 ; 9780762310579 ; 9781849502382 ; 9781849502382 ; Emotional and Physiological Processes and Positive Intervention Strategies Volume 3 ; >
       au < crawling ; exists ; 2004 ; 9780762311538 ; 9781849503068 ; 9781849503068 ; Exploring Interpersonal Dynamics Volume 4 ; >
-      au < crawling ; exists ; 2006 ; 9780762312894 ; 9781849503990 ; 9781849503990 ; Employee Health, Coping and Methodologies Volume 5 ; >
+      au < frozen ; exists ; 2006 ; 9780762312894 ; 9781849503990 ; 9781849503990 ; Employee Health, Coping and Methodologies Volume 5 ; >
       au < ready ; exists ; 2007 ; 9780762314447 ; 9781849505055 ; 9781849505055 ; Exploring the Work and Non-Work Interface Volume 6 ; >
       au < ready ; exists ; 2009 ; 9781848555440 ; 9781848555457 ; 9781848555457 ; Current Perspectives on Job-Stress Recovery Volume 7 ; >
       au < ready ; exists ; 2010 ; 9781849507127 ; 9781849507134 ; 9781849507134 ; New Developments in Theoretical and Conceptual Approaches to Job Stress Volume 8 ; >
@@ -2735,9 +2735,9 @@
 
       au < ready ; exists ; 2000 ; 9780762306275 ; 9781849500418 ; 9781849500418 ; Research in Organizational Change and Development Volume 12 ; >
       au < ready ; exists ; 2001 ; 9780762308279 ; 9781849501255 ; 9781849501255 ; Research in Organizational Change and Development Volume 13 ; >
-      au < crawling ; exists ; 2003 ; 9780762309948 ; 9781849501958 ; 9781849501958 ; Research in Organizational Change and Development Volume 14 ; >
+      au < frozen ; exists ; 2003 ; 9780762309948 ; 9781849501958 ; 9781849501958 ; Research in Organizational Change and Development Volume 14 ; >
       au < ready ; exists ; 2005 ; 9780762311675 ; 9781849503198 ; 9781849503198 ; Research in Organizational Change and Development Volume 15 ; >
-      au < crawling ; exists ; 2007 ; 9780762313266 ; 9781849504256 ; 9781849504256 ; Research in Organizational Change and Development Volume 16 ; >
+      au < frozen ; exists ; 2007 ; 9780762313266 ; 9781849504256 ; 9781849504256 ; Research in Organizational Change and Development Volume 16 ; >
       au < ready ; exists ; 2009 ; 9781848555464 ; 9781848555471 ; 9781848555471 ; Research in Organizational Change and Development Volume 17 ; >
       au < frozen ; exists ; 2010 ; 9780857241917 ; 9780857241924 ; 9780857241924 ; Research in Organizational Change and Development Volume 18 ; >
       au < frozen ; exists ; 2011 ; 9781780520223 ; 9781780520230 ; 9781780520230 ; Research in Organizational Change and Development Volume 19 ; >
@@ -2772,7 +2772,7 @@
       au < frozen ; exists ; 2008 ; 9781848550049 ; 9781848550056 ; 9781848550056 ; Research in Personnel and Human Resources Management Volume 27 ; >
       au < ready ; exists ; 2009 ; 9781848550568 ; 9781848550575 ; 9781848550575 ; Research in Personnel and Human Resources Management Volume 28 ; >
       au < ready ; exists ; 2010 ; 9780857241252 ; 9780857241269 ; 9780857241269 ; Research in Personnel and Human Resources Management Volume 29 ; >
-      au < crawling ; exists ; 2011 ; 9780857245533 ; 9780857245540 ; 9780857245540 ; Research in Personnel and Human Resources Management Volume 30 ; >
+      au < frozen ; exists ; 2011 ; 9780857245533 ; 9780857245540 ; 9780857245540 ; Research in Personnel and Human Resources Management Volume 30 ; >
       au < ready ; exists ; 2012 ; 9781781901724 ; 9781781901731 ; 9781781901731 ; Research in Personnel and Human Resources Management Volume 31 ; >
       au < frozen ; exists ; 2014 ; 9781783508471 ; 9781783508242 ; 9781783508242 ; Research in Personnel and Human Resources Management Volume 32 ; >
       au < frozen ; exists ; 2015 ; 9781785600173 ; 9781785600166 ; 9781785600166 ; Research in Personnel and Human Resources Management Volume 33 ; >
@@ -2804,7 +2804,7 @@
       au < ready ; exists ; 2011 ; 9781780522548 ; 9781780522555 ; 9781780522555 ; Revitalizing Marxist Theory for Today's Capitalism Volume 27 ; >
       au < ready ; exists ; 2013 ; 9781781906705 ; 9781781906712 ; 9781781906712 ; Contradictions: Finance, Greed, and Labor Unequally Paid Volume 28 ; >
       au < frozen ; exists ; 2014 ; 9781784410070 ; 9781784410063 ; 9781784410063 ; Sraffa and Althusser Reconsidered: Neoliberalism Advancing in South Africa, England, and Greece Volume 29 ; >
-      au < crawling ; exists ; 2015 ; 9781785602955 ; 9781785602948 ; 9781785602948 ; Theoretical Engagements in Geopolitical Economy Volume 30 A ; >
+      au < frozen ; exists ; 2015 ; 9781785602955 ; 9781785602948 ; 9781785602948 ; Theoretical Engagements in Geopolitical Economy Volume 30 A ; >
       au < frozen ; exists ; 2016 ; 9781785603372 ; 9781785603365 ; 9781785603365 ; Analytical Gains of Geopolitical Economy Volume 30 B ; >
       au < crawling ; exists ; 2016 ; 9781786352361 ; 9781786352354 ; 9781786352354 ; Risking Capitalism Volume 31 ; >
       au < crawling ; exists ; 2017 ; 9781787144781 ; 9781787144774 ; 9781787144774 ; Return of Marxian Macro-Dynamics in East Asia Volume 32 ; >
@@ -2825,7 +2825,7 @@
       au < ready ; exists ; 2008 ; 9781848551787 ; 9781848551794 ; 9781848551794 ; Politics and Public Policy Volume 17 ; >
       au < ready ; exists ; 2010 ; 9780857240910 ; 9780857240927 ; 9780857240927 ; Democratic Paths and Trends Volume 18 ; >
       au < frozen ; exists ; 2011 ; 9781780522388 ; 9781780522395 ; 9781780522395 ; Democracies: Challenges to Societal Health Volume 19 ; >
-      au < crawling ; exists ; 2012 ; 9781781903377 ; 9781781903384 ; 9781781903384 ; Linking Environment, Democracy and Gender Volume 20 ; >
+      au < frozen ; exists ; 2012 ; 9781781903377 ; 9781781903384 ; 9781781903384 ; Linking Environment, Democracy and Gender Volume 20 ; >
       au < frozen ; exists ; 2013 ; 9781781905456 ; 9781781905463 ; 9781781905463 ; Voices of Globalization Volume 21 ; >
       au < crawling ; exists ; 2014 ; 9781783502585 ; 9781783502578 ; 9781783502578 ; The Many Faces of Populism: Current Perspectives Volume 22 ; >
       au < ready ; exists ; 2015 ; 9781785605673 ; 9781785605666 ; 9781785605666 ; Enabling Gender Equality: Future Generations of the Global World Volume 23 ; >
@@ -2956,7 +2956,7 @@
       #param[journal_issn] = 0196-1152
       #series = rsppp
 
-      au < crawling ; exists ; 2001 ; 9780762307166 ; 9781849500760 ; 9781849500760 ; The Organizational Response to Social Problems Volume 8 ; >
+      au < frozen ; exists ; 2001 ; 9780762307166 ; 9781849500760 ; 9781849500760 ; The Organizational Response to Social Problems Volume 8 ; >
       au < testing ; exists ; 2001 ; 9780762308064 ; 9781849501149 ; 9781849501149 ; Environmental Risks: Perception, Evaluation and Management Volume 9 ; >
       au < testing ; exists ; 2002 ; 9780762308545 ; 9781849501415 ; 9781849501415 ; The Environmental State Under Pressure Volume 10 ; >
       au < ready ; exists ; 2003 ; 9780762310432 ; 9781849502276 ; 9781849502276 ; Terrorism and Disaster: New Threats, New Ideas Volume 11 ; >
@@ -3132,7 +3132,7 @@
       au < ready ; exists ; 2007 ; 9780762314331 ; 9781849504980 ; 9781849504980 ; The Sociology of Entrepreneurship Volume 25 ; >
       au < ready ; exists ; 2009 ; 9781848556461 ; 9781848556478 ; 9781848556478 ; Studying Differences between Organizations: Comparative Approaches to Organizational Research Volume 26 ; >
       au < ready ; exists ; 2009 ; 9781848558663 ; 9781848558670 ; 9781848558670 ; Institutions and Ideology Volume 27 ; >
-      au < crawling ; exists ; 2010 ; 9781849509305 ; 9781849509312 ; 9781849509312 ; Stanford's Organization Theory Renaissance, 1970-2000 Volume 28 ; >
+      au < frozen ; exists ; 2010 ; 9781849509305 ; 9781849509312 ; 9781849509312 ; Stanford's Organization Theory Renaissance, 1970-2000 Volume 28 ; >
       au < testing ; exists ; 2010 ; 9781849509848 ; 9781849509855 ; 9781849509855 ; Technology and Organization: Essays in Honour of Joan Woodward Volume 29 ; >
       au < testing ; exists ; 2010 ; 9780857242051 ; 9780857242068 ; 9780857242068 ; Markets on Trial: The Economic Sociology of the U.S. Financial Crisis: Part A Volume 30 Part A ; >
       au < testing ; exists ; 2010 ; 9780857242075 ; 9780857242082 ; 9780857242082 ; Markets on Trial: The Economic Sociology of the U.S. Financial Crisis: Part B Volume 30 Part B ; >
@@ -3176,7 +3176,7 @@
       #series = rss
 
       au < testing ; exists ; 2012 ; 9781780522968 ; 9781780522975 ; 9781780522975 ; Qualitative Research on Sport and Physical Culture Volume 6 ; >
-      au < crawling ; exists ; 2013 ; 9781781905913 ; 9781781905920 ; 9781781905920 ; Native Games: Indigenous Peoples and Sports in the Post-Colonial World Volume 7 ; >
+      au < frozen ; exists ; 2013 ; 9781781905913 ; 9781781905920 ; 9781781905920 ; Native Games: Indigenous Peoples and Sports in the Post-Colonial World Volume 7 ; >
       au < ready ; exists ; 2014 ; 9781783508853 ; 9781783508860 ; 9781783508860 ; Sport, Social Development and Peace Volume 8 ; >
       au < testing ; exists ; 2016 ; 9781786350503 ; 9781786350497 ; 9781786350497 ; Sociology of Sport: A Global Subdiscipline in Review Volume 9 ; >
       au < testing ; exists ; 2017 ; 9781787146433 ; 9781787146426 ; 9781787146426 ; Reflections on Sociology of Sport: Ten Questions, Ten Scholars, Ten Perspectives Volume 10 ; >
@@ -3204,7 +3204,7 @@
       au < ready ; exists ; 2007 ; 9780762312689 ; 9781849503846 ; 9781849503846 ; Workplace Temporalities Volume 17 ; >
       au < ready ; exists ; 2009 ; 9781848553682 ; 9781848553699 ; 9781848553699 ; Economic Sociology of Work Volume 18 ; >
       au < testing ; exists ; 2009 ; 9781848557307 ; 9781848557314 ; 9781848557314 ; Work and Organizationsin China Afterthirty Years of Transition Volume 19 ; >
-      au < crawling ; exists ; 2010 ; 9781848553705 ; 9781848553712 ; 9781848553712 ; Gender and Sexuality in the Workplace Volume 20 ; >
+      au < frozen ; exists ; 2010 ; 9781848553705 ; 9781848553712 ; 9781848553712 ; Gender and Sexuality in the Workplace Volume 20 ; >
       au < testing ; exists ; 2010 ; 9780857242396 ; 9780857242402 ; 9780857242402 ; Institutions and Entrepreneurship Volume 21 ; >
       au < testing ; exists ; 2011 ; 9781849509466 ; 9781849509473 ; 9781849509473 ; Comparing European Workers Part A Volume 22 Part 1 ; >
       au < ready ; exists ; 2011 ; 9780857249319 ; 9780857249326 ; 9780857249326 ; Comparing European Workers Part B: Policies and Institutions Volume 22 Part 2 ; >
