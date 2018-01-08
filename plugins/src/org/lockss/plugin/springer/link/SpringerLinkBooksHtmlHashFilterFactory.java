@@ -93,6 +93,8 @@ public class SpringerLinkBooksHtmlHashFilterFactory implements FilterFactory {
             HtmlNodeFilters.tagWithAttribute("div", "class", "bar-dock"),
 
             //adds on the side
+            HtmlNodeFilters.tagWithAttribute("div", "id", "leaderboard"),
+            HtmlNodeFilters.tagWithAttribute("div", "class", "skyscraper-ad"),
             HtmlNodeFilters.tagWithAttribute("div", "class", "banner-advert"),
             HtmlNodeFilters.tagWithAttribute("div", "id", "doubleclick-ad"),
 
@@ -101,11 +103,15 @@ public class SpringerLinkBooksHtmlHashFilterFactory implements FilterFactory {
             HtmlNodeFilters.tagWithAttribute("div", "role", "banner"),
 
             //non essentials like metrics and related links
+            HtmlNodeFilters.tagWithAttribute("ul", "id", "book-metrics"),
+            HtmlNodeFilters.tagWithAttributeRegex("span", "class", "article-metrics"),
             HtmlNodeFilters.tagWithAttribute("div", "role", "complementary"),
             HtmlNodeFilters.tagWithAttribute("div", "class", "col-aside"),
             HtmlNodeFilters.tagWithAttribute("div", "class", "document-aside"),
 
             //random divs floating around
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "uptodate-recommendations"),
+            HtmlNodeFilters.tagWithAttributeRegex("h2", "class", "uptodate-recommendations"),
             HtmlNodeFilters.tagWithAttribute("div", "id", "MathJax_Message"),
             HtmlNodeFilters.tagWithAttribute("div", "id", "web-trekk-abstract"),
             HtmlNodeFilters.tagWithAttribute("div", "class", "look-inside-interrupt"),
