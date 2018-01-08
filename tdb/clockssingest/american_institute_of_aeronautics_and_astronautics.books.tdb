@@ -553,10 +553,10 @@
     au < ready ; exists ; 2011 ; ; 9781624101342 ; 9781624101342 ; AIAA Centennial of Naval Aviation Forum "100 Years of Achievement and Progress" (9781624101342) ; https://arc.aiaa.org/ ; >
     au < ready ; exists ; 2011 ; ; 9781600869525 ; 9781600869525 ; AIAA Guidance, Navigation, and Control Conference (9781600869525) ; https://arc.aiaa.org/ ; >
     au < crawling ; exists ; 2011 ; ; 9781624101540 ; 9781624101540 ; AIAA Modeling and Simulation Technologies Conference (9781624101540) ; https://arc.aiaa.org/ ; >
-    au < ready ; exists ; 2011 ; ; 9781600869532 ; 9781600869532 ; AIAA SPACE 2011 Conference & Exposition (9781600869532) ; https://arc.aiaa.org/ ; >
+    au < crawling ; exists ; 2011 ; ; 9781600869532 ; 9781600869532 ; AIAA SPACE 2011 Conference & Exposition (9781600869532) ; https://arc.aiaa.org/ ; >
     au < ready ; exists ; 2011 ; ; 9781600869440 ; 9781600869440 ; Infotech@Aerospace 2011 (9781600869440) ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2011 ; ; 9781624101434 ; 9781624101434 ; 3rd AIAA Atmospheric Space Environments Conference (9781624101434) ; https://arc.aiaa.org/ ; >
-    au < ready ; exists ; 2011 ; ; 9781624101441 ; 9781624101441 ; 6th AIAA Theoretical Fluid Mechanics Conference (9781624101441) ; https://arc.aiaa.org/ ; >
+    au < crawling ; exists ; 2011 ; ; 9781624101441 ; 9781624101441 ; 6th AIAA Theoretical Fluid Mechanics Conference (9781624101441) ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2011 ; ; 9781624101571 ; 9781624101571 ; 9th Annual International Energy Conversion Engineering Conference (9781624101571) ; https://arc.aiaa.org/ ; >
     au < ready ; exists ; 2011 ; ; 9781600869419 ; 9781600869419 ; 11th AIAA Aviation Technology, Integration, and Operations (ATIO) Conference (9781600869419) ; https://arc.aiaa.org/ ; >
     au < notReady ; exists ; 2011 ; ; 9781600869426 ; 9781600869426 ; 17th AIAA International Space Planes and Hypersonic Systems and Technologies Conference (9781600869426) ; https://arc.aiaa.org/ ; >
@@ -674,7 +674,7 @@
     au < notReady ; exists ; 2015 ; ; 9781624103421 ; 9781624103421 ; 56th AIAA/ASCE/AHS/ASC Structures, Structural Dynamics, and Materials Conference (9781624103421) ; https://arc.aiaa.org/ ; >
     au < ready ; exists ; 2016 ; ; 9781624103902 ; 9781624103902 ; AIAA Atmospheric Flight Mechanics Conference (9781624103902) ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2016 ; ; 9781624104305 ; 9781624104305 ; AIAA Atmospheric Flight Mechanics Conference (9781624104305) ; https://arc.aiaa.org/ ; >
-    au < ready ; exists ; 2016 ; ; 9781624104312 ; 9781624104312 ; AIAA Flight Testing Conference (9781624104312) ; https://arc.aiaa.org/ ; >
+    au < crawling ; exists ; 2016 ; ; 9781624104312 ; 9781624104312 ; AIAA Flight Testing Conference (9781624104312) ; https://arc.aiaa.org/ ; >
     au < notReady ; exists ; 2016 ; ; 9781624103896 ; 9781624103896 ; AIAA Guidance, Navigation, and Control Conference (9781624103896) ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2016 ; ; 9781624103889 ; 9781624103889 ; AIAA Infotech @ Aerospace (9781624103889) ; https://arc.aiaa.org/ ; >
     au < ready ; exists ; 2016 ; ; 9781624103872 ; 9781624103872 ; AIAA Modeling and Simulation Technologies Conference (9781624103872) ; https://arc.aiaa.org/ ; >
@@ -686,7 +686,7 @@
     au < crawling ; exists ; 2016 ; ; 9781624104336 ; 9781624104336 ; 8th AIAA Atmospheric and Space Environments Conference (9781624104336) ; https://arc.aiaa.org/ ; >
     au < ready ; exists ; 2016 ; ; 9781624104329 ; 9781624104329 ; 8th AIAA Flow Control Conference (9781624104329) ; https://arc.aiaa.org/ ; >
     au < ready ; exists ; 2016 ; ; 9781624103919 ; 9781624103919 ; 9th Symposium on Space Resource Utilization (9781624103919) ; https://arc.aiaa.org/ ; >
-    au < ready ; exists ; 2016 ; ; 9781624104077 ; 9781624104077 ; 14th International Energy Conversion Engineering Conference (9781624104077) ; https://arc.aiaa.org/ ; >
+    au < crawling ; exists ; 2016 ; ; 9781624104077 ; 9781624104077 ; 14th International Energy Conversion Engineering Conference (9781624104077) ; https://arc.aiaa.org/ ; >
     au < ready ; exists ; 2016 ; ; 9781624103988 ; 9781624103988 ; 15th Dynamics Specialists Conference (9781624103988) ; https://arc.aiaa.org/ ; >
     au < testing ; exists ; 2016 ; ; 9781624104404 ; 9781624104404 ; 16th AIAA Aviation Technology, Integration, and Operations Conference (9781624104404) ; https://arc.aiaa.org/ ; >
     au < ready ; exists ; 2016 ; ; 9781624104398 ; 9781624104398 ; 17th AIAA/ISSMO Multidisciplinary Analysis and Optimization Conference (9781624104398) ; https://arc.aiaa.org/ ; >
@@ -699,7 +699,7 @@
     au < ready ; exists ; 2016 ; ; 9781624103957 ; 9781624103957 ; 34th Wind Energy Symposium (9781624103957) ; https://arc.aiaa.org/ ; >
     au < notReady ; exists ; 2016 ; ; 9781624104367 ; 9781624104367 ; 46th AIAA Fluid Dynamics Conference (9781624104367) ; https://arc.aiaa.org/ ; >
     au < notReady ; exists ; 2016 ; ; 9781624104350 ; 9781624104350 ; 46th AIAA Thermophysics Conference (9781624104350) ; https://arc.aiaa.org/ ; >
-    au < ready ; exists ; 2016 ; ; 9781624104343 ; 9781624104343 ; 47th AIAA Plasmadynamics and Lasers Conference (9781624104343) ; https://arc.aiaa.org/ ; >
+    au < crawling ; exists ; 2016 ; ; 9781624104343 ; 9781624104343 ; 47th AIAA Plasmadynamics and Lasers Conference (9781624104343) ; https://arc.aiaa.org/ ; >
     au < notReady ; exists ; 2016 ; ; 9781624104060 ; 9781624104060 ; 52nd AIAA/SAE/ASEE Joint Propulsion Conference (9781624104060) ; https://arc.aiaa.org/ ; >
     au < notReady ; exists ; 2016 ; ; 9781624103933 ; 9781624103933 ; 54th AIAA Aerospace Sciences Meeting (9781624103933) ; https://arc.aiaa.org/ ; >
     au < notReady ; exists ; 2016 ; ; 9781624103926 ; 9781624103926 ; 57th AIAA/ASCE/AHS/ASC Structures, Structural Dynamics, and Materials Conference (9781624103926) ; https://arc.aiaa.org/ ; >
