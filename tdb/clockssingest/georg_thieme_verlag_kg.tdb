@@ -6603,7 +6603,7 @@
     param[journal_id] = 10.1055/s-00034923
     comment[years] = 2017-current
 
-    au < ready ; exists ; 2017 ; 2017 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2017 ; 2017 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 11 ; 11 ; >
 
   }
 
@@ -6796,7 +6796,7 @@
     param[journal_id] = 10.1055/s-00034915
     comment[years] = 2010-current
 
-    au < ready ; exists ; 2015 ; 2015 ; Onkologische Welt Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2015 ; 2015 ; Onkologische Welt Volume 6 ; 6 ; >
     au < exists ; exists ; 2016 ; 2016 ; Onkologische Welt Volume 7 ; 7 ; >
     au < crawling ; exists ; 2017 ; 2017 ; Onkologische Welt Volume 8 ; 8 ; >
 
@@ -6855,7 +6855,7 @@
     au < manifest ; exists ; 2014 ; 2014 ; Phlebologie Volume 43 ; 43 ; >
     au < manifest ; exists ; 2015 ; 2015 ; Phlebologie Volume 44 ; 44 ; >
     au < manifest ; exists ; 2016 ; 2016 ; Phlebologie Volume 45 ; 45 ; >
-    au < ready ; exists ; 2017 ; 2017 ; Phlebologie Volume 46 ; 46 ; >
+    au < crawling ; exists ; 2017 ; 2017 ; Phlebologie Volume 46 ; 46 ; >
 
   }
 
@@ -6934,7 +6934,7 @@
     param[journal_id] = 10.1055/s-00034911
     comment[years] = 2003-current
 
-    au < ready ; exists ; 2017 ; 2017 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2017 ; 2017 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 15 ; 15 ; >
 
   }
 
