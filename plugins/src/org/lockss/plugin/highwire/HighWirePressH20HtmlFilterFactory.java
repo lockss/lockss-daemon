@@ -36,6 +36,7 @@ import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.Reader;
+import java.util.regex.Pattern;
 
 import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
@@ -52,6 +53,7 @@ import org.lockss.filter.StringFilter;
 import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.util.LineRewritingReader;
 import org.lockss.util.ListUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.ReaderInputStream;
@@ -291,8 +293,32 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         new HtmlCompoundTransform(
             HtmlNodeFilterTransform.exclude(new OrFilter(filters)), xformAllTags));
     Reader filteredReader = FilterUtil.getReader(filtered, encoding);
-    Reader httpFilter = new StringFilter(filteredReader, "http:", "https:");
+    LineRewritingReader rewritingReader = new LineRewritingReader(filteredReader) {
+      @Override
+      public String rewriteLine(String line) {
+        // Markup changes over time [anywhere]
+        line = PAT_NBSP.matcher(line).replaceAll(REP_NBSP);
+        line = PAT_AMP.matcher(line).replaceAll(REP_AMP);
+        line = PAT_PUNCTUATION.matcher(line).replaceAll(REP_PUNCTUATION); // e.g. \(, \-, during encoding glitch (or similar)
+        line = PAT_WHITESPACE.matcher(line).replaceAll(EMPTY_STRING); // e.g. \(, \-, during encoding glitch (or similar)
+        return line;
+      }
+    };
+    Reader httpFilter = new StringFilter(rewritingReader, "http:", "https:");
     return new ReaderInputStream(new WhiteSpaceFilter(httpFilter));
   }
+
+  public static final String EMPTY_STRING = "";
+
+  public static final Pattern PAT_WHITESPACE = Pattern.compile("\\s", Pattern.CASE_INSENSITIVE);
+
+  public static final Pattern PAT_NBSP = Pattern.compile("&nbsp;", Pattern.CASE_INSENSITIVE);
+  public static final String REP_NBSP = " ";
+
+  public static final Pattern PAT_AMP = Pattern.compile("&amp;", Pattern.CASE_INSENSITIVE);
+  public static final String REP_AMP = "&";
+
+  public static final Pattern PAT_PUNCTUATION = Pattern.compile("[,\\\\]", Pattern.CASE_INSENSITIVE);
+  public static final String REP_PUNCTUATION = EMPTY_STRING;
 
 }

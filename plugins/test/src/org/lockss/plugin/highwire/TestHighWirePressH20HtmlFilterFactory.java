@@ -198,7 +198,7 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
       "<div></div>";
 
   private static final String withRelatedURLs =
-      "<div><span id=\"related-urls\"" +
+      "<div>  <span id=\"related-urls\"" +
           "/span></div>";
   private static final String withoutRelatedURLs =
       "<div></div>";
@@ -229,11 +229,11 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
   private static final String textIndexFactorFiltered = // div attributes are removed
 //      "<div>" +
 //      "<h2 id=\"read_this_journal\" title=\"Read This Journal\"><span>" +
-      "Read This Journal" +
+      "ReadThisJournal" +
 //      "</span></h2>" +
 //      "<div>" +
 //      "<h2 id=\"KEEP THIS\"><span>" +
-      "KEEP THIS BIT" +
+      "KEEPTHISBIT" +
 //      "</span></h2>" +
 //      "</div>" +
 //      "</div>" +
@@ -257,7 +257,7 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
 //          " <input type=\"image\" value=\"GO\" alt=\"Link: Go\" id=\"header-qs-search-go\"" +
 //          "src=\"/publisher/img/go.gif\" />" +
 //          "<p>" +
-          " " +
+          "" +
 //          "</p>" +
 //          "</form>" +
           "";
@@ -279,20 +279,20 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
           "</div>";
 
   private static final String accessCheckFiltered=
-      " " +
+      "" +
 //          "<div>" +
 //          "<ol>" +
 //          "<li></li>" +
 //          "<li><a href=\"/content/47/1/1.figures-only\" rel=\"view-figures-only\">" +
-          "Figures Only" +
+          "FiguresOnly" +
 //          "</a></li>" +
 //          "<li><a href=\"/content/47/1/1.full\"" +
 //          " rel=\"view-full-text\">" +
-          "Full Text" +
+          "FullText" +
 //          "</a></li>" +
 //          "<li><a href=\"/content/47/1/1." +
 //          "full.pdf+html\" rel=\"view-full-text.pdf\">" +
-          "Full Text (PDF)" +
+          "FullText(PDF)" +
 //          "</a></li>" +
 //          "</ol>" +
 //          "</div>" +
@@ -307,7 +307,7 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
           "<div id=\"something-nav\">";
 
   private static final String institutionLogoFiltered = // div attributes are removed
-      " ";
+      "";
 
   private static final String sidebarGlobalNavHtml =
       " <div id=\"sidebar-global-nav\">" +
@@ -319,7 +319,7 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
           "<div id=\"something-nav\">";
 
   private static final String sidebarGlobalNavFiltered = // div attributes are removed
-      " ";
+      "";
 
   private static final String col3Html =
       " <div id=\"generic\" class=\"hw-gen-page pagetype-content\">" +
@@ -331,7 +331,7 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
           "</div><script type=\"text/javascript\"></script></div>";
 
   private static final String col3Filtered = // div attributes are removed
-      " ";
+      "";
 
   private static final String tocBannerAdHtml =
       "   <div id=\"content-block\">" +
@@ -351,7 +351,7 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
 //      " <div>" +
 //      " <div>" +
 //      " <h1>" +
-      " Table of Contents" +
+      "TableofContents" +
 //      "</h1><cite>" +
       "";
 
@@ -458,7 +458,7 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
 
   private static final String adfootHtmlFiltered =
       "<body>\n" +
-          "<widget-container> </widget-container>\n" +
+          "<widget-container></widget-container>\n" +
           "</body>";
 
   private static final String europaceHtml =
@@ -536,7 +536,7 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
           "</body>";
   private static final String spanTagFiltered =
 //      "<body>" +
-          " " +
+          "" +
 //          "<span id=\"top\"/>" +
 //          "</body>" +
           "";
@@ -548,7 +548,7 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
           "</body>";
   private static final String attrTagFiltered =
 //      "<body>" +
-          " " +
+          "" +
 //          "<h1>" +
           "title" +
 //          "</h1>" +
@@ -565,7 +565,7 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
           "name=\"submit\"value=\"Add to Marked Citations\" />" +
           "</div>" +
           "</div></form>";
-  private static final String divBlockInFormFiltered = "Show no tags";
+  private static final String divBlockInFormFiltered = "Shownotags";
 //      "<form method=\"post\" action=\"/content/26/4.toc\"></form>";
 
 
