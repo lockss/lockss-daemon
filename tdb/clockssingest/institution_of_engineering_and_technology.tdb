@@ -44,7 +44,7 @@
       param[journal_id] = et
 
       au < frozen ; exists ; 2012 ;  Engineering & Technology Volume 7 ; 7 ; >
-      au < crawling ; exists ; 2013 ;  Engineering & Technology Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2013 ;  Engineering & Technology Volume 8 ; 8 ; >
       au < frozen ; exists ; 2014 ; Engineering & Technology Volume 9 ; 9 ; >
       au < frozen ; exists ; 2015 ; Engineering & Technology Volume 10 ; 10 ; >
       au < notReady ; exists ; 2016 ; Engineering & Technology Volume 11 ; 11 ; > #500 Error
@@ -64,7 +64,7 @@
       param[journal_id] = iet-bmt
 
       au < frozen ; exists ; 2012 ;  IET Biometrics Volume 1 ; 1 ; >
-      au < crawling ; exists ; 2013 ;  IET Biometrics Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2013 ;  IET Biometrics Volume 2 ; 2 ; >
       au < frozen ; exists ; 2014 ; IET Biometrics Volume 3 ; 3 ; >
       au < frozen ; exists ; 2015 ; IET Biometrics Volume 4 ; 4 ; >
       au < frozen ; exists ; 2016 ; IET Biometrics Volume 5 ; 5 ; >
@@ -179,9 +179,9 @@
       >
       param[journal_id] = iet-epa
 
-      au < crawling ; exists ; 2012 ;  IET Electric Power Applications Volume 6 ; 6 ; >
-      au < crawling ; exists ; 2013 ;  IET Electric Power Applications Volume 7 ; 7 ; >
-      au < crawling ; exists ; 2014 ; IET Electric Power Applications Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2012 ;  IET Electric Power Applications Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2013 ;  IET Electric Power Applications Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2014 ; IET Electric Power Applications Volume 8 ; 8 ; >
       au < frozen ; exists ; 2015 ; IET Electric Power Applications Volume 9 ; 9 ; >
       au < testing ; exists ; 2016 ; IET Electric Power Applications Volume 10 ; 10 ; >
       au < crawling ; exists ; 2017 ; IET Electric Power Applications Volume 11 ; 11 ; >
@@ -440,7 +440,7 @@
       param[journal_id] = iet-smt
 
       au < frozen ; exists ; 2012 ;  IET Science, Measurement & Technology Volume 6 ; 6 ; >
-      au < crawling ; exists ; 2013 ;  IET Science, Measurement & Technology Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2013 ;  IET Science, Measurement & Technology Volume 7 ; 7 ; >
       au < frozen ; exists ; 2014 ; IET Science, Measurement & Technology Volume 8 ; 8 ; >
       au < frozen ; exists ; 2015 ; IET Science, Measurement & Technology Volume 9 ; 9 ; >
       au < frozen ; exists ; 2016 ; IET Science, Measurement & Technology Volume 10 ; 10 ; >
