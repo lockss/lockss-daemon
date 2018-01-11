@@ -94,7 +94,9 @@
     au < frozen ; exists ; 2013 ; 978-0-89118-614-4 ; Turfgrass: Biology, Use, and Management ; turfgrassbiolog ; >
     au < finished ; finished ; 2015 ; 978-0-89118-626-7 ; Cotton, 2nd edition ; agronmonogr57 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; 978-0-89118-628-1 ; Sorghum: State of the Art and Future Perspectives ; agronmonogr58 ; >
-    
+    au < exists ; exists ; 2017 ; 978-0-89118-356-3 ; Precision Conservation: Geospatial Techniques for Agricultural and Natural Resources Conservation ; agronmonogr59 ; >
+    au < exists ; exists ; 2017 ; 978-0-89118-358-7 ; Agroclimatology: Linking Agriculture to Climate ; agronmonogr60 ; >
+
     
   }
   
@@ -172,8 +174,7 @@
     au < frozen ; exists ; 1965 ; 978-0-89118-273-3 ; World Population and Food Supplies, 1980 ; worldpopulation ; >
     au < frozen ; exists ; 1997 ; 978-0-89118-327-3 ; Advances in Carbon Dioxide Effects Research ; advancesincarbo ; >
     au < frozen ; exists ; 1982 ; 978-0-89118-251-1 ; Soil Erosion and Crop Productivity ; soilerosionandc ; >
-    
-    
+
   }
   
   {
@@ -218,8 +219,7 @@
     au < frozen ; exists ; 1992 ; 978-0-89118-599-4 ; Use of Plant Introductions in Cultivar Development Part 2 ; useofplantintro2 ; >
     au < frozen ; exists ; 1969 ; 978-0-89118-580-2 ; Variety Protection ; varietyprotecti ; >
     au < finished ; finished ; 2014 ; 978-0-89118-620-5 ; Yield Gains in Major U.S. Field Crops ; yieldgainsinmaj ; reingest2.clockss.org:8085 >
-    
-    
+
   }
   
   {
@@ -245,8 +245,7 @@
     au < frozen ; exists ; 2002 ; 978-0-89118-891-9 ; Soil Mineralogy with Environmental Applications ; soilmineralogyw ; >
     au < frozen ; exists ; 1990 ; 978-0-89118-862-9 ; Soil Testing and Plant Analysis ; soiltestingandp ; >
     au < frozen ; exists ; 2005 ; 978-0-89118-892-6 ; Chemical Processes in Soils ; chemicalprocess ; >
-    
-    
+
   }
   
   {
@@ -349,9 +348,12 @@
     au < frozen ; exists ; 1966 ; 978-0-89118-887-2 ; Agricultural Anhydrous Ammonia Technology and Use ; agriculturalanh ; >
     au < frozen ; exists ; 1975 ; 978-0-89118-868-1 ; Agricultural Development Soil, Food, People, Work ; agriculturaldev ; >
     au < frozen ; exists ; 1993 ; 978-0-89118-254-2 ; Agricultural Research in the Northeastern United States: Critical Review and Future Perspectives ; agriculturalres ; >
+    au < exists ; exists ; 2016 ; 978-0-89118-965-7 ; Agronomy—Grow with It! ; agronomygrowwithit ; >
     au < frozen ; exists ; 2011 ; 978-0-89118-199-6 ; Alfalfa Management Guide ; alfalfamanageme ; >
     au < frozen ; exists ; 2012 ; 978-0-89118-183-5 ; Analysis of Generalized Linear Mixed Models in the Agricultural and Natural Resources Sciences ; analysisofgener ; >
+    au < exists ; exists ; 2017 ; 978-0-89118-358-7 ; Applied Statistics in Agricultural, Biological, and Environmental Sciences ; appliedstatistics ; >
     au < frozen ; exists ; 1995 ; 978-0-89118-869-8 ; Carbon Forms and Functions in Forest Soils ; carbonformsandf ; >
+    au < exists ; exists ; 2017 ; 978-0-89118-363-1 ; A Collection of Case Studies ; casestudies ; >
     au < frozen ; exists ; 1968 ; 978-0-89118-870-4 ; Changing Patterns in Fertilizer Use ; changingpattern ; >
     au < frozen ; exists ; 1993 ; 978-0-89118-575-8 ; Compilation of North American Maize Breeding Germplasm ; compilationofno ; >
     au < frozen ; exists ; 1995 ; 978-0-89118-612-0 ; Corn silage production, management, and feeding ; cornsilageprodu ; >
@@ -380,6 +382,7 @@
     au < frozen ; exists ; 1998 ; 978-0-89118-567-3 ; Intellectual Property Rights III Global Genetic Resources: Access and Property Rights ; intellectualpro3 ; >
     au < frozen ; exists ; 1993 ; 978-0-89118-568-0 ; International Crop Science I ; internationalcr ; >
     au < frozen ; exists ; 1979 ; 978-0-89118-569-7 ; Introduction to Crop Protection ; introductiontoc ; >
+    au < exists ; exists ; 2014 ;  ; Irrigating Turfgrasses with Recycled Water ; irrigatingturfg ; >
     au < frozen ; exists ; 2012 ; 978-0-89118-955-8 ; Know Soil Know Life ; knowsoilknowlif ; >
     au < frozen ; exists ; 1983 ; 978-0-89118-241-2 ; Limitations to Efficient Water Use in Crop Production ; limitationstoef ; >
     au < frozen ; exists ; 1989 ; 978-0-89118-242-9 ; Lunar Base Agriculture: Soils for Plant Growth ; lunarbaseagricu ; >
@@ -397,6 +400,7 @@
     au < frozen ; exists ; 1994 ; 978-0-89118-246-7 ; Physiology and Determination of Crop Yield ; physiologyandde ; >
     au < frozen ; exists ; 1966 ; 978-0-89118-888-9 ; Plant Environment and Efficient Water Use ; plantenvironmen ; >
     au < frozen ; exists ; 1985 ; 978-0-89118-247-4 ; Potassium in Agriculture ; potassiuminagri ; >
+    au < exists ; exists ; 2017 ; 978-0-89118-362-4 ; Practical Mathematics for Precision Farming ; practicalmath ; >
     au < frozen ; exists ; 2010 ; 978-0-89118-198-9 ; Practical Perspectives on Science Education ; practicalperspe ; >
     au < frozen ; exists ; 1996 ; 978-0-89118-257-3 ; Precision Agriculture: Proceedings of the Third International Conference ; precisionagricu3 ; >
     au < frozen ; exists ; 1999 ; 978-0-89118-258-0 ; Precision Agriculture: Proceedings of the Fourth International Conference, Part A ; precisionagric4a ; >
@@ -412,12 +416,13 @@
     au < frozen ; exists ; 1981 ; 978-0-89118-881-0 ; Soil and Water Resources: Research Priorities for the Nation ; soilandwaterres ; >
     au < finished ; finished ; 2015 ; 978-0-89118-965-7 ; Soil Ecosystems Services ; soilecosystemsservices ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 1985 ; 978-0-89118-309-9 ; Soil Erosion and Conservation in the Tropics ; soilerosionandc ; >
+    au < deepCrawl ; exists ; 2016 ; 978-0-89118-354-9 ; Soil Fertility Management in Agroecosystems ; soilfertility ; >
     au < frozen ; exists ; 2011 ; 978-0-89118-195-8 ; Soil Management: Building a Stable Base for Agriculture ; soilmanagementb ; >
     au < frozen ; exists ; 2008 ; 978-0-89118-856-8 ; Soil Science Step-by-Step Field Analysis ; soilsciencestep ; >
-    au < frozen ; exists ; 1966 ; 978-0-89118-889-6 ; Soil Surveys and Land Use Planning ; soilsurveysandl ; >
-    au < frozen ; exists ; 1972 ; 978-0-89118-890-2 ; Soil Water ; soilwater ; >
     au < frozen ; exists ; 1977 ; 978-0-89118-252-8 ; Soils for Management of Organic Wastes and Waste Waters ; soilsformanagem ; >
     au < frozen ; exists ; 2008 ; 978-0-89118-340-2 ; Soils of Florida ; soilsofflorida ; >
+    au < frozen ; exists ; 1966 ; 978-0-89118-889-6 ; Soil Surveys and Land Use Planning ; soilsurveysandl ; >
+    au < frozen ; exists ; 1972 ; 978-0-89118-890-2 ; Soil Water ; soilwater ; >
     au < frozen ; exists ; 1996 ; 978-0-89118-253-5 ; Stubble Over the Soil. The Vital Role of Plant Residue in Soil Management to Improve Soil Quality ; stubbleoverthes ; >
     au < frozen ; exists ; 2007 ; 978-0-89118-197-2 ; The American Society of Agronomy: 100 Years of History ; theamericansoci ; >
     au < frozen ; exists ; 1999 ; 978-0-89118-255-9 ; The Genetics and Exploitation of Heterosis in Crops ; thegeneticsande ; >
@@ -430,8 +435,7 @@
     au < frozen ; exists ; 1994 ; 978-0-89118-578-9 ; Turf Weeds and Their Control ; turfweedsandthe ; >
     au < frozen ; exists ; 1986 ; 978-0-89118-886-5 ; Utilization, Treatment, and Disposal of Waste on Land ; utilizationtrea ; >
     au < frozen ; exists ; 2012 ; 978-0-089118-616-8 ; Urban–Rural Interfaces: Linking People and Nature ; urbanruralinter ; >
-    au < deepCrawl ; exists ; 2016 ; 978-0-89118-354-9 ; Soil Fertility Management in Agroecosystems ; soilfertility ; >
-    
+
   }
   
 }
