@@ -64,10 +64,17 @@ public class TestScHtmlHashFilterFactory extends LockssTestCase {
   
   private static final String withArticleIcons = 
       "<div class=\"articleBodyContainer\">\n" +
-      "Hello World " +
-      "<span class=\"article-groups left-flag EditorsAward\">\n" + 
+      " Hello World " +
+      " <span class=\"article-groups left-flag EditorsAward\">\n" + 
       "  <i class=\"icon-award\"></i><span>EDITOR'S AWARD</span>\n" + 
-      "</span>" +
+      " </span>" +
+      " <div id=\"getCitation\" class=\"reveal-modal\" data-reveal=\"\">\n" + 
+      "    <div class=\"modal-title\">Citation</div>\n" + 
+      "    <p>citation info</p>\n" + 
+      "    <p class=\"citation-label\">Download citation file:</p>  \n" + 
+      "    <p>© 2017 American Speech-Language-Hearing Association</p>\n" + 
+      "    <a class=\"close-reveal-modal\">×</a>\n" + 
+      " </div>" +
       "</div>\n" + 
       "<div class=\"leftColumn\">\n" +
       " More Text" +

@@ -155,6 +155,8 @@ public class ScHtmlHashFilterFactory implements FilterFactory {
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-CitingArticles"),
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "access-state-logos"),
             HtmlNodeFilters.tagWithAttributeRegex("span", "class", "article-groups"),
+            // copyright date did not have a tag suitable for filtering, using containing tag for ASHA
+            HtmlNodeFilters.tagWithAttribute("div", "id", "getCitation"),
             
         }))
       )

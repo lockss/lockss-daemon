@@ -100,10 +100,6 @@ public class ScHtmlLinkRewriterFactory implements LinkRewriterFactory {
           
           if (node instanceof LinkTag) {
             
-            String itemUrl = ((LinkTag)node).getLink();
-            if (itemUrl.contains("#") && itemUrl.contains("ServeContent?url=")) {
-              ((LinkTag)node).setLink(itemUrl.substring(itemUrl.lastIndexOf('#')));
-            }
             Attribute urlAttr = ((TagNode)node).getAttributeEx(DATA_ARTICLE_URL_ATTR);
             // id="item_MultimediaUrl"
             if (urlAttr != null && classAttr != null) {
