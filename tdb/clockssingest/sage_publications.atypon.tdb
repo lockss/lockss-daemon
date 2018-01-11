@@ -37305,7 +37305,7 @@
       au < frozen ; exists ; 2013 ; The Sociological Review Volume 61 ; 61 ; sora ; >
       au < frozen ; exists ; 2014 ; The Sociological Review Volume 62 ; 62 ; sora ; >
       au < frozen ; exists ; 2015 ; The Sociological Review Volume 63 ; 63 ; sora ; >
-      au < frozen ; exists ; 2016 ; The Sociological Review Volume 64 ; 64 ; sora ; >
+      au < ingNotReady ; exists ; 2016 ; The Sociological Review Volume 64 ; 64 ; sora ; > #crawl again after 1/10/2018. Monographs moved to the journal.
       au < crawling ; exists ; 2017 ; The Sociological Review Volume 65 ; 65 ; sora ; >
 
   }
@@ -37319,9 +37319,11 @@
     >
 
       #param[base_url] = http://som.sagepub.com/
+      #monographs moved to the journal The Sociological Review.
 
-      au < frozen ; exists ; 2016 ; The Sociological Review Monographs Volume 64 ; 64 ; soma ; >
-      au < crawling ; exists ; 2017 ; The Sociological Review Monographs Volume 65 ; 65 ; soma ; >
+      au < superseded ; exists ; 2016 ; The Sociological Review Monographs Volume 64 ; 64 ; soma ; >
+      au < superseded ; exists ; 2017 ; The Sociological Review Monographs Volume 65 ; 65 ; soma ; >
+      #moved.
 
   }
 

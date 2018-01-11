@@ -120,21 +120,22 @@
     >
 
       param[base_url] = http://palaios.sepmonline.org/
+      # Moved to Silverchair as of ~ 1/1/2018
 
-      au < manifest ; exists ; 1986 ; PALAIOS Volume 1 ; 1 ; >
-      au < manifest ; exists ; 1987 ; PALAIOS Volume 2 ; 2 ; >
-      au < manifest ; exists ; 1988 ; PALAIOS Volume 3 ; 3 ; >
-      au < manifest ; exists ; 1989 ; PALAIOS Volume 4 ; 4 ; >
-      au < manifest ; exists ; 1990 ; PALAIOS Volume 5 ; 5 ; >
-      au < manifest ; exists ; 1991 ; PALAIOS Volume 6 ; 6 ; >
-      au < manifest ; exists ; 1992 ; PALAIOS Volume 7 ; 7 ; >
-      au < manifest ; exists ; 1993 ; PALAIOS Volume 8 ; 8 ; >
-      au < manifest ; exists ; 1994 ; PALAIOS Volume 9 ; 9 ; >
-      au < manifest ; exists ; 1995 ; PALAIOS Volume 10 ; 10 ; >
-      au < manifest ; exists ; 1996 ; PALAIOS Volume 11 ; 11 ; >
-      au < manifest ; exists ; 1997 ; PALAIOS Volume 12 ; 12 ; >
-      au < manifest ; exists ; 1998 ; PALAIOS Volume 13 ; 13 ; >
-      au < manifest ; exists ; 1999 ; PALAIOS Volume 14 ; 14 ; >
+      au < doNotProcess ; exists ; 1986 ; PALAIOS Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 1987 ; PALAIOS Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 1988 ; PALAIOS Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 1989 ; PALAIOS Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 1990 ; PALAIOS Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 1991 ; PALAIOS Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 1992 ; PALAIOS Volume 7 ; 7 ; >
+      au < doNotProcess ; exists ; 1993 ; PALAIOS Volume 8 ; 8 ; >
+      au < doNotProcess ; exists ; 1994 ; PALAIOS Volume 9 ; 9 ; >
+      au < doNotProcess ; exists ; 1995 ; PALAIOS Volume 10 ; 10 ; >
+      au < doNotProcess ; exists ; 1996 ; PALAIOS Volume 11 ; 11 ; >
+      au < doNotProcess ; exists ; 1997 ; PALAIOS Volume 12 ; 12 ; >
+      au < doNotProcess ; exists ; 1998 ; PALAIOS Volume 13 ; 13 ; >
+      au < doNotProcess ; exists ; 1999 ; PALAIOS Volume 14 ; 14 ; >
       au < finished ; crawling ; 2000 ; PALAIOS Volume 15 ; 15 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2001 ; PALAIOS Volume 16 ; 16 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2002 ; PALAIOS Volume 17 ; 17 ; reingest1.clockss.org:8082 >
@@ -151,8 +152,9 @@
       au < finished ; finished ; 2013 ; PALAIOS Volume 28 ; 28 ; >
       au < finished ; finished ; 2014 ; PALAIOS Volume 29 ; 29 ; >
       au < frozen ; exists ; 2015 ; PALAIOS Volume 30 ; 30 ; >
-      au < deepCrawl ; exists ; 2016 ; PALAIOS Volume 31 ; 31 ; >
-      au < crawling ; exists ; 2017 ; PALAIOS Volume 32 ; 32 ; >
+      au < frozen ; exists ; 2016 ; PALAIOS Volume 31 ; 31 ; >
+      au < frozen ; exists ; 2017 ; PALAIOS Volume 32 ; 32 ; >
+      #moved to Silverchair
 
   }
 
