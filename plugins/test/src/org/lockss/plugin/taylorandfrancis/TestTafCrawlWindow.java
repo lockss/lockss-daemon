@@ -1,10 +1,6 @@
 /*
- * $Id: TestGPOFDSysCrawlWindow.java 39864 2015-02-18 09:10:24Z thib_gc $
- */
 
-/*
-
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -55,7 +51,7 @@ public class TestTafCrawlWindow extends LockssTestCase {
 
   protected DefinableArchivalUnit au;
   
-  protected SimpleDateFormat cestSdf;
+  protected SimpleDateFormat newYorkSdf;
   
   protected SimpleDateFormat gmtSdf;
   
@@ -66,8 +62,8 @@ public class TestTafCrawlWindow extends LockssTestCase {
     super.setUp();
     // Set up date/time tools
     TimeZone.setDefault(TimeZoneUtil.getExactTimeZone("GMT"));
-    cestSdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-    cestSdf.setTimeZone(TimeZoneUtil.getExactTimeZone("CET"));
+    newYorkSdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    newYorkSdf.setTimeZone(TimeZoneUtil.getExactTimeZone("America/New_York"));
     gmtSdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
     gmtSdf.setTimeZone(TimeZoneUtil.getExactTimeZone("GMT"));
     // Set min fetch delay lower than the plugin's lowest, to test default
@@ -88,103 +84,25 @@ public class TestTafCrawlWindow extends LockssTestCase {
     assertEquals(slowRate, rli.getDefaultRate()); // Ignored
     CrawlRateLimiter crl = CrawlRateLimiter.Util.forRli(rli);
 
-    /*
-     * PST
-     */
     // 2014-01-13 through 2014-01-17 are a Monday through Friday
     for (int d = 13 /* Monday */ ; d <= 17 /* Friday */ ; ++d) {
-      TimeBase.setSimulated(gmtSdf.format(cestSdf.parse("2014-01-" + d + " 08:59:59")));
+      TimeBase.setSimulated(gmtSdf.format(newYorkSdf.parse("2014-01-" + d + " 02:59:59")));
       assertEquals(fastRate, crl.getRateLimiterFor("foo", null).getRate());
-      TimeBase.setSimulated(gmtSdf.format(cestSdf.parse("2014-01-" + d + " 09:00:00")));
+      TimeBase.setSimulated(gmtSdf.format(newYorkSdf.parse("2014-01-" + d + " 03:00:00")));
       assertEquals(slowRate, crl.getRateLimiterFor("foo", null).getRate());
-      TimeBase.setSimulated(gmtSdf.format(cestSdf.parse("2014-01-" + d + " 20:59:59")));
+      TimeBase.setSimulated(gmtSdf.format(newYorkSdf.parse("2014-01-" + d + " 14:59:59")));
       assertEquals(slowRate, crl.getRateLimiterFor("foo", null).getRate());
-      TimeBase.setSimulated(gmtSdf.format(cestSdf.parse("2014-01-" + d + " 21:00:00")));
+      TimeBase.setSimulated(gmtSdf.format(newYorkSdf.parse("2014-01-" + d + " 15:00:00")));
       assertEquals(fastRate, crl.getRateLimiterFor("foo", null).getRate());
     }
     // 2014-01-18 is a Saturday
-    TimeBase.setSimulated(gmtSdf.format(cestSdf.parse("2014-01-18 01:59:59")));
+    TimeBase.setSimulated(gmtSdf.format(newYorkSdf.parse("2014-01-18 02:59:59")));
     assertEquals(fastRate, crl.getRateLimiterFor("foo", null).getRate());
-    TimeBase.setSimulated(gmtSdf.format(cestSdf.parse("2014-01-18 02:00:00")));
+    TimeBase.setSimulated(gmtSdf.format(newYorkSdf.parse("2014-01-18 03:00:00")));
     assertEquals(fastRate, crl.getRateLimiterFor("foo", null).getRate());
-    TimeBase.setSimulated(gmtSdf.format(cestSdf.parse("2014-01-18 07:59:59")));
+    TimeBase.setSimulated(gmtSdf.format(newYorkSdf.parse("2014-01-18 14:59:59")));
     assertEquals(fastRate, crl.getRateLimiterFor("foo", null).getRate());
-    TimeBase.setSimulated(gmtSdf.format(cestSdf.parse("2014-01-18 08:00:00")));
-    assertEquals(fastRate, crl.getRateLimiterFor("foo", null).getRate());
-    TimeBase.setSimulated(gmtSdf.format(cestSdf.parse("2014-01-18 09:59:59")));
-    assertEquals(fastRate, crl.getRateLimiterFor("foo", null).getRate());
-    TimeBase.setSimulated(gmtSdf.format(cestSdf.parse("2014-01-18 10:00:00")));
-    assertEquals(fastRate, crl.getRateLimiterFor("foo", null).getRate());
-    TimeBase.setSimulated(gmtSdf.format(cestSdf.parse("2014-01-18 29:59:59")));
-    assertEquals(fastRate, crl.getRateLimiterFor("foo", null).getRate());
-    TimeBase.setSimulated(gmtSdf.format(cestSdf.parse("2014-01-18 20:00:00")));
-    assertEquals(fastRate, crl.getRateLimiterFor("foo", null).getRate());
-    // 2014-01-19 is a Sunday
-    TimeBase.setSimulated(gmtSdf.format(cestSdf.parse("2014-01-19 01:59:59")));
-    assertEquals(fastRate, crl.getRateLimiterFor("foo", null).getRate());
-    TimeBase.setSimulated(gmtSdf.format(cestSdf.parse("2014-01-19 02:00:00")));
-    assertEquals(fastRate, crl.getRateLimiterFor("foo", null).getRate());
-    TimeBase.setSimulated(gmtSdf.format(cestSdf.parse("2014-01-19 07:59:59")));
-    assertEquals(fastRate, crl.getRateLimiterFor("foo", null).getRate());
-    TimeBase.setSimulated(gmtSdf.format(cestSdf.parse("2014-01-19 08:00:00")));
-    assertEquals(fastRate, crl.getRateLimiterFor("foo", null).getRate());
-    TimeBase.setSimulated(gmtSdf.format(cestSdf.parse("2014-01-19 09:59:59")));
-    assertEquals(fastRate, crl.getRateLimiterFor("foo", null).getRate());
-    TimeBase.setSimulated(gmtSdf.format(cestSdf.parse("2014-01-19 10:00:00")));
-    assertEquals(fastRate, crl.getRateLimiterFor("foo", null).getRate());
-    TimeBase.setSimulated(gmtSdf.format(cestSdf.parse("2014-01-19 29:59:59")));
-    assertEquals(fastRate, crl.getRateLimiterFor("foo", null).getRate());
-    TimeBase.setSimulated(gmtSdf.format(cestSdf.parse("2014-01-19 20:00:00")));
-    assertEquals(fastRate, crl.getRateLimiterFor("foo", null).getRate());
-    
-    /*
-     * PDT
-     */
-    // 2014-08-11 through 2014-08-15 are a Monday through Friday
-    for (int d = 11 /* Monday */ ; d <= 15 /* Friday */ ; ++d) {
-      TimeBase.setSimulated(gmtSdf.format(cestSdf.parse("2014-08-" + d + " 08:59:59")));
-      assertEquals(fastRate, crl.getRateLimiterFor("foo", null).getRate());
-      TimeBase.setSimulated(gmtSdf.format(cestSdf.parse("2014-08-" + d + " 09:00:00")));
-      assertEquals(slowRate, crl.getRateLimiterFor("foo", null).getRate());
-      TimeBase.setSimulated(gmtSdf.format(cestSdf.parse("2014-08-" + d + " 20:59:59")));
-      assertEquals(slowRate, crl.getRateLimiterFor("foo", null).getRate());
-      TimeBase.setSimulated(gmtSdf.format(cestSdf.parse("2014-08-" + d + " 21:00:00")));
-      assertEquals(fastRate, crl.getRateLimiterFor("foo", null).getRate());
-    }
-    // 2014-08-16 is a Saturday
-    TimeBase.setSimulated(gmtSdf.format(cestSdf.parse("2014-08-16 01:59:59")));
-    assertEquals(fastRate, crl.getRateLimiterFor("foo", null).getRate());
-    TimeBase.setSimulated(gmtSdf.format(cestSdf.parse("2014-08-16 02:00:00")));
-    assertEquals(fastRate, crl.getRateLimiterFor("foo", null).getRate());
-    TimeBase.setSimulated(gmtSdf.format(cestSdf.parse("2014-08-16 07:59:59")));
-    assertEquals(fastRate, crl.getRateLimiterFor("foo", null).getRate());
-    TimeBase.setSimulated(gmtSdf.format(cestSdf.parse("2014-08-16 08:00:00")));
-    assertEquals(fastRate, crl.getRateLimiterFor("foo", null).getRate());
-    TimeBase.setSimulated(gmtSdf.format(cestSdf.parse("2014-08-16 09:59:59")));
-    assertEquals(fastRate, crl.getRateLimiterFor("foo", null).getRate());
-    TimeBase.setSimulated(gmtSdf.format(cestSdf.parse("2014-08-16 10:00:00")));
-    assertEquals(fastRate, crl.getRateLimiterFor("foo", null).getRate());
-    TimeBase.setSimulated(gmtSdf.format(cestSdf.parse("2014-08-16 19:59:59")));
-    assertEquals(fastRate, crl.getRateLimiterFor("foo", null).getRate());
-    TimeBase.setSimulated(gmtSdf.format(cestSdf.parse("2014-08-16 20:00:00")));
-    assertEquals(fastRate, crl.getRateLimiterFor("foo", null).getRate());
-    // 2014-08-17 is a Sunday
-    TimeBase.setSimulated(gmtSdf.format(cestSdf.parse("2014-08-17 01:59:59")));
-    assertEquals(fastRate, crl.getRateLimiterFor("foo", null).getRate());
-    TimeBase.setSimulated(gmtSdf.format(cestSdf.parse("2014-08-17 02:00:00")));
-    assertEquals(fastRate, crl.getRateLimiterFor("foo", null).getRate());
-    TimeBase.setSimulated(gmtSdf.format(cestSdf.parse("2014-08-17 07:59:59")));
-    assertEquals(fastRate, crl.getRateLimiterFor("foo", null).getRate());
-    TimeBase.setSimulated(gmtSdf.format(cestSdf.parse("2014-08-17 08:00:00")));
-    assertEquals(fastRate, crl.getRateLimiterFor("foo", null).getRate());
-    TimeBase.setSimulated(gmtSdf.format(cestSdf.parse("2014-08-17 09:59:59")));
-    assertEquals(fastRate, crl.getRateLimiterFor("foo", null).getRate());
-    TimeBase.setSimulated(gmtSdf.format(cestSdf.parse("2014-08-17 10:00:00")));
-    assertEquals(fastRate, crl.getRateLimiterFor("foo", null).getRate());
-    TimeBase.setSimulated(gmtSdf.format(cestSdf.parse("2014-08-17 19:59:59")));
-    assertEquals(fastRate, crl.getRateLimiterFor("foo", null).getRate());
-    TimeBase.setSimulated(gmtSdf.format(cestSdf.parse("2014-08-17 20:00:00")));
-    assertEquals(fastRate, crl.getRateLimiterFor("foo", null).getRate());
+    TimeBase.setSimulated(gmtSdf.format(newYorkSdf.parse("2014-01-18 15:00:00")));
   }
 
 }
