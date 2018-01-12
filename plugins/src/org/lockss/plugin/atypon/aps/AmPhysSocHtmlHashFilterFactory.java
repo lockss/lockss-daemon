@@ -46,8 +46,8 @@ import org.lockss.util.Logger;
 
 //Keeps contents only (includeNodes), then hashes out unwanted nodes 
 //within the content (excludeNodes).
-public class AmPhysHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
-  Logger log = Logger.getLogger(AmPhysHtmlHashFilterFactory.class);
+public class AmPhysSocHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
+  Logger log = Logger.getLogger(AmPhysSocHtmlHashFilterFactory.class);
   
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,

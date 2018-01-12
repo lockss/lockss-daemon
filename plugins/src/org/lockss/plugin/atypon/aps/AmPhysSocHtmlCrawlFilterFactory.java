@@ -46,7 +46,7 @@ import org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory;
  * extraneous links
  * 
  */
-public class AmPhysHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory {
+public class AmPhysSocHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory {
   
   NodeFilter[] filters = new NodeFilter[] {
       
@@ -59,7 +59,8 @@ public class AmPhysHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFacto
       
       // XXX TOC - links to all other issues
       // Article landing - ajax tabs
-      HtmlNodeFilters.tagWithAttributeRegex("li", "id", "pane-pcw-(R|r)e(ferences|lated)"),
+      HtmlNodeFilters.tagWithAttribute("li", "id", "pane-pcw-references"),
+      HtmlNodeFilters.tagWithAttribute("li", "id", "pane-pcw-related"),
   };
   
   public InputStream createFilteredInputStream(ArchivalUnit au,
