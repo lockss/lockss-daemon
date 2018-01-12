@@ -10,11 +10,11 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>American Physiological Society Plugin</string>
+    <string>American Physiological Society Plugin (Legacy)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>34</string>
+    <string>35</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -43,7 +43,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"American Physiological Society Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
+    <string>"American Physiological Society Plugin (Legacy), Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
     <string>text/html_crawl_filter_factory</string>
