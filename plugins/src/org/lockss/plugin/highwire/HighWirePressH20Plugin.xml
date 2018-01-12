@@ -282,7 +282,7 @@
     <!-- these will not count towards poll results but will replicate from peer if above -->
     <string>au_url_poll_result_weight</string>
     <list>
-      <string>"[.]i[^.]+[.]short$", 0</string>
+      <string>"/i[^.]+[.]short$", 0</string>
       <string>"[.]figures-only$", 0</string>
       <string>"[.](css|js)$", 0</string>
       <string>"://[^/]+(?!.*/content/)(/[^/]+)+[.](gif|png)$", 0</string>
