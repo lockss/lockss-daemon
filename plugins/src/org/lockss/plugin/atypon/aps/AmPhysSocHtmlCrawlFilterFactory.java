@@ -56,11 +56,18 @@ public class AmPhysSocHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFa
       HtmlNodeFilters.tag("footer"),
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "publication(_header|-menu)"),
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "content-navigation"),
-      
-      // XXX TOC - links to all other issues
       // Article landing - ajax tabs
       HtmlNodeFilters.tagWithAttribute("li", "id", "pane-pcw-references"),
       HtmlNodeFilters.tagWithAttribute("li", "id", "pane-pcw-related"),
+      // References
+      HtmlNodeFilters.tagWithAttributeRegex("li", "class", "references__item"),
+      // XXX following may not be needed
+      HtmlNodeFilters.tagWithAttribute("span", "class", "references__suffix"),
+      HtmlNodeFilters.tagWithAttribute("a", "class", "sfxLink"),
+      // never want these links, excluded lists was too long
+      HtmlNodeFilters.tagWithAttributeRegex("a", "class", "rightslink"),
+      HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/servlet/linkout[?]type=rightslink"),
+      HtmlNodeFilters.tagWithAttributeRegex("a", "class", "author-name"),
   };
   
   public InputStream createFilteredInputStream(ArchivalUnit au,

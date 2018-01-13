@@ -79,15 +79,10 @@ public class AmPhysSocHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFact
         },
         // toc - contents only
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "toc_content"),
-//        // abs, ref - contents only
-//        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumPublicationContentWidget"),
-//        // early 2017- changed to <div class
-//        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "downloadCitationsWidget"),
-//        // showPopup&citid=citart1
-//        HtmlNodeFilters.tagWithAttributeRegex("body", "class", "popupBody"),
         // article
-        // HtmlNodeFilters.tag("article")
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article__content"),
+        // XXX possible alternative filter HtmlNodeFilters.tag("article")
+        HtmlNodeFilters.tagWithAttribute("div", "class", "article_list"),
         
     };
     
@@ -99,9 +94,13 @@ public class AmPhysSocHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFact
         // on article page
         HtmlNodeFilters.tag("nav"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "content.?navigation"),
-//        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-row-right"),
+        // XXX following would be needed if alternative filter HtmlNodeFilters.tag("article") is used
+        // HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-row-right"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "badges"),
         HtmlNodeFilters.tagWithAttribute("a", "class", "rightslink"),
+        // filter all lists, aggressive filtering
+        HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "rlist"),
+        // XXX alternatively, only reference items HtmlNodeFilters.tagWithAttributeRegex("li", "class", "references__item"),
     };
     return super.createFilteredInputStream(au, in, encoding, 
                                            includeNodes, excludeNodes);
