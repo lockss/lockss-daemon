@@ -120,7 +120,7 @@
         au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2015 ; Diabetes Volume 64 ; 64 ; reingest4.clockss.org:8082 >
         au < ada.ClockssADADrupalPlugin ; finished ; crawling ; 2016 ; Diabetes Volume 65 ; 65 ; reingest2.clockss.org:8085 >
         au < ada.ClockssADADrupalPlugin ; crawling ; exists ; 2017 ; Diabetes Volume 66 ; 66 ; >
-        au < ada.ClockssADADrupalPlugin ; expected ; exists ; 2018 ; Diabetes Volume 67 ; 67 ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2018 ; Diabetes Volume 67 ; 67 ; >
 
       }
 
@@ -184,7 +184,7 @@
         au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2015 ; Diabetes Care Volume 38 ; 38 ; reingest1.clockss.org:8082 >
         au < ada.ClockssADADrupalPlugin ; finished ; crawling ; 2016 ; Diabetes Care Volume 39 ; 39 ; reingest4.clockss.org:8082 >
         au < ada.ClockssADADrupalPlugin ; crawling ; exists ; 2017 ; Diabetes Care Volume 40 ; 40 ; >
-        au < ada.ClockssADADrupalPlugin ; expected ; exists ; 2018 ; Diabetes Care Volume 41 ; 41 ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2018 ; Diabetes Care Volume 41 ; 41 ; >
 
       }
 
