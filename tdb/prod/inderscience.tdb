@@ -710,7 +710,7 @@
       au < doNotProcess ; 2011-2012 ; International Journal of Applied Systemic Studies Volume 4 ; 4 ; https://www.inderscienceonline.com/ >
       au < released ; 2013-2014 ; International Journal of Applied Systemic Studies Volume 5 ; 5 ; http://www.inderscienceonline.com/ >
       au < released ; 2015 ; International Journal of Applied Systemic Studies Volume 6 ; 6 ; http://www.inderscienceonline.com/ >
-      au < expected ; 2016 ; International Journal of Applied Systemic Studies Volume 7 ; 7 ; https://www.inderscienceonline.com/ >
+      au < manifest ; 2016 ; International Journal of Applied Systemic Studies Volume 7 ; 7 ; https://www.inderscienceonline.com/ >
       au < expected ; 2017 ; International Journal of Applied Systemic Studies Volume 8 ; 8 ; https://www.inderscienceonline.com/ >
 
     }
@@ -6620,7 +6620,7 @@
 
       au < released ; 2014-2015 ; International Journal of Petroleum Engineering Volume 1 ; 1 ; http://www.inderscienceonline.com/ >
       au < released ; 2016 ; International Journal of Petroleum Engineering Volume 2 ; 2 ; http://www.inderscienceonline.com/ >
-      au < expected ; 2017 ; International Journal of Petroleum Engineering Volume 3 ; 3 ; https://www.inderscienceonline.com/ >
+      au < manifest ; 2017 ; International Journal of Petroleum Engineering Volume 3 ; 3 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -7713,7 +7713,7 @@
       param[journal_id] = ijsccps
 
       au < doNotProcess ; 2011-2016 ; International Journal of Social Computing and Cyber-Physical Systems Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
-      au < exists ; 2017-2019 ; International Journal of Social Computing and Cyber-Physical Systems Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
+      au < manifest ; 2017-2019 ; International Journal of Social Computing and Cyber-Physical Systems Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -9054,7 +9054,7 @@
 
       au < doNotProcess ; 2011-2012 ; International Journal of Web Science Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
       au < released ; 2013-2014 ; International Journal of Web Science Volume 2 ; 2 ; http://www.inderscienceonline.com/ >
-      au < exists ; 2017-2018 ; International Journal of Web Science Volume 3 ; 3 ; https://www.inderscienceonline.com/ >
+      au < manifest ; 2017-2018 ; International Journal of Web Science Volume 3 ; 3 ; https://www.inderscienceonline.com/ >
 
     }
 
