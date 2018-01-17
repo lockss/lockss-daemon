@@ -314,14 +314,14 @@
            ex: ..home/literatum/.../ijpe.2015.1.issue-3/ijpe.2015.071062/20150811/ijpe.2015.071062.fp.png_v03 
          -->
     <list>
-    <string>://[^/]+/(templates/jsp|(css|img|js)Jawr|pb-assets|resources|sda|wro)/</string>
-    <string>/(assets|css|img|js|wro)/.+\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$</string>
-    <string>://[^/]+/na[0-9]+/home/(readonly|literatum)/publisher/.*(/covergifs/.*\.jpg|\.fp\.png(_v[0-9]+)?)$</string>
+      <string>://[^/]+/(templates/jsp|(css|img|js)Jawr|pb-assets|resources|sda|wro)/</string>
+      <string>/(assets|css|img|js|wro)/.+\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$</string>
+      <string>://[^/]+/na[0-9]+/home/(readonly|literatum)/publisher/.*(/covergifs/.*\.jpg|\.fp\.png(_v[0-9]+)?)$</string>
     </list>
   </entry>
   <!-- don't worry about polling for those low-importance files that will 
        repair from peer in time (eg due to versioning, etc) -->
-   <entry>
+  <entry>
     <string>au_url_poll_result_weight</string>
     <list>
       <string>://[^/]+/(templates/jsp|(css|img|js)Jawr|pb-assets|resources|sda|wro)/, 0</string>
