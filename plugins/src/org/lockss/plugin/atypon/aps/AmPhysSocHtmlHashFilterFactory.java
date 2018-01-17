@@ -79,10 +79,11 @@ public class AmPhysSocHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFact
         },
         // toc - contents only
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "toc_content"),
-        // article
+        // article page, references
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article__content"),
         // XXX possible alternative filter HtmlNodeFilters.tag("article")
-        HtmlNodeFilters.tagWithAttribute("div", "class", "article_list"),
+        // Download Citations page
+        HtmlNodeFilters.tagWithAttribute("div", "class", "articleList"),
         
     };
     
@@ -98,9 +99,7 @@ public class AmPhysSocHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFact
         // HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-row-right"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "badges"),
         HtmlNodeFilters.tagWithAttribute("a", "class", "rightslink"),
-        // filter all lists, aggressive filtering
-        HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "rlist"),
-        // XXX alternatively, only reference items HtmlNodeFilters.tagWithAttributeRegex("li", "class", "references__item"),
+        HtmlNodeFilters.tagWithAttributeRegex("li", "class", "references__item"),
     };
     return super.createFilteredInputStream(au, in, encoding, 
                                            includeNodes, excludeNodes);
