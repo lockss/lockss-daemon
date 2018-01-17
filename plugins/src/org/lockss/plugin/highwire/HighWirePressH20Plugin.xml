@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>125</string>
+    <string>126</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>43</string>
+        <string>44</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -282,7 +282,8 @@
     <!-- these will not count towards poll results but will replicate from peer if above -->
     <string>au_url_poll_result_weight</string>
     <list>
-      <string>"/i[^.]+[.]short$", 0</string>
+      <string>"[.]short$", 0</string>
+      <string>"with-ds=yes$", 0</string>
       <string>"[.]figures-only$", 0</string>
       <string>"[.](css|js)$", 0</string>
       <string>"://[^/]+(?!.*/content/)(/[^/]+)+[.](gif|png)$", 0</string>
