@@ -52,6 +52,7 @@
       au < ClockssHighWirePressH20Plugin ; deepCrawl ; exists ; 2015 ; The Plant Cell Volume 27 ; 27 ; >
       au < ClockssHighWirePressH20Plugin ; deepCrawl ; exists ; 2016 ; The Plant Cell Volume 28 ; 28 ; >
       au < ClockssHWDrupalPlugin ; manifest ; exists ; 2017 ; The Plant Cell Volume 29 ; 29 ; >
+      au < ClockssHWDrupalPlugin ; expected ; exists ; 2018 ; The Plant Cell Volume 30 ; 30 ; >
 
     }
 
@@ -243,6 +244,9 @@
       au < ClockssHWDrupalPlugin ; manifest ; exists ; 2017 ; Plant Physiology Volume 173 ; 173 ; >
       au < ClockssHWDrupalPlugin ; manifest ; exists ; 2017 ; Plant Physiology Volume 174 ; 174 ; >
       au < ClockssHWDrupalPlugin ; manifest ; exists ; 2017 ; Plant Physiology Volume 175 ; 175 ; >
+      au < ClockssHWDrupalPlugin ; expected ; exists ; 2018 ; Plant Physiology Volume 176 ; 176 ; >
+      au < ClockssHWDrupalPlugin ; expected ; exists ; 2018 ; Plant Physiology Volume 177 ; 177 ; >
+      au < ClockssHWDrupalPlugin ; expected ; exists ; 2018 ; Plant Physiology Volume 178 ; 178 ; >
 
     }
 }
