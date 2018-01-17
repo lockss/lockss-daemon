@@ -40,11 +40,11 @@
     param[base_url] = http://bjr.boneandjoint.org.uk/
     #base_url changed, removing www.
 
-    au < besbjs.BESBJSDrupalPlugin ; ready ; 2012 ; Bone & Joint Research Volume 1 ; 1 >
-    au < besbjs.BESBJSDrupalPlugin ; ready ; 2013 ; Bone & Joint Research Volume 2 ; 2 >
-    au < besbjs.BESBJSDrupalPlugin ; ready ; 2014 ; Bone & Joint Research Volume 3 ; 3 >
-    au < besbjs.BESBJSDrupalPlugin ; ready ; 2015 ; Bone & Joint Research Volume 4 ; 4 >
-    au < besbjs.BESBJSDrupalPlugin ; ready ; 2016 ; Bone & Joint Research Volume 5 ; 5 >
+    au < besbjs.BESBJSDrupalPlugin ; releasing ; 2012 ; Bone & Joint Research Volume 1 ; 1 >
+    au < besbjs.BESBJSDrupalPlugin ; releasing ; 2013 ; Bone & Joint Research Volume 2 ; 2 >
+    au < besbjs.BESBJSDrupalPlugin ; releasing ; 2014 ; Bone & Joint Research Volume 3 ; 3 >
+    au < besbjs.BESBJSDrupalPlugin ; releasing ; 2015 ; Bone & Joint Research Volume 4 ; 4 >
+    au < besbjs.BESBJSDrupalPlugin ; releasing ; 2016 ; Bone & Joint Research Volume 5 ; 5 >
     au < besbjs.BESBJSDrupalPlugin ; expected ; 2017 ; Bone & Joint Research Volume 6 ; 6 >
     }
     {
