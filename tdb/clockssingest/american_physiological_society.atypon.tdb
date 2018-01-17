@@ -1,0 +1,260 @@
+{
+
+  publisher <
+    name = American Physiological Society ;
+    info[contract] = 2008 ;
+    info[tester] = 5 ;
+    info[poller] = 2
+  >
+
+  plugin = org.lockss.plugin.atypon.aps.ClockssAmPhysAtyponPlugin
+  implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
+  param[base_url] = http://www.physiology.org/
+  
+  comment[titles0] = Moved to Atypon 2017
+
+  {
+
+    title <
+      name = Advances in Physiology Education ;
+      issn = 1043-4046 ;
+      eissn = 1522-1229 
+    >
+
+    param[journal_id] = advances
+
+    {
+
+      au < testing ; exists ; 2017 ; Advances in Physiology Education Volume 41 ; 41 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = American Journal of Physiology - Cell Physiology ;
+      issn = 0363-6143 ;
+      eissn = 1522-1563 
+    >
+
+    param[journal_id] = ajpcell
+
+    {
+
+      au < testing ; exists ; 2017 ; American Journal of Physiology - Cell Physiology Volume 312 ; 312 ; >
+      au < testing ; exists ; 2017 ; American Journal of Physiology - Cell Physiology Volume 313 ; 313 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = American Journal of Physiology - Endocrinology and Metabolism ;
+      issn = 0193-1849 ;
+      eissn = 1522-1555 
+    >
+
+    param[journal_id] = ajpendo
+
+    {
+
+      au < testing ; exists ; 2017 ; American Journal of Physiology - Endocrinology and Metabolism Volume 312 ; 312 ; >
+      au < testing ; exists ; 2017 ; American Journal of Physiology - Endocrinology and Metabolism Volume 313 ; 313 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = American Journal of Physiology - Gastrointestinal and Liver Physiology ;
+      issn = 0193-1857 ;
+      eissn = 1522-1547 
+    >
+
+    param[journal_id] = ajpgi
+
+    {
+
+      au < testing ; exists ; 2017 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 312 ; 312 ; >
+      au < testing ; exists ; 2017 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 313 ; 313 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = American Journal of Physiology - Heart and Circulatory Physiology ;
+      issn = 0363-6135 ;
+      eissn = 1522-1539 
+    >
+
+    param[journal_id] = ajpheart
+
+    {
+
+      au < testing ; exists ; 2017 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 312 ; 312 ; >
+      au < testing ; exists ; 2017 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 313 ; 313 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = American Journal of Physiology - Lung Cellular and Molecular Physiology ;
+      issn = 1040-0605 ;
+      eissn = 1522-1504 
+    >
+
+    param[journal_id] = ajplung
+
+    {
+
+      au < testing ; exists ; 2017 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 312 ; 312 ; >
+      au < testing ; exists ; 2017 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 313 ; 313 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = American Journal of Physiology - Regulatory, Integrative and Comparative Physiology ;
+      issn = 0363-6119 ;
+      eissn = 1522-1490 
+    >
+
+    param[journal_id] = ajpregu
+
+    {
+
+      au < testing ; exists ; 2017 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 312 ; 312 ; >
+      au < testing ; exists ; 2017 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 313 ; 313 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = American Journal of Physiology - Renal Physiology ;
+      issn = 1931-857X ;
+      eissn = 1522-1466 
+    >
+
+    param[journal_id] = ajprenal
+    # other possible issn 0363-6127
+
+    {
+
+      au < testing ; exists ; 2017 ; American Journal of Physiology - Renal Physiology Volume 312 ; 312 ; >
+      au < testing ; exists ; 2017 ; American Journal of Physiology - Renal Physiology Volume 313 ; 313 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Journal of Applied Physiology ;
+      issn = 8750-7587 ;
+      eissn = 1522-1601 
+    >
+
+    param[journal_id] = jappl
+
+    {
+
+      au < testing ; exists ; 2017 ; Journal of Applied Physiology Volume 122 ; 122 ; >
+      au < testing ; exists ; 2017 ; Journal of Applied Physiology Volume 123 ; 123 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Journal of Neurophysiology ;
+      issn = 0022-3077 ;
+      eissn = 1522-1598 
+    >
+
+    param[journal_id] = jn
+
+    {
+
+      au < testing ; exists ; 2017 ; Journal of Neurophysiology Volume 117 ; 117 ; >
+      au < testing ; exists ; 2017 ; Journal of Neurophysiology Volume 118 ; 118 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Physiological Genomics ;
+      issn = 1094-8341 ;
+      eissn = 1531-2267 
+    >
+
+    param[journal_id] = physiolgenomics
+
+    {
+
+      au < testing ; exists ; 2017 ; Physiological Genomics Volume 49 ; 49 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Physiological Reviews ;
+      issn = 0031-9333 ;
+      eissn = 1522-1210 
+    >
+
+    param[journal_id] = physrev
+
+    {
+
+      au < testing ; exists ; 2017 ; Physiological Reviews Volume 97 ; 97 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Physiology ;
+      issn = 1548-9213 ;
+      eissn = 1548-9221 
+    >
+
+    param[journal_id] = physiologyonline
+
+    {
+
+      au < testing ; exists ; 2017 ; Physiology Volume 32 ; 32 ; >
+
+    }
+
+  }
+
+}
