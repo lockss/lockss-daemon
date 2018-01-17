@@ -1,0 +1,23 @@
+{
+
+  publisher <
+    name = Springer Science+Business Media ;
+    info[tester] = 6
+  >
+
+  plugin = org.lockss.plugin.springer.link.SpringerLinkBooksPlugin
+  param[base_url] = https://link.springer.com/
+
+   implicit < status ; status2 ; isbn ; eisbn ; year ; name ; param[book_isbn] ; hidden[proxy] >
+
+    {
+
+      title <
+        name = Springer Books ;
+        type = bookSeries
+      >
+
+      au < testing ; exists ; 978-3-319-46887-7 ; 978-3-319-46889-1 ; 2017 ; Africa's Population: In Search of a Demographic Dividend (978-3-319-46889-1) ; 978-3-319-46889-1 ; >
+      au < testing ; exists ; 978-3-319-49817-1 ; 978-3-319-49818-8 ; 2017 ; Regional Upgrading in Southern Europe (978-3-319-49818-8) ; 978-3-319-49818-8 ; >
+    }
+}
