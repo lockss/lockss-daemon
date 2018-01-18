@@ -17,11 +17,13 @@
 
     {
     plugin = org.lockss.plugin.atypon.GenericAtyponPlugin
-    param[base_url] = http://www.healthaffairs.org/
+    param[base_url] = https://www.healthaffairs.org/
     param[journal_id] = hlthaff
     implicit < status ; year ; name ; param[volume_name] >
     
     au < exists ; 2017 ; Health Affairs Volume 36 ; 36 >
+    au < exists ; 2018 ; Health Affairs Volume 37 ; 37 >
+
     }
 
     {
