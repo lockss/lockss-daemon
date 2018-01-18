@@ -292,6 +292,8 @@
     param[base_url] = http://www.kcajournals.com/
     param[journal_id] = KCAJBM
 
+#NOT READY - requires registration to access full-text content; we have sent an email 
+# to see if this can be turned off, otherwise not preservable in the GLN
     au < testing ; 2008 ; KCA Journal of Business Management Volume 1 ; 1 ; 2008 >
     au < testing ; 2009 ; KCA Journal of Business Management Volume 2 ; 2 ; 2009 >
     au < testing ; 2011 ; KCA Journal of Business Management Volume 3 ; 3 ; 2011 >
