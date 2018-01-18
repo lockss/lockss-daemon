@@ -37,7 +37,8 @@
     au < finished ; finished ; 2015 ; Therapeutics and Clinical Risk Management Volume 11 ; 11 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Therapeutics and Clinical Risk Management Volume 12 ; 12 ; 2016 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2017 ; Therapeutics and Clinical Risk Management Volume 13 ; 13 ; 2017 ; >
-    
+    au < expected ; exists ; 2018 ; Therapeutics and Clinical Risk Management Volume 14 ; 14 ; 2018 ; >
+
   }
 
   {
@@ -62,7 +63,8 @@
     au < finished ; finished ; 2015 ; Vascular Health and Risk Management Volume 11 ; 11 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Vascular Health and Risk Management Volume 12 ; 12 ; 2016 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2017 ; Vascular Health and Risk Management Volume 13 ; 13 ; 2017 ; >
-    
+    au < expected ; exists ; 2018 ; Vascular Health and Risk Management Volume 14 ; 14 ; 2018 ; >
+
   }
 
   {
@@ -87,7 +89,8 @@
     au < finished ; finished ; 2015 ; Neuropsychiatric Disease and Treatment Volume 11 ; 11 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Neuropsychiatric Disease and Treatment Volume 12 ; 12 ; 2016 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2017 ; Neuropsychiatric Disease and Treatment Volume 13 ; 13 ; 2017 ; >
-    
+    au < expected ; exists ; 2018 ; Neuropsychiatric Disease and Treatment Volume 14 ; 14 ; 2018 ; >
+
   }
 
   {
@@ -111,7 +114,8 @@
     au < finished ; finished ; 2015 ; Clinical Interventions in Aging Volume 10 ; 10 ; 2015 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Clinical Interventions in Aging Volume 11 ; 11 ; 2016 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2017 ; Clinical Interventions in Aging Volume 12 ; 12 ; 2017 ; >
-    
+    au < expected ; exists ; 2018 ; Clinical Interventions in Aging Volume 13 ; 13 ; 2018 ; >
+
   }
 
   {
@@ -135,7 +139,8 @@
     au < finished ; finished ; 2015 ; International Journal of Nanomedicine Volume 10 ; 10 ; 2015 ; >
     au < finished ; crawling ; 2016 ; International Journal of Nanomedicine Volume 11 ; 11 ; 2016 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2017 ; International Journal of Nanomedicine Volume 12 ; 12 ; 2017 ; >
-    
+    au < expected ; exists ; 2018 ; International Journal of Nanomedicine Volume 13 ; 13 ; 2018 ; >
+
   }
 
   {
@@ -159,7 +164,8 @@
     au < finished ; finished ; 2015 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 10 ; 10 ; 2015 ; >
     au < finished ; crawling ; 2016 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 11 ; 11 ; 2016 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2017 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 12 ; 12 ; 2017 ; >
-    
+    au < expected ; exists ; 2018 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 13 ; 13 ; 2018 ; >
+
   }
 
   {
@@ -181,7 +187,8 @@
     au < finished ; finished ; 2015 ; Journal of Multidisciplinary Healthcare Volume 8 ; 8 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Journal of Multidisciplinary Healthcare Volume 9 ; 9 ; 2016 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2017 ; Journal of Multidisciplinary Healthcare Volume 10 ; 10 ; 2017 ; >
-    
+    au < expected ; exists ; 2018 ; Journal of Multidisciplinary Healthcare Volume 11 ; 11 ; 2018 ; >
+
   }
 
   {
@@ -205,7 +212,8 @@
     au < finished ; finished ; 2015 ; Biologics: Targets and Therapy Volume 9 ; 9 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Biologics: Targets and Therapy Volume 10 ; 10 ; 2016 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2017 ; Biologics: Targets and Therapy Volume 11 ; 11 ; 2017 ; >
-    
+    au < expected ; exists ; 2018 ; Biologics: Targets and Therapy Volume 12 ; 12 ; 2018 ; >
+
   }
 
   {
@@ -228,7 +236,8 @@
     au < finished ; finished ; 2015 ; Clinical Ophthalmology Volume 9 ; 9 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Clinical Ophthalmology Volume 10 ; 10 ; 2016 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2017 ; Clinical Ophthalmology Volume 11 ; 11 ; 2017 ; >
-    
+    au < expected ; exists ; 2018 ; Clinical Ophthalmology Volume 12 ; 12 ; 2018 ; >
+
   }
 
   {
@@ -250,7 +259,8 @@
     au < finished ; finished ; 2015 ; Nanotechnology, Science and Applications Volume 8 ; 8 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Nanotechnology, Science and Applications Volume 9 ; 9 ; 2016 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2017 ; Nanotechnology, Science and Applications Volume 10 ; 10 ; 2017 ; >
-    
+    au < expected ; exists ; 2018 ; Nanotechnology, Science and Applications Volume 11 ; 11 ; 2018 ; >
+
   }
 
   {
@@ -273,7 +283,8 @@
     au < finished ; crawling ; 2015 ; Drug Design, Development and Therapy Volume 9 ; 9 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Drug Design, Development and Therapy Volume 10 ; 10 ; 2016 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2017 ; Drug Design, Development and Therapy Volume 11 ; 11 ; 2017 ; >
-    
+    au < expected ; exists ; 2018 ; Drug Design, Development and Therapy Volume 12 ; 12 ; 2018 ; >
+
   }
 
   {
@@ -296,7 +307,8 @@
     au < finished ; finished ; 2015 ; Patient Preference and Adherence Volume 9 ; 9 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Patient Preference and Adherence Volume 10 ; 10 ; 2016 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2017 ; Patient Preference and Adherence Volume 11 ; 11 ; 2017 ; >
-    
+    au < expected ; exists ; 2018 ; Patient Preference and Adherence Volume 12 ; 12 ; 2018 ; >
+
   }
 
   {
@@ -318,7 +330,8 @@
     au < finished ; finished ; 2015 ; OncoTargets and Therapy Volume 8 ; 8 ; 2015 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; OncoTargets and Therapy Volume 9 ; 9 ; 2016 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2017 ; OncoTargets and Therapy Volume 10 ; 10 ; 2017 ; >
-        
+    au < expected ; exists ; 2018 ; OncoTargets and Therapy Volume 11 ; 11 ; 2018 ; >
+
   }
 
   {
@@ -340,7 +353,8 @@
     au < finished ; finished ; 2015 ; Medical Devices: Evidence and Research Volume 8 ; 8 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Medical Devices: Evidence and Research Volume 9 ; 9 ; 2016 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2017 ; Medical Devices: Evidence and Research Volume 10 ; 10 ; 2017 ; >
-    
+    au < expected ; exists ; 2018 ; Medical Devices: Evidence and Research Volume 11 ; 11 ; 2018 ; >
+
   }
 
   {
@@ -362,7 +376,8 @@
     au < finished ; finished ; 2015 ; Advances and Applications in Bioinformatics and Chemistry Volume 8 ; 8 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Advances and Applications in Bioinformatics and Chemistry Volume 9 ; 9 ; 2016 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2017 ; Advances and Applications in Bioinformatics and Chemistry Volume 10 ; 10 ; 2017 ; >
-    
+    au < expected ; exists ; 2018 ; Advances and Applications in Bioinformatics and Chemistry Volume 11 ; 11 ; 2018 ; >
+
   }
 
   {
@@ -384,7 +399,8 @@
     au < finished ; finished ; 2015 ; Stem Cells and Cloning: Advances and Applications Volume 8 ; 8 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Stem Cells and Cloning: Advances and Applications Volume 9 ; 9 ; 2016 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2017 ; Stem Cells and Cloning: Advances and Applications Volume 10 ; 10 ; 2017 ; >
-    
+    au < expected ; exists ; 2018 ; Stem Cells and Cloning: Advances and Applications Volume 11 ; 11 ; 2018 ; >
+
   }
 
   {
@@ -406,7 +422,8 @@
     au < finished ; finished ; 2015 ; Journal of Asthma and Allergy Volume 8 ; 8 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Journal of Asthma and Allergy Volume 9 ; 9 ; 2016 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2017 ; Journal of Asthma and Allergy Volume 10 ; 10 ; 2017 ; >
-    
+    au < expected ; exists ; 2018 ; Journal of Asthma and Allergy Volume 11 ; 11 ; 2018 ; >
+
   }
 
   {
@@ -428,7 +445,8 @@
     au < finished ; finished ; 2015 ; Infection and Drug Resistance Volume 8 ; 8 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Infection and Drug Resistance Volume 9 ; 9 ; 2016 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2017 ; Infection and Drug Resistance Volume 10 ; 10 ; 2017 ; >
-    
+    au < expected ; exists ; 2018 ; Infection and Drug Resistance Volume 11 ; 11 ; 2018 ; >
+
   }
 
   {
@@ -449,7 +467,8 @@
     au < finished ; finished ; 2015 ; ClinicoEconomics and Outcomes Research Volume 7 ; 7 ; 2015 ; >
     au < finished ; crawling ; 2016 ; ClinicoEconomics and Outcomes Research Volume 8 ; 8 ; 2016 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2017 ; ClinicoEconomics and Outcomes Research Volume 9 ; 9 ; 2017 ; >
-    
+    au < expected ; exists ; 2018 ; ClinicoEconomics and Outcomes Research Volume 10 ; 10 ; 2018 ; >
+
   }
 
   {
@@ -493,7 +512,8 @@
     au < finished ; finished ; 2015 ; Local and Regional Anesthesia Volume 8 ; 8 ; 2015 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2016 ; Local and Regional Anesthesia Volume 9 ; 9 ; 2016 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2017 ; Local and Regional Anesthesia Volume 10 ; 10 ; 2017 ; >
-    
+    au < expected ; exists ; 2018 ; Local and Regional Anesthesia Volume 11 ; 11 ; 2018 ; >
+
   }
 
   {
@@ -515,7 +535,8 @@
     au < finished ; finished ; 2015 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 8 ; 8 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 9 ; 9 ; 2016 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2017 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 10 ; 10 ; 2017 ; >
-    
+    au < expected ; exists ; 2018 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 11 ; 11 ; 2018 ; >
+
   }
 
   {
@@ -537,7 +558,8 @@
     au < finished ; finished ; 2015 ; Clinical, Cosmetic and Investigational Dermatology Volume 8 ; 8 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Clinical, Cosmetic and Investigational Dermatology Volume 9 ; 9 ; 2016 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2017 ; Clinical, Cosmetic and Investigational Dermatology Volume 10 ; 10 ; 2017 ; >
-    
+    au < expected ; exists ; 2018 ; Clinical, Cosmetic and Investigational Dermatology Volume 11 ; 11 ; 2018 ; >
+
   }
 
   {
@@ -559,7 +581,8 @@
     au < finished ; finished ; 2015 ; Clinical and Experimental Gastroenterology Volume 8 ; 8 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Clinical and Experimental Gastroenterology Volume 9 ; 9 ; 2016 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2017 ; Clinical and Experimental Gastroenterology Volume 10 ; 10 ; 2017 ; >
-    
+    au < expected ; exists ; 2018 ; Clinical and Experimental Gastroenterology Volume 11 ; 11 ; 2018 ; >
+
   }
 
   {
@@ -581,7 +604,8 @@
     au < finished ; finished ; 2015 ; Journal of Inflammation Research Volume 8 ; 8 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Journal of Inflammation Research Volume 9 ; 9 ; 2016 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2017 ; Journal of Inflammation Research Volume 10 ; 10 ; 2017 ; >
-    
+    au < expected ; exists ; 2018 ; Journal of Inflammation Research Volume 11 ; 11 ; 2018 ; >
+
   }
 
   {
@@ -603,7 +627,8 @@
     au < finished ; finished ; 2015 ; The Application of Clinical Genetics Volume 8 ; 8 ; 2015 ; >
     au < finished ; crawling ; 2016 ; The Application of Clinical Genetics Volume 9 ; 9 ; 2016 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2017 ; The Application of Clinical Genetics Volume 10 ; 10 ; 2017 ; >
-    
+    au < expected ; exists ; 2018 ; The Application of Clinical Genetics Volume 11 ; 11 ; 2018 ; >
+
   }
 
   {
@@ -625,7 +650,8 @@
     au < finished ; finished ; 2015 ; International Journal of Nephrology and Renovascular Disease Volume 8 ; 8 ; 2015 ; >
     au < finished ; crawling ; 2016 ; International Journal of Nephrology and Renovascular Disease Volume 9 ; 9 ; 2016 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2017 ; International Journal of Nephrology and Renovascular Disease Volume 10 ; 10 ; 2017 ; >
-    
+    au < expected ; exists ; 2018 ; International Journal of Nephrology and Renovascular Disease Volume 11 ; 11 ; 2018 ; >
+
   }
 
   {
@@ -647,7 +673,8 @@
     au < finished ; finished ; 2015 ; Pharmacogenomics and Personalized Medicine Volume 8 ; 8 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Pharmacogenomics and Personalized Medicine Volume 9 ; 9 ; 2016 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2017 ; Pharmacogenomics and Personalized Medicine Volume 10 ; 10 ; 2017 ; >
-    
+    au < expected ; exists ; 2018 ; Pharmacogenomics and Personalized Medicine Volume 11 ; 11 ; 2018 ; >
+
   }
 
   {
@@ -669,7 +696,8 @@
     au < finished ; finished ; 2015 ; International Journal of General Medicine Volume 8 ; 8 ; 2015 ; >
     au < finished ; crawling ; 2016 ; International Journal of General Medicine Volume 9 ; 9 ; 2016 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2017 ; International Journal of General Medicine Volume 10 ; 10 ; 2017 ; >
-    
+    au < expected ; exists ; 2018 ; International Journal of General Medicine Volume 11 ; 11 ; 2018 ; >
+
   }
 
   {
@@ -691,7 +719,8 @@
     au < finished ; finished ; 2015 ; Open Access Surgery Volume 8 ; 8 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Open Access Surgery Volume 9 ; 9 ; 2016 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2017 ; Open Access Surgery Volume 10 ; 10 ; 2017 ; >
-    
+    au < expected ; exists ; 2018 ; Open Access Surgery Volume 11 ; 11 ; 2018 ; >
+
   }
 
   {
@@ -713,7 +742,8 @@
     au < finished ; finished ; 2015 ; Journal of Pain Research Volume 8 ; 8 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Journal of Pain Research Volume 9 ; 9 ; 2016 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2017 ; Journal of Pain Research Volume 10 ; 10 ; 2017 ; >
-    
+    au < expected ; exists ; 2018 ; Journal of Pain Research Volume 11 ; 11 ; 2018 ; >
+
   }
 
   {
@@ -735,7 +765,8 @@
     au < finished ; finished ; 2015 ; Integrated Blood Pressure Control Volume 8 ; 8 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Integrated Blood Pressure Control Volume 9 ; 9 ; 2016 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2017 ; Integrated Blood Pressure Control Volume 10 ; 10 ; 2017 ; >
-    
+    au < expected ; exists ; 2018 ; Integrated Blood Pressure Control Volume 11 ; 11 ; 2018 ; >
+
   }
 
   {
@@ -756,7 +787,8 @@
     au < finished ; finished ; 2015 ; Clinical Epidemiology Volume 7 ; 7 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Clinical Epidemiology Volume 8 ; 8 ; 2016 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2017 ; Clinical Epidemiology Volume 9 ; 9 ; 2017 ; >
-  
+    au < expected ; exists ; 2018 ; Clinical Epidemiology Volume 10 ; 10 ; 2018 ; >
+
   }
 
   {
@@ -777,7 +809,8 @@
     au < finished ; finished ; 2015 ; Drug, Healthcare and Patient Safety Volume 7 ; 7 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Drug, Healthcare and Patient Safety Volume 8 ; 8 ; 2016 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2017 ; Drug, Healthcare and Patient Safety Volume 9 ; 9 ; 2017 ; >
-    
+    au < expected ; exists ; 2018 ; Drug, Healthcare and Patient Safety Volume 10 ; 10 ; 2018 ; >
+
   }
 
   {
@@ -798,7 +831,8 @@
     au < finished ; finished ; 2015 ; International Journal of Women's Health Volume 7 ; 7 ; 2015 ; >
     au < finished ; crawling ; 2016 ; International Journal of Women's Health Volume 8 ; 8 ; 2016 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2017 ; International Journal of Women's Health Volume 9 ; 9 ; 2017 ; >
-    
+    au < expected ; exists ; 2018 ; International Journal of Women's Health Volume 10 ; 10 ; 2018 ; >
+
   }
 
   {
@@ -820,7 +854,8 @@
     au < finished ; finished ; 2015 ; International Medical Case Reports Journal Volume 8 ; 8 ; 2015 ; >
     au < finished ; crawling ; 2016 ; International Medical Case Reports Journal Volume 9 ; 9 ; 2016 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2017 ; International Medical Case Reports Journal Volume 10 ; 10 ; 2017 ; >
-    
+    au < expected ; exists ; 2018 ; International Medical Case Reports Journal Volume 11 ; 11 ; 2018 ; >
+
   }
 
   {
@@ -841,7 +876,8 @@
     au < finished ; finished ; 2015 ; Open Access Emergency Medicine Volume 7 ; 7 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Open Access Emergency Medicine Volume 8 ; 8 ; 2016 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2017 ; Open Access Emergency Medicine Volume 9 ; 9 ; 2017 ; >
-    
+    au < expected ; exists ; 2018 ; Open Access Emergency Medicine Volume 10 ; 10 ; 2018 ; >
+
   }
 
   {
@@ -884,7 +920,8 @@
     au < finished ; finished ; 2015 ; Reports in Medical Imaging Volume 8 ; 8 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Reports in Medical Imaging Volume 9 ; 9 ; 2016 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2017 ; Reports in Medical Imaging Volume 10 ; 10 ; 2017 ; >
-    
+    au < expected ; exists ; 2018 ; Reports in Medical Imaging Volume 11 ; 11 ; 2018 ; >
+
   }
 
   {
@@ -905,7 +942,8 @@
     au < finished ; finished ; 2015 ; Research and Reports in Urology Volume 7 ; 7 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Research and Reports in Urology Volume 8 ; 8 ; 2016 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2017 ; Research and Reports in Urology Volume 9 ; 9 ; 2017 ; >
-    
+    au < expected ; exists ; 2018 ; Research and Reports in Urology Volume 10 ; 10 ; 2018 ; >
+
   }
 
   {
@@ -926,7 +964,8 @@
     au < finished ; finished ; 2015 ; Open Access Journal of Clinical Trials Volume 7 ; 7 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Open Access Journal of Clinical Trials Volume 8 ; 8 ; 2016 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2017 ; Open Access Journal of Clinical Trials Volume 9 ; 9 ; 2017 ; >
-    
+    au < expected ; exists ; 2018 ; Open Access Journal of Clinical Trials Volume 10 ; 10 ; 2018 ; >
+
   }
 
   {
