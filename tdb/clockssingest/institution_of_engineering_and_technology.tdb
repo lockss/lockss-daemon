@@ -24,11 +24,11 @@
       param[journal_id] = el
       #from Vol 1 in 1965
 
-      au < crawling ; exists ; 2012 ;  Electronics Letters Volume 48 ; 48 ; >
+      au < frozen ; exists ; 2012 ;  Electronics Letters Volume 48 ; 48 ; >
       au < frozen ; exists ; 2013 ;  Electronics Letters Volume 49 ; 49 ; >
       au < frozen ; exists ; 2014 ; Electronics Letters Volume 50 ; 50 ; >
       au < frozen ; exists ; 2015 ; Electronics Letters Volume 51 ; 51 ; >
-      au < crawling ; exists ; 2016 ; Electronics Letters Volume 52 ; 52 ; >
+      au < frozen ; exists ; 2016 ; Electronics Letters Volume 52 ; 52 ; >
       au < crawling ; exists ; 2017 ; Electronics Letters Volume 53 ; 53 ; >
 
     }
@@ -183,7 +183,7 @@
       au < frozen ; exists ; 2013 ;  IET Electric Power Applications Volume 7 ; 7 ; >
       au < frozen ; exists ; 2014 ; IET Electric Power Applications Volume 8 ; 8 ; >
       au < frozen ; exists ; 2015 ; IET Electric Power Applications Volume 9 ; 9 ; >
-      au < crawling ; exists ; 2016 ; IET Electric Power Applications Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2016 ; IET Electric Power Applications Volume 10 ; 10 ; >
       au < crawling ; exists ; 2017 ; IET Electric Power Applications Volume 11 ; 11 ; >
 
 
@@ -500,7 +500,7 @@
       param[journal_id] = iet-syb
 
       au < frozen ; exists ; 2012 ;  IET Systems Biology Volume 6 ; 6 ; >
-      au < crawling ; exists ; 2013 ;  IET Systems Biology Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2013 ;  IET Systems Biology Volume 7 ; 7 ; >
       au < frozen ; exists ; 2014 ; IET Systems Biology Volume 8 ; 8 ; >
       au < frozen ; exists ; 2015 ; IET Systems Biology Volume 9 ; 9 ; >
       au < frozen ; exists ; 2016 ; IET Systems Biology Volume 10 ; 10 ; >
