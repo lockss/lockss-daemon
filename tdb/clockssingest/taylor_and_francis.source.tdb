@@ -18,23 +18,11 @@
     hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[year] >
     
+    # this was for 2 triggered titles only
     au < readySource ; finished ; 2013 ; Taylor & Francis Source Content 2013 ; 2013 >
+    #For all ongoing T&F deliveries
+    au < expected ; exists ; 2018 ; Taylor & Francis Source Content 2017 ; 2018 >
     
-
-  }
-   {
-  
-    title <
-      name = Taylor & Francis new Source Content
-    >
-    
-    plugin = org.lockss.plugin.taylorandfrancis.ClockssTaylorAndFrancisSourcePlugin
-    param[base_url] = http://content5.lockss.org/sourcefiles/taylorfrancis-released/
-    hidden[proxy] = DIRECT
-    implicit < status ; status2 ; year ; name ; param[year] >
-    
-
-    au < testing ; exists ; 2017 ; Taylor & Francis Source Content 2017 ; 2017 >
 
   }
   
