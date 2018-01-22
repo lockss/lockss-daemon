@@ -21,12 +21,12 @@
       param[base_url] = http://journal.pda.org/
       implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2012 ; Journal of the American Heart Association Volume 66 ; 66 ; >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2013 ; Journal of the American Heart Association Volume 67 ; 67 ; >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2014 ; Journal of the American Heart Association Volume 68 ; 68 ; >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2015 ; Journal of the American Heart Association Volume 69 ; 69 ; >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2016 ; Journal of the American Heart Association Volume 70 ; 70 ; >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2017 ; Journal of the American Heart Association Volume 71 ; 71 ; >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; Journal of the American Heart Association Volume 66 ; 66 ; >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2013 ; Journal of the American Heart Association Volume 67 ; 67 ; >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2014 ; Journal of the American Heart Association Volume 68 ; 68 ; >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2015 ; Journal of the American Heart Association Volume 69 ; 69 ; >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2016 ; Journal of the American Heart Association Volume 70 ; 70 ; >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2017 ; Journal of the American Heart Association Volume 71 ; 71 ; >
 
   }
 
