@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
- Copyright (c) 2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2014-2018 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -206,7 +202,7 @@ public class FuncContentConfigurationService extends LockssTestCase {
 
     result = proxy.addAuById(auId4);
     assertFalse(result.getIsSuccess());
-    assertEquals("Error creating AU: bad config value", result.getMessage());
+    assertEquals("bad config value", result.getMessage());
     assertNull(pluginMgr.getAuFromId(auId4));
   }
 
@@ -265,7 +261,7 @@ public class FuncContentConfigurationService extends LockssTestCase {
     assertNotNull(pluginMgr.getAuFromId(auId3));
     result = results.get(1);
     assertFalse(result.getIsSuccess());
-    assertEquals("Error creating AU: bad config value", result.getMessage());
+    assertEquals("bad config value", result.getMessage());
     assertNull(pluginMgr.getAuFromId(auId4));
   }
 

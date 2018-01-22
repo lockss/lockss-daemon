@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
- Copyright (c) 2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2014-2018 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,9 +28,14 @@
 package org.lockss.ws.content;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import javax.jws.WebService;
 import org.lockss.app.LockssDaemon;
+import org.lockss.config.Configuration;
+import org.lockss.daemon.TitleConfig;
+import org.lockss.remote.RemoteApi;
 import org.lockss.remote.RemoteApi.BatchAuStatus;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
@@ -66,28 +67,10 @@ public class ContentConfigurationServiceImpl implements
     final String DEBUG_HEADER = "addByAuId(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auId = " + auId);
 
-    ContentConfigurationResult result = null;
+    List<String> auIds = new ArrayList<String>();
+    auIds.add(auId);
 
-    // Add the archival unit.
-    BatchAuStatus status =
-	LockssDaemon.getLockssDaemon().getRemoteApi().addByAuId(auId);
-
-    // Handle the result.
-    BatchAuStatus.Entry statusEntry = status.getStatusList().get(0);
-    if (statusEntry.isOk()) {
-      if (log.isDebug()) log.debug("Success configuring AU '"
-	  + statusEntry.getName() + "': " + statusEntry.getExplanation());
-
-      result = new ContentConfigurationResult(auId, statusEntry.getName(),
-	  Boolean.TRUE, statusEntry.getExplanation());
-    } else {
-      log.error("Error configuring AU '" + statusEntry.getName() + "': "
-	  + statusEntry.getExplanation());
-
-      result = new ContentConfigurationResult(auId, statusEntry.getName(),
-	  Boolean.FALSE, statusEntry.getExplanation());
-    }
-
+    ContentConfigurationResult result = addAusByIdList(auIds).get(0);
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
     return result;
   }
@@ -112,9 +95,57 @@ public class ContentConfigurationServiceImpl implements
     List<ContentConfigurationResult> results =
 	new ArrayList<ContentConfigurationResult>(auIds.size());
 
+    RemoteApi remoteApi = LockssDaemon.getLockssDaemon().getRemoteApi();
+    String[] auIdArray = new String[auIds.size()];
+    int index = 0;
+
+    Map<String, Configuration> titleConfigs =
+	new HashMap<String, Configuration>();
+
     // Loop  through all the Archival Unit identifiers.
     for (String auId : auIds) {
-      results.add(addAuById(auId));
+      // Populate the array of Archival Unit identifiers.
+      auIdArray[index++] = auId;
+
+      // Get the configuration of the Archival Unit.
+      TitleConfig titleConfig = remoteApi.findTitleConfig(auId);
+
+      // Check whether the configuration was found.
+      if (titleConfig != null) {
+        // Yes: Add it to the map.
+        titleConfigs.put(auId,  titleConfig.getConfig());
+      }
+    }
+
+    // Add all the archival units.
+    BatchAuStatus status = remoteApi.batchAddAus(RemoteApi.BATCH_ADD_ADD,
+	auIdArray, null, null, titleConfigs, new HashMap<String, String>(),
+	null);
+
+    index = 0;
+
+    // Loop through all the results.
+    for (BatchAuStatus.Entry entry : status.getUnsortedStatusList()) {
+      BatchAuStatus entryStatus = new BatchAuStatus();
+      entryStatus.add(entry);
+
+      ContentConfigurationResult result = null;
+
+      if (entry.isOk()) {
+        if (log.isDebug()) log.debug("Success configuring AU '"
+  	  + entry.getName() + "': " + entry.getExplanation());
+
+        result = new ContentConfigurationResult(auIdArray[index++],
+            entry.getName(), Boolean.TRUE, entry.getExplanation());
+      } else {
+        log.error("Error configuring AU '" + entry.getName() + "': "
+  	  + entry.getExplanation());
+
+        result = new ContentConfigurationResult(auIdArray[index++],
+            entry.getName(), Boolean.FALSE, entry.getExplanation());
+      }
+
+      results.add(result);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "results = " + results);
