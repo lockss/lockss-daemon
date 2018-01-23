@@ -61,8 +61,8 @@ public class TestHighWirePressH20Plugin extends LockssTestCase {
   static final String HW_REPAIR_FROM_PEER_REGEXP[] = 
     {
         "[.](css|js)$",
-        "://[^/]+(?!.*/content/)(/[^/]+)+[.](gif|png)$",
-        "://[^/]+(/shared/img/).*[.](gif|png)$"
+        "://[^/]+(?!.*/content/)(/[^/]+)+[.](gif|png|jpg)$",
+        "://[^/]+(/shared/img/).*[.](gif|png|jpg)$"
     };
 
   private DefinablePlugin plugin;
