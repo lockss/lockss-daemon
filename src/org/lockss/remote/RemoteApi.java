@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -1432,7 +1428,7 @@ public class RemoteApi
     public int getOkCnt() {
       return ok;
     }
-    void add(BatchAuStatus.Entry status) {
+    public void add(BatchAuStatus.Entry status) {
       sortedList = null;
       statusList.add(status);
       if (status.order == STATUS_ORDER_NORM) {
@@ -1511,7 +1507,12 @@ public class RemoteApi
 	return status;
       }
       public boolean isOk() {
-	return status == null;
+	if (status == null) {
+	  return true;
+	} else if (order == STATUS_ORDER_NORM) {
+	  return true;
+	}
+	return false;
       }
       public String getExplanation() {
 	return explanation;
@@ -2069,7 +2070,7 @@ public class RemoteApi
    * @param auId A String with the archival unit identifier.
    * @return a TitleConfig with the title configuration of the archival unit.
    */
-  private TitleConfig findTitleConfig(String auId) {
+  public TitleConfig findTitleConfig(String auId) {
     // Loop  through all the title configurations.
     for (TitleConfig tc : pluginMgr.findAllTitleConfigs()) {
       // Check whether this is the title configuration of the archival unit.
