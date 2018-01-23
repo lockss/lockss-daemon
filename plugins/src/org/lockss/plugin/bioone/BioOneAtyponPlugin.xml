@@ -6,14 +6,14 @@
   <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.bioone.BioOneAtyponPlugin</string>
-  </entry> 
+  </entry>
   <entry>
     <string>plugin_name</string>
     <string>BioOne Plugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>34</string>
+    <string>35</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -31,8 +31,8 @@
         <string>6</string>
       </entry>
     </map>
-  </entry>  
-<!-- Now a child of BaseAtypon which lives in a different directory "atypon" -->  
+  </entry>
+<!-- Now a child of BaseAtypon which lives in a different directory "atypon" -->
   <entry>
     <string>plugin_parent</string>
     <string>org.lockss.plugin.atypon.BaseAtyponPlugin</string>
@@ -40,12 +40,12 @@
   <entry>
     <string>plugin_parent_version</string>
     <string>83</string>
-  </entry>   
+  </entry>
   <entry>
     <string>au_name</string>
     <string>"BioOne Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
-<!--  This needs to be in the child because of the special case for the 'coas' journal -->  
+<!--  This needs to be in the child because of the special case for the 'coas' journal -->
   <entry>
     <string>au_feature_urls</string>
     <map>
@@ -80,8 +80,8 @@
         </map>
       </entry>
     </map>
-  </entry>  
-<!--  the pdf filter, article iterator, link extractor, & metadata extractor come from BaseAtypon inheritance -->  
+  </entry>
+<!--  the pdf filter, article iterator, link extractor, & metadata extractor come from BaseAtypon inheritance -->
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.bioone.BioOneAtyponHtmlHashFilterFactory</string>

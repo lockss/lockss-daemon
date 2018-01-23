@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -50,6 +50,13 @@ public class BioOneAtyponHtmlCrawlFilterFactory implements FilterFactory {
       throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
 
+        // filtering to prevent over-crawl: header, mainFooter, articleNav, articlePageHeader, references
+        HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "mainFooter"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "articleNav"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "articlePageHeader"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "[rR]eferences"),
+
         // Can exclude this entire item because we need the download citation links
         //HtmlNodeFilters.tagWithAttribute("div", "class", "relatedContent"),
         // instead we shall filter out the following components on an article page:
@@ -68,7 +75,7 @@ public class BioOneAtyponHtmlCrawlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "breadcrumbs"),
 
         // Contains reverse citations
-        HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "citedBy"),
     };
     return new HtmlFilterInputStream(in,
                                      encoding,

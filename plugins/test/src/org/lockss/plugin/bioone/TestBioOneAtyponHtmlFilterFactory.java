@@ -3,7 +3,7 @@
  */
 /*
 
- Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -67,14 +67,23 @@ public class TestBioOneAtyponHtmlFilterFactory extends LockssTestCase {
           " <div class=\"columnBlock\">" +
           "   <div class=\"columnBlock\">" +
           "    <h2>Article Views</h2>" +
-          "    <div class=\"itemContent\" id=\"articleViews\"></div>" +
+          "    <div class=\"itemContent\" id=\"articleViews\">" +
+          "     <p class=\"browseCurrent\"><a href=\"/doi/abs/10.2994/1808.0.CO%3B2\">Abstract &amp; References</a></p>" +
+          "     <p><a href=\"/doi/full/10.2994/1808.0.CO%3B2\">Full Text</a></p>" +
+          "     <p><a href=\"/doi/pdf/10.2994/1808.0.CO%3B2\">PDF</a>" +
+          "     \n" +
+          "     (99 KB)\n" +
+          "     </p>" +
+          "    </div>" +
           "   </div>" +
           "   <div class=\"columnBlock\">" +
           "    <h2>Article Tools</h2>" +
-          "    <div class=\"itemContent\" id=\"articleTools\"></div>" +
+          "    <div class=\"itemContent\" id=\"articleTools\">" +
+          "      <p><a href=\"/action/showCitFormats?doi=10.5358%2Fhsj.32.1\">Download to Citation Manager</a></p>" + 
+          "    </div>" +
           "   </div>" +
           "   <div class=\"columnBlock\">" +
-          "    <h2>Related Article Sarch</h2>" +
+          "    <h2>Related Article Search</h2>" +
           "    <div class=\"itemContent\" id=\"relatedArticleSearch\"></div>" +
           "   </div>" +
           "   <div class=\"columnBlock\">" +
@@ -87,7 +96,7 @@ public class TestBioOneAtyponHtmlFilterFactory extends LockssTestCase {
           "      <p><a  href=\"/servlet/linkout?type=google-cite&doi=10.3106%2F041.035.0104\">Google Scholar</a></p>" +
           "     </div>" +
           "   </div>" +
-          "</div>" +
+          " </div>" +
           "</div>" +
           "</div>";
 
@@ -96,7 +105,8 @@ public class TestBioOneAtyponHtmlFilterFactory extends LockssTestCase {
    * Variant to test with Crawl Filter
    */
 
-  /* these string html bits are unique to crawl filtering */
+  /* these string html bits are unique to crawl filtering
+   * check that citation manager links are collected */
   private static final String rightColumnCrawlFiltered = 
       "<div id=\"contentSidebar\">" +
           "<div class=\"relatedContent\">" +
@@ -107,10 +117,12 @@ public class TestBioOneAtyponHtmlFilterFactory extends LockssTestCase {
           "   </div>" +
           "   <div class=\"columnBlock\">" +
           "    <h2>Article Tools</h2>" +
-          "    <div class=\"itemContent\" id=\"articleTools\"></div>" +
+          "    <div class=\"itemContent\" id=\"articleTools\">" +
+          "      <p><a href=\"/action/showCitFormats?doi=10.5358%2Fhsj.32.1\">Download to Citation Manager</a></p>" + 
+          "    </div>" +
           "   </div>" +
           "   <div class=\"columnBlock\">" +
-          "    <h2>Related Article Sarch</h2>" +
+          "    <h2>Related Article Search</h2>" +
           "    " +
           "   </div>" +
           "   <div class=\"columnBlock\">" +
@@ -121,7 +133,7 @@ public class TestBioOneAtyponHtmlFilterFactory extends LockssTestCase {
           "     <h2>Citing Articles</h2>" +
           "     " +
           "   </div>" +
-          "</div>" +
+          " </div>" +
           "</div>" +
           "</div>";
 
@@ -169,9 +181,7 @@ public class TestBioOneAtyponHtmlFilterFactory extends LockssTestCase {
           "<a class=\"articleToolsNav\" href=\"/doi/full/10.1111/x\">next article �</a>" +
           "</div>";
   private static final String articleNavFiltered=
-      "<div class=\"articleNav\">" +
-          "<span class=\"navSearchColon\"> : </span>" +
-          "</div>";
+      "";
   private static final String issueNav=
       "<div class=\"issueNav\">Jun 2010 : Volume 45 Issue 1 |" +
           "<!--<div id=\"nextprev\">-->" +
@@ -188,7 +198,8 @@ public class TestBioOneAtyponHtmlFilterFactory extends LockssTestCase {
   private static final String issueNavFiltered=
       "";
   private static final String breadcrumb=
-      "<div id=\"breadcrumbs\">" +
+      "<div class=\"articlePageHeader\">" +
+          "<div id=\"breadcrumbs\">" +
           "<a href=\"/\">Home</a>" +
           "    / " +
           "<a href=\"/action/showPublications?type=byAlphabet\">All Titles</a>" +
@@ -205,6 +216,7 @@ public class TestBioOneAtyponHtmlFilterFactory extends LockssTestCase {
           "       / <span class=\"title\">" +
           "               pg(s) 1-26" +
           "</span>" +
+          "</div>" +
           "</div>";
 
   private static final String breadcrumbFiltered=
@@ -230,19 +242,19 @@ public class TestBioOneAtyponHtmlFilterFactory extends LockssTestCase {
 
       inA = fact.createFilteredInputStream(mau, new StringInputStream(leftColumnTOC),
           ENC);
-      assertEquals(leftColumnTOCFiltered,StringUtil.fromInputStream(inA));      
+      assertEquals(leftColumnTOCFiltered,StringUtil.fromInputStream(inA));
 
       inA = fact.createFilteredInputStream(mau, new StringInputStream(articleNav),
           ENC);
-      assertEquals(articleNavFiltered,StringUtil.fromInputStream(inA));      
+      assertEquals(articleNavFiltered,StringUtil.fromInputStream(inA));
 
       inA = fact.createFilteredInputStream(mau, new StringInputStream(issueNav),
           ENC);
-      assertEquals(issueNavFiltered,StringUtil.fromInputStream(inA));      
+      assertEquals(issueNavFiltered,StringUtil.fromInputStream(inA));
 
       inA = fact.createFilteredInputStream(mau, new StringInputStream(breadcrumb),
           ENC);
-      assertEquals(breadcrumbFiltered,StringUtil.fromInputStream(inA));      
+      assertEquals(breadcrumbFiltered,StringUtil.fromInputStream(inA));
       
     }
   }
@@ -255,82 +267,83 @@ public class TestBioOneAtyponHtmlFilterFactory extends LockssTestCase {
    * These html bits are unique to hashing
    */
   private static final String headerHtml =
-      "<div id=\"header\">" +                                                                                                                                                             
-          "<div id=\"bannerLayout\">" +                                                                                                                                                       
-          "<div id=\"search\">" +                                                                                                                                                             
-          "  <form action=\"/action/doSearch\" name=\"simpleQuickSearchForm1\" method=\"get\"><span class=\"qSearchLabel\">search</span>" +                                                   
-          "    <input id=\"searchQuery\" />" +                                                                                                                                                
-          "    <input id=\"foo\" />" +                                                                                                                                                        
-          "  </form>" +                                                                                                                                                                       
-          "  <span class=\"searchLink\"><a href=\"/search/advanced\">Advanced Search</a></span>" +                                                                                            
-          "</div>" +                                                                                                                                                                          
-          "<!-- placeholder id=null, description=Header-Mobile Button -->" +                                                                                                                  
-          "<div id=\"bannerLogo\">" +                                                                                                                                                         
-          "   <a href=\"/\"><img src=\"/templates/logo\" alt=\"BioOne\" width=\"165\" height=\"54\" /></a>" +                                                                                 
-          "</div>" +                                                                                                                                                                          
-          "</div>" +                                                                                                                                                                          
-          "<div id=\"pageHeaderLayout\">" +                                                                                                                                                   
-          "<div id=\"headerLogo\" class=\"swirlHeader\" title=\"Stanford University\">" +                                                                                                     
-          "Brought to you by: Stanford University" +                                                                                                                                          
-          "</div>" +                                                                                                                                                                          
-          "</div>" +                                                                                                                                                                          
-          "</div>";
+      "<div id=\"header\">" +
+          "<div id=\"bannerLayout\">" +
+          "<div id=\"search\">" +
+          "  <form action=\"/action/doSearch\" name=\"simpleQuickSearchForm1\" method=\"get\"><span class=\"qSearchLabel\">search</span>" +
+          "    <input id=\"searchQuery\" />" +
+          "    <input id=\"foo\" />" +
+          "  </form>" +
+          "  <span class=\"searchLink\"><a href=\"/search/advanced\">Advanced Search</a></span>" +
+          "</div>" +
+          "<!-- placeholder id=null, description=Header-Mobile Button -->" +
+          "<div id=\"bannerLogo\">" +
+          "   <a href=\"/\"><img src=\"/templates/logo\" alt=\"BioOne\" width=\"165\" height=\"54\" /></a>" +
+          "</div>" +
+          "</div>" +
+          "<div id=\"pageHeaderLayout\">" +
+          "<div id=\"headerLogo\" class=\"swirlHeader\" title=\"Stanford University\">" +
+          "Brought to you by: Stanford University" +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "";
   private static final String headerHtmlFiltered = "";
 
   /* script and google translate element */
-  private static final String scriptHtml =                                                                                                                                                              
-      "<div style=\"float:none\"><div style=\"float:right\"><div class=\"gWidget\">" +                                                                    
-          "<!-- placeholder id=null, description=Google Translator Widget -->" +                                                                                                              
-          "<div style=\"margin-left:10px;\"><div id=\"google_translate_element\"></div><script>" +                                                                                            
-          "function googleTranslateElementInit() {" +                                                                                                                                         
-          "  new google.translate.TranslateElement({" +                                                                                                                                       
-          "  }, 'google_translate_element');" +                                                                                                                                               
-          "}" +                                                                                                                                                                               
+  private static final String scriptHtml = 
+      "<div style=\"float:none\"><div style=\"float:right\"><div class=\"gWidget\">" +
+          "<!-- placeholder id=null, description=Google Translator Widget -->" +
+          "<div style=\"margin-left:10px;\"><div id=\"google_translate_element\"></div><script>" +
+          "function googleTranslateElementInit() {" +
+          "  new google.translate.TranslateElement({" +
+          "  }, 'google_translate_element');" +
+          "}" +
           "</script><script src=\"//blah\"></script>";
   private static final String scriptHtmlFiltered =
-      "<div style=\"float:none\"><div style=\"float:right\"><div class=\"gWidget\">" +                                                                    
-          "<div style=\"margin-left:10px;\">";                                                                                            
+      "<div style=\"float:none\"><div style=\"float:right\"><div class=\"gWidget\">" +
+          "<div style=\"margin-left:10px;\">";
 
-  private static final String accessIconHtml =                                                                                                                                                         
-      "<h4 class=\"searchTitle\">The Title" +                                                                                                                                             
-          "<img src=\"/templates/jsp/_style2/_AP/_bioone/images/access_full.gif\" alt=\"full access\" title=\"full access\" class=\"accessIcon\" />" +                                        
+  private static final String accessIconHtml = 
+      "<h4 class=\"searchTitle\">The Title" +
+          "<img src=\"/templates/jsp/_style2/_AP/_bioone/images/access_full.gif\" alt=\"full access\" title=\"full access\" class=\"accessIcon\" />" +
           "</h4><p class=\"searchAuthor\">blah</p>";
   private static final String accessIconFiltered =
-      "<h4 class=\"searchTitle\">The Title" +                                                                                                                                             
+      "<h4 class=\"searchTitle\">The Title" +
           "</h4><p class=\"searchAuthor\">blah</p>";
 
   private static final String leftColumnHtml = 
-      "<div id=\"contentNav\">" +                                                                                                                                                         
-          "       <div id=\"articleInfoBox\">" +                                                                                                                                              
-          "        <div class=\"articleInfoCover\">" +                                                                                                                                        
-          "                <img src=\"/na101/home/literatum/publisher/bioone/journals/covergifs/jmam/2010/041.035.0100/cover.jpg\" />" +                                                      
-          "        </div>" +                                                                                                                                                                  
-          "        <div class=\"articleInfoNav\">" +                                                                                                                                          
-          "        <ul>" +                                                                                                                                                                    
-          "          <li><a href=\"/loi/jmam\">List of Issues</a></li>" +                                                                                                                     
-          "          <li><a href=\"/toc/jmam/38/2\">" +                                                                                                                                       
-          "          Current Issue" +                                                                                                                                                         
-          "          </a></li>" +                                                                                                                                                             
-          "        </ul>" +                                                                                                                                                                   
-          "        </div>" +                                                                                                                                                                  
-          "        <br/><br/>" +                                                                                                                                                              
-          "        </div>" +                                                                                                                                                                  
-          "       <div class=\"columnBlock\"><!-- placeholder id=null, description=Journal Sidebar Bottom --></div>" +                                                                        
-          "</div>" ;       
+      "<div id=\"contentNav\">" +
+          "       <div id=\"articleInfoBox\">" +
+          "        <div class=\"articleInfoCover\">" +
+          "                <img src=\"/na101/home/literatum/publisher/bioone/journals/covergifs/jmam/2010/041.035.0100/cover.jpg\" />" +
+          "        </div>" +
+          "        <div class=\"articleInfoNav\">" +
+          "        <ul>" +
+          "          <li><a href=\"/loi/jmam\">List of Issues</a></li>" +
+          "          <li><a href=\"/toc/jmam/38/2\">" +
+          "          Current Issue" +
+          "          </a></li>" +
+          "        </ul>" +
+          "        </div>" +
+          "        <br/><br/>" +
+          "        </div>" +
+          "       <div class=\"columnBlock\"><!-- placeholder id=null, description=Journal Sidebar Bottom --></div>" +
+          "</div>" ;
   private static final String leftColumnFiltered = "";
 
   private static final String footerHtml = 
-      "<div id=\"mainFooter\">" +                                                                                                                                                         
-          "    <div id=\"articleFooter\">BioOne is the blah.</div>" +                                                                                                                         
-          "    <div class=\"clearFloats\">&nbsp;</div>" +                                                                                                                                     
-          "        <div id=\"footerLayout\">" +                                                                                                                                               
-          "            <div id=\"footerAddress\">" +                                                                                                                                          
-          "                    21 Dupont Circle NW, Suite 800, Washington, DC 20036 &bull; Phone 202.296.1605 &bull; Fax 202.872.0884" +                                                      
-          "                    </div>" +                                                                                                                                                      
-          "        </div>" +                                                                                                                                                                  
-          "        <div id=\"footerCopyright\">" +                                                                                                                                            
-          "            Copyright &copy; 2013 BioOne All rights reserved" +                                                                                                                    
-          "        </div>" +                                                                                                                                                                  
+      "<div id=\"mainFooter\">" +
+          "    <div id=\"articleFooter\">BioOne is the blah.</div>" +
+          "    <div class=\"clearFloats\">&nbsp;</div>" +
+          "        <div id=\"footerLayout\">" +
+          "            <div id=\"footerAddress\">" +
+          "                    21 Dupont Circle NW, Suite 800, Washington, DC 20036 &bull; Phone 202.296.1605 &bull; Fax 202.872.0884" +
+          "                    </div>" +
+          "        </div>" +
+          "        <div id=\"footerCopyright\">" +
+          "            Copyright &copy; 2013 BioOne All rights reserved" +
+          "        </div>" +
           "</div>";
   private static final String footerHtmlFiltered = "";
 
@@ -338,7 +351,7 @@ public class TestBioOneAtyponHtmlFilterFactory extends LockssTestCase {
       "<link href=\"/templates/jsp/style.css\" rel=\"stylesheet\" type=\"text/css\" />";
   private static final String linkRelFiltered = "";
 
-  private static final String rightColumnHashFiltered = "";  
+  private static final String rightColumnHashFiltered = "";
 
   private static final String googleWidgetHtml = 
       "<div class=\"gWidgetContainer\"><div style=\"float:none\"><div style=\"float:right\">" +
@@ -355,7 +368,8 @@ public class TestBioOneAtyponHtmlFilterFactory extends LockssTestCase {
       "<span class=\"NLM_article-title\"> Foo Title.</span> " +
       "<span class=\"citation_source-journal\">Zool Sci</span> 17: " +
       "<span class=\"NLM_fpage\">1129</span>- <span class=\"NLM_lpage\">1136</span> " +
-      "<a href=\"/servlet/linkout?suffix=bibr27&amp;dbid=4&amp;doi=10.2108%2Fzs140053&amp;key=10.2108%2Fzsj.17.1129&amp;tollfreelink=2011_106728_8dcaec470370ec38b274e723e8495ed975b7ee94917ff16a517fb1b7ae6a4a84\">BioOne</a>" +
+      "<a href=\"/servlet/linkout?suffix=bibr27&amp;dbid=4&amp;doi=10.2108%2Fzs140053&amp;" +
+      "key=10.2108%2Fzsj.17.1129&amp;tollfreelink=2011_106728_8dcaec470370ec38b274e723e8495ed975b7ee94917ff16a517fb1b7ae6a4a84\">BioOne</a>" +
       ", <a href=\"/servlet/linkout?suffix=bibr27&amp;dbid=8&amp;doi=10.2108%2Fzs140053&amp;key=18522469\" target=\"new\">PubMed</a>" +
       "</td>" +
       "</div>" +
