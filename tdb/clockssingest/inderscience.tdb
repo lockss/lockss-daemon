@@ -707,7 +707,7 @@
       au < doNotProcess ; doNotProcess ; 2011-2012 ; International Journal of Applied Systemic Studies Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2013-2014 ; International Journal of Applied Systemic Studies Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; >
       au < finished ; crawling ; 2015-2016 ; International Journal of Applied Systemic Studies Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 2017 ; International Journal of Applied Systemic Studies Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2017 ; International Journal of Applied Systemic Studies Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -1889,7 +1889,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Computational Materials Science and Surface Engineering Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Computational Materials Science and Surface Engineering Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
       au < finished ; crawling ; 2014-2016 ; International Journal of Computational Materials Science and Surface Engineering Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 2017 ; International Journal of Computational Materials Science and Surface Engineering Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2017 ; International Journal of Computational Materials Science and Surface Engineering Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -2349,7 +2349,7 @@
       au < finished ; crawling ; 2016 ; International Journal of Data Mining and Bioinformatics Volume 16 ; 16 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2017 ; International Journal of Data Mining and Bioinformatics Volume 17 ; 17 ; http://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2017 ; International Journal of Data Mining and Bioinformatics Volume 18 ; 18 ; http://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2017 ; International Journal of Data Mining and Bioinformatics Volume 19 ; 19 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2017 ; International Journal of Data Mining and Bioinformatics Volume 19 ; 19 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -4015,7 +4015,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Human Factors and Ergonomics Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014-2015 ; International Journal of Human Factors and Ergonomics Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; >
       au < finished ; crawling ; 2016 ; International Journal of Human Factors and Ergonomics Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < manifest ; exists ; 2017 ; International Journal of Human Factors and Ergonomics Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2017 ; International Journal of Human Factors and Ergonomics Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -6599,7 +6599,7 @@
 
       au < finished ; finished ; 2014-2015 ; International Journal of Petroleum Engineering Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; >
       au < finished ; crawling ; 2016 ; International Journal of Petroleum Engineering Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 2017 ; International Journal of Petroleum Engineering Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2017 ; International Journal of Petroleum Engineering Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -7205,7 +7205,7 @@
       au < finished ; finished ; 2014 ; International Journal of Reliability and Safety Volume 8 ; 8 ; http://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2015 ; International Journal of Reliability and Safety Volume 9 ; 9 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; International Journal of Reliability and Safety Volume 10 ; 10 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 2017 ; International Journal of Reliability and Safety Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2017 ; International Journal of Reliability and Safety Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -7695,7 +7695,7 @@
 
       param[journal_id] = ijsccps
 
-      au < manifest ; exists ; 2011-2016 ; International Journal of Social Computing and Cyber-Physical Systems Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2011-2016 ; International Journal of Social Computing and Cyber-Physical Systems Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2017-2019 ; International Journal of Social Computing and Cyber-Physical Systems Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
 
     }
