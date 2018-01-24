@@ -80,7 +80,7 @@ implements SourceXmlSchemaHelper {
   private static final String dataset_chapter = dataset_content + "/book-item";
   // these are relative to the dataset_chapter   
   private static final String dataset_chapter_doi = "book-item-unique-ids/doi";
-  private static final String dataset_chapter_date = "book-item-properties/online-publication-date";
+  public static final String dataset_chapter_date = "book-item-properties/online-publication-date";
     // get the book title from the closest preceding  book-project node
   private static final String dataset_book_title = "preceding-sibling::book-project[1]/book-project-properties/collection-title";
   //These are the same between both versions so keep them identical 

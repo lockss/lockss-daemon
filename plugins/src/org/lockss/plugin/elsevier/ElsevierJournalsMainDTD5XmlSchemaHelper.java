@@ -227,6 +227,8 @@ implements SourceXmlSchemaHelper {
   private static final MultiValueMap cookMap = new MultiValueMap();
   static {
     cookMap.put(common_title, MetadataField.FIELD_ARTICLE_TITLE);
+    // Elsevier has indicated that this should take priority of online date
+	cookMap.put(common_copyright, MetadataField.FIELD_DATE);
     cookMap.put(common_author_group, 
         new MetadataField(MetadataField.FIELD_AUTHOR, MetadataField.splitAt(AUTHOR_SPLIT_CHAR)));
   }

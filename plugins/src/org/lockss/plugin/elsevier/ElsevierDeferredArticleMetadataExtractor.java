@@ -200,21 +200,21 @@ public class ElsevierDeferredArticleMetadataExtractor extends BaseArticleMetadat
    *  
    *  
    *  Journals/Book-Series  articleMD (from main.xml) has 
-   *       FIELD_AUTHOR, FIELD_ARTICLE_TITLE, FIELD_ACCESS_URL
+   *       FIELD_AUTHOR, FIELD_ARTICLE_TITLE, FIELD_ACCESS_URL, FIELD_DATE
    *    from datasetMD (from dataset.xml) get
-   *       FIELD_DOI, FIELD_ISSN, FIELD_PUBLICATION_TITLE, FIELD_DATE
+   *       FIELD_DOI, FIELD_ISSN, FIELD_PUBLICATION_TITLE, 
    *       NOTE - no longer picking up FIELD_ISBN for journals - it was often a false positive
    *    fallbacks to pick up from raw
-   *       if FIELD_DATE is null, use raw "common_copyright" if available
+   *       if FIELD_DATE is null, use raw "online-publication-date" if available
    *       if FIELD_DOI is null, use raw "common_doi" if available
    *       if ARTICLE_TITLE is null, use "common_dochead" if available
    *       
    *  Books articleMD (from main.xml) has
-   *      FIELD_ISBN, FIELD_ISSN? (if series), FIELD_ARTICLE_TITLE, FIELD_AUTHOR, FIELD_ACCESS_URL
+   *      FIELD_ISBN, FIELD_ISSN? (if series), FIELD_ARTICLE_TITLE, FIELD_AUTHOR, FIELD_ACCESS_URL, FIELD_DATE
    *    from datasetMD (from dataset.xml) get
-   *      FIELD_DOI, FIELD_PUBLICATION_TITLE, FIELD_DATE
+   *      FIELD_DOI, FIELD_PUBLICATION_TITLE, 
    *    fallbacks to pick up from raw       
-   *       if FIELD_DATE is null, use raw "common_copyright" if available
+   *       if FIELD_DATE is null, use raw "online-publication-date" if available
    *       if FIELD_DOI is null, use raw "common_doi" if available
    *       
    *  ALSO - because this is a little complicated, this will also explicitly set the
@@ -224,7 +224,8 @@ public class ElsevierDeferredArticleMetadataExtractor extends BaseArticleMetadat
     // using putIfBetter avoids copying over a null value, which otherwise fills field
     articleMD.putIfBetter(MetadataField.FIELD_DOI, datasetMD.get(MetadataField.FIELD_DOI));
     articleMD.putIfBetter(MetadataField.FIELD_PUBLICATION_TITLE, datasetMD.get(MetadataField.FIELD_PUBLICATION_TITLE));
-    articleMD.putIfBetter(MetadataField.FIELD_DATE, datasetMD.get(MetadataField.FIELD_DATE));
+    // we now prioritize the main.xml copyright date
+    //articleMD.putIfBetter(MetadataField.FIELD_DATE, datasetMD.get(MetadataField.FIELD_DATE));
     //books will not have this, but it won't hurt to do the call anyway to handle journals
     articleMD.putIfBetter(MetadataField.FIELD_ISSN, datasetMD.get(MetadataField.FIELD_ISSN));
     // copy over any raw values from datasetMD to this one
@@ -239,7 +240,7 @@ public class ElsevierDeferredArticleMetadataExtractor extends BaseArticleMetadat
     String dtd = datasetMD.getRaw(ElsevierJournalsDatasetXmlSchemaHelper.dataset_dtd_metadata);
     if ((dtd != null) && dtd.startsWith("BOOK")) {
       // BOOK CHAPTER
-      articleMD.putIfBetter(MetadataField.FIELD_DATE, articleMD.getRaw(ElsevierBooksMainDTD5XmlSchemaHelper.common_copyright));
+      articleMD.putIfBetter(MetadataField.FIELD_DATE, articleMD.getRaw(ElsevierBooksDatasetXmlSchemaHelper.dataset_chapter_date));
       articleMD.putIfBetter(MetadataField.FIELD_DOI,articleMD.getRaw(ElsevierBooksMainDTD5XmlSchemaHelper.common_doi));
       // for now we only have the xpath to support chapters, which is what they are giving us
       articleMD.put(MetadataField.FIELD_ARTICLE_TYPE,  MetadataField.ARTICLE_TYPE_BOOKCHAPTER);
@@ -250,7 +251,7 @@ public class ElsevierDeferredArticleMetadataExtractor extends BaseArticleMetadat
       // not cooking the isbn in the raw metadata to a FIELD_ISBN
       // there were a lot of false positives for collections that were causing problems. Just make them
       // journals and count them as articles
-      articleMD.putIfBetter(MetadataField.FIELD_DATE, articleMD.getRaw(ElsevierJournalsMainDTD5XmlSchemaHelper.common_copyright));
+      articleMD.putIfBetter(MetadataField.FIELD_DATE, articleMD.getRaw(ElsevierJournalsDatasetXmlSchemaHelper.dataset_article_date));
       articleMD.putIfBetter(MetadataField.FIELD_DOI,articleMD.getRaw(ElsevierJournalsMainDTD5XmlSchemaHelper.common_doi));
       //docheading, such as "Book Review" or "Index" or "Research Article"
       articleMD.putIfBetter(MetadataField.FIELD_ARTICLE_TITLE, articleMD.getRaw(ElsevierJournalsMainDTD5XmlSchemaHelper.common_dochead));

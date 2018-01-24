@@ -476,12 +476,8 @@ public class TestElsevierDTD5XmlMetadataExtractor extends SourceXmlMetadataExtra
     assertEquals(common_issn, am.get(MetadataField.FIELD_ISSN));
 
     log.debug3("doi val is: " + doi_val);
-    //The dataset doesn't set this value, it'll fail over the main.xml value
-    if (doi_val.equals("10.1016/S0140-1111(14)61865-1")) {
-      assertEquals(null, am.get(MetadataField.FIELD_DATE));
-    } else {
-      assertEquals(dateMap.get(doi_val), am.get(MetadataField.FIELD_DATE));
-    }
+    //The dataset no longer cooks the date - gets it from main.xml
+    assertEquals(null, am.get(MetadataField.FIELD_DATE));
     assertEquals(pubTitleMap.get(doi_val), am.get(MetadataField.FIELD_PUBLICATION_TITLE));
   }
 

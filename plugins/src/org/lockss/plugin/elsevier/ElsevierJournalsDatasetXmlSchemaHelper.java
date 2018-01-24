@@ -70,7 +70,7 @@ implements SourceXmlSchemaHelper {
   private static final String dataset_article_doi = "journal-item-unique-ids/doi";
   private static final String dataset_article_issn = "journal-item-unique-ids/jid-aid/issn";
   private static final String dataset_article_jid = "journal-item-unique-ids/jid-aid/jid";
-  private static final String dataset_article_date = "journal-item-properties/online-publication-date";
+  public static final String dataset_article_date = "journal-item-properties/online-publication-date";
   // get the journal title from the closest preceding journal-info node
   private static final String dataset_journal_title = "preceding-sibling::journal-issue[1]/journal-issue-properties/collection-title";
   // this will be there if part of a book series (which looks like a journal)
@@ -164,7 +164,10 @@ implements SourceXmlSchemaHelper {
     //DO NOT COOK THIS...too many false positives turning journals in to book-series
     // not sure why Elsevier is categorizing collections of journals as book series
     //cookMap.put(dataset_series_isbn, MetadataField.FIELD_ISBN);
-    cookMap.put(dataset_article_date, MetadataField.FIELD_DATE);
+
+    // Elsevier has indicated that we should prioritize copyright year
+    // which comes from main.xml - so don't cook this value
+    //cookMap.put(dataset_article_date, MetadataField.FIELD_DATE);
   }
 
   /**
