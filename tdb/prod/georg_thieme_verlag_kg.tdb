@@ -6574,4 +6574,381 @@
 
   }
 
+  {
+
+    title <
+       name = ACI Open ;
+       eissn = 2566-9346 ;
+       doi = 10.1055/s-00034447
+    >
+
+    param[journal_id] = 10.1055/s-00034447
+    comment[years] = 2017-current
+
+    au < exists ; 2017 ; 2017 ; ACI Open Volume 1 ; 1 >
+
+  }
+
+  {
+
+    title <
+       name = Adipositas - Ursachen, Folgeerkrankungen, Therapie ;
+       issn = 1865-1739 ;
+       eissn = 2567-6334 ;
+       doi = 10.1055/s-00034923
+    >
+
+    param[journal_id] = 10.1055/s-00034923
+    comment[years] = 2017-current
+
+    au < exists ; 2017 ; 2017 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 11 ; 11 >
+
+  }
+
+  {
+
+    title <
+       name = Applied Clinical Informatics ;
+       eissn = 1869-0327 ;
+       doi = 10.1055/s-00035026
+    >
+
+    param[journal_id] = 10.1055/s-00035026
+    comment[years] = 2009-current
+
+    au < exists ; 2010 ; 2010 ; Applied Clinical Informatics Volume 1 ; 1 >
+
+  }
+
+  {
+
+    title <
+       name = Arthritis und Rheuma ;
+       issn = 0176-5167 ;
+       eissn = 2567-5753 ;
+       doi = 10.1055/s-00034922
+    >
+
+    param[journal_id] = 10.1055/s-00034922
+    comment[years] = 2004-current
+
+    au < exists ; 2017 ; 2017 ; Arthritis und Rheuma Volume 37 ; 37 >
+
+  }
+
+  {
+
+    title <
+       name = GGP - Fachzeitschrift für Geriatrische und Gerontologische Pflege ;
+       issn = 2511-7548 ;
+       eissn = 2511-7556 ;
+       doi = 10.1055/s-00033559
+    >
+
+    param[journal_id] = 10.1055/s-00033559
+    comment[years] = 2017-current
+
+    au < exists ; 2017 ; 2017 ; GGP - Fachzeitschrift für Geriatrische und Gerontologische Pflege Volume 1 ; 1 >
+
+  }
+
+  {
+
+    title <
+       name = Hämostaseologie ;
+       issn = 0720-9355 ;
+       eissn = 2567-5761 ;
+       doi = 10.1055/s-00034925
+    >
+
+    param[journal_id] = 10.1055/s-00034925
+    comment[years] = 2000-current
+
+    au < exists ; 2017 ; 2017 ; Hämostaseologie Volume 37 ; 37 >
+
+  }
+
+  {
+
+    title <
+       name = Indian Journal of Cardiovascular Disease in Women WINCARS ;
+       eissn = 2455-7854 ;
+       doi = 10.1055/s-00035300
+    >
+
+    param[journal_id] = 10.1055/s-00035300
+    comment[years] = 2017-current
+
+    au < exists ; 2017 ; 2017 ; Indian Journal of Cardiovascular Disease in Women WINCARS Volume 1 ; 1 >
+
+  }
+
+  {
+
+    title <
+       name = Journal of Cardiac Critical Care TSS ;
+       eissn = 2456-9224 ;
+       doi = 10.1055/s-00034793
+    >
+
+    param[journal_id] = 10.1055/s-00034793
+    comment[years] = 2017-current
+
+    au < exists ; 2017 ; 2017 ; Journal of Cardiac Critical Care TSS Volume 1 ; 1 >
+
+  }
+
+  {
+
+    title <
+       name = Journal of Child Science ;
+       eissn = 2474-5871 ;
+       doi = 10.1055/s-00033103
+    >
+
+    param[journal_id] = 10.1055/s-00033103
+    comment[years] = 2017-current
+
+    au < exists ; 2017 ; 2017 ; Journal of Child Science Volume 7 ; 7 >
+
+  }
+
+  {
+
+    title <
+       name = Kinder- und Jugendmedizin ;
+       issn = 1617-0288 ;
+       eissn = 2567-577X ;
+       doi = 10.1055/s-00034917
+    >
+
+    param[journal_id] = 10.1055/s-00034917
+    comment[years] = 2003-current
+
+    au < exists ; 2017 ; 2017 ; Kinder- und Jugendmedizin Volume 17 ; 17 >
+
+  }
+
+  {
+
+    title <
+       name = Methods of Information in Medicine ;
+       issn = 0026-1270 ;
+       eissn = 2511-705X ;
+       doi = 10.1055/s-00035037
+    >
+
+    param[journal_id] = 10.1055/s-00035037
+    comment[years] = 1962-current
+
+    au < exists ; 2016 ; 2016 ; Methods of Information in Medicine Volume 55 ; 55 >
+    au < expected ; 2017 ; 2017 ; Methods of Information in Medicine Volume 56 ; 56 >
+
+  }
+
+  {
+
+    title <
+       name = Nervenheilkunde ;
+       issn = 0722-1541 ;
+       eissn = 2567-5788 ;
+       doi = 10.1055/s-00034916
+    >
+
+    param[journal_id] = 10.1055/s-00034916
+    comment[years] = 2003-current
+
+    au < exists ; 2015 ; 2015 ; Nervenheilkunde Volume 34 ; 34 >
+    au < expected ; 2016 ; 2016 ; Nervenheilkunde Volume 35 ; 35 >
+    au < expected ; 2017 ; 2017 ; Nervenheilkunde Volume 36 ; 36 >
+
+  }
+
+  {
+
+    title <
+       name = Nuklearmedizin ;
+       issn = 0029-5566 ;
+       eissn = 2567-6407 ;
+       doi = 10.1055/s-00034924
+    >
+
+    param[journal_id] = 10.1055/s-00034924
+    comment[years] = 1961-current
+
+    au < exists ; 2015 ; 2015 ; Nuklearmedizin Volume 54 ; 54 >
+    au < exists ; 2016 ; 2016 ; Nuklearmedizin Volume 55 ; 55 >
+    au < exists ; 2017 ; 2017 ; Nuklearmedizin Volume 56 ; 56 >
+
+  }
+
+  {
+
+    title <
+       name = Onkologische Welt ;
+       issn = 1869-0874 ;
+       eissn = 2567-5796 ;
+       doi = 10.1055/s-00034915
+    >
+
+    param[journal_id] = 10.1055/s-00034915
+    comment[years] = 2010-current
+
+    au < exists ; 2015 ; 2015 ; Onkologische Welt Volume 6 ; 6 >
+    au < exists ; 2016 ; 2016 ; Onkologische Welt Volume 7 ; 7 >
+    au < exists ; 2017 ; 2017 ; Onkologische Welt Volume 8 ; 8 >
+
+  }
+
+  {
+
+    title <
+       name = Osteologie ;
+       issn = 1019-1291 ;
+       eissn = 2567-5818 ;
+       doi = 10.1055/s-00034914
+    >
+
+    param[journal_id] = 10.1055/s-00034914
+    comment[years] = 2008-current
+
+    au < exists ; 2017 ; 2017 ; Osteologie Volume 26 ; 26 >
+
+  }
+
+  {
+
+    title <
+       name = osteopathisch - Fachzeitschrift für Osteopathen ;
+       issn = 2510-4373 ;
+       eissn = 2510-4381 ;
+       doi = 10.1055/s-00033423
+    >
+
+    param[journal_id] = 10.1055/s-00033423
+    comment[years] = 2017-current
+
+    au < exists ; 2017 ; 2017 ; osteopathisch - Fachzeitschrift für Osteopathen Volume 1 ; 1 >
+
+  }
+
+  {
+
+    title <
+       name = Phlebologie ;
+       issn = 0939-978X ;
+       eissn = 2567-5826 ;
+       doi = 10.1055/s-00034913
+    >
+
+    param[journal_id] = 10.1055/s-00034913
+    comment[years] = 1998-current
+
+    au < exists ; 2008 ; 2008 ; Phlebologie Volume 37 ; 37 >
+    au < exists ; 2009 ; 2009 ; Phlebologie Volume 38 ; 38 >
+    au < exists ; 2010 ; 2010 ; Phlebologie Volume 39 ; 39 >
+    au < exists ; 2011 ; 2011 ; Phlebologie Volume 40 ; 40 >
+    au < exists ; 2012 ; 2012 ; Phlebologie Volume 41 ; 41 >
+    au < exists ; 2013 ; 2013 ; Phlebologie Volume 42 ; 42 >
+    au < exists ; 2014 ; 2014 ; Phlebologie Volume 43 ; 43 >
+    au < exists ; 2015 ; 2015 ; Phlebologie Volume 44 ; 44 >
+    au < exists ; 2016 ; 2016 ; Phlebologie Volume 45 ; 45 >
+    au < exists ; 2017 ; 2017 ; Phlebologie Volume 46 ; 46 >
+
+  }
+
+  {
+
+    title <
+       name = Revista Iberoamericana de Cirugía de la Mano ;
+       issn = 1698-8396 ;
+       eissn = 1698-840X ;
+       doi = 10.1055/s-00033287
+    >
+
+    param[journal_id] = 10.1055/s-00033287
+    comment[years] = 2017-current
+
+    au < exists ; 2017 ; 2017 ; Revista Iberoamericana de Cirugía de la Mano Volume 45 ; 45 >
+
+  }
+
+  {
+
+    title <
+       name = Schlaf ;
+       issn = 2194-7880 ;
+       eissn = 2568-0528 ;
+       doi = 10.1055/s-00035148
+    >
+
+    param[journal_id] = 10.1055/s-00035148
+    comment[years] = 2012-current
+
+    au < exists ; 2017 ; 2017 ; Schlaf Volume 6 ; 6 >
+
+  }
+
+  {
+
+    title <
+       name = TH Open ;
+       eissn = 2512-9465 ;
+       doi = 10.1055/s-00033990
+    >
+
+    param[journal_id] = 10.1055/s-00033990
+    comment[years] = 2017-current
+
+    au < exists ; 2017 ; 2017 ; TH Open Volume 1 ; 1 >
+
+  }
+
+  {
+
+    title <
+       name = Tierärztliche Praxis G: Großtiere/Nutztiere ;
+       issn = 1434-1220 ;
+       eissn = 2567-5834 ;
+       doi = 10.1055/s-00034912
+    >
+
+    param[journal_id] = 10.1055/s-00034912
+    comment[years] = 2003-current
+
+    au < exists ; 2017 ; 2017 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 45 ; 45 >
+
+  }
+
+  {
+
+    title <
+       name = Tierärztliche Praxis K: Kleintiere/Heimtiere ;
+       issn = 1434-1239 ;
+       eissn = 2567-5842 ;
+       doi = 10.1055/s-00034911
+    >
+
+    param[journal_id] = 10.1055/s-00034911
+    comment[years] = 2003-current
+
+    au < exists ; 2017 ; 2017 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 15 ; 15 >
+
+  }
+
+  {
+
+    title <
+       name = Yearbook of Medical Informatics ;
+       issn = 0943-4747 ;
+       eissn = 2364-0502 ;
+       doi = 10.1055/s-00034612
+    >
+
+    param[journal_id] = 10.1055/s-00034612
+    comment[years] = 2017-current
+
+    au < exists ; 2017 ; 2017 ; Yearbook of Medical Informatics Volume 26 ; 26 >
+
+  }
 }
