@@ -16,6 +16,7 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://www.amjbot.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    #move to Wiley
 
     au < HighWirePressH20Plugin ; manifest ; 1997 ; American Journal of Botany Volume 84 ; 84 >
     au < HighWirePressH20Plugin ; manifest ; 1998 ; American Journal of Botany Volume 85 ; 85 >
