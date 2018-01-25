@@ -133,16 +133,16 @@
       au < doNotProcess ; 2011 ; American Journal of Respiratory and Critical Care Medicine Volume 184 ; 184 >
       au < doNotProcess ; 2012 ; American Journal of Respiratory and Critical Care Medicine Volume 185 ; 185 >
       au < doNotProcess ; 2012 ; American Journal of Respiratory and Critical Care Medicine Volume 186 ; 186 >
-      au < testing ; 2013 ; American Journal of Respiratory and Critical Care Medicine Volume 187 ; 187 >
-      au < testing ; 2013 ; American Journal of Respiratory and Critical Care Medicine Volume 188 ; 188 >
-      au < testing ; 2014 ; American Journal of Respiratory and Critical Care Medicine Volume 189 ; 189 >
-      au < testing ; 2014 ; American Journal of Respiratory and Critical Care Medicine Volume 190 ; 190 >
-      au < testing ; 2015 ; American Journal of Respiratory and Critical Care Medicine Volume 191 ; 191 >
-      au < testing ; 2015 ; American Journal of Respiratory and Critical Care Medicine Volume 192 ; 192 >
+      au < exists ; 2013 ; American Journal of Respiratory and Critical Care Medicine Volume 187 ; 187 >
+      au < exists ; 2013 ; American Journal of Respiratory and Critical Care Medicine Volume 188 ; 188 >
+      au < exists ; 2014 ; American Journal of Respiratory and Critical Care Medicine Volume 189 ; 189 >
+      au < exists ; 2014 ; American Journal of Respiratory and Critical Care Medicine Volume 190 ; 190 >
+      au < exists ; 2015 ; American Journal of Respiratory and Critical Care Medicine Volume 191 ; 191 >
+      au < exists ; 2015 ; American Journal of Respiratory and Critical Care Medicine Volume 192 ; 192 >
       au < released ; 2016 ; American Journal of Respiratory and Critical Care Medicine Volume 193 ; 193 >
-      au < testing ; 2016 ; American Journal of Respiratory and Critical Care Medicine Volume 194 ; 194 >
-      au < manifest ; 2017 ; American Journal of Respiratory and Critical Care Medicine Volume 195 ; 195 >
-      au < manifest ; 2017 ; American Journal of Respiratory and Critical Care Medicine Volume 196 ; 196 >
+      au < exists ; 2016 ; American Journal of Respiratory and Critical Care Medicine Volume 194 ; 194 >
+      au < exists ; 2017 ; American Journal of Respiratory and Critical Care Medicine Volume 195 ; 195 >
+      au < exists ; 2017 ; American Journal of Respiratory and Critical Care Medicine Volume 196 ; 196 >
       
     }
     
@@ -268,16 +268,16 @@
       au < doNotProcess ; 2011 ; American Journal of Respiratory Cell and Molecular Biology Volume 45 ; 45 >
       au < doNotProcess ; 2012 ; American Journal of Respiratory Cell and Molecular Biology Volume 46 ; 46 >
       au < doNotProcess ; 2012 ; American Journal of Respiratory Cell and Molecular Biology Volume 47 ; 47 >
-      au < testing ; 2013 ; American Journal of Respiratory Cell and Molecular Biology Volume 48 ; 48 >
-      au < testing ; 2013 ; American Journal of Respiratory Cell and Molecular Biology Volume 49 ; 49 >
-      au < testing ; 2014 ; American Journal of Respiratory Cell and Molecular Biology Volume 50 ; 50 >
-      au < testing ; 2014 ; American Journal of Respiratory Cell and Molecular Biology Volume 51 ; 51 >
-      au < testing ; 2015 ; American Journal of Respiratory Cell and Molecular Biology Volume 52 ; 52 >
-      au < testing ; 2015 ; American Journal of Respiratory Cell and Molecular Biology Volume 53 ; 53 >
-      au < testing ; 2016 ; American Journal of Respiratory Cell and Molecular Biology Volume 54 ; 54 >
-      au < testing ; 2016 ; American Journal of Respiratory Cell and Molecular Biology Volume 55 ; 55 >
+      au < exists ; 2013 ; American Journal of Respiratory Cell and Molecular Biology Volume 48 ; 48 >
+      au < exists ; 2013 ; American Journal of Respiratory Cell and Molecular Biology Volume 49 ; 49 >
+      au < exists ; 2014 ; American Journal of Respiratory Cell and Molecular Biology Volume 50 ; 50 >
+      au < exists ; 2014 ; American Journal of Respiratory Cell and Molecular Biology Volume 51 ; 51 >
+      au < exists ; 2015 ; American Journal of Respiratory Cell and Molecular Biology Volume 52 ; 52 >
+      au < exists ; 2015 ; American Journal of Respiratory Cell and Molecular Biology Volume 53 ; 53 >
+      au < exists ; 2016 ; American Journal of Respiratory Cell and Molecular Biology Volume 54 ; 54 >
+      au < exists ; 2016 ; American Journal of Respiratory Cell and Molecular Biology Volume 55 ; 55 >
       au < released ; 2017 ; American Journal of Respiratory Cell and Molecular Biology Volume 56 ; 56 >
-      au < manifest ; 2017 ; American Journal of Respiratory Cell and Molecular Biology Volume 57 ; 57 >
+      au < exists ; 2017 ; American Journal of Respiratory Cell and Molecular Biology Volume 57 ; 57 >
 
     }
     
@@ -320,7 +320,7 @@
       au < doNotProcess ; 2008 ; Proceedings of the American Thoracic Society Volume 5 ; 5 >
       au < doNotProcess ; 2009 ; Proceedings of the American Thoracic Society Volume 6 ; 6 >
       au < doNotProcess ; 2010 ; Proceedings of the American Thoracic Society Volume 7 ; 7 >
-      au < testing ; 2011 ; Proceedings of the American Thoracic Society Volume 8 ; 8 >
+      au < exists ; 2011 ; Proceedings of the American Thoracic Society Volume 8 ; 8 >
       au < released ; 2012 ; Proceedings of the American Thoracic Society Volume 9 ; 9 >
     }
       
@@ -340,10 +340,10 @@
       param[base_url] = http://www.atsjournals.org/
       param[journal_id] = annalsats
 
-      au < testing ; 2013 ; Annals of the American Thoracic Society Volume 10 ; 10 >
+      au < exists ; 2013 ; Annals of the American Thoracic Society Volume 10 ; 10 >
       au < released ; 2014 ; Annals of the American Thoracic Society Volume 11 ; 11 >
-      au < testing ; 2015 ; Annals of the American Thoracic Society Volume 12 ; 12 >
-      au < testing ; 2016 ; Annals of the American Thoracic Society Volume 13 ; 13 >
+      au < exists ; 2015 ; Annals of the American Thoracic Society Volume 12 ; 12 >
+      au < exists ; 2016 ; Annals of the American Thoracic Society Volume 13 ; 13 >
       au < expected ; 2017 ; Annals of the American Thoracic Society Volume 14 ; 14 >
 
   }
