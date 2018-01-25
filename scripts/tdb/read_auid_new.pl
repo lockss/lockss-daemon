@@ -1943,7 +1943,7 @@ while (my $line = <>) {
     #prefix for an article link
     $url_d = sprintf("%s%s/",
      $param{base_url}, $param{volume_name});
-#    $man_url = uri_unescape($url_s) . " + " . uri_unescape($url_p1) . " + " . uri_unescape($url_p2);
+    $man_url = uri_unescape($url_s) . " + " . uri_unescape($url_p1) . " + " . uri_unescape($url_p2);
     $man_url_p1 = uri_unescape($url_p1);
     #printf("*man_url_p1: %s\n", $man_url_p1);
     $man_url_p2 = uri_unescape($url_p2);
