@@ -20797,6 +20797,7 @@
 
     param[base_url] = http://www.scielo.br/
     param[journal_issn] = 0482-5004
+    # move to BioMed
 
     au < doNotProcess ; exists ; 2003 ; 43 ; Revista Brasileira de Reumatologia Volume 43 ; 2003 ; >
     au < doNotProcess ; exists ; 2004 ; 44 ; Revista Brasileira de Reumatologia Volume 44 ; 2004 ; >
