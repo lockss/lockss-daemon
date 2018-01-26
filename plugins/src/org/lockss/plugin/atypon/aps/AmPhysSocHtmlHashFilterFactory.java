@@ -90,10 +90,10 @@ public class AmPhysSocHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFact
     // handled by parent: script, sfxlink, stylesheet, pdfplus file sise
     // <head> tag, <li> item has the text "Cited by", accessIcon, 
     NodeFilter[] excludeNodes = new NodeFilter[] {
-        // toc - select pulldown menu under volume title
-        // HtmlNodeFilters.tagWithAttributeRegex("div", "class", "publicationToolContainer"),
+        // toc - should be okay
         // on article page
         HtmlNodeFilters.tag("nav"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "author-info"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "content.?navigation"),
         // XXX following would be needed if alternative filter HtmlNodeFilters.tag("article") is used
         // HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-row-right"),
