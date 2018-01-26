@@ -899,6 +899,61 @@
   {
 
     title <
+      name = Animal Frontiers ;
+      issn = 2160-6056 ;
+      eissn = 2160-6064 ;
+      issnl = 2160-6056
+    >
+
+    param[journal_id] = af
+
+    au < exists ; exists ; 2011 ; 2011 ; Animal Frontiers Volume 1 ; 1 ; >
+    au < exists ; exists ; 2012 ; 2012 ; Animal Frontiers Volume 2 ; 2 ; >
+    au < exists ; exists ; 2013 ; 2013 ; Animal Frontiers Volume 3 ; 3 ; >
+    au < exists ; exists ; 2014 ; 2014 ; Animal Frontiers Volume 4 ; 4 ; >
+    au < exists ; exists ; 2015 ; 2015 ; Animal Frontiers Volume 5 ; 5 ; >
+    au < exists ; exists ; 2016 ; 2016 ; Animal Frontiers Volume 6 ; 6 ; >
+    au < exists ; exists ; 2017 ; 2017 ; Animal Frontiers Volume 7 ; 7 ; >
+    au < expected ; exists ; 2018 ; 2018 ; Animal Frontiers Volume 8 ; 8 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Animal Science ;
+      issn = 0021-8812 ;
+      eissn = 1525-3163 ;
+      issnl = 0021-8812
+    >
+
+    param[journal_id] = jas
+    #content available from 1962 volume 21 to 2000 volume 77
+
+    au < exists ; exists ; 2001 ; 2001 ; Journal of Animal Science Volume 78 ; 78 ; >
+    au < exists ; exists ; 2002 ; 2002 ; Journal of Animal Science Volume 79 ; 79 ; >
+    au < exists ; exists ; 2003 ; 2003 ; Journal of Animal Science Volume 80 ; 80 ; >
+    au < exists ; exists ; 2004 ; 2004 ; Journal of Animal Science Volume 81 ; 81 ; >
+    au < exists ; exists ; 2005 ; 2005 ; Journal of Animal Science Volume 82 ; 82 ; >
+    au < exists ; exists ; 2006 ; 2006 ; Journal of Animal Science Volume 83 ; 83 ; >
+    au < exists ; exists ; 2007 ; 2007 ; Journal of Animal Science Volume 84 ; 84 ; >
+    au < exists ; exists ; 2008 ; 2008 ; Journal of Animal Science Volume 85 ; 85 ; >
+    au < exists ; exists ; 2009 ; 2009 ; Journal of Animal Science Volume 86 ; 86 ; >
+    au < exists ; exists ; 2010 ; 2010 ; Journal of Animal Science Volume 87 ; 87 ; >
+    au < exists ; exists ; 2011 ; 2011 ; Journal of Animal Science Volume 88 ; 88 ; >
+    au < exists ; exists ; 2012 ; 2012 ; Journal of Animal Science Volume 89 ; 89 ; >
+    au < exists ; exists ; 2013 ; 2013 ; Journal of Animal Science Volume 90 ; 90 ; >
+    au < exists ; exists ; 2014 ; 2014 ; Journal of Animal Science Volume 91 ; 91 ; >
+    au < exists ; exists ; 2015 ; 2015 ; Journal of Animal Science Volume 92 ; 92 ; >
+    au < exists ; exists ; 2016 ; 2016 ; Journal of Animal Science Volume 93 ; 93 ; >
+    au < exists ; exists ; 2017 ; 2017 ; Journal of Animal Science Volume 94 ; 94 ; >
+    au < expected ; exists ; 2018 ; 2018 ; Journal of Animal Science Volume 95 ; 95 ; >
+
+  }
+
+  {
+
+    title <
       name = Annals of Behavioral Medicine ;
       issn = 0883-6612 ;
       eissn = 1532-4796 ;
@@ -19100,6 +19155,21 @@
   {
 
     title <
+      name = Translational Animal Science ;
+      eissn = 2573-2102 ;
+      issnl = 2573-2102
+    >
+
+    param[journal_id] = tas
+
+    au < exists ; exists ; 2017 ; 2017 ; Translational Animal Science Volume 1 ; 1 ;  >
+    au < expected ; exists ; 2018 ; 2018 ; Translational Animal Science Volume 2 ; 2 ;  >
+
+  }
+
+  {
+
+    title <
       name = Translational Behavioral Medicine ;
       issn = 1869-6716 ;
       eissn = 1613-9860 ;
@@ -19108,7 +19178,14 @@
 
     param[journal_id] = tbm
 
-    au < expected ; exists ; 2018 ; 2018 ; Translational Behavioral Medicine Volume 1 ; 1 ;  >
+    au < exists ; exists ; 2011 ; 2011 ; Translational Behavioral Medicine Volume 1 ; 1 ;  >
+    au < exists ; exists ; 2012 ; 2012 ; Translational Behavioral Medicine Volume 2 ; 2 ;  >
+    au < exists ; exists ; 2013 ; 2013 ; Translational Behavioral Medicine Volume 3 ; 3 ;  >
+    au < exists ; exists ; 2014 ; 2014 ; Translational Behavioral Medicine Volume 4 ; 4 ;  >
+    au < exists ; exists ; 2015 ; 2015 ; Translational Behavioral Medicine Volume 5 ; 5 ;  >
+    au < exists ; exists ; 2016 ; 2016 ; Translational Behavioral Medicine Volume 6 ; 6 ;  >
+    au < exists ; exists ; 2017 ; 2017 ; Translational Behavioral Medicine Volume 7 ; 7 ;  >
+    au < expected ; exists ; 2018 ; 2018 ; Translational Behavioral Medicine Volume 8 ; 8 ;  >
 
   }
 
