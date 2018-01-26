@@ -5,6 +5,7 @@
   >
   
   comment[moved] = moved from HW to new platform
+    # move to OUP
 
   {
 
@@ -18,7 +19,7 @@
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://animalfrontiers.fass.org/
     implicit < status ; year ; name ; param[volume_name] >
-
+    # move to OUP
 
     au < down ; 2011 ; Animal Frontiers Volume 1 ; 1 >
     au < down ; 2012 ; Animal Frontiers Volume 2 ; 2 >
@@ -38,7 +39,7 @@
 
     pluginPrefix = org.lockss.plugin.highwire.
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-    
+    # move to OUP
     {
     
       param[base_url] = http://jas.fass.org/
