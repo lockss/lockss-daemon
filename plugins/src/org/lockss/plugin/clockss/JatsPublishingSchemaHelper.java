@@ -185,6 +185,22 @@ implements SourceXmlSchemaHelper {
     }
   };
   
+  /*
+  <contrib-group>^M
+  <contrib contrib-type="author" xlink:type="simple">^M
+     <string-name>^M
+        <given-names>Raluca-Ioana</given-names>^M
+        <x xml:space="preserve"> </x>^M
+        <surname>Stefan</surname>^M
+     </string-name>^M
+     <xref ref-type="aff" rid="end-a1">^M
+        <sup>a</sup>^M
+     </xref>^M
+     <x xml:space="preserve">, </x>^M
+  </contrib>^M
+*/
+  
+  
   /* 
    * AUTHOR INFORMATION
    * We're at the top level of a 
@@ -195,7 +211,13 @@ implements SourceXmlSchemaHelper {
    *     <surname>
    *     <given-names>
    *     <prefix>
-   *   </name
+   *   </name>
+   *   
+   *   <string-name> also seems to sometimes have given-names, surname
+   *   but if no children, take the whole
+   *   eg:
+   *   <string-name name-style="eastern" xml:lang="zh">磯部光孝</string-name>
+   *   
    */
   static private final NodeValue JATS_AUTHOR_VALUE = new NodeValue() {
     @Override
@@ -203,23 +225,32 @@ implements SourceXmlSchemaHelper {
 
       log.debug3("getValue of JATS author");
       NodeList elementChildren = node.getChildNodes();
-      if (elementChildren == null) return null;
+      // only accept no children if this is a "string-name" node
+      if (elementChildren == null && 
+    		  !("string-name".equals(node.getNodeName()))) return null;
       
-      // perhaps pick up iso attr if it's available 
       String tsurname = null;
       String tgiven = null;
       String tprefix = null;
-      // look at each child 
-      for (int j = 0; j < elementChildren.getLength(); j++) {
-        Node checkNode = elementChildren.item(j);
-        String nodeName = checkNode.getNodeName();
-        if ("surname".equals(nodeName)) {
-          tsurname = checkNode.getTextContent();
-        } else if ("given-names".equals(nodeName) ) {
-          tgiven = checkNode.getTextContent();
-        } else if ("prefix".equals(nodeName)) {
-          tprefix = checkNode.getTextContent();
-        }
+
+      if (elementChildren != null) {
+    	  // perhaps pick up iso attr if it's available 
+    	  // look at each child 
+    	    for (int j = 0; j < elementChildren.getLength(); j++) {
+    		  Node checkNode = elementChildren.item(j);
+    		  String nodeName = checkNode.getNodeName();
+    		  if ("surname".equals(nodeName)) {
+    			  tsurname = checkNode.getTextContent();
+    		  } else if ("given-names".equals(nodeName) ) {
+    			  tgiven = checkNode.getTextContent();
+    		  } else if ("prefix".equals(nodeName)) {
+    			  tprefix = checkNode.getTextContent();
+    		  }
+    	    }
+      } else {
+    	  // we only fall here if the node is a string-name 
+    	  // no children - just get the plain text value
+    	  tsurname = node.getTextContent();
       }
 
       // where to put the prefix?
@@ -350,8 +381,8 @@ implements SourceXmlSchemaHelper {
     JATS_articleMap.put(JATS_edate, JATS_DATE_VALUE);
     JATS_articleMap.put(JATS_copydate, XmlDomMetadataExtractor.TEXT_VALUE); 
     JATS_articleMap.put(JATS_contrib, JATS_AUTHOR_VALUE);
-    // fall back (used by PSOT)
-    JATS_articleMap.put(JATS_string_contrib, XmlDomMetadataExtractor.TEXT_VALUE);
+    // fall back (used by PSOT, T&F)
+    JATS_articleMap.put(JATS_string_contrib, JATS_AUTHOR_VALUE);
 
   }
 
