@@ -174,8 +174,16 @@ public class TaylorAndFrancisSourceXmlMetadataExtractorFactory extends SourceXml
             thisAM.put(MetadataField.FIELD_AUTHOR,altAuthList.get(i));
           }
         }
+        //If we didn't get a valid date value, use the copyright year if it's there
+        if (thisAM.get(MetadataField.FIELD_DATE) == null) {
+          if (thisAM.getRaw(JatsPublishingSchemaHelper.JATS_date) != null) {
+            thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_date));
+          } else {// last chance
+            thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_edate));
+          }
+        }
       }
-      log.debug3("in TFSourceXmlMetadataExtractor postEmitProcess");
+      log.debug3("in TFSourceXmlMetadataExtractor postCookProcess");
     }
     
   }
