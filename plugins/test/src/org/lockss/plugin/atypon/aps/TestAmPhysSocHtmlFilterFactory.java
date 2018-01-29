@@ -59,7 +59,7 @@ public class TestAmPhysSocHtmlFilterFactory extends LockssTestCase {
   
   
   private static final String manifestContent = 
-      "<body>\n" +
+      "<html><body>\n" +
       "<h1>Journal Name 2017 CLOCKSS Manifest Page</h1>\n" +
       "<ul>\n" +
       "    <li><a href=\"/toc/jid/313/6\">December 2017 (Vol. 313 Issue 6 Page F1179-F1280)</a></li>\n" +
@@ -73,8 +73,9 @@ public class TestAmPhysSocHtmlFilterFactory extends LockssTestCase {
       "    <img src=\"http://www.lockss.org/images/LOCKSS-small.gif\" alt=\"LOCKSS logo\" width=\"108\" height=\"108\">\n" +
       "    CLOCKSS system has permission to ingest, preserve, and serve this Archival Unit.\n" +
       "</p>\n" +
-      "</body>";
+      "</body></html>";
   
+/*
   private static final String manifestContentFiltered = 
       "<a href=\"/toc/jid/313/6\">December 2017 (Vol. 313 Issue 6 Page F1179-F1280)</a>" + 
       "<a href=\"/toc/jid/313/5\">November 2017 (Vol. 313 Issue 5 Page F1061-F1178)</a>" + 
@@ -82,6 +83,16 @@ public class TestAmPhysSocHtmlFilterFactory extends LockssTestCase {
       "<a href=\"/toc/jid/313/3\">September 2017 (Vol. 313 Issue 3 Page F561-F728)</a>" + 
       "<a href=\"/toc/jid/313/2\">August 2017 (Vol. 313 Issue 2 Page F135-F560)</a>" + 
       "<a href=\"/toc/jid/313/1\">July 2017 (Vol. 313 Issue 1 Page F1-F61)</a>";
+*/
+  
+  private static final String manifestHashFiltered = 
+      " December 2017 (Vol. 313 Issue 6 Page F1179-F1280)" + 
+      " November 2017 (Vol. 313 Issue 5 Page F1061-F1178)" + 
+      " October 2017 (Vol. 313 Issue 4 Page F835-F1060)" + 
+      " September 2017 (Vol. 313 Issue 3 Page F561-F728)" + 
+      " August 2017 (Vol. 313 Issue 2 Page F135-F560)" + 
+      " July 2017 (Vol. 313 Issue 1 Page F1-F61)" +
+      " ";
   
   private static final String tocContent = 
       "<html class=\"pb-page\" data-request-id=\"9b091ab2-2ab5-4d31-bed7-31d90503fe85\" lang=\"en\">\n" +
@@ -313,6 +324,7 @@ public class TestAmPhysSocHtmlFilterFactory extends LockssTestCase {
       "</body>\n" +
       "</html>";
   
+  /*
   private static final String tocContentHashFiltered = 
       "<div class=\"toc_content\">\n" +
       "<div class=\"col-md-2\">\n" +
@@ -389,6 +401,34 @@ public class TestAmPhysSocHtmlFilterFactory extends LockssTestCase {
       "   </div>\n" + 
       "</div>\n" +
       "</div>";
+   */
+  
+  private static final String tocContentHashFiltered = 
+      " Research Article" + 
+      " Intrarenal signaling" + 
+      " A Author" + 
+      " 2017 Jul 01" + 
+      " : F20-F29" + 
+      " https://doi.org/10.9999/jid.0001.2016" + 
+      " Abstract" + 
+      " Full text" + 
+      " PDF" + 
+      " References" + 
+      " Preview Abstract" + 
+      " Text..." + 
+      " Review" + 
+      " Saving the sweetness" + 
+      " I Author" + 
+      " 2017 Jul 01" + 
+      " : F55-F61" + 
+      " https://doi.org/10.9999/jid.0001.2016" + 
+      " Abstract" + 
+      " Full text" + 
+      " PDF" + 
+      " References" + 
+      " Preview Abstract" + 
+      " Text..." + 
+      " ";
   
   private static final String art1Content = 
       "<html lang=\"en\" class=\"pb-page\" >\n" + 
@@ -450,7 +490,7 @@ public class TestAmPhysSocHtmlFilterFactory extends LockssTestCase {
       " </div>\n" + 
       " <div class=\"epub-section\"><span class=\"epub-section__item\"><span class=\"epub-section__state\">Published Online:</span><span class=\"epub-section__date\">1 Jun 2017</span></span><span class=\"epub-section__item\"><a href=\"https://doi.org/10.1152/jn.00002.2017\" class=\"epub-section__doi__text\">https://doi.org/10.1152/jn.00002.2017</a></span></div>\n" + 
       " <div>\n" + 
-      "              <ul class=\"rlist--inline\"></ul>\n" + 
+      "              <ul class=\"rlist--inline\"><li class=\"corrections single\"></li><li class=\"latest-version no-border\"><div class=\"versions-ctrl\"><a href=\"http://www.physiology.org/doi/prev/20170728-aop/abs/10.1152/physiolgenomics.00060.2017\">This is the final version - click for previous version</a></div></li></ul>\n" + 
       " </div>\n" + 
       " <!--+articleCoolbar()-->\n" + 
       " <nav class=\"stickybar coolBar trans\">\n" + 
@@ -738,7 +778,7 @@ public class TestAmPhysSocHtmlFilterFactory extends LockssTestCase {
       " </div>\n" + 
       " <div class=\"epub-section\"><span class=\"epub-section__item\"><span class=\"epub-section__state\">Published Online:</span><span class=\"epub-section__date\">1 Jun 2017</span></span><span class=\"epub-section__item\"><a href=\"https://doi.org/10.1152/jn.00002.2017\" class=\"epub-section__doi__text\">https://doi.org/10.1152/jn.00002.2017</a></span></div>\n" + 
       " <div>\n" + 
-      "              <ul class=\"rlist--inline\"></ul>\n" + 
+      "              <ul class=\"rlist--inline\"><li class=\"corrections single\"></li><li class=\"latest-version no-border\"><div class=\"versions-ctrl\"><a href=\"http://www.physiology.org/doi/prev/20170728-aop/abs/10.1152/physiolgenomics.00060.2017\">This is the final version - click for previous version</a></div></li></ul>\n" + 
       " </div>\n" + 
       " <!--+articleCoolbar()-->\n" + 
       " <nav class=\"stickybar coolBar trans\">\n" + 
@@ -915,6 +955,7 @@ public class TestAmPhysSocHtmlFilterFactory extends LockssTestCase {
       "   </body>\n" + 
       "</html>";
   
+  /*
   private static final String art1ContentHashFiltered = 
       "<div class=\"col-sm-8 col-md-8 article__content\">\n" + 
       "     <div class=\"citation\">\n" + 
@@ -1025,15 +1066,150 @@ public class TestAmPhysSocHtmlFilterFactory extends LockssTestCase {
       " </div>\n" + 
       " \n" + 
       " </div>";
+   */
+  private static final String art1ContentHashFiltered = 
+      " Research Article Control of Homeostasis" + 
+      " Cit Title" + 
+      " Author" + 
+      " Author" + 
+      " Published Online: 1 Jun 2017 https://doi.org/10.1152/jn.00002.2017" + 
+      " Abstract" + 
+      " Text..." + 
+      " Text..." + 
+      " MATERIALS AND METHODS" + 
+      " Text..." + 
+      "" + 
+      "" + 
+      "" + 
+      "" + 
+      "" + 
+      " figure caption..." + 
+      "" + 
+      "" + 
+      "" + 
+      " Download" + 
+      " figure" + 
+      " Download PowerPoint" + 
+      "" + 
+      "" + 
+      "" + 
+      "" + 
+      "" + 
+      "" + 
+      "" + 
+      " Table 1. Caption..." + 
+      "" + 
+      "" + 
+      "" + 
+      "" + 
+      "" + 
+      " Text..." + 
+      "" + 
+      "" + 
+      "" + 
+      " Text..." + 
+      "" + 
+      " Data analysis." + 
+      " Text..." + 
+      "" + 
+      "" + 
+      "" + 
+      "" + 
+      "" + 
+      " Text..." + 
+      "" + 
+      "" + 
+      "" + 
+      " Download" + 
+      " figure" + 
+      " Download PowerPoint" + 
+      "" + 
+      "" + 
+      " Text..." + 
+      "" + 
+      " ACKNOWLEDGMENTS" + 
+      " Text..." + 
+      "" + 
+      "" + 
+      "" + 
+      "" + 
+      " AUTHOR NOTES" + 
+      " Supplemental data" + 
+      "" + 
+      " supplemental table 1.xls (890.5 kb)" + 
+      "" + 
+      "" + 
+      "" + 
+      "" + 
+      "" + 
+      "" + 
+      "" + 
+      "" + 
+      " ";
   
   private static final String citContent = 
-      "";
+      "<html>\n" +
+      "<div class=\"citationFormats\">\n" + 
+      "  <div class=\"citation-download\">\n" + 
+      "    <p class=\"citation-msg\">\n" + 
+      "      download article citation data to the citation manager of your choice.<br><br>\n" + 
+      "    </p>\n" + 
+      "    <!-- download options -->\n" + 
+      "    <form action=\"/action/downloadCitation\" name=\"frmCitmgr\" class=\"citation-form\" method=\"post\" target=\"_self\">\n" + 
+      "    </form>\n" + 
+      "  </div>\n" + 
+      "  <!-- list of articles -->\n" + 
+      "  <div class=\"articleList\">\n" + 
+      "    <span class=\"sectionTitle\">Download article citation data for:</span>\n" + 
+      "    <hr>\n" + 
+      "    <div class=\"art_title\"><a href=\"/doi/abs/10.1152/jn.00002.2017\">research in progress</a></div>\n" + 
+      "    <div class=\"art_authors\"><span class=\"NLM_string-name\">A Author</span>" +
+      "    </div>\n" + 
+      "    <span class=\"journalName\">journal Name</span>\n" + 
+      "    <span class=\"year\">2017</span>\n" + 
+      "    <span class=\"volume\">99</span>:<span class=\"issue\">9</span>,\n" + 
+      "    <br>\n" + 
+      "    <hr>\n" + 
+      "  </div>\n" + 
+      "</div>\n" +
+      "</html>";
   
-  private static final String citContentCrawlFiltered = 
-      "";
-  
+  /*
   private static final String citContentHashFiltered = 
-      "";
+      "<html>\n" +
+      "<div class=\"citationFormats\">\n" + 
+      "  <div class=\"citation-download\">\n" + 
+      "    <p class=\"citation-msg\">\n" + 
+      "      download article citation data to the citation manager of your choice.<br><br>\n" + 
+      "    </p>\n" + 
+      "    <!-- download options -->\n" + 
+      "    <form action=\"/action/downloadCitation\" name=\"frmCitmgr\" class=\"citation-form\" method=\"post\" target=\"_self\">\n" + 
+      "    </form>\n" + 
+      "  </div>\n" + 
+      "  <!-- list of articles -->\n" + 
+      "  <div class=\"articleList\">\n" + 
+      "    <span class=\"sectionTitle\">Download article citation data for:</span>\n" + 
+      "    <hr>\n" + 
+      "    <div class=\"art_title\"><a href=\"/doi/abs/10.1152/jn.00002.2017\">research in progress</a></div>\n" + 
+      "    <div class=\"art_authors\"><span class=\"NLM_string-name\">A Author</span>" +
+      "    </div>\n" + 
+      "    <span class=\"journalName\">journal Name</span>\n" + 
+      "    <span class=\"year\">2017</span>\n" + 
+      "    <span class=\"volume\">99</span>:<span class=\"issue\">9</span>,\n" + 
+      "    <br>\n" + 
+      "    <hr>\n" + 
+      "  </div>\n" + 
+      "</div>\n" +
+      "</html>";
+   */
+  private static final String citContentHashFiltered = 
+      " Download article citation data for:" + 
+      " research in progress" + 
+      " A Author" +
+      " journal Name" + 
+      " 2017" + 
+      " 99 : 9 ," + 
+      " ";
   
   
   protected ArchivalUnit createAu()
@@ -1082,7 +1258,7 @@ public class TestAmPhysSocHtmlFilterFactory extends LockssTestCase {
       doFilterTest(mau, variantFact, manifestContent, manifestContent); 
       doFilterTest(mau, variantFact, tocContent, tocContentCrawlFiltered); 
       doFilterTest(mau, variantFact, art1Content, art1ContentCrawlFiltered); 
-      doFilterTest(mau, variantFact, citContent, citContentCrawlFiltered); 
+      doFilterTest(mau, variantFact, citContent, citContent); 
     }
   }
   
@@ -1090,7 +1266,7 @@ public class TestAmPhysSocHtmlFilterFactory extends LockssTestCase {
    public static class TestHash extends TestAmPhysSocHtmlFilterFactory {
      public void testFiltering() throws Exception {
       variantFact = new AmPhysSocHtmlHashFilterFactory();
-      doFilterTest(mau, variantFact, manifestContent, manifestContentFiltered); 
+      doFilterTest(mau, variantFact, manifestContent, manifestHashFiltered); 
       doFilterTest(mau, variantFact, tocContent, tocContentHashFiltered); 
       doFilterTest(mau, variantFact, art1Content, art1ContentHashFiltered); 
       doFilterTest(mau, variantFact, citContent, citContentHashFiltered); 
