@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -210,9 +210,7 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
       }
       return nodeList;
     }
-  };   
-
-
+  };
 
   /** Create an array of NodeFilters that combines the atyponBaseFilters with
    *  the given array
@@ -271,8 +269,15 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
       combinedFiltered = new HtmlFilterInputStream(in, encoding,
           new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(bothFilters)), xform_spanID));
     }
+    
+    return commonFiltering(combinedFiltered, encoding, doWS);
+  }
+
+  private InputStream commonFiltering(InputStream combinedFiltered, String encoding, boolean doWS) {
+    
     // a little inefficient but pull out comments after the child nodes are applied
     combinedFiltered = filterComments(combinedFiltered,encoding);
+    
     if (!doTagRemovalFiltering() && !doWS && !doHttpsConversion()) {
       // already done, return without converting back to a reader
       return combinedFiltered;
@@ -282,19 +287,27 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
      * optional additional processing - 
      *    removal of all tags and/or removal of WS & https conversion
      */
-    Reader tagFilter = FilterUtil.getReader(combinedFiltered, encoding);
+    Reader tagFilter;
+    
     // if removing both tags and WS, add a space before each tag
     if (doTagRemovalFiltering() && doWS) {
       tagFilter = new StringFilter(FilterUtil.getReader(combinedFiltered, encoding), "<", " <");
-    } 
+    } else {
+      tagFilter = FilterUtil.getReader(combinedFiltered, encoding);
+    }
+    
     if (doTagRemovalFiltering()) {
       tagFilter = new HtmlTagFilter(tagFilter, new TagPair("<", ">"));
     }
+    
+    // as Atypon publishers move to https this will support them. 
+    // It doesn't matter if it changes http to http unnecessarily for hash purposes
     if (doHttpsConversion()) {
       tagFilter = new StringFilter(tagFilter, "http:", "https:");
     }
+    
     if (doWS) {
-      // first subsitute plain white space for &nbsp;   
+      // first substitute plain white space for &nbsp;   
       // add spaces before all "<"
       // consolidate spaces down to 1
       // If the tags were removed above (with space added) it will not find tags
@@ -348,41 +361,11 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
       combinedFiltered = new HtmlFilterInputStream(in, encoding,
         new HtmlCompoundTransform(
             HtmlNodeFilterTransform.include(new OrFilter(includeNodes)),
-            HtmlNodeFilterTransform.exclude(new OrFilter(allExcludeNodes)))
+            HtmlNodeFilterTransform.exclude(new OrFilter(allExcludeNodes)),
+            xform_spanID)
         );
     }
-    // a little inefficient but pull out comments after the child nodes are applied
-    combinedFiltered = filterComments(combinedFiltered,encoding);
-    // as Atyon publishers move to https this will support them. 
-    // It doesn't matter if it changes http to http unnecessarily for hash purposes
-    Reader freader;
-    if (doHttpsConversion()) {
-      freader = FilterUtil.getReader(combinedFiltered, encoding);
-      freader = new StringFilter(freader, "http:", "https:");
-    } else {
-      freader = FilterUtil.getReader(combinedFiltered, encoding);
-    }
-    if (doWSFiltering()) {
-      // first subsitute plain white space for &nbsp;                                                                                                  
-      // add spaces before all "<"
-      // consolidate spaces down to 1
-      String[][] unifySpaces = new String[][] {
-          // inconsistent use of nbsp v empty space - do this replacement first                                                                        
-          {"&nbsp;", " "},
-          {"<", " <"},
-      };
-      Reader NBSPFilter = StringFilter.makeNestedFilter(freader,
-          unifySpaces, false);
-      if (doTagRemovalFiltering()) {
-        NBSPFilter = new HtmlTagFilter(NBSPFilter, new TagPair("<", ">"));
-      }
-      freader = new WhiteSpaceFilter(NBSPFilter); 
-    }
-    else if (doTagRemovalFiltering()) {
-      freader = new HtmlTagFilter(freader, new TagPair(" <", ">"));
-    }
-
-    return new ReaderInputStream(freader);
+    return commonFiltering(combinedFiltered, encoding, doWSFiltering());
   }
 
   /** Create a FilteredInputStream that excludes the the atyponBaseFilters and

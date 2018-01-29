@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -45,7 +45,6 @@ import org.lockss.config.TdbAu;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.metapress.MetapressHtmlCrawlFilterFactory;
 import org.lockss.util.Logger;
 
 /**
@@ -70,12 +69,12 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
     // toc - right column, current issue or book landing page
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumBookIssueNavigation"),
 
-    // sections that may show up with this skin                                          
+    // sections that may show up with this skin
     // http://www.birpublications.org/toc/bjr/88/1052
-    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumAd"),    
-    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumMostReadWidget"),    
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumAd"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumMostReadWidget"),
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumMostCitedWidget"),
-    HtmlNodeFilters.tagWithAttributeRegex("div",  "class","literatumMostRecentWidget"),                                      
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumMostRecentWidget"),
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumListOfIssuesWidget"),
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumListOfIssuesResponsiveWidget"),
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumOpenAccessWidget"),
@@ -97,7 +96,7 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
     // T&F doesn't have prev/next article links
 
     // breadcrumb or other link back to TOC from article page
-    // AMetSoc, Ammons, APHA, NRC,  
+    // AMetSoc, Ammons, APHA, NRC,
     HtmlNodeFilters.tagWithAttribute("div", "id", "breadcrumbs"),
     // ASCE, BiR, Maney, SEG, SIAM, Endocrine 
     HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "^(linkList )?breadcrumbs$"),
@@ -115,12 +114,12 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
     // there are a variety of ways these blocks are identified, but 
     // these are unlikely to be used anywhere else so put in parent
     // emerald, AIAA
-    HtmlNodeFilters.tagWithAttribute("div",  "class", "references"),
+    HtmlNodeFilters.tagWithAttribute("div", "class", "references"),
     // ASCE
-    HtmlNodeFilters.tagWithAttribute("li",  "class", "reference"),
+    HtmlNodeFilters.tagWithAttribute("li", "class", "reference"),
     // T&F: <ul class=\"references numeric-ordered-list\" id=\"references-Section\">
-    HtmlNodeFilters.tagWithAttributeRegex("ul",  "class", "^references"),
-    HtmlNodeFilters.tagWithAttribute("li",  "class", "reference"),
+    HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "^references"),
+    HtmlNodeFilters.tagWithAttribute("li", "class", "reference"),
     //maney, future-science (also in child...will remove later)
     HtmlNodeFilters.tagWithAttribute("table", "class", "references"),
 
