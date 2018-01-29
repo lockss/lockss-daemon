@@ -332,7 +332,7 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
     
     // Remove script tags that can confuse the parser with " and ' out of match order (even if escaped)
     in = new BufferedInputStream(new ReaderInputStream(
-        new HtmlTagFilter(FilterUtil.getReader(in, encoding), new TagPair("<script","</script>"))));    
+        new HtmlTagFilter(FilterUtil.getReader(in, encoding), new TagPair("<script","</script>"))));
 
     InputStream combinedFiltered;
     // xform_allIDs filters out all "id" attributes and
@@ -373,10 +373,16 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
       };
       Reader NBSPFilter = StringFilter.makeNestedFilter(freader,
           unifySpaces, false);
-      return new ReaderInputStream(new WhiteSpaceFilter(NBSPFilter)); 
-    } else { 
-      return new ReaderInputStream(freader);
+      if (doTagRemovalFiltering()) {
+        NBSPFilter = new HtmlTagFilter(NBSPFilter, new TagPair("<", ">"));
+      }
+      freader = new WhiteSpaceFilter(NBSPFilter); 
     }
+    else if (doTagRemovalFiltering()) {
+      freader = new HtmlTagFilter(freader, new TagPair(" <", ">"));
+    }
+
+    return new ReaderInputStream(freader);
   }
 
   /** Create a FilteredInputStream that excludes the the atyponBaseFilters and
