@@ -97,9 +97,14 @@ public class AmPhysSocHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFact
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "content.?navigation"),
         // XXX following would be needed if alternative filter HtmlNodeFilters.tag("article") is used
         // HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-row-right"),
+        // The publisher seems to be in the process of tweeking the site
         HtmlNodeFilters.tagWithAttribute("div", "class", "badges"),
         HtmlNodeFilters.tagWithAttribute("a", "class", "rightslink"),
         HtmlNodeFilters.tagWithAttributeRegex("li", "class", "references__item"),
+        // The publisher seems to be in the process of tweeking the site, adding and changing the tag attributes
+        HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "article__header"),
+        HtmlNodeFilters.tagWithAttributeRegex("li", "class", "(corrections|latest-version)"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "versions-ctrl"),
     };
     return super.createFilteredInputStream(au, in, encoding, 
                                            includeNodes, excludeNodes);
@@ -107,18 +112,18 @@ public class AmPhysSocHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFact
 
   @Override
   public boolean doTagIDFiltering() {
-    return true;
+    return false;
   }
   
   @Override
   public boolean doWSFiltering() {
-    return false;
+    return true;
   }
   
   /* removes tags and comments after other processing */
   @Override
   public boolean doTagRemovalFiltering() {
-    return false;
+    return true;
   }
   
   @Override
