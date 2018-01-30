@@ -103,7 +103,7 @@ public class AmPhysSocHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFact
         HtmlNodeFilters.tagWithAttributeRegex("li", "class", "references__item"),
         // The publisher seems to be in the process of tweeking the site, adding and changing the tag attributes
         HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "article__header"),
-        HtmlNodeFilters.tagWithAttributeRegex("li", "class", "(corrections|latest-version)"),
+        HtmlNodeFilters.tagWithAttributeRegex("li", "class", "(correction|latest-version)"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "versions-ctrl"),
     };
     return super.createFilteredInputStream(au, in, encoding, 

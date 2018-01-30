@@ -70,6 +70,7 @@ public class AmPhysSocHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFa
       HtmlNodeFilters.tagWithAttributeRegex("a", "class", "rightslink"),
       HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/servlet/linkout[?]type="),
       HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/author/"),
+      HtmlNodeFilters.tagWithAttributeRegex("li", "class", "(correction|latest-version)"),
   };
   
   public InputStream createFilteredInputStream(ArchivalUnit au,

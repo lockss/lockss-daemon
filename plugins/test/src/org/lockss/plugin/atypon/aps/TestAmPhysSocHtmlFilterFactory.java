@@ -490,7 +490,7 @@ public class TestAmPhysSocHtmlFilterFactory extends LockssTestCase {
       " </div>\n" + 
       " <div class=\"epub-section\"><span class=\"epub-section__item\"><span class=\"epub-section__state\">Published Online:</span><span class=\"epub-section__date\">1 Jun 2017</span></span><span class=\"epub-section__item\"><a href=\"https://doi.org/10.1152/jn.00002.2017\" class=\"epub-section__doi__text\">https://doi.org/10.1152/jn.00002.2017</a></span></div>\n" + 
       " <div>\n" + 
-      "              <ul class=\"rlist--inline\"><li class=\"corrections single\"></li><li class=\"latest-version no-border\"><div class=\"versions-ctrl\"><a href=\"http://www.physiology.org/doi/prev/20170728-aop/abs/10.1152/physiolgenomics.00060.2017\">This is the final version - click for previous version</a></div></li></ul>\n" + 
+      "              <ul class=\"rlist--inline\"><li class=\"correction\"></li><li class=\"corrections single\"></li><li class=\"latest-version no-border\"><div class=\"versions-ctrl\"><a href=\"http://www.physiology.org/doi/prev/20170728-aop/abs/10.1152/physiolgenomics.00060.2017\">This is the final version - click for previous version</a></div></li></ul>\n" + 
       " </div>\n" + 
       " <!--+articleCoolbar()-->\n" + 
       " <nav class=\"stickybar coolBar trans\">\n" + 
@@ -778,7 +778,7 @@ public class TestAmPhysSocHtmlFilterFactory extends LockssTestCase {
       " </div>\n" + 
       " <div class=\"epub-section\"><span class=\"epub-section__item\"><span class=\"epub-section__state\">Published Online:</span><span class=\"epub-section__date\">1 Jun 2017</span></span><span class=\"epub-section__item\"><a href=\"https://doi.org/10.1152/jn.00002.2017\" class=\"epub-section__doi__text\">https://doi.org/10.1152/jn.00002.2017</a></span></div>\n" + 
       " <div>\n" + 
-      "              <ul class=\"rlist--inline\"><li class=\"corrections single\"></li><li class=\"latest-version no-border\"><div class=\"versions-ctrl\"><a href=\"http://www.physiology.org/doi/prev/20170728-aop/abs/10.1152/physiolgenomics.00060.2017\">This is the final version - click for previous version</a></div></li></ul>\n" + 
+      "              <ul class=\"rlist--inline\"></ul>\n" + 
       " </div>\n" + 
       " <!--+articleCoolbar()-->\n" + 
       " <nav class=\"stickybar coolBar trans\">\n" + 
