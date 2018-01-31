@@ -6861,6 +6861,21 @@
     param[journal_id] = 10.1055/s-00034924
     comment[years] = 1961-current
 
+    au < exists ; 2000 ; 2000 ; Nuklearmedizin Volume 39 ; 39 >
+    au < exists ; 2001 ; 2001 ; Nuklearmedizin Volume 40 ; 40 >
+    au < exists ; 2002 ; 2002 ; Nuklearmedizin Volume 41 ; 41 >
+    au < exists ; 2003 ; 2003 ; Nuklearmedizin Volume 42 ; 42 >
+    au < exists ; 2004 ; 2004 ; Nuklearmedizin Volume 43 ; 43 >
+    au < exists ; 2005 ; 2005 ; Nuklearmedizin Volume 44 ; 44 >
+    au < exists ; 2006 ; 2006 ; Nuklearmedizin Volume 45 ; 45 >
+    au < exists ; 2007 ; 2007 ; Nuklearmedizin Volume 46 ; 46 >
+    au < exists ; 2008 ; 2008 ; Nuklearmedizin Volume 47 ; 47 >
+    au < exists ; 2009 ; 2009 ; Nuklearmedizin Volume 48 ; 48 >
+    au < exists ; 2010 ; 2010 ; Nuklearmedizin Volume 49 ; 49 >
+    au < exists ; 2011 ; 2011 ; Nuklearmedizin Volume 50 ; 50 >
+    au < exists ; 2012 ; 2012 ; Nuklearmedizin Volume 51 ; 51 >
+    au < exists ; 2013 ; 2013 ; Nuklearmedizin Volume 52 ; 52 >
+    au < exists ; 2014 ; 2014 ; Nuklearmedizin Volume 53 ; 53 >
     au < manifest ; 2015 ; 2015 ; Nuklearmedizin Volume 54 ; 54 >
     au < manifest ; 2016 ; 2016 ; Nuklearmedizin Volume 55 ; 55 >
     au < manifest ; 2017 ; 2017 ; Nuklearmedizin Volume 56 ; 56 >
@@ -6879,6 +6894,11 @@
     param[journal_id] = 10.1055/s-00034915
     comment[years] = 2010-current
 
+    au < exists ; 2010 ; 2010 ; Onkologische Welt Volume 1 ; 1 >
+    au < exists ; 2011 ; 2011 ; Onkologische Welt Volume 2 ; 2 >
+    au < exists ; 2012 ; 2012 ; Onkologische Welt Volume 3 ; 3 >
+    au < exists ; 2013 ; 2013 ; Onkologische Welt Volume 4 ; 4 >
+    au < exists ; 2014 ; 2014 ; Onkologische Welt Volume 5 ; 5 >
     au < manifest ; 2015 ; 2015 ; Onkologische Welt Volume 6 ; 6 >
     au < manifest ; 2016 ; 2016 ; Onkologische Welt Volume 7 ; 7 >
     au < manifest ; 2017 ; 2017 ; Onkologische Welt Volume 8 ; 8 >
@@ -6897,6 +6917,15 @@
     param[journal_id] = 10.1055/s-00034914
     comment[years] = 2008-current
 
+    au < exists ; 2008 ; 2008 ; Osteologie Volume 17 ; 17 >
+    au < exists ; 2009 ; 2009 ; Osteologie Volume 18 ; 18 >
+    au < exists ; 2010 ; 2010 ; Osteologie Volume 19 ; 19 >
+    au < exists ; 2011 ; 2011 ; Osteologie Volume 20 ; 20 >
+    au < exists ; 2012 ; 2012 ; Osteologie Volume 21 ; 21 >
+    au < exists ; 2013 ; 2013 ; Osteologie Volume 22 ; 22 >
+    au < exists ; 2014 ; 2014 ; Osteologie Volume 23 ; 23 >
+    au < exists ; 2015 ; 2015 ; Osteologie Volume 24 ; 24 >
+    au < exists ; 2016 ; 2016 ; Osteologie Volume 25 ; 25 >
     au < manifest ; 2017 ; 2017 ; Osteologie Volume 26 ; 26 >
 
   }
@@ -6952,8 +6981,21 @@
     >
 
     param[journal_id] = 10.1055/s-00033287
-    comment[years] = 2017-current
+    comment[years] = 2004-current
 
+    au < exists ; 2004 ; 2004 ; Revista Iberoamericana de Cirugía de la Mano Volume 32 ; 32 >
+    au < exists ; 2005 ; 2005 ; Revista Iberoamericana de Cirugía de la Mano Volume 33 ; 33 >
+    au < exists ; 2006 ; 2006 ; Revista Iberoamericana de Cirugía de la Mano Volume 34 ; 34 >
+    au < exists ; 2007 ; 2007 ; Revista Iberoamericana de Cirugía de la Mano Volume 35 ; 35 >
+    au < exists ; 2008 ; 2008 ; Revista Iberoamericana de Cirugía de la Mano Volume 36 ; 36 >
+    au < exists ; 2009 ; 2009 ; Revista Iberoamericana de Cirugía de la Mano Volume 37 ; 37 >
+    au < exists ; 2010 ; 2010 ; Revista Iberoamericana de Cirugía de la Mano Volume 38 ; 38 >
+    au < exists ; 2011 ; 2011 ; Revista Iberoamericana de Cirugía de la Mano Volume 39 ; 39 >
+    au < exists ; 2012 ; 2012 ; Revista Iberoamericana de Cirugía de la Mano Volume 40 ; 40 >
+    au < exists ; 2013 ; 2013 ; Revista Iberoamericana de Cirugía de la Mano Volume 41 ; 41 >
+    au < exists ; 2014 ; 2014 ; Revista Iberoamericana de Cirugía de la Mano Volume 42 ; 42 >
+    au < exists ; 2015 ; 2015 ; Revista Iberoamericana de Cirugía de la Mano Volume 43 ; 43 >
+    au < exists ; 2016 ; 2016 ; Revista Iberoamericana de Cirugía de la Mano Volume 44 ; 44 >
     au < manifest ; 2017 ; 2017 ; Revista Iberoamericana de Cirugía de la Mano Volume 45 ; 45 >
 
   }
@@ -7001,6 +7043,20 @@
     param[journal_id] = 10.1055/s-00034912
     comment[years] = 2003-current
 
+    au < exists ; 2003 ; 2003 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 31 ; 31 >
+    au < exists ; 2004 ; 2004 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 32 ; 32 >
+    au < exists ; 2005 ; 2005 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 33 ; 33 >
+    au < exists ; 2006 ; 2006 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 34 ; 34 >
+    au < exists ; 2007 ; 2007 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 35 ; 35 >
+    au < exists ; 2008 ; 2008 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 36 ; 36 >
+    au < exists ; 2009 ; 2009 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 37 ; 37 >
+    au < exists ; 2010 ; 2010 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 38 ; 38 >
+    au < exists ; 2011 ; 2011 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 39 ; 39 >
+    au < exists ; 2012 ; 2012 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 40 ; 40 >
+    au < exists ; 2013 ; 2013 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 41 ; 41 >
+    au < exists ; 2014 ; 2014 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 42 ; 42 >
+    au < exists ; 2015 ; 2015 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 43 ; 43 >
+    au < exists ; 2016 ; 2016 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 44 ; 44 >
     au < manifest ; 2017 ; 2017 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 45 ; 45 >
 
   }
@@ -7017,6 +7073,20 @@
     param[journal_id] = 10.1055/s-00034911
     comment[years] = 2003-current
 
+    au < exists ; 2003 ; 2003 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 1 ; 1 >
+    au < exists ; 2004 ; 2004 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 2 ; 2 >
+    au < exists ; 2005 ; 2005 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 3 ; 3 >
+    au < exists ; 2006 ; 2006 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 4 ; 4 >
+    au < exists ; 2007 ; 2007 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 5 ; 5 >
+    au < exists ; 2008 ; 2008 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 6 ; 6 >
+    au < exists ; 2009 ; 2009 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 7 ; 7 >
+    au < exists ; 2010 ; 2010 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 8 ; 8 >
+    au < exists ; 2011 ; 2011 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 9 ; 9 >
+    au < exists ; 2012 ; 2012 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 10 ; 10 >
+    au < exists ; 2013 ; 2013 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 11 ; 11 >
+    au < exists ; 2014 ; 2014 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 12 ; 12 >
+    au < exists ; 2015 ; 2015 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 13 ; 13 >
+    au < exists ; 2016 ; 2016 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 14 ; 14 >
     au < manifest ; 2017 ; 2017 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 15 ; 15 >
 
   }
