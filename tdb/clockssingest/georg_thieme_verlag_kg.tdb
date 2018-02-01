@@ -6606,12 +6606,12 @@
     au < manifest ; exists ; 2007 ; 2007 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 1 ; 1 ; >
     au < manifest ; exists ; 2008 ; 2008 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 2 ; 2 ; >
     au < manifest ; exists ; 2009 ; 2009 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 3 ; 3 ; >
-    au < testing ; exists ; 2010 ; 2010 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 4 ; 4 ; >
-    au < testing ; exists ; 2011 ; 2011 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 5 ; 5 ; >
-    au < testing ; exists ; 2012 ; 2012 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 6 ; 6 ; >
-    au < testing ; exists ; 2013 ; 2013 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 7 ; 7 ; >
-    au < testing ; exists ; 2014 ; 2014 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 8 ; 8 ; >
-    au < testing ; exists ; 2015 ; 2015 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 9 ; 9 ; >
+    au < ready ; exists ; 2010 ; 2010 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 4 ; 4 ; >
+    au < ready ; exists ; 2011 ; 2011 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 5 ; 5 ; >
+    au < ready ; exists ; 2012 ; 2012 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 6 ; 6 ; >
+    au < ready ; exists ; 2013 ; 2013 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 7 ; 7 ; >
+    au < ready ; exists ; 2014 ; 2014 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 8 ; 8 ; >
+    au < ready ; exists ; 2015 ; 2015 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 9 ; 9 ; >
     au < testing ; exists ; 2016 ; 2016 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 10 ; 10 ; >
     au < crawling ; exists ; 2017 ; 2017 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 11 ; 11 ; >
 
@@ -6630,10 +6630,10 @@
 
     au < manifest ; exists ; 2009 ; 2009 ; Applied Clinical Informatics Volume 0 ; 0 ; >
     au < frozen ; exists ; 2010 ; 2010 ; Applied Clinical Informatics Volume 1 ; 1 ; >
-    au < testing ; exists ; 2011 ; 2011 ; Applied Clinical Informatics Volume 2 ; 2 ; >
-    au < testing ; exists ; 2012 ; 2012 ; Applied Clinical Informatics Volume 3 ; 3 ; >
-    au < testing ; exists ; 2013 ; 2013 ; Applied Clinical Informatics Volume 4 ; 4 ; >
-    au < testing ; exists ; 2014 ; 2014 ; Applied Clinical Informatics Volume 5 ; 5 ; >
+    au < ready ; exists ; 2011 ; 2011 ; Applied Clinical Informatics Volume 2 ; 2 ; >
+    au < ready ; exists ; 2012 ; 2012 ; Applied Clinical Informatics Volume 3 ; 3 ; >
+    au < ready ; exists ; 2013 ; 2013 ; Applied Clinical Informatics Volume 4 ; 4 ; >
+    au < ready ; exists ; 2014 ; 2014 ; Applied Clinical Informatics Volume 5 ; 5 ; >
     au < testing ; exists ; 2015 ; 2015 ; Applied Clinical Informatics Volume 6 ; 6 ; >
     au < testing ; exists ; 2016 ; 2016 ; Applied Clinical Informatics Volume 7 ; 7 ; >
     au < testing ; exists ; 2017 ; 2017 ; Applied Clinical Informatics Volume 8 ; 8 ; >
@@ -6660,12 +6660,12 @@
     au < manifest ; exists ; 2008 ; 2008 ; Arthritis und Rheuma Volume 28 ; 28 ; >
     au < manifest ; exists ; 2009 ; 2009 ; Arthritis und Rheuma Volume 29 ; 29 ; >
     au < testing ; exists ; 2010 ; 2010 ; Arthritis und Rheuma Volume 30 ; 30 ; >
-    au < testing ; exists ; 2011 ; 2011 ; Arthritis und Rheuma Volume 31 ; 31 ; >
-    au < testing ; exists ; 2012 ; 2012 ; Arthritis und Rheuma Volume 32 ; 32 ; >
+    au < ready ; exists ; 2011 ; 2011 ; Arthritis und Rheuma Volume 31 ; 31 ; >
+    au < ready ; exists ; 2012 ; 2012 ; Arthritis und Rheuma Volume 32 ; 32 ; >
     au < testing ; exists ; 2013 ; 2013 ; Arthritis und Rheuma Volume 33 ; 33 ; >
     au < testing ; exists ; 2014 ; 2014 ; Arthritis und Rheuma Volume 34 ; 34 ; >
     au < testing ; exists ; 2015 ; 2015 ; Arthritis und Rheuma Volume 35 ; 35 ; >
-    au < testing ; exists ; 2016 ; 2016 ; Arthritis und Rheuma Volume 36 ; 36 ; >
+    au < ready ; exists ; 2016 ; 2016 ; Arthritis und Rheuma Volume 36 ; 36 ; >
     au < crawling ; exists ; 2017 ; 2017 ; Arthritis und Rheuma Volume 37 ; 37 ; >
 
   }
@@ -6790,7 +6790,7 @@
     au < exists ; exists ; 2013 ; 2013 ; Kinder- und Jugendmedizin Volume 13 ; 13 ; >
     au < testing ; exists ; 2014 ; 2014 ; Kinder- und Jugendmedizin Volume 14 ; 14 ; >
     au < testing ; exists ; 2015 ; 2015 ; Kinder- und Jugendmedizin Volume 15 ; 15 ; >
-    au < testing ; exists ; 2016 ; 2016 ; Kinder- und Jugendmedizin Volume 16 ; 16 ; >
+    au < ready ; exists ; 2016 ; 2016 ; Kinder- und Jugendmedizin Volume 16 ; 16 ; >
     au < crawling ; exists ; 2017 ; 2017 ; Kinder- und Jugendmedizin Volume 17 ; 17 ; >
 
   }
@@ -6810,9 +6810,9 @@
     au < manifest ; exists ; 2007 ; 2007 ; Methods of Information in Medicine Volume 46 ; 46 ; >
     au < manifest ; exists ; 2008 ; 2008 ; Methods of Information in Medicine Volume 47 ; 47 ; >
     au < manifest ; exists ; 2009 ; 2009 ; Methods of Information in Medicine Volume 48 ; 48 ; >
-    au < testing ; exists ; 2010 ; 2010 ; Methods of Information in Medicine Volume 49 ; 49 ; >
-    au < testing ; exists ; 2011 ; 2011 ; Methods of Information in Medicine Volume 50 ; 50 ; >
-    au < testing ; exists ; 2012 ; 2012 ; Methods of Information in Medicine Volume 51 ; 51 ; >
+    au < ready ; exists ; 2010 ; 2010 ; Methods of Information in Medicine Volume 49 ; 49 ; >
+    au < ready ; exists ; 2011 ; 2011 ; Methods of Information in Medicine Volume 50 ; 50 ; >
+    au < ready ; exists ; 2012 ; 2012 ; Methods of Information in Medicine Volume 51 ; 51 ; >
     au < testing ; exists ; 2013 ; 2013 ; Methods of Information in Medicine Volume 52 ; 52 ; >
     au < testing ; exists ; 2014 ; 2014 ; Methods of Information in Medicine Volume 53 ; 53 ; >
     au < testing ; exists ; 2015 ; 2015 ; Methods of Information in Medicine Volume 54 ; 54 ; >
@@ -6841,13 +6841,13 @@
     au < manifest ; exists ; 2008 ; 2008 ; Nervenheilkunde Volume 27 ; 27 ; >
     au < manifest ; exists ; 2009 ; 2009 ; Nervenheilkunde Volume 28 ; 28 ; >
     au < testing ; exists ; 2010 ; 2010 ; Nervenheilkunde Volume 29 ; 29 ; >
-    au < testing ; exists ; 2011 ; 2011 ; Nervenheilkunde Volume 30 ; 30 ; >
+    au < ready ; exists ; 2011 ; 2011 ; Nervenheilkunde Volume 30 ; 30 ; >
     au < testing ; exists ; 2012 ; 2012 ; Nervenheilkunde Volume 31 ; 31 ; >
-    au < testing ; exists ; 2013 ; 2013 ; Nervenheilkunde Volume 32 ; 32 ; >
+    au < ready ; exists ; 2013 ; 2013 ; Nervenheilkunde Volume 32 ; 32 ; >
     au < testing ; exists ; 2014 ; 2014 ; Nervenheilkunde Volume 33 ; 33 ; >
     au < frozen ; exists ; 2015 ; 2015 ; Nervenheilkunde Volume 34 ; 34 ; >
     au < testing ; exists ; 2016 ; 2016 ; Nervenheilkunde Volume 35 ; 35 ; >
-    au < testing ; exists ; 2017 ; 2017 ; Nervenheilkunde Volume 36 ; 36 ; >
+    au < ready ; exists ; 2017 ; 2017 ; Nervenheilkunde Volume 36 ; 36 ; >
 
   }
 
