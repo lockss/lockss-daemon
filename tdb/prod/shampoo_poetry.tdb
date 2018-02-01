@@ -17,21 +17,20 @@
     param[base_url] = http://www.shampoopoetry.com/
     implicit < status ; year ; name ; param[year] ; param[issue_set] >
 
-    au < released ; 2000 ; Shampoo 2000 ; 2000 ; One, Two, Three >
-    au < released ; 2001 ; Shampoo 2001 ; 2001 ; Four, Five, Six, Seven, Eight, Nine >
-    au < released ; 2002 ; Shampoo 2002 ; 2002 ; Ten, Eleven, Twelve, Thirteen, Fourteen, Fifteen >
-    au < released ; 2003 ; Shampoo 2003 ; 2003 ; Sixteen, Seventeen, Eighteen, Nineteen >
-    au < released ; 2004 ; Shampoo 2004 ; 2004 ; Twentytwo, Twentyone, Twenty >
+    au < down ; 2000 ; Shampoo 2000 ; 2000 ; One, Two, Three >
+    au < down ; 2001 ; Shampoo 2001 ; 2001 ; Four, Five, Six, Seven, Eight, Nine >
+    au < down ; 2002 ; Shampoo 2002 ; 2002 ; Ten, Eleven, Twelve, Thirteen, Fourteen, Fifteen >
+    au < down ; 2003 ; Shampoo 2003 ; 2003 ; Sixteen, Seventeen, Eighteen, Nineteen >
+    au < down ; 2004 ; Shampoo 2004 ; 2004 ; Twentytwo, Twentyone, Twenty >
     au < superseded ; 2005 ; Shampoo 2005 [superseded] ; 2005 ; Twentyfive, Twentyonefour, Twentythree >
-    au < released ; 2005 ; Shampoo 2005 ; 2005 ; Twentyfive, Twentyfour, Twentythree >
-    au < released ; 2006 ; Shampoo 2006 ; 2006 ; Twentyeight, Twentyseven, Twentysix >
-    au < released ; 2007 ; Shampoo 2007 ; 2007 ; Twentynine,Thirty,Thirtyone >
-    au < released ; 2008 ; Shampoo 2008 ; 2008 ; Thirtytwo,Thirtythree,Thirtyfour >
-    au < released ; 2009 ; Shampoo 2009 ; 2009 ; Thirtyfive,Thirtysix >
-    au < released ; 2010 ; Shampoo 2010 ; 2010 ; Thirtyseven >
-    au < released ; 2011 ; Shampoo 2011 ; 2011 ; thirtyeight,thirtynine >
-    au < released ; 2013 ; Shampoo 2013 ; 2013 ; forty >
-    au < exists ; 2014 ; Shampoo 2014 ; 2014 ; fortyone >
+    au < down ; 2005 ; Shampoo 2005 ; 2005 ; Twentyfive, Twentyfour, Twentythree >
+    au < down ; 2006 ; Shampoo 2006 ; 2006 ; Twentyeight, Twentyseven, Twentysix >
+    au < down ; 2007 ; Shampoo 2007 ; 2007 ; Twentynine,Thirty,Thirtyone >
+    au < down ; 2008 ; Shampoo 2008 ; 2008 ; Thirtytwo,Thirtythree,Thirtyfour >
+    au < down ; 2009 ; Shampoo 2009 ; 2009 ; Thirtyfive,Thirtysix >
+    au < down ; 2010 ; Shampoo 2010 ; 2010 ; Thirtyseven >
+    au < down ; 2011 ; Shampoo 2011 ; 2011 ; thirtyeight,thirtynine >
+    au < down ; 2013 ; Shampoo 2013 ; 2013 ; forty >
     
   }
 
