@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2017 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -128,7 +128,9 @@ public class BaseAtyponHtmlLinkRewriterFactory implements LinkRewriterFactory {
         if ("post".equalsIgnoreCase(method) && "frmCitmgr".equalsIgnoreCase(f_name)) {
           String newUrl = html_url.replaceAll(SHOW_CITATION,DOWNLOAD_CITATION) + DEFAULT_CITATION_ARGS;
           InputTag buttonInput = ((FormTag) node).getInputTag("submit");
-          buttonInput.setAttribute("onclick",newUrl);
+          if (buttonInput != null) {
+            buttonInput.setAttribute("onclick",newUrl);
+          }
           ((FormTag) node).setAttribute("action", newUrl);
         }
       }

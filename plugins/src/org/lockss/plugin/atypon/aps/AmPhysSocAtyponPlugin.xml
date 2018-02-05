@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -38,7 +38,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>88</string>
+    <string>89</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -48,7 +48,7 @@
   <entry>
     <string>application/pdf_filter_factory</string>
     <string>org.lockss.plugin.atypon.aps.AmPhysSocPdfFilterFactory</string>
-  </entry>  
+  </entry>
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.atypon.aps.AmPhysSocHtmlHashFilterFactory</string>
