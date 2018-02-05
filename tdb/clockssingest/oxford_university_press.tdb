@@ -8488,7 +8488,7 @@
 
     param[journal_id] = jcmc
 
-    au < expected ; exists ; 2018 ; 2018 ; Journal of Computer-Mediated Communication Volume 1 ; 1 ;  >
+    au < manifest ; exists ; 2018 ; 2018 ; Journal of Computer-Mediated Communication Volume 1 ; 1 ;  >
 
   }
 
@@ -19185,7 +19185,7 @@
     au < manifest ; exists ; 2015 ; 2015 ; Translational Behavioral Medicine Volume 5 ; 5 ;  >
     au < manifest ; exists ; 2016 ; 2016 ; Translational Behavioral Medicine Volume 6 ; 6 ;  >
     au < manifest ; exists ; 2017 ; 2017 ; Translational Behavioral Medicine Volume 7 ; 7 ;  >
-    au < expected ; exists ; 2018 ; 2018 ; Translational Behavioral Medicine Volume 8 ; 8 ;  >
+    au < manifest ; exists ; 2018 ; 2018 ; Translational Behavioral Medicine Volume 8 ; 8 ;  >
 
   }
 
