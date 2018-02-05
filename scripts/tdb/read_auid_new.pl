@@ -617,29 +617,30 @@ while (my $line = <>) {
     }
         sleep(4);
 
-  } elsif ($plugin eq "PensoftPlugin" || $plugin eq "ClockssPensoftPlugin") {
-        #Url with list of urls for issues
-        $url = sprintf("%sjournals/%s/archive?year=%d",
-            $param{base_url}, $param{journal_name}, $param{year});
-        $start_url = uri_unescape($url);
-        my $req_s = HTTP::Request->new(GET, $start_url);
-        my $resp_s = $ua->request($req_s);
-        #For reporting at the end
-        $man_url = $start_url ;
-    if ($resp_s->is_success) {
-      my $start_contents = $resp_s->content;
-      if (defined($start_contents) && (($start_contents =~ m/$cc_license_tag/) && ($start_contents =~ m/$cc_license_url/)) && ($start_contents =~ m/\($param{year}\)/)) {
-         if ($start_contents =~ m/<title>(.*) - Pensoft<\/title>/si) {
-            $vol_title = $1 . "Volume " . $param{year};
-        }
-         $result = "Manifest"
-      } else {
-         $result = "--"
-      }
-    } else {
-      $result = "--"
-    }
-        sleep(4);
+#  } elsif ($plugin eq "PensoftPlugin" || $plugin eq "ClockssPensoftPlugin") {
+#        #Url with list of urls for issues
+#        $url = sprintf("%sjournals/%s/archive?year=%d",
+#            $param{base_url}, $param{journal_name}, $param{year});
+#        $start_url = uri_unescape($url);
+#        my $req_s = HTTP::Request->new(GET, $start_url);
+#        my $resp_s = $ua->request($req_s);
+#        #For reporting at the end
+#        $man_url = $start_url ;
+#    if ($resp_s->is_success) {
+#      my $start_contents = $resp_s->content;
+#      if (defined($start_contents) && (($start_contents =~ m/$cc_license_tag/) && ($start_contents =~ m/$cc_license_url/)) && ($start_contents =~ m/\($param{year}\)/)) {
+#         if ($start_contents =~ m/<title>(.*) - Pensoft<\/title>/si) {
+#            $vol_title = $1 . "Volume " . $param{year};
+#        }
+#         $result = "Manifest"
+#      } else {
+#         $result = "--"
+#      }
+#    } else {
+#      $result = "--"
+#    }
+#        sleep(4);
+#Newplugin is org.lockss.plugin.pensoft.oai.ClockssPensoftOaiPlugin
 
   } elsif ($plugin eq "GeorgThiemeVerlagPlugin") {
         #Url with list of urls for issues
