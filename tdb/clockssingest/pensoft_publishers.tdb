@@ -26,7 +26,7 @@
     au < finished ; finished ; 2013 ; 1 ; Biodiversity Data Journal Volume 2013 ; 2013 ; http://bdj.pensoft.net/ ; >
     au < frozen ; exists ; 2014 ; 2 ; Biodiversity Data Journal Volume 2014 ; 2014 ; http://bdj.pensoft.net/ ; >
     au < finished ; finished ; 2015 ; 3 ; Biodiversity Data Journal Volume 2015 ; 2015 ; http://bdj.pensoft.net/ ; reingest1.clockss.org:8082 >
-    au < exists ; exists ; 2016 ; 4 ; Biodiversity Data Journal Volume 2016 ; 2016 ; https://bdj.pensoft.net/ ; >
+    au < testing ; exists ; 2016 ; 4 ; Biodiversity Data Journal Volume 2016 ; 2016 ; https://bdj.pensoft.net/ ; >
     au < expected ; exists ; 2017 ; 5 ; Biodiversity Data Journal Volume 2017 ; 2017 ; https://bdj.pensoft.net/ ; >
     
    }
@@ -51,7 +51,7 @@
     au < finished ; finished ; 2013 ; 8 ; BioRisk Volume 2013 ; 2013 ; http://biorisk.pensoft.net/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 9 ; BioRisk Volume 2014 ; 2014 ; http://biorisk.pensoft.net/ ; reingest1.clockss.org:8082 >
     au < notReady ; exists ; 2015 ; 10 ; BioRisk Volume 2015 [abstract only] ; 2015 ; https://biorisk.pensoft.net/ ; > #no substance.
-    au < exists ; exists ; 2016 ; 11 ; BioRisk Volume 2016 ; 2016 ; https://biorisk.pensoft.net/ ; >
+    au < testing ; exists ; 2016 ; 11 ; BioRisk Volume 2016 ; 2016 ; https://biorisk.pensoft.net/ ; >
     au < exists ; exists ; 2017 ; 12 ; BioRisk Volume 2017 ; 2017 ; https://biorisk.pensoft.net/ ; >
   
    }
@@ -74,7 +74,7 @@
     au < frozen ; exists ; 2013 ; 7 ; Comparative Cytogenetics Volume 2013 ; 2013 ; http://compcytogen.pensoft.net/ ; >
     au < finished ; finished ; 2014 ; 8 ; Comparative Cytogenetics Volume 2014 ; 2014 ; http://compcytogen.pensoft.net/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; 9 ; Comparative Cytogenetics Volume 2015 ; 2015 ; http://compcytogen.pensoft.net/ ; reingest1.clockss.org:8082 >
-    au < exists ; exists ; 2016 ; 10 ; Comparative Cytogenetics Volume 2016 ; 2016 ; https://compcytogen.pensoft.net/ ; >
+    au < testing ; exists ; 2016 ; 10 ; Comparative Cytogenetics Volume 2016 ; 2016 ; https://compcytogen.pensoft.net/ ; >
     au < exists ; exists ; 2017 ; 11 ; Comparative Cytogenetics Volume 2017 ; 2017 ; https://compcytogen.pensoft.net/ ; >
   
    }
@@ -132,7 +132,7 @@
     au < frozen ; exists ; 2013 ; 30-35 ; Journal of Hymenoptera Research Volume 2013 ; 2013 ; http://jhr.pensoft.net/ ; >
     au < finished ; finished ; 2014 ; 36-41 ; Journal of Hymenoptera Research Volume 2014 ; 2014 ; http://jhr.pensoft.net/ ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; 42-47 ; Journal of Hymenoptera Research Volume 2015 ; 2015 ; http://jhr.pensoft.net/ ; >
-    au < exists ; exists ; 2016 ; 48-53 ; Journal of Hymenoptera Research Volume 2016 ; 2016 ; https://jhr.pensoft.net/ ; >
+    au < testing ; exists ; 2016 ; 48-53 ; Journal of Hymenoptera Research Volume 2016 ; 2016 ; https://jhr.pensoft.net/ ; >
     au < exists ; exists ; 2017 ; 54-59 ; Journal of Hymenoptera Research Volume 2017 ; 2017 ; https://jhr.pensoft.net/ ; >
   
    }
@@ -154,7 +154,7 @@
     au < finished ; finished ; 2013 ; 6-7 ; MycoKeys Volume 2013 ; 2013 ; http://mycokeys.pensoft.net/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; 8 ; MycoKeys Volume 2014 ; 2014 ; http://mycokeys.pensoft.net/ ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2015 ; 9-11 ; MycoKeys Volume 2015 ; 2015 ; http://mycokeys.pensoft.net/ ; >
-    au < exists ; exists ; 2016 ; 12-18 ; MycoKeys Volume 2016 ; 2016 ; https://mycokeys.pensoft.net/ ; >
+    au < testing ; exists ; 2016 ; 12-18 ; MycoKeys Volume 2016 ; 2016 ; https://mycokeys.pensoft.net/ ; >
     au < exists ; exists ; 2017 ; 19-25 ; MycoKeys Volume 2017 ; 2017 ; https://mycokeys.pensoft.net/ ; >
   
    }
@@ -173,7 +173,7 @@
     au < frozen ; exists ; 2013 ; 4-6 ; Nature Conservation Volume 2013 ; 2013 ; http://natureconservation.pensoft.net/ ; >
     au < finished ; finished ; 2014 ; 7-9 ; Nature Conservation Volume 2014 ; 2014 ; http://natureconservation.pensoft.net/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 10-13 ; Nature Conservation Volume 2015 ; 2015 ; http://natureconservation.pensoft.net/ ; reingest2.clockss.org:8085 >
-    au < exists ; exists ; 2016 ; 14-16 ; Nature Conservation Volume 2016 ; 2016 ; https://natureconservation.pensoft.net/ ; >
+    au < testing ; exists ; 2016 ; 14-16 ; Nature Conservation Volume 2016 ; 2016 ; https://natureconservation.pensoft.net/ ; >
     au < exists ; exists ; 2017 ; 17-19 ; Nature Conservation Volume 2017 ; 2017 ; https://natureconservation.pensoft.net/ ; >
   
    }
@@ -195,7 +195,7 @@
     au < frozen ; exists ; 2013 ; 16-19 ; NeoBiota Volume 2013 ; 2013 ; http://neobiota.pensoft.net/ ; >
     au < finished ; finished ; 2014 ; 20-23 ; NeoBiota Volume 2014 ; 2014 ; http://neobiota.pensoft.net/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 24-27 ; NeoBiota Volume 2015 ; 2015 ; http://neobiota.pensoft.net/ ; reingest1.clockss.org:8082 >
-    au < exists ; exists ; 2016 ; 28-31 ; NeoBiota Volume 2016 ; 2016 ; https://neobiota.pensoft.net/ ; >
+    au < testing ; exists ; 2016 ; 28-31 ; NeoBiota Volume 2016 ; 2016 ; https://neobiota.pensoft.net/ ; >
     au < exists ; exists ; 2017 ; 32-36 ; NeoBiota Volume 2017 ; 2017 ; https://neobiota.pensoft.net/ ; >
   
    }
@@ -214,7 +214,7 @@
     
     au < frozen ; exists ; 2014 ; 37 ; Nota Lepidopterologica Volume 2014 ; 2014 ; http://nl.pensoft.net/ ; >
     au < frozen ; exists ; 2015 ; 38 ; Nota Lepidopterologica Volume 2015 ; 2015 ; http://nl.pensoft.net/ ; >
-    au < exists ; exists ; 2016 ; 39 ; Nota Lepidopterologica Volume 2016 ; 2016 ; https://nl.pensoft.net/ ; >
+    au < testing ; exists ; 2016 ; 39 ; Nota Lepidopterologica Volume 2016 ; 2016 ; https://nl.pensoft.net/ ; >
     au < exists ; exists ; 2017 ; 40 ; Nota Lepidopterologica Volume 2017 ; 2017 ; https://nl.pensoft.net/ ; >
 
    }
@@ -237,7 +237,7 @@
     au < frozen ; exists ; 2013 ; 20-32 ; PhytoKeys Volume 2013 ; 2013 ; http://phytokeys.pensoft.net/ ; >
     au < frozen ; exists ; 2014 ; 33-43 ; PhytoKeys Volume 2014 ; 2014 ; http://phytokeys.pensoft.net/ ; >
     au < frozen ; exists ; 2015 ; 44-57 ; PhytoKeys Volume 2015 ; 2015 ; http://phytokeys.pensoft.net/ ; >
-    au < exists ; exists ; 2016 ; 58-75 ; PhytoKeys Volume 2016 ; 2016 ; https://phytokeys.pensoft.net/ ; >
+    au < testing ; exists ; 2016 ; 58-75 ; PhytoKeys Volume 2016 ; 2016 ; https://phytokeys.pensoft.net/ ; >
     au < exists ; exists ; 2017 ; 76-93 ; PhytoKeys Volume 2017 ; 2017 ; https://phytokeys.pensoft.net/ ; >
   
    }
@@ -259,7 +259,7 @@
     au < frozen ; exists ; 2013 ; 10-12 ; Subterranean Biology Volume 2013 ; 2013 ; http://subtbiol.pensoft.net/ ; >
     au < finished ; finished ; 2014 ; 13-14 ; Subterranean Biology Volume 2014 ; 2014 ; http://subtbiol.pensoft.net/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; 15-16 ; Subterranean Biology Volume 2015 ; 2015 ; http://subtbiol.pensoft.net/ ; reingest2.clockss.org:8085 >
-    au < exists ; exists ; 2016 ; 17-20 ; Subterranean Biology Volume 2016 ; 2016 ; https://subtbiol.pensoft.net/ ; >
+    au < testing ; exists ; 2016 ; 17-20 ; Subterranean Biology Volume 2016 ; 2016 ; https://subtbiol.pensoft.net/ ; >
     au < exists ; exists ; 2017 ; 21-24 ; Subterranean Biology Volume 2017 ; 2017 ; https://subtbiol.pensoft.net/ ; >
 
    }
@@ -284,7 +284,7 @@
     au < frozen ; exists ; 2013 ; 256-366 ; ZooKeys Volume 2013 ; 2013 ; http://zookeys.pensoft.net/ ; >
     au < frozen ; exists ; 2014 ; 343-468 ; ZooKeys Volume 2014 ; 2014 ; http://zookeys.pensoft.net/ ; >
     au < frozen ; exists ; 2015 ; 469-548 ; ZooKeys Volume 2015 ; 2015 ; http://zookeys.pensoft.net/ ; >
-    au < exists ; exists ; 2016 ; 549-641 ; ZooKeys Volume 2016 ; 2016 ; https://zookeys.pensoft.net/ ; >
+    au < testing ; exists ; 2016 ; 549-641 ; ZooKeys Volume 2016 ; 2016 ; https://zookeys.pensoft.net/ ; >
     au < exists ; exists ; 2017 ; 642-734 ; ZooKeys Volume 2017 ; 2017 ; https://zookeys.pensoft.net/ ; >
   
    }
@@ -304,8 +304,8 @@
     #notReady: V91 has not substance and has a crawl error which is undefined.
 
     au < finished ; finished ; 2014 ; 90 ; Zoosystematics and Evolution Volume 2014 ; 2014 ; http://zse.pensoft.net/ ; reingest2.clockss.org:8085 >
-    au < exists ; exists ; 2015 ; 91 ; Zoosystematics and Evolution Volume 2015 ; 2015 ; https://zse.pensoft.net/ ; >
-    au < exists ; exists ; 2016 ; 92 ; Zoosystematics and Evolution Volume 2016 ; 2016 ; https://zse.pensoft.net/ ; >
+    au < testing ; exists ; 2015 ; 91 ; Zoosystematics and Evolution Volume 2015 ; 2015 ; https://zse.pensoft.net/ ; >
+    au < testing ; exists ; 2016 ; 92 ; Zoosystematics and Evolution Volume 2016 ; 2016 ; https://zse.pensoft.net/ ; >
     au < exists ; exists ; 2017 ; 93 ; Zoosystematics and Evolution Volume 2017 ; 2017 ; https://zse.pensoft.net/ ; >
 
     }
