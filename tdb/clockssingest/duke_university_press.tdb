@@ -45,7 +45,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; American Literary Scholarship 2013 ; 2011 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; American Literary Scholarship 2014 ; 2012 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; American Literary Scholarship 2015 ; 2013 ; reingest1.clockss.org:8082 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2016 ; American Literary Scholarship 2016 ; 2014 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2016 ; American Literary Scholarship 2016 ; 2014 ; >
       au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; American Literary Scholarship 2017 ; 2015 ; >
 
     }
@@ -238,41 +238,41 @@
       comment[plugin] = This journal is HighWire H10
       comment[gvc] = This journal is not compared in the gln_v_clockss script
 
-      au < ClockssHighWirePlugin ; exists ; exists ; 1812-1821 ; The Carlyle Letters Online Volume 1 ; 1 ; >
-      au < ClockssHighWirePlugin ; exists ; exists ; 1822-1823 ; The Carlyle Letters Online Volume 2 ; 2 ; >
-      au < ClockssHighWirePlugin ; exists ; exists ; 1824-1825 ; The Carlyle Letters Online Volume 3 ; 3 ; >
-      au < ClockssHighWirePlugin ; exists ; exists ; 1826-1828 ; The Carlyle Letters Online Volume 4 ; 4 ; >
-      au < ClockssHighWirePlugin ; exists ; exists ; 1829-1831 ; The Carlyle Letters Online Volume 5 ; 5 ; >
-      au < ClockssHighWirePlugin ; exists ; exists ; 1831-1833 ; The Carlyle Letters Online Volume 6 ; 6 ; >
-      au < ClockssHighWirePlugin ; exists ; exists ; 1833-1834 ; The Carlyle Letters Online Volume 7 ; 7 ; >
-      au < ClockssHighWirePlugin ; exists ; exists ; 1835-1836 ; The Carlyle Letters Online Volume 8 ; 8 ; >
-      au < ClockssHighWirePlugin ; exists ; exists ; 1836-1837 ; The Carlyle Letters Online Volume 9 ; 9 ; >
-      au < ClockssHighWirePlugin ; exists ; exists ; 1838 ; The Carlyle Letters Online Volume 10 ; 10 ; >
-      au < ClockssHighWirePlugin ; exists ; exists ; 1839 ; The Carlyle Letters Online Volume 11 ; 11 ; >
-      au < ClockssHighWirePlugin ; exists ; exists ; 1840 ; The Carlyle Letters Online Volume 12 ; 12 ; >
-      au < ClockssHighWirePlugin ; exists ; exists ; 1841 ; The Carlyle Letters Online Volume 13 ; 13 ; >
-      au < ClockssHighWirePlugin ; exists ; exists ; 1842 ; The Carlyle Letters Online Volume 14 ; 14 ; >
-      au < ClockssHighWirePlugin ; exists ; exists ; 1842 ; The Carlyle Letters Online Volume 15 ; 15 ; >
-      au < ClockssHighWirePlugin ; exists ; exists ; 1843 ; The Carlyle Letters Online Volume 16 ; 16 ; >
-      au < ClockssHighWirePlugin ; exists ; exists ; 1843-1844 ; The Carlyle Letters Online Volume 17 ; 17 ; >
-      au < ClockssHighWirePlugin ; exists ; exists ; 1844 ; The Carlyle Letters Online Volume 18 ; 18 ; >
-      au < ClockssHighWirePlugin ; exists ; exists ; 1845 ; The Carlyle Letters Online Volume 19 ; 19 ; >
-      au < ClockssHighWirePlugin ; exists ; exists ; 1845-1846 ; The Carlyle Letters Online Volume 20 ; 20 ; >
-      au < ClockssHighWirePlugin ; exists ; exists ; 1846-1847 ; The Carlyle Letters Online Volume 21 ; 21 ; >
-      au < ClockssHighWirePlugin ; exists ; exists ; 1847-1848 ; The Carlyle Letters Online Volume 22 ; 22 ; >
-      au < ClockssHighWirePlugin ; exists ; exists ; 1848-1849 ; The Carlyle Letters Online Volume 23 ; 23 ; >
-      au < ClockssHighWirePlugin ; exists ; exists ; 1849 ; The Carlyle Letters Online Volume 24 ; 24 ; >
-      au < ClockssHighWirePlugin ; exists ; exists ; 1850 ; The Carlyle Letters Online Volume 25 ; 25 ; >
-      au < ClockssHighWirePlugin ; exists ; exists ; 1851 ; The Carlyle Letters Online Volume 26 ; 26 ; >
-      au < ClockssHighWirePlugin ; exists ; exists ; 1852 ; The Carlyle Letters Online Volume 27 ; 27 ; >
-      au < ClockssHighWirePlugin ; exists ; exists ; 1853 ; The Carlyle Letters Online Volume 28 ; 28 ; >
-      au < ClockssHighWirePlugin ; exists ; exists ; 1854-1855 ; The Carlyle Letters Online Volume 29 ; 29 ; >
-      au < ClockssHighWirePlugin ; exists ; exists ; 1855 ; The Carlyle Letters Online Volume 30 ; 30 ; >
-      au < ClockssHighWirePlugin ; exists ; exists ; 1856 ; The Carlyle Letters Online Volume 31 ; 31 ; >
-      au < ClockssHighWirePlugin ; exists ; exists ; 1856-1857 ; The Carlyle Letters Online Volume 32 ; 32 ; >
-      au < ClockssHighWirePlugin ; exists ; exists ; 1857-1858 ; The Carlyle Letters Online Volume 33 ; 33 ; >
-      au < ClockssHighWirePlugin ; exists ; exists ; 1858 ; The Carlyle Letters Online Volume 34 ; 34 ; >
-      au < ClockssHighWirePlugin ; exists ; exists ; 1859 ; The Carlyle Letters Online Volume 35 ; 35 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1812-1821 ; The Carlyle Letters Online Volume 1 ; 1 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1822-1823 ; The Carlyle Letters Online Volume 2 ; 2 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1824-1825 ; The Carlyle Letters Online Volume 3 ; 3 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1826-1828 ; The Carlyle Letters Online Volume 4 ; 4 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1829-1831 ; The Carlyle Letters Online Volume 5 ; 5 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1831-1833 ; The Carlyle Letters Online Volume 6 ; 6 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1833-1834 ; The Carlyle Letters Online Volume 7 ; 7 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1835-1836 ; The Carlyle Letters Online Volume 8 ; 8 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1836-1837 ; The Carlyle Letters Online Volume 9 ; 9 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1838 ; The Carlyle Letters Online Volume 10 ; 10 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1839 ; The Carlyle Letters Online Volume 11 ; 11 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1840 ; The Carlyle Letters Online Volume 12 ; 12 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1841 ; The Carlyle Letters Online Volume 13 ; 13 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1842 ; The Carlyle Letters Online Volume 14 ; 14 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1842 ; The Carlyle Letters Online Volume 15 ; 15 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1843 ; The Carlyle Letters Online Volume 16 ; 16 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1843-1844 ; The Carlyle Letters Online Volume 17 ; 17 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1844 ; The Carlyle Letters Online Volume 18 ; 18 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1845 ; The Carlyle Letters Online Volume 19 ; 19 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1845-1846 ; The Carlyle Letters Online Volume 20 ; 20 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1846-1847 ; The Carlyle Letters Online Volume 21 ; 21 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1847-1848 ; The Carlyle Letters Online Volume 22 ; 22 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1848-1849 ; The Carlyle Letters Online Volume 23 ; 23 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1849 ; The Carlyle Letters Online Volume 24 ; 24 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1850 ; The Carlyle Letters Online Volume 25 ; 25 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1851 ; The Carlyle Letters Online Volume 26 ; 26 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1852 ; The Carlyle Letters Online Volume 27 ; 27 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1853 ; The Carlyle Letters Online Volume 28 ; 28 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1854-1855 ; The Carlyle Letters Online Volume 29 ; 29 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1855 ; The Carlyle Letters Online Volume 30 ; 30 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1856 ; The Carlyle Letters Online Volume 31 ; 31 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1856-1857 ; The Carlyle Letters Online Volume 32 ; 32 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1857-1858 ; The Carlyle Letters Online Volume 33 ; 33 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1858 ; The Carlyle Letters Online Volume 34 ; 34 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1859 ; The Carlyle Letters Online Volume 35 ; 35 ; >
 
    }
 
@@ -568,7 +568,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2015 ; Environmental Humanities Volume 6 ; 6 ; reingest3.clockss.org:8083 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2015 ; Environmental Humanities Volume 7 ; 7 ; reingest3.clockss.org:8083 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2016 ; Environmental Humanities Volume 8 ; 8 ; reingest4.clockss.org:8082 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2017 ; Environmental Humanities Volume 9 ; 9 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2017 ; Environmental Humanities Volume 9 ; 9 ; >
 
   }
 
@@ -829,9 +829,9 @@
       implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Journal of Chinese Literature and Culture Volume 1 ; 1 ; >
-     au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2015 ; Journal of Chinese Literature and Culture Volume 2 ; 2 ; >
-     au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2016 ; Journal of Chinese Literature and Culture Volume 3 ; 3 ; >
-     au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2017 ; Journal of Chinese Literature and Culture Volume 4 ; 4 ; >
+     au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2015 ; Journal of Chinese Literature and Culture Volume 2 ; 2 ; >
+     au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2016 ; Journal of Chinese Literature and Culture Volume 3 ; 3 ; >
+     au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2017 ; Journal of Chinese Literature and Culture Volume 4 ; 4 ; >
 
   }
 
@@ -937,9 +937,9 @@
       param[base_url] = http://jmews.dukejournals.org/
       implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2015 ; Journal of Middle East Women's Studies Volume 11 ; 11 ; >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2016 ; Journal of Middle East Women's Studies Volume 12 ; 12 ; >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2017 ; Journal of Middle East Women's Studies Volume 13 ; 13 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2015 ; Journal of Middle East Women's Studies Volume 11 ; 11 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2016 ; Journal of Middle East Women's Studies Volume 12 ; 12 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2017 ; Journal of Middle East Women's Studies Volume 13 ; 13 ; >
 
    }
 
@@ -1788,7 +1788,7 @@
 
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Transgender Studies Quarterly Volume 1 ; 1 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Transgender Studies Quarterly Volume 2 ; 2 ; reingest2.clockss.org:8085 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2016 ; Transgender Studies Quarterly Volume 3 ; 3 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2016 ; Transgender Studies Quarterly Volume 3 ; 3 ; >
 
      }
 
@@ -1807,9 +1807,9 @@
       param[base_url] = http://tcl.dukejournals.org/
       implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2015 ; Twentieth-Century Literature Volume 61 ; 61 ; >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2016 ; Twentieth-Century Literature Volume 62 ; 62 ; >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2017 ; Twentieth-Century Literature Volume 63 ; 63 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2015 ; Twentieth-Century Literature Volume 61 ; 61 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2016 ; Twentieth-Century Literature Volume 62 ; 62 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2017 ; Twentieth-Century Literature Volume 63 ; 63 ; >
 
      }
 
@@ -1828,14 +1828,14 @@
       implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
       #move from Oxford University Press 
 
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2000 ; World Policy Journal Volume 17 ; 17 ; >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2001 ; World Policy Journal Volume 18 ; 18 ; >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2002 ; World Policy Journal Volume 19 ; 19 ; >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2003 ; World Policy Journal Volume 20 ; 20 ; >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2004 ; World Policy Journal Volume 21 ; 21 ; >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2005 ; World Policy Journal Volume 22 ; 22 ; >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2006 ; World Policy Journal Volume 23 ; 23 ; >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2007 ; World Policy Journal Volume 24 ; 24 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2000 ; World Policy Journal Volume 17 ; 17 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2001 ; World Policy Journal Volume 18 ; 18 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2002 ; World Policy Journal Volume 19 ; 19 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2003 ; World Policy Journal Volume 20 ; 20 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2004 ; World Policy Journal Volume 21 ; 21 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2005 ; World Policy Journal Volume 22 ; 22 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2006 ; World Policy Journal Volume 23 ; 23 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2007 ; World Policy Journal Volume 24 ; 24 ; >
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2008 ; World Policy Journal Volume 25 ; 25 ; >
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2009 ; World Policy Journal Volume 26 ; 26 ; >
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2010 ; World Policy Journal Volume 27 ; 27 ; >
@@ -1844,8 +1844,8 @@
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2013 ; World Policy Journal Volume 30 ; 30 ; >
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2014 ; World Policy Journal Volume 31 ; 31 ; >
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2015 ; World Policy Journal Volume 32 ; 32 ; >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2016 ; World Policy Journal Volume 33 ; 33 ; >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2017 ; World Policy Journal Volume 34 ; 34 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2016 ; World Policy Journal Volume 33 ; 33 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2017 ; World Policy Journal Volume 34 ; 34 ; >
 
   }
   
