@@ -10,6 +10,9 @@
     plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
 
+
+    #do not include http://collabra.org/ ; COLLABRA ; issn = 2376-6832 
+
   {
 
       title <
@@ -196,7 +199,7 @@
       au < manifest ; exists ; 2007 ; 3 ; Digital Medievalist Volume 2007 ; 2007 ; https://journal.digitalmedievalist.org/ ; >
       au < manifest ; exists ; 2008 ; 4 ; Digital Medievalist Volume 2008 ; 2008 ; https://journal.digitalmedievalist.org/ ; >
       au < manifest ; exists ; 2009 ; 5 ; Digital Medievalist Volume 2009 ; 2009 ; https://journal.digitalmedievalist.org/ ; >
-      au < exists ; exists ; 2010 ; 6 ; Digital Medievalist Volume 2010 ; 2010 ; https://journal.digitalmedievalist.org/ ; >
+      au < doesNotExist ; doesNotExist ; 2010 ; 6 ; Digital Medievalist Volume 2010 ; 2010 ; https://journal.digitalmedievalist.org/ ; > #M exists. No articles for that year.
       au < frozen ; exists ; 2011 ; 7 ; Digital Medievalist Volume 2011 ; 2011 ; https://journal.digitalmedievalist.org/ ; >
       au < frozen ; exists ; 2012 ; 8 ; Digital Medievalist Volume 2012 ; 2012 ; https://journal.digitalmedievalist.org/ ; >
       au < frozen ; exists ; 2013 ; 9 ; Digital Medievalist Volume 2013 ; 2013 ; https://journal.digitalmedievalist.org/ ; >
@@ -266,14 +269,15 @@
 
       comment[publisher] = Stockholm University Press
 #      param[base_url] = http://www.karib.no/
+      #requested clockss permission statement RT 7992 2/5/2018
 
       au < exists ; exists ; 2014 ; 1 ; Karib: Nordic Journal for Caribbean Studies Volume 2014 ; 2014 ; https://www.karib.no/ ; >
       au < exists ; exists ; 2015 ; 2 ; Karib: Nordic Journal for Caribbean Studies Volume 2015 ; 2015 ; https://www.karib.no/ ; >
-      au < exists ; exists ; 2017 ; 2 ; Karib: Nordic Journal for Caribbean Studies Volume 2017 ; 2017 ; https://www.karib.no/ ; >
+      au < exists ; exists ; 2017 ; 3 ; Karib: Nordic Journal for Caribbean Studies Volume 2017 ; 2017 ; https://www.karib.no/ ; >
 
   }
 
-  {
+ {
 
       title <
         name = Rural Landscapes: Society, Environment, History ;
@@ -342,14 +346,14 @@
       au < manifest ; exists ; 2005 ; 35 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2005 ; 2005 ; https://www.iberoamericana.se/ ; >
       au < manifest ; exists ; 2006 ; 36 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2006 ; 2006 ; https://www.iberoamericana.se/ ; >
       au < manifest ; exists ; 2007 ; 37 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2007 ; 2007 ; https://www.iberoamericana.se/ ; >
-      au < exists ; exists ; 2008 ; 38 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2008 ; 2008 ; https://www.iberoamericana.se/ ; >
+      au < doesNotExist ; doesNotExist ; 2008 ; 38 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2008 ; 2008 ; https://www.iberoamericana.se/ ; > #M exists. No articles for that year.
       au < manifest ; exists ; 2009 ; 39 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2009 ; 2009 ; https://www.iberoamericana.se/ ; >
       au < manifest ; exists ; 2010 ; 40 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2010 ; 2010 ; https://www.iberoamericana.se/ ; >
       au < frozen ; exists ; 2011 ; 41 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2011 ; 2011 ; https://www.iberoamericana.se/ ; >
       au < frozen ; exists ; 2012 ; 42 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2012 ; 2012 ; https://www.iberoamericana.se/ ; >
       au < frozen ; exists ; 2013 ; 43 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2013 ; 2013 ; https://www.iberoamericana.se/ ; >
       au < frozen ; exists ; 2014 ; 44 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2014 ; 2014 ; https://www.iberoamericana.se/ ; >
-      au < exists ; exists ; 2015 ; 45 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2015 ; 2015 ; https://www.iberoamericana.se/ ; >
+      au < doesNotExist ; doesNotExist ; 2015 ; 45 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2015 ; 2015 ; https://www.iberoamericana.se/ ; > #M exists. No articles for that year.
       au < frozen ; exists ; 2016 ; 46 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2016 ; 2016 ; https://www.iberoamericana.se/ ; >
       au < crawling ; exists ; 2017 ; 47 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2017 ; 2017 ; https://www.iberoamericana.se/ ; >
 
@@ -404,7 +408,7 @@
       au < manifest ; exists ; 2003 ; 7 ; Archaeology International Volume 2003 ; 2003 ; https://www.ai-journal.com/ ; >
       au < manifest ; exists ; 2004 ; 8 ; Archaeology International Volume 2004 ; 2004 ; https://www.ai-journal.com/ ; >
       au < manifest ; exists ; 2005 ; 9 ; Archaeology International Volume 2005 ; 2005 ; https://www.ai-journal.com/ ; >
-      au < exists ; exists ; 2006 ; 10 ; Archaeology International Volume 2006 ; 2006 ; https://www.ai-journal.com/ ; >
+      au < doesNotExist ; doesNotExist ; 2006 ; 10 ; Archaeology International Volume 2006 ; 2006 ; https://www.ai-journal.com/ ; > #M exists. No articles for that year.
       au < manifest ; exists ; 2007 ; 11 ; Archaeology International Volume 2007 ; 2007 ; https://www.ai-journal.com/ ; >
       au < manifest ; exists ; 2008 ; 12 ; Archaeology International Volume 2008 ; 2008 ; https://www.ai-journal.com/ ; >
       au < manifest ; exists ; 2009 ; 13 ; Archaeology International Volume 2009 ; 2009 ; https://www.ai-journal.com/ ; >
@@ -516,9 +520,9 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = http://datascience.codata.org/
 
-      au < exists ; exists ; 2002 ; 1 ; Data Science Journal Volume 2002 ; 2002 ; https://datascience.codata.org/ ; >
+      au < doesNotExist ; doesNotExist ; 2002 ; 1 ; Data Science Journal Volume 2002 ; 2002 ; https://datascience.codata.org/ ; > #M exists. No articles for that year.
       au < manifest ; exists ; 2003 ; 2 ; Data Science Journal Volume 2003 ; 2003 ; https://datascience.codata.org/ ; >
-      au < exists ; exists ; 2004 ; 3 ; Data Science Journal Volume 2004 ; 2004 ; https://datascience.codata.org/ ; >
+      au < doesNotExist ; doesNotExist ; 2004 ; 3 ; Data Science Journal Volume 2004 ; 2004 ; https://datascience.codata.org/ ; > #M exists. No articles for that year.
       au < manifest ; exists ; 2005 ; 4 ; Data Science Journal Volume 2005 ; 2005 ; https://datascience.codata.org/ ; >
       au < manifest ; exists ; 2006 ; 5 ; Data Science Journal Volume 2006 ; 2006 ; https://datascience.codata.org/ ; >
       au < manifest ; exists ; 2007 ; 6 ; Data Science Journal Volume 2007 ; 2007 ; https://datascience.codata.org/ ; >
@@ -1029,7 +1033,7 @@
       au < manifest ; exists ; 2005 ; 16 ; Papers from the Institute of Archaeology Volume 2005 ; 2005 ; https://pia-journal.co.uk/ ; >
       au < manifest ; exists ; 2006 ; 17 ; Papers from the Institute of Archaeology Volume 2006 ; 2006 ; https://pia-journal.co.uk/ ; >
       au < manifest ; exists ; 2007 ; 18 ; Papers from the Institute of Archaeology Volume 2007 ; 2007 ; https://pia-journal.co.uk/ ; >
-      au < exists ; exists ; 2008 ; 19 ; Papers from the Institute of Archaeology Volume 2008 ; 2008 ; https://pia-journal.co.uk/ ; >
+      au < doesNotExist ; doesNotExist ; 2008 ; 19 ; Papers from the Institute of Archaeology Volume 2008 ; 2008 ; https://pia-journal.co.uk/ ; > #M exists. No articles for that year.
       au < manifest ; exists ; 2009 ; 20 ; Papers from the Institute of Archaeology Volume 2009 ; 2009 ; https://pia-journal.co.uk/ ; >
       au < doNotProcess ; exists ; 2010 ; 21 ; Papers from the Institute of Archaeology Volume 2010 ; 2010 ; https://pia-journal.co.uk/ ; >
       au < doNotProcess ; exists ; 2011 ; 22 ; Papers from the Institute of Archaeology Volume 2011 ; 2011 ; https://pia-journal.co.uk/ ; >
@@ -1068,7 +1072,7 @@
       #Moved to https and removed www.
 #      param[base_url] = https://presentpasts.info/
 
-      au < exists ; exists ; 2009 ; 1 ; Present Pasts Volume 2009 ; 2009 ; https://presentpasts.info/ ; >
+      au < doesNotExist ; doesNotExist ; 2009 ; 1 ; Present Pasts Volume 2009 ; 2009 ; https://presentpasts.info/ ; > #M exists. No articles for that year.
       au < doNotProcess ; exists ; 2010 ; 2 ; Present Pasts Volume 2010 ; 2010 ; https://presentpasts.info/ ; >
       au < doNotProcess ; exists ; 2011 ; 3 ; Present Pasts Volume 2011 ; 2011 ; https://presentpasts.info/ ; >
       au < doNotProcess ; exists ; 2012 ; 4 ; Present Pasts Volume 2012 ; 2012 ; https://presentpasts.info/ ; >
@@ -1284,20 +1288,20 @@
 #      param[base_url] = http://serials.uksg.org/
 
       au < manifest ; exists ; 1988 ; 1 ; Serials: The Journal for the Serials Community Volume 1988 ; 1988 ; https://serials.uksg.org/ ; >
-      au < exists ; exists ; 1989 ; 2 ; Serials: The Journal for the Serials Community Volume 1989 ; 1989 ; https://serials.uksg.org/ ; >
-      au < exists ; exists ; 1990 ; 3 ; Serials: The Journal for the Serials Community Volume 1990 ; 1990 ; https://serials.uksg.org/ ; >
-      au < exists ; exists ; 1991 ; 4 ; Serials: The Journal for the Serials Community Volume 1991 ; 1991 ; https://serials.uksg.org/ ; >
-      au < exists ; exists ; 1992 ; 5 ; Serials: The Journal for the Serials Community Volume 1992 ; 1992 ; https://serials.uksg.org/ ; >
-      au < exists ; exists ; 1993 ; 6 ; Serials: The Journal for the Serials Community Volume 1993 ; 1993 ; https://serials.uksg.org/ ; >
-      au < exists ; exists ; 1994 ; 7 ; Serials: The Journal for the Serials Community Volume 1994 ; 1994 ; https://serials.uksg.org/ ; >
+      au < doesNotExist ; doesNotExist ; 1989 ; 2 ; Serials: The Journal for the Serials Community Volume 1989 ; 1989 ; https://serials.uksg.org/ ; > #M exists. No articles for that year.
+      au < doesNotExist ; doesNotExist ; 1990 ; 3 ; Serials: The Journal for the Serials Community Volume 1990 ; 1990 ; https://serials.uksg.org/ ; > #M exists. No articles for that year.
+      au < doesNotExist ; doesNotExist ; 1991 ; 4 ; Serials: The Journal for the Serials Community Volume 1991 ; 1991 ; https://serials.uksg.org/ ; > #M exists. No articles for that year.
+      au < doesNotExist ; doesNotExist ; 1992 ; 5 ; Serials: The Journal for the Serials Community Volume 1992 ; 1992 ; https://serials.uksg.org/ ; > #M exists. No articles for that year.
+      au < doesNotExist ; doesNotExist ; 1993 ; 6 ; Serials: The Journal for the Serials Community Volume 1993 ; 1993 ; https://serials.uksg.org/ ; > #M exists. No articles for that year.
+      au < doesNotExist ; doesNotExist ; 1994 ; 7 ; Serials: The Journal for the Serials Community Volume 1994 ; 1994 ; https://serials.uksg.org/ ; > #M exists. No articles for that year.
       au < manifest ; exists ; 1995 ; 8 ; Serials: The Journal for the Serials Community Volume 1995 ; 1995 ; https://serials.uksg.org/ ; >
       au < manifest ; exists ; 1996 ; 9 ; Serials: The Journal for the Serials Community Volume 1996 ; 1996 ; https://serials.uksg.org/ ; >
       au < manifest ; exists ; 1997 ; 10 ; Serials: The Journal for the Serials Community Volume 1997 ; 1997 ; https://serials.uksg.org/ ; >
       au < manifest ; exists ; 1998 ; 11 ; Serials: The Journal for the Serials Community Volume 1998 ; 1998 ; https://serials.uksg.org/ ; >
       au < manifest ; exists ; 1999 ; 12 ; Serials: The Journal for the Serials Community Volume 1999 ; 1999 ; https://serials.uksg.org/ ; >
-      au < exists ; exists ; 2000 ; 13 ; Serials: The Journal for the Serials Community Volume 2000 ; 2000 ; https://serials.uksg.org/ ; >
+      au < doesNotExist ; doesNotExist ; 2000 ; 13 ; Serials: The Journal for the Serials Community Volume 2000 ; 2000 ; https://serials.uksg.org/ ; > #M exists. No articles for that year.
       au < manifest ; exists ; 2001 ; 14 ; Serials: The Journal for the Serials Community Volume 2001 ; 2001 ; https://serials.uksg.org/ ; >
-      au < exists ; exists ; 2002 ; 15 ; Serials: The Journal for the Serials Community Volume 2002 ; 2002 ; https://serials.uksg.org/ ; >
+      au < doesNotExist ; doesNotExist ; 2002 ; 15 ; Serials: The Journal for the Serials Community Volume 2002 ; 2002 ; https://serials.uksg.org/ ; > #M exists. No articles for that year.
       au < manifest ; exists ; 2003 ; 16 ; Serials: The Journal for the Serials Community Volume 2003 ; 2003 ; https://serials.uksg.org/ ; >
       au < manifest ; exists ; 2004 ; 17 ; Serials: The Journal for the Serials Community Volume 2004 ; 2004 ; https://serials.uksg.org/ ; >
       au < manifest ; exists ; 2005 ; 18 ; Serials: The Journal for the Serials Community Volume 2005 ; 2005 ; https://serials.uksg.org/ ; >
