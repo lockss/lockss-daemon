@@ -1,0 +1,106 @@
+<map>
+<!-- Next generation of ClockssSourcePlugin allows for arbitrarily named bucket/sizing -->
+  <entry>
+    <string>plugin_status</string>
+    <string>down - parent only</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.clockss.ClockssDirSourcePlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <!-- support for guessing at encoding, setting provider -->
+    <string>required_daemon_version</string>
+    <string>1.67.0</string>
+  </entry>  
+  <entry>
+    <string>plugin_name</string>
+    <string>Parent Directory Source Plugin (CLOCKSS)</string>
+  </entry>
+  <entry>
+    <string>plugin_bulk_content</string>
+    <boolean>true</boolean>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Parent Directory Source Plugin (CLOCKSS), Base URL %s, Directory %s", base_url, directory</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>100</long>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>28800000</long>
+  </entry>
+  <entry>
+    <string>au_refetch_depth</string>
+    <int>99</int>
+  </entry>
+  <entry>
+    <string>plugin_notes</string>
+    <string>Plugin for ingest of CLOCKSS source files using arbitrary name directories</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,"^%s", base_url</string>
+      <string>2,"^%s%s/.*;O=[AD]$", base_url, directory</string>
+      <string>1,"^%s%s/", base_url, directory</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%s%s/", base_url, directory</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>directory</key>
+        <displayName>Directory name</displayName>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>            
+    </list>
+  </entry>
+  <entry>
+    <string>clockss_override</string>
+    <map>
+      <entry>
+        <string>au_def_pause_time</string>
+        <long>100</long>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <string>403=org.lockss.util.urlconn.CacheException$NoRetryDeadLinkException</string>
+    </list>
+  </entry>
+  <!--  do not extract external references from file-transfer xml files -->
+  <entry>
+    <string>application/xml_link_extractor_factory</string>
+    <string>org.lockss.plugin.clockss.ClockssSourceXmlLinkExtractorFactory</string>
+  </entry>
+  <entry>
+    <string>text/xml_link_extractor_factory</string>
+    <string>org.lockss.plugin.clockss.ClockssSourceXmlLinkExtractorFactory</string>
+  </entry>    
+</map>
