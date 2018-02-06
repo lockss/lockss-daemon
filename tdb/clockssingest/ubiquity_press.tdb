@@ -271,9 +271,9 @@
 #      param[base_url] = http://www.karib.no/
       #requested clockss permission statement RT 7992 2/5/2018
 
-      au < exists ; exists ; 2014 ; 1 ; Karib: Nordic Journal for Caribbean Studies Volume 2014 ; 2014 ; https://www.karib.no/ ; >
-      au < exists ; exists ; 2015 ; 2 ; Karib: Nordic Journal for Caribbean Studies Volume 2015 ; 2015 ; https://www.karib.no/ ; >
-      au < exists ; exists ; 2017 ; 3 ; Karib: Nordic Journal for Caribbean Studies Volume 2017 ; 2017 ; https://www.karib.no/ ; >
+      au < manifest ; exists ; 2014 ; 1 ; Karib: Nordic Journal for Caribbean Studies Volume 2014 ; 2014 ; https://www.karib.no/ ; >
+      au < manifest ; exists ; 2015 ; 2 ; Karib: Nordic Journal for Caribbean Studies Volume 2015 ; 2015 ; https://www.karib.no/ ; >
+      au < manifest ; exists ; 2017 ; 3 ; Karib: Nordic Journal for Caribbean Studies Volume 2017 ; 2017 ; https://www.karib.no/ ; >
 
   }
 
