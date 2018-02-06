@@ -55,8 +55,9 @@ public class TaylorAndFrancisSourceZipXmlArticleIteratorFactory extends SourceZi
   
   // ROOT_TEMPLATE doesn't need to be defined as sub-tree is entire tree under base/year
   // This pattern is specific to TandF - exclude the XML that start with "CATS_"
+    // remove explicit use of "year" and allow any arbitrary directory for new generation source plugin
   private static final String PATTERN_TEMPLATE = 
-      "\"%s%d/.*\\.zip!/(?!.*CATS_).*\\.xml$\", base_url, year";
+      "\"%s[^/]+/.*\\.zip!/(?!.*CATS_).*\\.xml$\", base_url";
 
   public static final Pattern XML_PATTERN = Pattern.compile("/(.*)\\.xml$", Pattern.CASE_INSENSITIVE);
   public static final String XML_REPLACEMENT = "/$1.xml";

@@ -46,8 +46,10 @@ public class SourceZipXmlArticleIteratorFactory extends SourceXmlArticleIterator
   protected static Logger log = Logger.getLogger(SourceZipXmlArticleIteratorFactory.class);
   
   // ROOT_TEMPLATE doesn't need to be defined as sub-tree is entire tree under base/year
+    // pull out explicit use of "year" param since it can now be a "directory" or a "year" param 
+    // depending on which generation of parent SourcePlugin we're using - make it just a single depth directory
   protected static final String ALL_ZIP_XML_PATTERN_TEMPLATE = 
-      "\"%s%d/.*\\.zip!/.*\\.xml$\", base_url, year";
+      "\"%s[^/]+/.*\\.zip!/.*\\.xml$\", base_url";
 
   // Be sure to exclude all nested archives in case supplemental data is provided this way
   protected static final Pattern SUB_NESTED_ARCHIVE_PATTERN = 

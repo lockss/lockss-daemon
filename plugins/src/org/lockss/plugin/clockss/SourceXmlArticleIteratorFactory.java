@@ -54,7 +54,9 @@ public class SourceXmlArticleIteratorFactory implements ArticleIteratorFactory, 
 
   // ROOT_TEMPLATE doesn't need to be defined as sub-tree is entire tree under base/year
   //could handle any number of subdirectories under the year so long as end in .xml
-  protected static final String ALL_XML_PATTERN_TEMPLATE = "\"^%s%d/(.*)\\.xml$\",base_url,year";  
+    // pull out explicit use of "year" param since it can now be a "directory" or a "year" param 
+    // depending on which generation of parent SourcePlugin we're using - make it just a single depth directory
+  protected static final String ALL_XML_PATTERN_TEMPLATE = "\"^%s[^/]+/(.*)\\.xml$\",base_url";  
 
   // Be sure to exclude all nested archives in case supplemental data is provided this way
   // the default for unpacked deliveries is all archives; override for zip/tar deliveries
@@ -71,7 +73,7 @@ public class SourceXmlArticleIteratorFactory implements ArticleIteratorFactory, 
 
   //
   // The non-archive source content structure looks like this:
-  // <root_location>/<year>/<possible subdirectories>/<STUFF>
+  // <root_location>/<dir>/<possible subdirectories>/<STUFF>
   //     where STUFF is a series of files:  <name>.pdf, <name>.epub &
   //    as well as a some number of <othername(s)>.xml which provide the metadata
   //    for all the content.

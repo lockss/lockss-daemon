@@ -55,10 +55,12 @@ public class SourceRisArticleIteratorFactory implements ArticleIteratorFactory, 
   
   // ROOT_TEMPLATE doesn't need to be defined as sub-tree is entire tree under base/year
   //could handle any number of subdirectories under the year so long as end in .ris
-  protected static final String PATTERN_TEMPLATE = "\"^%s%d/(.*)\\.ris$\",base_url,year";
+
+  // pull out explicit use of "year" param since it can now be an arbitrary directory
+  protected static final String PATTERN_TEMPLATE = "\"^%s[^/]+/(.*)\\.ris$\",base_url";
   //
   // The source content structure looks like this:
-  // <root_location>/<year>/<possible subdirectories>/<STUFF>
+  // <root_location>/<dir>/<possible subdirectories>/<STUFF>
   //     where STUFF is a series of files:  <name>.pdf, <name>.epub &
   //    as well as a some number of <othername(s)>.ris which provide the metadata
   //    for all the content.

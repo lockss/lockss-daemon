@@ -46,8 +46,9 @@ public class SourceTarXmlArticleIteratorFactory extends SourceXmlArticleIterator
   protected static Logger log = Logger.getLogger(SourceTarXmlArticleIteratorFactory.class);
   
   // ROOT_TEMPLATE doesn't need to be defined as sub-tree is entire tree under base/year
+    // pull out explicit use of "year" in pattern as it could be any directory (2018, 2018_A, etc)
   protected static final String ALL_ZIP_XML_PATTERN_TEMPLATE = 
-      "\"%s%d/.*\\.tar!/.*\\.xml$\", base_url, year";
+      "\"%s[^/]+/.*\\.tar!/.*\\.xml$\", base_url";
 
   // Be sure to exclude all nested archives in case supplemental data is provided this way
   protected static final Pattern SUB_NESTED_ARCHIVE_PATTERN = 
