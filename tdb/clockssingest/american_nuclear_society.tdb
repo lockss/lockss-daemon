@@ -26,16 +26,6 @@
       au < finished ; crawling ; 2015 ; Nuclear Science and Engineering Volume 179 ; 179 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2015 ; Nuclear Science and Engineering Volume 180 ; 180 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; Nuclear Science and Engineering Volume 181 ; 181 ; reingest5.clockss.org:8082 >
-      au < exists ; exists ; 2016 ; Nuclear Science and Engineering Volume 182 ; 182 ; >
-      au < exists ; exists ; 2016 ; Nuclear Science and Engineering Volume 183 ; 183 ; >
-      au < exists ; exists ; 2016 ; Nuclear Science and Engineering Volume 184 ; 184 ; >
-      au < exists ; exists ; 2017 ; Nuclear Science and Engineering Volume 185 ; 185 ; >
-      au < exists ; exists ; 2017 ; Nuclear Science and Engineering Volume 186 ; 186 ; >
-      au < exists ; exists ; 2017 ; Nuclear Science and Engineering Volume 187 ; 187 ; >
-      au < exists ; exists ; 2017 ; Nuclear Science and Engineering Volume 188 ; 188 ; >
-      au < exists ; exists ; 2018 ; Nuclear Science and Engineering Volume 189 ; 189 ; >
-      au < expected ; exists ; 2018 ; Nuclear Science and Engineering Volume 190 ; 190 ; >
-      au < expected ; exists ; 2018 ; Nuclear Science and Engineering Volume 191 ; 191 ; >
 
     }
 
@@ -53,18 +43,6 @@
       au < finished ; crawling ; 2015 ; Nuclear Technology Volume 190 ; 190 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; Nuclear Technology Volume 191 ; 191 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2015 ; Nuclear Technology Volume 192 ; 192 ; reingest4.clockss.org:8082 >
-      au < exists ; exists ; 2016 ; Nuclear Technology Volume 193 ; 193 ; >
-      au < exists ; exists ; 2016 ; Nuclear Technology Volume 194 ; 194 ; >
-      au < exists ; exists ; 2016 ; Nuclear Technology Volume 195 ; 195 ; >
-      au < exists ; exists ; 2016 ; Nuclear Technology Volume 196 ; 196 ; >
-      au < exists ; exists ; 2017 ; Nuclear Technology Volume 197 ; 197 ; >
-      au < exists ; exists ; 2017 ; Nuclear Technology Volume 198 ; 198 ; >
-      au < exists ; exists ; 2017 ; Nuclear Technology Volume 199 ; 199 ; >
-      au < exists ; exists ; 2017 ; Nuclear Technology Volume 200 ; 200 ; >
-      au < exists ; exists ; 2018 ; Nuclear Technology Volume 201 ; 201 ; >
-      au < expected ; exists ; 2018 ; Nuclear Technology Volume 202 ; 202 ; >
-      au < expected ; exists ; 2018 ; Nuclear Technology Volume 203 ; 203 ; >
-      au < expected ; exists ; 2018 ; Nuclear Technology Volume 204 ; 204 ; >
 
     }
 
@@ -77,17 +55,8 @@
 
       param[journal_id] = fst
       
-      au < exists ; exists ; 2013 ; Fusion Science and Technology Volume 64 ; 64 ; >
-      au < exists ; exists ; 2014 ; Fusion Science and Technology Volume 65 ; 65 ; >
-      au < exists ; exists ; 2014 ; Fusion Science and Technology Volume 66 ; 66 ; >
       au < finished ; crawling ; 2015 ; Fusion Science and Technology Volume 67 ; 67 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; Fusion Science and Technology Volume 68 ; 68 ; reingest5.clockss.org:8082 >
-      au < exists ; exists ; 2016 ; Fusion Science and Technology Volume 69 ; 69 ; >
-      au < exists ; exists ; 2016 ; Fusion Science and Technology Volume 70 ; 70 ; >
-      au < exists ; exists ; 2017 ; Fusion Science and Technology Volume 71 ; 71 ; >
-      au < exists ; exists ; 2017 ; Fusion Science and Technology Volume 72 ; 72 ; >
-      au < exists ; exists ; 2018 ; Fusion Science and Technology Volume 73 ; 73 ; >
-      au < expected ; exists ; 2018 ; Fusion Science and Technology Volume 74 ; 74 ; >
 
     }
 
