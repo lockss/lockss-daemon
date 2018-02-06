@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2018 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,6 +36,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.lockss.util.*;
+import org.apache.commons.io.FilenameUtils;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 
@@ -59,10 +60,10 @@ public class VerduciXmlMetadataExtractorFactory extends SourceXmlMetadataExtract
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
       String contentType)
           throws PluginException {
-    return new NzmaPubMedXmlMetadataExtractor();
+    return new VerduciPubMedXmlMetadataExtractor();
   }
 
-  public class NzmaPubMedXmlMetadataExtractor extends SourceXmlMetadataExtractor {
+  public class VerduciPubMedXmlMetadataExtractor extends SourceXmlMetadataExtractor {
 
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
@@ -76,7 +77,8 @@ public class VerduciXmlMetadataExtractorFactory extends SourceXmlMetadataExtract
 
     /* 
      * PDF file lives in sibling directory PDF/xxx.pdf
-     * The filename is currently startpage-endpage-articletitle.pdf
+     * The filename is supposedly startpage-endpage.pdf
+     * and if there is no endpage, then startpage-startpage.pdf
      * but the articletitle part is variable relative to the value in 
      * the xml so we are requested that they send it in some other form
      * otherwise we will need to add in an iterator to find the CU.
@@ -88,8 +90,15 @@ public class VerduciXmlMetadataExtractorFactory extends SourceXmlMetadataExtract
       // TODO - placeholder for the prototype - will not work
       // filename is just the same a the XML filename but with .pdf 
       // instead of .xml
+    	//TODO - placeholder
       String url_string = cu.getUrl();
-      String pdfName = url_string.substring(0,url_string.length() - 3) + "pdf";
+      String xmlPath = FilenameUtils.getPath(url_string);
+      String spage = oneAM.get(MetadataField.FIELD_START_PAGE);
+      String epage = oneAM.get(MetadataField.FIELD_END_PAGE);
+      if (epage == null) {
+    	  	epage = oneAM.get(MetadataField.FIELD_START_PAGE);
+      }
+      String pdfName = xmlPath + spage + "-" + epage;
       log.debug3("pdfName is " + pdfName);
       List<String> returnList = new ArrayList<String>();
       returnList.add(pdfName);

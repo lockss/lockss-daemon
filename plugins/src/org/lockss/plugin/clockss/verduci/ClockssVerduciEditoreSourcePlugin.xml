@@ -26,7 +26,7 @@
   </entry>
   <entry>
     <string>plugin_parent</string>
-    <string>org.lockss.plugin.clockss.ClockssSourcePlugin</string>
+    <string>org.lockss.plugin.clockss.ClockssDirSourcePlugin</string>
   </entry>
   <entry>
     <string>plugin_parent_version</string>
@@ -34,7 +34,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Verduci Editore Source Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
+    <string>"Verduci Editore Source Plugin (CLOCKSS), Base URL %s, Directory %s", base_url, directory</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -44,7 +44,7 @@
     <string>au_substance_url_pattern</string>
     <list>
       <!-- http://clockss-ingest.lockss.org/sourcefiles/verduci-released/2017/Eur Rev Med Pharmacol Sci 2017;21(22)/PDF/*.pdf-->
-      <string>"^%s%d/.+\.pdf$", base_url, year</string>
+      <string>"^%s%s/.+\.pdf$", base_url, directory</string>
     </list>
   </entry>
   <entry>
