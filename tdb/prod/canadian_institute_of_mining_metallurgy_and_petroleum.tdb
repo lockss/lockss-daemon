@@ -14,6 +14,7 @@
       eissn = 0964-1823 
     >
     param[base_url] = http://emg.geoscienceworld.org/
+    #GSW moved to SC
     
     au < doNotProcess ; 1992 ; Exploration and Mining Geology Volume 1 [abstracts only] ; 1 >
     au < doNotProcess ; 1993 ; Exploration and Mining Geology Volume 2 [abstracts only] ; 2 >
@@ -24,16 +25,16 @@
     au < doNotProcess ; 1998 ; Exploration and Mining Geology Volume 7 [abstracts only] ; 7 >
     au < doNotProcess ; 1999 ; Exploration and Mining Geology Volume 8 [abstracts only] ; 8 >
     au < doNotProcess ; 2000 ; Exploration and Mining Geology Volume 9 [abstracts only] ; 9 >
-    au < manifest ; 2001 ; Exploration and Mining Geology Volume 10 ; 10 >
-    au < manifest ; 2002 ; Exploration and Mining Geology Volume 11 ; 11 >
-    au < manifest ; 2003 ; Exploration and Mining Geology Volume 12 ; 12 >
-    au < manifest ; 2004 ; Exploration and Mining Geology Volume 13 ; 13 >
-    au < manifest ; 2005 ; Exploration and Mining Geology Volume 14 ; 14 >
-    au < released ; 2006 ; Exploration and Mining Geology Volume 15 ; 15 >
-    au < released ; 2007 ; Exploration and Mining Geology Volume 16 ; 16 >
-    au < released ; 2008 ; Exploration and Mining Geology Volume 17 ; 17 >
-    au < released ; 2009 ; Exploration and Mining Geology Volume 18 ; 18 >
-    au < released ; 2010 ; Exploration and Mining Geology Volume 19 ; 19 >
+    au < doNotProcess ; 2001 ; Exploration and Mining Geology Volume 10 ; 10 >
+    au < doNotProcess ; 2002 ; Exploration and Mining Geology Volume 11 ; 11 >
+    au < doNotProcess ; 2003 ; Exploration and Mining Geology Volume 12 ; 12 >
+    au < doNotProcess ; 2004 ; Exploration and Mining Geology Volume 13 ; 13 >
+    au < doNotProcess ; 2005 ; Exploration and Mining Geology Volume 14 ; 14 >
+    au < down ; 2006 ; Exploration and Mining Geology Volume 15 ; 15 >
+    au < down ; 2007 ; Exploration and Mining Geology Volume 16 ; 16 >
+    au < down ; 2008 ; Exploration and Mining Geology Volume 17 ; 17 >
+    au < down ; 2009 ; Exploration and Mining Geology Volume 18 ; 18 >
+    au < down ; 2010 ; Exploration and Mining Geology Volume 19 ; 19 >
 
   } 
 }

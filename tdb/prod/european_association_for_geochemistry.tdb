@@ -17,13 +17,14 @@
     >
 
     param[base_url] = http://perspectives.geoscienceworld.org/
+    #GSW moved to SC
     
-    au < HighWirePressH20Plugin ; released ; 2012 ; Geochemical Perspectives Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; released ; 2013 ; Geochemical Perspectives Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; released ; 2014 ; Geochemical Perspectives Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; released ; 2015 ; Geochemical Perspectives Volume 4 ; 4 >
-    au < gsw.GSWDrupalPlugin ; released ; 2016 ; Geochemical Perspectives Volume 5 ; 5 >
-    au < gsw.GSWDrupalPlugin ; manifest ; 2017 ; Geochemical Perspectives Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; down ; 2012 ; Geochemical Perspectives Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; down ; 2013 ; Geochemical Perspectives Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; down ; 2014 ; Geochemical Perspectives Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; down ; 2015 ; Geochemical Perspectives Volume 4 ; 4 >
+    au < gsw.GSWDrupalPlugin ; down ; 2016 ; Geochemical Perspectives Volume 5 ; 5 >
+    au < gsw.GSWDrupalPlugin ; doNotProcess ; 2017 ; Geochemical Perspectives Volume 6 ; 6 >
     
   }
 
