@@ -34,8 +34,11 @@
 
 package org.lockss.plugin.clockss.mersenne;
 
+import java.util.HashMap;
 import java.util.Map;
 
+import org.apache.commons.collections.map.MultiValueMap;
+import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.XmlDomMetadataExtractor;
 import org.lockss.extractor.XmlDomMetadataExtractor.XPathValue;
 import org.lockss.plugin.clockss.JatsPublishingSchemaHelper;
@@ -59,6 +62,29 @@ extends JatsPublishingSchemaHelper {
    * but that information is available in each article as well (per JATS)
    */
 
+  /*
+   * Mersenne combines its jats-like article node in to a journal-issue/body
+   * There is useful global information in the 
+   * journal-issue/journal-meta
+   * and
+   * journal-issue/issue-meta
+   * For now we're just using the issue-meta to get the issue
+   * but it confirms the volume and publication year as well
+   * 
+   */
+  
+  static private final String Issue_issue = "/journal-issue/issue-meta/issue";
+  static private final String Issue_volume = "/journal-issue/issue-meta/volume";
+  static private final String Issue_year = "/journal-issue/issue-meta/pub-date/year";
+  
+  static private final Map<String,XPathValue> Mersenne_globalMap = 
+	      new HashMap<String,XPathValue>();
+	  static {
+		  Mersenne_globalMap.put(Issue_issue,XmlDomMetadataExtractor.TEXT_VALUE);
+	    // only in earlier versions
+		  Mersenne_globalMap.put(Issue_volume, XmlDomMetadataExtractor.TEXT_VALUE);
+		  Mersenne_globalMap.put(Issue_year, XmlDomMetadataExtractor.TEXT_VALUE);
+	  }	    
 
   /* In our case, we have multiple articles in one file */
   static private final String Issue_articleNode = "/journal-issue/body/article";
@@ -73,6 +99,13 @@ extends JatsPublishingSchemaHelper {
     theMap.put(Mersenne_pdf_uri, XmlDomMetadataExtractor.TEXT_VALUE);
     return theMap;
   }
+  
+  @Override
+  public MultiValueMap getCookMap() {
+	MultiValueMap theCookMap = super.getCookMap();
+	theCookMap.put(Issue_issue, MetadataField.FIELD_ISSUE);
+    return theCookMap;
+  }
 
 
   /**
@@ -81,5 +114,14 @@ extends JatsPublishingSchemaHelper {
   @Override
   public String getArticleNode() {
     return Issue_articleNode;
+  }
+  
+  
+  /*
+   * Mersenne has some issue information in the journal-issue metadata
+   */
+  @Override
+  public Map<String, XPathValue> getGlobalMetaMap() {
+    return Mersenne_globalMap;
   }
 }
