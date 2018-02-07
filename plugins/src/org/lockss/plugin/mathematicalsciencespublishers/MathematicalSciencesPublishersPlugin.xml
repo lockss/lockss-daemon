@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>down. moved to https</string>
+    <string>ready</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -42,7 +42,10 @@
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%s%s/%d/manifest", base_url, journal_id, year</string>
+    <list>
+      <string>"%s%s/%d/manifest", to_http(base_url), journal_id, year</string>
+      <string>"%s%s/%d/manifest", to_https(base_url), journal_id, year</string>
+    </list>    
   </entry>
   <entry>
     <string>au_feature_urls</string>
@@ -77,10 +80,10 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^%s.*[.](bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url</string>
+      <string>1,"^https?://%s/.*[.](bmp|css|gif|ico|jpe?g|js|png|tif?f)$", url_host(base_url)</string>
       <!-- comment for rule #2, /b[^/]+[.]xhtml are biliographies, so /f... may indicate formulas or figures -->
-      <string>2,"^%s%s/%d/[^/]+/f[^/]+[.]xhtml", base_url, journal_id, year</string>
-      <string>1,"^%s%s/%d/", base_url, journal_id, year</string>
+      <string>2,"^https?://%s/%s/%d/[^/]+/f[^/]+[.]xhtml", url_host(base_url), journal_id, year</string>
+      <string>1,"^https?://%s/%s/%d/", url_host(base_url), journal_id, year</string>
     </list>
   </entry>
   <entry>
@@ -118,9 +121,23 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%s%s/%d/[^/]+/(?:[^/]+[.]pdf|[^bfi][^/]+[.]xhtml)$", base_url, journal_id, year</string>
+      <string>"^https?://%s/%s/%d/[^/]+/(?:[^/]+[.]pdf|[^bfi][^/]+[.]xhtml)$", url_host(base_url), journal_id, year</string>
     </list>
   </entry>
+  <!-- additions for https conversion -->
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.BaseUrlHttpHttpsUrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>plugin_url_fetcher_factory</string>
+    <string>org.lockss.plugin.base.HttpToHttpsUrlFetcherFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.base.HttpToHttpsUrlConsumerFactory</string>
+  </entry>  
+<!-- end support for https conversion -->    
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.mathematicalsciencespublishers.MathematicalSciencesPublishersHtmlFilterFactory</string>
