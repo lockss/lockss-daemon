@@ -66,12 +66,12 @@
       au < down ; 2008 ; American Journal of Respiratory and Critical Care Medicine Volume 178 ; 178 >
       au < down ; 2009 ; American Journal of Respiratory and Critical Care Medicine Volume 179 ; 179 >
       au < down ; 2009 ; American Journal of Respiratory and Critical Care Medicine Volume 180 ; 180 >
-      au < down ; 2010 ; American Journal of Respiratory and Critical Care Medicine Volume 181 ; 181 >
-      au < down ; 2010 ; American Journal of Respiratory and Critical Care Medicine Volume 182 ; 182 >
-      au < down ; 2011 ; American Journal of Respiratory and Critical Care Medicine Volume 183 ; 183 >
-      au < down ; 2011 ; American Journal of Respiratory and Critical Care Medicine Volume 184 ; 184 >
-      au < down ; 2012 ; American Journal of Respiratory and Critical Care Medicine Volume 185 ; 185 >
-      au < down ; 2012 ; American Journal of Respiratory and Critical Care Medicine Volume 186 ; 186 >
+      au < superseded ; 2010 ; American Journal of Respiratory and Critical Care Medicine Volume 181 [superseded] ; 181 >
+      au < superseded ; 2010 ; American Journal of Respiratory and Critical Care Medicine Volume 182 [superseded] ; 182 >
+      au < superseded ; 2011 ; American Journal of Respiratory and Critical Care Medicine Volume 183 [superseded] ; 183 >
+      au < superseded ; 2011 ; American Journal of Respiratory and Critical Care Medicine Volume 184 [superseded] ; 184 >
+      au < superseded ; 2012 ; American Journal of Respiratory and Critical Care Medicine Volume 185 [superseded] ; 185 >
+      au < superseded ; 2012 ; American Journal of Respiratory and Critical Care Medicine Volume 186 [superseded] ; 186 >
     
     }
   
@@ -79,54 +79,12 @@
     
       plugin = org.lockss.plugin.atypon.americanthoracic.AtsJournalsPlugin
       implicit < status ; year ; name ; param[volume_name] >
-      param[base_url] = http://www.atsjournals.org/
       param[journal_id] = ajrccm
+      #Moved to https
       
-      au < doNotProcess ; 1987 ; American Journal of Respiratory and Critical Care Medicine Volume 136 ; 136 >
-      au < doNotProcess ; 1988 ; American Journal of Respiratory and Critical Care Medicine Volume 137 ; 137 >
-      au < doNotProcess ; 1988 ; American Journal of Respiratory and Critical Care Medicine Volume 138 ; 138 >
-      au < doNotProcess ; 1989 ; American Journal of Respiratory and Critical Care Medicine Volume 139 ; 139 >
-      au < doNotProcess ; 1989 ; American Journal of Respiratory and Critical Care Medicine Volume 140 ; 140 >
-      au < doNotProcess ; 1990 ; American Journal of Respiratory and Critical Care Medicine Volume 141 ; 141 >
-      au < doNotProcess ; 1990 ; American Journal of Respiratory and Critical Care Medicine Volume 142 ; 142 >
-      au < doNotProcess ; 1991 ; American Journal of Respiratory and Critical Care Medicine Volume 143 ; 143 >
-      au < doNotProcess ; 1991 ; American Journal of Respiratory and Critical Care Medicine Volume 144 ; 144 >
-      au < doNotProcess ; 1992 ; American Journal of Respiratory and Critical Care Medicine Volume 145 ; 145 >
-      au < doNotProcess ; 1992 ; American Journal of Respiratory and Critical Care Medicine Volume 146 ; 146 >
-      au < doNotProcess ; 1993 ; American Journal of Respiratory and Critical Care Medicine Volume 147 ; 147 >
-      au < doNotProcess ; 1993 ; American Journal of Respiratory and Critical Care Medicine Volume 148 ; 148 >
-      au < doNotProcess ; 1994 ; American Journal of Respiratory and Critical Care Medicine Volume 149 ; 149 >
-      au < doNotProcess ; 1994 ; American Journal of Respiratory and Critical Care Medicine Volume 150 ; 150 >
-      au < doNotProcess ; 1995 ; American Journal of Respiratory and Critical Care Medicine Volume 151 ; 151 >
-      au < doNotProcess ; 1995 ; American Journal of Respiratory and Critical Care Medicine Volume 152 ; 152 >
-      au < doNotProcess ; 1996 ; American Journal of Respiratory and Critical Care Medicine Volume 153 ; 153 >
-      au < doNotProcess ; 1996 ; American Journal of Respiratory and Critical Care Medicine Volume 154 ; 154 >
-      au < doNotProcess ; 1997 ; American Journal of Respiratory and Critical Care Medicine Volume 155 ; 155 >
-      au < doNotProcess ; 1997 ; American Journal of Respiratory and Critical Care Medicine Volume 156 ; 156 >
-      au < doNotProcess ; 1998 ; American Journal of Respiratory and Critical Care Medicine Volume 157 ; 157 >
-      au < doNotProcess ; 1998 ; American Journal of Respiratory and Critical Care Medicine Volume 158 ; 158 >
-      au < doNotProcess ; 1999 ; American Journal of Respiratory and Critical Care Medicine Volume 159 ; 159 >
-      au < doNotProcess ; 1999 ; American Journal of Respiratory and Critical Care Medicine Volume 160 ; 160 >
-      au < doNotProcess ; 2000 ; American Journal of Respiratory and Critical Care Medicine Volume 161 ; 161 >
-      au < doNotProcess ; 2000 ; American Journal of Respiratory and Critical Care Medicine Volume 162 ; 162 >
-      au < doNotProcess ; 2001 ; American Journal of Respiratory and Critical Care Medicine Volume 163 ; 163 >
-      au < doNotProcess ; 2001 ; American Journal of Respiratory and Critical Care Medicine Volume 164 ; 164 >
-      au < doNotProcess ; 2002 ; American Journal of Respiratory and Critical Care Medicine Volume 165 ; 165 >
-      au < doNotProcess ; 2002 ; American Journal of Respiratory and Critical Care Medicine Volume 166 ; 166 >
-      au < doNotProcess ; 2003 ; American Journal of Respiratory and Critical Care Medicine Volume 167 ; 167 >
-      au < doNotProcess ; 2003 ; American Journal of Respiratory and Critical Care Medicine Volume 168 ; 168 >
-      au < doNotProcess ; 2004 ; American Journal of Respiratory and Critical Care Medicine Volume 169 ; 169 >
-      au < doNotProcess ; 2004 ; American Journal of Respiratory and Critical Care Medicine Volume 170 ; 170 >
-      au < doNotProcess ; 2005 ; American Journal of Respiratory and Critical Care Medicine Volume 171 ; 171 >
-      au < doNotProcess ; 2005 ; American Journal of Respiratory and Critical Care Medicine Volume 172 ; 172 >
-      au < doNotProcess ; 2006 ; American Journal of Respiratory and Critical Care Medicine Volume 173 ; 173 >
-      au < doNotProcess ; 2006 ; American Journal of Respiratory and Critical Care Medicine Volume 174 ; 174 >
-      au < doNotProcess ; 2007 ; American Journal of Respiratory and Critical Care Medicine Volume 175 ; 175 >
-      au < doNotProcess ; 2007 ; American Journal of Respiratory and Critical Care Medicine Volume 176 ; 176 >
-      au < doNotProcess ; 2008 ; American Journal of Respiratory and Critical Care Medicine Volume 177 ; 177 >
-      au < doNotProcess ; 2008 ; American Journal of Respiratory and Critical Care Medicine Volume 178 ; 178 >
-      au < doNotProcess ; 2009 ; American Journal of Respiratory and Critical Care Medicine Volume 179 ; 179 >
-      au < doNotProcess ; 2009 ; American Journal of Respiratory and Critical Care Medicine Volume 180 ; 180 >
+      {
+      param[base_url] = https://www.atsjournals.org/
+
       au < doNotProcess ; 2010 ; American Journal of Respiratory and Critical Care Medicine Volume 181 ; 181 >
       au < doNotProcess ; 2010 ; American Journal of Respiratory and Critical Care Medicine Volume 182 ; 182 >
       au < doNotProcess ; 2011 ; American Journal of Respiratory and Critical Care Medicine Volume 183 ; 183 >
@@ -139,11 +97,32 @@
       au < exists ; 2014 ; American Journal of Respiratory and Critical Care Medicine Volume 190 ; 190 >
       au < exists ; 2015 ; American Journal of Respiratory and Critical Care Medicine Volume 191 ; 191 >
       au < exists ; 2015 ; American Journal of Respiratory and Critical Care Medicine Volume 192 ; 192 >
-      au < released ; 2016 ; American Journal of Respiratory and Critical Care Medicine Volume 193 ; 193 >
+      au < exists ; 2016 ; American Journal of Respiratory and Critical Care Medicine Volume 193 ; 193 >
       au < exists ; 2016 ; American Journal of Respiratory and Critical Care Medicine Volume 194 ; 194 >
       au < exists ; 2017 ; American Journal of Respiratory and Critical Care Medicine Volume 195 ; 195 >
       au < exists ; 2017 ; American Journal of Respiratory and Critical Care Medicine Volume 196 ; 196 >
-      
+      }
+
+      {
+      param[base_url] = http://www.atsjournals.org/
+
+      au < doNotProcess ; 2010 ; American Journal of Respiratory and Critical Care Medicine Volume 181 ; 181 >
+      au < doNotProcess ; 2010 ; American Journal of Respiratory and Critical Care Medicine Volume 182 ; 182 >
+      au < doNotProcess ; 2011 ; American Journal of Respiratory and Critical Care Medicine Volume 183 ; 183 >
+      au < doNotProcess ; 2011 ; American Journal of Respiratory and Critical Care Medicine Volume 184 ; 184 >
+      au < doNotProcess ; 2012 ; American Journal of Respiratory and Critical Care Medicine Volume 185 ; 185 >
+      au < doNotProcess ; 2012 ; American Journal of Respiratory and Critical Care Medicine Volume 186 ; 186 >
+      au < doNotProcess ; 2013 ; American Journal of Respiratory and Critical Care Medicine Volume 187 ; 187 >
+      au < doNotProcess ; 2013 ; American Journal of Respiratory and Critical Care Medicine Volume 188 ; 188 >
+      au < doNotProcess ; 2014 ; American Journal of Respiratory and Critical Care Medicine Volume 189 ; 189 >
+      au < doNotProcess ; 2014 ; American Journal of Respiratory and Critical Care Medicine Volume 190 ; 190 >
+      au < doNotProcess ; 2015 ; American Journal of Respiratory and Critical Care Medicine Volume 191 ; 191 >
+      au < doNotProcess ; 2015 ; American Journal of Respiratory and Critical Care Medicine Volume 192 ; 192 >
+      au < superseded ; 2016 ; American Journal of Respiratory and Critical Care Medicine Volume 193 [superseded] ; 193 >
+      au < doNotProcess ; 2016 ; American Journal of Respiratory and Critical Care Medicine Volume 194 ; 194 >
+      au < doNotProcess ; 2017 ; American Journal of Respiratory and Critical Care Medicine Volume 195 ; 195 >
+      au < doNotProcess ; 2017 ; American Journal of Respiratory and Critical Care Medicine Volume 196 ; 196 >
+      }
     }
     
   }
@@ -204,12 +183,12 @@
       au < down ; 2008 ; American Journal of Respiratory Cell and Molecular Biology Volume 39 ; 39 >
       au < down ; 2009 ; American Journal of Respiratory Cell and Molecular Biology Volume 40 ; 40 >
       au < down ; 2009 ; American Journal of Respiratory Cell and Molecular Biology Volume 41 ; 41 >
-      au < down ; 2010 ; American Journal of Respiratory Cell and Molecular Biology Volume 42 ; 42 >
-      au < down ; 2010 ; American Journal of Respiratory Cell and Molecular Biology Volume 43 ; 43 >
-      au < down ; 2011 ; American Journal of Respiratory Cell and Molecular Biology Volume 44 ; 44 >
-      au < down ; 2011 ; American Journal of Respiratory Cell and Molecular Biology Volume 45 ; 45 >
-      au < down ; 2012 ; American Journal of Respiratory Cell and Molecular Biology Volume 46 ; 46 >
-      au < down ; 2012 ; American Journal of Respiratory Cell and Molecular Biology Volume 47 ; 47 >
+      au < superseded ; 2010 ; American Journal of Respiratory Cell and Molecular Biology Volume 42 [superseded] ; 42 >
+      au < superseded ; 2010 ; American Journal of Respiratory Cell and Molecular Biology Volume 43 [superseded] ; 43 >
+      au < superseded ; 2011 ; American Journal of Respiratory Cell and Molecular Biology Volume 44 [superseded] ; 44 >
+      au < superseded ; 2011 ; American Journal of Respiratory Cell and Molecular Biology Volume 45 [superseded] ; 45 >
+      au < superseded ; 2012 ; American Journal of Respiratory Cell and Molecular Biology Volume 46 [superseded] ; 46 >
+      au < superseded ; 2012 ; American Journal of Respiratory Cell and Molecular Biology Volume 47 [superseded] ; 47 >
 
       
     }
@@ -218,56 +197,18 @@
     
       plugin = org.lockss.plugin.atypon.americanthoracic.AtsJournalsPlugin
       implicit < status ; year ; name ; param[volume_name] >
-      param[base_url] = http://www.atsjournals.org/
       param[journal_id] = ajrcmb
+      #Moved to https
 
-      au < doNotProcess ; 1989 ; American Journal of Respiratory Cell and Molecular Biology Volume 1 ; 1 >
-      au < doNotProcess ; 1990 ; American Journal of Respiratory Cell and Molecular Biology Volume 2 ; 2 >
-      au < doNotProcess ; 1990 ; American Journal of Respiratory Cell and Molecular Biology Volume 3 ; 3 >
-      au < doNotProcess ; 1991 ; American Journal of Respiratory Cell and Molecular Biology Volume 4 ; 4 >
-      au < doNotProcess ; 1991 ; American Journal of Respiratory Cell and Molecular Biology Volume 5 ; 5 >
-      au < doNotProcess ; 1992 ; American Journal of Respiratory Cell and Molecular Biology Volume 6 ; 6 >
-      au < doNotProcess ; 1992 ; American Journal of Respiratory Cell and Molecular Biology Volume 7 ; 7 >
-      au < doNotProcess ; 1993 ; American Journal of Respiratory Cell and Molecular Biology Volume 8 ; 8 >
-      au < doNotProcess ; 1993 ; American Journal of Respiratory Cell and Molecular Biology Volume 9 ; 9 >
-      au < doNotProcess ; 1994 ; American Journal of Respiratory Cell and Molecular Biology Volume 10 ; 10 >
-      au < doNotProcess ; 1994 ; American Journal of Respiratory Cell and Molecular Biology Volume 11 ; 11 >
-      au < doNotProcess ; 1995 ; American Journal of Respiratory Cell and Molecular Biology Volume 12 ; 12 >
-      au < doNotProcess ; 1995 ; American Journal of Respiratory Cell and Molecular Biology Volume 13 ; 13 >
-      au < doNotProcess ; 1996 ; American Journal of Respiratory Cell and Molecular Biology Volume 14 ; 14 >
-      au < doNotProcess ; 1996 ; American Journal of Respiratory Cell and Molecular Biology Volume 15 ; 15 >
-      au < doNotProcess ; 1997 ; American Journal of Respiratory Cell and Molecular Biology Volume 16 ; 16 >
-      au < doNotProcess ; 1997 ; American Journal of Respiratory Cell and Molecular Biology Volume 17 ; 17 >
-      au < doNotProcess ; 1998 ; American Journal of Respiratory Cell and Molecular Biology Volume 18 ; 18 >
-      au < doNotProcess ; 1998 ; American Journal of Respiratory Cell and Molecular Biology Volume 19 ; 19 >
-      au < doNotProcess ; 1999 ; American Journal of Respiratory Cell and Molecular Biology Volume 20 ; 20 >
-      au < doNotProcess ; 1999 ; American Journal of Respiratory Cell and Molecular Biology Volume 21 ; 21 >
-      au < doNotProcess ; 2000 ; American Journal of Respiratory Cell and Molecular Biology Volume 22 ; 22 >
-      au < doNotProcess ; 2000 ; American Journal of Respiratory Cell and Molecular Biology Volume 23 ; 23 >
-      au < doNotProcess ; 2001 ; American Journal of Respiratory Cell and Molecular Biology Volume 24 ; 24 >
-      au < doNotProcess ; 2001 ; American Journal of Respiratory Cell and Molecular Biology Volume 25 ; 25 >
-      au < doNotProcess ; 2002 ; American Journal of Respiratory Cell and Molecular Biology Volume 26 ; 26 >
-      au < doNotProcess ; 2002 ; American Journal of Respiratory Cell and Molecular Biology Volume 27 ; 27 >
-      au < doNotProcess ; 2003 ; American Journal of Respiratory Cell and Molecular Biology Volume 28 ; 28 >
-      au < doNotProcess ; 2003 ; American Journal of Respiratory Cell and Molecular Biology Volume 29 ; 29 >
-      au < doNotProcess ; 2004 ; American Journal of Respiratory Cell and Molecular Biology Volume 30 ; 30 >
-      au < doNotProcess ; 2004 ; American Journal of Respiratory Cell and Molecular Biology Volume 31 ; 31 >
-      au < doNotProcess ; 2005 ; American Journal of Respiratory Cell and Molecular Biology Volume 32 ; 32 >
-      au < doNotProcess ; 2005 ; American Journal of Respiratory Cell and Molecular Biology Volume 33 ; 33 >
-      au < doNotProcess ; 2006 ; American Journal of Respiratory Cell and Molecular Biology Volume 34 ; 34 >
-      au < doNotProcess ; 2006 ; American Journal of Respiratory Cell and Molecular Biology Volume 35 ; 35 >
-      au < doNotProcess ; 2007 ; American Journal of Respiratory Cell and Molecular Biology Volume 36 ; 36 >
-      au < doNotProcess ; 2007 ; American Journal of Respiratory Cell and Molecular Biology Volume 37 ; 37 >
-      au < doNotProcess ; 2008 ; American Journal of Respiratory Cell and Molecular Biology Volume 38 ; 38 >
-      au < doNotProcess ; 2008 ; American Journal of Respiratory Cell and Molecular Biology Volume 39 ; 39 >
-      au < doNotProcess ; 2009 ; American Journal of Respiratory Cell and Molecular Biology Volume 40 ; 40 >
-      au < doNotProcess ; 2009 ; American Journal of Respiratory Cell and Molecular Biology Volume 41 ; 41 >
-      au < doNotProcess ; 2010 ; American Journal of Respiratory Cell and Molecular Biology Volume 42 ; 42 >
-      au < doNotProcess ; 2010 ; American Journal of Respiratory Cell and Molecular Biology Volume 43 ; 43 >
-      au < doNotProcess ; 2011 ; American Journal of Respiratory Cell and Molecular Biology Volume 44 ; 44 >
-      au < doNotProcess ; 2011 ; American Journal of Respiratory Cell and Molecular Biology Volume 45 ; 45 >
-      au < doNotProcess ; 2012 ; American Journal of Respiratory Cell and Molecular Biology Volume 46 ; 46 >
-      au < doNotProcess ; 2012 ; American Journal of Respiratory Cell and Molecular Biology Volume 47 ; 47 >
+      {
+      param[base_url] = https://www.atsjournals.org/
+
+      au < exists ; 2010 ; American Journal of Respiratory Cell and Molecular Biology Volume 42 ; 42 >
+      au < exists ; 2010 ; American Journal of Respiratory Cell and Molecular Biology Volume 43 ; 43 >
+      au < exists ; 2011 ; American Journal of Respiratory Cell and Molecular Biology Volume 44 ; 44 >
+      au < exists ; 2011 ; American Journal of Respiratory Cell and Molecular Biology Volume 45 ; 45 >
+      au < exists ; 2012 ; American Journal of Respiratory Cell and Molecular Biology Volume 46 ; 46 >
+      au < exists ; 2012 ; American Journal of Respiratory Cell and Molecular Biology Volume 47 ; 47 >
       au < exists ; 2013 ; American Journal of Respiratory Cell and Molecular Biology Volume 48 ; 48 >
       au < exists ; 2013 ; American Journal of Respiratory Cell and Molecular Biology Volume 49 ; 49 >
       au < exists ; 2014 ; American Journal of Respiratory Cell and Molecular Biology Volume 50 ; 50 >
@@ -276,9 +217,29 @@
       au < exists ; 2015 ; American Journal of Respiratory Cell and Molecular Biology Volume 53 ; 53 >
       au < exists ; 2016 ; American Journal of Respiratory Cell and Molecular Biology Volume 54 ; 54 >
       au < exists ; 2016 ; American Journal of Respiratory Cell and Molecular Biology Volume 55 ; 55 >
-      au < released ; 2017 ; American Journal of Respiratory Cell and Molecular Biology Volume 56 ; 56 >
+      au < exists ; 2017 ; American Journal of Respiratory Cell and Molecular Biology Volume 56 ; 56 >
       au < exists ; 2017 ; American Journal of Respiratory Cell and Molecular Biology Volume 57 ; 57 >
+      }
+      {
+      param[base_url] = http://www.atsjournals.org/
 
+      au < doNotProcess ; 2010 ; American Journal of Respiratory Cell and Molecular Biology Volume 42 ; 42 >
+      au < doNotProcess ; 2010 ; American Journal of Respiratory Cell and Molecular Biology Volume 43 ; 43 >
+      au < doNotProcess ; 2011 ; American Journal of Respiratory Cell and Molecular Biology Volume 44 ; 44 >
+      au < doNotProcess ; 2011 ; American Journal of Respiratory Cell and Molecular Biology Volume 45 ; 45 >
+      au < doNotProcess ; 2012 ; American Journal of Respiratory Cell and Molecular Biology Volume 46 ; 46 >
+      au < doNotProcess ; 2012 ; American Journal of Respiratory Cell and Molecular Biology Volume 47 ; 47 >
+      au < doNotProcess ; 2013 ; American Journal of Respiratory Cell and Molecular Biology Volume 48 ; 48 >
+      au < doNotProcess ; 2013 ; American Journal of Respiratory Cell and Molecular Biology Volume 49 ; 49 >
+      au < doNotProcess ; 2014 ; American Journal of Respiratory Cell and Molecular Biology Volume 50 ; 50 >
+      au < doNotProcess ; 2014 ; American Journal of Respiratory Cell and Molecular Biology Volume 51 ; 51 >
+      au < doNotProcess ; 2015 ; American Journal of Respiratory Cell and Molecular Biology Volume 52 ; 52 >
+      au < doNotProcess ; 2015 ; American Journal of Respiratory Cell and Molecular Biology Volume 53 ; 53 >
+      au < doNotProcess ; 2016 ; American Journal of Respiratory Cell and Molecular Biology Volume 54 ; 54 >
+      au < doNotProcess ; 2016 ; American Journal of Respiratory Cell and Molecular Biology Volume 55 ; 55 >
+      au < superseded ; 2017 ; American Journal of Respiratory Cell and Molecular Biology Volume 56 [superseded] ; 56 >
+      au < doNotProcess ; 2017 ; American Journal of Respiratory Cell and Molecular Biology Volume 57 ; 57 >
+      }
     }
     
   }
@@ -304,14 +265,30 @@
       au < down ; 2007 ; Proceedings of the American Thoracic Society Volume 4 ; 4 >
       au < down ; 2008 ; Proceedings of the American Thoracic Society Volume 5 ; 5 >
       au < down ; 2009 ; Proceedings of the American Thoracic Society Volume 6 ; 6 >
-      au < down ; 2010 ; Proceedings of the American Thoracic Society Volume 7 ; 7 >
+      au < superseded ; 2010 ; Proceedings of the American Thoracic Society Volume 7 [superseded] ; 7 >
     }
     
     {
       plugin = org.lockss.plugin.atypon.americanthoracic.AtsJournalsPlugin
       implicit < status ; year ; name ; param[volume_name] >
-      param[base_url] = http://www.atsjournals.org/
       param[journal_id] = pats
+      #moved to https.
+
+      {
+      param[base_url] = https://www.atsjournals.org/
+
+      au < doNotProcess ; 2004 ; Proceedings of the American Thoracic Society Volume 1 ; 1 >
+      au < doNotProcess ; 2005 ; Proceedings of the American Thoracic Society Volume 2 ; 2 >
+      au < doNotProcess ; 2006 ; Proceedings of the American Thoracic Society Volume 3 ; 3 >
+      au < doNotProcess ; 2007 ; Proceedings of the American Thoracic Society Volume 4 ; 4 >
+      au < doNotProcess ; 2008 ; Proceedings of the American Thoracic Society Volume 5 ; 5 >
+      au < doNotProcess ; 2009 ; Proceedings of the American Thoracic Society Volume 6 ; 6 >
+      au < exists ; 2010 ; Proceedings of the American Thoracic Society Volume 7 ; 7 >
+      au < exists ; 2011 ; Proceedings of the American Thoracic Society Volume 8 ; 8 >
+      au < exists ; 2012 ; Proceedings of the American Thoracic Society Volume 9 ; 9 >
+      }
+      {
+      param[base_url] = http://www.atsjournals.org/
 
       au < doNotProcess ; 2004 ; Proceedings of the American Thoracic Society Volume 1 ; 1 >
       au < doNotProcess ; 2005 ; Proceedings of the American Thoracic Society Volume 2 ; 2 >
@@ -320,8 +297,9 @@
       au < doNotProcess ; 2008 ; Proceedings of the American Thoracic Society Volume 5 ; 5 >
       au < doNotProcess ; 2009 ; Proceedings of the American Thoracic Society Volume 6 ; 6 >
       au < doNotProcess ; 2010 ; Proceedings of the American Thoracic Society Volume 7 ; 7 >
-      au < exists ; 2011 ; Proceedings of the American Thoracic Society Volume 8 ; 8 >
-      au < released ; 2012 ; Proceedings of the American Thoracic Society Volume 9 ; 9 >
+      au < doNotProcess ; 2011 ; Proceedings of the American Thoracic Society Volume 8 ; 8 >
+      au < superseded ; 2012 ; Proceedings of the American Thoracic Society Volume 9 [superseded] ; 9 >
+      }
     }
       
   }
@@ -337,15 +315,27 @@
 
       plugin = org.lockss.plugin.atypon.americanthoracic.AtsJournalsPlugin
       implicit < status ; year ; name ; param[volume_name] >
-      param[base_url] = http://www.atsjournals.org/
       param[journal_id] = annalsats
+      #Moved to https
+
+    {
+      param[base_url] = https://www.atsjournals.org/
 
       au < exists ; 2013 ; Annals of the American Thoracic Society Volume 10 ; 10 >
-      au < released ; 2014 ; Annals of the American Thoracic Society Volume 11 ; 11 >
+      au < exists ; 2014 ; Annals of the American Thoracic Society Volume 11 ; 11 >
       au < exists ; 2015 ; Annals of the American Thoracic Society Volume 12 ; 12 >
       au < exists ; 2016 ; Annals of the American Thoracic Society Volume 13 ; 13 >
       au < expected ; 2017 ; Annals of the American Thoracic Society Volume 14 ; 14 >
+    }
+    {
+      param[base_url] = http://www.atsjournals.org/
 
+      au < doNotProcess ; 2013 ; Annals of the American Thoracic Society Volume 10 ; 10 >
+      au < superseded ; 2014 ; Annals of the American Thoracic Society Volume 11 [superseded] ; 11 >
+      au < doNotProcess ; 2015 ; Annals of the American Thoracic Society Volume 12 ; 12 >
+      au < doNotProcess ; 2016 ; Annals of the American Thoracic Society Volume 13 ; 13 >
+      au < doNotProcess ; 2017 ; Annals of the American Thoracic Society Volume 14 ; 14 >
+    }
   }
 
 }
