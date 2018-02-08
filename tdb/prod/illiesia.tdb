@@ -5,7 +5,6 @@
   >
 
   plugin = org.lockss.plugin.illiesia.IlliesiaPlugin
-  param[base_url] = http://www2.pms-lj.si/illiesia/
   implicit < status ; year ; name ; volume ; param[year] >   
   
   {
@@ -15,7 +14,27 @@
       issn = 1855-5810 ;
       eissn = 1854-0392
     >
-   
+    {
+    param[base_url] = http://illiesia.speciesfile.org/
+
+    au < notReady ; 2005 ; Illiesia International Journal of Stonefly Research Volume 1 ; 1 ; 2005 > #no substance. crawl rules?
+    au < notReady ; 2006 ; Illiesia International Journal of Stonefly Research Volume 2 ; 2 ; 2006 > #no substance. crawl rules?
+    au < notReady ; 2007 ; Illiesia International Journal of Stonefly Research Volume 3 ; 3 ; 2007 > #no substance. crawl rules?
+    au < notReady ; 2008 ; Illiesia International Journal of Stonefly Research Volume 4 ; 4 ; 2008 > #no substance. crawl rules?
+    au < doNotProcess ; 2009 ; Illiesia International Journal of Stonefly Research Volume 5 ; 5 ; 2009 >
+    au < doNotProcess ; 2010 ; Illiesia International Journal of Stonefly Research Volume 6 ; 6 ; 2010 >
+    au < doNotProcess ; 2011 ; Illiesia International Journal of Stonefly Research Volume 7 ; 7 ; 2011 >
+    au < doNotProcess ; 2012 ; Illiesia International Journal of Stonefly Research Volume 8 ; 8 ; 2012 >
+    au < doNotProcess ; 2013 ; Illiesia International Journal of Stonefly Research Volume 9 ; 9 ; 2013 >
+    au < doNotProcess ; 2014 ; Illiesia International Journal of Stonefly Research Volume 10 ; 10 ; 2014 >
+    au < doNotProcess ; 2015 ; Illiesia International Journal of Stonefly Research Volume 11 ; 11 ; 2015 >
+    au < manifest ; 2016 ; Illiesia International Journal of Stonefly Research Volume 12 ; 12 ; 2016 > #nothing published 2016
+    au < manifest ; 2017 ; Illiesia International Journal of Stonefly Research Volume 13 ; 13 ; 2017 >
+    au < expected ; 2018 ; Illiesia International Journal of Stonefly Research Volume 14 ; 14 ; 2018 >
+    }
+    {
+    param[base_url] = http://www2.pms-lj.si/illiesia/
+
     au < notReady ; 2005 ; Illiesia International Journal of Stonefly Research Volume 1 ; 1 ; 2005 > #no substance. crawl rules?
     au < notReady ; 2006 ; Illiesia International Journal of Stonefly Research Volume 2 ; 2 ; 2006 > #no substance. crawl rules?
     au < notReady ; 2007 ; Illiesia International Journal of Stonefly Research Volume 3 ; 3 ; 2007 > #no substance. crawl rules?
@@ -27,9 +46,10 @@
     au < released ; 2013 ; Illiesia International Journal of Stonefly Research Volume 9 ; 9 ; 2013 >
     au < released ; 2014 ; Illiesia International Journal of Stonefly Research Volume 10 ; 10 ; 2014 >
     au < released ; 2015 ; Illiesia International Journal of Stonefly Research Volume 11 ; 11 ; 2015 >
-    au < expected ; 2016 ; Illiesia International Journal of Stonefly Research Volume 12 ; 12 ; 2016 > #nothing published 2016
-    au < expected ; 2017 ; Illiesia International Journal of Stonefly Research Volume 13 ; 13 ; 2017 >
- 
+    au < exists ; 2016 ; Illiesia International Journal of Stonefly Research Volume 12 ; 12 ; 2016 >
+    au < exists ; 2017 ; Illiesia International Journal of Stonefly Research Volume 13 ; 13 ; 2017 >
+    au < expected ; 2018 ; Illiesia International Journal of Stonefly Research Volume 14 ; 14 ; 2018 >
+    }
   }
     
 }
