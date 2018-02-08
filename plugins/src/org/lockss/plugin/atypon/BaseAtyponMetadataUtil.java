@@ -205,9 +205,9 @@ public class BaseAtyponMetadataUtil {
     // We're only in this method if the type was BOOK or BOOK_CHAPTER
     TdbAu tdbau = au.getTdbAu();
     String au_type = (tdbau == null) ? null : tdbau.getPublicationType();
-    // if the tdb publication type is NOT a book or book chapter, then we don't belong
-    if ( au_type != null && !( MetadataField.PUBLICATION_TYPE_BOOKSERIES.equals(au_type)
-          || MetadataField.PUBLICATION_TYPE_BOOK.equals(au_type)) ) {
+    // proceedings, books and book_series could all represent as books/chapters
+    // so only discard if the TDB thinks this should actually be a journal - possibly overcrawled?
+    if (au_type != null && (MetadataField.PUBLICATION_TYPE_JOURNAL.equals(au_type))) {
         // we probably overcrawled and got a BOOK_CHAP or BOOK while 
         // collecting a journal or proceedings 
         return false;
