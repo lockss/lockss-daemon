@@ -576,12 +576,11 @@
       >
 
       comment[publisher] = Ubiquity Press
-#      param[base_url] = http://www.govafricajournal.org/
+      #      param[base_url] = http://www.govafricajournal.org/
+      # No longer publishing. Moved to https://gaj.ubiquitypress.com/
 
-      au < doNotProcess ; exists ; 2014 ; 1 ; Governance in Africa Volume 2014 ; 2014 ; https://www.govafricajournal.org/ ; >
       au < finished ; finished ; 2015 ; 2 ; Governance in Africa Volume 2015 ; 2015 ; http://www.govafricajournal.org/ ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016 ; 3 ; Governance in Africa Volume 2016 ; 2016 ; http://www.govafricajournal.org/ ; >
-      au < expected ; exists ; 2017 ; 4 ; Governance in Africa Volume 2017 ; 2017 ; https://www.govafricajournal.org/ ; >
+      au < finished ; manifest ; 2016 ; 3 ; Governance in Africa Volume 2016 ; 2016 ; http://www.govafricajournal.org/ ; reingest3.clockss.org:8083 >
 
   }
 
