@@ -629,13 +629,13 @@
     comment[base_url] = http://www.ukvet.co.uk/view/caHome.html
     param[journal_id] = coan
 
-    au < exists ; 2011 ; Companion Animal Volume 16 ; 16 ; https://www.magonlinelibrary.com/ >
-    au < exists ; 2012 ; Companion Animal Volume 17 ; 17 ; https://www.magonlinelibrary.com/ >
+    au < exists ; 2011 ; Companion Animal Volume 16 ; 16 ; http://www.magonlinelibrary.com/ >
+    au < exists ; 2012 ; Companion Animal Volume 17 ; 17 ; http://www.magonlinelibrary.com/ >
     au < released ; 2013 ; Companion Animal Volume 18 ; 18 ; http://www.magonlinelibrary.com/ >
     au < released ; 2014 ; Companion Animal Volume 19 ; 19 ; http://www.magonlinelibrary.com/ >
     au < released ; 2015 ; Companion Animal Volume 20 ; 20 ; http://www.magonlinelibrary.com/ >
     au < released ; 2016 ; Companion Animal Volume 21 ; 21 ; http://www.magonlinelibrary.com/ >
-    au < manifest ; 2017 ; Companion Animal Volume 22 ; 22 ; https://www.magonlinelibrary.com/ >
+    au < exists ; 2017 ; Companion Animal Volume 22 ; 22 ; http://www.magonlinelibrary.com/ >
 
   }
 
@@ -670,13 +670,13 @@
     comment[base_url] = http://www.ukvet.co.uk/view/lsHome.html
     param[journal_id] = live
 
-    au < exists ; 2011 ; Livestock Volume 16 ; 16 ; https://www.magonlinelibrary.com/ >
-    au < exists ; 2012 ; Livestock Volume 17 ; 17 ; https://www.magonlinelibrary.com/ >
+    au < exists ; 2011 ; Livestock Volume 16 ; 16 ; http://www.magonlinelibrary.com/ >
+    au < exists ; 2012 ; Livestock Volume 17 ; 17 ; http://www.magonlinelibrary.com/ >
     au < released ; 2013 ; Livestock Volume 18 ; 18 ; http://www.magonlinelibrary.com/ >
     au < released ; 2014 ; Livestock Volume 19 ; 19 ; http://www.magonlinelibrary.com/ >
     au < released ; 2015 ; Livestock Volume 20 ; 20 ; http://www.magonlinelibrary.com/ >
     au < released ; 2016 ; Livestock Volume 21 ; 21 ; http://www.magonlinelibrary.com/ >
-    au < manifest ; 2017 ; Livestock Volume 22 ; 22 ; https://www.magonlinelibrary.com/ >
+    au < exists ; 2017 ; Livestock Volume 22 ; 22 ; http://www.magonlinelibrary.com/ >
 
   }
 
