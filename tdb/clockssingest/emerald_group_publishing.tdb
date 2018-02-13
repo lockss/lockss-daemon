@@ -526,7 +526,7 @@
     param[journal_id] = aam
     #continues = 2044-2084
 
-    au < frozen ; exists ; 2015 ; Arts and the Market Volume 5 ; 5 ; >
+    au < finished ; manifest ; 2015 ; Arts and the Market Volume 5 ; 5 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2016 ; Arts and the Market Volume 6 ; 6 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2017 ; Arts and the Market Volume 7 ; 7 ; >
 
