@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>18</string>
+    <string>19</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -21,7 +21,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>29</string>
+    <string>32</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -47,8 +47,8 @@
   <entry>
     <string>plugin_url_consumer_factory</string>
     <string>org.lockss.plugin.atypon.BaseAtyponHttpToHttpsUrlConsumerFactory</string>
-  </entry>  
-<!-- end changes for https conversion -->     
+  </entry>
+<!-- end changes for https conversion -->
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.atypon.futurescience.FutureScienceHtmlHashFilterFactory</string>
@@ -57,9 +57,9 @@
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.atypon.futurescience.FutureScienceHtmlCrawlFilterFactory</string>
   </entry>
-  <!--some pdfplus files need scraping.  -->  
+  <!--some pdfplus files need scraping.  -->
   <entry>
     <string>application/pdf_filter_factory</string>
     <string>org.lockss.plugin.atypon.BaseAtyponScrapingPdfFilterFactory</string>
-  </entry>  
+  </entry>
 </map>

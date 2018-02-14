@@ -9,9 +9,9 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>9</string>
+    <string>10</string>
   </entry>
-<!--  updating out of sync with parent, must have own feature_version_map -->  
+<!--  updating out of sync with parent, must have own feature_version_map -->
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
@@ -28,7 +28,7 @@
         <string>6</string>
       </entry>
     </map>
-  </entry>    
+  </entry>
   <entry>
     <string>plugin_name</string>
     <string>Practical Action Publishing Journals Plugin (CLOCKSS)</string>
@@ -39,7 +39,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>61</string>
+    <string>89</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -60,11 +60,11 @@
   <entry>
     <string>text/html_link_extractor_factory</string>
     <string>org.lockss.plugin.atypon.practicalaction.PracticalActionHtmlLinkExtractorFactory</string>
-  </entry>  
+  </entry>
   <entry>
     <string>application/pdf_filter_factory</string>
     <string>org.lockss.plugin.atypon.practicalaction.PracticalActionJournalsPdfFilterFactory</string>
-  </entry>  
+  </entry>
   <entry>
   <!--  CLOCKSS does not need this warning message about registering IP addresses -->
     <string>plugin_au_config_user_msg</string>
@@ -79,4 +79,4 @@
       </entry>
     </map>
   </entry>
-</map>    
+</map>

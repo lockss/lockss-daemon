@@ -9,8 +9,8 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
-  </entry>  
+    <string>7</string>
+  </entry>
   <entry>
     <string>plugin_name</string>
     <string>American Society of Clinical Oncology Journals Plugin</string>
@@ -21,12 +21,12 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>83</string>
-  </entry>   
+    <string>89</string>
+  </entry>
   <entry>
     <string>au_name</string>
     <string>"American Society of Clinical Oncology Journals Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
-  </entry>   
+  </entry>
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.atypon.asco.AscoHtmlHashFilterFactory</string>
@@ -38,5 +38,5 @@
   <entry>
     <string>application/pdf_filter_factory</string>
     <string>org.lockss.plugin.atypon.BaseAtyponScrapingPdfFilterFactory</string>
-  </entry>  
+  </entry>
 </map>

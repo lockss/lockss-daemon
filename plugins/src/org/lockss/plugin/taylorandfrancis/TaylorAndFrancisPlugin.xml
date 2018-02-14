@@ -14,20 +14,20 @@
   <entry>
     <string>plugin_publishing_platform</string>
     <string>Atypon</string>
-  </entry>   
+  </entry>
   <entry>
     <string>plugin_version</string>
-    <string>105</string>
+    <string>106</string>
   </entry>
-<!-- Now a child of BaseAtypon which lives in a different directory "atypon" -->  
+<!-- Now a child of BaseAtypon which lives in a different directory "atypon" -->
   <entry>
     <string>plugin_parent</string>
     <string>org.lockss.plugin.atypon.BaseAtyponPlugin</string>
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>83</string>
-  </entry>   
+    <string>89</string>
+  </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
@@ -64,7 +64,7 @@
   <entry>
     <string>text/html_link_extractor_factory</string>
     <string>org.lockss.plugin.taylorandfrancis.TafHtmlLinkExtractorFactory</string>
-  </entry> 
+  </entry>
   <entry>
     <string>text/html_link_rewriter_factory</string>
     <string>org.lockss.plugin.taylorandfrancis.TaylorAndFrancisJavaScriptLinkRewriterFactory</string>
@@ -76,7 +76,7 @@
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.taylorandfrancis.TafArticleIteratorFactory</string>
-  </entry> 
+  </entry>
   <entry>
     <string>text/html_metadata_extractor_factory_map</string>
     <map>
@@ -103,7 +103,7 @@
     <string>org.lockss.plugin.taylorandfrancis.TafRisMetadataExtractorFactory</string>
    </entry>
   </map>
-  </entry>    
+  </entry>
   <!--  Set up different windows with different crawl rate; in place of au_def_pause_time -->
   <entry>
     <string>au_rate_limiter_info</string>
@@ -140,7 +140,7 @@
   <!-- For now, because T&F is so large and we're trying to clean up some agreements, add the following
         ALL THOSE FROM BASE ATYPON plus...
          these ones should repair from peer to speed agreements on old aus, but should still be weighted
-           - /action/downloadCitation?doi=... 
+           - /action/downloadCitation?doi=...
            - /<dir>/home/literatum/
    -->
   <entry>

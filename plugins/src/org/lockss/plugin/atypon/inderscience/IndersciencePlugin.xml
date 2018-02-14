@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>16</string>
+    <string>17</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -21,7 +21,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>83</string>
+    <string>89</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -46,8 +46,8 @@
   <entry>
     <string>plugin_url_consumer_factory</string>
     <string>org.lockss.plugin.atypon.BaseAtyponHttpToHttpsUrlConsumerFactory</string>
-  </entry>  
-<!-- end changes for https conversion -->     
+  </entry>
+<!-- end changes for https conversion -->
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.atypon.inderscience.InderscienceHtmlHashFilterFactory</string>
@@ -56,4 +56,4 @@
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.atypon.inderscience.InderscienceHtmlCrawlFilterFactory</string>
   </entry>
-</map>    
+</map>

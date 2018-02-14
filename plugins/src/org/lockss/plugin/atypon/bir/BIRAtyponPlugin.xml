@@ -9,8 +9,8 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>21</string>
-  </entry>  
+    <string>22</string>
+  </entry>
   <entry>
     <string>plugin_name</string>
     <string>British Institute of Radiology Publishing Plugin</string>
@@ -21,8 +21,8 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>83</string>
-  </entry>   
+    <string>89</string>
+  </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
@@ -52,9 +52,9 @@
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.atypon.bir.BIRAtyponHtmlCrawlFilterFactory</string>
   </entry>
-  <!-- some pdfplus files need scraping -->  
+  <!-- some pdfplus files need scraping -->
   <entry>
     <string>application/pdf_filter_factory</string>
     <string>org.lockss.plugin.atypon.BaseAtyponScrapingPdfFilterFactory</string>
-  </entry>  
+  </entry>
 </map>

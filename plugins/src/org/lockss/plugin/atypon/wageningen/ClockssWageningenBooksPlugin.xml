@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>16</string>
+    <string>17</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -27,7 +27,7 @@
         <string>1</string>
       </entry>
     </map>
-  </entry>  
+  </entry>
   <entry>
     <string>plugin_name</string>
     <string>Wageningen Academic Publishers Books Plugin (CLOCKSS)</string>
@@ -38,7 +38,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>16</string>
+    <string>17</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -47,7 +47,7 @@
   <entry>
     <string>au_start_url</string>
     <string>"%sclockss/eisbn/%s", base_url, book_eisbn</string>
-  </entry>  
+  </entry>
   <entry>
   <!--  CLOCKSS does not need this warning message about registering IP addresses -->
     <string>plugin_au_config_user_msg</string>
