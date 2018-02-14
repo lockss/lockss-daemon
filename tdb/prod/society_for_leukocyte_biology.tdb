@@ -17,6 +17,7 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://www.jleukbio.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    #move to Wiley
 
     {
 
