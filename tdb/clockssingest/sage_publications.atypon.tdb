@@ -14062,9 +14062,7 @@
 
     #param[base_url] = http://hhc.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1988 ; Home Health Care Management & Practice Volume 1 ; 1 ; hhca ; >
       au < manifest ; exists ; 1989-1990 ; Home Health Care Management & Practice Volume 2 ; 2 ; hhca ; >
@@ -14110,9 +14108,7 @@
 
     #param[base_url] = http://hsx.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1997 ; Homicide Studies Volume 1 ; 1 ; hsxa ; >
       au < manifest ; exists ; 1998 ; Homicide Studies Volume 2 ; 2 ; hsxa ; >
@@ -14137,6 +14133,38 @@
       au < crawling ; exists ; 2017 ; Homicide Studies Volume 21 ; 21 ; hsxa ; >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = Hong Kong Journal of Emergency Medicine ;
+      issn = 1024-9079 ;
+      eissn = 2309-5407
+    >
+
+    #param[base_url] = http://hkj.sagepub.com/
+
+      au < exists ; exists ; 2000 ; Hong Kong Journal of Emergency Medicine Volume 7 ; 7 ; hkja ; >
+      au < exists ; exists ; 2001 ; Hong Kong Journal of Emergency Medicine Volume 8 ; 8 ; hkja ; >
+      au < exists ; exists ; 2002 ; Hong Kong Journal of Emergency Medicine Volume 9 ; 9 ; hkja ; >
+      au < exists ; exists ; 2003 ; Hong Kong Journal of Emergency Medicine Volume 10 ; 10 ; hkja ; >
+      au < exists ; exists ; 2004 ; Hong Kong Journal of Emergency Medicine Volume 11 ; 11 ; hkja ; >
+      au < exists ; exists ; 2005 ; Hong Kong Journal of Emergency Medicine Volume 12 ; 12 ; hkja ; >
+      au < exists ; exists ; 2006 ; Hong Kong Journal of Emergency Medicine Volume 13 ; 13 ; hkja ; >
+      au < exists ; exists ; 2007 ; Hong Kong Journal of Emergency Medicine Volume 14 ; 14 ; hkja ; >
+      au < exists ; exists ; 2008 ; Hong Kong Journal of Emergency Medicine Volume 15 ; 15 ; hkja ; >
+      au < exists ; exists ; 2009 ; Hong Kong Journal of Emergency Medicine Volume 16 ; 16 ; hkja ; >
+      au < exists ; exists ; 2010 ; Hong Kong Journal of Emergency Medicine Volume 17 ; 17 ; hkja ; >
+      au < exists ; exists ; 2011 ; Hong Kong Journal of Emergency Medicine Volume 18 ; 18 ; hkja ; >
+      au < exists ; exists ; 2012 ; Hong Kong Journal of Emergency Medicine Volume 19 ; 19 ; hkja ; >
+      au < exists ; exists ; 2013 ; Hong Kong Journal of Emergency Medicine Volume 20 ; 20 ; hkja ; >
+      au < exists ; exists ; 2014 ; Hong Kong Journal of Emergency Medicine Volume 21 ; 21 ; hkja ; >
+      au < exists ; exists ; 2015 ; Hong Kong Journal of Emergency Medicine Volume 22 ; 22 ; hkja ; >
+      au < exists ; exists ; 2016 ; Hong Kong Journal of Emergency Medicine Volume 23 ; 23 ; hkja ; >
+      au < exists ; exists ; 2017 ; Hong Kong Journal of Emergency Medicine Volume 24 ; 24 ; hkja ; >
+      au < exists ; exists ; 2018 ; Hong Kong Journal of Emergency Medicine Volume 25 ; 25 ; hkja ; >
 
   }
 
@@ -34385,9 +34413,7 @@
 
     #param[base_url] = http://pun.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1999 ; Punishment & Society Volume 1 ; 1 ; puna ; >
       au < manifest ; exists ; 2000 ; Punishment & Society Volume 2 ; 2 ; puna ; >
@@ -34423,9 +34449,7 @@
 
     #param[base_url] = http://qhr.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1991 ; Qualitative Health Research Volume 1 ; 1 ; qhra ; >
       au < manifest ; exists ; 1992 ; Qualitative Health Research Volume 2 ; 2 ; qhra ; >
@@ -34469,9 +34493,7 @@
 
     #param[base_url] = http://qix.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1995 ; Qualitative Inquiry Volume 1 ; 1 ; qixa ; >
       au < manifest ; exists ; 1996 ; Qualitative Inquiry Volume 2 ; 2 ; qixa ; >
@@ -34511,9 +34533,7 @@
 
     #param[base_url] = http://qrj.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 2001 ; Qualitative Research Volume 1 ; 1 ; qrja ; >
       au < manifest ; exists ; 2002 ; Qualitative Research Volume 2 ; 2 ; qrja ; >
@@ -34547,9 +34567,7 @@
 
     #param[base_url] = http://qsw.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 2002 ; Qualitative Social Work Volume 1 ; 1 ; qswa ; >
       au < manifest ; exists ; 2003 ; Qualitative Social Work Volume 2 ; 2 ; qswa ; >
@@ -34575,6 +34593,46 @@
   {
 
     title <
+      name = Quarterly Journal of Experimental Psychology ;
+      issn = 1747-0218 ;
+      eissn = 1747-0226
+    >
+
+    #param[base_url] = http://qjp.sagepub.com/
+    #content available from 1948 volume 1 to 1999 volume 52
+
+      au < exists ; exists ; 2000 ; Quarterly Journal of Experimental Psychology Volume 53 ; 53 ; qjpb ; >
+      au < exists ; exists ; 2000 ; Quarterly Journal of Experimental Psychology Volume 53 issue 1b-4b ; 53 ; qjpc ; >
+      au < exists ; exists ; 2001 ; Quarterly Journal of Experimental Psychology Volume 54 ; 54 ; qjpb ; >
+      au < exists ; exists ; 2001 ; Quarterly Journal of Experimental Psychology Volume 54 issue 1b-4b ; 54 ; qjpc ; >
+      au < exists ; exists ; 2002 ; Quarterly Journal of Experimental Psychology Volume 55 ; 55 ; qjpb ; >
+      au < exists ; exists ; 2002 ; Quarterly Journal of Experimental Psychology Volume 55 issue 1b-4b ; 55 ; qjpc ; >
+      au < exists ; exists ; 2003 ; Quarterly Journal of Experimental Psychology Volume 56 ; 56 ; qjpb ; >
+      au < exists ; exists ; 2003 ; Quarterly Journal of Experimental Psychology Volume 56 issue 1b-4b ; 56 ; qjpc ; >
+      au < exists ; exists ; 2004 ; Quarterly Journal of Experimental Psychology Volume 57 ; 57 ; qjpb ; >
+      au < exists ; exists ; 2004 ; Quarterly Journal of Experimental Psychology Volume 57 issue 1b-4b ; 57 ; qjpc ; >
+      au < exists ; exists ; 2005 ; Quarterly Journal of Experimental Psychology Volume 58 ; 58 ; qjpb ; >
+      au < exists ; exists ; 2005 ; Quarterly Journal of Experimental Psychology Volume 58 issue 1b-4b ; 58 ; qjpc ; >
+      au < exists ; exists ; 2006 ; Quarterly Journal of Experimental Psychology Volume 59 ; 59 ; qjpd ; >
+      au < exists ; exists ; 2007 ; Quarterly Journal of Experimental Psychology Volume 60 ; 60 ; qjpd ; >
+      au < exists ; exists ; 2008 ; Quarterly Journal of Experimental Psychology Volume 61 ; 61 ; qjpd ; >
+      au < exists ; exists ; 2009 ; Quarterly Journal of Experimental Psychology Volume 62 ; 62 ; qjpd ; >
+      au < exists ; exists ; 2010 ; Quarterly Journal of Experimental Psychology Volume 63 ; 63 ; qjpd ; >
+      au < exists ; exists ; 2011 ; Quarterly Journal of Experimental Psychology Volume 64 ; 64 ; qjpd ; >
+      au < exists ; exists ; 2012 ; Quarterly Journal of Experimental Psychology Volume 65 ; 65 ; qjpd ; >
+      au < exists ; exists ; 2013 ; Quarterly Journal of Experimental Psychology Volume 66 ; 66 ; qjpd ; >
+      au < exists ; exists ; 2014 ; Quarterly Journal of Experimental Psychology Volume 67 ; 67 ; qjpd ; >
+      au < exists ; exists ; 2015 ; Quarterly Journal of Experimental Psychology Volume 68 ; 68 ; qjpd ; >
+      au < exists ; exists ; 2016 ; Quarterly Journal of Experimental Psychology Volume 69 ; 69 ; qjpd ; >
+      au < exists ; exists ; 2017 ; Quarterly Journal of Experimental Psychology Volume 70 ; 70 ; qjpd ; >
+      au < exists ; exists ; 2018 ; Quarterly Journal of Experimental Psychology Volume 71 ; 71 ; qjpd ; >
+
+
+  }
+
+  {
+
+    title <
       name = Race & Class ;
       issn = 0306-3968 ;
       eissn = 1741-3125
@@ -34582,9 +34640,7 @@
 
     #param[base_url] = http://rac.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1959 ; Race & Class Volume 1 ; 1 ; raca ; >
       au < manifest ; exists ; 1960 ; Race & Class Volume 2 ; 2 ; raca ; >
