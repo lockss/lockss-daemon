@@ -77,9 +77,9 @@
       
       param[journal_id] = radiographics
 
-      au < ready ; 2013 ; RadioGraphics Volume 33 ; 33 >
-      au < ready ; 2014 ; RadioGraphics Volume 34 ; 34 >
-      au < ready ; 2015 ; RadioGraphics Volume 35 ; 35 >
+      au < releasing ; 2013 ; RadioGraphics Volume 33 ; 33 >
+      au < releasing ; 2014 ; RadioGraphics Volume 34 ; 34 >
+      au < releasing ; 2015 ; RadioGraphics Volume 35 ; 35 >
       au < released ; 2016 ; RadioGraphics Volume 36 ; 36 >
       au < exists ; 2017 ; RadioGraphics Volume 37 ; 37 >
 
@@ -393,22 +393,22 @@
       
       param[journal_id] = radiology
 
-      au < ready ; 2013 ; Radiology Volume 266 ; 266 >
-      au < ready ; 2013 ; Radiology Volume 267 ; 267 >
-      au < ready ; 2013 ; Radiology Volume 268 ; 268 >
-      au < ready ; 2013 ; Radiology Volume 269 ; 269 >
-      au < ready ; 2014 ; Radiology Volume 270 ; 270 >
-      au < ready ; 2014 ; Radiology Volume 271 ; 271 >
-      au < ready ; 2014 ; Radiology Volume 272 ; 272 >
-      au < ready ; 2014 ; Radiology Volume 273 ; 273 >
-      au < ready ; 2015 ; Radiology Volume 274 ; 274 >
-      au < ready ; 2015 ; Radiology Volume 275 ; 275 >
+      au < releasing ; 2013 ; Radiology Volume 266 ; 266 >
+      au < releasing ; 2013 ; Radiology Volume 267 ; 267 >
+      au < releasing ; 2013 ; Radiology Volume 268 ; 268 >
+      au < releasing ; 2013 ; Radiology Volume 269 ; 269 >
+      au < releasing ; 2014 ; Radiology Volume 270 ; 270 >
+      au < releasing ; 2014 ; Radiology Volume 271 ; 271 >
+      au < releasing ; 2014 ; Radiology Volume 272 ; 272 >
+      au < releasing ; 2014 ; Radiology Volume 273 ; 273 >
+      au < releasing ; 2015 ; Radiology Volume 274 ; 274 >
+      au < releasing ; 2015 ; Radiology Volume 275 ; 275 >
       au < released ; 2015 ; Radiology Volume 276 ; 276 >
       au < released ; 2015 ; Radiology Volume 277 ; 277 >
-      au < ready ; 2016 ; Radiology Volume 278 ; 278 >
-      au < ready ; 2016 ; Radiology Volume 279 ; 279 >
+      au < releasing ; 2016 ; Radiology Volume 278 ; 278 >
+      au < releasing ; 2016 ; Radiology Volume 279 ; 279 >
       au < released ; 2016 ; Radiology Volume 280 ; 280 >
-      au < ready ; 2016 ; Radiology Volume 281 ; 281 > #no 2017 manifest pages yet
+      au < releasing ; 2016 ; Radiology Volume 281 ; 281 > #no 2017 manifest pages yet
       au < exists ; 2017 ; Radiology Volume 282 ; 282 >
       au < exists ; 2017 ; Radiology Volume 283 ; 283 >
       au < exists ; 2017 ; Radiology Volume 284 ; 284 >
