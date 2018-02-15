@@ -239,7 +239,7 @@
         pluginPrefix = org.lockss.plugin.highwire.
         implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
-        au < aai.ClockssAAIDrupalPlugin ; ready ; exists ; 2017 ; ImmunoHorizons Volume 1 ; 1 ; >
+        au < aai.ClockssAAIDrupalPlugin ; crawling ; exists ; 2017 ; ImmunoHorizons Volume 1 ; 1 ; >
         au < aai.ClockssAAIDrupalPlugin ; manifest ; exists ; 2018 ; ImmunoHorizons Volume 2 ; 2 ; >
 
   }
