@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -56,5 +56,10 @@
   <entry>
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.atypon.ampsychpub.AmPsychPubHtmlCrawlFilterFactory</string>
+  </entry>
+  <!--  Some PDF & PDF+ links need http-2-https conversion -->
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponHttpHttpsUrlNormalizer</string>
   </entry>
 </map>
