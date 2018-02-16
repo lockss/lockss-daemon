@@ -9,14 +9,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>32</string>
+    <string>33</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>13</string>
+        <string>14</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -38,7 +38,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>89</string>
+    <string>90</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -79,4 +79,13 @@
     <string>application/pdf_filter_factory</string>
     <string>org.lockss.plugin.atypon.BaseAtyponScrapingPdfFilterFactory</string>
   </entry>
+<!--  a more limited article iterator factory excludes article patterns without the journal_id -->  
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.atypon.futurescience.FSJournalIdLimitedArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.atypon.futurescience.FSJournalIdLimitedArticleIteratorFactory</string>
+  </entry>  
 </map>
