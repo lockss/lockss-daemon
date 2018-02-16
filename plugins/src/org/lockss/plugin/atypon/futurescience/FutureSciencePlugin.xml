@@ -89,7 +89,7 @@
     <map>
       <entry>
         <string>*;DublinCore</string>
-        <string>org.lockss.plugin.atypon.futurescience.FSLimitedMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.atypon.futurescience.FSLimitedHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>  
