@@ -364,7 +364,7 @@ implements LinkExtractorFactory {
    *          ,{i:'S3F4',g:[{m:'s3-g4.gif',l:'s3-g4.jpeg',size:'37 kB'}]}
    *          ,{i:'S3F5',g:[{m:'s3-g5.gif',l:'s3-g5.jpeg',size:'28 kB'}]}
    *    ]}</script>
-   * variant seen in ASCO 5/19/2017 - note the addition of a "type:'fig'" as the 2nd element of array
+   * variant seen in ASCO 5/19/2017 - note the addition of a "type:'fig'" as the 2nd element of array; ALSO Practical Action (missing content)
    * <script type="text/javascript">
    * window.figureViewer=
    *   {doi:'10.1200/JGO.2015.001677',

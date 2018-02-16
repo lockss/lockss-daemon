@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>11</string>
+    <string>12</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -28,10 +28,28 @@
     <string>au_name</string>
     <string>"Practical Action Publishing Books Plugin (CLOCKSS), Base URL %s, eISBN %s", base_url, book_eisbn</string>
   </entry>
-    <entry>
+  <!-- override start_url to handle http to https conversion -->
+  <entry>
     <string>au_start_url</string>
-    <string>"%sclockss/eisbn/%s", base_url, book_eisbn</string>
+      <list>
+      <string>"%sclockss/eisbn/%s", to_http(base_url), book_eisbn</string>
+      <string>"%sclockss/eisbn/%s", to_https(base_url), book_eisbn</string>
+    </list>
   </entry>
+  <!--  also for https conversion -->
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponHttpHttpsUrlNormalizer</string>
+  </entry>
+ <entry>
+    <string>plugin_url_fetcher_factory</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponHttpToHttpsUrlFetcherFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponHttpToHttpsUrlConsumerFactory</string>
+  </entry>  
+<!-- end changes for https conversion -->    
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.atypon.practicalaction.PracticalActionJournalsHtmlHashFilterFactory</string>
