@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -44,6 +44,13 @@
     <string>au_name</string>
     <string>"American Psychiatric Publishing Journals Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
+  <!-- Needed for http links in some html pages -->
+  <entry>
+    <string>au_additional_url_stems</string>
+    <list>
+      <string>"%s", to_http(base_url)</string>
+    </list>
+  </entry>
   <!--some pdfplus files need scraping.  -->
   <entry>
     <string>application/pdf_filter_factory</string>
@@ -61,5 +68,9 @@
   <entry>
     <string>au_url_normalizer</string>
     <string>org.lockss.plugin.atypon.BaseAtyponHttpHttpsUrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>text/html_link_rewriter_factory</string>
+    <string>org.lockss.plugin.atypon.ampsychpub.AmPsychPubHtmlLinkRewriterFactory</string>
   </entry>
 </map>
