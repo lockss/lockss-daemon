@@ -32,6 +32,13 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.atypon.futurescience;
 
+import java.util.Iterator;
+
+import org.lockss.daemon.PluginException;
+import org.lockss.extractor.MetadataTarget;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.ArticleFiles;
+import org.lockss.plugin.SubTreeArticleIteratorBuilder;
 import org.lockss.plugin.atypon.BaseAtyponArticleIteratorFactory;
 import org.lockss.util.Logger;
 
@@ -62,5 +69,6 @@ public class FSJournalIdLimitedArticleIteratorFactory extends BaseAtyponArticleI
 	  return JID_LIMITED_PATTERN_TEMPLATE_WITH_ABSTRACT;
   }
 
+  
 }
 
