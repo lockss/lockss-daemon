@@ -22,7 +22,7 @@
         ada.ADADrupalPlugin
         aha.AHADrupalPlugin
         aps.APSDrupalPlugin
-        apta.APTADrupalPlugin
+        apta.APTADrupalPlugin (Deprecated)
         arf.ARFDrupalPlugin
         ash.ASHDrupalPlugin
         asm.ASMDrupalPlugin
@@ -35,9 +35,9 @@
         fsf.FSFDrupalPlugin
         gensoc.GeneticsSocietyDrupalPlugin
         gsl.GSLDrupalPlugin
-        gsw.GSWDrupalPlugin
+        gsw.GSWDrupalPlugin (soon to be Deprecated)
         iwa.IWADrupalPlugin
-        jbjs.JBJSDrupalPlugin (soon to be Deprecated)
+        jbjs.JBJSDrupalPlugin (Deprecated)
         oup.OUPDrupalPlugin (Deprecated)
         portlandpress.PortlandPressDrupalPlugin
         rcgp.RCGPDrupalPlugin
@@ -53,7 +53,7 @@
    -->
   <entry>
     <string>plugin_version</string>
-    <string>69</string>
+    <string>70</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -153,12 +153,13 @@
       <string>1,"^https?://%s/content(/[^/.]+)?/%s(/[^/.]+)?(\.toc)?$", url_host(base_url), volume_name</string>
       <!-- after content is required vol, optional issue, required page, then allowed extensions or EOL 
             page may also contain roman numerals, dot, & number (iii.2)  -->
-      <string>1,"^https?://%s/content/%s(/[^/.]+)?/(((?:([ivx]+)\.)?[^/.]+?(\.\d+)?))(|/related|/tab-figures-data|\.(?:long|supplemental|data|figures-only))$", url_host(base_url), volume_name</string>
+      <string>1,"^https?://%s/content/%s(/[^/.]+)?/(((?:([ivx]+)\.)?[^/.]+?(\.\d+)?))(|/related|/tab-figures-data)$", url_host(base_url), volume_name</string>
       <!-- http://msphere.asm.org/content/1/1/masthead.1-1 was excluded -->
-      <string>1,"^https?://%s/content/%s(/[^/.]+)?/((ENEURO|wpt|masthead)\.[0-9.-]+)(|/related|/tab-figures-data|\.(?:long|supplemental|data|figures-only))$", url_host(base_url), volume_name</string>
+      <string>1,"^https?://%s/content/%s(/[^/.]+)?/((ENEURO|wpt|masthead)\.[0-9.-]+)(|/related|/tab-figures-data)$", url_host(base_url), volume_name</string>
       <!-- after content is optional jcode, required vol, optional issue, required page, then allowed extensions -->
       <string>1,"^https?://%s/content(/[^/.]+)?/%s(/[^/.]+)?/(((?:([ivx]+)\.)?[^/.]+?(\.\d+)?))(\.(?:full(?:-text)?\.pdf(?:\+html)?))$", url_host(base_url), volume_name</string>
       <string>1,"^https?://%s/content(/[^/.]+)?/%s(/[^/.]+)?/((ENEURO|wpt|masthead)\.[0-9.-]+)(\.(?:full(?:-text)?\.pdf(?:\+html)?))$", url_host(base_url), volume_name</string>
+      <string>1,"^https?://%s/content(/[^/.]+)?/%s(/[^/.]+)?/.+\.(long|supplemental|data|figures-only)$", url_host(base_url), volume_name</string>
       <string>1,"^https?://%s/search/volume[^/?]+?%s[^/?]+\?(page=[0-9]+&amp;)?facet.+toc-section-id", url_host(base_url), volume_name</string>
       <string>1,"^https?://%s/highwire/filestream/", url_host(base_url)</string>
       <string>1,"^https?://%s/[^/]+/(download-(pdf|suppl|video))/", url_host(base_url)</string>

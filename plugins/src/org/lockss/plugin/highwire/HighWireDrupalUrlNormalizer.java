@@ -32,9 +32,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.highwire;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -79,16 +76,6 @@ public class HighWireDrupalUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
   protected static final String DOWNLOAD_PARAM = "?download=";
   
   protected static final String TOC_SEC_ID_PARAM = "facet[toc-section-id]";
-//  protected static final String VOL_PARAM = "volume";
-//  protected static final String ISSUE_PARAM = "issue";
-//  protected static final String PAGE_PARAM = "page";
-  
-//  protected static final Set<String> KNOWN_PARAMS = new HashSet<String>(Arrays.asList(
-//      TOC_SEC_ID_PARAM,
-//      VOL_PARAM,
-//      ISSUE_PARAM,
-//      PAGE_PARAM
-//    ));
   
   
   @Override
