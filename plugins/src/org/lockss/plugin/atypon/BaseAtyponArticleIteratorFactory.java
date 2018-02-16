@@ -65,9 +65,9 @@ ArticleMetadataExtractorFactory {
 
   
   // Only put the 'abs' in the pattern if used for primary; otherwise builder spews errors
-  private static final String PATTERN_TEMPLATE_WITH_ABSTRACT = 
+  private static final String DEFAULT_PATTERN_TEMPLATE_WITH_ABSTRACT = 
       "\"^%sdoi/((abs|full|pdf|pdfplus)/)?[.0-9]+/\", base_url";
-  private static final String PATTERN_TEMPLATE = 
+  private static final String DEFAULT_PATTERN_TEMPLATE = 
       "\"^%sdoi/((full|pdf|pdfplus)/)?[.0-9]+/\", base_url";
 
   // various aspects of an article
@@ -132,11 +132,11 @@ ArticleMetadataExtractorFactory {
     if (isAbstractOnly(au)) {
       builder.setSpec(target,
           ROOT_TEMPLATE,
-          PATTERN_TEMPLATE_WITH_ABSTRACT, Pattern.CASE_INSENSITIVE);
+          getPatternWithAbstractTemplate(), Pattern.CASE_INSENSITIVE);
     } else {
       builder.setSpec(target,
           ROOT_TEMPLATE,
-          PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
+          getPatternTemplate(), Pattern.CASE_INSENSITIVE);
     }
 
     // The order in which these aspects are added is important. They determine which will trigger
@@ -243,6 +243,15 @@ ArticleMetadataExtractorFactory {
   protected SubTreeArticleIteratorBuilder localBuilderCreator(ArchivalUnit au) { 
     return new SubTreeArticleIteratorBuilder(au);
   }
+  
+  //Use a getter for the pattern and pattern-with-abstract templates so a child can override
+  protected String getPatternTemplate() {
+	  return DEFAULT_PATTERN_TEMPLATE;
+  }
+  protected String getPatternWithAbstractTemplate() {
+	  return DEFAULT_PATTERN_TEMPLATE_WITH_ABSTRACT;
+  }
+  
 
   @Override
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
