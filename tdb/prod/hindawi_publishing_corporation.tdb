@@ -11,7 +11,7 @@
 #  param[base_url] = http://www.hindawi.com/
   #download_url is still http
   param[download_url] = http://downloads.hindawi.com/
-  implicit < status ; year ; name ; param[volume_name] ; volume ; param[baes_url] >
+  implicit < status ; year ; name ; param[volume_name] ; volume ; param[base_url] >
 
   {
     title <

@@ -8,7 +8,7 @@
 #  param[base_url] = http://www.igi-global.com/
 
   {
-    implicit < status ; year ; eisbn ; param[book_isbn] ; doi ; param[volume] ; name ; author ; param[baes_url] >
+    implicit < status ; year ; eisbn ; param[book_isbn] ; doi ; param[volume] ; name ; author ; param[base_url] >
     comment[notReady] = Forthcoming Book - Contents Coming Soon
   
     {
