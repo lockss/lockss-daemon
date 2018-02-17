@@ -79,8 +79,8 @@ public class AmPsychPubHtmlLinkRewriterFactory implements LinkRewriterFactory {
     //<a class="citationsTool" href="#" ...
     // becomes
     // <a class="citationsTool" href="/action/downloadCitation?doi=10.1177%2F0001345516665507&amp;format=ris&amp;include=cit" target="_blank">
-    private static final Pattern DOI_URL_PATTERN = Pattern.compile("^https://(.*/)doi/(abs|figure|full|ref(?:erences)?|suppl)/([.0-9]+)/([^/]+)$");
-    private static final Pattern PDF_URL_PATTERN = Pattern.compile( "^http://(.*/)doi/(pdf(?:plus)?)/([.0-9]+)/([^/]+)$");
+    private static final Pattern DOI_URL_PATTERN = Pattern.compile("^https://(.*/)doi/(abs|figure|full|ref(?:erences)?|suppl)(/[.0-9]+/[^/]+)$");
+    private static final Pattern PDF_URL_PATTERN = Pattern.compile( "^http://(.*/)doi/(pdf(?:plus)?)(/[.0-9]+/[^/]+)$");
     private static final String PDF_LINK = "/doi/pdf";
     
     private String html_url = null;
@@ -106,7 +106,7 @@ public class AmPsychPubHtmlLinkRewriterFactory implements LinkRewriterFactory {
             String linkUrl = linkval.getValue();
             if (linkUrl.contains(PDF_LINK)) {
               Matcher pdfMat = PDF_URL_PATTERN.matcher(linkUrl);
-              if (doiMat.group(1).equals(pdfMat.group(1)) && doiMat.group(3).equals(pdfMat.group(3))) {
+              if (pdfMat.find() && doiMat.group(1).equals(pdfMat.group(1)) && doiMat.group(3).equals(pdfMat.group(3))) {
                 String newUrl =  "/doi/" + pdfMat.group(2) + pdfMat.group(3);
                 ((LinkTag) node).setLink(newUrl);
               }
