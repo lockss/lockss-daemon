@@ -217,7 +217,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2015 ; Diabetes Spectrum Volume 28 ; 28 ; reingest4.clockss.org:8082 >
       au < ada.ClockssADADrupalPlugin ; finished ; crawling ; 2016 ; Diabetes Spectrum Volume 29 ; 29 ; reingest4.clockss.org:8082 >
       au < ada.ClockssADADrupalPlugin ; crawling ; exists ; 2017 ; Diabetes Spectrum Volume 30 ; 30 ; >
-      au < ada.ClockssADADrupalPlugin ; expected ; exists ; 2018 ; Diabetes Spectrum Volume 31 ; 31 ; >
+      au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2018 ; Diabetes Spectrum Volume 31 ; 31 ; >
 
     }
 

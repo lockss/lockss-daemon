@@ -947,7 +947,7 @@
     au < manifest ; exists ; 2015 ; 2015 ; Journal of Animal Science Volume 92 ; 92 ; >
     au < manifest ; exists ; 2016 ; 2016 ; Journal of Animal Science Volume 93 ; 93 ; >
     au < manifest ; exists ; 2017 ; 2017 ; Journal of Animal Science Volume 94 ; 94 ; >
-    au < expected ; exists ; 2018 ; 2018 ; Journal of Animal Science Volume 95 ; 95 ; >
+    au < manifest ; exists ; 2018 ; 2018 ; Journal of Animal Science Volume 95 ; 95 ; >
 
   }
 
@@ -10584,7 +10584,7 @@
 
     param[journal_id] = jvc
 
-    au < expected ; exists ; 2018 ; 2018 ; Journal of Victorian Culture Volume 1 ; 1 ;  >
+    au < manifest ; exists ; 2018 ; 2018 ; Journal of Victorian Culture Volume 1 ; 1 ;  >
 
   }
 

@@ -13006,7 +13006,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Global Journal of Emerging Market Economies Volume 6 ; 6 ; emea ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Global Journal of Emerging Market Economies Volume 7 ; 7 ; emea ; >
       au < frozen ; exists ; 2016 ; Global Journal of Emerging Market Economies Volume 8 ; 8 ; emea ; >
-      au < expected ; exists ; 2017 ; Global Journal of Emerging Market Economies Volume 9 ; 9 ; emea ; >
+      au < manifest ; exists ; 2017 ; Global Journal of Emerging Market Economies Volume 9 ; 9 ; emea ; >
 
     }
 
@@ -14146,25 +14146,25 @@
 
     #param[base_url] = http://hkj.sagepub.com/
 
-      au < exists ; exists ; 2000 ; Hong Kong Journal of Emergency Medicine Volume 7 ; 7 ; hkja ; >
-      au < exists ; exists ; 2001 ; Hong Kong Journal of Emergency Medicine Volume 8 ; 8 ; hkja ; >
-      au < exists ; exists ; 2002 ; Hong Kong Journal of Emergency Medicine Volume 9 ; 9 ; hkja ; >
-      au < exists ; exists ; 2003 ; Hong Kong Journal of Emergency Medicine Volume 10 ; 10 ; hkja ; >
-      au < exists ; exists ; 2004 ; Hong Kong Journal of Emergency Medicine Volume 11 ; 11 ; hkja ; >
-      au < exists ; exists ; 2005 ; Hong Kong Journal of Emergency Medicine Volume 12 ; 12 ; hkja ; >
-      au < exists ; exists ; 2006 ; Hong Kong Journal of Emergency Medicine Volume 13 ; 13 ; hkja ; >
-      au < exists ; exists ; 2007 ; Hong Kong Journal of Emergency Medicine Volume 14 ; 14 ; hkja ; >
-      au < exists ; exists ; 2008 ; Hong Kong Journal of Emergency Medicine Volume 15 ; 15 ; hkja ; >
-      au < exists ; exists ; 2009 ; Hong Kong Journal of Emergency Medicine Volume 16 ; 16 ; hkja ; >
-      au < exists ; exists ; 2010 ; Hong Kong Journal of Emergency Medicine Volume 17 ; 17 ; hkja ; >
-      au < exists ; exists ; 2011 ; Hong Kong Journal of Emergency Medicine Volume 18 ; 18 ; hkja ; >
-      au < exists ; exists ; 2012 ; Hong Kong Journal of Emergency Medicine Volume 19 ; 19 ; hkja ; >
-      au < exists ; exists ; 2013 ; Hong Kong Journal of Emergency Medicine Volume 20 ; 20 ; hkja ; >
-      au < exists ; exists ; 2014 ; Hong Kong Journal of Emergency Medicine Volume 21 ; 21 ; hkja ; >
-      au < exists ; exists ; 2015 ; Hong Kong Journal of Emergency Medicine Volume 22 ; 22 ; hkja ; >
-      au < exists ; exists ; 2016 ; Hong Kong Journal of Emergency Medicine Volume 23 ; 23 ; hkja ; >
-      au < exists ; exists ; 2017 ; Hong Kong Journal of Emergency Medicine Volume 24 ; 24 ; hkja ; >
-      au < exists ; exists ; 2018 ; Hong Kong Journal of Emergency Medicine Volume 25 ; 25 ; hkja ; >
+      au < manifest ; exists ; 2000 ; Hong Kong Journal of Emergency Medicine Volume 7 ; 7 ; hkja ; >
+      au < manifest ; exists ; 2001 ; Hong Kong Journal of Emergency Medicine Volume 8 ; 8 ; hkja ; >
+      au < manifest ; exists ; 2002 ; Hong Kong Journal of Emergency Medicine Volume 9 ; 9 ; hkja ; >
+      au < manifest ; exists ; 2003 ; Hong Kong Journal of Emergency Medicine Volume 10 ; 10 ; hkja ; >
+      au < manifest ; exists ; 2004 ; Hong Kong Journal of Emergency Medicine Volume 11 ; 11 ; hkja ; >
+      au < manifest ; exists ; 2005 ; Hong Kong Journal of Emergency Medicine Volume 12 ; 12 ; hkja ; >
+      au < manifest ; exists ; 2006 ; Hong Kong Journal of Emergency Medicine Volume 13 ; 13 ; hkja ; >
+      au < manifest ; exists ; 2007 ; Hong Kong Journal of Emergency Medicine Volume 14 ; 14 ; hkja ; >
+      au < manifest ; exists ; 2008 ; Hong Kong Journal of Emergency Medicine Volume 15 ; 15 ; hkja ; >
+      au < manifest ; exists ; 2009 ; Hong Kong Journal of Emergency Medicine Volume 16 ; 16 ; hkja ; >
+      au < manifest ; exists ; 2010 ; Hong Kong Journal of Emergency Medicine Volume 17 ; 17 ; hkja ; >
+      au < manifest ; exists ; 2011 ; Hong Kong Journal of Emergency Medicine Volume 18 ; 18 ; hkja ; >
+      au < manifest ; exists ; 2012 ; Hong Kong Journal of Emergency Medicine Volume 19 ; 19 ; hkja ; >
+      au < manifest ; exists ; 2013 ; Hong Kong Journal of Emergency Medicine Volume 20 ; 20 ; hkja ; >
+      au < manifest ; exists ; 2014 ; Hong Kong Journal of Emergency Medicine Volume 21 ; 21 ; hkja ; >
+      au < manifest ; exists ; 2015 ; Hong Kong Journal of Emergency Medicine Volume 22 ; 22 ; hkja ; >
+      au < manifest ; exists ; 2016 ; Hong Kong Journal of Emergency Medicine Volume 23 ; 23 ; hkja ; >
+      au < manifest ; exists ; 2017 ; Hong Kong Journal of Emergency Medicine Volume 24 ; 24 ; hkja ; >
+      au < manifest ; exists ; 2018 ; Hong Kong Journal of Emergency Medicine Volume 25 ; 25 ; hkja ; >
 
   }
 
@@ -30583,17 +30583,17 @@
 
       #param[base_url] = http://njn.sagepub.com/
 
-        au < exists ; exists ; 1997 ; Nordic Journal of Nursing Research Volume 17 ; 17 ; njnb ; >
-        au < exists ; exists ; 1998 ; Nordic Journal of Nursing Research Volume 18 ; 18 ; njnb ; >
-        au < exists ; exists ; 1999 ; Nordic Journal of Nursing Research Volume 19 ; 19 ; njnb ; >
-        au < exists ; exists ; 2000 ; Nordic Journal of Nursing Research Volume 20 ; 20 ; njnb ; >
-        au < exists ; exists ; 2001 ; Nordic Journal of Nursing Research Volume 21 ; 21 ; njnb ; >
-        au < exists ; exists ; 2002 ; Nordic Journal of Nursing Research Volume 22 ; 22 ; njnb ; >
-        au < exists ; exists ; 2003 ; Nordic Journal of Nursing Research Volume 23 ; 23 ; njnb ; >
-        au < exists ; exists ; 2004 ; Nordic Journal of Nursing Research Volume 24 ; 24 ; njnb ; >
-        au < exists ; exists ; 2005 ; Nordic Journal of Nursing Research Volume 25 ; 25 ; njnb ; >
-        au < exists ; exists ; 2006 ; Nordic Journal of Nursing Research Volume 26 ; 26 ; njnb ; >
-        au < exists ; exists ; 2007 ; Nordic Journal of Nursing Research Volume 27 ; 27 ; njnb ; >
+        au < manifest ; exists ; 1997 ; Nordic Journal of Nursing Research Volume 17 ; 17 ; njnb ; >
+        au < manifest ; exists ; 1998 ; Nordic Journal of Nursing Research Volume 18 ; 18 ; njnb ; >
+        au < manifest ; exists ; 1999 ; Nordic Journal of Nursing Research Volume 19 ; 19 ; njnb ; >
+        au < manifest ; exists ; 2000 ; Nordic Journal of Nursing Research Volume 20 ; 20 ; njnb ; >
+        au < manifest ; exists ; 2001 ; Nordic Journal of Nursing Research Volume 21 ; 21 ; njnb ; >
+        au < manifest ; exists ; 2002 ; Nordic Journal of Nursing Research Volume 22 ; 22 ; njnb ; >
+        au < manifest ; exists ; 2003 ; Nordic Journal of Nursing Research Volume 23 ; 23 ; njnb ; >
+        au < manifest ; exists ; 2004 ; Nordic Journal of Nursing Research Volume 24 ; 24 ; njnb ; >
+        au < manifest ; exists ; 2005 ; Nordic Journal of Nursing Research Volume 25 ; 25 ; njnb ; >
+        au < manifest ; exists ; 2006 ; Nordic Journal of Nursing Research Volume 26 ; 26 ; njnb ; >
+        au < manifest ; exists ; 2007 ; Nordic Journal of Nursing Research Volume 27 ; 27 ; njnb ; >
 
         au < superseded ; exists ; 2008 ; Nordic Journal of Nursing Research Volume 28 [superseded] ; 28 ; njna ; >
         au < superseded ; exists ; 2009 ; Nordic Journal of Nursing Research Volume 29 [superseded] ; 29 ; njna ; >
@@ -30602,12 +30602,12 @@
         au < superseded ; exists ; 2012 ; Nordic Journal of Nursing Research Volume 32 [superseded] ; 32 ; njna ; >
         au < superseded ; exists ; 2013 ; Nordic Journal of Nursing Research Volume 33 [superseded] ; 33 ; njna ; >
         
-        au < exists ; exists ; 2008 ; Nordic Journal of Nursing Research Volume 28 ; 28 ; njnb ; >
-        au < exists ; exists ; 2009 ; Nordic Journal of Nursing Research Volume 29 ; 29 ; njnb ; >
-        au < exists ; exists ; 2010 ; Nordic Journal of Nursing Research Volume 30 ; 30 ; njnb ; >
-        au < exists ; exists ; 2011 ; Nordic Journal of Nursing Research Volume 31 ; 31 ; njnb ; >
-        au < exists ; exists ; 2012 ; Nordic Journal of Nursing Research Volume 32 ; 32 ; njnb ; >
-        au < exists ; exists ; 2013 ; Nordic Journal of Nursing Research Volume 33 ; 33 ; njnb ; >
+        au < manifest ; exists ; 2008 ; Nordic Journal of Nursing Research Volume 28 ; 28 ; njnb ; >
+        au < manifest ; exists ; 2009 ; Nordic Journal of Nursing Research Volume 29 ; 29 ; njnb ; >
+        au < manifest ; exists ; 2010 ; Nordic Journal of Nursing Research Volume 30 ; 30 ; njnb ; >
+        au < manifest ; exists ; 2011 ; Nordic Journal of Nursing Research Volume 31 ; 31 ; njnb ; >
+        au < manifest ; exists ; 2012 ; Nordic Journal of Nursing Research Volume 32 ; 32 ; njnb ; >
+        au < manifest ; exists ; 2013 ; Nordic Journal of Nursing Research Volume 33 ; 33 ; njnb ; >
 
         au < doNotProcess ; doNotProcess ; 2014 ; Nordic Journal of Nursing Research Volume 34 ; 34 ; njnb ; >
         au < doNotProcess ; doNotProcess ; 2015 ; Nordic Journal of Nursing Research Volume 35 ; 35 ; njna ; >
@@ -34610,31 +34610,31 @@
     #param[base_url] = http://qjp.sagepub.com/
     #content available from 1948 volume 1 to 1999 volume 52
 
-      au < exists ; exists ; 2000 ; Quarterly Journal of Experimental Psychology Volume 53 ; 53 ; qjpb ; >
-      au < exists ; exists ; 2000 ; Quarterly Journal of Experimental Psychology Volume 53 issue 1b-4b ; 53 ; qjpc ; >
-      au < exists ; exists ; 2001 ; Quarterly Journal of Experimental Psychology Volume 54 ; 54 ; qjpb ; >
-      au < exists ; exists ; 2001 ; Quarterly Journal of Experimental Psychology Volume 54 issue 1b-4b ; 54 ; qjpc ; >
-      au < exists ; exists ; 2002 ; Quarterly Journal of Experimental Psychology Volume 55 ; 55 ; qjpb ; >
-      au < exists ; exists ; 2002 ; Quarterly Journal of Experimental Psychology Volume 55 issue 1b-4b ; 55 ; qjpc ; >
-      au < exists ; exists ; 2003 ; Quarterly Journal of Experimental Psychology Volume 56 ; 56 ; qjpb ; >
-      au < exists ; exists ; 2003 ; Quarterly Journal of Experimental Psychology Volume 56 issue 1b-4b ; 56 ; qjpc ; >
-      au < exists ; exists ; 2004 ; Quarterly Journal of Experimental Psychology Volume 57 ; 57 ; qjpb ; >
-      au < exists ; exists ; 2004 ; Quarterly Journal of Experimental Psychology Volume 57 issue 1b-4b ; 57 ; qjpc ; >
-      au < exists ; exists ; 2005 ; Quarterly Journal of Experimental Psychology Volume 58 ; 58 ; qjpb ; >
-      au < exists ; exists ; 2005 ; Quarterly Journal of Experimental Psychology Volume 58 issue 1b-4b ; 58 ; qjpc ; >
-      au < exists ; exists ; 2006 ; Quarterly Journal of Experimental Psychology Volume 59 ; 59 ; qjpd ; >
-      au < exists ; exists ; 2007 ; Quarterly Journal of Experimental Psychology Volume 60 ; 60 ; qjpd ; >
-      au < exists ; exists ; 2008 ; Quarterly Journal of Experimental Psychology Volume 61 ; 61 ; qjpd ; >
-      au < exists ; exists ; 2009 ; Quarterly Journal of Experimental Psychology Volume 62 ; 62 ; qjpd ; >
-      au < exists ; exists ; 2010 ; Quarterly Journal of Experimental Psychology Volume 63 ; 63 ; qjpd ; >
-      au < exists ; exists ; 2011 ; Quarterly Journal of Experimental Psychology Volume 64 ; 64 ; qjpd ; >
-      au < exists ; exists ; 2012 ; Quarterly Journal of Experimental Psychology Volume 65 ; 65 ; qjpd ; >
-      au < exists ; exists ; 2013 ; Quarterly Journal of Experimental Psychology Volume 66 ; 66 ; qjpd ; >
-      au < exists ; exists ; 2014 ; Quarterly Journal of Experimental Psychology Volume 67 ; 67 ; qjpd ; >
-      au < exists ; exists ; 2015 ; Quarterly Journal of Experimental Psychology Volume 68 ; 68 ; qjpd ; >
-      au < exists ; exists ; 2016 ; Quarterly Journal of Experimental Psychology Volume 69 ; 69 ; qjpd ; >
-      au < exists ; exists ; 2017 ; Quarterly Journal of Experimental Psychology Volume 70 ; 70 ; qjpd ; >
-      au < exists ; exists ; 2018 ; Quarterly Journal of Experimental Psychology Volume 71 ; 71 ; qjpd ; >
+      au < manifest ; exists ; 2000 ; Quarterly Journal of Experimental Psychology Volume 53 ; 53 ; qjpb ; >
+      au < manifest ; exists ; 2000 ; Quarterly Journal of Experimental Psychology Volume 53 issue 1b-4b ; 53 ; qjpc ; >
+      au < manifest ; exists ; 2001 ; Quarterly Journal of Experimental Psychology Volume 54 ; 54 ; qjpb ; >
+      au < manifest ; exists ; 2001 ; Quarterly Journal of Experimental Psychology Volume 54 issue 1b-4b ; 54 ; qjpc ; >
+      au < manifest ; exists ; 2002 ; Quarterly Journal of Experimental Psychology Volume 55 ; 55 ; qjpb ; >
+      au < manifest ; exists ; 2002 ; Quarterly Journal of Experimental Psychology Volume 55 issue 1b-4b ; 55 ; qjpc ; >
+      au < manifest ; exists ; 2003 ; Quarterly Journal of Experimental Psychology Volume 56 ; 56 ; qjpb ; >
+      au < manifest ; exists ; 2003 ; Quarterly Journal of Experimental Psychology Volume 56 issue 1b-4b ; 56 ; qjpc ; >
+      au < manifest ; exists ; 2004 ; Quarterly Journal of Experimental Psychology Volume 57 ; 57 ; qjpb ; >
+      au < manifest ; exists ; 2004 ; Quarterly Journal of Experimental Psychology Volume 57 issue 1b-4b ; 57 ; qjpc ; >
+      au < manifest ; exists ; 2005 ; Quarterly Journal of Experimental Psychology Volume 58 ; 58 ; qjpb ; >
+      au < manifest ; exists ; 2005 ; Quarterly Journal of Experimental Psychology Volume 58 issue 1b-4b ; 58 ; qjpc ; >
+      au < manifest ; exists ; 2006 ; Quarterly Journal of Experimental Psychology Volume 59 ; 59 ; qjpd ; >
+      au < manifest ; exists ; 2007 ; Quarterly Journal of Experimental Psychology Volume 60 ; 60 ; qjpd ; >
+      au < manifest ; exists ; 2008 ; Quarterly Journal of Experimental Psychology Volume 61 ; 61 ; qjpd ; >
+      au < manifest ; exists ; 2009 ; Quarterly Journal of Experimental Psychology Volume 62 ; 62 ; qjpd ; >
+      au < manifest ; exists ; 2010 ; Quarterly Journal of Experimental Psychology Volume 63 ; 63 ; qjpd ; >
+      au < manifest ; exists ; 2011 ; Quarterly Journal of Experimental Psychology Volume 64 ; 64 ; qjpd ; >
+      au < manifest ; exists ; 2012 ; Quarterly Journal of Experimental Psychology Volume 65 ; 65 ; qjpd ; >
+      au < manifest ; exists ; 2013 ; Quarterly Journal of Experimental Psychology Volume 66 ; 66 ; qjpd ; >
+      au < manifest ; exists ; 2014 ; Quarterly Journal of Experimental Psychology Volume 67 ; 67 ; qjpd ; >
+      au < manifest ; exists ; 2015 ; Quarterly Journal of Experimental Psychology Volume 68 ; 68 ; qjpd ; >
+      au < manifest ; exists ; 2016 ; Quarterly Journal of Experimental Psychology Volume 69 ; 69 ; qjpd ; >
+      au < manifest ; exists ; 2017 ; Quarterly Journal of Experimental Psychology Volume 70 ; 70 ; qjpd ; >
+      au < manifest ; exists ; 2018 ; Quarterly Journal of Experimental Psychology Volume 71 ; 71 ; qjpd ; >
 
 
   }
