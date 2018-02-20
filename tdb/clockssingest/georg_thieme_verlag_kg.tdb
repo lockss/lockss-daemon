@@ -6609,7 +6609,7 @@
     au < crawling ; exists ; 2010 ; 2010 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 4 ; 4 ; >
     au < crawling ; exists ; 2011 ; 2011 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 5 ; 5 ; >
     au < crawling ; exists ; 2012 ; 2012 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2013 ; 2013 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2013 ; 2013 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 7 ; 7 ; >
     au < crawling ; exists ; 2014 ; 2014 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 8 ; 8 ; >
     au < crawling ; exists ; 2015 ; 2015 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 9 ; 9 ; >
     au < crawling ; exists ; 2016 ; 2016 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 10 ; 10 ; >
@@ -6632,7 +6632,7 @@
     au < finished ; manifest ; 2010 ; 2010 ; Applied Clinical Informatics Volume 1 ; 1 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2011 ; 2011 ; Applied Clinical Informatics Volume 2 ; 2 ; >
     au < crawling ; exists ; 2012 ; 2012 ; Applied Clinical Informatics Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2013 ; 2013 ; Applied Clinical Informatics Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2013 ; 2013 ; Applied Clinical Informatics Volume 4 ; 4 ; >
     au < crawling ; exists ; 2014 ; 2014 ; Applied Clinical Informatics Volume 5 ; 5 ; >
     au < crawling ; exists ; 2015 ; 2015 ; Applied Clinical Informatics Volume 6 ; 6 ; >
     au < crawling ; exists ; 2016 ; 2016 ; Applied Clinical Informatics Volume 7 ; 7 ; >
@@ -6660,7 +6660,7 @@
     au < manifest ; exists ; 2008 ; 2008 ; Arthritis und Rheuma Volume 28 ; 28 ; >
     au < manifest ; exists ; 2009 ; 2009 ; Arthritis und Rheuma Volume 29 ; 29 ; >
     au < crawling ; exists ; 2010 ; 2010 ; Arthritis und Rheuma Volume 30 ; 30 ; >
-    au < crawling ; exists ; 2011 ; 2011 ; Arthritis und Rheuma Volume 31 ; 31 ; >
+    au < frozen ; exists ; 2011 ; 2011 ; Arthritis und Rheuma Volume 31 ; 31 ; >
     au < crawling ; exists ; 2012 ; 2012 ; Arthritis und Rheuma Volume 32 ; 32 ; >
     au < crawling ; exists ; 2013 ; 2013 ; Arthritis und Rheuma Volume 33 ; 33 ; >
     au < crawling ; exists ; 2014 ; 2014 ; Arthritis und Rheuma Volume 34 ; 34 ; >
@@ -6709,11 +6709,11 @@
     au < manifest ; exists ; 2008 ; 2008 ; Hämostaseologie Volume 28 ; 28 ; >
     au < manifest ; exists ; 2009 ; 2009 ; Hämostaseologie Volume 29 ; 29 ; >
     au < crawling ; exists ; 2010 ; 2010 ; Hämostaseologie Volume 30 ; 30 ; >
-    au < crawling ; exists ; 2011 ; 2011 ; Hämostaseologie Volume 31 ; 31 ; >
+    au < frozen ; exists ; 2011 ; 2011 ; Hämostaseologie Volume 31 ; 31 ; >
     au < crawling ; exists ; 2012 ; 2012 ; Hämostaseologie Volume 32 ; 32 ; >
     au < crawling ; exists ; 2013 ; 2013 ; Hämostaseologie Volume 33 ; 33 ; >
     au < crawling ; exists ; 2014 ; 2014 ; Hämostaseologie Volume 34 ; 34 ; >
-    au < crawling ; exists ; 2015 ; 2015 ; Hämostaseologie Volume 35 ; 35 ; >
+    au < frozen ; exists ; 2015 ; 2015 ; Hämostaseologie Volume 35 ; 35 ; >
     au < crawling ; exists ; 2016 ; 2016 ; Hämostaseologie Volume 36 ; 36 ; >
     au < crawling ; exists ; 2017 ; 2017 ; Hämostaseologie Volume 37 ; 37 ; >
 
@@ -6843,7 +6843,7 @@
     au < crawling ; exists ; 2010 ; 2010 ; Nervenheilkunde Volume 29 ; 29 ; >
     au < crawling ; exists ; 2011 ; 2011 ; Nervenheilkunde Volume 30 ; 30 ; >
     au < testing ; exists ; 2012 ; 2012 ; Nervenheilkunde Volume 31 ; 31 ; >
-    au < crawling ; exists ; 2013 ; 2013 ; Nervenheilkunde Volume 32 ; 32 ; >
+    au < frozen ; exists ; 2013 ; 2013 ; Nervenheilkunde Volume 32 ; 32 ; >
     au < crawling ; exists ; 2014 ; 2014 ; Nervenheilkunde Volume 33 ; 33 ; >
     au < finished ; manifest ; 2015 ; 2015 ; Nervenheilkunde Volume 34 ; 34 ; reingest3.clockss.org:8083 >
     au < testing ; exists ; 2016 ; 2016 ; Nervenheilkunde Volume 35 ; 35 ; >
@@ -6880,7 +6880,7 @@
     au < manifest ; exists ; 2014 ; 2014 ; Nuklearmedizin Volume 53 ; 53 ; >
     au < finished ; manifest ; 2015 ; 2015 ; Nuklearmedizin Volume 54 ; 54 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; Nuklearmedizin Volume 55 ; 55 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; Nuklearmedizin Volume 56 ; 56 ; >
+    au < frozen ; exists ; 2017 ; 2017 ; Nuklearmedizin Volume 56 ; 56 ; >
 
   }
 
@@ -6965,7 +6965,7 @@
     au < crawling ; exists ; 2010 ; 2010 ; Phlebologie Volume 39 ; 39 ; >
     au < crawling ; exists ; 2011 ; 2011 ; Phlebologie Volume 40 ; 40 ; >
     au < crawling ; exists ; 2012 ; 2012 ; Phlebologie Volume 41 ; 41 ; >
-    au < crawling ; exists ; 2013 ; 2013 ; Phlebologie Volume 42 ; 42 ; >
+    au < frozen ; exists ; 2013 ; 2013 ; Phlebologie Volume 42 ; 42 ; >
     au < crawling ; exists ; 2014 ; 2014 ; Phlebologie Volume 43 ; 43 ; >
     au < crawling ; exists ; 2015 ; 2015 ; Phlebologie Volume 44 ; 44 ; >
     au < crawling ; exists ; 2016 ; 2016 ; Phlebologie Volume 45 ; 45 ; >
