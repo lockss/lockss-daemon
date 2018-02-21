@@ -58,8 +58,10 @@ public class AmPsychPubHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterF
       // Article landing
       HtmlNodeFilters.tagWithAttribute("div", "id", "relatedContent"),
       HtmlNodeFilters.tagWithAttribute("div", "id", "cme"),
-      // References
-      HtmlNodeFilters.tagWithAttributeRegex("table", "class", "references"),
+      // Related
+      HtmlNodeFilters.allExceptSubtree(
+          HtmlNodeFilters.tagWithAttributeRegex("div", "data-pb-dropzone", "right"),
+          HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/action/showCitFormats\\?")),
       // never want these links, excluded lists was too long
       HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/servlet/linkout[?]type="),
       HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/author/"),

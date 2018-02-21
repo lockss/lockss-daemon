@@ -95,293 +95,252 @@ public class TestAmPsychPubHtmlFilterFactory extends LockssTestCase {
       " ";
   
   private static final String tocContent = 
-      "<html class=\"pb-page\" data-request-id=\"9b091ab2-2ab5-4d31-bed7-31d90503fe85\" lang=\"en\">\n" +
-      "<head data-pb-dropzone=\"head\">...head stuff...</head>" +
-      "<title>Journal Name: Vol 313, No 1</title>\n" +
-      "<body class=\"pb-ui\">\n" +
-      "<div class=\"base\" data-db-parent-of=\"sb1\">\n" + 
-      "<header class=\"header \">\n header stuff \n</header>\n" + 
-      " <nav class=\"article__breadcrumbs\"><a href=\"/\" class=\"article__tocHeading\">Physiology.org</a>" +
-      " <a href=\"/journal/jid\" class=\"article__tocHeading\">Journal Name</a>" +
-      " <a href=\"/toc/jid/313/1\" class=\"article__tocHeading separator\">Vol. 313, No. 1</a>" +
-      " </nav>\n" + 
-      "</div>\n" +
-      "<main class=\"content\">\n" +
-      "main\n" +
-      "<div data-widget-def=\"ux3-layout-widget\" data-widget-id=\"e81613f4-f742-47c6-9a72-83da91c190d3\" class=\"publication_header\">\n" + 
+      "<html class=\"pb-page\" data-request-id=\"9b091ab2-2ab5-4d31-bed7-31d90503fe85\" lang=\"en\">\n" + 
+      "  <head data-pb-dropzone=\"head\">...head stuff...</head>\n" + 
+      "  <title>Journal Name: Vol 313, No 1</title>\n" + 
+      "  <body class=\"pb-ui\">\n" + 
+      "    <div class=\"base\" data-db-parent-of=\"sb1\">\n" + 
+      "      <header class=\"header \">\n" + 
+      "        header stuff \n" + 
+      "      </header>\n" + 
+      "      <nav class=\"article__breadcrumbs\">\n" +
+      " <a href=\"/\" class=\"article__tocHeading\">Physiology.org</a>\n" +
+      " <a href=\"/journal/jid\" class=\"article__tocHeading\">Journal Name</a>\n" +
+      " <a href=\"/toc/jid/313/1\" class=\"article__tocHeading separator\">Vol. 313, No. 1</a> </nav>\n" + 
+      "    </div>\n" + 
+      "    <main class=\"content\">\n" + 
+      "      main\n" + 
+      "      <div data-widget-def=\"ux3-layout-widget\" data-widget-id=\"e81613f4-f742-47c6-9a72-83da91c190d3\" class=\"publication_header\">\n" + 
       "        <div class=\"overlay\">\n" + 
-      "        <div class=\"container\"><div class=\"row\"><div>\n" + 
-      "        <div class=\"container\"><div class=\"row\"><div class=\"logo-container\">" +
-      "<img src=\"/pb-assets/images/jid_logo.svg\" alt=\"Journal Name Logo\">" +
-      "</div></div></div>\n" + 
-      "</div></div></div>\n" + 
-      "</div>\n" + 
-      "</div>" +
-      "<div class=\"container\"><div class=\"row\"><div class=\"publication_container clearfix\">\n" +
-      "<div class=\"publication-menu hidden-xs hidden-sm container\">" +
-      "<div class=\"row\">" +
-      "\n" + 
-      "</div></div>" +
-      "<div class=\"container\">" +
-      "<div class=\"row\">" +
-      "<div class=\"xs-space\">\n" + 
-      "<div class=\"col-sm-8 toc-left-side\">\n" + 
-      "<div class=\"toc_content\">\n" +
-      "" +
-      "<div class=\"col-md-2\">\n" +
-      "<nav class=\"toc__section\">\n" +
-      "<div id=\"sections\" class=\"article-sections makeSticky\" style=\"bottom: initial; top: 132.6px;\">" +
-      "<ul class=\"sections__drop rlist separator\">\n" +
-      "<li role=\"menuitem\" class=\"\"><a class=\"w-slide__hide\" href=\"#d240875e75\"><span>Research Article</span></a></li>\n" +
-      "<li role=\"menuitem\"><a class=\"w-slide__hide\" href=\"#d240875e3145\"><span>Review</span></a></li>\n" +
-      "</ul></div>\n" +
-      "</nav>\n" +
-      "</div>\n" +
-      "<div class=\"col-md-10 toc-separator\">\n" + 
-      "   <div class=\"table-of-content\">\n" + 
-      "      <h2 class=\"toc__heading section__header to-section\" id=\"d240875e75\">Research Article</h2>\n" + 
-      "      <div class=\"issue-item\">\n" + 
-      "         <div class=\"badges\"><span class=\"access__icon icon-lock_open\"></span><span class=\"access__type\">Full Access</span></div>\n" + 
-      "         <h6 class=\"toc__heading sub-heading\"></h6>\n" + 
-      "         <div class=\"toc-item__main\">\n" + 
-      "            <div class=\"article-meta\">\n" + 
-      "               <h4 class=\"issue-item__title\"><a href=\"/doi/full/10.9999/jid.0001.2016\">Intrarenal signaling</a></h4>\n" + 
-      "               <ul class=\"rlist--inline loa\" aria-label=\"authors\" style=\"float: none; position: static;\" title=\"<li><span class=&quot;author-name&quot;>A Author</span></li>\">\n" + 
-      "                  <li><span class=\"author-name\">A Author</span></li>\n" + 
-      "               </ul>\n" + 
-      "               <ul class=\"toc-item__detail\">\n" + 
-      "                  <li class=\"toc-pubdate\"><span tabindex=\"0\"></span><span tabindex=\"0\" class=\"date\">2017 Jul 01</span></li>\n" + 
-      "                  <li class=\"toc-pagerange\"><span tabindex=\"0\">: </span><span tabindex=\"0\">F20-F29</span></li>\n" + 
-      "               </ul>\n" + 
-      "               <p class=\"epub-section__item\"><a href=\"https://doi.org/10.9999/jid.0001.2016\">https://doi.org/10.9999/jid.0001.2016</a></p>\n" + 
+      "          <div class=\"container\">\n" + 
+      "            <div class=\"row\">\n" + 
+      "              <div>\n" + 
+      "                <div class=\"container\">\n" + 
+      "                  <div class=\"row\">\n" + 
+      "                    <div class=\"logo-container\"><img src=\"/pb-assets/images/jid_logo.svg\" alt=\"Journal Name Logo\"></div>\n" + 
+      "                  </div>\n" + 
+      "                </div>\n" + 
+      "              </div>\n" + 
       "            </div>\n" + 
-      "         </div>\n" + 
-      "         <div class=\"toc-item__footer\">\n" + 
-      "            <ul class=\"rlist--inline separator toc-item__detail\">\n" + 
-      "               <li><a title=\"Abstract\" href=\"/doi/abs/10.9999/jid.0001.2016\"><span>Abstract</span><i class=\"icon icon-abstract\"></i></a></li>\n" + 
-      "               <li><a title=\"Full text\" href=\"/doi/full/10.9999/jid.0001.2016\"><span>Full text</span><i class=\"icon icon-full-text\"></i></a></li>\n" + 
-      "               <li><a title=\"PDF\" href=\"/doi/pdf/10.9999/jid.0001.2016\"><span>PDF</span><i class=\"icon icon-PDF\"></i></a></li>\n" + 
-      "               <li><a title=\"References\" href=\"/doi/references/10.9999/jid.0001.2016\"><span>References</span><i class=\"icon icon-Icon_Links-References\"></i></a></li>\n" + 
-      "               <li><a class=\"rightslink\" href=\"/servlet/linkout?type=rightslink&amp;url=startPage\"><span>Permissions</span><i class=\"icon icon-permission\"></i></a></li>\n" + 
-      "            </ul>\n" + 
-      "         </div>\n" + 
+      "          </div>\n" + 
+      "        </div>\n" + 
       "      </div>\n" + 
-      "      <h2 class=\"toc__heading section__header to-section\" id=\"d240875e3145\">Review</h2>\n" + 
-      "      <div class=\"issue-item\">\n" + 
-      "         <div class=\"badges\"><span class=\"access__icon icon-lock_open\"></span><span class=\"access__type\">Full Access</span></div>\n" + 
-      "         <h6 class=\"toc__heading sub-heading\"></h6>\n" + 
-      "         <div class=\"toc-item__main\">\n" + 
-      "            <div class=\"article-meta\">\n" + 
-      "               <h4 class=\"issue-item__title\"><a href=\"/doi/full/10.9999/jid.0001.2016\">Saving the sweetness</a></h4>\n" + 
-      "               <ul class=\"rlist--inline loa\" aria-label=\"authors\" style=\"float: none; position: static;\">\n" + 
-      "                  <li><span class=\"author-name\">I Author</span></li>\n" + 
-      "               </ul>\n" + 
-      "               <ul class=\"toc-item__detail\">\n" + 
-      "                  <li class=\"toc-pubdate\"><span tabindex=\"0\"></span><span tabindex=\"0\" class=\"date\">2017 Jul 01</span></li>\n" + 
-      "                  <li class=\"toc-pagerange\"><span tabindex=\"0\">: </span><span tabindex=\"0\">F55-F61</span></li>\n" + 
-      "               </ul>\n" + 
-      "               <p class=\"epub-section__item\"><a href=\"https://doi.org/10.9999/jid.0001.2016\">https://doi.org/10.9999/jid.0001.2016</a></p>\n" + 
+      "      <div class=\"container\">\n" + 
+      "        <div class=\"row\">\n" + 
+      "          <div class=\"publication_container clearfix\">\n" + 
+      "            <div class=\"publication-menu hidden-xs hidden-sm container\">\n" + 
+      "              <div class=\"row\"></div>\n" + 
       "            </div>\n" + 
-      "         </div>\n" + 
-      "         <div class=\"toc-item__footer\">\n" + 
-      "            <ul class=\"rlist--inline separator toc-item__detail\">\n" + 
-      "               <li><a title=\"Abstract\" href=\"/doi/abs/10.9999/jid.0001.2016\"><span>Abstract</span><i class=\"icon icon-abstract\"></i></a></li>\n" + 
-      "               <li><a title=\"Full text\" href=\"/doi/full/10.9999/jid.0001.2016\"><span>Full text</span><i class=\"icon icon-full-text\"></i></a></li>\n" + 
-      "               <li><a title=\"PDF\" href=\"/doi/pdf/10.9999/jid.0001.2016\"><span>PDF</span><i class=\"icon icon-PDF\"></i></a></li>\n" + 
-      "               <li><a title=\"References\" href=\"/doi/references/10.9999/jid.0001.2016\"><span>References</span><i class=\"icon icon-Icon_Links-References\"></i></a></li>\n" + 
-      "               <li><a class=\"rightslink\" href=\"/servlet/linkout?type=rightslink&amp;url=startPage\"><span>Permissions</span><i class=\"icon icon-permission\"></i></a></li>\n" + 
-      "            </ul>\n" + 
-      "         </div>\n" + 
+      "            <div class=\"container\">\n" + 
+      "              <div class=\"row\">\n" + 
+      "                <div class=\"xs-space\">\n" + 
+      "                  <div class=\"col-sm-8 toc-left-side\">\n" + 
+      "                    <div class=\"tocContent\">\n" + 
+      "                      <!--totalCount1--><!--modified:1519149651000-->\n" + 
+      "                      <h2 class=\"tocHeading\" id=\"toc-heading-5\">\n" + 
+      "                        <div class=\"subject heading-1\">Articles</div>\n" + 
+      "                      </h2>\n" + 
+      "                      <table class=\"articleEntry\" width=\"100%\" border=\"0\">\n" + 
+      "                        <tbody>\n" + 
+      "                          <tr>\n" + 
+      "                            <td class=\"accessIconContainer\">\n" + 
+      "                              <div></div>\n" + 
+      "                              <div class=\"ccIcon\"></div>\n" + 
+      "                            </td>\n" + 
+      "                            <td width=\"10\" valign=\"top\" align=\"right\"></td>\n" + 
+      "                            <td valign=\"top\">\n" + 
+      "                              <div class=\"icon-feature-au icon-feature-cm \"></div>\n" + 
+      "                              <div class=\"art_title linkable title-group level1\"><a class=\"ref nowrap\" href=\"/doi/full/10.1176/appi.ajp.2016.16020224\"></a>\n" + 
+      "                                <a class=\"ref nowrap\" href=\"/doi/full/10.1176/appi.ajp.2016.16020224\">Internet Disorder</a>\n" + 
+      "                              </div>\n" + 
+      "                              <div class=\"tocAuthors afterTitle\">\n" + 
+      "                                <div class=\"articleEntryAuthor all\"><span class=\"articleEntryAuthorsLinks\">\n" + 
+      "                                  <span class=\"hlFld-ContribAuthor\"><a class=\"entryAuthor linkable\" href=\"/author/Author\">Author</a></span>, Ph.D., \n" + 
+      "                                  <span class=\"hlFld-ContribAuthor\"><a class=\"entryAuthor linkable\" href=\"/author/Other\">Other</a></span>, Ph.D.</span>\n" + 
+      "                                </div>\n" + 
+      "                              </div>\n" + 
+      "                              <div class=\"art_meta citation\"><span class=\"issueInfo\">174(3)</span><span class=\"articlePageRange \"><span class=\"issueInfoComma\">, </span>pp. 230<span>-</span>236</span></div>\n" + 
+      "                              <div class=\"tocArticleDoi\"><a href=\"https://doi.org/10.1176/appi.ajp.2016.16020224\">https://doi.org/10.1176/appi.ajp.2016.16020224</a></div>\n" + 
+      "                              <a href=\"/servlet/linkout?suffix=s0&amp;dbid=16384&amp;type=tocOpenUrl&amp;doi=10.1176/appi.ajp.2016.16020224" +
+      "&amp;url=http%3A%2F%2Fsfx.stanford.edu%2Flocal%3Fsid%3Dapp%26iuid%3D9332%26id%3Ddoi%3A10.1176%2Fappi.ajp.2016.16020224\"\n" +
+      " title=\"OpenURL\" onclick=\"newWindow(this.href);return false\"\n" +
+      " class=\"sfxLink\"><img src=\"/userimages/9332/sfxbutton\" alt=\"OpenURL\"></a>\n" + 
+      "                              <div class=\"tocDeliverFormatsLinks\">\n" + 
+      "                                <a class=\"ref nowrap abs\" href=\"/doi/abs/10.1176/appi.ajp.2016.16020224\">Abstract</a> |\n" + 
+      "                                <a class=\"ref nowrap full\" href=\"/doi/full/10.1176/appi.ajp.2016.16020224\">Full Text</a> |\n" + 
+      "                                <a class=\"ref nowrap references\" href=\"/doi/ref/10.1176/appi.ajp.2016.16020224\">References</a> |\n" + 
+      "                                <a class=\"ref nowrap pdf\" target=\"_blank\" title=\"Opens new window\" href=\"/doi/pdf/10.1176/appi.ajp.2016.16020224\">PDF (534 KB)</a> |\n" + 
+      "                                <a class=\"ref nowrap pdfplus\" target=\"_blank\" title=\"Opens new window\" href=\"/doi/pdfplus/10.1176/appi.ajp.2016.16020224\">PDF Plus (554 KB)</a> |\n" + 
+      "                                <a class=\"ref nowrap suppl\" href=\"/doi/suppl/10.1176/appi.ajp.2016.16020224\">Supplemental Material</a>&nbsp;\n" + 
+      "                                <div id=\"Absappiajp201616020224\" class=\"previewViewSection tocPreview\">\n" + 
+      "                                  <div class=\"closeButton\" onclick=\"showHideTocPublicationAbs('10.1176/appi.ajp.2016.16020224', 'Absappiajp201616020224');\"></div>\n" + 
+      "                                  <p class=\"previewContent\"></p>\n" + 
+      "                                </div>\n" + 
+      "                              </div>\n" + 
+      "                            </td>\n" + 
+      "                          </tr>\n" + 
+      "                        </tbody>\n" + 
+      "                      </table>\n" + 
+      "                    </div>\n" + 
+      "                  </div>\n" + 
+      "                </div>\n" + 
+      "              </div>\n" + 
+      "              <div class=\"col-sm-4 gray-bg toc-right-side\"></div>\n" + 
+      "            </div>\n" + 
+      "          </div>\n" + 
+      "        </div>\n" + 
       "      </div>\n" + 
-      "   </div>\n" + 
-      "</div>\n" +
-      "</div>" +
-      "</div>" +
-      "</div>" +
-      "</div>\n" +
-      "<div class=\"col-sm-4 gray-bg toc-right-side\">\n" + 
-      "</div>" +
-      "</div></div></div>\n" +
-      "</div></div></div>\n" +
-      "</main>\n" +
-      "<footer>  footer stuff</footer>" +
-      "</body>\n" +
+      "      </div></div>\n" + 
+      "    </main>\n" + 
+      "    <footer>  footer stuff</footer>\n" + 
+      "  </body>\n" + 
       "</html>";
   
   private static final String tocContentCrawlFiltered = 
-      "<html class=\"pb-page\" data-request-id=\"9b091ab2-2ab5-4d31-bed7-31d90503fe85\" lang=\"en\">\n" +
-      "<head data-pb-dropzone=\"head\">...head stuff...</head>" +
-      "<title>Journal Name: Vol 313, No 1</title>\n" +
-      "<body class=\"pb-ui\">\n" +
-      "<div class=\"base\" data-db-parent-of=\"sb1\">\n" + 
-      "\n" +
-      " <nav class=\"article__breadcrumbs\"><a href=\"/\" class=\"article__tocHeading\">Physiology.org</a>" +
-      " <a href=\"/journal/jid\" class=\"article__tocHeading\">Journal Name</a>" +
-      " <a href=\"/toc/jid/313/1\" class=\"article__tocHeading separator\">Vol. 313, No. 1</a>" +
-      " </nav>\n" + 
-      "</div>\n" +
-      "<main class=\"content\">\n" +
-      "main\n" +
-      "<div data-widget-def=\"ux3-layout-widget\" data-widget-id=\"e81613f4-f742-47c6-9a72-83da91c190d3\" class=\"publication_header\">\n" + 
+      "<html class=\"pb-page\" data-request-id=\"9b091ab2-2ab5-4d31-bed7-31d90503fe85\" lang=\"en\">\n" + 
+      "  <head data-pb-dropzone=\"head\">...head stuff...</head>\n" + 
+      "  <title>Journal Name: Vol 313, No 1</title>\n" + 
+      "  <body class=\"pb-ui\">\n" + 
+      "    <div class=\"base\" data-db-parent-of=\"sb1\">\n" + 
+      "      \n" + 
+      "      <nav class=\"article__breadcrumbs\">\n" +
+      " <a href=\"/\" class=\"article__tocHeading\">Physiology.org</a>\n" +
+      " <a href=\"/journal/jid\" class=\"article__tocHeading\">Journal Name</a>\n" +
+      " <a href=\"/toc/jid/313/1\" class=\"article__tocHeading separator\">Vol. 313, No. 1</a> </nav>\n" + 
+      "    </div>\n" + 
+      "    <main class=\"content\">\n" + 
+      "      main\n" + 
+      "      <div data-widget-def=\"ux3-layout-widget\" data-widget-id=\"e81613f4-f742-47c6-9a72-83da91c190d3\" class=\"publication_header\">\n" + 
       "        <div class=\"overlay\">\n" + 
-      "        <div class=\"container\"><div class=\"row\"><div>\n" + 
-      "        <div class=\"container\"><div class=\"row\"><div class=\"logo-container\"><img src=\"/pb-assets/images/jid_logo.svg\" alt=\"Journal Name Logo\"></div></div></div>\n" + 
-      "</div></div></div>\n" + 
-      "</div>\n" + 
-      "</div><div class=\"container\"><div class=\"row\"><div class=\"publication_container clearfix\">\n" + 
-      "<div class=\"publication-menu hidden-xs hidden-sm container\"><div class=\"row\">\n" + 
-      "</div></div>" +
-//      "<div class=\"container\"><div class=\"row\"><div class=\"publication_container clearfix\">\n" + 
-      "<div class=\"container\">" +
-      "<div class=\"row\">" +
-      "<div class=\"xs-space\">\n" + 
-      "<div class=\"col-sm-8 toc-left-side\">\n" + 
-      "<div class=\"toc_content\">\n" +
-      "<div class=\"col-md-2\">\n" +
-      "<nav class=\"toc__section\">\n" +
-      "<div id=\"sections\" class=\"article-sections makeSticky\" style=\"bottom: initial; top: 132.6px;\">" +
-      "<ul class=\"sections__drop rlist separator\">\n" +
-      "<li role=\"menuitem\" class=\"\"><a class=\"w-slide__hide\" href=\"#d240875e75\"><span>Research Article</span></a></li>\n" +
-      "<li role=\"menuitem\"><a class=\"w-slide__hide\" href=\"#d240875e3145\"><span>Review</span></a></li>\n" +
-      "</ul></div>\n" +
-      "</nav>\n" +
-      "</div>\n" +
-      "<div class=\"col-md-10 toc-separator\">\n" + 
-      "   <div class=\"table-of-content\">\n" + 
-      "      <h2 class=\"toc__heading section__header to-section\" id=\"d240875e75\">Research Article</h2>\n" + 
-      "      <div class=\"issue-item\">\n" + 
-      "         <div class=\"badges\"><span class=\"access__icon icon-lock_open\"></span><span class=\"access__type\">Full Access</span></div>\n" + 
-      "         <h6 class=\"toc__heading sub-heading\"></h6>\n" + 
-      "         <div class=\"toc-item__main\">\n" + 
-      "            <div class=\"article-meta\">\n" + 
-      "               <h4 class=\"issue-item__title\"><a href=\"/doi/full/10.9999/jid.0001.2016\">Intrarenal signaling</a></h4>\n" + 
-      "               <ul class=\"rlist--inline loa\" aria-label=\"authors\" style=\"float: none; position: static;\" title=\"<li><span class=&quot;author-name&quot;>A Author</span></li>\">\n" + 
-      "                  <li><span class=\"author-name\">A Author</span></li>\n" + 
-      "               </ul>\n" + 
-      "               <ul class=\"toc-item__detail\">\n" + 
-      "                  <li class=\"toc-pubdate\"><span tabindex=\"0\"></span><span tabindex=\"0\" class=\"date\">2017 Jul 01</span></li>\n" + 
-      "                  <li class=\"toc-pagerange\"><span tabindex=\"0\">: </span><span tabindex=\"0\">F20-F29</span></li>\n" + 
-      "               </ul>\n" + 
-      "               <p class=\"epub-section__item\"><a href=\"https://doi.org/10.9999/jid.0001.2016\">https://doi.org/10.9999/jid.0001.2016</a></p>\n" + 
+      "          <div class=\"container\">\n" + 
+      "            <div class=\"row\">\n" + 
+      "              <div>\n" + 
+      "                <div class=\"container\">\n" + 
+      "                  <div class=\"row\">\n" + 
+      "                    <div class=\"logo-container\"><img src=\"/pb-assets/images/jid_logo.svg\" alt=\"Journal Name Logo\"></div>\n" + 
+      "                  </div>\n" + 
+      "                </div>\n" + 
+      "              </div>\n" + 
       "            </div>\n" + 
-      "         </div>\n" + 
-      "         <div class=\"toc-item__footer\">\n" + 
-      "            <ul class=\"rlist--inline separator toc-item__detail\">\n" + 
-      "               <li><a title=\"Abstract\" href=\"/doi/abs/10.9999/jid.0001.2016\"><span>Abstract</span><i class=\"icon icon-abstract\"></i></a></li>\n" + 
-      "               <li><a title=\"Full text\" href=\"/doi/full/10.9999/jid.0001.2016\"><span>Full text</span><i class=\"icon icon-full-text\"></i></a></li>\n" + 
-      "               <li><a title=\"PDF\" href=\"/doi/pdf/10.9999/jid.0001.2016\"><span>PDF</span><i class=\"icon icon-PDF\"></i></a></li>\n" + 
-      "               <li><a title=\"References\" href=\"/doi/references/10.9999/jid.0001.2016\"><span>References</span><i class=\"icon icon-Icon_Links-References\"></i></a></li>\n" + 
-      "               <li></li>\n" + 
-      "            </ul>\n" + 
-      "         </div>\n" + 
+      "          </div>\n" + 
+      "        </div>\n" + 
       "      </div>\n" + 
-      "      <h2 class=\"toc__heading section__header to-section\" id=\"d240875e3145\">Review</h2>\n" + 
-      "      <div class=\"issue-item\">\n" + 
-      "         <div class=\"badges\"><span class=\"access__icon icon-lock_open\"></span><span class=\"access__type\">Full Access</span></div>\n" + 
-      "         <h6 class=\"toc__heading sub-heading\"></h6>\n" + 
-      "         <div class=\"toc-item__main\">\n" + 
-      "            <div class=\"article-meta\">\n" + 
-      "               <h4 class=\"issue-item__title\"><a href=\"/doi/full/10.9999/jid.0001.2016\">Saving the sweetness</a></h4>\n" + 
-      "               <ul class=\"rlist--inline loa\" aria-label=\"authors\" style=\"float: none; position: static;\">\n" + 
-      "                  <li><span class=\"author-name\">I Author</span></li>\n" + 
-      "               </ul>\n" + 
-      "               <ul class=\"toc-item__detail\">\n" + 
-      "                  <li class=\"toc-pubdate\"><span tabindex=\"0\"></span><span tabindex=\"0\" class=\"date\">2017 Jul 01</span></li>\n" + 
-      "                  <li class=\"toc-pagerange\"><span tabindex=\"0\">: </span><span tabindex=\"0\">F55-F61</span></li>\n" + 
-      "               </ul>\n" + 
-      "               <p class=\"epub-section__item\"><a href=\"https://doi.org/10.9999/jid.0001.2016\">https://doi.org/10.9999/jid.0001.2016</a></p>\n" + 
+      "      <div class=\"container\">\n" + 
+      "        <div class=\"row\">\n" + 
+      "          <div class=\"publication_container clearfix\">\n" + 
+      "            <div class=\"publication-menu hidden-xs hidden-sm container\">\n" + 
+      "              <div class=\"row\"></div>\n" + 
       "            </div>\n" + 
-      "         </div>\n" + 
-      "         <div class=\"toc-item__footer\">\n" + 
-      "            <ul class=\"rlist--inline separator toc-item__detail\">\n" + 
-      "               <li><a title=\"Abstract\" href=\"/doi/abs/10.9999/jid.0001.2016\"><span>Abstract</span><i class=\"icon icon-abstract\"></i></a></li>\n" + 
-      "               <li><a title=\"Full text\" href=\"/doi/full/10.9999/jid.0001.2016\"><span>Full text</span><i class=\"icon icon-full-text\"></i></a></li>\n" + 
-      "               <li><a title=\"PDF\" href=\"/doi/pdf/10.9999/jid.0001.2016\"><span>PDF</span><i class=\"icon icon-PDF\"></i></a></li>\n" + 
-      "               <li><a title=\"References\" href=\"/doi/references/10.9999/jid.0001.2016\"><span>References</span><i class=\"icon icon-Icon_Links-References\"></i></a></li>\n" + 
-      "               <li></li>\n" + 
-      "            </ul>\n" + 
-      "         </div>\n" + 
+      "            <div class=\"container\">\n" + 
+      "              <div class=\"row\">\n" + 
+      "                <div class=\"xs-space\">\n" + 
+      "                  <div class=\"col-sm-8 toc-left-side\">\n" + 
+      "                    <div class=\"tocContent\">\n" + 
+      "                      <!--totalCount1--><!--modified:1519149651000-->\n" + 
+      "                      <h2 class=\"tocHeading\" id=\"toc-heading-5\">\n" + 
+      "                        <div class=\"subject heading-1\">Articles</div>\n" + 
+      "                      </h2>\n" + 
+      "                      <table class=\"articleEntry\" width=\"100%\" border=\"0\">\n" + 
+      "                        <tbody>\n" + 
+      "                          <tr>\n" + 
+      "                            <td class=\"accessIconContainer\">\n" + 
+      "                              <div></div>\n" + 
+      "                              <div class=\"ccIcon\"></div>\n" + 
+      "                            </td>\n" + 
+      "                            <td width=\"10\" valign=\"top\" align=\"right\"></td>\n" + 
+      "                            <td valign=\"top\">\n" + 
+      "                              <div class=\"icon-feature-au icon-feature-cm \"></div>\n" + 
+      "                              <div class=\"art_title linkable title-group level1\"><a class=\"ref nowrap\" href=\"/doi/full/10.1176/appi.ajp.2016.16020224\"></a>\n" + 
+      "                                <a class=\"ref nowrap\" href=\"/doi/full/10.1176/appi.ajp.2016.16020224\">Internet Disorder</a>\n" + 
+      "                              </div>\n" + 
+      "                              <div class=\"tocAuthors afterTitle\">\n" + 
+      "                                <div class=\"articleEntryAuthor all\"><span class=\"articleEntryAuthorsLinks\">\n" + 
+      "                                  <span class=\"hlFld-ContribAuthor\"></span>, Ph.D., \n" + 
+      "                                  <span class=\"hlFld-ContribAuthor\"></span>, Ph.D.</span>\n" + 
+      "                                </div>\n" + 
+      "                              </div>\n" + 
+      "                              <div class=\"art_meta citation\"><span class=\"issueInfo\">174(3)</span><span class=\"articlePageRange \"><span class=\"issueInfoComma\">, </span>pp. 230<span>-</span>236</span></div>\n" + 
+      "                              <div class=\"tocArticleDoi\"><a href=\"https://doi.org/10.1176/appi.ajp.2016.16020224\">https://doi.org/10.1176/appi.ajp.2016.16020224</a></div>\n" + 
+      "                              <a href=\"/servlet/linkout?suffix=s0&amp;dbid=16384&amp;type=tocOpenUrl&amp;doi=10.1176/appi.ajp.2016.16020224" +
+      "&amp;url=http%3A%2F%2Fsfx.stanford.edu%2Flocal%3Fsid%3Dapp%26iuid%3D9332%26id%3Ddoi%3A10.1176%2Fappi.ajp.2016.16020224\"\n" +
+      " title=\"OpenURL\" onclick=\"newWindow(this.href);return false\"\n" +
+      " class=\"sfxLink\"><img src=\"/userimages/9332/sfxbutton\" alt=\"OpenURL\"></a>\n" + 
+      "                              <div class=\"tocDeliverFormatsLinks\">\n" + 
+      "                                <a class=\"ref nowrap abs\" href=\"/doi/abs/10.1176/appi.ajp.2016.16020224\">Abstract</a> |\n" + 
+      "                                <a class=\"ref nowrap full\" href=\"/doi/full/10.1176/appi.ajp.2016.16020224\">Full Text</a> |\n" + 
+      "                                <a class=\"ref nowrap references\" href=\"/doi/ref/10.1176/appi.ajp.2016.16020224\">References</a> |\n" + 
+      "                                <a class=\"ref nowrap pdf\" target=\"_blank\" title=\"Opens new window\" href=\"/doi/pdf/10.1176/appi.ajp.2016.16020224\">PDF (534 KB)</a> |\n" + 
+      "                                <a class=\"ref nowrap pdfplus\" target=\"_blank\" title=\"Opens new window\" href=\"/doi/pdfplus/10.1176/appi.ajp.2016.16020224\">PDF Plus (554 KB)</a> |\n" + 
+      "                                <a class=\"ref nowrap suppl\" href=\"/doi/suppl/10.1176/appi.ajp.2016.16020224\">Supplemental Material</a>&nbsp;\n" + 
+      "                                <div id=\"Absappiajp201616020224\" class=\"previewViewSection tocPreview\">\n" + 
+      "                                  <div class=\"closeButton\" onclick=\"showHideTocPublicationAbs('10.1176/appi.ajp.2016.16020224', 'Absappiajp201616020224');\"></div>\n" + 
+      "                                  <p class=\"previewContent\"></p>\n" + 
+      "                                </div>\n" + 
+      "                              </div>\n" + 
+      "                            </td>\n" + 
+      "                          </tr>\n" + 
+      "                        </tbody>\n" + 
+      "                      </table>\n" + 
+      "                    </div>\n" + 
+      "                  </div>\n" + 
+      "                </div>\n" + 
+      "              </div>\n" + 
+      "              <div class=\"col-sm-4 gray-bg toc-right-side\"></div>\n" + 
+      "            </div>\n" + 
+      "          </div>\n" + 
+      "        </div>\n" + 
       "      </div>\n" + 
-      "   </div>\n" + 
-      "</div>\n" +
-      "</div></div></div></div>\n" +
-      "<div class=\"col-sm-4 gray-bg toc-right-side\">\n" + 
-      "</div>" +
-      "</div></div></div>\n" +
-      "</div></div></div>\n" + 
-      "</main>\n" +
-      "</body>\n" +
+      "      </div></div>\n" + 
+      "    </main>\n" + 
+      "    \n" + 
+      "  </body>\n" + 
       "</html>";
   
+  private static final String tocContentHashFiltered = 
+      "<div class=\"tocContent\">\n" + 
+      "                      \n" + 
+      "                      <h2 class=\"tocHeading\" >\n" + 
+      "                        <div class=\"subject heading-1\">Articles</div>\n" + 
+      "                      </h2>\n" + 
+      "                      <table class=\"articleEntry\" width=\"100%\" border=\"0\">\n" + 
+      "                        <tbody>\n" + 
+      "                          <tr>\n" + 
+      "                            \n" + 
+      "                            <td width=\"10\" valign=\"top\" align=\"right\"></td>\n" + 
+      "                            <td valign=\"top\">\n" + 
+      "                              <div class=\"icon-feature-au icon-feature-cm \"></div>\n" + 
+      "                              <div class=\"art_title linkable title-group level1\"><a class=\"ref nowrap\" href=\"/doi/full/10.1176/appi.ajp.2016.16020224\"></a>\n" + 
+      "                                <a class=\"ref nowrap\" href=\"/doi/full/10.1176/appi.ajp.2016.16020224\">Internet Disorder</a>\n" + 
+      "                              </div>\n" + 
+      "                              <div class=\"tocAuthors afterTitle\">\n" + 
+      "                                <div class=\"articleEntryAuthor all\"><span class=\"articleEntryAuthorsLinks\">\n" + 
+      "                                  <span class=\"hlFld-ContribAuthor\"><a class=\"entryAuthor linkable\" href=\"/author/Author\">Author</a></span>, Ph.D., \n" + 
+      "                                  <span class=\"hlFld-ContribAuthor\"><a class=\"entryAuthor linkable\" href=\"/author/Other\">Other</a></span>, Ph.D.</span>\n" + 
+      "                                </div>\n" + 
+      "                              </div>\n" + 
+      "                              <div class=\"art_meta citation\"><span class=\"issueInfo\">174(3)</span><span class=\"articlePageRange \"><span class=\"issueInfoComma\">, </span>pp. 230<span>-</span>236</span></div>\n" + 
+      "                              <div class=\"tocArticleDoi\"><a href=\"https://doi.org/10.1176/appi.ajp.2016.16020224\">https://doi.org/10.1176/appi.ajp.2016.16020224</a></div>\n" + 
+      "                              \n" + 
+      "                              <div class=\"tocDeliverFormatsLinks\">\n" + 
+      "                                <a class=\"ref nowrap abs\" href=\"/doi/abs/10.1176/appi.ajp.2016.16020224\">Abstract</a> |\n" + 
+      "                                <a class=\"ref nowrap full\" href=\"/doi/full/10.1176/appi.ajp.2016.16020224\">Full Text</a> |\n" + 
+      "                                <a class=\"ref nowrap references\" href=\"/doi/ref/10.1176/appi.ajp.2016.16020224\">References</a> |\n" + 
+      "                                <a class=\"ref nowrap pdf\" target=\"_blank\" title=\"Opens new window\" href=\"/doi/pdf/10.1176/appi.ajp.2016.16020224\"></a> |\n" + 
+      "                                <a class=\"ref nowrap pdfplus\" target=\"_blank\" title=\"Opens new window\" href=\"/doi/pdfplus/10.1176/appi.ajp.2016.16020224\"></a> |\n" + 
+      "                                <a class=\"ref nowrap suppl\" href=\"/doi/suppl/10.1176/appi.ajp.2016.16020224\">Supplemental Material</a>&nbsp;\n" + 
+      "                                <div  class=\"previewViewSection tocPreview\">\n" + 
+      "                                  <div class=\"closeButton\" onclick=\"showHideTocPublicationAbs('10.1176/appi.ajp.2016.16020224', 'Absappiajp201616020224');\"></div>\n" + 
+      "                                  <p class=\"previewContent\"></p>\n" + 
+      "                                </div>\n" + 
+      "                              </div>\n" + 
+      "                            </td>\n" + 
+      "                          </tr>\n" + 
+      "                        </tbody>\n" + 
+      "                      </table>\n" + 
+      "                    </div>";
   /*
   private static final String tocContentHashFiltered = 
-      "<div class=\"toc_content\">\n" +
-      "<div class=\"col-md-2\">\n" +
-      "\n" +
-      "</div>\n" +
-      "<div class=\"col-md-10 toc-separator\">\n" + 
-      "   <div class=\"table-of-content\">\n" + 
-      "      <h2 class=\"toc__heading section__header to-section\" >Research Article</h2>\n" + 
-      "      <div class=\"issue-item\">\n" + 
-      "         \n" + 
-      "         <h6 class=\"toc__heading sub-heading\"></h6>\n" + 
-      "         <div class=\"toc-item__main\">\n" + 
-      "            <div class=\"article-meta\">\n" + 
-      "               <h4 class=\"issue-item__title\"><a href=\"/doi/full/10.9999/jid.0001.2016\">Intrarenal signaling</a></h4>\n" + 
-      "               <ul class=\"rlist--inline loa\" aria-label=\"authors\" style=\"float: none; position: static;\" title=\"<li><span class=&quot;author-name&quot;>A Author</span></li>\">\n" + 
-      "                  <li><span class=\"author-name\">A Author</span></li>\n" + 
-      "               </ul>\n" + 
-      "               <ul class=\"toc-item__detail\">\n" + 
-      "                  <li class=\"toc-pubdate\"><span tabindex=\"0\"></span><span tabindex=\"0\" class=\"date\">2017 Jul 01</span></li>\n" + 
-      "                  <li class=\"toc-pagerange\"><span tabindex=\"0\">: </span><span tabindex=\"0\">F20-F29</span></li>\n" + 
-      "               </ul>\n" + 
-      "               <p class=\"epub-section__item\"><a href=\"https://doi.org/10.9999/jid.0001.2016\">https://doi.org/10.9999/jid.0001.2016</a></p>\n" + 
-      "            </div>\n" + 
-      "         </div>\n" + 
-      "         <div class=\"toc-item__footer\">\n" + 
-      "            <ul class=\"rlist--inline separator toc-item__detail\">\n" + 
-      "               <li><a title=\"Abstract\" href=\"/doi/abs/10.9999/jid.0001.2016\"><span>Abstract</span><i class=\"icon icon-abstract\"></i></a></li>\n" + 
-      "               <li><a title=\"Full text\" href=\"/doi/full/10.9999/jid.0001.2016\"><span>Full text</span><i class=\"icon icon-full-text\"></i></a></li>\n" + 
-      "               <li><a title=\"PDF\" href=\"/doi/pdf/10.9999/jid.0001.2016\"><span>PDF</span><i class=\"icon icon-PDF\"></i></a></li>\n" + 
-      "               <li><a title=\"References\" href=\"/doi/references/10.9999/jid.0001.2016\"><span>References</span><i class=\"icon icon-Icon_Links-References\"></i></a></li>\n" + 
-      "               <li></li>\n" + 
-      "            </ul>\n" + 
-      "         </div>\n" + 
-      "      </div>\n" + 
-      "      <h2 class=\"toc__heading section__header to-section\" >Review</h2>\n" + 
-      "      <div class=\"issue-item\">\n" + 
-      "         \n" + 
-      "         <h6 class=\"toc__heading sub-heading\"></h6>\n" + 
-      "         <div class=\"toc-item__main\">\n" + 
-      "            <div class=\"article-meta\">\n" + 
-      "               <h4 class=\"issue-item__title\"><a href=\"/doi/full/10.9999/jid.0001.2016\">Saving the sweetness</a></h4>\n" + 
-      "               <ul class=\"rlist--inline loa\" aria-label=\"authors\" style=\"float: none; position: static;\">\n" + 
-      "                  <li><span class=\"author-name\">I Author</span></li>\n" + 
-      "               </ul>\n" + 
-      "               <ul class=\"toc-item__detail\">\n" + 
-      "                  <li class=\"toc-pubdate\"><span tabindex=\"0\"></span><span tabindex=\"0\" class=\"date\">2017 Jul 01</span></li>\n" + 
-      "                  <li class=\"toc-pagerange\"><span tabindex=\"0\">: </span><span tabindex=\"0\">F55-F61</span></li>\n" + 
-      "               </ul>\n" + 
-      "               <p class=\"epub-section__item\"><a href=\"https://doi.org/10.9999/jid.0001.2016\">https://doi.org/10.9999/jid.0001.2016</a></p>\n" + 
-      "            </div>\n" + 
-      "         </div>\n" + 
-      "         <div class=\"toc-item__footer\">\n" + 
-      "            <ul class=\"rlist--inline separator toc-item__detail\">\n" + 
-      "               <li><a title=\"Abstract\" href=\"/doi/abs/10.9999/jid.0001.2016\"><span>Abstract</span><i class=\"icon icon-abstract\"></i></a></li>\n" + 
-      "               <li><a title=\"Full text\" href=\"/doi/full/10.9999/jid.0001.2016\"><span>Full text</span><i class=\"icon icon-full-text\"></i></a></li>\n" + 
-      "               <li><a title=\"PDF\" href=\"/doi/pdf/10.9999/jid.0001.2016\"><span>PDF</span><i class=\"icon icon-PDF\"></i></a></li>\n" + 
-      "               <li><a title=\"References\" href=\"/doi/references/10.9999/jid.0001.2016\"><span>References</span><i class=\"icon icon-Icon_Links-References\"></i></a></li>\n" + 
-      "               <li></li>\n" + 
-      "            </ul>\n" + 
-      "         </div>\n" + 
-      "      </div>\n" + 
-      "   </div>\n" + 
-      "</div>\n" +
-      "</div>";
-   */
-  
-  private static final String tocContentHashFiltered = 
-      " Research Article" + 
+      " Articles" + 
       " Intrarenal signaling" + 
       " A Author" + 
       " 2017 Jul 01" + 
@@ -406,720 +365,653 @@ public class TestAmPsychPubHtmlFilterFactory extends LockssTestCase {
       " Preview Abstract" + 
       " Text..." + 
       " ";
+   */
   
   private static final String art1Content = 
-      "<html lang=\"en\" class=\"pb-page\" >\n" + 
-      "   <head data-pb-dropzone=\"head\">\n" + 
-      "      <meta name=\"citation_journal_title\" content=\"Journal of Neurophysiology\" />\n" + 
-      "   </head>\n" + 
-      "   <body class=\"pb-ui\">\n" + 
-      "   <div id=\"pb-page-content\" data-ng-non-bindable>\n" + 
-      "   <div data-pb-dropzone=\"main\" data-pb-dropzone-name=\"Main\">\n" + 
-      "   <div class=\"base\" data-db-parent-of=\"sb1\">\n" + 
-      "   <header class=\"header fixed base pageHeader\">\n" + 
-      "   <div class=\"popup login-popup hidden\">\n" + 
-      "   <a href=\"#\" class=\"close\"><i class=\"icon-close_thin\"></i></a>\n" + 
-      "   </div>\n" + 
-      "   </header>\n" + 
-      "   </div>\n" + 
-      "   <main class=\"content jn pageBody\">\n" + 
-      "   <div>\n" + 
-      "   <div data-widget-def=\"ux3-layout-widget\" data-widget-id=\"id\" class=\"publication_header\">\n" + 
-      "   <div class=\"overlay\">\n" + 
-      "   </div>\n" + 
-      "   </div>\n" + 
-      "   <div class=\"container\">\n" + 
-      "   <div class=\"row\">\n" + 
-      "   <div class=\"publication_container clearfix\">\n" + 
-      "  <div class=\"publication-menu hidden-xs hidden-sm container\">\n" + 
-      "     <div class=\"row\">\n" + 
-      "     </div>\n" + 
-      "  </div>\n" + 
-      "  <article data-figures=\"http://www.physiology.org/action/ajaxShowFigures?doi=10.1152%2Fjn.00002.2017&amp;ajax=true\" data-references=\"http://www.physiology.org/action/ajaxShowEnhancedAbstract?doi=10.1152%2Fjn.00002.2017&amp;ajax=true\" data-enable-mathjax=\"true\" class=\"container\">\n" + 
-      "     <div class=\"row\">\n" + 
-      "     <div class=\"col-sm-8 col-md-8 article__content\">\n" + 
-      "     <div class=\"citation\">\n" + 
-      "     <div class=\"citation__top\"><span class=\"citation__top__item article__access\"><i class=\"citation__access__icon icon-lock_open\"></i></span><span class=\"article__breadcrumbs\"><span class=\"citation__top__item article__tocHeading\">Research Article</span><span class=\"citation__top__item article__tocHeading\">Control of Homeostasis</span></span></div>\n" + 
-      "     <h1 class=\"citation__title\">Cit Title</h1>\n" + 
-      "     <ul class=\"rlist--inline loa mobile-authors visible-xs\" title=\"list of authors\">\n" + 
-      "       <li><a href=\"#\" title=\"Author\" data-slide-target=\"#sb-1\" class=\"w-slide__btn\"><span>Author</span></a></li>\n" + 
-      "     </ul>\n" + 
-      "     <div class=\"loa-wrapper hidden-xs\">\n" + 
-      "     <div id=\"sb-1\" class=\"accordion\">\n" + 
-      "     <div class=\"accordion-tabbed loa-accordion\">\n" + 
-      "     <div class=\"accordion-tabbed__tab-mobile \">\n" + 
-      " <a href=\"#\" data-id=\"a4\" data-db-target-for=\"a4\" title=\"Author\" class=\"author-name accordion-tabbed__control visible-x\"><span>Author</span><i aria-hidden=\"true\" class=\"icon-Email\"></i><i aria-hidden=\"true\" class=\"icon-arrow_d_n\"></i></a>\n" + 
-      " <div data-db-target-of=\"a4\" class=\"author-info accordion-tabbed__content\">\n" + 
-      "    <p class=\"author-type\"></p>\n" + 
-      "    <p></p>\n" + 
-      "    <p>Department of Biology</p>\n" + 
-      "    <div class=\"bottom-info\">\n" + 
-      "       <p><a href=\"/author/Author\">\n" + 
-      "       Search for more papers by this author\n" + 
-      "       </a>\n" + 
-      "       </p>\n" + 
+      "<html class=\"pb-page\" data-request-id=\"3b0ad0c2-6486-4c37-b3b1-febfb45e6b98\" lang=\"en\">\n" + 
+      "  <script type=\"text/javascript\" async=\"\" src=\"https://www.google-analytics.com/analytics.js\"></script>" +
+      "  <head data-pb-dropzone=\"head\">\n" + 
+      "    <link rel=\"schema.DC\" href=\"http://purl.org/DC/elements/1.0/\">\n" + 
+      "    <meta name=\"dc.Date\" scheme=\"WTN8601\" content=\"2017-03-01\">\n" + 
+      "    <meta charset=\"UTF-8\">\n" + 
+      "    <title>EDITOR'S NOTE | American Journal of Psychiatry</title>\n" + 
+      "    <meta data-pb-head=\"head-widgets-end\">\n" + 
+      "  </head>\n" + 
+      "  <body class=\"pb-ui\">\n" + 
+      "    <div id=\"pb-page-content\" data-ng-non-bindable=\"\">\n" + 
+      "      <div data-pb-dropzone=\"main\" data-pb-dropzone-name=\"Main\">\n" + 
+      "        <div class=\"widget pageHeader none  widget-none  widget-compact-all\" id=\"13c35e80-9b5e-479b-a71e-eec581320abf\">\n" + 
+      "          <div class=\"wrapped \">\n" + 
+      "            <div class=\"widget-body body body-none  body-compact-all\">\n" + 
+      "              <header class=\"page-header\">\n" + 
+      "                <div data-pb-dropzone=\"main\">\n" + 
+      "                  <div class=\"widget layout-inline-content alignRight  widget-none  widget-compact-all\">\n" + 
+      "                    <div class=\"wrapped \">\n" + 
+      "                      <div class=\"widget-body body body-none  body-compact-all\">\n" + 
+      "                        <div class=\"inline-dropzone\" data-pb-dropzone=\"content\">\n" + 
+      "                          <div class=\"widget literatumInstitutionBanner none inst-welcome-text widget-none  widget-compact-all\">\n" + 
+      "                            <div class=\"wrapped \">\n" + 
+      "                              <div class=\"widget-body body body-none  body-compact-all\">\n" + 
+      "                                <div class=\"welcome\">\n" + 
+      "                                  <span>\n" + 
+      "                                  <a href=\"http://lane.stanford.edu/index.html\" target=\"_blank\" class=\"institutionLink\"> Access provided </a>\n" + 
+      "                                  </span>\n" + 
+      "                                </div>\n" + 
+      "                              </div>\n" + 
+      "                            </div>\n" + 
+      "                          </div>\n" + 
+      "                          <div class=\"widget literatumNavigationLoginBar none  widget-none  widget-compact-all\" id=\"cb45e9a4-16b2-496d-ab56-03679748b2f9\">\n" + 
+      "                            <div class=\"wrapped \">\n" + 
+      "                              <div class=\"widget-body body body-none  body-compact-all\">\n" + 
+      "                                <div class=\"loginBar\">\n" + 
+      "                                  <a href=\"/action/showLogin?uri=%2Fdoi%2Ffull%2F10.1176%2Fappi.ajp.2017.1743editor\">\n" + 
+      "                                  Sign In\n" + 
+      "                                  </a>\n" + 
+      "                                  &nbsp;|&nbsp;\n" + 
+      "                                  <a href=\"/action/registration?redirectUri=%2Fdoi%2Ffull%2F10.1176%2Fappi.ajp.2017.1743editor\" class=\"register-link\">\n" + 
+      "                                  Register\n" + 
+      "                                  </a>\n" + 
+      "                                </div>\n" + 
+      "                              </div>\n" + 
+      "                            </div>\n" + 
+      "                          </div>\n" + 
+      "                          <div class=\"widget general-html none  widget-none  widget-compact-all\" id=\"2e0349a3-fb1b-442d-85fc-96b757b4b122\">\n" + 
+      "                            <div class=\"wrapped \">\n" + 
+      "                              <div class=\"widget-body body body-none  body-compact-all\">|&nbsp;&nbsp;<a href=\"http://psychiatryonline.org/store/home\">POL Subscriptions</a></div>\n" + 
+      "                            </div>\n" + 
+      "                          </div>\n" + 
+      "                        </div>\n" + 
+      "                      </div>\n" + 
+      "                    </div>\n" + 
+      "                  </div>\n" + 
+      "                  <div class=\"widget general-html none menuXml pso-nav widget-none  widget-compact-all\" id=\"4e77a08e-279b-4d2d-ab49-287ccba5f3fa\">\n" + 
+      "                    <div class=\"wrapped \">\n" + 
+      "                      <div class=\"widget-body body body-none  body-compact-all\">\n" + 
+      "                        <ul class=\"primaryNav\">\n" + 
+      "                          <li><a href=\"http://psychiatryonline.org\">PsychiatryOnline</a></li>\n" + 
+      "                          <li>\n" + 
+      "                            <a href=\"http://dsm.psychiatryonline.org\">DSM Library</a>\n" + 
+      "                            <ul>\n" + 
+      "                              <li><a href=\"http://dsm.psychiatryonline.org/doi/book/10.1176/appi.books.9780890425596\">DSM-5®</a></li>\n" + 
+      "                            </ul>\n" + 
+      "                          </li>\n" + 
+      "                          <li>\n" + 
+      "                            <a href=\"http://psychiatryonline.org/books\">Books</a>\n" + 
+      "                            <ul>\n" + 
+      "                              <li><a href=\"http://psychiatryonline.org/doi/book/10.1176/appi.books.9781585624201\">Textbook</a></li>\n" + 
+      "                              <li><a href=\"http://psychiatryonline.org/books\">More Books</a></li>\n" + 
+      "                            </ul>\n" + 
+      "                          </li>\n" + 
+      "                          <li>\n" + 
+      "                            <a href=\"#\">Collections</a>\n" + 
+      "                            <ul>\n" + 
+      "                              <li><a href=\"http://psychiatryonline.org/psychotherapy\">Psychotherapy Library</a></li>\n" + 
+      "                              <li><a href=\"http://psychiatryonline.org/ebooks\">eBooks</a></li>\n" + 
+      "                            </ul>\n" + 
+      "                          </li>\n" + 
+      "                          <li>\n" + 
+      "                            <a href=\"http://psychiatryonline.org/journals\">Journals</a>\n" + 
+      "                            <ul>\n" + 
+      "                              <li><a href=\"http://ajp.psychiatryonline.org\">The American Journal of Psychiatry</a></li>\n" + 
+      "                              <li><a href=\"http://focus.psychiatryonline.org\">FOCUS</a></li>\n" + 
+      "                              <li><a href=\"http://ps.psychiatryonline.org\">Psychiatric Services</a></li>\n" + 
+      "                            </ul>\n" + 
+      "                          </li>\n" + 
+      "                          <li><a href=\"http://psychnews.psychiatryonline.org\">News</a></li>\n" + 
+      "                          <li><a href=\"http://psychiatryonline.org/guidelines\">APA Guidelines</a></li>\n" + 
+      "                          <li>\n" + 
+      "                            <a href=\"http://psychiatryonline.org/patients\">Patient Education</a>\n" + 
+      "                            <ul>\n" + 
+      "                              <li><a href=\"http://psychiatryonline.org/doi/book/10.1176/appi.books.9781615371280\">What Your </a></li>\n" + 
+      "                              <li><a href=\"http://psychiatryonline.org/doi/book/10.1176/appi.books.9781615370283\">Helping </a></li>\n" + 
+      "                              <li><a href=\"http://psychiatryonline.org/doi/10.1176/appi.books.9781615370740\">Understanding </a></li>\n" + 
+      "                            </ul>\n" + 
+      "                          </li>\n" + 
+      "                          <li><a href=\"http://psychiatryonline.org/international\">International</a></li>\n" + 
+      "                          <li><a href=\"http://psychiatryonline.org/cme\">CME</a></li>\n" + 
+      "                          <li><a href=\"http://psychiatryonline.org/action/showPreferences\">My POL</a></li>\n" + 
+      "                        </ul>\n" + 
+      "                      </div>\n" + 
+      "                    </div>\n" + 
+      "                  </div>\n" + 
+      "                  <div class=\"widget layout-frame none logo-area widget-none  widget-compact-all\" id=\"bb52c9e8-36a4-4f06-b076-7efc3f26a473\">\n" + 
+      "                    <div class=\"wrapped \">\n" + 
+      "                      <div class=\"widget-body body body-none  body-compact-all\">\n" + 
+      "                        <div data-pb-dropzone=\"contents\">\n" + 
+      "                          <div class=\"widget quickSearchWidget alignRight  widget-none  widget-compact-all\" id=\"191aebe7-029c-4c98-968c-118e596d5978\">\n" + 
+      "                            <div class=\"wrapped \">\n" + 
+      "                              <div class=\"widget-body body body-none  body-compact-all\">\n" + 
+      "                                <div class=\"quickSearchFormContainer\">\n" + 
+      "                                </div>\n" + 
+      "                                <div class=\"advancedSearchLinkDropZone\" data-pb-dropzone=\"advancedSearchLinkDropZone\">\n" + 
+      "                                  <div class=\"widget general-html alignRight  widget-none  widget-compact-all\" id=\"df755376-76dc-4e40-bc93-f917707c7646\">\n" + 
+      "                                  </div>\n" + 
+      "                                </div>\n" + 
+      "                              </div>\n" + 
+      "                            </div>\n" + 
+      "                          </div>\n" + 
+      "                        </div>\n" + 
+      "                      </div>\n" + 
+      "                    </div>\n" + 
+      "                  </div>\n" + 
+      "                  <div class=\"widget general-html none menuXml ajp-nav widget-none  widget-compact-all\" id=\"444a132a-c177-432d-9851-305a063fd6ed\">\n" + 
+      "                    <div class=\"wrapped \">\n" + 
+      "                      <div class=\"widget-body body body-none  body-compact-all\">\n" + 
+      "                        <ul class=\"primaryNav\">\n" + 
+      "                          <li><a href=\"/\">Home</a></li>\n" + 
+      "                          <li><a href=\"/current\">Current Issue</a></li>\n" + 
+      "                          <li><a href=\"/loi/ajp\">All Issues</a></li>\n" + 
+      "                        </ul>\n" + 
+      "                      </div>\n" + 
+      "                    </div>\n" + 
+      "                  </div>\n" + 
+      "                </div>\n" + 
+      "              </header>\n" + 
+      "            </div>\n" + 
+      "          </div>\n" + 
+      "        </div>\n" + 
+      "        <div class=\"widget pageBody none  widget-none  widget-compact-all\" id=\"a3907b2c-e067-4eb5-9e12-040b6179d9d6\">\n" + 
+      "          <div class=\"wrapped \">\n" + 
+      "            <div class=\"widget-body body body-none  body-compact-all\">\n" + 
+      "              <!--begin pagefulltext-->\n" + 
+      "              <div class=\"page-body pagefulltext\">\n" + 
+      "                <div data-pb-dropzone=\"main\">\n" + 
+      "                  <div class=\"widget layout-two-columns none articleColumns widget-none  widget-compact-all\" id=\"037a5805-7259-48af-8825-21291d1e258b\">\n" + 
+      "                    <div class=\"wrapped \">\n" + 
+      "                      <div class=\"widget-body body body-none  body-compact-all\">\n" + 
+      "                        <div class=\"pb-columns row-fluid \">\n" + 
+      "                          <div class=\"width_2_3\">\n" + 
+      "                            <div data-pb-dropzone=\"left\" class=\"pb-autoheight\">\n" + 
+      "                              <div class=\"widget literatumBookIssueNavigation none articleContentNavigation widget-none  widget-compact-all\" id=\"95ff3bc6-de68-4ecb-812b-fe6f505b1aa8\">\n" + 
+      "                                <div class=\"wrapped \">\n" + 
+      "                                  <div class=\"widget-body body body-none  body-compact-all\">\n" + 
+      "                                    <div class=\"pager issueBookNavPager\">\n" + 
+      "                                      <span class=\"journalNavLeftTd\">\n" + 
+      "                                      <span class=\"prev placedLeft\">\n" + 
+      "                                      <a href=\"http://ajp.psychiatryonline.org/doi/10.1176/appi.ajp.2017.174301\">\n" + 
+      "                                      Previous Article\n" + 
+      "                                      </a>\n" + 
+      "                                      </span>\n" + 
+      "                                      </span>\n" + 
+      "                                      <span class=\"journalNavCenterTd\">\n" + 
+      "                                        <div class=\"journalNavTitle\">\n" + 
+      "                                          <a href=\"/toc/ajp/174/3\">Volume 174, Issue 3, March 01, 2017</a>, <span class=\"articlePageRange\">pp. 298-298</span>\n" + 
+      "                                        </div>\n" + 
+      "                                      </span>\n" + 
+      "                                      <span class=\"journalNavRightTd\">\n" + 
+      "                                      </span>\n" + 
+      "                                    </div>\n" + 
+      "                                  </div>\n" + 
+      "                                </div>\n" + 
+      "                              </div>\n" + 
+      "                              <div class=\"widget literatumPublicationContentWidget none  widget-none  widget-compact-all\" id=\"75b33ea9-e7d2-43bd-8d65-da6fe6904e73\">\n" + 
+      "                                <div class=\"wrapped \">\n" + 
+      "                                  <div class=\"widget-body body body-none  body-compact-all\">\n" + 
+      "                                    <div class=\"articleMeta ja\">\n" + 
+      "                                      <div class=\"tocHeading\">\n" + 
+      "                                        <b>Editor's Note</b>\n" + 
+      "                                      </div>\n" + 
+      "                                      <div class=\"publicationContentTitle\">\n" + 
+      "                                        <h1>\n" + 
+      "                                          EDITOR'S NOTE\n" + 
+      "                                        </h1>\n" + 
+      "                                      </div>\n" + 
+      "                                      <div class=\"articleMetaDrop publicationContentDropZone\" data-pb-dropzone=\"articleMetaDropZone\">\n" + 
+      "                                      </div>\n" + 
+      "                                      <div class=\"publicationContentAuthors\">\n" + 
+      "                                        <div class=\"hlFld-ContribAuthor\"></div>\n" + 
+      "                                      </div>\n" + 
+      "                                      <div class=\"articleMetaDrop publicationContentDropZone publicationContentDropZone1\" data-pb-dropzone=\"articleMetaDropZone1\">\n" + 
+      "                                      </div>\n" + 
+      "                                      <div class=\"authInfo authInfoLink\" style=\"display: none;\"><a href=\"#\" onclick=\"scrollToAuthAndArtInformation();\">View Author and Article Information</a></div>\n" + 
+      "                                      <div>\n" + 
+      "                                      </div>\n" + 
+      "                                      <div class=\"publicationContentDoi publicationContentEpubDate\">\n" + 
+      "                                        Published online: March 01, 2017\n" + 
+      "                                        &nbsp;|&nbsp;\n" + 
+      "                                        <a href=\"https://doi.org/10.1176/appi.ajp.2017.1743editor\">https://doi.org/10.1176/appi.ajp.2017.1743editor</a>\n" + 
+      "                                      </div>\n" + 
+      "                                    </div>\n" + 
+      "                                    <div class=\"articleToolsDropZone\" data-pb-dropzone=\"articleToolsDropZone\">\n" + 
+      "                                    </div>\n" + 
+      "                                    <div class=\"publication-tabs ja\">\n" + 
+      "                                      <div class=\"tabs tabs-widget\">\n" + 
+      "                                        <ul class=\"tab-nav\" role=\"tablist\">\n" + 
+      "                                          <li role=\"tab\" aria-selected=\"false\">\n" + 
+      "                                            <a href=\"/doi/abs/10.1176/appi.ajp.2017.1743editor\" class=\"show-abstract\">\n" + 
+      "                                            Citation\n" + 
+      "                                            </a>\n" + 
+      "                                          </li>\n" + 
+      "                                          <li class=\"active\" role=\"tab\" aria-selected=\"true\">\n" + 
+      "                                            <a href=\"/doi/full/10.1176/appi.ajp.2017.1743editor\" class=\"show-full\">\n" + 
+      "                                            Full Text\n" + 
+      "                                            </a>\n" + 
+      "                                          </li>\n" + 
+      "                                          <li role=\"tab\" aria-selected=\"false\">\n" + 
+      "                                            <a href=\"http://ajp.psychiatryonline.org/doi/pdf/10.1176/appi.ajp.2017.1743editor\"" +
+      " class=\"show-pdf\" target=\"_self\">\n" + 
+      "                                            PDF\n" + 
+      "                                            </a>\n" + 
+      "                                          </li>\n" + 
+      "                                          <li role=\"tab\" aria-selected=\"false\">\n" + 
+      "                                            <a href=\"http://ajp.psychiatryonline.org/doi/pdfplus/10.1176/appi.ajp.2017.1743editor\" target=\"_self\">\n" + 
+      "                                            PDF Plus\n" + 
+      "                                            </a>\n" + 
+      "                                          </li>\n" + 
+      "                                          <li role=\"tab\" aria-selected=\"false\">\n" + 
+      "                                            <a href=\"#relatedContent\">\n" + 
+      "                                            Related\n" + 
+      "                                            </a>\n" + 
+      "                                          </li>\n" + 
+      "                                        </ul>\n" + 
+      "                                        <div class=\"tab-content \">\n" + 
+      "                                          <a id=\"top-content-scroll\"></a>\n" + 
+      "                                          <div class=\"tab tab-pane active\">\n" + 
+      "                                            <article class=\"article\">\n" + 
+      "                                              <p class=\"fulltext\"></p>\n" + 
+      "                                              <!-- abstract content -->\n" + 
+      "                                              <div class=\"hlFld-Abstract\">\n" + 
+      "                                                <p class=\"fulltext\"></p>\n" + 
+      "                                              </div>\n" + 
+      "                                              <!-- /abstract content --><!-- fulltext content -->\n" + 
+      "                                              <div class=\"hlFld-Fulltext\">\n" + 
+      "                                                <p>The <i>Journal</i> was notified about a complaint (" +
+      "<a class=\"ext-link\" href=\"http://ajp.psychiatryonline.org/doi/full/10.1176/appi.ajp.158.6.906\" target=\"_blank\">" +
+      "http://dx.doi.org/10.1176/appi.ajp.158.6.906</a>).</p>\n" + 
+      "                                              </div>\n" + 
+      "                                              <!-- /fulltext content -->\n" + 
+      "                                              <div class=\"response\">\n" + 
+      "                                                <div class=\"sub-article-title\"></div>\n" + 
+      "                                              </div>\n" + 
+      "                                            </article>\n" + 
+      "                                          </div>\n" + 
+      "                                          <div class=\"tab tab-pane\" id=\"relatedContent\">\n" + 
+      "                                            <div class=\"category\">\n" + 
+      "                                              <h3>Original Article</h3>\n" + 
+      "                                              <ul>\n" + 
+      "                                                <li>\n" + 
+      "                                                  <a href=\"/doi/full/10.1176/appi.ajp.158.6.906\" class=\"ref nowrap\">\n" + 
+      "                                                  Double-Blind\n" + 
+      "                                                  </a>\n" + 
+      "                                                </li>\n" + 
+      "                                              </ul>\n" + 
+      "                                            </div>\n" + 
+      "                                          </div>\n" + 
+      "                                          <div class=\"tab tab-pane\" id=\"cme\">\n" + 
+      "                                            <div data-pb-dropzone=\"cme\">\n" + 
+      "                                            </div>\n" + 
+      "                                          </div>\n" + 
+      "                                        </div>\n" + 
+      "                                      </div>\n" + 
+      "                                    </div>\n" + 
+      "                                    <input id=\"viewLargeImageCaption\" value=\"View Large Image\" type=\"hidden\">\n" + 
+      "                                  </div>\n" + 
+      "                                </div>\n" + 
+      "                              </div>\n" + 
+      "                            </div>\n" + 
+      "                          </div>\n" + 
+      "                          <div class=\"width_1_3\">\n" + 
+      "                            <div data-pb-dropzone=\"right\" class=\"pb-autoheight\">\n" + 
+      "                              <div class=\"widget literatumArticleToolsWidget none  widget-none\"" +
+      " id=\"2a984b58-2a84-4286-a261-a8108df4d8a8\">\n" + 
+      "                                <div class=\"wrapped \">\n" + 
+      "                                  <div class=\"widget-body body body-none \">\n" + 
+      "                                    <div class=\"articleTools\">\n" + 
+      "                                      <ul class=\"linkList blockLinks separators centered\">\n" + 
+      "                                        <li class=\"addToFavs\">\n" + 
+      "                                          <a href=\"/personalize/addFavoritePublication?doi=10.1176%2Fappi.ajp.2017.1743editor\">Add to My POL</a>\n" + 
+      "                                        </li>\n" + 
+      "                                        <li class=\"downloadCitations\">\n" + 
+      "                                          <a href=\"/action/showCitFormats?doi=10.1176%2Fappi.ajp.2017.1743editor\">Send to Citation Mgr</a>\n" + 
+      "                                        </li>\n" + 
+      "                                      </ul>\n" + 
+      "                                    </div>\n" + 
+      "                                  </div>\n" + 
+      "                                </div>\n" + 
+      "                              </div>\n" + 
+      "                              <div class=\"widget layout-two-columns none  widget-none  widget-compact-all\">\n" + 
+      "                                <div class=\"wrapped \">\n" + 
+      "                                  <div class=\"widget-body body body-none  body-compact-all\">\n" + 
+      "                                    <div class=\"pb-columns row-fluid gutterless\">\n" + 
+      "                                      <div class=\"width_5_24\">\n" + 
+      "                                        <div data-pb-dropzone=\"left\" class=\"pb-autoheight\">\n" + 
+      "                                          <div class=\"widget general-html none  widget-none  widget-compact-all\"" +
+      " id=\"1e879678-c84a-44e1-9a30-da2e26c3da18\">\n" + 
+      "                                            <div class=\"wrapped \">\n" + 
+      "                                              <div class=\"widget-body body body-none  body-compact-all\">\n" + 
+      "                                                <script type=\"text/javascript\"></script>\n" + 
+      "                                              </div>\n" + 
+      "                                            </div>\n" + 
+      "                                          </div>\n" + 
+      "                                        </div>\n" + 
+      "                                      </div>\n" + 
+      "                                      <div class=\"width_19_24\">\n" + 
+      "                                        <div data-pb-dropzone=\"right\" class=\"pb-autoheight\">\n" + 
+      "                                          <div class=\"widget general-bookmark-share alignCenter widget-compact-horizontal\">\n" + 
+      "                                            <div class=\"wrapped \">\n" + 
+      "                                              <div class=\"widget-body body body-none  body-compact-horizontal\">\n" + 
+      "                                                <!-- AddThis Button BEGIN -->\n" + 
+      "                                                <div class=\"addthis_toolbox addthis_default_style addthis_32x32_style\"" +
+      " addthis:url=\"https://ajp.psychiatryonline.org/doi/full/10.1176/appi.ajp.2017.1743editor\">\n" + 
+      "                                                  <a class=\"addthis_button_twitter at300b\" title=\"Twitter\" href=\"#\">\n" + 
+      "                                                    <span class=\"at-icon-wrapper\" style=\"background-color: rgb(29, 161, 242);" +
+      " line-height: 32px; height: 32px; width: 32px;\">\n" + 
+      "                                                    </span>\n" + 
+      "                                                  </a>\n" + 
+      "                                                  <div class=\"atclear\"></div>\n" + 
+      "                                                </div>\n" + 
+      "                                                <!-- AddThis Button END -->\n" + 
+      "                                              </div>\n" + 
+      "                                            </div>\n" + 
+      "                                          </div>\n" + 
+      "                                        </div>\n" + 
+      "                                      </div>\n" + 
+      "                                    </div>\n" + 
+      "                                  </div>\n" + 
+      "                                </div>\n" + 
+      "                              </div>\n" + 
+      "                              <div class=\"widget layout-frame none inner-white widget-emphasis\" id=\"f4410c40-ec02-421f-a474-5b07264d4858\">\n" + 
+      "                                <div class=\"wrapped \" id=\"TrendMD\">\n" + 
+      "                                  <div class=\"widget-body body body-emphasis \">\n" + 
+      "                                    <div data-pb-dropzone=\"contents\">\n" + 
+      "                                      <div class=\"widget general-html none  widget-none  widget-compact-vertical\"" +
+      " id=\"6117f7c0-7fe4-4a19-9c90-a141fe2541cf\">\n" + 
+      "                                        <div class=\"wrapped \" id=\"TrendMD\">\n" + 
+      "                                          <div class=\"widget-body body body-none  body-compact-vertical\">\n" + 
+      "                                            <div id=\"trendmd-suggestions\"></div>\n" + 
+      "                                          </div>\n" + 
+      "                                        </div>\n" + 
+      "                                      </div>\n" + 
+      "                                    </div>\n" + 
+      "                                  </div>\n" + 
+      "                                </div>\n" + 
+      "                              </div>\n" + 
+      "                            </div>\n" + 
+      "                          </div>\n" + 
+      "                        </div>\n" + 
+      "                      </div>\n" + 
+      "                    </div>\n" + 
+      "                  </div>\n" + 
+      "                </div>\n" + 
+      "              </div>\n" + 
+      "              <!--end pagefulltext-->\n" + 
+      "            </div>\n" + 
+      "          </div>\n" + 
+      "        </div>\n" + 
+      "        <div class=\"widget pageFooter none  widget-none  widget-compact-all\" id=\"857d8e34-9b91-4e39-a31f-dc42600dc42e\">\n" + 
+      "          <div class=\"wrapped \">\n" + 
+      "            <div class=\"widget-body body body-none  body-compact-all\">\n" + 
+      "              <footer class=\"page-footer\">\n" + 
+      "                <div data-pb-dropzone=\"main\">\n" + 
+      "                  <div class=\"widget layout-two-columns none journal-footer widget-emphasis  widget-compact-all\" id=\"81af7199-c224-44f9-b563-5e3a25b1ba12\">\n" + 
+      "                    <div class=\"wrapped \">\n" + 
+      "                      <div class=\"widget-body body body-emphasis  body-compact-all\"></div>\n" + 
+      "                    </div>\n" + 
+      "                  </div>\n" + 
+      "                  <div class=\"widget layout-frame none site-footer widget-none  widget-compact-all\" id=\"e81e9be5-29c7-4a4d-8f66-4f7292f99263\">\n" + 
+      "                    <div class=\"wrapped \">\n" + 
+      "                      <div class=\"widget-body body body-none  body-compact-all\">\n" + 
+      "                        <div data-pb-dropzone=\"contents\">\n" + 
+      "                          <div class=\"widget layout-three-columns none  widget-none  widget-compact-all\" id=\"baf7b00f-2c80-479e-a4b9-c4cda6e243c1\">\n" + 
+      "                          </div>\n" + 
+      "                          <div class=\"widget general-html none  widget-none\" id=\"5143440b-2a7f-455d-9aef-494cf0659e35\">\n" + 
+      "                            <div class=\"wrapped \">\n" + 
+      "                              <div class=\"widget-body body body-none \">\n" + 
+      "                                <div class=\"site-copyright\">Copyright © American Psychiatric Association</div>\n" + 
+      "                                <div class=\"lit-site\">Powered by <a href=\"http://www.atypon.com/\" target=\"new\">Atypon® Literatum</a></div>\n" + 
+      "                              </div>\n" + 
+      "                            </div>\n" + 
+      "                          </div>\n" + 
+      "                        </div>\n" + 
+      "                      </div>\n" + 
+      "                    </div>\n" + 
+      "                  </div>\n" + 
+      "                </div>\n" + 
+      "              </footer>\n" + 
+      "            </div>\n" + 
+      "          </div>\n" + 
+      "        </div>\n" + 
+      "        <div class=\"widget general-html none  widget-none\" id=\"9b0d00cb-3a46-4474-a164-2b3bc16b9005\">\n" + 
+      "          <div class=\"wrapped \" id=\"open-athens-js\">\n" + 
+      "          </div>\n" + 
+      "        </div>\n" + 
+      "      </div>\n" + 
       "    </div>\n" + 
-      " </div>\n" + 
-      " </div>\n" + 
-      " </div>\n" + 
-      " </div>\n" + 
-      " </div>\n" + 
-      " </div>\n" + 
-      " <div class=\"epub-section\"><span class=\"epub-section__item\"><span class=\"epub-section__state\">Published Online:</span><span class=\"epub-section__date\">1 Jun 2017</span></span><span class=\"epub-section__item\"><a href=\"https://doi.org/10.1152/jn.00002.2017\" class=\"epub-section__doi__text\">https://doi.org/10.1152/jn.00002.2017</a></span></div>\n" + 
-      " <div>\n" + 
-      "              <ul class=\"rlist--inline\"><li class=\"correction\"></li><li class=\"corrections single\"></li><li class=\"latest-version no-border\"><div class=\"versions-ctrl\"><a href=\"http://www.physiology.org/doi/prev/20170728-aop/abs/10.1152/physiolgenomics.00060.2017\">This is the final version - click for previous version</a></div></li></ul>\n" + 
-      " </div>\n" + 
-      " <!--+articleCoolbar()-->\n" + 
-      " <nav class=\"stickybar coolBar trans\">\n" + 
-      " <div class=\"stickybar__wrapper coolBar__wrapper clearfix\">\n" + 
-      " <div class=\"rlist coolBar__zone\">\n" + 
-      "    <!--div.coolBar__section//| pb.renderDropzone(thisWidget, 'coolbarDropZone1')--><a href=\"#\" data-db-target-for=\"article\" data-db-switch=\"icon-close_thin\" data-slide-target=\"#articleMenu\" class=\"coolBar__ctrl hidden-md hidden-lg w-slide__btn\"><i aria-hidden=\"true\" class=\"icon-Icon_About-Article\"></i><span>More</span></a>\n" + 
-      "    <div data-db-target-of=\"article\" id=\"articleMenu\" class=\"coolBar__drop fixed rlist\">\n" + 
-      "       <div data-target=\"article .tab .tab__nav, .coolBar--download .coolBar__drop\" data-remove=\"false\" data-target-class=\"hidden-xs hidden-sm\" data-toggle=\"transplant\" data-direction=\"from\" data-transplant=\"self\" class=\"transplant showit\"></div>\n" + 
-      "    </div>\n" + 
-      " </div>\n" + 
-      " <ul data-cb-group=\"Article\" data-cb-group-icon=\"icon-toc\" class=\"rlist coolBar__first\">\n" + 
-      "    <li class=\"coolBar__section coolBar--sections article-top-section\">\n" + 
-      "       <a href=\"#\" data-db-target-for=\"sections\" data-db-switch=\"icon-close_thin\" title=\"Sections\" data-slide-target=\"#sectionMenu\" class=\"coolBar__ctrl\"><i aria-hidden=\"true\" class=\"icon-Icon_Section-menu\"></i><span>Sections</span></a>\n" + 
-      "       <div data-db-target-of=\"sections\" id=\"sectionMenu\" class=\"coolBar__drop rlist\"></div>\n" + 
-      "    </li>\n" + 
-      " </ul>\n" + 
-      " <ul class=\"coolBar__second rlist\">\n" + 
-      "    <li class=\"coolBar__section coolBar--download hidden-xs hidden-sm\">\n" + 
-      "       <a data-db-target-for=\"pdfLinks\" title=\"PDF\" href=\"#\" aria-haspopup=\"true\" aria-controls=\"download_Pop\" role=\"button\" id=\"download_Ctrl\" class=\"coolBar__ctrl\"><i class=\"icon icon-PDF red_icon\"></i><span>PDF (472 KB)</span></a>\n" + 
-      "       <ul data-db-target-of=\"pdfLinks\" aria-labelledby=\"articleToolsCtrl\" role=\"menu\" class=\"coolBar__drop rlist w-slide--list hidden-xs hidden-sm\">\n" + 
-      " <li><a href=\"http://www.physiology.org/doi/pdf/10.1152/jn.00002.2017\" role=\"menuitem\" target=\"_blank\">Download PDF</a></li>\n" + 
-      "       </ul>\n" + 
-      "    </li>\n" + 
-      " </ul>\n" + 
-      "    </div>\n" + 
-      " </nav>\n" + 
-      " <div>\n" + 
-      " <div class=\"article__body row\">\n" + 
-      " <div class=\"col-md-12\">\n" + 
-      "    <p class=\"fulltext\"></p>\n" + 
-      "    <!--abstract content-->\n" + 
-      "    <div class=\"hlFld-Abstract\">\n" + 
-      "       <p class=\"fulltext\"></p>\n" + 
-      "       <h2 class=\"article-section__title section__title\" id=\"d2276776e1\">Abstract</h2>\n" + 
-      "       <div class=\"abstractSection abstractInFull\">\n" + 
-      " <p>Text...</p>\n" + 
-      "       </div>\n" + 
-      "    </div>\n" + 
-      "    <!--/abstract content--><!--fulltext content-->\n" + 
-      "    <div class=\"hlFld-Fulltext\">\n" + 
-      "       <p>Text...</p>\n" + 
-      "       <h1 class=\"article-section__title section__title\" id=\"_i1\">MATERIALS AND METHODS</h1>\n" + 
-      "       <p>Text...</p>\n" + 
-      "       <figure data-figure-id=\"F0001\" id=\"F0001\" class=\"figure\">\n" + 
-      " <img class=\"figure__image\" src=\"/na101/home/literatum/publisher/medium/z9k0061741260001.gif\" data-lg-src=\"/na101/home/literatum/publisher/images/large/z9k0061741260001.jpeg\" alt=\"Fig. 1.\" />\n" + 
-      " <figcaption>\n" + 
-      "    <strong class=\"figure__title\"></strong>\n" + 
-      "    <span class=\"figure__caption\">\n" + 
-      "       <p>figure caption...</p>\n" + 
-      "    </span>\n" + 
-      " </figcaption>\n" + 
-      "       </figure>\n" + 
-      "       <div class=\"figure-extra\"><a alt=\"figure\" href=\"/na101/home/literatum/publisher/images/large/z9k0061741260001.jpeg\" download=\"\">Download\n" + 
-      "   figure\n" + 
-      " </a><a href=\"/action/downloadFigures?id=F0001&amp;doi=10.1152/jn.00002.2017\" class=\"ppt-figure-link\">Download PowerPoint</a>\n" + 
-      "       </div>\n" + 
-      "       <br /> \n" + 
-      "       <div id=\"T1\" class=\"anchor-spacer\"></div>\n" + 
-      "       <div class=\"article-table-content\" id=\"T1\">\n" + 
-      " <table class=\"table article-section__table\">\n" + 
-      "    <caption>\n" + 
-      "       <strong>\n" + 
-      "          <p><span class=\"captionLabel\">Table 1.</span> Caption...</p>\n" + 
-      "       </strong>\n" + 
-      "    </caption>\n" + 
-      " </table>\n" + 
-      " <div class=\"tableFooter\">\n" + 
-      "    <div class=\"footnote\">\n" + 
-      "       <p>Text...</p>\n" + 
-      "    </div>\n" + 
-      " </div>\n" + 
-      "       </div>\n" + 
-      "       <p>Text...</p>\n" + 
-      "       <div id=\"_i7\" class=\"anchor-spacer\"></div>\n" + 
-      "       <h3 class=\"article-section__title\" id=\"_i7\">Data analysis.</h3>\n" + 
-      "       <p>Text...</p>\n" + 
-      "       <figure data-figure-id=\"F0002\" id=\"F0002\" class=\"figure\">\n" + 
-      " <img class=\"figure__image\" src=\"/na101/home/literatum/publisher/images/medium/z9k0061741260002.gif\" data-lg-src=\"/na101/home/literatum/publisher/images/large/z9k0061741260002.jpeg\" alt=\"Fig. 2.\" />\n" + 
-      " <figcaption>\n" + 
-      "    <strong class=\"figure__title\"></strong>\n" + 
-      "    <span class=\"figure__caption\">\n" + 
-      "       <p>Text...</p>\n" + 
-      "    </span>\n" + 
-      " </figcaption>\n" + 
-      "       </figure>\n" + 
-      "       <div class=\"figure-extra\"><a alt=\"figure\" href=\"/na101/home/literatum/publisher/images/large/z9k0061741260002.jpeg\" download=\"\">Download\n" + 
-      "   figure\n" + 
-      " </a><a href=\"/action/downloadFigures?id=F0002&amp;doi=10.1152/jn.00002.2017\" class=\"ppt-figure-link\">Download PowerPoint</a>\n" + 
-      "       </div>\n" + 
-      "       <br /> \n" + 
-      "       <p>Text...</p>\n" + 
-      "       <div class=\"ack\">\n" + 
-      " <h2 class=\"article-section__title section__title\" id=\"_i36\">ACKNOWLEDGMENTS</h2>\n" + 
-      " <p>Text...</p>\n" + 
-      "       </div>\n" + 
-      "    </div>\n" + 
-      "    <!--/fulltext content-->\n" + 
-      "    <p class=\"fulltext\"></p>\n" + 
-      "    <h2 class=\"article-section__title section__title\" id=\"d2276776e177\">AUTHOR NOTES</h2>\n" + 
-      "    <h2 class=\"article-section__title section__title\" id=\"d2276776e1s\">Supplemental data</h2>\n" + 
-      "    <ul>\n" + 
-      "       <li><a href=\"/doi/suppl/10.1152/jn.00002.2017/suppl_file/supplemental+table+1.xls\">supplemental table 1.xls (890.5 kb)</a></li>\n" + 
-      "    </ul>\n" + 
-      "    <div class=\"response\">\n" + 
-      "       <div class=\"sub-article-title\"></div>\n" + 
-      "    </div>\n" + 
-      " </div>\n" + 
-      " </div>\n" + 
-      " </div>\n" + 
-      " <div class=\"content-navigation clearfix\">\n" + 
-      " <a href=\"/doi/10.1152/jn.00860.2016\" title=\"Previous\" class=\"content-navigation__btn--pre\"><i class=\"icon-arrow_l\"></i><span>Previous</span></a>\n" + 
-      " <div class=\"content-navigation__extra\">\n" + 
-      " <a href=\"#\" title=\"Back to Top\" class=\"content-navigation__btn-back\">Back to Top</a>\n" + 
-      " </div>\n" + 
-      " <a href=\"/doi/10.1152/jn.00756.2016\" title=\"Next\" class=\"content-navigation__btn--next\"><span>Next</span><i class=\"icon-arrow_r\"></i></a>\n" + 
-      " </div>\n" + 
-      " </div>\n" + 
-      " <div class=\"col-sm-4 hidden-xs hidden-sm sticko__parent article-row-right gutterless\">\n" + 
-      " <!--+articleTab()-->\n" + 
-      " <div class=\"tab tab--slide tab--flex sticko__md tabs--xs dynamic-sticko  tab--flex tabs--xs\">\n" + 
-      " <ul data-mobile-toggle=\"slide\" class=\"rlist tab__nav w-slide--list\">\n" + 
-      " <li role=\"presentation\"><a href=\"#pane-pcw-figures\" aria-controls=\"#pane-pcw-figures\" role=\"tab\" data-toggle=\"tab\" title=\"figures\" id=\"pane-pcw-figurescon\" data-slide-target=\"#pane-pcw-figures\" class=\"figures-tab\"><i aria-hidden=\"true\" class=\"icon-Icon_Images\"></i><span>Figures</span></a></li>\n" + 
-      " <li role=\"presentation\"><a href=\"#pane-pcw-references\" aria-controls=\"#pane-pcw-references\" role=\"tab\" data-toggle=\"tab\" title=\"references\" id=\"pane-pcw-referencescon\" data-slide-target=\"#pane-pcw-references\" class=\"references-tab\"><i aria-hidden=\"true\" class=\"icon-Icon_Links-References\"></i><span>References</span></a></li>\n" + 
-      " <li role=\"presentation\"><a href=\"#pane-pcw-related\" aria-controls=\"#pane-pcw-related\" role=\"tab\" data-toggle=\"tab\" title=\"related\" id=\"pane-pcw-relatedcon\" data-slide-target=\"#pane-pcw-related\" class=\"related-tab\"><i aria-hidden=\"true\" class=\"icon-related2\"></i><span>Related</span></a></li>\n" + 
-      " <li role=\"presentation\"><a href=\"#pane-pcw-details\" aria-controls=\"#pane-pcw-details\" role=\"tab\" data-toggle=\"tab\" title=\"details\" id=\"pane-pcw-detailscon\" data-slide-target=\"#pane-pcw-details\" class=\"details-tab\"><i aria-hidden=\"true\" class=\"icon-Icon_Information\"></i><span>Information</span></a></li>\n" + 
-      " </ul>\n" + 
-      " <ul class=\"rlist tab__content sticko__child scroll-to-target\">\n" + 
-      " <li id=\"pane-pcw-figures\" aria-labelledby=\"pane-pcw-figurescon\" role=\"tabpanel\" class=\"tab__pane\"></li>\n" + 
-      " <li id=\"pane-pcw-references\" aria-labelledby=\"pane-pcw-referencescon\" role=\"tabpanel\" class=\"tab__pane\"></li>\n" + 
-      " <li id=\"pane-pcw-related\" aria-labelledby=\"pane-pcw-relatedcon\" role=\"tabpanel\" class=\"tab__pane tab__pane--clear\">\n" + 
-      " <div class=\"accordion\">\n" + 
-      " <ul class=\"accordion-tabbed rlist\">\n" + 
-      " <li class=\"accordion-tabbed__tab js--open\">\n" + 
-      "    <a href=\"#\" title=\"Similar\" aria-expanded=\"false\" aria-controls=\"relatedTab3\" class=\"accordion-tabbed__control\">Recommended</a>\n" + 
-      "    <div id=\"relatedTab3\" class=\"accordion-tabbed__content\">\n" + 
-      "    <ul class=\"rlist lot\">\n" + 
-      "     <li class=\"grid-item\">\n" + 
-      "     <div class=\"creative-work\">\n" + 
-      "     <div class=\"delayLoad\">\n" + 
-      "     <a href=\"/doi/full/10.1152/jn.00499.2006\" title=\"Genetic Modifications\">\n" + 
-      "     <h5 class=\"creative-work__title\">Genetic Modifications</h5>\n" + 
-      "     </a>\n" + 
-      "     <div class=\"meta\"><i class=\"icon-date\"></i><span class=\"publication-time\"><time datetime=\"November 2006\">November 2006</time></span><span class=\"publication-journal-title\"><a href=\"/journal/jn\">Journal of Neurophysiology</a></span></div>\n" + 
-      "     </div>\n" + 
-      "     </div>\n" + 
-      "     </li>\n" + 
-      "     </ul>\n" + 
-      "     <div class=\"card\">\n" + 
-      "     <h3><a href=\"/toc/jn/117/6\">More from this issue ></a></h3>\n" + 
-      "     </div>\n" + 
-      "    </div>\n" + 
-      " </li>\n" + 
-      " </ul>\n" + 
-      " </div>\n" + 
-      " </li>\n" + 
-      " <li id=\"pane-pcw-details\" aria-labelledby=\"pane-pcw-detailscon\" role=\"tabpanel\" class=\"tab__pane\">\n" + 
-      "    <div data-widget-def=\"graphQueryWidget\" data-widget-id=\"id\" class=\"cover-image\">\n" + 
-      "       <!-- - var onePageArticle = pageRange.includes(\"-\")--><!-- Determine whether this article is not part of a regular issue-->\n" + 
-      "       <div class=\"article-cover-image\">\n" + 
-      " <div class=\"cover-image\">\n" + 
-      "    <div class=\"cover-image__image\"><img src=\"/na101/home/literatum/publisher/physio/.issue-6.cover.gif\" width=\"100\" height=\"130\" alt=\"Journal of Neurophysiology 117 6 cover image\"></div>\n" + 
-      "    <div class=\"cover-image__details\">\n" + 
-      "       <div class=\"parent-item\"> <a href=\"/toc/jn/117/6\" class=\"volume\"><span class=\"volume\">Volume 117</span><span class=\"issue\">Issue 6</span></a><span class=\"coverDate\">June 2017</span><span class=\"pages\">Pages 2125-2136</span></div>\n" + 
-      "    </div>\n" + 
-      " </div>\n" + 
-      " <hr>\n" + 
-      " <a href=\"/doi/suppl/10.1152/jn.00002.2017\" class=\"suppl-info-link\">Supplemental Information</a><br>\n" + 
-      " <hr>\n" + 
-      "       </div>\n" + 
-      "    </div>\n" + 
-      "    <section class=\"section\">\n" + 
-      "       <div class=\"section__body\">\n" + 
-      " <strong class=\"section__title\"> Copyright & Permissions</strong>\n" + 
-      " <p>Copyright 2017 the American Physiological Society</p>\n" + 
-      "       </div>\n" + 
-      "    </section>\n" + 
-      "    <section class=\"article__keyword\">\n" + 
-      "       <strong class=\"section__title\">Keywords</strong>\n" + 
-      "       <div class=\"section__body\">\n" + 
-      "       </div>\n" + 
-      "    </section>\n" + 
-      "    <h3>Metrics</h3>\n" + 
-      "    <div data-widget-def=\"literatumContentItemDownloadCount\" data-widget-id=\"id\" class=\"article-downloads\">\n" + 
-      "                Downloaded 15 times\n" + 
-      "    </div>\n" + 
-      "    <div id=\"doi_altmetric_drawer_area\">\n" + 
-      "       <div data-badge-details=\"right\" data-badge-type=\"donut\" data-doi=\"10.1152/jn.00002.2017\" data-hide-no-mentions=\"true\" class=\"altmetric-embed\">\n" + 
-      "       </div>\n" + 
-      "    </div>\n" + 
-      " </li>\n" + 
-      " <li class=\"tab__spinner\"><img src=\"/pb-assets/images/spinner.gif\" id=\"spinner\" style=\"width: 100%\"/></li>\n" + 
-      " </ul>\n" + 
-      " </div>\n" + 
-      " </div>\n" + 
-      " </div>\n" + 
-      "  </article>\n" + 
-      "  </div>\n" + 
-      "  </div>\n" + 
-      "  </div>\n" + 
-      "  </div>\n" + 
-      "  </main>\n" + 
-      "  <footer>\n" + 
-      "  <div data-widget-def=\"ux3-layout-widget\" data-widget-id=\"id\" class=\"footer-top\">\n" + 
-      "  <div class=\"container\">\n" + 
-      "  <div class=\"row\">\n" + 
-      "  <div class=\"col-sm-3\">\n" + 
-      "  <div data-widget-def=\"ux3-general-image\" data-widget-id=\"id\" class=\"aps-logo\">\n" + 
-      "     <a href=\"http://www.the-aps.org\" title=\"American Physiological Society\"><img alt=\"American Physiological Society\" src=\"/pb-assets/images/aps-logo-footer.svg\"/></a>\n" + 
-      "  </div>\n" + 
-      "  <div>\n" + 
-      "  <div class=\"contact\">\n" + 
-      "  <div class=\"contact\">\n" + 
-      "  <nav class=\"contact__nav\">\n" + 
-      "  <ul class=\"rlist--inline separator separated-list footer--contact__list hidden-lg hidden-md\">\n" + 
-      " <li><a href=\"/contact\">Contact Us</a></li>\n" + 
-      " <li><a href=\"/about\">About Us</a></li>\n" + 
-      "  </ul>\n" + 
-      "  </nav>\n" + 
-      "  </div>\n" + 
-      "     </div>\n" + 
-      "  </div>\n" + 
-      "  </div>\n" + 
-      "  <div class=\"col-lg-9 sitemap hidden-xs hidden-sm col-sm-9\">\n" + 
-      "  <div class=\" col-sm-6\">\n" + 
-      "     <h6>Journals</h6>\n" + 
-      "  </div>\n" + 
-      "  <div class=\" col-sm-3\">\n" + 
-      "     <h6>Information For</h6>\n" + 
-      "  </div>\n" + 
-      "  </div>\n" + 
-      "  </div>\n" + 
-      "  </div>\n" + 
-      "  </div>\n" + 
-      "  </footer>\n" + 
-      "  </div>\n" + 
-      "  </div>\n" + 
-      "   </body>\n" + 
+      "  </body>\n" + 
       "</html>";
   
   private static final String art1ContentCrawlFiltered = 
-      "<html lang=\"en\" class=\"pb-page\" >\n" + 
-      "   <head data-pb-dropzone=\"head\">\n" + 
-      "      <meta name=\"citation_journal_title\" content=\"Journal of Neurophysiology\" />\n" + 
-      "   </head>\n" + 
-      "   <body class=\"pb-ui\">\n" + 
-      "   <div id=\"pb-page-content\" data-ng-non-bindable>\n" + 
-      "   <div data-pb-dropzone=\"main\" data-pb-dropzone-name=\"Main\">\n" + 
-      "   <div class=\"base\" data-db-parent-of=\"sb1\">\n" + 
-      "   \n" + 
-      "   </div>\n" + 
-      "   <main class=\"content jn pageBody\">\n" + 
-      "   <div>\n" + 
-      "   \n" + 
-      "   <div class=\"container\">\n" + 
-      "   <div class=\"row\">\n" + 
-      "   <div class=\"publication_container clearfix\">\n" +
-      "  \n" + 
-      "  <article data-figures=\"http://www.physiology.org/action/ajaxShowFigures?doi=10.1152%2Fjn.00002.2017&amp;ajax=true\" data-references=\"http://www.physiology.org/action/ajaxShowEnhancedAbstract?doi=10.1152%2Fjn.00002.2017&amp;ajax=true\" data-enable-mathjax=\"true\" class=\"container\">\n" + 
-      "     <div class=\"row\">\n" + 
-      "     <div class=\"col-sm-8 col-md-8 article__content\">\n" + 
-      "     <div class=\"citation\">\n" + 
-      "     <div class=\"citation__top\"><span class=\"citation__top__item article__access\"><i class=\"citation__access__icon icon-lock_open\"></i></span><span class=\"article__breadcrumbs\"><span class=\"citation__top__item article__tocHeading\">Research Article</span><span class=\"citation__top__item article__tocHeading\">Control of Homeostasis</span></span></div>\n" + 
-      "     <h1 class=\"citation__title\">Cit Title</h1>\n" + 
-      "     <ul class=\"rlist--inline loa mobile-authors visible-xs\" title=\"list of authors\">\n" + 
-      "       <li><a href=\"#\" title=\"Author\" data-slide-target=\"#sb-1\" class=\"w-slide__btn\"><span>Author</span></a></li>\n" + 
-      "     </ul>\n" + 
-      "     <div class=\"loa-wrapper hidden-xs\">\n" + 
-      "     <div id=\"sb-1\" class=\"accordion\">\n" + 
-      "     <div class=\"accordion-tabbed loa-accordion\">\n" + 
-      "     <div class=\"accordion-tabbed__tab-mobile \">\n" + 
-      " <a href=\"#\" data-id=\"a4\" data-db-target-for=\"a4\" title=\"Author\" class=\"author-name accordion-tabbed__control visible-x\"><span>Author</span><i aria-hidden=\"true\" class=\"icon-Email\"></i><i aria-hidden=\"true\" class=\"icon-arrow_d_n\"></i></a>\n" + 
-      " <div data-db-target-of=\"a4\" class=\"author-info accordion-tabbed__content\">\n" + 
-      "    <p class=\"author-type\"></p>\n" + 
-      "    <p></p>\n" + 
-      "    <p>Department of Biology</p>\n" + 
-      "    <div class=\"bottom-info\">\n" + 
-      "       <p>\n" + 
-      "       </p>\n" + 
+      "<html class=\"pb-page\" data-request-id=\"3b0ad0c2-6486-4c37-b3b1-febfb45e6b98\" lang=\"en\">\n" + 
+      "  <script type=\"text/javascript\" async=\"\" src=\"https://www.google-analytics.com/analytics.js\"></script>" +
+      "  <head data-pb-dropzone=\"head\">\n" + 
+      "    <link rel=\"schema.DC\" href=\"http://purl.org/DC/elements/1.0/\">\n" + 
+      "    <meta name=\"dc.Date\" scheme=\"WTN8601\" content=\"2017-03-01\">\n" + 
+      "    <meta charset=\"UTF-8\">\n" + 
+      "    <title>EDITOR'S NOTE | American Journal of Psychiatry</title>\n" + 
+      "    <meta data-pb-head=\"head-widgets-end\">\n" + 
+      "  </head>\n" + 
+      "  <body class=\"pb-ui\">\n" + 
+      "    <div id=\"pb-page-content\" data-ng-non-bindable=\"\">\n" + 
+      "      <div data-pb-dropzone=\"main\" data-pb-dropzone-name=\"Main\">\n" + 
+      "        <div class=\"widget pageHeader none  widget-none  widget-compact-all\" id=\"13c35e80-9b5e-479b-a71e-eec581320abf\">\n" + 
+      "          <div class=\"wrapped \">\n" + 
+      "            <div class=\"widget-body body body-none  body-compact-all\">\n" + 
+      "              \n" + 
+      "            </div>\n" + 
+      "          </div>\n" + 
+      "        </div>\n" + 
+      "        <div class=\"widget pageBody none  widget-none  widget-compact-all\" id=\"a3907b2c-e067-4eb5-9e12-040b6179d9d6\">\n" + 
+      "          <div class=\"wrapped \">\n" + 
+      "            <div class=\"widget-body body body-none  body-compact-all\">\n" + 
+      "              <!--begin pagefulltext-->\n" + 
+      "              <div class=\"page-body pagefulltext\">\n" + 
+      "                <div data-pb-dropzone=\"main\">\n" + 
+      "                  <div class=\"widget layout-two-columns none articleColumns widget-none  widget-compact-all\" id=\"037a5805-7259-48af-8825-21291d1e258b\">\n" + 
+      "                    <div class=\"wrapped \">\n" + 
+      "                      <div class=\"widget-body body body-none  body-compact-all\">\n" + 
+      "                        <div class=\"pb-columns row-fluid \">\n" + 
+      "                          <div class=\"width_2_3\">\n" + 
+      "                            <div data-pb-dropzone=\"left\" class=\"pb-autoheight\">\n" + 
+      "                              \n" + 
+      "                              <div class=\"widget literatumPublicationContentWidget none  widget-none  widget-compact-all\" id=\"75b33ea9-e7d2-43bd-8d65-da6fe6904e73\">\n" + 
+      "                                <div class=\"wrapped \">\n" + 
+      "                                  <div class=\"widget-body body body-none  body-compact-all\">\n" + 
+      "                                    <div class=\"articleMeta ja\">\n" + 
+      "                                      <div class=\"tocHeading\">\n" + 
+      "                                        <b>Editor's Note</b>\n" + 
+      "                                      </div>\n" + 
+      "                                      <div class=\"publicationContentTitle\">\n" + 
+      "                                        <h1>\n" + 
+      "                                          EDITOR'S NOTE\n" + 
+      "                                        </h1>\n" + 
+      "                                      </div>\n" + 
+      "                                      <div class=\"articleMetaDrop publicationContentDropZone\" data-pb-dropzone=\"articleMetaDropZone\">\n" + 
+      "                                      </div>\n" + 
+      "                                      <div class=\"publicationContentAuthors\">\n" + 
+      "                                        <div class=\"hlFld-ContribAuthor\"></div>\n" + 
+      "                                      </div>\n" + 
+      "                                      <div class=\"articleMetaDrop publicationContentDropZone publicationContentDropZone1\" data-pb-dropzone=\"articleMetaDropZone1\">\n" + 
+      "                                      </div>\n" + 
+      "                                      <div class=\"authInfo authInfoLink\" style=\"display: none;\"><a href=\"#\" onclick=\"scrollToAuthAndArtInformation();\">View Author and Article Information</a></div>\n" + 
+      "                                      <div>\n" + 
+      "                                      </div>\n" + 
+      "                                      <div class=\"publicationContentDoi publicationContentEpubDate\">\n" + 
+      "                                        Published online: March 01, 2017\n" + 
+      "                                        &nbsp;|&nbsp;\n" + 
+      "                                        <a href=\"https://doi.org/10.1176/appi.ajp.2017.1743editor\">https://doi.org/10.1176/appi.ajp.2017.1743editor</a>\n" + 
+      "                                      </div>\n" + 
+      "                                    </div>\n" + 
+      "                                    <div class=\"articleToolsDropZone\" data-pb-dropzone=\"articleToolsDropZone\">\n" + 
+      "                                    </div>\n" + 
+      "                                    <div class=\"publication-tabs ja\">\n" + 
+      "                                      <div class=\"tabs tabs-widget\">\n" + 
+      "                                        <ul class=\"tab-nav\" role=\"tablist\">\n" + 
+      "                                          <li role=\"tab\" aria-selected=\"false\">\n" + 
+      "                                            <a href=\"/doi/abs/10.1176/appi.ajp.2017.1743editor\" class=\"show-abstract\">\n" + 
+      "                                            Citation\n" + 
+      "                                            </a>\n" + 
+      "                                          </li>\n" + 
+      "                                          <li class=\"active\" role=\"tab\" aria-selected=\"true\">\n" + 
+      "                                            <a href=\"/doi/full/10.1176/appi.ajp.2017.1743editor\" class=\"show-full\">\n" + 
+      "                                            Full Text\n" + 
+      "                                            </a>\n" + 
+      "                                          </li>\n" + 
+      "                                          <li role=\"tab\" aria-selected=\"false\">\n" + 
+      "                                            <a href=\"http://ajp.psychiatryonline.org/doi/pdf/10.1176/appi.ajp.2017.1743editor\"" +
+      " class=\"show-pdf\" target=\"_self\">\n" + 
+      "                                            PDF\n" + 
+      "                                            </a>\n" + 
+      "                                          </li>\n" + 
+      "                                          <li role=\"tab\" aria-selected=\"false\">\n" + 
+      "                                            <a href=\"http://ajp.psychiatryonline.org/doi/pdfplus/10.1176/appi.ajp.2017.1743editor\" target=\"_self\">\n" + 
+      "                                            PDF Plus\n" + 
+      "                                            </a>\n" + 
+      "                                          </li>\n" + 
+      "                                          <li role=\"tab\" aria-selected=\"false\">\n" + 
+      "                                            <a href=\"#relatedContent\">\n" + 
+      "                                            Related\n" + 
+      "                                            </a>\n" + 
+      "                                          </li>\n" + 
+      "                                        </ul>\n" + 
+      "                                        <div class=\"tab-content \">\n" + 
+      "                                          <a id=\"top-content-scroll\"></a>\n" + 
+      "                                          <div class=\"tab tab-pane active\">\n" + 
+      "                                            <article class=\"article\">\n" + 
+      "                                              <p class=\"fulltext\"></p>\n" + 
+      "                                              <!-- abstract content -->\n" + 
+      "                                              <div class=\"hlFld-Abstract\">\n" + 
+      "                                                <p class=\"fulltext\"></p>\n" + 
+      "                                              </div>\n" + 
+      "                                              <!-- /abstract content --><!-- fulltext content -->\n" + 
+      "                                              <div class=\"hlFld-Fulltext\">\n" + 
+      "                                                <p>The <i>Journal</i> was notified about a complaint (" +
+      "<a class=\"ext-link\" href=\"http://ajp.psychiatryonline.org/doi/full/10.1176/appi.ajp.158.6.906\" target=\"_blank\">" +
+      "http://dx.doi.org/10.1176/appi.ajp.158.6.906</a>).</p>\n" + 
+      "                                              </div>\n" + 
+      "                                              <!-- /fulltext content -->\n" + 
+      "                                              <div class=\"response\">\n" + 
+      "                                                <div class=\"sub-article-title\"></div>\n" + 
+      "                                              </div>\n" + 
+      "                                            </article>\n" + 
+      "                                          </div>\n" + 
+      "                                          \n" + 
+      "                                          \n" + 
+      "                                        </div>\n" + 
+      "                                      </div>\n" + 
+      "                                    </div>\n" + 
+      "                                    <input id=\"viewLargeImageCaption\" value=\"View Large Image\" type=\"hidden\">\n" + 
+      "                                  </div>\n" + 
+      "                                </div>\n" + 
+      "                              </div>\n" + 
+      "                            </div>\n" + 
+      "                          </div>\n" + 
+      "                          <div class=\"width_1_3\">\n" + 
+      "                            <div data-pb-dropzone=\"right\" class=\"pb-autoheight\">" + 
+      "<div class=\"widget literatumArticleToolsWidget none  widget-none\" id=\"2a984b58-2a84-4286-a261-a8108df4d8a8\">" + 
+      "<div class=\"wrapped \">" + 
+      "<div class=\"widget-body body body-none \">" + 
+      "<div class=\"articleTools\">" + 
+      "<ul class=\"linkList blockLinks separators centered\">" + 
+      "<li class=\"downloadCitations\">" + 
+      "<a href=\"/action/showCitFormats?doi=10.1176%2Fappi.ajp.2017.1743editor\">Send to Citation Mgr</a>" + 
+      "</li>" + 
+      "</ul>" + 
+      "</div>" + 
+      "</div>" + 
+      "</div>" + 
+      "</div>" + 
+      "</div>\n" + 
+      "                          </div>\n" + 
+      "                        </div>\n" + 
+      "                      </div>\n" + 
+      "                    </div>\n" + 
+      "                  </div>\n" + 
+      "                </div>\n" + 
+      "              </div>\n" + 
+      "              <!--end pagefulltext-->\n" + 
+      "            </div>\n" + 
+      "          </div>\n" + 
+      "        </div>\n" + 
+      "        <div class=\"widget pageFooter none  widget-none  widget-compact-all\" id=\"857d8e34-9b91-4e39-a31f-dc42600dc42e\">\n" + 
+      "          <div class=\"wrapped \">\n" + 
+      "            <div class=\"widget-body body body-none  body-compact-all\">\n" + 
+      "              \n" + 
+      "            </div>\n" + 
+      "          </div>\n" + 
+      "        </div>\n" + 
+      "        <div class=\"widget general-html none  widget-none\" id=\"9b0d00cb-3a46-4474-a164-2b3bc16b9005\">\n" + 
+      "          <div class=\"wrapped \" id=\"open-athens-js\">\n" + 
+      "          </div>\n" + 
+      "        </div>\n" + 
+      "      </div>\n" + 
       "    </div>\n" + 
-      " </div>\n" + 
-      " </div>\n" + 
-      " </div>\n" + 
-      " </div>\n" + 
-      " </div>\n" + 
-      " </div>\n" + 
-      " <div class=\"epub-section\"><span class=\"epub-section__item\"><span class=\"epub-section__state\">Published Online:</span><span class=\"epub-section__date\">1 Jun 2017</span></span><span class=\"epub-section__item\"><a href=\"https://doi.org/10.1152/jn.00002.2017\" class=\"epub-section__doi__text\">https://doi.org/10.1152/jn.00002.2017</a></span></div>\n" + 
-      " <div>\n" + 
-      "              <ul class=\"rlist--inline\"></ul>\n" + 
-      " </div>\n" + 
-      " <!--+articleCoolbar()-->\n" + 
-      " <nav class=\"stickybar coolBar trans\">\n" + 
-      " <div class=\"stickybar__wrapper coolBar__wrapper clearfix\">\n" + 
-      " <div class=\"rlist coolBar__zone\">\n" + 
-      "    <!--div.coolBar__section//| pb.renderDropzone(thisWidget, 'coolbarDropZone1')--><a href=\"#\" data-db-target-for=\"article\" data-db-switch=\"icon-close_thin\" data-slide-target=\"#articleMenu\" class=\"coolBar__ctrl hidden-md hidden-lg w-slide__btn\"><i aria-hidden=\"true\" class=\"icon-Icon_About-Article\"></i><span>More</span></a>\n" + 
-      "    <div data-db-target-of=\"article\" id=\"articleMenu\" class=\"coolBar__drop fixed rlist\">\n" + 
-      "       <div data-target=\"article .tab .tab__nav, .coolBar--download .coolBar__drop\" data-remove=\"false\" data-target-class=\"hidden-xs hidden-sm\" data-toggle=\"transplant\" data-direction=\"from\" data-transplant=\"self\" class=\"transplant showit\"></div>\n" + 
-      "    </div>\n" + 
-      " </div>\n" + 
-      " <ul data-cb-group=\"Article\" data-cb-group-icon=\"icon-toc\" class=\"rlist coolBar__first\">\n" + 
-      "    <li class=\"coolBar__section coolBar--sections article-top-section\">\n" + 
-      "       <a href=\"#\" data-db-target-for=\"sections\" data-db-switch=\"icon-close_thin\" title=\"Sections\" data-slide-target=\"#sectionMenu\" class=\"coolBar__ctrl\"><i aria-hidden=\"true\" class=\"icon-Icon_Section-menu\"></i><span>Sections</span></a>\n" + 
-      "       <div data-db-target-of=\"sections\" id=\"sectionMenu\" class=\"coolBar__drop rlist\"></div>\n" + 
-      "    </li>\n" + 
-      " </ul>\n" + 
-      " <ul class=\"coolBar__second rlist\">\n" + 
-      "    <li class=\"coolBar__section coolBar--download hidden-xs hidden-sm\">\n" + 
-      "       <a data-db-target-for=\"pdfLinks\" title=\"PDF\" href=\"#\" aria-haspopup=\"true\" aria-controls=\"download_Pop\" role=\"button\" id=\"download_Ctrl\" class=\"coolBar__ctrl\"><i class=\"icon icon-PDF red_icon\"></i><span>PDF (472 KB)</span></a>\n" + 
-      "       <ul data-db-target-of=\"pdfLinks\" aria-labelledby=\"articleToolsCtrl\" role=\"menu\" class=\"coolBar__drop rlist w-slide--list hidden-xs hidden-sm\">\n" + 
-      " <li><a href=\"http://www.physiology.org/doi/pdf/10.1152/jn.00002.2017\" role=\"menuitem\" target=\"_blank\">Download PDF</a></li>\n" + 
-      "       </ul>\n" + 
-      "    </li>\n" + 
-      " </ul>\n" + 
-      "    </div>\n" + 
-      " </nav>\n" + 
-      " <div>\n" + 
-      " <div class=\"article__body row\">\n" + 
-      " <div class=\"col-md-12\">\n" + 
-      "    <p class=\"fulltext\"></p>\n" + 
-      "    <!--abstract content-->\n" + 
-      "    <div class=\"hlFld-Abstract\">\n" + 
-      "       <p class=\"fulltext\"></p>\n" + 
-      "       <h2 class=\"article-section__title section__title\" id=\"d2276776e1\">Abstract</h2>\n" + 
-      "       <div class=\"abstractSection abstractInFull\">\n" + 
-      " <p>Text...</p>\n" + 
-      "       </div>\n" + 
-      "    </div>\n" + 
-      "    <!--/abstract content--><!--fulltext content-->\n" + 
-      "    <div class=\"hlFld-Fulltext\">\n" + 
-      "       <p>Text...</p>\n" + 
-      "       <h1 class=\"article-section__title section__title\" id=\"_i1\">MATERIALS AND METHODS</h1>\n" + 
-      "       <p>Text...</p>\n" + 
-      "       <figure data-figure-id=\"F0001\" id=\"F0001\" class=\"figure\">\n" + 
-      " <img class=\"figure__image\" src=\"/na101/home/literatum/publisher/medium/z9k0061741260001.gif\" data-lg-src=\"/na101/home/literatum/publisher/images/large/z9k0061741260001.jpeg\" alt=\"Fig. 1.\" />\n" + 
-      " <figcaption>\n" + 
-      "    <strong class=\"figure__title\"></strong>\n" + 
-      "    <span class=\"figure__caption\">\n" + 
-      "       <p>figure caption...</p>\n" + 
-      "    </span>\n" + 
-      " </figcaption>\n" + 
-      "       </figure>\n" + 
-      "       <div class=\"figure-extra\"><a alt=\"figure\" href=\"/na101/home/literatum/publisher/images/large/z9k0061741260001.jpeg\" download=\"\">Download\n" + 
-      "   figure\n" + 
-      " </a><a href=\"/action/downloadFigures?id=F0001&amp;doi=10.1152/jn.00002.2017\" class=\"ppt-figure-link\">Download PowerPoint</a>\n" + 
-      "       </div>\n" + 
-      "       <br /> \n" + 
-      "       <div id=\"T1\" class=\"anchor-spacer\"></div>\n" + 
-      "       <div class=\"article-table-content\" id=\"T1\">\n" + 
-      " <table class=\"table article-section__table\">\n" + 
-      "    <caption>\n" + 
-      "       <strong>\n" + 
-      "          <p><span class=\"captionLabel\">Table 1.</span> Caption...</p>\n" + 
-      "       </strong>\n" + 
-      "    </caption>\n" + 
-      " </table>\n" + 
-      " <div class=\"tableFooter\">\n" + 
-      "    <div class=\"footnote\">\n" + 
-      "       <p>Text...</p>\n" + 
-      "    </div>\n" + 
-      " </div>\n" + 
-      "       </div>\n" + 
-      "       <p>Text...</p>\n" + 
-      "       <div id=\"_i7\" class=\"anchor-spacer\"></div>\n" + 
-      "       <h3 class=\"article-section__title\" id=\"_i7\">Data analysis.</h3>\n" + 
-      "       <p>Text...</p>\n" + 
-      "       <figure data-figure-id=\"F0002\" id=\"F0002\" class=\"figure\">\n" + 
-      " <img class=\"figure__image\" src=\"/na101/home/literatum/publisher/images/medium/z9k0061741260002.gif\" data-lg-src=\"/na101/home/literatum/publisher/images/large/z9k0061741260002.jpeg\" alt=\"Fig. 2.\" />\n" + 
-      " <figcaption>\n" + 
-      "    <strong class=\"figure__title\"></strong>\n" + 
-      "    <span class=\"figure__caption\">\n" + 
-      "       <p>Text...</p>\n" + 
-      "    </span>\n" + 
-      " </figcaption>\n" + 
-      "       </figure>\n" + 
-      "       <div class=\"figure-extra\"><a alt=\"figure\" href=\"/na101/home/literatum/publisher/images/large/z9k0061741260002.jpeg\" download=\"\">Download\n" + 
-      "   figure\n" + 
-      " </a><a href=\"/action/downloadFigures?id=F0002&amp;doi=10.1152/jn.00002.2017\" class=\"ppt-figure-link\">Download PowerPoint</a>\n" + 
-      "       </div>\n" + 
-      "       <br /> \n" + 
-      "       <p>Text...</p>\n" + 
-      "       <div class=\"ack\">\n" + 
-      " <h2 class=\"article-section__title section__title\" id=\"_i36\">ACKNOWLEDGMENTS</h2>\n" + 
-      " <p>Text...</p>\n" + 
-      "       </div>\n" + 
-      "    </div>\n" + 
-      "    <!--/fulltext content-->\n" + 
-      "    <p class=\"fulltext\"></p>\n" + 
-      "    <h2 class=\"article-section__title section__title\" id=\"d2276776e177\">AUTHOR NOTES</h2>\n" + 
-      "    <h2 class=\"article-section__title section__title\" id=\"d2276776e1s\">Supplemental data</h2>\n" + 
-      "    <ul>\n" + 
-      "       <li><a href=\"/doi/suppl/10.1152/jn.00002.2017/suppl_file/supplemental+table+1.xls\">supplemental table 1.xls (890.5 kb)</a></li>\n" + 
-      "    </ul>\n" + 
-      "    <div class=\"response\">\n" + 
-      "       <div class=\"sub-article-title\"></div>\n" + 
-      "    </div>\n" + 
-      " </div>\n" + 
-      " </div>\n" + 
-      " </div>\n" + 
-      " \n" + 
-      " </div>\n" + 
-      " <div class=\"col-sm-4 hidden-xs hidden-sm sticko__parent article-row-right gutterless\">\n" + 
-      " <!--+articleTab()-->\n" + 
-      " <div class=\"tab tab--slide tab--flex sticko__md tabs--xs dynamic-sticko  tab--flex tabs--xs\">\n" + 
-      " <ul data-mobile-toggle=\"slide\" class=\"rlist tab__nav w-slide--list\">\n" + 
-      " <li role=\"presentation\"><a href=\"#pane-pcw-figures\" aria-controls=\"#pane-pcw-figures\" role=\"tab\" data-toggle=\"tab\" title=\"figures\" id=\"pane-pcw-figurescon\" data-slide-target=\"#pane-pcw-figures\" class=\"figures-tab\"><i aria-hidden=\"true\" class=\"icon-Icon_Images\"></i><span>Figures</span></a></li>\n" + 
-      " <li role=\"presentation\"><a href=\"#pane-pcw-references\" aria-controls=\"#pane-pcw-references\" role=\"tab\" data-toggle=\"tab\" title=\"references\" id=\"pane-pcw-referencescon\" data-slide-target=\"#pane-pcw-references\" class=\"references-tab\"><i aria-hidden=\"true\" class=\"icon-Icon_Links-References\"></i><span>References</span></a></li>\n" + 
-      " <li role=\"presentation\"><a href=\"#pane-pcw-related\" aria-controls=\"#pane-pcw-related\" role=\"tab\" data-toggle=\"tab\" title=\"related\" id=\"pane-pcw-relatedcon\" data-slide-target=\"#pane-pcw-related\" class=\"related-tab\"><i aria-hidden=\"true\" class=\"icon-related2\"></i><span>Related</span></a></li>\n" + 
-      " <li role=\"presentation\"><a href=\"#pane-pcw-details\" aria-controls=\"#pane-pcw-details\" role=\"tab\" data-toggle=\"tab\" title=\"details\" id=\"pane-pcw-detailscon\" data-slide-target=\"#pane-pcw-details\" class=\"details-tab\"><i aria-hidden=\"true\" class=\"icon-Icon_Information\"></i><span>Information</span></a></li>\n" + 
-      " </ul>\n" + 
-      " <ul class=\"rlist tab__content sticko__child scroll-to-target\">\n" + 
-      " <li id=\"pane-pcw-figures\" aria-labelledby=\"pane-pcw-figurescon\" role=\"tabpanel\" class=\"tab__pane\"></li>\n" + 
-      " \n" + 
-      " \n" + 
-      " <li id=\"pane-pcw-details\" aria-labelledby=\"pane-pcw-detailscon\" role=\"tabpanel\" class=\"tab__pane\">\n" + 
-      "    <div data-widget-def=\"graphQueryWidget\" data-widget-id=\"id\" class=\"cover-image\">\n" + 
-      "       <!-- - var onePageArticle = pageRange.includes(\"-\")--><!-- Determine whether this article is not part of a regular issue-->\n" + 
-      "       <div class=\"article-cover-image\">\n" + 
-      " <div class=\"cover-image\">\n" + 
-      "    <div class=\"cover-image__image\"><img src=\"/na101/home/literatum/publisher/physio/.issue-6.cover.gif\" width=\"100\" height=\"130\" alt=\"Journal of Neurophysiology 117 6 cover image\"></div>\n" + 
-      "    <div class=\"cover-image__details\">\n" + 
-      "       <div class=\"parent-item\"> <a href=\"/toc/jn/117/6\" class=\"volume\"><span class=\"volume\">Volume 117</span><span class=\"issue\">Issue 6</span></a><span class=\"coverDate\">June 2017</span><span class=\"pages\">Pages 2125-2136</span></div>\n" + 
-      "    </div>\n" + 
-      " </div>\n" + 
-      " <hr>\n" + 
-      " <a href=\"/doi/suppl/10.1152/jn.00002.2017\" class=\"suppl-info-link\">Supplemental Information</a><br>\n" + 
-      " <hr>\n" + 
-      "       </div>\n" + 
-      "    </div>\n" + 
-      "    <section class=\"section\">\n" + 
-      "       <div class=\"section__body\">\n" + 
-      " <strong class=\"section__title\"> Copyright & Permissions</strong>\n" + 
-      " <p>Copyright 2017 the American Physiological Society</p>\n" + 
-      "       </div>\n" + 
-      "    </section>\n" + 
-      "    <section class=\"article__keyword\">\n" + 
-      "       <strong class=\"section__title\">Keywords</strong>\n" + 
-      "       <div class=\"section__body\">\n" + 
-      "       </div>\n" + 
-      "    </section>\n" + 
-      "    <h3>Metrics</h3>\n" + 
-      "    <div data-widget-def=\"literatumContentItemDownloadCount\" data-widget-id=\"id\" class=\"article-downloads\">\n" + 
-      "                Downloaded 15 times\n" + 
-      "    </div>\n" + 
-      "    <div id=\"doi_altmetric_drawer_area\">\n" + 
-      "       <div data-badge-details=\"right\" data-badge-type=\"donut\" data-doi=\"10.1152/jn.00002.2017\" data-hide-no-mentions=\"true\" class=\"altmetric-embed\">\n" + 
-      "       </div>\n" + 
-      "    </div>\n" + 
-      " </li>\n" + 
-      " <li class=\"tab__spinner\"><img src=\"/pb-assets/images/spinner.gif\" id=\"spinner\" style=\"width: 100%\"/></li>\n" + 
-      " </ul>\n" + 
-      " </div>\n" + 
-      " </div>\n" + 
-      " </div>\n" + 
-      "  </article>\n" + 
-      "  </div>\n" + 
-      "  </div>\n" + 
-      "  </div>\n" + 
-      "  </div>\n" + 
-      "  </main>\n" + 
-      "  \n" + 
-      "  </div>\n" + 
-      "  </div>\n" + 
-      "   </body>\n" + 
+      "  </body>\n" + 
       "</html>";
   
   private static final String art1ContentHashFiltered = 
-      "<div class=\"col-sm-8 col-md-8 article__content\">\n" + 
-      "     <div class=\"citation\">\n" + 
-      "     <div class=\"citation__top\"><span class=\"citation__top__item article__access\"><i class=\"citation__access__icon icon-lock_open\"></i></span><span class=\"article__breadcrumbs\"><span class=\"citation__top__item article__tocHeading\">Research Article</span><span class=\"citation__top__item article__tocHeading\">Control of Homeostasis</span></span></div>\n" + 
-      "     <h1 class=\"citation__title\">Cit Title</h1>\n" + 
-      "     <ul class=\"rlist--inline loa mobile-authors visible-xs\" title=\"list of authors\">\n" + 
-      "       <li><a href=\"#\" title=\"Author\" data-slide-target=\"#sb-1\" class=\"w-slide__btn\"><span>Author</span></a></li>\n" + 
-      "     </ul>\n" + 
-      "     <div class=\"loa-wrapper hidden-xs\">\n" + 
-      "     <div  class=\"accordion\">\n" + 
-      "     <div class=\"accordion-tabbed loa-accordion\">\n" + 
-      "     <div class=\"accordion-tabbed__tab-mobile \">\n" + 
-      " <a href=\"#\" data-id=\"a4\" data-db-target-for=\"a4\" title=\"Author\" class=\"author-name accordion-tabbed__control visible-x\"><span>Author</span><i aria-hidden=\"true\" class=\"icon-Email\"></i><i aria-hidden=\"true\" class=\"icon-arrow_d_n\"></i></a>\n" + 
-      " \n" + 
-      " </div>\n" + 
-      " </div>\n" + 
-      " </div>\n" + 
-      " </div>\n" + 
-      " </div>\n" + 
-      " <div class=\"epub-section\"><span class=\"epub-section__item\"><span class=\"epub-section__state\">Published Online:</span><span class=\"epub-section__date\">1 Jun 2017</span></span><span class=\"epub-section__item\"><a href=\"https://doi.org/10.1152/jn.00002.2017\" class=\"epub-section__doi__text\">https://doi.org/10.1152/jn.00002.2017</a></span></div>\n" + 
-      " <div>\n" + 
-      "              <ul class=\"rlist--inline\"></ul>\n" + 
-      " </div>\n" + 
-      " \n" + 
-      " \n" + 
-      " <div>\n" + 
-      " <div class=\"article__body row\">\n" + 
-      " <div class=\"col-md-12\">\n" + 
-      "    <p class=\"fulltext\"></p>\n" + 
-      "    \n" + 
-      "    <div class=\"hlFld-Abstract\">\n" + 
-      "       <p class=\"fulltext\"></p>\n" + 
-      "       <h2 class=\"article-section__title section__title\" >Abstract</h2>\n" + 
-      "       <div class=\"abstractSection abstractInFull\">\n" + 
-      " <p>Text...</p>\n" + 
-      "       </div>\n" + 
-      "    </div>\n" + 
-      "    \n" + 
-      "    <div class=\"hlFld-Fulltext\">\n" + 
-      "       <p>Text...</p>\n" + 
-      "       <h1 class=\"article-section__title section__title\" >MATERIALS AND METHODS</h1>\n" + 
-      "       <p>Text...</p>\n" + 
-      "       <figure data-figure-id=\"F0001\"  class=\"figure\">\n" + 
-      " <img class=\"figure__image\" src=\"/na101/home/literatum/publisher/medium/z9k0061741260001.gif\" data-lg-src=\"/na101/home/literatum/publisher/images/large/z9k0061741260001.jpeg\" alt=\"Fig. 1.\" />\n" + 
-      " <figcaption>\n" + 
-      "    <strong class=\"figure__title\"></strong>\n" + 
-      "    <span class=\"figure__caption\">\n" + 
-      "       <p>figure caption...</p>\n" + 
-      "    </span>\n" + 
-      " </figcaption>\n" + 
-      "       </figure>\n" + 
-      "       <div class=\"figure-extra\"><a alt=\"figure\" href=\"/na101/home/literatum/publisher/images/large/z9k0061741260001.jpeg\" download=\"\">Download\n" + 
-      "   figure\n" + 
-      " </a><a href=\"/action/downloadFigures?id=F0001&amp;doi=10.1152/jn.00002.2017\" class=\"ppt-figure-link\">Download PowerPoint</a>\n" + 
-      "       </div>\n" + 
-      "       <br /> \n" + 
-      "       <div  class=\"anchor-spacer\"></div>\n" + 
-      "       <div class=\"article-table-content\" >\n" + 
-      " <table class=\"table article-section__table\">\n" + 
-      "    <caption>\n" + 
-      "       <strong>\n" + 
-      "          <p><span class=\"captionLabel\">Table 1.</span> Caption...</p>\n" + 
-      "       </strong>\n" + 
-      "    </caption>\n" + 
-      " </table>\n" + 
-      " <div class=\"tableFooter\">\n" + 
-      "    <div class=\"footnote\">\n" + 
-      "       <p>Text...</p>\n" + 
-      "    </div>\n" + 
-      " </div>\n" + 
-      "       </div>\n" + 
-      "       <p>Text...</p>\n" + 
-      "       <div  class=\"anchor-spacer\"></div>\n" + 
-      "       <h3 class=\"article-section__title\" >Data analysis.</h3>\n" + 
-      "       <p>Text...</p>\n" + 
-      "       <figure data-figure-id=\"F0002\"  class=\"figure\">\n" + 
-      " <img class=\"figure__image\" src=\"/na101/home/literatum/publisher/images/medium/z9k0061741260002.gif\" data-lg-src=\"/na101/home/literatum/publisher/images/large/z9k0061741260002.jpeg\" alt=\"Fig. 2.\" />\n" + 
-      " <figcaption>\n" + 
-      "    <strong class=\"figure__title\"></strong>\n" + 
-      "    <span class=\"figure__caption\">\n" + 
-      "       <p>Text...</p>\n" + 
-      "    </span>\n" + 
-      " </figcaption>\n" + 
-      "       </figure>\n" + 
-      "       <div class=\"figure-extra\"><a alt=\"figure\" href=\"/na101/home/literatum/publisher/images/large/z9k0061741260002.jpeg\" download=\"\">Download\n" + 
-      "   figure\n" + 
-      " </a><a href=\"/action/downloadFigures?id=F0002&amp;doi=10.1152/jn.00002.2017\" class=\"ppt-figure-link\">Download PowerPoint</a>\n" + 
-      "       </div>\n" + 
-      "       <br /> \n" + 
-      "       <p>Text...</p>\n" + 
-      "       <div class=\"ack\">\n" + 
-      " <h2 class=\"article-section__title section__title\" >ACKNOWLEDGMENTS</h2>\n" + 
-      " <p>Text...</p>\n" + 
-      "       </div>\n" + 
-      "    </div>\n" + 
-      "    \n" + 
-      "    <p class=\"fulltext\"></p>\n" + 
-      "    <h2 class=\"article-section__title section__title\" >AUTHOR NOTES</h2>\n" + 
-      "    <h2 class=\"article-section__title section__title\" >Supplemental data</h2>\n" + 
-      "    <ul>\n" + 
-      "       <li><a href=\"/doi/suppl/10.1152/jn.00002.2017/suppl_file/supplemental+table+1.xls\">supplemental table 1.xls (890.5 kb)</a></li>\n" + 
-      "    </ul>\n" + 
-      "    <div class=\"response\">\n" + 
-      "       <div class=\"sub-article-title\"></div>\n" + 
-      "    </div>\n" + 
-      " </div>\n" + 
-      " </div>\n" + 
-      " </div>\n" + 
-      " \n" + 
-      " </div>";
+      "<div class=\"widget literatumPublicationContentWidget none  widget-none  widget-compact-all\" >\n" + 
+      "                                <div class=\"wrapped \">\n" + 
+      "                                  <div class=\"widget-body body body-none  body-compact-all\">\n" + 
+      "                                    <div class=\"articleMeta ja\">\n" + 
+      "                                      <div class=\"tocHeading\">\n" + 
+      "                                        <b>Editor's Note</b>\n" + 
+      "                                      </div>\n" + 
+      "                                      <div class=\"publicationContentTitle\">\n" + 
+      "                                        <h1>\n" + 
+      "                                          EDITOR'S NOTE\n" + 
+      "                                        </h1>\n" + 
+      "                                      </div>\n" + 
+      "                                      <div class=\"articleMetaDrop publicationContentDropZone\" data-pb-dropzone=\"articleMetaDropZone\">\n" + 
+      "                                      </div>\n" + 
+      "                                      <div class=\"publicationContentAuthors\">\n" + 
+      "                                        <div class=\"hlFld-ContribAuthor\"></div>\n" + 
+      "                                      </div>\n" + 
+      "                                      <div class=\"articleMetaDrop publicationContentDropZone publicationContentDropZone1\" data-pb-dropzone=\"articleMetaDropZone1\">\n" + 
+      "                                      </div>\n" + 
+      "                                      <div class=\"authInfo authInfoLink\" style=\"display: none;\"><a href=\"#\" onclick=\"scrollToAuthAndArtInformation();\">View Author and Article Information</a></div>\n" + 
+      "                                      <div>\n" + 
+      "                                      </div>\n" + 
+      "                                      <div class=\"publicationContentDoi publicationContentEpubDate\">\n" + 
+      "                                        Published online: March 01, 2017\n" + 
+      "                                        &nbsp;|&nbsp;\n" + 
+      "                                        <a href=\"https://doi.org/10.1176/appi.ajp.2017.1743editor\">https://doi.org/10.1176/appi.ajp.2017.1743editor</a>\n" + 
+      "                                      </div>\n" + 
+      "                                    </div>\n" + 
+      "                                    <div class=\"articleToolsDropZone\" data-pb-dropzone=\"articleToolsDropZone\">\n" + 
+      "                                    </div>\n" + 
+      "                                    <div class=\"publication-tabs ja\">\n" + 
+      "                                      <div class=\"tabs tabs-widget\">\n" + 
+      "                                        \n" + 
+      "                                        <div class=\"tab-content \">\n" + 
+      "                                          <a ></a>\n" + 
+      "                                          <div class=\"tab tab-pane active\">\n" + 
+      "                                            <article class=\"article\">\n" + 
+      "                                              <p class=\"fulltext\"></p>\n" + 
+      "                                              \n" + 
+      "                                              <div class=\"hlFld-Abstract\">\n" + 
+      "                                                <p class=\"fulltext\"></p>\n" + 
+      "                                              </div>\n" + 
+      "                                              \n" + 
+      "                                              <div class=\"hlFld-Fulltext\">\n" + 
+      "                                                <p>The <i>Journal</i> was notified about a complaint (" +
+      "<a class=\"ext-link\" href=\"http://ajp.psychiatryonline.org/doi/full/10.1176/appi.ajp.158.6.906\" target=\"_blank\">" +
+      "http://dx.doi.org/10.1176/appi.ajp.158.6.906</a>).</p>\n" + 
+      "                                              </div>\n" + 
+      "                                              \n" + 
+      "                                              \n" + 
+      "                                            </article>\n" + 
+      "                                          </div>\n" + 
+      "                                          \n" + 
+      "                                          \n" + 
+      "                                        </div>\n" + 
+      "                                      </div>\n" + 
+      "                                    </div>\n" + 
+      "                                    <input  value=\"View Large Image\" type=\"hidden\">\n" + 
+      "                                  </div>\n" + 
+      "                                </div>\n" + 
+      "                              </div>";
    /*
   private static final String art1ContentHashFiltered = 
-      " Research Article Control of Homeostasis" + 
-      " Cit Title" + 
-      " Author" + 
-      " Author" + 
-      " Published Online: 1 Jun 2017 https://doi.org/10.1152/jn.00002.2017" + 
-      " Abstract" + 
-      " Text..." + 
-      " Text..." + 
-      " MATERIALS AND METHODS" + 
-      " Text..." + 
-      "" + 
-      "" + 
-      "" + 
-      "" + 
-      "" + 
-      " figure caption..." + 
-      "" + 
-      "" + 
-      "" + 
-      " Download" + 
-      " figure" + 
-      " Download PowerPoint" + 
-      "" + 
-      "" + 
-      "" + 
-      "" + 
-      "" + 
-      "" + 
-      "" + 
-      " Table 1. Caption..." + 
-      "" + 
-      "" + 
-      "" + 
-      "" + 
-      "" + 
-      " Text..." + 
-      "" + 
-      "" + 
-      "" + 
-      " Text..." + 
-      "" + 
-      " Data analysis." + 
-      " Text..." + 
-      "" + 
-      "" + 
-      "" + 
-      "" + 
-      "" + 
-      " Text..." + 
-      "" + 
-      "" + 
-      "" + 
-      " Download" + 
-      " figure" + 
-      " Download PowerPoint" + 
-      "" + 
-      "" + 
-      " Text..." + 
-      "" + 
-      " ACKNOWLEDGMENTS" + 
-      " Text..." + 
-      "" + 
-      "" + 
-      "" + 
-      "" + 
-      " AUTHOR NOTES" + 
-      " Supplemental data" + 
-      "" + 
-      " supplemental table 1.xls (890.5 kb)" + 
-      "" + 
-      "" + 
-      "" + 
-      "" + 
-      "" + 
-      "" + 
-      "" + 
       "" + 
       " ";
    */
@@ -1194,7 +1086,7 @@ public class TestAmPsychPubHtmlFilterFactory extends LockssTestCase {
           throws PluginException, IOException {
     InputStream actIn; 
     actIn = fact.createFilteredInputStream(au, 
-        new StringInputStream(nameToHash), Constants.DEFAULT_ENCODING);
+        new StringInputStream(nameToHash), Constants.ENCODING_UTF_8);
     assertEquals(expectedStr, StringUtil.fromInputStream(actIn));
   }
   
@@ -1221,7 +1113,7 @@ public class TestAmPsychPubHtmlFilterFactory extends LockssTestCase {
       variantFact = new AmPsychPubHtmlCrawlFilterFactory();
       doFilterTest(mau, variantFact, manifestContent, manifestContent); 
       doFilterTest(mau, variantFact, tocContent, tocContentCrawlFiltered); 
-// XXX     doFilterTest(mau, variantFact, art1Content, art1ContentCrawlFiltered); 
+      doFilterTest(mau, variantFact, art1Content, art1ContentCrawlFiltered); 
       doFilterTest(mau, variantFact, citContent, citContent); 
     }
   }
@@ -1231,8 +1123,8 @@ public class TestAmPsychPubHtmlFilterFactory extends LockssTestCase {
      public void testFiltering() throws Exception {
       variantFact = new AmPsychPubHtmlHashFilterFactory();
       doFilterTest(mau, variantFact, manifestContent, manifestContentFiltered); 
-// XXX      doFilterTest(mau, variantFact, tocContent, tocContentHashFiltered); 
-// XXX      doFilterTest(mau, variantFact, art1Content, art1ContentHashFiltered); 
+      doFilterTest(mau, variantFact, tocContent, tocContentHashFiltered); 
+      doFilterTest(mau, variantFact, art1Content, art1ContentHashFiltered); 
       doFilterTest(mau, variantFact, citContent, citContentHashFiltered); 
      }
    }
