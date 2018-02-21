@@ -6606,7 +6606,7 @@
     au < manifest ; exists ; 2007 ; 2007 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 1 ; 1 ; >
     au < manifest ; exists ; 2008 ; 2008 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 2 ; 2 ; >
     au < manifest ; exists ; 2009 ; 2009 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2010 ; 2010 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2010 ; 2010 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 4 ; 4 ; >
     au < crawling ; exists ; 2011 ; 2011 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 5 ; 5 ; >
     au < crawling ; exists ; 2012 ; 2012 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 6 ; 6 ; >
     au < frozen ; exists ; 2013 ; 2013 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 7 ; 7 ; >
@@ -6634,7 +6634,7 @@
     au < crawling ; exists ; 2012 ; 2012 ; Applied Clinical Informatics Volume 3 ; 3 ; >
     au < frozen ; exists ; 2013 ; 2013 ; Applied Clinical Informatics Volume 4 ; 4 ; >
     au < crawling ; exists ; 2014 ; 2014 ; Applied Clinical Informatics Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2015 ; 2015 ; Applied Clinical Informatics Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2015 ; 2015 ; Applied Clinical Informatics Volume 6 ; 6 ; >
     au < crawling ; exists ; 2016 ; 2016 ; Applied Clinical Informatics Volume 7 ; 7 ; >
     au < crawling ; exists ; 2017 ; 2017 ; Applied Clinical Informatics Volume 8 ; 8 ; >
     au < manifest ; exists ; 2018 ; 2018 ; Applied Clinical Informatics Volume 9 ; 9 ; >
@@ -6665,7 +6665,7 @@
     au < crawling ; exists ; 2013 ; 2013 ; Arthritis und Rheuma Volume 33 ; 33 ; >
     au < crawling ; exists ; 2014 ; 2014 ; Arthritis und Rheuma Volume 34 ; 34 ; >
     au < crawling ; exists ; 2015 ; 2015 ; Arthritis und Rheuma Volume 35 ; 35 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; Arthritis und Rheuma Volume 36 ; 36 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; Arthritis und Rheuma Volume 36 ; 36 ; >
     au < crawling ; exists ; 2017 ; 2017 ; Arthritis und Rheuma Volume 37 ; 37 ; >
 
   }
@@ -6711,7 +6711,7 @@
     au < crawling ; exists ; 2010 ; 2010 ; Hämostaseologie Volume 30 ; 30 ; >
     au < frozen ; exists ; 2011 ; 2011 ; Hämostaseologie Volume 31 ; 31 ; >
     au < crawling ; exists ; 2012 ; 2012 ; Hämostaseologie Volume 32 ; 32 ; >
-    au < crawling ; exists ; 2013 ; 2013 ; Hämostaseologie Volume 33 ; 33 ; >
+    au < frozen ; exists ; 2013 ; 2013 ; Hämostaseologie Volume 33 ; 33 ; >
     au < crawling ; exists ; 2014 ; 2014 ; Hämostaseologie Volume 34 ; 34 ; >
     au < frozen ; exists ; 2015 ; 2015 ; Hämostaseologie Volume 35 ; 35 ; >
     au < crawling ; exists ; 2016 ; 2016 ; Hämostaseologie Volume 36 ; 36 ; >
@@ -6814,7 +6814,7 @@
     au < crawling ; exists ; 2011 ; 2011 ; Methods of Information in Medicine Volume 50 ; 50 ; >
     au < crawling ; exists ; 2012 ; 2012 ; Methods of Information in Medicine Volume 51 ; 51 ; >
     au < crawling ; exists ; 2013 ; 2013 ; Methods of Information in Medicine Volume 52 ; 52 ; >
-    au < crawling ; exists ; 2014 ; 2014 ; Methods of Information in Medicine Volume 53 ; 53 ; >
+    au < frozen ; exists ; 2014 ; 2014 ; Methods of Information in Medicine Volume 53 ; 53 ; >
     au < crawling ; exists ; 2015 ; 2015 ; Methods of Information in Medicine Volume 54 ; 54 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Methods of Information in Medicine Volume 55 ; 55 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2017 ; 2017 ; Methods of Information in Medicine Volume 56 ; 56 ; >
@@ -6962,7 +6962,7 @@
 
     au < manifest ; exists ; 2008 ; 2008 ; Phlebologie Volume 37 ; 37 ; >
     au < manifest ; exists ; 2009 ; 2009 ; Phlebologie Volume 38 ; 38 ; >
-    au < crawling ; exists ; 2010 ; 2010 ; Phlebologie Volume 39 ; 39 ; >
+    au < frozen ; exists ; 2010 ; 2010 ; Phlebologie Volume 39 ; 39 ; >
     au < crawling ; exists ; 2011 ; 2011 ; Phlebologie Volume 40 ; 40 ; >
     au < crawling ; exists ; 2012 ; 2012 ; Phlebologie Volume 41 ; 41 ; >
     au < frozen ; exists ; 2013 ; 2013 ; Phlebologie Volume 42 ; 42 ; >
