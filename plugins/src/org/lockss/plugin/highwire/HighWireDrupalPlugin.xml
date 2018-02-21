@@ -53,7 +53,7 @@
    -->
   <entry>
     <string>plugin_version</string>
-    <string>70</string>
+    <string>71</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -192,6 +192,7 @@
       <string>502=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
       <string>503=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
       <string>504=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
+      <string>520=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
       <!-- Invalid content-type file; retry. Captures cases of html returned instead of PDF 
         This usually was an html page with backend error message
         Make no store/no_fail due to article html returned for http://caseconnector.jbjs.org/content/2/2/e16

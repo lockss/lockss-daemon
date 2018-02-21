@@ -101,7 +101,12 @@ public class HighWireDrupalHttpResponseHandler implements CacheResultHandler {
           return new CacheException.RetryableNetworkException_2_10S("504 Gateway Time-out");
         }
         return new NoFailRetryableNetworkException_2_10S("504 Gateway Time-out (non-fatal)");
-        
+
+      case 520:
+        // http://www.plantcell.org/content/29/2/202.full.pdf 520 Origin Error
+        logger.debug2("520: " + url);
+        return new CacheException.RetryableNetworkException_3_10S("520 Origin Error");
+
       default:
         logger.warning("Unexpected responseCode (" + responseCode + ") in handleResult(): AU " + au.getName() + "; URL " + url);
         throw new UnsupportedOperationException("Unexpected responseCode (" + responseCode + ")");
