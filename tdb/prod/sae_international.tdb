@@ -7,6 +7,7 @@
   plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
   implicit < status ; year ; name ; param[volume_name] >
   #base_url change to http://subs.sae.org/e-journal-#, found at 04/25/2017
+  #that's gone - all the journals are now at https://saemobilus.sae.org/ 2/2018 - unfamiliar platform
 
   {
   
