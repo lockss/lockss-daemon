@@ -59,11 +59,11 @@ public class AmPsychPubHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterF
       HtmlNodeFilters.tagWithAttribute("div", "id", "relatedContent"),
       HtmlNodeFilters.tagWithAttribute("div", "id", "cme"),
       // Related
-      HtmlNodeFilters.allExceptSubtree(
-          HtmlNodeFilters.tagWithAttributeRegex("div", "data-pb-dropzone", "right"),
-          HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/action/showCitFormats\\?")),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "id", "(altmetric|trendmd)", true),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(altmetric|trendmd)", true),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "bookmark"),
       // never want these links, excluded lists was too long
-      HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/servlet/linkout[?]type="),
+      HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/servlet/linkout[?](suffix|type)="),
       HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/author/"),
       
   };

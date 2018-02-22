@@ -261,10 +261,7 @@ public class TestAmPsychPubHtmlFilterFactory extends LockssTestCase {
       "                              </div>\n" + 
       "                              <div class=\"art_meta citation\"><span class=\"issueInfo\">174(3)</span><span class=\"articlePageRange \"><span class=\"issueInfoComma\">, </span>pp. 230<span>-</span>236</span></div>\n" + 
       "                              <div class=\"tocArticleDoi\"><a href=\"https://doi.org/10.1176/appi.ajp.2016.16020224\">https://doi.org/10.1176/appi.ajp.2016.16020224</a></div>\n" + 
-      "                              <a href=\"/servlet/linkout?suffix=s0&amp;dbid=16384&amp;type=tocOpenUrl&amp;doi=10.1176/appi.ajp.2016.16020224" +
-      "&amp;url=http%3A%2F%2Fsfx.stanford.edu%2Flocal%3Fsid%3Dapp%26iuid%3D9332%26id%3Ddoi%3A10.1176%2Fappi.ajp.2016.16020224\"\n" +
-      " title=\"OpenURL\" onclick=\"newWindow(this.href);return false\"\n" +
-      " class=\"sfxLink\"><img src=\"/userimages/9332/sfxbutton\" alt=\"OpenURL\"></a>\n" + 
+      "                              \n" + 
       "                              <div class=\"tocDeliverFormatsLinks\">\n" + 
       "                                <a class=\"ref nowrap abs\" href=\"/doi/abs/10.1176/appi.ajp.2016.16020224\">Abstract</a> |\n" + 
       "                                <a class=\"ref nowrap full\" href=\"/doi/full/10.1176/appi.ajp.2016.16020224\">Full Text</a> |\n" + 
@@ -906,21 +903,50 @@ public class TestAmPsychPubHtmlFilterFactory extends LockssTestCase {
       "                            </div>\n" + 
       "                          </div>\n" + 
       "                          <div class=\"width_1_3\">\n" + 
-      "                            <div data-pb-dropzone=\"right\" class=\"pb-autoheight\">" + 
-      "<div class=\"widget literatumArticleToolsWidget none  widget-none\" id=\"2a984b58-2a84-4286-a261-a8108df4d8a8\">" + 
-      "<div class=\"wrapped \">" + 
-      "<div class=\"widget-body body body-none \">" + 
-      "<div class=\"articleTools\">" + 
+      "                            <div data-pb-dropzone=\"right\" class=\"pb-autoheight\">\n" + 
+      "                              <div class=\"widget literatumArticleToolsWidget none  widget-none\"" +
+      " id=\"2a984b58-2a84-4286-a261-a8108df4d8a8\">\n" + 
+      "                                <div class=\"wrapped \">\n" + 
+      "                                  <div class=\"widget-body body body-none \">\n" + 
+      "                                    <div class=\"articleTools\">" + 
       "<ul class=\"linkList blockLinks separators centered\">" + 
       "<li class=\"downloadCitations\">" + 
       "<a href=\"/action/showCitFormats?doi=10.1176%2Fappi.ajp.2017.1743editor\">Send to Citation Mgr</a>" + 
       "</li>" + 
       "</ul>" + 
-      "</div>" + 
-      "</div>" + 
-      "</div>" + 
-      "</div>" + 
       "</div>\n" + 
+      "                                  </div>\n" + 
+      "                                </div>\n" + 
+      "                              </div>\n" + 
+      "                              <div class=\"widget layout-two-columns none  widget-none  widget-compact-all\">\n" + 
+      "                                <div class=\"wrapped \">\n" + 
+      "                                  <div class=\"widget-body body body-none  body-compact-all\">\n" + 
+      "                                    <div class=\"pb-columns row-fluid gutterless\">\n" + 
+      "                                      <div class=\"width_5_24\">\n" + 
+      "                                        <div data-pb-dropzone=\"left\" class=\"pb-autoheight\">\n" + 
+      "                                          <div class=\"widget general-html none  widget-none  widget-compact-all\"" +
+      " id=\"1e879678-c84a-44e1-9a30-da2e26c3da18\">\n" + 
+      "                                            <div class=\"wrapped \">\n" + 
+      "                                              <div class=\"widget-body body body-none  body-compact-all\">\n" + 
+      "                                                <script type=\"text/javascript\"></script>\n" + 
+      "                                              </div>\n" + 
+      "                                            </div>\n" + 
+      "                                          </div>\n" + 
+      "                                        </div>\n" + 
+      "                                      </div>\n" + 
+      "                                      <div class=\"width_19_24\">\n" + 
+      "                                        <div data-pb-dropzone=\"right\" class=\"pb-autoheight\">\n" + 
+      "                                          \n" + 
+      "                                        </div>\n" + 
+      "                                      </div>\n" + 
+      "                                    </div>\n" + 
+      "                                  </div>\n" + 
+      "                                </div>\n" + 
+      "                              </div>\n" + 
+      "                              <div class=\"widget layout-frame none inner-white widget-emphasis\" id=\"f4410c40-ec02-421f-a474-5b07264d4858\">\n" + 
+      "                                \n" + 
+      "                              </div>\n" + 
+      "                            </div>\n" + 
       "                          </div>\n" + 
       "                        </div>\n" + 
       "                      </div>\n" + 
