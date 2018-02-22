@@ -939,7 +939,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Diabetologie und Stoffwechsel Volume 9 ; 9 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2015 ; 2015 ; Diabetologie und Stoffwechsel Volume 10 ; 10 ; reingest1.clockss.org:8082 >
    au < deepCrawl ; down ; 2016 ; 2016 ; Diabetologie und Stoffwechsel Volume 11 ; 11 ;  >
-   au < crawling ; exists ; 2017 ; 2017 ; Diabetologie und Stoffwechsel Volume 12 ; 12 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Diabetologie und Stoffwechsel Volume 12 ; 12 ; >
 
   }
 
@@ -1741,7 +1741,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Gastroenterologie up2dat Volume 10 ; 10 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; Gastroenterologie up2dat Volume 11 ; 11 ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; Gastroenterologie up2dat Volume 12 ; 12 ; reingest4.clockss.org:8082 >
-   au < crawling ; exists ; 2017 ; 2017 ; Gastroenterologie up2dat Volume 13 ; 13 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Gastroenterologie up2dat Volume 13 ; 13 ; >
 
   }
 
@@ -1874,7 +1874,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Gesundheitswesen Das Volume 78 ; 78 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; Gesundheitswesen Das Volume 79 ; 79 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; Gesundheitswesen Das Volume 80 ; 80 ; reingest3.clockss.org:8083 >
-   au < crawling ; exists ; 2017 ; 2017 ; Gesundheitswesen Das Volume 81 ; 81 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Gesundheitswesen Das Volume 81 ; 81 ; >
 
   }
 
@@ -2124,7 +2124,7 @@
    au < finished ; crawling ; 2014 ; 2014 ; Indian Journal of Neurosurgery Volume 3 ; 3 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2015 ; 2015 ; Indian Journal of Neurosurgery Volume 4 ; 4 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; down ; 2016 ; 2016 ; Indian Journal of Neurosurgery Volume 5 ; 5 ;  >
-   au < crawling ; exists ; 2017 ; 2017 ; Indian Journal of Neurosurgery Volume 6 ; 6 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Indian Journal of Neurosurgery Volume 6 ; 6 ; >
 
   }
 
@@ -2232,7 +2232,7 @@
     au < finished ; finished ; 2014 ; 2014 ; intensiv Volume 22 ; 22 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; intensiv Volume 23 ; 23 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; intensiv Volume 24 ; 24 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; 2017 ; intensiv Volume 25 ; 25 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; intensiv Volume 25 ; 25 ; >
 
   }
 
@@ -2374,7 +2374,7 @@
     au < finished ; finished ; 2014 ; 2014 ; International Journal of Sports Medicine Volume 35 ; 35 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; International Journal of Sports Medicine Volume 36 ; 36 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; International Journal of Sports Medicine Volume 37 ; 37 ;  >
-    au < crawling ; exists ; 2017 ; 2017 ; International Journal of Sports Medicine Volume 38 ; 38 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; International Journal of Sports Medicine Volume 38 ; 38 ; >
 
   }
 
@@ -2410,7 +2410,7 @@
     param[journal_id] = 10.1055/s-00033766
     comment[years] = 2017-current
 
-    au < crawling ; exists ; 2017 ; 2017 ; Joints Volume 1 ; 1 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Joints Volume 1 ; 1 ; >
 
   }
 
@@ -2431,7 +2431,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Journal Club AINS Volume 3 ; 3 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; Journal Club AINS Volume 4 ; 4 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; Journal Club AINS Volume 5 ; 5 ;  >
-    au < crawling ; exists ; 2017 ; 2017 ; Journal Club AINS Volume 6 ; 6 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Journal Club AINS Volume 6 ; 6 ; >
 
   }
 
@@ -2560,7 +2560,7 @@
     #years = 2016-current
 
     au < finished ; crawling ; 2016 ; 2016 ; Journal of Hand and Microsurgery Volume 8 ; 8 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2017 ; 2017 ; Journal of Hand and Microsurgery Volume 9 ; 9 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Journal of Hand and Microsurgery Volume 9 ; 9 ; >
 
   }
 
@@ -2983,7 +2983,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Kardiologie up2date Volume 10 ; 10 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; Kardiologie up2date Volume 11 ; 11 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Kardiologie up2date Volume 12 ; 12 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2017 ; 2017 ; Kardiologie up2date Volume 13 ; 13 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Kardiologie up2date Volume 13 ; 13 ; >
 
   }
 
@@ -3037,7 +3037,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Klinikarzt Der Volume 43 ; 43 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; Klinikarzt Der Volume 44 ; 44 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Klinikarzt Der Volume 45 ; 45 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2017 ; 2017 ; Klinikarzt Der Volume 46 ; 46 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Klinikarzt Der Volume 46 ; 46 ; >
 
   }
 
@@ -3587,7 +3587,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Neuroradiologie Scan Volume 4 ; 4 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Neuroradiologie Scan Volume 5 ; 5 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Neuroradiologie Scan Volume 6 ; 6 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2017 ; 2017 ; Neuroradiologie Scan Volume 7 ; 7 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Neuroradiologie Scan Volume 7 ; 7 ; >
 
   }
 
@@ -4025,7 +4025,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Pharmacopsychiatry Volume 47 ; 47 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; Pharmacopsychiatry Volume 48 ; 48 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Pharmacopsychiatry Volume 49 ; 49 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; 2017 ; Pharmacopsychiatry Volume 50 ; 50 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Pharmacopsychiatry Volume 50 ; 50 ; >
 
   }
 
@@ -4066,7 +4066,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 24 ; 24 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 25 ; 25 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 26 ; 26 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2017 ; 2017 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 27 ; 27 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 27 ; 27 ; >
 
   }
 
@@ -4266,7 +4266,7 @@
     comment[years] = 2016-current
 
    au < finished ; crawling ; 2016 ; 2016 ; Planta Medica International Open Volume 1 ; 1 ; reingest1.clockss.org:8082 >
-   au < crawling ; exists ; 2017 ; 2017 ; Planta Medica International Open Volume 2 ; 2 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Planta Medica International Open Volume 2 ; 2 ; >
 
   }
 
@@ -4348,7 +4348,7 @@
    au < finished ; finished ; 2014 ; 2014 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 64 ; 64 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 65 ; 65 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 66 ; 66 ; reingest5.clockss.org:8082 >
-   au < crawling ; exists ; 2017 ; 2017 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 67 ; 67 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 67 ; 67 ; >
 
   }
 
@@ -4594,7 +4594,7 @@
    au < finished ; finished ; 2014 ; 2014 ; retten! Volume 3 ; 3 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; retten! Volume 4 ; 4 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2016 ; 2016 ; retten! Volume 5 ; 5 ; reingest4.clockss.org:8082 >
-   au < crawling ; exists ; 2017 ; 2017 ; retten! Volume 6 ; 6 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; retten! Volume 6 ; 6 ; >
 
   }
 
@@ -4710,7 +4710,7 @@
     au < finished ; finished ; 2014 ; 2014 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 186 ; 186 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 187 ; 187 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 188 ; 188 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; 2017 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 189 ; 189 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 189 ; 189 ; >
 
   }
 
@@ -5344,7 +5344,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Sportphysio Volume 2 ; 2 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Sportphysio Volume 3 ; 3 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Sportphysio Volume 4 ; 4 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2017 ; 2017 ; Sportphysio Volume 5 ; 5 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Sportphysio Volume 5 ; 5 ; >
 
   }
 
@@ -5867,7 +5867,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 35 ; 35 ; >
     au < finished ; finished ; 2015 ; 2015 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 36 ; 36 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 37 ; 37 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2017 ; 2017 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 38 ; 38 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 38 ; 38 ; >
 
   }
 
@@ -6039,7 +6039,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Zahnmedizin up2date Volume 8 ; 8 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Zahnmedizin up2date Volume 9 ; 9 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Zahnmedizin up2date Volume 10 ; 10 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2017 ; 2017 ; Zahnmedizin up2date Volume 11 ; 11 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Zahnmedizin up2date Volume 11 ; 11 ; >
 
   }
 
@@ -6421,7 +6421,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Zeitschrift für Sexualforschung Volume 27 ; 27 ; >
     au < finished ; finished ; 2015 ; 2015 ; Zeitschrift für Sexualforschung Volume 28 ; 28 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Zeitschrift für Sexualforschung Volume 29 ; 29 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; 2017 ; Zeitschrift für Sexualforschung Volume 30 ; 30 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Zeitschrift für Sexualforschung Volume 30 ; 30 ; >
 
   }
 
@@ -6613,7 +6613,7 @@
     au < crawling ; exists ; 2014 ; 2014 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 8 ; 8 ; >
     au < crawling ; exists ; 2015 ; 2015 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 9 ; 9 ; >
     au < crawling ; exists ; 2016 ; 2016 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 11 ; 11 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 11 ; 11 ; >
 
   }
 
@@ -6944,7 +6944,7 @@
     param[journal_id] = 10.1055/s-00033423
     comment[years] = 2017-current
 
-    au < crawling ; exists ; 2017 ; 2017 ; osteopathisch - Fachzeitschrift für Osteopathen Volume 1 ; 1 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; osteopathisch - Fachzeitschrift für Osteopathen Volume 1 ; 1 ; >
 
   }
 
@@ -7014,7 +7014,7 @@
     param[journal_id] = 10.1055/s-00035148
     comment[years] = 2012-current
 
-    au < crawling ; exists ; 2017 ; 2017 ; Schlaf Volume 6 ; 6 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Schlaf Volume 6 ; 6 ; >
 
   }
 

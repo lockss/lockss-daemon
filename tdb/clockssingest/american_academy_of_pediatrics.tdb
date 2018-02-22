@@ -392,7 +392,7 @@
       au < aap.ClockssAAPDrupalPlugin ; finished ; crawling ; 2016 ; Pediatrics Volume 137 ; 137 ; reingest5.clockss.org:8082 >
       au < aap.ClockssAAPDrupalPlugin ; finished ; crawling ; 2016 ; Pediatrics Volume 138 ; 138 ; reingest2.clockss.org:8085 >
       au < aap.ClockssAAPDrupalPlugin ; crawling ; exists ; 2017 ; Pediatrics Volume 139 ; 139 ; >
-      au < aap.ClockssAAPDrupalPlugin ; crawling ; exists ; 2017 ; Pediatrics Volume 140 ; 140 ; >
+      au < aap.ClockssAAPDrupalPlugin ; deepCrawl ; exists ; 2017 ; Pediatrics Volume 140 ; 140 ; >
       au < aap.ClockssAAPDrupalPlugin ; expected ; exists ; 2018 ; Pediatrics Volume 141 ; 141 ; >
       au < aap.ClockssAAPDrupalPlugin ; expected ; exists ; 2018 ; Pediatrics Volume 142 ; 142 ; >
 

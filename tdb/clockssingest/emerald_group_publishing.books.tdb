@@ -62,7 +62,7 @@
       au < finished ; finished ; 2013 ; 9781781902851 ; 9781781902868 ; 9781781902868 ; Freight Transport Modelling (9781781902868) ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2013 ; 9781781902875 ; 9781781902882 ; 9781781902882 ; Transport Survey Methods: Best Practice for Decision Making (9781781902882) ; reingest1.clockss.org:8082 >
 
-      au < crawling ; exists ; 2017 ; 9781786352224 ; 9781786352217 ; 9781786352217 ; Traffic Safety and Human Behavior (9781786352217) ; >
+      au < deepCrawl ; exists ; 2017 ; 9781786352224 ; 9781786352217 ; 9781786352217 ; Traffic Safety and Human Behavior (9781786352217) ; >
 
   }
   
@@ -462,7 +462,7 @@
       au < finished ; crawling ; 2016 ; 9781785603532 ; 9781785603525 ; 9781785603525 ; Dynamic Factor Models Volume 35 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2016 ; 9781785607875 ; 9781785607868 ; 9781785607868 ; Essays in Honor of Aman Ullah Volume 36 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; 9781785609862 ; 9781785609855 ; 9781785609855 ; Spatial Econometrics: Qualitative and Limited Dependent Variables Volume 37 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2017 ; 9781787143906 ; 9781787143890 ; 9781787143890 ; Regression Discontinuity Designs: Theory and Applications Volume 38 ; >
+      au < deepCrawl ; exists ; 2017 ; 9781787143906 ; 9781787143890 ; 9781787143890 ; Regression Discontinuity Designs: Theory and Applications Volume 38 ; >
   }
 
   {
@@ -1122,7 +1122,7 @@
       au < crawling ; exists ; 2014 ; 9781783509706 ; 9781783509928 ; 9781783509928 ; Advances in Mergers & Acquisitions Volume 13 ; >
       au < finished ; crawling ; 2014 ; 9781785600913 ; 9781785600906 ; 9781785600906 ; Advances in Mergers & Acquisitions Volume 14 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2016 ; 9781786353948 ; 9781786353931 ; 9781786353931 ; Advances in Mergers & Acquisitions Volume 15 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; 9781787146938 ; 9781787146921 ; 9781787146921 ; Advances in Mergers & Acquisitions Volume 16 ; >
+      au < deepCrawl ; exists ; 2017 ; 9781787146938 ; 9781787146921 ; 9781787146921 ; Advances in Mergers & Acquisitions Volume 16 ; >
 
   }
 
@@ -1229,7 +1229,7 @@
       au < finished ; crawling ; 2015 ; 9781784411404 ; 9781784411398 ; 9781784411398 ; Knowing, Becoming, doing as Teacher Educators: Identity, Intimate Scholarship, Inquiry Volume 26 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2017 ; 9781787140516 ; 9781787140509 ; 9781787140509 ; Innovations in English Language Arts Teacher Education Volume 27 ; >
       au < crawling ; exists ; 2017 ; 9781786357977 ; 9781786357960 ; 9781786357960 ; Crossroads of the Classroom: Narrative Intersections of Teacher Knowledge and Subject Matter Volume 28 ; >
-      au < crawling ; exists ; 2017 ; 9781784412616 ; 9781784412609 ; 9781784412609 ; Culturally Sustaining and Revitalizing Pedagogies: Language, Culture, and Power Volume 29 ; >
+      au < deepCrawl ; exists ; 2017 ; 9781784412616 ; 9781784412609 ; 9781784412609 ; Culturally Sustaining and Revitalizing Pedagogies: Language, Culture, and Power Volume 29 ; >
 
   }
 
@@ -1297,7 +1297,7 @@
       au < finished ; manifest ; 2015 ; 9781785604638 ; 9781785604621 ; 9781785604621 ; Business Models and Modelling Volume 33 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2016 ; 9781786350206 ; 9781786350190 ; 9781786350190 ; Strategy Beyond Markets Volume 34 ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2016 ; 9781786355089 ; 9781786355072 ; 9781786355072 ; Resource Redeployment and Corporate Strategy Volume 35 ; >
-      au < crawling ; exists ; 2017 ; 9781787142770 ; 9781787142763 ; 9781787142763 ; Geography, Location, and Strategy Volume 36 ; >
+      au < deepCrawl ; exists ; 2017 ; 9781787142770 ; 9781787142763 ; 9781787142763 ; Geography, Location, and Strategy Volume 36 ; >
       au < crawling ; exists ; 2017 ; 9781787430808 ; 9781787430792 ; 9781787430792 ; Entrepreneurship, Innovation, and Platforms Volume 37 ; >
 
   }
@@ -1443,7 +1443,7 @@
       au < frozen ; exists ; 2012 ; 9781780521008 ; 9781780521015 ; 9781780521015 ; Applications of Management Science Volume 15 ; >
       au < ready ; exists ; 2013 ; 9781781909560 ; 9781781909577 ; 9781781909577 ; Applications of Management Science Volume 16 ; >
       au < ready ; exists ; 2015 ; 9781784412111 ; 9781784412104 ; 9781784412104 ; Applications of Management Science Volume 17 ; >
-      au < crawling ; exists ; 2017 ; 9781787142831 ; 9781787142824 ; 9781787142824 ; Applications of Management Science Volume 18 ; >
+      au < deepCrawl ; exists ; 2017 ; 9781787142831 ; 9781787142824 ; 9781787142824 ; Applications of Management Science Volume 18 ; >
 
   }
 
@@ -1829,7 +1829,7 @@
       au < finished ; crawling ; 2015 ; 9781785604454 ; 9781785604447 ; 9781785604447 ; Sustainability After Rio Volume 8 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2016 ; 9781786353849 ; 9781786353832 ; 9781786353832 ; Accountability and Social Responsibility: International Perspectives Volume 9 ; >
       au < ready ; exists ; 2016 ; 9781786356260 ; 9781786356253 ; 9781786356253 ; Corporate Responsibility and Stakeholding Volume 10 ; >
-      au < crawling ; exists ; 2017 ; 9781786356253 ; 9781787144118 ; 9781787144118 ; Corporate Social Responsibility and Corporate Governance Volume 11 ; >
+      au < deepCrawl ; exists ; 2017 ; 9781786356253 ; 9781787144118 ; 9781787144118 ; Corporate Social Responsibility and Corporate Governance Volume 11 ; >
       au < crawling ; exists ; 2017 ; 9781787146952 ; 9781787146945 ; 9781787146945 ; Modern Organisational Governance Volume 12 ; >
 
   }
@@ -2018,7 +2018,7 @@
       au < finished ; crawling ; 2016 ; 9781784412715 ; 9781784412708 ; 9781784412708 ; Post-Education-Forall and Sustainable Development Paradigm: Structural Changes with Diversifying Actors and Norms Volume 29 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; 9781786355287 ; 9781786355270 ; 9781786355270 ; Annual Review of Comparative and International Education 2016 Volume 30 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2017 ; 9781786355409 ; 9781786355393 ; 9781786355393 ; The Impact of the OECD on Education Worldwide Volume 31 ; >
-      au < crawling ; exists ; 2017 ; 9781787148604 ; 9781787148598 ; 9781787148598 ; Work-Integrated Learning in the 21st Century Volume 32 ; >
+      au < deepCrawl ; exists ; 2017 ; 9781787148604 ; 9781787148598 ; 9781787148598 ; Work-Integrated Learning in the 21st Century Volume 32 ; >
       au < crawling ; exists ; 2017 ; 9781787144705 ; 9781787144699 ; 9781787144699 ; The Century of Science Volume 33 ; >
 
   }
@@ -2069,9 +2069,9 @@
       au < frozen ; exists ; 2015 ; 9781785604171 ; 9781785604164 ; 9781785604164 ; Foundations of Inclusive Education Research Volume 6 ; >
       au < finished ; crawling ; 2015 ; 9781784416485 ; 9781784416478 ; 9781784416478 ; Inclusive Pedagogy Across the Curriculum Volume 7 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; 9781786353887 ; 9781786353870 ; 9781786353870 ; Implementing Inclusive Education: Issues in Bridging the Policy-Practice Gap Volume 8 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2017 ; 9781787141537 ; 9781787141520 ; 9781787141520 ; Ethics, Equity, and Inclusive Education Volume 9 ; >
+      au < deepCrawl ; exists ; 2017 ; 9781787141537 ; 9781787141520 ; 9781787141520 ; Ethics, Equity, and Inclusive Education Volume 9 ; >
       au < crawling ; exists ; 2017 ; 9781787142619 ; 9781787142602 ; 9781787142602 ; Working with Families for Inclusive Education Volume 10 ; >
-      au < crawling ; exists ; 2017 ; 9781787145900 ; 9781787145894 ; 9781787145894 ; Inclusive Principles and Practices in Literacy Education Volume 11 ; >
+      au < deepCrawl ; exists ; 2017 ; 9781787145900 ; 9781787145894 ; 9781787145894 ; Inclusive Principles and Practices in Literacy Education Volume 11 ; >
 
   }
 
@@ -2484,7 +2484,7 @@
       au < finished ; crawling ; 2015 ; 9781785604478 ; 9781785604461 ; 9781785604461 ; The Ethical Contribution of Organizations to Society Volume 14 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2016 ; 9781786354440 ; 9781786354433 ; 9781786354433 ; Contemporary Issues in Applied and Professional Ethics Volume 15 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2016 ; 9781786355041 ; 9781786355034 ; 9781786355034 ; The Contribution of Love, and Hate, to Organizational Ethics Volume 16 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; 9781787144163 ; 9781787144156 ; 9781787144156 ; Responsible Leadership and Ethical Decision-Making Volume 17 ; >
+      au < deepCrawl ; exists ; 2017 ; 9781787144163 ; 9781787144156 ; 9781787144156 ; Responsible Leadership and Ethical Decision-Making Volume 17 ; >
       au < crawling ; exists ; 2017 ; 9781787432055 ; 9781787432048 ; 9781787432048 ; Ethics in the Global South Volume 18 ; >
 
   }
@@ -3179,7 +3179,7 @@
       au < finished ; crawling ; 2013 ; 9781781905913 ; 9781781905920 ; 9781781905920 ; Native Games: Indigenous Peoples and Sports in the Post-Colonial World Volume 7 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2014 ; 9781783508853 ; 9781783508860 ; 9781783508860 ; Sport, Social Development and Peace Volume 8 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 9781786350503 ; 9781786350497 ; 9781786350497 ; Sociology of Sport: A Global Subdiscipline in Review Volume 9 ; >
-      au < crawling ; exists ; 2017 ; 9781787146433 ; 9781787146426 ; 9781787146426 ; Reflections on Sociology of Sport: Ten Questions, Ten Scholars, Ten Perspectives Volume 10 ; >
+      au < deepCrawl ; exists ; 2017 ; 9781787146433 ; 9781787146426 ; 9781787146426 ; Reflections on Sociology of Sport: Ten Questions, Ten Scholars, Ten Perspectives Volume 10 ; >
 
   }
 

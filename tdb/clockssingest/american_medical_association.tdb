@@ -154,7 +154,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; JAMA Ophthalmology Volume 132 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; JAMA Ophthalmology Volume 133 ; 2015 ; >
     au < finished ; crawling ; 2016 ; JAMA Ophthalmology Volume 134 ; 2016 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; JAMA Ophthalmology Volume 135 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; JAMA Ophthalmology Volume 135 ; 2017 ; >
     au < manifest ; exists ; 2018 ; JAMA Ophthalmology Volume 136 ; 2018 ; >
 
   }
@@ -284,7 +284,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; JAMA: The Journal of the American Medical Association Volume 311-312 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; JAMA: The Journal of the American Medical Association Volume 313-314 ; 2015 ; >
     au < finished ; crawling ; 2016 ; JAMA: The Journal of the American Medical Association Volume 315-316 ; 2016 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2017 ; JAMA: The Journal of the American Medical Association Volume 317-318 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; JAMA: The Journal of the American Medical Association Volume 317-318 ; 2017 ; >
     au < manifest ; exists ; 2018 ; JAMA: The Journal of the American Medical Association Volume 319-320 ; 2018 ; >
 
   }

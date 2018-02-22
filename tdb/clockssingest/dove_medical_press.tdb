@@ -306,7 +306,7 @@
     au < finished ; finished ; 2014 ; Patient Preference and Adherence Volume 8 ; 8 ; 2014 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Patient Preference and Adherence Volume 9 ; 9 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Patient Preference and Adherence Volume 10 ; 10 ; 2016 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Patient Preference and Adherence Volume 11 ; 11 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Patient Preference and Adherence Volume 11 ; 11 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Patient Preference and Adherence Volume 12 ; 12 ; 2018 ; >
 
   }
@@ -329,7 +329,7 @@
     au < finished ; finished ; 2014 ; OncoTargets and Therapy Volume 7 ; 7 ; 2014 ; >
     au < finished ; finished ; 2015 ; OncoTargets and Therapy Volume 8 ; 8 ; 2015 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; OncoTargets and Therapy Volume 9 ; 9 ; 2016 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2017 ; OncoTargets and Therapy Volume 10 ; 10 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; OncoTargets and Therapy Volume 10 ; 10 ; 2017 ; >
     au < manifest ; exists ; 2018 ; OncoTargets and Therapy Volume 11 ; 11 ; 2018 ; >
 
   }
@@ -672,7 +672,7 @@
     au < finished ; finished ; 2014 ; Pharmacogenomics and Personalized Medicine Volume 7 ; 7 ; 2014 ; >
     au < finished ; finished ; 2015 ; Pharmacogenomics and Personalized Medicine Volume 8 ; 8 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Pharmacogenomics and Personalized Medicine Volume 9 ; 9 ; 2016 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Pharmacogenomics and Personalized Medicine Volume 10 ; 10 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Pharmacogenomics and Personalized Medicine Volume 10 ; 10 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Pharmacogenomics and Personalized Medicine Volume 11 ; 11 ; 2018 ; >
 
   }
@@ -695,7 +695,7 @@
     au < finished ; finished ; 2014 ; International Journal of General Medicine Volume 7 ; 7 ; 2014 ; >
     au < finished ; finished ; 2015 ; International Journal of General Medicine Volume 8 ; 8 ; 2015 ; >
     au < finished ; crawling ; 2016 ; International Journal of General Medicine Volume 9 ; 9 ; 2016 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; International Journal of General Medicine Volume 10 ; 10 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; International Journal of General Medicine Volume 10 ; 10 ; 2017 ; >
     au < manifest ; exists ; 2018 ; International Journal of General Medicine Volume 11 ; 11 ; 2018 ; >
 
   }
@@ -1140,7 +1140,7 @@
     au < finished ; finished ; 2014 ; Open Access Rheumatology: Research and Reviews Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Open Access Rheumatology: Research and Reviews Volume 7 ; 7 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Open Access Rheumatology: Research and Reviews Volume 8 ; 8 ; 2016 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Open Access Rheumatology: Research and Reviews Volume 9 ; 9 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Open Access Rheumatology: Research and Reviews Volume 9 ; 9 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Open Access Rheumatology: Research and Reviews Volume 10 ; 10 ; 2018 ; >
 
   }
@@ -1906,7 +1906,7 @@
     au < finished ; finished ; 2014 ; Advances in Genomics and Genetics Volume 4 ; 4 ; 2014 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Advances in Genomics and Genetics Volume 5 ; 5 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Advances in Genomics and Genetics Volume 6 ; 6 ; 2016 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Advances in Genomics and Genetics Volume 7 ; 7 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Advances in Genomics and Genetics Volume 7 ; 7 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Advances in Genomics and Genetics Volume 8 ; 8 ; 2018 ; >
 
   }
@@ -2143,7 +2143,7 @@
     au < finished ; finished ; 2014 ; Medicolegal and Bioethics Volume 4 ; 4 ; 2014 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Medicolegal and Bioethics Volume 5 ; 5 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Medicolegal and Bioethics Volume 6 ; 6 ; 2016 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Medicolegal and Bioethics Volume 7 ; 7 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Medicolegal and Bioethics Volume 7 ; 7 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Medicolegal and Bioethics Volume 8 ; 8 ; 2018 ; >
 
   }
@@ -2506,7 +2506,7 @@
     au < finished ; finished ; 2014 ; ImmunoTargets and Therapy Volume 3 ; 3 ; 2014 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; ImmunoTargets and Therapy Volume 4 ; 4 ; 2015 ; >
     au < finished ; crawling ; 2016 ; ImmunoTargets and Therapy Volume 5 ; 5 ; 2016 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; ImmunoTargets and Therapy Volume 6 ; 6 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; ImmunoTargets and Therapy Volume 6 ; 6 ; 2017 ; >
     au < manifest ; exists ; 2018 ; ImmunoTargets and Therapy Volume 7 ; 7 ; 2018 ; >
 
   }
@@ -2740,7 +2740,7 @@
     au < finished ; finished ; 2014 ; Journal of Vascular Diagnostics and Interventions Volume 2 ; 2 ; 2014 ; >
     au < finished ; finished ; 2015 ; Journal of Vascular Diagnostics and Interventions Volume 3 ; 3 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Journal of Vascular Diagnostics and Interventions Volume 4 ; 4 ; 2016 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2017 ; Journal of Vascular Diagnostics and Interventions Volume 5 ; 5 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Journal of Vascular Diagnostics and Interventions Volume 5 ; 5 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Journal of Vascular Diagnostics and Interventions Volume 6 ; 6 ; 2018 ; >
 
   }
