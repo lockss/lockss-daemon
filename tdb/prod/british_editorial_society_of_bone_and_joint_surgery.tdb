@@ -4,9 +4,10 @@
     name = British Editorial Society of Bone and Joint Surgery
   >
   
-  comment[Drupal] = moving to Drupal during 2015.
-  pluginPrefix = org.lockss.plugin.highwire.
-  implicit < pluginSuffix; status ; year ; name ; param[volume_name] >
+  comment[moved] = moved to HW Drupal during 2015. Moved to Atypon Jan 2018.
+  #pluginPrefix = org.lockss.plugin.highwire.
+  #implicit < pluginSuffix; status ; year ; name ; param[volume_name] >
+  implicit < status ; year ; name ; param[volume_name] >
 
   {
   
@@ -15,16 +16,30 @@
       issn = 2048-0091 ;
       issnl = 2048-0105
     >
-    
+    {
+    plugin = org.lockss.plugin.atypon.GenericAtyponPlugin
+    param[base_url] = http://online.boneandjoint.org.uk/
+    param[journal_id] = bj360
+
+    au < doNotProcess ; 2012 ; Bone & Joint 360 Volume 1 ; 1 >
+    au < doNotProcess ; 2013 ; Bone & Joint 360 Volume 2 ; 2 >
+    au < doNotProcess ; 2014 ; Bone & Joint 360 Volume 3 ; 3 >
+    au < doNotProcess ; 2015 ; Bone & Joint 360 Volume 4 ; 4 >
+    au < doNotProcess ; 2016 ; Bone & Joint 360 Volume 5 ; 5 >
+    au < doNotProcess ; 2017 ; Bone & Joint 360 Volume 6 ; 6 >
+    au < expected ; 2018 ; Bone & Joint 360 Volume 7 ; 7 >
+    }
+    {
+    plugin = org.lockss.plugin.highwire.besbjs.BESBJSDrupalPlugin
     param[base_url] = http://bj360.boneandjoint.org.uk/
 
-    au < besbjs.BESBJSDrupalPlugin ; released ; 2012 ; Bone & Joint 360 Volume 1 ; 1 >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 2013 ; Bone & Joint 360 Volume 2 ; 2 >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 2014 ; Bone & Joint 360 Volume 3 ; 3 >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 2015 ; Bone & Joint 360 Volume 4 ; 4 >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 2016 ; Bone & Joint 360 Volume 5 ; 5 >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 2017 ; Bone & Joint 360 Volume 6 ; 6 >
-    
+    au < down ; 2012 ; Bone & Joint 360 Volume 1 ; 1 >
+    au < down ; 2013 ; Bone & Joint 360 Volume 2 ; 2 >
+    au < down ; 2014 ; Bone & Joint 360 Volume 3 ; 3 >
+    au < down ; 2015 ; Bone & Joint 360 Volume 4 ; 4 >
+    au < down ; 2016 ; Bone & Joint 360 Volume 5 ; 5 >
+    au < down ; 2017 ; Bone & Joint 360 Volume 6 ; 6 >
+    }
   }
   
   {
@@ -37,25 +52,37 @@
     rights = openaccess
     
     {
+    plugin = org.lockss.plugin.atypon.GenericAtyponPlugin
+    param[base_url] = http://online.boneandjoint.org.uk/
+    param[journal_id] = bjr
+
+    au < doNotProcess ; 2012 ; Bone & Joint Research Volume 1 ; 1 >
+    au < doNotProcess ; 2013 ; Bone & Joint Research Volume 2 ; 2 >
+    au < doNotProcess ; 2014 ; Bone & Joint Research Volume 3 ; 3 >
+    au < doNotProcess ; 2015 ; Bone & Joint Research Volume 4 ; 4 >
+    au < doNotProcess ; 2016 ; Bone & Joint Research Volume 5 ; 5 >
+    au < expected ; 2017 ; Bone & Joint Research Volume 6 ; 6 >
+    au < expected ; 2018 ; Bone & Joint Research Volume 7 ; 7 >
+    }
+    {
+    plugin = org.lockss.plugin.highwire.besbjs.BESBJSDrupalPlugin
     param[base_url] = http://bjr.boneandjoint.org.uk/
     #base_url changed, removing www.
 
-    au < besbjs.BESBJSDrupalPlugin ; released ; 2012 ; Bone & Joint Research Volume 1 ; 1 >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 2013 ; Bone & Joint Research Volume 2 ; 2 >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 2014 ; Bone & Joint Research Volume 3 ; 3 >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 2015 ; Bone & Joint Research Volume 4 ; 4 >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 2016 ; Bone & Joint Research Volume 5 ; 5 >
-    au < besbjs.BESBJSDrupalPlugin ; expected ; 2017 ; Bone & Joint Research Volume 6 ; 6 >
+    au < down ; 2012 ; Bone & Joint Research Volume 1 ; 1 >
+    au < down ; 2013 ; Bone & Joint Research Volume 2 ; 2 >
+    au < down ; 2014 ; Bone & Joint Research Volume 3 ; 3 >
+    au < down ; 2015 ; Bone & Joint Research Volume 4 ; 4 >
+    au < down ; 2016 ; Bone & Joint Research Volume 5 ; 5 >
     }
     {
+    plugin = org.lockss.plugin.highwire.besbjs.BESBJSDrupalPlugin
     param[base_url] = http://www.bjr.boneandjoint.org.uk/
 
-    au < besbjs.BESBJSDrupalPlugin ; superseded ; 2012 ; Bone & Joint Research Volume 1 [superseded] ; 1 >
-    au < besbjs.BESBJSDrupalPlugin ; superseded ; 2013 ; Bone & Joint Research Volume 2 [superseded] ; 2 >
-    au < besbjs.BESBJSDrupalPlugin ; superseded ; 2014 ; Bone & Joint Research Volume 3 [superseded] ; 3 >
-    au < besbjs.BESBJSDrupalPlugin ; superseded ; 2015 ; Bone & Joint Research Volume 4 [superseded] ; 4 >
-    au < besbjs.BESBJSDrupalPlugin ; doNotProcess ; 2016 ; Bone & Joint Research Volume 5 ; 5 >
-    au < besbjs.BESBJSDrupalPlugin ; doNotProcess ; 2017 ; Bone & Joint Research Volume 6 ; 6 >
+    au < superseded ; 2012 ; Bone & Joint Research Volume 1 [superseded] ; 1 >
+    au < superseded ; 2013 ; Bone & Joint Research Volume 2 [superseded] ; 2 >
+    au < superseded ; 2014 ; Bone & Joint Research Volume 3 [superseded] ; 3 >
+    au < superseded ; 2015 ; Bone & Joint Research Volume 4 [superseded] ; 4 >
     }
   }
   
@@ -71,87 +98,89 @@
     comment[continued_by] = The Bone & Joint Journal, ISSN: 2049-4394, eISSN: 2049-4408 as of Jan 1 2013
     
     {
+    plugin = org.lockss.plugin.highwire.besbjs.BESBJSDrupalPlugin
     param[base_url] = http://bjj.boneandjoint.org.uk/
     #base_url changed, lost www.
     
-    au < besbjs.BESBJSDrupalPlugin ; released ; 1948 ; Journal of Bone & Joint Surgery, British Volume Volume 30 ; 30-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 1949 ; Journal of Bone & Joint Surgery, British Volume Volume 31 ; 31-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 1950 ; Journal of Bone & Joint Surgery, British Volume Volume 32 ; 32-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 1951 ; Journal of Bone & Joint Surgery, British Volume Volume 33 ; 33-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 1952 ; Journal of Bone & Joint Surgery, British Volume Volume 34 ; 34-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 1953 ; Journal of Bone & Joint Surgery, British Volume Volume 35 ; 35-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 1954 ; Journal of Bone & Joint Surgery, British Volume Volume 36 ; 36-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 1955 ; Journal of Bone & Joint Surgery, British Volume Volume 37 ; 37-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 1956 ; Journal of Bone & Joint Surgery, British Volume Volume 38 ; 38-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 1957 ; Journal of Bone & Joint Surgery, British Volume Volume 39 ; 39-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 1958 ; Journal of Bone & Joint Surgery, British Volume Volume 40 ; 40-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 1959 ; Journal of Bone & Joint Surgery, British Volume Volume 41 ; 41-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 1960 ; Journal of Bone & Joint Surgery, British Volume Volume 42 ; 42-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 1961 ; Journal of Bone & Joint Surgery, British Volume Volume 43 ; 43-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 1962 ; Journal of Bone & Joint Surgery, British Volume Volume 44 ; 44-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 1963 ; Journal of Bone & Joint Surgery, British Volume Volume 45 ; 45-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 1964 ; Journal of Bone & Joint Surgery, British Volume Volume 46 ; 46-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 1965 ; Journal of Bone & Joint Surgery, British Volume Volume 47 ; 47-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 1966 ; Journal of Bone & Joint Surgery, British Volume Volume 48 ; 48-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 1967 ; Journal of Bone & Joint Surgery, British Volume Volume 49 ; 49-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 1968 ; Journal of Bone & Joint Surgery, British Volume Volume 50 ; 50-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 1969 ; Journal of Bone & Joint Surgery, British Volume Volume 51 ; 51-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 1970 ; Journal of Bone & Joint Surgery, British Volume Volume 52 ; 52-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 1971 ; Journal of Bone & Joint Surgery, British Volume Volume 53 ; 53-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 1972 ; Journal of Bone & Joint Surgery, British Volume Volume 54 ; 54-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 1973 ; Journal of Bone & Joint Surgery, British Volume Volume 55 ; 55-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 1974 ; Journal of Bone & Joint Surgery, British Volume Volume 56 ; 56-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 1975 ; Journal of Bone & Joint Surgery, British Volume Volume 57 ; 57-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 1976 ; Journal of Bone & Joint Surgery, British Volume Volume 58 ; 58-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 1977 ; Journal of Bone & Joint Surgery, British Volume Volume 59 ; 59-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 1978 ; Journal of Bone & Joint Surgery, British Volume Volume 60 ; 60-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 1979 ; Journal of Bone & Joint Surgery, British Volume Volume 61 ; 61-B >
-    au < besbjs.BESBJSDrupalPlugin ; manifest ; 1980 ; Journal of Bone & Joint Surgery, British Volume Volume 62 ; 62-B >
-    au < besbjs.BESBJSDrupalPlugin ; manifest ; 1981 ; Journal of Bone & Joint Surgery, British Volume Volume 63 ; 63-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 1982 ; Journal of Bone & Joint Surgery, British Volume Volume 64 ; 64-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 1983 ; Journal of Bone & Joint Surgery, British Volume Volume 65 ; 65-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 1984 ; Journal of Bone & Joint Surgery, British Volume Volume 66 ; 66-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 1985 ; Journal of Bone & Joint Surgery, British Volume Volume 67 ; 67-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 1986 ; Journal of Bone & Joint Surgery, British Volume Volume 68 ; 68-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 1987 ; Journal of Bone & Joint Surgery, British Volume Volume 69 ; 69-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 1988 ; Journal of Bone & Joint Surgery, British Volume Volume 70 ; 70-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 1989 ; Journal of Bone & Joint Surgery, British Volume Volume 71 ; 71-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 1990 ; Journal of Bone & Joint Surgery, British Volume Volume 72 ; 72-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 1991 ; Journal of Bone & Joint Surgery, British Volume Volume 73 ; 73-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 1992 ; Journal of Bone & Joint Surgery, British Volume Volume 74 ; 74-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 1993 ; Journal of Bone & Joint Surgery, British Volume Volume 75 ; 75-B >
-    au < besbjs.BESBJSDrupalPlugin ; manifest ; 1994 ; Journal of Bone & Joint Surgery, British Volume Volume 76 ; 76-B >
-    au < besbjs.BESBJSDrupalPlugin ; manifest ; 1995 ; Journal of Bone & Joint Surgery, British Volume Volume 77 ; 77-B >
-    au < besbjs.BESBJSDrupalPlugin ; manifest ; 1996 ; Journal of Bone & Joint Surgery, British Volume Volume 78 ; 78-B >
-    au < besbjs.BESBJSDrupalPlugin ; manifest ; 1997 ; Journal of Bone & Joint Surgery, British Volume Volume 79 ; 79-B >
-    au < besbjs.BESBJSDrupalPlugin ; manifest ; 1998 ; Journal of Bone & Joint Surgery, British Volume Volume 80 ; 80-B >
-    au < besbjs.BESBJSDrupalPlugin ; manifest ; 1999 ; Journal of Bone & Joint Surgery, British Volume Volume 81 ; 81-B >
-    au < besbjs.BESBJSDrupalPlugin ; manifest ; 2000 ; Journal of Bone & Joint Surgery, British Volume Volume 82 ; 82-B >
-    au < besbjs.BESBJSDrupalPlugin ; manifest ; 2001 ; Journal of Bone & Joint Surgery, British Volume Volume 83 ; 83-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 2002 ; Journal of Bone & Joint Surgery, British Volume Volume 84 ; 84-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 2003 ; Journal of Bone & Joint Surgery, British Volume Volume 85 ; 85-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 2004 ; Journal of Bone & Joint Surgery, British Volume Volume 86 ; 86-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 2005 ; Journal of Bone & Joint Surgery, British Volume Volume 87 ; 87-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 2006 ; Journal of Bone & Joint Surgery, British Volume Volume 88 ; 88-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 2007 ; Journal of Bone & Joint Surgery, British Volume Volume 89 ; 89-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 2008 ; Journal of Bone & Joint Surgery, British Volume Volume 90 ; 90-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 2009 ; Journal of Bone & Joint Surgery, British Volume Volume 91 ; 91-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 2010 ; Journal of Bone & Joint Surgery, British Volume Volume 92 ; 92-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 2011 ; Journal of Bone & Joint Surgery, British Volume Volume 93 ; 93-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 2012 ; Journal of Bone & Joint Surgery, British Volume Volume 94 ; 94-B >
+    au < down ; 1948 ; Journal of Bone & Joint Surgery, British Volume Volume 30 ; 30-B >
+    au < down ; 1949 ; Journal of Bone & Joint Surgery, British Volume Volume 31 ; 31-B >
+    au < down ; 1950 ; Journal of Bone & Joint Surgery, British Volume Volume 32 ; 32-B >
+    au < down ; 1951 ; Journal of Bone & Joint Surgery, British Volume Volume 33 ; 33-B >
+    au < down ; 1952 ; Journal of Bone & Joint Surgery, British Volume Volume 34 ; 34-B >
+    au < down ; 1953 ; Journal of Bone & Joint Surgery, British Volume Volume 35 ; 35-B >
+    au < down ; 1954 ; Journal of Bone & Joint Surgery, British Volume Volume 36 ; 36-B >
+    au < down ; 1955 ; Journal of Bone & Joint Surgery, British Volume Volume 37 ; 37-B >
+    au < down ; 1956 ; Journal of Bone & Joint Surgery, British Volume Volume 38 ; 38-B >
+    au < down ; 1957 ; Journal of Bone & Joint Surgery, British Volume Volume 39 ; 39-B >
+    au < down ; 1958 ; Journal of Bone & Joint Surgery, British Volume Volume 40 ; 40-B >
+    au < down ; 1959 ; Journal of Bone & Joint Surgery, British Volume Volume 41 ; 41-B >
+    au < down ; 1960 ; Journal of Bone & Joint Surgery, British Volume Volume 42 ; 42-B >
+    au < down ; 1961 ; Journal of Bone & Joint Surgery, British Volume Volume 43 ; 43-B >
+    au < down ; 1962 ; Journal of Bone & Joint Surgery, British Volume Volume 44 ; 44-B >
+    au < down ; 1963 ; Journal of Bone & Joint Surgery, British Volume Volume 45 ; 45-B >
+    au < down ; 1964 ; Journal of Bone & Joint Surgery, British Volume Volume 46 ; 46-B >
+    au < down ; 1965 ; Journal of Bone & Joint Surgery, British Volume Volume 47 ; 47-B >
+    au < down ; 1966 ; Journal of Bone & Joint Surgery, British Volume Volume 48 ; 48-B >
+    au < down ; 1967 ; Journal of Bone & Joint Surgery, British Volume Volume 49 ; 49-B >
+    au < down ; 1968 ; Journal of Bone & Joint Surgery, British Volume Volume 50 ; 50-B >
+    au < down ; 1969 ; Journal of Bone & Joint Surgery, British Volume Volume 51 ; 51-B >
+    au < down ; 1970 ; Journal of Bone & Joint Surgery, British Volume Volume 52 ; 52-B >
+    au < down ; 1971 ; Journal of Bone & Joint Surgery, British Volume Volume 53 ; 53-B >
+    au < down ; 1972 ; Journal of Bone & Joint Surgery, British Volume Volume 54 ; 54-B >
+    au < down ; 1973 ; Journal of Bone & Joint Surgery, British Volume Volume 55 ; 55-B >
+    au < down ; 1974 ; Journal of Bone & Joint Surgery, British Volume Volume 56 ; 56-B >
+    au < down ; 1975 ; Journal of Bone & Joint Surgery, British Volume Volume 57 ; 57-B >
+    au < down ; 1976 ; Journal of Bone & Joint Surgery, British Volume Volume 58 ; 58-B >
+    au < down ; 1977 ; Journal of Bone & Joint Surgery, British Volume Volume 59 ; 59-B >
+    au < down ; 1978 ; Journal of Bone & Joint Surgery, British Volume Volume 60 ; 60-B >
+    au < down ; 1979 ; Journal of Bone & Joint Surgery, British Volume Volume 61 ; 61-B >
+    au < doNotProcess ; 1980 ; Journal of Bone & Joint Surgery, British Volume Volume 62 ; 62-B >
+    au < doNotProcess ; 1981 ; Journal of Bone & Joint Surgery, British Volume Volume 63 ; 63-B >
+    au < down ; 1982 ; Journal of Bone & Joint Surgery, British Volume Volume 64 ; 64-B >
+    au < down ; 1983 ; Journal of Bone & Joint Surgery, British Volume Volume 65 ; 65-B >
+    au < down ; 1984 ; Journal of Bone & Joint Surgery, British Volume Volume 66 ; 66-B >
+    au < down ; 1985 ; Journal of Bone & Joint Surgery, British Volume Volume 67 ; 67-B >
+    au < down ; 1986 ; Journal of Bone & Joint Surgery, British Volume Volume 68 ; 68-B >
+    au < down ; 1987 ; Journal of Bone & Joint Surgery, British Volume Volume 69 ; 69-B >
+    au < down ; 1988 ; Journal of Bone & Joint Surgery, British Volume Volume 70 ; 70-B >
+    au < down ; 1989 ; Journal of Bone & Joint Surgery, British Volume Volume 71 ; 71-B >
+    au < down ; 1990 ; Journal of Bone & Joint Surgery, British Volume Volume 72 ; 72-B >
+    au < down ; 1991 ; Journal of Bone & Joint Surgery, British Volume Volume 73 ; 73-B >
+    au < down ; 1992 ; Journal of Bone & Joint Surgery, British Volume Volume 74 ; 74-B >
+    au < down ; 1993 ; Journal of Bone & Joint Surgery, British Volume Volume 75 ; 75-B >
+    au < doNotProcess ; 1994 ; Journal of Bone & Joint Surgery, British Volume Volume 76 ; 76-B >
+    au < doNotProcess ; 1995 ; Journal of Bone & Joint Surgery, British Volume Volume 77 ; 77-B >
+    au < doNotProcess ; 1996 ; Journal of Bone & Joint Surgery, British Volume Volume 78 ; 78-B >
+    au < doNotProcess ; 1997 ; Journal of Bone & Joint Surgery, British Volume Volume 79 ; 79-B >
+    au < doNotProcess ; 1998 ; Journal of Bone & Joint Surgery, British Volume Volume 80 ; 80-B >
+    au < doNotProcess ; 1999 ; Journal of Bone & Joint Surgery, British Volume Volume 81 ; 81-B >
+    au < doNotProcess ; 2000 ; Journal of Bone & Joint Surgery, British Volume Volume 82 ; 82-B >
+    au < doNotProcess ; 2001 ; Journal of Bone & Joint Surgery, British Volume Volume 83 ; 83-B >
+    au < down ; 2002 ; Journal of Bone & Joint Surgery, British Volume Volume 84 ; 84-B >
+    au < down ; 2003 ; Journal of Bone & Joint Surgery, British Volume Volume 85 ; 85-B >
+    au < down ; 2004 ; Journal of Bone & Joint Surgery, British Volume Volume 86 ; 86-B >
+    au < down ; 2005 ; Journal of Bone & Joint Surgery, British Volume Volume 87 ; 87-B >
+    au < down ; 2006 ; Journal of Bone & Joint Surgery, British Volume Volume 88 ; 88-B >
+    au < down ; 2007 ; Journal of Bone & Joint Surgery, British Volume Volume 89 ; 89-B >
+    au < down ; 2008 ; Journal of Bone & Joint Surgery, British Volume Volume 90 ; 90-B >
+    au < down ; 2009 ; Journal of Bone & Joint Surgery, British Volume Volume 91 ; 91-B >
+    au < down ; 2010 ; Journal of Bone & Joint Surgery, British Volume Volume 92 ; 92-B >
+    au < down ; 2011 ; Journal of Bone & Joint Surgery, British Volume Volume 93 ; 93-B >
+    au < down ; 2012 ; Journal of Bone & Joint Surgery, British Volume Volume 94 ; 94-B >
     }
     {
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://www.bjj.boneandjoint.org.uk/
     
-    au < HighWirePressH20Plugin ; superseded ; 2004 ; Journal of Bone & Joint Surgery, British Volume Volume 86 [superseded] ; 86-B >
-    au < HighWirePressH20Plugin ; superseded ; 2005 ; Journal of Bone & Joint Surgery, British Volume Volume 87 [superseded] ; 87-B >
-    au < HighWirePressH20Plugin ; superseded ; 2006 ; Journal of Bone & Joint Surgery, British Volume Volume 88 [superseded] ; 88-B >
-    au < HighWirePressH20Plugin ; superseded ; 2007 ; Journal of Bone & Joint Surgery, British Volume Volume 89 [superseded] ; 89-B >
-    au < HighWirePressH20Plugin ; superseded ; 2008 ; Journal of Bone & Joint Surgery, British Volume Volume 90 [superseded] ; 90-B >
-    au < HighWirePressH20Plugin ; superseded ; 2009 ; Journal of Bone & Joint Surgery, British Volume Volume 91 [superseded] ; 91-B >
-    au < HighWirePressH20Plugin ; superseded ; 2010 ; Journal of Bone & Joint Surgery, British Volume Volume 92 [superseded] ; 92-B >
-    au < HighWirePressH20Plugin ; superseded ; 2011 ; Journal of Bone & Joint Surgery, British Volume Volume 93 [superseded] ; 93-B >
-    au < HighWirePressH20Plugin ; superseded ; 2012 ; Journal of Bone & Joint Surgery, British Volume Volume 94 [superseded] ; 94-B >
+    au < superseded ; 2004 ; Journal of Bone & Joint Surgery, British Volume Volume 86 [superseded] ; 86-B >
+    au < superseded ; 2005 ; Journal of Bone & Joint Surgery, British Volume Volume 87 [superseded] ; 87-B >
+    au < superseded ; 2006 ; Journal of Bone & Joint Surgery, British Volume Volume 88 [superseded] ; 88-B >
+    au < superseded ; 2007 ; Journal of Bone & Joint Surgery, British Volume Volume 89 [superseded] ; 89-B >
+    au < superseded ; 2008 ; Journal of Bone & Joint Surgery, British Volume Volume 90 [superseded] ; 90-B >
+    au < superseded ; 2009 ; Journal of Bone & Joint Surgery, British Volume Volume 91 [superseded] ; 91-B >
+    au < superseded ; 2010 ; Journal of Bone & Joint Surgery, British Volume Volume 92 [superseded] ; 92-B >
+    au < superseded ; 2011 ; Journal of Bone & Joint Surgery, British Volume Volume 93 [superseded] ; 93-B >
+    au < superseded ; 2012 ; Journal of Bone & Joint Surgery, British Volume Volume 94 [superseded] ; 94-B >
     }
   }
 
@@ -165,23 +194,46 @@
     
     comment[continues] = Journal of Bone & Joint Surgery, British Volume, issn 0301-620X, eissn 2044-5377 as of Jan 1 2013
     {
+    plugin = org.lockss.plugin.atypon.GenericAtyponPlugin
+    param[base_url] = http://online.boneandjoint.org.uk/
+    param[journal_id] = bjj
+    
+    au < doNotProcess ; 2011 ; Journal of Bone & Joint Surgery, British Volume Volume 93 ; 93-B >
+    au < doNotProcess ; 2012 ; Journal of Bone & Joint Surgery, British Volume Volume 94 ; 94-B >
+    au < doNotProcess ; 2013 ; Journal of Bone & Joint Surgery, British Volume Volume 95 ; 95-B >
+    au < doNotProcess ; 2014 ; Journal of Bone & Joint Surgery, British Volume Volume 96 ; 96-B >
+    au < doNotProcess ; 2015 ; Journal of Bone & Joint Surgery, British Volume Volume 97 ; 97-B >
+    au < doNotProcess ; 2016 ; Journal of Bone & Joint Surgery, British Volume Volume 98 ; 98-B >
+    au < exists ; 2017 ; Journal of Bone & Joint Surgery, British Volume Volume 99 ; 99-B >
+    au < exists ; 2018 ; Journal of Bone & Joint Surgery, British Volume Volume 100 ; 100-B >
+    }
+    {
+    plugin = org.lockss.plugin.highwire.besbjs.BESBJSDrupalPlugin
     param[base_url] = http://bjj.boneandjoint.org.uk/
     #base_url changed, removing www.
 
-    au < besbjs.BESBJSDrupalPlugin ; released ; 2013 ; The Bone & Joint Journal Volume 95 ; 95-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 2014 ; The Bone & Joint Journal Volume 96 ; 96-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 2015 ; The Bone & Joint Journal Volume 97 ; 97-B >
-    au < besbjs.BESBJSDrupalPlugin ; released ; 2016 ; The Bone & Joint Journal Volume 98 ; 98-B >
-    au < besbjs.BESBJSDrupalPlugin ; manifest ; 2017 ; The Bone & Joint Journal Volume 99 ; 99-B >
+    au < down ; 2013 ; The Bone & Joint Journal Volume 95 ; 95-B >
+    au < down ; 2014 ; The Bone & Joint Journal Volume 96 ; 96-B >
+    au < down ; 2015 ; The Bone & Joint Journal Volume 97 ; 97-B >
+    au < down ; 2016 ; The Bone & Joint Journal Volume 98 ; 98-B >
+    au < doNotProcess ; 2017 ; The Bone & Joint Journal Volume 99 ; 99-B >
     }
+
     {
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://www.bjj.boneandjoint.org.uk/
 
-    au < HighWirePressH20Plugin ; superseded ; 2013 ; The Bone & Joint Journal Volume 95 [superseded] ; 95-B >
-    au < HighWirePressH20Plugin ; superseded ; 2014 ; The Bone & Joint Journal Volume 96 [superseded] ; 96-B >
-    au < besbjs.BESBJSDrupalPlugin ; superseded ; 2015 ; The Bone & Joint Journal Volume 97 [superseded] ; 97-B >
-    au < besbjs.BESBJSDrupalPlugin ; doNotProcess ; 2016 ; The Bone & Joint Journal Volume 98 ; 98-B >
-    au < besbjs.BESBJSDrupalPlugin ; doNotProcess ; 2017 ; The Bone & Joint Journal Volume 99 ; 99-B >
+    au < superseded ; 2013 ; The Bone & Joint Journal Volume 95 [superseded] ; 95-B >
+    au < superseded ; 2014 ; The Bone & Joint Journal Volume 96 [superseded] ; 96-B >
+    }
+
+    {
+    plugin = org.lockss.plugin.highwire.besbjs.BESBJSDrupalPlugin
+    param[base_url] = http://www.bjj.boneandjoint.org.uk/
+
+    au < superseded ; 2015 ; The Bone & Joint Journal Volume 97 [superseded] ; 97-B >
+    au < doNotProcess ; 2016 ; The Bone & Joint Journal Volume 98 ; 98-B >
+    au < doNotProcess ; 2017 ; The Bone & Joint Journal Volume 99 ; 99-B >
     }
   }
 
