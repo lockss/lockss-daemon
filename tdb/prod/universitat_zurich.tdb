@@ -24,6 +24,76 @@
 
     {
       title <
+        name = sui generis ;
+        eissn = 2297-105X
+      >
+      
+      plugin = org.lockss.plugin.ojs2.OJS2Plugin
+      param[journal_id] = sui-generis
+      param[base_url] = http://sui-generis.ch/
+
+      au < exists ; 2014 ; sui generis Volume 2014 ; 2014 ; 2014 >
+      au < testing ; 2015 ; sui generis Volume 2015 ; 2015 ; 2015 >
+      au < testing ; 2016 ; sui generis Volume 2016 ; 2016 ; 2016 >
+      au < testing ; 2017 ; sui generis Volume 2017 ; 2017 ; 2017 >
+      au < exists ; 2018 ; sui generis Volume 2018 ; 2018 ; 2018 >
+
+    }
+
+    {
+      title <
+        name = altrelettere ;
+        eissn = 1664-6908
+      >
+      
+      plugin = org.lockss.plugin.ojs2.OJS2Plugin
+      param[journal_id] = altrelettere
+      param[base_url] = http://www.altrelettere.uzh.ch/
+
+      au < exists ; 2012 ; altrelettere Volume 2012 ; 2012 ; 2012 >
+      au < exists ; 2013 ; altrelettere Volume 2013 ; 2013 ; 2013 >
+      au < exists ; 2014 ; altrelettere Volume 2014 ; 2014 ; 2014 >
+      au < testing ; 2015 ; altrelettere Volume 2015 ; 2015 ; 2015 >
+      au < testing ; 2016 ; altrelettere Volume 2016 ; 2016 ; 2016 >
+      au < testing ; 2017 ; altrelettere Volume 2017 ; 2017 ; 2017 >
+
+    }
+
+    {
+      title <
+        name = SComS: Studies in Communications Sciences ;
+        eissn = 1424-4896
+      >
+      
+      plugin = org.lockss.plugin.ojs2.OJS2Plugin
+      param[journal_id] = scoms
+      param[base_url] = http://www.hope.uzh.ch/
+
+      au < exists ; 1998 ; SComS: Studies in Communications Sciences Volume 1998 ; 1998 ; 1998 >
+      au < exists ; 1999 ; SComS: Studies in Communications Sciences Volume 1999 ; 1999 ; 1999 >
+      au < exists ; 2000 ; SComS: Studies in Communications Sciences Volume 2000 ; 2000 ; 2000 >
+      au < exists ; 2001 ; SComS: Studies in Communications Sciences Volume 2001 ; 2001 ; 2001 >
+      au < exists ; 2002 ; SComS: Studies in Communications Sciences Volume 2002 ; 2002 ; 2002 >
+      au < exists ; 2003 ; SComS: Studies in Communications Sciences Volume 2003 ; 2003 ; 2003 >
+      au < exists ; 2004 ; SComS: Studies in Communications Sciences Volume 2004 ; 2004 ; 2004 >
+      au < exists ; 2005 ; SComS: Studies in Communications Sciences Volume 2005 ; 2005 ; 2005 >
+      au < exists ; 2006 ; SComS: Studies in Communications Sciences Volume 2006 ; 2006 ; 2006 >
+      au < exists ; 2007 ; SComS: Studies in Communications Sciences Volume 2007 ; 2007 ; 2007 >
+      au < exists ; 2008 ; SComS: Studies in Communications Sciences Volume 2008 ; 2008 ; 2008 >
+      au < exists ; 2009 ; SComS: Studies in Communications Sciences Volume 2009 ; 2009 ; 2009 >
+      au < exists ; 2010 ; SComS: Studies in Communications Sciences Volume 2010 ; 2010 ; 2010 >
+      au < exists ; 2011 ; SComS: Studies in Communications Sciences Volume 2011 ; 2011 ; 2011 >
+      au < exists ; 2012 ; SComS: Studies in Communications Sciences Volume 2012 ; 2012 ; 2012 >
+      au < exists ; 2013 ; SComS: Studies in Communications Sciences Volume 2013 ; 2013 ; 2013 >
+      au < exists ; 2014 ; SComS: Studies in Communications Sciences Volume 2014 ; 2014 ; 2014 >
+      au < testing ; 2015 ; SComS: Studies in Communications Sciences Volume 2015 ; 2015 ; 2015 >
+      au < testing ; 2016 ; SComS: Studies in Communications Sciences Volume 2016 ; 2016 ; 2016 >
+      au < testing ; 2017 ; SComS: Studies in Communications Sciences Volume 2017 ; 2017 ; 2017 >
+
+    }
+
+    {
+      title <
         name = Zwingliana ;
         issn = 0254-4407
       >
