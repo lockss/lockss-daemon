@@ -526,8 +526,8 @@
     param[journal_id] = aam
     #continues = 2044-2084
 
-    au < finished ; manifest ; 2015 ; Arts and the Market Volume 5 ; 5 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; Arts and the Market Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; Arts and the Market Volume 5 ; 5 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; Arts and the Market Volume 6 ; 6 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2017 ; Arts and the Market Volume 7 ; 7 ; >
 
   }
@@ -1481,7 +1481,7 @@
     param[journal_id] = ijhg
     #continues = 1477-7274
 
-    au < finished ; manifest ; 2016 ; International Journal of Health Governance Volume 21 ; 21 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; International Journal of Health Governance Volume 21 ; 21 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2017 ; International Journal of Health Governance Volume 22 ; 22 ; >
 
   }
@@ -1813,7 +1813,7 @@
     param[journal_id] = ccsm
     #continues = 1352-7606
 
-    au < finished ; manifest ; 2016 ; Cross Cultural & Strategic Management Volume 23 ; 23 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2016 ; Cross Cultural & Strategic Management Volume 23 ; 23 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2017 ; Cross Cultural & Strategic Management Volume 24 ; 24 ; >
 
   }
@@ -3793,7 +3793,7 @@
     au < manifest ; exists ; 2011 ; International Journal of Culture, Tourism and Hospitality Research Volume 5 ; 5 ; >
     au < manifest ; exists ; 2012 ; International Journal of Culture, Tourism and Hospitality Research Volume 6 ; 6 ; >
     au < manifest ; exists ; 2013 ; International Journal of Culture, Tourism and Hospitality Research Volume 7 ; 7 ; >
-    au < finished ; manifest ; 2014 ; International Journal of Culture, Tourism and Hospitality Research Volume 8 ; 8 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; International Journal of Culture, Tourism and Hospitality Research Volume 8 ; 8 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; International Journal of Culture, Tourism and Hospitality Research Volume 9 ; 9 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; International Journal of Culture, Tourism and Hospitality Research Volume 10 ; 10 ; >
     au < crawling ; exists ; 2017 ; International Journal of Culture, Tourism and Hospitality Research Volume 11 ; 11 ; >
@@ -4340,7 +4340,7 @@
     au < manifest ; exists ; 2013 ; International Journal of Managerial Finance Volume 9 ; 9 ; >
     au < frozen ; exists ; 2014 ; International Journal of Managerial Finance Volume 10 ; 10 ; >
     au < frozen ; exists ; 2015 ; International Journal of Managerial Finance Volume 11 ; 11 ; >
-    au < finished ; manifest ; 2016 ; International Journal of Managerial Finance Volume 12 ; 12 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; International Journal of Managerial Finance Volume 12 ; 12 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2017 ; International Journal of Managerial Finance Volume 13 ; 13 ; >
 
   }
@@ -5600,7 +5600,7 @@
     au < manifest ; exists ; 2013 ; Journal of Applied Research in Higher Education Volume 5 ; 5 ; >
     au < finished ; finished ; 2014 ; Journal of Applied Research in Higher Education Volume 6 ; 6 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Journal of Applied Research in Higher Education Volume 7 ; 7 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; Journal of Applied Research in Higher Education Volume 8 ; 8 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2016 ; Journal of Applied Research in Higher Education Volume 8 ; 8 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2017 ; Journal of Applied Research in Higher Education Volume 9 ; 9 ; >
 
   }
