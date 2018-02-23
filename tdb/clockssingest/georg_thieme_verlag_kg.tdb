@@ -1151,7 +1151,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Deutsche Zeitschrift für Osteopathie Volume 12 ; 12 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; Deutsche Zeitschrift für Osteopathie Volume 13 ; 13 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2016 ; 2016 ; Deutsche Zeitschrift für Osteopathie Volume 14 ; 14 ; reingest2.clockss.org:8085 >
-   au < crawling ; exists ; 2017 ; 2017 ; Deutsche Zeitschrift für Osteopathie Volume 15 ; 15 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Deutsche Zeitschrift für Osteopathie Volume 15 ; 15 ; >
 
   }
 
@@ -1242,7 +1242,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Endoscopy Volume 46 ; 46 ; >
    au < finished ; finished ; 2015 ; 2015 ; Endoscopy Volume 47 ; 47 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2016 ; 2016 ; Endoscopy Volume 48 ; 48 ; reingest3.clockss.org:8083 >
-   au < crawling ; exists ; 2017 ; 2017 ; Endoscopy Volume 49 ; 49 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Endoscopy Volume 49 ; 49 ; >
 
   }
 
@@ -1321,7 +1321,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Erfahrungsheilkunde Volume 63 ; 63 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2015 ; 2015 ; Erfahrungsheilkunde Volume 64 ; 64 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; Erfahrungsheilkunde Volume 65 ; 65 ; reingest5.clockss.org:8082 >
-   au < crawling ; exists ; 2017 ; 2017 ; Erfahrungsheilkunde Volume 66 ; 66 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Erfahrungsheilkunde Volume 66 ; 66 ; >
 
   }
 
@@ -1637,7 +1637,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 21 ; 21 ; >
    au < finished ; finished ; 2015 ; 2015 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 22 ; 22 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 23 ; 23 ; reingest1.clockss.org:8082 >
-   au < crawling ; exists ; 2017 ; 2017 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 24 ; 24 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 24 ; 24 ; >
 
   }
 
@@ -1689,7 +1689,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Fortschritte der Neurologie - Psychiatrie Volume 82 ; 82 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; Fortschritte der Neurologie - Psychiatrie Volume 83 ; 83 ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; Fortschritte der Neurologie - Psychiatrie Volume 84 ; 84 ; reingest2.clockss.org:8085 >
-   au < crawling ; exists ; 2017 ; 2017 ; Fortschritte der Neurologie - Psychiatrie Volume 85 ; 85 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Fortschritte der Neurologie - Psychiatrie Volume 85 ; 85 ; >
 
   }
 
@@ -1929,7 +1929,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 46 ; 46 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2015 ; 2015 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 47 ; 47 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; down ; 2016 ; 2016 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 48 ; 48 ;  >
-   au < crawling ; exists ; 2017 ; 2017 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 49 ; 49 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 49 ; 49 ; >
 
   }
 
@@ -2826,7 +2826,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Journal of Pediatric Neurology Volume 12 ; 12 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Journal of Pediatric Neurology Volume 13 ; 13 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Journal of Pediatric Neurology Volume 14 ; 14 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; 2017 ; Journal of Pediatric Neurology Volume 15 ; 15 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Journal of Pediatric Neurology Volume 15 ; 15 ; >
 
   }
 
@@ -4088,7 +4088,7 @@
     au < finished ; finished ; 2014 ; 2014 ; physiopraxis Volume 12 ; 12 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2015 ; 2015 ; physiopraxis Volume 13 ; 13 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; physiopraxis Volume 14 ; 14 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; 2017 ; physiopraxis Volume 15 ; 15 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; physiopraxis Volume 15 ; 15 ; >
 
   }
 
@@ -5000,7 +5000,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Seminars in Plastic Surgery Volume 28 ; 28 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; Seminars in Plastic Surgery Volume 29 ; 29 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2016 ; 2016 ; Seminars in Plastic Surgery Volume 30 ; 30 ; reingest2.clockss.org:8085 >
-   au < crawling ; exists ; 2017 ; 2017 ; Seminars in Plastic Surgery Volume 31 ; 31 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Seminars in Plastic Surgery Volume 31 ; 31 ; >
 
   }
 
@@ -5471,7 +5471,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Suchttherapie Volume 15 ; 15 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; Suchttherapie Volume 16 ; 16 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2016 ; 2016 ; Suchttherapie Volume 17 ; 17 ; reingest4.clockss.org:8082 >
-   au < crawling ; exists ; 2017 ; 2017 ; Suchttherapie Volume 18 ; 18 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Suchttherapie Volume 18 ; 18 ; >
 
   }
 
@@ -5517,7 +5517,7 @@
    au < finished ; finished ; 2014 ; 2014 ; SYNFACTS Volume 10 ; 10 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; SYNFACTS Volume 11 ; 11 ; reingest2.clockss.org:8085 >
    au < deepCrawl ; exists ; 2016 ; 2016 ; SYNFACTS Volume 12 ; 12 ; >
-   au < crawling ; exists ; 2017 ; 2017 ; SYNFACTS Volume 13 ; 13 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; SYNFACTS Volume 13 ; 13 ; >
 
   }
 
@@ -6903,7 +6903,7 @@
     au < manifest ; exists ; 2014 ; 2014 ; Onkologische Welt Volume 5 ; 5 ; >
     au < finished ; crawling ; 2015 ; 2015 ; Onkologische Welt Volume 6 ; 6 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; 2016 ; Onkologische Welt Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; Onkologische Welt Volume 8 ; 8 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Onkologische Welt Volume 8 ; 8 ; >
 
   }
 

@@ -265,7 +265,7 @@
       au < finished ; finished ; 2014 ; Energy & Environmental Science Volume 7 ; 7 ; 2014 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2015 ; Energy & Environmental Science Volume 8 ; 8 ; 2015 ; >
       au < deepCrawl ; exists ; 2016 ; Energy & Environmental Science Volume 9 ; 9 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; Energy & Environmental Science Volume 10 ; 10 ; 2017 ; >
+      au < deepCrawl ; exists ; 2017 ; Energy & Environmental Science Volume 10 ; 10 ; 2017 ; >
 
   }
 
@@ -343,12 +343,12 @@
       au < crawling ; exists ; 2017 ; Faraday Discussions Volume 196 ; 196 ; 2017 ; >
       au < deepCrawl ; exists ; 2017 ; Faraday Discussions Volume 197 ; 197 ; 2017 ; >
       au < crawling ; exists ; 2017 ; Faraday Discussions Volume 198 ; 198 ; 2017 ; >
-      au < crawling ; exists ; 2017 ; Faraday Discussions Volume 199 ; 199 ; 2017 ; >
+      au < deepCrawl ; exists ; 2017 ; Faraday Discussions Volume 199 ; 199 ; 2017 ; >
       au < crawling ; exists ; 2017 ; Faraday Discussions Volume 200 ; 200 ; 2017 ; >
       au < deepCrawl ; exists ; 2017 ; Faraday Discussions Volume 201 ; 201 ; 2017 ; >
       au < crawling ; exists ; 2017 ; Faraday Discussions Volume 202 ; 202 ; 2017 ; >
       au < deepCrawl ; exists ; 2017 ; Faraday Discussions Volume 203 ; 203 ; 2017 ; >
-      au < crawling ; exists ; 2017 ; Faraday Discussions Volume 204 ; 204 ; 2017 ; >
+      au < deepCrawl ; exists ; 2017 ; Faraday Discussions Volume 204 ; 204 ; 2017 ; >
 
   }
 
@@ -628,7 +628,7 @@
       au < frozen ; exists ; 2014 ; Organic & Biomolecular Chemistry Volume 12 ; 12 ; 2014 ; >
       au < deepCrawl ; exists ; 2015 ; Organic & Biomolecular Chemistry Volume 13 ; 13 ; 2015 ; >
       au < deepCrawl ; exists ; 2016 ; Organic & Biomolecular Chemistry Volume 14 ; 14 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; Organic & Biomolecular Chemistry Volume 15 ; 15 ; 2017 ; >
+      au < deepCrawl ; exists ; 2017 ; Organic & Biomolecular Chemistry Volume 15 ; 15 ; 2017 ; >
 
   }
 
@@ -705,7 +705,7 @@
 
       param[journal_code] = se
 
-      au < crawling ; exists ; 2017 ; Sustainable Energy & Fuels Volume 1 ; 1 ; 2017 ; >
+      au < deepCrawl ; exists ; 2017 ; Sustainable Energy & Fuels Volume 1 ; 1 ; 2017 ; >
 
   }
 
@@ -1936,7 +1936,7 @@
       au < frozen ; exists ; 2014 ; Materials Horizons Volume 1 ; 1 ; 2014 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2015 ; Materials Horizons Volume 2 ; 2 ; 2015 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2016 ; Materials Horizons Volume 3 ; 3 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; Materials Horizons Volume 4 ; 4 ; 2017 ; >
+      au < deepCrawl ; exists ; 2017 ; Materials Horizons Volume 4 ; 4 ; 2017 ; >
 
   }
 
@@ -1993,7 +1993,7 @@
       param[journal_code] = nh
 
       au < deepCrawl ; exists ; 2016 ; Nanoscale Horizons Volume 1 ; 1 ; 2016 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2017 ; Nanoscale Horizons Volume 2 ; 2 ; 2017 ; >
+      au < deepCrawl ; exists ; 2017 ; Nanoscale Horizons Volume 2 ; 2 ; 2017 ; >
 
   }
 

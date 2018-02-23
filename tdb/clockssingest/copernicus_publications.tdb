@@ -123,7 +123,7 @@
       au < finished ; finished ; 2014 ; 2014 ; Advances in Science and Research Volume 11 ; 11 ; http://www.adv-sci-res.net/ ; http://www.advances-in-science-and-research.net/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Advances in Science and Research Volume 12 ; 12 ; http://www.adv-sci-res.net/ ; http://www.advances-in-science-and-research.net/ ; >
       au < finished ; crawling ; 2016 ; 2016 ; Advances in Science and Research Volume 13 ; 13 ; http://www.adv-sci-res.net/ ; http://www.advances-in-science-and-research.net/ ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2017 ; 2017 ; Advances in Science and Research Volume 14 ; 14 ; https://www.adv-sci-res.net/ ; https://www.advances-in-science-and-research.net/ ; >
+      au < deepCrawl ; exists ; 2017 ; 2017 ; Advances in Science and Research Volume 14 ; 14 ; https://www.adv-sci-res.net/ ; https://www.advances-in-science-and-research.net/ ; >
       au < manifest ; exists ; 2018 ; 2018 ; Advances in Science and Research Volume 15 ; 15 ; https://www.adv-sci-res.net/ ; https://www.advances-in-science-and-research.net/ ; >
 
    }
@@ -140,7 +140,7 @@
 
       au < finished ; finished ; 2015 ; 2015 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 1 ; 1 ; http://www.adv-stat-clim-meteorol-oceanogr.net/ ; http://www.advances-statistical-climatology-meteorology-oceanography.net/ ; >
       au < finished ; crawling ; 2016 ; 2016 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 2 ; 2 ; http://www.adv-stat-clim-meteorol-oceanogr.net/ ; http://www.advances-statistical-climatology-meteorology-oceanography.net/ ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; 2017 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 3 ; 3 ; https://www.adv-stat-clim-meteorol-oceanogr.net/ ; https://www.advances-statistical-climatology-meteorology-oceanography.net/ ; >
+      au < deepCrawl ; exists ; 2017 ; 2017 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 3 ; 3 ; https://www.adv-stat-clim-meteorol-oceanogr.net/ ; https://www.advances-statistical-climatology-meteorology-oceanography.net/ ; >
       au < expected ; exists ; 2018 ; 2018 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 4 ; 4 ; https://www.adv-stat-clim-meteorol-oceanogr.net/ ; https://www.advances-statistical-climatology-meteorology-oceanography.net/ ; >
 
    }
@@ -442,7 +442,7 @@
       au < finished ; finished ; 2014 ; 2014 ; Climate of the Past Volume 10 ; 10 ; http://www.clim-past.net/ ; http://www.climate-of-the-past.net/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Climate of the Past Volume 11 ; 11 ; http://www.clim-past.net/ ; http://www.climate-of-the-past.net/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2016 ; 2016 ; Climate of the Past Volume 12 ; 12 ; http://www.clim-past.net/ ; http://www.climate-of-the-past.net/ ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; 2017 ; Climate of the Past Volume 13 ; 13 ; https://www.clim-past.net/ ; https://www.climate-of-the-past.net/ ; >
+      au < deepCrawl ; exists ; 2017 ; 2017 ; Climate of the Past Volume 13 ; 13 ; https://www.clim-past.net/ ; https://www.climate-of-the-past.net/ ; >
       au < manifest ; exists ; 2018 ; 2018 ; Climate of the Past Volume 14 ; 14 ; https://www.clim-past.net/ ; https://www.climate-of-the-past.net/ ; >
 
    }
@@ -809,7 +809,7 @@
       au < finished ; finished ; 2014 ; 2014 ; Geographica Helvetica Volume 69 ; 69 ; http://www.geogr-helv.net/ ; http://www.geographica-helvetica.net/ ; >
       au < finished ; finished ; 2015 ; 2015 ; Geographica Helvetica Volume 70 ; 70 ; http://www.geogr-helv.net/ ; http://www.geographica-helvetica.net/ ; >
       au < finished ; crawling ; 2016 ; 2016 ; Geographica Helvetica Volume 71 ; 71 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; 2017 ; Geographica Helvetica Volume 72 ; 72 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ ; >
+      au < deepCrawl ; exists ; 2017 ; 2017 ; Geographica Helvetica Volume 72 ; 72 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ ; >
       au < manifest ; exists ; 2018 ; 2018 ; Geographica Helvetica Volume 73 ; 73 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ ; >
 
    }
@@ -933,7 +933,7 @@
       au < finished ; finished ; 2014 ; 2014 ; History of Geo- and Space Sciences Volume 5 ; 5 ; http://www.hist-geo-space-sci.net/ ; http://www.history-of-geo-and-space-sciences.net/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; History of Geo- and Space Sciences Volume 6 ; 6 ; http://www.hist-geo-space-sci.net/ ; http://www.history-of-geo-and-space-sciences.net/ ; >
       au < finished ; crawling ; 2016 ; 2016 ; History of Geo- and Space Sciences Volume 7 ; 7 ; http://www.hist-geo-space-sci.net/ ; http://www.history-of-geo-and-space-sciences.net/ ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2017 ; 2017 ; History of Geo- and Space Sciences Volume 8 ; 8 ; https://www.hist-geo-space-sci.net/ ; https://www.history-of-geo-and-space-sciences.net/ ; >
+      au < deepCrawl ; exists ; 2017 ; 2017 ; History of Geo- and Space Sciences Volume 8 ; 8 ; https://www.hist-geo-space-sci.net/ ; https://www.history-of-geo-and-space-sciences.net/ ; >
       au < manifest ; exists ; 2018 ; 2018 ; History of Geo- and Space Sciences Volume 9 ; 9 ; https://www.hist-geo-space-sci.net/ ; https://www.history-of-geo-and-space-sciences.net/ ; >
 
    }
@@ -1428,7 +1428,7 @@
       au < finished ; finished ; 2014 ; 2014 ; Primate Biology Volume 1 ; 1 ; http://www.primate-biol.net/ ; http://www.primate-biology.net/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Primate Biology Volume 2 ; 2 ; http://www.primate-biol.net/ ; http://www.primate-biology.net/ ; >
       au < finished ; crawling ; 2016 ; 2016 ; Primate Biology Volume 3 ; 3 ; https://www.primate-biol.net/ ; https://www.primate-biology.net/ ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; 2017 ; Primate Biology Volume 4 ; 4 ; https://www.primate-biol.net/ ; https://www.primate-biology.net/ ; >
+      au < deepCrawl ; exists ; 2017 ; 2017 ; Primate Biology Volume 4 ; 4 ; https://www.primate-biol.net/ ; https://www.primate-biology.net/ ; >
       au < manifest ; exists ; 2018 ; 2018 ; Primate Biology Volume 5 ; 5 ; https://www.primate-biol.net/ ; https://www.primate-biology.net/ ; >
 
    }
@@ -1531,7 +1531,7 @@
 
       au < finished ; finished ; 2015 ; 2015 ; SOIL Volume 1 ; 1 ; http://www.soil-journal.net/ ; http://www.soil-journal.net/ ; >
       au < finished ; crawling ; 2016 ; 2016 ; SOIL Volume 2 ; 2 ; http://www.soil-journal.net/ ; http://www.soil-journal.net/ ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; 2017 ; SOIL Volume 3 ; 3 ; https://www.soil-journal.net/ ; https://www.soil-journal.net/ ; >
+      au < deepCrawl ; exists ; 2017 ; 2017 ; SOIL Volume 3 ; 3 ; https://www.soil-journal.net/ ; https://www.soil-journal.net/ ; >
       au < manifest ; exists ; 2018 ; 2018 ; SOIL Volume 4 ; 4 ; https://www.soil-journal.net/ ; https://www.soil-journal.net/ ; >
 
    }
@@ -1568,7 +1568,7 @@
       au < finished ; finished ; 2014 ; 2014 ; Solid Earth Volume 5 ; 5 ; http://www.solid-earth.net/ ; http://www.solid-earth.net/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Solid Earth Volume 6 ; 6 ; http://www.solid-earth.net/ ; http://www.solid-earth.net/ ; >
       au < finished ; crawling ; 2016 ; 2016 ; Solid Earth Volume 7 ; 7 ; http://www.solid-earth.net/ ; http://www.solid-earth.net/ ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2017 ; 2017 ; Solid Earth Volume 8 ; 8 ; https://www.solid-earth.net/ ; https://www.solid-earth.net/ ; >
+      au < deepCrawl ; exists ; 2017 ; 2017 ; Solid Earth Volume 8 ; 8 ; https://www.solid-earth.net/ ; https://www.solid-earth.net/ ; >
       au < manifest ; exists ; 2018 ; 2018 ; Solid Earth Volume 9 ; 9 ; https://www.solid-earth.net/ ; https://www.solid-earth.net/ ; >
 
    }

@@ -115,7 +115,7 @@
     au < manifest ; exists ; 2014 ; Elemente der Mathematik Volume 69 ; 69 ; >
     au < finished ; crawling ; 2015 ; Elemente der Mathematik Volume 70 ; 70 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Elemente der Mathematik Volume 71 ; 71 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Elemente der Mathematik Volume 72 ; 72 ; >
+    au < deepCrawl ; exists ; 2017 ; Elemente der Mathematik Volume 72 ; 72 ; >
     
   }
 
@@ -134,7 +134,7 @@
     au < manifest ; exists ; 2014 ; EMS Surveys in Mathematical Sciences Volume 1 ; 1 ; >
     au < finished ; crawling ; 2015 ; EMS Surveys in Mathematical Sciences Volume 2 ; 2 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; EMS Surveys in Mathematical Sciences Volume 3 ; 3 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2017 ; EMS Surveys in Mathematical Sciences Volume 4 ; 4 ; >
+    au < deepCrawl ; exists ; 2017 ; EMS Surveys in Mathematical Sciences Volume 4 ; 4 ; >
     
   }
 
@@ -429,7 +429,7 @@
     au < manifest ; exists ; 2014 ; Publications of the Research Institute for Mathematical Sciences Volume 50 ; 50 ; >
     au < finished ; crawling ; 2015 ; Publications of the Research Institute for Mathematical Sciences Volume 51 ; 51 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Publications of the Research Institute for Mathematical Sciences Volume 52 ; 52 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Publications of the Research Institute for Mathematical Sciences Volume 53 ; 53 ; >
+    au < deepCrawl ; exists ; 2017 ; Publications of the Research Institute for Mathematical Sciences Volume 53 ; 53 ; >
     
   }
 
