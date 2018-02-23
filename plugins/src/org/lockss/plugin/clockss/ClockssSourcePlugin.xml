@@ -1,7 +1,8 @@
 <map>
   <entry>
+  <!--  use more general parent ClockssDirSourcePlugin which doesn't limit to year param -->
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>deprecated</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
