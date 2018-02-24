@@ -33,7 +33,10 @@ package org.lockss.plugin.atypon.ampsychpub;
 
 import java.io.InputStream;
 
+import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
+import org.htmlparser.tags.Div;
+import org.htmlparser.tags.HeadingTag;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
@@ -65,6 +68,25 @@ public class AmPsychPubHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterF
       // never want these links, excluded lists was too long
       HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/servlet/linkout[?](suffix|type)="),
       HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/author/"),
+      
+      // Avoid following links in a Related Articles section
+      // Some links are only differentiated by the title <h1 class="widget-header header-regular ">Related Articles</h1>
+      // XXX NOTE: best if this is the last filter !!! Hopefully not too much time to run
+      new NodeFilter() {
+        @Override public boolean accept(Node node) {
+          if (!(node instanceof Div)) return false;
+          Node prevNode = node.getPreviousSibling();
+          while (prevNode != null && !(prevNode instanceof HeadingTag)) {
+            prevNode = prevNode.getPreviousSibling();
+          }
+          if (prevNode != null && prevNode instanceof HeadingTag) {
+            // XXX use Regex if the heading text changes
+            String heading = ((HeadingTag)prevNode).getStringText();
+            return "Related Articles".equals(heading);
+          }
+          return false;
+        }
+      }
       
   };
   

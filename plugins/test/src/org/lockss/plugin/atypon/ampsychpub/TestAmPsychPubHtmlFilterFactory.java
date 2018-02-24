@@ -707,7 +707,15 @@ public class TestAmPsychPubHtmlFilterFactory extends LockssTestCase {
       "                                  </div>\n" + 
       "                                </div>\n" + 
       "                              </div>\n" + 
-      "                              <div class=\"widget layout-frame none inner-white widget-emphasis\" id=\"f4410c40-ec02-421f-a474-5b07264d4858\">\n" + 
+      "                              <div class=\"widget layout-frame none inner-white widget-emphasis\" id=\"f4410c40-ec02-421f-a474-5b07264d4858\">\n" +
+      "                                <div class=\"wrapped \">\n" + 
+      "                                  <h1 class=\"widget-header header-regular \">Related Articles</h1>\n" + 
+      "                                  <div class=\"widget-body body body-regular \">\n" + 
+      "                                    <p><b>Text...</b></p>\n" + 
+      "                                    <a href=\"http://www.psychiatryonline.org/doi/abs/10.1176/appi.ps.201300158\" target=\"_blank\">10.1176/appi.ps.201300158</a>\n" + 
+      "                                    <hr>\n" + 
+      "                                  </div>\n" + 
+      "                                </div>\n" + 
       "                                <div class=\"wrapped \" id=\"TrendMD\">\n" + 
       "                                  <div class=\"widget-body body body-emphasis \">\n" + 
       "                                    <div data-pb-dropzone=\"contents\">\n" + 
@@ -944,6 +952,10 @@ public class TestAmPsychPubHtmlFilterFactory extends LockssTestCase {
       "                                </div>\n" + 
       "                              </div>\n" + 
       "                              <div class=\"widget layout-frame none inner-white widget-emphasis\" id=\"f4410c40-ec02-421f-a474-5b07264d4858\">\n" + 
+      "                                <div class=\"wrapped \">\n" + 
+      "                                  <h1 class=\"widget-header header-regular \">Related Articles</h1>\n" + 
+      "                                  \n" + 
+      "                                </div>\n" + 
       "                                \n" + 
       "                              </div>\n" + 
       "                            </div>\n" + 
