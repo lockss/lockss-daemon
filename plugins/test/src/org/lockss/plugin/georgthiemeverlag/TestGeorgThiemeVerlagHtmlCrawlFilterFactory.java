@@ -274,7 +274,16 @@ public class TestGeorgThiemeVerlagHtmlCrawlFilterFactory extends LockssTestCase 
   private static final String withoutOffAULinks = "<div id=\"page\">\n" +
       "</div>";
   
-  
+  private static final String articleBox =
+		  "<div class=\"articleBox supmat related\">" +
+				  "<div class=\"wrapper\" style=\"padding-top: 10px\">" +
+				  "<h4>See also:</h4>" +
+				  "<a class=\"articleTitle extraVSpace\" href=\"/products/ejournals/abstract/10.1055/s-0034-1370123\">" +
+				  "Sauerstoff in der Medizin</a>" +
+				  "Inn Med up 2014; 2(02): 115-129<br>" +
+				  "DOI: 10.1055/s-0034-1370123<br>" +
+				  "<br></div></div>";
+
   public void testFiltering() throws Exception {
     InputStream inA;
     String a;
@@ -320,6 +329,12 @@ public class TestGeorgThiemeVerlagHtmlCrawlFilterFactory extends LockssTestCase 
         Constants.DEFAULT_ENCODING);
     a = StringUtil.fromInputStream(inA);
     assertEquals(withoutOffAULinks, a);
+    
+    // off page links
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(articleBox),
+        Constants.DEFAULT_ENCODING);
+    a = StringUtil.fromInputStream(inA);
+    assertEquals("", a);    
     
   }
   
