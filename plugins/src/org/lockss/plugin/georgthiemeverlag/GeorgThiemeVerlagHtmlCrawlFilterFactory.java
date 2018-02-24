@@ -67,6 +67,16 @@ public class GeorgThiemeVerlagHtmlCrawlFilterFactory implements FilterFactory {
         // Appears that correction anchors have class="anchorc" 
         // eg. https://www.thieme-connect.de/products/ejournals/abstract/10.1055/s-0030-1249709
         HtmlNodeFilters.tagWithAttribute("a", "class", "anchorc"),
+        //We've been overrawling due to links to other articles from boxes on the abstract pages
+        //https://www.thieme-connect.de/products/ejournals/abstract/10.1055/s-0030-1255783
+        //<div class="articleBox supmat related">
+        HtmlNodeFilters.tagWithAttributeRegex("div",  "class",  "articleBox.*related"),
+        // this will not conflict with true supplementary material which is in its own tab
+        // <section id="supmat"...div id="supportingMaterial..."
+        // see an article with suppl at 
+        // https://www.thieme-connect.de/products/ejournals/abstract/10.1055/s-0034-1390442
+        
+        
     };
     InputStream filtered = new HtmlFilterInputStream(in, encoding,
         HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
