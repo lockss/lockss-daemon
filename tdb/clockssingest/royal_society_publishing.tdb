@@ -482,7 +482,7 @@
     au < rsp.ClockssRSPDrupalPlugin ; frozen ; exists ; 2014 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 372 ; 372 ; >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2015 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 373 ; 373 ; reingest5.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2016 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 374 ; 374 ; reingest2.clockss.org:8085 >
-    au < rsp.ClockssRSPDrupalPlugin ; crawling ; exists ; 2017 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 375 ; 375 ; >
+    au < rsp.ClockssRSPDrupalPlugin ; deepCrawl ; exists ; 2017 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 375 ; 375 ; >
 
   }
 

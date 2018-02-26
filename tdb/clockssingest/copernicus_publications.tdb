@@ -182,7 +182,7 @@
       au < finished ; finished ; 2014 ; 2014 ; Annales Geophysicae Volume 32 ; 32 ; http://www.ann-geophys.net/ ; http://www.annales-geophysicae.net/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Annales Geophysicae Volume 33 ; 33 ; http://www.ann-geophys.net/ ; http://www.annales-geophysicae.net/ ; >
       au < finished ; crawling ; 2016 ; 2016 ; Annales Geophysicae Volume 34 ; 34 ; http://www.ann-geophys.net/ ; http://www.annales-geophysicae.net/ ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; 2017 ; Annales Geophysicae Volume 35 ; 35 ; https://www.ann-geophys.net/ ; https://www.annales-geophysicae.net/ ; >
+      au < deepCrawl ; exists ; 2017 ; 2017 ; Annales Geophysicae Volume 35 ; 35 ; https://www.ann-geophys.net/ ; https://www.annales-geophysicae.net/ ; >
       au < manifest ; exists ; 2018 ; 2018 ; Annales Geophysicae Volume 36 ; 36 ; https://www.ann-geophys.net/ ; https://www.annales-geophysicae.net/ ; >
 
    }
@@ -610,7 +610,7 @@
       au < finished ; finished ; 2014 ; 2014 ; Earth System Science Data Volume 6 ; 6 ; http://www.earth-syst-sci-data.net/ ; http://www.earth-system-science-data.net/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Earth System Science Data Volume 7 ; 7 ; http://www.earth-syst-sci-data.net/ ; http://www.earth-system-science-data.net/ ; >
       au < finished ; crawling ; 2016 ; 2016 ; Earth System Science Data Volume 8 ; 8 ; http://www.earth-syst-sci-data.net/ ; http://www.earth-system-science-data.net/ ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2017 ; 2017 ; Earth System Science Data Volume 9 ; 9 ; https://www.earth-syst-sci-data.net/ ; https://www.earth-system-science-data.net/ ; >
+      au < deepCrawl ; exists ; 2017 ; 2017 ; Earth System Science Data Volume 9 ; 9 ; https://www.earth-syst-sci-data.net/ ; https://www.earth-system-science-data.net/ ; >
       au < manifest ; exists ; 2018 ; 2018 ; Earth System Science Data Volume 10 ; 10 ; https://www.earth-syst-sci-data.net/ ; https://www.earth-system-science-data.net/ ; >
 
    }
@@ -1327,7 +1327,7 @@
       au < finished ; finished ; 2014 ; 2014 ; Nonlinear Processes in Geophysics Volume 21 ; 21 ; http://www.nonlin-processes-geophys.net/ ; http://www.nonlinear-processes-in-geophysics.net/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Nonlinear Processes in Geophysics Volume 22 ; 22 ; http://www.nonlin-processes-geophys.net/ ; http://www.nonlinear-processes-in-geophysics.net/ ; >
       au < frozen ; exists ; 2016 ; 2016 ; Nonlinear Processes in Geophysics Volume 23 ; 23 ; https://www.nonlin-processes-geophys.net/ ; https://www.nonlinear-processes-in-geophysics.net/ ; >
-      au < crawling ; exists ; 2017 ; 2017 ; Nonlinear Processes in Geophysics Volume 24 ; 24 ; https://www.nonlin-processes-geophys.net/ ; https://www.nonlinear-processes-in-geophysics.net/ ; >
+      au < deepCrawl ; exists ; 2017 ; 2017 ; Nonlinear Processes in Geophysics Volume 24 ; 24 ; https://www.nonlin-processes-geophys.net/ ; https://www.nonlinear-processes-in-geophysics.net/ ; >
       au < manifest ; exists ; 2018 ; 2018 ; Nonlinear Processes in Geophysics Volume 25 ; 25 ; https://www.nonlin-processes-geophys.net/ ; https://www.nonlinear-processes-in-geophysics.net/ ; >
 
    }
@@ -1369,7 +1369,7 @@
       au < finished ; finished ; 2014 ; 2014 ; Ocean Science Volume 10 ; 10 ; http://www.ocean-sci.net/ ; http://www.ocean-science.net/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Ocean Science Volume 11 ; 11 ; http://www.ocean-sci.net/ ; http://www.ocean-science.net/ ; >
       au < frozen ; exists ; 2016 ; 2016 ; Ocean Science Volume 12 ; 12 ; https://www.ocean-sci.net/ ; https://www.ocean-science.net/ ; >
-      au < crawling ; exists ; 2017 ; 2017 ; Ocean Science Volume 13 ; 13 ; https://www.ocean-sci.net/ ; https://www.ocean-science.net/ ; >
+      au < deepCrawl ; exists ; 2017 ; 2017 ; Ocean Science Volume 13 ; 13 ; https://www.ocean-sci.net/ ; https://www.ocean-science.net/ ; >
       au < manifest ; exists ; 2018 ; 2018 ; Ocean Science Volume 14 ; 14 ; https://www.ocean-sci.net/ ; https://www.ocean-science.net/ ; >
 
    }

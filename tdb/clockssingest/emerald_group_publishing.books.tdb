@@ -511,7 +511,7 @@
       au < finished ; crawling ; 2012 ; 9781781901021 ; 9781781901038 ; 9781781901038 ; Health Disparities Among Under-served Populations: Implications for Research, Policy and Praxis Volume 9 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2014 ; 9781783507092 ; 9781783507108 ; 9781783507108 ; The Obama Administration and Educational Reform Volume 10 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; 9781785602917 ; 9781785602900 ; 9781785602900 ; Mitigating Inequality: Higher Education Research, Policy, and Practice in an Era of Massification and Stratification Volume 11 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2017 ; 9781783504619 ; 9781783504626 ; 9781783504626 ; The Power of Resistance Volume 12 ; >
+      au < deepCrawl ; exists ; 2017 ; 9781783504619 ; 9781783504626 ; 9781783504626 ; The Power of Resistance Volume 12 ; >
 
   }
 
@@ -1034,7 +1034,7 @@
       au < finished ; crawling ; 2015 ; 9781785604997 ; 9781785604980 ; 9781785604980 ; Library Staffing for the Future Volume 34 ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2016 ; 9781785607318 ; 9781785607301 ; 9781785607301 ; Innovation in Libraries and Information Services Volume 35 ; >
       au < finished ; crawling ; 2016 ; 9781786352705 ; 9781786352699 ; 9781786352699 ; The Future of Library Space Volume 36 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2017 ; 9781787430846 ; 9781787430839 ; 9781787430839 ; Emotion in the Library Workplace Volume 37 ; >
+      au < deepCrawl ; exists ; 2017 ; 9781787430846 ; 9781787430839 ; 9781787430839 ; Emotion in the Library Workplace Volume 37 ; >
 
   }
 
@@ -1066,7 +1066,7 @@
       au < crawling ; exists ; 2015 ; 9781784416508 ; 9781784416492 ; 9781784416492 ; Advances in Management Accounting Volume 25 ; >
       au < finished ; crawling ; 2016 ; 9781784416522 ; 9781784416515 ; 9781784416515 ; Advances in Management Accounting Volume 26 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2016 ; 9781785609725 ; 9781785609718 ; 9781785609718 ; Advances in Management Accounting Volume 27 ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; 9781787145306 ; 9781787145290 ; 9781787145290 ; Advances in Management Accounting Volume 28 ; >
+      au < deepCrawl ; exists ; 2017 ; 9781787145306 ; 9781787145290 ; 9781787145290 ; Advances in Management Accounting Volume 28 ; >
 
   }
 
@@ -1348,7 +1348,7 @@
       au < frozen ; exists ; 2014 ; 9781784411206 ; 9781784411190 ; 9781784411190 ; Advances in Taxation Volume 21 ; >
       au < finished ; crawling ; 2015 ; 9781785602771 ; 9781785602764 ; 9781785602764 ; Advances in Taxation Volume 22 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2016 ; 9781786350022 ; 9781786350015 ; 9781786350015 ; Advances in Taxation Volume 23 ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; 9781787145245 ; 9781787145238 ; 9781787145238 ; Advances in Taxation Volume 24 ; >
+      au < deepCrawl ; exists ; 2017 ; 9781787145245 ; 9781787145238 ; 9781787145238 ; Advances in Taxation Volume 24 ; >
 
   }
 
@@ -1422,7 +1422,7 @@
       au < ready ; exists ; 2014 ; 9781783504985 ; 9781783504978 ; 9781783504978 ; Innovative Pathways for University Entrepreneurship in the 21st Century Volume 24 ; >
       au < finished ; crawling ; 2015 ; 9781784419509 ; 9781784419493 ; 9781784419493 ; The Challenges of Ethics and Entrepreneurship in the Global Environment Volume 25 ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2016 ; 9781786352385 ; 9781786352378 ; 9781786352378 ; Technological Innovation: Generating Economic Results Volume 26 ; >
-      au < crawling ; exists ; 2017 ; 9781787430761 ; 9781787430754 ; 9781787430754 ; The Great Debates in Entrepreneurship Volume 27 ; >
+      au < deepCrawl ; exists ; 2017 ; 9781787430761 ; 9781787430754 ; 9781787430754 ; The Great Debates in Entrepreneurship Volume 27 ; >
 
   }
 
@@ -1908,7 +1908,7 @@
       au < finished ; crawling ; 2014 ; 9781784411794 ; 9781784411787 ; 9781784411787 ; Globalization and the Environment of China Volume 14 ; reingest2.clockss.org:8085 >
       au < ready ; exists ; 2015 ; 9781785602139 ; 9781785602122 ; 9781785602122 ; Food Security in an Uncertain World Volume 15 ; >
       au < frozen ; exists ; 2016 ; 9781785602153 ; 9781785602146 ; 9781785602146 ; Food Security in a Food Abundant World Volume 16 ; >
-      au < crawling ; exists ; 2017 ; 9781787145160 ; 9781787145153 ; 9781787145153 ; World Agricultural Resources and Food Security Volume 17 ; >
+      au < deepCrawl ; exists ; 2017 ; 9781787145160 ; 9781787145153 ; 9781787145153 ; World Agricultural Resources and Food Security Volume 17 ; >
 
   }
 
@@ -1944,7 +1944,7 @@
       au < finished ; crawling ; 2014 ; 9781783506224 ; 9781783506217 ; 9781783506217 ; Evaluating Companies for Mergers and Acquisitions Volume 30 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2015 ; 9781784417420 ; 9781784417413 ; 9781784417413 ; Reintegrating Iran with the West: Challenges and Opportunities Volume 31 ; reingest4.clockss.org:8082 >
       au < ready ; exists ; 2016 ; 9781786353542 ; 9781786353535 ; 9781786353535 ; Global Talent Management and Staffing in MNEs Volume 32 ; >
-      au < crawling ; exists ; 2017 ; 9781787431645 ; 9781787431638 ; 9781787431638 ; Multinational Enterprises and Sustainable Development Volume 33 ; >
+      au < deepCrawl ; exists ; 2017 ; 9781787431645 ; 9781787431638 ; 9781787431638 ; Multinational Enterprises and Sustainable Development Volume 33 ; >
 
   }
 
@@ -2454,7 +2454,7 @@
       au < ready ; exists ; 2014 ; 9781783504879 ; 9781783504886 ; 9781783504886 ; Research in Economic History Volume 30 ; >
       au < frozen ; exists ; 2015 ; 9781784417826 ; 9781784417819 ; 9781784417819 ; Research in Economic History Volume 31 ; >
       au < finished ; crawling ; 2016 ; 9781786352767 ; 9781786352750 ; 9781786352750 ; Research in Economic History Volume 32 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; 9781787431201 ; 9781787431195 ; 9781787431195 ; Research in Economic History Volume 33 ; >
+      au < deepCrawl ; exists ; 2017 ; 9781787431201 ; 9781787431195 ; 9781787431195 ; Research in Economic History Volume 33 ; >
 
   }
 
@@ -3158,7 +3158,7 @@
       au < ready ; exists ; 2016 ; 9781786354327 ; 9781786354310 ; 9781786354310 ; How Institutions Matter! Volume 48B ; >
       au < crawling ; exists ; 2017 ; 9781786353863 ; 9781786353856 ; 9781786353856 ; Multinational Corporations and Organization Theory: Post Millennium Perspectives Volume 49 ; >
       au < crawling ; exists ; 2017 ; 9781786359155 ; 9781786359148 ; 9781786359148 ; Emergence Volume 50 ; >
-      au < crawling ; exists ; 2017 ; 9781787142398 ; 9781787142381 ; 9781787142381 ; From Categories to Categorization: Studies in Sociology, Organizations and Strategy at the Crossroads Volume 51 ; >
+      au < deepCrawl ; exists ; 2017 ; 9781787142398 ; 9781787142381 ; 9781787142381 ; From Categories to Categorization: Studies in Sociology, Organizations and Strategy at the Crossroads Volume 51 ; >
       au < crawling ; exists ; 2017 ; 9781787143807 ; 9781787143791 ; 9781787143791 ; Justification, Evaluation and Critique in the Study of Organizations Volume 52 ; >
       au < deepCrawl ; exists ; 2017 ; 9781787144347 ; 9781787144330 ; 9781787144330 ; Structure, Content and Meaning of Organizational Networks Volume 53 ; >
 

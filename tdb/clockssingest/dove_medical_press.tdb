@@ -282,7 +282,7 @@
     au < finished ; finished ; 2014 ; Drug Design, Development and Therapy Volume 8 ; 8 ; 2014 ; >
     au < finished ; crawling ; 2015 ; Drug Design, Development and Therapy Volume 9 ; 9 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Drug Design, Development and Therapy Volume 10 ; 10 ; 2016 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Drug Design, Development and Therapy Volume 11 ; 11 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Drug Design, Development and Therapy Volume 11 ; 11 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Drug Design, Development and Therapy Volume 12 ; 12 ; 2018 ; >
 
   }
@@ -466,7 +466,7 @@
     au < finished ; finished ; 2014 ; ClinicoEconomics and Outcomes Research Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; ClinicoEconomics and Outcomes Research Volume 7 ; 7 ; 2015 ; >
     au < finished ; crawling ; 2016 ; ClinicoEconomics and Outcomes Research Volume 8 ; 8 ; 2016 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2017 ; ClinicoEconomics and Outcomes Research Volume 9 ; 9 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; ClinicoEconomics and Outcomes Research Volume 9 ; 9 ; 2017 ; >
     au < manifest ; exists ; 2018 ; ClinicoEconomics and Outcomes Research Volume 10 ; 10 ; 2018 ; >
 
   }
@@ -718,7 +718,7 @@
     au < finished ; finished ; 2014 ; Open Access Surgery Volume 7 ; 7 ; 2014 ; >
     au < finished ; finished ; 2015 ; Open Access Surgery Volume 8 ; 8 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Open Access Surgery Volume 9 ; 9 ; 2016 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2017 ; Open Access Surgery Volume 10 ; 10 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Open Access Surgery Volume 10 ; 10 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Open Access Surgery Volume 11 ; 11 ; 2018 ; >
 
   }
@@ -764,7 +764,7 @@
     au < finished ; finished ; 2014 ; Integrated Blood Pressure Control Volume 7 ; 7 ; 2014 ; >
     au < finished ; finished ; 2015 ; Integrated Blood Pressure Control Volume 8 ; 8 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Integrated Blood Pressure Control Volume 9 ; 9 ; 2016 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Integrated Blood Pressure Control Volume 10 ; 10 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Integrated Blood Pressure Control Volume 10 ; 10 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Integrated Blood Pressure Control Volume 11 ; 11 ; 2018 ; >
 
   }
@@ -808,7 +808,7 @@
     au < finished ; finished ; 2014 ; Drug, Healthcare and Patient Safety Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Drug, Healthcare and Patient Safety Volume 7 ; 7 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Drug, Healthcare and Patient Safety Volume 8 ; 8 ; 2016 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Drug, Healthcare and Patient Safety Volume 9 ; 9 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Drug, Healthcare and Patient Safety Volume 9 ; 9 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Drug, Healthcare and Patient Safety Volume 10 ; 10 ; 2018 ; >
 
   }
@@ -853,7 +853,7 @@
     au < finished ; finished ; 2014 ; International Medical Case Reports Journal Volume 7 ; 7 ; 2014 ; >
     au < finished ; finished ; 2015 ; International Medical Case Reports Journal Volume 8 ; 8 ; 2015 ; >
     au < finished ; crawling ; 2016 ; International Medical Case Reports Journal Volume 9 ; 9 ; 2016 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; International Medical Case Reports Journal Volume 10 ; 10 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; International Medical Case Reports Journal Volume 10 ; 10 ; 2017 ; >
     au < manifest ; exists ; 2018 ; International Medical Case Reports Journal Volume 11 ; 11 ; 2018 ; >
 
   }
@@ -1308,7 +1308,7 @@
     au < finished ; finished ; 2014 ; Breast Cancer: Targets and Therapy Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Breast Cancer: Targets and Therapy Volume 7 ; 7 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Breast Cancer: Targets and Therapy Volume 8 ; 8 ; 2016 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Breast Cancer: Targets and Therapy Volume 9 ; 9 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Breast Cancer: Targets and Therapy Volume 9 ; 9 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Breast Cancer: Targets and Therapy Volume 10 ; 10 ; 2018 ; >
 
   }
@@ -1741,7 +1741,7 @@
     au < finished ; finished ; 2014 ; Advances in Medical Education and Practice Volume 5 ; 5 ; 2014 ; >
     au < finished ; finished ; 2015 ; Advances in Medical Education and Practice Volume 6 ; 6 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Advances in Medical Education and Practice Volume 7 ; 7 ; 2016 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Advances in Medical Education and Practice Volume 8 ; 8 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Advances in Medical Education and Practice Volume 8 ; 8 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Advances in Medical Education and Practice Volume 9 ; 9 ; 2018 ; >
 
   }
@@ -1762,7 +1762,7 @@
     au < finished ; finished ; 2014 ; Research and Reports in Tropical Medicine Volume 5 ; 5 ; 2014 ; >
     au < finished ; finished ; 2015 ; Research and Reports in Tropical Medicine Volume 6 ; 6 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Research and Reports in Tropical Medicine Volume 7 ; 7 ; 2016 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Research and Reports in Tropical Medicine Volume 8 ; 8 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Research and Reports in Tropical Medicine Volume 8 ; 8 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Research and Reports in Tropical Medicine Volume 9 ; 9 ; 2018 ; >
 
   }
@@ -2687,7 +2687,7 @@
     au < finished ; finished ; 2014 ; Hypoxia Volume 2 ; 2 ; 2014 ; >
     au < finished ; finished ; 2015 ; Hypoxia Volume 3 ; 3 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Hypoxia Volume 4 ; 4 ; 2016 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Hypoxia Volume 5 ; 5 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Hypoxia Volume 5 ; 5 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Hypoxia Volume 6 ; 6 ; 2018 ; >
 
   }

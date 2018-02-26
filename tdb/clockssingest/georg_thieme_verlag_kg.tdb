@@ -1396,7 +1396,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Ernährung & Medizin Volume 29 ; 029 ; >
    au < finished ; finished ; 2015 ; 2015 ; Ernährung & Medizin Volume 30 ; 030 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; Ernährung & Medizin Volume 31 ; 31 ; reingest3.clockss.org:8083 >
-   au < crawling ; exists ; 2017 ; 2017 ; Ernährung & Medizin Volume 32 ; 32 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Ernährung & Medizin Volume 32 ; 32 ; >
 
   }
 
@@ -2775,7 +2775,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Journal of Pediatric Infectious Diseases Volume 9 ; 9 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; Journal of Pediatric Infectious Diseases Volume 10 ; 10 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2016 ; 2016 ; Journal of Pediatric Infectious Diseases Volume 11 ; 11 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2017 ; 2017 ; Journal of Pediatric Infectious Diseases Volume 12 ; 12 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Journal of Pediatric Infectious Diseases Volume 12 ; 12 ; >
 
   }
 
@@ -3089,7 +3089,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Klinische Monatsblätter für Augenheilkunde Volume 231 ; 231 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; Klinische Monatsblätter für Augenheilkunde Volume 232 ; 232 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; 2016 ; Klinische Monatsblätter für Augenheilkunde Volume 233 ; 233 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; Klinische Monatsblätter für Augenheilkunde Volume 234 ; 234 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Klinische Monatsblätter für Augenheilkunde Volume 234 ; 234 ; >
 
   }
 
@@ -3223,7 +3223,7 @@
     au < finished ; finished ; 2014 ; 2014 ; kma - Das Gesundheitswirtschaftsmagazin Volume 19 ; 19 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; kma - Das Gesundheitswirtschaftsmagazin Volume 20 ; 20 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; kma - Das Gesundheitswirtschaftsmagazin Volume 21 ; 21 ;  >
-    au < crawling ; exists ; 2017 ; 2017 ; kma - Das Gesundheitswirtschaftsmagazin Volume 22 ; 22 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; kma - Das Gesundheitswirtschaftsmagazin Volume 22 ; 22 ; >
 
   }
 
@@ -3915,7 +3915,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Pädiatrie up2date Volume 9 ; 9 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Pädiatrie up2date Volume 10 ; 10 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Pädiatrie up2date Volume 11 ; 11 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; 2017 ; Pädiatrie up2date Volume 12 ; 12 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Pädiatrie up2date Volume 12 ; 12 ; >
 
   }
 
@@ -4542,7 +4542,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Radiopraxis Volume 7 ; 7 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2015 ; 2015 ; Radiopraxis Volume 8 ; 8 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; down ; 2016 ; 2016 ; Radiopraxis Volume 9 ; 9 ;  >
-   au < crawling ; exists ; 2017 ; 2017 ; Radiopraxis Volume 10 ; 10 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Radiopraxis Volume 10 ; 10 ; >
 
   }
 
@@ -4949,7 +4949,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Seminars in Neurology Volume 34 ; 34 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; Seminars in Neurology Volume 35 ; 35 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; Seminars in Neurology Volume 36 ; 36 ; reingest2.clockss.org:8085 >
-   au < crawling ; exists ; 2017 ; 2017 ; Seminars in Neurology Volume 37 ; 37 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Seminars in Neurology Volume 37 ; 37 ; >
 
   }
 
@@ -6065,7 +6065,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 28 ; 28 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 29 ; 29 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 30 ; 30 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2017 ; 2017 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 31 ; 31 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 31 ; 31 ; >
 
   }
 
@@ -6745,7 +6745,7 @@
     param[journal_id] = 10.1055/s-00034793
     comment[years] = 2017-current
 
-    au < crawling ; exists ; 2017 ; 2017 ; Journal of Cardiac Critical Care TSS Volume 1 ; 1 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Journal of Cardiac Critical Care TSS Volume 1 ; 1 ; >
 
   }
 
