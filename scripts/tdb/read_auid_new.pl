@@ -701,7 +701,7 @@ while (my $line = <>) {
             my $man_contents = $resp->content;
             #no lockss permission statement on start page. Permission statement is here: https://www.thieme-connect.de/lockss.txt
             if (defined($man_contents) && ($man_contents =~ m/products\/ebooks\/pdf/)) {
-                 if ($man_contents =~ m/<h1 class="productTitle">(.*)\s*<\/h1>/si) {               
+                 if ($man_contents =~ m/<h1 class="productTitle">(.*)\s*<\/h1>/si) {
                     $vol_title = $1;
                     $vol_title =~ s/\s*\n\s*/ /g;
                 }
@@ -712,7 +712,7 @@ while (my $line = <>) {
         } else {
             $result = "--"
         }
-        sleep(4);                
+        sleep(4);
         
   } elsif ($plugin eq "ClockssGeorgThiemeVerlagBooksPlugin") {
         $url = sprintf("%sproducts/ebooks/book/%s",
@@ -724,7 +724,7 @@ while (my $line = <>) {
         if ($resp->is_success) {
             my $man_contents = $resp->content;
             if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/products\/ebooks\/pdf/)) {
-                if ($man_contents =~ m/<h1 class="productTitle">(.*)\s*<\/h1>/si) {               
+                if ($man_contents =~ m/<h1 class="productTitle">(.*)\s*<\/h1>/si) {
                     $vol_title = $1;
                     $vol_title =~ s/\s*\n\s*/ /g;
                 }
@@ -735,7 +735,7 @@ while (my $line = <>) {
         } else {
             $result = "--"
         }
-        sleep(4);        
+        sleep(4);
 
   } elsif ($plugin eq "ClockssDoveMedicalPressPlugin") {
         $url = sprintf("%slockss.php?t=clockss&pa=issue&j_id=%s&year=%d",
@@ -766,6 +766,7 @@ while (my $line = <>) {
            ($plugin eq "AmPublicHealthAssocPlugin") ||
            ($plugin eq "AMetSocPlugin") ||
            ($plugin eq "AmPhysSocAtyponPlugin") ||
+           ($plugin eq "AmPsychPubAtyponPlugin") ||
            ($plugin eq "ARRSPlugin") ||
            ($plugin eq "AscoJournalsPlugin") ||
            ($plugin eq "AtsJournalsPlugin") ||
@@ -781,7 +782,7 @@ while (my $line = <>) {
            ($plugin eq "MarkAllenPlugin") ||
            ($plugin eq "MultiSciencePlugin") ||
            ($plugin eq "MassachusettsMedicalSocietyPlugin") ||
-           ($plugin eq "RsnaJournalsPlugin") ||           
+           ($plugin eq "RsnaJournalsPlugin") ||
            ($plugin eq "SageAtyponJournalsPlugin") ||
            ($plugin eq "SiamPlugin") ||
            ($plugin eq "WageningenJournalsPlugin")) {
@@ -1459,7 +1460,7 @@ while (my $line = <>) {
     } else {
       $result = "--"
     }
-    sleep(4);    
+    sleep(4);
 #  } elsif ($plugin eq "MetaPressPlugin") {
 #    $url = sprintf("%sopenurl.asp?genre=volume&eissn=%s&volume=%s",
 #      $param{base_url}, $param{journal_issn}, $param{volume_name});
@@ -2407,7 +2408,7 @@ while (my $line = <>) {
       $result = "--REQ_FAIL--"
     }
     sleep(4);
-        
+    
   } elsif ($plugin eq "ClockssJstorCurrentScholarshipPlugin"){
       $url = sprintf("%sclockss-manifest/%s/%s",
       $param{base_url}, $param{journal_id}, $param{year});
