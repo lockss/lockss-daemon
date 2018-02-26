@@ -61,6 +61,7 @@ import org.lockss.metadata.MetadataManager;
 import org.lockss.metadata.TestMetadataManager.MySimulatedPlugin0;
 import org.lockss.metadata.TestMetadataManager.MySimulatedPlugin1;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.PluginManager;
 import org.lockss.plugin.PluginTestUtil;
 import org.lockss.plugin.simulated.SimulatedArchivalUnit;
@@ -969,6 +970,175 @@ public class FuncAuControlService extends LockssTestCase {
     assertEquals(sau1.getAuId(), result.getId());
     assertTrue(result.isSuccess());
     assertNull(result.getErrorMessage());
+  }
+
+  /**
+   * Tests setting read-only and read-write on an Archival Unit.
+   */
+  public void testReadOnlyById() throws Exception {
+    UserAccount userAccount = accountManager.getUser(USER_NAME);
+
+    // User "userAdminRole" should succeed.
+    userAccount.setRoles(LockssServlet.ROLE_USER_ADMIN);
+
+    RequestAuControlResult result = proxy.setReadOnlyById("");
+    assertEquals("", result.getId());
+    assertFalse(result.isSuccess());
+    assertEquals(MISSING_AU_ID_ERROR_MESSAGE,
+	result.getErrorMessage());
+
+    pluginMgr.deleteAu(mau);
+    pluginMgr.deleteAu(mau0);
+    pluginMgr.deleteAu(mau1);
+
+    int expectedAuCount = 2;
+    assertEquals(expectedAuCount, pluginMgr.getAllAus().size());
+
+    result = proxy.setReadOnlyById(mau.getAuId());
+    assertEquals(mau.getAuId(), result.getId());
+    assertFalse(result.isSuccess());
+    assertEquals(NO_SUCH_AU_ERROR_MESSAGE, result.getErrorMessage());
+
+    // User "contentAdminRole" should fail.
+    userAccount.setRoles(LockssServlet.ROLE_CONTENT_ADMIN);
+    try {
+      result = proxy.setReadOnlyById(mau.getAuId());
+      fail("Test should have failed for role "
+	   + LockssServlet.ROLE_CONTENT_ADMIN);
+    } catch (LockssWebServicesFault lwsf) {
+      // Expected authorization failure.
+      assertEquals(AuthorizationInterceptor.NO_REQUIRED_ROLE,
+	  lwsf.getMessage());
+    }
+
+    // User "auAdminRole" should fail.
+    userAccount.setRoles(LockssServlet.ROLE_AU_ADMIN);
+    try {
+      result = proxy.setReadOnlyById(mau.getAuId());
+      fail("Test should have failed for role " + LockssServlet.ROLE_AU_ADMIN);
+    } catch (LockssWebServicesFault lwsf) {
+      // Expected authorization failure.
+      assertEquals(AuthorizationInterceptor.NO_REQUIRED_ROLE,
+	  lwsf.getMessage());
+    }
+
+    // User "accessContentRole" should fail.
+    userAccount.setRoles(LockssServlet.ROLE_CONTENT_ACCESS);
+    try {
+      result = proxy.setReadOnlyById(mau.getAuId());
+      fail("Test should have failed for role "
+	  + LockssServlet.ROLE_CONTENT_ACCESS);
+    } catch (LockssWebServicesFault lwsf) {
+      // Expected authorization failure.
+      assertEquals(AuthorizationInterceptor.NO_REQUIRED_ROLE,
+	  lwsf.getMessage());
+    }
+
+    // User "debugRole" should succeed.
+    userAccount.setRoles(LockssServlet.ROLE_DEBUG);
+
+    assertFalse(AuUtil.isReadOnly(sau0));
+    result = proxy.setReadOnlyById(sau0.getAuId());
+    assertEquals(sau0.getAuId(), result.getId());
+    assertTrue(result.isSuccess());
+    assertNull(result.getErrorMessage());
+    assertTrue(AuUtil.isReadOnly(sau0));
+
+    result = proxy.setReadWriteById(sau0.getAuId());
+    assertEquals(sau0.getAuId(), result.getId());
+    assertTrue(result.isSuccess());
+    assertNull(result.getErrorMessage());
+    assertFalse(AuUtil.isReadOnly(sau0));
+  }
+
+  /**
+   * Tests the read-only operations on Archival Units by a list of their
+   * identifiers.
+   */
+  public void testSetReadOnlyByIdList() throws Exception {
+    UserAccount userAccount = accountManager.getUser(USER_NAME);
+
+    // User "userAdminRole" should succeed.
+    userAccount.setRoles(LockssServlet.ROLE_USER_ADMIN);
+
+    pluginMgr.deleteAu(mau);
+    pluginMgr.deleteAu(mau0);
+    pluginMgr.deleteAu(mau1);
+
+    int expectedAuCount = 2;
+    assertEquals(expectedAuCount, pluginMgr.getAllAus().size());
+
+    List<String> auIds = new ArrayList<String>();
+    auIds.add(sau0.getAuId());
+    auIds.add(sau1.getAuId());
+
+    List<RequestAuControlResult> results = proxy.setReadWriteByIdList(auIds);
+    RequestAuControlResult result;
+
+    // User "contentAdminRole" should fail.
+    userAccount.setRoles(LockssServlet.ROLE_CONTENT_ADMIN);
+    try {
+      results = proxy.requestMdIndexingByIdList(auIds, true);
+      fail("Test should have failed for role "
+	   + LockssServlet.ROLE_CONTENT_ADMIN);
+    } catch (LockssWebServicesFault lwsf) {
+      // Expected authorization failure.
+      assertEquals(AuthorizationInterceptor.NO_REQUIRED_ROLE,
+	  lwsf.getMessage());
+    }
+
+    // User "auAdminRole" should fail.
+    userAccount.setRoles(LockssServlet.ROLE_AU_ADMIN);
+    try {
+      results = proxy.requestMdIndexingByIdList(auIds, false);
+      fail("Test should have failed for role " + LockssServlet.ROLE_AU_ADMIN);
+    } catch (LockssWebServicesFault lwsf) {
+      // Expected authorization failure.
+      assertEquals(AuthorizationInterceptor.NO_REQUIRED_ROLE,
+	  lwsf.getMessage());
+    }
+
+    // User "accessContentRole" should fail.
+    userAccount.setRoles(LockssServlet.ROLE_CONTENT_ACCESS);
+    try {
+      results = proxy.requestMdIndexingByIdList(auIds, true);
+      fail("Test should have failed for role "
+	  + LockssServlet.ROLE_CONTENT_ACCESS);
+    } catch (LockssWebServicesFault lwsf) {
+      // Expected authorization failure.
+      assertEquals(AuthorizationInterceptor.NO_REQUIRED_ROLE,
+	  lwsf.getMessage());
+    }
+
+    // User "debugRole" should succeed.
+    userAccount.setRoles(LockssServlet.ROLE_DEBUG);
+
+    results = proxy.setReadOnlyByIdList(auIds);
+    result = results.get(0);
+    assertEquals(sau0.getAuId(), result.getId());
+    assertTrue(result.isSuccess());
+    assertNull(result.getErrorMessage());
+    assertTrue(AuUtil.isReadOnly(sau0));
+
+    result = results.get(1);
+    assertEquals(sau1.getAuId(), result.getId());
+    assertTrue(result.isSuccess());
+    assertNull(result.getErrorMessage());
+    assertTrue(AuUtil.isReadOnly(sau1));
+
+    results = proxy.setReadWriteByIdList(auIds);
+    result = results.get(0);
+    assertEquals(sau0.getAuId(), result.getId());
+    assertTrue(result.isSuccess());
+    assertNull(result.getErrorMessage());
+    assertFalse(AuUtil.isReadOnly(sau0));
+
+    result = results.get(1);
+    assertEquals(sau1.getAuId(), result.getId());
+    assertTrue(result.isSuccess());
+    assertNull(result.getErrorMessage());
+    assertFalse(AuUtil.isReadOnly(sau1));
+
   }
 
   private Configuration simAuConfig(String rootPath) {

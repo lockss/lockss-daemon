@@ -356,6 +356,9 @@ public class BaseCachedUrl implements CachedUrl {
    * already contains the key.
    */
   public void addProperty(String key, String value) {
+    if (AuUtil.isReadOnly(au)) {
+      throw new ReadOnlyAuException("Attempt to addProperty to CU of AU set in read-only mode: " + au.getName());
+    }
     ensureRnc();
     rnc.addProperty(key, value);
   }

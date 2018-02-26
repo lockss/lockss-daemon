@@ -84,6 +84,7 @@ public class LockssRepositoryImpl
   // starts with a '#' so no possibility of clashing with a URL
   public static final String AU_ID_FILE = "#au_id_file";
   public static final String SUSPECT_VERSIONS_FILE = "#suspect_versions";
+  public static final String READ_ONLY_MARKER_FILE = "#read_only";
   static final String AU_ID_PROP = "au.id";
   static final String PLUGIN_ID_PROP = "plugin.id";
   static final char ESCAPE_CHAR = '#';
@@ -103,8 +104,9 @@ public class LockssRepositoryImpl
   UniqueRefLruCache nodeCache;
   private boolean isGlobalNodeCache =
     RepositoryManager.DEFAULT_GLOBAL_CACHE_ENABLED;
+  private boolean isReadOnly = false;
 
-  LockssRepositoryImpl(String rootPath) {
+  protected LockssRepositoryImpl(String rootPath) {
     if (rootPath.endsWith(File.separator)) {
       rootLocation = rootPath;
     } else {
@@ -458,6 +460,66 @@ public class LockssRepositoryImpl
 
   File getAsuvFile() {
     return new File(rootLocation, SUSPECT_VERSIONS_FILE);
+  }
+
+  File getReadOnlyFile() {
+    return new File(rootLocation, READ_ONLY_MARKER_FILE);
+  }
+
+  /** Return true if the read-only marker file is present, and cache the
+   * result for {@link #isReadOnly()} */
+  public boolean checkReadOnlyState() {
+    isReadOnly = getReadOnlyFile().exists();
+    return isReadOnly;
+  }
+
+  /** Set the repository into read-only mode, or clear that mode.  Cache
+   * the current state for {@link #isReadOnly()} */
+  public void setReadOnly(boolean val) {
+    if (val) {
+      markReadOnly();
+    } else {
+      markNotReadOnly();
+    }
+    isReadOnly = val;
+  }
+
+  /** Return the cached state of the read-only status of the repository */
+  public boolean isReadOnly() {
+    return isReadOnly;
+  }
+
+  void markReadOnly() {
+    if (checkReadOnlyState()) {
+      return;
+    }
+    File rof = getReadOnlyFile();
+    try {
+      if (!rof.createNewFile()) {
+	logger.warning("Read-only marker createNewFile() failed");
+      }
+    } catch (IOException e) {
+      if (!checkReadOnlyState()) {
+	throw new RuntimeException("Failed to mark AU repository read-only");
+      }
+      logger.warning("Ignoring error marking repo read-only, as checkReadOnlyState() is true", e);
+    }
+    rof.setReadOnly();
+    if (!checkReadOnlyState()) {
+      throw new RuntimeException("Failed to mark AU repository read-only");
+    }
+  }
+
+  void markNotReadOnly() {
+    if (!checkReadOnlyState()) {
+      return;
+    }
+    File rof = getReadOnlyFile();
+    rof.setWritable(true);
+    rof.delete();
+    if (checkReadOnlyState()) {
+      throw new RuntimeException("Failed to mark AU repository writable");
+    }
   }
 
 

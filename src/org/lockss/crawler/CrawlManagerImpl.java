@@ -405,6 +405,9 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	@Override public void auCreated(AuEvent event, ArchivalUnit au) {
 	  auEventCreated(event, au);
 	}
+	@Override public void auStateChange(AuEvent event, ArchivalUnit au) {
+	  auEventStateChange(event, au);
+	}
       };
     pluginMgr.registerAuEventHandler(auCreateDestroyHandler);
 
@@ -931,6 +934,32 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     }
   }
 
+  private List<Crawler> getAuCrawlers(ArchivalUnit au) {
+    List<Crawler> res = new ArrayList<Crawler>();
+    synchronized(runningCrawlersLock) {
+      for (PoolCrawlers pc : poolMap.values()) {
+	for (Crawler crawler : pc.getCrawlers()) {
+	  if (au == crawler.getAu()) {
+	    res.add(crawler);
+	  }
+	}
+      }
+    }
+    return res;
+  }
+
+  public void abortAuCrawlers(ArchivalUnit au, String message) {
+    for (Crawler crawler : getAuCrawlers(au)) {
+      abortCrawler(crawler, au, message);
+    }
+  }
+
+  private void abortCrawler(Crawler crawler, ArchivalUnit au, String message) {
+    CrawlerStatus stat = crawler.getCrawlerStatus();
+    stat.setCrawlStatus(Crawler.STATUS_ERROR, "Aborted: " + message);
+    crawler.abortCrawl();
+  }
+
   void auEventDeleted(AuEvent event, ArchivalUnit au) {
     switch (event.getType()) {
     case RestartDelete:
@@ -945,13 +974,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       removeAuFromQueues(au);
     }
     synchronized(runningCrawlersLock) {
-      for (PoolCrawlers pc : poolMap.values()) {
-	for (Crawler crawler : pc.getCrawlers()) {
-	  if (au == crawler.getAu()) {
-	    crawler.abortCrawl();
-	  }
-	}
-      }
+      abortAuCrawlers(au, "AU deleted");
     }
     // Notify CrawlerStatus objects to discard any pointer to this AU
     for (CrawlerStatus status : cmStatus.getCrawlerStatusList()) {
@@ -970,6 +993,19 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     }
 
     rebuildQueueSoon();
+  }
+
+  void auEventStateChange(AuEvent event, ArchivalUnit au) {
+    switch (event.getType()) {
+    case ReadOnly:
+      if (AuUtil.isReadOnly(au)) {
+	removeAuFromQueues(au);
+	synchronized(runningCrawlersLock) {
+	  abortAuCrawlers(au, "AU set to read-only");
+	}
+      }
+      break;
+    }
   }
 
   /** For all running crawls, collect those whose AU's priority is <=
@@ -1075,17 +1111,22 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     if (urls == null) {
       throw new IllegalArgumentException("Called with null URL");
     }
+    if (AuUtil.isReadOnly(au)) {
+      logger.debug("Repair crawl not started because AU is read-only.");
+      callCallback(cb, cookie, false, null);
+      return;
+    }
     // check rate limiter before obtaining locks
     RateLimiter limiter = repairRateLimiters.getRateLimiter(au);
     if (!limiter.isEventOk()) {
-      logger.debug("Repair aborted due to rate limiter.");
+      logger.debug("Repair crawl not started due to rate limiter.");
       callCallback(cb, cookie, false, null);
       return;
     }
     // check with regulator and start repair
     Map locks = getRepairLocks(au, urls, lock);
     if (locks.isEmpty()) {
-      logger.debug("Repair aborted due to activity lock.");
+      logger.debug("Repair crawl not started due to activity lock.");
       callCallback(cb, cookie, false, null);
       return;
     }
@@ -1184,6 +1225,9 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 
   public void checkEligibleForNewContentCrawl(ArchivalUnit au)
       throws NotEligibleException {
+    if (AuUtil.isReadOnly(au)) {
+      throw new NotEligibleException("AU is read-only");
+    }
     if (!windowOkToStart(au.getCrawlWindow())) {
       throw new NotEligibleException("Crawl window is closed");
     }

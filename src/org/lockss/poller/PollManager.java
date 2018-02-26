@@ -1120,6 +1120,8 @@ public class PollManager
 	}
 	@Override public void auDeleted(AuEvent event, ArchivalUnit au) {
 	  cancelAuPolls(au);
+	// XXX Could cancel polls when AU set read-only, but should
+	// distinguish votes because they can continue
 	}};
     pluginMgr.registerAuEventHandler(auEventHandler);
 
@@ -2937,6 +2939,9 @@ public class PollManager
       throws NotEligibleException {
     ArchivalUnit au = req.au;
 
+    if (AuUtil.isReadOnly(au)) {
+      throw new NotEligibleException("AU is read-only");
+    }
     // If a poll is already running, don't start another one.
     if (entryManager.isPollRunning(au)) {
       throw new NotEligibleException("AU is already running a poll.");

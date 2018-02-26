@@ -1302,6 +1302,36 @@ public class TestV3Poller extends LockssTestCase {
 
   }
 
+  public void testRequestRepairReadOnly() throws Exception {
+    MyV3Poller v3Poller;
+
+    // 100% repair from cache: the repair goes to a peer
+    ConfigurationUtil.addFromArgs(V3Poller.PARAM_V3_REPAIR_FROM_CACHE_PERCENT,
+				  "100");
+    v3Poller = makeInittedV3Poller("foo");
+    v3Poller.requestRepair("http://example.com",
+			   theParticipants(v3Poller).values());
+
+    assertEmpty(publisherRepairUrls(v3Poller));
+    assertSameElements(Arrays.asList("http://example.com"),
+		peerRepairUrls(v3Poller));
+
+    AuState aus = AuUtil.getAuState(testau);
+    aus.setReadOnly(true);
+    v3Poller.requestRepair("http://example.com/whenreadonly",
+			   theParticipants(v3Poller).values());
+    assertEmpty(publisherRepairUrls(v3Poller));
+    assertSameElements(Arrays.asList("http://example.com"),
+		       peerRepairUrls(v3Poller));
+    aus.setReadOnly(false);
+    v3Poller.requestRepair("http://example.com/whennotreadonly",
+			   theParticipants(v3Poller).values());
+    assertEmpty(publisherRepairUrls(v3Poller));
+    assertSameElements(Arrays.asList("http://example.com",
+				     "http://example.com/whennotreadonly"),
+		       peerRepairUrls(v3Poller));
+  }
+
   public void testRequestRepairPubDown() throws Exception {
     MyV3Poller v3Poller;
 

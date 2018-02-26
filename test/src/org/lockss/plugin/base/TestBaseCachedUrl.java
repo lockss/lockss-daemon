@@ -679,6 +679,10 @@ public class TestBaseCachedUrl extends LockssTestCase {
     }
 
     public void testAddProperty() throws Exception {
+      MockNodeManager nodeMgr = new MockNodeManager();
+      theDaemon.setNodeManager(nodeMgr, mau);
+      nodeMgr.setAuState(new MockAuState(mau));
+
       CIProperties newProps = new CIProperties();
       newProps.setProperty("test", "value");
       newProps.setProperty("test2", "value2");
@@ -708,6 +712,27 @@ public class TestBaseCachedUrl extends LockssTestCase {
 	cu2.addProperty("illegal prop", "123");
 	fail("Attempt to add unapproved property should fail");
       } catch (IllegalArgumentException e) {
+      }
+    }
+
+    public void testAddPropertyReadOnly() throws Exception {
+      MockNodeManager nodeMgr = new MockNodeManager();
+      theDaemon.setNodeManager(nodeMgr, mau);
+      MockAuState aus = new MockAuState(mau);
+      nodeMgr.setAuState(aus);
+
+      CIProperties newProps = new CIProperties();
+      newProps.setProperty("test", "value");
+      createLeaf(url1, (String)null, newProps);
+
+      CachedUrl cu = getTestCu(url1);
+      aus.setReadOnly(true);
+      try {
+	cu.addProperty(CachedUrl.PROPERTY_CHECKSUM, "foobar");
+	fail("cu.addProperty() on read-only AU should fail: " + cu);
+      } catch (ReadOnlyAuException e) {
+	assertMatchesRE("Attempt to addProperty to CU of AU set in read-only mode:",
+			e.getMessage());
       }
     }
 

@@ -109,6 +109,9 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
         HistoryRepositoryImpl.createNewHistoryRepository(mau);
     repository.initService(theDaemon);
     repository.startService();
+    NodeManager nmgr = new MockNodeManager();
+    theDaemon.setNodeManager(nmgr, mau);
+
     if (idmgr == null) {
       idmgr = theDaemon.getIdentityManager();
       idmgr.startService();
@@ -407,6 +410,39 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     assertTrue(colIter.hasNext());
     assertEquals("test", colIter.next());
     assertFalse(colIter.hasNext());
+  }
+
+  public void testStoreAuStateReadOnly() throws Exception {
+    HashSet strCol = new HashSet();
+    strCol.add("test");
+    AuState origState = new AuState(mau,
+				    123000, 123123, 41, "woop woop",
+				    321000, 222000, 3, "pollres", 12345,
+				    456000, strCol,
+				    AuState.AccessType.OpenAccess,
+				    2, 1.0, 1.0,
+				    SubstanceChecker.State.Yes,
+				    "SubstVer3", "MetadatVer7", 111444,
+				    12345,
+				    111222, // lastPoPPoll
+				    7, // lastPoPPollResult
+				    222333, // lastLocalHashScan
+				    444777, // numAgreePeersLastPoR
+				    777444, // numWillingRepairers
+				    747474, // numCurrentSuspectVersions
+				    ListUtil.list("http://hos.t/pa/th"),
+				    repository);
+
+    AuUtil.getAuState(mau).setReadOnly(true);
+    try {
+      repository.storeAuState(origState);
+      fail("storeAuState of read-only AU should fail: " + mau);
+    } catch (ReadOnlyAuException e) {
+      assertMatchesRE("Attempt to storeAuState of read-only AU",
+		      e.getMessage());
+    }
+    AuUtil.getAuState(mau).setReadOnly(false);
+    repository.storeAuState(origState);
   }
 
   public void testStoreDamagedNodeSet() throws Exception {

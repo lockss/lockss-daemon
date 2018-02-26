@@ -191,6 +191,14 @@ public class HistoryRepositoryImpl
     }
   }
 
+  // Ideally this should check the repository's read-only status, not the
+  // AU's, but don't have a pointer to the repo
+  protected boolean isReadOnly() {
+    AuState aus = AuUtil.getAuState(storedAu);
+    if (aus == null) return false;
+    return aus.isReadOnly();
+  }
+
   public File getIdentityAgreementFile() {
     return new File(rootLocation, IDENTITY_AGREEMENT_FILE_NAME);
   }
@@ -544,6 +552,9 @@ public class HistoryRepositoryImpl
    */
   void storeAuState(ObjectSerializer serializer,
                     AuState auState) {
+    if (isReadOnly()) {
+      throw new ReadOnlyAuException("Attempt to storeAuState of read-only AU: " + storedAu);
+    }
     logger.debug3("Storing state for AU '" + auState.getArchivalUnit().getName() + "'");
     File file = prepareFile(rootLocation, AU_FILE_NAME);
 
@@ -576,6 +587,9 @@ public class HistoryRepositoryImpl
    */
   void storeDamagedNodeSet(ObjectSerializer serializer,
                            DamagedNodeSet nodeSet) {
+    if (isReadOnly()) {
+      throw new ReadOnlyAuException("Attempt to storeDamagedNodeSet of read-only AU: " + storedAu);
+    }
     logger.debug3("Storing damaged nodes for AU '" + nodeSet.theAu.getName() + "'");
     File file = prepareFile(rootLocation, DAMAGED_NODES_FILE_NAME);
 
@@ -610,6 +624,9 @@ public class HistoryRepositoryImpl
    */
   void storeIdentityAgreements(ObjectSerializer serializer,
                                AuAgreements auAgreements) {
+    if (isReadOnly()) {
+      throw new ReadOnlyAuException("Attempt to storeIdentityAgreements of read-only AU: " + storedAu);
+    }
     logger.debug3("Storing identity agreements for AU '" + storedAu.getName() + "'");
     File file = prepareFile(rootLocation, IDENTITY_AGREEMENT_FILE_NAME);
 

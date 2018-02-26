@@ -52,6 +52,8 @@ public interface AuEventHandler {
   void auReconfigured(AuEvent event, ArchivalUnit au, Configuration oldAuConf);
   /** Called after a change to the AU's content */
   void auContentChanged(AuEvent event, ArchivalUnit au, ChangeInfo info);
+  /** Called after some other change to the AU's state */
+  void auStateChange(AuEvent event, ArchivalUnit au);
 
   /** Passed to {@link #auContentChanged(ArchivalUnit,ChangeInfo)} to
    * describe the nature of the content change. */
@@ -158,5 +160,6 @@ public interface AuEventHandler {
 			       Configuration oldAuConf) {}
     public void auContentChanged(AuEvent event, ArchivalUnit au,
 				 ChangeInfo info) {}
+    public void auStateChange(AuEvent event, ArchivalUnit au) {}
   }
 }

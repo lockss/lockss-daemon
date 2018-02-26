@@ -147,4 +147,16 @@ public class MockLockssRepository implements LockssRepository {
   public boolean hasSuspectUrlVersions(ArchivalUnit au) {
     return false;
   }
+
+  public boolean checkReadOnlyState() {
+    return false;
+  }
+
+  public boolean isReadOnly() {
+    return false;
+  }
+
+  public void setReadOnly(boolean val) {
+  }
+
 }

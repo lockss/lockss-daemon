@@ -934,6 +934,7 @@ public class PluginManager
 	  ArchivalUnit.ConfigurationException("Couldn't configure AU managers",
 					      e);
       }
+      checkReadOnlyAu(au);
       if (oldAu != null) {
 	log.debug("Reconfigured AU " + au);
 	signalAuEvent(au, new AuEvent(AuEvent.Type.Reconfig, false), oldConfig);
@@ -980,6 +981,7 @@ public class PluginManager
 					      e);
       }
       putAuInMap(au);
+      checkReadOnlyAu(au);
       signalAuEvent(au, event, null);
       return au;
     } catch (ArchivalUnit.ConfigurationException e) {
@@ -989,6 +991,23 @@ public class PluginManager
       throw new
 	ArchivalUnit.ConfigurationException("Unexpected error creating AU", e);
     }
+  }
+
+  void checkReadOnlyAu(ArchivalUnit au) {
+    org.lockss.repository.LockssRepository repo =
+      getDaemon().getLockssRepository(au);
+    if (repo.checkReadOnlyState()) {
+      log.debug("Setting read-only: " + au.getName());
+      (AuUtil.getAuState(au)).setReadOnly(true);
+    }
+  }
+
+  public void setAuReadOnly(ArchivalUnit au, boolean val) {
+    org.lockss.repository.LockssRepository repo =
+      getDaemon().getLockssRepository(au);
+    repo.setReadOnly(val);
+    (AuUtil.getAuState(au)).setReadOnly(val);
+    signalAuEvent(au, new AuEvent(AuEvent.Type.ReadOnly, false), null);
   }
 
   /** Stop the AU's activity and remove it, as though it had never been
@@ -1134,6 +1153,17 @@ public class PluginManager
 	  public void execute(AuEventHandler hand) {
 	    try {
 	      hand.auReconfigured(how, au, oldAuConfig);
+	    } catch (Exception e) {
+	      log.error("AuEventHandler threw", e);
+	    }
+	  }});
+      break;
+    default:
+      // Catch-all for other state changes
+      applyAuEvent(new AuEventClosure() {
+	  public void execute(AuEventHandler hand) {
+	    try {
+	      hand.auStateChange(how, au);
 	    } catch (Exception e) {
 	      log.error("AuEventHandler threw", e);
 	    }

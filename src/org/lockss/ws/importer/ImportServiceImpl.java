@@ -594,7 +594,12 @@ public class ImportServiceImpl implements ImportService {
 
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "au = " + au);
     } else {
-      // No.
+      // No, check if allowed to import into it
+      if (AuUtil.isReadOnly(au)) {
+	wsResult.setIsSuccess(Boolean.FALSE);
+	wsResult.setMessage("Target Archival Unit is read-only");
+	return;
+      }
       if (AuUtil.getAuState(au).hasCrawled()) {
 	wsResult.setIsSuccess(Boolean.FALSE);
 	wsResult.setMessage("Target Archival Unit has crawled already");

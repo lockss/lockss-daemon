@@ -482,6 +482,15 @@ public class TestAuState extends LockssTestCase {
     assertEquals(123, aus.getLastMetadataIndex());
   }
     
+  public void testReadOnly() {
+    AuState aus = new AuState(mau, historyRepo);
+    assertFalse(aus.isReadOnly());
+    aus.setReadOnly(true);
+    assertTrue(aus.isReadOnly());
+    aus.setReadOnly(false);
+    assertFalse(aus.isReadOnly());
+  }
+
   public void testLastContentChange() {
     TimeBase.setSimulated(10);
     AuState aus = new AuState(mau, historyRepo);

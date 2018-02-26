@@ -90,6 +90,9 @@ public class AuState implements LockssSerializable {
   protected transient long lastPollAttempt; // last time we attempted to
 					    // start a poll
 
+  protected transient boolean isReadOnly; // determined from repository,
+					    // not stored with AU state
+
   // Note - the copy constructor (AuState(ArchivalUnit, HistoryRepository))
   // must be udpated whenever a new persistent field is added
 
@@ -789,6 +792,14 @@ public class AuState implements LockssSerializable {
       needSave();
       urlUpdateCntr = 0;
     }
+  }
+
+  public void setReadOnly(boolean val) {
+    isReadOnly = val;
+  }
+
+  public boolean isReadOnly() {
+    return isReadOnly;
   }
 
   public void setAccessType(AccessType accessType) {

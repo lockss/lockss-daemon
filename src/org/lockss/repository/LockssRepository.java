@@ -99,6 +99,18 @@ public interface LockssRepository extends LockssAuManager {
    */
   public boolean hasSuspectUrlVersions(ArchivalUnit au);
 
+  /** Return true if the read-only marker file is present, and cache the
+   * result for {@link #isReadOnly()} */
+  public boolean checkReadOnlyState();
+
+  /** Return the cached state of the read-only status of the repository */
+  public boolean isReadOnly();
+
+  /** Set the repository into read-only mode, or clear that mode.  Cache
+   * the current state for {@link #isReadOnly()} */
+  public void setReadOnly(boolean val);
+
+
   /**
    * Thrown when an unexpected error is encountered while caching.
    * Typically this is a file system error.

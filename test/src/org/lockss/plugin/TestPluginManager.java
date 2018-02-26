@@ -454,6 +454,13 @@ public class TestPluginManager extends LockssTestCase {
     Configuration config = ConfigurationUtil.fromArgs("a", "b");
     ArchivalUnit au = mgr.createAu(mpi, config,
                                    new AuEvent(AuEvent.Type.Create, false));
+    org.lockss.repository.LockssRepository repo =
+      theDaemon.getLockssRepository(au);
+
+    MockNodeManager nodeMgr = new MockNodeManager();
+    theDaemon.setNodeManager(nodeMgr, au);
+    MockAuState maus = new MockAuState();
+    nodeMgr.setAuState(maus);
 
     // verify put in PluginManager map
     String auid = au.getAuId();
@@ -470,6 +477,8 @@ public class TestPluginManager extends LockssTestCase {
     assertEquals(ListUtil.list(au), createEvents);
     assertEmpty(deleteEvents);
     assertEmpty(reconfigEvents);
+
+    assertFalse(AuUtil.isReadOnly(au));
 
     // verify turns RuntimeException into ArchivalUnit.ConfigurationException
     mpi.setCfgEx(new ArchivalUnit.ConfigurationException("should be thrown"));
@@ -490,7 +499,99 @@ public class TestPluginManager extends LockssTestCase {
     } catch (RuntimeException e) {
       fail("createAU threw RuntimeException", e);
     }
+  }
 
+  // Factories for LockssRepository and NodeManager which return managers
+  // where isReadOnly() is true, to test AU startup before wiring exists to
+  // set up mock manager.
+
+  public static class ReadOnlyRepoFact implements LockssAuManager.Factory {
+    public LockssAuManager createAuManager(ArchivalUnit au) {
+      try {
+	File tmpdir = FileTestUtil.tempFile("tmprepo");
+	return new ReadOnlyRepo(tmpdir.toString());
+      } catch (IOException e) {
+	throw new RuntimeException(e);
+      }
+    }
+  }
+
+  public static class ReadOnlyRepo extends LockssRepositoryImpl {
+    public ReadOnlyRepo(String dir) {
+      super(dir);
+    }
+
+    public boolean checkReadOnlyState() {
+      return true;
+    }
+
+    public boolean isReadOnly() {
+      return true;
+    }
+  }
+
+  public static class NodeMgrAusFact implements LockssAuManager.Factory {
+    public LockssAuManager createAuManager(ArchivalUnit au) {
+      return new NodeMgrAus(au);
+    }
+  }
+
+  public static class NodeMgrAus extends NodeManagerImpl {
+    public NodeMgrAus(ArchivalUnit au) {
+      super(au);
+    }
+
+    public AuState getAuState() {
+      AuState res = super.getAuState();
+      if (res == null) {
+	res = new MockAuState();
+	super.auState = res;
+      }
+      return res;
+    }
+  }
+
+  public void testCreateAuReadOnly() throws Exception {
+    mgr.startService();
+    minimalConfig();
+    ConfigurationUtil.addFromArgs( ( LockssApp.MANAGER_PREFIX
+				     + LockssDaemon.LOCKSS_REPOSITORY),
+				   ReadOnlyRepoFact.class.getName());
+    ConfigurationUtil.addFromArgs( ( LockssApp.MANAGER_PREFIX
+				     + LockssDaemon.NODE_MANAGER),
+				   NodeMgrAusFact.class.getName());
+
+    String pid = new ThrowingMockPlugin().getPluginId();
+    String key = PluginManager.pluginKeyFromId(pid);
+    assertTrue(mgr.ensurePluginLoaded(key));
+    ThrowingMockPlugin mpi = (ThrowingMockPlugin)mgr.getPlugin(key);
+    assertNotNull(mpi);
+    mgr.registerAuEventHandler(new MyAuEventHandler());
+    Configuration config = ConfigurationUtil.fromArgs("a", "b");
+    ArchivalUnit au = mgr.createAu(mpi, config,
+                                   new AuEvent(AuEvent.Type.Create, false));
+    org.lockss.repository.LockssRepository repo =
+      theDaemon.getLockssRepository(au);
+
+    assertTrue(AuUtil.isReadOnly(au));
+
+    // verify put in PluginManager map
+    String auid = au.getAuId();
+    ArchivalUnit aux = mgr.getAuFromId(auid);
+    assertSame(au, aux);
+
+    // verify got right config
+    Configuration auConfig = au.getConfiguration();
+    assertEquals("b", auConfig.get("a"));
+    assertEquals(1, auConfig.keySet().size());
+    assertEquals(mpi, au.getPlugin());
+
+    // verify event handler run
+    assertEquals(ListUtil.list(au), createEvents);
+    assertEmpty(deleteEvents);
+    assertEmpty(reconfigEvents);
+
+    assertTrue(AuUtil.isReadOnly(au));
   }
 
   public void testConfigureAu() throws Exception {

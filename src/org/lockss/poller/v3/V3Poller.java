@@ -2256,6 +2256,12 @@ public class V3Poller extends BasePoll {
      final String url,
      final Collection<ParticipantUserData> repairVoters) {
 
+    if (getAuState().isReadOnly()) {
+      log.debug2("Discarding repair request because AU is read-only: " +
+		 getAu().getName());
+      return;
+    }
+
     PollerStateBean.RepairQueue repairQueue = pollerState.getRepairQueue();
     if (repairQueue.okToQueueRepair()) {
       // Choose where to request the repair.

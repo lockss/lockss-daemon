@@ -43,7 +43,7 @@ import javax.xml.namespace.QName;
 import javax.xml.ws.Service;
 import org.lockss.account.AccountManager;
 import org.lockss.account.UserAccount;
-import org.lockss.plugin.PluginManager;
+import org.lockss.plugin.*;
 import org.lockss.servlet.AdminServletManager;
 import org.lockss.servlet.LockssServlet;
 import org.lockss.servlet.ServletManager;
@@ -283,7 +283,15 @@ public class FuncImportService extends LockssTestCase {
     assertEquals(10, new File(tempDirPath + "/cache/d/dummy.host/file"
 	+ importFile.getAbsolutePath() + "/#content/current").length());
     String auId = ImportServiceImpl.makeAuId(params.getTargetId());
-    assertEquals("Test of SHA-256", pluginMgr.getAuFromId(auId).getName());
+    org.lockss.plugin.ArchivalUnit au = pluginMgr.getAuFromId(auId);
+    assertEquals("Test of SHA-256", au.getName());
+
+    // import when AU is read-only should fail
+    AuUtil.getAuState(au).setReadOnly(true);
+
+    result = proxy.importPushedFile(params);
+    assertEquals(Boolean.FALSE, result.getIsSuccess());
+    assertMatchesRE("Target Archival Unit is read-only", result.getMessage());
 
     // Clean up the import file.
     importFile.delete();

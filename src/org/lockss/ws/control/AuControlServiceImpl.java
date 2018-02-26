@@ -51,6 +51,7 @@ import org.lockss.db.DbManager;
 import org.lockss.metadata.MetadataManager;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.AuUtil;
+import org.lockss.plugin.PluginManager;
 import org.lockss.poller.Poll;
 import org.lockss.poller.PollManager;
 import org.lockss.poller.PollSpec;
@@ -87,6 +88,10 @@ public class AuControlServiceImpl implements AuControlService {
   static final String ACTION_ENABLE_METADATA_INDEXING = "Enable Indexing";
   static final String ENABLE_METADATA_INDEXING_ERROR_MESSAGE =
       "Cannot enable AU metadata indexing";
+  static final String SET_READ_ONLY_ERROR_MESSAGE =
+      "Cannot set AU to read-only";
+  static final String SET_READ_WRITE_ERROR_MESSAGE =
+      "Cannot set AU to read-write";
 
   private static Logger log = Logger.getLogger(AuControlServiceImpl.class);
 
@@ -788,6 +793,169 @@ public class AuControlServiceImpl implements AuControlService {
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "results = " + results);
     return results;
   }
+
+  /**
+   * Sets the AU to be read-only
+   *
+   * @param auId
+   *          A String with the identifier (auid) of the archival unit.
+   * @return a RequestAuControlResult with the result of the operation.
+   * @throws LockssWebServicesFault
+   */
+  @Override
+  public RequestAuControlResult setReadOnlyById(String auId)
+      throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "setReadOnlyById(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auId = " + auId);
+
+    // Add to the audit log a reference to this operation, if necessary.
+    audit(ACTION_SET_READ_ONLY, auId);
+
+    RequestAuControlResult result = null;
+
+    LockssDaemon daemon = LockssDaemon.getLockssDaemon();
+    PluginManager pluginMgr = daemon.getPluginManager();
+
+    // Handle a missing auId.
+    if (StringUtil.isNullString(auId)) {
+      result =
+	  new RequestAuControlResult(auId, false, MISSING_AU_ID_ERROR_MESSAGE);
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+      return result;
+    }
+
+    // Get the Archival Unit to set read-only.
+    ArchivalUnit au = pluginMgr.getAuFromId(auId);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "au = " + au);
+
+    // Handle a missing Archival Unit.
+    if (au == null) {
+      result =
+	  new RequestAuControlResult(auId, false, NO_SUCH_AU_ERROR_MESSAGE);
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+      return result;
+    }
+
+    try {
+      pluginMgr.setAuReadOnly(au, true);
+      result = new RequestAuControlResult(auId, true, null);
+    } catch (Exception e) {
+      result = new RequestAuControlResult(auId, false,
+	  SET_READ_ONLY_ERROR_MESSAGE + ": " + e.getMessage());
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+    return result;
+  }
+
+  /**
+   * Sets the AU to be read-write
+   *
+   * @param auId
+   *          A String with the identifier (auid) of the archival unit.
+   * @return a RequestAuControlResult with the result of the operation.
+   * @throws LockssWebServicesFault
+   */
+  @Override
+  public RequestAuControlResult setReadWriteById(String auId)
+      throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "setReadwriteById(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auId = " + auId);
+
+    // Add to the audit log a reference to this operation, if necessary.
+    audit(ACTION_SET_READ_WRITE, auId);
+
+    RequestAuControlResult result = null;
+
+    LockssDaemon daemon = LockssDaemon.getLockssDaemon();
+    PluginManager pluginMgr = daemon.getPluginManager();
+
+    // Handle a missing auId.
+    if (StringUtil.isNullString(auId)) {
+      result =
+	  new RequestAuControlResult(auId, false, MISSING_AU_ID_ERROR_MESSAGE);
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+      return result;
+    }
+
+    // Get the Archival Unit to set read-only.
+    ArchivalUnit au = pluginMgr.getAuFromId(auId);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "au = " + au);
+
+    // Handle a missing Archival Unit.
+    if (au == null) {
+      result =
+	  new RequestAuControlResult(auId, false, NO_SUCH_AU_ERROR_MESSAGE);
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+      return result;
+    }
+
+    try {
+      pluginMgr.setAuReadOnly(au, false);
+      result = new RequestAuControlResult(auId, true, null);
+    } catch (Exception e) {
+      result = new RequestAuControlResult(auId, false,
+	  SET_READ_WRITE_ERROR_MESSAGE + ": " + e.getMessage());
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+    return result;
+  }
+
+  /**
+   * Sets a list of AUs to be read-only
+   *
+   * @param auIds
+   *          A List<String> with the identifiers (auids) of the archival units.
+   * @return a List<RequestAuControlResult> with the results of the operation.
+   * @throws LockssWebServicesFault
+   */
+  @Override
+  public List<RequestAuControlResult> setReadOnlyByIdList(List<String> auIds)
+      throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "setReadOnlyByIdList(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auIds = " + auIds);
+
+    List<RequestAuControlResult> results =
+	new ArrayList<RequestAuControlResult>(auIds.size());
+
+    // Loop through all the Archival Unit identifiers.
+    for (String auId : auIds) {
+      // Perform the request.
+      results.add(setReadOnlyById(auId));
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "results = " + results);
+    return results;
+  }
+
+  /**
+   * Sets a list of AUs to be read-write
+   *
+   * @param auIds
+   *          A List<String> with the identifiers (auids) of the archival units.
+   * @return a List<RequestAuControlResult> with the results of the operation.
+   * @throws LockssWebServicesFault
+   */
+  @Override
+  public List<RequestAuControlResult> setReadWriteByIdList(List<String> auIds)
+      throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "setReadwriteByIdList(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auIds = " + auIds);
+
+    List<RequestAuControlResult> results =
+	new ArrayList<RequestAuControlResult>(auIds.size());
+
+    // Loop through all the Archival Unit identifiers.
+    for (String auId : auIds) {
+      // Perform the request.
+      results.add(setReadWriteById(auId));
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "results = " + results);
+    return results;
+  }
+
 
   /**
    * Adds to the audit log a reference to this operation, if necessary.

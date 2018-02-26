@@ -100,6 +100,8 @@ public class DebugPanel extends LockssServlet {
   static final String ACTION_SLEEP = "Sleep";
   public static final String ACTION_DISABLE_METADATA_INDEXING =
       "Disable Indexing";
+  public static final String ACTION_SET_READ_ONLY = "Set Read Only";
+  public static final String ACTION_SET_READ_WRITE = "Set Read Write";
 
   /** Set of actions for which audit alerts shouldn't be generated */
   public static final Set noAuditActions = SetUtil.set(ACTION_FIND_URL);
@@ -220,6 +222,12 @@ public class DebugPanel extends LockssServlet {
     if (ACTION_DISABLE_METADATA_INDEXING.equals(action)) {
       doDisableMetadataIndexing();
     }
+    if (ACTION_SET_READ_ONLY.equals(action)) {
+      doSetReadOnly(true);
+    }
+    if (ACTION_SET_READ_WRITE.equals(action)) {
+      doSetReadOnly(false);
+    }
     if (showForm) {
       displayPage();
     }
@@ -253,6 +261,13 @@ public class DebugPanel extends LockssServlet {
     } catch (InterruptedException e) {
       errMsg = "Interrupted: " + e;
     }
+  }
+
+  private void doSetReadOnly(boolean val) {
+    ArchivalUnit au = getAu();
+    if (au == null) return;
+    pluginMgr.setAuReadOnly(au, val);
+    statusMsg = au.getName() + (val ? " set read-only" : " set read-write");
   }
 
   private void doReindexMetadata() {
@@ -636,6 +651,17 @@ public class DebugPanel extends LockssServlet {
                                         ACTION_DISABLE_METADATA_INDEXING);
       frm.add(" ");
       frm.add(disableIndexing);
+    }
+    if (true /*readOnlyEnabled*/) {
+      frm.add("<br>");
+      Input readonly = new Input(Input.Submit, KEY_ACTION,
+				 ACTION_SET_READ_ONLY);
+      frm.add(" ");
+      frm.add(readonly);
+      Input writable = new Input(Input.Submit, KEY_ACTION,
+				 ACTION_SET_READ_WRITE);
+      frm.add(" ");
+      frm.add(writable);
     }
     frm.add("</center>");
 

@@ -148,6 +148,23 @@ public class TestDefaultUrlCacher extends LockssTestCase {
     assertNotEquals(origChange, finalChange);
   }
 
+  public void testCacheReadOnly() throws IOException {
+    ud = new UrlData(new StringInputStream("test stream"),
+        new CIProperties(), TEST_URL);
+    cacher = new MyDefaultUrlCacher(mau, ud);
+    AuState aus = AuUtil.getAuState(mau);
+    aus.setReadOnly(true);
+
+    try {
+      cacher.storeContent();
+      fail("storeContent() should fail with read-only AU: " + cacher);
+    } catch (ReadOnlyAuException e) {
+      assertMatchesRE("Attempt to store content in read-only repository",
+		      e.getMessage());
+    }
+    assertFalse(cacher.wasStored);
+  }
+
   public void testCacheRedirect() throws IOException {
     String cont = "test stream";
     ud = new UrlData(new StringInputStream(cont),

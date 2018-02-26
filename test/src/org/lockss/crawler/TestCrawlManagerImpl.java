@@ -307,6 +307,16 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       assertSameElements(ListUtil.list(aus[4], aus[3], aus[4]), abortLst);
     }
 
+    public void testSetReadOnly() {
+      theDaemon.setAusStarted(true);
+      List<ArchivalUnit> abortLst = new ArrayList<ArchivalUnit>();
+      MockCrawler mc = new AbortRecordingCrawler(abortLst, mau);
+      crawlManager.addToRunningCrawls(mau, mc);
+      assertEmpty(abortLst);
+      pluginMgr.setAuReadOnly(mau, true);
+      assertSameElements(ListUtil.list(mau), abortLst);
+    }
+
     private void setNewContentRateLimit(String rate, String startRate,
 					String pluginRate) {
       cprops.put(CrawlManagerImpl.PARAM_MAX_NEW_CONTENT_RATE, rate);
@@ -437,6 +447,12 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       assertNotEligible("window.*closed", mau);
       mau.setCrawlWindow(new CrawlWindows.Always());
       assertQueueable(mau);
+      assertEligible(mau);
+
+      pluginMgr.setAuReadOnly(mau, true);
+      assertNotEligible(CrawlManagerImpl.NotEligibleException.class,
+			"AU is read-only", mau);
+      pluginMgr.setAuReadOnly(mau, false);
       assertEligible(mau);
 
       RateLimiter limit = crawlManager.getNewContentRateLimiter(mau);

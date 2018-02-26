@@ -607,6 +607,9 @@ public class BlockHasher extends GenericHasher {
 	  mismatch(curVer, localHashAlgorithm,
 		   hashOfContent, currentVersionStoredHash);
 	}
+      } else if (AuUtil.isReadOnly(cus.getArchivalUnit())) {
+	// Checksum missing but AU is read-only
+	log.debug2("Not storing localhash in props: read-only");
       } else {
 	// No checksum property - create one
 	missing(curVer, localHashAlgorithm, hashOfContent);

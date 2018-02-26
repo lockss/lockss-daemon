@@ -289,6 +289,10 @@ public class PollerActions {
                + pid + " in poll "
                + msg.getKey() + " for URL "
                + msg.getTargetUrl());
+    if (ud.getPoller().getAuState().isReadOnly()) {
+      log.debug2("but discarding because AU is read-only");
+      return V3Events.evtOk;
+    }
     // Apply the repair
     String repairTarget = msg.getTargetUrl();
     try {

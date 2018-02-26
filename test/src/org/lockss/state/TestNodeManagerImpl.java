@@ -66,7 +66,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     p.setProperty(AuUtil.PARAM_POLL_PROTOCOL_VERSION, "1");
     ConfigurationUtil.setCurrentConfigFromProps(p);
     mau = new MockArchivalUnit();
-    mau.setPlugin(new MockPlugin());
+    mau.setPlugin(new MockPlugin(theDaemon));
     mau.setAuCachedUrlSet(makeFakeCus(mau, TEST_URL, 2, 2));
     theDaemon.getNodeManagerManager();
     theDaemon.getPluginManager();

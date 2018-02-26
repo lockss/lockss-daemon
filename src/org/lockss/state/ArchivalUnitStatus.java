@@ -198,7 +198,7 @@ public class ArchivalUnitStatus
   static class AuSummary implements StatusAccessor {
     static final String TABLE_TITLE = "Archival Units";
 
-    static final String FOOT_STATUS = "Flags may follow status: C means the AU is complete, D means that the AU is no longer available from the publisher, NS means the AU has no files containing substantial content.";
+    static final String FOOT_STATUS = "Flags may follow status: RO means read-only, C means the AU is complete, D means that the AU is no longer available from the publisher, NS means the AU has no files containing substantial content.";
 
     static final String FOOT_SIZE = "If blank, size has changed and is being recalculated.  Check again later.";
 
@@ -409,19 +409,28 @@ public class ArchivalUnitStatus
       boolean isClosed = AuUtil.isClosed(au);
       boolean noSubstance = auState.hasNoSubstance();
         
-      if (isPubDown || isClosed || noSubstance) {
-	List flags = new ArrayList();
-	if (isClosed) {
-	  flags.add("C");
-	}
-	if (isPubDown) {
-	  flags.add("D");
-	}
-	if (noSubstance) {
-	  flags.add("NS");
-	}
-	String flagStr = StringUtil.separatedString(flags, " (", ",", ")");
-	stat = ListUtil.list(stat, flagStr);
+      List flags = new ArrayList();
+      if (AuUtil.isReadOnly(au)) {
+	flags.add(new StatusTable.DisplayedValue("RO").setColor("darkorange"));
+      }
+      if (isClosed) {
+	flags.add("C");
+      }
+      if (isPubDown) {
+	flags.add("D");
+      }
+      if (noSubstance) {
+	flags.add("NS");
+      }
+
+      if (!flags.isEmpty()) {
+	List statlst = ListUtil.list(stat);
+	statlst.add(" (");
+	statlst.addAll(flags);
+	statlst.add(")");
+	stat = statlst;
+// 	String flagStr = StringUtil.separatedString(flags, " (", ",", ")");
+// 	stat = ListUtil.list(stat, flagStr);
       }
 
       rowMap.put("Damaged", stat);
@@ -1040,11 +1049,33 @@ public class ArchivalUnitStatus
       }
       AuNodeImpl auNode = AuUtil.getAuRepoNode(au);
       String spec = LockssRepositoryImpl.getRepositorySpec(au);
-      String repo = LockssRepositoryImpl.mapAuToFileLocation(LockssRepositoryImpl.getLocalRepositoryPath(spec), au);
+      String repopath = LockssRepositoryImpl.mapAuToFileLocation(LockssRepositoryImpl.getLocalRepositoryPath(spec), au);
 
       res.add(new StatusTable.SummaryInfo("Repository",
 					  ColumnDescriptor.TYPE_STRING,
-					  repo));
+					  repopath));
+      LockssRepository repo = theDaemon.getLockssRepository(au);
+      if (AuUtil.isReadOnly(au) || repo.checkReadOnlyState()) {
+	StatusTable.DisplayedValue readonlyval;
+	if (!AuUtil.isReadOnly(au)) {
+	  readonlyval =
+	    new StatusTable.DisplayedValue("** Repository is marked read-only but AU is not **");
+	  readonlyval.setColor("crimson");
+	} else if (!repo.checkReadOnlyState()) {
+	  readonlyval =
+	    new StatusTable.DisplayedValue("** AU is read-only but its repository is not **");
+	  readonlyval.setColor("crimson");
+	} else {
+	  readonlyval =
+	    new StatusTable.DisplayedValue("** Read-only **");
+	  readonlyval.setColor("darkorange");
+	}
+	readonlyval.setBold(true);
+
+	res.add(new StatusTable.SummaryInfo(null,
+					    ColumnDescriptor.TYPE_STRING,
+					    readonlyval));
+      }
       res.add(new StatusTable.SummaryInfo("Status",
 					  ColumnDescriptor.TYPE_STRING,
 					  stat));

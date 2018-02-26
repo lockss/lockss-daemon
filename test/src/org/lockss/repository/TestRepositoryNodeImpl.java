@@ -417,6 +417,26 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertTrue(leaf.hasAgreement(testid_4));
   }
   
+  public void testSealReadOnly() throws Exception {
+    RepositoryNode leaf =
+        createLeaf("http://www.example.com/testDir/branch1/leaf1",
+        "test stream", null);
+    leaf.makeNewVersion();
+    OutputStream os = leaf.getNewOutputStream();
+    InputStream is = new StringInputStream("test stream 2");
+    StreamUtil.copy(is, os);
+    is.close();
+    os.close();
+    repo.setReadOnly(true);
+    try {
+      leaf.sealNewVersion();
+      fail("sealNewVersion() with read-only repo should fail: " + leaf);
+    } catch (ReadOnlyRepositoryException e) {
+      assertMatchesRE("Attempt to sealNewVersion in read-only repository",
+		      e.getMessage());
+    }
+  }
+
   public void testVersionFileLocation() throws Exception {
     RepositoryNode leaf =
         createLeaf("http://www.example.com/testDir/branch1/leaf1",

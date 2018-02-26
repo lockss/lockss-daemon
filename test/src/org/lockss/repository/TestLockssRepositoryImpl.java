@@ -147,6 +147,44 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     return (s.endsWith(File.separator)) ? s : s + File.separator;
   }
 
+  public void testMarkReadOnly() {
+    assertFalse(repo.isReadOnly());
+    assertFalse(repo.checkReadOnlyState());
+    assertFalse(repo.isReadOnly());
+    repo.markReadOnly();
+    assertTrue(repo.isReadOnly());
+    assertTrue(repo.checkReadOnlyState());
+    assertTrue(repo.isReadOnly());
+    repo.markReadOnly();
+    assertTrue(repo.isReadOnly());
+    assertTrue(repo.checkReadOnlyState());
+    repo.markNotReadOnly();
+    assertFalse(repo.isReadOnly());
+    assertFalse(repo.checkReadOnlyState());
+    repo.markNotReadOnly();
+    assertFalse(repo.checkReadOnlyState());
+  }
+
+  public void testIsMarkesReadOnly() throws IOException {
+    assertFalse(repo.isReadOnly());
+    assertFalse(repo.checkReadOnlyState());
+    File rof = repo.getReadOnlyFile();
+    try {
+      if (!rof.createNewFile()) {
+	fail("Read-only marker createNewFile() failed");
+      }
+    } catch (IOException e) {
+      log.error("Read-only marker createNewFile() failed", e);
+      fail("Read-only marker createNewFile() failed");
+    }
+    rof.setReadOnly();
+
+    // Still cached false
+    assertFalse(repo.isReadOnly());
+    assertTrue(repo.checkReadOnlyState());
+    assertTrue(repo.isReadOnly());
+  }
+
   public void testSuspectUrlVersions() throws Exception {
     String location =
       LockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau);

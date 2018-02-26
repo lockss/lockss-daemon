@@ -284,7 +284,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
 	// cache values
 	nodeProps.setProperty(TREE_SIZE_PROPERTY, Long.toString(totalSize));
 	nodeProps.setProperty(CHILD_COUNT_PROPERTY, Integer.toString(children));
-	writeNodeProperties();
+	if (!repository.isReadOnly()) {
+	  writeNodeProperties();
+	}
       }
       return totalSize;
     }
@@ -453,8 +455,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
     }
     
     // normalization needed?
-    CheckUnnormalizedMode unnormMode =
-      RepositoryManager.getCheckUnnormalizedMode();
+    CheckUnnormalizedMode unnormMode = repository.isReadOnly()
+      ? CheckUnnormalizedMode.Log
+      : RepositoryManager.getCheckUnnormalizedMode();
 
     // We switch to using a sorted set, this time we hold strings
     // representing the url
@@ -625,7 +628,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
     // get unfiltered node list
     int count = getNodeList(null, false).size();
     nodeProps.setProperty(CHILD_COUNT_PROPERTY, Integer.toString(count));
-    writeNodeProperties();
+    if (!repository.isReadOnly()) {
+      writeNodeProperties();
+    }
     return count;
   }
 
@@ -760,6 +765,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
   }
 
   public synchronized void makeNewVersion() {
+    if (repository.isReadOnly()) {
+      throw new ReadOnlyRepositoryException("Attempt to makeNewVersion in read-only repository: " + this);
+    }
     if (newVersionOpen) {
       // check if time since new version exceeds timeout
       if (versionTimeout.expired()) {
@@ -801,6 +809,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
   }
 
   public synchronized void sealNewVersion() {
+    if (repository.isReadOnly()) {
+      throw new ReadOnlyRepositoryException("Attempt to sealNewVersion in read-only repository: " + this);
+    }
     try {
       if (curOutputStream==null) {
 	throw new UnsupportedOperationException("getNewOutputStream() not called, or already sealed.");
@@ -973,6 +984,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
   private void writeProps(File toFile, Properties props, String url)
       throws IOException {
+    if (repository.isReadOnly()) {
+      throw new ReadOnlyRepositoryException("Attempt to writeProps in read-only repository: " + this);
+    }
     OutputStream os = null;
     try {
       os = new BufferedOutputStream(FileUtil.newFileOutputStream(toFile));
@@ -983,6 +997,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
   }
 
   public synchronized void abandonNewVersion() {
+    if (repository.isReadOnly()) {
+      return;
+    }
     try {
       if (!newVersionOpen) {
         throw new UnsupportedOperationException("New version not initialized.");
@@ -1014,6 +1031,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
   }
 
   public synchronized void deactivateContent() {
+    if (repository.isReadOnly()) {
+      throw new ReadOnlyRepositoryException("Attempt to deactivateContent in read-only repository: " + this);
+    }
     if (newVersionOpen) {
       throw new UnsupportedOperationException("Can't deactivate while new version open.");
     }
@@ -1054,6 +1074,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
   }
 
   public synchronized void markAsDeleted() {
+    if (repository.isReadOnly()) {
+      throw new ReadOnlyRepositoryException("Attempt to markAsDeleted in read-only repository: " + this);
+    }
     ensureCurrentInfoLoaded();
     if (hasContent() && !isContentInactive()) {
       deactivateContent();
@@ -1068,6 +1091,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
   }
 
   public synchronized void markAsNotDeleted() {
+    if (repository.isReadOnly()) {
+      throw new ReadOnlyRepositoryException("Attempt to markAsNotDeleted in read-only repository: " + this);
+    }
     ensureCurrentInfoLoaded();
 
     // store the deletion value
@@ -1082,6 +1108,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
 
   public synchronized void restoreLastVersion() {
+    if (repository.isReadOnly()) {
+      throw new ReadOnlyRepositoryException("Attempt to restoreLastVersion in read-only repository: " + this);
+    }
     if (isDeleted()) {
       // removes the 'deleted' mark, then treats as inactive and returns here
       markAsNotDeleted();
@@ -1146,6 +1175,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
   }
 
   public OutputStream getNewOutputStream() {
+    if (repository.isReadOnly()) {
+      throw new ReadOnlyRepositoryException("Attempt to getNewOutputStream in read-only repository: " + this);
+    }
     if (!newVersionOpen) {
       throw new UnsupportedOperationException("New version not initialized.");
     }
@@ -1208,6 +1240,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
   }
   
   public synchronized void signalAgreement(Collection peers) {
+    if (repository.isReadOnly()) {
+      throw new ReadOnlyRepositoryException("Attempt to signalAgreement in read-only repository: " + this);
+    }
     PersistentPeerIdSet agreeingPeers = loadAgreementHistory();
     for (Iterator it = peers.iterator(); it.hasNext(); ) {
       PeerIdentity key = (PeerIdentity)it.next();
@@ -1226,6 +1261,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
   }
 
   public void setNewProperties(Properties newProps) {
+    if (repository.isReadOnly()) {
+      throw new ReadOnlyRepositoryException("Attempt to setNewProperties in read-only repository: " + this);
+    }
     if (!newVersionOpen) {
       throw new UnsupportedOperationException("New version not initialized.");
     }
@@ -1278,11 +1316,15 @@ public class RepositoryNodeImpl implements RepositoryNode {
 	  loadNodeProps(true);
 	} catch (LockssRepositoryImpl.RepositoryStateException rse) {
 	  currentVersion = DELETED_VERSION;
-	  logger.warning("Renaming faulty 'nodeProps' to 'nodeProps.ERROR'");
-	  if (!PlatformUtil.updateAtomically(nodePropsFile,
-					     new File(nodePropsFile.getAbsolutePath()
-						      + FAULTY_FILE_EXTENSION))) {
-	    logger.error("Error renaming nodeProps file");
+	  if (repository.isReadOnly()) {
+	    logger.warning("Faulty 'nodeProps' but read-only, proceding");
+	  } else {
+	    logger.warning("Renaming faulty 'nodeProps' to 'nodeProps.ERROR'");
+	    if (!PlatformUtil.updateAtomically(nodePropsFile,
+					       new File(nodePropsFile.getAbsolutePath()
+							+ FAULTY_FILE_EXTENSION))) {
+	      logger.error("Error renaming nodeProps file");
+	    }
 	  }
 	}
       }
@@ -1391,17 +1433,17 @@ public class RepositoryNodeImpl implements RepositoryNode {
     return history;
   }
 
-  /* Rename a potentially corrupt agreement history file */
-  void backupAgreementHistoryFile() {
-    try {
-      PlatformUtil.updateAtomically(agreementFile,
-                                    new File(agreementFile.getCanonicalFile() + ".old"));
-    } catch (IOException ex) {
-      // This would only be caused by getCanonicalFile() throwing IOException.
-      // Worthy of a stack trace.
-      logger.error("Unable to back-up suspect agreement history file:", ex);
-    }
-  }
+//   /* Rename a potentially corrupt agreement history file */
+//   void backupAgreementHistoryFile() {
+//     try {
+//       PlatformUtil.updateAtomically(agreementFile,
+//                                     new File(agreementFile.getCanonicalFile() + ".old"));
+//     } catch (IOException ex) {
+//       // This would only be caused by getCanonicalFile() throwing IOException.
+//       // Worthy of a stack trace.
+//       logger.error("Unable to back-up suspect agreement history file:", ex);
+//     }
+//   }
   
 
   /**
@@ -1558,6 +1600,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
    * @return boolean false iff inconsistent
    */
   boolean checkNodeRootConsistency() {
+    if (repository.isReadOnly()) {
+      throw new ReadOnlyRepositoryException("Attempt to checkNodeRootConsistency in read-only repository: " + this);
+    }
     // -root directory exists and is a directory
     if (!ensureDirExists(nodeRootFile)) {
       return false;
@@ -1587,6 +1632,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
    * @return boolean true if repaired or no damage
    */
   boolean checkContentConsistency() {
+    if (repository.isReadOnly()) {
+      return false;
+    }
     // -content dir should exist as a directory
     if (!ensureDirExists(getContentDir())) {
       logger.error("Couldn't create content directory.");
@@ -1713,6 +1761,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
    * Writes the node properties to disk.
    */
   protected void writeNodeProperties() {
+    if (repository.isReadOnly()) {
+      throw new ReadOnlyRepositoryException("Attempt to writeNodeProperties in read-only repository: " + this);
+    }
     try {
       OutputStream os =
 	new BufferedOutputStream(FileUtil.newFileOutputStream(nodePropsFile));

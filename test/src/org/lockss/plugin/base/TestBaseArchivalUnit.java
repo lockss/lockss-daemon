@@ -918,6 +918,25 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     }
   }
 
+  public void testMakeUrlCacherReadOnly() {
+    mbau.setAuId("random");
+    String u1 = "http://www.example.com/1.zip";
+    AuState aus = AuUtil.getAuState(mbau);
+    aus.setReadOnly(true);
+    try {
+      UrlCacher uc =
+	mbau.makeUrlCacher(new UrlData(null, new CIProperties(), u1));
+      fail("makeUrlCacher() on read-only AU should fail: " + uc);
+    } catch (ReadOnlyAuException e) {
+      assertMatchesRE("Attempt to create UrlCacher for AU set in read-only mode:",
+		      e.getMessage());
+    }
+    aus.setReadOnly(false);
+    UrlCacher uc =
+	mbau.makeUrlCacher(new UrlData(null, new CIProperties(), u1));
+    assertEquals(u1, uc.getUrl());
+  }
+
   public static void main(String[] argv) {
     String[] testCaseList = { TestableBaseArchivalUnit.class.getName()};
     junit.swingui.TestRunner.main(testCaseList);

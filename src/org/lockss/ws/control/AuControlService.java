@@ -266,4 +266,54 @@ public interface AuControlService {
   List<RequestAuControlResult> enableMdIndexingByIdList(
       @WebParam(name = "auIds") List<String> auIds)
       throws LockssWebServicesFault;
+
+  /**
+   * Sets the AU to be read-only
+   *
+   * @param auId
+   *          A String with the identifier (auid) of the archival unit.
+   * @return a RequestAuControlResult with the result of the operation.
+   * @throws LockssWebServicesFault
+   */
+  @WebMethod
+  RequestAuControlResult setReadOnlyById(
+      @WebParam(name = "auId") String auId) throws LockssWebServicesFault;
+
+  /**
+   * Sets the AU to be read-write
+   *
+   * @param auId
+   *          A String with the identifier (auid) of the archival unit.
+   * @return a RequestAuControlResult with the result of the operation.
+   * @throws LockssWebServicesFault
+   */
+  @WebMethod
+  RequestAuControlResult setReadWriteById(
+      @WebParam(name = "auId") String auId) throws LockssWebServicesFault;
+
+  /**
+   * Sets a list of AUs to be read-only
+   *
+   * @param auIds
+   *          A List<String> with the identifiers (auids) of the archival units.
+   * @return a List<RequestAuControlResult> with the results of the operation.
+   * @throws LockssWebServicesFault
+   */
+  @WebMethod
+  List<RequestAuControlResult> setReadOnlyByIdList(
+      @WebParam(name = "auIds") List<String> auIds)
+      throws LockssWebServicesFault;
+
+  /**
+   * Sets a list of AUs to be read-write
+   *
+   * @param auIds
+   *          A List<String> with the identifiers (auids) of the archival units.
+   * @return a List<RequestAuControlResult> with the results of the operation.
+   * @throws LockssWebServicesFault
+   */
+  @WebMethod
+  List<RequestAuControlResult> setReadWriteByIdList(
+      @WebParam(name = "auIds") List<String> auIds)
+      throws LockssWebServicesFault;
 }

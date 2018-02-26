@@ -62,7 +62,7 @@ public class NodeManagerImpl
 
   // state and caches for this AU
   ArchivalUnit managedAu;
-  AuState auState;
+  protected AuState auState;
   UniqueRefLruCache nodeCache;
   HashMap activeNodes;
 
@@ -72,7 +72,7 @@ public class NodeManagerImpl
 
   private static Logger logger = Logger.getLogger("NodeManager");
 
-  NodeManagerImpl(ArchivalUnit au) {
+  protected NodeManagerImpl(ArchivalUnit au) {
     managedAu = au;
   }
 

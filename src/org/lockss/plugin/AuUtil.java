@@ -304,6 +304,16 @@ public class AuUtil {
 			false);
   }
 
+  /** Returns true if the AU is set in read-only mode */
+  public static boolean isReadOnly(ArchivalUnit au) {
+    // expedient for tests to avoid NPE
+    AuState aus = getAuState(au);
+    if (aus == null) {
+      return false;
+    }
+    return aus.isReadOnly();
+  }
+
   /**
    * Returns true if the AU has ever successfully completed a new content
    * crawl

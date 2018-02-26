@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -30,19 +30,25 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.app;
+package org.lockss.repository;
 
-public class LockssAppException extends RuntimeException {
+/** An attempt was made to write to an AU that's marked read-only */
 
-  public LockssAppException() {
+public class ReadOnlyRepositoryException extends RuntimeException {
+
+  public ReadOnlyRepositoryException() {
     super();
   }
 
-  public LockssAppException(String msg) {
+  public ReadOnlyRepositoryException(String msg) {
     super(msg);
   }
 
-  public LockssAppException(String msg, Throwable t) {
-    super(msg, t);
+  public ReadOnlyRepositoryException(Throwable cause) {
+    super(cause);
+  }
+
+  public ReadOnlyRepositoryException(String msg, Throwable cause) {
+    super(msg, cause);
   }
 }

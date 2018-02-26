@@ -44,6 +44,7 @@ import org.lockss.crawler.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
 import org.lockss.repository.*;
+import org.lockss.state.*;
 
 public class TestBlockHasher extends LockssTestCase {
   private static final String BASE_URL = "http://www.test.com/blah/";
@@ -721,6 +722,36 @@ public class TestBlockHasher extends LockssTestCase {
     assertTrue(asuv.isSuspect(urls[4], 0));
   }
   
+  public void testOneContentLocalHashMissingReadOnly()
+      throws Exception {
+    enableLocalHash("SHA-1");
+    RecordingEventHandler handRec = new RecordingEventHandler();
+    MockArchivalUnit mau = setupContentTree();
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    CIProperties props = new CIProperties();
+    addContent(mau, urls[4], "foo", props);
+    AuState aus = AuUtil.getAuState(mau);
+    aus.setReadOnly(true);
+    MessageDigest[] digs = { dig };
+    byte[][] inits = {null};
+    BlockHasher hasher = new MyBlockHasher(cus, digs, inits, handRec);
+    hasher.setFiltered(false);
+    assertEquals(3, hashToEnd(hasher, 100));
+    assertTrue(hasher.finished());
+    List<Event> events = handRec.getEvents();
+    assertEquals(1, events.size());
+    assertEvent(urls[4], 3, "foo", events.get(0), false);
+    LocalHashResult lhr = hasher.getLocalHashResult();
+    assertEquals(0, lhr.getMatchingVersions());
+    assertEquals(0, lhr.getNewlySuspectVersions());
+    assertEquals(0, lhr.getNewlyHashedVersions());
+
+    // ensure that no checksum property was stored on the CU
+    CachedUrl cu = mau.makeCachedUrl(urls[4]);
+    CIProperties props2 = cu.getProperties();
+    assertEquals(null, props2.get(CachedUrl.PROPERTY_CHECKSUM));
+  }
+
   String randomString(int len) {
     return org.apache.commons.lang3.RandomStringUtils.randomAlphabetic(len);
   }

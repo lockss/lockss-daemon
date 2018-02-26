@@ -267,6 +267,9 @@ public class DefaultUrlCacher implements UrlCacher {
 				CIProperties headers,
 				boolean doValidate, List<String> redirUrls)
       throws IOException {
+    if (AuUtil.isReadOnly(au)) {
+      throw new ReadOnlyAuException("Attempt to store content in read-only repository: " + this);
+    }
     RepositoryNode leaf = null;
     OutputStream os = null;
     boolean currentWasSuspect = isCurrentVersionSuspect();

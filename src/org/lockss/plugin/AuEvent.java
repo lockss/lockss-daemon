@@ -54,7 +54,9 @@ public class AuEvent {
      */
     Reconfig,
     /** AU's content chaged. */
-    ContentChanged
+    ContentChanged,
+    /** AU's read-only status changed */
+    ReadOnly
   };
 
   private Type type;

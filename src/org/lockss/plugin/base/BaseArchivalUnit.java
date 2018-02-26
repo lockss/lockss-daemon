@@ -194,6 +194,9 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   }
 
   public UrlCacher makeUrlCacher(UrlData ud) {
+    if (AuUtil.isReadOnly(this)) {
+      throw new ReadOnlyAuException("Attempt to create UrlCacher for AU set in read-only mode: " + getName());
+    }
     ArchiveMemberSpec ams = ArchiveMemberSpec.fromUrl(this, ud.url);
     if (ams != null) {
       throw new IllegalArgumentException("Cannot make a UrlCacher for an"
