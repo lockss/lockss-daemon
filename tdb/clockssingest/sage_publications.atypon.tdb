@@ -23543,7 +23543,7 @@
 
       #continues = 2211-0682
 
-      au < testing ; exists ; 2017 ; SLAS TECHNOLOGY: Translating Life Sciences Innovation Volume 22 ; 22 ; jlad ; >
+      au < notReady ; exists ; 2017 ; SLAS TECHNOLOGY: Translating Life Sciences Innovation Volume 22 ; 22 ; jlad ; > #error parsing page.
 
   }
 
@@ -41517,7 +41517,7 @@
       #param[base_url] = http://waf.sagepub.com/
 
       au < frozen ; exists ; 2016 ; World Affairs Volume 179 ; 179 ; wafj ; >
-      au < testing ; exists ; 2017 ; World Affairs Volume 180 ; 180 ; wafj ; >
+      au < ready ; exists ; 2017 ; World Affairs Volume 180 ; 180 ; wafj ; >
 
   }
 
