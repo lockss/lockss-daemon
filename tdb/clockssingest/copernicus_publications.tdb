@@ -390,7 +390,7 @@
       au < finished ; finished ; 2014 ; 2014 ; Biogeosciences Volume 11 ; 11 ; http://www.biogeosciences.net/ ; http://www.biogeosciences.net/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Biogeosciences Volume 12 ; 12 ; http://www.biogeosciences.net/ ; http://www.biogeosciences.net/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2016 ; 2016 ; Biogeosciences Volume 13 ; 13 ; http://www.biogeosciences.net/ ; http://www.biogeosciences.net/ ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2017 ; 2017 ; Biogeosciences Volume 14 ; 14 ; https://www.biogeosciences.net/ ; https://www.biogeosciences.net/ ; >
+      au < deepCrawl ; exists ; 2017 ; 2017 ; Biogeosciences Volume 14 ; 14 ; https://www.biogeosciences.net/ ; https://www.biogeosciences.net/ ; >
       au < manifest ; exists ; 2018 ; 2018 ; Biogeosciences Volume 15 ; 15 ; https://www.biogeosciences.net/ ; https://www.biogeosciences.net/ ; >
 
    }
@@ -968,7 +968,7 @@
       au < finished ; finished ; 2014 ; 2014 ; Hydrology and Earth System Sciences Volume 18 ; 18 ; http://www.hydrol-earth-syst-sci.net/ ; http://www.hydrology-and-earth-system-sciences.net/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Hydrology and Earth System Sciences Volume 19 ; 19 ; http://www.hydrol-earth-syst-sci.net/ ; http://www.hydrology-and-earth-system-sciences.net/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2016 ; 2016 ; Hydrology and Earth System Sciences Volume 20 ; 20 ; http://www.hydrol-earth-syst-sci.net/ ; http://www.hydrology-and-earth-system-sciences.net/ ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; 2017 ; Hydrology and Earth System Sciences Volume 21 ; 21 ; https://www.hydrol-earth-syst-sci.net/ ; https://www.hydrology-and-earth-system-sciences.net/ ; >
+      au < deepCrawl ; exists ; 2017 ; 2017 ; Hydrology and Earth System Sciences Volume 21 ; 21 ; https://www.hydrol-earth-syst-sci.net/ ; https://www.hydrology-and-earth-system-sciences.net/ ; >
       au < manifest ; exists ; 2018 ; 2018 ; Hydrology and Earth System Sciences Volume 22 ; 22 ; https://www.hydrol-earth-syst-sci.net/ ; https://www.hydrology-and-earth-system-sciences.net/ ; >
 
    }

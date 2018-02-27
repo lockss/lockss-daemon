@@ -155,7 +155,7 @@
     au < finished ; finished ; 2014 ; International Journal of Advanced Pervasive and Ubiquitous Computing (IJAPUC) Volume 6 ; 6 ; http://www.igi-global.com/ ; > 
     au < frozen ; exists ; 2015 ; International Journal of Advanced Pervasive and Ubiquitous Computing (IJAPUC) Volume 7 ; 7 ; http://www.igi-global.com/ ; > 
     au < crawling ; exists ; 2016 ; International Journal of Advanced Pervasive and Ubiquitous Computing (IJAPUC) Volume 8 ; 8 ; http://www.igi-global.com/ ; > 
-    au < crawling ; exists ; 2017 ; International Journal of Advanced Pervasive and Ubiquitous Computing (IJAPUC) Volume 9 ; 9 ; http://www.igi-global.com/ ; > 
+    au < deepCrawl ; exists ; 2017 ; International Journal of Advanced Pervasive and Ubiquitous Computing (IJAPUC) Volume 9 ; 9 ; http://www.igi-global.com/ ; > 
 
   }
 
@@ -581,7 +581,7 @@
     au < finished ; crawling ; 2014 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 8 ; 8 ; http://www.igi-global.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 9 ; 9 ; http://www.igi-global.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 10 ; 10 ; http://www.igi-global.com/ ; > 
-    au < crawling ; exists ; 2017 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 11 ; 11 ; http://www.igi-global.com/ ; > 
+    au < deepCrawl ; exists ; 2017 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 11 ; 11 ; http://www.igi-global.com/ ; > 
 
   }
 
@@ -615,7 +615,7 @@
     #continues = 1947-3133
 
     au < deepCrawl ; exists ; 2016 ; International Journal of Computers in Clinical Practice (IJCCP) Volume 1 ; 1 ; http://www.igi-global.com/ ; > 
-    au < crawling ; exists ; 2017 ; International Journal of Computers in Clinical Practice (IJCCP) Volume 2 ; 2 ; http://www.igi-global.com/ ; >
+    au < deepCrawl ; exists ; 2017 ; International Journal of Computers in Clinical Practice (IJCCP) Volume 2 ; 2 ; http://www.igi-global.com/ ; >
 
   }
 
@@ -970,7 +970,7 @@
     au < finished ; finished ; 2014 ; International Journal of E-Adoption (IJEA) Volume 6 ; 6 ; http://www.igi-global.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; International Journal of E-Adoption (IJEA) Volume 7 ; 7 ; http://www.igi-global.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2016 ; International Journal of E-Adoption (IJEA) Volume 8 ; 8 ; http://www.igi-global.com/ ; > 
-    au < crawling ; exists ; 2017 ; International Journal of E-Adoption (IJEA) Volume 9 ; 9 ; http://www.igi-global.com/ ; > 
+    au < deepCrawl ; exists ; 2017 ; International Journal of E-Adoption (IJEA) Volume 9 ; 9 ; http://www.igi-global.com/ ; > 
 
   }
 
@@ -1256,7 +1256,7 @@
     au < finished ; finished ; 2014 ; International Journal of Game-Based Learning (IJGBL) Volume 4 ; 4 ; http://www.igi-global.com/ ; reingest2.clockss.org:8085 > 
     au < frozen ; exists ; 2015 ; International Journal of Game-Based Learning (IJGBL) Volume 5 ; 5 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2016 ; International Journal of Game-Based Learning (IJGBL) Volume 6 ; 6 ; http://www.igi-global.com/ ; > 
-    au < crawling ; exists ; 2017 ; International Journal of Game-Based Learning (IJGBL) Volume 7 ; 7 ; http://www.igi-global.com/ ; > 
+    au < deepCrawl ; exists ; 2017 ; International Journal of Game-Based Learning (IJGBL) Volume 7 ; 7 ; http://www.igi-global.com/ ; > 
 
   }
 
@@ -1342,7 +1342,7 @@
     au < finished ; crawling ; 2014 ; International Journal of Grid and High Performance Computing (IJGHPC) Volume 6 ; 6 ; http://www.igi-global.com/ ; reingest4.clockss.org:8082 > 
     au < finished ; finished ; 2015 ; International Journal of Grid and High Performance Computing (IJGHPC) Volume 7 ; 7 ; http://www.igi-global.com/ ; reingest5.clockss.org:8082 > 
     au < deepCrawl ; exists ; 2016 ; International Journal of Grid and High Performance Computing (IJGHPC) Volume 8 ; 8 ; http://www.igi-global.com/ ; > 
-    au < crawling ; exists ; 2017 ; International Journal of Grid and High Performance Computing (IJGHPC) Volume 9 ; 9 ; http://www.igi-global.com/ ; > 
+    au < deepCrawl ; exists ; 2017 ; International Journal of Grid and High Performance Computing (IJGHPC) Volume 9 ; 9 ; http://www.igi-global.com/ ; > 
 
   }
 
@@ -2276,7 +2276,7 @@
     au < finished ; finished ; 2014 ; International Journal of People-Oriented Programming (IJPOP) Volume 3 ; 3 ; http://www.igi-global.com/ ; reingest3.clockss.org:8083 > 
     au < finished ; crawling ; 2015 ; International Journal of People-Oriented Programming (IJPOP) Volume 4 ; 4 ; http://www.igi-global.com/ ; reingest4.clockss.org:8082 > 
     au < frozen ; exists ; 2016 ; International Journal of People-Oriented Programming (IJPOP) Volume 5 ; 5 ; http://www.igi-global.com/ ; > 
-    au < crawling ; exists ; 2017 ; International Journal of People-Oriented Programming (IJPOP) Volume 6 ; 6 ; http://www.igi-global.com/ ; > 
+    au < deepCrawl ; exists ; 2017 ; International Journal of People-Oriented Programming (IJPOP) Volume 6 ; 6 ; http://www.igi-global.com/ ; > 
 
   }
 
@@ -2687,7 +2687,7 @@
     au < finished ; finished ; 2014 ; International Journal of Swarm Intelligence Research (IJSIR) Volume 5 ; 5 ; http://www.igi-global.com/ ; reingest2.clockss.org:8085 > 
     au < frozen ; exists ; 2015 ; International Journal of Swarm Intelligence Research (IJSIR) Volume 6 ; 6 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2016 ; International Journal of Swarm Intelligence Research (IJSIR) Volume 7 ; 7 ; http://www.igi-global.com/ ; > 
-    au < crawling ; exists ; 2017 ; International Journal of Swarm Intelligence Research (IJSIR) Volume 8 ; 8 ; http://www.igi-global.com/ ; > 
+    au < deepCrawl ; exists ; 2017 ; International Journal of Swarm Intelligence Research (IJSIR) Volume 8 ; 8 ; http://www.igi-global.com/ ; > 
 
   }
 

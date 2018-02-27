@@ -886,7 +886,7 @@
     au < finished ; finished ; 2014 ; Modernist Cultures Volume 9 ; 9 ; http://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Modernist Cultures Volume 10 ; 10 ; http://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Modernist Cultures Volume 11 ; 11 ; http://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 2017 ; Modernist Cultures Volume 12 ; 12 ; http://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2017 ; Modernist Cultures Volume 12 ; 12 ; http://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2018 ; Modernist Cultures Volume 13 ; 13 ; https://www.euppublishing.com/ ; >
 
   }
@@ -1096,7 +1096,7 @@
     au < finished ; finished ; 2014 ; Oxford Literary Review Volume 36 ; 36 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2015 ; Oxford Literary Review Volume 37 ; 37 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2016 ; Oxford Literary Review Volume 38 ; 38 ; http://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 2017 ; Oxford Literary Review Volume 39 ; 39 ; http://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2017 ; Oxford Literary Review Volume 39 ; 39 ; http://www.euppublishing.com/ ; >
     au < expected ; exists ; 2018 ; Oxford Literary Review Volume 40 ; 40 ; https://www.euppublishing.com/ ; >
 
   }

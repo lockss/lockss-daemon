@@ -626,7 +626,7 @@
     au < finished ; finished ; 2014 ; The Application of Clinical Genetics Volume 7 ; 7 ; 2014 ; >
     au < finished ; finished ; 2015 ; The Application of Clinical Genetics Volume 8 ; 8 ; 2015 ; >
     au < finished ; crawling ; 2016 ; The Application of Clinical Genetics Volume 9 ; 9 ; 2016 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; The Application of Clinical Genetics Volume 10 ; 10 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; The Application of Clinical Genetics Volume 10 ; 10 ; 2017 ; >
     au < manifest ; exists ; 2018 ; The Application of Clinical Genetics Volume 11 ; 11 ; 2018 ; >
 
   }
@@ -830,7 +830,7 @@
     au < finished ; finished ; 2014 ; International Journal of Women's Health Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; International Journal of Women's Health Volume 7 ; 7 ; 2015 ; >
     au < finished ; crawling ; 2016 ; International Journal of Women's Health Volume 8 ; 8 ; 2016 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2017 ; International Journal of Women's Health Volume 9 ; 9 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; International Journal of Women's Health Volume 9 ; 9 ; 2017 ; >
     au < manifest ; exists ; 2018 ; International Journal of Women's Health Volume 10 ; 10 ; 2018 ; >
 
   }
@@ -1075,7 +1075,7 @@
     au < finished ; finished ; 2014 ; Risk Management and Healthcare Policy Volume 7 ; 7 ; 2014 ; >
     au < finished ; finished ; 2015 ; Risk Management and Healthcare Policy Volume 8 ; 7 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Risk Management and Healthcare Policy Volume 9 ; 9 ; 2016 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Risk Management and Healthcare Policy Volume 10 ; 10 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Risk Management and Healthcare Policy Volume 10 ; 10 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Risk Management and Healthcare Policy Volume 11 ; 11 ; 2018 ; >
 
   }
@@ -1460,7 +1460,7 @@
     au < finished ; finished ; 2014 ; Eye and Brain Volume 6 ; 6 ; 2014 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Eye and Brain Volume 7 ; 7 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Eye and Brain Volume 8 ; 8 ; 2016 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Eye and Brain Volume 9 ; 9 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Eye and Brain Volume 9 ; 9 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Eye and Brain Volume 10 ; 10 ; 2018 ; >
 
   }
@@ -1987,7 +1987,7 @@
     au < finished ; finished ; 2014 ; Research and Reports in Neonatology Volume 4 ; 4 ; 2014 ; >
     au < finished ; finished ; 2015 ; Research and Reports in Neonatology Volume 5 ; 5 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Research and Reports in Neonatology Volume 6 ; 6 ; 2016 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2017 ; Research and Reports in Neonatology Volume 7 ; 7 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Research and Reports in Neonatology Volume 7 ; 7 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Research and Reports in Neonatology Volume 8 ; 8 ; 2018 ; >
 
   }
@@ -2045,7 +2045,7 @@
     au < finished ; finished ; 2014 ; ChronoPhysiology and Therapy Volume 4 ; 4 ; 2014 ; >
     au < finished ; finished ; 2015 ; ChronoPhysiology and Therapy Volume 5 ; 5 ; 2015 ; >
     au < finished ; crawling ; 2016 ; ChronoPhysiology and Therapy Volume 6 ; 6 ; 2016 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; ChronoPhysiology and Therapy Volume 7 ; 7 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; ChronoPhysiology and Therapy Volume 7 ; 7 ; 2017 ; >
     au < manifest ; exists ; 2018 ; ChronoPhysiology and Therapy Volume 8 ; 8 ; 2018 ; >
 
   }
@@ -2469,7 +2469,7 @@
     au < finished ; finished ; 2014 ; Orphan Drugs: Research and Reviews Volume 4 ; 4 ; 2014 ; >
     au < finished ; finished ; 2015 ; Orphan Drugs: Research and Reviews Volume 5 ; 5 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Orphan Drugs: Research and Reviews Volume 6 ; 6 ; 2016 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Orphan Drugs: Research and Reviews Volume 7 ; 7 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Orphan Drugs: Research and Reviews Volume 7 ; 7 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Orphan Drugs: Research and Reviews Volume 8 ; 8 ; 2018 ; >
 
   }
@@ -2822,7 +2822,7 @@
 
     au < finished ; finished ; 2015 ; Advanced Health Care Technologies Volume 1 ; 1 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Advanced Health Care Technologies Volume 2 ; 2 ; 2016 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2017 ; Advanced Health Care Technologies Volume 3 ; 3 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Advanced Health Care Technologies Volume 3 ; 3 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Advanced Health Care Technologies Volume 4 ; 4 ; 2018 ; >
 
   }

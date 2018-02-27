@@ -1622,7 +1622,7 @@
     au < rsp.ClockssRSPDrupalPlugin ; frozen ; exists ; 2014 ; Royal Society Open Science Volume 1 ; 1 ; >
     au < rsp.ClockssRSPDrupalPlugin ; frozen ; exists ; 2015 ; Royal Society Open Science Volume 2 ; 2 ; >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2016 ; Royal Society Open Science Volume 3 ; 3 ; reingest1.clockss.org:8082 >
-    au < rsp.ClockssRSPDrupalPlugin ; crawling ; exists ; 2017 ; Royal Society Open Science Volume 4 ; 4 ; >
+    au < rsp.ClockssRSPDrupalPlugin ; deepCrawl ; exists ; 2017 ; Royal Society Open Science Volume 4 ; 4 ; >
 
   }
 

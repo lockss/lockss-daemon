@@ -395,7 +395,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Allgemeine Homöopathische Zeitung Volume 259 ; 259 ; >
     au < finished ; finished ; 2015 ; 2015 ; Allgemeine Homöopathische Zeitung Volume 260 ; 260 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Allgemeine Homöopathische Zeitung Volume 261 ; 261 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; 2017 ; Allgemeine Homöopathische Zeitung Volume 262 ; 262 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Allgemeine Homöopathische Zeitung Volume 262 ; 262 ; >
 
     }
 
@@ -1842,7 +1842,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Gesundheitsökonomie & Qualitätsmanagement Volume 19 ; 19 ; >
    au < finished ; finished ; 2015 ; 2015 ; Gesundheitsökonomie & Qualitätsmanagement Volume 20 ; 20 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; exists ; 2016 ; 2016 ; Gesundheitsökonomie & Qualitätsmanagement Volume 21 ; 21 ; >
-   au < crawling ; exists ; 2017 ; 2017 ; Gesundheitsökonomie & Qualitätsmanagement Volume 22 ; 22 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Gesundheitsökonomie & Qualitätsmanagement Volume 22 ; 22 ; >
 
   }
 
@@ -2104,7 +2104,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Im OP Volume 4 ; 4 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; Im OP Volume 5 ; 5 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; Im OP Volume 6 ; 6 ; reingest5.clockss.org:8082 >
-   au < crawling ; exists ; 2017 ; 2017 ; Im OP Volume 7 ; 7 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Im OP Volume 7 ; 7 ; >
 
   }
 
@@ -2575,7 +2575,7 @@
 
     param[journal_id] = 10.1055/s-00031934 
     
-    au < crawling ; exists ; 2017 ; 2017 ; The Journal of Hip Surgery  Volume 1 ; 1 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; The Journal of Hip Surgery  Volume 1 ; 1 ; >
 
   }
 
@@ -3512,7 +3512,7 @@
     param[journal_id] = 10.1055/s-00033101
     #years = 2017-current
 
-    au < crawling ; exists ; 2017 ; 2017 ; Neurology International Open Volume 1 ; 1 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Neurology International Open Volume 1 ; 1 ; >
 
   }
 
@@ -3720,7 +3720,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Notfallmedizin up2date Volume 9 ; 9 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Notfallmedizin up2date Volume 10 ; 10 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Notfallmedizin up2date Volume 11 ; 11 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; 2017 ; Notfallmedizin up2date Volume 12 ; 12 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Notfallmedizin up2date Volume 12 ; 12 ; >
 
   }
 
@@ -4612,7 +4612,7 @@
     # move from Scielo, May 2016
 
    au < finished ; crawling ; 2016 ; 2016 ; Revista Brasileira de Ginecologia e Obstetrícia Volume 38 ; 38 ; reingest2.clockss.org:8085 >
-   au < crawling ; exists ; 2017 ; 2017 ; Revista Brasileira de Ginecologia e Obstetrícia Volume 39 ; 39 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Revista Brasileira de Ginecologia e Obstetrícia Volume 39 ; 39 ; >
 
   }
 
@@ -5489,7 +5489,7 @@
 
     au < finished ; finished ; 2015 ; 2015 ; The Surgery Journal Volume 1 ; 1 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; The Surgery Journal Volume 2 ; 2 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; 2017 ; The Surgery Journal Volume 3 ; 3 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; The Surgery Journal Volume 3 ; 3 ; >
 
   }
 
@@ -6208,7 +6208,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Zeitschrift für Klassische Homöopathie Volume 58 ; 58 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Zeitschrift für Klassische Homöopathie Volume 59 ; 59 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Zeitschrift für Klassische Homöopathie Volume 60 ; 60 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; 2017 ; Zeitschrift für Klassische Homöopathie Volume 61 ; 61 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Zeitschrift für Klassische Homöopathie Volume 61 ; 61 ; >
 
   }
 
@@ -6284,7 +6284,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 152 ; 152 ; >
     au < finished ; finished ; 2015 ; 2015 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 153 ; 153 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 154 ; 154 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2017 ; 2017 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 155 ; 155 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 155 ; 155 ; >
 
   }
 
@@ -6572,7 +6572,7 @@
     au < finished ; finished ; 2014 ; 2014 ; ZWR - Das Deutsche Zahnärzteblatt Volume 123 ; 123 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; ZWR - Das Deutsche Zahnärzteblatt Volume 124 ; 124 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; 2016 ; ZWR - Das Deutsche Zahnärzteblatt Volume 125 ; 125 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; ZWR - Das Deutsche Zahnärzteblatt Volume 126 ; 126 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; ZWR - Das Deutsche Zahnärzteblatt Volume 126 ; 126 ; >
 
   }
 
@@ -6791,7 +6791,7 @@
     au < crawling ; exists ; 2014 ; 2014 ; Kinder- und Jugendmedizin Volume 14 ; 14 ; >
     au < manifest ; exists ; 2015 ; 2015 ; Kinder- und Jugendmedizin Volume 15 ; 15 ; >
     au < crawling ; exists ; 2016 ; 2016 ; Kinder- und Jugendmedizin Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; Kinder- und Jugendmedizin Volume 17 ; 17 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Kinder- und Jugendmedizin Volume 17 ; 17 ; >
 
   }
 
@@ -6998,7 +6998,7 @@
     au < manifest ; exists ; 2014 ; 2014 ; Revista Iberoamericana de Cirugía de la Mano Volume 42 ; 42 ; >
     au < manifest ; exists ; 2015 ; 2015 ; Revista Iberoamericana de Cirugía de la Mano Volume 43 ; 43 ; >
     au < manifest ; exists ; 2016 ; 2016 ; Revista Iberoamericana de Cirugía de la Mano Volume 44 ; 44 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; Revista Iberoamericana de Cirugía de la Mano Volume 45 ; 45 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Revista Iberoamericana de Cirugía de la Mano Volume 45 ; 45 ; >
 
   }
 
