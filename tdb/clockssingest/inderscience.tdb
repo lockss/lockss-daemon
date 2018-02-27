@@ -5617,8 +5617,7 @@
       au < doNotProcess ; exists ; 2007-2008 ; International Journal of Mass Customisation Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2009-2010 ; International Journal of Mass Customisation Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011-2012 ; International Journal of Mass Customisation Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
-      au < finished ; finished ; 2015 ; International Journal of Mass Customisation Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < expected ; exists ; 2017 ; International Journal of Mass Customisation Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; finished ; 2015 ; International Journal of Mass Customisation Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 > #issue 2, 3, 4 not online
 
     }
 
@@ -5819,7 +5818,6 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Mechatronics and Automation Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014 ; International Journal of Mechatronics and Automation Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; >
       au < finished ; crawling ; 2015-2016 ; International Journal of Mechatronics and Automation Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < expected ; exists ; 2017 ; International Journal of Mechatronics and Automation Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -6129,7 +6127,7 @@
       param[journal_id] = ijme
       #This title is not yet published
 
-      au < expected ; exists ; 2017 ; International Journal of Molecular Engineering Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < expected ; exists ; 2018 ; International Journal of Molecular Engineering Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -6305,8 +6303,8 @@
 
       param[journal_id] = ijns
 
-      au < finished ; finished ; 2016-2017 ; International Journal of Network Science Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < expected ; exists ; 2017 ; International Journal of Network Science Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; finished ; 2016-2017 ; International Journal of Network Science Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >  #issue 4 not online
+      au < expected ; exists ; 2018 ; International Journal of Network Science Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -6470,7 +6468,7 @@
       param[journal_id] = ijnss
       #This title is not yet published
 
-      au < expected ; exists ; 2017 ; International Journal of Nuclear Safety and Security Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < expected ; exists ; 2018 ; International Journal of Nuclear Safety and Security Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -6578,7 +6576,6 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Organisational Design and Engineering Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2013-2014 ; International Journal of Organisational Design and Engineering Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2016 ; International Journal of Organisational Design and Engineering Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < expected ; exists ; 2017 ; International Journal of Organisational Design and Engineering Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -6611,7 +6608,7 @@
       param[journal_id] = ijplp
       #This title is not yet published
 
-      au < expected ; exists ; 2017 ; International Journal of Physiotherapy and Life Physics Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < expected ; exists ; 2018 ; International Journal of Physiotherapy and Life Physics Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -6791,8 +6788,8 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Private Law Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Private Law Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014 ; International Journal of Private Law Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2015 ; International Journal of Private Law Volume 8 ; 8 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < expected ; exists ; 2017 ; International Journal of Private Law Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; finished ; 2015-2017 ; International Journal of Private Law Volume 8 ; 8 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
+      au < expected ; exists ; 2018 ; International Journal of Private Law Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -6931,7 +6928,7 @@
       param[journal_id] = ijpsq
       #This title is not yet published
 
-      au < expected ; exists ; 2017 ; International Journal of Product Sound Quality Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < expected ; exists ; 2018 ; International Journal of Product Sound Quality Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -7010,7 +7007,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Public Law and Policy Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014 ; International Journal of Public Law and Policy Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; >
       au < finished ; crawling ; 2015-2016 ; International Journal of Public Law and Policy Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2017 ; International Journal of Public Law and Policy Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; >
+      au < ingNotReady ; exists ; 2017-2018 ; International Journal of Public Law and Policy Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; > #issue 2,3,4 not online
 
     }
 
@@ -7131,7 +7128,6 @@
       au < doNotProcess ; exists ; 2009 ; International Journal of Radio Frequency Identification Technology and Applications Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Radio Frequency Identification Technology and Applications Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2012-2015 ; International Journal of Radio Frequency Identification Technology and Applications Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; >
-      au < expected ; exists ; 2017 ; International Journal of Radio Frequency Identification Technology and Applications Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -7217,7 +7213,7 @@
       param[journal_id] = ijrem
       #This title is not yet published
 
-      au < expected ; exists ; 2017 ; International Journal of Remanufacturing Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < expected ; exists ; 2018 ; International Journal of Remanufacturing Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -7836,6 +7832,7 @@
       au < finished ; finished ; 2014 ; International Journal of Sport Management and Marketing Volume 15 ; 15 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2015-2016 ; International Journal of Sport Management and Marketing Volume 16 ; 16 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; International Journal of Sport Management and Marketing Volume 17 ; 17 ; http://www.inderscienceonline.com/ ; >
+      au < expected ; exists ; 2018 ; International Journal of Sport Management and Marketing Volume 18 ; 18 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -7929,10 +7926,9 @@
       >
 
       # title is not yet published on 9/26/2013, 2/28/2017
-
       param[journal_id] = ijsrpsd
 
-      au < expected ; exists ; 2017 ; International Journal of Sudan Research, Policy and Sustainable Development Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < expected ; exists ; 2018 ; International Journal of Sudan Research, Policy and Sustainable Development Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -8049,7 +8045,6 @@
       au < doNotProcess ; exists ; 2008-2009 ; International Journal of Sustainable Manufacturing Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2010-2012 ; International Journal of Sustainable Manufacturing Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2013-2015 ; International Journal of Sustainable Manufacturing Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; >
-      au < expected ; exists ; 2017 ; International Journal of Sustainable Manufacturing Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -8066,7 +8061,6 @@
 
       au < finished ; finished ; 2012-2014 ; International Journal of Sustainable Materials and Structural Systems Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2015-2016 ; International Journal of Sustainable Materials and Structural Systems Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < expected ; exists ; 2017 ; International Journal of Sustainable Materials and Structural Systems Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -8586,6 +8580,7 @@
       au < finished ; finished ; 2013-2014 ; International Journal of Tourism Policy Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2015-2016 ; International Journal of Tourism Policy Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2017 ; International Journal of Tourism Policy Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; >
+      au < expected ; exists ; 2018 ; International Journal of Tourism Policy Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -8629,7 +8624,6 @@
       au < finished ; finished ; 2013-2014 ; International Journal of Transitions and Innovation Systems Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; >
       au < finished ; crawling ; 2015 ; International Journal of Transitions and Innovation Systems Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; International Journal of Transitions and Innovation Systems Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < expected ; exists ; 2017 ; International Journal of Transitions and Innovation Systems Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -9073,7 +9067,7 @@
       param[journal_id] = ijwi
 
       au < finished ; crawling ; 2012-2016 ; International Journal of Work Innovation Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; International Journal of Work Innovation Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; >
+      au < ingNotReady ; exists ; 2017-2019 ; International Journal of Work Innovation Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; > #issue 2,3,4 not online
 
     }
 
@@ -9096,6 +9090,7 @@
       au < finished ; finished ; 2014 ; International Journal of Work Organisation and Emotion Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; >
       au < finished ; crawling ; 2015-2016 ; International Journal of Work Organisation and Emotion Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2017 ; International Journal of Work Organisation and Emotion Volume 8 ; 8 ; http://www.inderscienceonline.com/ ; >
+      au < expected ; exists ; 2018 ; International Journal of Work Organisation and Emotion Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -9360,6 +9355,7 @@
       au < finished ; finished ; 2014 ; World Review of Science, Technology and Sustainable Development Volume 11 ; 11 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2015-2016 ; World Review of Science, Technology and Sustainable Development Volume 12 ; 12 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2017 ; World Review of Science, Technology and Sustainable Development Volume 13 ; 13 ; http://www.inderscienceonline.com/ ; >
+      au < expected ; exists ; 2018 ; World Review of Science, Technology and Sustainable Development Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -9421,7 +9417,7 @@
       param[journal_id] = ijcad
 
       au < finished ; crawling ; 2013-2015 ; International Journal of Circuits and Architecture Design Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < ingNotReady ; exists ; 2016-2017 ; International Journal of Circuits and Architecture Design Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; > # issue 3 & 4 not online
+      au < crawling ; exists ; 2016 ; International Journal of Circuits and Architecture Design Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; >
 
   }
 
@@ -9491,7 +9487,7 @@
       au < finished ; crawling ; 2014 ; International Journal of Human Rights and Constitutional Studies Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; International Journal of Human Rights and Constitutional Studies Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; International Journal of Human Rights and Constitutional Studies Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < ingNotReady ; exists ; 2017 ; International Journal of Human Rights and Constitutional Studies Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; > # issue 3 & 4 not online
+      au < crawling ; exists ; 2017 ; International Journal of Human Rights and Constitutional Studies Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; >
 
   }
 
@@ -9507,7 +9503,7 @@
 
       au < finished ; crawling ; 2014-2015 ; International Journal of Automotive Composites Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; International Journal of Automotive Composites Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < ingNotReady ; exists ; 2017 ; International Journal of Automotive Composites Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; > #issue 2, 3 & 4 not online
+      au < ingNotReady ; exists ; 2017-2018 ; International Journal of Automotive Composites Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; > #issue 2, 3 & 4 not online
 
   }
 
@@ -9522,7 +9518,6 @@
       param[journal_id] = ijhem
 
       au < finished ; crawling ; 2014-2016 ; International Journal of Hospitality and Event Management Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < expected ; exists ; 2017 ; International Journal of Hospitality and Event Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ ;  >
 
   }
 
@@ -9570,7 +9565,6 @@
 
       au < finished ; crawling ; 2015 ; International Journal of Decision Support Systems Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < ingNotReady ; down ; 2016 ; International Journal of Decision Support Systems Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 > #issue 4 not online
-      au < expected ; exists ; 2017 ; International Journal of Decision Support Systems Volume 3 ; 3 ; https://www.inderscienceonline.com/ ;  >
 
   }
 
@@ -9646,7 +9640,7 @@
       param[journal_id] = ijtmcp
 
       au < finished ; crawling ; 2015-2016 ; International Journal of Telemedicine and Clinical Practices Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 2017-2018 ; International Journal of Telemedicine and Clinical Practices Volume 2 ; 2 ; https://www.inderscienceonline.com/ ;  >
+      au < manifest ; exists ; 2017-2018 ; International Journal of Telemedicine and Clinical Practices Volume 2 ; 2 ; https://www.inderscienceonline.com/ ;  > #issue 4 not online
 
   }
 
@@ -9717,7 +9711,7 @@
       param[journal_id] = ijmcs
 
       au < finished ; crawling ; 2016 ; International Journal of Multinational Corporation Strategy Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < ingNotReady ; exists ; 2017 ; International Journal of Multinational Corporation Strategy Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; > # issue 2, 3, 4 not online
+      au < ingNotReady ; exists ; 2017-2018 ; International Journal of Multinational Corporation Strategy Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; > # issue 3, 4 not online
 
   }
 
@@ -9745,7 +9739,7 @@
 
       param[journal_id] = ijsggc
 
-      au < ingNotReady ; exists ; 2016-2017 ; International Journal of Smart Grid and Green Communications Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; > # issue 3 and 4 not online
+      au < ingNotReady ; exists ; 2016-2018 ; International Journal of Smart Grid and Green Communications Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; > # issue 3 and 4 not online
 
   }
 
@@ -9802,7 +9796,7 @@
       param[journal_id] = ijeie
 
       au < finished ; crawling ; 2016 ; International Journal of Earthquake and Impact Engineering Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < ingNotReady ; exists ; 2017 ; International Journal of Earthquake and Impact Engineering Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; > # issue 3 , 4 not online
+      au < ingNotReady ; exists ; 2017-2018 ; International Journal of Earthquake and Impact Engineering Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; > # issue 3 , 4 not online
 
   }
 
@@ -9830,7 +9824,7 @@
 
       param[journal_id] = ijasmm
 
-      au < ingNotReady ; exists ; 2017 ; International Journal of Additive and Subtractive Materials Manufacturing Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; > #issue 3, 4 not online
+      au < ingNotReady ; exists ; 2017-2018 ; International Journal of Additive and Subtractive Materials Manufacturing Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; > #issue 3, 4 not online
 
   }
 
@@ -9844,7 +9838,7 @@
 
       param[journal_id] = ijbbm
 
-      au < ingNotReady ; exists ; 2017 ; International Journal of Bibliometrics in Business and Management Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
+      au < ingNotReady ; exists ; 2017-2018 ; International Journal of Bibliometrics in Business and Management Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
 
   }
 
@@ -9858,7 +9852,7 @@
 
       param[journal_id] = ijric
 
-      au < ingNotReady ; exists ; 2017 ; International Journal of Research, Innovation and Commercialisation Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
+      au < ingNotReady ; exists ; 2017-2018 ; International Journal of Research, Innovation and Commercialisation Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
 
   }
 
@@ -9872,7 +9866,7 @@
 
       param[journal_id] = ijsrece
 
-      au < ingNotReady ; exists ; 2017 ; International Journal of Sustainable Real Estate and Construction Economics Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
+      au < ingNotReady ; exists ; 2017-2018 ; International Journal of Sustainable Real Estate and Construction Economics Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
 
   }
 
@@ -9886,7 +9880,7 @@
 
       param[journal_id] = ijisdc
 
-      au < ingNotReady ; exists ; 2017 ; International Journal of Intelligent Systems Design and Computing Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; > #issue 3, 4 not online
+      au < ingNotReady ; exists ; 2017-2018 ; International Journal of Intelligent Systems Design and Computing Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; > #issue 3, 4 not online
 
   }
   

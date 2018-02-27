@@ -5608,9 +5608,7 @@
       au < doNotProcess ; 2007-2008 ; International Journal of Mass Customisation Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
       au < doNotProcess ; 2009-2010 ; International Journal of Mass Customisation Volume 3 ; 3 ; https://www.inderscienceonline.com/ >
       au < doNotProcess ; 2011-2012 ; International Journal of Mass Customisation Volume 4 ; 4 ; https://www.inderscienceonline.com/ >
-      au < released ; 2015 ; International Journal of Mass Customisation Volume 5 ; 5 ; http://www.inderscienceonline.com/ >
-      au < expected ; 2016 ; International Journal of Mass Customisation Volume 6 ; 6 ; https://www.inderscienceonline.com/ >
-      au < expected ; 2017 ; International Journal of Mass Customisation Volume 7 ; 7 ; https://www.inderscienceonline.com/ >
+      au < released ; 2015 ; International Journal of Mass Customisation Volume 5 ; 5 ; http://www.inderscienceonline.com/ > #issue 2, 3, 4 not online
 
     }
 
@@ -5811,7 +5809,6 @@
       au < manifest ; 2013 ; International Journal of Mechatronics and Automation Volume 3 ; 3 ; https://www.inderscienceonline.com/ >
       au < released ; 2014 ; International Journal of Mechatronics and Automation Volume 4 ; 4 ; http://www.inderscienceonline.com/ >
       au < released ; 2015-2016 ; International Journal of Mechatronics and Automation Volume 5 ; 5 ; http://www.inderscienceonline.com/ >
-      au < expected ; 2017 ; International Journal of Mechatronics and Automation Volume 6 ; 6 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -6064,7 +6061,6 @@
       au < released ; 2014 ; International Journal of Modelling in Operations Management Volume 4 ; 4 ; http://www.inderscienceonline.com/ >
       au < released ; 2015 ; International Journal of Modelling in Operations Management Volume 5 ; 5 ; http://www.inderscienceonline.com/ >
       au < released ; 2016-2017 ; International Journal of Modelling in Operations Management Volume 6 ; 6 ; http://www.inderscienceonline.com/ > #volume 6 issue 4 not online yet
-      au < expected ; 2017 ; International Journal of Modelling in Operations Management Volume 7 ; 7 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -6122,7 +6118,7 @@
       param[journal_id] = ijme
       # title is not yet published up on 4/11/2013
 
-      au < expected ; 2017 ; International Journal of Molecular Engineering Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
+      au < expected ; 2018 ; International Journal of Molecular Engineering Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -6298,8 +6294,8 @@
 
       param[journal_id] = ijns
 
-      au < released ; 2016-2017 ; International Journal of Network Science Volume 1 ; 1 ; http://www.inderscienceonline.com/ >
-      au < expected ; 2017 ; International Journal of Network Science Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
+      au < released ; 2016-2017 ; International Journal of Network Science Volume 1 ; 1 ; http://www.inderscienceonline.com/ > #issue 4 not online
+      au < expected ; 2018 ; International Journal of Network Science Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -6463,7 +6459,7 @@
       param[journal_id] = ijnss
       # title is not yet published on 4/11/2013
 
-      au < expected ; 2017 ; International Journal of Nuclear Safety and Security Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
+      au < expected ; 2018 ; International Journal of Nuclear Safety and Security Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -6571,7 +6567,6 @@
       au < doNotProcess ; 2012 ; International Journal of Organisational Design and Engineering Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
       au < released ; 2013-2014 ; International Journal of Organisational Design and Engineering Volume 3 ; 3 ; http://www.inderscienceonline.com/ >
       au < released ; 2016 ; International Journal of Organisational Design and Engineering Volume 4 ; 4 ; http://www.inderscienceonline.com/ >
-      au < expected ; 2017 ; International Journal of Organisational Design and Engineering Volume 5 ; 5 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -6604,7 +6599,7 @@
       param[journal_id] = ijplp
       # title is not yet published on 9/26/2013
 
-      au < expected ; 2017 ; International Journal of Physiotherapy and Life Physics Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
+      au < expected ; 2018 ; International Journal of Physiotherapy and Life Physics Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -6784,8 +6779,8 @@
       au < doNotProcess ; 2012 ; International Journal of Private Law Volume 5 ; 5 ; https://www.inderscienceonline.com/ >
       au < manifest ; 2013 ; International Journal of Private Law Volume 6 ; 6 ; https://www.inderscienceonline.com/ >
       au < released ; 2014 ; International Journal of Private Law Volume 7 ; 7 ; http://www.inderscienceonline.com/ >
-      au < released ; 2015 ; International Journal of Private Law Volume 8 ; 8 ; http://www.inderscienceonline.com/ >
-      au < expected ; 2017 ; International Journal of Private Law Volume 9 ; 9 ; https://www.inderscienceonline.com/ >
+      au < released ; 2015-2017 ; International Journal of Private Law Volume 8 ; 8 ; http://www.inderscienceonline.com/ >
+      au < expected ; 2018 ; International Journal of Private Law Volume 9 ; 9 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -6924,7 +6919,7 @@
       param[journal_id] = ijpsq
       # title is not yet published on 9/26/2013
 
-      au < expected ; 2017 ; International Journal of Product Sound Quality Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
+      au < expected ; 2018 ; International Journal of Product Sound Quality Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -7002,9 +6997,8 @@
       au < doNotProcess ; 2012 ; International Journal of Public Law and Policy Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
       au < manifest ; 2013 ; International Journal of Public Law and Policy Volume 3 ; 3 ; https://www.inderscienceonline.com/ >
       au < released ; 2014 ; International Journal of Public Law and Policy Volume 4 ; 4 ; http://www.inderscienceonline.com/ >
-      au < released ; 2015 ; International Journal of Public Law and Policy Volume 5 ; 5 ; http://www.inderscienceonline.com/ >
-      au < manifest ; 2016 ; International Journal of Public Law and Policy Volume 6 ; 6 ; https://www.inderscienceonline.com/ >
-      au < expected ; 2017 ; International Journal of Public Law and Policy Volume 7 ; 7 ; https://www.inderscienceonline.com/ >
+      au < released ; 2015-2016 ; International Journal of Public Law and Policy Volume 5 ; 5 ; http://www.inderscienceonline.com/ >
+      au < manifest ; 2017-2018 ; International Journal of Public Law and Policy Volume 6 ; 6 ; https://www.inderscienceonline.com/ >  #issue 2,3,4 not online
 
     }
 
@@ -7122,7 +7116,6 @@
       au < doNotProcess ; 2009 ; International Journal of Radio Frequency Identification Technology and Applications Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
       au < doNotProcess ; 2011 ; International Journal of Radio Frequency Identification Technology and Applications Volume 3 ; 3 ; https://www.inderscienceonline.com/ >
       au < released ; 2012-2015 ; International Journal of Radio Frequency Identification Technology and Applications Volume 4 ; 4 ; http://www.inderscienceonline.com/ >
-      au < expected ; 2017 ; International Journal of Radio Frequency Identification Technology and Applications Volume 5 ; 5 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -7206,7 +7199,7 @@
       param[journal_id] = ijrem
       # title is not yet published on 9/26/2013
 
-      au < expected ; 2017 ; International Journal of Remanufacturing Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
+      au < expected ; 2018 ; International Journal of Remanufacturing Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -7715,8 +7708,7 @@
       param[journal_id] = ijsnm
 
       au < released ; 2012-2013 ; International Journal of Social Network Mining Volume 1 ; 1 ; http://www.inderscienceonline.com/ >
-      au < released ; 2015-2016 ; International Journal of Social Network Mining Volume 2 ; 2 ; http://www.inderscienceonline.com/ >#volume 2 issue 4 not online yet
-      au < expected ; 2017 ; International Journal of Social Network Mining Volume 3 ; 3 ; https://www.inderscienceonline.com/ >
+      au < released ; 2015-2017 ; International Journal of Social Network Mining Volume 2 ; 2 ; http://www.inderscienceonline.com/ >#volume 2 issue 4 not online yet
 
     }
 
@@ -7824,9 +7816,9 @@
       au < manifest ; 2013 ; International Journal of Sport Management and Marketing Volume 13 ; 13 ; https://www.inderscienceonline.com/ >
       au < manifest ; 2013 ; International Journal of Sport Management and Marketing Volume 14 ; 14 ; https://www.inderscienceonline.com/ >
       au < released ; 2014 ; International Journal of Sport Management and Marketing Volume 15 ; 15 ; http://www.inderscienceonline.com/ >
-      au < released ; 2015 ; International Journal of Sport Management and Marketing Volume 16 ; 16 ; http://www.inderscienceonline.com/ >
-      au < manifest ; 2016 ; International Journal of Sport Management and Marketing Volume 17 ; 17 ; https://www.inderscienceonline.com/ >
-      au < expected ; 2017 ; International Journal of Sport Management and Marketing Volume 18 ; 18 ; https://www.inderscienceonline.com/ >
+      au < released ; 2015-2016 ; International Journal of Sport Management and Marketing Volume 16 ; 16 ; http://www.inderscienceonline.com/ >
+      au < manifest ; 2017 ; International Journal of Sport Management and Marketing Volume 17 ; 17 ; https://www.inderscienceonline.com/ >
+      au < expected ; 2018 ; International Journal of Sport Management and Marketing Volume 18 ; 18 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -7919,12 +7911,10 @@
         issnl = 2040-4247
       >
 
-      comment[doNotProcess] = missing, page does not exist.
       # title is not yet published on 9/26/2013
-
       param[journal_id] = ijsrpsd
 
-      au < expected ; 2017 ; International Journal of Sudan Research, Policy and Sustainable Development Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
+      au < expected ; 2018 ; International Journal of Sudan Research, Policy and Sustainable Development Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -8041,7 +8031,6 @@
       au < doNotProcess ; 2008-2009 ; International Journal of Sustainable Manufacturing Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
       au < doNotProcess ; 2010-2012 ; International Journal of Sustainable Manufacturing Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
       au < released ; 2013-2015 ; International Journal of Sustainable Manufacturing Volume 3 ; 3 ; http://www.inderscienceonline.com/ >
-      au < expected ; 2017 ; International Journal of Sustainable Manufacturing Volume 4 ; 4 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -8058,7 +8047,6 @@
 
       au < released ; 2012-2014 ; International Journal of Sustainable Materials and Structural Systems Volume 1 ; 1 ; http://www.inderscienceonline.com/ >
       au < released ; 2015-2016 ; International Journal of Sustainable Materials and Structural Systems Volume 2 ; 2 ; http://www.inderscienceonline.com/ >
-      au < expected ; 2017 ; International Journal of Sustainable Materials and Structural Systems Volume 3 ; 3 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -8575,9 +8563,9 @@
       au < doNotProcess ; 2010 ; International Journal of Tourism Policy Volume 3 ; 3 ; https://www.inderscienceonline.com/ >
       au < doNotProcess ; 2011-2012 ; International Journal of Tourism Policy Volume 4 ; 4 ; https://www.inderscienceonline.com/ >
       au < released ; 2013-2014 ; International Journal of Tourism Policy Volume 5 ; 5 ; http://www.inderscienceonline.com/ >
-      au < released ; 2015 ; International Journal of Tourism Policy Volume 6 ; 6 ; http://www.inderscienceonline.com/ >
-      au < manifest ; 2016 ; International Journal of Tourism Policy Volume 7 ; 7 ; https://www.inderscienceonline.com/ >
-      au < expected ; 2017 ; International Journal of Tourism Policy Volume 8 ; 8 ; https://www.inderscienceonline.com/ >
+      au < released ; 2015-2016 ; International Journal of Tourism Policy Volume 6 ; 6 ; http://www.inderscienceonline.com/ >
+      au < manifest ; 2017 ; International Journal of Tourism Policy Volume 7 ; 7 ; https://www.inderscienceonline.com/ >
+      au < expected ; 2018 ; International Journal of Tourism Policy Volume 8 ; 8 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -8621,7 +8609,6 @@
       au < released ; 2013-2014 ; International Journal of Transitions and Innovation Systems Volume 3 ; 3 ; http://www.inderscienceonline.com/ >
       au < released ; 2015 ; International Journal of Transitions and Innovation Systems Volume 4 ; 4 ; http://www.inderscienceonline.com/ >
       au < released ; 2016 ; International Journal of Transitions and Innovation Systems Volume 5 ; 5 ; http://www.inderscienceonline.com/ >
-      au < expected ; 2017 ; International Journal of Transitions and Innovation Systems Volume 6 ; 6 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -9064,9 +9051,8 @@
 
       param[journal_id] = ijwi
 
-      au < released ; 2012-2015 ; International Journal of Work Innovation Volume 1 ; 1 ; http://www.inderscienceonline.com/ >
-      au < manifest ; 2016 ; International Journal of Work Innovation Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
-      au < expected ; 2017 ; International Journal of Work Innovation Volume 3 ; 3 ; https://www.inderscienceonline.com/ >
+      au < released ; 2012-2016 ; International Journal of Work Innovation Volume 1 ; 1 ; http://www.inderscienceonline.com/ >
+      au < manifest ; 2017-2019 ; International Journal of Work Innovation Volume 2 ; 2 ; https://www.inderscienceonline.com/ > #issue 2,3,4 not online
 
     }
 
@@ -9087,9 +9073,9 @@
       au < doNotProcess ; 2011 ; International Journal of Work Organisation and Emotion Volume 4 ; 4 ; https://www.inderscienceonline.com/ >
       au < doNotProcess ; 2012-2013 ; International Journal of Work Organisation and Emotion Volume 5 ; 5 ; https://www.inderscienceonline.com/ >
       au < released ; 2014 ; International Journal of Work Organisation and Emotion Volume 6 ; 6 ; http://www.inderscienceonline.com/ >
-      au < released ; 2015 ; International Journal of Work Organisation and Emotion Volume 7 ; 7 ; http://www.inderscienceonline.com/ >
-      au < manifest ; 2016 ; International Journal of Work Organisation and Emotion Volume 8 ; 8 ; https://www.inderscienceonline.com/ >
-      au < expected ; 2017 ; International Journal of Work Organisation and Emotion Volume 9 ; 9 ; https://www.inderscienceonline.com/ >
+      au < released ; 2015-2016 ; International Journal of Work Organisation and Emotion Volume 7 ; 7 ; http://www.inderscienceonline.com/ >
+      au < manifest ; 2017 ; International Journal of Work Organisation and Emotion Volume 8 ; 8 ; https://www.inderscienceonline.com/ >
+      au < expected ; 2018 ; International Journal of Work Organisation and Emotion Volume 9 ; 9 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -9352,9 +9338,9 @@
       au < doNotProcess ; 2012 ; World Review of Science, Technology and Sustainable Development Volume 9 ; 9 ; https://www.inderscienceonline.com/ >
       au < manifest ; 2013 ; World Review of Science, Technology and Sustainable Development Volume 10 ; 10 ; https://www.inderscienceonline.com/ >
       au < released ; 2014 ; World Review of Science, Technology and Sustainable Development Volume 11 ; 11 ; http://www.inderscienceonline.com/ >
-      au < released ; 2015 ; World Review of Science, Technology and Sustainable Development Volume 12 ; 12 ; http://www.inderscienceonline.com/ >
-      au < manifest ; 2016 ; World Review of Science, Technology and Sustainable Development Volume 13 ; 13 ; https://www.inderscienceonline.com/ >
-      au < expected ; 2017 ; World Review of Science, Technology and Sustainable Development Volume 14 ; 14 ; https://www.inderscienceonline.com/ >
+      au < released ; 2015-2016 ; World Review of Science, Technology and Sustainable Development Volume 12 ; 12 ; http://www.inderscienceonline.com/ >
+      au < manifest ; 2017 ; World Review of Science, Technology and Sustainable Development Volume 13 ; 13 ; https://www.inderscienceonline.com/ >
+      au < expected ; 2018 ; World Review of Science, Technology and Sustainable Development Volume 14 ; 14 ; https://www.inderscienceonline.com/ >
 
     }
 
