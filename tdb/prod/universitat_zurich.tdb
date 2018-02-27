@@ -50,9 +50,9 @@
       param[journal_id] = altrelettere
       param[base_url] = http://www.altrelettere.uzh.ch/
 
-      au < exists ; 2012 ; altrelettere Volume 2012 ; 2012 ; 2012 >
-      au < exists ; 2013 ; altrelettere Volume 2013 ; 2013 ; 2013 >
-      au < exists ; 2014 ; altrelettere Volume 2014 ; 2014 ; 2014 >
+      au < manifest ; 2012 ; altrelettere Volume 2012 ; 2012 ; 2012 >
+      au < manifest ; 2013 ; altrelettere Volume 2013 ; 2013 ; 2013 >
+      au < manifest ; 2014 ; altrelettere Volume 2014 ; 2014 ; 2014 >
       au < testing ; 2015 ; altrelettere Volume 2015 ; 2015 ; 2015 >
       au < testing ; 2016 ; altrelettere Volume 2016 ; 2016 ; 2016 >
       au < testing ; 2017 ; altrelettere Volume 2017 ; 2017 ; 2017 >
@@ -69,23 +69,23 @@
       param[journal_id] = scoms
       param[base_url] = http://www.hope.uzh.ch/
 
-      au < exists ; 1998 ; SComS: Studies in Communications Sciences Volume 1998 ; 1998 ; 1998 >
-      au < exists ; 1999 ; SComS: Studies in Communications Sciences Volume 1999 ; 1999 ; 1999 >
-      au < exists ; 2000 ; SComS: Studies in Communications Sciences Volume 2000 ; 2000 ; 2000 >
-      au < exists ; 2001 ; SComS: Studies in Communications Sciences Volume 2001 ; 2001 ; 2001 >
-      au < exists ; 2002 ; SComS: Studies in Communications Sciences Volume 2002 ; 2002 ; 2002 >
-      au < exists ; 2003 ; SComS: Studies in Communications Sciences Volume 2003 ; 2003 ; 2003 >
-      au < exists ; 2004 ; SComS: Studies in Communications Sciences Volume 2004 ; 2004 ; 2004 >
-      au < exists ; 2005 ; SComS: Studies in Communications Sciences Volume 2005 ; 2005 ; 2005 >
-      au < exists ; 2006 ; SComS: Studies in Communications Sciences Volume 2006 ; 2006 ; 2006 >
-      au < exists ; 2007 ; SComS: Studies in Communications Sciences Volume 2007 ; 2007 ; 2007 >
-      au < exists ; 2008 ; SComS: Studies in Communications Sciences Volume 2008 ; 2008 ; 2008 >
-      au < exists ; 2009 ; SComS: Studies in Communications Sciences Volume 2009 ; 2009 ; 2009 >
-      au < exists ; 2010 ; SComS: Studies in Communications Sciences Volume 2010 ; 2010 ; 2010 >
-      au < exists ; 2011 ; SComS: Studies in Communications Sciences Volume 2011 ; 2011 ; 2011 >
-      au < exists ; 2012 ; SComS: Studies in Communications Sciences Volume 2012 ; 2012 ; 2012 >
-      au < exists ; 2013 ; SComS: Studies in Communications Sciences Volume 2013 ; 2013 ; 2013 >
-      au < exists ; 2014 ; SComS: Studies in Communications Sciences Volume 2014 ; 2014 ; 2014 >
+      au < manifest ; 1998 ; SComS: Studies in Communications Sciences Volume 1998 ; 1998 ; 1998 >
+      au < manifest ; 1999 ; SComS: Studies in Communications Sciences Volume 1999 ; 1999 ; 1999 >
+      au < manifest ; 2000 ; SComS: Studies in Communications Sciences Volume 2000 ; 2000 ; 2000 >
+      au < manifest ; 2001 ; SComS: Studies in Communications Sciences Volume 2001 ; 2001 ; 2001 >
+      au < manifest ; 2002 ; SComS: Studies in Communications Sciences Volume 2002 ; 2002 ; 2002 >
+      au < manifest ; 2003 ; SComS: Studies in Communications Sciences Volume 2003 ; 2003 ; 2003 >
+      au < manifest ; 2004 ; SComS: Studies in Communications Sciences Volume 2004 ; 2004 ; 2004 >
+      au < manifest ; 2005 ; SComS: Studies in Communications Sciences Volume 2005 ; 2005 ; 2005 >
+      au < manifest ; 2006 ; SComS: Studies in Communications Sciences Volume 2006 ; 2006 ; 2006 >
+      au < manifest ; 2007 ; SComS: Studies in Communications Sciences Volume 2007 ; 2007 ; 2007 >
+      au < manifest ; 2008 ; SComS: Studies in Communications Sciences Volume 2008 ; 2008 ; 2008 >
+      au < manifest ; 2009 ; SComS: Studies in Communications Sciences Volume 2009 ; 2009 ; 2009 >
+      au < manifest ; 2010 ; SComS: Studies in Communications Sciences Volume 2010 ; 2010 ; 2010 >
+      au < manifest ; 2011 ; SComS: Studies in Communications Sciences Volume 2011 ; 2011 ; 2011 >
+      au < manifest ; 2012 ; SComS: Studies in Communications Sciences Volume 2012 ; 2012 ; 2012 >
+      au < manifest ; 2013 ; SComS: Studies in Communications Sciences Volume 2013 ; 2013 ; 2013 >
+      au < manifest ; 2014 ; SComS: Studies in Communications Sciences Volume 2014 ; 2014 ; 2014 >
       au < testing ; 2015 ; SComS: Studies in Communications Sciences Volume 2015 ; 2015 ; 2015 >
       au < testing ; 2016 ; SComS: Studies in Communications Sciences Volume 2016 ; 2016 ; 2016 >
       au < testing ; 2017 ; SComS: Studies in Communications Sciences Volume 2017 ; 2017 ; 2017 >
