@@ -18,7 +18,7 @@
     >
     {
     plugin = org.lockss.plugin.atypon.GenericAtyponPlugin
-    param[base_url] = http://online.boneandjoint.org.uk/
+    param[base_url] = https://online.boneandjoint.org.uk/
     param[journal_id] = bj360
 
     au < doNotProcess ; 2012 ; Bone & Joint 360 Volume 1 ; 1 >
@@ -53,7 +53,7 @@
     
     {
     plugin = org.lockss.plugin.atypon.GenericAtyponPlugin
-    param[base_url] = http://online.boneandjoint.org.uk/
+    param[base_url] = https://online.boneandjoint.org.uk/
     param[journal_id] = bjr
 
     au < doNotProcess ; 2012 ; Bone & Joint Research Volume 1 ; 1 >
@@ -195,7 +195,7 @@
     comment[continues] = Journal of Bone & Joint Surgery, British Volume, issn 0301-620X, eissn 2044-5377 as of Jan 1 2013
     {
     plugin = org.lockss.plugin.atypon.GenericAtyponPlugin
-    param[base_url] = http://online.boneandjoint.org.uk/
+    param[base_url] = https://online.boneandjoint.org.uk/
     param[journal_id] = bjj
     
     au < doNotProcess ; 2011 ; Journal of Bone & Joint Surgery, British Volume Volume 93 ; 93-B >
