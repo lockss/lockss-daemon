@@ -39,7 +39,6 @@ import java.util.regex.Pattern;
 import org.htmlparser.Attribute;
 import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
-import org.htmlparser.nodes.TagNode;
 import org.htmlparser.tags.LinkTag;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit;
