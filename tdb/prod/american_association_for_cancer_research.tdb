@@ -23,8 +23,8 @@
     au < HighWirePressH20Plugin ; down ; 2013 ; Cancer Discovery Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; down ; 2014 ; Cancer Discovery Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; down ; 2015 ; Cancer Discovery Volume 5 ; 5 >
-    au < HWDrupalPlugin ; manifest ; 2016 ; Cancer Discovery Volume 6 ; 6 >
-    au < HWDrupalPlugin ; manifest ; 2017 ; Cancer Discovery Volume 7 ; 7 >
+    au < aacr.AmAssocCancerResearchDrupalPlugin ; testing ; 2016 ; Cancer Discovery Volume 6 ; 6 >
+    au < aacr.AmAssocCancerResearchDrupalPlugin ; testing ; 2017 ; Cancer Discovery Volume 7 ; 7 >
 
   }
 
@@ -65,8 +65,8 @@
       au < HighWirePressH20Plugin ; down ; 2013 ; Cancer Epidemiology Biomarkers & Prevention Volume 22 ; 22 >
       au < HighWirePressH20Plugin ; down ; 2014 ; Cancer Epidemiology Biomarkers & Prevention Volume 23 ; 23 >
       au < HighWirePressH20Plugin ; down ; 2015 ; Cancer Epidemiology Biomarkers & Prevention Volume 24 ; 24 >
-      au < HWDrupalPlugin ; manifest ; 2016 ; Cancer Epidemiology Biomarkers & Prevention Volume 25 ; 25 >
-      au < HWDrupalPlugin ; manifest ; 2017 ; Cancer Epidemiology Biomarkers & Prevention Volume 26 ; 26 >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; testing ; 2016 ; Cancer Epidemiology Biomarkers & Prevention Volume 25 ; 25 >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; testing ; 2017 ; Cancer Epidemiology Biomarkers & Prevention Volume 26 ; 26 >
 
     }
 
@@ -88,8 +88,8 @@
       au < HighWirePressH20Plugin ; down ; 2013 ; Cancer Immunology Research Volume 1 ; 1 >
       au < HighWirePressH20Plugin ; down ; 2014 ; Cancer Immunology Research Volume 2 ; 2 >
       au < HighWirePressH20Plugin ; down ; 2015 ; Cancer Immunology Research Volume 3 ; 3 >
-      au < HWDrupalPlugin ; manifest ; 2016 ; Cancer Immunology Research Volume 4 ; 4 >
-      au < HWDrupalPlugin ; manifest ; 2017 ; Cancer Immunology Research Volume 5 ; 5 >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; testing ; 2016 ; Cancer Immunology Research Volume 4 ; 4 >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; testing ; 2017 ; Cancer Immunology Research Volume 5 ; 5 >
 
     }
 
@@ -116,8 +116,8 @@
       au < HighWirePressH20Plugin ; down ; 2013 ; Cancer Prevention Research Volume 6 ; 6 >
       au < HighWirePressH20Plugin ; down ; 2014 ; Cancer Prevention Research Volume 7 ; 7 >
       au < HighWirePressH20Plugin ; down ; 2015 ; Cancer Prevention Research Volume 8 ; 8 >
-      au < HWDrupalPlugin ; manifest ; 2016 ; Cancer Prevention Research Volume 9 ; 9 >
-      au < HWDrupalPlugin ; manifest ; 2017 ; Cancer Prevention Research Volume 10 ; 10 >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; testing ; 2016 ; Cancer Prevention Research Volume 9 ; 9 >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; testing ; 2017 ; Cancer Prevention Research Volume 10 ; 10 >
 
     }
 
@@ -211,8 +211,8 @@
       au < HighWirePressH20Plugin ; down ; 2013 ; Cancer Research Volume 73 ; 73 >
       au < HighWirePressH20Plugin ; down ; 2014 ; Cancer Research Volume 74 ; 74 >
       au < HighWirePressH20Plugin ; down ; 2015 ; Cancer Research Volume 75 ; 75 >
-      au < HWDrupalPlugin ; manifest ; 2016 ; Cancer Research Volume 76 ; 76 >
-      au < HWDrupalPlugin ; manifest ; 2017 ; Cancer Research Volume 77 ; 77 >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; testing ; 2016 ; Cancer Research Volume 76 ; 76 >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; testing ; 2017 ; Cancer Research Volume 77 ; 77 >
 
     }
 
@@ -252,8 +252,8 @@
       au < HighWirePressH20Plugin ; down ; 2013 ; Clinical Cancer Research Volume 19 ; 19 >
       au < HighWirePressH20Plugin ; down ; 2014 ; Clinical Cancer Research Volume 20 ; 20 >
       au < HighWirePressH20Plugin ; down ; 2015 ; Clinical Cancer Research Volume 21 ; 21 >
-      au < HWDrupalPlugin ; manifest ; 2016 ; Clinical Cancer Research Volume 22 ; 22 >
-      au < HWDrupalPlugin ; manifest ; 2017 ; Clinical Cancer Research Volume 23 ; 23 >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; testing ; 2016 ; Clinical Cancer Research Volume 22 ; 22 >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; testing ; 2017 ; Clinical Cancer Research Volume 23 ; 23 >
 
     }
 
@@ -285,8 +285,8 @@
       au < HighWirePressH20Plugin ; down ; 2013 ; Molecular Cancer Research Volume 11 ; 11 >
       au < HighWirePressH20Plugin ; down ; 2014 ; Molecular Cancer Research Volume 12 ; 12 >
       au < HighWirePressH20Plugin ; down ; 2015 ; Molecular Cancer Research Volume 13 ; 13 >
-      au < HWDrupalPlugin ; manifest ; 2016 ; Molecular Cancer Research Volume 14 ; 14 >
-      au < HWDrupalPlugin ; manifest ; 2017 ; Molecular Cancer Research Volume 15 ; 15 >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; testing ; 2016 ; Molecular Cancer Research Volume 14 ; 14 >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; testing ; 2017 ; Molecular Cancer Research Volume 15 ; 15 >
 
     }
 
@@ -319,8 +319,8 @@
       au < HighWirePressH20Plugin ; down ; 2013 ; Molecular Cancer Therapeutics Volume 12 ; 12 >
       au < HighWirePressH20Plugin ; down ; 2014 ; Molecular Cancer Therapeutics Volume 13 ; 13 >
       au < HighWirePressH20Plugin ; down ; 2015 ; Molecular Cancer Therapeutics Volume 14 ; 14 >
-      au < HWDrupalPlugin ; manifest ; 2016 ; Molecular Cancer Therapeutics Volume 15 ; 15 >
-      au < HWDrupalPlugin ; manifest ; 2017 ; Molecular Cancer Therapeutics Volume 16 ; 16 >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; testing ; 2016 ; Molecular Cancer Therapeutics Volume 15 ; 15 >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; testing ; 2017 ; Molecular Cancer Therapeutics Volume 16 ; 16 >
 
     }
 

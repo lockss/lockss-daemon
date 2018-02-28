@@ -16,8 +16,8 @@
 
     param[base_url] = http://www.basictranslational.onlinejacc.org/
 
-    au < HWDrupalPlugin ; manifest ; 2016 ; JACC: Basic To Translational Science Volume 1 ; 1 >
-    au < HWDrupalPlugin ; manifest ; 2017 ; JACC: Basic To Translational Science Volume 2 ; 2 >
+    au < accardiol.AmCollegeCardiologyDrupalPlugin ; testing ; 2016 ; JACC: Basic To Translational Science Volume 1 ; 1 >
+    au < accardiol.AmCollegeCardiologyDrupalPlugin ; testing ; 2017 ; JACC: Basic To Translational Science Volume 2 ; 2 >
 
   }
 
@@ -40,11 +40,11 @@
     {
     param[base_url] = http://www.imaging.onlinejacc.org/
 
-    au < HWDrupalPlugin ; manifest ; 2013 ; JACC: Cardiovascular Imaging Volume 6 ; 6 >
-    au < HWDrupalPlugin ; manifest ; 2014 ; JACC: Cardiovascular Imaging Volume 7 ; 7 >
-    au < HWDrupalPlugin ; manifest ; 2015 ; JACC: Cardiovascular Imaging Volume 8 ; 8 >
-    au < HWDrupalPlugin ; manifest ; 2016 ; JACC: Cardiovascular Imaging Volume 9 ; 9 >
-    au < HWDrupalPlugin ; exists ; 2017 ; JACC: Cardiovascular Imaging Volume 10 ; 10 >
+    au < accardiol.AmCollegeCardiologyDrupalPlugin ; testing ; 2013 ; JACC: Cardiovascular Imaging Volume 6 ; 6 >
+    au < accardiol.AmCollegeCardiologyDrupalPlugin ; testing ; 2014 ; JACC: Cardiovascular Imaging Volume 7 ; 7 >
+    au < accardiol.AmCollegeCardiologyDrupalPlugin ; testing ; 2015 ; JACC: Cardiovascular Imaging Volume 8 ; 8 >
+    au < accardiol.AmCollegeCardiologyDrupalPlugin ; testing ; 2016 ; JACC: Cardiovascular Imaging Volume 9 ; 9 >
+    au < accardiol.AmCollegeCardiologyDrupalPlugin ; testing ; 2017 ; JACC: Cardiovascular Imaging Volume 10 ; 10 >
 
     }
 
@@ -69,11 +69,11 @@
     {
     param[base_url] = http://www.interventions.onlinejacc.org/
 
-    au < HWDrupalPlugin ; manifest ; 2013 ; JACC: Cardiovascular Interventions Volume 6 ; 6 >
-    au < HWDrupalPlugin ; manifest ; 2014 ; JACC: Cardiovascular Interventions Volume 7 ; 7 >
-    au < HWDrupalPlugin ; manifest ; 2015 ; JACC: Cardiovascular Interventions Volume 8 ; 8 >
-    au < HWDrupalPlugin ; manifest ; 2016 ; JACC: Cardiovascular Interventions Volume 9 ; 9 >
-    au < HWDrupalPlugin ; exists ; 2017 ; JACC: Cardiovascular Interventions Volume 10 ; 10 >
+    au < accardiol.AmCollegeCardiologyDrupalPlugin ; testing ; 2013 ; JACC: Cardiovascular Interventions Volume 6 ; 6 >
+    au < accardiol.AmCollegeCardiologyDrupalPlugin ; testing ; 2014 ; JACC: Cardiovascular Interventions Volume 7 ; 7 >
+    au < accardiol.AmCollegeCardiologyDrupalPlugin ; testing ; 2015 ; JACC: Cardiovascular Interventions Volume 8 ; 8 >
+    au < accardiol.AmCollegeCardiologyDrupalPlugin ; testing ; 2016 ; JACC: Cardiovascular Interventions Volume 9 ; 9 >
+    au < accardiol.AmCollegeCardiologyDrupalPlugin ; testing ; 2017 ; JACC: Cardiovascular Interventions Volume 10 ; 10 >
     }
 
   }
@@ -156,17 +156,17 @@
     {
     param[base_url] = http://www.onlinejacc.org/
 
-    au < HWDrupalPlugin ; manifest ; 2012 ; Journal of the American College of Cardiology Volume 60 ; 60 >
-    au < HWDrupalPlugin ; manifest ; 2013 ; Journal of the American College of Cardiology Volume 61 ; 61 >
-    au < HWDrupalPlugin ; manifest ; 2013 ; Journal of the American College of Cardiology Volume 62 ; 62 >
-    au < HWDrupalPlugin ; manifest ; 2014 ; Journal of the American College of Cardiology Volume 63 ; 63 >
-    au < HWDrupalPlugin ; manifest ; 2014 ; Journal of the American College of Cardiology Volume 64 ; 64 >
-    au < HWDrupalPlugin ; manifest ; 2015 ; Journal of the American College of Cardiology Volume 65 ; 65 >
-    au < HWDrupalPlugin ; manifest ; 2015 ; Journal of the American College of Cardiology Volume 66 ; 66 >
-    au < HWDrupalPlugin ; manifest ; 2016 ; Journal of the American College of Cardiology Volume 67 ; 67 >
-    au < HWDrupalPlugin ; exists ; 2016 ; Journal of the American College of Cardiology Volume 68 ; 68 >
-    au < HWDrupalPlugin ; manifest ; 2017 ; Journal of the American College of Cardiology Volume 69 ; 69 >
-    au < HWDrupalPlugin ; manifest ; 2017 ; Journal of the American College of Cardiology Volume 70 ; 70 >
+    au < accardiol.AmCollegeCardiologyDrupalPlugin ; testing ; 2012 ; Journal of the American College of Cardiology Volume 60 ; 60 >
+    au < accardiol.AmCollegeCardiologyDrupalPlugin ; testing ; 2013 ; Journal of the American College of Cardiology Volume 61 ; 61 >
+    au < accardiol.AmCollegeCardiologyDrupalPlugin ; testing ; 2013 ; Journal of the American College of Cardiology Volume 62 ; 62 >
+    au < accardiol.AmCollegeCardiologyDrupalPlugin ; testing ; 2014 ; Journal of the American College of Cardiology Volume 63 ; 63 >
+    au < accardiol.AmCollegeCardiologyDrupalPlugin ; testing ; 2014 ; Journal of the American College of Cardiology Volume 64 ; 64 >
+    au < accardiol.AmCollegeCardiologyDrupalPlugin ; testing ; 2015 ; Journal of the American College of Cardiology Volume 65 ; 65 >
+    au < accardiol.AmCollegeCardiologyDrupalPlugin ; testing ; 2015 ; Journal of the American College of Cardiology Volume 66 ; 66 >
+    au < accardiol.AmCollegeCardiologyDrupalPlugin ; testing ; 2016 ; Journal of the American College of Cardiology Volume 67 ; 67 >
+    au < accardiol.AmCollegeCardiologyDrupalPlugin ; testing ; 2016 ; Journal of the American College of Cardiology Volume 68 ; 68 >
+    au < accardiol.AmCollegeCardiologyDrupalPlugin ; testing ; 2017 ; Journal of the American College of Cardiology Volume 69 ; 69 >
+    au < accardiol.AmCollegeCardiologyDrupalPlugin ; testing ; 2017 ; Journal of the American College of Cardiology Volume 70 ; 70 >
 
     }
 

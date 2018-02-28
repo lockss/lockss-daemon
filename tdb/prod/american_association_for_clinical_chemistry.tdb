@@ -35,59 +35,59 @@
     {
       param[base_url] = http://clinchem.aaccjnls.org/
 
-      au < HWDrupalPlugin ; manifest ; 1955 ; Clinical Chemistry Volume 1 ; 1 >
-      au < HWDrupalPlugin ; manifest ; 1956 ; Clinical Chemistry Volume 2 ; 2 >
-      au < HWDrupalPlugin ; manifest ; 1957 ; Clinical Chemistry Volume 3 ; 3 >
-      au < HWDrupalPlugin ; manifest ; 1958 ; Clinical Chemistry Volume 4 ; 4 >
-      au < HWDrupalPlugin ; manifest ; 1959 ; Clinical Chemistry Volume 5 ; 5 >
-      au < HWDrupalPlugin ; manifest ; 1960 ; Clinical Chemistry Volume 6 ; 6 >
-      au < HWDrupalPlugin ; manifest ; 1961 ; Clinical Chemistry Volume 7 ; 7 >
-      au < HWDrupalPlugin ; manifest ; 1962 ; Clinical Chemistry Volume 8 ; 8 >
-      au < HWDrupalPlugin ; manifest ; 1963 ; Clinical Chemistry Volume 9 ; 9 >
-      au < HWDrupalPlugin ; manifest ; 1964 ; Clinical Chemistry Volume 10 ; 10 >
-      au < HWDrupalPlugin ; manifest ; 1965 ; Clinical Chemistry Volume 11 ; 11 >
-      au < HWDrupalPlugin ; manifest ; 1966 ; Clinical Chemistry Volume 12 ; 12 >
-      au < HWDrupalPlugin ; manifest ; 1967 ; Clinical Chemistry Volume 13 ; 13 >
-      au < HWDrupalPlugin ; manifest ; 1968 ; Clinical Chemistry Volume 14 ; 14 >
-      au < HWDrupalPlugin ; manifest ; 1969 ; Clinical Chemistry Volume 15 ; 15 >
-      au < HWDrupalPlugin ; manifest ; 1970 ; Clinical Chemistry Volume 16 ; 16 >
-      au < HWDrupalPlugin ; manifest ; 1971 ; Clinical Chemistry Volume 17 ; 17 >
-      au < HWDrupalPlugin ; manifest ; 1972 ; Clinical Chemistry Volume 18 ; 18 >
-      au < HWDrupalPlugin ; manifest ; 1973 ; Clinical Chemistry Volume 19 ; 19 >
-      au < HWDrupalPlugin ; manifest ; 1974 ; Clinical Chemistry Volume 20 ; 20 >
-      au < HWDrupalPlugin ; manifest ; 1975 ; Clinical Chemistry Volume 21 ; 21 >
-      au < HWDrupalPlugin ; manifest ; 1976 ; Clinical Chemistry Volume 22 ; 22 >
-      au < HWDrupalPlugin ; manifest ; 1977 ; Clinical Chemistry Volume 23 ; 23 >
-      au < HWDrupalPlugin ; manifest ; 1978 ; Clinical Chemistry Volume 24 ; 24 >
-      au < HWDrupalPlugin ; manifest ; 1979 ; Clinical Chemistry Volume 25 ; 25 >
-      au < HWDrupalPlugin ; manifest ; 1980 ; Clinical Chemistry Volume 26 ; 26 >
-      au < HWDrupalPlugin ; manifest ; 1981 ; Clinical Chemistry Volume 27 ; 27 >
-      au < HWDrupalPlugin ; manifest ; 1982 ; Clinical Chemistry Volume 28 ; 28 >
-      au < HWDrupalPlugin ; manifest ; 1983 ; Clinical Chemistry Volume 29 ; 29 >
-      au < HWDrupalPlugin ; manifest ; 1984 ; Clinical Chemistry Volume 30 ; 30 >
-      au < HWDrupalPlugin ; manifest ; 1985 ; Clinical Chemistry Volume 31 ; 31 >
-      au < HWDrupalPlugin ; manifest ; 1986 ; Clinical Chemistry Volume 32 ; 32 >
-      au < HWDrupalPlugin ; manifest ; 1987 ; Clinical Chemistry Volume 33 ; 33 >
-      au < HWDrupalPlugin ; manifest ; 1988 ; Clinical Chemistry Volume 34 ; 34 >
-      au < HWDrupalPlugin ; manifest ; 1989 ; Clinical Chemistry Volume 35 ; 35 >
-      au < HWDrupalPlugin ; exists ; 1990 ; Clinical Chemistry Volume 36 ; 36 >
-      au < HWDrupalPlugin ; manifest ; 1991 ; Clinical Chemistry Volume 37 ; 37 >
-      au < HWDrupalPlugin ; manifest ; 1992 ; Clinical Chemistry Volume 38 ; 38 >
-      au < HWDrupalPlugin ; manifest ; 1993 ; Clinical Chemistry Volume 39 ; 39 >
-      au < HWDrupalPlugin ; manifest ; 1994 ; Clinical Chemistry Volume 40 ; 40 >
-      au < HWDrupalPlugin ; manifest ; 1995 ; Clinical Chemistry Volume 41 ; 41 >
-      au < HWDrupalPlugin ; manifest ; 1996 ; Clinical Chemistry Volume 42 ; 42 >
-      au < HWDrupalPlugin ; manifest ; 1997 ; Clinical Chemistry Volume 43 ; 43 >
-      au < HWDrupalPlugin ; manifest ; 1998 ; Clinical Chemistry Volume 44 ; 44 >
-      au < HWDrupalPlugin ; manifest ; 1999 ; Clinical Chemistry Volume 45 ; 45 >
-      au < HWDrupalPlugin ; manifest ; 2000 ; Clinical Chemistry Volume 46 ; 46 >
-      au < HWDrupalPlugin ; manifest ; 2001 ; Clinical Chemistry Volume 47 ; 47 >
-      au < HWDrupalPlugin ; manifest ; 2002 ; Clinical Chemistry Volume 48 ; 48 >
-      au < HWDrupalPlugin ; manifest ; 2003 ; Clinical Chemistry Volume 49 ; 49 >
-      au < HWDrupalPlugin ; manifest ; 2004 ; Clinical Chemistry Volume 50 ; 50 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 1955 ; Clinical Chemistry Volume 1 ; 1 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 1956 ; Clinical Chemistry Volume 2 ; 2 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 1957 ; Clinical Chemistry Volume 3 ; 3 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 1958 ; Clinical Chemistry Volume 4 ; 4 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 1959 ; Clinical Chemistry Volume 5 ; 5 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 1960 ; Clinical Chemistry Volume 6 ; 6 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 1961 ; Clinical Chemistry Volume 7 ; 7 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 1962 ; Clinical Chemistry Volume 8 ; 8 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 1963 ; Clinical Chemistry Volume 9 ; 9 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 1964 ; Clinical Chemistry Volume 10 ; 10 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 1965 ; Clinical Chemistry Volume 11 ; 11 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 1966 ; Clinical Chemistry Volume 12 ; 12 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 1967 ; Clinical Chemistry Volume 13 ; 13 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 1968 ; Clinical Chemistry Volume 14 ; 14 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 1969 ; Clinical Chemistry Volume 15 ; 15 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 1970 ; Clinical Chemistry Volume 16 ; 16 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 1971 ; Clinical Chemistry Volume 17 ; 17 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 1972 ; Clinical Chemistry Volume 18 ; 18 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 1973 ; Clinical Chemistry Volume 19 ; 19 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 1974 ; Clinical Chemistry Volume 20 ; 20 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 1975 ; Clinical Chemistry Volume 21 ; 21 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 1976 ; Clinical Chemistry Volume 22 ; 22 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 1977 ; Clinical Chemistry Volume 23 ; 23 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 1978 ; Clinical Chemistry Volume 24 ; 24 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 1979 ; Clinical Chemistry Volume 25 ; 25 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 1980 ; Clinical Chemistry Volume 26 ; 26 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 1981 ; Clinical Chemistry Volume 27 ; 27 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 1982 ; Clinical Chemistry Volume 28 ; 28 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 1983 ; Clinical Chemistry Volume 29 ; 29 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 1984 ; Clinical Chemistry Volume 30 ; 30 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 1985 ; Clinical Chemistry Volume 31 ; 31 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 1986 ; Clinical Chemistry Volume 32 ; 32 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 1987 ; Clinical Chemistry Volume 33 ; 33 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 1988 ; Clinical Chemistry Volume 34 ; 34 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 1989 ; Clinical Chemistry Volume 35 ; 35 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; exists ; 1990 ; Clinical Chemistry Volume 36 ; 36 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 1991 ; Clinical Chemistry Volume 37 ; 37 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 1992 ; Clinical Chemistry Volume 38 ; 38 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 1993 ; Clinical Chemistry Volume 39 ; 39 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 1994 ; Clinical Chemistry Volume 40 ; 40 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 1995 ; Clinical Chemistry Volume 41 ; 41 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 1996 ; Clinical Chemistry Volume 42 ; 42 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 1997 ; Clinical Chemistry Volume 43 ; 43 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 1998 ; Clinical Chemistry Volume 44 ; 44 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 1999 ; Clinical Chemistry Volume 45 ; 45 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 2000 ; Clinical Chemistry Volume 46 ; 46 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 2001 ; Clinical Chemistry Volume 47 ; 47 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 2002 ; Clinical Chemistry Volume 48 ; 48 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 2003 ; Clinical Chemistry Volume 49 ; 49 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 2004 ; Clinical Chemistry Volume 50 ; 50 >
 
-      au < HWDrupalPlugin ; manifest ; 2016 ; Clinical Chemistry Volume 62 ; 62 >
-      au < HWDrupalPlugin ; manifest ; 2017 ; Clinical Chemistry Volume 63 ; 63 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; testing ; 2016 ; Clinical Chemistry Volume 62 ; 62 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; testing ; 2017 ; Clinical Chemistry Volume 63 ; 63 >
 
     }
 
@@ -104,8 +104,8 @@
 
       param[base_url] = http://jalm.aaccjnls.org/
 
-      au < HWDrupalPlugin ; manifest ; 2016-2017 ; The Journal of Applied Laboratory Medicine Volume 1 ; 1 >
-      au < HWDrupalPlugin ; manifest ; 2017-2018 ; The Journal of Applied Laboratory Medicine Volume 2 ; 2 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; testing ; 2016-2017 ; The Journal of Applied Laboratory Medicine Volume 1 ; 1 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; testing ; 2017-2018 ; The Journal of Applied Laboratory Medicine Volume 2 ; 2 >
 
     }
 
