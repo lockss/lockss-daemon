@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,20 +33,26 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.georgthiemeverlag;
 
 import java.io.InputStream;
+import java.util.regex.Pattern;
 
+import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.*;
+import org.htmlparser.tags.CompositeTag;
+import org.htmlparser.tags.LinkTag;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 
 public class GeorgThiemeVerlagHtmlCrawlFilterFactory implements FilterFactory {
+ private static final Pattern LINKOUT = Pattern.compile("dx\\.doi\\.org", Pattern.CASE_INSENSITIVE);
   
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding)
       throws PluginException {
+	  
     NodeFilter[] filters = new NodeFilter[] {
         // Aggressive filtering of non-content tags
         // Do not crawl header or footer for links
@@ -71,10 +77,23 @@ public class GeorgThiemeVerlagHtmlCrawlFilterFactory implements FilterFactory {
         //https://www.thieme-connect.de/products/ejournals/abstract/10.1055/s-0030-1255783
         //<div class="articleBox supmat related">
         HtmlNodeFilters.tagWithAttributeRegex("div",  "class",  "articleBox.*related"),
+        HtmlNodeFilters.tagWithAttributeRegex("div",  "class",  "articleBox.*backinfo"),
         // this will not conflict with true supplementary material which is in its own tab
         // <section id="supmat"...div id="supportingMaterial..."
         // see an article with suppl at 
         // https://www.thieme-connect.de/products/ejournals/abstract/10.1055/s-0034-1390442
+        
+        // THey also have an unmarked link to the related article with text that includes a dx.doi.org reference
+        // even though it's an in-house cross-journal link
+        //<a href="/products/ejournals/abstractfoo">FOO: http://dx.doi.org/foo</a>
+        new NodeFilter() {
+          @Override public boolean accept(Node node) {
+            if (!(node instanceof LinkTag)) return false;
+            String allText = ((CompositeTag)node).toPlainTextString();
+            return LINKOUT.matcher(allText).find();
+          }
+        },        
+        
         
         
     };
@@ -82,5 +101,5 @@ public class GeorgThiemeVerlagHtmlCrawlFilterFactory implements FilterFactory {
         HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
     return filtered;
   }
-  
+
 }
