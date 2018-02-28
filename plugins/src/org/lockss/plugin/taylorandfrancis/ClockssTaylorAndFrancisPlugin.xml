@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>down. moving to source</string>
+    <string>down. deprecated. now source</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>106</string>
+    <string>107</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -21,7 +21,7 @@
   </entry>
    <entry>
     <string>plugin_parent_version</string>
-    <string>106</string>
+    <string>107</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -31,9 +31,13 @@
     <string>au_name</string>
     <string>&quot;Taylor &amp; Francis Plugin (CLOCKSS), Base URL %s, Journal ID %s, Volume %s&quot;, base_url, journal_id, volume_name</string>
   </entry>
+  <!--  override start url from parent to support http to https conversion -->
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%sclockss/%s/%s/index.html&quot;, base_url, journal_id, volume_name</string>
+    <list>
+      <string>"%sclockss/%s/%s/index.html", to_http(base_url), journal_id, volume_name</string>
+      <string>"%sclockss/%s/%s/index.html", to_https(base_url), journal_id, volume_name</string>
+    </list>
   </entry>
   <entry>
   <!--  CLOCKSS does not need this warning message about registering IP addresses -->

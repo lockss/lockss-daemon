@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -40,8 +40,8 @@ import org.lockss.extractor.JsoupHtmlLinkExtractor;
 import org.lockss.extractor.JsoupHtmlLinkExtractor.SimpleTagLinkExtractor;
 import org.lockss.extractor.LinkExtractor.Callback;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.atypon.BaseAtyponHtmlLinkExtractorFactory;
-import org.lockss.plugin.atypon.endocrinesociety.EndocrineSocietyBooksHtmlLinkExtractorFactory.EndocrineBooksLinkTagLinkExtractor;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 
@@ -108,8 +108,8 @@ public class TafHtmlLinkExtractorFactory extends BaseAtyponHtmlLinkExtractorFact
           if (openWindowMatcher.find()) {
             String newUrl = openWindowMatcher.group(1);
             if (!StringUtil.isNullString(newUrl)) {
-              cb.foundLink(newUrl);
-              return;
+            	cb.foundLink(AuUtil.normalizeHttpHttpsFromBaseUrl(au,newUrl));
+            	return;
             }
           }
         }
@@ -153,8 +153,8 @@ public class TafHtmlLinkExtractorFactory extends BaseAtyponHtmlLinkExtractorFact
             String newUrl = pageMatch.group(1) + DOWNCIT_ACTION + showCitMatcher.group(1) + CIT_SUFFIX;
             log.debug3("created a downloadCitations link: " + newUrl);
             if (!StringUtil.isNullString(newUrl)) {
-              cb.foundLink(newUrl);
-              // continue on to find the actual link now
+            	cb.foundLink(AuUtil.normalizeHttpHttpsFromBaseUrl(au,newUrl));
+            	// continue on to find the actual link now
             }
           }
         }

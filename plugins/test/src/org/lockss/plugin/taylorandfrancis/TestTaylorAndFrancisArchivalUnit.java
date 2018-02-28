@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -58,8 +58,9 @@ public class TestTaylorAndFrancisArchivalUnit extends LockssTestCase {
   static final String JID_KEY = ConfigParamDescr.JOURNAL_ID.getKey();
   static final String VOL_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
   static final String ROOT_URL = "http://www.tandfonline.com/";
+  static final String ROOT_URL_HTTPS = "https://www.tandfonline.com/";
   
-  static Logger log = Logger.getLogger("TestTaylorAndFrancisArchivalUnit");
+  private static final Logger log = Logger.getLogger(TestTaylorAndFrancisArchivalUnit.class);
   protected String PluginIdentifier;
   protected String keyword;
   protected String PluginName;
@@ -205,8 +206,9 @@ public class TestTaylorAndFrancisArchivalUnit extends LockssTestCase {
 
     // 4 digit
     String expected = ROOT_URL+keyword+"/uytj20/24/index.html";
+    String expected_https = ROOT_URL_HTTPS +keyword+"/uytj20/24/index.html";
     DefinableArchivalUnit tfAu = makeAu(url, 24, "uytj20");
-    assertEquals(ListUtil.list(expected), tfAu.getStartUrls());
+    assertEquals(ListUtil.list(expected, expected_https), tfAu.getStartUrls());
   }
   
   public void testShouldNotCachePageFromOtherSite() throws Exception {
