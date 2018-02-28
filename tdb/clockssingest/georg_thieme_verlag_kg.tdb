@@ -6631,7 +6631,7 @@
     au < manifest ; exists ; 2009 ; 2009 ; Applied Clinical Informatics Volume 0 ; 0 ; >
     au < finished ; crawling ; 2010 ; 2010 ; Applied Clinical Informatics Volume 1 ; 1 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2011 ; 2011 ; Applied Clinical Informatics Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2012 ; 2012 ; Applied Clinical Informatics Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2012 ; 2012 ; Applied Clinical Informatics Volume 3 ; 3 ; >
     au < frozen ; exists ; 2013 ; 2013 ; Applied Clinical Informatics Volume 4 ; 4 ; >
     au < frozen ; exists ; 2014 ; 2014 ; Applied Clinical Informatics Volume 5 ; 5 ; >
     au < frozen ; exists ; 2015 ; 2015 ; Applied Clinical Informatics Volume 6 ; 6 ; >
@@ -6790,7 +6790,7 @@
     au < manifest ; exists ; 2013 ; 2013 ; Kinder- und Jugendmedizin Volume 13 ; 13 ; >
     au < crawling ; exists ; 2014 ; 2014 ; Kinder- und Jugendmedizin Volume 14 ; 14 ; >
     au < manifest ; exists ; 2015 ; 2015 ; Kinder- und Jugendmedizin Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; Kinder- und Jugendmedizin Volume 16 ; 16 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; Kinder- und Jugendmedizin Volume 16 ; 16 ; >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Kinder- und Jugendmedizin Volume 17 ; 17 ; >
 
   }
@@ -6813,7 +6813,7 @@
     au < crawling ; exists ; 2010 ; 2010 ; Methods of Information in Medicine Volume 49 ; 49 ; >
     au < frozen ; exists ; 2011 ; 2011 ; Methods of Information in Medicine Volume 50 ; 50 ; >
     au < frozen ; exists ; 2012 ; 2012 ; Methods of Information in Medicine Volume 51 ; 51 ; >
-    au < crawling ; exists ; 2013 ; 2013 ; Methods of Information in Medicine Volume 52 ; 52 ; >
+    au < frozen ; exists ; 2013 ; 2013 ; Methods of Information in Medicine Volume 52 ; 52 ; >
     au < frozen ; exists ; 2014 ; 2014 ; Methods of Information in Medicine Volume 53 ; 53 ; >
     au < crawling ; exists ; 2015 ; 2015 ; Methods of Information in Medicine Volume 54 ; 54 ; >
     au < finished ; crawling ; 2016 ; 2016 ; Methods of Information in Medicine Volume 55 ; 55 ; reingest5.clockss.org:8082 >
@@ -6844,7 +6844,7 @@
     au < frozen ; exists ; 2011 ; 2011 ; Nervenheilkunde Volume 30 ; 30 ; >
     au < manifest ; exists ; 2012 ; 2012 ; Nervenheilkunde Volume 31 ; 31 ; >
     au < frozen ; exists ; 2013 ; 2013 ; Nervenheilkunde Volume 32 ; 32 ; >
-    au < crawling ; exists ; 2014 ; 2014 ; Nervenheilkunde Volume 33 ; 33 ; >
+    au < frozen ; exists ; 2014 ; 2014 ; Nervenheilkunde Volume 33 ; 33 ; >
     au < finished ; crawling ; 2015 ; 2015 ; Nervenheilkunde Volume 34 ; 34 ; reingest3.clockss.org:8083 >
     au < manifest ; exists ; 2016 ; 2016 ; Nervenheilkunde Volume 35 ; 35 ; >
     au < crawling ; exists ; 2017 ; 2017 ; Nervenheilkunde Volume 36 ; 36 ; >
@@ -6879,7 +6879,7 @@
     au < manifest ; exists ; 2013 ; 2013 ; Nuklearmedizin Volume 52 ; 52 ; >
     au < manifest ; exists ; 2014 ; 2014 ; Nuklearmedizin Volume 53 ; 53 ; >
     au < finished ; crawling ; 2015 ; 2015 ; Nuklearmedizin Volume 54 ; 54 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2016 ; 2016 ; Nuklearmedizin Volume 55 ; 55 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; Nuklearmedizin Volume 55 ; 55 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Nuklearmedizin Volume 56 ; 56 ; >
 
   }
@@ -6967,8 +6967,8 @@
     au < crawling ; exists ; 2012 ; 2012 ; Phlebologie Volume 41 ; 41 ; >
     au < frozen ; exists ; 2013 ; 2013 ; Phlebologie Volume 42 ; 42 ; >
     au < crawling ; exists ; 2014 ; 2014 ; Phlebologie Volume 43 ; 43 ; >
-    au < crawling ; exists ; 2015 ; 2015 ; Phlebologie Volume 44 ; 44 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; Phlebologie Volume 45 ; 45 ; >
+    au < frozen ; exists ; 2015 ; 2015 ; Phlebologie Volume 44 ; 44 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; Phlebologie Volume 45 ; 45 ; >
     au < crawling ; exists ; 2017 ; 2017 ; Phlebologie Volume 46 ; 46 ; >
 
   }
