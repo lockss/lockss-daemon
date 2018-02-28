@@ -384,7 +384,7 @@
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Journal of Cell Science Volume 127 ; 127 ; reingest3.clockss.org:8083 >
     au < biologists.ClockssBiologistsDrupalPlugin ; finished ; finished ; 2015 ; Journal of Cell Science Volume 128 ; 128 ; reingest2.clockss.org:8085 >
     au < biologists.ClockssBiologistsDrupalPlugin ; finished ; crawling ; 2016 ; Journal of Cell Science Volume 129 ; 129 ; reingest1.clockss.org:8082 >
-    au < biologists.ClockssBiologistsDrupalPlugin ; crawling ; exists ; 2017 ; Journal of Cell Science Volume 130 ; 130 ; >
+    au < biologists.ClockssBiologistsDrupalPlugin ; deepCrawl ; exists ; 2017 ; Journal of Cell Science Volume 130 ; 130 ; >
     au < biologists.ClockssBiologistsDrupalPlugin ; expected ; exists ; 2018 ; Journal of Cell Science Volume 131 ; 131 ; >
 
   }

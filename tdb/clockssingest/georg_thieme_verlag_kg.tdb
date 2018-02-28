@@ -260,7 +260,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Aktuelle Rheumatologie Volume 41 ; 41 ; >
     au < finished ; finished ; 2015 ; 2015 ; Aktuelle Rheumatologie Volume 42 ; 42 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Aktuelle Rheumatologie Volume 43 ; 43 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2017 ; 2017 ; Aktuelle Rheumatologie Volume 44 ; 44 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Aktuelle Rheumatologie Volume 44 ; 44 ; >
 
   }
 
@@ -333,7 +333,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Aktuelle Urologie Volume 45 ; 45 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; Aktuelle Urologie Volume 46 ; 46 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Aktuelle Urologie Volume 47 ; 47 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; 2017 ; Aktuelle Urologie Volume 48 ; 48 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Aktuelle Urologie Volume 48 ; 48 ; >
 
    }
 
@@ -469,7 +469,7 @@
     au < finished ; finished ; 2014 ; 2014 ; American Journal of Perinatology Volume 31 ; 31 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; American Journal of Perinatology Volume 32 ; 32 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; American Journal of Perinatology Volume 33 ; 33 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; 2017 ; American Journal of Perinatology Volume 34 ; 34 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; American Journal of Perinatology Volume 34 ; 34 ; >
 
    }
 
@@ -507,7 +507,7 @@
 
    au < finished ; finished ; 2015 ; 2015 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 34 ; 34 ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 35 ; 35 ; reingest5.clockss.org:8082 >
-   au < crawling ; exists ; 2017 ; 2017 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 36 ; 36 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 36 ; 36 ; >
 
    }
 
@@ -843,7 +843,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Deutsche Zeitschrift für Onkologie Volume 46 ; 46 ; >
    au < finished ; finished ; 2015 ; 2015 ; Deutsche Zeitschrift für Onkologie Volume 47 ; 47 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; Deutsche Zeitschrift für Onkologie Volume 48 ; 48 ; reingest2.clockss.org:8085 >
-   au < crawling ; exists ; 2017 ; 2017 ; Deutsche Zeitschrift für Onkologie Volume 49 ; 49 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Deutsche Zeitschrift für Onkologie Volume 49 ; 49 ; >
 
   }
 
@@ -1811,7 +1811,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Gefäßmedizin Scan Volume 1 ; 1 ; >
    au < finished ; finished ; 2015 ; 2015 ; Gefäßmedizin Scan Volume 2 ; 2 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; Gefäßmedizin Scan Volume 3 ; 3 ; reingest4.clockss.org:8082 >
-   au < crawling ; exists ; 2017 ; 2017 ; Gefäßmedizin Scan Volume 4 ; 4 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Gefäßmedizin Scan Volume 4 ; 4 ; >
 
   }
 
@@ -2663,7 +2663,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Journal of Neurological Surgery Part B : Skull Base Volume 75 ; 75 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2015 ; 2015 ; Journal of Neurological Surgery Part B : Skull Base Volume 76 ; 76 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Journal of Neurological Surgery Part B : Skull Base Volume 77 ; 77 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; 2017 ; Journal of Neurological Surgery Part B : Skull Base Volume 78 ; 78 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Journal of Neurological Surgery Part B : Skull Base Volume 78 ; 78 ; >
 
   }
 
@@ -3249,7 +3249,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Krankenhaushygiene up2date Volume 9 ; 9 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Krankenhaushygiene up2date Volume 10 ; 10 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Krankenhaushygiene up2date Volume 11 ; 11 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2017 ; 2017 ; Krankenhaushygiene up2date Volume 12 ; 12 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Krankenhaushygiene up2date Volume 12 ; 12 ; >
 
   }
 
@@ -3782,7 +3782,7 @@
     au < finished ; finished ; 2014 ; 2014 ; OP-Journal Volume 30 ; 30 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; OP-Journal Volume 31 ; 31 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; OP-Journal Volume 32 ; 32 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; 2017 ; OP-Journal Volume 33 ; 33 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; OP-Journal Volume 33 ; 33 ; >
 
   }
 
@@ -3960,7 +3960,7 @@
     au < finished ; finished ; 2014 ; 2014 ; pferde spiegel Volume 17 ; 17 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; pferde spiegel Volume 18 ; 18 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; pferde spiegel Volume 19 ; 19 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; 2017 ; pferde spiegel Volume 20 ; 20 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; pferde spiegel Volume 20 ; 20 ; >
 
   }
 
@@ -4115,7 +4115,7 @@
     au < finished ; finished ; 2014 ; 2014 ; physioscience Volume 10 ; 10 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; physioscience Volume 11 ; 11 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; physioscience Volume 12 ; 12 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; 2017 ; physioscience Volume 13 ; 13 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; physioscience Volume 13 ; 13 ; >
 
   }
 
@@ -4251,7 +4251,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Planta Medica Volume 80 ; 80 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; Planta Medica Volume 81 ; 81 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; Planta Medica Volume 82 ; 82 ; reingest4.clockss.org:8082 >
-   au < crawling ; exists ; 2017 ; 2017 ; Planta Medica Volume 83 ; 83 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Planta Medica Volume 83 ; 83 ; >
 
   }
 
@@ -4368,7 +4368,7 @@
     au < finished ; finished ; 2014 ; 2014 ; PSYCH up2date Volume 8 ; 8 ; >
     au < finished ; finished ; 2015 ; 2015 ; PSYCH up2date Volume 9 ; 9 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; PSYCH up2date Volume 10 ; 10 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; 2017 ; PSYCH up2date Volume 11 ; 11 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; PSYCH up2date Volume 11 ; 11 ; >
 
   }
 
@@ -4518,7 +4518,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Radiologie up2date Volume 14 ; 14 ; >
    au < finished ; finished ; 2015 ; 2015 ; Radiologie up2date Volume 15 ; 15 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2016 ; 2016 ; Radiologie up2date Volume 16 ; 16 ; reingest1.clockss.org:8082 >
-   au < crawling ; exists ; 2017 ; 2017 ; Radiologie up2date Volume 17 ; 17 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Radiologie up2date Volume 17 ; 17 ; >
 
   }
 
@@ -5064,7 +5064,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Seminars in Reproductive Medicine Volume 32 ; 32 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; Seminars in Reproductive Medicine Volume 33 ; 33 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2016 ; 2016 ; Seminars in Reproductive Medicine Volume 34 ; 34 ; reingest3.clockss.org:8083 >
-   au < crawling ; exists ; 2017 ; 2017 ; Seminars in Reproductive Medicine Volume 35 ; 35 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Seminars in Reproductive Medicine Volume 35 ; 35 ; >
 
   }
 
@@ -5260,7 +5260,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 11 ; 11 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 12 ; 12 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 13 ; 13 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2017 ; 2017 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 14 ; 14 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 14 ; 14 ; >
 
   }
 
@@ -5561,7 +5561,7 @@
    au < finished ; finished ; 2014 ; 2014 ; SYNLETT Volume 25 ; 25 ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2015 ; 2015 ; SYNLETT Volume 26 ; 26 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; SYNLETT Volume 27 ; 27 ; reingest4.clockss.org:8082 >
-   au < crawling ; exists ; 2017 ; 2017 ; SYNLETT Volume 28 ; 28 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; SYNLETT Volume 28 ; 28 ; >
 
   }
 
@@ -5995,7 +5995,7 @@
 
     au < finished ; finished ; 2015 ; 2015 ; VPT Magazin Volume 1 ; 1 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; VPT Magazin Volume 2 ; 2 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; 2017 ; VPT Magazin Volume 3 ; 3 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; VPT Magazin Volume 3 ; 3 ; >
 
   }
 
@@ -6454,7 +6454,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Zeitschrift für Chirurgie Volume 139 ; 139 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; Zeitschrift für Chirurgie Volume 140 ; 140 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Zeitschrift für Chirurgie Volume 141 ; 141 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2017 ; 2017 ; Zeitschrift für Chirurgie Volume 142 ; 142 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Zeitschrift für Chirurgie Volume 142 ; 142 ; >
 
   }
 
@@ -6587,7 +6587,7 @@
     param[journal_id] = 10.1055/s-00034447
     comment[years] = 2017-current
 
-    au < crawling ; exists ; 2017 ; 2017 ; ACI Open Volume 1 ; 1 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; ACI Open Volume 1 ; 1 ; >
 
   }
 
@@ -7105,7 +7105,7 @@
     param[journal_id] = 10.1055/s-00034612
     comment[years] = 2017-current
 
-    au < crawling ; exists ; 2017 ; 2017 ; Yearbook of Medical Informatics Volume 26 ; 26 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Yearbook of Medical Informatics Volume 26 ; 26 ; >
 
   }
 

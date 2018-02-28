@@ -627,7 +627,7 @@
       au < finished ; crawling ; 2013 ; 9781783501205 ; 9781783501212 ; 9781783501212 ; Advances in Financial Economics Volume 16 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2014 ; 9781784412920 ; 9781784412913 ; 9781784412913 ; Corporate Governance in the US and Global Settings Volume 17 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; 9781785603556 ; 9781785603549 ; 9781785603549 ; International Corporate Governance Volume 18 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; 9781786351661 ; 9781786351654 ; 9781786351654 ; Global Corporate Governance Volume 19 ; >
+      au < deepCrawl ; exists ; 2017 ; 9781786351661 ; 9781786351654 ; 9781786351654 ; Global Corporate Governance Volume 19 ; >
 
   }
 
@@ -684,7 +684,7 @@
       au < finished ; crawling ; 2012 ; 9781780520025 ; 9781780520032 ; 9781780520032 ; Advances in Global Leadership Volume 7 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2014 ; 9781783504794 ; 9781783504800 ; 9781783504800 ; Advances in Global Leadership Volume 8 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2016 ; 9781786351388 ; 9781786351371 ; 9781786351371 ; Advances in Global Leadership Volume 9 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2017 ; 9781787146990 ; 9781787146983 ; 9781787146983 ; Advances in Global Leadership Volume 10 ; >
+      au < deepCrawl ; exists ; 2017 ; 9781787146990 ; 9781787146983 ; 9781787146983 ; Advances in Global Leadership Volume 10 ; >
 
   }
 
@@ -716,7 +716,7 @@
       au < finished ; crawling ; 2014 ; 9781784410780 ; 9781784410773 ; 9781784410773 ; Advances in Group Processes Volume 31 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2015 ; 9781785600777 ; 9781785600760 ; 9781785600760 ; Advances in Group Processes Volume 32 ; >
       au < finished ; crawling ; 2016 ; 9781786350428 ; 9781786350411 ; 9781786350411 ; Advances in Group Processes Volume 33 ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; 9781787431935 ; 9781787431928 ; 9781787431928 ; Advances in Group Processes Volume 34 ; >
+      au < deepCrawl ; exists ; 2017 ; 9781787431935 ; 9781787431928 ; 9781787431928 ; Advances in Group Processes Volume 34 ; >
 
   }
 
@@ -1569,7 +1569,7 @@
       au < crawling ; exists ; 2014 ; 9781784411268 ; 9781784411251 ; 9781784411251 ; Family and Health: Evolving Needs, Responsibilities, and Experiences Volume 8B ; >
       au < finished ; crawling ; 2015 ; 9781785602634 ; 9781785602627 ; 9781785602627 ; Violence and Crime in the Family: Patterns, Causes, and Consequences Volume 9 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; 9781786352309 ; 9781786352293 ; 9781786352293 ; Divorce, Separation, and Remarriage: The Transformation of Family Volume 10 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; 9781787146105 ; 9781787146099 ; 9781787146099 ; Intimate Relationships and Social Change Volume 11 ; >
+      au < deepCrawl ; exists ; 2017 ; 9781787146105 ; 9781787146099 ; 9781787146099 ; Intimate Relationships and Social Change Volume 11 ; >
 
   }
 
@@ -2256,8 +2256,8 @@
       au < finished ; crawling ; 2015 ; 9781784417581 ; 9781784417574 ; 9781784417574 ; Patrimonial Capitalism and Empire Volume 28 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2015 ; 9781785600937 ; 9781785600920 ; 9781785600920 ; Chartering Capitalism: Organizing Markets, States, and Publics Volume 29 ; >
       au < finished ; crawling ; 2016 ; 9781786350749 ; 9781786350732 ; 9781786350732 ; Perverse Politics? Feminism, Anti-Imperialism, Multiplicity Volume 30 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; 9781787142671 ; 9781787142664 ; 9781787142664 ; International Origins of Social and Political Theory Volume 32 ; >
-      au < crawling ; exists ; 2017 ; 9781787146556 ; 9781787146549 ; 9781787146549 ; Rethinking the Colonial State Volume 33 ; >
+      au < deepCrawl ; exists ; 2017 ; 9781787142671 ; 9781787142664 ; 9781787142664 ; International Origins of Social and Political Theory Volume 32 ; >
+      au < deepCrawl ; exists ; 2017 ; 9781787146556 ; 9781787146549 ; 9781787146549 ; Rethinking the Colonial State Volume 33 ; >
 
   }
 
@@ -2807,7 +2807,7 @@
       au < finished ; crawling ; 2015 ; 9781785602955 ; 9781785602948 ; 9781785602948 ; Theoretical Engagements in Geopolitical Economy Volume 30 A ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; 9781785603372 ; 9781785603365 ; 9781785603365 ; Analytical Gains of Geopolitical Economy Volume 30 B ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2016 ; 9781786352361 ; 9781786352354 ; 9781786352354 ; Risking Capitalism Volume 31 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2017 ; 9781787144781 ; 9781787144774 ; 9781787144774 ; Return of Marxian Macro-Dynamics in East Asia Volume 32 ; >
+      au < deepCrawl ; exists ; 2017 ; 9781787144781 ; 9781787144774 ; 9781787144774 ; Return of Marxian Macro-Dynamics in East Asia Volume 32 ; >
 
   }
 

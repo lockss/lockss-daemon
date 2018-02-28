@@ -355,7 +355,7 @@
       au < frozen ; exists ; 2014 ; 44 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2014 ; 2014 ; https://www.iberoamericana.se/ ; >
       au < doesNotExist ; doesNotExist ; 2015 ; 45 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2015 ; 2015 ; https://www.iberoamericana.se/ ; > #M exists. No articles for that year.
       au < frozen ; exists ; 2016 ; 46 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2016 ; 2016 ; https://www.iberoamericana.se/ ; >
-      au < crawling ; exists ; 2017 ; 47 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2017 ; 2017 ; https://www.iberoamericana.se/ ; >
+      au < deepCrawl ; exists ; 2017 ; 47 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2017 ; 2017 ; https://www.iberoamericana.se/ ; >
 
   }
 }
@@ -491,7 +491,7 @@
       au < doNotProcess ; exists ; 2014 ; 24 ; Bulletin of the History of Archaeology Volume 2014 ; 2014 ; https://www.archaeologybulletin.org/ ; >
       au < finished ; finished ; 2015 ; 25 ; Bulletin of the History of Archaeology Volume 2015 ; 2015 ; http://www.archaeologybulletin.org/ ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2016 ; 26 ; Bulletin of the History of Archaeology Volume 2016 ; 2016 ; http://www.archaeologybulletin.org/ ; >
-      au < crawling ; exists ; 2017 ; 27 ; Bulletin of the History of Archaeology Volume 2017 ; 2017 ; http://www.archaeologybulletin.org/ ; >
+      au < deepCrawl ; exists ; 2017 ; 27 ; Bulletin of the History of Archaeology Volume 2017 ; 2017 ; http://www.archaeologybulletin.org/ ; >
 
   }
 
@@ -611,7 +611,7 @@
       au < frozen ; exists ; 2014 ; 15 ; International Journal of Integrated Care Volume 2014 ; 2014 ; http://www.ijic.org/ ; >
       au < frozen ; exists ; 2015 ; 16 ; International Journal of Integrated Care Volume 2015 ; 2015 ; http://www.ijic.org/ ; >
       au < finished ; crawling ; 2016 ; 17 ; International Journal of Integrated Care Volume 2016 ; 2016 ; http://www.ijic.org/ ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2017 ; 18 ; International Journal of Integrated Care Volume 2017 ; 2017 ; http://www.ijic.org/ ; >
+      au < deepCrawl ; exists ; 2017 ; 18 ; International Journal of Integrated Care Volume 2017 ; 2017 ; http://www.ijic.org/ ; >
 
   }
 
@@ -760,7 +760,7 @@
       au < finished ; finished ; 2014 ; 9 ; Journal of Molecular Signaling Volume 2014 ; 2014 ; http://www.jmolecularsignaling.com/ ; >
       au < finished ; finished ; 2015 ; 10 ; Journal of Molecular Signaling Volume 2015 ; 2015 ; http://www.jmolecularsignaling.com/ ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2016 ; 11 ; Journal of Molecular Signaling Volume 2016 ; 2016 ; http://www.jmolecularsignaling.com/ ; >
-      au < crawling ; exists ; 2017 ; 12 ; Journal of Molecular Signaling Volume 2017 ; 2017 ; http://www.jmolecularsignaling.com/ ; >
+      au < deepCrawl ; exists ; 2017 ; 12 ; Journal of Molecular Signaling Volume 2017 ; 2017 ; http://www.jmolecularsignaling.com/ ; >
 
   }
 
@@ -864,7 +864,7 @@
       au < doNotProcess ; exists ; 2014 ; 2 ; Journal of Open Research Software Volume 2014 ; 2014 ; https://openresearchsoftware.metajnl.com/ ; >
       au < finished ; finished ; 2015 ; 3 ; Journal of Open Research Software Volume 2015 ; 2015 ; http://openresearchsoftware.metajnl.com/ ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2016 ; 4 ; Journal of Open Research Software Volume 2016 ; 2016 ; http://openresearchsoftware.metajnl.com/ ; >
-      au < crawling ; exists ; 2017 ; 5 ; Journal of Open Research Software Volume 2017 ; 2017 ; http://openresearchsoftware.metajnl.com/ ; >
+      au < deepCrawl ; exists ; 2017 ; 5 ; Journal of Open Research Software Volume 2017 ; 2017 ; http://openresearchsoftware.metajnl.com/ ; >
 
   }
 
@@ -1553,7 +1553,7 @@
       au < frozen ; exists ; 2014 ; 2 ; International Journal for History, Culture and Modernity Volume 2014 ; 2014 ; https://www.history-culture-modernity.org/ ; >
       au < frozen ; exists ; 2015 ; 3 ; International Journal for History, Culture and Modernity Volume 2015 ; 2015 ; https://www.history-culture-modernity.org/ ; >
       au < frozen ; exists ; 2016 ; 4 ; International Journal for History, Culture and Modernity Volume 2016 ; 2016 ; https://www.history-culture-modernity.org/ ; >
-      au < crawling ; exists ; 2017 ; 5 ; International Journal for History, Culture and Modernity Volume 2017 ; 2017 ; https://www.history-culture-modernity.org/ ; >
+      au < deepCrawl ; exists ; 2017 ; 5 ; International Journal for History, Culture and Modernity Volume 2017 ; 2017 ; https://www.history-culture-modernity.org/ ; >
 
   }
 
@@ -1760,7 +1760,7 @@
       au < frozen ; exists ; 2014 ; 10 ; Utrecht Law Review Volume 2014 ; 2014 ; https://www.utrechtlawreview.org/ ; >
       au < frozen ; exists ; 2015 ; 11 ; Utrecht Law Review Volume 2015 ; 2015 ; https://www.utrechtlawreview.org/ ; >
       au < frozen ; exists ; 2016 ; 12 ; Utrecht Law Review Volume 2016 ; 2016 ; https://www.utrechtlawreview.org/ ; >
-      au < crawling ; exists ; 2017 ; 13 ; Utrecht Law Review Volume 2017 ; 2017 ; https://www.utrechtlawreview.org/ ; >
+      au < deepCrawl ; exists ; 2017 ; 13 ; Utrecht Law Review Volume 2017 ; 2017 ; https://www.utrechtlawreview.org/ ; >
 
   }
 

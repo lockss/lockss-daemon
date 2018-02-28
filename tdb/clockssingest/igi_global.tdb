@@ -379,7 +379,7 @@
     au < finished ; finished ; 2014 ; International Journal of Artificial Life Research (IJALR) Volume 4 ; 4 ; http://www.igi-global.com/ ; reingest3.clockss.org:8083 > 
     au < finished ; crawling ; 2015 ; International Journal of Artificial Life Research (IJALR) Volume 5 ; 5 ; http://www.igi-global.com/ ; reingest4.clockss.org:8082 > 
     au < crawling ; exists ; 2016 ; International Journal of Artificial Life Research (IJALR) Volume 6 ; 6 ; http://www.igi-global.com/ ; > 
-    au < crawling ; exists ; 2017 ; International Journal of Artificial Life Research (IJALR) Volume 7 ; 7 ; http://www.igi-global.com/ ; > 
+    au < deepCrawl ; exists ; 2017 ; International Journal of Artificial Life Research (IJALR) Volume 7 ; 7 ; http://www.igi-global.com/ ; > 
 
   }
 
@@ -400,7 +400,7 @@
     au < finished ; finished ; 2014 ; International Journal of Asian Business and Information Management (IJABIM) Volume 5 ; 5 ; http://www.igi-global.com/ ; reingest4.clockss.org:8082 > 
     au < finished ; finished ; 2015 ; International Journal of Asian Business and Information Management (IJABIM) Volume 6 ; 6 ; http://www.igi-global.com/ ; reingest2.clockss.org:8085 > 
     au < deepCrawl ; exists ; 2016 ; International Journal of Asian Business and Information Management (IJABIM) Volume 7 ; 7 ; http://www.igi-global.com/ ; > 
-    au < crawling ; exists ; 2017 ; International Journal of Asian Business and Information Management (IJABIM) Volume 8 ; 8 ; http://www.igi-global.com/ ; > 
+    au < deepCrawl ; exists ; 2017 ; International Journal of Asian Business and Information Management (IJABIM) Volume 8 ; 8 ; http://www.igi-global.com/ ; > 
 
   }
 
@@ -1063,7 +1063,7 @@
     au < finished ; finished ; 2014 ; International Journal of E-Health and Medical Communications (IJEHMC) Volume 5 ; 5 ; http://www.igi-global.com/ ; reingest2.clockss.org:8085 > 
     au < finished ; finished ; 2015 ; International Journal of E-Health and Medical Communications (IJEHMC) Volume 6 ; 6 ; http://www.igi-global.com/ ; reingest4.clockss.org:8082 > 
     au < deepCrawl ; exists ; 2016 ; International Journal of E-Health and Medical Communications (IJEHMC) Volume 7 ; 7 ; http://www.igi-global.com/ ; > 
-    au < crawling ; exists ; 2017 ; International Journal of E-Health and Medical Communications (IJEHMC) Volume 8 ; 8 ; http://www.igi-global.com/ ; > 
+    au < deepCrawl ; exists ; 2017 ; International Journal of E-Health and Medical Communications (IJEHMC) Volume 8 ; 8 ; http://www.igi-global.com/ ; > 
 
   }
 
@@ -1601,7 +1601,7 @@
     au < finished ; finished ; 2014 ; International Journal of Information Systems and Supply Chain Management (IJISSCM) Volume 7 ; 7 ; http://www.igi-global.com/ ; reingest2.clockss.org:8085 > 
     au < finished ; finished ; 2015 ; International Journal of Information Systems and Supply Chain Management (IJISSCM) Volume 8 ; 8 ; http://www.igi-global.com/ ; reingest3.clockss.org:8083 > 
     au < deepCrawl ; exists ; 2016 ; International Journal of Information Systems and Supply Chain Management (IJISSCM) Volume 9 ; 9 ; http://www.igi-global.com/ ; > 
-    au < crawling ; exists ; 2017 ; International Journal of Information Systems and Supply Chain Management (IJISSCM) Volume 10 ; 10 ; http://www.igi-global.com/ ; > 
+    au < deepCrawl ; exists ; 2017 ; International Journal of Information Systems and Supply Chain Management (IJISSCM) Volume 10 ; 10 ; http://www.igi-global.com/ ; > 
 
   }
 
@@ -1995,7 +1995,7 @@
     au < finished ; finished ; 2014 ; International Journal of Manufacturing, Materials, and Mechanical Engineering (IJMMME) Volume 4 ; 4 ; http://www.igi-global.com/ ; reingest5.clockss.org:8082 > 
     au < finished ; finished ; 2015 ; International Journal of Manufacturing, Materials, and Mechanical Engineering (IJMMME) Volume 5 ; 5 ; http://www.igi-global.com/ ; reingest4.clockss.org:8082 > 
     au < deepCrawl ; exists ; 2016 ; International Journal of Manufacturing, Materials, and Mechanical Engineering (IJMMME) Volume 6 ; 6 ; http://www.igi-global.com/ ; > 
-    au < crawling ; exists ; 2017 ; International Journal of Manufacturing, Materials, and Mechanical Engineering (IJMMME) Volume 7 ; 7 ; http://www.igi-global.com/ ; > 
+    au < deepCrawl ; exists ; 2017 ; International Journal of Manufacturing, Materials, and Mechanical Engineering (IJMMME) Volume 7 ; 7 ; http://www.igi-global.com/ ; > 
 
   }
 
@@ -2216,7 +2216,7 @@
     au < finished ; finished ; 2014 ; International Journal of Open Source Software and Processes (IJOSSP) Volume 5 ; 5 ; http://www.igi-global.com/ ; reingest2.clockss.org:8085 > 
     au < finished ; crawling ; 2015 ; International Journal of Open Source Software and Processes (IJOSSP) Volume 6 ; 6 ; http://www.igi-global.com/ ; reingest1.clockss.org:8082 > 
     au < frozen ; exists ; 2016 ; International Journal of Open Source Software and Processes (IJOSSP) Volume 7 ; 7 ; http://www.igi-global.com/ ; > 
-    au < crawling ; exists ; 2017 ; International Journal of Open Source Software and Processes (IJOSSP) Volume 8 ; 8 ; http://www.igi-global.com/ ; > 
+    au < deepCrawl ; exists ; 2017 ; International Journal of Open Source Software and Processes (IJOSSP) Volume 8 ; 8 ; http://www.igi-global.com/ ; > 
 
   }
 
@@ -2314,7 +2314,7 @@
     au < frozen ; exists ; 2014 ; International Journal of Productivity Management and Assessment Technologies (IJPMAT) Volume 2 ; 2 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2015 ; International Journal of Productivity Management and Assessment Technologies (IJPMAT) Volume 3 ; 3 ; http://www.igi-global.com/ ; reingest4.clockss.org:8082 > 
     au < deepCrawl ; exists ; 2016 ; International Journal of Productivity Management and Assessment Technologies (IJPMAT) Volume 4 ; 4 ; http://www.igi-global.com/ ; > 
-    au < crawling ; exists ; 2017 ; International Journal of Productivity Management and Assessment Technologies (IJPMAT) Volume 5 ; 5 ; http://www.igi-global.com/ ; > 
+    au < deepCrawl ; exists ; 2017 ; International Journal of Productivity Management and Assessment Technologies (IJPMAT) Volume 5 ; 5 ; http://www.igi-global.com/ ; > 
 
   }
 
@@ -2389,7 +2389,7 @@
     au < frozen ; exists ; 2014 ; International Journal of Risk and Contingency Management (IJRCM) Volume 3 ; 3 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2015 ; International Journal of Risk and Contingency Management (IJRCM) Volume 4 ; 4 ; http://www.igi-global.com/ ; reingest3.clockss.org:8083 > 
     au < deepCrawl ; exists ; 2016 ; International Journal of Risk and Contingency Management (IJRCM) Volume 5 ; 5 ; http://www.igi-global.com/ ; > 
-    au < crawling ; exists ; 2017 ; International Journal of Risk and Contingency Management (IJRCM) Volume 6 ; 6 ; http://www.igi-global.com/ ; > 
+    au < deepCrawl ; exists ; 2017 ; International Journal of Risk and Contingency Management (IJRCM) Volume 6 ; 6 ; http://www.igi-global.com/ ; > 
 
   }
 
@@ -2508,7 +2508,7 @@
     au < finished ; finished ; 2014 ; International Journal of Social Ecology and Sustainable Development (IJSESD) Volume 5 ; 5 ; http://www.igi-global.com/ ; reingest4.clockss.org:8082 > 
     au < frozen ; exists ; 2015 ; International Journal of Social Ecology and Sustainable Development (IJSESD) Volume 6 ; 6 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2016 ; International Journal of Social Ecology and Sustainable Development (IJSESD) Volume 7 ; 7 ; http://www.igi-global.com/ ; > 
-    au < crawling ; exists ; 2017 ; International Journal of Social Ecology and Sustainable Development (IJSESD) Volume 8 ; 8 ; http://www.igi-global.com/ ; > 
+    au < deepCrawl ; exists ; 2017 ; International Journal of Social Ecology and Sustainable Development (IJSESD) Volume 8 ; 8 ; http://www.igi-global.com/ ; > 
 
   }
 
@@ -2607,7 +2607,7 @@
     au < frozen ; exists ; 2014 ; International Journal of Strategic Decision Sciences (IJSDS) Volume 5 ; 5 ; http://www.igi-global.com/ ; > 
     au < frozen ; exists ; 2015 ; International Journal of Strategic Decision Sciences (IJSDS) Volume 6 ; 6 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2016 ; International Journal of Strategic Decision Sciences (IJSDS) Volume 7 ; 7 ; http://www.igi-global.com/ ; > 
-    au < crawling ; exists ; 2017 ; International Journal of Strategic Decision Sciences (IJSDS) Volume 8 ; 8 ; http://www.igi-global.com/ ; > 
+    au < deepCrawl ; exists ; 2017 ; International Journal of Strategic Decision Sciences (IJSDS) Volume 8 ; 8 ; http://www.igi-global.com/ ; > 
 
   }
 
@@ -2964,7 +2964,7 @@
     au < finished ; finished ; 2014 ; International Journal of Web Services Research (IJWSR) Volume 11 ; 11 ; http://www.igi-global.com/ ; reingest1.clockss.org:8082 > 
     au < finished ; finished ; 2015 ; International Journal of Web Services Research (IJWSR) Volume 12 ; 12 ; http://www.igi-global.com/ ; reingest5.clockss.org:8082 > 
     au < deepCrawl ; exists ; 2016 ; International Journal of Web Services Research (IJWSR) Volume 13 ; 13 ; http://www.igi-global.com/ ; > 
-    au < crawling ; exists ; 2017 ; International Journal of Web Services Research (IJWSR) Volume 14 ; 14 ; http://www.igi-global.com/ ; > 
+    au < deepCrawl ; exists ; 2017 ; International Journal of Web Services Research (IJWSR) Volume 14 ; 14 ; http://www.igi-global.com/ ; > 
 
   }
 
@@ -3173,7 +3173,7 @@
     au < finished ; finished ; 2014 ; Journal of Global Information Management (JGIM) Volume 22 ; 22 ; http://www.igi-global.com/ ; > 
     au < frozen ; exists ; 2015 ; Journal of Global Information Management (JGIM) Volume 23 ; 23 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2016 ; Journal of Global Information Management (JGIM) Volume 24 ; 24 ; http://www.igi-global.com/ ; > 
-    au < crawling ; exists ; 2017 ; Journal of Global Information Management (JGIM) Volume 25 ; 25 ; http://www.igi-global.com/ ; > 
+    au < deepCrawl ; exists ; 2017 ; Journal of Global Information Management (JGIM) Volume 25 ; 25 ; http://www.igi-global.com/ ; > 
 
   }
 

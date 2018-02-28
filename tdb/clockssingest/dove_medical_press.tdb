@@ -919,7 +919,7 @@
     au < finished ; finished ; 2014 ; Reports in Medical Imaging Volume 7 ; 7 ; 2014 ; >
     au < finished ; finished ; 2015 ; Reports in Medical Imaging Volume 8 ; 8 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Reports in Medical Imaging Volume 9 ; 9 ; 2016 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Reports in Medical Imaging Volume 10 ; 10 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Reports in Medical Imaging Volume 10 ; 10 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Reports in Medical Imaging Volume 11 ; 11 ; 2018 ; >
 
   }
@@ -1097,7 +1097,7 @@
     au < finished ; finished ; 2014 ; Transplant Research and Risk Management Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Transplant Research and Risk Management Volume 7 ; 7 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Transplant Research and Risk Management Volume 8 ; 8 ; 2016 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Transplant Research and Risk Management Volume 9 ; 9 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Transplant Research and Risk Management Volume 9 ; 9 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Transplant Research and Risk Management Volume 10 ; 10 ; 2018 ; >
 
   }
@@ -1395,7 +1395,7 @@
     au < finished ; finished ; 2014 ; Open Access Journal of Contraception Volume 5 ; 5 ; 2014 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Open Access Journal of Contraception Volume 6 ; 6 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Open Access Journal of Contraception Volume 7 ; 7 ; 2016 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Open Access Journal of Contraception Volume 8 ; 8 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Open Access Journal of Contraception Volume 8 ; 8 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Open Access Journal of Contraception Volume 9 ; 9 ; 2018 ; >
 
   }
@@ -1946,7 +1946,7 @@
     au < finished ; finished ; 2014 ; Gastrointestinal Cancer: Targets and Therapy Volume 4 ; 4 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Gastrointestinal Cancer: Targets and Therapy Volume 5 ; 5 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Gastrointestinal Cancer: Targets and Therapy Volume 6 ; 6 ; 2016 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Gastrointestinal Cancer: Targets and Therapy Volume 7 ; 7 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Gastrointestinal Cancer: Targets and Therapy Volume 7 ; 7 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Gastrointestinal Cancer: Targets and Therapy Volume 8 ; 8 ; 2018 ; >
 
   }
@@ -1967,7 +1967,7 @@
     au < finished ; finished ; 2014 ; Pediatric Health, Medicine and Therapeutics Volume 5 ; 5 ; 2014 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Pediatric Health, Medicine and Therapeutics Volume 6 ; 6 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Pediatric Health, Medicine and Therapeutics Volume 7 ; 7 ; 2016 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Pediatric Health, Medicine and Therapeutics Volume 8 ; 8 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Pediatric Health, Medicine and Therapeutics Volume 8 ; 8 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Pediatric Health, Medicine and Therapeutics Volume 9 ; 9 ; 2018 ; >
 
   }
@@ -2449,7 +2449,7 @@
     au < finished ; finished ; 2014 ; Integrated Pharmacy Research and Practice Volume 3 ; 3 ; 2014 ; >
     au < finished ; finished ; 2015 ; Integrated Pharmacy Research and Practice Volume 4 ; 4 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Integrated Pharmacy Research and Practice Volume 5 ; 5 ; 2016 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Integrated Pharmacy Research and Practice Volume 6 ; 6 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Integrated Pharmacy Research and Practice Volume 6 ; 6 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Integrated Pharmacy Research and Practice Volume 7 ; 7 ; 2018 ; >
 
   }
