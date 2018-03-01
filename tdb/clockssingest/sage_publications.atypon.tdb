@@ -13391,9 +13391,7 @@
 
     #param[base_url] = http://heb.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1957-1966 ; Health Education & Behavior Volume 1 ; 1 ; heba ; >
       au < manifest ; exists ; 1974 ; Health Education & Behavior Volume 2 ; 2 ; heba ; >
@@ -13454,9 +13452,7 @@
 
     #param[base_url] = http://hej.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1943 ; Health Education Journal Volume 1 ; 1 ; heja ; >
       au < manifest ; exists ; 1944 ; Health Education Journal Volume 2 ; 2 ; heja ; >
@@ -13549,9 +13545,7 @@
 
     #param[base_url] = http://jhi.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1995 ; Health Informatics Journal Volume 1 ; 1 ; jhia ; >
       au < manifest ; exists ; 1996 ; Health Informatics Journal Volume 2 ; 2 ; jhia ; >
@@ -13622,9 +13616,7 @@
 
     #param[base_url] = http://hpp.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 2000 ; Health Promotion Practice Volume 1 ; 1 ; hppa ; >
       au < manifest ; exists ; 2001 ; Health Promotion Practice Volume 2 ; 2 ; hppa ; >
@@ -13675,9 +13667,7 @@
 
     #param[base_url] = http://hea.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1997 ; Health: An Interdisciplinary Journal for the Social Study of Health, Illness and Medicine Volume 1 ; 1 ; heaa ; >
       au < manifest ; exists ; 1998 ; Health: An Interdisciplinary Journal for the Social Study of Health, Illness and Medicine Volume 2 ; 2 ; heaa ; >
@@ -13783,9 +13773,7 @@
 
     #param[base_url] = http://hip.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1989 ; High Performance Polymers Volume 1 ; 1 ; hipa ; >
       au < manifest ; exists ; 1990 ; High Performance Polymers Volume 2 ; 2 ; hipa ; >
@@ -13841,6 +13829,34 @@
   {
 
     title <
+      name = HIP International ;
+      issn = 1120-7000 ;
+      eissn = 1724-6067
+    >
+
+      #param[journal_id] = hpi
+
+      au < exists ; exists ; 2002 ; HIP International Volume 12 ; 12 ; hpia ; >
+      au < exists ; exists ; 2003 ; HIP International Volume 13 ; 13 ; hpia ; >
+      au < exists ; exists ; 2004 ; HIP International Volume 14 ; 14 ; hpia ; >
+      au < exists ; exists ; 2005 ; HIP International Volume 15 ; 15 ; hpia ; >
+      au < exists ; exists ; 2006 ; HIP International Volume 16 ; 16 ; hpia ; >
+      au < exists ; exists ; 2007 ; HIP International Volume 17 ; 17 ; hpia ; >
+      au < exists ; exists ; 2008 ; HIP International Volume 18 ; 18 ; hpia ; >
+      au < exists ; exists ; 2009 ; HIP International Volume 19 ; 19 ; hpia ; >
+      au < exists ; exists ; 2010 ; HIP International Volume 20 ; 20 ; hpia ; >
+      au < exists ; exists ; 2011 ; HIP International Volume 21 ; 21 ; hpia ; >
+      au < exists ; exists ; 2012 ; HIP International Volume 22 ; 22 ; hpia ; >
+      au < exists ; exists ; 2013 ; HIP International Volume 23 ; 23 ; hpia ; >
+      au < exists ; exists ; 2014 ; HIP International Volume 24 ; 24 ; hpia ; >
+      au < exists ; exists ; 2015 ; HIP International Volume 25 ; 25 ; hpia ; >
+      au < exists ; exists ; 2016 ; HIP International Volume 26 ; 26 ; hpia ; >
+      au < exists ; exists ; 2017 ; HIP International Volume 27 ; 27 ; hpia ; >
+  }
+
+  {
+
+    title <
       name = Hispanic Health Care International ;
       issn = 1540-4153 ;
       eissn = 1938-8993
@@ -13863,9 +13879,7 @@
 
     #param[base_url] = http://hjb.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1979 ; Hispanic Journal of Behavioral Sciences Volume 1 ; 1 ; hjba ; >
       au < manifest ; exists ; 1980 ; Hispanic Journal of Behavioral Sciences Volume 2 ; 2 ; hjba ; >
@@ -18734,6 +18748,33 @@
   {
 
     title <
+      name = Journal of Applied Biomaterials & Functional Materials ;
+      eissn = 2280-8000
+    >
+
+    #param[journal_id] = jbf
+
+      au < exists ; exists ; 2003 ; Journal of Applied Biomaterials & Functional Materials Volume 1 ; 1 ; jbfb ; >
+      au < exists ; exists ; 2004 ; Journal of Applied Biomaterials & Functional Materials Volume 2 ; 2 ; jbfb ; >
+      au < exists ; exists ; 2005 ; Journal of Applied Biomaterials & Functional Materials Volume 3 ; 3 ; jbfb ; >
+      au < exists ; exists ; 2006 ; Journal of Applied Biomaterials & Functional Materials Volume 4 ; 4 ; jbfb ; >
+      au < exists ; exists ; 2007 ; Journal of Applied Biomaterials & Functional Materials Volume 5 ; 5 ; jbfb ; >
+      au < exists ; exists ; 2008 ; Journal of Applied Biomaterials & Functional Materials Volume 6 ; 6 ; jbfb ; >
+      au < exists ; exists ; 2009 ; Journal of Applied Biomaterials & Functional Materials Volume 7 ; 7 ; jbfb ; >
+      au < exists ; exists ; 2010 ; Journal of Applied Biomaterials & Functional Materials Volume 8 ; 8 ; jbfb ; >
+      au < doesNotExist ; doesNotExist ; 2011 ; Journal of Applied Biomaterials & Functional Materials Volume 9 ; 9 ; jbfa ; >
+      au < doesNotExist ; doesNotExist ; 2012 ; Journal of Applied Biomaterials & Functional Materials Volume 10 ; 10 ; jbfa ; >
+      au < doesNotExist ; doesNotExist ; 2013 ; Journal of Applied Biomaterials & Functional Materials Volume 11 ; 11 ; jbfa ; >
+      au < exists ; exists ; 2014 ; Journal of Applied Biomaterials & Functional Materials Volume 12 ; 12 ; jbfa ; >
+      au < exists ; exists ; 2015 ; Journal of Applied Biomaterials & Functional Materials Volume 13 ; 13 ; jbfa ; >
+      au < exists ; exists ; 2016 ; Journal of Applied Biomaterials & Functional Materials Volume 14 ; 14 ; jbfa ; >
+      au < exists ; exists ; 2017 ; Journal of Applied Biomaterials & Functional Materials Volume 15 ; 15 ; jbfa ; >
+
+  }
+
+  {
+
+    title <
       name = Journal of Applied Gerontology ;
       issn = 0733-4648 ;
       eissn = 1552-4523
@@ -18741,9 +18782,7 @@
 
     #param[base_url] = http://jag.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1982 ; Journal of Applied Gerontology Volume 1 ; 1 ; jaga ; >
       au < manifest ; exists ; 1983 ; Journal of Applied Gerontology Volume 2 ; 2 ; jaga ; >
@@ -18820,7 +18859,6 @@
     #param[base_url] = http://jas.sagepub.com/
     # earlier volumes at Brill
 
-    
     {
 
       au < manifest ; exists ; 2002 ; Journal of Asian and African Studies Volume 37 ; 37 ; jasa ; >
@@ -18873,7 +18911,6 @@
 
     {
 
-
       au < doNotProcess ; doNotProcess ; 2010 ; Journal of Asthma & Allergy Educators Volume 1 ; 1 ; jaaa ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Journal of Asthma & Allergy Educators Volume 2 ; 2 ; jaaa ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Journal of Asthma & Allergy Educators Volume 3 ; 3 ; jaaa ; >
@@ -18893,9 +18930,7 @@
 
     #param[base_url] = http://jad.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1996 ; Journal of Attention Disorders Volume 1 ; 1 ; jada ; >
       au < manifest ; exists ; 1997 ; Journal of Attention Disorders Volume 2 ; 2 ; jada ; >
@@ -18933,9 +18968,7 @@
 
     #param[base_url] = http://jbc.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1986 ; Journal of Bioactive and Compatible Polymers Volume 1 ; 1 ; jbca ; >
       au < manifest ; exists ; 1987 ; Journal of Bioactive and Compatible Polymers Volume 2 ; 2 ; jbca ; >
@@ -18984,9 +19017,7 @@
 
     #param[base_url] = http://jbr.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1986 ; Journal of Biological Rhythms Volume 1 ; 1 ; jbra ; >
       au < manifest ; exists ; 1987 ; Journal of Biological Rhythms Volume 2 ; 2 ; jbra ; >
@@ -19084,9 +19115,7 @@
 
     #param[base_url] = http://jbx.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1996 ; Journal of Biomolecular Screening Volume 1 ; 1 ; jbxa ; >
       au < manifest ; exists ; 1997 ; Journal of Biomolecular Screening Volume 2 ; 2 ; jbxa ; >
@@ -19125,9 +19154,7 @@
 
     #param[base_url] = http://jbp.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1974-1975 ; Journal of Black Psychology Volume 1 ; 1 ; jbpa ; >
       au < manifest ; exists ; 1975-1976 ; Journal of Black Psychology Volume 2 ; 2 ; jbpa ; >
@@ -19187,9 +19214,7 @@
 
     #param[base_url] = http://jbs.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1970-1971 ; Journal of Black Studies Volume 1 ; 1 ; jbsa ; >
       au < manifest ; exists ; 1971-1972 ; Journal of Black Studies Volume 2 ; 2 ; jbsa ; >
@@ -19308,9 +19333,7 @@
 
     #param[base_url] = http://jbt.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1987 ; Journal of Business and Technical Communication Volume 1 ; 1 ; jbta ; >
       au < manifest ; exists ; 1988 ; Journal of Business and Technical Communication Volume 2 ; 2 ; jbta ; >
@@ -19359,9 +19382,7 @@
     #param[base_url] = http://job.sagepub.com/
     comment[continued_by] = 2329-4884
 
-    
     {
-
 
       au < manifest ; exists ; 1963 ; Journal of Business Communication Volume 1 ; 1 ; joba ; >
       au < manifest ; exists ; 1965 ; Journal of Business Communication Volume 2 ; 2 ; joba ; >
@@ -19450,9 +19471,7 @@
 
     #param[base_url] = http://cpt.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1996 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 1 ; 1 ; cpta ; >
       au < manifest ; exists ; 1997 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 2 ; 2 ; cpta ; >
@@ -19491,9 +19510,7 @@
 
     #param[base_url] = http://jca.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1993 ; Journal of Career Assessment Volume 1 ; 1 ; jcaa ; >
       au < manifest ; exists ; 1994 ; Journal of Career Assessment Volume 2 ; 2 ; jcaa ; >
@@ -19535,9 +19552,7 @@
 
     #param[base_url] = http://jcd.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1972-1973 ; Journal of Career Development Volume 1 ; 1 ; jcda ; >
       au < manifest ; exists ; 1975-1976 ; Journal of Career Development Volume 2 ; 2 ; jcda ; >
@@ -19597,9 +19612,7 @@
 
     #param[base_url] = http://jel.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1998 ; Journal of Cases in Educational Leadership Volume 1 ; 1 ; jela ; >
       au < manifest ; exists ; 1999 ; Journal of Cases in Educational Leadership Volume 2 ; 2 ; jela ; >
@@ -19636,9 +19649,7 @@
 
     #param[base_url] = http://cel.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1965 ; Journal of Cellular Plastics Volume 1 ; 1 ; cela ; >
       au < manifest ; exists ; 1966 ; Journal of Cellular Plastics Volume 2 ; 2 ; cela ; >
@@ -19740,9 +19751,7 @@
 
     #param[base_url] = http://chc.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1997 ; Journal of Child Health Care Volume 1 ; 1 ; chca ; >
       au < manifest ; exists ; 1998 ; Journal of Child Health Care Volume 2 ; 2 ; chca ; >
@@ -19780,9 +19789,7 @@
 
     #param[base_url] = http://jcn.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1986 ; Journal of Child Neurology Volume 1 ; 1 ; jcna ; >
       au < manifest ; exists ; 1987 ; Journal of Child Neurology Volume 2 ; 2 ; jcna ; >
@@ -19849,9 +19856,7 @@
 
     #param[base_url] = http://jcs.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 2001 ; Journal of Classical Sociology Volume 1 ; 1 ; jcsa ; >
       au < manifest ; exists ; 2002 ; Journal of Classical Sociology Volume 2 ; 2 ; jcsa ; >
@@ -19885,7 +19890,6 @@
     #param[base_url] = http://edm.sagepub.com/
 
     {
-
 
       au < manifest ; exists ; 2007 ; Journal of Cognitive Engineering and Decision Making Volume 1 ; 1 ; edma ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Cognitive Engineering and Decision Making Volume 2 ; 2 ; edma ; >
@@ -19946,7 +19950,6 @@
     #param[base_url] = http://jcl.sagepub.com/
 
     {
-
 
       au < manifest ; exists ; 1966 ; The Journal of Commonwealth Literature Volume 1 ; 1 ; jcla ; >
       au < manifest ; exists ; 1967 ; The Journal of Commonwealth Literature Volume 2 ; 2 ; jcla ; >
@@ -20017,7 +20020,6 @@
 
     {
 
-
       au < manifest ; exists ; 1974 ; Journal of Communication Inquiry Volume 1 ; 1 ; jcia ; >
       au < manifest ; exists ; 1976 ; Journal of Communication Inquiry Volume 2 ; 2 ; jcia ; >
       au < manifest ; exists ; 1977 ; Journal of Communication Inquiry Volume 3 ; 3 ; jcia ; >
@@ -20074,9 +20076,7 @@
 
     #param[base_url] = http://jcm.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1967 ; Journal of Composite Materials Volume 1 ; 1 ; jcma ; >
       au < manifest ; exists ; 1968 ; Journal of Composite Materials Volume 2 ; 2 ; jcma ; >
@@ -20166,9 +20166,7 @@
 
     #param[base_url] = http://jcr.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1957 ; Journal of Conflict Resolution Volume 1 ; 1 ; jcra ; >
       au < manifest ; exists ; 1958 ; Journal of Conflict Resolution Volume 2 ; 2 ; jcrb ; >
@@ -20246,9 +20244,7 @@
 
     #param[base_url] = http://joc.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 2001 ; Journal of Consumer Culture Volume 1 ; 1 ; joca ; >
       au < manifest ; exists ; 2002 ; Journal of Consumer Culture Volume 2 ; 2 ; joca ; >
@@ -20282,9 +20278,7 @@
 
     #param[base_url] = http://ccj.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1978 ; Journal of Contemporary Criminal Justice Volume 1 ; 1 ; ccja ; >
       au < manifest ; exists ; 1981 ; Journal of Contemporary Criminal Justice Volume 2 ; 2 ; ccja ; >
@@ -20334,9 +20328,7 @@
 
     #param[base_url] = http://jce.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1972 ; Journal of Contemporary Ethnography Volume 1 ; 1 ; jcea ; >
       au < manifest ; exists ; 1973 ; Journal of Contemporary Ethnography Volume 2 ; 2 ; jcea ; >
@@ -20399,9 +20391,7 @@
 
     #param[base_url] = http://jch.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1966 ; Journal of Contemporary History Volume 1 ; 1 ; jcha ; >
       au < manifest ; exists ; 1967 ; Journal of Contemporary History Volume 2 ; 2 ; jcha ; >
@@ -20470,9 +20460,7 @@
 
     #param[base_url] = http://jcx.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1994 ; Journal of Correctional Health Care Volume 1 ; 1 ; jcxa ; >
       au < manifest ; exists ; 1995 ; Journal of Correctional Health Care Volume 2 ; 2 ; jcxa ; >
@@ -20527,9 +20515,7 @@
 
     #param[base_url] = http://crc.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 2006 ; Journal of Creative Communications Volume 1 ; 1 ; crca ; >
       au < manifest ; exists ; 2007 ; Journal of Creative Communications Volume 2 ; 2 ; crca ; >
@@ -20587,9 +20573,7 @@
 
     #param[base_url] = http://jcc.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1970 ; Journal of Cross-Cultural Psychology Volume 1 ; 1 ; jcca ; >
       au < manifest ; exists ; 1971 ; Journal of Cross-Cultural Psychology Volume 2 ; 2 ; jcca ; >
@@ -20679,9 +20663,7 @@
 
     #param[base_url] = http://dms.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 2004 ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 1 ; 1 ; dmsa ; >
       au < manifest ; exists ; 2005 ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 2 ; 2 ; dmsa ; >
@@ -20712,9 +20694,7 @@
 
     #param[base_url] = http://jdr.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1919 ; Journal of Dental Research Volume 1 ; 1 ; jdrb ; >
       au < manifest ; exists ; 1920 ; Journal of Dental Research Volume 2 ; 2 ; jdrb ; >
@@ -20841,9 +20821,7 @@
 
     #param[base_url] = http://jds.sagepub.com/
 
-    
     {
-
 
       au < doesNotExist ; doesNotExist ; 0 ; Journal of Developing Societies Volume 17 ; 17 ; jdsa ; >
       au < manifest ; exists ; 2002 ; Journal of Developing Societies Volume 18 ; 18 ; jdsa ; >
@@ -20875,7 +20853,6 @@
       >
 
         #param[base_url] = http://dst.sagepub.com/
-
 
         au < manifest ; exists ; 2007 ; Journal of Diabetes Science and Technology Volume 1 ; 1 ; dsta ; >
         au < doNotProcess ; doNotProcess ; 2008 ; Journal of Diabetes Science and Technology Volume 2 ; 2 ; dsta ; >
@@ -20953,9 +20930,7 @@
 
     #param[base_url] = http://dps.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1990 ; Journal of Disability Policy Studies Volume 1 ; 1 ; dpsa ; >
       au < manifest ; exists ; 1991 ; Journal of Disability Policy Studies Volume 2 ; 2 ; dpsa ; >
@@ -21064,9 +21039,7 @@
 
     #param[base_url] = http://jea.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1981 ; The Journal of Early Adolescence Volume 1 ; 1 ; jeaa ; >
       au < manifest ; exists ; 1982 ; The Journal of Early Adolescence Volume 2 ; 2 ; jeaa ; >
@@ -21120,9 +21093,7 @@
 
     #param[base_url] = http://ecl.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 2001 ; Journal of Early Childhood Literacy Volume 1 ; 1 ; ecla ; >
       au < manifest ; exists ; 2002 ; Journal of Early Childhood Literacy Volume 2 ; 2 ; ecla ; >
@@ -21157,9 +21128,7 @@
 
     #param[base_url] = http://ecr.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 2003 ; Journal of Early Childhood Research Volume 1 ; 1 ; ecra ; >
       au < manifest ; exists ; 2004 ; Journal of Early Childhood Research Volume 2 ; 2 ; ecra ; >
@@ -21192,9 +21161,7 @@
 
     #param[base_url] = http://jei.sagepub.com/
 
-    
     {
-
 
       au < doesNotExist ; doesNotExist ; 0 ; Journal of Early Intervention Volume 1 ; 1 ; jeia ; >
       au < manifest ; exists ; 1981 ; Journal of Early Intervention Volume 2 ; 2 ; jeia ; >
@@ -21250,9 +21217,7 @@
 
     #param[base_url] = http://jsd.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 2007 ; Journal of Education for Sustainable Development Volume 1 ; 1 ; jsda ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Education for Sustainable Development Volume 2 ; 2 ; jsda ; >
@@ -21280,9 +21245,7 @@
 
     #param[base_url] = http://jeb.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1976 ; Journal of Educational and Behavioral Statistics Volume 1 ; 1 ; jeba ; >
       au < manifest ; exists ; 1977 ; Journal of Educational and Behavioral Statistics Volume 2 ; 2 ; jeba ; >
@@ -21578,6 +21541,27 @@
 
     }
 
+  }
+
+  {
+
+    title <
+      name = Journal of Endometriosis and Pelvic Pain Disorders ;
+      issn = 2284-0265 ;
+      eissn = 2284-0273
+    >
+
+      #param[journal_id] = pev
+
+      au < exists ; exists ; 2009 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 1 ; 1 ; pevb ; >
+      au < exists ; exists ; 2010 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 2 ; 2 ; pevb ; >
+      au < exists ; exists ; 2011 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 3 ; 3 ; pevb ; >
+      au < exists ; exists ; 2012 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 4 ; 4 ; pevb ; >
+      au < exists ; exists ; 2013 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 5 ; 5 ; peva ; >
+      au < exists ; exists ; 2014 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 6 ; 6 ; peva ; >
+      au < exists ; exists ; 2015 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 7 ; 7 ; peva ; >
+      au < exists ; exists ; 2016 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 8 ; 8 ; peva ; >
+      au < exists ; exists ; 2017 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 9 ; 9 ; peva ; >
   }
 
   {
@@ -21929,9 +21913,7 @@
 
     #param[base_url] = http://jfh.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1976 ; Journal of Family History Volume 1 ; 1 ; jfha ; >
       au < manifest ; exists ; 1977 ; Journal of Family History Volume 2 ; 2 ; jfha ; >
@@ -21990,9 +21972,7 @@
 
     #param[base_url] = http://jfi.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1980 ; Journal of Family Issues Volume 1 ; 1 ; jfia ; >
       au < manifest ; exists ; 1981 ; Journal of Family Issues Volume 2 ; 2 ; jfia ; >
@@ -22047,9 +22027,7 @@
 
     #param[base_url] = http://jfn.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1995 ; Journal of Family Nursing Volume 1 ; 1 ; jfna ; >
       au < manifest ; exists ; 1996 ; Journal of Family Nursing Volume 2 ; 2 ; jfna ; >
@@ -22090,7 +22068,6 @@
       #param[base_url] = http://jfm.sagepub.com/
 
     {
-
 
       au < manifest ; exists ; 1999 ; Journal of Feline Medicine and Surgery Volume 1 ; 1 ; jfma ; >
       au < manifest ; exists ; 2000 ; Journal of Feline Medicine and Surgery Volume 2 ; 2 ; jfma ; >
@@ -22141,9 +22118,7 @@
 
     #param[base_url] = http://jfe.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1989 ; Journal of Fire Protection Engineering Volume 1 ; 1 ; jfea ; >
       au < manifest ; exists ; 1990 ; Journal of Fire Protection Engineering Volume 2 ; 2 ; jfea ; >
@@ -22183,9 +22158,7 @@
 
     #param[base_url] = http://jfs.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1983 ; Journal of Fire Sciences Volume 1 ; 1 ; jfse ; >
       au < manifest ; exists ; 1984 ; Journal of Fire Sciences Volume 2 ; 2 ; jfse ; >
@@ -22409,6 +22382,7 @@
     }
 
   }
+
   {
 
     title <
@@ -22420,7 +22394,6 @@
     #param[base_url] = http://hsb.sagepub.com/
 
     {
-
 
       au < manifest ; exists ; 2004 ; Journal of Health and Social Behavior Volume 45 ; 45 ; hsbb ; >
       au < manifest ; exists ; 2005 ; Journal of Health and Social Behavior Volume 46 ; 46 ; hsbb ; >
@@ -22451,9 +22424,7 @@
 
     #param[base_url] = http://jhm.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1999 ; Journal of Health Management Volume 1 ; 1 ; jhma ; >
       au < manifest ; exists ; 2000 ; Journal of Health Management Volume 2 ; 2 ; jhma ; >
@@ -22489,9 +22460,7 @@
 
     #param[base_url] = http://hpq.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1996 ; Journal of Health Psychology Volume 1 ; 1 ; hpqa ; >
       au < manifest ; exists ; 1997 ; Journal of Health Psychology Volume 2 ; 2 ; hpqa ; >
@@ -22544,9 +22513,7 @@
 
     #param[base_url] = http://jhh.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 2002 ; Journal of Hispanic Higher Education Volume 1 ; 1 ; jhha ; >
       au < manifest ; exists ; 2003 ; Journal of Hispanic Higher Education Volume 2 ; 2 ; jhha ; >
@@ -22580,7 +22547,6 @@
     #param[base_url] = http://jhc.sagepub.com/
 
     {
-
 
       au < manifest ; exists ; 1953 ; Journal of Histochemistry and Cytochemistry Volume 1 ; 1 ; jhca ; >
       au < manifest ; exists ; 1954 ; Journal of Histochemistry and Cytochemistry Volume 2 ; 2 ; jhca ; >
@@ -22695,9 +22661,7 @@
 
     #param[base_url] = http://jhn.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1983 ; Journal of Holistic Nursing Volume 1 ; 1 ; jhna ; >
       au < manifest ; exists ; 1984 ; Journal of Holistic Nursing Volume 2 ; 2 ; jhna ; >
@@ -22749,9 +22713,7 @@
 
     #param[base_url] = http://jht.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1976 ; Journal of Hospitality & Tourism Research Volume 1 ; 1 ; jhta ; >
       au < manifest ; exists ; 1977 ; Journal of Hospitality & Tourism Research Volume 2 ; 2 ; jhta ; >
@@ -22809,9 +22771,7 @@
 
     #param[base_url] = http://jhl.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1985 ; Journal of Human Lactation Volume 1 ; 1 ; jhla ; >
       au < manifest ; exists ; 1986 ; Journal of Human Lactation Volume 2 ; 2 ; jhla ; >
@@ -22861,9 +22821,7 @@
 
     #param[base_url] = http://jhv.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1995 ; Journal of Human Values Volume 1 ; 1 ; jhva ; >
       au < manifest ; exists ; 1996 ; Journal of Human Values Volume 2 ; 2 ; jhva ; >
@@ -22903,9 +22861,7 @@
 
     #param[base_url] = http://jhp.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1961 ; Journal of Humanistic Psychology Volume 1 ; 1 ; jhpa ; >
       au < manifest ; exists ; 1962 ; Journal of Humanistic Psychology Volume 2 ; 2 ; jhpa ; >
@@ -22997,9 +22953,7 @@
 
     #param[base_url] = http://jir.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1959 ; Journal of Industrial Relations Volume 1 ; 1 ; jira ; >
       au < manifest ; exists ; 1960 ; Journal of Industrial Relations Volume 2 ; 2 ; jira ; >
@@ -23075,9 +23029,7 @@
 
     #param[base_url] = http://jit.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1971-1972 ; Journal of Industrial Textiles Volume 1 ; 1 ; jita ; >
       au < manifest ; exists ; 1972-1973 ; Journal of Industrial Textiles Volume 2 ; 2 ; jita ; >
@@ -23144,9 +23096,7 @@
 
     #param[base_url] = http://bji.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 2000 ; British Journal of Infection Control Volume 1 ; 1 ; bjia ; >
       au < manifest ; exists ; 2001 ; British Journal of Infection Control Volume 2 ; 2 ; bjia ; >
@@ -23174,9 +23124,7 @@
 
     #param[base_url] = http://bji.sagepub.com/
 
-    
     {
-
 
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Infection Prevention Volume 10 ; 10 ; bjib ; >
       au < doNotProcess ; doNotProcess ; 2010 ; Journal of Infection Prevention Volume 11 ; 11 ; bjib ; >
@@ -23202,9 +23150,7 @@
 
     #param[base_url] = http://jis.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1979 ; Journal of Information Science Volume 1 ; 1 ; jisa ; >
       au < manifest ; exists ; 1980 ; Journal of Information Science Volume 2 ; 2 ; jisa ; >
@@ -23302,9 +23248,7 @@
 
     #param[base_url] = http://jim.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1990 ; Journal of Intelligent Material Systems and Structures Volume 1 ; 1 ; jima ; >
       au < manifest ; exists ; 1991 ; Journal of Intelligent Material Systems and Structures Volume 2 ; 2 ; jima ; >
@@ -23349,9 +23293,7 @@
 
     #param[base_url] = http://jic.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1986 ; Journal of Intensive Care Medicine Volume 1 ; 1 ; jica ; >
       au < manifest ; exists ; 1987 ; Journal of Intensive Care Medicine Volume 2 ; 2 ; jica ; >
@@ -23494,9 +23436,7 @@
 
     #param[base_url] = http://jiv.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1986 ; Journal of Interpersonal Violence Volume 1 ; 1 ; jiva ; >
       au < manifest ; exists ; 1987 ; Journal of Interpersonal Violence Volume 2 ; 2 ; jiva ; >
@@ -23636,9 +23576,7 @@
 
     #param[base_url] = http://jls.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1982 ; Journal of Language and Social Psychology Volume 1 ; 1 ; jlsa ; >
       au < manifest ; exists ; 1983 ; Journal of Language and Social Psychology Volume 2 ; 2 ; jlsa ; >
@@ -23723,9 +23661,7 @@
 
     #param[base_url] = http://jlo.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1993 ; Journal of Leadership & Organizational Studies Volume 1 ; 1 ; jloa ; >
       au < manifest ; exists ; 1995 ; Journal of Leadership & Organizational Studies Volume 2 ; 2 ; jloa ; >
@@ -23765,9 +23701,7 @@
 
     #param[base_url] = http://ldx.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1968 ; Journal of Learning Disabilities Volume 1 ; 1 ; ldxa ; >
       au < manifest ; exists ; 1969 ; Journal of Learning Disabilities Volume 2 ; 2 ; ldxa ; >
@@ -23834,9 +23768,7 @@
 
     #param[base_url] = http://lis.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1969 ; Journal of Librarianship and Information Science Volume 1 ; 1 ; lisa ; >
       au < manifest ; exists ; 1970 ; Journal of Librarianship and Information Science Volume 2 ; 2 ; lisa ; >
@@ -23996,9 +23928,7 @@
 
     #param[base_url] = http://jmk.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1981 ; Journal of Macromarketing Volume 1 ; 1 ; jmka ; >
       au < manifest ; exists ; 1982 ; Journal of Macromarketing Volume 2 ; 2 ; jmka ; >
@@ -24052,9 +23982,7 @@
 
     #param[base_url] = http://jom.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1975 ; Journal of Management Volume 1 ; 1 ; joma ; >
       au < manifest ; exists ; 1976 ; Journal of Management Volume 2 ; 2 ; joma ; >
@@ -24114,9 +24042,7 @@
 
     #param[base_url] = http://jme.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1975 ; Journal of Management Education Volume 1 ; 1 ; jmea ; >
       au < manifest ; exists ; 1976 ; Journal of Management Education Volume 2 ; 2 ; jmea ; >
@@ -24174,9 +24100,7 @@
 
     #param[base_url] = http://jmi.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1992 ; Journal of Management Inquiry Volume 1 ; 1 ; jmia ; >
       au < manifest ; exists ; 1993 ; Journal of Management Inquiry Volume 2 ; 2 ; jmia ; >
@@ -24219,9 +24143,7 @@
 
     #param[base_url] = http://jmd.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1979 ; Journal of Marketing Education Volume 1 ; 1 ; jmda ; >
       au < manifest ; exists ; 1980 ; Journal of Marketing Education Volume 2 ; 2 ; jmda ; >
@@ -24277,9 +24199,7 @@
 
     #param[base_url] = http://mcu.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1996 ; Journal of Material Culture Volume 1 ; 1 ; mcua ; >
       au < manifest ; exists ; 1997 ; Journal of Material Culture Volume 2 ; 2 ; mcua ; >
@@ -24389,9 +24309,7 @@
 
     #param[base_url] = http://mmr.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 2007 ; Journal of Mixed Methods Research Volume 1 ; 1 ; mmra ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Mixed Methods Research Volume 2 ; 2 ; mmra ; >
@@ -24488,6 +24406,20 @@
       au < frozen ; exists ; 2015 ; Journal of Near Infrared Spectroscopy Volume 23 ; 23 ; jnsa ; >
       au < frozen ; exists ; 2016 ; Journal of Near Infrared Spectroscopy Volume 24 ; 24 ; jnsa ; >
       au < crawling ; exists ; 2017 ; Journal of Near Infrared Spectroscopy Volume 25 ; 25 ; jnsa ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Onco-Nephrology ;
+      issn = 2399-3693 ;
+      eissn = 2399-3707
+    >
+
+    #param[jounral_id] = jnp
+
+      au < exists ; exists ; 2017 ; Journal of Onco-Nephrology Volume 1 ; 1 ; jnpa ; >
 
   }
 
@@ -24899,7 +24831,6 @@
 
     {
 
-
       au < manifest ; exists ; 2001 ; Journal of Pharmacy Technology Volume 17 ; 17 ; pmta ; >
       au < manifest ; exists ; 2002 ; Journal of Pharmacy Technology Volume 18 ; 18 ; pmta ; >
       au < manifest ; exists ; 2003 ; Journal of Pharmacy Technology Volume 19 ; 19 ; pmta ; >
@@ -24932,9 +24863,7 @@
 
     #param[base_url] = http://jpe.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1981 ; Journal of Planning Education and Research Volume 1 ; 1 ; jpea ; >
       au < manifest ; exists ; 1982 ; Journal of Planning Education and Research Volume 2 ; 2 ; jpea ; >
@@ -24988,9 +24917,7 @@
 
     #param[base_url] = http://jph.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 2002 ; Journal of Planning History Volume 1 ; 1 ; jpha ; >
       au < manifest ; exists ; 2003 ; Journal of Planning History Volume 2 ; 2 ; jpha ; >
@@ -25023,9 +24950,7 @@
 
     #param[base_url] = http://jpl.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1985 ; Journal of Planning Literature Volume 1 ; 1 ; jpla ; >
       au < manifest ; exists ; 1987 ; Journal of Planning Literature Volume 2 ; 2 ; jpla ; >
@@ -25074,9 +24999,7 @@
 
     #param[base_url] = http://jpf.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1985 ; Journal of Plastic Film and Sheeting Volume 1 ; 1 ; jpfa ; >
       au < manifest ; exists ; 1986 ; Journal of Plastic Film and Sheeting Volume 2 ; 2 ; jpfa ; >
@@ -25126,9 +25049,7 @@
 
     #param[base_url] = http://pbi.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1999 ; Journal of Positive Behavior Interventions Volume 1 ; 1 ; pbia ; >
       au < manifest ; exists ; 2000 ; Journal of Positive Behavior Interventions Volume 2 ; 2 ; pbia ; >
@@ -25165,7 +25086,6 @@
     #param[base_url] = http://jpc.sagepub.com/
 
     {
-
 
       au < doNotProcess ; doNotProcess ; 2010 ; Journal of Primary Care & Community Health Volume 1 ; 1 ; jpca ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Journal of Primary Care & Community Health Volume 2 ; 2 ; jpca ; >
@@ -25224,9 +25144,7 @@
 
     #param[base_url] = http://jpa.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1983 ; Journal of Psychoeducational Assessment Volume 1 ; 1 ; jpaa ; >
       au < manifest ; exists ; 1984 ; Journal of Psychoeducational Assessment Volume 2 ; 2 ; jpaa ; >
@@ -25278,9 +25196,7 @@
 
     #param[base_url] = http://jop.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1987 ; Journal of Psychopharmacology Volume 1 ; 1 ; jopa ; >
       au < manifest ; exists ; 1988 ; Journal of Psychopharmacology Volume 2 ; 2 ; jopa ; >
@@ -25328,9 +25244,7 @@
 
     #param[base_url] = http://jrp.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1982 ; Journal of Reinforced Plastics and Composites Volume 1 ; 1 ; jrpa ; >
       au < manifest ; exists ; 1983 ; Journal of Reinforced Plastics and Composites Volume 2 ; 2 ; jrpa ; >
@@ -25399,10 +25313,7 @@
 
     #param[base_url] = http://jra.sagepub.com/
 
-    
     {
-
-      comment[notReady] = consistent low poll
 
       au < manifest ; exists ; 2000 ; Journal of the Renin-Angiotensin-Aldosterone System Volume 1 ; 1 ; jraa ; >
       au < manifest ; exists ; 2001 ; Journal of the Renin-Angiotensin-Aldosterone System Volume 2 ; 2 ; jraa ; >
@@ -25453,9 +25364,7 @@
 
     #param[base_url] = http://jrc.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1964 ; Journal of Research in Crime and Delinquency Volume 1 ; 1 ; jrca ; >
       au < manifest ; exists ; 1965 ; Journal of Research in Crime and Delinquency Volume 2 ; 2 ; jrca ; >
@@ -25526,9 +25435,7 @@
 
     #param[base_url] = http://jri.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 2002 ; Journal of Research in International Education Volume 1 ; 1 ; jria ; >
       au < manifest ; exists ; 2003 ; Journal of Research in International Education Volume 2 ; 2 ; jria ; >
@@ -25561,9 +25468,7 @@
 
     #param[base_url] = http://jrm.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1953 ; Journal of Research in Music Education Volume 1 ; 1 ; jrma ; >
       au < manifest ; exists ; 1954 ; Journal of Research in Music Education Volume 2 ; 2 ; jrma ; >
@@ -25645,9 +25550,7 @@
 
     #param[base_url] = http://jrn.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1996 ; Journal of Research in Nursing Volume 1 ; 1 ; jrna ; >
       au < manifest ; exists ; 1997 ; Journal of Research in Nursing Volume 2 ; 2 ; jrna ; >
@@ -25709,9 +25612,7 @@
 
     #param[base_url] = http://jsm.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1999 ; Journal of Sandwich Structures and Materials Volume 1 ; 1 ; jsma ; >
       au < manifest ; exists ; 2000 ; Journal of Sandwich Structures and Materials Volume 2 ; 2 ; jsma ; >
@@ -25777,6 +25678,22 @@
   {
 
     title <
+      name = Journal of Scleroderma and Related Disorders ;
+      issn = 2397-1983 ;
+      eissn = 2397-1991
+    >
+
+    #param[journal_id] = jso
+
+      au < exists ; exists ; 2016 ; Journal of Scleroderma and Related Disorders Volume 1 ; 1 ; jsoa ; >
+      au < exists ; exists ; 2017 ; Journal of Scleroderma and Related Disorders Volume 2 ; 2 ; jsoa ; >
+      au < exists ; exists ; 2017 ; Journal of Scleroderma and Related Disorders Volume 3 ; 3 ; jsoa ; >
+
+  }
+
+  {
+
+    title <
       name = Journal of Service Research ;
       issn = 1094-6705 ;
       eissn = 1552-7379
@@ -25784,9 +25701,7 @@
 
     #param[base_url] = http://jsr.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1998 ; Journal of Service Research Volume 1 ; 1 ; jsra ; >
       au < manifest ; exists ; 1999 ; Journal of Service Research Volume 2 ; 2 ; jsra ; >
@@ -25823,9 +25738,7 @@
 
     #param[base_url] = http://spr.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1984 ; Journal of Social and Personal Relationships Volume 1 ; 1 ; spra ; >
       au < manifest ; exists ; 1985 ; Journal of Social and Personal Relationships Volume 2 ; 2 ; spra ; >
@@ -25876,9 +25789,7 @@
 
     #param[base_url] = http://jsa.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 2001 ; Journal of Social Archaeology Volume 1 ; 1 ; jsaa ; >
       au < manifest ; exists ; 2002 ; Journal of Social Archaeology Volume 2 ; 2 ; jsaa ; >
@@ -25912,9 +25823,7 @@
 
     #param[base_url] = http://jsw.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 2001 ; Journal of Social Work Volume 1 ; 1 ; jswa ; >
       au < manifest ; exists ; 2002 ; Journal of Social Work Volume 2 ; 2 ; jswa ; >
@@ -25948,9 +25857,7 @@
 
     #param[base_url] = http://jos.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1965 ; Journal of Sociology Volume 1 ; 1 ; josa ; >
       au < manifest ; exists ; 1966 ; Journal of Sociology Volume 2 ; 2 ; josa ; >
@@ -29093,9 +29000,36 @@
     {
 
      title <
+       name = Medicine Access @ Point of Care ;
+       eissn = 2399-2026
+     >
+
+        #param[journal_id] = map
+
+        au < exists ; exists ; 2017 ; Medicine Access @ Point of Care Volume 1 ; 1 ; mapa ; >
+        au < exists ; exists ; 2018 ; Medicine Access @ Point of Care Volume 2 ; 2 ; mapa ; >
+    }
+
+    {
+
+     title <
+       name = Nephrology @ Point of Care ;
+       eissn = 2059-3007
+     >
+
+        #param[journal_id] = npc
+
+        au < exists ; exists ; 2015 ; Nephrology @ Point of Care Volume 1 ; 1 ; npca ; >
+        au < exists ; exists ; 2016 ; Nephrology @ Point of Care Volume 2 ; 2 ; npca ; >
+        au < exists ; exists ; 2017 ; Nephrology @ Point of Care Volume 3 ; 3 ; npca ; >
+    }
+
+    {
+
+     title <
        name = Medico-Legal Journal ;
-       issn =  0025-8172 ;
-       eissn =  2042-1834
+       issn = 0025-8172 ;
+       eissn = 2042-1834
      >
 
         #param[base_url] = http://mlj.sagepub.com/

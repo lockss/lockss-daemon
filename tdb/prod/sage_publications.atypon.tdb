@@ -14142,6 +14142,34 @@
     }
 
     {
+
+      title <
+        name = HIP International ;
+        issn = 1120-7000 ;
+        eissn = 1724-6067
+      >
+
+        #param[journal_id] = hpi
+
+        au < exists ; 2002 ; HIP International Volume 12 ; 12 ; hpia >
+        au < exists ; 2003 ; HIP International Volume 13 ; 13 ; hpia >
+        au < exists ; 2004 ; HIP International Volume 14 ; 14 ; hpia >
+        au < exists ; 2005 ; HIP International Volume 15 ; 15 ; hpia >
+        au < exists ; 2006 ; HIP International Volume 16 ; 16 ; hpia >
+        au < exists ; 2007 ; HIP International Volume 17 ; 17 ; hpia >
+        au < exists ; 2008 ; HIP International Volume 18 ; 18 ; hpia >
+        au < exists ; 2009 ; HIP International Volume 19 ; 19 ; hpia >
+        au < exists ; 2010 ; HIP International Volume 20 ; 20 ; hpia >
+        au < exists ; 2011 ; HIP International Volume 21 ; 21 ; hpia >
+        au < exists ; 2012 ; HIP International Volume 22 ; 22 ; hpia >
+        au < exists ; 2013 ; HIP International Volume 23 ; 23 ; hpia >
+        au < exists ; 2014 ; HIP International Volume 24 ; 24 ; hpia >
+        au < exists ; 2015 ; HIP International Volume 25 ; 25 ; hpia >
+        au < exists ; 2016 ; HIP International Volume 26 ; 26 ; hpia >
+        au < exists ; 2017 ; HIP International Volume 27 ; 27 ; hpia >
+    }
+
+    {
   
       title <
         name = Hispanic Health Care International ;
@@ -18445,6 +18473,33 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
     {
 
       title <
+        name = Journal of Applied Biomaterials & Functional Materials ;
+        eissn = 2280-8000
+      >
+
+      #param[journal_id] = jbf
+
+        au < exists ; 2003 ; Journal of Applied Biomaterials & Functional Materials Volume 1 ; 1 ; jbfb >
+        au < exists ; 2004 ; Journal of Applied Biomaterials & Functional Materials Volume 2 ; 2 ; jbfb >
+        au < exists ; 2005 ; Journal of Applied Biomaterials & Functional Materials Volume 3 ; 3 ; jbfb >
+        au < exists ; 2006 ; Journal of Applied Biomaterials & Functional Materials Volume 4 ; 4 ; jbfb >
+        au < exists ; 2007 ; Journal of Applied Biomaterials & Functional Materials Volume 5 ; 5 ; jbfb >
+        au < exists ; 2008 ; Journal of Applied Biomaterials & Functional Materials Volume 6 ; 6 ; jbfb >
+        au < exists ; 2009 ; Journal of Applied Biomaterials & Functional Materials Volume 7 ; 7 ; jbfb >
+        au < exists ; 2010 ; Journal of Applied Biomaterials & Functional Materials Volume 8 ; 8 ; jbfb >
+        au < doesNotExist ; 2011 ; Journal of Applied Biomaterials & Functional Materials Volume 9 ; 9 ; jbfa >
+        au < doesNotExist ; 2012 ; Journal of Applied Biomaterials & Functional Materials Volume 10 ; 10 ; jbfa >
+        au < doesNotExist ; 2013 ; Journal of Applied Biomaterials & Functional Materials Volume 11 ; 11 ; jbfa >
+        au < exists ; 2014 ; Journal of Applied Biomaterials & Functional Materials Volume 12 ; 12 ; jbfa >
+        au < exists ; 2015 ; Journal of Applied Biomaterials & Functional Materials Volume 13 ; 13 ; jbfa >
+        au < exists ; 2016 ; Journal of Applied Biomaterials & Functional Materials Volume 14 ; 14 ; jbfa >
+        au < exists ; 2017 ; Journal of Applied Biomaterials & Functional Materials Volume 15 ; 15 ; jbfa >
+
+    }
+
+    {
+
+      title <
         name = Journal of Applied Gerontology ;
         issn = 0733-4648 ;
         eissn = 1552-4523 ;
@@ -21437,42 +21492,63 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
     }
 
-  {
+    {
 
-    title <
-      name = Journal of Endovascular Therapy ;
-      issn = 1526-6028 ;
-      eissn = 1545-1550
-    >
+      title <
+        name = Journal of Endometriosis and Pelvic Pain Disorders ;
+        issn = 2284-0265 ;
+        eissn = 2284-0273
+      >
 
-      #param[base_url] = http://jet.sagepub.com/
+        #param[journal_id] = pev
 
-      au < manifest ; 1995 ; Journal of Endovascular Therapy Volume 1 ; 1 ; jeta >
-      au < manifest ; 1995 ; Journal of Endovascular Therapy Volume 2 ; 2 ; jeta >
-      au < manifest ; 1996 ; Journal of Endovascular Therapy Volume 3 ; 3 ; jeta >
-      au < manifest ; 1997 ; Journal of Endovascular Therapy Volume 4 ; 4 ; jeta >
-      au < manifest ; 1998 ; Journal of Endovascular Therapy Volume 5 ; 5 ; jeta >
-      au < manifest ; 1999 ; Journal of Endovascular Therapy Volume 6 ; 6 ; jeta >
-      au < manifest ; 2000 ; Journal of Endovascular Therapy Volume 7 ; 7 ; jeta >
-      au < manifest ; 2001 ; Journal of Endovascular Therapy Volume 8 ; 8 ; jeta >
-      au < manifest ; 2002 ; Journal of Endovascular Therapy Volume 9 ; 9 ; jeta >
-      au < manifest ; 2003 ; Journal of Endovascular Therapy Volume 10 ; 10 ; jeta >
-      au < manifest ; 2004 ; Journal of Endovascular Therapy Volume 11 ; 11 ; jeta >
-      au < manifest ; 2005 ; Journal of Endovascular Therapy Volume 12 ; 12 ; jeta >
-      au < manifest ; 2006 ; Journal of Endovascular Therapy Volume 13 ; 13 ; jeta >
-      au < manifest ; 2007 ; Journal of Endovascular Therapy Volume 14 ; 14 ; jeta >
-      au < released ; 2008 ; Journal of Endovascular Therapy Volume 15 ; 15 ; jeta >
-      au < released ; 2009 ; Journal of Endovascular Therapy Volume 16 ; 16 ; jeta >
-      au < released ; 2010 ; Journal of Endovascular Therapy Volume 17 ; 17 ; jeta >
-      au < released ; 2011 ; Journal of Endovascular Therapy Volume 18 ; 18 ; jeta >
-      au < released ; 2012 ; Journal of Endovascular Therapy Volume 19 ; 19 ; jeta >
-      au < released ; 2013 ; Journal of Endovascular Therapy Volume 20 ; 20 ; jeta >
-      au < doNotProcess ; 2014 ; Journal of Endovascular Therapy Volume 21 ; 21 ; jeta >
-      au < doNotProcess ; 2015 ; Journal of Endovascular Therapy Volume 22 ; 22 ; jeta >
-      au < released ; 2016 ; Journal of Endovascular Therapy Volume 23 ; 23 ; jeta >
-      au < manifest ; 2017 ; Journal of Endovascular Therapy Volume 24 ; 24 ; jeta >
+        au < exists ; 2009 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 1 ; 1 ; pevb >
+        au < exists ; 2010 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 2 ; 2 ; pevb >
+        au < exists ; 2011 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 3 ; 3 ; pevb >
+        au < exists ; 2012 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 4 ; 4 ; pevb >
+        au < exists ; 2013 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 5 ; 5 ; peva >
+        au < exists ; 2014 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 6 ; 6 ; peva >
+        au < exists ; 2015 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 7 ; 7 ; peva >
+        au < exists ; 2016 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 8 ; 8 ; peva >
+        au < exists ; 2017 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 9 ; 9 ; peva >
+    }
 
-  }
+    {
+
+      title <
+        name = Journal of Endovascular Therapy ;
+        issn = 1526-6028 ;
+        eissn = 1545-1550
+      >
+
+        #param[base_url] = http://jet.sagepub.com/
+
+        au < manifest ; 1995 ; Journal of Endovascular Therapy Volume 1 ; 1 ; jeta >
+        au < manifest ; 1995 ; Journal of Endovascular Therapy Volume 2 ; 2 ; jeta >
+        au < manifest ; 1996 ; Journal of Endovascular Therapy Volume 3 ; 3 ; jeta >
+        au < manifest ; 1997 ; Journal of Endovascular Therapy Volume 4 ; 4 ; jeta >
+        au < manifest ; 1998 ; Journal of Endovascular Therapy Volume 5 ; 5 ; jeta >
+        au < manifest ; 1999 ; Journal of Endovascular Therapy Volume 6 ; 6 ; jeta >
+        au < manifest ; 2000 ; Journal of Endovascular Therapy Volume 7 ; 7 ; jeta >
+        au < manifest ; 2001 ; Journal of Endovascular Therapy Volume 8 ; 8 ; jeta >
+        au < manifest ; 2002 ; Journal of Endovascular Therapy Volume 9 ; 9 ; jeta >
+        au < manifest ; 2003 ; Journal of Endovascular Therapy Volume 10 ; 10 ; jeta >
+        au < manifest ; 2004 ; Journal of Endovascular Therapy Volume 11 ; 11 ; jeta >
+        au < manifest ; 2005 ; Journal of Endovascular Therapy Volume 12 ; 12 ; jeta >
+        au < manifest ; 2006 ; Journal of Endovascular Therapy Volume 13 ; 13 ; jeta >
+        au < manifest ; 2007 ; Journal of Endovascular Therapy Volume 14 ; 14 ; jeta >
+        au < released ; 2008 ; Journal of Endovascular Therapy Volume 15 ; 15 ; jeta >
+        au < released ; 2009 ; Journal of Endovascular Therapy Volume 16 ; 16 ; jeta >
+        au < released ; 2010 ; Journal of Endovascular Therapy Volume 17 ; 17 ; jeta >
+        au < released ; 2011 ; Journal of Endovascular Therapy Volume 18 ; 18 ; jeta >
+        au < released ; 2012 ; Journal of Endovascular Therapy Volume 19 ; 19 ; jeta >
+        au < released ; 2013 ; Journal of Endovascular Therapy Volume 20 ; 20 ; jeta >
+        au < doNotProcess ; 2014 ; Journal of Endovascular Therapy Volume 21 ; 21 ; jeta >
+        au < doNotProcess ; 2015 ; Journal of Endovascular Therapy Volume 22 ; 22 ; jeta >
+        au < released ; 2016 ; Journal of Endovascular Therapy Volume 23 ; 23 ; jeta >
+        au < manifest ; 2017 ; Journal of Endovascular Therapy Volume 24 ; 24 ; jeta >
+
+    }
 
     {
 
@@ -24258,43 +24334,57 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
     }
 
-  {
+    {
 
-    title <
-      name = Journal of Near Infrared Spectroscopy ;
-      issn = 0967-0335 ;
-      eissn = 1751-6552
-    >
+      title <
+        name = Journal of Near Infrared Spectroscopy ;
+        issn = 0967-0335 ;
+        eissn = 1751-6552
+      >
 
-      #param[base_url] = http://jns.sagepub.com/
+        #param[base_url] = http://jns.sagepub.com/
 
-      au < manifest ; 1993 ; Journal of Near Infrared Spectroscopy Volume 1 ; 1 ; jnsa >
-      au < manifest ; 1994 ; Journal of Near Infrared Spectroscopy Volume 2 ; 2 ; jnsa >
-      au < manifest ; 1995 ; Journal of Near Infrared Spectroscopy Volume 3 ; 3 ; jnsa >
-      au < manifest ; 1996 ; Journal of Near Infrared Spectroscopy Volume 4 ; 4 ; jnsa >
-      au < manifest ; 1997 ; Journal of Near Infrared Spectroscopy Volume 5 ; 5 ; jnsa >
-      au < manifest ; 1998 ; Journal of Near Infrared Spectroscopy Volume 6 ; 6 ; jnsa >
-      au < manifest ; 1999 ; Journal of Near Infrared Spectroscopy Volume 7 ; 7 ; jnsa >
-      au < manifest ; 2000 ; Journal of Near Infrared Spectroscopy Volume 8 ; 8 ; jnsa >
-      au < manifest ; 2001 ; Journal of Near Infrared Spectroscopy Volume 9 ; 9 ; jnsa >
-      au < manifest ; 2002 ; Journal of Near Infrared Spectroscopy Volume 10 ; 10 ; jnsa >
-      au < manifest ; 2003 ; Journal of Near Infrared Spectroscopy Volume 11 ; 11 ; jnsa >
-      au < manifest ; 2004 ; Journal of Near Infrared Spectroscopy Volume 12 ; 12 ; jnsa >
-      au < manifest ; 2005 ; Journal of Near Infrared Spectroscopy Volume 13 ; 13 ; jnsa >
-      au < manifest ; 2006 ; Journal of Near Infrared Spectroscopy Volume 14 ; 14 ; jnsa >
-      au < manifest ; 2007 ; Journal of Near Infrared Spectroscopy Volume 15 ; 15 ; jnsa >
-      au < released ; 2008 ; Journal of Near Infrared Spectroscopy Volume 16 ; 16 ; jnsa >
-      au < released ; 2009 ; Journal of Near Infrared Spectroscopy Volume 17 ; 17 ; jnsa >
-      au < released ; 2010 ; Journal of Near Infrared Spectroscopy Volume 18 ; 18 ; jnsa >
-      au < released ; 2011 ; Journal of Near Infrared Spectroscopy Volume 19 ; 19 ; jnsa >
-      au < released ; 2012 ; Journal of Near Infrared Spectroscopy Volume 20 ; 20 ; jnsa >
-      au < released ; 2013 ; Journal of Near Infrared Spectroscopy Volume 21 ; 21 ; jnsa >
-      au < released ; 2014 ; Journal of Near Infrared Spectroscopy Volume 22 ; 22 ; jnsa >
-      au < released ; 2015 ; Journal of Near Infrared Spectroscopy Volume 23 ; 23 ; jnsa >
-      au < released ; 2016 ; Journal of Near Infrared Spectroscopy Volume 24 ; 24 ; jnsa >
-      au < manifest ; 2017 ; Journal of Near Infrared Spectroscopy Volume 25 ; 25 ; jnsa >
+        au < manifest ; 1993 ; Journal of Near Infrared Spectroscopy Volume 1 ; 1 ; jnsa >
+        au < manifest ; 1994 ; Journal of Near Infrared Spectroscopy Volume 2 ; 2 ; jnsa >
+        au < manifest ; 1995 ; Journal of Near Infrared Spectroscopy Volume 3 ; 3 ; jnsa >
+        au < manifest ; 1996 ; Journal of Near Infrared Spectroscopy Volume 4 ; 4 ; jnsa >
+        au < manifest ; 1997 ; Journal of Near Infrared Spectroscopy Volume 5 ; 5 ; jnsa >
+        au < manifest ; 1998 ; Journal of Near Infrared Spectroscopy Volume 6 ; 6 ; jnsa >
+        au < manifest ; 1999 ; Journal of Near Infrared Spectroscopy Volume 7 ; 7 ; jnsa >
+        au < manifest ; 2000 ; Journal of Near Infrared Spectroscopy Volume 8 ; 8 ; jnsa >
+        au < manifest ; 2001 ; Journal of Near Infrared Spectroscopy Volume 9 ; 9 ; jnsa >
+        au < manifest ; 2002 ; Journal of Near Infrared Spectroscopy Volume 10 ; 10 ; jnsa >
+        au < manifest ; 2003 ; Journal of Near Infrared Spectroscopy Volume 11 ; 11 ; jnsa >
+        au < manifest ; 2004 ; Journal of Near Infrared Spectroscopy Volume 12 ; 12 ; jnsa >
+        au < manifest ; 2005 ; Journal of Near Infrared Spectroscopy Volume 13 ; 13 ; jnsa >
+        au < manifest ; 2006 ; Journal of Near Infrared Spectroscopy Volume 14 ; 14 ; jnsa >
+        au < manifest ; 2007 ; Journal of Near Infrared Spectroscopy Volume 15 ; 15 ; jnsa >
+        au < released ; 2008 ; Journal of Near Infrared Spectroscopy Volume 16 ; 16 ; jnsa >
+        au < released ; 2009 ; Journal of Near Infrared Spectroscopy Volume 17 ; 17 ; jnsa >
+        au < released ; 2010 ; Journal of Near Infrared Spectroscopy Volume 18 ; 18 ; jnsa >
+        au < released ; 2011 ; Journal of Near Infrared Spectroscopy Volume 19 ; 19 ; jnsa >
+        au < released ; 2012 ; Journal of Near Infrared Spectroscopy Volume 20 ; 20 ; jnsa >
+        au < released ; 2013 ; Journal of Near Infrared Spectroscopy Volume 21 ; 21 ; jnsa >
+        au < released ; 2014 ; Journal of Near Infrared Spectroscopy Volume 22 ; 22 ; jnsa >
+        au < released ; 2015 ; Journal of Near Infrared Spectroscopy Volume 23 ; 23 ; jnsa >
+        au < released ; 2016 ; Journal of Near Infrared Spectroscopy Volume 24 ; 24 ; jnsa >
+        au < manifest ; 2017 ; Journal of Near Infrared Spectroscopy Volume 25 ; 25 ; jnsa >
 
-  }
+    }
+
+    {
+
+      title <
+        name = Journal of Onco-Nephrology ;
+        issn = 2399-3693 ;
+        eissn = 2399-3707
+      >
+
+      #param[jounral_id] = jnp
+
+        au < exists ; 2017 ; Journal of Onco-Nephrology Volume 1 ; 1 ; jnpa >
+
+    }
 
     {
 
@@ -25518,6 +25608,22 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2017 ; The Journal of School Nursing Volume 33 ; 33 ; jsnb >
 
       }
+
+    }
+
+    {
+
+      title <
+        name = Journal of Scleroderma and Related Disorders ;
+        issn = 2397-1983 ;
+        eissn = 2397-1991
+      >
+
+      #param[journal_id] = jso
+
+        au < exists ; 2016 ; Journal of Scleroderma and Related Disorders Volume 1 ; 1 ; jsoa >
+        au < exists ; 2017 ; Journal of Scleroderma and Related Disorders Volume 2 ; 2 ; jsoa >
+        au < exists ; 2017 ; Journal of Scleroderma and Related Disorders Volume 3 ; 3 ; jsoa >
 
     }
 
@@ -29071,6 +29177,33 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
       }
 
+    }
+
+    {
+
+     title <
+       name = Medicine Access @ Point of Care ;
+       eissn = 2399-2026
+     >
+
+        #param[journal_id] = map
+
+        au < exists ; 2017 ; Medicine Access @ Point of Care Volume 1 ; 1 ; mapa >
+        au < exists ; 2018 ; Medicine Access @ Point of Care Volume 2 ; 2 ; mapa >
+    }
+
+    {
+
+     title <
+       name = Nephrology @ Point of Care ;
+       eissn = 2059-3007
+     >
+
+        #param[journal_id] = npc
+
+        au < exists ; 2015 ; Nephrology @ Point of Care Volume 1 ; 1 ; npca >
+        au < exists ; 2016 ; Nephrology @ Point of Care Volume 2 ; 2 ; npca >
+        au < exists ; 2017 ; Nephrology @ Point of Care Volume 3 ; 3 ; npca >
     }
 
     {
