@@ -4,7 +4,7 @@
     name = British Editorial Society of Bone and Joint Surgery
   >
   
-  comment[moved] = moved to HW Drupal during 2015. Moved to Atypon Jan 2018.
+  comment[moved] = moved to HW Drupal during 2015. Moved to Atypon ~Jan 2018.
   #pluginPrefix = org.lockss.plugin.highwire.
   #implicit < pluginSuffix; status ; year ; name ; param[volume_name] >
   implicit < status ; year ; name ; param[volume_name] >
@@ -237,4 +237,25 @@
     }
   }
 
+
+  {
+
+    title <
+      name = EFORT Open Reviews ;
+      issn = 2396-7544 ;
+      eissn = 2058-5241 ;
+      issnl = 2396-7544
+    >
+
+    plugin = org.lockss.plugin.atypon.GenericAtyponPlugin
+    param[base_url] = https://online.boneandjoint.org.uk/
+    param[journal_id] = eor
+
+    au < exists ; 2016 ; EFORT Open Reviews Volume 1 ; 1 >
+    au < exists ; 2017 ; EFORT Open Reviews Volume 2 ; 2 >
+    au < expected ; 2018 ; EFORT Open Reviews Volume 3 ; 3 >
+
+  }
+  
 }
+
