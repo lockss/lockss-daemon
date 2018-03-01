@@ -31,7 +31,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.5.3'
+__version__ = '0.6.0'
 
 import getpass
 import itertools
@@ -113,6 +113,23 @@ def get_au_urls(host, auth, auid, prefix=None):
   req.AuId = auid
   if prefix is not None: req.url = prefix
   return _ws_port(host, auth).getAuUrls(req).Return
+
+def get_au_type_urls(host, auth, auid, type):
+  '''Performs a queryAus operation on the given host for the given AUID and
+  selects only the url list of type  given (articleUrls,substanceUrls) for the AU.  
+
+  Parameters:
+  - host (string): a host:port pair
+  - auth (ZSI authentication object): an authentication object
+  - auid (string): an AUID
+  - type (string): one of articleUrls or substanceUrls
+  '''
+  res = query_aus(host, auth, type, 'auId = "%s"' % (auid,))
+  if len(res) == 0: return None
+  else: 
+    if type == 'articleUrls':
+      return res[0].ArticleUrls
+    else: return res[0].SubstanceUrls
 
 def get_auids(host, auth):
   '''Performs a getAuids operation on the given host, which really produces a
@@ -389,6 +406,8 @@ class _DaemonStatusServiceOptions(object):
     group = optparse.OptionGroup(parser, 'AU operations')
     group.add_option('--get-au-status', action='store_true', help='output status information about target AUIDs; narrow down output with optional --select list chosen among %s' % (', '.join(sorted(_AU_STATUS)),))
     group.add_option('--get-au-urls', action='store_true', help='output URLs in one AU on one host')
+    group.add_option('--get-au-article-urls', action='store_true', help='output article URLs in one AU on one host')
+    group.add_option('--get-au-subst-urls', action='store_true', help='output substance URLs in one AU on one host')
     group.add_option('--get-auids', action='store_true', help='output True/False table of all AUIDs (or target AUIDs if specified) present on target hosts')
     group.add_option('--get-auids-names', action='store_true', help='output True/False table of all AUIDs (or target AUIDs if specified) and their names present on target hosts')
     group.add_option('--get-peer-agreements', action='store_true', help='output peer agreements for one AU on one hosts')
@@ -411,10 +430,10 @@ class _DaemonStatusServiceOptions(object):
   def __init__(self, parser, opts, args):
     super(_DaemonStatusServiceOptions, self).__init__()
     if len(args) > 0: parser.error('extraneous arguments: %s' % (' '.join(args)))
-    if len(filter(None, [opts.get_au_status, opts.get_au_urls, opts.get_auids, opts.get_auids_names, opts.get_peer_agreements, opts.get_platform_configuration, opts.is_daemon_ready, opts.is_daemon_ready_quiet, opts.query_aus, opts.query_crawls])) != 1:
-      parser.error('exactly one of --get-au-status, --get-au-urls, --get-auids, --get-auids-names, --get-peer-agreements, --get-platform-configuration, --is-daemon-ready, --is-daemon-ready-quiet, --query-aus --query-crawls is required')
-    if len(opts.auid) + len(opts.auids) > 0 and not any([opts.get_au_status, opts.get_au_urls, opts.get_auids, opts.get_auids_names, opts.get_peer_agreements]):
-      parser.error('--auid, --auids can only be applied to --get-au-status, --get-au-urls, --get-auids, --get-auids-names, --get-peer-agreements')
+    if len(filter(None, [opts.get_au_status, opts.get_au_urls, opts.get_au_article_urls, opts.get_au_subst_urls, opts.get_auids, opts.get_auids_names, opts.get_peer_agreements, opts.get_platform_configuration, opts.is_daemon_ready, opts.is_daemon_ready_quiet, opts.query_aus, opts.query_crawls])) != 1:
+      parser.error('exactly one of --get-au-status, --get-au-urls, --get-au-article-urls, --get-au-subst-urls,--get-auids, --get-auids-names, --get-peer-agreements, --get-platform-configuration, --is-daemon-ready, --is-daemon-ready-quiet, --query-aus --query-crawls is required')
+    if len(opts.auid) + len(opts.auids) > 0 and not any([opts.get_au_status, opts.get_au_urls, opts.get_au_article_urls, opts.get_au_subst_urls, opts.get_auids, opts.get_auids_names, opts.get_peer_agreements]):
+      parser.error('--auid, --auids can only be applied to --get-au-status, --get-au-urls, --get-au-article-urls, --get-au-subst-urls, --get-auids, --get-auids-names, --get-peer-agreements')
     if opts.select and not any([opts.get_au_status, opts.get_platform_configuration, opts.query_aus, opts.query_crawls]):
       parser.error('--select can only be applied to --get-au-status, --get-platform-configuration, --query-aus, --query-crawls')
     if opts.where and not any([opts.query_aus, opts.query_crawls]):
@@ -447,6 +466,16 @@ class _DaemonStatusServiceOptions(object):
     if self.get_au_urls:
       if len(self.hosts) != 1: parser.error('only one target host is allowed with --get-au-urls')
       if len(self.auids) != 1: parser.error('only one target AUID is allowed with --get-au-urls')
+    # get article url list
+    self.get_au_article_urls = opts.get_au_article_urls
+    if self.get_au_article_urls:
+      if len(self.hosts) != 1: parser.error('only one target host is allowed with --get-au-article-urls')
+      if len(self.auids) != 1: parser.error('only one target AUID is allowed with --get-au-article-urls')
+    # get substance url list
+    self.get_au_subst_urls = opts.get_au_subst_urls
+    if self.get_au_subst_urls:
+      if len(self.hosts) != 1: parser.error('only one target host is allowed with --get-au-subst-urls')
+      if len(self.auids) != 1: parser.error('only one target AUID is allowed with --get-au-subst-urls')
     # get_peer_agreements
     self.get_peer_agreements = opts.get_peer_agreements
     if self.get_peer_agreements:
@@ -549,6 +578,17 @@ def _do_get_au_urls(options):
   # Single request to a single host: unthreaded
   r = get_au_urls(options.hosts[0], options.auth, options.auids[0])
   for url in sorted(r): _output_record(options, [url])
+
+def _do_get_au_article_urls(options):
+  # Single request to a single host: unthreaded
+  r = get_au_type_urls(options.hosts[0], options.auth, options.auids[0], "articleUrls")
+  for url in sorted(r): _output_record(options, [url])
+
+def _do_get_au_subst_urls(options):
+  # Single request to a single host: unthreaded
+  r = get_au_type_urls(options.hosts[0], options.auth, options.auids[0], "substanceUrls")
+  for url in sorted(r): _output_record(options, [url])
+
 
 def _do_get_auids(options):
   if len(options.auids) > 0:
@@ -727,6 +767,8 @@ def _do_query_crawls(options):
 def _dispatch(options):
   if options.get_au_status: _do_get_au_status(options)
   elif options.get_au_urls: _do_get_au_urls(options)
+  elif options.get_au_article_urls: _do_get_au_article_urls(options)
+  elif options.get_au_subst_urls: _do_get_au_subst_urls(options)
   elif options.get_auids or options.get_auids_names: _do_get_auids(options)
   elif options.get_peer_agreements: _do_get_peer_agreements(options)
   elif options.get_platform_configuration: _do_get_platform_configuration(options)
