@@ -11139,41 +11139,72 @@
 
     }
 
-  {
+    {
 
-    title <
-      name = European Journal of Mass Spectrometry ;
-      issn = 1469-0667 ;
-      eissn = 1751-6838
-    >
+      title <
+        name = European Journal of Mass Spectrometry ;
+        issn = 1469-0667 ;
+        eissn = 1751-6838
+      >
 
-      #param[base_url] = http://ems.sagepub.com/
+        #param[base_url] = http://ems.sagepub.com/
 
-      au < manifest ; 1995 ; European Journal of Mass Spectrometry Volume 1 ; 1 ; emsb >
-      au < manifest ; 1996 ; European Journal of Mass Spectrometry Volume 2 ; 2 ; emsb >
-      au < manifest ; 1997 ; European Journal of Mass Spectrometry Volume 3 ; 3 ; emsb >
-      au < manifest ; 1998 ; European Journal of Mass Spectrometry Volume 4 ; 4 ; emsb >
-      au < manifest ; 1999 ; European Journal of Mass Spectrometry Volume 5 ; 5 ; emsb >
-      au < manifest ; 2000 ; European Journal of Mass Spectrometry Volume 6 ; 6 ; emsa >
-      au < manifest ; 2001 ; European Journal of Mass Spectrometry Volume 7 ; 7 ; emsa >
-      au < manifest ; 2002 ; European Journal of Mass Spectrometry Volume 8 ; 8 ; emsa >
-      au < manifest ; 2003 ; European Journal of Mass Spectrometry Volume 9 ; 9 ; emsa >
-      au < manifest ; 2004 ; European Journal of Mass Spectrometry Volume 10 ; 10 ; emsa >
-      au < manifest ; 2005 ; European Journal of Mass Spectrometry Volume 11 ; 11 ; emsa >
-      au < manifest ; 2006 ; European Journal of Mass Spectrometry Volume 12 ; 12 ; emsa >
-      au < manifest ; 2007 ; European Journal of Mass Spectrometry Volume 13 ; 13 ; emsa >
-      au < released ; 2008 ; European Journal of Mass Spectrometry Volume 14 ; 14 ; emsa >
-      au < released ; 2009 ; European Journal of Mass Spectrometry Volume 15 ; 15 ; emsa >
-      au < released ; 2010 ; European Journal of Mass Spectrometry Volume 16 ; 16 ; emsa >
-      au < released ; 2011 ; European Journal of Mass Spectrometry Volume 17 ; 17 ; emsa >
-      au < released ; 2012 ; European Journal of Mass Spectrometry Volume 18 ; 18 ; emsa >
-      au < released ; 2013 ; European Journal of Mass Spectrometry Volume 19 ; 19 ; emsa >
-      au < released ; 2014 ; European Journal of Mass Spectrometry Volume 20 ; 20 ; emsa >
-      au < released ; 2015 ; European Journal of Mass Spectrometry Volume 21 ; 21 ; emsa >
-      au < released ; 2016 ; European Journal of Mass Spectrometry Volume 22 ; 22 ; emsa >
-      au < manifest ; 2017 ; European Journal of Mass Spectrometry Volume 23 ; 23 ; emsa >
+        au < manifest ; 1995 ; European Journal of Mass Spectrometry Volume 1 ; 1 ; emsb >
+        au < manifest ; 1996 ; European Journal of Mass Spectrometry Volume 2 ; 2 ; emsb >
+        au < manifest ; 1997 ; European Journal of Mass Spectrometry Volume 3 ; 3 ; emsb >
+        au < manifest ; 1998 ; European Journal of Mass Spectrometry Volume 4 ; 4 ; emsb >
+        au < manifest ; 1999 ; European Journal of Mass Spectrometry Volume 5 ; 5 ; emsb >
+        au < manifest ; 2000 ; European Journal of Mass Spectrometry Volume 6 ; 6 ; emsa >
+        au < manifest ; 2001 ; European Journal of Mass Spectrometry Volume 7 ; 7 ; emsa >
+        au < manifest ; 2002 ; European Journal of Mass Spectrometry Volume 8 ; 8 ; emsa >
+        au < manifest ; 2003 ; European Journal of Mass Spectrometry Volume 9 ; 9 ; emsa >
+        au < manifest ; 2004 ; European Journal of Mass Spectrometry Volume 10 ; 10 ; emsa >
+        au < manifest ; 2005 ; European Journal of Mass Spectrometry Volume 11 ; 11 ; emsa >
+        au < manifest ; 2006 ; European Journal of Mass Spectrometry Volume 12 ; 12 ; emsa >
+        au < manifest ; 2007 ; European Journal of Mass Spectrometry Volume 13 ; 13 ; emsa >
+        au < released ; 2008 ; European Journal of Mass Spectrometry Volume 14 ; 14 ; emsa >
+        au < released ; 2009 ; European Journal of Mass Spectrometry Volume 15 ; 15 ; emsa >
+        au < released ; 2010 ; European Journal of Mass Spectrometry Volume 16 ; 16 ; emsa >
+        au < released ; 2011 ; European Journal of Mass Spectrometry Volume 17 ; 17 ; emsa >
+        au < released ; 2012 ; European Journal of Mass Spectrometry Volume 18 ; 18 ; emsa >
+        au < released ; 2013 ; European Journal of Mass Spectrometry Volume 19 ; 19 ; emsa >
+        au < released ; 2014 ; European Journal of Mass Spectrometry Volume 20 ; 20 ; emsa >
+        au < released ; 2015 ; European Journal of Mass Spectrometry Volume 21 ; 21 ; emsa >
+        au < released ; 2016 ; European Journal of Mass Spectrometry Volume 22 ; 22 ; emsa >
+        au < manifest ; 2017 ; European Journal of Mass Spectrometry Volume 23 ; 23 ; emsa >
 
-  }
+    }
+
+    {
+
+      title <
+        name = European Journal of Ophthalmology ;
+        issn = 1120-6721 ;
+        eissn = 1724-6016
+      >
+
+      #param[journal_id] = ejo
+
+        au < exists ; 1999 ; European Journal of Ophthalmology Volume 9 ; 9 ; ejoa >
+        au < exists ; 2000 ; European Journal of Ophthalmology Volume 10 ; 10 ; ejoa >
+        au < exists ; 2001 ; European Journal of Ophthalmology Volume 11 ; 11 ; ejoa >
+        au < exists ; 2002 ; European Journal of Ophthalmology Volume 12 ; 12 ; ejoa >
+        au < exists ; 2003 ; European Journal of Ophthalmology Volume 13 ; 13 ; ejoa >
+        au < exists ; 2004 ; European Journal of Ophthalmology Volume 14 ; 14 ; ejoa >
+        au < exists ; 2005 ; European Journal of Ophthalmology Volume 15 ; 15 ; ejoa >
+        au < exists ; 2006 ; European Journal of Ophthalmology Volume 16 ; 16 ; ejoa >
+        au < exists ; 2007 ; European Journal of Ophthalmology Volume 17 ; 17 ; ejoa >
+        au < exists ; 2008 ; European Journal of Ophthalmology Volume 18 ; 18 ; ejoa >
+        au < exists ; 2009 ; European Journal of Ophthalmology Volume 19 ; 19 ; ejoa >
+        au < exists ; 2010 ; European Journal of Ophthalmology Volume 20 ; 20 ; ejoa >
+        au < exists ; 2011 ; European Journal of Ophthalmology Volume 21 ; 21 ; ejoa >
+        au < exists ; 2012 ; European Journal of Ophthalmology Volume 22 ; 22 ; ejoa >
+        au < exists ; 2013 ; European Journal of Ophthalmology Volume 23 ; 23 ; ejoa >
+        au < exists ; 2014 ; European Journal of Ophthalmology Volume 24 ; 24 ; ejoa >
+        au < exists ; 2015 ; European Journal of Ophthalmology Volume 25 ; 25 ; ejoa >
+        au < exists ; 2016 ; European Journal of Ophthalmology Volume 26 ; 26 ; ejoa >
+        au < exists ; 2017 ; European Journal of Ophthalmology Volume 27 ; 27 ; ejoa >
+    }
 
     {
 
@@ -12827,24 +12858,68 @@
 
     }
 
-  {
+    {
 
-    title <
-      name = Global Advances in Health and Medicine ;
-      issn = 2164-957X ;
-      eissn = 2164-9561
-    >
+      title <
+        name = Giornale di Techniche Nefrologiche e Dialitiche ;
+        issn = 0394-9362 ;
+        eissn = 1724-5974
+      >
 
-      #param[base_url] = http://gam.sagepub.com/
+        #param[journal_id] = gtn
 
-      au < released ; 2012 ; Global Advances in Health and Medicine Volume 1 ; 1 ; gama >
-      au < released ; 2013 ; Global Advances in Health and Medicine Volume 2 ; 2 ; gama >
-      au < released ; 2014 ; Global Advances in Health and Medicine Volume 3 ; 3 ; gama >
-      au < released ; 2015 ; Global Advances in Health and Medicine Volume 4 ; 4 ; gama >
-      au < released ; 2016 ; Global Advances in Health and Medicine Volume 5 ; 5 ; gama >
-      au < manifest ; 2017 ; Global Advances in Health and Medicine Volume 6 ; 6 ; gama >
+        au < exists ; 2001 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 13 ; 13 ; gtna >
+        au < exists ; 2002 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 14 ; 14 ; gtna >
+        au < doesNotExist ; 2003 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 15 ; 15 ; gtna >
+        au < doesNotExist ; 2004 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 16 ; 16 ; gtna >
+        au < doesNotExist ; 2005 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 17 ; 17 ; gtna >
+        au < exists ; 2006 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 18 ; 18 ; gtna >
+        au < exists ; 2007 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 19 ; 19 ; gtna >
+        au < exists ; 2008 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 20 ; 20 ; gtna >
+        au < exists ; 2009 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 21 ; 21 ; gtna >
+        au < exists ; 2010 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 22 ; 22 ; gtna >
+        au < exists ; 2011 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 23 ; 23 ; gtna >
+        au < exists ; 2012 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 24 ; 24 ; gtna >
+        au < exists ; 2013 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 25 ; 25 ; gtna >
+        au < exists ; 2014 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 26 ; 26 ; gtna >
+        au < exists ; 2015 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 27 ; 27 ; gtna >
+        au < exists ; 2016 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 28 ; 28 ; gtna >
+    }
 
-  }
+    {
+
+      title <
+        name = Global & Regional Health Technology Assessment ;
+        issn = 2284-2403 ;
+        eissn = 2283-5733
+      >
+
+        #param[journal_id] = grh
+
+        au < exists ; 2014 ; Global & Regional Health Technology Assessment Volume 1 ; 1 ; grha >
+        au < exists ; 2015 ; Global & Regional Health Technology Assessment Volume 2 ; 2 ; grha >
+        au < exists ; 2016 ; Global & Regional Health Technology Assessment Volume 3 ; 3 ; grha >
+        au < exists ; 2017 ; Global & Regional Health Technology Assessment Volume 4 ; 4 ; grha >
+    }
+
+    {
+
+      title <
+        name = Global Advances in Health and Medicine ;
+        issn = 2164-957X ;
+        eissn = 2164-9561
+      >
+
+        #param[base_url] = http://gam.sagepub.com/
+
+        au < released ; 2012 ; Global Advances in Health and Medicine Volume 1 ; 1 ; gama >
+        au < released ; 2013 ; Global Advances in Health and Medicine Volume 2 ; 2 ; gama >
+        au < released ; 2014 ; Global Advances in Health and Medicine Volume 3 ; 3 ; gama >
+        au < released ; 2015 ; Global Advances in Health and Medicine Volume 4 ; 4 ; gama >
+        au < released ; 2016 ; Global Advances in Health and Medicine Volume 5 ; 5 ; gama >
+        au < manifest ; 2017 ; Global Advances in Health and Medicine Volume 6 ; 6 ; gama >
+
+    }
 
     {
 
@@ -24540,6 +24615,40 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       }
 
     }
+
+  {
+
+    title <
+      name = Journal of Perioperative Practice ;
+      issn = 1750-4589 ;
+      eissn = 2515-7949
+    >
+
+    #param[journal_id] = ppj
+
+      au < exists ; 1998 ; Journal of Perioperative Practice Volume 8 ; 8 ; ppjb >
+      au < exists ; 1999 ; Journal of Perioperative Practice Volume 9 ; 9 ; ppjb >
+      au < exists ; 2000 ; Journal of Perioperative Practice Volume 10 ; 10 ; ppjc >
+      au < exists ; 2001 ; Journal of Perioperative Practice Volume 11 ; 11 ; ppjc >
+      au < exists ; 2002 ; Journal of Perioperative Practice Volume 12 ; 12 ; ppjc >
+      au < exists ; 2003 ; Journal of Perioperative Practice Volume 13 ; 13 ; ppjc >
+      au < exists ; 2004 ; Journal of Perioperative Practice Volume 14 ; 14 ; ppjc >
+      au < exists ; 2005 ; Journal of Perioperative Practice Volume 15 ; 15 ; ppjc >
+      au < exists ; 2006 ; Journal of Perioperative Practice Volume 16 ; 16 ; ppja >
+      au < exists ; 2007 ; Journal of Perioperative Practice Volume 17 ; 17 ; ppja >
+      au < exists ; 2008 ; Journal of Perioperative Practice Volume 18 ; 18 ; ppja >
+      au < exists ; 2009 ; Journal of Perioperative Practice Volume 19 ; 19 ; ppja >
+      au < exists ; 2010 ; Journal of Perioperative Practice Volume 20 ; 20 ; ppja >
+      au < exists ; 2011 ; Journal of Perioperative Practice Volume 21 ; 21 ; ppja >
+      au < exists ; 2012 ; Journal of Perioperative Practice Volume 22 ; 22 ; ppja >
+      au < exists ; 2013 ; Journal of Perioperative Practice Volume 23 ; 23 ; ppja >
+      au < exists ; 2014 ; Journal of Perioperative Practice Volume 24 ; 24 ; ppja >
+      au < exists ; 2015 ; Journal of Perioperative Practice Volume 25 ; 25 ; ppja >
+      au < exists ; 2016 ; Journal of Perioperative Practice Volume 26 ; 26 ; ppja >
+      au < exists ; 2017 ; Journal of Perioperative Practice Volume 27 ; 27 ; ppja >
+      au < exists ; 2018 ; Journal of Perioperative Practice Volume 28 ; 28 ; ppja >
+
+  }
 
     {
 
