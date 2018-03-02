@@ -62,7 +62,8 @@ public class TestHighWirePressH20Plugin extends LockssTestCase {
     {
         "[.](css|js)$",
         "://[^/]+(?!.*/content/)(/[^/]+)+[.](gif|png|jpg)$",
-        "://[^/]+(/shared/img/).*[.](gif|png|jpg)$"
+        "://[^/]+(/shared/img/).*[.](gif|png|jpg)$",
+        "://[^/]+/content/[^?]+[.]full[.]pdf[+]html([?]frame=(header|sidebar))?$"
     };
 
   private DefinablePlugin plugin;
@@ -174,31 +175,36 @@ public class TestHighWirePressH20Plugin extends LockssTestCase {
         ROOT_URL + "publisher/icons/login.gif",
         ROOT_URL + "shared/img/common/hw-lens-monocle-xsm.png",
         ROOT_URL + "shared/img/content/int-data-supp-closed.png",
-        ROOT_URL + "shared/img/fancybox/fancy_title_over.png"
+        ROOT_URL + "shared/img/fancybox/fancy_title_over.png",
+        ROOT_URL + "content/317/2/216.full.pdf+html?frame=sidebar",
+        ROOT_URL + "content/317/2/216.full.pdf+html"
         );
     
     Pattern p0 = Pattern.compile(HW_REPAIR_FROM_PEER_REGEXP[0]);
     Pattern p1 = Pattern.compile(HW_REPAIR_FROM_PEER_REGEXP[1]);
     Pattern p2 = Pattern.compile(HW_REPAIR_FROM_PEER_REGEXP[2]);
+    Pattern p3 = Pattern.compile(HW_REPAIR_FROM_PEER_REGEXP[3]);
 
-    Matcher m0, m1, m2;
+    Matcher m0, m1, m2, m3;
     for (String urlString : repairList) {
       m0 = p0.matcher(urlString);
       m1 = p1.matcher(urlString);
       m2 = p2.matcher(urlString);
-      assertEquals(urlString, true, m0.find() || m1.find() || m2.find());
+      m3 = p3.matcher(urlString);
+      assertEquals(urlString, true, m0.find() || m1.find() || m2.find() || m3.find());
     }
     //and this one should fail - it needs to be weighted correctly and repaired from publisher if possible
-    String notString = ROOT_URL + "img/close-icon.png";
+    String notString = ROOT_URL + "img/close-icon.pdf";
     m0 = p0.matcher(notString);
     m1 = p1.matcher(notString);
     m2 = p2.matcher(notString);
-    assertEquals(false, m0.find() && m1.find() && m2.find());
+    m3 = p3.matcher(notString);
+    assertEquals(false, m0.find() || m1.find() || m2.find() || m3.find());
     
     PatternFloatMap urlPollResults = au.makeUrlPollResultWeightMap();
     assertNotNull(urlPollResults);
     for (String urlString : repairList) {
-      assertEquals(0.0, urlPollResults.getMatch(urlString, (float) 1), .0001);
+      assertEquals(urlString, 0.0, urlPollResults.getMatch(urlString, (float) 1), .0001);
     }
     assertEquals(0.0, urlPollResults.getMatch(ROOT_URL + "search?submit=yes&issue=Suppl%202&volume=101&sortspec=first-page&tocsectionid=Abstracts&FIRSTINDEX=0", (float) 1), .0001);
     assertEquals(1.0, urlPollResults.getMatch(ROOT_URL + "search?submit=yes&sortspec=first-page&tocsectionid=Abstracts&volume=101&issue=Suppl%202", (float) 1), .0001);
