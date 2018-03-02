@@ -31,7 +31,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.6.0'
+__version__ = '0.6.1'
 
 import getpass
 import itertools
@@ -582,12 +582,14 @@ def _do_get_au_urls(options):
 def _do_get_au_article_urls(options):
   # Single request to a single host: unthreaded
   r = get_au_type_urls(options.hosts[0], options.auth, options.auids[0], "articleUrls")
-  for url in sorted(r): _output_record(options, [url])
+  if r is not None:
+    for url in sorted(r): _output_record(options, [url])
 
 def _do_get_au_subst_urls(options):
   # Single request to a single host: unthreaded
   r = get_au_type_urls(options.hosts[0], options.auth, options.auids[0], "substanceUrls")
-  for url in sorted(r): _output_record(options, [url])
+  if r is not None:
+    for url in sorted(r): _output_record(options, [url])
 
 
 def _do_get_auids(options):
