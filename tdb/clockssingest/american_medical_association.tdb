@@ -113,7 +113,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; JAMA Neurology Volume 71 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; JAMA Neurology Volume 72 ; 2015 ; >
     au < finished ; crawling ; 2016 ; JAMA Neurology Volume 73 ; 2016 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; JAMA Neurology Volume 74 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; JAMA Neurology Volume 74 ; 2017 ; >
     au < manifest ; exists ; 2018 ; JAMA Neurology Volume 75 ; 2018 ; >
 
   }
@@ -241,7 +241,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; JAMA Surgery Volume 149 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; JAMA Surgery Volume 150 ; 2015 ; >
     au < finished ; crawling ; 2016 ; JAMA Surgery Volume 151 ; 2016 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; JAMA Surgery Volume 152 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; JAMA Surgery Volume 152 ; 2017 ; >
     au < manifest ; exists ; 2018 ; JAMA Surgery Volume 153 ; 2018 ; >
 
   }

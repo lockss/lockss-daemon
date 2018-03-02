@@ -36,7 +36,7 @@
     au < finished ; finished ; 2014 ; Therapeutics and Clinical Risk Management Volume 10 ; 10 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Therapeutics and Clinical Risk Management Volume 11 ; 11 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Therapeutics and Clinical Risk Management Volume 12 ; 12 ; 2016 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Therapeutics and Clinical Risk Management Volume 13 ; 13 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Therapeutics and Clinical Risk Management Volume 13 ; 13 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Therapeutics and Clinical Risk Management Volume 14 ; 14 ; 2018 ; >
 
   }
@@ -163,7 +163,7 @@
     au < finished ; finished ; 2014 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 9 ; 9 ; 2014 ; >
     au < finished ; finished ; 2015 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 10 ; 10 ; 2015 ; >
     au < finished ; crawling ; 2016 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 11 ; 11 ; 2016 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 12 ; 12 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 12 ; 12 ; 2017 ; >
     au < manifest ; exists ; 2018 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 13 ; 13 ; 2018 ; >
 
   }
@@ -511,7 +511,7 @@
     au < finished ; finished ; 2014 ; Local and Regional Anesthesia Volume 7 ; 7 ; 2014 ; >
     au < finished ; finished ; 2015 ; Local and Regional Anesthesia Volume 8 ; 8 ; 2015 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2016 ; Local and Regional Anesthesia Volume 9 ; 9 ; 2016 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Local and Regional Anesthesia Volume 10 ; 10 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Local and Regional Anesthesia Volume 10 ; 10 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Local and Regional Anesthesia Volume 11 ; 11 ; 2018 ; >
 
   }
@@ -741,7 +741,7 @@
     au < finished ; finished ; 2014 ; Journal of Pain Research Volume 7 ; 7 ; 2014 ; >
     au < finished ; finished ; 2015 ; Journal of Pain Research Volume 8 ; 8 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Journal of Pain Research Volume 9 ; 9 ; 2016 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Journal of Pain Research Volume 10 ; 10 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Journal of Pain Research Volume 10 ; 10 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Journal of Pain Research Volume 11 ; 11 ; 2018 ; >
 
   }
@@ -1162,7 +1162,7 @@
     au < finished ; finished ; 2014 ; Virus Adaptation and Treatment Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Virus Adaptation and Treatment Volume 7 ; 7 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Virus Adaptation and Treatment Volume 8 ; 8 ; 2016 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2017 ; Virus Adaptation and Treatment Volume 9 ; 9 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Virus Adaptation and Treatment Volume 9 ; 9 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Virus Adaptation and Treatment Volume 10 ; 10 ; 2018 ; >
 
   }
@@ -1482,7 +1482,7 @@
     au < finished ; finished ; 2014 ; Pathology and Laboratory Medicine International Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Pathology and Laboratory Medicine International Volume 7 ; 7 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Pathology and Laboratory Medicine International Volume 8 ; 8 ; 2016 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Pathology and Laboratory Medicine International Volume 9 ; 9 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Pathology and Laboratory Medicine International Volume 9 ; 9 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Pathology and Laboratory Medicine International Volume 10 ; 10 ; 2018 ; >
 
   }
@@ -1567,7 +1567,7 @@
     au < finished ; finished ; 2014 ; Patient Related Outcome Measures Volume 5 ; 5 ; 2014 ; >
     au < finished ; finished ; 2015 ; Patient Related Outcome Measures Volume 6 ; 6 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Patient Related Outcome Measures Volume 7 ; 7 ; 2016 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Patient Related Outcome Measures Volume 8 ; 8 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Patient Related Outcome Measures Volume 8 ; 8 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Patient Related Outcome Measures Volume 9 ; 9 ; 2018 ; >
 
   }
@@ -2542,7 +2542,7 @@
     au < finished ; finished ; 2014 ; Oncolytic Virotherapy Volume 3 ; 3 ; 2014 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Oncolytic Virotherapy Volume 4 ; 4 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Oncolytic Virotherapy Volume 5 ; 5 ; 2016 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Oncolytic Virotherapy Volume 6 ; 6 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Oncolytic Virotherapy Volume 6 ; 6 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Oncolytic Virotherapy Volume 7 ; 7 ; 2018 ; >
 
   }
@@ -2669,7 +2669,7 @@
     au < finished ; finished ; 2014 ; Journal of Hepatocellular Carcinoma Volume 1 ; 1 ; 2014 ; >
     au < finished ; finished ; 2015 ; Journal of Hepatocellular Carcinoma Volume 2 ; 2 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Journal of Hepatocellular Carcinoma Volume 3 ; 3 ; 2016 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Journal of Hepatocellular Carcinoma Volume 4 ; 4 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Journal of Hepatocellular Carcinoma Volume 4 ; 4 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Journal of Hepatocellular Carcinoma Volume 5 ; 5 ; 2018 ; >
 
   }

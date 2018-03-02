@@ -150,7 +150,7 @@
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; European Respiratory Review Volume 23 ; 23 ; reingest4.clockss.org:8082 >
     au < ers.ClockssERSDrupalPlugin ; finished ; finished ; 2015 ; European Respiratory Review Volume 24 ; 24 ; reingest2.clockss.org:8085 >
     au < ers.ClockssERSDrupalPlugin ; finished ; crawling ; 2016 ; European Respiratory Review Volume 25 ; 25 ; reingest2.clockss.org:8085 >
-    au < ers.ClockssERSDrupalPlugin ; crawling ; exists ; 2017 ; European Respiratory Review Volume 26 ; 26 ; >
+    au < ers.ClockssERSDrupalPlugin ; deepCrawl ; exists ; 2017 ; European Respiratory Review Volume 26 ; 26 ; >
 
   }
 

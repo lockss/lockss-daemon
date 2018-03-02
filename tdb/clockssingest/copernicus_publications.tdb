@@ -289,7 +289,7 @@
       au < finished ; finished ; 2014 ; 2014 ; Atmospheric Chemistry and Physics Volume 14 ; 14 ; http://www.atmos-chem-phys.net/ ; http://www.atmospheric-chemistry-and-physics.net/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Atmospheric Chemistry and Physics Volume 15 ; 15 ; http://www.atmos-chem-phys.net/ ; http://www.atmospheric-chemistry-and-physics.net/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; 2016 ; Atmospheric Chemistry and Physics Volume 16 ; 16 ; http://www.atmos-chem-phys.net/ ; http://www.atmospheric-chemistry-and-physics.net/ ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2017 ; 2017 ; Atmospheric Chemistry and Physics Volume 17 ; 17 ; https://www.atmos-chem-phys.net/ ; https://www.atmospheric-chemistry-and-physics.net/ ; >
+      au < deepCrawl ; exists ; 2017 ; 2017 ; Atmospheric Chemistry and Physics Volume 17 ; 17 ; https://www.atmos-chem-phys.net/ ; https://www.atmospheric-chemistry-and-physics.net/ ; >
       au < manifest ; exists ; 2018 ; 2018 ; Atmospheric Chemistry and Physics Volume 18 ; 18 ; https://www.atmos-chem-phys.net/ ; https://www.atmospheric-chemistry-and-physics.net/ ; >
 
    }
@@ -721,7 +721,7 @@
       au < finished ; finished ; 2014 ; 2014 ; Fossil Record Reports Volume 17 ; 17 ; http://www.foss-rec.net/ ; http://www.fossil-record.net/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Fossil Record Reports Volume 18 ; 18 ; http://www.foss-rec.net/ ; http://www.fossil-record.net/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2016 ; 2016 ; Fossil Record Reports Volume 19 ; 19 ; http://www.foss-rec.net/ ; http://www.fossil-record.net/ ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2017 ; 2017 ; Fossil Record Reports Volume 20 ; 20 ; https://www.foss-rec.net/ ; https://www.fossil-record.net/ ; >
+      au < deepCrawl ; exists ; 2017 ; 2017 ; Fossil Record Reports Volume 20 ; 20 ; https://www.foss-rec.net/ ; https://www.fossil-record.net/ ; >
       au < manifest ; exists ; 2018 ; 2018 ; Fossil Record Reports Volume 21 ; 21 ; https://www.foss-rec.net/ ; https://www.fossil-record.net/ ; >
 
    }
@@ -1220,7 +1220,7 @@
       au < finished ; finished ; 2014 ; 2014 ; Journal of Sensors and Sensor Systems Volume 3 ; 3 ; http://www.j-sens-sens-syst.net/ ; http://www.journal-of-sensors-and-sensor-systems.net/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Journal of Sensors and Sensor Systems Volume 4 ; 4 ; http://www.j-sens-sens-syst.net/ ; http://www.journal-of-sensors-and-sensor-systems.net/ ; >
       au < frozen ; exists ; 2016 ; 2016 ; Journal of Sensors and Sensor Systems Volume 5 ; 5 ; https://www.j-sens-sens-syst.net/ ; https://www.journal-of-sensors-and-sensor-systems.net/ ; >
-      au < crawling ; exists ; 2017 ; 2017 ; Journal of Sensors and Sensor Systems Volume 6 ; 6 ; https://www.j-sens-sens-syst.net/ ; https://www.journal-of-sensors-and-sensor-systems.net/ ; >
+      au < deepCrawl ; exists ; 2017 ; 2017 ; Journal of Sensors and Sensor Systems Volume 6 ; 6 ; https://www.j-sens-sens-syst.net/ ; https://www.journal-of-sensors-and-sensor-systems.net/ ; >
       au < manifest ; exists ; 2018 ; 2018 ; Journal of Sensors and Sensor Systems Volume 7 ; 7 ; https://www.j-sens-sens-syst.net/ ; https://www.journal-of-sensors-and-sensor-systems.net/ ; >
 
    }

@@ -573,7 +573,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Drug Research Volume 64 ; 64 ; >
     au < finished ; finished ; 2015 ; 2015 ; Drug Research Volume 65 ; 65 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; 2016 ; Drug Research Volume 66 ; 66 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; Drug Research Volume 67 ; 67 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Drug Research Volume 67 ; 67 ; >
 
    }
 
@@ -653,7 +653,7 @@
       au < finished ; finished ; 2014 ; 2014 ; Balint Journal Volume 15 ; 15 ; >
       au < finished ; finished ; 2015 ; 2015 ; Balint Journal Volume 16 ; 16 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; 2016 ; Balint Journal Volume 17 ; 17 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2017 ; 2017 ; Balint Journal Volume 18 ; 18 ; >
+      au < deepCrawl ; exists ; 2017 ; 2017 ; Balint Journal Volume 18 ; 18 ; >
 
   }
 
@@ -712,7 +712,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Clinics in Colon and Rectal Surgery Volume 27 ; 027 ; >
     au < finished ; finished ; 2015 ; 2015 ; Clinics in Colon and Rectal Surgery Volume 28 ; 028 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Clinics in Colon and Rectal Surgery Volume 29 ; 29 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; 2017 ; Clinics in Colon and Rectal Surgery Volume 30 ; 30 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Clinics in Colon and Rectal Surgery Volume 30 ; 30 ; >
 
   }
 
@@ -873,7 +873,7 @@
     param[journal_id] = 10.1055/s-00032260
     comment[years] = 2017-current
 
-   au < crawling ; exists ; 2017 ; 2017 ; Digestive Disease Interventions Volume 1 ; 1 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Digestive Disease Interventions Volume 1 ; 1 ; >
 
   }
 
@@ -1546,7 +1546,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Experimental and Clinical Endocrinology & Diabetes Volume 122 ; 122 ; >
    au < finished ; finished ; 2015 ; 2015 ; Experimental and Clinical Endocrinology & Diabetes Volume 123 ; 123 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2016 ; 2016 ; Experimental and Clinical Endocrinology & Diabetes Volume 124 ; 124 ; reingest4.clockss.org:8082 >
-   au < crawling ; exists ; 2017 ; 2017 ; Experimental and Clinical Endocrinology & Diabetes Volume 125 ; 125 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Experimental and Clinical Endocrinology & Diabetes Volume 125 ; 125 ; >
 
   }
 
@@ -2748,7 +2748,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Journal of Pediatric Genetics Volume 3 ; 3 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; Journal of Pediatric Genetics Volume 4 ; 4 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Journal of Pediatric Genetics Volume 5 ; 5 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; 2017 ; Journal of Pediatric Genetics Volume 6 ; 6 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Journal of Pediatric Genetics Volume 6 ; 6 ; >
 
   }
 
@@ -2914,7 +2914,7 @@
     comment[years] = 2016-current
 
     au < finished ; crawling ; 2016 ; 2016 ; Journal of Reconstructive Microsurgery Open Volume 1 ; 1 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; 2017 ; Journal of Reconstructive Microsurgery Open Volume 2 ; 2 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Journal of Reconstructive Microsurgery Open Volume 2 ; 2 ; >
 
   }
 
@@ -2935,7 +2935,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Journal of Wrist Surgery Volume 3 ; 3 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; Journal of Wrist Surgery Volume 4 ; 4 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Journal of Wrist Surgery Volume 5 ; 5 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2017 ; 2017 ; Journal of Wrist Surgery Volume 6 ; 6 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Journal of Wrist Surgery Volume 6 ; 6 ; >
 
   }
 
@@ -3195,7 +3195,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Klinische Pädiatrie Volume 226 ; 226 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Klinische Pädiatrie Volume 227 ; 227 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Klinische Pädiatrie Volume 228 ; 228 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2017 ; 2017 ; Klinische Pädiatrie Volume 229 ; 229 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Klinische Pädiatrie Volume 229 ; 229 ; >
 
   }
 
@@ -3323,7 +3323,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Laryngo-Rhino-Otologie Volume 93 ; 93 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Laryngo-Rhino-Otologie Volume 94 ; 94 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Laryngo-Rhino-Otologie Volume 95 ; 95 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; 2017 ; Laryngo-Rhino-Otologie Volume 96 ; 96 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Laryngo-Rhino-Otologie Volume 96 ; 96 ; >
 
   }
 
@@ -4809,7 +4809,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Seminars in Interventional Radiology Volume 31 ; 31 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; Seminars in Interventional Radiology Volume 32 ; 32 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; Seminars in Interventional Radiology Volume 33 ; 33 ; reingest4.clockss.org:8082 >
-   au < crawling ; exists ; 2017 ; 2017 ; Seminars in Interventional Radiology Volume 34 ; 34 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Seminars in Interventional Radiology Volume 34 ; 34 ; >
 
   }
 
@@ -5211,7 +5211,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Seminars in Thrombosis and Hemostasis Volume 40 ; 40 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Seminars in Thrombosis and Hemostasis Volume 41 ; 41 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Seminars in Thrombosis and Hemostasis Volume 42 ; 42 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; 2017 ; Seminars in Thrombosis and Hemostasis Volume 43 ; 43 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Seminars in Thrombosis and Hemostasis Volume 43 ; 43 ; >
 
   }
 
@@ -5665,7 +5665,7 @@
    au < finished ; finished ; 2014 ; 2014 ; team-konkret Volume 10 ; 10 ; >
    au < finished ; finished ; 2015 ; 2015 ; team-konkret Volume 11 ; 11 ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; team-konkret Volume 12 ; 12 ; reingest3.clockss.org:8083 >
-   au < crawling ; exists ; 2017 ; 2017 ; team-konkret Volume 13 ; 13 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; team-konkret Volume 13 ; 13 ; >
 
   }
 
@@ -5883,7 +5883,7 @@
 
    au < finished ; finished ; 2015 ; 2015 ; Ultrasound International Open Volume 1 ; 1 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; Ultrasound International Open Volume 2 ; 2 ; reingest1.clockss.org:8082 >
-   au < crawling ; exists ; 2017 ; 2017 ; Ultrasound International Open Volume 3 ; 3 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Ultrasound International Open Volume 3 ; 3 ; >
 
   }
 
@@ -6131,7 +6131,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 218 ; 218 ; >
     au < finished ; finished ; 2015 ; 2015 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 219 ; 219 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 220 ; 220 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; 2017 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 221 ; 221 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 221 ; 221 ; >
 
   }
 
@@ -6232,7 +6232,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Zeitschrift für Komplementärmedizin Volume 6 ; 6 ; >
     au < finished ; finished ; 2015 ; 2015 ; Zeitschrift für Komplementärmedizin Volume 7 ; 7 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Zeitschrift für Komplementärmedizin Volume 8 ; 8 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; 2017 ; Zeitschrift für Komplementärmedizin Volume 9 ; 9 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Zeitschrift für Komplementärmedizin Volume 9 ; 9 ; >
 
   }
 
@@ -6682,7 +6682,7 @@
     param[journal_id] = 10.1055/s-00033559
     comment[years] = 2017-current
 
-    au < crawling ; exists ; 2017 ; 2017 ; GGP - Fachzeitschrift für Geriatrische und Gerontologische Pflege Volume 1 ; 1 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; GGP - Fachzeitschrift für Geriatrische und Gerontologische Pflege Volume 1 ; 1 ; >
 
   }
 

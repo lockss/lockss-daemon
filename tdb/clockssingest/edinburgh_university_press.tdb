@@ -347,7 +347,7 @@
     au < finished ; finished ; 2014 ; Derrida Today Volume 7 ; 7 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2015 ; Derrida Today Volume 8 ; 8 ; http://www.euppublishing.com/ ; >
     au < frozen ; exists ; 2016 ; Derrida Today Volume 9 ; 9 ; http://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 2017 ; Derrida Today Volume 10 ; 10 ; http://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2017 ; Derrida Today Volume 10 ; 10 ; http://www.euppublishing.com/ ; >
     au < expected ; exists ; 2018 ; Derrida Today Volume 11 ; 11 ; https://www.euppublishing.com/ ; >
 
   }
@@ -1128,7 +1128,7 @@
     au < finished ; finished ; 2014 ; Paragraph Volume 37 ; 37 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2015 ; Paragraph Volume 38 ; 38 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2016 ; Paragraph Volume 39 ; 39 ; http://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 2017 ; Paragraph Volume 40 ; 40 ; http://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2017 ; Paragraph Volume 40 ; 40 ; http://www.euppublishing.com/ ; >
     au < expected ; exists ; 2018 ; Paragraph Volume 41 ; 41 ; https://www.euppublishing.com/ ; >
 
   }
@@ -1560,7 +1560,7 @@
        au < doNotProcess ; doNotProcess ; 2014 ; Costume Volume 48 ; 48 ; https://www.euppublishing.com/ ; >
        au < doNotProcess ; doNotProcess ; 2015 ; Costume Volume 49 ; 49 ; https://www.euppublishing.com/ ; >
        au < doNotProcess ; exists ; 2016 ; Costume Volume 50 ; 50 ; https://www.euppublishing.com/ ; >
-       au < crawling ; exists ; 2017 ; Costume Volume 51 ; 51 ; http://www.euppublishing.com/ ; > #moving to edinburgh
+       au < deepCrawl ; exists ; 2017 ; Costume Volume 51 ; 51 ; http://www.euppublishing.com/ ; > #moving to edinburgh
        au < expected ; exists ; 2018 ; Costume Volume 52 ; 52 ; https://www.euppublishing.com/ ; >
 
      }  

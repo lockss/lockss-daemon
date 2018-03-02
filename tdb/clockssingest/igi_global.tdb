@@ -50,7 +50,7 @@
     au < finished ; finished ; 2014 ; Information Resources Management Journal (IRMJ) Volume 27 ; 27 ; http://www.igi-global.com/ ; reingest1.clockss.org:8082 > 
     au < finished ; finished ; 2015 ; Information Resources Management Journal (IRMJ) Volume 28 ; 28 ; http://www.igi-global.com/ ; reingest5.clockss.org:8082 > 
     au < deepCrawl ; exists ; 2016 ; Information Resources Management Journal (IRMJ) Volume 29 ; 29 ; http://www.igi-global.com/ ; > 
-    au < crawling ; exists ; 2017 ; Information Resources Management Journal (IRMJ) Volume 30 ; 30 ; http://www.igi-global.com/ ; > 
+    au < deepCrawl ; exists ; 2017 ; Information Resources Management Journal (IRMJ) Volume 30 ; 30 ; http://www.igi-global.com/ ; > 
 
   }
 
@@ -537,7 +537,7 @@
     au < deepCrawl ; exists ; 2013 ; International Journal of Chemoinformatics and Chemical Engineering (IJCCE) Volume 3 ; 3 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2015 ; International Journal of Chemoinformatics and Chemical Engineering (IJCCE) Volume 4 ; 4 ; http://www.igi-global.com/ ; reingest4.clockss.org:8082 > 
     au < deepCrawl ; exists ; 2016 ; International Journal of Chemoinformatics and Chemical Engineering (IJCCE) Volume 5 ; 5 ; http://www.igi-global.com/ ; > 
-    au < crawling ; exists ; 2017 ; International Journal of Chemoinformatics and Chemical Engineering (IJCCE) Volume 6 ; 6 ; http://www.igi-global.com/ ; >
+    au < deepCrawl ; exists ; 2017 ; International Journal of Chemoinformatics and Chemical Engineering (IJCCE) Volume 6 ; 6 ; http://www.igi-global.com/ ; >
 
   }
 
@@ -1174,7 +1174,7 @@
     au < deepCrawl ; exists ; 2014 ; International Journal of E-Planning Research (IJEPR) Volume 3 ; 3 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2015 ; International Journal of E-Planning Research (IJEPR) Volume 4 ; 4 ; http://www.igi-global.com/ ; reingest3.clockss.org:8083 > 
     au < deepCrawl ; exists ; 2016 ; International Journal of E-Planning Research (IJEPR) Volume 5 ; 5 ; http://www.igi-global.com/ ; > 
-    au < crawling ; exists ; 2017 ; International Journal of E-Planning Research (IJEPR) Volume 6 ; 6 ; http://www.igi-global.com/ ; > 
+    au < deepCrawl ; exists ; 2017 ; International Journal of E-Planning Research (IJEPR) Volume 6 ; 6 ; http://www.igi-global.com/ ; > 
 
   }
 
@@ -1363,7 +1363,7 @@
     au < finished ; finished ; 2014 ; International Journal of Handheld Computing Research (IJHCR) Volume 5 ; 5 ; http://www.igi-global.com/ ; reingest3.clockss.org:8083 > 
     au < frozen ; exists ; 2015 ; International Journal of Handheld Computing Research (IJHCR) Volume 6 ; 6 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2016 ; International Journal of Handheld Computing Research (IJHCR) Volume 7 ; 7 ; http://www.igi-global.com/ ; > 
-    au < crawling ; exists ; 2017 ; International Journal of Handheld Computing Research (IJHCR) Volume 8 ; 8 ; http://www.igi-global.com/ ; > 
+    au < deepCrawl ; exists ; 2017 ; International Journal of Handheld Computing Research (IJHCR) Volume 8 ; 8 ; http://www.igi-global.com/ ; > 
 
   }
 
@@ -1668,7 +1668,7 @@
     au < finished ; finished ; 2014 ; International Journal of Information Technologies and Systems Approach (IJITSA) Volume 7 ; 7 ; http://www.igi-global.com/ ; reingest1.clockss.org:8082 > 
     au < frozen ; exists ; 2015 ; International Journal of Information Technologies and Systems Approach (IJITSA) Volume 8 ; 8 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2016 ; International Journal of Information Technologies and Systems Approach (IJITSA) Volume 9 ; 9 ; http://www.igi-global.com/ ; > 
-    au < crawling ; exists ; 2017 ; International Journal of Information Technologies and Systems Approach (IJITSA) Volume 10 ; 10 ; http://www.igi-global.com/ ; > 
+    au < deepCrawl ; exists ; 2017 ; International Journal of Information Technologies and Systems Approach (IJITSA) Volume 10 ; 10 ; http://www.igi-global.com/ ; > 
 
   }
 
@@ -2666,7 +2666,7 @@
     au < finished ; crawling ; 2014 ; International Journal of Sustainable Economies Management (IJSEM) Volume 3 ; 3 ; http://www.igi-global.com/ ; reingest3.clockss.org:8083 > 
     au < frozen ; exists ; 2015 ; International Journal of Sustainable Economies Management (IJSEM) Volume 4 ; 4 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2016 ; International Journal of Sustainable Economies Management (IJSEM) Volume 5 ; 5 ; http://www.igi-global.com/ ; > 
-    au < crawling ; exists ; 2017 ; International Journal of Sustainable Economies Management (IJSEM) Volume 6 ; 6 ; http://www.igi-global.com/ ; > 
+    au < deepCrawl ; exists ; 2017 ; International Journal of Sustainable Economies Management (IJSEM) Volume 6 ; 6 ; http://www.igi-global.com/ ; > 
 
   }
 
@@ -2786,7 +2786,7 @@
     au < finished ; crawling ; 2014 ; International Journal of Technoethics (IJT) Volume 5 ; 5 ; http://www.igi-global.com/ ; reingest5.clockss.org:8082 > 
     au < finished ; finished ; 2015 ; International Journal of Technoethics (IJT) Volume 6 ; 6 ; http://www.igi-global.com/ ; reingest1.clockss.org:8082 > 
     au < deepCrawl ; exists ; 2016 ; International Journal of Technoethics (IJT) Volume 7 ; 7 ; http://www.igi-global.com/ ; > 
-    au < crawling ; exists ; 2017 ; International Journal of Technoethics (IJT) Volume 8 ; 8 ; http://www.igi-global.com/ ; > 
+    au < deepCrawl ; exists ; 2017 ; International Journal of Technoethics (IJT) Volume 8 ; 8 ; http://www.igi-global.com/ ; > 
 
   }
 
@@ -2915,7 +2915,7 @@
     au < finished ; finished ; 2014 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 6 ; 6 ; http://www.igi-global.com/ ; reingest4.clockss.org:8082 > 
     au < finished ; finished ; 2015 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 7 ; 7 ; http://www.igi-global.com/ ; reingest3.clockss.org:8083 > 
     au < deepCrawl ; exists ; 2016 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 8 ; 8 ; http://www.igi-global.com/ ; > 
-    au < crawling ; exists ; 2017 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 9 ; 9 ; http://www.igi-global.com/ ; > 
+    au < deepCrawl ; exists ; 2017 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 9 ; 9 ; http://www.igi-global.com/ ; > 
 
   }
 
@@ -2937,7 +2937,7 @@
     au < finished ; finished ; 2014 ; International Journal of Web Portals (IJWP) Volume 6 ; 6 ; http://www.igi-global.com/ ; reingest1.clockss.org:8082 > 
     au < finished ; finished ; 2015 ; International Journal of Web Portals (IJWP) Volume 7 ; 7 ; http://www.igi-global.com/ ; reingest1.clockss.org:8082 > 
     au < crawling ; exists ; 2016 ; International Journal of Web Portals (IJWP) Volume 8 ; 8 ; http://www.igi-global.com/ ; > 
-    au < crawling ; exists ; 2017 ; International Journal of Web Portals (IJWP) Volume 9 ; 9 ; http://www.igi-global.com/ ; > 
+    au < deepCrawl ; exists ; 2017 ; International Journal of Web Portals (IJWP) Volume 9 ; 9 ; http://www.igi-global.com/ ; > 
 
   }
 
@@ -3066,7 +3066,7 @@
     au < finished ; finished ; 2014 ; Journal of Cases on Information Technology (JCIT) Volume 16 ; 16 ; http://www.igi-global.com/ ; reingest5.clockss.org:8082 > 
     au < finished ; finished ; 2015 ; Journal of Cases on Information Technology (JCIT) Volume 17 ; 17 ; http://www.igi-global.com/ ; reingest4.clockss.org:8082 > 
     au < deepCrawl ; exists ; 2016 ; Journal of Cases on Information Technology (JCIT) Volume 18 ; 18 ; http://www.igi-global.com/ ; > 
-    au < crawling ; exists ; 2017 ; Journal of Cases on Information Technology (JCIT) Volume 19 ; 19 ; http://www.igi-global.com/ ; > 
+    au < deepCrawl ; exists ; 2017 ; Journal of Cases on Information Technology (JCIT) Volume 19 ; 19 ; http://www.igi-global.com/ ; > 
 
   }
 
@@ -3135,7 +3135,7 @@
     au < finished ; finished ; 2014 ; Journal of Electronic Commerce in Organizations (JECO) Volume 12 ; 12 ; http://www.igi-global.com/ ; reingest5.clockss.org:8082 > 
     au < finished ; finished ; 2015 ; Journal of Electronic Commerce in Organizations (JECO) Volume 13 ; 13 ; http://www.igi-global.com/ ; reingest1.clockss.org:8082 > 
     au < deepCrawl ; exists ; 2016 ; Journal of Electronic Commerce in Organizations (JECO) Volume 14 ; 14 ; http://www.igi-global.com/ ; > 
-    au < crawling ; exists ; 2017 ; Journal of Electronic Commerce in Organizations (JECO) Volume 15 ; 15 ; http://www.igi-global.com/ ; > 
+    au < deepCrawl ; exists ; 2017 ; Journal of Electronic Commerce in Organizations (JECO) Volume 15 ; 15 ; http://www.igi-global.com/ ; > 
 
   }
 
