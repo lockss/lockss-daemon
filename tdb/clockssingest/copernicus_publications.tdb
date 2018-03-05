@@ -286,7 +286,7 @@
       au < manifest ; exists ; 2011 ; 2011 ; Atmospheric Chemistry and Physics Volume 11 ; 11 ; https://www.atmos-chem-phys.net/ ; https://www.atmospheric-chemistry-and-physics.net/ ; >
       au < finished ; frozen ; 2012 ; 2012 ; Atmospheric Chemistry and Physics Volume 12 ; 12 ; http://www.atmos-chem-phys.net/ ; http://www.atmospheric-chemistry-and-physics.net/ ; >
       au < finished ; crawling ; 2013 ; 2013 ; Atmospheric Chemistry and Physics Volume 13 ; 13 ; http://www.atmos-chem-phys.net/ ; http://www.atmospheric-chemistry-and-physics.net/ ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2014 ; 2014 ; Atmospheric Chemistry and Physics Volume 14 ; 14 ; http://www.atmos-chem-phys.net/ ; http://www.atmospheric-chemistry-and-physics.net/ ; reingest5.clockss.org:8082 >
+      au < zapped ; finished ; 2014 ; 2014 ; Atmospheric Chemistry and Physics Volume 14 ; 14 ; http://www.atmos-chem-phys.net/ ; http://www.atmospheric-chemistry-and-physics.net/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Atmospheric Chemistry and Physics Volume 15 ; 15 ; http://www.atmos-chem-phys.net/ ; http://www.atmospheric-chemistry-and-physics.net/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; 2016 ; Atmospheric Chemistry and Physics Volume 16 ; 16 ; http://www.atmos-chem-phys.net/ ; http://www.atmospheric-chemistry-and-physics.net/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2017 ; 2017 ; Atmospheric Chemistry and Physics Volume 17 ; 17 ; https://www.atmos-chem-phys.net/ ; https://www.atmospheric-chemistry-and-physics.net/ ; >
@@ -338,7 +338,7 @@
       au < manifest ; exists ; 2011 ; 2011 ; Atmospheric Measurement Techniques Volume 4 ; 4 ; https://www.atmos-meas-tech.net/ ; https://www.atmospheric-measurement-techniques.net/ ; >
       au < finished ; finished ; 2012 ; 2012 ; Atmospheric Measurement Techniques Volume 5 ; 5 ; http://www.atmos-meas-tech.net/ ; http://www.atmospheric-measurement-techniques.net/ ; >
       au < finished ; crawling ; 2013 ; 2013 ; Atmospheric Measurement Techniques Volume 6 ; 6 ; http://www.atmos-meas-tech.net/ ; http://www.atmospheric-measurement-techniques.net/ ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2014 ; 2014 ; Atmospheric Measurement Techniques Volume 7 ; 7 ; http://www.atmos-meas-tech.net/ ; http://www.atmospheric-measurement-techniques.net/ ; >
+      au < zapped ; finished ; 2014 ; 2014 ; Atmospheric Measurement Techniques Volume 7 ; 7 ; http://www.atmos-meas-tech.net/ ; http://www.atmospheric-measurement-techniques.net/ ; >
       au < frozen ; exists ; 2015 ; 2015 ; Atmospheric Measurement Techniques Volume 8 ; 8 ; http://www.atmos-meas-tech.net/ ; http://www.atmospheric-measurement-techniques.net/ ; >
       au < finished ; crawling ; 2016 ; 2016 ; Atmospheric Measurement Techniques Volume 9 ; 9 ; http://www.atmos-meas-tech.net/ ; http://www.atmospheric-measurement-techniques.net/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2017 ; 2017 ; Atmospheric Measurement Techniques Volume 10 ; 10 ; https://www.atmos-meas-tech.net/ ; https://www.atmospheric-measurement-techniques.net/ ; >
@@ -387,8 +387,8 @@
       au < manifest ; exists ; 2011 ; 2011 ; Biogeosciences Volume 8 ; 8 ; https://www.biogeosciences.net/ ; https://www.biogeosciences.net/ ; >
       au < finished ; finished ; 2012 ; 2012 ; Biogeosciences Volume 9 ; 9 ; http://www.biogeosciences.net/ ; http://www.biogeosciences.net/ ; >
       au < finished ; crawling ; 2013 ; 2013 ; Biogeosciences Volume 10 ; 10 ; http://www.biogeosciences.net/ ; http://www.biogeosciences.net/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2014 ; 2014 ; Biogeosciences Volume 11 ; 11 ; http://www.biogeosciences.net/ ; http://www.biogeosciences.net/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2015 ; 2015 ; Biogeosciences Volume 12 ; 12 ; http://www.biogeosciences.net/ ; http://www.biogeosciences.net/ ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 2014 ; 2014 ; Biogeosciences Volume 11 ; 11 ; http://www.biogeosciences.net/ ; http://www.biogeosciences.net/ ; reingest5.clockss.org:8082 >
+      au < zapped ; finished ; 2015 ; 2015 ; Biogeosciences Volume 12 ; 12 ; http://www.biogeosciences.net/ ; http://www.biogeosciences.net/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2016 ; 2016 ; Biogeosciences Volume 13 ; 13 ; http://www.biogeosciences.net/ ; http://www.biogeosciences.net/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2017 ; 2017 ; Biogeosciences Volume 14 ; 14 ; https://www.biogeosciences.net/ ; https://www.biogeosciences.net/ ; >
       au < manifest ; exists ; 2018 ; 2018 ; Biogeosciences Volume 15 ; 15 ; https://www.biogeosciences.net/ ; https://www.biogeosciences.net/ ; >
@@ -439,7 +439,7 @@
       au < manifest ; exists ; 2011 ; 2011 ; Climate of the Past Volume 7 ; 7 ; https://www.clim-past.net/ ; https://www.climate-of-the-past.net/ ; >
       au < finished ; finished ; 2012 ; 2012 ; Climate of the Past Volume 8 ; 8 ; http://www.clim-past.net/ ; http://www.climate-of-the-past.net/ ; >
       au < finished ; crawling ; 2013 ; 2013 ; Climate of the Past Volume 9 ; 9 ; http://www.clim-past.net/ ; http://www.climate-of-the-past.net/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2014 ; 2014 ; Climate of the Past Volume 10 ; 10 ; http://www.clim-past.net/ ; http://www.climate-of-the-past.net/ ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 2014 ; 2014 ; Climate of the Past Volume 10 ; 10 ; http://www.clim-past.net/ ; http://www.climate-of-the-past.net/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Climate of the Past Volume 11 ; 11 ; http://www.clim-past.net/ ; http://www.climate-of-the-past.net/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2016 ; 2016 ; Climate of the Past Volume 12 ; 12 ; http://www.clim-past.net/ ; http://www.climate-of-the-past.net/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; 2017 ; Climate of the Past Volume 13 ; 13 ; https://www.clim-past.net/ ; https://www.climate-of-the-past.net/ ; >
@@ -868,7 +868,7 @@
       au < manifest ; exists ; 2011 ; 2011 ; Geoscientific Model Development Volume 4 ; 4 ; https://www.geosci-model-dev.net/ ; https://www.geoscientific-model-development.net/ ; >
       au < finished ; finished ; 2012 ; 2012 ; Geoscientific Model Development Volume 5 ; 5 ; http://www.geosci-model-dev.net/ ; http://www.geoscientific-model-development.net/ ; >
       au < finished ; crawling ; 2013 ; 2013 ; Geoscientific Model Development Volume 6 ; 6 ; http://www.geosci-model-dev.net/ ; http://www.geoscientific-model-development.net/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2014 ; 2014 ; Geoscientific Model Development Volume 7 ; 7 ; http://www.geosci-model-dev.net/ ; http://www.geoscientific-model-development.net/ ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 2014 ; 2014 ; Geoscientific Model Development Volume 7 ; 7 ; http://www.geosci-model-dev.net/ ; http://www.geoscientific-model-development.net/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2015 ; 2015 ; Geoscientific Model Development Volume 8 ; 8 ; http://www.geosci-model-dev.net/ ; http://www.geoscientific-model-development.net/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2016 ; 2016 ; Geoscientific Model Development Volume 9 ; 9 ; http://www.geosci-model-dev.net/ ; http://www.geoscientific-model-development.net/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2017 ; 2017 ; Geoscientific Model Development Volume 10 ; 10 ; https://www.geosci-model-dev.net/ ; https://www.geoscientific-model-development.net/ ; >
@@ -965,7 +965,7 @@
       au < manifest ; exists ; 2011 ; 2011 ; Hydrology and Earth System Sciences Volume 15 ; 15 ; https://www.hydrol-earth-syst-sci.net/ ; https://www.hydrology-and-earth-system-sciences.net/ ; >
       au < finished ; finished ; 2012 ; 2012 ; Hydrology and Earth System Sciences Volume 16 ; 16 ; http://www.hydrol-earth-syst-sci.net/ ; http://www.hydrology-and-earth-system-sciences.net/ ; >
       au < finished ; crawling ; 2013 ; 2013 ; Hydrology and Earth System Sciences Volume 17 ; 17 ; http://www.hydrol-earth-syst-sci.net/ ; http://www.hydrology-and-earth-system-sciences.net/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2014 ; 2014 ; Hydrology and Earth System Sciences Volume 18 ; 18 ; http://www.hydrol-earth-syst-sci.net/ ; http://www.hydrology-and-earth-system-sciences.net/ ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 2014 ; 2014 ; Hydrology and Earth System Sciences Volume 18 ; 18 ; http://www.hydrol-earth-syst-sci.net/ ; http://www.hydrology-and-earth-system-sciences.net/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Hydrology and Earth System Sciences Volume 19 ; 19 ; http://www.hydrol-earth-syst-sci.net/ ; http://www.hydrology-and-earth-system-sciences.net/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2016 ; 2016 ; Hydrology and Earth System Sciences Volume 20 ; 20 ; http://www.hydrol-earth-syst-sci.net/ ; http://www.hydrology-and-earth-system-sciences.net/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; 2017 ; Hydrology and Earth System Sciences Volume 21 ; 21 ; https://www.hydrol-earth-syst-sci.net/ ; https://www.hydrology-and-earth-system-sciences.net/ ; >
@@ -1270,8 +1270,8 @@
       au < manifest ; exists ; 2011 ; 2011 ; Natural Hazards and Earth System Sciences Volume 11 ; 11 ; https://www.nat-hazards-earth-syst-sci.net/ ; https://www.natural-hazards-and-earth-system-sciences.net/ ; >
       au < finished ; frozen ; 2012 ; 2012 ; Natural Hazards and Earth System Sciences Volume 12 ; 12 ; http://www.nat-hazards-earth-syst-sci.net/ ; http://www.natural-hazards-and-earth-system-sciences.net/ ; >
       au < finished ; crawling ; 2013 ; 2013 ; Natural Hazards and Earth System Sciences Volume 13 ; 13 ; http://www.nat-hazards-earth-syst-sci.net/ ; http://www.natural-hazards-and-earth-system-sciences.net/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2014 ; 2014 ; Natural Hazards and Earth System Sciences Volume 14 ; 14 ; http://www.nat-hazards-earth-syst-sci.net/ ; http://www.natural-hazards-and-earth-system-sciences.net/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2015 ; 2015 ; Natural Hazards and Earth System Sciences Volume 15 ; 15 ; http://www.nat-hazards-earth-syst-sci.net/ ; http://www.natural-hazards-and-earth-system-sciences.net/ ; >
+      au < zapped ; finished ; 2014 ; 2014 ; Natural Hazards and Earth System Sciences Volume 14 ; 14 ; http://www.nat-hazards-earth-syst-sci.net/ ; http://www.natural-hazards-and-earth-system-sciences.net/ ; reingest5.clockss.org:8082 >
+      au < zapped ; finished ; 2015 ; 2015 ; Natural Hazards and Earth System Sciences Volume 15 ; 15 ; http://www.nat-hazards-earth-syst-sci.net/ ; http://www.natural-hazards-and-earth-system-sciences.net/ ; >
       au < frozen ; exists ; 2016 ; 2016 ; Natural Hazards and Earth System Sciences Volume 16 ; 16 ; https://www.nat-hazards-earth-syst-sci.net/ ; https://www.natural-hazards-and-earth-system-sciences.net/ ; >
       au < crawling ; exists ; 2017 ; 2017 ; Natural Hazards and Earth System Sciences Volume 17 ; 17 ; https://www.nat-hazards-earth-syst-sci.net/ ; https://www.natural-hazards-and-earth-system-sciences.net/ ; >
       au < manifest ; exists ; 2018 ; 2018 ; Natural Hazards and Earth System Sciences Volume 18 ; 18 ; https://www.nat-hazards-earth-syst-sci.net/ ; https://www.natural-hazards-and-earth-system-sciences.net/ ; >
@@ -1643,7 +1643,7 @@
       au < finished ; frozen ; 2012 ; 2012 ; The Cryosphere Volume 6 ; 6 ; http://www.the-cryosphere.net/ ; http://www.the-cryosphere.net/ ; >
       au < finished ; crawling ; 2013 ; 2013 ; The Cryosphere Volume 7 ; 7 ; http://www.the-cryosphere.net/ ; http://www.the-cryosphere.net/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2014 ; 2014 ; The Cryosphere Volume 8 ; 8 ; http://www.the-cryosphere.net/ ; http://www.the-cryosphere.net/ ; >
-      au < finished ; finished ; 2015 ; 2015 ; The Cryosphere Volume 9 ; 9 ; http://www.the-cryosphere.net/ ; http://www.the-cryosphere.net/ ; >
+      au < zapped ; finished ; 2015 ; 2015 ; The Cryosphere Volume 9 ; 9 ; http://www.the-cryosphere.net/ ; http://www.the-cryosphere.net/ ; >
       au < finished ; crawling ; 2016 ; 2016 ; The Cryosphere Volume 10 ; 10 ; http://www.the-cryosphere.net/ ; http://www.the-cryosphere.net/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; 2017 ; The Cryosphere Volume 11 ; 11 ; https://www.the-cryosphere.net/ ; https://www.the-cryosphere.net/ ; >
       au < manifest ; exists ; 2018 ; 2018 ; The Cryosphere Volume 12 ; 12 ; https://www.the-cryosphere.net/ ; https://www.the-cryosphere.net/ ; >

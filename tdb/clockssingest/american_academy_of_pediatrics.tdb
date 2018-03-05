@@ -491,15 +491,15 @@
 
       au < ClockssHighWirePlugin ; finished ; finished ; 2000 ; Red Book Online Volume 2000 ; 2000 ; >
       au < ClockssHighWirePlugin ; finished ; finished ; 2003 ; Red Book Online Volume 2003 ; 2003 ; >
-      au < ClockssHighWirePlugin ; finished ; finished ; 2006 ; Red Book Online Volume 2006 ; 2006 ; >
-      au < ClockssHighWirePlugin ; finished ; finished ; 2009 ; Red Book Online Volume 2009 ; 2009 ; >
+      au < ClockssHighWirePlugin ; zapped ; finished ; 2006 ; Red Book Online Volume 2006 ; 2006 ; >
+      au < ClockssHighWirePlugin ; zapped ; finished ; 2009 ; Red Book Online Volume 2009 ; 2009 ; >
     }
 
     {
       param[base_url] = http://aapredbook.aappublications.org/
       comment[moved] = moved to http://redbook.solutions.aap.org/
       
-      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Red Book Online Volume 2012 ; 1 ; >
+      au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2012 ; Red Book Online Volume 2012 ; 1 ; >
     }
 
   }

@@ -1118,8 +1118,8 @@
    au < finished ; finished ; 2011 ; 2011 ; DMW - Deutsche Medizinische Wochenschrift Volume 137 ; 137 ; >
    au < finished ; finished ; 2012 ; 2012 ; DMW - Deutsche Medizinische Wochenschrift Volume 138 ; 138 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2013 ; 2013 ; DMW - Deutsche Medizinische Wochenschrift Volume 139 ; 139 ; reingest1.clockss.org:8082 >
-   au < finished ; finished ; 2014 ; 2014 ; DMW - Deutsche Medizinische Wochenschrift Volume 140 ; 140 ; reingest2.clockss.org:8085 >
-   au < finished ; finished ; 2015 ; 2015 ; DMW - Deutsche Medizinische Wochenschrift Volume 141 ; 141 ; reingest5.clockss.org:8082 >
+   au < zapped ; finished ; 2014 ; 2014 ; DMW - Deutsche Medizinische Wochenschrift Volume 140 ; 140 ; reingest2.clockss.org:8085 >
+   au < zapped ; finished ; 2015 ; 2015 ; DMW - Deutsche Medizinische Wochenschrift Volume 141 ; 141 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; DMW - Deutsche Medizinische Wochenschrift Volume 142 ; 142 ; reingest2.clockss.org:8085 >
    au < crawling ; exists ; 2017 ; 2017 ; DMW - Deutsche Medizinische Wochenschrift Volume 143 ; 143 ; >
 
@@ -1240,7 +1240,7 @@
    au < finished ; finished ; 2012 ; 2012 ; Endoscopy Volume 44 ; 44 ; >
    au < finished ; finished ; 2013 ; 2013 ; Endoscopy Volume 45 ; 45 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2014 ; 2014 ; Endoscopy Volume 46 ; 46 ; >
-   au < finished ; finished ; 2015 ; 2015 ; Endoscopy Volume 47 ; 47 ; reingest3.clockss.org:8083 >
+   au < zapped ; finished ; 2015 ; 2015 ; Endoscopy Volume 47 ; 47 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2016 ; 2016 ; Endoscopy Volume 48 ; 48 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Endoscopy Volume 49 ; 49 ; >
 
@@ -5556,8 +5556,8 @@
    au < doNotProcess ; exists ; 2009 ; 2009 ; SYNLETT Volume 20 ; 20 ; >
    au < finished ; finished ; 2010 ; 2010 ; SYNLETT Volume 21 ; 21 ; reingest1.clockss.org:8082 >
    au < frozen ; exists ; 2011 ; 2011 ; SYNLETT Volume 22 ; 22 ; >
-   au < finished ; finished ; 2012 ; 2012 ; SYNLETT Volume 23 ; 23 ; reingest2.clockss.org:8085 >
-   au < finished ; finished ; 2013 ; 2013 ; SYNLETT Volume 24 ; 24 ; reingest3.clockss.org:8083 >
+   au < zapped ; finished ; 2012 ; 2012 ; SYNLETT Volume 23 ; 23 ; reingest2.clockss.org:8085 >
+   au < zapped ; finished ; 2013 ; 2013 ; SYNLETT Volume 24 ; 24 ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2014 ; 2014 ; SYNLETT Volume 25 ; 25 ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2015 ; 2015 ; SYNLETT Volume 26 ; 26 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; SYNLETT Volume 27 ; 27 ; reingest4.clockss.org:8082 >
@@ -5616,8 +5616,8 @@
    au < finished ; finished ; 2010 ; 2010 ; SYNTHESIS Volume 42 ; 42 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2011 ; 2011 ; SYNTHESIS Volume 43 ; 43 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2012 ; 2012 ; SYNTHESIS Volume 44 ; 44 ; >
-   au < finished ; finished ; 2013 ; 2013 ; SYNTHESIS Volume 45 ; 45 ; reingest4.clockss.org:8082 >
-   au < finished ; finished ; 2014 ; 2014 ; SYNTHESIS Volume 46 ; 46 ; reingest5.clockss.org:8082 >
+   au < zapped ; finished ; 2013 ; 2013 ; SYNTHESIS Volume 45 ; 45 ; reingest4.clockss.org:8082 >
+   au < zapped ; finished ; 2014 ; 2014 ; SYNTHESIS Volume 46 ; 46 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2015 ; 2015 ; SYNTHESIS Volume 47 ; 47 ; reingest1.clockss.org:8082 >
    au < deepCrawl ; exists ; 2016 ; 2016 ; SYNTHESIS Volume 48 ; 48 ; >
    au < crawling ; exists ; 2017 ; 2017 ; SYNTHESIS Volume 49 ; 49 ; >
