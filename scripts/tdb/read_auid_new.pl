@@ -168,6 +168,12 @@ while (my $line = <>) {
            $plugin eq "AAPLDrupalPlugin" ||
            $plugin eq "ADADrupalPlugin" ||
            $plugin eq "AHADrupalPlugin" ||
+           $plugin eq "AmAssocCancerResearchDrupalPlugin" ||
+           $plugin eq "AmAssocClinChemDrupalPlugin" ||
+           $plugin eq "AmAssocRespCareDrupalPlugin" ||
+           $plugin eq "AmCollegeCardiologyDrupalPlugin" ||
+           $plugin eq "AmSocEnVitDrupalPlugin" ||
+           $plugin eq "AmSocHealthSysDrupalPlugin" ||
            $plugin eq "APSDrupalPlugin" ||
            $plugin eq "ARFDrupalPlugin" ||
            $plugin eq "ASHDrupalPlugin" ||
@@ -177,6 +183,7 @@ while (my $line = <>) {
            $plugin eq "BESBJSDrupalPlugin" ||
            $plugin eq "BiologistsDrupalPlugin" ||
            $plugin eq "BMJDrupalPlugin" ||
+           $plugin eq "CollegeFamilyPhysCanadaDrupalPlugin" ||
            $plugin eq "EMBODrupalPlugin" ||
            $plugin eq "ERSDrupalPlugin" ||
            $plugin eq "FSFDrupalPlugin" ||
