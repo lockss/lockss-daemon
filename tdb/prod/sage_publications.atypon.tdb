@@ -6091,8 +6091,8 @@
       au < doNotProcess ; 2014 ; The Cleft Palate-Craniofacial Journal Volume 51 ; 51 ; cpca >
       au < doNotProcess ; 2015 ; The Cleft Palate-Craniofacial Journal Volume 52 ; 52 ; cpca >
       au < doNotProcess ; 2016 ; The Cleft Palate-Craniofacial Journal Volume 53 ; 53 ; cpca >
-      au < exists ; 2017 ; The Cleft Palate-Craniofacial Journal Volume 54 ; 54 ; cpca >
-      au < exists ; 2018 ; The Cleft Palate-Craniofacial Journal Volume 55 ; 55 ; cpca >
+      au < manifest ; 2017 ; The Cleft Palate-Craniofacial Journal Volume 54 ; 54 ; cpca >
+      au < manifest ; 2018 ; The Cleft Palate-Craniofacial Journal Volume 55 ; 55 ; cpca >
 
     }
 
@@ -11185,25 +11185,25 @@
 
       #param[journal_id] = ejo
 
-        au < exists ; 1999 ; European Journal of Ophthalmology Volume 9 ; 9 ; ejoa >
-        au < exists ; 2000 ; European Journal of Ophthalmology Volume 10 ; 10 ; ejoa >
-        au < exists ; 2001 ; European Journal of Ophthalmology Volume 11 ; 11 ; ejoa >
-        au < exists ; 2002 ; European Journal of Ophthalmology Volume 12 ; 12 ; ejoa >
-        au < exists ; 2003 ; European Journal of Ophthalmology Volume 13 ; 13 ; ejoa >
-        au < exists ; 2004 ; European Journal of Ophthalmology Volume 14 ; 14 ; ejoa >
-        au < exists ; 2005 ; European Journal of Ophthalmology Volume 15 ; 15 ; ejoa >
-        au < exists ; 2006 ; European Journal of Ophthalmology Volume 16 ; 16 ; ejoa >
-        au < exists ; 2007 ; European Journal of Ophthalmology Volume 17 ; 17 ; ejoa >
-        au < exists ; 2008 ; European Journal of Ophthalmology Volume 18 ; 18 ; ejoa >
-        au < exists ; 2009 ; European Journal of Ophthalmology Volume 19 ; 19 ; ejoa >
-        au < exists ; 2010 ; European Journal of Ophthalmology Volume 20 ; 20 ; ejoa >
-        au < exists ; 2011 ; European Journal of Ophthalmology Volume 21 ; 21 ; ejoa >
-        au < exists ; 2012 ; European Journal of Ophthalmology Volume 22 ; 22 ; ejoa >
-        au < exists ; 2013 ; European Journal of Ophthalmology Volume 23 ; 23 ; ejoa >
-        au < exists ; 2014 ; European Journal of Ophthalmology Volume 24 ; 24 ; ejoa >
-        au < exists ; 2015 ; European Journal of Ophthalmology Volume 25 ; 25 ; ejoa >
-        au < exists ; 2016 ; European Journal of Ophthalmology Volume 26 ; 26 ; ejoa >
-        au < exists ; 2017 ; European Journal of Ophthalmology Volume 27 ; 27 ; ejoa >
+        au < manifest ; 1999 ; European Journal of Ophthalmology Volume 9 ; 9 ; ejoa >
+        au < manifest ; 2000 ; European Journal of Ophthalmology Volume 10 ; 10 ; ejoa >
+        au < manifest ; 2001 ; European Journal of Ophthalmology Volume 11 ; 11 ; ejoa >
+        au < manifest ; 2002 ; European Journal of Ophthalmology Volume 12 ; 12 ; ejoa >
+        au < manifest ; 2003 ; European Journal of Ophthalmology Volume 13 ; 13 ; ejoa >
+        au < manifest ; 2004 ; European Journal of Ophthalmology Volume 14 ; 14 ; ejoa >
+        au < manifest ; 2005 ; European Journal of Ophthalmology Volume 15 ; 15 ; ejoa >
+        au < manifest ; 2006 ; European Journal of Ophthalmology Volume 16 ; 16 ; ejoa >
+        au < manifest ; 2007 ; European Journal of Ophthalmology Volume 17 ; 17 ; ejoa >
+        au < manifest ; 2008 ; European Journal of Ophthalmology Volume 18 ; 18 ; ejoa >
+        au < manifest ; 2009 ; European Journal of Ophthalmology Volume 19 ; 19 ; ejoa >
+        au < manifest ; 2010 ; European Journal of Ophthalmology Volume 20 ; 20 ; ejoa >
+        au < manifest ; 2011 ; European Journal of Ophthalmology Volume 21 ; 21 ; ejoa >
+        au < manifest ; 2012 ; European Journal of Ophthalmology Volume 22 ; 22 ; ejoa >
+        au < manifest ; 2013 ; European Journal of Ophthalmology Volume 23 ; 23 ; ejoa >
+        au < manifest ; 2014 ; European Journal of Ophthalmology Volume 24 ; 24 ; ejoa >
+        au < manifest ; 2015 ; European Journal of Ophthalmology Volume 25 ; 25 ; ejoa >
+        au < manifest ; 2016 ; European Journal of Ophthalmology Volume 26 ; 26 ; ejoa >
+        au < manifest ; 2017 ; European Journal of Ophthalmology Volume 27 ; 27 ; ejoa >
     }
 
     {
@@ -12868,22 +12868,22 @@
 
         #param[journal_id] = gtn
 
-        au < exists ; 2001 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 13 ; 13 ; gtna >
-        au < exists ; 2002 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 14 ; 14 ; gtna >
+        au < manifest ; 2001 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 13 ; 13 ; gtna >
+        au < manifest ; 2002 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 14 ; 14 ; gtna >
         au < doesNotExist ; 2003 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 15 ; 15 ; gtna >
         au < doesNotExist ; 2004 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 16 ; 16 ; gtna >
         au < doesNotExist ; 2005 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 17 ; 17 ; gtna >
-        au < exists ; 2006 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 18 ; 18 ; gtna >
-        au < exists ; 2007 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 19 ; 19 ; gtna >
-        au < exists ; 2008 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 20 ; 20 ; gtna >
-        au < exists ; 2009 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 21 ; 21 ; gtna >
-        au < exists ; 2010 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 22 ; 22 ; gtna >
-        au < exists ; 2011 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 23 ; 23 ; gtna >
-        au < exists ; 2012 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 24 ; 24 ; gtna >
-        au < exists ; 2013 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 25 ; 25 ; gtna >
-        au < exists ; 2014 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 26 ; 26 ; gtna >
-        au < exists ; 2015 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 27 ; 27 ; gtna >
-        au < exists ; 2016 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 28 ; 28 ; gtna >
+        au < manifest ; 2006 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 18 ; 18 ; gtna >
+        au < manifest ; 2007 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 19 ; 19 ; gtna >
+        au < manifest ; 2008 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 20 ; 20 ; gtna >
+        au < manifest ; 2009 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 21 ; 21 ; gtna >
+        au < manifest ; 2010 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 22 ; 22 ; gtna >
+        au < manifest ; 2011 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 23 ; 23 ; gtna >
+        au < manifest ; 2012 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 24 ; 24 ; gtna >
+        au < manifest ; 2013 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 25 ; 25 ; gtna >
+        au < manifest ; 2014 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 26 ; 26 ; gtna >
+        au < manifest ; 2015 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 27 ; 27 ; gtna >
+        au < manifest ; 2016 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 28 ; 28 ; gtna >
     }
 
     {
@@ -12896,10 +12896,10 @@
 
         #param[journal_id] = grh
 
-        au < exists ; 2014 ; Global & Regional Health Technology Assessment Volume 1 ; 1 ; grha >
-        au < exists ; 2015 ; Global & Regional Health Technology Assessment Volume 2 ; 2 ; grha >
-        au < exists ; 2016 ; Global & Regional Health Technology Assessment Volume 3 ; 3 ; grha >
-        au < exists ; 2017 ; Global & Regional Health Technology Assessment Volume 4 ; 4 ; grha >
+        au < manifest ; 2014 ; Global & Regional Health Technology Assessment Volume 1 ; 1 ; grha >
+        au < manifest ; 2015 ; Global & Regional Health Technology Assessment Volume 2 ; 2 ; grha >
+        au < manifest ; 2016 ; Global & Regional Health Technology Assessment Volume 3 ; 3 ; grha >
+        au < manifest ; 2017 ; Global & Regional Health Technology Assessment Volume 4 ; 4 ; grha >
     }
 
     {
@@ -14151,22 +14151,22 @@
 
         #param[journal_id] = hpi
 
-        au < exists ; 2002 ; HIP International Volume 12 ; 12 ; hpia >
-        au < exists ; 2003 ; HIP International Volume 13 ; 13 ; hpia >
-        au < exists ; 2004 ; HIP International Volume 14 ; 14 ; hpia >
-        au < exists ; 2005 ; HIP International Volume 15 ; 15 ; hpia >
-        au < exists ; 2006 ; HIP International Volume 16 ; 16 ; hpia >
-        au < exists ; 2007 ; HIP International Volume 17 ; 17 ; hpia >
-        au < exists ; 2008 ; HIP International Volume 18 ; 18 ; hpia >
-        au < exists ; 2009 ; HIP International Volume 19 ; 19 ; hpia >
-        au < exists ; 2010 ; HIP International Volume 20 ; 20 ; hpia >
-        au < exists ; 2011 ; HIP International Volume 21 ; 21 ; hpia >
+        au < manifest ; 2002 ; HIP International Volume 12 ; 12 ; hpia >
+        au < manifest ; 2003 ; HIP International Volume 13 ; 13 ; hpia >
+        au < manifest ; 2004 ; HIP International Volume 14 ; 14 ; hpia >
+        au < manifest ; 2005 ; HIP International Volume 15 ; 15 ; hpia >
+        au < manifest ; 2006 ; HIP International Volume 16 ; 16 ; hpia >
+        au < manifest ; 2007 ; HIP International Volume 17 ; 17 ; hpia >
+        au < manifest ; 2008 ; HIP International Volume 18 ; 18 ; hpia >
+        au < manifest ; 2009 ; HIP International Volume 19 ; 19 ; hpia >
+        au < manifest ; 2010 ; HIP International Volume 20 ; 20 ; hpia >
+        au < manifest ; 2011 ; HIP International Volume 21 ; 21 ; hpia >
         au < exists ; 2012 ; HIP International Volume 22 ; 22 ; hpia >
-        au < exists ; 2013 ; HIP International Volume 23 ; 23 ; hpia >
-        au < exists ; 2014 ; HIP International Volume 24 ; 24 ; hpia >
-        au < exists ; 2015 ; HIP International Volume 25 ; 25 ; hpia >
-        au < exists ; 2016 ; HIP International Volume 26 ; 26 ; hpia >
-        au < exists ; 2017 ; HIP International Volume 27 ; 27 ; hpia >
+        au < manifest ; 2013 ; HIP International Volume 23 ; 23 ; hpia >
+        au < manifest ; 2014 ; HIP International Volume 24 ; 24 ; hpia >
+        au < manifest ; 2015 ; HIP International Volume 25 ; 25 ; hpia >
+        au < manifest ; 2016 ; HIP International Volume 26 ; 26 ; hpia >
+        au < manifest ; 2017 ; HIP International Volume 27 ; 27 ; hpia >
     }
 
     {
@@ -18479,21 +18479,21 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
       #param[journal_id] = jbf
 
-        au < exists ; 2003 ; Journal of Applied Biomaterials & Functional Materials Volume 1 ; 1 ; jbfb >
-        au < exists ; 2004 ; Journal of Applied Biomaterials & Functional Materials Volume 2 ; 2 ; jbfb >
-        au < exists ; 2005 ; Journal of Applied Biomaterials & Functional Materials Volume 3 ; 3 ; jbfb >
-        au < exists ; 2006 ; Journal of Applied Biomaterials & Functional Materials Volume 4 ; 4 ; jbfb >
-        au < exists ; 2007 ; Journal of Applied Biomaterials & Functional Materials Volume 5 ; 5 ; jbfb >
-        au < exists ; 2008 ; Journal of Applied Biomaterials & Functional Materials Volume 6 ; 6 ; jbfb >
-        au < exists ; 2009 ; Journal of Applied Biomaterials & Functional Materials Volume 7 ; 7 ; jbfb >
-        au < exists ; 2010 ; Journal of Applied Biomaterials & Functional Materials Volume 8 ; 8 ; jbfb >
+        au < manifest ; 2003 ; Journal of Applied Biomaterials & Functional Materials Volume 1 ; 1 ; jbfb >
+        au < manifest ; 2004 ; Journal of Applied Biomaterials & Functional Materials Volume 2 ; 2 ; jbfb >
+        au < manifest ; 2005 ; Journal of Applied Biomaterials & Functional Materials Volume 3 ; 3 ; jbfb >
+        au < manifest ; 2006 ; Journal of Applied Biomaterials & Functional Materials Volume 4 ; 4 ; jbfb >
+        au < manifest ; 2007 ; Journal of Applied Biomaterials & Functional Materials Volume 5 ; 5 ; jbfb >
+        au < manifest ; 2008 ; Journal of Applied Biomaterials & Functional Materials Volume 6 ; 6 ; jbfb >
+        au < manifest ; 2009 ; Journal of Applied Biomaterials & Functional Materials Volume 7 ; 7 ; jbfb >
+        au < manifest ; 2010 ; Journal of Applied Biomaterials & Functional Materials Volume 8 ; 8 ; jbfb >
         au < doesNotExist ; 2011 ; Journal of Applied Biomaterials & Functional Materials Volume 9 ; 9 ; jbfa >
         au < doesNotExist ; 2012 ; Journal of Applied Biomaterials & Functional Materials Volume 10 ; 10 ; jbfa >
         au < doesNotExist ; 2013 ; Journal of Applied Biomaterials & Functional Materials Volume 11 ; 11 ; jbfa >
-        au < exists ; 2014 ; Journal of Applied Biomaterials & Functional Materials Volume 12 ; 12 ; jbfa >
-        au < exists ; 2015 ; Journal of Applied Biomaterials & Functional Materials Volume 13 ; 13 ; jbfa >
-        au < exists ; 2016 ; Journal of Applied Biomaterials & Functional Materials Volume 14 ; 14 ; jbfa >
-        au < exists ; 2017 ; Journal of Applied Biomaterials & Functional Materials Volume 15 ; 15 ; jbfa >
+        au < manifest ; 2014 ; Journal of Applied Biomaterials & Functional Materials Volume 12 ; 12 ; jbfa >
+        au < manifest ; 2015 ; Journal of Applied Biomaterials & Functional Materials Volume 13 ; 13 ; jbfa >
+        au < manifest ; 2016 ; Journal of Applied Biomaterials & Functional Materials Volume 14 ; 14 ; jbfa >
+        au < manifest ; 2017 ; Journal of Applied Biomaterials & Functional Materials Volume 15 ; 15 ; jbfa >
 
     }
 
@@ -21502,15 +21502,15 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
         #param[journal_id] = pev
 
-        au < exists ; 2009 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 1 ; 1 ; pevb >
-        au < exists ; 2010 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 2 ; 2 ; pevb >
-        au < exists ; 2011 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 3 ; 3 ; pevb >
-        au < exists ; 2012 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 4 ; 4 ; pevb >
-        au < exists ; 2013 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 5 ; 5 ; peva >
-        au < exists ; 2014 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 6 ; 6 ; peva >
-        au < exists ; 2015 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 7 ; 7 ; peva >
-        au < exists ; 2016 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 8 ; 8 ; peva >
-        au < exists ; 2017 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 9 ; 9 ; peva >
+        au < manifest ; 2009 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 1 ; 1 ; pevb >
+        au < manifest ; 2010 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 2 ; 2 ; pevb >
+        au < manifest ; 2011 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 3 ; 3 ; pevb >
+        au < manifest ; 2012 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 4 ; 4 ; pevb >
+        au < manifest ; 2013 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 5 ; 5 ; peva >
+        au < manifest ; 2014 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 6 ; 6 ; peva >
+        au < manifest ; 2015 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 7 ; 7 ; peva >
+        au < manifest ; 2016 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 8 ; 8 ; peva >
+        au < manifest ; 2017 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 9 ; 9 ; peva >
     }
 
     {
@@ -24382,7 +24382,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
       #param[jounral_id] = jnp
 
-        au < exists ; 2017 ; Journal of Onco-Nephrology Volume 1 ; 1 ; jnpa >
+        au < manifest ; 2017 ; Journal of Onco-Nephrology Volume 1 ; 1 ; jnpa >
 
     }
 
@@ -24716,27 +24716,27 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
     #param[journal_id] = ppj
 
-      au < exists ; 1998 ; Journal of Perioperative Practice Volume 8 ; 8 ; ppjb >
-      au < exists ; 1999 ; Journal of Perioperative Practice Volume 9 ; 9 ; ppjb >
-      au < exists ; 2000 ; Journal of Perioperative Practice Volume 10 ; 10 ; ppjc >
-      au < exists ; 2001 ; Journal of Perioperative Practice Volume 11 ; 11 ; ppjc >
-      au < exists ; 2002 ; Journal of Perioperative Practice Volume 12 ; 12 ; ppjc >
-      au < exists ; 2003 ; Journal of Perioperative Practice Volume 13 ; 13 ; ppjc >
-      au < exists ; 2004 ; Journal of Perioperative Practice Volume 14 ; 14 ; ppjc >
-      au < exists ; 2005 ; Journal of Perioperative Practice Volume 15 ; 15 ; ppjc >
-      au < exists ; 2006 ; Journal of Perioperative Practice Volume 16 ; 16 ; ppja >
-      au < exists ; 2007 ; Journal of Perioperative Practice Volume 17 ; 17 ; ppja >
-      au < exists ; 2008 ; Journal of Perioperative Practice Volume 18 ; 18 ; ppja >
-      au < exists ; 2009 ; Journal of Perioperative Practice Volume 19 ; 19 ; ppja >
-      au < exists ; 2010 ; Journal of Perioperative Practice Volume 20 ; 20 ; ppja >
-      au < exists ; 2011 ; Journal of Perioperative Practice Volume 21 ; 21 ; ppja >
-      au < exists ; 2012 ; Journal of Perioperative Practice Volume 22 ; 22 ; ppja >
-      au < exists ; 2013 ; Journal of Perioperative Practice Volume 23 ; 23 ; ppja >
-      au < exists ; 2014 ; Journal of Perioperative Practice Volume 24 ; 24 ; ppja >
-      au < exists ; 2015 ; Journal of Perioperative Practice Volume 25 ; 25 ; ppja >
-      au < exists ; 2016 ; Journal of Perioperative Practice Volume 26 ; 26 ; ppja >
-      au < exists ; 2017 ; Journal of Perioperative Practice Volume 27 ; 27 ; ppja >
-      au < exists ; 2018 ; Journal of Perioperative Practice Volume 28 ; 28 ; ppja >
+      au < manifest ; 1998 ; Journal of Perioperative Practice Volume 8 ; 8 ; ppjb >
+      au < manifest ; 1999 ; Journal of Perioperative Practice Volume 9 ; 9 ; ppjb >
+      au < manifest ; 2000 ; Journal of Perioperative Practice Volume 10 ; 10 ; ppjc >
+      au < manifest ; 2001 ; Journal of Perioperative Practice Volume 11 ; 11 ; ppjc >
+      au < manifest ; 2002 ; Journal of Perioperative Practice Volume 12 ; 12 ; ppjc >
+      au < manifest ; 2003 ; Journal of Perioperative Practice Volume 13 ; 13 ; ppjc >
+      au < manifest ; 2004 ; Journal of Perioperative Practice Volume 14 ; 14 ; ppjc >
+      au < manifest ; 2005 ; Journal of Perioperative Practice Volume 15 ; 15 ; ppjc >
+      au < manifest ; 2006 ; Journal of Perioperative Practice Volume 16 ; 16 ; ppja >
+      au < manifest ; 2007 ; Journal of Perioperative Practice Volume 17 ; 17 ; ppja >
+      au < manifest ; 2008 ; Journal of Perioperative Practice Volume 18 ; 18 ; ppja >
+      au < manifest ; 2009 ; Journal of Perioperative Practice Volume 19 ; 19 ; ppja >
+      au < manifest ; 2010 ; Journal of Perioperative Practice Volume 20 ; 20 ; ppja >
+      au < manifest ; 2011 ; Journal of Perioperative Practice Volume 21 ; 21 ; ppja >
+      au < manifest ; 2012 ; Journal of Perioperative Practice Volume 22 ; 22 ; ppja >
+      au < manifest ; 2013 ; Journal of Perioperative Practice Volume 23 ; 23 ; ppja >
+      au < manifest ; 2014 ; Journal of Perioperative Practice Volume 24 ; 24 ; ppja >
+      au < manifest ; 2015 ; Journal of Perioperative Practice Volume 25 ; 25 ; ppja >
+      au < manifest ; 2016 ; Journal of Perioperative Practice Volume 26 ; 26 ; ppja >
+      au < manifest ; 2017 ; Journal of Perioperative Practice Volume 27 ; 27 ; ppja >
+      au < manifest ; 2018 ; Journal of Perioperative Practice Volume 28 ; 28 ; ppja >
 
   }
 
@@ -25621,9 +25621,9 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
       #param[journal_id] = jso
 
-        au < exists ; 2016 ; Journal of Scleroderma and Related Disorders Volume 1 ; 1 ; jsoa >
-        au < exists ; 2017 ; Journal of Scleroderma and Related Disorders Volume 2 ; 2 ; jsoa >
-        au < exists ; 2017 ; Journal of Scleroderma and Related Disorders Volume 3 ; 3 ; jsoa >
+        au < manifest ; 2016 ; Journal of Scleroderma and Related Disorders Volume 1 ; 1 ; jsoa >
+        au < manifest ; 2017 ; Journal of Scleroderma and Related Disorders Volume 2 ; 2 ; jsoa >
+        au < manifest ; 2017 ; Journal of Scleroderma and Related Disorders Volume 3 ; 3 ; jsoa >
 
     }
 
@@ -29188,8 +29188,8 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
         #param[journal_id] = map
 
-        au < exists ; 2017 ; Medicine Access @ Point of Care Volume 1 ; 1 ; mapa >
-        au < exists ; 2018 ; Medicine Access @ Point of Care Volume 2 ; 2 ; mapa >
+        au < manifest ; 2017 ; Medicine Access @ Point of Care Volume 1 ; 1 ; mapa >
+        au < manifest ; 2018 ; Medicine Access @ Point of Care Volume 2 ; 2 ; mapa >
     }
 
     {
@@ -29201,9 +29201,9 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
         #param[journal_id] = npc
 
-        au < exists ; 2015 ; Nephrology @ Point of Care Volume 1 ; 1 ; npca >
-        au < exists ; 2016 ; Nephrology @ Point of Care Volume 2 ; 2 ; npca >
-        au < exists ; 2017 ; Nephrology @ Point of Care Volume 3 ; 3 ; npca >
+        au < manifest ; 2015 ; Nephrology @ Point of Care Volume 1 ; 1 ; npca >
+        au < manifest ; 2016 ; Nephrology @ Point of Care Volume 2 ; 2 ; npca >
+        au < manifest ; 2017 ; Nephrology @ Point of Care Volume 3 ; 3 ; npca >
     }
 
     {
