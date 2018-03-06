@@ -63,7 +63,7 @@ public class TestHighWirePressH20Plugin extends LockssTestCase {
         "[.](css|js)$",
         "://[^/]+(?!.*/content/)(/[^/]+)+[.](gif|png|jpg)$",
         "://[^/]+(/shared/img/).*[.](gif|png|jpg)$",
-        "://[^/]+/content/[^?]+[.]full[.]pdf[+]html([?]frame=(header|sidebar))?$"
+        "://[^/]+/content/[^?]+[.](full[.]pdf[+]html([?]frame=(header|sidebar))?|long)$"
     };
 
   private DefinablePlugin plugin;
@@ -176,8 +176,9 @@ public class TestHighWirePressH20Plugin extends LockssTestCase {
         ROOT_URL + "shared/img/common/hw-lens-monocle-xsm.png",
         ROOT_URL + "shared/img/content/int-data-supp-closed.png",
         ROOT_URL + "shared/img/fancybox/fancy_title_over.png",
-        ROOT_URL + "content/317/2/216.full.pdf+html?frame=sidebar",
-        ROOT_URL + "content/317/2/216.full.pdf+html"
+        ROOT_URL + "content/322/2/216.full.pdf+html?frame=sidebar",
+        ROOT_URL + "content/322/2/216.full.pdf+html",
+        ROOT_URL + "content/322/2/216.long"
         );
     
     Pattern p0 = Pattern.compile(HW_REPAIR_FROM_PEER_REGEXP[0]);

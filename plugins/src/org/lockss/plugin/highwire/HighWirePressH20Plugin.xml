@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>128</string>
+    <string>129</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>46</string>
+        <string>47</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -276,7 +276,7 @@
       <string>[.](css|js)$</string>
       <string>://[^/]+(?!.*/content/)(/[^/]+)+[.](gif|png|jpg)$</string>
       <string>://[^/]+(/shared/img/).*[.](gif|png|jpg)$</string>
-      <string>://[^/]+/content/[^?]+[.]full[.]pdf[+]html([?]frame=(header|sidebar))?$</string>
+      <string>://[^/]+/content/[^?]+[.](full[.]pdf[+]html([?]frame=(header|sidebar))?|long)$</string>
     </list>
   </entry>
   <entry>
@@ -290,7 +290,7 @@
       <string>"://[^/]+(?!.*/content/)(/[^/]+)+[.](gif|png|jpg)$", 0</string>
       <string>"://[^/]+(/shared/img/).*[.](gif|png|jpg)$", 0</string>
       <string>"/search\?submit=yes(?!(&amp;sortspec=[^&amp;]+)?&amp;tocsectionid=)", 0</string>
-      <string>"://[^/]+/content/[^?]+[.]full[.]pdf[+]html([?]frame=(header|sidebar))?$", 0</string>
+      <string>"://[^/]+/content/[^?]+[.](full[.]pdf[+]html([?]frame=(header|sidebar))?|long)$", 0</string>
     </list>
   </entry>
 </map>
