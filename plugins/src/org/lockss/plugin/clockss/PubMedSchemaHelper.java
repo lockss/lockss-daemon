@@ -151,7 +151,8 @@ implements SourceXmlSchemaHelper {
   private static String publisher = "Journal/PublisherName";
   private static String pub_title = "Journal/JournalTitle";
   private static String pub_issn = "Journal/Issn";
-  private static String pub_date = "Journal/PubDate";
+  // could be @PubStatus = (ppublish|epublish)
+  private static String pub_date = "Journal/PubDate"; 
   private static String pub_volume = "Journal/Volume";
   private static String pub_issue = "Journal/Issue";
   
