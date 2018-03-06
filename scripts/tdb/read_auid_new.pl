@@ -172,6 +172,7 @@ while (my $line = <>) {
            $plugin eq "ARFDrupalPlugin" ||
            $plugin eq "ASHDrupalPlugin" ||
            $plugin eq "ASMDrupalPlugin" ||
+           $plugin eq "ASPBDrupalPlugin" ||
            $plugin eq "ASPETDrupalPlugin" ||
            $plugin eq "BESBJSDrupalPlugin" ||
            $plugin eq "BiologistsDrupalPlugin" ||
