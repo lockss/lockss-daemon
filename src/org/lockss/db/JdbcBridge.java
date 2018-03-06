@@ -56,7 +56,7 @@ public class JdbcBridge {
   /**
    * Provides a database connection using a passed datasource, retrying the
    * operation with the specified parameters in case of transient failures.
-   * <p />
+   * <p>
    * Autocommit is disabled to allow the client code to manage transactions.
    * 
    * @param ds

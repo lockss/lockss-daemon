@@ -169,7 +169,7 @@ public class ParticipantWsResult {
   /**
    * Provides the list of agreeing URLs.
    *
-   * @return a Collection<String> with the agreeing URLs.
+   * @return a {@code Collection<String>} with the agreeing URLs.
    */
   public Collection<String> getAgreedUrls() {
     return agreedUrls;
@@ -181,7 +181,7 @@ public class ParticipantWsResult {
   /**
    * Provides the list of disagreeing URLs.
    *
-   * @return a Collection<String> with the disagreeing URLs.
+   * @return a {@code Collection<String>} with the disagreeing URLs.
    */
   public Collection<String> getDisagreedUrls() {
     return disagreedUrls;
@@ -193,7 +193,7 @@ public class ParticipantWsResult {
   /**
    * Provides the list of pollerOnly URLs.
    *
-   * @return a Collection<String> with the pollerOnly URLs.
+   * @return a {@code Collection<String>} with the pollerOnly URLs.
    */
   public Collection<String> getPollerOnlyUrls() {
     return pollerOnlyUrls;
@@ -205,7 +205,7 @@ public class ParticipantWsResult {
   /**
    * Provides the list of voterOnly URLs.
    *
-   * @return a Collection<String> with the voterOnly URLs.
+   * @return a {@code Collection<String>} with the voterOnly URLs.
    */
   public Collection<String> getVoterOnlyUrls() {
     return voterOnlyUrls;

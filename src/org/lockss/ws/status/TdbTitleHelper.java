@@ -129,7 +129,7 @@ public class TdbTitleHelper {
    * query results.
    * 
    * @param results
-   *          A Collection<TdbTitleWsResult> with the query results.
+   *          A {@code Collection<TdbTitleWsResult>} with the query results.
    * @return a String with the requested printable copy.
    */
   String nonDefaultToString(Collection<TdbTitleWsResult> results) {

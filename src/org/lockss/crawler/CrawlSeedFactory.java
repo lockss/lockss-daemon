@@ -37,7 +37,7 @@ import org.lockss.daemon.Crawler;
 /** Factory to create a plugin-specific {@link CrawlSeed} */
 public interface CrawlSeedFactory {
   /** Create a CrawlInitializer, to be used during a single crawl
-   * @param au the AU
+   * @param crawlFacade the crawler facade
    * @return a Crawl Initializer
    */
   public CrawlSeed createCrawlSeed(Crawler.CrawlerFacade crawlFacade);

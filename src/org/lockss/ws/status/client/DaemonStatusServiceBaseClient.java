@@ -55,10 +55,6 @@ public abstract class DaemonStatusServiceBaseClient extends
   private static final int TIMEOUT_VALUE = 600;
 
   /**
-   * Executes the client code common to all the operations.
-   * 
-   * @param args
-   *          A String[] with the command line arguments.
    * @throws Exception
    */
   protected DaemonStatusService getProxy() throws Exception {

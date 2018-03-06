@@ -204,7 +204,7 @@ public class PeerWsResult {
   /**
    * Provides the groups.
    * 
-   * @return a List<String> with the groups.
+   * @return a {@code List<String>} with the groups.
    */
   public List<String> getGroups() {
     return groups;

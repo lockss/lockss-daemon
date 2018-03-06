@@ -70,7 +70,7 @@ public interface DaemonStatusService {
    * Provides a list of the identifier/name pairs of the archival units in the
    * system.
    * 
-   * @return a List<IdNamePair> with the identifier/name pairs of the archival
+   * @return a {@code List<IdNamePair>} with the identifier/name pairs of the archival
    *         units in the system.
    * @throws LockssWebServicesFault
    */
@@ -96,7 +96,7 @@ public interface DaemonStatusService {
    *          A String with the
    *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
    *          used to specify what properties to retrieve from which plugins.
-   * @return a List<PluginWsResult> with the results.
+   * @return a {@code List<PluginWsResult>} with the results.
    * @throws LockssWebServicesFault
    */
   @WebMethod
@@ -111,7 +111,7 @@ public interface DaemonStatusService {
    *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
    *          used to specify what properties to retrieve from which archival
    *          units.
-   * @return a List<AuWsResult> with the results.
+   * @return a {@code List<AuWsResult>} with the results.
    * @throws LockssWebServicesFault
    */
   @WebMethod
@@ -125,7 +125,7 @@ public interface DaemonStatusService {
    *          A String with the
    *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
    *          used to specify what properties to retrieve from which peers.
-   * @return a List<PeerWsResult> with the results.
+   * @return a {@code List<PeerWsResult>} with the results.
    * @throws LockssWebServicesFault
    */
   @WebMethod
@@ -139,7 +139,7 @@ public interface DaemonStatusService {
    *          A String with the
    *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
    *          used to specify what properties to retrieve from which votes.
-   * @return a List<VotelWsResult> with the results.
+   * @return a {@code List<VotelWsResult>} with the results.
    * @throws LockssWebServicesFault
    */
   @WebMethod
@@ -155,7 +155,7 @@ public interface DaemonStatusService {
    *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
    *          used to specify what properties to retrieve from which repository
    *          spaces.
-   * @return a List<RepositorySpaceWsResult> with the results.
+   * @return a {@code List<RepositorySpaceWsResult>} with the results.
    * @throws LockssWebServicesFault
    */
   @WebMethod
@@ -171,7 +171,7 @@ public interface DaemonStatusService {
    *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
    *          used to specify what properties to retrieve from which
    *          repositories.
-   * @return a List<RepositoryWsResult> with the results.
+   * @return a {@code List<RepositoryWsResult>} with the results.
    * @throws LockssWebServicesFault
    */
   @WebMethod
@@ -186,7 +186,7 @@ public interface DaemonStatusService {
    *          A String with the
    *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
    *          used to specify what properties to retrieve from which crawls.
-   * @return a List<CrawlWsResult> with the results.
+   * @return a {@code List<CrawlWsResult>} with the results.
    * @throws LockssWebServicesFault
    */
   @WebMethod
@@ -201,7 +201,7 @@ public interface DaemonStatusService {
    *          A String with the
    *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
    *          used to specify what properties to retrieve from which polls.
-   * @return a List<PollWsResult> with the results.
+   * @return a {@code List<PollWsResult>} with the results.
    * @throws LockssWebServicesFault
    */
   @WebMethod
@@ -226,7 +226,7 @@ public interface DaemonStatusService {
    *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
    *          used to specify what properties to retrieve from which title
    *          database publishers.
-   * @return a List<TdbPublisherWsResult> with the results.
+   * @return a {@code List<TdbPublisherWsResult>} with the results.
    * @throws LockssWebServicesFault
    */
   @WebMethod
@@ -242,7 +242,7 @@ public interface DaemonStatusService {
    *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
    *          used to specify what properties to retrieve from which title
    *          database titles.
-   * @return a List<TdbTitleWsResult> with the results.
+   * @return a {@code List<TdbTitleWsResult>} with the results.
    * @throws LockssWebServicesFault
    */
   @WebMethod
@@ -258,7 +258,7 @@ public interface DaemonStatusService {
    *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
    *          used to specify what properties to retrieve from which title
    *          database archival units.
-   * @return a List<TdbAuWsResult> with the results.
+   * @return a {@code List<TdbAuWsResult>} with the results.
    * @throws LockssWebServicesFault
    */
   @WebMethod
@@ -274,7 +274,7 @@ public interface DaemonStatusService {
    * @param url
    *          A String with the URL above which no results will be provided, or
    *          <code>NULL</code> if all the URLS are to be provided.
-   * @return a List<String> with the results.
+   * @return a {@code List<String>} with the results.
    * @throws LockssWebServicesFault
    */
   @WebMethod

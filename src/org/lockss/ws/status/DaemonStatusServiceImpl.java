@@ -128,7 +128,7 @@ public class DaemonStatusServiceImpl implements DaemonStatusService {
    * Provides a list of the identifier/name pairs of the archival units in the
    * system.
    * 
-   * @return a List<IdNamePair> with the identifier/name pairs of the archival
+   * @return a {@code List<IdNamePair>} with the identifier/name pairs of the archival
    *         units in the system.
    * @throws LockssWebServicesFault
    */
@@ -188,7 +188,7 @@ public class DaemonStatusServiceImpl implements DaemonStatusService {
    *          A String with the
    *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
    *          used to specify what properties to retrieve from which plugins.
-   * @return a List<PluginWsResult> with the results.
+   * @return a {@code List<PluginWsResult>} with the results.
    * @throws LockssWebServicesFault
    */
   @Override
@@ -250,7 +250,7 @@ public class DaemonStatusServiceImpl implements DaemonStatusService {
    *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
    *          used to specify what properties to retrieve from which archival
    *          units.
-   * @return a List<AuWsResult> with the results.
+   * @return a {@code List<AuWsResult>} with the results.
    * @throws LockssWebServicesFault
    */
   @Override
@@ -310,7 +310,7 @@ public class DaemonStatusServiceImpl implements DaemonStatusService {
    *          A String with the
    *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
    *          used to specify what properties to retrieve from which peers.
-   * @return a List<PeerWsResult> with the results.
+   * @return a {@code List<PeerWsResult>} with the results.
    * @throws LockssWebServicesFault
    */
   @Override
@@ -370,7 +370,7 @@ public class DaemonStatusServiceImpl implements DaemonStatusService {
    *          A String with the
    *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
    *          used to specify what properties to retrieve from which votes.
-   * @return a List<VoteWsResult> with the results.
+   * @return a {@code List<VoteWsResult>} with the results.
    * @throws LockssWebServicesFault
    */
   @Override
@@ -432,7 +432,7 @@ public class DaemonStatusServiceImpl implements DaemonStatusService {
    *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
    *          used to specify what properties to retrieve from which repository
    *          spaces.
-   * @return a List<RepositorySpaceWsResult> with the results.
+   * @return a {@code List<RepositorySpaceWsResult>} with the results.
    * @throws LockssWebServicesFault
    */
   @Override
@@ -497,7 +497,7 @@ public class DaemonStatusServiceImpl implements DaemonStatusService {
    *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
    *          used to specify what properties to retrieve from which
    *          repositories.
-   * @return a List<RepositoryWsResult> with the results.
+   * @return a {@code List<RepositoryWsResult>} with the results.
    * @throws LockssWebServicesFault
    */
   @Override
@@ -561,7 +561,7 @@ public class DaemonStatusServiceImpl implements DaemonStatusService {
    *          A String with the
    *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
    *          used to specify what properties to retrieve from which crawls.
-   * @return a List<CrawlWsResult> with the results.
+   * @return a {@code List<CrawlWsResult>} with the results.
    * @throws LockssWebServicesFault
    */
   @Override
@@ -621,7 +621,7 @@ public class DaemonStatusServiceImpl implements DaemonStatusService {
    *          A String with the
    *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
    *          used to specify what properties to retrieve from which polls.
-   * @return a List<PollWsResult> with the results.
+   * @return a {@code List<PollWsResult>} with the results.
    * @throws LockssWebServicesFault
    */
   @Override
@@ -764,7 +764,7 @@ public class DaemonStatusServiceImpl implements DaemonStatusService {
    *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
    *          used to specify what properties to retrieve from which title
    *          database publishers.
-   * @return a List<TdbPublisherWsResult> with the results.
+   * @return a {@code List<TdbPublisherWsResult>} with the results.
    * @throws LockssWebServicesFault
    */
   @Override
@@ -829,7 +829,7 @@ public class DaemonStatusServiceImpl implements DaemonStatusService {
    *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
    *          used to specify what properties to retrieve from which title
    *          database titles.
-   * @return a List<TdbTitleWsResult> with the results.
+   * @return a {@code List<TdbTitleWsResult>} with the results.
    * @throws LockssWebServicesFault
    */
   @Override
@@ -894,7 +894,7 @@ public class DaemonStatusServiceImpl implements DaemonStatusService {
    *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
    *          used to specify what properties to retrieve from which title
    *          database archival units.
-   * @return a List<TdbAuWsResult> with the results.
+   * @return a {@code List<TdbAuWsResult>} with the results.
    * @throws LockssWebServicesFault
    */
   @Override
@@ -967,7 +967,7 @@ public class DaemonStatusServiceImpl implements DaemonStatusService {
    *          A String with the fully-qualified class name of the objects
    *          used as source in the query.
    * @param selectPropertyNames
-   *          A Collection<String> with the names of the properties in the query
+   *          A {@code Collection<String>} with the names of the properties in the query
    *          'select' clause.
    * @return a String with the full query.
    * @throws LockssWebServicesFault
@@ -1012,8 +1012,8 @@ public class DaemonStatusServiceImpl implements DaemonStatusService {
    * @param query
    *          A String with the query.
    * @param allPropertyNames
-   *          A Set<String> with all the possible property names.
-   * @return a Collection<String> with the names of the properties in the
+   *          A {@code Set<String>} with all the possible property names.
+   * @return a {@code Collection<String>} with the names of the properties in the
    *         'select' clause of a query.
    * @throws LockssWebServicesFault
    */
@@ -1095,10 +1095,10 @@ public class DaemonStatusServiceImpl implements DaemonStatusService {
    * Validates property names.
    * 
    * @param propertyNames
-   *          A Collection<String> with the names of the properties to be
+   *          A {@code Collection<String>} with the names of the properties to be
    *          validated.
    * @param validPropertyNames
-   *          A Set<String> with the valid property names.
+   *          A {@code Set<String>} with the valid property names.
    * @param query A String with the query.
    * @throws LockssWebServicesFault
    *           if the validation fails.
@@ -1156,7 +1156,7 @@ public class DaemonStatusServiceImpl implements DaemonStatusService {
    * @param className
    *          A String with the fully-qualified class name.
    * @param propertyNames
-   *          A Collection<String> with the names of the properties in the query
+   *          A {@code Collection<String>} with the names of the properties in the query
    *          'select' clause.
    * @return a String with the query 'select' clause.
    */
@@ -1267,7 +1267,7 @@ public class DaemonStatusServiceImpl implements DaemonStatusService {
    * @param url
    *          A String with the URL above which no results will be provided, or
    *          <code>NULL</code> if all the URLS are to be provided.
-   * @return a List<String> with the results.
+   * @return a {@code List<String>} with the results.
    * @throws LockssWebServicesFault
    */
   public List<String> getAuUrls(String auId, String url)

@@ -83,7 +83,7 @@ public class PlatformConfigurationWsResult {
   /**
    * Provides the groups.
    * 
-   * @return a List<String> with the groups.
+   * @return a {@code List<String>} with the groups.
    */
   public List<String> getGroups() {
     return groups;
@@ -143,7 +143,7 @@ public class PlatformConfigurationWsResult {
   /**
    * Provides the disk labels.
    * 
-   * @return a List<String> with the disks labels.
+   * @return a {@code List<String>} with the disks labels.
    */
   public List<String> getDisks() {
     return disks;
@@ -228,7 +228,7 @@ public class PlatformConfigurationWsResult {
   /**
    * Provides the daemon properties.
    * 
-   * @return a List<String> with the properties.
+   * @return a {@code List<String>} with the properties.
    */
   public List<String> getProperties() {
     return properties;

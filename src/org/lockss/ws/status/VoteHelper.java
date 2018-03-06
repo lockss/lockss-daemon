@@ -153,7 +153,7 @@ public class VoteHelper {
    * Provides a printable copy of a collection of vote-related query results.
    * 
    * @param results
-   *          A Collection<VoteWsResult> with the query results.
+   *          A {@code Collection<VoteWsResult>} with the query results.
    * @return a String with the requested printable copy.
    */
   String nonDefaultToString(Collection<VoteWsResult> results) {

@@ -341,7 +341,6 @@ public class ImportServiceImpl implements ImportService {
    * Provides the names of the supported checksum algorithms.
    * 
    * @return a String[] with the names of the supported checksum algorithms.
-   * @throws LockssWebServicesFault
    */
   @Override
   public String[] getSupportedChecksumAlgorithms() {
@@ -356,7 +355,7 @@ public class ImportServiceImpl implements ImportService {
    *          An ImportWsParams with the parameters of the importing operation.
    * @param wsResult
    *          An ImportWsResult with any validation errors.
-   * @return a Map<String, String> with the validated properties map.
+   * @return a {@code Map<String, String>} with the validated properties map.
    */
   private Map<String, String> getAndValidateUserProperties(
       ImportWsParams importParams, ImportWsResult wsResult) {
@@ -541,7 +540,7 @@ public class ImportServiceImpl implements ImportService {
    * @param importParams
    *          An ImportWsParams with the parameters of the importing operation.
    * @param properties
-   *          A Map<String, String> with the user-specified properties.
+   *          A {@code Map<String, String>} with the user-specified properties.
    * @param wsResult
    *          An ImportWsResult with any errors.
    */

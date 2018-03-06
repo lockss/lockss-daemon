@@ -167,7 +167,7 @@ public class RepositoryHelper {
    * results.
    * 
    * @param results
-   *          A Collection<RepositoryWsResult> with the query results.
+   *          A {@code Collection<RepositoryWsResult>} with the query results.
    * @return a String with the requested printable copy.
    */
   String nonDefaultToString(Collection<RepositoryWsResult> results) {

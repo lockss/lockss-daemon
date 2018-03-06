@@ -52,7 +52,7 @@ public class PkNamePairIdNamePairListPair {
    * @param key
    *          A PkNamePair with the key.
    * @param values
-   *          A List<IdNamePair> with the values.
+   *          A {@code List<IdNamePair>} with the values.
    */
   public PkNamePairIdNamePairListPair(PkNamePair key, List<IdNamePair> values) {
     this.key = key;
@@ -71,7 +71,7 @@ public class PkNamePairIdNamePairListPair {
   /**
    * Provides the values of the pair.
    * 
-   * @return a List<IdNamePair> with the values.
+   * @return a {@code {@code List<IdNamePair>}} with the values.
    */
   public List<IdNamePair> getValues() {
     return values;

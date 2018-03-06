@@ -42,7 +42,7 @@ import org.mortbay.jetty.servlet.WebApplicationHandler;
 
 /**
  * WebApplicationHandler that allows the registration of servlet context
- * listeners.<br />
+ * listeners.<br>
  * This is needed to get Apache CXF web services working because the Jetty 5
  * WebApplicationHandler base class ignores any ServletContextListener that it
  * is being told to notify.

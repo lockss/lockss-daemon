@@ -192,7 +192,7 @@ public String getCrawlType() {
   /**
    * Provides the URLs of the pages fetched during the crawl.
    * 
-   * @return a List<String> with the URLs.
+   * @return a {@code List<String>} with the URLs.
    */
   public List<String> getPagesFetched() {
     return pagesFetched;
@@ -216,7 +216,7 @@ public String getCrawlType() {
   /**
    * Provides the URLs of the pages parsed during the crawl.
    * 
-   * @return a List<String> with the URLs.
+   * @return a {@code List<String>} with the URLs.
    */
   public List<String> getPagesParsed() {
     return pagesParsed;
@@ -240,7 +240,7 @@ public String getCrawlType() {
   /**
    * Provides the URLs of the pages pending to crawl.
    * 
-   * @return a List<String> with the URLs.
+   * @return a {@code List<String>} with the URLs.
    */
   public List<String> getPagesPending() {
     return pagesPending;
@@ -264,7 +264,7 @@ public String getCrawlType() {
   /**
    * Provides the URLs of the pages excluded from the crawl.
    * 
-   * @return a List<String> with the URLs.
+   * @return a {@code List<String>} with the URLs.
    */
   public List<String> getPagesExcluded() {
     return pagesExcluded;
@@ -300,7 +300,7 @@ public String getCrawlType() {
   /**
    * Provides the URLs of the not modified pages found during the crawl.
    * 
-   * @return a List<String> with the URLs.
+   * @return a {@code List<String>} with the URLs.
    */
   public List<String> getPagesNotModified() {
     return pagesNotModified;
@@ -324,7 +324,7 @@ public String getCrawlType() {
   /**
    * Provides data about the pages with errors found during the crawl.
    * 
-   * @return a List<UrlErrorWsResult> with the data.
+   * @return a {@code List<UrlErrorWsResult>} with the data.
    */
   public List<UrlErrorWsResult> getPagesWithErrors() {
     return pagesWithErrors;
@@ -348,7 +348,7 @@ public String getCrawlType() {
   /**
    * Provides the MIME types found during the crawl.
    * 
-   * @return a Collection<String> with the MIME types.
+   * @return a {@code Collection<String>} with the MIME types.
    */
   public Collection<String> getMimeTypes() {
     return mimeTypes;
@@ -360,7 +360,7 @@ public String getCrawlType() {
   /**
    * Provides the sources of the crawl.
    * 
-   * @return a List<String> with the sources.
+   * @return a {@code List<String>} with the sources.
    */
   public List<String> getSources() {
     return sources;
@@ -372,7 +372,7 @@ public String getCrawlType() {
   /**
    * Provides the starting URLs of the crawl.
    * 
-   * @return a Collection<String> with the URLs.
+   * @return a {@code Collection<String>} with the URLs.
    */
   public Collection<String> getStartingUrls() {
     return startingUrls;

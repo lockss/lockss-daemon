@@ -98,7 +98,7 @@ public class Api extends ServletBase
   /**
    * Service the client request
    * <p>Execute requested command, return any response generated</p>
-   * <p>Only <code>POST</codes>s are honored
+   * <p>Only <code>POST</code>s are honored
    */
   public void doPost(HttpServletRequest request, HttpServletResponse response) 
               throws ServletException, IOException {

@@ -63,7 +63,7 @@ public class RegexpCssLinkRewriterFactory implements LinkRewriterFactory {
   /** Controls the amount of URL-encoding applied when rewriting CSS files
    * and fragments.  If <code>Full</code>, URLs embedded as query args in
    * ServeContent URLs are fully URL-encoded; if <code>Minimal</code>, only
-   * the bare minimum encoding necessary is applied ("?", "&", "=") */
+   * the bare minimum encoding necessary is applied ("?", "&amp;", "=") */
   public static final String PARAM_URL_ENCODE =
     Configuration.PREFIX + "cssLinkRewriter.urlEncode";
   public static final CssLinkRewriterUrlEncodeMode DEFAULT_URL_ENCODE =

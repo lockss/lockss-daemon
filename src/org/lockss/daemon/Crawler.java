@@ -143,8 +143,8 @@ public interface Crawler {
 
     /**
      * Generate a URL cacher for the given URL, suitable for fetching and
-     * possibly storing a permission page.  See {@link
-     * BaseCrawler.PARAM_STORE_PERMISSION_SCHEME}.
+     * possibly storing a permission page.  See
+     * {@link BaseCrawler#PARAM_STORE_PERMISSION_SCHEME}.
      * @param url
      * @return UrlCacher for the given URL
      */

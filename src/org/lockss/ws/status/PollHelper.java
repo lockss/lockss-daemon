@@ -187,7 +187,7 @@ public class PollHelper {
    * Provides a printable copy of a collection of poll-related query results.
    * 
    * @param results
-   *          A Collection<PollWsResult> with the query results.
+   *          A {@code Collection<PollWsResult>} with the query results.
    * @return a String with the requested printable copy.
    */
   String nonDefaultToString(Collection<PollWsResult> results) {

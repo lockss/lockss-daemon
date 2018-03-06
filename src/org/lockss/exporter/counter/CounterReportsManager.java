@@ -80,7 +80,7 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
 
   /**
    * Indication of whether the COUNTER reports subsystem should be enabled.
-   * <p />
+   * <p>
    * Defaults to false. If the COUNTER reports subsystem is not enabled, no
    * statistics are collected or aggregated. Changes require daemon restart.
    */
@@ -89,14 +89,14 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
   /**
    * Default value of COUNTER reports subsystem operation configuration
    * parameter.
-   * <p />
+   * <p>
    * <code>false</code> to disable, <code>true</code> to enable.
    */
   public static final boolean DEFAULT_COUNTER_ENABLED = false;
 
   /**
    * Base directory for reporting.
-   * <p />
+   * <p>
    * Defaults to <code><i>daemon_tmpdir</i>/report</code>. Changes require
    * daemon restart.
    */
@@ -110,7 +110,7 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
 
   /**
    * Name of the directory used to store the report output files.
-   * <p />
+   * <p>
    * Defaults to <code>output</code>. Changes require daemon restart.
    */
   public static final String PARAM_REPORT_OUTPUTDIR = PREFIX
@@ -120,7 +120,7 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
 
   /**
    * Name of the organization to which to assign COUNTER requests by default.
-   * <p />
+   * <p>
    * Defaults to <code>YOUR_ORGANIZATION_NAME_HERE</code>. Changes require
    * daemon restart.
    */

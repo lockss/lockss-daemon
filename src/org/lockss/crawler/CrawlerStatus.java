@@ -87,9 +87,9 @@ public class CrawlerStatus {
 
   /** Determines whether to record referrer URLs, and how many.  See also
    * org.lockss.crawlStatus.recordReferrerTypes
-   *
-   * <dl><lh>Set to one of:</lh>
-   *
+   * 
+   * <p>Set to one of:</p>
+   * <dl>
    * <dt>None</dt><dd>Referrers will not be recorded.</dd>
    *
    * <dt>First</dt><dd>The first referrer to a page will be recorded.</dd>
@@ -105,8 +105,8 @@ public class CrawlerStatus {
   /** Specifies the types of URLs whose referrers will be recorded.  See
    * also org.lockss.crawlStatus.recordReferrers
    *
-   * <dl><lh>Set to one of:</lh>
-   *
+   * <p>Set to one of:</p>
+   * <dl>
    * <dt>All</dt><dd>Referrers will be recorded for all URLs encountered.</dd>
    *
    * <dt>Included</dt><dd>Referrers of included URLs (those that match the
@@ -131,8 +131,8 @@ public class CrawlerStatus {
    * referrers */
   public enum RecordReferrersMode {None, First, All};
 
-  /** URLs whose referrers are recorded.  See {@link
-  /** #PARAM_RECORD_REFERRER_TYPES} */
+  /** URLs whose referrers are recorded.  See
+   * {@link #PARAM_RECORD_REFERRER_TYPES} */
   public enum RecordReferrerTypes {
     All, Included, Excluded, ExcludedOnHost, ExcludedOffHost};
 

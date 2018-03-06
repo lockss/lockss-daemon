@@ -134,7 +134,7 @@ public class RepositoryWsResult {
   /**
    * Provides the Archival Unit configuration parameters.
    * 
-   * @return a Map<String, String> with the parameters.
+   * @return a {@code Map<String, String>} with the parameters.
    */
   public Map<String, String> getParams() {
     return params;

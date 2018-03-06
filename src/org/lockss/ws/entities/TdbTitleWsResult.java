@@ -75,7 +75,7 @@ public class TdbTitleWsResult {
     return proprietaryId;
   }
   /**
-   * @deprecated Replaced by {@link #setProprietaryIds(List<String>)}
+   * @deprecated Replaced by {@link #setProprietaryIds(List)}
    */
   @Deprecated public void setProprietaryId(String proprietaryId) {
     this.proprietaryId = proprietaryId;

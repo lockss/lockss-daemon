@@ -2638,7 +2638,7 @@ public class DbManagerSql {
   /**
    * Provides a database connection using the default datasource, retrying the
    * operation in the default manner in case of transient failures.
-   * <p />
+   * <p>
    * Autocommit is disabled to allow the client code to manage transactions.
    * 
    * @return a Connection with the database connection to be used.
@@ -2673,7 +2673,7 @@ public class DbManagerSql {
   /**
    * Provides a database connection using a passed datasource, retrying the
    * operation in the default manner in case of transient failures.
-   * <p />
+   * <p>
    * Auto-commit is disabled to allow the client code to manage transactions.
    * 
    * @param ds
@@ -2689,7 +2689,7 @@ public class DbManagerSql {
   /**
    * Provides a database connection using a passed datasource, retrying the
    * operation in the default manner in case of transient failures.
-   * <p />
+   * <p>
    * Auto-commit is disabled to allow the client code to manage transactions.
    * 
    * @param ds
@@ -2731,7 +2731,7 @@ public class DbManagerSql {
   /**
    * Provides a database connection using a passed datasource, retrying the
    * operation with the specified parameters in case of transient failures.
-   * <p />
+   * <p>
    * Autocommit is disabled to allow the client code to manage transactions.
    * 
    * @param ds
@@ -4237,7 +4237,7 @@ public class DbManagerSql {
    * @param conn
    *          A Connection with the database connection to be used.
    * @param tableMap
-   *          A Map<String, String> with the creation queries indexed by table
+   *          A {@code Map<String, String>} with the creation queries indexed by table
    *          name.
    * @throws SQLException
    *           if any problem occurred creating the tables.
@@ -4316,7 +4316,7 @@ public class DbManagerSql {
    * @param conn
    *          A Connection with the database connection to be used.
    * @param tableMap
-   *          A Map<String, String> with the removal queries indexed by table
+   *          A {@code Map<String, String>} with the removal queries indexed by table
    *          name.
    * @throws SQLException
    *           if any problem occurred removing the tables.
@@ -4441,7 +4441,7 @@ public class DbManagerSql {
    * @param conn
    *          A Connection with the database connection to be used.
    * @param functionMap
-   *          A Map<String, String> with the removal queries indexed by function
+   *          A {@code Map<String, String>} with the removal queries indexed by function
    *          name.
    * @throws SQLException
    *           if any problem occurred removing the functions.

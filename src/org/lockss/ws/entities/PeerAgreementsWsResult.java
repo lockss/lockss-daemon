@@ -56,7 +56,7 @@ public class PeerAgreementsWsResult {
   /**
    * Provides the data about the agreements with the other peer.
    * 
-   * @return a Map<AgreementTypeWsResult, PeerAgreementWsResult> with the
+   * @return a {@code Map<AgreementTypeWsResult, PeerAgreementWsResult>} with the
    *         agreements data.
    */
   public Map<AgreementTypeWsResult, PeerAgreementWsResult> getAgreements() {

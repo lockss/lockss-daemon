@@ -90,7 +90,7 @@ public interface HasherService {
   /**
    * Provides the results of all the asynchronous hashing operations.
    * 
-   * @return a List<HasherWsAsynchronousResult> with the result of the hashing
+   * @return a {@code List<HasherWsAsynchronousResult>} with the result of the hashing
    *         operation.
    * @throws LockssWebServicesFault
    */

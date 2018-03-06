@@ -349,7 +349,7 @@ public class HasherServiceImpl implements HasherService {
   /**
    * Provides the results of all the asynchronous hashing operations.
    * 
-   * @return a List<HasherWsAsynchronousResult> with the results of the hashing
+   * @return a {@code List<HasherWsAsynchronousResult>} with the results of the hashing
    *         operations.
    * @throws LockssWebServicesFault
    */

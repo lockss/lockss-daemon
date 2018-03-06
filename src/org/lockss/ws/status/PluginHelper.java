@@ -126,7 +126,7 @@ public class PluginHelper {
    * Provides a printable copy of a collection of plugin-related query results.
    * 
    * @param results
-   *          A Collection<PluginWsResult> with the query results.
+   *          A {@code Collection<PluginWsResult>} with the query results.
    * @return a String with the requested printable copy.
    */
   String nonDefaultToString(Collection<PluginWsResult> results) {

@@ -53,7 +53,7 @@ public class DbRow {
   /**
    * Constructor.
    * 
-   * @param name A String with the name of the database table.
+   * @param tableName A String with the name of the database table.
    */
   public DbRow(String tableName) {
     this.tableName = tableName;
@@ -78,7 +78,7 @@ public class DbRow {
   /**
    * Provides the names of the tables that are foreign keys.
    * 
-   * @return a Set<String> with the names of the tables that are foreign keys.
+   * @return a {@code Set<String>} with the names of the tables that are foreign keys.
    */
   public Set<String> getFkTables() {
     Set<String> result = new HashSet<String>();

@@ -79,10 +79,10 @@ public class ContentConfigurationServiceImpl implements
    * Configures the archival units defined by a list of their identifiers.
    * 
    * @param auIds
-   *          A List<String> with the identifiers (auids) of the archival units.
+   *          A {@code List<String>} with the identifiers (auids) of the archival units.
    *          The archival units to be added must already be in the title db
    *          that's loaded into the daemon.
-   * @return a List<ContentConfigurationResult> with the results of the
+   * @return a {@code List<ContentConfigurationResult>} with the results of the
    *         operation.
    * @throws LockssWebServicesFault
    */
@@ -180,8 +180,8 @@ public class ContentConfigurationServiceImpl implements
    * Unconfigures the archival units defined by a list with their identifiers.
    * 
    * @param auIds
-   *          A List<String> with the identifiers (auids) of the archival units.
-   * @return a List<ContentConfigurationResult> with the results of the
+   *          A {@code List<String>} with the identifiers (auids) of the archival units.
+   * @return a {@code List<ContentConfigurationResult>} with the results of the
    *         operation.
    * @throws LockssWebServicesFault
    */
@@ -263,8 +263,8 @@ public class ContentConfigurationServiceImpl implements
    * reactivates the archival units defined by a list with their identifiers.
    * 
    * @param auIds
-   *          A List<String> with the identifiers (auids) of the archival units.
-   * @return a List<ContentConfigurationResult> with the results of the
+   *          A {@code List<String>} with the identifiers (auids) of the archival units.
+   * @return a {@code List<ContentConfigurationResult>} with the results of the
    *         operation.
    * @throws LockssWebServicesFault
    */
@@ -346,8 +346,8 @@ public class ContentConfigurationServiceImpl implements
    * Deactivates the archival units defined by a list with their identifiers.
    * 
    * @param auIds
-   *          A List<String> with the identifiers (auids) of the archival units.
-   * @return a List<ContentConfigurationResult> with the results of the
+   *          A {@code List<String>} with the identifiers (auids) of the archival units.
+   * @return a {@code List<ContentConfigurationResult>} with the results of the
    *         operation.
    * @throws LockssWebServicesFault
    */

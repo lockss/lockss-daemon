@@ -45,7 +45,7 @@ public class AuConfigurationWsResult {
   /**
    * Provides the definitional parameters of the Archival Unit configuration.
    * 
-   * @return a Map<String, String> with the definitional parameters.
+   * @return a {@code Map<String, String>} with the definitional parameters.
    */
   public Map<String, String> getDefParams() {
     return defParams;
@@ -58,7 +58,7 @@ public class AuConfigurationWsResult {
    * Provides the non-definitional parameters of the Archival Unit
    * configuration.
    * 
-   * @return a Map<String, String> with the non-definitional parameters.
+   * @return a {@code Map<String, String>} with the non-definitional parameters.
    */
   public Map<String, String> getNonDefParams() {
     return nonDefParams;

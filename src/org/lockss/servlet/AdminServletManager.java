@@ -211,7 +211,7 @@ public class AdminServletManager extends BaseServletManager {
 
   /**
    * Default value of the OIOSAML operation configuration parameter.
-   * <p />
+   * <p>
    * <code>false</code> to disable, <code>true</code> to enable.
    */
   public static final String PARAM_OIOSAML_ENABLED =
@@ -220,7 +220,7 @@ public class AdminServletManager extends BaseServletManager {
 
   /**
    * OIOSAML home directory parent directory name.
-   * <p />
+   * <p>
    * Defaults to <code><i>daemon_tmpdir</i></code>.
    */
   public static final String PARAM_OIOSAML_HOMEDIR_PATH = OIOSAML_PREFIX
@@ -240,7 +240,7 @@ public class AdminServletManager extends BaseServletManager {
 
   /**
    * OIOSAML configuration file name.
-   * <p />
+   * <p>
    * Defaults to <code><i>oiosaml-sp.properties</i></code>.
    */
   public static final String PARAM_OIOSAML_CONFIG_FILE = OIOSAML_PREFIX
@@ -255,7 +255,7 @@ public class AdminServletManager extends BaseServletManager {
 
   /**
    * OIOSAML protected URL mapping.
-   * <p />
+   * <p>
    * Defaults to <code><i>/*</i></code>.
    */
   public static final String PARAM_OIOSAML_PROTECTED_URLS = OIOSAML_PREFIX

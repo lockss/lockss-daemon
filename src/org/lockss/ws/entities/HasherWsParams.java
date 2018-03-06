@@ -134,7 +134,7 @@ public class HasherWsParams {
   }
 
   /**
-   * Provides the name of the hashing algorithm to be used. <br />
+   * Provides the name of the hashing algorithm to be used. <br>
    * The acceptable values are SHA-1 (or SHA1), MD5 and SHA-256.
    * 
    * @return a String with the hashing algorithm name.
@@ -147,7 +147,7 @@ public class HasherWsParams {
   }
 
   /**
-   * Provides the name of the type of hashing to be performed. <br />
+   * Provides the name of the type of hashing to be performed. <br>
    * The acceptable values are V1Content, V1Name, V1File, V3Tree and V3File.
    * 
    * @return a String with the hashing type name.
@@ -160,7 +160,7 @@ public class HasherWsParams {
   }
 
   /**
-   * Provides the name of the result encoding to be used. <br />
+   * Provides the name of the result encoding to be used. <br>
    * The acceptable values are Base64 and Hex.
    * 
    * @return a String with the identifier result encoding name.

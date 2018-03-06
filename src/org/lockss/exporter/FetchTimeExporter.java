@@ -84,7 +84,7 @@ public class FetchTimeExporter {
   /**
    * Name of this server for the purpose of assigning to it the fetch time
    * export output.
-   * <p />
+   * <p>
    * Defaults to the networking host name.
    */
   public static final String PARAM_SERVER_NAME =
@@ -92,7 +92,7 @@ public class FetchTimeExporter {
 
   /**
    * Name of the directory used to store the fetch time export output files.
-   * <p />
+   * <p>
    * Defaults to <code>fetchTime</code>.
    */
   public static final String PARAM_FETCH_TIME_EXPORT_OUTPUTDIR = PREFIX
@@ -107,7 +107,7 @@ public class FetchTimeExporter {
   /**
    * Name of the key used to store in the database the identifier of the last
    * metadata item for which the data has been exported.
-   * <p />
+   * <p>
    * Defaults to <code>export_fetch_time_md_item_seq</code>.
    */
   public static final String PARAM_FETCH_TIME_EXPORT_LAST_ITEM_LABEL =
@@ -122,7 +122,7 @@ public class FetchTimeExporter {
 
   /**
    * The maximum number of metadata items to write to one file.
-   * <p />
+   * <p>
    * Defaults to <code>100000</code>.
    */
   public static final String PARAM_MAX_NUMBER_OF_EXPORTED_ITEMS_PER_FILE =

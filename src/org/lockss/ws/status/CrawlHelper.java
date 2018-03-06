@@ -178,7 +178,7 @@ public class CrawlHelper {
    * Provides a printable copy of a collection of peer-related query results.
    * 
    * @param results
-   *          A Collection<CrawlWsResult> with the query results.
+   *          A {@code Collection<CrawlWsResult>} with the query results.
    * @return a String with the requested printable copy.
    */
   String nonDefaultToString(Collection<CrawlWsResult> results) {

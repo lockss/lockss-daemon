@@ -52,7 +52,7 @@ public class KeyValueListPair {
    * @param key
    *          A String with the key.
    * @param values
-   *          A List<String> with the values.
+   *          A {@code List<String>} with the values.
    */
   public KeyValueListPair(String key, List<String> values) {
     this.key = key;
@@ -71,7 +71,7 @@ public class KeyValueListPair {
   /**
    * Provides the values of the pair.
    * 
-   * @return a List<String> with the values.
+   * @return a {@code List<String>} with the values.
    */
   public List<String> getValues() {
     return values;

@@ -139,7 +139,7 @@ public class PollWsResult {
   /**
    * Provides the tallied URLs.
    * 
-   * @return a List<String> with the tallied URLs.
+   * @return a {@code List<String>} with the tallied URLs.
    */
   public List<String> getTalliedUrls() {
     return talliedUrls;
@@ -163,7 +163,7 @@ public class PollWsResult {
   /**
    * Provides the data on URLs with errors.
    * 
-   * @return a Map<String, String> with the data on URLs with errors.
+   * @return a {@code Map<String, String>} with the data on URLs with errors.
    */
   public Map<String, String> getErrorUrls() {
     return errorUrls;
@@ -187,7 +187,7 @@ public class PollWsResult {
   /**
    * Provides the data on completed repairs.
    * 
-   * @return a List<RepairWsResult> with the data on completed repairs.
+   * @return a {@code List<RepairWsResult>} with the data on completed repairs.
    */
   public List<RepairWsResult> getCompletedRepairs() {
     return completedRepairs;
@@ -347,7 +347,7 @@ public class PollWsResult {
   /**
    * Provides the URLs in agreement.
    * 
-   * @return a Set<String> with the URLs.
+   * @return a {@code Set<String>} with the URLs.
    */
   public Set<String> getAgreedUrls() {
     return agreedUrls;
@@ -371,7 +371,7 @@ public class PollWsResult {
   /**
    * Provides the URLs in disagreement.
    * 
-   * @return a Set<String> with the URLs.
+   * @return a {@code Set<String>} with the URLs.
    */
   public Set<String> getDisagreedUrls() {
     return disagreedUrls;
@@ -395,7 +395,7 @@ public class PollWsResult {
   /**
    * Provides the URLs with no quorum.
    * 
-   * @return a Set<String> with the URLs.
+   * @return a {@code Set<String>} with the URLs.
    */
   public Set<String> getNoQuorumUrls() {
     return noQuorumUrls;
@@ -419,7 +419,7 @@ public class PollWsResult {
   /**
    * Provides the URLs that are too close.
    * 
-   * @return a Set<String> with the URLs.
+   * @return a {@code Set<String>} with the URLs.
    */
   public Set<String> getTooCloseUrls() {
     return tooCloseUrls;
@@ -443,7 +443,7 @@ public class PollWsResult {
   /**
    * Provides the active repairs.
    * 
-   * @return a List<RepairWsResult> with the active repairs.
+   * @return a {@code List<RepairWsResult>} with the active repairs.
    */
   public List<RepairWsResult> getActiveRepairs() {
     return activeRepairs;
@@ -491,7 +491,7 @@ public class PollWsResult {
   /**
    * Provides the poll participants.
    * 
-   * @return a List<ParticipantWsResult> with the participants.
+   * @return a {@code List<ParticipantWsResult>} with the participants.
    */
   public List<ParticipantWsResult> getParticipants() {
     return participants;

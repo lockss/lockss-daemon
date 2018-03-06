@@ -342,13 +342,13 @@ public class ParseUtils implements ApiParameters, ClusterControlParameters {
    * dynamic data associated with some daemon structures - archival unit
    * editable key fields are an example.  The XML looks something like:
    *
-   * <code>
-   *    <metadata>dynamic_element_name_1</metadata>
-   *    <dynamic_element_name_1>value_1</dynamic_element_name_1>
-   *
-   *    <metadata>dynamic_element_name_2</metadata>
-   *    <dynamic_element_name_2>value_2</dynamic_element_name_2>
-   * <code>
+   * <pre>
+&lt;metadata&gt;dynamic_element_name_1&lt;/metadata&gt;
+&lt;dynamic_element_name_1&gt;value_1&lt;/dynamic_element_name_1&gt;
+
+&lt;metadata&gt;dynamic_element_name_2&lt;/metadata&gt;
+&lt;dynamic_element_name_2&gt;value_2&lt;/dynamic_element_name_2&gt;
+</pre>
    *
    * @param xmlUtils XML utilities object
    * @param document The request document

@@ -216,7 +216,7 @@ public class ContentServiceImpl implements ContentService {
    *          A String with the URL.
    * @param auId
    *          A String with the identifier (auid) of the archival unit.
-   * @return a List<FileWsResult> with the results.
+   * @return a {@code List<FileWsResult>} with the results.
    * @throws LockssWebServicesFault
    */
   public List<FileWsResult> getVersions(String url, String auId)

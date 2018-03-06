@@ -63,8 +63,8 @@ public interface AuControlService {
    * their identifiers have substance.
    * 
    * @param auIds
-   *          A List<String> with the identifiers (auids) of the archival units.
-   * @return a List<CheckSubstanceResult> with the results of the operation.
+   *          A {@code List<String>} with the identifiers (auids) of the archival units.
+   * @return a {@code List<CheckSubstanceResult>} with the results of the operation.
    * @throws LockssWebServicesFault
    */
   @WebMethod
@@ -96,13 +96,13 @@ public interface AuControlService {
    * identifiers.
    * 
    * @param auIds
-   *          A List<String> with the identifiers (auids) of the archival units.
+   *          A {@code List<String>} with the identifiers (auids) of the archival units.
    * @param priority
    *          An Integer with the priority of the crawl request.
    * @param force
    *          A boolean with <code>true</code> if the request is to be made even
    *          in the presence of some anomalies, <code>false</code> otherwise.
-   * @return a List<RequestCrawlResult> with the results of the operation.
+   * @return a {@code List<RequestCrawlResult>} with the results of the operation.
    * @throws LockssWebServicesFault
    */
   @WebMethod
@@ -138,7 +138,7 @@ public interface AuControlService {
    * identifiers.
    * 
    * @param auIds
-   *          A List<String> with the identifiers (auids) of the archival units.
+   *          A {@code List<String>} with the identifiers (auids) of the archival units.
    * @param refetchDepth
    *          An int with the depth of the crawl request.
    * @param priority
@@ -146,7 +146,7 @@ public interface AuControlService {
    * @param force
    *          A boolean with <code>true</code> if the request is to be made even
    *          in the presence of some anomalies, <code>false</code> otherwise.
-   * @return a List<RequestDeepCrawlResult> with the results of the operation.
+   * @return a {@code List<RequestDeepCrawlResult>} with the results of the operation.
    * @throws LockssWebServicesFault
    */
   @WebMethod
@@ -173,8 +173,8 @@ public interface AuControlService {
    * identifiers.
    * 
    * @param auIds
-   *          A List<String> with the identifiers (auids) of the archival units.
-   * @return a List<RequestAuControlResult> with the results of the operation.
+   *          A {@code List<String>} with the identifiers (auids) of the archival units.
+   * @return a {@code List<RequestAuControlResult>} with the results of the operation.
    * @throws LockssWebServicesFault
    */
   @WebMethod

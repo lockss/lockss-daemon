@@ -394,16 +394,16 @@ public class AuActivityBase extends StatusActivityBase {
    * @param noEditKeys {@link Collection} of keys that should not be edited (null for none)
    * @param config Plugin configuration
    *
-   * <code>
-   * <key>
-   *    <internal>internal name</internal>
-   *    <name>key name</name>
-   *    <description>footnote text</description>
-   *    <value>key value</value>
-   *    <edit>true is use can supply a value</edit>
-   *    <size>suggested maximum value length</size>
-   * </key>
-   * </code>
+   * <pre>
+&lt;key&gt;
+   &lt;internal&gt;internal name&lt;/internal&gt;
+   &lt;name&gt;key name&lt;/name&gt;
+   &lt;description&gt;footnote text&lt;/description&gt;
+   &lt;value&gt;key value&lt;/value&gt;
+   &lt;edit&gt;true is use can supply a value&lt;/edit&gt;
+   &lt;size&gt;suggested maximum value length&lt;/size&gt;
+&lt;/key&gt;
+</pre>
    */
   protected void addKeys(Element root,
                          String keyRootName,

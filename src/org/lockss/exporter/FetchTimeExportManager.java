@@ -54,7 +54,7 @@ public class FetchTimeExportManager extends BaseLockssDaemonManager implements
 
   /**
    * Indication of whether the fetch time export subsystem should be enabled.
-   * <p />
+   * <p>
    * Defaults to false. If the fetch time export subsystem is not enabled, no
    * data is collected or exported.
    */
@@ -64,14 +64,14 @@ public class FetchTimeExportManager extends BaseLockssDaemonManager implements
   /**
    * Default value of the fetch time export subsystem operation configuration
    * parameter.
-   * <p />
+   * <p>
    * <code>false</code> to disable, <code>true</code> to enable.
    */
   public static final boolean DEFAULT_FETCH_TIME_EXPORT_ENABLED = false;
 
   /**
    * Base directory for export files.
-   * <p />
+   * <p>
    * Defaults to <code><i>daemon_tmpdir</i>/export</code>.
    */
   public static final String PARAM_EXPORT_BASEDIR_PATH = PREFIX
@@ -93,7 +93,7 @@ public class FetchTimeExportManager extends BaseLockssDaemonManager implements
   /**
    * Indication of whether the fetch time exporter should be run for the first
    * time on startup, independently of the Cron task.
-   * <p />
+   * <p>
    * Defaults to false.
    */
   public static final String PARAM_FETCH_TIME_EXPORT_RUN_ON_STARTUP =
@@ -102,7 +102,7 @@ public class FetchTimeExportManager extends BaseLockssDaemonManager implements
   /**
    * Default value of the fetch time exporter run on startup configuration
    * parameter.
-   * <p />
+   * <p>
    * <code>false</code> to disable, <code>true</code> to enable.
    */
   public static final boolean DEFAULT_FETCH_TIME_EXPORT_RUN_ON_STARTUP = false;

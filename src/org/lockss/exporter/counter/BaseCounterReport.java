@@ -550,14 +550,14 @@ public abstract class BaseCounterReport implements CounterReport {
    * For each row in the report, the requests counts are displayed for a set of
    * items. Each report has its own set of items; for some reports, an item is a
    * month in the report period; for others, it is a publication year.
-   * <br />
+   * <br>
    * Also, some  reports include as the first item a total of request counts.
-   * <br />
+   * <br>
    * Each item is represented by an ItemCounts object and it will correspond to
    * at least one column in the report, possibly more. The request count for
    * each column in the report is linked to the appropriate key in the
    * ItemCounts object.
-   * <br />
+   * <br>
    * The reason why the request counts need to be initialized to zero is that if
    * for any given item there are no requests, the requests counts are not
    * stored in the database at all, rather than being stored as zero.
@@ -749,19 +749,19 @@ public abstract class BaseCounterReport implements CounterReport {
    * Representation of a report data row.
    * 
    * A report is considered a list of rows. The list is divided in two parts:
-   * <br />
-   * A header, comprised of a fixed number of rows, and<br />
+   * <br>
+   * A header, comprised of a fixed number of rows, and<br>
    * The request data, comprised of a variable number of rows.
-   * <br />
+   * <br>
    * This class represents a row in the request data set, not the header.
-   * <br />
+   * <br>
    * Each row displays the request counts for one title during the period of
    * the report. The first row is special because it displays accumulated totals
    * for all the titles in the report.
-   * <br />
+   * <br>
    * If a title does not have any requests during the period of the report, it
    * does not appear in the report.
-   * <br />
+   * <br>
    * Therefore, if there are n titles with requests during the period of the
    * report, there will be n+1 rows in the request data set of the report.
    */
@@ -822,14 +822,14 @@ public abstract class BaseCounterReport implements CounterReport {
    * 
    * The request counts for a title are calculated for a set of items, which
    * vary from report to  report.
-   * <br />
+   * <br>
    * For example, for a report that lists the requests for various months, each
    * month is an item. In this case, the number of items will depend on the
    * period covered by the report.
-   * <br />
+   * <br>
    * Also, if the report must include totals across the items in the report, one
    * additional item will be included in the report, before all the others.
-   * <br />
+   * <br>
    * An item may include one request count or several, resulting in one actual
    * column in the report, or several. All the items must have the same number
    * of request counts, except for the item with accumulated totals, which may

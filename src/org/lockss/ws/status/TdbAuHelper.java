@@ -127,7 +127,7 @@ public class TdbAuHelper {
    * unit-related query results.
    * 
    * @param results
-   *          A Collection<TdbAuWsResult> with the query results.
+   *          A {@code Collection<TdbAuWsResult>} with the query results.
    * @return a String with the requested printable copy.
    */
   String nonDefaultToString(Collection<TdbAuWsResult> results) {

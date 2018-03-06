@@ -132,7 +132,7 @@ public class RepositorySpaceHelper {
    * results.
    * 
    * @param results
-   *          A Collection<RepositorySpaceWsResult> with the query results.
+   *          A {@code Collection<RepositorySpaceWsResult>} with the query results.
    * @return a String with the requested printable copy.
    */
   String nonDefaultToString(Collection<RepositorySpaceWsResult> results) {

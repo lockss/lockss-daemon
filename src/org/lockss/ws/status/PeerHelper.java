@@ -152,7 +152,7 @@ public class PeerHelper {
    * Provides a printable copy of a collection of peer-related query results.
    * 
    * @param results
-   *          A Collection<PeerWsResult> with the query results.
+   *          A {@code Collection<PeerWsResult>} with the query results.
    * @return a String with the requested printable copy.
    */
   String nonDefaultToString(Collection<PeerWsResult> results) {

@@ -110,12 +110,6 @@ public abstract class Exploder {
 
   /**
    * Constructor
-   * @param uc UrlCacher for the archive
-   * @param maxRetries
-   * @param crawlSpec the CrawlSpec for the crawl that found the archive
-   * @param crawler the crawler that found the archive
-   * @param explode true to explode the archives
-   * @param store true to store the archive as well
    */
   protected Exploder(FetchedUrlData toExplode, CrawlerFacade crawlFacade,
       ExploderHelper helper) {

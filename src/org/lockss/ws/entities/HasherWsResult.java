@@ -137,7 +137,7 @@ public class HasherWsResult {
   }
 
   /**
-   * Provides the status. <br />
+   * Provides the status. <br>
    * The possible values are Init, Starting, Running, Done, Error and
    * RequestError.
    * 

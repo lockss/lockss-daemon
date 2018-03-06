@@ -52,7 +52,7 @@ public class KeyIdNamePairListPair {
    * @param key
    *          A String with the key.
    * @param values
-   *          A List<IdNamePair> with the values.
+   *          A {@code List<IdNamePair>} with the values.
    */
   public KeyIdNamePairListPair(String key, List<IdNamePair> values) {
     this.key = key;
@@ -71,7 +71,7 @@ public class KeyIdNamePairListPair {
   /**
    * Provides the values of the pair.
    * 
-   * @return a List<IdNamePair> with the values.
+   * @return a {@code {@code List<IdNamePair>}} with the values.
    */
   public List<IdNamePair> getValues() {
     return values;

@@ -98,21 +98,21 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 
   /**
    * Indication of whether the subscription subsystem should be enabled.
-   * <p />
+   * <p>
    * Defaults to false. Changes require daemon restart.
    */
   public static final String PARAM_SUBSCRIPTION_ENABLED = PREFIX + "enabled";
 
   /**
    * Default value of subscription subsystem operation configuration parameter.
-   * <p />
+   * <p>
    * <code>false</code> to disable, <code>true</code> to enable.
    */
   public static final boolean DEFAULT_SUBSCRIPTION_ENABLED = false;
 
   /**
    * Repository available space threshold.
-   * <p />
+   * <p>
    * Defaults to 0.
    */
   public static final String PARAM_REPOSITORY_AVAIL_SPACE_THRESHOLD =
@@ -126,7 +126,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 
   /**
    * Batch size to configure archival units.
-   * <p />
+   * <p>
    * Defaults to 1000.
    */
   public static final String PARAM_SUBSCRIPTION_AU_CONFIGURATION_BATCH_SIZE =
@@ -141,7 +141,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 
   /**
    * Maximum rate at which we will configure archival units.
-   * <p />
+   * <p>
    * Defaults to 1000/1m.
    */
   public static final String PARAM_SUBSCRIPTION_AU_CONFIGURATION_RATE =
@@ -156,7 +156,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 
   /**
    * Indication of whether the Total Subscription option is enabled.
-   * <p />
+   * <p>
    * Defaults to false.
    */
   public static final String PARAM_TOTAL_SUBSCRIPTION_ENABLED =
@@ -164,7 +164,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 
   /**
    * Default value of Total Subscription configuration parameter.
-   * <p />
+   * <p>
    * <code>false</code> to disable, <code>true</code> to enable.
    */
   public static final boolean DEFAULT_TOTAL_SUBSCRIPTION_ENABLED = false;
@@ -172,7 +172,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
   /**
    * Indication of whether a title is subscribable even if all of its Archival
    * Units are down.
-   * <p />
+   * <p>
    * Defaults to false.
    */
   public static final String PARAM_DOWN_TITLE_IS_SUBSCRIBABLE =
@@ -180,7 +180,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 
   /**
    * Default value of subscribable down title configuration parameter.
-   * <p />
+   * <p>
    * <code>false</code> to disable, <code>true</code> to enable.
    */
   public static final boolean DEFAULT_DOWN_TITLE_IS_SUBSCRIBABLE = false;
@@ -188,7 +188,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
   /**
    * Indication of whether subscription synchronization will result in whole
    * title subscriptions instead of range subscriptions.
-   * <p />
+   * <p>
    * Defaults to false.
    */
   public static final String PARAM_SYNCHRONIZE_WHOLE_TITLE =
@@ -196,7 +196,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 
   /**
    * Default value of whole title synchronization configuration parameter.
-   * <p />
+   * <p>
    * <code>false</code> to disable, <code>true</code> to enable.
    */
   public static final boolean DEFAULT_SYNCHRONIZE_WHOLE_TITLE = false;

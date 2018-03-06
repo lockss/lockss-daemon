@@ -445,7 +445,7 @@ public class AuWsResult {
   /**
    * Provides the Archival Unit URLs to crawl new content.
    * 
-   * @return a List<String> with the URLs to crawl new content.
+   * @return a {@code List<String>} with the URLs to crawl new content.
    */
   public List<String> getNewContentCrawlUrls() {
     return newContentCrawlUrls;
@@ -457,7 +457,7 @@ public class AuWsResult {
   /**
    * Provides the Archival Unit URL stems.
    * 
-   * @return a List<String> with the URL stems.
+   * @return a {@code List<String>} with the URL stems.
    */
   public List<String> getUrlStems() {
     return urlStems;
@@ -482,7 +482,7 @@ public class AuWsResult {
   /**
    * Provides the Archival Unit peer agreements.
    * 
-   * @return a List<PeerAgreementsWsResult> with the peer agreements.
+   * @return a {@code List<PeerAgreementsWsResult>} with the peer agreements.
    */
   public List<PeerAgreementsWsResult> getPeerAgreements() {
     return peerAgreements;
@@ -494,7 +494,7 @@ public class AuWsResult {
   /**
    * Provides the Archival Unit URLs.
    * 
-   * @return a List<UrlWsResult> with the URLs.
+   * @return a {@code List<UrlWsResult>} with the URLs.
    */
   public List<UrlWsResult> getUrls() {
     return urls;
@@ -506,7 +506,7 @@ public class AuWsResult {
   /**
    * Provides the Archival Unit substance URLs.
    * 
-   * @return a List<String> with the substance URLs.
+   * @return a {@code List<String>} with the substance URLs.
    */
   public List<String> getSubstanceUrls() {
     return substanceUrls;
@@ -518,7 +518,7 @@ public class AuWsResult {
   /**
    * Provides the Archival Unit article URLs.
    * 
-   * @return a List<String> with the article URLs.
+   * @return a {@code List<String>} with the article URLs.
    */
   public List<String> getArticleUrls() {
     return articleUrls;

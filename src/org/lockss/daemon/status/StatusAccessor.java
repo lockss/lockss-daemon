@@ -46,7 +46,7 @@ public interface StatusAccessor {
    * optionally the default {@link StatusTable.SortRule}s,
    * {@link StatusTable.SummaryInfo}, and Title.
    *
-   * @param table @{link StatusTable} which specifies a name and optionally
+   * @param table {@link StatusTable} which specifies a name and optionally
    * a key.  This table will be populatred with {@link ColumnDescriptor} and
    * rows, as well as optionally the default {@link StatusTable.SortRule}s,
    * {@link StatusTable.SummaryInfo}, and Title.

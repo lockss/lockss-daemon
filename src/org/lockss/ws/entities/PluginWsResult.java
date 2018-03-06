@@ -99,7 +99,7 @@ public class PluginWsResult {
   /**
    * Provides the plugin definition properties.
    * 
-   * @return A Map<String, String> with the properties.
+   * @return a {@code Map<String, String>} with the properties.
    */
   public Map<String, String> getDefinition() {
     return definition;

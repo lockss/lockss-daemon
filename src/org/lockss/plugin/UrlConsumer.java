@@ -41,7 +41,6 @@ public interface UrlConsumer {
   /**
    * Do some or no processing and store using UrlCacher. Should also report
    * pages that need parsing to crawler and pass errors up to fetcher.
-   * @param fud
    * @throws IOException
    */
   public void consume() throws IOException;
