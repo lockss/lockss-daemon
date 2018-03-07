@@ -111,7 +111,7 @@
     au < rsp.ClockssRSPDrupalPlugin ; notReady ; exists ; 2014 ; Biology Letters Volume 10 ; 10 ; > #xml error: See http://rsbl.royalsocietypublishing.org/highwire/filestream/25839/field_highwire_adjunct_files/2/rsbl20140479supp3.xml
     au < rsp.ClockssRSPDrupalPlugin ; frozen ; exists ; 2015 ; Biology Letters Volume 11 ; 11 ; >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2016 ; Biology Letters Volume 12 ; 12 ; reingest1.clockss.org:8082 >
-    au < rsp.ClockssRSPDrupalPlugin ; crawling ; exists ; 2017 ; Biology Letters Volume 13 ; 13 ; >
+    au < rsp.ClockssRSPDrupalPlugin ; deepCrawl ; exists ; 2017 ; Biology Letters Volume 13 ; 13 ; >
 
   }
 

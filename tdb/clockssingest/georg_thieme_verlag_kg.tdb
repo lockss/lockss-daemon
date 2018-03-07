@@ -158,7 +158,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Aktuelle Kardiologie Volume 3 ; 3 ; >
     au < finished ; finished ; 2015 ; 2015 ; Aktuelle Kardiologie Volume 4 ; 4 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Aktuelle Kardiologie Volume 5 ; 5 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; 2017 ; Aktuelle Kardiologie Volume 6 ; 6 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Aktuelle Kardiologie Volume 6 ; 6 ; >
 
   }
 
@@ -767,7 +767,7 @@
     param[journal_id] = 10.1055/s-00032321
     #years = 2017-current
 
-    au < crawling ; exists ; 2017 ; 2017 ; Current Research: Concussion Volume 4 ; 4 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Current Research: Concussion Volume 4 ; 4 ; >
 
   }
 
@@ -913,7 +913,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Diabetes aktuell Volume 12 ; 12 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2015 ; 2015 ; Diabetes aktuell Volume 13 ; 13 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2016 ; 2016 ; Diabetes aktuell Volume 14 ; 14 ; >
-   au < crawling ; exists ; 2017 ; 2017 ; Diabetes aktuell Volume 15 ; 15 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Diabetes aktuell Volume 15 ; 15 ; >
 
   }
 
@@ -1121,7 +1121,7 @@
    au < zapped ; finished ; 2014 ; 2014 ; DMW - Deutsche Medizinische Wochenschrift Volume 140 ; 140 ; reingest2.clockss.org:8085 >
    au < zapped ; finished ; 2015 ; 2015 ; DMW - Deutsche Medizinische Wochenschrift Volume 141 ; 141 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; DMW - Deutsche Medizinische Wochenschrift Volume 142 ; 142 ; reingest2.clockss.org:8085 >
-   au < crawling ; exists ; 2017 ; 2017 ; DMW - Deutsche Medizinische Wochenschrift Volume 143 ; 143 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; DMW - Deutsche Medizinische Wochenschrift Volume 143 ; 143 ; >
 
   }
 
@@ -1261,7 +1261,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Endoscopy international open Volume 2 ; 2 ; >
     au < frozen ; exists ; 2015 ; 2015 ; Endoscopy international open Volume 3 ; 3 ; >
     au < finished ; crawling ; 2016 ; 2016 ; Endoscopy international open Volume 4 ; 4 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; 2017 ; Endoscopy international open Volume 5 ; 5 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Endoscopy international open Volume 5 ; 5 ; >
 
   }
 
@@ -1345,7 +1345,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Ergopraxis Volume 7 ; 7 ; >
    au < finished ; finished ; 2015 ; 2015 ; Ergopraxis Volume 8 ; 8 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2016 ; 2016 ; Ergopraxis Volume 9 ; 9 ; >
-   au < crawling ; exists ; 2017 ; 2017 ; Ergopraxis Volume 10 ; 10 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Ergopraxis Volume 10 ; 10 ; >
 
   }
 
@@ -1459,7 +1459,7 @@
     au < finished ; finished ; 2014 ; 2014 ; European Journal of Pediatric Surgery Reports Volume 2 ; 2 ; >
     au < finished ; finished ; 2015 ; 2015 ; European Journal of Pediatric Surgery Reports Volume 3 ; 3 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2016 ; 2016 ; European Journal of Pediatric Surgery Reports Volume 4 ; 4 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; 2017 ; European Journal of Pediatric Surgery Reports Volume 5 ; 5 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; European Journal of Pediatric Surgery Reports Volume 5 ; 5 ; >
 
   }
 
@@ -1977,7 +1977,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Hebamme Die Volume 27 ; 27 ; >
    au < finished ; finished ; 2015 ; 2015 ; Hebamme Die Volume 28 ; 28 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; down ; 2016 ; 2016 ; Hebamme Die Volume 29 ; 29 ;  >
-   au < crawling ; exists ; 2017 ; 2017 ; Hebamme Die Volume 30 ; 30 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Hebamme Die Volume 30 ; 30 ; >
 
   }
 
@@ -2483,7 +2483,7 @@
     param[journal_id] = 10.1055/s-00033285
     #years = 2017
 
-   au < crawling ; exists ; 2017 ; 2017 ; Journal of Academic Ophtalmology Volume 9 ; 9 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Journal of Academic Ophtalmology Volume 9 ; 9 ; >
 
   }
 
@@ -2956,7 +2956,7 @@
     au < finished ; finished ; 2014 ; 2014 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 3 ; 3 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; 2015 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 4 ; 4 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2016 ; 2016 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 6 ; 6 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 6 ; 6 ; >
 
   }
 
@@ -4399,7 +4399,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Psych Pflege Heute Volume 20 ; 20 ; >
    au < finished ; finished ; 2015 ; 2015 ; Psych Pflege Heute Volume 21 ; 21 ; reingest1.clockss.org:8082 >
    au < deepCrawl ; exists ; 2016 ; 2016 ; Psych Pflege Heute Volume 22 ; 22 ; >
-   au < crawling ; exists ; 2017 ; 2017 ; Psych Pflege Heute Volume 23 ; 23 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Psych Pflege Heute Volume 23 ; 23 ; >
 
   }
 
@@ -5438,7 +5438,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Sprache Stimme Gehör Volume 38 ; 38 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; Sprache Stimme Gehör Volume 39 ; 39 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; Sprache Stimme Gehör Volume 40 ; 40 ; reingest3.clockss.org:8083 >
-   au < crawling ; exists ; 2017 ; 2017 ; Sprache Stimme Gehör Volume 41 ; 41 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Sprache Stimme Gehör Volume 41 ; 41 ; >
 
   }
 
@@ -5620,7 +5620,7 @@
    au < zapped ; finished ; 2014 ; 2014 ; SYNTHESIS Volume 46 ; 46 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2015 ; 2015 ; SYNTHESIS Volume 47 ; 47 ; reingest1.clockss.org:8082 >
    au < deepCrawl ; exists ; 2016 ; 2016 ; SYNTHESIS Volume 48 ; 48 ; >
-   au < crawling ; exists ; 2017 ; 2017 ; SYNTHESIS Volume 49 ; 49 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; SYNTHESIS Volume 49 ; 49 ; >
 
   }
 
@@ -7059,7 +7059,7 @@
     au < manifest ; exists ; 2014 ; 2014 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 42 ; 42 ; >
     au < manifest ; exists ; 2015 ; 2015 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 43 ; 43 ; >
     au < manifest ; exists ; 2016 ; 2016 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 44 ; 44 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 45 ; 45 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 45 ; 45 ; >
 
   }
 

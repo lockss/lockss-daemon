@@ -135,7 +135,7 @@
     au < finished ; finished ; 2014 ; Advances in Dual Diagnosis Volume 7 ; 7 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Advances in Dual Diagnosis Volume 8 ; 8 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Advances in Dual Diagnosis Volume 9 ; 9 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2017 ; Advances in Dual Diagnosis Volume 10 ; 10 ; >
+    au < deepCrawl ; exists ; 2017 ; Advances in Dual Diagnosis Volume 10 ; 10 ; >
 
   }
 
@@ -2887,7 +2887,7 @@
     au < frozen ; exists ; 2014 ; Human Resource Management International Digest Volume 22 ; 22 ; >
     au < finished ; finished ; 2015 ; Human Resource Management International Digest Volume 23 ; 23 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Human Resource Management International Digest Volume 24 ; 24 ; >
-    au < crawling ; exists ; 2017 ; Human Resource Management International Digest Volume 25 ; 25 ; >
+    au < deepCrawl ; exists ; 2017 ; Human Resource Management International Digest Volume 25 ; 25 ; >
 
   }
 
@@ -4044,7 +4044,7 @@
     au < finished ; finished ; 2014 ; International Journal of Gender and Entrepreneurship Volume 6 ; 6 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; International Journal of Gender and Entrepreneurship Volume 7 ; 7 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; International Journal of Gender and Entrepreneurship Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2017 ; International Journal of Gender and Entrepreneurship Volume 9 ; 9 ; >
+    au < deepCrawl ; exists ; 2017 ; International Journal of Gender and Entrepreneurship Volume 9 ; 9 ; >
 
   }
 
@@ -4505,7 +4505,7 @@
     au < finished ; finished ; 2014 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 24 ; 24 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 25 ; 25 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 26 ; 26 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 27 ; 27 ; >
+    au < deepCrawl ; exists ; 2017 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 27 ; 27 ; >
 
   }
 
@@ -4596,7 +4596,7 @@
     au < finished ; finished ; 2014 ; International Journal of Organizational Analysis Volume 22 ; 22 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; International Journal of Organizational Analysis Volume 23 ; 23 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; International Journal of Organizational Analysis Volume 24 ; 24 ; >
-    au < crawling ; exists ; 2017 ; International Journal of Organizational Analysis Volume 25 ; 25 ; >
+    au < deepCrawl ; exists ; 2017 ; International Journal of Organizational Analysis Volume 25 ; 25 ; >
 
   }
 
@@ -5151,7 +5151,7 @@
     au < finished ; finished ; 2014 ; International Journal of Structural Integrity Volume 5 ; 5 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; International Journal of Structural Integrity Volume 6 ; 6 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; International Journal of Structural Integrity Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2017 ; International Journal of Structural Integrity Volume 8 ; 8 ; >
+    au < deepCrawl ; exists ; 2017 ; International Journal of Structural Integrity Volume 8 ; 8 ; >
 
   }
 
@@ -5920,7 +5920,7 @@
     au < finished ; finished ; 2014 ; Journal of Consumer Marketing Volume 31 ; 31 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Journal of Consumer Marketing Volume 32 ; 32 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2016 ; Journal of Consumer Marketing Volume 33 ; 33 ; >
-    au < crawling ; exists ; 2017 ; Journal of Consumer Marketing Volume 34 ; 34 ; >
+    au < deepCrawl ; exists ; 2017 ; Journal of Consumer Marketing Volume 34 ; 34 ; >
 
   }
 
@@ -6818,7 +6818,7 @@
     au < finished ; finished ; 2014 ; Journal of Indian Business Research Volume 6 ; 6 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Journal of Indian Business Research Volume 7 ; 7 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Journal of Indian Business Research Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2017 ; Journal of Indian Business Research Volume 9 ; 9 ; >
+    au < deepCrawl ; exists ; 2017 ; Journal of Indian Business Research Volume 9 ; 9 ; >
 
   }
 
@@ -7365,7 +7365,7 @@
     au < finished ; finished ; 2014 ; The Journal of Mental Health Training, Education and Practice: Issues for workforce development Volume 9 ; 9 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; The Journal of Mental Health Training, Education and Practice: Issues for workforce development Volume 10 ; 10 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; The Journal of Mental Health Training, Education and Practice: Issues for workforce development Volume 11 ; 11 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2017 ; The Journal of Mental Health Training, Education and Practice: Issues for workforce development Volume 12 ; 12 ; >
+    au < deepCrawl ; exists ; 2017 ; The Journal of Mental Health Training, Education and Practice: Issues for workforce development Volume 12 ; 12 ; >
 
   }
 
@@ -8208,7 +8208,7 @@
     au < finished ; finished ; 2014 ; Leadership in Health Services Volume 27 ; 27 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Leadership in Health Services Volume 28 ; 28 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Leadership in Health Services Volume 29 ; 29 ; >
-    au < crawling ; exists ; 2017 ; Leadership in Health Services Volume 30 ; 30 ; >
+    au < deepCrawl ; exists ; 2017 ; Leadership in Health Services Volume 30 ; 30 ; >
 
   }
 
@@ -8592,7 +8592,7 @@
     au < finished ; finished ; 2014 ; Management Decision Volume 52 ; 52 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2015 ; Management Decision Volume 53 ; 53 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Management Decision Volume 54 ; 54 ; >
-    au < crawling ; exists ; 2017 ; Management Decision Volume 55 ; 55 ; >
+    au < deepCrawl ; exists ; 2017 ; Management Decision Volume 55 ; 55 ; >
 
   }
 
@@ -8787,7 +8787,7 @@
     au < finished ; finished ; 2014 ; Managerial Auditing Journal Volume 29 ; 29 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Managerial Auditing Journal Volume 30 ; 30 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Managerial Auditing Journal Volume 31 ; 31 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2017 ; Managerial Auditing Journal Volume 32 ; 32 ; >
+    au < deepCrawl ; exists ; 2017 ; Managerial Auditing Journal Volume 32 ; 32 ; >
 
   }
 
@@ -9648,7 +9648,7 @@
     au < frozen ; exists ; 2014 ; Pacific Accounting Review Volume 26 ; 26 ; >
     au < finished ; finished ; 2015 ; Pacific Accounting Review Volume 27 ; 27 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Pacific Accounting Review Volume 28 ; 28 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Pacific Accounting Review Volume 29 ; 29 ; >
+    au < deepCrawl ; exists ; 2017 ; Pacific Accounting Review Volume 29 ; 29 ; >
 
   }
 
@@ -9814,7 +9814,7 @@
     au < finished ; finished ; 2014 ; Pigment & Resin Technology Volume 43 ; 43 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Pigment & Resin Technology Volume 44 ; 44 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Pigment & Resin Technology Volume 45 ; 45 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2017 ; Pigment & Resin Technology Volume 46 ; 46 ; >
+    au < deepCrawl ; exists ; 2017 ; Pigment & Resin Technology Volume 46 ; 46 ; >
 
   }
 
@@ -10603,7 +10603,7 @@
     au < finished ; finished ; 2014 ; Social Responsibility Journal Volume 10 ; 10 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2015 ; Social Responsibility Journal Volume 11 ; 11 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Social Responsibility Journal Volume 12 ; 12 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2017 ; Social Responsibility Journal Volume 13 ; 13 ; >
+    au < deepCrawl ; exists ; 2017 ; Social Responsibility Journal Volume 13 ; 13 ; >
 
   }
 
@@ -11506,7 +11506,7 @@
     au < finished ; finished ; 2014 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 18 ; 18 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 19 ; 19 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 20 ; 20 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 21 ; 21 ; >
+    au < deepCrawl ; exists ; 2017 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 21 ; 21 ; >
 
   }
 
