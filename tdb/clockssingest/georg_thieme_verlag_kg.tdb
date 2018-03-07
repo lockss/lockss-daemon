@@ -490,7 +490,7 @@
     au < finished ; finished ; 2014 ; 2014 ; American Journal of Perinatology Reports Volume 4 ; 4 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; American Journal of Perinatology Reports Volume 5 ; 5 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; 2016 ; American Journal of Perinatology Reports Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; American Journal of Perinatology Reports Volume 7 ; 7 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; American Journal of Perinatology Reports Volume 7 ; 7 ; >
 
    }
 
@@ -794,7 +794,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Deutsche Heilpraktiker-Zeitschrift Volume 9 ; 9 ; >
    au < finished ; finished ; 2015 ; 2015 ; Deutsche Heilpraktiker-Zeitschrift Volume 10 ; 10 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; down ; 2016 ; 2016 ; Deutsche Heilpraktiker-Zeitschrift Volume 11 ; 11 ;  >
-   au < crawling ; exists ; 2017 ; 2017 ; Deutsche Heilpraktiker-Zeitschrift Volume 12 ; 12 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Deutsche Heilpraktiker-Zeitschrift Volume 12 ; 12 ; >
 
   }
 
@@ -858,7 +858,7 @@
     param[journal_id] = 10.1055/s-00033104
     comment[years] = 2017-current
 
-   au < crawling ; exists ; 2017 ; 2017 ; Die Wirbelsäule Volume 1 ; 1 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Die Wirbelsäule Volume 1 ; 1 ; >
 
   }
 
@@ -1177,7 +1177,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Endo-Praxis Volume 30 ; 30 ; >
    au < finished ; finished ; 2015 ; 2015 ; Endo-Praxis Volume 31 ; 31 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2016 ; 2016 ; Endo-Praxis Volume 32 ; 32 ; reingest3.clockss.org:8083 >
-   au < crawling ; exists ; 2017 ; 2017 ; Endo-Praxis Volume 33 ; 33 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Endo-Praxis Volume 33 ; 33 ; >
 
   }
 
@@ -1612,7 +1612,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Facial Plastic Surgery Volume 30 ; 30 ; >
    au < finished ; finished ; 2015 ; 2015 ; Facial Plastic Surgery Volume 31 ; 31 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; Facial Plastic Surgery Volume 32 ; 32 ; reingest1.clockss.org:8082 >
-   au < crawling ; exists ; 2017 ; 2017 ; Facial Plastic Surgery Volume 33 ; 33 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Facial Plastic Surgery Volume 33 ; 33 ; >
 
   }
 
@@ -1949,7 +1949,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Handchirurgie Scan Volume 3 ; 3 ; >
     au < finished ; finished ; 2015 ; 2015 ; Handchirurgie Scan Volume 4 ; 4 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Handchirurgie Scan Volume 5 ; 5 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2017 ; 2017 ; Handchirurgie Scan Volume 6 ; 6 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Handchirurgie Scan Volume 6 ; 6 ; >
 
   }
 
@@ -2152,7 +2152,7 @@
    au < finished ; crawling ; 2014 ; 2014 ; Indian Journal of Neurotrauma Volume 11 ; 11 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2015 ; 2015 ; Indian Journal of Neurotrauma Volume 12 ; 12 ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; Indian Journal of Neurotrauma Volume 13 ; 13 ; reingest5.clockss.org:8082 >
-   au < crawling ; exists ; 2017 ; 2017 ; Indian Journal of Neurotrauma Volume 14 ; 14 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Indian Journal of Neurotrauma Volume 14 ; 14 ; >
 
   }
 
@@ -2321,7 +2321,7 @@
     au < finished ; finished ; 2014 ; 2014 ; International Journal of Angiology Volume 23 ; 23 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; 2015 ; International Journal of Angiology Volume 24 ; 24 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; 2016 ; International Journal of Angiology Volume 25 ; 25 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; International Journal of Angiology Volume 26 ; 26 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; International Journal of Angiology Volume 26 ; 26 ; >
 
   }
 
@@ -2727,7 +2727,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Journal of Pediatric Epilepsy Volume 3 ; 3 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Journal of Pediatric Epilepsy Volume 4 ; 4 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; Journal of Pediatric Epilepsy Volume 5 ; 5 ;  >
-    au < crawling ; exists ; 2017 ; 2017 ; Journal of Pediatric Epilepsy Volume 6 ; 6 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Journal of Pediatric Epilepsy Volume 6 ; 6 ; >
 
   }
 
@@ -4897,7 +4897,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Seminars in Musculoskeletal Radiology Volume 18 ; 18 ; >
    au < finished ; finished ; 2015 ; 2015 ; Seminars in Musculoskeletal Radiology Volume 19 ; 19 ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; Seminars in Musculoskeletal Radiology Volume 20 ; 20 ; reingest1.clockss.org:8082 >
-   au < crawling ; exists ; 2017 ; 2017 ; Seminars in Musculoskeletal Radiology Volume 21 ; 21 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Seminars in Musculoskeletal Radiology Volume 21 ; 21 ; >
 
   }
 
@@ -5405,7 +5405,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Sportverletzung - Sportschaden Volume 28 ; 28 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; Sportverletzung - Sportschaden Volume 29 ; 29 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2016 ; 2016 ; Sportverletzung - Sportschaden Volume 30 ; 30 ; reingest2.clockss.org:8085 >
-   au < crawling ; exists ; 2017 ; 2017 ; Sportverletzung - Sportschaden Volume 31 ; 31 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Sportverletzung - Sportschaden Volume 31 ; 31 ; >
 
    }
 
@@ -5719,7 +5719,7 @@
     au < finished ; finished ; 2014 ; 2014 ; The Thoracic and Cardiovascular Surgeon Volume 62 ; 62 ; >
     au < finished ; finished ; 2015 ; 2015 ; The Thoracic and Cardiovascular Surgeon Volume 63 ; 63 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; The Thoracic and Cardiovascular Surgeon Volume 64 ; 64 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; 2017 ; The Thoracic and Cardiovascular Surgeon Volume 65 ; 65 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; The Thoracic and Cardiovascular Surgeon Volume 65 ; 65 ; >
 
   }
 
@@ -5741,7 +5741,7 @@
     au < finished ; finished ; 2014 ; 2014 ; The Thoracic and Cardiovascular Surgeon Reports Volume 3 ; 3 ; >
     au < finished ; finished ; 2015 ; 2015 ; The Thoracic and Cardiovascular Surgeon Reports Volume 4 ; 4 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; 2016 ; The Thoracic and Cardiovascular Surgeon Reports Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; The Thoracic and Cardiovascular Surgeon Reports Volume 6 ; 6 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; The Thoracic and Cardiovascular Surgeon Reports Volume 6 ; 6 ; >
 
   }
 
@@ -6666,7 +6666,7 @@
     au < crawling ; exists ; 2014 ; 2014 ; Arthritis und Rheuma Volume 34 ; 34 ; >
     au < frozen ; exists ; 2015 ; 2015 ; Arthritis und Rheuma Volume 35 ; 35 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Arthritis und Rheuma Volume 36 ; 36 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; Arthritis und Rheuma Volume 37 ; 37 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Arthritis und Rheuma Volume 37 ; 37 ; >
 
   }
 
@@ -6928,7 +6928,7 @@
     au < manifest ; exists ; 2014 ; 2014 ; Osteologie Volume 23 ; 23 ; >
     au < manifest ; exists ; 2015 ; 2015 ; Osteologie Volume 24 ; 24 ; >
     au < manifest ; exists ; 2016 ; 2016 ; Osteologie Volume 25 ; 25 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; Osteologie Volume 26 ; 26 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Osteologie Volume 26 ; 26 ; >
 
   }
 
@@ -7029,7 +7029,7 @@
     param[journal_id] = 10.1055/s-00033990
     comment[years] = 2017-current
 
-    au < crawling ; exists ; 2017 ; 2017 ; TH Open Volume 1 ; 1 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; TH Open Volume 1 ; 1 ; >
 
   }
 
@@ -7089,7 +7089,7 @@
     au < manifest ; exists ; 2014 ; 2014 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 12 ; 12 ; >
     au < manifest ; exists ; 2015 ; 2015 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 13 ; 13 ; >
     au < manifest ; exists ; 2016 ; 2016 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 15 ; 15 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 15 ; 15 ; >
 
   }
 

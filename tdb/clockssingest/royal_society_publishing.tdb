@@ -249,7 +249,7 @@
     au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2014 ; Notes and Records the Royal Society Journal of the History of Science Volume 68 ; 68 ; reingest5.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2015 ; Notes and Records the Royal Society Journal of the History of Science Volume 69 ; 69 ; reingest5.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2016 ; Notes and Records the Royal Society Journal of the History of Science Volume 70 ; 70 ; reingest2.clockss.org:8085 >
-    au < rsp.ClockssRSPDrupalPlugin ; crawling ; exists ; 2017 ; Notes and Records the Royal Society Journal of the History of Science Volume 71 ; 71 ; >
+    au < rsp.ClockssRSPDrupalPlugin ; deepCrawl ; exists ; 2017 ; Notes and Records the Royal Society Journal of the History of Science Volume 71 ; 71 ; >
     
   }
 

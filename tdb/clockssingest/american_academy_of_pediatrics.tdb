@@ -168,7 +168,7 @@
       au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2015 ; Hospital Pediatrics Volume 5 [superseded] ; 5 ; >
       au < aap.ClockssAAPDrupalPlugin ; finished ; crawling ; 2015 ; Hospital Pediatrics Volume 5 ; 5 ; reingest1.clockss.org:8082 >
       au < aap.ClockssAAPDrupalPlugin ; finished ; crawling ; 2016 ; Hospital Pediatrics Volume 6 ; 6 ; reingest4.clockss.org:8082 >
-      au < aap.ClockssAAPDrupalPlugin ; crawling ; exists ; 2017 ; Hospital Pediatrics Volume 7 ; 7 ; >
+      au < aap.ClockssAAPDrupalPlugin ; deepCrawl ; exists ; 2017 ; Hospital Pediatrics Volume 7 ; 7 ; >
       au < aap.ClockssAAPDrupalPlugin ; expected ; exists ; 2018 ; Hospital Pediatrics Volume 8 ; 8 ; >
 
   }
