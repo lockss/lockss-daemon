@@ -191,7 +191,7 @@
 
       au < manifest ; exists ; 2007 ; IET Computers & Digital Techniques Volume 1 ; 1 ; >
       au < manifest ; exists ; 2008 ; IET Computers & Digital Techniques Volume 2 ; 2 ; >
-      au < crawling ; exists ; 2009 ; IET Computers & Digital Techniques Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2009 ; IET Computers & Digital Techniques Volume 3 ; 3 ; >
       au < crawling ; exists ; 2010 ; IET Computers & Digital Techniques Volume 4 ; 4 ; >
       au < crawling ; exists ; 2011 ; IET Computers & Digital Techniques Volume 5 ; 5 ; >
       au < frozen ; exists ; 2012 ; IET Computers & Digital Techniques Volume 6 ; 6 ; >
@@ -218,7 +218,7 @@
       au < manifest ; exists ; 2008 ; IET Computer Vision Volume 2 ; 2 ; >
       au < crawling ; exists ; 2009 ; IET Computer Vision Volume 3 ; 3 ; >
       au < crawling ; exists ; 2010 ; IET Computer Vision Volume 4 ; 4 ; >
-      au < crawling ; exists ; 2011 ; IET Computer Vision Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2011 ; IET Computer Vision Volume 5 ; 5 ; >
       au < frozen ; exists ; 2012 ; IET Computer Vision Volume 6 ; 6 ; >
       au < frozen ; exists ; 2013 ; IET Computer Vision Volume 7 ; 7 ; >
       au < frozen ; exists ; 2014 ; IET Computer Vision Volume 8 ; 8 ; >
@@ -268,7 +268,7 @@
       au < manifest ; exists ; 2007 ; IET Electric Power Applications Volume 1 ; 1 ; >
       au < manifest ; exists ; 2008 ; IET Electric Power Applications Volume 2 ; 2 ; >
       au < crawling ; exists ; 2009 ; IET Electric Power Applications Volume 3 ; 3 ; >
-      au < crawling ; exists ; 2010 ; IET Electric Power Applications Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2010 ; IET Electric Power Applications Volume 4 ; 4 ; >
       au < crawling ; exists ; 2011 ; IET Electric Power Applications Volume 5 ; 5 ; >
       au < frozen ; exists ; 2012 ; IET Electric Power Applications Volume 6 ; 6 ; >
       au < frozen ; exists ; 2013 ; IET Electric Power Applications Volume 7 ; 7 ; >
@@ -291,7 +291,7 @@
       >
       param[journal_id] = iet-est
 
-      au < crawling ; exists ; 2011 ; IET Electrical Systems in Transportation Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2011 ; IET Electrical Systems in Transportation Volume 1 ; 1 ; >
       au < frozen ; exists ; 2012 ; IET Electrical Systems in Transportation Volume 2 ; 2 ; >
       au < frozen ; exists ; 2013 ; IET Electrical Systems in Transportation Volume 3 ; 3 ; >
       au < frozen ; exists ; 2014 ; IET Electrical Systems in Transportation Volume 4 ; 4 ; >
@@ -316,7 +316,7 @@
       au < manifest ; exists ; 2007 ; IET Generation, Transmission & Distribution Volume 1 ; 1 ; >
       au < manifest ; exists ; 2008 ; IET Generation, Transmission & Distribution Volume 2 ; 2 ; >
       au < crawling ; exists ; 2009 ; IET Generation, Transmission & Distribution Volume 3 ; 3 ; >
-      au < crawling ; exists ; 2010 ; IET Generation, Transmission & Distribution Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2010 ; IET Generation, Transmission & Distribution Volume 4 ; 4 ; >
       au < crawling ; exists ; 2011 ; IET Generation, Transmission & Distribution Volume 5 ; 5 ; >
       au < frozen ; exists ; 2012 ; IET Generation, Transmission & Distribution Volume 6 ; 6 ; >
       au < frozen ; exists ; 2013 ; IET Generation, Transmission & Distribution Volume 7 ; 7 ; >
@@ -393,9 +393,9 @@
 
       au < manifest ; exists ; 2007 ; IET Intelligent Transport Systems Volume 1 ; 1 ; >
       au < manifest ; exists ; 2008 ; IET Intelligent Transport Systems Volume 2 ; 2 ; >
-      au < crawling ; exists ; 2009 ; IET Intelligent Transport Systems Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2009 ; IET Intelligent Transport Systems Volume 3 ; 3 ; >
       au < crawling ; exists ; 2010 ; IET Intelligent Transport Systems Volume 4 ; 4 ; >
-      au < crawling ; exists ; 2011 ; IET Intelligent Transport Systems Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2011 ; IET Intelligent Transport Systems Volume 5 ; 5 ; >
       au < frozen ; exists ; 2012 ; IET Intelligent Transport Systems Volume 6 ; 6 ; >
       au < frozen ; exists ; 2013 ; IET Intelligent Transport Systems Volume 7 ; 7 ; >
       au < frozen ; exists ; 2014 ; IET Intelligent Transport Systems Volume 8 ; 8 ; >
@@ -622,7 +622,7 @@
       au < manifest ; exists ; 2007 ; IET Signal Processing Volume 1 ; 1 ; >
       au < manifest ; exists ; 2008 ; IET Signal Processing Volume 2 ; 2 ; >
       au < crawling ; exists ; 2009 ; IET Signal Processing Volume 3 ; 3 ; >
-      au < crawling ; exists ; 2010 ; IET Signal Processing Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2010 ; IET Signal Processing Volume 4 ; 4 ; >
       au < crawling ; exists ; 2011 ; IET Signal Processing Volume 5 ; 5 ; >
       au < frozen ; exists ; 2012 ; IET Signal Processing Volume 6 ; 6 ; >
       au < frozen ; exists ; 2013 ; IET Signal Processing Volume 7 ; 7 ; >
@@ -721,8 +721,8 @@
       au < manifest ; exists ; 2006 ; Micro & Nano Letters Volume 1 ; 1 ; >
       au < manifest ; exists ; 2007 ; Micro & Nano Letters Volume 2 ; 2 ; >
       au < manifest ; exists ; 2008 ; Micro & Nano Letters Volume 3 ; 3 ; >
-      au < crawling ; exists ; 2009 ; Micro & Nano Letters Volume 4 ; 4 ; >
-      au < crawling ; exists ; 2010 ; Micro & Nano Letters Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2009 ; Micro & Nano Letters Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2010 ; Micro & Nano Letters Volume 5 ; 5 ; >
       au < crawling ; exists ; 2011 ; Micro & Nano Letters Volume 6 ; 6 ; >
       au < frozen ; exists ; 2012 ; Micro & Nano Letters Volume 7 ; 7 ; >
       au < frozen ; exists ; 2013 ; Micro & Nano Letters Volume 8 ; 8 ; >

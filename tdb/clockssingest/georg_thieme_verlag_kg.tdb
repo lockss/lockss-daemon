@@ -6630,7 +6630,7 @@
 
     au < manifest ; exists ; 2009 ; 2009 ; Applied Clinical Informatics Volume 0 ; 0 ; >
     au < finished ; crawling ; 2010 ; 2010 ; Applied Clinical Informatics Volume 1 ; 1 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2011 ; 2011 ; Applied Clinical Informatics Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2011 ; 2011 ; Applied Clinical Informatics Volume 2 ; 2 ; >
     au < frozen ; exists ; 2012 ; 2012 ; Applied Clinical Informatics Volume 3 ; 3 ; >
     au < frozen ; exists ; 2013 ; 2013 ; Applied Clinical Informatics Volume 4 ; 4 ; >
     au < frozen ; exists ; 2014 ; 2014 ; Applied Clinical Informatics Volume 5 ; 5 ; >
@@ -6710,7 +6710,7 @@
     au < manifest ; exists ; 2009 ; 2009 ; Hämostaseologie Volume 29 ; 29 ; >
     au < frozen ; exists ; 2010 ; 2010 ; Hämostaseologie Volume 30 ; 30 ; >
     au < frozen ; exists ; 2011 ; 2011 ; Hämostaseologie Volume 31 ; 31 ; >
-    au < crawling ; exists ; 2012 ; 2012 ; Hämostaseologie Volume 32 ; 32 ; >
+    au < frozen ; exists ; 2012 ; 2012 ; Hämostaseologie Volume 32 ; 32 ; >
     au < frozen ; exists ; 2013 ; 2013 ; Hämostaseologie Volume 33 ; 33 ; >
     au < frozen ; exists ; 2014 ; 2014 ; Hämostaseologie Volume 34 ; 34 ; >
     au < frozen ; exists ; 2015 ; 2015 ; Hämostaseologie Volume 35 ; 35 ; >
@@ -6785,7 +6785,7 @@
     au < manifest ; exists ; 2008 ; 2008 ; Kinder- und Jugendmedizin Volume 8 ; 8 ; >
     au < manifest ; exists ; 2009 ; 2009 ; Kinder- und Jugendmedizin Volume 9 ; 9 ; >
     au < frozen ; exists ; 2010 ; 2010 ; Kinder- und Jugendmedizin Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2011 ; 2011 ; Kinder- und Jugendmedizin Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2011 ; 2011 ; Kinder- und Jugendmedizin Volume 11 ; 11 ; >
     au < frozen ; exists ; 2012 ; 2012 ; Kinder- und Jugendmedizin Volume 12 ; 12 ; >
     au < manifest ; exists ; 2013 ; 2013 ; Kinder- und Jugendmedizin Volume 13 ; 13 ; >
     au < crawling ; exists ; 2014 ; 2014 ; Kinder- und Jugendmedizin Volume 14 ; 14 ; >
@@ -6815,7 +6815,7 @@
     au < frozen ; exists ; 2012 ; 2012 ; Methods of Information in Medicine Volume 51 ; 51 ; >
     au < frozen ; exists ; 2013 ; 2013 ; Methods of Information in Medicine Volume 52 ; 52 ; >
     au < frozen ; exists ; 2014 ; 2014 ; Methods of Information in Medicine Volume 53 ; 53 ; >
-    au < crawling ; exists ; 2015 ; 2015 ; Methods of Information in Medicine Volume 54 ; 54 ; >
+    au < frozen ; exists ; 2015 ; 2015 ; Methods of Information in Medicine Volume 54 ; 54 ; >
     au < finished ; crawling ; 2016 ; 2016 ; Methods of Information in Medicine Volume 55 ; 55 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2017 ; 2017 ; Methods of Information in Medicine Volume 56 ; 56 ; >
 
