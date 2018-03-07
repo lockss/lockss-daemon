@@ -10,8 +10,8 @@
   <entry>
     <string>plugin_version</string>
     <string>26</string>
-  </entry>  
-<!--  updating out of sync with parent, must have own feature_version_map -->  
+  </entry>
+<!--  updating out of sync with parent, must have own feature_version_map -->
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
@@ -40,7 +40,7 @@
   <entry>
     <string>plugin_parent_version</string>
     <string>89</string>
-  </entry>    
+  </entry>
   <entry>
     <string>au_name</string>
     <string>"American Meteorological Society Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
@@ -65,8 +65,8 @@
   <entry>
     <string>plugin_url_consumer_factory</string>
     <string>org.lockss.plugin.atypon.BaseAtyponHttpToHttpsUrlConsumerFactory</string>
-  </entry>  
-<!-- end changes for https conversion -->      
+  </entry>
+<!-- end changes for https conversion -->
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.atypon.americanmeteorologicalsociety.AMetSocHtmlHashFilterFactory</string>
@@ -74,5 +74,5 @@
   <entry>
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.atypon.americanmeteorologicalsociety.AMetSocHtmlCrawlFilterFactory</string>
-  </entry>  
+  </entry>
 </map>
