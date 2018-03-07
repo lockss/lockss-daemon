@@ -637,7 +637,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Advances in Dental Research Volume 26 ; 26 ; adra ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Advances in Dental Research Volume 27 ; 27 ; adra ; >
       au < finished ; manifest ; 2016 ; Advances in Dental Research Volume 28 ; 28 ; adra ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2017 ; Advances in Dental Research Volume 29 ; 29 ; adra ; >
+      au < frozen ; exists ; 2017 ; Advances in Dental Research Volume 29 ; 29 ; adra ; >
 
     }
 
@@ -14268,7 +14268,7 @@
       au < manifest ; exists ; 2007 ; Hong Kong Journal of Emergency Medicine Volume 14 ; 14 ; hkja ; >
       au < manifest ; exists ; 2008 ; Hong Kong Journal of Emergency Medicine Volume 15 ; 15 ; hkja ; >
       au < manifest ; exists ; 2009 ; Hong Kong Journal of Emergency Medicine Volume 16 ; 16 ; hkja ; >
-      au < crawling ; exists ; 2010 ; Hong Kong Journal of Emergency Medicine Volume 17 ; 17 ; hkja ; >
+      au < frozen ; exists ; 2010 ; Hong Kong Journal of Emergency Medicine Volume 17 ; 17 ; hkja ; >
       au < crawling ; exists ; 2011 ; Hong Kong Journal of Emergency Medicine Volume 18 ; 18 ; hkja ; >
       au < crawling ; exists ; 2012 ; Hong Kong Journal of Emergency Medicine Volume 19 ; 19 ; hkja ; >
       au < crawling ; exists ; 2013 ; Hong Kong Journal of Emergency Medicine Volume 20 ; 20 ; hkja ; >
@@ -41539,7 +41539,7 @@
       #param[base_url] = http://waf.sagepub.com/
 
       au < frozen ; exists ; 2016 ; World Affairs Volume 179 ; 179 ; wafj ; >
-      au < crawling ; exists ; 2017 ; World Affairs Volume 180 ; 180 ; wafj ; >
+      au < frozen ; exists ; 2017 ; World Affairs Volume 180 ; 180 ; wafj ; >
 
   }
 

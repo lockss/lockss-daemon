@@ -368,7 +368,7 @@
       au < manifest ; exists ; 2007 ; IET Information Security Volume 1 ; 1 ; >
       au < manifest ; exists ; 2008 ; IET Information Security Volume 2 ; 2 ; >
       au < crawling ; exists ; 2009 ; IET Information Security Volume 3 ; 3 ; >
-      au < crawling ; exists ; 2010 ; IET Information Security Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2010 ; IET Information Security Volume 4 ; 4 ; >
       au < crawling ; exists ; 2011 ; IET Information Security Volume 5 ; 5 ; >
       au < frozen ; exists ; 2012 ; IET Information Security Volume 6 ; 6 ; >
       au < frozen ; exists ; 2013 ; IET Information Security Volume 7 ; 7 ; >
@@ -493,7 +493,7 @@
       au < manifest ; exists ; 2007 ; IET Optoelectronics Volume 1 ; 1 ; >
       au < manifest ; exists ; 2008 ; IET Optoelectronics Volume 2 ; 2 ; >
       au < crawling ; exists ; 2009 ; IET Optoelectronics Volume 3 ; 3 ; >
-      au < crawling ; exists ; 2010 ; IET Optoelectronics Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2010 ; IET Optoelectronics Volume 4 ; 4 ; >
       au < crawling ; exists ; 2011 ; IET Optoelectronics Volume 5 ; 5 ; >
       au < frozen ; exists ; 2012 ; IET Optoelectronics Volume 6 ; 6 ; >
       au < frozen ; exists ; 2013 ; IET Optoelectronics Volume 7 ; 7 ; >
@@ -518,8 +518,8 @@
 
       au < manifest ; exists ; 2008 ; IET Power Electronics Volume 1 ; 1 ; >
       au < crawling ; exists ; 2009 ; IET Power Electronics Volume 2 ; 2 ; >
-      au < crawling ; exists ; 2010 ; IET Power Electronics Volume 3 ; 3 ; >
-      au < crawling ; exists ; 2011 ; IET Power Electronics Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2010 ; IET Power Electronics Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2011 ; IET Power Electronics Volume 4 ; 4 ; >
       au < frozen ; exists ; 2012 ; IET Power Electronics Volume 5 ; 5 ; >
       au < frozen ; exists ; 2013 ; IET Power Electronics Volume 6 ; 6 ; >
       au < frozen ; exists ; 2014 ; IET Power Electronics Volume 7 ; 7 ; >
@@ -596,7 +596,7 @@
       au < manifest ; exists ; 2007 ; IET Science, Measurement & Technology Volume 1 ; 1 ; >
       au < manifest ; exists ; 2008 ; IET Science, Measurement & Technology Volume 2 ; 2 ; >
       au < manifest ; exists ; 2009 ; IET Science, Measurement & Technology Volume 3 ; 3 ; >
-      au < crawling ; exists ; 2010 ; IET Science, Measurement & Technology Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2010 ; IET Science, Measurement & Technology Volume 4 ; 4 ; >
       au < frozen ; exists ; 2011 ; IET Science, Measurement & Technology Volume 5 ; 5 ; >
       au < frozen ; exists ; 2012 ; IET Science, Measurement & Technology Volume 6 ; 6 ; >
       au < frozen ; exists ; 2013 ; IET Science, Measurement & Technology Volume 7 ; 7 ; >
