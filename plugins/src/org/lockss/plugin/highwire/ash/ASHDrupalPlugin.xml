@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>down - publisher issue</string>
+    <string>testing</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -21,7 +21,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>69</string>
+    <string>71</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -45,7 +45,41 @@
     <string>"American Society of Hematology Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
-    <string>text/html_link_extractor_factory</string>
-    <string>org.lockss.plugin.highwire.HighWireDrupalHtmlLinkExtractorFactory</string>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"^https?://%s/c?lockss-manifest/[^/.]*vol_%s_manifest.html", url_host(base_url), volume_name</string>
+      <string>1,"^https?://%s/content(/[^/]+)?/suppl/", url_host(base_url)</string>
+      <string>2,"^https?://%s/content/(by/(year|volume)|current|.*/article-)", url_host(base_url)</string>
+      <!-- after content is optional jcode, required vol, optional issue, optional .toc  -->
+      <string>1,"^https?://%s/content(/[^/.]+)?/%s(/[^/.]+)?(\.toc)?$", url_host(base_url), volume_name</string>
+      <!-- after content is required vol, optional issue, required page, then allowed extensions or EOL 
+            page may also contain roman numerals, dot, & number (iii.2)  -->
+      <string>1,"^https?://%s/content/%s(/[^/.]+)?/(((?:([ivx]+)\.)?[^/.]+?(\.\d+)?))(|/related|/tab-figures-data)$", url_host(base_url), volume_name</string>
+      <!-- http://msphere.asm.org/content/1/1/masthead.1-1 was excluded -->
+      <string>1,"^https?://%s/content/%s(/[^/.]+)?/((ENEURO|wpt|masthead)\.[0-9.-]+)(|/related|/tab-figures-data)$", url_host(base_url), volume_name</string>
+      <!-- after content is optional jcode, required vol, optional issue, required page, then allowed extensions -->
+      <string>1,"^https?://%s/content(/[^/.]+)?/%s(/[^/.]+)?/(((?:([ivx]+)\.)?[^/.]+?(\.\d+)?))(\.(?:full(?:-text)?\.pdf(?:\+html)?))$", url_host(base_url), volume_name</string>
+      <string>1,"^https?://%s/content(/[^/.]+)?/%s(/[^/.]+)?/((ENEURO|wpt|masthead)\.[0-9.-]+)(\.(?:full(?:-text)?\.pdf(?:\+html)?))$", url_host(base_url), volume_name</string>
+      <string>1,"^https?://%s/content(/[^/.]+)?/%s(/[^/.]+)?/.+\.(long|supplemental|data|figures-only)$", url_host(base_url), volume_name</string>
+      <string>1,"^https?://%s/search/volume[^/?]+?%s[^/?]+\?(page=[0-9]+&amp;)?facet.+toc-section-id", url_host(base_url), volume_name</string>
+      <string>1,"^https?://%s/highwire/filestream/", url_host(base_url)</string>
+      <string>1,"^https?://%s/[^/]+/(download-(pdf|suppl|video))/", url_host(base_url)</string>
+      <!-- allow content like http://msphere.asm.org/content/msph/1/1/e00001-15/DC2/embed/inline-supplementary-material-2.pdf?download=true -->
+      <string>1,"^https?://%s/[^?]+(/embed/inline-supplementary-)", url_host(base_url)</string>
+      <!-- otherwise, all content from glencoesoftware CDN -->
+      <string>1,"^https?://([^/]+\.glencoesoftware\.com/.)"</string>
+      <string>1,"^https?://signin\.hematology\.org/Login\.aspx"</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.highwire.HighWireDrupalSigninUrlConsumerFactory</string>
+  </entry>
+  <entry>
+    <string>au_permitted_host_pattern</string>
+    <list>
+      <string>.+\.glencoesoftware\.com</string>
+      <string>.+//signin\.hematology\.org</string> 
+    </list>
   </entry>
 </map>
