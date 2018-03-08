@@ -119,7 +119,7 @@
     au < HighWirePressH20Plugin ; released ; 2014 ; Canadian Medical Association Journal Volume 186 ; 186 >
     au < HighWirePressH20Plugin ; released ; 2015 ; Canadian Medical Association Journal Volume 187 ; 187 >
     au < HighWirePressH20Plugin ; released ; 2016 ; Canadian Medical Association Journal Volume 188 ; 188 >
-    au < HighWirePressH20Plugin ; manifest ; 2017 ; Canadian Medical Association Journal Volume 189 ; 189 >
+    au < HighWirePressH20Plugin ; testing ; 2017 ; Canadian Medical Association Journal Volume 189 ; 189 >
 
   }
 
@@ -140,7 +140,7 @@
       au < doNotProcess ; 2014 ; CMAJ Open Volume 2 ; 2 >
       au < released ; 2015 ; CMAJ Open Volume 3 ; 3 >
       au < released ; 2016 ; CMAJ Open Volume 4 ; 4 >
-      au < manifest ; 2017 ; CMAJ Open Volume 5 ; 5 >
+      au < testing ; 2017 ; CMAJ Open Volume 5 ; 5 >
     }
     {
       param[base_url] = http://www.cmajopen.ca/
