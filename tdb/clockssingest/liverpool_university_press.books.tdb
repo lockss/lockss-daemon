@@ -101,7 +101,7 @@
     implicit < status ; status2 ; year ; volume ; isbn ; eisbn ; param[book_eisbn] ; name ; hidden[proxy] >
     #series = lejc
 
-    au < ready ; exists ; 1965 ; 1 ; 9781904113669 ; 9781909821330 ; 9781904113669 ; Hebrew Poems from Spain (9781904113669) ; >
+    au < crawling ; exists ; 1965 ; 1 ; 9781904113669 ; 9781909821330 ; 9781904113669 ; Hebrew Poems from Spain (9781904113669) ; >
     au < crawling ; exists ; 1972 ; 2 ; 9781874774181 ; 9781909821385 ; 9781874774181 ; Hasidic Prayer (9781874774181) ; >
     au < crawling ; exists ; 1973 ; 3 ; 9781874774532 ; 9781909821187 ; 9781874774532 ; Moses Mendelssohn: A Biographical Study (9781874774532) ; >
     au < frozen ; exists ; 1973 ; 4 ; 9781904113232 ; 9781909821347 ; 9781904113232 ; The Book of Direction to the Duties of the Heart (9781904113232) ; >
@@ -110,7 +110,7 @@
     au < ready ; exists ; 1982 ; 7 ; 9781874774167 ; 9781909821453 ; 9781874774167 ; Judaism on Trial: Jewish-Christian Disputations in the Middle Ages (9781874774167) ; >
     au < frozen ; exists ; 1982 ; 8 ; 9781904113133 ; 9781909821163 ; 9781904113133 ; Principles of Faith Rosh Amanah (9781904113133) ; >
     au < frozen ; exists ; 1982 ; 9 ; 9781904113690 ; 9781909821491 ; 9781904113690 ; Marrano Poets of the Seventeenth Century (9781904113690) ; >
-    au < ready ; exists ; 1982 ; 10 ; 9781904113591 ; 9781909821873 ; 9781904113591 ; Ideology and Experience: Antisemitism in France at the time of the Dreyfus Affair (9781904113591) ; >
+    au < crawling ; exists ; 1982 ; 10 ; 9781904113591 ; 9781909821873 ; 9781904113591 ; Ideology and Experience: Antisemitism in France at the time of the Dreyfus Affair (9781904113591) ; >
     au < crawling ; exists ; 1983 ; 11 ; 9781904113508 ; 9781909821774 ; 9781904113508 ; Mystical Theology and Social Dissent: The Life and Works of Judah Loew of Prague (9781904113508) ; >
     au < frozen ; exists ; 1986 ; 12 ; 9781874774297 ; 9781909821279 ; 9781874774297 ; Victorian Jews through British Eyes (9781874774297) ; >
     au < frozen ; exists ; 1986 ; 13 ; 9781904113218 ; 9781909821422 ; 9781904113218 ; Dogma in Medieval Jewish Thought: From Maimonides to Abravanal (9781904113218) ; >
@@ -136,19 +136,19 @@
     au < crawling ; exists ; 1993 ; 33 ; 9781874774013 ; 9781909821743 ; 9781874774013 ; One People? Tradition, Modernity, and Jewish Unity (9781874774013) ; >
     au < crawling ; exists ; 1994 ; 34 ; 9781904113225 ; 9781909821590 ; 9781904113225 ; Polin Studies in Polish Jewry Volume 8: Jews in Independent Poland 1918-1939 (9781904113225) ; >
     au < crawling ; exists ; 2013 ; 35 ; 9781906764944 ; 9781786948274 ; 9781906764944 ; Hasidism and Politics: The Kingdom of Poland, 18151864 (9781906764944) ; >
-    au < ready ; exists ; 1995 ; 36 ; 9781874774112 ; 9781909821293 ; 9781874774112 ; Turn Aside From Evil and Do Good: An Introduction and a Way to the Tree of Life (9781874774112) ; >
+    au < crawling ; exists ; 1995 ; 36 ; 9781874774112 ; 9781909821293 ; 9781874774112 ; Turn Aside From Evil and Do Good: An Introduction and a Way to the Tree of Life (9781874774112) ; >
     au < crawling ; exists ; 1996 ; 37 ; 9781904113812 ; 9781909821606 ; 9781904113812 ; Polin Studies in Polish Jewry Volume 9: Jews, Poles, Socialists and the Failure of an Ideal (9781904113812) ; >
     au < crawling ; exists ; 1996 ; 38 ; 9781874774358 ; 9781909821712 ; 9781874774358 ; Hasidism Reappraised (9781874774358) ; >
     au < crawling ; exists ; 1996 ; 39 ; 9781874774334 ; 9781909821835 ; 9781874774334 ; Love, Work, and Death: Jewish Life in Medieval Umbria (9781874774334) ; >
     au < ready ; exists ; 1997 ; 40 ; 9781904113768 ; 9781909821200 ; 9781904113768 ; The Golden Age of Aragonese Jewry: Community and Society in the Crown of Aragon, 1213-1327 (9781904113768) ; >
-    au < ready ; exists ; 1997 ; 41 ; 9781874774426 ; 9781909821361 ; 9781874774426 ; European Jewry in the Age of Mercantilism 1550-1750 (9781874774426) ; >
-    au < ready ; exists ; 1992 ; 42 ; 9781904113805 ; 9781909821583 ; 9781904113805 ; Polin Studies in Polish Jewry Volume 7: Jewish Life in Nazi Occupied Warsaw (9781904113805) ; >
-    au < ready ; exists ; 1997 ; 43 ; 9781874774310 ; 9781909821613 ; 9781874774310 ; Polin Studies in Polish Jewry Volume 10: Jews in Early Modern Poland (9781874774310) ; >
+    au < crawling ; exists ; 1997 ; 41 ; 9781874774426 ; 9781909821361 ; 9781874774426 ; European Jewry in the Age of Mercantilism 1550-1750 (9781874774426) ; >
+    au < crawling ; exists ; 1992 ; 42 ; 9781904113805 ; 9781909821583 ; 9781904113805 ; Polin Studies in Polish Jewry Volume 7: Jewish Life in Nazi Occupied Warsaw (9781904113805) ; >
+    au < crawling ; exists ; 1997 ; 43 ; 9781874774310 ; 9781909821613 ; 9781874774310 ; Polin Studies in Polish Jewry Volume 10: Jews in Early Modern Poland (9781874774310) ; >
     au < frozen ; exists ; 1997 ; 44 ; 9781874774365 ; 9781909821767 ; 9781874774365 ; Athens in Jerusalem: Classical Antiquity and Hellenism in the Making of the Modern Secular Jew (9781874774365) ; >
     au < crawling ; exists ; 1997 ; 45 ; 9781874774372 ; 9781909821859 ; 9781874774372 ; Jewish Hymnography: A Literary History (9781874774372) ; >
     au < crawling ; exists ; 1998 ; 46 ; 9781874774341 ; 9781909821620 ; 9781874774341 ; Polin Studies in Polish Jewry Volume 11: Focusing on Aspects and Experiences of Religion (9781874774341) ; >
     au < crawling ; exists ; 1998 ; 47 ; 9781874774457 ; 9781909821811 ; 9781874774457 ; Creating American Reform Judaism: The Life and Times of Isaac Mayer Wise (9781874774457) ; >
-    au < ready ; exists ; 1999 ; 48 ; 9781904113119 ; 9781909821378 ; 9781904113119 ; Beyond Reasonable Doubt (9781904113119) ; >
+    au < crawling ; exists ; 1999 ; 48 ; 9781904113119 ; 9781909821378 ; 9781904113119 ; Beyond Reasonable Doubt (9781904113119) ; >
     au < crawling ; exists ; 1999 ; 49 ; 9781874774402 ; 9781909821637 ; 9781874774402 ; Focusing on Galicia: Jews, Poles and Ukranians 1772-1918 (9781874774402) ; >
     au < crawling ; exists ; 1999 ; 50 ; 9781874774556 ; 9781909821736 ; 9781874774556 ; Is There a Jewish Philosophy? Rethinking Fundamentals (9781874774556) ; >
     au < frozen ; exists ; 1999 ; 51 ; 9781874774914 ; 9781909821750 ; 9781874774914 ; Between the Yeshiva World and Modern Orthodoxy: The Life and Works of Rabbi Jehiel Jacob Weinburg 1884-1966 (9781874774914) ; >
@@ -164,17 +164,17 @@
     au < crawling ; exists ; 2001 ; 61 ; 9781904113102 ; 9781909821323 ; 9781904113102 ; Haskalah and History: The Emergence of a Modern Jewish Historical Consciousness (9781904113102) ; >
     au < crawling ; exists ; 2001 ; 62 ; 9781874774709 ; 9781909821651 ; 9781874774709 ; Polin Studies in Polish Jewry Volume 14: Focusing on Jews in the Polish Borderlands (9781874774709) ; >
     au < crawling ; exists ; 2002 ; 63 ; 9781904113553 ; 9781909821231 ; 9781904113553 ; The History of the Jews in the Netherlands (9781904113553) ; >
-    au < ready ; exists ; 2002 ; 64 ; 9781874774723 ; 9781909821668 ; 9781874774723 ; Polin Studies in Polish Jewry Volume 15: Focusing on Religious Life 1500-1900 (9781874774723) ; >
+    au < crawling ; exists ; 2002 ; 64 ; 9781874774723 ; 9781909821668 ; 9781874774723 ; Polin Studies in Polish Jewry Volume 15: Focusing on Religious Life 1500-1900 (9781874774723) ; >
     au < frozen ; exists ; 2003 ; 65 ; 9781874774808 ; 9781909821248 ; 9781874774808 ; British Jewry and the Holocaust (9781874774808) ; >
     au < frozen ; exists ; 2003 ; 66 ; 9781904113775 ; 9781909821224 ; 9781904113775 ; Yiddish Theatre: New Approaches (9781904113775) ; >
     au < crawling ; exists ; 2003 ; 67 ; 9781906764425 ; 9781909821262 ; 9781906764425 ; Pride versus Prejudice: Jewish Doctors and Lawyers in England, 1890-1990 (9781906764425) ; >
     au < crawling ; exists ; 2003 ; 68 ; 9781906764265 ; 9781909821460 ; 9781906764265 ; Seeking Zion: Modernity and Messianic Activism in the Writings of Tsevi Hirsch Kalischer (9781906764265) ; >
-    au < ready ; exists ; 2003 ; 69 ; 9781874774747 ; 9781909821675 ; 9781874774747 ; Polin Studies in Polish Jewry Volume 16: Focusing on Jewish Popular Culture and its Afterlife (9781874774747) ; >
+    au < crawling ; exists ; 2003 ; 69 ; 9781874774747 ; 9781909821675 ; 9781874774747 ; Polin Studies in Polish Jewry Volume 16: Focusing on Jewish Popular Culture and its Afterlife (9781874774747) ; >
     au < frozen ; exists ; 2003 ; 70 ; 9781904113683 ; 9781909821798 ; 9781904113683 ; Time and Process in Ancient Judaism (9781904113683) ; >
     au < crawling ; exists ; 2004 ; 71 ; 9781904113331 ; 9781909821040 ; 9781904113331 ; The Three Temples: On the Emergence of Jewish Mysticism (9781904113331) ; >
     au < crawling ; exists ; 2004 ; 72 ; 9781906764234 ; 9781909821132 ; 9781906764234 ; The Limits of Orthodox Theology (9781906764234) ; >
     au < frozen ; exists ; 2004 ; 73 ; 9781874774945 ; 9781909821194 ; 9781874774945 ; Arthur Szyk: Artist, Jew, Pole (9781874774945) ; >
-    au < ready ; exists ; 2004 ; 74 ; 9781904113324 ; 9781909821286 ; 9781904113324 ; Yom Tov Lipmann Heller: Portrait of a Seventeenth-Century Rabbi (9781904113324) ; >
+    au < crawling ; exists ; 2004 ; 74 ; 9781904113324 ; 9781909821286 ; 9781904113324 ; Yom Tov Lipmann Heller: Portrait of a Seventeenth-Century Rabbi (9781904113324) ; >
     au < crawling ; exists ; 2004 ; 75 ; 9781874774563 ; 9781909821354 ; 9781874774563 ; Meshal Haqadmoni: Fables from the Distant Past Volumes 1 & 2 (9781874774563) ; >
     au < crawling ; exists ; 2004 ; 76 ; 9781874774761 ; 9781909821682 ; 9781874774761 ; Polin Studies in Polish Jewry Volume 17: The Shtetl: Myth and Reality (9781874774761) ; >
     au < crawling ; exists ; 2005 ; 77 ; 9781874774938 ; 9781909821699 ; 9781874774938 ; Polin Studies in Polish Jewry Volume 18: Jewish Women in Eastern Europe (9781874774938) ; >
