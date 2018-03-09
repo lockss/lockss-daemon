@@ -270,7 +270,7 @@
     au < rsp.ClockssRSPDrupalPlugin ; frozen ; exists ; 2014 ; Open Biology Volume 4 ; 4 ; >
     au < rsp.ClockssRSPDrupalPlugin ; frozen ; exists ; 2015 ; Open Biology Volume 5 ; 5 ; >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2016 ; Open Biology Volume 6 ; 6 ; reingest4.clockss.org:8082 >
-    au < rsp.ClockssRSPDrupalPlugin ; crawling ; exists ; 2017 ; Open Biology Volume 7 ; 7 ; >
+    au < rsp.ClockssRSPDrupalPlugin ; deepCrawl ; exists ; 2017 ; Open Biology Volume 7 ; 7 ; >
     
   }
 

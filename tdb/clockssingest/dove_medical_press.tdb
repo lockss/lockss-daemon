@@ -62,7 +62,7 @@
     au < finished ; finished ; 2014 ; Vascular Health and Risk Management Volume 10 ; 10 ; 2014 ; >
     au < finished ; finished ; 2015 ; Vascular Health and Risk Management Volume 11 ; 11 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Vascular Health and Risk Management Volume 12 ; 12 ; 2016 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Vascular Health and Risk Management Volume 13 ; 13 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Vascular Health and Risk Management Volume 13 ; 13 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Vascular Health and Risk Management Volume 14 ; 14 ; 2018 ; >
 
   }
@@ -398,7 +398,7 @@
     au < finished ; finished ; 2014 ; Stem Cells and Cloning: Advances and Applications Volume 7 ; 7 ; 2014 ; >
     au < finished ; finished ; 2015 ; Stem Cells and Cloning: Advances and Applications Volume 8 ; 8 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Stem Cells and Cloning: Advances and Applications Volume 9 ; 9 ; 2016 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Stem Cells and Cloning: Advances and Applications Volume 10 ; 10 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Stem Cells and Cloning: Advances and Applications Volume 10 ; 10 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Stem Cells and Cloning: Advances and Applications Volume 11 ; 11 ; 2018 ; >
 
   }
@@ -421,7 +421,7 @@
     au < finished ; finished ; 2014 ; Journal of Asthma and Allergy Volume 7 ; 7 ; 2014 ; >
     au < finished ; finished ; 2015 ; Journal of Asthma and Allergy Volume 8 ; 8 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Journal of Asthma and Allergy Volume 9 ; 9 ; 2016 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Journal of Asthma and Allergy Volume 10 ; 10 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Journal of Asthma and Allergy Volume 10 ; 10 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Journal of Asthma and Allergy Volume 11 ; 11 ; 2018 ; >
 
   }
@@ -649,7 +649,7 @@
     au < finished ; finished ; 2014 ; International Journal of Nephrology and Renovascular Disease Volume 7 ; 7 ; 2014 ; >
     au < finished ; finished ; 2015 ; International Journal of Nephrology and Renovascular Disease Volume 8 ; 8 ; 2015 ; >
     au < finished ; crawling ; 2016 ; International Journal of Nephrology and Renovascular Disease Volume 9 ; 9 ; 2016 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; International Journal of Nephrology and Renovascular Disease Volume 10 ; 10 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; International Journal of Nephrology and Renovascular Disease Volume 10 ; 10 ; 2017 ; >
     au < manifest ; exists ; 2018 ; International Journal of Nephrology and Renovascular Disease Volume 11 ; 11 ; 2018 ; >
 
   }
@@ -1220,7 +1220,7 @@
     au < finished ; finished ; 2014 ; Open Access Journal of Sports Medicine Volume 5 ; 5 ; 2014 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Open Access Journal of Sports Medicine Volume 6 ; 6 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Open Access Journal of Sports Medicine Volume 7 ; 7 ; 2016 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Open Access Journal of Sports Medicine Volume 8 ; 8 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Open Access Journal of Sports Medicine Volume 8 ; 8 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Open Access Journal of Sports Medicine Volume 9 ; 9 ; 2018 ; >
 
   }
@@ -1242,7 +1242,7 @@
     au < finished ; finished ; 2014 ; Clinical Pharmacology: Advances and Applications Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Clinical Pharmacology: Advances and Applications Volume 7 ; 7 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Clinical Pharmacology: Advances and Applications Volume 8 ; 8 ; 2016 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Clinical Pharmacology: Advances and Applications Volume 9 ; 9 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Clinical Pharmacology: Advances and Applications Volume 9 ; 9 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Clinical Pharmacology: Advances and Applications Volume 10 ; 10 ; 2018 ; >
 
   }
@@ -1804,7 +1804,7 @@
     au < finished ; finished ; 2014 ; Pragmatic and Observational Research Volume 5 ; 5 ; 2014 ; >
     au < finished ; finished ; 2015 ; Pragmatic and Observational Research Volume 6 ; 6 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Pragmatic and Observational Research Volume 7 ; 7 ; 2016 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Pragmatic and Observational Research Volume 8 ; 8 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Pragmatic and Observational Research Volume 8 ; 8 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Pragmatic and Observational Research Volume 9 ; 9 ; 2018 ; >
 
   }
@@ -2806,7 +2806,7 @@
     au < finished ; finished ; 2014 ; Innovation and Entrepreneurship in Health Volume 1 ; 1 ; 2014 ; >
     au < finished ; finished ; 2015 ; Innovation and Entrepreneurship in Health Volume 2 ; 2 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Innovation and Entrepreneurship in Health Volume 3 ; 3 ; 2016 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Innovation and Entrepreneurship in Health Volume 4 ; 4 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Innovation and Entrepreneurship in Health Volume 4 ; 4 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Innovation and Entrepreneurship in Health Volume 5 ; 5 ; 2018 ; >
 
   }

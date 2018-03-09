@@ -107,7 +107,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Aktuelle Dermatologie Volume 40 ; 40 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; 2015 ; Aktuelle Dermatologie Volume 41 ; 41 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2016 ; 2016 ; Aktuelle Dermatologie Volume 42 ; 42 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2017 ; 2017 ; Aktuelle Dermatologie Volume 43 ; 43 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Aktuelle Dermatologie Volume 43 ; 43 ; >
 
   }
 
@@ -210,7 +210,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Aktuelle Neurologie Volume 41 ; 41 ; >
     au < finished ; finished ; 2015 ; 2015 ; Aktuelle Neurologie Volume 42 ; 42 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2016 ; 2016 ; Aktuelle Neurologie Volume 43 ; 43 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; Aktuelle Neurologie Volume 44 ; 44 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Aktuelle Neurologie Volume 44 ; 44 ; >
 
   }
 
@@ -737,7 +737,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Craniomaxillofacial Trauma & Reconstruction Volume 7 ; 7 ; >
     au < finished ; finished ; 2015 ; 2015 ; Craniomaxillofacial Trauma & Reconstruction Volume 8 ; 8 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; 2016 ; Craniomaxillofacial Trauma & Reconstruction Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; Craniomaxillofacial Trauma & Reconstruction Volume 10 ; 10 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Craniomaxillofacial Trauma & Reconstruction Volume 10 ; 10 ; >
 
   }
 
@@ -752,7 +752,7 @@
     param[journal_id] = 10.1055/s-00032027
     #years = 2017-current
 
-    au < crawling ; exists ; 2017 ; 2017 ; Craniomaxillofacial Trauma & Reconstruction Open Volume 1 ; 1 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Craniomaxillofacial Trauma & Reconstruction Open Volume 1 ; 1 ; >
 
   }
 
@@ -2019,7 +2019,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Homoeopathic Links Volume 27 ; 27 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2015 ; 2015 ; Homoeopathic Links Volume 28 ; 28 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2016 ; 2016 ; Homoeopathic Links Volume 29 ; 29 ; reingest4.clockss.org:8082 >
-   au < crawling ; exists ; 2017 ; 2017 ; Homoeopathic Links Volume 30 ; 30 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Homoeopathic Links Volume 30 ; 30 ; >
 
   }
 
@@ -2684,7 +2684,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Journal of Neurological Surgery Reports Volume 75 ; 75 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; Journal of Neurological Surgery Reports Volume 76 ; 76 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; 2016 ; Journal of Neurological Surgery Reports Volume 77 ; 77 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; Journal of Neurological Surgery Reports Volume 78 ; 78 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Journal of Neurological Surgery Reports Volume 78 ; 78 ; >
 
   }
 
@@ -3828,7 +3828,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Orthopädie und Unfallchirurgie up2date Volume 9 ; 9 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Orthopädie und Unfallchirurgie up2date Volume 10 ; 10 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; 2016 ; Orthopädie und Unfallchirurgie up2date Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; Orthopädie und Unfallchirurgie up2date Volume 12 ; 12 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Orthopädie und Unfallchirurgie up2date Volume 12 ; 12 ; >
 
   }
 
@@ -4451,7 +4451,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Psychiatrische Praxis Volume 41 ; 41 ; >
    au < finished ; finished ; 2015 ; 2015 ; Psychiatrische Praxis Volume 42 ; 42 ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; Psychiatrische Praxis Volume 43 ; 43 ; reingest3.clockss.org:8083 >
-   au < crawling ; exists ; 2017 ; 2017 ; Psychiatrische Praxis Volume 44 ; 44 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Psychiatrische Praxis Volume 44 ; 44 ; >
 
   }
 
@@ -6098,7 +6098,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Zeitschrift für Gastroenterologie Volume 52 ; 52 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; Zeitschrift für Gastroenterologie Volume 53 ; 53 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Zeitschrift für Gastroenterologie Volume 54 ; 54 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; 2017 ; Zeitschrift für Gastroenterologie Volume 55 ; 55 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Zeitschrift für Gastroenterologie Volume 55 ; 55 ; >
 
   }
 
@@ -6389,7 +6389,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Zeitschrift für Phytotherapie Volume 35 ; 35 ; >
     au < finished ; finished ; 2015 ; 2015 ; Zeitschrift für Phytotherapie Volume 36 ; 36 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Zeitschrift für Phytotherapie Volume 37 ; 37 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; 2017 ; Zeitschrift für Phytotherapie Volume 38 ; 38 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Zeitschrift für Phytotherapie Volume 38 ; 38 ; >
 
   }
 
@@ -6730,7 +6730,7 @@
     param[journal_id] = 10.1055/s-00035300
     comment[years] = 2017-current
 
-    au < crawling ; exists ; 2017 ; 2017 ; Indian Journal of Cardiovascular Disease in Women WINCARS Volume 1 ; 1 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Indian Journal of Cardiovascular Disease in Women WINCARS Volume 1 ; 1 ; >
 
   }
 
@@ -6760,7 +6760,7 @@
     param[journal_id] = 10.1055/s-00033103
     comment[years] = 2017-current
 
-    au < crawling ; exists ; 2017 ; 2017 ; Journal of Child Science Volume 7 ; 7 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Journal of Child Science Volume 7 ; 7 ; >
     au < manifest ; exists ; 2018 ; 2018 ; Journal of Child Science Volume 8 ; 8 ; >
 
   }

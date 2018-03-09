@@ -91,7 +91,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Accounting History Volume 19 ; 19 ; acha ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Accounting History Volume 20 ; 20 ; acha ; >
       au < finished ; manifest ; 2016 ; Accounting History Volume 21 ; 21 ; acha ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2017 ; Accounting History Volume 22 ; 22 ; acha ; >
+      au < deepCrawl ; exists ; 2017 ; Accounting History Volume 22 ; 22 ; acha ; >
 
     }
 
@@ -446,7 +446,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Adsorption Science & Technology Volume 32 ; 32 ; adta ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Adsorption Science & Technology Volume 33 ; 33 ; adta ; >
       au < finished ; manifest ; 2016 ; Adsorption Science & Technology Volume 34 ; 34 ; adta ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2017 ; Adsorption Science & Technology Volume 35 ; 35 ; adta ; >
+      au < deepCrawl ; exists ; 2017 ; Adsorption Science & Technology Volume 35 ; 35 ; adta ; >
 
   }
 
@@ -1409,7 +1409,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; American Journal of Lifestyle Medicine Volume 8 ; 8 ; ajla ; >
       au < doNotProcess ; doNotProcess ; 2015 ; American Journal of Lifestyle Medicine Volume 9 ; 9 ; ajla ; >
       au < frozen ; exists ; 2016 ; American Journal of Lifestyle Medicine Volume 10 ; 10 ; ajla ; >
-      au < crawling ; exists ; 2017 ; American Journal of Lifestyle Medicine Volume 11 ; 11 ; ajla ; >
+      au < deepCrawl ; exists ; 2017 ; American Journal of Lifestyle Medicine Volume 11 ; 11 ; ajla ; >
 
     }
 
@@ -2784,7 +2784,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Applied Biosafety Volume 19 ; 19 ; apbb ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Applied Biosafety Volume 20 ; 20 ; apbb ; >
       au < frozen ; exists ; 2016 ; Applied Biosafety Volume 21 ; 21 ; apbb ; >
-      au < crawling ; exists ; 2017 ; Applied Biosafety Volume 22 ; 22 ; apbb ; >
+      au < deepCrawl ; exists ; 2017 ; Applied Biosafety Volume 22 ; 22 ; apbb ; >
 
   }
 
@@ -3331,7 +3331,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Assessment Volume 21 ; 21 ; asma ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Assessment Volume 22 ; 22 ; asma ; >
       au < finished ; manifest ; 2016 ; Assessment Volume 23 ; 23 ; asma ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2017  ; Assessment Volume 24 ; 24 ; asma ; >
+      au < deepCrawl ; exists ; 2017  ; Assessment Volume 24 ; 24 ; asma ; >
 
     }
 
@@ -3985,7 +3985,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Biological Research For Nursing Volume 16 ; 16 ; brna ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Biological Research For Nursing Volume 17 ; 17 ; brna ; >
       au < frozen ; exists ; 2016 ; Biological Research For Nursing Volume 18 ; 18 ; brna ; >
-      au < crawling ; exists ; 2017 ; Biological Research For Nursing Volume 19 ; 19 ; brna ; >
+      au < deepCrawl ; exists ; 2017 ; Biological Research For Nursing Volume 19 ; 19 ; brna ; >
 
     }
 
@@ -4872,7 +4872,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Business and Professional Communication Quarterly Volume 77 ; 77 ; bcqe ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Business and Professional Communication Quarterly Volume 78 ; 78 ; bcqe ; >
       au < frozen ; exists ; 2016 ; Business and Professional Communication Quarterly Volume 79 ; 79 ; bcqe ; >
-      au < crawling ; exists ; 2017 ; Business and Professional Communication Quarterly Volume 80 ; 80 ; bcqe ; >
+      au < deepCrawl ; exists ; 2017 ; Business and Professional Communication Quarterly Volume 80 ; 80 ; bcqe ; >
 
     }
 
@@ -5219,7 +5219,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; The Canadian Journal of Psychiatry Volume 59 ; 59 ; cpab ; >
       au < doNotProcess ; doNotProcess ; 2015 ; The Canadian Journal of Psychiatry Volume 60 ; 60 ; cpab ; >
       au < frozen ; exists ; 2016 ; The Canadian Journal of Psychiatry Volume 61 ; 61 ; cpab ; >
-      au < crawling ; exists ; 2017 ; The Canadian Journal of Psychiatry Volume 62 ; 62 ; cpab ; >
+      au < deepCrawl ; exists ; 2017 ; The Canadian Journal of Psychiatry Volume 62 ; 62 ; cpab ; >
 
   }
 
@@ -6248,7 +6248,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Clinical Case Studies Volume 13 ; 13 ; ccsa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Clinical Case Studies Volume 14 ; 14 ; ccsa ; >
       au < frozen ; exists ; 2016 ; Clinical Case Studies Volume 15 ; 15 ; ccsa ; >
-      au < crawling ; exists ; 2017 ; Clinical Case Studies Volume 16 ; 16 ; ccsa ; >
+      au < deepCrawl ; exists ; 2017 ; Clinical Case Studies Volume 16 ; 16 ; ccsa ; >
 
     }
 
@@ -8769,7 +8769,7 @@
       au < doNotProcess ; doNotProcess ; 2013-2014 ; Currents in Biblical Research Volume 12 ; 12 ; cbib ; >
       au < doNotProcess ; doNotProcess ; 2014-2015 ; Currents in Biblical Research Volume 13 ; 13 ; cbib ; >
       au < doNotProcess ; doNotProcess ; 2015-2016 ; Currents in Biblical Research Volume 14 ; 14 ; cbib ; >
-      au < crawling ; exists ; 2016-2017 ; Currents in Biblical Research Volume 15 ; 15 ; cbib ; >
+      au < deepCrawl ; exists ; 2016-2017 ; Currents in Biblical Research Volume 15 ; 15 ; cbib ; >
       au < manifest ; exists ; 2017-2018 ; Currents in Biblical Research Volume 16 ; 16 ; cbib ; >
 
     }
@@ -10216,7 +10216,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Emotion Review Volume 6 ; 6 ; emra ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Emotion Review Volume 7 ; 7 ; emra ; >
       au < frozen ; exists ; 2016 ; Emotion Review Volume 8 ; 8 ; emra ; >
-      au < crawling ; exists ; 2017 ; Emotion Review Volume 9 ; 9 ; emra ; >
+      au < deepCrawl ; exists ; 2017 ; Emotion Review Volume 9 ; 9 ; emra ; >
 
     }
 
@@ -10738,7 +10738,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; European Educational Research Journal Volume 13 ; 13 ; eera ; >
       au < doNotProcess ; doNotProcess ; 2015 ; European Educational Research Journal Volume 14 ; 14 ; eera ; >
       au < finished ; manifest ; 2016 ; European Educational Research Journal Volume 15 ; 15 ; eera ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; European Educational Research Journal Volume 16 ; 16 ; eera ; >
+      au < deepCrawl ; exists ; 2017 ; European Educational Research Journal Volume 16 ; 16 ; eera ; >
 
   }
 
@@ -11185,7 +11185,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; European Journal of International Relations Volume 20 ; 20 ; ejta ; >
       au < doNotProcess ; doNotProcess ; 2015 ; European Journal of International Relations Volume 21 ; 21 ; ejta ; >
       au < frozen ; exists ; 2016 ; European Journal of International Relations Volume 22 ; 22 ; ejta ; >
-      au < crawling ; exists ; 2017 ; European Journal of International Relations Volume 23 ; 23 ; ejta ; >
+      au < deepCrawl ; exists ; 2017 ; European Journal of International Relations Volume 23 ; 23 ; ejta ; >
 
     }
 
@@ -12845,7 +12845,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Gifted Child Quarterly Volume 58 ; 58 ; gcqb ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Gifted Child Quarterly Volume 59 ; 59 ; gcqb ; >
       au < frozen ; exists ; 2016 ; Gifted Child Quarterly Volume 60 ; 60 ; gcqb ; >
-      au < crawling ; exists ; 2017 ; Gifted Child Quarterly Volume 61 ; 61 ; gcqb ; >
+      au < deepCrawl ; exists ; 2017 ; Gifted Child Quarterly Volume 61 ; 61 ; gcqb ; >
 
     }
 
@@ -13653,7 +13653,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Health Services Research and Managerial Epidemiology Volume 1 ; 1 ; hmea ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Health Services Research and Managerial Epidemiology Volume 2 ; 2 ; hmea ; >
       au < finished ; manifest ; 2016 ; Health Services Research and Managerial Epidemiology Volume 3 ; 3 ; hmea ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2017 ; Health Services Research and Managerial Epidemiology Volume 4 ; 4 ; hmea ; >
+      au < deepCrawl ; exists ; 2017 ; Health Services Research and Managerial Epidemiology Volume 4 ; 4 ; hmea ; >
 
   }
 
@@ -13735,7 +13735,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Healthcare Management Forum Volume 27 ; 27 ; hmfa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Healthcare Management Forum Volume 28 ; 28 ; hmfa ; >
       au < frozen ; exists ; 2016 ; Healthcare Management Forum Volume 29 ; 29 ; hmfa ; >
-      au < crawling ; exists ; 2017 ; Healthcare Management Forum Volume 30 ; 30 ; hmfa ; >
+      au < deepCrawl ; exists ; 2017 ; Healthcare Management Forum Volume 30 ; 30 ; hmfa ; >
 
   }
 
@@ -13948,7 +13948,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; History and Sociology of South Asia Volume 8 ; 8 ; hsab ; >
       au < doNotProcess ; doNotProcess ; 2015 ; History and Sociology of South Asia Volume 9 ; 9 ; hsab ; >
       au < frozen ; exists ; 2016 ; History and Sociology of South Asia Volume 10 ; 10 ; hsab ; >
-      au < crawling ; exists ; 2017 ; History and Sociology of South Asia Volume 11 ; 11 ; hsab ; >
+      au < deepCrawl ; exists ; 2017 ; History and Sociology of South Asia Volume 11 ; 11 ; hsab ; >
 
     }
 
@@ -17148,7 +17148,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Spray and Combustion Dynamics Volume 6 ; 6 ; scda ; >
       au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Spray and Combustion Dynamics Volume 7 ; 7 ; scda ; >
       au < frozen ; exists ; 2016 ; International Journal of Spray and Combustion Dynamics Volume 8 ; 8 ; scda ; >
-      au < crawling ; exists ; 2017 ; International Journal of Spray and Combustion Dynamics Volume 9 ; 9 ; scda ; >
+      au < deepCrawl ; exists ; 2017 ; International Journal of Spray and Combustion Dynamics Volume 9 ; 9 ; scda ; >
 
   }
 
@@ -20152,7 +20152,7 @@
       au < frozen ; exists ; 2014 ; The Journal of Computational Multiphase Flows Volume 6 ; 6 ; cmfa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; The Journal of Computational Multiphase Flows Volume 7 ; 7 ; cmfa ; >
       au < frozen ; exists ; 2016 ; The Journal of Computational Multiphase Flows Volume 8 ; 8 ; cmfa ; >
-      au < crawling ; exists ; 2017 ; The Journal of Computational Multiphase Flows Volume 9 ; 9 ; cmfa ; >
+      au < deepCrawl ; exists ; 2017 ; The Journal of Computational Multiphase Flows Volume 9 ; 9 ; cmfa ; >
 
   }
 
@@ -20678,7 +20678,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 11 ; 11 ; dmsa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 12 ; 12 ; dmsa ; >
       au < frozen ; exists ; 2016 ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 13 ; 13 ; dmsa ; >
-      au < crawling ; exists ; 2017 ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 14 ; 14 ; dmsa ; >
+      au < deepCrawl ; exists ; 2017 ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 14 ; 14 ; dmsa ; >
 
     }
 
@@ -20864,7 +20864,7 @@
         au < doNotProcess ; doNotProcess ; 2014 ; Journal of Diabetes Science and Technology Volume 8 ; 8 ; dsta ; >
         au < doNotProcess ; doNotProcess ; 2015 ; Journal of Diabetes Science and Technology Volume 9 ; 9 ; dsta ; >
         au < frozen ; exists ; 2016 ; Journal of Diabetes Science and Technology Volume 10 ; 10 ; dsta ; >
-        au < crawling ; exists ; 2017 ; Journal of Diabetes Science and Technology Volume 11 ; 11 ; dsta ; >
+        au < deepCrawl ; exists ; 2017 ; Journal of Diabetes Science and Technology Volume 11 ; 11 ; dsta ; >
 
     }
 
@@ -21537,7 +21537,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Emotional and Behavioral Disorders Volume 22 ; 22 ; ebxa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Emotional and Behavioral Disorders Volume 23 ; 23 ; ebxa ; >
       au < finished ; manifest ; 2016 ; Journal of Emotional and Behavioral Disorders Volume 24 ; 24 ; ebxa ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2017 ; Journal of Emotional and Behavioral Disorders Volume 25 ; 25 ; ebxa ; >
+      au < deepCrawl ; exists ; 2017 ; Journal of Emotional and Behavioral Disorders Volume 25 ; 25 ; ebxa ; >
 
     }
 
@@ -21700,7 +21700,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Entrepreneurship Volume 23 ; 23 ; joea ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Entrepreneurship Volume 24 ; 24 ; joea ; >
       au < frozen ; exists ; 2016 ; Journal of Entrepreneurship Volume 25 ; 25 ; joea ; >
-      au < crawling ; exists ; 2017 ; Journal of Entrepreneurship Volume 26 ; 26 ; joea ; >
+      au < deepCrawl ; exists ; 2017 ; Journal of Entrepreneurship Volume 26 ; 26 ; joea ; >
 
     }
 
@@ -22483,7 +22483,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Health Psychology Volume 19 ; 19 ; hpqa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Health Psychology Volume 20 ; 20 ; hpqa ; >
       au < frozen ; exists ; 2016 ; Journal of Health Psychology Volume 21 ; 21 ; hpqa ; >
-      au < crawling ; exists ; 2017 ; Journal of Health Psychology Volume 22 ; 22 ; hpqa ; >
+      au < deepCrawl ; exists ; 2017 ; Journal of Health Psychology Volume 22 ; 22 ; hpqa ; >
 
     }
 
@@ -22530,7 +22530,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Hispanic Higher Education Volume 13 ; 13 ; jhha ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Hispanic Higher Education Volume 14 ; 14 ; jhha ; >
       au < frozen ; exists ; 2016 ; Journal of Hispanic Higher Education Volume 15 ; 15 ; jhha ; >
-      au < crawling ; exists ; 2017  ; Journal of Hispanic Higher Education Volume 16 ; 16 ; jhha ; >
+      au < deepCrawl ; exists ; 2017  ; Journal of Hispanic Higher Education Volume 16 ; 16 ; jhha ; >
 
     }
 
@@ -23013,7 +23013,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Industrial Relations Volume 56 ; 56 ; jira ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Industrial Relations Volume 57 ; 57 ; jira ; >
       au < frozen ; exists ; 2016 ; Journal of Industrial Relations Volume 58 ; 58 ; jira ; >
-      au < crawling ; exists ; 2017 ; Journal of Industrial Relations Volume 59 ; 59 ; jira ; >
+      au < deepCrawl ; exists ; 2017 ; Journal of Industrial Relations Volume 59 ; 59 ; jira ; >
 
     }
 
@@ -23134,7 +23134,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Infection Prevention Volume 15 ; 15 ; bjib ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Infection Prevention Volume 16 ; 16 ; bjib ; >
       au < frozen ; exists ; 2016 ; Journal of Infection Prevention Volume 17 ; 17 ; bjib ; >
-      au < crawling ; exists ; 2017 ; Journal of Infection Prevention Volume 18 ; 18 ; bjib ; >
+      au < deepCrawl ; exists ; 2017 ; Journal of Infection Prevention Volume 18 ; 18 ; bjib ; >
 
     }
 
@@ -23355,7 +23355,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of the Intensive Care Society Volume 15 ; 15 ; inca ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of the Intensive Care Society Volume 16 ; 16 ; inca ; >
       au < frozen ; exists ; 2016 ; Journal of the Intensive Care Society Volume 17 ; 17 ; inca ; >
-      au < crawling ; exists ; 2017 ; Journal of the Intensive Care Society Volume 18 ; 18 ; inca ; >
+      au < deepCrawl ; exists ; 2017 ; Journal of the Intensive Care Society Volume 18 ; 18 ; inca ; >
 
   }
 
@@ -24321,7 +24321,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Mixed Methods Research Volume 8 ; 8 ; mmra ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Mixed Methods Research Volume 9 ; 9 ; mmra ; >
       au < frozen ; exists ; 2016 ; Journal of Mixed Methods Research Volume 10 ; 10 ; mmra ; >
-      au < crawling ; exists ; 2017 ; Journal of Mixed Methods Research Volume 11 ; 11 ; mmra ; >
+      au < deepCrawl ; exists ; 2017 ; Journal of Mixed Methods Research Volume 11 ; 11 ; mmra ; >
 
     }
 
@@ -25180,7 +25180,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Psychoeducational Assessment Volume 32 ; 32 ; jpaa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Psychoeducational Assessment Volume 33 ; 33 ; jpaa ; >
       au < finished ; manifest ; 2016 ; Journal of Psychoeducational Assessment Volume 34 ; 34 ; jpaa ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2017 ; Journal of Psychoeducational Assessment Volume 35 ; 35 ; jpaa ; >
+      au < deepCrawl ; exists ; 2017 ; Journal of Psychoeducational Assessment Volume 35 ; 35 ; jpaa ; >
 
     }
 
@@ -27030,7 +27030,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Travel Research Volume 53 ; 53 ; jtrb ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Travel Research Volume 54 ; 54 ; jtrb ; >
       au < frozen ; exists ; 2016 ; Journal of Travel Research Volume 55 ; 55 ; jtrb ; >
-      au < crawling ; exists ; 2017 ; Journal of Travel Research Volume 56 ; 56 ; jtrb ; >
+      au < deepCrawl ; exists ; 2017 ; Journal of Travel Research Volume 56 ; 56 ; jtrb ; >
 
     }
 
@@ -27092,7 +27092,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Urban History Volume 40 ; 40 ; juha ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Urban History Volume 41 ; 41 ; juha ; >
       au < frozen ; exists ; 2016 ; Journal of Urban History Volume 42 ; 42 ; juha ; >
-      au < crawling ; exists ; 2017  ; Journal of Urban History Volume 43 ; 43 ; juha ; >
+      au < deepCrawl ; exists ; 2017  ; Journal of Urban History Volume 43 ; 43 ; juha ; >
 
     }
 
@@ -27255,7 +27255,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Vibration and Control Volume 20 ; 20 ; jvcb ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Vibration and Control Volume 21 ; 21 ; jvcb ; >
       au < frozen ; exists ; 2016 ; Journal of Vibration and Control Volume 22 ; 22 ; jvcb ; >
-      au < crawling ; exists ; 2017 ; Journal of Vibration and Control Volume 23 ; 23 ; jvcb ; >
+      au < deepCrawl ; exists ; 2017 ; Journal of Vibration and Control Volume 23 ; 23 ; jvcb ; >
 
     }
 
@@ -27393,7 +27393,7 @@
         au < doNotProcess ; doNotProcess ; 2014 ; Journalism & Mass Communication Educator Volume 69 ; 69 ; jmcb ; >
         au < doNotProcess ; doNotProcess ; 2015 ; Journalism & Mass Communication Educator Volume 70 ; 70 ; jmcb ; >
         au < frozen ; exists ; 2016 ; Journalism & Mass Communication Educator Volume 71 ; 71 ; jmcb ; >
-        au < crawling ; exists ; 2017 ; Journalism & Mass Communication Educator Volume 72 ; 72 ; jmcb ; >
+        au < deepCrawl ; exists ; 2017 ; Journalism & Mass Communication Educator Volume 72 ; 72 ; jmcb ; >
 
       }
 
@@ -27754,7 +27754,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Language and Speech Volume 57 ; 57 ; lasa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Language and Speech Volume 58 ; 58 ; lasa ; >
       au < frozen ; exists ; 2016 ; Language and Speech Volume 59 ; 59 ; lasa ; >
-      au < crawling ; exists ; 2017 ; Language and Speech Volume 60 ; 60 ; lasa ; >
+      au < deepCrawl ; exists ; 2017 ; Language and Speech Volume 60 ; 60 ; lasa ; >
 
     }
 
@@ -28728,7 +28728,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Media, War & Conflict Volume 7 ; 7 ; mwca ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Media, War & Conflict Volume 8 ; 8 ; mwca ; >
       au < frozen ; exists ; 2016 ; Media, War & Conflict Volume 9 ; 9 ; mwca ; >
-      au < crawling ; exists ; 2017 ; Media, War & Conflict Volume 10 ; 10 ; mwca ; >
+      au < deepCrawl ; exists ; 2017 ; Media, War & Conflict Volume 10 ; 10 ; mwca ; >
 
     }
 
@@ -28991,7 +28991,7 @@
         au < doNotProcess ; doNotProcess ; 2014 ; Medical Law International Volume 14 ; 14 ; mlia ; >
         au < doNotProcess ; doNotProcess ; 2015 ; Medical Law International Volume 15 ; 15 ; mlia ; >
         au < finished ; manifest ; 2016 ; Medical Law International Volume 16 ; 16 ; mlia ; reingest5.clockss.org:8082 >
-        au < crawling ; exists ; 2017 ; Medical Law International Volume 17 ; 17 ; mlia ; >
+        au < deepCrawl ; exists ; 2017 ; Medical Law International Volume 17 ; 17 ; mlia ; >
 
       }
 
@@ -30464,7 +30464,7 @@
       au < frozen ; exists ; 2014 ; Newspaper Research Journal Volume 35 ; 35 ; nrja ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Newspaper Research Journal Volume 36 ; 36 ; nrja ; >
       au < frozen ; exists ; 2016 ; Newspaper Research Journal Volume 37 ; 37 ; nrja ; >
-      au < crawling ; exists ; 2017 ; Newspaper Research Journal Volume 38 ; 38 ; nrja ; >
+      au < deepCrawl ; exists ; 2017 ; Newspaper Research Journal Volume 38 ; 38 ; nrja ; >
 
   }
 
@@ -30629,7 +30629,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Nonprofit and Voluntary Sector Quarterly Volume 43 ; 43 ; nvsb ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Nonprofit and Voluntary Sector Quarterly Volume 44 ; 44 ; nvsb ; >
       au < frozen ; exists ; 2016 ; Nonprofit and Voluntary Sector Quarterly Volume 45 ; 45 ; nvsb ; >
-      au < crawling ; exists ; 2017 ; Nonprofit and Voluntary Sector Quarterly Volume 46 ; 46 ; nvsb ; >
+      au < deepCrawl ; exists ; 2017 ; Nonprofit and Voluntary Sector Quarterly Volume 46 ; 46 ; nvsb ; >
 
     }
 
@@ -31079,7 +31079,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Organization Volume 21 ; 21 ; orga ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Organization Volume 22 ; 22 ; orga ; >
       au < finished ; manifest ; 2016 ; Organization Volume 23 ; 23 ; orga ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; Organization Volume 24 ; 24 ; orga ; >
+      au < deepCrawl ; exists ; 2017 ; Organization Volume 24 ; 24 ; orga ; >
 
     }
 
@@ -31947,7 +31947,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Philosophy & Social Criticism Volume 40 ; 40 ; pscb ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Philosophy & Social Criticism Volume 41 ; 41 ; pscb ; >
       au < frozen ; exists ; 2016 ; Philosophy & Social Criticism Volume 42 ; 42 ; pscb ; >
-      au < crawling ; exists ; 2017 ; Philosophy & Social Criticism Volume 43 ; 43 ; pscb ; >
+      au < deepCrawl ; exists ; 2017 ; Philosophy & Social Criticism Volume 43 ; 43 ; pscb ; >
 
     }
 
@@ -32231,7 +32231,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Policy Futures in Education Volume 12 ; 12 ; pfea ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Policy Futures in Education Volume 13 ; 13 ; pfea ; >
       au < frozen ; exists ; 2016 ; Policy Futures in Education Volume 14 ; 14 ; pfea ; >
-      au < crawling ; exists ; 2017 ; Policy Futures in Education Volume 15 ; 15 ; pfea ; >
+      au < deepCrawl ; exists ; 2017 ; Policy Futures in Education Volume 15 ; 15 ; pfea ; >
 
   }
 
@@ -32515,7 +32515,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; politics Volume 34 ; 34 ; pola ; >
       au < doNotProcess ; doNotProcess ; 2015 ; politics Volume 35 ; 35 ; pola ; >
       au < frozen ; exists ; 2016 ; politics Volume 36 ; 36 ; pola ; >
-      au < crawling ; exists ; 2017 ; politics Volume 37 ; 37 ; pola ; >
+      au < deepCrawl ; exists ; 2017 ; politics Volume 37 ; 37 ; pola ; >
 
   }
 
@@ -32834,7 +32834,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Probation Journal Volume 61 ; 61 ; prbb ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Probation Journal Volume 62 ; 62 ; prbb ; >
       au < frozen ; exists ; 2016 ; Probation Journal Volume 63 ; 63 ; prbb ; >
-      au < crawling ; exists ; 2017 ; Probation Journal Volume 64 ; 64 ; prbb ; >
+      au < deepCrawl ; exists ; 2017 ; Probation Journal Volume 64 ; 64 ; prbb ; >
 
     }
 
@@ -32913,7 +32913,7 @@
         au < doNotProcess ; doNotProcess ; 2014 ; Proceedings of the International Symposium of Human Factors and Ergonomics in Healthcare Volume 3 ; 3 ; hcsa ; >
         au < doNotProcess ; doNotProcess ; 2015 ; Proceedings of the International Symposium of Human Factors and Ergonomics in Healthcare Volume 4 ; 4 ; hcsa ; >
         au < frozen ; exists ; 2016 ; Proceedings of the International Symposium of Human Factors and Ergonomics in Healthcare Volume 5 ; 5 ; hcsa ; >
-        au < crawling ; exists ; 2017 ; Proceedings of the International Symposium of Human Factors and Ergonomics in Healthcare Volume 6 ; 6 ; hcsa ; >
+        au < deepCrawl ; exists ; 2017 ; Proceedings of the International Symposium of Human Factors and Ergonomics in Healthcare Volume 6 ; 6 ; hcsa ; >
 
     }
 
@@ -33505,7 +33505,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 228 ; 228 ; pima ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 229 ; 229 ; pima ; >
       au < frozen ; exists ; 2016 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 230 ; 230 ; pima ; >
-      au < crawling ; exists ; 2017 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 231 ; 231 ; pima ; >
+      au < deepCrawl ; exists ; 2017 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 231 ; 231 ; pima ; >
 
     }
 
@@ -33537,7 +33537,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 228 ; 228 ; pinb ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 229 ; 229 ; pinb ; >
       au < frozen ; exists ; 2016 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 230 ; 230 ; pinb ; >
-      au < crawling ; exists ; 2017 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 231 ; 231 ; pinb ; >
+      au < deepCrawl ; exists ; 2017 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 231 ; 231 ; pinb ; >
 
     }
 
@@ -34898,7 +34898,7 @@
         au < doNotProcess ; doNotProcess ; 2014 ; Recherche et Applications en Marketing Volume 29 ; 29 ; rama ; >
         au < doNotProcess ; doNotProcess ; 2015 ; Recherche et Applications en Marketing Volume 30 ; 30 ; rama ; >
         au < frozen ; exists ; 2016 ; Recherche et Applications en Marketing Volume 31 ; 31 ; rama ; >
-        au < crawling ; exists ; 2017 ; Recherche et Applications en Marketing Volume 32 ; 32 ; rama ; >
+        au < deepCrawl ; exists ; 2017 ; Recherche et Applications en Marketing Volume 32 ; 32 ; rama ; >
 
       }
 
@@ -36063,7 +36063,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Scandinavian Journal of Surgery Volume 103 ; 103 ; sjsb ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Scandinavian Journal of Surgery Volume 104 ; 104 ; sjsb ; >
     au < frozen ; exists ; 2016 ; Scandinavian Journal of Surgery Volume 105 ; 105 ; sjsb ; >
-    au < crawling ; exists ; 2017 ; Scandinavian Journal of Surgery Volume 106 ; 106 ; sjsb ; >
+    au < deepCrawl ; exists ; 2017 ; Scandinavian Journal of Surgery Volume 106 ; 106 ; sjsb ; >
 
   }
 
@@ -36191,7 +36191,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Science Communication Volume 36 ; 36 ; scxb ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Science Communication Volume 37 ; 37 ; scxb ; >
       au < frozen ; exists ; 2016 ; Science Communication Volume 38 ; 38 ; scxb ; >
-      au < crawling ; exists ; 2017 ; Science Communication Volume 39 ; 39 ; scxb ; >
+      au < deepCrawl ; exists ; 2017 ; Science Communication Volume 39 ; 39 ; scxb ; >
 
     }
 
@@ -36541,7 +36541,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Sexualities Volume 17 ; 17 ; sexa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Sexualities Volume 18 ; 18 ; sexa ; >
       au < frozen ; exists ; 2016 ; Sexualities Volume 19 ; 19 ; sexa ; >
-      au < crawling ; exists ; 2017 ; Sexualities Volume 20 ; 20 ; sexa ; >
+      au < deepCrawl ; exists ; 2017 ; Sexualities Volume 20 ; 20 ; sexa ; >
 
     }
 
@@ -37265,7 +37265,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Society and Mental Health Volume 4 ; 4 ; smha ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Society and Mental Health Volume 5 ; 5 ; smha ; >
       au < frozen ; exists ; 2016 ; Society and Mental Health Volume 6 ; 6 ; smha ; >
-      au < crawling ; exists ; 2017 ; Society and Mental Health Volume 7 ; 7 ; smha ; >
+      au < deepCrawl ; exists ; 2017 ; Society and Mental Health Volume 7 ; 7 ; smha ; >
 
   }
 
@@ -37550,7 +37550,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Sociology of Education Volume 87 ; 87 ; soea ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Sociology of Education Volume 88 ; 88 ; soea ; >
       au < frozen ; exists ; 2016 ; Sociology of Education Volume 89 ; 89 ; soea ; >
-      au < crawling ; exists ; 2017 ; Sociology of Education Volume 90 ; 90 ; soea ; >
+      au < deepCrawl ; exists ; 2017 ; Sociology of Education Volume 90 ; 90 ; soea ; >
 
   }
 
@@ -39377,7 +39377,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Therapeutic Advances in Chronic Disease Volume 5 ; 5 ; taja ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Therapeutic Advances in Chronic Disease Volume 6 ; 6 ; taja ; >
       au < frozen ; exists ; 2016 ; Therapeutic Advances in Chronic Disease Volume 7 ; 7 ; taja ; >
-      au < crawling ; exists ; 2017 ; Therapeutic Advances in Chronic Disease Volume 8 ; 8 ; taja ; >
+      au < deepCrawl ; exists ; 2017 ; Therapeutic Advances in Chronic Disease Volume 8 ; 8 ; taja ; >
 
     }
 
@@ -40059,7 +40059,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Toxicologic Pathology Volume 42 ; 42 ; tpxb ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Toxicologic Pathology Volume 43 ; 43 ; tpxb ; >
       au < frozen ; exists ; 2016 ; Toxicologic Pathology Volume 44 ; 44 ; tpxb ; >
-      au < crawling ; exists ; 2017 ; Toxicologic Pathology Volume 45 ; 45 ; tpxb ; >
+      au < deepCrawl ; exists ; 2017 ; Toxicologic Pathology Volume 45 ; 45 ; tpxb ; >
 
     }
 
@@ -40877,7 +40877,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Vascular and Endovascular Surgery Volume 48 ; 48 ; vesb ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Vascular and Endovascular Surgery Volume 49 ; 49 ; vesb ; >
       au < frozen ; exists ; 2016 ; Vascular and Endovascular Surgery Volume 50 ; 50 ; vesb ; >
-      au < crawling ; exists ; 2017 ; Vascular and Endovascular Surgery Volume 51 ; 51 ; vesb ; >
+      au < deepCrawl ; exists ; 2017 ; Vascular and Endovascular Surgery Volume 51 ; 51 ; vesb ; >
 
 
     }
@@ -41841,7 +41841,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Youth Violence and Juvenile Justice Volume 12 ; 12 ; yvja ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Youth Violence and Juvenile Justice Volume 13 ; 13 ; yvja ; >
       au < finished ; manifest ; 2016 ; Youth Violence and Juvenile Justice Volume 14 ; 14 ; yvja ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2017 ; Youth Violence and Juvenile Justice Volume 15 ; 15 ; yvja ; >
+      au < deepCrawl ; exists ; 2017 ; Youth Violence and Juvenile Justice Volume 15 ; 15 ; yvja ; >
 
 
     }
@@ -42701,7 +42701,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Sociological Methodology Volume 44 ; 44 ; smxa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Sociological Methodology Volume 45 ; 45 ; smxa ; >
       au < frozen ; exists ; 2016 ; Sociological Methodology Volume 46 ; 46 ; smxa ; >
-      au < crawling ; exists ; 2017 ; Sociological Methodology Volume 47 ; 47 ; smxa ; >
+      au < deepCrawl ; exists ; 2017 ; Sociological Methodology Volume 47 ; 47 ; smxa ; >
 
     }
 
@@ -43372,7 +43372,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 147 ; 147 ; cphc ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 148 ; 148 ; cphc ; >
     au < frozen ; exists ; 2016 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 149 ; 149 ; cphc ; >
-    au < crawling ; exists ; 2017 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 150 ; 150 ; cphc ; >
+    au < deepCrawl ; exists ; 2017 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 150 ; 150 ; cphc ; >
 
     }
 
@@ -43948,7 +43948,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Clinical Urology Volume 7 ; 7 ; urob ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Clinical Urology Volume 8 ; 8 ; urob ; >
       au < frozen ; exists ; 2016 ; Journal of Clinical Urology Volume 9 ; 9 ; urob ; >
-      au < crawling ; exists ; 2017 ; Journal of Clinical Urology Volume 10 ; 10 ; urob ; >
+      au < deepCrawl ; exists ; 2017 ; Journal of Clinical Urology Volume 10 ; 10 ; urob ; >
 
     }
 

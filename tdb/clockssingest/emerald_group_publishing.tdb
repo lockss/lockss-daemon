@@ -332,7 +332,7 @@
     au < finished ; finished ; 2014 ; Aircraft Engineering and Aerospace Technology Volume 86 ; 86 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Aircraft Engineering and Aerospace Technology Volume 87 ; 87 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Aircraft Engineering and Aerospace Technology Volume 88 ; 88 ; >
-    au < crawling ; exists ; 2017 ; Aircraft Engineering and Aerospace Technology Volume 89 ; 89 ; >
+    au < deepCrawl ; exists ; 2017 ; Aircraft Engineering and Aerospace Technology Volume 89 ; 89 ; >
 
   }
 
@@ -3963,7 +3963,7 @@
     au < finished ; finished ; 2014 ; International Journal of Energy Sector Management Volume 8 ; 8 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; International Journal of Energy Sector Management Volume 9 ; 9 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; International Journal of Energy Sector Management Volume 10 ; 10 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2017 ; International Journal of Energy Sector Management Volume 11 ; 11 ; >
+    au < deepCrawl ; exists ; 2017 ; International Journal of Energy Sector Management Volume 11 ; 11 ; >
 
   }
 
@@ -4159,7 +4159,7 @@
     au < finished ; finished ; 2014 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 7 ; 7 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 8 ; 8 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 9 ; 9 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 10 ; 10 ; >
+    au < deepCrawl ; exists ; 2017 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 10 ; 10 ; >
 
   }
 
@@ -5293,7 +5293,7 @@
     au < finished ; finished ; 2014 ; International Journal of Workplace Health Management Volume 7 ; 7 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; International Journal of Workplace Health Management Volume 8 ; 8 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; International Journal of Workplace Health Management Volume 9 ; 9 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2017 ; International Journal of Workplace Health Management Volume 10 ; 10 ; >
+    au < deepCrawl ; exists ; 2017 ; International Journal of Workplace Health Management Volume 10 ; 10 ; >
 
   }
 
@@ -6234,7 +6234,7 @@
     au < finished ; finished ; 2014 ; Journal of Educational Administration Volume 52 ; 52 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Journal of Educational Administration Volume 53 ; 53 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Journal of Educational Administration Volume 54 ; 54 ; >
-    au < crawling ; exists ; 2017 ; Journal of Educational Administration Volume 55 ; 55 ; >
+    au < deepCrawl ; exists ; 2017 ; Journal of Educational Administration Volume 55 ; 55 ; >
 
   }
 
@@ -7391,7 +7391,7 @@
     au < finished ; finished ; 2014 ; Journal of Modelling in Management Volume 9 ; 9 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2015 ; Journal of Modelling in Management Volume 10 ; 10 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Journal of Modelling in Management Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2017 ; Journal of Modelling in Management Volume 12 ; 12 ; >
+    au < deepCrawl ; exists ; 2017 ; Journal of Modelling in Management Volume 12 ; 12 ; >
 
   }
 
@@ -7994,7 +7994,7 @@
     au < finished ; finished ; 2014 ; Journal of Systems and Information Technology Volume 16 ; 16 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; Journal of Systems and Information Technology Volume 17 ; 17 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Journal of Systems and Information Technology Volume 18 ; 18 ; >
-    au < crawling ; exists ; 2017 ; Journal of Systems and Information Technology Volume 19 ; 19 ; >
+    au < deepCrawl ; exists ; 2017 ; Journal of Systems and Information Technology Volume 19 ; 19 ; >
 
   }
 
@@ -8416,7 +8416,7 @@
     au < finished ; manifest ; 2014 ; Library Management Volume 35 ; 35 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2015 ; Library Management Volume 36 ; 36 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2016 ; Library Management Volume 37 ; 37 ; >
-    au < crawling ; exists ; 2017 ; Library Management Volume 38 ; 38 ; >
+    au < deepCrawl ; exists ; 2017 ; Library Management Volume 38 ; 38 ; >
 
   }
 
@@ -9949,7 +9949,7 @@
     au < finished ; finished ; 2014 ; Program: Electronic Library and Information Systems Volume 48 ; 48 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2015 ; Program: Electronic Library and Information Systems Volume 49 ; 49 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2016 ; Program: Electronic Library and Information Systems Volume 50 ; 50 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Program: Electronic Library and Information Systems Volume 51 ; 51 ; >
+    au < deepCrawl ; exists ; 2017 ; Program: Electronic Library and Information Systems Volume 51 ; 51 ; >
 
   }
 
@@ -10032,7 +10032,7 @@
     au < finished ; finished ; 2014 ; Qualitative Market Research: An International Journal Volume 17 ; 17 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; Qualitative Market Research: An International Journal Volume 18 ; 18 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Qualitative Market Research: An International Journal Volume 19 ; 19 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Qualitative Market Research: An International Journal Volume 20 ; 20 ; >
+    au < deepCrawl ; exists ; 2017 ; Qualitative Market Research: An International Journal Volume 20 ; 20 ; >
 
   }
 
@@ -10405,7 +10405,7 @@
     au < finished ; finished ; 2014 ; Review of Accounting and Finance Volume 13 ; 13 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; Review of Accounting and Finance Volume 14 ; 14 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Review of Accounting and Finance Volume 15 ; 15 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2017 ; Review of Accounting and Finance Volume 16 ; 16 ; >
+    au < deepCrawl ; exists ; 2017 ; Review of Accounting and Finance Volume 16 ; 16 ; >
 
   }
 
@@ -10741,7 +10741,7 @@
     au < finished ; finished ; 2014 ; Strategic Direction Volume 30 ; 30 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Strategic Direction Volume 31 ; 31 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2016 ; Strategic Direction Volume 32 ; 32 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Strategic Direction Volume 33 ; 33 ; >
+    au < deepCrawl ; exists ; 2017 ; Strategic Direction Volume 33 ; 33 ; >
 
   }
 
@@ -11216,7 +11216,7 @@
     au < finished ; finished ; 2014 ; The TQM Journal Volume 26 ; 26 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; The TQM Journal Volume 27 ; 27 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2016 ; The TQM Journal Volume 28 ; 28 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2017 ; The TQM Journal Volume 29 ; 29 ; >
+    au < deepCrawl ; exists ; 2017 ; The TQM Journal Volume 29 ; 29 ; >
 
   }
 

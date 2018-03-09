@@ -338,7 +338,7 @@
     au < finished ; finished ; 2014 ; Future Virology Volume 9 ; 9 ; http://www.futuremedicine.com/ ; >
     au < zapped ; finished ; 2015 ; Future Virology Volume 10 ; 10 ; http://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Future Virology Volume 11 ; 11 ; http://www.futuremedicine.com/ ; >
-    au < crawling ; exists ; 2017 ; Future Virology Volume 12 ; 12 ; https://www.futuremedicine.com/ ; >
+    au < deepCrawl ; exists ; 2017 ; Future Virology Volume 12 ; 12 ; https://www.futuremedicine.com/ ; >
     
   }
 
@@ -526,7 +526,7 @@
     au < frozen ; exists ; 2014 ; Journal of Comparative Effectiveness Research Volume 3 ; 3 ; http://www.futuremedicine.com/ ; >
     au < finished ; finished ; 2015 ; Journal of Comparative Effectiveness Research Volume 4 ; 4 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2016 ; Journal of Comparative Effectiveness Research Volume 5 ; 5 ; http://www.futuremedicine.com/ ; >
-    au < crawling ; exists ; 2017 ; Journal of Comparative Effectiveness Research Volume 6 ; 6 ; https://www.futuremedicine.com/ ; >
+    au < deepCrawl ; exists ; 2017 ; Journal of Comparative Effectiveness Research Volume 6 ; 6 ; https://www.futuremedicine.com/ ; >
     
   }
 
