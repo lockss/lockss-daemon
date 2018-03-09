@@ -12926,7 +12926,7 @@
       au < manifest ; exists ; 2013 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 25 ; 25 ; gtna ; >
       au < manifest ; exists ; 2014 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 26 ; 26 ; gtna ; >
       au < manifest ; exists ; 2015 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 27 ; 27 ; gtna ; >
-      au < manifest ; exists ; 2016 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 28 ; 28 ; gtna ; >
+      au < crawling ; exists ; 2016 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 28 ; 28 ; gtna ; >
   }
 
   {
@@ -14272,7 +14272,7 @@
       au < crawling ; exists ; 2011 ; Hong Kong Journal of Emergency Medicine Volume 18 ; 18 ; hkja ; >
       au < crawling ; exists ; 2012 ; Hong Kong Journal of Emergency Medicine Volume 19 ; 19 ; hkja ; >
       au < crawling ; exists ; 2013 ; Hong Kong Journal of Emergency Medicine Volume 20 ; 20 ; hkja ; >
-      au < ready ; exists ; 2014 ; Hong Kong Journal of Emergency Medicine Volume 21 ; 21 ; hkja ; >
+      au < crawling ; exists ; 2014 ; Hong Kong Journal of Emergency Medicine Volume 21 ; 21 ; hkja ; >
       au < crawling ; exists ; 2015 ; Hong Kong Journal of Emergency Medicine Volume 22 ; 22 ; hkja ; >
       au < crawling ; exists ; 2016 ; Hong Kong Journal of Emergency Medicine Volume 23 ; 23 ; hkja ; >
       au < frozen ; exists ; 2017 ; Hong Kong Journal of Emergency Medicine Volume 24 ; 24 ; hkja ; >
@@ -17965,7 +17965,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Studies Volume 48 ; 48 ; isqa ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Studies Volume 49 ; 49 ; isqa ; >
       au < frozen ; exists ; 2013 ; International Studies Volume 50 ; 50 ; isqa ; >
-      au < ready ; exists ; 2014 ; International Studies Volume 51 ; 51 ; isqa ; >
+      au < crawling ; exists ; 2014 ; International Studies Volume 51 ; 51 ; isqa ; >
       au < frozen ; exists ; 2015 ; International Studies Volume 52 ; 52 ; isqa ; >
       au < crawling ; exists ; 2016 ; International Studies Volume 53 ; 53 ; isqa ; >
       au < expected ; exists ; 2017 ; International Studies Volume 54 ; 54 ; isqa ; >
@@ -21560,7 +21560,7 @@
       au < manifest ; exists ; 2013 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 5 ; 5 ; peva ; >
       au < manifest ; exists ; 2014 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 6 ; 6 ; peva ; >
       au < manifest ; exists ; 2015 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 7 ; 7 ; peva ; >
-      au < manifest ; exists ; 2016 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 8 ; 8 ; peva ; >
+      au < crawling ; exists ; 2016 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 8 ; 8 ; peva ; >
       au < manifest ; exists ; 2017 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 9 ; 9 ; peva ; >
   }
 
@@ -25685,7 +25685,7 @@
 
     #param[journal_id] = jso
 
-      au < manifest ; exists ; 2016 ; Journal of Scleroderma and Related Disorders Volume 1 ; 1 ; jsoa ; >
+      au < crawling ; exists ; 2016 ; Journal of Scleroderma and Related Disorders Volume 1 ; 1 ; jsoa ; >
       au < manifest ; exists ; 2017 ; Journal of Scleroderma and Related Disorders Volume 2 ; 2 ; jsoa ; >
       au < manifest ; exists ; 2017 ; Journal of Scleroderma and Related Disorders Volume 3 ; 3 ; jsoa ; >
 
@@ -29020,7 +29020,7 @@
         #param[journal_id] = npc
 
         au < manifest ; exists ; 2015 ; Nephrology @ Point of Care Volume 1 ; 1 ; npca ; >
-        au < manifest ; exists ; 2016 ; Nephrology @ Point of Care Volume 2 ; 2 ; npca ; >
+        au < crawling ; exists ; 2016 ; Nephrology @ Point of Care Volume 2 ; 2 ; npca ; >
         au < manifest ; exists ; 2017 ; Nephrology @ Point of Care Volume 3 ; 3 ; npca ; >
     }
 
@@ -30667,7 +30667,7 @@
         au < manifest ; exists ; 2008 ; Nordic Journal of Nursing Research Volume 28 ; 28 ; njnb ; >
         au < manifest ; exists ; 2009 ; Nordic Journal of Nursing Research Volume 29 ; 29 ; njnb ; >
         au < crawling ; exists ; 2010 ; Nordic Journal of Nursing Research Volume 30 ; 30 ; njnb ; >
-        au < ready ; exists ; 2011 ; Nordic Journal of Nursing Research Volume 31 ; 31 ; njnb ; >
+        au < crawling ; exists ; 2011 ; Nordic Journal of Nursing Research Volume 31 ; 31 ; njnb ; >
         au < crawling ; exists ; 2012 ; Nordic Journal of Nursing Research Volume 32 ; 32 ; njnb ; >
         au < crawling ; exists ; 2013 ; Nordic Journal of Nursing Research Volume 33 ; 33 ; njnb ; >
 
@@ -34688,8 +34688,8 @@
       au < manifest ; exists ; 2007 ; Quarterly Journal of Experimental Psychology Volume 60 ; 60 ; qjpd ; >
       au < manifest ; exists ; 2008 ; Quarterly Journal of Experimental Psychology Volume 61 ; 61 ; qjpd ; >
       au < manifest ; exists ; 2009 ; Quarterly Journal of Experimental Psychology Volume 62 ; 62 ; qjpd ; >
-      au < ready ; exists ; 2010 ; Quarterly Journal of Experimental Psychology Volume 63 ; 63 ; qjpd ; >
-      au < ready ; exists ; 2011 ; Quarterly Journal of Experimental Psychology Volume 64 ; 64 ; qjpd ; >
+      au < crawling ; exists ; 2010 ; Quarterly Journal of Experimental Psychology Volume 63 ; 63 ; qjpd ; >
+      au < crawling ; exists ; 2011 ; Quarterly Journal of Experimental Psychology Volume 64 ; 64 ; qjpd ; >
       au < crawling ; exists ; 2012 ; Quarterly Journal of Experimental Psychology Volume 65 ; 65 ; qjpd ; >
       au < frozen ; exists ; 2013 ; Quarterly Journal of Experimental Psychology Volume 66 ; 66 ; qjpd ; >
       au < crawling ; exists ; 2014 ; Quarterly Journal of Experimental Psychology Volume 67 ; 67 ; qjpd ; >
