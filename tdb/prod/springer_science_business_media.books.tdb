@@ -8,7 +8,7 @@
   plugin = org.lockss.plugin.springer.link.SpringerLinkBooksPlugin
   param[base_url] = https://link.springer.com/
 
-   implicit < status ; status2 ; isbn ; eisbn ; year ; name ; param[book_isbn] ; hidden[proxy] >
+   implicit < status ; status2 ; isbn ; eisbn ; year ; name ; param[book_eisbn] ; hidden[proxy] >
 
     {
 
