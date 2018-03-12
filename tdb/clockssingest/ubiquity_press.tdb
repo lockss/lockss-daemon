@@ -108,7 +108,7 @@
 #      param[base_url] = http://www.glossa-journal.org/
 
       au < frozen ; exists ; 2016 ; 1 ; Glossa: a journal of general linguistics Volume 2016 ; 2016 ; http://www.glossa-journal.org/ ; >
-      au < crawling ; exists ; 2017 ; 2 ; Glossa: a journal of general linguistics Volume 2017 ; 2017 ; http://www.glossa-journal.org/ ; >
+      au < deepCrawl ; exists ; 2017 ; 2 ; Glossa: a journal of general linguistics Volume 2017 ; 2017 ; http://www.glossa-journal.org/ ; >
 
   }
 
@@ -902,7 +902,7 @@
       au < finished ; finished ; 2014 ; 5 ; Journal of the Belgian Society of Radiology Volume 2014 ; 2014 ; http://www.jbsr.be/ ; >
       au < frozen ; exists ; 2015 ; 6 ; Journal of the Belgian Society of Radiology Volume 2015 ; 2015 ; http://www.jbsr.be/ ; >
       au < frozen ; exists ; 2016 ; 7 ; Journal of the Belgian Society of Radiology Volume 2016 ; 2016 ; http://www.jbsr.be/ ; >
-      au < crawling ; exists ; 2017 ; 8 ; Journal of the Belgian Society of Radiology Volume 2017 ; 2017 ; http://www.jbsr.be/ ; >
+      au < deepCrawl ; exists ; 2017 ; 8 ; Journal of the Belgian Society of Radiology Volume 2017 ; 2017 ; http://www.jbsr.be/ ; >
 
   }
 
@@ -965,7 +965,7 @@
 
       au < finished ; finished ; 2015 ; 1 ; Open Quaternary Volume 2015 ; 2015 ; http://www.openquaternary.com/ ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2016 ; 2 ; Open Quaternary Volume 2016 ; 2016 ; http://www.openquaternary.com/ ; >
-      au < crawling ; exists ; 2017 ; 3 ; Open Quaternary Volume 2017 ; 2017 ; http://www.openquaternary.com/ ; >
+      au < deepCrawl ; exists ; 2017 ; 3 ; Open Quaternary Volume 2017 ; 2017 ; http://www.openquaternary.com/ ; >
 
   }
 
@@ -1156,7 +1156,7 @@
       au < doNotProcess ; exists ; 2014 ; 3 ; Secularism and Nonreligion Volume 2014 ; 2014 ; https://secularismandnonreligion.org/ ; >
       au < doNotProcess ; exists ; 2015 ; 4 ; Secularism and Nonreligion Volume 2015 ; 2015 ; https://secularismandnonreligion.org/ ; >
       au < frozen ; exists ; 2016 ; 5 ; Secularism and Nonreligion Volume 2016 ; 2016 ; https://secularismandnonreligion.org/ ; >
-      au < crawling ; exists ; 2017 ; 6 ; Secularism and Nonreligion Volume 2017 ; 2017 ; https://secularismandnonreligion.org/ ; >
+      au < deepCrawl ; exists ; 2017 ; 6 ; Secularism and Nonreligion Volume 2017 ; 2017 ; https://secularismandnonreligion.org/ ; >
     }
   }
 

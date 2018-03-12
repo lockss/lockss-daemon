@@ -137,7 +137,7 @@
     param[journal_id] = ipk
 
    au < frozen ; exists ; 2016 ; International Journal of Pharmacokinetics Volume 1 ; 1 ; http://www.future-science.com/ ; >
-   au < crawling ; exists ; 2017 ; International Journal of Pharmacokinetics Volume 2 ; 2 ; https://www.future-science.com/ ; >
+   au < deepCrawl ; exists ; 2017 ; International Journal of Pharmacokinetics Volume 2 ; 2 ; https://www.future-science.com/ ; >
  
    }
 
@@ -192,7 +192,7 @@
     au < zapped ; finished ; 2014 ; Therapeutic Delivery Volume 5 ; 5 ; http://www.future-science.com/ ; reingest1.clockss.org:8082 >
     au < zapped ; finished ; 2015 ; Therapeutic Delivery Volume 6 ; 6 ; http://www.future-science.com/ ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2016 ; Therapeutic Delivery Volume 7 ; 7 ; http://www.future-science.com/ ; >
-    au < crawling ; exists ; 2017 ; Therapeutic Delivery Volume 8 ; 8 ; https://www.future-science.com/ ; >
+    au < deepCrawl ; exists ; 2017 ; Therapeutic Delivery Volume 8 ; 8 ; https://www.future-science.com/ ; >
     
   }
 

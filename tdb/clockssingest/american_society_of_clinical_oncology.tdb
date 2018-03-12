@@ -136,7 +136,7 @@
 
       param[journal_id] = po
 
-      au < crawling ; exists ; 2017 ; JCO Precision Oncology Volume 1 ; 1 ; >
+      au < deepCrawl ; exists ; 2017 ; JCO Precision Oncology Volume 1 ; 1 ; >
       au < manifest ; exists ; 2018 ; JCO Precision Oncology Volume 2 ; 2 ; >
 
   }

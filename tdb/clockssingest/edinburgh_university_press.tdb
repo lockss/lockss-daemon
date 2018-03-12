@@ -171,7 +171,7 @@
     au < finished ; finished ; 2014 ; Ben Jonson Journal Volume 21 ; 21 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2015 ; Ben Jonson Journal Volume 22 ; 22 ; http://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Ben Jonson Journal Volume 23 ; 23 ; http://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 2017 ; Ben Jonson Journal Volume 24 ; 24 ; http://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2017 ; Ben Jonson Journal Volume 24 ; 24 ; http://www.euppublishing.com/ ; >
     au < expected ; exists ; 2018 ; Ben Jonson Journal Volume 25 ; 25 ; https://www.euppublishing.com/ ; >
 
   }
@@ -263,7 +263,7 @@
     au < finished ; finished ; 2014 ; Corpora Volume 9 ; 9 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2015 ; Corpora Volume 10 ; 10 ; http://www.euppublishing.com/ ; >
     au < frozen ; exists ; 2016 ; Corpora Volume 11 ; 11 ; http://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 2017 ; Corpora Volume 12 ; 12 ; http://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2017 ; Corpora Volume 12 ; 12 ; http://www.euppublishing.com/ ; >
     au < expected ; exists ; 2018 ; Corpora Volume 13 ; 13 ; https://www.euppublishing.com/ ; >
 
   }
@@ -416,7 +416,7 @@
     #move from Open Humanities Press
     
      au < frozen ; exists ; 2016 ; Film-Philosophy Volume 20 ; 20 ; http://www.euppublishing.com/ ; >
-     au < crawling ; exists ; 2017 ; Film-Philosophy Volume 21 ; 21 ; http://www.euppublishing.com/ ; >
+     au < deepCrawl ; exists ; 2017 ; Film-Philosophy Volume 21 ; 21 ; http://www.euppublishing.com/ ; >
      au < manifest ; exists ; 2018 ; Film-Philosophy Volume 22 ; 22 ; https://www.euppublishing.com/ ; >
 
   }
@@ -465,7 +465,7 @@
 
      au < finished ; finished ; 2015 ; Journal of Holy Land and Palestine Studies Volume 14 ; 14 ; http://www.euppublishing.com/ ; >
      au < frozen ; exists ; 2016 ; Journal of Holy Land and Palestine Studies Volume 15 ; 15 ; http://www.euppublishing.com/ ; >
-     au < crawling ; exists ; 2017 ; Journal of Holy Land and Palestine Studies Volume 16 ; 16 ; http://www.euppublishing.com/ ; >
+     au < deepCrawl ; exists ; 2017 ; Journal of Holy Land and Palestine Studies Volume 16 ; 16 ; http://www.euppublishing.com/ ; >
      au < expected ; exists ; 2018 ; Journal of Holy Land and Palestine Studies Volume 17 ; 17 ; https://www.euppublishing.com/ ; >
 
   }

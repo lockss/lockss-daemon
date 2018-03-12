@@ -835,7 +835,7 @@
     au < finished ; finished ; 2014 ; Advances in Medicine Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; >
     au < finished ; finished ; 2015 ; Advances in Medicine Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Advances in Medicine Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
-    au < crawling ; exists ; 2017 ; Advances in Medicine Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
+    au < deepCrawl ; exists ; 2017 ; Advances in Medicine Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
 
   }
 
@@ -1393,7 +1393,7 @@
     au < finished ; finished ; 2014 ; Advances in Urology Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Advances in Urology Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Advances in Urology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
-    au < crawling ; exists ; 2017 ; Advances in Urology Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
+    au < deepCrawl ; exists ; 2017 ; Advances in Urology Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
 
   }
 
@@ -1468,7 +1468,7 @@
     au < finished ; finished ; 2014 ; AIDS Research and Treatment Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; AIDS Research and Treatment Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; AIDS Research and Treatment Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
-    au < crawling ; exists ; 2017 ; AIDS Research and Treatment Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
+    au < deepCrawl ; exists ; 2017 ; AIDS Research and Treatment Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
       
   }
   
@@ -1679,7 +1679,7 @@
     au < finished ; finished ; 2014 ; Arthritis Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Arthritis Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2016 ; Arthritis Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
-    au < crawling ; exists ; 2017 ; Arthritis Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
+    au < deepCrawl ; exists ; 2017 ; Arthritis Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
 
   }
 
@@ -3632,7 +3632,7 @@
     au < finished ; finished ; 2014 ; International Journal of Analysis Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; International Journal of Analysis Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2016 ; International Journal of Analysis Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
-    au < crawling ; exists ; 2017 ; International Journal of Analysis Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
+    au < deepCrawl ; exists ; 2017 ; International Journal of Analysis Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
 
   }
 
@@ -3901,7 +3901,7 @@
     au < finished ; finished ; 2014 ; International Journal of Chemical Engineering Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; International Journal of Chemical Engineering Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; International Journal of Chemical Engineering Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
-    au < crawling ; exists ; 2017 ; International Journal of Chemical Engineering Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
+    au < deepCrawl ; exists ; 2017 ; International Journal of Chemical Engineering Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
 
   }
 
@@ -4236,7 +4236,7 @@
     au < finished ; finished ; 2014 ; International Journal of Evolutionary Biology Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; International Journal of Evolutionary Biology Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; International Journal of Evolutionary Biology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
-    au < crawling ; exists ; 2017 ; International Journal of Evolutionary Biology Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
+    au < deepCrawl ; exists ; 2017 ; International Journal of Evolutionary Biology Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
     
   }
   
@@ -4412,7 +4412,7 @@
     au < finished ; finished ; 2014 ; International Journal of Inflammation Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; International Journal of Inflammation Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; International Journal of Inflammation Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
-    au < crawling ; exists ; 2017 ; International Journal of Inflammation Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
+    au < deepCrawl ; exists ; 2017 ; International Journal of Inflammation Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
     
   }
 
@@ -4751,7 +4751,7 @@
     au < finished ; finished ; 2014 ; International Journal of Optics Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; International Journal of Optics Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; International Journal of Optics Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
-    au < crawling ; exists ; 2017 ; International Journal of Optics Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
+    au < deepCrawl ; exists ; 2017 ; International Journal of Optics Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
 
   }
 
@@ -5312,7 +5312,7 @@
     au < frozen ; exists ; 2014 ; International Journal of Zoology Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; >
     au < finished ; finished ; 2015 ; International Journal of Zoology Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2016 ; International Journal of Zoology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2017 ; International Journal of Zoology Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
+    au < deepCrawl ; exists ; 2017 ; International Journal of Zoology Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
 
   }
   
@@ -5351,7 +5351,7 @@
     au < finished ; finished ; 2014 ; Journal of Addiction Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Journal of Addiction Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2016 ; Journal of Addiction Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
-    au < crawling ; exists ; 2017 ; Journal of Addiction Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
+    au < deepCrawl ; exists ; 2017 ; Journal of Addiction Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
 
   }
 
@@ -5780,7 +5780,7 @@
     au < finished ; finished ; 2014 ; Journal of Botany Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; >
     au < finished ; crawling ; 2015 ; Journal of Botany Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Journal of Botany Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2017 ; Journal of Botany Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
+    au < deepCrawl ; exists ; 2017 ; Journal of Botany Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
     
   }
   
@@ -6058,7 +6058,7 @@
     au < finished ; finished ; 2014 ; Journal of Computational Engineering Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Journal of Computational Engineering Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2016 ; Journal of Computational Engineering Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
-    au < crawling ; exists ; 2017 ; Journal of Computational Engineering Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
+    au < deepCrawl ; exists ; 2017 ; Journal of Computational Engineering Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
 
   }
 
@@ -6897,7 +6897,7 @@
     au < finished ; finished ; 2014 ; Journal of Medical Engineering Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2015 ; Journal of Medical Engineering Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2016 ; Journal of Medical Engineering Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
-    au < crawling ; exists ; 2017 ; Journal of Medical Engineering Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
+    au < deepCrawl ; exists ; 2017 ; Journal of Medical Engineering Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
 
   }
 
@@ -7649,7 +7649,7 @@
     au < finished ; finished ; 2014 ; Journal of Sensors Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2015 ; Journal of Sensors Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2016 ; Journal of Sensors Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
-    au < crawling ; exists ; 2017 ; Journal of Sensors Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
+    au < deepCrawl ; exists ; 2017 ; Journal of Sensors Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
 
   }
 
@@ -8519,7 +8519,7 @@
     param[journal_id] = oti
     #Content published prior to 2017 is hosted on the Wiley Online Library.
 
-    au < crawling ; exists ; 2017 ; Occupational Therapy International Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
+    au < deepCrawl ; exists ; 2017 ; Occupational Therapy International Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
 
   }
 
@@ -9267,7 +9267,7 @@
     au < finished ; finished ; 2014 ; Stroke Research and Treatment Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Stroke Research and Treatment Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; Stroke Research and Treatment Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
-    au < crawling ; exists ; 2017 ; Stroke Research and Treatment Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
+    au < deepCrawl ; exists ; 2017 ; Stroke Research and Treatment Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
     
   }
   

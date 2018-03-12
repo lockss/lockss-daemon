@@ -210,7 +210,7 @@
     param[journal_issn] = 2415-6302
     comment[journal_id] = jca
 
-    au < crawling ; exists ; 2017 ; Journal of Combinatorial Algebra Volume 1 ; 1 ; >
+    au < deepCrawl ; exists ; 2017 ; Journal of Combinatorial Algebra Volume 1 ; 1 ; >
     
   }
 

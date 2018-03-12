@@ -375,7 +375,7 @@
     au < finished ; finished ; 2014 ; Advances and Applications in Bioinformatics and Chemistry Volume 7 ; 7 ; 2014 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Advances and Applications in Bioinformatics and Chemistry Volume 8 ; 8 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Advances and Applications in Bioinformatics and Chemistry Volume 9 ; 9 ; 2016 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Advances and Applications in Bioinformatics and Chemistry Volume 10 ; 10 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Advances and Applications in Bioinformatics and Chemistry Volume 10 ; 10 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Advances and Applications in Bioinformatics and Chemistry Volume 11 ; 11 ; 2018 ; >
 
   }
@@ -875,7 +875,7 @@
     au < finished ; finished ; 2014 ; Open Access Emergency Medicine Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Open Access Emergency Medicine Volume 7 ; 7 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Open Access Emergency Medicine Volume 8 ; 8 ; 2016 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Open Access Emergency Medicine Volume 9 ; 9 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Open Access Emergency Medicine Volume 9 ; 9 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Open Access Emergency Medicine Volume 10 ; 10 ; 2018 ; >
 
   }
@@ -941,7 +941,7 @@
     au < finished ; finished ; 2014 ; Research and Reports in Urology Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Research and Reports in Urology Volume 7 ; 7 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Research and Reports in Urology Volume 8 ; 8 ; 2016 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2017 ; Research and Reports in Urology Volume 9 ; 9 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Research and Reports in Urology Volume 9 ; 9 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Research and Reports in Urology Volume 10 ; 10 ; 2018 ; >
 
   }
@@ -1008,7 +1008,7 @@
     au < finished ; finished ; 2014 ; Psychology Research and Behavior Management Volume 7 ; 7 ; 2014 ; >
     au < finished ; finished ; 2015 ; Psychology Research and Behavior Management Volume 8 ; 8 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Psychology Research and Behavior Management Volume 9 ; 9 ; 2016 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Psychology Research and Behavior Management Volume 10 ; 10 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Psychology Research and Behavior Management Volume 10 ; 10 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Psychology Research and Behavior Management Volume 11 ; 11 ; 2018 ; >
 
   }
@@ -1030,7 +1030,7 @@
     au < finished ; finished ; 2014 ; Clinical, Cosmetic and Investigational Dentistry Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Clinical, Cosmetic and Investigational Dentistry Volume 7 ; 7 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Clinical, Cosmetic and Investigational Dentistry Volume 8 ; 8 ; 2016 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Clinical, Cosmetic and Investigational Dentistry Volume 9 ; 9 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Clinical, Cosmetic and Investigational Dentistry Volume 9 ; 9 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Clinical, Cosmetic and Investigational Dentistry Volume 10 ; 10 ; 2018 ; >
 
   }
@@ -1825,7 +1825,7 @@
     au < finished ; finished ; 2014 ; Research Reports in Clinical Cardiology Volume 5 ; 5 ; 2014 ; >
     au < finished ; finished ; 2015 ; Research Reports in Clinical Cardiology Volume 6 ; 6 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Research Reports in Clinical Cardiology Volume 7 ; 7 ; 2016 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Research Reports in Clinical Cardiology Volume 8 ; 8 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Research Reports in Clinical Cardiology Volume 8 ; 8 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Research Reports in Clinical Cardiology Volume 9 ; 9 ; 2018 ; >
 
   }
@@ -2392,7 +2392,7 @@
     au < finished ; finished ; 2014 ; Nursing: Research and Reviews Volume 4 ; 4 ; 2014 ; >
     au < finished ; finished ; 2015 ; Nursing: Research and Reviews Volume 5 ; 5 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Nursing: Research and Reviews Volume 6 ; 6 ; 2016 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2017 ; Nursing: Research and Reviews Volume 7 ; 7 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Nursing: Research and Reviews Volume 7 ; 7 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Nursing: Research and Reviews Volume 8 ; 8 ; 2018 ; >
 
   }
@@ -2632,7 +2632,7 @@
     au < finished ; finished ; 2014 ; International Journal of Clinical Transfusion Medicine Volume 2 ; 2 ; 2014 ; >
     au < finished ; finished ; 2015 ; International Journal of Clinical Transfusion Medicine Volume 3 ; 3 ; 2015 ; >
     au < finished ; crawling ; 2016 ; International Journal of Clinical Transfusion Medicine Volume 4 ; 4 ; 2016 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; International Journal of Clinical Transfusion Medicine Volume 5 ; 5 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; International Journal of Clinical Transfusion Medicine Volume 5 ; 5 ; 2017 ; >
     au < manifest ; exists ; 2018 ; International Journal of Clinical Transfusion Medicine Volume 6 ; 6 ; 2018 ; >
 
   }
@@ -2757,7 +2757,7 @@
     au < finished ; finished ; 2014 ; Chronic Wound Care Management and Research Volume 1 ; 1 ; 2014 ; >
     au < finished ; finished ; 2015 ; Chronic Wound Care Management and Research Volume 2 ; 2 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Chronic Wound Care Management and Research Volume 3 ; 3 ; 2016 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Chronic Wound Care Management and Research Volume 4 ; 4 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Chronic Wound Care Management and Research Volume 4 ; 4 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Chronic Wound Care Management and Research Volume 5 ; 5 ; 2018 ; >
 
   }
