@@ -42,7 +42,6 @@ import org.lockss.daemon.RangeCachedUrlSetSpec;
 import org.lockss.plugin.*;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 import org.lockss.plugin.base.BaseCachedUrlSet;
-import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.state.AuState;
 import org.lockss.test.*;
 import org.lockss.util.Constants;
