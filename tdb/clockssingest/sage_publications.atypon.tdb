@@ -7030,7 +7030,7 @@
       au < frozen ; exists ; 2014 ; Competition and Regulation in Network Industries Volume 15 ; 15 ; crna ; >
       au < frozen ; exists ; 2015 ; Competition and Regulation in Network Industries Volume 16 ; 16 ; crna ; >
       au < frozen ; exists ; 2016 ; Competition and Regulation in Network Industries Volume 17 ; 17 ; crna ; >
-      au < crawling ; exists ; 2017 ; Competition and Regulation in Network Industries Volume 18 ; 18 ; crna ; >
+      au < frozen ; exists ; 2017 ; Competition and Regulation in Network Industries Volume 18 ; 18 ; crna ; >
       #vol18 added just to ingest5 to test the ability to select the disk
 
   }
@@ -14269,12 +14269,12 @@
       au < manifest ; exists ; 2008 ; Hong Kong Journal of Emergency Medicine Volume 15 ; 15 ; hkja ; >
       au < manifest ; exists ; 2009 ; Hong Kong Journal of Emergency Medicine Volume 16 ; 16 ; hkja ; >
       au < frozen ; exists ; 2010 ; Hong Kong Journal of Emergency Medicine Volume 17 ; 17 ; hkja ; >
-      au < crawling ; exists ; 2011 ; Hong Kong Journal of Emergency Medicine Volume 18 ; 18 ; hkja ; >
+      au < frozen ; exists ; 2011 ; Hong Kong Journal of Emergency Medicine Volume 18 ; 18 ; hkja ; >
       au < crawling ; exists ; 2012 ; Hong Kong Journal of Emergency Medicine Volume 19 ; 19 ; hkja ; >
       au < crawling ; exists ; 2013 ; Hong Kong Journal of Emergency Medicine Volume 20 ; 20 ; hkja ; >
       au < crawling ; exists ; 2014 ; Hong Kong Journal of Emergency Medicine Volume 21 ; 21 ; hkja ; >
       au < frozen ; exists ; 2015 ; Hong Kong Journal of Emergency Medicine Volume 22 ; 22 ; hkja ; >
-      au < crawling ; exists ; 2016 ; Hong Kong Journal of Emergency Medicine Volume 23 ; 23 ; hkja ; >
+      au < frozen ; exists ; 2016 ; Hong Kong Journal of Emergency Medicine Volume 23 ; 23 ; hkja ; >
       au < frozen ; exists ; 2017 ; Hong Kong Journal of Emergency Medicine Volume 24 ; 24 ; hkja ; >
       au < manifest ; exists ; 2018 ; Hong Kong Journal of Emergency Medicine Volume 25 ; 25 ; hkja ; >
 
@@ -17965,7 +17965,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Studies Volume 48 ; 48 ; isqa ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Studies Volume 49 ; 49 ; isqa ; >
       au < frozen ; exists ; 2013 ; International Studies Volume 50 ; 50 ; isqa ; >
-      au < crawling ; exists ; 2014 ; International Studies Volume 51 ; 51 ; isqa ; >
+      au < frozen ; exists ; 2014 ; International Studies Volume 51 ; 51 ; isqa ; >
       au < frozen ; exists ; 2015 ; International Studies Volume 52 ; 52 ; isqa ; >
       au < frozen ; exists ; 2016 ; International Studies Volume 53 ; 53 ; isqa ; >
       au < expected ; exists ; 2017 ; International Studies Volume 54 ; 54 ; isqa ; >
@@ -21560,7 +21560,7 @@
       au < manifest ; exists ; 2013 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 5 ; 5 ; peva ; >
       au < manifest ; exists ; 2014 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 6 ; 6 ; peva ; >
       au < manifest ; exists ; 2015 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 7 ; 7 ; peva ; >
-      au < crawling ; exists ; 2016 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 8 ; 8 ; peva ; >
+      au < frozen ; exists ; 2016 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 8 ; 8 ; peva ; >
       au < manifest ; exists ; 2017 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 9 ; 9 ; peva ; >
   }
 
@@ -38061,7 +38061,7 @@
     #journal_id = srj
 
       au < frozen ; exists ; 2010 ; String Research Journal Volume 1 ; 1 ; srja ; >
-      au < crawling ; exists ; 2011 ; String Research Journal Volume 2 ; 2 ; srja ; >
+      au < frozen ; exists ; 2011 ; String Research Journal Volume 2 ; 2 ; srja ; >
       au < frozen ; exists ; 2012 ; String Research Journal Volume 3 ; 3 ; srja ; >
       au < frozen ; exists ; 2013 ; String Research Journal Volume 4 ; 4 ; srja ; >
       au < frozen ; exists ; 2014 ; String Research Journal Volume 5 ; 5 ; srja ; >

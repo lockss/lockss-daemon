@@ -69,7 +69,7 @@
       au < manifest ; exists ; 2007 ; Electronics Letters Volume 43 ; 43 ; >
       au < manifest ; exists ; 2008 ; Electronics Letters Volume 44 ; 44 ; >
       au < frozen ; exists ; 2009 ; Electronics Letters Volume 45 ; 45 ; >
-      au < crawling ; exists ; 2010 ; Electronics Letters Volume 46 ; 46 ; >
+      au < frozen ; exists ; 2010 ; Electronics Letters Volume 46 ; 46 ; >
       au < crawling ; exists ; 2011 ; Electronics Letters Volume 47 ; 47 ; >
       au < frozen ; exists ; 2012 ; Electronics Letters Volume 48 ; 48 ; >
       au < frozen ; exists ; 2013 ; Electronics Letters Volume 49 ; 49 ; >
@@ -94,7 +94,7 @@
       au < manifest ; exists ; 2006 ; Engineering & Technology Volume 1 ; 1 ; >
       au < manifest ; exists ; 2007 ; Engineering & Technology Volume 2 ; 2 ; >
       au < manifest ; exists ; 2008 ; Engineering & Technology Volume 3 ; 3 ; >
-      au < crawling ; exists ; 2009 ; Engineering & Technology Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2009 ; Engineering & Technology Volume 4 ; 4 ; >
       au < crawling ; exists ; 2010 ; Engineering & Technology Volume 5 ; 5 ; >
       au < frozen ; exists ; 2011 ; Engineering & Technology Volume 6 ; 6 ; >
       au < frozen ; exists ; 2012 ; Engineering & Technology Volume 7 ; 7 ; >
@@ -241,8 +241,8 @@
 
       au < manifest ; exists ; 2007 ; IET Control Theory & Applications Volume 1 ; 1 ; >
       au < manifest ; exists ; 2008 ; IET Control Theory & Applications Volume 2 ; 2 ; >
-      au < crawling ; exists ; 2009 ; IET Control Theory & Applications Volume 3 ; 3 ; >
-      au < crawling ; exists ; 2010 ; IET Control Theory & Applications Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2009 ; IET Control Theory & Applications Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2010 ; IET Control Theory & Applications Volume 4 ; 4 ; >
       au < crawling ; exists ; 2011 ; IET Control Theory & Applications Volume 5 ; 5 ; >
       au < frozen ; exists ; 2012 ; IET Control Theory & Applications Volume 6 ; 6 ; >
       au < frozen ; exists ; 2013 ; IET Control Theory & Applications Volume 7 ; 7 ; >
@@ -267,7 +267,7 @@
 
       au < manifest ; exists ; 2007 ; IET Electric Power Applications Volume 1 ; 1 ; >
       au < manifest ; exists ; 2008 ; IET Electric Power Applications Volume 2 ; 2 ; >
-      au < crawling ; exists ; 2009 ; IET Electric Power Applications Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2009 ; IET Electric Power Applications Volume 3 ; 3 ; >
       au < frozen ; exists ; 2010 ; IET Electric Power Applications Volume 4 ; 4 ; >
       au < crawling ; exists ; 2011 ; IET Electric Power Applications Volume 5 ; 5 ; >
       au < frozen ; exists ; 2012 ; IET Electric Power Applications Volume 6 ; 6 ; >
@@ -343,7 +343,7 @@
       au < manifest ; exists ; 2008 ; IET Image Processing Volume 2 ; 2 ; >
       au < manifest ; exists ; 2009 ; IET Image Processing Volume 3 ; 3 ; >
       au < frozen ; exists ; 2010 ; IET Image Processing Volume 4 ; 4 ; >
-      au < crawling ; exists ; 2011 ; IET Image Processing Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2011 ; IET Image Processing Volume 5 ; 5 ; >
       au < testing ; exists ; 2012 ; IET Image Processing Volume 6 ; 6 ; >
       au < frozen ; exists ; 2013 ; IET Image Processing Volume 7 ; 7 ; >
       au < frozen ; exists ; 2014 ; IET Image Processing Volume 8 ; 8 ; >
@@ -447,7 +447,7 @@
       au < manifest ; exists ; 2008 ; IET Nanotechnology Volume 2 ; 2 ; >
       au < crawling ; exists ; 2009 ; IET Nanotechnology Volume 3 ; 3 ; >
       au < crawling ; exists ; 2010 ; IET Nanotechnology Volume 4 ; 4 ; >
-      au < crawling ; exists ; 2011 ; IET Nanotechnology Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2011 ; IET Nanotechnology Volume 5 ; 5 ; >
       au < frozen ; exists ; 2012 ; IET Nanotechnology Volume 6 ; 6 ; >
       au < frozen ; exists ; 2013 ; IET Nanotechnology Volume 7 ; 7 ; >
       au < frozen ; exists ; 2014 ; IET Nanotechnology Volume 8 ; 8 ; >
@@ -517,7 +517,7 @@
       param[journal_id] = iet-pel
 
       au < manifest ; exists ; 2008 ; IET Power Electronics Volume 1 ; 1 ; >
-      au < crawling ; exists ; 2009 ; IET Power Electronics Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2009 ; IET Power Electronics Volume 2 ; 2 ; >
       au < frozen ; exists ; 2010 ; IET Power Electronics Volume 3 ; 3 ; >
       au < frozen ; exists ; 2011 ; IET Power Electronics Volume 4 ; 4 ; >
       au < frozen ; exists ; 2012 ; IET Power Electronics Volume 5 ; 5 ; >
@@ -545,7 +545,7 @@
       au < manifest ; exists ; 2008 ; IET Radar, Sonar & Navigation Volume 2 ; 2 ; >
       au < crawling ; exists ; 2009 ; IET Radar, Sonar & Navigation Volume 3 ; 3 ; >
       au < crawling ; exists ; 2010 ; IET Radar, Sonar & Navigation Volume 4 ; 4 ; >
-      au < crawling ; exists ; 2011 ; IET Radar, Sonar & Navigation Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2011 ; IET Radar, Sonar & Navigation Volume 5 ; 5 ; >
       au < frozen ; exists ; 2012 ; IET Radar, Sonar & Navigation Volume 6 ; 6 ; >
       au < frozen ; exists ; 2013 ; IET Radar, Sonar & Navigation Volume 7 ; 7 ; >
       au < frozen ; exists ; 2014 ; IET Radar, Sonar & Navigation Volume 8 ; 8 ; >
@@ -571,7 +571,7 @@
       au < manifest ; exists ; 2008 ; IET Renewable Power Generation Volume 2 ; 2 ; >
       au < crawling ; exists ; 2009 ; IET Renewable Power Generation Volume 3 ; 3 ; >
       au < crawling ; exists ; 2010 ; IET Renewable Power Generation Volume 4 ; 4 ; >
-      au < crawling ; exists ; 2011 ; IET Renewable Power Generation Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2011 ; IET Renewable Power Generation Volume 5 ; 5 ; >
       au < frozen ; exists ; 2012 ; IET Renewable Power Generation Volume 6 ; 6 ; >
       au < frozen ; exists ; 2013 ; IET Renewable Power Generation Volume 7 ; 7 ; >
       au < frozen ; exists ; 2014 ; IET Renewable Power Generation Volume 8 ; 8 ; >
@@ -673,7 +673,7 @@
 
       au < manifest ; exists ; 2007 ; IET Systems Biology Volume 1 ; 1 ; >
       au < manifest ; exists ; 2008 ; IET Systems Biology Volume 2 ; 2 ; >
-      au < crawling ; exists ; 2009 ; IET Systems Biology Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2009 ; IET Systems Biology Volume 3 ; 3 ; >
       au < frozen ; exists ; 2010 ; IET Systems Biology Volume 4 ; 4 ; >
       au < crawling ; exists ; 2011 ; IET Systems Biology Volume 5 ; 5 ; >
       au < frozen ; exists ; 2012 ; IET Systems Biology Volume 6 ; 6 ; >
@@ -697,7 +697,7 @@
       >
       param[journal_id] = iet-wss
 
-      au < crawling ; exists ; 2011 ; IET Wireless Sensor Systems Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2011 ; IET Wireless Sensor Systems Volume 1 ; 1 ; >
       au < frozen ; exists ; 2012 ; IET Wireless Sensor Systems Volume 2 ; 2 ; >
       au < frozen ; exists ; 2013 ; IET Wireless Sensor Systems Volume 3 ; 3 ; >
       au < frozen ; exists ; 2014 ; IET Wireless Sensor Systems Volume 4 ; 4 ; >
