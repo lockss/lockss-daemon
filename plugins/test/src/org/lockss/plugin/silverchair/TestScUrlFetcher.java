@@ -40,6 +40,7 @@ import org.lockss.plugin.UrlData;
 import org.lockss.plugin.base.BaseCachedUrl;
 import org.lockss.plugin.base.BaseCachedUrlSet;
 import org.lockss.plugin.base.PassiveUrlConsumerFactory;
+import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.test.*;
 import org.lockss.util.CIProperties;
 import org.lockss.util.Logger;
