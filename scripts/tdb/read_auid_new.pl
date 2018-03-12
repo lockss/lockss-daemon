@@ -108,10 +108,10 @@ while (my $line = <>) {
           }
         }
       } else {
-        $result = "--"
+        $result = "--NO_TAG--"
       }
     } else {
-      $result = "--"
+      $result = "--REQ_FAIL--"
     }
     sleep(4);
 
@@ -157,10 +157,10 @@ while (my $line = <>) {
                     }
                 }
             } else {
-                $result = "--"
+                $result = "--NO_TAG--"
             }
         } else {
-            $result = "--"
+            $result = "--REQ_FAIL--"
         }
         sleep(4);
 
@@ -210,10 +210,10 @@ while (my $line = <>) {
                     $result = "MissingProbeLink";
                 }
             } else {
-                $result = "--"
+                $result = "--NO_TAG--"
             }
         } else {
-            $result = "--"
+            $result = "--REQ_FAIL--"
         }
         sleep(4);
 
@@ -263,10 +263,10 @@ while (my $line = <>) {
                     $result = "MissingProbeLink";
                 }
             } else {
-                $result = "--"
+                $result = "--NO_TAG--"
             }
         } else {
-            $result = "--"
+            $result = "--REQ_FAIL--"
         }
         sleep(4);
 
@@ -289,10 +289,10 @@ while (my $line = <>) {
 #        }
 #    $result = "Manifest"
 #      } else {
-#    $result = "--"
+#    $result = "--NO_TAG--"
 #      }
 #  } else {
-#      $result = "--"
+#      $result = "--REQ_FAIL--"
 #  }
 #        sleep(4);
 
@@ -304,14 +304,17 @@ while (my $line = <>) {
       my $resp = $ua->request($req);
       if ($resp->is_success) {
           my $man_contents = $resp->content;
-          if (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) || ($man_contents =~ m/$oa_tag/))) {
+          if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+          } elsif (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) || ($man_contents =~ m/$oa_tag/))) {
               $vol_title = $param{collection_id};
               $result = "Manifest"
           } else {
-              $result = "--"
+              $result = "--NO_TAG--"
           }
       } else {
-          $result = "--"
+          $result = "--REQ_FAIL--"
       }
       sleep(5);
 
@@ -323,7 +326,10 @@ while (my $line = <>) {
       my $resp = $ua->request($req);
       if ($resp->is_success) {
           my $man_contents = $resp->content;
-          if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
+          if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+          } elsif (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
               if ($man_contents =~ m/<title>\s*(.*)\s*<\/title>/si) {
                   $vol_title = $1;
               }
@@ -336,7 +342,7 @@ while (my $line = <>) {
               $result = "--NO_TAG--";
           }
       } else {
-          $result = "--"
+          $result = "--REQ_FAIL--"
       }
       sleep(5);
 
@@ -353,7 +359,10 @@ while (my $line = <>) {
       my $resp_p = $ua->request($req_p);
       if ($resp->is_success) {
           my $man_contents_p = $resp_p->content;
-          if (defined($man_contents_p) && ($man_contents_p =~ m/$clockss_tag/)) {
+          if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+          } elsif (defined($man_contents_p) && ($man_contents_p =~ m/$clockss_tag/)) {
               if ($man_contents_p =~ m/<title>\s*(.*)\s*<\/title>/si) {
                   $vol_title = $1;
               }
@@ -367,7 +376,7 @@ while (my $line = <>) {
               $result = "--NO_TAG--";
           }
       } else {
-          $result = "--"
+          $result = "--REQ_FAIL--"
       }
       sleep(5);
 
@@ -382,24 +391,22 @@ while (my $line = <>) {
         if ($req->url ne $resp->request->uri) {
           $vol_title = $resp->request->uri;
           $result = "Redirected";
-        } else {
-          if (defined($man_contents) && 
+        } elsif (defined($man_contents) && 
              (($man_contents =~ m/$lockss_tag/) || ($man_contents =~ m/$oa_tag/)) &&
               ($man_contents =~ m/$param{journal_abbr}\/vol$param{volume}/)) {
-            if ($man_contents =~ m/<title>(.*) --.*<\/title>/si) {
-              $vol_title = $1;
-              $vol_title =~ s/\s*\n\s*/ /g;
-              if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
-                $vol_title = "\"" . $vol_title . "\"";
-              }
+          if ($man_contents =~ m/<title>(.*) --.*<\/title>/si) {
+            $vol_title = $1;
+            $vol_title =~ s/\s*\n\s*/ /g;
+            if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+              $vol_title = "\"" . $vol_title . "\"";
             }
-            $result = "Manifest"
-          } else {
-            $result = "--";
           }
+          $result = "Manifest"
+        } else {
+          $result = "--NO_TAG--"
         }
       } else {
-        $result = "--"
+        $result = "--REQ_FAIL--"
       }
       sleep(4);
 
@@ -411,7 +418,10 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && (($man_contents =~ m/$clockss_tag/)) && ($man_contents =~ m/$param{journal_abbr}\/vol$param{volume}/)) {
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && (($man_contents =~ m/$clockss_tag/)) && ($man_contents =~ m/$param{journal_abbr}\/vol$param{volume}/)) {
     if ($man_contents =~ m/<title>(.*) --.*<\/title>/si) {
         $vol_title = $1;
         $vol_title =~ s/\s*\n\s*/ /g;
@@ -421,10 +431,10 @@ while (my $line = <>) {
     }
     $result = "Manifest"
       } else {
-    $result = "--"
+    $result = "--NO_TAG--"
       }
   } else {
-      $result = "--"
+      $result = "--REQ_FAIL--"
   }
         sleep(4);
 
@@ -574,10 +584,10 @@ while (my $line = <>) {
         }
          $result = "Manifest"
       } else {
-         $result = "--"
+         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--"
+      $result = "--REQ_FAIL--"
     }
         sleep(4);
 
@@ -598,10 +608,10 @@ while (my $line = <>) {
 #        }
 #         $result = "Manifest"
 #      } else {
-#         $result = "--"
+#         $result = "--NO_TAG--"
 #      }
 #    } else {
-#      $result = "--"
+#      $result = "--REQ_FAIL--"
 #    }
 #        sleep(4);
 #Newplugin is org.lockss.plugin.pensoft.oai.ClockssPensoftOaiPlugin
@@ -618,7 +628,10 @@ while (my $line = <>) {
         if ($resp->is_success) {
             my $man_contents = $resp->content;
             #no lockss permission statement on start page. Permission statement is here: https://www.thieme-connect.de/lockss.txt
-            if (defined($man_contents) && ($man_contents =~ m/Year $param{volume_name}/) && ($man_contents =~ m/DOI: $doi/)) {
+            if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+            } elsif (defined($man_contents) && ($man_contents =~ m/Year $param{volume_name}/) && ($man_contents =~ m/DOI: $doi/)) {
                 if ($man_contents =~ m/<h1>(.*)<\/h1>/si) {
                     $vol_title = $1
                 }
@@ -627,7 +640,7 @@ while (my $line = <>) {
                 $result = "--"
             }
         } else {
-            $result = "--"
+            $result = "--REQ_FAIL--"
         }
         sleep(4);
         
@@ -642,16 +655,19 @@ while (my $line = <>) {
         my $resp = $ua->request($req);
         if ($resp->is_success) {
             my $man_contents = $resp->content;
-            if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/Year $param{volume_name}/) && ($man_contents =~ m/DOI: $doi/)) {
+            if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+            } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/Year $param{volume_name}/) && ($man_contents =~ m/DOI: $doi/)) {
                 if ($man_contents =~ m/<h1>(.*)<\/h1>/si) {
                     $vol_title = $1
                 }
                 $result = "Manifest"
             } else {
-                $result = "--"
+                $result = "--NO_TAG--"
             }
         } else {
-            $result = "--"
+            $result = "--REQ_FAIL--"
         }
         sleep(4);
         
@@ -664,7 +680,10 @@ while (my $line = <>) {
         if ($resp->is_success) {
             my $man_contents = $resp->content;
             #no lockss permission statement on start page. Permission statement is here: https://www.thieme-connect.de/lockss.txt
-            if (defined($man_contents) && ($man_contents =~ m/products\/ebooks\/pdf/)) {
+            if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+            } elsif (defined($man_contents) && ($man_contents =~ m/products\/ebooks\/pdf/)) {
                  if ($man_contents =~ m/<h1 class="productTitle">(.*)\s*<\/h1>/si) {
                     $vol_title = $1;
                     $vol_title =~ s/\s*\n\s*/ /g;
@@ -674,7 +693,7 @@ while (my $line = <>) {
                 $result = "--"
             }
         } else {
-            $result = "--"
+            $result = "--REQ_FAIL--"
         }
         sleep(4);
         
@@ -687,17 +706,20 @@ while (my $line = <>) {
         #printf("response: %s", $resp->status_line);
         if ($resp->is_success) {
             my $man_contents = $resp->content;
-            if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/products\/ebooks\/pdf/)) {
+            if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+            } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/products\/ebooks\/pdf/)) {
                 if ($man_contents =~ m/<h1 class="productTitle">(.*)\s*<\/h1>/si) {
                     $vol_title = $1;
                     $vol_title =~ s/\s*\n\s*/ /g;
                 }
                 $result = "Manifest"
             } else {
-                $result = "--"
+                $result = "--NO_TAG--"
             }
         } else {
-            $result = "--"
+            $result = "--REQ_FAIL--"
         }
         sleep(4);
 
@@ -709,7 +731,10 @@ while (my $line = <>) {
         my $resp = $ua->request($req);
         if ($resp->is_success) { 
             my $man_contents = $resp->content;
-            if (defined($man_contents)) {
+            if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+            } elsif (defined($man_contents)) {
 		#<h1>CLOCKSS - Published Issues: Biosimilars 2015</h1>
                 if ($man_contents =~ m/<h1>CLOCKSS - Published Issues: (.*) $param{year}<\/h1>/si) {
                     $vol_title = $1
@@ -719,7 +744,7 @@ while (my $line = <>) {
                 $result = "--"
             }
         } else {
-            $result = "--"
+            $result = "--REQ_FAIL--"
         }
         sleep(4);
         
@@ -775,10 +800,10 @@ while (my $line = <>) {
               }
               $result = "Manifest";
           } else {
-              $result = "--"
+              $result = "--NO_TAG--"
           }
       } else {
-          $result = "--"
+          $result = "--REQ_FAIL--"
       }
         sleep(4);
 
@@ -833,10 +858,10 @@ while (my $line = <>) {
               }
               $result = "Manifest";
           } else {
-              $result = "--"
+              $result = "--NO_TAG--"
           }
       } else {
-      $result = "--"
+      $result = "--REQ_FAIL--"
   }
         sleep(4);
 
@@ -888,15 +913,15 @@ while (my $line = <>) {
                       if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+pdf(plus)?\/${doi1}\//)) {
                           $result = "Manifest";
                       }
-                  } 
+                  }
               }
           } else {
-              $result = "--"
+            $result = "--NO_TAG--"
           }
       } else {
-          $result = "--"
+          $result = "--REQ_FAIL--"
       }
-        sleep(4);
+      sleep(4);
 
   # the CLOCKSS Atypon Books plugins go here
   } elsif (($plugin eq "ClockssGenericAtyponBooksPlugin") ||
@@ -952,10 +977,10 @@ while (my $line = <>) {
                   }
               }
           } else {
-              $result = "--"
+              $result = "--NO_TAG--"
           }
       } else {
-          $result = "--"
+          $result = "--REQ_FAIL--"
       }
         sleep(4);
 # use "\w+" at beginning of match to indicate something other than needs.SourcePlugin
@@ -989,10 +1014,10 @@ while (my $line = <>) {
               }
               $result = "Manifest";
           } else {
-              $result = "--"
+              $result = "--NO_TAG--"
           }
       } else {
-          $result = "--"
+          $result = "--REQ_FAIL--"
       }
       sleep(4);
 
@@ -1015,10 +1040,10 @@ while (my $line = <>) {
 #        }
 #        $result = "Manifest";
 #      } else {
-#        $result = "--"
+#        $result = "--NO_TAG--"
 #      }
 #    } else {
-#      $result = "--"
+#      $result = "--REQ_FAIL--"
 #    }
 #    sleep(4);
 #
@@ -1041,10 +1066,10 @@ while (my $line = <>) {
 #        }
 #        $result = "Manifest";
 #      } else {
-#        $result = "--"
+#        $result = "--NO_TAG--"
 #      }
 #    } else {
-#      $result = "--"
+#      $result = "--REQ_FAIL--"
 #    }
 #    sleep(4);
 
@@ -1057,7 +1082,10 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
         $vol_title = $param{journal_id};
         if (($man_contents =~ m/\/$param{journal_id}\//) && ($man_contents =~ m/$param{year}/)) {
           $result = "Manifest";
@@ -1065,10 +1093,10 @@ while (my $line = <>) {
           $result = "--NO_URL--";
         }
       } else {
-        $result = "--"
+        $result = "--NO_TAG--"
       }
     } else {
-      $result = "--"
+      $result = "--REQ_FAIL--"
     }
     sleep(4);
 
@@ -1080,7 +1108,10 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
         $vol_title = $param{collection_id} . " " . $param{year_string};
         if (($man_contents =~ m/\/$param{collection_id}\//) && ($man_contents =~ m/$param{year_string}/) &&
             ($man_contents =~ m/\/books\/$param{collection_id}\/year\/$param{year_string}/)) {
@@ -1089,10 +1120,10 @@ while (my $line = <>) {
           $result = "--NO_URL--";
         }
       } else {
-        $result = "--"
+        $result = "--NO_TAG--"
       }
     } else {
-      $result = "--" . $resp->code() . " " . $resp->message();
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
 
@@ -1105,14 +1136,17 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && ($man_contents =~ m/\/$param{journal_id}\/$param{year}/)) {
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && ($man_contents =~ m/\/$param{journal_id}\/$param{year}/)) {
         $vol_title = $param{journal_id};
         $result = "Manifest";
       } else {
-        $result = "--"
+        $result = "--NO_TAG--"
       }
     } else {
-      $result = "--"
+      $result = "--REQ_FAIL--"
     }
     sleep(4);
 
@@ -1125,14 +1159,17 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/\/$param{journal_id}\/$param{year}/)) {
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/\/$param{journal_id}\/$param{year}/)) {
         $vol_title = $param{journal_id};
         $result = "Manifest";
       } else {
-        $result = "--"
+        $result = "--NO_TAG--"
       }
     } else {
-      $result = "--"
+      $result = "--REQ_FAIL--"
     }
     sleep(4);
 
@@ -1155,10 +1192,10 @@ while (my $line = <>) {
 #        }
 #        $result = "Manifest";
 #      } else {
-#        $result = "--"
+#        $result = "--NO_TAG--"
 #      }
 #    } else {
-#      $result = "--"
+#      $result = "--REQ_FAIL--"
 #    }
 #    sleep(4);
 #
@@ -1171,7 +1208,10 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/ || $man_contents =~ m/$oa_tag/) && ($man_contents =~ m/a href=.lockss.php/)) {
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && ($man_contents =~ m/$lockss_tag/ || $man_contents =~ m/$oa_tag/) && ($man_contents =~ m/a href=.lockss.php/)) {
         if ($man_contents =~ m/<title>LOCKSS - Published Issues: (.*)<\/title>/si) {
           $vol_title = $1;
           $vol_title =~ s/\s*\n\s*/ /g;
@@ -1181,10 +1221,10 @@ while (my $line = <>) {
         }
         $result = "Manifest";
       } else {
-        $result = "--"
+        $result = "--NO_TAG--"
       }
     } else {
-      $result = "--"
+      $result = "--REQ_FAIL--"
     }
     sleep(4);
 
@@ -1197,7 +1237,10 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/a href=.lockss.php/)) {
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/a href=.lockss.php/)) {
         if ($man_contents =~ m/<title>CLOCKSS - Published Issues: (.*)<\/title>/si) {
           $vol_title = $1;
           $vol_title =~ s/\s*\n\s*/ /g;
@@ -1207,10 +1250,10 @@ while (my $line = <>) {
         }
         $result = "Manifest";
       } else {
-        $result = "--"
+        $result = "--NO_TAG--"
       }
     } else {
-      $result = "--"
+      $result = "--REQ_FAIL--"
     }
     sleep(4);
 
@@ -1222,7 +1265,10 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) || ($man_contents =~ m/$oa_tag/))) {
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) || ($man_contents =~ m/$oa_tag/))) {
         if ($man_contents =~ m/<title>(.*)\s*LOCKSS Manifest Page<\/title>/si) {
           $vol_title = $1;
           $vol_title =~ s/\s*\n\s*/ /g;
@@ -1232,10 +1278,10 @@ while (my $line = <>) {
         }
         $result = "Manifest"
       } else {
-        $result = "--"
+        $result = "--NO_TAG--"
       }
     } else {
-      $result = "--"
+      $result = "--REQ_FAIL--"
     }
     sleep(4);
 
@@ -1247,7 +1293,10 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
         if ($man_contents =~ m/<title>(.*)\s*CLOCKSS Manifest Page<\/title>/si) {
           $vol_title = $1;
           $vol_title =~ s/\s*\n\s*/ /g;
@@ -1257,10 +1306,10 @@ while (my $line = <>) {
         }
         $result = "Manifest"
       } else {
-        $result = "--"
+        $result = "--NO_TAG--"
       }
     } else {
-      $result = "--"
+      $result = "--REQ_FAIL--"
     }
     sleep(4);
 
@@ -1275,10 +1324,10 @@ while (my $line = <>) {
 #      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
 #        $result = "Manifest"
 #      } else {
-#        $result = "--"
+#        $result = "--NO_TAG--"
 #      }
 #    } else {
-#      $result = "--"
+#      $result = "--REQ_FAIL--"
 #    }
 #    sleep(4);
 #
@@ -1293,10 +1342,10 @@ while (my $line = <>) {
 #      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
 #        $result = "Manifest"
 #      } else {
-#        $result = "--"
+#        $result = "--NO_TAG--"
 #      }
 #    } else {
-#      $result = "--"
+#      $result = "--REQ_FAIL--"
 #    }
 #    sleep(4);
 #
@@ -1308,7 +1357,10 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && (($man_contents =~ m/\/$param{journal_id}\/journal\/v$param{volume_name}/) || ($man_contents =~ m/\/$param{journal_id}\/archive\//) || ($man_contents =~ m/\/$param{journal_id}\/index_ja.html/))) {
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && (($man_contents =~ m/\/$param{journal_id}\/journal\/v$param{volume_name}/) || ($man_contents =~ m/\/$param{journal_id}\/archive\//) || ($man_contents =~ m/\/$param{journal_id}\/index_ja.html/))) {
         if ($man_contents =~ m/<TITLE>\s*(.*)\s*<\/TITLE>/si) {
           $vol_title = $1;
           $vol_title =~ s/\s*\n\s*/ /g;
@@ -1318,10 +1370,10 @@ while (my $line = <>) {
         }
         $result = "Manifest"
       } else {
-        $result = "--"
+        $result = "--NO_TAG--"
       }
     } else {
-      $result = "--"
+      $result = "--REQ_FAIL--"
     }
     sleep(4);
 
@@ -1333,7 +1385,10 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/\/download\/10.1057\/$param{book_isbn}(\.pdf|\.epub|\")/)) {
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/\/download\/10.1057\/$param{book_isbn}(\.pdf|\.epub|\")/)) {
         if ($man_contents =~ m/<h1 class="product-title"\s*>\s*([^<>]*)\s*<\/h1>/si) {
           $vol_title = $1;
           $vol_title =~ s/\s*\n\s*/ /g;
@@ -1345,10 +1400,10 @@ while (my $line = <>) {
         }
         $result = "Manifest"
       } else {
-        $result = "--"
+        $result = "--NO_TAG--"
       }
     } else {
-      $result = "--"
+      $result = "--REQ_FAIL--"
     }
     sleep(4);
 
@@ -1360,7 +1415,10 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && ($man_contents =~ m/<a href="[^"]*$param{volume_name}/)) {
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && ($man_contents =~ m/<a href="[^"]*$param{volume_name}/)) {
         if ($man_contents =~ m/<TITLE>\s*(.*)\s*<\/TITLE>/si) {
           $vol_title = $1;
           $vol_title =~ s/\s*\n\s*/ /g;
@@ -1370,10 +1428,10 @@ while (my $line = <>) {
         }
         $result = "Manifest"
       } else {
-        $result = "--"
+        $result = "--NO_TAG--"
       }
     } else {
-      $result = "--"
+      $result = "--REQ_FAIL--"
     }
     sleep(4);
   } elsif ($plugin eq "ClockssIngentaJournalPlugin") {
@@ -1384,7 +1442,10 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/<a href="[^"]*$param{volume_name}/)) {
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/<a href="[^"]*$param{volume_name}/)) {
         if ($man_contents =~ m/<TITLE>\s*(.*)\s*<\/TITLE>/si) {
           $vol_title = $1;
           $vol_title =~ s/\s*\n\s*/ /g;
@@ -1394,10 +1455,10 @@ while (my $line = <>) {
         }
         $result = "Manifest"
       } else {
-        $result = "--"
+        $result = "--NO_TAG--"
       }
     } else {
-      $result = "--"
+      $result = "--REQ_FAIL--"
     }
     sleep(4);
   } elsif ($plugin eq "ClockssIngentaBooksPlugin") {
@@ -1409,7 +1470,10 @@ while (my $line = <>) {
     if ($resp->is_success) {
       my $man_contents = $resp->content;
       #manifest must have pub_id and art00001 - /content/bkpub/2ouatw/2016/00000001/00000001/art00001
-      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/<a href="[^"]*$param{publisher_id}\/[^"]+\/art00001/)) {
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/<a href="[^"]*$param{publisher_id}\/[^"]+\/art00001/)) {
         if ($man_contents =~ m/<TITLE>Ingenta Connect\s*(.*)\s*CLOCKSS MANIFEST PAGE<\/TITLE>/si) {
           $vol_title = $1;
           $vol_title =~ s/\s*\n\s*/ /g;
@@ -1419,10 +1483,10 @@ while (my $line = <>) {
         }
         $result = "Manifest"
       } else {
-        $result = "--"
+        $result = "--NO_TAG--"
       }
     } else {
-      $result = "--"
+      $result = "--REQ_FAIL--"
     }
     sleep(4);
 #  } elsif ($plugin eq "MetaPressPlugin") {
@@ -1481,7 +1545,10 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
       if ($man_contents =~ m/<title>\s*(.*)\s*LOCKSS Manifest Page\s*<\/title>/si) {
           $vol_title = $1;
           $vol_title =~ s/\s*\n\s*/ /g;
@@ -1529,7 +1596,10 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
         if ($man_contents =~ m/<TITLE>\s*(.*)\s*<\/TITLE>/si) {
           $vol_title = $1;
           $vol_title =~ s/\s*\n\s*/ /g;
@@ -1554,7 +1624,10 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && ($man_contents =~ m/$igi_tag/)) {
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && ($man_contents =~ m/$igi_tag/)) {
         if ($man_contents =~ m/<TITLE>\s*(.*)\s*<\/TITLE>/si) {
           $vol_title = $1;
           $vol_title =~ s/\s*\n\s*/ /g;
@@ -1579,7 +1652,10 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/$igi_tag/)) {
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/$igi_tag/)) {
         if ($man_contents =~ m/<TITLE>\s*(.*)\s*<\/TITLE>/si) {
           $vol_title = $1;
           $vol_title =~ s/\s*\n\s*/ /g;
@@ -1700,7 +1776,10 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && ($man_contents =~ m/\/lockss\?journalcode=$param{journal_code}&volume=$param{volume_name}&year=$param{year}/)) {
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && ($man_contents =~ m/\/lockss\?journalcode=$param{journal_code}&volume=$param{volume_name}&year=$param{year}/)) {
         if ($man_contents =~ m/<title>\s*RSC Journals \|(.*)\s*<\/title>/si) {
           $vol_title = $1;
           $vol_title =~ s/\s*\n\s*/ /g;
@@ -1725,7 +1804,10 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/\/lockss\?journalcode=$param{journal_code}&volume=$param{volume_name}&year=$param{year}/)) {
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/\/lockss\?journalcode=$param{journal_code}&volume=$param{volume_name}&year=$param{year}/)) {
         if ($man_contents =~ m/<title>\s*RSC Journals \|(.*)\s*<\/title>/si) {
           $vol_title = $1;
           $vol_title =~ s/\s*\n\s*/ /g;
@@ -1757,7 +1839,10 @@ while (my $line = <>) {
 #      } else {
 #	print "no match -has chapters\n";
 #      }
-      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
         if ($man_contents !~ m/$has_no_chapters/) {
           if ($man_contents =~ m/<title>\s*ASMscience \|(.*)\s*<\/title>/si) {
             $vol_title = $1;
@@ -1787,7 +1872,10 @@ while (my $line = <>) {
     if ($resp->is_success) {
       my $man_contents = $resp->content;
       my $has_no_chapters = "Chapters \\(0\\)";
-      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
         if ($man_contents !~ m/$has_no_chapters/) {
           if ($man_contents =~ m/<title>\s*ASMscience \|(.*)\s*<\/title>/si) {
             $vol_title = $1;
@@ -1817,7 +1905,10 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
         $result = "Manifest"
       } else {
         $result = "--NO_TAG--"
@@ -1835,7 +1926,10 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
         $result = "Manifest"
       } else {
         $result = "--NO_TAG--"
@@ -1853,7 +1947,10 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
         $result = "Manifest"
       } else {
         $result = "--NO_TAG--"
@@ -1871,7 +1968,10 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
         $result = "Manifest"
       } else {
         $result = "--NO_TAG--"
@@ -1890,7 +1990,10 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
         $result = "Manifest"
       } else {
         $result = "--NO_TAG--"
@@ -2002,7 +2105,10 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$bmc_tag/) && ($man_contents =~ m/content\/$param{volume_name}/)) {
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && ($man_contents =~ m/$bmc_tag/) && ($man_contents =~ m/content\/$param{volume_name}/)) {
         if ($man_contents =~ m/<title>(.*)<\/title>/si) {
           $vol_title = $1;
           $vol_title =~ s/ \| / /g;
@@ -2029,7 +2135,10 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && (($man_contents =~ m/$bmc_tag/) || ($man_contents =~ m/$bmc2_tag/)) && ($man_contents =~ m/content\/$param{volume_name}/)) {
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && (($man_contents =~ m/$bmc_tag/) || ($man_contents =~ m/$bmc2_tag/)) && ($man_contents =~ m/content\/$param{volume_name}/)) {
         if ($man_contents =~ m/<title>(.*)<\/title>/si) {
           $vol_title = $1;
           $vol_title =~ s/ \| / /g;
@@ -2055,7 +2164,10 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/journals\/$param{journal_id}\/$param{volume_name}/)) {
+      if ($req->url ne $resp->request->uri) {
+        $vol_title = $resp->request->uri;
+        $result = "Redirected";
+      } elsif (defined($man_contents) && ($man_contents =~ m/journals\/$param{journal_id}\/$param{volume_name}/)) {
         if ($man_contents =~ m/<title>(.*)<\/title>/si) {
           $vol_title = $1;
           #$vol_title =~ s/ \| / /g;
@@ -2085,7 +2197,10 @@ while (my $line = <>) {
       #showBackIssue.asp?issn=0189-6725;year=2015;volume=12
       #showBackIssue.asp?issn=0022-3859;year=2016;volume=62
       #showBackIssue.asp?issn=$param{journal_issn};year=$param{year};volume=$param{volume_name}
-      if (defined($man_contents) && ($man_contents =~ m/showBackIssue.asp\?issn=$param{journal_issn};year=$param{year};volume=$param{volume_name}/)) {
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && ($man_contents =~ m/showBackIssue.asp\?issn=$param{journal_issn};year=$param{year};volume=$param{volume_name}/)) {
         if ($man_contents =~ m/<title>(.*)<\/title>/si) {
           $vol_title = $1;
           $vol_title =~ s/\s*\n\s*/ /g;
@@ -2134,7 +2249,10 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && ($man_contents =~ m/\/publications\/$param{journal_id}\/tocs\/$param{volume_name}\//)) {
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && ($man_contents =~ m/\/publications\/$param{journal_id}\/tocs\/$param{volume_name}\//)) {
         if ($man_contents =~ m/<title>(.*)<\/title>/si) {
           $vol_title = $1;
           $vol_title =~ s/ \| Digital Library//;
@@ -2158,7 +2276,10 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/\/publications\/$param{journal_id}\/tocs\/$param{volume_name}\//)) {
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/\/publications\/$param{journal_id}\/tocs\/$param{volume_name}\//)) {
         if ($man_contents =~ m/<title>(.*)<\/title>/si) {
           $vol_title = $1;
           $vol_title =~ s/ \| Digital Library//;
@@ -2183,7 +2304,10 @@ while (my $line = <>) {
     if ($resp->is_success) {
       my $man_contents = $resp->content;
 #      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && (man_contents =~ m/issn=$param{journal_issn}.vol=$param{volume_name}/)) {
-      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && ($man_contents =~ m/vol=$param{volume_name}/)) {
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && ($man_contents =~ m/vol=$param{volume_name}/)) {
         if ($man_contents =~ m/<h1>(.*)<\/h1>/si) {
           $vol_title = $1;
         }
@@ -2205,7 +2329,10 @@ while (my $line = <>) {
     if ($resp->is_success) {
       my $man_contents = $resp->content;
 #      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && (man_contents =~ m/issn=$param{journal_issn}.vol=$param{volume_name}/)) {
-      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/vol=$param{volume_name}/)) {
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/vol=$param{volume_name}/)) {
         if ($man_contents =~ m/<h1>(.*)<\/h1>/si) {
           $vol_title = $1;
         }
@@ -2226,7 +2353,10 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
         $result = "Manifest"
       } else {
         $result = "--NO_TAG--"
@@ -2245,7 +2375,10 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
         $result = "Manifest"
       } else {
         $result = "--NO_TAG--"
@@ -2263,7 +2396,10 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
       	$vol_title= "Proceedings for " . $param{year};
         $result = "Manifest"
       } else {
@@ -2282,7 +2418,10 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
       	$vol_title= "Proceedings for " . $param{year};
         $result = "Manifest"
       } else {
@@ -2301,7 +2440,10 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
       if ($man_contents =~ m/<title>(.*)<\/title>/si) {
           $vol_title = $1;
           $vol_title =~ s/\s*\n\s*/ /g;
@@ -2323,7 +2465,10 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
       if ($man_contents =~ m/<title>(.*)<\/title>/si) {
           $vol_title = $1;
           $vol_title =~ s/\s*\n\s*/ /g;
@@ -2344,7 +2489,10 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
         $result = "Manifest"
       } else {
         $result = "--NO_TAG--"
@@ -2363,7 +2511,10 @@ while (my $line = <>) {
     #printf("resp is %s\n",$resp->status_line);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
         $result = "Manifest"
       } else {
         $result = "--NO_TAG--"
@@ -2389,10 +2540,10 @@ while (my $line = <>) {
                   ($man_contents =~ m/stable\/[0-9.]+\//))) {
               $result = "Manifest";
           } else {
-              $result = "--"
+              $result = "--NO_TAG--"
           }
       } else {
-          $result = "--"
+          $result = "--REQ_FAIL--"
       }
       sleep(4);
   }elsif ($plugin eq "JstorCurrentScholarshipPlugin"){
@@ -2412,10 +2563,10 @@ while (my $line = <>) {
                   ($man_contents =~ m/stable\/[0-9.]+\//))) {
               $result = "Manifest";
           } else {
-              $result = "--"
+              $result = "--NO_TAG--"
           }
       } else {
-          $result = "--"
+          $result = "--REQ_FAIL--"
       }
       sleep(4);
       
