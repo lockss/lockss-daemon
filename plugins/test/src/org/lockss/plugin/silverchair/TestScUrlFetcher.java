@@ -40,6 +40,7 @@ import org.lockss.plugin.UrlData;
 import org.lockss.plugin.base.BaseCachedUrl;
 import org.lockss.plugin.base.BaseCachedUrlSet;
 import org.lockss.plugin.base.PassiveUrlConsumerFactory;
+import org.lockss.repository.OldLockssRepositoryImpl;
 import org.lockss.test.*;
 import org.lockss.util.CIProperties;
 import org.lockss.util.Logger;
@@ -78,7 +79,7 @@ public class TestScUrlFetcher extends LockssTestCase {
 
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     CIProperties props = new CIProperties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    props.setProperty(OldLockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
     theDaemon = getMockLockssDaemon();
