@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>129</string>
+    <string>130</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -157,10 +157,12 @@
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.highwire.HighWirePressH20HtmlCrawlFilterFactory</string>
   </entry>
+  <!-- remove article-depth-first control
   <entry>
     <string>plugin_crawl_url_comparator_factory</string>
     <string>org.lockss.plugin.highwire.HighWirePressH20CrawlUrlComparatorFactory</string>
   </entry>
+  -->
   <entry>
     <string>plugin_crawl_seed_factory</string>
     <string>org.lockss.plugin.highwire.HighWirePressH20CrawlSeedFactory</string>

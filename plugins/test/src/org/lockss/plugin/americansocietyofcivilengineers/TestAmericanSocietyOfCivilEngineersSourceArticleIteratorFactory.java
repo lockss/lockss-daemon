@@ -36,7 +36,6 @@ import org.lockss.config.Configuration;
 import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.SimulatedArchivalUnit;
 import org.lockss.plugin.simulated.SimulatedContentGenerator;
-import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.test.*;
 import org.lockss.util.*;
 

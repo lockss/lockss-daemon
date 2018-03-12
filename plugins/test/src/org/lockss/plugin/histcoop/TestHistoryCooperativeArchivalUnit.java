@@ -43,7 +43,6 @@ import org.lockss.test.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.BaseCachedUrlSet;
 import org.lockss.state.AuState;
-import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.plugin.definable.*;
 
 public class TestHistoryCooperativeArchivalUnit extends LockssTestCase {
