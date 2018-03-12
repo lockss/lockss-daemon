@@ -379,22 +379,29 @@ while (my $line = <>) {
       my $resp = $ua->request($req);
       if ($resp->is_success) {
         my $man_contents = $resp->content;
-        if (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) || ($man_contents =~ m/$oa_tag/)) && ($man_contents =~ m/$param{journal_abbr}\/vol$param{volume}/)) {
-          if ($man_contents =~ m/<title>(.*) --.*<\/title>/si) {
-            $vol_title = $1;
-            $vol_title =~ s/\s*\n\s*/ /g;
-            if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
-              $vol_title = "\"" . $vol_title . "\"";
-            }
-          }
-          $result = "Manifest"
+        if ($req->url ne $resp->request->uri) {
+          $vol_title = $resp->request->uri;
+          $result = "Redirected";
         } else {
+          if (defined($man_contents) && 
+             (($man_contents =~ m/$lockss_tag/) || ($man_contents =~ m/$oa_tag/)) &&
+              ($man_contents =~ m/$param{journal_abbr}\/vol$param{volume}/)) {
+            if ($man_contents =~ m/<title>(.*) --.*<\/title>/si) {
+              $vol_title = $1;
+              $vol_title =~ s/\s*\n\s*/ /g;
+              if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+                $vol_title = "\"" . $vol_title . "\"";
+              }
+            }
+            $result = "Manifest"
+          } else {
+            $result = "--";
+          }
+        }
+      } else {
         $result = "--"
       }
-    } else {
-      $result = "--"
-  }
-        sleep(4);
+      sleep(4);
 
   } elsif ($plugin eq "ClockssBerkeleyElectronicPressPlugin") {
         $url = sprintf("%s%s/lockss-volume%d.html",
