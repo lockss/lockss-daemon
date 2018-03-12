@@ -42,7 +42,7 @@ import org.lockss.plugin.*;
 import org.lockss.protocol.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
-import org.lockss.repository.LockssRepositoryImpl;
+import org.lockss.repository.OldLockssRepositoryImpl;
 
 /** JUnitTest case for class: org.lockss.poller.Poll */
 public class TestV1PollTally extends LockssTestCase {

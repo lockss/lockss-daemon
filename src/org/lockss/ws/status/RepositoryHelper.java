@@ -43,7 +43,7 @@ import java.util.List;
 import java.util.Set;
 import org.lockss.app.LockssDaemon;
 import org.lockss.remote.RemoteApi;
-import org.lockss.repository.LockssRepositoryImpl;
+import org.lockss.repository.OldLockssRepositoryImpl;
 import org.lockss.util.Logger;
 import org.lockss.ws.entities.RepositoryWsResult;
 
@@ -117,7 +117,7 @@ public class RepositoryHelper {
     for (String repositorySpaceName : allRepositorySpacesNames) {
       // Get the name of the path to this repository space.
       String pathName =
-	  LockssRepositoryImpl.getLocalRepositoryPath(repositorySpaceName);
+	  OldLockssRepositoryImpl.getLocalRepositoryPath(repositorySpaceName);
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pathName = " + pathName);
 
       // Get the name of the root directory of this repository space.
@@ -127,7 +127,7 @@ public class RepositoryHelper {
 	buffer.append(File.separator);
       }
 
-      buffer.append(LockssRepositoryImpl.CACHE_ROOT_NAME);
+      buffer.append(OldLockssRepositoryImpl.CACHE_ROOT_NAME);
       buffer.append(File.separator);
 
       String repositorySpaceRootName = buffer.toString();

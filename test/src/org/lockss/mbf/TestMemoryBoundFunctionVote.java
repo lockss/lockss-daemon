@@ -43,7 +43,7 @@ import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.util.*;
 import org.lockss.protocol.*;
-import org.lockss.repository.LockssRepositoryImpl;
+import org.lockss.repository.OldLockssRepositoryImpl;
 import org.lockss.app.LockssDaemon;
 
 /**

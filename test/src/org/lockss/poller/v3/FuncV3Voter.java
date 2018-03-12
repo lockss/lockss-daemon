@@ -181,8 +181,8 @@ public class FuncV3Voter extends LockssTestCase {
     cus.setHashItSource(files);
     cus.setFlatItSource(files);
 
-    LockssRepositoryImpl repo =
-      (LockssRepositoryImpl)LockssRepositoryImpl.createNewLockssRepository(
+    OldLockssRepositoryImpl repo =
+      (OldLockssRepositoryImpl)OldLockssRepositoryImpl.createNewLockssRepository(
         mau);
     theDaemon.setLockssRepository(repo, mau);
     repo.initService(theDaemon);

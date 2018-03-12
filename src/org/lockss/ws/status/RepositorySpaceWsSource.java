@@ -52,7 +52,7 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.Plugin;
 import org.lockss.plugin.PluginManager;
-import org.lockss.repository.LockssRepositoryImpl;
+import org.lockss.repository.OldLockssRepositoryImpl;
 import org.lockss.util.Logger;
 import org.lockss.util.PlatformUtil;
 import org.lockss.util.PropUtil;
@@ -190,7 +190,7 @@ public class RepositorySpaceWsSource extends RepositorySpaceWsResult {
     Collection<String> specs = StringUtil.breakAt(getRepositorySpaceId(), ";");
 
     for (String repoSpec : specs) {
-      String path = LockssRepositoryImpl.getLocalRepositoryPath(repoSpec);
+      String path = OldLockssRepositoryImpl.getLocalRepositoryPath(repoSpec);
 
       if (path != null) {
 	roots.add(path);
@@ -211,7 +211,7 @@ public class RepositorySpaceWsSource extends RepositorySpaceWsResult {
 	buffer.append(File.separator);
       }
 
-      buffer.append(LockssRepositoryImpl.CACHE_ROOT_NAME);
+      buffer.append(OldLockssRepositoryImpl.CACHE_ROOT_NAME);
       buffer.append(File.separator);
       String extendedCacheLocation = buffer.toString();
 
@@ -224,7 +224,7 @@ public class RepositorySpaceWsSource extends RepositorySpaceWsResult {
 
 	  if (sub.isDirectory()) {
 	    String auid = null;
-	    File auidfile = new File(sub, LockssRepositoryImpl.AU_ID_FILE);
+	    File auidfile = new File(sub, OldLockssRepositoryImpl.AU_ID_FILE);
 
 	    if (auidfile.exists()) {
 	      Properties props = propsFromFile(auidfile);
@@ -244,10 +244,10 @@ public class RepositorySpaceWsSource extends RepositorySpaceWsResult {
 		    .get(PluginManager.AU_PARAM_REPOSITORY);
 
 		String repoRoot = (repoSpec == null) ? CurrentConfig
-		    .getParam(LockssRepositoryImpl.PARAM_CACHE_LOCATION)
-		    : LockssRepositoryImpl.getLocalRepositoryPath(repoSpec);
+		    .getParam(OldLockssRepositoryImpl.PARAM_CACHE_LOCATION)
+		    : OldLockssRepositoryImpl.getLocalRepositoryPath(repoSpec);
 
-		if (!LockssRepositoryImpl
+		if (!OldLockssRepositoryImpl
 		    .isDirInRepository(extendedCacheLocation, repoRoot)) {
 		  au = null;
 		}

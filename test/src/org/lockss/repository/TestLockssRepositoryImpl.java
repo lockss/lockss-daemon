@@ -53,7 +53,7 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
   private static Logger logger = Logger.getLogger("LockssRepository");
   private MockLockssDaemon daemon;
   private RepositoryManager repoMgr;
-  private LockssRepositoryImpl repo;
+  private OldLockssRepositoryImpl repo;
   private MockArchivalUnit mau;
   private String tempDirPath;
 
@@ -67,11 +67,11 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     repoMgr = daemon.getRepositoryManager();
     Properties props = new Properties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    props.setProperty(OldLockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     ConfigurationUtil.addFromProps(props);
 
     mau = setUpMau(null);
-    repo = (LockssRepositoryImpl)daemon.getLockssRepository(mau);
+    repo = (OldLockssRepositoryImpl)daemon.getLockssRepository(mau);
   }
 
   public void tearDown() throws Exception {
@@ -84,8 +84,8 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     if (id != null) {
       mau.setAuId(id);
     }
-    LockssRepositoryImpl repo =
-      (LockssRepositoryImpl)LockssRepositoryImpl.createNewLockssRepository(mau);
+    OldLockssRepositoryImpl repo =
+      (OldLockssRepositoryImpl)OldLockssRepositoryImpl.createNewLockssRepository(mau);
     // set small node cache; one test needs to fill it up
     repo.setNodeCacheSize(17);
     repo.initService(daemon);
@@ -94,12 +94,12 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
   }
 
   String getCacheLocation() {
-    return LockssRepositoryImpl.getCacheLocation();
+    return OldLockssRepositoryImpl.getCacheLocation();
   }
 
   public void testGetLocalRepository() throws Exception {
-    LockssRepositoryImpl.LocalRepository localRepo =
-      LockssRepositoryImpl.getLocalRepository(mau);
+    OldLockssRepositoryImpl.LocalRepository localRepo =
+      OldLockssRepositoryImpl.getLocalRepository(mau);
     assertNotNull("Failed to create LocalRepository for: " + mau, localRepo);
     assertEquals(tempDirPath, localRepo.getRepositoryPath());
 
@@ -108,8 +108,8 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     mau2.setConfiguration(ConfigurationUtil.fromArgs
 			  (PluginManager.AU_PARAM_REPOSITORY,
 			   repoSpec(tempDir2)));
-    LockssRepositoryImpl.LocalRepository localRepo2 =
-      LockssRepositoryImpl.getLocalRepository(mau2);
+    OldLockssRepositoryImpl.LocalRepository localRepo2 =
+      OldLockssRepositoryImpl.getLocalRepository(mau2);
     assertNotNull("Failed to create LocalRepository for: " + mau2, localRepo2);
     assertNotSame(localRepo2, localRepo);
     assertEquals(tempDir2, localRepo2.getRepositoryPath());
@@ -122,22 +122,22 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
 
   public void testGetLocalRepositoryPath() throws Exception {
     assertEquals("foo",
-		 LockssRepositoryImpl.getLocalRepositoryPath("local:foo"));
+		 OldLockssRepositoryImpl.getLocalRepositoryPath("local:foo"));
     assertEquals("/cache/foo",
-		 LockssRepositoryImpl.getLocalRepositoryPath("local:/cache/foo"));
-    assertNull(LockssRepositoryImpl.getLocalRepositoryPath("other:foo"));
-    assertNull(LockssRepositoryImpl.getLocalRepositoryPath("foo"));
+		 OldLockssRepositoryImpl.getLocalRepositoryPath("local:/cache/foo"));
+    assertNull(OldLockssRepositoryImpl.getLocalRepositoryPath("other:foo"));
+    assertNull(OldLockssRepositoryImpl.getLocalRepositoryPath("foo"));
   }
 
   public void testLocalRepository_GetAuMap() {
     Properties newProps = new Properties();
     mau.setAuId("barfoo");
-    newProps.setProperty(LockssRepositoryImpl.AU_ID_PROP, mau.getAuId());
+    newProps.setProperty(OldLockssRepositoryImpl.AU_ID_PROP, mau.getAuId());
     String location = getCacheLocation() + "ab";
-    LockssRepositoryImpl.saveAuIdProperties(location, newProps);
+    OldLockssRepositoryImpl.saveAuIdProperties(location, newProps);
 
-    LockssRepositoryImpl.LocalRepository localRepo =
-      LockssRepositoryImpl.getLocalRepository(mau);
+    OldLockssRepositoryImpl.LocalRepository localRepo =
+      OldLockssRepositoryImpl.getLocalRepository(mau);
     localRepo.auMap = null;
     Map aumap = localRepo.getAuMap();
     assertEquals(addSlash(location), aumap.get(mau.getAuId()));
@@ -149,7 +149,7 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
 
   public void testSuspectUrlVersions() throws Exception {
     String location =
-      LockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau);
+      OldLockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau);
 
     String url1 = "http://www.example.com/testDir/branch1/leaf1";
     createLeaf(url1, "test stream 1", null);
@@ -215,7 +215,7 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     asuv.markAsSuspect(url3, 2, res3, res4);
     assertTrue(asuv.isSuspect(url2, 2));
 
-    File file = new File(location, LockssRepositoryImpl.SUSPECT_VERSIONS_FILE);
+    File file = new File(location, OldLockssRepositoryImpl.SUSPECT_VERSIONS_FILE);
     assertFalse("Suspect file shouldn't exist: " + file, file.exists());
     repo.storeSuspectUrlVersions(mau, asuv);
 
@@ -224,14 +224,14 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     // Make a second AU and copy the serialized file, ensure it loads correctly
 
     MockArchivalUnit mau2 = setUpMau("second");
-    LockssRepositoryImpl repo2 =
-      (LockssRepositoryImpl)daemon.getLockssRepository(mau2);
+    OldLockssRepositoryImpl repo2 =
+      (OldLockssRepositoryImpl)daemon.getLockssRepository(mau2);
     repo2.startService();
     String location2 =
-      LockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau2);
+      OldLockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau2);
 
     File file2 = new File(location2,
-			  LockssRepositoryImpl.SUSPECT_VERSIONS_FILE);
+			  OldLockssRepositoryImpl.SUSPECT_VERSIONS_FILE);
     assertFalse("Suspect file2 shouldn't exist: " + file2, file2.exists());
     assertFalse(repo2.hasSuspectUrlVersions(mau2));
     FileUtils.copyFile(file, file2);
@@ -263,13 +263,13 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
   }
 
   public void testGetRepositoryRoot() throws Exception {
-    assertEquals(tempDirPath, LockssRepositoryImpl.getRepositoryRoot(mau));
+    assertEquals(tempDirPath, OldLockssRepositoryImpl.getRepositoryRoot(mau));
 
     Configuration auconf =
       ConfigurationUtil.fromArgs(PluginManager.AU_PARAM_REPOSITORY,
 				 "local:/foo/bar");
     mau.setConfiguration(auconf);
-    assertEquals("/foo/bar", LockssRepositoryImpl.getRepositoryRoot(mau));
+    assertEquals("/foo/bar", OldLockssRepositoryImpl.getRepositoryRoot(mau));
   }
 
   // The whole point of isDirInRepository() is to resolve symbolic links,
@@ -277,16 +277,16 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
   // link.  So we test only that isDirInRepository() is canonicalizing the
   // path.
   public void testIsDirInRepository() throws Exception {
-    assertTrue(LockssRepositoryImpl.isDirInRepository("/foo/bar", "/foo"));
-    assertTrue(LockssRepositoryImpl.isDirInRepository("/foo/bar", "/foo/"));
-    assertTrue(LockssRepositoryImpl.isDirInRepository("/foo/../bar/a",
+    assertTrue(OldLockssRepositoryImpl.isDirInRepository("/foo/bar", "/foo"));
+    assertTrue(OldLockssRepositoryImpl.isDirInRepository("/foo/bar", "/foo/"));
+    assertTrue(OldLockssRepositoryImpl.isDirInRepository("/foo/../bar/a",
 						      "/bar"));
-    assertFalse(LockssRepositoryImpl.isDirInRepository("/foo/bar", "/bar"));
+    assertFalse(OldLockssRepositoryImpl.isDirInRepository("/foo/bar", "/bar"));
   }
 
   public void testFileLocation() throws Exception {
     String cachePath =
-      LockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau);
+      OldLockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau);
     File testFile = new File(cachePath);
 
     createLeaf("http://www.example.com/testDir/branch1/leaf1",
@@ -428,7 +428,7 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
   public void testCaching() throws Exception {
     createLeaf("http://www.example.com/testDir/leaf1", null, null);
     createLeaf("http://www.example.com/testDir/leaf2", null, null);
-    LockssRepositoryImpl repoImpl = (LockssRepositoryImpl)repo;
+    OldLockssRepositoryImpl repoImpl = (OldLockssRepositoryImpl)repo;
 
     // initial values are strange because creating each child node
     // causes invalidateCachedValues() to be called nodes up to the root
@@ -445,7 +445,7 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
   public void testWeakReferenceCaching() throws Exception {
     createLeaf("http://www.example.com/testDir/leaf1", null, null);
 
-    LockssRepositoryImpl repoImpl = (LockssRepositoryImpl)repo;
+    OldLockssRepositoryImpl repoImpl = (OldLockssRepositoryImpl)repo;
     RepositoryNode leaf = repo.getNode("http://www.example.com/testDir/leaf1");
     RepositoryNode leaf2 = null;
     int loopSize = 1;
@@ -482,7 +482,7 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     try {
       leaf.getNodeContents().getInputStream();
       fail("Should have thrown state exception.");
-    } catch (LockssRepository.RepositoryStateException rse) { }
+    } catch (OldLockssRepository.RepositoryStateException rse) { }
 
     assertTrue(leaf.contentDir.exists());
     assertEquals(RepositoryNodeImpl.INACTIVE_VERSION, leaf.getCurrentVersion());
@@ -527,88 +527,88 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
   // test static naming calls
 
   public void testGetNextDirName() {
-    assertEquals("a", LockssRepositoryImpl.getNextDirName(""));
-    assertEquals("b", LockssRepositoryImpl.getNextDirName("a"));
-    assertEquals("c", LockssRepositoryImpl.getNextDirName("b"));
-    assertEquals("z", LockssRepositoryImpl.getNextDirName("y"));
-    assertEquals("aa", LockssRepositoryImpl.getNextDirName("z"));
-    assertEquals("ab", LockssRepositoryImpl.getNextDirName("aa"));
-    assertEquals("ba", LockssRepositoryImpl.getNextDirName("az"));
-    assertEquals("aaa", LockssRepositoryImpl.getNextDirName("zz"));
+    assertEquals("a", OldLockssRepositoryImpl.getNextDirName(""));
+    assertEquals("b", OldLockssRepositoryImpl.getNextDirName("a"));
+    assertEquals("c", OldLockssRepositoryImpl.getNextDirName("b"));
+    assertEquals("z", OldLockssRepositoryImpl.getNextDirName("y"));
+    assertEquals("aa", OldLockssRepositoryImpl.getNextDirName("z"));
+    assertEquals("ab", OldLockssRepositoryImpl.getNextDirName("aa"));
+    assertEquals("ba", OldLockssRepositoryImpl.getNextDirName("az"));
+    assertEquals("aaa", OldLockssRepositoryImpl.getNextDirName("zz"));
   }
 
   public void testGetAuDirFromMap() {
-    LockssRepositoryImpl.LocalRepository localRepo =
-      LockssRepositoryImpl.getLocalRepository("/foo");
+    OldLockssRepositoryImpl.LocalRepository localRepo =
+      OldLockssRepositoryImpl.getLocalRepository("/foo");
     Map aumap = localRepo.getAuMap();
     aumap.put(mau.getAuId(), "/foo/bar/testDir");
     assertEquals("/foo/bar/testDir",
-		 LockssRepositoryImpl.getAuDir(mau, "/foo", false));
+		 OldLockssRepositoryImpl.getAuDir(mau, "/foo", false));
   }
 
   public void testGetAuDirFromMapNoCacheWrongRepo() {
-    LockssRepositoryImpl.LocalRepository localRepo =
-      LockssRepositoryImpl.getLocalRepository("/foo");
+    OldLockssRepositoryImpl.LocalRepository localRepo =
+      OldLockssRepositoryImpl.getLocalRepository("/foo");
     Map aumap = localRepo.getAuMap();
     aumap.put(mau.getAuId(), "/foo/bar/testDir");
-    assertNull(LockssRepositoryImpl.getAuDir(mau, "/other/repo", false));
+    assertNull(OldLockssRepositoryImpl.getAuDir(mau, "/other/repo", false));
     assertEquals("/foo/bar/testDir",
-		 LockssRepositoryImpl.getAuDir(mau, "/foo", false));
-    assertNull(LockssRepositoryImpl.getAuDir(mau, "/other/repo", false));
+		 OldLockssRepositoryImpl.getAuDir(mau, "/foo", false));
+    assertNull(OldLockssRepositoryImpl.getAuDir(mau, "/other/repo", false));
   }
 
   public void testGetAuDirNoCreate() {
     mau.setAuId("foobar23");
-    assertNull(LockssRepositoryImpl.getAuDir(mau, "", false));
+    assertNull(OldLockssRepositoryImpl.getAuDir(mau, "", false));
   }
 
   public void testSaveAndLoadNames() {
     String location =
-      LockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau);
+      OldLockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau);
 
-    File idFile = new File(location + LockssRepositoryImpl.AU_ID_FILE);
+    File idFile = new File(location + OldLockssRepositoryImpl.AU_ID_FILE);
     assertTrue(idFile.exists());
 
-    Properties props = LockssRepositoryImpl.getAuIdProperties(location);
+    Properties props = OldLockssRepositoryImpl.getAuIdProperties(location);
     assertNotNull(props);
     assertEquals(mau.getAuId(),
-                 props.getProperty(LockssRepositoryImpl.AU_ID_PROP));
+                 props.getProperty(OldLockssRepositoryImpl.AU_ID_PROP));
   }
 
   public void testMapAuToFileLocation() {
-    LockssRepositoryImpl.localRepositories.clear();
-    LockssRepositoryImpl.lastPluginDir = "ba";
+    OldLockssRepositoryImpl.localRepositories.clear();
+    OldLockssRepositoryImpl.lastPluginDir = "ba";
     String expectedStr = getCacheLocation() + "bb/";
     assertEquals(FileUtil.sysDepPath(expectedStr),
-		 LockssRepositoryImpl.mapAuToFileLocation(tempDirPath,
+		 OldLockssRepositoryImpl.mapAuToFileLocation(tempDirPath,
 							  new MockArchivalUnit()));
   }
 
   public void testDoesAuDirExist() {
-    LockssRepositoryImpl.localRepositories.clear();
+    OldLockssRepositoryImpl.localRepositories.clear();
     MockArchivalUnit mau = new MockArchivalUnit();
     String auid = "sdflkjsd";
     mau.setAuId(auid);
-    assertFalse(LockssRepositoryImpl.doesAuDirExist(auid, tempDirPath));
+    assertFalse(OldLockssRepositoryImpl.doesAuDirExist(auid, tempDirPath));
     // ensure asking doesn't create it
-    assertFalse(LockssRepositoryImpl.doesAuDirExist(auid, tempDirPath));
-    LockssRepositoryImpl.lastPluginDir = "ga";
+    assertFalse(OldLockssRepositoryImpl.doesAuDirExist(auid, tempDirPath));
+    OldLockssRepositoryImpl.lastPluginDir = "ga";
     String expectedStr = getCacheLocation() + "gb/";
     assertEquals(FileUtil.sysDepPath(expectedStr),
-		 LockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau));
-    assertTrue(LockssRepositoryImpl.doesAuDirExist(auid, tempDirPath));
+		 OldLockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau));
+    assertTrue(OldLockssRepositoryImpl.doesAuDirExist(auid, tempDirPath));
   }
 
   public void testGetAuDirInitWithOne() {
-    LockssRepositoryImpl.localRepositories.clear();
+    OldLockssRepositoryImpl.localRepositories.clear();
     String root = getCacheLocation();
     assertEquals(FileUtil.sysDepPath(root + "b/"),
-                 LockssRepositoryImpl.mapAuToFileLocation(tempDirPath,
+                 OldLockssRepositoryImpl.mapAuToFileLocation(tempDirPath,
 							  new MockArchivalUnit()));
   }
 
   public void testGetAuDirSkipping() {
-    LockssRepositoryImpl.localRepositories.clear();
+    OldLockssRepositoryImpl.localRepositories.clear();
     String root = getCacheLocation();
     // a already made by setup
     assertTrue(new File(root + "a").exists());
@@ -638,7 +638,7 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
   }
 
   String probe() {
-    return LockssRepositoryImpl.mapAuToFileLocation(tempDirPath,
+    return OldLockssRepositoryImpl.mapAuToFileLocation(tempDirPath,
 						    new MockArchivalUnit());
   }
 
@@ -646,16 +646,16 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     String testStr = "http://www.example.com/branch1/branch2/index.html";
     String expectedStr = "root/www.example.com/http/branch1/branch2/index.html";
     assertEquals(FileUtil.sysDepPath(expectedStr),
-                 LockssRepositoryImpl.mapUrlToFileLocation("root", testStr));
+                 OldLockssRepositoryImpl.mapUrlToFileLocation("root", testStr));
 
     testStr = "hTTp://www.exaMPLE.com/branch1/branch2/index.html";
     expectedStr = "root/www.example.com/http/branch1/branch2/index.html";
     assertEquals(FileUtil.sysDepPath(expectedStr),
-                 LockssRepositoryImpl.mapUrlToFileLocation("root", testStr));
+                 OldLockssRepositoryImpl.mapUrlToFileLocation("root", testStr));
 
     try {
       testStr = ":/brokenurl.com/branch1/index/";
-      LockssRepositoryImpl.mapUrlToFileLocation("root", testStr);
+      OldLockssRepositoryImpl.mapUrlToFileLocation("root", testStr);
       fail("Should have thrown MalformedURLException");
     } catch (MalformedURLException mue) {}
   }
@@ -666,16 +666,16 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
 //    assertEquals(FileUtil.sysDepPath(expectedStr),
   //               LockssRepositoryImpl.mapUrlToFileLocation("root", testStr));
     assertEquals("root/www.example.com/http/#nodestate.xml",
-                 LockssRepositoryImpl.unescape(expectedStr));
+                 OldLockssRepositoryImpl.unescape(expectedStr));
 
     testStr = "http://www.example.com/index.html?leaf=bad"+File.separator+
         "query"+File.separator;
     expectedStr = "root/www.example.com/http/index.html?leaf=bad#squery#s";
     assertEquals(FileUtil.sysDepPath(expectedStr),
-                 LockssRepositoryImpl.mapUrlToFileLocation("root", testStr));
+                 OldLockssRepositoryImpl.mapUrlToFileLocation("root", testStr));
     assertEquals("root/www.example.com/http/index.html?leaf=bad"+
                  File.separator+"query"+File.separator,
-                 LockssRepositoryImpl.unescape(expectedStr));
+                 OldLockssRepositoryImpl.unescape(expectedStr));
   }
   
   protected RepositoryNode createLeaf(String url, String content,
@@ -769,7 +769,7 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
       String expectedStr = "root/www.example.com/http/abc\\/\\..";
       RepositoryNode leaf = createLeaf(url, "test stream", null);
       assertEquals(true, leaf.hasContent());
-      String fileLocation = LockssRepositoryImpl.mapUrlToFileLocation("root", url);
+      String fileLocation = OldLockssRepositoryImpl.mapUrlToFileLocation("root", url);
       assertEquals(expectedStr, fileLocation);
     }
 

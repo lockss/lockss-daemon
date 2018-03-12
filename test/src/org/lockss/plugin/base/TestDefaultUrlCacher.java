@@ -68,7 +68,7 @@ public class TestDefaultUrlCacher extends LockssTestCase {
 
   private MyMockArchivalUnit mau;
   private MockLockssDaemon theDaemon;
-  private LockssRepository repo;
+  private OldLockssRepository repo;
   private MockAlertManager alertMgr;
   private int pauseBeforeFetchCounter;
   private UrlData ud;
@@ -99,7 +99,7 @@ public class TestDefaultUrlCacher extends LockssTestCase {
     mau.setPlugin(plugin);
 
     repo =
-      (LockssRepository)theDaemon.newAuManager(LockssDaemon.LOCKSS_REPOSITORY,
+      (OldLockssRepository)theDaemon.newAuManager(LockssDaemon.LOCKSS_REPOSITORY,
                                                mau);
     theDaemon.setLockssRepository(repo, mau);
     repo.startService();

@@ -39,7 +39,7 @@ import org.lockss.plugin.*;
 import org.lockss.config.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
-import org.lockss.repository.LockssRepositoryImpl;
+import org.lockss.repository.OldLockssRepositoryImpl;
 
 /**
  * Test class for org.lockss.daemon.CuUrl

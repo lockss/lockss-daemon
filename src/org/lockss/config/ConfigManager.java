@@ -1664,7 +1664,7 @@ public class ConfigManager implements LockssManager {
       String firstSpace =
 	((String)StringUtil.breakAt(space, ';', 1).elementAt(0));
       platformOverride(config,
-		       LockssRepositoryImpl.PARAM_CACHE_LOCATION,
+		       OldLockssRepositoryImpl.PARAM_CACHE_LOCATION,
 		       firstSpace);
       platformOverride(config, HistoryRepositoryImpl.PARAM_HISTORY_LOCATION,
 		       firstSpace);

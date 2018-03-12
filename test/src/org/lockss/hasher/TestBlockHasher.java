@@ -69,7 +69,7 @@ public class TestBlockHasher extends LockssTestCase {
   MockMessageDigest dig = null;
   private MockLockssDaemon daemon;
   private RepositoryManager repoMgr;
-  private LockssRepositoryImpl repo;
+  private OldLockssRepositoryImpl repo;
   private MockAuState maus;
   private String tempDirPath;
 
@@ -81,7 +81,7 @@ public class TestBlockHasher extends LockssTestCase {
     tempDirPath = setUpDiskSpace();
     repoMgr = daemon.getRepositoryManager();
     repoMgr.startService();
-    repo = (LockssRepositoryImpl)LockssRepositoryImpl.createNewLockssRepository(
+    repo = (OldLockssRepositoryImpl)OldLockssRepositoryImpl.createNewLockssRepository(
         mau);
     daemon.setLockssRepository(repo, mau);
     repo.initService(daemon);

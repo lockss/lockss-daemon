@@ -676,8 +676,8 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    * @return the LockssRepository
    * @throws IllegalArgumentException if the manager is not available.
    */
-  public LockssRepository getLockssRepository(ArchivalUnit au) {
-    return (LockssRepository)getAuManager(LOCKSS_REPOSITORY, au);
+  public OldLockssRepository getLockssRepository(ArchivalUnit au) {
+    return (OldLockssRepository)getAuManager(LOCKSS_REPOSITORY, au);
   }
 
   /**
@@ -722,7 +722,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    * Return all LockssRepositories.
    * @return a list of all LockssRepositories for all AUs
    */
-  public List<LockssRepository> getAllLockssRepositories() {
+  public List<OldLockssRepository> getAllLockssRepositories() {
     return getAuManagersOfType(LOCKSS_REPOSITORY);
   }
 

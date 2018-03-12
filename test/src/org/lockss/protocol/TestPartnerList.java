@@ -42,7 +42,7 @@ import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
-import org.lockss.repository.LockssRepositoryImpl;
+import org.lockss.repository.OldLockssRepositoryImpl;
 
 /**
  * Test class for org.lockss.protocol.PartnerList

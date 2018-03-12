@@ -57,7 +57,7 @@ public class NodeManagerImpl
   // the various necessary managers
   LockssDaemon theDaemon;
   HistoryRepository historyRepo;
-  private LockssRepository lockssRepo;
+  private OldLockssRepository lockssRepo;
   static SimpleDateFormat sdf = new SimpleDateFormat();
 
   // state and caches for this AU
@@ -1597,7 +1597,7 @@ public class NodeManagerImpl
    * @throws IOException
    */
   public void deleteNode(CachedUrlSet cus) throws IOException {
-    LockssRepository repository = getDaemon().getLockssRepository(managedAu);
+    OldLockssRepository repository = getDaemon().getLockssRepository(managedAu);
     repository.deleteNode(cus.getUrl());
     NodeState extraState = getNodeState(cus);
     extraState.getCrawlState().type = CrawlState.NODE_DELETED;
@@ -1609,7 +1609,7 @@ public class NodeManagerImpl
    * @throws IOException
    */
   private void deactivateNode(CachedUrlSet cus) throws IOException {
-    LockssRepository repository = getDaemon().getLockssRepository(managedAu);
+    OldLockssRepository repository = getDaemon().getLockssRepository(managedAu);
     repository.deactivateNode(cus.getUrl());
   }
 

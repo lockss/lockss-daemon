@@ -44,7 +44,7 @@ import org.lockss.config.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.*;
-import org.lockss.repository.LockssRepositoryImpl;
+import org.lockss.repository.OldLockssRepositoryImpl;
 import org.lockss.protocol.*;
 
 public abstract class BaseFuncExporter extends LockssTestCase {

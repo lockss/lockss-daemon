@@ -57,7 +57,7 @@ public class BaseCachedUrl implements CachedUrl {
   protected String url;
   protected static Logger logger = Logger.getLogger(CachedUrl.class);
 
-  private LockssRepository repository;
+  private OldLockssRepository repository;
   private RepositoryNode leaf = null;
   protected RepositoryNode.RepositoryNodeContents rnc = null;
   protected Properties options;
@@ -327,7 +327,7 @@ public class BaseCachedUrl implements CachedUrl {
       // XXX Wrong Exception.  Should this method be declared to throw
       // UnsupportedEncodingException?
       logger.error("Creating InputStreamReader for '" + getUrl() + "'", e);
-      throw new LockssRepository.RepositoryStateException
+      throw new OldLockssRepository.RepositoryStateException
 	("Couldn't create InputStreamReader:" + e.toString());
     }
   }
@@ -563,7 +563,7 @@ public class BaseCachedUrl implements CachedUrl {
 	String msg =
 	  "Couldn't open member for which exists() was true: " + this;
 	logger.error(msg);
-	throw new LockssRepository.RepositoryStateException(msg, e);
+	throw new OldLockssRepository.RepositoryStateException(msg, e);
       }
     }
 
@@ -595,7 +595,7 @@ public class BaseCachedUrl implements CachedUrl {
 	String msg =
 	  "Couldn't open member for which exists() was true: " + this;
 	logger.error(msg);
-	throw new LockssRepository.RepositoryStateException(msg, e);
+	throw new OldLockssRepository.RepositoryStateException(msg, e);
       }
     }
 
@@ -659,7 +659,7 @@ public class BaseCachedUrl implements CachedUrl {
       try {
 	return getMemberTFile().length();
       } catch (IOException e) {
-	throw new LockssRepository.RepositoryStateException
+	throw new OldLockssRepository.RepositoryStateException
 	  ("Couldn't get archive member length", e);
       }
     }

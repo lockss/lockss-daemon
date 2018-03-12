@@ -68,7 +68,7 @@ public class TestSimpleUrlConsumer extends LockssTestCase {
     super.setUp();
 
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    ConfigurationUtil.setFromArgs(LockssRepositoryImpl.PARAM_CACHE_LOCATION,
+    ConfigurationUtil.setFromArgs(OldLockssRepositoryImpl.PARAM_CACHE_LOCATION,
 				  tempDirPath);
     theDaemon = getMockLockssDaemon();
 

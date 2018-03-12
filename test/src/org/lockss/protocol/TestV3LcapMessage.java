@@ -45,7 +45,7 @@ import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.poller.*;
 import org.lockss.poller.v3.V3Events;
-import org.lockss.repository.LockssRepositoryImpl;
+import org.lockss.repository.OldLockssRepositoryImpl;
 import org.lockss.util.*;
 import org.lockss.app.LockssDaemon;
 import org.mortbay.util.B64Code;

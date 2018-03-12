@@ -138,21 +138,21 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
 	roots.add(getDefaultRepositoryLocation());
       }
       for (String repoSpec : specs) {
-	String path = LockssRepositoryImpl.getLocalRepositoryPath(repoSpec);
+	String path = OldLockssRepositoryImpl.getLocalRepositoryPath(repoSpec);
 	if (path != null) {
 	  roots.add(path);
 	}
       }
       for (Iterator iter = roots.iterator(); iter.hasNext(); ) {
 	String root = (String)iter.next();
-	addRows(rows, LockssRepositoryImpl.extendCacheLocation(root),
+	addRows(rows, OldLockssRepositoryImpl.extendCacheLocation(root),
 		includeInternalAus, stats);
       }
       return rows;
     }
 
     String getDefaultRepositoryLocation() {
-      return CurrentConfig.getParam(LockssRepositoryImpl.PARAM_CACHE_LOCATION);
+      return CurrentConfig.getParam(OldLockssRepositoryImpl.PARAM_CACHE_LOCATION);
     }
 
     class Stats {
@@ -171,11 +171,11 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
 	  File sub = subs[ix];
 	  String auid = null;
 	  if (sub.isDirectory()) {
-	    File auidfile = new File(sub, LockssRepositoryImpl.AU_ID_FILE);
+	    File auidfile = new File(sub, OldLockssRepositoryImpl.AU_ID_FILE);
 	    if (auidfile.exists()) {
 	      Properties props = propsFromFile(auidfile);
 	      if (props != null) {
-		auid = props.getProperty(LockssRepositoryImpl.AU_ID_PROP);
+		auid = props.getProperty(OldLockssRepositoryImpl.AU_ID_PROP);
 		if (!includeInternalAus &&
 		    pluginMgr.isInternalAu(pluginMgr.getAuFromId(auid))) {
 		  continue;
@@ -206,8 +206,8 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
 	  String repoSpec = auConfig.get(PluginManager.AU_PARAM_REPOSITORY);
 	  String repoRoot = (repoSpec == null)
 	    ? getDefaultRepositoryLocation()
-	    : LockssRepositoryImpl.getLocalRepositoryPath(repoSpec);
-	  if (!LockssRepositoryImpl.isDirInRepository(root, repoRoot)) {
+	    : OldLockssRepositoryImpl.getLocalRepositoryPath(repoSpec);
+	  if (!OldLockssRepositoryImpl.isDirInRepository(root, repoRoot)) {
 	    au = null;
 	  }
 	}

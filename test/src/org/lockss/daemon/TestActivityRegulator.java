@@ -38,7 +38,7 @@ import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
 import org.lockss.plugin.CachedUrlSet;
-import org.lockss.repository.LockssRepositoryImpl;
+import org.lockss.repository.OldLockssRepositoryImpl;
 
 public class TestActivityRegulator extends LockssTestCase {
   private ActivityRegulator regulator;

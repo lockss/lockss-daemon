@@ -201,9 +201,9 @@ public class RepositoryManager
 					 DEFAULT_MAX_PER_AU_CACHE_SIZE);
       for (Iterator iter = getDaemon().getAllLockssRepositories().iterator();
 	   iter.hasNext(); ) {
-	LockssRepository repo = (LockssRepository)iter.next();
-	if (repo instanceof LockssRepositoryImpl) {
-	  LockssRepositoryImpl repoImpl = (LockssRepositoryImpl)repo;
+	OldLockssRepository repo = (OldLockssRepository)iter.next();
+	if (repo instanceof OldLockssRepositoryImpl) {
+	  OldLockssRepositoryImpl repoImpl = (OldLockssRepositoryImpl)repo;
 	  repoImpl.setNodeCacheSize(paramNodeCacheSize);
 	}
       }
@@ -283,7 +283,7 @@ public class RepositoryManager
   }
 
   public PlatformUtil.DF getRepositoryDF(String repoName) {
-    String path = LockssRepositoryImpl.getLocalRepositoryPath(repoName);
+    String path = OldLockssRepositoryImpl.getLocalRepositoryPath(repoName);
     log.debug("path: " + path);
 //    try {
       return platInfo.getJavaDF(path);
@@ -338,8 +338,8 @@ public class RepositoryManager
     List res = null;
     for (Iterator iter = getRepositoryList().iterator(); iter.hasNext(); ) {
       String repoName = (String)iter.next();
-      String path = LockssRepositoryImpl.getLocalRepositoryPath(repoName);
-      if (LockssRepositoryImpl.doesAuDirExist(auid, path)) {
+      String path = OldLockssRepositoryImpl.getLocalRepositoryPath(repoName);
+      if (OldLockssRepositoryImpl.doesAuDirExist(auid, path)) {
 	if (res == null) {
 	  res = new ArrayList();
 	}
@@ -350,10 +350,10 @@ public class RepositoryManager
   }
 
   // hack only local
-  public synchronized LockssRepositoryImpl getRepositoryFromPath(String path) {
-    LockssRepositoryImpl repo = (LockssRepositoryImpl)localRepos.get(path);
+  public synchronized OldLockssRepositoryImpl getRepositoryFromPath(String path) {
+    OldLockssRepositoryImpl repo = (OldLockssRepositoryImpl)localRepos.get(path);
     if (repo == null) {
-      repo =  new LockssRepositoryImpl(path);
+      repo =  new OldLockssRepositoryImpl(path);
       repo.initService(getDaemon());
       repo.startService();
       localRepos.put(path, repo);
@@ -370,7 +370,7 @@ public class RepositoryManager
    * @return the AU's disk usage in bytes, or -1 if unknown
    */
   public long getRepoDiskUsage(String repoAuPath, boolean calcIfUnknown) {
-    LockssRepository repo = getRepositoryFromPath(repoAuPath);
+    OldLockssRepository repo = getRepositoryFromPath(repoAuPath);
     if (repo != null) {
       try {
 	RepositoryNode repoNode = repo.getNode(AuCachedUrlSetSpec.URL);
@@ -384,7 +384,7 @@ public class RepositoryManager
   }
 
   public synchronized void setRepositoryForPath(String path,
-						LockssRepositoryImpl repo) {
+						OldLockssRepositoryImpl repo) {
     localRepos.put(path, repo);
   }
 

@@ -51,8 +51,8 @@ import org.lockss.util.*;
  * finalized (they go to null when the last hard reference is gone, then are
  * removed from the cache on finalize()).
  */
-public class LockssRepositoryImpl
-  extends BaseLockssDaemonManager implements LockssRepository {
+public class OldLockssRepositoryImpl
+  extends BaseLockssDaemonManager implements OldLockssRepository {
   
   private static final Logger logger = Logger.getLogger("LockssRepository");
 
@@ -104,7 +104,7 @@ public class LockssRepositoryImpl
   private boolean isGlobalNodeCache =
     RepositoryManager.DEFAULT_GLOBAL_CACHE_ENABLED;
 
-  LockssRepositoryImpl(String rootPath) {
+  OldLockssRepositoryImpl(String rootPath) {
     if (rootPath.endsWith(File.separator)) {
       rootLocation = rootPath;
     } else {
@@ -219,7 +219,7 @@ public class LockssRepositoryImpl
       node = new AuNodeImpl(canonUrl, nodeLocation, this);
     } else {
       // determine proper node location
-      nodeLocation = LockssRepositoryImpl.mapUrlToFileLocation(rootLocation,
+      nodeLocation = OldLockssRepositoryImpl.mapUrlToFileLocation(rootLocation,
           canonUrl);
       node = new RepositoryNodeImpl(canonUrl, nodeLocation, this);
     }
@@ -233,7 +233,7 @@ public class LockssRepositoryImpl
       }
       if (!nodeDir.isDirectory()) {
         logger.error("Cache file not a directory: "+nodeLocation);
-        throw new LockssRepository.RepositoryStateException("Invalid cache file.");
+        throw new OldLockssRepository.RepositoryStateException("Invalid cache file.");
       }
     }
 
@@ -328,18 +328,18 @@ public class LockssRepositoryImpl
    * @param au the {@link ArchivalUnit}
    * @return the new LockssRepository instance
    */
-  public static LockssRepository createNewLockssRepository(ArchivalUnit au) {
+  public static OldLockssRepository createNewLockssRepository(ArchivalUnit au) {
     String root = getRepositoryRoot(au);
     if (root == null || root.equals("null")) {
       logger.error("No repository dir set in config");
-      throw new LockssRepository.RepositoryStateException("No repository dir set in config");
+      throw new OldLockssRepository.RepositoryStateException("No repository dir set in config");
     }
-    String auDir = LockssRepositoryImpl.mapAuToFileLocation(root, au);
+    String auDir = OldLockssRepositoryImpl.mapAuToFileLocation(root, au);
     if (logger.isDebug2()) {
       logger.debug2("repo: " + auDir + ", au: " + au.getName());
     }
     staticCacheLocation = extendCacheLocation(root);
-    LockssRepositoryImpl repo = new LockssRepositoryImpl(auDir);
+    OldLockssRepositoryImpl repo = new OldLockssRepositoryImpl(auDir);
     Plugin plugin = au.getPlugin();
     if (plugin != null) {
       LockssDaemon daemon = plugin.getDaemon();
@@ -725,7 +725,7 @@ public class LockssRepositoryImpl
     } catch (IOException ioe) {
       logger.error("Couldn't write properties for " + propFile.getPath() + ".",
                    ioe);
-      throw new LockssRepository.RepositoryStateException(
+      throw new OldLockssRepository.RepositoryStateException(
           "Couldn't write au id properties file.");
     }
   }

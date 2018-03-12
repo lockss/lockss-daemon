@@ -56,7 +56,7 @@ public class AuNodeImpl extends RepositoryNodeImpl {
 
 
   AuNodeImpl(String url, String nodeLocation,
-             LockssRepositoryImpl repository) {
+             OldLockssRepositoryImpl repository) {
     super(url, nodeLocation, repository);
   }
 
@@ -95,7 +95,7 @@ public class AuNodeImpl extends RepositoryNodeImpl {
     if (nodeRootFile==null) initNodeRoot();
     if (!nodeRootFile.exists()) {
       logger.error("No cache directory located for: "+url);
-      throw new LockssRepository.RepositoryStateException("No cache directory located.");
+      throw new OldLockssRepository.RepositoryStateException("No cache directory located.");
     }
     TreeMap childM = new TreeMap();
     // for all directories beneath Au level

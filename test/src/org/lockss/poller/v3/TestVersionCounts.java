@@ -49,7 +49,7 @@ import org.lockss.poller.*;
 import org.lockss.poller.v3.V3Serializer.*;
 import org.lockss.test.*;
 import org.lockss.hasher.*;
-import org.lockss.repository.LockssRepositoryImpl;
+import org.lockss.repository.OldLockssRepositoryImpl;
 import org.mortbay.util.B64Code;
 
 import static org.lockss.util.Constants.*;

@@ -195,7 +195,7 @@ public class TestRepositoryManager extends LockssTestCase {
     }
   }
 
-  class MyMockLockssRepositoryImpl extends LockssRepositoryImpl {
+  class MyMockLockssRepositoryImpl extends OldLockssRepositoryImpl {
     int nodeCacheSize = 0;
     int cnt = 0;
 

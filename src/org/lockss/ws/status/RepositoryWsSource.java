@@ -51,7 +51,7 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.Plugin;
 import org.lockss.plugin.PluginManager;
-import org.lockss.repository.LockssRepositoryImpl;
+import org.lockss.repository.OldLockssRepositoryImpl;
 import org.lockss.util.Logger;
 import org.lockss.util.PropUtil;
 import org.lockss.ws.entities.RepositoryWsResult;
@@ -85,7 +85,7 @@ public class RepositoryWsSource extends RepositoryWsResult {
     this.repositorySpaceRootName = repositorySpaceRootName;
 
     File auIdFile = new File(repositoryRootDirectory,
-	LockssRepositoryImpl.AU_ID_FILE);
+	OldLockssRepositoryImpl.AU_ID_FILE);
 
     if (auIdFile.exists()) {
       Properties props = propsFromFile(auIdFile);
@@ -336,10 +336,10 @@ public class RepositoryWsSource extends RepositoryWsResult {
 	String repoSpec =
 	    au.getConfiguration().get(PluginManager.AU_PARAM_REPOSITORY);
 	String repoRoot = (repoSpec == null)
-	    ? CurrentConfig.getParam(LockssRepositoryImpl.PARAM_CACHE_LOCATION)
-	    : LockssRepositoryImpl.getLocalRepositoryPath(repoSpec);
+	    ? CurrentConfig.getParam(OldLockssRepositoryImpl.PARAM_CACHE_LOCATION)
+	    : OldLockssRepositoryImpl.getLocalRepositoryPath(repoSpec);
 
-	if (!LockssRepositoryImpl.isDirInRepository(repositorySpaceRootName,
+	if (!OldLockssRepositoryImpl.isDirInRepository(repositorySpaceRootName,
 	    repoRoot)) {
 	  au = null;
 	}

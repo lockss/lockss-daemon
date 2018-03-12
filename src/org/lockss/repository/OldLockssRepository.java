@@ -40,7 +40,7 @@ import org.lockss.plugin.ArchivalUnit;
 /**
  * LockssRepository is used to organize the urls being cached.
  */
-public interface LockssRepository extends LockssAuManager {
+public interface OldLockssRepository extends LockssAuManager {
   /**
    * Returns a {@link RepositoryNode} which represents the url in question.
    * This only returns urls which exist in the cache (null otherwise).

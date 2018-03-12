@@ -71,7 +71,7 @@ public class DefaultUrlCacher implements UrlCacher {
   protected final String origUrl;   // URL with which I was created
   protected String fetchUrl;		// possibly affected by redirects
   private List<String> redirectUrls;
-  private final LockssRepository repository;
+  private final OldLockssRepository repository;
   private final CacheResultMap resultMap;
   private LockssWatchdog wdog;
   private BitSet fetchFlags = new BitSet();

@@ -54,7 +54,7 @@ public interface RepositoryNodeVersion {
   /**
    * Returns the content of this content version
    * @return size
-   * @throws LockssRepository.RepositoryStateException
+   * @throws OldLockssRepository.RepositoryStateException
    */
   public long getContentSize();
 
@@ -64,7 +64,7 @@ public interface RepositoryNodeVersion {
    * content-less or inactive node.
    * @return an {@link RepositoryNode.RepositoryNodeContents} object from
    * which the contents of the cache can be read.
-   * @throws LockssRepository.RepositoryStateException
+   * @throws OldLockssRepository.RepositoryStateException
    */
   public RepositoryNode.RepositoryNodeContents getNodeContents();
 

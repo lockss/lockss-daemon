@@ -136,7 +136,7 @@ public class AuUtil {
    * @return the AuSuspectUrlVersions
    */
   public static AuSuspectUrlVersions getSuspectUrlVersions(ArchivalUnit au) {
-    LockssRepository repo = getDaemon(au).getLockssRepository(au);
+    OldLockssRepository repo = getDaemon(au).getLockssRepository(au);
     return repo.getSuspectUrlVersions(au);
   }
 
@@ -148,7 +148,7 @@ public class AuUtil {
   public static void saveSuspectUrlVersions(ArchivalUnit au,
 					    AuSuspectUrlVersions asuv)
       throws SerializationException {
-    LockssRepository repo = getDaemon(au).getLockssRepository(au);
+    OldLockssRepository repo = getDaemon(au).getLockssRepository(au);
     repo.storeSuspectUrlVersions(au, asuv);
   }
 
@@ -158,13 +158,13 @@ public class AuUtil {
    * @return the AuSuspectUrlVersions
    */
   public static boolean hasSuspectUrlVersions(ArchivalUnit au) {
-    LockssRepository repo = getDaemon(au).getLockssRepository(au);
+    OldLockssRepository repo = getDaemon(au).getLockssRepository(au);
     return repo.hasSuspectUrlVersions(au);
   }
 
   public static AuNodeImpl getAuRepoNode(ArchivalUnit au) {
     LockssDaemon daemon = getDaemon(au);
-    LockssRepository repo = daemon.getLockssRepository(au);
+    OldLockssRepository repo = daemon.getLockssRepository(au);
     try {
       return(AuNodeImpl)repo.getNode(au.getAuCachedUrlSet().getUrl());
     } catch (MalformedURLException e) {
@@ -182,7 +182,7 @@ public class AuUtil {
   public static RepositoryNode getRepositoryNode(ArchivalUnit au, String url) 
       throws MalformedURLException {
     LockssDaemon daemon = getDaemon(au);
-    LockssRepository repo = daemon.getLockssRepository(au);
+    OldLockssRepository repo = daemon.getLockssRepository(au);
     return repo.getNode(url);
   }
 

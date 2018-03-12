@@ -801,7 +801,7 @@ public class ArchivalUnitStatus
 
     protected void populateTable(StatusTable table, ArchivalUnit au)
         throws StatusService.NoSuchTableException {
-      LockssRepository repo = theDaemon.getLockssRepository(au);
+      OldLockssRepository repo = theDaemon.getLockssRepository(au);
       NodeManager nodeMan = theDaemon.getNodeManager(au);
 
       table.setTitle(getTitle(au.getName()));
@@ -818,7 +818,7 @@ public class ArchivalUnitStatus
 
 
     private List getRows(StatusTable table, ArchivalUnit au,
-			 LockssRepository repo, NodeManager nodeMan) {
+			 OldLockssRepository repo, NodeManager nodeMan) {
       int startRow = Math.max(0, getIntProp(table, "skiprows"));
       int numRows = getIntProp(table, "numrows");
       if (numRows <= 0) {
@@ -1039,8 +1039,8 @@ public class ArchivalUnitStatus
 					    "Awaiting recalc"));
       }
       AuNodeImpl auNode = AuUtil.getAuRepoNode(au);
-      String spec = LockssRepositoryImpl.getRepositorySpec(au);
-      String repo = LockssRepositoryImpl.mapAuToFileLocation(LockssRepositoryImpl.getLocalRepositoryPath(spec), au);
+      String spec = OldLockssRepositoryImpl.getRepositorySpec(au);
+      String repo = OldLockssRepositoryImpl.mapAuToFileLocation(OldLockssRepositoryImpl.getLocalRepositoryPath(spec), au);
 
       res.add(new StatusTable.SummaryInfo("Repository",
 					  ColumnDescriptor.TYPE_STRING,

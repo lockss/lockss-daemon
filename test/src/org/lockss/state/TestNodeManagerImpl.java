@@ -58,7 +58,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     Properties p = new Properties();
     p.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
-    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    p.setProperty(OldLockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     p.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION, tempDirPath);
     p.setProperty(NodeManagerManager.PARAM_MAX_PER_AU_CACHE_SIZE, "10");
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.1.2.3");

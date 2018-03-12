@@ -91,8 +91,8 @@ public class TestSimpleHasher extends LockssTestCase {
   }
 
   MockArchivalUnit setupContentTree() {
-    LockssRepositoryImpl repo =
-      (LockssRepositoryImpl)LockssRepositoryImpl.createNewLockssRepository(
+    OldLockssRepositoryImpl repo =
+      (OldLockssRepositoryImpl)OldLockssRepositoryImpl.createNewLockssRepository(
         mau);
     daemon.setLockssRepository(repo, mau);
     repo.initService(daemon);

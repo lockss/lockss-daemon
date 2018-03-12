@@ -638,10 +638,10 @@ public class RemoteApi
       Configuration auConfig = au.getConfiguration();
       Properties auprops = new Properties();
       auprops.setProperty(AU_BACK_PROP_AUID, au.getAuId());
-      String repo = LockssRepositoryImpl.getRepositorySpec(au);
+      String repo = OldLockssRepositoryImpl.getRepositorySpec(au);
       auprops.setProperty(AU_BACK_PROP_REPOSPEC, repo);
       auprops.setProperty(AU_BACK_PROP_REPODIR,
-			  LockssRepositoryImpl.mapAuToFileLocation(LockssRepositoryImpl.getLocalRepositoryPath(repo), au));
+			  OldLockssRepositoryImpl.mapAuToFileLocation(OldLockssRepositoryImpl.getLocalRepositoryPath(repo), au));
 
       addPropsToZip(zip, auprops, dir + BACK_FILE_AU_PROPS,
 		    "AU " + au.getName());

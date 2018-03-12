@@ -43,7 +43,7 @@ import org.lockss.repository.*;
 /**
  * Mock version of LockssRepository.
  */
-public class MockLockssRepository implements LockssRepository {
+public class MockLockssRepository implements OldLockssRepository {
   private String rootLocation;
   private ArchivalUnit repoAu;
   private HashMap nodeCache = new HashMap();
@@ -126,7 +126,7 @@ public class MockLockssRepository implements LockssRepository {
       nodeLocation = rootLocation;
       node = new MockRepositoryNode(url, nodeLocation);
     } else {
-      nodeLocation = LockssRepositoryImpl.mapUrlToFileLocation(rootLocation,
+      nodeLocation = OldLockssRepositoryImpl.mapUrlToFileLocation(rootLocation,
           url);
       node = new MockRepositoryNode(url, nodeLocation);
     }

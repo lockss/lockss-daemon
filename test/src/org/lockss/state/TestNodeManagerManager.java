@@ -70,7 +70,7 @@ public class TestNodeManagerManager extends LockssTestCase {
       throws Exception {
     Properties p = new Properties();
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    p.put(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    p.put(OldLockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     if (param1 != null) {
       p.put(param1, val1);
     }

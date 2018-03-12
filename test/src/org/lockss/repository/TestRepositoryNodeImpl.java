@@ -68,7 +68,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     super.setUp();
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     props = new Properties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    props.setProperty(OldLockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
     mau = new MockArchivalUnit();
@@ -346,8 +346,8 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     RepositoryNode leaf =
         createLeaf("http://www.example.com/testDir/branch1/leaf1",
                    "test stream", null);
-    tempDirPath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau);
-    tempDirPath = LockssRepositoryImpl.mapUrlToFileLocation(tempDirPath,
+    tempDirPath = OldLockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau);
+    tempDirPath = OldLockssRepositoryImpl.mapUrlToFileLocation(tempDirPath,
         "http://www.example.com/testDir/branch1/leaf1");
     File testFile = new File(tempDirPath);
     assertTrue(testFile.exists());
@@ -365,8 +365,8 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     RepositoryNode leaf =
       createLeaf("http://www.example.com/testDir/branch1/leaf1",
                  "test stream", null);
-    tempDirPath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau);
-    tempDirPath = LockssRepositoryImpl.mapUrlToFileLocation(tempDirPath,
+    tempDirPath = OldLockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau);
+    tempDirPath = OldLockssRepositoryImpl.mapUrlToFileLocation(tempDirPath,
         "http://www.example.com/testDir/branch1/leaf1");
     File testFile = new File(tempDirPath, "#agreement");
     assertFalse(testFile.exists());
@@ -385,8 +385,8 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     RepositoryNode leaf =
       createLeaf("http://www.example.com/testDir/branch1/leaf1",
                  "test stream", null);
-    tempDirPath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau);
-    tempDirPath = LockssRepositoryImpl.mapUrlToFileLocation(tempDirPath,
+    tempDirPath = OldLockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau);
+    tempDirPath = OldLockssRepositoryImpl.mapUrlToFileLocation(tempDirPath,
         "http://www.example.com/testDir/branch1/leaf1");
     PeerIdentity testid_1 = new MockPeerIdentity("TCP:[192.168.0.1]:9723");
     PeerIdentity testid_2 = new MockPeerIdentity("TCP:[192.168.0.2]:9723");
@@ -421,8 +421,8 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     RepositoryNode leaf =
         createLeaf("http://www.example.com/testDir/branch1/leaf1",
         "test stream", null);
-    tempDirPath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau);
-    tempDirPath = LockssRepositoryImpl.mapUrlToFileLocation(tempDirPath,
+    tempDirPath = OldLockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau);
+    tempDirPath = OldLockssRepositoryImpl.mapUrlToFileLocation(tempDirPath,
         "http://www.example.com/testDir/branch1/leaf1");
     File testFile = new File(tempDirPath + "/#content/1");
     assertFalse(testFile.exists());
@@ -448,8 +448,8 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     RepositoryNode leaf =
         createLeaf("http://www.example.com/testDir/branch1/leaf1",
                    "test stream", null);
-    tempDirPath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau);
-    tempDirPath = LockssRepositoryImpl.mapUrlToFileLocation(tempDirPath,
+    tempDirPath = OldLockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau);
+    tempDirPath = OldLockssRepositoryImpl.mapUrlToFileLocation(tempDirPath,
         "http://www.example.com/testDir/branch1/leaf1");
     File curFile = new File(tempDirPath + "/#content/current");
     File curPropsFile = new File(tempDirPath + "/#content/current.props");
@@ -499,8 +499,8 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     RepositoryNode leaf =
         createLeaf("http://www.example.com/testDir/branch1/leaf1",
                    "test stream", null);
-    tempDirPath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau);
-    tempDirPath = LockssRepositoryImpl.mapUrlToFileLocation(tempDirPath,
+    tempDirPath = OldLockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau);
+    tempDirPath = OldLockssRepositoryImpl.mapUrlToFileLocation(tempDirPath,
         "http://www.example.com/testDir/branch1/leaf1");
     File curFile = new File(tempDirPath + "/#content/current");
     File curPropsFile = new File(tempDirPath + "/#content/current.props");
@@ -552,7 +552,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     try {
       node.listChildren(null, false);
       fail("listChildren() is nonexistent dir should throw");
-    } catch (LockssRepository.RepositoryStateException e) {
+    } catch (OldLockssRepository.RepositoryStateException e) {
     }
   }
 
@@ -1087,7 +1087,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     String query = u.getQuery();
     if (query!=null) {
       pad +=
-	(LockssRepositoryImpl.escapeQuery(query).length() - query.length());
+	(OldLockssRepositoryImpl.escapeQuery(query).length() - query.length());
     }
 
 
@@ -1108,9 +1108,9 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
   public void testMakeNodeLocation() throws Exception {
     RepositoryNodeImpl leaf = (RepositoryNodeImpl)
         repo.createNewNode("http://www.example.com/testDir");
-    String nodeLoc = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath,
+    String nodeLoc = OldLockssRepositoryImpl.mapAuToFileLocation(tempDirPath,
 							      mau);
-    nodeLoc = LockssRepositoryImpl.mapUrlToFileLocation(nodeLoc,
+    nodeLoc = OldLockssRepositoryImpl.mapUrlToFileLocation(nodeLoc,
         "http://www.example.com/testDir");
     File testFile = new File(nodeLoc);
     assertFalse(testFile.exists());
@@ -1152,9 +1152,9 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
       throws Exception {
     String url = "http://www.example.com/foo.html";
     RepositoryNodeImpl leaf = (RepositoryNodeImpl)repo.createNewNode(url);
-    String nodeLoc = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath,
+    String nodeLoc = OldLockssRepositoryImpl.mapAuToFileLocation(tempDirPath,
 							      mau);
-    nodeLoc = LockssRepositoryImpl.mapUrlToFileLocation(nodeLoc, url);
+    nodeLoc = OldLockssRepositoryImpl.mapUrlToFileLocation(nodeLoc, url);
     File testFile;
     switch (whichFile) {
     case DEL_NODE_DIR:
@@ -1199,7 +1199,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     if (tryRead) {
       try {
 	getLeafContent(leaf);
-      } catch (LockssRepository.RepositoryStateException e) {
+      } catch (OldLockssRepository.RepositoryStateException e) {
 	// expected
       }
     }
@@ -1303,8 +1303,8 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertEquals("value 2", props.getProperty("test 1"));
 
     // make sure proper files exist
-    tempDirPath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau);
-    tempDirPath = LockssRepositoryImpl.mapUrlToFileLocation(tempDirPath,
+    tempDirPath = OldLockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau);
+    tempDirPath = OldLockssRepositoryImpl.mapUrlToFileLocation(tempDirPath,
         "http://www.example.com/testDir/test.cache");
 
     File testFileDir = new File(tempDirPath + "/#content");
@@ -1355,8 +1355,8 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertEquals("value 2", props.getProperty("test 1"));
 
     // make sure proper files exist
-    tempDirPath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau);
-    tempDirPath = LockssRepositoryImpl.mapUrlToFileLocation(tempDirPath,
+    tempDirPath = OldLockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau);
+    tempDirPath = OldLockssRepositoryImpl.mapUrlToFileLocation(tempDirPath,
         "http://www.example.com/testDir/test.cache");
 
     File testFileDir = new File(tempDirPath + "/#content");
@@ -1399,8 +1399,8 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertEquals("value 2", props.getProperty("test 1"));
 
     // make sure proper files exist
-    tempDirPath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau);
-    tempDirPath = LockssRepositoryImpl.mapUrlToFileLocation(tempDirPath,
+    tempDirPath = OldLockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau);
+    tempDirPath = OldLockssRepositoryImpl.mapUrlToFileLocation(tempDirPath,
         "http://www.example.com/testDir/test.cache");
 
     File testFileDir = new File(tempDirPath + "/#content");
@@ -2541,14 +2541,14 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     return createLeaf(repo, url, content, props);
   }
 
-  public static RepositoryNode createLeaf(LockssRepository repo, String url,
+  public static RepositoryNode createLeaf(OldLockssRepository repo, String url,
       String content, Properties props) throws Exception {
     RepositoryNode leaf = repo.createNewNode(url);
     createContentVersion(leaf, content, props);
     return leaf;
   }
 
-  public static RepositoryNode createLeaf(LockssRepository repo, String url,
+  public static RepositoryNode createLeaf(OldLockssRepository repo, String url,
       InputStream contentStream, Properties props) throws Exception {
     RepositoryNode leaf = repo.createNewNode(url);
     createContentVersion(leaf, contentStream, props);
@@ -2647,7 +2647,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
 
     void loadNodeProps(boolean okIfNotThere) {
       if (failPropsLoad) {
-        throw new LockssRepository.RepositoryStateException("Couldn't load properties file.");
+        throw new OldLockssRepository.RepositoryStateException("Couldn't load properties file.");
       } else {
         super.loadNodeProps(okIfNotThere);
       }
@@ -2671,7 +2671,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
 
     void ensureCurrentInfoLoaded() {
       if (failEnsureCurrentLoaded) {
-        throw new LockssRepository.RepositoryStateException("Couldn't load current info.");
+        throw new OldLockssRepository.RepositoryStateException("Couldn't load current info.");
       } else {
         super.ensureCurrentInfoLoaded();
       }
@@ -2686,7 +2686,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     }
   }
 
-  static class MyLockssRepositoryImpl extends LockssRepositoryImpl {
+  static class MyLockssRepositoryImpl extends OldLockssRepositoryImpl {
     boolean dontNormalize = false;
     void setDontNormalize(boolean val) {
       dontNormalize = val;
@@ -2702,15 +2702,15 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
       return super.canonicalizePath(url);
     }
 
-    public static LockssRepository createNewLockssRepository(ArchivalUnit au) {
+    public static OldLockssRepository createNewLockssRepository(ArchivalUnit au) {
       String root = getRepositoryRoot(au);
       if (root == null) {
-	throw new LockssRepository.RepositoryStateException("null root");
+	throw new OldLockssRepository.RepositoryStateException("null root");
       }
-      String auDir = LockssRepositoryImpl.mapAuToFileLocation(root, au);
+      String auDir = OldLockssRepositoryImpl.mapAuToFileLocation(root, au);
       log.debug("repo: " + auDir + ", au: " + au.getName());
 //       staticCacheLocation = extendCacheLocation(root);
-      LockssRepositoryImpl repo = new MyLockssRepositoryImpl(auDir);
+      OldLockssRepositoryImpl repo = new MyLockssRepositoryImpl(auDir);
       Plugin plugin = au.getPlugin();
       if (plugin != null) {
 	LockssDaemon daemon = plugin.getDaemon();

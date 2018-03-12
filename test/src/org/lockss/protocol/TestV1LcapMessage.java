@@ -41,7 +41,7 @@ import java.util.*;
 import org.lockss.test.*;
 import org.lockss.config.*;
 import org.lockss.poller.*;
-import org.lockss.repository.LockssRepositoryImpl;
+import org.lockss.repository.OldLockssRepositoryImpl;
 import org.lockss.util.*;
 import org.lockss.app.LockssDaemon;
 
