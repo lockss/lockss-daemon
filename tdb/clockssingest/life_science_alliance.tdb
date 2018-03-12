@@ -1,0 +1,28 @@
+{
+
+  publisher <
+    name = Life Science Alliance ;
+    info[contract] = 2018 ;
+    info[tester] = 8 ;
+    info[poller] = 2
+  >
+
+  plugin = org.lockss.plugin.highwire.ClockssHWDrupalPlugin
+  implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
+  #Alliance between Rockefeller University Press, EMBO Press, and Cold Spring Harbor Lab Press 
+
+  {
+
+    title <
+      name = The Journal of Cell Biology ;
+      issn = 0021-9525 ;
+      eissn = 1540-8140
+    >
+
+    param[base_url] = http://jcb.rupress.org/
+
+    au < exists ; exists ; 2017 ; Life Science Alliance Volume 1 ; 1 ; >
+
+  }
+
+}
