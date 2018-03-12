@@ -9,11 +9,11 @@
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.67.3</string> <!-- au_repair_from_peer_if_missing_url_pattern -->
+    <string>1.70.0</string> <!-- https conversion support -->
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>35</string>
+    <string>36</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -52,16 +52,19 @@
     <string>au_crawlrules</string>
     <list>
       <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
-      <string>4,"^%s", base_url</string>
-      <string>1,"^%s%s/lockss-volume%d.html$", base_url, journal_abbr, volume</string>
-      <string>1,"^%s%s/([^/]+/)?vol%d", base_url, journal_abbr, volume</string>
-      <string>1,"^%s%s/%d/", base_url, journal_abbr, volume</string>
-      <string>1,"^%scgi/viewcontent\.cgi\?.*context=%s", base_url, journal_abbr</string>
+      <string>4,"^https?://%s/", url_host(base_url)</string>
+      <string>1,"^https?://%s/%s/lockss-volume%d.html$", url_host(base_url), journal_abbr, volume</string>
+      <string>1,"^https?://%s/%s/([^/]+/)?vol%d", url_host(base_url), journal_abbr, volume</string>
+      <string>1,"^https?://%s/%s/%d/", url_host(base_url), journal_abbr, volume</string>
+      <string>1,"^https?://%s/cgi/viewcontent\.cgi\?.*context=%s", url_host(base_url), journal_abbr</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%s%s/lockss-volume%d.html", base_url, journal_abbr, volume</string>
+    <list>
+    <string>"%s%s/lockss-volume%d.html", to_http(base_url), journal_abbr, volume</string>
+    <string>"%s%s/lockss-volume%d.html", to_https(base_url), journal_abbr, volume</string>
+    </list>
   </entry>
   <entry>
     <string>au_feature_urls</string>
@@ -121,8 +124,22 @@
   </entry>
   <entry>
     <string>au_redirect_to_login_url_pattern</string>
-    <string>"%scgi/login\.cgi", base_url</string>
+    <string>"%s/cgi/login\.cgi", url_host(base_url)</string>
   </entry>
+  <!--  also for https conversion -->
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.bepress.BePressHttpHttpsUrlNormalizer</string>
+  </entry>
+ <entry>
+    <string>plugin_url_fetcher_factory</string>
+    <string>org.lockss.plugin.bepress.BePressHttpToHttpsUrlFetcherFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.bepress.BePressHttpToHttpsUrlConsumerFactory</string>
+  </entry>
+  <!--  end for https conversion -->  
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.bepress.DigitalCommonsRepositoryHtmlHashFilterFactory</string>
@@ -149,24 +166,25 @@
     </map>
   </entry>
   <entry>
+<!-- http://scholarship.law.duke.edu/cgi/viewcontent.cgi?article=1523&context=alr -->
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%scgi/viewcontent\.cgi\?.*context=%s", base_url, journal_abbr</string>
+      <string>"^https?://%s/cgi/viewcontent\.cgi\?.*context=%s", url_host(base_url), journal_abbr</string>
     </list>
   </entry>
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
     <list>
-      <string>"^%sassets/", base_url</string> <!-- images, stylesheets, Javascript -->
-      <string>"^%s(%s/)?[^/]+\.css$", base_url, journal_abbr</string> <!-- stylesheets -->
+      <string>"^https?://%s/assets/", url_host(base_url)</string> <!-- images, stylesheets, Javascript -->
+      <string>"^https?://%s/(%s/)?[^/]+\.css$", url_host(base_url), journal_abbr</string> <!-- stylesheets -->
     </list>
   </entry>
   <entry>
     <!-- these will not count towards poll results but will replicate from peer if above -->
     <string>au_url_poll_result_weight</string>
     <list>
-      <string>"^%sassets/", base_url, 0</string> <!-- images, stylesheets, Javascript -->
-      <string>"^%s(%s/)?[^/]+\.css$", base_url, journal_abbr, 0</string> <!-- stylesheets -->
+      <string>"^https?://%s/assets/", url_host(base_url), 0</string> <!-- images, stylesheets, Javascript -->
+      <string>"^https?://%s/(%s/)?[^/]+\.css$", url_host(base_url), journal_abbr, 0</string> <!-- stylesheets -->
     </list>
   </entry>
   <entry>
