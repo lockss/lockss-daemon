@@ -164,42 +164,7 @@ while (my $line = <>) {
         }
         sleep(4);
 
-  } elsif ($plugin eq "AAPDrupalPlugin" ||
-           $plugin eq "AAPLDrupalPlugin" ||
-           $plugin eq "ADADrupalPlugin" ||
-           $plugin eq "AHADrupalPlugin" ||
-           $plugin eq "AmAssocCancerResearchDrupalPlugin" ||
-           $plugin eq "AmAssocClinChemDrupalPlugin" ||
-           $plugin eq "AmAssocRespCareDrupalPlugin" ||
-           $plugin eq "AmCollegeCardiologyDrupalPlugin" ||
-           $plugin eq "AmSocEnVitDrupalPlugin" ||
-           $plugin eq "AmSocHealthSysDrupalPlugin" ||
-           $plugin eq "APSDrupalPlugin" ||
-           $plugin eq "ARFDrupalPlugin" ||
-           $plugin eq "ASHDrupalPlugin" ||
-           $plugin eq "ASMDrupalPlugin" ||
-           $plugin eq "ASPBDrupalPlugin" ||
-           $plugin eq "ASPETDrupalPlugin" ||
-           $plugin eq "BESBJSDrupalPlugin" ||
-           $plugin eq "BiologistsDrupalPlugin" ||
-           $plugin eq "BMJDrupalPlugin" ||
-           $plugin eq "CollegeFamilyPhysCanadaDrupalPlugin" ||
-           $plugin eq "EMBODrupalPlugin" ||
-           $plugin eq "ERSDrupalPlugin" ||
-           $plugin eq "FSFDrupalPlugin" ||
-           $plugin eq "GeneticsSocietyDrupalPlugin" ||
-           $plugin eq "GSLDrupalPlugin" ||
-           $plugin eq "GSWDrupalPlugin" ||
-           $plugin eq "IWADrupalPlugin" ||
-           $plugin eq "JBJSDrupalPlugin" ||
-           $plugin eq "OUPDrupalPlugin" ||
-           $plugin eq "PortlandPressDrupalPlugin" ||
-           $plugin eq "RCGPDrupalPlugin" ||
-           $plugin eq "RCPsychDrupalPlugin" ||
-           $plugin eq "RSPDrupalPlugin" ||
-           $plugin eq "RUPDrupalPlugin" ||
-           $plugin eq "SFNDrupalPlugin" ||
-           $plugin eq "HWDrupalPlugin") {
+  } elsif ($plugin =~ m/(?!Clockss).+DrupalPlugin/) {
         $url = sprintf("%slockss-manifest/vol_%s_manifest.html",
             $param{base_url}, $param{volume_name});
         $man_url = uri_unescape($url);
@@ -252,23 +217,7 @@ while (my $line = <>) {
         }
         sleep(4);
 
-  } elsif ($plugin eq "ClockssAAASDrupalPlugin" ||
-           $plugin eq "ClockssAAIDrupalPlugin" ||
-           $plugin eq "ClockssAAPDrupalPlugin" ||
-           $plugin eq "ClockssAAPLDrupalPlugin" ||
-           $plugin eq "ClockssADADrupalPlugin" ||
-           $plugin eq "ClockssAPSDrupalPlugin" ||
-           $plugin eq "ClockssASPETDrupalPlugin" ||
-           $plugin eq "ClockssBiologistsDrupalPlugin" ||
-           $plugin eq "ClockssERSDrupalPlugin" ||
-           $plugin eq "ClockssGSLDrupalPlugin" ||
-           $plugin eq "ClockssGSWDrupalPlugin" ||
-           $plugin eq "ClockssIWADrupalPlugin" ||
-           $plugin eq "ClockssOUPDrupalPlugin" ||
-           $plugin eq "ClockssPortlandPressDrupalPlugin" ||
-           $plugin eq "ClockssRSPDrupalPlugin" ||
-           $plugin eq "ClockssRUPDrupalPlugin" ||
-           $plugin eq "ClockssHWDrupalPlugin") {
+  } elsif ($plugin =~ m/Clockss.+DrupalPlugin/) {
         $url = sprintf("%sclockss-manifest/vol_%s_manifest.html",
             $param{base_url}, $param{volume_name});
         $man_url = uri_unescape($url);
