@@ -141,7 +141,7 @@
 
       au < ready ; exists ; 2007 ; IET Circuits, Devices and Systems Volume 1 ; 1 ; >
       au < ready ; exists ; 2008 ; IET Circuits, Devices and Systems Volume 2 ; 2 ; >
-      au < crawling ; exists ; 2009 ; IET Circuits, Devices and Systems Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2009 ; IET Circuits, Devices and Systems Volume 3 ; 3 ; >
       au < crawling ; exists ; 2010 ; IET Circuits, Devices and Systems Volume 4 ; 4 ; >
       au < crawling ; exists ; 2011 ; IET Circuits, Devices and Systems Volume 5 ; 5 ; >
       au < frozen ; exists ; 2012 ; IET Circuits, Devices and Systems Volume 6 ; 6 ; >
@@ -166,7 +166,7 @@
 
       au < ready ; exists ; 2007 ; IET Communications Volume 1 ; 1 ; >
       au < ready ; exists ; 2008 ; IET Communications Volume 2 ; 2 ; >
-      au < crawling ; exists ; 2009 ; IET Communications Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2009 ; IET Communications Volume 3 ; 3 ; >
       au < crawling ; exists ; 2010 ; IET Communications Volume 4 ; 4 ; >
       au < crawling ; exists ; 2011 ; IET Communications Volume 5 ; 5 ; >
       au < notReady ; exists ; 2012 ; IET Communications Volume 6 ; 6 ; > #500 Error
@@ -217,7 +217,7 @@
       au < ready ; exists ; 2007 ; IET Computer Vision Volume 1 ; 1 ; >
       au < ready ; exists ; 2008 ; IET Computer Vision Volume 2 ; 2 ; >
       au < crawling ; exists ; 2009 ; IET Computer Vision Volume 3 ; 3 ; >
-      au < crawling ; exists ; 2010 ; IET Computer Vision Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2010 ; IET Computer Vision Volume 4 ; 4 ; >
       au < frozen ; exists ; 2011 ; IET Computer Vision Volume 5 ; 5 ; >
       au < frozen ; exists ; 2012 ; IET Computer Vision Volume 6 ; 6 ; >
       au < frozen ; exists ; 2013 ; IET Computer Vision Volume 7 ; 7 ; >
@@ -367,7 +367,7 @@
 
       au < ready ; exists ; 2007 ; IET Information Security Volume 1 ; 1 ; >
       au < ready ; exists ; 2008 ; IET Information Security Volume 2 ; 2 ; >
-      au < crawling ; exists ; 2009 ; IET Information Security Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2009 ; IET Information Security Volume 3 ; 3 ; >
       au < frozen ; exists ; 2010 ; IET Information Security Volume 4 ; 4 ; >
       au < crawling ; exists ; 2011 ; IET Information Security Volume 5 ; 5 ; >
       au < frozen ; exists ; 2012 ; IET Information Security Volume 6 ; 6 ; >
@@ -419,7 +419,7 @@
 
       au < ready ; exists ; 2007 ; IET Microwaves, Antennas & Propagation Volume 1 ; 1 ; >
       au < ready ; exists ; 2008 ; IET Microwaves, Antennas & Propagation Volume 2 ; 2 ; >
-      au < crawling ; exists ; 2009 ; IET Microwaves, Antennas & Propagation Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2009 ; IET Microwaves, Antennas & Propagation Volume 3 ; 3 ; >
       au < crawling ; exists ; 2010 ; IET Microwaves, Antennas & Propagation Volume 4 ; 4 ; >
       au < frozen ; exists ; 2011 ; IET Microwaves, Antennas & Propagation Volume 5 ; 5 ; >
       au < frozen ; exists ; 2012 ; IET Microwaves, Antennas & Propagation Volume 6 ; 6 ; >
@@ -623,7 +623,7 @@
       au < ready ; exists ; 2008 ; IET Signal Processing Volume 2 ; 2 ; >
       au < crawling ; exists ; 2009 ; IET Signal Processing Volume 3 ; 3 ; >
       au < frozen ; exists ; 2010 ; IET Signal Processing Volume 4 ; 4 ; >
-      au < crawling ; exists ; 2011 ; IET Signal Processing Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2011 ; IET Signal Processing Volume 5 ; 5 ; >
       au < frozen ; exists ; 2012 ; IET Signal Processing Volume 6 ; 6 ; >
       au < frozen ; exists ; 2013 ; IET Signal Processing Volume 7 ; 7 ; >
       au < frozen ; exists ; 2014 ; IET Signal Processing Volume 8 ; 8 ; >
@@ -648,7 +648,7 @@
       au < ready ; exists ; 2007 ; IET Software Volume 1 ; 1 ; >
       au < ready ; exists ; 2008 ; IET Software Volume 2 ; 2 ; >
       au < crawling ; exists ; 2009 ; IET Software Volume 3 ; 3 ; >
-      au < crawling ; exists ; 2010 ; IET Software Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2010 ; IET Software Volume 4 ; 4 ; >
       au < crawling ; exists ; 2011 ; IET Software Volume 5 ; 5 ; >
       au < frozen ; exists ; 2012 ; IET Software Volume 6 ; 6 ; >
       au < frozen ; exists ; 2013 ; IET Software Volume 7 ; 7 ; >
