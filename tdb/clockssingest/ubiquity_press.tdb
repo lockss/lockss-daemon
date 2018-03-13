@@ -162,7 +162,7 @@
       au < finished ; finished ; 2014 ; 6 ; Studies in the Maternal Volume 2014 ; 2014 ; http://www.mamsie.bbk.ac.uk/ ; >
       au < frozen ; exists ; 2015 ; 7 ; Studies in the Maternal Volume 2015 ; 2015 ; http://www.mamsie.bbk.ac.uk/ ; >
       au < frozen ; exists ; 2016 ; 8 ; Studies in the Maternal Volume 2016 ; 2016 ; http://www.mamsie.bbk.ac.uk/ ; >
-      au < crawling ; exists ; 2017 ; 9 ; Studies in the Maternal Volume 2017 ; 2017 ; https://www.mamsie.bbk.ac.uk/ ; >
+      au < deepCrawl ; exists ; 2017 ; 9 ; Studies in the Maternal Volume 2017 ; 2017 ; https://www.mamsie.bbk.ac.uk/ ; >
 
   }
 
@@ -564,7 +564,7 @@
 
       au < finished ; finished ; 2015 ; 1 ; Glocality: Undergraduate Academic Journal Volume 2015 ; 2015 ; http://www.glocality.eu/ ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2016 ; 2 ; Glocality: Undergraduate Academic Journal Volume 2016 ; 2016 ; http://www.glocality.eu/ ; >
-      au < crawling ; exists ; 2017 ; 3 ; Glocality: Undergraduate Academic Journal Volume 2017 ; 2017 ; http://www.glocality.eu/ ; >
+      au < deepCrawl ; exists ; 2017 ; 3 ; Glocality: Undergraduate Academic Journal Volume 2017 ; 2017 ; http://www.glocality.eu/ ; >
 
   }
 
@@ -813,7 +813,7 @@
 
       au < finished ; finished ; 2015 ; 1 ; Journal of Open Humanities Data Volume 2015 ; 2015 ; http://openhumanitiesdata.metajnl.com/ ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2016 ; 2 ; Journal of Open Humanities Data Volume 2016 ; 2016 ; http://openhumanitiesdata.metajnl.com/ ; >
-      au < crawling ; exists ; 2017 ; 3 ; Journal of Open Humanities Data Volume 2017 ; 2017 ; http://openhumanitiesdata.metajnl.com/ ; >
+      au < deepCrawl ; exists ; 2017 ; 3 ; Journal of Open Humanities Data Volume 2017 ; 2017 ; http://openhumanitiesdata.metajnl.com/ ; >
 
   }
 
@@ -831,7 +831,7 @@
       au < doNotProcess ; exists ; 2014 ; 2 ; Journal of Open Psychology Data Volume 2014 ; 2014 ; https://openpsychologydata.metajnl.com/ ; >
       au < finished ; finished ; 2015 ; 3 ; Journal of Open Psychology Data Volume 2015 ; 2015 ; http://openpsychologydata.metajnl.com/ ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2016 ; 4 ; Journal of Open Psychology Data Volume 2016 ; 2016 ; http://openpsychologydata.metajnl.com/ ; >
-      au < crawling ; exists ; 2017 ; 5 ; Journal of Open Psychology Data Volume 2017 ; 2017 ; http://openpsychologydata.metajnl.com/ ; >
+      au < deepCrawl ; exists ; 2017 ; 5 ; Journal of Open Psychology Data Volume 2017 ; 2017 ; http://openpsychologydata.metajnl.com/ ; >
 
   }
 
@@ -1271,7 +1271,7 @@
       au < finished ; finished ; 2014 ; 3 ; Insights: the UKSG journal Volume 2014 ; 2014 ; http://insights.uksg.org/ ; >
       au < finished ; finished ; 2015 ; 4 ; Insights: the UKSG journal Volume 2015 ; 2015 ; http://insights.uksg.org/ ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2016 ; 5 ; Insights: the UKSG journal Volume 2016 ; 2016 ; http://insights.uksg.org/ ; >
-      au < crawling ; exists ; 2017 ; 6 ; Insights: the UKSG journal Volume 2017 ; 2017 ; http://insights.uksg.org/ ; >
+      au < deepCrawl ; exists ; 2017 ; 6 ; Insights: the UKSG journal Volume 2017 ; 2017 ; http://insights.uksg.org/ ; >
 
   }
 

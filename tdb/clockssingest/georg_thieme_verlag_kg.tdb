@@ -964,7 +964,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Dialyse aktuell Volume 9 ; 9 ; >
    au < finished ; finished ; 2015 ; 2015 ; Dialyse aktuell Volume 10 ; 10 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; exists ; 2016 ; 2016 ; Dialyse aktuell Volume 11 ; 11 ; >
-   au < crawling ; exists ; 2017 ; 2017 ; Dialyse aktuell Volume 12 ; 12 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Dialyse aktuell Volume 12 ; 12 ; >
 
   }
 
@@ -1714,7 +1714,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Frauenheilkunde up2date Volume 8 ; 8 ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2015 ; 2015 ; Frauenheilkunde up2date Volume 9 ; 9 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; exists ; 2016 ; 2016 ; Frauenheilkunde up2date Volume 10 ; 10 ; >
-   au < crawling ; exists ; 2017 ; 2017 ; Frauenheilkunde up2date Volume 11 ; 11 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Frauenheilkunde up2date Volume 11 ; 11 ; >
 
    }
 
@@ -2511,7 +2511,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 9 ; 9 ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2015 ; 2015 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 10 ; 10 ; reingest2.clockss.org:8085 >
    au < deepCrawl ; exists ; 2016 ; 2016 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 11 ; 11 ; >
-   au < crawling ; exists ; 2017 ; 2017 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 12 ; 12 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 12 ; 12 ; >
 
   }
 
@@ -3143,7 +3143,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Klinische Neurophysiologie Volume 45 ; 45 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; Klinische Neurophysiologie Volume 46 ; 46 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Klinische Neurophysiologie Volume 47 ; 47 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; 2017 ; Klinische Neurophysiologie Volume 48 ; 48 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Klinische Neurophysiologie Volume 48 ; 48 ; >
 
   }
 
@@ -3610,7 +3610,7 @@
     au < finished ; finished ; 2014 ; 2014 ; neuroreha Volume 6 ; 6 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; neuroreha Volume 7 ; 7 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; neuroreha Volume 8 ; 8 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; 2017 ; neuroreha Volume 9 ; 9 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; neuroreha Volume 9 ; 9 ; >
 
   }
 
@@ -3643,7 +3643,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Notarzt Der Volume 30 ; 30 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Notarzt Der Volume 31 ; 31 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Notarzt Der Volume 32 ; 32 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2017 ; 2017 ; Notarzt Der Volume 33 ; 33 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Notarzt Der Volume 33 ; 33 ; >
 
   }
 
@@ -4861,7 +4861,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Seminars in Liver Disease Volume 34 ; 34 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2015 ; 2015 ; Seminars in Liver Disease Volume 35 ; 35 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2016 ; 2016 ; Seminars in Liver Disease Volume 36 ; 36 ; reingest5.clockss.org:8082 >
-   au < crawling ; exists ; 2017 ; 2017 ; Seminars in Liver Disease Volume 37 ; 37 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Seminars in Liver Disease Volume 37 ; 37 ; >
 
   }
 
@@ -5814,7 +5814,7 @@
     au < finished ; finished ; 2014 ; 2014 ; TumorDiagnostik & Therapie Volume 37 ; 37 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; TumorDiagnostik & Therapie Volume 38 ; 38 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; TumorDiagnostik & Therapie Volume 39 ; 39 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; 2017 ; TumorDiagnostik & Therapie Volume 40 ; 40 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; TumorDiagnostik & Therapie Volume 40 ; 40 ; >
 
   }
 
@@ -6258,7 +6258,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Zeitschrift für Orthomolekulare Medizin Volume 12 ; 12 ; >
     au < finished ; finished ; 2015 ; 2015 ; Zeitschrift für Orthomolekulare Medizin Volume 13 ; 13 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Zeitschrift für Orthomolekulare Medizin Volume 14 ; 14 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2017 ; 2017 ; Zeitschrift für Orthomolekulare Medizin Volume 15 ; 15 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Zeitschrift für Orthomolekulare Medizin Volume 15 ; 15 ; >
 
   }
 
@@ -6361,7 +6361,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Zeitschrift für Palliativmedizin Volume 15 ; 15 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Zeitschrift für Palliativmedizin Volume 16 ; 16 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Zeitschrift für Palliativmedizin Volume 17 ; 17 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; 2017 ; Zeitschrift für Palliativmedizin Volume 18 ; 18 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Zeitschrift für Palliativmedizin Volume 18 ; 18 ; >
 
   }
 

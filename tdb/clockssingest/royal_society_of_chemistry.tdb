@@ -1087,7 +1087,7 @@
 
       au < frozen ; exists ; 2015 ; Environmental Science: Water Research & Technology Volume 1 ; 1 ; 2015 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2016 ; Environmental Science: Water Research & Technology Volume 2 ; 2 ; 2016 ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; Environmental Science: Water Research & Technology Volume 3 ; 3 ; 2017 ; >
+      au < deepCrawl ; exists ; 2017 ; Environmental Science: Water Research & Technology Volume 3 ; 3 ; 2017 ; >
 
   }
 
@@ -1340,7 +1340,7 @@
       au < frozen ; exists ; 2014 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 2 ; 2 ; 2014 ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2015 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 3 ; 3 ; 2015 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2016 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 4 ; 4 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 5 ; 5 ; 2017 ; >
+      au < deepCrawl ; exists ; 2017 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 5 ; 5 ; 2017 ; >
 
   }
 
@@ -2334,7 +2334,7 @@
       param[journal_code] = re
 
       au < frozen ; exists ; 2016 ; Reaction Chemistry & Engineering Volume 1 ; 1 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; Reaction Chemistry & Engineering Volume 2 ; 2 ; 2017 ; >
+      au < deepCrawl ; exists ; 2017 ; Reaction Chemistry & Engineering Volume 2 ; 2 ; 2017 ; >
 
   }
 

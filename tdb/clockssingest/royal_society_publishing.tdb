@@ -1293,7 +1293,7 @@
     au < rsp.ClockssRSPDrupalPlugin ; frozen ; exists ; 2014 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 470 ; 470 ; >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2015 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 471 ; 471 ; reingest5.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2016 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 472 ; 472 ; reingest5.clockss.org:8082 >
-    au < rsp.ClockssRSPDrupalPlugin ; crawling ; exists ; 2017 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 473 ; 473 ; >
+    au < rsp.ClockssRSPDrupalPlugin ; deepCrawl ; exists ; 2017 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 473 ; 473 ; >
 
   }
 

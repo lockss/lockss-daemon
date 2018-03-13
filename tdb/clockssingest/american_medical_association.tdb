@@ -69,7 +69,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; JAMA Facial Plastic Surgery Volume 16 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; JAMA Facial Plastic Surgery Volume 17 ; 2015 ; >
     au < finished ; crawling ; 2016 ; JAMA Facial Plastic Surgery Volume 18 ; 2016 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2017 ; JAMA Facial Plastic Surgery Volume 19 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; JAMA Facial Plastic Surgery Volume 19 ; 2017 ; >
     au < manifest ; exists ; 2018 ; JAMA Facial Plastic Surgery Volume 20 ; 2018 ; >
 
   }
