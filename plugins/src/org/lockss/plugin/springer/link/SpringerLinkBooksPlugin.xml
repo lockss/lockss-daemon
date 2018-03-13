@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Substance</string>
-        <string>3</string>
+        <string>4</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -94,6 +94,8 @@
     <list>
       <!--  http://link.springer.com/content/pdf/10.1007%2F978-3-319-18518-7.pdf-->
       <string>"^%scontent/pdf/[.0-9]+(/|%%2F)%s\.pdf$", base_url, book_eisbn</string>
+      <!-- -->
+      <string>"^%scontent/pdf/[.0-9]+(/|%%2F)[\d-]{13,17}\.pdf$", base_url</string>
     </list>
   </entry>
   <entry>
