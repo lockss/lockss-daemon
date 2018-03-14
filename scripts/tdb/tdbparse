@@ -9,4 +9,4 @@ if [ "X${JAVA_HOME}" = "X" ]; then
 else
   JAVA=$JAVA_HOME/bin/java
 fi
-$JAVA -Xmx1024m -classpath `cat $CLASSPATHFILE` org.lockss.tdb.TdbParse "$@"
+$JAVA -Xmx1536m -classpath `cat $CLASSPATHFILE` org.lockss.tdb.TdbParse "$@"
