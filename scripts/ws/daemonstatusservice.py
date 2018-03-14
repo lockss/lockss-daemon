@@ -31,7 +31,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.6.1'
+__version__ = '0.6.2'
 
 import getpass
 import itertools
@@ -510,9 +510,9 @@ class _DaemonStatusServiceOptions(object):
     if len(errfields) > 1: parser.error('unknown fields: %s' % (', '.join(errfields),))
     return fields
 
-# Last modified 2016-08-02
+# Last modified 2018-03-14 for unicode support
 def _output_record(options, lst):
-  print '\t'.join([x if type(x) is unicode else str(x or '') for x in lst])
+  print '\t'.join([x.encode('utf-8') if type(x) is unicode else str(x or '') for x in lst])
 
 # Last modified 2015-08-05
 def _output_table(options, data, rowheaders, lstcolkeys):
