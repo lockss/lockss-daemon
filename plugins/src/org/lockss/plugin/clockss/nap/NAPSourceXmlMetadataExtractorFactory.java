@@ -97,6 +97,8 @@ public class NAPSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtra
     // this is defined in the schema as 'NAP_copyyear'
     private static final String COPYRIGHT_KEY = "copyright";
     private static final String FLAT_ISBN_KEY = "flat_isbn";
+
+    @Override
     protected void postCookProcess(SourceXmlSchemaHelper schemaHelper, 
         CachedUrl cu, ArticleMetadata thisAM) {
 
@@ -113,6 +115,14 @@ public class NAPSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtra
       if (thisAM.get(MetadataField.FIELD_DATE) == null) {
         thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(COPYRIGHT_KEY));
       }
+      
+  	log.debug3("setting publication type in postcook process");
+  	// this is a book volume
+  	thisAM.put(MetadataField.FIELD_PUBLICATION_TYPE,MetadataField.PUBLICATION_TYPE_BOOK);
+  	thisAM.put(MetadataField.FIELD_ARTICLE_TYPE,MetadataField.ARTICLE_TYPE_BOOKVOLUME);
+      
     }
+    
+
   }
 }

@@ -125,6 +125,16 @@ public class Onix3LongSourceXmlMetadataExtractorFactory extends SourceXmlMetadat
       }
       return allAMs;
     }
+    
+    @Override
+    protected void postCookProcess(SourceXmlSchemaHelper schemaHelper, 
+    		CachedUrl cu, ArticleMetadata thisAM) {
+
+    	log.debug3("setting publication type in postcook process");
+    	// this is a book volume
+    	thisAM.put(MetadataField.FIELD_PUBLICATION_TYPE,MetadataField.PUBLICATION_TYPE_BOOK);
+    	thisAM.put(MetadataField.FIELD_ARTICLE_TYPE,MetadataField.ARTICLE_TYPE_BOOKVOLUME);
+    }
 
   }
 }
