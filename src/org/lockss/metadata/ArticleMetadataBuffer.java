@@ -187,7 +187,7 @@ class ArticleMetadataBuffer {
         if (MetadataField.PUBLICATION_TYPE_BOOK.equals(publicationType)
             || MetadataField.PUBLICATION_TYPE_BOOKSERIES.equals(publicationType)
            ) {
-          if (StringUtil.isNullString(startPage)
+          if (!StringUtil.isNullString(startPage)
               || !StringUtil.isNullString(endPage)
               || !StringUtil.isNullString(itemNumber)) {
             // assume book chapter if startPage, endPage, or itemNumber present
