@@ -85,7 +85,7 @@
       <string>2,"^https?://%s/content/pdf/(bbm|bfm)",  url_host(base_url)</string>
       <string>1,"^%sauid=.*$", base_url</string>
       <string>1,"^https?://%s/download/epub/",  url_host(base_url)</string>
-      <string>1,"^https?://%s/(content|chapter|book|article)/",  url_host(base_url)</string>
+      <string>1,"^https?://%s/(content|chapter|book|article|referencework)/",  url_host(base_url)</string>
       <string>1,"^https?://(%s|static-content\.springer\.com/).*\.pdf$", url_host(base_url)</string>
     </list>
   </entry>
