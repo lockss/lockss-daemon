@@ -1612,7 +1612,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; American Politics Research Volume 42 ; 42 ; aprb ; >
       au < doNotProcess ; doNotProcess ; 2015 ; American Politics Research Volume 43 ; 43 ; aprb ; >
       au < finished ; manifest ; 2016 ; American Politics Research Volume 44 ; 44 ; aprb ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2017  ; American Politics Research Volume 45 ; 45 ; aprb ; >
+      au < deepCrawl ; exists ; 2017  ; American Politics Research Volume 45 ; 45 ; aprb ; >
 
     }
 
@@ -2750,7 +2750,7 @@
       #param[base_url] = http://jws.sagepub.com/
 
       au < finished ; manifest ; 2016 ; ANTYAJAA: Indian Journal of Women and Social Change Volume 1 ; 1 ; jwsa ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; ANTYAJAA: Indian Journal of Women and Social Change Volume 2 ; 2 ; jwsa ; >
+      au < deepCrawl ; exists ; 2017 ; ANTYAJAA: Indian Journal of Women and Social Change Volume 2 ; 2 ; jwsa ; >
 
   }
 
@@ -3253,7 +3253,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Asia-Pacific Journal of Public Health Volume 26 ; 26 ; apha ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Asia-Pacific Journal of Public Health Volume 27 ; 27 ; apha ; >
       au < finished ; manifest ; 2016 ; Asia-Pacific Journal of Public Health Volume 28 ; 28 ; apha ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; Asia-Pacific Journal of Public Health Volume 29 ; 29 ; apha ; >
+      au < deepCrawl ; exists ; 2017 ; Asia-Pacific Journal of Public Health Volume 29 ; 29 ; apha ; >
 
     }
 
@@ -4672,7 +4672,7 @@
       au < deepCrawl ; exists ; 2017 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 133 ; 133 ; bmsa ; >
       au < deepCrawl ; exists ; 2017 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 134 ; 134 ; bmsa ; >
       au < deepCrawl ; exists ; 2017 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 135 ; 135 ; bmsa ; >
-      au < crawling ; exists ; 2017 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 136 ; 136 ; bmsa ; >
+      au < deepCrawl ; exists ; 2017 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 136 ; 136 ; bmsa ; >
 
     }
 
@@ -5438,7 +5438,7 @@
         au < doNotProcess ; doNotProcess ; 2014 ; Career Development and Transition for Exceptional Individuals Volume 37 ; 37 ; cdeb ; >
         au < doNotProcess ; doNotProcess ; 2015 ; Career Development and Transition for Exceptional Individuals Volume 38 ; 38 ; cdeb ; >
         au < finished ; manifest ; 2016 ; Career Development and Transition for Exceptional Individuals Volume 39 ; 39 ; cdeb ; reingest5.clockss.org:8082 >
-        au < crawling ; exists ; 2017 ; Career Development and Transition for Exceptional Individuals Volume 40 ; 40 ; cdeb ; >
+        au < deepCrawl ; exists ; 2017 ; Career Development and Transition for Exceptional Individuals Volume 40 ; 40 ; cdeb ; >
 
       }
 
@@ -5870,7 +5870,7 @@
 
       au < doNotProcess ; doNotProcess ; 2015 ; Chinese Journal of Sociology Volume 1 ; 1 ; chsa ; >
       au < frozen ; exists ; 2016 ; Chinese Journal of Sociology Volume 2 ; 2 ; chsa ; >
-      au < crawling ; exists ; 2017 ; Chinese Journal of Sociology Volume 3 ; 3 ; chsa ; >
+      au < deepCrawl ; exists ; 2017 ; Chinese Journal of Sociology Volume 3 ; 3 ; chsa ; >
 
   }
 
@@ -7661,7 +7661,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Cornell Hospitality Quarterly Volume 55 ; 55 ; cqxb ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Cornell Hospitality Quarterly Volume 56 ; 56 ; cqxb ; >
       au < finished ; manifest ; 2016 ; Cornell Hospitality Quarterly Volume 57 ; 57 ; cqxb ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2017 ; Cornell Hospitality Quarterly Volume 58 ; 58 ; cqxb ; >
+      au < deepCrawl ; exists ; 2017 ; Cornell Hospitality Quarterly Volume 58 ; 58 ; cqxb ; >
 
     }
 
@@ -7928,7 +7928,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Criminal Justice and Behavior Volume 41 ; 41 ; cjbb ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Criminal Justice and Behavior Volume 42 ; 42 ; cjbb ; >
       au < frozen ; exists ; 2016 ; Criminal Justice and Behavior Volume 43 ; 43 ; cjbb ; >
-      au < crawling ; exists ; 2017 ; Criminal Justice and Behavior Volume 44 ; 44 ; cjbb ; >
+      au < deepCrawl ; exists ; 2017 ; Criminal Justice and Behavior Volume 44 ; 44 ; cjbb ; >
 
     }
 
@@ -9161,7 +9161,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Dose-Response Volume 12 ; 12 ; dosb ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Dose-Response Volume 13 ; 13 ; dosb ; >
       au < frozen ; exists ; 2016 ; Dose-Response Volume 14 ; 14 ; dosb ; >
-      au < crawling ; exists ; 2017 ; Dose-Response Volume 15 ; 15 ; dosb ; >
+      au < deepCrawl ; exists ; 2017 ; Dose-Response Volume 15 ; 15 ; dosb ; >
 
   }
 
@@ -10282,7 +10282,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Energy & Environment Volume 25 ; 25 ; eaea ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Energy & Environment Volume 26 ; 26 ; eaea ; >
       au < finished ; manifest ; 2016 ; Energy & Environment Volume 27 ; 27 ; eaea ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2017 ; Energy & Environment Volume 28 ; 28 ; eaea ; >
+      au < deepCrawl ; exists ; 2017 ; Energy & Environment Volume 28 ; 28 ; eaea ; >
 
   }
 
@@ -10379,7 +10379,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Environment and Behavior Volume 46 ; 46 ; eaba ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Environment and Behavior Volume 47 ; 47 ; eaba ; >
       au < frozen ; exists ; 2016 ; Environment and Behavior Volume 48 ; 48 ; eaba ; >
-      au < crawling ; exists ; 2017  ; Environment and Behavior Volume 49 ; 49 ; eaba ; >
+      au < deepCrawl ; exists ; 2017  ; Environment and Behavior Volume 49 ; 49 ; eaba ; >
 
     }
 
@@ -11037,7 +11037,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; European Journal of Criminology Volume 11 ; 11 ; euca ; >
       au < doNotProcess ; doNotProcess ; 2015 ; European Journal of Criminology Volume 12 ; 12 ; euca ; >
       au < frozen ; exists ; 2016 ; European Journal of Criminology Volume 13 ; 13 ; euca ; >
-      au < crawling ; exists ; 2017 ; European Journal of Criminology Volume 14 ; 14 ; euca ; >
+      au < deepCrawl ; exists ; 2017 ; European Journal of Criminology Volume 14 ; 14 ; euca ; >
 
     }
 
@@ -11553,7 +11553,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; European Urban and Regional Studies Volume 21 ; 21 ; eura ; >
       au < doNotProcess ; doNotProcess ; 2015 ; European Urban and Regional Studies Volume 22 ; 22 ; eura ; >
       au < frozen ; exists ; 2016 ; European Urban and Regional Studies Volume 23 ; 23 ; eura ; >
-      au < crawling ; exists ; 2017 ; European Urban and Regional Studies Volume 24 ; 24 ; eura ; >
+      au < deepCrawl ; exists ; 2017 ; European Urban and Regional Studies Volume 24 ; 24 ; eura ; >
 
     }
 
@@ -12895,7 +12895,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Gifted Education International Volume 30 ; 30 ; geia ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Gifted Education International Volume 31 ; 31 ; geia ; >
       au < frozen ; exists ; 2016 ; Gifted Education International Volume 32 ; 32 ; geia ; >
-      au < crawling ; exists ; 2017 ; Gifted Education International Volume 33 ; 33 ; geia ; >
+      au < deepCrawl ; exists ; 2017 ; Gifted Education International Volume 33 ; 33 ; geia ; >
 
     }
 
@@ -15492,7 +15492,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Innate Immunity Volume 20 ; 20 ; inib ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Innate Immunity Volume 21 ; 21 ; inib ; >
       au < frozen ; exists ; 2016 ; Innate Immunity Volume 22 ; 22 ; inib ; >
-      au < crawling ; exists ; 2017 ; Innate Immunity Volume 23 ; 23 ; inib ; >
+      au < deepCrawl ; exists ; 2017 ; Innate Immunity Volume 23 ; 23 ; inib ; >
 
     }
 
@@ -15777,7 +15777,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; The International Journal of Aging and Human Development Volume 81 ; 81 ; ahdb ; >
       au < frozen ; exists ; 2016 ; The International Journal of Aging and Human Development Volume 82 ; 82 ; ahdb ; >
       au < frozen ; exists ; 2016 ; The International Journal of Aging and Human Development Volume 83 ; 83 ; ahdb ; >
-      au < crawling ; exists ; 2017 ; The International Journal of Aging and Human Development Volume 84 ; 84 ; ahdb ; >
+      au < deepCrawl ; exists ; 2017 ; The International Journal of Aging and Human Development Volume 84 ; 84 ; ahdb ; >
       au < crawling ; exists ; 2017 ; The International Journal of Aging and Human Development Volume 85 ; 85 ; ahdb ; >
 
   }
@@ -17588,7 +17588,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; International Review for the Sociology of Sport Volume 49 ; 49 ; irsb ; >
       au < doNotProcess ; doNotProcess ; 2015 ; International Review for the Sociology of Sport Volume 50 ; 50 ; irsb ; >
       au < frozen ; exists ; 2016 ; International Review for the Sociology of Sport Volume 51 ; 51 ; irsb ; >
-      au < crawling ; exists ; 2017 ; International Review for the Sociology of Sport Volume 52 ; 52 ; irsb ; >
+      au < deepCrawl ; exists ; 2017 ; International Review for the Sociology of Sport Volume 52 ; 52 ; irsb ; >
 
     }
 
@@ -19901,7 +19901,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Cognitive Engineering and Decision Making Volume 8 ; 8 ; edma ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Cognitive Engineering and Decision Making Volume 9 ; 9 ; edma ; >
       au < frozen ; exists ; 2016 ; Journal of Cognitive Engineering and Decision Making Volume 10 ; 10 ; edma ; >
-      au < crawling ; exists ; 2017 ; Journal of Cognitive Engineering and Decision Making Volume 11 ; 11 ; edma ; >
+      au < deepCrawl ; exists ; 2017 ; Journal of Cognitive Engineering and Decision Making Volume 11 ; 11 ; edma ; >
 
     }
 
@@ -20807,7 +20807,7 @@
       #param[base_url] = http://jdp.sagepub.com/
 
       au < finished ; manifest ; 2016 ; Journal of Development Policy and Practice Volume 1 ; 1 ; jdpa ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; Journal of Development Policy and Practice Volume 2 ; 2 ; jdpa ; >
+      au < deepCrawl ; exists ; 2017 ; Journal of Development Policy and Practice Volume 2 ; 2 ; jdpa ; >
 
   }
 
@@ -21657,7 +21657,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of English Linguistics Volume 42 ; 42 ; enga ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of English Linguistics Volume 43 ; 43 ; enga ; >
       au < frozen ; exists ; 2016 ; Journal of English Linguistics Volume 44 ; 44 ; enga ; >
-      au < crawling ; exists ; 2017 ; Journal of English Linguistics Volume 45 ; 45 ; enga ; >
+      au < deepCrawl ; exists ; 2017 ; Journal of English Linguistics Volume 45 ; 45 ; enga ; >
 
     }
 
@@ -23326,7 +23326,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Intensive Care Medicine Volume 29 ; 29 ; jica ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Intensive Care Medicine Volume 30 ; 30 ; jica ; >
       au < frozen ; exists ; 2016 ; Journal of Intensive Care Medicine Volume 31 ; 31 ; jica ; >
-      au < crawling ; exists ; 2017  ; Journal of Intensive Care Medicine Volume 32 ; 32 ; jica ; >
+      au < deepCrawl ; exists ; 2017  ; Journal of Intensive Care Medicine Volume 32 ; 32 ; jica ; >
 
     }
 
@@ -24489,7 +24489,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Orthopaedic Surgery Volume 22 ; 22 ; osja ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Orthopaedic Surgery Volume 23 ; 23 ; osja ; >
       au < frozen ; exists ; 2016 ; Journal of Orthopaedic Surgery Volume 24 ; 24 ; osja ; >
-      au < crawling ; exists ; 2017 ; Journal of Orthopaedic Surgery Volume 25 ; 25 ; osja ; >
+      au < deepCrawl ; exists ; 2017 ; Journal of Orthopaedic Surgery Volume 25 ; 25 ; osja ; >
 
   }
 
@@ -25598,7 +25598,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Research on Leadership Education Volume 9 ; 9 ; jrla ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Research on Leadership Education Volume 10 ; 10 ; jrla ; >
     au < finished ; manifest ; 2016 ; Journal of Research on Leadership Education Volume 11 ; 11 ; jrla ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Journal of Research on Leadership Education Volume 12 ; 12 ; jrla ; >
+    au < deepCrawl ; exists ; 2017 ; Journal of Research on Leadership Education Volume 12 ; 12 ; jrla ; >
 
   }
 
@@ -25632,7 +25632,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Sandwich Structures and Materials Volume 16 ; 16 ; jsma ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Sandwich Structures and Materials Volume 17 ; 17 ; jsma ; >
       au < finished ; manifest ; 2016 ; Journal of Sandwich Structures and Materials Volume 18 ; 18 ; jsma ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; Journal of Sandwich Structures and Materials Volume 19 ; 19 ; jsma ; >
+      au < deepCrawl ; exists ; 2017 ; Journal of Sandwich Structures and Materials Volume 19 ; 19 ; jsma ; >
 
     }
 
@@ -26442,7 +26442,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of the American Psychiatric Nurses Association Volume 20 ; 20 ; japa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of the American Psychiatric Nurses Association Volume 21 ; 21 ; japa ; >
       au < finished ; manifest ; 2016 ; Journal of the American Psychiatric Nurses Association Volume 22 ; 22 ; japa ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2017 ; Journal of the American Psychiatric Nurses Association Volume 23 ; 23 ; japa ; >
+      au < deepCrawl ; exists ; 2017 ; Journal of the American Psychiatric Nurses Association Volume 23 ; 23 ; japa ; >
 
     }
 
@@ -29181,7 +29181,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; The Medieval History Journal Volume 17 ; 17 ; mhja ; >
       au < doNotProcess ; doNotProcess ; 2015 ; The Medieval History Journal Volume 18 ; 18 ; mhja ; >
       au < frozen ; exists ; 2016 ; The Medieval History Journal Volume 19 ; 19 ; mhja ; >
-      au < crawling ; exists ; 2017 ; The Medieval History Journal Volume 20 ; 20 ; mhja ; >
+      au < deepCrawl ; exists ; 2017 ; The Medieval History Journal Volume 20 ; 20 ; mhja ; >
 
     }
 
@@ -30139,7 +30139,7 @@
       au < frozen ; exists ; 2016 ; National Institute Economic Review Volume 237 ; 237 ; nera ; >
       au < finished ; manifest ; 2016 ; National Institute Economic Review Volume 238 ; 238 ; nera ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2017 ; National Institute Economic Review Volume 239 ; 239 ; nera ; >
-      au < crawling ; exists ; 2017 ; National Institute Economic Review Volume 240 ; 240 ; nera ; >
+      au < deepCrawl ; exists ; 2017 ; National Institute Economic Review Volume 240 ; 240 ; nera ; >
       au < deepCrawl ; exists ; 2017 ; National Institute Economic Review Volume 241 ; 241 ; nera ; >
       au < deepCrawl ; exists ; 2017 ; National Institute Economic Review Volume 242 ; 242 ; nera ; >
 
@@ -30753,7 +30753,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; North American Archaeologist Volume 35 ; 35 ; naaa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; North American Archaeologist Volume 36 ; 36 ; naaa ; >
       au < frozen ; exists ; 2016 ; North American Archaeologist Volume 37 ; 37 ; naaa ; >
-      au < crawling ; exists ; 2017  ; North American Archaeologist Volume 38 ; 38 ; naaa ; >
+      au < deepCrawl ; exists ; 2017  ; North American Archaeologist Volume 38 ; 38 ; naaa ; >
 
   }
 
@@ -30988,7 +30988,7 @@
       au < frozen ; exists ; 2015-2016 ; OMEGA - Journal of Death and Dying Volume 72 ; 72 ; omea ; >
       au < frozen ; exists ; 2016 ; OMEGA - Journal of Death and Dying Volume 73 ; 73 ; omea ; >
       au < deepCrawl ; exists ; 2016-2017 ; OMEGA - Journal of Death and Dying Volume 74 ; 74 ; omea ; >
-      au < crawling ; exists ; 2017 ; OMEGA - Journal of Death and Dying Volume 75 ; 75 ; omea ; >
+      au < deepCrawl ; exists ; 2017 ; OMEGA - Journal of Death and Dying Volume 75 ; 75 ; omea ; >
       au < deepCrawl ; exists ; 2017 ; OMEGA - Journal of Death and Dying Volume 76 ; 76 ; omea ; >
 
   }
@@ -31579,7 +31579,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Personality and Social Psychology Bulletin Volume 40 ; 40 ; pspc ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Personality and Social Psychology Bulletin Volume 41 ; 41 ; pspc ; >
       au < frozen ; exists ; 2016 ; Personality and Social Psychology Bulletin Volume 42 ; 42 ; pspc ; >
-      au < crawling ; exists ; 2017 ; Personality and Social Psychology Bulletin Volume 43 ; 43 ; pspc ; >
+      au < deepCrawl ; exists ; 2017 ; Personality and Social Psychology Bulletin Volume 43 ; 43 ; pspc ; >
 
     }
 
@@ -35169,7 +35169,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Research in Comparative and International Education Volume 9 ; 9 ; rcia ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Research in Comparative and International Education Volume 10 ; 10 ; rcia ; >
       au < frozen ; exists ; 2016 ; Research in Comparative and International Education Volume 11 ; 11 ; rcia ; >
-      au < crawling ; exists ; 2017 ; Research in Comparative and International Education Volume 12 ; 12 ; rcia ; >
+      au < deepCrawl ; exists ; 2017 ; Research in Comparative and International Education Volume 12 ; 12 ; rcia ; >
 
   }
 
@@ -38623,7 +38623,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Teaching Sociology Volume 42 ; 42 ; tsoa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Teaching Sociology Volume 43 ; 43 ; tsoa ; >
       au < frozen ; exists ; 2016 ; Teaching Sociology Volume 44 ; 44 ; tsoa ; >
-      au < crawling ; exists ; 2017 ; Teaching Sociology Volume 45 ; 45 ; tsoa ; >
+      au < deepCrawl ; exists ; 2017 ; Teaching Sociology Volume 45 ; 45 ; tsoa ; >
 
     }
 
@@ -39961,7 +39961,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Tourism and Hospitality Research Volume 14 ; 14 ; thrb ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Tourism and Hospitality Research Volume 15 ; 15 ; thrb ; >
       au < frozen ; exists ; 2016 ; Tourism and Hospitality Research Volume 16 ; 16 ; thrb ; >
-      au < crawling ; exists ; 2017 ; Tourism and Hospitality Research Volume 17 ; 17 ; thrb ; >
+      au < deepCrawl ; exists ; 2017 ; Tourism and Hospitality Research Volume 17 ; 17 ; thrb ; >
 
   }
 
@@ -40387,7 +40387,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Trauma Volume 16 ; 16 ; traa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Trauma Volume 17 ; 17 ; traa ; >
       au < frozen ; exists ; 2016 ; Trauma Volume 18 ; 18 ; traa ; >
-      au < crawling ; exists ; 2017 ; Trauma Volume 19 ; 19 ; traa ; >
+      au < deepCrawl ; exists ; 2017 ; Trauma Volume 19 ; 19 ; traa ; >
 
     }
 
@@ -40527,7 +40527,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Tropical Conservation Science Volume 7 ; 7 ; trca ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Tropical Conservation Science Volume 8 ; 8 ; trca ; >
       au < frozen ; exists ; 2016 ; Tropical Conservation Science Volume 9 ; 9 ; trca ; >
-      au < crawling ; exists ; 2017 ; Tropical Conservation Science Volume 10 ; 10 ; trca ; >
+      au < deepCrawl ; exists ; 2017 ; Tropical Conservation Science Volume 10 ; 10 ; trca ; >
 
   }
 
@@ -41105,7 +41105,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Violence Against Women Volume 20 ; 20 ; vawa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Violence Against Women Volume 21 ; 21 ; vawa ; >
       au < frozen ; exists ; 2016 ; Violence Against Women Volume 22 ; 22 ; vawa ; >
-      au < crawling ; exists ; 2017 ; Violence Against Women Volume 23 ; 23 ; vawa ; >
+      au < deepCrawl ; exists ; 2017 ; Violence Against Women Volume 23 ; 23 ; vawa ; >
 
 
     }
@@ -41523,7 +41523,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Workplace Health & Safety Volume 62 ; 62 ; whsd ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Workplace Health & Safety Volume 63 ; 63 ; whsd ; >
       au < frozen ; exists ; 2016 ; Workplace Health & Safety Volume 64 ; 64 ; whsd ; >
-      au < crawling ; exists ; 2017 ; Workplace Health & Safety Volume 65 ; 65 ; whsd ; >
+      au < deepCrawl ; exists ; 2017 ; Workplace Health & Safety Volume 65 ; 65 ; whsd ; >
 
   }
 
@@ -42932,7 +42932,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Australian Journal of Education Volume 58 ; 58 ; aeda ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Australian Journal of Education Volume 59 ; 59 ; aeda ; >
       au < finished ; manifest ; 2016 ; Australian Journal of Education Volume 60 ; 60 ; aeda ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; Australian Journal of Education Volume 61 ; 61 ; aeda ; >
+      au < deepCrawl ; exists ; 2017 ; Australian Journal of Education Volume 61 ; 61 ; aeda ; >
 
     }
 
@@ -45383,7 +45383,7 @@
         au < doNotProcess ; doNotProcess ; 2014 ; Phlebology Volume 29 ; 29 ; phla ; >
         au < doNotProcess ; doNotProcess ; 2015 ; Phlebology Volume 30 ; 30 ; phla ; >
         au < frozen ; exists ; 2016 ; Phlebology Volume 31 ; 31 ; phla ; >
-        au < crawling ; exists ; 2017 ; Phlebology Volume 32 ; 32 ; phla ; >
+        au < deepCrawl ; exists ; 2017 ; Phlebology Volume 32 ; 32 ; phla ; >
 
       }
 

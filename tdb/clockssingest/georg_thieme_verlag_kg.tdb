@@ -420,7 +420,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Allgemein- und Viszeralchirurgie up2date Volume 8 ; 8 ; >
     au < finished ; finished ; 2015 ; 2015 ; Allgemein- und Viszeralchirurgie up2date Volume 9 ; 9 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Allgemein- und Viszeralchirurgie up2date Volume 10 ; 10 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; 2017 ; Allgemein- und Viszeralchirurgie up2date Volume 11 ; 11 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Allgemein- und Viszeralchirurgie up2date Volume 11 ; 11 ; >
 
    }
 
@@ -2083,7 +2083,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Hormone and Metabolic Research Volume 46 ; 46 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2015 ; 2015 ; Hormone and Metabolic Research Volume 47 ; 47 ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; Hormone and Metabolic Research Volume 48 ; 48 ; reingest4.clockss.org:8082 >
-   au < crawling ; exists ; 2017 ; 2017 ; Hormone and Metabolic Research Volume 49 ; 49 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Hormone and Metabolic Research Volume 49 ; 49 ; >
 
   }
 
@@ -2184,7 +2184,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Informationen aus Orthodontie & Kieferorthopädie Volume 46 ; 46 ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2015 ; 2015 ; Informationen aus Orthodontie & Kieferorthopädie Volume 47 ; 47 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; down ; 2016 ; 2016 ; Informationen aus Orthodontie & Kieferorthopädie Volume 48 ; 48 ;  >
-   au < crawling ; exists ; 2017 ; 2017 ; Informationen aus Orthodontie & Kieferorthopädie Volume 49 ; 49 ; >
+   au < deepCrawl ; exists ; 2017 ; 2017 ; Informationen aus Orthodontie & Kieferorthopädie Volume 49 ; 49 ; >
 
   }
 
@@ -2543,7 +2543,7 @@
     param[journal_id] = 10.1055/s-00033348 
     #years = 2017-current
 
-    au < crawling ; exists ; 2017 ; 2017 ; Journal of Clinical Interventional Radiology Volume 1 ; 1 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Journal of Clinical Interventional Radiology Volume 1 ; 1 ; >
 
   }
 
@@ -3477,7 +3477,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Neonatologie Scan Volume 2 ; 2 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Neonatologie Scan Volume 3 ; 3 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Neonatologie Scan Volume 4 ; 4 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2017 ; 2017 ; Neonatologie Scan Volume 5 ; 5 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Neonatologie Scan Volume 5 ; 5 ; >
 
   }
 
@@ -3565,7 +3565,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Neuropediatrics Volume 45 ; 45 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Neuropediatrics Volume 46 ; 46 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; Neuropediatrics Volume 47 ; 47 ;  >
-    au < crawling ; exists ; 2017 ; 2017 ; Neuropediatrics Volume 48 ; 48 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Neuropediatrics Volume 48 ; 48 ; >
 
   }
 
@@ -4147,7 +4147,7 @@
     au < finished ; finished ; 2014 ; 2014 ; PiD - Psychotherapie im Dialog Volume 15 ; 15 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; PiD - Psychotherapie im Dialog Volume 16 ; 16 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; PiD - Psychotherapie im Dialog Volume 17 ; 17 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; 2017 ; PiD - Psychotherapie im Dialog Volume 18 ; 18 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; PiD - Psychotherapie im Dialog Volume 18 ; 18 ; >
 
   }
 
@@ -5152,7 +5152,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Seminars in Speech and Language Volume 35 ; 35 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Seminars in Speech and Language Volume 36 ; 36 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2016 ; 2016 ; Seminars in Speech and Language Volume 37 ; 37 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; 2017 ; Seminars in Speech and Language Volume 38 ; 38 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Seminars in Speech and Language Volume 38 ; 38 ; >
 
   }
 

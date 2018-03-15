@@ -135,7 +135,7 @@
     au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2014 ; Interface Focus Volume 4 ; 4 ; reingest5.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2015 ; Interface Focus Volume 5 ; 5 ; reingest5.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2016 ; Interface Focus Volume 6 ; 6 ; reingest5.clockss.org:8082 >
-    au < rsp.ClockssRSPDrupalPlugin ; crawling ; exists ; 2017 ; Interface Focus Volume 7 ; 7 ; >
+    au < rsp.ClockssRSPDrupalPlugin ; deepCrawl ; exists ; 2017 ; Interface Focus Volume 7 ; 7 ; >
 
   }
   

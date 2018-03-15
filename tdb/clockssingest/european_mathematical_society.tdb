@@ -194,7 +194,7 @@
     au < manifest ; exists ; 2014 ; Interfaces and Free Boundaries Volume 16 ; 16 ; >
     au < finished ; crawling ; 2015 ; Interfaces and Free Boundaries Volume 17 ; 17 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Interfaces and Free Boundaries Volume 18 ; 18 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Interfaces and Free Boundaries Volume 19 ; 19 ; >
+    au < deepCrawl ; exists ; 2017 ; Interfaces and Free Boundaries Volume 19 ; 19 ; >
     
   }
 
@@ -361,7 +361,7 @@
     au < manifest ; exists ; 2014 ; Portugaliae Mathematica Volume 71 ; 71 ; >
     au < finished ; crawling ; 2015 ; Portugaliae Mathematica Volume 72 ; 72 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2016 ; Portugaliae Mathematica Volume 73 ; 73 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2017 ; Portugaliae Mathematica Volume 74 ; 74 ; >
+    au < deepCrawl ; exists ; 2017 ; Portugaliae Mathematica Volume 74 ; 74 ; >
     
   }
 
@@ -486,7 +486,7 @@
     au < finished ; crawling ; 2015 ; Rendiconti del Seminario Matematico della Università di Padova Volume 134 ; 134 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2016 ; Rendiconti del Seminario Matematico della Università di Padova Volume 135 ; 135 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Rendiconti del Seminario Matematico della Università di Padova Volume 136 ; 136 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Rendiconti del Seminario Matematico della Università di Padova Volume 137 ; 137 ; >
+    au < deepCrawl ; exists ; 2017 ; Rendiconti del Seminario Matematico della Università di Padova Volume 137 ; 137 ; >
     au < frozen ; exists ; 2017 ; Rendiconti del Seminario Matematico della Università di Padova Volume 138 ; 138 ; >
     
   }

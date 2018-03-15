@@ -871,7 +871,7 @@
       au < zapped ; finished ; 2014 ; 2014 ; Geoscientific Model Development Volume 7 ; 7 ; http://www.geosci-model-dev.net/ ; http://www.geoscientific-model-development.net/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2015 ; 2015 ; Geoscientific Model Development Volume 8 ; 8 ; http://www.geosci-model-dev.net/ ; http://www.geoscientific-model-development.net/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2016 ; 2016 ; Geoscientific Model Development Volume 9 ; 9 ; http://www.geosci-model-dev.net/ ; http://www.geoscientific-model-development.net/ ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; 2017 ; Geoscientific Model Development Volume 10 ; 10 ; https://www.geosci-model-dev.net/ ; https://www.geoscientific-model-development.net/ ; >
+      au < deepCrawl ; exists ; 2017 ; 2017 ; Geoscientific Model Development Volume 10 ; 10 ; https://www.geosci-model-dev.net/ ; https://www.geoscientific-model-development.net/ ; >
       au < manifest ; exists ; 2018 ; 2018 ; Geoscientific Model Development Volume 11 ; 11 ; https://www.geosci-model-dev.net/ ; https://www.geoscientific-model-development.net/ ; >
 
    }
@@ -1493,7 +1493,7 @@
       au < finished ; finished ; 2014 ; 2014 ; Scientific Drilling Volume 18 ; 18 ; http://www.sci-dril.net/ ; http://www.scientific-drilling.net/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Scientific Drilling Volume 19 ; 19 ; http://www.sci-dril.net/ ; http://www.scientific-drilling.net/ ; >
       au < finished ; crawling ; 2016 ; 2016 ; Scientific Drilling Volume 20 ; 20 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; 2017 ; Scientific Drilling Volume 21 ; 21 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ ; >
+      au < deepCrawl ; exists ; 2017 ; 2017 ; Scientific Drilling Volume 21 ; 21 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ ; >
       au < manifest ; exists ; 2018 ; 2018 ; Scientific Drilling Volume 22 ; 22 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ ; >
 
    }
@@ -1699,7 +1699,7 @@
       au < finished ; finished ; 2014 ; 2014 ; Web Ecology Volume 14 ; 14 ; http://www.web-ecol.net/ ; http://www.web-ecology.net/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Web Ecology Volume 15 ; 15 ; http://www.web-ecol.net/ ; http://www.web-ecology.net/ ; >
       au < finished ; crawling ; 2016 ; 2016 ; Web Ecology Volume 16 ; 16 ; https://www.web-ecol.net/ ; https://www.web-ecology.net/ ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; 2017 ; Web Ecology Volume 17 ; 17 ; https://www.web-ecol.net/ ; https://www.web-ecology.net/ ; >
+      au < deepCrawl ; exists ; 2017 ; 2017 ; Web Ecology Volume 17 ; 17 ; https://www.web-ecol.net/ ; https://www.web-ecology.net/ ; >
       au < manifest ; exists ; 2018 ; 2018 ; Web Ecology Volume 18 ; 18 ; https://www.web-ecol.net/ ; https://www.web-ecology.net/ ; >
 
    }

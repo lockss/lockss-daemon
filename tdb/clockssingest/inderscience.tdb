@@ -1624,7 +1624,7 @@
       au < finished ; finished ; 2014 ; International Journal of Cloud Computing Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2015 ; International Journal of Cloud Computing Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; International Journal of Cloud Computing Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; International Journal of Cloud Computing Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; >
+      au < deepCrawl ; exists ; 2017 ; International Journal of Cloud Computing Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; >
 
     }
 
@@ -2145,7 +2145,7 @@
         au < finished ; finished ; 2014 ; International Journal of Continuing Engineering Education and Life-Long Learning Volume 24 ; 24 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
         au < finished ; finished ; 2015 ; International Journal of Continuing Engineering Education and Life-Long Learning Volume 25 ; 25 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
         au < finished ; crawling ; 2016 ; International Journal of Continuing Engineering Education and Life-Long Learning Volume 26 ; 26 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-        au < crawling ; exists ; 2017 ; International Journal of Continuing Engineering Education and Life-Long Learning Volume 27 ; 27 ; http://www.inderscienceonline.com/ ; >
+        au < deepCrawl ; exists ; 2017 ; International Journal of Continuing Engineering Education and Life-Long Learning Volume 27 ; 27 ; http://www.inderscienceonline.com/ ; >
 
       }
 
@@ -3158,7 +3158,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Environment and Health Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Environment and Health Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014-2015 ; International Journal of Environment and Health Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; >
-      au < crawling ; exists ; 2016-2017 ; International Journal of Environment and Health Volume 8 ; 8 ; http://www.inderscienceonline.com/ ; >
+      au < deepCrawl ; exists ; 2016-2017 ; International Journal of Environment and Health Volume 8 ; 8 ; http://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2018 ; International Journal of Environment and Health Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -3948,7 +3948,7 @@
       au < finished ; finished ; 2014 ; International Journal of Heavy Vehicle Systems Volume 21 ; 21 ; http://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2015 ; International Journal of Heavy Vehicle Systems Volume 22 ; 22 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2016 ; International Journal of Heavy Vehicle Systems Volume 23 ; 23 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2017 ; International Journal of Heavy Vehicle Systems Volume 24 ; 24 ; http://www.inderscienceonline.com/ ; >
+      au < deepCrawl ; exists ; 2017 ; International Journal of Heavy Vehicle Systems Volume 24 ; 24 ; http://www.inderscienceonline.com/ ; >
 
     }
 
@@ -5052,7 +5052,7 @@
       param[journal_id] = ijler
 
       au < finished ; finished ; 2014-2015 ; International Journal of Lean Enterprise Research Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2016-2017 ; International Journal of Lean Enterprise Research Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; >
+      au < deepCrawl ; exists ; 2016-2017 ; International Journal of Lean Enterprise Research Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; >
 
     }
 
@@ -5129,7 +5129,7 @@
       au < finished ; finished ; 2014 ; International Journal of Learning Technology Volume 9 ; 9 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; International Journal of Learning Technology Volume 10 ; 10 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; International Journal of Learning Technology Volume 11 ; 11 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; International Journal of Learning Technology Volume 12 ; 12 ; http://www.inderscienceonline.com/ ; >
+      au < deepCrawl ; exists ; 2017 ; International Journal of Learning Technology Volume 12 ; 12 ; http://www.inderscienceonline.com/ ; >
 
     }
 
@@ -6964,7 +6964,7 @@
       au < finished ; crawling ; 2016 ; International Journal of Productivity and Quality Management Volume 19 ; 19 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; International Journal of Productivity and Quality Management Volume 20 ; 20 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; International Journal of Productivity and Quality Management Volume 21 ; 21 ; http://www.inderscienceonline.com/ ; >
-      au < crawling ; exists ; 2017 ; International Journal of Productivity and Quality Management Volume 22 ; 22 ; http://www.inderscienceonline.com/ ; >
+      au < deepCrawl ; exists ; 2017 ; International Journal of Productivity and Quality Management Volume 22 ; 22 ; http://www.inderscienceonline.com/ ; >
 
     }
 
@@ -8083,7 +8083,7 @@
       au < finished ; finished ; 2014 ; International Journal of Sustainable Society Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2015 ; International Journal of Sustainable Society Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2016 ; International Journal of Sustainable Society Volume 8 ; 8 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2017 ; International Journal of Sustainable Society Volume 9 ; 9 ; http://www.inderscienceonline.com/ ; >
+      au < deepCrawl ; exists ; 2017 ; International Journal of Sustainable Society Volume 9 ; 9 ; http://www.inderscienceonline.com/ ; >
 
     }
 
@@ -8399,7 +8399,7 @@
       au < finished ; crawling ; 2016 ; International Journal of Technology Management Volume 70 ; 70 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; International Journal of Technology Management Volume 71 ; 71 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; International Journal of Technology Management Volume 72 ; 72 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; International Journal of Technology Management Volume 73 ; 73 ; http://www.inderscienceonline.com/ ; >
+      au < deepCrawl ; exists ; 2017 ; International Journal of Technology Management Volume 73 ; 73 ; http://www.inderscienceonline.com/ ; >
       au < finished ; manifest ; 2017 ; International Journal of Technology Management Volume 74 ; 74 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2017 ; International Journal of Technology Management Volume 75 ; 75 ; http://www.inderscienceonline.com/ ; >
 
@@ -8579,7 +8579,7 @@
       au < doNotProcess ; doNotProcess ; 2011-2012 ; International Journal of Tourism Policy Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2013-2014 ; International Journal of Tourism Policy Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2015-2016 ; International Journal of Tourism Policy Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; International Journal of Tourism Policy Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; >
+      au < deepCrawl ; exists ; 2017 ; International Journal of Tourism Policy Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2018 ; International Journal of Tourism Policy Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; >
 
     }
