@@ -296,6 +296,10 @@ while (my $line = <>) {
 #  }
 #        sleep(4);
 
+  } elsif ($plugin eq "ProjectMuse2017Plugin") {
+      $result = "Checker stub";
+      sleep(4);
+
   } elsif ($plugin eq "GPOFDSysSitemapsPlugin") {
       $url = sprintf("%ssmap/fdsys/sitemap_%d/%d_%s_sitemap.xml",
       $param{base_url}, $param{year}, $param{year}, $param{collection_id});
@@ -614,7 +618,45 @@ while (my $line = <>) {
 #      $result = "--REQ_FAIL--"
 #    }
 #        sleep(4);
-#Newplugin is org.lockss.plugin.pensoft.oai.ClockssPensoftOaiPlugin
+
+  } elsif ($plugin eq "PensoftOaiPlugin" || $plugin eq "ClockssPensoftOaiPlugin") {
+    #permission is different from start
+    $perm_url = uri_unescape($param{base_url});
+    #start_url for all OAI queries https://bdj.pensoft.net/oai.php?verb=ListRecords&identifier=bdj&metadataPrefix=oai_dc
+    $url = sprintf("%soai.php?verb=ListRecords&set=%s&metadataPrefix=oai_dc",
+      $param{base_url}, $param{au_oai_set});
+    if (defined($param{au_oai_date}) && $param{au_oai_date} =~ m/^[0-9]{4}$/) {
+      $url = $url . "&from=" . $param{au_oai_date} . "-01-01" . "&until=" . $param{au_oai_date} . "-12-31";
+    }
+    $man_url = uri_unescape($url);
+    my $req_p = HTTP::Request->new(GET, $perm_url);
+    my $resp_p = $ua->request($req_p);
+    my $req_s = HTTP::Request->new(GET, $man_url);
+    my $resp_s = $ua->request($req_s);
+    
+    if ($resp_p->is_success) {
+      my $perm_contents = $resp_p->content;
+      my $lcl_tag = $cc_license_tag;
+      if (defined($perm_contents) && ($perm_contents =~ m/$lcl_tag/s)) {
+        if ($resp_s->is_success) {
+          if ($resp_s->content =~ m/results in an empty (set|list)/is) {
+            $result = "--EMPTY_LIST--"
+          } else {
+            $result = "Manifest";
+          }
+        } else {
+          #printf("URL: %s\n", $man_url);
+          $result = "--REQ_FAIL--"
+        }
+      } else {
+        #printf("URL: %s\n", $perm_url);
+        $result = "--NO_LOCKSS--"
+      }
+    } else {
+      #printf("URL: %s\n", $perm_url);
+      $result = "--PERM_REQ_FAIL--"
+    }
+    sleep(4);
 
   } elsif ($plugin eq "GeorgThiemeVerlagPlugin") {
         #Url with list of urls for issues
@@ -1672,7 +1714,7 @@ while (my $line = <>) {
     }
     sleep(4);
   } elsif ($plugin eq "IgiGlobalBooksPlugin") {
-  	#permission is different from start
+    #permission is different from start
     $url = sprintf("%slockss/books.aspx",
       $param{base_url});
     $perm_url = uri_unescape($url);
@@ -1708,7 +1750,7 @@ while (my $line = <>) {
     sleep(4);
 
   } elsif ($plugin eq "ClockssIgiGlobalBooksPlugin") {
-  	#permission is different from start
+    #permission is different from start
     $url = sprintf("%slockss/books.aspx",
       $param{base_url});
     $perm_url = uri_unescape($url);
@@ -2400,7 +2442,7 @@ while (my $line = <>) {
               $vol_title = $resp->request->uri;
               $result = "Redirected";
       } elsif (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
-      	$vol_title= "Proceedings for " . $param{year};
+        $vol_title= "Proceedings for " . $param{year};
         $result = "Manifest"
       } else {
         $result = "--NO_TAG--"
@@ -2422,7 +2464,7 @@ while (my $line = <>) {
               $vol_title = $resp->request->uri;
               $result = "Redirected";
       } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
-      	$vol_title= "Proceedings for " . $param{year};
+        $vol_title= "Proceedings for " . $param{year};
         $result = "Manifest"
       } else {
         $result = "--NO_TAG--"
@@ -2546,7 +2588,7 @@ while (my $line = <>) {
           $result = "--REQ_FAIL--"
       }
       sleep(4);
-  }elsif ($plugin eq "JstorCurrentScholarshipPlugin"){
+  } elsif ($plugin eq "JstorCurrentScholarshipPlugin"){
       #clockss and lockss use the same manifest page
       $url = sprintf("%sclockss-manifest/%s/%s",
       $param{base_url}, $param{journal_id}, $param{year});
@@ -2570,59 +2612,39 @@ while (my $line = <>) {
       }
       sleep(4);
       
-  } elsif ($plugin eq "ClockssIUCrOaiPlugin") {
+  } elsif (($plugin eq "IUCrOaiPlugin") || ($plugin eq "ClockssIUCrOaiPlugin")) {
     #permission is different from start
     $url = sprintf("%se/issues/2010/lockss.html", $param{base_url});
     $perm_url = uri_unescape($url);
     #start_url for all OAI queries
     $url = sprintf("%scgi-bin/oai?verb=ListRecords&set=%s&metadataPrefix=oai_dc",
       $param{script_url}, $param{au_oai_set});
-    $man_url = uri_unescape($url);
-    my $req_p = HTTP::Request->new(GET, $perm_url);
-    my $resp_p = $ua->request($req_p);
-    my $req_s = HTTP::Request->new(GET, $man_url);
-    my $resp_s = $ua->request($req_s);
-    
-    if ($resp_p->is_success) {
-      my $perm_contents = $resp_p->content;
-      my $lcl_tag = $clockss_tag;
-      $lcl_tag =~ s/ /./g;
-      if (defined($perm_contents) && ($perm_contents =~ m/$lcl_tag/s)) {
-        if ($resp_s->is_success) {
-          $result = "Manifest";
-        } else {
-          #printf("URL: %s\n", $man_url);
-          $result = "--REQ_FAIL--"
-        }
-      } else {
-        #printf("URL: %s\n", $perm_url);
-        $result = "--NO_LOCKSS--"
-      }
-    } else {
-      #printf("URL: %s\n", $perm_url);
-      $result = "--PERM_REQ_FAIL--"
+    if (defined($param{au_oai_date}) && $param{au_oai_date} =~ m/^[0-9-]{7}$/) {
+      my ($mo) = $param{au_oai_date} =~ m/^[0-9]{4}-([0-9]{2})$/;
+      my $dy = '28';
+      my @mon = ('01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12');
+      my @ldy = ('31', '28', '31', '30', '31', '30', '31', '31', '30', '31', '30', '31');
+      my %lday;
+      @lday{@mon} = @ldy;
+      $dy = $lday{$mo};
+      $url = $url . "&from=" . $param{au_oai_date} . "-01" . "&until=" . $param{au_oai_date} . "-" . $dy;
     }
-    sleep(4);
-  } elsif ($plugin eq "IUCrOaiPlugin") {
-    #permission is different from start
-    $url = sprintf("%se/issues/2010/lockss.html", $param{base_url});
-    $perm_url = uri_unescape($url);
-    #start_url for all OAI queries
-    $url = sprintf("%scgi-bin/oai?verb=ListRecords&set=%s&metadataPrefix=oai_dc",
-      $param{script_url}, $param{au_oai_set});
     $man_url = uri_unescape($url);
     my $req_p = HTTP::Request->new(GET, $perm_url);
     my $resp_p = $ua->request($req_p);
     my $req_s = HTTP::Request->new(GET, $man_url);
     my $resp_s = $ua->request($req_s);
-    
     if ($resp_p->is_success) {
       my $perm_contents = $resp_p->content;
-      my $lcl_tag = $lockss_tag;
+      my $lcl_tag = ($plugin eq "ClockssIUCrOaiPlugin") ? $clockss_tag : $lockss_tag;
       $lcl_tag =~ s/ /./g;
       if (defined($perm_contents) && ($perm_contents =~ m/$lcl_tag/s)) {
         if ($resp_s->is_success) {
-          $result = "Manifest";
+          if ($resp_s->content =~ m/results in an empty (set|list)/is) {
+            $result = "--EMPTY_LIST--";
+          } else {
+            $result = "Manifest";
+          }
         } else {
           #printf("URL: %s\n", $man_url);
           $result = "--REQ_FAIL--"
