@@ -1412,7 +1412,7 @@
       au < finished ; crawling ; 2003 ; 9780762310029 ; 9781849502009 ; 9781849502009 ; Issues in Entrepeneurship Volume 14 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2004 ; 9780762311026 ; 9781849502658 ; 9781849502658 ; Intellectual Property and Entrepreneurship Volume 15 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2005 ; 9780762312306 ; 9781849503594 ; 9781849503594 ; University Entrepreneurship and Technology Transfer Volume 16 ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2007 ; 9780762313365 ; 9781849504331 ; 9781849504331 ; The Cyclic Nature of Innovation: Connecting Hard Sciences with Soft Values Volume 17 ; >
+      au < frozen ; exists ; 2007 ; 9780762313365 ; 9781849504331 ; 9781849504331 ; The Cyclic Nature of Innovation: Connecting Hard Sciences with Soft Values Volume 17 ; >
       au < finished ; crawling ; 2008 ; 9780762314812 ; 9781849505321 ; 9781849505321 ; Technological Innovation: Generating Economic Results Volume 18 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2009 ; 9781848554665 ; 9781848554672 ; 9781848554672 ; Measuring the Social Value of Innovation: A Link in the University Technology Transfer and Entrepreneurship Equation Volume 19 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2009 ; 9781848559509 ; 9781848559516 ; 9781848559516 ; Frontiers in Eco-Entrepreneurship Research Volume 20 ; reingest4.clockss.org:8082 >
@@ -1542,7 +1542,7 @@
 
       au < finished ; crawling ; 2010 ; 9780857243355 ; 9780857243362 ; 9780857243362 ; Innovating Women: Contributions to Technological Advancement Volume 1 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2012 ; 9781781902547 ; 9781781902554 ; 9781781902554 ; Social and Sustainable Enterprise: Changing the Nature of Business Volume 2 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2013 ; 9781783506422 ; 9781783506415 ; 9781783506415 ; Enterprising Places: Leadership and Governance Networks Volume 3 ; >
+      au < frozen ; exists ; 2013 ; 9781783506422 ; 9781783506415 ; 9781783506415 ; Enterprising Places: Leadership and Governance Networks Volume 3 ; >
       au < finished ; crawling ; 2014 ; 9781784411121 ; 9781784411091 ; 9781784411091 ; Exploring Rural Enterprise: New Perspectives on Research, Policy & Practice Volume 4 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; 9781784415525 ; 9781784415518 ; 9781784415518 ; Exploring Criminal and Illegal Enterprise: New Perspectives on Research, Policy & Practice Volume 5; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2016 ; 9781785608216 ; 9781785608209 ; 9781785608209 ; New Perspectives on Research, Policy & Practice in Public Entrepreneurship Volume 6 ; reingest2.clockss.org:8085 >
@@ -2845,7 +2845,7 @@
       #series = rpp
 
       au < manifest ; exists ; 2001 ; 9780762307593 ; 9781849500920 ; 9781849500920 ; Learning from International Public Management Reform: Part A Volume 11 Part 1 ; >
-      au < crawling ; exists ; 2001 ; 9780762307609 ; 9781849500937 ; 9781849500937 ; Learning from International Public Management Reform: Part B Volume 11 Part 2 ; >
+      au < frozen ; exists ; 2001 ; 9780762307609 ; 9781849500937 ; 9781849500937 ; Learning from International Public Management Reform: Part B Volume 11 Part 2 ; >
       au < finished ; manifest ; 2002 ; 9780762309047 ; 9781849501651 ; 9781849501651 ; The Transformative Power of Dialogue Volume 12 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2004 ; 9780762310319 ; 9781849502184 ; 9781849502184 ; Strategies for Public Management Reform Volume 13 ; >
       au < crawling ; exists ; 2006 ; 9780762312269 ; 9781849503556 ; 9781849503556 ; Public Ethics and Governance: Standards and Practices in Comparative Perspective Volume 14 ; >
@@ -2922,7 +2922,7 @@
       #param[journal_issn] = 0163-786X
       #series = rsmcc
 
-      au < crawling ; exists ; 2000 ; 9780762306657 ; 9781849500548 ; 9781849500548 ; Research in Social Movements, Conflicts and Change Volume 22 ; >
+      au < frozen ; exists ; 2000 ; 9780762306657 ; 9781849500548 ; 9781849500548 ; Research in Social Movements, Conflicts and Change Volume 22 ; >
       au < crawling ; exists ; 2001 ; 9780762307869 ; 9781849501057 ; 9781849501057 ; Political Opportunities Social Movements, and Democratization Volume 23 ; >
       au < crawling ; exists ; 2002 ; 9780762307876 ; 9781849501064 ; 9781849501064 ; Consensus Decision Making, Northern Ireland and Indigenous Movements Volume 24 ; >
       au < crawling ; exists ; 2004 ; 9780762310371 ; 9781849502238 ; 9781849502238 ; Authority in Contention Volume 25 ; >
@@ -2940,7 +2940,7 @@
       au < crawling ; exists ; 2014 ; 9781784411060 ; 9781784411053 ; 9781784411053 ; Intersectionality and Social Change Volume 37 ; >
       au < frozen ; exists ; 2015 ; 9781785603594 ; 9781785603587 ; 9781785603587 ; Research in Social Movements, Conflicts and Change Volume 38 ; >
       au < crawling ; exists ; 2016 ; 9781786350282 ; 9781786350275 ; 9781786350275 ; Protest, Social Movements and Global Democracy Since 2011: New Perspectives Volume 39 ; >
-      au < crawling ; exists ; 2016 ; 9781786350787 ; 9781786350770 ; 9781786350770 ; Narratives of Identity in Social Movements, Conflicts and Change Volume 40 ; >
+      au < frozen ; exists ; 2016 ; 9781786350787 ; 9781786350770 ; 9781786350770 ; Narratives of Identity in Social Movements, Conflicts and Change Volume 40 ; >
       au < deepCrawl ; exists ; 2017 ; 9781787141919 ; 9781787141902 ; 9781787141902 ; Non-State Violent Actors and Social Movement Organizations Volume 41 ; >
 
   }
@@ -3022,7 +3022,7 @@
       au < finished ; manifest ; 2003 ; 9780762309979 ; 9781849501965 ; 9781849501965 ; Histories of Economic Thought Volume 21 Part 2 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2003 ; 9780762309986 ; 9781849501972 ; 9781849501972 ; Documents on Modern History of Economic Thought: Part C Volume 21 Part 3 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2004 ; 9780762310906 ; 9781849502580 ; 9781849502580 ; Wisconsin "Government and Business" and the History of Heterodox Economic T Volume 22 ; >
-      au < crawling ; exists ; 2004 ; 9780762310890 ; 9781849502573 ; 9781849502573 ; A Research Annual Volume 22 Part 1 ; >
+      au < frozen ; exists ; 2004 ; 9780762310890 ; 9781849502573 ; 9781849502573 ; A Research Annual Volume 22 Part 1 ; >
       au < crawling ; exists ; 2005 ; 9780762311668 ; 9781849503181 ; 9781849503181 ; Further University of Wisconsin Materials: Further Documents of F. Taylor Ostrander Volume 23 ; >
       au < finished ; manifest ; 2005 ; 9780762311644 ; 9781849503167 ; 9781849503167 ; A Research Annual Volume 23 Part 1 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2005 ; 9780762311651 ; 9781849503174 ; 9781849503174 ; Documents from F. Taylor Ostrander Volume 23 Part 2 ; >
@@ -3178,7 +3178,7 @@
       au < crawling ; exists ; 2012 ; 9781780522968 ; 9781780522975 ; 9781780522975 ; Qualitative Research on Sport and Physical Culture Volume 6 ; >
       au < finished ; crawling ; 2013 ; 9781781905913 ; 9781781905920 ; 9781781905920 ; Native Games: Indigenous Peoples and Sports in the Post-Colonial World Volume 7 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2014 ; 9781783508853 ; 9781783508860 ; 9781783508860 ; Sport, Social Development and Peace Volume 8 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2016 ; 9781786350503 ; 9781786350497 ; 9781786350497 ; Sociology of Sport: A Global Subdiscipline in Review Volume 9 ; >
+      au < frozen ; exists ; 2016 ; 9781786350503 ; 9781786350497 ; 9781786350497 ; Sociology of Sport: A Global Subdiscipline in Review Volume 9 ; >
       au < deepCrawl ; exists ; 2017 ; 9781787146433 ; 9781787146426 ; 9781787146426 ; Reflections on Sociology of Sport: Ten Questions, Ten Scholars, Ten Perspectives Volume 10 ; >
 
   }
@@ -3390,12 +3390,12 @@
       au < crawling ; exists ; 2007 ; 9780762313938 ; 9781849508056 ; 9781849508056 ; Research on Professional Responsibility and Ethics in Accounting Volume 12 ; >
       au < crawling ; exists ; 2008 ; 9781848553767 ; 9781848553774 ; 9781848553774 ; Research on Professional Responsibility and Ethics in Accounting Volume 13 ; >
       au < crawling ; exists ; 2010 ; 9781849507226 ; 9781849507233 ; 9781849507233 ; Research on Professional Responsibility and Ethics in Accounting Volume 14 ; >
-      au < crawling ; exists ; 2011 ; 9781780520049 ; 9781780520056 ; 9781780520056 ; Research on Professional Responsibility and Ethics in Accounting Volume 15 ; >
+      au < frozen ; exists ; 2011 ; 9781780520049 ; 9781780520056 ; 9781780520056 ; Research on Professional Responsibility and Ethics in Accounting Volume 15 ; >
       au < crawling ; exists ; 2012 ; 9781780527604 ; 9781780527611 ; 9781780527611 ; Research on Professional Responsibility and Ethics in Accounting Volume 16 ; >
       au < crawling ; exists ; 2013 ; 9781781908440 ; 9781781908457 ; 9781781908457 ; Research on Professional Responsibility and Ethics in Accounting Volume 17 ; >
       au < crawling ; exists ; 2014 ; 9781784411640 ; 9781784411633 ; 9781784411633 ; Research on Professional Responsibility and Ethics in Accounting Volume 18 ; >
       au < crawling ; exists ; 2015 ; 9781784416669 ; 9781784416652 ; 9781784416652 ; Research on Professional Responsibility and Ethics in Accounting Volume 19 ; >
-      au < crawling ; exists ; 2016 ; 9781785609749 ; 9781785609732 ; 9781785609732 ; Research on Professional Responsibility and Ethics in Accounting Volume 20 ; >
+      au < frozen ; exists ; 2016 ; 9781785609749 ; 9781785609732 ; 9781785609732 ; Research on Professional Responsibility and Ethics in Accounting Volume 20 ; >
 
   }
 
@@ -3587,7 +3587,7 @@
       au < crawling ; exists ; 2010 ; 9780857246158 ; 9780857246165 ; 9780857246165 ; Studies in Law, Politics, and Society Volume 53 ; >
       au < frozen ; exists ; 2011 ; 9780857248251 ; 9780857248268 ; 9780857248268 ; Special Issue Social Movements/Legal Possibilities Volume 54 ; >
       au < crawling ; exists ; 2011 ; 9781780520803 ; 9781780520810 ; 9781780520810 ; Studies in Law, Politics, and Society Volume 55 ; >
-      au < crawling ; exists ; 2011 ; 9781780522524 ; 9781780522531 ; 9781780522531 ; Special Issue Human Rights: New Possibilities/New Problems Volume 56 ; >
+      au < frozen ; exists ; 2011 ; 9781780522524 ; 9781780522531 ; 9781780522531 ; Special Issue Human Rights: New Possibilities/New Problems Volume 56 ; >
       au < crawling ; exists ; 2012 ; 9781780526225 ; 9781780526232 ; 9781780526232 ; Studies in Law, Politics, and Society Volume 57 ; >
       au < frozen ; exists ; 2012 ; 9781780528700 ; 9781780528717 ; 9781780528717 ; Special Issue: The Discourse of Judging Volume 58 ; >
       au < crawling ; exists ; 2012 ; 9781781903438 ; 9781781903445 ; 9781781903445 ; Special Issue: The Legacy of Stuart Scheingold Volume 59 ; >

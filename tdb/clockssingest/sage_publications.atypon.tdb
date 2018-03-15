@@ -6094,7 +6094,7 @@
       au < crawling ; exists ; 2008 ; The Cleft Palate-Craniofacial Journal Volume 45 ; 45 ; cpca ; >
       au < crawling ; exists ; 2009 ; The Cleft Palate-Craniofacial Journal Volume 46 ; 46 ; cpca ; >
       au < crawling ; exists ; 2010 ; The Cleft Palate-Craniofacial Journal Volume 47 ; 47 ; cpca ; >
-      au < crawling ; exists ; 2011 ; The Cleft Palate-Craniofacial Journal Volume 48 ; 48 ; cpca ; >
+      au < frozen ; exists ; 2011 ; The Cleft Palate-Craniofacial Journal Volume 48 ; 48 ; cpca ; >
       au < crawling ; exists ; 2012 ; The Cleft Palate-Craniofacial Journal Volume 49 ; 49 ; cpca ; >
       au < crawling ; exists ; 2013 ; The Cleft Palate-Craniofacial Journal Volume 50 ; 50 ; cpca ; >
       au < crawling ; exists ; 2014 ; The Cleft Palate-Craniofacial Journal Volume 51 ; 51 ; cpca ; >
@@ -29020,7 +29020,7 @@
         #param[journal_id] = npc
 
         au < crawling ; exists ; 2015 ; Nephrology @ Point of Care Volume 1 ; 1 ; npca ; >
-        au < crawling ; exists ; 2016 ; Nephrology @ Point of Care Volume 2 ; 2 ; npca ; >
+        au < frozen ; exists ; 2016 ; Nephrology @ Point of Care Volume 2 ; 2 ; npca ; >
         au < manifest ; exists ; 2017 ; Nephrology @ Point of Care Volume 3 ; 3 ; npca ; >
     }
 
@@ -30666,9 +30666,9 @@
         
         au < crawling ; exists ; 2008 ; Nordic Journal of Nursing Research Volume 28 ; 28 ; njnb ; >
         au < crawling ; exists ; 2009 ; Nordic Journal of Nursing Research Volume 29 ; 29 ; njnb ; >
-        au < crawling ; exists ; 2010 ; Nordic Journal of Nursing Research Volume 30 ; 30 ; njnb ; >
+        au < frozen ; exists ; 2010 ; Nordic Journal of Nursing Research Volume 30 ; 30 ; njnb ; >
         au < frozen ; exists ; 2011 ; Nordic Journal of Nursing Research Volume 31 ; 31 ; njnb ; >
-        au < crawling ; exists ; 2012 ; Nordic Journal of Nursing Research Volume 32 ; 32 ; njnb ; >
+        au < frozen ; exists ; 2012 ; Nordic Journal of Nursing Research Volume 32 ; 32 ; njnb ; >
         au < frozen ; exists ; 2013 ; Nordic Journal of Nursing Research Volume 33 ; 33 ; njnb ; >
 
         au < doNotProcess ; doNotProcess ; 2014 ; Nordic Journal of Nursing Research Volume 34 ; 34 ; njnb ; >
@@ -34688,8 +34688,8 @@
       au < manifest ; exists ; 2007 ; Quarterly Journal of Experimental Psychology Volume 60 ; 60 ; qjpd ; >
       au < crawling ; exists ; 2008 ; Quarterly Journal of Experimental Psychology Volume 61 ; 61 ; qjpd ; >
       au < crawling ; exists ; 2009 ; Quarterly Journal of Experimental Psychology Volume 62 ; 62 ; qjpd ; >
-      au < crawling ; exists ; 2010 ; Quarterly Journal of Experimental Psychology Volume 63 ; 63 ; qjpd ; >
-      au < crawling ; exists ; 2011 ; Quarterly Journal of Experimental Psychology Volume 64 ; 64 ; qjpd ; >
+      au < frozen ; exists ; 2010 ; Quarterly Journal of Experimental Psychology Volume 63 ; 63 ; qjpd ; >
+      au < frozen ; exists ; 2011 ; Quarterly Journal of Experimental Psychology Volume 64 ; 64 ; qjpd ; >
       au < crawling ; exists ; 2012 ; Quarterly Journal of Experimental Psychology Volume 65 ; 65 ; qjpd ; >
       au < frozen ; exists ; 2013 ; Quarterly Journal of Experimental Psychology Volume 66 ; 66 ; qjpd ; >
       au < crawling ; exists ; 2014 ; Quarterly Journal of Experimental Psychology Volume 67 ; 67 ; qjpd ; >
@@ -45829,7 +45829,7 @@
     au < frozen ; exists ; 2016 ; Perceptual and Motor Skills Volume 122 ; 122 ; pmsb ; >
     au < frozen ; exists ; 2016 ; Perceptual and Motor Skills Volume 123 ; 123 ; pmsb ; >
     au < deepCrawl ; exists ; 2017 ; Perceptual and Motor Skills Volume 124 ; 124 ; pmsb ; >
-    au < crawling ; exists ; 2017 ; Perceptual and Motor Skills Volume 125 ; 125 ; pmsb ; >
+    au < frozen ; exists ; 2017 ; Perceptual and Motor Skills Volume 125 ; 125 ; pmsb ; >
 
   }
 
