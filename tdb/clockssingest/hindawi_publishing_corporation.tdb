@@ -46,7 +46,7 @@
     au < frozen ; exists ; 2014 ; Abstract and Applied Analysis Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; >
     au < zapped ; finished ; 2015 ; Abstract and Applied Analysis Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2016 ; Abstract and Applied Analysis Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
-    au < crawling ; exists ; 2017 ; Abstract and Applied Analysis Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
+    au < deepCrawl ; exists ; 2017 ; Abstract and Applied Analysis Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
 
   }
 
@@ -2686,7 +2686,7 @@
     au < frozen ; exists ; 2014 ; Child Development Research Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; >
     au < finished ; finished ; 2015 ; Child Development Research Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Child Development Research Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
-    au < crawling ; exists ; 2017 ; Child Development Research Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
+    au < deepCrawl ; exists ; 2017 ; Child Development Research Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
 
   }
   
@@ -3192,7 +3192,7 @@
     au < finished ; finished ; 2014 ; Emergency Medicine International Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; >
     au < finished ; finished ; 2015 ; Emergency Medicine International Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Emergency Medicine International Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2017 ; Emergency Medicine International Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
+    au < deepCrawl ; exists ; 2017 ; Emergency Medicine International Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
     
   }
 
@@ -4214,7 +4214,7 @@
     au < finished ; finished ; 2014 ; International Journal of Engineering Mathematics Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; International Journal of Engineering Mathematics Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; International Journal of Engineering Mathematics Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
-    au < crawling ; exists ; 2017 ; International Journal of Engineering Mathematics Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
+    au < deepCrawl ; exists ; 2017 ; International Journal of Engineering Mathematics Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
 
   }
 
@@ -5085,7 +5085,7 @@
     au < finished ; finished ; 2014 ; International Journal of Rotating Machinery Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; International Journal of Rotating Machinery Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2016 ; International Journal of Rotating Machinery Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
-    au < crawling ; exists ; 2017 ; International Journal of Rotating Machinery Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
+    au < deepCrawl ; exists ; 2017 ; International Journal of Rotating Machinery Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
 
   }
 
@@ -5446,7 +5446,7 @@
     au < finished ; finished ; 2014 ; Journal of Amino Acids Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Journal of Amino Acids Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Journal of Amino Acids Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2017 ; Journal of Amino Acids Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
+    au < deepCrawl ; exists ; 2017 ; Journal of Amino Acids Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
     
   }
 
@@ -6327,7 +6327,7 @@
     au < finished ; finished ; 2014 ; Journal of Drug Delivery Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; >
     au < finished ; crawling ; 2015 ; Journal of Drug Delivery Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Journal of Drug Delivery Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2017 ; Journal of Drug Delivery Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
+    au < deepCrawl ; exists ; 2017 ; Journal of Drug Delivery Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
 
   }
 
@@ -6843,7 +6843,7 @@
     au < finished ; finished ; 2014 ; Journal of Marine Biology Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; >
     au < finished ; finished ; 2015 ; Journal of Marine Biology Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2016 ; Journal of Marine Biology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
-    au < crawling ; exists ; 2017 ; Journal of Marine Biology Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
+    au < deepCrawl ; exists ; 2017 ; Journal of Marine Biology Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
 
   }
 
@@ -8056,7 +8056,7 @@
     au < finished ; finished ; 2014 ; Journal of Veterinary Medicine Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2015 ; Journal of Veterinary Medicine Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2016 ; Journal of Veterinary Medicine Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
-    au < crawling ; exists ; 2017 ; Journal of Veterinary Medicine Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
+    au < deepCrawl ; exists ; 2017 ; Journal of Veterinary Medicine Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
 
   }
 
@@ -9432,7 +9432,7 @@
     au < finished ; crawling ; 2014 ; Veterinary Medicine International Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Veterinary Medicine International Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2016 ; Veterinary Medicine International Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
-    au < crawling ; exists ; 2017 ; Veterinary Medicine International Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
+    au < deepCrawl ; exists ; 2017 ; Veterinary Medicine International Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
     
   }
 

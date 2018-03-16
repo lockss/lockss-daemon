@@ -28,7 +28,7 @@
       au < frozen ; exists ; 2014 ; 3 ; Orbit: Writing Around Pynchon Volume 2014 ; 2014 ; https://www.pynchon.net/ ; >
       au < frozen ; exists ; 2015 ; 4 ; Orbit: Writing Around Pynchon Volume 2015 ; 2015 ; https://www.pynchon.net/ ; >
       au < frozen ; exists ; 2016 ; 5 ; Orbit: Writing Around Pynchon Volume 2016 ; 2016 ; https://www.pynchon.net/ ; >
-      au < crawling ; exists ; 2017 ; 6 ; Orbit: Writing Around Pynchon Volume 2017 ; 2017 ; https://www.pynchon.net/ ; >
+      au < deepCrawl ; exists ; 2017 ; 6 ; Orbit: Writing Around Pynchon Volume 2017 ; 2017 ; https://www.pynchon.net/ ; >
 
   }
 
@@ -735,7 +735,7 @@
       au < frozen ; exists ; 2014 ; 2014 ; Journal of Interactive Media in Education Volume 2014 ; 2014 ; http://www-jime.open.ac.uk/ ; >
       au < frozen ; exists ; 2015 ; 2015 ; Journal of Interactive Media in Education Volume 2015 ; 2015 ; http://www-jime.open.ac.uk/ ; >
       au < finished ; crawling ; 2016 ; 2016 ; Journal of Interactive Media in Education Volume 2016 ; 2016 ; http://www-jime.open.ac.uk/ ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; 2017 ; Journal of Interactive Media in Education Volume 2017 ; 2017 ; http://www-jime.open.ac.uk/ ; >
+      au < deepCrawl ; exists ; 2017 ; 2017 ; Journal of Interactive Media in Education Volume 2017 ; 2017 ; http://www-jime.open.ac.uk/ ; >
 
   }
 
@@ -932,7 +932,7 @@
 #      param[base_url] = http://www.mahkuscript.com/
 
       au < frozen ; exists ; 2016 ; 1 ; MaHKUscript: Journal of Fine Art Research Volume 2016 ; 2016 ; http://www.mahkuscript.com/ ; >
-      au < crawling ; exists ; 2017 ; 2 ; MaHKUscript: Journal of Fine Art Research Volume 2017 ; 2017 ; https://www.mahkuscript.com/ ; >
+      au < deepCrawl ; exists ; 2017 ; 2 ; MaHKUscript: Journal of Fine Art Research Volume 2017 ; 2017 ; https://www.mahkuscript.com/ ; >
 
   }
 
@@ -1702,7 +1702,7 @@
       au < frozen ; exists ; 2014 ; 7 ; Studium Volume 2014 ; 2014 ; http://www.gewina-studium.nl/ ; >
       au < frozen ; exists ; 2015 ; 8 ; Studium Volume 2015 ; 2015 ; http://www.gewina-studium.nl/ ; >
       au < finished ; crawling ; 2016 ; 9 ; Studium Volume 2016 ; 2016 ; http://www.gewina-studium.nl/ ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2017 ; 10 ; Studium Volume 2017 ; 2017 ; http://www.gewina-studium.nl/ ; >
+      au < deepCrawl ; exists ; 2017 ; 10 ; Studium Volume 2017 ; 2017 ; http://www.gewina-studium.nl/ ; >
 
   }
 
