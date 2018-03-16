@@ -160,7 +160,7 @@
     au < finished ; finished ; 2014 ; 8 ; MycoKeys Volume 2014 ; 2014 ; http://mycokeys.pensoft.net/ ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2015 ; 9-11 ; MycoKeys Volume 2015 ; 2015 ; http://mycokeys.pensoft.net/ ; >
     au < frozen ; exists ; 2016 ; 12-18 ; MycoKeys Volume 2016 ; 2016 ; https://mycokeys.pensoft.net/ ; >
-    au < crawling ; exists ; 2017 ; 19-25 ; MycoKeys Volume 2017 ; 2017 ; https://mycokeys.pensoft.net/ ; >
+    au < frozen ; exists ; 2017 ; 19-25 ; MycoKeys Volume 2017 ; 2017 ; https://mycokeys.pensoft.net/ ; >
     au < expected ; exists ; 2018 ; 26-32 ; MycoKeys Volume 2018 ; 2018 ; https://mycokeys.pensoft.net/ ; >
   
    }
@@ -247,7 +247,7 @@
     au < frozen ; exists ; 2014 ; 33-43 ; PhytoKeys Volume 2014 ; 2014 ; http://phytokeys.pensoft.net/ ; >
     au < frozen ; exists ; 2015 ; 44-57 ; PhytoKeys Volume 2015 ; 2015 ; http://phytokeys.pensoft.net/ ; >
     au < frozen ; exists ; 2016 ; 58-75 ; PhytoKeys Volume 2016 ; 2016 ; https://phytokeys.pensoft.net/ ; >
-    au < crawling ; exists ; 2017 ; 76-93 ; PhytoKeys Volume 2017 ; 2017 ; https://phytokeys.pensoft.net/ ; >
+    au < frozen ; exists ; 2017 ; 76-93 ; PhytoKeys Volume 2017 ; 2017 ; https://phytokeys.pensoft.net/ ; >
     au < expected ; exists ; 2018 ; 94-111 ; PhytoKeys Volume 2018 ; 2018 ; https://phytokeys.pensoft.net/ ; >
   
    }
