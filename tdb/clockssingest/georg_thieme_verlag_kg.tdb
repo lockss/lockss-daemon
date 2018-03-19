@@ -2259,7 +2259,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Intensivmedizin up2date Volume 10 ; 10 ; >
     au < finished ; finished ; 2015 ; 2015 ; Intensivmedizin up2date Volume 11 ; 11 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Intensivmedizin up2date Volume 12 ; 12 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; 2017 ; Intensivmedizin up2date Volume 13 ; 13 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Intensivmedizin up2date Volume 13 ; 13 ; >
 
   }
 
@@ -2604,7 +2604,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Journal of Knee Surgery Volume 27 ; 27 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; 2015 ; Journal of Knee Surgery Volume 28 ; 28 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; 2016 ; Journal of Knee Surgery Volume 29 ; 29 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; Journal of Knee Surgery Volume 30 ; 30 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Journal of Knee Surgery Volume 30 ; 30 ; >
 
   }
 
@@ -5359,7 +5359,7 @@
     param[journal_id] = 10.1055/s-00032056
     #years = 2017-current
 
-    au < crawling ; exists ; 2017 ; 2017 ; Sports Medicine International Open Volume 1 ; 1 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Sports Medicine International Open Volume 1 ; 1 ; >
 
   }
 
@@ -5576,7 +5576,7 @@
     param[journal_id] = 10.1055/s-00032269
     #years = 2017-current
 
-    au < crawling ; exists ; 2017 ; 2017 ; SynOpen Volume 1 ; 1 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; SynOpen Volume 1 ; 1 ; >
 
   }
 
@@ -5781,7 +5781,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 4 ; 4 ; >
     au < finished ; finished ; 2015 ; 2015 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 5 ; 5 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 6 ; 6 ;  >
-    au < crawling ; exists ; 2017 ; 2017 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 7 ; 7 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 7 ; 7 ; >
 
   }
 
@@ -5931,7 +5931,7 @@
     au < finished ; finished ; 2014 ; 2014 ; veterinär spiegel Volume 24 ; 24 ; >
     au < finished ; finished ; 2015 ; 2015 ; veterinär spiegel Volume 25 ; 25 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; veterinär spiegel Volume 26 ; 26 ;  >
-    au < crawling ; exists ; 2017 ; 2017 ; veterinär spiegel Volume 27 ; 27 ; >
+    au < deepCrawl ; exists ; 2017 ; 2017 ; veterinär spiegel Volume 27 ; 27 ; >
 
   }
 

@@ -120,7 +120,7 @@
       au < ers.ClockssERSDrupalPlugin ; zapped ; finished ; 2015 ; European Respiratory Journal Volume 46 ; 46 ; reingest2.clockss.org:8085 >
       au < ers.ClockssERSDrupalPlugin ; finished ; crawling ; 2016 ; European Respiratory Journal Volume 47 ; 47 ; reingest1.clockss.org:8082 >
       au < ers.ClockssERSDrupalPlugin ; finished ; crawling ; 2016 ; European Respiratory Journal Volume 48 ; 48 ; reingest5.clockss.org:8082 >
-      au < ers.ClockssERSDrupalPlugin ; crawling ; exists ; 2017 ; European Respiratory Journal Volume 49 ; 49 ; >
+      au < ers.ClockssERSDrupalPlugin ; deepCrawl ; exists ; 2017 ; European Respiratory Journal Volume 49 ; 49 ; >
       au < ers.ClockssERSDrupalPlugin ; deepCrawl ; exists ; 2017 ; European Respiratory Journal Volume 50 ; 50 ; >
 
     }

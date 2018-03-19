@@ -1183,7 +1183,7 @@
       param[journal_id] = ijmri
 
       au < finished ; crawling ; 2016 ; International Journal of Masonry Research and Innovation Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; International Journal of Masonry Research and Innovation Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; >
+      au < deepCrawl ; exists ; 2017 ; International Journal of Masonry Research and Innovation Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; >
 
     }
 
@@ -1735,7 +1735,7 @@
       au < finished ; finished ; 2015 ; International Journal of Communication Networks and Distributed Systems Volume 15 ; 15 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2016 ; International Journal of Communication Networks and Distributed Systems Volume 16 ; 16 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; International Journal of Communication Networks and Distributed Systems Volume 17 ; 17 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2017 ; International Journal of Communication Networks and Distributed Systems Volume 18 ; 18 ; http://www.inderscienceonline.com/ ; >
+      au < deepCrawl ; exists ; 2017 ; International Journal of Communication Networks and Distributed Systems Volume 18 ; 18 ; http://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2017 ; International Journal of Communication Networks and Distributed Systems Volume 19 ; 19 ; http://www.inderscienceonline.com/ ; >
 
     }
@@ -3054,7 +3054,7 @@
       au < finished ; finished ; 2014 ; International Journal of Entrepreneurial Venturing Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2015 ; International Journal of Entrepreneurial Venturing Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2016 ; International Journal of Entrepreneurial Venturing Volume 8 ; 8 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; International Journal of Entrepreneurial Venturing Volume 9 ; 9 ; http://www.inderscienceonline.com/ ; >
+      au < deepCrawl ; exists ; 2017 ; International Journal of Entrepreneurial Venturing Volume 9 ; 9 ; http://www.inderscienceonline.com/ ; >
 
     }
 
@@ -6151,7 +6151,7 @@
       au < finished ; finished ; 2014 ; International Journal of Monetary Economics and Finance Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2015 ; International Journal of Monetary Economics and Finance Volume 8 ; 8 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2016 ; International Journal of Monetary Economics and Finance Volume 9 ; 9 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2017 ; International Journal of Monetary Economics and Finance Volume 10 ; 10 ; http://www.inderscienceonline.com/ ; >
+      au < deepCrawl ; exists ; 2017 ; International Journal of Monetary Economics and Finance Volume 10 ; 10 ; http://www.inderscienceonline.com/ ; >
 
     }
 
@@ -6434,7 +6434,7 @@
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Nuclear Knowledge Management Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Nuclear Knowledge Management Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2013-2014 ; International Journal of Nuclear Knowledge Management Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; International Journal of Nuclear Knowledge Management Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; >
+      au < deepCrawl ; exists ; 2017 ; International Journal of Nuclear Knowledge Management Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; >
 
     }
 
@@ -7606,7 +7606,7 @@
       au < finished ; finished ; 2014 ; International Journal of Signal and Imaging Systems Engineering Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2015 ; International Journal of Signal and Imaging Systems Engineering Volume 8 ; 8 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2016 ; International Journal of Signal and Imaging Systems Engineering Volume 9 ; 9 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2017 ; International Journal of Signal and Imaging Systems Engineering Volume 10 ; 10 ; http://www.inderscienceonline.com/ ; >
+      au < deepCrawl ; exists ; 2017 ; International Journal of Signal and Imaging Systems Engineering Volume 10 ; 10 ; http://www.inderscienceonline.com/ ; >
 
     }
 
@@ -7706,7 +7706,7 @@
       au < doNotProcess ; doNotProcess ; 2011-2012 ; International Journal of Social Entrepreneurship and Innovation Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Social Entrepreneurship and Innovation Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014-2015 ; International Journal of Social Entrepreneurship and Innovation Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2016-2017 ; International Journal of Social Entrepreneurship and Innovation Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; >
+      au < deepCrawl ; exists ; 2016-2017 ; International Journal of Social Entrepreneurship and Innovation Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; >
 
     }
 
@@ -8927,7 +8927,7 @@
       au < finished ; finished ; 2014 ; International Journal of Water Volume 8 ; 8 ; http://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2015 ; International Journal of Water Volume 9 ; 9 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; International Journal of Water Volume 10 ; 10 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; International Journal of Water Volume 11 ; 11 ; http://www.inderscienceonline.com/ ; >
+      au < deepCrawl ; exists ; 2017 ; International Journal of Water Volume 11 ; 11 ; http://www.inderscienceonline.com/ ; >
 
     }
 
@@ -9307,7 +9307,7 @@
       au < finished ; finished ; 2014 ; World Review of Entrepreneurship, Management and Sustainable Development Volume 10 ; 10 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; World Review of Entrepreneurship, Management and Sustainable Development Volume 11 ; 11 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; World Review of Entrepreneurship, Management and Sustainable Development Volume 12 ; 12 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; World Review of Entrepreneurship, Management and Sustainable Development Volume 13 ; 13 ; http://www.inderscienceonline.com/ ; >
+      au < deepCrawl ; exists ; 2017 ; World Review of Entrepreneurship, Management and Sustainable Development Volume 13 ; 13 ; http://www.inderscienceonline.com/ ; >
 
     }
 

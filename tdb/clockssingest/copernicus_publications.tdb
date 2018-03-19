@@ -341,7 +341,7 @@
       au < zapped ; finished ; 2014 ; 2014 ; Atmospheric Measurement Techniques Volume 7 ; 7 ; http://www.atmos-meas-tech.net/ ; http://www.atmospheric-measurement-techniques.net/ ; >
       au < frozen ; exists ; 2015 ; 2015 ; Atmospheric Measurement Techniques Volume 8 ; 8 ; http://www.atmos-meas-tech.net/ ; http://www.atmospheric-measurement-techniques.net/ ; >
       au < finished ; crawling ; 2016 ; 2016 ; Atmospheric Measurement Techniques Volume 9 ; 9 ; http://www.atmos-meas-tech.net/ ; http://www.atmospheric-measurement-techniques.net/ ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; 2017 ; Atmospheric Measurement Techniques Volume 10 ; 10 ; https://www.atmos-meas-tech.net/ ; https://www.atmospheric-measurement-techniques.net/ ; >
+      au < deepCrawl ; exists ; 2017 ; 2017 ; Atmospheric Measurement Techniques Volume 10 ; 10 ; https://www.atmos-meas-tech.net/ ; https://www.atmospheric-measurement-techniques.net/ ; >
       au < manifest ; exists ; 2018 ; 2018 ; Atmospheric Measurement Techniques Volume 11 ; 11 ; https://www.atmos-meas-tech.net/ ; https://www.atmospheric-measurement-techniques.net/ ; >
 
    }
@@ -490,7 +490,7 @@
       au < finished ; finished ; 2014 ; 2014 ; Drinking Water Engineering and Science Volume 7 ; 7 ; http://www.drink-water-eng-sci.net/ ; http://www.drinking-water-engineering-and-science.net/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Drinking Water Engineering and Science Volume 8 ; 8 ; http://www.drink-water-eng-sci.net/ ; http://www.drinking-water-engineering-and-science.net/ ; >
       au < finished ; crawling ; 2016 ; 2016 ; Drinking Water Engineering and Science Volume 9 ; 9 ; http://www.drink-water-eng-sci.net/ ; http://www.drinking-water-engineering-and-science.net/ ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; 2017 ; Drinking Water Engineering and Science Volume 10 ; 10 ; https://www.drink-water-eng-sci.net/ ; https://www.drinking-water-engineering-and-science.net/ ; >
+      au < deepCrawl ; exists ; 2017 ; 2017 ; Drinking Water Engineering and Science Volume 10 ; 10 ; https://www.drink-water-eng-sci.net/ ; https://www.drinking-water-engineering-and-science.net/ ; >
       au < manifest ; exists ; 2018 ; 2018 ; Drinking Water Engineering and Science Volume 11 ; 11 ; https://www.drink-water-eng-sci.net/ ; https://www.drinking-water-engineering-and-science.net/ ; >
 
    }

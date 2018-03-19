@@ -5490,7 +5490,7 @@
     au < finished ; finished ; 2014 ; Internet Research Volume 24 ; 24 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Internet Research Volume 25 ; 25 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2016 ; Internet Research Volume 26 ; 26 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2017 ; Internet Research Volume 27 ; 27 ; http://www.emeraldinsight.com/ ; >
+    au < deepCrawl ; exists ; 2017 ; Internet Research Volume 27 ; 27 ; http://www.emeraldinsight.com/ ; >
 
   }
 
@@ -6690,7 +6690,7 @@
     au < finished ; finished ; 2014 ; Journal of Financial Management of Property and Construction Volume 19 ; 19 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Journal of Financial Management of Property and Construction Volume 20 ; 20 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2016 ; Journal of Financial Management of Property and Construction Volume 21 ; 21 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Journal of Financial Management of Property and Construction Volume 22 ; 22 ; http://www.emeraldinsight.com/ ; >
+    au < deepCrawl ; exists ; 2017 ; Journal of Financial Management of Property and Construction Volume 22 ; 22 ; http://www.emeraldinsight.com/ ; >
 
   }
 
@@ -7399,7 +7399,7 @@
     au < finished ; manifest ; 2014 ; Journal of Managerial Psychology Volume 29 ; 29 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Journal of Managerial Psychology Volume 30 ; 30 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Journal of Managerial Psychology Volume 31 ; 31 ; http://www.emeraldinsight.com/ ; >
-    au < crawling ; exists ; 2017 ; Journal of Managerial Psychology Volume 32 ; 32 ; http://www.emeraldinsight.com/ ; >
+    au < deepCrawl ; exists ; 2017 ; Journal of Managerial Psychology Volume 32 ; 32 ; http://www.emeraldinsight.com/ ; >
 
   }
 
@@ -10546,7 +10546,7 @@
     au < finished ; finished ; 2014 ; Records Management Journal Volume 24 ; 24 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Records Management Journal Volume 25 ; 25 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Records Management Journal Volume 26 ; 26 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Records Management Journal Volume 27 ; 27 ; http://www.emeraldinsight.com/ ; >
+    au < deepCrawl ; exists ; 2017 ; Records Management Journal Volume 27 ; 27 ; http://www.emeraldinsight.com/ ; >
 
   }
 
