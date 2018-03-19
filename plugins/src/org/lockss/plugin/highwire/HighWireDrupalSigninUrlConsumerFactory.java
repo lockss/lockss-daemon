@@ -77,14 +77,14 @@ public class HighWireDrupalSigninUrlConsumerFactory extends HighWireDrupalUrlCon
     @Override
     public boolean shouldStoreAtOrigUrl() {
       boolean should = super.shouldStoreAtOrigUrl();
-      if (!should) {
-        //special extra case while trying ASH signon redirect
-        should = (fud.redirectUrls != null
-            && (fud.redirectUrls.size() == 2 || fud.redirectUrls.size() == 3)
-            && fud.redirectUrls.get(0).equals(fud.fetchUrl)
-            && fud.origUrl.equals(fud.fetchUrl));
-        if (fud.redirectUrls != null && fud.redirectUrls.size() > 1) {
-          log.debug3("big redirect: " + fud.origUrl + " to " + fud.fetchUrl);
+      if (!should && fud.redirectUrls != null && (fud.redirectUrls.size() > 1)) {
+        //special extra case while trying signin redirect
+        
+        should = (fud.origUrl.equals(fud.fetchUrl)
+               || fud.fetchUrl.endsWith("?sso-checked=true"));
+        log.debug3("SO redirect: " + fud.redirectUrls.size() + " " + fud.origUrl + " to " + fud.fetchUrl + " : " + should);
+        if (!should) {
+          log.debug3("myfud: " + fud.redirectUrls.size() + " " + fud.redirectUrls.toString());
         }
       }
       return should;

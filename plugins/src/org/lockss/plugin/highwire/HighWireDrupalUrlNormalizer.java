@@ -74,7 +74,6 @@ public class HighWireDrupalUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
   protected static final String EXPAND_PARAM = "/expansion?";
   protected static final String ITOK_PARAM = "?itok=";
   protected static final String DOWNLOAD_PARAM = "?download=";
-  protected static final String SIGNIN_PARAM = "?sso-checked=";
   
   protected static final String TOC_SEC_ID_PARAM = "facet[toc-section-id]";
   
@@ -160,7 +159,6 @@ public class HighWireDrupalUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
         url.contains(ELTR_PARAM) || 
         url.contains(EXPAND_PARAM) ||
         url.contains(ITOK_PARAM) ||
-        url.contains(SIGNIN_PARAM) ||
         url.contains(DOWNLOAD_PARAM)) {
       url = url.replaceFirst("[?].+$", "");
     }

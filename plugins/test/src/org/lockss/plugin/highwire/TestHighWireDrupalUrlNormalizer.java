@@ -115,7 +115,7 @@ public class TestHighWireDrupalUrlNormalizer extends LockssTestCase {
         normalizer.normalizeUrl("https://www.example.com/content/304/2/H253.full-text.pdf%2Bhtml", m_mau2));
     assertEquals("http://www.example.com/content/304/2/H253.full.pdf",
         normalizer.normalizeUrl("http://www.example.com/content/304/2/H253.full.pdf?download=yes", m_mau));
-    assertEquals("http://www.example.com/content/304/2/H253.full.pdf",
+    assertEquals("http://www.example.com/content/304/2/H253.full.pdf?sso-checked=yestrue",
         normalizer.normalizeUrl("http://www.example.com/content/304/2/H253.full.pdf?sso-checked=yestrue", m_mau));
     
     assertEquals("https://www.example.com/content/303/1/C1",
