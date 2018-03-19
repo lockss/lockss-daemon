@@ -903,11 +903,11 @@
     param[journal_id] = bqmt
     #continued_by = 1463-5771
 
-    au < exists ; exists ; 1994 ; Benchmarking for Quality Management & Technology Volume 1 ; 1 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1995 ; Benchmarking for Quality Management & Technology Volume 2 ; 2 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1996 ; Benchmarking for Quality Management & Technology Volume 3 ; 3 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1997 ; Benchmarking for Quality Management & Technology Volume 4 ; 4 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1998 ; Benchmarking for Quality Management & Technology Volume 5 ; 5 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1994 ; Benchmarking for Quality Management & Technology Volume 1 ; 1 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1995 ; Benchmarking for Quality Management & Technology Volume 2 ; 2 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1996 ; Benchmarking for Quality Management & Technology Volume 3 ; 3 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1997 ; Benchmarking for Quality Management & Technology Volume 4 ; 4 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1998 ; Benchmarking for Quality Management & Technology Volume 5 ; 5 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -1132,9 +1132,9 @@
     param[journal_id] = joce
     #continued_by = 1466-4100
 
-    au < exists ; exists ; 1996 ; Journal of Clinical Effectiveness Volume 1 ; 1 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1997 ; Journal of Clinical Effectiveness Volume 2 ; 2 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1998 ; Journal of Clinical Effectiveness Volume 3 ; 3 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1996 ; Journal of Clinical Effectiveness Volume 1 ; 1 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1997 ; Journal of Clinical Effectiveness Volume 2 ; 2 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1998 ; Journal of Clinical Effectiveness Volume 3 ; 3 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -1218,8 +1218,8 @@
     param[journal_id] = bprmj
     #continued_by = 1463-7154
 
-    au < exists ; exists ; 1995 ; Business Process Re-engineering & Management Journal Volume 1 ; 1 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1996 ; Business Process Re-engineering & Management Journal Volume 2 ; 2 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1995 ; Business Process Re-engineering & Management Journal Volume 1 ; 1 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1996 ; Business Process Re-engineering & Management Journal Volume 2 ; 2 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -3316,8 +3316,8 @@
     param[journal_id] = dprg
     #continues = 1463-6697
 
-    au < exists ; exists ; 2017 ; Digital Policy, Regulation and Governance Volume 19 ; 19 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 2018 ; Digital Policy, Regulation and Governance Volume 20 ; 20 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2017 ; Digital Policy, Regulation and Governance Volume 19 ; 19 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2018 ; Digital Policy, Regulation and Governance Volume 20 ; 20 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -3368,11 +3368,11 @@
     param[journal_id] = otp
     #continued_bu = 0959-3845
 
-    au < exists ; exists ; 1982-1983 ; Office Technology and People Volume 1 ; 1 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1985 ; Office Technology and People Volume 2 ; 2 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1987 ; Office Technology and People Volume 3 ; 3 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1988 ; Office Technology and People Volume 4 ; 4 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1989 ; Office Technology and People Volume 5 ; 5 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1982-1983 ; Office Technology and People Volume 1 ; 1 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1985 ; Office Technology and People Volume 2 ; 2 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1987 ; Office Technology and People Volume 3 ; 3 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1988 ; Office Technology and People Volume 4 ; 4 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1989 ; Office Technology and People Volume 5 ; 5 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -3418,7 +3418,7 @@
     au < finished ; finished ; 2015 ; Information Technology & People Volume 28 ; 28 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2016 ; Information Technology & People Volume 29 ; 29 ; http://www.emeraldinsight.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Information Technology & People Volume 30 ; 30 ; http://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 2018 ; Information Technology & People Volume 31 ; 31 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2018 ; Information Technology & People Volume 31 ; 31 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -3548,7 +3548,7 @@
     param[journal_id] = sgpe
     #continues = 1759-751X
 
-    au < exists ; exists ; 2017 ; Studies in Graduate and Postdoctoral Education Volume 8 ; 8 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2017 ; Studies in Graduate and Postdoctoral Education Volume 8 ; 8 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -3781,9 +3781,9 @@
     param[journal_id] = ribs
     #continued_by = 1056-9219
 
-    au < exists ; exists ; 2016 ; Review of International Business and Strategy Volume 26 ; 26 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 2017 ; Review of International Business and Strategy Volume 27 ; 27 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 2018 ; Review of International Business and Strategy Volume 28 ; 28 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2016 ; Review of International Business and Strategy Volume 26 ; 26 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2017 ; Review of International Business and Strategy Volume 27 ; 27 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2018 ; Review of International Business and Strategy Volume 28 ; 28 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -4669,17 +4669,17 @@
     param[journal_id] = tijoa
     #continued_by = 1934-8835
 
-    au < exists ; exists ; 1993 ; International Journal of Organizational Analysis Volume 1 ; 1 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1994 ; International Journal of Organizational Analysis Volume 2 ; 2 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1995 ; International Journal of Organizational Analysis Volume 3 ; 3 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1996 ; International Journal of Organizational Analysis Volume 4 ; 4 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1997 ; International Journal of Organizational Analysis Volume 5 ; 5 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1998 ; International Journal of Organizational Analysis Volume 6 ; 6 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1999 ; International Journal of Organizational Analysis Volume 7 ; 7 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 2000 ; International Journal of Organizational Analysis Volume 8 ; 8 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 2001 ; International Journal of Organizational Analysis Volume 9 ; 9 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 2002 ; International Journal of Organizational Analysis Volume 10 ; 10 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 2003 ; International Journal of Organizational Analysis Volume 11 ; 11 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1993 ; International Journal of Organizational Analysis Volume 1 ; 1 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1994 ; International Journal of Organizational Analysis Volume 2 ; 2 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1995 ; International Journal of Organizational Analysis Volume 3 ; 3 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1996 ; International Journal of Organizational Analysis Volume 4 ; 4 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1997 ; International Journal of Organizational Analysis Volume 5 ; 5 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1998 ; International Journal of Organizational Analysis Volume 6 ; 6 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1999 ; International Journal of Organizational Analysis Volume 7 ; 7 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2000 ; International Journal of Organizational Analysis Volume 8 ; 8 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2001 ; International Journal of Organizational Analysis Volume 9 ; 9 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2002 ; International Journal of Organizational Analysis Volume 10 ; 10 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2003 ; International Journal of Organizational Analysis Volume 11 ; 11 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -5760,7 +5760,7 @@
     param[journal_id] = jet
     #continues = 1754-9450
 
-    au < exists ; exists ; 2017 ; Journal of Enabling Technologies Volume 11 ; 11 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2017 ; Journal of Enabling Technologies Volume 11 ; 11 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -7317,12 +7317,12 @@
     param[journal_id] = jmh_arc
     comment[merged_into] = 0025-1747
 
-    au < exists ; exists ; 1995 ; Journal of Management History (Archive) Volume 1 ; 1 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1996 ; Journal of Management History (Archive) Volume 2 ; 2 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1997 ; Journal of Management History (Archive) Volume 3 ; 3 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1998 ; Journal of Management History (Archive) Volume 4 ; 4 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1999 ; Journal of Management History (Archive) Volume 5 ; 5 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 2000 ; Journal of Management History (Archive) Volume 6 ; 6 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1995 ; Journal of Management History (Archive) Volume 1 ; 1 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1996 ; Journal of Management History (Archive) Volume 2 ; 2 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1997 ; Journal of Management History (Archive) Volume 3 ; 3 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1998 ; Journal of Management History (Archive) Volume 4 ; 4 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1999 ; Journal of Management History (Archive) Volume 5 ; 5 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2000 ; Journal of Management History (Archive) Volume 6 ; 6 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -7733,14 +7733,14 @@
     param[journal_id] = jv
     comment[continued_by] = 0960-2712
 
-    au < exists ; exists ; 1983 ; Journal of Valuation Volume 1 ; 1 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1984 ; Journal of Valuation Volume 2 ; 2 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1985 ; Journal of Valuation Volume 3 ; 3 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1986 ; Journal of Valuation Volume 4 ; 4 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1987 ; Journal of Valuation Volume 5 ; 5 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1988 ; Journal of Valuation Volume 6 ; 6 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1989 ; Journal of Valuation Volume 7 ; 7 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1990 ; Journal of Valuation Volume 8 ; 8 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1983 ; Journal of Valuation Volume 1 ; 1 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1984 ; Journal of Valuation Volume 2 ; 2 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1985 ; Journal of Valuation Volume 3 ; 3 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1986 ; Journal of Valuation Volume 4 ; 4 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1987 ; Journal of Valuation Volume 5 ; 5 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1988 ; Journal of Valuation Volume 6 ; 6 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1989 ; Journal of Valuation Volume 7 ; 7 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1990 ; Journal of Valuation Volume 8 ; 8 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -8156,14 +8156,14 @@
     param[journal_id] = ect
     #continued_by = 1366-5626
 
-    au < exists ; exists ; 1989 ; Employee Counselling Today Volume 1 ; 1 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1990 ; Employee Counselling Today Volume 2 ; 2 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1991 ; Employee Counselling Today Volume 3 ; 3 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1992 ; Employee Counselling Today Volume 4 ; 4 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1993 ; Employee Counselling Today Volume 5 ; 5 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1994 ; Employee Counselling Today Volume 6 ; 6 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1995 ; Employee Counselling Today Volume 7 ; 7 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1996 ; Employee Counselling Today Volume 8 ; 8 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1989 ; Employee Counselling Today Volume 1 ; 1 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1990 ; Employee Counselling Today Volume 2 ; 2 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1991 ; Employee Counselling Today Volume 3 ; 3 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1992 ; Employee Counselling Today Volume 4 ; 4 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1993 ; Employee Counselling Today Volume 5 ; 5 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1994 ; Employee Counselling Today Volume 6 ; 6 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1995 ; Employee Counselling Today Volume 7 ; 7 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1996 ; Employee Counselling Today Volume 8 ; 8 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -8326,16 +8326,16 @@
     param[journal_id] = lhsv
     #continued_by = 1751-1879
 
-    au < exists ; exists ; 1997 ; Leadership in Health Services Volume 10 ; 10 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1998 ; Leadership in Health Services Volume 11 ; 11 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1999 ; Leadership in Health Services Volume 12 ; 12 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 2000 ; Leadership in Health Services Volume 13 ; 13 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 2001 ; Leadership in Health Services Volume 14 ; 14 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 2002 ; Leadership in Health Services Volume 15 ; 15 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 2003 ; Leadership in Health Services Volume 16 ; 16 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 2004 ; Leadership in Health Services Volume 17 ; 17 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 2005 ; Leadership in Health Services Volume 18 ; 18 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 2006 ; Leadership in Health Services Volume 19 ; 19 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1997 ; Leadership in Health Services Volume 10 ; 10 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1998 ; Leadership in Health Services Volume 11 ; 11 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1999 ; Leadership in Health Services Volume 12 ; 12 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2000 ; Leadership in Health Services Volume 13 ; 13 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2001 ; Leadership in Health Services Volume 14 ; 14 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2002 ; Leadership in Health Services Volume 15 ; 15 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2003 ; Leadership in Health Services Volume 16 ; 16 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2004 ; Leadership in Health Services Volume 17 ; 17 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2005 ; Leadership in Health Services Volume 18 ; 18 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2006 ; Leadership in Health Services Volume 19 ; 19 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -8665,8 +8665,8 @@
     param[journal_id] = lw
     #continued_by = 0957-6053
 
-    au < exists ; exists ; 1988 ; Logistics World Volume 1 ; 1 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1989 ; Logistics World Volume 2 ; 2 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1988 ; Logistics World Volume 1 ; 1 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1989 ; Logistics World Volume 2 ; 2 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -9254,19 +9254,19 @@
     param[journal_id] = ald
     #continued_by = 2042-8308
 
-    au < exists ; exists ; 1997 ; A Life in the Day Volume 1 ; 1 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1998 ; A Life in the Day Volume 2 ; 2 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1999 ; A Life in the Day Volume 3 ; 3 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 2000 ; A Life in the Day Volume 4 ; 4 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 2001 ; A Life in the Day Volume 5 ; 5 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 2002 ; A Life in the Day Volume 6 ; 6 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 2003 ; A Life in the Day Volume 7 ; 7 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 2004 ; A Life in the Day Volume 8 ; 8 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 2005 ; A Life in the Day Volume 9 ; 9 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 2006 ; A Life in the Day Volume 10 ; 10 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 2007 ; A Life in the Day Volume 11 ; 11 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 2008 ; A Life in the Day Volume 12 ; 12 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 2009 ; A Life in the Day Volume 13 ; 13 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1997 ; A Life in the Day Volume 1 ; 1 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1998 ; A Life in the Day Volume 2 ; 2 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1999 ; A Life in the Day Volume 3 ; 3 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2000 ; A Life in the Day Volume 4 ; 4 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2001 ; A Life in the Day Volume 5 ; 5 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2002 ; A Life in the Day Volume 6 ; 6 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2003 ; A Life in the Day Volume 7 ; 7 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2004 ; A Life in the Day Volume 8 ; 8 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2005 ; A Life in the Day Volume 9 ; 9 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2006 ; A Life in the Day Volume 10 ; 10 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2007 ; A Life in the Day Volume 11 ; 11 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2008 ; A Life in the Day Volume 12 ; 12 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2009 ; A Life in the Day Volume 13 ; 13 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -9618,8 +9618,8 @@
     param[journal_id] = ils
     #continues = 0307-4803
 
-    au < exists ; exists ; 2017 ; Information and Learning Science Volume 118 ; 118 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 2018 ; Information and Learning Science Volume 119 ; 119 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2017 ; Information and Learning Science Volume 118 ; 118 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2018 ; Information and Learning Science Volume 119 ; 119 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -9697,14 +9697,14 @@
     param[journal_id] = oclcm
     #continued_by = 1065-075X
 
-    au < exists ; exists ; 1985 ; OCLC Micro Volume 1 ; 1 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1986 ; OCLC Micro Volume 2 ; 2 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1987 ; OCLC Micro Volume 3 ; 3 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1988 ; OCLC Micro Volume 4 ; 4 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1989 ; OCLC Micro Volume 5 ; 5 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1990 ; OCLC Micro Volume 6 ; 6 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1991 ; OCLC Micro Volume 7 ; 7 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1992 ; OCLC Micro Volume 8 ; 8 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1985 ; OCLC Micro Volume 1 ; 1 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1986 ; OCLC Micro Volume 2 ; 2 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1987 ; OCLC Micro Volume 3 ; 3 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1988 ; OCLC Micro Volume 4 ; 4 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1989 ; OCLC Micro Volume 5 ; 5 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1990 ; OCLC Micro Volume 6 ; 6 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1991 ; OCLC Micro Volume 7 ; 7 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1992 ; OCLC Micro Volume 8 ; 8 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -9757,9 +9757,9 @@
     param[journal_id] = dlp
     #continues = 1065-075X
 
-    au < exists ; exists ; 2016 ; Digital Library Perspectives Volume 32 ; 32 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 2017 ; Digital Library Perspectives Volume 33 ; 33 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 2018 ; Digital Library Perspectives Volume 34 ; 34 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2016 ; Digital Library Perspectives Volume 32 ; 32 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2017 ; Digital Library Perspectives Volume 33 ; 33 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2018 ; Digital Library Perspectives Volume 34 ; 34 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -9807,22 +9807,22 @@
     param[journal_id] = or
     #continued_by = 1353-2642
 
-    au < exists ; exists ; 1977 ; Online Review Volume 1 ; 1 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1978 ; Online Review Volume 2 ; 2 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1979 ; Online Review Volume 3 ; 3 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1980 ; Online Review Volume 4 ; 4 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1981 ; Online Review Volume 5 ; 5 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1982 ; Online Review Volume 6 ; 6 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1983 ; Online Review Volume 7 ; 7 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1984 ; Online Review Volume 8 ; 8 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1985 ; Online Review Volume 9 ; 9 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1986 ; Online Review Volume 10 ; 10 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1987 ; Online Review Volume 11 ; 11 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1988 ; Online Review Volume 12 ; 12 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1989 ; Online Review Volume 13 ; 13 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1990 ; Online Review Volume 14 ; 14 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1991 ; Online Review Volume 15 ; 15 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1992 ; Online Review Volume 16 ; 16 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1977 ; Online Review Volume 1 ; 1 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1978 ; Online Review Volume 2 ; 2 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1979 ; Online Review Volume 3 ; 3 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1980 ; Online Review Volume 4 ; 4 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1981 ; Online Review Volume 5 ; 5 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1982 ; Online Review Volume 6 ; 6 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1983 ; Online Review Volume 7 ; 7 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1984 ; Online Review Volume 8 ; 8 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1985 ; Online Review Volume 9 ; 9 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1986 ; Online Review Volume 10 ; 10 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1987 ; Online Review Volume 11 ; 11 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1988 ; Online Review Volume 12 ; 12 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1989 ; Online Review Volume 13 ; 13 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1990 ; Online Review Volume 14 ; 14 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1991 ; Online Review Volume 15 ; 15 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1992 ; Online Review Volume 16 ; 16 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -9838,13 +9838,13 @@
     #continues = 0309-314X
     #continued_by = 1468-4527
 
-    au < exists ; exists ; 1993 ; Online and CD-Rom Review Volume 17 ; 17 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1994 ; Online and CD-Rom Review Volume 18 ; 18 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1995 ; Online and CD-Rom Review Volume 19 ; 19 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1996 ; Online and CD-Rom Review Volume 20 ; 20 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1997 ; Online and CD-Rom Review Volume 21 ; 21 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1998 ; Online and CD-Rom Review Volume 22 ; 22 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1999 ; Online and CD-Rom Review Volume 23 ; 23 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1993 ; Online and CD-Rom Review Volume 17 ; 17 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1994 ; Online and CD-Rom Review Volume 18 ; 18 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1995 ; Online and CD-Rom Review Volume 19 ; 19 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1996 ; Online and CD-Rom Review Volume 20 ; 20 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1997 ; Online and CD-Rom Review Volume 21 ; 21 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1998 ; Online and CD-Rom Review Volume 22 ; 22 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1999 ; Online and CD-Rom Review Volume 23 ; 23 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -10970,8 +10970,8 @@
     param[journal_id] = sajbs
     #continues = 2045-4457
 
-    au < exists ; exists ; 2017 ; South Asian Journal of Business Studies Volume 6 ; 6 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 2018 ; South Asian Journal of Business Studies Volume 7 ; 7 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2017 ; South Asian Journal of Business Studies Volume 6 ; 6 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2018 ; South Asian Journal of Business Studies Volume 7 ; 7 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -11090,8 +11090,8 @@
     param[journal_id] = jgoss
     #continues = 1753-8297
 
-    au < exists ; exists ; 2017 ; Journal of Global Operations and Strategic Sourcing Volume 10 ; 10 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 2018 ; Journal of Global Operations and Strategic Sourcing Volume 11 ; 11 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2017 ; Journal of Global Operations and Strategic Sourcing Volume 10 ; 10 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2018 ; Journal of Global Operations and Strategic Sourcing Volume 11 ; 11 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -11106,27 +11106,27 @@
     param[journal_id] = plr
     #continued_by = 1087-8572
 
-    au < exists ; exists ; 1975 ; Planning Review Volume 3 ; 3 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1976 ; Planning Review Volume 4 ; 4 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1977 ; Planning Review Volume 5 ; 5 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1978 ; Planning Review Volume 6 ; 6 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1979 ; Planning Review Volume 7 ; 7 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1980 ; Planning Review Volume 8 ; 8 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1981 ; Planning Review Volume 9 ; 9 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1982 ; Planning Review Volume 10 ; 10 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1983 ; Planning Review Volume 11 ; 11 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1984 ; Planning Review Volume 12 ; 12 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1985 ; Planning Review Volume 13 ; 13 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1986 ; Planning Review Volume 14 ; 14 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1987 ; Planning Review Volume 15 ; 15 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1988 ; Planning Review Volume 16 ; 16 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1989 ; Planning Review Volume 17 ; 17 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1990 ; Planning Review Volume 18 ; 18 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1991 ; Planning Review Volume 19 ; 19 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1992 ; Planning Review Volume 20 ; 20 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1993 ; Planning Review Volume 21 ; 21 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1994 ; Planning Review Volume 22 ; 22 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1995 ; Planning Review Volume 23 ; 23 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1975 ; Planning Review Volume 3 ; 3 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1976 ; Planning Review Volume 4 ; 4 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1977 ; Planning Review Volume 5 ; 5 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1978 ; Planning Review Volume 6 ; 6 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1979 ; Planning Review Volume 7 ; 7 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1980 ; Planning Review Volume 8 ; 8 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1981 ; Planning Review Volume 9 ; 9 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1982 ; Planning Review Volume 10 ; 10 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1983 ; Planning Review Volume 11 ; 11 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1984 ; Planning Review Volume 12 ; 12 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1985 ; Planning Review Volume 13 ; 13 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1986 ; Planning Review Volume 14 ; 14 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1987 ; Planning Review Volume 15 ; 15 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1988 ; Planning Review Volume 16 ; 16 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1989 ; Planning Review Volume 17 ; 17 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1990 ; Planning Review Volume 18 ; 18 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1991 ; Planning Review Volume 19 ; 19 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1992 ; Planning Review Volume 20 ; 20 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1993 ; Planning Review Volume 21 ; 21 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1994 ; Planning Review Volume 22 ; 22 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1995 ; Planning Review Volume 23 ; 23 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -11228,7 +11228,7 @@
     param[journal_id] = ijbpa
     #continues = 0263-080X
 
-    au < exists ; exists ; 2017 ; International Journal of Building Pathology and Adaptation Volume 35 ; 35 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2017 ; International Journal of Building Pathology and Adaptation Volume 35 ; 35 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -11929,9 +11929,9 @@
     param[journal_id] = ijamc
     #continued_by = 1747-3616
 
-    au < exists ; exists ; 1999-2000 ; International Journal of Advertising and Marketing to Children Volume 1 ; 1 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 2000-2001 ; International Journal of Advertising and Marketing to Children Volume 2 ; 2 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 2001 ; International Journal of Advertising and Marketing to Children Volume 3 issue 1 ; 3 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1999-2000 ; International Journal of Advertising and Marketing to Children Volume 1 ; 1 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2000-2001 ; International Journal of Advertising and Marketing to Children Volume 2 ; 2 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2001 ; International Journal of Advertising and Marketing to Children Volume 3 issue 1 ; 3 ; https://www.emeraldinsight.com/ ; >
 
   }
 

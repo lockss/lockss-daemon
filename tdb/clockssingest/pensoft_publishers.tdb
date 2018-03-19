@@ -28,7 +28,7 @@
     au < finished ; finished ; 2015 ; 3 ; Biodiversity Data Journal Volume 2015 ; 2015 ; http://bdj.pensoft.net/ ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; 4 ; Biodiversity Data Journal Volume 2016 ; 2016 ; https://bdj.pensoft.net/ ; >
     au < frozen ; exists ; 2017 ; 5 ; Biodiversity Data Journal Volume 2017 ; 2017 ; https://bdj.pensoft.net/ ; >
-    au < exists ; exists ; 2018 ; 6 ; Biodiversity Data Journal Volume 2018 ; 2018 ; https://bdj.pensoft.net/ ; >
+    au < manifest ; exists ; 2018 ; 6 ; Biodiversity Data Journal Volume 2018 ; 2018 ; https://bdj.pensoft.net/ ; >
     
    }
 
@@ -54,7 +54,7 @@
     au < notReady ; exists ; 2015 ; 10 ; BioRisk Volume 2015 [abstract only] ; 2015 ; https://biorisk.pensoft.net/ ; > #no substance.
     au < frozen ; exists ; 2016 ; 11 ; BioRisk Volume 2016 ; 2016 ; https://biorisk.pensoft.net/ ; >
     au < frozen ; exists ; 2017 ; 12 ; BioRisk Volume 2017 ; 2017 ; https://biorisk.pensoft.net/ ; >
-    au < exists ; exists ; 2018 ; 13 ; BioRisk Volume 2018 ; 2018 ; https://biorisk.pensoft.net/ ; >
+    au < manifest ; exists ; 2018 ; 13 ; BioRisk Volume 2018 ; 2018 ; https://biorisk.pensoft.net/ ; >
   
    }
    
@@ -78,7 +78,7 @@
     au < finished ; finished ; 2015 ; 9 ; Comparative Cytogenetics Volume 2015 ; 2015 ; http://compcytogen.pensoft.net/ ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; 10 ; Comparative Cytogenetics Volume 2016 ; 2016 ; https://compcytogen.pensoft.net/ ; >
     au < crawling ; exists ; 2017 ; 11 ; Comparative Cytogenetics Volume 2017 ; 2017 ; https://compcytogen.pensoft.net/ ; >
-    au < expected ; exists ; 2018 ; 12 ; Comparative Cytogenetics Volume 2018 ; 2018 ; https://compcytogen.pensoft.net/ ; >
+    au < manifest ; exists ; 2018 ; 12 ; Comparative Cytogenetics Volume 2018 ; 2018 ; https://compcytogen.pensoft.net/ ; >
   
    }
 
@@ -97,7 +97,7 @@
      au < finished ; finished ; 2015 ; 62 ; Deutsche Entomologische Zeitschrift Volume 2015 ; 2015 ; http://dez.pensoft.net/ ; reingest1.clockss.org:8082 >
      au < frozen ; exists ; 2016 ; 63 ; Deutsche Entomologische Zeitschrift Volume 2016 ; 2016 ; http://dez.pensoft.net/ ; >
      au < frozen ; exists ; 2017 ; 64 ; Deutsche Entomologische Zeitschrift Volume 2017 ; 2017 ; https://dez.pensoft.net/ ; >
-     au < expected ; exists ; 2018 ; 65 ; Deutsche Entomologische Zeitschrift Volume 2018 ; 2018 ; https://dez.pensoft.net/ ; >
+     au < manifest ; exists ; 2018 ; 65 ; Deutsche Entomologische Zeitschrift Volume 2018 ; 2018 ; https://dez.pensoft.net/ ; >
 
    }
    
@@ -114,7 +114,7 @@
 #    param[base_url] = http://ijm.pensoft.net/
     #notReady: V2011, no substance?
     
-    au < exists ; exists ; 2011 ; 4-6 ; International Journal of Myriapodology Volume 2011 ; 2011 ; https://ijm.pensoft.net/ ; >
+    au < manifest ; exists ; 2011 ; 4-6 ; International Journal of Myriapodology Volume 2011 ; 2011 ; https://ijm.pensoft.net/ ; >
     au < frozen ; exists ; 2012 ; 7 ; International Journal of Myriapodology Volume 2012 ; 2012 ; http://ijm.pensoft.net/ ; >
 
    }
@@ -138,7 +138,7 @@
     au < frozen ; exists ; 2015 ; 42-47 ; Journal of Hymenoptera Research Volume 2015 ; 2015 ; http://jhr.pensoft.net/ ; >
     au < frozen ; exists ; 2016 ; 48-53 ; Journal of Hymenoptera Research Volume 2016 ; 2016 ; https://jhr.pensoft.net/ ; >
     au < frozen ; exists ; 2017 ; 54-61 ; Journal of Hymenoptera Research Volume 2017 ; 2017 ; https://jhr.pensoft.net/ ; >
-    au < expected ; exists ; 2018 ; 62-67 ; Journal of Hymenoptera Research Volume 2018 ; 2018 ; https://jhr.pensoft.net/ ; >
+    au < manifest ; exists ; 2018 ; 62-67 ; Journal of Hymenoptera Research Volume 2018 ; 2018 ; https://jhr.pensoft.net/ ; >
   
    }
   
@@ -161,7 +161,7 @@
     au < frozen ; exists ; 2015 ; 9-11 ; MycoKeys Volume 2015 ; 2015 ; http://mycokeys.pensoft.net/ ; >
     au < frozen ; exists ; 2016 ; 12-18 ; MycoKeys Volume 2016 ; 2016 ; https://mycokeys.pensoft.net/ ; >
     au < frozen ; exists ; 2017 ; 19-25 ; MycoKeys Volume 2017 ; 2017 ; https://mycokeys.pensoft.net/ ; >
-    au < expected ; exists ; 2018 ; 26-32 ; MycoKeys Volume 2018 ; 2018 ; https://mycokeys.pensoft.net/ ; >
+    au < manifest ; exists ; 2018 ; 26-32 ; MycoKeys Volume 2018 ; 2018 ; https://mycokeys.pensoft.net/ ; >
   
    }
   
@@ -181,7 +181,7 @@
     au < finished ; finished ; 2015 ; 10-13 ; Nature Conservation Volume 2015 ; 2015 ; http://natureconservation.pensoft.net/ ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2016 ; 14-16 ; Nature Conservation Volume 2016 ; 2016 ; https://natureconservation.pensoft.net/ ; >
     au < frozen ; exists ; 2017 ; 17-19 ; Nature Conservation Volume 2017 ; 2017 ; https://natureconservation.pensoft.net/ ; >
-    au < expected ; exists ; 2018 ; 20-22 ; Nature Conservation Volume 2018 ; 2018 ; https://natureconservation.pensoft.net/ ; >
+    au < manifest ; exists ; 2018 ; 20-22 ; Nature Conservation Volume 2018 ; 2018 ; https://natureconservation.pensoft.net/ ; >
   
    }
   
@@ -204,7 +204,7 @@
     au < finished ; finished ; 2015 ; 24-27 ; NeoBiota Volume 2015 ; 2015 ; http://neobiota.pensoft.net/ ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; 28-31 ; NeoBiota Volume 2016 ; 2016 ; https://neobiota.pensoft.net/ ; >
     au < frozen ; exists ; 2017 ; 32-36 ; NeoBiota Volume 2017 ; 2017 ; https://neobiota.pensoft.net/ ; >
-    au < expected ; exists ; 2017 ; 37-41 ; NeoBiota Volume 2018 ; 2018 ; https://neobiota.pensoft.net/ ; >
+    au < manifest ; exists ; 2017 ; 37-41 ; NeoBiota Volume 2018 ; 2018 ; https://neobiota.pensoft.net/ ; >
   
    }
 
@@ -224,7 +224,7 @@
     au < frozen ; exists ; 2015 ; 38 ; Nota Lepidopterologica Volume 2015 ; 2015 ; http://nl.pensoft.net/ ; >
     au < frozen ; exists ; 2016 ; 39 ; Nota Lepidopterologica Volume 2016 ; 2016 ; https://nl.pensoft.net/ ; >
     au < frozen ; exists ; 2017 ; 40 ; Nota Lepidopterologica Volume 2017 ; 2017 ; https://nl.pensoft.net/ ; >
-    au < expected ; exists ; 2018 ; 41 ; Nota Lepidopterologica Volume 2018 ; 2018 ; https://nl.pensoft.net/ ; >
+    au < manifest ; exists ; 2018 ; 41 ; Nota Lepidopterologica Volume 2018 ; 2018 ; https://nl.pensoft.net/ ; >
 
    }
     
@@ -248,7 +248,7 @@
     au < frozen ; exists ; 2015 ; 44-57 ; PhytoKeys Volume 2015 ; 2015 ; http://phytokeys.pensoft.net/ ; >
     au < frozen ; exists ; 2016 ; 58-75 ; PhytoKeys Volume 2016 ; 2016 ; https://phytokeys.pensoft.net/ ; >
     au < frozen ; exists ; 2017 ; 76-93 ; PhytoKeys Volume 2017 ; 2017 ; https://phytokeys.pensoft.net/ ; >
-    au < expected ; exists ; 2018 ; 94-111 ; PhytoKeys Volume 2018 ; 2018 ; https://phytokeys.pensoft.net/ ; >
+    au < manifest ; exists ; 2018 ; 94-111 ; PhytoKeys Volume 2018 ; 2018 ; https://phytokeys.pensoft.net/ ; >
   
    }
   
@@ -271,7 +271,7 @@
     au < finished ; finished ; 2015 ; 15-16 ; Subterranean Biology Volume 2015 ; 2015 ; http://subtbiol.pensoft.net/ ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2016 ; 17-20 ; Subterranean Biology Volume 2016 ; 2016 ; https://subtbiol.pensoft.net/ ; >
     au < frozen ; exists ; 2017 ; 21-24 ; Subterranean Biology Volume 2017 ; 2017 ; https://subtbiol.pensoft.net/ ; >
-    au < expected ; exists ; 2018 ; 25-28 ; Subterranean Biology Volume 2018 ; 2018 ; https://subtbiol.pensoft.net/ ; >
+    au < manifest ; exists ; 2018 ; 25-28 ; Subterranean Biology Volume 2018 ; 2018 ; https://subtbiol.pensoft.net/ ; >
 
    }
   
@@ -297,7 +297,7 @@
     au < frozen ; exists ; 2015 ; 469-548 ; ZooKeys Volume 2015 ; 2015 ; http://zookeys.pensoft.net/ ; >
     au < frozen ; exists ; 2016 ; 549-641 ; ZooKeys Volume 2016 ; 2016 ; https://zookeys.pensoft.net/ ; >
     au < frozen ; exists ; 2017 ; 642-734 ; ZooKeys Volume 2017 ; 2017 ; https://zookeys.pensoft.net/ ; >
-    au < expected ; exists ; 2018 ; 735-820 ; ZooKeys Volume 2018 ; 2018 ; https://zookeys.pensoft.net/ ; >
+    au < manifest ; exists ; 2018 ; 735-820 ; ZooKeys Volume 2018 ; 2018 ; https://zookeys.pensoft.net/ ; >
   
    }
    
@@ -319,7 +319,7 @@
     au < frozen ; exists ; 2015 ; 91 ; Zoosystematics and Evolution Volume 2015 ; 2015 ; https://zse.pensoft.net/ ; >
     au < frozen ; exists ; 2016 ; 92 ; Zoosystematics and Evolution Volume 2016 ; 2016 ; https://zse.pensoft.net/ ; >
     au < frozen ; exists ; 2017 ; 93 ; Zoosystematics and Evolution Volume 2017 ; 2017 ; https://zse.pensoft.net/ ; >
-    au < expected ; exists ; 2018 ; 94 ; Zoosystematics and Evolution Volume 2018 ; 2018 ; https://zse.pensoft.net/ ; >
+    au < manifest ; exists ; 2018 ; 94 ; Zoosystematics and Evolution Volume 2018 ; 2018 ; https://zse.pensoft.net/ ; >
 
     }
 

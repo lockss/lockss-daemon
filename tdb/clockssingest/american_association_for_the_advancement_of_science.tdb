@@ -22,14 +22,14 @@
       param[base_url] = http://science.sciencemag.org/
       #volume 344 File size (346438) differs from Content-Length header (461302): http://science.sciencemag.org/content/sci/suppl/2014/04/23/344.6182.380.DC1/1249656s-tables.zip
 
-      au < exists ; exists ; 2012 ; Science Volume 335 ; 335 ; >
-      au < exists ; exists ; 2012 ; Science Volume 336 ; 336 ; >
-      au < exists ; exists ; 2012 ; Science Volume 337 ; 337 ; >
-      au < exists ; exists ; 2012 ; Science Volume 338 ; 338 ; >
-      au < exists ; exists ; 2013 ; Science Volume 339 ; 339 ; >
-      au < exists ; exists ; 2013 ; Science Volume 340 ; 340 ; >
-      au < exists ; exists ; 2013 ; Science Volume 341 ; 341 ; >
-      au < exists ; exists ; 2013 ; Science Volume 342 ; 342 ; >
+      au < manifest ; exists ; 2012 ; Science Volume 335 ; 335 ; >
+      au < manifest ; exists ; 2012 ; Science Volume 336 ; 336 ; >
+      au < manifest ; exists ; 2012 ; Science Volume 337 ; 337 ; >
+      au < manifest ; exists ; 2012 ; Science Volume 338 ; 338 ; >
+      au < manifest ; exists ; 2013 ; Science Volume 339 ; 339 ; >
+      au < manifest ; exists ; 2013 ; Science Volume 340 ; 340 ; >
+      au < manifest ; exists ; 2013 ; Science Volume 341 ; 341 ; >
+      au < manifest ; exists ; 2013 ; Science Volume 342 ; 342 ; >
       au < finished ; finished ; 2014 ; Science Volume 343 ; 343 ; reingest1.clockss.org:8082 >
       au < zapped ; finished ; 2014 ; Science Volume 344 ; 344 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2014 ; Science Volume 345 ; 345 ; reingest1.clockss.org:8082 >
