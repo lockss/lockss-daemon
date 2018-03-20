@@ -1,10 +1,9 @@
-package org.lockss.safenet;
+package org.lockss.entitlement;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.text.DateFormat;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -13,6 +12,7 @@ import java.util.Map;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.JsonNode;
+import org.apache.commons.lang3.time.FastDateFormat;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.message.BasicNameValuePair;
@@ -20,61 +20,84 @@ import org.apache.http.message.BasicNameValuePair;
 import org.lockss.app.BaseLockssManager;
 import org.lockss.app.ConfigurableManager;
 import org.lockss.config.Configuration;
+import org.lockss.util.Constants;
 import org.lockss.util.IOUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.UrlUtil;
 import org.lockss.util.urlconn.LockssUrlConnection;
+import org.lockss.util.urlconn.LockssUrlConnectionPool;
 
-public class BaseEntitlementRegistryClient extends BaseLockssManager implements EntitlementRegistryClient, ConfigurableManager {
+public class KeepsafeEntitlementRegistryClient extends BaseLockssManager implements EntitlementRegistryClient, ConfigurableManager {
 
-  private static final Logger log = Logger.getLogger(BaseEntitlementRegistryClient.class);
+  private static final Logger log = Logger.getLogger(KeepsafeEntitlementRegistryClient.class);
 
-  public static final String PREFIX = Configuration.PREFIX + "safenet.";
+  public static final String PREFIX = Configuration.PREFIX + "entitlement.keepsafe.";
   public static final String PARAM_ER_URI = PREFIX + "registryUri";
   static final String DEFAULT_ER_URI = "";
   public static final String PARAM_ER_APIKEY = PREFIX + "apiKey";
   static final String DEFAULT_ER_APIKEY = "";
-  private static final DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
+  public static final String PARAM_CONNECT_TIMEOUT = PREFIX + "timeout.connect";
+  static final long DEFAULT_CONNECT_TIMEOUT = 30 * Constants.SECOND;
+  public static final String PARAM_DATA_TIMEOUT = PREFIX + "timeout.data";
+  static final long DEFAULT_DATA_TIMEOUT = 120 * Constants.SECOND;
+  public static final String PARAM_CLOSE_IDLE_CONNECTION_IDLE_TIME = PREFIX + "closeIdleConnections.idleTime";
+  static final long DEFAULT_CLOSE_IDLE_CONNECTION_IDLE_TIME = 10 * Constants.MINUTE;
 
+  private static final FastDateFormat dateFormat = FastDateFormat.getInstance("yyyyMMdd");
+
+  private LockssUrlConnectionPool connectionPool;
+  private long paramCloseIdleConnectionsIdleTime = DEFAULT_CLOSE_IDLE_CONNECTION_IDLE_TIME;
   private ObjectMapper objectMapper;
   private String erUri;
   private String apiKey;
 
-  public BaseEntitlementRegistryClient() {
+  public KeepsafeEntitlementRegistryClient() {
     this.objectMapper = new ObjectMapper();
+    this.connectionPool = new LockssUrlConnectionPool();
   }
 
   public void setConfig(Configuration config, Configuration oldConfig, Configuration.Differences diffs) {
     if (diffs.contains(PREFIX)) {
       erUri = config.get(PARAM_ER_URI, DEFAULT_ER_URI);
       apiKey = config.get(PARAM_ER_APIKEY, DEFAULT_ER_APIKEY);
+      long connectTimeout = config.getTimeInterval(PARAM_CONNECT_TIMEOUT, DEFAULT_CONNECT_TIMEOUT);
+      long dataTimeout = config.getTimeInterval(PARAM_DATA_TIMEOUT, DEFAULT_DATA_TIMEOUT);
+      paramCloseIdleConnectionsIdleTime = config.getTimeInterval(PARAM_CLOSE_IDLE_CONNECTION_IDLE_TIME, DEFAULT_CLOSE_IDLE_CONNECTION_IDLE_TIME);
+      connectionPool.setConnectTimeout(connectTimeout);
+      connectionPool.setDataTimeout(dataTimeout);
     }
   }
 
   public boolean isUserEntitled(String issn, String institution, String start, String end) throws IOException {
+      JsonNode entitlement = this.findMatchingEntitlement(issn, institution, start, end);
+      return entitlement != null;
+  }
+
+  private JsonNode findMatchingEntitlement(String issn, String institution, String start, String end) throws IOException {
     Map<String, String> parameters = new HashMap<String, String>();
-    parameters.put("api_key", apiKey);
     parameters.put("identifier_value", issn);
     parameters.put("institution", institution);
     parameters.put("start", start);
     parameters.put("end", end);
+    parameters.put("validate", "1");
 
     JsonNode entitlements = callEntitlementRegistry("/entitlements", parameters);
     if (entitlements != null) {
       for(JsonNode entitlement : entitlements) {
         JsonNode entitlementInstitution = entitlement.get("institution");
-        if (entitlementInstitution != null && entitlementInstitution.asText().equals(institution)) {
+        log.debug("Checking entitlement " + entitlement.toString());
+        if (entitlementInstitution != null && entitlementInstitution.asText().endsWith(institution + "/")) {
           log.warning("TODO: Verify title and dates");
-          return true;
+          return entitlement;
         }
       }
 
       // Valid request, but the entitlements don't match the information we passed, which should never happen
-      throw new IOException("No matching entitlements returned from entitlement registry");
+      log.error("Entitlements returned from entitlement registry do not match passed parameters");
     }
 
     //Valid request, no entitlements found
-    return false;
+    return null;
   }
 
   private Date extractDate(String value) throws IOException {
@@ -96,46 +119,22 @@ public class BaseEntitlementRegistryClient extends BaseLockssManager implements 
       return extractDate(value.asText());
   }
 
-  public String getPublisher(String issn, String start, String end) throws IOException {
-    Map<String, String> parameters = new HashMap<String, String>();
-    parameters.put("identifier", issn);
-    Date startDate = extractDate(start);
-    Date endDate = extractDate(end);
-    JsonNode titles = callEntitlementRegistry("/titles", parameters);
-    if (titles != null) {
-      List<String> foundPublishers = new ArrayList<String>();
-      for(JsonNode title : titles) {
-        JsonNode publishers = title.get("publishers");
-        for(JsonNode publisher : publishers) {
-          Date foundStartDate = extractDate(publisher, "start");
-          Date foundEndDate = extractDate(publisher, "end");
-
-          if ( foundStartDate != null && ( startDate == null || foundStartDate.after(startDate) ) ) {
-              continue;
-          }
-          if ( foundEndDate != null && ( endDate == null || foundEndDate.before(endDate) ) ) {
-              continue;
-          }
-          foundPublishers.add(publisher.get("id").asText());
-        }
-      }
-      if (foundPublishers.size() > 1) {
-        // Valid request, but there are multiple publishers for the date range, which should never happen
-        throw new IOException("Multiple matching publishers returned from entitlement registry");
-      }
-      if (foundPublishers.size() == 1) {
-          return foundPublishers.get(0);
-      }
+  public String getPublisher(String issn, String institution, String start, String end) throws IOException {
+    JsonNode entitlement = this.findMatchingEntitlement(issn, institution, start, end);
+    if ( entitlement == null ) {
+        return null;
     }
-    // Valid request, no publisher found
-    return null;
+
+    String url = entitlement.get("publisher").asText();
+    String[] parts = url.split("/");
+    return parts[parts.length - 1];
   }
 
   public PublisherWorkflow getPublisherWorkflow(String publisherGuid) throws IOException {
     Map<String, String> parameters = new HashMap<String, String>();
     JsonNode publisher = callEntitlementRegistry("/publishers/"+publisherGuid, parameters);
     if (publisher != null) {
-      JsonNode foundGuid = publisher.get("id");
+      JsonNode foundGuid = publisher.get("guid");
       if (foundGuid != null && foundGuid.asText().equals(publisherGuid)) {
         JsonNode foundWorkflow = publisher.get("workflow");
         if(foundWorkflow != null) {
@@ -146,6 +145,10 @@ public class BaseEntitlementRegistryClient extends BaseLockssManager implements 
             // Valid request, but workflow didn't match ones we've implemented, which should never happen
             throw new IOException("No valid workflow returned from entitlement registry: " + foundWorkflow.asText().toUpperCase());
           }
+        }
+        else {
+            log.warning("No workflow set for publisher, defaulting to PRIMARY_LOCKSS");
+            return PublisherWorkflow.PRIMARY_LOCKSS;
         }
       }
     }
@@ -169,7 +172,7 @@ public class BaseEntitlementRegistryClient extends BaseLockssManager implements 
       if (!scope.equals(institution.get("scope").asText())) {
         throw new IOException("No matching institutions returned from entitlement registry");
       }
-      return institution.get("id").asText();
+      return institution.get("guid").asText();
     }
     throw new IOException("No matching institutions returned from entitlement registry");
   }
@@ -190,6 +193,8 @@ public class BaseEntitlementRegistryClient extends BaseLockssManager implements 
       String url = builder.toString();
       log.debug("Connecting to ER at " + url);
       connection = openConnection(url);
+      connection.setRequestProperty("Accept", "application/json");
+      connection.setRequestProperty("Authorization", "Token " + apiKey);
       connection.execute();
       int responseCode = connection.getResponseCode();
       if (responseCode == 200) {
@@ -210,12 +215,13 @@ public class BaseEntitlementRegistryClient extends BaseLockssManager implements 
       if(connection != null) {
         IOUtil.safeRelease(connection);
       }
+      connectionPool.closeIdleConnections(paramCloseIdleConnectionsIdleTime);
     }
   }
 
   // protected so that it can be overriden with mock connections in tests
   protected LockssUrlConnection openConnection(String url) throws IOException {
-    return UrlUtil.openConnection(url);
+    return UrlUtil.openConnection(url, connectionPool);
   }
 
   protected static List<NameValuePair> mapToPairs(Map<String, String> params) {

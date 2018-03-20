@@ -50,12 +50,14 @@ import org.lockss.daemon.status.StatusService;
 import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
 import org.lockss.db.PkNamePair;
+import org.lockss.exporter.biblio.BibliographicItem;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.BaseArticleMetadataExtractor;
 import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.AuUtil;
+import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.Plugin;
 import org.lockss.plugin.Plugin.Feature;
 import org.lockss.plugin.PluginManager;
@@ -4533,4 +4535,38 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   public boolean deleteDbAu(Long auSeq, String auKey) throws DbException {
     return getMetadataManagerSql().removeAu(auSeq, auKey);
   }
+
+  /**
+   * Finds the bibliographic information held about a CachedUrl.
+   *
+   * @param cu
+   *          A CachedUrl to lookup.
+   * @return a BibliographicItem with appropriate infomation populated if the CachedUrl was found in the database,
+   *         <code>null</code> otherwise.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public BibliographicItem getCUBibliographicInfo(CachedUrl cu) throws DbException {
+    // Get a connection to the database.
+    Connection conn = dbManager.getConnection();
+
+    return getCUBibliographicInfo(conn, cu);
+  }
+
+  /**
+   * Finds the bibliographic information held about a CachedUrl.
+   *
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param cu
+   *          A CachedUrl to lookup.
+   * @return a BibliographicItem with appropriate infomation populated if the CachedUrl was found in the database,
+   *         <code>null</code> otherwise.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public BibliographicItem getCUBibliographicInfo(Connection conn, CachedUrl cu) throws DbException {
+    return mdManagerSql.getCUBibliographicInfo(conn, cu);
+  }
+
 }

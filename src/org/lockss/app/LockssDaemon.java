@@ -58,7 +58,7 @@ import org.lockss.config.*;
 import org.lockss.crawler.*;
 import org.lockss.remote.*;
 import org.lockss.clockss.*;
-import org.lockss.safenet.*;
+import org.lockss.entitlement.*;
 import org.apache.commons.collections.map.LinkedMap;
 
 /**
@@ -102,6 +102,9 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     PARAM_DAEMON_DEADLINE_REASONABLE + "future";
   static final long DEFAULT_DAEMON_DEADLINE_REASONABLE_FUTURE =
     20 * Constants.WEEK;
+
+  public static final String PARAM_KEEPSAFE_ENABLED = Configuration.PREFIX + "entitlement.keepsafe.enabled";
+  static final boolean DEFAULT_KEEPSAFE_ENABLED = false;
 
   /** List of local IP addresses to which to bind listen sockets for
    * servers (admin ui, content, proxy).  If not set, servers listen on all
@@ -147,7 +150,8 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public static final String ICP_MANAGER = "IcpManager";
   public static final String CRON = "Cron";
   public static final String CLOCKSS_PARAMS = "ClockssParams";
-  public static final String SAFENET_MANAGER = "SafenetManager";
+  public static final String ENTITLEMENT_REGISTRY_CLIENT = "EntitlementRegistryClient";
+  public static final String CACHED_ENTITLEMENT_REGISTRY_CLIENT = "CachedEntitlementRegistryClient";
   public static final String TRUEZIP_MANAGER = "TrueZipManager";
   public static final String DB_MANAGER = "DbManager";
   public static final String COUNTER_REPORTS_MANAGER = "CounterReportsManager";
@@ -237,9 +241,13 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
       public boolean shouldStart() {
         return isClockss();
       }},
-    new ManagerDesc(SAFENET_MANAGER, "org.lockss.safenet.CachingEntitlementRegistryClient") {
+    new ManagerDesc(ENTITLEMENT_REGISTRY_CLIENT, "org.lockss.entitlement.KeepsafeEntitlementRegistryClient") {
       public boolean shouldStart() {
-        return isSafenet();
+        return isKeepsafe();
+      }},
+    new ManagerDesc(CACHED_ENTITLEMENT_REGISTRY_CLIENT, "org.lockss.entitlement.CachingEntitlementRegistryClient") {
+      public boolean shouldStart() {
+        return isKeepsafe();
       }},
     // watchdog last
     new ManagerDesc(WATCHDOG_SERVICE, DEFAULT_WATCHDOG_SERVICE)
@@ -271,7 +279,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
 
   private static LockssDaemon theDaemon;
   private boolean isClockss;
-  private boolean isSafenet;
+  private boolean isKeepsafe;
   protected String testingMode;
 
   protected LockssDaemon(List<String> propUrls) {
@@ -338,10 +346,10 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   }
 
   /**
-   * True if running as a Safenet daemon
+   * True if running as a Keepsafe daemon
    */
-  public boolean isSafenet() {
-    return isSafenet;
+  public boolean isKeepsafe() {
+    return isKeepsafe;
   }
 
   /** Stop the daemon.  Currently only used in testing. */
@@ -630,7 +638,16 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    * @throws IllegalArgumentException if the manager is not available.
    */
   public EntitlementRegistryClient getEntitlementRegistryClient() {
-    return (EntitlementRegistryClient) getManager(SAFENET_MANAGER);
+    return (EntitlementRegistryClient) getManager(ENTITLEMENT_REGISTRY_CLIENT);
+  }
+
+  /**
+   * return the EntitlementRegistryClient instance.
+   * @return EntitlementRegistryClient instance.
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+  public EntitlementRegistryClient getCachedEntitlementRegistryClient() {
+    return (EntitlementRegistryClient) getManager(CACHED_ENTITLEMENT_REGISTRY_CLIENT);
   }
 
   // LockssAuManager accessors
@@ -977,7 +994,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     testingMode = config.get(PARAM_TESTING_MODE);
     String proj = ConfigManager.getPlatformProject();
     isClockss = "clockss".equalsIgnoreCase(proj);
-    isSafenet = "safenet".equalsIgnoreCase(proj);
+    isKeepsafe = config.getBoolean(PARAM_KEEPSAFE_ENABLED, DEFAULT_KEEPSAFE_ENABLED);
 
     super.setConfig(config, prevConfig, changedKeys);
   }

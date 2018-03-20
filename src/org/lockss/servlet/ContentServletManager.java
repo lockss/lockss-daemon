@@ -139,6 +139,13 @@ public class ContentServletManager
                      "Serve Content",
                      ServletDescr.NO_NAV_TABLE);
 
+  public static final ServletDescr SERVLET_ENTITLEMENT_CHECK_SERVE_CONTENT =
+    new ServletDescr("ServeContent",
+		     EntitlementCheckServeContent.class,
+                     "Serve Content",
+                     "ServeContent",
+                     ServletDescr.NO_NAV_TABLE);
+
   public static final ServletDescr SERVLET_SERVE_CONTENT =
     new ServletDescr("ServeContent",
 		     ServeContent.class,
@@ -192,6 +199,10 @@ public class ContentServletManager
     SERVLET_SERVE_CONTENT_NO_NAV,
   };
 
+  static final ServletDescr servletDescrsKeepsafe[] = {
+    SERVLET_ENTITLEMENT_CHECK_SERVE_CONTENT,
+  };
+
   // All servlets must be listed here (even if not in nav table).
   // Order of descrs determines order in nav table.
   static final ServletDescr servletDescrs[] = {
@@ -203,7 +214,9 @@ public class ContentServletManager
   };
 
   public ServletDescr[] getServletDescrs() {
-    if (CurrentConfig.getBooleanParam(PARAM_CONTENT_ONLY,
+    if (LockssDaemon.getLockssDaemon().isKeepsafe()) {
+      return servletDescrsKeepsafe;
+    } else if (CurrentConfig.getBooleanParam(PARAM_CONTENT_ONLY,
 				      DEFAULT_CONTENT_ONLY)) {
       return servletDescrsNoNav;
     } else {

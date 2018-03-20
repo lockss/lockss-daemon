@@ -46,9 +46,12 @@ import java.util.TreeMap;
 import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
 import org.lockss.db.PkNamePair;
+import org.lockss.exporter.biblio.BibliographicItem;
+import org.lockss.exporter.biblio.BibliographicItemImpl;
 import org.lockss.metadata.MetadataManager.PrioritizedAuId;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.AuUtil;
+import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.PluginManager;
 import org.lockss.util.KeyPair;
 import org.lockss.util.Logger;
@@ -1574,6 +1577,21 @@ public class MetadataManagerSql {
       + " where "
       + AU_SEQ_COLUMN + " = ?"
       + " and " + AU_KEY_COLUMN + " = ?";
+
+  // Query to fetch the date and ISSN of a CachedUrl
+  private static final String GET_CU_BIB_INFO_QUERY = "select distinct "
+      + "mi." + DATE_COLUMN
+      + ", i." + ISSN_COLUMN
+      + ", i." + ISSN_TYPE_COLUMN
+      + " from "
+      + URL_TABLE + " u"
+      + ", " + MD_ITEM_TABLE + " mi"
+      + ", " + ISSN_TABLE + " i"
+      + " where "
+      + "u." + URL_COLUMN + "= ?"
+      + " and u." + FEATURE_COLUMN + "='" + MetadataManager.ACCESS_URL_FEATURE + "'"
+      + " and u." + MD_ITEM_SEQ_COLUMN + "=" + "mi." + MD_ITEM_SEQ_COLUMN
+      + " and i." + MD_ITEM_SEQ_COLUMN + "=" + "mi." + PARENT_SEQ_COLUMN;
 
   private DbManager dbManager;
   private MetadataManager metadataManager;
@@ -7214,5 +7232,68 @@ public class MetadataManagerSql {
     if (log.isDebug2())
       log.debug2(DEBUG_HEADER + "result = " + (deletedCount > 0));
     return deletedCount > 0;
+  }
+
+  /**
+   * Finds the bibliographic information held about a CachedUrl.
+   *
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param cu
+   *          A CachedUrl to lookup.
+   * @return a BibliographicItem with appropriate infomation populated if the CachedUrl was found in the database,
+   *         <code>null</code> otherwise.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public BibliographicItem getCUBibliographicInfo(Connection conn, CachedUrl cu) throws DbException {
+    final String DEBUG_HEADER = "getCUBibliographicInfo(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "cu = " + cu);
+    String query = GET_CU_BIB_INFO_QUERY;
+    PreparedStatement stmt = null;
+    ResultSet resultSet = null;
+    try {
+      // return all related values for debugging purposes
+
+      stmt = dbManager.prepareStatement(conn, query);
+
+      ArrayList<String> args = new ArrayList<String>();
+      args.add(cu.getUrl());
+      for (int i = 0; i < args.size(); i++) {
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "arg " + i + " = " + args.get(i));
+        stmt.setString(i + 1, args.get(i));
+      }
+
+      resultSet = dbManager.executeQuery(stmt);
+
+      boolean foundResults = false;
+      BibliographicItemImpl item = new BibliographicItemImpl();
+      while ( resultSet.next() ) {
+        foundResults = true;
+        String year = resultSet.getString(1);
+        String issn = resultSet.getString(2);
+        String issnType = resultSet.getString(3);
+        item.setYear(year);
+        if(P_ISSN_TYPE.equals(issnType)){
+          item.setPrintIssn(issn);
+        }
+        else if(E_ISSN_TYPE.equals(issnType)){
+          item.setEissn(issn);
+        }
+        else if(L_ISSN_TYPE.equals(issnType)){
+          item.setIssnL(issn);
+        }
+      }
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + item);
+      return foundResults ? item : null;
+    } catch (SQLException sqle) {
+      String message = "Cannot get the BibliogaphicItem";
+      log.error(message, sqle);
+      log.error("SQL = '" + query + "'.");
+      throw new DbException(message, sqle);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(stmt);
+    }
   }
 }
