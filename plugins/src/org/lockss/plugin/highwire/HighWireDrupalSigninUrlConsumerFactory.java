@@ -32,6 +32,9 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.highwire;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
@@ -41,6 +44,19 @@ import org.lockss.util.Logger;
  */
 public class HighWireDrupalSigninUrlConsumerFactory extends HighWireDrupalUrlConsumerFactory {
   private static final Logger log = Logger.getLogger(HighWireDrupalSigninUrlConsumerFactory.class);
+  
+  //For a signin redirect - it could be multiple hops, eg 
+  //   http://www.bloodjournal.org/content/129/23/3111.full.pdf
+  //   https://signin.hematology.org/Login.aspx?vi
+  //   http://www.bloodjournal.org/content/129/23/3111.full.pdf?sso-checked=true
+  //   http://www.bloodjournal.org/content/bloodjournal/129/23/3111.full.pdf?sso-checked=true
+  // so allow for more than 2 hops and don't worry about the addition of a jid in the url pattern
+ protected static final String SIG_ORIG_STRING = "/content(/.+/[^/]+)$";
+ // Same as the original but with optional extra directory just after "content/"
+ protected static final String DEST_WITH_JID_STRING = "/content/[^/]+(/.+/[^/]+)(\\?sso-checked=true)$";
+ 
+ protected static final Pattern origPat = Pattern.compile(SIG_ORIG_STRING, Pattern.CASE_INSENSITIVE);
+ protected static final Pattern destPat = Pattern.compile(DEST_WITH_JID_STRING, Pattern.CASE_INSENSITIVE);
   
   @Override
   public UrlConsumer createUrlConsumer(CrawlerFacade facade, FetchedUrlData fud) {
@@ -78,10 +94,17 @@ public class HighWireDrupalSigninUrlConsumerFactory extends HighWireDrupalUrlCon
     public boolean shouldStoreAtOrigUrl() {
       boolean should = super.shouldStoreAtOrigUrl();
       if (!should && fud.redirectUrls != null && (fud.redirectUrls.size() > 1)) {
-        //special extra case while trying signin redirect
-        
-        should = (fud.origUrl.equals(fud.fetchUrl)
-               || fud.fetchUrl.endsWith("?sso-checked=true"));
+        //the fetched = original or fetched = original with ?sso-checked=true
+        if (fud.fetchUrl.equals(fud.origUrl) ||
+        		fud.fetchUrl.equals(fud.origUrl + "?sso-checked=true") ) {
+        	  should = true;
+        } else {
+        	// fetched = original + journal_id dir after content + ?sso-checked=true
+          Matcher destMat = destPat.matcher(fud.fetchUrl);
+          Matcher origMat = origPat.matcher(fud.origUrl);
+          should =  (destMat.find() && origMat.find()
+        		  && origMat.group(1) == destMat.group(1)); 
+        }
         log.debug3("SO redirect: " + fud.redirectUrls.size() + " " + fud.origUrl + " to " + fud.fetchUrl + " : " + should);
         if (!should) {
           log.debug3("myfud: " + fud.redirectUrls.size() + " " + fud.redirectUrls.toString());
