@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>9</string>
+    <string>10</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -67,6 +67,12 @@
       <string>"^%scontent/journals?/[^/]+/[^/]+\?crawler=true&amp;mimetype=application/pdf$", base_url</string>
     </list>
   </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <string>500=org.lockss.plugin.pub2web.Pub2WebHttpResponseHandler</string>
+    </list>
+  </entry>  
   <entry>
     <string>text/html_crawl_filter_factory</string> 
     <string>org.lockss.plugin.pub2web.iet.IetHtmlCrawlFilterFactory</string>
