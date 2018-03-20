@@ -11247,13 +11247,13 @@
       au < manifest ; exists ; 2006 ; European Journal of Ophthalmology Volume 16 ; 16 ; ejoa ; >
       au < manifest ; exists ; 2007 ; European Journal of Ophthalmology Volume 17 ; 17 ; ejoa ; >
       au < crawling ; exists ; 2008 ; European Journal of Ophthalmology Volume 18 ; 18 ; ejoa ; >
-      au < crawling ; exists ; 2009 ; European Journal of Ophthalmology Volume 19 ; 19 ; ejoa ; >
+      au < frozen ; exists ; 2009 ; European Journal of Ophthalmology Volume 19 ; 19 ; ejoa ; >
       au < frozen ; exists ; 2010 ; European Journal of Ophthalmology Volume 20 ; 20 ; ejoa ; >
       au < frozen ; exists ; 2011 ; European Journal of Ophthalmology Volume 21 ; 21 ; ejoa ; >
       au < crawling ; exists ; 2012 ; European Journal of Ophthalmology Volume 22 ; 22 ; ejoa ; >
       au < crawling ; exists ; 2013 ; European Journal of Ophthalmology Volume 23 ; 23 ; ejoa ; >
       au < frozen ; exists ; 2014 ; European Journal of Ophthalmology Volume 24 ; 24 ; ejoa ; >
-      au < crawling ; exists ; 2015 ; European Journal of Ophthalmology Volume 25 ; 25 ; ejoa ; >
+      au < frozen ; exists ; 2015 ; European Journal of Ophthalmology Volume 25 ; 25 ; ejoa ; >
       au < frozen ; exists ; 2016 ; European Journal of Ophthalmology Volume 26 ; 26 ; ejoa ; >
       au < manifest ; exists ; 2017 ; European Journal of Ophthalmology Volume 27 ; 27 ; ejoa ; >
   }
@@ -12926,7 +12926,7 @@
       au < frozen ; exists ; 2013 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 25 ; 25 ; gtna ; >
       au < frozen ; exists ; 2014 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 26 ; 26 ; gtna ; >
       au < frozen ; exists ; 2015 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 27 ; 27 ; gtna ; >
-      au < crawling ; exists ; 2016 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 28 ; 28 ; gtna ; >
+      au < frozen ; exists ; 2016 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 28 ; 28 ; gtna ; >
       au < manifest ; exists ; 2017 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 29 ; 29 ; gtna ; >
   }
 
@@ -13848,7 +13848,7 @@
       au < frozen ; exists ; 2010 ; HIP International Volume 20 ; 20 ; hpia ; >
       au < frozen ; exists ; 2011 ; HIP International Volume 21 ; 21 ; hpia ; >
       au < manifest ; exists ; 2012 ; HIP International Volume 22 ; 22 ; hpia ; >
-      au < crawling ; exists ; 2013 ; HIP International Volume 23 ; 23 ; hpia ; >
+      au < frozen ; exists ; 2013 ; HIP International Volume 23 ; 23 ; hpia ; >
       au < crawling ; exists ; 2014 ; HIP International Volume 24 ; 24 ; hpia ; >
       au < frozen ; exists ; 2015 ; HIP International Volume 25 ; 25 ; hpia ; >
       au < frozen ; exists ; 2016 ; HIP International Volume 26 ; 26 ; hpia ; >
@@ -14268,7 +14268,7 @@
       au < manifest ; exists ; 2006 ; Hong Kong Journal of Emergency Medicine Volume 13 ; 13 ; hkja ; >
       au < manifest ; exists ; 2007 ; Hong Kong Journal of Emergency Medicine Volume 14 ; 14 ; hkja ; >
       au < frozen ; exists ; 2008 ; Hong Kong Journal of Emergency Medicine Volume 15 ; 15 ; hkja ; >
-      au < crawling ; exists ; 2009 ; Hong Kong Journal of Emergency Medicine Volume 16 ; 16 ; hkja ; >
+      au < frozen ; exists ; 2009 ; Hong Kong Journal of Emergency Medicine Volume 16 ; 16 ; hkja ; >
       au < frozen ; exists ; 2010 ; Hong Kong Journal of Emergency Medicine Volume 17 ; 17 ; hkja ; >
       au < frozen ; exists ; 2011 ; Hong Kong Journal of Emergency Medicine Volume 18 ; 18 ; hkja ; >
       au < frozen ; exists ; 2012 ; Hong Kong Journal of Emergency Medicine Volume 19 ; 19 ; hkja ; >
@@ -18762,12 +18762,12 @@
       au < manifest ; exists ; 2007 ; Journal of Applied Biomaterials & Functional Materials Volume 5 ; 5 ; jbfb ; >
       au < frozen ; exists ; 2008 ; Journal of Applied Biomaterials & Functional Materials Volume 6 ; 6 ; jbfb ; >
       au < frozen ; exists ; 2009 ; Journal of Applied Biomaterials & Functional Materials Volume 7 ; 7 ; jbfb ; >
-      au < crawling ; exists ; 2010 ; Journal of Applied Biomaterials & Functional Materials Volume 8 ; 8 ; jbfb ; >
+      au < frozen ; exists ; 2010 ; Journal of Applied Biomaterials & Functional Materials Volume 8 ; 8 ; jbfb ; >
       au < doesNotExist ; doesNotExist ; 2011 ; Journal of Applied Biomaterials & Functional Materials Volume 9 ; 9 ; jbfa ; >
       au < doesNotExist ; doesNotExist ; 2012 ; Journal of Applied Biomaterials & Functional Materials Volume 10 ; 10 ; jbfa ; >
       au < doesNotExist ; doesNotExist ; 2013 ; Journal of Applied Biomaterials & Functional Materials Volume 11 ; 11 ; jbfa ; >
-      au < crawling ; exists ; 2014 ; Journal of Applied Biomaterials & Functional Materials Volume 12 ; 12 ; jbfa ; >
-      au < crawling ; exists ; 2015 ; Journal of Applied Biomaterials & Functional Materials Volume 13 ; 13 ; jbfa ; >
+      au < frozen ; exists ; 2014 ; Journal of Applied Biomaterials & Functional Materials Volume 12 ; 12 ; jbfa ; >
+      au < frozen ; exists ; 2015 ; Journal of Applied Biomaterials & Functional Materials Volume 13 ; 13 ; jbfa ; >
       au < frozen ; exists ; 2016 ; Journal of Applied Biomaterials & Functional Materials Volume 14 ; 14 ; jbfa ; >
       au < manifest ; exists ; 2017 ; Journal of Applied Biomaterials & Functional Materials Volume 15 ; 15 ; jbfa ; >
 
@@ -21560,7 +21560,7 @@
       au < frozen ; exists ; 2012 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 4 ; 4 ; pevb ; >
       au < frozen ; exists ; 2013 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 5 ; 5 ; peva ; >
       au < frozen ; exists ; 2014 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 6 ; 6 ; peva ; >
-      au < crawling ; exists ; 2015 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 7 ; 7 ; peva ; >
+      au < frozen ; exists ; 2015 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 7 ; 7 ; peva ; >
       au < frozen ; exists ; 2016 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 8 ; 8 ; peva ; >
       au < manifest ; exists ; 2017 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 9 ; 9 ; peva ; >
   }
@@ -24760,10 +24760,10 @@
       au < manifest ; exists ; 2006 ; Journal of Perioperative Practice Volume 16 ; 16 ; ppja ; >
       au < manifest ; exists ; 2007 ; Journal of Perioperative Practice Volume 17 ; 17 ; ppja ; >
       au < frozen ; exists ; 2008 ; Journal of Perioperative Practice Volume 18 ; 18 ; ppja ; >
-      au < crawling ; exists ; 2009 ; Journal of Perioperative Practice Volume 19 ; 19 ; ppja ; >
+      au < frozen ; exists ; 2009 ; Journal of Perioperative Practice Volume 19 ; 19 ; ppja ; >
       au < frozen ; exists ; 2010 ; Journal of Perioperative Practice Volume 20 ; 20 ; ppja ; >
       au < frozen ; exists ; 2011 ; Journal of Perioperative Practice Volume 21 ; 21 ; ppja ; >
-      au < crawling ; exists ; 2012 ; Journal of Perioperative Practice Volume 22 ; 22 ; ppja ; >
+      au < frozen ; exists ; 2012 ; Journal of Perioperative Practice Volume 22 ; 22 ; ppja ; >
       au < frozen ; exists ; 2013 ; Journal of Perioperative Practice Volume 23 ; 23 ; ppja ; >
       au < frozen ; exists ; 2014 ; Journal of Perioperative Practice Volume 24 ; 24 ; ppja ; >
       au < frozen ; exists ; 2015 ; Journal of Perioperative Practice Volume 25 ; 25 ; ppja ; >
