@@ -15812,6 +15812,53 @@
   }
 
   {
+    title <
+      name = The International Journal of Artificial Organs ;
+      issn = 0391-3988 ;
+      eissn = 1724-6040
+    >
+      #param[journal_id] = jao
+
+      au < exists ; exists ; 1982 ; The International Journal of Artificial Organs Volume 5 ; 5 ; jaoa ; >
+      au < exists ; exists ; 1983 ; The International Journal of Artificial Organs Volume 6 ; 6 ; jaoa ; >
+      au < exists ; exists ; 1984 ; The International Journal of Artificial Organs Volume 7 ; 7 ; jaoa ; >
+      au < exists ; exists ; 1985 ; The International Journal of Artificial Organs Volume 8 ; 8 ; jaoa ; >
+      au < exists ; exists ; 1986 ; The International Journal of Artificial Organs Volume 9 ; 9 ; jaoa ; >
+      au < exists ; exists ; 1987 ; The International Journal of Artificial Organs Volume 10 ; 10 ; jaoa ; >
+      au < doesNotExist ; doesNotExist ; 1988 ; The International Journal of Artificial Organs Volume 11 ; 11 ; jaoa ; >
+      au < doesNotExist ; doesNotExist ; 1989 ; The International Journal of Artificial Organs Volume 12 ; 12 ; jaoa ; >
+      au < doesNotExist ; doesNotExist ; 1990 ; The International Journal of Artificial Organs Volume 13 ; 13 ; jaoa ; >
+      au < exists ; exists ; 1991 ; The International Journal of Artificial Organs Volume 14 ; 14 ; jaoa ; >
+      au < exists ; exists ; 1992 ; The International Journal of Artificial Organs Volume 15 ; 15 ; jaoa ; >
+      au < exists ; exists ; 1993 ; The International Journal of Artificial Organs Volume 16 ; 16 ; jaoa ; >
+      au < exists ; exists ; 1994 ; The International Journal of Artificial Organs Volume 17 ; 17 ; jaoa ; >
+      au < exists ; exists ; 1995 ; The International Journal of Artificial Organs Volume 18 ; 18 ; jaoa ; >
+      au < exists ; exists ; 1996 ; The International Journal of Artificial Organs Volume 19 ; 19 ; jaoa ; >
+      au < exists ; exists ; 1997 ; The International Journal of Artificial Organs Volume 20 ; 20 ; jaoa ; >
+      au < exists ; exists ; 1998 ; The International Journal of Artificial Organs Volume 21 ; 21 ; jaoa ; >
+      au < exists ; exists ; 1999 ; The International Journal of Artificial Organs Volume 22 ; 22 ; jaoa ; >
+      au < exists ; exists ; 2000 ; The International Journal of Artificial Organs Volume 23 ; 23 ; jaoa ; >
+      au < exists ; exists ; 2001 ; The International Journal of Artificial Organs Volume 24 ; 24 ; jaoa ; >
+      au < exists ; exists ; 2002 ; The International Journal of Artificial Organs Volume 25 ; 25 ; jaoa ; >
+      au < exists ; exists ; 2003 ; The International Journal of Artificial Organs Volume 26 ; 26 ; jaoa ; >
+      au < exists ; exists ; 2004 ; The International Journal of Artificial Organs Volume 27 ; 27 ; jaoa ; >
+      au < exists ; exists ; 2005 ; The International Journal of Artificial Organs Volume 28 ; 28 ; jaoa ; >
+      au < exists ; exists ; 2006 ; The International Journal of Artificial Organs Volume 29 ; 29 ; jaoa ; >
+      au < exists ; exists ; 2007 ; The International Journal of Artificial Organs Volume 30 ; 30 ; jaoa ; >
+      au < exists ; exists ; 2008 ; The International Journal of Artificial Organs Volume 31 ; 31 ; jaoa ; >
+      au < exists ; exists ; 2009 ; The International Journal of Artificial Organs Volume 32 ; 32 ; jaoa ; >
+      au < exists ; exists ; 2010 ; The International Journal of Artificial Organs Volume 33 ; 33 ; jaoa ; >
+      au < exists ; exists ; 2011 ; The International Journal of Artificial Organs Volume 34 ; 34 ; jaoa ; >
+      au < exists ; exists ; 2012 ; The International Journal of Artificial Organs Volume 35 ; 35 ; jaoa ; >
+      au < exists ; exists ; 2013 ; The International Journal of Artificial Organs Volume 36 ; 36 ; jaoa ; >
+      au < exists ; exists ; 2014 ; The International Journal of Artificial Organs Volume 37 ; 37 ; jaoa ; >
+      au < exists ; exists ; 2015 ; The International Journal of Artificial Organs Volume 38 ; 38 ; jaoa ; >
+      au < exists ; exists ; 2016 ; The International Journal of Artificial Organs Volume 39 ; 39 ; jaoa ; >
+      au < exists ; exists ; 2017 ; The International Journal of Artificial Organs Volume 40 ; 40 ; jaoa ; >
+      au < exists ; exists ; 2018 ; The International Journal of Artificial Organs Volume 41 ; 41 ; jaoa ; >
+  }
+
+  {
 
     title <
       name = International Journal of Behavioral Development ;
@@ -15821,9 +15868,7 @@
 
     #param[base_url] = http://jbd.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1978 ; International Journal of Behavioral Development Volume 1 ; 1 ; jbda ; >
       au < manifest ; exists ; 1979 ; International Journal of Behavioral Development Volume 2 ; 2 ; jbda ; >
@@ -15881,9 +15926,7 @@
 
     #param[base_url] = http://ijb.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1997 ; International Journal of Bilingualism Volume 1 ; 1 ; ijba ; >
       au < manifest ; exists ; 1998 ; International Journal of Bilingualism Volume 2 ; 2 ; ijba ; >
@@ -15908,6 +15951,46 @@
       au < deepCrawl ; exists ; 2017 ; International Journal of Bilingualism Volume 21 ; 21 ; ijba ; >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = The International Journal of Biological Markers ;
+      eissn = 1724-6008
+    >
+
+      #param[journal_id] = jbm
+
+      au < exists ; exists ; 1991 ; The International Journal of Biological Markers Volume 6 ; 6 ; jbmb ; >
+      au < exists ; exists ; 1992 ; The International Journal of Biological Markers Volume 7 ; 7 ; jbmb ; >
+      au < exists ; exists ; 1993 ; The International Journal of Biological Markers Volume 8 ; 8 ; jbmb ; >
+      au < doesNotExist ; doesNotExist ; 1994 ; The International Journal of Biological Markers Volume 9 ; 9 ; jbmb ; >
+      au < exists ; exists ; 1995 ; The International Journal of Biological Markers Volume 10 ; 10 ; jbmb ; >
+      au < doesNotExist ; doesNotExist ; 1996 ; The International Journal of Biological Markers Volume 11 ; 11 ; jbmb ; >
+      au < doesNotExist ; doesNotExist ; 1997 ; The International Journal of Biological Markers Volume 12 ; 12 ; jbmb ; >
+      au < exists ; exists ; 1998 ; The International Journal of Biological Markers Volume 13 ; 13 ; jbmb ; >
+      au < exists ; exists ; 1999 ; The International Journal of Biological Markers Volume 14 ; 14 ; jbmb ; >
+      au < exists ; exists ; 2000 ; The International Journal of Biological Markers Volume 15 ; 15 ; jbmb ; >
+      au < exists ; exists ; 2001 ; The International Journal of Biological Markers Volume 16 ; 16 ; jbmb ; >
+      au < exists ; exists ; 2002 ; The International Journal of Biological Markers Volume 17 ; 17 ; jbmb ; >
+      au < exists ; exists ; 2003 ; The International Journal of Biological Markers Volume 18 ; 18 ; jbmb ; >
+      au < exists ; exists ; 2004 ; The International Journal of Biological Markers Volume 19 ; 19 ; jbmb ; >
+      au < exists ; exists ; 2005 ; The International Journal of Biological Markers Volume 20 ; 20 ; jbmb ; >
+      au < exists ; exists ; 2006 ; The International Journal of Biological Markers Volume 21 ; 21 ; jbmb ; >
+      au < exists ; exists ; 2007 ; The International Journal of Biological Markers Volume 22 ; 22 ; jbmb ; >
+      au < exists ; exists ; 2008 ; The International Journal of Biological Markers Volume 23 ; 23 ; jbmb ; >
+      au < exists ; exists ; 2009 ; The International Journal of Biological Markers Volume 24 ; 24 ; jbmb ; >
+      au < exists ; exists ; 2010 ; The International Journal of Biological Markers Volume 25 ; 25 ; jbmb ; >
+      au < exists ; exists ; 2011 ; The International Journal of Biological Markers Volume 26 ; 26 ; jbmb ; >
+      au < exists ; exists ; 2012 ; The International Journal of Biological Markers Volume 27 ; 27 ; jbmb ; >
+      au < exists ; exists ; 2013 ; The International Journal of Biological Markers Volume 28 ; 28 ; jbmb ; >
+      au < exists ; exists ; 2014 ; The International Journal of Biological Markers Volume 29 ; 29 ; jbmb ; >
+      au < exists ; exists ; 2015 ; The International Journal of Biological Markers Volume 30 ; 30 ; jbmb ; >
+      au < exists ; exists ; 2016 ; The International Journal of Biological Markers Volume 31 ; 31 ; jbmb ; >
+      au < exists ; exists ; 2017 ; The International Journal of Biological Markers Volume 32 ; 32 ; jbmb ; >
+      au < exists ; exists ; 2018 ; The International Journal of Biological Markers Volume 33 ; 33 ; jbmb ; >
 
   }
 
@@ -27259,6 +27342,38 @@
       au < deepCrawl ; exists ; 2017 ; Journal of Vibration and Control Volume 23 ; 23 ; jvcb ; >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = The Journal of Vascular Access ;
+      issn = 1129-7298 ;
+      eissn = 1724-6032
+    >
+
+    #param[journal_id] = jva
+
+      au < exists ; exists ; 2000 ; The Journal of Vascular Access Volume 1 ; 1 ; jvaa ; >
+      au < exists ; exists ; 2001 ; The Journal of Vascular Access Volume 2 ; 2 ; jvaa ; >
+      au < exists ; exists ; 2002 ; The Journal of Vascular Access Volume 3 ; 3 ; jvaa ; >
+      au < exists ; exists ; 2003 ; The Journal of Vascular Access Volume 4 ; 4 ; jvaa ; >
+      au < exists ; exists ; 2004 ; The Journal of Vascular Access Volume 5 ; 5 ; jvaa ; >
+      au < exists ; exists ; 2005 ; The Journal of Vascular Access Volume 6 ; 6 ; jvaa ; >
+      au < exists ; exists ; 2006 ; The Journal of Vascular Access Volume 7 ; 7 ; jvaa ; >
+      au < exists ; exists ; 2007 ; The Journal of Vascular Access Volume 8 ; 8 ; jvaa ; >
+      au < exists ; exists ; 2008 ; The Journal of Vascular Access Volume 9 ; 9 ; jvaa ; >
+      au < exists ; exists ; 2009 ; The Journal of Vascular Access Volume 10 ; 10 ; jvaa ; >
+      au < exists ; exists ; 2010 ; The Journal of Vascular Access Volume 11 ; 11 ; jvaa ; >
+      au < exists ; exists ; 2011 ; The Journal of Vascular Access Volume 12 ; 12 ; jvaa ; >
+      au < exists ; exists ; 2012 ; The Journal of Vascular Access Volume 13 ; 13 ; jvaa ; >
+      au < exists ; exists ; 2013 ; The Journal of Vascular Access Volume 14 ; 14 ; jvaa ; >
+      au < exists ; exists ; 2014 ; The Journal of Vascular Access Volume 15 ; 15 ; jvaa ; >
+      au < exists ; exists ; 2015 ; The Journal of Vascular Access Volume 16 ; 16 ; jvaa ; >
+      au < exists ; exists ; 2016 ; The Journal of Vascular Access Volume 17 ; 17 ; jvaa ; >
+      au < exists ; exists ; 2017 ; The Journal of Vascular Access Volume 18 ; 18 ; jvaa ; >
+      au < exists ; exists ; 2018 ; The Journal of Vascular Access Volume 19 ; 19 ; jvaa ; >
 
   }
 
@@ -39165,9 +39280,7 @@
 
     #param[base_url] = http://tcr.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1997 ; Theoretical Criminology Volume 1 ; 1 ; tcra ; >
       au < manifest ; exists ; 1998 ; Theoretical Criminology Volume 2 ; 2 ; tcra ; >
@@ -39205,9 +39318,7 @@
 
     #param[base_url] = http://tap.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1991 ; Theory & Psychology Volume 1 ; 1 ; tapa ; >
       au < manifest ; exists ; 1992 ; Theory & Psychology Volume 2 ; 2 ; tapa ; >
@@ -39251,9 +39362,7 @@
 
     #param[base_url] = http://tre.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 2003 ; Theory and Research in Education Volume 1 ; 1 ; trea ; >
       au < manifest ; exists ; 2004 ; Theory and Research in Education Volume 2 ; 2 ; trea ; >
@@ -39285,9 +39394,7 @@
 
     #param[base_url] = http://tcs.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1982 ; Theory, Culture & Society Volume 1 ; 1 ; tcsa ; >
       au < manifest ; exists ; 1983 ; Theory, Culture & Society Volume 2 ; 2 ; tcsa ; >
@@ -39338,9 +39445,7 @@
 
     #param[base_url] = http://tak.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 2007 ; Therapeutic Advances in Cardiovascular Disease Volume 1 ; 1 ; taka ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Therapeutic Advances in Cardiovascular Disease Volume 2 ; 2 ; taka ; >
@@ -39370,7 +39475,6 @@
 
     {
 
-
       au < doNotProcess ; doNotProcess ; 2010 ; Therapeutic Advances in Chronic Disease Volume 1 ; 1 ; taja ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Therapeutic Advances in Chronic Disease Volume 2 ; 2 ; taja ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Therapeutic Advances in Chronic Disease Volume 3 ; 3 ; taja ; >
@@ -39395,7 +39499,6 @@
     #param[base_url] = http://taw.sagepub.com/
 
     {
-
 
       au < doNotProcess ; doNotProcess ; 2010 ; Therapeutic Advances in Drug Safety Volume 1 ; 1 ; tawa ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Therapeutic Advances in Drug Safety Volume 2 ; 2 ; tawa ; >
@@ -39422,7 +39525,6 @@
 
     {
 
-
       au < doNotProcess ; doNotProcess ; 2010 ; Therapeutic Advances in Endocrinology and Metabolism Volume 1 ; 1 ; taea ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Therapeutic Advances in Endocrinology and Metabolism Volume 2 ; 2 ; taea ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Therapeutic Advances in Endocrinology and Metabolism Volume 3 ; 3 ; taea ; >
@@ -39446,9 +39548,7 @@
 
     #param[base_url] = http://tag.sagepub.com/
 
-    
     {
-
 
       au < doNotProcess ; doNotProcess ; 2008 ; Therapeutic Advances in Gastroenterology Volume 1 ; 1 ; taga ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Therapeutic Advances in Gastroenterology Volume 2 ; 2 ; taga ; >
@@ -39477,7 +39577,6 @@
 
     {
 
-
       au < doNotProcess ; doNotProcess ; 2010 ; Therapeutic Advances in Hematology Volume 1 ; 1 ; taha ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Therapeutic Advances in Hematology Volume 2 ; 2 ; taha ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Therapeutic Advances in Hematology Volume 3 ; 3 ; taha ; >
@@ -39501,9 +39600,7 @@
 
     #param[base_url] = http://tam.sagepub.com/
 
-    
     {
-
 
       au < doNotProcess ; doNotProcess ; 2009 ; Therapeutic Advances in Medical Oncology Volume 1 ; 1 ; tama ; >
       au < doNotProcess ; doNotProcess ; 2010 ; Therapeutic Advances in Medical Oncology Volume 2 ; 2 ; tama ; >
@@ -39531,7 +39628,6 @@
 
     {
 
-
       au < doNotProcess ; doNotProcess ; 2009 ; Therapeutic Advances in Musculoskeletal Disease Volume 1 ; 1 ; taba ; >
       au < doNotProcess ; doNotProcess ; 2010 ; Therapeutic Advances in Musculoskeletal Disease Volume 2 ; 2 ; taba ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Therapeutic Advances in Musculoskeletal Disease Volume 3 ; 3 ; taba ; >
@@ -39556,9 +39652,7 @@
 
     #param[base_url] = http://tan.sagepub.com/
 
-    
     {
-
 
       au < doNotProcess ; doNotProcess ; 2008 ; Therapeutic Advances in Neurological Disorders Volume 1 ; 1 ; tana ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Therapeutic Advances in Neurological Disorders Volume 2 ; 2 ; tana ; >
@@ -39587,7 +39681,6 @@
 
     {
 
-
       au < doNotProcess ; doNotProcess ; 2011 ; Therapeutic Advances in Psychopharmacology Volume 1 ; 1 ; tppa ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Therapeutic Advances in Psychopharmacology Volume 2 ; 2 ; tppa ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Therapeutic Advances in Psychopharmacology Volume 3 ; 3 ; tppa ; >
@@ -39610,9 +39703,7 @@
 
     #param[base_url] = http://tar.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 2007 ; Therapeutic Advances in Respiratory Disease Volume 1 ; 1 ; tara ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Therapeutic Advances in Respiratory Disease Volume 2 ; 2 ; tara ; >
@@ -39640,9 +39731,7 @@
 
     #param[base_url] = http://tau.sagepub.com/
 
-    
     {
-
 
       au < doNotProcess ; doNotProcess ; 2009 ; Therapeutic Advances in Urology Volume 1 ; 1 ; taua ; >
       au < doNotProcess ; doNotProcess ; 2010 ; Therapeutic Advances in Urology Volume 2 ; 2 ; taua ; >
@@ -39690,9 +39779,7 @@
 
     #param[base_url] = http://the.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1980 ; Thesis Eleven Volume 1 ; 1 ; thea ; >
       au < manifest ; exists ; 1981 ; Thesis Eleven Volume 2 ; 2 ; thea ; >
@@ -39849,9 +39936,7 @@
 
     #param[base_url] = http://tas.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1992 ; Time & Society Volume 1 ; 1 ; tasa ; >
       au < manifest ; exists ; 1993 ; Time & Society Volume 2 ; 2 ; tasa ; >
@@ -39894,9 +39979,7 @@
 
     #param[base_url] = http://tec.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1981 ; Topics in Early Childhood Special Education Volume 1 ; 1 ; teca ; >
       au < manifest ; exists ; 1982 ; Topics in Early Childhood Special Education Volume 2 ; 2 ; teca ; >
@@ -39976,9 +40059,7 @@
 
     #param[base_url] = http://tou.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 2001 ; Tourist Studies Volume 1 ; 1 ; toua ; >
       au < manifest ; exists ; 2002 ; Tourist Studies Volume 2 ; 2 ; toua ; >
@@ -40012,9 +40093,7 @@
 
     #param[base_url] = http://tpx.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1972 ; Toxicologic Pathology Volume 1 ; 1 ; tpxa ; >
       au < manifest ; exists ; 1974 ; Toxicologic Pathology Volume 2 ; 2 ; tpxa ; >
@@ -40076,9 +40155,7 @@
 
     #param[base_url] = http://tih.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1985 ; Toxicology and Industrial Health Volume 1 ; 1 ; tiha ; >
       au < manifest ; exists ; 1986 ; Toxicology and Industrial Health Volume 2 ; 2 ; tiha ; >
@@ -40128,9 +40205,7 @@
 
     #param[base_url] = http://tim.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1979 ; Transactions of the Institute of Measurement and Control Volume 1 ; 1 ; tima ; >
       au < manifest ; exists ; 1980 ; Transactions of the Institute of Measurement and Control Volume 2 ; 2 ; tima ; >
@@ -40186,9 +40261,7 @@
 
     #param[base_url] = http://tps.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1964 ; Transcultural Psychiatry Volume 1 ; 1 ; tpsc ; >
       au < manifest ; exists ; 1965 ; Transcultural Psychiatry Volume 2 ; 2 ; tpsc ; >
@@ -40261,7 +40334,6 @@
 
     {
 
-
       au < manifest ; exists ; 1995 ; Transfer: European Review of Labour and Research Volume 1 ; 1 ; trsa ; >
       au < manifest ; exists ; 1996 ; Transfer: European Review of Labour and Research Volume 2 ; 2 ; trsa ; >
       au < manifest ; exists ; 1997 ; Transfer: European Review of Labour and Research Volume 3 ; 3 ; trsa ; >
@@ -40299,9 +40371,7 @@
 
     #param[base_url] = http://trn.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1984 ; Transformation: An International Journal of Holistic Mission Studies Volume 1 ; 1 ; trna ; >
       au < manifest ; exists ; 1985 ; Transformation: An International Journal of Holistic Mission Studies Volume 2 ; 2 ; trna ; >
@@ -40366,9 +40436,7 @@
 
     #param[base_url] = http://tra.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1999 ; Trauma Volume 1 ; 1 ; traa ; >
       au < manifest ; exists ; 2000 ; Trauma Volume 2 ; 2 ; traa ; >
@@ -40404,9 +40472,7 @@
 
     #param[base_url] = http://tva.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 2000 ; Trauma, Violence, & Abuse Volume 1 ; 1 ; tvaa ; >
       au < manifest ; exists ; 2001 ; Trauma, Violence, & Abuse Volume 2 ; 2 ; tvaa ; >
@@ -40441,9 +40507,7 @@
 
     #param[base_url] = http://tmt.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1995 ; Traumatology Volume 1 ; 1 ; tmta ; >
       au < manifest ; exists ; 1996 ; Traumatology Volume 2 ; 2 ; tmta ; >
@@ -40479,7 +40543,6 @@
 
     #param[base_url] = http://tia.sagepub.com/
 
-    
     {
 
       comment[tia15] = Vol-15 not online as of Oct 2011
@@ -40549,6 +40612,31 @@
   {
 
     title <
+      name = Tumori Journal ;
+      issn = 0300-8916 ;
+      eissn = 2038-2529
+    >
+
+      #journal_id = tmj
+
+      au < exists ; exists ; 2007 ; Tumori Journal Volume 93 ; 93 ; tmja ; >
+      au < exists ; exists ; 2008 ; Tumori Journal Volume 94 ; 94 ; tmja ; >
+      au < exists ; exists ; 2009 ; Tumori Journal Volume 95 ; 95 ; tmja ; >
+      au < exists ; exists ; 2010 ; Tumori Journal Volume 96 ; 96 ; tmja ; >
+      au < exists ; exists ; 2011 ; Tumori Journal Volume 97 ; 97 ; tmja ; >
+      au < exists ; exists ; 2012 ; Tumori Journal Volume 98 ; 98 ; tmja ; >
+      au < exists ; exists ; 2013 ; Tumori Journal Volume 99 ; 99 ; tmja ; >
+      au < exists ; exists ; 2014 ; Tumori Journal Volume 100 ; 100 ; tmja ; >
+      au < exists ; exists ; 2015 ; Tumori Journal Volume 101 ; 101 ; tmja ; >
+      au < exists ; exists ; 2016 ; Tumori Journal Volume 102 ; 102 ; tmja ; >
+      au < exists ; exists ; 2017 ; Tumori Journal Volume 103 ; 103 ; tmja ; >
+      au < exists ; exists ; 2018 ; Tumori Journal Volume 104 ; 104 ; tmja ; >
+
+  }
+
+  {
+
+    title <
       name = Update: Applications of Research in Music Education ;
       issn = 8755-1233 ;
       eissn = 1945-0109
@@ -40556,7 +40644,6 @@
 
     #param[base_url] = http://upd.sagepub.com/
 
-    
     {
 
       au < manifest ; exists ; 1984-1985 ; Update: Applications of Research in Music Education Volume 3 ; 3 ; upda ; >
@@ -40608,9 +40695,7 @@
 
     #param[base_url] = http://uar.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1965 ; Urban Affairs Review Volume 1 ; 1 ; uara ; >
       au < manifest ; exists ; 1966 ; Urban Affairs Review Volume 2 ; 2 ; uara ; >
@@ -40680,9 +40765,7 @@
 
     #param[base_url] = http://uex.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1965 ; Urban Education Volume 1 ; 1 ; uexa ; >
       au < manifest ; exists ; 1966 ; Urban Education Volume 2 ; 2 ; uexa ; >
@@ -40751,9 +40834,7 @@
 
     #param[base_url] = http://usj.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1964 ; Urban Studies Volume 1 ; 1 ; usja ; >
       au < manifest ; exists ; 1965 ; Urban Studies Volume 2 ; 2 ; usja ; >
@@ -40812,7 +40893,35 @@
 
     }
 
-    }
+  }
+
+  {
+
+    title <
+      name = Urologia Journal ;
+      issn = 0391-5603 ;
+      eissn = 1724-6075
+    >
+
+    #param[journal_id] = urj
+
+      au < exists ; exists ; 2003 ; Urologia Journal Volume 70 ; 70 ; urja ; >
+      au < exists ; exists ; 2004 ; Urologia Journal Volume 71 ; 71 ; urja ; >
+      au < exists ; exists ; 2005 ; Urologia Journal Volume 72 ; 72 ; urja ; >
+      au < exists ; exists ; 2006 ; Urologia Journal Volume 73 ; 73 ; urja ; >
+      au < exists ; exists ; 2007 ; Urologia Journal Volume 74 ; 74 ; urja ; >
+      au < exists ; exists ; 2008 ; Urologia Journal Volume 75 ; 75 ; urja ; >
+      au < exists ; exists ; 2009 ; Urologia Journal Volume 76 ; 76 ; urja ; >
+      au < exists ; exists ; 2010 ; Urologia Journal Volume 77 ; 77 ; urja ; >
+      au < exists ; exists ; 2011 ; Urologia Journal Volume 78 ; 78 ; urja ; >
+      au < exists ; exists ; 2012 ; Urologia Journal Volume 79 ; 79 ; urja ; >
+      au < exists ; exists ; 2013 ; Urologia Journal Volume 80 ; 80 ; urja ; >
+      au < exists ; exists ; 2014 ; Urologia Journal Volume 81 ; 81 ; urja ; >
+      au < exists ; exists ; 2015 ; Urologia Journal Volume 82 ; 82 ; urja ; >
+      au < exists ; exists ; 2016 ; Urologia Journal Volume 83 ; 83 ; urja ; >
+      au < exists ; exists ; 2017 ; Urologia Journal Volume 84 ; 84 ; urja ; >
+
+  }
 
   {
 
@@ -40824,9 +40933,7 @@
 
     #param[base_url] = http://ves.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1967 ; Vascular and Endovascular Surgery Volume 1 ; 1 ; vesa ; >
       au < manifest ; exists ; 1968 ; Vascular and Endovascular Surgery Volume 2 ; 2 ; vesa ; >
