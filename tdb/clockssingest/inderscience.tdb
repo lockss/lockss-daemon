@@ -823,7 +823,7 @@
 
       au < finished ; finished ; 2013-2015 ; International Journal of Automation and Logistics Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; >
       au < finished ; crawling ; 2016 ; International Journal of Automation and Logistics Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2017 ; International Journal of Automation and Logistics Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; >
+      au < deepCrawl ; exists ; 2017 ; International Journal of Automation and Logistics Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; >
 
     }
 
@@ -992,7 +992,7 @@
       au < finished ; finished ; 2014 ; International Journal of Big Data Intelligence Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2015 ; International Journal of Big Data Intelligence Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; International Journal of Big Data Intelligence Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2017 ; International Journal of Big Data Intelligence Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; >
+      au < deepCrawl ; exists ; 2017 ; International Journal of Big Data Intelligence Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; >
 
     }
 
@@ -1345,7 +1345,7 @@
       au < finished ; finished ; 2014 ; International Journal of Business Environment Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2015 ; International Journal of Business Environment Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; International Journal of Business Environment Volume 8 ; 8 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2017 ; International Journal of Business Environment Volume 9 ; 9 ; http://www.inderscienceonline.com/ ; >
+      au < deepCrawl ; exists ; 2017 ; International Journal of Business Environment Volume 9 ; 9 ; http://www.inderscienceonline.com/ ; >
 
     }
 
@@ -1736,7 +1736,7 @@
       au < finished ; crawling ; 2016 ; International Journal of Communication Networks and Distributed Systems Volume 16 ; 16 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; International Journal of Communication Networks and Distributed Systems Volume 17 ; 17 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2017 ; International Journal of Communication Networks and Distributed Systems Volume 18 ; 18 ; http://www.inderscienceonline.com/ ; >
-      au < crawling ; exists ; 2017 ; International Journal of Communication Networks and Distributed Systems Volume 19 ; 19 ; http://www.inderscienceonline.com/ ; >
+      au < deepCrawl ; exists ; 2017 ; International Journal of Communication Networks and Distributed Systems Volume 19 ; 19 ; http://www.inderscienceonline.com/ ; >
 
     }
 
@@ -1828,7 +1828,7 @@
       au < finished ; finished ; 2014 ; International Journal of Computational Economics and Econometrics Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2015 ; International Journal of Computational Economics and Econometrics Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; International Journal of Computational Economics and Econometrics Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; International Journal of Computational Economics and Econometrics Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; >
+      au < deepCrawl ; exists ; 2017 ; International Journal of Computational Economics and Econometrics Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; >
 
     }
 
@@ -2271,7 +2271,7 @@
       au < finished ; finished ; 2014 ; International Journal of Critical Infrascructures Volume 10 ; 10 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; International Journal of Critical Infrascructures Volume 11 ; 11 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; International Journal of Critical Infrascructures Volume 12 ; 12 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; International Journal of Critical Infrascructures Volume 13 ; 13 ; http://www.inderscienceonline.com/ ; >
+      au < deepCrawl ; exists ; 2017 ; International Journal of Critical Infrascructures Volume 13 ; 13 ; http://www.inderscienceonline.com/ ; >
 
     }
 
@@ -8821,7 +8821,7 @@
       au < finished ; finished ; 2014 ; International Journal of Vehicle Noise and Vibration Volume 10 ; 10 ; http://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2015 ; International Journal of Vehicle Noise and Vibration Volume 11 ; 11 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2016 ; International Journal of Vehicle Noise and Vibration Volume 12 ; 12 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2017 ; International Journal of Vehicle Noise and Vibration Volume 13 ; 13 ; http://www.inderscienceonline.com/ ; >
+      au < deepCrawl ; exists ; 2017 ; International Journal of Vehicle Noise and Vibration Volume 13 ; 13 ; http://www.inderscienceonline.com/ ; >
 
     }
 

@@ -3683,7 +3683,7 @@
       #param[base_url] = http://dli.sagepub.com/
 
       au < finished ; manifest ; 2016 ; Autism & Developmental Language Impairments Volume 1 ; 1 ; dlia ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; Autism & Developmental Language Impairments Volume 2 ; 2 ; dlia ; >
+      au < deepCrawl ; exists ; 2017 ; Autism & Developmental Language Impairments Volume 2 ; 2 ; dlia ; >
 
   }
 
@@ -6377,7 +6377,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Clinical Nursing Research Volume 23 ; 23 ; cnra ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Clinical Nursing Research Volume 24 ; 24 ; cnra ; >
       au < frozen ; exists ; 2016 ; Clinical Nursing Research Volume 25 ; 25 ; cnra ; >
-      au < crawling ; exists ; 2017 ; Clinical Nursing Research Volume 26 ; 26 ; cnra ; >
+      au < deepCrawl ; exists ; 2017 ; Clinical Nursing Research Volume 26 ; 26 ; cnra ; >
 
     }
 
@@ -9132,7 +9132,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Discourse Studies Volume 16 ; 16 ; disa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Discourse Studies Volume 17 ; 17 ; disa ; >
       au < frozen ; exists ; 2016 ; Discourse Studies Volume 18 ; 18 ; disa ; >
-      au < crawling ; exists ; 2017 ; Discourse Studies Volume 19 ; 19 ; disa ; >
+      au < deepCrawl ; exists ; 2017 ; Discourse Studies Volume 19 ; 19 ; disa ; >
 
     }
 
@@ -10031,7 +10031,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Educational Management Administration & Leadership Volume 42 ; 42 ; emad ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Educational Management Administration & Leadership Volume 43 ; 43 ; emad ; >
       au < frozen ; exists ; 2016 ; Educational Management Administration & Leadership Volume 44 ; 44 ; emad ; >
-      au < crawling ; exists ; 2017 ; Educational Management Administration & Leadership Volume 45 ; 45 ; emad ; >
+      au < deepCrawl ; exists ; 2017 ; Educational Management Administration & Leadership Volume 45 ; 45 ; emad ; >
 
     }
 
@@ -18140,7 +18140,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Irish Journal of Sociology Volume 22 ; 22 ; irja ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Irish Journal of Sociology Volume 23 ; 23 ; irja ; >
       au < frozen ; exists ; 2016 ; Irish Journal of Sociology Volume 24 ; 24 ; irja ; >
-      au < crawling ; exists ; 2017 ; Irish Journal of Sociology Volume 25 ; 25 ; irja ; >
+      au < deepCrawl ; exists ; 2017 ; Irish Journal of Sociology Volume 25 ; 25 ; irja ; >
 
   }
 
@@ -21957,7 +21957,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Family History Volume 39 ; 39 ; jfha ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Family History Volume 40 ; 40 ; jfha ; >
       au < frozen ; exists ; 2016 ; Journal of Family History Volume 41 ; 41 ; jfha ; >
-      au < crawling ; exists ; 2017 ; Journal of Family History Volume 42 ; 42 ; jfha ; >
+      au < deepCrawl ; exists ; 2017 ; Journal of Family History Volume 42 ; 42 ; jfha ; >
 
     }
 
@@ -22242,7 +22242,7 @@
       au < frozen ; exists ; 2013-2014 ; Journal of General Management Volume 39 ; 39 ; gema ; >
       au < frozen ; exists ; 2014-2015 ; Journal of General Management Volume 40 ; 40 ; gema ; >
       au < frozen ; exists ; 2015-2016 ; Journal of General Management Volume 41 ; 41 ; gema ; >
-      au < crawling ; exists ; 2016-2017 ; Journal of General Management Volume 42 ; 42 ; gema ; >
+      au < deepCrawl ; exists ; 2016-2017 ; Journal of General Management Volume 42 ; 42 ; gema ; >
       au < manifest ; exists ; 2017-2018 ; Journal of General Management Volume 43 ; 43 ; gema ; >
 
   }
@@ -23397,7 +23397,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Interdisciplinary Economics Volume 26 ; 26 ; jiea ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Interdisciplinary Economics Volume 27 ; 27 ; jiea ; >
       au < frozen ; exists ; 2016 ; Journal of Interdisciplinary Economics Volume 28 ; 28 ; jiea ; >
-      au < crawling ; exists ; 2017 ; Journal of Interdisciplinary Economics Volume 29 ; 29 ; jiea ; >
+      au < deepCrawl ; exists ; 2017 ; Journal of Interdisciplinary Economics Volume 29 ; 29 ; jiea ; >
 
     }
 
@@ -24814,7 +24814,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Pharmacy Practice Volume 27 ; 27 ; jppa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Pharmacy Practice Volume 28 ; 28 ; jppa ; >
       au < frozen ; exists ; 2016 ; Journal of Pharmacy Practice Volume 29 ; 29 ; jppa ; >
-      au < crawling ; exists ; 2017 ; Journal of Pharmacy Practice Volume 30 ; 30 ; jppa ; >
+      au < deepCrawl ; exists ; 2017 ; Journal of Pharmacy Practice Volume 30 ; 30 ; jppa ; >
 
     }
 
@@ -26851,7 +26851,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Tissue Engineering Volume 5 ; 5 ; teja ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Tissue Engineering Volume 6 ; 6 ; teja ; >
       au < frozen ; exists ; 2016 ; Journal of Tissue Engineering Volume 7 ; 7 ; teja ; >
-      au < crawling ; exists ; 2017 ; Journal of Tissue Engineering Volume 8 ; 8 ; teja ; >
+      au < deepCrawl ; exists ; 2017 ; Journal of Tissue Engineering Volume 8 ; 8 ; teja ; >
 
   }
 
@@ -29690,7 +29690,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Musicae Scientiae Volume 18 ; 18 ; msxa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Musicae Scientiae Volume 19 ; 19 ; msxa ; >
       au < frozen ; exists ; 2016 ; Musicae Scientiae Volume 20 ; 20 ; msxa ; >
-      au < crawling ; exists ; 2017 ; Musicae Scientiae Volume 21 ; 21 ; msxa ; >
+      au < deepCrawl ; exists ; 2017 ; Musicae Scientiae Volume 21 ; 21 ; msxa ; >
 
     }
 
@@ -30189,7 +30189,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; The Neurohospitalist Volume 4 ; 4 ; nhoa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; The Neurohospitalist Volume 5 ; 5 ; nhoa ; >
       au < frozen ; exists ; 2016 ; The Neurohospitalist Volume 6 ; 6 ; nhoa ; >
-      au < crawling ; exists ; 2017 ; The Neurohospitalist Volume 7 ; 7 ; nhoa ; >
+      au < deepCrawl ; exists ; 2017 ; The Neurohospitalist Volume 7 ; 7 ; nhoa ; >
 
     }
 
@@ -31206,7 +31206,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Organizational Psychology Review Volume 4 ; 4 ; opra ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Organizational Psychology Review Volume 5 ; 5 ; opra ; >
       au < frozen ; exists ; 2016 ; Organizational Psychology Review Volume 6 ; 6 ; opra ; >
-      au < crawling ; exists ; 2017 ; Organizational Psychology Review Volume 7 ; 7 ; opra ; >
+      au < deepCrawl ; exists ; 2017 ; Organizational Psychology Review Volume 7 ; 7 ; opra ; >
 
     }
 
@@ -33435,7 +33435,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 228 ; 228 ; pika ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 229 ; 229 ; pika ; >
       au < frozen ; exists ; 2016 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 230 ; 230 ; pika ; >
-      au < crawling ; exists ; 2017 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 231 ; 231 ; pika ; >
+      au < deepCrawl ; exists ; 2017 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 231 ; 231 ; pika ; >
 
     }
 
@@ -34796,7 +34796,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Race and Justice Volume 4 ; 4 ; raja ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Race and Justice Volume 5 ; 5 ; raja ; >
       au < frozen ; exists ; 2016 ; Race and Justice Volume 6 ; 6 ; raja ; >
-      au < crawling ; exists ; 2017 ; Race and Justice Volume 7 ; 7 ; raja ; >
+      au < deepCrawl ; exists ; 2017 ; Race and Justice Volume 7 ; 7 ; raja ; >
 
     }
 
@@ -35663,7 +35663,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Review of Market Integration Volume 6 ; 6 ; rmia ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Review of Market Integration Volume 7 ; 7 ; rmia ; >
       au < frozen ; exists ; 2016 ; Review of Market Integration Volume 8 ; 8 ; rmia ; >
-      au < crawling ; exists ; 2017 ; Review of Market Integration Volume 9 ; 9 ; rmia ; >
+      au < deepCrawl ; exists ; 2017 ; Review of Market Integration Volume 9 ; 9 ; rmia ; >
 
     }
 
@@ -37864,7 +37864,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Sports Health: A Multidisciplinary Approach Volume 6 ; 6 ; spha ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Sports Health: A Multidisciplinary Approach Volume 7 ; 7 ; spha ; >
       au < frozen ; exists ; 2016 ; Sports Health: A Multidisciplinary Approach Volume 8 ; 8 ; spha ; >
-      au < crawling ; exists ; 2017 ; Sports Health: A Multidisciplinary Approach Volume 9 ; 9 ; spha ; >
+      au < deepCrawl ; exists ; 2017 ; Sports Health: A Multidisciplinary Approach Volume 9 ; 9 ; spha ; >
 
     }
 
@@ -40504,7 +40504,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Trends in Amplification Volume 18 ; 18 ; tiab ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Trends in Amplification Volume 19 ; 19 ; tiab ; >
       au < frozen ; exists ; 2016 ; Trends in Amplification Volume 20 ; 20 ; tiab ; >
-      au < crawling ; exists ; 2017 ; Trends in Amplification Volume 21 ; 21 ; tiab ; >
+      au < deepCrawl ; exists ; 2017 ; Trends in Amplification Volume 21 ; 21 ; tiab ; >
 
     }
 
@@ -41771,7 +41771,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Youth & Society Volume 46 ; 46 ; yasa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Youth & Society Volume 47 ; 47 ; yasa ; >
       au < frozen ; exists ; 2016 ; Youth & Society Volume 48 ; 48 ; yasa ; >
-      au < crawling ; exists ; 2017 ; Youth & Society Volume 49 ; 49 ; yasa ; >
+      au < deepCrawl ; exists ; 2017 ; Youth & Society Volume 49 ; 49 ; yasa ; >
 
 
     }
@@ -43248,7 +43248,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Jindal Journal of Business Research Volume 3 ; 3 ; brja ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Jindal Journal of Business Research Volume 4 ; 4 ; brja ; >
     au < finished ; manifest ; 2016 ; Jindal Journal of Business Research Volume 5 ; 5 ; brja ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Jindal Journal of Business Research Volume 6 ; 6 ; brja ; >
+    au < deepCrawl ; exists ; 2017 ; Jindal Journal of Business Research Volume 6 ; 6 ; brja ; >
 
     }
 
@@ -45178,7 +45178,7 @@
         au < doNotProcess ; doNotProcess ; 2014 ; JRSM Open Volume 5 ; 5 ; shrb ; >
         au < doNotProcess ; doNotProcess ; 2015 ; JRSM Open Volume 6 ; 6 ; shrb ; >
         au < frozen ; exists ; 2016 ; JRSM Open Volume 7 ; 7 ; shrb ; >
-        au < crawling ; exists ; 2017 ; JRSM Open Volume 8 ; 8 ; shrb ; >
+        au < deepCrawl ; exists ; 2017 ; JRSM Open Volume 8 ; 8 ; shrb ; >
 
     }
 
@@ -45992,7 +45992,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; South East Asia Research Volume 22 ; 22 ; sera ; >
     au < doNotProcess ; doNotProcess ; 2015 ; South East Asia Research Volume 23 ; 23 ; sera ; >
     au < doNotProcess ; doNotProcess ; 2016 ; South East Asia Research Volume 24 ; 24 ; sera ; >
-    au < crawling ; exists ; 2017 ; South East Asia Research Volume 25 ; 25 ; sera ; >
+    au < deepCrawl ; exists ; 2017 ; South East Asia Research Volume 25 ; 25 ; sera ; >
 
   }
 

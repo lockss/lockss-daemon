@@ -258,7 +258,7 @@
     au < finished ; finished ; 2014 ; Nanotechnology, Science and Applications Volume 7 ; 7 ; 2014 ; >
     au < finished ; finished ; 2015 ; Nanotechnology, Science and Applications Volume 8 ; 8 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Nanotechnology, Science and Applications Volume 9 ; 9 ; 2016 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Nanotechnology, Science and Applications Volume 10 ; 10 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Nanotechnology, Science and Applications Volume 10 ; 10 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Nanotechnology, Science and Applications Volume 11 ; 11 ; 2018 ; >
 
   }
@@ -786,7 +786,7 @@
     au < finished ; finished ; 2014 ; Clinical Epidemiology Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Clinical Epidemiology Volume 7 ; 7 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Clinical Epidemiology Volume 8 ; 8 ; 2016 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Clinical Epidemiology Volume 9 ; 9 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Clinical Epidemiology Volume 9 ; 9 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Clinical Epidemiology Volume 10 ; 10 ; 2018 ; >
 
   }
@@ -1783,7 +1783,7 @@
     au < finished ; finished ; 2014 ; Research and Reports in Biology Volume 5 ; 5 ; 2014 ; >
     au < finished ; finished ; 2015 ; Research and Reports in Biology Volume 6 ; 6 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Research and Reports in Biology Volume 7 ; 7 ; 2016 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2017 ; Research and Reports in Biology Volume 8 ; 8 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Research and Reports in Biology Volume 8 ; 8 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Research and Reports in Biology Volume 9 ; 9 ; 2018 ; >
 
   }
@@ -2297,7 +2297,7 @@
     au < finished ; finished ; 2014 ; Open Access Medical Statistics Volume 4 ; 4 ; 2014 ; >
     au < finished ; finished ; 2015 ; Open Access Medical Statistics Volume 5 ; 5 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Open Access Medical Statistics Volume 6 ; 6 ; 2016 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Open Access Medical Statistics Volume 7 ; 7 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Open Access Medical Statistics Volume 7 ; 7 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Open Access Medical Statistics Volume 8 ; 8 ; 2018 ; >
 
   }
@@ -2317,7 +2317,7 @@
     au < finished ; finished ; 2014 ; Psoriasis: Targets and Therapy Volume 4 ; 4 ; 2014 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Psoriasis: Targets and Therapy Volume 5 ; 5 ; 2015 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2016 ; Psoriasis: Targets and Therapy Volume 6 ; 6 ; 2016 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Psoriasis: Targets and Therapy Volume 7 ; 7 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Psoriasis: Targets and Therapy Volume 7 ; 7 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Psoriasis: Targets and Therapy Volume 8 ; 8 ; 2018 ; >
 
   }
@@ -2704,7 +2704,7 @@
     au < finished ; finished ; 2014 ; Metalloproteinases In Medicine Volume 1 ; 1 ; 2014 ; >
     au < finished ; finished ; 2015 ; Metalloproteinases In Medicine Volume 2 ; 2 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Metalloproteinases In Medicine Volume 3 ; 3 ; 2016 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2017 ; Metalloproteinases In Medicine Volume 4 ; 4 ; 2017 ; >
+    au < deepCrawl ; exists ; 2017 ; Metalloproteinases In Medicine Volume 4 ; 4 ; 2017 ; >
     au < manifest ; exists ; 2018 ; Metalloproteinases In Medicine Volume 5 ; 5 ; 2018 ; >
 
   }
