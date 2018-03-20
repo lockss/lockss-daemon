@@ -388,7 +388,7 @@
 
       au < finished ; crawling ; 2008 ; 9780762314515 ; 9781849505222 ; 9781849505222 ; Advances in Culture, Tourism and Hospitality Research Volume 2 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2009 ; 9781849506038 ; 9781849506045 ; 9781849506045 ; Perspectives on Cross-Cultural, Ethnographic, Brand Image, Storytelling, Unconscious Needs, and Hospitality Guest Research Volume 3 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2010 ; 9781849509008 ; 9781849509015 ; 9781849509015 ; Tourism-Marketing Performance Metrics and Usefulness Auditing of Destination Websites Volume 4 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2010 ; 9781849509008 ; 9781849509015 ; 9781849509015 ; Tourism-Marketing Performance Metrics and Usefulness Auditing of Destination Websites Volume 4 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2011 ; 9780857248534 ; 9780857248541 ; 9780857248541 ; Tourism Sensemaking: Strategies to Give Meaning to Experience Volume 5 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2012 ; 9781780527420 ; 9781780527437 ; 9781780527437 ; Field Guide to Case Study Research in Tourism, Hospitality and Leisure Volume 6 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2013 ; 9781781902103 ; 9781781902110 ; 9781781902110 ; Luxury Fashion and Culture Volume 7 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
@@ -419,7 +419,7 @@
       au < finished ; crawling ; 2011 ; 9780857242792 ; 9780857242808 ; 9780857242808 ; The Early Childhood Educator Professional Development Grant: Research and Practice Volume 15 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2012 ; 9781781900741 ; 9781781900758 ; 9781781900758 ; Early Education in a Global Context Volume 16 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2013 ; 9781781907009 ; 9781781907016 ; 9781781907016 ; Learning Across the Early Childhood Curriculum Volume 17 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2014 ; 9781783504596 ; 9781783504602 ; 9781783504602 ; Early Childhood and Special Education Volume 18 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2014 ; 9781783504596 ; 9781783504602 ; 9781783504602 ; Early Childhood and Special Education Volume 18 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2015 ; 9781785602931 ; 9781785602924 ; 9781785602924 ; Discussions on Sensitive Issues Volume 19 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; 9781786354082 ; 9781786354075 ; 9781786354075 ; Family Involvement in Early Education and Child Care Volume 20 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
   }
@@ -745,7 +745,7 @@
       au < finished ; crawling ; 2012 ; 9781780528588 ; 9781780528595 ; 9781780528595 ; Health Information Technology in the International Context Volume 12 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2012 ; 9781781901908 ; 9781781901915 ; 9781781901915 ; Annual Review of Health Care Management: Strategy and Policy Perspectives on Reforming Health Systems Volume 13 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2013 ; 9781781906330 ; 9781781906347 ; 9781781906347 ; Leading in Health Care Organizations: Improving Safety, Satisfaction and Financial Performance Volume 14 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2013 ; 9781783507153 ; 9781783507160 ; 9781783507160 ; Annual Review of Health Care Management: Revisiting The Evolution of Health Systems Organization Volume 15 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2013 ; 9781783507153 ; 9781783507160 ; 9781783507160 ; Annual Review of Health Care Management: Revisiting The Evolution of Health Systems Organization Volume 15 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2014 ; 9781784411978 ; 9781784411961 ; 9781784411961 ; Population Health Management in Health Care Organizations Volume 16 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2015 ; 9781784412791 ; 9781784412784 ; 9781784412784 ; International Best Practices in Health Care Management Volume 17 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
 
@@ -912,7 +912,7 @@
       #param[journal_issn] = 1474-7979
       #series = aim
 
-      au < frozen ; exists ; 2000 ; 9780762306695 ; 9781849500562 ; 9781849500562 ; Globalization, the Multinational Firm, and Emerging Economies Volume 10 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2000 ; 9780762306695 ; 9781849500562 ; 9781849500562 ; Globalization, the Multinational Firm, and Emerging Economies Volume 10 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2001 ; 9780762307951 ; 9781849501101 ; 9781849501101 ; Reassesing the Internationalization of the Firm Volume 11 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2002 ; 9780762309504 ; 9781849501675 ; 9781849501675 ; New Directions in International Advertising Research Volume 12 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2003 ; 9780762309894 ; 9781849501927 ; 9781849501927 ; Study Abroad Volume 13 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
@@ -999,7 +999,7 @@
       au < finished ; manifest ; 2015 ; 9781784416386 ; 9781784416379 ; 9781784416379 ; Current Issues in Libraries, Information Science and Related Fields Volume 39 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2015 ; 9781785606533 ; 9781785606526 ; 9781785606526 ; Accessibility for Persons with Disabilities and the Inclusive Future of Libraries Volume 40 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2016 ; 9781786350589 ; 9781786350572 ; 9781786350572 ; Perspectives on Libraries as Institutions of Human Rights and Social Justice Volume 41 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2016 ; 9781786359339 ; 9781786359322 ; 9781786359322 ; Celebrating the James Partridge Award: Essays Toward the Development of a More Diverse, Inclusive, and Equitable Field of Library and Information Science Volume 42 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2016 ; 9781786359339 ; 9781786359322 ; 9781786359322 ; Celebrating the James Partridge Award: Essays Toward the Development of a More Diverse, Inclusive, and Equitable Field of Library and Information Science Volume 42 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
 
   }
 
@@ -1083,7 +1083,7 @@
 
       au < finished ; crawling ; 1999 ; 9780762305377 ; 9781849500333 ; 9781849500333 ; Emergent Issues in the Field of Drug Abuse Volume 7 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2002 ; 9780762308811 ; 9781849501521 ; 9781849501521 ; Social Networks and Health Volume 8 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2007 ; 9780762314386 ; 9781849505017 ; 9781849505017 ; Bioethical Issues, Sociological Perspectives Volume 9 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2007 ; 9780762314386 ; 9781849505017 ; 9781849505017 ; Bioethical Issues, Sociological Perspectives Volume 9 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2008 ; 9781848552142 ; 9781848552159 ; 9781848552159 ; Patients, Consumers and Civil Society Volume 10 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2010 ; 9781848550803 ; 9781848550810 ; 9781848550810 ; Understanding Emerging Epidemics: Social and Political Approaches Volume 11 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2011 ; 9780857245755 ; 9780857245762 ; 9780857245762 ; Sociology of Diagnosis Volume 12 ; http://www.emeraldinsight.com/ ; >
@@ -1119,7 +1119,7 @@
       au < finished ; crawling ; 2012 ; 9781780521961 ; 9781780521978 ; 9781780521978 ; Advances in Mergers and Acquisitions Volume 10 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2012 ; 9781781904596 ; 9781781904602 ; 9781781904602 ; Advances in Mergers and Acquisitions Volume 11 ; http://www.emeraldinsight.com/ ; >
       au < finished ; crawling ; 2013 ; 9781781908365 ; 9781781908372 ; 9781781908372 ; Advances in Mergers & Acquisitions Volume 12 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2014 ; 9781783509706 ; 9781783509928 ; 9781783509928 ; Advances in Mergers & Acquisitions Volume 13 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2014 ; 9781783509706 ; 9781783509928 ; 9781783509928 ; Advances in Mergers & Acquisitions Volume 13 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2014 ; 9781785600913 ; 9781785600906 ; 9781785600906 ; Advances in Mergers & Acquisitions Volume 14 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2016 ; 9781786353948 ; 9781786353931 ; 9781786353931 ; Advances in Mergers & Acquisitions Volume 15 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; 9781787146938 ; 9781787146921 ; 9781787146921 ; Advances in Mergers & Acquisitions Volume 16 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
@@ -1217,13 +1217,13 @@
       au < frozen ; exists ; 2012 ; 9781780529240 ; 9781780529257 ; 9781780529257 ; Narrative Inquirers in the Midst of Meaning-making: Interpretive Acts of Teacher Educators Volume 16 ; http://www.emeraldinsight.com/ ; >
       au < finished ; crawling ; 2012 ; 9781781902349 ; 9781781902356 ; 9781781902356 ; Warrior Women: Remaking Postsecondary Places through Relational Narrative Inquiry Volume 17 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2013 ; 9781781906514 ; 9781781906521 ; 9781781906521 ; Emotion and School: Understanding how the Hidden Curriculum Influences Relationships, Leadership, Teaching, and Learning Volume 18 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2013 ; 9781781908501 ; 9781781908518 ; 9781781908518 ; From Teacher Thinking to Teachers and Teaching: The Evolution of a Research Community Volume 19 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2013 ; 9781781908501 ; 9781781908518 ; 9781781908518 ; From Teacher Thinking to Teachers and Teaching: The Evolution of a Research Community Volume 19 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2014 ; 9781781907023 ; 9781781907030 ; 9781781907030 ; Innovations in Science Teacher Education in the Asia Pacific Volume 20 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2014 ; 9781784412654 ; 9781784412647 ; 9781784412647 ; Research on Preparing Preservice Teachers to Work Effectively with Emergent Bilinguals Volume 21 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2014 ; 9781784411367 ; 9781784411350 ; 9781784411350 ; International Teacher Education: Promising Pedagogies (Part A) Volume 22 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2014 ; 9781784411381 ; 9781784411374 ; 9781784411374 ; Narrative Conceptions of Knowledge: Towards Understanding Teacher Attrition Volume 23 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2015 ; 9781784416706 ; 9781784416690 ; 9781784416690 ; International Teacher Education: Promising Pedagogies (Part B) Volume 22B ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2015 ; 9781784416744 ; 9781784416737 ; 9781784416737 ; International Teacher Education: Promising Pedagogies (Part C) Volume 22C ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2015 ; 9781784416744 ; 9781784416737 ; 9781784416737 ; International Teacher Education: Promising Pedagogies (Part C) Volume 22C ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; 9781784414948 ; 9781784414931 ; 9781784414931 ; Research on Preparing Inservice Teachers to Work Effectively with Emergent Bilinguals Volume 24 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; 9781784416720 ; 9781784416713 ; 9781784416713 ; Exploring Pedagogies for Diverse Learners Online Volume 25 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2015 ; 9781784411404 ; 9781784411398 ; 9781784411398 ; Knowing, Becoming, doing as Teacher Educators: Identity, Intimate Scholarship, Inquiry Volume 26 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
@@ -1245,12 +1245,12 @@
       #series = ase
 
       au < finished ; crawling ; 2001 ; 9780762308187 ; 9781849501200 ; 9781849501200 ; Autistic Spectrum Disorders: Educational and Clinical Interventions Volume 14 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2003 ; 9780762309757 ; 9781849501866 ; 9781849501866 ; Effective Education for Learners with Exceptionalities Volume 15 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2003 ; 9780762309757 ; 9781849501866 ; 9781849501866 ; Effective Education for Learners with Exceptionalities Volume 15 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2005 ; 9780762311309 ; 9781849502870 ; 9781849502870 ; Current Perspectives on Learning Disabilities Volume 16 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2006 ; 9780762313419 ; 9781849504386 ; 9781849504386 ; Current Perspectives in Special Education Administration Volume 17 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2006 ; 9780762313419 ; 9781849504386 ; 9781849504386 ; Current Perspectives in Special Education Administration Volume 17 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2008 ; 9781848553569 ; 9781848553576 ; 9781848553576 ; Autism and Developmental Disabilities: Current Practices and Issues Volume 18 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2009 ; 9781848556683 ; 9781848556690 ; 9781848556690 ; Current Issues and Trends in Special Education: Identification, Assessment and Instruction Volume 19 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2010 ; 9781849509541 ; 9781849509558 ; 9781849509558 ; Current Issues and Trends in Special Education: Research, Technology, and Teacher Preparation Volume 20 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2009 ; 9781848556683 ; 9781848556690 ; 9781848556690 ; Current Issues and Trends in Special Education: Identification, Assessment and Instruction Volume 19 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2010 ; 9781849509541 ; 9781849509558 ; 9781849509558 ; Current Issues and Trends in Special Education: Research, Technology, and Teacher Preparation Volume 20 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2011 ; 9780857246295 ; 9780857246301 ; 9780857246301 ; History of Special Education Volume 21 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2012 ; 9781780525044 ; 9781780525051 ; 9781780525051 ; Behavioral Disorders: Identification, Assessment, and Instruction of Students with EBD Volume 22 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2012 ; 9781780525068 ; 9781780525075 ; 9781780525075 ; Behavioral Disorders: Practice Concerns and Students with EBD Volume 23 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
@@ -1260,7 +1260,7 @@
       au < finished ; crawling ; 2014 ; 9781784410452 ; 9781784410445 ; 9781784410445 ; Special Education International Perspectives: Biopsychosocial, Cultural, and Disability Aspects Volume 27 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2014 ; 9781784410964 ; 9781784410957 ; 9781784410957 ; Special Education International Perspectives: Practices Across the Globe Volume 28 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; 9781784416584 ; 9781784416577 ; 9781784416577 ; The Broad Autism Phenotype Volume 29 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2015 ; 9781784416607 ; 9781784416591 ; 9781784416591 ; Interdisciplinary Connections to Special Education: Important Aspects to Consider Volume 30A ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2015 ; 9781784416607 ; 9781784416591 ; 9781784416591 ; Interdisciplinary Connections to Special Education: Important Aspects to Consider Volume 30A ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2015 ; 9781784416645 ; 9781784416638 ; 9781784416638 ; Interdisciplinary Connections to Special Education: Key Related Professionals Involved Volume 30B ; http://www.emeraldinsight.com/ ; >
       au < finished ; crawling ; 2016 ; 9781786355423 ; 9781786355416 ; 9781786355416 ; General and Special Education Inclusion in an Age of Change: Impact on Students with Disabilities Volume 31 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 9781786355447 ; 9781786355430 ; 9781786355430 ; General and Special Education Inclusion in an Age of Change: Roles of Professionals Involved Volume 32 ; http://www.emeraldinsight.com/ ; >
@@ -1282,7 +1282,7 @@
       au < frozen ; exists ; 2001 ; 9780762307210 ; 9781849500807 ; 9781849500807 ; Multiunit Organization and Multimarket Strategy Volume 18 ; http://www.emeraldinsight.com/ ; >
       au < finished ; crawling ; 2002 ; 9780762309030 ; 9781849501644 ; 9781849501644 ; The New Institutionalism in Strategic Management Volume 19 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2003 ; 9780762310340 ; 9781849502214 ; 9781849502214 ; Geography and Strategy Volume 20 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2004 ; 9780762311354 ; 9781849502917 ; 9781849502917 ; Business Strategy over the Industry Lifecycle Volume 21 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2004 ; 9780762311354 ; 9781849502917 ; 9781849502917 ; Business Strategy over the Industry Lifecycle Volume 21 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2005 ; 9780762312009 ; 9781849503402 ; 9781849503402 ; Strategy Process Volume 22 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2006 ; 9780762313389 ; 9781849504355 ; 9781849504355 ; Ecology and Strategy Volume 23 ; http://www.emeraldinsight.com/ ; >
       au < finished ; crawling ; 2007 ; 9780762314270 ; 9781849504942 ; 9781849504942 ; Real Options Theory Volume 24 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
@@ -1318,7 +1318,7 @@
       au < finished ; crawling ; 2013 ; 9781783501366 ; 9781783501373 ; 9781783501373 ; Environmental Philosophy: The Art of Life in a World of Limits Volume 13 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2014 ; 9781783507535 ; 9781783507542 ; 9781783507542 ; The Sustainability of Restorative Justice Volume 14 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2014 ; 9781783506972 ; 9781783506866 ; 9781783506866 ; Occupy the Earth: Global Environmental Movements Volume 15 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2015 ; 9781784412951 ; 9781784412944 ; 9781784412944 ; The UN Global Compact: Fair Competition and Environmental and Labour Justice in International Markets Volume 16 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2015 ; 9781784412951 ; 9781784412944 ; 9781784412944 ; The UN Global Compact: Fair Competition and Environmental and Labour Justice in International Markets Volume 16 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; 9781785605581 ; 9781785605574 ; 9781785605574 ; Beyond the UN Global Compact: Institutions and Regulations Volume 17 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2016 ; 9781785607431 ; 9781785607424 ; 9781785607424 ; Lessons from the Great Recession: At the Crossroads of Sustainability and Recovery Volume 18 ; http://www.emeraldinsight.com/ ; >
       au < frozen ; exists ; 2016 ; 9781786358196 ; 9781786358189 ; 9781786358189 ; Climate Change and the 2030 Corporate Agenda for Sustainable Development Volume 19 ; http://www.emeraldinsight.com/ ; >
@@ -1389,7 +1389,7 @@
       #series = aece
 
       au < crawling ; exists ; 2001 ; 9780762303052 ; 9781849500210 ; 9781849500210 ; The Long-Term Economics of Climate Change: Beyond a Doubling of Greenhouse Gas Concentrations Volume 3 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2002 ; 9780762308507 ; 9781849501385 ; 9781849501385 ; Economics of Pesticides, Sustainable Food Production, and Organic Food Markets Volume 4 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2002 ; 9780762308507 ; 9781849501385 ; 9781849501385 ; Economics of Pesticides, Sustainable Food Production, and Organic Food Markets Volume 4 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2005 ; 9780762312719 ; 9781849503860 ; 9781849503860 ; Perspectives on Climate Change: Science, Economics, Politics, Ethics Volume 5 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2007 ; 9780080453279 ; 9781849500005 ; 9781849500005 ; Living on the Edge Volume 6 ; http://www.emeraldinsight.com/ ; >
       au < finished ; crawling ; 2007 ; 9780762314485 ; 9781849505079 ; 9781849505079 ; Ecological Economics of Sustainable Watershed Management Volume 7 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
@@ -1412,11 +1412,11 @@
       au < finished ; crawling ; 2003 ; 9780762310029 ; 9781849502009 ; 9781849502009 ; Issues in Entrepeneurship Volume 14 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2004 ; 9780762311026 ; 9781849502658 ; 9781849502658 ; Intellectual Property and Entrepreneurship Volume 15 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2005 ; 9780762312306 ; 9781849503594 ; 9781849503594 ; University Entrepreneurship and Technology Transfer Volume 16 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2007 ; 9780762313365 ; 9781849504331 ; 9781849504331 ; The Cyclic Nature of Innovation: Connecting Hard Sciences with Soft Values Volume 17 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2007 ; 9780762313365 ; 9781849504331 ; 9781849504331 ; The Cyclic Nature of Innovation: Connecting Hard Sciences with Soft Values Volume 17 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2008 ; 9780762314812 ; 9781849505321 ; 9781849505321 ; Technological Innovation: Generating Economic Results Volume 18 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2009 ; 9781848554665 ; 9781848554672 ; 9781848554672 ; Measuring the Social Value of Innovation: A Link in the University Technology Transfer and Entrepreneurship Equation Volume 19 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2009 ; 9781848559509 ; 9781848559516 ; 9781848559516 ; Frontiers in Eco-Entrepreneurship Research Volume 20 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2010 ; 9780857241993 ; 9780857242006 ; 9780857242006 ; Spanning Boundaries and Disciplines: University Technology Commercialization in the Idea Age Volume 21 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2010 ; 9780857241993 ; 9780857242006 ; 9780857242006 ; Spanning Boundaries and Disciplines: University Technology Commercialization in the Idea Age Volume 21 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2011 ; 9781780523941 ; 9781780523958 ; 9781780523958 ; Entrepreneurship and Global Competitiveness in Regional Economies: Determinants and Policy Implications Volume 22 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2013 ; 9781780529929 ; 9781780529936 ; 9781780529936 ; A Cross-Disciplinary Primer on the Meaning and Principles of Innovation Volume 23 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2014 ; 9781783504985 ; 9781783504978 ; 9781783504978 ; Innovative Pathways for University Entrepreneurship in the 21st Century Volume 24 ; http://www.emeraldinsight.com/ ; >
@@ -1438,7 +1438,7 @@
       #series = mansc
 
       au < finished ; manifest ; 2006 ; 9780762312214 ; 9780857249999 ; 9780857249999 ; Applications of Management Science: In Productivity, Finance, and Operations Volume 12 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2009 ; 9781848558786 ; 9781848558793 ; 9781848558793 ; Financial Modeling Applications and Data Envelopment Applications Volume 13 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2009 ; 9781848558786 ; 9781848558793 ; 9781848558793 ; Financial Modeling Applications and Data Envelopment Applications Volume 13 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2010 ; 9780857244697 ; 9780857244703 ; 9780857244703 ; Applications in Multicriteria Decision Making, Data Envelopment Analysis, and Finance Volume 14 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2012 ; 9781780521008 ; 9781780521015 ; 9781780521015 ; Applications of Management Science Volume 15 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2013 ; 9781781909560 ; 9781781909577 ; 9781781909577 ; Applications of Management Science Volume 16 ; http://www.emeraldinsight.com/ ; >
@@ -1460,7 +1460,7 @@
 
       au < finished ; crawling ; 2009 ; 9781849507202 ; 9781849507219 ; 9781849507219 ; Tourism Branding: Communities in Action Volume 1 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2010 ; 9781849509206 ; 9781849509213 ; 9781849509213 ; Tourism in the Muslim World Volume 2 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2010 ; 9780857246196 ; 9780857246202 ; 9780857246202 ; Tourism and the Implications of Climate Change: Issues and Actions Volume 3 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2010 ; 9780857246196 ; 9780857246202 ; 9780857246202 ; Tourism and the Implications of Climate Change: Issues and Actions Volume 3 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2012 ; 9781780529806 ; 9781780529813 ; 9781780529813 ; Knowledge Management in Tourism: Policy and Governance Applications Volume 4 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2014 ; 9780857246790 ; 9780857246806 ; 9780857246806 ; Tourism as an Instrument for Development: A Theoretical and Practical Study Volume 5 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; 9781783501120 ; 9781783501137 ; 9781783501137 ; Contemporary Destination Governance: A Case Study Approach, 2015  Volume 6; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
@@ -1487,7 +1487,7 @@
       au < finished ; crawling ; 2010 ; 9780857244857 ; 9780857244864 ; 9780857244864 ; Climate Change Adaptation and Disaster Risk Reduction: An Asian Perspective Volume 5 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2011 ; 9780857243195 ; 9780857243201 ; 9780857243201 ; Climate and Disaster Resilience in Cities Volume 6 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2011 ; 9780857247377 ; 9780857247384 ; 9780857247384 ; Disaster Education Volume 7 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2011 ; 9780857248633 ; 9780857248640 ; 9780857248640 ; Droughts in Asian Monsoon Region Volume 8 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2011 ; 9780857248633 ; 9780857248640 ; 9780857248640 ; Droughts in Asian Monsoon Region Volume 8 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2012 ; 9780857248657 ; 9780857248664 ; 9780857248664 ; Environment Disaster Linkages Volume 9 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2012 ; 9780857248671 ; 9780857248688 ; 9780857248688 ; Community-Based Disaster Risk Reduction Volume 10 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2012 ; 9781780524863 ; 9781780524870 ; 9781780524870 ; Climate Change Modeling For Local Adaptation In The Hindu Kush-Himalayan Region Volume 11 ; http://www.emeraldinsight.com/ ; >
@@ -1513,7 +1513,7 @@
       #series = cosr
 
       au < crawling ; exists ; 2000 ; 9780762306794 ; 9781849500593 ; 9781849500593 ; Comparative Perspectives on Universities Volume 19 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2002 ; 9780762308361 ; 9781849501316 ; 9781849501316 ; The Comparative Study of Conscription in the Armed Forces Volume 20 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2002 ; 9780762308361 ; 9781849501316 ; 9781849501316 ; The Comparative Study of Conscription in the Armed Forces Volume 20 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2003 ; 9780762308859 ; 9781849501552 ; 9781849501552 ; Comparative Studies of Culture and Power Volume 21 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2003 ; 9780762310647 ; 9781849502436 ; 9781849502436 ; Multicultural Challenge Volume 22 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2006 ; 9780762313792 ; 9781849504669 ; 9781849504669 ; Comparative Studies of Social and Political Elites Volume 23 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
@@ -1542,7 +1542,7 @@
 
       au < finished ; crawling ; 2010 ; 9780857243355 ; 9780857243362 ; 9780857243362 ; Innovating Women: Contributions to Technological Advancement Volume 1 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2012 ; 9781781902547 ; 9781781902554 ; 9781781902554 ; Social and Sustainable Enterprise: Changing the Nature of Business Volume 2 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2013 ; 9781783506422 ; 9781783506415 ; 9781783506415 ; Enterprising Places: Leadership and Governance Networks Volume 3 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2013 ; 9781783506422 ; 9781783506415 ; 9781783506415 ; Enterprising Places: Leadership and Governance Networks Volume 3 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2014 ; 9781784411121 ; 9781784411091 ; 9781784411091 ; Exploring Rural Enterprise: New Perspectives on Research, Policy & Practice Volume 4 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; 9781784415525 ; 9781784415518 ; 9781784415518 ; Exploring Criminal and Illegal Enterprise: New Perspectives on Research, Policy & Practice Volume 5; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2016 ; 9781785608216 ; 9781785608209 ; 9781785608209 ; New Perspectives on Research, Policy & Practice in Public Entrepreneurship Volume 6 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
@@ -1566,7 +1566,7 @@
       au < finished ; crawling ; 2012 ; 9781780529783 ; 9781780529790 ; 9781780529790 ; Economic Stress and the Family Volume 6 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2013 ; 9781783500284 ; 9781783500291 ; 9781783500291 ; Visions of the 21st Century Family: Transforming Structures and Identities Volume 7 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2014 ; 9781784410155 ; 9781784410148 ; 9781784410148 ; Family Relationships and Familial Responses to Health Issues Volume 8A ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2014 ; 9781784411268 ; 9781784411251 ; 9781784411251 ; Family and Health: Evolving Needs, Responsibilities, and Experiences Volume 8B ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2014 ; 9781784411268 ; 9781784411251 ; 9781784411251 ; Family and Health: Evolving Needs, Responsibilities, and Experiences Volume 8B ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; 9781785602634 ; 9781785602627 ; 9781785602627 ; Violence and Crime in the Family: Patterns, Causes, and Consequences Volume 9 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; 9781786352309 ; 9781786352293 ; 9781786352293 ; Divorce, Separation, and Remarriage: The Transformation of Family Volume 10 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; 9781787146105 ; 9781787146099 ; 9781787146099 ; Intimate Relationships and Social Change Volume 11 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
@@ -1631,8 +1631,8 @@
       au < finished ; crawling ; 2011 ; 9780857247018 ; 9780857247025 ; 9780857247025 ; Frontiers of Peace Economics and Peace Science Volume 16 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2011 ; 9781780521305 ; 9781780521312 ; 9781780521312 ; Ethnic Conflict, Civil War and Cost of Conflict Volume 17 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2011 ; 9780857248954 ; 9780857248961 ; 9780857248961 ; Governance, Development and Conflict Volume 18 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2012 ; 9781780526386 ; 9781780526393 ; 9781780526393 ; New Wars, New Militaries, New Soldiers: Conflicts, the Armed Forces and the Soldierly Subject Volume 19 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2012 ; 9781781903353 ; 9781781903360 ; 9781781903360 ; Cooperation for a Peaceful and Sustainable World Part 1 Volume 20 Part 1 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2012 ; 9781780526386 ; 9781780526393 ; 9781780526393 ; New Wars, New Militaries, New Soldiers: Conflicts, the Armed Forces and the Soldierly Subject Volume 19 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2012 ; 9781781903353 ; 9781781903360 ; 9781781903360 ; Cooperation for a Peaceful and Sustainable World Part 1 Volume 20 Part 1 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2013 ; 9781781906552 ; 9781781906569 ; 9781781906569 ; Cooperation for a Peaceful and Sustainable World Part 1 Volume 20 Part 2 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2013 ; 9781781907221 ; 9781781907238 ; 9781781907238 ; Nuclear Disarmament: Regional Perspectives on Progress Volume 21 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2014 ; 9781783508273 ; 9781783508280 ; 9781783508280 ; Understanding Terrorism Volume 22 ; http://www.emeraldinsight.com/ ; >
@@ -1656,11 +1656,11 @@
 
       au < finished ; crawling ; 1992 ; 9780444896537 ; 9781849508599 ; 9781849508599 ; Economic Modeling in the Nordic Countries Volume 210 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 1993 ; 9780444814692 ; 9781849508605 ; 9781849508605 ; Contingent Valuation: A Critical Assessment Volume 220 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 1994 ; 9780444820723 ; 9781849508582 ; 9781849508582 ; Economics of Crime: Deterrence and the Rational Offender Volume 227 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 1994 ; 9780444820723 ; 9781849508582 ; 9781849508582 ; Economics of Crime: Deterrence and the Rational Offender Volume 227 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 1995 ; 9780444817877 ; 9781849508551 ; 9781849508551 ; Economics, Econometrics and the LINK: Essays in Honor of Lawrence R.Klein Volume 226 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 1996 ; 9780444821447 ; 9781849508650 ; 9781849508650 ; International Comparisons of Prices, Output and Productivity Volume 231 ; http://www.emeraldinsight.com/ ; >
       au < frozen ; exists ; 1996 ; 9780444824813 ; 9781849508544 ; 9781849508544 ; Agricultural Markets Volume 234 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 1996 ; 9780444824820 ; 9781849508537 ; 9781849508537 ; The Peace Dividend Volume 235 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 1996 ; 9780444824820 ; 9781849508537 ; 9781849508537 ; The Peace Dividend Volume 235 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 1997 ; 9780444827678 ; 9781849508520 ; 9781849508520 ; Government for the Future Volume 238 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 1998 ; 9780444506924 ; 9781849508476 ; 9781849508476 ; Explaining Unemployment: Econometric Models for the Netherlands Volume 250 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 1999 ; 9780444502568 ; 9781849508513 ; 9781849508513 ; The Creation and Analysis of Employer-Employee Matched Data Volume 241 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
@@ -1679,11 +1679,11 @@
       au < crawling ; exists ; 2004 ; 9780444517081 ; 9781849508315 ; 9781849508315 ; Environmental Policy International Trade and Factor Markets Volume 267 ; http://www.emeraldinsight.com/ ; >
       au < finished ; crawling ; 2004 ; 9780444516336 ; 9781849508308 ; 9781849508308 ; New Directions in Macromodelling Volume 269 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2004 ; 9780444518163 ; 9781849508391 ; 9781849508391 ; The Political Economy of Policy Reform: Essays in Honor of J. Michael Finger Volume 270 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2004 ; 9780444515346 ; 9781849508384 ; 9781849508384 ; The Economics of Time Use Volume 271 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2004 ; 9780444515346 ; 9781849508384 ; 9781849508384 ; The Economics of Time Use Volume 271 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2005 ; 9780444514813 ; 9781849508292 ; 9781849508292 ; Urban Dynamics and Growth: Advances in Urban Economics Volume 266 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2005 ; 9780444516770 ; 9781849508285 ; 9781849508285 ; Taxing the Hard-to-tax: Lessons from Theory and Practice Volume 268 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2005 ; 9780444518583 ; 9781849508377 ; 9781849508377 ; Patent Activity and Technical Change in US Industries Volume 272 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2005 ; 9780444518378 ; 9781849508322 ; 9781849508322 ; Modelling the Riskiness in Country Risk Ratings Volume 273 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2005 ; 9780444518378 ; 9781849508322 ; 9781849508322 ; Modelling the Riskiness in Country Risk Ratings Volume 273 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2006 ; 9780444521729 ; 9781849508360 ; 9781849508360 ; Panel Data Econometrics Theoretical Contributions and Empirical Applications Volume 274 ; http://www.emeraldinsight.com/ ; >
       au < finished ; crawling ; 2006 ; 9780444520890 ; 9781849508346 ; 9781849508346 ; Structural Models of Wage and Employment Dynamics Volume 275 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2006 ; 9780444518385 ; 9781849508339 ; 9781849508339 ; Nonlinear Time Series Analysis of Business Cycles Volume 276 ; http://www.emeraldinsight.com/ ; >
@@ -1700,7 +1700,7 @@
       au < finished ; crawling ; 2009 ; 9781848552609 ; 9781848552616 ; 9781848552616 ; The Asian Economy and Asian Money Volume 287 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2009 ; 9781848553125 ; 9781848553132 ; 9781848553132 ; Quantifying Consumer Preferences Volume 288 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2010 ; 9780857241474 ; 9780857241481 ; 9780857241481 ; Transportation Indicators and Business Cycles Volume 289 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2010 ; 9780857241559 ; 9780857241566 ; 9780857241566 ; Current Issues in Health Economics Volume 290 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2010 ; 9780857241559 ; 9780857241566 ; 9780857241566 ; Current Issues in Health Economics Volume 290 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2011 ; 9780857247216 ; 9780857247223 ; 9780857247223 ; Contributions to Economic Analysis Volume 291 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2011 ; 9781780523149 ; 9781780523156 ; 9781780523156 ; The United States of Europe: European Union and the Euro Revolution, Revised Edition Volume 292 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2014 ; 9781783505692 ; 9781783505708 ; 9781783505708 ; Handbook of Microsimulation Modelling Volume 293 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
@@ -1744,7 +1744,7 @@
       au < finished ; crawling ; 2013 ; 9781781907702 ; 9781781907719 ; 9781781907719 ; Institutional Investors’ Power to Change Corporate Behavior: International Perspectives Volume 5 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2014 ; 9781783507955 ; 9781783507962 ; 9781783507962 ; Communicating Corporate Social Responsibility: Perspectives and Practice Volume 6 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2014 ; 9781783504671 ; 9781783504688 ; 9781783504688 ; Socially Responsible Investment in the 21st Century: Does it Make a Difference for Society? Volume 7 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2014 ; 9781784411527 ; 9781784411510 ; 9781784411510 ; Corporate Social Responsibility and Sustainability: Emerging Trends in Developing Economies Volume 8 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2014 ; 9781784411527 ; 9781784411510 ; 9781784411510 ; Corporate Social Responsibility and Sustainability: Emerging Trends in Developing Economies Volume 8 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2015 ; 9781784415846 ; 9781784415839 ; 9781784415839 ; The Human Factor In Social Capital Management: The Owner-manager Perspective Volume 9 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2016 ; 9781785609800 ; 9781785609794 ; 9781785609794 ; Finance Reconsidered: New Perspectives for a Responsible and Sustainable Finance Volume 10 ; http://www.emeraldinsight.com/ ; >
       au < finished ; crawling ; 2016 ; 9781786355102 ; 9781786355096 ; 9781786355096 ; Finance and Economy for Society: Integrating Sustainability Volume 11 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
@@ -1771,7 +1771,7 @@
       au < finished ; crawling ; 2010 ; 9780857242235 ; 9780857242242 ; 9780857242242 ; Theorizing the Dynamics of Social Processes Volume 27 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2011 ; 9780857247971 ; 9780857247988 ; 9780857247988 ; The Vitality Of Critical Theory Volume 28 ; http://www.emeraldinsight.com/ ; >
       au < finished ; crawling ; 2011 ; 9780857248213 ; 9780857248220 ; 9780857248220 ; The Diversity of Social Theories Volume 29 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2012 ; 9781781900345 ; 9781781900352 ; 9781781900352 ; Theorizing Modern Society as a Dynamic Process Volume 30 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2012 ; 9781781900345 ; 9781781900352 ; 9781781900352 ; Theorizing Modern Society as a Dynamic Process Volume 30 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2013 ; 9781783502189 ; 9781783502196 ; 9781783502196 ; Social Theories of History and Histories of Social Theory Volume 31 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2014 ; 9781784412234 ; 9781784412227 ; 9781784412227 ; Mediations of Social Life in the 21st Century Volume 32 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; 9781785602474 ; 9781785602467 ; 9781785602467 ; Globalization, Critique and Social Theory: Diagnoses and Challenges Volume 33 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
@@ -1801,7 +1801,7 @@
       au < finished ; crawling ; 2012 ; 9781781902400 ; 9781781902417 ; 9781781902417 ; Increasing Student Engagement and Retention Using Immersive Interfaces: Virtual Worlds, Gaming, and Simulation Volume 6 Part C ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2013 ; 9781781905098 ; 9781781905104 ; 9781781905104 ; Increasing Student Engagement and Retention Using Mobile Applications: Smartphones, Skype and Texting Technologies Volume 6 Part D ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2013 ; 9781781905111 ; 9781781905128 ; 9781781905128 ; Increasing Student Engagement and Retention Using Classroom Technologies: Classroom Response Systems and Mediated Discourse Technologies Volume 6 Part E ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2013 ; 9781781905135 ; 9781781905142 ; 9781781905142 ; Increasing Student Engagement and Retention using Multimedia Technologies: Video Annotation, Multimedia Applications, Videoconferencing and Transmedia Storytelling Volume 6 Part F ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2013 ; 9781781905135 ; 9781781905142 ; 9781781905142 ; Increasing Student Engagement and Retention using Multimedia Technologies: Video Annotation, Multimedia Applications, Videoconferencing and Transmedia Storytelling Volume 6 Part F ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2013 ; 9781781905159 ; 9781781905166 ; 9781781905166 ; Increasing Student Engagement and Retention in e-learning Environments: Web 2.0 and Blended Learning Technologies Volume 6 Part G ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2013 ; 9781781906880 ; 9781781906897 ; 9781781906897 ; Digital Humanities: Current Perspective, Practices, and Research Volume 7 ; http://www.emeraldinsight.com/ ; >
       au < finished ; crawling ; 2013 ; 9781781906903 ; 9781781906910 ; 9781781906910 ; Redesigning Courses for Online Delivery Volume 8 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
@@ -1819,7 +1819,7 @@
       #param[journal_issn] = 2043-0523
       #series = dcgr
 
-      au < frozen ; exists ; 2010 ; 9780857242952 ; 9780857242969 ; 9780857242969 ; NGOs and Social Responsibility Volume 1 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2010 ; 9780857242952 ; 9780857242969 ; 9780857242969 ; NGOs and Social Responsibility Volume 1 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2011 ; 9780857248770 ; 9780857248787 ; 9780857248787 ; Governance in the Business Environment Volume 2 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2012 ; 9781780527369 ; 9781780527376 ; 9781780527376 ; Business Strategy and Sustainability Volume 3 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2013 ; 9781781905890 ; 9781781905906 ; 9781781905906 ; Education and Corporate Social Responsibility International Perspectives Volume 4 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
@@ -1893,7 +1893,7 @@
       #series = feg
 
       au < finished ; crawling ; 2006 ; 9780444527653 ; 9781849500135 ; 9781849500135 ; Theory and Practice of Foreign Aid Volume 1 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2007 ; 9780444527646 ; 9781849505390 ; 9781849505390 ; Intellectual Property, Growth and Trade Volume 2 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2007 ; 9780444527646 ; 9781849505390 ; 9781849505390 ; Intellectual Property, Growth and Trade Volume 2 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2008 ; 9780444529428 ; 9781849505406 ; 9781849505406 ; Forecasting in the Presence of Structural Breaks and Model Uncertainty Volume 3 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2008 ; 9780444531902 ; 9781849505413 ; 9781849505413 ; Contemporary and Emerging Issues in Trade Theory and Policy Volume 4 ; http://www.emeraldinsight.com/ ; >
       au < finished ; crawling ; 2008 ; 9781846639623 ; 9781846639630 ; 9781846639630 ; Globalization and Emerging Issues in Trade Theory and Policy Volume 5 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
@@ -1923,7 +1923,7 @@
       #param[journal_issn] = 1574-0129
       #series = ffe
 
-      au < frozen ; exists ; 2008 ; 9780444532633 ; 9781849505420 ; 9781849505420 ; Frontiers of Family Economics Volume 1 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2008 ; 9780444532633 ; 9781849505420 ; 9781849505420 ; Frontiers of Family Economics Volume 1 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
 
   }
 
@@ -1962,7 +1962,7 @@
       au < finished ; crawling ; 2001 ; 9780762306862 ; 9781849500630 ; 9781849500630 ; Asian Financial Crisis Financial, Structural and International Dimensions Volume 1 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2001 ; 9780762308309 ; 9781849501286 ; 9781849501286 ; International Finance Review Volume 2 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2002 ; 9780762309825 ; 9781849501897 ; 9781849501897 ; Global Risk Management: Financial, Operational, and Insurance Strategies Volume 3 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2003 ; 9780762310685 ; 9781849502467 ; 9781849502467 ; The Japanese Finance: Corporate Finance and Capital Markets in ... Volume 4 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2003 ; 9780762310685 ; 9781849502467 ; 9781849502467 ; The Japanese Finance: Corporate Finance and Capital Markets in ... Volume 4 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2005 ; 9780762311637 ; 9781849503150 ; 9781849503150 ; Latin American Financial Markets: Developments in Financial Innovations Volume 5 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2006 ; 9780762312641 ; 9781849503815 ; 9781849503815 ; Emerging European Financial Markets: Independence and Integration Post-Enlargement Volume 6 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2006 ; 9780762313921 ; 9781849504751 ; 9781849504751 ; Value Creation in Multinational Enterprise Volume 7 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
@@ -2126,17 +2126,17 @@
       #param[journal_issn] = 1876-0562
       #series = lis
 
-      au < frozen ; exists ; 1991 ; 9780122870415 ; 9781849507950 ; 9781849507950 ; Library Technical Services: Operations and Management Volume 91A ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 1991 ; 9780122870415 ; 9781849507950 ; 9781849507950 ; Library Technical Services: Operations and Management Volume 91A ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 1991 ; 9780124245204 ; 9781849507967 ; 9781849507967 ; Operations Research for Libraries and Information Agencies: Techniques for the Evaluation of Management Decision Alternatives Volume 91B ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 1994 ; 9780124650305 ; 9781849507943 ; 9781849507943 ; Information Services for Innovative Organizations Volume 94A ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 1994 ; 9780122215704 ; 9781849508001 ; 9781849508001 ; Using Subject Headings for Online Retrieval: Theory, Practice and Potential Volume 94B ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 1996 ; 9780120510405 ; 9781849508018 ; 9781849508018 ; Information Tasks: Toward a User-centered Approach to Information Systems Volume 96 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 1997 ; 9780122661709 ; 9781849507981 ; 9781849507981 ; Automated Information Retrieval: Theory and Methods Volume 97A ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 1997 ; 9780124874152 ; 9781849507998 ; 9781849507998 ; Communicating Research Volume 97B ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2001 ; 9780123341518 ; 9781849507929 ; 9781849507929 ; Models for Library Management, Decision Making and Planning Volume 01 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2001 ; 9780123341518 ; 9781849507929 ; 9781849507929 ; Models for Library Management, Decision Making and Planning Volume 01 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2002 ; 9780125877800 ; 9781849507974 ; 9781849507974 ; Understanding Reference Transactions: Transforming an Art into a Science Volume 02 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2004 ; 9780120885534 ; 9781849507905 ; 9781849507905 ; Link Analysis: An Information Science Approach Volume 04 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2005 ; 9780120887538 ; 9781849508025 ; 9781849508025 ; Power Laws in the Information Production Process: Lotkaian Informetrics Volume 05 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2005 ; 9780120887538 ; 9781849508025 ; 9781849508025 ; Power Laws in the Information Production Process: Lotkaian Informetrics Volume 05 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2011 ; 9781780521701 ; 9781780521718 ; 9781780521718 ; New Directions in Information Behaviour Volume 1 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2012 ; 9781780524702 ; 9781780524719 ; 9781780524719 ; Library and Information Science Trends and Research: Asia-Oceania Volume 2 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2012 ; 9781780526362 ; 9781780526379 ; 9781780526379 ; Web Search Engine Research Volume 4 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
@@ -2161,7 +2161,7 @@
       #series = lrpe
 
       au < finished ; crawling ; 2012 ; 9781780526300 ; 9781780526317 ; 9781780526317 ; Using Informative Assessments towards Effective Literacy Instruction Volume 1 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2013 ; 9781781905036 ; 9781781905043 ; 9781781905043 ; Advanced Literacy Practices Volume 2 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2013 ; 9781781905036 ; 9781781905043 ; 9781781905043 ; Advanced Literacy Practices Volume 2 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2013 ; 9781781906965 ; 9781781906972 ; 9781781906972 ; School-Based Interventions for Struggling Readers, K-8 Volume 3 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2014 ; 9781783508211 ; 9781783508228 ; 9781783508228 ; Theoretical Models of Learning and Literacy Development Volume 4 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2015 ; 9781784416768 ; 9781784416751 ; 9781784416751 ; Video Reflection in Literacy Teacher Education and Development: Lessons from Research and Practice Volume 5 ; http://www.emeraldinsight.com/ ; >
@@ -2201,7 +2201,7 @@
       #series = ntbfnm
 
       au < finished ; crawling ; 2008 ; 9780080554488 ; 9781849505444 ; 9781849505444 ; New Technology-Based Firms in the New Millenium Volume 6 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2009 ; 9781848557826 ; 9781848557833 ; 9781848557833 ; New Technology-Based Firms in the New Millenium Volume 7 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2009 ; 9781848557826 ; 9781848557833 ; 9781848557833 ; New Technology-Based Firms in the New Millenium Volume 7 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2010 ; 9780857243737 ; 9780857243744 ; 9780857243744 ; New Technology-Based Firms in the New Millennium Volume 8 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2012 ; 9781780521183 ; 9781780521190 ; 9781780521190 ; New Technology-Based Firms in the New Millennium Volume 9 ; http://www.emeraldinsight.com/ ; >
       au < finished ; crawling ; 2013 ; 9781781903155 ; 9781781903162 ; 9781781903162 ; New Technology-Based Firms in the New Millennium Volume 10 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
@@ -2252,9 +2252,9 @@
       au < finished ; crawling ; 2013 ; 9781781906033 ; 9781781906040 ; 9781781906040 ; Postcolonial Sociology Volume 24 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2013 ; 9781781907269 ; 9781781907276 ; 9781781907276 ; Decentering Social Theory Volume 25 ; http://www.emeraldinsight.com/ ; >
       au < finished ; crawling ; 2014 ; 9781783508297 ; 9781783508303 ; 9781783508303 ; The United States in Decline Volume 26 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2014 ; 9781783506682 ; 9781783506675 ; 9781783506675 ; Fields of Knowledge: Science, Politics and Publics in the Neoliberal Age Volume 27 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2014 ; 9781783506682 ; 9781783506675 ; 9781783506675 ; Fields of Knowledge: Science, Politics and Publics in the Neoliberal Age Volume 27 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; 9781784417581 ; 9781784417574 ; 9781784417574 ; Patrimonial Capitalism and Empire Volume 28 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2015 ; 9781785600937 ; 9781785600920 ; 9781785600920 ; Chartering Capitalism: Organizing Markets, States, and Publics Volume 29 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2015 ; 9781785600937 ; 9781785600920 ; 9781785600920 ; Chartering Capitalism: Organizing Markets, States, and Publics Volume 29 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; 9781786350749 ; 9781786350732 ; 9781786350732 ; Perverse Politics? Feminism, Anti-Imperialism, Multiplicity Volume 30 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; 9781787142671 ; 9781787142664 ; 9781787142664 ; International Origins of Social and Political Theory Volume 32 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2017 ; 9781787146556 ; 9781787146549 ; 9781787146549 ; Rethinking the Colonial State Volume 33 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
@@ -2311,7 +2311,7 @@
       #series = raee
 
       au < finished ; manifest ; 2008 ; 9781848552524 ; 9781848552531 ; 9781848552531 ; Corporate Governance in Less Developed and Emerging Economies Volume 8 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2009 ; 9781849506250 ; 9781849506267 ; 9781849506267 ; Accounting in Emerging Economies Volume 9 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2009 ; 9781849506250 ; 9781849506267 ; 9781849506267 ; Accounting in Emerging Economies Volume 9 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2010 ; 9780857244512 ; 9780857244529 ; 9780857244529 ; Research in Accounting in Emerging Economies Volume 10 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2011 ; 9781780524443 ; 9781780524450 ; 9781780524450 ; Accounting in Asia Volume 11 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2012 ; 9781781902226 ; 9781781902233 ; 9781781902233 ; Accounting in Africa Volume 12 Part A ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
@@ -2351,7 +2351,7 @@
       #param[journal_issn] = 0192-0812
       #series = rcmh
 
-      au < frozen ; exists ; 2000 ; 9780762306718 ; 9781849500586 ; 9781849500586 ; Research in Community and Mental Health Volume 11 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2000 ; 9780762306718 ; 9781849500586 ; 9781849500586 ; Research in Community and Mental Health Volume 11 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2002 ; 9780762309726 ; 9781849501835 ; 9781849501835 ; Community-Based Interventions for Criminal Offenders with Severe Mental Illness Volume 12 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2004 ; 9780762311293 ; 9781849502863 ; 9781849502863 ; Research on Employment for Persons with Severe Mental Illness Volume 13 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2006 ; 9780762313150 ; 9781849504164 ; 9781849504164 ; Research on Community-Based Mental Health Services for Children and Adolescents Volume 14 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
@@ -2371,7 +2371,7 @@
 
       au < finished ; crawling ; 2008 ; 9781848552104 ; 9781848552111 ; 9781848552111 ; A Focused Issue on Fundamental Issues in Competence Theory Development Volume 4 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2010 ; 9781849509909 ; 9781849509916 ; 9781849509916 ; A Focussed Issue on Identifying, Building, and Linking Competences Volume 5 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2012 ; 9781780528823 ; 9781780528830 ; 9781780528830 ; A Focused Issue on Competence Perspectives on New Industry Dynamics Volume 6 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2012 ; 9781780528823 ; 9781780528830 ; 9781780528830 ; A Focused Issue on Competence Perspectives on New Industry Dynamics Volume 6 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2014 ; 9781784412753 ; 9781784412746 ; 9781784412746 ; A Focused Issue on Building New Competences in Dynamic Environments Volume 7 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
 
   }
@@ -2422,7 +2422,7 @@
       au < finished ; crawling ; 2010 ; 9780857241177 ; 9780857241184 ; 9780857241184 ; Economic Action in Theory and Practice: Anthropological Investigations Volume 30 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2011 ; 9781780522289 ; 9781780522296 ; 9781780522296 ; The Economics of Religion: Anthropological Approaches Volume 31 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2012 ; 9781781900581 ; 9781781900598 ; 9781781900598 ; Political Economy, Neoliberalism, and the Prehistoric Economies of Latin America Volume 32 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2013 ; 9781781905418 ; 9781781905425 ; 9781781905425 ; Engaging with Capitalism: Cases from Oceania Volume 33 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2013 ; 9781781905418 ; 9781781905425 ; 9781781905425 ; Engaging with Capitalism: Cases from Oceania Volume 33 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2014 ; 9781784410568 ; 9781784410551 ; 9781784410551 ; Production, Consumption, Business and the Economy: Structural Ideals and Moral Realities Volume 34 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2015 ; 9781785603617 ; 9781785603600 ; 9781785603600 ; Climate Change, Culture, and Economics: Anthropological Investigations Volume 35 ; http://www.emeraldinsight.com/ ; >
       au < finished ; crawling ; 2016 ; 9781786352286 ; 9781786352279 ; 9781786352279 ; The Economics of Ecology, Exchange, and Adaptation: Anthropological Explorations Volume 36 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
@@ -2469,7 +2469,7 @@
       #param[journal_issn] = 1529-2096
       #series = reio
 
-      au < frozen ; exists ; 2000 ; 9780762306633 ; 9781849500531 ; 9781849500531 ; Symposium on Health Care Ethics Volume 2 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2000 ; 9780762306633 ; 9781849500531 ; 9781849500531 ; Symposium on Health Care Ethics Volume 2 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2001 ; 9780762308095 ; 9781849501163 ; 9781849501163 ; The Next Phase of Business Ethics: Integrating Psychology and Ethics Volume 3 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2002 ; 9780762309559 ; 9781849501712 ; 9781849501712 ; Re-Imaging Business Ethics: Meaningful Solutions for a Global Economy Volume 4 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2003 ; 9780762310678 ; 9781849502450 ; 9781849502450 ; Spiritual Intelligence at Work: Meaning, Metaphor, and Morals Volume 5 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
@@ -2501,9 +2501,9 @@
       #series = rexe
 
       au < finished ; crawling ; 2001 ; 9780762307029 ; 9781849500715 ; 9781849500715 ; Research in Experimental Economics Volume 8 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2005 ; 9780762311743 ; 9781849503242 ; 9781849503242 ; Field Experiments in Economics Volume 10 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2006 ; 9780762313013 ; 9781849504065 ; 9781849504065 ; Experiments Investigating Fundraising and Charitable Contributors Volume 11 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2008 ; 9780762313846 ; 9781849505475 ; 9781849505475 ; Risk Aversion in Experiments Volume 12 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2005 ; 9780762311743 ; 9781849503242 ; 9781849503242 ; Field Experiments in Economics Volume 10 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2006 ; 9780762313013 ; 9781849504065 ; 9781849504065 ; Experiments Investigating Fundraising and Charitable Contributors Volume 11 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2008 ; 9780762313846 ; 9781849505475 ; 9781849505475 ; Risk Aversion in Experiments Volume 12 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2010 ; 9781849507684 ; 9781849507691 ; 9781849507691 ; Charity with Choice Volume 13 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2011 ; 9780857247476 ; 9780857247483 ; 9780857247483 ; Experiments on Energy, the Environment, and Sustainability Volume 14 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2012 ; 9781780527840 ; 9781780527857 ; 9781780527857 ; New Advances in Experimental Research on Corruption Volume 15 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
@@ -2533,7 +2533,7 @@
       au < finished ; crawling ; 2006 ; 9780762313457 ; 9781849504416 ; 9781849504416 ; Research in Finance Volume 23 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2008 ; 9780762313778 ; 9781849505499 ; 9781849505499 ; Research in Finance Volume 24 ; http://www.emeraldinsight.com/ ; >
       au < finished ; crawling ; 2009 ; 9781848554467 ; 9781848554474 ; 9781848554474 ; Research in Finance Volume 25 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2010 ; 9781849507264 ; 9781849507271 ; 9781849507271 ; Research in Finance Volume 26 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2010 ; 9781849507264 ; 9781849507271 ; 9781849507271 ; Research in Finance Volume 26 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2011 ; 9780857245410 ; 9780857245427 ; 9780857245427 ; Research in Finance Volume 27 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2012 ; 9781780527529 ; 9781780527536 ; 9781780527536 ; Research in Finance Volume 28 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2013 ; 9781781907580 ; 9781781907597 ; 9781781907597 ; Research in Finance Volume 29 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
@@ -2563,11 +2563,11 @@
       au < finished ; crawling ; 2004 ; 9780762310944 ; 9781849502603 ; 9781849502603 ; North American Economic and Financial Integration Volume 10 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2005 ; 9780762312207 ; 9781849503501 ; 9781849503501 ; Internalization, International Diversification and the Multinational Enterprise: Essays in Honor of Alan M. Rugman Volume 11 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2006 ; 9780762312962 ; 9781849504027 ; 9781849504027 ; Regional Economic Integration Volume 12 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2007 ; 9780762313952 ; 9781849504768 ; 9781849504768 ; Regional Aspects of Multinationality and Performance Volume 13 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2007 ; 9780762313952 ; 9781849504768 ; 9781849504768 ; Regional Aspects of Multinationality and Performance Volume 13 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2008 ; 9780762314706 ; 9781849505505 ; 9781849505505 ; International Business Scholarship: AIB Fellows on the First 50 Years and Beyond Volume 14 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2011 ; 9780857245557 ; 9780857245564 ; 9780857245564 ; The Future of Foreign Direct Investment and the Multinational Enterprise Volume 15 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2014 ; 9781784410391 ; 9781784410384 ; 9781784410384 ; Multidisciplinary Insights from New AIB Fellows Volume 16 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2016 ; 9781786353702 ; 9781786353696 ; 9781786353696 ; Perspectives on Headquarters-subsidiary Relationships in the Contemporary MNC Volume 17 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2016 ; 9781786353702 ; 9781786353696 ; 9781786353696 ; Perspectives on Headquarters-subsidiary Relationships in the Contemporary MNC Volume 17 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
 
   }
 
@@ -2611,7 +2611,7 @@
       au < finished ; manifest ; 2007 ; 9780762313907 ; 9781849504737 ; 9781849504737 ; Aspects of Worker Well-Being Volume 26 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2007 ; 9780762313914 ; 9781849504744 ; 9781849504744 ; Immigration Volume 27 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2008 ; 9780762313976 ; 9781849505529 ; 9781849505529 ; Work, Earnings and Other Aspects of the Employment Relation Volume 28 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2009 ; 9781849506335 ; 9781849506342 ; 9781849506342 ; Ethnicity and Labor Market Outcomes Volume 29 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2009 ; 9781849506335 ; 9781849506342 ; 9781849506342 ; Ethnicity and Labor Market Outcomes Volume 29 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2010 ; 9781849507660 ; 9781849507677 ; 9781849507677 ; Jobs, Training, and Worker Well-being Volume 30 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2010 ; 9780857240002 ; 9780857240019 ; 9780857240019 ; Child Labor and the Transition between School and Work Volume 31 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2011 ; 9780857247490 ; 9780857247506 ; 9780857247506 ; Who Loses in the Downturn? Economic Crisis, Employment and Income Distribution Volume 32 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
@@ -2626,7 +2626,7 @@
       au < finished ; crawling ; 2015 ; 9781784414566 ; 9781784414559 ; 9781784414559 ; Gender Convergence in the Labor Market Volume 41 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; 9781785601415 ; 9781785601408 ; 9781785601408 ; Gender in the Labor Market Volume 42 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2016 ; 9781785608117 ; 9781785608100 ; 9781785608100 ; Inequality: Causes and Consequences Volume 43 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2016 ; 9781785609442 ; 9781785609435 ; 9781785609435 ; Income Inequality Around the World Volume 44 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2016 ; 9781785609442 ; 9781785609435 ; 9781785609435 ; Income Inequality Around the World Volume 44 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; 9781787143784 ; 9781787143777 ; 9781787143777 ; Skill Mismatch in Labor Markets Volume 45 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
 
   }
@@ -2650,7 +2650,7 @@
       au < crawling ; exists ; 2009 ; 9781848553347 ; 9781848553354 ; 9781848553354 ; Law & Economics: Toward Social Justice Volume 24 ; http://www.emeraldinsight.com/ ; >
       au < finished ; crawling ; 2012 ; 9781780528984 ; 9781780528991 ; 9781780528991 ; Research in Law and Economics Volume 25 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2014 ; 9781783509515 ; 9781783509522 ; 9781783509522 ; The Law and Economics of Class Actions Volume 26 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2015 ; 9781785605635 ; 9781785605628 ; 9781785605628 ; Economic and Legal Issues in Competition, Intellectual Property, Bankruptcy, and the Cost of Raising Children Volume 27 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2015 ; 9781785605635 ; 9781785605628 ; 9781785605628 ; Economic and Legal Issues in Competition, Intellectual Property, Bankruptcy, and the Cost of Raising Children Volume 27 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
 
   }
 
@@ -2709,7 +2709,7 @@
       au < finished ; crawling ; 2003 ; 9780762310579 ; 9781849502382 ; 9781849502382 ; Emotional and Physiological Processes and Positive Intervention Strategies Volume 3 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2004 ; 9780762311538 ; 9781849503068 ; 9781849503068 ; Exploring Interpersonal Dynamics Volume 4 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2006 ; 9780762312894 ; 9781849503990 ; 9781849503990 ; Employee Health, Coping and Methodologies Volume 5 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2007 ; 9780762314447 ; 9781849505055 ; 9781849505055 ; Exploring the Work and Non-Work Interface Volume 6 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2007 ; 9780762314447 ; 9781849505055 ; 9781849505055 ; Exploring the Work and Non-Work Interface Volume 6 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2009 ; 9781848555440 ; 9781848555457 ; 9781848555457 ; Current Perspectives on Job-Stress Recovery Volume 7 ; http://www.emeraldinsight.com/ ; >
       au < finished ; manifest ; 2010 ; 9781849507127 ; 9781849507134 ; 9781849507134 ; New Developments in Theoretical and Conceptual Approaches to Job Stress Volume 8 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2011 ; 9780857247117 ; 9780857247124 ; 9780857247124 ; The Role of Individual Differences in Occupational Stress and Well Being Volume 9 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
@@ -2717,7 +2717,7 @@
       au < finished ; crawling ; 2013 ; 9781781905852 ; 9781781905869 ; 9781781905869 ; The Role of Emotion and Emotion Regulation in Job Stress and Well Being Volume 11 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2014 ; 9781783506477 ; 9781783506460 ; 9781783506460 ; The Role of Demographics in Occupational Stress and Well Being Volume 12 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2015 ; 9781785601170 ; 9781785601163 ; 9781785601163 ; Mistreatment in Organizations Volume 13 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2016 ; 9781786350626 ; 9781786350619 ; 9781786350619 ; The Role of Leadership in Occupational Stress Volume 14 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2016 ; 9781786350626 ; 9781786350619 ; 9781786350619 ; The Role of Leadership in Occupational Stress Volume 14 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2017 ; 9781787430662 ; 9781787430655 ; 9781787430655 ; Power, Politics, and Political Skill in Job Stress Volume 15 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
 
   }
@@ -2738,7 +2738,7 @@
       au < finished ; crawling ; 2003 ; 9780762309948 ; 9781849501958 ; 9781849501958 ; Research in Organizational Change and Development Volume 14 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2005 ; 9780762311675 ; 9781849503198 ; 9781849503198 ; Research in Organizational Change and Development Volume 15 ; http://www.emeraldinsight.com/ ; >
       au < finished ; crawling ; 2007 ; 9780762313266 ; 9781849504256 ; 9781849504256 ; Research in Organizational Change and Development Volume 16 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2009 ; 9781848555464 ; 9781848555471 ; 9781848555471 ; Research in Organizational Change and Development Volume 17 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2009 ; 9781848555464 ; 9781848555471 ; 9781848555471 ; Research in Organizational Change and Development Volume 17 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2010 ; 9780857241917 ; 9780857241924 ; 9780857241924 ; Research in Organizational Change and Development Volume 18 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2011 ; 9781780520223 ; 9781780520230 ; 9781780520230 ; Research in Organizational Change and Development Volume 19 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2012 ; 9781780528069 ; 9781780528076 ; 9781780528076 ; Research in Organizational Change and Development Volume 20 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
@@ -2794,7 +2794,7 @@
 
       au < finished ; crawling ; 2000 ; 9780762306961 ; 9781849505727 ; 9781849505727 ; Value, Capitalist Dynamics and Money Volume 18 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2001 ; 9780762308385 ; 9781849501330 ; 9781849501330 ; Marx's Capital and Capitalism\; Markets in a Socialist Alternative Volume 19 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2002 ; 9780762309849 ; 9781849501903 ; 9781849501903 ; Confronting 9-11, Ideologies of Race, and Eminent Economists Volume 20 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2002 ; 9780762309849 ; 9781849501903 ; 9781849501903 ; Confronting 9-11, Ideologies of Race, and Eminent Economists Volume 20 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2004 ; 9780762310982 ; 9781849502634 ; 9781849502634 ; Neoliberalism in Crisis, Accumulation, and Rosa Luxemburg's Legacy Volume 21 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2005 ; 9780762311767 ; 9781849503266 ; 9781849503266 ; The Capitalist State and Its Economy: Democracy in Socialism Volume 22 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2006 ; 9780762313051 ; 9781849504089 ; 9781849504089 ; The Hidden History of 9-11-2001 Volume 23 ; http://www.emeraldinsight.com/ ; >
@@ -2845,15 +2845,15 @@
       #series = rpp
 
       au < manifest ; exists ; 2001 ; 9780762307593 ; 9781849500920 ; 9781849500920 ; Learning from International Public Management Reform: Part A Volume 11 Part 1 ; https://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2001 ; 9780762307609 ; 9781849500937 ; 9781849500937 ; Learning from International Public Management Reform: Part B Volume 11 Part 2 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2001 ; 9780762307609 ; 9781849500937 ; 9781849500937 ; Learning from International Public Management Reform: Part B Volume 11 Part 2 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2002 ; 9780762309047 ; 9781849501651 ; 9781849501651 ; The Transformative Power of Dialogue Volume 12 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2004 ; 9780762310319 ; 9781849502184 ; 9781849502184 ; Strategies for Public Management Reform Volume 13 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2004 ; 9780762310319 ; 9781849502184 ; 9781849502184 ; Strategies for Public Management Reform Volume 13 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2006 ; 9780762312269 ; 9781849503556 ; 9781849503556 ; Public Ethics and Governance: Standards and Practices in Comparative Perspective Volume 14 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2006 ; 9780762313594 ; 9781849504539 ; 9781849504539 ; Comparative Public Administration Volume 15 ; http://www.emeraldinsight.com/ ; >
       au < finished ; crawling ; 2007 ; 9780762314003 ; 9781849504782 ; 9781849504782 ; Cultural Aspects of Public Management Reform Volume 16 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2008 ; 9781846639968 ; 9781846639975 ; 9781846639975 ; Comparative Governance Reform in Asia: Democracy, Corruption, and Government Trust Volume 17 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2009 ; 9781849506397 ; 9781849506403 ; 9781849506403 ; The Many Faces of Public Management Reform in the Asia-Pacific Region Volume 18 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2010 ; 9781849509244 ; 9781849509251 ; 9781849509251 ; Public Administration Singapore-style Volume 19 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2010 ; 9781849509244 ; 9781849509251 ; 9781849509251 ; Public Administration Singapore-style Volume 19 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2011 ; 9780857248190 ; 9780857248206 ; 9780857248206 ; Curbing Corruption in Asian Countries: An Impossible Dream? Volume 20 ; http://www.emeraldinsight.com/ ; >
       au < finished ; manifest ; 2011 ; 9781780521107 ; 9781780521114 ; 9781780521114 ; New Steering Concepts in Public Management Volume 21 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2012 ; 9781780528687 ; 9781780528694 ; 9781780528694 ; Institutional Reforms in the Public Sector: What Did We Learn? Volume 22 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
@@ -2874,7 +2874,7 @@
 
       au < finished ; crawling ; 2008 ; 9780762314096 ; 9781849505550 ; 9781849505550 ; Biculturalism, Self Identity and Societal Transformation Volume 15 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2010 ; 9780857241672 ; 9780857241689 ; 9780857241689 ; Race in the Age of Obama Volume 16 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2012 ; 9781780523446 ; 9781780523453 ; 9781780523453 ; Hispanic Migration and Urban Development: Studies from Washington DC Volume 17 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2012 ; 9781780523446 ; 9781780523453 ; 9781780523453 ; Hispanic Migration and Urban Development: Studies from Washington DC Volume 17 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2013 ; 9781781901847 ; 9781781901854 ; 9781781901854 ; 21st Century Urban Race Politics: Representing Minorities as Universal Interests Volume 18 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; 9781783509829 ; 9781783509812 ; 9781783509812 ; Race in the Age of Obama: Part 2 Volume 19 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
 
@@ -2891,19 +2891,19 @@
       #param[journal_issn] = 1057-1922
       #series = rrsd
 
-      au < frozen ; exists ; 2000 ; 9780762304745 ; 9781849500289 ; 9781849500289 ; Research in Rural Sociology and Development Volume 8 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2000 ; 9780762304745 ; 9781849500289 ; 9781849500289 ; Research in Rural Sociology and Development Volume 8 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2003 ; 9780762309542 ; 9781849501705 ; 9781849501705 ; Walking Towards Justice: Democratization in Rural Life Volume 9 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2005 ; 9780762311620 ; 9781849503143 ; 9781849503143 ; Nature, Raw Materials, and Political Economy Volume 10 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2005 ; 9780762312504 ; 9781849503730 ; 9781849503730 ; New Directions in the Sociology of Global Development Volume 11 ; http://www.emeraldinsight.com/ ; >
       au < finished ; manifest ; 2006 ; 9780762313174 ; 9781849504171 ; 9781849504171 ; Between the Local and the Global Volume 12 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2007 ; 9780762314201 ; 9781849504898 ; 9781849504898 ; Gender Regimes, Citizen Participation and Rural Restructuring Volume 13 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2009 ; 9781848551381 ; 9781848551398 ; 9781848551398 ; Beyond the Rural-Urban Divide: Cross-Continental Perspectives on the Differentiated Countryside and its Regulation Volume 14 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2010 ; 9781849509183 ; 9781849509190 ; 9781849509190 ; Welfare Reform in Rural Places: Comparative Perspectives Volume 15 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2010 ; 9781849509183 ; 9781849509190 ; 9781849509190 ; Welfare Reform in Rural Places: Comparative Perspectives Volume 15 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2010 ; 9780857242815 ; 9780857242822 ; 9780857242822 ; From Community to Consumption: New and Classical Themes in Rural Sociological Research Volume 16 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2011 ; 9780857243171 ; 9780857243188 ; 9780857243188 ; Globalization and the Time-Space Reorganization Volume 17 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2012 ; 9781780523484 ; 9781780523491 ; 9781780523491 ; Rethinking Agricultural Policy Regimes: Food Security, Climate Change and the Future Resilience of Global Agriculture Volume 18 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2013 ; 9781781905975 ; 9781781905982 ; 9781781905982 ; Agriculture in Mediterranean Europe: Between Old and New Paradigms Volume 19 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2014 ; 9781783507115 ; 9781783507122 ; 9781783507122 ; Labor Relations in Globalized Food Volume 20 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2013 ; 9781781905975 ; 9781781905982 ; 9781781905982 ; Agriculture in Mediterranean Europe: Between Old and New Paradigms Volume 19 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2014 ; 9781783507115 ; 9781783507122 ; 9781783507122 ; Labor Relations in Globalized Food Volume 20 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2014 ; 9781784410902 ; 9781784410896 ; 9781784410896 ; Alternative Agrifood Movements: Patterns of Convergence and Divergence Volume 21 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2015 ; 9781784416225 ; 9781784416218 ; 9781784416218 ; Constructing a New Framework for Rural Development Volume 22 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2016 ; 9781785607974 ; 9781785607967 ; 9781785607967 ; Metropolitan Ruralities Volume 23 ; http://www.emeraldinsight.com/ ; >
@@ -2922,12 +2922,12 @@
       #param[journal_issn] = 0163-786X
       #series = rsmcc
 
-      au < frozen ; exists ; 2000 ; 9780762306657 ; 9781849500548 ; 9781849500548 ; Research in Social Movements, Conflicts and Change Volume 22 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2000 ; 9780762306657 ; 9781849500548 ; 9781849500548 ; Research in Social Movements, Conflicts and Change Volume 22 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2001 ; 9780762307869 ; 9781849501057 ; 9781849501057 ; Political Opportunities Social Movements, and Democratization Volume 23 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2002 ; 9780762307876 ; 9781849501064 ; 9781849501064 ; Consensus Decision Making, Northern Ireland and Indigenous Movements Volume 24 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2004 ; 9780762310371 ; 9781849502238 ; 9781849502238 ; Authority in Contention Volume 25 ; http://www.emeraldinsight.com/ ; >
       au < finished ; crawling ; 2005 ; 9780762312634 ; 9781849503808 ; 9781849503808 ; Research in Social Movements, Conflicts and Change Volume 26 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2007 ; 9780762313181 ; 9781849504188 ; 9781849504188 ; Research in Social Movements, Conflicts and Change Volume 27 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2007 ; 9780762313181 ; 9781849504188 ; 9781849504188 ; Research in Social Movements, Conflicts and Change Volume 27 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2008 ; 9781846638923 ; 9781846638930 ; 9781846638930 ; Research in Social Movements, Conflicts and Change Volume 28 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2008 ; 9781848552906 ; 9781848552913 ; 9781848552913 ; Pushing the Boundaries: New Frontiers in Conflict Resolution and Collaboration Volume 29 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2010 ; 9780857240361 ; 9780857240378 ; 9780857240378 ; Research in Social Movements, Conflicts and Change Volume 30 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
@@ -2938,9 +2938,9 @@
       au < finished ; crawling ; 2013 ; 9781781906354 ; 9781781906361 ; 9781781906361 ; Advances in the Visual Analysis of Social Movements Volume 35 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2013 ; 9781781907320 ; 9781781907337 ; 9781781907337 ; Research in Social Movements, Conflicts and Change Volume 36 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2014 ; 9781784411060 ; 9781784411053 ; 9781784411053 ; Intersectionality and Social Change Volume 37 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2015 ; 9781785603594 ; 9781785603587 ; 9781785603587 ; Research in Social Movements, Conflicts and Change Volume 38 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2015 ; 9781785603594 ; 9781785603587 ; 9781785603587 ; Research in Social Movements, Conflicts and Change Volume 38 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2016 ; 9781786350282 ; 9781786350275 ; 9781786350275 ; Protest, Social Movements and Global Democracy Since 2011: New Perspectives Volume 39 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2016 ; 9781786350787 ; 9781786350770 ; 9781786350770 ; Narratives of Identity in Social Movements, Conflicts and Change Volume 40 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2016 ; 9781786350787 ; 9781786350770 ; 9781786350770 ; Narratives of Identity in Social Movements, Conflicts and Change Volume 40 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2017 ; 9781787141919 ; 9781787141902 ; 9781787141902 ; Non-State Violent Actors and Social Movement Organizations Volume 41 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
 
   }
@@ -2961,16 +2961,16 @@
       au < finished ; manifest ; 2002 ; 9780762308545 ; 9781849501415 ; 9781849501415 ; The Environmental State Under Pressure Volume 10 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2003 ; 9780762310432 ; 9781849502276 ; 9781849502276 ; Terrorism and Disaster: New Threats, New Ideas Volume 11 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2005 ; 9780762312313 ; 9781849503600 ; 9781849503600 ; The Organizatioanl Response to Persons with Mental Illness Invloved with the Criminal Justice System Volume 12 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2006 ; 9780762313198 ; 9781849504195 ; 9781849504195 ; Long-Term Management of Contaminated Sites Volume 13 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2006 ; 9780762313198 ; 9781849504195 ; 9781849504195 ; Long-Term Management of Contaminated Sites Volume 13 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2007 ; 9780762313716 ; 9781849504607 ; 9781849504607 ; Cultures of Contamination Volume 14 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2007 ; 9780762314171 ; 9781849504881 ; 9781849504881 ; Equity and the Environment Volume 15 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2007 ; 9780762314171 ; 9781849504881 ; 9781849504881 ; Equity and the Environment Volume 15 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2008 ; 9781848552982 ; 9781848552999 ; 9781848552999 ; Integrating the Sciences and Society: Challenges, Practices, and Potentials Volume 16 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2010 ; 9781849507363 ; 9781849507370 ; 9781849507370 ; New Approaches to Social Problems Treatment Volume 17 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2010 ; 9780857241832 ; 9780857241849 ; 9780857241849 ; Environment and Social Justice: An International Perspective Volume 18 ; http://www.emeraldinsight.com/ ; >
       au < finished ; crawling ; 2011 ; 9780857243898 ; 9780857243904 ; 9780857243904 ; Government Secrecy Volume 19 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2012 ; 9781781903759 ; 9781781903766 ; 9781781903766 ; Disaster by Design: The Aral Sea and its Lessons for Sustainability Volume 20 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2013 ; 9781781907344 ; 9781781907351 ; 9781781907351 ; William R. Freudenburg, A Life in Social Research Volume 21 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2016 ; 9781786352347 ; 9781786352330 ; 9781786352330 ; Paradoxes of the Democratization of Higher Education Volume 22 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2016 ; 9781786352347 ; 9781786352330 ; 9781786352330 ; Paradoxes of the Democratization of Higher Education Volume 22 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
 
   }
 
@@ -2987,11 +2987,11 @@
 
       au < crawling ; exists ; 2000 ; 9780762305513 ; 9781849500364 ; 9781849500364 ; Expanding the Scope of Social Science Research on Disability Volume 1 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2001 ; 9780762307739 ; 9781849501026 ; 9781849501026 ; Exploring Theories and Expanding Methodologies: Where we are and where we need to go Volume 2 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2003 ; 9780762310074 ; 9781849502030 ; 9781849502030 ; Using Survey Data to Study Disability: Results from the National Health Survey on Disability Volume 3 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2006 ; 9780762312825 ; 9781849503945 ; 9781849503945 ; International Views on Disability Measures: Moving Toward Comparative Measurement Volume 4 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2010 ; 9780857243775 ; 9780857243782 ; 9780857243782 ; Disability as a Fluid State Volume 5 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2003 ; 9780762310074 ; 9781849502030 ; 9781849502030 ; Using Survey Data to Study Disability: Results from the National Health Survey on Disability Volume 3 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2006 ; 9780762312825 ; 9781849503945 ; 9781849503945 ; International Views on Disability Measures: Moving Toward Comparative Measurement Volume 4 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2010 ; 9780857243775 ; 9780857243782 ; 9780857243782 ; Disability as a Fluid State Volume 5 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2011 ; 9780857247995 ; 9780857248008 ; 9780857248008 ; Disability and Community Volume 6 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2013 ; 9781783501564 ; 9781783501571 ; 9781783501571 ; Disability and Intersecting Statuses Volume 7 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2013 ; 9781783501564 ; 9781783501571 ; 9781783501571 ; Disability and Intersecting Statuses Volume 7 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2014 ; 9781784412630 ; 9781784412623 ; 9781784412623 ; Environmental Contexts and Disability Volume 8 ; http://www.emeraldinsight.com/ ; >
       au < finished ; crawling ; 2016 ; 9781786354785 ; 9781786354778 ; 9781786354778 ; Sociology Looking at Disability: What Did We Know and When Did We Know it Volume 9 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; 9781787146068 ; 9781787146051 ; 9781787146051 ; Factors in Studying Employment for Persons with Disability Volume 10 ; http://www.emeraldinsight.com/ ; >
@@ -3009,31 +3009,31 @@
       #param[journal_issn] = 0743-4154
       #series = rhet
 
-      au < frozen ; exists ; 2000 ; 9780762306374 ; 9781849500456 ; 9781849500456 ; A Research Annual Volume 18 Part 1 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2000 ; 9780762306374 ; 9781849500456 ; 9781849500456 ; A Research Annual Volume 18 Part 1 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2000 ; 9780762306350 ; 9781849500449 ; 9781849500449 ; American Economics Volume 18 Part 2 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2000 ; 9780762306541 ; 9781849500500 ; 9781849500500 ; Twentieth-Century Economics Volume 18 Part 3 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2001 ; 9780762307036 ; 9781849500722 ; 9781849500722 ; A Research Annual Volume 19 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2001 ; 9780762306947 ; 9781849500685 ; 9781849500685 ; Edward Everett Hale: The Writings of an Economic Maverick Volume 19 Part 2 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2001 ; 9780762307043 ; 9781849500739 ; 9781849500739 ; Edwin Seligman's Lectures on Public Finance, 1927/1928 Volume 19 Part 3 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2002 ; 9780762308477 ; 9781849501378 ; 9781849501378 ; A Research Annual Volume 20 Part 1 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2002 ; 9780762307937 ; 9781849501088 ; 9781849501088 ; Henry George's Writings on the United Kingdom Volume 20 Part 2 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2001 ; 9780762306947 ; 9781849500685 ; 9781849500685 ; Edward Everett Hale: The Writings of an Economic Maverick Volume 19 Part 2 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2001 ; 9780762307043 ; 9781849500739 ; 9781849500739 ; Edwin Seligman's Lectures on Public Finance, 1927/1928 Volume 19 Part 3 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2002 ; 9780762308477 ; 9781849501378 ; 9781849501378 ; A Research Annual Volume 20 Part 1 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2002 ; 9780762307937 ; 9781849501088 ; 9781849501088 ; Henry George's Writings on the United Kingdom Volume 20 Part 2 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2002 ; 9780762307944 ; 9781849501095 ; 9781849501095 ; Richard T Ely: The Story of Economics in the United States Volume 20 Part 3 ; http://www.emeraldinsight.com/ ; >
       au < finished ; manifest ; 2003 ; 9780762309962 ; 9781849505741 ; 9781849505741 ; A Research Annual Volume 21 Part 1 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2003 ; 9780762309979 ; 9781849501965 ; 9781849501965 ; Histories of Economic Thought Volume 21 Part 2 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2003 ; 9780762309986 ; 9781849501972 ; 9781849501972 ; Documents on Modern History of Economic Thought: Part C Volume 21 Part 3 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2004 ; 9780762310906 ; 9781849502580 ; 9781849502580 ; Wisconsin "Government and Business" and the History of Heterodox Economic T Volume 22 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2004 ; 9780762310906 ; 9781849502580 ; 9781849502580 ; Wisconsin "Government and Business" and the History of Heterodox Economic T Volume 22 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2004 ; 9780762310890 ; 9781849502573 ; 9781849502573 ; A Research Annual Volume 22 Part 1 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2005 ; 9780762311668 ; 9781849503181 ; 9781849503181 ; Further University of Wisconsin Materials: Further Documents of F. Taylor Ostrander Volume 23 ; http://www.emeraldinsight.com/ ; >
       au < finished ; manifest ; 2005 ; 9780762311644 ; 9781849503167 ; 9781849503167 ; A Research Annual Volume 23 Part 1 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2005 ; 9780762311651 ; 9781849503174 ; 9781849503174 ; Documents from F. Taylor Ostrander Volume 23 Part 2 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2006 ; 9780762313495 ; 9781849504447 ; 9781849504447 ; Research in the History of Economic Thought and Methodology Volume 24 Part 1 ; http://www.emeraldinsight.com/ ; >
       au < finished ; manifest ; 2006 ; 9780762313549 ; 9781849504492 ; 9781849504492 ; Further Documents from F. Taylor Ostrander Volume 24 Part 2 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2006 ; 9780762313556 ; 9781849504508 ; 9781849504508 ; Documents from and on Economic Thought Volume 24 Part 3 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2006 ; 9780762313556 ; 9781849504508 ; 9781849504508 ; Documents from and on Economic Thought Volume 24 Part 3 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2007 ; 9780762314225 ; 9781849504911 ; 9781849504911 ; A Research Annual Volume 25 Part 1 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2007 ; 9780762314232 ; 9781849504928 ; 9781849504928 ; Documents from the History of Economic Thought Volume 25 Part 2 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2007 ; 9780762314249 ; 9781849504935 ; 9781849504935 ; Further Documents from the History of Economic Thought Volume 25 Part 3 ; http://www.emeraldinsight.com/ ; >
       au < finished ; crawling ; 2008 ; 9781846639043 ; 9781846639050 ; 9781846639050 ; A Research Annual Volume 26 Part 1 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2008 ; 9781846639067 ; 9781846639074 ; 9781846639074 ; Documents from F. Taylor Ostrander at Oxford, John R. Commons' Reasonable Value Volume 26 Part 2 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2008 ; 9781846639067 ; 9781846639074 ; 9781846639074 ; Documents from F. Taylor Ostrander at Oxford, John R. Commons' Reasonable Value Volume 26 Part 2 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2008 ; 9781846639081 ; 9781846639098 ; 9781846639098 ; Documents on and from the History of Economic Thought and Methodology Volume 26 Part 3 ; http://www.emeraldinsight.com/ ; >
       au < finished ; crawling ; 2009 ; 9781848556560 ; 9781848556577 ; 9781848556577 ; A Research Annual Volume 27 Part 1 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2009 ; 9781848556584 ; 9781848556591 ; 9781848556591 ; Henry George, the Transatlantic Irish, and their Times Volume 27 Part 2 ; http://www.emeraldinsight.com/ ; >
@@ -3047,7 +3047,7 @@
       au < crawling ; exists ; 2012 ; 9781780528243 ; 9781780528250 ; 9781780528250 ; Research in the History of Economic Thought and Methodology: A Research Annual Volume 30 Part 1 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2012 ; 9781780528267 ; 9781780528274 ; 9781780528274 ; Documents on Government and the Economy Volume 30 Part 2 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2013 ; 9781783500581 ; 9781783500598 ; 9781783500598 ; A Research Annual Volume 31A ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2013 ; 9781783500604 ; 9781783500611 ; 9781783500611 ; Documents related to John Maynard Keynes, institutionalism at Chicago & Frank H. Knight Volume 31B ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2013 ; 9781783500604 ; 9781783500611 ; 9781783500611 ; Documents related to John Maynard Keynes, institutionalism at Chicago & Frank H. Knight Volume 31B ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2014 ; 9781784411541 ; 9781784411534 ; 9781784411534 ; A Research Annual Volume 32 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2015 ; 9781784418588 ; 9781784418571 ; 9781784418571 ; A Research Annual Volume 33 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2016 ; 9781785609602 ; 9781785609596 ; 9781785609596 ; Including a Symposium on Austrian Economics in the Postwar Era Volume 34A ; http://www.emeraldinsight.com/ ; >
@@ -3069,11 +3069,11 @@
 
       au < crawling ; exists ; 2002 ; 9780762308170 ; 9781849508858 ; 9781849508858 ; Schooling and Social Capital in Diverse Cultures Volume 13 ; http://www.emeraldinsight.com/ ; >
       au < finished ; crawling ; 2003 ; 9780762310616 ; 9781849502412 ; 9781849502412 ; Inequality Across Societies: Families, Schools and Persisting Stratification Volume 14 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2006 ; 9780762312917 ; 9781849504003 ; 9781849504003 ; Children's Lives and Schooling across Societies Volume 15 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2006 ; 9780762312917 ; 9781849504003 ; 9781849504003 ; Children's Lives and Schooling across Societies Volume 15 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2008 ; 9781846639104 ; 9781846639111 ; 9781846639111 ; Strong States, Weak Schools: The Benefits and Dilemmas of Centralized Accountability Volume 16 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2010 ; 9781849509763 ; 9781849509770 ; 9781849509770 ; Globalization, Changing Demographics, and Educational Challenges in East Asia Volume 17 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2012 ; 9781780527086 ; 9781780527093 ; 9781780527093 ; Beyond the Nation-State Volume 18 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2016 ; 9781784416287 ; 9781784416270 ; 9781784416270 ; Family Environments, School Resources, and Educational Outcomes Volume 19 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2016 ; 9781784416287 ; 9781784416270 ; 9781784416270 ; Family Environments, School Resources, and Educational Outcomes Volume 19 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
 
   }
 
@@ -3091,18 +3091,18 @@
       au < crawling ; exists ; 2000 ; 9780762306442 ; 9781849500470 ; 9781849500470 ; Health Care Providers, Institutions, and Patients: Changing Patterns of Care Provision and Care Delivery Volume 17 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2000 ; 9780762307401 ; 9781849500845 ; 9781849500845 ; Health, Illness, and use of Care: The Impact of Social Factors Volume 18 ; http://www.emeraldinsight.com/ ; >
       au < finished ; crawling ; 2001 ; 9780762308088 ; 9781849501156 ; 9781849501156 ; Changing Consumers and Changing Technology in Health Care and Health Care Delivery Volume 19 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2002 ; 9780762309573 ; 9781849501729 ; 9781849501729 ; Social Inequalities, Health and Health Care Delivery Volume 20 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2002 ; 9780762309573 ; 9781849501729 ; 9781849501729 ; Social Inequalities, Health and Health Care Delivery Volume 20 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2003 ; 9780762310692 ; 9781849502474 ; 9781849502474 ; Reorganizing Health Care Delivery Systems: Problems of Managed Volume 21 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2004 ; 9780762311477 ; 9781849503006 ; 9781849503006 ; Chronic Care, Health Care Systems and Services Integration Volume 22 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2005 ; 9780762312498 ; 9781849503723 ; 9781849503723 ; Health Care Services, Racial and Ethnic Minorities and Underserved Populations: Patient and Provider Perspectives Volume 23 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2006 ; 9780762313204 ; 9781849504201 ; 9781849504201 ; Access, Quality and Satisfaction with Care Volume 24 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2007 ; 9780762314744 ; 9781849505567 ; 9781849505567 ; Inequalities and Disparities in Health Care and Health: Concerns of Patients, Providers and Insurers Volume 25 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2008 ; 9781848551602 ; 9781848551619 ; 9781848551619 ; Care for Major Health Problems and Population Health Concerns: Impacts on Patients, Providers and Policy Volume 26 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2007 ; 9780762314744 ; 9781849505567 ; 9781849505567 ; Inequalities and Disparities in Health Care and Health: Concerns of Patients, Providers and Insurers Volume 25 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2008 ; 9781848551602 ; 9781848551619 ; 9781848551619 ; Care for Major Health Problems and Population Health Concerns: Impacts on Patients, Providers and Policy Volume 26 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2009 ; 9781848558342 ; 9781848558359 ; 9781848558359 ; Social Sources of Disparities in Health and Health Care and Linkages to Policy, Population Concerns and Providers of Care Volume 27 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2010 ; 9781849507141 ; 9781849507158 ; 9781849507158 ; The Impact of Demographics on Health and Health Care: Race, Ethnicity and Other Social Factors Volume 28 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2010 ; 9781849507141 ; 9781849507158 ; 9781849507158 ; The Impact of Demographics on Health and Health Care: Race, Ethnicity and Other Social Factors Volume 28 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2011 ; 9780857247155 ; 9780857247162 ; 9780857247162 ; Access to Care and Factors that Impact Access, Patients as Partners in Care and Changing Roles of Health Providers Volume 29 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2012 ; 9781781901243 ; 9781781901250 ; 9781781901250 ; Issues in Health and Health Care Related to Race/Ethnicity, Immigration, SES and Gender Volume 30 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2013 ; 9781781905876 ; 9781781905883 ; 9781781905883 ; Social Determinants, Health Disparities and Linkages to Health and Health Care Volume 31 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2013 ; 9781781905876 ; 9781781905883 ; 9781781905883 ; Social Determinants, Health Disparities and Linkages to Health and Health Care Volume 31 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2014 ; 9781783506453 ; 9781783506361 ; 9781783506361 ; Technology, Communication, Disparities and Government Options in Health and Health Care Services Volume 32 ; http://www.emeraldinsight.com/ ; >
       au < finished ; crawling ; 2015 ; 9781785603679 ; 9781785603662 ; 9781785603662 ; Education, Social Factors, and Health Beliefs in Health and Health Care Services Volume 33 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2016 ; 9781786354686 ; 9781786354679 ; 9781786354679 ; Special Social Groups, Social Factors and Disparities in Health and Health Care Volume 34 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
@@ -3129,8 +3129,8 @@
       au < finished ; manifest ; 2004 ; 9780762310081 ; 9781849502047 ; 9781849502047 ; Legitimacy Processes in Organizations Volume 22 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2005 ; 9780762312405 ; 9781849503655 ; 9781849503655 ; Transformation in Cultural Industries Volume 23 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2006 ; 9780762313020 ; 9781849504072 ; 9781849504072 ; Professional Service Firms Volume 24 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2007 ; 9780762314331 ; 9781849504980 ; 9781849504980 ; The Sociology of Entrepreneurship Volume 25 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2009 ; 9781848556461 ; 9781848556478 ; 9781848556478 ; Studying Differences between Organizations: Comparative Approaches to Organizational Research Volume 26 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2007 ; 9780762314331 ; 9781849504980 ; 9781849504980 ; The Sociology of Entrepreneurship Volume 25 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2009 ; 9781848556461 ; 9781848556478 ; 9781848556478 ; Studying Differences between Organizations: Comparative Approaches to Organizational Research Volume 26 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2009 ; 9781848558663 ; 9781848558670 ; 9781848558670 ; Institutions and Ideology Volume 27 ; http://www.emeraldinsight.com/ ; >
       au < finished ; crawling ; 2010 ; 9781849509305 ; 9781849509312 ; 9781849509312 ; Stanford's Organization Theory Renaissance, 1970-2000 Volume 28 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2010 ; 9781849509848 ; 9781849509855 ; 9781849509855 ; Technology and Organization: Essays in Honour of Joan Woodward Volume 29 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
@@ -3139,7 +3139,7 @@
       au < finished ; manifest ; 2010 ; 9780857245939 ; 9780857245946 ; 9780857245946 ; Categories in Markets: Origins and Evolution Volume 31 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2011 ; 9780857245953 ; 9780857245960 ; 9780857245960 ; Philosophy and Organization Theory Volume 32 ; http://www.emeraldinsight.com/ ; >
       au < finished ; crawling ; 2011 ; 9781780522845 ; 9781780522852 ; 9781780522852 ; Communities and Organizations Volume 33 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2012 ; 9781780526645 ; 9781780526652 ; 9781780526652 ; Rethinking Power in Organizations, Institutions, and Markets Volume 34 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2012 ; 9781780526645 ; 9781780526652 ; 9781780526652 ; Rethinking Power in Organizations, Institutions, and Markets Volume 34 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2012 ; 9781780527826 ; 9781780527833 ; 9781780527833 ; Reinventing Hierarchy and Bureaucracy - from the Bureau to Network Organizations Volume 35 ; http://www.emeraldinsight.com/ ; >
       au < finished ; crawling ; 2012 ; 9781780527123 ; 9781780527130 ; 9781780527130 ; The Garbage Can Model of Organizational Choice: Looking Forward at Forty Volume 36 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2012 ; 9781781905050 ; 9781781905067 ; 9781781905067 ; Managing 'Human Resources' by Exploiting and Exploring People's Potentials Volume 37 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
@@ -3178,7 +3178,7 @@
       au < crawling ; exists ; 2012 ; 9781780522968 ; 9781780522975 ; 9781780522975 ; Qualitative Research on Sport and Physical Culture Volume 6 ; http://www.emeraldinsight.com/ ; >
       au < finished ; crawling ; 2013 ; 9781781905913 ; 9781781905920 ; 9781781905920 ; Native Games: Indigenous Peoples and Sports in the Post-Colonial World Volume 7 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2014 ; 9781783508853 ; 9781783508860 ; 9781783508860 ; Sport, Social Development and Peace Volume 8 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2016 ; 9781786350503 ; 9781786350497 ; 9781786350497 ; Sociology of Sport: A Global Subdiscipline in Review Volume 9 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2016 ; 9781786350503 ; 9781786350497 ; 9781786350497 ; Sociology of Sport: A Global Subdiscipline in Review Volume 9 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; 9781787146433 ; 9781787146426 ; 9781787146426 ; Reflections on Sociology of Sport: Ten Questions, Ten Scholars, Ten Perspectives Volume 10 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
 
   }
@@ -3198,23 +3198,23 @@
       au < finished ; crawling ; 2003 ; 9780762308828 ; 9781849501538 ; 9781849501538 ; Labor Revitalization: Global Perspectives and New Initiatives Volume 11 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2003 ; 9780762308866 ; 9781849501569 ; 9781849501569 ; The Sociology of Job Training Volume 12 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2004 ; 9780762310456 ; 9781849502290 ; 9781849502290 ; Globalism/Localism at Work Volume 13 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2004 ; 9780762307883 ; 9781849501071 ; 9781849501071 ; Diversity in the Work Force Volume 14 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2004 ; 9780762307883 ; 9781849501071 ; 9781849501071 ; Diversity in the Work Force Volume 14 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2005 ; 9780762311910 ; 9781849503365 ; 9781849503365 ; Entrepreneurship Volume 15 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2005 ; 9780762312023 ; 9781849503419 ; 9781849503419 ; Worker Participation: Current Research and Future Trends Volume 16 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2007 ; 9780762312689 ; 9781849503846 ; 9781849503846 ; Workplace Temporalities Volume 17 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2007 ; 9780762312689 ; 9781849503846 ; 9781849503846 ; Workplace Temporalities Volume 17 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2009 ; 9781848553682 ; 9781848553699 ; 9781848553699 ; Economic Sociology of Work Volume 18 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2009 ; 9781848557307 ; 9781848557314 ; 9781848557314 ; Work and Organizationsin China Afterthirty Years of Transition Volume 19 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2009 ; 9781848557307 ; 9781848557314 ; 9781848557314 ; Work and Organizationsin China Afterthirty Years of Transition Volume 19 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2010 ; 9781848553705 ; 9781848553712 ; 9781848553712 ; Gender and Sexuality in the Workplace Volume 20 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2010 ; 9780857242396 ; 9780857242402 ; 9780857242402 ; Institutions and Entrepreneurship Volume 21 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2010 ; 9780857242396 ; 9780857242402 ; 9780857242402 ; Institutions and Entrepreneurship Volume 21 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2011 ; 9781849509466 ; 9781849509473 ; 9781849509473 ; Comparing European Workers Part A Volume 22 Part 1 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2011 ; 9780857249319 ; 9780857249326 ; 9780857249326 ; Comparing European Workers Part B: Policies and Institutions Volume 22 Part 2 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2012 ; 9781780523460 ; 9781780523477 ; 9781780523477 ; Religion, Work and Inequality Volume 23 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2013 ; 9781781905395 ; 9781781905401 ; 9781781905401 ; Networks, Work and Inequality Volume 24 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2014 ; 9781783505715 ; 9781783505722 ; 9781783505722 ; Adolescent Experiences and Adult Work Outcomes: Connections and Causes Volume 25 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2013 ; 9781781905395 ; 9781781905401 ; 9781781905401 ; Networks, Work and Inequality Volume 24 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2014 ; 9781783505715 ; 9781783505722 ; 9781783505722 ; Adolescent Experiences and Adult Work Outcomes: Connections and Causes Volume 25 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; 9781784416300 ; 9781784416294 ; 9781784416294 ; Work and Family in the New Economy Volume 26 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2015 ; 9781784416324 ; 9781784416317 ; 9781784416317 ; Immigration and Work Volume 27 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2016 ; 9781785607271 ; 9781785607264 ; 9781785607264 ; A Gedenkschrift to Randy Hodson: Working with Dignity Volume 28 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2016 ; 9781786354068 ; 9781786354051 ; 9781786354051 ; Research in the Sociology of Work Volume 29 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2015 ; 9781784416324 ; 9781784416317 ; 9781784416317 ; Immigration and Work Volume 27 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2016 ; 9781785607271 ; 9781785607264 ; 9781785607264 ; A Gedenkschrift to Randy Hodson: Working with Dignity Volume 28 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; 9781786354068 ; 9781786354051 ; 9781786354051 ; Research in the Sociology of Work Volume 29 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; 9781787144606 ; 9781787144590 ; 9781787144590 ; Emerging Conceptions of Work, Management and the Labor Market Volume 30 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
 
   }
@@ -3230,10 +3230,10 @@
       #param[journal_issn] = 1479-3520
       #series = rup
 
-      au < frozen ; exists ; 2000 ; 9780762304998 ; 9781849500296 ; 9781849500296 ; Citizen Responsive Government Volume 8 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2000 ; 9780762304998 ; 9781849500296 ; 9781849500296 ; Citizen Responsive Government Volume 8 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2003 ; 9780762310609 ; 9781849502405 ; 9781849502405 ; The City as an Entertainment Machine Volume 9 ; http://www.emeraldinsight.com/ ; >
       au < finished ; crawling ; 2006 ; 9780762313099 ; 9781849504102 ; 9781849504102 ; Community and Ecology Volume 10 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2014 ; 9781781907368 ; 9781781907375 ; 9781781907375 ; Can Tocqueville Karaoke? Global Contrasts of Citizen Participation, the Arts and Development Volume 11 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2014 ; 9781781907368 ; 9781781907375 ; 9781781907375 ; Can Tocqueville Karaoke? Global Contrasts of Citizen Participation, the Arts and Development Volume 11 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
 
   }
 
@@ -3251,9 +3251,9 @@
       au < finished ; manifest ; 1999 ; 9780762305407 ; 9781849500340 ; 9781849500340 ; Constructions of Urban Space Volume 5 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2001 ; 9780762305414 ; 9781849500357 ; 9781849500357 ; Critical Perspectives on Urban Redevelopment Volume 6 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2004 ; 9780762311491 ; 9781849503020 ; 9781849503020 ; Race and Ethnicity in New York City Volume 7 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2006 ; 9780762313211 ; 9781849504218 ; 9781849504218 ; Ethnic Landscapes in an Urban World Volume 8 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2006 ; 9780762313211 ; 9781849504218 ; 9781849504218 ; Ethnic Landscapes in an Urban World Volume 8 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2008 ; 9780762314775 ; 9781849505574 ; 9781849505574 ; Gender in an Urban World Volume 9 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2010 ; 9780857243478 ; 9780857243485 ; 9780857243485 ; Suburbanization in Global Society Volume 10 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2010 ; 9780857243478 ; 9780857243485 ; 9780857243485 ; Suburbanization in Global Society Volume 10 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2011 ; 9781780522586 ; 9781780522593 ; 9781780522593 ; Everyday Life in the Segmented City Volume 11 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2012 ; 9781781900369 ; 9781781900376 ; 9781781900376 ; Urban Areas and Global Climate Change Volume 12 ; http://www.emeraldinsight.com/ ; >
       au < finished ; crawling ; 2013 ; 9781781905937 ; 9781781905944 ; 9781781905944 ; Urban Megaprojects: A Worldwide View Volume 13 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
@@ -3273,8 +3273,8 @@
       #param[journal_issn] = 1479-8387
       #series = rmsm
 
-      au < frozen ; exists ; 2004 ; 9780762310517 ; 9781849502351 ; 9781849502351 ; Research Methodology in Strategy and Management Volume 1 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2005 ; 9780762312085 ; 9781849503440 ; 9781849503440 ; Research Methodology in Strategy and Management Volume 2 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2004 ; 9780762310517 ; 9781849502351 ; 9781849502351 ; Research Methodology in Strategy and Management Volume 1 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2005 ; 9780762312085 ; 9781849503440 ; 9781849503440 ; Research Methodology in Strategy and Management Volume 2 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2006 ; 9780762313396 ; 9781849504362 ; 9781849504362 ; Research Methodology in Strategy and Management Volume 3 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2007 ; 9780762314041 ; 9781849504805 ; 9781849504805 ; Research Methodology in Strategy and Management Volume 4 ; http://www.emeraldinsight.com/ ; >
       au < finished ; manifest ; 2009 ; 9781848551589 ; 9781848551596 ; 9781848551596 ; Research Methodology in Strategy and Management Volume 5 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
@@ -3300,10 +3300,10 @@
       au < crawling ; exists ; 2003 ; 9780762310142 ; 9781849502085 ; 9781849502085 ; Inequality, Welfare and Poverty: Theory and Measurement Volume 9 ; http://www.emeraldinsight.com/ ; >
       au < frozen ; exists ; 2003 ; 9780762310241 ; 9781849502122 ; 9781849502122 ; Fiscal Policy, Inequality and Welfare Volume 10 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2004 ; 9780762311132 ; 9781849502764 ; 9781849502764 ; Inequality, Welfare and Income Distribution: Experimental Approaches Volume 11 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2004 ; 9780762311361 ; 9781849502924 ; 9781849502924 ; Studies on Economic Well-Being: Essays in the Honor of John P. Formby Volume 12 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2004 ; 9780762311361 ; 9781849502924 ; 9781849502924 ; Studies on Economic Well-Being: Essays in the Honor of John P. Formby Volume 12 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2006 ; 9780762313501 ; 9781849504454 ; 9781849504454 ; Dynamics of Inequality and Poverty Volume 13 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2007 ; 9780762313747 ; 9781849504621 ; 9781849504621 ; Inequality and Poverty Volume 14 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2007 ; 9780762314508 ; 9781849505086 ; 9781849505086 ; Equity Volume 15 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2007 ; 9780762314508 ; 9781849505086 ; 9781849505086 ; Equity Volume 15 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2008 ; 9781848551343 ; 9781848551350 ; 9781848551350 ; Inequality and Opportunity: Papers from the Second ECINEQ Society Meeting Volume 16 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2009 ; 9781848557864 ; 9781848557871 ; 9781848557871 ; Occupational and Residential Segregation Volume 17 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2010 ; 9780857241450 ; 9780857241467 ; 9780857241467 ; Studies in Applied Welfare Analysis: Papers from the Third ECINEQ Meeting Volume 18 ; http://www.emeraldinsight.com/ ; >
@@ -3327,18 +3327,18 @@
       #param[journal_issn] = 1746-9791
       #series = reom
 
-      au < frozen ; exists ; 2005 ; 9780762312344 ; 9781849503624 ; 9781849503624 ; The Effect of Affect in Organizational Settings Volume 1 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2006 ; 9780762313105 ; 9781849504119 ; 9781849504119 ; Individual and Organizational Perspectives on Emotion Management and Display Volume 2 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2005 ; 9780762312344 ; 9781849503624 ; 9781849503624 ; The Effect of Affect in Organizational Settings Volume 1 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2006 ; 9780762313105 ; 9781849504119 ; 9781849504119 ; Individual and Organizational Perspectives on Emotion Management and Display Volume 2 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2007 ; 9780762314140 ; 9781849504874 ; 9781849504874 ; Functionality, Intentionality and Morality Volume 3 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2008 ; 9781846639401 ; 9781846639418 ; 9781846639418 ; Emotions, Ethics and Decision-Making Volume 4 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2008 ; 9781846639401 ; 9781846639418 ; 9781846639418 ; Emotions, Ethics and Decision-Making Volume 4 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2009 ; 9781848556546 ; 9781848556553 ; 9781848556553 ; Emotions in Groups, Organizations and Cultures Volume 5 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2010 ; 9780857241771 ; 9780857241788 ; 9780857241788 ; Emotions and Organizational Dynamism Volume 6 ; http://www.emeraldinsight.com/ ; >
       au < finished ; manifest ; 2011 ; 9781780522081 ; 9781780522098 ; 9781780522098 ; What Have We Learned? Ten Years On Volume 7 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2012 ; 9781780526768 ; 9781780526775 ; 9781780526775 ; Experiencing and Managing Emotions in the Workplace Volume 8 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2013 ; 9781781908884 ; 9781781908891 ; 9781781908891 ; Individual Sources, Dynamics, and Expressions of Emotion Volume 9 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2012 ; 9781780526768 ; 9781780526775 ; 9781780526775 ; Experiencing and Managing Emotions in the Workplace Volume 8 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2013 ; 9781781908884 ; 9781781908891 ; 9781781908891 ; Individual Sources, Dynamics, and Expressions of Emotion Volume 9 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2014 ; 9781783509393 ; 9781783509348 ; 9781783509348 ; Emotions and the Organizational Fabric Volume 10 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2015 ; 9781785602214 ; 9781785602207 ; 9781785602207 ; New Ways of Studying Emotions in Organizations Volume 11 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2016 ; 9781785609985 ; 9781785609978 ; 9781785609978 ; Emotions and Organizational Governance Volume 12 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2016 ; 9781785609985 ; 9781785609978 ; 9781785609978 ; Emotions and Organizational Governance Volume 12 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2017 ; 9781787144385 ; 9781787144378 ; 9781787144378 ; Emotions and Identity Volume 13 ; http://www.emeraldinsight.com/ ; >
 
   }
@@ -3355,20 +3355,20 @@
       #series = rmgt
 
       au < finished ; manifest ; 2000 ; 9780762306626 ; 9781849500524 ; 9781849500524 ; Technology Volume 3 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2002 ; 9780762308620 ; 9781849501446 ; 9781849501446 ; Toward Phenomenology of Groups and Group Membership Volume 4 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2003 ; 9780762309511 ; 9781849501682 ; 9781849501682 ; Identity Issues in Groups Volume 5 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2004 ; 9780762310937 ; 9781849502597 ; 9781849502597 ; Time in Groups Volume 6 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2002 ; 9780762308620 ; 9781849501446 ; 9781849501446 ; Toward Phenomenology of Groups and Group Membership Volume 4 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2003 ; 9780762309511 ; 9781849501682 ; 9781849501682 ; Identity Issues in Groups Volume 5 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2004 ; 9780762310937 ; 9781849502597 ; 9781849502597 ; Time in Groups Volume 6 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2005 ; 9780762312290 ; 9781849503587 ; 9781849503587 ; Status and Groups Volume 7 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2006 ; 9780762313006 ; 9781849504058 ; 9781849504058 ; Ethics in Groups Volume 8 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2006 ; 9780762313624 ; 9781849504546 ; 9781849504546 ; National Culture and Groups Volume 9 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2007 ; 9780762314133 ; 9781849504867 ; 9781849504867 ; Affect and Groups Volume 10 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2008 ; 9781848550520 ; 9781848550537 ; 9781848550537 ; Diversity and Groups Volume 11 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2009 ; 9781849505833 ; 9781849505840 ; 9781849505840 ; Creativity in Groups Volume 12 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2007 ; 9780762314133 ; 9781849504867 ; 9781849504867 ; Affect and Groups Volume 10 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2008 ; 9781848550520 ; 9781848550537 ; 9781848550537 ; Diversity and Groups Volume 11 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2009 ; 9781849505833 ; 9781849505840 ; 9781849505840 ; Creativity in Groups Volume 12 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2010 ; 9780857241610 ; 9780857241627 ; 9780857241627 ; Fairness and Groups Volume 13 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2011 ; 9780857245595 ; 9780857245601 ; 9780857245601 ; Negotiation and Groups Volume 14 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2011 ; 9780857245595 ; 9780857245601 ; 9780857245601 ; Negotiation and Groups Volume 14 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2012 ; 9781781900307 ; 9781781900314 ; 9781781900314 ; Looking Back, Moving Forward: A Review of Group and Team-Based Research Volume 15 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2014 ; 9781783503131 ; 9781783503148 ; 9781783503148 ; Pushing the Boundaries: Multiteam Systems in Research and Practice Volume 16 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2015 ; 9781785602832 ; 9781785602825 ; 9781785602825 ; Team Cohesion: Advances in Psychological Theory, Methods and Practice Volume 17 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2015 ; 9781785602832 ; 9781785602825 ; 9781785602825 ; Team Cohesion: Advances in Psychological Theory, Methods and Practice Volume 17 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2017 ; 9781786354044 ; 9781786354037 ; 9781786354037 ; Team Dynamics Over Time Volume 18 ; http://www.emeraldinsight.com/ ; >
 
   }
@@ -3388,14 +3388,14 @@
       au < crawling ; exists ; 2005 ; 9780762312399 ; 9781849508049 ; 9781849508049 ; Research on Professional Responsibility and Ethics in Accounting Volume 10 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2006 ; 9780762313679 ; 9781849508032 ; 9781849508032 ; Research on Professional Responsibility and Ethics in Accounting Volume 11 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2007 ; 9780762313938 ; 9781849508056 ; 9781849508056 ; Research on Professional Responsibility and Ethics in Accounting Volume 12 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2008 ; 9781848553767 ; 9781848553774 ; 9781848553774 ; Research on Professional Responsibility and Ethics in Accounting Volume 13 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2008 ; 9781848553767 ; 9781848553774 ; 9781848553774 ; Research on Professional Responsibility and Ethics in Accounting Volume 13 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2010 ; 9781849507226 ; 9781849507233 ; 9781849507233 ; Research on Professional Responsibility and Ethics in Accounting Volume 14 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2011 ; 9781780520049 ; 9781780520056 ; 9781780520056 ; Research on Professional Responsibility and Ethics in Accounting Volume 15 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2011 ; 9781780520049 ; 9781780520056 ; 9781780520056 ; Research on Professional Responsibility and Ethics in Accounting Volume 15 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2012 ; 9781780527604 ; 9781780527611 ; 9781780527611 ; Research on Professional Responsibility and Ethics in Accounting Volume 16 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2013 ; 9781781908440 ; 9781781908457 ; 9781781908457 ; Research on Professional Responsibility and Ethics in Accounting Volume 17 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2014 ; 9781784411640 ; 9781784411633 ; 9781784411633 ; Research on Professional Responsibility and Ethics in Accounting Volume 18 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2014 ; 9781784411640 ; 9781784411633 ; 9781784411633 ; Research on Professional Responsibility and Ethics in Accounting Volume 18 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2015 ; 9781784416669 ; 9781784416652 ; 9781784416652 ; Research on Professional Responsibility and Ethics in Accounting Volume 19 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2016 ; 9781785609749 ; 9781785609732 ; 9781785609732 ; Research on Professional Responsibility and Ethics in Accounting Volume 20 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2016 ; 9781785609749 ; 9781785609732 ; 9781785609732 ; Research on Professional Responsibility and Ethics in Accounting Volume 20 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
 
   }
 
@@ -3411,7 +3411,7 @@
       #series = rtim
 
       au < crawling ; exists ; 2001 ; 9780762308118 ; 9781849501187 ; 9781849501187 ; Comparative Studies of Technological Evolution Volume 7 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2004 ; 9780762311569 ; 9781849503082 ; 9781849503082 ; Product Inovation, Interactive Learning and Economic Performance Volume 8 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2004 ; 9780762311569 ; 9781849503082 ; 9781849503082 ; Product Inovation, Interactive Learning and Economic Performance Volume 8 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2005 ; 9780762312412 ; 9781849503662 ; 9781849503662 ; The Emergence of Entrepreneurial Economics Volume 9 ; http://www.emeraldinsight.com/ ; >
 
   }
@@ -3433,13 +3433,13 @@
       au < crawling ; exists ; 2008 ; 9780765620927 ; 9780857247261 ; 9780857247261 ; Review of Marketing Research Volume 4 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2009 ; 9780765621252 ; 9780857247278 ; 9780857247278 ; Review of Marketing Research Volume 5 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2010 ; 9780765621276 ; 9780857247285 ; 9780857247285 ; Review of Marketing Research Volume 6 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2010 ; 9780857244758 ; 9780857244765 ; 9780857244765 ; Review of Marketing Research Volume 7 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2010 ; 9780857244758 ; 9780857244765 ; 9780857244765 ; Review of Marketing Research Volume 7 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2011 ; 9780857248978 ; 9780857248985 ; 9780857248985 ; Review of Marketing Research: Special Issue - Marketing Legends Volume 8 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2012 ; 9781780529127 ; 9781780529134 ; 9781780529134 ; Special Issue - Toward a Better Understanding of the Role of Value in Markets and Marketing Volume 9 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2013 ; 9781781907603 ; 9781781907610 ; 9781781907610 ; Review of Marketing Research Volume 10 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2014 ; 9781784410018 ; 9781784410001 ; 9781784410001 ; Shopper Marketing and the Role of In-Store Marketing Volume 11 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2015 ; 9781784419325 ; 9781784419318 ; 9781784419318 ; Brand Meaning Management Volume 12 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2016 ; 9781786352828 ; 9781786352811 ; 9781786352811 ; Marketing in and for a Sustainable Society Volume 13 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2016 ; 9781786352828 ; 9781786352811 ; 9781786352811 ; Marketing in and for a Sustainable Society Volume 13 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2017 ; 9781787144927 ; 9781787144910 ; 9781787144910 ; Qualitative Consumer Research Volume 14 ; http://www.emeraldinsight.com/ ; >
 
   }
@@ -3462,14 +3462,14 @@
       au < crawling ; exists ; 2009 ; 9781848557321 ; 9781848557338 ; 9781848557338 ; Structural, Historical, and Comparative Perspectives Volume 12 ; http://www.emeraldinsight.com/ ; >
       au < finished ; manifest ; 2010 ; 9781849507349 ; 9781849507356 ; 9781849507356 ; Children and Youth Speak for Themselves Volume 13 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2011 ; 9781780520742 ; 9781780520759 ; 9781780520759 ; The Well-Being, Peer Cultures and Rights of Children Volume 14 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2012 ; 9781780528762 ; 9781780528779 ; 9781780528779 ; Disputes in Everyday Life: Social and Moral Orders of Children and Young People Volume 15 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2012 ; 9781780528762 ; 9781780528779 ; 9781780528779 ; Disputes in Everyday Life: Social and Moral Orders of Children and Young People Volume 15 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2013 ; 9781781905432 ; 9781781905449 ; 9781781905449 ; Youth Engagement: The Civic-Political Lives of Children and Youth Volume 16 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2014 ; 9781783507795 ; 9781783507801 ; 9781783507801 ; Child Labour in Global Society Volume 17 ; http://www.emeraldinsight.com/ ; >
       au < finished ; manifest ; 2014 ; 9781784410605 ; 9781784410599 ; 9781784410599 ; Soul of Society: A Focus on the Lives of Children & Youth Volume 18 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2015 ; 9781785602658 ; 9781785602641 ; 9781785602641 ; Technology and Youth: Growing Up in a Digital World Volume 19 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2016 ; 9781786350466 ; 9781786350459 ; 9781786350459 ; Education and Youth Today Volume 20 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2016 ; 9781786353962 ; 9781786353955 ; 9781786353955 ; Friendship and Peer Culture in Multilingual Settings Volume 21 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2017 ; 9781787140998 ; 9781787140981 ; 9781787140981 ; Researching Children and Youth: Methodological Issues, Strategies, and Innovations Volume 22 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2016 ; 9781786350466 ; 9781786350459 ; 9781786350459 ; Education and Youth Today Volume 20 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2016 ; 9781786353962 ; 9781786353955 ; 9781786353955 ; Friendship and Peer Culture in Multilingual Settings Volume 21 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2017 ; 9781787140998 ; 9781787140981 ; 9781787140981 ; Researching Children and Youth: Methodological Issues, Strategies, and Innovations Volume 22 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
 
   }
 
@@ -3484,12 +3484,12 @@
       #param[journal_issn] = 1521-6136
       #series = slcd
 
-      au < frozen ; exists ; 2000 ; 9780762306800 ; 9781849508896 ; 9781849508896 ; Sociology of Crime, Law and Deviance Volume 2 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2000 ; 9780762306800 ; 9781849508896 ; 9781849508896 ; Sociology of Crime, Law and Deviance Volume 2 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2001 ; 9780762308002 ; 9781849508889 ; 9781849508889 ; Legal Professions: Work, Structure and Organization Volume 3 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2004 ; 9780762310401 ; 9781849508872 ; 9781849508872 ; Terrorism and Counter-Terrorism Volume 5 ; http://www.emeraldinsight.com/ ; >
       au < finished ; manifest ; 2005 ; 9780762311286 ; 9780857240538 ; 9780857240538 ; Ethnographies of Law and Social Control Volume 6 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2006 ; 9780762313228 ; 9780857240545 ; 9780857240545 ; Sociological Theory and Criminological Research Volume 7 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2007 ; 9780762313075 ; 9780857240552 ; 9780857240552 ; Police Occupational Culture Volume 8 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2006 ; 9780762313228 ; 9780857240545 ; 9780857240545 ; Sociological Theory and Criminological Research Volume 7 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2007 ; 9780762313075 ; 9780857240552 ; 9780857240552 ; Police Occupational Culture Volume 8 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2007 ; 9780762313068 ; 9780857240569 ; 9780857240569 ; Crime and Human Rights Volume 9 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2008 ; 9780762314164 ; 9781849505581 ; 9781849505581 ; Surveillance and Governance: Crime Control and Beyond Volume 10 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2008 ; 9780762314553 ; 9781849505598 ; 9781849505598 ; Restorative Justice: from Theory to Practice Volume 11 ; http://www.emeraldinsight.com/ ; >
@@ -3497,11 +3497,11 @@
       au < crawling ; exists ; 2009 ; 9781848554382 ; 9781848554399 ; 9781848554399 ; Immigration, Crime and Justice Volume 13 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2010 ; 9781849507325 ; 9781849507332 ; 9781849507332 ; Popular Culture, Crime and Social Control Volume 14 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2010 ; 9780857243454 ; 9780857243461 ; 9780857243461 ; Social Control: Informal, Legal and Medical Volume 15 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2011 ; 9780857248015 ; 9780857248022 ; 9780857248022 ; Economic Crisis and Crime Volume 16 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2011 ; 9780857248015 ; 9780857248022 ; 9780857248022 ; Economic Crisis and Crime Volume 16 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2012 ; 9781780529141 ; 9781780529158 ; 9781780529158 ; Disasters, Hazards and Law Volume 17 ; http://www.emeraldinsight.com/ ; >
       au < finished ; manifest ; 2013 ; 9781783500369 ; 9781783500376 ; 9781783500376 ; Music and Law Volume 18 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2014 ; 9781783509102 ; 9781783509072 ; 9781783509072 ; Punishment and Incarceration: A Global Perspective Volume 19 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2015 ; 9781785601910 ; 9781785601903 ; 9781785601903 ; Terrorism and Counterterrorism Today Volume 20 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2014 ; 9781783509102 ; 9781783509072 ; 9781783509072 ; Punishment and Incarceration: A Global Perspective Volume 19 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; 9781785601910 ; 9781785601903 ; 9781785601903 ; Terrorism and Counterterrorism Today Volume 20 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 9781786350305 ; 9781786350299 ; 9781786350299 ; The Politics of Policing: Between Force and Legitimacy Volume 21 ; http://www.emeraldinsight.com/ ; >
       au < finished ; manifest ; 2017 ; 9781787146044 ; 9781787146037 ; 9781787146037 ; Race, Ethnicity and Law Volume 22 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
 
@@ -3538,13 +3538,13 @@
       au < crawling ; exists ; 2001 ; 9780762307685 ; 9781849500999 ; 9781849500999 ; Ethnography and Education Policy Volume 4 ; http://www.emeraldinsight.com/ ; >
       au < finished ; manifest ; 2001 ; 9780762307975 ; 9781849501118 ; 9781849501118 ; Critical Ethnography and Education Volume 5 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2002 ; 9780762308934 ; 9781849501606 ; 9781849501606 ; Debates and Developments in Ethonographic Methodology Volume 6 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2002 ; 9780762309061 ; 9781849501668 ; 9781849501668 ; Doing a Doctorate in Educational Ethnography Volume 7 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2002 ; 9780762309061 ; 9781849501668 ; 9781849501668 ; Doing a Doctorate in Educational Ethnography Volume 7 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2003 ; 9780762310180 ; 9781849502108 ; 9781849502108 ; Investigating Educational Policy Through Ethnography Volume 8 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2004 ; 9780762311125 ; 9781849502757 ; 9781849502757 ; Ethnographies of Educational and Cultural Conflicts: Strategies and Resolutions Volume 9 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2004 ; 9780762311446 ; 9781849502979 ; 9781849502979 ; Identity, Agency and Social Institutions in Educational Ethnography Volume 10 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2005 ; 9780762312528 ; 9781849503747 ; 9781849503747 ; Methodological Issues and Practices in Ethnography Volume 11 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2005 ; 9780762312528 ; 9781849503747 ; 9781849503747 ; Methodological Issues and Practices in Ethnography Volume 11 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2007 ; 9780762314379 ; 9781849505000 ; 9781849505000 ; Methodological Developments in Ethnography Volume 12 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2016 ; 9781784416249 ; 9781784416232 ; 9781784416232 ; New Directions in Educational Ethnography Volume 13 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2016 ; 9781784416249 ; 9781784416232 ; 9781784416232 ; New Directions in Educational Ethnography Volume 13 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
 
   }
 
@@ -3562,22 +3562,22 @@
       au < crawling ; exists ; 2003 ; 9780762310159 ; 9781849502092 ; 9781849502092 ; Studies in Law, Politics, and Society Volume 28 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2003 ; 9780762310326 ; 9781849502191 ; 9781849502191 ; Studies in Law, Politics, and Society Volume 29 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2003 ; 9780762310722 ; 9781849502504 ; 9781849502504 ; Punishment, Politics and Culture Volume 30 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2003 ; 9780762310746 ; 9781849502528 ; 9781849502528 ; Studies in Law, Politics, and Society Volume 31 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2004 ; 9780762310975 ; 9781849502627 ; 9781849502627 ; Studies in Law, Politics, and Society Volume 32 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2004 ; 9780762311095 ; 9781849502726 ; 9781849502726 ; Studies in Law, Politics, and Society Volume 33 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2003 ; 9780762310746 ; 9781849502528 ; 9781849502528 ; Studies in Law, Politics, and Society Volume 31 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2004 ; 9780762310975 ; 9781849502627 ; 9781849502627 ; Studies in Law, Politics, and Society Volume 32 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2004 ; 9780762311095 ; 9781849502726 ; 9781849502726 ; Studies in Law, Politics, and Society Volume 33 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2004 ; 9780762311514 ; 9781849503044 ; 9781849503044 ; Aesthetics of Law and Culture: Texts, Images, Screens Volume 34 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2005 ; 9780762311798 ; 9781849503273 ; 9781849503273 ; Studies in Law, Politics, and Society Volume 35 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2005 ; 9780762311897 ; 9781849503341 ; 9781849503341 ; Toward a Critique of Guilt: Perspectives from Law and the Humanities Volume 36 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2005 ; 9780762311897 ; 9781849503341 ; 9781849503341 ; Toward a Critique of Guilt: Perspectives from Law and the Humanities Volume 36 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2005 ; 9780762312450 ; 9781849503693 ; 9781849503693 ; Crime and Punishment: Perspectives from the Humanities Volume 37 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2006 ; 9780762312726 ; 9781849503877 ; 9781849503877 ; Studies in Law, Politics, and Society Volume 38 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2006 ; 9780762313235 ; 9781849504225 ; 9781849504225 ; Studies in Law, Politics, and Society Volume 39 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2007 ; 9780762313242 ; 9781849504232 ; 9781849504232 ; Studies in Law, Politics, and Society Volume 40 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2007 ; 9780762314607 ; 9781849505116 ; 9781849505116 ; Special Issue Law and Society Reconsidered Volume 41 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2007 ; 9780762314607 ; 9781849505116 ; 9781849505116 ; Special Issue Law and Society Reconsidered Volume 41 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2008 ; 9780762314676 ; 9781849505604 ; 9781849505604 ; Special Issue: Is the Death Penalty Dying? Volume 42 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2008 ; 9780762314829 ; 9781849505611 ; 9781849505611 ; Special Issue Law and Literature Reconsidered Volume 43 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2008 ; 9780762314867 ; 9781849505628 ; 9781849505628 ; Special Issue Constitutional Politics in a Conservative Era Volume 44 ; http://www.emeraldinsight.com/ ; >
       au < finished ; manifest ; 2008 ; 9781848550902 ; 9781848550919 ; 9781848550919 ; Studies in Law, Politics, and Society Volume 45 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2008 ; 9781848553781 ; 9781848553798 ; 9781848553798 ; Studies in Law, Politics, and Society Volume 46 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2008 ; 9781848553781 ; 9781848553798 ; 9781848553798 ; Studies in Law, Politics, and Society Volume 46 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2009 ; 9781848556522 ; 9781848556539 ; 9781848556539 ; Special Issue New Perspectives on Crime and Criminal Justice Volume 47 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2009 ; 9781848559301 ; 9781848559318 ; 9781848559318 ; Special Issue Revisiting Rights Volume 48 ; http://www.emeraldinsight.com/ ; >
       au < frozen ; exists ; 2009 ; 9781849506151 ; 9781849506168 ; 9781849506168 ; Studies in Law, Politics, and Society Volume 49 ; http://www.emeraldinsight.com/ ; >
@@ -3585,19 +3585,19 @@
       au < crawling ; exists ; 2010 ; 9781849507509 ; 9781849507516 ; 9781849507516 ; Special Issue Interdisciplinary Legal Studies: The Next Generation Volume 51 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2010 ; 9780857243577 ; 9780857243584 ; 9780857243584 ; Special Issue Law Firms, Legal Culture, and Legal Practice Volume 52 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2010 ; 9780857246158 ; 9780857246165 ; 9780857246165 ; Studies in Law, Politics, and Society Volume 53 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2011 ; 9780857248251 ; 9780857248268 ; 9780857248268 ; Special Issue Social Movements/Legal Possibilities Volume 54 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2011 ; 9780857248251 ; 9780857248268 ; 9780857248268 ; Special Issue Social Movements/Legal Possibilities Volume 54 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2011 ; 9781780520803 ; 9781780520810 ; 9781780520810 ; Studies in Law, Politics, and Society Volume 55 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2011 ; 9781780522524 ; 9781780522531 ; 9781780522531 ; Special Issue Human Rights: New Possibilities/New Problems Volume 56 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2011 ; 9781780522524 ; 9781780522531 ; 9781780522531 ; Special Issue Human Rights: New Possibilities/New Problems Volume 56 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2012 ; 9781780526225 ; 9781780526232 ; 9781780526232 ; Studies in Law, Politics, and Society Volume 57 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2012 ; 9781780528700 ; 9781780528717 ; 9781780528717 ; Special Issue: The Discourse of Judging Volume 58 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2012 ; 9781780528700 ; 9781780528717 ; 9781780528717 ; Special Issue: The Discourse of Judging Volume 58 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2012 ; 9781781903438 ; 9781781903445 ; 9781781903445 ; Special Issue: The Legacy of Stuart Scheingold Volume 59 ; http://www.emeraldinsight.com/ ; >
       au < finished ; manifest ; 2013 ; 9781781904312 ; 9781781904329 ; 9781781904329 ; Special Issue: Who Belongs? Immigration, Citizenship, and the Constitution of Legality Volume 60 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2013 ; 9781781906194 ; 9781781906200 ; 9781781906200 ; Studies in Law, Politics, and Society Volume 61 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2013 ; 9781781907382 ; 9781781907399 ; 9781781907399 ; From Economy to Society? Perspectives on Transnational Risk Regulation Volume 62 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2014 ; 9781783507856 ; 9781783507863 ; 9781783507863 ; Studies in Law, Politics, and Society Volume 63 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2014 ; 9781783509676 ; 9781783509669 ; 9781783509669 ; Special Issue: The Beautiful Prison Volume 64 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2014 ; 9781784412395 ; 9781784412388 ; 9781784412388 ; Special Issue: Law and the Liberal State Volume 65 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2015 ; 9781784415686 ; 9781784415679 ; 9781784415679 ; Studies in Law, Politics, and Society Volume 66 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2014 ; 9781783509676 ; 9781783509669 ; 9781783509669 ; Special Issue: The Beautiful Prison Volume 64 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2014 ; 9781784412395 ; 9781784412388 ; 9781784412388 ; Special Issue: Law and the Liberal State Volume 65 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; 9781784415686 ; 9781784415679 ; 9781784415679 ; Studies in Law, Politics, and Society Volume 66 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2015 ; 9781784418823 ; 9781784418816 ; 9781784418816 ; Special Issue: Thinking and Rethinking Intellectual Property Volume 67 ; http://www.emeraldinsight.com/ ; >
       au < finished ; manifest ; 2015 ; 9781785602993 ; 9781785602986 ; 9781785602986 ; Special Issue Cassandra’s Curse: The Law and Foreseeable Future Disasters Volume 68 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2016 ; 9781785607837 ; 9781785607820 ; 9781785607820 ; Special Issue: Feminist Legal Theory Volume 69 ; http://www.emeraldinsight.com/ ; >
@@ -3620,14 +3620,14 @@
       #series = smfa
 
       au < finished ; manifest ; 2008 ; 9780762314799 ; 9781849505710 ; 9781849505710 ; Performance Measurement and Management Control: Measuring and Rewarding Performance Volume 18 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2009 ; 9781848552548 ; 9781848552555 ; 9781848552555 ; Managerial Attitudes toward a Stakeholder Prominence within a Southeast Asia Context Volume 19 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2009 ; 9781848552548 ; 9781848552555 ; 9781848552555 ; Managerial Attitudes toward a Stakeholder Prominence within a Southeast Asia Context Volume 19 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2010 ; 9781849507240 ; 9781849507257 ; 9781849507257 ; Performance Measurement and Management Control: Innovative Concepts and Practices Volume 20 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2010 ; 9780857245052 ; 9780857245069 ; 9780857245069 ; Reputation Building, Website Disclosure and the Case of Intellectual Capital Volume 21 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2011 ; 9781780524429 ; 9781780524436 ; 9781780524436 ; Achieving Global Convergence of Financial Reporting Standards: Implications from the South Pacific Region Volume 22 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2011 ; 9781780524429 ; 9781780524436 ; 9781780524436 ; Achieving Global Convergence of Financial Reporting Standards: Implications from the South Pacific Region Volume 22 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2012 ; 9781780522449 ; 9781780522456 ; 9781780522456 ; Globalization and Contextual Factors in Accounting: The Case of Germany Volume 23 ; http://www.emeraldinsight.com/ ; >
       au < finished ; manifest ; 2012 ; 9781780527345 ; 9781780527352 ; 9781780527352 ; An Organizational Learning Approach to Process Innovations: The Extent and Scope of Diffusion and Adoption in Management Accounting Systems Volume 24 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2012 ; 9781780529103 ; 9781780529110 ; 9781780529110 ; Performance Measurement and Management Control: Global Issues Volume 25 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2013 ; 9781780527666 ; 9781780527673 ; 9781780527673 ; Accounting and Control for Sustainability Volume 26 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2013 ; 9781780527666 ; 9781780527673 ; 9781780527673 ; Accounting and Control for Sustainability Volume 26 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2013 ; 9781783501687 ; 9781783501694 ; 9781783501694 ; Intellectual Capital and Public Sector Performance Volume 27 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2014 ; 9781783503773 ; 9781783503780 ; 9781783503780 ; Performance Measurement and Management Control: Behavioral Implications and Human Actions Volume 28 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2015 ; 9781783508983 ; 9781783508976 ; 9781783508976 ; Adoption of Anglo-american Models of Corporate Governance and Financial Reporting in China Volume 29 ; http://www.emeraldinsight.com/ ; >
@@ -3671,7 +3671,7 @@
       au < crawling ; exists ; 2013 ; 9781781906576 ; 9781781906583 ; 9781781906583 ; Conceptualizing and Researching Governance in Public and Non-Profit Organizations Volume 1 ; http://www.emeraldinsight.com/ ; >
       au < finished ; manifest ; 2014 ; 9781783507054 ; 9781783507054 ; 9781783507054 ; Mechanisms, Roles and Consequences of Governance: Emerging Issues Volume 22 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2014 ; 9781784410117 ; 9781784410100 ; 9781784410100 ; Public Value Management, Measurement and Reporting Volume 23 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2015 ; 9781785604294 ; 9781785604287 ; 9781785604287 ; Contingency, Behavioural and Evolutionary Perspectives on Public and Nonprofit Governance Volume 24 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2015 ; 9781785604294 ; 9781785604287 ; 9781785604287 ; Contingency, Behavioural and Evolutionary Perspectives on Public and Nonprofit Governance Volume 24 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2016 ; 9781786351081 ; 9781786351074 ; 9781786351074 ; Governance and Performance in Public and Non-Profit Organizations Volume 25 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
 
   }
@@ -3689,7 +3689,7 @@
 
       au < finished ; manifest ; 2000 ; 9780762300532 ; 9781849500180 ; 9781849500180 ; Cross-Cultural Case Study Volume 6 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2004 ; 9780762310210 ; 9781849502115 ; 9781849502115 ; Seeing is Believing? Approaches to Visual Research Volume 7 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2007 ; 9780762312832 ; 9781849503952 ; 9781849503952 ; Negotiating Boundaries and Borders Volume 8 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2007 ; 9780762312832 ; 9781849503952 ; 9781849503952 ; Negotiating Boundaries and Borders Volume 8 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2008 ; 9780762313686 ; 9781849505635 ; 9781849505635 ; Qualitative Urban Analysis: An International Perspective Volume 9 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2008 ; 9781846639906 ; 9781846639913 ; 9781846639913 ; Qualitative Housing Analysis: An International Perspective Volume 10 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2010 ; 9781849509428 ; 9781849509435 ; 9781849509435 ; New Frontiers in Ethnography Volume 11 ; http://www.emeraldinsight.com/ ; >
@@ -3714,27 +3714,27 @@
       au < crawling ; exists ; 2001 ; 9780762307548 ; 9781849500906 ; 9781849500906 ; Studies in Symbolic Interaction Volume 24 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2002 ; 9780762308514 ; 9781849501392 ; 9781849501392 ; Studies in Symbolic Interaction Volume 25 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2003 ; 9780762310098 ; 9781849502054 ; 9781849502054 ; Studies in Symbolic Interaction Volume 26 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2004 ; 9780762310968 ; 9781849502610 ; 9781849502610 ; Studies in Symbolic Interaction Volume 27 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2004 ; 9780762310968 ; 9781849502610 ; 9781849502610 ; Studies in Symbolic Interaction Volume 27 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2005 ; 9780762311866 ; 9781849503327 ; 9781849503327 ; Studies in Symbolic Interaction Volume 28 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2006 ; 9780762313259 ; 9781849504249 ; 9781849504249 ; Studies in Symbolic Interaction Volume 29 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2008 ; 9781846639302 ; 9781846639319 ; 9781846639319 ; Studies in Symbolic Interaction Volume 30 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2008 ; 9781848551244 ; 9781848551251 ; 9781848551251 ; Studies in Symbolic Interaction Volume 31 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2008 ; 9781848551244 ; 9781848551251 ; 9781848551251 ; Studies in Symbolic Interaction Volume 31 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2008 ; 9781848551268 ; 9781848551275 ; 9781848551275 ; Studies in Symbolic Interaction Volume 32 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2009 ; 9781848557840 ; 9781848557857 ; 9781848557857 ; Studies in Symbolic Interaction Volume 33 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2009 ; 9781848557840 ; 9781848557857 ; 9781848557857 ; Studies in Symbolic Interaction Volume 33 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2010 ; 9781849509602 ; 9781849509619 ; 9781849509619 ; Studies in Symbolic Interaction Volume 34 ; http://www.emeraldinsight.com/ ; >
       au < crawling ; exists ; 2010 ; 9780857243614 ; 9780857243621 ; 9780857243621 ; Studies in Symbolic Interaction Volume 35 ; http://www.emeraldinsight.com/ ; >
       au < finished ; manifest ; 2011 ; 9780857247957 ; 9780857247964 ; 9780857247964 ; Blue Ribbon Papers: Interactionism: The Emerging Landscape Volume 36 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2011 ; 9781780521565 ; 9781780521572 ; 9781780521572 ; Studies in Symbolic Interaction Volume 37 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2012 ; 9781780527468 ; 9781780527475 ; 9781780527475 ; Blue-Ribbon Papers: Behind the Professional Mask: The Autobiographies of Leading Symbolic Interactionists Volume 38 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2012 ; 9781780527468 ; 9781780527475 ; 9781780527475 ; Blue-Ribbon Papers: Behind the Professional Mask: The Autobiographies of Leading Symbolic Interactionists Volume 38 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2012 ; 9781781900567 ; 9781781900574 ; 9781781900574 ; Studies in Symbolic Interaction Volume 39 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2013 ; 9781781907825 ; 9781781907832 ; 9781781907832 ; 40th Anniversary of Studies in Symbolic Interaction Volume 40 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2013 ; 9781781907825 ; 9781781907832 ; 9781781907832 ; 40th Anniversary of Studies in Symbolic Interaction Volume 40 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2013 ; 9781781907849 ; 9781781907856 ; 9781781907856 ; Radical Interactionism on the Rise Volume 41 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2014 ; 9781783508372 ; 9781783508389 ; 9781783508389 ; Revisiting Symbolic Interaction in Music Studies and New Interpretive Works Volume 42 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2014 ; 9781783509331 ; 9781783509324 ; 9781783509324 ; Symbolic Interaction and New Social Media Volume 43 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2015 ; 9781784418540 ; 9781784418533 ; 9781784418533 ; Contributions from European Symbolic Interactionists: Reflections on Methods Volume 44 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2015 ; 9781784418564 ; 9781784418557 ; 9781784418557 ; Contributions from European Symbolic Interactionists: Conflict and Cooperation Volume 45 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2014 ; 9781783509331 ; 9781783509324 ; 9781783509324 ; Symbolic Interaction and New Social Media Volume 43 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; 9781784418540 ; 9781784418533 ; 9781784418533 ; Contributions from European Symbolic Interactionists: Reflections on Methods Volume 44 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2015 ; 9781784418564 ; 9781784418557 ; 9781784418557 ; Contributions from European Symbolic Interactionists: Conflict and Cooperation Volume 45 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2016 ; 9781786350367 ; 9781786350350 ; 9781786350350 ; The Astructural Bias Charge: Myth or Reality? Volume 46 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2016 ; 9781786350480 ; 9781786350473 ; 9781786350473 ; Symbolic Interactionist Takes on Music Volume 47 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2016 ; 9781786350480 ; 9781786350473 ; 9781786350473 ; Symbolic Interactionist Takes on Music Volume 47 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2017 ; 9781787431683 ; 9781787431676 ; 9781787431676 ; Oppression and Resistance Volume 48 ; http://www.emeraldinsight.com/ ; >
       au < frozen ; exists ; 2017 ; 9781787431669 ; 9781787431652 ; 9781787431652 ; Carl J. Couch and The Iowa School Volume 49 ; http://www.emeraldinsight.com/ ; >
 
@@ -3776,7 +3776,7 @@
       au < crawling ; exists ; 2013 ; 9781781902127 ; 9781781902615 ; 9781781902615 ; Geographies of Tourism Volume 19 ; http://www.emeraldinsight.com/ ; >
       au < finished ; manifest ; 2015 ; 9781783509935 ; 9781783509942 ; 9781783509942 ; Tourism Research Frontiers: Beyond the Boundaries of Knowledge Volume 20 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2015 ; 9781783509973 ; 9781783509980 ; 9781783509980 ; Tourism Education: Global Issues and Trends Volume 21 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2016 ; 9781783509294 ; 9781783509300 ; 9781783509300 ; Tourism Research Paradigms: Critical and Emergent Knowledges Volume 22 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2016 ; 9781783509294 ; 9781783509300 ; 9781783509300 ; Tourism Research Paradigms: Critical and Emergent Knowledges Volume 22 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2016 ; 9781784413569 ; 9781784413552 ; 9781784413552 ; Social Conflict and Harmony: Tourism in China’s Multi-Ethnic Communities Volume 23 ; http://www.emeraldinsight.com/ ; >
 
   }
@@ -3793,14 +3793,14 @@
       #series = ts
 
       au < finished ; manifest ; 2012 ; 9781780522982 ; 9781780522999 ; 9781780522999 ; Cycling and Sustainability Volume 1 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2012 ; 9781780524405 ; 9781780524412 ; 9781780524412 ; Transport and Climate Change Volume 2 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2012 ; 9781781904756 ; 9781781904763 ; 9781781904763 ; Sustainable Transport for Chinese Cities Volume 3 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2012 ; 9781780524405 ; 9781780524412 ; 9781780524412 ; Transport and Climate Change Volume 2 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2012 ; 9781781904756 ; 9781781904763 ; 9781781904763 ; Sustainable Transport for Chinese Cities Volume 3 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2001 ; 9781781905951 ; 9781781905968 ; 9781781905968 ; Sustainable Aviation Futures Volume 4 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2005 ; 9781783509195 ; 9781783509201 ; 9781783509201 ; Parking Issues and Policies Volume 5 ; http://www.emeraldinsight.com/ ; >
-      au < frozen ; exists ; 2008 ; 9781784410629 ; 9781784410612 ; 9781784410612 ; Sustainable Logistics Volume 6 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2005 ; 9781783509195 ; 9781783509201 ; 9781783509201 ; Parking Issues and Policies Volume 5 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2008 ; 9781784410629 ; 9781784410612 ; 9781784410612 ; Sustainable Logistics Volume 6 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2011 ; 9781784416164 ; 9781784416157 ; 9781784416157 ; Sustainable Urban Transport Volume 7 ; http://www.emeraldinsight.com/ ; >
       au < finished ; manifest ; 2012 ; 9781786352262 ; 9781786352255 ; 9781786352255 ; Paratransit: Shaping the Flexible Transport Future Volume 8 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2012 ; 9781787146280 ; 9781787146273 ; 9781787146273 ; Walking: Connecting Sustainable Transport with Health Volume 9 ; http://www.emeraldinsight.com/ ; >
+      au < finished ; manifest ; 2012 ; 9781787146280 ; 9781787146273 ; 9781787146273 ; Walking: Connecting Sustainable Transport with Health Volume 9 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
 
   }
 }
