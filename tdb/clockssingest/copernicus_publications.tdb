@@ -1715,7 +1715,7 @@
 #      param[home_url] = http://www.wind-energy-science.net/
 
       au < finished ; crawling ; 2016 ; 2016 ; Wind Energy Science Volume 1 ; 1 ; https://www.wind-energ-sci.net/ ; https://www.wind-energy-science.net/ ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2017 ; 2017 ; Wind Energy Science Volume 2 ; 2 ; https://www.wind-energ-sci.net/ ; https://www.wind-energy-science.net/ ; >
+      au < deepCrawl ; exists ; 2017 ; 2017 ; Wind Energy Science Volume 2 ; 2 ; https://www.wind-energ-sci.net/ ; https://www.wind-energy-science.net/ ; >
       au < manifest ; exists ; 2018 ; 2018 ; Wind Energy Science Volume 3 ; 3 ; https://www.wind-energ-sci.net/ ; https://www.wind-energy-science.net/ ; >
 
    }

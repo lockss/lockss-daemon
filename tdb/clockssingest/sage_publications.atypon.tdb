@@ -1677,7 +1677,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; The American Review of Public Administration Volume 44 ; 44 ; arpb ; >
       au < doNotProcess ; doNotProcess ; 2015 ; The American Review of Public Administration Volume 45 ; 45 ; arpb ; >
       au < frozen ; exists ; 2016 ; The American Review of Public Administration Volume 46 ; 46 ; arpb ; >
-      au < crawling ; exists ; 2017 ; The American Review of Public Administration Volume 47 ; 47 ; arpb ; >
+      au < deepCrawl ; exists ; 2017 ; The American Review of Public Administration Volume 47 ; 47 ; arpb ; >
 
     }
 
@@ -5526,7 +5526,7 @@
       au < frozen ; exists ; 2014 ; Cell Transplantation Volume 23 ; 23 ; clla ; >
       au < frozen ; exists ; 2015 ; Cell Transplantation Volume 24 ; 24 ; clla ; >
       au < frozen ; exists ; 2016 ; Cell Transplantation Volume 25 ; 25 ; clla ; >
-      au < crawling ; exists ; 2017 ; Cell Transplantation Volume 26 ; 26 ; clla ; >
+      au < deepCrawl ; exists ; 2017 ; Cell Transplantation Volume 26 ; 26 ; clla ; >
 
   }
 
@@ -5885,7 +5885,7 @@
       #param[base_url] = http://csd.sagepub.com/
 
       au < finished ; manifest ; 2016 ; Chinese Sociological Dialogue Volume 1 ; 1 ; csda ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; Chinese Sociological Dialogue Volume 2 ; 2 ; csda ; >
+      au < deepCrawl ; exists ; 2017 ; Chinese Sociological Dialogue Volume 2 ; 2 ; csda ; >
 
   }
 
@@ -6171,7 +6171,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Clin-Alert Volume 52 ; 52 ; claa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Clin-Alert Volume 53 ; 53 ; claa ; >
       au < frozen ; exists ; 2016 ; Clin-Alert Volume 54 ; 54 ; claa ; >
-      au < crawling ; exists ; 2017 ; Clin-Alert Volume 55 ; 55 ; claa ; >
+      au < deepCrawl ; exists ; 2017 ; Clin-Alert Volume 55 ; 55 ; claa ; >
 
     }
 
@@ -10079,7 +10079,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Educational Policy Volume 28 ; 28 ; epxa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Educational Policy Volume 29 ; 29 ; epxa ; >
       au < frozen ; exists ; 2016 ; Educational Policy Volume 30 ; 30 ; epxa ; >
-      au < crawling ; exists ; 2017 ; Educational Policy Volume 31 ; 31 ; epxa ; >
+      au < deepCrawl ; exists ; 2017 ; Educational Policy Volume 31 ; 31 ; epxa ; >
 
     }
 
@@ -11723,7 +11723,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Evaluation Review Volume 38 ; 38 ; erxb ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Evaluation Review Volume 39 ; 39 ; erxb ; >
       au < frozen ; exists ; 2016 ; Evaluation Review Volume 40 ; 40 ; erxb ; >
-      au < crawling ; exists ; 2017 ; Evaluation Review Volume 41 ; 41 ; erxb ; >
+      au < deepCrawl ; exists ; 2017 ; Evaluation Review Volume 41 ; 41 ; erxb ; >
 
     }
 
@@ -12107,7 +12107,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Feminist Criminology Volume 9 ; 9 ; fcxa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Feminist Criminology Volume 10 ; 10 ; fcxa ; >
       au < finished ; manifest ; 2016 ; Feminist Criminology Volume 11 ; 11 ; fcxa ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2017  ; Feminist Criminology Volume 12 ; 12 ; fcxa ; >
+      au < deepCrawl ; exists ; 2017  ; Feminist Criminology Volume 12 ; 12 ; fcxa ; >
 
     }
 
@@ -13437,7 +13437,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Health Education & Behavior Volume 41 ; 41 ; hebc ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Health Education & Behavior Volume 42 ; 42 ; hebc ; >
       au < frozen ; exists ; 2016 ; Health Education & Behavior Volume 43 ; 43 ; hebc ; >
-      au < crawling ; exists ; 2017 ; Health Education & Behavior Volume 44 ; 44 ; hebc ; >
+      au < deepCrawl ; exists ; 2017 ; Health Education & Behavior Volume 44 ; 44 ; hebc ; >
 
     }
 
@@ -17848,7 +17848,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; International Small Business Journal Volume 32 ; 32 ; isbb ; >
       au < doNotProcess ; doNotProcess ; 2015 ; International Small Business Journal Volume 33 ; 33 ; isbb ; >
       au < frozen ; exists ; 2016 ; International Small Business Journal Volume 34 ; 34 ; isbb ; >
-      au < crawling ; exists ; 2017 ; International Small Business Journal Volume 35 ; 35 ; isbb ; >
+      au < deepCrawl ; exists ; 2017 ; International Small Business Journal Volume 35 ; 35 ; isbb ; >
 
     }
 
@@ -24339,7 +24339,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 13 ; 13 ; mmja ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 14 ; 14 ; mmja ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 15 ; 15 ; mmja ; >
-      au < crawling ; exists ; 2017 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 16 ; 16 ; mmja ; >
+      au < deepCrawl ; exists ; 2017 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 16 ; 16 ; mmja ; >
 
     }
 
@@ -26344,7 +26344,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Studies in International Education Volume 18 ; 18 ; jsia ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Studies in International Education Volume 19 ; 19 ; jsia ; >
       au < frozen ; exists ; 2016 ; Journal of Studies in International Education Volume 20 ; 20 ; jsia ; >
-      au < crawling ; exists ; 2017 ; Journal of Studies in International Education Volume 21 ; 21 ; jsia ; >
+      au < deepCrawl ; exists ; 2017 ; Journal of Studies in International Education Volume 21 ; 21 ; jsia ; >
 
     }
 
@@ -29775,7 +29775,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Music Educators Journal Volume 101 ; 101 ; mejc ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Music Educators Journal Volume 102 ; 102 ; mejc ; >
       au < finished ; manifest ; 2016 ; Music Educators Journal Volume 103 ; 103 ; mejc ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; Music Educators Journal Volume 104 ; 104 ; mejc ; >
+      au < deepCrawl ; exists ; 2017 ; Music Educators Journal Volume 104 ; 104 ; mejc ; >
 
     }
 
@@ -33683,7 +33683,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability Volume 228 ; 228 ; pioa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability Volume 229 ; 229 ; pioa ; >
       au < frozen ; exists ; 2016 ; Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability Volume 230 ; 230 ; pioa ; >
-      au < crawling ; exists ; 2017 ; Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability Volume 231 ; 231 ; pioa ; >
+      au < deepCrawl ; exists ; 2017 ; Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability Volume 231 ; 231 ; pioa ; >
 
     }
 
