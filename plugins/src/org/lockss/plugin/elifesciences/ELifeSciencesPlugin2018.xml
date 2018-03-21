@@ -1,53 +1,53 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>down</string>
+    <string>development</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.elifesciences.ELifeSciencesPlugin</string>
+    <string>org.lockss.plugin.elifesciences.ELifeSciences2018Plugin</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>eLife Sciences Plugin (Legacy)</string>
+    <string>eLife Sciences Plugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>15</string>
+    <string>1</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>3</string>
+        <string>1</string>
       </entry>
       <entry>
         <string>Poll</string>
-        <string>11</string>
+        <string>1</string>
       </entry>
       <entry>
         <string>Substance</string>
-        <string>3</string>
+        <string>1</string>
       </entry>
     </map>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"eLife Sciences Plugin (Legacy), Base URL %s, Month %s", base_url, year_month</string>
+    <string>"eLife Sciences Plugin, Base URL %s, Year %d, Month %s", base_url, year, month</string>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%sarchive/%s", base_url, year_month</string>
+    <string>"%sarchive/%d/%s", base_url, year, month</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
+    <!-- 
+        https://elifesciences.org/archive/2017/january (start_url; creative commons)	    
+        https://elifesciences.org/articles/23693 -->
       <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)$", url_host(base_url)</string>
-      <string>1,"^https?://%s/content/[0-9]+/[^/]+(\?panels_ajax_tab_tab=elife_article_(data|info)&amp;panels_ajax_tab_trigger=article-(data|info)|/article-data|/article-info)?$", url_host(base_url)</string>
-      <string>1,"^https?://%s/elife/citation/[^/]+/ris$", url_host(base_url)</string>
-      <string>2,"^https?://%s/panels_ajax_tab/elife_article(_author|_figdata)?/node:[0-9]+/[0-9]$", url_host(base_url)</string>
-      <string>1,"^https?://elife-publishing-cdn\.s3\.amazonaws\.com/[0-9]+/[^/]+\.[^/]+$"</string>
+      <string>1,"^https?://%s/articles/[0-9]+", url_host(base_url)</string>
       <string>1,"^https?://.+\.glencoesoftware\.com/(.+\.(css|js|mp4))$"</string>
       <string>1,"^https?://cdn\.elifesciences\.org/(elife-articles/)?[0-9]+/(figures-pdf/)?[^/+]+\.[^/]+$"</string>
     </list>
@@ -65,11 +65,20 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
-        <key>year_month</key>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>month</key>
         <displayName>Month</displayName>
-        <description>Month in the form yyyy/mm</description>
+        <description>Month in long form (e.g., january)</description>
         <type>1</type>
-        <size>6</size>
+        <size>10</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
@@ -78,7 +87,8 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"%scontent/[0-9]+/[^/]+-download\.pdf$", base_url</string>
+    <!-- it will come from the cdn so won't use the base_url -->
+      <string>"articles/[0-9]+/[^/]+\.pdf$"</string>
     </list>
   </entry>
   <entry>
@@ -87,10 +97,10 @@
     <string>au_permitted_host_pattern</string>
     <list>
       <string>cdn\.elifesciences\.org</string>
-      <string>elife-publishing-cdn\.s3\.amazonaws\.com</string>
       <string>.+\.glencoesoftware\.com</string>
     </list>
   </entry>
+  <!-- TODO 
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
     <list>
@@ -98,27 +108,27 @@
     </list>
   </entry>
   <entry>
-    <!-- these will not count towards poll results but will replicate from peer if above 1.69.5 -->
     <string>au_url_poll_result_weight</string>
     <list>
       <string>"sites/default/files/(css|js)/(css|js)_[^/]+\.(css|js)$", 0</string>
     </list>
   </entry>
+   -->
   <entry>
     <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.elifesciences.ELifeHtmlHashFilterFactory</string>
+    <string>org.lockss.plugin.elifesciences.ELife2018HtmlHashFilterFactory</string>
   </entry>
   <entry>
     <string>text/html_crawl_filter_factory</string>
-    <string>org.lockss.plugin.elifesciences.ELifeHtmlCrawlFilterFactory</string>
+    <string>org.lockss.plugin.elifesciences.ELife2018HtmlCrawlFilterFactory</string>
   </entry>
     <entry>
     <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.elifesciences.ELifeArticleIteratorFactory</string>
+    <string>org.lockss.plugin.elifesciences.ELife2018ArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.elifesciences.ELifeArticleIteratorFactory</string>
+    <string>org.lockss.plugin.elifesciences.ELife2018ArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>text/html_metadata_extractor_factory_map</string>
