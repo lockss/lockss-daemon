@@ -71,6 +71,10 @@ public class IetHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("li",  "class", "previousLinkContainer"),
         HtmlNodeFilters.tagWithAttribute("li",  "class", "indexLinkContainer"),
         HtmlNodeFilters.tagWithAttribute("li",  "class", "nextLinkContainer"),
+        //at bottom of TOC
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "morelikethiscontentcontainer"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "morelikethiscontentcontainer"),
+        
 
     };
     return (new HtmlFilterInputStream(in, encoding, HtmlNodeFilterTransform.exclude(new OrFilter(filters))));

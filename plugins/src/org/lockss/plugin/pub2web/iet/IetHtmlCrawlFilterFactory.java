@@ -50,6 +50,8 @@ public class IetHtmlCrawlFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttribute("div", "id", "mostcited"),
     HtmlNodeFilters.tagWithAttribute("div", "id", "mostviewed"),
     HtmlNodeFilters.tagWithAttributeRegex("div", "id", "morelikethiscontentcontainer"),
+    // now it's class 3/21/18
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "morelikethiscontentcontainer"),
 
     // prev article, toc, next article links - just in case of overcrawl
     HtmlNodeFilters.tagWithAttribute("div",  "class", "articlenav"),
