@@ -5319,7 +5319,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Capital & Class Volume 38 ; 38 ; cnca ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Capital & Class Volume 39 ; 39 ; cnca ; >
       au < frozen ; exists ; 2016 ; Capital & Class Volume 40 ; 40 ; cnca ; >
-      au < crawling ; exists ; 2017 ; Capital & Class Volume 41 ; 41 ; cnca ; >
+      au < deepCrawl ; exists ; 2017 ; Capital & Class Volume 41 ; 41 ; cnca ; >
 
     }
 
@@ -8838,7 +8838,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Diabetes and Vascular Disease Research Volume 11 ; 11 ; dvra ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Diabetes and Vascular Disease Research Volume 12 ; 12 ; dvra ; >
       au < finished ; manifest ; 2016 ; Diabetes and Vascular Disease Research Volume 13 ; 13 ; dvra ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; Diabetes and Vascular Disease Research Volume 14 ; 14 ; dvra ; >
+      au < deepCrawl ; exists ; 2017 ; Diabetes and Vascular Disease Research Volume 14 ; 14 ; dvra ; >
 
     }
 
@@ -14066,7 +14066,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; History of Science Volume 52 ; 52 ; hosa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; History of Science Volume 53 ; 53 ; hosa ; >
       au < frozen ; exists ; 2016 ; History of Science Volume 54 ; 54 ; hosa ; >
-      au < crawling ; exists ; 2017 ; History of Science Volume 55 ; 55 ; hosa ; >
+      au < deepCrawl ; exists ; 2017 ; History of Science Volume 55 ; 55 ; hosa ; >
 
   }
 
@@ -31001,7 +31001,7 @@
       au < doNotProcess ; doNotProcess ; 2009-2011 ; Nutrition and Health Volume 20 ; 20 ; naha ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Nutrition and Health Volume 21 ; 21 ; naha ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Nutrition and Health Volume 22 ; 22 ; naha ; >
-      au < crawling ; exists ; 2017 ; Nutrition and Health Volume 23 ; 23 ; naha ; >
+      au < deepCrawl ; exists ; 2017 ; Nutrition and Health Volume 23 ; 23 ; naha ; >
 
     }
 
@@ -32597,7 +32597,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Political Theory Volume 42 ; 42 ; ptxa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Political Theory Volume 43 ; 43 ; ptxa ; >
       au < finished ; manifest ; 2016 ; Political Theory Volume 44 ; 44 ; ptxa ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; Political Theory Volume 45 ; 45 ; ptxa ; >
+      au < deepCrawl ; exists ; 2017 ; Political Theory Volume 45 ; 45 ; ptxa ; >
 
     }
 
@@ -42282,7 +42282,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Learning Disability Quarterly Volume 37 ; 37 ; ldqa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Learning Disability Quarterly Volume 38 ; 38 ; ldqa ; >
       au < frozen ; exists ; 2016 ; Learning Disability Quarterly Volume 39 ; 39 ; ldqa ; >
-      au < crawling ; exists ; 2017 ; Learning Disability Quarterly Volume 40 ; 40 ; ldqa ; >
+      au < deepCrawl ; exists ; 2017 ; Learning Disability Quarterly Volume 40 ; 40 ; ldqa ; >
 
 
     }
