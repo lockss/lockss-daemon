@@ -73,8 +73,19 @@ public class IetHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("li",  "class", "nextLinkContainer"),
         //at bottom of TOC
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", "morelikethiscontentcontainer"),
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "morelikethiscontentcontainer"),
         
+        // added in 3/21/18  due to html changes
+        // from crawl filter
+        //on toc
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "morelikethiscontentcontainer"),
+        // on article pages
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "aboutthisarticle.*tabbedsection"),
+        //on article page - tabs for cited by <div class="cite citations hidden-js-div tabbedsection tab-pane hide tabbedsection">
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "cite.*tabbedsection"),
+        //on article page - tabs for related <div class="relatedContent hide tabbedsection">
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "relatedContent.*tabbedsection"),
+        //on article right column - crawl filter leaves citation information download links
+        HtmlNodeFilters.tagWithAttribute("div", "id", "sidebar_right"),
 
     };
     return (new HtmlFilterInputStream(in, encoding, HtmlNodeFilterTransform.exclude(new OrFilter(filters))));

@@ -50,8 +50,6 @@ public class IetHtmlCrawlFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttribute("div", "id", "mostcited"),
     HtmlNodeFilters.tagWithAttribute("div", "id", "mostviewed"),
     HtmlNodeFilters.tagWithAttributeRegex("div", "id", "morelikethiscontentcontainer"),
-    // now it's class 3/21/18
-    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "morelikethiscontentcontainer"),
 
     // prev article, toc, next article links - just in case of overcrawl
     HtmlNodeFilters.tagWithAttribute("div",  "class", "articlenav"),
@@ -67,6 +65,24 @@ public class IetHtmlCrawlFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttribute("div",  "class", "consanguinityContainer"),
     HtmlNodeFilters.tagWithAttribute("a", "target", "xrefwindow"),
     HtmlNodeFilters.tagWithAttribute("div", "class", "crossSelling"),
+    
+    //3/21/18 - html has changed - add to crawl filter
+    // on TOC - most cited and most read
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "morelikethiscontentcontainer"),
+    // on article page - tabs for references <div class="references hide tabbedsection">
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "references.*tabbedsection"),
+    // on article page - tabs for keywords <div class="aboutthisarticle hide tabbedsection">
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "aboutthisarticle.*tabbedsection"),
+    //on article page - tabs for cited by <div class="cite citations hidden-js-div tabbedsection tab-pane hide tabbedsection">
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "cite.*tabbedsection"),
+    //on article page - tabs for related <div class="relatedContent hide tabbedsection">
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "relatedContent.*tabbedsection"),
+    //on article right column - except for citation information download links
+    HtmlNodeFilters.allExceptSubtree(
+            HtmlNodeFilters.tagWithAttribute("div", "id", "sidebar_right"),
+              HtmlNodeFilters.tagWithAttributeRegex(
+                     "a", "href", "/content/journals/.*/cite/[a-z]+$")),
+
     
   };
 
