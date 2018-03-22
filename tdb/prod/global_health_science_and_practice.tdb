@@ -4,8 +4,8 @@
     name = Global Health: Science and Practice
   >
 
-      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-      implicit < status ; year ; name ; param[volume_name] >
+      pluginPrefix = org.lockss.plugin.highwire.
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
       
   {
 
@@ -17,11 +17,11 @@
       rights = openaccess
       param[base_url] = http://www.ghspjournal.org/
 
-      au < released ; 2013 ; Global Health: Science and Practice Volume 1 ; 1 >
-      au < released ; 2014 ; Global Health: Science and Practice Volume 2 ; 2 >
-      au < released ; 2015 ; Global Health: Science and Practice Volume 3 ; 3 >
-      au < released ; 2016 ; Global Health: Science and Practice Volume 4 ; 4 >
-      au < testing ; 2017 ; Global Health: Science and Practice Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; released ; 2013 ; Global Health: Science and Practice Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; released ; 2014 ; Global Health: Science and Practice Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; released ; 2015 ; Global Health: Science and Practice Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; released ; 2016 ; Global Health: Science and Practice Volume 4 ; 4 >
+      au < HighWireDrupalPlugin ; exists ; 2017 ; Global Health: Science and Practice Volume 5 ; 5 >
 
   }
   
