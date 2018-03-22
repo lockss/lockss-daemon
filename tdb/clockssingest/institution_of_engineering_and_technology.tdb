@@ -29,7 +29,7 @@
       au < crawling ; exists ; 1967 ; Electronics Letters Volume 3 ; 3 ; >
       au < crawling ; exists ; 1968 ; Electronics Letters Volume 4 ; 4 ; >
       au < crawling ; exists ; 1969 ; Electronics Letters Volume 5 ; 5 ; >
-      au < crawling ; exists ; 1970 ; Electronics Letters Volume 6 ; 6 ; >
+      au < frozen ; exists ; 1970 ; Electronics Letters Volume 6 ; 6 ; >
       au < crawling ; exists ; 1971 ; Electronics Letters Volume 7 ; 7 ; >
       au < crawling ; exists ; 1972 ; Electronics Letters Volume 8 ; 8 ; >
       au < crawling ; exists ; 1973 ; Electronics Letters Volume 9 ; 9 ; >
@@ -619,7 +619,7 @@
       >
       param[journal_id] = iet-spr
 
-      au < crawling ; exists ; 2007 ; IET Signal Processing Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2007 ; IET Signal Processing Volume 1 ; 1 ; >
       au < crawling ; exists ; 2008 ; IET Signal Processing Volume 2 ; 2 ; >
       au < frozen ; exists ; 2009 ; IET Signal Processing Volume 3 ; 3 ; >
       au < frozen ; exists ; 2010 ; IET Signal Processing Volume 4 ; 4 ; >
