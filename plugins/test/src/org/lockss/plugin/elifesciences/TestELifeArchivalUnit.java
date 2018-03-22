@@ -52,7 +52,7 @@ public class TestELifeArchivalUnit extends LockssTestCase {
   private static final Logger log = Logger.getLogger(TestELifeArchivalUnit.class);
 
   static final String PLUGIN_ID = "org.lockss.plugin.elifesciences.ELifeSciencesPlugin";
-  static final String PluginName = "eLife Sciences Plugin";
+  static final String PluginName = "eLife Sciences Plugin (Legacy)";
   
   static final String  ELIFE_REPAIR_FROM_PEER_REGEXP1 = "sites/default/files/(css|js)/(css|js)_[^/]+\\.(css|js)$";
 //  static final String  ELIFE_REPAIR_FROM_PEER_REGEXP2 = "\\.(mp4)$";
