@@ -158,7 +158,7 @@ public class GeorgThiemeVerlagHtmlMetadataExtractorFactory implements FileMetada
   			  }
   		  } else if (foundPID != null) {
   			  // there wasn't an EISSN, so let's check the ISSN
-  			  if (!(foundPID.equals(AU_PID) || foundEID.equals(AU_EID)) ) {
+  			  if (!(foundPID.equals(AU_PID) || foundPID.equals(AU_EID)) ) {
   				  return false;
   			  }
   		  } 
