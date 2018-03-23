@@ -24,7 +24,7 @@
       param[journal_id] = el
       #from Vol 1 in 1965
 
-      au < crawling ; exists ; 1965 ; Electronics Letters Volume 1 ; 1 ; >
+      au < frozen ; exists ; 1965 ; Electronics Letters Volume 1 ; 1 ; >
       au < crawling ; exists ; 1966 ; Electronics Letters Volume 2 ; 2 ; >
       au < crawling ; exists ; 1967 ; Electronics Letters Volume 3 ; 3 ; >
       au < crawling ; exists ; 1968 ; Electronics Letters Volume 4 ; 4 ; >
@@ -266,7 +266,7 @@
       param[journal_id] = iet-epa
 
       au < crawling ; exists ; 2007 ; IET Electric Power Applications Volume 1 ; 1 ; >
-      au < crawling ; exists ; 2008 ; IET Electric Power Applications Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2008 ; IET Electric Power Applications Volume 2 ; 2 ; >
       au < frozen ; exists ; 2009 ; IET Electric Power Applications Volume 3 ; 3 ; >
       au < frozen ; exists ; 2010 ; IET Electric Power Applications Volume 4 ; 4 ; >
       au < frozen ; exists ; 2011 ; IET Electric Power Applications Volume 5 ; 5 ; >
@@ -418,7 +418,7 @@
       param[journal_id] = iet-map
 
       au < crawling ; exists ; 2007 ; IET Microwaves, Antennas & Propagation Volume 1 ; 1 ; >
-      au < crawling ; exists ; 2008 ; IET Microwaves, Antennas & Propagation Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2008 ; IET Microwaves, Antennas & Propagation Volume 2 ; 2 ; >
       au < frozen ; exists ; 2009 ; IET Microwaves, Antennas & Propagation Volume 3 ; 3 ; >
       au < frozen ; exists ; 2010 ; IET Microwaves, Antennas & Propagation Volume 4 ; 4 ; >
       au < frozen ; exists ; 2011 ; IET Microwaves, Antennas & Propagation Volume 5 ; 5 ; >
