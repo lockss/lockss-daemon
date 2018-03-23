@@ -424,7 +424,7 @@
     au < zapped ; finished ; 2014 ; Immunotherapy Volume 6 ; 6 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
     au < notReady ; exists ; 2015 ; Immunotherapy Volume 7 ; 7 ; http://www.futuremedicine.com/ ; > #500 Error. Waiting for Atypon to fix.
     au < frozen ; exists ; 2016 ; Immunotherapy Volume 8 ; 8 ; http://www.futuremedicine.com/ ; >
-    au < crawling ; exists ; 2017 ; Immunotherapy Volume 9 ; 9 ; https://www.futuremedicine.com/ ; >
+    au < deepCrawl ; exists ; 2017 ; Immunotherapy Volume 9 ; 9 ; https://www.futuremedicine.com/ ; >
     
   }
 
