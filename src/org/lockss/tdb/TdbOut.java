@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2017, Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2018, Board of Trustees of Leland Stanford Jr. University,
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification,
@@ -37,7 +37,6 @@ import java.util.*;
 
 import org.apache.commons.cli.*;
 import org.lockss.tdb.AntlrUtil.SyntaxError;
-import org.lockss.util.*;
 
 public class TdbOut {
 
@@ -48,7 +47,7 @@ public class TdbOut {
    * 
    * @since 1.68
    */
-  public static final String VERSION = "[TdbOut:0.2.6]";
+  public static final String VERSION = "[TdbOut:0.2.7]";
   
   /**
    * <p>
@@ -581,10 +580,10 @@ public class TdbOut {
       try {
         if ("-".equals(f)) {
           f = "<stdin>";
-          tdbBuilder.parse(f, System.in, Constants.ENCODING_UTF_8);
+          tdbBuilder.parse(f, System.in, TdbUtil.ENCODING_UTF_8);
         }
         else {
-          tdbBuilder.parse(f, Constants.ENCODING_UTF_8);
+          tdbBuilder.parse(f, TdbUtil.ENCODING_UTF_8);
         }
       }
       catch (FileNotFoundException fnfe) {
@@ -688,11 +687,13 @@ public class TdbOut {
       if (typeJournal && !Title.TYPE_JOURNAL.equals(title.getType())) {
         continue;
       }
+      String titleStr = title.getIssn();
+      String eissnStr = title.getEissn();
       out.println(String.format("%s,%s,%s,%s",
                                 csvValue(title.getPublisher().getName()),
                                 csvValue(title.getName()),
-                                csvValue(StringUtil.nonNull(title.getIssn())),
-                                csvValue(StringUtil.nonNull(title.getEissn()))));
+                                csvValue((titleStr == null) ? "" : titleStr),
+                                csvValue((eissnStr == null) ? "" : eissnStr)));
     }
     out.close();
   }

@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2017, Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2018, Board of Trustees of Leland Stanford Jr. University,
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification,
@@ -36,8 +36,6 @@ import java.io.Serializable;
 import java.util.*;
 
 import org.antlr.v4.runtime.Token;
-import org.lockss.plugin.PluginManager;
-import org.lockss.util.*;
 
 /**
  * <p>
@@ -406,7 +404,7 @@ public class Au implements Serializable {
       String plugin = getComputedPlugin();
       Map<String, String> params = getParams();
       if (plugin != null && params != null && params.size() > 0) {
-        auid = PluginManager.generateAuId(plugin, PropUtil.propsToCanonicalEncodedString(params));
+        auid = TdbUtil.generateAuId(plugin, params);
       }
     }
     return auid;
@@ -442,9 +440,9 @@ public class Au implements Serializable {
           boolean first = true;
           for (String nondefkey : new TreeSet<String>(nondefParams.keySet())) {
             sb.append(first ? "@@@NONDEF@@@" : "&");
-            sb.append(PropKeyEncoder.encode(nondefkey));
+            sb.append(TdbUtil.encode(nondefkey));
             sb.append("~");
-            sb.append(PropKeyEncoder.encode(nondefParams.get(nondefkey)));
+            sb.append(TdbUtil.encode(nondefParams.get(nondefkey)));
             first = false;
           }
           auidplus = sb.toString();

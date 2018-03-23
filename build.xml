@@ -371,8 +371,8 @@ Args:
   <property name="jackson-annotations.jar" value="${lib}/jackson-annotations-2.3.0.jar" />
   <property name="crawljax-lockss-bridge.jar" value="${lib}/crawljax-lockss-bridge.jar" />
 
-  <property name="antlr.runtime.jar" value="${lib}/antlr-runtime-4.4.jar" />
-  <property name="antlr.tools.jar" value="${lib}/antlr-4.4-complete.jar" />
+  <property name="antlr.runtime.jar" value="${lib}/antlr-runtime-4.5.3.jar" />
+  <property name="antlr.tools.jar" value="${lib}/antlr-4.5.3-complete.jar" />
   <!-- Jars we create -->
   <property name="lockss.jar"     value="${lib}/lockss.jar"/>
   <property name="lockss.rewoven.jar"    value="${lib}/lockss-rewoven.jar"/>

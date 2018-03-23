@@ -232,7 +232,7 @@ public class PropUtil {
     if (props == null || props.isEmpty()) {
       return "";
     }
-    StringBuffer sb = new StringBuffer();
+    StringBuilder sb = new StringBuilder();
     SortedSet sortedKeys = new TreeSet(props.keySet());
 
     for (Iterator it = sortedKeys.iterator() ; it.hasNext() ; ) {

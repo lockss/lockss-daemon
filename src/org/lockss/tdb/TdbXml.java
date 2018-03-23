@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2016, Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2018, Board of Trustees of Leland Stanford Jr. University,
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification,
@@ -41,7 +41,6 @@ import org.apache.commons.cli.*;
 import org.apache.commons.lang3.StringEscapeUtils;
 import org.apache.commons.lang3.text.translate.*;
 import org.lockss.tdb.AntlrUtil.SyntaxError;
-import org.lockss.util.Constants;
 
 import com.ibm.icu.text.Transliterator;
 
@@ -54,7 +53,7 @@ public class TdbXml {
    * 
    * @since 1.68
    */
-  public static final String VERSION = "[TdbXml:0.2.6]";
+  public static final String VERSION = "[TdbXml:0.2.7]";
   
   /**
    * <p>
@@ -559,12 +558,12 @@ public class TdbXml {
       String year = mat.group(4);
       if (year != null) {
         ausb.append("_");
-        ausb.append(year);
+        ausb.append(year.replace('.', '_'));
       }
       String comment = mat.group(6);
       if (comment != null) {
         ausb.append("_");
-        ausb.append(comment.replace(" ", ""));
+        ausb.append(comment.replace(" ", "").replace('.', '_'));
       }
     }
     else {
@@ -714,7 +713,7 @@ public class TdbXml {
           KeepGoing.addError(options, null);
         }
         else {
-          tdbBuilder.parse(f, Constants.ENCODING_UTF_8);
+          tdbBuilder.parse(f, TdbUtil.ENCODING_UTF_8);
           PrintStream out = OutputDirectoryOption.getMultipleOutput(options, f, ".xml");
           produceOutput(options, out, tdbBuilder.getTdb());
           out.close();
@@ -759,10 +758,10 @@ public class TdbXml {
       try {
         if ("-".equals(f)) {
           f = "<stdin>";
-          tdbBuilder.parse(f, System.in, Constants.ENCODING_UTF_8);
+          tdbBuilder.parse(f, System.in, TdbUtil.ENCODING_UTF_8);
         }
         else {
-          tdbBuilder.parse(f, Constants.ENCODING_UTF_8);
+          tdbBuilder.parse(f, TdbUtil.ENCODING_UTF_8);
         }
       }
       catch (FileNotFoundException fnfe) {

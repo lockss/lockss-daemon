@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2016, Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2018, Board of Trustees of Leland Stanford Jr. University,
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification,
@@ -34,11 +34,9 @@ package org.lockss.tdb;
 
 import java.io.*;
 import java.util.*;
-import java.util.zip.*;
 
 import org.apache.commons.cli.*;
 import org.lockss.tdb.AntlrUtil.SyntaxError;
-import org.lockss.util.Constants;
 
 /**
  * @author Thib Guicherd-Callin
@@ -53,7 +51,7 @@ public class TdbParse {
    * 
    * @since 1.72
    */
-  public static final String VERSION = "[TdbParse:0.1.0]";
+  public static final String VERSION = "[TdbParse:0.1.1]";
 
   /**
    * @since 1.72
@@ -73,10 +71,10 @@ public class TdbParse {
       try {
         if ("-".equals(f)) {
           f = "<stdin>";
-          tdbBuilder.parse(f, System.in, Constants.ENCODING_UTF_8);
+          tdbBuilder.parse(f, System.in, TdbUtil.ENCODING_UTF_8);
         }
         else {
-          tdbBuilder.parse(f, Constants.ENCODING_UTF_8);
+          tdbBuilder.parse(f, TdbUtil.ENCODING_UTF_8);
         }
       }
       catch (FileNotFoundException fnfe) {
