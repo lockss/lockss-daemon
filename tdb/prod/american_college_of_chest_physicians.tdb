@@ -46,6 +46,7 @@
       implicit < status ; year ; name ; param[year] >
 
       comment[prior] = there are prior issues (2004 and earlier)
+      #move to Elsevier
       
       au < doNotProcess ; 2005 ; Chest Volume 127-128 ; 2005 >
       au < doNotProcess ; 2006 ; Chest Volume 129-130 ; 2006 >
@@ -53,14 +54,13 @@
       au < doNotProcess ; 2008 ; Chest Volume 133-134 ; 2008 >
       au < doNotProcess ; 2009 ; Chest Volume 135-136 ; 2009 >
       au < doNotProcess ; 2010 ; Chest Volume 137-138 ; 2010 >
-      au < released ; 2011 ; Chest Volume 139-140 ; 2011 >
-      au < released ; 2012 ; Chest Volume 141-142 ; 2012 >
-      au < released ; 2013 ; Chest Volume 143-144 ; 2013 >
-      au < released ; 2014 ; Chest Volume 145-146 ; 2014 >
-      au < released ; 2015 ; Chest Volume 147-148 ; 2015 >
-      au < released ; 2016 ; Chest Volume 149-150 ; 2016 >
-      au < testing ; 2017 ; Chest Volume 151-152 ; 2017 >
-    
+      au < down ; 2011 ; Chest Volume 139-140 ; 2011 >
+      au < down ; 2012 ; Chest Volume 141-142 ; 2012 >
+      au < down ; 2013 ; Chest Volume 143-144 ; 2013 >
+      au < down ; 2014 ; Chest Volume 145-146 ; 2014 >
+      au < down ; 2015 ; Chest Volume 147-148 ; 2015 >
+      au < down ; 2016 ; Chest Volume 149-150 ; 2016 >
+
     }
 
   }
