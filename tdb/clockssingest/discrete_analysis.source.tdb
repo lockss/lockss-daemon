@@ -14,7 +14,8 @@
     >
 
     #currently only one journal but they want the option to deliver more in the future    
-    plugin = needs.plugin
+    plugin = needs.SourcePlugin
+    
     #plugin = org.lockss.plugin.clockss.discreteanlysis.ClockssDiscreteAnalysisSourcePlugin
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/adoaj-released/
     hidden[proxy] = DIRECT
