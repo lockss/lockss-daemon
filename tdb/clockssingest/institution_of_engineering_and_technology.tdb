@@ -46,9 +46,9 @@
       au < crawling ; exists ; 1984 ; Electronics Letters Volume 20 ; 20 ; >
       au < frozen ; exists ; 1985 ; Electronics Letters Volume 21 ; 21 ; >
       au < frozen ; exists ; 1986 ; Electronics Letters Volume 22 ; 22 ; >
-      au < notReady ; exists ; 1987 ; Electronics Letters Volume 23 ; 23 ; > #500 error. http://digital-library.theiet.org/content/journals/10.1049/el_19870726/cite/bibtex
+      au < ready ; exists ; 1987 ; Electronics Letters Volume 23 ; 23 ; >
       au < frozen ; exists ; 1988 ; Electronics Letters Volume 24 ; 24 ; >
-      au < notReady ; exists ; 1989 ; Electronics Letters Volume 25 ; 25 ; > #500 error. 10.1049/el_19890470/cite/bibtex and 10.1049/el_19890175/cite/bibtex
+      au < ready ; exists ; 1989 ; Electronics Letters Volume 25 ; 25 ; >
       au < frozen ; exists ; 1990 ; Electronics Letters Volume 26 ; 26 ; >
       au < frozen ; exists ; 1991 ; Electronics Letters Volume 27 ; 27 ; >
       au < frozen ; exists ; 1992 ; Electronics Letters Volume 28 ; 28 ; >
@@ -101,7 +101,7 @@
       au < frozen ; exists ; 2013 ; Engineering & Technology Volume 8 ; 8 ; >
       au < frozen ; exists ; 2014 ; Engineering & Technology Volume 9 ; 9 ; >
       au < frozen ; exists ; 2015 ; Engineering & Technology Volume 10 ; 10 ; >
-      au < notReady ; exists ; 2016 ; Engineering & Technology Volume 11 ; 11 ; > #500 Error
+      au < ready ; exists ; 2016 ; Engineering & Technology Volume 11 ; 11 ; >
       au < deepCrawl ; exists ; 2017 ; Engineering & Technology Volume 12 ; 12 ; >
       au < manifest ; exists ; 2018 ; Engineering & Technology Volume 13 ; 13 ; >
 
@@ -169,8 +169,8 @@
       au < frozen ; exists ; 2009 ; IET Communications Volume 3 ; 3 ; >
       au < frozen ; exists ; 2010 ; IET Communications Volume 4 ; 4 ; >
       au < frozen ; exists ; 2011 ; IET Communications Volume 5 ; 5 ; >
-      au < notReady ; exists ; 2012 ; IET Communications Volume 6 ; 6 ; > #500 Error
-      au < notReady ; exists ; 2013 ; IET Communications Volume 7 ; 7 ; > #500 Error
+      au < testing ; exists ; 2012 ; IET Communications Volume 6 ; 6 ; > #500 Error
+      au < testing ; exists ; 2013 ; IET Communications Volume 7 ; 7 ; > #500 Error
       au < frozen ; exists ; 2014 ; IET Communications Volume 8 ; 8 ; >
       au < frozen ; exists ; 2015 ; IET Communications Volume 9 ; 9 ; >
       au < frozen ; exists ; 2016 ; IET Communications Volume 10 ; 10 ; >
@@ -344,7 +344,7 @@
       au < frozen ; exists ; 2009 ; IET Image Processing Volume 3 ; 3 ; >
       au < frozen ; exists ; 2010 ; IET Image Processing Volume 4 ; 4 ; >
       au < frozen ; exists ; 2011 ; IET Image Processing Volume 5 ; 5 ; >
-      au < testing ; exists ; 2012 ; IET Image Processing Volume 6 ; 6 ; >
+      au < ready ; exists ; 2012 ; IET Image Processing Volume 6 ; 6 ; >
       au < frozen ; exists ; 2013 ; IET Image Processing Volume 7 ; 7 ; >
       au < frozen ; exists ; 2014 ; IET Image Processing Volume 8 ; 8 ; >
       au < frozen ; exists ; 2015 ; IET Image Processing Volume 9 ; 9 ; >
