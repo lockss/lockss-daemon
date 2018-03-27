@@ -25,45 +25,45 @@
       #from Vol 1 in 1965
 
       au < frozen ; exists ; 1965 ; Electronics Letters Volume 1 ; 1 ; >
-      au < crawling ; exists ; 1966 ; Electronics Letters Volume 2 ; 2 ; >
+      au < frozen ; exists ; 1966 ; Electronics Letters Volume 2 ; 2 ; >
       au < frozen ; exists ; 1967 ; Electronics Letters Volume 3 ; 3 ; >
       au < frozen ; exists ; 1968 ; Electronics Letters Volume 4 ; 4 ; >
       au < frozen ; exists ; 1969 ; Electronics Letters Volume 5 ; 5 ; >
       au < frozen ; exists ; 1970 ; Electronics Letters Volume 6 ; 6 ; >
-      au < crawling ; exists ; 1971 ; Electronics Letters Volume 7 ; 7 ; >
+      au < frozen ; exists ; 1971 ; Electronics Letters Volume 7 ; 7 ; >
       au < crawling ; exists ; 1972 ; Electronics Letters Volume 8 ; 8 ; >
-      au < crawling ; exists ; 1973 ; Electronics Letters Volume 9 ; 9 ; >
+      au < frozen ; exists ; 1973 ; Electronics Letters Volume 9 ; 9 ; >
       au < frozen ; exists ; 1974 ; Electronics Letters Volume 10 ; 10 ; >
-      au < crawling ; exists ; 1975 ; Electronics Letters Volume 11 ; 11 ; >
+      au < frozen ; exists ; 1975 ; Electronics Letters Volume 11 ; 11 ; >
       au < crawling ; exists ; 1976 ; Electronics Letters Volume 12 ; 12 ; >
       au < frozen ; exists ; 1977 ; Electronics Letters Volume 13 ; 13 ; >
       au < frozen ; exists ; 1978 ; Electronics Letters Volume 14 ; 14 ; >
       au < frozen ; exists ; 1979 ; Electronics Letters Volume 15 ; 15 ; >
-      au < crawling ; exists ; 1980 ; Electronics Letters Volume 16 ; 16 ; >
+      au < frozen ; exists ; 1980 ; Electronics Letters Volume 16 ; 16 ; >
       au < frozen ; exists ; 1981 ; Electronics Letters Volume 17 ; 17 ; >
       au < frozen ; exists ; 1982 ; Electronics Letters Volume 18 ; 18 ; >
       au < frozen ; exists ; 1983 ; Electronics Letters Volume 19 ; 19 ; >
       au < crawling ; exists ; 1984 ; Electronics Letters Volume 20 ; 20 ; >
-      au < crawling ; exists ; 1985 ; Electronics Letters Volume 21 ; 21 ; >
-      au < crawling ; exists ; 1986 ; Electronics Letters Volume 22 ; 22 ; >
+      au < frozen ; exists ; 1985 ; Electronics Letters Volume 21 ; 21 ; >
+      au < frozen ; exists ; 1986 ; Electronics Letters Volume 22 ; 22 ; >
       au < notReady ; exists ; 1987 ; Electronics Letters Volume 23 ; 23 ; > #500 error. http://digital-library.theiet.org/content/journals/10.1049/el_19870726/cite/bibtex
-      au < crawling ; exists ; 1988 ; Electronics Letters Volume 24 ; 24 ; >
+      au < frozen ; exists ; 1988 ; Electronics Letters Volume 24 ; 24 ; >
       au < notReady ; exists ; 1989 ; Electronics Letters Volume 25 ; 25 ; > #500 error. 10.1049/el_19890470/cite/bibtex and 10.1049/el_19890175/cite/bibtex
-      au < crawling ; exists ; 1990 ; Electronics Letters Volume 26 ; 26 ; >
+      au < frozen ; exists ; 1990 ; Electronics Letters Volume 26 ; 26 ; >
       au < frozen ; exists ; 1991 ; Electronics Letters Volume 27 ; 27 ; >
       au < frozen ; exists ; 1992 ; Electronics Letters Volume 28 ; 28 ; >
-      au < crawling ; exists ; 1993 ; Electronics Letters Volume 29 ; 29 ; >
+      au < frozen ; exists ; 1993 ; Electronics Letters Volume 29 ; 29 ; >
       au < frozen ; exists ; 1994 ; Electronics Letters Volume 30 ; 30 ; >
       au < frozen ; exists ; 1995 ; Electronics Letters Volume 31 ; 31 ; >
       au < crawling ; exists ; 1996 ; Electronics Letters Volume 32 ; 32 ; >
       au < ready ; exists ; 1997 ; Electronics Letters Volume 33 ; 33 ; >
-      au < crawling ; exists ; 1998 ; Electronics Letters Volume 34 ; 34 ; >
-      au < crawling ; exists ; 1999 ; Electronics Letters Volume 35 ; 35 ; >
-      au < crawling ; exists ; 2000 ; Electronics Letters Volume 36 ; 36 ; >
-      au < crawling ; exists ; 2001 ; Electronics Letters Volume 37 ; 37 ; >
-      au < crawling ; exists ; 2002 ; Electronics Letters Volume 38 ; 38 ; >
+      au < frozen ; exists ; 1998 ; Electronics Letters Volume 34 ; 34 ; >
+      au < frozen ; exists ; 1999 ; Electronics Letters Volume 35 ; 35 ; >
+      au < frozen ; exists ; 2000 ; Electronics Letters Volume 36 ; 36 ; >
+      au < frozen ; exists ; 2001 ; Electronics Letters Volume 37 ; 37 ; >
+      au < frozen ; exists ; 2002 ; Electronics Letters Volume 38 ; 38 ; >
       au < crawling ; exists ; 2003 ; Electronics Letters Volume 39 ; 39 ; >
-      au < crawling ; exists ; 2004 ; Electronics Letters Volume 40 ; 40 ; >
+      au < frozen ; exists ; 2004 ; Electronics Letters Volume 40 ; 40 ; >
       au < frozen ; exists ; 2005 ; Electronics Letters Volume 41 ; 41 ; >
       au < frozen ; exists ; 2006 ; Electronics Letters Volume 42 ; 42 ; >
       au < frozen ; exists ; 2007 ; Electronics Letters Volume 43 ; 43 ; >
@@ -91,8 +91,8 @@
       >
       param[journal_id] = et
 
-      au < crawling ; exists ; 2006 ; Engineering & Technology Volume 1 ; 1 ; >
-      au < crawling ; exists ; 2007 ; Engineering & Technology Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2006 ; Engineering & Technology Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2007 ; Engineering & Technology Volume 2 ; 2 ; >
       au < frozen ; exists ; 2008 ; Engineering & Technology Volume 3 ; 3 ; >
       au < frozen ; exists ; 2009 ; Engineering & Technology Volume 4 ; 4 ; >
       au < frozen ; exists ; 2010 ; Engineering & Technology Volume 5 ; 5 ; >
@@ -139,8 +139,8 @@
       >
        param[journal_id] = iet-cds
 
-      au < crawling ; exists ; 2007 ; IET Circuits, Devices and Systems Volume 1 ; 1 ; >
-      au < crawling ; exists ; 2008 ; IET Circuits, Devices and Systems Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2007 ; IET Circuits, Devices and Systems Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2008 ; IET Circuits, Devices and Systems Volume 2 ; 2 ; >
       au < frozen ; exists ; 2009 ; IET Circuits, Devices and Systems Volume 3 ; 3 ; >
       au < frozen ; exists ; 2010 ; IET Circuits, Devices and Systems Volume 4 ; 4 ; >
       au < frozen ; exists ; 2011 ; IET Circuits, Devices and Systems Volume 5 ; 5 ; >
@@ -164,8 +164,8 @@
       >
       param[journal_id] = iet-com
 
-      au < crawling ; exists ; 2007 ; IET Communications Volume 1 ; 1 ; >
-      au < crawling ; exists ; 2008 ; IET Communications Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2007 ; IET Communications Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2008 ; IET Communications Volume 2 ; 2 ; >
       au < frozen ; exists ; 2009 ; IET Communications Volume 3 ; 3 ; >
       au < frozen ; exists ; 2010 ; IET Communications Volume 4 ; 4 ; >
       au < frozen ; exists ; 2011 ; IET Communications Volume 5 ; 5 ; >
@@ -189,7 +189,7 @@
       >
       param[journal_id] = iet-cdt
 
-      au < crawling ; exists ; 2007 ; IET Computers & Digital Techniques Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2007 ; IET Computers & Digital Techniques Volume 1 ; 1 ; >
       au < frozen ; exists ; 2008 ; IET Computers & Digital Techniques Volume 2 ; 2 ; >
       au < frozen ; exists ; 2009 ; IET Computers & Digital Techniques Volume 3 ; 3 ; >
       au < frozen ; exists ; 2010 ; IET Computers & Digital Techniques Volume 4 ; 4 ; >
@@ -215,7 +215,7 @@
       param[journal_id] = iet-cvi
 
       au < frozen ; exists ; 2007 ; IET Computer Vision Volume 1 ; 1 ; >
-      au < crawling ; exists ; 2008 ; IET Computer Vision Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2008 ; IET Computer Vision Volume 2 ; 2 ; >
       au < frozen ; exists ; 2009 ; IET Computer Vision Volume 3 ; 3 ; >
       au < frozen ; exists ; 2010 ; IET Computer Vision Volume 4 ; 4 ; >
       au < frozen ; exists ; 2011 ; IET Computer Vision Volume 5 ; 5 ; >
@@ -313,8 +313,8 @@
       >
       param[journal_id] = iet-gtd
 
-      au < crawling ; exists ; 2007 ; IET Generation, Transmission & Distribution Volume 1 ; 1 ; >
-      au < crawling ; exists ; 2008 ; IET Generation, Transmission & Distribution Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2007 ; IET Generation, Transmission & Distribution Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2008 ; IET Generation, Transmission & Distribution Volume 2 ; 2 ; >
       au < frozen ; exists ; 2009 ; IET Generation, Transmission & Distribution Volume 3 ; 3 ; >
       au < frozen ; exists ; 2010 ; IET Generation, Transmission & Distribution Volume 4 ; 4 ; >
       au < frozen ; exists ; 2011 ; IET Generation, Transmission & Distribution Volume 5 ; 5 ; >
@@ -391,7 +391,7 @@
       >
       param[journal_id] = iet-its
 
-      au < crawling ; exists ; 2007 ; IET Intelligent Transport Systems Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2007 ; IET Intelligent Transport Systems Volume 1 ; 1 ; >
       au < frozen ; exists ; 2008 ; IET Intelligent Transport Systems Volume 2 ; 2 ; >
       au < frozen ; exists ; 2009 ; IET Intelligent Transport Systems Volume 3 ; 3 ; >
       au < frozen ; exists ; 2010 ; IET Intelligent Transport Systems Volume 4 ; 4 ; >
@@ -417,7 +417,7 @@
       >
       param[journal_id] = iet-map
 
-      au < crawling ; exists ; 2007 ; IET Microwaves, Antennas & Propagation Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2007 ; IET Microwaves, Antennas & Propagation Volume 1 ; 1 ; >
       au < frozen ; exists ; 2008 ; IET Microwaves, Antennas & Propagation Volume 2 ; 2 ; >
       au < frozen ; exists ; 2009 ; IET Microwaves, Antennas & Propagation Volume 3 ; 3 ; >
       au < frozen ; exists ; 2010 ; IET Microwaves, Antennas & Propagation Volume 4 ; 4 ; >
@@ -443,7 +443,7 @@
       >
       param[journal_id] = iet-nbt
 
-      au < crawling ; exists ; 2007 ; IET Nanotechnology Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2007 ; IET Nanotechnology Volume 1 ; 1 ; >
       au < frozen ; exists ; 2008 ; IET Nanotechnology Volume 2 ; 2 ; >
       au < frozen ; exists ; 2009 ; IET Nanotechnology Volume 3 ; 3 ; >
       au < frozen ; exists ; 2010 ; IET Nanotechnology Volume 4 ; 4 ; >
@@ -542,7 +542,7 @@
       param[journal_id] = iet-rsn
 
       au < frozen ; exists ; 2007 ; IET Radar, Sonar & Navigation Volume 1 ; 1 ; >
-      au < crawling ; exists ; 2008 ; IET Radar, Sonar & Navigation Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2008 ; IET Radar, Sonar & Navigation Volume 2 ; 2 ; >
       au < frozen ; exists ; 2009 ; IET Radar, Sonar & Navigation Volume 3 ; 3 ; >
       au < frozen ; exists ; 2010 ; IET Radar, Sonar & Navigation Volume 4 ; 4 ; >
       au < frozen ; exists ; 2011 ; IET Radar, Sonar & Navigation Volume 5 ; 5 ; >
@@ -568,7 +568,7 @@
       param[journal_id] = iet-rpg
 
       au < frozen ; exists ; 2007 ; IET Renewable Power Generation Volume 1 ; 1 ; >
-      au < crawling ; exists ; 2008 ; IET Renewable Power Generation Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2008 ; IET Renewable Power Generation Volume 2 ; 2 ; >
       au < frozen ; exists ; 2009 ; IET Renewable Power Generation Volume 3 ; 3 ; >
       au < frozen ; exists ; 2010 ; IET Renewable Power Generation Volume 4 ; 4 ; >
       au < frozen ; exists ; 2011 ; IET Renewable Power Generation Volume 5 ; 5 ; >
@@ -594,7 +594,7 @@
       param[journal_id] = iet-smt
 
       au < frozen ; exists ; 2007 ; IET Science, Measurement & Technology Volume 1 ; 1 ; >
-      au < crawling ; exists ; 2008 ; IET Science, Measurement & Technology Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2008 ; IET Science, Measurement & Technology Volume 2 ; 2 ; >
       au < frozen ; exists ; 2009 ; IET Science, Measurement & Technology Volume 3 ; 3 ; >
       au < frozen ; exists ; 2010 ; IET Science, Measurement & Technology Volume 4 ; 4 ; >
       au < frozen ; exists ; 2011 ; IET Science, Measurement & Technology Volume 5 ; 5 ; >
@@ -620,7 +620,7 @@
       param[journal_id] = iet-spr
 
       au < frozen ; exists ; 2007 ; IET Signal Processing Volume 1 ; 1 ; >
-      au < crawling ; exists ; 2008 ; IET Signal Processing Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2008 ; IET Signal Processing Volume 2 ; 2 ; >
       au < frozen ; exists ; 2009 ; IET Signal Processing Volume 3 ; 3 ; >
       au < frozen ; exists ; 2010 ; IET Signal Processing Volume 4 ; 4 ; >
       au < frozen ; exists ; 2011 ; IET Signal Processing Volume 5 ; 5 ; >
@@ -646,7 +646,7 @@
       param[journal_id] = iet-sen
 
       au < frozen ; exists ; 2007 ; IET Software Volume 1 ; 1 ; >
-      au < crawling ; exists ; 2008 ; IET Software Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2008 ; IET Software Volume 2 ; 2 ; >
       au < frozen ; exists ; 2009 ; IET Software Volume 3 ; 3 ; >
       au < frozen ; exists ; 2010 ; IET Software Volume 4 ; 4 ; >
       au < frozen ; exists ; 2011 ; IET Software Volume 5 ; 5 ; >
@@ -671,8 +671,8 @@
       >
       param[journal_id] = iet-syb
 
-      au < crawling ; exists ; 2007 ; IET Systems Biology Volume 1 ; 1 ; >
-      au < crawling ; exists ; 2008 ; IET Systems Biology Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2007 ; IET Systems Biology Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2008 ; IET Systems Biology Volume 2 ; 2 ; >
       au < frozen ; exists ; 2009 ; IET Systems Biology Volume 3 ; 3 ; >
       au < frozen ; exists ; 2010 ; IET Systems Biology Volume 4 ; 4 ; >
       au < frozen ; exists ; 2011 ; IET Systems Biology Volume 5 ; 5 ; >
@@ -718,7 +718,7 @@
       >
       param[journal_id] = mnl
 
-      au < crawling ; exists ; 2006 ; Micro & Nano Letters Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2006 ; Micro & Nano Letters Volume 1 ; 1 ; >
       au < frozen ; exists ; 2007 ; Micro & Nano Letters Volume 2 ; 2 ; >
       au < frozen ; exists ; 2008 ; Micro & Nano Letters Volume 3 ; 3 ; >
       au < frozen ; exists ; 2009 ; Micro & Nano Letters Volume 4 ; 4 ; >
