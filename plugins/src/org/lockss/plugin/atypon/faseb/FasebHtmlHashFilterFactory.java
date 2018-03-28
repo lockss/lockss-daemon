@@ -50,8 +50,8 @@ import org.lockss.util.Logger;
 
 // Keeps contents only (includeNodes), then hashes out unwanted nodes 
 // within the content (excludeNodes).
-public class FedAmSocExpBiolHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
-  Logger log = Logger.getLogger(FedAmSocExpBiolHtmlHashFilterFactory.class);
+public class FasebHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
+  Logger log = Logger.getLogger(FasebHtmlHashFilterFactory.class);
   
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
@@ -150,7 +150,7 @@ public class FedAmSocExpBiolHtmlHashFilterFactory extends BaseAtyponHtmlHashFilt
         "/home/etenbrink/workspace/data/testfiles/f2_topic.html",
         "/home/etenbrink/workspace/data/testfiles/f2_full.html",
         "/home/etenbrink/workspace/data/testfiles/f2_abs.html")) {
-      IOUtils.copy(new FedAmSocExpBiolHtmlHashFilterFactory().createFilteredInputStream(null, new FileInputStream(file), null),
+      IOUtils.copy(new FasebHtmlHashFilterFactory().createFilteredInputStream(null, new FileInputStream(file), null),
           new FileOutputStream(file + ".hash.out"));
     }
   }

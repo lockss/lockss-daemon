@@ -44,18 +44,18 @@ import org.lockss.util.Logger;
  * <p>
  * A simple UrlConsumerFactory
  */
-public class FedAmSocExpBiolUrlConsumerFactory implements UrlConsumerFactory {
-  private static final Logger log = Logger.getLogger(FedAmSocExpBiolUrlConsumerFactory.class);
+public class FasebUrlConsumerFactory implements UrlConsumerFactory {
+  private static final Logger log = Logger.getLogger(FasebUrlConsumerFactory.class);
   
   @Override
   public UrlConsumer createUrlConsumer(CrawlerFacade crawlFacade,
       FetchedUrlData fud) {
-    return new FedAmSocExpBiolUrlConsumer(crawlFacade, fud);
+    return new FasebUrlConsumer(crawlFacade, fud);
   }
   
-  public class FedAmSocExpBiolUrlConsumer extends SimpleUrlConsumer {
+  public class FasebUrlConsumer extends SimpleUrlConsumer {
     
-    public FedAmSocExpBiolUrlConsumer(CrawlerFacade facade, FetchedUrlData fud) {
+    public FasebUrlConsumer(CrawlerFacade facade, FetchedUrlData fud) {
       super(facade, fud);
     }
     

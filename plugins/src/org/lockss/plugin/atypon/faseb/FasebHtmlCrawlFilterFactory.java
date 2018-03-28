@@ -51,7 +51,7 @@ import org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory;
  * extraneous links
  * 
  */
-public class FedAmSocExpBiolHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory {
+public class FasebHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory {
   
   NodeFilter[] filters = new NodeFilter[] {
       
@@ -99,7 +99,7 @@ public class FedAmSocExpBiolHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFi
         "/home/etenbrink/workspace/data/testfiles/f2_topic.html",
         "/home/etenbrink/workspace/data/testfiles/f2_full.html",
         "/home/etenbrink/workspace/data/testfiles/f2_abs.html")) {
-      IOUtils.copy(new FedAmSocExpBiolHtmlCrawlFilterFactory().createFilteredInputStream(null, new FileInputStream(file), null),
+      IOUtils.copy(new FasebHtmlCrawlFilterFactory().createFilteredInputStream(null, new FileInputStream(file), null),
           new FileOutputStream(file + ".crwl.out"));
     }
   }
