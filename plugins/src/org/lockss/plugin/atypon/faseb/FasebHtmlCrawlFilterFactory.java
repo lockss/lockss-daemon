@@ -85,22 +85,4 @@ public class FasebHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactor
     return super.createFilteredInputStream(au, in, encoding, filters);
   }
   
-  //Add this ‘main’ to the bottom of the actual htmlhash filter class and then run as java program
-  public static void main(String[] args) throws Exception {
-    for (String file : Arrays.asList(
-        "/home/etenbrink/workspace/data/testfiles/t1_manifest.html",
-        "/home/etenbrink/workspace/data/testfiles/t1_toc.html",
-        "/home/etenbrink/workspace/data/testfiles/t1_full.html",
-        "/home/etenbrink/workspace/data/testfiles/t1_abs.html",
-        "/home/etenbrink/workspace/data/testfiles/t1_cit.html",
-        "/home/etenbrink/workspace/data/testfiles/t1_sup.html",
-        "/home/etenbrink/workspace/data/testfiles/t1_ref.html",
-        "/home/etenbrink/workspace/data/testfiles/f2_toc.html",
-        "/home/etenbrink/workspace/data/testfiles/f2_topic.html",
-        "/home/etenbrink/workspace/data/testfiles/f2_full.html",
-        "/home/etenbrink/workspace/data/testfiles/f2_abs.html")) {
-      IOUtils.copy(new FasebHtmlCrawlFilterFactory().createFilteredInputStream(null, new FileInputStream(file), null),
-          new FileOutputStream(file + ".crwl.out"));
-    }
-  }
 }
