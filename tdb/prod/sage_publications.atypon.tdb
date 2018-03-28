@@ -14667,6 +14667,31 @@
     }
 
     {
+
+      title <
+        name = Hong Kong Journal of Occupational Therapy ;
+        issn = 1569-1861 ;
+        eissn = 1876-4398
+      >
+
+      #param[journal_id] = hjo
+
+        au < exists ; 2009 ; Hong Kong Journal of Occupational Therapy Volume 19 ; 19 ; hjoa >
+        au < exists ; 2010 ; Hong Kong Journal of Occupational Therapy Volume 20 ; 20 ; hjoa >
+        au < exists ; 2011 ; Hong Kong Journal of Occupational Therapy Volume 21 ; 21 ; hjoa >
+        au < exists ; 2012 ; Hong Kong Journal of Occupational Therapy Volume 22 ; 22 ; hjoa >
+        au < exists ; 2013 ; Hong Kong Journal of Occupational Therapy Volume 23 ; 23 ; hjoa >
+        au < exists ; 2014 ; Hong Kong Journal of Occupational Therapy Volume 24 ; 24 ; hjoa >
+        au < exists ; 2015 ; Hong Kong Journal of Occupational Therapy Volume 25 ; 25 ; hjoa >
+        au < exists ; 2015 ; Hong Kong Journal of Occupational Therapy Volume 26 ; 26 ; hjoa >
+        au < exists ; 2016 ; Hong Kong Journal of Occupational Therapy Volume 27 ; 27 ; hjoa >
+        au < exists ; 2016 ; Hong Kong Journal of Occupational Therapy Volume 28 ; 28 ; hjoa >
+        au < exists ; 2017 ; Hong Kong Journal of Occupational Therapy Volume 29 ; 29 ; hjoa >
+        au < exists ; 2017 ; Hong Kong Journal of Occupational Therapy Volume 30 ; 30 ; hjoa >
+
+    }
+
+    {
   
       title <
         name = Hospital Pharmacy ;
@@ -35558,133 +35583,166 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
     }
 
-  {
+    {
 
-    title <
-      name = Review & Expositor ;
-      issn = 0034-6373 ;
-      eissn = 2052-9449 ;
-      issnl = 0034-6373
-    >
+      title <
+        name = Review & Expositor ;
+        issn = 0034-6373 ;
+        eissn = 2052-9449 ;
+        issnl = 0034-6373
+      >
 
-    #param[base_url] = http://rae.sagepub.com/
+      #param[base_url] = http://rae.sagepub.com/
 
-    au < doNotProcess ; 1904 ; Review & Expositor Volume 1 ; 1 ; raea >
-    au < doNotProcess ; 1905 ; Review & Expositor Volume 2 ; 2 ; raea >
-    au < doNotProcess ; 1906 ; Review & Expositor Volume 3 ; 3 ; raea >
-    au < doNotProcess ; 1907 ; Review & Expositor Volume 4 ; 4 ; raeb >
-    au < doNotProcess ; 1908 ; Review & Expositor Volume 5 ; 5 ; raeb >
-    au < doNotProcess ; 1909 ; Review & Expositor Volume 6 ; 6 ; raeb >
-    au < doNotProcess ; 1910 ; Review & Expositor Volume 7 ; 7 ; raeb >
-    au < doNotProcess ; 1911 ; Review & Expositor Volume 8 ; 8 ; raeb >
-    au < doNotProcess ; 1912 ; Review & Expositor Volume 9 ; 9 ; raeb >
-    au < doNotProcess ; 1913 ; Review & Expositor Volume 10 ; 10 ; raeb >
-    au < doNotProcess ; 1914 ; Review & Expositor Volume 11 ; 11 ; raeb >
-    au < doNotProcess ; 1915 ; Review & Expositor Volume 12 ; 12 ; raeb >
-    au < doNotProcess ; 1916 ; Review & Expositor Volume 13 ; 13 ; raeb >
-    au < doNotProcess ; 1917 ; Review & Expositor Volume 14 ; 14 ; raeb >
-    au < doNotProcess ; 1918 ; Review & Expositor Volume 15 ; 15 ; raeb >
-    au < doNotProcess ; 1919 ; Review & Expositor Volume 16 ; 16 ; raeb >
-    au < doNotProcess ; 1920 ; Review & Expositor Volume 17 ; 17 ; raeb >
-    au < doNotProcess ; 1921 ; Review & Expositor Volume 18 ; 18 ; raeb >
-    au < doNotProcess ; 1922 ; Review & Expositor Volume 19 ; 19 ; raeb >
-    au < doNotProcess ; 1923 ; Review & Expositor Volume 20 ; 20 ; raeb >
-    au < doNotProcess ; 1924 ; Review & Expositor Volume 21 ; 21 ; raeb >
-    au < doNotProcess ; 1925 ; Review & Expositor Volume 22 ; 22 ; raeb >
-    au < doNotProcess ; 1926 ; Review & Expositor Volume 23 ; 23 ; raeb >
-    au < doNotProcess ; 1927 ; Review & Expositor Volume 24 ; 24 ; raeb >
-    au < doNotProcess ; 1928 ; Review & Expositor Volume 25 ; 25 ; raeb >
-    au < doNotProcess ; 1929 ; Review & Expositor Volume 26 ; 26 ; raeb >
-    au < doNotProcess ; 1930 ; Review & Expositor Volume 27 ; 27 ; raeb >
-    au < doNotProcess ; 1931 ; Review & Expositor Volume 28 ; 28 ; raeb >
-    au < doNotProcess ; 1932 ; Review & Expositor Volume 29 ; 29 ; raeb >
-    au < doNotProcess ; 1933 ; Review & Expositor Volume 30 ; 30 ; raeb >
-    au < doNotProcess ; 1934 ; Review & Expositor Volume 31 ; 31 ; raeb >
-    au < doNotProcess ; 1935 ; Review & Expositor Volume 32 ; 32 ; raeb >
-    au < doNotProcess ; 1936 ; Review & Expositor Volume 33 ; 33 ; raeb >
-    au < doNotProcess ; 1937 ; Review & Expositor Volume 34 ; 34 ; raeb >
-    au < doNotProcess ; 1938 ; Review & Expositor Volume 35 ; 35 ; raeb >
-    au < doNotProcess ; 1939 ; Review & Expositor Volume 36 ; 36 ; raeb >
-    au < doNotProcess ; 1940 ; Review & Expositor Volume 37 ; 37 ; raeb >
-    au < doNotProcess ; 1941 ; Review & Expositor Volume 38 ; 38 ; raeb >
-    au < doNotProcess ; 1942 ; Review & Expositor Volume 39 ; 39 ; raeb >
-    au < doNotProcess ; 1943 ; Review & Expositor Volume 40 ; 40 ; raeb >
-    au < doNotProcess ; 1944 ; Review & Expositor Volume 41 ; 41 ; raeb >
-    au < doNotProcess ; 1945 ; Review & Expositor Volume 42 ; 42 ; raeb >
-    au < doNotProcess ; 1946 ; Review & Expositor Volume 43 ; 43 ; raeb >
-    au < doNotProcess ; 1947 ; Review & Expositor Volume 44 ; 44 ; raeb >
-    au < doNotProcess ; 1948 ; Review & Expositor Volume 45 ; 45 ; raeb >
-    au < doNotProcess ; 1949 ; Review & Expositor Volume 46 ; 46 ; raeb >
-    au < doNotProcess ; 1950 ; Review & Expositor Volume 47 ; 47 ; raeb >
-    au < doNotProcess ; 1951 ; Review & Expositor Volume 48 ; 48 ; raeb >
-    au < doNotProcess ; 1952 ; Review & Expositor Volume 49 ; 49 ; raeb >
-    au < doNotProcess ; 1953 ; Review & Expositor Volume 50 ; 50 ; raeb >
-    au < doNotProcess ; 1954 ; Review & Expositor Volume 51 ; 51 ; raeb >
-    au < doNotProcess ; 1955 ; Review & Expositor Volume 52 ; 52 ; raeb >
-    au < doNotProcess ; 1956 ; Review & Expositor Volume 53 ; 53 ; raeb >
-    au < doNotProcess ; 1957 ; Review & Expositor Volume 54 ; 54 ; raeb >
-    au < doNotProcess ; 1958 ; Review & Expositor Volume 55 ; 55 ; raeb >
-    au < doNotProcess ; 1959 ; Review & Expositor Volume 56 ; 56 ; raeb >
-    au < doNotProcess ; 1960 ; Review & Expositor Volume 57 ; 57 ; raeb >
-    au < doNotProcess ; 1961 ; Review & Expositor Volume 58 ; 58 ; raeb >
-    au < doNotProcess ; 1962 ; Review & Expositor Volume 59 ; 59 ; raeb >
-    au < doNotProcess ; 1963 ; Review & Expositor Volume 60 ; 60 ; raeb >
-    au < doNotProcess ; 1964 ; Review & Expositor Volume 61 ; 61 ; raeb >
-    au < doNotProcess ; 1965 ; Review & Expositor Volume 62 ; 62 ; raeb >
-    au < doNotProcess ; 1966 ; Review & Expositor Volume 63 ; 63 ; raeb >
-    au < doNotProcess ; 1967 ; Review & Expositor Volume 64 ; 64 ; raeb >
-    au < doNotProcess ; 1968 ; Review & Expositor Volume 65 ; 65 ; raeb >
-    au < doNotProcess ; 1969 ; Review & Expositor Volume 66 ; 66 ; raeb >
-    au < doNotProcess ; 1970 ; Review & Expositor Volume 67 ; 67 ; raeb >
-    au < doNotProcess ; 1971 ; Review & Expositor Volume 68 ; 68 ; raeb >
-    au < doNotProcess ; 1972 ; Review & Expositor Volume 69 ; 69 ; raeb >
-    au < doNotProcess ; 1973 ; Review & Expositor Volume 70 ; 70 ; raeb >
-    au < doNotProcess ; 1974 ; Review & Expositor Volume 71 ; 71 ; raeb >
-    au < doNotProcess ; 1975 ; Review & Expositor Volume 72 ; 72 ; raeb >
-    au < doNotProcess ; 1976 ; Review & Expositor Volume 73 ; 73 ; raeb >
-    au < doNotProcess ; 1977 ; Review & Expositor Volume 74 ; 74 ; raeb >
-    au < doNotProcess ; 1978 ; Review & Expositor Volume 75 ; 75 ; raeb >
-    au < doNotProcess ; 1979 ; Review & Expositor Volume 76 ; 76 ; raeb >
-    au < doNotProcess ; 1980 ; Review & Expositor Volume 77 ; 77 ; raeb >
-    au < doNotProcess ; 1981 ; Review & Expositor Volume 78 ; 78 ; raeb >
-    au < doNotProcess ; 1982 ; Review & Expositor Volume 79 ; 79 ; raeb >
-    au < doNotProcess ; 1983 ; Review & Expositor Volume 80 ; 80 ; raeb >
-    au < doNotProcess ; 1984 ; Review & Expositor Volume 81 ; 81 ; raeb >
-    au < doNotProcess ; 1985 ; Review & Expositor Volume 82 ; 82 ; raeb >
-    au < doNotProcess ; 1986 ; Review & Expositor Volume 83 ; 83 ; raeb >
-    au < doNotProcess ; 1987 ; Review & Expositor Volume 84 ; 84 ; raeb >
-    au < doNotProcess ; 1988 ; Review & Expositor Volume 85 ; 85 ; raeb >
-    au < doNotProcess ; 1989 ; Review & Expositor Volume 86 ; 86 ; raeb >
-    au < doNotProcess ; 1990 ; Review & Expositor Volume 87 ; 87 ; raeb >
-    au < doNotProcess ; 1991 ; Review & Expositor Volume 88 ; 88 ; raeb >
-    au < doNotProcess ; 1992 ; Review & Expositor Volume 89 ; 89 ; raeb >
-    au < doNotProcess ; 1993 ; Review & Expositor Volume 90 ; 90 ; raeb >
-    au < doNotProcess ; 1994 ; Review & Expositor Volume 91 ; 91 ; raeb >
-    au < doNotProcess ; 1995 ; Review & Expositor Volume 92 ; 92 ; raeb >
-    au < doNotProcess ; 1996 ; Review & Expositor Volume 93 ; 93 ; raeb >
-    au < doNotProcess ; 1997 ; Review & Expositor Volume 94 ; 94 ; raeb >
-    au < doNotProcess ; 1998 ; Review & Expositor Volume 95 ; 95 ; raeb >
-    au < doNotProcess ; 1999 ; Review & Expositor Volume 96 ; 96 ; raeb >
-    au < manifest ; 2000 ; Review & Expositor Volume 97 ; 97 ; raeb >
-    au < manifest ; 2001 ; Review & Expositor Volume 98 ; 98 ; raeb >
-    au < manifest ; 2002 ; Review & Expositor Volume 99 ; 99 ; raeb >
-    au < manifest ; 2003 ; Review & Expositor Volume 100 ; 100 ; raeb >
-    au < manifest ; 2004 ; Review & Expositor Volume 101 ; 101 ; raeb >
-    au < manifest ; 2005 ; Review & Expositor Volume 102 ; 102 ; raeb >
-    au < manifest ; 2006 ; Review & Expositor Volume 103 ; 103 ; raeb >
-    au < manifest ; 2007 ; Review & Expositor Volume 104 ; 104 ; raeb >
-    au < released ; 2008 ; Review & Expositor Volume 105 ; 105 ; raeb >
-    au < released ; 2009 ; Review & Expositor Volume 106 ; 106 ; raeb >
-    au < released ; 2010 ; Review & Expositor Volume 107 ; 107 ; raeb >
-    au < released ; 2011 ; Review & Expositor Volume 108 ; 108 ; raeb >
-    au < released ; 2012 ; Review & Expositor Volume 109 ; 109 ; raeb >
-    au < doNotProcess ; 2013 ; Review & Expositor Volume 110 ; 110 ; raeb >
-    au < doNotProcess ; 2014 ; Review & Expositor Volume 111 ; 111 ; raeb >
-    au < doNotProcess ; 2015 ; Review & Expositor Volume 112 ; 112 ; raeb >
-    au < released ; 2016 ; Review & Expositor Volume 113 ; 113 ; raeb >
-    au < manifest ; 2017 ; Review & Expositor Volume 114 ; 114 ; raeb >
+      au < doNotProcess ; 1904 ; Review & Expositor Volume 1 ; 1 ; raea >
+      au < doNotProcess ; 1905 ; Review & Expositor Volume 2 ; 2 ; raea >
+      au < doNotProcess ; 1906 ; Review & Expositor Volume 3 ; 3 ; raea >
+      au < doNotProcess ; 1907 ; Review & Expositor Volume 4 ; 4 ; raeb >
+      au < doNotProcess ; 1908 ; Review & Expositor Volume 5 ; 5 ; raeb >
+      au < doNotProcess ; 1909 ; Review & Expositor Volume 6 ; 6 ; raeb >
+      au < doNotProcess ; 1910 ; Review & Expositor Volume 7 ; 7 ; raeb >
+      au < doNotProcess ; 1911 ; Review & Expositor Volume 8 ; 8 ; raeb >
+      au < doNotProcess ; 1912 ; Review & Expositor Volume 9 ; 9 ; raeb >
+      au < doNotProcess ; 1913 ; Review & Expositor Volume 10 ; 10 ; raeb >
+      au < doNotProcess ; 1914 ; Review & Expositor Volume 11 ; 11 ; raeb >
+      au < doNotProcess ; 1915 ; Review & Expositor Volume 12 ; 12 ; raeb >
+      au < doNotProcess ; 1916 ; Review & Expositor Volume 13 ; 13 ; raeb >
+      au < doNotProcess ; 1917 ; Review & Expositor Volume 14 ; 14 ; raeb >
+      au < doNotProcess ; 1918 ; Review & Expositor Volume 15 ; 15 ; raeb >
+      au < doNotProcess ; 1919 ; Review & Expositor Volume 16 ; 16 ; raeb >
+      au < doNotProcess ; 1920 ; Review & Expositor Volume 17 ; 17 ; raeb >
+      au < doNotProcess ; 1921 ; Review & Expositor Volume 18 ; 18 ; raeb >
+      au < doNotProcess ; 1922 ; Review & Expositor Volume 19 ; 19 ; raeb >
+      au < doNotProcess ; 1923 ; Review & Expositor Volume 20 ; 20 ; raeb >
+      au < doNotProcess ; 1924 ; Review & Expositor Volume 21 ; 21 ; raeb >
+      au < doNotProcess ; 1925 ; Review & Expositor Volume 22 ; 22 ; raeb >
+      au < doNotProcess ; 1926 ; Review & Expositor Volume 23 ; 23 ; raeb >
+      au < doNotProcess ; 1927 ; Review & Expositor Volume 24 ; 24 ; raeb >
+      au < doNotProcess ; 1928 ; Review & Expositor Volume 25 ; 25 ; raeb >
+      au < doNotProcess ; 1929 ; Review & Expositor Volume 26 ; 26 ; raeb >
+      au < doNotProcess ; 1930 ; Review & Expositor Volume 27 ; 27 ; raeb >
+      au < doNotProcess ; 1931 ; Review & Expositor Volume 28 ; 28 ; raeb >
+      au < doNotProcess ; 1932 ; Review & Expositor Volume 29 ; 29 ; raeb >
+      au < doNotProcess ; 1933 ; Review & Expositor Volume 30 ; 30 ; raeb >
+      au < doNotProcess ; 1934 ; Review & Expositor Volume 31 ; 31 ; raeb >
+      au < doNotProcess ; 1935 ; Review & Expositor Volume 32 ; 32 ; raeb >
+      au < doNotProcess ; 1936 ; Review & Expositor Volume 33 ; 33 ; raeb >
+      au < doNotProcess ; 1937 ; Review & Expositor Volume 34 ; 34 ; raeb >
+      au < doNotProcess ; 1938 ; Review & Expositor Volume 35 ; 35 ; raeb >
+      au < doNotProcess ; 1939 ; Review & Expositor Volume 36 ; 36 ; raeb >
+      au < doNotProcess ; 1940 ; Review & Expositor Volume 37 ; 37 ; raeb >
+      au < doNotProcess ; 1941 ; Review & Expositor Volume 38 ; 38 ; raeb >
+      au < doNotProcess ; 1942 ; Review & Expositor Volume 39 ; 39 ; raeb >
+      au < doNotProcess ; 1943 ; Review & Expositor Volume 40 ; 40 ; raeb >
+      au < doNotProcess ; 1944 ; Review & Expositor Volume 41 ; 41 ; raeb >
+      au < doNotProcess ; 1945 ; Review & Expositor Volume 42 ; 42 ; raeb >
+      au < doNotProcess ; 1946 ; Review & Expositor Volume 43 ; 43 ; raeb >
+      au < doNotProcess ; 1947 ; Review & Expositor Volume 44 ; 44 ; raeb >
+      au < doNotProcess ; 1948 ; Review & Expositor Volume 45 ; 45 ; raeb >
+      au < doNotProcess ; 1949 ; Review & Expositor Volume 46 ; 46 ; raeb >
+      au < doNotProcess ; 1950 ; Review & Expositor Volume 47 ; 47 ; raeb >
+      au < doNotProcess ; 1951 ; Review & Expositor Volume 48 ; 48 ; raeb >
+      au < doNotProcess ; 1952 ; Review & Expositor Volume 49 ; 49 ; raeb >
+      au < doNotProcess ; 1953 ; Review & Expositor Volume 50 ; 50 ; raeb >
+      au < doNotProcess ; 1954 ; Review & Expositor Volume 51 ; 51 ; raeb >
+      au < doNotProcess ; 1955 ; Review & Expositor Volume 52 ; 52 ; raeb >
+      au < doNotProcess ; 1956 ; Review & Expositor Volume 53 ; 53 ; raeb >
+      au < doNotProcess ; 1957 ; Review & Expositor Volume 54 ; 54 ; raeb >
+      au < doNotProcess ; 1958 ; Review & Expositor Volume 55 ; 55 ; raeb >
+      au < doNotProcess ; 1959 ; Review & Expositor Volume 56 ; 56 ; raeb >
+      au < doNotProcess ; 1960 ; Review & Expositor Volume 57 ; 57 ; raeb >
+      au < doNotProcess ; 1961 ; Review & Expositor Volume 58 ; 58 ; raeb >
+      au < doNotProcess ; 1962 ; Review & Expositor Volume 59 ; 59 ; raeb >
+      au < doNotProcess ; 1963 ; Review & Expositor Volume 60 ; 60 ; raeb >
+      au < doNotProcess ; 1964 ; Review & Expositor Volume 61 ; 61 ; raeb >
+      au < doNotProcess ; 1965 ; Review & Expositor Volume 62 ; 62 ; raeb >
+      au < doNotProcess ; 1966 ; Review & Expositor Volume 63 ; 63 ; raeb >
+      au < doNotProcess ; 1967 ; Review & Expositor Volume 64 ; 64 ; raeb >
+      au < doNotProcess ; 1968 ; Review & Expositor Volume 65 ; 65 ; raeb >
+      au < doNotProcess ; 1969 ; Review & Expositor Volume 66 ; 66 ; raeb >
+      au < doNotProcess ; 1970 ; Review & Expositor Volume 67 ; 67 ; raeb >
+      au < doNotProcess ; 1971 ; Review & Expositor Volume 68 ; 68 ; raeb >
+      au < doNotProcess ; 1972 ; Review & Expositor Volume 69 ; 69 ; raeb >
+      au < doNotProcess ; 1973 ; Review & Expositor Volume 70 ; 70 ; raeb >
+      au < doNotProcess ; 1974 ; Review & Expositor Volume 71 ; 71 ; raeb >
+      au < doNotProcess ; 1975 ; Review & Expositor Volume 72 ; 72 ; raeb >
+      au < doNotProcess ; 1976 ; Review & Expositor Volume 73 ; 73 ; raeb >
+      au < doNotProcess ; 1977 ; Review & Expositor Volume 74 ; 74 ; raeb >
+      au < doNotProcess ; 1978 ; Review & Expositor Volume 75 ; 75 ; raeb >
+      au < doNotProcess ; 1979 ; Review & Expositor Volume 76 ; 76 ; raeb >
+      au < doNotProcess ; 1980 ; Review & Expositor Volume 77 ; 77 ; raeb >
+      au < doNotProcess ; 1981 ; Review & Expositor Volume 78 ; 78 ; raeb >
+      au < doNotProcess ; 1982 ; Review & Expositor Volume 79 ; 79 ; raeb >
+      au < doNotProcess ; 1983 ; Review & Expositor Volume 80 ; 80 ; raeb >
+      au < doNotProcess ; 1984 ; Review & Expositor Volume 81 ; 81 ; raeb >
+      au < doNotProcess ; 1985 ; Review & Expositor Volume 82 ; 82 ; raeb >
+      au < doNotProcess ; 1986 ; Review & Expositor Volume 83 ; 83 ; raeb >
+      au < doNotProcess ; 1987 ; Review & Expositor Volume 84 ; 84 ; raeb >
+      au < doNotProcess ; 1988 ; Review & Expositor Volume 85 ; 85 ; raeb >
+      au < doNotProcess ; 1989 ; Review & Expositor Volume 86 ; 86 ; raeb >
+      au < doNotProcess ; 1990 ; Review & Expositor Volume 87 ; 87 ; raeb >
+      au < doNotProcess ; 1991 ; Review & Expositor Volume 88 ; 88 ; raeb >
+      au < doNotProcess ; 1992 ; Review & Expositor Volume 89 ; 89 ; raeb >
+      au < doNotProcess ; 1993 ; Review & Expositor Volume 90 ; 90 ; raeb >
+      au < doNotProcess ; 1994 ; Review & Expositor Volume 91 ; 91 ; raeb >
+      au < doNotProcess ; 1995 ; Review & Expositor Volume 92 ; 92 ; raeb >
+      au < doNotProcess ; 1996 ; Review & Expositor Volume 93 ; 93 ; raeb >
+      au < doNotProcess ; 1997 ; Review & Expositor Volume 94 ; 94 ; raeb >
+      au < doNotProcess ; 1998 ; Review & Expositor Volume 95 ; 95 ; raeb >
+      au < doNotProcess ; 1999 ; Review & Expositor Volume 96 ; 96 ; raeb >
+      au < manifest ; 2000 ; Review & Expositor Volume 97 ; 97 ; raeb >
+      au < manifest ; 2001 ; Review & Expositor Volume 98 ; 98 ; raeb >
+      au < manifest ; 2002 ; Review & Expositor Volume 99 ; 99 ; raeb >
+      au < manifest ; 2003 ; Review & Expositor Volume 100 ; 100 ; raeb >
+      au < manifest ; 2004 ; Review & Expositor Volume 101 ; 101 ; raeb >
+      au < manifest ; 2005 ; Review & Expositor Volume 102 ; 102 ; raeb >
+      au < manifest ; 2006 ; Review & Expositor Volume 103 ; 103 ; raeb >
+      au < manifest ; 2007 ; Review & Expositor Volume 104 ; 104 ; raeb >
+      au < released ; 2008 ; Review & Expositor Volume 105 ; 105 ; raeb >
+      au < released ; 2009 ; Review & Expositor Volume 106 ; 106 ; raeb >
+      au < released ; 2010 ; Review & Expositor Volume 107 ; 107 ; raeb >
+      au < released ; 2011 ; Review & Expositor Volume 108 ; 108 ; raeb >
+      au < released ; 2012 ; Review & Expositor Volume 109 ; 109 ; raeb >
+      au < doNotProcess ; 2013 ; Review & Expositor Volume 110 ; 110 ; raeb >
+      au < doNotProcess ; 2014 ; Review & Expositor Volume 111 ; 111 ; raeb >
+      au < doNotProcess ; 2015 ; Review & Expositor Volume 112 ; 112 ; raeb >
+      au < released ; 2016 ; Review & Expositor Volume 113 ; 113 ; raeb >
+      au < manifest ; 2017 ; Review & Expositor Volume 114 ; 114 ; raeb >
 
-  }
+    }
+
+    {
+
+      title <
+        name = The Review of Black Political Economy ;
+        issn = 0034-6446 ;
+        eissn = 1936-4814
+      >
+
+      #param[journal_id] = rbp
+
+      au < exists ; 1997-1998 ; The Review of Black Political Economy Volume 25 ; 25 ; rbpa >
+      au < exists ; 1998-1999 ; The Review of Black Political Economy Volume 26 ; 26 ; rbpa >
+      au < exists ; 1999-2000 ; The Review of Black Political Economy Volume 27 ; 27 ; rbpa >
+      au < exists ; 2000-2001 ; The Review of Black Political Economy Volume 28 ; 28 ; rbpa >
+      au < exists ; 2001-2002 ; The Review of Black Political Economy Volume 29 ; 29 ; rbpa >
+      au < exists ; 2002-2003 ; The Review of Black Political Economy Volume 30 ; 30 ; rbpa >
+      au < exists ; 2003-2004 ; The Review of Black Political Economy Volume 31 ; 31 ; rbpa >
+      au < doesNotExist ; 2005 ; The Review of Black Political Economy Volume 32 ; 32 ; rbpa >
+      au < doesNotExist ; 2006 ; The Review of Black Political Economy Volume 33 ; 33 ; rbpa >
+      au < doesNotExist ; 2007 ; The Review of Black Political Economy Volume 34 ; 34 ; rbpa >
+      au < doesNotExist ; 2008 ; The Review of Black Political Economy Volume 35 ; 35 ; rbpa >
+      au < exists ; 2009 ; The Review of Black Political Economy Volume 36 ; 36 ; rbpa >
+      au < doesNotExist ; 2010 ; The Review of Black Political Economy Volume 37 ; 37 ; rbpa >
+      au < doesNotExist ; 2011 ; The Review of Black Political Economy Volume 38 ; 38 ; rbpa >
+      au < exists ; 2012 ; The Review of Black Political Economy Volume 39 ; 39 ; rbpa >
+      au < exists ; 2013 ; The Review of Black Political Economy Volume 40 ; 40 ; rbpa >
+      au < doesNotExist ; 2014 ; The Review of Black Political Economy Volume 41 ; 41 ; rbpa >
+      au < doesNotExist ; 2015 ; The Review of Black Political Economy Volume 42 ; 42 ; rbpa >
+      au < doesNotExist ; 2016 ; The Review of Black Political Economy Volume 43 ; 43 ; rbpa >
+      au < exists ; 2017 ; The Review of Black Political Economy Volume 44 ; 44 ; rbpa >
+
+    }
 
     {
 
