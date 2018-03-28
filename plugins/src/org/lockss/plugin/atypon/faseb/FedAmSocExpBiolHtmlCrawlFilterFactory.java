@@ -1,0 +1,106 @@
+/* $Id$
+ */
+
+/*
+
+Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
+all rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Except as contained in this notice, the name of Stanford University shall not
+be used in advertising or otherwise to promote the sale, use or other dealings
+in this Software without prior written authorization from Stanford University.
+
+ */
+
+package org.lockss.plugin.atypon.faseb;
+
+import org.apache.commons.io.IOUtils;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.util.Arrays;
+
+import org.htmlparser.NodeFilter;
+import org.lockss.daemon.PluginException;
+import org.lockss.filter.html.*;
+import org.lockss.plugin.*;
+import org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory;
+
+/*
+ *
+ * created because article links are not grouped under a journalid or volumeid,
+ * but under article ids - will pull the links from the page, so filtering out
+ * extraneous links
+ * 
+ */
+public class FedAmSocExpBiolHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory {
+  
+  NodeFilter[] filters = new NodeFilter[] {
+      
+      // NOTE: overcrawling is an occasional issue with in-line references to "original article"
+      
+      HtmlNodeFilters.tag("header"),
+      HtmlNodeFilters.tag("footer"),
+      
+      HtmlNodeFilters.tagWithAttribute("li", "id", "pane-pcw-references"),
+      HtmlNodeFilters.tagWithAttribute("li", "id", "pane-pcw-related"),
+      HtmlNodeFilters.tagWithAttribute("section", "class", "article__metrics"),
+      HtmlNodeFilters.tagWithAttribute("section", "class", "article__keyword"),
+      HtmlNodeFilters.tagWithAttribute("div", "class", "article__references"),
+      
+      HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "corrections"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "quickSearch"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "search__filters"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "search-result__"),
+      HtmlNodeFilters.allExceptSubtree(
+          HtmlNodeFilters.tag("nav"),
+          HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/action/showCitFormats.doi=")),
+      
+      // never want these links, excluded lists was too long
+      // HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/servlet/linkout[?](suffix)="),
+      HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/servlet/linkout[?]"),
+      HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/author/"),
+  };
+  
+  public InputStream createFilteredInputStream(ArchivalUnit au,
+      InputStream in, String encoding) throws PluginException{ 
+    return super.createFilteredInputStream(au, in, encoding, filters);
+  }
+  
+  //Add this ‘main’ to the bottom of the actual htmlhash filter class and then run as java program
+  public static void main(String[] args) throws Exception {
+    for (String file : Arrays.asList(
+        "/home/etenbrink/workspace/data/testfiles/t1_manifest.html",
+        "/home/etenbrink/workspace/data/testfiles/t1_toc.html",
+        "/home/etenbrink/workspace/data/testfiles/t1_full.html",
+        "/home/etenbrink/workspace/data/testfiles/t1_abs.html",
+        "/home/etenbrink/workspace/data/testfiles/t1_cit.html",
+        "/home/etenbrink/workspace/data/testfiles/t1_sup.html",
+        "/home/etenbrink/workspace/data/testfiles/t1_ref.html",
+        "/home/etenbrink/workspace/data/testfiles/f2_toc.html",
+        "/home/etenbrink/workspace/data/testfiles/f2_topic.html",
+        "/home/etenbrink/workspace/data/testfiles/f2_full.html",
+        "/home/etenbrink/workspace/data/testfiles/f2_abs.html")) {
+      IOUtils.copy(new FedAmSocExpBiolHtmlCrawlFilterFactory().createFilteredInputStream(null, new FileInputStream(file), null),
+          new FileOutputStream(file + ".crwl.out"));
+    }
+  }
+}

@@ -11,7 +11,7 @@
     <string>plugin_name</string>
     <string>Base Atypon Books Plugin</string>
   </entry>
-<!--  http to https support -->  
+<!--  http to https support -->
   <entry>
     <string>required_daemon_version</string>
     <string>1.70.0</string>
@@ -55,14 +55,14 @@
   <!-- manifest to book landing page with chapters -->
     <string>au_refetch_depth</string>
     <int>2</int>
-  </entry>  
+  </entry>
   <entry>
     <string>au_crawlrules</string>
     <!--
      NOTE: any changes to the crawl rules in BaseAtyponBooksPlugin must be
      added to BaseAtyponISBNBooksPlugin which is a child of this plugin with
-     ISBN restricted crawl rules         
-     -->  
+     ISBN restricted crawl rules
+     -->
     <!--  CRAWL COMMENT BLOCK
     support files
     images and data:<base>/na101v1/home/midtierbeta/publisher/fum/books/content/books/2011/9781780840000/ebo.11.115/production/images/large/figure1.jpeg
@@ -76,18 +76,18 @@
      -->
     <list>
       <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)(_v[0-9]+)?$", url_host(base_url)</string>
-      <string>1,"^https?://%s/na101/home/[a-z]+/publisher/[^/]+/books/content/books/[^/]+/%s/", url_host(base_url), book_eisbn</string>   
+      <string>1,"^https?://%s/na101/home/[a-z]+/publisher/[^/]+/books/content/books/[^/]+/%s/", url_host(base_url), book_eisbn</string>
       <string>1,"^https?://%s\.global\.prod\.fastly\.net/[^?]*\.(css|gif|jpe?g|js|png)$", url_host(base_url)</string>
       <string>2,"^https?://%s/doi/[^/]+/[0-9.]+/(null\?|[-.9]+$)", url_host(base_url)</string>
       <string>1,"^https?://%s/doi/book/[0-9.]+/", url_host(base_url)</string>
       <string>1,"^https?://%s/doi/(abs|full|pdf|pdfplus|ref)/[0-9.]+/", url_host(base_url)</string>
       <string>1,"^https?://%s/action/(showImage|showFullPopup|showCitFormats|showSupplements|showMediaPlayer|showPopup)\?([^=]+=[^&amp;]+&amp;)*doi=", url_host(base_url)</string>
-      <string>1,"^https?://%s/action/downloadCitation\?doi=.*&amp;format=ris&amp;include=(cit|abs)$", url_host(base_url)</string> 
+      <string>1,"^https?://%s/action/downloadCitation\?doi=.*&amp;format=ris&amp;include=(cit|abs)$", url_host(base_url)</string>
     </list>
   </entry>
   <entry>
     <string>plugin_config_props</string>
-   <list>
+    <list>
       <org.lockss.daemon.ConfigParamDescr>
         <key>base_url</key>
         <displayName>Base URL</displayName>
@@ -120,7 +120,7 @@
 <!-- That is, even if there is both a books and journals plugin, if they crawl from the 
      same base_url, they crawl 1 at a time. If this is NOT correct for a specific child
      they can override this
--->     
+-->
   <entry>
     <string>plugin_fetch_rate_limiter_source</string>
     <string>host:base_url</string>
@@ -128,23 +128,23 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      	<string>"^https?://%s/doi/(pdf|pdfplus|full)/[.0-9]+/[^\?&amp;]+$", url_host(base_url)</string>
+      <string>"^https?://%s/doi/(pdf|pdfplus|full)/[.0-9]+/[^\?&amp;]+$", url_host(base_url)</string>
     </list>
   </entry>
   <entry>
     <string>plugin_substance_predicate_factory</string>
     <string>org.lockss.plugin.atypon.BaseAtyponSubstancePredicateFactory</string>
-  </entry>  
-<!--  Children will probably need to extend these and then use their own crawl/hash filters -->  
+  </entry>
+<!--  Children will probably need to extend these and then use their own crawl/hash filters -->
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory</string>
   </entry>
   <entry>
-    <string>text/html_crawl_filter_factory</string> 
+    <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory</string>
   </entry>
-  <!--  by default, use the simple pdf filter factory, not the scraping alternative -->    
+  <!--  by default, use the simple pdf filter factory, not the scraping alternative -->
   <entry>
     <string>application/pdf_filter_factory</string>
     <string>org.lockss.plugin.atypon.BaseAtyponPdfFilterFactory</string>
@@ -183,23 +183,23 @@
 <!--  checked: FutureScienceGroup, AIAA, SEG, WAGENINGEN, LUP, ASCE -->
   <entry>
 <!--  oddly, ris files are text/plain -->
-  <string>text/plain_metadata_extractor_factory_map</string>
-  <map>
-    <entry>
-    <string>*;RIS</string>
-    <string>org.lockss.plugin.atypon.BaseAtyponRisMetadataExtractorFactory</string>
-   </entry>
-  </map>
+    <string>text/plain_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;RIS</string>
+        <string>org.lockss.plugin.atypon.BaseAtyponRisMetadataExtractorFactory</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>application/x-research-info-systems_metadata_extractor_factory_map</string>
     <map>
       <entry>
-    <string>*;RIS</string>
-    <string>org.lockss.plugin.atypon.BaseAtyponRisMetadataExtractorFactory</string>
-   </entry>
-  </map>
-  </entry> 
+        <string>*;RIS</string>
+        <string>org.lockss.plugin.atypon.BaseAtyponRisMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
   <entry>
     <string>application/pdf_metadata_extractor_factory_map</string>
     <!-- if full_text_cu PDF is only aspect of article (due to overcrawl) -->
@@ -211,7 +211,7 @@
       </entry>
     </map>
   </entry>
-    <entry>
+  <entry>
     <string>plugin_cache_result_list</string>
     <list>
       <!-- Invalid content-type file. Captures cases like html returned instead of PDF 
@@ -236,7 +236,7 @@
     <!-- www.emeraldinsight.com.global.prod.fastly.net for some js files -->
     <string>"%s\.global\.prod\.fastly\.net", url_host(base_url)</string>
   </entry>
-  <!--  versioning or variants for style support -->  
+  <!--  versioning or variants for style support -->
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
     <!-- base_url host or cdn host + templates/jsp/. or any of (img|css|js)Jawr/ or sda/
@@ -246,16 +246,16 @@
     <string>://[^/]+/(templates/jsp|(css|img|js)Jawr|pb-assets|resources|sda|wro)/</string>
     <string>/(assets|css|img|js|wro)/.+\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$</string>
     </list>
-  </entry>         
+  </entry>
   <!-- don't worry about polling for those low-importance files that will 
        repair from peer in time (eg due to versioning, etc)  -->
-   <entry>
+  <entry>
     <string>au_url_poll_result_weight</string>
     <list>
       <string>://[^/]+/(templates/jsp|(css|img|js)Jawr|pb-assets|resources|sda|wro)/, 0</string>
       <string>/(assets|css|img|js|wro)/.+\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$, 0</string>
     </list>
-  </entry>  
+  </entry>
   <!-- GLN children require a plugin_au_config_user_msg, which can be a printf -->
   <!-- Here is a default version, but plugins may need to customize -->
   <!-- CLOCKSS children must turn it off-->

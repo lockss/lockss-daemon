@@ -18,7 +18,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>90</string>
+    <string>91</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -63,7 +63,7 @@
       <entry>
         <string>au_issue</string>
         <string>"%stoc/%s/%s/%s", base_url, journal_id, volume_name, issue</string>
-      </entry>  
+      </entry>
       <!--  we don't need au_volume as it will default to au_start_url -->
     </map>
   </entry>
@@ -71,7 +71,7 @@
   <!-- manifest to issue to articles -->
     <string>au_refetch_depth</string>
     <int>2</int>
-  </entry>  
+  </entry>
   <entry>
     <string>au_crawlrules</string>
     <!--  CRAWL COMMENT BLOCK
@@ -88,7 +88,7 @@
     - do not need to explicitly include the start_url
     - include the TOC using the journal__id and volume_name to keep from leaking in to other volumes
                  accept a journal_id with a .<number> suffix (original unclear, but was seen in much older volumes)
-    -            with alternate url for single issue vols (BioOneAtypon)    
+    -            with alternate url for single issue vols (BioOneAtypon)
     - exclude the usual traps
     - exclude the article with the permission tab. It's redundant
     - exclude the article with the search highlight turned off. It's redundant (BioOneAtypon)
@@ -105,7 +105,7 @@
     - NRC, Endocrine & T&F currently (10/2016)
     - allow the download of a Table (downloadTable), which now might come with a csv version (T&F)
     - exclude a doi/<type>/<DOIprefix>/null?sequence=.... (taylor&francis)
-    - exclude the popup image if the id is null (bioOneAtypon)        
+    - exclude the popup image if the id is null (bioOneAtypon)
     - some publishers show in-line images in larger format using URL with show*Image and variations for other formats
     - there can be additional arguments ([^=]+=[^&]*&)* between the showBlah? and the doi= at the end
     massmedical and t&f have a number of additions 
@@ -116,17 +116,26 @@
       <string>2,"^https?://%s/.*/www\.tandf\.co\.uk/", url_host(base_url)</string>
       <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)(_v[0-9]+|\?v=[0-9.]+|\?[a-z0-9]+)?$", url_host(base_url)</string>
       <string>1,"^https?://(cdn\.nejm\.org)/."</string>
+      <string>1,"^https?://faseb-prod-cdn\.literatumonline\.com/journals/content/fasebj/"</string>
+      <!-- 15:32:20.525: Warning: 5-BaseUrlFetcher: Redirected to excluded URL: 
+      https://faseb-prod-cdn.literatumonline.com/journals/content/fasebj/2018/fasebj.2018.32.issue-3/fj.201700767r/20180309/suppl/fj.201700767r.sd1
+      .docx?b92b4ad1b4f274c70877518616abb28b5e60edcaa0d0d74615663cb6c98b26ea6fea4c67eff0c60316078c20dc3769af5f07d482336e6f4d26936c4e73b5f281744b9559753e
+      1c82406965f0c6e1a963ba4e34334bbe47da0e7f40bd5577af91096c38dc48b0e65462cb096b5dbf7e37152cec602e00192cfb98cad6adce484a992cbfaef3ac75a74df2dd91900b40
+      b8e42fdf151ae0cb77 
+      redirected from: 
+      http://www.fasebj.org/doi/suppl/10.1096/fj.201700767R/suppl_file/fj.201700767R.sd1.docx -->
       <string>1,"^https?://%s\.global\.prod\.fastly\.net/[^?]*\.(css|gif|jpe?g|js|png)$", url_host(base_url)</string>
-      <string>1,"^https?://%s/na[0-9]+/home/literatum/publisher/[^/]+/journals/[^/]+/%s/", url_host(base_url), journal_id</string>   
+      <string>1,"^https?://%s/na[0-9]+/home/literatum/publisher/[^/]+/journals/[^/]+/%s/", url_host(base_url), journal_id</string>
       <string>1,"^https?://%s/toc/%s(\.[0-9]+)?/%s($|/)", url_host(base_url), journal_id, volume_name</string>
       <string>2,"^https?://%s/doi/([^/]+/)?[0-9.]+/(null\?|[-.9]+$)", url_host(base_url)</string>
       <string>2,"^https?://%s/doi/.*\?(prevSearch=|queryID=%%24%%7BresultBean.queryID%%7D|tab=permissions)", url_host(base_url)</string>
       <string>1,"^https?://%s/doi/((pdf|pdfplus|full|abs|ref(erences)?|suppl|figure|video[^/]+)/)?[0-9.]+/", url_host(base_url)</string>
-      <string>2,"^https?://%s/action/showFullPopup\?doi=.*&amp;id=$", url_host(base_url)</string>          
-      <string>1,"^https?://%s/action/downloadCitation\?doi=.*&amp;format=ris&amp;include=(cit|abs)$", url_host(base_url)</string> 
+      <string>2,"^https?://%s/action/showFullPopup\?doi=.*&amp;id=$", url_host(base_url)</string>
+      <string>1,"^https?://%s/action/downloadCitation\?doi=.*&amp;format=ris&amp;include=(cit|abs)$", url_host(base_url)</string>
       <string>1,"^https?://%s/action/downloadTable\?(doi=.+&amp;id=[^&amp;]+|id=.+&amp;doi=[^&amp;]+)(&amp;downloadType=[^&amp;]+)?$", url_host(base_url)</string>
-      <!-- note downloadFigures should *not* be added in to this as we do not want the ppt download associated -->          
+      <!-- note downloadFigures should *not* be added in to this as we do not want the ppt download associated -->
       <string>1,"^https?://%s/action/(downloadPdfFig|showImage|showFullPopup|showCitFormats|showSupplements|showMediaPlayer|showPopup)\?([^=]+=[^&amp;]+&amp;)*doi=", url_host(base_url)</string>
+      <string>1,"^https?://%s/topic/eb-abstracts-", url_host(base_url)</string>
     </list>
   </entry>
   <!--  tandf is serving pdf files of this form (tables) without mime-type -->
@@ -135,7 +144,7 @@
     <list>
       <string>.*&amp;downloadType=(pdf|PDF)$, application/pdf</string>
     </list>
-  </entry>    
+  </entry>
   <entry>
     <string>plugin_config_props</string>
     <list>
@@ -185,26 +194,26 @@
 <!-- That is, even if there is both a books and journals plugin, if they crawl from the 
      same base_url, they crawl 1 at a time. If this is NOT correct for a specific child
      they can override this
--->     
+-->
   <entry>
     <string>plugin_fetch_rate_limiter_source</string>
     <string>host:base_url</string>
   </entry>
   <entry>
-<!--  this is actually used to look for redirection  -->  
+<!--  this is actually used to look for redirection  -->
     <string>plugin_substance_predicate_factory</string>
     <string>org.lockss.plugin.atypon.BaseAtyponSubstancePredicateFactory</string>
-  </entry>  
-<!--  Children will probably need to extend these and then use their own crawl/hash filters -->  
+  </entry>
+<!--  Children will probably need to extend these and then use their own crawl/hash filters -->
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory</string>
   </entry>
   <entry>
-    <string>text/html_crawl_filter_factory</string> 
+    <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory</string>
   </entry>
-  <!--  by default, use the simple pdf filter factory, not the scraping alternative -->    
+  <!--  by default, use the simple pdf filter factory, not the scraping alternative -->
   <entry>
     <string>application/pdf_filter_factory</string>
     <string>org.lockss.plugin.atypon.BaseAtyponPdfFilterFactory</string>
@@ -216,7 +225,7 @@
   <entry>
     <string>plugin_cache_result_list</string>
     <list>
-      <!-- Invalid content-type file. Captures cases like html returned instead of PDF; store but no fail - leaves a hole --> 
+      <!-- Invalid content-type file. Captures cases like html returned instead of PDF; store but no fail - leaves a hole -->
       <string>org.lockss.plugin.ContentValidationException=org.lockss.plugin.atypon.BaseAtyponHttpResponseHandler</string>
       <string>500=org.lockss.plugin.atypon.BaseAtyponHttpResponseHandler</string>
       <string>403=org.lockss.plugin.atypon.BaseAtyponHttpResponseHandler</string>
@@ -279,7 +288,7 @@
     <string>org.lockss.plugin.atypon.BaseAtyponRisMetadataExtractorFactory</string>
    </entry>
   </map>
-  </entry> 
+  </entry>
   <entry>
     <string>application/pdf_metadata_extractor_factory_map</string>
     <!-- if full_text_cu PDF is only aspect of article (due to overcrawl) -->
@@ -302,9 +311,10 @@
       <string>"cdn\.nejm\.org"</string>
       <!-- www.emeraldinsight.com.global.prod.fastly.net for some js files -->
       <string>"%s\.global\.prod\.fastly\.net", url_host(base_url)</string>
+      <string>"faseb-prod-cdn\.literatumonline\.com"</string>
     </list>
-  </entry>  
-  <!--  versioning or variants for style support -->  
+  </entry>
+  <!--  versioning or variants for style support -->
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
     <!-- base_url + templates/jsp/. or any of (img|css|js)Jawr/ or sda/ or wro/ or pb-assets/ or resources/
