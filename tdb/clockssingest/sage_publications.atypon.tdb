@@ -18,6 +18,41 @@
   {
 
     title <
+      name = About Campus ;
+      issn = 1086-4822 ;
+      eissn = 1536-0687
+    >
+
+    #param[journal_id] = aca
+
+      au < exists ; exists ; 1996 ; About Campus Volume 1 ; 1 ; acaa ; >
+      au < exists ; exists ; 1997 ; About Campus Volume 2 ; 2 ; acaa ; >
+      au < exists ; exists ; 1998 ; About Campus Volume 3 ; 3 ; acaa ; >
+      au < exists ; exists ; 1999 ; About Campus Volume 4 ; 4 ; acaa ; >
+      au < exists ; exists ; 2000 ; About Campus Volume 5 ; 5 ; acaa ; >
+      au < exists ; exists ; 2001 ; About Campus Volume 6 ; 6 ; acaa ; >
+      au < exists ; exists ; 2002 ; About Campus Volume 7 ; 7 ; acaa ; >
+      au < exists ; exists ; 2003 ; About Campus Volume 8 ; 8 ; acaa ; >
+      au < exists ; exists ; 2004 ; About Campus Volume 9 ; 9 ; acaa ; >
+      au < exists ; exists ; 2005 ; About Campus Volume 10 ; 10 ; acaa ; >
+      au < exists ; exists ; 2006 ; About Campus Volume 11 ; 11 ; acaa ; >
+      au < exists ; exists ; 2007 ; About Campus Volume 12 ; 12 ; acaa ; >
+      au < exists ; exists ; 2008 ; About Campus Volume 13 ; 13 ; acaa ; >
+      au < exists ; exists ; 2009 ; About Campus Volume 14 ; 14 ; acaa ; >
+      au < exists ; exists ; 2010 ; About Campus Volume 15 ; 15 ; acaa ; >
+      au < exists ; exists ; 2011 ; About Campus Volume 16 ; 16 ; acaa ; >
+      au < exists ; exists ; 2012 ; About Campus Volume 17 ; 17 ; acaa ; >
+      au < exists ; exists ; 2013 ; About Campus Volume 18 ; 18 ; acaa ; >
+      au < exists ; exists ; 2014 ; About Campus Volume 19 ; 19 ; acaa ; >
+      au < exists ; exists ; 2015 ; About Campus Volume 20 ; 20 ; acaa ; >
+      au < exists ; exists ; 2016 ; About Campus Volume 21 ; 21 ; acaa ; >
+      au < exists ; exists ; 2017 ; About Campus Volume 22 ; 22 ; acaa ; >
+
+  }
+
+  {
+
+    title <
       name = Abstracts in Anthropology ;
       issn = 0001-3455 ;
       eissn = 1557-5136
@@ -68,7 +103,6 @@
     #param[base_url] = http://ach.sagepub.com/
 
     {
-
 
       au < manifest ; exists ; 1996 ; Accounting History Volume 1 ; 1 ; acha ; >
       au < manifest ; exists ; 1997 ; Accounting History Volume 2 ; 2 ; acha ; >
@@ -5886,6 +5920,33 @@
 
       au < finished ; manifest ; 2016 ; Chinese Sociological Dialogue Volume 1 ; 1 ; csda ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; Chinese Sociological Dialogue Volume 2 ; 2 ; csda ; >
+
+  }
+
+  {
+
+    title <
+      name = Christian Education Journal ;
+      issn = 0739-8913 ;
+      eissn = 2378-525X
+    >
+
+    #param[journal_id] = ceja
+
+      au < exists ; exists ; 2003-2004 ; Christian Education Journal Volume 1 ; 1 ; ceja ; >
+      au < exists ; exists ; 2005 ; Christian Education Journal Volume 2 ; 2 ; ceja ; >
+      au < exists ; exists ; 2006 ; Christian Education Journal Volume 3 ; 3 ; ceja ; >
+      au < exists ; exists ; 2007 ; Christian Education Journal Volume 4 ; 4 ; ceja ; >
+      au < exists ; exists ; 2008 ; Christian Education Journal Volume 5 ; 5 ; ceja ; >
+      au < exists ; exists ; 2009 ; Christian Education Journal Volume 6 ; 6 ; ceja ; >
+      au < exists ; exists ; 2010 ; Christian Education Journal Volume 7 ; 7 ; ceja ; >
+      au < exists ; exists ; 2011 ; Christian Education Journal Volume 8 ; 8 ; ceja ; >
+      au < exists ; exists ; 2012 ; Christian Education Journal Volume 9 ; 9 ; ceja ; >
+      au < exists ; exists ; 2013 ; Christian Education Journal Volume 10 ; 10 ; ceja ; >
+      au < exists ; exists ; 2014 ; Christian Education Journal Volume 11 ; 11 ; ceja ; >
+      au < exists ; exists ; 2015 ; Christian Education Journal Volume 12 ; 12 ; ceja ; >
+      au < exists ; exists ; 2016 ; Christian Education Journal Volume 13 ; 13 ; ceja ; >
+      au < exists ; exists ; 2017 ; Christian Education Journal Volume 14 ; 14 ; ceja ; >
 
   }
 
@@ -25215,6 +25276,39 @@
       au < frozen ; exists ; 2010 ; The Journal of Psychiatry & Law Volume 38 ; 38 ; plxa ; >
       au < frozen ; exists ; 2011 ; The Journal of Psychiatry & Law Volume 39 ; 39 ; plxa ; >
       au < frozen ; exists ; 2012 ; The Journal of Psychiatry & Law Volume 40 ; 40 ; plxa ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Psychology and Theology ;
+      issn = 0091-6471 ;
+      eissn = 2328-1162
+    >
+
+    #param[journal_id] = ptja
+    #content available from 1973 volume 1 to 1999 volume 27
+
+      au < exists ; exists ; 2000 ; Journal of Psychology and Theology Volume 28 ; 28 ; ptja ; >
+      au < exists ; exists ; 2001 ; Journal of Psychology and Theology Volume 29 ; 29 ; ptja ; >
+      au < exists ; exists ; 2002 ; Journal of Psychology and Theology Volume 30 ; 30 ; ptja ; >
+      au < exists ; exists ; 2003 ; Journal of Psychology and Theology Volume 31 ; 31 ; ptja ; >
+      au < exists ; exists ; 2004 ; Journal of Psychology and Theology Volume 32 ; 32 ; ptja ; >
+      au < exists ; exists ; 2005 ; Journal of Psychology and Theology Volume 33 ; 33 ; ptja ; >
+      au < exists ; exists ; 2006 ; Journal of Psychology and Theology Volume 34 ; 34 ; ptja ; >
+      au < exists ; exists ; 2007 ; Journal of Psychology and Theology Volume 35 ; 35 ; ptja ; >
+      au < exists ; exists ; 2008 ; Journal of Psychology and Theology Volume 36 ; 36 ; ptja ; >
+      au < exists ; exists ; 2009 ; Journal of Psychology and Theology Volume 37 ; 37 ; ptja ; >
+      au < exists ; exists ; 2010 ; Journal of Psychology and Theology Volume 38 ; 38 ; ptja ; >
+      au < exists ; exists ; 2011 ; Journal of Psychology and Theology Volume 39 ; 39 ; ptja ; >
+      au < exists ; exists ; 2012 ; Journal of Psychology and Theology Volume 40 ; 40 ; ptja ; >
+      au < exists ; exists ; 2013 ; Journal of Psychology and Theology Volume 41 ; 41 ; ptja ; >
+      au < exists ; exists ; 2014 ; Journal of Psychology and Theology Volume 42 ; 42 ; ptja ; >
+      au < exists ; exists ; 2015 ; Journal of Psychology and Theology Volume 43 ; 43 ; ptja ; >
+      au < exists ; exists ; 2016 ; Journal of Psychology and Theology Volume 44 ; 44 ; ptja ; >
+      au < exists ; exists ; 2017 ; Journal of Psychology and Theology Volume 45 ; 45 ; ptja ; >
+      au < exists ; exists ; 2018 ; Journal of Psychology and Theology Volume 46 ; 46 ; ptja ; >
 
   }
 
@@ -44800,8 +44894,7 @@
       title <
         name = International Journal of Maritime History ;
         issn = 0843-8714 ;
-        eissn = 2052-7756 ;
-        issnl = 0843-8714
+        eissn = 2052-7756
       >
 
         #param[base_url] = http://ijh.sagepub.com/
@@ -44836,15 +44929,55 @@
         au < frozen ; exists ; 2016 ; International Journal of Maritime History Volume 28 ; 28 ; ijha ; >
         au < deepCrawl ; exists ; 2017 ; International Journal of Maritime History Volume 29 ; 29 ; ijha ; >
 
-  }
+    }
+
+    {
+
+      title <
+        name = International Journal of Market Research ;
+        issn = 1470-7853 ;
+        eissn = 2515-2173
+      >
+
+        #param[journal_id] = mre
+
+        au < exists ; exists ; 1991 ; International Journal of Market Research Volume 33 ; 33 ; mreb ; >
+        au < exists ; exists ; 1992 ; International Journal of Market Research Volume 34 ; 34 ; mreb ; >
+        au < exists ; exists ; 1993 ; International Journal of Market Research Volume 35 ; 35 ; mreb ; >
+        au < exists ; exists ; 1994 ; International Journal of Market Research Volume 36 ; 36 ; mreb ; >
+        au < exists ; exists ; 1995 ; International Journal of Market Research Volume 37 ; 37 ; mreb ; >
+        au < exists ; exists ; 1996 ; International Journal of Market Research Volume 38 ; 38 ; mreb ; >
+        au < exists ; exists ; 1997 ; International Journal of Market Research Volume 39 ; 39 ; mreb ; >
+        au < exists ; exists ; 1998 ; International Journal of Market Research Volume 40 ; 40 ; mreb ; >
+        au < exists ; exists ; 1999 ; International Journal of Market Research Volume 41 ; 41 ; mreb ; >
+        au < exists ; exists ; 2000 ; International Journal of Market Research Volume 42 ; 42 ; mrea ; >
+        au < exists ; exists ; 2001 ; International Journal of Market Research Volume 43 ; 43 ; mrea ; >
+        au < exists ; exists ; 2002 ; International Journal of Market Research Volume 44 ; 44 ; mrea ; >
+        au < exists ; exists ; 2003 ; International Journal of Market Research Volume 45 ; 45 ; mrea ; >
+        au < exists ; exists ; 2004 ; International Journal of Market Research Volume 46 ; 46 ; mrea ; >
+        au < exists ; exists ; 2005 ; International Journal of Market Research Volume 47 ; 47 ; mrea ; >
+        au < exists ; exists ; 2006 ; International Journal of Market Research Volume 48 ; 48 ; mrea ; >
+        au < exists ; exists ; 2007 ; International Journal of Market Research Volume 49 ; 49 ; mrea ; >
+        au < exists ; exists ; 2008 ; International Journal of Market Research Volume 50 ; 50 ; mrea ; >
+        au < exists ; exists ; 2009 ; International Journal of Market Research Volume 51 ; 51 ; mrea ; >
+        au < exists ; exists ; 2010 ; International Journal of Market Research Volume 52 ; 52 ; mrea ; >
+        au < exists ; exists ; 2011 ; International Journal of Market Research Volume 53 ; 53 ; mrea ; >
+        au < exists ; exists ; 2012 ; International Journal of Market Research Volume 54 ; 54 ; mrea ; >
+        au < exists ; exists ; 2013 ; International Journal of Market Research Volume 55 ; 55 ; mrea ; >
+        au < exists ; exists ; 2014 ; International Journal of Market Research Volume 56 ; 56 ; mrea ; >
+        au < exists ; exists ; 2015 ; International Journal of Market Research Volume 57 ; 57 ; mrea ; >
+        au < exists ; exists ; 2016 ; International Journal of Market Research Volume 58 ; 58 ; mrea ; >
+        au < exists ; exists ; 2017 ; International Journal of Market Research Volume 59 ; 59 ; mrea ; >
+        au < exists ; exists ; 2018 ; International Journal of Market Research Volume 60 ; 60 ; mrea ; >
+
+    }
 
     {
 
       title <
         name = International Journal of STD & AIDS ;
         issn = 0956-4624 ;
-        eissn = 1758-1052 ;
-        issnl = 0956-4624
+        eissn = 1758-1052
       >
 
         #param[base_url] = http://std.sagepub.com/
