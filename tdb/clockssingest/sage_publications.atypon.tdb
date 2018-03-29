@@ -877,6 +877,23 @@
 
   {
     title <
+      name = Allergy & Rhinology ;
+      eissn = 2152-6567
+    >
+
+      #param[journal_id] = aar
+
+      au < exists ; exists ; 2011 ; Allergy & Rhinology Volume 2 ; 2 ; aara ; >
+      au < exists ; exists ; 2012 ; Allergy & Rhinology Volume 3 ; 3 ; aara ; >
+      au < exists ; exists ; 2013 ; Allergy & Rhinology Volume 4 ; 4 ; aara ; >
+      au < exists ; exists ; 2014 ; Allergy & Rhinology Volume 5 ; 5 ; aara ; >
+      au < exists ; exists ; 2015 ; Allergy & Rhinology Volume 6 ; 6 ; aara ; >
+      au < exists ; exists ; 2016 ; Allergy & Rhinology Volume 7 ; 7 ; aara ; >
+
+  }
+
+  {
+    title <
       name = AlterNative: An International Journal of Indigenous Peoples ;
       issn = 1177-1801 ;
       eissn = 1174-1740
@@ -11735,6 +11752,37 @@
   {
 
     title <
+      name = Evaluation Journal of Australasia ;
+      issn = 1035-719X ;
+      eissn = 2515-9372
+    >
+
+    #param[journal_id] = evj
+
+      au < exists ; exists ; 2001 ; Evaluation Journal of Australasia Volume 1 ; 1 ; evja ; >
+      au < exists ; exists ; 2002 ; Evaluation Journal of Australasia Volume 2 ; 2 ; evja ; >
+      au < exists ; exists ; 2003 ; Evaluation Journal of Australasia Volume 3 ; 3 ; evja ; >
+      au < exists ; exists ; 2005 ; Evaluation Journal of Australasia Volume 4 ; 4 ; evja ; >
+      au < exists ; exists ; 2005 ; Evaluation Journal of Australasia Volume 5 ; 5 ; evja ; >
+      au < exists ; exists ; 2006 ; Evaluation Journal of Australasia Volume 6 ; 6 ; evja ; >
+      au < exists ; exists ; 2007 ; Evaluation Journal of Australasia Volume 7 ; 7 ; evja ; >
+      au < exists ; exists ; 2008 ; Evaluation Journal of Australasia Volume 8 ; 8 ; evja ; >
+      au < exists ; exists ; 2009 ; Evaluation Journal of Australasia Volume 9 ; 9 ; evja ; >
+      au < exists ; exists ; 2010 ; Evaluation Journal of Australasia Volume 10 ; 10 ; evja ; >
+      au < exists ; exists ; 2011 ; Evaluation Journal of Australasia Volume 11 ; 11 ; evja ; >
+      au < exists ; exists ; 2012 ; Evaluation Journal of Australasia Volume 12 ; 12 ; evja ; >
+      au < exists ; exists ; 2013 ; Evaluation Journal of Australasia Volume 13 ; 13 ; evja ; >
+      au < exists ; exists ; 2014 ; Evaluation Journal of Australasia Volume 14 ; 14 ; evja ; >
+      au < exists ; exists ; 2015 ; Evaluation Journal of Australasia Volume 15 ; 15 ; evja ; >
+      au < exists ; exists ; 2016 ; Evaluation Journal of Australasia Volume 16 ; 16 ; evja ; >
+      au < exists ; exists ; 2017 ; Evaluation Journal of Australasia Volume 17 ; 17 ; evja ; >
+      au < exists ; exists ; 2018 ; Evaluation Journal of Australasia Volume 18 ; 18 ; evja ; >
+
+  }
+
+  {
+
+    title <
       name = Evaluation Review ;
       issn = 0193-841X ;
       eissn = 1552-3926
@@ -18766,6 +18814,38 @@
 
     }
 
+    {
+
+    title <
+      name = Journal of Advertising Education ;
+      issn = 1098-0482 ;
+      eissn = 2516-1873
+    >
+
+    #param[journal_id] = adv
+
+      au < exists ; exists ; 1999 ; Journal of Advertising Education Volume 3 ; 3 ; adva ; >
+      au < exists ; exists ; 2000 ; Journal of Advertising Education Volume 4 ; 4 ; adva ; >
+      au < exists ; exists ; 2001 ; Journal of Advertising Education Volume 5 ; 5 ; adva ; >
+      au < exists ; exists ; 2002 ; Journal of Advertising Education Volume 6 ; 6 ; adva ; >
+      au < exists ; exists ; 2003 ; Journal of Advertising Education Volume 7 ; 7 ; adva ; >
+      au < exists ; exists ; 2004 ; Journal of Advertising Education Volume 8 ; 8 ; adva ; >
+      au < exists ; exists ; 2005 ; Journal of Advertising Education Volume 9 ; 9 ; adva ; >
+      au < exists ; exists ; 2006 ; Journal of Advertising Education Volume 10 ; 10 ; adva ; >
+      au < exists ; exists ; 2007 ; Journal of Advertising Education Volume 11 ; 11 ; adva ; >
+      au < exists ; exists ; 2008 ; Journal of Advertising Education Volume 12 ; 12 ; adva ; >
+      au < exists ; exists ; 2009 ; Journal of Advertising Education Volume 13 ; 13 ; adva ; >
+      au < exists ; exists ; 2010 ; Journal of Advertising Education Volume 14 ; 14 ; adva ; >
+      au < exists ; exists ; 2011 ; Journal of Advertising Education Volume 15 ; 15 ; adva ; >
+      au < exists ; exists ; 2012 ; Journal of Advertising Education Volume 16 ; 16 ; adva ; >
+      au < exists ; exists ; 2013 ; Journal of Advertising Education Volume 17 ; 17 ; adva ; >
+      au < exists ; exists ; 2014 ; Journal of Advertising Education Volume 18 ; 18 ; adva ; >
+      au < exists ; exists ; 2015 ; Journal of Advertising Education Volume 19 ; 19 ; adva ; >
+      au < exists ; exists ; 2016 ; Journal of Advertising Education Volume 20 ; 20 ; adva ; >
+      au < exists ; exists ; 2017 ; Journal of Advertising Education Volume 21 ; 21 ; adva ; >
+
+    }
+
   {
 
     title <
@@ -18776,9 +18856,7 @@
 
     #param[base_url] = http://jah.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1989 ; Journal of Aging and Health Volume 1 ; 1 ; jaha ; >
       au < manifest ; exists ; 1990 ; Journal of Aging and Health Volume 2 ; 2 ; jaha ; >
@@ -25268,10 +25346,25 @@
   {
 
     title <
+      name = Journal of Psoriasis and Psoriatic Arthritis ;
+      issn = 0093-1853 ;
+      eissn = 2163-1794
+    >
+
+      #param[journal_id] = jps
+
+      au < exists ; exists ; 2015-2016 ; Journal of Psoriasis and Psoriatic Arthritis Volume 1 ; 1 ; jpsa ; >
+      au < exists ; exists ; 2016-2017 ; Journal of Psoriasis and Psoriatic Arthritis Volume 2 ; 2 ; jpsa ; >
+      au < exists ; exists ; 2017-2018 ; Journal of Psoriasis and Psoriatic Arthritis Volume 3 ; 3 ; jpsa ; >
+
+  }
+
+  {
+
+    title <
       name = The Journal of Psychiatry & Law ;
       issn = 0093-1853 ;
-      eissn = 2163-1794 ;
-      issnl = 0093-1853
+      eissn = 2163-1794
     >
 
       #param[base_url] = http://plx.sagepub.com/
@@ -28293,6 +28386,52 @@
       au < deepCrawl ; exists ; 2017 ; Lighting Research and Technology Volume 49 ; 49 ; lrtd ; >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = The Linacre Quarterly ;
+      issn = 0024-3639 ;
+      eissn = 2050-8549
+    >
+
+    #param[journal_id] = lqr
+
+      au < exists ; exists ; 1986 ; The Linacre Quarterly Volume 53 ; 53 ; lqra ; >
+      au < exists ; exists ; 1987 ; The Linacre Quarterly Volume 54 ; 54 ; lqra ; >
+      au < exists ; exists ; 1988 ; The Linacre Quarterly Volume 55 ; 55 ; lqra ; >
+      au < exists ; exists ; 1989 ; The Linacre Quarterly Volume 56 ; 56 ; lqra ; >
+      au < exists ; exists ; 1990 ; The Linacre Quarterly Volume 57 ; 57 ; lqra ; >
+      au < exists ; exists ; 1991 ; The Linacre Quarterly Volume 58 ; 58 ; lqra ; >
+      au < exists ; exists ; 1992 ; The Linacre Quarterly Volume 59 ; 59 ; lqra ; >
+      au < exists ; exists ; 1993 ; The Linacre Quarterly Volume 60 ; 60 ; lqra ; >
+      au < exists ; exists ; 1994 ; The Linacre Quarterly Volume 61 ; 61 ; lqra ; >
+      au < exists ; exists ; 1995 ; The Linacre Quarterly Volume 62 ; 62 ; lqra ; >
+      au < exists ; exists ; 1996 ; The Linacre Quarterly Volume 63 ; 63 ; lqra ; >
+      au < exists ; exists ; 1997 ; The Linacre Quarterly Volume 64 ; 64 ; lqra ; >
+      au < exists ; exists ; 1998 ; The Linacre Quarterly Volume 65 ; 65 ; lqra ; >
+      au < exists ; exists ; 1999 ; The Linacre Quarterly Volume 66 ; 66 ; lqra ; >
+      au < exists ; exists ; 2000 ; The Linacre Quarterly Volume 67 ; 67 ; lqra ; >
+      au < exists ; exists ; 2001 ; The Linacre Quarterly Volume 68 ; 68 ; lqra ; >
+      au < exists ; exists ; 2002 ; The Linacre Quarterly Volume 69 ; 69 ; lqra ; >
+      au < exists ; exists ; 2003 ; The Linacre Quarterly Volume 70 ; 70 ; lqra ; >
+      au < exists ; exists ; 2004 ; The Linacre Quarterly Volume 71 ; 71 ; lqra ; >
+      au < exists ; exists ; 2005 ; The Linacre Quarterly Volume 72 ; 72 ; lqra ; >
+      au < exists ; exists ; 2006 ; The Linacre Quarterly Volume 73 ; 73 ; lqra ; >
+      au < exists ; exists ; 2007 ; The Linacre Quarterly Volume 74 ; 74 ; lqra ; >
+      au < exists ; exists ; 2008 ; The Linacre Quarterly Volume 75 ; 75 ; lqra ; >
+      au < exists ; exists ; 2009 ; The Linacre Quarterly Volume 76 ; 76 ; lqra ; >
+      au < exists ; exists ; 2010 ; The Linacre Quarterly Volume 77 ; 77 ; lqra ; >
+      au < exists ; exists ; 2011 ; The Linacre Quarterly Volume 78 ; 78 ; lqra ; >
+      au < exists ; exists ; 2012 ; The Linacre Quarterly Volume 79 ; 79 ; lqra ; >
+      au < exists ; exists ; 2013 ; The Linacre Quarterly Volume 80 ; 80 ; lqra ; >
+      au < exists ; exists ; 2014 ; The Linacre Quarterly Volume 81 ; 81 ; lqra ; >
+      au < exists ; exists ; 2015 ; The Linacre Quarterly Volume 82 ; 82 ; lqra ; >
+      au < exists ; exists ; 2016 ; The Linacre Quarterly Volume 83 ; 83 ; lqra ; >
+      au < exists ; exists ; 2017 ; The Linacre Quarterly Volume 84 ; 84 ; lqra ; >
+      au < exists ; exists ; 2018 ; The Linacre Quarterly Volume 85 ; 85 ; lqra ; >
 
   }
 
