@@ -27520,6 +27520,34 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
     }
 
     {
+
+      title <
+        name = Journal for Vascular Ultrasound ;
+        issn = 1544-3167 ;
+        eissn = 1544-3175
+      >
+  
+        #param[journal_id] = jvu
+
+        au < exists ; 2003 ; Journal for Vascular Ultrasound Volume 27 ; 27 ; jvua >
+        au < exists ; 2004 ; Journal for Vascular Ultrasound Volume 28 ; 28 ; jvua >
+        au < exists ; 2005 ; Journal for Vascular Ultrasound Volume 29 ; 29 ; jvua >
+        au < exists ; 2006 ; Journal for Vascular Ultrasound Volume 30 ; 30 ; jvua >
+        au < exists ; 2007 ; Journal for Vascular Ultrasound Volume 31 ; 31 ; jvua >
+        au < exists ; 2008 ; Journal for Vascular Ultrasound Volume 32 ; 32 ; jvua >
+        au < exists ; 2009 ; Journal for Vascular Ultrasound Volume 33 ; 33 ; jvua >
+        au < exists ; 2010 ; Journal for Vascular Ultrasound Volume 34 ; 34 ; jvua >
+        au < exists ; 2011 ; Journal for Vascular Ultrasound Volume 35 ; 35 ; jvua >
+        au < exists ; 2012 ; Journal for Vascular Ultrasound Volume 36 ; 36 ; jvua >
+        au < exists ; 2013 ; Journal for Vascular Ultrasound Volume 37 ; 37 ; jvua >
+        au < exists ; 2014 ; Journal for Vascular Ultrasound Volume 38 ; 38 ; jvua >
+        au < exists ; 2015 ; Journal for Vascular Ultrasound Volume 39 ; 39 ; jvua >
+        au < exists ; 2016 ; Journal for Vascular Ultrasound Volume 40 ; 40 ; jvua >
+        au < exists ; 2017 ; Journal for Vascular Ultrasound Volume 41 ; 41 ; jvua >
+
+    }
+
+    {
   
       title <
         name = Journal of Veterinary Dentistry ;
@@ -33791,26 +33819,52 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
     }
 
-  {
+    {
 
-    title <
-      name = Proceedings of Singapore Healthcare ;
-      issn = 2010-1058 ;
-      eissn = 2059-2329
-    >
+      title <
+        name = Proceedings of Singapore Healthcare ;
+        issn = 2010-1058 ;
+        eissn = 2059-2329
+      >
 
-      #param[base_url] = http://psh.sagepub.com/
+        #param[base_url] = http://psh.sagepub.com/
 
-      au < released ; 2010 ; Proceedings of Singapore Healthcare Volume 19 ; 19 ; psha >
-      au < released ; 2011 ; Proceedings of Singapore Healthcare Volume 20 ; 20 ; psha >
-      au < released ; 2012 ; Proceedings of Singapore Healthcare Volume 21 ; 21 ; psha >
-      au < released ; 2013 ; Proceedings of Singapore Healthcare Volume 22 ; 22 ; psha >
-      au < doNotProcess ; 2014 ; Proceedings of Singapore Healthcare Volume 23 ; 23 ; psha >
-      au < doNotProcess ; 2015 ; Proceedings of Singapore Healthcare Volume 24 ; 24 ; psha >
-      au < released ; 2016 ; Proceedings of Singapore Healthcare Volume 25 ; 25 ; psha >
-      au < manifest ; 2017 ; Proceedings of Singapore Healthcare Volume 26 ; 26 ; psha >
+        au < released ; 2010 ; Proceedings of Singapore Healthcare Volume 19 ; 19 ; psha >
+        au < released ; 2011 ; Proceedings of Singapore Healthcare Volume 20 ; 20 ; psha >
+        au < released ; 2012 ; Proceedings of Singapore Healthcare Volume 21 ; 21 ; psha >
+        au < released ; 2013 ; Proceedings of Singapore Healthcare Volume 22 ; 22 ; psha >
+        au < doNotProcess ; 2014 ; Proceedings of Singapore Healthcare Volume 23 ; 23 ; psha >
+        au < doNotProcess ; 2015 ; Proceedings of Singapore Healthcare Volume 24 ; 24 ; psha >
+        au < released ; 2016 ; Proceedings of Singapore Healthcare Volume 25 ; 25 ; psha >
+        au < manifest ; 2017 ; Proceedings of Singapore Healthcare Volume 26 ; 26 ; psha >
 
-  }
+    }
+
+    {
+
+      title <
+        name = Professional School Counseling ;
+        issn = 1096-2409 ;
+        eissn = 2156-759X
+      >
+
+      #param[journal_id] = pcxa
+
+        au < exists ; 2005 ; Professional School Counseling Volume 9 ; 9 ; pcxa >
+        au < exists ; 2006 ; Professional School Counseling Volume 10 ; 10 ; pcxa >
+        au < exists ; 2007 ; Professional School Counseling Volume 11 ; 11 ; pcxa >
+        au < exists ; 2008 ; Professional School Counseling Volume 12 ; 12 ; pcxa >
+        au < exists ; 2009 ; Professional School Counseling Volume 13 ; 13 ; pcxa >
+        au < exists ; 2010 ; Professional School Counseling Volume 14 ; 14 ; pcxa >
+        au < exists ; 2011 ; Professional School Counseling Volume 15 ; 15 ; pcxa >
+        au < exists ; 2012 ; Professional School Counseling Volume 16 ; 16 ; pcxa >
+        au < exists ; 2013 ; Professional School Counseling Volume 17 ; 17 ; pcxa >
+        au < exists ; 2014 ; Professional School Counseling Volume 18 ; 18 ; pcxa >
+        au < exists ; 2015 ; Professional School Counseling Volume 19 ; 19 ; pcxa >
+        au < exists ; 2016 ; Professional School Counseling Volume 20 ; 20 ; pcxa >
+        au < exists ; 2017 ; Professional School Counseling Volume 21 ; 21 ; pcxa >
+
+    }
 
     {
 

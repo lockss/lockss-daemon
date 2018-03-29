@@ -27343,6 +27343,34 @@
   {
 
     title <
+      name = Journal for Vascular Ultrasound ;
+      issn = 1544-3167 ;
+      eissn = 1544-3175
+    >
+
+      #param[journal_id] = jvu
+
+      au < exists ; exists ; 2003 ; Journal for Vascular Ultrasound Volume 27 ; 27 ; jvua ; >
+      au < exists ; exists ; 2004 ; Journal for Vascular Ultrasound Volume 28 ; 28 ; jvua ; >
+      au < exists ; exists ; 2005 ; Journal for Vascular Ultrasound Volume 29 ; 29 ; jvua ; >
+      au < exists ; exists ; 2006 ; Journal for Vascular Ultrasound Volume 30 ; 30 ; jvua ; >
+      au < exists ; exists ; 2007 ; Journal for Vascular Ultrasound Volume 31 ; 31 ; jvua ; >
+      au < exists ; exists ; 2008 ; Journal for Vascular Ultrasound Volume 32 ; 32 ; jvua ; >
+      au < exists ; exists ; 2009 ; Journal for Vascular Ultrasound Volume 33 ; 33 ; jvua ; >
+      au < exists ; exists ; 2010 ; Journal for Vascular Ultrasound Volume 34 ; 34 ; jvua ; >
+      au < exists ; exists ; 2011 ; Journal for Vascular Ultrasound Volume 35 ; 35 ; jvua ; >
+      au < exists ; exists ; 2012 ; Journal for Vascular Ultrasound Volume 36 ; 36 ; jvua ; >
+      au < exists ; exists ; 2013 ; Journal for Vascular Ultrasound Volume 37 ; 37 ; jvua ; >
+      au < exists ; exists ; 2014 ; Journal for Vascular Ultrasound Volume 38 ; 38 ; jvua ; >
+      au < exists ; exists ; 2015 ; Journal for Vascular Ultrasound Volume 39 ; 39 ; jvua ; >
+      au < exists ; exists ; 2016 ; Journal for Vascular Ultrasound Volume 40 ; 40 ; jvua ; >
+      au < exists ; exists ; 2017 ; Journal for Vascular Ultrasound Volume 41 ; 41 ; jvua ; >
+
+  }
+
+  {
+
+    title <
       name = Journal of Veterinary Dentistry ;
       issn = 0898-7564 ;
       eissn = 2470-4083
@@ -32410,10 +32438,7 @@
 
     #param[base_url] = http://ppn.sagepub.com/
 
-    
     {
-
-      comment[notReady] = consistent low poll
 
       au < manifest ; exists ; 2000 ; Policy, Politics, & Nursing Practice Volume 1 ; 1 ; ppna ; >
       au < manifest ; exists ; 2001 ; Policy, Politics, & Nursing Practice Volume 2 ; 2 ; ppna ; >
@@ -32514,9 +32539,7 @@
 
     #param[base_url] = http://prq.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1948 ; Political Research Quarterly Volume 1 ; 1 ; prqa ; >
       au < manifest ; exists ; 1949 ; Political Research Quarterly Volume 2 ; 2 ; prqa ; >
@@ -32759,9 +32782,7 @@
 
     #param[base_url] = http://pas.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1970 ; Politics & Society Volume 1 ; 1 ; pasa ; >
       au < manifest ; exists ; 1971 ; Politics & Society Volume 2 ; 2 ; pasa ; >
@@ -32823,9 +32844,7 @@
 
     #param[base_url] = http://ppe.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 2002 ; Politics, Philosophy & Economics Volume 1 ; 1 ; ppea ; >
       au < manifest ; exists ; 2003 ; Politics, Philosophy & Economics Volume 2 ; 2 ; ppea ; >
@@ -32880,10 +32899,7 @@
 
     #param[base_url] = http://tpj.sagepub.com/
 
-    
     {
-
-      comment[notReady] = consistent low poll
 
       au < manifest ; exists ; 1921 ; The Prison Journal Volume 1 ; 1 ; tpja ; >
       au < manifest ; exists ; 1922 ; The Prison Journal Volume 2 ; 2 ; tpjb ; >
@@ -32997,9 +33013,7 @@
 
     #param[base_url] = http://prb.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1929 ; Probation Journal Volume 1 ; 1 ; prba ; >
       au < manifest ; exists ; 1935 ; Probation Journal Volume 2 ; 2 ; prba ; >
@@ -33076,8 +33090,8 @@
           issn = 1071-1813
       >
         #param[base_url] = http://pro.sagepub.com/
-      {
 
+      {
 
         au < manifest ; exists ; 1974 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 18 ; 18 ; prob ; >
         au < manifest ; exists ; 1975 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 19 ; 19 ; prob ; >
@@ -33159,7 +33173,6 @@
 
     {
 
-
       au < manifest ; exists ; 1983 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 197 ; 197 ; piaa ; >
       au < manifest ; exists ; 1984 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 198 ; 198 ; piaa ; >
       au < manifest ; exists ; 1985 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 199 ; 199 ; piaa ; >
@@ -33211,7 +33224,6 @@
     #param[base_url] = http://pib.sagepub.com/
 
     {
-
 
       au < manifest ; exists ; 1983 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 197 ; 197 ; piba ; >
       au < manifest ; exists ; 1984 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 198 ; 198 ; piba ; >
@@ -33265,7 +33277,6 @@
 
     {
 
-
       au < manifest ; exists ; 1983 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 197 ; 197 ; picb ; >
       au < manifest ; exists ; 1984 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 198 ; 198 ; picb ; >
       au < manifest ; exists ; 1985 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 199 ; 199 ; picb ; >
@@ -33318,7 +33329,6 @@
 
     {
 
-
       au < manifest ; exists ; 1984 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 198 ; 198 ; pida ; >
       au < manifest ; exists ; 1985 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 199 ; 199 ; pida ; >
       au < manifest ; exists ; 1986 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 200 ; 200 ; pida ; >
@@ -33370,7 +33380,6 @@
 
     {
 
-
       au < manifest ; exists ; 1989 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 203 ; 203 ; piea ; >
       au < manifest ; exists ; 1990 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 204 ; 204 ; piea ; >
       au < manifest ; exists ; 1991 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 205 ; 205 ; piea ; >
@@ -33416,7 +33425,6 @@
     #param[base_url] = http://pif.sagepub.com/
 
     {
-
 
       au < manifest ; exists ; 1989 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 203 ; 203 ; pifa ; >
       au < manifest ; exists ; 1990 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 204 ; 204 ; pifa ; >
@@ -33464,7 +33472,6 @@
 
     {
 
-
       au < manifest ; exists ; 1989 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 203 ; 203 ; piga ; >
       au < manifest ; exists ; 1990 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 204 ; 204 ; piga ; >
       au < manifest ; exists ; 1991 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 205 ; 205 ; piga ; >
@@ -33510,7 +33517,6 @@
     #param[base_url] = http://pih.sagepub.com/
 
     {
-
 
       au < manifest ; exists ; 1989 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 203 ; 203 ; pihb ; >
       au < manifest ; exists ; 1990 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 204 ; 204 ; pihb ; >
@@ -33558,7 +33564,6 @@
 
     {
 
-
       au < manifest ; exists ; 1991 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 205 ; 205 ; piia ; >
       au < manifest ; exists ; 1992 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 206 ; 206 ; piia ; >
       au < manifest ; exists ; 1993 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 207 ; 207 ; piia ; >
@@ -33603,7 +33608,6 @@
 
     {
 
-
       au < manifest ; exists ; 1994 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 208 ; 208 ; pija ; >
       au < manifest ; exists ; 1995 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 209 ; 209 ; pija ; >
       au < manifest ; exists ; 1996 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 210 ; 210 ; pija ; >
@@ -33645,7 +33649,6 @@
 
     {
 
-
       au < manifest ; exists ; 1999 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 213 ; 213 ; pika ; >
       au < manifest ; exists ; 2000 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 214 ; 214 ; pika ; >
       au < manifest ; exists ; 2001 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 215 ; 215 ; pika ; >
@@ -33681,7 +33684,6 @@
     #param[base_url] = http://pil.sagepub.com/
 
     {
-
 
       au < manifest ; exists ; 1999 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 213 ; 213 ; pila ; >
       au < manifest ; exists ; 2000 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 214 ; 214 ; pila ; >
@@ -33719,7 +33721,6 @@
 
     {
 
-
       au < manifest ; exists ; 2002 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 216 ; 216 ; pima ; >
       au < manifest ; exists ; 2003 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 217 ; 217 ; pima ; >
       au < manifest ; exists ; 2004 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 218 ; 218 ; pima ; >
@@ -33753,7 +33754,6 @@
 
     {
 
-
       au < manifest ; exists ; 2004 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 218 ; 218 ; pinb ; >
       au < manifest ; exists ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 219 ; 219 ; pinb ; >
       au < manifest ; exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 220 ; 220 ; pinb ; >
@@ -33784,7 +33784,6 @@
     #param[base_url] = http://pio.sagepub.com/
 
     {
-
 
       au < manifest ; exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability Volume 220 ; 220 ; pioa ; >
       au < manifest ; exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability Volume 221 ; 221 ; pioa ; >
@@ -33850,6 +33849,32 @@
   {
 
     title <
+      name = Professional School Counseling ;
+      issn = 1096-2409 ;
+      eissn = 2156-759X
+    >
+
+    #param[journal_id] = pcxa
+
+      au < exists ; exists ; 2005 ; Professional School Counseling Volume 9 ; 9 ; pcxa ; >
+      au < exists ; exists ; 2006 ; Professional School Counseling Volume 10 ; 10 ; pcxa ; >
+      au < exists ; exists ; 2007 ; Professional School Counseling Volume 11 ; 11 ; pcxa ; >
+      au < exists ; exists ; 2008 ; Professional School Counseling Volume 12 ; 12 ; pcxa ; >
+      au < exists ; exists ; 2009 ; Professional School Counseling Volume 13 ; 13 ; pcxa ; >
+      au < exists ; exists ; 2010 ; Professional School Counseling Volume 14 ; 14 ; pcxa ; >
+      au < exists ; exists ; 2011 ; Professional School Counseling Volume 15 ; 15 ; pcxa ; >
+      au < exists ; exists ; 2012 ; Professional School Counseling Volume 16 ; 16 ; pcxa ; >
+      au < exists ; exists ; 2013 ; Professional School Counseling Volume 17 ; 17 ; pcxa ; >
+      au < exists ; exists ; 2014 ; Professional School Counseling Volume 18 ; 18 ; pcxa ; >
+      au < exists ; exists ; 2015 ; Professional School Counseling Volume 19 ; 19 ; pcxa ; >
+      au < exists ; exists ; 2016 ; Professional School Counseling Volume 20 ; 20 ; pcxa ; >
+      au < exists ; exists ; 2017 ; Professional School Counseling Volume 21 ; 21 ; pcxa ; >
+
+  }
+
+  {
+
+    title <
       name = Progress in Development Studies ;
       issn = 1464-9934 ;
       eissn = 1477-027X
@@ -33857,9 +33882,7 @@
 
     #param[base_url] = http://pdj.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 2001 ; Progress in Development Studies Volume 1 ; 1 ; pdja ; >
       au < manifest ; exists ; 2002 ; Progress in Development Studies Volume 2 ; 2 ; pdja ; >
