@@ -48,7 +48,7 @@ import org.lockss.servlet.ServletUtil.LinkTransform;
 import org.lockss.util.Logger;
 
 /**
- * This custom link rewriter performs Sagepub specific rewriting 
+ * This custom link rewriter performs publisher specific rewriting 
  */
 public class AmPsychPubHtmlLinkRewriterFactory implements LinkRewriterFactory {
   
