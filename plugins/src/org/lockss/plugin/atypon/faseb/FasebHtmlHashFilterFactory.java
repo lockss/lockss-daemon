@@ -32,13 +32,9 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.atypon.faseb;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.InputStream;
-import java.util.Arrays;
 import java.util.Vector;
 
-import org.apache.commons.io.IOUtils;
 import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.tags.Bullet;
@@ -122,13 +118,13 @@ public class FasebHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory 
   
   @Override
   public boolean doWSFiltering() {
-    return false;
+    return true;
   }
   
   /* removes tags and comments after other processing */
   @Override
   public boolean doTagRemovalFiltering() {
-    return false;
+    return true;
   }
   
   @Override

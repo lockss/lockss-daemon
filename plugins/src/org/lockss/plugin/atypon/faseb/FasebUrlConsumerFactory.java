@@ -76,20 +76,22 @@ public class FasebUrlConsumerFactory implements UrlConsumerFactory {
      * 
      * fj.201700799R.sd1.docx name common to both URLs
      * </p>
+     * @throws IOException for unhandled redirection
      * 
      */
-    public boolean shouldStoreAtOrigUrl() {
+    public boolean shouldStoreAtOrigUrl() throws IOException {
       boolean should = false;
       
       if (fud.redirectUrls != null && (fud.redirectUrls.size() > 0)) {
-        //the fetched = original or fetched = original with ?sso-checked=true
+        //the fetched = original or fetched is from cdn
         if (fud.fetchUrl.equals(fud.origUrl) ||
             fud.fetchUrl.contains("faseb-prod-cdn.literatumonline.com/journals/content/fasebj/")) {
           should = true;
         }
-        log.debug3("SSO redirect: " + fud.redirectUrls.size() + " " + fud.origUrl + " to " + fud.fetchUrl + " : " + should);
+        log.debug3("Faseb redirect: " + fud.redirectUrls.size() + " " + fud.origUrl + " to " + fud.fetchUrl + " : " + should);
         if (!should) {
           log.debug3("myfud: " + fud.redirectUrls.size() + " " + fud.redirectUrls.toString());
+          throw new IOException("Redirection not handled: " + fud.fetchUrl);
         }
       }
       return should;

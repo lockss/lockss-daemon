@@ -31,12 +31,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.atypon.faseb;
 
-import org.apache.commons.io.IOUtils;
-
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.InputStream;
-import java.util.Arrays;
 
 import org.htmlparser.NodeFilter;
 import org.lockss.daemon.PluginException;
