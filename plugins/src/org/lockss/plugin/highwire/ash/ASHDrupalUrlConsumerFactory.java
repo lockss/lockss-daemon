@@ -30,38 +30,25 @@ in this Software without prior written authorization from Stanford University.
 
  */
 
-package org.lockss.plugin.highwire;
-
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+package org.lockss.plugin.highwire.ash;
 
 import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.plugin.*;
+import org.lockss.plugin.highwire.HighWireDrupalSigninUrlConsumerFactory;
 import org.lockss.util.Logger;
 
 /**
  * @since 1.68.0 with storeAtOrigUrl()
  */
-public class HighWireDrupalSigninUrlConsumerFactory extends HighWireDrupalUrlConsumerFactory {
-  private static final Logger log = Logger.getLogger(HighWireDrupalSigninUrlConsumerFactory.class);
-  
-  //For a signin redirect - it could be multiple hops, eg 
-  //   http://www.bloodjournal.org/content/129/23/3111.full.pdf
-  //   https://signin.hematology.org/Login.aspx?vi
-  //   http://www.bloodjournal.org/content/129/23/3111.full.pdf?sso-checked=true
-  //   http://www.bloodjournal.org/content/bloodjournal/129/23/3111.full.pdf?sso-checked=true
-  // so allow for more than 2 hops and don't worry about the addition of a jid in the url pattern
-  protected static final String SIG_ORIG_STRING = "/content(/.+/[^/]+)$";
-  // Same as the original but with optional extra directory just after "content/"
-  protected static final String DEST_WITH_JID_STRING = "/content/[^/]+(/.+/[^/]+)(\\?sso-checked=true)$";
-  
-  protected static final Pattern origPat = Pattern.compile(SIG_ORIG_STRING, Pattern.CASE_INSENSITIVE);
-  protected static final Pattern destPat = Pattern.compile(DEST_WITH_JID_STRING, Pattern.CASE_INSENSITIVE);
+public class ASHDrupalUrlConsumerFactory extends HighWireDrupalSigninUrlConsumerFactory {
+  private static final Logger log = Logger.getLogger(ASHDrupalUrlConsumerFactory.class);
+  private static final String SEARCH_STR = "/search/volume";
+  private static final String CHECKED_STR = "sso-checked=true";
   
   @Override
   public UrlConsumer createUrlConsumer(CrawlerFacade facade, FetchedUrlData fud) {
     log.debug3("Creating a UrlConsumer");
-    return new HighWireDrupalSigninUrlConsumer(facade, fud);
+    return new ASHDrupalUrlConsumer(facade, fud);
   }
   
   /**
@@ -73,10 +60,10 @@ public class HighWireDrupalSigninUrlConsumerFactory extends HighWireDrupalUrlCon
    * 
    * @since 1.68.0
    */
-  public class HighWireDrupalSigninUrlConsumer extends HighWireDrupalUrlConsumer {
+  public class ASHDrupalUrlConsumer extends HighWireDrupalSigninUrlConsumer {
     
     
-    public HighWireDrupalSigninUrlConsumer(CrawlerFacade facade, FetchedUrlData fud) {
+    public ASHDrupalUrlConsumer(CrawlerFacade facade, FetchedUrlData fud) {
       super(facade, fud);
     }
     
@@ -93,23 +80,12 @@ public class HighWireDrupalSigninUrlConsumerFactory extends HighWireDrupalUrlCon
     @Override
     public boolean shouldStoreAtOrigUrl() {
       boolean should = super.shouldStoreAtOrigUrl();
-      if (!should && fud.redirectUrls != null && (fud.redirectUrls.size() > 0)) {
-        //the fetched = original or fetched = original with ?sso-checked=true
-        if (fud.fetchUrl.equals(fud.origUrl) ||
-            fud.fetchUrl.equals(fud.origUrl + "?sso-checked=true") ) {
+      if (!should && fud != null && fud.redirectUrls != null) {
+        if (fud.origUrl.contains(SEARCH_STR) &&
+            fud.fetchUrl.contains(SEARCH_STR) && fud.fetchUrl.endsWith(CHECKED_STR)) {
           should = true;
-        } else {
-          // fetched = original + journal_id dir after content + ?sso-checked=true
-          Matcher destMat = destPat.matcher(fud.fetchUrl);
-          Matcher origMat = origPat.matcher(fud.origUrl);
-          if (destMat.find() && origMat.find()) {
-            should =  origMat.group(1).equals(destMat.group(1));
-          }
         }
-        log.debug3("SO redirect: " + fud.redirectUrls.size() + " " + fud.origUrl + " to " + fud.fetchUrl + " : " + should);
-        if (!should) {
-          log.warning("myfud: " + fud.redirectUrls.size() + " " + fud.redirectUrls.toString());
-        }
+        log.warning("SSO redirect: " + should + ": " + fud.redirectUrls.size()  + ": " + fud.origUrl + ": " + fud.redirectUrls.toString());
       }
       return should;
     }
