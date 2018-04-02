@@ -35,6 +35,7 @@ package org.lockss.plugin.atypon.faseb;
 
 import java.io.IOException;
 
+import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.SimpleUrlConsumer;
@@ -89,9 +90,12 @@ public class FasebUrlConsumerFactory implements UrlConsumerFactory {
           should = true;
         }
         log.debug3("Faseb redirect: " + fud.redirectUrls.size() + " " + fud.origUrl + " to " + fud.fetchUrl + " : " + should);
-        if (!should) {
-          log.debug3("myfud: " + fud.redirectUrls.size() + " " + fud.redirectUrls.toString());
-          throw new IOException("Redirection not handled: " + fud.fetchUrl);
+        if (!should && au.getConfiguration().containsKey(ConfigParamDescr.BASE_URL.getKey())) {
+          String baseUrl = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
+          if (fud.origUrl.startsWith(baseUrl)) {
+            log.warning("myfud: " + fud.redirectUrls.size() + " " + fud.redirectUrls.toString());
+//    XXX        throw new IOException("Redirection not handled: " + fud.fetchUrl);
+          }
         }
       }
       return should;
