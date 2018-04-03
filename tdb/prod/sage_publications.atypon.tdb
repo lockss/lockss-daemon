@@ -23,28 +23,28 @@
 
     #param[journal_id] = aca
 
-      au < exists ; 1996 ; About Campus Volume 1 ; 1 ; acaa >
-      au < exists ; 1997 ; About Campus Volume 2 ; 2 ; acaa >
-      au < exists ; 1998 ; About Campus Volume 3 ; 3 ; acaa >
-      au < exists ; 1999 ; About Campus Volume 4 ; 4 ; acaa >
-      au < exists ; 2000 ; About Campus Volume 5 ; 5 ; acaa >
-      au < exists ; 2001 ; About Campus Volume 6 ; 6 ; acaa >
-      au < exists ; 2002 ; About Campus Volume 7 ; 7 ; acaa >
-      au < exists ; 2003 ; About Campus Volume 8 ; 8 ; acaa >
-      au < exists ; 2004 ; About Campus Volume 9 ; 9 ; acaa >
-      au < exists ; 2005 ; About Campus Volume 10 ; 10 ; acaa >
-      au < exists ; 2006 ; About Campus Volume 11 ; 11 ; acaa >
-      au < exists ; 2007 ; About Campus Volume 12 ; 12 ; acaa >
-      au < exists ; 2008 ; About Campus Volume 13 ; 13 ; acaa >
-      au < exists ; 2009 ; About Campus Volume 14 ; 14 ; acaa >
-      au < exists ; 2010 ; About Campus Volume 15 ; 15 ; acaa >
-      au < exists ; 2011 ; About Campus Volume 16 ; 16 ; acaa >
-      au < exists ; 2012 ; About Campus Volume 17 ; 17 ; acaa >
-      au < exists ; 2013 ; About Campus Volume 18 ; 18 ; acaa >
-      au < exists ; 2014 ; About Campus Volume 19 ; 19 ; acaa >
-      au < exists ; 2015 ; About Campus Volume 20 ; 20 ; acaa >
-      au < exists ; 2016 ; About Campus Volume 21 ; 21 ; acaa >
-      au < exists ; 2017 ; About Campus Volume 22 ; 22 ; acaa >
+      au < manifest ; 1996 ; About Campus Volume 1 ; 1 ; acaa >
+      au < manifest ; 1997 ; About Campus Volume 2 ; 2 ; acaa >
+      au < manifest ; 1998 ; About Campus Volume 3 ; 3 ; acaa >
+      au < manifest ; 1999 ; About Campus Volume 4 ; 4 ; acaa >
+      au < manifest ; 2000 ; About Campus Volume 5 ; 5 ; acaa >
+      au < manifest ; 2001 ; About Campus Volume 6 ; 6 ; acaa >
+      au < manifest ; 2002 ; About Campus Volume 7 ; 7 ; acaa >
+      au < manifest ; 2003 ; About Campus Volume 8 ; 8 ; acaa >
+      au < manifest ; 2004 ; About Campus Volume 9 ; 9 ; acaa >
+      au < manifest ; 2005 ; About Campus Volume 10 ; 10 ; acaa >
+      au < manifest ; 2006 ; About Campus Volume 11 ; 11 ; acaa >
+      au < manifest ; 2007 ; About Campus Volume 12 ; 12 ; acaa >
+      au < manifest ; 2008 ; About Campus Volume 13 ; 13 ; acaa >
+      au < manifest ; 2009 ; About Campus Volume 14 ; 14 ; acaa >
+      au < manifest ; 2010 ; About Campus Volume 15 ; 15 ; acaa >
+      au < manifest ; 2011 ; About Campus Volume 16 ; 16 ; acaa >
+      au < manifest ; 2012 ; About Campus Volume 17 ; 17 ; acaa >
+      au < manifest ; 2013 ; About Campus Volume 18 ; 18 ; acaa >
+      au < manifest ; 2014 ; About Campus Volume 19 ; 19 ; acaa >
+      au < manifest ; 2015 ; About Campus Volume 20 ; 20 ; acaa >
+      au < manifest ; 2016 ; About Campus Volume 21 ; 21 ; acaa >
+      au < manifest ; 2017 ; About Campus Volume 22 ; 22 ; acaa >
 
   }
 
@@ -878,12 +878,12 @@
 
         #param[journal_id] = aar
 
-        au < exists ; 2011 ; Allergy & Rhinology Volume 2 ; 2 ; aara >
-        au < exists ; 2012 ; Allergy & Rhinology Volume 3 ; 3 ; aara >
-        au < exists ; 2013 ; Allergy & Rhinology Volume 4 ; 4 ; aara >
-        au < exists ; 2014 ; Allergy & Rhinology Volume 5 ; 5 ; aara >
-        au < exists ; 2015 ; Allergy & Rhinology Volume 6 ; 6 ; aara >
-        au < exists ; 2016 ; Allergy & Rhinology Volume 7 ; 7 ; aara >
+        au < manifest ; 2011 ; Allergy & Rhinology Volume 2 ; 2 ; aara >
+        au < manifest ; 2012 ; Allergy & Rhinology Volume 3 ; 3 ; aara >
+        au < manifest ; 2013 ; Allergy & Rhinology Volume 4 ; 4 ; aara >
+        au < manifest ; 2014 ; Allergy & Rhinology Volume 5 ; 5 ; aara >
+        au < manifest ; 2015 ; Allergy & Rhinology Volume 6 ; 6 ; aara >
+        au < manifest ; 2016 ; Allergy & Rhinology Volume 7 ; 7 ; aara >
 
     }
 
@@ -5943,20 +5943,20 @@
 
     #param[journal_id] = ceja
 
-      au < exists ; 2003-2004 ; Christian Education Journal Volume 1 ; 1 ; ceja >
-      au < exists ; 2005 ; Christian Education Journal Volume 2 ; 2 ; ceja >
-      au < exists ; 2006 ; Christian Education Journal Volume 3 ; 3 ; ceja >
-      au < exists ; 2007 ; Christian Education Journal Volume 4 ; 4 ; ceja >
-      au < exists ; 2008 ; Christian Education Journal Volume 5 ; 5 ; ceja >
-      au < exists ; 2009 ; Christian Education Journal Volume 6 ; 6 ; ceja >
-      au < exists ; 2010 ; Christian Education Journal Volume 7 ; 7 ; ceja >
-      au < exists ; 2011 ; Christian Education Journal Volume 8 ; 8 ; ceja >
-      au < exists ; 2012 ; Christian Education Journal Volume 9 ; 9 ; ceja >
-      au < exists ; 2013 ; Christian Education Journal Volume 10 ; 10 ; ceja >
-      au < exists ; 2014 ; Christian Education Journal Volume 11 ; 11 ; ceja >
-      au < exists ; 2015 ; Christian Education Journal Volume 12 ; 12 ; ceja >
-      au < exists ; 2016 ; Christian Education Journal Volume 13 ; 13 ; ceja >
-      au < exists ; 2017 ; Christian Education Journal Volume 14 ; 14 ; ceja >
+      au < manifest ; 2003-2004 ; Christian Education Journal Volume 1 ; 1 ; ceja >
+      au < manifest ; 2005 ; Christian Education Journal Volume 2 ; 2 ; ceja >
+      au < manifest ; 2006 ; Christian Education Journal Volume 3 ; 3 ; ceja >
+      au < manifest ; 2007 ; Christian Education Journal Volume 4 ; 4 ; ceja >
+      au < manifest ; 2008 ; Christian Education Journal Volume 5 ; 5 ; ceja >
+      au < manifest ; 2009 ; Christian Education Journal Volume 6 ; 6 ; ceja >
+      au < manifest ; 2010 ; Christian Education Journal Volume 7 ; 7 ; ceja >
+      au < manifest ; 2011 ; Christian Education Journal Volume 8 ; 8 ; ceja >
+      au < manifest ; 2012 ; Christian Education Journal Volume 9 ; 9 ; ceja >
+      au < manifest ; 2013 ; Christian Education Journal Volume 10 ; 10 ; ceja >
+      au < manifest ; 2014 ; Christian Education Journal Volume 11 ; 11 ; ceja >
+      au < manifest ; 2015 ; Christian Education Journal Volume 12 ; 12 ; ceja >
+      au < manifest ; 2016 ; Christian Education Journal Volume 13 ; 13 ; ceja >
+      au < manifest ; 2017 ; Christian Education Journal Volume 14 ; 14 ; ceja >
 
   }
 
@@ -11715,24 +11715,24 @@
 
       #param[journal_id] = evj
 
-        au < exists ; 2001 ; Evaluation Journal of Australasia Volume 1 ; 1 ; evja >
-        au < exists ; 2002 ; Evaluation Journal of Australasia Volume 2 ; 2 ; evja >
-        au < exists ; 2003 ; Evaluation Journal of Australasia Volume 3 ; 3 ; evja >
-        au < exists ; 2005 ; Evaluation Journal of Australasia Volume 4 ; 4 ; evja >
-        au < exists ; 2005 ; Evaluation Journal of Australasia Volume 5 ; 5 ; evja >
-        au < exists ; 2006 ; Evaluation Journal of Australasia Volume 6 ; 6 ; evja >
-        au < exists ; 2007 ; Evaluation Journal of Australasia Volume 7 ; 7 ; evja >
-        au < exists ; 2008 ; Evaluation Journal of Australasia Volume 8 ; 8 ; evja >
-        au < exists ; 2009 ; Evaluation Journal of Australasia Volume 9 ; 9 ; evja >
-        au < exists ; 2010 ; Evaluation Journal of Australasia Volume 10 ; 10 ; evja >
-        au < exists ; 2011 ; Evaluation Journal of Australasia Volume 11 ; 11 ; evja >
-        au < exists ; 2012 ; Evaluation Journal of Australasia Volume 12 ; 12 ; evja >
-        au < exists ; 2013 ; Evaluation Journal of Australasia Volume 13 ; 13 ; evja >
-        au < exists ; 2014 ; Evaluation Journal of Australasia Volume 14 ; 14 ; evja >
-        au < exists ; 2015 ; Evaluation Journal of Australasia Volume 15 ; 15 ; evja >
-        au < exists ; 2016 ; Evaluation Journal of Australasia Volume 16 ; 16 ; evja >
-        au < exists ; 2017 ; Evaluation Journal of Australasia Volume 17 ; 17 ; evja >
-        au < exists ; 2018 ; Evaluation Journal of Australasia Volume 18 ; 18 ; evja >
+        au < manifest ; 2001 ; Evaluation Journal of Australasia Volume 1 ; 1 ; evja >
+        au < manifest ; 2002 ; Evaluation Journal of Australasia Volume 2 ; 2 ; evja >
+        au < manifest ; 2003 ; Evaluation Journal of Australasia Volume 3 ; 3 ; evja >
+        au < manifest ; 2005 ; Evaluation Journal of Australasia Volume 4 ; 4 ; evja >
+        au < manifest ; 2005 ; Evaluation Journal of Australasia Volume 5 ; 5 ; evja >
+        au < manifest ; 2006 ; Evaluation Journal of Australasia Volume 6 ; 6 ; evja >
+        au < manifest ; 2007 ; Evaluation Journal of Australasia Volume 7 ; 7 ; evja >
+        au < manifest ; 2008 ; Evaluation Journal of Australasia Volume 8 ; 8 ; evja >
+        au < manifest ; 2009 ; Evaluation Journal of Australasia Volume 9 ; 9 ; evja >
+        au < manifest ; 2010 ; Evaluation Journal of Australasia Volume 10 ; 10 ; evja >
+        au < manifest ; 2011 ; Evaluation Journal of Australasia Volume 11 ; 11 ; evja >
+        au < manifest ; 2012 ; Evaluation Journal of Australasia Volume 12 ; 12 ; evja >
+        au < manifest ; 2013 ; Evaluation Journal of Australasia Volume 13 ; 13 ; evja >
+        au < manifest ; 2014 ; Evaluation Journal of Australasia Volume 14 ; 14 ; evja >
+        au < manifest ; 2015 ; Evaluation Journal of Australasia Volume 15 ; 15 ; evja >
+        au < manifest ; 2016 ; Evaluation Journal of Australasia Volume 16 ; 16 ; evja >
+        au < manifest ; 2017 ; Evaluation Journal of Australasia Volume 17 ; 17 ; evja >
+        au < manifest ; 2018 ; Evaluation Journal of Australasia Volume 18 ; 18 ; evja >
 
     }
 
@@ -14724,18 +14724,18 @@
 
       #param[journal_id] = hjo
 
-        au < exists ; 2009 ; Hong Kong Journal of Occupational Therapy Volume 19 ; 19 ; hjoa >
-        au < exists ; 2010 ; Hong Kong Journal of Occupational Therapy Volume 20 ; 20 ; hjoa >
-        au < exists ; 2011 ; Hong Kong Journal of Occupational Therapy Volume 21 ; 21 ; hjoa >
-        au < exists ; 2012 ; Hong Kong Journal of Occupational Therapy Volume 22 ; 22 ; hjoa >
-        au < exists ; 2013 ; Hong Kong Journal of Occupational Therapy Volume 23 ; 23 ; hjoa >
-        au < exists ; 2014 ; Hong Kong Journal of Occupational Therapy Volume 24 ; 24 ; hjoa >
-        au < exists ; 2015 ; Hong Kong Journal of Occupational Therapy Volume 25 ; 25 ; hjoa >
-        au < exists ; 2015 ; Hong Kong Journal of Occupational Therapy Volume 26 ; 26 ; hjoa >
-        au < exists ; 2016 ; Hong Kong Journal of Occupational Therapy Volume 27 ; 27 ; hjoa >
-        au < exists ; 2016 ; Hong Kong Journal of Occupational Therapy Volume 28 ; 28 ; hjoa >
-        au < exists ; 2017 ; Hong Kong Journal of Occupational Therapy Volume 29 ; 29 ; hjoa >
-        au < exists ; 2017 ; Hong Kong Journal of Occupational Therapy Volume 30 ; 30 ; hjoa >
+        au < manifest ; 2009 ; Hong Kong Journal of Occupational Therapy Volume 19 ; 19 ; hjoa >
+        au < manifest ; 2010 ; Hong Kong Journal of Occupational Therapy Volume 20 ; 20 ; hjoa >
+        au < manifest ; 2011 ; Hong Kong Journal of Occupational Therapy Volume 21 ; 21 ; hjoa >
+        au < manifest ; 2012 ; Hong Kong Journal of Occupational Therapy Volume 22 ; 22 ; hjoa >
+        au < manifest ; 2013 ; Hong Kong Journal of Occupational Therapy Volume 23 ; 23 ; hjoa >
+        au < manifest ; 2014 ; Hong Kong Journal of Occupational Therapy Volume 24 ; 24 ; hjoa >
+        au < manifest ; 2015 ; Hong Kong Journal of Occupational Therapy Volume 25 ; 25 ; hjoa >
+        au < manifest ; 2015 ; Hong Kong Journal of Occupational Therapy Volume 26 ; 26 ; hjoa >
+        au < manifest ; 2016 ; Hong Kong Journal of Occupational Therapy Volume 27 ; 27 ; hjoa >
+        au < manifest ; 2016 ; Hong Kong Journal of Occupational Therapy Volume 28 ; 28 ; hjoa >
+        au < manifest ; 2017 ; Hong Kong Journal of Occupational Therapy Volume 29 ; 29 ; hjoa >
+        au < manifest ; 2017 ; Hong Kong Journal of Occupational Therapy Volume 30 ; 30 ; hjoa >
 
     }
 
@@ -16196,43 +16196,43 @@
 
         #param[journal_id] = jao
 
-        au < exists ; 1982 ; The International Journal of Artificial Organs Volume 5 ; 5 ; jaoa >
-        au < exists ; 1983 ; The International Journal of Artificial Organs Volume 6 ; 6 ; jaoa >
-        au < exists ; 1984 ; The International Journal of Artificial Organs Volume 7 ; 7 ; jaoa >
-        au < exists ; 1985 ; The International Journal of Artificial Organs Volume 8 ; 8 ; jaoa >
-        au < exists ; 1986 ; The International Journal of Artificial Organs Volume 9 ; 9 ; jaoa >
-        au < exists ; 1987 ; The International Journal of Artificial Organs Volume 10 ; 10 ; jaoa >
+        au < manifest ; 1982 ; The International Journal of Artificial Organs Volume 5 ; 5 ; jaoa >
+        au < manifest ; 1983 ; The International Journal of Artificial Organs Volume 6 ; 6 ; jaoa >
+        au < manifest ; 1984 ; The International Journal of Artificial Organs Volume 7 ; 7 ; jaoa >
+        au < manifest ; 1985 ; The International Journal of Artificial Organs Volume 8 ; 8 ; jaoa >
+        au < manifest ; 1986 ; The International Journal of Artificial Organs Volume 9 ; 9 ; jaoa >
+        au < manifest ; 1987 ; The International Journal of Artificial Organs Volume 10 ; 10 ; jaoa >
         au < doesNotExist ; 1988 ; The International Journal of Artificial Organs Volume 11 ; 11 ; jaoa >
         au < doesNotExist ; 1989 ; The International Journal of Artificial Organs Volume 12 ; 12 ; jaoa >
         au < doesNotExist ; 1990 ; The International Journal of Artificial Organs Volume 13 ; 13 ; jaoa >
-        au < exists ; 1991 ; The International Journal of Artificial Organs Volume 14 ; 14 ; jaoa >
-        au < exists ; 1992 ; The International Journal of Artificial Organs Volume 15 ; 15 ; jaoa >
-        au < exists ; 1993 ; The International Journal of Artificial Organs Volume 16 ; 16 ; jaoa >
-        au < exists ; 1994 ; The International Journal of Artificial Organs Volume 17 ; 17 ; jaoa >
-        au < exists ; 1995 ; The International Journal of Artificial Organs Volume 18 ; 18 ; jaoa >
-        au < exists ; 1996 ; The International Journal of Artificial Organs Volume 19 ; 19 ; jaoa >
-        au < exists ; 1997 ; The International Journal of Artificial Organs Volume 20 ; 20 ; jaoa >
-        au < exists ; 1998 ; The International Journal of Artificial Organs Volume 21 ; 21 ; jaoa >
-        au < exists ; 1999 ; The International Journal of Artificial Organs Volume 22 ; 22 ; jaoa >
-        au < exists ; 2000 ; The International Journal of Artificial Organs Volume 23 ; 23 ; jaoa >
-        au < exists ; 2001 ; The International Journal of Artificial Organs Volume 24 ; 24 ; jaoa >
-        au < exists ; 2002 ; The International Journal of Artificial Organs Volume 25 ; 25 ; jaoa >
-        au < exists ; 2003 ; The International Journal of Artificial Organs Volume 26 ; 26 ; jaoa >
-        au < exists ; 2004 ; The International Journal of Artificial Organs Volume 27 ; 27 ; jaoa >
-        au < exists ; 2005 ; The International Journal of Artificial Organs Volume 28 ; 28 ; jaoa >
-        au < exists ; 2006 ; The International Journal of Artificial Organs Volume 29 ; 29 ; jaoa >
-        au < exists ; 2007 ; The International Journal of Artificial Organs Volume 30 ; 30 ; jaoa >
-        au < exists ; 2008 ; The International Journal of Artificial Organs Volume 31 ; 31 ; jaoa >
-        au < exists ; 2009 ; The International Journal of Artificial Organs Volume 32 ; 32 ; jaoa >
-        au < exists ; 2010 ; The International Journal of Artificial Organs Volume 33 ; 33 ; jaoa >
-        au < exists ; 2011 ; The International Journal of Artificial Organs Volume 34 ; 34 ; jaoa >
-        au < exists ; 2012 ; The International Journal of Artificial Organs Volume 35 ; 35 ; jaoa >
-        au < exists ; 2013 ; The International Journal of Artificial Organs Volume 36 ; 36 ; jaoa >
-        au < exists ; 2014 ; The International Journal of Artificial Organs Volume 37 ; 37 ; jaoa >
-        au < exists ; 2015 ; The International Journal of Artificial Organs Volume 38 ; 38 ; jaoa >
-        au < exists ; 2016 ; The International Journal of Artificial Organs Volume 39 ; 39 ; jaoa >
-        au < exists ; 2017 ; The International Journal of Artificial Organs Volume 40 ; 40 ; jaoa >
-        au < exists ; 2018 ; The International Journal of Artificial Organs Volume 41 ; 41 ; jaoa >
+        au < manifest ; 1991 ; The International Journal of Artificial Organs Volume 14 ; 14 ; jaoa >
+        au < manifest ; 1992 ; The International Journal of Artificial Organs Volume 15 ; 15 ; jaoa >
+        au < manifest ; 1993 ; The International Journal of Artificial Organs Volume 16 ; 16 ; jaoa >
+        au < manifest ; 1994 ; The International Journal of Artificial Organs Volume 17 ; 17 ; jaoa >
+        au < manifest ; 1995 ; The International Journal of Artificial Organs Volume 18 ; 18 ; jaoa >
+        au < manifest ; 1996 ; The International Journal of Artificial Organs Volume 19 ; 19 ; jaoa >
+        au < manifest ; 1997 ; The International Journal of Artificial Organs Volume 20 ; 20 ; jaoa >
+        au < manifest ; 1998 ; The International Journal of Artificial Organs Volume 21 ; 21 ; jaoa >
+        au < manifest ; 1999 ; The International Journal of Artificial Organs Volume 22 ; 22 ; jaoa >
+        au < manifest ; 2000 ; The International Journal of Artificial Organs Volume 23 ; 23 ; jaoa >
+        au < manifest ; 2001 ; The International Journal of Artificial Organs Volume 24 ; 24 ; jaoa >
+        au < manifest ; 2002 ; The International Journal of Artificial Organs Volume 25 ; 25 ; jaoa >
+        au < manifest ; 2003 ; The International Journal of Artificial Organs Volume 26 ; 26 ; jaoa >
+        au < manifest ; 2004 ; The International Journal of Artificial Organs Volume 27 ; 27 ; jaoa >
+        au < manifest ; 2005 ; The International Journal of Artificial Organs Volume 28 ; 28 ; jaoa >
+        au < manifest ; 2006 ; The International Journal of Artificial Organs Volume 29 ; 29 ; jaoa >
+        au < manifest ; 2007 ; The International Journal of Artificial Organs Volume 30 ; 30 ; jaoa >
+        au < manifest ; 2008 ; The International Journal of Artificial Organs Volume 31 ; 31 ; jaoa >
+        au < manifest ; 2009 ; The International Journal of Artificial Organs Volume 32 ; 32 ; jaoa >
+        au < manifest ; 2010 ; The International Journal of Artificial Organs Volume 33 ; 33 ; jaoa >
+        au < manifest ; 2011 ; The International Journal of Artificial Organs Volume 34 ; 34 ; jaoa >
+        au < manifest ; 2012 ; The International Journal of Artificial Organs Volume 35 ; 35 ; jaoa >
+        au < manifest ; 2013 ; The International Journal of Artificial Organs Volume 36 ; 36 ; jaoa >
+        au < manifest ; 2014 ; The International Journal of Artificial Organs Volume 37 ; 37 ; jaoa >
+        au < manifest ; 2015 ; The International Journal of Artificial Organs Volume 38 ; 38 ; jaoa >
+        au < manifest ; 2016 ; The International Journal of Artificial Organs Volume 39 ; 39 ; jaoa >
+        au < manifest ; 2017 ; The International Journal of Artificial Organs Volume 40 ; 40 ; jaoa >
+        au < manifest ; 2018 ; The International Journal of Artificial Organs Volume 41 ; 41 ; jaoa >
     }
 
     {
@@ -16339,34 +16339,34 @@
 
       #param[journal_id] = jbm
 
-      au < exists ; 1991 ; The International Journal of Biological Markers Volume 6 ; 6 ; jbmb >
-      au < exists ; 1992 ; The International Journal of Biological Markers Volume 7 ; 7 ; jbmb >
-      au < exists ; 1993 ; The International Journal of Biological Markers Volume 8 ; 8 ; jbmb >
+      au < manifest ; 1991 ; The International Journal of Biological Markers Volume 6 ; 6 ; jbmb >
+      au < manifest ; 1992 ; The International Journal of Biological Markers Volume 7 ; 7 ; jbmb >
+      au < manifest ; 1993 ; The International Journal of Biological Markers Volume 8 ; 8 ; jbmb >
       au < doesNotExist ; 1994 ; The International Journal of Biological Markers Volume 9 ; 9 ; jbmb >
-      au < exists ; 1995 ; The International Journal of Biological Markers Volume 10 ; 10 ; jbmb >
+      au < manifest ; 1995 ; The International Journal of Biological Markers Volume 10 ; 10 ; jbmb >
       au < doesNotExist ; 1996 ; The International Journal of Biological Markers Volume 11 ; 11 ; jbmb >
       au < doesNotExist ; 1997 ; The International Journal of Biological Markers Volume 12 ; 12 ; jbmb >
-      au < exists ; 1998 ; The International Journal of Biological Markers Volume 13 ; 13 ; jbmb >
-      au < exists ; 1999 ; The International Journal of Biological Markers Volume 14 ; 14 ; jbmb >
-      au < exists ; 2000 ; The International Journal of Biological Markers Volume 15 ; 15 ; jbmb >
-      au < exists ; 2001 ; The International Journal of Biological Markers Volume 16 ; 16 ; jbmb >
-      au < exists ; 2002 ; The International Journal of Biological Markers Volume 17 ; 17 ; jbmb >
-      au < exists ; 2003 ; The International Journal of Biological Markers Volume 18 ; 18 ; jbmb >
-      au < exists ; 2004 ; The International Journal of Biological Markers Volume 19 ; 19 ; jbmb >
-      au < exists ; 2005 ; The International Journal of Biological Markers Volume 20 ; 20 ; jbmb >
-      au < exists ; 2006 ; The International Journal of Biological Markers Volume 21 ; 21 ; jbmb >
-      au < exists ; 2007 ; The International Journal of Biological Markers Volume 22 ; 22 ; jbmb >
-      au < exists ; 2008 ; The International Journal of Biological Markers Volume 23 ; 23 ; jbmb >
-      au < exists ; 2009 ; The International Journal of Biological Markers Volume 24 ; 24 ; jbmb >
-      au < exists ; 2010 ; The International Journal of Biological Markers Volume 25 ; 25 ; jbmb >
-      au < exists ; 2011 ; The International Journal of Biological Markers Volume 26 ; 26 ; jbmb >
-      au < exists ; 2012 ; The International Journal of Biological Markers Volume 27 ; 27 ; jbmb >
-      au < exists ; 2013 ; The International Journal of Biological Markers Volume 28 ; 28 ; jbmb >
-      au < exists ; 2014 ; The International Journal of Biological Markers Volume 29 ; 29 ; jbmb >
-      au < exists ; 2015 ; The International Journal of Biological Markers Volume 30 ; 30 ; jbmb >
-      au < exists ; 2016 ; The International Journal of Biological Markers Volume 31 ; 31 ; jbmb >
-      au < exists ; 2017 ; The International Journal of Biological Markers Volume 32 ; 32 ; jbmb >
-      au < exists ; 2018 ; The International Journal of Biological Markers Volume 33 ; 33 ; jbmb >
+      au < manifest ; 1998 ; The International Journal of Biological Markers Volume 13 ; 13 ; jbmb >
+      au < manifest ; 1999 ; The International Journal of Biological Markers Volume 14 ; 14 ; jbmb >
+      au < manifest ; 2000 ; The International Journal of Biological Markers Volume 15 ; 15 ; jbmb >
+      au < manifest ; 2001 ; The International Journal of Biological Markers Volume 16 ; 16 ; jbmb >
+      au < manifest ; 2002 ; The International Journal of Biological Markers Volume 17 ; 17 ; jbmb >
+      au < manifest ; 2003 ; The International Journal of Biological Markers Volume 18 ; 18 ; jbmb >
+      au < manifest ; 2004 ; The International Journal of Biological Markers Volume 19 ; 19 ; jbmb >
+      au < manifest ; 2005 ; The International Journal of Biological Markers Volume 20 ; 20 ; jbmb >
+      au < manifest ; 2006 ; The International Journal of Biological Markers Volume 21 ; 21 ; jbmb >
+      au < manifest ; 2007 ; The International Journal of Biological Markers Volume 22 ; 22 ; jbmb >
+      au < manifest ; 2008 ; The International Journal of Biological Markers Volume 23 ; 23 ; jbmb >
+      au < manifest ; 2009 ; The International Journal of Biological Markers Volume 24 ; 24 ; jbmb >
+      au < manifest ; 2010 ; The International Journal of Biological Markers Volume 25 ; 25 ; jbmb >
+      au < manifest ; 2011 ; The International Journal of Biological Markers Volume 26 ; 26 ; jbmb >
+      au < manifest ; 2012 ; The International Journal of Biological Markers Volume 27 ; 27 ; jbmb >
+      au < manifest ; 2013 ; The International Journal of Biological Markers Volume 28 ; 28 ; jbmb >
+      au < manifest ; 2014 ; The International Journal of Biological Markers Volume 29 ; 29 ; jbmb >
+      au < manifest ; 2015 ; The International Journal of Biological Markers Volume 30 ; 30 ; jbmb >
+      au < manifest ; 2016 ; The International Journal of Biological Markers Volume 31 ; 31 ; jbmb >
+      au < manifest ; 2017 ; The International Journal of Biological Markers Volume 32 ; 32 ; jbmb >
+      au < manifest ; 2018 ; The International Journal of Biological Markers Volume 33 ; 33 ; jbmb >
 
   }
 
@@ -18550,25 +18550,25 @@
 
     #param[journal_id] = adv
 
-      au < exists ; 1999 ; Journal of Advertising Education Volume 3 ; 3 ; adva >
-      au < exists ; 2000 ; Journal of Advertising Education Volume 4 ; 4 ; adva >
-      au < exists ; 2001 ; Journal of Advertising Education Volume 5 ; 5 ; adva >
-      au < exists ; 2002 ; Journal of Advertising Education Volume 6 ; 6 ; adva >
-      au < exists ; 2003 ; Journal of Advertising Education Volume 7 ; 7 ; adva >
-      au < exists ; 2004 ; Journal of Advertising Education Volume 8 ; 8 ; adva >
-      au < exists ; 2005 ; Journal of Advertising Education Volume 9 ; 9 ; adva >
-      au < exists ; 2006 ; Journal of Advertising Education Volume 10 ; 10 ; adva >
-      au < exists ; 2007 ; Journal of Advertising Education Volume 11 ; 11 ; adva >
-      au < exists ; 2008 ; Journal of Advertising Education Volume 12 ; 12 ; adva >
-      au < exists ; 2009 ; Journal of Advertising Education Volume 13 ; 13 ; adva >
-      au < exists ; 2010 ; Journal of Advertising Education Volume 14 ; 14 ; adva >
-      au < exists ; 2011 ; Journal of Advertising Education Volume 15 ; 15 ; adva >
-      au < exists ; 2012 ; Journal of Advertising Education Volume 16 ; 16 ; adva >
-      au < exists ; 2013 ; Journal of Advertising Education Volume 17 ; 17 ; adva >
-      au < exists ; 2014 ; Journal of Advertising Education Volume 18 ; 18 ; adva >
-      au < exists ; 2015 ; Journal of Advertising Education Volume 19 ; 19 ; adva >
-      au < exists ; 2016 ; Journal of Advertising Education Volume 20 ; 20 ; adva >
-      au < exists ; 2017 ; Journal of Advertising Education Volume 21 ; 21 ; adva >
+      au < manifest ; 1999 ; Journal of Advertising Education Volume 3 ; 3 ; adva >
+      au < manifest ; 2000 ; Journal of Advertising Education Volume 4 ; 4 ; adva >
+      au < manifest ; 2001 ; Journal of Advertising Education Volume 5 ; 5 ; adva >
+      au < manifest ; 2002 ; Journal of Advertising Education Volume 6 ; 6 ; adva >
+      au < manifest ; 2003 ; Journal of Advertising Education Volume 7 ; 7 ; adva >
+      au < manifest ; 2004 ; Journal of Advertising Education Volume 8 ; 8 ; adva >
+      au < manifest ; 2005 ; Journal of Advertising Education Volume 9 ; 9 ; adva >
+      au < manifest ; 2006 ; Journal of Advertising Education Volume 10 ; 10 ; adva >
+      au < manifest ; 2007 ; Journal of Advertising Education Volume 11 ; 11 ; adva >
+      au < manifest ; 2008 ; Journal of Advertising Education Volume 12 ; 12 ; adva >
+      au < manifest ; 2009 ; Journal of Advertising Education Volume 13 ; 13 ; adva >
+      au < manifest ; 2010 ; Journal of Advertising Education Volume 14 ; 14 ; adva >
+      au < manifest ; 2011 ; Journal of Advertising Education Volume 15 ; 15 ; adva >
+      au < manifest ; 2012 ; Journal of Advertising Education Volume 16 ; 16 ; adva >
+      au < manifest ; 2013 ; Journal of Advertising Education Volume 17 ; 17 ; adva >
+      au < manifest ; 2014 ; Journal of Advertising Education Volume 18 ; 18 ; adva >
+      au < manifest ; 2015 ; Journal of Advertising Education Volume 19 ; 19 ; adva >
+      au < manifest ; 2016 ; Journal of Advertising Education Volume 20 ; 20 ; adva >
+      au < manifest ; 2017 ; Journal of Advertising Education Volume 21 ; 21 ; adva >
 
     }
 
@@ -25342,9 +25342,9 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
         #param[journal_id] = jps
 
-        au < exists ; 2015-2016 ; Journal of Psoriasis and Psoriatic Arthritis Volume 1 ; 1 ; jpsa >
-        au < exists ; 2016-2017 ; Journal of Psoriasis and Psoriatic Arthritis Volume 2 ; 2 ; jpsa >
-        au < exists ; 2017-2018 ; Journal of Psoriasis and Psoriatic Arthritis Volume 3 ; 3 ; jpsa >
+        au < manifest ; 2015-2016 ; Journal of Psoriasis and Psoriatic Arthritis Volume 1 ; 1 ; jpsa >
+        au < manifest ; 2016-2017 ; Journal of Psoriasis and Psoriatic Arthritis Volume 2 ; 2 ; jpsa >
+        au < manifest ; 2017-2018 ; Journal of Psoriasis and Psoriatic Arthritis Volume 3 ; 3 ; jpsa >
 
     }
 
@@ -25392,25 +25392,25 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       #param[journal_id] = ptja
       #content available from 1973 volume 1 to 1999 volume 27
 
-        au < exists ; 2000 ; Journal of Psychology and Theology Volume 28 ; 28 ; ptja >
-        au < exists ; 2001 ; Journal of Psychology and Theology Volume 29 ; 29 ; ptja >
-        au < exists ; 2002 ; Journal of Psychology and Theology Volume 30 ; 30 ; ptja >
-        au < exists ; 2003 ; Journal of Psychology and Theology Volume 31 ; 31 ; ptja >
-        au < exists ; 2004 ; Journal of Psychology and Theology Volume 32 ; 32 ; ptja >
-        au < exists ; 2005 ; Journal of Psychology and Theology Volume 33 ; 33 ; ptja >
-        au < exists ; 2006 ; Journal of Psychology and Theology Volume 34 ; 34 ; ptja >
-        au < exists ; 2007 ; Journal of Psychology and Theology Volume 35 ; 35 ; ptja >
-        au < exists ; 2008 ; Journal of Psychology and Theology Volume 36 ; 36 ; ptja >
-        au < exists ; 2009 ; Journal of Psychology and Theology Volume 37 ; 37 ; ptja >
-        au < exists ; 2010 ; Journal of Psychology and Theology Volume 38 ; 38 ; ptja >
-        au < exists ; 2011 ; Journal of Psychology and Theology Volume 39 ; 39 ; ptja >
-        au < exists ; 2012 ; Journal of Psychology and Theology Volume 40 ; 40 ; ptja >
-        au < exists ; 2013 ; Journal of Psychology and Theology Volume 41 ; 41 ; ptja >
-        au < exists ; 2014 ; Journal of Psychology and Theology Volume 42 ; 42 ; ptja >
-        au < exists ; 2015 ; Journal of Psychology and Theology Volume 43 ; 43 ; ptja >
-        au < exists ; 2016 ; Journal of Psychology and Theology Volume 44 ; 44 ; ptja >
-        au < exists ; 2017 ; Journal of Psychology and Theology Volume 45 ; 45 ; ptja >
-        au < exists ; 2018 ; Journal of Psychology and Theology Volume 46 ; 46 ; ptja >
+        au < manifest ; 2000 ; Journal of Psychology and Theology Volume 28 ; 28 ; ptja >
+        au < manifest ; 2001 ; Journal of Psychology and Theology Volume 29 ; 29 ; ptja >
+        au < manifest ; 2002 ; Journal of Psychology and Theology Volume 30 ; 30 ; ptja >
+        au < manifest ; 2003 ; Journal of Psychology and Theology Volume 31 ; 31 ; ptja >
+        au < manifest ; 2004 ; Journal of Psychology and Theology Volume 32 ; 32 ; ptja >
+        au < manifest ; 2005 ; Journal of Psychology and Theology Volume 33 ; 33 ; ptja >
+        au < manifest ; 2006 ; Journal of Psychology and Theology Volume 34 ; 34 ; ptja >
+        au < manifest ; 2007 ; Journal of Psychology and Theology Volume 35 ; 35 ; ptja >
+        au < manifest ; 2008 ; Journal of Psychology and Theology Volume 36 ; 36 ; ptja >
+        au < manifest ; 2009 ; Journal of Psychology and Theology Volume 37 ; 37 ; ptja >
+        au < manifest ; 2010 ; Journal of Psychology and Theology Volume 38 ; 38 ; ptja >
+        au < manifest ; 2011 ; Journal of Psychology and Theology Volume 39 ; 39 ; ptja >
+        au < manifest ; 2012 ; Journal of Psychology and Theology Volume 40 ; 40 ; ptja >
+        au < manifest ; 2013 ; Journal of Psychology and Theology Volume 41 ; 41 ; ptja >
+        au < manifest ; 2014 ; Journal of Psychology and Theology Volume 42 ; 42 ; ptja >
+        au < manifest ; 2015 ; Journal of Psychology and Theology Volume 43 ; 43 ; ptja >
+        au < manifest ; 2016 ; Journal of Psychology and Theology Volume 44 ; 44 ; ptja >
+        au < manifest ; 2017 ; Journal of Psychology and Theology Volume 45 ; 45 ; ptja >
+        au < manifest ; 2018 ; Journal of Psychology and Theology Volume 46 ; 46 ; ptja >
 
     }
 
@@ -27624,21 +27624,21 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
   
         #param[journal_id] = jvu
 
-        au < exists ; 2003 ; Journal for Vascular Ultrasound Volume 27 ; 27 ; jvua >
-        au < exists ; 2004 ; Journal for Vascular Ultrasound Volume 28 ; 28 ; jvua >
-        au < exists ; 2005 ; Journal for Vascular Ultrasound Volume 29 ; 29 ; jvua >
-        au < exists ; 2006 ; Journal for Vascular Ultrasound Volume 30 ; 30 ; jvua >
-        au < exists ; 2007 ; Journal for Vascular Ultrasound Volume 31 ; 31 ; jvua >
-        au < exists ; 2008 ; Journal for Vascular Ultrasound Volume 32 ; 32 ; jvua >
-        au < exists ; 2009 ; Journal for Vascular Ultrasound Volume 33 ; 33 ; jvua >
-        au < exists ; 2010 ; Journal for Vascular Ultrasound Volume 34 ; 34 ; jvua >
-        au < exists ; 2011 ; Journal for Vascular Ultrasound Volume 35 ; 35 ; jvua >
-        au < exists ; 2012 ; Journal for Vascular Ultrasound Volume 36 ; 36 ; jvua >
-        au < exists ; 2013 ; Journal for Vascular Ultrasound Volume 37 ; 37 ; jvua >
-        au < exists ; 2014 ; Journal for Vascular Ultrasound Volume 38 ; 38 ; jvua >
-        au < exists ; 2015 ; Journal for Vascular Ultrasound Volume 39 ; 39 ; jvua >
-        au < exists ; 2016 ; Journal for Vascular Ultrasound Volume 40 ; 40 ; jvua >
-        au < exists ; 2017 ; Journal for Vascular Ultrasound Volume 41 ; 41 ; jvua >
+        au < manifest ; 2003 ; Journal for Vascular Ultrasound Volume 27 ; 27 ; jvua >
+        au < manifest ; 2004 ; Journal for Vascular Ultrasound Volume 28 ; 28 ; jvua >
+        au < manifest ; 2005 ; Journal for Vascular Ultrasound Volume 29 ; 29 ; jvua >
+        au < manifest ; 2006 ; Journal for Vascular Ultrasound Volume 30 ; 30 ; jvua >
+        au < manifest ; 2007 ; Journal for Vascular Ultrasound Volume 31 ; 31 ; jvua >
+        au < manifest ; 2008 ; Journal for Vascular Ultrasound Volume 32 ; 32 ; jvua >
+        au < manifest ; 2009 ; Journal for Vascular Ultrasound Volume 33 ; 33 ; jvua >
+        au < manifest ; 2010 ; Journal for Vascular Ultrasound Volume 34 ; 34 ; jvua >
+        au < manifest ; 2011 ; Journal for Vascular Ultrasound Volume 35 ; 35 ; jvua >
+        au < manifest ; 2012 ; Journal for Vascular Ultrasound Volume 36 ; 36 ; jvua >
+        au < manifest ; 2013 ; Journal for Vascular Ultrasound Volume 37 ; 37 ; jvua >
+        au < manifest ; 2014 ; Journal for Vascular Ultrasound Volume 38 ; 38 ; jvua >
+        au < manifest ; 2015 ; Journal for Vascular Ultrasound Volume 39 ; 39 ; jvua >
+        au < manifest ; 2016 ; Journal for Vascular Ultrasound Volume 40 ; 40 ; jvua >
+        au < manifest ; 2017 ; Journal for Vascular Ultrasound Volume 41 ; 41 ; jvua >
 
     }
 
@@ -27772,25 +27772,25 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
       #param[journal_id] = jva
 
-        au < exists ; 2000 ; The Journal of Vascular Access Volume 1 ; 1 ; jvaa >
-        au < exists ; 2001 ; The Journal of Vascular Access Volume 2 ; 2 ; jvaa >
-        au < exists ; 2002 ; The Journal of Vascular Access Volume 3 ; 3 ; jvaa >
-        au < exists ; 2003 ; The Journal of Vascular Access Volume 4 ; 4 ; jvaa >
-        au < exists ; 2004 ; The Journal of Vascular Access Volume 5 ; 5 ; jvaa >
-        au < exists ; 2005 ; The Journal of Vascular Access Volume 6 ; 6 ; jvaa >
-        au < exists ; 2006 ; The Journal of Vascular Access Volume 7 ; 7 ; jvaa >
-        au < exists ; 2007 ; The Journal of Vascular Access Volume 8 ; 8 ; jvaa >
-        au < exists ; 2008 ; The Journal of Vascular Access Volume 9 ; 9 ; jvaa >
-        au < exists ; 2009 ; The Journal of Vascular Access Volume 10 ; 10 ; jvaa >
-        au < exists ; 2010 ; The Journal of Vascular Access Volume 11 ; 11 ; jvaa >
-        au < exists ; 2011 ; The Journal of Vascular Access Volume 12 ; 12 ; jvaa >
-        au < exists ; 2012 ; The Journal of Vascular Access Volume 13 ; 13 ; jvaa >
-        au < exists ; 2013 ; The Journal of Vascular Access Volume 14 ; 14 ; jvaa >
-        au < exists ; 2014 ; The Journal of Vascular Access Volume 15 ; 15 ; jvaa >
-        au < exists ; 2015 ; The Journal of Vascular Access Volume 16 ; 16 ; jvaa >
-        au < exists ; 2016 ; The Journal of Vascular Access Volume 17 ; 17 ; jvaa >
-        au < exists ; 2017 ; The Journal of Vascular Access Volume 18 ; 18 ; jvaa >
-        au < exists ; 2018 ; The Journal of Vascular Access Volume 19 ; 19 ; jvaa >
+        au < manifest ; 2000 ; The Journal of Vascular Access Volume 1 ; 1 ; jvaa >
+        au < manifest ; 2001 ; The Journal of Vascular Access Volume 2 ; 2 ; jvaa >
+        au < manifest ; 2002 ; The Journal of Vascular Access Volume 3 ; 3 ; jvaa >
+        au < manifest ; 2003 ; The Journal of Vascular Access Volume 4 ; 4 ; jvaa >
+        au < manifest ; 2004 ; The Journal of Vascular Access Volume 5 ; 5 ; jvaa >
+        au < manifest ; 2005 ; The Journal of Vascular Access Volume 6 ; 6 ; jvaa >
+        au < manifest ; 2006 ; The Journal of Vascular Access Volume 7 ; 7 ; jvaa >
+        au < manifest ; 2007 ; The Journal of Vascular Access Volume 8 ; 8 ; jvaa >
+        au < manifest ; 2008 ; The Journal of Vascular Access Volume 9 ; 9 ; jvaa >
+        au < manifest ; 2009 ; The Journal of Vascular Access Volume 10 ; 10 ; jvaa >
+        au < manifest ; 2010 ; The Journal of Vascular Access Volume 11 ; 11 ; jvaa >
+        au < manifest ; 2011 ; The Journal of Vascular Access Volume 12 ; 12 ; jvaa >
+        au < manifest ; 2012 ; The Journal of Vascular Access Volume 13 ; 13 ; jvaa >
+        au < manifest ; 2013 ; The Journal of Vascular Access Volume 14 ; 14 ; jvaa >
+        au < manifest ; 2014 ; The Journal of Vascular Access Volume 15 ; 15 ; jvaa >
+        au < manifest ; 2015 ; The Journal of Vascular Access Volume 16 ; 16 ; jvaa >
+        au < manifest ; 2016 ; The Journal of Vascular Access Volume 17 ; 17 ; jvaa >
+        au < manifest ; 2017 ; The Journal of Vascular Access Volume 18 ; 18 ; jvaa >
+        au < manifest ; 2018 ; The Journal of Vascular Access Volume 19 ; 19 ; jvaa >
 
     }
 
@@ -28590,39 +28590,39 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
       #param[journal_id] = lqr
 
-        au < exists ; 1986 ; The Linacre Quarterly Volume 53 ; 53 ; lqra >
-        au < exists ; 1987 ; The Linacre Quarterly Volume 54 ; 54 ; lqra >
-        au < exists ; 1988 ; The Linacre Quarterly Volume 55 ; 55 ; lqra >
-        au < exists ; 1989 ; The Linacre Quarterly Volume 56 ; 56 ; lqra >
-        au < exists ; 1990 ; The Linacre Quarterly Volume 57 ; 57 ; lqra >
-        au < exists ; 1991 ; The Linacre Quarterly Volume 58 ; 58 ; lqra >
-        au < exists ; 1992 ; The Linacre Quarterly Volume 59 ; 59 ; lqra >
-        au < exists ; 1993 ; The Linacre Quarterly Volume 60 ; 60 ; lqra >
-        au < exists ; 1994 ; The Linacre Quarterly Volume 61 ; 61 ; lqra >
-        au < exists ; 1995 ; The Linacre Quarterly Volume 62 ; 62 ; lqra >
-        au < exists ; 1996 ; The Linacre Quarterly Volume 63 ; 63 ; lqra >
-        au < exists ; 1997 ; The Linacre Quarterly Volume 64 ; 64 ; lqra >
-        au < exists ; 1998 ; The Linacre Quarterly Volume 65 ; 65 ; lqra >
-        au < exists ; 1999 ; The Linacre Quarterly Volume 66 ; 66 ; lqra >
-        au < exists ; 2000 ; The Linacre Quarterly Volume 67 ; 67 ; lqra >
-        au < exists ; 2001 ; The Linacre Quarterly Volume 68 ; 68 ; lqra >
-        au < exists ; 2002 ; The Linacre Quarterly Volume 69 ; 69 ; lqra >
-        au < exists ; 2003 ; The Linacre Quarterly Volume 70 ; 70 ; lqra >
-        au < exists ; 2004 ; The Linacre Quarterly Volume 71 ; 71 ; lqra >
-        au < exists ; 2005 ; The Linacre Quarterly Volume 72 ; 72 ; lqra >
-        au < exists ; 2006 ; The Linacre Quarterly Volume 73 ; 73 ; lqra >
-        au < exists ; 2007 ; The Linacre Quarterly Volume 74 ; 74 ; lqra >
-        au < exists ; 2008 ; The Linacre Quarterly Volume 75 ; 75 ; lqra >
-        au < exists ; 2009 ; The Linacre Quarterly Volume 76 ; 76 ; lqra >
-        au < exists ; 2010 ; The Linacre Quarterly Volume 77 ; 77 ; lqra >
-        au < exists ; 2011 ; The Linacre Quarterly Volume 78 ; 78 ; lqra >
-        au < exists ; 2012 ; The Linacre Quarterly Volume 79 ; 79 ; lqra >
-        au < exists ; 2013 ; The Linacre Quarterly Volume 80 ; 80 ; lqra >
-        au < exists ; 2014 ; The Linacre Quarterly Volume 81 ; 81 ; lqra >
-        au < exists ; 2015 ; The Linacre Quarterly Volume 82 ; 82 ; lqra >
-        au < exists ; 2016 ; The Linacre Quarterly Volume 83 ; 83 ; lqra >
-        au < exists ; 2017 ; The Linacre Quarterly Volume 84 ; 84 ; lqra >
-        au < exists ; 2018 ; The Linacre Quarterly Volume 85 ; 85 ; lqra >
+        au < manifest ; 1986 ; The Linacre Quarterly Volume 53 ; 53 ; lqra >
+        au < manifest ; 1987 ; The Linacre Quarterly Volume 54 ; 54 ; lqra >
+        au < manifest ; 1988 ; The Linacre Quarterly Volume 55 ; 55 ; lqra >
+        au < manifest ; 1989 ; The Linacre Quarterly Volume 56 ; 56 ; lqra >
+        au < manifest ; 1990 ; The Linacre Quarterly Volume 57 ; 57 ; lqra >
+        au < manifest ; 1991 ; The Linacre Quarterly Volume 58 ; 58 ; lqra >
+        au < manifest ; 1992 ; The Linacre Quarterly Volume 59 ; 59 ; lqra >
+        au < manifest ; 1993 ; The Linacre Quarterly Volume 60 ; 60 ; lqra >
+        au < manifest ; 1994 ; The Linacre Quarterly Volume 61 ; 61 ; lqra >
+        au < manifest ; 1995 ; The Linacre Quarterly Volume 62 ; 62 ; lqra >
+        au < manifest ; 1996 ; The Linacre Quarterly Volume 63 ; 63 ; lqra >
+        au < manifest ; 1997 ; The Linacre Quarterly Volume 64 ; 64 ; lqra >
+        au < manifest ; 1998 ; The Linacre Quarterly Volume 65 ; 65 ; lqra >
+        au < manifest ; 1999 ; The Linacre Quarterly Volume 66 ; 66 ; lqra >
+        au < manifest ; 2000 ; The Linacre Quarterly Volume 67 ; 67 ; lqra >
+        au < manifest ; 2001 ; The Linacre Quarterly Volume 68 ; 68 ; lqra >
+        au < manifest ; 2002 ; The Linacre Quarterly Volume 69 ; 69 ; lqra >
+        au < manifest ; 2003 ; The Linacre Quarterly Volume 70 ; 70 ; lqra >
+        au < manifest ; 2004 ; The Linacre Quarterly Volume 71 ; 71 ; lqra >
+        au < manifest ; 2005 ; The Linacre Quarterly Volume 72 ; 72 ; lqra >
+        au < manifest ; 2006 ; The Linacre Quarterly Volume 73 ; 73 ; lqra >
+        au < manifest ; 2007 ; The Linacre Quarterly Volume 74 ; 74 ; lqra >
+        au < manifest ; 2008 ; The Linacre Quarterly Volume 75 ; 75 ; lqra >
+        au < manifest ; 2009 ; The Linacre Quarterly Volume 76 ; 76 ; lqra >
+        au < manifest ; 2010 ; The Linacre Quarterly Volume 77 ; 77 ; lqra >
+        au < manifest ; 2011 ; The Linacre Quarterly Volume 78 ; 78 ; lqra >
+        au < manifest ; 2012 ; The Linacre Quarterly Volume 79 ; 79 ; lqra >
+        au < manifest ; 2013 ; The Linacre Quarterly Volume 80 ; 80 ; lqra >
+        au < manifest ; 2014 ; The Linacre Quarterly Volume 81 ; 81 ; lqra >
+        au < manifest ; 2015 ; The Linacre Quarterly Volume 82 ; 82 ; lqra >
+        au < manifest ; 2016 ; The Linacre Quarterly Volume 83 ; 83 ; lqra >
+        au < manifest ; 2017 ; The Linacre Quarterly Volume 84 ; 84 ; lqra >
+        au < manifest ; 2018 ; The Linacre Quarterly Volume 85 ; 85 ; lqra >
 
     }
 
@@ -33991,19 +33991,19 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
       #param[journal_id] = pcxa
 
-        au < exists ; 2005 ; Professional School Counseling Volume 9 ; 9 ; pcxa >
-        au < exists ; 2006 ; Professional School Counseling Volume 10 ; 10 ; pcxa >
-        au < exists ; 2007 ; Professional School Counseling Volume 11 ; 11 ; pcxa >
-        au < exists ; 2008 ; Professional School Counseling Volume 12 ; 12 ; pcxa >
-        au < exists ; 2009 ; Professional School Counseling Volume 13 ; 13 ; pcxa >
-        au < exists ; 2010 ; Professional School Counseling Volume 14 ; 14 ; pcxa >
-        au < exists ; 2011 ; Professional School Counseling Volume 15 ; 15 ; pcxa >
-        au < exists ; 2012 ; Professional School Counseling Volume 16 ; 16 ; pcxa >
-        au < exists ; 2013 ; Professional School Counseling Volume 17 ; 17 ; pcxa >
-        au < exists ; 2014 ; Professional School Counseling Volume 18 ; 18 ; pcxa >
-        au < exists ; 2015 ; Professional School Counseling Volume 19 ; 19 ; pcxa >
-        au < exists ; 2016 ; Professional School Counseling Volume 20 ; 20 ; pcxa >
-        au < exists ; 2017 ; Professional School Counseling Volume 21 ; 21 ; pcxa >
+        au < manifest ; 2005 ; Professional School Counseling Volume 9 ; 9 ; pcxa >
+        au < manifest ; 2006 ; Professional School Counseling Volume 10 ; 10 ; pcxa >
+        au < manifest ; 2007 ; Professional School Counseling Volume 11 ; 11 ; pcxa >
+        au < manifest ; 2008 ; Professional School Counseling Volume 12 ; 12 ; pcxa >
+        au < manifest ; 2009 ; Professional School Counseling Volume 13 ; 13 ; pcxa >
+        au < manifest ; 2010 ; Professional School Counseling Volume 14 ; 14 ; pcxa >
+        au < manifest ; 2011 ; Professional School Counseling Volume 15 ; 15 ; pcxa >
+        au < manifest ; 2012 ; Professional School Counseling Volume 16 ; 16 ; pcxa >
+        au < manifest ; 2013 ; Professional School Counseling Volume 17 ; 17 ; pcxa >
+        au < manifest ; 2014 ; Professional School Counseling Volume 18 ; 18 ; pcxa >
+        au < manifest ; 2015 ; Professional School Counseling Volume 19 ; 19 ; pcxa >
+        au < manifest ; 2016 ; Professional School Counseling Volume 20 ; 20 ; pcxa >
+        au < manifest ; 2017 ; Professional School Counseling Volume 21 ; 21 ; pcxa >
 
     }
 
@@ -35916,26 +35916,26 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
       #param[journal_id] = rbp
 
-      au < exists ; 1997-1998 ; The Review of Black Political Economy Volume 25 ; 25 ; rbpa >
-      au < exists ; 1998-1999 ; The Review of Black Political Economy Volume 26 ; 26 ; rbpa >
-      au < exists ; 1999-2000 ; The Review of Black Political Economy Volume 27 ; 27 ; rbpa >
-      au < exists ; 2000-2001 ; The Review of Black Political Economy Volume 28 ; 28 ; rbpa >
-      au < exists ; 2001-2002 ; The Review of Black Political Economy Volume 29 ; 29 ; rbpa >
-      au < exists ; 2002-2003 ; The Review of Black Political Economy Volume 30 ; 30 ; rbpa >
-      au < exists ; 2003-2004 ; The Review of Black Political Economy Volume 31 ; 31 ; rbpa >
+      au < manifest ; 1997-1998 ; The Review of Black Political Economy Volume 25 ; 25 ; rbpa >
+      au < manifest ; 1998-1999 ; The Review of Black Political Economy Volume 26 ; 26 ; rbpa >
+      au < manifest ; 1999-2000 ; The Review of Black Political Economy Volume 27 ; 27 ; rbpa >
+      au < manifest ; 2000-2001 ; The Review of Black Political Economy Volume 28 ; 28 ; rbpa >
+      au < manifest ; 2001-2002 ; The Review of Black Political Economy Volume 29 ; 29 ; rbpa >
+      au < manifest ; 2002-2003 ; The Review of Black Political Economy Volume 30 ; 30 ; rbpa >
+      au < manifest ; 2003-2004 ; The Review of Black Political Economy Volume 31 ; 31 ; rbpa >
       au < doesNotExist ; 2005 ; The Review of Black Political Economy Volume 32 ; 32 ; rbpa >
       au < doesNotExist ; 2006 ; The Review of Black Political Economy Volume 33 ; 33 ; rbpa >
       au < doesNotExist ; 2007 ; The Review of Black Political Economy Volume 34 ; 34 ; rbpa >
       au < doesNotExist ; 2008 ; The Review of Black Political Economy Volume 35 ; 35 ; rbpa >
-      au < exists ; 2009 ; The Review of Black Political Economy Volume 36 ; 36 ; rbpa >
+      au < manifest ; 2009 ; The Review of Black Political Economy Volume 36 ; 36 ; rbpa >
       au < doesNotExist ; 2010 ; The Review of Black Political Economy Volume 37 ; 37 ; rbpa >
       au < doesNotExist ; 2011 ; The Review of Black Political Economy Volume 38 ; 38 ; rbpa >
-      au < exists ; 2012 ; The Review of Black Political Economy Volume 39 ; 39 ; rbpa >
-      au < exists ; 2013 ; The Review of Black Political Economy Volume 40 ; 40 ; rbpa >
+      au < manifest ; 2012 ; The Review of Black Political Economy Volume 39 ; 39 ; rbpa >
+      au < manifest ; 2013 ; The Review of Black Political Economy Volume 40 ; 40 ; rbpa >
       au < doesNotExist ; 2014 ; The Review of Black Political Economy Volume 41 ; 41 ; rbpa >
       au < doesNotExist ; 2015 ; The Review of Black Political Economy Volume 42 ; 42 ; rbpa >
       au < doesNotExist ; 2016 ; The Review of Black Political Economy Volume 43 ; 43 ; rbpa >
-      au < exists ; 2017 ; The Review of Black Political Economy Volume 44 ; 44 ; rbpa >
+      au < manifest ; 2017 ; The Review of Black Political Economy Volume 44 ; 44 ; rbpa >
 
     }
 
@@ -40902,18 +40902,18 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
       #journal_id = tmj
 
-      au < exists ; 2007 ; Tumori Journal Volume 93 ; 93 ; tmja >
-      au < exists ; 2008 ; Tumori Journal Volume 94 ; 94 ; tmja >
-      au < exists ; 2009 ; Tumori Journal Volume 95 ; 95 ; tmja >
-      au < exists ; 2010 ; Tumori Journal Volume 96 ; 96 ; tmja >
-      au < exists ; 2011 ; Tumori Journal Volume 97 ; 97 ; tmja >
-      au < exists ; 2012 ; Tumori Journal Volume 98 ; 98 ; tmja >
-      au < exists ; 2013 ; Tumori Journal Volume 99 ; 99 ; tmja >
-      au < exists ; 2014 ; Tumori Journal Volume 100 ; 100 ; tmja >
-      au < exists ; 2015 ; Tumori Journal Volume 101 ; 101 ; tmja >
-      au < exists ; 2016 ; Tumori Journal Volume 102 ; 102 ; tmja >
-      au < exists ; 2017 ; Tumori Journal Volume 103 ; 103 ; tmja >
-      au < exists ; 2018 ; Tumori Journal Volume 104 ; 104 ; tmja >
+      au < manifest ; 2007 ; Tumori Journal Volume 93 ; 93 ; tmja >
+      au < manifest ; 2008 ; Tumori Journal Volume 94 ; 94 ; tmja >
+      au < manifest ; 2009 ; Tumori Journal Volume 95 ; 95 ; tmja >
+      au < manifest ; 2010 ; Tumori Journal Volume 96 ; 96 ; tmja >
+      au < manifest ; 2011 ; Tumori Journal Volume 97 ; 97 ; tmja >
+      au < manifest ; 2012 ; Tumori Journal Volume 98 ; 98 ; tmja >
+      au < manifest ; 2013 ; Tumori Journal Volume 99 ; 99 ; tmja >
+      au < manifest ; 2014 ; Tumori Journal Volume 100 ; 100 ; tmja >
+      au < manifest ; 2015 ; Tumori Journal Volume 101 ; 101 ; tmja >
+      au < manifest ; 2016 ; Tumori Journal Volume 102 ; 102 ; tmja >
+      au < manifest ; 2017 ; Tumori Journal Volume 103 ; 103 ; tmja >
+      au < manifest ; 2018 ; Tumori Journal Volume 104 ; 104 ; tmja >
 
   }
 
@@ -41190,21 +41190,21 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
       #param[journal_id] = urj
 
-        au < exists ; 2003 ; Urologia Journal Volume 70 ; 70 ; urja >
-        au < exists ; 2004 ; Urologia Journal Volume 71 ; 71 ; urja >
-        au < exists ; 2005 ; Urologia Journal Volume 72 ; 72 ; urja >
-        au < exists ; 2006 ; Urologia Journal Volume 73 ; 73 ; urja >
-        au < exists ; 2007 ; Urologia Journal Volume 74 ; 74 ; urja >
-        au < exists ; 2008 ; Urologia Journal Volume 75 ; 75 ; urja >
-        au < exists ; 2009 ; Urologia Journal Volume 76 ; 76 ; urja >
-        au < exists ; 2010 ; Urologia Journal Volume 77 ; 77 ; urja >
-        au < exists ; 2011 ; Urologia Journal Volume 78 ; 78 ; urja >
-        au < exists ; 2012 ; Urologia Journal Volume 79 ; 79 ; urja >
-        au < exists ; 2013 ; Urologia Journal Volume 80 ; 80 ; urja >
-        au < exists ; 2014 ; Urologia Journal Volume 81 ; 81 ; urja >
-        au < exists ; 2015 ; Urologia Journal Volume 82 ; 82 ; urja >
-        au < exists ; 2016 ; Urologia Journal Volume 83 ; 83 ; urja >
-        au < exists ; 2017 ; Urologia Journal Volume 84 ; 84 ; urja >
+        au < manifest ; 2003 ; Urologia Journal Volume 70 ; 70 ; urja >
+        au < manifest ; 2004 ; Urologia Journal Volume 71 ; 71 ; urja >
+        au < manifest ; 2005 ; Urologia Journal Volume 72 ; 72 ; urja >
+        au < manifest ; 2006 ; Urologia Journal Volume 73 ; 73 ; urja >
+        au < manifest ; 2007 ; Urologia Journal Volume 74 ; 74 ; urja >
+        au < manifest ; 2008 ; Urologia Journal Volume 75 ; 75 ; urja >
+        au < manifest ; 2009 ; Urologia Journal Volume 76 ; 76 ; urja >
+        au < manifest ; 2010 ; Urologia Journal Volume 77 ; 77 ; urja >
+        au < manifest ; 2011 ; Urologia Journal Volume 78 ; 78 ; urja >
+        au < manifest ; 2012 ; Urologia Journal Volume 79 ; 79 ; urja >
+        au < manifest ; 2013 ; Urologia Journal Volume 80 ; 80 ; urja >
+        au < manifest ; 2014 ; Urologia Journal Volume 81 ; 81 ; urja >
+        au < manifest ; 2015 ; Urologia Journal Volume 82 ; 82 ; urja >
+        au < manifest ; 2016 ; Urologia Journal Volume 83 ; 83 ; urja >
+        au < manifest ; 2017 ; Urologia Journal Volume 84 ; 84 ; urja >
 
     }
 
@@ -45084,34 +45084,34 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
         #param[journal_id] = mre
 
-        au < exists ; 1991 ; International Journal of Market Research Volume 33 ; 33 ; mreb >
-        au < exists ; 1992 ; International Journal of Market Research Volume 34 ; 34 ; mreb >
-        au < exists ; 1993 ; International Journal of Market Research Volume 35 ; 35 ; mreb >
-        au < exists ; 1994 ; International Journal of Market Research Volume 36 ; 36 ; mreb >
-        au < exists ; 1995 ; International Journal of Market Research Volume 37 ; 37 ; mreb >
-        au < exists ; 1996 ; International Journal of Market Research Volume 38 ; 38 ; mreb >
-        au < exists ; 1997 ; International Journal of Market Research Volume 39 ; 39 ; mreb >
-        au < exists ; 1998 ; International Journal of Market Research Volume 40 ; 40 ; mreb >
-        au < exists ; 1999 ; International Journal of Market Research Volume 41 ; 41 ; mreb >
-        au < exists ; 2000 ; International Journal of Market Research Volume 42 ; 42 ; mrea >
-        au < exists ; 2001 ; International Journal of Market Research Volume 43 ; 43 ; mrea >
-        au < exists ; 2002 ; International Journal of Market Research Volume 44 ; 44 ; mrea >
-        au < exists ; 2003 ; International Journal of Market Research Volume 45 ; 45 ; mrea >
-        au < exists ; 2004 ; International Journal of Market Research Volume 46 ; 46 ; mrea >
-        au < exists ; 2005 ; International Journal of Market Research Volume 47 ; 47 ; mrea >
-        au < exists ; 2006 ; International Journal of Market Research Volume 48 ; 48 ; mrea >
-        au < exists ; 2007 ; International Journal of Market Research Volume 49 ; 49 ; mrea >
-        au < exists ; 2008 ; International Journal of Market Research Volume 50 ; 50 ; mrea >
-        au < exists ; 2009 ; International Journal of Market Research Volume 51 ; 51 ; mrea >
-        au < exists ; 2010 ; International Journal of Market Research Volume 52 ; 52 ; mrea >
-        au < exists ; 2011 ; International Journal of Market Research Volume 53 ; 53 ; mrea >
-        au < exists ; 2012 ; International Journal of Market Research Volume 54 ; 54 ; mrea >
-        au < exists ; 2013 ; International Journal of Market Research Volume 55 ; 55 ; mrea >
-        au < exists ; 2014 ; International Journal of Market Research Volume 56 ; 56 ; mrea >
-        au < exists ; 2015 ; International Journal of Market Research Volume 57 ; 57 ; mrea >
-        au < exists ; 2016 ; International Journal of Market Research Volume 58 ; 58 ; mrea >
-        au < exists ; 2017 ; International Journal of Market Research Volume 59 ; 59 ; mrea >
-        au < exists ; 2018 ; International Journal of Market Research Volume 60 ; 60 ; mrea >
+        au < manifest ; 1991 ; International Journal of Market Research Volume 33 ; 33 ; mreb >
+        au < manifest ; 1992 ; International Journal of Market Research Volume 34 ; 34 ; mreb >
+        au < manifest ; 1993 ; International Journal of Market Research Volume 35 ; 35 ; mreb >
+        au < manifest ; 1994 ; International Journal of Market Research Volume 36 ; 36 ; mreb >
+        au < manifest ; 1995 ; International Journal of Market Research Volume 37 ; 37 ; mreb >
+        au < manifest ; 1996 ; International Journal of Market Research Volume 38 ; 38 ; mreb >
+        au < manifest ; 1997 ; International Journal of Market Research Volume 39 ; 39 ; mreb >
+        au < manifest ; 1998 ; International Journal of Market Research Volume 40 ; 40 ; mreb >
+        au < manifest ; 1999 ; International Journal of Market Research Volume 41 ; 41 ; mreb >
+        au < manifest ; 2000 ; International Journal of Market Research Volume 42 ; 42 ; mrea >
+        au < manifest ; 2001 ; International Journal of Market Research Volume 43 ; 43 ; mrea >
+        au < manifest ; 2002 ; International Journal of Market Research Volume 44 ; 44 ; mrea >
+        au < manifest ; 2003 ; International Journal of Market Research Volume 45 ; 45 ; mrea >
+        au < manifest ; 2004 ; International Journal of Market Research Volume 46 ; 46 ; mrea >
+        au < manifest ; 2005 ; International Journal of Market Research Volume 47 ; 47 ; mrea >
+        au < manifest ; 2006 ; International Journal of Market Research Volume 48 ; 48 ; mrea >
+        au < manifest ; 2007 ; International Journal of Market Research Volume 49 ; 49 ; mrea >
+        au < manifest ; 2008 ; International Journal of Market Research Volume 50 ; 50 ; mrea >
+        au < manifest ; 2009 ; International Journal of Market Research Volume 51 ; 51 ; mrea >
+        au < manifest ; 2010 ; International Journal of Market Research Volume 52 ; 52 ; mrea >
+        au < manifest ; 2011 ; International Journal of Market Research Volume 53 ; 53 ; mrea >
+        au < manifest ; 2012 ; International Journal of Market Research Volume 54 ; 54 ; mrea >
+        au < manifest ; 2013 ; International Journal of Market Research Volume 55 ; 55 ; mrea >
+        au < manifest ; 2014 ; International Journal of Market Research Volume 56 ; 56 ; mrea >
+        au < manifest ; 2015 ; International Journal of Market Research Volume 57 ; 57 ; mrea >
+        au < manifest ; 2016 ; International Journal of Market Research Volume 58 ; 58 ; mrea >
+        au < manifest ; 2017 ; International Journal of Market Research Volume 59 ; 59 ; mrea >
+        au < manifest ; 2018 ; International Journal of Market Research Volume 60 ; 60 ; mrea >
 
     }
 
