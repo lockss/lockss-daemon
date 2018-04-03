@@ -86,8 +86,8 @@
       au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 2003 ; Clinical Chemistry Volume 49 ; 49 >
       au < aacc.AmAssocClinChemDrupalPlugin ; manifest ; 2004 ; Clinical Chemistry Volume 50 ; 50 >
 
-      au < aacc.AmAssocClinChemDrupalPlugin ; testing ; 2016 ; Clinical Chemistry Volume 62 ; 62 >
-      au < aacc.AmAssocClinChemDrupalPlugin ; testing ; 2017 ; Clinical Chemistry Volume 63 ; 63 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; ready ; 2016 ; Clinical Chemistry Volume 62 ; 62 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; ready ; 2017 ; Clinical Chemistry Volume 63 ; 63 >
 
     }
 
@@ -104,8 +104,8 @@
 
       param[base_url] = http://jalm.aaccjnls.org/
 
-      au < aacc.AmAssocClinChemDrupalPlugin ; testing ; 2016-2017 ; The Journal of Applied Laboratory Medicine Volume 1 ; 1 >
-      au < aacc.AmAssocClinChemDrupalPlugin ; testing ; 2017-2018 ; The Journal of Applied Laboratory Medicine Volume 2 ; 2 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; ready ; 2016-2017 ; The Journal of Applied Laboratory Medicine Volume 1 ; 1 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; ready ; 2017-2018 ; The Journal of Applied Laboratory Medicine Volume 2 ; 2 >
 
     }
 
