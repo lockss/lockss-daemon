@@ -23,7 +23,6 @@ import org.lockss.util.Constants;
 import org.lockss.util.Logger;
 import org.lockss.util.UrlUtil;
 
-import com.lyncode.xml.exceptions.XmlReaderException;
 import com.lyncode.xoai.model.oaipmh.Record;
 import com.lyncode.xoai.serviceprovider.exceptions.BadArgumentException;
 import com.lyncode.xoai.serviceprovider.exceptions.InvalidOAIResponse;
