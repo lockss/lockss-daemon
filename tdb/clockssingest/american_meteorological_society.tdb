@@ -12,6 +12,8 @@
   implicit < status ; status2 ; year ; name ; param[volume_name] ; param[base_url] ; hidden[proxy] >
 #  param[base_url] = http://journals.ametsoc.org/
   
+  comment[https] = appears to have moved from http to https
+  
   {
 
     title <
