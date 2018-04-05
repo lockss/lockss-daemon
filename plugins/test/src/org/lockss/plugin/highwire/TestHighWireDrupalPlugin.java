@@ -233,6 +233,9 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
     shouldCacheTest(ROOT_URL + "content/by/year", false, au);
     shouldCacheTest(ROOT_URL + "content/current", false, au);
     
+    // other pages
+    shouldCacheTest(ROOT_URL + "content/2015/11/2293.figures-only", true, au);
+    shouldCacheTest(ROOT_URL + "content/2015/11/2293/tab-figures-only", true, au);
     shouldCacheTest(ROOT_URL + "content/2015/11/2293/tab-figures-data", true, au);
     shouldCacheTest(ROOT_URL + "content/2015/11/2293/tab-article-info", false, au);
     shouldCacheTest(ROOT_URL + "content/2015/11/2293/tab-metrics", false, au);

@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2017 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -56,12 +56,15 @@ public class HighWireDrupalHtmlCrawlFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttribute("div", "class", "section ref-list"),
     // Title bar on toc with link to current issue
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "title-menu-and-about"),
-    // Right side except pdf linka
+    // Right side except pdf links & <div> supplementary material section (accardiol)
     //  <a href="/content/347/bmj.f5250.full.pdf" title="PDF" class="pdf-link"></a>
     //  <a href="/content/198/8/3045.full-text.pdf" target="_blank" class="link-icon"></a>
+    //  add exception for supplementary-material in JACC
     HtmlNodeFilters.allExceptSubtree(
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-right-wrapper"),
-        HtmlNodeFilters.tagWithAttributeRegex("a", "class", "(pdf-link|link-icon)")),
+        new OrFilter( // HtmlCompoundTransform(
+            HtmlNodeFilters.tagWithAttributeRegex("a", "class", "(pdf-link|link-icon)"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "id", "supplementary-material"))),
     // messages now contain correction lists
     // do not filter issue-toc-section issue-toc-section-messages-from-munich
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "messages(?!-from-)"),
@@ -74,6 +77,15 @@ public class HighWireDrupalHtmlCrawlFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "relationship-manager"),
     // Do not crawl any links with by/year/ or by/volume
     HtmlNodeFilters.tagWithAttributeRegex("a", "href", "by/(year|volume)"),
+    // never want these links, excluded lists was too long
+    HtmlNodeFilters.tagWithAttributeRegex("a", "href", "(" +
+        "[.](abstract|full.txt|powerpoint|ppt)$" +
+        "|" +
+        "\tab-(article-info|e-letters)$" +
+        "|" +
+        "^/(keyword/|lookup/(google-scholar|external-ref)|panels_ajax_tab|powerpoint/|search/author)" +
+        ")"),
+    
   };
   
   @Override

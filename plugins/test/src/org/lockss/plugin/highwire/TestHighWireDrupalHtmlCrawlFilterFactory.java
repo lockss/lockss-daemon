@@ -166,13 +166,70 @@ public class TestHighWireDrupalHtmlCrawlFilterFactory extends LockssTestCase {
       "     </div>" +
       "        </div></div>\n" +
       "      </div><a href=\"/content/347/bmj.f52.full.pdf\" title=\"PDF\" class=\"pdf-link\">PDF</a>\n" +
+      "XXX\n" +
+      "<div id=\"fig-data-supplementary-materials\" class=\"group frag-supplementary-material\">\n" + 
+      "  <div class=\"fig-data-title-jump clearfix\">\n" + 
+      "    <h3 class=\"fig-data-group-title\">Supplementary Materials</h3>\n" + 
+      "  </div>\n" + 
+      "  <div class=\"item-list\">\n" + 
+      "    <ul class=\"fig-data-list clearfix\" id=\"fragments-supplementary-material\">\n" + 
+      "      <li class=\"first last\">\n" + 
+      "        <div class=\"element-fig-data clearfix supplementary-material-caption\">\n" + 
+      "          <div class=\"highwire-markup\">\n" + 
+      "            <div>\n" + 
+      "              <div class=\"supplementary-material-expansion\" id=\"DC1\">\n" + 
+      "                <span class=\"highwire-journal-article-marker-start\"></span>\n" + 
+      "                <span class=\"supplementary-material-label\">Supplemental Figures&nbsp;1-4</span>\n" + 
+      "                <span class=\"inline-linked-media-wrapper\"><span id=\"DC1\" class=\"inline-linked-media\">\n" + 
+      "                    <a href=\"/content/btr/2/4/398/DC1/embed/media-1.pdf?download=true\" class=\"\" data-icon-position=\"\" data-hide-link-title=\"0\">\n" + 
+      "                    <i class=\"icon-download-alt\"></i>[S2452302X1730133X_mmc1.pdf]</a>\n" + 
+      "                </span></span>\n" + 
+      "              <span class=\"highwire-journal-article-marker-end\"></span>\n" + 
+      "              </div>\n" + 
+      "              <span id=\"related-urls\"></span>\n" + 
+      "            </div>\n" + 
+      "          </div>\n" + 
+      "        </div>\n" + 
+      "      </li>\n" + 
+      "    </ul>\n" + 
+      "  </div>\n" + 
+      "</div>" +
+      "" +
       "</div>\n" +
       "</div>";
   
   private static final String withoutSidebar = "<div id=\"page\">" +
       "\n" +
       "<div class=\"sidebar-right-wrapper grid-10 omega\">" +
-      "<a href=\"/content/347/bmj.f52.full.pdf\" title=\"PDF\" class=\"pdf-link\">PDF</a></div>\n" +
+      "<a href=\"/content/347/bmj.f52.full.pdf\" title=\"PDF\" class=\"pdf-link\">PDF</a>" +
+      "<div id=\"fig-data-supplementary-materials\" class=\"group frag-supplementary-material\">\n" + 
+      "  <div class=\"fig-data-title-jump clearfix\">\n" + 
+      "    <h3 class=\"fig-data-group-title\">Supplementary Materials</h3>\n" + 
+      "  </div>\n" + 
+      "  <div class=\"item-list\">\n" + 
+      "    <ul class=\"fig-data-list clearfix\" id=\"fragments-supplementary-material\">\n" + 
+      "      <li class=\"first last\">\n" + 
+      "        <div class=\"element-fig-data clearfix supplementary-material-caption\">\n" + 
+      "          <div class=\"highwire-markup\">\n" + 
+      "            <div>\n" + 
+      "              <div class=\"supplementary-material-expansion\" id=\"DC1\">\n" + 
+      "                <span class=\"highwire-journal-article-marker-start\"></span>\n" + 
+      "                <span class=\"supplementary-material-label\">Supplemental Figures&nbsp;1-4</span>\n" + 
+      "                <span class=\"inline-linked-media-wrapper\"><span id=\"DC1\" class=\"inline-linked-media\">\n" + 
+      "                    <a href=\"/content/btr/2/4/398/DC1/embed/media-1.pdf?download=true\" class=\"\" data-icon-position=\"\" data-hide-link-title=\"0\">\n" + 
+      "                    <i class=\"icon-download-alt\"></i>[S2452302X1730133X_mmc1.pdf]</a>\n" + 
+      "                </span></span>\n" + 
+      "              <span class=\"highwire-journal-article-marker-end\"></span>\n" + 
+      "              </div>\n" + 
+      "              <span id=\"related-urls\"></span>\n" + 
+      "            </div>\n" + 
+      "          </div>\n" + 
+      "        </div>\n" + 
+      "      </li>\n" + 
+      "    </ul>\n" + 
+      "  </div>\n" + 
+      "</div>" +
+      "</div>\n" +
       "</div>";
   
   private static final String withPager = "<div id=\"page\">" +
