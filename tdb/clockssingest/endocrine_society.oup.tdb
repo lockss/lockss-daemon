@@ -14,7 +14,6 @@
   #param[base_url] = https://academic.oup.com/
 
   {
-
     title <
       name = Endocrine Reviews ;
       issn = 0163-769X ;
@@ -65,13 +64,13 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Endocrine Reviews Volume 36 ; 2015 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; Endocrine Reviews Volume 37 ; 2016 ; >
       au < manifest ; exists ; 2017 ; Endocrine Reviews Volume 38 ; 2017 ; >
+      au < expected ; exists ; 2018 ; Endocrine Reviews Volume 38 ; 2018 ; >
 
     }
 
   }
 
   {
-
     title <
       name = Endocrinology ;
       issn = 0013-7227 ;
@@ -185,13 +184,13 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Endocrinology Volume 156 ; 2015 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; Endocrinology Volume 157 ; 2016 ; >
       au < manifest ; exists ; 2017 ; Endocrinology Volume 158 ; 2017 ; >
+      au < expected ; exists ; 2018 ; Endocrinology Volume 158 ; 2018 ; >
 
     }
 
   }
 
   {
-
     title <
       name = Journal of Clinical Endocrinology & Metabolism ;
       issn = 0021-972X ;
@@ -281,13 +280,13 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Clinical Endocrinology & Metabolism Volume 100 ; 2015 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; Journal of Clinical Endocrinology & Metabolism Volume 101 ; 2016 ; >
       au < manifest ; exists ; 2017 ; Journal of Clinical Endocrinology & Metabolism Volume 102 ; 2017 ; >
+      au < expected ; exists ; 2018 ; Journal of Clinical Endocrinology & Metabolism Volume 102 ; 2018 ; >
 
     }
 
   }
 
   {
-
     title <
       name = Molecular Endocrinology ;
       issn = 0888-8809 ;
@@ -331,6 +330,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Molecular Endocrinology Volume 29 ; 2015 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; Molecular Endocrinology Volume 30 ; 2016 ; >
       au < exists ; exists ; 2017 ; Molecular Endocrinology Volume 31 ; 2017 ; >
+      au < expected ; exists ; 2018 ; Molecular Endocrinology Volume 31 ; 2018 ; >
 
     }
 
