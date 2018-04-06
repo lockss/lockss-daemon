@@ -37,7 +37,7 @@
       au < manifest ; exists ; 2005 ; About Campus Volume 10 ; 10 ; acaa ; >
       au < manifest ; exists ; 2006 ; About Campus Volume 11 ; 11 ; acaa ; >
       au < manifest ; exists ; 2007 ; About Campus Volume 12 ; 12 ; acaa ; >
-      au < crawling ; exists ; 2008 ; About Campus Volume 13 ; 13 ; acaa ; >
+      au < frozen ; exists ; 2008 ; About Campus Volume 13 ; 13 ; acaa ; >
       au < frozen ; exists ; 2009 ; About Campus Volume 14 ; 14 ; acaa ; >
       au < crawling ; exists ; 2010 ; About Campus Volume 15 ; 15 ; acaa ; >
       au < crawling ; exists ; 2011 ; About Campus Volume 16 ; 16 ; acaa ; >
@@ -884,11 +884,11 @@
       #param[journal_id] = aar
 
       au < crawling ; exists ; 2011 ; Allergy & Rhinology Volume 2 ; 2 ; aara ; >
-      au < crawling ; exists ; 2012 ; Allergy & Rhinology Volume 3 ; 3 ; aara ; >
-      au < crawling ; exists ; 2013 ; Allergy & Rhinology Volume 4 ; 4 ; aara ; >
+      au < frozen ; exists ; 2012 ; Allergy & Rhinology Volume 3 ; 3 ; aara ; >
+      au < frozen ; exists ; 2013 ; Allergy & Rhinology Volume 4 ; 4 ; aara ; >
       au < crawling ; exists ; 2014 ; Allergy & Rhinology Volume 5 ; 5 ; aara ; >
       au < crawling ; exists ; 2015 ; Allergy & Rhinology Volume 6 ; 6 ; aara ; >
-      au < crawling ; exists ; 2016 ; Allergy & Rhinology Volume 7 ; 7 ; aara ; >
+      au < frozen ; exists ; 2016 ; Allergy & Rhinology Volume 7 ; 7 ; aara ; >
 
   }
 
@@ -5957,12 +5957,12 @@
       au < crawling ; exists ; 2008 ; Christian Education Journal Volume 5 ; 5 ; ceja ; >
       au < crawling ; exists ; 2009 ; Christian Education Journal Volume 6 ; 6 ; ceja ; >
       au < crawling ; exists ; 2010 ; Christian Education Journal Volume 7 ; 7 ; ceja ; >
-      au < crawling ; exists ; 2011 ; Christian Education Journal Volume 8 ; 8 ; ceja ; >
+      au < frozen ; exists ; 2011 ; Christian Education Journal Volume 8 ; 8 ; ceja ; >
       au < crawling ; exists ; 2012 ; Christian Education Journal Volume 9 ; 9 ; ceja ; >
       au < frozen ; exists ; 2013 ; Christian Education Journal Volume 10 ; 10 ; ceja ; >
       au < crawling ; exists ; 2014 ; Christian Education Journal Volume 11 ; 11 ; ceja ; >
       au < crawling ; exists ; 2015 ; Christian Education Journal Volume 12 ; 12 ; ceja ; >
-      au < crawling ; exists ; 2016 ; Christian Education Journal Volume 13 ; 13 ; ceja ; >
+      au < frozen ; exists ; 2016 ; Christian Education Journal Volume 13 ; 13 ; ceja ; >
       au < manifest ; exists ; 2017 ; Christian Education Journal Volume 14 ; 14 ; ceja ; >
 
   }
@@ -11773,7 +11773,7 @@
       au < crawling ; exists ; 2012 ; Evaluation Journal of Australasia Volume 12 ; 12 ; evja ; >
       au < crawling ; exists ; 2013 ; Evaluation Journal of Australasia Volume 13 ; 13 ; evja ; >
       au < crawling ; exists ; 2014 ; Evaluation Journal of Australasia Volume 14 ; 14 ; evja ; >
-      au < crawling ; exists ; 2015 ; Evaluation Journal of Australasia Volume 15 ; 15 ; evja ; >
+      au < frozen ; exists ; 2015 ; Evaluation Journal of Australasia Volume 15 ; 15 ; evja ; >
       au < crawling ; exists ; 2016 ; Evaluation Journal of Australasia Volume 16 ; 16 ; evja ; >
       au < manifest ; exists ; 2017 ; Evaluation Journal of Australasia Volume 17 ; 17 ; evja ; >
       au < manifest ; exists ; 2018 ; Evaluation Journal of Australasia Volume 18 ; 18 ; evja ; >
@@ -14400,15 +14400,15 @@
 
     #param[journal_id] = hjo
 
-      au < crawling ; exists ; 2009 ; Hong Kong Journal of Occupational Therapy Volume 19 ; 19 ; hjoa ; >
-      au < crawling ; exists ; 2010 ; Hong Kong Journal of Occupational Therapy Volume 20 ; 20 ; hjoa ; >
+      au < frozen ; exists ; 2009 ; Hong Kong Journal of Occupational Therapy Volume 19 ; 19 ; hjoa ; >
+      au < frozen ; exists ; 2010 ; Hong Kong Journal of Occupational Therapy Volume 20 ; 20 ; hjoa ; >
       au < crawling ; exists ; 2011 ; Hong Kong Journal of Occupational Therapy Volume 21 ; 21 ; hjoa ; >
-      au < crawling ; exists ; 2012 ; Hong Kong Journal of Occupational Therapy Volume 22 ; 22 ; hjoa ; >
-      au < crawling ; exists ; 2013 ; Hong Kong Journal of Occupational Therapy Volume 23 ; 23 ; hjoa ; >
-      au < crawling ; exists ; 2014 ; Hong Kong Journal of Occupational Therapy Volume 24 ; 24 ; hjoa ; >
+      au < frozen ; exists ; 2012 ; Hong Kong Journal of Occupational Therapy Volume 22 ; 22 ; hjoa ; >
+      au < frozen ; exists ; 2013 ; Hong Kong Journal of Occupational Therapy Volume 23 ; 23 ; hjoa ; >
+      au < frozen ; exists ; 2014 ; Hong Kong Journal of Occupational Therapy Volume 24 ; 24 ; hjoa ; >
       au < crawling ; exists ; 2015 ; Hong Kong Journal of Occupational Therapy Volume 25 ; 25 ; hjoa ; >
       au < crawling ; exists ; 2015 ; Hong Kong Journal of Occupational Therapy Volume 26 ; 26 ; hjoa ; >
-      au < crawling ; exists ; 2016 ; Hong Kong Journal of Occupational Therapy Volume 27 ; 27 ; hjoa ; >
+      au < frozen ; exists ; 2016 ; Hong Kong Journal of Occupational Therapy Volume 27 ; 27 ; hjoa ; >
       au < frozen ; exists ; 2016 ; Hong Kong Journal of Occupational Therapy Volume 28 ; 28 ; hjoa ; >
       au < manifest ; exists ; 2017 ; Hong Kong Journal of Occupational Therapy Volume 29 ; 29 ; hjoa ; >
       au < manifest ; exists ; 2017 ; Hong Kong Journal of Occupational Therapy Volume 30 ; 30 ; hjoa ; >
@@ -18836,11 +18836,11 @@
       au < crawling ; exists ; 2008 ; Journal of Advertising Education Volume 12 ; 12 ; adva ; >
       au < crawling ; exists ; 2009 ; Journal of Advertising Education Volume 13 ; 13 ; adva ; >
       au < crawling ; exists ; 2010 ; Journal of Advertising Education Volume 14 ; 14 ; adva ; >
-      au < crawling ; exists ; 2011 ; Journal of Advertising Education Volume 15 ; 15 ; adva ; >
-      au < crawling ; exists ; 2012 ; Journal of Advertising Education Volume 16 ; 16 ; adva ; >
+      au < frozen ; exists ; 2011 ; Journal of Advertising Education Volume 15 ; 15 ; adva ; >
+      au < frozen ; exists ; 2012 ; Journal of Advertising Education Volume 16 ; 16 ; adva ; >
       au < crawling ; exists ; 2013 ; Journal of Advertising Education Volume 17 ; 17 ; adva ; >
       au < crawling ; exists ; 2014 ; Journal of Advertising Education Volume 18 ; 18 ; adva ; >
-      au < crawling ; exists ; 2015 ; Journal of Advertising Education Volume 19 ; 19 ; adva ; >
+      au < frozen ; exists ; 2015 ; Journal of Advertising Education Volume 19 ; 19 ; adva ; >
       au < crawling ; exists ; 2016 ; Journal of Advertising Education Volume 20 ; 20 ; adva ; >
       au < manifest ; exists ; 2017 ; Journal of Advertising Education Volume 21 ; 21 ; adva ; >
 
@@ -25417,7 +25417,7 @@
       au < crawling ; exists ; 2011 ; Journal of Psychology and Theology Volume 39 ; 39 ; ptja ; >
       au < crawling ; exists ; 2012 ; Journal of Psychology and Theology Volume 40 ; 40 ; ptja ; >
       au < crawling ; exists ; 2013 ; Journal of Psychology and Theology Volume 41 ; 41 ; ptja ; >
-      au < crawling ; exists ; 2014 ; Journal of Psychology and Theology Volume 42 ; 42 ; ptja ; >
+      au < frozen ; exists ; 2014 ; Journal of Psychology and Theology Volume 42 ; 42 ; ptja ; >
       au < crawling ; exists ; 2015 ; Journal of Psychology and Theology Volume 43 ; 43 ; ptja ; >
       au < crawling ; exists ; 2016 ; Journal of Psychology and Theology Volume 44 ; 44 ; ptja ; >
       au < manifest ; exists ; 2017 ; Journal of Psychology and Theology Volume 45 ; 45 ; ptja ; >
@@ -27449,12 +27449,12 @@
       au < manifest ; exists ; 2006 ; Journal for Vascular Ultrasound Volume 30 ; 30 ; jvua ; >
       au < manifest ; exists ; 2007 ; Journal for Vascular Ultrasound Volume 31 ; 31 ; jvua ; >
       au < crawling ; exists ; 2008 ; Journal for Vascular Ultrasound Volume 32 ; 32 ; jvua ; >
-      au < crawling ; exists ; 2009 ; Journal for Vascular Ultrasound Volume 33 ; 33 ; jvua ; >
+      au < frozen ; exists ; 2009 ; Journal for Vascular Ultrasound Volume 33 ; 33 ; jvua ; >
       au < crawling ; exists ; 2010 ; Journal for Vascular Ultrasound Volume 34 ; 34 ; jvua ; >
-      au < crawling ; exists ; 2011 ; Journal for Vascular Ultrasound Volume 35 ; 35 ; jvua ; >
-      au < crawling ; exists ; 2012 ; Journal for Vascular Ultrasound Volume 36 ; 36 ; jvua ; >
+      au < frozen ; exists ; 2011 ; Journal for Vascular Ultrasound Volume 35 ; 35 ; jvua ; >
+      au < frozen ; exists ; 2012 ; Journal for Vascular Ultrasound Volume 36 ; 36 ; jvua ; >
       au < crawling ; exists ; 2013 ; Journal for Vascular Ultrasound Volume 37 ; 37 ; jvua ; >
-      au < crawling ; exists ; 2014 ; Journal for Vascular Ultrasound Volume 38 ; 38 ; jvua ; >
+      au < frozen ; exists ; 2014 ; Journal for Vascular Ultrasound Volume 38 ; 38 ; jvua ; >
       au < crawling ; exists ; 2015 ; Journal for Vascular Ultrasound Volume 39 ; 39 ; jvua ; >
       au < crawling ; exists ; 2016 ; Journal for Vascular Ultrasound Volume 40 ; 40 ; jvua ; >
       au < manifest ; exists ; 2017 ; Journal for Vascular Ultrasound Volume 41 ; 41 ; jvua ; >
@@ -28422,13 +28422,13 @@
       au < manifest ; exists ; 2006 ; The Linacre Quarterly Volume 73 ; 73 ; lqra ; >
       au < manifest ; exists ; 2007 ; The Linacre Quarterly Volume 74 ; 74 ; lqra ; >
       au < crawling ; exists ; 2008 ; The Linacre Quarterly Volume 75 ; 75 ; lqra ; >
-      au < crawling ; exists ; 2009 ; The Linacre Quarterly Volume 76 ; 76 ; lqra ; >
-      au < crawling ; exists ; 2010 ; The Linacre Quarterly Volume 77 ; 77 ; lqra ; >
+      au < frozen ; exists ; 2009 ; The Linacre Quarterly Volume 76 ; 76 ; lqra ; >
+      au < frozen ; exists ; 2010 ; The Linacre Quarterly Volume 77 ; 77 ; lqra ; >
       au < crawling ; exists ; 2011 ; The Linacre Quarterly Volume 78 ; 78 ; lqra ; >
       au < crawling ; exists ; 2012 ; The Linacre Quarterly Volume 79 ; 79 ; lqra ; >
       au < crawling ; exists ; 2013 ; The Linacre Quarterly Volume 80 ; 80 ; lqra ; >
       au < crawling ; exists ; 2014 ; The Linacre Quarterly Volume 81 ; 81 ; lqra ; >
-      au < crawling ; exists ; 2015 ; The Linacre Quarterly Volume 82 ; 82 ; lqra ; >
+      au < frozen ; exists ; 2015 ; The Linacre Quarterly Volume 82 ; 82 ; lqra ; >
       au < crawling ; exists ; 2016 ; The Linacre Quarterly Volume 83 ; 83 ; lqra ; >
       au < manifest ; exists ; 2017 ; The Linacre Quarterly Volume 84 ; 84 ; lqra ; >
       au < manifest ; exists ; 2018 ; The Linacre Quarterly Volume 85 ; 85 ; lqra ; >
@@ -33999,8 +33999,8 @@
       au < manifest ; exists ; 2006 ; Professional School Counseling Volume 10 ; 10 ; pcxa ; >
       au < manifest ; exists ; 2007 ; Professional School Counseling Volume 11 ; 11 ; pcxa ; >
       au < crawling ; exists ; 2008 ; Professional School Counseling Volume 12 ; 12 ; pcxa ; >
-      au < crawling ; exists ; 2009 ; Professional School Counseling Volume 13 ; 13 ; pcxa ; >
-      au < crawling ; exists ; 2010 ; Professional School Counseling Volume 14 ; 14 ; pcxa ; >
+      au < frozen ; exists ; 2009 ; Professional School Counseling Volume 13 ; 13 ; pcxa ; >
+      au < frozen ; exists ; 2010 ; Professional School Counseling Volume 14 ; 14 ; pcxa ; >
       au < crawling ; exists ; 2011 ; Professional School Counseling Volume 15 ; 15 ; pcxa ; >
       au < crawling ; exists ; 2012 ; Professional School Counseling Volume 16 ; 16 ; pcxa ; >
       au < crawling ; exists ; 2013 ; Professional School Counseling Volume 17 ; 17 ; pcxa ; >
@@ -35946,7 +35946,7 @@
     au < crawling ; exists ; 2009 ; The Review of Black Political Economy Volume 36 ; 36 ; rbpa ; >
     au < doesNotExist ; doesNotExist ; 2010 ; The Review of Black Political Economy Volume 37 ; 37 ; rbpa ; >
     au < doesNotExist ; doesNotExist ; 2011 ; The Review of Black Political Economy Volume 38 ; 38 ; rbpa ; >
-    au < crawling ; exists ; 2012 ; The Review of Black Political Economy Volume 39 ; 39 ; rbpa ; >
+    au < frozen ; exists ; 2012 ; The Review of Black Political Economy Volume 39 ; 39 ; rbpa ; >
     au < crawling ; exists ; 2013 ; The Review of Black Political Economy Volume 40 ; 40 ; rbpa ; >
     au < doesNotExist ; doesNotExist ; 2014 ; The Review of Black Political Economy Volume 41 ; 41 ; rbpa ; >
     au < doesNotExist ; doesNotExist ; 2015 ; The Review of Black Political Economy Volume 42 ; 42 ; rbpa ; >
