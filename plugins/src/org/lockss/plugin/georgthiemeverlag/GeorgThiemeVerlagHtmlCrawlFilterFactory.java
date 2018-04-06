@@ -38,7 +38,9 @@ import java.util.regex.Pattern;
 import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.*;
+import org.htmlparser.nodes.TagNode;
 import org.htmlparser.tags.CompositeTag;
+import org.htmlparser.tags.Div;
 import org.htmlparser.tags.LinkTag;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
@@ -83,14 +85,36 @@ public class GeorgThiemeVerlagHtmlCrawlFilterFactory implements FilterFactory {
         // see an article with suppl at 
         // https://www.thieme-connect.de/products/ejournals/abstract/10.1055/s-0034-1390442
         
-        // THey also have an unmarked link to the related article with text that includes a dx.doi.org reference
+        // MULTIPLE THINGS:
+        // 1. THey also have an unmarked link to the related article with text that includes a dx.doi.org reference
         // even though it's an in-house cross-journal link
         //<a href="/products/ejournals/abstractfoo">FOO: http://dx.doi.org/foo</a>
+        // 2. Per request from Thieme - they *used to* have hidden sfx links that were valid links to our crawler but
+        // caused huge number of 500 errors on their servers.  They've since modified them to be data-href instead of href
+        // until visible, but we promised to crawl filter out the old style to avoid the errors in their logs
+        // WAS (filter out):
+        //<div id="sfx10.1055/s-0034-1384567" style="display: none”>
+        // <a target="sfx" href="?id=doi:10.1055/s-0034-1384567&amp;sid=Thieme:Connect&amp;jtitle=Das..." id="sfxServer”>
+        // NOW:
+        // <a target="sfx" data-href="?id=doi:10.1055/s-0034-1384567&amp;sid=Thieme:Connect&amp;jtitle=Das..." id="sfxServer">
+        // exclude <a href with parent of display:none and attr of
         new NodeFilter() {
           @Override public boolean accept(Node node) {
             if (!(node instanceof LinkTag)) return false;
             String allText = ((CompositeTag)node).toPlainTextString();
-            return LINKOUT.matcher(allText).find();
+            if (LINKOUT.matcher(allText).find()) {
+            		return true;
+            } else { 
+                String id = ((LinkTag) node).getAttribute("id");
+                if ("sfxServer".equals(id)) { // null safe
+                  Node parent = node.getParent();
+                  if(parent instanceof Div) {
+                      String pStyle = ((TagNode) parent).getAttribute("style");
+                      return (pStyle != null && !pStyle.isEmpty() && pStyle.matches("display\\s*:\\s*none"));
+                  }
+                }                  
+            }
+            return false;
           }
         },        
         

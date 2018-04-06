@@ -283,6 +283,34 @@ public class TestGeorgThiemeVerlagHtmlCrawlFilterFactory extends LockssTestCase 
 				  "Inn Med up 2014; 2(02): 115-129<br>" +
 				  "DOI: 10.1055/s-0034-1370123<br>" +
 				  "<br></div></div>";
+  
+  private static final String sfxHiddenAllGone = 
+		  "<div>" +
+			        "<div id=\"sfx10.1055/s-0034-1384567\" style=\"display: none\">" +
+			        "  <a target=\"sfx\" href=\"?id=doi:10.1055/s-0034-1384567&Foo\" id=\"sfxServer\"></a>" +
+			        "<a target=\"sfx\" data-href=\"?id=doi:10.1055/s-0034-1384567FOO\" id=\"sfxServer\"></a>" +
+			        "</div>" +
+			        "<div id=\"sfx10.1055/s-0034-1384567\" style=\"display      :none\">" +
+			        "<a target=\"sfx\" href=\"?id=doi:10.1055/s-0034-1384567&Foo\" id=\"sfxServer\"></a>" +
+			        "</div>" +
+	        "</div>";
+  private static final String sfxHiddenFiltered = 
+		  "<div>" +
+			        "<div id=\"sfx10.1055/s-0034-1384567\" style=\"display: none\">  " +
+			        "</div>" +
+			        "<div id=\"sfx10.1055/s-0034-1384567\" style=\"display      :none\">" +
+			        "</div>" +
+	        "</div>";
+
+  private static final String sfxHiddenNotGone = 
+		  "<div>" +
+			        "<div id=\"sfx10.1055/s-0034-1384567\" style=\"display: none\">" +
+	        "<a target=\"sfx\" href=\"?id=doi:10.1055/s-0034-1384567&Foo\" id=\"sfxOther\"></a>" +
+	        "</div>" +
+	        "<div id=\"sfx10.1055/s-0034-1384567\" style=\"random\">" +
+	        "<a target=\"sfx\" href=\"?id=doi:10.1055/s-0034-1384567&Foo\" id=\"sfxServer\"></a>" +
+	        "</div></div>";
+  
 
   public void testFiltering() throws Exception {
     InputStream inA;
@@ -335,6 +363,18 @@ public class TestGeorgThiemeVerlagHtmlCrawlFilterFactory extends LockssTestCase 
         Constants.DEFAULT_ENCODING);
     a = StringUtil.fromInputStream(inA);
     assertEquals("", a);    
+
+    // old style hidden sfxlinks - removed
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(sfxHiddenAllGone),
+        Constants.DEFAULT_ENCODING);
+    a = StringUtil.fromInputStream(inA);
+    assertEquals(sfxHiddenFiltered, a);    
+    
+    // anti-test of old style sfxlink removal
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(sfxHiddenNotGone),
+        Constants.DEFAULT_ENCODING);
+    a = StringUtil.fromInputStream(inA);
+    assertEquals(sfxHiddenNotGone, a);    
     
   }
   
