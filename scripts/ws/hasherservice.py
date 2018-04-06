@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 
 '''A library and a command line tool to interact with the LOCKSS daemon hasher
 service via its Web Services API.'''
