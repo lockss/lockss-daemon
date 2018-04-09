@@ -9,7 +9,6 @@
   >
 
     plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
-    implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
   {
   
@@ -18,6 +17,8 @@
       eissn = 2373-2873 ;
       issnl = 2373-2873
     >
+
+    implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
     {
 
@@ -39,6 +40,8 @@
       eissn = 1943-0264 ;
       issnl = 1943-0264
     >
+
+    implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
     {
 
@@ -67,6 +70,8 @@
       issnl = 2157-1422
     >
 
+    implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
+
     {
 
       param[base_url] = http://perspectivesinmedicine.cshlp.org/
@@ -92,6 +97,8 @@
       eissn = 1559-6095 ;
       issnl = 1940-3402
     >
+
+    implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
     {
 
@@ -124,7 +131,9 @@
       issnl = 0091-7451
     >
 
-    {
+    implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
+
+   {
 
       param[base_url] = http://symposium.cshlp.org/
       
@@ -226,6 +235,9 @@
       issnl = 0890-9369
     >
 
+
+    implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
+
     {
 
       param[base_url] = http://genesdev.cshlp.org/
@@ -276,38 +288,40 @@
       issnl = 1088-9051
     >
 
+    implicit < status ; status2 ; year ; name ; param[volume_name] ; param[base_url] ; hidden[proxy] >
+
     {
 
-      param[base_url] = http://genome.cshlp.org/
+#      param[base_url] = http://genome.cshlp.org/
 
-      au < exists ; exists ; 1991-1992 ; Genome Research Volume 1 ; 1 ; >
-      au < exists ; exists ; 1992-1993 ; Genome Research Volume 2 ; 2 ; >
-      au < exists ; exists ; 1993-1994 ; Genome Research Volume 3 ; 3 ; >
-      au < exists ; exists ; 1994-1995 ; Genome Research Volume 4 ; 4 ; >
-      au < exists ; exists ; 1995 ; Genome Research Volume 5 ; 5 ; >
-      au < exists ; exists ; 1996 ; Genome Research Volume 6  ; 6  ; >
-      au < exists ; exists ; 1997 ; Genome Research Volume 7  ; 7  ; >
-      au < exists ; exists ; 1998 ; Genome Research Volume 8  ; 8  ; >
-      au < exists ; exists ; 1999 ; Genome Research Volume 9  ; 9  ; >
-      au < exists ; exists ; 2000 ; Genome Research Volume 10 ; 10 ; >
-      au < exists ; exists ; 2001 ; Genome Research Volume 11 ; 11 ; >
-      au < exists ; exists ; 2002 ; Genome Research Volume 12 ; 12 ; >
-      au < exists ; exists ; 2003 ; Genome Research Volume 13 ; 13 ; >
-      au < exists ; exists ; 2004 ; Genome Research Volume 14 ; 14 ; >
-      au < exists ; exists ; 2005 ; Genome Research Volume 15 ; 15 ; >
-      au < exists ; exists ; 2006 ; Genome Research Volume 16 ; 16 ; >
-      au < exists ; exists ; 2007 ; Genome Research Volume 17 ; 17 ; >
-      au < exists ; exists ; 2008 ; Genome Research Volume 18 ; 18 ; >
-      au < exists ; exists ; 2009 ; Genome Research Volume 19 ; 19 ; >
-      au < exists ; exists ; 2010 ; Genome Research Volume 20 ; 20 ; >
-      au < exists ; exists ; 2011 ; Genome Research Volume 21 ; 21 ; >
-      au < exists ; exists ; 2012 ; Genome Research Volume 22 ; 22 ; >
-      au < exists ; exists ; 2013 ; Genome Research Volume 23 ; 23 ; >
-      au < zapped ; finished ; 2014 ; Genome Research Volume 24 ; 24 ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2015 ; Genome Research Volume 25 ; 25 ; >
-      au < deepCrawl ; exists ; 2016 ; Genome Research Volume 26 ; 26 ; >
-      au < deepCrawl ; exists ; 2017 ; Genome Research Volume 27 ; 27 ; >
-      au < manifest ; exists ; 2018 ; Genome Research Volume 28 ; 28 ; >
+      au < exists ; exists ; 1991-1992 ; Genome Research Volume 1 ; 1 ; https://genome.cshlp.org/ ; >
+      au < exists ; exists ; 1992-1993 ; Genome Research Volume 2 ; 2 ; https://genome.cshlp.org/ ; >
+      au < exists ; exists ; 1993-1994 ; Genome Research Volume 3 ; 3 ; https://genome.cshlp.org/ ; >
+      au < exists ; exists ; 1994-1995 ; Genome Research Volume 4 ; 4 ; https://genome.cshlp.org/ ; >
+      au < exists ; exists ; 1995 ; Genome Research Volume 5 ; 5 ; https://genome.cshlp.org/ ; >
+      au < exists ; exists ; 1996 ; Genome Research Volume 6  ; 6  ; https://genome.cshlp.org/ ; >
+      au < exists ; exists ; 1997 ; Genome Research Volume 7  ; 7  ; https://genome.cshlp.org/ ; >
+      au < exists ; exists ; 1998 ; Genome Research Volume 8  ; 8  ; https://genome.cshlp.org/ ; >
+      au < exists ; exists ; 1999 ; Genome Research Volume 9  ; 9  ; https://genome.cshlp.org/ ; >
+      au < exists ; exists ; 2000 ; Genome Research Volume 10 ; 10 ; https://genome.cshlp.org/ ; >
+      au < exists ; exists ; 2001 ; Genome Research Volume 11 ; 11 ; https://genome.cshlp.org/ ; >
+      au < exists ; exists ; 2002 ; Genome Research Volume 12 ; 12 ; https://genome.cshlp.org/ ; >
+      au < exists ; exists ; 2003 ; Genome Research Volume 13 ; 13 ; https://genome.cshlp.org/ ; >
+      au < exists ; exists ; 2004 ; Genome Research Volume 14 ; 14 ; https://genome.cshlp.org/ ; >
+      au < exists ; exists ; 2005 ; Genome Research Volume 15 ; 15 ; https://genome.cshlp.org/ ; >
+      au < exists ; exists ; 2006 ; Genome Research Volume 16 ; 16 ; https://genome.cshlp.org/ ; >
+      au < exists ; exists ; 2007 ; Genome Research Volume 17 ; 17 ; https://genome.cshlp.org/ ; >
+      au < exists ; exists ; 2008 ; Genome Research Volume 18 ; 18 ; https://genome.cshlp.org/ ; >
+      au < exists ; exists ; 2009 ; Genome Research Volume 19 ; 19 ; https://genome.cshlp.org/ ; >
+      au < exists ; exists ; 2010 ; Genome Research Volume 20 ; 20 ; https://genome.cshlp.org/ ; >
+      au < exists ; exists ; 2011 ; Genome Research Volume 21 ; 21 ; https://genome.cshlp.org/ ; >
+      au < exists ; exists ; 2012 ; Genome Research Volume 22 ; 22 ; https://genome.cshlp.org/ ; >
+      au < exists ; exists ; 2013 ; Genome Research Volume 23 ; 23 ; https://genome.cshlp.org/ ; >
+      au < zapped ; finished ; 2014 ; Genome Research Volume 24 ; 24 ; http://genome.cshlp.org/ ; reingest5.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2015 ; Genome Research Volume 25 ; 25 ; http://genome.cshlp.org/ ; >
+      au < deepCrawl ; exists ; 2016 ; Genome Research Volume 26 ; 26 ; http://genome.cshlp.org/ ; >
+      au < deepCrawl ; exists ; 2017 ; Genome Research Volume 27 ; 27 ; http://genome.cshlp.org/ ; >
+      au < manifest ; exists ; 2018 ; Genome Research Volume 28 ; 28 ; https://genome.cshlp.org/ ; >
 
     }
 
@@ -321,6 +335,8 @@
       eissn = 1549-5485 ;
       issnl = 1072-0502
     >
+
+    implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
     {
 
@@ -364,6 +380,8 @@
       eissn = 1469-9001 ;
       issnl = 1355-8382
     >
+
+    implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
     {
 

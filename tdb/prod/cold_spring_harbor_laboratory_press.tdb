@@ -5,7 +5,6 @@
   >
 
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-    implicit < status ; year ; name ; param[volume_name] >
 
   {
   
@@ -14,6 +13,8 @@
       eissn = 2373-2873 ;
       issnl = 2373-2873
     >
+
+    implicit < status ; year ; name ; param[volume_name] >
 
     {
 
@@ -34,6 +35,8 @@
       eissn = 1943-0264 ;
       issnl = 1943-0264
     >
+
+    implicit < status ; year ; name ; param[volume_name] >
 
     {
 
@@ -61,6 +64,8 @@
       issnl = 2157-1422
     >
 
+    implicit < status ; year ; name ; param[volume_name] >
+
     {
 
       param[base_url] = http://perspectivesinmedicine.cshlp.org/
@@ -85,6 +90,8 @@
       eissn = 1559-6095 ;
       issnl = 1940-3402
     >
+
+    implicit < status ; year ; name ; param[volume_name] >
 
     {
 
@@ -115,6 +122,8 @@
       eissn = 1943-4456 ;
       issnl = 0091-7451
     >
+
+    implicit < status ; year ; name ; param[volume_name] >
 
     {
 
@@ -218,6 +227,8 @@
       issnl = 0890-9369
     >
 
+    implicit < status ; year ; name ; param[volume_name] >
+
     {
 
       param[base_url] = http://genesdev.cshlp.org/
@@ -267,37 +278,39 @@
       issnl = 1088-9051
     >
 
+    implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
+
     {
 
-      param[base_url] = http://genome.cshlp.org/
+#      param[base_url] = http://genome.cshlp.org/
 
-      au < manifest ; 1991-1992 ; Genome Research Volume 1 ; 1 >
-      au < manifest ; 1992-1993 ; Genome Research Volume 2 ; 2 >
-      au < manifest ; 1993-1994 ; Genome Research Volume 3 ; 3 >
-      au < manifest ; 1994-1995 ; Genome Research Volume 4 ; 4 >
-      au < manifest ; 1995 ; Genome Research Volume 5 ; 5 >
-      au < manifest ; 1996 ; Genome Research Volume 6  ; 6  >
-      au < manifest ; 1997 ; Genome Research Volume 7  ; 7  >
-      au < manifest ; 1998 ; Genome Research Volume 8  ; 8  >
-      au < manifest ; 1999 ; Genome Research Volume 9  ; 9  >
-      au < manifest ; 2000 ; Genome Research Volume 10 ; 10 >
-      au < manifest ; 2001 ; Genome Research Volume 11 ; 11 >
-      au < manifest ; 2002 ; Genome Research Volume 12 ; 12 >
-      au < manifest ; 2003 ; Genome Research Volume 13 ; 13 >
-      au < manifest ; 2004 ; Genome Research Volume 14 ; 14 >
-      au < released ; 2005 ; Genome Research Volume 15 ; 15 >
-      au < released ; 2006 ; Genome Research Volume 16 ; 16 >
-      au < released ; 2007 ; Genome Research Volume 17 ; 17 >
-      au < released ; 2008 ; Genome Research Volume 18 ; 18 >
-      au < released ; 2009 ; Genome Research Volume 19 ; 19 >
-      au < released ; 2010 ; Genome Research Volume 20 ; 20 >
-      au < released ; 2011 ; Genome Research Volume 21 ; 21 >
-      au < released ; 2012 ; Genome Research Volume 22 ; 22 >
-      au < released ; 2013 ; Genome Research Volume 23 ; 23 >
-      au < released ; 2014 ; Genome Research Volume 24 ; 24 >
-      au < released ; 2015 ; Genome Research Volume 25 ; 25 >
-      au < released ; 2016 ; Genome Research Volume 26 ; 26 >
-      au < manifest ; 2017 ; Genome Research Volume 27 ; 27 >
+      au < manifest ; 1991-1992 ; Genome Research Volume 1 ; 1 ; https://genome.cshlp.org/ >
+      au < manifest ; 1992-1993 ; Genome Research Volume 2 ; 2 ; https://genome.cshlp.org/ >
+      au < manifest ; 1993-1994 ; Genome Research Volume 3 ; 3 ; https://genome.cshlp.org/ >
+      au < manifest ; 1994-1995 ; Genome Research Volume 4 ; 4 ; https://genome.cshlp.org/ >
+      au < manifest ; 1995 ; Genome Research Volume 5 ; 5 ; https://genome.cshlp.org/ >
+      au < manifest ; 1996 ; Genome Research Volume 6  ; 6  ; https://genome.cshlp.org/ >
+      au < manifest ; 1997 ; Genome Research Volume 7  ; 7  ; https://genome.cshlp.org/ >
+      au < manifest ; 1998 ; Genome Research Volume 8  ; 8  ; https://genome.cshlp.org/ >
+      au < manifest ; 1999 ; Genome Research Volume 9  ; 9  ; https://genome.cshlp.org/ >
+      au < manifest ; 2000 ; Genome Research Volume 10 ; 10 ; https://genome.cshlp.org/ >
+      au < manifest ; 2001 ; Genome Research Volume 11 ; 11 ; https://genome.cshlp.org/ >
+      au < manifest ; 2002 ; Genome Research Volume 12 ; 12 ; https://genome.cshlp.org/ >
+      au < manifest ; 2003 ; Genome Research Volume 13 ; 13 ; https://genome.cshlp.org/ >
+      au < manifest ; 2004 ; Genome Research Volume 14 ; 14 ; https://genome.cshlp.org/ >
+      au < released ; 2005 ; Genome Research Volume 15 ; 15 ; http://genome.cshlp.org/ >
+      au < released ; 2006 ; Genome Research Volume 16 ; 16 ; http://genome.cshlp.org/ >
+      au < released ; 2007 ; Genome Research Volume 17 ; 17 ; http://genome.cshlp.org/ >
+      au < released ; 2008 ; Genome Research Volume 18 ; 18 ; http://genome.cshlp.org/ >
+      au < released ; 2009 ; Genome Research Volume 19 ; 19 ; http://genome.cshlp.org/ >
+      au < released ; 2010 ; Genome Research Volume 20 ; 20 ; http://genome.cshlp.org/ >
+      au < released ; 2011 ; Genome Research Volume 21 ; 21 ; http://genome.cshlp.org/ >
+      au < released ; 2012 ; Genome Research Volume 22 ; 22 ; http://genome.cshlp.org/ >
+      au < released ; 2013 ; Genome Research Volume 23 ; 23 ; http://genome.cshlp.org/ >
+      au < released ; 2014 ; Genome Research Volume 24 ; 24 ; http://genome.cshlp.org/ >
+      au < released ; 2015 ; Genome Research Volume 25 ; 25 ; http://genome.cshlp.org/ >
+      au < released ; 2016 ; Genome Research Volume 26 ; 26 ; http://genome.cshlp.org/ >
+      au < manifest ; 2017 ; Genome Research Volume 27 ; 27 ; https://genome.cshlp.org/ >
 
     }
 
@@ -311,6 +324,8 @@
       eissn = 1549-5485 ;
       issnl = 1072-0502
     >
+
+    implicit < status ; year ; name ; param[volume_name] >
 
     {
 
@@ -353,6 +368,8 @@
       eissn = 1469-9001 ;
       issnl = 1355-8382
     >
+
+    implicit < status ; year ; name ; param[volume_name] >
 
     {
 

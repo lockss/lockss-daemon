@@ -13,33 +13,33 @@
     >
     
     plugin = org.lockss.plugin.bepress.BePressPlugin
-    param[base_url] = http://docs.lib.purdue.edu/
+#    param[base_url] = http://docs.lib.purdue.edu/
     param[journal_abbr] = atg
-    implicit < status ; year ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume] ; param[base_url] >
 
-    au < released ; 1989 ; Against the Grain Volume 1 ; 1 >
-    au < released ; 1990 ; Against the Grain Volume 2 ; 2 >
-    au < released ; 1991 ; Against the Grain Volume 3 ; 3 >
-    au < released ; 1992 ; Against the Grain Volume 4 ; 4 >
-    au < released ; 1993 ; Against the Grain Volume 5 ; 5 >
-    au < released ; 1994 ; Against the Grain Volume 6 ; 6 >
-    au < released ; 1995 ; Against the Grain Volume 7 ; 7 >
-    au < released ; 1996 ; Against the Grain Volume 8 ; 8 >
-    au < released ; 1997 ; Against the Grain Volume 9 ; 9 >
-    au < released ; 1998 ; Against the Grain Volume 10 ; 10 >
-    au < released ; 1999 ; Against the Grain Volume 11 ; 11 >
-    au < released ; 2000 ; Against the Grain Volume 12 ; 12 >
-    au < released ; 2001 ; Against the Grain Volume 13 ; 13 >
-    au < released ; 2002 ; Against the Grain Volume 14 ; 14 >
-    au < released ; 2003 ; Against the Grain Volume 15 ; 15 >
-    au < released ; 2004 ; Against the Grain Volume 16 ; 16 >
-    au < released ; 2005 ; Against the Grain Volume 17 ; 17 >
-    au < released ; 2006 ; Against the Grain Volume 18 ; 18 >
-    au < released ; 2007 ; Against the Grain Volume 19 ; 19 >
-    au < released ; 2008 ; Against the Grain Volume 20 ; 20 >
-    au < released ; 2009 ; Against the Grain Volume 21 ; 21 >
-    au < released ; 2010 ; Against the Grain Volume 22 ; 22 >
-    au < released ; 2011 ; Against the Grain Volume 23 ; 23 >
+    au < released ; 1989 ; Against the Grain Volume 1 ; 1 ; http://docs.lib.purdue.edu/ >
+    au < released ; 1990 ; Against the Grain Volume 2 ; 2 ; http://docs.lib.purdue.edu/ >
+    au < released ; 1991 ; Against the Grain Volume 3 ; 3 ; http://docs.lib.purdue.edu/ >
+    au < released ; 1992 ; Against the Grain Volume 4 ; 4 ; http://docs.lib.purdue.edu/ >
+    au < released ; 1993 ; Against the Grain Volume 5 ; 5 ; http://docs.lib.purdue.edu/ >
+    au < released ; 1994 ; Against the Grain Volume 6 ; 6 ; http://docs.lib.purdue.edu/ >
+    au < released ; 1995 ; Against the Grain Volume 7 ; 7 ; http://docs.lib.purdue.edu/ >
+    au < released ; 1996 ; Against the Grain Volume 8 ; 8 ; http://docs.lib.purdue.edu/ >
+    au < released ; 1997 ; Against the Grain Volume 9 ; 9 ; http://docs.lib.purdue.edu/ >
+    au < released ; 1998 ; Against the Grain Volume 10 ; 10 ; http://docs.lib.purdue.edu/ >
+    au < released ; 1999 ; Against the Grain Volume 11 ; 11 ; http://docs.lib.purdue.edu/ >
+    au < released ; 2000 ; Against the Grain Volume 12 ; 12 ; http://docs.lib.purdue.edu/ >
+    au < released ; 2001 ; Against the Grain Volume 13 ; 13 ; http://docs.lib.purdue.edu/ >
+    au < released ; 2002 ; Against the Grain Volume 14 ; 14 ; http://docs.lib.purdue.edu/ >
+    au < released ; 2003 ; Against the Grain Volume 15 ; 15 ; http://docs.lib.purdue.edu/ >
+    au < released ; 2004 ; Against the Grain Volume 16 ; 16 ; http://docs.lib.purdue.edu/ >
+    au < released ; 2005 ; Against the Grain Volume 17 ; 17 ; http://docs.lib.purdue.edu/ >
+    au < released ; 2006 ; Against the Grain Volume 18 ; 18 ; http://docs.lib.purdue.edu/ >
+    au < released ; 2007 ; Against the Grain Volume 19 ; 19 ; http://docs.lib.purdue.edu/ >
+    au < released ; 2008 ; Against the Grain Volume 20 ; 20 ; http://docs.lib.purdue.edu/ >
+    au < released ; 2009 ; Against the Grain Volume 21 ; 21 ; http://docs.lib.purdue.edu/ >
+    au < released ; 2010 ; Against the Grain Volume 22 ; 22 ; http://docs.lib.purdue.edu/ >
+    au < released ; 2011 ; Against the Grain Volume 23 ; 23 ; http://docs.lib.purdue.edu/ >
 
   }
   
@@ -73,29 +73,29 @@
     {
     
       plugin = org.lockss.plugin.bepress.BePressPlugin
-      param[base_url] = http://docs.lib.purdue.edu/
+#      param[base_url] = http://docs.lib.purdue.edu/
       param[journal_abbr] = clcweb
-      implicit < status ; year ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] ; param[base_url] >
       
-      au < doNotProcess ; 1999 ; CLCWeb: Comparative Literature and Culture Volume 1 ; 1 >
-      au < doNotProcess ; 2000 ; CLCWeb: Comparative Literature and Culture Volume 2 ; 2 >
-      au < doNotProcess ; 2001 ; CLCWeb: Comparative Literature and Culture Volume 3 ; 3 >
-      au < doNotProcess ; 2002 ; CLCWeb: Comparative Literature and Culture Volume 4 ; 4 >
-      au < doNotProcess ; 2003 ; CLCWeb: Comparative Literature and Culture Volume 5 ; 5 >
-      au < doNotProcess ; 2004 ; CLCWeb: Comparative Literature and Culture Volume 6 ; 6 >
-      au < doNotProcess ; 2005 ; CLCWeb: Comparative Literature and Culture Volume 7 ; 7 >
-      au < doNotProcess ; 2006 ; CLCWeb: Comparative Literature and Culture Volume 8 ; 8 >
-      au < released ; 2007 ; CLCWeb: Comparative Literature and Culture Volume 9 ; 9 >
-      au < released ; 2008 ; CLCWeb: Comparative Literature and Culture Volume 10 ; 10 >
-      au < released ; 2009 ; CLCWeb: Comparative Literature and Culture Volume 11 ; 11 >
-      au < released ; 2010 ; CLCWeb: Comparative Literature and Culture Volume 12 ; 12 >
-      au < released ; 2011 ; CLCWeb: Comparative Literature and Culture Volume 13 ; 13 >
-      au < released ; 2012 ; CLCWeb: Comparative Literature and Culture Volume 14 ; 14 >
-      au < released ; 2013 ; CLCWeb: Comparative Literature and Culture Volume 15 ; 15 >
-      au < released ; 2014 ; CLCWeb: Comparative Literature and Culture Volume 16 ; 16 >
-      au < released ; 2015 ; CLCWeb: Comparative Literature and Culture Volume 17 ; 17 >
-      au < released ; 2016 ; CLCWeb: Comparative Literature and Culture Volume 18 ; 18 >
-      au < testing ; 2017 ; CLCWeb: Comparative Literature and Culture Volume 19 ; 19 >
+      au < doNotProcess ; 1999 ; CLCWeb: Comparative Literature and Culture Volume 1 ; 1 ; https://docs.lib.purdue.edu/ >
+      au < doNotProcess ; 2000 ; CLCWeb: Comparative Literature and Culture Volume 2 ; 2 ; https://docs.lib.purdue.edu/ >
+      au < doNotProcess ; 2001 ; CLCWeb: Comparative Literature and Culture Volume 3 ; 3 ; https://docs.lib.purdue.edu/ >
+      au < doNotProcess ; 2002 ; CLCWeb: Comparative Literature and Culture Volume 4 ; 4 ; https://docs.lib.purdue.edu/ >
+      au < doNotProcess ; 2003 ; CLCWeb: Comparative Literature and Culture Volume 5 ; 5 ; https://docs.lib.purdue.edu/ >
+      au < doNotProcess ; 2004 ; CLCWeb: Comparative Literature and Culture Volume 6 ; 6 ; https://docs.lib.purdue.edu/ >
+      au < doNotProcess ; 2005 ; CLCWeb: Comparative Literature and Culture Volume 7 ; 7 ; https://docs.lib.purdue.edu/ >
+      au < doNotProcess ; 2006 ; CLCWeb: Comparative Literature and Culture Volume 8 ; 8 ; https://docs.lib.purdue.edu/ >
+      au < released ; 2007 ; CLCWeb: Comparative Literature and Culture Volume 9 ; 9 ; http://docs.lib.purdue.edu/ >
+      au < released ; 2008 ; CLCWeb: Comparative Literature and Culture Volume 10 ; 10 ; http://docs.lib.purdue.edu/ >
+      au < released ; 2009 ; CLCWeb: Comparative Literature and Culture Volume 11 ; 11 ; http://docs.lib.purdue.edu/ >
+      au < released ; 2010 ; CLCWeb: Comparative Literature and Culture Volume 12 ; 12 ; http://docs.lib.purdue.edu/ >
+      au < released ; 2011 ; CLCWeb: Comparative Literature and Culture Volume 13 ; 13 ; http://docs.lib.purdue.edu/ >
+      au < released ; 2012 ; CLCWeb: Comparative Literature and Culture Volume 14 ; 14 ; http://docs.lib.purdue.edu/ >
+      au < released ; 2013 ; CLCWeb: Comparative Literature and Culture Volume 15 ; 15 ; http://docs.lib.purdue.edu/ >
+      au < released ; 2014 ; CLCWeb: Comparative Literature and Culture Volume 16 ; 16 ; http://docs.lib.purdue.edu/ >
+      au < released ; 2015 ; CLCWeb: Comparative Literature and Culture Volume 17 ; 17 ; http://docs.lib.purdue.edu/ >
+      au < released ; 2016 ; CLCWeb: Comparative Literature and Culture Volume 18 ; 18 ; http://docs.lib.purdue.edu/ >
+      au < testing ; 2017 ; CLCWeb: Comparative Literature and Culture Volume 19 ; 19 ; https://docs.lib.purdue.edu/ >
 
     }
 
@@ -109,15 +109,15 @@
     >
 
     plugin = org.lockss.plugin.bepress.BePressPlugin
-    param[base_url] = http://docs.lib.purdue.edu/
+#    param[base_url] = http://docs.lib.purdue.edu/
     param[journal_abbr] = dcp
-    implicit < status ; year ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume] ; param[base_url] >
 
-    au < released ; 2009 ; Data Curation Profiles Directory Volume 1 ; 1 >
-    au < released ; 2010 ; Data Curation Profiles Directory Volume 2 ; 2 >
-    au < released ; 2011 ; Data Curation Profiles Directory Volume 3 ; 3 >
-    au < released ; 2012 ; Data Curation Profiles Directory Volume 4 ; 4 >
-    au < released ; 2013 ; Data Curation Profiles Directory Volume 5 ; 5 >
+    au < released ; 2009 ; Data Curation Profiles Directory Volume 1 ; 1 ; http://docs.lib.purdue.edu/ >
+    au < released ; 2010 ; Data Curation Profiles Directory Volume 2 ; 2 ; http://docs.lib.purdue.edu/ >
+    au < released ; 2011 ; Data Curation Profiles Directory Volume 3 ; 3 ; http://docs.lib.purdue.edu/ >
+    au < released ; 2012 ; Data Curation Profiles Directory Volume 4 ; 4 ; http://docs.lib.purdue.edu/ >
+    au < released ; 2013 ; Data Curation Profiles Directory Volume 5 ; 5 ; http://docs.lib.purdue.edu/ >
 
   }
     
