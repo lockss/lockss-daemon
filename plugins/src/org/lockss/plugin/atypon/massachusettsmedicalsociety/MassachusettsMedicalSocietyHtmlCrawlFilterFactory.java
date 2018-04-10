@@ -36,11 +36,12 @@ import org.htmlparser.filters.OrFilter;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory;
 
 /*
  * This Crawl Filter is NOT BASED on BaseAtypon!
  */
-public class MassachusettsMedicalSocietyHtmlCrawlFilterFactory implements FilterFactory {
+public class MassachusettsMedicalSocietyHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory {
 
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
@@ -96,14 +97,13 @@ public class MassachusettsMedicalSocietyHtmlCrawlFilterFactory implements Filter
             HtmlNodeFilters.tag("nav"),
             HtmlNodeFilters.tag("footer"),
             
-            HtmlNodeFilters.tagWithAttribute("div", "id", "nejm_jobs"),
-            HtmlNodeFilters.tagWithAttribute("section", "id", "article_letters"),
-            HtmlNodeFilters.tagWithAttribute("section", "id", "article_references"),
-            HtmlNodeFilters.tagWithAttribute("section", "id", "article_citing_articles"),
-            HtmlNodeFilters.tagWithAttribute("section", "id", "author_affiliations"),
-            // 
-            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(^(footer-)?ad$|-banner|-institution|ArticleListWidget)"),
             HtmlNodeFilters.tagWithAttribute("div", "data-widget-def"),
+            HtmlNodeFilters.tagWithAttribute("div", "id", "nejm_jobs"),
+            HtmlNodeFilters.tagWithAttributeRegex("ol", "class", "article-reference"),
+            HtmlNodeFilters.tagWithAttributeRegex("section", "id", "article_(letter|correspondence|reference|citing)"),
+            HtmlNodeFilters.tagWithAttribute("section", "id", "author_affiliations"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(^(footer-)?ad$|-banner|-institution|ArticleListWidget)"),
+            HtmlNodeFilters.tagWithAttributeRegex("p", "class", "alert-bar"),
             
             HtmlNodeFilters.allExceptSubtree(
                 HtmlNodeFilters.tagWithAttribute("ul", "class", "m-article-tools"),
@@ -112,9 +112,7 @@ public class MassachusettsMedicalSocietyHtmlCrawlFilterFactory implements Filter
                     HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/action/showCitFormats[?]"))),
             
     };
-    return new HtmlFilterInputStream(in,
-                                     encoding,
-                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+    return super.createFilteredInputStream(au, in, encoding, filters);
   }
 
 }

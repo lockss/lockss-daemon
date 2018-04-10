@@ -149,14 +149,13 @@ public class MassachusettsMedicalSocietyHtmlHashFilterFactory extends BaseAtypon
         HtmlNodeFilters.tag("nav"),
         HtmlNodeFilters.tag("footer"),
         
-        HtmlNodeFilters.tagWithAttribute("div", "id", "nejm_jobs"),
-        HtmlNodeFilters.tagWithAttribute("section", "id", "article_letters"),
-        HtmlNodeFilters.tagWithAttribute("section", "id", "article_references"),
-        HtmlNodeFilters.tagWithAttribute("section", "id", "article_citing_articles"),
-        HtmlNodeFilters.tagWithAttribute("section", "id", "author_affiliations"),
-        // 
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(^(footer-)?ad$|-banner|-institution|ArticleListWidget)"),
         HtmlNodeFilters.tagWithAttribute("div", "data-widget-def"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "nejm_jobs"),
+        HtmlNodeFilters.tagWithAttributeRegex("ol", "class", "article-reference"),
+        HtmlNodeFilters.tagWithAttributeRegex("section", "id", "article_(letter|correspondence|reference|citing)"),
+        HtmlNodeFilters.tagWithAttribute("section", "id", "author_affiliations"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(^(footer-)?ad$|-banner|-institution|ArticleListWidget)"),
+        HtmlNodeFilters.tagWithAttributeRegex("p", "class", "alert-bar"),
         HtmlNodeFilters.tagWithAttribute("ul", "class", "m-article-tools"),
         
     };
