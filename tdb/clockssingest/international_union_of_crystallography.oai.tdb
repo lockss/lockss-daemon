@@ -64,6 +64,7 @@
     au < testing ; exists ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 October ; 2017-10 ; >
     au < manifest ; exists ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 November ; 2017-11 ; >
     au < manifest ; exists ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 December ; 2017-12 ; >
+    au < expected ; exists ; 2018 ; 74 ; Acta Crystallographica Section E: Crystallographic Communications Volume 74 December ; 2018-12 ; >
 
   }
 
@@ -214,6 +215,7 @@
     au < deepCrawl ; exists ; 2017 ; 4 ; IUCrJ Volume 4 October ; 2017-10 ; >
     au < manifest ; exists ; 2017 ; 4 ; IUCrJ Volume 4 November ; 2017-11 ; >
     au < manifest ; exists ; 2017 ; 4 ; IUCrJ Volume 4 December ; 2017-12 ; >
+    au < expected ; exists ; 2018 ; 5 ; IUCrJ Volume 5 December ; 2018-12 ; >
 
   }
   
@@ -256,6 +258,7 @@
     au < manifest ; exists ; 2017 ; 2 ; IUCrData Volume 2 November ; 2017-11 ; >
     au < manifest ; exists ; 2017 ; 2 ; IUCrData Volume 2 December ; 2017-12 ; >
     
+    au < expected ; exists ; 2018 ; 3 ; IUCrData Volume 3 December ; 2018-12 ; >
 
   }  
 }
