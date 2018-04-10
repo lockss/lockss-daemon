@@ -7,8 +7,8 @@
   >
   {
     plugin = org.lockss.plugin.atypon.wageningen.ClockssWageningenJournalsPlugin
-    param[base_url] = http://www.wageningenacademic.com/
-    implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
+#    param[base_url] = http://www.wageningenacademic.com/
+    implicit < status ; status2 ; year ; name ; param[volume_name] ; param[base_url] ; hidden[proxy] >
 
     {
 
@@ -20,14 +20,14 @@
 
       param[journal_id] = bm
     
-      au < manifest ; exists ; 2010 ; Beneficial Microbes Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2011 ; Beneficial Microbes Volume 2 ; 2 ; >
-      au < frozen ; exists ; 2012 ; Beneficial Microbes Volume 3 ; 3 ; >
-      au < finished ; finished ; 2013 ; Beneficial Microbes Volume 4 ; 4 ; >
-      au < frozen ; exists ; 2014 ; Beneficial Microbes Volume 5 ; 5 ; >
-      au < finished ; finished ; 2015 ; Beneficial Microbes Volume 6 ; 6 ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2016 ; Beneficial Microbes Volume 7 ; 7 ; >
-      au < deepCrawl ; exists ; 2017 ; Beneficial Microbes Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2010 ; Beneficial Microbes Volume 1 ; 1 ; https://www.wageningenacademic.com/ ; >
+      au < manifest ; exists ; 2011 ; Beneficial Microbes Volume 2 ; 2 ; https://www.wageningenacademic.com/ ; >
+      au < frozen ; exists ; 2012 ; Beneficial Microbes Volume 3 ; 3 ; http://www.wageningenacademic.com/ ; >
+      au < finished ; finished ; 2013 ; Beneficial Microbes Volume 4 ; 4 ; http://www.wageningenacademic.com/ ; >
+      au < frozen ; exists ; 2014 ; Beneficial Microbes Volume 5 ; 5 ; http://www.wageningenacademic.com/ ; >
+      au < finished ; finished ; 2015 ; Beneficial Microbes Volume 6 ; 6 ; http://www.wageningenacademic.com/ ; reingest5.clockss.org:8082 >
+      au < frozen ; exists ; 2016 ; Beneficial Microbes Volume 7 ; 7 ; http://www.wageningenacademic.com/ ; >
+      au < deepCrawl ; exists ; 2017 ; Beneficial Microbes Volume 8 ; 8 ; http://www.wageningenacademic.com/ ; >
 
     }
 
@@ -41,12 +41,12 @@
 
       param[journal_id] = cep
 
-      au < frozen ; exists ; 2012 ; Comparative Exercise Physiology Volume 8 ; 8 ; >
-      au < finished ; finished ; 2013 ; Comparative Exercise Physiology Volume 9 ; 9 ; >
-      au < finished ; finished ; 2014 ; Comparative Exercise Physiology Volume 10 ; 10 ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2015 ; Comparative Exercise Physiology Volume 11 ; 11 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2016 ; Comparative Exercise Physiology Volume 12 ; 12 ; >
-      au < deepCrawl ; exists ; 2017 ; Comparative Exercise Physiology Volume 13 ; 13 ; >
+      au < frozen ; exists ; 2012 ; Comparative Exercise Physiology Volume 8 ; 8 ; http://www.wageningenacademic.com/ ; >
+      au < finished ; finished ; 2013 ; Comparative Exercise Physiology Volume 9 ; 9 ; http://www.wageningenacademic.com/ ; >
+      au < finished ; finished ; 2014 ; Comparative Exercise Physiology Volume 10 ; 10 ; http://www.wageningenacademic.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; Comparative Exercise Physiology Volume 11 ; 11 ; http://www.wageningenacademic.com/ ; reingest2.clockss.org:8085 >
+      au < frozen ; exists ; 2016 ; Comparative Exercise Physiology Volume 12 ; 12 ; http://www.wageningenacademic.com/ ; >
+      au < deepCrawl ; exists ; 2017 ; Comparative Exercise Physiology Volume 13 ; 13 ; http://www.wageningenacademic.com/ ; >
 
     }
 
@@ -59,9 +59,9 @@
 
       param[journal_id] = jiff
 
-      au < finished ; finished ; 2015 ; Journal of Insects as Food and Feed Volume 1 ; 1 ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2016 ; Journal of Insects as Food and Feed Volume 2 ; 2 ; >
-      au < deepCrawl ; exists ; 2017 ; Journal of Insects as Food and Feed Volume 3 ; 3 ; >
+      au < finished ; finished ; 2015 ; Journal of Insects as Food and Feed Volume 1 ; 1 ; http://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
+      au < frozen ; exists ; 2016 ; Journal of Insects as Food and Feed Volume 2 ; 2 ; http://www.wageningenacademic.com/ ; >
+      au < deepCrawl ; exists ; 2017 ; Journal of Insects as Food and Feed Volume 3 ; 3 ; http://www.wageningenacademic.com/ ; >
 
     }
 
@@ -75,23 +75,23 @@
 
       param[journal_id] = jcns
 
-      au < manifest ; exists ; 2001 ; Journal on Chain and Network Science Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2002 ; Journal on Chain and Network Science Volume 2 ; 2 ; >
-      au < manifest ; exists ; 2003 ; Journal on Chain and Network Science Volume 3 ; 3 ; >
-      au < manifest ; exists ; 2004 ; Journal on Chain and Network Science Volume 4 ; 4 ; >
-      au < manifest ; exists ; 2005 ; Journal on Chain and Network Science Volume 5 ; 5 ; >
-      au < manifest ; exists ; 2006 ; Journal on Chain and Network Science Volume 6 ; 6 ; >
-      au < manifest ; exists ; 2007 ; Journal on Chain and Network Science Volume 7 ; 7 ; >
-      au < manifest ; exists ; 2008 ; Journal on Chain and Network Science Volume 8 ; 8 ; >
-      au < manifest ; exists ; 2009 ; Journal on Chain and Network Science Volume 9 ; 9 ; >
-      au < manifest ; exists ; 2010 ; Journal on Chain and Network Science Volume 10 ; 10 ; >
-      au < manifest ; exists ; 2011 ; Journal on Chain and Network Science Volume 11 ; 11 ; >
-      au < frozen ; exists ; 2012 ; Journal on Chain and Network Science Volume 12 ; 12 ; >
-      au < finished ; finished ; 2013 ; Journal on Chain and Network Science Volume 13 ; 13 ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2014 ; Journal on Chain and Network Science Volume 14 ; 14 ; >
-      au < finished ; finished ; 2015 ; Journal on Chain and Network Science Volume 15 ; 15 ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2016 ; Journal on Chain and Network Science Volume 16 ; 16 ; >
-      au < expected ; exists ; 2017 ; Journal on Chain and Network Science Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2001 ; Journal on Chain and Network Science Volume 1 ; 1 ; https://www.wageningenacademic.com/ ; >
+      au < manifest ; exists ; 2002 ; Journal on Chain and Network Science Volume 2 ; 2 ; https://www.wageningenacademic.com/ ; >
+      au < manifest ; exists ; 2003 ; Journal on Chain and Network Science Volume 3 ; 3 ; https://www.wageningenacademic.com/ ; >
+      au < manifest ; exists ; 2004 ; Journal on Chain and Network Science Volume 4 ; 4 ; https://www.wageningenacademic.com/ ; >
+      au < manifest ; exists ; 2005 ; Journal on Chain and Network Science Volume 5 ; 5 ; https://www.wageningenacademic.com/ ; >
+      au < manifest ; exists ; 2006 ; Journal on Chain and Network Science Volume 6 ; 6 ; https://www.wageningenacademic.com/ ; >
+      au < manifest ; exists ; 2007 ; Journal on Chain and Network Science Volume 7 ; 7 ; https://www.wageningenacademic.com/ ; >
+      au < manifest ; exists ; 2008 ; Journal on Chain and Network Science Volume 8 ; 8 ; https://www.wageningenacademic.com/ ; >
+      au < manifest ; exists ; 2009 ; Journal on Chain and Network Science Volume 9 ; 9 ; https://www.wageningenacademic.com/ ; >
+      au < manifest ; exists ; 2010 ; Journal on Chain and Network Science Volume 10 ; 10 ; https://www.wageningenacademic.com/ ; >
+      au < manifest ; exists ; 2011 ; Journal on Chain and Network Science Volume 11 ; 11 ; https://www.wageningenacademic.com/ ; >
+      au < frozen ; exists ; 2012 ; Journal on Chain and Network Science Volume 12 ; 12 ; http://www.wageningenacademic.com/ ; >
+      au < finished ; finished ; 2013 ; Journal on Chain and Network Science Volume 13 ; 13 ; http://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; Journal on Chain and Network Science Volume 14 ; 14 ; http://www.wageningenacademic.com/ ; >
+      au < finished ; finished ; 2015 ; Journal on Chain and Network Science Volume 15 ; 15 ; http://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
+      au < frozen ; exists ; 2016 ; Journal on Chain and Network Science Volume 16 ; 16 ; http://www.wageningenacademic.com/ ; >
+      au < expected ; exists ; 2017 ; Journal on Chain and Network Science Volume 17 ; 17 ; https://www.wageningenacademic.com/ ; >
 
     }
 
@@ -105,11 +105,11 @@
 
       param[journal_id] = qas
 
-      au < finished ; finished ; 2013 ; Quality Assurance and Safety of Crops & Foods Volume 5 ; 5 ; >
-      au < finished ; finished ; 2014 ; Quality Assurance and Safety of Crops & Foods Volume 6 ; 6 ; >
-      au < finished ; finished ; 2015 ; Quality Assurance and Safety of Crops & Foods Volume 7 ; 7 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2016 ; Quality Assurance and Safety of Crops & Foods Volume 8 ; 8 ; >
-      au < deepCrawl ; exists ; 2017 ; Quality Assurance and Safety of Crops & Foods Volume 9 ; 9 ; >
+      au < finished ; finished ; 2013 ; Quality Assurance and Safety of Crops & Foods Volume 5 ; 5 ; http://www.wageningenacademic.com/ ; >
+      au < finished ; finished ; 2014 ; Quality Assurance and Safety of Crops & Foods Volume 6 ; 6 ; http://www.wageningenacademic.com/ ; >
+      au < finished ; finished ; 2015 ; Quality Assurance and Safety of Crops & Foods Volume 7 ; 7 ; http://www.wageningenacademic.com/ ; reingest2.clockss.org:8085 >
+      au < frozen ; exists ; 2016 ; Quality Assurance and Safety of Crops & Foods Volume 8 ; 8 ; http://www.wageningenacademic.com/ ; >
+      au < deepCrawl ; exists ; 2017 ; Quality Assurance and Safety of Crops & Foods Volume 9 ; 9 ; http://www.wageningenacademic.com/ ; >
 
     }
 
@@ -123,16 +123,16 @@
 
       param[journal_id] = wmj
 
-      au < manifest ; exists ; 2008 ; World Mycotoxin Journal Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2009 ; World Mycotoxin Journal Volume 2 ; 2 ; >
-      au < manifest ; exists ; 2010 ; World Mycotoxin Journal Volume 3 ; 3 ; >
-      au < frozen ; exists ; 2011 ; World Mycotoxin Journal Volume 4 ; 4 ; >
-      au < frozen ; exists ; 2012 ; World Mycotoxin Journal Volume 5 ; 5 ; >
-      au < finished ; finished ; 2013 ; World Mycotoxin Journal Volume 6 ; 6 ; >
-      au < finished ; finished ; 2014 ; World Mycotoxin Journal Volume 7 ; 7 ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2015 ; World Mycotoxin Journal Volume 8 ; 8 ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2016 ; World Mycotoxin Journal Volume 9 ; 9 ; >
-      au < deepCrawl ; exists ; 2017 ; World Mycotoxin Journal Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2008 ; World Mycotoxin Journal Volume 1 ; 1 ; https://www.wageningenacademic.com/ ; >
+      au < manifest ; exists ; 2009 ; World Mycotoxin Journal Volume 2 ; 2 ; https://www.wageningenacademic.com/ ; >
+      au < manifest ; exists ; 2010 ; World Mycotoxin Journal Volume 3 ; 3 ; https://www.wageningenacademic.com/ ; >
+      au < frozen ; exists ; 2011 ; World Mycotoxin Journal Volume 4 ; 4 ; http://www.wageningenacademic.com/ ; >
+      au < frozen ; exists ; 2012 ; World Mycotoxin Journal Volume 5 ; 5 ; http://www.wageningenacademic.com/ ; >
+      au < finished ; finished ; 2013 ; World Mycotoxin Journal Volume 6 ; 6 ; http://www.wageningenacademic.com/ ; >
+      au < finished ; finished ; 2014 ; World Mycotoxin Journal Volume 7 ; 7 ; http://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; World Mycotoxin Journal Volume 8 ; 8 ; http://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
+      au < frozen ; exists ; 2016 ; World Mycotoxin Journal Volume 9 ; 9 ; http://www.wageningenacademic.com/ ; >
+      au < deepCrawl ; exists ; 2017 ; World Mycotoxin Journal Volume 10 ; 10 ; http://www.wageningenacademic.com/ ; >
 
     }
 
