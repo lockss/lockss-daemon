@@ -3,7 +3,7 @@
  */
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -23,7 +23,7 @@ STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
 WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-Except as contained in this notice, tMassachusettsMedicalSocietyHtmlFilterFactoryhe name of Stanford University shall not
+Except as contained in this notice, the name of Stanford University shall not
 be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
@@ -73,7 +73,6 @@ public class MassachusettsMedicalSocietyHtmlHashFilterFactory extends BaseAtypon
         HtmlNodeFilters.tagWithAttribute("div", "id", "topNav"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "corners dropDown"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "boxContent"),
-
 
         // Contain cross-links to other articles in other journals/volumes
         HtmlNodeFilters.tagWithAttribute("div", "id", "related"),
@@ -139,11 +138,26 @@ public class MassachusettsMedicalSocietyHtmlHashFilterFactory extends BaseAtypon
         //Metadata contains either "current-issue" or "Last-6-months" or...
         HtmlNodeFilters.tagWithAttribute("meta", "name", "evt-ageContent"),
         //removes "OpenURL" button local url reference (eg Stanford)
-        HtmlNodeFilters.tagWithAttributeRegex("a", "title", "OpenURL "),
+        HtmlNodeFilters.tagWithAttributeRegex("a", "title", "OpenURL"),
         // references current mp3s "More Weekly Audio Summaries" from page
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "jcarousel-skin-audio"),
         // remove toolsbox
-        HtmlNodeFilters.tagWithAttribute("div", "id", "toolsBox")
+        HtmlNodeFilters.tagWithAttribute("div", "id", "toolsBox"),
+        
+        HtmlNodeFilters.tag("header"),
+        HtmlNodeFilters.tag("aside"),
+        HtmlNodeFilters.tag("nav"),
+        HtmlNodeFilters.tag("footer"),
+        
+        HtmlNodeFilters.tagWithAttribute("div", "id", "nejm_jobs"),
+        HtmlNodeFilters.tagWithAttribute("section", "id", "article_letters"),
+        HtmlNodeFilters.tagWithAttribute("section", "id", "article_references"),
+        HtmlNodeFilters.tagWithAttribute("section", "id", "article_citing_articles"),
+        HtmlNodeFilters.tagWithAttribute("section", "id", "author_affiliations"),
+        // 
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(^(footer-)?ad$|-banner|-institution|ArticleListWidget)"),
+        HtmlNodeFilters.tagWithAttribute("div", "data-widget-def"),
+        HtmlNodeFilters.tagWithAttribute("ul", "class", "m-article-tools"),
         
     };
     

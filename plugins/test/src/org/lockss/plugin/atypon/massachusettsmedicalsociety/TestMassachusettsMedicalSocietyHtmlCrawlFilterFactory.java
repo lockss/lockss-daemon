@@ -3,7 +3,7 @@
  */
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -217,7 +217,7 @@ public class TestMassachusettsMedicalSocietyHtmlCrawlFilterFactory extends Locks
 
       InputStream actIn = fact.createFilteredInputStream(mau, 
           new StringInputStream(adClassHtml), Constants.DEFAULT_ENCODING);
-      assertEquals(adClassHtmlFiltered, StringUtil.fromInputStream(actIn));
+      assertEquals(adTag, adClassHtmlFiltered, StringUtil.fromInputStream(actIn));
     }
 
   }

@@ -1,7 +1,7 @@
 /* Id: $ */
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -90,6 +90,27 @@ public class MassachusettsMedicalSocietyHtmlCrawlFilterFactory implements Filter
              * we do not want them because they are variable.
              */
             HtmlNodeFilters.tagWithAttributeRegex("li", "class", "^downloadSlides"),
+            
+            HtmlNodeFilters.tag("header"),
+            HtmlNodeFilters.tag("aside"),
+            HtmlNodeFilters.tag("nav"),
+            HtmlNodeFilters.tag("footer"),
+            
+            HtmlNodeFilters.tagWithAttribute("div", "id", "nejm_jobs"),
+            HtmlNodeFilters.tagWithAttribute("section", "id", "article_letters"),
+            HtmlNodeFilters.tagWithAttribute("section", "id", "article_references"),
+            HtmlNodeFilters.tagWithAttribute("section", "id", "article_citing_articles"),
+            HtmlNodeFilters.tagWithAttribute("section", "id", "author_affiliations"),
+            // 
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(^(footer-)?ad$|-banner|-institution|ArticleListWidget)"),
+            HtmlNodeFilters.tagWithAttribute("div", "data-widget-def"),
+            
+            HtmlNodeFilters.allExceptSubtree(
+                HtmlNodeFilters.tagWithAttribute("ul", "class", "m-article-tools"),
+                new OrFilter( // HtmlCompoundTransform(
+                    HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/doi/pdf/"),
+                    HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/action/showCitFormats[?]"))),
+            
     };
     return new HtmlFilterInputStream(in,
                                      encoding,

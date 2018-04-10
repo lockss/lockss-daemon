@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>testing</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>14</string>
+    <string>15</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -38,8 +38,8 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>83</string>
-  </entry>  
+    <string>91</string>
+  </entry>
   <entry>
     <string>au_name</string>
     <string>"Massachusetts Medical Society Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
@@ -60,9 +60,9 @@
   <entry>
     <string>text/plain_filter_factory</string>
     <string>org.lockss.plugin.atypon.massachusettsmedicalsociety.MMRisFilterFactory</string>
-  </entry>  
+  </entry>
   <entry>
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.atypon.massachusettsmedicalsociety.MassachusettsMedicalSocietyHtmlCrawlFilterFactory</string>
-  </entry> 
-</map> 
+  </entry>
+</map>
