@@ -2331,7 +2331,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Critical Computer-Based Systems Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014 ; International Journal of Critical Computer-Based Systems Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2015-2016 ; International Journal of Critical Computer-Based Systems Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; International Journal of Critical Computer-Based Systems Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; >
+      au < deepCrawl ; exists ; 2017 ; International Journal of Critical Computer-Based Systems Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2018 ; International Journal of Critical Computer-Based Systems Volume 8 ; 8 ; http://www.inderscienceonline.com/ ; >
 
     }
@@ -6285,7 +6285,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Modelling in Operations Management Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014 ; International Journal of Modelling in Operations Management Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2015 ; International Journal of Modelling in Operations Management Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2016-2017 ; International Journal of Modelling in Operations Management Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; >
+      au < deepCrawl ; exists ; 2016-2017 ; International Journal of Modelling in Operations Management Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2018-2019 ; International Journal of Modelling in Operations Management Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -7321,7 +7321,7 @@
 
       au < doNotProcess ; doNotProcess ; 2009-2011 ; International Journal of Quality and Innovation Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2012-2014 ; International Journal of Quality and Innovation Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; >
-      au < crawling ; exists ; 2016-2017 ; International Journal of Quality and Innovation Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; >
+      au < deepCrawl ; exists ; 2016-2017 ; International Journal of Quality and Innovation Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2018-2019 ; International Journal of Quality and Innovation Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -10028,7 +10028,7 @@
 
       param[journal_id] = ijexportm
 
-      au < crawling ; exists ; 2016-2017 ; International Journal of Export Marketing Volume 1 ; 1 ; http://www.inderscienceonline.com/ ;  > # issue 4 not online
+      au < deepCrawl ; exists ; 2016-2017 ; International Journal of Export Marketing Volume 1 ; 1 ; http://www.inderscienceonline.com/ ;  > # issue 4 not online
       au < expected ; exists ; 2018-2019 ; International Journal of Export Marketing Volume 2 ; 2 ; https://www.inderscienceonline.com/ ;  >
 
   }
