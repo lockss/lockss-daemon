@@ -59,6 +59,7 @@
       au < notReady ; exists ; 2015 ; Early Theatre Volume 18 ; 18 ; 2015 ; > #clockss permission page missing index.php
       au < notReady ; exists ; 2016 ; Early Theatre Volume 19 ; 19 ; 2016 ; > #clockss permission page missing index.php
       au < notReady ; exists ; 2017 ; Early Theatre Volume 20 ; 20 ; 2017 ; > #clockss permission page missing index.php
+      au < expected ; exists ; 2018 ; Early Theatre Volume 21 ; 21 ; 2018 ; >
 
     }
 
@@ -116,6 +117,7 @@
       au < frozen ; exists ; 2015 ; Global Labour Journal Volume 6 ; 6 ; 2015 ; > 
       au < frozen ; exists ; 2016 ; Global Labour Journal Volume 7 ; 7 ; 2016 ; > 
       au < deepCrawl ; exists ; 2017 ; Global Labour Journal Volume 8 ; 8 ; 2017 ; > 
+      au < expected ; exists ; 2018 ; Global Labour Journal Volume 9 ; 9 ; 2018 ; > 
 
     }
 
@@ -135,6 +137,7 @@
       au < frozen ; exists ; 2016 ; Health Reform Observer – Observatoire des Réformes de Santé Volume 4 ; 4 ; 2016 ; > 
       au < deepCrawl ; exists ; 2017 ; Health Reform Observer – Observatoire des Réformes de Santé Volume 5 ; 5 ; 2017 ; > 
       au < manifest ; exists ; 2018 ; Health Reform Observer – Observatoire des Réformes de Santé Volume 6 ; 6 ; 2018 ; > 
+      au < expected ; exists ; 2019 ; Health Reform Observer – Observatoire des Réformes de Santé Volume 7 ; 7 ; 2019 ; > 
 
     }
 
@@ -148,6 +151,7 @@
       param[journal_id] = ijsap
 
       au < deepCrawl ; exists ; 2017 ; International Journal for Students as Partners Volume 1 ; 1 ; 2017 ; > 
+      au < expected ; exists ; 2018 ; International Journal for Students as Partners Volume 2 ; 2 ; 2018 ; > 
 
     }
 
@@ -168,6 +172,7 @@
       au < notReady ; exists ; 2015 ; Journal for the History of Analytical Philosophy Volume 5 ; 5 ; 2015 ; >  #clockss permission page missing index.php
       au < notReady ; exists ; 2016 ; Journal for the History of Analytical Philosophy Volume 6 ; 6 ; 2016 ; >  #clockss permission page missing index.php
       au < notReady ; exists ; 2017 ; Journal for the History of Analytical Philosophy Volume 7 ; 7 ; 2017 ; >  #clockss permission page missing index.php
+      au < expected ; exists ; 2018 ; Journal for the History of Analytical Philosophy Volume 8 ; 8 ; 2018 ; >
 
     }
 
@@ -186,6 +191,7 @@
 #
 #      au < manifest ; exists ; 9999 ; Journal of Professional Communication Volume 0 ; 0 ; 0 ; > 
 #
+au < expected ; exists ; 10000 ; Journal of Professional Communication Volume 1 ; 1 ; 1 ; > 
 #    }
 
     {
@@ -247,6 +253,7 @@
       au < frozen ; exists ; 2015 ; Russell: the Journal of Bertrand Russell Studies Volume 35 ; 35 ; 2015 ; >
       au < frozen ; exists ; 2016 ; Russell: the Journal of Bertrand Russell Studies Volume 36 ; 36 ; 2016 ; >
       au < deepCrawl ; exists ; 2017 ; Russell: the Journal of Bertrand Russell Studies Volume 37 ; 37 ; 2017 ; > 
+      au < expected ; exists ; 2018 ; Russell: the Journal of Bertrand Russell Studies Volume 38 ; 38 ; 2018 ; > 
 
     }
 
@@ -264,6 +271,7 @@
       au < manifest ; exists ; 2012 ; The Sophie Journal Volume 2 ; 2 ; 2012 ; > 
       au < frozen ; exists ; 2015 ; The Sophie Journal Volume 3 ; 3 ; 2015 ; > 
       au < deepCrawl ; exists ; 2017 ; The Sophie Journal Volume 4 ; 4 ; 2017 ; > 
+      au < expected ; exists ; 2018 ; The Sophie Journal Volume 5 ; 5 ; 2018 ; > 
 
     }
 
@@ -282,4 +290,3 @@
     }
 
 }
-
