@@ -36,8 +36,9 @@
     au < frozen ; exists ; 2015 ; Applied Physiology, Nutrition, and Metabolism Volume 40 ; 40 ; >
     au < deepCrawl ; exists ; 2016 ; Applied Physiology, Nutrition, and Metabolism Volume 41 ; 41 ; >
     au < deepCrawl ; exists ; 2017 ; Applied Physiology, Nutrition, and Metabolism Volume 42 ; 42 ; >
-    
-  }  
+    au < expected ; exists ; 2018 ; Applied Physiology, Nutrition, and Metabolism Volume 43 ; 43 ; >
+
+  }
   
   {
   
@@ -88,6 +89,7 @@
       au < frozen ; exists ; 2015 ; Biochemistry and Cell Biology Volume 93 ; 93 ; >
       au < deepCrawl ; exists ; 2016 ; Biochemistry and Cell Biology Volume 94 ; 94 ; >
       au < deepCrawl ; exists ; 2017 ; Biochemistry and Cell Biology Volume 95 ; 95 ; >
+      au < expected ; exists ; 2018 ; Biochemistry and Cell Biology Volume 96 ; 96 ; >
 
     }
   
@@ -213,6 +215,7 @@
       au < frozen ; exists ; 2015 ; Botany Volume 93 ; 93 ; >
       au < deepCrawl ; exists ; 2016 ; Botany Volume 94 ; 94 ; >
       au < deepCrawl ; exists ; 2017 ; Botany Volume 95 ; 95 ; >
+      au < expected ; exists ; 2018 ; Botany Volume 96 ; 96 ; >
 
     }
     
@@ -359,6 +362,7 @@
     au < frozen ; exists ; 2015 ; Canadian Geotechnical Journal Volume 52 ; 52 ; >
     au < deepCrawl ; exists ; 2016 ; Canadian Geotechnical Journal Volume 53 ; 53 ; >
     au < deepCrawl ; exists ; 2017 ; Canadian Geotechnical Journal Volume 54 ; 54 ; >
+    au < expected ; exists ; 2018 ; Canadian Geotechnical Journal Volume 55 ; 55 ; >
 
   }
 
@@ -467,6 +471,7 @@
     au < deepCrawl ; exists ; 2016 ; Canadian Journal of Chemistry Volume 94 ; 94 ; >
     au < deepCrawl ; exists ; 2017 ; Canadian Journal of Chemistry Volume 95 ; 95 ; >
     
+    au < expected ; exists ; 2018 ; Canadian Journal of Chemistry Volume 96 ; 96 ; >
     }
     
     {
@@ -524,6 +529,7 @@
     au < deepCrawl ; exists ; 2016 ; Canadian Journal of Civil Engineering Volume 43 ; 43 ; >
     au < deepCrawl ; exists ; 2017 ; Canadian Journal of Civil Engineering Volume 44 ; 44 ; >
     
+    au < expected ; exists ; 2018 ; Canadian Journal of Civil Engineering Volume 45 ; 45 ; >
     }
 
     {
@@ -590,6 +596,7 @@
     au < frozen ; exists ; 2015 ; Canadian Journal of Earth Sciences Volume 52 ; 52 ; >
     au < deepCrawl ; exists ; 2016 ; Canadian Journal of Earth Sciences Volume 53 ; 53 ; >
     au < deepCrawl ; exists ; 2017 ; Canadian Journal of Earth Sciences Volume 54 ; 54 ; >
+    au < expected ; exists ; 2018 ; Canadian Journal of Earth Sciences Volume 55 ; 55 ; >
 
     }
     
@@ -649,6 +656,7 @@
     au < deepCrawl ; exists ; 2016 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 73 ; 73 ; > 
     au < deepCrawl ; exists ; 2017 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 74 ; 74 ; > 
    
+    au < expected ; exists ; 2018 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 75 ; 75 ; > 
     }
 
     }
@@ -837,6 +845,7 @@
     au < frozen ; exists ; 2015 ; Canadian Journal of Forest Research Volume 45 ; 45 ; >
     au < deepCrawl ; exists ; 2016 ; Canadian Journal of Forest Research Volume 46 ; 46 ; >
     au < deepCrawl ; exists ; 2017 ; Canadian Journal of Forest Research Volume 47 ; 47 ; >
+    au < expected ; exists ; 2018 ; Canadian Journal of Forest Research Volume 48 ; 48 ; >
 
     }
 
@@ -913,6 +922,7 @@
     au < frozen ; exists ; 2015 ; Canadian Journal of Microbiology Volume 61 ; 61 ; >
     au < deepCrawl ; exists ; 2016 ; Canadian Journal of Microbiology Volume 62 ; 62 ; >
     au < deepCrawl ; exists ; 2017 ; Canadian Journal of Microbiology Volume 63 ; 63 ; >
+    au < expected ; exists ; 2018 ; Canadian Journal of Microbiology Volume 64 ; 64 ; >
 
     }
 
@@ -993,6 +1003,7 @@
     au < frozen ; exists ; 2015 ; Canadian Journal of Physics Volume 93 ; 93 ; >
     au < deepCrawl ; exists ; 2016 ; Canadian Journal of Physics Volume 94 ; 94 ; >
     au < deepCrawl ; exists ; 2017 ; Canadian Journal of Physics Volume 95 ; 95 ; >
+    au < expected ; exists ; 2018 ; Canadian Journal of Physics Volume 96 ; 96 ; >
 
     }
     
@@ -1062,6 +1073,7 @@
     au < frozen ; exists ; 2015 ; Canadian Journal of Physiology and Pharmacology Volume 93 ; 93 ; >
     au < deepCrawl ; exists ; 2016 ; Canadian Journal of Physiology and Pharmacology Volume 94 ; 94 ; >
     au < deepCrawl ; exists ; 2017 ; Canadian Journal of Physiology and Pharmacology Volume 95 ; 95 ; >
+    au < expected ; exists ; 2018 ; Canadian Journal of Physiology and Pharmacology Volume 96 ; 96 ; >
 
     }
     
@@ -1176,7 +1188,8 @@
     au < frozen ; exists ; 2015 ; Canadian Journal of Zoology Volume 93 ; 93 ; >
     au < deepCrawl ; exists ; 2016 ; Canadian Journal of Zoology Volume 94 ; 94 ; >
     au < deepCrawl ; exists ; 2017 ; Canadian Journal of Zoology Volume 95 ; 95 ; >
-    
+    au < expected ; exists ; 2018 ; Canadian Journal of Zoology Volume 96 ; 96 ; >
+
     }
 
     {
@@ -1214,6 +1227,7 @@
     au < frozen ; exists ; 2015 ; Environmental Reviews Volume 23 ; 23 ; >
     au < deepCrawl ; exists ; 2016 ; Environmental Reviews Volume 24 ; 24 ; >
     au < deepCrawl ; exists ; 2017 ; Environmental Reviews Volume 25 ; 25 ; >
+    au < expected ; exists ; 2018 ; Environmental Reviews Volume 26 ; 26 ; >
 
     }
 
@@ -1263,6 +1277,7 @@
       au < frozen ; exists ; 2015 ; Genome Volume 58 ; 58 ; >
       au < deepCrawl ; exists ; 2016 ; Genome Volume 59 ; 59 ; >
       au < deepCrawl ; exists ; 2017 ; Genome Volume 60 ; 60 ; >
+      au < expected ; exists ; 2018 ; Genome Volume 61 ; 61 ; >
 
     }
     
@@ -1351,6 +1366,7 @@
     au < frozen ; exists ; 2015 ; Journal of Unmanned Vehicle Systems Volume 3 ; 3 ; >
     au < deepCrawl ; exists ; 2016 ; Journal of Unmanned Vehicle Systems Volume 4 ; 4 ; >
     au < deepCrawl ; exists ; 2017 ; Journal of Unmanned Vehicle Systems Volume 5 ; 5 ; >
+    au < expected ; exists ; 2018 ; Journal of Unmanned Vehicle Systems Volume 6 ; 6 ; >
 
     }
     
@@ -1383,6 +1399,7 @@
     au < frozen ; exists ; 2015 ; Canadian Journal of Animal Science Volume 95 ; 95 ; >
     au < frozen ; exists ; 2016 ; Canadian Journal of Animal Science Volume 96 ; 96 ; >
     au < deepCrawl ; exists ; 2017 ; Canadian Journal of Animal Science Volume 97 ; 97 ; >
+    au < expected ; exists ; 2018 ; Canadian Journal of Animal Science Volume 98 ; 98 ; >
 
     }
     
@@ -1415,6 +1432,7 @@
     au < frozen ; exists ; 2015 ; Canadian Journal of Plant Science Volume 95 ; 95 ; >
     au < frozen ; exists ; 2016 ; Canadian Journal of Plant Science Volume 96 ; 96 ; >
     au < deepCrawl ; exists ; 2017 ; Canadian Journal of Plant Science Volume 97 ; 97 ; >
+    au < expected ; exists ; 2018 ; Canadian Journal of Plant Science Volume 98 ; 98 ; >
 
     }
     
@@ -1447,6 +1465,7 @@
     au < frozen ; exists ; 2015 ; Canadian Journal of Soil Science Volume 95 ; 95 ; >
     au < frozen ; exists ; 2016 ; Canadian Journal of Soil Science Volume 96 ; 96 ; >
     au < deepCrawl ; exists ; 2017 ; Canadian Journal of Soil Science Volume 97 ; 97 ; >
+    au < expected ; exists ; 2018 ; Canadian Journal of Soil Science Volume 98 ; 98 ; >
 
     }
     
@@ -1494,6 +1513,7 @@
     au < frozen ; exists ; 2015 ; Arctic Science Volume 1 ; 1 ; >
     au < frozen ; exists ; 2016 ; Arctic Science Volume 2 ; 2 ; >
     au < deepCrawl ; exists ; 2017 ; Arctic Science Volume 3 ; 3 ; >
+    au < expected ; exists ; 2018 ; Arctic Science Volume 4 ; 4 ; >
 
     }
 }
@@ -1521,7 +1541,7 @@
      
     param[journal_id] = facets
 
-    au < notReady ; exists ; 2017 ; FACETS Volume 1 ; 1 ; >#not really atypon. http://www.facetsjournal.com/clockss/facets/1/index.html
+    au < notReady ; exists ; 2016 ; FACETS Volume 1 ; 1 ; >#not really atypon. http://www.facetsjournal.com/clockss/facets/1/index.html
     au < notReady ; exists ; 2017 ; FACETS Volume 2 ; 2 ; >#not really atypon. http://www.facetsjournal.com/clockss/facets/2/index.html
 
     }
