@@ -46,14 +46,14 @@ import org.lockss.plugin.*;
  * <li>http://jamanetwork.com/journals/jama/fullarticle/2174029</li>
  * </ul>
  */
-public class AmaScUrlNormalizer implements UrlNormalizer {
+public class AmaScUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
 
   private static final Pattern LINKID_PATTERN = Pattern.compile("[?]linkid=\\d+$", Pattern.CASE_INSENSITIVE);
   private static final String LINKID_CANONICAL = "";
   
   
   @Override
-  public String normalizeUrl(String url, ArchivalUnit au) throws PluginException {
+  public String additionalNormalization(String url, ArchivalUnit au) throws PluginException {
     url = LINKID_PATTERN.matcher(url).replaceFirst(LINKID_CANONICAL);
     return url;
   }

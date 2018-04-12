@@ -88,6 +88,7 @@ public class ScHtmlMetadataExtractorFactory implements FileMetadataExtractorFact
         if (url == null || url.isEmpty() || !au.makeCachedUrl(url).hasContent()) {
           url = cu.getUrl();
         }
+        // this will have the correct protocol for this AU
         am.replace(MetadataField.FIELD_ACCESS_URL, url);
         return am;
       }

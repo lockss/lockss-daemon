@@ -10,7 +10,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -83,9 +83,12 @@
     <string>au_name</string>
     <string>"American Medical Association Plugin (CLOCKSS), Base URL %s, Resource ID %d, Year %d", base_url, resource_id, year</string>
   </entry>
-  <entry>
+  <entry>  
     <string>au_start_url</string>
-    <string>"%sLOCKSS/ListOfIssues.aspx?resourceId=%d&amp;year=%d", base_url, resource_id, year</string>
+    <list>
+      <string>"%sLOCKSS/ListOfIssues.aspx?resourceId=%d&amp;year=%d", to_http(base_url), resource_id, year</string>
+      <string>"%sLOCKSS/ListOfIssues.aspx?resourceId=%d&amp;year=%d", to_https(base_url), resource_id, year</string>
+    </list>    
   </entry>
   <entry>
     <string>au_feature_urls</string>
@@ -118,12 +121,15 @@
     <list>
       <string>1,"^https?://([^.]+\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net)/"</string>
       <string>1,"^https?://(%s|[^.]+\.(silverchair-?cdn\.com/|cloudfront\.net/|brightcove\.net/)).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", url_host(base_url)</string>
-      <string>1,"^%sjournals/%s/issue/", base_url, journal_id</string>
-      <string>1,"^%sjournals/%s/(fullarticle|article-abstract)/", base_url, journal_id</string>
-      <string>1,"^%s(journals/%s/)?data/journals/[^/]+/[^/]+/[^./]+\.pdf$", base_url, journal_id</string>
-      <string>1,"^%spdfaccess\.ashx[?]url=/data/journals/(.+routename=%s|[^/]+/[^/]+(/[^/]+)?$)", base_url, journal_id</string>
-      <string>1,"^%sjournals/%s/downloadcitation/[^?/]+\?format=ris$", base_url, journal_id</string>
-      <string>2,"^%sdownloadimage\.aspx\?", base_url</string>
+      <string>1,"^https?://%s/journals/%s/issue/", url_host(base_url), journal_id</string>
+      <string>1,"^https?://%s/journals/%s/(fullarticle|article-abstract)/", url_host(base_url), journal_id</string>
+      <!--  was at: /journals/jamacardiology/data/journals/cardiology/935228/hoi150012.pdf -->
+      <!-- now at:  /journals/cardiology/articlepdf/2492417/hoi150012.pdf-->
+      <!--          /journals/jamacardiology/articlepdf/2498961/hoi150011.pdf -->
+      <string>1,"^https?://%s/(journals/%s/)?data/journals/[^/]+/[^/]+/[^./]+\.pdf$", url_host(base_url), journal_id</string>
+      <string>1,"^https?://%s/pdfaccess\.ashx[?]url=/data/journals/(.+routename=%s|[^/]+/[^/]+(/[^/]+)?$)", url_host(base_url), journal_id</string>
+      <string>1,"^https?://%s/journals/%s/downloadcitation/[^?/]+\?format=ris$", url_host(base_url), journal_id</string>
+      <string>2,"^https?://%s/downloadimage\.aspx\?", url_host(base_url)</string>
       
       <!--  Not collecting audio/video/interactive content
       <string>1,"^%slearning/(audio|video)-player/[^./]+$", base_url</string> -->
@@ -191,6 +197,11 @@
       </entry>
     </map>
   </entry>
+<!--  for http to https conversion support -->  
+  <entry>
+    <string>plugin_url_fetcher_factory</string>
+    <string>org.lockss.plugin.base.HttpToHttpsUrlFetcherFactory</string>
+  </entry>  
   <entry>
     <string>plugin_url_consumer_factory</string>
     <string>org.lockss.plugin.silverchair.ama.AmaScUrlConsumerFactory</string>

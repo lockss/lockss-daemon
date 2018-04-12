@@ -37,11 +37,12 @@ import java.util.regex.Pattern;
 
 import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.plugin.*;
+import org.lockss.plugin.base.HttpToHttpsUrlConsumer;
 import org.lockss.plugin.base.SimpleUrlConsumer;
 import org.lockss.util.Logger;
 
 /**
- * @since 1.68.0 with storeAtOrigUrl()
+ * @since 1.70.0 with storeAtOrigUrl() and https transition support
  */
 public class AmaScUrlConsumerFactory implements UrlConsumerFactory {
   private static final Logger log = Logger.getLogger(AmaScUrlConsumerFactory.class);
@@ -87,20 +88,13 @@ public class AmaScUrlConsumerFactory implements UrlConsumerFactory {
    * 
    * @since 1.68.0
    */
-  public class AmaScUrlConsumer extends SimpleUrlConsumer {
+  public class AmaScUrlConsumer extends HttpToHttpsUrlConsumer {
     
     public AmaScUrlConsumer(CrawlerFacade facade,
         FetchedUrlData fud) {
       super(facade, fud);
     }
     
-    @Override
-    public void consume() throws IOException {
-      if (shouldStoreRedirectsAtOrigUrl()) {
-        storeAtOrigUrl();
-      }
-      super.consume();
-    }
     
     /**
      * <p>
@@ -111,13 +105,19 @@ public class AmaScUrlConsumerFactory implements UrlConsumerFactory {
      * @return True if and only if the fetched URL data represents a particular
      *         redirect chain that should cause content to be stored only at the
      *         origin URL.
+     *         Also support for http to https transition
      */
-    protected boolean shouldStoreRedirectsAtOrigUrl() {
-      boolean should =  fud.redirectUrls != null
-          && fud.redirectUrls.size() == 1
+    @Override
+	public boolean shouldStoreAtOrigUrl() {
+     	// first just check for simple http to https transition 
+    	  boolean should = super.shouldStoreAtOrigUrl();
+      if (!should) {
+    	  	should = fud.redirectUrls != null
+          && fud.redirectUrls.size() >= 1 // could be http to https to dest
           && fud.redirectUrls.get(0).equals(fud.fetchUrl)
           && destPdfPat.matcher(fud.fetchUrl).find()
           && origPdfPat.matcher(fud.origUrl).find();
+      }
       return should;
     }
     

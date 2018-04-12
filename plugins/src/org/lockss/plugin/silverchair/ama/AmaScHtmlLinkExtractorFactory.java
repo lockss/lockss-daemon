@@ -39,6 +39,7 @@ import org.lockss.extractor.*;
 import org.lockss.extractor.JsoupHtmlLinkExtractor.SimpleTagLinkExtractor;
 import org.lockss.extractor.LinkExtractor.Callback;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.AuUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 
@@ -105,7 +106,8 @@ public class AmaScHtmlLinkExtractorFactory implements LinkExtractorFactory {
       if (node.hasAttr("data-article-url")) {
         String url = node.attr("data-article-url");
         if (!StringUtil.isNullString(url)) {
-          cb.foundLink(url);
+        		// won't matter if it's relative - necessary for absolute
+          cb.foundLink(AuUtil.normalizeHttpHttpsFromBaseUrl(au,url));
         }
       }
     }
