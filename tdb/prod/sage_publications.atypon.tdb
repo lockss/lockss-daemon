@@ -878,12 +878,14 @@
 
         #param[journal_id] = aar
 
+        au < exists ; 2010 ; Allergy & Rhinology Volume 1 ; 1 ; aara >
         au < manifest ; 2011 ; Allergy & Rhinology Volume 2 ; 2 ; aara >
         au < manifest ; 2012 ; Allergy & Rhinology Volume 3 ; 3 ; aara >
         au < manifest ; 2013 ; Allergy & Rhinology Volume 4 ; 4 ; aara >
         au < manifest ; 2014 ; Allergy & Rhinology Volume 5 ; 5 ; aara >
         au < manifest ; 2015 ; Allergy & Rhinology Volume 6 ; 6 ; aara >
         au < manifest ; 2016 ; Allergy & Rhinology Volume 7 ; 7 ; aara >
+        au < exists ; 2017 ; Allergy & Rhinology Volume 8 ; 8 ; aara >
 
     }
 
@@ -18744,9 +18746,9 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2008 ; Journal of Applied Biomaterials & Functional Materials Volume 6 ; 6 ; jbfb >
         au < manifest ; 2009 ; Journal of Applied Biomaterials & Functional Materials Volume 7 ; 7 ; jbfb >
         au < manifest ; 2010 ; Journal of Applied Biomaterials & Functional Materials Volume 8 ; 8 ; jbfb >
-        au < doesNotExist ; 2011 ; Journal of Applied Biomaterials & Functional Materials Volume 9 ; 9 ; jbfa >
-        au < doesNotExist ; 2012 ; Journal of Applied Biomaterials & Functional Materials Volume 10 ; 10 ; jbfa >
-        au < doesNotExist ; 2013 ; Journal of Applied Biomaterials & Functional Materials Volume 11 ; 11 ; jbfa >
+        au < exists ; 2011 ; Journal of Applied Biomaterials & Functional Materials Volume 9 ; 9 ; jbfb >
+        au < exists ; 2012 ; Journal of Applied Biomaterials & Functional Materials Volume 10 ; 10 ; jbfa >
+        au < exists ; 2013 ; Journal of Applied Biomaterials & Functional Materials Volume 11 ; 11 ; jbfa >
         au < manifest ; 2014 ; Journal of Applied Biomaterials & Functional Materials Volume 12 ; 12 ; jbfa >
         au < manifest ; 2015 ; Journal of Applied Biomaterials & Functional Materials Volume 13 ; 13 ; jbfa >
         au < manifest ; 2016 ; Journal of Applied Biomaterials & Functional Materials Volume 14 ; 14 ; jbfa >
