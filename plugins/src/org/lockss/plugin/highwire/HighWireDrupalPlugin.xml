@@ -150,7 +150,7 @@
       <string>1,"^https?://%s/content(/[^/]+)?/suppl/", url_host(base_url)</string>
       <string>2,"^https?://%s/content/(by/(year|volume)|current|.*/article-)", url_host(base_url)</string>
       <!-- after content is optional jcode, required vol, optional issue, optional .toc  -->
-      <string>1,"^https?://%s/content(/[^/.]+)?/%s(/[^/.]+)?(\.toc)?$", url_host(base_url), volume_name</string>
+      <string>1,"^https?://%s/content(/(?![0-9]+/)[^/.]+)?/%s(/[^/.]+)?(\.toc)?$", url_host(base_url), volume_name</string>
       <!-- after content is required vol, optional issue, required page, then allowed extensions or EOL 
             page may also contain roman numerals, dot, & number (iii.2)  -->
       <!-- ASH has a new pattern for supp data http://www.bloodjournal.org/content/121/1/170/tab-figures-only -->
@@ -158,18 +158,20 @@
       <!-- http://msphere.asm.org/content/1/1/masthead.1-1 was excluded -->
       <string>1,"^https?://%s/content/%s(/[^/.]+)?/((ENEURO|wpt|masthead)\.[0-9.-]+)(|/related|/tab-figures-(data|only))$", url_host(base_url), volume_name</string>
       <!-- after content is optional jcode, required vol, optional issue, required page, then allowed extensions -->
-      <string>1,"^https?://%s/content(/[^/.]+)?/%s(/[^/.]+)?/(((?:([ivx]+)\.)?[^/.]+?(\.\d+)?))(\.(?:full(?:-text)?\.pdf(?:\+html)?))$", url_host(base_url), volume_name</string>
-      <string>1,"^https?://%s/content(/[^/.]+)?/%s(/[^/.]+)?/((ENEURO|wpt|masthead)\.[0-9.-]+)(\.(?:full(?:-text)?\.pdf(?:\+html)?))$", url_host(base_url), volume_name</string>
-      <string>1,"^https?://%s/content(/[^/.]+)?/%s(/[^/.]+)?/.+\.(long|supplemental|data|figures-only)$", url_host(base_url), volume_name</string>
+      <string>1,"^https?://%s/content(/(?![0-9]+/)[^/.]+)?/%s(/[^/.]+)?/(((?:([ivx]+)\.)?[^/.]+?(\.\d+)?))(\.(?:full(?:-text)?\.pdf(?:\+html)?))$", url_host(base_url), volume_name</string>
+      <string>1,"^https?://%s/content(/(?![0-9]+/)[^/.]+)?/%s(/[^/.]+)?/((ENEURO|wpt|masthead)\.[0-9.-]+)(\.(?:full(?:-text)?\.pdf(?:\+html)?))$", url_host(base_url), volume_name</string>
+      <string>1,"^https?://%s/content(/(?![0-9]+/)[^/.]+)?/%s(/[^/.]+)?/.+\.(long|supplemental|data|figures-only)$", url_host(base_url), volume_name</string>
       <string>1,"^https?://%s/search/volume[^/?]+?%s[^/?]+\?(page=[0-9]+&amp;)?facet.+toc-section-id", url_host(base_url), volume_name</string>
       <string>1,"^https?://%s/highwire/filestream/", url_host(base_url)</string>
       <string>1,"^https?://%s/[^/]+/(download-(pdf|suppl|video))/", url_host(base_url)</string>
       <!-- allow content like http://msphere.asm.org/content/msph/1/1/e00001-15/DC2/embed/inline-supplementary-material-2.pdf?download=true -->
       <string>1,"^https?://%s/[^?]+(/embed/inline-supplementary-)", url_host(base_url)</string>
+      <!-- allow content like http://imaging.onlinejacc.org/content/jimg/6/11/1129/DC1/embed/media-1.docx -->
+      <string>1,"^https?://%s/content(/(?![0-9]+/)[^/.]+)?/%s(/[^/.]+){1,2}/DC[^/]{0,5}/embed/", url_host(base_url), volume_name</string>
       <!-- otherwise, all content from glencoesoftware CDN -->
       <string>1,"^https?://([^/]+\.glencoesoftware\.com/.)"</string>
       <string>1,"^https?://signin\.hematology\.org/Login\.aspx"</string>
-      <string>1,"^https?://%s/content(/[^/.]+)?/%s(/[^/.]+).+[?]sso-checked=true$", url_host(base_url), volume_name</string>
+      <string>1,"^https?://%s/content(/(?![0-9]+/)[^/.]+)?/%s(/[^/.]+).+[?]sso-checked=true$", url_host(base_url), volume_name</string>
     </list>
   </entry>
   <entry>

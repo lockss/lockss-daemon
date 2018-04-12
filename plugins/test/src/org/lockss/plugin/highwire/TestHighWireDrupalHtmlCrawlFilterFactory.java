@@ -293,6 +293,34 @@ public class TestHighWireDrupalHtmlCrawlFilterFactory extends LockssTestCase {
       "\n" +
       "</div>";
   
+  private static final String withPrevNext =
+      "<div class=\"panel-pane pane-highwire-node-pager\">\n" + 
+      "  <div class=\"pane-content\">\n" + 
+      "    <div class=\"pager highwire-pager pager-mini clearfix highwire-node-pager highwire-issue-pager\">\n" +
+      "<span class=\"pager-prev\">\n" +
+      "<a href=\"/content/99/6\" title=\"JACC: : 99 (6)\" rel=\"prev\" class=\"pager-link-prev link-icon\">\n" +
+      "<i class=\"icon-circle-arrow-left\"></i> <span class=\"title\">Previous</span></a></span>\n" +
+      "<span class=\"pager-next\">\n" +
+      "<a href=\"/content/100/1\" title=\"JACC: : 100 (1)\" rel=\"next\" class=\"pager-link-next link-icon-right link-icon\">\n" +
+      "<span class=\"title\">Next</span> <i class=\"icon-circle-arrow-right\"></i></a></span>\n" +
+      "    </div>\n" +
+      "  </div>\n" + 
+      "</div>";
+  
+  private static final String withoutPrevNext =
+      "<div class=\"panel-pane pane-highwire-node-pager\">\n" + 
+      "  <div class=\"pane-content\">\n" + 
+      "    <div class=\"pager highwire-pager pager-mini clearfix highwire-node-pager highwire-issue-pager\">\n" + 
+      "<span class=\"pager-prev\">\n" + 
+      "<a href=\"/content/99/6\" title=\"JACC: : 99 (6)\" rel=\"prev\" class=\"pager-link-prev link-icon\">\n" + 
+      "<i class=\"icon-circle-arrow-left\"></i> <span class=\"title\">Previous</span></a></span>\n" + 
+      "<span class=\"pager-next\">\n" + 
+      "<a href=\"/content/100/1\" title=\"JACC: : 100 (1)\" rel=\"next\" class=\"pager-link-next link-icon-right link-icon\">\n" + 
+      "<span class=\"title\">Next</span> <i class=\"icon-circle-arrow-right\"></i></a></span>\n" + 
+      "    </div>\n" + 
+      "  </div>\n" + 
+      "</div>";
+  
   /*
    */
   public void testFiltering() throws Exception {
@@ -311,7 +339,7 @@ public class TestHighWireDrupalHtmlCrawlFilterFactory extends LockssTestCase {
     a = StringUtil.fromInputStream(inA);
     assertEquals(withoutFooter, a);
     
-//    // ref list
+    // ref list
     inA = fact.createFilteredInputStream(mau, new StringInputStream(withRefList),
         Constants.DEFAULT_ENCODING);
     a = StringUtil.fromInputStream(inA);
@@ -346,6 +374,12 @@ public class TestHighWireDrupalHtmlCrawlFilterFactory extends LockssTestCase {
         Constants.DEFAULT_ENCODING);
     a = StringUtil.fromInputStream(inA);
     assertEquals(withoutNav, a);
+    
+    // prev/next
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(withPrevNext),
+        Constants.DEFAULT_ENCODING);
+    a = StringUtil.fromInputStream(inA);
+    assertEquals(withoutPrevNext, a);
     
   }
   

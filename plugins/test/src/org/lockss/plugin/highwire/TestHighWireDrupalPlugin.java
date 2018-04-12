@@ -302,6 +302,16 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
     shouldCacheTest(ROOT_URL + "content/jid/1/1/ivx.1", false, au);
     shouldCacheTest(ROOT_URL + "content/jid/1/1/ivx.1.full.pdf", true, au);
     
+    shouldCacheTest(ROOT_URL + "content/2013/1/X3", false, au);
+    shouldCacheTest(ROOT_URL + "content/2013a/1/3", true, au);
+    
+    // http://imaging.onlinejacc.org/content/jimg/6/11/1129/DC1/embed/media-1.docx
+    shouldCacheTest(ROOT_URL + "content/jid/1/1/1/DC1/embed/doc-1.docx", true, au);
+    shouldCacheTest(ROOT_URL + "content/jid/1/1/1/DC1/embed/doc-1.pdf", true, au);
+    shouldCacheTest(ROOT_URL + "content/jid/1/1/DC1/embed/doc-1.docx", true, au);
+    shouldCacheTest(ROOT_URL + "content/1/1/1/DC1/embed/doc-1.pdf", true, au);
+    shouldCacheTest(ROOT_URL + "content/1/1/DC1/embed/doc-1.docx", true, au);
+    
   }
   
   // Test the crawl rules for HW Drupal
@@ -338,7 +348,6 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
     shouldCacheTest(ROOT_URL + "content/os-86/1_suppl_2/2.full.pdf", true, au);
     shouldCacheTest(ROOT_URL + "content/os-86/1_suppl_2/2.full.pdf+html", true, au);
     shouldCacheTest(ROOT_URL + "content/os-86/1_suppl_2/2.full-text.pdf+html", true, au);
-    
     
   }
   
