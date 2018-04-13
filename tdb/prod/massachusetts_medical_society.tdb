@@ -11,6 +11,7 @@
       issnl = 0028-4793
     >
 
+      attr[EncodingMatchRange]=1000
     {
 
       pluginPrefix = org.lockss.plugin.highwire.
@@ -38,6 +39,7 @@
       param[base_url] = http://www.nejm.org/
       param[journal_id] = nejm
       implicit < status ; year ; name ; param[volume_name] >
+      
 
       au < released ; 2008 ; New England Journal of Medicine Volume 358 ; 358 >
       au < released ; 2008 ; New England Journal of Medicine Volume 359 ; 359 >
