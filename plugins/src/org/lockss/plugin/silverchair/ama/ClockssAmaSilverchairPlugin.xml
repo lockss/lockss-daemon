@@ -124,9 +124,13 @@
       <string>1,"^https?://%s/journals/%s/issue/", url_host(base_url), journal_id</string>
       <string>1,"^https?://%s/journals/%s/(fullarticle|article-abstract)/", url_host(base_url), journal_id</string>
       <!--  was at: /journals/jamacardiology/data/journals/cardiology/935228/hoi150012.pdf -->
-      <!-- now at:  /journals/cardiology/articlepdf/2492417/hoi150012.pdf-->
-      <!--          /journals/jamacardiology/articlepdf/2498961/hoi150011.pdf -->
-      <string>1,"^https?://%s/(journals/%s/)?data/journals/[^/]+/[^/]+/[^./]+\.pdf$", url_host(base_url), journal_id</string>
+      <!--   now at:/journals/jamacardiology/articlepdf/2498961/hoi150011.pdf -->
+	  <!--  allow arbitrary journalid level for pdf only; otherwise fulltext can go to other jama journals -->
+	  <!--  supplemental pdf can use different journal identifier:eg CARDIOLOGY vs jamacardiology -->
+	  <!--  supplementary data/Journals/CARDIOLOGY/935934/HOI160066supp1_prod.pdf redirect to final of -->
+	  <!--  journals/CARDIOLOGY/articlepdf/2557840/hoi160066supp1_prod.pdf --> 
+      <string>1,"^https?://%s/journals/[^/]+/articlepdf/[^./]+/[^/]+\.pdf$", url_host(base_url)</string>
+      <string>1,"^https?://%s/(journals/%s/)?data/(J|j)ournals/[^/]+/[^/]+/[^./]+\.pdf$", url_host(base_url), journal_id</string>
       <string>1,"^https?://%s/pdfaccess\.ashx[?]url=/data/journals/(.+routename=%s|[^/]+/[^/]+(/[^/]+)?$)", url_host(base_url), journal_id</string>
       <string>1,"^https?://%s/journals/%s/downloadcitation/[^?/]+\?format=ris$", url_host(base_url), journal_id</string>
       <string>2,"^https?://%s/downloadimage\.aspx\?", url_host(base_url)</string>

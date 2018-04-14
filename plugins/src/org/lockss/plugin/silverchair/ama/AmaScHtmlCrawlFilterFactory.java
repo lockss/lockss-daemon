@@ -42,23 +42,6 @@ import org.lockss.plugin.*;
 
 public class AmaScHtmlCrawlFilterFactory implements FilterFactory {
 
-  /*
-   * XXX Not sure what this indicates, however, it is in the parent version
-   * AMA = American Medical Association (http://jamanetwork.com/)
-   * Tabs 20151025
-   * 1=extract/abstract/article
-   * 2=discussion (w/i framework of article contents)
-   * 3=figures
-   * 4=tables
-   * 5=video
-   * 6=references
-   * 7=letters
-   * 8=cme
-   * 9=citing
-   * 10=comments
-   * 12=supplemental
-   *
-   */
 
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,

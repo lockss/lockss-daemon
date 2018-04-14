@@ -52,8 +52,17 @@ public class AmaScUrlConsumerFactory implements UrlConsumerFactory {
   protected static final String DEST_PDF_STRING =
       "/pdfaccess[.]ashx[?]url=" + PDF_STRING + "(.routename=.+)?$";
   
+  // 4/13/18 - the website has changed - now using https AND the urls and redirects have changed again
+  // PDF links are: https://jamanetwork.com/journals/jamacardiology/articlepdf/2569804/hoi160069.pdf
+  // no longer appear to redirect, nor do figures, tables, etc
+  // PDF supplemental files redirect 
+  // from: https://jamanetwork.com/data/Journals/CARDIOLOGY/935934/HOI160069supp1_prod.pdf
+  // to: https://jamanetwork.com/journals/CARDIOLOGY/articlepdf/2569804/hoi160069supp1_prod.pdf
+  protected static final String NEW_PDF_STRING = "/journals/[^/]+/articlepdf/[^/]+/[^/.]+[.]pdf";
+    
   protected static final Pattern origPdfPat = Pattern.compile(ORIG_PDF_STRING, Pattern.CASE_INSENSITIVE);
   protected static final Pattern destPdfPat = Pattern.compile(DEST_PDF_STRING, Pattern.CASE_INSENSITIVE);
+  protected static final Pattern newDestPdfPat = Pattern.compile(NEW_PDF_STRING, Pattern.CASE_INSENSITIVE);
   
   @Override
   public UrlConsumer createUrlConsumer(CrawlerFacade facade, FetchedUrlData fud) {
@@ -111,12 +120,13 @@ public class AmaScUrlConsumerFactory implements UrlConsumerFactory {
 	public boolean shouldStoreAtOrigUrl() {
      	// first just check for simple http to https transition 
     	  boolean should = super.shouldStoreAtOrigUrl();
-      if (!should) {
-    	  	should = fud.redirectUrls != null
-          && fud.redirectUrls.size() >= 1 // could be http to https to dest
-          && fud.redirectUrls.get(0).equals(fud.fetchUrl)
-          && destPdfPat.matcher(fud.fetchUrl).find()
-          && origPdfPat.matcher(fud.origUrl).find();
+      if ((!should) && (fud.redirectUrls != null && fud.redirectUrls.size() >=1)) { // could be http to https to dest
+  	  	should =  (
+    	          (destPdfPat.matcher(fud.fetchUrl).find() && origPdfPat.matcher(fud.origUrl).find()) ||
+    	          // 2nd generation - original could be either; fetched has articlepdf
+    	          (newDestPdfPat.matcher(fud.fetchUrl).find() &&
+    	      	     (origPdfPat.matcher(fud.origUrl).find() || newDestPdfPat.matcher(fud.origUrl).find()))
+    	      	  );
       }
       return should;
     }
