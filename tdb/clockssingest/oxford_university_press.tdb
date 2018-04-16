@@ -914,7 +914,7 @@
     au < manifest ; exists ; 2015 ; 2015 ; Animal Frontiers Volume 5 ; 5 ; >
     au < manifest ; exists ; 2016 ; 2016 ; Animal Frontiers Volume 6 ; 6 ; >
     au < manifest ; exists ; 2017 ; 2017 ; Animal Frontiers Volume 7 ; 7 ; >
-    au < expected ; exists ; 2018 ; 2018 ; Animal Frontiers Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2018 ; 2018 ; Animal Frontiers Volume 8 ; 8 ; >
 
   }
 
@@ -19163,7 +19163,7 @@
     param[journal_id] = tas
 
     au < manifest ; exists ; 2017 ; 2017 ; Translational Animal Science Volume 1 ; 1 ;  >
-    au < expected ; exists ; 2018 ; 2018 ; Translational Animal Science Volume 2 ; 2 ;  >
+    au < manifest ; exists ; 2018 ; 2018 ; Translational Animal Science Volume 2 ; 2 ;  >
 
   }
 
