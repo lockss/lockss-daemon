@@ -29,7 +29,7 @@ count=50 #output is up to twice this
    comm -12 $tpath/gr_clockss_c.txt $tpath/gr_gln_mc.txt > $tpath/gr_common.txt
 
    # Also convert the https items to http items, convert to clockss format, and start a list
-   cat $tpath/gr_gln_m.txt | grep https: | grep -v ProjectMuse2017Plugin | sed -e 's/https/http/' | sed -e 's/\(\|[^\|]*\)Plugin/Clockss\1Plugin/' | sort > $tpath/gr_gln_mcs.txt
+   cat $tpath/gr_gln_m.txt | grep https%3A | grep -v ProjectMuse2017Plugin | sed -e 's/https/http/' | sed -e 's/\(\|[^\|]*\)Plugin/Clockss\1Plugin/' | sort > $tpath/gr_gln_mcs.txt
    # Find common items on the clockss list and the clockss-formatted gln list
    comm -12 $tpath/gr_clockss_c.txt $tpath/gr_gln_mcs.txt > $tpath/gr_common_s.txt
 
