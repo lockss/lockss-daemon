@@ -7,7 +7,7 @@ tpath="/home/$LOGNAME/tmp"
 #mkdir -p $tpath
 
 plugin="lockss"
-count=100
+count=50 #output is up to twice this
 
 # Make a list of AUids that are on ingest machine(s), and 'Yes' have substance, have crawled successfully.
    # Date of last successful crawl is unimportant because many good AUs have been frozen or finished.
@@ -25,29 +25,37 @@ count=100
 
    # Convert the gln list to clockss format, and start a list
    cat $tpath/gr_gln_m.txt | sed -e 's/\(\|[^\|]*\)Plugin/Clockss\1Plugin/' | sort > $tpath/gr_gln_mc.txt
-   # Also convert the https items to http items, convert to clockss format, and add to list
-   cat $tpath/gr_gln_m.txt | grep https: | grep -v ProjectMuse2017Plugin | sed -e 's/https/http/' | sed -e 's/\(\|[^\|]*\)Plugin/Clockss\1Plugin/' | sort >> $tpath/gr_gln_mc.txt
    # Find common items on the clockss list and the clockss-formatted gln list
    comm -12 $tpath/gr_clockss_c.txt $tpath/gr_gln_mc.txt > $tpath/gr_common.txt
+
+   # Also convert the https items to http items, convert to clockss format, and start a list
+   cat $tpath/gr_gln_m.txt | grep https: | grep -v ProjectMuse2017Plugin | sed -e 's/https/http/' | sed -e 's/\(\|[^\|]*\)Plugin/Clockss\1Plugin/' | sort > $tpath/gr_gln_mcs.txt
+   # Find common items on the clockss list and the clockss-formatted gln list
+   comm -12 $tpath/gr_clockss_c.txt $tpath/gr_gln_mcs.txt > $tpath/gr_common_s.txt
 
    #set +x
 
 # Document Errors. AUs that are in the GLN but not in clockss
-   echo "********ERRORS********" > $tpath/gr_errors.txt
+   echo "********ERRORS********" > $tpath/gr_errors.txt #create error file 
    #echo "***Manifest in GLN, but not Crawling in Clockss***" >> $tpath/gr_errors.txt
    #comm -13 $tpath/gr_clockss_c.txt $tpath/gr_gln_mc.txt >> $tpath/gr_errors.txt
    #echo "***Not Manifest in GLN, but Crawling in Clockss***" >> $tpath/gr_errors.txt
    #comm -23 $tpath/gr_clockss_c.txt $tpath/gr_gln_mc.txt >> $tpath/gr_errors.txt
 
 # Find items not healthy on the ingest machines.
-   echo "***M on gln. C on clockss. Not healthy on ingest machines.***" >> $tpath/gr_errors.txt
-   comm -13 $tpath/gr_ingest_healthy.txt $tpath/gr_common.txt >> $tpath/gr_errors.txt
+   #echo "***M on gln. C on clockss. Not healthy on ingest machines.***" >> $tpath/gr_errors.txt
+   #comm -13 $tpath/gr_ingest_healthy.txt $tpath/gr_common.txt >> $tpath/gr_errors.txt
    # Find common items on the list of AUs with manifest pages, and the list of healthy AUs on the ingest machines.
+   
+# Find items healthy on the ingest machines.
    comm -12 $tpath/gr_ingest_healthy.txt $tpath/gr_common.txt > $tpath/gr_common_healthy.txt
+   comm -12 $tpath/gr_ingest_healthy.txt $tpath/gr_common_s.txt > $tpath/gr_common_healthy_s.txt
 
 # Select a random collection of clockss AUids
    shuf $tpath/gr_common_healthy.txt | head -"$count" > $tpath/gr_common_shuf.txt
+   shuf $tpath/gr_common_healthy_s.txt | head -"$count" > $tpath/gr_common_shuf_s.txt
 
+# FOR AUs THAT ARE HTTP FOR CLOCKSS AND GLN
 # Does AU have a clockss and gln manifest page?
    # Look for clockss manifest pages for the previously selected set.
    ./scripts/tdb/read_auid_new.pl $tpath/gr_common_shuf.txt > $tpath/gr_man_clks.txt
@@ -60,8 +68,22 @@ count=100
    cat $tpath/gr_man_gln.txt | grep "*N" >> $tpath/gr_errors.txt
    cat $tpath/gr_man_gln.txt | grep "*M" | sed -e 's/.*, \(org|lockss|plugin|[^,]*\), .*/\1/' > $tpath/gr_found_gln.txt
 
+# FOR AUs THAT ARE HTTPS FOR GLN AND HTTP FOR CLOCKSS
+# Does AU have a clockss and gln manifest page?
+   # Look for clockss manifest pages for the previously selected set.
+   ./scripts/tdb/read_auid_new.pl $tpath/gr_common_shuf_s.txt > $tpath/gr_man_clks.txt
+   cat $tpath/gr_man_clks.txt | grep "*N" >> $tpath/gr_errors.txt
+   cat $tpath/gr_man_clks.txt | grep "*M" | sed -e 's/.*, \(org|lockss|plugin|[^,]*\), .*/\1/' > $tpath/gr_found_cl.txt
+   # Convert the list from clockss to gln
+   cat $tpath/gr_found_cl_s.txt | sed -e '/https/http/' | sed -e 's/Clockss\([^\|]*\)Plugin/\1Plugin/' > $tpath/gr_found_cl_g.txt
+   # Look for lockss manifest pages for AUids that have clockss manifest pages.
+   ./scripts/tdb/read_auid_new.pl $tpath/gr_found_cl_g.txt > $tpath/gr_man_gln.txt
+   cat $tpath/gr_man_gln.txt | grep "*N" >> $tpath/gr_errors.txt
+   cat $tpath/gr_man_gln.txt | grep "*M" | sed -e 's/.*, \(org|lockss|plugin|[^,]*\), .*/\1/' > $tpath/gr_found_gln_s.txt
+
 # Output
    cat $tpath/gr_found_gln.txt
+   cat $tpath/gr_found_gln_s.txt
    cat $tpath/gr_errors.txt
 
 exit 0
