@@ -7,7 +7,7 @@ tpath="/home/$LOGNAME/tmp"
 #mkdir -p $tpath
 
 plugin="lockss"
-count=500
+count=100
 
 # Make a list of AUids that are on ingest machine(s), and 'Yes' have substance, have crawled successfully.
    # Date of last successful crawl is unimportant because many good AUs have been frozen or finished.
@@ -17,15 +17,19 @@ count=500
 # Make a list of AUids that are crawling in clockssingest, manifest in gln
    #set -x
    # Make a list of AUids from clockss
-   #./scripts/tdb/tdbout -CZLI -a -Q "year ~ '^20' and plugin ~ '$plugin' and year !~ '2017'" tdb/clockssingest/*.tdb | grep -v TaylorAndFrancisPlugin | sort > $tpath/gr_clockss_c.txt
-   ./scripts/tdb/tdbout -CZLIF -a -Q "year ~ '^20' and plugin ~ '$plugin' and year !~ '2017'" tdb/clockssingest/*.tdb | sort > $tpath/gr_clockss_c.txt
+   #./scripts/tdb/tdbout -CZLI -a -Q "year ~ '^20' and plugin ~ '$plugin' and year !~ '2018'" tdb/clockssingest/*.tdb | grep -v TaylorAndFrancisPlugin | sort > $tpath/gr_clockss_c.txt
+   ./scripts/tdb/tdbout -CZLIF -a -Q "year ~ '^20' and plugin ~ '$plugin' and year !~ '2018'" tdb/clockssingest/*.tdb | sort > $tpath/gr_clockss_c.txt
    # Make a list of AUids from gln
-   #./scripts/tdb/tdbout -M -a -Q "year ~ '^20' and plugin ~ '$plugin' and year !~ '2017'" tdb/prod/*.tdb | grep -v TaylorAndFrancisPlugin | sort > $tpath/gr_gln_m.txt
-   ./scripts/tdb/tdbout -M -a -Q "year ~ '^20' and plugin ~ '$plugin' and year !~ '2017'" tdb/prod/*.tdb | sort > $tpath/gr_gln_m.txt
-   # Convert the gln list to clockss format
+   #./scripts/tdb/tdbout -M -a -Q "year ~ '^20' and plugin ~ '$plugin' and year !~ '2018'" tdb/prod/*.tdb | grep -v TaylorAndFrancisPlugin | sort > $tpath/gr_gln_m.txt
+   ./scripts/tdb/tdbout -M -a -Q "year ~ '^20' and plugin ~ '$plugin' and year !~ '2018'" tdb/prod/*.tdb | sort > $tpath/gr_gln_m.txt
+
+   # Convert the gln list to clockss format, and start a list
    cat $tpath/gr_gln_m.txt | sed -e 's/\(\|[^\|]*\)Plugin/Clockss\1Plugin/' | sort > $tpath/gr_gln_mc.txt
+   # Also convert the https items to http items, convert to clockss format, and add to list
+   cat $tpath/gr_gln_m.txt | grep https: | grep -v ProjectMuse2017Plugin | sed -e 's/https/http/' | sed -e 's/\(\|[^\|]*\)Plugin/Clockss\1Plugin/' | sort >> $tpath/gr_gln_mc.txt
    # Find common items on the clockss list and the clockss-formatted gln list
    comm -12 $tpath/gr_clockss_c.txt $tpath/gr_gln_mc.txt > $tpath/gr_common.txt
+
    #set +x
 
 # Document Errors. AUs that are in the GLN but not in clockss
