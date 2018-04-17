@@ -35,15 +35,15 @@
       au < manifest ; 2005 ; About Campus Volume 10 ; 10 ; acaa >
       au < manifest ; 2006 ; About Campus Volume 11 ; 11 ; acaa >
       au < manifest ; 2007 ; About Campus Volume 12 ; 12 ; acaa >
-      au < manifest ; 2008 ; About Campus Volume 13 ; 13 ; acaa >
-      au < manifest ; 2009 ; About Campus Volume 14 ; 14 ; acaa >
-      au < manifest ; 2010 ; About Campus Volume 15 ; 15 ; acaa >
-      au < manifest ; 2011 ; About Campus Volume 16 ; 16 ; acaa >
-      au < manifest ; 2012 ; About Campus Volume 17 ; 17 ; acaa >
-      au < manifest ; 2013 ; About Campus Volume 18 ; 18 ; acaa >
-      au < manifest ; 2014 ; About Campus Volume 19 ; 19 ; acaa >
-      au < manifest ; 2015 ; About Campus Volume 20 ; 20 ; acaa >
-      au < manifest ; 2016 ; About Campus Volume 21 ; 21 ; acaa >
+      au < ready ; 2008 ; About Campus Volume 13 ; 13 ; acaa >
+      au < ready ; 2009 ; About Campus Volume 14 ; 14 ; acaa >
+      au < ready ; 2010 ; About Campus Volume 15 ; 15 ; acaa >
+      au < ready ; 2011 ; About Campus Volume 16 ; 16 ; acaa >
+      au < ready ; 2012 ; About Campus Volume 17 ; 17 ; acaa >
+      au < ready ; 2013 ; About Campus Volume 18 ; 18 ; acaa >
+      au < ready ; 2014 ; About Campus Volume 19 ; 19 ; acaa >
+      au < ready ; 2015 ; About Campus Volume 20 ; 20 ; acaa >
+      au < ready ; 2016 ; About Campus Volume 21 ; 21 ; acaa >
       au < manifest ; 2017 ; About Campus Volume 22 ; 22 ; acaa >
 
   }
@@ -879,12 +879,12 @@
         #param[journal_id] = aar
 
         au < exists ; 2010 ; Allergy & Rhinology Volume 1 ; 1 ; aara >
-        au < manifest ; 2011 ; Allergy & Rhinology Volume 2 ; 2 ; aara >
-        au < manifest ; 2012 ; Allergy & Rhinology Volume 3 ; 3 ; aara >
-        au < manifest ; 2013 ; Allergy & Rhinology Volume 4 ; 4 ; aara >
-        au < manifest ; 2014 ; Allergy & Rhinology Volume 5 ; 5 ; aara >
-        au < manifest ; 2015 ; Allergy & Rhinology Volume 6 ; 6 ; aara >
-        au < manifest ; 2016 ; Allergy & Rhinology Volume 7 ; 7 ; aara >
+        au < ready ; 2011 ; Allergy & Rhinology Volume 2 ; 2 ; aara >
+        au < ready ; 2012 ; Allergy & Rhinology Volume 3 ; 3 ; aara >
+        au < ready ; 2013 ; Allergy & Rhinology Volume 4 ; 4 ; aara >
+        au < ready ; 2014 ; Allergy & Rhinology Volume 5 ; 5 ; aara >
+        au < ready ; 2015 ; Allergy & Rhinology Volume 6 ; 6 ; aara >
+        au < ready ; 2016 ; Allergy & Rhinology Volume 7 ; 7 ; aara >
         au < exists ; 2017 ; Allergy & Rhinology Volume 8 ; 8 ; aara >
 
     }
@@ -1775,8 +1775,8 @@
       au < manifest ; 2002 ; American String Teacher Volume 52 ; 52 ; staa >
       au < manifest ; 2006 ; American String Teacher Volume 56 ; 56 ; staa >
       au < manifest ; 2007 ; American String Teacher Volume 57 ; 57 ; staa >
-      au < manifest ; 2008 ; American String Teacher Volume 58 ; 58 ; staa >
-      au < manifest ; 2009 ; American String Teacher Volume 59 ; 59 ; staa >
+      au < ready ; 2008 ; American String Teacher Volume 58 ; 58 ; staa >
+      au < ready ; 2009 ; American String Teacher Volume 59 ; 59 ; staa >
       au < released ; 2010 ; American String Teacher Volume 60 ; 60 ; staa >
       au < released ; 2011 ; American String Teacher Volume 61 ; 61 ; staa >
       au < released ; 2012 ; American String Teacher Volume 62 ; 62 ; staa >
@@ -5949,15 +5949,15 @@
       au < manifest ; 2005 ; Christian Education Journal Volume 2 ; 2 ; ceja >
       au < manifest ; 2006 ; Christian Education Journal Volume 3 ; 3 ; ceja >
       au < manifest ; 2007 ; Christian Education Journal Volume 4 ; 4 ; ceja >
-      au < manifest ; 2008 ; Christian Education Journal Volume 5 ; 5 ; ceja >
-      au < manifest ; 2009 ; Christian Education Journal Volume 6 ; 6 ; ceja >
-      au < manifest ; 2010 ; Christian Education Journal Volume 7 ; 7 ; ceja >
-      au < manifest ; 2011 ; Christian Education Journal Volume 8 ; 8 ; ceja >
-      au < manifest ; 2012 ; Christian Education Journal Volume 9 ; 9 ; ceja >
-      au < manifest ; 2013 ; Christian Education Journal Volume 10 ; 10 ; ceja >
-      au < manifest ; 2014 ; Christian Education Journal Volume 11 ; 11 ; ceja >
-      au < manifest ; 2015 ; Christian Education Journal Volume 12 ; 12 ; ceja >
-      au < manifest ; 2016 ; Christian Education Journal Volume 13 ; 13 ; ceja >
+      au < ready ; 2008 ; Christian Education Journal Volume 5 ; 5 ; ceja >
+      au < ready ; 2009 ; Christian Education Journal Volume 6 ; 6 ; ceja >
+      au < ready ; 2010 ; Christian Education Journal Volume 7 ; 7 ; ceja >
+      au < ready ; 2011 ; Christian Education Journal Volume 8 ; 8 ; ceja >
+      au < ready ; 2012 ; Christian Education Journal Volume 9 ; 9 ; ceja >
+      au < ready ; 2013 ; Christian Education Journal Volume 10 ; 10 ; ceja >
+      au < ready ; 2014 ; Christian Education Journal Volume 11 ; 11 ; ceja >
+      au < ready ; 2015 ; Christian Education Journal Volume 12 ; 12 ; ceja >
+      au < ready ; 2016 ; Christian Education Journal Volume 13 ; 13 ; ceja >
       au < manifest ; 2017 ; Christian Education Journal Volume 14 ; 14 ; ceja >
 
   }
@@ -11167,7 +11167,7 @@
       au < manifest ; 2006 ; European Journal of Inflammation Volume 4 ; 4 ; ejia >
       au < manifest ; 2007 ; European Journal of Inflammation Volume 5 ; 5 ; ejia >
       au < released ; 2008 ; European Journal of Inflammation Volume 6 ; 6 ; ejia >
-      au < manifest ; 2009 ; European Journal of Inflammation Volume 7 ; 7 ; ejia >
+      au < ready ; 2009 ; European Journal of Inflammation Volume 7 ; 7 ; ejia >
       au < released ; 2010 ; European Journal of Inflammation Volume 8 ; 8 ; ejia >
       au < released ; 2011 ; European Journal of Inflammation Volume 9 ; 9 ; ejia >
       au < released ; 2012 ; European Journal of Inflammation Volume 10 ; 10 ; ejia >
@@ -11275,15 +11275,15 @@
         au < manifest ; 2005 ; European Journal of Ophthalmology Volume 15 ; 15 ; ejoa >
         au < manifest ; 2006 ; European Journal of Ophthalmology Volume 16 ; 16 ; ejoa >
         au < manifest ; 2007 ; European Journal of Ophthalmology Volume 17 ; 17 ; ejoa >
-        au < manifest ; 2008 ; European Journal of Ophthalmology Volume 18 ; 18 ; ejoa >
-        au < manifest ; 2009 ; European Journal of Ophthalmology Volume 19 ; 19 ; ejoa >
-        au < manifest ; 2010 ; European Journal of Ophthalmology Volume 20 ; 20 ; ejoa >
-        au < manifest ; 2011 ; European Journal of Ophthalmology Volume 21 ; 21 ; ejoa >
+        au < ready ; 2008 ; European Journal of Ophthalmology Volume 18 ; 18 ; ejoa >
+        au < ready ; 2009 ; European Journal of Ophthalmology Volume 19 ; 19 ; ejoa >
+        au < ready ; 2010 ; European Journal of Ophthalmology Volume 20 ; 20 ; ejoa >
+        au < ready ; 2011 ; European Journal of Ophthalmology Volume 21 ; 21 ; ejoa >
         au < released ; 2012 ; European Journal of Ophthalmology Volume 22 ; 22 ; ejoa >
-        au < manifest ; 2013 ; European Journal of Ophthalmology Volume 23 ; 23 ; ejoa >
+        au < ready ; 2013 ; European Journal of Ophthalmology Volume 23 ; 23 ; ejoa >
         au < released ; 2014 ; European Journal of Ophthalmology Volume 24 ; 24 ; ejoa >
         au < released ; 2015 ; European Journal of Ophthalmology Volume 25 ; 25 ; ejoa >
-        au < manifest ; 2016 ; European Journal of Ophthalmology Volume 26 ; 26 ; ejoa >
+        au < ready ; 2016 ; European Journal of Ophthalmology Volume 26 ; 26 ; ejoa >
         au < manifest ; 2017 ; European Journal of Ophthalmology Volume 27 ; 27 ; ejoa >
     }
 
@@ -11724,15 +11724,15 @@
         au < manifest ; 2005 ; Evaluation Journal of Australasia Volume 5 ; 5 ; evja >
         au < manifest ; 2006 ; Evaluation Journal of Australasia Volume 6 ; 6 ; evja >
         au < manifest ; 2007 ; Evaluation Journal of Australasia Volume 7 ; 7 ; evja >
-        au < manifest ; 2008 ; Evaluation Journal of Australasia Volume 8 ; 8 ; evja >
-        au < manifest ; 2009 ; Evaluation Journal of Australasia Volume 9 ; 9 ; evja >
-        au < manifest ; 2010 ; Evaluation Journal of Australasia Volume 10 ; 10 ; evja >
-        au < manifest ; 2011 ; Evaluation Journal of Australasia Volume 11 ; 11 ; evja >
-        au < manifest ; 2012 ; Evaluation Journal of Australasia Volume 12 ; 12 ; evja >
-        au < manifest ; 2013 ; Evaluation Journal of Australasia Volume 13 ; 13 ; evja >
-        au < manifest ; 2014 ; Evaluation Journal of Australasia Volume 14 ; 14 ; evja >
-        au < manifest ; 2015 ; Evaluation Journal of Australasia Volume 15 ; 15 ; evja >
-        au < manifest ; 2016 ; Evaluation Journal of Australasia Volume 16 ; 16 ; evja >
+        au < ready ; 2008 ; Evaluation Journal of Australasia Volume 8 ; 8 ; evja >
+        au < ready ; 2009 ; Evaluation Journal of Australasia Volume 9 ; 9 ; evja >
+        au < ready ; 2010 ; Evaluation Journal of Australasia Volume 10 ; 10 ; evja >
+        au < ready ; 2011 ; Evaluation Journal of Australasia Volume 11 ; 11 ; evja >
+        au < ready ; 2012 ; Evaluation Journal of Australasia Volume 12 ; 12 ; evja >
+        au < ready ; 2013 ; Evaluation Journal of Australasia Volume 13 ; 13 ; evja >
+        au < ready ; 2014 ; Evaluation Journal of Australasia Volume 14 ; 14 ; evja >
+        au < ready ; 2015 ; Evaluation Journal of Australasia Volume 15 ; 15 ; evja >
+        au < ready ; 2016 ; Evaluation Journal of Australasia Volume 16 ; 16 ; evja >
         au < manifest ; 2017 ; Evaluation Journal of Australasia Volume 17 ; 17 ; evja >
         au < manifest ; 2018 ; Evaluation Journal of Australasia Volume 18 ; 18 ; evja >
 
@@ -12988,13 +12988,13 @@
         au < manifest ; 2006 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 18 ; 18 ; gtna >
         au < manifest ; 2007 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 19 ; 19 ; gtna >
         au < released ; 2008 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 20 ; 20 ; gtna >
-        au < manifest ; 2009 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 21 ; 21 ; gtna >
+        au < ready ; 2009 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 21 ; 21 ; gtna >
         au < released ; 2010 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 22 ; 22 ; gtna >
-        au < manifest ; 2011 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 23 ; 23 ; gtna >
-        au < manifest ; 2012 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 24 ; 24 ; gtna >
+        au < ready ; 2011 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 23 ; 23 ; gtna >
+        au < ready ; 2012 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 24 ; 24 ; gtna >
         au < released ; 2013 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 25 ; 25 ; gtna >
         au < released ; 2014 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 26 ; 26 ; gtna >
-        au < manifest ; 2015 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 27 ; 27 ; gtna >
+        au < ready ; 2015 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 27 ; 27 ; gtna >
         au < released ; 2016 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 28 ; 28 ; gtna >
         au < manifest ; 2017 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 29 ; 29 ; gtna >
     }
@@ -13009,9 +13009,9 @@
 
         #param[journal_id] = grh
 
-        au < manifest ; 2014 ; Global & Regional Health Technology Assessment Volume 1 ; 1 ; grha >
-        au < manifest ; 2015 ; Global & Regional Health Technology Assessment Volume 2 ; 2 ; grha >
-        au < manifest ; 2016 ; Global & Regional Health Technology Assessment Volume 3 ; 3 ; grha >
+        au < ready ; 2014 ; Global & Regional Health Technology Assessment Volume 1 ; 1 ; grha >
+        au < ready ; 2015 ; Global & Regional Health Technology Assessment Volume 2 ; 2 ; grha >
+        au < ready ; 2016 ; Global & Regional Health Technology Assessment Volume 3 ; 3 ; grha >
         au < manifest ; 2017 ; Global & Regional Health Technology Assessment Volume 4 ; 4 ; grha >
     }
 
@@ -14271,14 +14271,14 @@
         au < manifest ; 2006 ; HIP International Volume 16 ; 16 ; hpia >
         au < manifest ; 2007 ; HIP International Volume 17 ; 17 ; hpia >
         au < released ; 2008 ; HIP International Volume 18 ; 18 ; hpia >
-        au < manifest ; 2009 ; HIP International Volume 19 ; 19 ; hpia >
-        au < manifest ; 2010 ; HIP International Volume 20 ; 20 ; hpia >
-        au < manifest ; 2011 ; HIP International Volume 21 ; 21 ; hpia >
-        au < manifest ; 2012 ; HIP International Volume 22 ; 22 ; hpia >
-        au < manifest ; 2013 ; HIP International Volume 23 ; 23 ; hpia >
+        au < ready ; 2009 ; HIP International Volume 19 ; 19 ; hpia >
+        au < ready ; 2010 ; HIP International Volume 20 ; 20 ; hpia >
+        au < ready ; 2011 ; HIP International Volume 21 ; 21 ; hpia >
+        au < ready ; 2012 ; HIP International Volume 22 ; 22 ; hpia >
+        au < ready ; 2013 ; HIP International Volume 23 ; 23 ; hpia >
         au < released ; 2014 ; HIP International Volume 24 ; 24 ; hpia >
-        au < manifest ; 2015 ; HIP International Volume 25 ; 25 ; hpia >
-        au < manifest ; 2016 ; HIP International Volume 26 ; 26 ; hpia >
+        au < ready ; 2015 ; HIP International Volume 25 ; 25 ; hpia >
+        au < ready ; 2016 ; HIP International Volume 26 ; 26 ; hpia >
         au < manifest ; 2017 ; HIP International Volume 27 ; 27 ; hpia >
     }
 
@@ -14702,7 +14702,7 @@
         au < manifest ; 2005 ; Hong Kong Journal of Emergency Medicine Volume 12 ; 12 ; hkja >
         au < manifest ; 2006 ; Hong Kong Journal of Emergency Medicine Volume 13 ; 13 ; hkja >
         au < manifest ; 2007 ; Hong Kong Journal of Emergency Medicine Volume 14 ; 14 ; hkja >
-        au < manifest ; 2008 ; Hong Kong Journal of Emergency Medicine Volume 15 ; 15 ; hkja >
+        au < ready ; 2008 ; Hong Kong Journal of Emergency Medicine Volume 15 ; 15 ; hkja >
         au < released ; 2009 ; Hong Kong Journal of Emergency Medicine Volume 16 ; 16 ; hkja >
         au < released ; 2010 ; Hong Kong Journal of Emergency Medicine Volume 17 ; 17 ; hkja >
         au < released ; 2011 ; Hong Kong Journal of Emergency Medicine Volume 18 ; 18 ; hkja >
@@ -14726,16 +14726,16 @@
 
       #param[journal_id] = hjo
 
-        au < manifest ; 2009 ; Hong Kong Journal of Occupational Therapy Volume 19 ; 19 ; hjoa >
-        au < manifest ; 2010 ; Hong Kong Journal of Occupational Therapy Volume 20 ; 20 ; hjoa >
-        au < manifest ; 2011 ; Hong Kong Journal of Occupational Therapy Volume 21 ; 21 ; hjoa >
-        au < manifest ; 2012 ; Hong Kong Journal of Occupational Therapy Volume 22 ; 22 ; hjoa >
-        au < manifest ; 2013 ; Hong Kong Journal of Occupational Therapy Volume 23 ; 23 ; hjoa >
-        au < manifest ; 2014 ; Hong Kong Journal of Occupational Therapy Volume 24 ; 24 ; hjoa >
-        au < manifest ; 2015 ; Hong Kong Journal of Occupational Therapy Volume 25 ; 25 ; hjoa >
-        au < manifest ; 2015 ; Hong Kong Journal of Occupational Therapy Volume 26 ; 26 ; hjoa >
-        au < manifest ; 2016 ; Hong Kong Journal of Occupational Therapy Volume 27 ; 27 ; hjoa >
-        au < manifest ; 2016 ; Hong Kong Journal of Occupational Therapy Volume 28 ; 28 ; hjoa >
+        au < ready ; 2009 ; Hong Kong Journal of Occupational Therapy Volume 19 ; 19 ; hjoa >
+        au < ready ; 2010 ; Hong Kong Journal of Occupational Therapy Volume 20 ; 20 ; hjoa >
+        au < ready ; 2011 ; Hong Kong Journal of Occupational Therapy Volume 21 ; 21 ; hjoa >
+        au < ready ; 2012 ; Hong Kong Journal of Occupational Therapy Volume 22 ; 22 ; hjoa >
+        au < ready ; 2013 ; Hong Kong Journal of Occupational Therapy Volume 23 ; 23 ; hjoa >
+        au < ready ; 2014 ; Hong Kong Journal of Occupational Therapy Volume 24 ; 24 ; hjoa >
+        au < ready ; 2015 ; Hong Kong Journal of Occupational Therapy Volume 25 ; 25 ; hjoa >
+        au < ready ; 2015 ; Hong Kong Journal of Occupational Therapy Volume 26 ; 26 ; hjoa >
+        au < ready ; 2016 ; Hong Kong Journal of Occupational Therapy Volume 27 ; 27 ; hjoa >
+        au < ready ; 2016 ; Hong Kong Journal of Occupational Therapy Volume 28 ; 28 ; hjoa >
         au < manifest ; 2017 ; Hong Kong Journal of Occupational Therapy Volume 29 ; 29 ; hjoa >
         au < manifest ; 2017 ; Hong Kong Journal of Occupational Therapy Volume 30 ; 30 ; hjoa >
 
@@ -16224,15 +16224,15 @@
         au < manifest ; 2005 ; The International Journal of Artificial Organs Volume 28 ; 28 ; jaoa >
         au < manifest ; 2006 ; The International Journal of Artificial Organs Volume 29 ; 29 ; jaoa >
         au < manifest ; 2007 ; The International Journal of Artificial Organs Volume 30 ; 30 ; jaoa >
-        au < manifest ; 2008 ; The International Journal of Artificial Organs Volume 31 ; 31 ; jaoa >
-        au < manifest ; 2009 ; The International Journal of Artificial Organs Volume 32 ; 32 ; jaoa >
-        au < manifest ; 2010 ; The International Journal of Artificial Organs Volume 33 ; 33 ; jaoa >
-        au < manifest ; 2011 ; The International Journal of Artificial Organs Volume 34 ; 34 ; jaoa >
-        au < manifest ; 2012 ; The International Journal of Artificial Organs Volume 35 ; 35 ; jaoa >
-        au < manifest ; 2013 ; The International Journal of Artificial Organs Volume 36 ; 36 ; jaoa >
-        au < manifest ; 2014 ; The International Journal of Artificial Organs Volume 37 ; 37 ; jaoa >
-        au < manifest ; 2015 ; The International Journal of Artificial Organs Volume 38 ; 38 ; jaoa >
-        au < manifest ; 2016 ; The International Journal of Artificial Organs Volume 39 ; 39 ; jaoa >
+        au < ready ; 2008 ; The International Journal of Artificial Organs Volume 31 ; 31 ; jaoa >
+        au < ready ; 2009 ; The International Journal of Artificial Organs Volume 32 ; 32 ; jaoa >
+        au < ready ; 2010 ; The International Journal of Artificial Organs Volume 33 ; 33 ; jaoa >
+        au < ready ; 2011 ; The International Journal of Artificial Organs Volume 34 ; 34 ; jaoa >
+        au < ready ; 2012 ; The International Journal of Artificial Organs Volume 35 ; 35 ; jaoa >
+        au < ready ; 2013 ; The International Journal of Artificial Organs Volume 36 ; 36 ; jaoa >
+        au < ready ; 2014 ; The International Journal of Artificial Organs Volume 37 ; 37 ; jaoa >
+        au < ready ; 2015 ; The International Journal of Artificial Organs Volume 38 ; 38 ; jaoa >
+        au < ready ; 2016 ; The International Journal of Artificial Organs Volume 39 ; 39 ; jaoa >
         au < manifest ; 2017 ; The International Journal of Artificial Organs Volume 40 ; 40 ; jaoa >
         au < manifest ; 2018 ; The International Journal of Artificial Organs Volume 41 ; 41 ; jaoa >
     }
@@ -16358,15 +16358,15 @@
       au < manifest ; 2005 ; The International Journal of Biological Markers Volume 20 ; 20 ; jbmb >
       au < manifest ; 2006 ; The International Journal of Biological Markers Volume 21 ; 21 ; jbmb >
       au < manifest ; 2007 ; The International Journal of Biological Markers Volume 22 ; 22 ; jbmb >
-      au < manifest ; 2008 ; The International Journal of Biological Markers Volume 23 ; 23 ; jbmb >
-      au < manifest ; 2009 ; The International Journal of Biological Markers Volume 24 ; 24 ; jbmb >
-      au < manifest ; 2010 ; The International Journal of Biological Markers Volume 25 ; 25 ; jbmb >
-      au < manifest ; 2011 ; The International Journal of Biological Markers Volume 26 ; 26 ; jbmb >
-      au < manifest ; 2012 ; The International Journal of Biological Markers Volume 27 ; 27 ; jbmb >
-      au < manifest ; 2013 ; The International Journal of Biological Markers Volume 28 ; 28 ; jbmb >
-      au < manifest ; 2014 ; The International Journal of Biological Markers Volume 29 ; 29 ; jbmb >
-      au < manifest ; 2015 ; The International Journal of Biological Markers Volume 30 ; 30 ; jbmb >
-      au < manifest ; 2016 ; The International Journal of Biological Markers Volume 31 ; 31 ; jbmb >
+      au < ready ; 2008 ; The International Journal of Biological Markers Volume 23 ; 23 ; jbmb >
+      au < ready ; 2009 ; The International Journal of Biological Markers Volume 24 ; 24 ; jbmb >
+      au < ready ; 2010 ; The International Journal of Biological Markers Volume 25 ; 25 ; jbmb >
+      au < ready ; 2011 ; The International Journal of Biological Markers Volume 26 ; 26 ; jbmb >
+      au < ready ; 2012 ; The International Journal of Biological Markers Volume 27 ; 27 ; jbmb >
+      au < ready ; 2013 ; The International Journal of Biological Markers Volume 28 ; 28 ; jbmb >
+      au < ready ; 2014 ; The International Journal of Biological Markers Volume 29 ; 29 ; jbmb >
+      au < ready ; 2015 ; The International Journal of Biological Markers Volume 30 ; 30 ; jbmb >
+      au < ready ; 2016 ; The International Journal of Biological Markers Volume 31 ; 31 ; jbmb >
       au < manifest ; 2017 ; The International Journal of Biological Markers Volume 32 ; 32 ; jbmb >
       au < manifest ; 2018 ; The International Journal of Biological Markers Volume 33 ; 33 ; jbmb >
 
@@ -18561,15 +18561,15 @@
       au < manifest ; 2005 ; Journal of Advertising Education Volume 9 ; 9 ; adva >
       au < manifest ; 2006 ; Journal of Advertising Education Volume 10 ; 10 ; adva >
       au < manifest ; 2007 ; Journal of Advertising Education Volume 11 ; 11 ; adva >
-      au < manifest ; 2008 ; Journal of Advertising Education Volume 12 ; 12 ; adva >
-      au < manifest ; 2009 ; Journal of Advertising Education Volume 13 ; 13 ; adva >
-      au < manifest ; 2010 ; Journal of Advertising Education Volume 14 ; 14 ; adva >
-      au < manifest ; 2011 ; Journal of Advertising Education Volume 15 ; 15 ; adva >
-      au < manifest ; 2012 ; Journal of Advertising Education Volume 16 ; 16 ; adva >
-      au < manifest ; 2013 ; Journal of Advertising Education Volume 17 ; 17 ; adva >
-      au < manifest ; 2014 ; Journal of Advertising Education Volume 18 ; 18 ; adva >
-      au < manifest ; 2015 ; Journal of Advertising Education Volume 19 ; 19 ; adva >
-      au < manifest ; 2016 ; Journal of Advertising Education Volume 20 ; 20 ; adva >
+      au < ready ; 2008 ; Journal of Advertising Education Volume 12 ; 12 ; adva >
+      au < ready ; 2009 ; Journal of Advertising Education Volume 13 ; 13 ; adva >
+      au < ready ; 2010 ; Journal of Advertising Education Volume 14 ; 14 ; adva >
+      au < ready ; 2011 ; Journal of Advertising Education Volume 15 ; 15 ; adva >
+      au < ready ; 2012 ; Journal of Advertising Education Volume 16 ; 16 ; adva >
+      au < ready ; 2013 ; Journal of Advertising Education Volume 17 ; 17 ; adva >
+      au < ready ; 2014 ; Journal of Advertising Education Volume 18 ; 18 ; adva >
+      au < ready ; 2015 ; Journal of Advertising Education Volume 19 ; 19 ; adva >
+      au < ready ; 2016 ; Journal of Advertising Education Volume 20 ; 20 ; adva >
       au < manifest ; 2017 ; Journal of Advertising Education Volume 21 ; 21 ; adva >
 
     }
@@ -18743,15 +18743,15 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2005 ; Journal of Applied Biomaterials & Functional Materials Volume 3 ; 3 ; jbfb >
         au < manifest ; 2006 ; Journal of Applied Biomaterials & Functional Materials Volume 4 ; 4 ; jbfb >
         au < manifest ; 2007 ; Journal of Applied Biomaterials & Functional Materials Volume 5 ; 5 ; jbfb >
-        au < manifest ; 2008 ; Journal of Applied Biomaterials & Functional Materials Volume 6 ; 6 ; jbfb >
-        au < manifest ; 2009 ; Journal of Applied Biomaterials & Functional Materials Volume 7 ; 7 ; jbfb >
-        au < manifest ; 2010 ; Journal of Applied Biomaterials & Functional Materials Volume 8 ; 8 ; jbfb >
+        au < ready ; 2008 ; Journal of Applied Biomaterials & Functional Materials Volume 6 ; 6 ; jbfb >
+        au < ready ; 2009 ; Journal of Applied Biomaterials & Functional Materials Volume 7 ; 7 ; jbfb >
+        au < ready ; 2010 ; Journal of Applied Biomaterials & Functional Materials Volume 8 ; 8 ; jbfb >
         au < exists ; 2011 ; Journal of Applied Biomaterials & Functional Materials Volume 9 ; 9 ; jbfb >
         au < exists ; 2012 ; Journal of Applied Biomaterials & Functional Materials Volume 10 ; 10 ; jbfa >
         au < exists ; 2013 ; Journal of Applied Biomaterials & Functional Materials Volume 11 ; 11 ; jbfa >
-        au < manifest ; 2014 ; Journal of Applied Biomaterials & Functional Materials Volume 12 ; 12 ; jbfa >
-        au < manifest ; 2015 ; Journal of Applied Biomaterials & Functional Materials Volume 13 ; 13 ; jbfa >
-        au < manifest ; 2016 ; Journal of Applied Biomaterials & Functional Materials Volume 14 ; 14 ; jbfa >
+        au < ready ; 2014 ; Journal of Applied Biomaterials & Functional Materials Volume 12 ; 12 ; jbfa >
+        au < ready ; 2015 ; Journal of Applied Biomaterials & Functional Materials Volume 13 ; 13 ; jbfa >
+        au < ready ; 2016 ; Journal of Applied Biomaterials & Functional Materials Volume 14 ; 14 ; jbfa >
         au < manifest ; 2017 ; Journal of Applied Biomaterials & Functional Materials Volume 15 ; 15 ; jbfa >
 
     }
@@ -21761,13 +21761,13 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
         #param[journal_id] = pev
 
-        au < manifest ; 2009 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 1 ; 1 ; pevb >
-        au < manifest ; 2010 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 2 ; 2 ; pevb >
-        au < manifest ; 2011 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 3 ; 3 ; pevb >
-        au < manifest ; 2012 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 4 ; 4 ; pevb >
+        au < ready ; 2009 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 1 ; 1 ; pevb >
+        au < ready ; 2010 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 2 ; 2 ; pevb >
+        au < ready ; 2011 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 3 ; 3 ; pevb >
+        au < ready ; 2012 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 4 ; 4 ; pevb >
         au < released ; 2013 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 5 ; 5 ; peva >
-        au < manifest ; 2014 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 6 ; 6 ; peva >
-        au < manifest ; 2015 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 7 ; 7 ; peva >
+        au < ready ; 2014 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 6 ; 6 ; peva >
+        au < ready ; 2015 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 7 ; 7 ; peva >
         au < released ; 2016 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 8 ; 8 ; peva >
         au < manifest ; 2017 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 9 ; 9 ; peva >
     }
@@ -24087,7 +24087,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2005 ; Journal of Literacy Research Volume 37 ; 37 ; jlrb >
         au < manifest ; 2006 ; Journal of Literacy Research Volume 38 ; 38 ; jlrb >
         au < manifest ; 2007 ; Journal of Literacy Research Volume 39 ; 39 ; jlrb >
-        au < manifest ; 2008 ; Journal of Literacy Research Volume 40 ; 40 ; jlrb >
+        au < ready ; 2008 ; Journal of Literacy Research Volume 40 ; 40 ; jlrb >
         au < released ; 2009 ; Journal of Literacy Research Volume 41 ; 41 ; jlrb >
         au < released ; 2010 ; Journal of Literacy Research Volume 42 ; 42 ; jlrb >
         au < doNotProcess ; 2011 ; Journal of Literacy Research Volume 43 ; 43 ; jlrb >
@@ -24985,15 +24985,15 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < manifest ; 2005 ; Journal of Perioperative Practice Volume 15 ; 15 ; ppjc >
       au < manifest ; 2006 ; Journal of Perioperative Practice Volume 16 ; 16 ; ppja >
       au < manifest ; 2007 ; Journal of Perioperative Practice Volume 17 ; 17 ; ppja >
-      au < manifest ; 2008 ; Journal of Perioperative Practice Volume 18 ; 18 ; ppja >
+      au < ready ; 2008 ; Journal of Perioperative Practice Volume 18 ; 18 ; ppja >
       au < released ; 2009 ; Journal of Perioperative Practice Volume 19 ; 19 ; ppja >
-      au < manifest ; 2010 ; Journal of Perioperative Practice Volume 20 ; 20 ; ppja >
-      au < manifest ; 2011 ; Journal of Perioperative Practice Volume 21 ; 21 ; ppja >
+      au < ready ; 2010 ; Journal of Perioperative Practice Volume 20 ; 20 ; ppja >
+      au < ready ; 2011 ; Journal of Perioperative Practice Volume 21 ; 21 ; ppja >
       au < released ; 2012 ; Journal of Perioperative Practice Volume 22 ; 22 ; ppja >
-      au < manifest ; 2013 ; Journal of Perioperative Practice Volume 23 ; 23 ; ppja >
-      au < manifest ; 2014 ; Journal of Perioperative Practice Volume 24 ; 24 ; ppja >
-      au < manifest ; 2015 ; Journal of Perioperative Practice Volume 25 ; 25 ; ppja >
-      au < manifest ; 2016 ; Journal of Perioperative Practice Volume 26 ; 26 ; ppja >
+      au < ready ; 2013 ; Journal of Perioperative Practice Volume 23 ; 23 ; ppja >
+      au < ready ; 2014 ; Journal of Perioperative Practice Volume 24 ; 24 ; ppja >
+      au < ready ; 2015 ; Journal of Perioperative Practice Volume 25 ; 25 ; ppja >
+      au < ready ; 2016 ; Journal of Perioperative Practice Volume 26 ; 26 ; ppja >
       au < manifest ; 2017 ; Journal of Perioperative Practice Volume 27 ; 27 ; ppja >
       au < manifest ; 2018 ; Journal of Perioperative Practice Volume 28 ; 28 ; ppja >
 
@@ -25344,7 +25344,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
         #param[journal_id] = jps
 
-        au < manifest ; 2015-2016 ; Journal of Psoriasis and Psoriatic Arthritis Volume 1 ; 1 ; jpsa >
+        au < ready ; 2015-2016 ; Journal of Psoriasis and Psoriatic Arthritis Volume 1 ; 1 ; jpsa >
         au < manifest ; 2016-2017 ; Journal of Psoriasis and Psoriatic Arthritis Volume 2 ; 2 ; jpsa >
         au < manifest ; 2017-2018 ; Journal of Psoriasis and Psoriatic Arthritis Volume 3 ; 3 ; jpsa >
 
@@ -25402,15 +25402,15 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2005 ; Journal of Psychology and Theology Volume 33 ; 33 ; ptja >
         au < manifest ; 2006 ; Journal of Psychology and Theology Volume 34 ; 34 ; ptja >
         au < manifest ; 2007 ; Journal of Psychology and Theology Volume 35 ; 35 ; ptja >
-        au < manifest ; 2008 ; Journal of Psychology and Theology Volume 36 ; 36 ; ptja >
-        au < manifest ; 2009 ; Journal of Psychology and Theology Volume 37 ; 37 ; ptja >
-        au < manifest ; 2010 ; Journal of Psychology and Theology Volume 38 ; 38 ; ptja >
-        au < manifest ; 2011 ; Journal of Psychology and Theology Volume 39 ; 39 ; ptja >
-        au < manifest ; 2012 ; Journal of Psychology and Theology Volume 40 ; 40 ; ptja >
-        au < manifest ; 2013 ; Journal of Psychology and Theology Volume 41 ; 41 ; ptja >
-        au < manifest ; 2014 ; Journal of Psychology and Theology Volume 42 ; 42 ; ptja >
-        au < manifest ; 2015 ; Journal of Psychology and Theology Volume 43 ; 43 ; ptja >
-        au < manifest ; 2016 ; Journal of Psychology and Theology Volume 44 ; 44 ; ptja >
+        au < ready ; 2008 ; Journal of Psychology and Theology Volume 36 ; 36 ; ptja >
+        au < ready ; 2009 ; Journal of Psychology and Theology Volume 37 ; 37 ; ptja >
+        au < ready ; 2010 ; Journal of Psychology and Theology Volume 38 ; 38 ; ptja >
+        au < ready ; 2011 ; Journal of Psychology and Theology Volume 39 ; 39 ; ptja >
+        au < ready ; 2012 ; Journal of Psychology and Theology Volume 40 ; 40 ; ptja >
+        au < ready ; 2013 ; Journal of Psychology and Theology Volume 41 ; 41 ; ptja >
+        au < ready ; 2014 ; Journal of Psychology and Theology Volume 42 ; 42 ; ptja >
+        au < ready ; 2015 ; Journal of Psychology and Theology Volume 43 ; 43 ; ptja >
+        au < ready ; 2016 ; Journal of Psychology and Theology Volume 44 ; 44 ; ptja >
         au < manifest ; 2017 ; Journal of Psychology and Theology Volume 45 ; 45 ; ptja >
         au < manifest ; 2018 ; Journal of Psychology and Theology Volume 46 ; 46 ; ptja >
 
@@ -27631,15 +27631,15 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2005 ; Journal for Vascular Ultrasound Volume 29 ; 29 ; jvua >
         au < manifest ; 2006 ; Journal for Vascular Ultrasound Volume 30 ; 30 ; jvua >
         au < manifest ; 2007 ; Journal for Vascular Ultrasound Volume 31 ; 31 ; jvua >
-        au < manifest ; 2008 ; Journal for Vascular Ultrasound Volume 32 ; 32 ; jvua >
-        au < manifest ; 2009 ; Journal for Vascular Ultrasound Volume 33 ; 33 ; jvua >
-        au < manifest ; 2010 ; Journal for Vascular Ultrasound Volume 34 ; 34 ; jvua >
-        au < manifest ; 2011 ; Journal for Vascular Ultrasound Volume 35 ; 35 ; jvua >
-        au < manifest ; 2012 ; Journal for Vascular Ultrasound Volume 36 ; 36 ; jvua >
-        au < manifest ; 2013 ; Journal for Vascular Ultrasound Volume 37 ; 37 ; jvua >
-        au < manifest ; 2014 ; Journal for Vascular Ultrasound Volume 38 ; 38 ; jvua >
-        au < manifest ; 2015 ; Journal for Vascular Ultrasound Volume 39 ; 39 ; jvua >
-        au < manifest ; 2016 ; Journal for Vascular Ultrasound Volume 40 ; 40 ; jvua >
+        au < ready ; 2008 ; Journal for Vascular Ultrasound Volume 32 ; 32 ; jvua >
+        au < ready ; 2009 ; Journal for Vascular Ultrasound Volume 33 ; 33 ; jvua >
+        au < ready ; 2010 ; Journal for Vascular Ultrasound Volume 34 ; 34 ; jvua >
+        au < ready ; 2011 ; Journal for Vascular Ultrasound Volume 35 ; 35 ; jvua >
+        au < ready ; 2012 ; Journal for Vascular Ultrasound Volume 36 ; 36 ; jvua >
+        au < ready ; 2013 ; Journal for Vascular Ultrasound Volume 37 ; 37 ; jvua >
+        au < ready ; 2014 ; Journal for Vascular Ultrasound Volume 38 ; 38 ; jvua >
+        au < ready ; 2015 ; Journal for Vascular Ultrasound Volume 39 ; 39 ; jvua >
+        au < ready ; 2016 ; Journal for Vascular Ultrasound Volume 40 ; 40 ; jvua >
         au < manifest ; 2017 ; Journal for Vascular Ultrasound Volume 41 ; 41 ; jvua >
 
     }
@@ -27782,15 +27782,15 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2005 ; The Journal of Vascular Access Volume 6 ; 6 ; jvaa >
         au < manifest ; 2006 ; The Journal of Vascular Access Volume 7 ; 7 ; jvaa >
         au < manifest ; 2007 ; The Journal of Vascular Access Volume 8 ; 8 ; jvaa >
-        au < manifest ; 2008 ; The Journal of Vascular Access Volume 9 ; 9 ; jvaa >
-        au < manifest ; 2009 ; The Journal of Vascular Access Volume 10 ; 10 ; jvaa >
-        au < manifest ; 2010 ; The Journal of Vascular Access Volume 11 ; 11 ; jvaa >
-        au < manifest ; 2011 ; The Journal of Vascular Access Volume 12 ; 12 ; jvaa >
-        au < manifest ; 2012 ; The Journal of Vascular Access Volume 13 ; 13 ; jvaa >
-        au < manifest ; 2013 ; The Journal of Vascular Access Volume 14 ; 14 ; jvaa >
-        au < manifest ; 2014 ; The Journal of Vascular Access Volume 15 ; 15 ; jvaa >
-        au < manifest ; 2015 ; The Journal of Vascular Access Volume 16 ; 16 ; jvaa >
-        au < manifest ; 2016 ; The Journal of Vascular Access Volume 17 ; 17 ; jvaa >
+        au < ready ; 2008 ; The Journal of Vascular Access Volume 9 ; 9 ; jvaa >
+        au < ready ; 2009 ; The Journal of Vascular Access Volume 10 ; 10 ; jvaa >
+        au < ready ; 2010 ; The Journal of Vascular Access Volume 11 ; 11 ; jvaa >
+        au < ready ; 2011 ; The Journal of Vascular Access Volume 12 ; 12 ; jvaa >
+        au < ready ; 2012 ; The Journal of Vascular Access Volume 13 ; 13 ; jvaa >
+        au < ready ; 2013 ; The Journal of Vascular Access Volume 14 ; 14 ; jvaa >
+        au < ready ; 2014 ; The Journal of Vascular Access Volume 15 ; 15 ; jvaa >
+        au < ready ; 2015 ; The Journal of Vascular Access Volume 16 ; 16 ; jvaa >
+        au < ready ; 2016 ; The Journal of Vascular Access Volume 17 ; 17 ; jvaa >
         au < manifest ; 2017 ; The Journal of Vascular Access Volume 18 ; 18 ; jvaa >
         au < manifest ; 2018 ; The Journal of Vascular Access Volume 19 ; 19 ; jvaa >
 
@@ -28614,15 +28614,15 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2005 ; The Linacre Quarterly Volume 72 ; 72 ; lqra >
         au < manifest ; 2006 ; The Linacre Quarterly Volume 73 ; 73 ; lqra >
         au < manifest ; 2007 ; The Linacre Quarterly Volume 74 ; 74 ; lqra >
-        au < manifest ; 2008 ; The Linacre Quarterly Volume 75 ; 75 ; lqra >
-        au < manifest ; 2009 ; The Linacre Quarterly Volume 76 ; 76 ; lqra >
-        au < manifest ; 2010 ; The Linacre Quarterly Volume 77 ; 77 ; lqra >
-        au < manifest ; 2011 ; The Linacre Quarterly Volume 78 ; 78 ; lqra >
-        au < manifest ; 2012 ; The Linacre Quarterly Volume 79 ; 79 ; lqra >
-        au < manifest ; 2013 ; The Linacre Quarterly Volume 80 ; 80 ; lqra >
-        au < manifest ; 2014 ; The Linacre Quarterly Volume 81 ; 81 ; lqra >
-        au < manifest ; 2015 ; The Linacre Quarterly Volume 82 ; 82 ; lqra >
-        au < manifest ; 2016 ; The Linacre Quarterly Volume 83 ; 83 ; lqra >
+        au < ready ; 2008 ; The Linacre Quarterly Volume 75 ; 75 ; lqra >
+        au < ready ; 2009 ; The Linacre Quarterly Volume 76 ; 76 ; lqra >
+        au < ready ; 2010 ; The Linacre Quarterly Volume 77 ; 77 ; lqra >
+        au < ready ; 2011 ; The Linacre Quarterly Volume 78 ; 78 ; lqra >
+        au < ready ; 2012 ; The Linacre Quarterly Volume 79 ; 79 ; lqra >
+        au < ready ; 2013 ; The Linacre Quarterly Volume 80 ; 80 ; lqra >
+        au < ready ; 2014 ; The Linacre Quarterly Volume 81 ; 81 ; lqra >
+        au < ready ; 2015 ; The Linacre Quarterly Volume 82 ; 82 ; lqra >
+        au < ready ; 2016 ; The Linacre Quarterly Volume 83 ; 83 ; lqra >
         au < manifest ; 2017 ; The Linacre Quarterly Volume 84 ; 84 ; lqra >
         au < manifest ; 2018 ; The Linacre Quarterly Volume 85 ; 85 ; lqra >
 
@@ -29614,7 +29614,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
         #param[journal_id] = npc
 
-        au < manifest ; 2015 ; Nephrology @ Point of Care Volume 1 ; 1 ; npca >
+        au < ready ; 2015 ; Nephrology @ Point of Care Volume 1 ; 1 ; npca >
         au < released ; 2016 ; Nephrology @ Point of Care Volume 2 ; 2 ; npca >
         au < manifest ; 2017 ; Nephrology @ Point of Care Volume 3 ; 3 ; npca >
     }
@@ -33996,15 +33996,15 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2005 ; Professional School Counseling Volume 9 ; 9 ; pcxa >
         au < manifest ; 2006 ; Professional School Counseling Volume 10 ; 10 ; pcxa >
         au < manifest ; 2007 ; Professional School Counseling Volume 11 ; 11 ; pcxa >
-        au < manifest ; 2008 ; Professional School Counseling Volume 12 ; 12 ; pcxa >
-        au < manifest ; 2009 ; Professional School Counseling Volume 13 ; 13 ; pcxa >
-        au < manifest ; 2010 ; Professional School Counseling Volume 14 ; 14 ; pcxa >
-        au < manifest ; 2011 ; Professional School Counseling Volume 15 ; 15 ; pcxa >
-        au < manifest ; 2012 ; Professional School Counseling Volume 16 ; 16 ; pcxa >
-        au < manifest ; 2013 ; Professional School Counseling Volume 17 ; 17 ; pcxa >
-        au < manifest ; 2014 ; Professional School Counseling Volume 18 ; 18 ; pcxa >
-        au < manifest ; 2015 ; Professional School Counseling Volume 19 ; 19 ; pcxa >
-        au < manifest ; 2016 ; Professional School Counseling Volume 20 ; 20 ; pcxa >
+        au < ready ; 2008 ; Professional School Counseling Volume 12 ; 12 ; pcxa >
+        au < ready ; 2009 ; Professional School Counseling Volume 13 ; 13 ; pcxa >
+        au < ready ; 2010 ; Professional School Counseling Volume 14 ; 14 ; pcxa >
+        au < ready ; 2011 ; Professional School Counseling Volume 15 ; 15 ; pcxa >
+        au < ready ; 2012 ; Professional School Counseling Volume 16 ; 16 ; pcxa >
+        au < ready ; 2013 ; Professional School Counseling Volume 17 ; 17 ; pcxa >
+        au < ready ; 2014 ; Professional School Counseling Volume 18 ; 18 ; pcxa >
+        au < ready ; 2015 ; Professional School Counseling Volume 19 ; 19 ; pcxa >
+        au < ready ; 2016 ; Professional School Counseling Volume 20 ; 20 ; pcxa >
         au < manifest ; 2017 ; Professional School Counseling Volume 21 ; 21 ; pcxa >
 
     }
@@ -35929,11 +35929,11 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < doesNotExist ; 2006 ; The Review of Black Political Economy Volume 33 ; 33 ; rbpa >
       au < doesNotExist ; 2007 ; The Review of Black Political Economy Volume 34 ; 34 ; rbpa >
       au < doesNotExist ; 2008 ; The Review of Black Political Economy Volume 35 ; 35 ; rbpa >
-      au < manifest ; 2009 ; The Review of Black Political Economy Volume 36 ; 36 ; rbpa >
+      au < ready ; 2009 ; The Review of Black Political Economy Volume 36 ; 36 ; rbpa >
       au < doesNotExist ; 2010 ; The Review of Black Political Economy Volume 37 ; 37 ; rbpa >
       au < doesNotExist ; 2011 ; The Review of Black Political Economy Volume 38 ; 38 ; rbpa >
-      au < manifest ; 2012 ; The Review of Black Political Economy Volume 39 ; 39 ; rbpa >
-      au < manifest ; 2013 ; The Review of Black Political Economy Volume 40 ; 40 ; rbpa >
+      au < ready ; 2012 ; The Review of Black Political Economy Volume 39 ; 39 ; rbpa >
+      au < ready ; 2013 ; The Review of Black Political Economy Volume 40 ; 40 ; rbpa >
       au < doesNotExist ; 2014 ; The Review of Black Political Economy Volume 41 ; 41 ; rbpa >
       au < doesNotExist ; 2015 ; The Review of Black Political Economy Volume 42 ; 42 ; rbpa >
       au < doesNotExist ; 2016 ; The Review of Black Political Economy Volume 43 ; 43 ; rbpa >
@@ -40905,15 +40905,15 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       #journal_id = tmj
 
       au < manifest ; 2007 ; Tumori Journal Volume 93 ; 93 ; tmja >
-      au < manifest ; 2008 ; Tumori Journal Volume 94 ; 94 ; tmja >
-      au < manifest ; 2009 ; Tumori Journal Volume 95 ; 95 ; tmja >
-      au < manifest ; 2010 ; Tumori Journal Volume 96 ; 96 ; tmja >
-      au < manifest ; 2011 ; Tumori Journal Volume 97 ; 97 ; tmja >
-      au < manifest ; 2012 ; Tumori Journal Volume 98 ; 98 ; tmja >
-      au < manifest ; 2013 ; Tumori Journal Volume 99 ; 99 ; tmja >
-      au < manifest ; 2014 ; Tumori Journal Volume 100 ; 100 ; tmja >
-      au < manifest ; 2015 ; Tumori Journal Volume 101 ; 101 ; tmja >
-      au < manifest ; 2016 ; Tumori Journal Volume 102 ; 102 ; tmja >
+      au < ready ; 2008 ; Tumori Journal Volume 94 ; 94 ; tmja >
+      au < ready ; 2009 ; Tumori Journal Volume 95 ; 95 ; tmja >
+      au < ready ; 2010 ; Tumori Journal Volume 96 ; 96 ; tmja >
+      au < ready ; 2011 ; Tumori Journal Volume 97 ; 97 ; tmja >
+      au < ready ; 2012 ; Tumori Journal Volume 98 ; 98 ; tmja >
+      au < ready ; 2013 ; Tumori Journal Volume 99 ; 99 ; tmja >
+      au < ready ; 2014 ; Tumori Journal Volume 100 ; 100 ; tmja >
+      au < ready ; 2015 ; Tumori Journal Volume 101 ; 101 ; tmja >
+      au < ready ; 2016 ; Tumori Journal Volume 102 ; 102 ; tmja >
       au < manifest ; 2017 ; Tumori Journal Volume 103 ; 103 ; tmja >
       au < manifest ; 2018 ; Tumori Journal Volume 104 ; 104 ; tmja >
 
@@ -41197,15 +41197,15 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2005 ; Urologia Journal Volume 72 ; 72 ; urja >
         au < manifest ; 2006 ; Urologia Journal Volume 73 ; 73 ; urja >
         au < manifest ; 2007 ; Urologia Journal Volume 74 ; 74 ; urja >
-        au < manifest ; 2008 ; Urologia Journal Volume 75 ; 75 ; urja >
-        au < manifest ; 2009 ; Urologia Journal Volume 76 ; 76 ; urja >
-        au < manifest ; 2010 ; Urologia Journal Volume 77 ; 77 ; urja >
-        au < manifest ; 2011 ; Urologia Journal Volume 78 ; 78 ; urja >
-        au < manifest ; 2012 ; Urologia Journal Volume 79 ; 79 ; urja >
-        au < manifest ; 2013 ; Urologia Journal Volume 80 ; 80 ; urja >
-        au < manifest ; 2014 ; Urologia Journal Volume 81 ; 81 ; urja >
-        au < manifest ; 2015 ; Urologia Journal Volume 82 ; 82 ; urja >
-        au < manifest ; 2016 ; Urologia Journal Volume 83 ; 83 ; urja >
+        au < ready ; 2008 ; Urologia Journal Volume 75 ; 75 ; urja >
+        au < ready ; 2009 ; Urologia Journal Volume 76 ; 76 ; urja >
+        au < ready ; 2010 ; Urologia Journal Volume 77 ; 77 ; urja >
+        au < ready ; 2011 ; Urologia Journal Volume 78 ; 78 ; urja >
+        au < ready ; 2012 ; Urologia Journal Volume 79 ; 79 ; urja >
+        au < ready ; 2013 ; Urologia Journal Volume 80 ; 80 ; urja >
+        au < ready ; 2014 ; Urologia Journal Volume 81 ; 81 ; urja >
+        au < ready ; 2015 ; Urologia Journal Volume 82 ; 82 ; urja >
+        au < ready ; 2016 ; Urologia Journal Volume 83 ; 83 ; urja >
         au < manifest ; 2017 ; Urologia Journal Volume 84 ; 84 ; urja >
 
     }
@@ -43087,7 +43087,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < manifest ; 2006 ; Sociological Research Online Volume 11 ; 11 ; sroa >
       au < manifest ; 2007 ; Sociological Research Online Volume 12 ; 12 ; sroa >
       au < released ; 2008 ; Sociological Research Online Volume 13 ; 13 ; sroa >
-      au < manifest ; 2009 ; Sociological Research Online Volume 14 ; 14 ; sroa >
+      au < ready ; 2009 ; Sociological Research Online Volume 14 ; 14 ; sroa >
       au < manifest ; 2010 ; Sociological Research Online Volume 15 ; 15 ; sroa >
       au < manifest ; 2011 ; Sociological Research Online Volume 16 ; 16 ; sroa >
       au < manifest ; 2012 ; Sociological Research Online Volume 17 ; 17 ; sroa >
@@ -45103,15 +45103,15 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2005 ; International Journal of Market Research Volume 47 ; 47 ; mrea >
         au < manifest ; 2006 ; International Journal of Market Research Volume 48 ; 48 ; mrea >
         au < manifest ; 2007 ; International Journal of Market Research Volume 49 ; 49 ; mrea >
-        au < manifest ; 2008 ; International Journal of Market Research Volume 50 ; 50 ; mrea >
-        au < manifest ; 2009 ; International Journal of Market Research Volume 51 ; 51 ; mrea >
-        au < manifest ; 2010 ; International Journal of Market Research Volume 52 ; 52 ; mrea >
-        au < manifest ; 2011 ; International Journal of Market Research Volume 53 ; 53 ; mrea >
-        au < manifest ; 2012 ; International Journal of Market Research Volume 54 ; 54 ; mrea >
-        au < manifest ; 2013 ; International Journal of Market Research Volume 55 ; 55 ; mrea >
-        au < manifest ; 2014 ; International Journal of Market Research Volume 56 ; 56 ; mrea >
-        au < manifest ; 2015 ; International Journal of Market Research Volume 57 ; 57 ; mrea >
-        au < manifest ; 2016 ; International Journal of Market Research Volume 58 ; 58 ; mrea >
+        au < ready ; 2008 ; International Journal of Market Research Volume 50 ; 50 ; mrea >
+        au < ready ; 2009 ; International Journal of Market Research Volume 51 ; 51 ; mrea >
+        au < ready ; 2010 ; International Journal of Market Research Volume 52 ; 52 ; mrea >
+        au < ready ; 2011 ; International Journal of Market Research Volume 53 ; 53 ; mrea >
+        au < ready ; 2012 ; International Journal of Market Research Volume 54 ; 54 ; mrea >
+        au < ready ; 2013 ; International Journal of Market Research Volume 55 ; 55 ; mrea >
+        au < ready ; 2014 ; International Journal of Market Research Volume 56 ; 56 ; mrea >
+        au < ready ; 2015 ; International Journal of Market Research Volume 57 ; 57 ; mrea >
+        au < ready ; 2016 ; International Journal of Market Research Volume 58 ; 58 ; mrea >
         au < manifest ; 2017 ; International Journal of Market Research Volume 59 ; 59 ; mrea >
         au < manifest ; 2018 ; International Journal of Market Research Volume 60 ; 60 ; mrea >
 
@@ -46408,7 +46408,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
     au < manifest ; 2005 ; Outlook on Agriculture Volume 34 ; 34 ; oaga >
     au < manifest ; 2006 ; Outlook on Agriculture Volume 35 ; 35 ; oaga >
     au < manifest ; 2007 ; Outlook on Agriculture Volume 36 ; 36 ; oaga >
-    au < manifest ; 2008 ; Outlook on Agriculture Volume 37 ; 37 ; oaga >
+    au < ready ; 2008 ; Outlook on Agriculture Volume 37 ; 37 ; oaga >
     au < released ; 2009 ; Outlook on Agriculture Volume 38 ; 38 ; oaga >
     au < released ; 2010 ; Outlook on Agriculture Volume 39 ; 39 ; oaga >
     au < doNotProcess ; 2011 ; Outlook on Agriculture Volume 40 ; 40 ; oaga >
