@@ -1,13 +1,13 @@
 #! /bin/bash
 #
-# Script that creates a list of auids that are ready to be pushed to the gln
+# Script that creates a list of auids that are ready to be pushed to the gln, based on clockss test results
 #
 
 tpath="/home/$LOGNAME/tmp"
 #mkdir -p $tpath
 
 plugin="lockss"
-count=50 #output is up to twice this
+count=100 
 
 # Make a list of AUids that are on ingest machine(s), and 'Yes' have substance, have crawled successfully.
    # Date of last successful crawl is unimportant because many good AUs have been frozen or finished.
@@ -29,12 +29,10 @@ count=50 #output is up to twice this
    comm -12 $tpath/gr_clockss_c.txt $tpath/gr_gln_mc.txt > $tpath/gr_common.txt
 
    # Also convert the https items to http items, convert to clockss format, and start a list
+   # In this script use http to compare to clockss AUs, and to look for healthy. But convert back to https to look for manifest pages.
    cat $tpath/gr_gln_m.txt | grep https%3A | grep -v ProjectMuse2017Plugin | sed -e 's/https/http/' | sed -e 's/\(\|[^\|]*\)Plugin/Clockss\1Plugin/' | sort > $tpath/gr_gln_mcs.txt
    # Find common items on the clockss list and the clockss-formatted gln list
    comm -12 $tpath/gr_clockss_c.txt $tpath/gr_gln_mcs.txt > $tpath/gr_common_s.txt
-   # Convert back to https and merge in with the rest of the AUs.
-   #cat $tpath/gr_common_s.txt | sed 's/http/https/' >> $tpath/gr_common.txt
-
    #set +x
 
 # Document Errors. AUs that are in the GLN but not in clockss
@@ -52,11 +50,13 @@ count=50 #output is up to twice this
 # Find items healthy on the ingest machines.
    comm -12 $tpath/gr_ingest_healthy.txt $tpath/gr_common.txt > $tpath/gr_common_healthy.txt
    comm -12 $tpath/gr_ingest_healthy.txt $tpath/gr_common_s.txt > $tpath/gr_common_healthy_s.txt
+   #Check health using http, but before checking for manifest pages move back to https and merge with the other list
+   cat $tpath/gr_common_healthy_s.txt | sed -e 's/http/https/' >> $tpath/gr_common_healthy.txt
 
 # Select a random collection of clockss AUids
    shuf $tpath/gr_common_healthy.txt | head -"$count" > $tpath/gr_common_shuf.txt
    #After health check, convert back to https and merge lists together
-   shuf $tpath/gr_common_healthy_s.txt | sed 's/http/https/' | head -"$count" >> $tpath/gr_common_shuf.txt
+   #shuf $tpath/gr_common_healthy_s.txt | sed 's/http/https/' | head -"$count" >> $tpath/gr_common_shuf.txt
    #cat $tpath/gr_common_shuf_s1.txt | sed -e 's/http/https/' > $tpath/gr_common_shuf_s2.txt #this one is https. For manifest page finding.
 
 # FOR All AUs
@@ -72,23 +72,8 @@ count=50 #output is up to twice this
    cat $tpath/gr_man_gln.txt | grep "*N" >> $tpath/gr_errors.txt
    cat $tpath/gr_man_gln.txt | grep "*M" | sed -e 's/.*, \(org|lockss|plugin|[^,]*\), .*/\1/' > $tpath/gr_found_gln.txt
 
-# FOR AUs THAT ARE HTTPS FOR GLN AND HTTP FOR CLOCKSS
-# For clockss, manifest pages need to be looked for under https, because they will show as redirected otherwise.
-# Does AU have a clockss and gln manifest page?
-   # Look for clockss manifest pages for the previously selected set.
-   #./scripts/tdb/read_auid_new.pl $tpath/gr_common_shuf_s2.txt > $tpath/gr_man_clks.txt
-   #cat $tpath/gr_man_clks.txt | grep "*N" >> $tpath/gr_errors.txt
-   #cat $tpath/gr_man_clks.txt | grep "*M" | sed -e 's/.*, \(org|lockss|plugin|[^,]*\), .*/\1/' > $tpath/gr_found_cl.txt
-   # Convert the list from clockss to gln
-   #cat $tpath/gr_found_cl.txt | sed -e 's/https/http/' | sed -e 's/Clockss\([^\|]*\)Plugin/\1Plugin/' > $tpath/gr_found_cl_g.txt
-   # Look for lockss manifest pages for AUids that have clockss manifest pages.
-   #./scripts/tdb/read_auid_new.pl $tpath/gr_found_cl_g.txt > $tpath/gr_man_gln.txt
-   #cat $tpath/gr_man_gln.txt | grep "*N" >> $tpath/gr_errors.txt
-   #cat $tpath/gr_man_gln.txt | grep "*M" | sed -e 's/.*, \(org|lockss|plugin|[^,]*\), .*/\1/' > $tpath/gr_found_gln_s.txt
-
 # Output
    cat $tpath/gr_found_gln.txt
-   #cat $tpath/gr_found_gln_s.txt
    cat $tpath/gr_errors.txt
 
 exit 0
