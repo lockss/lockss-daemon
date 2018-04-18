@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2017 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -52,9 +52,7 @@ implements ArticleIteratorFactory,
 
   // params from tdb file corresponding to AU
   protected static final String ROOT_TEMPLATE = "\"%s\", script_url"; 
-
-  protected static final String PATTERN_TEMPLATE =
-      "\"^%s\", script_url";
+  protected static final String PATTERN_TEMPLATE = "\"^%s(cgi-bin/paper)\", script_url";
   
   //http://scripts.iucr.org/cgi-bin/paper?S0365110X59001475
   protected static final Pattern ABSTRACT_PATTERN = Pattern.compile(
@@ -63,17 +61,17 @@ implements ArticleIteratorFactory,
   protected static final String ABSTRACT_REPLACEMENT = "cgi-bin/paper\\?$1";
   
   @Override
-  public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) 
+  public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target)
       throws PluginException {
     SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
 
     builder.setSpec(target,
         ROOT_TEMPLATE, PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
-    
+
     builder.addAspect(
-    		ABSTRACT_PATTERN,
-            ABSTRACT_REPLACEMENT,
-        ArticleFiles.ROLE_ABSTRACT, 
+        ABSTRACT_PATTERN,
+        ABSTRACT_REPLACEMENT,
+        ArticleFiles.ROLE_ABSTRACT,
         ArticleFiles.ROLE_ARTICLE_METADATA);
 
     builder.setFullTextFromRoles(
@@ -85,7 +83,7 @@ implements ArticleIteratorFactory,
   
   @Override
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
-    throws PluginException {
+      throws PluginException {
     return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
   }
 

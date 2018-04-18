@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2017 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -56,12 +56,11 @@ import com.lyncode.xoai.serviceprovider.model.Context;
  * permission URL list.
  */
 public abstract class BaseOaiPmhCrawlSeed extends BaseCrawlSeed {
-  private static final Logger logger = 
-      Logger.getLogger(BaseOaiPmhCrawlSeed.class);
+  private static final Logger logger = Logger.getLogger(BaseOaiPmhCrawlSeed.class);
   
   public static final String DEFAULT_METADATA_PREFIX = "oai_lockss";
   public static final String DATE_FORMAT = "yyyy-MM-dd";
-  public static final String DATETIME_FORMAT = "yyyy-MM-dd'T'hh:mm:ss";
+  public static final String DATETIME_FORMAT = "yyyy-MM-dd'T'hh:mm:ss'Z'";
   public static final String KEY_AU_OAI_FROM_DATE = "oai_from_date";
   public static final String KEY_AU_OAI_UNTIL_DATE = "oai_until_date";
   public static final String KEY_AU_OAI_SET = "au_oai_set";
@@ -70,7 +69,7 @@ public abstract class BaseOaiPmhCrawlSeed extends BaseCrawlSeed {
   public static final String KEY_AU_OAI_GRANULARITY = "oai_granularity";
   public static final String DEFAULT_OAI_URL_POSTFIX = "oai/request";
   public static final String YEAR_POSTFIX = "-01-01";
-  public static final Granularity DEFAULT_GRANULARITY = Granularity.Second;
+  public static final Granularity DEFAULT_GRANULARITY = Granularity.Day;
   public static final String NULL_SET = "[NONE]";
   
   protected ServiceProvider sp;
@@ -114,6 +113,7 @@ public abstract class BaseOaiPmhCrawlSeed extends BaseCrawlSeed {
   protected void populateFromConfig(Configuration config) 
       throws PluginException, ConfigurationException {
     this.baseUrl = config.get(ConfigParamDescr.BASE_URL.getKey());
+    // See https://www.openarchives.org/OAI/openarchivesprotocol.html#Datestamp for discussion
     if(config.containsKey(ConfigParamDescr.YEAR.getKey())) {
       try {
         setDates(config.getInt(ConfigParamDescr.YEAR.getKey()));
@@ -137,7 +137,6 @@ public abstract class BaseOaiPmhCrawlSeed extends BaseCrawlSeed {
         throw new ConfigurationException(KEY_AU_OAI_URL_POSTFIX +
                                          " must not be null");
       }
-        
     }
     if(config.containsKey(KEY_AU_OAI_METADATA_PREFIX)) {
       if(!setMetadataPrefix(config.get(KEY_AU_OAI_METADATA_PREFIX))) {
@@ -152,7 +151,6 @@ public abstract class BaseOaiPmhCrawlSeed extends BaseCrawlSeed {
                                          " or " + Granularity.Second);
       }
     }
-      
   }
 
   /**
@@ -174,7 +172,7 @@ public abstract class BaseOaiPmhCrawlSeed extends BaseCrawlSeed {
    */
   protected void setDates(String from, String until)
       throws ConfigurationException {
-    TimeZone utc = TimeZoneUtil.getExactTimeZone("UTC");
+    TimeZone utc = TimeZoneUtil.getExactTimeZone("GMT");
     DateFormat df = new SimpleDateFormat(DATETIME_FORMAT);
     df.setTimeZone(utc);
     this.from = parseDate(from, df, "from");
@@ -185,7 +183,7 @@ public abstract class BaseOaiPmhCrawlSeed extends BaseCrawlSeed {
       throws ConfigurationException {
     Date ret;
     if(date.length() == 10) {
-      date = date + "T00:00:00";
+      date = date + "T00:00:00Z";
     }
     try {
       ret = df.parse(date);
@@ -264,6 +262,30 @@ public abstract class BaseOaiPmhCrawlSeed extends BaseCrawlSeed {
   @Override
   public abstract Collection<String> doGetStartUrls() 
       throws ConfigurationException, PluginException, IOException;
-
   
+  /*
+  public static void main(String[] args) throws Exception {
+    SimpleDateFormat dayFormat = new SimpleDateFormat(DATE_FORMAT);
+    SimpleDateFormat secFormat = new SimpleDateFormat(DATETIME_FORMAT);
+    Date convertedDate = null;
+    String yearMonth = "2016-01";
+    TimeZone utc = TimeZoneUtil.getExactTimeZone("GMT");
+    dayFormat.setTimeZone(utc);
+    secFormat.setTimeZone(utc);
+    
+    try {
+      convertedDate = secFormat.parse(yearMonth + "-01T00:00:00Z");
+      convertedDate = dayFormat.parse(yearMonth + "-01");
+    } catch (ParseException e) {
+      e.printStackTrace();
+      throw new ConfigurationException("Invalid value yearMonth: " + yearMonth, e);
+    }
+    Calendar c = Calendar.getInstance();
+    c.setTime(convertedDate);
+    int lday = c.getActualMaximum(Calendar.DAY_OF_MONTH);
+    String sday = String.valueOf(lday);
+    String[] ary = new String[] { yearMonth + "-01", yearMonth + "-" + sday};
+    System.out.println(ary[1]);
+  }
+  */
 }

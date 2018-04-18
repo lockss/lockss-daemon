@@ -3,9 +3,13 @@ package org.lockss.plugin.internationalunionofcrystallography.oai;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
@@ -41,8 +45,7 @@ public class IUCrOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
   protected Pattern yearPattern = Pattern.compile("^([0-9]{4}-[0-9]{2})-[0-9]{2}$");
   protected Pattern idPattern = Pattern.compile("^http://dx.doi.org/[^/]+/([^/]+)$");
   public static final String OAI_DC_METADATA_PREFIX = "oai_dc";
-  private static Logger logger =
-	      Logger.getLogger(IUCrOaiCrawlSeed.class);
+  private static Logger logger = Logger.getLogger(IUCrOaiCrawlSeed.class);
   private boolean error = false;
 
   public IUCrOaiCrawlSeed(CrawlerFacade cf) {
@@ -52,9 +55,27 @@ public class IUCrOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
   }
   
   protected void populateFromConfig(Configuration config) 
-	      throws PluginException, ConfigurationException {
-	  super.populateFromConfig(config);
-	  this.baseUrl = config.get("script_url");
+      throws PluginException, ConfigurationException {
+    super.populateFromConfig(config);
+    this.baseUrl = config.get("script_url");
+    
+    if (usesSet && set.equalsIgnoreCase("iucrdata")) {
+      this.setGranularity(DATE_FORMAT.toUpperCase());
+      SimpleDateFormat dateFormat = new SimpleDateFormat(DATE_FORMAT);
+      Date convertedDate = null;
+      String nd = yearMonth + "-01";
+      try {
+        convertedDate = dateFormat.parse(nd);
+      } catch (ParseException e) {
+        e.printStackTrace();
+        throw new ConfigurationException("Invalid yearMonth: " + yearMonth, e);
+      }
+      Calendar c = Calendar.getInstance();
+      c.setTime(convertedDate);
+      int lday = c.getActualMaximum(Calendar.DAY_OF_MONTH);
+      String sday = String.valueOf(lday);
+      setDates(yearMonth + "-01", yearMonth + "-" + sday);
+    }
   }
 
   @Override

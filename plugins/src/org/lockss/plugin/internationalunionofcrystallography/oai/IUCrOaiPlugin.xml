@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>10</string>
+    <string>11</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -46,7 +46,6 @@
     <string>au_refetch_depth</string>
     <int>1</int>
   </entry>
-  http://scripts.iucr.org/cgi-bin/paper?S1600536805000310
   <entry>
     <string>au_name</string>
     <string>"International Union of Crystallography OAI Plugin, Base URL %s, Script URL %s, OAI Set %s, OAI Date %s", base_url, script_url, au_oai_set, au_oai_date</string>
@@ -54,8 +53,9 @@
   <entry>
     <string>au_permission_url</string>
     <list>
-    	<string>"%slockss.html", script_url</string>
-    	<string>"%se/issues/2010/lockss.html", base_url</string>
+      <string>"%slockss.html", script_url</string>
+      <string>"%se/issues/2010/lockss.html", base_url</string>
+      <string>"https://journals.iucr.org/e/issues/2010/lockss.html"</string>
     </list>
   </entry>
   <entry>
@@ -76,14 +76,13 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^https?://(%s|%s|iucrdata\.iucr\.org)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)$", url_host(base_url), url_host(script_url)</string>
-      <string>1,"^%sauid=.*$", script_url</string>
+      <string>1,"^https?://(%s|%s|journals\.iucr\.org)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)$", url_host(base_url), url_host(script_url)</string>
+      <string>1,"^%sauid=", script_url</string>
       <string>2,"^(%s|%s).*buy=yes$", script_url, base_url</string>
-      <string>1,"^(%s|%s|iucrdata\.iucr\.org)[^/]+/issues/[^/]+/[^/]+/[^/]+/[^/]+/(.+\.pdf|index\.html|.+fig[0-9]+\.html)$", base_url, script_url</string>
-      <string>1,"^(%s|%s|iucrdata\.iucr\.org)cgi-bin/paper\?[^/]+$", script_url, base_url</string>
+      <string>1,"^(%s|%s)[^/]+/issues/[^/]+/[^/]+/[^/]+/[^/]+/(.+\.pdf|index\.html|.+fig[0-9]+\.html)$", base_url, script_url</string>
+      <string>1,"^(%s|%s)cgi-bin/paper\?[^/]+$", script_url, base_url</string>
       <!-- IUCr has asked us not to download &Qmime=cif which is what requires the following -->
-      <string>2,"^(%s|%s)cgi-bin/(sendsupfiles|sendsup|sendcif)\?Qmime=cif$", script_url, base_url</string>
-      <string>1,"^(%s|%s)cgi-bin/(sendsupfiles|sendsup|sendcif)\?.+$", script_url, base_url</string>
+      <string>1,"^(%s|%s)cgi-bin/(sendsupfiles|sendsup|sendcif)\?(?!.+Qmime=cif)", script_url, base_url</string>
       <!-- IUCr has asked us not to download &Qmime=cif which is what requires the following -->
       <!-- <string>1,"^http://publcif.iucr.org/cifmoldb/gui/cifjmol\.php\?cifid=[^/]+$"</string> -->
     </list>
@@ -169,14 +168,18 @@
     </map>
   </entry>
   <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.internationalunionofcrystallography.oai.IUCrOaiUrlNormalizer</string>
+  </entry>
+  <entry>
     <string>au_additional_url_stems</string>
     <list>
-      <string>"http://iucrdata.iucr.org/"</string>
+      <string>http://journals.iucr.org/</string>
     </list>
   </entry>
   <entry>
     <string>au_permitted_host_pattern</string>
-    <string>iucrdata\.iucr\.org</string>
+    <string>journals\.iucr\.org</string>
   </entry>
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>

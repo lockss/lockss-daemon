@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2017 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -45,6 +45,7 @@ import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 import org.lockss.util.Logger;
 
+import com.lyncode.xoai.model.oaipmh.Granularity;
 import com.lyncode.xoai.model.oaipmh.Record;
 import com.lyncode.xoai.serviceprovider.exceptions.BadArgumentException;
 import com.lyncode.xoai.serviceprovider.exceptions.InvalidOAIResponse;
@@ -121,6 +122,7 @@ public abstract class RecordFilteringOaiPmhCrawlSeed extends BaseOaiPmhCrawlSeed
     ListRecordsParameters lip = ListRecordsParameters.request();
     lip.withMetadataPrefix(metadataPrefix);
     if (usesDateRange) {
+      lip.withGranularity(granularity.toString());
       lip.withFrom(from);
       lip.withUntil(until);
     }
