@@ -19,14 +19,14 @@
     >
     
     plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
-    param[base_url] = http://qane-afi.casn.ca/
+    #param[base_url] = http://qane-afi.casn.ca/
     param[journal_abbr] = journal
-    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+    implicit < status ; status2 ; year ; name ; param[volume] ; param[base_url] ; hidden[proxy] >
 
-    au < finished ; finished ; 2014-2015 ; Quality Advancement in Nursing Education - Avancées en formation infirmière Volume 1 ; 1 ; >
-    au < frozen ; exists ; 2016 ; Quality Advancement in Nursing Education - Avancées en formation infirmière Volume 2 ; 2 ; >
-    au < deepCrawl ; exists ; 2017 ; Quality Advancement in Nursing Education - Avancées en formation infirmière Volume 3 ; 3 ; >
-    au < expected ; exists ; 2018 ; Quality Advancement in Nursing Education - Avancées en formation infirmière Volume 4 ; 4 ; >
+    au < finished ; finished ; 2014-2015 ; Quality Advancement in Nursing Education - Avancées en formation infirmière Volume 1 ; 1 ; http://qane-afi.casn.ca/ ; >
+    au < frozen ; exists ; 2016 ; Quality Advancement in Nursing Education - Avancées en formation infirmière Volume 2 ; 2 ; http://qane-afi.casn.ca/ ; >
+    au < deepCrawl ; exists ; 2017 ; Quality Advancement in Nursing Education - Avancées en formation infirmière Volume 3 ; 3 ; http://qane-afi.casn.ca/ ; >
+    au < expected ; exists ; 2018 ; Quality Advancement in Nursing Education - Avancées en formation infirmière Volume 4 ; 4 ; https://qane-afi.casn.ca/ ; >
 
   }
 
