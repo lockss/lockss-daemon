@@ -22,7 +22,7 @@
     >
     
     {
-      param[base_url] = http://amd.aom.org/
+      param[base_url] = https://amd.aom.org/
       param[journal_id] = amd
   
       au < doNotProcess ; 2015 ; Academy of Management Discoveries (AMD) Volume 1 ; 1 >
@@ -44,7 +44,7 @@
     
     {
       
-      param[base_url] = http://amle.aom.org/
+      param[base_url] = https://amle.aom.org/
       param[journal_id] = amle
 
       au < doNotProcess ; 2002 ; Academy of Management Learning and Education (AMLE) Volume 1 ; 1 >
@@ -80,7 +80,7 @@
     
     {
       
-      param[base_url] = http://amj.aom.org/
+      param[base_url] = https://amj.aom.org/
       param[journal_id] = amj
 
       au < doNotProcess ; 1958 ; Academy of Management Journal (AMJ) Volume 1 ; 1 >
@@ -160,7 +160,7 @@
     
     {
 
-      param[base_url] = http://amr.aom.org/
+      param[base_url] = https://amr.aom.org/
       param[journal_id] = amr
 
       au < doNotProcess ; 1976 ; Academy of Management Review (AMR) Volume 1 ; 1 >
@@ -222,7 +222,7 @@
     
     {
 
-      param[base_url] = http://amp.aom.org/
+      param[base_url] = https://amp.aom.org/
       param[journal_id] = amp
 
       au < doNotProcess ; 1987 ; Academy of Management Perspectives (AMP) Volume 1 ; 1 >
