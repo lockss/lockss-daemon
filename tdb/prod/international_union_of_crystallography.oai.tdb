@@ -5,7 +5,6 @@
   >
   
   plugin = org.lockss.plugin.internationalunionofcrystallography.oai.IUCrOaiPlugin
-  param[base_url] = http://journals.iucr.org/
   param[script_url] = http://scripts.iucr.org/
   implicit < status ; year ; volume ; name ; param[au_oai_date] >
 
@@ -21,6 +20,8 @@
     
     comment[continues] = Structure Reports Online 1600-5368 [2001-2014]
     param[au_oai_set] = actacryste
+    param[base_url] = http://journals.iucr.org/
+    
     
     au < ready ; 2015 ; 71 ; Acta Crystallographica Section E: Crystallographic Communications Volume 71 January ; 2015-01 >
     au < ready ; 2015 ; 71 ; Acta Crystallographica Section E: Crystallographic Communications Volume 71 February ; 2015-02 >
@@ -63,6 +64,8 @@
     
     comment[continued_by] = Crystallographic Communications 2056-9890 [2015-onward]
     param[au_oai_set] = actacryste
+    param[base_url] = http://journals.iucr.org/
+    
     
     au < doNotProcess ; 2010 ; 66 ; Acta Crystallographica Section E: Crystallographic Communications Volume 66 January ; 2010-01 >
     au < doNotProcess ; 2010 ; 66 ; Acta Crystallographica Section E: Crystallographic Communications Volume 66 February ; 2010-02 >
@@ -139,6 +142,7 @@
     comment[date] = Date is a year month published date in the form yyyy-mm. Not all months have material published
     
     param[au_oai_set] = iucrj
+    param[base_url] = http://journals.iucr.org/
     
     
     au < doesNotExist ; 2014 ; 1 ; IUCrJ Volume 1 January ; 2014-01 >
@@ -178,5 +182,60 @@
     au < manifest ; 2016 ; 3 ; IUCrJ Volume 3 November ; 2016-11 >
     au < ready ; 2016 ; 3 ; IUCrJ Volume 3 December ; 2016-12 >
 
+  }
+
+  {
+  
+    title <
+      name =  IUCrData ;
+      eissn = 2414-3146 ;
+      issnl = 2414-3146
+    >
+    
+    # param of date is a year-month published date in the form yyyy-mm. Not all months have material published
+    # Issues are Volume 1, Part1,2,3 etc. Parts do not correspond with month published.
+    
+    param[au_oai_set] = iucrdata
+    param[base_url] = http://iucrdata.iucr.org/
+    
+    au < testing ; 2016 ; 1 ; IUCrData Volume 1 January ; 2016-01 ; >
+    au < manifest ; 2016 ; 1 ; IUCrData Volume 1 February ; 2016-02 ; >
+    au < manifest ; 2016 ; 1 ; IUCrData Volume 1 March ; 2016-03 ; >
+    au < manifest ; 2016 ; 1 ; IUCrData Volume 1 April ; 2016-04 ; >
+    au < manifest ; 2016 ; 1 ; IUCrData Volume 1 May ; 2016-05 ; >
+    au < manifest ; 2016 ; 1 ; IUCrData Volume 1 June ; 2016-06 ; >
+    au < manifest ; 2016 ; 1 ; IUCrData Volume 1 July ; 2016-07 ; >
+    au < manifest ; 2016 ; 1 ; IUCrData Volume 1 August ; 2016-08 ; >
+    au < manifest ; 2016 ; 1 ; IUCrData Volume 1 September ; 2016-09 ; >
+    au < manifest ; 2016 ; 1 ; IUCrData Volume 1 October ; 2016-10 ; >
+    au < manifest ; 2016 ; 1 ; IUCrData Volume 1 November ; 2016-11 ; >
+    au < manifest ; 2016 ; 1 ; IUCrData Volume 1 December ; 2016-12 ; >
+    
+    au < manifest ; 2017 ; 2 ; IUCrData Volume 2 January ; 2017-01 ; >
+    au < manifest ; 2017 ; 2 ; IUCrData Volume 2 February ; 2017-02 ; >
+    au < manifest ; 2017 ; 2 ; IUCrData Volume 2 March ; 2017-03 ; >
+    au < manifest ; 2017 ; 2 ; IUCrData Volume 2 April ; 2017-04 ; >
+    au < manifest ; 2017 ; 2 ; IUCrData Volume 2 May ; 2017-05 ; >
+    au < manifest ; 2017 ; 2 ; IUCrData Volume 2 June ; 2017-06 ; >
+    au < manifest ; 2017 ; 2 ; IUCrData Volume 2 July ; 2017-07 ; >
+    au < manifest ; 2017 ; 2 ; IUCrData Volume 2 August ; 2017-08 ; >
+    au < manifest ; 2017 ; 2 ; IUCrData Volume 2 September ; 2017-09 ; >
+    au < manifest ; 2017 ; 2 ; IUCrData Volume 2 October ; 2017-10 ; >
+    au < manifest ; 2017 ; 2 ; IUCrData Volume 2 November ; 2017-11 ; >
+    au < manifest ; 2017 ; 2 ; IUCrData Volume 2 December ; 2017-12 ; >
+    
+    au < manifest ; 2018 ; 3 ; IUCrData Volume 3 January ; 2018-01 ; >
+    au < manifest ; 2018 ; 3 ; IUCrData Volume 3 February ; 2018-02 ; >
+    au < manifest ; 2018 ; 3 ; IUCrData Volume 3 March ; 2018-03 ; >
+    au < manifest ; 2018 ; 3 ; IUCrData Volume 3 April ; 2018-04 ; >
+    au < expected ; 2018 ; 3 ; IUCrData Volume 3 May ; 2018-05 ; >
+    au < expected ; 2018 ; 3 ; IUCrData Volume 3 June ; 2018-06 ; >
+    au < expected ; 2018 ; 3 ; IUCrData Volume 3 July ; 2018-07 ; >
+    au < expected ; 2018 ; 3 ; IUCrData Volume 3 August ; 2018-08 ; >
+    au < expected ; 2018 ; 3 ; IUCrData Volume 3 September ; 2018-09 ; >
+    au < expected ; 2018 ; 3 ; IUCrData Volume 3 October ; 2018-10 ; >
+    au < expected ; 2018 ; 3 ; IUCrData Volume 3 November ; 2018-11 ; >
+    au < expected ; 2018 ; 3 ; IUCrData Volume 3 December ; 2018-12 ; >
+    
   }
 }
