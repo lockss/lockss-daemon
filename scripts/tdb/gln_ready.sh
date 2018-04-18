@@ -7,7 +7,7 @@ tpath="/home/$LOGNAME/tmp"
 #mkdir -p $tpath
 
 plugin="lockss"
-count=100 
+count=200 
 
 # Make a list of AUids that are on ingest machine(s), and 'Yes' have substance, have crawled successfully.
    # Date of last successful crawl is unimportant because many good AUs have been frozen or finished.
@@ -54,7 +54,8 @@ count=100
    cat $tpath/gr_common_healthy_s.txt | sed -e 's/http/https/' >> $tpath/gr_common_healthy.txt
 
 # Select a random collection of clockss AUids
-   shuf $tpath/gr_common_healthy.txt | head -"$count" > $tpath/gr_common_shuf.txt
+   cat $tpath/gr_common_healthy.txt | sort | uniq | shuf | head -"$count" > $tpath/gr_common_shuf.txt
+   #shuf $tpath/gr_common_healthy.txt | head -"$count" > $tpath/gr_common_shuf.txt
    #After health check, convert back to https and merge lists together
    #shuf $tpath/gr_common_healthy_s.txt | sed 's/http/https/' | head -"$count" >> $tpath/gr_common_shuf.txt
    #cat $tpath/gr_common_shuf_s1.txt | sed -e 's/http/https/' > $tpath/gr_common_shuf_s2.txt #this one is https. For manifest page finding.
