@@ -155,6 +155,8 @@ public class TestSEGArchivalUnit
                     true, segAu, cus);
     shouldCacheTest(ROOT_URL + "doi/pdfplus/11.1111/XXX-2013-0041.1",
                     true, segAu, cus);
+    shouldCacheTest(ROOT_URL.replace("http:", "https:") + "doi/pdfplus/11.1111/XXX-2013-0041.1",
+        true, segAu, cus);
     
     // should not get crawled - missing doi
     shouldCacheTest(ROOT_URL + "/full/XXX-2013-0041.1", false, segAu, cus);  
@@ -169,8 +171,9 @@ public class TestSEGArchivalUnit
   }
   
   public void testStartUrlConstruction() throws Exception {
-    String expected = ROOT_URL + "clockss/" + JOURNAL_ID + "/" 
-                      + VOLUME_NAME + "/index.html";
+    String[] expected = {
+        ROOT_URL +                            "clockss/" + JOURNAL_ID + "/" + VOLUME_NAME + "/index.html",
+        ROOT_URL.replace("http:", "https:") + "clockss/" + JOURNAL_ID + "/" + VOLUME_NAME + "/index.html"};
     assertEquals(ListUtil.list(expected), 
                  segAu.getStartUrls());
   }
@@ -201,6 +204,10 @@ public class TestSEGArchivalUnit
       makeAu(new URL("http://www.example2.com/"), "bbbjid", "44");
     assertEquals(PLUGIN_NAME + ", Base URL http://www.example2.com/,"
                  + " Journal ID bbbjid, Volume 44", au2.getName());
+    DefinableArchivalUnit au3 =
+        makeAu(new URL("https://www.example3.com/"), "bbbjid", "33");
+      assertEquals(PLUGIN_NAME + ", Base URL https://www.example3.com/,"
+                   + " Journal ID bbbjid, Volume 33", au3.getName());
   }
 
 }
