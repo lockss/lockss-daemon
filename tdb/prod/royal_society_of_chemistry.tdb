@@ -153,7 +153,7 @@
       au < released ; 2014 ; CBiomaterials Science Volume 2 ; 2 ; 2014 >
       au < released ; 2015 ; CBiomaterials Science Volume 3 ; 3 ; 2015 >
       au < released ; 2016 ; CBiomaterials Science Volume 4 ; 4 ; 2016 >
-      au < ready ; 2017 ; CBiomaterials Science Volume 5 ; 5 ; 2017 >
+      au < releasing ; 2017 ; CBiomaterials Science Volume 5 ; 5 ; 2017 >
 
     }
   }
@@ -375,15 +375,15 @@
       au < released ; 2016 ; Faraday Discussions Volume 194 ; 194 ; 2016 >
       au < released ; 2016 ; Faraday Discussions Volume 195 ; 195 ; 2016 >
 
-      au < ready ; 2017 ; Faraday Discussions Volume 196 ; 196 ; 2017 >
-      au < ready ; 2017 ; Faraday Discussions Volume 197 ; 197 ; 2017 >
+      au < releasing ; 2017 ; Faraday Discussions Volume 196 ; 196 ; 2017 >
+      au < releasing ; 2017 ; Faraday Discussions Volume 197 ; 197 ; 2017 >
       au < manifest ; 2017 ; Faraday Discussions Volume 198 ; 198 ; 2017 >
       au < manifest ; 2017 ; Faraday Discussions Volume 199 ; 199 ; 2017 >
       au < manifest ; 2017 ; Faraday Discussions Volume 200 ; 200 ; 2017 >
-      au < ready ; 2017 ; Faraday Discussions Volume 201 ; 201 ; 2017 >
+      au < releasing ; 2017 ; Faraday Discussions Volume 201 ; 201 ; 2017 >
       au < manifest ; 2017 ; Faraday Discussions Volume 202 ; 202 ; 2017 >
       au < manifest ; 2017 ; Faraday Discussions Volume 203 ; 203 ; 2017 >
-      au < ready ; 2017 ; Faraday Discussions Volume 204 ; 204 ; 2017 >
+      au < releasing ; 2017 ; Faraday Discussions Volume 204 ; 204 ; 2017 >
     }
   }
 
@@ -595,7 +595,7 @@
       param[journal_code] = me
 
       au < released ; 2016 ; Molecular Systems Design and Engineering Volume 1 ; 1 ; 2016 >
-      au < ready ; 2017 ; Molecular Systems Design and Engineering Volume 2 ; 2 ; 2017 >
+      au < releasing ; 2017 ; Molecular Systems Design and Engineering Volume 2 ; 2 ; 2017 >
 
   }
 
@@ -1405,7 +1405,7 @@
       au < released ; 2014 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 2 ; 2 ; 2014 >
       au < released ; 2015 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 3 ; 3 ; 2015 >
       au < released ; 2016 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 4 ; 4 ; 2016 >
-      au < ready ; 2017 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 5 ; 5 ; 2017 >
+      au < releasing ; 2017 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 5 ; 5 ; 2017 >
 
   }
 
@@ -2077,7 +2077,7 @@
       au < manifest ; 2014 ; Organic Chemistry Frontiers Volume 1 ; 1 ; 2014 >
       au < released ; 2015 ; Organic Chemistry Frontiers Volume 2 ; 2 ; 2015 >
       au < released ; 2016 ; Organic Chemistry Frontiers Volume 3 ; 3 ; 2016 >
-      au < ready ; 2017 ; Organic Chemistry Frontiers Volume 4 ; 4 ; 2017 >
+      au < releasing ; 2017 ; Organic Chemistry Frontiers Volume 4 ; 4 ; 2017 >
 
   }
 
@@ -2387,7 +2387,7 @@
       au < manifest ; 2014 ; RSC Advances Volume 4 ; 4 ; 2014 >
       au < released ; 2015 ; RSC Advances Volume 5 ; 5 ; 2015 >
       au < released ; 2016 ; RSC Advances Volume 6 ; 6 ; 2016 >
-      au < ready ; 2017 ; RSC Advances Volume 7 ; 7 ; 2017 >
+      au < releasing ; 2017 ; RSC Advances Volume 7 ; 7 ; 2017 >
 
   }
 
@@ -2401,7 +2401,7 @@
       param[journal_code] = re
 
       au < released ; 2016 ; Reaction Chemistry & Engineering Volume 1 ; 1 ; 2016 >
-      au < ready ; 2017 ; Reaction Chemistry & Engineering Volume 2 ; 2 ; 2017 >
+      au < releasing ; 2017 ; Reaction Chemistry & Engineering Volume 2 ; 2 ; 2017 >
 
   }
 
