@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>down. Not released to GLN. LXPIPE-173</string>
+    <string>testing - Not released to GLN. LXPIPE-173</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>12</string>
+    <string>13</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -54,8 +54,9 @@
     <string>au_permission_url</string>
     <list>
       <string>"%slockss.html", script_url</string>
-      <string>"%se/issues/2010/lockss.html", base_url</string>
       <string>"https://journals.iucr.org/e/issues/2010/lockss.html"</string>
+      <string>"%sx/issues/2016/lockss.html", base_url</string>
+      <string>"%se/issues/2010/lockss.html", base_url</string>
     </list>
   </entry>
   <entry>
@@ -175,6 +176,7 @@
     <string>au_additional_url_stems</string>
     <list>
       <string>http://journals.iucr.org/</string>
+      <string>https://journals.iucr.org/</string>
     </list>
   </entry>
   <entry>
