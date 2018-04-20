@@ -92,7 +92,7 @@ public class TestIUCrOaiPlugin extends LockssPluginTestCase {
     ArchivalUnit au = createAu(AU_CONFIG);
 
     // start page
-    assertShouldCache(BASE_URL + "e/issues/2010/lockss.html", true, au);
+    assertShouldCache(BASE_URL + "x/issues/2016/lockss.html", true, au);
     assertShouldCache(SCRIPT_URL + "lockss.html", true, au);
     assertShouldCache(SCRIPT_URL + "auid=org%7Clockss%7Cplugin%7Cinternationalunionofcrystallography%7Coai%7CClockssIUCrOaiPlugin%26au_oai_date%7E2015-06" +
         "%26au_oai_set%7Eiucrdata%26base...", true, au);
