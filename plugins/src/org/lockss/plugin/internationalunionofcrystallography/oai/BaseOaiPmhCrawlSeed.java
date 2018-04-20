@@ -172,6 +172,8 @@ public abstract class BaseOaiPmhCrawlSeed extends BaseCrawlSeed {
    */
   protected void setDates(String from, String until)
       throws ConfigurationException {
+    // TimeZoneUtil.getExactTimeZone depends on 1.74 build
+    // As GMT is the default return value from getTimeZone, we don't care if the call fails silently
     TimeZone utc = TimeZone.getTimeZone("GMT"); // XXX     TimeZoneUtil.getExactTimeZone("GMT");
     DateFormat df = new SimpleDateFormat(DATETIME_FORMAT);
     df.setTimeZone(utc);

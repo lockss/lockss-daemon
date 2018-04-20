@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>13</string>
+    <string>14</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -54,9 +54,7 @@
     <string>au_permission_url</string>
     <list>
       <string>"%slockss.html", script_url</string>
-      <string>"https://journals.iucr.org/e/issues/2010/lockss.html"</string>
       <string>"%sx/issues/2016/lockss.html", base_url</string>
-      <string>"%se/issues/2010/lockss.html", base_url</string>
     </list>
   </entry>
   <entry>
