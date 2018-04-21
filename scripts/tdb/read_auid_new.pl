@@ -2644,6 +2644,8 @@ while (my $line = <>) {
         if ($resp_s->is_success) {
           if ($resp_s->content =~ m/results in an empty (set|list)/is) {
             $result = "--EMPTY_LIST--";
+          } elsif (!($resp_s->content =~ m/<date>$param{au_oai_date}-/is)) {
+            $result = "--NO_DATE_MATCH--";
           } else {
             $result = "Manifest";
           }
