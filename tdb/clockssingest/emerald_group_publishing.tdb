@@ -539,7 +539,7 @@
     au < finished ; crawling ; 2015 ; Arts and the Market Volume 5 ; 5 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Arts and the Market Volume 6 ; 6 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Arts and the Market Volume 7 ; 7 ; http://www.emeraldinsight.com/ ; >
-    au < expected ; exists ; 2018 ; Arts and the Market Volume 8 ; 8 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2018 ; Arts and the Market Volume 8 ; 8 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -2484,7 +2484,7 @@
     au < finished ; finished ; 2015 ; EuroMed Journal of Business Volume 10 ; 10 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; EuroMed Journal of Business Volume 11 ; 11 ; http://www.emeraldinsight.com/ ; >
     au < testing ; exists ; 2017 ; EuroMed Journal of Business Volume 12 ; 12 ; https://www.emeraldinsight.com/ ; >
-    au < expected ; exists ; 2018 ; EuroMed Journal of Business Volume 13 ; 13 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2018 ; EuroMed Journal of Business Volume 13 ; 13 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -3968,7 +3968,7 @@
     au < finished ; finished ; 2015 ; International Journal of Culture, Tourism and Hospitality Research Volume 9 ; 9 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; International Journal of Culture, Tourism and Hospitality Research Volume 10 ; 10 ; http://www.emeraldinsight.com/ ; >
     au < deepCrawl ; exists ; 2017 ; International Journal of Culture, Tourism and Hospitality Research Volume 11 ; 11 ; http://www.emeraldinsight.com/ ; >
-    au < expected ; exists ; 2018 ; International Journal of Culture, Tourism and Hospitality Research Volume 12 ; 12 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2018 ; International Journal of Culture, Tourism and Hospitality Research Volume 12 ; 12 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -4608,7 +4608,7 @@
     au < finished ; finished ; 2015 ; International Journal of Manpower Volume 36 ; 36 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2016 ; International Journal of Manpower Volume 37 ; 37 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; International Journal of Manpower Volume 38 ; 38 ; http://www.emeraldinsight.com/ ; >
-    au < expected ; exists ; 2018 ; International Journal of Manpower Volume 39 ; 39 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2018 ; International Journal of Manpower Volume 39 ; 39 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -4857,7 +4857,7 @@
     au < finished ; finished ; 2015 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 9 ; 9 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 10 ; 10 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2017 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 11 ; 11 ; http://www.emeraldinsight.com/ ; >
-    au < expected ; exists ; 2018 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 12 ; 12 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2018 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 12 ; 12 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -6349,7 +6349,7 @@
     au < finished ; finished ; 2015 ; Journal of Economic and Administrative Sciences Volume 31 ; 31 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2016 ; Journal of Economic and Administrative Sciences Volume 32 ; 32 ; http://www.emeraldinsight.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Journal of Economic and Administrative Sciences Volume 33 ; 33 ; http://www.emeraldinsight.com/ ; >
-    au < expected ; exists ; 2018 ; Journal of Economic and Administrative Sciences Volume 34 ; 34 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2018 ; Journal of Economic and Administrative Sciences Volume 34 ; 34 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -9439,7 +9439,7 @@
     au < finished ; finished ; 2015 ; Meditari Accountancy Research Volume 23 ; 23 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Meditari Accountancy Research Volume 24 ; 24 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Meditari Accountancy Research Volume 25 ; 25 ; http://www.emeraldinsight.com/ ; >
-    au < expected ; exists ; 2018 ; Meditari Accountancy Research Volume 26 ; 26 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2018 ; Meditari Accountancy Research Volume 26 ; 26 ; https://www.emeraldinsight.com/ ; >
 
     }
 
@@ -9655,7 +9655,7 @@
     au < finished ; finished ; 2015 ; Multinational Business Review Volume 23 ; 23 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2016 ; Multinational Business Review Volume 24 ; 24 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Multinational Business Review Volume 25 ; 25 ; http://www.emeraldinsight.com/ ; >
-    au < expected ; exists ; 2018 ; Multinational Business Review Volume 26 ; 26 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2018 ; Multinational Business Review Volume 26 ; 26 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -10545,7 +10545,7 @@
     au < finished ; finished ; 2015 ; Qualitative Research in Accounting & Management Volume 12 ; 12 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Qualitative Research in Accounting & Management Volume 13 ; 13 ; http://www.emeraldinsight.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Qualitative Research in Accounting & Management Volume 14 ; 14 ; http://www.emeraldinsight.com/ ; >
-    au < expected ; exists ; 2018 ; Qualitative Research in Accounting & Management Volume 15 ; 15 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2018 ; Qualitative Research in Accounting & Management Volume 15 ; 15 ; https://www.emeraldinsight.com/ ; >
 
   }
 
