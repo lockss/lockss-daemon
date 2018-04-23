@@ -59,7 +59,7 @@ public class IUCrOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
     super.populateFromConfig(config);
     this.baseUrl = config.get("script_url");
     
-    if (usesSet && set.equalsIgnoreCase("iucrdata")) {
+    if (usesSet) {
       this.setGranularity(DATE_FORMAT.toUpperCase());
       SimpleDateFormat dateFormat = new SimpleDateFormat(DATE_FORMAT);
       Date convertedDate = null;
