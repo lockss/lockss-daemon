@@ -168,6 +168,8 @@
       au < ash.ASHDrupalPlugin ; ready ; 2016 ; Blood Volume 128 ; 128 >
       au < ash.ASHDrupalPlugin ; ready ; 2017 ; Blood Volume 129 ; 129 >
       au < ash.ASHDrupalPlugin ; ready ; 2017 ; Blood Volume 130 ; 130 >
+      au < ash.ASHDrupalPlugin ; expected ; 2018 ; Blood Volume 131 ; 131 >
+      au < ash.ASHDrupalPlugin ; expected ; 2018 ; Blood Volume 132 ; 132 >
 
     }
 
@@ -204,8 +206,8 @@
     au < released ; 2015 ; Hematology: ASH Education Program Book Volume 2015 ; 2015 >
     au < released ; 2016 ; Hematology: ASH Education Program Book Volume 2016 ; 2016 >
     au < released ; 2017 ; Hematology: ASH Education Program Book Volume 2017 ; 2017 >
+    expected ; 2018 ; Hematology: ASH Education Program Book Volume 2018 ; 2018 >
 
   }
 
 }
-
