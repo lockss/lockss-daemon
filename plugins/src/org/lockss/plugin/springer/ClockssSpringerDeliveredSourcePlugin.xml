@@ -1,0 +1,58 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>testing</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.springer.ClockssSpringerDeliveredSourcePlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.clockss.ClockssDeliveredSourcePlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent_version</string>
+    <string>3</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Springer Delivered Source Plugin (CLOCKSS), Base URL %s, Year %d, Directory %s", base_url, year, directory</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Springer Delivered Source Plugin (CLOCKSS)</string>
+  </entry>
+  <entry>
+    <string>plugin_archive_file_types</string>
+    <string>standard</string>
+  </entry>
+  <!--  this content isn't in archives; try to adapt the iterator to work with either so it can be shared -->
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^%s%d/%s.+\.pdf$", base_url, year, directory</string>
+    </list>
+  </entry>
+ <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.springer.SpringerSourceArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.springer.SpringerSourceArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>application/xml_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.springer.SpringerSourceMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+</map>    

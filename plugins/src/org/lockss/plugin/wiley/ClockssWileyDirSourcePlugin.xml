@@ -1,43 +1,42 @@
 <map>
-<!--  after 2017 use the more general ClockssWileyDirSourcePlugin -->
   <entry>
     <string>plugin_status</string>
-    <string>deprecated</string>
+    <string>testing</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.wiley.ClockssWileySourcePlugin</string>
+    <string>org.lockss.plugin.wiley.ClockssWileyDirSourcePlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>21</string>
+    <string>1</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
-    <string>org.lockss.plugin.clockss.ClockssSourcePlugin</string>
+    <string>org.lockss.plugin.clockss.ClockssDirSourcePlugin</string>
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>15</string>
+    <string>1</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Wiley Source Plugin (CLOCKSS, Legacy)</string>
+    <string>Wiley Source Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Wiley Source Plugin (CLOCKSS, Legacy), Base URL %s, Year %d", base_url, year</string>
+    <string>"Wiley Source Plugin (CLOCKSS), Base URL %s, Directory %s", base_url, directory</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>14</string>
+        <string>1</string>
       </entry>
       <entry>
         <string>Poll</string>
-        <string>2</string>
+        <string>1</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -47,13 +46,13 @@
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%s%d", base_url, year</string>
+    <string>"%s%s", base_url, directory</string>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
       <!-- http://clockss-ingest.lockss.org/sourcefiles/wiley-released/2012/A/AAB102.1.zip -->
-      <string>"^%s%d/.+\.zip$", base_url, year</string>
+      <string>"^%s%s/.+\.zip$", base_url, directory</string>
     </list>
   </entry>
   <entry>

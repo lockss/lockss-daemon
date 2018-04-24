@@ -1,27 +1,26 @@
 <map>
-<!-- For 2017+ use the more general ClockssElsevierDirSourcePLugin --> 
   <entry>
     <string>plugin_status</string>
-    <string>deprecated</string>
+    <string>testing</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.elsevier.ClockssElsevierDTD5SourcePlugin</string>
+    <string>org.lockss.plugin.elsevier.ClockssElsevierDirSourcePlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>27</string>
+    <string>1</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>17</string>
+        <string>1</string>
       </entry>
       <entry>
         <string>Poll</string>
-        <string>3</string>
+        <string>1</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -31,19 +30,19 @@
   </entry>
   <entry>
     <string>plugin_parent</string>
-    <string>org.lockss.plugin.clockss.ClockssSourcePlugin</string>
+    <string>org.lockss.plugin.clockss.ClockssDirSourcePlugin</string>
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>15</string>
+    <string>1</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Elsevier DTD5 Source Plugin (CLOCKSS, Legacy), Base URL %s, Year %d", base_url, year</string>
+    <string>"Elsevier DTD5 Source Plugin (CLOCKSS), Base URL %s, Directory %s", base_url, directory</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Elsevier DTD5 Source Plugin (CLOCKSS, Legacy)</string>
+    <string>Elsevier DTD5 Source Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_archive_file_types</string>
@@ -52,7 +51,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%s%d/.+\.tar$", base_url, year</string>
+      <string>"^%s%s/.+\.tar$", base_url, directory</string>
     </list>
   </entry>
   <entry>
