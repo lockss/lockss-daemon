@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -43,7 +43,15 @@ public class SpringerSourceArticleIteratorFactory implements ArticleIteratorFact
 
   protected static Logger log = Logger.getLogger(SpringerSourceArticleIteratorFactory.class);
   
-  protected static final String ROOT_TEMPLATE = "\"%s%d\",base_url,year";
+  /*
+   * Modified on 4/24/2018 to handle THREE variants of deliveries/plugins:
+   * 1. ClockssSpringerSourcePlugin (param of base_url & year)
+   * 	<base_url>/<year>/ftp_xyz.zip!/XXX=/....
+   * 2. ClockssSpringerDirSourcePlugin  (param of base_url & directory)
+   * 	<base_url>/<directory>/ftp_xyz.zip!/XXX=/....
+   * 3. ClockssSpringereDeliveredSourcePlugin (param of base_url & year & directory)
+   * 	<base_url>/<year>/<directory>/XXX=/....   note unpacked contents make the levels equivalent
+   */
   // find anyfiles that end in "BodyRef/PDF/XXX.pdf"
   // We do not know how many levels down because the book/journal might be at various levels
   // book series
@@ -54,8 +62,11 @@ public class SpringerSourceArticleIteratorFactory implements ArticleIteratorFact
   //BOK=978-981-10-0886-3/CHP=1_10.1007978-981-10-0886-3_1/BodyRef/PDF/978-981-10-0886-3_Chapter_1.pdf
   // journal
   //JOU=13678/VOL=2012.1/ISU=1/ART=12/BodyRef/PDF/13678_2012_Article_12.pdf
-  protected static final String PATTERN_TEMPLATE = "\"%s%d/[^/]+\\.zip!/[A-Z]+=.*/BodyRef/PDF/[^/]+\\.pdf$\",base_url,year";
-  protected static final String NESTED_ARCHIVE_PATTERN_TEMPLATE = "\"%s%d/[^/]+\\.zip!/.+\\.(zip|tar|gz|tgz|tar\\.gz)$\",base_url,year";
+  
+  // level above the content level is either HDX_Y or foooo.zip!
+  protected static final String PATTERN_TEMPLATE = "\"%s[^/]+/(HD[^/]+|[^/]+\\.zip!)/[A-Z]+=.*/BodyRef/PDF/[^/]+\\.pdf$\",base_url";
+  //any archive lower than <base>/x/y/... where 'y' could be a zip
+  protected static final String NESTED_ARCHIVE_PATTERN_TEMPLATE = "\"%s[^/]+/[^/]+/.+\\.(zip|tar|gz|tgz|tar\\.gz)$\",base_url";
  
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
@@ -64,7 +75,6 @@ public class SpringerSourceArticleIteratorFactory implements ArticleIteratorFact
     return new SpringerArticleIterator(au, new SubTreeArticleIterator.Spec()
                                        .setTarget(target)
                                        .setVisitArchiveMembers(true)
-                                       .setRootTemplate(ROOT_TEMPLATE)
                                        .setPatternTemplate(PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE)
                                        .setExcludeSubTreePatternTemplate(NESTED_ARCHIVE_PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE));
   }
@@ -72,7 +82,8 @@ public class SpringerSourceArticleIteratorFactory implements ArticleIteratorFact
   protected static class SpringerArticleIterator extends SubTreeArticleIterator {
 	
     // break it in to three parts in order to find the corresponding xml.Meta file
-    protected static Pattern PATTERN = Pattern.compile("(/[^/]+\\.zip!/[A-Z]+=.*/)(BodyRef/PDF/)([^/]+)(\\.pdf)$", Pattern.CASE_INSENSITIVE);
+	//1. is EITHER /<notslash>.zip!  OR /HD[^/]+ for unpacked delivered content directory - to anchor top of content sequence
+    protected static Pattern PATTERN = Pattern.compile("(/(?:HD[^/]+|[^/]+\\.zip!)/[A-Z]+=.*/)(BodyRef/PDF/)([^/]+)(\\.pdf)$", Pattern.CASE_INSENSITIVE);
     
     protected SpringerArticleIterator(ArchivalUnit au,
                                   SubTreeArticleIterator.Spec spec) {

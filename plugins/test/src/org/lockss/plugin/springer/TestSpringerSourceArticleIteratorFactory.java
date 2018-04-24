@@ -84,11 +84,6 @@ public class TestSpringerSourceArticleIteratorFactory extends ArticleIteratorTes
 				 "year", "2012");
 	  }
 
-  public void testRoots() throws Exception {
-    SubTreeArticleIterator artIter = createSubTreeIter();
-    assertEquals(ListUtil.list("http://www.example.com/2012"),
-		 getRootUrls(artIter));
-  }
 
   
   /*
@@ -99,8 +94,10 @@ public class TestSpringerSourceArticleIteratorFactory extends ArticleIteratorTes
     Pattern pat = getPattern(artIter);
 
     assertNotMatchesRE(pat, "http://www.wrong.com/2012/STUFF_07-26-12.zip!/JOU=2/VOL=2012.3/ISU=3/ART=2012_53/BodyRef/PDF/article.pdf");
-    assertNotMatchesRE(pat, "http://www.example.com/1066/STUFF_07-26-12.zip!/JOU=2/VOL=2012.3/ISU=3/ART=2012_53/BodyRef/PDF/article.pdf");
+    // the RE is more permissive now to handle three different flavors of plugin - SourcePlugin, DirSourcePlugin and DeliveredSourcePlugin
+    assertMatchesRE(pat, "http://www.example.com/1066/STUFF_07-26-12.zip!/JOU=2/VOL=2012.3/ISU=3/ART=2012_53/BodyRef/PDF/article.pdf");
     assertNotMatchesRE(pat, "http://www.example.com/2012/STUFF_07-26-12.wrong!/JOU=2/VOL=2012.3/ISU=3/ART=2012_53/BodyRef/PDF/article.pdf");
+    assertNotMatchesRE(pat, "http://www.example.com/2012/HDX_Y/more/JOU=2/VOL=2012.3/ISU=3/ART=2012_53/BodyRef/PDF/article.pdf");
     assertNotMatchesRE(pat, "http://www.example.com/2012/STUFF_07-26-12.zip!/JOU=2/VOL=2012.3/ISU=3/ART=2012_53/PDF/article.pdf");
     assertNotMatchesRE(pat, "http://www.example.com/2012/STUFF_07-26-12.zip!/JOU=2/VOL=2012.3/ISU=3/ART=2012_53/BodyRef/article.pdf");
     assertNotMatchesRE(pat, "http://www.example.com/2012/STUFF_07-26-12.zip!/JOU=2/VOL=2012.3/ISU=3/ART=2012_53/BodyRef/PDF/article.wrong");
@@ -108,6 +105,11 @@ public class TestSpringerSourceArticleIteratorFactory extends ArticleIteratorTes
     assertNotMatchesRE(pat, "http://www.example.com/2012/STUFF_07-26-12.zip!/JOU=2/VOL=2012.3/ISU=3/ART=2012_53/wrong/PDF/article.pdf");
     assertMatchesRE(pat, "http://www.example.com/2012/STUFF_07-26-12.zip!/JOU=2/VOL=2012.3/ISU=3/ART=2012_53/BodyRef/PDF/article.pdf");
     assertMatchesRE(pat, "http://www.example.com/2012/DIFF-STUFF_07-26-12.zip!/JOU=2/VOL=2012.3/ISU=3/ART=2012_53/BodyRef/PDF/article.pdf");
+    assertMatchesRE(pat, "http://www.example.com/2012/STUFF_07-26-12.zip!/JOU=23/VOL=2012.2/ISU=8/ART=2012_23/BodyRef/PDF/article.pdf");
+    // DirSourcePlugin
+    assertMatchesRE(pat, "http://www.example.com/2012_1/STUFF_07-26-12.zip!/JOU=23/VOL=2012.2/ISU=8/ART=2012_23/BodyRef/PDF/article.pdf");
+    // DeliveredSourcePlugin
+    assertMatchesRE(pat, "http://www.example.com/2012/HD1_3/JOU=23/VOL=2012.2/ISU=8/ART=2012_23/BodyRef/PDF/article.pdf");
     assertMatchesRE(pat, "http://www.example.com/2012/STUFF_07-26-12.zip!/JOU=23/VOL=2012.2/ISU=8/ART=2012_23/BodyRef/PDF/article.pdf");
     assertMatchesRE(pat, "http://www.example.com/2012/STUFF_07-26-12.zip!/JOU=2/VOL=2012.3/ISU=2-3/ART=2012_53/BodyRef/PDF/random_article.pdf");
     
