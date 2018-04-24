@@ -12,22 +12,60 @@
       name = Springer Source Content
     >
     
-    plugin = org.lockss.plugin.springer.ClockssSpringerSourcePlugin
-    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/springer-released/
-    hidden[proxy] = DIRECT
-    implicit < status ; status2 ; year ; name ; param[year] >
-    
-    au < zapped ; finished ; 2009 ; Springer Source Content 2009 ; 2009 >
-    au < zapped ; finished ; 2010 ; Springer Source Content 2010 ; 2010 >
-    au < zapped ; finished ; 2011 ; Springer Source Content 2011 ; 2011 >
-    au < zapped ; finished ; 2012 ; Springer Source Content 2012 ; 2012 >
-    au < zapped ; finished ; 2013 ; Springer Source Content 2013 ; 2013 >
-    au < zapped ; finished ; 2014 ; Springer Source Content 2014 ; 2014 >
-    au < zapped ; finished ; 2015 ; Springer Source Content 2015 ; 2015 >
-    au < zapped ; finished ; 2016 ; Springer Source Content 2016 ; 2016 >
-    au < readySource ; crawling ; 2017 ; Springer Source Content 2017 ; 2017 >
-    au < testing ; exists ; 2018 ; Springer Source Content 2018 ; 2018 >
-    
+    {
+
+      plugin = org.lockss.plugin.springer.ClockssSpringerSourcePlugin
+      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/springer-released/
+      hidden[proxy] = DIRECT
+      implicit < status ; status2 ; year ; name ; param[year] >
+      
+      au < zapped ; finished ; 2009 ; Springer Source Content 2009 ; 2009 >
+      au < zapped ; finished ; 2010 ; Springer Source Content 2010 ; 2010 >
+      au < zapped ; finished ; 2011 ; Springer Source Content 2011 ; 2011 >
+      au < zapped ; finished ; 2012 ; Springer Source Content 2012 ; 2012 >
+      au < zapped ; finished ; 2013 ; Springer Source Content 2013 ; 2013 >
+      au < zapped ; finished ; 2014 ; Springer Source Content 2014 ; 2014 >
+      au < zapped ; finished ; 2015 ; Springer Source Content 2015 ; 2015 >
+      au < zapped ; finished ; 2016 ; Springer Source Content 2016 ; 2016 >
+      au < readySource ; crawling ; 2017 ; Springer Source Content 2017 ; 2017 >
+   	#no more AUs expected using this plugin
+      
+    }
+
+    {
+      
+      plugin = org.lockss.plugin.springer.ClockssSpringerDirSourcePlugin
+      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/springer-released/
+      hidden[proxy] = DIRECT
+      implicit < status ; status2 ; year ; name ; param[directory] >
+      
+      au < expected ; exists ; 2018 ; Springer Source Content 2018_1 ; 2018_1 >
+      au < expected ; exists ; 2018 ; Springer Source Content 2018_2 ; 2018_2 >
+      #more to come in 2018
+      
+    }
   }
 
+  {
+  
+    title <
+      name = Springer Delivered Source Content
+    >
+    
+    plugin = org.lockss.plugin.springer.ClockssSpringerDeliveredSourcePlugin
+    param[base_url] = http://clockss-staged.clockss.org/sourcefiles/springer-delivered/
+    hidden[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[year] ; param[directory] >
+      
+    au < testing ; exists ; 2018 ; Springer Delivered Source Content 2018 HD1_1 ; 2018 ; HD1_1 >
+    au < testing ; exists ; 2018 ; Springer Delivered Source Content 2018 HD1_2 ; 2018 ; HD1_2 >
+    au < testing ; exists ; 2018 ; Springer Delivered Source Content 2018 HD1_3 ; 2018 ; HD1_3 >
+    au < testing ; exists ; 2018 ; Springer Delivered Source Content 2018 HD1_4 ; 2018 ; HD1_4 >
+    au < testing ; exists ; 2018 ; Springer Delivered Source Content 2018 HD1_5 ; 2018 ; HD1_5 >
+    au < testing ; exists ; 2018 ; Springer Delivered Source Content 2018 HD1_6 ; 2018 ; HD1_6 >
+    au < testing ; exists ; 2018 ; Springer Delivered Source Content 2018 HD1_7 ; 2018 ; HD1_7 >
+    au < testing ; exists ; 2018 ; Springer Delivered Source Content 2018 HD1_8 ; 2018 ; HD1_8 >
+    au < testing ; exists ; 2018 ; Springer Delivered Source Content 2018 HD1_9 ; 2018 ; HD1_9 >
+    
+  }  
 }
