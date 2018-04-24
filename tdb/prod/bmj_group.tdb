@@ -56,6 +56,7 @@
     au < HighWirePressH20Plugin ; down ; 2015 ; Acupuncture in Medicine Volume 33 ; 33 >
     au < bmj.BMJDrupalPlugin ; notReady ; 2016 ; Acupuncture in Medicine Volume 34 ; 34 > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; testing ; 2017 ; Acupuncture in Medicine Volume 35 ; 35 >
+    au < bmj.BMJDrupalPlugin ; expected ; 2018 ; Acupuncture in Medicine Volume 36 ; 36 >
 
   }
 
@@ -146,6 +147,7 @@
     au < HighWirePressH20Plugin ; down ; 2015 ; Annals of the Rheumatic Diseases Volume 75 ; 75 >
     au < bmj.BMJDrupalPlugin ; notReady ; 2016 ; Annals of the Rheumatic Diseases Volume 76 ; 76 > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; testing ; 2017 ; Annals of the Rheumatic Diseases Volume 77 ; 77 >
+    au < bmj.BMJDrupalPlugin ; expected ; 2018 ; Annals of the Rheumatic Diseases Volume 78 ; 78 >
 
   }
 
@@ -262,6 +264,7 @@
     au < HighWirePressH20Plugin ; down ; 2015 ; Archives of Disease in Childhood Volume 100 ; 100 >
     au < bmj.BMJDrupalPlugin ; notReady ; 2016 ; Archives of Disease in Childhood Volume 101 ; 101 > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; testing ; 2017 ; Archives of Disease in Childhood Volume 102 ; 102 >
+    au < bmj.BMJDrupalPlugin ; expected ; 2018 ; Archives of Disease in Childhood Volume 103 ; 103 >
 
   }
 
@@ -290,6 +293,7 @@
     au < HighWirePressH20Plugin ; down ; 2015 ; Archives of Disease in Childhood - Education and Practice Volume 100 ; 100 >
     au < bmj.BMJDrupalPlugin ; notReady ; 2016 ; Archives of Disease in Childhood - Education and Practice Volume 101 ; 101 > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Archives of Disease in Childhood - Education and Practice Volume 102 ; 102 >
+    au < bmj.BMJDrupalPlugin ; expected ; 2018 ; Archives of Disease in Childhood - Education and Practice Volume 103 ; 103 >
 
   }
 
@@ -337,6 +341,7 @@
     au < HighWirePressH20Plugin ; down ; 2015 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 100 ; 100 >
     au < bmj.BMJDrupalPlugin ; notReady ; 2016 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 101 ; 101 > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 102 ; 102 >
+    au < bmj.BMJDrupalPlugin ; expected ; 2018 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 103 ; 103 >
 
   }
 
@@ -458,6 +463,9 @@
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; BMJ Volume 356 ; 356 >
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; BMJ Volume 357 ; 357 >
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; BMJ Volume 358 ; 358 >
+    au < bmj.BMJDrupalPlugin ; expected ; 2018 ; BMJ Volume 359 ; 359 >
+    au < bmj.BMJDrupalPlugin ; expected ; 2018 ; BMJ Volume 360 ; 360 >
+    au < bmj.BMJDrupalPlugin ; expected ; 2018 ; BMJ Volume 361 ; 361 >
 
   }
 
@@ -474,6 +482,7 @@
     au < HighWirePressH20Plugin ; down ; 2015 ; BMJ Innovations Volume 1 ; 1 >
     au < bmj.BMJDrupalPlugin ; manifest ; 2016 ; BMJ Innovations Volume 2 ; 2 >
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; BMJ Innovations Volume 3 ; 3 >
+    au < bmj.BMJDrupalPlugin ; expected ; 2018 ; BMJ Innovations Volume 4 ; 4 >
 
   }
   
@@ -492,6 +501,7 @@
     au < HighWirePressH20Plugin ; down ; 2015 ; BMJ Open Volume 5 ; 5 >
     au < bmj.BMJDrupalPlugin ; testing ; 2016 ; BMJ Open Volume 6 ; 6 >
     au < bmj.BMJDrupalPlugin ; testing ; 2017 ; BMJ Open Volume 7 ; 7 >
+    au < bmj.BMJDrupalPlugin ; expected ; 2018 ; BMJ Open Volume 8 ; 8 >
 
   }
   
@@ -509,6 +519,7 @@
       au < HighWirePressH20Plugin ; down ; 2015 ; BMJ Open Diabetes Research & Care Volume 3 ; 3 >
       au < bmj.BMJDrupalPlugin ; notReady ; 2016 ; BMJ Open Diabetes Research & Care Volume 4 ; 4 > # Unable to fetch probe permission page
       au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; BMJ Open Diabetes Research & Care Volume 5 ; 5 >
+      au < bmj.BMJDrupalPlugin ; expected ; 2018 ; BMJ Open Diabetes Research & Care Volume 6 ; 6 >
 
   }
   
@@ -521,6 +532,7 @@
     param[base_url] = http://bmjophth.bmj.com/
 
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; BMJ Open Ophthalmology Volume 1 ; 1 >
+    au < bmj.BMJDrupalPlugin ; expected ; 2018 ; BMJ Open Ophthalmology Volume 2 ; 2 >
 
   }
   
@@ -536,6 +548,7 @@
     au < HighWirePressH20Plugin ; down ; 2015 ; BMJ Open Respiratory Research Volume 2 ; 2 >
     au < bmj.BMJDrupalPlugin ; notReady ; 2016 ; BMJ Open Respiratory Research Volume 3 ; 3 > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; testing ; 2017 ; BMJ Open Respiratory Research Volume 4 ; 4 >
+    au < bmj.BMJDrupalPlugin ; expected ; 2018 ; BMJ Open Respiratory Research Volume 5 ; 5 >
 
   }
   
@@ -565,6 +578,8 @@
       au < bmj.BMJDrupalPlugin ; testing ; 2015 ; BMJ Quality Improvement Reports Volume 4 ; 4 >
       au < bmj.BMJDrupalPlugin ; doNotProcess ; 2016 ; BMJ Quality Improvement Reports Volume 5 ; 5 >
       au < bmj.BMJDrupalPlugin ; testing ; 2017 ; BMJ Quality Improvement Reports Volume 6 ; 6 >
+      au < bmj.BMJDrupalPlugin ; expected ; 2018 ; BMJ Quality Improvement Reports Volume 7 ; 7 >
+
     }
       
   }
@@ -580,6 +595,7 @@
     au < HighWirePressH20Plugin ; down ; 2014-2015 ; BMJ Simulation & Technology Enhanced Learning Volume 1 ; 1 >
     au < bmj.BMJDrupalPlugin ; notReady ; 2016 ; BMJ Simulation & Technology Enhanced Learning Volume 2 ; 2 > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; BMJ Simulation & Technology Enhanced Learning Volume 3 ; 3 >
+    au < bmj.BMJDrupalPlugin ; expected ; 2018 ; BMJ Simulation & Technology Enhanced Learning Volume 4 ; 4 >
 
   }
 
@@ -599,6 +615,7 @@
     au < HighWirePressH20Plugin ; down ; 2015 ; BMJ Supportive & Palliative Care Volume 5 ; 5 >
     au < bmj.BMJDrupalPlugin ; notReady ; 2016 ; BMJ Supportive & Palliative Care Volume 6 ; 6 > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; BMJ Supportive & Palliative Care Volume 7 ; 7 >
+    au < bmj.BMJDrupalPlugin ; expected ; 2018 ; BMJ Supportive & Palliative Care Volume 8 ; 8 >
 
   }
 
@@ -715,6 +732,7 @@
     au < HighWirePressH20Plugin ; down ; 2015 ; British Journal of Ophthalmology Volume 99 ; 99 >
     au < bmj.BMJDrupalPlugin ; notReady ; 2016 ; British Journal of Ophthalmology Volume 100 ; 100 > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; testing ; 2017 ; British Journal of Ophthalmology Volume 101 ; 101 >
+    au < bmj.BMJDrupalPlugin ; expected ; 2018 ; British Journal of Ophthalmology Volume 102 ; 102 >
 
   }
 
@@ -779,6 +797,7 @@
     au < HighWirePressH20Plugin ; down ; 2015 ; British Journal of Sports Medicine Volume 49 ; 49 >
     au < bmj.BMJDrupalPlugin ; notReady ; 2016 ; British Journal of Sports Medicine Volume 50 ; 50 > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; testing ; 2017 ; British Journal of Sports Medicine Volume 51 ; 51 >
+    au < bmj.BMJDrupalPlugin ; expected ; 2018 ; British Journal of Sports Medicine Volume 52 ; 52 >
 
   }
 
@@ -850,6 +869,7 @@
     au < HighWirePressH20Plugin ; down ; 2015 ; Drug and Therapeutics Bulletin Volume 53 ; 53 >
     au < bmj.BMJDrupalPlugin ; manifest ; 2016 ; Drug and Therapeutics Bulletin Volume 54 ; 54 >
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Drug and Therapeutics Bulletin Volume 55 ; 55 >
+    au < bmj.BMJDrupalPlugin ; expected ; 2018 ; Drug and Therapeutics Bulletin Volume 56 ; 56 >
 
   }
 
@@ -897,6 +917,7 @@
     au < HighWirePressH20Plugin ; down ; 2015 ; Emergency Medicine Journal Volume 32 ; 32 >
     au < bmj.BMJDrupalPlugin ; notReady ; 2016 ; Emergency Medicine Journal Volume 33 ; 33 > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Emergency Medicine Journal Volume 34 ; 34 >
+    au < bmj.BMJDrupalPlugin ; expected ; 2018 ; Emergency Medicine Journal Volume 35 ; 35 >
 
   }
 
@@ -950,6 +971,7 @@
     au < HighWirePressH20Plugin ; down ; 2015 ; European Journal of Hospital Pharmacy: Science and Practice Volume 22 ; 22 >
     au < bmj.BMJDrupalPlugin ; manifest ; 2016 ; European Journal of Hospital Pharmacy: Science and Practice Volume 23 ; 23 >
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; European Journal of Hospital Pharmacy: Science and Practice Volume 24 ; 24 >
+    au < bmj.BMJDrupalPlugin ; expected ; 2018 ; European Journal of Hospital Pharmacy: Science and Practice Volume 25 ; 25 >
 
   }
 
@@ -969,6 +991,7 @@
     au < HighWirePressH20Plugin ; down ; 2015 ; Frontline Gastroenterology Volume 6 ; 6 >
     au < bmj.BMJDrupalPlugin ; notReady ; 2016 ; Frontline Gastroenterology Volume 7 ; 7 > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Frontline Gastroenterology Volume 8 ; 8 >
+    au < bmj.BMJDrupalPlugin ; expected ; 2018 ; Frontline Gastroenterology Volume 9 ; 9 >
 
   }
 
@@ -985,6 +1008,7 @@
     au < HighWirePressH20Plugin ; down ; 2015 ; OpenHeart Volume 2 ; 2 >
     au < bmj.BMJDrupalPlugin ; notReady ; 2016 ; OpenHeart Volume 3 ; 3 > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; OpenHeart Volume 4 ; 4 >
+    au < bmj.BMJDrupalPlugin ; expected ; 2018 ; OpenHeart Volume 5 ; 5 >
 
   }
 
@@ -1005,6 +1029,7 @@
     au < HighWirePressH20Plugin ; down ; 2015 ; Heart Asia Volume 7 ; 7 >
     au < bmj.BMJDrupalPlugin ; notReady ; 2016 ; Heart Asia Volume 8 ; 8 > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Heart Asia Volume 9 ; 9 >
+    au < bmj.BMJDrupalPlugin ; expected ; 2018 ; Heart Asia Volume 10 ; 10 >
 
   }
 
@@ -1028,6 +1053,7 @@
     au < HighWirePressH20Plugin ; exists ; 2015 ; BMJ Case Reports Volume 2015 ; 2015 >
     au < HighWirePressH20Plugin ; exists ; 2016 ; BMJ Case Reports Volume 2016 ; 2016 >
     au < HighWirePressH20Plugin ; exists ; 2017 ; BMJ Case Reports Volume 2017 ; 2017 >
+    au < HighWirePressH20Plugin ; expected ; 2018 ; BMJ Case Reports Volume 2018 ; 2018 >
 
   }
 
@@ -1065,6 +1091,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; down ; 2015 ; Evidence-Based Medicine Volume 20 ; 20 >
     au < bmj.BMJDrupalPlugin ; notReady ; 2016 ; Evidence-Based Medicine Volume 21 ; 21 > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Evidence-Based Medicine Volume 22 ; 22 >
+    au < bmj.BMJDrupalPlugin ; expected ; 2018 ; Evidence-Based Medicine Volume 23 ; 23 >
 
   }
 
@@ -1098,6 +1125,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; down ; 2015 ; Evidence-Based Mental Health Volume 18 ; 18 >
     au < bmj.BMJDrupalPlugin ; notReady ; 2016 ; Evidence-Based Mental Health Volume 19 ; 19 > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Evidence-Based Mental Health Volume 20 ; 20 >
+    au < bmj.BMJDrupalPlugin ; expected ; 2018 ; Evidence-Based Mental Health Volume 21 ; 21 >
 
   }
 
@@ -1131,6 +1159,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; down ; 2015 ; Evidence-Based Nursing Volume 18 ; 18 >
     au < bmj.BMJDrupalPlugin ; notReady ; 2016 ; Evidence-Based Nursing Volume 19 ; 19 > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Evidence-Based Nursing Volume 20 ; 20 >
+    au < bmj.BMJDrupalPlugin ; expected ; 2018 ; Evidence-Based Nursing Volume 21 ; 21 >
 
   }
 
@@ -1210,6 +1239,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; down ; 2015 ; Gut Volume 64 ; 64 >
     au < bmj.BMJDrupalPlugin ; notReady ; 2016 ; Gut Volume 65 ; 65 > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Gut Volume 66 ; 66 >
+    au < bmj.BMJDrupalPlugin ; expected ; 2018 ; Gut Volume 67 ; 67 >
 
   }
 
@@ -1326,6 +1356,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; down ; 2015 ; Heart Volume 101 ; 101 >
     au < bmj.BMJDrupalPlugin ; notReady ; 2016 ; Heart Volume 102 ; 102 > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Heart Volume 103 ; 103 >
+    au < bmj.BMJDrupalPlugin ; expected ; 2018 ; Heart Volume 104 ; 104 >
 
   }
 
@@ -1372,7 +1403,8 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       au < HighWirePressH20Plugin ; down ; 2015 ; Injury Prevention Volume 21 ; 21 >
       au < bmj.BMJDrupalPlugin ; notReady ; 2016 ; Injury Prevention Volume 22 ; 22 > # Unable to fetch probe permission page
       au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Injury Prevention Volume 23 ; 23 >
-      
+      au < bmj.BMJDrupalPlugin ; expected ; 2018 ; Injury Prevention Volume 24 ; 24 >
+
     }
 
   }
@@ -1457,6 +1489,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; down ; 2015 ; Journal of Clinical Pathology Volume 68 ; 68 >
     au < bmj.BMJDrupalPlugin ; notReady ; 2016 ; Journal of Clinical Pathology Volume 69 ; 69 > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Journal of Clinical Pathology Volume 70 ; 70 >
+    au < bmj.BMJDrupalPlugin ; expected ; 2018 ; Journal of Clinical Pathology Volume 71 ; 71 >
 
   }
 
@@ -1541,6 +1574,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; down ; 2015 ; Journal of Epidemiology & Community Health Volume 69 ; 69 >
     au < bmj.BMJDrupalPlugin ; notReady ; 2016 ; Journal of Epidemiology & Community Health Volume 70 ; 70 > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Journal of Epidemiology & Community Health Volume 71 ; 71 >
+    au < bmj.BMJDrupalPlugin ; expected ; 2018 ; Journal of Epidemiology & Community Health Volume 72 ; 72 >
 
   }
 
@@ -1571,6 +1605,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; down ; 2015 ; Journal of Family Planning and Reproductive Health Care Volume 41 ; 41 >
     au < bmj.BMJDrupalPlugin ; notReady ; 2016 ; Journal of Family Planning and Reproductive Health Care Volume 42 ; 42 > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Journal of Family Planning and Reproductive Health Care Volume 43 ; 43 >
+    au < bmj.BMJDrupalPlugin ; expected ; 2018 ; Journal of Family Planning and Reproductive Health Care Volume 44 ; 44 >
 
   }
 
@@ -1627,6 +1662,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; down ; 2015 ; Journal of Medical Ethics Volume 41 ; 41 >
     au < bmj.BMJDrupalPlugin ; notReady ; 2016 ; Journal of Medical Ethics Volume 42 ; 42 > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Journal of Medical Ethics Volume 43 ; 43 >
+    au < bmj.BMJDrupalPlugin ; expected ; 2018 ; Journal of Medical Ethics Volume 44 ; 44 >
 
   }
 
@@ -1694,6 +1730,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; down ; 2015 ; Journal of Medical Genetics Volume 52 ; 52 >
     au < bmj.BMJDrupalPlugin ; notReady ; 2016 ; Journal of Medical Genetics Volume 53 ; 53 > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Journal of Medical Genetics Volume 54 ; 54 >
+    au < bmj.BMJDrupalPlugin ; expected ; 2018 ; Journal of Medical Genetics Volume 55 ; 55 >
 
   }
 
@@ -1716,6 +1753,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; down ; 2015 ; Journal of NeuroInterventional Surgery Volume 7 ; 7 >
     au < bmj.BMJDrupalPlugin ; notReady ; 2016 ; Journal of NeuroInterventional Surgery Volume 8 ; 8 > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Journal of NeuroInterventional Surgery Volume 9 ; 9 >
+    au < bmj.BMJDrupalPlugin ; expected ; 2018 ; Journal of NeuroInterventional Surgery Volume 10 ; 10 >
 
   }
 
@@ -1817,6 +1855,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; down ; 2015 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 86 ; 86 >
     au < bmj.BMJDrupalPlugin ; notReady ; 2016 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 87 ; 87 > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 88 ; 88 >
+    au < bmj.BMJDrupalPlugin ; expected ; 2018 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 89 ; 89 >
 
   }
 
@@ -1996,6 +2035,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       au < HighWirePressH20Plugin ; down ; 2015 ; Journal of the Royal Army Medical Corps Volume 161 ; 161 >
       au < bmj.BMJDrupalPlugin ; notReady ; 2016 ; Journal of the Royal Army Medical Corps Volume 162 ; 162 > # Unable to fetch probe permission page
       au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Journal of the Royal Army Medical Corps Volume 163 ; 163 >
+      au < bmj.BMJDrupalPlugin ; expected ; 2018 ; Journal of the Royal Army Medical Corps Volume 164 ; 164 >
 
     }
     
@@ -2019,6 +2059,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       au < HighWirePressH20Plugin ; down ; 2015 ; Lupus Science & Medicine Volume 2 ; 2 >
       au < bmj.BMJDrupalPlugin ; notReady ; 2016 ; Lupus Science & Medicine Volume 3 ; 3 > # Unable to fetch probe permission page
       au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Lupus Science & Medicine Volume 4 ; 4 >
+      au < bmj.BMJDrupalPlugin ; expected ; 2018 ; Lupus Science & Medicine Volume 5 ; 5 >
 
     }
     
@@ -2054,6 +2095,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; down ; 2015 ; Medical Humanities Volume 41 ; 41 >
     au < bmj.BMJDrupalPlugin ; notReady ; 2016 ; Medical Humanities Volume 42 ; 42 > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Medical Humanities Volume 43 ; 43 >
+    au < bmj.BMJDrupalPlugin ; expected ; 2018 ; Medical Humanities Volume 44 ; 44 >
 
   }
 
@@ -2164,6 +2206,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; down ; 2015 ; Occupational and Environmental Medicine Volume 72 ; 72 >
     au < bmj.BMJDrupalPlugin ; notReady ; 2016 ; Occupational and Environmental Medicine Volume 73 ; 73 > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Occupational and Environmental Medicine Volume 74 ; 74 >
+    au < bmj.BMJDrupalPlugin ; expected ; 2018 ; Occupational and Environmental Medicine Volume 75 ; 75 >
 
   }
 
@@ -2270,6 +2313,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; down ; 2015 ; Postgraduate Medical Journal Volume 91 ; 91 >
     au < bmj.BMJDrupalPlugin ; notReady ; 2016 ; Postgraduate Medical Journal Volume 92 ; 92 > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Postgraduate Medical Journal Volume 93 ; 93 >
+    au < bmj.BMJDrupalPlugin ; expected ; 2018 ; Postgraduate Medical Journal Volume 94 ; 94 >
 
   }
 
@@ -2300,6 +2344,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; down ; 2015 ; Practical Neurology Volume 15 ; 15 >
     au < bmj.BMJDrupalPlugin ; notReady ; 2016 ; Practical Neurology Volume 16 ; 16 > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Practical Neurology Volume 17 ; 17 >
+    au < bmj.BMJDrupalPlugin ; expected ; 2018 ; Practical Neurology Volume 18 ; 18 >
 
   }
 
@@ -2351,6 +2396,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       au < HighWirePressH20Plugin ; down ; 2015 ; BMJ Quality & Safety Volume 24 ; 24 >
       au < bmj.BMJDrupalPlugin ; notReady ; 2016 ; BMJ Quality & Safety Volume 25 ; 25 > # Unable to fetch probe permission page
       au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; BMJ Quality & Safety Volume 26 ; 26 >
+      au < bmj.BMJDrupalPlugin ; expected ; 2018 ; BMJ Quality & Safety Volume 27 ; 27 >
 
       }
   }
@@ -2367,6 +2413,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; down ; 2015 ; RMD Open Volume 1 ; 1 >
     au < bmj.BMJDrupalPlugin ; notReady ; 2016 ; RMD Open Volume 2 ; 2 > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; RMD Open Volume 3 ; 3 >
+    au < bmj.BMJDrupalPlugin ; expected ; 2018 ; RMD Open Volume 4 ; 4 >
 
   }
 
@@ -2473,6 +2520,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; down ; 2015 ; Sexually Transmitted Infections Volume 91 ; 91 >
     au < bmj.BMJDrupalPlugin ; manifest ; 2016 ; Sexually Transmitted Infections Volume 92 ; 92 >
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Sexually Transmitted Infections Volume 93 ; 93 >
+    au < bmj.BMJDrupalPlugin ; expected ; 2018 ; Sexually Transmitted Infections Volume 94 ; 94 >
 
   }
 
@@ -2558,6 +2606,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; down ; 2015 ; Thorax Volume 70 ; 70 >
     au < bmj.BMJDrupalPlugin ; notReady ; 2016 ; Thorax Volume 71 ; 71 > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Thorax Volume 72 ; 72 >
+    au < bmj.BMJDrupalPlugin ; expected ; 2018 ; Thorax Volume 73 ; 73 >
 
   }
 
@@ -2609,10 +2658,10 @@ comment[tc15] = recursive URL structure
       au < HighWirePressH20Plugin ; down ; 2015 ; Tobacco Control Volume 24 ; 24 >
       au < bmj.BMJDrupalPlugin ; notReady ; 2016 ; Tobacco Control Volume 25 ; 25 > # Unable to fetch probe permission page
       au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Tobacco Control Volume 26 ; 26 >
+      au < bmj.BMJDrupalPlugin ; expected ; 2018 ; Tobacco Control Volume 27 ; 27 >
 
     }
 
   }
 
 }
-
