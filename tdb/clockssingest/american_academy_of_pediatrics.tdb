@@ -216,7 +216,7 @@
       au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2015 ; NeoReviews Volume 16 [superseded] ; 16 ; >
       au < aap.ClockssAAPDrupalPlugin ; finished ; crawling ; 2015 ; NeoReviews Volume 16 ; 16 ; reingest1.clockss.org:8082 >
       au < aap.ClockssAAPDrupalPlugin ; finished ; crawling ; 2016 ; NeoReviews Volume 17 ; 17 ; reingest1.clockss.org:8082 >
-      au < aap.ClockssAAPDrupalPlugin ; deepCrawl ; exists ; 2017 ; NeoReviews Volume 18 ; 18 ; >
+      au < aap.ClockssAAPDrupalPlugin ; deepCrawl ; exists ; 2017 ; NeoReviews Volume 18 ; 18 ; > #probe link empty
       au < aap.ClockssAAPDrupalPlugin ; expected ; exists ; 2018 ; NeoReviews Volume 19 ; 19 ; >
 
     }

@@ -12,12 +12,12 @@
     >
 
       plugin = org.lockss.plugin.bepress.BePressPlugin
-      param[base_url] = http://ir.library.louisville.edu/
+      #param[base_url] = http://ir.library.louisville.edu/
       param[journal_abbr] = jri
-      implicit < status ; year ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] ; param[base_url] >
     
-      au < released ; 2017 ; Journal of Respiratory Infections Volume 1 ; 1 >
-      au < expected ; 2018 ; Journal of Respiratory Infections Volume 2 ; 2 >
+      au < released ; 2017 ; Journal of Respiratory Infections Volume 1 ; 1 ; http://ir.library.louisville.edu/>
+      au < expected ; 2018 ; Journal of Respiratory Infections Volume 2 ; 2 ; https://ir.library.louisville.edu/>
 
   }
   
@@ -29,12 +29,12 @@
     >
 
       plugin = org.lockss.plugin.bepress.BePressPlugin
-      param[base_url] = http://ir.library.louisville.edu/
+      #param[base_url] = http://ir.library.louisville.edu/
       param[journal_abbr] = rgh
-      implicit < status ; year ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] ; param[base_url] >
     
-      au < testing ; 2017 ; Journal of Refugee & Global Health Volume 1 ; 1 >
-      au < expected ; 2018 ; Journal of Refugee & Global Health Volume 2 ; 2 >
+      au < exists ; 2017 ; Journal of Refugee & Global Health Volume 1 ; 1 ; https://ir.library.louisville.edu/>
+      au < expected ; 2018 ; Journal of Refugee & Global Health Volume 2 ; 2 ; https://ir.library.louisville.edu/>
 
   }
   
