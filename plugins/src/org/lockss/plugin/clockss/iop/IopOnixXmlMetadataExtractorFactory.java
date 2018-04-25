@@ -227,8 +227,8 @@ public class IopOnixXmlMetadataExtractorFactory extends SourceXmlMetadataExtract
       String fullDOI = (helper == Onix2Helper) ? oneAM.getRaw(Onix2BooksSchemaHelper.ONIX_idtype_doi) : 
         oneAM.getRaw(Onix3BooksSchemaHelper.ONIX_idtype_doi);
       String clean_doi = null;
-      if (fullDOI != null && fullDOI.contains("dx.doi.org")) {
-        clean_doi = StringUtils.substringAfter(fullDOI,"http://dx.doi.org/");
+      if (fullDOI != null && fullDOI.contains("doi.org")) {
+        clean_doi = StringUtils.substringAfter(fullDOI,"doi.org/");
         if (!(fullDOI.equals(clean_doi))) {
             oneAM.putIfBetter(MetadataField.FIELD_DOI,clean_doi);
         }
