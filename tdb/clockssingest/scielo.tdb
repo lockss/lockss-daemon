@@ -1351,8 +1351,8 @@
   {
 
     title <
-      name = Ajayu Órgano de Difusión Científica del Departamento de Psicología UCBSP ;
-      eissn = 2077-2161
+      name = Ajayu Órgano de Difusión Científica del Departamento de Psicología UCBSP 
+      #eissn = 2077-2161 #check digit is incorrect.
     >
 
     param[base_url] = http://www.scielo.org.bo/

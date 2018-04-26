@@ -11299,7 +11299,7 @@
   {
 
     title <
-      name = JAMIA ;
+      name = Journal of the American Medical Informatics Association ;
       issn = 1067-5027 ;
       eissn = 1527-974X ;
       issnl = 1067-5027
@@ -11309,29 +11309,29 @@
     plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < doNotProcess ; 1994 ; JAMIA Volume 1 ; 1 >
-    au < doNotProcess ; 1995 ; JAMIA Volume 2 ; 2 >
-    au < doNotProcess ; 1996 ; JAMIA Volume 3 ; 3 >
-    au < doNotProcess ; 1997 ; JAMIA Volume 4 ; 4 >
-    au < doNotProcess ; 1998 ; JAMIA Volume 5 ; 5 >
-    au < doNotProcess ; 1999 ; JAMIA Volume 6 ; 6 >
-    au < doNotProcess ; 2000 ; JAMIA Volume 7 ; 7 >
-    au < doNotProcess ; 2001 ; JAMIA Volume 8 ; 8 >
-    au < doNotProcess ; 2002 ; JAMIA Volume 9 ; 9 >
-    au < doNotProcess ; 2003 ; JAMIA Volume 10 ; 10 >
-    au < doNotProcess ; 2004 ; JAMIA Volume 11 ; 11 >
-    au < doNotProcess ; 2005 ; JAMIA Volume 12 ; 12 >
-    au < doNotProcess ; 2006 ; JAMIA Volume 13 ; 13 >
-    au < doNotProcess ; 2007 ; JAMIA Volume 14 ; 14 >
-    au < down ; 2008 ; JAMIA Volume 15 ; 15 >
-    au < down ; 2009 ; JAMIA Volume 16 ; 16 >
-    au < down ; 2010 ; JAMIA Volume 17 ; 17 >
-    au < down ; 2011 ; JAMIA Volume 18 ; 18 >
-    au < down ; 2012 ; JAMIA Volume 19 ; 19 >
-    au < down ; 2013 ; JAMIA Volume 20 ; 20 >
-    au < down ; 2014 ; JAMIA Volume 21 ; 21 >
-    au < down ; 2015 ; JAMIA Volume 22 ; 22 >
-    au < doNotProcess ; 2016 ; JAMIA Volume 23 ; 23 >
+    au < doNotProcess ; 1994 ; Journal of the American Medical Informatics Association Volume 1 ; 1 >
+    au < doNotProcess ; 1995 ; Journal of the American Medical Informatics Association Volume 2 ; 2 >
+    au < doNotProcess ; 1996 ; Journal of the American Medical Informatics Association Volume 3 ; 3 >
+    au < doNotProcess ; 1997 ; Journal of the American Medical Informatics Association Volume 4 ; 4 >
+    au < doNotProcess ; 1998 ; Journal of the American Medical Informatics Association Volume 5 ; 5 >
+    au < doNotProcess ; 1999 ; Journal of the American Medical Informatics Association Volume 6 ; 6 >
+    au < doNotProcess ; 2000 ; Journal of the American Medical Informatics Association Volume 7 ; 7 >
+    au < doNotProcess ; 2001 ; Journal of the American Medical Informatics Association Volume 8 ; 8 >
+    au < doNotProcess ; 2002 ; Journal of the American Medical Informatics Association Volume 9 ; 9 >
+    au < doNotProcess ; 2003 ; Journal of the American Medical Informatics Association Volume 10 ; 10 >
+    au < doNotProcess ; 2004 ; Journal of the American Medical Informatics Association Volume 11 ; 11 >
+    au < doNotProcess ; 2005 ; Journal of the American Medical Informatics Association Volume 12 ; 12 >
+    au < doNotProcess ; 2006 ; Journal of the American Medical Informatics Association Volume 13 ; 13 >
+    au < doNotProcess ; 2007 ; Journal of the American Medical Informatics Association Volume 14 ; 14 >
+    au < down ; 2008 ; Journal of the American Medical Informatics Association Volume 15 ; 15 >
+    au < down ; 2009 ; Journal of the American Medical Informatics Association Volume 16 ; 16 >
+    au < down ; 2010 ; Journal of the American Medical Informatics Association Volume 17 ; 17 >
+    au < down ; 2011 ; Journal of the American Medical Informatics Association Volume 18 ; 18 >
+    au < down ; 2012 ; Journal of the American Medical Informatics Association Volume 19 ; 19 >
+    au < down ; 2013 ; Journal of the American Medical Informatics Association Volume 20 ; 20 >
+    au < down ; 2014 ; Journal of the American Medical Informatics Association Volume 21 ; 21 >
+    au < down ; 2015 ; Journal of the American Medical Informatics Association Volume 22 ; 22 >
+    au < doNotProcess ; 2016 ; Journal of the American Medical Informatics Association Volume 23 ; 23 >
 
   }
 
@@ -20602,7 +20602,7 @@
   {
 
     title <
-      name = Protein Engineering, Design & Selection : PEDS ;
+      name = Protein Engineering, Design & Selection (PEDS) ;
       issn = 1741-0126 ;
       eissn = 1741-0134 ;
       issnl = 1741-0126
@@ -20614,7 +20614,7 @@
     param[base_url] = http://peds.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume] >
 
-    au < down ; 2005 ; Protein Engineering, Design & Selection : PEDS Volume 18 ; 18 >
+    au < down ; 2005 ; Protein Engineering, Design & Selection (PEDS) Volume 18 ; 18 >
 
     }
 
@@ -20624,35 +20624,35 @@
     param[base_url] = http://peds.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; doNotProcess ; 1986-1987 ; Protein Engineering, Design & Selection : PEDS Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1988-1989 ; Protein Engineering, Design & Selection : PEDS Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1989-1990 ; Protein Engineering, Design & Selection : PEDS Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1990-1991 ; Protein Engineering, Design & Selection : PEDS Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1992 ; Protein Engineering, Design & Selection : PEDS Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1993 ; Protein Engineering, Design & Selection : PEDS Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1994 ; Protein Engineering, Design & Selection : PEDS Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1995 ; Protein Engineering, Design & Selection : PEDS Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1996 ; Protein Engineering, Design & Selection : PEDS Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1997 ; Protein Engineering, Design & Selection : PEDS Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1998 ; Protein Engineering, Design & Selection : PEDS Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1999 ; Protein Engineering, Design & Selection : PEDS Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2000 ; Protein Engineering, Design & Selection : PEDS Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; Protein Engineering, Design & Selection : PEDS Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; Protein Engineering, Design & Selection : PEDS Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2003 ; Protein Engineering, Design & Selection : PEDS Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2004 ; Protein Engineering, Design & Selection : PEDS Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Protein Engineering, Design & Selection : PEDS Volume 18 ; 18 >
-    au < HighWireStrVolPlugin ; down ; 2006 ; Protein Engineering, Design & Selection : PEDS Volume 19 ; 19 >
-    au < HighWireStrVolPlugin ; down ; 2007 ; Protein Engineering, Design & Selection : PEDS Volume 20 ; 20 >
-    au < HighWirePressPlugin ; down ; 2008 ;  Protein Engineering, Design & Selection : PEDS Volume 21 ; 21 >
-    au < HighWirePressPlugin ; down ; 2009 ; Protein Engineering, Design & Selection : PEDS Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; down ; 2010 ; Protein Engineering, Design & Selection : PEDS Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; down ; 2011 ; Protein Engineering, Design & Selection : PEDS Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; down ; 2012 ; Protein Engineering, Design & Selection : PEDS Volume 25 ; 25 >
-    au < HighWirePressH20Plugin ; down ; 2013 ; Protein Engineering, Design & Selection : PEDS Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; down ; 2014 ; Protein Engineering, Design & Selection : PEDS Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; down ; 2015 ; Protein Engineering, Design & Selection : PEDS Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2016 ; Protein Engineering, Design & Selection : PEDS Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1986-1987 ; Protein Engineering, Design & Selection (PEDS) Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1988-1989 ; Protein Engineering, Design & Selection (PEDS) Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1989-1990 ; Protein Engineering, Design & Selection (PEDS) Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1990-1991 ; Protein Engineering, Design & Selection (PEDS) Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1992 ; Protein Engineering, Design & Selection (PEDS) Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1993 ; Protein Engineering, Design & Selection (PEDS) Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1994 ; Protein Engineering, Design & Selection (PEDS) Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1995 ; Protein Engineering, Design & Selection (PEDS) Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1996 ; Protein Engineering, Design & Selection (PEDS) Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1997 ; Protein Engineering, Design & Selection (PEDS) Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1998 ; Protein Engineering, Design & Selection (PEDS) Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1999 ; Protein Engineering, Design & Selection (PEDS) Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2000 ; Protein Engineering, Design & Selection (PEDS) Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; Protein Engineering, Design & Selection (PEDS) Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; Protein Engineering, Design & Selection (PEDS) Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2003 ; Protein Engineering, Design & Selection (PEDS) Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2004 ; Protein Engineering, Design & Selection (PEDS) Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Protein Engineering, Design & Selection (PEDS) Volume 18 ; 18 >
+    au < HighWireStrVolPlugin ; down ; 2006 ; Protein Engineering, Design & Selection (PEDS) Volume 19 ; 19 >
+    au < HighWireStrVolPlugin ; down ; 2007 ; Protein Engineering, Design & Selection (PEDS) Volume 20 ; 20 >
+    au < HighWirePressPlugin ; down ; 2008 ;  Protein Engineering, Design & Selection (PEDS) Volume 21 ; 21 >
+    au < HighWirePressPlugin ; down ; 2009 ; Protein Engineering, Design & Selection (PEDS) Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; down ; 2010 ; Protein Engineering, Design & Selection (PEDS) Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; down ; 2011 ; Protein Engineering, Design & Selection (PEDS) Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; down ; 2012 ; Protein Engineering, Design & Selection (PEDS) Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; down ; 2013 ; Protein Engineering, Design & Selection (PEDS) Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; down ; 2014 ; Protein Engineering, Design & Selection (PEDS) Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; down ; 2015 ; Protein Engineering, Design & Selection (PEDS) Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2016 ; Protein Engineering, Design & Selection (PEDS) Volume 29 ; 29 >
 
     }
 

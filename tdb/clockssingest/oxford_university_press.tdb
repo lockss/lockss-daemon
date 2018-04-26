@@ -11773,11 +11773,10 @@
 
   }
 
-  #Publisher and previous TDB differ on title - Modern Judaism - A Journal of Jewish Ideas and Experience vs Modern Judaism 
   {
 
     title <
-      name = Modern Judaism - A Journal of Jewish Ideas and Experience ;
+      name = Modern Judaism ;
       issn = 0276-1114 ;
       eissn = 1086-3273 ;
       issnl = 0276-1114
@@ -11785,43 +11784,43 @@
 
     param[journal_id] = mj
 
-    au < doNotProcess ; exists ; 1981 ; 1981 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 1 ; 1 ;  >
-    au < doNotProcess ; exists ; 1982 ; 1982 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 2 ; 2 ;  >
-    au < doNotProcess ; exists ; 1983 ; 1983 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 3 ; 3 ;  >
-    au < doNotProcess ; exists ; 1984 ; 1984 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 4 ; 4 ;  >
-    au < doNotProcess ; exists ; 1985 ; 1985 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 5 ; 5 ;  >
-    au < doNotProcess ; exists ; 1986 ; 1986 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 6 ; 6 ;  >
-    au < doNotProcess ; exists ; 1987 ; 1987 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 7 ; 7 ;  >
-    au < doNotProcess ; exists ; 1988 ; 1988 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 8 ; 8 ;  >
-    au < doNotProcess ; exists ; 1989 ; 1989 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 9 ; 9 ;  >
-    au < doNotProcess ; exists ; 1990 ; 1990 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 10 ; 10 ;  >
-    au < doNotProcess ; exists ; 1991 ; 1991 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 11 ; 11 ;  >
-    au < doNotProcess ; exists ; 1992 ; 1992 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 12 ; 12 ;  >
-    au < doNotProcess ; exists ; 1993 ; 1993 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 13 ; 13 ;  >
-    au < doNotProcess ; exists ; 1994 ; 1994 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 14 ; 14 ;  >
-    au < doNotProcess ; exists ; 1995 ; 1995 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 15 ; 15 ;  >
-    au < doNotProcess ; exists ; 1996 ; 1996 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 16 ; 16 ;  >
-    au < doNotProcess ; exists ; 1997 ; 1997 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 17 ; 17 ;  >
-    au < doNotProcess ; exists ; 1998 ; 1998 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 18 ; 18 ;  >
-    au < doNotProcess ; exists ; 1999 ; 1999 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 19 ; 19 ;  >
-    au < doNotProcess ; exists ; 2000 ; 2000 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 20 ; 20 ;  >
-    au < doNotProcess ; exists ; 2001 ; 2001 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 21 ; 21 ;  >
-    au < doNotProcess ; exists ; 2002 ; 2002 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 22 ; 22 ;  >
-    au < doNotProcess ; exists ; 2003 ; 2003 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 23 ; 23 ;  >
-    au < doNotProcess ; exists ; 2004 ; 2004 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 24 ; 24 ;  >
-    au < doNotProcess ; exists ; 2005 ; 2005 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 25 ; 25 ;  >
-    au < doNotProcess ; exists ; 2006 ; 2006 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 26 ; 26 ;  >
-    au < doNotProcess ; exists ; 2007 ; 2007 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 27 ; 27 ;  >
-    au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 28 ; 28 ;  >
-    au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 29 ; 29 ;  >
-    au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 30 ; 30 ;  >
-    au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 31 ; 31 ;  >
-    au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 32 ; 32 ;  >
-    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 33 ; 33 ;  >
-    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 34 ; 34 ;  >
-    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 35 ; 35 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 36 ; 36 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 37 ; 37 ;  >
+    au < doNotProcess ; exists ; 1981 ; 1981 ; Modern Judaism Volume 1 ; 1 ;  >
+    au < doNotProcess ; exists ; 1982 ; 1982 ; Modern Judaism Volume 2 ; 2 ;  >
+    au < doNotProcess ; exists ; 1983 ; 1983 ; Modern Judaism Volume 3 ; 3 ;  >
+    au < doNotProcess ; exists ; 1984 ; 1984 ; Modern Judaism Volume 4 ; 4 ;  >
+    au < doNotProcess ; exists ; 1985 ; 1985 ; Modern Judaism Volume 5 ; 5 ;  >
+    au < doNotProcess ; exists ; 1986 ; 1986 ; Modern Judaism Volume 6 ; 6 ;  >
+    au < doNotProcess ; exists ; 1987 ; 1987 ; Modern Judaism Volume 7 ; 7 ;  >
+    au < doNotProcess ; exists ; 1988 ; 1988 ; Modern Judaism Volume 8 ; 8 ;  >
+    au < doNotProcess ; exists ; 1989 ; 1989 ; Modern Judaism Volume 9 ; 9 ;  >
+    au < doNotProcess ; exists ; 1990 ; 1990 ; Modern Judaism Volume 10 ; 10 ;  >
+    au < doNotProcess ; exists ; 1991 ; 1991 ; Modern Judaism Volume 11 ; 11 ;  >
+    au < doNotProcess ; exists ; 1992 ; 1992 ; Modern Judaism Volume 12 ; 12 ;  >
+    au < doNotProcess ; exists ; 1993 ; 1993 ; Modern Judaism Volume 13 ; 13 ;  >
+    au < doNotProcess ; exists ; 1994 ; 1994 ; Modern Judaism Volume 14 ; 14 ;  >
+    au < doNotProcess ; exists ; 1995 ; 1995 ; Modern Judaism Volume 15 ; 15 ;  >
+    au < doNotProcess ; exists ; 1996 ; 1996 ; Modern Judaism Volume 16 ; 16 ;  >
+    au < doNotProcess ; exists ; 1997 ; 1997 ; Modern Judaism Volume 17 ; 17 ;  >
+    au < doNotProcess ; exists ; 1998 ; 1998 ; Modern Judaism Volume 18 ; 18 ;  >
+    au < doNotProcess ; exists ; 1999 ; 1999 ; Modern Judaism Volume 19 ; 19 ;  >
+    au < doNotProcess ; exists ; 2000 ; 2000 ; Modern Judaism Volume 20 ; 20 ;  >
+    au < doNotProcess ; exists ; 2001 ; 2001 ; Modern Judaism Volume 21 ; 21 ;  >
+    au < doNotProcess ; exists ; 2002 ; 2002 ; Modern Judaism Volume 22 ; 22 ;  >
+    au < doNotProcess ; exists ; 2003 ; 2003 ; Modern Judaism Volume 23 ; 23 ;  >
+    au < doNotProcess ; exists ; 2004 ; 2004 ; Modern Judaism Volume 24 ; 24 ;  >
+    au < doNotProcess ; exists ; 2005 ; 2005 ; Modern Judaism Volume 25 ; 25 ;  >
+    au < doNotProcess ; exists ; 2006 ; 2006 ; Modern Judaism Volume 26 ; 26 ;  >
+    au < doNotProcess ; exists ; 2007 ; 2007 ; Modern Judaism Volume 27 ; 27 ;  >
+    au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; Modern Judaism Volume 28 ; 28 ;  >
+    au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Modern Judaism Volume 29 ; 29 ;  >
+    au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Modern Judaism Volume 30 ; 30 ;  >
+    au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Modern Judaism Volume 31 ; 31 ;  >
+    au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Modern Judaism Volume 32 ; 32 ;  >
+    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Modern Judaism Volume 33 ; 33 ;  >
+    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Modern Judaism Volume 34 ; 34 ;  >
+    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Modern Judaism Volume 35 ; 35 ;  >
+    au < manifest ; exists ; 2016 ; 2016 ; Modern Judaism Volume 36 ; 36 ;  >
+    au < manifest ; exists ; 2017 ; 2017 ; Modern Judaism Volume 37 ; 37 ;  >
 
   }
 
@@ -14172,22 +14171,7 @@
   {
 
     title <
-      name = Protein Engineering, Design & Selection : PEDS ;
-      issn = 1741-0126 ;
-      eissn = 1741-0134 ;
-      issnl = 1741-0126
-    >
-
-    param[journal_id] = 
-
-    #this title was ONLY in the previous TDB listing - suppressing AU generation 
-
-  }
-
-  {
-
-    title <
-      name = Protein Engineering, Design and Selection ;
+      name = Protein Engineering, Design and Selection (PEDS) ;
       issn = 1741-0126 ;
       eissn = 1741-0134
     >
@@ -14195,38 +14179,38 @@
     param[journal_id] = peds
 
     #this title was ONLY in the publisher listing
-    au < doNotProcess ; exists ; 1986 ; 1986 ; Protein Engineering, Design and Selection Volume 1 [1986] ; 1 ;  >
-    au < doNotProcess ; exists ; 1987 ; 1987 ; Protein Engineering, Design and Selection Volume 1 [1987] ; 1 ;  >
-    au < doNotProcess ; exists ; 1988 ; 1988 ; Protein Engineering, Design and Selection Volume 2 ; 2 ;  >
-    au < doNotProcess ; exists ; 1989 ; 1989 ; Protein Engineering, Design and Selection Volume 2 ; 2 ;  >
-    au < doNotProcess ; exists ; 1990 ; 1990 ; Protein Engineering, Design and Selection Volume 3 ; 3 ;  >
-    au < doNotProcess ; exists ; 1991 ; 1991 ; Protein Engineering, Design and Selection Volume 4 ; 4 ;  >
-    au < doNotProcess ; exists ; 1992 ; 1992 ; Protein Engineering, Design and Selection Volume 5 ; 5 ;  >
-    au < doNotProcess ; exists ; 1993 ; 1993 ; Protein Engineering, Design and Selection Volume 6 ; 6 ;  >
-    au < doNotProcess ; exists ; 1994 ; 1994 ; Protein Engineering, Design and Selection Volume 7 ; 7 ;  >
-    au < doNotProcess ; exists ; 1995 ; 1995 ; Protein Engineering, Design and Selection Volume 8 ; 8 ;  >
-    au < doNotProcess ; exists ; 1996 ; 1996 ; Protein Engineering, Design and Selection Volume 9 ; 9 ;  >
-    au < doNotProcess ; exists ; 1997 ; 1997 ; Protein Engineering, Design and Selection Volume 10 ; 10 ;  >
-    au < doNotProcess ; exists ; 1998 ; 1998 ; Protein Engineering, Design and Selection Volume 11 ; 11 ;  >
-    au < doNotProcess ; exists ; 1999 ; 1999 ; Protein Engineering, Design and Selection Volume 12 ; 12 ;  >
-    au < doNotProcess ; exists ; 2000 ; 2000 ; Protein Engineering, Design and Selection Volume 13 ; 13 ;  >
-    au < doNotProcess ; exists ; 2001 ; 2001 ; Protein Engineering, Design and Selection Volume 14 ; 14 ;  >
-    au < doNotProcess ; exists ; 2002 ; 2002 ; Protein Engineering, Design and Selection Volume 15 ; 15 ;  >
-    au < doNotProcess ; exists ; 2003 ; 2003 ; Protein Engineering, Design and Selection Volume 16 ; 16 ;  >
-    au < doNotProcess ; exists ; 2004 ; 2004 ; Protein Engineering, Design and Selection Volume 17 ; 17 ;  >
-    au < doNotProcess ; exists ; 2005 ; 2005 ; Protein Engineering, Design and Selection Volume 18 ; 18 ;  >
-    au < doNotProcess ; exists ; 2006 ; 2006 ; Protein Engineering, Design and Selection Volume 19 ; 19 ;  >
-    au < doNotProcess ; exists ; 2007 ; 2007 ; Protein Engineering, Design and Selection Volume 20 ; 20 ;  >
-    au < manifest ; exists ; 2008 ; 2008 ; Protein Engineering, Design and Selection Volume 21 ; 21 ;  >
-    au < manifest ; exists ; 2009 ; 2009 ; Protein Engineering, Design and Selection Volume 22 ; 22 ;  >
-    au < manifest ; exists ; 2010 ; 2010 ; Protein Engineering, Design and Selection Volume 23 ; 23 ;  >
-    au < manifest ; exists ; 2011 ; 2011 ; Protein Engineering, Design and Selection Volume 24 ; 24 ;  >
-    au < manifest ; exists ; 2012 ; 2012 ; Protein Engineering, Design and Selection Volume 25 ; 25 ;  >
-    au < manifest ; exists ; 2013 ; 2013 ; Protein Engineering, Design and Selection Volume 26 ; 26 ;  >
-    au < manifest ; exists ; 2014 ; 2014 ; Protein Engineering, Design and Selection Volume 27 ; 27 ;  >
-    au < manifest ; exists ; 2015 ; 2015 ; Protein Engineering, Design and Selection Volume 28 ; 28 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; Protein Engineering, Design and Selection Volume 29 ; 29 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Protein Engineering, Design and Selection Volume 30 ; 30 ;  >
+    au < doNotProcess ; exists ; 1986 ; 1986 ; Protein Engineering, Design and Selection (PEDS) Volume 1 [1986] ; 1 ;  >
+    au < doNotProcess ; exists ; 1987 ; 1987 ; Protein Engineering, Design and Selection (PEDS) Volume 1 [1987] ; 1 ;  >
+    au < doNotProcess ; exists ; 1988 ; 1988 ; Protein Engineering, Design and Selection (PEDS) Volume 2 ; 2 ;  >
+    au < doNotProcess ; exists ; 1989 ; 1989 ; Protein Engineering, Design and Selection (PEDS) Volume 2 ; 2 ;  >
+    au < doNotProcess ; exists ; 1990 ; 1990 ; Protein Engineering, Design and Selection (PEDS) Volume 3 ; 3 ;  >
+    au < doNotProcess ; exists ; 1991 ; 1991 ; Protein Engineering, Design and Selection (PEDS) Volume 4 ; 4 ;  >
+    au < doNotProcess ; exists ; 1992 ; 1992 ; Protein Engineering, Design and Selection (PEDS) Volume 5 ; 5 ;  >
+    au < doNotProcess ; exists ; 1993 ; 1993 ; Protein Engineering, Design and Selection (PEDS) Volume 6 ; 6 ;  >
+    au < doNotProcess ; exists ; 1994 ; 1994 ; Protein Engineering, Design and Selection (PEDS) Volume 7 ; 7 ;  >
+    au < doNotProcess ; exists ; 1995 ; 1995 ; Protein Engineering, Design and Selection (PEDS) Volume 8 ; 8 ;  >
+    au < doNotProcess ; exists ; 1996 ; 1996 ; Protein Engineering, Design and Selection (PEDS) Volume 9 ; 9 ;  >
+    au < doNotProcess ; exists ; 1997 ; 1997 ; Protein Engineering, Design and Selection (PEDS) Volume 10 ; 10 ;  >
+    au < doNotProcess ; exists ; 1998 ; 1998 ; Protein Engineering, Design and Selection (PEDS) Volume 11 ; 11 ;  >
+    au < doNotProcess ; exists ; 1999 ; 1999 ; Protein Engineering, Design and Selection (PEDS) Volume 12 ; 12 ;  >
+    au < doNotProcess ; exists ; 2000 ; 2000 ; Protein Engineering, Design and Selection (PEDS) Volume 13 ; 13 ;  >
+    au < doNotProcess ; exists ; 2001 ; 2001 ; Protein Engineering, Design and Selection (PEDS) Volume 14 ; 14 ;  >
+    au < doNotProcess ; exists ; 2002 ; 2002 ; Protein Engineering, Design and Selection (PEDS) Volume 15 ; 15 ;  >
+    au < doNotProcess ; exists ; 2003 ; 2003 ; Protein Engineering, Design and Selection (PEDS) Volume 16 ; 16 ;  >
+    au < doNotProcess ; exists ; 2004 ; 2004 ; Protein Engineering, Design and Selection (PEDS) Volume 17 ; 17 ;  >
+    au < doNotProcess ; exists ; 2005 ; 2005 ; Protein Engineering, Design and Selection (PEDS) Volume 18 ; 18 ;  >
+    au < doNotProcess ; exists ; 2006 ; 2006 ; Protein Engineering, Design and Selection (PEDS) Volume 19 ; 19 ;  >
+    au < doNotProcess ; exists ; 2007 ; 2007 ; Protein Engineering, Design and Selection (PEDS) Volume 20 ; 20 ;  >
+    au < manifest ; exists ; 2008 ; 2008 ; Protein Engineering, Design and Selection (PEDS) Volume 21 ; 21 ;  >
+    au < manifest ; exists ; 2009 ; 2009 ; Protein Engineering, Design and Selection (PEDS) Volume 22 ; 22 ;  >
+    au < manifest ; exists ; 2010 ; 2010 ; Protein Engineering, Design and Selection (PEDS) Volume 23 ; 23 ;  >
+    au < manifest ; exists ; 2011 ; 2011 ; Protein Engineering, Design and Selection (PEDS) Volume 24 ; 24 ;  >
+    au < manifest ; exists ; 2012 ; 2012 ; Protein Engineering, Design and Selection (PEDS) Volume 25 ; 25 ;  >
+    au < manifest ; exists ; 2013 ; 2013 ; Protein Engineering, Design and Selection (PEDS) Volume 26 ; 26 ;  >
+    au < manifest ; exists ; 2014 ; 2014 ; Protein Engineering, Design and Selection (PEDS) Volume 27 ; 27 ;  >
+    au < manifest ; exists ; 2015 ; 2015 ; Protein Engineering, Design and Selection (PEDS) Volume 28 ; 28 ;  >
+    au < manifest ; exists ; 2016 ; 2016 ; Protein Engineering, Design and Selection (PEDS) Volume 29 ; 29 ;  >
+    au < manifest ; exists ; 2017 ; 2017 ; Protein Engineering, Design and Selection (PEDS) Volume 30 ; 30 ;  >
 
   }
 
@@ -16386,13 +16370,12 @@
 
   }
 
-  #Publisher and previous TDB differ on eissn - 1468-263 vs 1468-263X 
   {
 
     title <
       name = The British Journal of Social Work ;
       issn = 0045-3102 ;
-      eissn = 1468-263 ;
+      eissn = 1468-263X ;
       issnl = 0045-3102
     >
 
