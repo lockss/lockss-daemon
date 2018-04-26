@@ -86,11 +86,6 @@ public class TestACMSourceArticleIteratorFactory extends ArticleIteratorTestCase
     return conf;
   }
 
-  public void testRoots() throws Exception {
-    SubTreeArticleIterator artIter = createSubTreeIter();
-    assertEquals(ListUtil.list(BASE_URL + YEAR),
-        getRootUrls(artIter));
-  }
 
   public void testUrlsWithPrefixes() throws Exception {
     SubTreeArticleIterator artIter = createSubTreeIter();
@@ -100,7 +95,8 @@ public class TestACMSourceArticleIteratorFactory extends ArticleIteratorTestCase
     assertNotMatchesRE(pat, "http://clockss-ingest.wrong.org/sourcefiles/acm-dev/2011/10aug2011/NEW-MAG-QUEUE-V9I7-2001562/NEW-MAG-QUEUE-V9I7-2001562.xml");
     assertNotMatchesRE(pat, "http://clockss-ingest.lockss.org/wrong/acm-dev/2011/10aug2011/NEW-MAG-QUEUE-V9I7-2001562/NEW-MAG-QUEUE-V9I7-2001562.xml");
     assertNotMatchesRE(pat, "http://clockss-ingest.lockss.org/sourcefiles/wrong/2011/10aug2011/NEW-MAG-QUEUE-V9I7-2001562/NEW-MAG-QUEUE-V9I7-2001562.xml");
-    assertNotMatchesRE(pat, "http://clockss-ingest.lockss.org/sourcefiles/acm-dev/wrong/10aug2011/NEW-MAG-QUEUE-V9I7-2001562/NEW-MAG-QUEUE-V9I7-2001562.xml");
+    // this is now acceptable
+    assertMatchesRE(pat, "http://clockss-ingest.lockss.org/sourcefiles/acm-dev/2011_A/10aug2011/NEW-MAG-QUEUE-V9I7-2001562/NEW-MAG-QUEUE-V9I7-2001562.xml");
     assertNotMatchesRE(pat, "http://clockss-ingest.lockss.org/sourcefiles/acm-dev/2011/wrong/NEW-MAG-QUEUE-V9I7-2001562/NEW-MAG-QUEUE-V9I7-2001562.xml");
     assertNotMatchesRE(pat, "http://clockss-ingest.lockss.org/sourcefiles/acm-dev/2011/10aug2011/NEW-MAG-QUEUE-V9I7-2001562/NEW-MAG-QUEUE-V9I7-2001562.tif");
     assertNotMatchesRE(pat, "http://clockss-ingest.lockss.org/sourcefiles/acm-dev/2011/10aug2011/NEW-MAG-QUEUE-V9I7-2001562/NEW-MAG-QUEUE-V9I7-2001562.jpg");
