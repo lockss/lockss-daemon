@@ -77,8 +77,9 @@ implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
   // or any bottom level "main.xml" files
   // BASE_URL/2014/CLKS0000000000003A.tar!/CLKS0000000000003/21735794/v89i9/S2173579414001674/main.xml
   // where the tar's letter could be A, B, C, ...
+  //Modified pattern to allow for <base_url>/<year>/ and <base_url>/<directory>/
   protected static final String TOP_METADATA_PATTERN_TEMPLATE = 
-      "\"(%s%d/[^/]+)[A-Z]+\\.tar!/([^/]+)/(dataset|.*/main)\\.xml$\",base_url,year";
+      "\"(%s[^/]+/[^/]+)[A-Z]+\\.tar!/([^/]+)/(dataset|.*/main)\\.xml$\",base_url";
   // Be sure to exclude all nested archives
   static final Pattern NESTED_ARCHIVE_PATTERN = 
       Pattern.compile(".*/[^/]+[A-Z]\\.tar!/.+\\.(zip|tar|gz|tgz|tar\\.gz)$", 

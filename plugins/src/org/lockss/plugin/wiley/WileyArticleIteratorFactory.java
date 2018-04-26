@@ -58,6 +58,8 @@ import org.lockss.util.Logger;
  * A/ADMA23.12.zip!/1419_hdp.wml.xml 
  * C/CEAT34.10.zip!/1728_hrp.wml.xml
  * </pre>
+ * 
+ * Modify pattern to work with both <base_url>/<year>/ and <base_url>/<directory>/
  */
 public class WileyArticleIteratorFactory 
   implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
@@ -70,7 +72,7 @@ public class WileyArticleIteratorFactory
   // This pattern will only pick up XML files that live
   //  in a zip files that is 2 levels below year
   protected static final String PATTERN_TEMPLATE = 
-      "\"%s%d/[A-Z0-9]/[^/]+\\.zip!/.*\\.xml$\",base_url,year";
+      "\"%s[^/]+/[A-Z0-9]/[^/]+\\.zip!/.*\\.xml$\",base_url";
     
     @Override
     public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) throws PluginException {

@@ -2,7 +2,7 @@
  * $Id$
  */
 /*
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -51,10 +51,11 @@ public class ACMSourceArticleIteratorFactory
    * exclude:
    * acm-released/2012/nsa_backfiles[_old]/PROC-ICCAD02-774572/PROC-ICCAD02-774572.xml
    * acm-released/2016/ACM_Books/author/author.xml
+   * 
+   * Modify pattern to work with both <base_url>/<year>/ and <base_url>/<directory>/ at top
    */
-  protected static final String ROOT_TEMPLATE = "\"%s%d\",base_url,year";
   protected static final String PATTERN_TEMPLATE = 
-    "\"%s%d/(\\d+[^/]+\\d+|ACM_Books)/([^/]+)/.*\\.xml$\",base_url,year";
+    "\"%s[^/]+/(\\d+[^/]+\\d+|ACM_Books)/([^/]+)/.*\\.xml$\",base_url";
 
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
@@ -66,7 +67,6 @@ public class ACMSourceArticleIteratorFactory
     log.debug3("An ACMArticleIterator was initialized");
     // no need to limit to ROOT_TEMPLATE
     SubTreeArticleIterator.Spec theSpec = new SubTreeArticleIterator.Spec();
-    theSpec.setRootTemplate(ROOT_TEMPLATE);
     theSpec.setTarget(target);
     theSpec.setPatternTemplate(PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
     /* this is necessary to be able to see what's inside the zip file */
