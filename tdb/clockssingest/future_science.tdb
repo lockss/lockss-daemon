@@ -30,8 +30,8 @@
     au < zapped ; finished ; 2015 ; Bioanalysis Volume 7 ; 7 ; http://www.future-science.com/ ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Bioanalysis Volume 8 ; 8 ; http://www.future-science.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Bioanalysis Volume 9 ; 9 ; https://www.future-science.com/ ; >
-   
     au < manifest ; exists ; 2018 ; Bioanalysis Volume 10 ; 10 ; https://www.future-science.com/ ; >
+
   }
 
   {
@@ -55,6 +55,39 @@
   }
 
   {
+
+    title <
+      name = BioTechniques ;
+      issn = 0736-6205 ;
+      eissn = 1940-9818
+    >
+
+    param[journal_id] = btn
+
+    au < exists ; exists ; 2009 ; BioTechniques Volume 46 ; 46 ; https://www.future-science.com/ ; >
+    au < exists ; exists ; 2009 ; BioTechniques Volume 47 ; 47 ; https://www.future-science.com/ ; >
+    au < exists ; exists ; 2010 ; BioTechniques Volume 48 ; 48 ; https://www.future-science.com/ ; >
+    au < exists ; exists ; 2010 ; BioTechniques Volume 49 ; 49 ; https://www.future-science.com/ ; >
+    au < exists ; exists ; 2011 ; BioTechniques Volume 50 ; 50 ; https://www.future-science.com/ ; >
+    au < exists ; exists ; 2011 ; BioTechniques Volume 51 ; 51 ; https://www.future-science.com/ ; >
+    au < exists ; exists ; 2012 ; BioTechniques Volume 52 ; 52 ; https://www.future-science.com/ ; >
+    au < exists ; exists ; 2012 ; BioTechniques Volume 53 ; 53 ; https://www.future-science.com/ ; >
+    au < exists ; exists ; 2013 ; BioTechniques Volume 54 ; 54 ; https://www.future-science.com/ ; >
+    au < exists ; exists ; 2013 ; BioTechniques Volume 55 ; 55 ; https://www.future-science.com/ ; >
+    au < exists ; exists ; 2014 ; BioTechniques Volume 56 ; 56 ; https://www.future-science.com/ ; >
+    au < exists ; exists ; 2014 ; BioTechniques Volume 57 ; 57 ; https://www.future-science.com/ ; >
+    au < exists ; exists ; 2015 ; BioTechniques Volume 58 ; 58 ; https://www.future-science.com/ ; >
+    au < exists ; exists ; 2015 ; BioTechniques Volume 59 ; 59 ; https://www.future-science.com/ ; >
+    au < exists ; exists ; 2016 ; BioTechniques Volume 60 ; 60 ; https://www.future-science.com/ ; >
+    au < exists ; exists ; 2016 ; BioTechniques Volume 61 ; 61 ; https://www.future-science.com/ ; >
+    au < exists ; exists ; 2017 ; BioTechniques Volume 62 ; 62 ; https://www.future-science.com/ ; >
+    au < exists ; exists ; 2017 ; BioTechniques Volume 63 ; 63 ; https://www.future-science.com/ ; >
+    au < exists ; exists ; 2018 ; BioTechniques Volume 64 ; 64 ; https://www.future-science.com/ ; >
+    au < exists ; exists ; 2018 ; BioTechniques Volume 65 ; 65 ; https://www.future-science.com/ ; >
+
+  }
+
+  {
   
     title < 
       name = Carbon Management ;
@@ -69,7 +102,6 @@
     au < superseded ; exists ; 2012 ; Carbon Management Volume 3 [superseded] ; 3 ; http://www.future-science.com/ ; >
     au < superseded ; exists ; 2013 ; Carbon Management Volume 4 [superseded] ; 4 ; http://www.future-science.com/ ; >
 
-  
   }
 
   {
@@ -109,8 +141,8 @@
     au < frozen ; exists ; 2015 ; Future Medicinal Chemistry Volume 7 ; 7 ; http://www.future-science.com/ ; >
     au < frozen ; exists ; 2016 ; Future Medicinal Chemistry Volume 8 ; 8 ; http://www.future-science.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Future Medicinal Chemistry Volume 9 ; 9 ; https://www.future-science.com/ ; >
-    
     au < manifest ; exists ; 2018 ; Future Medicinal Chemistry Volume 10 ; 10 ; https://www.future-science.com/ ; >
+
   }
 
   {
@@ -125,8 +157,8 @@
     au < finished ; finished ; 2015 ; Future Science OA Volume 1 ; 1 ; http://www.future-science.com/ ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2016 ; Future Science OA Volume 2 ; 2 ; http://www.future-science.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Future Science OA Volume 3 ; 3 ; https://www.future-science.com/ ; >
-    
     au < manifest ; exists ; 2018 ; Future Science OA Volume 4 ; 4 ; https://www.future-science.com/ ; >
+
   }
 
   {
@@ -141,8 +173,8 @@
 
    au < frozen ; exists ; 2016 ; International Journal of Pharmacokinetics Volume 1 ; 1 ; http://www.future-science.com/ ; >
    au < deepCrawl ; exists ; 2017 ; International Journal of Pharmacokinetics Volume 2 ; 2 ; https://www.future-science.com/ ; >
- 
    au < manifest ; exists ; 2018 ; International Journal of Pharmacokinetics Volume 3 ; 3 ; https://www.future-science.com/ ; >
+
    }
 
   {
@@ -176,8 +208,8 @@
     au < finished ; finished ; 2015 ; Pharmaceutical Patent Analyst Volume 4 ; 4 ; http://www.future-science.com/ ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Pharmaceutical Patent Analyst Volume 5 ; 5 ; http://www.future-science.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Pharmaceutical Patent Analyst Volume 6 ; 6 ; https://www.future-science.com/ ; >
-    
     au < manifest ; exists ; 2018 ; Pharmaceutical Patent Analyst Volume 7 ; 7 ; https://www.future-science.com/ ; >
+
   }
 
   {
@@ -198,8 +230,8 @@
     au < zapped ; finished ; 2015 ; Therapeutic Delivery Volume 6 ; 6 ; http://www.future-science.com/ ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2016 ; Therapeutic Delivery Volume 7 ; 7 ; http://www.future-science.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Therapeutic Delivery Volume 8 ; 8 ; https://www.future-science.com/ ; >
-    
     au < manifest ; exists ; 2018 ; Therapeutic Delivery Volume 9 ; 9 ; https://www.future-science.com/ ; >
+
   }
 
 }
