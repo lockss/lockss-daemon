@@ -792,7 +792,7 @@
       au < finished ; finished ; 2015 ; 10 ; Journal of Molecular Signaling Volume 2015 ; 2015 ; http://www.jmolecularsignaling.com/ ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2016 ; 11 ; Journal of Molecular Signaling Volume 2016 ; 2016 ; http://www.jmolecularsignaling.com/ ; >
       au < deepCrawl ; exists ; 2017 ; 12 ; Journal of Molecular Signaling Volume 2017 ; 2017 ; http://www.jmolecularsignaling.com/ ; >
-      au < expected ; exists ; 2018 ; 13 ; Journal of Molecular Signaling Volume 2018 ; 2018 ; https://www.jmolecularsignaling.com/ ; >
+      au < manifest ; exists ; 2018 ; 13 ; Journal of Molecular Signaling Volume 2018 ; 2018 ; https://www.jmolecularsignaling.com/ ; >
 
   }
 
@@ -1227,7 +1227,7 @@
       au < finished ; finished ; 2015 ; 4 ; Stability: International Journal of Security & Development Volume 2015 ; 2015 ; http://www.stabilityjournal.org/ ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2016 ; 5 ; Stability: International Journal of Security & Development Volume 2016 ; 2016 ; http://www.stabilityjournal.org/ ; >
       au < deepCrawl ; exists ; 2017 ; 6 ; Stability: International Journal of Security & Development Volume 2017 ; 2017 ; http://www.stabilityjournal.org/ ; >
-      au < expected ; exists ; 2018 ; 7 ; Stability: International Journal of Security & Development Volume 2018 ; 2018 ; https://www.stabilityjournal.org/ ; >
+      au < manifest ; exists ; 2018 ; 7 ; Stability: International Journal of Security & Development Volume 2018 ; 2018 ; https://www.stabilityjournal.org/ ; >
 
   }
 
@@ -1643,7 +1643,7 @@
       au < frozen ; exists ; 2015 ; 9 ; International Journal of the Commons Volume 2015 ; 2015 ; https://www.thecommonsjournal.org/ ; >
       au < frozen ; exists ; 2016 ; 10 ; International Journal of the Commons Volume 2016 ; 2016 ; https://www.thecommonsjournal.org/ ; >
       au < deepCrawl ; exists ; 2017 ; 11 ; International Journal of the Commons Volume 2017 ; 2017 ; https://www.thecommonsjournal.org/ ; >
-      au < expected ; exists ; 2018 ; 12 ; International Journal of the Commons Volume 2018 ; 2018 ; https://www.thecommonsjournal.org/ ; >
+      au < manifest ; exists ; 2018 ; 12 ; International Journal of the Commons Volume 2018 ; 2018 ; https://www.thecommonsjournal.org/ ; >
 
   }
 
