@@ -12717,7 +12717,7 @@
   {
 
     title <
-      name = The Journals of Gerontology Series A: Biological Sciences and Medical Sciences ;
+      name = The Journals of Gerontology: Series A ;
       issn = 1079-5006 ;
       eissn = 1758-535X ;
       issnl = 1079-5006
@@ -12729,30 +12729,30 @@
     param[base_url] = http://biomedgerontology.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; doNotProcess ; 1995 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 50A ; 50A >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1996 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 51A ; 51A >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1997 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 52A ; 52A >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1998 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 53A ; 53A >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1999 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 54 ; 54 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2000 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 55 ; 55 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 56 ; 56 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 57 ; 57 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2003 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 58 ; 58 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2004 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 59 ; 59 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 60 ; 60 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 61 ; 61 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2007 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 62 ; 62 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 63 ; 63 >
-    au < HighWirePressH20Plugin ; down ; 2009 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 64A ; 64A >
-    au < HighWirePressH20Plugin ; down ; 2010 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 65A ; 65A >
-    au < HighWirePressH20Plugin ; down ; 2011 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 66A ; 66A >
-    au < HighWirePressH20Plugin ; down ; 2012 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 67A ; 67A >
-    au < HighWirePressH20Plugin ; down ; 2012 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 67 ; 67 >
-    au < HighWirePressH20Plugin ; down ; 2013 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 68 ; 68 >
-    au < HighWirePressH20Plugin ; down ; 2014 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 69 ; 69 >
-    au < HighWirePressH20Plugin ; down ; 2014 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 69A ; 69A >
-    au < HighWirePressH20Plugin ; down ; 2015 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 70 ; 70 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2016 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 71 ; 71 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1995 ; The Journals of Gerontology: Series A Volume 50A ; 50A >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1996 ; The Journals of Gerontology: Series A Volume 51A ; 51A >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1997 ; The Journals of Gerontology: Series A Volume 52A ; 52A >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1998 ; The Journals of Gerontology: Series A Volume 53A ; 53A >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1999 ; The Journals of Gerontology: Series A Volume 54 ; 54 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2000 ; The Journals of Gerontology: Series A Volume 55 ; 55 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; The Journals of Gerontology: Series A Volume 56 ; 56 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; The Journals of Gerontology: Series A Volume 57 ; 57 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2003 ; The Journals of Gerontology: Series A Volume 58 ; 58 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2004 ; The Journals of Gerontology: Series A Volume 59 ; 59 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; The Journals of Gerontology: Series A Volume 60 ; 60 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; The Journals of Gerontology: Series A Volume 61 ; 61 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2007 ; The Journals of Gerontology: Series A Volume 62 ; 62 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; The Journals of Gerontology: Series A Volume 63 ; 63 >
+    au < HighWirePressH20Plugin ; down ; 2009 ; The Journals of Gerontology: Series A Volume 64A ; 64A >
+    au < HighWirePressH20Plugin ; down ; 2010 ; The Journals of Gerontology: Series A Volume 65A ; 65A >
+    au < HighWirePressH20Plugin ; down ; 2011 ; The Journals of Gerontology: Series A Volume 66A ; 66A >
+    au < HighWirePressH20Plugin ; down ; 2012 ; The Journals of Gerontology: Series A Volume 67A ; 67A >
+    au < HighWirePressH20Plugin ; down ; 2012 ; The Journals of Gerontology: Series A Volume 67 ; 67 >
+    au < HighWirePressH20Plugin ; down ; 2013 ; The Journals of Gerontology: Series A Volume 68 ; 68 >
+    au < HighWirePressH20Plugin ; down ; 2014 ; The Journals of Gerontology: Series A Volume 69 ; 69 >
+    au < HighWirePressH20Plugin ; down ; 2014 ; The Journals of Gerontology: Series A Volume 69A ; 69A >
+    au < HighWirePressH20Plugin ; down ; 2015 ; The Journals of Gerontology: Series A Volume 70 ; 70 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2016 ; The Journals of Gerontology: Series A Volume 71 ; 71 >
 
     }
 
@@ -12761,7 +12761,7 @@
   {
 
     title <
-      name = The Journals of Gerontology Series B: Psychological Sciences and Social Sciences ;
+      name = The Journals of Gerontology: Series B ;
       issn = 1079-5014 ;
       eissn = 1758-5368 ;
       issnl = 1079-5014
@@ -12773,29 +12773,29 @@
     param[base_url] = http://psychsocgerontology.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; doNotProcess ; 1995 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 50B ; 50B >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1996 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 51B ; 51B >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1997 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 52B ; 52B >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1998 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 53B ; 53B >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1999 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 54B ; 54B >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2000 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 55 ; 55 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 56 ; 56 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 57 ; 57 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2003 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 58 ; 58 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2004 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 59 ; 59 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 60 ; 60 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 61 ; 61 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2007 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 62 ; 62 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 63 ; 63 >
-    au < HighWirePressH20Plugin ; down ; 2009 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 64B ; 64B >
-    au < HighWirePressH20Plugin ; down ; 2010 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 65B ; 65B >
-    au < HighWirePressH20Plugin ; down ; 2011 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 66B ; 66B >
-    au < HighWirePressH20Plugin ; down ; 2012 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 67B ; 67B >
-    au < HighWirePressH20Plugin ; down ; 2012 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 67 ; 67 >
-    au < HighWirePressH20Plugin ; down ; 2013 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 68 ; 68 >
-    au < HighWirePressH20Plugin ; down ; 2014 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 69B ; 69B >
-    au < HighWirePressH20Plugin ; down ; 2015 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 70 ; 70 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2016 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 71 ; 71 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1995 ; The Journals of Gerontology: Series B Volume 50B ; 50B >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1996 ; The Journals of Gerontology: Series B Volume 51B ; 51B >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1997 ; The Journals of Gerontology: Series B Volume 52B ; 52B >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1998 ; The Journals of Gerontology: Series B Volume 53B ; 53B >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1999 ; The Journals of Gerontology: Series B Volume 54B ; 54B >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2000 ; The Journals of Gerontology: Series B Volume 55 ; 55 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; The Journals of Gerontology: Series B Volume 56 ; 56 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; The Journals of Gerontology: Series B Volume 57 ; 57 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2003 ; The Journals of Gerontology: Series B Volume 58 ; 58 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2004 ; The Journals of Gerontology: Series B Volume 59 ; 59 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; The Journals of Gerontology: Series B Volume 60 ; 60 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; The Journals of Gerontology: Series B Volume 61 ; 61 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2007 ; The Journals of Gerontology: Series B Volume 62 ; 62 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; The Journals of Gerontology: Series B Volume 63 ; 63 >
+    au < HighWirePressH20Plugin ; down ; 2009 ; The Journals of Gerontology: Series B Volume 64B ; 64B >
+    au < HighWirePressH20Plugin ; down ; 2010 ; The Journals of Gerontology: Series B Volume 65B ; 65B >
+    au < HighWirePressH20Plugin ; down ; 2011 ; The Journals of Gerontology: Series B Volume 66B ; 66B >
+    au < HighWirePressH20Plugin ; down ; 2012 ; The Journals of Gerontology: Series B Volume 67B ; 67B >
+    au < HighWirePressH20Plugin ; down ; 2012 ; The Journals of Gerontology: Series B Volume 67 ; 67 >
+    au < HighWirePressH20Plugin ; down ; 2013 ; The Journals of Gerontology: Series B Volume 68 ; 68 >
+    au < HighWirePressH20Plugin ; down ; 2014 ; The Journals of Gerontology: Series B Volume 69B ; 69B >
+    au < HighWirePressH20Plugin ; down ; 2015 ; The Journals of Gerontology: Series B Volume 70 ; 70 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2016 ; The Journals of Gerontology: Series B Volume 71 ; 71 >
 
     }
 
@@ -13204,7 +13204,7 @@
   {
 
     title <
-      name = Journal of the ICRU ;
+      name = Journal of the International Commission on Radiation Units and Measurements ;
       alt_title = Journal of the International Commission on Radiation Units and Measurements ;
       issn = 1473-6691 ;
       eissn = 1742-3422 ;
@@ -13219,7 +13219,7 @@
     param[base_url] = http://jicru.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume] >
 
-    au < down ; 2006 ; Journal of the ICRU Volume 6 ; 6 >
+    au < down ; 2006 ; Journal of the International Commission on Radiation Units and Measurements Volume 6 ; 6 >
 
     }
 
@@ -13229,20 +13229,20 @@
     param[base_url] = http://jicru.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; Journal of the ICRU Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; Journal of the ICRU Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2003 ; Journal of the ICRU Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2004 ; Journal of the ICRU Volume 4 ; 4 >
-    au < HighWireStrVolPlugin ; down ; 2005 ; Journal of the ICRU Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Journal of the ICRU Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; down ; 2007 ; Journal of the ICRU Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; down ; 2008 ; Journal of the ICRU Volume 8 ; 8 >
-    au < HighWirePressPlugin ; down ; 2009 ; Journal of the ICRU Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; down ; 2010 ; Journal of the ICRU Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; down ; 2011 ; Journal of the ICRU Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; down ; 2012 ; Journal of the ICRU Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; Journal of the ICRU Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; Journal of the ICRU Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; Journal of the International Commission on Radiation Units and Measurements Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; Journal of the International Commission on Radiation Units and Measurements Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2003 ; Journal of the International Commission on Radiation Units and Measurements Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2004 ; Journal of the International Commission on Radiation Units and Measurements Volume 4 ; 4 >
+    au < HighWireStrVolPlugin ; down ; 2005 ; Journal of the International Commission on Radiation Units and Measurements Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Journal of the International Commission on Radiation Units and Measurements Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; down ; 2007 ; Journal of the International Commission on Radiation Units and Measurements Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; down ; 2008 ; Journal of the International Commission on Radiation Units and Measurements Volume 8 ; 8 >
+    au < HighWirePressPlugin ; down ; 2009 ; Journal of the International Commission on Radiation Units and Measurements Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; down ; 2010 ; Journal of the International Commission on Radiation Units and Measurements Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; down ; 2011 ; Journal of the International Commission on Radiation Units and Measurements Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; down ; 2012 ; Journal of the International Commission on Radiation Units and Measurements Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; Journal of the International Commission on Radiation Units and Measurements Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; Journal of the International Commission on Radiation Units and Measurements Volume 14 ; 14 >
 
     }
 

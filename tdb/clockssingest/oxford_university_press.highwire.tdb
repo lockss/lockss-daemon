@@ -12589,7 +12589,7 @@
   {
 
     title <
-      name = The Journals of Gerontology Series A: Biological Sciences and Medical Sciences ;
+      name = The Journals of Gerontology: Series A ;
       issn = 1079-5006 ;
       eissn = 1758-535X ;
       issnl = 1079-5006
@@ -12600,7 +12600,7 @@
     param[base_url] = http://biomedgerontology.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < superseded ; exists ; 2009 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 64A [to delete] ; 64A ; >
+    au < superseded ; exists ; 2009 ; The Journals of Gerontology: Series A Volume 64A [to delete] ; 64A ; >
 
     }
 
@@ -12609,30 +12609,30 @@
     param[base_url] = http://biomedgerontology.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < doNotProcess ; exists ; 1995 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 50A ; 50A ; >
-    au < doNotProcess ; exists ; 1996 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 51A ; 51A ; >
-    au < doNotProcess ; exists ; 1997 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 52A ; 52A ; >
-    au < doNotProcess ; exists ; 1998 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 53A ; 53A ; >
-    au < doNotProcess ; exists ; 1999 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 54 ; 54 ; >
-    au < doNotProcess ; exists ; 2000 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 55 ; 55 ; >
-    au < doNotProcess ; exists ; 2001 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 56 ; 56 ; >
-    au < doNotProcess ; exists ; 2002 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 57 ; 57 ; >
-    au < doNotProcess ; exists ; 2003 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 58 ; 58 ; >
-    au < doNotProcess ; exists ; 2004 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 59 ; 59 ; >
-    au < doNotProcess ; exists ; 2005 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 60 ; 60 ; >
-    au < doNotProcess ; exists ; 2006 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 61 ; 61 ; >
-    au < doNotProcess ; exists ; 2007 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 62 ; 62 ; >
-    au < doNotProcess ; exists ; 2008 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 63 ; 63 ; >
-    au < finished ; finished ; 2009 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 64A ; 64A ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 2010 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 65A ; 65A ; >
-    au < finished ; finished ; 2011 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 66A ; 66A ; >
-    au < finished ; finished ; 2012 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 67A ; 67A ; >
-    au < finished ; finished ; 2012 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 67 ; 67 ; >
-    au < finished ; finished ; 2013 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 68 ; 68 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2014 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 69 ; 69 ; >
-    au < finished ; finished ; 2014 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 69A ; 69A ; >
-    au < finished ; finished ; 2015 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 70 ; 70 ; reingest4.clockss.org:8082 >
-    au < doNotProcess ; exists ; 2016 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 71 ; 71 ; >
+    au < doNotProcess ; exists ; 1995 ; The Journals of Gerontology: Series A Volume 50A ; 50A ; >
+    au < doNotProcess ; exists ; 1996 ; The Journals of Gerontology: Series A Volume 51A ; 51A ; >
+    au < doNotProcess ; exists ; 1997 ; The Journals of Gerontology: Series A Volume 52A ; 52A ; >
+    au < doNotProcess ; exists ; 1998 ; The Journals of Gerontology: Series A Volume 53A ; 53A ; >
+    au < doNotProcess ; exists ; 1999 ; The Journals of Gerontology: Series A Volume 54 ; 54 ; >
+    au < doNotProcess ; exists ; 2000 ; The Journals of Gerontology: Series A Volume 55 ; 55 ; >
+    au < doNotProcess ; exists ; 2001 ; The Journals of Gerontology: Series A Volume 56 ; 56 ; >
+    au < doNotProcess ; exists ; 2002 ; The Journals of Gerontology: Series A Volume 57 ; 57 ; >
+    au < doNotProcess ; exists ; 2003 ; The Journals of Gerontology: Series A Volume 58 ; 58 ; >
+    au < doNotProcess ; exists ; 2004 ; The Journals of Gerontology: Series A Volume 59 ; 59 ; >
+    au < doNotProcess ; exists ; 2005 ; The Journals of Gerontology: Series A Volume 60 ; 60 ; >
+    au < doNotProcess ; exists ; 2006 ; The Journals of Gerontology: Series A Volume 61 ; 61 ; >
+    au < doNotProcess ; exists ; 2007 ; The Journals of Gerontology: Series A Volume 62 ; 62 ; >
+    au < doNotProcess ; exists ; 2008 ; The Journals of Gerontology: Series A Volume 63 ; 63 ; >
+    au < finished ; finished ; 2009 ; The Journals of Gerontology: Series A Volume 64A ; 64A ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2010 ; The Journals of Gerontology: Series A Volume 65A ; 65A ; >
+    au < finished ; finished ; 2011 ; The Journals of Gerontology: Series A Volume 66A ; 66A ; >
+    au < finished ; finished ; 2012 ; The Journals of Gerontology: Series A Volume 67A ; 67A ; >
+    au < finished ; finished ; 2012 ; The Journals of Gerontology: Series A Volume 67 ; 67 ; >
+    au < finished ; finished ; 2013 ; The Journals of Gerontology: Series A Volume 68 ; 68 ; reingest5.clockss.org:8082 >
+    au < frozen ; exists ; 2014 ; The Journals of Gerontology: Series A Volume 69 ; 69 ; >
+    au < finished ; finished ; 2014 ; The Journals of Gerontology: Series A Volume 69A ; 69A ; >
+    au < finished ; finished ; 2015 ; The Journals of Gerontology: Series A Volume 70 ; 70 ; reingest4.clockss.org:8082 >
+    au < doNotProcess ; exists ; 2016 ; The Journals of Gerontology: Series A Volume 71 ; 71 ; >
 
     }
 
@@ -12641,7 +12641,7 @@
   {
 
     title <
-      name = The Journals of Gerontology Series B: Psychological Sciences and Social Sciences ;
+      name = The Journals of Gerontology: Series B ;
       issn = 1079-5014 ;
       eissn = 1758-5368 ;
       issnl = 1079-5014
@@ -12652,7 +12652,7 @@
     param[base_url] = http://psychsocgerontology.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < superseded ; down ; 2009 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 64B [superseded] ; 64B ; >
+    au < superseded ; down ; 2009 ; The Journals of Gerontology: Series B Volume 64B [superseded] ; 64B ; >
 
     }
 
@@ -12661,29 +12661,29 @@
     param[base_url] = http://psychsocgerontology.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < doNotProcess ; exists ; 1995 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 50B ; 50B ; >
-    au < doNotProcess ; exists ; 1996 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 51B ; 51B ; >
-    au < doNotProcess ; exists ; 1997 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 52B ; 52B ; >
-    au < doNotProcess ; exists ; 1998 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 53B ; 53B ; >
-    au < doNotProcess ; exists ; 1999 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 54B ; 54B ; >
-    au < doNotProcess ; exists ; 2000 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 55 ; 55 ; >
-    au < doNotProcess ; exists ; 2001 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 56 ; 56 ; >
-    au < doNotProcess ; exists ; 2002 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 57 ; 57 ; >
-    au < doNotProcess ; exists ; 2003 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 58 ; 58 ; >
-    au < doNotProcess ; exists ; 2004 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 59 ; 59 ; >
-    au < doNotProcess ; exists ; 2005 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 60 ; 60 ; >
-    au < doNotProcess ; exists ; 2006 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 61 ; 61 ; >
-    au < doNotProcess ; exists ; 2007 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 62 ; 62 ; >
-    au < doNotProcess ; exists ; 2008 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 63 ; 63 ; >
-    au < frozen ; exists ; 2009 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 64B ; 64B ; >
-    au < finished ; finished ; 2010 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 65B ; 65B ; >
-    au < finished ; finished ; 2011 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 66B ; 66B ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 2012 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 67B ; 67B ; >
-    au < finished ; finished ; 2012 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 67 ; 67 ; >
-    au < finished ; finished ; 2013 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 68 ; 68 ; >
-    au < finished ; finished ; 2014 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 69B ; 69B ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 2015 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 70 ; 70 ; reingest2.clockss.org:8085 >
-    au < doNotProcess ; exists ; 2016 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 71 ; 71 ; >
+    au < doNotProcess ; exists ; 1995 ; The Journals of Gerontology: Series B Volume 50B ; 50B ; >
+    au < doNotProcess ; exists ; 1996 ; The Journals of Gerontology: Series B Volume 51B ; 51B ; >
+    au < doNotProcess ; exists ; 1997 ; The Journals of Gerontology: Series B Volume 52B ; 52B ; >
+    au < doNotProcess ; exists ; 1998 ; The Journals of Gerontology: Series B Volume 53B ; 53B ; >
+    au < doNotProcess ; exists ; 1999 ; The Journals of Gerontology: Series B Volume 54B ; 54B ; >
+    au < doNotProcess ; exists ; 2000 ; The Journals of Gerontology: Series B Volume 55 ; 55 ; >
+    au < doNotProcess ; exists ; 2001 ; The Journals of Gerontology: Series B Volume 56 ; 56 ; >
+    au < doNotProcess ; exists ; 2002 ; The Journals of Gerontology: Series B Volume 57 ; 57 ; >
+    au < doNotProcess ; exists ; 2003 ; The Journals of Gerontology: Series B Volume 58 ; 58 ; >
+    au < doNotProcess ; exists ; 2004 ; The Journals of Gerontology: Series B Volume 59 ; 59 ; >
+    au < doNotProcess ; exists ; 2005 ; The Journals of Gerontology: Series B Volume 60 ; 60 ; >
+    au < doNotProcess ; exists ; 2006 ; The Journals of Gerontology: Series B Volume 61 ; 61 ; >
+    au < doNotProcess ; exists ; 2007 ; The Journals of Gerontology: Series B Volume 62 ; 62 ; >
+    au < doNotProcess ; exists ; 2008 ; The Journals of Gerontology: Series B Volume 63 ; 63 ; >
+    au < frozen ; exists ; 2009 ; The Journals of Gerontology: Series B Volume 64B ; 64B ; >
+    au < finished ; finished ; 2010 ; The Journals of Gerontology: Series B Volume 65B ; 65B ; >
+    au < finished ; finished ; 2011 ; The Journals of Gerontology: Series B Volume 66B ; 66B ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2012 ; The Journals of Gerontology: Series B Volume 67B ; 67B ; >
+    au < finished ; finished ; 2012 ; The Journals of Gerontology: Series B Volume 67 ; 67 ; >
+    au < finished ; finished ; 2013 ; The Journals of Gerontology: Series B Volume 68 ; 68 ; >
+    au < finished ; finished ; 2014 ; The Journals of Gerontology: Series B Volume 69B ; 69B ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2015 ; The Journals of Gerontology: Series B Volume 70 ; 70 ; reingest2.clockss.org:8085 >
+    au < doNotProcess ; exists ; 2016 ; The Journals of Gerontology: Series B Volume 71 ; 71 ; >
 
     }
 
@@ -14373,8 +14373,8 @@
   {
 
     title <
-      name = Journal of the ICRU ;
-      alt_title = Journal of the International Commission on Radiation Units and Measurements ;
+      name = Journal of the International Commission on Radiation Units and Measurements ;
+      alt_title = Journal of the ICRU ;
       issn = 1473-6691 ;
       eissn = 1742-3422 ;
       issnl = 1473-6691
@@ -14387,8 +14387,8 @@
     param[base_url] = http://jicru.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < zapped ; finished ; 2008 ; Journal of the ICRU Volume 8 ; 8 ; >
-    au < superseded ; finished ; 2009 ; Journal of the ICRU Volume 9 [superseded] ; 9 ; >
+    au < zapped ; finished ; 2008 ; Journal of the International Commission on Radiation Units and Measurements Volume 8 ; 8 ; >
+    au < superseded ; finished ; 2009 ; Journal of the International Commission on Radiation Units and Measurements Volume 9 [superseded] ; 9 ; >
 
     }
 
@@ -14397,20 +14397,20 @@
     param[base_url] = http://jicru.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < doNotProcess ; exists ; 2001 ; Journal of the ICRU Volume 1 ; 1 ; >
-    au < doNotProcess ; exists ; 2002 ; Journal of the ICRU Volume 2 ; 2 ; >
-    au < doNotProcess ; exists ; 2003 ; Journal of the ICRU Volume 3 ; 3 ; >
-    au < doNotProcess ; exists ; 2004 ; Journal of the ICRU Volume 4 ; 4 ; >
-    au < doNotProcess ; exists ; 2005 ; Journal of the ICRU Volume 5 ; 5 ; >
-    au < doNotProcess ; exists ; 2006 ; Journal of the ICRU Volume 6 ; 6 ; >
-    au < doNotProcess ; exists ; 2007 ; Journal of the ICRU Volume 7 ; 7 ; >
-    au < doNotProcess ; doNotProcess ; 2008 ; Journal of the ICRU Volume 8 ; 8 ; >
-    au < finished ; frozen ; 2009 ; Journal of the ICRU Volume 9 ; 9 ; >
-    au < finished ; finished ; 2010 ; Journal of the ICRU Volume 10 ; 10 ; >
-    au < finished ; finished ; 2011 ; Journal of the ICRU Volume 11 ; 11 ; >
-    au < finished ; finished ; 2012 ; Journal of the ICRU Volume 12 ; 12 ; >
-    au < doNotProcess ; exists ; 2013 ; Journal of the ICRU Volume 13 ; 13 ; >
-    au < doNotProcess ; exists ; 2014 ; Journal of the ICRU Volume 14 ; 14 ; >
+    au < doNotProcess ; exists ; 2001 ; Journal of the International Commission on Radiation Units and Measurements Volume 1 ; 1 ; >
+    au < doNotProcess ; exists ; 2002 ; Journal of the International Commission on Radiation Units and Measurements Volume 2 ; 2 ; >
+    au < doNotProcess ; exists ; 2003 ; Journal of the International Commission on Radiation Units and Measurements Volume 3 ; 3 ; >
+    au < doNotProcess ; exists ; 2004 ; Journal of the International Commission on Radiation Units and Measurements Volume 4 ; 4 ; >
+    au < doNotProcess ; exists ; 2005 ; Journal of the International Commission on Radiation Units and Measurements Volume 5 ; 5 ; >
+    au < doNotProcess ; exists ; 2006 ; Journal of the International Commission on Radiation Units and Measurements Volume 6 ; 6 ; >
+    au < doNotProcess ; exists ; 2007 ; Journal of the International Commission on Radiation Units and Measurements Volume 7 ; 7 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Journal of the International Commission on Radiation Units and Measurements Volume 8 ; 8 ; >
+    au < finished ; frozen ; 2009 ; Journal of the International Commission on Radiation Units and Measurements Volume 9 ; 9 ; >
+    au < finished ; finished ; 2010 ; Journal of the International Commission on Radiation Units and Measurements Volume 10 ; 10 ; >
+    au < finished ; finished ; 2011 ; Journal of the International Commission on Radiation Units and Measurements Volume 11 ; 11 ; >
+    au < finished ; finished ; 2012 ; Journal of the International Commission on Radiation Units and Measurements Volume 12 ; 12 ; >
+    au < doNotProcess ; exists ; 2013 ; Journal of the International Commission on Radiation Units and Measurements Volume 13 ; 13 ; >
+    au < doNotProcess ; exists ; 2014 ; Journal of the International Commission on Radiation Units and Measurements Volume 14 ; 14 ; >
 
     }
 
