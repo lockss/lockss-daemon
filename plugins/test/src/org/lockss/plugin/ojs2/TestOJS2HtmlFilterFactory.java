@@ -178,6 +178,16 @@ public class TestOJS2HtmlFilterFactory extends LockssTestCase {
       "<body> " +
       "</body>";
   
+  private static final String inputTag=
+"<input type=\"hidden\" name=\"csrfToken\" value=\"7e623e1a0c9edb10734972ee46286898\"> "
++ "<input name=\"query\" value=\"\" type=\"text\" aria-label=\"Search Query\"> "
++ "<button type=\"submit\"> Search </button>";
+
+  private static final String inputTagFiltered=
+" "
++ "<input name=\"query\" value=\"\" type=\"text\" aria-label=\"Search Query\"> "
++ "<button type=\"submit\"> Search </button>";
+
   public void testSidebarKeywordCloudFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(sidebarKeywordCloudHtml),
@@ -272,10 +282,16 @@ public class TestOJS2HtmlFilterFactory extends LockssTestCase {
     assertEquals(accessHtmlFiltered, StringUtil.fromInputStream(actIn));
     
     actIn = fact.createFilteredInputStream(mau,
-        new StringInputStream(footerHtml),
-        Constants.DEFAULT_ENCODING);
-    
-    assertEquals(footerHtmlFiltered, StringUtil.fromInputStream(actIn));
+            new StringInputStream(footerHtml),
+            Constants.DEFAULT_ENCODING);
+        
+        assertEquals(footerHtmlFiltered, StringUtil.fromInputStream(actIn));
+
+    actIn = fact.createFilteredInputStream(mau,
+                new StringInputStream(inputTag),
+                Constants.DEFAULT_ENCODING);
+            
+            assertEquals(inputTagFiltered, StringUtil.fromInputStream(actIn));
 
   }
 

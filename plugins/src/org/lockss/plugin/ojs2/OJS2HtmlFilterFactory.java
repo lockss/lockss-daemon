@@ -129,6 +129,9 @@ public class OJS2HtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithTextRegex("span", "^[0-9]*$")),
     // EU-style cookies disclosure banner
     HtmlNodeFilters.tagWithAttribute("div", "id", "cookiesAlert"), // http://ojs.statsbiblioteket.dk/
+    // see child JidcOJS2Plugin - variable tage on <input...>
+    //<input type="hidden" name="csrfToken" value="7e623e1a0c9edb10734972ee46286898">
+    HtmlNodeFilters.tagWithAttribute("input", "name", "csrfToken"),
   };
   
   @Override
