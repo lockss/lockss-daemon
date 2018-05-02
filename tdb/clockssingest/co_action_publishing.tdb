@@ -93,7 +93,7 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Education Inquiry Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Education Inquiry Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Education Inquiry Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2013 ; Education Inquiry Volume 4 ; 4 ; >
+    au < doNotProcess ; exists ; 2013 ; Education Inquiry Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Education Inquiry Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Education Inquiry Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Education Inquiry Volume 7 ; 7 ; >
@@ -184,7 +184,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; European Journal of Psychotraumatology [including Supplements] Volume 3 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; European Journal of Psychotraumatology [including Supplements] Volume 4 ; 4 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; European Journal of Psychotraumatology [including Supplements] Volume 5 ; 5 ; >
-      au < manifest ; exists ; 2015 ; European Journal of Psychotraumatology [including Supplements] Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2015 ; European Journal of Psychotraumatology [including Supplements] Volume 6 ; 6 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; European Journal of Psychotraumatology [including Supplements] Volume 7 ; 7 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; European Journal of Psychotraumatology [including Supplements] Volume 8 ; 8 ; >
 
@@ -271,13 +271,13 @@
     #param[base_url] = http://www.circumpolarhealthjournal.net/
     param[journal_id] = zich20
         
-    au < manifest ; exists ; 2001 ; International Journal of Circumpolar Health [including Supplements] Volume 60 ; 60 ; >
-    au < manifest ; exists ; 2002 ; International Journal of Circumpolar Health [including Supplements] Volume 61 ; 61 ; >
-    au < manifest ; exists ; 2003 ; International Journal of Circumpolar Health Volume 62 ; 62 ; >
-    au < manifest ; exists ; 2004 ; International Journal of Circumpolar Health Volume 63 ; 63 ; >
-    au < manifest ; exists ; 2005 ; International Journal of Circumpolar Health Volume 64 ; 64 ; >
-    au < manifest ; exists ; 2006 ; International Journal of Circumpolar Health Volume 65 ; 65 ; >
-    au < manifest ; exists ; 2007 ; International Journal of Circumpolar Health Volume 66 ; 66 ; >
+    au < doNotProcess ; exists ; 2001 ; International Journal of Circumpolar Health [including Supplements] Volume 60 ; 60 ; >
+    au < doNotProcess ; exists ; 2002 ; International Journal of Circumpolar Health [including Supplements] Volume 61 ; 61 ; >
+    au < doNotProcess ; exists ; 2003 ; International Journal of Circumpolar Health Volume 62 ; 62 ; >
+    au < doNotProcess ; exists ; 2004 ; International Journal of Circumpolar Health Volume 63 ; 63 ; >
+    au < doNotProcess ; exists ; 2005 ; International Journal of Circumpolar Health Volume 64 ; 64 ; >
+    au < doNotProcess ; exists ; 2006 ; International Journal of Circumpolar Health Volume 65 ; 65 ; >
+    au < doNotProcess ; exists ; 2007 ; International Journal of Circumpolar Health Volume 66 ; 66 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; International Journal of Circumpolar Health Volume 67 ; 67 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Circumpolar Health Volume 68 ; 68 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Circumpolar Health Volume 69 ; 69 ; >
@@ -462,7 +462,7 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Mechanical Circulatory Support Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Mechanical Circulatory Support Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Mechanical Circulatory Support Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2013 ; Mechanical Circulatory Support Volume 4 ; 4 ; >
+    au < doNotProcess ; exists ; 2013 ; Mechanical Circulatory Support Volume 4 ; 4 ; >
 
   }
 
@@ -478,15 +478,15 @@
       #param[base_url] = http://med-ed-online.net/
       param[journal_id] = zmeo20
       
-      au < manifest ; exists ; 1996 ; Medical Education Online Volume 1 ; 1 ; >
-      au < manifest ; exists ; 1997 ; Medical Education Online Volume 2 ; 2 ; >
-      au < manifest ; exists ; 1998 ; Medical Education Online Volume 3 ; 3 ; >
-      au < manifest ; exists ; 1999 ; Medical Education Online Volume 4 ; 4 ; >
-      au < manifest ; exists ; 2000 ; Medical Education Online Volume 5 ; 5 ; >
-      au < manifest ; exists ; 2001 ; Medical Education Online Volume 6 ; 6 ; >
-      au < manifest ; exists ; 2002 ; Medical Education Online Volume 7 ; 7 ; >
-      au < manifest ; exists ; 2003 ; Medical Education Online Volume 8 ; 8 ; >
-      au < manifest ; exists ; 2004 ; Medical Education Online Volume 9 ; 9 ; >
+      au < doNotProcess ; exists ; 1996 ; Medical Education Online Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 1997 ; Medical Education Online Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 1998 ; Medical Education Online Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 1999 ; Medical Education Online Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2000 ; Medical Education Online Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2001 ; Medical Education Online Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2002 ; Medical Education Online Volume 7 ; 7 ; >
+      au < doNotProcess ; exists ; 2003 ; Medical Education Online Volume 8 ; 8 ; >
+      au < doNotProcess ; exists ; 2004 ; Medical Education Online Volume 9 ; 9 ; >
       au < doNotProcess ; doNotProcess ; 2005 ; Medical Education Online Volume 10 ; 10 ; >
       au < doNotProcess ; doNotProcess ; 2006 ; Medical Education Online Volume 11 ; 11 ; >
       au < doNotProcess ; doNotProcess ; 2007 ; Medical Education Online Volume 12 ; 12 ; >
@@ -785,40 +785,40 @@
     param[journal_id] = zela19
     #continued_by = 1600-0870 & 1600-0889
 
-    au < manifest ; exists ; 1949 ; Tellus Volume 1 ; 1 ; >
-    au < manifest ; exists ; 1950 ; Tellus Volume 2 ; 2 ; >
-    au < manifest ; exists ; 1951 ; Tellus Volume 3 ; 3 ; >
-    au < manifest ; exists ; 1952 ; Tellus Volume 4 ; 4 ; >
-    au < manifest ; exists ; 1953 ; Tellus Volume 5 ; 5 ; >
-    au < manifest ; exists ; 1954 ; Tellus Volume 6 ; 6 ; >
-    au < manifest ; exists ; 1955 ; Tellus Volume 7 ; 7 ; >
-    au < manifest ; exists ; 1956 ; Tellus Volume 8 ; 8 ; >
-    au < manifest ; exists ; 1957 ; Tellus Volume 9 ; 9 ; >
-    au < manifest ; exists ; 1958 ; Tellus Volume 10 ; 10 ; >
-    au < manifest ; exists ; 1959 ; Tellus Volume 11 ; 11 ; >
-    au < manifest ; exists ; 1960 ; Tellus Volume 12 ; 12 ; >
-    au < manifest ; exists ; 1961 ; Tellus Volume 13 ; 13 ; >
-    au < manifest ; exists ; 1962 ; Tellus Volume 14 ; 14 ; >
-    au < manifest ; exists ; 1963 ; Tellus Volume 15 ; 15 ; >
-    au < manifest ; exists ; 1964 ; Tellus Volume 16 ; 16 ; >
-    au < manifest ; exists ; 1965 ; Tellus Volume 17 ; 17 ; >
-    au < manifest ; exists ; 1966 ; Tellus Volume 18 ; 18 ; >
-    au < manifest ; exists ; 1967 ; Tellus Volume 19 ; 19 ; >
-    au < manifest ; exists ; 1968 ; Tellus Volume 20 ; 20 ; >
-    au < manifest ; exists ; 1969 ; Tellus Volume 21 ; 21 ; >
-    au < manifest ; exists ; 1970 ; Tellus Volume 22 ; 22 ; >
-    au < manifest ; exists ; 1971 ; Tellus Volume 23 ; 23 ; >
-    au < manifest ; exists ; 1972 ; Tellus Volume 24 ; 24 ; >
-    au < manifest ; exists ; 1973 ; Tellus Volume 25 ; 25 ; >
-    au < manifest ; exists ; 1974 ; Tellus Volume 26 ; 26 ; >
-    au < manifest ; exists ; 1975 ; Tellus Volume 27 ; 27 ; >
-    au < manifest ; exists ; 1976 ; Tellus Volume 28 ; 28 ; >
-    au < manifest ; exists ; 1977 ; Tellus Volume 29 ; 29 ; >
-    au < manifest ; exists ; 1978 ; Tellus Volume 30 ; 30 ; >
-    au < manifest ; exists ; 1979 ; Tellus Volume 31 ; 31 ; >
-    au < manifest ; exists ; 1980 ; Tellus Volume 32 ; 32 ; >
-    au < manifest ; exists ; 1981 ; Tellus Volume 33 ; 33 ; >
-    au < manifest ; exists ; 1982 ; Tellus Volume 34 ; 34 ; >
+    au < doNotProcess ; exists ; 1949 ; Tellus Volume 1 ; 1 ; >
+    au < doNotProcess ; exists ; 1950 ; Tellus Volume 2 ; 2 ; >
+    au < doNotProcess ; exists ; 1951 ; Tellus Volume 3 ; 3 ; >
+    au < doNotProcess ; exists ; 1952 ; Tellus Volume 4 ; 4 ; >
+    au < doNotProcess ; exists ; 1953 ; Tellus Volume 5 ; 5 ; >
+    au < doNotProcess ; exists ; 1954 ; Tellus Volume 6 ; 6 ; >
+    au < doNotProcess ; exists ; 1955 ; Tellus Volume 7 ; 7 ; >
+    au < doNotProcess ; exists ; 1956 ; Tellus Volume 8 ; 8 ; >
+    au < doNotProcess ; exists ; 1957 ; Tellus Volume 9 ; 9 ; >
+    au < doNotProcess ; exists ; 1958 ; Tellus Volume 10 ; 10 ; >
+    au < doNotProcess ; exists ; 1959 ; Tellus Volume 11 ; 11 ; >
+    au < doNotProcess ; exists ; 1960 ; Tellus Volume 12 ; 12 ; >
+    au < doNotProcess ; exists ; 1961 ; Tellus Volume 13 ; 13 ; >
+    au < doNotProcess ; exists ; 1962 ; Tellus Volume 14 ; 14 ; >
+    au < doNotProcess ; exists ; 1963 ; Tellus Volume 15 ; 15 ; >
+    au < doNotProcess ; exists ; 1964 ; Tellus Volume 16 ; 16 ; >
+    au < doNotProcess ; exists ; 1965 ; Tellus Volume 17 ; 17 ; >
+    au < doNotProcess ; exists ; 1966 ; Tellus Volume 18 ; 18 ; >
+    au < doNotProcess ; exists ; 1967 ; Tellus Volume 19 ; 19 ; >
+    au < doNotProcess ; exists ; 1968 ; Tellus Volume 20 ; 20 ; >
+    au < doNotProcess ; exists ; 1969 ; Tellus Volume 21 ; 21 ; >
+    au < doNotProcess ; exists ; 1970 ; Tellus Volume 22 ; 22 ; >
+    au < doNotProcess ; exists ; 1971 ; Tellus Volume 23 ; 23 ; >
+    au < doNotProcess ; exists ; 1972 ; Tellus Volume 24 ; 24 ; >
+    au < doNotProcess ; exists ; 1973 ; Tellus Volume 25 ; 25 ; >
+    au < doNotProcess ; exists ; 1974 ; Tellus Volume 26 ; 26 ; >
+    au < doNotProcess ; exists ; 1975 ; Tellus Volume 27 ; 27 ; >
+    au < doNotProcess ; exists ; 1976 ; Tellus Volume 28 ; 28 ; >
+    au < doNotProcess ; exists ; 1977 ; Tellus Volume 29 ; 29 ; >
+    au < doNotProcess ; exists ; 1978 ; Tellus Volume 30 ; 30 ; >
+    au < doNotProcess ; exists ; 1979 ; Tellus Volume 31 ; 31 ; >
+    au < doNotProcess ; exists ; 1980 ; Tellus Volume 32 ; 32 ; >
+    au < doNotProcess ; exists ; 1981 ; Tellus Volume 33 ; 33 ; >
+    au < doNotProcess ; exists ; 1982 ; Tellus Volume 34 ; 34 ; >
 
   }
 
@@ -835,23 +835,23 @@
     param[journal_id] = zela20
     #continues = 0040-2826
       
-    au < manifest ; exists ; 1983 ; Tellus A: Dynamic Meteorology and Oceanography Volume 35 ; 35 ; >
-    au < manifest ; exists ; 1984 ; Tellus A: Dynamic Meteorology and Oceanography Volume 36 ; 36 ; >
-    au < manifest ; exists ; 1985 ; Tellus A: Dynamic Meteorology and Oceanography Volume 37 ; 37 ; >
-    au < manifest ; exists ; 1986 ; Tellus A: Dynamic Meteorology and Oceanography Volume 38 ; 38 ; >
-    au < manifest ; exists ; 1987 ; Tellus A: Dynamic Meteorology and Oceanography Volume 39 ; 39 ; >
-    au < manifest ; exists ; 1988 ; Tellus A: Dynamic Meteorology and Oceanography Volume 40 ; 40 ; >
-    au < manifest ; exists ; 1989 ; Tellus A: Dynamic Meteorology and Oceanography Volume 41 ; 41 ; >
-    au < manifest ; exists ; 1990 ; Tellus A: Dynamic Meteorology and Oceanography Volume 42 ; 42 ; >
-    au < manifest ; exists ; 1991 ; Tellus A: Dynamic Meteorology and Oceanography Volume 43 ; 43 ; >
-    au < manifest ; exists ; 1992 ; Tellus A: Dynamic Meteorology and Oceanography Volume 44 ; 44 ; >
-    au < manifest ; exists ; 1993 ; Tellus A: Dynamic Meteorology and Oceanography Volume 45 ; 45 ; >
-    au < manifest ; exists ; 1994 ; Tellus A: Dynamic Meteorology and Oceanography Volume 46 ; 46 ; >
-    au < manifest ; exists ; 1995 ; Tellus A: Dynamic Meteorology and Oceanography Volume 47 ; 47 ; >
-    au < manifest ; exists ; 1996 ; Tellus A: Dynamic Meteorology and Oceanography Volume 48 ; 48 ; >
-    au < manifest ; exists ; 1997 ; Tellus A: Dynamic Meteorology and Oceanography Volume 49 ; 49 ; >
-    au < manifest ; exists ; 1998 ; Tellus A: Dynamic Meteorology and Oceanography Volume 50 ; 50 ; >
-    au < manifest ; exists ; 1999 ; Tellus A: Dynamic Meteorology and Oceanography Volume 51 ; 51 ; >
+    au < doNotProcess ; exists ; 1983 ; Tellus A: Dynamic Meteorology and Oceanography Volume 35 ; 35 ; >
+    au < doNotProcess ; exists ; 1984 ; Tellus A: Dynamic Meteorology and Oceanography Volume 36 ; 36 ; >
+    au < doNotProcess ; exists ; 1985 ; Tellus A: Dynamic Meteorology and Oceanography Volume 37 ; 37 ; >
+    au < doNotProcess ; exists ; 1986 ; Tellus A: Dynamic Meteorology and Oceanography Volume 38 ; 38 ; >
+    au < doNotProcess ; exists ; 1987 ; Tellus A: Dynamic Meteorology and Oceanography Volume 39 ; 39 ; >
+    au < doNotProcess ; exists ; 1988 ; Tellus A: Dynamic Meteorology and Oceanography Volume 40 ; 40 ; >
+    au < doNotProcess ; exists ; 1989 ; Tellus A: Dynamic Meteorology and Oceanography Volume 41 ; 41 ; >
+    au < doNotProcess ; exists ; 1990 ; Tellus A: Dynamic Meteorology and Oceanography Volume 42 ; 42 ; >
+    au < doNotProcess ; exists ; 1991 ; Tellus A: Dynamic Meteorology and Oceanography Volume 43 ; 43 ; >
+    au < doNotProcess ; exists ; 1992 ; Tellus A: Dynamic Meteorology and Oceanography Volume 44 ; 44 ; >
+    au < doNotProcess ; exists ; 1993 ; Tellus A: Dynamic Meteorology and Oceanography Volume 45 ; 45 ; >
+    au < doNotProcess ; exists ; 1994 ; Tellus A: Dynamic Meteorology and Oceanography Volume 46 ; 46 ; >
+    au < doNotProcess ; exists ; 1995 ; Tellus A: Dynamic Meteorology and Oceanography Volume 47 ; 47 ; >
+    au < doNotProcess ; exists ; 1996 ; Tellus A: Dynamic Meteorology and Oceanography Volume 48 ; 48 ; >
+    au < doNotProcess ; exists ; 1997 ; Tellus A: Dynamic Meteorology and Oceanography Volume 49 ; 49 ; >
+    au < doNotProcess ; exists ; 1998 ; Tellus A: Dynamic Meteorology and Oceanography Volume 50 ; 50 ; >
+    au < doNotProcess ; exists ; 1999 ; Tellus A: Dynamic Meteorology and Oceanography Volume 51 ; 51 ; >
     au < doNotProcess ; doNotProcess ; 2000 ; Tellus A: Dynamic Meteorology and Oceanography Volume 52 ; 52 ; >
     au < doNotProcess ; doNotProcess ; 2001 ; Tellus A: Dynamic Meteorology and Oceanography Volume 53 ; 53 ; >
     au < doNotProcess ; doNotProcess ; 2002 ; Tellus A: Dynamic Meteorology and Oceanography Volume 54 ; 54 ; >
@@ -885,23 +885,23 @@
     param[journal_id] = zelb20
     #continues = 0040-2826
 
-    au < manifest ; exists ; 1983 ; Tellus B: Chemical and Physical Meteorology Volume 35 ; 35 ; >
-    au < manifest ; exists ; 1984 ; Tellus B: Chemical and Physical Meteorology Volume 36 ; 36 ; >
-    au < manifest ; exists ; 1985 ; Tellus B: Chemical and Physical Meteorology Volume 37 ; 37 ; >
-    au < manifest ; exists ; 1986 ; Tellus B: Chemical and Physical Meteorology Volume 38 ; 38 ; >
-    au < manifest ; exists ; 1987 ; Tellus B: Chemical and Physical Meteorology Volume 39 ; 39 ; >
-    au < manifest ; exists ; 1988 ; Tellus B: Chemical and Physical Meteorology Volume 40 ; 40 ; >
-    au < manifest ; exists ; 1989 ; Tellus B: Chemical and Physical Meteorology Volume 41 ; 41 ; >
-    au < manifest ; exists ; 1990 ; Tellus B: Chemical and Physical Meteorology Volume 42 ; 42 ; >
-    au < manifest ; exists ; 1991 ; Tellus B: Chemical and Physical Meteorology Volume 43 ; 43 ; >
-    au < manifest ; exists ; 1992 ; Tellus B: Chemical and Physical Meteorology Volume 44 ; 44 ; >
-    au < manifest ; exists ; 1993 ; Tellus B: Chemical and Physical Meteorology Volume 45 ; 45 ; >
-    au < manifest ; exists ; 1994 ; Tellus B: Chemical and Physical Meteorology Volume 46 ; 46 ; >
-    au < manifest ; exists ; 1995 ; Tellus B: Chemical and Physical Meteorology Volume 47 ; 47 ; >
-    au < manifest ; exists ; 1996 ; Tellus B: Chemical and Physical Meteorology Volume 48 ; 48 ; >
-    au < manifest ; exists ; 1997 ; Tellus B: Chemical and Physical Meteorology Volume 49 ; 49 ; >
-    au < manifest ; exists ; 1998 ; Tellus B: Chemical and Physical Meteorology Volume 50 ; 50 ; >
-    au < manifest ; exists ; 1999 ; Tellus B: Chemical and Physical Meteorology Volume 51 ; 51 ; >
+    au < doNotProcess ; exists ; 1983 ; Tellus B: Chemical and Physical Meteorology Volume 35 ; 35 ; >
+    au < doNotProcess ; exists ; 1984 ; Tellus B: Chemical and Physical Meteorology Volume 36 ; 36 ; >
+    au < doNotProcess ; exists ; 1985 ; Tellus B: Chemical and Physical Meteorology Volume 37 ; 37 ; >
+    au < doNotProcess ; exists ; 1986 ; Tellus B: Chemical and Physical Meteorology Volume 38 ; 38 ; >
+    au < doNotProcess ; exists ; 1987 ; Tellus B: Chemical and Physical Meteorology Volume 39 ; 39 ; >
+    au < doNotProcess ; exists ; 1988 ; Tellus B: Chemical and Physical Meteorology Volume 40 ; 40 ; >
+    au < doNotProcess ; exists ; 1989 ; Tellus B: Chemical and Physical Meteorology Volume 41 ; 41 ; >
+    au < doNotProcess ; exists ; 1990 ; Tellus B: Chemical and Physical Meteorology Volume 42 ; 42 ; >
+    au < doNotProcess ; exists ; 1991 ; Tellus B: Chemical and Physical Meteorology Volume 43 ; 43 ; >
+    au < doNotProcess ; exists ; 1992 ; Tellus B: Chemical and Physical Meteorology Volume 44 ; 44 ; >
+    au < doNotProcess ; exists ; 1993 ; Tellus B: Chemical and Physical Meteorology Volume 45 ; 45 ; >
+    au < doNotProcess ; exists ; 1994 ; Tellus B: Chemical and Physical Meteorology Volume 46 ; 46 ; >
+    au < doNotProcess ; exists ; 1995 ; Tellus B: Chemical and Physical Meteorology Volume 47 ; 47 ; >
+    au < doNotProcess ; exists ; 1996 ; Tellus B: Chemical and Physical Meteorology Volume 48 ; 48 ; >
+    au < doNotProcess ; exists ; 1997 ; Tellus B: Chemical and Physical Meteorology Volume 49 ; 49 ; >
+    au < doNotProcess ; exists ; 1998 ; Tellus B: Chemical and Physical Meteorology Volume 50 ; 50 ; >
+    au < doNotProcess ; exists ; 1999 ; Tellus B: Chemical and Physical Meteorology Volume 51 ; 51 ; >
     au < doNotProcess ; doNotProcess ; 2000 ; Tellus B: Chemical and Physical Meteorology Volume 52 ; 52 ; >
     au < doNotProcess ; doNotProcess ; 2001 ; Tellus B: Chemical and Physical Meteorology Volume 53 ; 53 ; >
     au < doNotProcess ; doNotProcess ; 2002 ; Tellus B: Chemical and Physical Meteorology Volume 54 ; 54 ; >

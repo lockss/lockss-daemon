@@ -9,7 +9,7 @@
   >
 
     plugin = org.lockss.plugin.copernicus.ClockssCopernicusPublicationsPlugin
-    #moved to https in summer 2017 - put param in au line to handle switch
+    #moved to https in summer 2017 - put base_url param in au line to handle switch
     implicit < status ; status2 ; year ; param[year] ; name ; param[volume_name] ; param[base_url] ; param[home_url] ; hidden[proxy] >
     comment[year] = year as param, not really use in plugin
 
