@@ -45,7 +45,6 @@ import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 import org.lockss.util.Logger;
 
-import com.lyncode.xoai.model.oaipmh.Granularity;
 import com.lyncode.xoai.model.oaipmh.Record;
 import com.lyncode.xoai.serviceprovider.exceptions.BadArgumentException;
 import com.lyncode.xoai.serviceprovider.exceptions.InvalidOAIResponse;
@@ -164,7 +163,7 @@ public abstract class RecordFilteringOaiPmhCrawlSeed extends BaseOaiPmhCrawlSeed
   protected abstract boolean checkMetaRules(MetadataSearch<String> metaSearch);
 
   /**
-   * Fetches OAI response and iterates through converting article IDs to atricle
+   * Fetches OAI response and iterates through converting article IDs to article
    * URLs and returning the list.
    * 
    * @throws ConfigurationException

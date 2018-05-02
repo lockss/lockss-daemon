@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,19 +36,11 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.BitSet;
 
-import org.lockss.crawler.CrawlUrlData;
 import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.daemon.LockssWatchdog;
-import org.lockss.plugin.FetchedUrlData;
 import org.lockss.plugin.UrlCacher;
-import org.lockss.plugin.UrlConsumer;
-import org.lockss.plugin.UrlConsumerFactory;
 import org.lockss.plugin.UrlFetcher;
-import org.lockss.plugin.UrlFetcher.FetchResult;
-import org.lockss.plugin.UrlFetcher.RedirectScheme;
-import org.lockss.plugin.base.PassiveUrlConsumerFactory.PassiveUrlConsumer;
 import org.lockss.util.Deadline;
-import org.lockss.util.IOUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 import org.lockss.util.urlconn.CacheException;
@@ -98,18 +90,16 @@ public class UrlFetcherOaiClient implements OAIClient{
             totalRetries = retriesLeft;
           }
           if (log.isDebug2()) {
-            log.debug("Retryable (" + retriesLeft + ") exception caching "
-  		       + url, e);
+            log.debug("Retryable (" + retriesLeft + ") exception caching " + url, e);
           } else {
             log.debug("Retryable (" + retriesLeft + ") exception caching "
-  		       + url + ": " + e.toString());
+                + url + ": " + e.toString());
           }
           if (--retriesLeft > 0) {
             long delayTime = facade.getRetryDelay(e);
             Deadline wait = Deadline.in(delayTime);
             log.debug3("Waiting " +
-  			StringUtil.timeIntervalToString(delayTime) +
-  			" before retry");
+                StringUtil.timeIntervalToString(delayTime) + " before retry");
             while (!wait.expired()) {
               try {
                 wait.sleep();
@@ -119,8 +109,7 @@ public class UrlFetcherOaiClient implements OAIClient{
             }
             uf.reset();
           } else {
-            log.warning("Failed to cache (" + totalRetries + "), skipping: "
-  			 + url);
+            log.warning("Failed to cache (" + totalRetries + "), skipping: " + url);
             throw new HttpException(e);
           }
         } catch(IOException e) {
