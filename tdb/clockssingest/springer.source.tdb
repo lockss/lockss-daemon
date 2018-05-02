@@ -68,4 +68,20 @@
     au < testing ; exists ; 2018 ; Springer Delivered Source Content 2018 HD1_9 ; 2018 ; HD1_9 >
     
   }  
+
+  {
+  
+      title <
+      name = Springer Science+Business Media Books Source Content
+    >
+
+    plugin = needs.Sourceplugin
+    #param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/tbd/
+    hidden[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[year] >
+    
+    #au < expected ; exists ; 2016 ;  Springer Science+Business Media Books Source Content 2016 ; 2016 >
+      
+ }
+
 }
