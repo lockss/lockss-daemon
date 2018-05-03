@@ -6,7 +6,7 @@
   
   comment[moved] = moved to HW Drupal during 2015. Moved to Atypon ~Jan 2018.
   #pluginPrefix = org.lockss.plugin.highwire.
-  #implicit < pluginSuffix; status ; year ; name ; param[volume_name] >
+  #implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
   implicit < status ; year ; name ; param[volume_name] >
 
   {

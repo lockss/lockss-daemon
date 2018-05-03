@@ -44,8 +44,9 @@
     au < HighWirePressH20Plugin ; down ; 2012 ; Engineering Geology Special Publications Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; down ; 2012 ; Engineering Geology Special Publications Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; down ; 2016 ; Engineering Geology Special Publications Volume 27 ; 27 >
-    au < gsl.GSLDrupalPlugin ; expected ; 2017 ; Engineering Geology Special Publications Volume 28 ; 28 >
-    
+    au < gsl.GSLDrupalPlugin ; exists ; 2017 ; Engineering Geology Special Publications Volume 28 ; 28 >
+    au < gsl.GSLDrupalPlugin ; expected ; 2018 ; Engineering Geology Special Publications Volume 29 ; 29 >
+
   }
 
   {
@@ -78,6 +79,7 @@
     au < HighWirePressH20Plugin ; down ; 2015 ; Geochemistry: Exploration, Environment, Analysis Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; down ; 2016 ; Geochemistry: Exploration, Environment, Analysis Volume 16 ; 16 >
     au < gsl.GSLDrupalPlugin ; manifest ; 2017 ; Geochemistry: Exploration, Environment, Analysis Volume 17 ; 17 >
+    au < gsl.GSLDrupalPlugin ; expected ; 2018 ; Geochemistry: Exploration, Environment, Analysis Volume 18 ; 18 >
 
   }
 
@@ -142,6 +144,8 @@
     au < HighWirePressH20Plugin ; down ; 2016 ; Geological Society of London Memoirs Volume 46 ; 46 >
     au < gsl.GSLDrupalPlugin ; manifest ; 2017 ; Geological Society of London Memoirs Volume 47 ; 47 >
     au < gsl.GSLDrupalPlugin ; exists ; 2017 ; Geological Society of London Memoirs Volume 48 ; 48 >
+    au < gsl.GSLDrupalPlugin ; expected ; 2018 ; Geological Society of London Memoirs Volume 49 ; 49 >
+    au < gsl.GSLDrupalPlugin ; expected ; 2018 ; Geological Society of London Memoirs Volume 50 ; 50 >
 
   }
 
@@ -608,6 +612,20 @@
     au < gsl.GSLDrupalPlugin ; manifest ; 2017 ; Geological Society of London Special Publications Volume 448 ; 448 >
     au < gsl.GSLDrupalPlugin ; manifest ; 2017 ; Geological Society of London Special Publications Volume 449 ; 449 >
     au < gsl.GSLDrupalPlugin ; exists ; 2017 ; Geological Society of London Special Publications Volume 450 ; 450 >
+    au < gsl.GSLDrupalPlugin ; expected ; 2018 ; Geological Society of London Special Publications Volume 451 ; 451 >
+    au < gsl.GSLDrupalPlugin ; expected ; 2018 ; Geological Society of London Special Publications Volume 452 ; 452 >
+    au < gsl.GSLDrupalPlugin ; expected ; 2018 ; Geological Society of London Special Publications Volume 453 ; 453 >
+    au < gsl.GSLDrupalPlugin ; expected ; 2018 ; Geological Society of London Special Publications Volume 454 ; 454 >
+    au < gsl.GSLDrupalPlugin ; expected ; 2018 ; Geological Society of London Special Publications Volume 455 ; 455 >
+    au < gsl.GSLDrupalPlugin ; expected ; 2018 ; Geological Society of London Special Publications Volume 456 ; 456 >
+    au < gsl.GSLDrupalPlugin ; expected ; 2018 ; Geological Society of London Special Publications Volume 457 ; 457 >
+    au < gsl.GSLDrupalPlugin ; expected ; 2018 ; Geological Society of London Special Publications Volume 458 ; 458 >
+    au < gsl.GSLDrupalPlugin ; expected ; 2018 ; Geological Society of London Special Publications Volume 459 ; 459 >
+    au < gsl.GSLDrupalPlugin ; expected ; 2018 ; Geological Society of London Special Publications Volume 460 ; 460 >
+    au < gsl.GSLDrupalPlugin ; expected ; 2018 ; Geological Society of London Special Publications Volume 461 ; 461 >
+    au < gsl.GSLDrupalPlugin ; expected ; 2018 ; Geological Society of London Special Publications Volume 462 ; 462 >
+    au < gsl.GSLDrupalPlugin ; expected ; 2018 ; Geological Society of London Special Publications Volume 463 ; 463 >
+    au < gsl.GSLDrupalPlugin ; expected ; 2018 ; Geological Society of London Special Publications Volume 464 ; 464 >
 
   }
 
@@ -672,6 +690,7 @@
     au < HighWirePressH20Plugin ; down ; 2015 ; Journal of the Geological Society of London Volume 172 ; 172 >
     au < HighWirePressH20Plugin ; down ; 2016 ; Journal of the Geological Society of London Volume 173 ; 173 >
     au < gsl.GSLDrupalPlugin ; manifest ; 2017 ; Journal of the Geological Society of London Volume 174 ; 174 >
+    au < gsl.GSLDrupalPlugin ; expected ; 2018 ; Journal of the Geological Society of London Volume 175 ; 175 >
 
   }
 
@@ -710,7 +729,8 @@
       au < HighWirePressH20Plugin ; down ; 2015 ; Petroleum Geoscience Volume 21 ; 21 >
       au < HighWirePressH20Plugin ; down ; 2016 ; Petroleum Geoscience Volume 22 ; 22 >
       au < gsl.GSLDrupalPlugin ; manifest ; 2017 ; Petroleum Geoscience Volume 23 ; 23 >
-    
+      au < gsl.GSLDrupalPlugin ; expected ; 2018 ; Petroleum Geoscience Volume 24 ; 24 >
+
   }
 
   {
@@ -776,7 +796,8 @@
     au < HighWirePressH20Plugin ; down ; 2015 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 48 ; 48 >
     au < HighWirePressH20Plugin ; down ; 2016 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 49 ; 49 >
     au < gsl.GSLDrupalPlugin ; manifest ; 2017 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 50 ; 50 >
-      
+    au < gsl.GSLDrupalPlugin ; expected ; 2018 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 51 ; 51 >
+
   }
 
   {
@@ -884,4 +905,3 @@
   }
 
 }
-
