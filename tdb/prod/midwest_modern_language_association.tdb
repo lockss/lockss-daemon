@@ -3,7 +3,7 @@
     name = Midwest Modern Language Association
   >
 
-  implicit < status ; year; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
 

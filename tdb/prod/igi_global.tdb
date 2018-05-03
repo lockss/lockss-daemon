@@ -6,7 +6,7 @@
 
   plugin = org.lockss.plugin.igiglobal.IgiGlobalPlugin
 #  param[base_url] = http://www.igi-global.com/
-  implicit < status ; year; name ; param[volume] ; param[base_url] >
+  implicit < status ; year ; name ; param[volume] ; param[base_url] >
 
   {
 

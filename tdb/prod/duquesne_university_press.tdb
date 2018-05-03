@@ -4,7 +4,7 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; year; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
  
   {
 

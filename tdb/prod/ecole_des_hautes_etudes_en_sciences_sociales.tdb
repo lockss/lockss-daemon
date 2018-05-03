@@ -3,7 +3,7 @@
     name = Ecole des Hautes Etudes en Sciences Sociales
   >
 
-  implicit < status ; year; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
 

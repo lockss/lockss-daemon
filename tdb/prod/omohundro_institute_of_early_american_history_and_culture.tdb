@@ -3,7 +3,7 @@
     name = Omohundro Institute of Early American History and Culture
   >
 
-  implicit < status ; year; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
 
