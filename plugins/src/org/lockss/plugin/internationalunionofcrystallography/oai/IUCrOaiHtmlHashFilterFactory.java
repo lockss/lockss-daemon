@@ -56,6 +56,7 @@ public class IUCrOaiHtmlHashFilterFactory implements FilterFactory {
      HtmlNodeFilters.tagWithAttribute("div", "id", "footersearch"),
      HtmlNodeFilters.tagWithAttribute("div", "id", "journalsocialmedia"),
      HtmlNodeFilters.tagWithAttribute("div", "id", "bibl"),
+     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article_functions"),
     };
     return new HtmlFilterInputStream(in,
                                      encoding,
