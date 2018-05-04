@@ -51,20 +51,20 @@
     au < frozen ; exists ; 2016 ; 72 ; Acta Crystallographica Section E: Crystallographic Communications Volume 72 September ; 2016-09 ; >
     au < frozen ; exists ; 2016 ; 72 ; Acta Crystallographica Section E: Crystallographic Communications Volume 72 October ; 2016-10 ; >
     au < frozen ; exists ; 2016 ; 72 ; Acta Crystallographica Section E: Crystallographic Communications Volume 72 November ; 2016-11 ; >
-    au < testing ; exists ; 2016 ; 72 ; Acta Crystallographica Section E: Crystallographic Communications Volume 72 December ; 2016-12 ; > # No records within date but should check again along with 2017 AUs
+    au < doesNotExist ; doesNotExist ; 2016 ; 72 ; Acta Crystallographica Section E: Crystallographic Communications Volume 72 December ; 2016-12 ; > # No records within date but should check again along with 2017 AUs
 
     au < deepCrawl ; exists ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 January ; 2017-01 ; >
     au < deepCrawl ; exists ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 February ; 2017-02 ; >
-    au < testing ; exists ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 March ; 2017-03 ; >
-    au < testing ; exists ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 April ; 2017-04 ; >
+    au < ready ; exists ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 March ; 2017-03 ; >
+    au < ready ; exists ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 April ; 2017-04 ; >
     au < testing ; exists ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 May ; 2017-05 ; >
     au < deepCrawl ; exists ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 June ; 2017-06 ; >
     au < deepCrawl ; exists ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 July ; 2017-07 ; >
     au < deepCrawl ; exists ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 August ; 2017-08 ; >
     au < deepCrawl ; exists ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 September ; 2017-09 ; >
-    au < testing ; exists ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 October ; 2017-10 ; >
-    au < testing ; exists ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 November ; 2017-11 ; >
-    au < testing ; exists ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 December ; 2017-12 ; >
+    au < doesNotExist ; doesNotExist ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 October ; 2017-10 ; > # No records within date
+    au < doesNotExist ; doesNotExist ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 November ; 2017-11 ; > # No records within date
+    au < doesNotExist ; doesNotExist ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 December ; 2017-12 ; > # No records within date
     au < manifest ; exists ; 2018 ; 74 ; Acta Crystallographica Section E: Crystallographic Communications Volume 74 January ; 2018-01 ; >
     au < manifest ; exists ; 2018 ; 74 ; Acta Crystallographica Section E: Crystallographic Communications Volume 74 February ; 2018-02 ; >
     au < manifest ; exists ; 2018 ; 74 ; Acta Crystallographica Section E: Crystallographic Communications Volume 74 March ; 2018-03 ; >
@@ -260,34 +260,34 @@
     param[base_url] = http://iucrdata.iucr.org/
     
     
-    au < testing ; exists ; 2016 ; 1 ; IUCrData Volume 1 January ; 2016-01 ; >
+    au < ready ; exists ; 2016 ; 1 ; IUCrData Volume 1 January ; 2016-01 ; >
     au < testing ; exists ; 2016 ; 1 ; IUCrData Volume 1 February ; 2016-02 ; >
-    au < testing ; exists ; 2016 ; 1 ; IUCrData Volume 1 March ; 2016-03 ; >
-    au < testing ; exists ; 2016 ; 1 ; IUCrData Volume 1 April ; 2016-04 ; >
-    au < testing ; exists ; 2016 ; 1 ; IUCrData Volume 1 May ; 2016-05 ; >
-    au < testing ; exists ; 2016 ; 1 ; IUCrData Volume 1 June ; 2016-06 ; >
-    au < testing ; exists ; 2016 ; 1 ; IUCrData Volume 1 July ; 2016-07 ; >
-    au < testing ; exists ; 2016 ; 1 ; IUCrData Volume 1 August ; 2016-08 ; >
-    au < testing ; exists ; 2016 ; 1 ; IUCrData Volume 1 September ; 2016-09 ; >
-    au < testing ; exists ; 2016 ; 1 ; IUCrData Volume 1 October ; 2016-10 ; >
-    au < testing ; exists ; 2016 ; 1 ; IUCrData Volume 1 November ; 2016-11 ; >
-    au < testing ; exists ; 2016 ; 1 ; IUCrData Volume 1 December ; 2016-12 ; >
+    au < ready ; exists ; 2016 ; 1 ; IUCrData Volume 1 March ; 2016-03 ; >
+    au < ready ; exists ; 2016 ; 1 ; IUCrData Volume 1 April ; 2016-04 ; >
+    au < ready ; exists ; 2016 ; 1 ; IUCrData Volume 1 May ; 2016-05 ; >
+    au < ready ; exists ; 2016 ; 1 ; IUCrData Volume 1 June ; 2016-06 ; >
+    au < ready ; exists ; 2016 ; 1 ; IUCrData Volume 1 July ; 2016-07 ; >
+    au < ready ; exists ; 2016 ; 1 ; IUCrData Volume 1 August ; 2016-08 ; >
+    au < ready ; exists ; 2016 ; 1 ; IUCrData Volume 1 September ; 2016-09 ; >
+    au < ready ; exists ; 2016 ; 1 ; IUCrData Volume 1 October ; 2016-10 ; >
+    au < ready ; exists ; 2016 ; 1 ; IUCrData Volume 1 November ; 2016-11 ; >
+    au < ready ; exists ; 2016 ; 1 ; IUCrData Volume 1 December ; 2016-12 ; >
     
-    au < testing ; exists ; 2017 ; 2 ; IUCrData Volume 2 January ; 2017-01 ; >
-    au < testing ; exists ; 2017 ; 2 ; IUCrData Volume 2 February ; 2017-02 ; >
-    au < testing ; exists ; 2017 ; 2 ; IUCrData Volume 2 March ; 2017-03 ; >
-    au < testing ; exists ; 2017 ; 2 ; IUCrData Volume 2 April ; 2017-04 ; >
-    au < testing ; exists ; 2017 ; 2 ; IUCrData Volume 2 May ; 2017-05 ; >
-    au < testing ; exists ; 2017 ; 2 ; IUCrData Volume 2 June ; 2017-06 ; >
-    au < testing ; exists ; 2017 ; 2 ; IUCrData Volume 2 July ; 2017-07 ; >
-    au < testing ; exists ; 2017 ; 2 ; IUCrData Volume 2 August ; 2017-08 ; >
-    au < testing ; exists ; 2017 ; 2 ; IUCrData Volume 2 September ; 2017-09 ; >
-    au < testing ; exists ; 2017 ; 2 ; IUCrData Volume 2 October ; 2017-10 ; >
-    au < testing ; exists ; 2017 ; 2 ; IUCrData Volume 2 November ; 2017-11 ; >
+    au < ready ; exists ; 2017 ; 2 ; IUCrData Volume 2 January ; 2017-01 ; >
+    au < ready ; exists ; 2017 ; 2 ; IUCrData Volume 2 February ; 2017-02 ; >
+    au < ready ; exists ; 2017 ; 2 ; IUCrData Volume 2 March ; 2017-03 ; >
+    au < ready ; exists ; 2017 ; 2 ; IUCrData Volume 2 April ; 2017-04 ; >
+    au < ready ; exists ; 2017 ; 2 ; IUCrData Volume 2 May ; 2017-05 ; >
+    au < ready ; exists ; 2017 ; 2 ; IUCrData Volume 2 June ; 2017-06 ; >
+    au < ready ; exists ; 2017 ; 2 ; IUCrData Volume 2 July ; 2017-07 ; >
+    au < ready ; exists ; 2017 ; 2 ; IUCrData Volume 2 August ; 2017-08 ; >
+    au < ready ; exists ; 2017 ; 2 ; IUCrData Volume 2 September ; 2017-09 ; >
+    au < ready ; exists ; 2017 ; 2 ; IUCrData Volume 2 October ; 2017-10 ; >
+    au < ready ; exists ; 2017 ; 2 ; IUCrData Volume 2 November ; 2017-11 ; >
     au < testing ; exists ; 2017 ; 2 ; IUCrData Volume 2 December ; 2017-12 ; >
     
-    au < testing ; exists ; 2018 ; 3 ; IUCrData Volume 3 January ; 2018-01 ; >
-    au < testing ; exists ; 2018 ; 3 ; IUCrData Volume 3 February ; 2018-02 ; >
+    au < ready ; exists ; 2018 ; 3 ; IUCrData Volume 3 January ; 2018-01 ; >
+    au < ready ; exists ; 2018 ; 3 ; IUCrData Volume 3 February ; 2018-02 ; >
     au < testing ; exists ; 2018 ; 3 ; IUCrData Volume 3 March ; 2018-03 ; >
     au < testing ; exists ; 2018 ; 3 ; IUCrData Volume 3 April ; 2018-04 ; >
     au < expected ; exists ; 2018 ; 3 ; IUCrData Volume 3 May ; 2018-05 ; >
