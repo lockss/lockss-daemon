@@ -25,11 +25,10 @@
         param[journal_id] = AI
  
         au < doNotProcess ; 2011 ; African Invertebrates Volume 2011 ; 2011 >
-        au < released ; 2012 ; African Invertebrates Volume 2012 ; 2012 >
-        au < released ; 2013 ; African Invertebrates Volume 2013 ; 2013 >
-        au < released ; 2014 ; African Invertebrates Volume 2014 ; 2014 >
+        au < down ; 2012 ; African Invertebrates Volume 2012 ; 2012 >
+        au < down ; 2013 ; African Invertebrates Volume 2013 ; 2013 >
+        au < down ; 2014 ; African Invertebrates Volume 2014 ; 2014 >
         au < doNotProcess ; 2015 ; African Invertebrates Volume 2015 ; 2015 >
-        au < doNotProcess ; 2016 ; African Invertebrates Volume 2016 ; 2016 >
 
       }
       
@@ -39,13 +38,13 @@
     
         param[base_url] = http://www.africaninvertebrates.org/ojs/
         param[journal_id] = AI
+        #move to Pensoft
 
-        au < released ; 2011 ; African Invertebrates Volume 2011 ; 2011 >
+        au < down ; 2011 ; African Invertebrates Volume 2011 ; 2011 >
         au < doNotProcess ; 2012 ; African Invertebrates Volume 2012 ; 2012 >
         au < doNotProcess ; 2013 ; African Invertebrates Volume 2013 ; 2013 >
         au < doNotProcess ; 2014 ; African Invertebrates Volume 2014 ; 2014 >
-        au < released ; 2015 ; African Invertebrates Volume 2015 ; 2015 >
-        au < expected ; 2016 ; African Invertebrates Volume 2016 ; 2016 >
+        au < down ; 2015 ; African Invertebrates Volume 2015 ; 2015 >
 
       }
 
@@ -66,8 +65,7 @@
       au < released ; 2013 ; African Invertebrates Volume 54 ; 54 >
       au < released ; 2014 ; African Invertebrates Volume 55 ; 55 >
       au < released ; 2015 ; African Invertebrates Volume 56 ; 56 >
-      au < expected ; 2016 ; African Invertebrates Volume 57 ; 57 >
-    
+
     }
 
   }

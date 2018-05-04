@@ -11,6 +11,23 @@
     plugin = org.lockss.plugin.pensoft.oai.PensoftOaiPlugin
 #    # param[base_url] = http://www.pensoft.net/
 
+  {
+
+    title <
+      name = African Invertebrates ;
+      issn = 1681-5556 ;
+      eissn = 2305-2562 ;
+      issnl = 1681-5556
+    >
+
+      param[au_oai_set] = africaninvertebrates
+
+    au < exists ; 2016 ; 7 ; African Invertebrates Volume 2016 ; 2016 ; https://africaninvertebrates.pensoft.net/ >
+    au < exists ; 2017 ; 8 ; African Invertebrates Volume 2017 ; 2017 ; https://africaninvertebrates.pensoft.net/ >
+    au < exists ; 2018 ; 9 ; African Invertebrates Volume 2018 ; 2018 ; https://africaninvertebrates.pensoft.net/ >
+
+  }
+
    {
      title <
       name = Biodiversity Data Journal ;

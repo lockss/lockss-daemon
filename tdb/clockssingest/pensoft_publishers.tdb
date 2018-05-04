@@ -12,6 +12,23 @@
     #implicit < status ; status2 ; year ; param[au_oai_date] ; name ; volume ; hidden[proxy] >
     plugin = org.lockss.plugin.pensoft.oai.ClockssPensoftOaiPlugin
 
+  {
+
+    title <
+      name = African Invertebrates ;
+      issn = 1681-5556 ;
+      eissn = 2305-2562 ;
+      issnl = 1681-5556
+    >
+
+      param[au_oai_set] = africaninvertebrates
+
+    au < exists ; exists ; 2016 ; 7 ; African Invertebrates Volume 2016 ; 2016 ; https://africaninvertebrates.pensoft.net/ ; >
+    au < exists ; exists ; 2017 ; 8 ; African Invertebrates Volume 2017 ; 2017 ; https://africaninvertebrates.pensoft.net/ ; >
+    au < exists ; exists ; 2018 ; 9 ; African Invertebrates Volume 2018 ; 2018 ; https://africaninvertebrates.pensoft.net/ ; >
+
+  }
+
    {
      title <
       name = Biodiversity Data Journal ;
