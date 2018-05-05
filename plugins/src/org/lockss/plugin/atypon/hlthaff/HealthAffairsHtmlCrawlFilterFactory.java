@@ -32,55 +32,83 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.atypon.hlthaff;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.InputStream;
-//import java.util.regex.Pattern;
-import java.io.OutputStreamWriter;
+import java.util.regex.Pattern;
 
-import org.apache.commons.io.IOUtils;
 import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.tags.CompositeTag;
 import org.htmlparser.tags.LinkTag;
+import org.htmlparser.tags.Bullet;
 import org.lockss.daemon.PluginException;
+import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.plugin.*;
 import org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory;
-import org.lockss.uiapi.util.Constants;
 
 public class HealthAffairsHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory {
-  // protected static final Pattern related_articlelink_pattern = Pattern.compile("related( article|editorial)?", Pattern.CASE_INSENSITIVE);
+
+  protected static final Pattern corrections = Pattern.compile("^( |&nbsp;)*(original article):?", Pattern.CASE_INSENSITIVE);
 
   NodeFilter[] filters = new NodeFilter[] {
-      // Leave in this specific filter for Health Affairs which often puts 
-      // related links on the TOC alongside the other formats (abs, full, pdf) ???
+      HtmlNodeFilters.tag("header"),
+      HtmlNodeFilters.tag("footer"),
+      HtmlNodeFilters.tag("nav"),
+      // Article landing - ajax tabs
+      HtmlNodeFilters.tagWithAttribute("li", "id", "pane-pcw-references"),
+      HtmlNodeFilters.tagWithAttribute("li", "id", "pane-pcw-related"),
+      // minor
+      HtmlNodeFilters.tagWithAttribute("section", "class", "article__metrics"),
+      HtmlNodeFilters.tagWithAttribute("div", "class", "toc-header__top"),
+      HtmlNodeFilters.tagWithAttribute("div", "class", "sidebar-region"),
+      HtmlNodeFilters.tagWithAttribute("div", "class", "article__topic"),
+      HtmlNodeFilters.tagWithAttribute("ul", "class", "social-links"),
+      // in case there are links in the preview text
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "toc-item__abstract"),
+      // References
+      HtmlNodeFilters.tagWithAttributeRegex("li", "class", "references__item"),
+      HtmlNodeFilters.tagWithAttribute("div", "id", "disqus_thread"),
+      // never want these links, excluded lists was too long
+      HtmlNodeFilters.tagWithAttribute("a", "class", "sfxLink"),
+      HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/servlet/linkout[?]type="),
+      HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/author/"),
+
+      // an insidious source of over crawling
+      // 5/1/18 - adding check for pattern in the <li>
       new NodeFilter() {
-            @Override public boolean accept(Node node) {
-              if (!(node instanceof LinkTag)) return false;
-              String allText = ((CompositeTag)node).toPlainTextString();
-              // return related_articlelink_pattern.matcher(allText).find();
-              return allText.toLowerCase().contains("related");
-            }
-        },
+        @Override public boolean accept(Node node) {
+          if (!(node instanceof LinkTag)) return false;
+          Node parent = node.getParent();
+          if (!(parent instanceof Bullet)) return false;
+          String allText = ((CompositeTag)parent).toPlainTextString();
+          return corrections.matcher(allText).find();
+        }
+      },
+
   };
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding)
       throws PluginException {
-    return super.createFilteredInputStream(au, in, encoding);
+    return super.createFilteredInputStream(au, in, encoding, filters);
   }
   
-  public static void main(String[] args) throws Exception {
+  /*public static void main(String[] args) throws Exception {
     String file1 = "/home/etenbrink/workspace/data/ha1.html";
     String file2 = "/home/etenbrink/workspace/data/ha2.html";
     String file3 = "/home/etenbrink/workspace/data/ha3.html";
-    String file4 = "/home/etenbrink/workspace/data/ha4.html";
+    String file4 = "/home/etenbrink/workspace/data/ha5.html";
     IOUtils.copy(new HealthAffairsHtmlCrawlFilterFactory().createFilteredInputStream(null, 
         new FileInputStream(file1), Constants.DEFAULT_ENCODING), 
-        new OutputStreamWriter(new FileOutputStream(file1 + ".out"), Constants.DEFAULT_ENCODING));
+        new FileOutputStream(file1 + ".out"));
     IOUtils.copy(new HealthAffairsHtmlCrawlFilterFactory().createFilteredInputStream(null,
         new FileInputStream(file2), Constants.DEFAULT_ENCODING),
-        new OutputStreamWriter(new FileOutputStream(file2 + ".out"), Constants.DEFAULT_ENCODING));
-  }
+        new FileOutputStream(file2 + ".out"));
+    IOUtils.copy(new HealthAffairsHtmlCrawlFilterFactory().createFilteredInputStream(null,
+        new FileInputStream(file3), Constants.DEFAULT_ENCODING),
+        new FileOutputStream(file3 + ".out"));
+    IOUtils.copy(new HealthAffairsHtmlCrawlFilterFactory().createFilteredInputStream(null,
+        new FileInputStream(file4), Constants.DEFAULT_ENCODING),
+        new FileOutputStream(file4 + ".out"));
+  }*/
   
 }
