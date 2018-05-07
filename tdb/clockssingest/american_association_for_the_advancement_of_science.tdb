@@ -2,6 +2,7 @@
 
   publisher <
     name = American Association for the Advancement of Science ;
+    info[back] = 1880 ;
     info[contract] = 2015 ;
     info[tester] = 8 ;
     info[poller] = 2
@@ -23,6 +24,9 @@
       #content available from 1880 volume os-1 to 2009 volume 326
       #volume 344 File size (346438) differs from Content-Length header (461302): http://science.sciencemag.org/content/sci/suppl/2014/04/23/344.6182.380.DC1/1249656s-tables.zip
 
+      au < exists ; exists ; 2007 ; Science Volume 324 ; 324 ; >
+      au < exists ; exists ; 2008 ; Science Volume 325 ; 325 ; >
+      au < exists ; exists ; 2009 ; Science Volume 326 ; 326 ; >
       au < manifest ; exists ; 2010 ; Science Volume 327 ; 327 ; >
       au < manifest ; exists ; 2010 ; Science Volume 328 ; 328 ; >
       au < manifest ; exists ; 2010 ; Science Volume 329 ; 329 ; >
