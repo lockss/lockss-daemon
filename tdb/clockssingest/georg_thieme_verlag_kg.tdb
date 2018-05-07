@@ -2612,7 +2612,7 @@
     #years = 2017-current
 
     au < deepCrawl ; exists ; 2017 ; 2017 ; Journal of Clinical Interventional Radiology Volume 1 ; 1 ; >
-    au < expected ; exists ; 2018 ; 2018 ; Journal of Clinical Interventional Radiology Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2018 ; 2018 ; Journal of Clinical Interventional Radiology Volume 2 ; 2 ; >
 
   }
 
@@ -6763,7 +6763,7 @@
     comment[years] = 2017-current
 
     au < deepCrawl ; exists ; 2017 ; 2017 ; ACI Open Volume 1 ; 1 ; >
-    au < expected ; exists ; 2018 ; 2018 ; ACI Open Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2018 ; 2018 ; ACI Open Volume 2 ; 2 ; >
 
   }
 
