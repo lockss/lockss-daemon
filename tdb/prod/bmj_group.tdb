@@ -1029,7 +1029,7 @@
     au < HighWirePressH20Plugin ; down ; 2015 ; Heart Asia Volume 7 ; 7 >
     au < bmj.BMJDrupalPlugin ; notReady ; 2016 ; Heart Asia Volume 8 ; 8 > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Heart Asia Volume 9 ; 9 >
-    au < bmj.BMJDrupalPlugin ; expected ; 2018 ; Heart Asia Volume 10 ; 10 >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; Heart Asia Volume 10 ; 10 >
 
   }
 
