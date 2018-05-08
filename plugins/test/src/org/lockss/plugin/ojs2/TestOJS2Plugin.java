@@ -57,8 +57,10 @@ public class TestOJS2Plugin extends LockssTestCase {
   // from au_url_poll_result_weight in plugins/src/org/lockss/plugin/ojs2/OJS2Plugin.xml
   // Note diff: java regex & vs. xml &amp;
   // if it changes in the plugin, you will likely need to change the test, so verify
-  static final String  OJS2_REPAIR_FROM_PEER_REGEXP = 
-      "/(lib|site|images|js|public|ads)/.+[.](css|gif|png|jpe?g|js)([?]((itok|v)=)?[^&]+)?$";
+  static final String  OJS2_REPAIR_FROM_PEER_REGEXP1 = 
+	      "/(libs?|site|images|js|public|ads)/.+[.](css|gif|png|jpe?g|js)([?]((itok|v)=)?[^&]+)?$";
+  static final String  OJS2_REPAIR_FROM_PEER_REGEXP2 = 
+	      "/page/css([?]name=.*)?$";
   
   private MockLockssDaemon theDaemon;
   private DefinablePlugin plugin;
@@ -335,7 +337,7 @@ public class TestOJS2Plugin extends LockssTestCase {
     
     // if it changes in the plugin, you will likely need to change the test, so verify
     assertEquals(ListUtil.list(
-        OJS2_REPAIR_FROM_PEER_REGEXP),
+        OJS2_REPAIR_FROM_PEER_REGEXP1,OJS2_REPAIR_FROM_PEER_REGEXP2),
         RegexpUtil.regexpCollection(au.makeRepairFromPeerIfMissingUrlPatterns()));
     
     // make sure that's the regexp that will match to the expected url string
@@ -357,15 +359,17 @@ public class TestOJS2Plugin extends LockssTestCase {
         ROOT_URL + "templates/images/progbg.gif",
         ROOT_URL + "submission/public/journals/2/cover_issue_3_en_US.jpg",
         ROOT_URL + "public/site/crosscheck_it_trans1.gif");
-     Pattern p = Pattern.compile(OJS2_REPAIR_FROM_PEER_REGEXP);
+    Pattern p1 = Pattern.compile(OJS2_REPAIR_FROM_PEER_REGEXP1);
+    Pattern p2 = Pattern.compile(OJS2_REPAIR_FROM_PEER_REGEXP2);
      for (String urlString : repairList) {
-       Matcher m = p.matcher(urlString);
-       assertEquals(urlString, true, m.find());
+         Matcher m1 = p1.matcher(urlString);
+         Matcher m2 = p1.matcher(urlString);
+       assertEquals(urlString, true, (m1.find() || m1.find()));
      }
      //and this one should fail - it needs to be weighted correctly and repaired from publisher if possible
      String notString = ROOT_URL + "index.php/aa/about/editorialPolicies";
-     Matcher m = p.matcher(notString);
-     assertEquals(false, m.find());
+     Matcher m1 = p1.matcher(notString);
+     assertEquals(false, m1.find());
      
     PatternFloatMap urlPollResults = au.makeUrlPollResultWeightMap();
     assertNotNull(urlPollResults);
