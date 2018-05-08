@@ -158,16 +158,16 @@
       param[base_url] = http://www.bloodjournal.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < ash.ASHDrupalPlugin ; ready ; 2013 ; Blood Volume 121 ; 121 >
-      au < ash.ASHDrupalPlugin ; ready ; 2013 ; Blood Volume 122 ; 122 >
+      au < ash.ASHDrupalPlugin ; releasing ; 2013 ; Blood Volume 121 ; 121 >
+      au < ash.ASHDrupalPlugin ; releasing ; 2013 ; Blood Volume 122 ; 122 >
       au < ash.ASHDrupalPlugin ; released ; 2014 ; Blood Volume 123 ; 123 >
-      au < ash.ASHDrupalPlugin ; ready ; 2014 ; Blood Volume 124 ; 124 >
+      au < ash.ASHDrupalPlugin ; releasing ; 2014 ; Blood Volume 124 ; 124 >
       au < ash.ASHDrupalPlugin ; released ; 2015 ; Blood Volume 125 ; 125 >
-      au < ash.ASHDrupalPlugin ; ready ; 2015 ; Blood Volume 126 ; 126 >
-      au < ash.ASHDrupalPlugin ; ready ; 2016 ; Blood Volume 127 ; 127 >
-      au < ash.ASHDrupalPlugin ; ready ; 2016 ; Blood Volume 128 ; 128 >
-      au < ash.ASHDrupalPlugin ; ready ; 2017 ; Blood Volume 129 ; 129 >
-      au < ash.ASHDrupalPlugin ; ready ; 2017 ; Blood Volume 130 ; 130 >
+      au < ash.ASHDrupalPlugin ; releasing ; 2015 ; Blood Volume 126 ; 126 >
+      au < ash.ASHDrupalPlugin ; releasing ; 2016 ; Blood Volume 127 ; 127 >
+      au < ash.ASHDrupalPlugin ; releasing ; 2016 ; Blood Volume 128 ; 128 >
+      au < ash.ASHDrupalPlugin ; releasing ; 2017 ; Blood Volume 129 ; 129 >
+      au < ash.ASHDrupalPlugin ; releasing ; 2017 ; Blood Volume 130 ; 130 >
       au < ash.ASHDrupalPlugin ; manifest ; 2018 ; Blood Volume 131 ; 131 >
       au < ash.ASHDrupalPlugin ; expected ; 2018 ; Blood Volume 132 ; 132 >
 
