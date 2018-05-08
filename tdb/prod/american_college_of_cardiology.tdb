@@ -16,7 +16,7 @@
 
     param[base_url] = http://basictranslational.onlinejacc.org/
 
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; releasing ; 2016 ; JACC: Basic To Translational Science Volume 1 ; 1 >
+    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2016 ; JACC: Basic To Translational Science Volume 1 ; 1 >
     au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2017 ; JACC: Basic To Translational Science Volume 2 ; 2 >
     au < accardiol.AmCollegeCardiologyDrupalPlugin ; manifest ; 2018 ; JACC: Basic To Translational Science Volume 3 ; 3 >
 
@@ -39,10 +39,10 @@
     au < HighWirePressPlugin ; down ; 2012 ; JACC: Cardiovascular Imaging Volume 5 ; 5 >
 
     au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2013 ; JACC: Cardiovascular Imaging Volume 6 ; 6 >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; releasing ; 2014 ; JACC: Cardiovascular Imaging Volume 7 ; 7 >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; releasing ; 2015 ; JACC: Cardiovascular Imaging Volume 8 ; 8 >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; releasing ; 2016 ; JACC: Cardiovascular Imaging Volume 9 ; 9 >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; releasing ; 2017 ; JACC: Cardiovascular Imaging Volume 10 ; 10 >
+    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2014 ; JACC: Cardiovascular Imaging Volume 7 ; 7 >
+    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2015 ; JACC: Cardiovascular Imaging Volume 8 ; 8 >
+    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2016 ; JACC: Cardiovascular Imaging Volume 9 ; 9 >
+    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2017 ; JACC: Cardiovascular Imaging Volume 10 ; 10 >
     au < accardiol.AmCollegeCardiologyDrupalPlugin ; manifest ; 2018 ; JACC: Cardiovascular Imaging Volume 11 ; 11 >
 
     }
@@ -65,11 +65,11 @@
     au < HighWirePressPlugin ; down ; 2011 ; JACC: Cardiovascular Interventions Volume 4 ; 4 >
     au < HighWirePressPlugin ; down ; 2012 ; JACC: Cardiovascular Interventions Volume 5 ; 5 >
 
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; releasing ; 2013 ; JACC: Cardiovascular Interventions Volume 6 ; 6 >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; releasing ; 2014 ; JACC: Cardiovascular Interventions Volume 7 ; 7 >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; releasing ; 2015 ; JACC: Cardiovascular Interventions Volume 8 ; 8 >
+    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2013 ; JACC: Cardiovascular Interventions Volume 6 ; 6 >
+    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2014 ; JACC: Cardiovascular Interventions Volume 7 ; 7 >
+    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2015 ; JACC: Cardiovascular Interventions Volume 8 ; 8 >
     au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2016 ; JACC: Cardiovascular Interventions Volume 9 ; 9 >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; releasing ; 2017 ; JACC: Cardiovascular Interventions Volume 10 ; 10 >
+    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2017 ; JACC: Cardiovascular Interventions Volume 10 ; 10 >
     au < accardiol.AmCollegeCardiologyDrupalPlugin ; expected ; 2018 ; JACC: Cardiovascular Interventions Volume 11 ; 11 >
     }
 
@@ -154,17 +154,17 @@
     {
     param[base_url] = http://www.onlinejacc.org/
 
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; releasing ; 2012 ; Journal of the American College of Cardiology Volume 60 ; 60 >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; releasing ; 2013 ; Journal of the American College of Cardiology Volume 61 ; 61 >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; releasing ; 2013 ; Journal of the American College of Cardiology Volume 62 ; 62 >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; releasing ; 2014 ; Journal of the American College of Cardiology Volume 63 ; 63 >
+    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2012 ; Journal of the American College of Cardiology Volume 60 ; 60 >
+    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2013 ; Journal of the American College of Cardiology Volume 61 ; 61 >
+    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2013 ; Journal of the American College of Cardiology Volume 62 ; 62 >
+    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2014 ; Journal of the American College of Cardiology Volume 63 ; 63 >
     au < accardiol.AmCollegeCardiologyDrupalPlugin ; testing ; 2014 ; Journal of the American College of Cardiology Volume 64 ; 64 >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; releasing ; 2015 ; Journal of the American College of Cardiology Volume 65 ; 65 >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; releasing ; 2015 ; Journal of the American College of Cardiology Volume 66 ; 66 >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; releasing ; 2016 ; Journal of the American College of Cardiology Volume 67 ; 67 >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; releasing ; 2016 ; Journal of the American College of Cardiology Volume 68 ; 68 >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; releasing ; 2017 ; Journal of the American College of Cardiology Volume 69 ; 69 >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; releasing ; 2017 ; Journal of the American College of Cardiology Volume 70 ; 70 >
+    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2015 ; Journal of the American College of Cardiology Volume 65 ; 65 >
+    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2015 ; Journal of the American College of Cardiology Volume 66 ; 66 >
+    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2016 ; Journal of the American College of Cardiology Volume 67 ; 67 >
+    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2016 ; Journal of the American College of Cardiology Volume 68 ; 68 >
+    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2017 ; Journal of the American College of Cardiology Volume 69 ; 69 >
+    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2017 ; Journal of the American College of Cardiology Volume 70 ; 70 >
     au < accardiol.AmCollegeCardiologyDrupalPlugin ; expected ; 2018 ; Journal of the American College of Cardiology Volume 71 ; 71 >
     au < accardiol.AmCollegeCardiologyDrupalPlugin ; expected ; 2018 ; Journal of the American College of Cardiology Volume 72 ; 72 >
 
