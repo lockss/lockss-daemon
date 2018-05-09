@@ -63,7 +63,7 @@ public class SageAtyponHtmlHashFilterFactory
                                                String encoding) {
 	  
 	NodeFilter[] includeNodes = new NodeFilter[] {
-			HtmlNodeFilters.tag("body"),
+			//HtmlNodeFilters.tag("body"),
 		//manifest
 	    new NodeFilter() {
 		  @Override
@@ -104,7 +104,6 @@ public class SageAtyponHtmlHashFilterFactory
 
         HtmlNodeFilters.tag("noscript"),
         HtmlNodeFilters.tag("style"),
-        /*
         // toc - first top block ad
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumAd"),
         // page header: login, register, etc., and journal menu such as
@@ -134,26 +133,27 @@ public class SageAtyponHtmlHashFilterFactory
                 "table", "class", "references"),
                 HtmlNodeFilters.tagWithAttributeRegex(
                     "span", "class", "NLM_")),
-                    */
  
     };
     // super.createFilteredInputStream adds bir filter to the baseAtyponFilters
     // and returns the filtered input stream using an array of NodeFilters that 
     // combine the two arrays of NodeFilters.
     //return super.createFilteredInputStream(au, in, encoding, includeNodes, excludeNodes);
+    // back out use of include/exclude for now
     return super.createFilteredInputStream(au, in, encoding, excludeNodes);
+
   }
 
   
   public boolean doTagRemovalFiltering() {
-    return false;
+    return true;
   }
    
   @Override
   public boolean doWSFiltering() {
-    return false;
+    return true;
   }
-  
+  /*
   public static void main(String[] args) throws Exception {
 	    String file1 = "/Users/aohlson/SageToc";
 	    //String file2 = "/Users/aohlson/SageArt.html.out";
@@ -165,6 +165,7 @@ public class SageAtyponHtmlHashFilterFactory
 	    //IOUtils.copy(new TafPdfFilterFactory().createFilteredInputStream(null, new FileInputStream(file2), null),
 	      //  new FileOutputStream(file2 + ".out"));
 	  }
+	  */
 
 }
 
