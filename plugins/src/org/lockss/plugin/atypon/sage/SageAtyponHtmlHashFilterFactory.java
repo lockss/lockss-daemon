@@ -33,13 +33,21 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.atypon.sage;
 
 import java.io.InputStream;
+import java.util.Vector;
 
+import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
+import org.htmlparser.tags.Bullet;
+import org.htmlparser.tags.BulletList;
 import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory;
 import org.lockss.util.Logger;
 
+
+//5/9/18 changed to include/exclude
+// Keeps contents only (includeNodes), then hashes out unwanted nodes 
+//within the content (excludeNodes).
 public class SageAtyponHtmlHashFilterFactory 
   extends BaseAtyponHtmlHashFilterFactory {
 
@@ -49,7 +57,44 @@ public class SageAtyponHtmlHashFilterFactory
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding) {
-    NodeFilter[] filters = new NodeFilter[] {
+	  
+	NodeFilter[] includeNodes = new NodeFilter[] {
+		//manifest
+	    new NodeFilter() {
+		  @Override
+		  public boolean accept(Node node) {
+		    if (HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/toc/").accept(node)) {
+			  Node liParent = node.getParent();
+			  if (liParent instanceof Bullet) {
+			    Bullet li = (Bullet)liParent;
+				Vector liAttr = li.getAttributesEx();
+				if (liAttr != null && liAttr.size() == 1) {
+				  Node ulParent = li.getParent();
+				  if (ulParent instanceof BulletList) {
+				    BulletList ul = (BulletList)ulParent;
+					Vector ulAttr = ul.getAttributesEx();
+					return ulAttr != null && ulAttr.size() == 1;
+			      }
+				}
+			  }
+		    } 
+			return false;
+	      }
+	    },
+     //toc   <div class="tocContent">
+	   HtmlNodeFilters.tagWithAttribute("div", "class","tocContent"),
+	 //article - doi/(ref|figure|full|abs...)/ 
+     //<div class="widget literatumPublicationContentWidget none articleContent
+	   HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumPublicationContentWidget"),
+     //meeting abstracts seem to use standard TOC, not search argument url
+	 //see - http://journals.sagepub.com/toc/faib/38/1_suppl
+	 //showCitation - included on article page - not a standalone for this plugin
+	 //showPopup&citart <body class="popupBody">
+	   HtmlNodeFilters.tagWithAttributeRegex("body","class","popupBody"),
+	   
+
+	};
+    NodeFilter[] excludeNodes = new NodeFilter[] {
         // handled by parent: script, sfxlink, stylesheet
 
         HtmlNodeFilters.tag("noscript"),
@@ -89,7 +134,7 @@ public class SageAtyponHtmlHashFilterFactory
     // super.createFilteredInputStream adds bir filter to the baseAtyponFilters
     // and returns the filtered input stream using an array of NodeFilters that 
     // combine the two arrays of NodeFilters.
-    return super.createFilteredInputStream(au, in, encoding, filters);
+    return super.createFilteredInputStream(au, in, encoding, includeNodes, excludeNodes);
   }
 
   
