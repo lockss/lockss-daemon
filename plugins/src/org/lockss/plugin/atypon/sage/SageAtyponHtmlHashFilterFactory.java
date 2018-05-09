@@ -32,9 +32,12 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.atypon.sage;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.util.Vector;
 
+import org.apache.commons.io.IOUtils;
 import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.tags.Bullet;
@@ -42,6 +45,7 @@ import org.htmlparser.tags.BulletList;
 import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory;
+import org.lockss.util.Constants;
 import org.lockss.util.Logger;
 
 
@@ -59,6 +63,7 @@ public class SageAtyponHtmlHashFilterFactory
                                                String encoding) {
 	  
 	NodeFilter[] includeNodes = new NodeFilter[] {
+			HtmlNodeFilters.tag("body"),
 		//manifest
 	    new NodeFilter() {
 		  @Override
@@ -99,7 +104,7 @@ public class SageAtyponHtmlHashFilterFactory
 
         HtmlNodeFilters.tag("noscript"),
         HtmlNodeFilters.tag("style"),
-        
+        /*
         // toc - first top block ad
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumAd"),
         // page header: login, register, etc., and journal menu such as
@@ -129,23 +134,37 @@ public class SageAtyponHtmlHashFilterFactory
                 "table", "class", "references"),
                 HtmlNodeFilters.tagWithAttributeRegex(
                     "span", "class", "NLM_")),
+                    */
  
     };
     // super.createFilteredInputStream adds bir filter to the baseAtyponFilters
     // and returns the filtered input stream using an array of NodeFilters that 
     // combine the two arrays of NodeFilters.
-    return super.createFilteredInputStream(au, in, encoding, includeNodes, excludeNodes);
+    //return super.createFilteredInputStream(au, in, encoding, includeNodes, excludeNodes);
+    return super.createFilteredInputStream(au, in, encoding, excludeNodes);
   }
 
   
   public boolean doTagRemovalFiltering() {
-    return true;
+    return false;
   }
    
   @Override
   public boolean doWSFiltering() {
-    return true;
+    return false;
   }
+  
+  public static void main(String[] args) throws Exception {
+	    String file1 = "/Users/aohlson/SageToc";
+	    //String file2 = "/Users/aohlson/SageArt.html.out";
+	    InputStream blah = new FileInputStream(file1);
+	    
+	    InputStream foo = new SageAtyponHtmlHashFilterFactory().createFilteredInputStream(null, blah, Constants.ENCODING_UTF_8);
+	    IOUtils.copy(foo,
+	        new FileOutputStream(file1 + ".out"));
+	    //IOUtils.copy(new TafPdfFilterFactory().createFilteredInputStream(null, new FileInputStream(file2), null),
+	      //  new FileOutputStream(file2 + ".out"));
+	  }
 
 }
 
