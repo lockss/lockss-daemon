@@ -945,7 +945,7 @@
       au < doNotProcess ; doNotProcess ; 2011-2012 ; International Journal of Aviation Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2013-2015 ; International Journal of Aviation Management Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; International Journal of Aviation Management Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < testing ; exists ; 2017 ; International Journal of Aviation Management Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
+      au < ready ; exists ; 2017 ; International Journal of Aviation Management Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2018 ; International Journal of Aviation Management Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -2039,7 +2039,7 @@
 
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Computational Systems Engineering Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < finished ; crawling ; 2015-2016 ; International Journal of Computational Systems Engineering Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < testing ; exists ; 2017 ; International Journal of Computational Systems Engineering Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
+      au < ready ; exists ; 2017 ; International Journal of Computational Systems Engineering Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2018 ; International Journal of Computational Systems Engineering Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -5178,7 +5178,7 @@
       au < doNotProcess ; doNotProcess ; 2011-2012 ; International Journal of Knowledge Engineering and Soft Data Paradigms Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2013-2014 ; International Journal of Knowledge Engineering and Soft Data Paradigms Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2015-2016 ; International Journal of Knowledge Engineering and Soft Data Paradigms Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < testing ; exists ; 2017 ; International Journal of Knowledge Engineering and Soft Data Paradigms Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
+      au < ready ; exists ; 2017 ; International Journal of Knowledge Engineering and Soft Data Paradigms Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2018 ; International Journal of Knowledge Engineering and Soft Data Paradigms Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -8133,7 +8133,7 @@
       au < finished ; finished ; 2013-2014 ; International Journal of Strategic Business Alliances Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2015 ; International Journal of Strategic Business Alliances Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; International Journal of Strategic Business Alliances Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < testing ; exists ; 2017 ; International Journal of Strategic Business Alliances Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
+      au < ready ; exists ; 2017 ; International Journal of Strategic Business Alliances Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2018 ; International Journal of Strategic Business Alliances Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -8944,7 +8944,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Trust Management in Computing and Communications Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014 ; International Journal of Trust Management in Computing and Communications Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2015-2016 ; International Journal of Trust Management in Computing and Communications Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < testing ; exists ; 2017 ; International Journal of Trust Management in Computing and Communications Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
+      au < ready ; exists ; 2017 ; International Journal of Trust Management in Computing and Communications Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2018 ; International Journal of Trust Management in Computing and Communications Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -9083,7 +9083,7 @@
       au < finished ; crawling ; 2016 ; International Journal of Vehicle Design Volume 72 ; 72 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2017 ; International Journal of Vehicle Design Volume 73 ; 73 ; http://www.inderscienceonline.com/ ; >
       au < deepCrawl ; exists ; 2017 ; International Journal of Vehicle Design Volume 74 ; 74 ; http://www.inderscienceonline.com/ ; >
-      au < testing ; exists ; 2017 ; International Journal of Vehicle Design Volume 75 ; 75 ; https://www.inderscienceonline.com/ ; >
+      au < ready ; exists ; 2017 ; International Journal of Vehicle Design Volume 75 ; 75 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2018 ; International Journal of Vehicle Design Volume 76 ; 76 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2018 ; International Journal of Vehicle Design Volume 77 ; 77 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2018 ; International Journal of Vehicle Design Volume 78 ; 78 ; https://www.inderscienceonline.com/ ; >

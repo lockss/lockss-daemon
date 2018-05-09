@@ -97,8 +97,8 @@
       param[journal_id] = jop
 
       au < testing ; exists ; 2005 ; Journal of Oncology Practice Volume 1 ; 1 ; >
-      au < testing ; exists ; 2006 ; Journal of Oncology Practice Volume 2 ; 2 ; >
-      au < testing ; exists ; 2007 ; Journal of Oncology Practice Volume 3 ; 3 ; >
+      au < ready ; exists ; 2006 ; Journal of Oncology Practice Volume 2 ; 2 ; >
+      au < ready ; exists ; 2007 ; Journal of Oncology Practice Volume 3 ; 3 ; >
       au < testing ; exists ; 2008 ; Journal of Oncology Practice Volume 4 ; 4 ; >
       au < testing ; exists ; 2009 ; Journal of Oncology Practice Volume 5 ; 5 ; >
       au < frozen ; exists ; 2010 ; Journal of Oncology Practice Volume 6 ; 6 ; >
