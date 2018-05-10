@@ -32,9 +32,12 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.atypon.sage;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.util.Vector;
 
+import org.apache.commons.io.IOUtils;
 import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.tags.Bullet;
@@ -42,6 +45,7 @@ import org.htmlparser.tags.BulletList;
 import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory;
+import org.lockss.plugin.atypon.BaseAtyponRisFilterFactory;
 import org.lockss.util.Logger;
 
 
@@ -130,6 +134,9 @@ public class SageAtyponHtmlHashFilterFactory
                 HtmlNodeFilters.tagWithAttributeRegex(
                     "span", "class", "NLM_")),
         //5/10/18 - some additions due to changes; some would repair in time but will slow finishing
+        // this is a hack - the refrences would leave this but at some point Sage stopped using it for
+        // reference author names so just remove it from the older versions of content
+        HtmlNodeFilters.tagWithAttribute("span","class","NLM_string-name"),
         //keywords have been added to all abs,etc
         HtmlNodeFilters.tagWithAttribute("div","class","hlFld-KeywordText"),
         //change to format of doi information - remove "DOI:" and http://dx.doi.org --> https://doi.org/
@@ -158,7 +165,7 @@ public class SageAtyponHtmlHashFilterFactory
   public boolean doWSFiltering() {
     return true;
   }
-  
+
 }
 
 

@@ -35,12 +35,15 @@ package org.lockss.plugin.atypon;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.util.regex.Pattern;
 
+import org.apache.commons.io.IOUtils;
 import org.apache.commons.io.input.BoundedInputStream;
 import org.apache.commons.lang.StringUtils;
 import org.lockss.daemon.PluginException;
@@ -118,6 +121,7 @@ public class BaseAtyponRisFilterFactory implements FilterFactory {
    */
   protected RisFilterReader getRisFilterReader(String encoding, InputStream inBuf)
       throws UnsupportedEncodingException {
-    return new RisFilterReader(inBuf, encoding, "Y2","UR");
+    return new RisBlankFilterReader(inBuf, encoding, "Y2","UR");
   }
+
 }
