@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,22 +32,16 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.atypon.sage;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.util.Vector;
 
-import org.apache.commons.io.IOUtils;
 import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.tags.Bullet;
 import org.htmlparser.tags.BulletList;
-import org.lockss.filter.html.HtmlFilterInputStream;
-import org.lockss.filter.html.HtmlNodeFilterTransform;
 import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory;
-import org.lockss.util.Constants;
 import org.lockss.util.Logger;
 
 
@@ -135,6 +129,13 @@ public class SageAtyponHtmlHashFilterFactory
                 "table", "class", "references"),
                 HtmlNodeFilters.tagWithAttributeRegex(
                     "span", "class", "NLM_")),
+        //5/10/18 - some additions due to changes; some would repair in time but will slow finishing
+        //keywords have been added to all abs,etc
+        HtmlNodeFilters.tagWithAttribute("div","class","hlFld-KeywordText"),
+        //change to format of doi information - remove "DOI:" and http://dx.doi.org --> https://doi.org/
+        HtmlNodeFilters.tagWithAttribute("a","class","doiWidgetLnk"),
+        HtmlNodeFilters.tagWithAttribute("div","class","publicationContentDoi"),
+        HtmlNodeFilters.tagWithAttribute("div","id","articleInfo"),
  
     };
     

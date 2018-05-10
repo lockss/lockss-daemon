@@ -112,8 +112,12 @@ public class BaseAtyponRisFilterFactory implements FilterFactory {
     }
   }
 
+  /* In addition to Y2 which often changes with download
+   * UR is now often changes from http to https 
+   * and if it's DOI it might go from dx.doi.org to doi.org - just remove it
+   */
   protected RisFilterReader getRisFilterReader(String encoding, InputStream inBuf)
       throws UnsupportedEncodingException {
-    return new RisFilterReader(inBuf, encoding, "Y2");
+    return new RisFilterReader(inBuf, encoding, "Y2","UR");
   }
 }
