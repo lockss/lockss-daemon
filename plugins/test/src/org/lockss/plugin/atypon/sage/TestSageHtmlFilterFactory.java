@@ -169,10 +169,8 @@ public class TestSageHtmlFilterFactory extends LockssTestCase {
    public static class TestHash extends TestSageHtmlFilterFactory {
      public void testFiltering() throws Exception {
        variantFact = new SageAtyponHtmlHashFilterFactory();
-       // back out for now
-       assertEquals(true,true);
-       //doFilterTest(mau, variantFact, manifestContent, manifestHashFiltered);
-       //doFilterTest(mau, variantFact, tocContent, tocContentFiltered);       
+       doFilterTest(mau, variantFact, manifestContent, manifestHashFiltered);
+       doFilterTest(mau, variantFact, tocContent, tocContentFiltered);       
      }
    }
    

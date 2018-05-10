@@ -42,6 +42,8 @@ import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.tags.Bullet;
 import org.htmlparser.tags.BulletList;
+import org.lockss.filter.html.HtmlFilterInputStream;
+import org.lockss.filter.html.HtmlNodeFilterTransform;
 import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory;
@@ -135,12 +137,14 @@ public class SageAtyponHtmlHashFilterFactory
                     "span", "class", "NLM_")),
  
     };
-    // super.createFilteredInputStream adds bir filter to the baseAtyponFilters
-    // and returns the filtered input stream using an array of NodeFilters that 
-    // combine the two arrays of NodeFilters.
-    //return super.createFilteredInputStream(au, in, encoding, includeNodes, excludeNodes);
-    // back out use of include/exclude for now
-    return super.createFilteredInputStream(au, in, encoding, excludeNodes);
+    
+    //1. First remove all comments because the use of comments with nested <script> blocks is
+    //causing problems for the parser.
+    //<!--script>                                                                                                                                                                                             
+    //</script><script>                                                                                                                                                                                       
+    //</script-->
+    InputStream noComment = filterComments(in, encoding);
+    return super.createFilteredInputStream(au, noComment, encoding, includeNodes, excludeNodes);
 
   }
 
@@ -153,20 +157,7 @@ public class SageAtyponHtmlHashFilterFactory
   public boolean doWSFiltering() {
     return true;
   }
-  /*
-  public static void main(String[] args) throws Exception {
-	    String file1 = "/Users/aohlson/SageToc";
-	    //String file2 = "/Users/aohlson/SageArt.html.out";
-	    InputStream blah = new FileInputStream(file1);
-	    
-	    InputStream foo = new SageAtyponHtmlHashFilterFactory().createFilteredInputStream(null, blah, Constants.ENCODING_UTF_8);
-	    IOUtils.copy(foo,
-	        new FileOutputStream(file1 + ".out"));
-	    //IOUtils.copy(new TafPdfFilterFactory().createFilteredInputStream(null, new FileInputStream(file2), null),
-	      //  new FileOutputStream(file2 + ".out"));
-	  }
-	  */
-
+  
 }
 
 
