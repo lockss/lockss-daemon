@@ -73,12 +73,12 @@ public class TestBaseAtyponRisFilterFactory extends LockssTestCase {
   private static final String yesContent1 = 
       "\n\n\n\nTY - JOUR\nY1 - gooddate  \nY2  - baddate\nER  - \n";
   private static final String yesContent1_expected =      
-      "\n\n\n\nTY - JOUR\nY1 - gooddate  \nER  - \n";
+      "TY - JOUR\nY1 - gooddate  \nER  - \n";
 
   private static final String yesContent2 =      
       "\n\n\n\n    TY - JOUR\nY1 - gooddate  \nY2  - baddate\nER  - \n"; // extra spaces before TY
   private static final String yesContent2_expected =      
-      "\n\n\n\n    TY - JOUR\nY1 - gooddate  \nER  - \n"; // extra spaces before TY
+      "    TY - JOUR\nY1 - gooddate  \nER  - \n"; // extra spaces before TY
   
   
   public void testBasicContent() throws Exception {
