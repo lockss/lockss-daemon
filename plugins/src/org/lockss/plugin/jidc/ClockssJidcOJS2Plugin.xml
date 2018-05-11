@@ -2,7 +2,7 @@
   <!-- Different start/permission - otherwise ClockssOJS2Plugin.xml inherited from OJS2Plugin.xml. -->  
   <entry>
     <string>plugin_status</string>
-    <string>testing</string>
+    <string>ready</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -14,7 +14,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
