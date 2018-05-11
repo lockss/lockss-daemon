@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
- Copyright (c) 2013-2016 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2018 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -1025,7 +1021,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
 	count = resultSet.getInt(1);
       }
     } finally {
-      stmt.close();
+      DbManager.safeCloseStatement(stmt);
     }
 
     return count;
@@ -1058,7 +1054,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
 	count = resultSet.getInt(1);
       }
     } finally {
-      stmt.close();
+      DbManager.safeCloseStatement(stmt);
     }
 
     return count;
@@ -1084,7 +1080,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
         resultSet.getString(1);
       }
     } finally {
-      stmt.close();
+      DbManager.safeCloseStatement(stmt);
     }
     
     try {
@@ -1102,7 +1098,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
         count = resultSet.getInt(1);
       }
     } finally {
-      stmt.close();
+      DbManager.safeCloseStatement(stmt);
     }
 
     return count;
@@ -1122,7 +1118,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
 	count = resultSet.getInt(1);
       }
     } finally {
-      stmt.close();
+      DbManager.safeCloseStatement(stmt);
     }
 
     return count;
@@ -1143,7 +1139,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
 	count = resultSet.getInt(1);
       }
     } finally {
-      stmt.close();
+      DbManager.safeCloseStatement(stmt);
     }
 
     return count;
@@ -1163,7 +1159,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
 	count = resultSet.getInt(1);
       }
     } finally {
-      stmt.close();
+      DbManager.safeCloseStatement(stmt);
     }
 
     return count;
@@ -1194,7 +1190,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
       stmt.setInt(7, pdfRequests);
       dbManager.executeUpdate(stmt);
     } finally {
-      stmt.close();
+      DbManager.safeCloseStatement(stmt);
     }
   }
 
@@ -1218,7 +1214,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
 	publicationSeq = resultSet.getLong(PUBLICATION_SEQ_COLUMN);
       }
     } finally {
-      stmt.close();
+      DbManager.safeCloseStatement(stmt);
     }
 
     return publicationSeq;
@@ -1246,7 +1242,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
       assertEquals(isPublisherInvolved,
 	  resultSet.getBoolean(IS_PUBLISHER_INVOLVED_COLUMN));
     } finally {
-      stmt.close();
+      DbManager.safeCloseStatement(stmt);
     }
   }
 
@@ -1579,8 +1575,8 @@ public class TestAuMetadataRecorder extends LockssTestCase {
 	count = resultSet.getInt(1);
       }
     } finally {
-      resultSet.close();
-      stmt.close();
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(stmt);
     }
 
     return count;

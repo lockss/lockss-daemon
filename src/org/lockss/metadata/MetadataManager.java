@@ -1,6 +1,6 @@
 /*
 
- Copyright (c) 2013-2016 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2018 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -2640,7 +2640,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
         if (activeReindexingTasks.containsKey(auId)) {
           ReindexingTask task = activeReindexingTasks.get(auId);
           task.cancel();
-          activeReindexingTasks.remove(task);
+          activeReindexingTasks.remove(auId);
         }
 
         // Remove the AU from the list of pending AUs if it is there.
@@ -3527,7 +3527,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     log.debug3(DEBUG_HEADER + "targetMdItemSeq = " + targetMdItemSeq);
 
     // Do not merge a metadata item into itself.
-    if (sourceMdItemSeq != targetMdItemSeq) {
+    if (!sourceMdItemSeq.equals(targetMdItemSeq)) {
       // Merge the names.
       mergeMdItemNames(conn, sourceMdItemSeq, targetMdItemSeq);
 
@@ -3670,7 +3670,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     log.debug3(DEBUG_HEADER + "targetMdItemSeq = " + targetMdItemSeq);
 
     // Do not merge a metadata item into itself.
-    if (sourceMdItemSeq != targetMdItemSeq) {
+    if (!sourceMdItemSeq.equals(targetMdItemSeq)) {
       // Merge the names.
       mergeMdItemNames(conn, sourceMdItemSeq, targetMdItemSeq);
 

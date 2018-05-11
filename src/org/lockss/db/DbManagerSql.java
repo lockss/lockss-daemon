@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
- Copyright (c) 2014-2016 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2014-2018 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -6786,7 +6782,7 @@ public class DbManagerSql {
 	  log.debug3(DEBUG_HEADER + "providerSeq = " + providerSeq);
 
 	// Check whether this is not the same publication as the previous one.
-	if (publicationSeq != previousPublicationSeq) {
+	if (!publicationSeq.equals(previousPublicationSeq)) {
 	  // Yes: Update the subscription provider.
 	  updateSubscriptionProvider(conn, subscriptionSeq, providerSeq);
 

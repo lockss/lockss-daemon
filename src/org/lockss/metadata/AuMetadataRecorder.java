@@ -1,6 +1,6 @@
 /*
 
- Copyright (c) 2013-2016 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2018 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -2117,7 +2117,8 @@ public class AuMetadataRecorder {
     log.debug3(DEBUG_HEADER + "unknownPublisherSeq = " + unknownPublisherSeq);
 
     // Check whether the unknown publisher is not the current one.
-    if (unknownPublisherSeq != null && unknownPublisherSeq != publisherSeq) {
+    if (unknownPublisherSeq != null
+	&& !unknownPublisherSeq.equals(publisherSeq)) {
       // Yes: Get the identifiers of any publications of the unknown publisher.
       Set<Long> unknownPublicationSeqs =
 	  findPublisherPublications(conn, unknownPublisherSeq);
@@ -2148,7 +2149,7 @@ public class AuMetadataRecorder {
 	    + unknownPublicationSeq);
 
 	// Ignore the publication if it is the current one.
-	if (unknownPublicationSeq != publicationSeq) {
+	if (!unknownPublicationSeq.equals(publicationSeq)) {
 	  // Fix the metadata of the publication of the unknown publisher.
 	  fixUnknownPublisherPublicationMetadata(conn, unknownPublicationSeq,
 	      mdItemMapByName);
