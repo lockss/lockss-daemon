@@ -2694,22 +2694,6 @@ Test results in ${test.results}
   </target>
 -->
   <!-- ==================================================================== -->
-  <target name="test-class"
-   depends="prepare.run.test,check.class.arg,jar-tests"
-   description="Run all tests for a single class, named by the 'class' property" >
-    <echo>Running tests for class ${class}</echo>
-    <dojunit cpid="test.run.classpath" usefile="false">
-     <junitelem>
-      <batchtest fork="${fork}" todir="${test.results}">
-        <fileset dir="${test.src}">
-          <include name="**/*.java" />
-          <exclude name="${exclude}" />
-        </fileset>
-      </batchtest>
-     </junitelem>
-    </dojunit>
-  </target>
-  <!-- ==================================================================== -->
   <target name="test-one"
    depends="prepare.run.test,check.class.arg,jar-tests,jar-plugins-tests"
    description="Run a single test class, named by the 'class' property" >
