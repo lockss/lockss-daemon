@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>19</string>
+    <string>20</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -42,6 +42,7 @@
      base_url/article.asp?article-arguments-go-here;type=(3|4|5)  epub or mobile version
      base_url/articlecited.asp?article-arguments-go-here;aid=jpgm_2013_59_3_179_118034 cited by listing
      YES:
+     NOTE - volumes can straddle years; don't rely on year parameter anymore
      base_url/showBackIssue.asp?issn=0022-3859;year=2013;volume=59;issue=4;month=October-December  
      base_url/citation.asp?issn=0022-3859;year=2013;volume=59;issue=3;spage=179;epage=185;aulast=Singh landing for refs
      base_url/article.asp?issn=0022-3859;year=2013;volume=59;issue=3;spage=186;epage=189;aulast=Kumar;type=0
@@ -56,10 +57,12 @@
     <string>au_crawlrules</string>
     <list>
       <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)$", base_url_host</string>
-      <string>2,"^%sarticle.asp\?issn=%s;year=%d;volume=%s;issue=.*;type=[3-9]$",base_url, journal_issn, year, volume_name</string>
-      <string>1,"^%s(article|citation|downloadpdf)\.asp\?issn=%s;year=%d;volume=%s;issue=",base_url, journal_issn, year, volume_name</string>
-      <string>1,"^%sciteman.asp\?issn=%s;year=%d;volume=%s;issue=.*;t=2$",base_url, journal_issn, year, volume_name</string>
-      <string>1,"^%s(showBackIssue|citation)\.asp\?issn=%s;year=%d;volume=%s", base_url, journal_issn, year, volume_name</string>
+      <string>2,"^%sarticle.asp\?issn=%s;year=[0-9]+;volume=%s;issue=.*;type=[3-9]$",base_url, journal_issn, volume_name</string>
+      <string>1,"^%s(article|citation|downloadpdf)\.asp\?issn=%s;year=[0-9]+;volume=%s;issue=",base_url, journal_issn,volume_name</string>
+      <!--  allow this for UrlConsumer -->
+      <string>1,"^%sshowcaptcha\.asp\?RedirectUrl=",base_url</string>
+      <string>1,"^%sciteman.asp\?issn=%s;year=[0-9]+;volume=%s;issue=.*;t=2$",base_url, journal_issn, volume_name</string>
+      <string>1,"^%s(showBackIssue|citation)\.asp\?issn=%s;year=[0-9]+;volume=%s", base_url, journal_issn,volume_name</string>
       <string>1,"^%sviewimage.asp\?img=", base_url</string>
     </list>
   </entry>
@@ -93,7 +96,7 @@
       or
       base_url/article.asp?issn=0022-3859;year=2013;volume=59;issue=3;spage=179;epage=185;aulast=Singh;type=2  pdf
       -->
-        <string>"^%s(article|downloadpdf)\.asp\?issn=%s;year=%d;volume=%s.*;aulast=[^;]*(;type=2)?$", base_url, journal_issn, year, volume_name</string>
+        <string>"^%s(article|downloadpdf)\.asp\?issn=%s;year=[0-9]+;volume=%s.*;aulast=[^;]*(;type=2)?$", base_url, journal_issn, volume_name</string>
       </list>
   </entry>
   <entry>
@@ -186,8 +189,12 @@
   </entry>
   <entry>
     <string>au_redirect_to_login_url_pattern</string>
-    <string>"%s(subscriberlogin|showcaptcha)\.asp", base_url</string>
+          <string>"%ssubscriberlogin\.asp", base_url</string>-->
   </entry>
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.medknow.MedknowUrlConsumerFactory</string>
+  </entry>  
   <entry>
     <string>au_login_page_checker</string>
     <string>org.lockss.plugin.medknow.MedknowLoginPageChecker</string>

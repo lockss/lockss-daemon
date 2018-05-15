@@ -67,9 +67,11 @@ public class MedknowArticleIteratorFactory
    * Because it's hard to uniquely identify something that DOESN'T
    * end with "type=X", have the iterator find the "type=0" (abstract)
    * and generate the others from this
+   * NOTE - 5/14/18 - year can vary within a volume - some volumes straddle multiple years
+   * the plugin still requires a single year parameter but we just accept any single year in the url
    */
   private static final String ROOT_TEMPLATE = "\"%s\", base_url";
-  private static final String PATTERN_TEMPLATE = "\"^%sarticle\\.asp\\?issn=%s;year=%d;volume=%s;.*;type=[0-2]$\", base_url, journal_issn, year, volume_name";
+  private static final String PATTERN_TEMPLATE = "\"^%sarticle\\.asp\\?issn=%s;year=[0-9]+;volume=%s;.*;type=[0-2]$\", base_url, journal_issn, volume_name";
   
   // various aspects of an article
   // DOI's can have "/"s in the suffix

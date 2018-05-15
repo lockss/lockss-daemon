@@ -241,7 +241,8 @@ public class TestMedknowArchivalUnit extends LockssPluginTestCase {
         au);
     assertNotSubstanceUrl("http://www.ajrnl.com/downloadpdf.asp?issn=1234-1234;year=2014;volume=33;issue=4;spage=355;epage=356;aulast=Jagannathan;type=2",
         au);
-    assertNotSubstanceUrl("http://www.ajrnl.com/article.asp?issn=1234-5678;year=2009;volume=33;issue=3;spage=239;epage=240;aulast=Phani;type=2",
+    // we now accept any year
+    assertSubstanceUrl("http://www.ajrnl.com/article.asp?issn=1234-5678;year=2009;volume=33;issue=3;spage=239;epage=240;aulast=Phani;type=2",
         au);
 
   }
