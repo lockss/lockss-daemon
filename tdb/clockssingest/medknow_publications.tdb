@@ -4556,12 +4556,12 @@
       au < manifest ; exists ; 2008 ; Ancient Science of Life Volume 27 ; 2008 ; 27 ; >
       au < manifest ; exists ; 2009 ; Ancient Science of Life Volume 28 ; 2009 ; 28 ; >
       au < manifest ; exists ; 2010 ; Ancient Science of Life Volume 29 ; 2010 ; 29 ; >
-      au < frozen ; exists ; 2011 ; Ancient Science of Life Volume 30 ; 2011 ; 30 ; >
-      au < frozen ; exists ; 2012 ; Ancient Science of Life Volume 31 ; 2012 ; 31 ; >
-      au < frozen ; exists ; 2013 ; Ancient Science of Life Volume 32 ; 2013 ; 32 ; >
-      au < frozen ; exists ; 2014 ; Ancient Science of Life Volume 33 ; 2014 ; 33 ; >
-      au < frozen ; exists ; 2015 ; Ancient Science of Life Volume 34 ; 2015 ; 34 ; >
-      au < deepCrawl ; exists ; 2016 ; Ancient Science of Life Volume 35 ; 2016 ; 35 ; >
+      au < frozen ; exists ; 2011 ; Ancient Science of Life Volume 30 ; 2011 ; 30 ; >   #do not use reingest4
+      au < frozen ; exists ; 2012 ; Ancient Science of Life Volume 31 ; 2012 ; 31 ; >   #do not use reingest4
+      au < frozen ; exists ; 2013 ; Ancient Science of Life Volume 32 ; 2013 ; 32 ; >   #do not use reingest4
+      au < frozen ; exists ; 2014 ; Ancient Science of Life Volume 33 ; 2014 ; 33 ; >   #do not use reingest4
+      au < frozen ; exists ; 2015 ; Ancient Science of Life Volume 34 ; 2015 ; 34 ; >   #do not use reingest4
+      au < frozen ; exists ; 2016 ; Ancient Science of Life Volume 35 ; 2016 ; 35 ; >   #do not use reingest4
       au < manifest ; exists ; 2017 ; Ancient Science of Life Volume 36 ; 2017 ; 36 ; >
       au < expected ; exists ; 2018 ; Ancient Science of Life Volume 37 ; 2018 ; 37 ; >
 
@@ -5629,12 +5629,12 @@
       param[journal_issn] = 2229-6360
       param[base_url] = http://www.ijmdent.com/
 
-      au < frozen ; exists ; 2011 ; Indian Journal of Multidisciplinary Dentistry Volume 1 ; 2011 ; 1 ; >
-      au < frozen ; exists ; 2012 ; Indian Journal of Multidisciplinary Dentistry Volume 2 ; 2012 ; 2 ; >
-      au < frozen ; exists ; 2013 ; Indian Journal of Multidisciplinary Dentistry Volume 3 ; 2013 ; 3 ; >
-      au < frozen ; exists ; 2014 ; Indian Journal of Multidisciplinary Dentistry Volume 4 ; 2014 ; 4 ; >
+      au < frozen ; exists ; 2011 ; Indian Journal of Multidisciplinary Dentistry Volume 1 ; 2011 ; 1 ; > #do not use reingest4
+      au < frozen ; exists ; 2012 ; Indian Journal of Multidisciplinary Dentistry Volume 2 ; 2012 ; 2 ; > #do not use reingest4
+      au < frozen ; exists ; 2013 ; Indian Journal of Multidisciplinary Dentistry Volume 3 ; 2013 ; 3 ; > #do not use reingest4
+      au < frozen ; exists ; 2014 ; Indian Journal of Multidisciplinary Dentistry Volume 4 ; 2014 ; 4 ; > #do not use reingest4
       au < frozen ; exists ; 2015 ; Indian Journal of Multidisciplinary Dentistry Volume 5 ; 2015 ; 5 ; >
-      au < deepCrawl ; exists ; 2016 ; Indian Journal of Multidisciplinary Dentistry Volume 6 ; 2016 ; 6 ; >
+      au < frozen ; exists ; 2016 ; Indian Journal of Multidisciplinary Dentistry Volume 6 ; 2016 ; 6 ; > #do not use reingest4
       au < manifest ; exists ; 2017 ; Indian Journal of Multidisciplinary Dentistry Volume 7 ; 2017 ; 7 ; >
       au < expected ; exists ; 2018 ; Indian Journal of Multidisciplinary Dentistry Volume 8 ; 2018 ; 8 ; >
 
