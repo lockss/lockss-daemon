@@ -39,7 +39,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <!-- http://clockss-ingest.lockss.org/sourcefiles/acm-released/2012/7nov2012/NEW-JOUR-JDIQ-V4I1-2378016/NEW-JOUR-JDIQ-V4I1-2378016.xml -->
+      <!-- http://clockss-ingest.lockss.org/sourcefiles/acm-released/2018_1/7nov2018/NEW-JOUR-JDIQ-V4I1-2378016/NEW-JOUR-JDIQ-V4I1-2378016.xml -->
       <string>"^%s%s/.+\.xml$", base_url, directory</string>
     </list>
   </entry>
