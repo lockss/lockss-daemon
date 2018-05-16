@@ -109,7 +109,7 @@ public class TestSpringerSourceArticleIteratorFactory extends ArticleIteratorTes
     // DirSourcePlugin
     assertMatchesRE(pat, "http://www.example.com/2012_1/STUFF_07-26-12.zip!/JOU=23/VOL=2012.2/ISU=8/ART=2012_23/BodyRef/PDF/article.pdf");
     // DeliveredSourcePlugin
-    assertMatchesRE(pat, "http://www.example.com/2012/HD1_3/JOU=23/VOL=2012.2/ISU=8/ART=2012_23/BodyRef/PDF/article.pdf");
+    assertMatchesRE(pat, "http://www.example.com/2012/HD1_3/JOU=23.zip!/JOU=23/VOL=2012.2/ISU=8/ART=2012_23/BodyRef/PDF/article.pdf");
     assertMatchesRE(pat, "http://www.example.com/2012/STUFF_07-26-12.zip!/JOU=23/VOL=2012.2/ISU=8/ART=2012_23/BodyRef/PDF/article.pdf");
     assertMatchesRE(pat, "http://www.example.com/2012/STUFF_07-26-12.zip!/JOU=2/VOL=2012.3/ISU=2-3/ART=2012_53/BodyRef/PDF/random_article.pdf");
     

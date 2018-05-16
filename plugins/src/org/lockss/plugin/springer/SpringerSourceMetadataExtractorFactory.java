@@ -118,11 +118,11 @@ public class SpringerSourceMetadataExtractorFactory
     
     private Map<String, String> journalTitleMap;
     
-    // 5/15/18 - don't think it's still used, but adapting to work with all layouts just in casel
+    // 5/15/18 - don't think it's still used, but adapting to work with all layouts just in case
     // http://clockss-ingest.lockss.org/sourcefiles/springer-released/2012/ftp_PUB_11-11-17_06-38-38.zip!/JOU=00238/VOL=2011.34/ISU=6/ART=476/BodyRef/PDF/238_2010_Article_476.pdf
     // http://clockss-ingest.lockss.org/sourcefiles/springer-released/2018_1/ftp_PUB.....zip!/JOU=xxx
     // http://clockss-staged.clockss.org/sourcefiles/springer-delivered/2018/HD1_9/JOU_foo.zip!/JOU=xxx    
-    private Pattern JOURNAL_ID_PATTERN = Pattern.compile("/springer-[^/]+/[^/]+(/HD[^/]+)?/[^/]+/JOU=([0-9]+)/.+");
+    private Pattern JOURNAL_ID_PATTERN = Pattern.compile("/springer-[^/]+/[^/]+(?:/HD[^/]+)?/[^/]+/JOU=([0-9]+)/.+");
 
     public SpringerSourceMetadataExtractor() {
       journalTitleMap = new HashMap<String, String>();
