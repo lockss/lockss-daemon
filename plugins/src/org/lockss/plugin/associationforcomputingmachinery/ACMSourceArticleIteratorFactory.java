@@ -53,9 +53,13 @@ public class ACMSourceArticleIteratorFactory
    * acm-released/2016/ACM_Books/author/author.xml
    * 
    * Modify pattern to work with both <base_url>/<year>/ and <base_url>/<directory>/ at top
+   * 
+   * Do NOT descend in to archives. The deliveries are unpacked and lower items zips might xml
    */
   protected static final String PATTERN_TEMPLATE = 
     "\"%s[^/]+/(\\d+[^/]+\\d+|ACM_Books)/([^/]+)/.*\\.xml$\",base_url";
+  protected static final String NESTED_ARCHIVE_PATTERN_TEMPLATE = "\"%s[^/]+/(\\d+[^/]+\\d+|ACM_Books)/.+\\.(zip|tar|gz|tgz|tar\\.gz)$\",base_url";
+  
 
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
@@ -69,6 +73,8 @@ public class ACMSourceArticleIteratorFactory
     SubTreeArticleIterator.Spec theSpec = new SubTreeArticleIterator.Spec();
     theSpec.setTarget(target);
     theSpec.setPatternTemplate(PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
+    theSpec.setExcludeSubTreePatternTemplate(NESTED_ARCHIVE_PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
+    
     /* this is necessary to be able to see what's inside the zip file */
     theSpec.setVisitArchiveMembers(true);
     builder.setSpec(theSpec);
