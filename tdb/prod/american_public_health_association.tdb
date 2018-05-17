@@ -15,134 +15,134 @@
 
   {
     plugin = org.lockss.plugin.highwire.HighWirePressPlugin
-    param[base_url] = http://ajph.aphapublications.org/
-    implicit < status ; year ; volume ; name ; param[volume_name] >
+#    param[base_url] = http://ajph.aphapublications.org/
+    implicit < status ; year ; volume ; name ; param[volume_name] ; param[base_url] >
 
-    au < down ; 1911 ; 1 ; American Journal of Public Health Volume 1 ; 1 >
-    au < down ; 1912 ; 2 ; American Journal of Public Health Volume 2 ; 2 >
-    au < down ; 1913 ; 3 ; American Journal of Public Health Volume 3 ; 3 >
-    au < down ; 1914 ; 4 ; American Journal of Public Health Volume 4 ; 4 >
-    au < down ; 1915 ; 5 ; American Journal of Public Health Volume 5 ; 5 >
-    au < down ; 1916 ; 6 ; American Journal of Public Health Volume 6 ; 6 >
-    au < down ; 1917 ; 7 ; American Journal of Public Health Volume 7 ; 7 >
-    au < down ; 1918 ; 8 ; American Journal of Public Health Volume 8 ; 8 >
-    au < down ; 1919 ; 9 ; American Journal of Public Health Volume 9 ; 9 >
-    au < down ; 1920 ; 10 ; American Journal of Public Health Volume 10 ; 10 >
-    au < down ; 1921 ; 11 ; American Journal of Public Health Volume 11 ; 11 >
-    au < down ; 1922 ; 12 ; American Journal of Public Health Volume 12 ; 12 >
-    au < down ; 1923 ; 13 ; American Journal of Public Health Volume 13 ; 13 >
-    au < down ; 1924 ; 14 ; American Journal of Public Health Volume 14 ; 14 >
-    au < down ; 1925 ; 15 ; American Journal of Public Health Volume 15 ; 15 >
-    au < down ; 1926 ; 16 ; American Journal of Public Health Volume 16 ; 16 >
-    au < down ; 1927 ; 17 ; American Journal of Public Health Volume 17 ; 17 >
-    au < down ; 1928 ; 18 ; American Journal of Public Health Volume 18 ; 18 >
-    au < down ; 1929 ; 19 ; American Journal of Public Health Volume 19 ; 19 >
-    au < down ; 1930 ; 20 ; American Journal of Public Health Volume 20 ; 20 >
-    au < down ; 1931 ; 21 ; American Journal of Public Health Volume 21 ; 21 >
-    au < down ; 1932 ; 22 ; American Journal of Public Health Volume 22 ; 22 >
-    au < down ; 1933 ; 23 ; American Journal of Public Health Volume 23 ; 23 >
-    au < down ; 1934 ; 24 ; American Journal of Public Health Volume 24 ; 24 >
-    au < down ; 1935 ; 25 ; American Journal of Public Health Volume 25 ; 25 >
-    au < down ; 1936 ; 26 ; American Journal of Public Health Volume 26 ; 26 >
-    au < down ; 1937 ; 27 ; American Journal of Public Health Volume 27 ; 27 >
-    au < down ; 1938 ; 28 ; American Journal of Public Health Volume 28 ; 28 >
-    au < down ; 1939 ; 29 ; American Journal of Public Health Volume 29 ; 29 >
-    au < down ; 1940 ; 30 ; American Journal of Public Health Volume 30 ; 30 >
-    au < down ; 1941 ; 31 ; American Journal of Public Health Volume 31 ; 31 >
-    au < down ; 1942 ; 32 ; American Journal of Public Health Volume 32 ; 32 >
-    au < down ; 1943 ; 33 ; American Journal of Public Health Volume 33 ; 33 >
-    au < down ; 1944 ; 34 ; American Journal of Public Health Volume 34 ; 34 >
-    au < down ; 1945 ; 35 ; American Journal of Public Health Volume 35 ; 35 >
-    au < down ; 1946 ; 36 ; American Journal of Public Health Volume 36 ; 36 >
-    au < down ; 1947 ; 37 ; American Journal of Public Health Volume 37 ; 37 >
-    au < down ; 1948 ; 38 ; American Journal of Public Health Volume 38 ; 38 >
-    au < down ; 1949 ; 39 ; American Journal of Public Health Volume 39 ; 39 >
-    au < down ; 1950 ; 40 ; American Journal of Public Health Volume 40 ; 40 >
-    au < down ; 1951 ; 41 ; American Journal of Public Health Volume 41 ; 41 >
-    au < down ; 1952 ; 42 ; American Journal of Public Health Volume 42 ; 42 >
-    au < down ; 1953 ; 43 ; American Journal of Public Health Volume 43 ; 43 >
-    au < down ; 1954 ; 44 ; American Journal of Public Health Volume 44 ; 44 >
-    au < down ; 1955 ; 45 ; American Journal of Public Health Volume 45 ; 45 >
-    au < down ; 1956 ; 46 ; American Journal of Public Health Volume 46 ; 46 >
-    au < down ; 1957 ; 47 ; American Journal of Public Health Volume 47 ; 47 >
-    au < down ; 1958 ; 48 ; American Journal of Public Health Volume 48 ; 48 >
-    au < down ; 1959 ; 49 ; American Journal of Public Health Volume 49 ; 49 >
-    au < down ; 1960 ; 50 ; American Journal of Public Health Volume 50 ; 50 >
-    au < down ; 1961 ; 51 ; American Journal of Public Health Volume 51 ; 51 >
-    au < down ; 1962 ; 52 ; American Journal of Public Health Volume 52 ; 52 >
-    au < down ; 1963 ; 53 ; American Journal of Public Health Volume 53 ; 53 >
-    au < down ; 1964 ; 54 ; American Journal of Public Health Volume 54 ; 54 >
-    au < down ; 1965 ; 55 ; American Journal of Public Health Volume 55 ; 55 >
-    au < down ; 1966 ; 56 ; American Journal of Public Health Volume 56 ; 56 >
-    au < down ; 1967 ; 57 ; American Journal of Public Health Volume 57 ; 57 >
-    au < down ; 1968 ; 58 ; American Journal of Public Health Volume 58 ; 58 >
-    au < down ; 1969 ; 59 ; American Journal of Public Health Volume 59 ; 59 >
-    au < down ; 1970 ; 60 ; American Journal of Public Health Volume 60 ; 60 >
-    au < down ; 1971 ; 61 ; American Journal of Public Health Volume 61 ; 61 >
-    au < down ; 1972 ; 62 ; American Journal of Public Health Volume 62 ; 62 >
-    au < down ; 1973 ; 63 ; American Journal of Public Health Volume 63 ; 63 >
-    au < down ; 1974 ; 64 ; American Journal of Public Health Volume 64 ; 64 >
-    au < down ; 1975 ; 65 ; American Journal of Public Health Volume 65 ; 65 >
-    au < down ; 1976 ; 66 ; American Journal of Public Health Volume 66 ; 66 >
-    au < down ; 1977 ; 67 ; American Journal of Public Health Volume 67 ; 67 >
-    au < down ; 1978 ; 68 ; American Journal of Public Health Volume 68 ; 68 >
-    au < down ; 1979 ; 69 ; American Journal of Public Health Volume 69 ; 69 >
-    au < down ; 1980 ; 70 ; American Journal of Public Health Volume 70 ; 70 >
-    au < down ; 1981 ; 71 ; American Journal of Public Health Volume 71 ; 71 >
-    au < down ; 1982 ; 72 ; American Journal of Public Health Volume 72 ; 72 >
-    au < down ; 1983 ; 73 ; American Journal of Public Health Volume 73 ; 73 >
-    au < down ; 1984 ; 74 ; American Journal of Public Health Volume 74 ; 74 >
-    au < down ; 1985 ; 75 ; American Journal of Public Health Volume 75 ; 75 >
-    au < down ; 1986 ; 76 ; American Journal of Public Health Volume 76 ; 76 >
-    au < down ; 1987 ; 77 ; American Journal of Public Health Volume 77 ; 77 >
-    au < down ; 1988 ; 78 ; American Journal of Public Health Volume 78 ; 78 >
-    au < down ; 1989 ; 79 ; American Journal of Public Health Volume 79 ; 79 >
-    au < down ; 1990 ; 80 ; American Journal of Public Health Volume 80 ; 80 >
-    au < down ; 1991 ; 81 ; American Journal of Public Health Volume 81 ; 81 >
-    au < down ; 1992 ; 82 ; American Journal of Public Health Volume 82 ; 82 >
-    au < down ; 1993 ; 83 ; American Journal of Public Health Volume 83 ; 83 >
-    au < down ; 1994 ; 84 ; American Journal of Public Health Volume 84 ; 84 >
-    au < down ; 1995 ; 85 ; American Journal of Public Health Volume 85 ; 85 >
-    au < down ; 1996 ; 86 ; American Journal of Public Health Volume 86 ; 86 >
-    au < down ; 1997 ; 87 ; American Journal of Public Health Volume 87 ; 87 >
-    au < down ; 1998 ; 88 ; American Journal of Public Health Volume 88 ; 88 >
-    au < down ; 1999 ; 89 ; American Journal of Public Health Volume 89 ; 89 >
-    au < down ; 2000 ; 90 ; American Journal of Public Health Volume 90 ; 90 >
-    au < down ; 2001 ; 91 ; American Journal of Public Health Volume 91 ; 91 >
-    au < down ; 2002 ; 92 ; American Journal of Public Health Volume 92 ; 92 >
-    au < down ; 2003 ; 93 ; American Journal of Public Health Volume 93 ; 93 >
-    au < down ; 2004 ; 94 ; American Journal of Public Health Volume 94 ; 94 >
-    au < down ; 2005 ; 95 ; American Journal of Public Health Volume 95 ; 95 >
-    au < down ; 2006 ; 96 ; American Journal of Public Health Volume 96 ; 96 >
-    au < down ; 2007 ; 97 ; American Journal of Public Health Volume 97 ; 97 >
-    au < down ; 2008 ; 98 ; American Journal of Public Health Volume 98 ; 98 >
-    au < down ; 2009 ; 99 ; American Journal of Public Health Volume 99 ; 99 >
-    au < down ; 2010 ; 100 ; American Journal of Public Health Volume 100 ; 100 >
-    au < down ; 2011 ; 101 ; American Journal of Public Health Volume 101 ; 101 >
+    au < down ; 1911 ; 1 ; American Journal of Public Health Volume 1 ; 1 ; http://ajph.aphapublications.org/ >
+    au < down ; 1912 ; 2 ; American Journal of Public Health Volume 2 ; 2 ; http://ajph.aphapublications.org/ >
+    au < down ; 1913 ; 3 ; American Journal of Public Health Volume 3 ; 3 ; http://ajph.aphapublications.org/ >
+    au < down ; 1914 ; 4 ; American Journal of Public Health Volume 4 ; 4 ; http://ajph.aphapublications.org/ >
+    au < down ; 1915 ; 5 ; American Journal of Public Health Volume 5 ; 5 ; http://ajph.aphapublications.org/ >
+    au < down ; 1916 ; 6 ; American Journal of Public Health Volume 6 ; 6 ; http://ajph.aphapublications.org/ >
+    au < down ; 1917 ; 7 ; American Journal of Public Health Volume 7 ; 7 ; http://ajph.aphapublications.org/ >
+    au < down ; 1918 ; 8 ; American Journal of Public Health Volume 8 ; 8 ; http://ajph.aphapublications.org/ >
+    au < down ; 1919 ; 9 ; American Journal of Public Health Volume 9 ; 9 ; http://ajph.aphapublications.org/ >
+    au < down ; 1920 ; 10 ; American Journal of Public Health Volume 10 ; 10 ; http://ajph.aphapublications.org/ >
+    au < down ; 1921 ; 11 ; American Journal of Public Health Volume 11 ; 11 ; http://ajph.aphapublications.org/ >
+    au < down ; 1922 ; 12 ; American Journal of Public Health Volume 12 ; 12 ; http://ajph.aphapublications.org/ >
+    au < down ; 1923 ; 13 ; American Journal of Public Health Volume 13 ; 13 ; http://ajph.aphapublications.org/ >
+    au < down ; 1924 ; 14 ; American Journal of Public Health Volume 14 ; 14 ; http://ajph.aphapublications.org/ >
+    au < down ; 1925 ; 15 ; American Journal of Public Health Volume 15 ; 15 ; http://ajph.aphapublications.org/ >
+    au < down ; 1926 ; 16 ; American Journal of Public Health Volume 16 ; 16 ; http://ajph.aphapublications.org/ >
+    au < down ; 1927 ; 17 ; American Journal of Public Health Volume 17 ; 17 ; http://ajph.aphapublications.org/ >
+    au < down ; 1928 ; 18 ; American Journal of Public Health Volume 18 ; 18 ; http://ajph.aphapublications.org/ >
+    au < down ; 1929 ; 19 ; American Journal of Public Health Volume 19 ; 19 ; http://ajph.aphapublications.org/ >
+    au < down ; 1930 ; 20 ; American Journal of Public Health Volume 20 ; 20 ; http://ajph.aphapublications.org/ >
+    au < down ; 1931 ; 21 ; American Journal of Public Health Volume 21 ; 21 ; http://ajph.aphapublications.org/ >
+    au < down ; 1932 ; 22 ; American Journal of Public Health Volume 22 ; 22 ; http://ajph.aphapublications.org/ >
+    au < down ; 1933 ; 23 ; American Journal of Public Health Volume 23 ; 23 ; http://ajph.aphapublications.org/ >
+    au < down ; 1934 ; 24 ; American Journal of Public Health Volume 24 ; 24 ; http://ajph.aphapublications.org/ >
+    au < down ; 1935 ; 25 ; American Journal of Public Health Volume 25 ; 25 ; http://ajph.aphapublications.org/ >
+    au < down ; 1936 ; 26 ; American Journal of Public Health Volume 26 ; 26 ; http://ajph.aphapublications.org/ >
+    au < down ; 1937 ; 27 ; American Journal of Public Health Volume 27 ; 27 ; http://ajph.aphapublications.org/ >
+    au < down ; 1938 ; 28 ; American Journal of Public Health Volume 28 ; 28 ; http://ajph.aphapublications.org/ >
+    au < down ; 1939 ; 29 ; American Journal of Public Health Volume 29 ; 29 ; http://ajph.aphapublications.org/ >
+    au < down ; 1940 ; 30 ; American Journal of Public Health Volume 30 ; 30 ; http://ajph.aphapublications.org/ >
+    au < down ; 1941 ; 31 ; American Journal of Public Health Volume 31 ; 31 ; http://ajph.aphapublications.org/ >
+    au < down ; 1942 ; 32 ; American Journal of Public Health Volume 32 ; 32 ; http://ajph.aphapublications.org/ >
+    au < down ; 1943 ; 33 ; American Journal of Public Health Volume 33 ; 33 ; http://ajph.aphapublications.org/ >
+    au < down ; 1944 ; 34 ; American Journal of Public Health Volume 34 ; 34 ; http://ajph.aphapublications.org/ >
+    au < down ; 1945 ; 35 ; American Journal of Public Health Volume 35 ; 35 ; http://ajph.aphapublications.org/ >
+    au < down ; 1946 ; 36 ; American Journal of Public Health Volume 36 ; 36 ; http://ajph.aphapublications.org/ >
+    au < down ; 1947 ; 37 ; American Journal of Public Health Volume 37 ; 37 ; http://ajph.aphapublications.org/ >
+    au < down ; 1948 ; 38 ; American Journal of Public Health Volume 38 ; 38 ; http://ajph.aphapublications.org/ >
+    au < down ; 1949 ; 39 ; American Journal of Public Health Volume 39 ; 39 ; http://ajph.aphapublications.org/ >
+    au < down ; 1950 ; 40 ; American Journal of Public Health Volume 40 ; 40 ; http://ajph.aphapublications.org/ >
+    au < down ; 1951 ; 41 ; American Journal of Public Health Volume 41 ; 41 ; http://ajph.aphapublications.org/ >
+    au < down ; 1952 ; 42 ; American Journal of Public Health Volume 42 ; 42 ; http://ajph.aphapublications.org/ >
+    au < down ; 1953 ; 43 ; American Journal of Public Health Volume 43 ; 43 ; http://ajph.aphapublications.org/ >
+    au < down ; 1954 ; 44 ; American Journal of Public Health Volume 44 ; 44 ; http://ajph.aphapublications.org/ >
+    au < down ; 1955 ; 45 ; American Journal of Public Health Volume 45 ; 45 ; http://ajph.aphapublications.org/ >
+    au < down ; 1956 ; 46 ; American Journal of Public Health Volume 46 ; 46 ; http://ajph.aphapublications.org/ >
+    au < down ; 1957 ; 47 ; American Journal of Public Health Volume 47 ; 47 ; http://ajph.aphapublications.org/ >
+    au < down ; 1958 ; 48 ; American Journal of Public Health Volume 48 ; 48 ; http://ajph.aphapublications.org/ >
+    au < down ; 1959 ; 49 ; American Journal of Public Health Volume 49 ; 49 ; http://ajph.aphapublications.org/ >
+    au < down ; 1960 ; 50 ; American Journal of Public Health Volume 50 ; 50 ; http://ajph.aphapublications.org/ >
+    au < down ; 1961 ; 51 ; American Journal of Public Health Volume 51 ; 51 ; http://ajph.aphapublications.org/ >
+    au < down ; 1962 ; 52 ; American Journal of Public Health Volume 52 ; 52 ; http://ajph.aphapublications.org/ >
+    au < down ; 1963 ; 53 ; American Journal of Public Health Volume 53 ; 53 ; http://ajph.aphapublications.org/ >
+    au < down ; 1964 ; 54 ; American Journal of Public Health Volume 54 ; 54 ; http://ajph.aphapublications.org/ >
+    au < down ; 1965 ; 55 ; American Journal of Public Health Volume 55 ; 55 ; http://ajph.aphapublications.org/ >
+    au < down ; 1966 ; 56 ; American Journal of Public Health Volume 56 ; 56 ; http://ajph.aphapublications.org/ >
+    au < down ; 1967 ; 57 ; American Journal of Public Health Volume 57 ; 57 ; http://ajph.aphapublications.org/ >
+    au < down ; 1968 ; 58 ; American Journal of Public Health Volume 58 ; 58 ; http://ajph.aphapublications.org/ >
+    au < down ; 1969 ; 59 ; American Journal of Public Health Volume 59 ; 59 ; http://ajph.aphapublications.org/ >
+    au < down ; 1970 ; 60 ; American Journal of Public Health Volume 60 ; 60 ; http://ajph.aphapublications.org/ >
+    au < down ; 1971 ; 61 ; American Journal of Public Health Volume 61 ; 61 ; http://ajph.aphapublications.org/ >
+    au < down ; 1972 ; 62 ; American Journal of Public Health Volume 62 ; 62 ; http://ajph.aphapublications.org/ >
+    au < down ; 1973 ; 63 ; American Journal of Public Health Volume 63 ; 63 ; http://ajph.aphapublications.org/ >
+    au < down ; 1974 ; 64 ; American Journal of Public Health Volume 64 ; 64 ; http://ajph.aphapublications.org/ >
+    au < down ; 1975 ; 65 ; American Journal of Public Health Volume 65 ; 65 ; http://ajph.aphapublications.org/ >
+    au < down ; 1976 ; 66 ; American Journal of Public Health Volume 66 ; 66 ; http://ajph.aphapublications.org/ >
+    au < down ; 1977 ; 67 ; American Journal of Public Health Volume 67 ; 67 ; http://ajph.aphapublications.org/ >
+    au < down ; 1978 ; 68 ; American Journal of Public Health Volume 68 ; 68 ; http://ajph.aphapublications.org/ >
+    au < down ; 1979 ; 69 ; American Journal of Public Health Volume 69 ; 69 ; http://ajph.aphapublications.org/ >
+    au < down ; 1980 ; 70 ; American Journal of Public Health Volume 70 ; 70 ; http://ajph.aphapublications.org/ >
+    au < down ; 1981 ; 71 ; American Journal of Public Health Volume 71 ; 71 ; http://ajph.aphapublications.org/ >
+    au < down ; 1982 ; 72 ; American Journal of Public Health Volume 72 ; 72 ; http://ajph.aphapublications.org/ >
+    au < down ; 1983 ; 73 ; American Journal of Public Health Volume 73 ; 73 ; http://ajph.aphapublications.org/ >
+    au < down ; 1984 ; 74 ; American Journal of Public Health Volume 74 ; 74 ; http://ajph.aphapublications.org/ >
+    au < down ; 1985 ; 75 ; American Journal of Public Health Volume 75 ; 75 ; http://ajph.aphapublications.org/ >
+    au < down ; 1986 ; 76 ; American Journal of Public Health Volume 76 ; 76 ; http://ajph.aphapublications.org/ >
+    au < down ; 1987 ; 77 ; American Journal of Public Health Volume 77 ; 77 ; http://ajph.aphapublications.org/ >
+    au < down ; 1988 ; 78 ; American Journal of Public Health Volume 78 ; 78 ; http://ajph.aphapublications.org/ >
+    au < down ; 1989 ; 79 ; American Journal of Public Health Volume 79 ; 79 ; http://ajph.aphapublications.org/ >
+    au < down ; 1990 ; 80 ; American Journal of Public Health Volume 80 ; 80 ; http://ajph.aphapublications.org/ >
+    au < down ; 1991 ; 81 ; American Journal of Public Health Volume 81 ; 81 ; http://ajph.aphapublications.org/ >
+    au < down ; 1992 ; 82 ; American Journal of Public Health Volume 82 ; 82 ; http://ajph.aphapublications.org/ >
+    au < down ; 1993 ; 83 ; American Journal of Public Health Volume 83 ; 83 ; http://ajph.aphapublications.org/ >
+    au < down ; 1994 ; 84 ; American Journal of Public Health Volume 84 ; 84 ; http://ajph.aphapublications.org/ >
+    au < down ; 1995 ; 85 ; American Journal of Public Health Volume 85 ; 85 ; http://ajph.aphapublications.org/ >
+    au < down ; 1996 ; 86 ; American Journal of Public Health Volume 86 ; 86 ; http://ajph.aphapublications.org/ >
+    au < down ; 1997 ; 87 ; American Journal of Public Health Volume 87 ; 87 ; http://ajph.aphapublications.org/ >
+    au < down ; 1998 ; 88 ; American Journal of Public Health Volume 88 ; 88 ; http://ajph.aphapublications.org/ >
+    au < down ; 1999 ; 89 ; American Journal of Public Health Volume 89 ; 89 ; http://ajph.aphapublications.org/ >
+    au < down ; 2000 ; 90 ; American Journal of Public Health Volume 90 ; 90 ; http://ajph.aphapublications.org/ >
+    au < down ; 2001 ; 91 ; American Journal of Public Health Volume 91 ; 91 ; http://ajph.aphapublications.org/ >
+    au < down ; 2002 ; 92 ; American Journal of Public Health Volume 92 ; 92 ; http://ajph.aphapublications.org/ >
+    au < down ; 2003 ; 93 ; American Journal of Public Health Volume 93 ; 93 ; http://ajph.aphapublications.org/ >
+    au < down ; 2004 ; 94 ; American Journal of Public Health Volume 94 ; 94 ; http://ajph.aphapublications.org/ >
+    au < down ; 2005 ; 95 ; American Journal of Public Health Volume 95 ; 95 ; http://ajph.aphapublications.org/ >
+    au < down ; 2006 ; 96 ; American Journal of Public Health Volume 96 ; 96 ; http://ajph.aphapublications.org/ >
+    au < down ; 2007 ; 97 ; American Journal of Public Health Volume 97 ; 97 ; http://ajph.aphapublications.org/ >
+    au < down ; 2008 ; 98 ; American Journal of Public Health Volume 98 ; 98 ; http://ajph.aphapublications.org/ >
+    au < down ; 2009 ; 99 ; American Journal of Public Health Volume 99 ; 99 ; http://ajph.aphapublications.org/ >
+    au < down ; 2010 ; 100 ; American Journal of Public Health Volume 100 ; 100 ; http://ajph.aphapublications.org/ >
+    au < down ; 2011 ; 101 ; American Journal of Public Health Volume 101 ; 101 ; http://ajph.aphapublications.org/ >
 
   }
   
   {
   
     plugin = org.lockss.plugin.atypon.apha.AmPublicHealthAssocPlugin
-    param[base_url] = http://ajph.aphapublications.org/
+#    param[base_url] = http://ajph.aphapublications.org/
     param[journal_id] = ajph
-    implicit < status ; year ; volume ; name ; param[volume_name] >
+    implicit < status ; year ; volume ; name ; param[volume_name] ; param[base_url] >
 
-    au < doNotProcess ; 2005 ; 95 ; American Journal of Public Health Volume 95 ; 95 >
-    au < doNotProcess ; 2006 ; 96 ; American Journal of Public Health Volume 96 ; 96 >
-    au < doNotProcess ; 2007 ; 97 ; American Journal of Public Health Volume 97 ; 97 >
-    au < doNotProcess ; 2008 ; 98 ; American Journal of Public Health Volume 98 ; 98 >
-    au < doNotProcess ; 2009 ; 99 ; American Journal of Public Health Volume 99 ; 99 >
-    au < doNotProcess ; 2010 ; 100 ; American Journal of Public Health Volume 100 ; 100 >
-    au < doNotProcess ; 2011 ; 101 ; American Journal of Public Health Volume 101 ; 101 >
-    au < released ; 2012 ; 102 ; American Journal of Public Health Volume 102 ; 102 >
-    au < released ; 2013 ; 103 ; American Journal of Public Health Volume 103 ; 103 >
-    au < released ; 2014 ; 104 ; American Journal of Public Health Volume 104 ; 104 >
-    au < released ; 2015 ; 105 ; American Journal of Public Health Volume 105 ; 105 >
-    au < released ; 2016 ; 106 ; American Journal of Public Health Volume 106 ; 106 >
-    au < released ; 2017 ; 107 ; American Journal of Public Health Volume 107 ; 107 >
-    au < expected ; 2018 ; 108 ; American Journal of Public Health Volume 108 ; 108 >
+    au < doNotProcess ; 2005 ; 95 ; American Journal of Public Health Volume 95 ; 95 ; https://ajph.aphapublications.org/ >
+    au < doNotProcess ; 2006 ; 96 ; American Journal of Public Health Volume 96 ; 96 ; https://ajph.aphapublications.org/ >
+    au < doNotProcess ; 2007 ; 97 ; American Journal of Public Health Volume 97 ; 97 ; https://ajph.aphapublications.org/ >
+    au < doNotProcess ; 2008 ; 98 ; American Journal of Public Health Volume 98 ; 98 ; https://ajph.aphapublications.org/ >
+    au < doNotProcess ; 2009 ; 99 ; American Journal of Public Health Volume 99 ; 99 ; https://ajph.aphapublications.org/ >
+    au < doNotProcess ; 2010 ; 100 ; American Journal of Public Health Volume 100 ; 100 ; https://ajph.aphapublications.org/ >
+    au < doNotProcess ; 2011 ; 101 ; American Journal of Public Health Volume 101 ; 101 ; https://ajph.aphapublications.org/ >
+    au < released ; 2012 ; 102 ; American Journal of Public Health Volume 102 ; 102 ; http://ajph.aphapublications.org/ >
+    au < released ; 2013 ; 103 ; American Journal of Public Health Volume 103 ; 103 ; http://ajph.aphapublications.org/ >
+    au < released ; 2014 ; 104 ; American Journal of Public Health Volume 104 ; 104 ; http://ajph.aphapublications.org/ >
+    au < released ; 2015 ; 105 ; American Journal of Public Health Volume 105 ; 105 ; http://ajph.aphapublications.org/ >
+    au < released ; 2016 ; 106 ; American Journal of Public Health Volume 106 ; 106 ; http://ajph.aphapublications.org/ >
+    au < released ; 2017 ; 107 ; American Journal of Public Health Volume 107 ; 107 ; http://ajph.aphapublications.org/ >
+    au < expected ; 2018 ; 108 ; American Journal of Public Health Volume 108 ; 108 ; https://ajph.aphapublications.org/ >
 
    }
    
