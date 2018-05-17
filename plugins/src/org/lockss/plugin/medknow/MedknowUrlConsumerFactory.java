@@ -44,6 +44,11 @@ import org.lockss.util.Logger;
  * Medknow redirects some content through a showCaptcha after a certain number of 
  * hits.  They seem to have turned it off at their side for PDF (?) but we are still
  * hitting it for other URLs so swallowing it in case it gets turned back on
+ * 
+ * Medknow also now redirects PDF to downloadPdf
+ *     article.asp?issn=0257-7941;year=2000;volume=19;issue=3;spage=123;epage=129;aulast=Jolly;type=2
+ * downloadpdf.asp?issn=0257-7941;year=2000;volume=19;issue=3;spage=123;epage=129;aulast=Jolly;type=2
+ * 
  */
 public class MedknowUrlConsumerFactory implements UrlConsumerFactory {
   private static final Logger log = Logger.getLogger(MedknowUrlConsumerFactory.class);
@@ -63,9 +68,11 @@ public class MedknowUrlConsumerFactory implements UrlConsumerFactory {
    */
   public class MedknowUrlConsumer extends SimpleUrlConsumer {
 
-    public static final String CAPTCHA_URL = "/showcaptcha.asp";
+	    public static final String CAPTCHA_URL = "/showcaptcha\\.asp";
+	    public static final String DOWNLOADPDF_URL = "/downloadpdf\\.asp";
  
     protected Pattern captchapat = Pattern.compile(CAPTCHA_URL, Pattern.CASE_INSENSITIVE);
+    protected Pattern downloadpdfpat = Pattern.compile(DOWNLOADPDF_URL, Pattern.CASE_INSENSITIVE);
 
     public MedknowUrlConsumer(CrawlerFacade facade,
         FetchedUrlData fud) {
@@ -83,13 +90,12 @@ public class MedknowUrlConsumerFactory implements UrlConsumerFactory {
 
     protected boolean shouldStoreRedirectsAtOrigUrl() {
       boolean should =  fud.redirectUrls != null
-          && fud.redirectUrls.size() == 1
-          && captchapat.matcher(fud.redirectUrls.get(0)).find();
-      if (!should) {
-        log.debug3("NOT swallowing this redirect");
-      }
+          && fud.redirectUrls.size() >= 1
+          && (captchapat.matcher(fud.redirectUrls.get(0)).find() ||
+        		  (downloadpdfpat.matcher(fud.fetchUrl).find()));
       if (fud.redirectUrls != null) {
-        log.debug3("SO redirect: " + fud.redirectUrls.size() + " " + fud.origUrl + " to " + fud.fetchUrl + " : " + should);
+    	    log.debug3("MED redirect " + fud.redirectUrls.size() + ": " + fud.redirectUrls.toString());
+        log.debug3("MED redirect: " + " " + fud.origUrl + " to " + fud.fetchUrl + " should consume?: " + should);
       }
       return should;
     }
