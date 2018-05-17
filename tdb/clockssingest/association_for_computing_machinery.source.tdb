@@ -38,7 +38,7 @@
       hidden[proxy] = DIRECT
       implicit < status ; status2 ; year ; name ; param[directory] >
       
-      au < testing ; exists ; 2018 ; Association for Computing Machinery Source Content 2018_1 ; 2018_1 >
+      au < readySource ; crawling ; 2018 ; Association for Computing Machinery Source Content 2018_1 ; 2018_1 >
       #no substantive delivery in the 2018_2 bucket - just top-level portico manifest
       au < doNotProcess ; exists ; 2018 ; Association for Computing Machinery Source Content 2018_2 ; 2018_2 >
       au < testing ; exists ; 2018 ; Association for Computing Machinery Source Content 2018_3 ; 2018_3 >
