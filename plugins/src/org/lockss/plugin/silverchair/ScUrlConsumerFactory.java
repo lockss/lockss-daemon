@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,12 +32,11 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.silverchair;
 
-import java.io.IOException;
 import java.util.regex.Pattern;
 
 import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.plugin.*;
-import org.lockss.plugin.base.SimpleUrlConsumer;
+import org.lockss.plugin.base.HttpToHttpsUrlConsumer;
 import org.lockss.util.Logger;
 /**
  * @since 1.68
@@ -69,7 +68,7 @@ public class ScUrlConsumerFactory implements UrlConsumerFactory {
    * 
    * @since 1.67.5
    */
-  public class ScUrlConsumer extends SimpleUrlConsumer {
+  public class ScUrlConsumer extends HttpToHttpsUrlConsumer {
 
     public static final String CANON_PDF_URL = "data/journals/[^&?]+\\.pdf$";
     public static final String TO_PDF_URL = ".ashx\\?url=/data/journals/[^&?]+\\.pdf$";
@@ -82,23 +81,23 @@ public class ScUrlConsumerFactory implements UrlConsumerFactory {
       super(facade, fud);
     }
 
+
     @Override
-    public void consume() throws IOException {
-        if (shouldStoreRedirectsAtOrigUrl()) {
-          storeAtOrigUrl();
-        }
-        super.consume();
-      }
-
-
-    protected boolean shouldStoreRedirectsAtOrigUrl() {
-      boolean should =  fud.redirectUrls != null
-          && fud.redirectUrls.size() == 1
-          && fud.redirectUrls.get(0).equals(fud.fetchUrl)
+    public boolean shouldStoreAtOrigUrl() {
+      // handle vanilla redirect from http to https
+      boolean should = super.shouldStoreAtOrigUrl();
+      if (!should) {
+    	  // a more complicated redirect, which *may* include the https redirection as well
+    	  // http://foo.pdf --> https://foo.pdf --> http://pdfaccess.ashx?url=foo --> https://pdfaccess.ashx?url=foo
+    	  // or some permutation thereof - stay flexible
+      should =  fud.redirectUrls != null
+          && fud.redirectUrls.size() >= 1
           && destPdfPat.matcher(fud.fetchUrl).find()
           && canonPdfPat.matcher(fud.origUrl).find();
-      if (!should) {
-        log.debug3("NOT swallowing this redirect");
+      }
+      if (fud.redirectUrls != null) {
+  	    log.debug3("Sc redirects " + fud.redirectUrls.size() + ": " + fud.redirectUrls.toString());
+        log.debug3("Sc redirect - orig to fetch: " + " " + fud.origUrl + " to " + fud.fetchUrl + " should consume?: " + should);
       }
       return should;
     }

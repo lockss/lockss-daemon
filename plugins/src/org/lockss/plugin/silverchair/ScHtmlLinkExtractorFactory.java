@@ -38,6 +38,7 @@ import org.lockss.extractor.*;
 import org.lockss.extractor.JsoupHtmlLinkExtractor.SimpleTagLinkExtractor;
 import org.lockss.extractor.LinkExtractor.Callback;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.AuUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 
@@ -159,7 +160,7 @@ public class ScHtmlLinkExtractorFactory implements LinkExtractorFactory {
             }
             logger.debug3(String.format("Generated %s", url));
             if (!StringUtil.isNullString(url)) {
-              cb.foundLink(url);
+              cb.foundLink(AuUtil.normalizeHttpHttpsFromBaseUrl(au,url));
             }
           }
 }
@@ -193,7 +194,7 @@ public class ScHtmlLinkExtractorFactory implements LinkExtractorFactory {
           String url = sb.toString();
           logger.debug3(String.format("Generated %s", url));
           if (!StringUtil.isNullString(url)) {
-            cb.foundLink(url);
+            cb.foundLink(AuUtil.normalizeHttpHttpsFromBaseUrl(au,url));
           }
         }
         else {
@@ -215,7 +216,7 @@ public class ScHtmlLinkExtractorFactory implements LinkExtractorFactory {
             String url = sb.toString();
             logger.debug3(String.format("Generated %s", url));
             if (!StringUtil.isNullString(url)) {
-              cb.foundLink(url);
+              cb.foundLink(AuUtil.normalizeHttpHttpsFromBaseUrl(au,url));
             }
           }
         }
@@ -226,7 +227,7 @@ public class ScHtmlLinkExtractorFactory implements LinkExtractorFactory {
           String url = onclickMat.group(1);
           logger.debug3(String.format("Generated %s", url));
           if (!StringUtil.isNullString(url)) {
-            cb.foundLink(url);
+            cb.foundLink(AuUtil.normalizeHttpHttpsFromBaseUrl(au,url));
           }
         }
 

@@ -44,6 +44,7 @@ import org.htmlparser.tags.ImageTag;
 import org.htmlparser.tags.LinkTag;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.AuUtil;
 import org.lockss.rewriter.*;
 import org.lockss.servlet.ServletUtil.LinkTransform;
 import org.lockss.util.Logger;
@@ -89,6 +90,10 @@ public class ScHtmlLinkRewriterFactory implements LinkRewriterFactory {
   }
   
   
+  /* 
+   * this may need some additional work to make sure the pdfUrl has the same protocol as the
+   * au - TODO 
+   */
   private static class PostFilter implements NodeFilter {
     
     public boolean accept(Node node) {

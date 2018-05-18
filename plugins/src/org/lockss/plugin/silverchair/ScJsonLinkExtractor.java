@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,6 +36,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.LinkExtractor;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.AuUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 import org.lockss.util.UrlUtil;
@@ -43,8 +44,6 @@ import org.lockss.util.UrlUtil;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
-import java.util.Iterator;
-import java.util.Map.Entry;
 
 public class ScJsonLinkExtractor implements LinkExtractor {
   private static final Logger logger = Logger.getLogger(ScJsonLinkExtractor.class);
@@ -84,7 +83,8 @@ public class ScJsonLinkExtractor implements LinkExtractor {
     if(!pdfNode.isMissingNode()) {
       foundUrl = pdfNode.textValue();
       URL baseUrl = new URL(UrlUtil.getUrlPrefix(srcUrl));
-      String f_link = UrlUtil.resolveUri(baseUrl, foundUrl);
+      // keep protocol appropriate for the original base_url
+      String f_link = AuUtil.normalizeHttpHttpsFromBaseUrl(au,UrlUtil.resolveUri(baseUrl, foundUrl));
       logger.debug2("found pdf link:" + f_link);
       cb.foundLink(f_link);
     }

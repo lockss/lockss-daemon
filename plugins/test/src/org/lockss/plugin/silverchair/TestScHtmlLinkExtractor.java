@@ -35,12 +35,44 @@ package org.lockss.plugin.silverchair;
 import java.net.URLEncoder;
 import java.util.*;
 
+import org.lockss.config.Configuration;
+import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.extractor.LinkExtractor;
+import org.lockss.plugin.definable.DefinablePlugin;
 import org.lockss.test.*;
 import org.lockss.util.Constants;
 import org.lockss.util.ListUtil;
 
 public class TestScHtmlLinkExtractor extends LockssTestCase {
+	public static final String BASE_URL = "http://www.example.com";
+	public static final String HTTPS_BASE_URL = "https://www.example.com";
+
+	static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
+	static final String YEAR_KEY = ConfigParamDescr.YEAR.getKey();
+	static final String RES_ID_KEY = "resource_id";
+	private DefinablePlugin plugin;
+	private MockArchivalUnit http_mau;
+	private MockArchivalUnit https_mau2;
+
+	public void setUp() throws Exception {
+		super.setUp();
+		plugin = new DefinablePlugin();
+		plugin.initPlugin(getMockLockssDaemon(),
+				"org.lockss.plugin.silverchair.ClockssSilverchairJournalsPlugin");
+		Properties props = new Properties();
+		//http
+		props.setProperty(YEAR_KEY, "2016");
+		props.setProperty(RES_ID_KEY, "140");
+		props.setProperty(BASE_URL_KEY, BASE_URL);
+		Configuration config = ConfigurationUtil.fromProps(props);
+		http_mau = new MockArchivalUnit();
+		http_mau.setConfiguration(config);
+
+		props.setProperty(BASE_URL_KEY, HTTPS_BASE_URL);
+		Configuration config2 = ConfigurationUtil.fromProps(props);
+		https_mau2 = new MockArchivalUnit();
+		https_mau2.setConfiguration(config2);
+	}		
 
   public void testSimpleAnchorTag() throws Exception {
       String url1 = "http://www.example.com/link1.html";
@@ -55,7 +87,7 @@ public class TestScHtmlLinkExtractor extends LockssTestCase {
       String srcUrl = "http://www.example.com/";
       LinkExtractor le = new ScHtmlLinkExtractorFactory().createLinkExtractor(Constants.MIME_TYPE_HTML);
       final List<String> emitted = new ArrayList<>();
-      le.extractUrls(null,
+      le.extractUrls(http_mau,
                    new StringInputStream(input),
                    Constants.ENCODING_UTF_8,
                    srcUrl,
@@ -80,7 +112,7 @@ public class TestScHtmlLinkExtractor extends LockssTestCase {
     String srcUrl = "http://www.example.com/";
     LinkExtractor le = new ScHtmlLinkExtractorFactory().createLinkExtractor(Constants.MIME_TYPE_HTML);
     final List<String> emitted = new ArrayList<>();
-    le.extractUrls(null,
+    le.extractUrls(http_mau,
                    new StringInputStream(input),
                    Constants.ENCODING_UTF_8,
                    srcUrl,
@@ -126,7 +158,7 @@ public class TestScHtmlLinkExtractor extends LockssTestCase {
     String srcUrl = baseUrl + "article.aspx?articleid=1234567";
     LinkExtractor le = new ScHtmlLinkExtractorFactory().createLinkExtractor(Constants.MIME_TYPE_HTML);
     final List<String> emitted = new ArrayList<>();
-    le.extractUrls(null,
+    le.extractUrls(http_mau,
                    new StringInputStream(input),
                    Constants.ENCODING_UTF_8,
                    srcUrl,
@@ -145,7 +177,7 @@ public class TestScHtmlLinkExtractor extends LockssTestCase {
     http://proceedings.spiedigitallibrary.org/proceeding.aspx?articleid=1224845
     srcUrl = baseUrl + "proceeding.aspx?articleid=1234567";
     final List<String> newemitted = new ArrayList<>();
-    le.extractUrls(null,
+    le.extractUrls(http_mau,
                    new StringInputStream(input),
                    Constants.ENCODING_UTF_8,
                    srcUrl,
@@ -178,7 +210,7 @@ public class TestScHtmlLinkExtractor extends LockssTestCase {
                                          "UTF-8") + "&post=json";
 
     final List<String> emitted = new ArrayList<>();
-    le.extractUrls(null,
+    le.extractUrls(http_mau,
                    new StringInputStream(input),
                    Constants.ENCODING_UTF_8,
                    baseUrl,

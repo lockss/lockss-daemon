@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>47</string>
+    <string>48</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -74,7 +74,10 @@
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%sLOCKSS/ListOfIssues.aspx?resourceId=%d&amp;year=%d", base_url, resource_id, year</string>
+   <list>
+    <string>"%sLOCKSS/ListOfIssues.aspx?resourceId=%d&amp;year=%d", to_http(base_url), resource_id, year</string>
+    <string>"%sLOCKSS/ListOfIssues.aspx?resourceId=%d&amp;year=%d", to_https(base_url), resource_id, year</string>
+    </list>    
   </entry>
   <entry>
   <!-- crawl examples
@@ -88,22 +91,22 @@
     <string>au_crawlrules</string>
     <list>
       <string>1,"^https?://([^.]+\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|ajax\.microsoft\.com)/"</string>
-      <string>2,"^%s(SharedControls/)?DownloadImage\.aspx\?", base_url</string>
+      <string>2,"^https?://%s/(SharedControls/)?DownloadImage\.aspx\?", url_host(base_url)</string>
       <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)$", url_host(base_url)</string>
       <string>1,"^https?://%s/[^./]+\.axd/(file|script|stylesheet)/", url_host(base_url)</string>
       <string>1,"^https?://[^.]+\.(silverchair\.netdna-cdn|silverchaircdn)\.com/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$"</string>
       <string>1,"^https?://[^.]+\.(silverchair\.netdna-cdn|silverchaircdn)\.com/combres\.axd/"</string>
-      <string>4,"^%s", base_url</string>
+      <string>4,"^https?://%s/", url_host(base_url)</string>
       <string>2,"__EVENTVALIDATION="</string>
-      <string>2,"^%sdownloadCitation\.aspx\?format=[^&amp;]+$", base_url</string>
-      <string>1,"^%s(article\.aspx\?articleid=|(downloadCitation|multimediaPlayer)\.aspx\?)", base_url</string>
-      <string>1,"^%sIssue\.aspx\?(.*&amp;journalid=%d|journalid=%d&amp;.*)$", base_url, resource_id, resource_id</string>
-      <string>1,"^%sdata/(Journals|Multimedia)/", base_url</string>
-      <string>1,"^%scombres\.axd/", base_url</string>
-      <string>1,"^%sissue\.aspx/SetArticlePDFLinkBasedOnAccess", base_url</string>
-      <string>1,"^%svolume\.aspx/SetPDFLinkBasedOnAccess", base_url</string>
-      <string>1,"^%spdfaccess\.ashx\?(ResourceID|url)", base_url</string>
-      <string>1,"^%s(Script|Web)Resource\.axd\?d", base_url</string>
+      <string>2,"^https?://%s/downloadCitation\.aspx\?format=[^&amp;]+$", url_host(base_url)</string>
+      <string>1,"^https?://%s/(article\.aspx\?articleid=|(downloadCitation|multimediaPlayer)\.aspx\?)", url_host(base_url)</string>
+      <string>1,"^https?://%s/Issue\.aspx\?(.*&amp;journalid=%d|journalid=%d&amp;.*)$", url_host(base_url), resource_id, resource_id</string>
+      <string>1,"^https?://%s/data/(Journals|Multimedia)/", url_host(base_url)</string>
+      <string>1,"^https?://%s/combres\.axd/", url_host(base_url)</string>
+      <string>1,"^https?://%s/issue\.aspx/SetArticlePDFLinkBasedOnAccess", url_host(base_url)</string>
+      <string>1,"^https?://%s/volume\.aspx/SetPDFLinkBasedOnAccess", url_host(base_url)</string>
+      <string>1,"^https?://%s/pdfaccess\.ashx\?(ResourceID|url)", url_host(base_url)</string>
+      <string>1,"^https?://%s/(Script|Web)Resource\.axd\?d", url_host(base_url)</string>
     </list>
   </entry>
   <entry>
@@ -207,7 +210,8 @@
   <entry>
     <string>plugin_cache_result_list</string>
     <list>
-<!--      <string>405=org.lockss.plugin.silverchair.ScHtmlHttpResponseHandler</string> -->
+      <!-- Mismatched actual length from Content-Length header should be ignored-->
+      <string>org.lockss.plugin.ContentValidationException$WrongLength=org.lockss.util.urlconn.CacheSuccess</string>
       <string>org.lockss.plugin.ContentValidationException=org.lockss.plugin.silverchair.ScHtmlHttpResponseHandler</string>
     </list>
   </entry>

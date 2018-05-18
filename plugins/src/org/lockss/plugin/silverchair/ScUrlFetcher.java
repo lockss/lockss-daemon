@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -31,26 +31,20 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.plugin.silverchair;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.methods.StringRequestEntity;
 import org.lockss.daemon.Crawler.CrawlerFacade;
-import org.lockss.plugin.base.BaseUrlFetcher;
-import org.lockss.util.HeaderUtil;
+import org.lockss.plugin.base.HttpToHttpsUrlFetcher;
 import org.lockss.util.Logger;
 import org.lockss.util.UrlUtil;
 import org.lockss.util.urlconn.*;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.net.URLDecoder;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class ScUrlFetcher extends BaseUrlFetcher {
+public class ScUrlFetcher extends HttpToHttpsUrlFetcher {
 
   protected static final Pattern PATTERN_POST =
     Pattern.compile("&post=json$",
@@ -172,4 +166,24 @@ public class ScUrlFetcher extends BaseUrlFetcher {
                                       connectionPool);
     return luc;
   }
+  
+  /*
+   * Support for http to https conversion - do we need to override?
+   * 
+   */
+  /*
+  @Override
+  protected boolean isHttpToHttpsRedirect(String fetched,
+                                          String redirect,
+                                          String normalized) {
+  return UrlUtil.isHttpUrl(fetched)
+        && UrlUtil.isHttpsUrl(redirect)
+        && UrlUtil.isHttpUrl(normalized)
+        && UrlUtil.stripProtocol(fetched).equals(UrlUtil.stripProtocol(redirect))
+        && fetched.equals(normalized);
+  }
+}
+*/
+  
+  
 }

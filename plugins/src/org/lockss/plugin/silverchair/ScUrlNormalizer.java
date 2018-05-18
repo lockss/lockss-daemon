@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2018Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -50,7 +50,8 @@ import org.lockss.plugin.*;
  * first)</li>
  * </ul>
  */
-public class ScUrlNormalizer implements UrlNormalizer {
+// Plugin specific is in addition to the standard http to https normalization
+public class ScUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
 
   private static final Pattern ATAB_PATTERN = Pattern.compile("&atab=[^&]*", Pattern.CASE_INSENSITIVE);
   private static final String ATAB_CANONICAL = "";
@@ -65,7 +66,7 @@ public class ScUrlNormalizer implements UrlNormalizer {
   private static final String ISSUE_CANONICAL = "/Issue.aspx?issueid=$2$5&journalid=$3$4";
   
   @Override
-  public String normalizeUrl(String url, ArchivalUnit au) throws PluginException {
+  public String additionalNormalization(String url, ArchivalUnit au) throws PluginException {
     url = ATAB_PATTERN.matcher(url).replaceFirst(ATAB_CANONICAL);
     url = ARTICLE_PATTERN.matcher(url).replaceFirst(ARTICLE_CANONICAL);
     url = PROCEEDING_PATTERN.matcher(url).replaceFirst(PROCEEDING_CANONICAL);
