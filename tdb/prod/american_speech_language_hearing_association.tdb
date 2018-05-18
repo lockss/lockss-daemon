@@ -16,37 +16,37 @@
     {
 
       plugin = org.lockss.plugin.silverchair.SilverchairJournalsPlugin
-      param[base_url] = http://aja.pubs.asha.org/
+#      param[base_url] = http://aja.pubs.asha.org/
       param[resource_id] = 140
-      implicit < status ; year ; name ; param[year] >
+      implicit < status ; year ; name ; param[year] ; param[base_url] >
 
-      au < manifest ; 1992 ; American Journal of Audiology Volume 1 ; 1992 >
-      au < manifest ; 1993 ; American Journal of Audiology Volume 2 ; 1993 >
-      au < manifest ; 1994 ; American Journal of Audiology Volume 3 ; 1994 >
-      au < manifest ; 1995 ; American Journal of Audiology Volume 4 ; 1995 >
-      au < manifest ; 1996 ; American Journal of Audiology Volume 5 ; 1996 >
-      au < manifest ; 1997 ; American Journal of Audiology Volume 6 ; 1997 >
-      au < manifest ; 1998 ; American Journal of Audiology Volume 7 ; 1998 >
-      au < manifest ; 1999 ; American Journal of Audiology Volume 8 ; 1999 >
-      au < manifest ; 2000 ; American Journal of Audiology Volume 9 ; 2000 >
-      au < manifest ; 2001 ; American Journal of Audiology Volume 10 ; 2001 >
-      au < manifest ; 2002 ; American Journal of Audiology Volume 11 ; 2002 >
-      au < manifest ; 2003 ; American Journal of Audiology Volume 12 ; 2003 >
-      au < manifest ; 2004 ; American Journal of Audiology Volume 13 ; 2004 >
-      au < doNotProcess ; 2005 ; American Journal of Audiology Volume 14 ; 2005 >
-      au < doNotProcess ; 2006 ; American Journal of Audiology Volume 15 ; 2006 >
-      au < doNotProcess ; 2007 ; American Journal of Audiology Volume 16 ; 2007 >
-      au < doNotProcess ; 2008 ; American Journal of Audiology Volume 17 ; 2008 >
-      au < doNotProcess ; 2009 ; American Journal of Audiology Volume 18 ; 2009 >
-      au < doNotProcess ; 2010 ; American Journal of Audiology Volume 19 ; 2010 >
-      au < doNotProcess ; 2011 ; American Journal of Audiology Volume 20 ; 2011 >
-      au < doNotProcess ; 2012 ; American Journal of Audiology Volume 21 ; 2012 >
-      au < released ; 2013 ; American Journal of Audiology Volume 22 ; 2013 >
-      au < released ; 2014 ; American Journal of Audiology Volume 23 ; 2014 >
-      au < manifest ; 2015 ; American Journal of Audiology Volume 24 ; 2015 >
-      au < released ; 2016 ; American Journal of Audiology Volume 25 ; 2016 >
-      au < released ; 2017 ; American Journal of Audiology Volume 26 ; 2017 >
-      au < expected ; 2018 ; American Journal of Audiology Volume 27 ; 2018 >
+      au < manifest ; 1992 ; American Journal of Audiology Volume 1 ; 1992 ; https://aja.pubs.asha.org/ >
+      au < manifest ; 1993 ; American Journal of Audiology Volume 2 ; 1993 ; https://aja.pubs.asha.org/ >
+      au < manifest ; 1994 ; American Journal of Audiology Volume 3 ; 1994 ; https://aja.pubs.asha.org/ >
+      au < manifest ; 1995 ; American Journal of Audiology Volume 4 ; 1995 ; https://aja.pubs.asha.org/ >
+      au < manifest ; 1996 ; American Journal of Audiology Volume 5 ; 1996 ; https://aja.pubs.asha.org/ >
+      au < manifest ; 1997 ; American Journal of Audiology Volume 6 ; 1997 ; https://aja.pubs.asha.org/ >
+      au < manifest ; 1998 ; American Journal of Audiology Volume 7 ; 1998 ; https://aja.pubs.asha.org/ >
+      au < manifest ; 1999 ; American Journal of Audiology Volume 8 ; 1999 ; https://aja.pubs.asha.org/ >
+      au < manifest ; 2000 ; American Journal of Audiology Volume 9 ; 2000 ; https://aja.pubs.asha.org/ >
+      au < manifest ; 2001 ; American Journal of Audiology Volume 10 ; 2001 ; https://aja.pubs.asha.org/ >
+      au < manifest ; 2002 ; American Journal of Audiology Volume 11 ; 2002 ; https://aja.pubs.asha.org/ >
+      au < manifest ; 2003 ; American Journal of Audiology Volume 12 ; 2003 ; https://aja.pubs.asha.org/ >
+      au < manifest ; 2004 ; American Journal of Audiology Volume 13 ; 2004 ; https://aja.pubs.asha.org/ >
+      au < doNotProcess ; 2005 ; American Journal of Audiology Volume 14 ; 2005 ; https://aja.pubs.asha.org/ >
+      au < doNotProcess ; 2006 ; American Journal of Audiology Volume 15 ; 2006 ; https://aja.pubs.asha.org/ >
+      au < doNotProcess ; 2007 ; American Journal of Audiology Volume 16 ; 2007 ; https://aja.pubs.asha.org/ >
+      au < doNotProcess ; 2008 ; American Journal of Audiology Volume 17 ; 2008 ; https://aja.pubs.asha.org/ >
+      au < doNotProcess ; 2009 ; American Journal of Audiology Volume 18 ; 2009 ; https://aja.pubs.asha.org/ >
+      au < doNotProcess ; 2010 ; American Journal of Audiology Volume 19 ; 2010 ; https://aja.pubs.asha.org/ >
+      au < doNotProcess ; 2011 ; American Journal of Audiology Volume 20 ; 2011 ; https://aja.pubs.asha.org/ >
+      au < doNotProcess ; 2012 ; American Journal of Audiology Volume 21 ; 2012 ; https://aja.pubs.asha.org/ >
+      au < released ; 2013 ; American Journal of Audiology Volume 22 ; 2013 ; http://aja.pubs.asha.org/ >
+      au < released ; 2014 ; American Journal of Audiology Volume 23 ; 2014 ; http://aja.pubs.asha.org/ >
+      au < manifest ; 2015 ; American Journal of Audiology Volume 24 ; 2015 ; https://aja.pubs.asha.org/ >
+      au < released ; 2016 ; American Journal of Audiology Volume 25 ; 2016 ; http://aja.pubs.asha.org/ >
+      au < released ; 2017 ; American Journal of Audiology Volume 26 ; 2017 ; http://aja.pubs.asha.org/ >
+      au < expected ; 2018 ; American Journal of Audiology Volume 27 ; 2018 ; https://aja.pubs.asha.org/ >
 
     }
 
@@ -64,38 +64,38 @@
 
       plugin = org.lockss.plugin.silverchair.SilverchairJournalsPlugin
       param[resource_id] = 141
-      implicit < status ; year ; name ; param[year] >
+      implicit < status ; year ; name ; param[year] ; param[base_url] >
 
       {
-      param[base_url] = http://ajslp.pubs.asha.org/
+#      param[base_url] = http://ajslp.pubs.asha.org/
 
-      au < manifest ; 1992 ; American Journal of Speech-Language Pathology Volume 1 ; 1992 >
-      au < manifest ; 1993 ; American Journal of Speech-Language Pathology Volume 2 ; 1993 >
-      au < manifest ; 1994 ; American Journal of Speech-Language Pathology Volume 3 ; 1994 >
-      au < manifest ; 1995 ; American Journal of Speech-Language Pathology Volume 4 ; 1995 >
-      au < manifest ; 1996 ; American Journal of Speech-Language Pathology Volume 5 ; 1996 >
-      au < manifest ; 1997 ; American Journal of Speech-Language Pathology Volume 6 ; 1997 >
-      au < manifest ; 1998 ; American Journal of Speech-Language Pathology Volume 7 ; 1998 >
-      au < manifest ; 1999 ; American Journal of Speech-Language Pathology Volume 8 ; 1999 >
-      au < manifest ; 2000 ; American Journal of Speech-Language Pathology Volume 9 ; 2000 >
-      au < manifest ; 2001 ; American Journal of Speech-Language Pathology Volume 10 ; 2001 >
-      au < manifest ; 2002 ; American Journal of Speech-Language Pathology Volume 11 ; 2002 >
-      au < manifest ; 2003 ; American Journal of Speech-Language Pathology Volume 12 ; 2003 >
-      au < manifest ; 2004 ; American Journal of Speech-Language Pathology Volume 13 ; 2004 >
-      au < doNotProcess ; 2005 ; American Journal of Speech-Language Pathology Volume 14 ; 2005 >
-      au < doNotProcess ; 2006 ; American Journal of Speech-Language Pathology Volume 15 ; 2006 >
-      au < doNotProcess ; 2007 ; American Journal of Speech-Language Pathology Volume 16 ; 2007 >
-      au < doNotProcess ; 2008 ; American Journal of Speech-Language Pathology Volume 17 ; 2008 >
-      au < doNotProcess ; 2009 ; American Journal of Speech-Language Pathology Volume 18 ; 2009 >
-      au < doNotProcess ; 2010 ; American Journal of Speech-Language Pathology Volume 19 ; 2010 >
-      au < doNotProcess ; 2011 ; American Journal of Speech-Language Pathology Volume 20 ; 2011 >
-      au < doNotProcess ; 2012 ; American Journal of Speech-Language Pathology Volume 21 ; 2012 >
-      au < manifest ; 2013 ; American Journal of Speech-Language Pathology Volume 22 ; 2013 >
-      au < manifest ; 2014 ; American Journal of Speech-Language Pathology Volume 23 ; 2014 >
-      au < manifest ; 2015 ; American Journal of Speech-Language Pathology Volume 24 ; 2015 >
-      au < released ; 2016 ; American Journal of Speech-Language Pathology Volume 25 ; 2016 >
-      au < released ; 2017 ; American Journal of Speech-Language Pathology Volume 26 ; 2017 >
-      au < expected ; 2018 ; American Journal of Speech-Language Pathology Volume 27 ; 2018 >
+      au < manifest ; 1992 ; American Journal of Speech-Language Pathology Volume 1 ; 1992 ; https://ajslp.pubs.asha.org/ >
+      au < manifest ; 1993 ; American Journal of Speech-Language Pathology Volume 2 ; 1993 ; https://ajslp.pubs.asha.org/ >
+      au < manifest ; 1994 ; American Journal of Speech-Language Pathology Volume 3 ; 1994 ; https://ajslp.pubs.asha.org/ >
+      au < manifest ; 1995 ; American Journal of Speech-Language Pathology Volume 4 ; 1995 ; https://ajslp.pubs.asha.org/ >
+      au < manifest ; 1996 ; American Journal of Speech-Language Pathology Volume 5 ; 1996 ; https://ajslp.pubs.asha.org/ >
+      au < manifest ; 1997 ; American Journal of Speech-Language Pathology Volume 6 ; 1997 ; https://ajslp.pubs.asha.org/ >
+      au < manifest ; 1998 ; American Journal of Speech-Language Pathology Volume 7 ; 1998 ; https://ajslp.pubs.asha.org/ >
+      au < manifest ; 1999 ; American Journal of Speech-Language Pathology Volume 8 ; 1999 ; https://ajslp.pubs.asha.org/ >
+      au < manifest ; 2000 ; American Journal of Speech-Language Pathology Volume 9 ; 2000 ; https://ajslp.pubs.asha.org/ >
+      au < manifest ; 2001 ; American Journal of Speech-Language Pathology Volume 10 ; 2001 ; https://ajslp.pubs.asha.org/ >
+      au < manifest ; 2002 ; American Journal of Speech-Language Pathology Volume 11 ; 2002 ; https://ajslp.pubs.asha.org/ >
+      au < manifest ; 2003 ; American Journal of Speech-Language Pathology Volume 12 ; 2003 ; https://ajslp.pubs.asha.org/ >
+      au < manifest ; 2004 ; American Journal of Speech-Language Pathology Volume 13 ; 2004 ; https://ajslp.pubs.asha.org/ >
+      au < doNotProcess ; 2005 ; American Journal of Speech-Language Pathology Volume 14 ; 2005 ; https://ajslp.pubs.asha.org/ >
+      au < doNotProcess ; 2006 ; American Journal of Speech-Language Pathology Volume 15 ; 2006 ; https://ajslp.pubs.asha.org/ >
+      au < doNotProcess ; 2007 ; American Journal of Speech-Language Pathology Volume 16 ; 2007 ; https://ajslp.pubs.asha.org/ >
+      au < doNotProcess ; 2008 ; American Journal of Speech-Language Pathology Volume 17 ; 2008 ; https://ajslp.pubs.asha.org/ >
+      au < doNotProcess ; 2009 ; American Journal of Speech-Language Pathology Volume 18 ; 2009 ; https://ajslp.pubs.asha.org/ >
+      au < doNotProcess ; 2010 ; American Journal of Speech-Language Pathology Volume 19 ; 2010 ; https://ajslp.pubs.asha.org/ >
+      au < doNotProcess ; 2011 ; American Journal of Speech-Language Pathology Volume 20 ; 2011 ; https://ajslp.pubs.asha.org/ >
+      au < doNotProcess ; 2012 ; American Journal of Speech-Language Pathology Volume 21 ; 2012 ; https://ajslp.pubs.asha.org/ >
+      au < manifest ; 2013 ; American Journal of Speech-Language Pathology Volume 22 ; 2013 ; https://ajslp.pubs.asha.org/ >
+      au < manifest ; 2014 ; American Journal of Speech-Language Pathology Volume 23 ; 2014 ; https://ajslp.pubs.asha.org/ >
+      au < manifest ; 2015 ; American Journal of Speech-Language Pathology Volume 24 ; 2015 ; https://ajslp.pubs.asha.org/ >
+      au < released ; 2016 ; American Journal of Speech-Language Pathology Volume 25 ; 2016 ; http://ajslp.pubs.asha.org/ >
+      au < released ; 2017 ; American Journal of Speech-Language Pathology Volume 26 ; 2017 ; http://ajslp.pubs.asha.org/ >
+      au < expected ; 2018 ; American Journal of Speech-Language Pathology Volume 27 ; 2018 ; https://ajslp.pubs.asha.org/ >
 
       }
 
@@ -115,73 +115,73 @@
 
       plugin = org.lockss.plugin.silverchair.SilverchairJournalsPlugin
       param[resource_id] = 142
-      implicit < status ; year ; name ; param[year] >
+      implicit < status ; year ; name ; param[year] ; param[base_url] >
       comment[continues] = 0022-4677
 
       {
-      param[base_url] = http://jslhr.pubs.asha.org/
+#      param[base_url] = http://jslhr.pubs.asha.org/
 
-      au < manifest ; 1958 ; Journal of Speech, Language, and Hearing Research Volume 1 ; 1958 >
-      au < manifest ; 1959 ; Journal of Speech, Language, and Hearing Research Volume 2 ; 1959 >
-      au < manifest ; 1960 ; Journal of Speech, Language, and Hearing Research Volume 3 ; 1960 >
-      au < manifest ; 1961 ; Journal of Speech, Language, and Hearing Research Volume 4 ; 1961 >
-      au < manifest ; 1962 ; Journal of Speech, Language, and Hearing Research Volume 5 ; 1962 >
-      au < manifest ; 1963 ; Journal of Speech, Language, and Hearing Research Volume 6 ; 1963 >
-      au < manifest ; 1964 ; Journal of Speech, Language, and Hearing Research Volume 7 ; 1964 >
-      au < manifest ; 1965 ; Journal of Speech, Language, and Hearing Research Volume 8 ; 1965 >
-      au < manifest ; 1966 ; Journal of Speech, Language, and Hearing Research Volume 9 ; 1966 >
-      au < manifest ; 1967 ; Journal of Speech, Language, and Hearing Research Volume 10 ; 1967 >
-      au < manifest ; 1968 ; Journal of Speech, Language, and Hearing Research Volume 11 ; 1968 >
-      au < manifest ; 1969 ; Journal of Speech, Language, and Hearing Research Volume 12 ; 1969 >
-      au < manifest ; 1970 ; Journal of Speech, Language, and Hearing Research Volume 13 ; 1970 >
-      au < manifest ; 1971 ; Journal of Speech, Language, and Hearing Research Volume 14 ; 1971 >
-      au < manifest ; 1972 ; Journal of Speech, Language, and Hearing Research Volume 15 ; 1972 >
-      au < manifest ; 1973 ; Journal of Speech, Language, and Hearing Research Volume 16 ; 1973 >
-      au < manifest ; 1974 ; Journal of Speech, Language, and Hearing Research Volume 17 ; 1974 >
-      au < manifest ; 1975 ; Journal of Speech, Language, and Hearing Research Volume 18 ; 1975 >
-      au < manifest ; 1976 ; Journal of Speech, Language, and Hearing Research Volume 19 ; 1976 >
-      au < manifest ; 1977 ; Journal of Speech, Language, and Hearing Research Volume 20 ; 1977 >
-      au < manifest ; 1978 ; Journal of Speech, Language, and Hearing Research Volume 21 ; 1978 >
-      au < manifest ; 1979 ; Journal of Speech, Language, and Hearing Research Volume 22 ; 1979 >
-      au < manifest ; 1980 ; Journal of Speech, Language, and Hearing Research Volume 23 ; 1980 >
-      au < manifest ; 1981 ; Journal of Speech, Language, and Hearing Research Volume 24 ; 1981 >
-      au < manifest ; 1982 ; Journal of Speech, Language, and Hearing Research Volume 25 ; 1982 >
-      au < manifest ; 1983 ; Journal of Speech, Language, and Hearing Research Volume 26 ; 1983 >
-      au < manifest ; 1984 ; Journal of Speech, Language, and Hearing Research Volume 27 ; 1984 >
-      au < manifest ; 1985 ; Journal of Speech, Language, and Hearing Research Volume 28 ; 1985 >
-      au < manifest ; 1986 ; Journal of Speech, Language, and Hearing Research Volume 29 ; 1986 >
-      au < manifest ; 1987 ; Journal of Speech, Language, and Hearing Research Volume 30 ; 1987 >
-      au < manifest ; 1988 ; Journal of Speech, Language, and Hearing Research Volume 31 ; 1988 >
-      au < manifest ; 1989 ; Journal of Speech, Language, and Hearing Research Volume 32 ; 1989 >
-      au < manifest ; 1990 ; Journal of Speech, Language, and Hearing Research Volume 33 ; 1990 >
-      au < manifest ; 1991 ; Journal of Speech, Language, and Hearing Research Volume 34 ; 1991 >
-      au < manifest ; 1992 ; Journal of Speech, Language, and Hearing Research Volume 35 ; 1992 >
-      au < manifest ; 1993 ; Journal of Speech, Language, and Hearing Research Volume 36 ; 1993 >
-      au < manifest ; 1994 ; Journal of Speech, Language, and Hearing Research Volume 37 ; 1994 >
-      au < manifest ; 1995 ; Journal of Speech, Language, and Hearing Research Volume 38 ; 1995 >
-      au < manifest ; 1996 ; Journal of Speech, Language, and Hearing Research Volume 39 ; 1996 >
-      au < manifest ; 1997 ; Journal of Speech, Language, and Hearing Research Volume 40 ; 1997 >
-      au < manifest ; 1998 ; Journal of Speech, Language, and Hearing Research Volume 41 ; 1998 >
-      au < manifest ; 1999 ; Journal of Speech, Language, and Hearing Research Volume 42 ; 1999 >
-      au < manifest ; 2000 ; Journal of Speech, Language, and Hearing Research Volume 43 ; 2000 >
-      au < manifest ; 2001 ; Journal of Speech, Language, and Hearing Research Volume 44 ; 2001 >
-      au < manifest ; 2002 ; Journal of Speech, Language, and Hearing Research Volume 45 ; 2002 >
-      au < manifest ; 2003 ; Journal of Speech, Language, and Hearing Research Volume 46 ; 2003 >
-      au < manifest ; 2004 ; Journal of Speech, Language, and Hearing Research Volume 47 ; 2004 >
-      au < doNotProcess ; 2005 ; Journal of Speech, Language, and Hearing Research Volume 48 ; 2005 >
-      au < doNotProcess ; 2006 ; Journal of Speech, Language, and Hearing Research Volume 49 ; 2006 >
-      au < doNotProcess ; 2007 ; Journal of Speech, Language, and Hearing Research Volume 50 ; 2007 >
-      au < doNotProcess ; 2008 ; Journal of Speech, Language, and Hearing Research Volume 51 ; 2008 >
-      au < doNotProcess ; 2009 ; Journal of Speech, Language, and Hearing Research Volume 52 ; 2009 >
-      au < doNotProcess ; 2010 ; Journal of Speech, Language, and Hearing Research Volume 53 ; 2010 >
-      au < doNotProcess ; 2011 ; Journal of Speech, Language, and Hearing Research Volume 54 ; 2011 >
-      au < doNotProcess ; 2012 ; Journal of Speech, Language, and Hearing Research Volume 55 ; 2012 >
-      au < manifest ; 2013 ; Journal of Speech, Language, and Hearing Research Volume 56 ; 2013 >
-      au < released ; 2014 ; Journal of Speech, Language, and Hearing Research Volume 57 ; 2014 >
-      au < manifest ; 2015 ; Journal of Speech, Language, and Hearing Research Volume 58 ; 2015 >
-      au < released ; 2016 ; Journal of Speech, Language, and Hearing Research Volume 59 ; 2016 >
-      au < released ; 2017 ; Journal of Speech, Language, and Hearing Research Volume 60 ; 2017 >
-      au < expected ; 2018 ; Journal of Speech, Language, and Hearing Research Volume 61 ; 2018 >
+      au < manifest ; 1958 ; Journal of Speech, Language, and Hearing Research Volume 1 ; 1958 ; https://jslhr.pubs.asha.org/ >
+      au < manifest ; 1959 ; Journal of Speech, Language, and Hearing Research Volume 2 ; 1959 ; https://jslhr.pubs.asha.org/ >
+      au < manifest ; 1960 ; Journal of Speech, Language, and Hearing Research Volume 3 ; 1960 ; https://jslhr.pubs.asha.org/ >
+      au < manifest ; 1961 ; Journal of Speech, Language, and Hearing Research Volume 4 ; 1961 ; https://jslhr.pubs.asha.org/ >
+      au < manifest ; 1962 ; Journal of Speech, Language, and Hearing Research Volume 5 ; 1962 ; https://jslhr.pubs.asha.org/ >
+      au < manifest ; 1963 ; Journal of Speech, Language, and Hearing Research Volume 6 ; 1963 ; https://jslhr.pubs.asha.org/ >
+      au < manifest ; 1964 ; Journal of Speech, Language, and Hearing Research Volume 7 ; 1964 ; https://jslhr.pubs.asha.org/ >
+      au < manifest ; 1965 ; Journal of Speech, Language, and Hearing Research Volume 8 ; 1965 ; https://jslhr.pubs.asha.org/ >
+      au < manifest ; 1966 ; Journal of Speech, Language, and Hearing Research Volume 9 ; 1966 ; https://jslhr.pubs.asha.org/ >
+      au < manifest ; 1967 ; Journal of Speech, Language, and Hearing Research Volume 10 ; 1967 ; https://jslhr.pubs.asha.org/ >
+      au < manifest ; 1968 ; Journal of Speech, Language, and Hearing Research Volume 11 ; 1968 ; https://jslhr.pubs.asha.org/ >
+      au < manifest ; 1969 ; Journal of Speech, Language, and Hearing Research Volume 12 ; 1969 ; https://jslhr.pubs.asha.org/ >
+      au < manifest ; 1970 ; Journal of Speech, Language, and Hearing Research Volume 13 ; 1970 ; https://jslhr.pubs.asha.org/ >
+      au < manifest ; 1971 ; Journal of Speech, Language, and Hearing Research Volume 14 ; 1971 ; https://jslhr.pubs.asha.org/ >
+      au < manifest ; 1972 ; Journal of Speech, Language, and Hearing Research Volume 15 ; 1972 ; https://jslhr.pubs.asha.org/ >
+      au < manifest ; 1973 ; Journal of Speech, Language, and Hearing Research Volume 16 ; 1973 ; https://jslhr.pubs.asha.org/ >
+      au < manifest ; 1974 ; Journal of Speech, Language, and Hearing Research Volume 17 ; 1974 ; https://jslhr.pubs.asha.org/ >
+      au < manifest ; 1975 ; Journal of Speech, Language, and Hearing Research Volume 18 ; 1975 ; https://jslhr.pubs.asha.org/ >
+      au < manifest ; 1976 ; Journal of Speech, Language, and Hearing Research Volume 19 ; 1976 ; https://jslhr.pubs.asha.org/ >
+      au < manifest ; 1977 ; Journal of Speech, Language, and Hearing Research Volume 20 ; 1977 ; https://jslhr.pubs.asha.org/ >
+      au < manifest ; 1978 ; Journal of Speech, Language, and Hearing Research Volume 21 ; 1978 ; https://jslhr.pubs.asha.org/ >
+      au < manifest ; 1979 ; Journal of Speech, Language, and Hearing Research Volume 22 ; 1979 ; https://jslhr.pubs.asha.org/ >
+      au < manifest ; 1980 ; Journal of Speech, Language, and Hearing Research Volume 23 ; 1980 ; https://jslhr.pubs.asha.org/ >
+      au < manifest ; 1981 ; Journal of Speech, Language, and Hearing Research Volume 24 ; 1981 ; https://jslhr.pubs.asha.org/ >
+      au < manifest ; 1982 ; Journal of Speech, Language, and Hearing Research Volume 25 ; 1982 ; https://jslhr.pubs.asha.org/ >
+      au < manifest ; 1983 ; Journal of Speech, Language, and Hearing Research Volume 26 ; 1983 ; https://jslhr.pubs.asha.org/ >
+      au < manifest ; 1984 ; Journal of Speech, Language, and Hearing Research Volume 27 ; 1984 ; https://jslhr.pubs.asha.org/ >
+      au < manifest ; 1985 ; Journal of Speech, Language, and Hearing Research Volume 28 ; 1985 ; https://jslhr.pubs.asha.org/ >
+      au < manifest ; 1986 ; Journal of Speech, Language, and Hearing Research Volume 29 ; 1986 ; https://jslhr.pubs.asha.org/ >
+      au < manifest ; 1987 ; Journal of Speech, Language, and Hearing Research Volume 30 ; 1987 ; https://jslhr.pubs.asha.org/ >
+      au < manifest ; 1988 ; Journal of Speech, Language, and Hearing Research Volume 31 ; 1988 ; https://jslhr.pubs.asha.org/ >
+      au < manifest ; 1989 ; Journal of Speech, Language, and Hearing Research Volume 32 ; 1989 ; https://jslhr.pubs.asha.org/ >
+      au < manifest ; 1990 ; Journal of Speech, Language, and Hearing Research Volume 33 ; 1990 ; https://jslhr.pubs.asha.org/ >
+      au < manifest ; 1991 ; Journal of Speech, Language, and Hearing Research Volume 34 ; 1991 ; https://jslhr.pubs.asha.org/ >
+      au < manifest ; 1992 ; Journal of Speech, Language, and Hearing Research Volume 35 ; 1992 ; https://jslhr.pubs.asha.org/ >
+      au < manifest ; 1993 ; Journal of Speech, Language, and Hearing Research Volume 36 ; 1993 ; https://jslhr.pubs.asha.org/ >
+      au < manifest ; 1994 ; Journal of Speech, Language, and Hearing Research Volume 37 ; 1994 ; https://jslhr.pubs.asha.org/ >
+      au < manifest ; 1995 ; Journal of Speech, Language, and Hearing Research Volume 38 ; 1995 ; https://jslhr.pubs.asha.org/ >
+      au < manifest ; 1996 ; Journal of Speech, Language, and Hearing Research Volume 39 ; 1996 ; https://jslhr.pubs.asha.org/ >
+      au < manifest ; 1997 ; Journal of Speech, Language, and Hearing Research Volume 40 ; 1997 ; https://jslhr.pubs.asha.org/ >
+      au < manifest ; 1998 ; Journal of Speech, Language, and Hearing Research Volume 41 ; 1998 ; https://jslhr.pubs.asha.org/ >
+      au < manifest ; 1999 ; Journal of Speech, Language, and Hearing Research Volume 42 ; 1999 ; https://jslhr.pubs.asha.org/ >
+      au < manifest ; 2000 ; Journal of Speech, Language, and Hearing Research Volume 43 ; 2000 ; https://jslhr.pubs.asha.org/ >
+      au < manifest ; 2001 ; Journal of Speech, Language, and Hearing Research Volume 44 ; 2001 ; https://jslhr.pubs.asha.org/ >
+      au < manifest ; 2002 ; Journal of Speech, Language, and Hearing Research Volume 45 ; 2002 ; https://jslhr.pubs.asha.org/ >
+      au < manifest ; 2003 ; Journal of Speech, Language, and Hearing Research Volume 46 ; 2003 ; https://jslhr.pubs.asha.org/ >
+      au < manifest ; 2004 ; Journal of Speech, Language, and Hearing Research Volume 47 ; 2004 ; https://jslhr.pubs.asha.org/ >
+      au < doNotProcess ; 2005 ; Journal of Speech, Language, and Hearing Research Volume 48 ; 2005 ; https://jslhr.pubs.asha.org/ >
+      au < doNotProcess ; 2006 ; Journal of Speech, Language, and Hearing Research Volume 49 ; 2006 ; https://jslhr.pubs.asha.org/ >
+      au < doNotProcess ; 2007 ; Journal of Speech, Language, and Hearing Research Volume 50 ; 2007 ; https://jslhr.pubs.asha.org/ >
+      au < doNotProcess ; 2008 ; Journal of Speech, Language, and Hearing Research Volume 51 ; 2008 ; https://jslhr.pubs.asha.org/ >
+      au < doNotProcess ; 2009 ; Journal of Speech, Language, and Hearing Research Volume 52 ; 2009 ; https://jslhr.pubs.asha.org/ >
+      au < doNotProcess ; 2010 ; Journal of Speech, Language, and Hearing Research Volume 53 ; 2010 ; https://jslhr.pubs.asha.org/ >
+      au < doNotProcess ; 2011 ; Journal of Speech, Language, and Hearing Research Volume 54 ; 2011 ; https://jslhr.pubs.asha.org/ >
+      au < doNotProcess ; 2012 ; Journal of Speech, Language, and Hearing Research Volume 55 ; 2012 ; https://jslhr.pubs.asha.org/ >
+      au < manifest ; 2013 ; Journal of Speech, Language, and Hearing Research Volume 56 ; 2013 ; https://jslhr.pubs.asha.org/ >
+      au < released ; 2014 ; Journal of Speech, Language, and Hearing Research Volume 57 ; 2014 ; http://jslhr.pubs.asha.org/ >
+      au < manifest ; 2015 ; Journal of Speech, Language, and Hearing Research Volume 58 ; 2015 ; https://jslhr.pubs.asha.org/ >
+      au < released ; 2016 ; Journal of Speech, Language, and Hearing Research Volume 59 ; 2016 ; http://jslhr.pubs.asha.org/ >
+      au < released ; 2017 ; Journal of Speech, Language, and Hearing Research Volume 60 ; 2017 ; http://jslhr.pubs.asha.org/ >
+      au < expected ; 2018 ; Journal of Speech, Language, and Hearing Research Volume 61 ; 2018 ; https://jslhr.pubs.asha.org/ >
       }
 
     }
@@ -199,61 +199,61 @@
     {
 
       plugin = org.lockss.plugin.silverchair.SilverchairJournalsPlugin
-      #param[base_url] = http://lshss.asha.org/
+#      #param[base_url] = http://lshss.asha.org/
       param[resource_id] = 143
-      implicit < status ; year ; name ; param[year] >
+      implicit < status ; year ; name ; param[year] ; param[base_url] >
 
       {
-      param[base_url] = http://lshss.pubs.asha.org/
+#      param[base_url] = http://lshss.pubs.asha.org/
 
-      au < manifest ; 1970 ; Language, Speech, and Hearing Services in Schools Volume 1 ; 1970 >
-      au < manifest ; 1972 ; Language, Speech, and Hearing Services in Schools Volume 3 ; 1972 >
-      au < manifest ; 1973 ; Language, Speech, and Hearing Services in Schools Volume 4 ; 1973 >
-      au < manifest ; 1974 ; Language, Speech, and Hearing Services in Schools Volume 5 ; 1974 >
-      au < manifest ; 1975 ; Language, Speech, and Hearing Services in Schools Volume 6 ; 1975 >
-      au < manifest ; 1976 ; Language, Speech, and Hearing Services in Schools Volume 7 ; 1976 >
-      au < manifest ; 1977 ; Language, Speech, and Hearing Services in Schools Volume 8 ; 1977 >
-      au < manifest ; 1978 ; Language, Speech, and Hearing Services in Schools Volume 9 ; 1978 >
-      au < manifest ; 1979 ; Language, Speech, and Hearing Services in Schools Volume 10 ; 1979 >
-      au < manifest ; 1980 ; Language, Speech, and Hearing Services in Schools Volume 11 ; 1980 >
-      au < manifest ; 1981 ; Language, Speech, and Hearing Services in Schools Volume 12 ; 1981 >
-      au < manifest ; 1982 ; Language, Speech, and Hearing Services in Schools Volume 13 ; 1982 >
-      au < manifest ; 1983 ; Language, Speech, and Hearing Services in Schools Volume 14 ; 1983 >
-      au < manifest ; 1984 ; Language, Speech, and Hearing Services in Schools Volume 15 ; 1984 >
-      au < manifest ; 1985 ; Language, Speech, and Hearing Services in Schools Volume 16 ; 1985 >
-      au < manifest ; 1986 ; Language, Speech, and Hearing Services in Schools Volume 17 ; 1986 >
-      au < manifest ; 1987 ; Language, Speech, and Hearing Services in Schools Volume 18 ; 1987 >
-      au < manifest ; 1988 ; Language, Speech, and Hearing Services in Schools Volume 19 ; 1988 >
-      au < manifest ; 1989 ; Language, Speech, and Hearing Services in Schools Volume 20 ; 1989 >
-      au < manifest ; 1990 ; Language, Speech, and Hearing Services in Schools Volume 21 ; 1990 >
-      au < manifest ; 1991 ; Language, Speech, and Hearing Services in Schools Volume 22 ; 1991 >
-      au < manifest ; 1992 ; Language, Speech, and Hearing Services in Schools Volume 23 ; 1992 >
-      au < manifest ; 1993 ; Language, Speech, and Hearing Services in Schools Volume 24 ; 1993 >
-      au < manifest ; 1994 ; Language, Speech, and Hearing Services in Schools Volume 25 ; 1994 >
-      au < manifest ; 1995 ; Language, Speech, and Hearing Services in Schools Volume 26 ; 1995 >
-      au < manifest ; 1996 ; Language, Speech, and Hearing Services in Schools Volume 27 ; 1996 >
-      au < manifest ; 1997 ; Language, Speech, and Hearing Services in Schools Volume 28 ; 1997 >
-      au < manifest ; 1998 ; Language, Speech, and Hearing Services in Schools Volume 29 ; 1998 >
-      au < manifest ; 1999 ; Language, Speech, and Hearing Services in Schools Volume 30 ; 1999 >
-      au < manifest ; 2000 ; Language, Speech, and Hearing Services in Schools Volume 31 ; 2000 >
-      au < manifest ; 2001 ; Language, Speech, and Hearing Services in Schools Volume 32 ; 2001 >
-      au < manifest ; 2002 ; Language, Speech, and Hearing Services in Schools Volume 33 ; 2002 >
-      au < manifest ; 2003 ; Language, Speech, and Hearing Services in Schools Volume 34 ; 2003 >
-      au < manifest ; 2004 ; Language, Speech, and Hearing Services in Schools Volume 35 ; 2004 >
-      au < doNotProcess ; 2005 ; Language, Speech, and Hearing Services in Schools Volume 36 ; 2005 >
-      au < doNotProcess ; 2006 ; Language, Speech, and Hearing Services in Schools Volume 37 ; 2006 >
-      au < doNotProcess ; 2007 ; Language, Speech, and Hearing Services in Schools Volume 38 ; 2007 >
-      au < doNotProcess ; 2008 ; Language, Speech, and Hearing Services in Schools Volume 39 ; 2008 >
-      au < doNotProcess ; 2009 ; Language, Speech, and Hearing Services in Schools Volume 40 ; 2009 >
-      au < doNotProcess ; 2010 ; Language, Speech, and Hearing Services in Schools Volume 41 ; 2010 >
-      au < doNotProcess ; 2011 ; Language, Speech, and Hearing Services in Schools Volume 42 ; 2011 >
-      au < doNotProcess ; 2012 ; Language, Speech, and Hearing Services in Schools Volume 43 ; 2012 >
-      au < manifest ; 2013 ; Language, Speech, and Hearing Services in Schools Volume 44 ; 2013 >
-      au < manifest ; 2014 ; Language, Speech, and Hearing Services in Schools Volume 45 ; 2014 >
-      au < manifest ; 2015 ; Language, Speech, and Hearing Services in Schools Volume 46 ; 2015 >
-      au < released ; 2016 ; Language, Speech, and Hearing Services in Schools Volume 47 ; 2016 >
-      au < released ; 2017 ; Language, Speech, and Hearing Services in Schools Volume 48 ; 2017 >
-      au < expected ; 2018 ; Language, Speech, and Hearing Services in Schools Volume 49 ; 2018 >
+      au < manifest ; 1970 ; Language, Speech, and Hearing Services in Schools Volume 1 ; 1970 ; https://lshss.pubs.asha.org/ >
+      au < manifest ; 1972 ; Language, Speech, and Hearing Services in Schools Volume 3 ; 1972 ; https://lshss.pubs.asha.org/ >
+      au < manifest ; 1973 ; Language, Speech, and Hearing Services in Schools Volume 4 ; 1973 ; https://lshss.pubs.asha.org/ >
+      au < manifest ; 1974 ; Language, Speech, and Hearing Services in Schools Volume 5 ; 1974 ; https://lshss.pubs.asha.org/ >
+      au < manifest ; 1975 ; Language, Speech, and Hearing Services in Schools Volume 6 ; 1975 ; https://lshss.pubs.asha.org/ >
+      au < manifest ; 1976 ; Language, Speech, and Hearing Services in Schools Volume 7 ; 1976 ; https://lshss.pubs.asha.org/ >
+      au < manifest ; 1977 ; Language, Speech, and Hearing Services in Schools Volume 8 ; 1977 ; https://lshss.pubs.asha.org/ >
+      au < manifest ; 1978 ; Language, Speech, and Hearing Services in Schools Volume 9 ; 1978 ; https://lshss.pubs.asha.org/ >
+      au < manifest ; 1979 ; Language, Speech, and Hearing Services in Schools Volume 10 ; 1979 ; https://lshss.pubs.asha.org/ >
+      au < manifest ; 1980 ; Language, Speech, and Hearing Services in Schools Volume 11 ; 1980 ; https://lshss.pubs.asha.org/ >
+      au < manifest ; 1981 ; Language, Speech, and Hearing Services in Schools Volume 12 ; 1981 ; https://lshss.pubs.asha.org/ >
+      au < manifest ; 1982 ; Language, Speech, and Hearing Services in Schools Volume 13 ; 1982 ; https://lshss.pubs.asha.org/ >
+      au < manifest ; 1983 ; Language, Speech, and Hearing Services in Schools Volume 14 ; 1983 ; https://lshss.pubs.asha.org/ >
+      au < manifest ; 1984 ; Language, Speech, and Hearing Services in Schools Volume 15 ; 1984 ; https://lshss.pubs.asha.org/ >
+      au < manifest ; 1985 ; Language, Speech, and Hearing Services in Schools Volume 16 ; 1985 ; https://lshss.pubs.asha.org/ >
+      au < manifest ; 1986 ; Language, Speech, and Hearing Services in Schools Volume 17 ; 1986 ; https://lshss.pubs.asha.org/ >
+      au < manifest ; 1987 ; Language, Speech, and Hearing Services in Schools Volume 18 ; 1987 ; https://lshss.pubs.asha.org/ >
+      au < manifest ; 1988 ; Language, Speech, and Hearing Services in Schools Volume 19 ; 1988 ; https://lshss.pubs.asha.org/ >
+      au < manifest ; 1989 ; Language, Speech, and Hearing Services in Schools Volume 20 ; 1989 ; https://lshss.pubs.asha.org/ >
+      au < manifest ; 1990 ; Language, Speech, and Hearing Services in Schools Volume 21 ; 1990 ; https://lshss.pubs.asha.org/ >
+      au < manifest ; 1991 ; Language, Speech, and Hearing Services in Schools Volume 22 ; 1991 ; https://lshss.pubs.asha.org/ >
+      au < manifest ; 1992 ; Language, Speech, and Hearing Services in Schools Volume 23 ; 1992 ; https://lshss.pubs.asha.org/ >
+      au < manifest ; 1993 ; Language, Speech, and Hearing Services in Schools Volume 24 ; 1993 ; https://lshss.pubs.asha.org/ >
+      au < manifest ; 1994 ; Language, Speech, and Hearing Services in Schools Volume 25 ; 1994 ; https://lshss.pubs.asha.org/ >
+      au < manifest ; 1995 ; Language, Speech, and Hearing Services in Schools Volume 26 ; 1995 ; https://lshss.pubs.asha.org/ >
+      au < manifest ; 1996 ; Language, Speech, and Hearing Services in Schools Volume 27 ; 1996 ; https://lshss.pubs.asha.org/ >
+      au < manifest ; 1997 ; Language, Speech, and Hearing Services in Schools Volume 28 ; 1997 ; https://lshss.pubs.asha.org/ >
+      au < manifest ; 1998 ; Language, Speech, and Hearing Services in Schools Volume 29 ; 1998 ; https://lshss.pubs.asha.org/ >
+      au < manifest ; 1999 ; Language, Speech, and Hearing Services in Schools Volume 30 ; 1999 ; https://lshss.pubs.asha.org/ >
+      au < manifest ; 2000 ; Language, Speech, and Hearing Services in Schools Volume 31 ; 2000 ; https://lshss.pubs.asha.org/ >
+      au < manifest ; 2001 ; Language, Speech, and Hearing Services in Schools Volume 32 ; 2001 ; https://lshss.pubs.asha.org/ >
+      au < manifest ; 2002 ; Language, Speech, and Hearing Services in Schools Volume 33 ; 2002 ; https://lshss.pubs.asha.org/ >
+      au < manifest ; 2003 ; Language, Speech, and Hearing Services in Schools Volume 34 ; 2003 ; https://lshss.pubs.asha.org/ >
+      au < manifest ; 2004 ; Language, Speech, and Hearing Services in Schools Volume 35 ; 2004 ; https://lshss.pubs.asha.org/ >
+      au < doNotProcess ; 2005 ; Language, Speech, and Hearing Services in Schools Volume 36 ; 2005 ; https://lshss.pubs.asha.org/ >
+      au < doNotProcess ; 2006 ; Language, Speech, and Hearing Services in Schools Volume 37 ; 2006 ; https://lshss.pubs.asha.org/ >
+      au < doNotProcess ; 2007 ; Language, Speech, and Hearing Services in Schools Volume 38 ; 2007 ; https://lshss.pubs.asha.org/ >
+      au < doNotProcess ; 2008 ; Language, Speech, and Hearing Services in Schools Volume 39 ; 2008 ; https://lshss.pubs.asha.org/ >
+      au < doNotProcess ; 2009 ; Language, Speech, and Hearing Services in Schools Volume 40 ; 2009 ; https://lshss.pubs.asha.org/ >
+      au < doNotProcess ; 2010 ; Language, Speech, and Hearing Services in Schools Volume 41 ; 2010 ; https://lshss.pubs.asha.org/ >
+      au < doNotProcess ; 2011 ; Language, Speech, and Hearing Services in Schools Volume 42 ; 2011 ; https://lshss.pubs.asha.org/ >
+      au < doNotProcess ; 2012 ; Language, Speech, and Hearing Services in Schools Volume 43 ; 2012 ; https://lshss.pubs.asha.org/ >
+      au < manifest ; 2013 ; Language, Speech, and Hearing Services in Schools Volume 44 ; 2013 ; https://lshss.pubs.asha.org/ >
+      au < manifest ; 2014 ; Language, Speech, and Hearing Services in Schools Volume 45 ; 2014 ; https://lshss.pubs.asha.org/ >
+      au < manifest ; 2015 ; Language, Speech, and Hearing Services in Schools Volume 46 ; 2015 ; https://lshss.pubs.asha.org/ >
+      au < released ; 2016 ; Language, Speech, and Hearing Services in Schools Volume 47 ; 2016 ; http://lshss.pubs.asha.org/ >
+      au < released ; 2017 ; Language, Speech, and Hearing Services in Schools Volume 48 ; 2017 ; http://lshss.pubs.asha.org/ >
+      au < expected ; 2018 ; Language, Speech, and Hearing Services in Schools Volume 49 ; 2018 ; https://lshss.pubs.asha.org/ >
 
       }
 
