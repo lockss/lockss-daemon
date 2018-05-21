@@ -32,9 +32,11 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.atypon;
 
+import org.apache.commons.lang.StringUtils;
 import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.HttpToHttpsUrlConsumer;
+import org.lockss.util.Logger;
 import org.lockss.util.UrlUtil;
 
 /**
@@ -48,6 +50,7 @@ import org.lockss.util.UrlUtil;
  * @author Alexandra Ohlson
  */
 public class BaseAtyponHttpToHttpsUrlConsumerFactory implements UrlConsumerFactory {
+	private static final Logger log = Logger.getLogger(BaseAtyponHttpToHttpsUrlConsumerFactory.class);
 
   @Override
   public UrlConsumer createUrlConsumer(CrawlerFacade crawlFacade,
@@ -76,18 +79,36 @@ public class BaseAtyponHttpToHttpsUrlConsumerFactory implements UrlConsumerFacto
      * which will normalize to
      * http://arc.aiaa.org/action/showCitFormats?doi=10.2514%2F1.C032918
      * 
+     * Found another odd change -   
+     * http://ajph.aphapublications.org/action/showPopup?citid=citart1&id=fd2%20fd4&doi=10.2105%2FAJPH.2011.300237
+     * became
+     * 	https://ajph.aphapublications.org/action/showPopup?citid=citart1&id=fd2+fd4&doi=10.2105%2FAJPH.2011.300237
+     * Note the encoding of the "+"
+     * I think it's safe to generalize this as the first part of the url up to the ? is the same and not worry
+     * about the aregs might or might not be encoded
+     *    http://foo.com/showCitFormats?doi=<anything> 
+     *    http://foo.com/action/showPopup?citid=<anything> 
+     * finally - allow for the / to %2F in the doi portion of a "doi/full/10.1111/blah url
      * </p>
      * 
      */
     public boolean shouldStoreAtOrigUrl() {
-      return AuUtil.isBaseUrlHttp(au)
-          && fud.redirectUrls != null
-          && fud.redirectUrls.size() == 1
-          && fud.fetchUrl.equals(fud.redirectUrls.get(0))
-          && UrlUtil.isHttpUrl(fud.origUrl)
-          && UrlUtil.isHttpsUrl(fud.fetchUrl)
-          && (UrlUtil.stripProtocol(fud.origUrl).equals(UrlUtil.stripProtocol(fud.fetchUrl)) ||
-               UrlUtil.stripProtocol(fud.origUrl).equals(UrlUtil.stripProtocol(fud.fetchUrl.replace("%2F","/"))));
+    	boolean should = false;
+    	if (AuUtil.isBaseUrlHttp(au)
+    			&& fud.redirectUrls != null
+    			&& fud.redirectUrls.size() >= 1
+    			&& UrlUtil.isHttpUrl(fud.origUrl)
+    			&& UrlUtil.isHttpsUrl(fud.fetchUrl)) {
+    		String origBase = StringUtils.substringBefore(UrlUtil.stripProtocol(fud.origUrl),"?");
+    		String fetchBase = StringUtils.substringBefore(UrlUtil.stripProtocol(fud.fetchUrl),"?");
+    		should = (origBase.equals(fetchBase) ||
+    				origBase.equals(fetchBase.replace("%2F","/")));
+    	    if (fud.redirectUrls != null) {
+    	    	    log.debug3("BA redirect " + fud.redirectUrls.size() + ": " + fud.redirectUrls.toString());
+    	        log.debug3("BA redirect: " + " " + fud.origUrl + " to " + fud.fetchUrl + " should consume?: " + should);
+    	    }
+    	}
+    	return should;
     }
  }
  
