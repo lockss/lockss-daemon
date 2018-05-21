@@ -82,6 +82,8 @@
     <string>au_crawlrules</string>
     <list>
       <string>1,"^https?://([^.]+\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|cdn\.mathjax\.org)/"</string>
+      <!-- 	https://academic.oup.com/my-account/register?siteId=191&returnUrl= redirect to this means access failed -->
+      <string>2,"^https?://%s/my-account/register", url_host(base_url)</string>
       <!-- images/figures/supplemental have Expires that will always be 2147483647 and don't redirect - allow -->
       <string>1,"^https?://(%s|oup\.silverchair-cdn\.com)/oup/backfile/Content_public/Journal/[^?]+\?Expires=2147483647", url_host(base_url)</string>
       <!--  PDFs redirect through one-time with changing expiring that stores in canonical -->
@@ -89,7 +91,12 @@
       <!--  allow any other item, but if it has Expires, it has to be stable - check this-->
       <string>1,"^https?://(%s|oup\.silverchair-cdn\.com).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", url_host(base_url)</string>
       <string>1,"^https?://oup\.silverchair-cdn\.com/.*(CSS|JS|\.pdf)(\?.*)?$"</string>
+      <!--  redundant version of issue, now filtered out of crawl -->      
+      <string>2,"^https?://%s/%s/issue/(volume/)?[^?]+\?browseBy=volume", url_host(base_url), journal_id</string>
       <string>1,"^https?://%s/%s/(article(-(pdf|abstract))?|issue(-pdf)?)/(volume/)?([0-9i]+|doi).*(?!/www\.)", url_host(base_url), journal_id</string>
+      <!-- meeting abstract supplemental issues use a search query to fill toc -->
+      <!--  https://academic.oup.com/ageing/search-results?q=&f_IssueNo=suppl_1&f_Volume=46&f_TocCategories=Clinical%20quality -->
+      <string>1,"^https?://%s/%s/search-results\?q=&amp;f_IssueNo=", url_host(base_url), journal_id</string>
       <string>1,"^https?://%s/%s/downloadcitation/[^?]+\?format=ris", url_host(base_url), journal_id</string>
     </list>
   </entry>
@@ -129,9 +136,17 @@
     <string>org.lockss.plugin.silverchair.oup.OupScUrlConsumerFactory</string>
   </entry>
   <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.silverchair.oup.OupScUrlNormalizer</string>
+  </entry>  
+  <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.silverchair.oup.OupScHtmlHashFilterFactory</string>
   </entry>
+  <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.silverchair.oup.OupScPdfFilterFactory</string>
+  </entry>  
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.silverchair.oup.OupScArticleIteratorFactory</string>

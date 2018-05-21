@@ -130,6 +130,17 @@ log.setLevel("debug3");
     shouldCacheTest(ROOT_URL + "database/issue/volume/2015", true, au);
     shouldCacheTest(ROOT_URL + "database/list-of-issues/2015", true, au);
     
+    //more issue TOC links
+    shouldCacheTest(ROOT_URL + "database/issue/46/6",true, au);
+    shouldCacheTest(ROOT_URL + "database/issue/46/Suppl_3",true, au);
+    shouldCacheTest(ROOT_URL + "database/issue/46/suppl_2",true, au);
+    // but exclude the following - they're also filtered, but just in case
+    shouldCacheTest(ROOT_URL + "database/issue/46/6?browseBy=volume",false, au);
+    shouldCacheTest(ROOT_URL + "database/issue/46/Suppl_3?browseBy=volume",false, au);
+    
+    // meeting abstract TOCs use a search url
+    shouldCacheTest(ROOT_URL + "database/search-results?q=&f_IssueNo=suppl_1&f_Volume=46&f_TocCategories=Scientific%20Research%20^S%20Neurology%20and%20Neurosciences", true, au);
+    
     // article files
     shouldCacheTest(ROOT_URL + "database/article/2433123/ProtoBug-functional-families-from-the-complete", true, au);
     shouldCacheTest(ROOT_URL + "database/article-abstract/2433123/ProtoBug-functional-families-from-the-complete", true, au);
@@ -137,6 +148,10 @@ log.setLevel("debug3");
     
     
     shouldCacheTest(ROOT_URL + "database/downloadcitation/2433123?format=ris", true, au);
+    // but not the other formats
+    shouldCacheTest(ROOT_URL + "database/downloadcitation/2433123?format=bibtex", false, au);
+    shouldCacheTest(ROOT_URL + "database/downloadcitation/2433123?format=txt", false, au);
+    shouldCacheTest(ROOT_URL + "database/downloadcitation/2433123?format=anythingelse", false, au);
     shouldCacheTest(ROOT_URL + "data/sitebuilderassetsoriginals/images/database/database_feature_panel.jpg", true, au);
     shouldCacheTest(ROOT_URL + "UI/app/img/apple-touch-icon.png", true, au);
     shouldCacheTest(ROOT_URL + "UI/app/img/favicon-16x16.png", true, au);
@@ -152,10 +167,20 @@ log.setLevel("debug3");
     shouldCacheTest("https://oup.silverchair-cdn.com/cassette.axd/script/92f525bab295d0ffa6f942402d5f7034757b1440/OupCookiePolicyJS", true, au);
     shouldCacheTest("https://oup.silverchair-cdn.com/data/SiteBuilderAssets/Live/CSS/database/Site1329903961.css", true, au);
     
-    // images with expiration are now preserved? XXX
-    shouldCacheTest(ROOT_URL + "DownloadFile/DownloadImage.aspx?image=https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/database/2015/10.1093_database_bav086/5/bav086f3bp.gif?Expires=1497052403&Signature=FO4epi~mvkHGSxWQ__&Key-Pair-Id=APKAIUCZBIA4Q&sec=83749777&ar=2433219&xsltPath=~/UI/app/XSLT&imagename=", true, au);
-    shouldCacheTest("https://oup.silverchair-cdn.com/DownloadFile/DownloadImage.aspx?image=https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/database/2015/10.1093_database_bav032/5/bav032f1p.gif?Expires=1497075372&Signature=eJ85Ld6h~aVw__&Key-Pair-Id=APLVPAVW3Q&sec=83747373&ar=2433164&xsltPath=~/UI/app/XSLT&imagename=", true, au);
-    shouldCacheTest("https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/database/2015/10.1093_database_bau122/2/bau122f1p.png?Expires=1497074690&Signature=S60KGC7x1rMgczcd6O-A__&Key-Pair-Id=APKAIULVPAVW3Q", true, au);
+    // non-redirecting supplemental data, images and figures with expiration but only for constant expiration time of 2032: 2147483647? 
+    shouldCacheTest("https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/database/46/1/10.1093_ageing_afw131/11/aa-15-0870-File001.docx?Expires=2147483647&Signature=wDg8A__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA", true, au);
+    shouldCacheTest("https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/database/46/1/10.1093_ageing_afw152/12/afw152_Supplementary_Data.zip?Expires=2147483647&Signature=TKw__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA", true, au);
+    // wrong Expires
+    shouldCacheTest("https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/database/46/1/10.1093_ageing_afw131/11/aa-15-0870-File001.docx?Expires=1497052403&Signature=wDg8A__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA", false, au);
+    //PDF files start at 
+    shouldCacheTest(ROOT_URL + "database/article-pdf/46/1/119/11062483/afw166.pdf", true, au);
+    // and redirect to a variable expiring url but as they're stored at the canonical, this is okay
+    shouldCacheTest("https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/database/46/1/10.1093_ageing_afw166/11/afw166.pdf?Expires=1524256967&Signature=wzdP26Lxkw__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA", true, au);
+    
+    // TODO - investigate these next three - not sure what's going on with the crawl rules here...
+    //shouldCacheTest(ROOT_URL + "DownloadFile/DownloadImage.aspx?image=https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/database/2015/10.1093_database_bav086/5/bav086f3bp.gif?Expires=1497052403&Signature=FO4epi~mvkHGSxWQ__&Key-Pair-Id=APKAIUCZBIA4Q&sec=83749777&ar=2433219&xsltPath=~/UI/app/XSLT&imagename=", false, au);
+    //shouldCacheTest("https://oup.silverchair-cdn.com/DownloadFile/DownloadImage.aspx?image=https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/database/2015/10.1093_database_bav032/5/bav032f1p.gif?Expires=1497075372&Signature=eJ85Ld6h~aVw__&Key-Pair-Id=APLVPAVW3Q&sec=83747373&ar=2433164&xsltPath=~/UI/app/XSLT&imagename=", true, au);
+    //shouldCacheTest("https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/database/2015/10.1093_database_bau122/2/bau122f1p.png?Expires=1497074690&Signature=S60KGC7x1rMgczcd6O-A__&Key-Pair-Id=APKAIULVPAVW3Q", true, au);
     // toc, front-matter, et al PDFs with expiration are now preserved? XXX
     shouldCacheTest("https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/database/Issue/461/1/toc.pdf" +
         "?Expires=1497074690&Signature=S60KGC7x1rMgczcd6O-A__&Key-Pair-Id=APKAIULVPAVW3Q", true, au);

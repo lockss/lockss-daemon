@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,40 +32,30 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.silverchair.oup;
 
-import java.io.InputStream;
+import java.util.regex.*;
 
-import org.htmlparser.NodeFilter;
-import org.htmlparser.filters.OrFilter;
-import org.lockss.daemon.PluginException;
-import org.lockss.filter.html.*;
+import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 
-public class OupScHtmlCrawlFilterFactory implements FilterFactory {
+/**
+ * <p>
+ * URLs on OUP meeting abstract articles have param ?searchresult=1, which can be removed
+ * </p>
+ * <ul>
+ * <li><code>https://academic.oup.com/ageing/article/46/suppl_1/i39/3828923?searchresult=1</code></li>
+ * <li>https://academic.oup.com/ageing/article/46/suppl_1/i39/3828923</li>
+ * </ul>
+ */
+public class OupScUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
 
-
-
+  private static final Pattern RESULT_PATTERN = Pattern.compile("[?]searchresult=\\d+$", Pattern.CASE_INSENSITIVE);
+  private static final String RESULT_CANONICAL = "";
+  
+  
   @Override
-  public InputStream createFilteredInputStream(ArchivalUnit au,
-                                               InputStream in,
-                                               String encoding)
-      throws PluginException {
-    return new HtmlFilterInputStream(
-        
-      in,
-      encoding,
-    	  HtmlNodeFilterTransform.exclude(new OrFilter(new NodeFilter[] {
-    		  HtmlNodeFilters.tagWithAttributeRegex("a", "class", "prev"),
-    		  HtmlNodeFilters.tagWithAttributeRegex("a", "class", "next"),
-    		  HtmlNodeFilters.tagWithAttributeRegex("div", "class", "master-header"),
-    		  HtmlNodeFilters.tagWithAttributeRegex("div", "id", "InfoColumn"),
-    		  HtmlNodeFilters.tagWithAttributeRegex("div", "id", "Sidebar"),
-    		  // don't collect the powerpoint version of images
-    		  HtmlNodeFilters.tagWithAttribute("div", "class", "downloadImagesppt"),
-    		  HtmlNodeFilters.tagWithAttributeRegex("a", "class", "download-slide"),
-    		  HtmlNodeFilters.tagWithAttributeRegex("div", "class","issue-browse-top"),
-    	  })
-      )
-    );
+  public String additionalNormalization(String url, ArchivalUnit au) throws PluginException {
+    url = RESULT_PATTERN.matcher(url).replaceFirst(RESULT_CANONICAL);
+    return url;
   }
-
+  
 }
