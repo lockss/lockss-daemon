@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>down - abstract parent only</string>
+    <string>down - deprecated - no longer used by any child plugins</string>
   </entry>
 <!--  This plugin is exactly like BaseAtyponBooksPlugin
       with the added crawl rule restriction that uses the book_eisbn param in the 
