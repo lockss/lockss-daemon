@@ -296,9 +296,9 @@ while (my $line = <>) {
 #  }
 #        sleep(4);
 
-  } elsif ($plugin eq "ProjectMuse2017Plugin") {
-      $result = "Checker stub";
-      sleep(4);
+#  } elsif ($plugin eq "ProjectMuse2017Plugin") {
+#      $result = "Checker_stub";
+#      sleep(4);
 
   } elsif ($plugin eq "GPOFDSysSitemapsPlugin") {
       $url = sprintf("%ssmap/fdsys/sitemap_%d/%d_%s_sitemap.xml",
