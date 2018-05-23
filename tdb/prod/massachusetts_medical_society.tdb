@@ -36,33 +36,33 @@
       
       comment[platform] = Atypon
       plugin = org.lockss.plugin.atypon.massachusettsmedicalsociety.MassachusettsMedicalSocietyPlugin
-      param[base_url] = http://www.nejm.org/
+      #param[base_url] = http://www.nejm.org/
       param[journal_id] = nejm
-      implicit < status ; year ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
       
 
-      au < released ; 2008 ; New England Journal of Medicine Volume 358 ; 358 >
-      au < released ; 2008 ; New England Journal of Medicine Volume 359 ; 359 >
-      au < released ; 2009 ; New England Journal of Medicine Volume 360 ; 360 >
-      au < released ; 2009 ; New England Journal of Medicine Volume 361 ; 361 >
-      au < released ; 2010 ; New England Journal of Medicine Volume 362 ; 362 >
-      au < released ; 2010 ; New England Journal of Medicine Volume 363 ; 363 >
-      au < released ; 2011 ; New England Journal of Medicine Volume 364 ; 364 >
-      au < released ; 2011 ; New England Journal of Medicine Volume 365 ; 365 >
-      au < released ; 2012 ; New England Journal of Medicine Volume 366 ; 366 >
-      au < released ; 2012 ; New England Journal of Medicine Volume 367 ; 367 >
-      au < released ; 2013 ; New England Journal of Medicine Volume 368 ; 368 >
-      au < released ; 2013 ; New England Journal of Medicine Volume 369 ; 369 >
-      au < released ; 2014 ; New England Journal of Medicine Volume 370 ; 370 >
-      au < released ; 2014 ; New England Journal of Medicine Volume 371 ; 371 >
-      au < released ; 2015 ; New England Journal of Medicine Volume 372 ; 372 >
-      au < released ; 2015 ; New England Journal of Medicine Volume 373 ; 373 >
-      au < released ; 2016 ; New England Journal of Medicine Volume 374 ; 374 >
-      au < released ; 2016 ; New England Journal of Medicine Volume 375 ; 375 >
-      au < manifest ; 2017 ; New England Journal of Medicine Volume 376 ; 376 >
-      au < manifest ; 2017 ; New England Journal of Medicine Volume 377 ; 377 >
-      au < expected ; 2018 ; New England Journal of Medicine Volume 378 ; 378 >
-      au < expected ; 2018 ; New England Journal of Medicine Volume 379 ; 379 >
+      au < released ; 2008 ; New England Journal of Medicine Volume 358 ; 358 ; http://www.nejm.org/ >
+      au < released ; 2008 ; New England Journal of Medicine Volume 359 ; 359 ; http://www.nejm.org/ >
+      au < released ; 2009 ; New England Journal of Medicine Volume 360 ; 360 ; http://www.nejm.org/ >
+      au < released ; 2009 ; New England Journal of Medicine Volume 361 ; 361 ; http://www.nejm.org/ >
+      au < released ; 2010 ; New England Journal of Medicine Volume 362 ; 362 ; http://www.nejm.org/ >
+      au < released ; 2010 ; New England Journal of Medicine Volume 363 ; 363 ; http://www.nejm.org/ >
+      au < released ; 2011 ; New England Journal of Medicine Volume 364 ; 364 ; http://www.nejm.org/ >
+      au < released ; 2011 ; New England Journal of Medicine Volume 365 ; 365 ; http://www.nejm.org/ >
+      au < released ; 2012 ; New England Journal of Medicine Volume 366 ; 366 ; http://www.nejm.org/ >
+      au < released ; 2012 ; New England Journal of Medicine Volume 367 ; 367 ; http://www.nejm.org/ >
+      au < released ; 2013 ; New England Journal of Medicine Volume 368 ; 368 ; http://www.nejm.org/ >
+      au < released ; 2013 ; New England Journal of Medicine Volume 369 ; 369 ; http://www.nejm.org/ >
+      au < released ; 2014 ; New England Journal of Medicine Volume 370 ; 370 ; http://www.nejm.org/ >
+      au < released ; 2014 ; New England Journal of Medicine Volume 371 ; 371 ; http://www.nejm.org/ >
+      au < released ; 2015 ; New England Journal of Medicine Volume 372 ; 372 ; http://www.nejm.org/ >
+      au < released ; 2015 ; New England Journal of Medicine Volume 373 ; 373 ; http://www.nejm.org/ >
+      au < released ; 2016 ; New England Journal of Medicine Volume 374 ; 374 ; http://www.nejm.org/ >
+      au < released ; 2016 ; New England Journal of Medicine Volume 375 ; 375 ; http://www.nejm.org/ >
+      au < exists ; 2017 ; New England Journal of Medicine Volume 376 ; 376 ; https://www.nejm.org/ >
+      au < exists ; 2017 ; New England Journal of Medicine Volume 377 ; 377 ; https://www.nejm.org/ >
+      au < exists ; 2018 ; New England Journal of Medicine Volume 378 ; 378 ; https://www.nejm.org/ >
+      au < expected ; 2018 ; New England Journal of Medicine Volume 379 ; 379 ; https://www.nejm.org/ >
 
     }
 
