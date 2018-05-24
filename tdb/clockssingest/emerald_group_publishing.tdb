@@ -3451,12 +3451,7 @@
     param[journal_id] = itp
     #continues = 0167-5710
 
-    au < exists ; exists ; 1982-1983 ; Information Technology & People Volume 1 ; 1 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1985 ; Information Technology & People Volume 2 ; 2 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1987 ; Information Technology & People Volume 3 ; 3 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1988 ; Information Technology & People Volume 4 ; 4 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 1989 ; Information Technology & People Volume 5 ; 5 ; https://www.emeraldinsight.com/ ; >
-    au < manifest ; exists ; 1992 ; Information Technology & People Volume 6 ; 6 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 1990-1992 ; Information Technology & People Volume 6 ; 6 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 1994 ; Information Technology & People Volume 7 ; 7 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 1995 ; Information Technology & People Volume 8 ; 8 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 1996 ; Information Technology & People Volume 9 ; 9 ; https://www.emeraldinsight.com/ ; >
@@ -3482,7 +3477,6 @@
     au < frozen ; exists ; 2016 ; Information Technology & People Volume 29 ; 29 ; http://www.emeraldinsight.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Information Technology & People Volume 30 ; 30 ; http://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2018 ; Information Technology & People Volume 31 ; 31 ; https://www.emeraldinsight.com/ ; >
-    au < expected ; exists ; 2019 ; Information Technology & People Volume 32 ; 32 ; https://www.emeraldinsight.com/ ; >
 
   }
 
