@@ -22118,6 +22118,28 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
     {
 
+    title <
+      name = Journal of Experimental Psychopathology ;
+      issn = 0363-1990 ;
+      eissn = 1552-5473
+    >
+
+    #param[journal_id] = epp
+
+      au < exists ; 2010 ; Journal of Experimental Psychopathology Volume 1 ; 1 ; eppa >
+      au < exists ; 2011 ; Journal of Experimental Psychopathology Volume 2 ; 2 ; eppa >
+      au < exists ; 2012 ; Journal of Experimental Psychopathology Volume 3 ; 3 ; eppa >
+      au < exists ; 2013 ; Journal of Experimental Psychopathology Volume 4 ; 4 ; eppa >
+      au < exists ; 2014 ; Journal of Experimental Psychopathology Volume 5 ; 5 ; eppa >
+      au < exists ; 2015 ; Journal of Experimental Psychopathology Volume 6 ; 6 ; eppa >
+      au < exists ; 2016 ; Journal of Experimental Psychopathology Volume 7 ; 7 ; eppa >
+      au < exists ; 2017 ; Journal of Experimental Psychopathology Volume 8 ; 8 ; eppa >
+      au < exists ; 2018 ; Journal of Experimental Psychopathology Volume 9 ; 9 ; eppa >
+
+    }
+
+    {
+
       title <
         name = Journal of Family History ;
         issn = 0363-1990 ;
