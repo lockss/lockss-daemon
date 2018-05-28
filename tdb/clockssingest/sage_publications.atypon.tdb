@@ -14160,6 +14160,31 @@
   {
 
     title <
+      name = Heart International ;
+      issn = 1826-1868 ;
+      eissn = 2036-2579
+    >
+
+      #param[journal_id] = hei
+
+      au < exists ; exists ; 2006 ; Heart International Volume 2 ; 2 ; heia ; >
+      au < exists ; exists ; 2007 ; Heart International Volume 3 ; 3 ; heia ; >
+      au < exists ; exists ; 2009 ; Heart International Volume 4 ; 4 ; heia ; >
+      au < doesNotExist ; doesNotExist ; 2010 ; Heart International Volume 5 ; 5 ; heia ; >
+      au < exists ; exists ; 2011 ; Heart International Volume 6 ; 6 ; heia ; >
+      au < exists ; exists ; 2012 ; Heart International Volume 7 ; 7 ; heia ; >
+      au < exists ; exists ; 2013 ; Heart International Volume 8 ; 8 ; heia ; >
+      au < exists ; exists ; 2014 ; Heart International Volume 9 ; 9 ; heia ; >
+      au < exists ; exists ; 2015 ; Heart International Volume 10 ; 10 ; heia ; >
+      au < exists ; exists ; 2016 ; Heart International Volume 11 ; 11 ; heia ; >
+      au < exists ; exists ; 2017 ; Heart International Volume 12 ; 12 ; heia ; >
+      au < expected ; exists ; 2018 ; Heart International Volume 13 ; 13 ; heia ; >
+
+  }
+
+  {
+
+    title <
       name = HERD: Health Environments Research & Design Journal ;
       issn = 1937-5867 ;
       eissn = 2167-5112
@@ -22647,8 +22672,7 @@
 
     title <
       name = Journal of Experimental Psychopathology ;
-      issn = 0363-1990 ;
-      eissn = 1552-5473
+      eissn = 2043-8087
     >
 
     #param[journal_id] = epp
@@ -26862,9 +26886,7 @@
 
     #param[base_url] = http://sed.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1966 ; The Journal of Special Education Volume 1 ; 1 ; seda ; >
       au < manifest ; exists ; 1967 ; The Journal of Special Education Volume 2 ; 2 ; seda ; >
@@ -26952,6 +26974,30 @@
   {
 
     title <
+      name = Journal of Spiritual Formation and Soul Care ;
+      issn = 1939-7909 ;
+      eissn = 2328-1030
+    >
+
+    #param[journal_id] = jsf
+
+      au < exists ; exists ; 2008 ; Journal of Spiritual Formation and Soul Care Volume 1 ; 1 ; jsfa ; >
+      au < exists ; exists ; 2009 ; Journal of Spiritual Formation and Soul Care Volume 2 ; 2 ; jsfa ; >
+      au < exists ; exists ; 2010 ; Journal of Spiritual Formation and Soul Care Volume 3 ; 3 ; jsfa ; >
+      au < exists ; exists ; 2011 ; Journal of Spiritual Formation and Soul Care Volume 4 ; 4 ; jsfa ; >
+      au < exists ; exists ; 2012 ; Journal of Spiritual Formation and Soul Care Volume 5 ; 5 ; jsfa ; >
+      au < exists ; exists ; 2013 ; Journal of Spiritual Formation and Soul Care Volume 6 ; 6 ; jsfa ; >
+      au < exists ; exists ; 2014 ; Journal of Spiritual Formation and Soul Care Volume 7 ; 7 ; jsfa ; >
+      au < exists ; exists ; 2015 ; Journal of Spiritual Formation and Soul Care Volume 8 ; 8 ; jsfa ; >
+      au < exists ; exists ; 2016 ; Journal of Spiritual Formation and Soul Care Volume 9 ; 9 ; jsfa ; >
+      au < exists ; exists ; 2017 ; Journal of Spiritual Formation and Soul Care Volume 10 ; 10 ; jsfa ; >
+      au < exists ; exists ; 2018 ; Journal of Spiritual Formation and Soul Care Volume 11 ; 11 ; jsfa ; >
+
+  }
+
+  {
+
+    title <
       name = Journal of Sport & Social Issues ;
       issn = 0193-7235 ;
       eissn = 1552-7638
@@ -26959,9 +27005,7 @@
 
     #param[base_url] = http://jss.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1977 ; Journal of Sport & Social Issues Volume 1 ; 1 ; jssa ; >
       au < manifest ; exists ; 1978 ; Journal of Sport & Social Issues Volume 2 ; 2 ; jssa ; >
