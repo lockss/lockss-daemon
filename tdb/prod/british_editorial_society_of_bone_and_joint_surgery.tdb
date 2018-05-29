@@ -204,8 +204,8 @@
     au < doNotProcess ; 2014 ; Journal of Bone & Joint Surgery, British Volume Volume 96 ; 96-B >
     au < doNotProcess ; 2015 ; Journal of Bone & Joint Surgery, British Volume Volume 97 ; 97-B >
     au < doNotProcess ; 2016 ; Journal of Bone & Joint Surgery, British Volume Volume 98 ; 98-B >
-    au < exists ; 2017 ; Journal of Bone & Joint Surgery, British Volume Volume 99 ; 99-B >
-    au < exists ; 2018 ; Journal of Bone & Joint Surgery, British Volume Volume 100 ; 100-B >
+    au < manifest ; 2017 ; Journal of Bone & Joint Surgery, British Volume Volume 99 ; 99-B >
+    au < manifest ; 2018 ; Journal of Bone & Joint Surgery, British Volume Volume 100 ; 100-B >
     }
     {
     plugin = org.lockss.plugin.highwire.besbjs.BESBJSDrupalPlugin

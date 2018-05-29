@@ -59,12 +59,12 @@
 
     param[journal_id] = btn
 
-    au < exists ; 2006 ; BioTechniques Volume 40 ; 40 ; https://www.future-science.com/ >
-    au < exists ; 2006 ; BioTechniques Volume 41 ; 41 ; https://www.future-science.com/ >
-    au < exists ; 2007 ; BioTechniques Volume 42 ; 42 ; https://www.future-science.com/ >
-    au < exists ; 2007 ; BioTechniques Volume 43 ; 43 ; https://www.future-science.com/ >
-    au < exists ; 2008 ; BioTechniques Volume 44 ; 44 ; https://www.future-science.com/ >
-    au < exists ; 2008 ; BioTechniques Volume 45 ; 45 ; https://www.future-science.com/ >
+    au < manifest ; 2006 ; BioTechniques Volume 40 ; 40 ; https://www.future-science.com/ >
+    au < manifest ; 2006 ; BioTechniques Volume 41 ; 41 ; https://www.future-science.com/ >
+    au < manifest ; 2007 ; BioTechniques Volume 42 ; 42 ; https://www.future-science.com/ >
+    au < manifest ; 2007 ; BioTechniques Volume 43 ; 43 ; https://www.future-science.com/ >
+    au < manifest ; 2008 ; BioTechniques Volume 44 ; 44 ; https://www.future-science.com/ >
+    au < manifest ; 2008 ; BioTechniques Volume 45 ; 45 ; https://www.future-science.com/ >
     au < manifest ; 2009 ; BioTechniques Volume 46 ; 46 ; https://www.future-science.com/ >
     au < manifest ; 2009 ; BioTechniques Volume 47 ; 47 ; https://www.future-science.com/ >
     au < manifest ; 2010 ; BioTechniques Volume 48 ; 48 ; https://www.future-science.com/ >

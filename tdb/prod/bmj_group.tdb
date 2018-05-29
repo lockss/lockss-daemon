@@ -1613,8 +1613,8 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
         param[base_url] = http://srh.bmj.com/
         #continued_by = 2515-1991
 
-    au < bmj.BMJDrupalPlugin ; exists ; 2016 ; Journal of Family Planning and Reproductive Health Care Volume 42 ; 42 >
-    au < bmj.BMJDrupalPlugin ; exists ; 2017 ; Journal of Family Planning and Reproductive Health Care Volume 43 ; 43 >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2016 ; Journal of Family Planning and Reproductive Health Care Volume 42 ; 42 >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Journal of Family Planning and Reproductive Health Care Volume 43 ; 43 >
 
     }
 
@@ -1630,7 +1630,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     param[base_url] = http://srh.bmj.com/
     #continues = 1471-1893
 
-    au < bmj.BMJDrupalPlugin ; exists ; 2018 ; BMJ Sexual & Reproductive Health Volume 44 ; 44 >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; BMJ Sexual & Reproductive Health Volume 44 ; 44 >
 
   }
 
