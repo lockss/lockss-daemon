@@ -9035,4 +9035,26 @@ public class DbManagerSql {
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
+
+  /**
+   * Updates the database from version 27 to version 28.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws SQLException
+   *           if any problem occurred updating the database.
+   */
+  void updateDatabaseFrom27To28(Connection conn) throws SQLException {
+    final String DEBUG_HEADER = "updateDatabaseFrom27To28(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    if (conn == null) {
+      throw new IllegalArgumentException("Null connection");
+    }
+
+    // Add the new metadata item type foe files.
+    addMetadataItemType(conn, MD_ITEM_TYPE_FILE);
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
 }

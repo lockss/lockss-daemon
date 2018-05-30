@@ -1,6 +1,6 @@
 /*
 
- Copyright (c) 2015-2016 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2015-2018 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -1574,6 +1574,27 @@ public class MetadataManagerSql {
       + " where "
       + AU_SEQ_COLUMN + " = ?"
       + " and " + AU_KEY_COLUMN + " = ?";
+
+  // Query to find a metadata key by its name.
+  private static final String FIND_MD_KEY_QUERY = "select "
+      + MD_KEY_SEQ_COLUMN
+      + " from " + MD_KEY_TABLE
+      + " where " + KEY_NAME_COLUMN + " = ?";
+
+  // Query to add a metadata key.
+  private static final String INSERT_MD_KEY_QUERY = "insert into "
+      + MD_KEY_TABLE
+      + "(" + MD_KEY_SEQ_COLUMN
+      + "," + KEY_NAME_COLUMN
+      + ") values (default,?)";
+
+  // Query to add a metadata key/value pair.
+  private static final String INSERT_MD_QUERY = "insert into "
+      + MD_TABLE
+      + "(" + MD_ITEM_SEQ_COLUMN
+      + "," + MD_KEY_SEQ_COLUMN
+      + "," + MD_VALUE_COLUMN
+      + ") values (?,?,?)";
 
   private DbManager dbManager;
   private MetadataManager metadataManager;
@@ -7214,5 +7235,148 @@ public class MetadataManagerSql {
     if (log.isDebug2())
       log.debug2(DEBUG_HEADER + "result = " + (deletedCount > 0));
     return deletedCount > 0;
+  }
+
+  /**
+   * Provides the identifier of a metadata key.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param keyName
+   *          A String with the key name.
+   * @return a Long with the identifier of the metadata key.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  Long findMdKey(Connection conn, String keyName) throws DbException {
+    final String DEBUG_HEADER = "findMdKey(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "keyName = " + keyName);
+
+    Long mdKeySeq = null;
+    ResultSet resultSet = null;
+
+    PreparedStatement findMdKey =
+	dbManager.prepareStatement(conn, FIND_MD_KEY_QUERY);
+
+    try {
+      findMdKey.setString(1, keyName);
+
+      resultSet = dbManager.executeQuery(findMdKey);
+      if (resultSet.next()) {
+	mdKeySeq = resultSet.getLong(MD_KEY_SEQ_COLUMN);
+      }
+    } catch (SQLException sqle) {
+      String message = "Cannot find metadata key";
+      log.error(message, sqle);
+      log.error("SQL = '" + FIND_MD_KEY_QUERY + "'.");
+      log.error("keyName = '" + keyName + "'.");
+      throw new DbException(message, sqle);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(findMdKey);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "mdKeySeq = " + mdKeySeq);
+    return mdKeySeq;
+  }
+
+  /**
+   * Adds a metadata key to the database.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param keyName
+   *          A String with the key name.
+   * @return a Long with the identifier of the metadata key just added.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  Long addMdKey(Connection conn, String keyName) throws DbException {
+    final String DEBUG_HEADER = "addMdKey(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "keyName = " + keyName);
+
+    Long mdKeySeq = null;
+    ResultSet resultSet = null;
+    PreparedStatement insertMdKey = dbManager.prepareStatement(conn,
+	INSERT_MD_KEY_QUERY, Statement.RETURN_GENERATED_KEYS);
+
+    try {
+      // Skip auto-increment key field #0
+      insertMdKey.setString(1, keyName);
+      dbManager.executeUpdate(insertMdKey);
+      resultSet = insertMdKey.getGeneratedKeys();
+
+      if (!resultSet.next()) {
+	log.error("Unable to create metadata key table row.");
+	return null;
+      }
+
+      mdKeySeq = resultSet.getLong(1);
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "Added mdKeySeq = " + mdKeySeq);
+    } catch (SQLException sqle) {
+      String message = "Cannot add metadata key";
+      log.error(message, sqle);
+      log.error("SQL = '" + INSERT_MD_KEY_QUERY + "'.");
+      log.error("keyName = '" + keyName + "'.");
+      throw new DbException(message, sqle);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(insertMdKey);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "mdKeySeq = " + mdKeySeq);
+    return mdKeySeq;
+  }
+
+  /**
+   * Adds to the database a metadata item metadata generic key/value pair.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param mdItemSeq
+   *          A Long with the metadata item identifier.
+   * @param mdKeySeq
+   *          A Long with the metadata item key/value pair key identifier.
+   * @param mdValue
+   *          A String with the value of the metadata item key/value pair.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  void addMdPair(Connection conn, Long mdItemSeq, Long mdKeySeq, String mdValue)
+      throws DbException {
+    final String DEBUG_HEADER = "addMdPair(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+      log.debug2(DEBUG_HEADER + "mdKeySeq = " + mdKeySeq);
+      log.debug2(DEBUG_HEADER + "mdValue = " + mdValue);
+    }
+
+    PreparedStatement insertMdItemMdPair =
+	dbManager.prepareStatement(conn, INSERT_MD_QUERY);
+
+    try {
+      insertMdItemMdPair.setLong(1, mdItemSeq);
+      insertMdItemMdPair.setLong(2, mdKeySeq);
+      insertMdItemMdPair.setString(3, mdValue);
+      int count = dbManager.executeUpdate(insertMdItemMdPair);
+
+      if (log.isDebug3()) {
+	log.debug3(DEBUG_HEADER + "count = " + count);
+	log.debug3(DEBUG_HEADER + "Added mdValue = " + mdValue);
+      }
+    } catch (SQLException sqle) {
+      String message = "Cannot add a metadata item generic key/value pair";
+      log.error(message, sqle);
+      log.error("SQL = '" + INSERT_MD_QUERY + "'.");
+      log.error("mdItemSeq = " + mdItemSeq + ".");
+      log.error("mdKeySeq = " + mdKeySeq + ".");
+      log.error("mdValue = " + mdValue + ".");
+      throw new DbException(message, sqle);
+    } finally {
+      DbManager.safeCloseStatement(insertMdItemMdPair);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
 }

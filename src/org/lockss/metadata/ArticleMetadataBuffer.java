@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
- Copyright (c) 2012-2016 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2012-2018 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -107,6 +103,7 @@ class ArticleMetadataBuffer {
     String itemNumber;
     String proprietaryIdentifier;
     String fetchTime;
+    Map<String, String> mdMap;
 
     /**
      * Extract the information from the ArticleMetadata
@@ -164,7 +161,9 @@ class ArticleMetadataBuffer {
       proprietaryIdentifier =
           md.get(MetadataField.FIELD_PROPRIETARY_IDENTIFIER);
       fetchTime = md.get(MetadataField.FIELD_FETCH_TIME);
-      
+      mdMap = md.getRawMap(MetadataField.FIELD_MD_MAP);
+      if (log.isDebug3()) log.debug3("mdMap = " + mdMap);
+
       // get publication type from metadata or infer it if not set
       publicationType = md.get(MetadataField.FIELD_PUBLICATION_TYPE);
       if (StringUtil.isNullString(publicationType)) {
@@ -204,7 +203,20 @@ class ArticleMetadataBuffer {
             equals(publicationType)) {
           // Assume article for proceedings publication.
           articleType = MetadataField.ARTICLE_TYPE_PROCEEDINGSARTICLE;          
+        } else if (MetadataField.PUBLICATION_TYPE_FILE.
+            equals(publicationType)) {
+          // Assume article for file publication.
+          articleType = MetadataField.ARTICLE_TYPE_FILE;          
         }
+      } else if (MetadataField.ARTICLE_TYPE_FILE.equals(articleType)
+	  && StringUtil.isNullString(publicationType)) {
+        publicationType = MetadataField.PUBLICATION_TYPE_FILE;
+      }
+
+      if (StringUtil.isNullString(publicationTitle)
+	  && MetadataField.PUBLICATION_TYPE_FILE.equals(publicationType)
+	  && StringUtil.isNullString(publisher)) {
+	publicationTitle = "File from " + publisher;
       }
     }
     
@@ -267,7 +279,8 @@ class ArticleMetadataBuffer {
           + ", coverage=" + coverage
           + ", itemNumber=" + itemNumber
           + ", proprietaryIdentifier=" + proprietaryIdentifier
-          + ", fetchTime=" + fetchTime + "]";
+          + ", fetchTime=" + fetchTime
+          + ", mdMap=" + mdMap + "]";
     }
   }
 

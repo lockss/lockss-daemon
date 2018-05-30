@@ -1342,6 +1342,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       log.debug3(DEBUG_HEADER + "is proceedings.");
       publicationSeq = findOrCreateProceedings(conn, publisherSeq, 
           pIssn, eIssn, pubTitle, proprietaryId);
+    } else if (MetadataField.PUBLICATION_TYPE_FILE.equals(pubType)) {
+      // Yes: Find or create the file publication.
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "is file.");
+      publicationSeq = findOrCreateFile(conn, publisherSeq, pubTitle,
+	  proprietaryId);
     } else {
       // No, it is a journal article: Find or create the journal.
       log.debug3(DEBUG_HEADER + "is journal.");
@@ -1814,6 +1819,79 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 	  Collections.singleton(proprietaryId));
     }
 
+    return publicationSeq;
+  }
+
+  /**
+   * Provides the identifier of a file existing or after creating it otherwise.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param publisherSeq
+   *          A Long with the publisher identifier.
+   * @param title
+   *          A String with the name of the file.
+   * @param proprietaryId
+   *          A String with the proprietary identifier of the publication.
+   * @return a Long with the identifier of the file.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Long findOrCreateFile(Connection conn, Long publisherSeq,
+      String title, String proprietaryId) throws DbException {
+    final String DEBUG_HEADER = "findOrCreateFile(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
+      log.debug2(DEBUG_HEADER + "title = " + title);
+      log.debug2(DEBUG_HEADER + "proprietaryId = " + proprietaryId);
+    }
+
+    // Find the file.
+    Long publicationSeq =
+	findPublication(conn, publisherSeq, title, null, null, null, null,
+			MD_ITEM_TYPE_FILE);
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
+
+    // Check whether it is a new file.
+    if (publicationSeq == null) {
+      // Yes: Add to the database the new file.
+      publicationSeq = addPublication(conn, publisherSeq, null,
+	  MD_ITEM_TYPE_FILE, title);
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "new publicationSeq = " + publicationSeq);
+
+      // Skip it if the new file could not be added.
+      if (publicationSeq == null) {
+	log.error("Publication for new file '" + title
+	    + "' could not be created.");
+	return publicationSeq;
+      }
+
+      // Get the file metadata item identifier.
+      Long mdItemSeq = findPublicationMetadataItem(conn, publicationSeq);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+
+      // Add to the database the new file publication proprietary identifier.
+      addMdItemProprietaryIds(conn, mdItemSeq,
+	  Collections.singleton(proprietaryId));
+    } else {
+      // No: Get the file metadata item identifier.
+      Long mdItemSeq = findPublicationMetadataItem(conn, publicationSeq);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+
+      // Add to the database the file publication name in the metadata as an
+      // alternate, if new.
+      addNewMdItemName(conn, mdItemSeq, title);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "added new title name.");
+
+      // Add to the database the proprietary identifier, if not there already.
+      addNewMdItemProprietaryIds(conn, mdItemSeq,
+	  Collections.singleton(proprietaryId));
+    }
+
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
     return publicationSeq;
   }
 
@@ -2486,6 +2564,35 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   public void addMdItemDoi(Connection conn, Long mdItemSeq, String doi)
       throws DbException {
     mdManagerSql.addMdItemDoi(conn, mdItemSeq, doi);
+  }
+
+  /**
+   * Adds to the database a generic metadata key/value pair of a metadata item.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param mdItemSeq
+   *          A Long with the metadata item identifier.
+   * @param key
+   *          A String with the key of the metadata item key/value pair.
+   * @param value
+   *          A String with the value of the metadata item key/value pair.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public void addMdItemMdPair(Connection conn, Long mdItemSeq, String key,
+      String value) throws DbException {
+    final String DEBUG_HEADER = "addMdItemMdPair(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+      log.debug2(DEBUG_HEADER + "key = " + key);
+      log.debug2(DEBUG_HEADER + "value = " + value);
+    }
+
+    Long mdKeySeq = findOrCreateMdKey(conn, key);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "mdKeySeq = " + mdKeySeq);
+
+    mdManagerSql.addMdPair(conn, mdItemSeq, mdKeySeq, value);
   }
 
   /**
@@ -3504,6 +3611,37 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 			     featuredUrlMap.get(feature));
       log.debug3(DEBUG_HEADER + "Added feature = " + feature + ", URL = "
 	  + featuredUrlMap.get(feature));
+    }
+  }
+
+  /**
+   * Adds to the database the generic metadata key/value pairs of a metadata
+   * item.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param mdItemSeq
+   *          A Long with the metadata item identifier.
+   * @param mdMap
+   *          A Map<String, String> with the metadata key/value pairs to be
+   *          added.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  void addMdItemMd(Connection conn, Long mdItemSeq, Map<String, String> mdMap)
+      throws DbException {
+    final String DEBUG_HEADER = "addMdItemMd(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+      log.debug2(DEBUG_HEADER + "mdMap = " + mdMap);
+    }
+
+    // Loop through all the generic metadata key/value pairs.
+    for (String key : mdMap.keySet()) {
+      // Add the key/value pair.
+      addMdItemMdPair(conn, mdItemSeq, key, mdMap.get(key));
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "Added key = " + key
+	  + ", value = " + mdMap.get(key));
     }
   }
 
@@ -4532,5 +4670,56 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    */
   public boolean deleteDbAu(Long auSeq, String auKey) throws DbException {
     return getMetadataManagerSql().removeAu(auSeq, auKey);
+  }
+
+  /**
+   * Provides the identifier of a key in a generic metadata key/value pair if
+   * existing or after creating it otherwise.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param keyName
+   *          A String with the key name.
+   * @return a Long with the identifier of the key.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  private Long findOrCreateMdKey(Connection conn, String keyName)
+      throws DbException {
+    final String DEBUG_HEADER = "findOrCreateMdKey(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "keyName = " + keyName);
+    
+    if (StringUtil.isNullString(keyName)) {
+      throw new DbException("Invalid metadata key '" + keyName + "'");
+    }
+
+    Long mdKeySeq = findMdKey(conn, keyName);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "mdKeySeq = " + mdKeySeq);
+
+    // Check whether it is a new key.
+    if (mdKeySeq == null) {
+      // Yes: Add to the database the new key.
+      mdKeySeq = mdManagerSql.addMdKey(conn, keyName);
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "new mdKeySeq = " + mdKeySeq);
+    }
+
+    return mdKeySeq;
+  }
+
+  /**
+   * Provides the identifier of a metadata key.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param keyName
+   *          A String with the key name.
+   * @return a Long with the identifier of the metadata key.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Long findMdKey(Connection conn, String keyName)
+      throws DbException {
+    return mdManagerSql.findMdKey(conn, keyName);
   }
 }

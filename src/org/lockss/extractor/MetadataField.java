@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -200,6 +196,8 @@ public class MetadataField {
   public static final String PUBLICATION_TYPE_JOURNAL = "journal";
   /** Publication is a proceedings publication. */
   public static final String PUBLICATION_TYPE_PROCEEDINGS = "proceedings";
+  /** Publication is a file. */
+  public static final String PUBLICATION_TYPE_FILE = "file";
   /** Publication is an unknown publication. */
   public static final String PUBLICATION_TYPE_UNKNOWN_PUBLICATION =
       "unknown_publication";
@@ -215,6 +213,8 @@ public class MetadataField {
   /** Publication unit is a proceedings article */
   public static final String ARTICLE_TYPE_PROCEEDINGSARTICLE =
       "proceedings_article";
+  /** Publication unit is a file */
+  public static final String ARTICLE_TYPE_FILE = "file";
   /** Publication unit is an unknown article */
   public static final String ARTICLE_TYPE_UNKNOWNARTICLE = "unknown_article";
 
@@ -603,6 +603,10 @@ public class MetadataField {
   public static final MetadataField FIELD_ABSTRACT = new MetadataField(
       FIELD_KEY_ABSTRACT, Cardinality.Single);
 
+  public static final String KEY_MD_MAP = "md.map";
+  public static final MetadataField FIELD_MD_MAP = new MetadataField(
+      KEY_MD_MAP, Cardinality.Single);
+
   // array of fields -- used to populate key-to-object fieldMap.
   // IMPORTANT: update this array when adding a new field!
   private static MetadataField[] fields = { 
@@ -623,6 +627,7 @@ public class MetadataField {
     FIELD_PUBLISHER,
     FIELD_START_PAGE,
     FIELD_VOLUME,
+    FIELD_MD_MAP,
     DC_FIELD_CITATION_CHAPTER,
     DC_FIELD_CITATION_EPAGE,
     DC_FIELD_CITATION_ISSUE,
