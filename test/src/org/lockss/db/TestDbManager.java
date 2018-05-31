@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
- Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2018 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -608,5 +604,28 @@ public class TestDbManager extends LockssTestCase {
     assertEquals(expectedLid, resultSet.getString(PROVIDER_LID_COLUMN));
     assertEquals(expectedName, resultSet.getString(PROVIDER_NAME_COLUMN));
     assertFalse(resultSet.next());
+  }
+
+  /**
+   * Tests the update of the database from version 0 to version 28.
+   * 
+   * @throws Exception
+   */
+  public void testV0ToV28Update() throws Exception {
+    initializeTestDbManager(0, 28);
+    assertTrue(dbManager.isReady());
+
+    Connection conn = dbManager.getConnection();
+    assertNotNull(conn);
+
+    String query = "select " + MD_ITEM_TYPE_SEQ_COLUMN
+	+ " from " + MD_ITEM_TYPE_TABLE
+	+ " where " + TYPE_NAME_COLUMN + " = ?";
+    PreparedStatement stmt = dbManager.prepareStatement(conn, query);
+    stmt.setString(1, MD_ITEM_TYPE_FILE);
+    ResultSet resultSet = dbManager.executeQuery(stmt);
+
+    assertTrue(resultSet.next());
+    assertEquals(11, resultSet.getLong(MD_ITEM_TYPE_SEQ_COLUMN));
   }
 }

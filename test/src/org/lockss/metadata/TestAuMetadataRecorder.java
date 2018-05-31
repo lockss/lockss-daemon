@@ -155,6 +155,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
     runValidateMdItemTypeHierarchyTest();
     runValidateMetadataTest();
     runRecordProceedingsTest();
+    runRecordFileTest();
   }
 
   ReindexingTask newReindexingTask(ArchivalUnit au,
@@ -1580,6 +1581,95 @@ public class TestAuMetadataRecorder extends LockssTestCase {
     }
 
     return count;
+  }
+
+  private void runRecordFileTest() throws Exception {
+    ArticleMetadata am = new ArticleMetadata();
+    am.put(MetadataField.FIELD_PUBLICATION_TYPE,
+	MetadataField.PUBLICATION_TYPE_FILE);
+    am.put(MetadataField.FIELD_DATE, "2016-01-28");
+    am.put(MetadataField.FIELD_ARTICLE_TITLE, "Article Title");
+    am.put(MetadataField.FIELD_PUBLISHER, "Publisher");
+    am.put(MetadataField.FIELD_ACCESS_URL, "http://xyz.com/file/1");
+
+    Map<String, String> md = new HashMap<String, String>();
+    md.put("key1", "value1");
+    am.putRaw(MetadataField.FIELD_MD_MAP.getKey(), md);
+
+    ArticleMetadataBuffer amBuffer = new ArticleMetadataBuffer(getTempDir());
+    amBuffer.add(am);
+
+    Connection conn = null;
+
+    try {
+      conn = dbManager.getConnection();
+
+      assertEquals(0, countItemsByTypeName(conn, MD_ITEM_TYPE_BOOK_SERIES));
+      assertEquals(1, countItemsByTypeName(conn, MD_ITEM_TYPE_BOOK));
+      assertEquals(0, countItemsByTypeName(conn, MD_ITEM_TYPE_BOOK_CHAPTER));
+      assertEquals(1, countItemsByTypeName(conn, MD_ITEM_TYPE_JOURNAL));
+      assertEquals(0, countItemsByTypeName(conn, MD_ITEM_TYPE_JOURNAL_ARTICLE));
+      assertEquals(0, countItemsByTypeName(conn, MD_ITEM_TYPE_BOOK_VOLUME));
+      assertEquals(0, countItemsByTypeName(conn, MD_ITEM_TYPE_PROCEEDINGS));
+      assertEquals(0, countItemsByTypeName(conn,
+	  MD_ITEM_TYPE_PROCEEDINGS_ARTICLE));
+      assertEquals(0, countItemsByTypeName(conn,
+	  MD_ITEM_TYPE_UNKNOWN_PUBLICATION));
+      assertEquals(0, countItemsByTypeName(conn,
+	  MD_ITEM_TYPE_UNKNOWN_ARTICLE));
+      assertEquals(0, countItemsByTypeName(conn, MD_ITEM_TYPE_FILE));
+
+      new AuMetadataRecorder(null, metadataManager, sau0).storeMetadata(conn,
+	  amBuffer.iterator().next());
+
+      assertEquals(0, countItemsByTypeName(conn, MD_ITEM_TYPE_BOOK_SERIES));
+      assertEquals(1, countItemsByTypeName(conn, MD_ITEM_TYPE_BOOK));
+      assertEquals(0, countItemsByTypeName(conn, MD_ITEM_TYPE_BOOK_CHAPTER));
+      assertEquals(1, countItemsByTypeName(conn, MD_ITEM_TYPE_JOURNAL));
+      assertEquals(0, countItemsByTypeName(conn, MD_ITEM_TYPE_JOURNAL_ARTICLE));
+      assertEquals(0, countItemsByTypeName(conn, MD_ITEM_TYPE_BOOK_VOLUME));
+      assertEquals(0, countItemsByTypeName(conn, MD_ITEM_TYPE_PROCEEDINGS));
+      assertEquals(0, countItemsByTypeName(conn,
+	  MD_ITEM_TYPE_PROCEEDINGS_ARTICLE));
+      assertEquals(0, countItemsByTypeName(conn,
+	  MD_ITEM_TYPE_UNKNOWN_PUBLICATION));
+      assertEquals(0, countItemsByTypeName(conn,
+	  MD_ITEM_TYPE_UNKNOWN_ARTICLE));
+      assertEquals(2, countItemsByTypeName(conn, MD_ITEM_TYPE_FILE));
+
+      PreparedStatement stmt = null;
+      ResultSet resultSet = null;
+
+      try {
+        String query = "select * from " + MD_TABLE;
+
+        stmt = dbManager.prepareStatement(conn, query);
+        resultSet = dbManager.executeQuery(stmt);
+
+        resultSet.next();
+        Long mdKeySeq = resultSet.getLong(MD_KEY_SEQ_COLUMN);
+        assertEquals((Long)1L, mdKeySeq);
+        assertEquals("value1", resultSet.getString(MD_VALUE_COLUMN));
+        assertFalse(resultSet.next());
+        resultSet.close();
+
+        query = "select * from " + MD_KEY_TABLE;
+
+        stmt = dbManager.prepareStatement(conn, query);
+        resultSet = dbManager.executeQuery(stmt);
+
+        resultSet.next();
+        String keyName = resultSet.getString(KEY_NAME_COLUMN);
+        assertEquals("key1", keyName);
+        assertFalse(resultSet.next());
+      } finally {
+        DbManager.safeCloseResultSet(resultSet);
+        DbManager.safeCloseStatement(stmt);
+      }
+
+    } finally {
+      DbManager.safeRollbackAndClose(conn);
+    }
   }
 
   private static class MySimulatedPlugin extends SimulatedPlugin {
