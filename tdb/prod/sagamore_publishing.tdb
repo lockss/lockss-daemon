@@ -30,7 +30,6 @@
     au < released ; 2012 ; 9 ; Asian Journal of Exercise and Sports Science Volume 9 ; 2012 >
     au < released ; 2013 ; 10 ; Asian Journal of Exercise and Sports Science Volume 10 ; 2013 >
     au < released ; 2014 ; 11 ; Asian Journal of Exercise and Sports Science Volume 11 ; 2014 >
-    au < expected ; 2015 ; 12 ; Asian Journal of Exercise and Sports Science Volume 12 ; 2015 >
   }
 
   {
@@ -40,11 +39,11 @@
     >
 
     param[journal_id] = gjhpep
+    #no content online
 
-    au < released ; 2012 ; 1 ; The Global Journal of Health and Physical Education Pedagogy Volume 1 ; 2012 >
-    au < released ; 2013 ; 2 ; The Global Journal of Health and Physical Education Pedagogy Volume 2 ; 2013 >
+    au < down ; 2012 ; 1 ; The Global Journal of Health and Physical Education Pedagogy Volume 1 ; 2012 >
+    au < down ; 2013 ; 2 ; The Global Journal of Health and Physical Education Pedagogy Volume 2 ; 2013 >
     au < notReady ; 2014 ; 3 ; The Global Journal of Health and Physical Education Pedagogy Volume 3 ; 2014 > # no substance. issues are 'announcements of interest' see http://js.sagamorepub.com/index.php/gjhpep/gateway/lockss?year=2014
-    au < expected ; 2015 ; 4 ; The Global Journal of Health and Physical Education Pedagogy Volume 4 ; 2015 >
   }
 
   {
@@ -55,22 +54,21 @@
 
     param[journal_id] = gjhep
 
-    au < manifest ; 1998 ; 1 ; Global Journal of Health Education and Promotion Volume 1 ; 1998 >
-    au < manifest ; 1999 ; 2 ; Global Journal of Health Education and Promotion Volume 2 ; 1999 >
-    au < manifest ; 2000 ; 3 ; Global Journal of Health Education and Promotion Volume 3 ; 2000 >
-    au < manifest ; 2001 ; 4 ; Global Journal of Health Education and Promotion Volume 4 ; 2001 >
-    au < manifest ; 2002 ; 5 ; Global Journal of Health Education and Promotion Volume 5 ; 2002 >
-    au < manifest ; 2003 ; 6 ; Global Journal of Health Education and Promotion Volume 6 ; 2003 >
-    au < manifest ; 2004 ; 7 ; Global Journal of Health Education and Promotion Volume 7 ; 2004 >
-    au < released ; 2005 ; 8 ; Global Journal of Health Education and Promotion Volume 8 ; 2005 >
-    au < released ; 2006 ; 9 ; Global Journal of Health Education and Promotion Volume 9 ; 2006 >
-    au < released ; 2007 ; 10 ; Global Journal of Health Education and Promotion Volume 10 ; 2007 >
-    au < released ; 2008 ; 11 ; Global Journal of Health Education and Promotion Volume 11 ; 2008 >
-    au < released ; 2009 ; 12 ; Global Journal of Health Education and Promotion Volume 12 ; 2009 >
-    au < released ; 2010 ; 13 ; Global Journal of Health Education and Promotion Volume 13 ; 2010 >
-    au < released ; 2011 ; 14 ; Global Journal of Health Education and Promotion Volume 14 ; 2011 >
-    au < released ; 2012 ; 15 ; Global Journal of Health Education and Promotion Volume 15 ; 2012 >
-    au < expected ; 2013 ; 16 ; Global Journal of Health Education and Promotion Volumd 16 ; 2013 >
+    au < doNotProcess ; 1998 ; 1 ; Global Journal of Health Education and Promotion Volume 1 ; 1998 >
+    au < doNotProcess ; 1999 ; 2 ; Global Journal of Health Education and Promotion Volume 2 ; 1999 >
+    au < doNotProcess ; 2000 ; 3 ; Global Journal of Health Education and Promotion Volume 3 ; 2000 >
+    au < doNotProcess ; 2001 ; 4 ; Global Journal of Health Education and Promotion Volume 4 ; 2001 >
+    au < doNotProcess ; 2002 ; 5 ; Global Journal of Health Education and Promotion Volume 5 ; 2002 >
+    au < doNotProcess ; 2003 ; 6 ; Global Journal of Health Education and Promotion Volume 6 ; 2003 >
+    au < doNotProcess ; 2004 ; 7 ; Global Journal of Health Education and Promotion Volume 7 ; 2004 >
+    au < down ; 2005 ; 8 ; Global Journal of Health Education and Promotion Volume 8 ; 2005 >
+    au < down ; 2006 ; 9 ; Global Journal of Health Education and Promotion Volume 9 ; 2006 >
+    au < down ; 2007 ; 10 ; Global Journal of Health Education and Promotion Volume 10 ; 2007 >
+    au < down ; 2008 ; 11 ; Global Journal of Health Education and Promotion Volume 11 ; 2008 >
+    au < down ; 2009 ; 12 ; Global Journal of Health Education and Promotion Volume 12 ; 2009 >
+    au < down ; 2010 ; 13 ; Global Journal of Health Education and Promotion Volume 13 ; 2010 >
+    au < down ; 2011 ; 14 ; Global Journal of Health Education and Promotion Volume 14 ; 2011 >
+    au < down ; 2012 ; 15 ; Global Journal of Health Education and Promotion Volume 15 ; 2012 >
   }
 
   {
@@ -87,10 +85,10 @@
     au < released ; 2012 ; 4 ; Journal of Applied Sport Management: Research that Matters Volume 4 ; 2012 >
     au < released ; 2013 ; 5 ; Journal of Applied Sport Management: Research that Matters Volume 5 ; 2013 >
     au < released ; 2014 ; 6 ; Journal of Applied Sport Management: Research that Matters Volume 6 ; 2014 >
-    au < released ; 2015 ; 7 ; Journal of Applied Sport Management: Research that Matters Volume 7 ; 2015 > #article page redirects to subscription page. http://js.sagamorepub.com/jasm/article/view/4498/4933
+    au < released ; 2015 ; 7 ; Journal of Applied Sport Management: Research that Matters Volume 7 ; 2015 >
     au < released ; 2016 ; 8 ; Journal of Applied Sport Management: Research that Matters Volume 8 ; 2016 > 
     au < testing ; 2017 ; 9 ; Journal of Applied Sport Management: Research that Matters Volume 9 ; 2017 > 
-    au < expected ; 2018 ; 10 ; Journal of Applied Sport Management: Research that Matters Volume 10 ; 2018 > 
+    au < exists ; 2018 ; 10 ; Journal of Applied Sport Management: Research that Matters Volume 10 ; 2018 >
   }
 
   {
@@ -100,12 +98,10 @@
 
     param[journal_id] = jfpdm
 
-    au < released ; 2013 ; 1 ; Journal of Facility Planning, Design, and Management Volume 1 ; 2013 >
-    au < released ; 2014 ; 2 ; Journal of Facility Planning, Design, and Management Volume 2 ; 2014 >
-    au < released ; 2015 ; 3 ; Journal of Facility Planning, Design, and Management Volume 3 ; 2015 >
-    au < released ; 2016 ; 4 ; Journal of Facility Planning, Design, and Management Volume 4 ; 2016 >
-    au < expected ; 2017 ; 5 ; Journal of Facility Planning, Design, and Management Volume 5 ; 2017 >
-    au < expected ; 2018 ; 6 ; Journal of Facility Planning, Design, and Management Volume 6 ; 2018 >
+    au < down ; 2013 ; 1 ; Journal of Facility Planning, Design, and Management Volume 1 ; 2013 >
+    au < down ; 2014 ; 2 ; Journal of Facility Planning, Design, and Management Volume 2 ; 2014 >
+    au < down ; 2015 ; 3 ; Journal of Facility Planning, Design, and Management Volume 3 ; 2015 >
+    au < down ; 2016 ; 4 ; Journal of Facility Planning, Design, and Management Volume 4 ; 2016 >
 
   }
 
@@ -176,7 +172,7 @@
     au < released ; 2015 ; 33 ; Journal of Park and Recreation Administration Volume 33 ; 2015 >
     au < released ; 2016 ; 34 ; Journal of Park and Recreation Administration Volume 34 ; 2016 >
     au < released ; 2017 ; 35 ; Journal of Park and Recreation Administration Volume 35 ; 2017 >
-    au < expected ; 2018 ; 36 ; Journal of Park and Recreation Administration Volume 36 ; 2018 >
+    au < exists ; 2018 ; 36 ; Journal of Park and Recreation Administration Volume 36 ; 2018 >
   }
 
   {
@@ -186,7 +182,6 @@
     >
 
     param[journal_id] = pe
-    # The Physical Educator Volume 71, redirects to login page.
 
     au < manifest ; 1980 ; 37 ; The Physical Educator Volume 37 ; 1980 >
     au < manifest ; 1981 ; 38 ; The Physical Educator Volume 38 ; 1981 >
@@ -226,7 +221,7 @@
     au < released ; 2015 ; 72 ; The Physical Educator Volume 72 ; 2015 >
     au < released ; 2016 ; 73 ; The Physical Educator Volume 73 ; 2016 >
     au < released ; 2017 ; 74 ; The Physical Educator Volume 74 ; 2017 >
-    au < expected ; 2018 ; 75 ; The Physical Educator Volume 75 ; 2018 >
+    au < exists ; 2018 ; 75 ; The Physical Educator Volume 75 ; 2018 >
   }
 
   {
@@ -295,7 +290,7 @@
     au < released ; 2015 ; 49 ; Therapeutic Recreation Journal Volume 49 ; 2015 >
     au < released ; 2016 ; 50 ; Therapeutic Recreation Journal Volume 50 ; 2016 >
     au < released ; 2017 ; 51 ; Therapeutic Recreation Journal Volume 51 ; 2017 >
-    au < expected ; 2018 ; 52 ; Therapeutic Recreation Journal Volume 52 ; 2018 >
+    au < exists ; 2018 ; 52 ; Therapeutic Recreation Journal Volume 52 ; 2018 >
   }
   
   {
@@ -306,13 +301,14 @@
 
     param[journal_id] = jhett
 
-    au < released ; 2014 ; 1 ; Journal of Health Education Teaching Techniques Volume 1 ; 2014 >
-    au < released ; 2015 ; 2 ; Journal of Health Education Teaching Techniques Volume 2 ; 2015 >
+    au < down ; 2014 ; 1 ; Journal of Health Education Teaching Techniques Volume 1 ; 2014 >
+    au < down ; 2015 ; 2 ; Journal of Health Education Teaching Techniques Volume 2 ; 2015 >
   }
   
   {
     title <
-      name = Journal of Nonprofit Education and Leadership
+      name = Journal of Nonprofit Education and Leadership ;
+      issn = 2157-0604
     >
 
     param[journal_id] = jnel
@@ -325,12 +321,13 @@
     au < released ; 2015 ; 5 ; Journal of Nonprofit Education and Leadership Volume 5 ; 2015 >
     au < released ; 2016 ; 6 ; Journal of Nonprofit Education and Leadership Volume 6 ; 2016 >
     au < released ; 2017 ; 7 ; Journal of Nonprofit Education and Leadership Volume 7 ; 2017 >
-    au < expected ; 2018 ; 8 ; Journal of Nonprofit Education and Leadership Volume 8 ; 2018 >
+    au < exists ; 2018 ; 8 ; Journal of Nonprofit Education and Leadership Volume 8 ; 2018 >
   }
   
   {
     title <
-      name = Learning Disabilities: A Multidisciplinary Journal
+      name = Learning Disabilities: A Multidisciplinary Journal ;
+      issn = 2374-7846
     >
 
     param[journal_id] = ldmj
@@ -357,20 +354,52 @@
     au < released ; 2014 ; 20 ; Learning Disabilities: A Multidisciplinary Journal Volume 20 ; 2014 >
     au < released ; 2016 ; 21 ; Learning Disabilities: A Multidisciplinary Journal Volume 21 ; 2016 >
     au < released ; 2017 ; 22 ; Learning Disabilities: A Multidisciplinary Journal Volume 22 ; 2017 >
-    au < expected ; 2018 ; 23 ; Learning Disabilities: A Multidisciplinary Journal Volume 23 ; 2018 >
+    au < exists ; 2018 ; 23 ; Learning Disabilities: A Multidisciplinary Journal Volume 23 ; 2018 >
+
   }
+
   {
     title <
-      name = PALAESTRA
+      name = PALAESTRA ;
+      issn = 2372-1391
     >
 
     param[journal_id] = palaestra
+    #manifest page not found, https://js.sagamorepub.com/palaestra/index
 
-    au < exists ; 2010 ; 24 ; PALAESTRA Volume 24 ; 2010 >
+    au < exists ; 1984 ; 1 ; PALAESTRA Volume 1 ; 1984 >
+    au < exists ; 1985 ; 1-2 ; PALAESTRA Volume 1-2 ; 1985 >
+    au < exists ; 1986 ; 2-3 ; PALAESTRA Volume 2-3 ; 1986 >
+    au < exists ; 1987 ; 3-4 ; PALAESTRA Volume 3-4 ; 1987 >
+    au < exists ; 1988 ; 4-5 ; PALAESTRA Volume 4-5 ; 1988 >
+    au < exists ; 1989 ; 5-6 ; PALAESTRA Volume 5-6 ; 1989 >
+    au < exists ; 1990 ; 6-7 ; PALAESTRA Volume 6-7 ; 1990 >
+    au < exists ; 1991 ; 7-8 ; PALAESTRA Volume 7-8 ; 1991 >
+    au < exists ; 1992 ; 8-9 ; PALAESTRA Volume 8-9 ; 1992 >
+    au < exists ; 1993 ; 9-10 ; PALAESTRA Volume 9-10 ; 1993 >
+    au < exists ; 1994 ; 10-11 ; PALAESTRA Volume 10-11 ; 1994 >
+    au < exists ; 1995 ; 11 ; PALAESTRA Volume 11 ; 1995 >
+    au < exists ; 1996 ; 12 ; PALAESTRA Volume 12 ; 1996 >
+    au < exists ; 1997 ; 13 ; PALAESTRA Volume 13 ; 1997 >
+    au < exists ; 1998 ; 14 ; PALAESTRA Volume 14 ; 1998 >
+    au < exists ; 1999 ; 15 ; PALAESTRA Volume 15 ; 1999 >
+    au < exists ; 2000 ; 16 ; PALAESTRA Volume 16 ; 2000 >
+    au < exists ; 2001 ; 17 ; PALAESTRA Volume 17 ; 2001 >
+    au < exists ; 2002 ; 18 ; PALAESTRA Volume 18 ; 2002 >
+    au < exists ; 2003 ; 19 ; PALAESTRA Volume 19 ; 2003 >
+    au < exists ; 2004 ; 20 ; PALAESTRA Volume 20 ; 2004 >
+    au < doesNotExist ; 2005 ; 21 ; PALAESTRA Volume 21 ; 2005 >
+    au < doesNotExist ; 2006 ; 22 ; PALAESTRA Volume 22 ; 2006 >
+    au < exists ; 2007 ; 23 ; PALAESTRA Volume 23 ; 2007 >
+    au < exists ; 2010 ; 25 ; PALAESTRA Volume 25 ; 2010 >
     au < exists ; 2011 ; 25 ; PALAESTRA Volume 25 ; 2011 >
     au < exists ; 2012 ; 26 ; PALAESTRA Volume 26 ; 2012 >
     au < exists ; 2013 ; 27 ; PALAESTRA Volume 27 ; 2013 >
     au < exists ; 2014 ; 28 ; PALAESTRA Volume 28 ; 2014 >
-    au < expected ; 2015 ; 29 ; PALAESTRA Volume 29 ; 2015 >
+    au < exists ; 2015 ; 29 ; PALAESTRA Volume 29 ; 2015 >
+    au < exists ; 2016 ; 30 ; PALAESTRA Volume 30 ; 2016 >
+    au < exists ; 2017 ; 31 ; PALAESTRA Volume 31 ; 2017 >
+    au < exists ; 2018 ; 32 ; PALAESTRA Volume 32 ; 2018 >
+
   }
 }
