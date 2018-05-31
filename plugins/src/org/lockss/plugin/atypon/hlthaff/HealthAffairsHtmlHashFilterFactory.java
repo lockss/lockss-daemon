@@ -32,18 +32,18 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.atypon.hlthaff;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
+//import java.io.FileInputStream;
+//import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.util.Vector;
 
-import org.apache.commons.io.IOUtils;
+//import org.apache.commons.io.IOUtils;
 import org.htmlparser.*;
 import org.htmlparser.tags.*;
 import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory;
-import org.lockss.uiapi.util.Constants;
+//import org.lockss.uiapi.util.Constants;
 
 // Keeps contents only (includeNodes), then hashes out unwanted nodes 
 // within the content (excludeNodes).
@@ -98,6 +98,8 @@ public class HealthAffairsHtmlHashFilterFactory
         // on article page <div class="article__breadcrumbs">
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "scroll-to-target"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article__breadcrumbs"),
+        // References
+        HtmlNodeFilters.tagWithAttributeRegex("li", "class", "references__item"),
     };
     return super.createFilteredInputStream(au, in, encoding, 
                                            includeNodes, excludeNodes);
@@ -105,15 +107,15 @@ public class HealthAffairsHtmlHashFilterFactory
   
   @Override
   public boolean doTagRemovalFiltering() {
-    return false;
+    return true;
   }
   
   @Override
   public boolean doWSFiltering() {
-    return false;
+    return true;
   }
   
-  public static void main(String[] args) throws Exception {
+  /*public static void main(String[] args) throws Exception {
     String file1 = "/home/etenbrink/workspace/data/ha1.html";
     String file2 = "/home/etenbrink/workspace/data/ha2.html";
     String file3 = "/home/etenbrink/workspace/data/ha3.html";
@@ -130,6 +132,6 @@ public class HealthAffairsHtmlHashFilterFactory
     IOUtils.copy(new HealthAffairsHtmlHashFilterFactory().createFilteredInputStream(null,
         new FileInputStream(file4), Constants.DEFAULT_ENCODING),
         new FileOutputStream(file4 + ".out"));
-  }
+  }*/
   
 }
