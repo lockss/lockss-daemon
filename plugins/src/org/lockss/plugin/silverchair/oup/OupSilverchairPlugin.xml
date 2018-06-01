@@ -91,6 +91,8 @@
       <!--  allow any other item, but if it has Expires, it has to be stable - check this-->
       <string>1,"^https?://(%s|oup\.silverchair-cdn\.com).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", url_host(base_url)</string>
       <string>1,"^https?://oup\.silverchair-cdn\.com/.*(CSS|JS|\.pdf)(\?.*)?$"</string>
+      <!--  PDF content is going through watermarking SOME of the time; we will consume -->
+      <string>1,"^https?://watermark\.silverchair\.com/[^/]+\.pdf?token="</string>
       <!--  redundant version of issue, now filtered out of crawl -->      
       <string>2,"^https?://%s/%s/issue/(volume/)?[^?]+\?browseBy=volume", url_host(base_url), journal_id</string>
       <string>1,"^https?://%s/%s/(article(-(pdf|abstract))?|issue(-pdf)?)/(volume/)?([0-9i]+|doi).*(?!/www\.)", url_host(base_url), journal_id</string>
@@ -193,13 +195,13 @@
   </entry>
   <entry>
     <string>au_permitted_host_pattern</string>
-    <string>"[^.]+\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|[^.]+\.silverchair-?cdn\.com|cdn\.mathjax\.org"</string>
+    <string>"[^.]+\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|[^.]+\.silverchair-?cdn\.com|cdn\.mathjax\.org|cdnjs\.cloudflare\.com|watermark\.silverchair\.com"</string>
   </entry>
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
     <list>
       <string>https?://oup\.silverchair-cdn\.com/(cassette\.axd|data)/.*(JS|CSS|\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff))(\?.*)?$</string>
-      <string>https?://(fonts\.googleapis\.com|cdn\.jsdelivr\.net)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?</string>
+      <string>https?://(fonts\.googleapis\.com|cdn\.jsdelivr\.net|cdnjs\.cloudflare\.com)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?</string>
     </list>
   </entry>
   <entry>
@@ -207,7 +209,7 @@
     <list>
       <string>"\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)\?Expires=[^?]+$", 0</string>
       <string>"https?://oup\.silverchair-cdn\.com/(cassette\.axd|data)/.*(JS|CSS|\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff))(\?.*)?$", 0</string>
-      <string>"https?://fonts.googleapis.com/.*(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", 0</string>
+      <string>"https?://(fonts\.googleapis\.com|cdn\.jsdelivr\.net|cdnjs\.cloudflare\.com)/.*(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", 0</string>
     </list>
   </entry>
 </map>

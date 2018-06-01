@@ -45,15 +45,25 @@ import org.lockss.util.Logger;
 public class OupScUrlConsumerFactory implements UrlConsumerFactory {
   private static final Logger log = Logger.getLogger(OupScUrlConsumerFactory.class);
 
-  public static final String DEL_URL = "/article-pdf/[^?]+\\.pdf$";
-  public static final String DOC_URL = "/backfile/Content_public/Journal/[^?]+\\.pdf";
+  //https://academic.oup.com/ageing/issue-pdf/45/1/10919248
+    //or
+  //https://academic.oup.com/ageing/article-pdf/45/2/323/6650409/afw017.pdf
+  // it doesn't really matter if it ends in PDF - if it redirects from a canonical to a temporary, we ought to consume
+  public static final String DEL_URL = "/(issue|article)-pdf/";
+  // will redirect to: 
+  // https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/ageing/45/2/10.1093_ageing_afw017/3/afw017.pdf?Expires=
+  public static final String DOC_URL = "/backfile/Content_public/Journal/[^?]+";
   public static final String DOC_ARGS = "\\?Expires=[^&]+&Signature=[^&]+&Key-Pair-Id=.+$";
+  // or if through watermarking to:
+  // https://watermark.silverchair.com/front_matter.pdf?token=AQECAHi208
+  public static final String WMARK_URL = "watermark[.]silverchair[.]com/[^?]+";
 
   public static final String ORIG_FULLTEXT_STRING = DEL_URL;
   public static final String DEST_FULLTEXT_STRING = DOC_URL +  DOC_ARGS;
 
   protected static final Pattern origFullTextPat = Pattern.compile(ORIG_FULLTEXT_STRING, Pattern.CASE_INSENSITIVE);
   protected static final Pattern destFullTextPat = Pattern.compile(DEST_FULLTEXT_STRING, Pattern.CASE_INSENSITIVE);
+  protected static final Pattern wMarkFullTextPat = Pattern.compile(WMARK_URL, Pattern.CASE_INSENSITIVE);
   
   public static Pattern getOrigPdfPattern() {
     return origFullTextPat;
@@ -110,8 +120,8 @@ public class OupScUrlConsumerFactory implements UrlConsumerFactory {
       boolean should =  fud.redirectUrls != null
           && fud.redirectUrls.size() == 1
           && fud.redirectUrls.get(0).equals(fud.fetchUrl)
-          && destFullTextPat.matcher(fud.fetchUrl).find()
-          && origFullTextPat.matcher(fud.origUrl).find();
+          && origFullTextPat.matcher(fud.origUrl).find()
+          && (destFullTextPat.matcher(fud.fetchUrl).find() || wMarkFullTextPat.matcher(fud.fetchUrl).find());
       if (fud.redirectUrls != null) {
   	    log.debug3("OUP redirect " + fud.redirectUrls.size() + ": " + fud.redirectUrls.toString());
         log.debug3("OUP redirect: " + " " + fud.origUrl + " to " + fud.fetchUrl + " should consume?: " + should);

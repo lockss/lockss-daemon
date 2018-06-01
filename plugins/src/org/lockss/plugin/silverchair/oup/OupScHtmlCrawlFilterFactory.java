@@ -57,8 +57,12 @@ public class OupScHtmlCrawlFilterFactory implements FilterFactory {
     		  HtmlNodeFilters.tagWithAttributeRegex("a", "class", "prev"),
     		  HtmlNodeFilters.tagWithAttributeRegex("a", "class", "next"),
     		  HtmlNodeFilters.tagWithAttributeRegex("div", "class", "master-header"),
+    		  // article left side with image of cover and nav arrows
     		  HtmlNodeFilters.tagWithAttributeRegex("div", "id", "InfoColumn"),
+    		  // right side of article - all the latest, most cited, etc
     		  HtmlNodeFilters.tagWithAttributeRegex("div", "id", "Sidebar"),
+    		  // top of article - linke to correction or original article
+    		  HtmlNodeFilters.tagWithAttribute("div", "class", "articlelinks"),
     		  // don't collect the powerpoint version of images
     		  HtmlNodeFilters.tagWithAttribute("div", "class", "downloadImagesppt"),
     		  HtmlNodeFilters.tagWithAttributeRegex("a", "class", "download-slide"),
