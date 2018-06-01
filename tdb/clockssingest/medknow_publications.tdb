@@ -8187,6 +8187,7 @@
 
       param[journal_issn] = 2249-9725
       param[base_url] = http://www.urjd.org/
+      #under "coming soon" statement, 2018/05/23
 
       au < frozen ; exists ; 2011 ; Universal Research Journal of Dentistry Volume 1 ; 2011 ; 1 ; >
       au < frozen ; exists ; 2012 ; Universal Research Journal of Dentistry Volume 2 ; 2012 ; 2 ; >
@@ -8194,8 +8195,6 @@
       au < frozen ; exists ; 2014 ; Universal Research Journal of Dentistry Volume 4 ; 2014 ; 4 ; >
       au < frozen ; exists ; 2015 ; Universal Research Journal of Dentistry Volume 5 ; 2015 ; 5 ; >
       au < frozen ; exists ; 2016 ; Universal Research Journal of Dentistry Volume 6 ; 2016 ; 6 ; >
-      au < expected ; exists ; 2017 ; Universal Research Journal of Dentistry Volume 7 ; 2017 ; 7 ; >
-      au < expected ; exists ; 2018 ; Universal Research Journal of Dentistry Volume 8 ; 2018 ; 8 ; >
 
   }
 
