@@ -92,7 +92,7 @@
       <string>1,"^https?://(%s|oup\.silverchair-cdn\.com).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", url_host(base_url)</string>
       <string>1,"^https?://oup\.silverchair-cdn\.com/.*(CSS|JS|\.pdf)(\?.*)?$"</string>
       <!--  PDF content is going through watermarking SOME of the time; we will consume -->
-      <string>1,"^https?://watermark\.silverchair\.com/[^/]+\.pdf?token="</string>
+      <string>1,"^https?://watermark\.silverchair\.com/[^/]+\.pdf\?token="</string>
       <!--  redundant version of issue, now filtered out of crawl -->      
       <string>2,"^https?://%s/%s/issue/(volume/)?[^?]+\?browseBy=volume", url_host(base_url), journal_id</string>
       <string>1,"^https?://%s/%s/(article(-(pdf|abstract))?|issue(-pdf)?)/(volume/)?([0-9i]+|doi).*(?!/www\.)", url_host(base_url), journal_id</string>
@@ -203,7 +203,7 @@
       <string>https?://oup\.silverchair-cdn\.com/(cassette\.axd|data)/.*(JS|CSS|\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff))(\?.*)?$</string>
       <string>https?://(fonts\.googleapis\.com|cdn\.jsdelivr\.net|cdnjs\.cloudflare\.com)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?</string>
     </list>
-  </entry>
+  </entry>wtermark
   <entry>
     <string>au_url_poll_result_weight</string>
     <list>
