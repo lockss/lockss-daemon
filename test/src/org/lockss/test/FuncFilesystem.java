@@ -46,7 +46,7 @@ public class FuncFilesystem extends LockssTestCase {
   // with "Too many open files" in the message.
   public void testTooManyOpenFiles() throws IOException {
     int nfiles = 1;
-    int nstreams = 100000;
+    int nstreams = 10000000;
     File[] files = new File[nfiles];
     for (int ix = 0; ix < nfiles; ix++) {
       files[ix] = FileTestUtil.writeTempFile("test", "foobar");
