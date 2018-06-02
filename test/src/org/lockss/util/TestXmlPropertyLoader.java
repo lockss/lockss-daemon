@@ -975,8 +975,8 @@ public class TestXmlPropertyLoader extends LockssTestCase {
    * </list> tag. When put inside a <property name="...">, it stores the list in
    * the property.
    * 
-   * Tom would like XML files to be able to add lists in multiple points.  The following
-   * new action would be allowed:
+   * Tom would like XML files to be able to add lists in multiple
+   * points. The following new action would be allowed:
    * 
    *   <property name="d">
    *      <list>
