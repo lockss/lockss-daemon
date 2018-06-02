@@ -842,7 +842,7 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                                      <a class='altmetric_embed close-popover'\n" + 
       "                                      style='display: block; position: absolute; top: 10px; right: 15px; font-size: 1.2em; font-weight: bold; text-decoration: none; color: black; padding-bottom: 2em; padding-left: 2em;'\n" + 
       "                                      href='javascript:void(0)'>\n" + 
-      "                                      ×\n" + 
+      "                                      \u00d7\n" +
       "                                      </a>\n" + 
       "                                      </div>\" style=\"display:inline-block;\" data-badge-popover=\"right\">\n" + 
       "                                      <img alt=\"Article has an altmetric score of 2\" src=\"https://badges.altmetric.com/?size=128&amp;score=2&amp;types=tttttttt\" style=\"border:0; margin:0; max-width: none;\" width=\"64px\" height=\"64px\">\n" + 
@@ -866,7 +866,7 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                              <section class=\"section\">\n" + 
       "                                <strong class=\"section__title\">Information</strong>\n" + 
       "                                <div class=\"section__body\">\n" + 
-      "                                  <p>© 2017 Project HOPE-The People-to-People Health Foundation, Inc.</p>\n" + 
+      "                                  <p>\u00a9 2017 Project HOPE-The People-to-People Health Foundation, Inc.</p>\n" +
       "                                </div>\n" + 
       "                              </section>\n" + 
       "                              <hr class=\"section__separator\">\n" + 
@@ -886,7 +886,7 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                                    <ul id=\"relatedTab1\" class=\"rlist accordion-tabbed__content creative-work\">\n" + 
       "                                      <li>\n" + 
       "                                        <a href=\"/doi/10.1377/hlthaff.2017.0281\">\n" + 
-      "                                          Microfinance Institutions’ Successful Delivery Of Micronutrient Powders: A Randomized Trial In Rural Haiti\n" + 
+      "                                          Microfinance Institutions\u2019 Successful Delivery Of Micronutrient Powders: A Randomized Trial In Rural Haiti\n" +
       "                                          <div class=\"meta\"><span>06 Nov 2017</span><span class=\"journal-title\">Health Affairs</span></div>\n" + 
       "                                        </a>\n" + 
       "                                      </li>\n" + 
@@ -1163,7 +1163,7 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                              <section class=\"section\">\n" + 
       "                                <strong class=\"section__title\">Information</strong>\n" + 
       "                                <div class=\"section__body\">\n" + 
-      "                                  <p>© 2017 Project HOPE-The People-to-People Health Foundation, Inc.</p>\n" + 
+      "                                  <p>\u00a9 2017 Project HOPE-The People-to-People Health Foundation, Inc.</p>\n" +
       "                                </div>\n" + 
       "                              </section>\n" + 
       "                              <hr class=\"section__separator\">\n" + 
