@@ -389,35 +389,35 @@
     
       plugin = org.lockss.plugin.atypon.rsna.RsnaJournalsPlugin
       comment[platform] = Atypon
-      param[base_url] = http://pubs.rsna.org/
-      implicit < status ; year ; name ; param[volume_name] >
+      #param[base_url] = http://pubs.rsna.org/
+      implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
       
       param[journal_id] = radiology
 
-      au < released ; 2013 ; Radiology Volume 266 ; 266 >
-      au < released ; 2013 ; Radiology Volume 267 ; 267 >
-      au < released ; 2013 ; Radiology Volume 268 ; 268 >
-      au < released ; 2013 ; Radiology Volume 269 ; 269 >
-      au < released ; 2014 ; Radiology Volume 270 ; 270 >
-      au < released ; 2014 ; Radiology Volume 271 ; 271 >
-      au < released ; 2014 ; Radiology Volume 272 ; 272 >
-      au < released ; 2014 ; Radiology Volume 273 ; 273 >
-      au < released ; 2015 ; Radiology Volume 274 ; 274 >
-      au < released ; 2015 ; Radiology Volume 275 ; 275 >
-      au < released ; 2015 ; Radiology Volume 276 ; 276 >
-      au < released ; 2015 ; Radiology Volume 277 ; 277 >
-      au < released ; 2016 ; Radiology Volume 278 ; 278 >
-      au < released ; 2016 ; Radiology Volume 279 ; 279 >
-      au < released ; 2016 ; Radiology Volume 280 ; 280 >
-      au < released ; 2016 ; Radiology Volume 281 ; 281 >
-      au < testing ; 2017 ; Radiology Volume 282 ; 282 >
-      au < exists ; 2017 ; Radiology Volume 283 ; 283 > #no 2017 manifest pages yet
-      au < exists ; 2017 ; Radiology Volume 284 ; 284 >
-      au < exists ; 2017 ; Radiology Volume 285 ; 285 >
-      au < exists ; 2018 ; Radiology Volume 286 ; 286 >
-      au < expected ; 2018 ; Radiology Volume 287 ; 287 >
-      au < expected ; 2018 ; Radiology Volume 288 ; 288 >
-      au < expected ; 2018 ; Radiology Volume 289 ; 289 >
+      au < released ; 2013 ; Radiology Volume 266 ; 266 ; http://pubs.rsna.org/ >
+      au < released ; 2013 ; Radiology Volume 267 ; 267 ; http://pubs.rsna.org/ >
+      au < released ; 2013 ; Radiology Volume 268 ; 268 ; http://pubs.rsna.org/ >
+      au < released ; 2013 ; Radiology Volume 269 ; 269 ; http://pubs.rsna.org/ >
+      au < released ; 2014 ; Radiology Volume 270 ; 270 ; http://pubs.rsna.org/ >
+      au < released ; 2014 ; Radiology Volume 271 ; 271 ; http://pubs.rsna.org/ >
+      au < released ; 2014 ; Radiology Volume 272 ; 272 ; http://pubs.rsna.org/ >
+      au < released ; 2014 ; Radiology Volume 273 ; 273 ; http://pubs.rsna.org/ >
+      au < released ; 2015 ; Radiology Volume 274 ; 274 ; http://pubs.rsna.org/ >
+      au < released ; 2015 ; Radiology Volume 275 ; 275 ; http://pubs.rsna.org/ >
+      au < released ; 2015 ; Radiology Volume 276 ; 276 ; http://pubs.rsna.org/ >
+      au < released ; 2015 ; Radiology Volume 277 ; 277 ; http://pubs.rsna.org/ >
+      au < released ; 2016 ; Radiology Volume 278 ; 278 ; http://pubs.rsna.org/ >
+      au < released ; 2016 ; Radiology Volume 279 ; 279 ; http://pubs.rsna.org/ >
+      au < released ; 2016 ; Radiology Volume 280 ; 280 ; http://pubs.rsna.org/ >
+      au < released ; 2016 ; Radiology Volume 281 ; 281 ; http://pubs.rsna.org/ >
+      au < manifest ; 2017 ; Radiology Volume 282 ; 282 ; https://pubs.rsna.org/ >
+      au < exists ; 2017 ; Radiology Volume 283 ; 283 ; https://pubs.rsna.org/ > #no 2017 manifest pages yet
+      au < exists ; 2017 ; Radiology Volume 284 ; 284 ; https://pubs.rsna.org/ >
+      au < exists ; 2017 ; Radiology Volume 285 ; 285 ; https://pubs.rsna.org/ >
+      au < exists ; 2018 ; Radiology Volume 286 ; 286 ; https://pubs.rsna.org/ >
+      au < expected ; 2018 ; Radiology Volume 287 ; 287 ; https://pubs.rsna.org/ >
+      au < expected ; 2018 ; Radiology Volume 288 ; 288 ; https://pubs.rsna.org/ >
+      au < expected ; 2018 ; Radiology Volume 289 ; 289 ; https://pubs.rsna.org/ >
 
     }
 
