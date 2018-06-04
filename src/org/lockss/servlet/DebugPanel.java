@@ -39,6 +39,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import org.mortbay.html.*;
 import org.lockss.app.*;
+import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.metadata.MetadataManager;
 import org.lockss.poller.*;
@@ -95,6 +96,7 @@ public class DebugPanel extends LockssServlet {
   public static final String ACTION_START_DEEP_CRAWL = "Deep Crawl";
   public static final String ACTION_FORCE_START_DEEP_CRAWL = "Force Deep Crawl";
   public static final String ACTION_CHECK_SUBSTANCE = "Check Substance";
+  public static final String ACTION_VALIDATE_FILES = "Validate Files";
   static final String ACTION_CRAWL_PLUGINS = "Crawl Plugins";
   static final String ACTION_RELOAD_CONFIG = "Reload Config";
   static final String ACTION_SLEEP = "Sleep";
@@ -204,6 +206,9 @@ public class DebugPanel extends LockssServlet {
     }
     if (ACTION_CHECK_SUBSTANCE.equals(action)) {
       doCheckSubstance();
+    }
+    if (ACTION_VALIDATE_FILES.equals(action)) {
+      doValidateFiles();
     }
     if (ACTION_CRAWL_PLUGINS.equals(action)) {
       crawlPluginRegistries();
@@ -374,7 +379,7 @@ public class DebugPanel extends LockssServlet {
       checkSubstance(au);
     } catch (RuntimeException e) {
       log.error("Error in SubstanceChecker", e);
-      errMsg = "Error in SubstanceChecker; see log.";
+      errMsg = "Error in SubstanceChecker; " + e.toString();
     }
   }
 
@@ -404,6 +409,23 @@ public class DebugPanel extends LockssServlet {
       auState.setSubstanceState(SubstanceChecker.State.No);
       break;
     }
+  }
+
+  private void doValidateFiles() throws IOException {
+    ArchivalUnit au = getAu();
+    if (au == null) return;
+    if (!AuUtil.hasContentValidator(au)) {
+      errMsg = au.getPlugin().getPluginName() +
+	" does not supply a content validator";
+      return;
+    }
+    String redir =
+      srvURL(AdminServletManager.SERVLET_LIST_OBJECTS,
+	     PropUtil.fromArgs("type", "auvalidate",
+			       "auid", au.getAuId()));
+
+    resp.setContentLength(0);
+    resp.sendRedirect(redir);
   }
 
   private boolean startReindexingMetadata(ArchivalUnit au, boolean force) {
@@ -621,10 +643,14 @@ public class DebugPanel extends LockssServlet {
       frm.add(deepCrawl);
       frm.add(depthText);
     }
-      Input checkSubstance = new Input(Input.Submit, KEY_ACTION,
-				       ACTION_CHECK_SUBSTANCE);
-      frm.add("<br>");
-      frm.add(checkSubstance);
+    Input checkSubstance = new Input(Input.Submit, KEY_ACTION,
+				     ACTION_CHECK_SUBSTANCE);
+    frm.add("<br>");
+    frm.add(checkSubstance);
+    Input validateFiles = new Input(Input.Submit, KEY_ACTION,
+				    ACTION_VALIDATE_FILES);
+    frm.add(" ");
+    frm.add(validateFiles);
     if (metadataMgr != null) {
       Input reindex = new Input(Input.Submit, KEY_ACTION,
                                 ( showForceReindexMetadata

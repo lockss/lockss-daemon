@@ -1318,6 +1318,14 @@ public class ArchivalUnitStatus
 			 PropUtil.fromArgs("type", "subfiles",
 					   "auid", au.getAuId())));
       }
+      if (AuUtil.hasContentValidator(au)) {
+	addLink(urlLinks,
+		new StatusTable
+		.SrvLink("Validate Files",
+			 AdminServletManager.SERVLET_LIST_OBJECTS,
+			 PropUtil.fromArgs("type", "auvalidate",
+					   "auid", au.getAuId())));
+      }
       res.add(new StatusTable.SummaryInfo(null,
 					  ColumnDescriptor.TYPE_STRING,
 					  urlLinks));

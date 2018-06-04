@@ -132,6 +132,8 @@ public class ListObjects extends LockssServlet {
 	new MetadataList().execute();
       } else if (type.equalsIgnoreCase("extracturls")) {
 	new ExtractUrlsList().execute();
+      } else if (type.equalsIgnoreCase("auvalidate")) {
+	new ValidationList().execute();
       } else {
 	displayError("Unknown list type: " + type);
 	return;
@@ -815,6 +817,49 @@ public class ListObjects extends LockssServlet {
     }
 
   }
+
+  /** Run ContentValidator on all URLs in AU, display any failures */
+  class ValidationList extends BaseList {
+
+    void printHeader() {
+      wrtr.println("# Content Validation in " + au.getName());
+      if (!AuUtil.hasContentValidator(au)) {
+	wrtr.println("# Plugin (" + au.getPlugin().getPluginName() +
+		     ") does not supply a content validator  ");
+      }
+      wrtr.println("# URL\tError");
+    }
+
+    void doBody() throws IOException {
+      try {
+	AuValidator v = new AuValidator(au);
+	AuValidator.Result res = v.validateAu();
+	for (AuValidator.ValidationFailure vf : res.getValidationFailures()) {
+	  wrtr.println(vf.getUrl() + "\t" + vf.getMessage());
+	}
+	wrtr.println();
+	wrtr.println("# " +
+		     StringUtil.numberOfUnits(res.numValidationFailures(),
+					      "validation failure"));
+	wrtr.println("# " +
+		     StringUtil.numberOfUnits(res.numValidations(),
+					      "file validated",
+					      "files validated"));
+	itemCnt = res.numFiles();
+      } catch (RuntimeException e) {
+	log.error("Error in AU Validator", e);
+	wrtr.println("Error in AU Validator: " + e.toString());
+	isError = true;
+      }
+
+    }
+
+    String unitName() {
+      return "file";
+    }
+
+  }
+
 
   class MyLinkExtractorCallback implements LinkExtractor.Callback {
     TreeSet<String> foundUrls = new TreeSet<String>();
