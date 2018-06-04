@@ -150,6 +150,10 @@ public class NullPlugin {
       return null;
     }
 
+    public MimeTypeMap getMimeTypeMap() {
+      return null;
+    }
+
     public org.lockss.extractor.ArticleMetadataExtractor
 	getArticleMetadataExtractor(MetadataTarget target,
 				    org.lockss.plugin.ArchivalUnit au) {

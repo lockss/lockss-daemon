@@ -37,6 +37,7 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import org.apache.commons.collections4.*;
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.util.*;
@@ -625,6 +626,16 @@ public class AuUtil {
     }
     return -1;
   }
+
+  public static boolean hasContentValidator(ArchivalUnit au) {
+    MimeTypeMap mtm = au.getPlugin().getMimeTypeMap();
+    return
+      mtm.hasAnyThat(new Predicate<MimeTypeInfo>() {
+	  public boolean evaluate(MimeTypeInfo mti) {
+	    return mti.getContentValidatorFactory() != null;
+	  }});
+  }
+
 
   public static boolean getBoolValue(Object value, boolean dfault) {
     if (value instanceof Boolean) {

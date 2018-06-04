@@ -32,6 +32,8 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.daemon;
 
+import org.apache.commons.collections4.*;
+import org.lockss.plugin.*;
 import org.lockss.extractor.*;
 import org.lockss.rewriter.*;
 import org.lockss.test.*;
@@ -144,6 +146,41 @@ public class TestMimeTypeMap extends LockssTestCase {
     assertSame(wild, MimeTypeMap.wildSubType("image/*"));
     assertEquals("image", MimeTypeMap.wildSubType("image"));
     assertEquals("image/bad/mime", MimeTypeMap.wildSubType("image/bad/mime"));
+  }
+
+  public void testHasAnyThat() {
+    map = new MimeTypeMap(MimeTypeMap.DEFAULT);
+    assertTrue(map.hasAnyThat(new Predicate<MimeTypeInfo>() {
+	public boolean evaluate(MimeTypeInfo mti) {
+	  return mti.getLinkExtractorFactory() != null;
+	}}));
+    assertFalse(map.hasAnyThat(new Predicate<MimeTypeInfo>() {
+	public boolean evaluate(MimeTypeInfo mti) {
+	  return mti.getCrawlFilterFactory() != null;
+	}}));
+    assertFalse(map.hasAnyThat(new Predicate<MimeTypeInfo>() {
+	public boolean evaluate(MimeTypeInfo mti) {
+	  return mti.getContentValidatorFactory() != null;
+	}}));
+
+    MimeTypeInfo.Mutable mt1 = new MimeTypeInfo.Impl();
+    MimeTypeInfo.Mutable mt2 = new MimeTypeInfo.Impl();
+
+    ContentValidatorFactory cv = new MockContentValidatorFactory();
+    mt1.setContentValidatorFactory(cv);
+    FilterFactory cff = new MockFilterFactory();
+    mt2.setCrawlFilterFactory(cff);
+    map.putMimeTypeInfo("text/html", mt1);
+    map.putMimeTypeInfo("image/*", mt2);
+
+    assertTrue(map.hasAnyThat(new Predicate<MimeTypeInfo>() {
+	public boolean evaluate(MimeTypeInfo mti) {
+	  return mti.getCrawlFilterFactory() != null;
+	}}));
+    assertTrue(map.hasAnyThat(new Predicate<MimeTypeInfo>() {
+	public boolean evaluate(MimeTypeInfo mti) {
+	  return mti.getContentValidatorFactory() != null;
+	}}));
   }
 
   public void testHtmlParserLinkExtractor()

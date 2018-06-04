@@ -225,6 +225,11 @@ public interface Plugin {
   public String getDefaultArticleMimeType();
 
   /**
+   * Returns the plugin-supplied MimeTypeMap
+   */
+  public MimeTypeMap getMimeTypeMap();
+
+  /**
    * Provides an indication of whether this is a plugin for bulk content.
    * 
    * @return a boolean with <code>true</code> if this is a plugin for bulk

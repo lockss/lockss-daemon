@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.daemon;
 
 import java.util.*;
+import org.apache.commons.collections4.*;
 
 import org.lockss.config.Configuration;
 import org.lockss.extractor.*;
@@ -181,7 +182,7 @@ public class MimeTypeMap {
     mti.setLinkRewriterFactory(fact);
   }
 
-  private Map map = new HashMap();
+  private Map<String,MimeTypeInfo> map = new <String,MimeTypeInfo>HashMap();
   private MimeTypeMap parent;
 
   public MimeTypeMap() {
@@ -227,7 +228,7 @@ public class MimeTypeMap {
    */
   public MimeTypeInfo getMimeTypeInfo(String contentType) {
     String mime = HeaderUtil.getMimeTypeFromContentType(contentType);
-    MimeTypeInfo res = (MimeTypeInfo) map.get(mime);
+    MimeTypeInfo res = map.get(mime);
     if (res == null && parent != null) {
       return parent.getMimeTypeInfo(mime);
     }
@@ -257,6 +258,29 @@ public class MimeTypeMap {
   }
 
   /**
+   * Return true if the predicate is true of any MimeTypeInfo in this
+   * MimeTypeMap or any parent map.  Useful, e.g., to determine whether a
+   * plugin has any ContentValidators:
+   * <pre>
+   *   mtm.hasAnyThat(new Predicate<MimeTypeInfo>() {
+   *     public boolean evaluate(MimeTypeInfo mti) {
+   *       return mti.getContentValidatorFactory() != null;
+   *     }});
+   * </pre>
+   */
+  public boolean hasAnyThat(Predicate<MimeTypeInfo> pred) {
+    for (MimeTypeInfo mti : map.values()) {
+      if (pred.evaluate(mti)) {
+	return true;
+      }
+    }
+    if (parent != null)  {
+      return parent.hasAnyThat(pred);
+    }
+    return false;
+  }
+
+  /**
    * Turn a mime type into one with a wildcard subtype.  (E.g.,
    * <code>image/gif</code> -> <code>image/*</code>.) If the argument already
    * has a wildcard subtype or is misformatted, return it unmodified.
@@ -272,4 +296,5 @@ public class MimeTypeMap {
     }
     return parts.get(0) + "/" + "*";
   }
+
 }

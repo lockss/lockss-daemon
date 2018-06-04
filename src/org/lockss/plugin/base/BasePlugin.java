@@ -448,6 +448,10 @@ public abstract class BasePlugin
     return null;
   }
 
+  public MimeTypeMap getMimeTypeMap() {
+    return mimeMap;
+  }
+
   protected MimeTypeInfo getMimeTypeInfo(String contentType) {
     if (contentType == null) {
       log.debug3("getMimeTypeInfo: null content type");
