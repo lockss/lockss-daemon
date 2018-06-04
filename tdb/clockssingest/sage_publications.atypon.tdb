@@ -14167,17 +14167,17 @@
 
       #param[journal_id] = hei
 
-      au < exists ; exists ; 2006 ; Heart International Volume 2 ; 2 ; heia ; >
-      au < exists ; exists ; 2007 ; Heart International Volume 3 ; 3 ; heia ; >
-      au < exists ; exists ; 2009 ; Heart International Volume 4 ; 4 ; heia ; >
+      au < manifest ; exists ; 2006 ; Heart International Volume 2 ; 2 ; heia ; >
+      au < manifest ; exists ; 2007 ; Heart International Volume 3 ; 3 ; heia ; >
+      au < manifest ; exists ; 2009 ; Heart International Volume 4 ; 4 ; heia ; >
       au < doesNotExist ; doesNotExist ; 2010 ; Heart International Volume 5 ; 5 ; heia ; >
-      au < exists ; exists ; 2011 ; Heart International Volume 6 ; 6 ; heia ; >
-      au < exists ; exists ; 2012 ; Heart International Volume 7 ; 7 ; heia ; >
-      au < exists ; exists ; 2013 ; Heart International Volume 8 ; 8 ; heia ; >
-      au < exists ; exists ; 2014 ; Heart International Volume 9 ; 9 ; heia ; >
-      au < exists ; exists ; 2015 ; Heart International Volume 10 ; 10 ; heia ; >
-      au < exists ; exists ; 2016 ; Heart International Volume 11 ; 11 ; heia ; >
-      au < exists ; exists ; 2017 ; Heart International Volume 12 ; 12 ; heia ; >
+      au < manifest ; exists ; 2011 ; Heart International Volume 6 ; 6 ; heia ; >
+      au < manifest ; exists ; 2012 ; Heart International Volume 7 ; 7 ; heia ; >
+      au < manifest ; exists ; 2013 ; Heart International Volume 8 ; 8 ; heia ; >
+      au < manifest ; exists ; 2014 ; Heart International Volume 9 ; 9 ; heia ; >
+      au < manifest ; exists ; 2015 ; Heart International Volume 10 ; 10 ; heia ; >
+      au < manifest ; exists ; 2016 ; Heart International Volume 11 ; 11 ; heia ; >
+      au < manifest ; exists ; 2017 ; Heart International Volume 12 ; 12 ; heia ; >
       au < expected ; exists ; 2018 ; Heart International Volume 13 ; 13 ; heia ; >
 
   }
@@ -15608,7 +15608,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Indian Historical Review Volume 42 ; 42 ; ihra ; >
       au < finished ; crawling ; 2016 ; Indian Historical Review Volume 43 ; 43 ; ihra ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2017 ; Indian Historical Review Volume 44 ; 44 ; ihra ; >
-      au < expected ; exists ; 2018 ; Indian Historical Review Volume 45 ; 45 ; ihra ; >
+      au < manifest ; exists ; 2018 ; Indian Historical Review Volume 45 ; 45 ; ihra ; >
 
   }
 
@@ -21232,7 +21232,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Creating Value Volume 1 ; 1 ; jcva ; >
       au < finished ; crawling ; 2016 ; Journal of Creating Value Volume 2 ; 2 ; jcva ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; Journal of Creating Value Volume 3 ; 3 ; jcva ; >
-      au < expected ; exists ; 2018 ; Journal of Creating Value Volume 4 ; 4 ; jcva ; >
+      au < manifest ; exists ; 2018 ; Journal of Creating Value Volume 4 ; 4 ; jcva ; >
 
   }
 
@@ -22677,15 +22677,15 @@
 
     #param[journal_id] = epp
 
-      au < exists ; exists ; 2010 ; Journal of Experimental Psychopathology Volume 1 ; 1 ; eppa ; >
-      au < exists ; exists ; 2011 ; Journal of Experimental Psychopathology Volume 2 ; 2 ; eppa ; >
-      au < exists ; exists ; 2012 ; Journal of Experimental Psychopathology Volume 3 ; 3 ; eppa ; >
-      au < exists ; exists ; 2013 ; Journal of Experimental Psychopathology Volume 4 ; 4 ; eppa ; >
-      au < exists ; exists ; 2014 ; Journal of Experimental Psychopathology Volume 5 ; 5 ; eppa ; >
-      au < exists ; exists ; 2015 ; Journal of Experimental Psychopathology Volume 6 ; 6 ; eppa ; >
-      au < exists ; exists ; 2016 ; Journal of Experimental Psychopathology Volume 7 ; 7 ; eppa ; >
-      au < exists ; exists ; 2017 ; Journal of Experimental Psychopathology Volume 8 ; 8 ; eppa ; >
-      au < exists ; exists ; 2018 ; Journal of Experimental Psychopathology Volume 9 ; 9 ; eppa ; >
+      au < manifest ; exists ; 2010 ; Journal of Experimental Psychopathology Volume 1 ; 1 ; eppa ; >
+      au < manifest ; exists ; 2011 ; Journal of Experimental Psychopathology Volume 2 ; 2 ; eppa ; >
+      au < manifest ; exists ; 2012 ; Journal of Experimental Psychopathology Volume 3 ; 3 ; eppa ; >
+      au < manifest ; exists ; 2013 ; Journal of Experimental Psychopathology Volume 4 ; 4 ; eppa ; >
+      au < manifest ; exists ; 2014 ; Journal of Experimental Psychopathology Volume 5 ; 5 ; eppa ; >
+      au < manifest ; exists ; 2015 ; Journal of Experimental Psychopathology Volume 6 ; 6 ; eppa ; >
+      au < manifest ; exists ; 2016 ; Journal of Experimental Psychopathology Volume 7 ; 7 ; eppa ; >
+      au < manifest ; exists ; 2017 ; Journal of Experimental Psychopathology Volume 8 ; 8 ; eppa ; >
+      au < manifest ; exists ; 2018 ; Journal of Experimental Psychopathology Volume 9 ; 9 ; eppa ; >
 
   }
 
@@ -26981,17 +26981,17 @@
 
     #param[journal_id] = jsf
 
-      au < exists ; exists ; 2008 ; Journal of Spiritual Formation and Soul Care Volume 1 ; 1 ; jsfa ; >
-      au < exists ; exists ; 2009 ; Journal of Spiritual Formation and Soul Care Volume 2 ; 2 ; jsfa ; >
-      au < exists ; exists ; 2010 ; Journal of Spiritual Formation and Soul Care Volume 3 ; 3 ; jsfa ; >
-      au < exists ; exists ; 2011 ; Journal of Spiritual Formation and Soul Care Volume 4 ; 4 ; jsfa ; >
-      au < exists ; exists ; 2012 ; Journal of Spiritual Formation and Soul Care Volume 5 ; 5 ; jsfa ; >
-      au < exists ; exists ; 2013 ; Journal of Spiritual Formation and Soul Care Volume 6 ; 6 ; jsfa ; >
-      au < exists ; exists ; 2014 ; Journal of Spiritual Formation and Soul Care Volume 7 ; 7 ; jsfa ; >
-      au < exists ; exists ; 2015 ; Journal of Spiritual Formation and Soul Care Volume 8 ; 8 ; jsfa ; >
-      au < exists ; exists ; 2016 ; Journal of Spiritual Formation and Soul Care Volume 9 ; 9 ; jsfa ; >
-      au < exists ; exists ; 2017 ; Journal of Spiritual Formation and Soul Care Volume 10 ; 10 ; jsfa ; >
-      au < exists ; exists ; 2018 ; Journal of Spiritual Formation and Soul Care Volume 11 ; 11 ; jsfa ; >
+      au < manifest ; exists ; 2008 ; Journal of Spiritual Formation and Soul Care Volume 1 ; 1 ; jsfa ; >
+      au < manifest ; exists ; 2009 ; Journal of Spiritual Formation and Soul Care Volume 2 ; 2 ; jsfa ; >
+      au < manifest ; exists ; 2010 ; Journal of Spiritual Formation and Soul Care Volume 3 ; 3 ; jsfa ; >
+      au < manifest ; exists ; 2011 ; Journal of Spiritual Formation and Soul Care Volume 4 ; 4 ; jsfa ; >
+      au < manifest ; exists ; 2012 ; Journal of Spiritual Formation and Soul Care Volume 5 ; 5 ; jsfa ; >
+      au < manifest ; exists ; 2013 ; Journal of Spiritual Formation and Soul Care Volume 6 ; 6 ; jsfa ; >
+      au < manifest ; exists ; 2014 ; Journal of Spiritual Formation and Soul Care Volume 7 ; 7 ; jsfa ; >
+      au < manifest ; exists ; 2015 ; Journal of Spiritual Formation and Soul Care Volume 8 ; 8 ; jsfa ; >
+      au < manifest ; exists ; 2016 ; Journal of Spiritual Formation and Soul Care Volume 9 ; 9 ; jsfa ; >
+      au < manifest ; exists ; 2017 ; Journal of Spiritual Formation and Soul Care Volume 10 ; 10 ; jsfa ; >
+      au < manifest ; exists ; 2018 ; Journal of Spiritual Formation and Soul Care Volume 11 ; 11 ; jsfa ; >
 
   }
 
@@ -30409,7 +30409,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Metamorphosis Volume 14 ; 14 ; meta ; >
       au < frozen ; exists ; 2016 ; Metamorphosis Volume 15 ; 15 ; meta ; >
       au < deepCrawl ; exists ; 2017 ; Metamorphosis Volume 16 ; 16 ; meta ; >
-      au < expected ; exists ; 2018 ; Metamorphosis Volume 17 ; 17 ; meta ; >
+      au < manifest ; exists ; 2018 ; Metamorphosis Volume 17 ; 17 ; meta ; >
 
   }
 
@@ -39007,7 +39007,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; South Asia Economic Journal Volume 16 ; 16 ; saea ; >
       au < frozen ; exists ; 2016 ; South Asia Economic Journal Volume 17 ; 17 ; saea ; >
       au < deepCrawl ; exists ; 2017 ; South Asia Economic Journal Volume 18 ; 18 ; saea ; >
-      au < expected ; exists ; 2018 ; South Asia Economic Journal Volume 19 ; 19 ; saea ; >
+      au < manifest ; exists ; 2018 ; South Asia Economic Journal Volume 19 ; 19 ; saea ; >
 
     }
 
@@ -41726,576 +41726,576 @@
 
     #param[journal_id] = trr
 
-      au < exists ; exists ; 2005 ; Transportation Research Record Volume 1901 ; 1901 ; trra ; >
-      au < exists ; exists ; 2005 ; Transportation Research Record Volume 1902 ; 1902 ; trra ; >
-      au < exists ; exists ; 2005 ; Transportation Research Record Volume 1903 ; 1903 ; trra ; >
-      au < exists ; exists ; 2005 ; Transportation Research Record Volume 1904 ; 1904 ; trra ; >
-      au < exists ; exists ; 2005 ; Transportation Research Record Volume 1905 ; 1905 ; trra ; >
-      au < exists ; exists ; 2005 ; Transportation Research Record Volume 1906 ; 1906 ; trra ; >
-      au < exists ; exists ; 2005 ; Transportation Research Record Volume 1907 ; 1907 ; trra ; >
+      au < manifest ; exists ; 2005 ; Transportation Research Record Volume 1901 ; 1901 ; trra ; >
+      au < manifest ; exists ; 2005 ; Transportation Research Record Volume 1902 ; 1902 ; trra ; >
+      au < manifest ; exists ; 2005 ; Transportation Research Record Volume 1903 ; 1903 ; trra ; >
+      au < manifest ; exists ; 2005 ; Transportation Research Record Volume 1904 ; 1904 ; trra ; >
+      au < manifest ; exists ; 2005 ; Transportation Research Record Volume 1905 ; 1905 ; trra ; >
+      au < manifest ; exists ; 2005 ; Transportation Research Record Volume 1906 ; 1906 ; trra ; >
+      au < manifest ; exists ; 2005 ; Transportation Research Record Volume 1907 ; 1907 ; trra ; >
       au < exists ; exists ; 2005 ; Transportation Research Record Volume 1908 ; 1908 ; trra ; >
       au < exists ; exists ; 2005 ; Transportation Research Record Volume 1909 ; 1909 ; trra ; >
       au < exists ; exists ; 2005 ; Transportation Research Record Volume 1910 ; 1910 ; trra ; >
       au < exists ; exists ; 2005 ; Transportation Research Record Volume 1911 ; 1911 ; trra ; >
-      au < exists ; exists ; 2005 ; Transportation Research Record Volume 1912 ; 1912 ; trra ; >
+      au < manifest ; exists ; 2005 ; Transportation Research Record Volume 1912 ; 1912 ; trra ; >
       au < exists ; exists ; 2005 ; Transportation Research Record Volume 1913 ; 1913 ; trra ; >
       au < exists ; exists ; 2005 ; Transportation Research Record Volume 1914 ; 1914 ; trra ; >
-      au < exists ; exists ; 2005 ; Transportation Research Record Volume 1915 ; 1915 ; trra ; >
+      au < manifest ; exists ; 2005 ; Transportation Research Record Volume 1915 ; 1915 ; trra ; >
       au < exists ; exists ; 2005 ; Transportation Research Record Volume 1916 ; 1916 ; trra ; >
-      au < exists ; exists ; 2005 ; Transportation Research Record Volume 1917 ; 1917 ; trra ; >
-      au < exists ; exists ; 2005 ; Transportation Research Record Volume 1918 ; 1918 ; trra ; >
-      au < exists ; exists ; 2005 ; Transportation Research Record Volume 1919 ; 1919 ; trra ; >
+      au < manifest ; exists ; 2005 ; Transportation Research Record Volume 1917 ; 1917 ; trra ; >
+      au < manifest ; exists ; 2005 ; Transportation Research Record Volume 1918 ; 1918 ; trra ; >
+      au < manifest ; exists ; 2005 ; Transportation Research Record Volume 1919 ; 1919 ; trra ; >
       au < exists ; exists ; 2005 ; Transportation Research Record Volume 1920 ; 1920 ; trra ; >
-      au < exists ; exists ; 2005 ; Transportation Research Record Volume 1921 ; 1921 ; trra ; >
-      au < exists ; exists ; 2005 ; Transportation Research Record Volume 1922 ; 1922 ; trra ; >
-      au < exists ; exists ; 2005 ; Transportation Research Record Volume 1923 ; 1923 ; trra ; >
-      au < exists ; exists ; 2005 ; Transportation Research Record Volume 1924 ; 1924 ; trra ; >
-      au < exists ; exists ; 2005 ; Transportation Research Record Volume 1925 ; 1925 ; trra ; >
-      au < exists ; exists ; 2005 ; Transportation Research Record Volume 1926 ; 1926 ; trra ; >
-      au < exists ; exists ; 2005 ; Transportation Research Record Volume 1927 ; 1927 ; trra ; >
-      au < exists ; exists ; 2005 ; Transportation Research Record Volume 1928 ; 1928 ; trra ; >
-      au < exists ; exists ; 2005 ; Transportation Research Record Volume 1929 ; 1929 ; trra ; >
-      au < exists ; exists ; 2005 ; Transportation Research Record Volume 1930 ; 1930 ; trra ; >
-      au < exists ; exists ; 2005 ; Transportation Research Record Volume 1931 ; 1931 ; trra ; >
-      au < exists ; exists ; 2005 ; Transportation Research Record Volume 1932 ; 1932 ; trra ; >
-      au < exists ; exists ; 2005 ; Transportation Research Record Volume 1933 ; 1933 ; trra ; >
-      au < exists ; exists ; 2005 ; Transportation Research Record Volume 1934 ; 1934 ; trra ; >
-      au < exists ; exists ; 2005 ; Transportation Research Record Volume 1935 ; 1935 ; trra ; >
-      au < exists ; exists ; 2005 ; Transportation Research Record Volume 1936 ; 1936 ; trra ; >
-      au < exists ; exists ; 2005 ; Transportation Research Record Volume 1937 ; 1937 ; trra ; >
-      au < exists ; exists ; 2005 ; Transportation Research Record Volume 1938 ; 1938 ; trra ; >
-      au < exists ; exists ; 2005 ; Transportation Research Record Volume 1939 ; 1939 ; trra ; >
-      au < exists ; exists ; 2005 ; Transportation Research Record Volume 1940 ; 1940 ; trra ; >
-      au < exists ; exists ; 2005 ; Transportation Research Record Volume 1941 ; 1941 ; trra ; >
-      au < exists ; exists ; 2006 ; Transportation Research Record Volume 1942 ; 1942 ; trra ; >
-      au < exists ; exists ; 2006 ; Transportation Research Record Volume 1943 ; 1943 ; trra ; >
-      au < exists ; exists ; 2006 ; Transportation Research Record Volume 1944 ; 1944 ; trra ; >
-      au < exists ; exists ; 2006 ; Transportation Research Record Volume 1945 ; 1945 ; trra ; >
-      au < exists ; exists ; 2006 ; Transportation Research Record Volume 1946 ; 1946 ; trra ; >
-      au < exists ; exists ; 2006 ; Transportation Research Record Volume 1947 ; 1947 ; trra ; >
-      au < exists ; exists ; 2006 ; Transportation Research Record Volume 1948 ; 1948 ; trra ; >
-      au < exists ; exists ; 2006 ; Transportation Research Record Volume 1949 ; 1949 ; trra ; >
-      au < exists ; exists ; 2006 ; Transportation Research Record Volume 1950 ; 1950 ; trra ; >
-      au < exists ; exists ; 2006 ; Transportation Research Record Volume 1951 ; 1951 ; trra ; >
-      au < exists ; exists ; 2006 ; Transportation Research Record Volume 1952 ; 1952 ; trra ; >
-      au < exists ; exists ; 2006 ; Transportation Research Record Volume 1953 ; 1953 ; trra ; >
-      au < exists ; exists ; 2006 ; Transportation Research Record Volume 1954 ; 1954 ; trra ; >
-      au < exists ; exists ; 2006 ; Transportation Research Record Volume 1955 ; 1955 ; trra ; >
-      au < exists ; exists ; 2006 ; Transportation Research Record Volume 1956 ; 1956 ; trra ; >
-      au < exists ; exists ; 2006 ; Transportation Research Record Volume 1957 ; 1957 ; trra ; >
-      au < exists ; exists ; 2006 ; Transportation Research Record Volume 1958 ; 1958 ; trra ; >
-      au < exists ; exists ; 2006 ; Transportation Research Record Volume 1959 ; 1959 ; trra ; >
-      au < exists ; exists ; 2006 ; Transportation Research Record Volume 1960 ; 1960 ; trra ; >
-      au < exists ; exists ; 2006 ; Transportation Research Record Volume 1961 ; 1961 ; trra ; >
-      au < exists ; exists ; 2006 ; Transportation Research Record Volume 1962 ; 1962 ; trra ; >
-      au < exists ; exists ; 2006 ; Transportation Research Record Volume 1963 ; 1963 ; trra ; >
-      au < exists ; exists ; 2006 ; Transportation Research Record Volume 1964 ; 1964 ; trra ; >
-      au < exists ; exists ; 2006 ; Transportation Research Record Volume 1965 ; 1965 ; trra ; >
-      au < exists ; exists ; 2006 ; Transportation Research Record Volume 1966 ; 1966 ; trra ; >
-      au < exists ; exists ; 2006 ; Transportation Research Record Volume 1967 ; 1967 ; trra ; >
-      au < exists ; exists ; 2006 ; Transportation Research Record Volume 1968 ; 1968 ; trra ; >
-      au < exists ; exists ; 2006 ; Transportation Research Record Volume 1969 ; 1969 ; trra ; >
-      au < exists ; exists ; 2006 ; Transportation Research Record Volume 1970 ; 1970 ; trra ; >
-      au < exists ; exists ; 2006 ; Transportation Research Record Volume 1971 ; 1971 ; trra ; >
-      au < exists ; exists ; 2006 ; Transportation Research Record Volume 1972 ; 1972 ; trra ; >
-      au < exists ; exists ; 2006 ; Transportation Research Record Volume 1973 ; 1973 ; trra ; >
-      au < exists ; exists ; 2006 ; Transportation Research Record Volume 1974 ; 1974 ; trra ; >
-      au < exists ; exists ; 2006 ; Transportation Research Record Volume 1975 ; 1975 ; trra ; >
-      au < exists ; exists ; 2006 ; Transportation Research Record Volume 1976 ; 1976 ; trra ; >
-      au < exists ; exists ; 2006 ; Transportation Research Record Volume 1977 ; 1977 ; trra ; >
-      au < exists ; exists ; 2006 ; Transportation Research Record Volume 1978 ; 1978 ; trra ; >
-      au < exists ; exists ; 2006 ; Transportation Research Record Volume 1979 ; 1979 ; trra ; >
-      au < exists ; exists ; 2006 ; Transportation Research Record Volume 1980 ; 1980 ; trra ; >
-      au < exists ; exists ; 2006 ; Transportation Research Record Volume 1981 ; 1981 ; trra ; >
-      au < exists ; exists ; 2006 ; Transportation Research Record Volume 1982 ; 1982 ; trra ; >
-      au < exists ; exists ; 2006 ; Transportation Research Record Volume 1983 ; 1983 ; trra ; >
-      au < exists ; exists ; 2006 ; Transportation Research Record Volume 1984 ; 1984 ; trra ; >
-      au < exists ; exists ; 2006 ; Transportation Research Record Volume 1985 ; 1985 ; trra ; >
-      au < exists ; exists ; 2006 ; Transportation Research Record Volume 1986 ; 1986 ; trra ; >
-      au < exists ; exists ; 2006 ; Transportation Research Record Volume 1987 ; 1987 ; trra ; >
-      au < exists ; exists ; 2006 ; Transportation Research Record Volume 1988 ; 1988 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 1989-1 ; 1989-1 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 1989-2 ; 1989-2 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 1990 ; 1990 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 1991 ; 1991 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 1992 ; 1992 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 1993 ; 1993 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 1994 ; 1994 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 1995 ; 1995 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 1996 ; 1996 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 1997 ; 1997 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 1998 ; 1998 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 1999 ; 1999 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 2000 ; 2000 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 2001 ; 2001 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 2002 ; 2002 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 2003 ; 2003 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 2004 ; 2004 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 2005 ; 2005 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 2006 ; 2006 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 2007 ; 2007 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 2008 ; 2008 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 2009 ; 2009 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 2010 ; 2010 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 2011 ; 2011 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 2012 ; 2012 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 2013 ; 2013 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 2014 ; 2014 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 2015 ; 2015 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 2016 ; 2016 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 2017 ; 2017 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 2018 ; 2018 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 2019 ; 2019 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 2020 ; 2020 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 2021 ; 2021 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 2022 ; 2022 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 2023 ; 2023 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 2024 ; 2024 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 2025 ; 2025 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 2026 ; 2026 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 2027 ; 2027 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 2028 ; 2028 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 2029 ; 2029 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 2030 ; 2030 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 2031 ; 2031 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 2032 ; 2032 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 2033 ; 2033 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 2034 ; 2034 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 2035 ; 2035 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 2036 ; 2036 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 2037 ; 2037 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 2038 ; 2038 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 2039 ; 2039 ; trra ; >
-      au < exists ; exists ; 2007 ; Transportation Research Record Volume 2040 ; 2040 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2041 ; 2041 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2042 ; 2042 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2043 ; 2043 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2044 ; 2044 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2045 ; 2045 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2046 ; 2046 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2047 ; 2047 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2048 ; 2048 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2049 ; 2049 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2050 ; 2050 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2051 ; 2051 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2052 ; 2052 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2053 ; 2053 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2054 ; 2054 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2055 ; 2055 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2056 ; 2056 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2057 ; 2057 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2058 ; 2058 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2059 ; 2059 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2060 ; 2060 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2061 ; 2061 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2062 ; 2062 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2063 ; 2063 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2064 ; 2064 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2065 ; 2065 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2066 ; 2066 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2067 ; 2067 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2068 ; 2068 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2069 ; 2069 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2070 ; 2070 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2071 ; 2071 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2072 ; 2072 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2073 ; 2073 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2074 ; 2074 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2075 ; 2075 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2076 ; 2076 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2077 ; 2077 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2078 ; 2078 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2079 ; 2079 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2080 ; 2080 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2081 ; 2081 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2082 ; 2082 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2083 ; 2083 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2084 ; 2084 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2085 ; 2085 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2086 ; 2086 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2087 ; 2087 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2088 ; 2088 ; trra ; >
-      au < exists ; exists ; 2008 ; Transportation Research Record Volume 2089 ; 2089 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2090 ; 2090 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2091 ; 2091 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2092 ; 2092 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2093 ; 2093 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2094 ; 2094 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2095 ; 2095 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2096 ; 2096 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2097 ; 2097 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2098 ; 2098 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2099 ; 2099 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2100 ; 2100 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2101 ; 2101 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2102 ; 2102 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2103 ; 2103 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2104 ; 2104 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2105 ; 2105 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2106 ; 2106 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2107 ; 2107 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2108 ; 2108 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2109 ; 2109 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2110 ; 2110 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2111 ; 2111 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2112 ; 2112 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2113 ; 2113 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2114 ; 2114 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2115 ; 2115 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2116 ; 2116 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2117 ; 2117 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2118 ; 2118 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2119 ; 2119 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2120 ; 2120 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2121 ; 2121 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2122 ; 2122 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2123 ; 2123 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2124 ; 2124 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2125 ; 2125 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2126 ; 2126 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2127 ; 2127 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2128 ; 2128 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2129 ; 2129 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2130 ; 2130 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2131 ; 2131 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2132 ; 2132 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2133 ; 2133 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2134 ; 2134 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2135 ; 2135 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2136 ; 2136 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2137 ; 2137 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2138 ; 2138 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2139 ; 2139 ; trra ; >
-      au < exists ; exists ; 2009 ; Transportation Research Record Volume 2140 ; 2140 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2141 ; 2141 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2142 ; 2142 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2143 ; 2143 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2144 ; 2144 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2145 ; 2145 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2146 ; 2146 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2147 ; 2147 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2148 ; 2148 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2149 ; 2149 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2150 ; 2150 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2151 ; 2151 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2152 ; 2152 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2153 ; 2153 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2154 ; 2154 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2155 ; 2155 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2156 ; 2156 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2157 ; 2157 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2158 ; 2158 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2159 ; 2159 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2160 ; 2160 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2161 ; 2161 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2162 ; 2162 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2163 ; 2163 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2164 ; 2164 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2165 ; 2165 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2166 ; 2166 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2167 ; 2167 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2168 ; 2168 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2169 ; 2169 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2170 ; 2170 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2171 ; 2171 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2172 ; 2172 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2173 ; 2173 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2174 ; 2174 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2175 ; 2175 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2176 ; 2176 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2177 ; 2177 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2178 ; 2178 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2179 ; 2179 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2180 ; 2180 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2181 ; 2181 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2182 ; 2182 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2183 ; 2183 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2184 ; 2184 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2185 ; 2185 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2186 ; 2186 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2187 ; 2187 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2188 ; 2188 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2189 ; 2189 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2190 ; 2190 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2191 ; 2191 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2192 ; 2192 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2193 ; 2193 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2194 ; 2194 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2195 ; 2195 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2196 ; 2196 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2197 ; 2197 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2198 ; 2198 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2199 ; 2199 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2200 ; 2200 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2201 ; 2201 ; trra ; >
-      au < exists ; exists ; 2010 ; Transportation Research Record Volume 2202 ; 2202 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2203 ; 2203 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2204 ; 2204 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2205 ; 2205 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2206 ; 2206 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2207 ; 2207 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2208 ; 2208 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2209 ; 2209 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2210 ; 2210 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2211 ; 2211 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2212 ; 2212 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2213 ; 2213 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2214 ; 2214 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2215 ; 2215 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2216 ; 2216 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2217 ; 2217 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2218 ; 2218 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2219 ; 2219 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2220 ; 2220 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2221 ; 2221 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2222 ; 2222 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2223 ; 2223 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2224 ; 2224 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2225 ; 2225 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2226 ; 2226 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2227 ; 2227 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2228 ; 2228 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2229 ; 2229 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2230 ; 2230 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2231 ; 2231 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2232 ; 2232 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2233 ; 2233 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2234 ; 2234 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2235 ; 2235 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2236 ; 2236 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2237 ; 2237 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2238 ; 2238 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2239 ; 2239 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2240 ; 2240 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2241 ; 2241 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2242 ; 2242 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2243 ; 2243 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2244 ; 2244 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2245 ; 2245 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2246 ; 2246 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2247 ; 2247 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2248 ; 2248 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2249 ; 2249 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2250 ; 2250 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2251 ; 2251 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2252 ; 2252 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2253 ; 2253 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2254 ; 2254 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2255 ; 2255 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2256 ; 2256 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2257 ; 2257 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2258 ; 2258 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2259 ; 2259 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2260 ; 2260 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2261 ; 2261 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2262 ; 2262 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2263 ; 2263 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2264 ; 2264 ; trra ; >
-      au < exists ; exists ; 2011 ; Transportation Research Record Volume 2265 ; 2265 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2266 ; 2266 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2267 ; 2267 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2268 ; 2268 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2269 ; 2269 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2270 ; 2270 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2271 ; 2271 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2272 ; 2272 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2273 ; 2273 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2274 ; 2274 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2275 ; 2275 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2276 ; 2276 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2277 ; 2277 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2278 ; 2278 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2279 ; 2279 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2280 ; 2280 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2281 ; 2281 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2282 ; 2282 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2283 ; 2283 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2284 ; 2284 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2285 ; 2285 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2286 ; 2286 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2287 ; 2287 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2288 ; 2288 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2289 ; 2289 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2290 ; 2290 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2291 ; 2291 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2292 ; 2292 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2293 ; 2293 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2294 ; 2294 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2295 ; 2295 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2296 ; 2296 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2297 ; 2297 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2298 ; 2298 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2299 ; 2299 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2300 ; 2300 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2301 ; 2301 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2302 ; 2302 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2303 ; 2303 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2304 ; 2304 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2305 ; 2305 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2306 ; 2306 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2307 ; 2307 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2308 ; 2308 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2309 ; 2309 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2310 ; 2310 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2311 ; 2311 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2312 ; 2312 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2313 ; 2313 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2314 ; 2314 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2315 ; 2315 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2316 ; 2316 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2317 ; 2317 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2318 ; 2318 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2319 ; 2319 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2320 ; 2320 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2321 ; 2321 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2322 ; 2322 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2323 ; 2323 ; trra ; >
-      au < exists ; exists ; 2012 ; Transportation Research Record Volume 2324 ; 2324 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2325 ; 2325 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2326 ; 2326 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2327 ; 2327 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2328 ; 2328 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2329 ; 2329 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2330 ; 2330 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2331 ; 2331 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2332 ; 2332 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2333 ; 2333 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2334 ; 2334 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2335 ; 2335 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2336 ; 2336 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2337 ; 2337 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2338 ; 2338 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2339 ; 2339 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2340 ; 2340 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2341 ; 2341 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2342 ; 2342 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2343 ; 2343 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2344 ; 2344 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2345 ; 2345 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2346 ; 2346 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2347 ; 2347 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2348 ; 2348 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2349 ; 2349 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2350 ; 2350 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2351 ; 2351 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2352 ; 2352 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2353 ; 2353 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2354 ; 2354 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2355 ; 2355 ; trra ; >
+      au < manifest ; exists ; 2005 ; Transportation Research Record Volume 1921 ; 1921 ; trra ; >
+      au < manifest ; exists ; 2005 ; Transportation Research Record Volume 1922 ; 1922 ; trra ; >
+      au < manifest ; exists ; 2005 ; Transportation Research Record Volume 1923 ; 1923 ; trra ; >
+      au < manifest ; exists ; 2005 ; Transportation Research Record Volume 1924 ; 1924 ; trra ; >
+      au < manifest ; exists ; 2005 ; Transportation Research Record Volume 1925 ; 1925 ; trra ; >
+      au < manifest ; exists ; 2005 ; Transportation Research Record Volume 1926 ; 1926 ; trra ; >
+      au < manifest ; exists ; 2005 ; Transportation Research Record Volume 1927 ; 1927 ; trra ; >
+      au < manifest ; exists ; 2005 ; Transportation Research Record Volume 1928 ; 1928 ; trra ; >
+      au < manifest ; exists ; 2005 ; Transportation Research Record Volume 1929 ; 1929 ; trra ; >
+      au < manifest ; exists ; 2005 ; Transportation Research Record Volume 1930 ; 1930 ; trra ; >
+      au < manifest ; exists ; 2005 ; Transportation Research Record Volume 1931 ; 1931 ; trra ; >
+      au < manifest ; exists ; 2005 ; Transportation Research Record Volume 1932 ; 1932 ; trra ; >
+      au < manifest ; exists ; 2005 ; Transportation Research Record Volume 1933 ; 1933 ; trra ; >
+      au < manifest ; exists ; 2005 ; Transportation Research Record Volume 1934 ; 1934 ; trra ; >
+      au < manifest ; exists ; 2005 ; Transportation Research Record Volume 1935 ; 1935 ; trra ; >
+      au < manifest ; exists ; 2005 ; Transportation Research Record Volume 1936 ; 1936 ; trra ; >
+      au < manifest ; exists ; 2005 ; Transportation Research Record Volume 1937 ; 1937 ; trra ; >
+      au < manifest ; exists ; 2005 ; Transportation Research Record Volume 1938 ; 1938 ; trra ; >
+      au < manifest ; exists ; 2005 ; Transportation Research Record Volume 1939 ; 1939 ; trra ; >
+      au < manifest ; exists ; 2005 ; Transportation Research Record Volume 1940 ; 1940 ; trra ; >
+      au < manifest ; exists ; 2005 ; Transportation Research Record Volume 1941 ; 1941 ; trra ; >
+      au < manifest ; exists ; 2006 ; Transportation Research Record Volume 1942 ; 1942 ; trra ; >
+      au < manifest ; exists ; 2006 ; Transportation Research Record Volume 1943 ; 1943 ; trra ; >
+      au < manifest ; exists ; 2006 ; Transportation Research Record Volume 1944 ; 1944 ; trra ; >
+      au < manifest ; exists ; 2006 ; Transportation Research Record Volume 1945 ; 1945 ; trra ; >
+      au < manifest ; exists ; 2006 ; Transportation Research Record Volume 1946 ; 1946 ; trra ; >
+      au < manifest ; exists ; 2006 ; Transportation Research Record Volume 1947 ; 1947 ; trra ; >
+      au < manifest ; exists ; 2006 ; Transportation Research Record Volume 1948 ; 1948 ; trra ; >
+      au < manifest ; exists ; 2006 ; Transportation Research Record Volume 1949 ; 1949 ; trra ; >
+      au < manifest ; exists ; 2006 ; Transportation Research Record Volume 1950 ; 1950 ; trra ; >
+      au < manifest ; exists ; 2006 ; Transportation Research Record Volume 1951 ; 1951 ; trra ; >
+      au < manifest ; exists ; 2006 ; Transportation Research Record Volume 1952 ; 1952 ; trra ; >
+      au < manifest ; exists ; 2006 ; Transportation Research Record Volume 1953 ; 1953 ; trra ; >
+      au < manifest ; exists ; 2006 ; Transportation Research Record Volume 1954 ; 1954 ; trra ; >
+      au < manifest ; exists ; 2006 ; Transportation Research Record Volume 1955 ; 1955 ; trra ; >
+      au < manifest ; exists ; 2006 ; Transportation Research Record Volume 1956 ; 1956 ; trra ; >
+      au < manifest ; exists ; 2006 ; Transportation Research Record Volume 1957 ; 1957 ; trra ; >
+      au < manifest ; exists ; 2006 ; Transportation Research Record Volume 1958 ; 1958 ; trra ; >
+      au < manifest ; exists ; 2006 ; Transportation Research Record Volume 1959 ; 1959 ; trra ; >
+      au < manifest ; exists ; 2006 ; Transportation Research Record Volume 1960 ; 1960 ; trra ; >
+      au < manifest ; exists ; 2006 ; Transportation Research Record Volume 1961 ; 1961 ; trra ; >
+      au < manifest ; exists ; 2006 ; Transportation Research Record Volume 1962 ; 1962 ; trra ; >
+      au < manifest ; exists ; 2006 ; Transportation Research Record Volume 1963 ; 1963 ; trra ; >
+      au < manifest ; exists ; 2006 ; Transportation Research Record Volume 1964 ; 1964 ; trra ; >
+      au < manifest ; exists ; 2006 ; Transportation Research Record Volume 1965 ; 1965 ; trra ; >
+      au < manifest ; exists ; 2006 ; Transportation Research Record Volume 1966 ; 1966 ; trra ; >
+      au < manifest ; exists ; 2006 ; Transportation Research Record Volume 1967 ; 1967 ; trra ; >
+      au < manifest ; exists ; 2006 ; Transportation Research Record Volume 1968 ; 1968 ; trra ; >
+      au < manifest ; exists ; 2006 ; Transportation Research Record Volume 1969 ; 1969 ; trra ; >
+      au < manifest ; exists ; 2006 ; Transportation Research Record Volume 1970 ; 1970 ; trra ; >
+      au < manifest ; exists ; 2006 ; Transportation Research Record Volume 1971 ; 1971 ; trra ; >
+      au < manifest ; exists ; 2006 ; Transportation Research Record Volume 1972 ; 1972 ; trra ; >
+      au < manifest ; exists ; 2006 ; Transportation Research Record Volume 1973 ; 1973 ; trra ; >
+      au < manifest ; exists ; 2006 ; Transportation Research Record Volume 1974 ; 1974 ; trra ; >
+      au < manifest ; exists ; 2006 ; Transportation Research Record Volume 1975 ; 1975 ; trra ; >
+      au < manifest ; exists ; 2006 ; Transportation Research Record Volume 1976 ; 1976 ; trra ; >
+      au < manifest ; exists ; 2006 ; Transportation Research Record Volume 1977 ; 1977 ; trra ; >
+      au < manifest ; exists ; 2006 ; Transportation Research Record Volume 1978 ; 1978 ; trra ; >
+      au < manifest ; exists ; 2006 ; Transportation Research Record Volume 1979 ; 1979 ; trra ; >
+      au < manifest ; exists ; 2006 ; Transportation Research Record Volume 1980 ; 1980 ; trra ; >
+      au < manifest ; exists ; 2006 ; Transportation Research Record Volume 1981 ; 1981 ; trra ; >
+      au < manifest ; exists ; 2006 ; Transportation Research Record Volume 1982 ; 1982 ; trra ; >
+      au < manifest ; exists ; 2006 ; Transportation Research Record Volume 1983 ; 1983 ; trra ; >
+      au < manifest ; exists ; 2006 ; Transportation Research Record Volume 1984 ; 1984 ; trra ; >
+      au < manifest ; exists ; 2006 ; Transportation Research Record Volume 1985 ; 1985 ; trra ; >
+      au < manifest ; exists ; 2006 ; Transportation Research Record Volume 1986 ; 1986 ; trra ; >
+      au < manifest ; exists ; 2006 ; Transportation Research Record Volume 1987 ; 1987 ; trra ; >
+      au < manifest ; exists ; 2006 ; Transportation Research Record Volume 1988 ; 1988 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 1989-1 ; 1989-1 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 1989-2 ; 1989-2 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 1990 ; 1990 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 1991 ; 1991 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 1992 ; 1992 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 1993 ; 1993 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 1994 ; 1994 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 1995 ; 1995 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 1996 ; 1996 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 1997 ; 1997 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 1998 ; 1998 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 1999 ; 1999 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 2000 ; 2000 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 2001 ; 2001 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 2002 ; 2002 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 2003 ; 2003 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 2004 ; 2004 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 2005 ; 2005 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 2006 ; 2006 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 2007 ; 2007 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 2008 ; 2008 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 2009 ; 2009 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 2010 ; 2010 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 2011 ; 2011 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 2012 ; 2012 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 2013 ; 2013 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 2014 ; 2014 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 2015 ; 2015 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 2016 ; 2016 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 2017 ; 2017 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 2018 ; 2018 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 2019 ; 2019 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 2020 ; 2020 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 2021 ; 2021 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 2022 ; 2022 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 2023 ; 2023 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 2024 ; 2024 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 2025 ; 2025 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 2026 ; 2026 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 2027 ; 2027 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 2028 ; 2028 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 2029 ; 2029 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 2030 ; 2030 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 2031 ; 2031 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 2032 ; 2032 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 2033 ; 2033 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 2034 ; 2034 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 2035 ; 2035 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 2036 ; 2036 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 2037 ; 2037 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 2038 ; 2038 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 2039 ; 2039 ; trra ; >
+      au < manifest ; exists ; 2007 ; Transportation Research Record Volume 2040 ; 2040 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2041 ; 2041 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2042 ; 2042 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2043 ; 2043 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2044 ; 2044 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2045 ; 2045 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2046 ; 2046 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2047 ; 2047 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2048 ; 2048 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2049 ; 2049 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2050 ; 2050 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2051 ; 2051 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2052 ; 2052 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2053 ; 2053 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2054 ; 2054 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2055 ; 2055 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2056 ; 2056 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2057 ; 2057 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2058 ; 2058 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2059 ; 2059 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2060 ; 2060 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2061 ; 2061 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2062 ; 2062 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2063 ; 2063 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2064 ; 2064 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2065 ; 2065 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2066 ; 2066 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2067 ; 2067 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2068 ; 2068 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2069 ; 2069 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2070 ; 2070 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2071 ; 2071 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2072 ; 2072 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2073 ; 2073 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2074 ; 2074 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2075 ; 2075 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2076 ; 2076 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2077 ; 2077 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2078 ; 2078 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2079 ; 2079 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2080 ; 2080 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2081 ; 2081 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2082 ; 2082 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2083 ; 2083 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2084 ; 2084 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2085 ; 2085 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2086 ; 2086 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2087 ; 2087 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2088 ; 2088 ; trra ; >
+      au < manifest ; exists ; 2008 ; Transportation Research Record Volume 2089 ; 2089 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2090 ; 2090 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2091 ; 2091 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2092 ; 2092 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2093 ; 2093 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2094 ; 2094 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2095 ; 2095 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2096 ; 2096 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2097 ; 2097 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2098 ; 2098 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2099 ; 2099 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2100 ; 2100 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2101 ; 2101 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2102 ; 2102 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2103 ; 2103 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2104 ; 2104 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2105 ; 2105 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2106 ; 2106 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2107 ; 2107 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2108 ; 2108 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2109 ; 2109 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2110 ; 2110 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2111 ; 2111 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2112 ; 2112 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2113 ; 2113 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2114 ; 2114 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2115 ; 2115 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2116 ; 2116 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2117 ; 2117 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2118 ; 2118 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2119 ; 2119 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2120 ; 2120 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2121 ; 2121 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2122 ; 2122 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2123 ; 2123 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2124 ; 2124 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2125 ; 2125 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2126 ; 2126 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2127 ; 2127 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2128 ; 2128 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2129 ; 2129 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2130 ; 2130 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2131 ; 2131 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2132 ; 2132 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2133 ; 2133 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2134 ; 2134 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2135 ; 2135 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2136 ; 2136 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2137 ; 2137 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2138 ; 2138 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2139 ; 2139 ; trra ; >
+      au < manifest ; exists ; 2009 ; Transportation Research Record Volume 2140 ; 2140 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2141 ; 2141 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2142 ; 2142 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2143 ; 2143 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2144 ; 2144 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2145 ; 2145 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2146 ; 2146 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2147 ; 2147 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2148 ; 2148 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2149 ; 2149 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2150 ; 2150 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2151 ; 2151 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2152 ; 2152 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2153 ; 2153 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2154 ; 2154 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2155 ; 2155 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2156 ; 2156 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2157 ; 2157 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2158 ; 2158 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2159 ; 2159 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2160 ; 2160 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2161 ; 2161 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2162 ; 2162 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2163 ; 2163 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2164 ; 2164 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2165 ; 2165 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2166 ; 2166 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2167 ; 2167 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2168 ; 2168 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2169 ; 2169 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2170 ; 2170 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2171 ; 2171 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2172 ; 2172 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2173 ; 2173 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2174 ; 2174 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2175 ; 2175 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2176 ; 2176 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2177 ; 2177 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2178 ; 2178 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2179 ; 2179 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2180 ; 2180 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2181 ; 2181 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2182 ; 2182 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2183 ; 2183 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2184 ; 2184 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2185 ; 2185 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2186 ; 2186 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2187 ; 2187 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2188 ; 2188 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2189 ; 2189 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2190 ; 2190 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2191 ; 2191 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2192 ; 2192 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2193 ; 2193 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2194 ; 2194 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2195 ; 2195 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2196 ; 2196 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2197 ; 2197 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2198 ; 2198 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2199 ; 2199 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2200 ; 2200 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2201 ; 2201 ; trra ; >
+      au < manifest ; exists ; 2010 ; Transportation Research Record Volume 2202 ; 2202 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2203 ; 2203 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2204 ; 2204 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2205 ; 2205 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2206 ; 2206 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2207 ; 2207 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2208 ; 2208 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2209 ; 2209 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2210 ; 2210 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2211 ; 2211 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2212 ; 2212 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2213 ; 2213 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2214 ; 2214 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2215 ; 2215 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2216 ; 2216 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2217 ; 2217 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2218 ; 2218 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2219 ; 2219 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2220 ; 2220 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2221 ; 2221 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2222 ; 2222 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2223 ; 2223 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2224 ; 2224 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2225 ; 2225 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2226 ; 2226 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2227 ; 2227 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2228 ; 2228 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2229 ; 2229 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2230 ; 2230 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2231 ; 2231 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2232 ; 2232 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2233 ; 2233 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2234 ; 2234 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2235 ; 2235 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2236 ; 2236 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2237 ; 2237 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2238 ; 2238 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2239 ; 2239 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2240 ; 2240 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2241 ; 2241 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2242 ; 2242 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2243 ; 2243 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2244 ; 2244 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2245 ; 2245 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2246 ; 2246 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2247 ; 2247 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2248 ; 2248 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2249 ; 2249 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2250 ; 2250 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2251 ; 2251 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2252 ; 2252 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2253 ; 2253 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2254 ; 2254 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2255 ; 2255 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2256 ; 2256 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2257 ; 2257 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2258 ; 2258 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2259 ; 2259 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2260 ; 2260 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2261 ; 2261 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2262 ; 2262 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2263 ; 2263 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2264 ; 2264 ; trra ; >
+      au < manifest ; exists ; 2011 ; Transportation Research Record Volume 2265 ; 2265 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2266 ; 2266 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2267 ; 2267 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2268 ; 2268 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2269 ; 2269 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2270 ; 2270 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2271 ; 2271 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2272 ; 2272 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2273 ; 2273 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2274 ; 2274 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2275 ; 2275 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2276 ; 2276 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2277 ; 2277 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2278 ; 2278 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2279 ; 2279 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2280 ; 2280 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2281 ; 2281 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2282 ; 2282 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2283 ; 2283 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2284 ; 2284 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2285 ; 2285 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2286 ; 2286 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2287 ; 2287 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2288 ; 2288 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2289 ; 2289 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2290 ; 2290 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2291 ; 2291 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2292 ; 2292 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2293 ; 2293 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2294 ; 2294 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2295 ; 2295 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2296 ; 2296 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2297 ; 2297 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2298 ; 2298 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2299 ; 2299 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2300 ; 2300 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2301 ; 2301 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2302 ; 2302 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2303 ; 2303 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2304 ; 2304 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2305 ; 2305 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2306 ; 2306 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2307 ; 2307 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2308 ; 2308 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2309 ; 2309 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2310 ; 2310 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2311 ; 2311 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2312 ; 2312 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2313 ; 2313 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2314 ; 2314 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2315 ; 2315 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2316 ; 2316 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2317 ; 2317 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2318 ; 2318 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2319 ; 2319 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2320 ; 2320 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2321 ; 2321 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2322 ; 2322 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2323 ; 2323 ; trra ; >
+      au < manifest ; exists ; 2012 ; Transportation Research Record Volume 2324 ; 2324 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2325 ; 2325 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2326 ; 2326 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2327 ; 2327 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2328 ; 2328 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2329 ; 2329 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2330 ; 2330 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2331 ; 2331 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2332 ; 2332 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2333 ; 2333 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2334 ; 2334 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2335 ; 2335 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2336 ; 2336 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2337 ; 2337 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2338 ; 2338 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2339 ; 2339 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2340 ; 2340 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2341 ; 2341 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2342 ; 2342 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2343 ; 2343 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2344 ; 2344 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2345 ; 2345 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2346 ; 2346 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2347 ; 2347 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2348 ; 2348 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2349 ; 2349 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2350 ; 2350 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2351 ; 2351 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2352 ; 2352 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2353 ; 2353 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2354 ; 2354 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2355 ; 2355 ; trra ; >
       au < exists ; exists ; 2013 ; Transportation Research Record Volume 2356 ; 2356 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2357 ; 2357 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2358 ; 2358 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2359 ; 2359 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2360 ; 2360 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2361 ; 2361 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2362 ; 2362 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2363 ; 2363 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2364 ; 2364 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2365 ; 2365 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2366 ; 2366 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2367 ; 2367 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2368 ; 2368 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2369 ; 2369 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2370 ; 2370 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2371 ; 2371 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2372 ; 2372 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2373 ; 2373 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2374 ; 2374 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2375 ; 2375 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2376 ; 2376 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2377 ; 2377 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2378 ; 2378 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2379 ; 2379 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2380 ; 2380 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2381 ; 2381 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2382 ; 2382 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2383 ; 2383 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2384 ; 2384 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2385 ; 2385 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2386 ; 2386 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2387 ; 2387 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2388 ; 2388 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2389 ; 2389 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2390 ; 2390 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2391 ; 2391 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2392 ; 2392 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2393 ; 2393 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2394 ; 2394 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2395 ; 2395 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2396 ; 2396 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2397 ; 2397 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2398 ; 2398 ; trra ; >
-      au < exists ; exists ; 2013 ; Transportation Research Record Volume 2399 ; 2399 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2400 ; 2400 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2401 ; 2401 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2402 ; 2402 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2403 ; 2403 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2404 ; 2404 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2405 ; 2405 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2406 ; 2406 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2407 ; 2407 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2408 ; 2408 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2409 ; 2409 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2410 ; 2410 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2411 ; 2411 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2412 ; 2412 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2413 ; 2413 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2414 ; 2414 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2415 ; 2415 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2416 ; 2416 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2417 ; 2417 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2418 ; 2418 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2419 ; 2419 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2420 ; 2420 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2421 ; 2421 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2422 ; 2422 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2423 ; 2423 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2424 ; 2424 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2425 ; 2425 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2426 ; 2426 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2427 ; 2427 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2428 ; 2428 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2429 ; 2429 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2430 ; 2430 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2431 ; 2431 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2432 ; 2432 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2433 ; 2433 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2434 ; 2434 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2435 ; 2435 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2436 ; 2436 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2437 ; 2437 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2438 ; 2438 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2439 ; 2439 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2440 ; 2440 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2441 ; 2441 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2442 ; 2442 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2443 ; 2443 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2444 ; 2444 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2445 ; 2445 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2446 ; 2446 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2447 ; 2447 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2448 ; 2448 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2449 ; 2449 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2450 ; 2450 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2451 ; 2451 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2452 ; 2452 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2453 ; 2453 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2454 ; 2454 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2455 ; 2455 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2456 ; 2456 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2457 ; 2457 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2458 ; 2458 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2459 ; 2459 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2460 ; 2460 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2461 ; 2461 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2462 ; 2462 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2463 ; 2463 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2464 ; 2464 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2465 ; 2465 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2466 ; 2466 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2467 ; 2467 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2468 ; 2468 ; trra ; >
-      au < exists ; exists ; 2014 ; Transportation Research Record Volume 2469 ; 2469 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2357 ; 2357 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2358 ; 2358 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2359 ; 2359 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2360 ; 2360 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2361 ; 2361 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2362 ; 2362 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2363 ; 2363 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2364 ; 2364 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2365 ; 2365 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2366 ; 2366 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2367 ; 2367 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2368 ; 2368 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2369 ; 2369 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2370 ; 2370 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2371 ; 2371 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2372 ; 2372 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2373 ; 2373 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2374 ; 2374 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2375 ; 2375 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2376 ; 2376 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2377 ; 2377 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2378 ; 2378 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2379 ; 2379 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2380 ; 2380 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2381 ; 2381 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2382 ; 2382 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2383 ; 2383 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2384 ; 2384 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2385 ; 2385 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2386 ; 2386 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2387 ; 2387 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2388 ; 2388 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2389 ; 2389 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2390 ; 2390 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2391 ; 2391 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2392 ; 2392 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2393 ; 2393 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2394 ; 2394 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2395 ; 2395 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2396 ; 2396 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2397 ; 2397 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2398 ; 2398 ; trra ; >
+      au < manifest ; exists ; 2013 ; Transportation Research Record Volume 2399 ; 2399 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2400 ; 2400 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2401 ; 2401 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2402 ; 2402 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2403 ; 2403 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2404 ; 2404 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2405 ; 2405 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2406 ; 2406 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2407 ; 2407 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2408 ; 2408 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2409 ; 2409 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2410 ; 2410 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2411 ; 2411 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2412 ; 2412 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2413 ; 2413 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2414 ; 2414 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2415 ; 2415 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2416 ; 2416 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2417 ; 2417 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2418 ; 2418 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2419 ; 2419 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2420 ; 2420 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2421 ; 2421 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2422 ; 2422 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2423 ; 2423 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2424 ; 2424 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2425 ; 2425 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2426 ; 2426 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2427 ; 2427 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2428 ; 2428 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2429 ; 2429 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2430 ; 2430 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2431 ; 2431 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2432 ; 2432 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2433 ; 2433 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2434 ; 2434 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2435 ; 2435 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2436 ; 2436 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2437 ; 2437 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2438 ; 2438 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2439 ; 2439 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2440 ; 2440 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2441 ; 2441 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2442 ; 2442 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2443 ; 2443 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2444 ; 2444 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2445 ; 2445 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2446 ; 2446 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2447 ; 2447 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2448 ; 2448 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2449 ; 2449 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2450 ; 2450 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2451 ; 2451 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2452 ; 2452 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2453 ; 2453 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2454 ; 2454 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2455 ; 2455 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2456 ; 2456 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2457 ; 2457 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2458 ; 2458 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2459 ; 2459 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2460 ; 2460 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2461 ; 2461 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2462 ; 2462 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2463 ; 2463 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2464 ; 2464 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2465 ; 2465 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2466 ; 2466 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2467 ; 2467 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2468 ; 2468 ; trra ; >
+      au < manifest ; exists ; 2014 ; Transportation Research Record Volume 2469 ; 2469 ; trra ; >
 
   }
 
@@ -46727,7 +46727,7 @@
         au < manifest ; exists ; 2003 ; International Journal of Care Pathways Volume 7 ; 7 ; icpc ; >
         au < manifest ; exists ; 2004 ; International Journal of Care Pathways Volume 8 ; 8 ; icpc ; >
         au < manifest ; exists ; 2005 ; International Journal of Care Pathways Volume 9 ; 9 ; icpc ; >
-        au < exists ; exists ; 2006 ; International Journal of Care Pathways Volume 10 ; 10 ; icpc ; >
+        au < manifest ; exists ; 2006 ; International Journal of Care Pathways Volume 10 ; 10 ; icpc ; >
         au < manifest ; exists ; 2007 ; International Journal of Care Pathways Volume 11 ; 11 ; icpc ; >
 
       }

@@ -1091,7 +1091,7 @@
     au < doNotProcess ; exists ; 2009 ; Journal of Central Nervous System Disease Volume 1 ; 1 ; cnsa ; >
     au < doNotProcess ; exists ; 2010 ; Journal of Central Nervous System Disease Volume 2 ; 2 ; cnsa ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Journal of Central Nervous System Disease Volume 3 ; 3 ; cnsa ; >
-    au < exists ; exists ; 2012 ; Journal of Central Nervous System Disease Volume 4 ; 4 ; cnsa ; >
+    au < manifest ; exists ; 2012 ; Journal of Central Nervous System Disease Volume 4 ; 4 ; cnsa ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Journal of Central Nervous System Disease Volume 5 ; 5 ; cnsa ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Central Nervous System Disease Volume 6 ; 6 ; cnsa ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Central Nervous System Disease Volume 7 ; 7 ; cnsa ; >
@@ -1139,7 +1139,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Medical Education and Curricular Development Volume 2 ; 2 ; mdea ; >
     au < manifest ; exists ; 2016 ; Journal of Medical Education and Curricular Development Volume 3 ; 3 ; mdea ; >
     au < manifest ; exists ; 2017 ; Journal of Medical Education and Curricular Development Volume 4 ; 4 ; mdea ; >
-    au < exists ; exists ; 2018 ; Journal of Medical Education and Curricular Development Volume 5 ; 5 ; mdea ; >
+    au < manifest ; exists ; 2018 ; Journal of Medical Education and Curricular Development Volume 5 ; 5 ; mdea ; >
 
   }
 
@@ -1298,7 +1298,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Ophthalmology and Eye Diseases Volume 7 ; 7 ; oeda ; >
     au < manifest ; exists ; 2016 ; Ophthalmology and Eye Diseases Volume 8 ; 8 ; oeda ; >
     au < manifest ; exists ; 2017 ; Ophthalmology and Eye Diseases Volume 9 ; 9 ; oeda ; >
-    au < exists ; exists ; 2018 ; Ophthalmology and Eye Diseases Volume 10 ; 10 ; oedb ; >
+    au < manifest ; exists ; 2018 ; Ophthalmology and Eye Diseases Volume 10 ; 10 ; oedb ; >
 
   }
 
