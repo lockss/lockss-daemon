@@ -132,7 +132,7 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "              </div>\n" + 
       "            </div>\n" + 
       "          </div>\n" + 
-      "          <div data-widget-def=\"ux3-layout-widget\" data-widget-id=\"997e6516-df0b-4ebb-b8c3-16252c6828dd\" class=\"container header--first-row\">\n" + 
+      "          <div data-widget-def=\"layout-widget\" data-widget-id=\"9876543-21\" class=\"container header--first-row\">\n" + 
       "            <div class=\"pull-left\">\n" + 
       "              <div class=\"header__logo\">\n" + 
       "                <a href=\"/\" title=\"logo\">\n" + 
@@ -178,7 +178,7 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                  <div class=\"toc-header__top\">\n" + 
       "                    <h3 class=\"filled--journal no-top-margin\"> <a href=\"/journal/hlthaff\">Journal</a></h3>\n" + 
       "                    <div class=\"current-issue\"><span>Vol. 36, No. 8</span><span><a href=\"https://www.pubservice.com/backissue/subbi.aspx?CO=PJ&amp;PC=HR&amp;BI=HRI\">&nbsp;|&nbsp;Purchase Issue</a></span></div>\n" + 
-      "                    <h1 class=\"toc-header__title\">August 2017 | Consumerism, Competition, Drug Approval &amp; More</h1>\n" + 
+      "                    <h1 class=\"toc-header__title\">August 2017 | Drug Approval &amp; More</h1>\n" + 
       "                  </div>\n" + 
       "                </div>\n" + 
       "                <div class=\" col-xs-2\">\n" + 
@@ -192,46 +192,46 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                <div class=\"table-of-content\">\n" + 
       "                  <div class=\"issue-item\">\n" + 
       "                    <span class=\"filled--journal default\">From the Editor-In-Chief</span><span class=\"toc-label text-uppercase\"></span>\n" + 
-      "                    <h2 class=\"issue-item__title\"><a href=\"/doi/full/10.1377/hlthaff.2017.0878\">Consumerism, Competition, Drug Approval, And More</a></h2>\n" + 
+      "                    <h2 class=\"issue-item__title\"><a href=\"/doi/full/10.1377/hlthaff.2017.9999\">Drug Approval, And More</a></h2>\n" + 
       "                    <div class=\"rlist--inline loa\"> <span area-label=\"author\"><a href=\"/author/Author%2C+A\" title=\"A Author\"><span>A Author</span></a></span>  </div>\n" + 
       "                    <div class=\"toc-item__detail\"></div>\n" + 
       "                    <span class=\"toc-label\" style=\"margin:0;\">Free Access</span>\n" + 
       "                    <div class=\"toc-item__footer\">\n" + 
       "                      <ul class=\"rlist--inline separator toc-item__detail\">\n" + 
-      "                        <li><a title=\"Full text\" href=\"/doi/full/10.1377/hlthaff.2017.0878\">\n" + 
+      "                        <li><a title=\"Full text\" href=\"/doi/full/10.1377/hlthaff.2017.9999\">\n" + 
       "                          Full text\n" + 
       "                          </a>\n" + 
       "                        </li>\n" + 
-      "                        <li><a title=\"PDF\" href=\"/doi/pdf/10.1377/hlthaff.2017.0878\">\n" + 
+      "                        <li><a title=\"PDF\" href=\"/doi/pdf/10.1377/hlthaff.2017.9999\">\n" + 
       "                          PDF\n" + 
       "                          </a>\n" + 
       "                        </li>\n" + 
-      "                        <li><a href=\"/servlet/linkout?suffix=s0&amp;dbid=16384&amp;type=tocOpenUrl&amp;doi=10.1377/hlthaff.2017.0878&amp;url=http%3A%2F%2Fsfx.stanford.edu%2Flocal%3Fsid%3Dhope%26iuid%3D6220%26id%3Ddoi%3A10.1377%2Fhlthaff.2017.0878\" title=\"OpenURL STANFORD UNIVERISTY MED CTR\" onclick=\"newWindow(this.href);return false\" class=\"sfxLink\"><img src=\"/templates/jsp/images/sfxbutton.gif\" alt=\"OpenURL STANFORD UNIVERISTY MED CTR\"></a></li>\n" + 
+      "                        <li><a href=\"/servlet/linkout?suffix=s0&amp;dbid=16384&amp;type=tocOpenUrl&amp;doi=10.1377/hlthaff.2017.9999&amp;url=http%3A%2F%2Fsfx.stanford.edu%2Flocal%3Fsid%3Dhope%26iuid%3D6220%26id%3Ddoi%3A10.1377%2Fhlthaff.2017.9999\" title=\"OpenURL STANFORD UNIVERISTY MED CTR\" onclick=\"newWindow(this.href);return false\" class=\"sfxLink\"><img src=\"/templates/jsp/images/sfxbutton.gif\" alt=\"OpenURL STANFORD UNIVERISTY MED CTR\"></a></li>\n" + 
       "                        <li>1359-1359</li>\n" + 
       "                      </ul>\n" + 
       "                    </div>\n" + 
       "                  </div>\n" + 
       "                  <div class=\"issue-item\">\n" + 
       "                    <span class=\"filled--journal default\">EntryPoint</span><span class=\"toc-label text-uppercase\"></span>\n" + 
-      "                    <h2 class=\"issue-item__title\"><a href=\"/doi/full/10.1377/hlthaff.2017.0849\">Propping Up Indian Health Care Through Medicaid</a></h2>\n" + 
+      "                    <h2 class=\"issue-item__title\"><a href=\"/doi/full/10.1377/hlthaff.2017.9999\">Propping Up Health Care Through Medicaid</a></h2>\n" + 
       "                    <div class=\"rlist--inline loa\"> <span area-label=\"author\"><a href=\"/author/Author%2C+A\" title=\"A Author\"><span>A Author</span></a></span>  </div>\n" + 
       "                    <div class=\"toc-item__detail\"></div>\n" + 
       "                    <span class=\"toc-label\" style=\"margin:0;\">Free Access</span>\n" + 
       "                    <div class=\"toc-item__footer\">\n" + 
       "                      <ul class=\"rlist--inline separator toc-item__detail\">\n" + 
-      "                        <li><a title=\"Abstract\" href=\"/doi/abs/10.1377/hlthaff.2017.0849\">\n" + 
+      "                        <li><a title=\"Abstract\" href=\"/doi/abs/10.1377/hlthaff.2017.9999\">\n" + 
       "                          Abstract\n" + 
       "                          </a>\n" + 
       "                        </li>\n" + 
-      "                        <li><a title=\"Full text\" href=\"/doi/full/10.1377/hlthaff.2017.0849\">\n" + 
+      "                        <li><a title=\"Full text\" href=\"/doi/full/10.1377/hlthaff.2017.9999\">\n" + 
       "                          Full text\n" + 
       "                          </a>\n" + 
       "                        </li>\n" + 
-      "                        <li><a title=\"PDF\" href=\"/doi/pdf/10.1377/hlthaff.2017.0849\">\n" + 
+      "                        <li><a title=\"PDF\" href=\"/doi/pdf/10.1377/hlthaff.2017.9999\">\n" + 
       "                          PDF\n" + 
       "                          </a>\n" + 
       "                        </li>\n" + 
-      "                        <li><a href=\"/doi/references/10.1377/hlthaff.2017.0849\"><span>References</span><i class=\"icon icon-Icon_Links-References\"></i></a></li>\n" + 
+      "                        <li><a href=\"/doi/references/10.1377/hlthaff.2017.9999\"><span>References</span><i class=\"icon icon-Icon_Links-References\"></i></a></li>\n" + 
       "                        <li><a href=\"/servlet/linkout?suffix=s0&amp;dbid=16384&amp;type=tocOpenUrl\" title=\"OpenURL STANFORD UNIVERISTY MED CTR\" class=\"sfxLink\"></a></li>\n" + 
       "                        <li>1360-1364</li>\n" + 
       "                      </ul>\n" + 
@@ -243,17 +243,17 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                  </div>\n" + 
       "                  <div class=\"issue-item\">\n" + 
       "                    <span class=\"filled--journal default\">Letters</span><span class=\"toc-label text-uppercase\"></span>\n" + 
-      "                    <h2 class=\"issue-item__title\"><a href=\"/doi/full/10.1377/hlthaff.2017.0807\">Innovations And Precise Terms</a></h2>\n" + 
+      "                    <h2 class=\"issue-item__title\"><a href=\"/doi/full/10.1377/hlthaff.2017.9999\">Innovations And Precise Terms</a></h2>\n" + 
       "                    <div class=\"rlist--inline loa\"> <span area-label=\"author\"><a href=\"/author/Author%2C+A\" title=\"A Author\"><span>A Author</span></a></span>  </div>\n" + 
       "                    <div class=\"toc-item__detail\"></div>\n" + 
       "                    <span class=\"toc-label\" style=\"margin:0;\">Free Access</span>\n" + 
       "                    <div class=\"toc-item__footer\">\n" + 
       "                      <ul class=\"rlist--inline separator toc-item__detail\">\n" + 
-      "                        <li><a title=\"Full text\" href=\"/doi/full/10.1377/hlthaff.2017.0807\">\n" + 
+      "                        <li><a title=\"Full text\" href=\"/doi/full/10.1377/hlthaff.2017.9999\">\n" + 
       "                          Full text\n" + 
       "                          </a>\n" + 
       "                        </li>\n" + 
-      "                        <li><a title=\"PDF\" href=\"/doi/pdf/10.1377/hlthaff.2017.0807\">\n" + 
+      "                        <li><a title=\"PDF\" href=\"/doi/pdf/10.1377/hlthaff.2017.9999\">\n" + 
       "                          PDF\n" + 
       "                          </a>\n" + 
       "                        </li>\n" + 
@@ -336,17 +336,17 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                <div class=\"table-of-content\">\n" + 
       "                  <div class=\"issue-item\">\n" + 
       "                    <span class=\"filled--journal default\">From the Editor-In-Chief</span><span class=\"toc-label text-uppercase\"></span>\n" + 
-      "                    <h2 class=\"issue-item__title\"><a href=\"/doi/full/10.1377/hlthaff.2017.0878\">Consumerism, Competition, Drug Approval, And More</a></h2>\n" + 
+      "                    <h2 class=\"issue-item__title\"><a href=\"/doi/full/10.1377/hlthaff.2017.9999\">Drug Approval, And More</a></h2>\n" + 
       "                    <div class=\"rlist--inline loa\"> <span area-label=\"author\"></span>  </div>\n" + 
       "                    <div class=\"toc-item__detail\"></div>\n" + 
       "                    <span class=\"toc-label\" style=\"margin:0;\">Free Access</span>\n" + 
       "                    <div class=\"toc-item__footer\">\n" + 
       "                      <ul class=\"rlist--inline separator toc-item__detail\">\n" + 
-      "                        <li><a title=\"Full text\" href=\"/doi/full/10.1377/hlthaff.2017.0878\">\n" + 
+      "                        <li><a title=\"Full text\" href=\"/doi/full/10.1377/hlthaff.2017.9999\">\n" + 
       "                          Full text\n" + 
       "                          </a>\n" + 
       "                        </li>\n" + 
-      "                        <li><a title=\"PDF\" href=\"/doi/pdf/10.1377/hlthaff.2017.0878\">\n" + 
+      "                        <li><a title=\"PDF\" href=\"/doi/pdf/10.1377/hlthaff.2017.9999\">\n" + 
       "                          PDF\n" + 
       "                          </a>\n" + 
       "                        </li>\n" + 
@@ -357,25 +357,25 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                  </div>\n" + 
       "                  <div class=\"issue-item\">\n" + 
       "                    <span class=\"filled--journal default\">EntryPoint</span><span class=\"toc-label text-uppercase\"></span>\n" + 
-      "                    <h2 class=\"issue-item__title\"><a href=\"/doi/full/10.1377/hlthaff.2017.0849\">Propping Up Indian Health Care Through Medicaid</a></h2>\n" + 
+      "                    <h2 class=\"issue-item__title\"><a href=\"/doi/full/10.1377/hlthaff.2017.9999\">Propping Up Health Care Through Medicaid</a></h2>\n" + 
       "                    <div class=\"rlist--inline loa\"> <span area-label=\"author\"></span>  </div>\n" + 
       "                    <div class=\"toc-item__detail\"></div>\n" + 
       "                    <span class=\"toc-label\" style=\"margin:0;\">Free Access</span>\n" + 
       "                    <div class=\"toc-item__footer\">\n" + 
       "                      <ul class=\"rlist--inline separator toc-item__detail\">\n" + 
-      "                        <li><a title=\"Abstract\" href=\"/doi/abs/10.1377/hlthaff.2017.0849\">\n" + 
+      "                        <li><a title=\"Abstract\" href=\"/doi/abs/10.1377/hlthaff.2017.9999\">\n" + 
       "                          Abstract\n" + 
       "                          </a>\n" + 
       "                        </li>\n" + 
-      "                        <li><a title=\"Full text\" href=\"/doi/full/10.1377/hlthaff.2017.0849\">\n" + 
+      "                        <li><a title=\"Full text\" href=\"/doi/full/10.1377/hlthaff.2017.9999\">\n" + 
       "                          Full text\n" + 
       "                          </a>\n" + 
       "                        </li>\n" + 
-      "                        <li><a title=\"PDF\" href=\"/doi/pdf/10.1377/hlthaff.2017.0849\">\n" + 
+      "                        <li><a title=\"PDF\" href=\"/doi/pdf/10.1377/hlthaff.2017.9999\">\n" + 
       "                          PDF\n" + 
       "                          </a>\n" + 
       "                        </li>\n" + 
-      "                        <li><a href=\"/doi/references/10.1377/hlthaff.2017.0849\"><span>References</span><i class=\"icon icon-Icon_Links-References\"></i></a></li>\n" + 
+      "                        <li><a href=\"/doi/references/10.1377/hlthaff.2017.9999\"><span>References</span><i class=\"icon icon-Icon_Links-References\"></i></a></li>\n" + 
       "                        <li></li>\n" + 
       "                        <li>1360-1364</li>\n" + 
       "                      </ul>\n" + 
@@ -387,17 +387,17 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                  </div>\n" + 
       "                  <div class=\"issue-item\">\n" + 
       "                    <span class=\"filled--journal default\">Letters</span><span class=\"toc-label text-uppercase\"></span>\n" + 
-      "                    <h2 class=\"issue-item__title\"><a href=\"/doi/full/10.1377/hlthaff.2017.0807\">Innovations And Precise Terms</a></h2>\n" + 
+      "                    <h2 class=\"issue-item__title\"><a href=\"/doi/full/10.1377/hlthaff.2017.9999\">Innovations And Precise Terms</a></h2>\n" + 
       "                    <div class=\"rlist--inline loa\"> <span area-label=\"author\"></span>  </div>\n" + 
       "                    <div class=\"toc-item__detail\"></div>\n" + 
       "                    <span class=\"toc-label\" style=\"margin:0;\">Free Access</span>\n" + 
       "                    <div class=\"toc-item__footer\">\n" + 
       "                      <ul class=\"rlist--inline separator toc-item__detail\">\n" + 
-      "                        <li><a title=\"Full text\" href=\"/doi/full/10.1377/hlthaff.2017.0807\">\n" + 
+      "                        <li><a title=\"Full text\" href=\"/doi/full/10.1377/hlthaff.2017.9999\">\n" + 
       "                          Full text\n" + 
       "                          </a>\n" + 
       "                        </li>\n" + 
-      "                        <li><a title=\"PDF\" href=\"/doi/pdf/10.1377/hlthaff.2017.0807\">\n" + 
+      "                        <li><a title=\"PDF\" href=\"/doi/pdf/10.1377/hlthaff.2017.9999\">\n" + 
       "                          PDF\n" + 
       "                          </a>\n" + 
       "                        </li>\n" + 
@@ -433,17 +433,17 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "<div class=\"table-of-content\">\n" + 
       "                  <div class=\"issue-item\">\n" + 
       "                    <span class=\"filled--journal default\">From the Editor-In-Chief</span><span class=\"toc-label text-uppercase\"></span>\n" + 
-      "                    <h2 class=\"issue-item__title\"><a href=\"/doi/full/10.1377/hlthaff.2017.0878\">Consumerism, Competition, Drug Approval, And More</a></h2>\n" + 
+      "                    <h2 class=\"issue-item__title\"><a href=\"/doi/full/10.1377/hlthaff.2017.9999\">Drug Approval, And More</a></h2>\n" + 
       "                    <div class=\"rlist--inline loa\"> <span area-label=\"author\"><a href=\"/author/Author%2C+A\" title=\"A Author\"><span>A Author</span></a></span>  </div>\n" + 
       "                    <div class=\"toc-item__detail\"></div>\n" + 
       "                    <span class=\"toc-label\" style=\"margin:0;\">Free Access</span>\n" + 
       "                    <div class=\"toc-item__footer\">\n" + 
       "                      <ul class=\"rlist--inline separator toc-item__detail\">\n" + 
-      "                        <li><a title=\"Full text\" href=\"/doi/full/10.1377/hlthaff.2017.0878\">\n" + 
+      "                        <li><a title=\"Full text\" href=\"/doi/full/10.1377/hlthaff.2017.9999\">\n" + 
       "                          Full text\n" + 
       "                          </a>\n" + 
       "                        </li>\n" + 
-      "                        <li><a title=\"PDF\" href=\"/doi/pdf/10.1377/hlthaff.2017.0878\">\n" + 
+      "                        <li><a title=\"PDF\" href=\"/doi/pdf/10.1377/hlthaff.2017.9999\">\n" + 
       "                          PDF\n" + 
       "                          </a>\n" + 
       "                        </li>\n" + 
@@ -454,25 +454,25 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                  </div>\n" + 
       "                  <div class=\"issue-item\">\n" + 
       "                    <span class=\"filled--journal default\">EntryPoint</span><span class=\"toc-label text-uppercase\"></span>\n" + 
-      "                    <h2 class=\"issue-item__title\"><a href=\"/doi/full/10.1377/hlthaff.2017.0849\">Propping Up Indian Health Care Through Medicaid</a></h2>\n" + 
+      "                    <h2 class=\"issue-item__title\"><a href=\"/doi/full/10.1377/hlthaff.2017.9999\">Propping Up Health Care Through Medicaid</a></h2>\n" + 
       "                    <div class=\"rlist--inline loa\"> <span area-label=\"author\"><a href=\"/author/Author%2C+A\" title=\"A Author\"><span>A Author</span></a></span>  </div>\n" + 
       "                    <div class=\"toc-item__detail\"></div>\n" + 
       "                    <span class=\"toc-label\" style=\"margin:0;\">Free Access</span>\n" + 
       "                    <div class=\"toc-item__footer\">\n" + 
       "                      <ul class=\"rlist--inline separator toc-item__detail\">\n" + 
-      "                        <li><a title=\"Abstract\" href=\"/doi/abs/10.1377/hlthaff.2017.0849\">\n" + 
+      "                        <li><a title=\"Abstract\" href=\"/doi/abs/10.1377/hlthaff.2017.9999\">\n" + 
       "                          Abstract\n" + 
       "                          </a>\n" + 
       "                        </li>\n" + 
-      "                        <li><a title=\"Full text\" href=\"/doi/full/10.1377/hlthaff.2017.0849\">\n" + 
+      "                        <li><a title=\"Full text\" href=\"/doi/full/10.1377/hlthaff.2017.9999\">\n" + 
       "                          Full text\n" + 
       "                          </a>\n" + 
       "                        </li>\n" + 
-      "                        <li><a title=\"PDF\" href=\"/doi/pdf/10.1377/hlthaff.2017.0849\">\n" + 
+      "                        <li><a title=\"PDF\" href=\"/doi/pdf/10.1377/hlthaff.2017.9999\">\n" + 
       "                          PDF\n" + 
       "                          </a>\n" + 
       "                        </li>\n" + 
-      "                        <li><a href=\"/doi/references/10.1377/hlthaff.2017.0849\"><span>References</span><i class=\"icon icon-Icon_Links-References\"></i></a></li>\n" + 
+      "                        <li><a href=\"/doi/references/10.1377/hlthaff.2017.9999\"><span>References</span><i class=\"icon icon-Icon_Links-References\"></i></a></li>\n" + 
       "                        <li></li>\n" + 
       "                        <li>1360-1364</li>\n" + 
       "                      </ul>\n" + 
@@ -484,17 +484,17 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                  </div>\n" + 
       "                  <div class=\"issue-item\">\n" + 
       "                    <span class=\"filled--journal default\">Letters</span><span class=\"toc-label text-uppercase\"></span>\n" + 
-      "                    <h2 class=\"issue-item__title\"><a href=\"/doi/full/10.1377/hlthaff.2017.0807\">Innovations And Precise Terms</a></h2>\n" + 
+      "                    <h2 class=\"issue-item__title\"><a href=\"/doi/full/10.1377/hlthaff.2017.9999\">Innovations And Precise Terms</a></h2>\n" + 
       "                    <div class=\"rlist--inline loa\"> <span area-label=\"author\"><a href=\"/author/Author%2C+A\" title=\"A Author\"><span>A Author</span></a></span>  </div>\n" + 
       "                    <div class=\"toc-item__detail\"></div>\n" + 
       "                    <span class=\"toc-label\" style=\"margin:0;\">Free Access</span>\n" + 
       "                    <div class=\"toc-item__footer\">\n" + 
       "                      <ul class=\"rlist--inline separator toc-item__detail\">\n" + 
-      "                        <li><a title=\"Full text\" href=\"/doi/full/10.1377/hlthaff.2017.0807\">\n" + 
+      "                        <li><a title=\"Full text\" href=\"/doi/full/10.1377/hlthaff.2017.9999\">\n" + 
       "                          Full text\n" + 
       "                          </a>\n" + 
       "                        </li>\n" + 
-      "                        <li><a title=\"PDF\" href=\"/doi/pdf/10.1377/hlthaff.2017.0807\">\n" + 
+      "                        <li><a title=\"PDF\" href=\"/doi/pdf/10.1377/hlthaff.2017.9999\">\n" + 
       "                          PDF\n" + 
       "                          </a>\n" + 
       "                        </li>\n" + 
@@ -509,7 +509,7 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       " " + 
       "" + 
       "From the Editor-In-Chief " + 
-      "Consumerism, Competition, Drug Approval, And More " + 
+      "Drug Approval, And More " + 
       "A Author " + 
       "" + 
       "Free Access " + 
@@ -530,7 +530,7 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "" + 
       "" + 
       "EntryPoint " + 
-      "Propping Up Indian Health Care Through Medicaid " + 
+      "Propping Up Health Care Through Medicaid " + 
       "A Author " + 
       "" + 
       "Free Access " + 
@@ -582,16 +582,16 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "";
   
   private static final String art1Content = 
-      "<html class=\"pb-page\" data-request-id=\"77cdf167-df5e-4a46-99b9-19e197d17387\" lang=\"en\">\n" + 
+      "<html class=\"pb-page\" data-request-id=\"9876543-21\" lang=\"en\">\n" + 
       "  <head data-pb-dropzone=\"head\">\n" + 
-      "    <meta name=\"pbContext\" content=\";website:website:hope-site;page:string:Article/Chapter View;journal:journal:hlthaff;article:article:10.1377/hlthaff.2017.1212;issue:issue:10.1377/hlthaff.2017.36.issue-11;wgroup:string:Publication Websites;pageGroup:string:Publication Pages;subPage:string:Full Text\">\n" + 
+      "    <meta name=\"pbContext\" content=\";website:website:hope-site;page:string:Article/Chapter View;journal:journal:hlthaff;article:article:10.1377/hlthaff.2018.test1;issue:issue:10.1377/hlthaff.2017.36.issue-11;wgroup:string:Publication Websites;pageGroup:string:Publication Pages;subPage:string:Full Text\">\n" + 
       "    <meta data-pb-head=\"head-widgets-start\">\n" + 
       "    <link rel=\"schema.DC\" href=\"http://purl.org/DC/elements/1.0/\">\n" + 
       "    <meta name=\"dc.Language\" content=\"en\">\n" + 
       "    <meta name=\"dc.Coverage\" content=\"world\">\n" + 
-      "    <link rel=\"meta\" type=\"application/atom+xml\" href=\"https://doi.org/10.1377%2Fhlthaff.2017.1212\">\n" + 
-      "    <link rel=\"meta\" type=\"application/rdf+json\" href=\"https://doi.org/10.1377%2Fhlthaff.2017.1212\">\n" + 
-      "    <link rel=\"meta\" type=\"application/unixref+xml\" href=\"https://doi.org/10.1377%2Fhlthaff.2017.1212\">\n" + 
+      "    <link rel=\"meta\" type=\"application/atom+xml\" href=\"https://doi.org/10.1377%2Fhlthaff.2018.test1\">\n" + 
+      "    <link rel=\"meta\" type=\"application/rdf+json\" href=\"https://doi.org/10.1377%2Fhlthaff.2018.test1\">\n" + 
+      "    <link rel=\"meta\" type=\"application/unixref+xml\" href=\"https://doi.org/10.1377%2Fhlthaff.2018.test1\">\n" + 
       "    <meta charset=\"UTF-8\">\n" + 
       "    <meta name=\"robots\" content=\"noarchive\">\n" + 
       "    <meta name=\"viewport\" content=\"width=device-width,initial-scale=1,maximum-scale=1, user-scalable=0\">\n" + 
@@ -652,7 +652,7 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "              <div>\n" + 
       "                <div class=\"container\"></div>\n" + 
       "                <div>\n" + 
-      "                  <article data-figures=\"https://www.healthaffairs.org/action/ajaxShowFigures?doi=10.1377%2Fhlthaff.2017.1212&amp;ajax=true\" data-references=\"https://www.healthaffairs.org/action/ajaxShowEnhancedAbstract?doi=10.1377%2Fhlthaff.2017.1212&amp;ajax=true\" class=\"container\">\n" + 
+      "                  <article data-figures=\"https://www.healthaffairs.org/action/ajaxShowFigures?doi=10.1377%2Fhlthaff.2018.test1&amp;ajax=true\" data-references=\"https://www.healthaffairs.org/action/ajaxShowEnhancedAbstract?doi=10.1377%2Fhlthaff.2018.test1&amp;ajax=true\" class=\"container\">\n" + 
       "                    <div class=\"row\">\n" + 
       "                      <div class=\"col-sm-8 col-md-8 article__content\">\n" + 
       "                        <!--+articleHEeader()--><!--+articleCitation()-->\n" + 
@@ -669,7 +669,7 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                          <h1 class=\"citation__title\">Making The Most Of Microfinance Networks</h1>\n" + 
       "                          <div class=\"issue-item\">\n" + 
       "                            <ul class=\"rlist--inline loa mobile-authors\" title=\"list of authors\">\n" + 
-      "                              <li><span class=\"hlFld-ContribAuthor\"><a href=\"/author/Saunders%2C+Margaret+K\" title=\"Margaret K. Saunders\">Margaret K. Saunders</a><sup>1</sup></span></li>\n" + 
+      "                              <li><span class=\"hlFld-ContribAuthor\"><a href=\"/author/Author\" title=\"Author\">Author</a><sup>1</sup></span></li>\n" + 
       "                            </ul>\n" + 
       "                          </div>\n" + 
       "                          <div class=\"article__affiliations\">\n" + 
@@ -680,7 +680,7 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                                <section class=\"section\">\n" + 
       "                                  <div class=\"section__body\">\n" + 
       "                                    <ol class=\"rlist spaced\">\n" + 
-      "                                      <li id=\"BIO1\">1. Margaret K. Saunders (msaunders@projecthope.org) is a deputy editor for global health at Health Affairs, in Bethesda, Maryland.</li>\n" + 
+      "                                      <li id=\"BIO1\">1. Author is an author at Health Affairs, in Bethesda, Maryland.</li>\n" + 
       "                                    </ol>\n" + 
       "                                  </div>\n" + 
       "                                </section>\n" + 
@@ -688,7 +688,7 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                            </div>\n" + 
       "                          </div>\n" + 
       "                        </div>\n" + 
-      "                        <div class=\"epub-section clearfix\"><span class=\"epub-section__item\"><span class=\"epub-section__state\">PUBLISHED:</span><span class=\"epub-section__date\">November 2017</span></span><span class=\"epub-section__item epub-section__access\"><i aria-hidden=\"true\" class=\"icon-lock_open\"></i><span class=\"epub-section__text\">Full Access</span></span><span class=\"epub-section__item pull-right\"><a href=\"https://doi.org/10.1377/hlthaff.2017.1212\" class=\"epub-section__doi__text\">https://doi.org/10.1377/hlthaff.2017.1212</a></span></div>\n" + 
+      "                        <div class=\"epub-section clearfix\"><span class=\"epub-section__item\"><span class=\"epub-section__state\">PUBLISHED:</span><span class=\"epub-section__date\">November 2017</span></span><span class=\"epub-section__item epub-section__access\"><i aria-hidden=\"true\" class=\"icon-lock_open\"></i><span class=\"epub-section__text\">Full Access</span></span><span class=\"epub-section__item pull-right\"><a href=\"https://doi.org/10.1377/hlthaff.2018.test1\" class=\"epub-section__doi__text\">https://doi.org/10.1377/hlthaff.2018.test1</a></span></div>\n" + 
       "                        <!--+articleCoolbar()-->\n" + 
       "                        <div class=\"scroll-to-target\">\n" + 
       "                          <nav class=\"stickybar coolBar trans\">\n" + 
@@ -705,7 +705,7 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                                        <li role=\"presentation\"><a href=\"#pane-pcw-related\" aria-controls=\"#pane-pcw-related\" role=\"tab\" data-toggle=\"tab\" title=\"related\" id=\"pane-pcw-relatedcon\" data-slide-target=\"#pane-pcw-related\" class=\"related-tab\"><span>Related</span></a></li>\n" + 
       "                                      </ul>\n" + 
       "                                      <ul data-db-target-of=\"downloads\" class=\"coolBar__drop rlist w-slide--list\">\n" + 
-      "                                        <li><a href=\"/doi/pdf/10.1377/hlthaff.2017.1212\"><i aria-hidden=\"true\" class=\"icon-download\"></i><span>View PDF</span></a></li>\n" + 
+      "                                        <li><a href=\"/doi/pdf/10.1377/hlthaff.2018.test1\"><i aria-hidden=\"true\" class=\"icon-download\"></i><span>View PDF</span></a></li>\n" + 
       "                                      </ul>\n" + 
       "                                    </div>\n" + 
       "                                  </div>\n" + 
@@ -715,15 +715,15 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                                <li class=\"coolBar__section coolBar--download hidden-xs hidden-sm\">\n" + 
       "                                  <a href=\"#\" data-db-target-for=\"downloads\" data-db-switch=\"icon-close_thin\" class=\"coolBar__ctrl\"><i aria-hidden=\"true\" class=\"icon-download\"></i><span>View Article</span></a>\n" + 
       "                                  <ul data-db-target-of=\"downloads\" class=\"coolBar__drop rlist w-slide--list cloned hidden-xs hidden-sm\">\n" + 
-      "                                    <li><a href=\"/doi/pdf/10.1377/hlthaff.2017.1212\"><i aria-hidden=\"true\" class=\"icon-download\"></i><span>View PDF</span></a></li>\n" + 
+      "                                    <li><a href=\"/doi/pdf/10.1377/hlthaff.2018.test1\"><i aria-hidden=\"true\" class=\"icon-download\"></i><span>View PDF</span></a></li>\n" + 
       "                                  </ul>\n" + 
       "                                </li>\n" + 
-      "                                <li class=\"coolBar__section coolBar--permissions\"><a href=\"/servlet/linkout?type=rightslink&amp;url=startPage%3D1937%26pageCount%3D1%26author%3DMargaret%2BK.%2BSaunders%26orderBeanReset%3Dtrue%26imprint%3DHealth%2BAffairs%26volumeNum%3D36%26issueNum%3D11%26contentID%3D10.1377%252Fhlthaff.2017.1212%26title%3DMaking%2BThe%2BMost%2BOf%2BMicrofinance%2BNetworks%26pa%3D%26issn%3D0278-2715%26publisherName%3DProject%2BHOPE%26publication%3DHealth%2BAffairs%26rpt%3Dn%26endPage%3D1937%26publicationDate%3D11%252F01%252F2017\" title=\"Permissions\" class=\"coolBar__ctrl\"><i aria-hidden=\"true\" class=\"icon-lock_open\"></i><span>Permissions</span></a></li>\n" + 
+      "                                <li class=\"coolBar__section coolBar--permissions\"><a href=\"/servlet/linkout?type=rightslink&amp;url=startPage%3D1937%26pageCount%3D1%26author%3DMargaret%2BK.%2BSaunders%26orderBeanReset%3Dtrue%26imprint%3DHealth%2BAffairs%26volumeNum%3D36%26issueNum%3D11%26contentID%3D10.1377%252Fhlthaff.2018.test1%26title%3DMaking%2BThe%2BMost%2BOf%2BMicrofinance%2BNetworks%26pa%3D%26issn%3D0278-2715%26publisherName%3DProject%2BHOPE%26publication%3DHealth%2BAffairs%26rpt%3Dn%26endPage%3D1937%26publicationDate%3D11%252F01%252F2017\" title=\"Permissions\" class=\"coolBar__ctrl\"><i aria-hidden=\"true\" class=\"icon-lock_open\"></i><span>Permissions</span></a></li>\n" + 
       "                              </ul>\n" + 
       "                              <ul class=\"coolBar__second rlist\">\n" + 
       "                                <div class=\" col-xs-6 gutterless \">\n" + 
-      "                                  <!-- Go to www.addthis.com/dashboard to customize your tools --><script type=\"text/javascript\" src=\"//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-4faab26f2cff13a7\"></script><a href=\"#\" data-db-target-for=\"3884840d-fcc8-4e71-a609-7ede38eea79d\" data-db-switch=\"icon-close_thin\" data-slide-target=\"#3884840d-fcc8-4e71-a609-7ede38eea79d_Pop\" class=\"share__ctrl w-slide__btn\"><i aria-hidden=\"true\" class=\"icon-Icon_Share\"></i><span>Share</span></a>\n" + 
-      "                                  <div data-db-target-of=\"3884840d-fcc8-4e71-a609-7ede38eea79d\" id=\"3884840d-fcc8-4e71-a609-7ede38eea79d_Pop\" class=\"share__block dropBlock__holder fixed\">\n" + 
+      "                                  <!-- Go to www.addthis.com/dashboard to customize your tools --><script type=\"text/javascript\" src=\"//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-4faab26f2cff13a7\"></script><a href=\"#\" data-db-target-for=\"9876543-21\" data-db-switch=\"icon-close_thin\" data-slide-target=\"#3884840d-fcc8-4e71-a609-7ede38eea79d_Pop\" class=\"share__ctrl w-slide__btn\"><i aria-hidden=\"true\" class=\"icon-Icon_Share\"></i><span>Share</span></a>\n" + 
+      "                                  <div data-db-target-of=\"9876543-21\" id=\"9876543-21_Pop\" class=\"share__block dropBlock__holder fixed\">\n" + 
       "                                    <div class=\"pb-dropzone\" data-pb-dropzone=\"shareBlock\"></div>\n" + 
       "                                    <ul class=\"rlist w-slide--list addthis addthis_toolbox addthis_default_style addthis_32x32_style\">\n" + 
       "                                      <li>\n" + 
@@ -744,13 +744,13 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                                  </div>\n" + 
       "                                </div>\n" + 
       "                                <div class=\" col-xs-6 gutterless \">\n" + 
-      "                                  <a href=\"#\" data-db-target-for=\"d020a48f-9d15-4045-ae4b-0e08784d228a\" data-db-switch=\"icon-close_thin\" aria-haspopup=\"true\" aria-controls=\"d020a48f-9d15-4045-ae4b-0e08784d228a_Pop\" role=\"button\" id=\"d020a48f-9d15-4045-ae4b-0e08784d228a_Ctrl\" data-slide-target=\"#d020a48f-9d15-4045-ae4b-0e08784d228a_Pop\" class=\"article-tools__ctrl w-slide__btn\"><i aria-hidden=\"true\" class=\"icon-Icon_Tools\"></i><span>Tools</span></a>\n" + 
-      "                                  <div data-db-target-of=\"d020a48f-9d15-4045-ae4b-0e08784d228a\" aria-labelledby=\"d020a48f-9d15-4045-ae4b-0e08784d228a_Ctrl\" role=\"menu\" id=\"d020a48f-9d15-4045-ae4b-0e08784d228a_Pop\" class=\"article-tools__block fixed dropBlock__holder\">\n" + 
+      "                                  <a href=\"#\" data-db-target-for=\"9876543-21\" data-db-switch=\"icon-close_thin\" aria-haspopup=\"true\" aria-controls=\"9876543-21_Pop\" role=\"button\" id=\"9876543-21_Ctrl\" class=\"article-tools__ctrl w-slide__btn\"><i aria-hidden=\"true\" class=\"icon-Icon_Tools\"></i><span>Tools</span></a>\n" + 
+      "                                  <div data-db-target-of=\"9876543-21\" aria-labelledby=\"9876543-21_Ctrl\" role=\"menu\" id=\"9876543-21_Pop\" class=\"article-tools__block fixed dropBlock__holder\">\n" + 
       "                                    <ul class=\"rlist w-slide--list\">\n" + 
-      "                                      <li role=\"none\" class=\"article-tool\"><a href=\"/personalize/addFavoritePublication?doi=10.1377%2Fhlthaff.2017.1212\" role=\"menuitem\"><i aria-hidden=\"true\" class=\"icon-Icon_Star-26\"></i><span>Add to favorites</span></a></li>\n" + 
-      "                                      <li role=\"none\" class=\"article-tool\"><a href=\"/action/showCitFormats?doi=10.1377%2Fhlthaff.2017.1212\" role=\"menuitem\"><i aria-hidden=\"true\" class=\"icon-Icon_Download\"></i><span>Download Citations</span></a></li>\n" + 
-      "                                      <li role=\"none\" class=\"article-tool\"><a href=\"/action/addCitationAlert?doi=10.1377%2Fhlthaff.2017.1212\" role=\"menuitem\"><i aria-hidden=\"true\" class=\"icon-Icon_Track-citations\"></i><span>Track Citations</span></a></li>\n" + 
-      "                                      <li role=\"none\" class=\"article-tool\"><a href=\"/servlet/linkout?type=rightslink&amp;url=startPage%3D1937%26pageCount%3D1%26author%3DMargaret%2BK.%2BSaunders%26orderBeanReset%3Dtrue%26imprint%3DHealth%2BAffairs%26volumeNum%3D36%26issueNum%3D11%26contentID%3D10.1377%252Fhlthaff.2017.1212%26title%3DMaking%2BThe%2BMost%2BOf%2BMicrofinance%2BNetworks%26pa%3D%26issn%3D0278-2715%26publisherName%3DProject%2BHOPE%26publication%3DHealth%2BAffairs%26rpt%3Dn%26endPage%3D1937%26publicationDate%3D11%252F01%252F2017\" role=\"menuitem\" target=\"blank\"><i aria-hidden=\"true\" class=\"icon-lock_open\"></i><span>Permissions</span></a></li>\n" + 
+      "                                      <li role=\"none\" class=\"article-tool\"><a href=\"/personalize/addFavoritePublication?doi=10.1377%2Fhlthaff.2018.test1\" role=\"menuitem\"><i aria-hidden=\"true\" class=\"icon-Icon_Star-26\"></i><span>Add to favorites</span></a></li>\n" + 
+      "                                      <li role=\"none\" class=\"article-tool\"><a href=\"/action/showCitFormats?doi=10.1377%2Fhlthaff.2018.test1\" role=\"menuitem\"><i aria-hidden=\"true\" class=\"icon-Icon_Download\"></i><span>Download Citations</span></a></li>\n" + 
+      "                                      <li role=\"none\" class=\"article-tool\"><a href=\"/action/addCitationAlert?doi=10.1377%2Fhlthaff.2018.test1\" role=\"menuitem\"><i aria-hidden=\"true\" class=\"icon-Icon_Track-citations\"></i><span>Track Citations</span></a></li>\n" + 
+      "                                      <li role=\"none\" class=\"article-tool\"><a href=\"/servlet/linkout?type=rightslink&amp;url=startPage%3D1937%26pageCount%3D1%26author%3DMargaret%2BK.%2BSaunders%26orderBeanReset%3Dtrue%26imprint%3DHealth%2BAffairs%26volumeNum%3D36%26issueNum%3D11%26contentID%3D10.1377%252Fhlthaff.2018.test1%26title%3DMaking%2BThe%2BMost%2BOf%2BMicrofinance%2BNetworks%26pa%3D%26issn%3D0278-2715%26publisherName%3DProject%2BHOPE%26publication%3DHealth%2BAffairs%26rpt%3Dn%26endPage%3D1937%26publicationDate%3D11%252F01%252F2017\" role=\"menuitem\" target=\"blank\"><i aria-hidden=\"true\" class=\"icon-lock_open\"></i><span>Permissions</span></a></li>\n" + 
       "                                    </ul>\n" + 
       "                                  </div>\n" + 
       "                                </div>\n" + 
@@ -763,9 +763,9 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                          <!--abstract content-->\n" + 
       "                          <div class=\"hlFld-Abstract\">\n" + 
       "                            <p class=\"fulltext\"></p>\n" + 
-      "                            <h2 class=\"article-section__title section__title\" id=\"d18015e1\">Abstract</h2>\n" + 
+      "                            <h2 class=\"article-section__title section__title\" id=\"9876543-21\">Abstract</h2>\n" + 
       "                            <div class=\"abstractSection abstractInFull\">\n" + 
-      "                              <p xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:oasis=\"http://www.niso.org/standards/z39-96/ns/oasis-exchange/table\">Together, data scientists and microfinance institutions are bringing vital health products to Haiti.</p>\n" + 
+      "                              <p xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:oasis=\"http://www.niso.org/standards/z39-96/ns/oasis-exchange/table\">Together, data scientists and microfinance institutions are bringing.</p>\n" + 
       "                            </div>\n" + 
       "                          </div>\n" + 
       "                          <!--/abstract content-->\n" + 
@@ -781,10 +781,10 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                          </div>\n" + 
       "                          <!--fulltext content-->\n" + 
       "                          <div class=\"hlFld-Fulltext\">\n" + 
-      "                            <p xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:oasis=\"http://www.niso.org/standards/z39-96/ns/oasis-exchange/table\">Microfinance institutions (MFIs) are known for offering financial services, execute programs by managing people across a country.</p>\n" + 
+      "                            <p xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:oasis=\"http://www.niso.org/standards/z39-96/ns/oasis-exchange/table\">Microfinance institutions (MFIs) are known.</p>\n" + 
       "                          </div>\n" + 
       "                          <!--/fulltext content--><script type=\"text/javascript\">\n" + 
-      "                            window.figureViewer={doi:'10.1377/hlthaff.2017.1212',path:'/na101/home/literatum/publisher/hope/journals/content/hlthaff/2017/hlthaff.2017.36.issue-11/hlthaff.2017.1212/20171026',figures:[{i:'l1',type:'fig',g:[{m:'figure1.gif',l:'figure1.jpeg',size:'540 KB'}]}\n" + 
+      "                            window.figureViewer={doi:'10.1377/hlthaff.2018.test1',path:'/na101/home/literatum/publisher/hope/journals/content/hlthaff/2017/hlthaff.2017.36.issue-11/hlthaff.2018.test1/20171026',figures:[{i:'l1',type:'fig',g:[{m:'figure1.gif',l:'figure1.jpeg',size:'540 KB'}]}\n" + 
       "                            ]}\n" + 
       "                          </script>\n" + 
       "                          <div class=\"response\">\n" + 
@@ -795,8 +795,6 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                      <div class=\"col-sm-4 hidden-xs hidden-sm sticko__parent\">\n" + 
       "                        <ul class=\"social-links rlist rlist--inline\">\n" + 
       "                          <li> <a href=\"https://www.youtube.com/user/HealthAffairsJournal\" title=\"youtube\" class=\"social-links__item\"> <i class=\"icon-youtube\"></i> </a> </li>\n" + 
-      "                          <!-- <li> <a href=\"#\" ttile=\"RSS\" class=\"social-links__item\"> <i class=\"icon-Rss\"></i> </a> </li> -->\n" + 
-      "                          <li> <a href=\"http://www.facebook.com/HealthAffairs\" title=\"facebook\" class=\"social-links__item\"> <i class=\"icon-facebook\"></i> </a> </li>\n" + 
       "                          <li> <a href=\"https://twitter.com/Health_Affairs\" title=\"twitter\" class=\"social-links__item\"> <i class=\"icon-twitter\"></i> </a> </li>\n" + 
       "                        </ul>\n" + 
       "                        <!--+articleTab()-->\n" + 
@@ -819,8 +817,8 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                                    </div>\n" + 
       "                                    <!-- script to add on the page to get the Altmetrics html call to work -->\n" + 
       "                                    <script type=\"text/javascript\" src=\"https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js\"></script>\n" + 
-      "                                    <div data-badge-popover=\"right\" data-badge-type=\"donut\" data-doi=\"10.1377/hlthaff.2017.1212\" class=\"altmetric-embed\" data-uuid=\"f49bf6b2-c920-a5b6-5033-71ffc9c45917\"><a target=\"_self\" href=\"https://www.altmetric.com/details.php?domain=www.healthaffairs.org&amp;citation_id=29234903\" rel=\"popover\" data-content=\"<div>    <div style='padding-left: 10px; line-height:18px; border-left: 16px solid #74CFED;'>\n" + 
-      "                                      <a class='link-to-altmetric-details-tab' target='_self' href='https://www.altmetric.com/details.php?domain=www.healthaffairs.org&amp;citation_id=29234903&amp;tab=twitter'>\n" + 
+      "                                    <div data-badge-popover=\"right\" data-badge-type=\"donut\" data-doi=\"10.1377/hlthaff.2018.test1\" class=\"altmetric-embed\" data-uuid=\"9876543-21\"><a target=\"_self\" href=\"https://www.altmetric.com/details.php?domain=www.healthaffairs.org&amp;citation_id=29876543\" rel=\"popover\" data-content=\"<div>    <div style='padding-left: 10px; line-height:18px; border-left: 16px solid #74CFED;'>\n" + 
+      "                                      <a class='link-to-altmetric-details-tab' target='_self' href='https://www.altmetric.com/details.php?domain=www.healthaffairs.org&amp;citation_id=29876543&amp;tab=twitter'>\n" + 
       "                                      Tweeted by <b>3</b>\n" + 
       "                                      </a>\n" + 
       "                                      </div>\n" + 
@@ -831,7 +829,7 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                                      </div>\n" + 
       "                                      </div>\n" + 
       "                                      <div style='margin-top: 10px; text-align: center;'>\n" + 
-      "                                      <a class='altmetric_details' target='_self' href='https://www.altmetric.com/details.php?domain=www.healthaffairs.org&amp;citation_id=29234903'>\n" + 
+      "                                      <a class='altmetric_details' target='_self' href='https://www.altmetric.com/details.php?domain=www.healthaffairs.org&amp;citation_id=29876543'>\n" + 
       "                                      See more details\n" + 
       "                                      </a>\n" + 
       "                                      |\n" + 
@@ -866,7 +864,7 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                              <section class=\"section\">\n" + 
       "                                <strong class=\"section__title\">Information</strong>\n" + 
       "                                <div class=\"section__body\">\n" + 
-      "                                  <p>© 2017 Project HOPE-The People-to-People Health Foundation, Inc.</p>\n" + 
+      "                                  <p>(c) 2017 Project HOPE-The People-to-People Health Foundation, Inc.</p>\n" + 
       "                                </div>\n" + 
       "                              </section>\n" + 
       "                              <hr class=\"section__separator\">\n" + 
@@ -885,8 +883,8 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                                    <a href=\"#\" title=\"Cited By\" aria-expanded=\"true\" aria-controls=\"relatedTab1\" class=\"accordion-tabbed__control\">Related articles</a>\n" + 
       "                                    <ul id=\"relatedTab1\" class=\"rlist accordion-tabbed__content creative-work\">\n" + 
       "                                      <li>\n" + 
-      "                                        <a href=\"/doi/10.1377/hlthaff.2017.0281\">\n" + 
-      "                                          Microfinance Institutions’ Successful Delivery Of Micronutrient Powders: A Randomized Trial In Rural Haiti\n" + 
+      "                                        <a href=\"/doi/10.1377/hlthaff.2017.9999\">\n" + 
+      "                                          Microfinance Institutions’ Successful Delivery\n" + 
       "                                          <div class=\"meta\"><span>06 Nov 2017</span><span class=\"journal-title\">Health Affairs</span></div>\n" + 
       "                                        </a>\n" + 
       "                                      </li>\n" + 
@@ -896,8 +894,8 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                                    <div class=\"accordion\">\n" + 
       "                                      <ul class=\"accordion-tabbed rlist\">\n" + 
       "                                        <li class=\"accordion-tabbed__tab js--open\">\n" + 
-      "                                          <a href=\"#\" title=\"Recommended\" aria-expanded=\"true\" aria-controls=\"05d9190f-74d7-4ba9-8239-69197746abc20\" class=\"accordion-tabbed__control\">Recommended</a>\n" + 
-      "                                          <div id=\"05d9190f-74d7-4ba9-8239-69197746abc20\" class=\"accordion-tabbed__content\" style=\"\">\n" + 
+      "                                          <a href=\"#\" title=\"Recommended\" aria-expanded=\"true\" aria-controls=\"9876543-21\" class=\"accordion-tabbed__control\">Recommended</a>\n" + 
+      "                                          <div id=\"9876543-21\" class=\"accordion-tabbed__content\" style=\"\">\n" + 
       "                                          </div>\n" + 
       "                                        </li>\n" + 
       "                                      </ul>\n" + 
@@ -906,7 +904,7 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                                </ul>\n" + 
       "                              </div>\n" + 
       "                            </li>\n" + 
-      "                            <li class=\"tab__spinner\" style=\"display: none;\"><img src=\"/ux3/widgets/publication-content/images/spinner.gif\" id=\"spinner\" style=\"width: 100%\"></li>\n" + 
+      "                            <li class=\"tab__spinner\" style=\"display: none;\"><img src=\"/widgets/publication-content/images/spinner.gif\" id=\"spinner\" style=\"width: 100%\"></li>\n" + 
       "                          </ul>\n" + 
       "                        </div>\n" + 
       "                      </div>\n" + 
@@ -916,9 +914,9 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                    if (articleRef) { articleRef.style.display = \"none\"; }\n" + 
       "                    \n" + 
       "                  </script>\n" + 
-      "                  <div id=\"figure-viewer\" data-ux3-wrapper=\"figure-viewer\" data-ux3-transformed-by=\"figureInit\" data-ux3-role=\"parent\" role=\"dialog\" class=\"figure-viewer\">\n" + 
+      "                  <div id=\"figure-viewer\" data-wrapper=\"figure-viewer\" data-transformed-by=\"figureInit\" data-role=\"parent\" role=\"dialog\" class=\"figure-viewer\">\n" + 
       "                    <div class=\"figure-viewer__reg__top clearfix\">\n" + 
-      "                      <div class=\"figure-viewer__top__right\"><a title=\"Close Figure Viewer\" href=\"#\" data-ux3-role=\"controller\" class=\"figure-viewer__ctrl__close\"><span class=\"icon-close_thin\"></span></a></div>\n" + 
+      "                      <div class=\"figure-viewer__top__right\"><a title=\"Close Figure Viewer\" href=\"#\" data-role=\"controller\" class=\"figure-viewer__ctrl__close\"><span class=\"icon-close_thin\"></span></a></div>\n" + 
       "                      <div class=\"figure-viewer__top__left\"><a title=\"Browse All Figures\" href=\"#\" class=\"figure-viewer__ctrl__browse\"><span class=\"icon-allfigures\"></span></a><a title=\"Return to Figure\" href=\"#\" class=\"figure-viewer__ctrl__return is-hidden\"><span class=\"icon-arrow-left\"></span></a><span tabindex=\"1\" class=\"zoomSlider js__zoom-slider ui-slider\"><input class=\"zoom-range\" type=\"range\"></span><button title=\"zoom in\" class=\"figure-viewer__label__zoom icon-zoom zoom-in\"></button><button title=\"zoom out\" class=\"figure-viewer__label__zoom icon-zoom-out zoom-out hidden\"></button></div>\n" + 
       "                    </div>\n" + 
       "                    <div class=\"figure-viewer__reg__center\" style=\"height: 100%;\">\n" + 
@@ -938,8 +936,8 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                  <div class=\"container\">\n" + 
       "                    <div class=\"row\">\n" + 
       "                      <div class=\" col-xs-8\">\n" + 
-      "                        <div id=\"disqus_thread\"><iframe id=\"dsq-app3120\" name=\"dsq-app3120\" allowtransparency=\"true\" scrolling=\"no\" tabindex=\"0\" title=\"Disqus\" style=\"width: 1px !important; min-width: 100% !important; border: medium none !important; overflow: hidden !important; height: 529px !important;\" src=\"https://disqus.com/embed/comments/?base=default&amp;f=www-healthaffairs-org&amp;t_i=10.1377%2Fhlthaff.2017.1212&amp;t_u=https%3A%2F%2Fwww.healthaffairs.org%2Fdoi%2Ffull%2F10.1377%2Fhlthaff.2017.1212&amp;t_d=Making%20The%20Most%20Of%20Microfinance%20Networks&amp;t_t=Making%20The%20Most%20Of%20Microfinance%20Networks&amp;s_o=default#version=aa7ee9c5dfe273f777188cca72f6158d\" horizontalscrolling=\"no\" verticalscrolling=\"no\" width=\"100%\" frameborder=\"0\"></iframe></div>\n" + 
-      "                        <noscript>Please enable JavaScript to view the <a href=\"https://disqus.com/?ref_noscript\">comments powered by Disqus.</a></noscript>\n" + 
+      "                        <div id=\"disqus_thread\"><iframe id=\"dsq-app3120\" name=\"dsq-app3120\" allowtransparency=\"true\" scrolling=\"no\" tabindex=\"0\" title=\"Disqus\" style=\"width: 1px !important; min-width: 100% !important; border: medium none !important; overflow: hidden !important; height: 529px !important;\" src=\"https://disqus.com/embed/comments/?base=default&amp;f=www-healthaffairs-org&amp;t_i=10.1377%2Fhlthaff.2018.test1&amp;t_u=https%3A%2F%2Fwww.healthaffairs.org%2Fdoi%2Ffull%2F10.1377%2Fhlthaff.2018.test1&amp;t_d=Making%20The%20Most%20Of%20Microfinance%20Networks&amp;t_t=Making%20The%20Most%20Of%20Microfinance%20Networks&amp;s_o=default#version=aa7ee9c5dfe273f777188cca72f6158d\" horizontalscrolling=\"no\" verticalscrolling=\"no\" width=\"100%\" frameborder=\"0\"></iframe></div>\n" + 
+      "                        <noscript>Please enable JavaScript</noscript>\n" + 
       "                      </div>\n" + 
       "                      <div class=\" col-xs-4\"></div>\n" + 
       "                    </div>\n" + 
@@ -961,17 +959,13 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                <ul class=\"rlist--inline\">\n" + 
       "                  <li class=\"footer-top col-xs-12 gutterless \">\n" + 
       "                    <div class=\"footer-top__header\">\n" + 
-      "                      <div data-widget-def=\"ux3-general-image\" data-widget-id=\"f11a2370-9fd8-4ae5-91ab-223cd483b50a\" class=\"footer__logo\">\n" + 
+      "                      <div data-widget-def=\"general-image\" data-widget-id=\"9876543-21\" class=\"footer__logo\">\n" + 
       "                        <img alt=\"\" src=\"/pb-assets/images/logos/HA_logo_footer_320x74px.png\">\n" + 
       "                      </div>\n" + 
       "                    </div>\n" + 
       "                    <div class=\" col-sm-4\">\n" + 
       "                      <address class=\"address\">\n" + 
-      "                        <div class=\"address__street\">7500 Old Georgetown Road, Suite 600</div>\n" + 
-      "                        <div class=\"address__city\">Bethesda, Maryland 20814</div>\n" + 
-      "                        <div class=\"address__tel\">T 301 656 7401</div>\n" + 
-      "                        <div class=\"address__fax\">F 301 654 2845</div>\n" + 
-      "                        <div class=\"address__email\"><a href=\"mailto:customerservice@healthaffairs.org\">customerservice@healthaffairs.org</a></div>\n" + 
+      "                        <div class=\"address__street\">7500 George Road, Suite 600</div>\n" + 
       "                      </address>\n" + 
       "                    </div>\n" + 
       "                    <div class=\" col-sm-8\">\n" + 
@@ -989,7 +983,7 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                      </div>\n" + 
       "                    </div>\n" + 
       "                    <div class=\"footer-bottom\">\n" + 
-      "                      <div data-widget-def=\"UX3HTMLWidget\" data-widget-id=\"9b3f3c04-2c68-429a-b6d5-eeb67f82a438\" class=\"container\">\n" + 
+      "                      <div data-widget-def=\"TMLWidget\" data-widget-id=\"9876543-21\" class=\"container\">\n" + 
       "                        <div class=\"footer-bottom__nav\">\n" + 
       "                          <ul class=\"rlist--inline separator\">\n" + 
       "                            <li><a href=\"/terms-of-use\">Terms and conditions</a></li>\n" + 
@@ -1020,30 +1014,30 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "        </footer>\n" + 
       "      </div>\n" + 
       "    </div>\n" + 
-      "    <div style=\"visibility: hidden; height: 1px; width: 1px; position: absolute; top: -9999px; z-index: 100000;\" id=\"_atssh\"><iframe id=\"_atssh432\" title=\"AddThis utility frame\" style=\"height: 1px; width: 1px; position: absolute; top: 0px; z-index: 100000; border: 0px none; left: 0px;\" src=\"https://s7.addthis.com/static/sh.e4e8af4de595fdb10ec1459d.html#rand=0.28609905006739056&amp;iit=1527725975899&amp;tmr=load%3D1527725975693%26core%3D1527725975710%26main%3D1527725975896%26ifr%3D1527725975901&amp;cb=0&amp;cdn=0&amp;md=0&amp;kw=&amp;ab=-&amp;dh=www.healthaffairs.org&amp;dr=&amp;du=https%3A%2F%2Fwww.healthaffairs.org%2Fdoi%2Ffull%2F10.1377%2Fhlthaff.2017.1212&amp;href=https%3A%2F%2Fwww.healthaffairs.org%2Fdoi%2Ffull%2F10.1377%2Fhlthaff.2017.1212&amp;dt=Making%20The%20Most%20Of%20Microfinance%20Networks%20%7C%20Health%20Affairs&amp;dbg=0&amp;cap=tc%3D0%26ab%3D0&amp;inst=1&amp;jsl=1&amp;prod=undefined&amp;lng=en&amp;ogt=&amp;pc=men&amp;pub=xa-4faab26f2cff13a7&amp;ssl=1&amp;sid=5b0f3f9792d317f1&amp;srf=0.01&amp;ver=300&amp;xck=0&amp;xtr=0&amp;og=&amp;csi=undefined&amp;rev=v8.3.15-wp&amp;ct=1&amp;xld=1&amp;xd=1\"></iframe></div>\n" + 
+      "    <div style=\"visibility: hidden; height: 1px; width: 1px; position: absolute; top: -9999px; z-index: 100000;\" id=\"_atssh\"><iframe id=\"_atssh432\" title=\"AddThis utility frame\" style=\"height: 1px; width: 1px; position: absolute; top: 0px; z-index: 100000; border: 0px none; left: 0px;\" src=\"https://s7.addthis.com/static/sh.e4e8af4de595fdb10ec1459d.html#rand=0.28609905006739056&amp;iit=1527725975899&amp;tmr=load%3D1527725975693%26core%3D1527725975710%26main%3D1527725975896%26ifr%3D1527725975901&amp;cb=0&amp;cdn=0&amp;md=0&amp;kw=&amp;ab=-&amp;dh=www.healthaffairs.org&amp;dr=&amp;du=https%3A%2F%2Fwww.healthaffairs.org%2Fdoi%2Ffull%2F10.1377%2Fhlthaff.2018.test1&amp;href=https%3A%2F%2Fwww.healthaffairs.org%2Fdoi%2Ffull%2F10.1377%2Fhlthaff.2018.test1&amp;dt=Making%20The%20Most%20Of%20Microfinance%20Networks%20%7C%20Health%20Affairs&amp;dbg=0&amp;cap=tc%3D0%26ab%3D0&amp;inst=1&amp;jsl=1&amp;prod=undefined&amp;lng=en&amp;ogt=&amp;pc=men&amp;pub=xa-4faab26f2cff13a7&amp;ssl=1&amp;sid=5b0f3f9792d317f1&amp;srf=0.01&amp;ver=300&amp;xck=0&amp;xtr=0&amp;og=&amp;csi=undefined&amp;rev=v8.3.15-wp&amp;ct=1&amp;xld=1&amp;xd=1\"></iframe></div>\n" + 
       "    <style id=\"service-icons-0\"></style>\n" + 
       "    <script type=\"text/javascript\">\n" + 
       "      if (window.location.hash && window.location.hash == '#_=_') {\n" + 
       "          window.location.hash = '';\n" + 
       "      }\n" + 
       "    </script>\n" + 
-      "    <div class=\"altmetric-embed altmetric-popover altmetric-right\" data-uuid=\"f49bf6b2-c920-a5b6-5033-71ffc9c45917\" id=\"_altmetric_popover_el\" style=\"margin: 0px; display: none;\">\n" + 
+      "    <div class=\"altmetric-embed altmetric-popover altmetric-right\" data-uuid=\"9876543-21\" id=\"_altmetric_popover_el\" style=\"margin: 0px; display: none;\">\n" + 
       "    </div>\n" + 
       "    <ul class=\"ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all quickSearchAutocomplete\" id=\"ui-id-1\" tabindex=\"0\" style=\"display: none;\"></ul>\n" + 
       "  </body>\n" + 
       "</html>";
   
   private static final String art1ContentCrawlFiltered = 
-      "<html class=\"pb-page\" data-request-id=\"77cdf167-df5e-4a46-99b9-19e197d17387\" lang=\"en\">\n" + 
+      "<html class=\"pb-page\" data-request-id=\"9876543-21\" lang=\"en\">\n" + 
       "  <head data-pb-dropzone=\"head\">\n" + 
-      "    <meta name=\"pbContext\" content=\";website:website:hope-site;page:string:Article/Chapter View;journal:journal:hlthaff;article:article:10.1377/hlthaff.2017.1212;issue:issue:10.1377/hlthaff.2017.36.issue-11;wgroup:string:Publication Websites;pageGroup:string:Publication Pages;subPage:string:Full Text\">\n" + 
+      "    <meta name=\"pbContext\" content=\";website:website:hope-site;page:string:Article/Chapter View;journal:journal:hlthaff;article:article:10.1377/hlthaff.2018.test1;issue:issue:10.1377/hlthaff.2017.36.issue-11;wgroup:string:Publication Websites;pageGroup:string:Publication Pages;subPage:string:Full Text\">\n" + 
       "    <meta data-pb-head=\"head-widgets-start\">\n" + 
       "    <link rel=\"schema.DC\" href=\"http://purl.org/DC/elements/1.0/\">\n" + 
       "    <meta name=\"dc.Language\" content=\"en\">\n" + 
       "    <meta name=\"dc.Coverage\" content=\"world\">\n" + 
-      "    <link rel=\"meta\" type=\"application/atom+xml\" href=\"https://doi.org/10.1377%2Fhlthaff.2017.1212\">\n" + 
-      "    <link rel=\"meta\" type=\"application/rdf+json\" href=\"https://doi.org/10.1377%2Fhlthaff.2017.1212\">\n" + 
-      "    <link rel=\"meta\" type=\"application/unixref+xml\" href=\"https://doi.org/10.1377%2Fhlthaff.2017.1212\">\n" + 
+      "    <link rel=\"meta\" type=\"application/atom+xml\" href=\"https://doi.org/10.1377%2Fhlthaff.2018.test1\">\n" + 
+      "    <link rel=\"meta\" type=\"application/rdf+json\" href=\"https://doi.org/10.1377%2Fhlthaff.2018.test1\">\n" + 
+      "    <link rel=\"meta\" type=\"application/unixref+xml\" href=\"https://doi.org/10.1377%2Fhlthaff.2018.test1\">\n" + 
       "    <meta charset=\"UTF-8\">\n" + 
       "    <meta name=\"robots\" content=\"noarchive\">\n" + 
       "    <meta name=\"viewport\" content=\"width=device-width,initial-scale=1,maximum-scale=1, user-scalable=0\">\n" + 
@@ -1063,7 +1057,7 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "              <div>\n" + 
       "                <div class=\"container\"></div>\n" + 
       "                <div>\n" + 
-      "                  <article data-figures=\"https://www.healthaffairs.org/action/ajaxShowFigures?doi=10.1377%2Fhlthaff.2017.1212&amp;ajax=true\" data-references=\"https://www.healthaffairs.org/action/ajaxShowEnhancedAbstract?doi=10.1377%2Fhlthaff.2017.1212&amp;ajax=true\" class=\"container\">\n" + 
+      "                  <article data-figures=\"https://www.healthaffairs.org/action/ajaxShowFigures?doi=10.1377%2Fhlthaff.2018.test1&amp;ajax=true\" data-references=\"https://www.healthaffairs.org/action/ajaxShowEnhancedAbstract?doi=10.1377%2Fhlthaff.2018.test1&amp;ajax=true\" class=\"container\">\n" + 
       "                    <div class=\"row\">\n" + 
       "                      <div class=\"col-sm-8 col-md-8 article__content\">\n" + 
       "                        <!--+articleHEeader()--><!--+articleCitation()-->\n" + 
@@ -1091,7 +1085,7 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                                <section class=\"section\">\n" + 
       "                                  <div class=\"section__body\">\n" + 
       "                                    <ol class=\"rlist spaced\">\n" + 
-      "                                      <li id=\"BIO1\">1. Margaret K. Saunders (msaunders@projecthope.org) is a deputy editor for global health at Health Affairs, in Bethesda, Maryland.</li>\n" + 
+      "                                      <li id=\"BIO1\">1. Author is an author at Health Affairs, in Bethesda, Maryland.</li>\n" + 
       "                                    </ol>\n" + 
       "                                  </div>\n" + 
       "                                </section>\n" + 
@@ -1099,7 +1093,7 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                            </div>\n" + 
       "                          </div>\n" + 
       "                        </div>\n" + 
-      "                        <div class=\"epub-section clearfix\"><span class=\"epub-section__item\"><span class=\"epub-section__state\">PUBLISHED:</span><span class=\"epub-section__date\">November 2017</span></span><span class=\"epub-section__item epub-section__access\"><i aria-hidden=\"true\" class=\"icon-lock_open\"></i><span class=\"epub-section__text\">Full Access</span></span><span class=\"epub-section__item pull-right\"><a href=\"https://doi.org/10.1377/hlthaff.2017.1212\" class=\"epub-section__doi__text\">https://doi.org/10.1377/hlthaff.2017.1212</a></span></div>\n" + 
+      "                        <div class=\"epub-section clearfix\"><span class=\"epub-section__item\"><span class=\"epub-section__state\">PUBLISHED:</span><span class=\"epub-section__date\">November 2017</span></span><span class=\"epub-section__item epub-section__access\"><i aria-hidden=\"true\" class=\"icon-lock_open\"></i><span class=\"epub-section__text\">Full Access</span></span><span class=\"epub-section__item pull-right\"><a href=\"https://doi.org/10.1377/hlthaff.2018.test1\" class=\"epub-section__doi__text\">https://doi.org/10.1377/hlthaff.2018.test1</a></span></div>\n" + 
       "                        <!--+articleCoolbar()-->\n" + 
       "                        <div class=\"scroll-to-target\">\n" + 
       "                          \n" + 
@@ -1109,19 +1103,19 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                          <!--abstract content-->\n" + 
       "                          <div class=\"hlFld-Abstract\">\n" + 
       "                            <p class=\"fulltext\"></p>\n" + 
-      "                            <h2 class=\"article-section__title section__title\" id=\"d18015e1\">Abstract</h2>\n" + 
+      "                            <h2 class=\"article-section__title section__title\" id=\"9876543-21\">Abstract</h2>\n" + 
       "                            <div class=\"abstractSection abstractInFull\">\n" + 
-      "                              <p xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:oasis=\"http://www.niso.org/standards/z39-96/ns/oasis-exchange/table\">Together, data scientists and microfinance institutions are bringing vital health products to Haiti.</p>\n" + 
+      "                              <p xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:oasis=\"http://www.niso.org/standards/z39-96/ns/oasis-exchange/table\">Together, data scientists and microfinance institutions are bringing.</p>\n" + 
       "                            </div>\n" + 
       "                          </div>\n" + 
       "                          <!--/abstract content-->\n" + 
       "                          \n" + 
       "                          <!--fulltext content-->\n" + 
       "                          <div class=\"hlFld-Fulltext\">\n" + 
-      "                            <p xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:oasis=\"http://www.niso.org/standards/z39-96/ns/oasis-exchange/table\">Microfinance institutions (MFIs) are known for offering financial services, execute programs by managing people across a country.</p>\n" + 
+      "                            <p xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:oasis=\"http://www.niso.org/standards/z39-96/ns/oasis-exchange/table\">Microfinance institutions (MFIs) are known.</p>\n" + 
       "                          </div>\n" + 
       "                          <!--/fulltext content--><script type=\"text/javascript\">\n" + 
-      "                            window.figureViewer={doi:'10.1377/hlthaff.2017.1212',path:'/na101/home/literatum/publisher/hope/journals/content/hlthaff/2017/hlthaff.2017.36.issue-11/hlthaff.2017.1212/20171026',figures:[{i:'l1',type:'fig',g:[{m:'figure1.gif',l:'figure1.jpeg',size:'540 KB'}]}\n" + 
+      "                            window.figureViewer={doi:'10.1377/hlthaff.2018.test1',path:'/na101/home/literatum/publisher/hope/journals/content/hlthaff/2017/hlthaff.2017.36.issue-11/hlthaff.2018.test1/20171026',figures:[{i:'l1',type:'fig',g:[{m:'figure1.gif',l:'figure1.jpeg',size:'540 KB'}]}\n" + 
       "                            ]}\n" + 
       "                          </script>\n" + 
       "                          <div class=\"response\">\n" + 
@@ -1132,8 +1126,6 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                      <div class=\"col-sm-4 hidden-xs hidden-sm sticko__parent\">\n" + 
       "                        <ul class=\"social-links rlist rlist--inline\">\n" + 
       "                          <li> <a href=\"https://www.youtube.com/user/HealthAffairsJournal\" title=\"youtube\" class=\"social-links__item\"> <i class=\"icon-youtube\"></i> </a> </li>\n" + 
-      "                          <!-- <li> <a href=\"#\" ttile=\"RSS\" class=\"social-links__item\"> <i class=\"icon-Rss\"></i> </a> </li> -->\n" + 
-      "                          <li> <a href=\"http://www.facebook.com/HealthAffairs\" title=\"facebook\" class=\"social-links__item\"> <i class=\"icon-facebook\"></i> </a> </li>\n" + 
       "                          <li> <a href=\"https://twitter.com/Health_Affairs\" title=\"twitter\" class=\"social-links__item\"> <i class=\"icon-twitter\"></i> </a> </li>\n" + 
       "                        </ul>\n" + 
       "                        <!--+articleTab()-->\n" + 
@@ -1163,7 +1155,7 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                              <section class=\"section\">\n" + 
       "                                <strong class=\"section__title\">Information</strong>\n" + 
       "                                <div class=\"section__body\">\n" + 
-      "                                  <p>© 2017 Project HOPE-The People-to-People Health Foundation, Inc.</p>\n" + 
+      "                                  <p>(c) 2017 Project HOPE-The People-to-People Health Foundation, Inc.</p>\n" + 
       "                                </div>\n" + 
       "                              </section>\n" + 
       "                              <hr class=\"section__separator\">\n" + 
@@ -1174,7 +1166,7 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                            </li>\n" + 
       "                            \n" + 
       "                            \n" + 
-      "                            <li class=\"tab__spinner\" style=\"display: none;\"><img src=\"/ux3/widgets/publication-content/images/spinner.gif\" id=\"spinner\" style=\"width: 100%\"></li>\n" + 
+      "                            <li class=\"tab__spinner\" style=\"display: none;\"><img src=\"/widgets/publication-content/images/spinner.gif\" id=\"spinner\" style=\"width: 100%\"></li>\n" + 
       "                          </ul>\n" + 
       "                        </div>\n" + 
       "                      </div>\n" + 
@@ -1184,9 +1176,9 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                    if (articleRef) { articleRef.style.display = \"none\"; }\n" + 
       "                    \n" + 
       "                  </script>\n" + 
-      "                  <div id=\"figure-viewer\" data-ux3-wrapper=\"figure-viewer\" data-ux3-transformed-by=\"figureInit\" data-ux3-role=\"parent\" role=\"dialog\" class=\"figure-viewer\">\n" + 
+      "                  <div id=\"figure-viewer\" data-wrapper=\"figure-viewer\" data-transformed-by=\"figureInit\" data-role=\"parent\" role=\"dialog\" class=\"figure-viewer\">\n" + 
       "                    <div class=\"figure-viewer__reg__top clearfix\">\n" + 
-      "                      <div class=\"figure-viewer__top__right\"><a title=\"Close Figure Viewer\" href=\"#\" data-ux3-role=\"controller\" class=\"figure-viewer__ctrl__close\"><span class=\"icon-close_thin\"></span></a></div>\n" + 
+      "                      <div class=\"figure-viewer__top__right\"><a title=\"Close Figure Viewer\" href=\"#\" data-role=\"controller\" class=\"figure-viewer__ctrl__close\"><span class=\"icon-close_thin\"></span></a></div>\n" + 
       "                      <div class=\"figure-viewer__top__left\"><a title=\"Browse All Figures\" href=\"#\" class=\"figure-viewer__ctrl__browse\"><span class=\"icon-allfigures\"></span></a><a title=\"Return to Figure\" href=\"#\" class=\"figure-viewer__ctrl__return is-hidden\"><span class=\"icon-arrow-left\"></span></a><span tabindex=\"1\" class=\"zoomSlider js__zoom-slider ui-slider\"><input class=\"zoom-range\" type=\"range\"></span><button title=\"zoom in\" class=\"figure-viewer__label__zoom icon-zoom zoom-in\"></button><button title=\"zoom out\" class=\"figure-viewer__label__zoom icon-zoom-out zoom-out hidden\"></button></div>\n" + 
       "                    </div>\n" + 
       "                    <div class=\"figure-viewer__reg__center\" style=\"height: 100%;\">\n" + 
@@ -1207,7 +1199,7 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                    <div class=\"row\">\n" + 
       "                      <div class=\" col-xs-8\">\n" + 
       "                        \n" + 
-      "                        <noscript>Please enable JavaScript to view the <a href=\"https://disqus.com/?ref_noscript\">comments powered by Disqus.</a></noscript>\n" + 
+      "                        <noscript>Please enable JavaScript</noscript>\n" + 
       "                      </div>\n" + 
       "                      <div class=\" col-xs-4\"></div>\n" + 
       "                    </div>\n" + 
@@ -1225,14 +1217,14 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "        \n" + 
       "      </div>\n" + 
       "    </div>\n" + 
-      "    <div style=\"visibility: hidden; height: 1px; width: 1px; position: absolute; top: -9999px; z-index: 100000;\" id=\"_atssh\"><iframe id=\"_atssh432\" title=\"AddThis utility frame\" style=\"height: 1px; width: 1px; position: absolute; top: 0px; z-index: 100000; border: 0px none; left: 0px;\" src=\"https://s7.addthis.com/static/sh.e4e8af4de595fdb10ec1459d.html#rand=0.28609905006739056&amp;iit=1527725975899&amp;tmr=load%3D1527725975693%26core%3D1527725975710%26main%3D1527725975896%26ifr%3D1527725975901&amp;cb=0&amp;cdn=0&amp;md=0&amp;kw=&amp;ab=-&amp;dh=www.healthaffairs.org&amp;dr=&amp;du=https%3A%2F%2Fwww.healthaffairs.org%2Fdoi%2Ffull%2F10.1377%2Fhlthaff.2017.1212&amp;href=https%3A%2F%2Fwww.healthaffairs.org%2Fdoi%2Ffull%2F10.1377%2Fhlthaff.2017.1212&amp;dt=Making%20The%20Most%20Of%20Microfinance%20Networks%20%7C%20Health%20Affairs&amp;dbg=0&amp;cap=tc%3D0%26ab%3D0&amp;inst=1&amp;jsl=1&amp;prod=undefined&amp;lng=en&amp;ogt=&amp;pc=men&amp;pub=xa-4faab26f2cff13a7&amp;ssl=1&amp;sid=5b0f3f9792d317f1&amp;srf=0.01&amp;ver=300&amp;xck=0&amp;xtr=0&amp;og=&amp;csi=undefined&amp;rev=v8.3.15-wp&amp;ct=1&amp;xld=1&amp;xd=1\"></iframe></div>\n" + 
+      "    <div style=\"visibility: hidden; height: 1px; width: 1px; position: absolute; top: -9999px; z-index: 100000;\" id=\"_atssh\"><iframe id=\"_atssh432\" title=\"AddThis utility frame\" style=\"height: 1px; width: 1px; position: absolute; top: 0px; z-index: 100000; border: 0px none; left: 0px;\" src=\"https://s7.addthis.com/static/sh.e4e8af4de595fdb10ec1459d.html#rand=0.28609905006739056&amp;iit=1527725975899&amp;tmr=load%3D1527725975693%26core%3D1527725975710%26main%3D1527725975896%26ifr%3D1527725975901&amp;cb=0&amp;cdn=0&amp;md=0&amp;kw=&amp;ab=-&amp;dh=www.healthaffairs.org&amp;dr=&amp;du=https%3A%2F%2Fwww.healthaffairs.org%2Fdoi%2Ffull%2F10.1377%2Fhlthaff.2018.test1&amp;href=https%3A%2F%2Fwww.healthaffairs.org%2Fdoi%2Ffull%2F10.1377%2Fhlthaff.2018.test1&amp;dt=Making%20The%20Most%20Of%20Microfinance%20Networks%20%7C%20Health%20Affairs&amp;dbg=0&amp;cap=tc%3D0%26ab%3D0&amp;inst=1&amp;jsl=1&amp;prod=undefined&amp;lng=en&amp;ogt=&amp;pc=men&amp;pub=xa-4faab26f2cff13a7&amp;ssl=1&amp;sid=5b0f3f9792d317f1&amp;srf=0.01&amp;ver=300&amp;xck=0&amp;xtr=0&amp;og=&amp;csi=undefined&amp;rev=v8.3.15-wp&amp;ct=1&amp;xld=1&amp;xd=1\"></iframe></div>\n" + 
       "    <style id=\"service-icons-0\"></style>\n" + 
       "    <script type=\"text/javascript\">\n" + 
       "      if (window.location.hash && window.location.hash == '#_=_') {\n" + 
       "          window.location.hash = '';\n" + 
       "      }\n" + 
       "    </script>\n" + 
-      "    <div class=\"altmetric-embed altmetric-popover altmetric-right\" data-uuid=\"f49bf6b2-c920-a5b6-5033-71ffc9c45917\" id=\"_altmetric_popover_el\" style=\"margin: 0px; display: none;\">\n" + 
+      "    <div class=\"altmetric-embed altmetric-popover altmetric-right\" data-uuid=\"9876543-21\" id=\"_altmetric_popover_el\" style=\"margin: 0px; display: none;\">\n" + 
       "    </div>\n" + 
       "    <ul class=\"ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all quickSearchAutocomplete\" id=\"ui-id-1\" tabindex=\"0\" style=\"display: none;\"></ul>\n" + 
       "  </body>\n" + 
@@ -1252,7 +1244,7 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                          <h1 class=\"citation__title\">Making The Most Of Microfinance Networks</h1>\n" + 
       "                          <div class=\"issue-item\">\n" + 
       "                            <ul class=\"rlist--inline loa mobile-authors\" title=\"list of authors\">\n" + 
-      "                              <li><span class=\"hlFld-ContribAuthor\"><a href=\"/author/Saunders%2C+Margaret+K\" title=\"Margaret K. Saunders\">Margaret K. Saunders</a><sup>1</sup></span></li>\n" + 
+      "                              <li><span class=\"hlFld-ContribAuthor\"><a href=\"/author/Author\" title=\"Author\">Author</a><sup>1</sup></span></li>\n" + 
       "                            </ul>\n" + 
       "                          </div>\n" + 
       "                          <div class=\"article__affiliations\">\n" + 
@@ -1263,7 +1255,7 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                                <section class=\"section\">\n" + 
       "                                  <div class=\"section__body\">\n" + 
       "                                    <ol class=\"rlist spaced\">\n" + 
-      "                                      <li id=\"BIO1\">1. Margaret K. Saunders (msaunders@projecthope.org) is a deputy editor for global health at Health Affairs, in Bethesda, Maryland.</li>\n" + 
+      "                                      <li id=\"BIO1\">1. Author is an author at Health Affairs, in Bethesda, Maryland.</li>\n" + 
       "                                    </ol>\n" + 
       "                                  </div>\n" + 
       "                                </section>\n" + 
@@ -1271,7 +1263,7 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                            </div>\n" + 
       "                          </div>\n" + 
       "                        </div>\n" + 
-      "                        <div class=\"epub-section clearfix\"><span class=\"epub-section__item\"><span class=\"epub-section__state\">PUBLISHED:</span><span class=\"epub-section__date\">November 2017</span></span><span class=\"epub-section__item epub-section__access\"><i aria-hidden=\"true\" class=\"icon-lock_open\"></i><span class=\"epub-section__text\">Full Access</span></span><span class=\"epub-section__item pull-right\"><a href=\"https://doi.org/10.1377/hlthaff.2017.1212\" class=\"epub-section__doi__text\">https://doi.org/10.1377/hlthaff.2017.1212</a></span></div>\n" + 
+      "                        <div class=\"epub-section clearfix\"><span class=\"epub-section__item\"><span class=\"epub-section__state\">PUBLISHED:</span><span class=\"epub-section__date\">November 2017</span></span><span class=\"epub-section__item epub-section__access\"><i aria-hidden=\"true\" class=\"icon-lock_open\"></i><span class=\"epub-section__text\">Full Access</span></span><span class=\"epub-section__item pull-right\"><a href=\"https://doi.org/10.1377/hlthaff.2018.test1\" class=\"epub-section__doi__text\">https://doi.org/10.1377/hlthaff.2018.test1</a></span></div>\n" + 
       "                        \n" + 
       "                        \n" + 
       "                        <div class=\"article__body \">\n" + 
@@ -1279,9 +1271,9 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                          \n" + 
       "                          <div class=\"hlFld-Abstract\">\n" + 
       "                            <p class=\"fulltext\"></p>\n" + 
-      "                            <h2 class=\"article-section__title section__title\" id=\"d18015e1\">Abstract</h2>\n" + 
+      "                            <h2 class=\"article-section__title section__title\" id=\"9876543-21\">Abstract</h2>\n" + 
       "                            <div class=\"abstractSection abstractInFull\">\n" + 
-      "                              <p xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:oasis=\"http://www.niso.org/standards/z39-96/ns/oasis-exchange/table\">Together, data scientists and microfinance institutions are bringing vital health products to Haiti.</p>\n" + 
+      "                              <p xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:oasis=\"http://www.niso.org/standards/z39-96/ns/oasis-exchange/table\">Together, data scientists and microfinance institutions are bringing.</p>\n" + 
       "                            </div>\n" + 
       "                          </div>\n" + 
       "                          \n" + 
@@ -1297,7 +1289,7 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                          </div>\n" + 
       "                          \n" + 
       "                          <div class=\"hlFld-Fulltext\">\n" + 
-      "                            <p xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:oasis=\"http://www.niso.org/standards/z39-96/ns/oasis-exchange/table\">Microfinance institutions (MFIs) are known for offering financial services, execute programs by managing people across a country.</p>\n" + 
+      "                            <p xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:oasis=\"http://www.niso.org/standards/z39-96/ns/oasis-exchange/table\">Microfinance institutions (MFIs) are known.</p>\n" + 
       "                          </div>\n" + 
       "                          \n" + 
       "                          <div class=\"response\">\n" + 
@@ -1320,7 +1312,7 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       " Making The Most Of Microfinance Networks" + 
       "" + 
       "" + 
-      " Margaret K. Saunders 1" + 
+      " Author 1" + 
       "" + 
       "" + 
       "" + 
@@ -1331,7 +1323,7 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "" + 
       "" + 
       "" + 
-      " 1. Margaret K. Saunders (msaunders@projecthope.org) is a deputy editor for global health at Health Affairs, in Bethesda, Maryland." + 
+      " 1. Author is an author at Health Affairs, in Bethesda, Maryland." + 
       "" + 
       "" + 
       "" + 
@@ -1339,7 +1331,7 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "" + 
       "" + 
       "" + 
-      " PUBLISHED: November 2017 Full Access https://doi.org/10.1377/hlthaff.2017.1212" + 
+      " PUBLISHED: November 2017 Full Access https://doi.org/10.1377/hlthaff.2018.test1" + 
       "" + 
       "" + 
       "" + 
@@ -1349,7 +1341,7 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "" + 
       " Abstract" + 
       "" + 
-      " Together, data scientists and microfinance institutions are bringing vital health products to Haiti." + 
+      " Together, data scientists and microfinance institutions are bringing." + 
       "" + 
       "" + 
       "" + 
@@ -1365,7 +1357,7 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "" + 
       "" + 
       "" + 
-      " Microfinance institutions (MFIs) are known for offering financial services, execute programs by managing people across a country." + 
+      " Microfinance institutions (MFIs) are known." + 
       "" + 
       "" + 
       "" + 
@@ -1389,7 +1381,7 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "  <div class=\"articleList\">\n" + 
       "    <span class=\"sectionTitle\">Download article citation data for:</span>\n" + 
       "    <hr>\n" + 
-      "    <div class=\"art_title\"><a href=\"/doi/abs/10.1152/jn.00002.2017\">research in progress</a></div>\n" + 
+      "    <div class=\"art_title\"><a href=\"/doi/abs/10.1377/hlthaff.2018.test1\">research in progress</a></div>\n" + 
       "    <div class=\"art_authors\"><span class=\"NLM_string-name\">A Author</span>" +
       "    </div>\n" + 
       "    <span class=\"journalName\">journal Name</span>\n" + 
@@ -1405,7 +1397,7 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "<div class=\"articleList\">\n" + 
       "    <span class=\"sectionTitle\">Download article citation data for:</span>\n" + 
       "    <hr>\n" + 
-      "    <div class=\"art_title\"><a href=\"/doi/abs/10.1152/jn.00002.2017\">research in progress</a></div>\n" + 
+      "    <div class=\"art_title\"><a href=\"/doi/abs/10.1377/hlthaff.2018.test1\">research in progress</a></div>\n" + 
       "    <div class=\"art_authors\"><span class=\"NLM_string-name\">A Author</span>" +
       "    </div>\n" + 
       "    <span class=\"journalName\">journal Name</span>\n" + 
@@ -1479,11 +1471,11 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
      public void testFiltering() throws Exception {
        variantFact = new HealthAffairsHtmlHashFilterFactory();
        doFilterTest(mau, variantFact, manifestContent, manifestHashFiltered);
-//       doFilterTest(mau, variantFact, tocContent, tocContentFiltered);
+//       doFilterTest(mau, variantFact, tocContent, tocContentFiltered); // with doTagRemovalFiltering & doWSFiltering = false
        doFilterTest(mau, variantFact, tocContent, tocContentHashFiltered);
-//       doFilterTest(mau, variantFact, art1Content, art1ContentFiltered);
+//       doFilterTest(mau, variantFact, art1Content, art1ContentFiltered); // with doTagRemovalFiltering & doWSFiltering = false
        doFilterTest(mau, variantFact, art1Content, art1ContentHashFiltered);
-//       doFilterTest(mau, variantFact, citContent, citContentFiltered);
+//       doFilterTest(mau, variantFact, citContent, citContentFiltered); // with doTagRemovalFiltering & doWSFiltering = false
        doFilterTest(mau, variantFact, citContent, citContentHashFiltered);
      }
    }

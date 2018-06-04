@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -39,8 +39,8 @@
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.atypon.hlthaff.HealthAffairsHtmlCrawlFilterFactory</string>
   </entry>
-  <!-- <entry>
+  <entry>
     <string>application/pdf_filter_factory</string>
     <string>org.lockss.plugin.atypon.BaseAtyponScrapingPdfFilterFactory</string>
-  </entry> -->
+  </entry>
 </map>
