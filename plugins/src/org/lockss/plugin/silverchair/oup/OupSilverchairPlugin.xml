@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>development</string>
+    <string>testing</string>
   </entry>
   <!-- NOTE: this plugin uses shared code (validation, response handler) from parent directory! -->
   <entry>
@@ -10,7 +10,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>16</string>
+    <string>17</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -88,8 +88,11 @@
       <string>1,"^https?://(%s|oup\.silverchair-cdn\.com)/oup/backfile/Content_public/Journal/[^?]+\?Expires=2147483647", url_host(base_url)</string>
       <!--  PDFs redirect through one-time with changing expiring that stores in canonical -->
       <string>1,"^https?://(%s|oup\.silverchair-cdn\.com)/oup/backfile/Content_public/Journal/%s/[^?]+[.]pdf\?Expires=", url_host(base_url), journal_id</string>
-      <!--  allow any other item, but if it has Expires, it has to be stable - check this-->
+      <!--  allow any other item, but if it has Expires it's a content image and it has to be stable-->
+      <string>2,"^https?://(%s|oup\.silverchair-cdn\.com).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)\?Expires=.*$", url_host(base_url)</string>
+      <!--  but allow any other items that do NOT have expiry - they're just support images, fonts, etc -->
       <string>1,"^https?://(%s|oup\.silverchair-cdn\.com).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", url_host(base_url)</string>
+      <!--  pdf can go through regardless of Expiry because it gets consumed, and JS and CSS have no expiry -->
       <string>1,"^https?://oup\.silverchair-cdn\.com/.*(CSS|JS|\.pdf)(\?.*)?$"</string>
       <!--  PDF content is going through watermarking SOME of the time; we will consume -->
       <string>1,"^https?://watermark\.silverchair\.com/[^/]+\.pdf\?token="</string>

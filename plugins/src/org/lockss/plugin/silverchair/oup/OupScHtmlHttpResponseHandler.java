@@ -92,7 +92,7 @@ public class OupScHtmlHttpResponseHandler implements CacheResultHandler {
     
     // this checks for the specific exceptions before going to the general case and retry
     if (ex instanceof ContentValidationException.WrongLength) {
-      if (url.contains("pdf/")) {
+      if (url.contains(".pdf")) {
         log.warning("Wrong length - not storing file " + url);
         // retry and no store cache exception
         return new ScRetryableNetworkException(ex);
@@ -110,7 +110,7 @@ public class OupScHtmlHttpResponseHandler implements CacheResultHandler {
       return new ScRetryableNetworkException(ex);
     }
     
-    // we should only get in her cases that we specifically map, report and retry/no fail/no store
+    // we should only get in here cases that we specifically map, report and retry/no fail/no store
     log.warning("Unexpected call to handleResult(): AU " + au.getName() + "; URL " + url, ex);
     return new ScRetryableNetworkException(ex);
   }

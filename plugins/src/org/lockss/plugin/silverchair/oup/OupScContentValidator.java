@@ -57,10 +57,10 @@ public class OupScContentValidator {
       if (StringUtil.endsWithIgnoreCase(url, PDF_EXT) ||
           StringUtil.endsWithIgnoreCase(url, PNG_EXT) ||
           StringUtil.endsWithIgnoreCase(url, JPG_EXT) ||
-          StringUtil.endsWithIgnoreCase(url, JPEG_EXT) ||
-          StringUtil.endsWithIgnoreCase(url, RIS_EXT)) {
+          StringUtil.endsWithIgnoreCase(url, JPEG_EXT)) {
         throw new ContentValidationException("URL MIME type mismatch");
       } else {
+//          StringUtil.endsWithIgnoreCase(url, RIS_EXT) ris is always text/plain - so just look for the maintenance string
         if (true) // XXX check for small size first
         try {
           if (StringUtil.containsString(new InputStreamReader(cu.getUnfilteredInputStream(), cu.getEncoding()), MAINTENANCE_STRING)) {

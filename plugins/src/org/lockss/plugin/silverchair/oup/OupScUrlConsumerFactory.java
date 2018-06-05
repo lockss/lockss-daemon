@@ -120,8 +120,8 @@ public class OupScUrlConsumerFactory implements UrlConsumerFactory {
       boolean should =  fud.redirectUrls != null
           && fud.redirectUrls.size() == 1
           && fud.redirectUrls.get(0).equals(fud.fetchUrl)
-          && origFullTextPat.matcher(fud.origUrl).find()
-          && (destFullTextPat.matcher(fud.fetchUrl).find() || wMarkFullTextPat.matcher(fud.fetchUrl).find());
+          && getOrigPdfPattern().matcher(fud.origUrl).find()
+          && (getDestPdfPattern().matcher(fud.fetchUrl).find() || wMarkFullTextPat.matcher(fud.fetchUrl).find());
       if (fud.redirectUrls != null) {
   	    log.debug3("OUP redirect " + fud.redirectUrls.size() + ": " + fud.redirectUrls.toString());
         log.debug3("OUP redirect: " + " " + fud.origUrl + " to " + fud.fetchUrl + " should consume?: " + should);
