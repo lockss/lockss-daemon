@@ -141,6 +141,13 @@ public class TestMedknowArchivalUnit extends LockssPluginTestCase {
     shouldCacheTest(ROOT_URL+"article.asp?issn=1234-5678;year=2011;volume=123;issue=7;spage=306;epage=308;aulast=Pandey;type=4", false, ABAu, cus);
     shouldCacheTest(ROOT_URL+"article.asp?issn=1234-5678;year=2011;volume=123;issue=7;spage=306;epage=308;aulast=Pandey;type=5", false, ABAu, cus);
 
+    shouldCacheTest(ROOT_URL+"article.asp?issn=1234-5678;year=2018;volume=123;issue=", true, ABAu, cus);
+    shouldCacheTest(ROOT_URL+"article.asp?issn=1234-5678;year=2018;volume=123;issue=7;spage=306;epage=308;aulast=Pandey", true, ABAu, cus);
+    shouldCacheTest(ROOT_URL+"article.asp?issn=1234-5678;year=2018;volume=123;issue=7;spage=306;epage=308;aulast=Pandey;type=0", true, ABAu, cus);
+    shouldCacheTest(ROOT_URL+"article.asp?issn=1234-5678;year=2018;volume=123;issue=7;spage=306;epage=308;aulast=Pandey;type=2", true, ABAu, cus);
+    shouldCacheTest(ROOT_URL+"article.asp?issn=1234-5679;year=2018;volume=123;issue=7;spage=306;epage=308;aulast=Pandey;type=2", false, ABAu, cus);
+    shouldCacheTest(ROOT_URL+"article.asp?issn=1234-5678;year=2011;volume=122;issue=7;spage=306;epage=308;aulast=Pandey;type=2", false, ABAu, cus);
+
     // citation landing page -- with or without type; we should normalize this to only one landing page (abstract)
     //http://www.jpgmonline.com/citation.asp?issn=0022-3859;year=2013;volume=59;issue=2;spage=93;epage=97;aulast=Kole;type=0;aid=jpgm_2013_59_2_93_113811
     //http://www.jpgmonline.com/citation.asp?issn=0022-3859;year=2013;volume=59;issue=2;spage=93;epage=97;aulast=Kole;aid=jpgm_2013_59_2_93_113811

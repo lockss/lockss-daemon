@@ -558,21 +558,21 @@
     # instead of by a listing like this: http://www.jcnonweb.com/backissues.asp
     # has a lockss permission statement http://www.cytojournal.com/lockss.txt
 
-    au < notReady ; exists ; 2004 ; CytoJournal Volume 2004 ; 2004 ; 2004 ; >
-    au < notReady ; exists ; 2005 ; CytoJournal Volume 2005 ; 2005 ; 2005 ; >
-    au < notReady ; exists ; 2006 ; CytoJournal Volume 2006 ; 2006 ; 2006 ; >
-    au < notReady ; exists ; 2007 ; CytoJournal Volume 2007 ; 2007 ; 2007 ; >
-    au < notReady ; exists ; 2008 ; CytoJournal Volume 2008 ; 2008 ; 2008 ; >
-    au < notReady ; exists ; 2009 ; CytoJournal Volume 2009 ; 2009 ; 2009 ; >
-    au < notReady ; exists ; 2010 ; CytoJournal Volume 2010 ; 2010 ; 2010 ; >
-    au < notReady ; exists ; 2011 ; CytoJournal Volume 2011 ; 2011 ; 2011 ; >
-    au < notReady ; exists ; 2012 ; CytoJournal Volume 2012 ; 2012 ; 2012 ; >
-    au < notReady ; exists ; 2013 ; CytoJournal Volume 2013 ; 2013 ; 2013 ; >
-    au < notReady ; exists ; 2014 ; CytoJournal Volume 2014 ; 2014 ; 2014 ; >
-    au < notReady ; exists ; 2015 ; CytoJournal Volume 2015 ; 2015 ; 2015 ; >
-    au < notReady ; exists ; 2016 ; CytoJournal Volume 2016 ; 2016 ; 2016 ; >
-    au < notReady ; exists ; 2017 ; CytoJournal Volume 2017 ; 2017 ; 2017 ; >
-    au < notReady ; exists ; 2018 ; CytoJournal Volume 2018 ; 2018 ; 2018 ; >
+    au < notReady ; exists ; 2004 ; CytoJournal Volume 2004 ; 2004 ; 1 ; >
+    au < notReady ; exists ; 2005 ; CytoJournal Volume 2005 ; 2005 ; 2 ; >
+    au < notReady ; exists ; 2006 ; CytoJournal Volume 2006 ; 2006 ; 3 ; >
+    au < notReady ; exists ; 2007 ; CytoJournal Volume 2007 ; 2007 ; 4 ; >
+    au < notReady ; exists ; 2008 ; CytoJournal Volume 2008 ; 2008 ; 5 ; >
+    au < notReady ; exists ; 2009 ; CytoJournal Volume 2009 ; 2009 ; 6 ; >
+    au < notReady ; exists ; 2010 ; CytoJournal Volume 2010 ; 2010 ; 7 ; >
+    au < notReady ; exists ; 2011 ; CytoJournal Volume 2011 ; 2011 ; 8 ; >
+    au < notReady ; exists ; 2012 ; CytoJournal Volume 2012 ; 2012 ; 9 ; >
+    au < notReady ; exists ; 2013 ; CytoJournal Volume 2013 ; 2013 ; 10 ; >
+    au < notReady ; exists ; 2014 ; CytoJournal Volume 2014 ; 2014 ; 11 ; >
+    au < notReady ; exists ; 2015 ; CytoJournal Volume 2015 ; 2015 ; 12 ; >
+    au < testing ; exists ; 2016 ; CytoJournal Volume 2016 ; 2016 ; 13 ; >
+    au < testing ; exists ; 2017 ; CytoJournal Volume 2017 ; 2017 ; 14 ; >
+    au < notReady ; exists ; 2018 ; CytoJournal Volume 2018 ; 2018 ; 15 ; >
 
   }
 
@@ -2386,10 +2386,10 @@
     au < notReady ; exists ; 2011 ; Journal of Carcinogenesis Volume 10 ; 2011 ; 10 ; >
     au < notReady ; exists ; 2012 ; Journal of Carcinogenesis Volume 11 ; 2012 ; 11 ; >
     au < notReady ; exists ; 2013 ; Journal of Carcinogenesis Volume 12 ; 2013 ; 12 ; >
-    au < notReady ; exists ; 2014 ; Journal of Carcinogenesis Volume 13 ; 2014 ; 13 ; >
+    au < testing ; exists ; 2014 ; Journal of Carcinogenesis Volume 13 ; 2014 ; 13 ; >
     au < notReady ; exists ; 2015 ; Journal of Carcinogenesis Volume 14 ; 2015 ; 14 ; >
     au < notReady ; exists ; 2016 ; Journal of Carcinogenesis Volume 15 ; 2016 ; 15 ; >
-    au < notReady ; exists ; 2017 ; Journal of Carcinogenesis Volume 16 ; 2017 ; 16 ; >
+    au < testing ; exists ; 2017 ; Journal of Carcinogenesis Volume 16 ; 2017 ; 16 ; >
     au < expected ; exists ; 2018 ; Journal of Carcinogenesis Volume 17 ; 2018 ; 17 ; >
 
   }
@@ -2433,7 +2433,7 @@
     au < notReady ; exists ; 2013 ; Journal of Clinical Imaging Science Volume 3 ; 2013 ; 3 ; >
     au < notReady ; exists ; 2014 ; Journal of Clinical Imaging Science Volume 4 ; 2014 ; 4 ; >
     au < notReady ; exists ; 2015 ; Journal of Clinical Imaging Science Volume 5 ; 2015 ; 5 ; >
-    au < notReady ; exists ; 2016 ; Journal of Clinical Imaging Science Volume 6 ; 2016 ; 6 ; >
+    au < testing ; exists ; 2016 ; Journal of Clinical Imaging Science Volume 6 ; 2016 ; 6 ; >
     au < notReady ; exists ; 2017 ; Journal of Clinical Imaging Science Volume 7 ; 2017 ; 7 ; >
     au < expected ; exists ; 2018 ; Journal of Clinical Imaging Science Volume 8 ; 2018 ; 8 ; >
 
@@ -3271,7 +3271,7 @@
     au < notReady ; exists ; 2014 ; Journal of Pathology Informatics Volume 5 ; 2014 ; 5 ; >
     au < notReady ; exists ; 2015 ; Journal of Pathology Informatics Volume 6 ; 2015 ; 6 ; >
     au < notReady ; exists ; 2016 ; Journal of Pathology Informatics Volume 7 ; 2016 ; 7 ; >
-    au < notReady ; exists ; 2017 ; Journal of Pathology Informatics Volume 8 ; 2017 ; 8 ; >
+    au < testing ; exists ; 2017 ; Journal of Pathology Informatics Volume 8 ; 2017 ; 8 ; >
     au < expected ; exists ; 2018 ; Journal of Pathology Informatics Volume 9 ; 2018 ; 9 ; >
 
   }
