@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>12</string>
+    <string>13</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -61,7 +61,7 @@
     <list>
       <string>1,"^%s", graphics_url</string>
       <!-- all content from CDN -->
-      <string>1,"^https?://(.+\.(googleapis)\.com)/."</string>
+      <string>1,"^https?://((fonts|ajax)\.(googleapis)\.com)/."</string>
       <string>2,"^%sen/(error|account)/", base_url</string>
       <string>4,"^%s", base_url</string>
       <string>1,"^%sen/ebooks/lockss\?isbn=[-0-9x]+", base_url</string>
@@ -159,7 +159,7 @@
          org.lockss.crawler.allowedPluginPermittedHosts -->
     <string>au_permitted_host_pattern</string>
     <list>
-      <string>.+\.googleapis\.com</string>
+      <string>(fonts|ajax)\.googleapis\.com</string>
     </list>
   </entry>
   <entry>

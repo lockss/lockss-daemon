@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -70,7 +70,7 @@
     <string>au_crawlrules</string>
     <list>
       <!-- all content from CDN -->
-      <string>1,"^https?://([^.]+\.(googleapis|jquery|gstatic|bootstrapcdn)\.com|cdn\.mathjax\.org)/."</string>
+      <string>1,"^https?://((fonts|ajax)\.(googleapis|gstatic)\.com|[^.]+\.(jquery|bootstrapcdn)\.com|cdn\.mathjax\.org)/."</string>
       <string>1,"^https?://%s/[^?]+[.](bmp|css|gif|ico|jpe?g|js|png|tif?f|eot|svg|ttf|woff.?)$", url_host(base_url)</string>
       <string>4,"^%s", base_url</string>
       <string>1,"^%s(?:journals/)?%s/home-%d[.]html$", base_url, journal_id, year</string>
@@ -147,7 +147,7 @@
          org.lockss.crawler.allowedPluginPermittedHosts -->
     <string>au_permitted_host_pattern</string>
     <list>
-      <string>.+\.googleapis\.com</string>
+      <string>(fonts|ajax)\.googleapis\.com</string>
       <string>.+\.jquery\.com</string>
       <string>.+\.gstatic\.com</string>
       <string>.+\.bootstrapcdn\.com</string>

@@ -16,7 +16,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>68</string>
+    <string>69</string>
   </entry>
 <!--
 This is a list of OJS2 Child plugins - be sure to update the child's
@@ -137,7 +137,7 @@ Note: also push this plugin to coppulpln, dkdemopln, ibictpln, italytestpln, syn
     <list>
       <string>2,"(/[^.?/]+)(\1){2,}"</string>
       <!-- all content from CDN -->
-      <string>1,"^https?://(.+\.cloudfront\.net|cdn\.mathjax\.org|cdnjs\.cloudflare\.com|.+\.(gstatic|googleapis|jquery)\.com)/."</string>
+      <string>1,"^https?://(.+\.cloudfront\.net|cdn\.mathjax\.org|cdnjs\.cloudflare\.com|.+\.jquery\.com|(fonts|ajax)\.(gstatic|googleapis)\.com)/."</string>
       <!-- new - making index.php and journal_id optional, removed [0-9]+ for some rules -->
       <string>1,"^https?://%s%s.*\.(bmp|css|gif|ico|js|jpe?g|png|tif?f|eot|svg|ttf|woff.?)([?]((itok|v)=)?[^&amp;]+)?$", url_host(base_url), url_path(base_url)</string>
       <!-- https://www.jidc.org/index.php/journal/$$$call$$$/page/page/css?name=stylesheet -->
@@ -224,7 +224,7 @@ Note: also push this plugin to coppulpln, dkdemopln, ibictpln, italytestpln, syn
       <string>cdnjs\.cloudflare\.com</string>      
       <string>.+\.mathjax\.org</string>
       <string>.+\.gstatic\.com</string>
-      <string>.+\.googleapis\.com</string>
+      <string>(fonts|ajax)\.googleapis\.com</string>
       <string>.+\.jquery\.com</string>
     </list>
   </entry>

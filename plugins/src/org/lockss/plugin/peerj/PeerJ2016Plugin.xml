@@ -14,7 +14,7 @@
   <entry>
     <!-- allows for multiple journals under peerj host, but no preprints -->
     <string>plugin_version</string>
-    <string>7</string>
+    <string>8</string>
   </entry>
   <entry>
     <!-- to use new feature of HtmlNodeFilters in the html hash filter - allExceptSubtree() -->
@@ -78,7 +78,7 @@
     -->
     <list>
       <!-- cloudfront used for support files -->
-      <string>1,"^https?://(%s|[^.]+\.cloudfront\.net|[^.]+\.(googleapis|gstatic)\.com)/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)$", url_host(base_url)</string>
+      <string>1,"^https?://(%s|[^.]+\.cloudfront\.net|(fonts|ajax)\.(googleapis|gstatic)\.com)/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)$", url_host(base_url)</string>
       <!-- fonts sometimes have argument; limit the options but allow simple arg -->
       <string>1,"^https?://%s/assets/[^?]*\.(eot|svg|ttf|woff)([?](v=|-)[^/&amp;]+)?$", url_host(base_url)</string>
       <!-- cloudfront also used for volume-specific supplemental content .docx, .gz, etc -->
@@ -105,7 +105,7 @@
     <list>
      <!-- <string>s3\.amazonaws\.com</string> -->
       <string>.+\.cloudfront\.net</string>
-      <string>.+\.(googleapis|gstatic)\.com</string>
+      <string>(fonts|ajax)\.(googleapis|gstatic)\.com</string>
     </list>
   </entry>
   

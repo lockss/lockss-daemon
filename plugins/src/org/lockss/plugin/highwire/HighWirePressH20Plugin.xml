@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>130</string>
+    <string>131</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -130,6 +130,8 @@
       <string>2,"^https?://%s/.*/most-read", url_host(base_url)</string>
       <string>2,"^https?://%s/highwire/filestream/powerpoint/", url_host(base_url)</string>
       <!-- otherwise, all content from CDN -->
+      <!--  leaving the allthings.googleapis because the suffix will limit what it collects; normally only fonts|ajax.googleapis to avoid storage.googleapis-->
+      <!--  and the plugin permitted hosts is restricted -->
       <string>1,"^https?://.+(cdn[.]mathjax[.]org|[.]googleapis[.]com|(cdn.*|journals)[.]bmj[.]com|[.]cloudfront[.]net|[.]glencoesoftware[.]com)[^?]*[.](css|gif|ico|jpe?g|js)"</string>
       <!-- all fonts, images, resources, css, js, etc. -->
       <string>1,"^https?://%s/[^?]*[.](bmp|gif|ico|jpe?g|png|tif?f|(css|js|eot|svg|ttf|woff)([?].*)?)$", url_host(base_url)</string>
@@ -268,7 +270,7 @@
       <string>.+\.mathjax\.org</string>
       <string>.+\.cloudfront\.net</string>
       <string>.+\.glencoesoftware\.com</string>
-      <string>.+\.(googleapis|gstatic)\.com</string>
+      <string>(fonts|ajax)\.(googleapis|gstatic)\.com</string>
       <string>(cdn.*|journals)\.bmj\.com</string>
     </list>
   </entry>

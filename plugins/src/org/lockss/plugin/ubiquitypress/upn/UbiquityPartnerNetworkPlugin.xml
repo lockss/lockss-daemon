@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>8</string>
+    <string>9</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -39,7 +39,7 @@
     <string>au_crawlrules</string>
     <list>
       <string>2,"^https?://%s%sjms/public/journals/1/journalFavicon_en_US.ico$", url_host(base_url), url_path(base_url)</string>
-      <string>1,"^https?://(.+\.cloudfront\.net|cdn\.mathjax\.org|.+\.(gstatic|googleapis|jquery)\.com)/."</string>
+      <string>1,"^https?://(.+\.cloudfront\.net|cdn\.mathjax\.org|.+\.jquery\.com|(fonts|ajax)\.(gstatic|googleapis)\.com)/."</string>
       <string>1,"^https?://%s%slockss/year/%d/?$", url_host(base_url), url_path(base_url), year</string>
       <string>1,"^https?://%s%s.*\.(bmp|css|gif|ico|js|jpe?g|png|tif?f|eot|svg|ttf|woff.?)([?]((itok|v)=)?[^&amp;]+)?(/)?$", url_host(base_url), url_path(base_url)</string>
       <string>1,"^https?://%s%sarticles(/abstract)?/[^/?]+/[^/?]+/?(galley/[^/?]+/download)?/?$", url_host(base_url), url_path(base_url)</string>
@@ -149,7 +149,7 @@
       <string>.+\.cloudfront\.net</string>
       <string>.+\.mathjax\.org</string>
       <string>.+\.gstatic\.com</string>
-      <string>.+\.googleapis\.com</string>
+      <string>(fonts|ajax)\.googleapis\.com</string>
       <string>.+\.jquery\.com</string>
     </list>
   </entry>

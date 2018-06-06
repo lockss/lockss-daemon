@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>48</string>
+    <string>49</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -90,7 +90,7 @@
    -->
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^https?://([^.]+\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|ajax\.microsoft\.com)/"</string>
+      <string>1,"^https?://((fonts|ajax)\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|ajax\.microsoft\.com)/"</string>
       <string>2,"^https?://%s/(SharedControls/)?DownloadImage\.aspx\?", url_host(base_url)</string>
       <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)$", url_host(base_url)</string>
       <string>1,"^https?://%s/[^./]+\.axd/(file|script|stylesheet)/", url_host(base_url)</string>
@@ -217,7 +217,7 @@
   </entry>
   <entry>
     <string>au_permitted_host_pattern</string>
-    <string>"[^.]+\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|ajax\.microsoft\.com|[^.]+\.(silverchair\.netdna-cdn|silverchaircdn)\.com"</string>
+    <string>"(fonts|ajax)\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|ajax\.microsoft\.com|[^.]+\.(silverchair\.netdna-cdn|silverchaircdn)\.com"</string>
   </entry>
   <entry>
       <string>plugin_url_fetcher_factory</string>

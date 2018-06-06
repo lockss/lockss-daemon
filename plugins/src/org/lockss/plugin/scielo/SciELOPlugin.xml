@@ -107,7 +107,7 @@
         https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js
      -->
     <list>
-      <string>1,"^https?://(%s|[^.]+\.googleapis\.com|cdn[.]mathjax[.]org|[^.]+\.cloudfront\.net)/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)$", url_host(base_url)</string>
+      <string>1,"^https?://(%s|(fonts|ajax)\.googleapis\.com|cdn[.]mathjax[.]org|[^.]+\.cloudfront\.net)/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)$", url_host(base_url)</string>
       <string>4,"^%s", base_url</string>
       <string>1,"^%spdf/.+/(.._)?.+\.pdf", base_url</string>
       <string>1,"^%sscielo\.php\?script=sci_issues&amp;pid=%s&amp;", base_url, journal_issn</string>
@@ -175,7 +175,7 @@
          org.lockss.crawler.allowedPluginPermittedHosts -->
     <string>au_permitted_host_pattern</string>
     <list>
-      <string>.+\.googleapis\.com</string>
+      <string>(fonts|ajax)\.googleapis\.com</string>
       <string>.+\.mathjax\.org</string>
       <string>.+\.cloudfront\.net</string>
     </list>
