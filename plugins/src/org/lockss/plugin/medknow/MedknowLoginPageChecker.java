@@ -39,6 +39,7 @@ import java.util.regex.Pattern;
 
 import org.lockss.daemon.*;
 import org.lockss.util.*;
+import org.lockss.util.urlconn.CacheException;
 
 /**
  * <p>Detects login pages in Medknow journals.
@@ -65,8 +66,10 @@ public class MedknowLoginPageChecker implements LoginPageChecker {
     if ("text/html".equalsIgnoreCase(HeaderUtil.getMimeTypeFromContentType(props.getProperty("Content-Type")))) {
       String theContents = StringUtil.fromReader(reader);
       Matcher downloadMat = DOWNLOAD_TITLE_PATTERN.matcher(theContents); 
-          
-      return downloadMat.find();
+      boolean found = downloadMat.find();
+      if (found) {
+        throw new CacheException.UnexpectedNoRetryFailException("Found a login page for pdf");
+      }
     }
     return false;
   }
