@@ -35,6 +35,7 @@ import java.io.*;
 import org.lockss.daemon.PluginException;
 import org.lockss.test.*;
 import org.lockss.util.*;
+import org.lockss.util.urlconn.CacheException;
 
 public class TestMedknowLoginPageChecker extends LockssTestCase {
 
@@ -112,7 +113,10 @@ public class TestMedknowLoginPageChecker extends LockssTestCase {
     MyStringReader reader = new MyStringReader(downloadPageText);
 
     try {
+      // old return value would be true, which would result in fatal error
       assertTrue(checker.isLoginPage(props, reader));
+    } catch (CacheException e) {
+      assertClass(CacheException.UnexpectedNoRetryFailException.class, e);
     } catch (PluginException e) {
 
     }
@@ -127,6 +131,8 @@ public class TestMedknowLoginPageChecker extends LockssTestCase {
 
     try {
       assertTrue(checker.isLoginPage(props, reader));
+    } catch (CacheException e) {
+      assertClass(CacheException.UnexpectedNoRetryFailException.class, e);
     } catch (PluginException e) {
 
     }
