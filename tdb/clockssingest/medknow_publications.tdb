@@ -3872,20 +3872,36 @@
       issnl = 0974-620X
     >
 
-    param[base_url] = http://ojoonline.org/
     param[journal_issn] = 0974-620X
 
-    au < manifest ; exists ; 2008 ; Oman Journal of Ophthalmology Volume 1 ; 2008 ; 1 ; >
-    au < manifest ; exists ; 2009 ; Oman Journal of Ophthalmology Volume 2 ; 2009 ; 2 ; >
-    au < manifest ; exists ; 2010 ; Oman Journal of Ophthalmology Volume 3 ; 2010 ; 3 ; >
+    {
+    param[base_url] = http://ojoonline.org/
+
     au < frozen ; exists ; 2011 ; Oman Journal of Ophthalmology Volume 4 ; 2011 ; 4 ; >
     au < frozen ; exists ; 2012 ; Oman Journal of Ophthalmology Volume 5 ; 2012 ; 5 ; >
     au < frozen ; exists ; 2013 ; Oman Journal of Ophthalmology Volume 6 ; 2013 ; 6 ; >
     au < finished ; crawling ; 2014 ; Oman Journal of Ophthalmology Volume 7 ; 2014 ; 7 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Oman Journal of Ophthalmology Volume 8 ; 2015 ; 8 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2016 ; Oman Journal of Ophthalmology Volume 9 ; 2016 ; 9 ; >
-    au < manifest ; exists ; 2017 ; Oman Journal of Ophthalmology Volume 10 ; 2017 ; 10 ; >
-    au < expected ; exists ; 2018 ; Oman Journal of Ophthalmology Volume 11 ; 2018 ; 11 ; >
+    }
+
+
+    {
+    param[base_url] = http://www.ojoonline.org/
+
+    au < exists ; exists ; 2008 ; Oman Journal of Ophthalmology Volume 1 ; 2008 ; 1 ; >
+    au < exists ; exists ; 2009 ; Oman Journal of Ophthalmology Volume 2 ; 2009 ; 2 ; >
+    au < exists ; exists ; 2010 ; Oman Journal of Ophthalmology Volume 3 ; 2010 ; 3 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Oman Journal of Ophthalmology Volume 4 ; 2011 ; 4 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Oman Journal of Ophthalmology Volume 5 ; 2012 ; 5 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Oman Journal of Ophthalmology Volume 6 ; 2013 ; 6 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; Oman Journal of Ophthalmology Volume 7 ; 2014 ; 7 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; Oman Journal of Ophthalmology Volume 8 ; 2015 ; 8 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; Oman Journal of Ophthalmology Volume 9 ; 2016 ; 9 ; >
+    au < exists ; exists ; 2017 ; Oman Journal of Ophthalmology Volume 10 ; 2017 ; 10 ; >
+    au < exists ; exists ; 2018 ; Oman Journal of Ophthalmology Volume 11 ; 2018 ; 11 ; >
+
+    }
 
   }
 

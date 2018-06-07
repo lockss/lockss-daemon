@@ -3853,20 +3853,36 @@
       issnl = 0974-620X
     >
 
-    param[base_url] = http://ojoonline.org/
     param[journal_issn] = 0974-620X
 
-    au < manifest ; 2008 ; Oman Journal of Ophthalmology Volume 1 ; 2008 ; 1 >
-    au < manifest ; 2009 ; Oman Journal of Ophthalmology Volume 2 ; 2009 ; 2 >
-    au < manifest ; 2010 ; Oman Journal of Ophthalmology Volume 3 ; 2010 ; 3 >
+    {
+    param[base_url] = http://ojoonline.org/
+
     au < released ; 2011 ; Oman Journal of Ophthalmology Volume 4 ; 2011 ; 4 >
     au < released ; 2012 ; Oman Journal of Ophthalmology Volume 5 ; 2012 ; 5 >
     au < released ; 2013 ; Oman Journal of Ophthalmology Volume 6 ; 2013 ; 6 >
     au < released ; 2014 ; Oman Journal of Ophthalmology Volume 7 ; 2014 ; 7 >
     au < released ; 2015 ; Oman Journal of Ophthalmology Volume 8 ; 2015 ; 8 >
     au < released ; 2016 ; Oman Journal of Ophthalmology Volume 9 ; 2016 ; 9 >
-    au < manifest ; 2017 ; Oman Journal of Ophthalmology Volume 10 ; 2017 ; 10 >
-    au < expected ; 2018 ; Oman Journal of Ophthalmology Volume 11 ; 2018 ; 11 >
+
+    }
+
+    {
+    param[base_url] = http://www.ojoonline.org/
+
+    au < exists ; 2008 ; Oman Journal of Ophthalmology Volume 1 ; 2008 ; 1 >
+    au < exists ; 2009 ; Oman Journal of Ophthalmology Volume 2 ; 2009 ; 2 >
+    au < exists ; 2010 ; Oman Journal of Ophthalmology Volume 3 ; 2010 ; 3 >
+    au < doNotProcess ; 2011 ; Oman Journal of Ophthalmology Volume 4 ; 2011 ; 4 >
+    au < doNotProcess ; 2012 ; Oman Journal of Ophthalmology Volume 5 ; 2012 ; 5 >
+    au < doNotProcess ; 2013 ; Oman Journal of Ophthalmology Volume 6 ; 2013 ; 6 >
+    au < doNotProcess ; 2014 ; Oman Journal of Ophthalmology Volume 7 ; 2014 ; 7 >
+    au < doNotProcess ; 2015 ; Oman Journal of Ophthalmology Volume 8 ; 2015 ; 8 >
+    au < doNotProcess ; 2016 ; Oman Journal of Ophthalmology Volume 9 ; 2016 ; 9 >
+    au < exists ; 2017 ; Oman Journal of Ophthalmology Volume 10 ; 2017 ; 10 >
+    au < exists ; 2018 ; Oman Journal of Ophthalmology Volume 11 ; 2018 ; 11 >
+
+    }
 
   }
 
