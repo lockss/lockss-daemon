@@ -12,6 +12,11 @@
     <string>1</string>
   </entry>
   <entry>
+  <!--  metadata support for ARTICLE_TYPE_FILE -->
+    <string>required_daemon_version</string>
+    <string>1.73.5</string>
+  </entry>  
+  <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>

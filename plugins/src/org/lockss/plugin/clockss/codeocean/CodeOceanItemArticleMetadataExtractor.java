@@ -89,10 +89,16 @@ public class CodeOceanItemArticleMetadataExtractor
     	    ArticleMetadata md = new ArticleMetadata();
     	    md.put(MetadataField.FIELD_ACCESS_URL, metadataCu.getUrl());
     	    md.put(MetadataField.FIELD_PROVIDER, CODE_OCEAN);
+    	    // for now use the publisher from the path - might need to get a clean version 
     	    md.put(MetadataField.FIELD_PUBLISHER, publisher);
-    	    md.put(MetadataField.FIELD_ARTICLE_TYPE, "file");
+    	    // these two are new to support the archiving of arbitrary blobs of content
+    	    md.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_FILE);
+    	    // This isn't explicitly necessary - it would be created based on the ARTICLE_TYPE_FILE and
+    	    // it is used only to attach the publisher to the "article"
+    	    md.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_FILE);
     	    md.put(MetadataField.FIELD_PROPRIETARY_IDENTIFIER, file_id);
-    	    if (year != null) md.put(MetadataField.FIELD_DATE, year); // ingest year for now
+    	    // for now use the ingest year - might need to pull a real year from the metadata?
+    	    if (year != null) md.put(MetadataField.FIELD_DATE, year);
     	    emit.emitMetadata(metadataCu, md);
     } 
   }
