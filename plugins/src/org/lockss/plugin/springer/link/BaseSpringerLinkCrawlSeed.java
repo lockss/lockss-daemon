@@ -145,7 +145,7 @@ public abstract class BaseSpringerLinkCrawlSeed extends BaseCrawlSeed {
    * @since 1.67.5
    */
   protected static final String API_URL = "https://api.springer.com/";
-  
+    
   protected CrawlerFacade facade;
 
   /**
