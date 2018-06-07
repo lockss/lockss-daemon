@@ -70,14 +70,20 @@
       param[journal_id] = scoms
       param[base_url] = http://www.hope.uzh.ch/
 
-      au < manifest ; 1998 ; SComS: Studies in Communications Sciences Volume 1998 ; 1998 ; 1998 >
-      au < manifest ; 1999 ; SComS: Studies in Communications Sciences Volume 1999 ; 1999 ; 1999 >
-      au < manifest ; 2000 ; SComS: Studies in Communications Sciences Volume 2000 ; 2000 ; 2000 >
-      au < manifest ; 2001 ; SComS: Studies in Communications Sciences Volume 2001 ; 2001 ; 2001 >
-      au < manifest ; 2002 ; SComS: Studies in Communications Sciences Volume 2002 ; 2002 ; 2002 >
-      au < manifest ; 2003 ; SComS: Studies in Communications Sciences Volume 2003 ; 2003 ; 2003 >
-      au < manifest ; 2004 ; SComS: Studies in Communications Sciences Volume 2004 ; 2004 ; 2004 >
-      au < manifest ; 2005 ; SComS: Studies in Communications Sciences Volume 2005 ; 2005 ; 2005 >
+      au < exists ; 1991 ; SComS: Studies in Communications Sciences Volume 1991 [abstract only] ; 1991 ; 1991 >
+      au < exists ; 1992 ; SComS: Studies in Communications Sciences Volume 1992 [abstract only] ; 1992 ; 1992 >
+      au < exists ; 1993 ; SComS: Studies in Communications Sciences Volume 1993 [abstract only] ; 1993 ; 1993 >
+      au < notReady ; 1994 ; SComS: Studies in Communications Sciences Volume 1994 [abstract only] ; 1994 ; 1994 > #no content
+      au < notReady ; 1996 ; SComS: Studies in Communications Sciences Volume 1996 [abstract only] ; 1996 ; 1996 > #no content
+      au < notReady ; 1997 ; SComS: Studies in Communications Sciences Volume 1997 [abstract only] ; 1997 ; 1997 > #no content
+      au < notReady ; 1998 ; SComS: Studies in Communications Sciences Volume 1998 ; 1998 ; 1998 > #no content
+      au < notReady ; 1999 ; SComS: Studies in Communications Sciences Volume 1999 ; 1999 ; 1999 > #no content
+      au < notReady ; 2000 ; SComS: Studies in Communications Sciences Volume 2000 ; 2000 ; 2000 > #no content
+      au < notReady ; 2001 ; SComS: Studies in Communications Sciences Volume 2001 ; 2001 ; 2001 > #no content
+      au < notReady ; 2002 ; SComS: Studies in Communications Sciences Volume 2002 ; 2002 ; 2002 > #no content
+      au < notReady ; 2003 ; SComS: Studies in Communications Sciences Volume 2003 ; 2003 ; 2003 > #no content
+      au < notReady ; 2004 ; SComS: Studies in Communications Sciences Volume 2004 ; 2004 ; 2004 > #no content
+      au < notReady ; 2005 ; SComS: Studies in Communications Sciences Volume 2005 ; 2005 ; 2005 > #no content
       au < manifest ; 2006 ; SComS: Studies in Communications Sciences Volume 2006 ; 2006 ; 2006 >
       au < manifest ; 2007 ; SComS: Studies in Communications Sciences Volume 2007 ; 2007 ; 2007 >
       au < manifest ; 2008 ; SComS: Studies in Communications Sciences Volume 2008 ; 2008 ; 2008 >
@@ -224,10 +230,11 @@
         au < released ; 2010 ; Zwingliana Volume 37 ; 37 ; 2010 >
         au < released ; 2011 ; Zwingliana Volume 38 ; 38 ; 2011 >
         au < released ; 2012 ; Zwingliana Volume 39 ; 39 ; 2012 >
-        au < doNotProcess ; 2013 ; Zwingliana Volume 40 ; 40 ; 2013 > #see http://www.zwingliana.ch/index.php/zwa/gateway/lockss?year=2013
-        au < doNotProcess ; 2014 ; Zwingliana Volume 41 ; 41 ; 2014 >
-        au < doNotProcess ; 2015 ; Zwingliana Volume 42 ; 42 ; 2015 >
+        au < testing ; 2013 ; Zwingliana Volume 40 ; 40 ; 2013 >
+        au < testing ; 2014 ; Zwingliana Volume 41 ; 41 ; 2014 >
+        au < doNotProcess ; 2015 ; Zwingliana Volume 42 ; 42 ; 2015 > #see http://www.zwingliana.ch/index.php/zwa/gateway/lockss?year=2015
         au < doNotProcess ; 2016 ; Zwingliana Volume 43 ; 43 ; 2016 >
+        au < doNotProcess ; 2017 ; Zwingliana Volume 44 [abstract only] ; 44 ; 2017 >
 
       }
 
