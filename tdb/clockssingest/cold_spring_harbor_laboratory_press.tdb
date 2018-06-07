@@ -52,7 +52,7 @@
       au < ready ; exists ; 2010 ; Cold Spring Harbor Perspectives in Biology Volume 2 ; 2 ; >
       au < testing ; exists ; 2011 ; Cold Spring Harbor Perspectives in Biology Volume 3 ; 3 ; >
       au < testing ; exists ; 2012 ; Cold Spring Harbor Perspectives in Biology Volume 4 ; 4 ; >
-      au < ready ; exists ; 2013 ; Cold Spring Harbor Perspectives in Biology Volume 5 ; 5 ; >
+      au < crawling ; exists ; 2013 ; Cold Spring Harbor Perspectives in Biology Volume 5 ; 5 ; >
       au < finished ; crawling ; 2014 ; Cold Spring Harbor Perspectives in Biology Volume 6 ; 6 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2015 ; Cold Spring Harbor Perspectives in Biology Volume 7 ; 7 ; >
       au < deepCrawl ; exists ; 2016 ; Cold Spring Harbor Perspectives in Biology Volume 8 ; 8 ; >
@@ -151,8 +151,8 @@
       au < testing ; exists ; 1941 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 9 ; 9 ; >
       au < testing ; exists ; 1942 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 10 ; 10 ; >
       au < testing ; exists ; 1946 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 11 ; 11 ; >
-      au < ready ; exists ; 1947 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 12 ; 12 ; >
-      au < ready ; exists ; 1948 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 13 ; 13 ; >
+      au < crawling ; exists ; 1947 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 12 ; 12 ; >
+      au < crawling ; exists ; 1948 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 13 ; 13 ; >
       au < ready ; exists ; 1949 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 14 ; 14 ; >
       au < testing ; exists ; 1950 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 15 ; 15 ; >
       au < testing ; exists ; 1951 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 16 ; 16 ; >
@@ -177,7 +177,7 @@
       au < testing ; exists ; 1970 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 35 ; 35 ; >
       au < testing ; exists ; 1971 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 36 ; 36 ; >
       au < testing ; exists ; 1972 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 37 ; 37 ; >
-      au < ready ; exists ; 1973 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 38 ; 38 ; >
+      au < crawling ; exists ; 1973 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 38 ; 38 ; >
       au < crawling ; exists ; 1974 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 39 ; 39 ; >
       au < ready ; exists ; 1975 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 40 ; 40 ; >
       au < crawling ; exists ; 1976 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 41 ; 41 ; >
@@ -186,20 +186,20 @@
       au < ready ; exists ; 1979 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 44 ; 44 ; >
       au < ready ; exists ; 1980 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 45 ; 45 ; >
       au < ready ; exists ; 1981 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 46 ; 46 ; >
-      au < ready ; exists ; 1982 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 47 ; 47 ; >
-      au < ready ; exists ; 1983 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 48 ; 48 ; >
+      au < crawling ; exists ; 1982 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 47 ; 47 ; >
+      au < crawling ; exists ; 1983 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 48 ; 48 ; >
       au < crawling ; exists ; 1984 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 49 ; 49 ; >
-      au < ready ; exists ; 1985 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 50 ; 50 ; >
+      au < crawling ; exists ; 1985 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 50 ; 50 ; >
       au < testing ; exists ; 1986 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 51 ; 51 ; >
-      au < ready ; exists ; 1987 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 52 ; 52 ; >
-      au < ready ; exists ; 1988 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 53 ; 53 ; >
+      au < crawling ; exists ; 1987 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 52 ; 52 ; >
+      au < crawling ; exists ; 1988 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 53 ; 53 ; >
       au < testing ; exists ; 1989 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 54 ; 54 ; >
-      au < ready ; exists ; 1990 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 55 ; 55 ; >
-      au < ready ; exists ; 1991 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 56 ; 56 ; >
-      au < ready ; exists ; 1992 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 57 ; 57 ; >
+      au < crawling ; exists ; 1990 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 55 ; 55 ; >
+      au < crawling ; exists ; 1991 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 56 ; 56 ; >
+      au < crawling ; exists ; 1992 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 57 ; 57 ; >
       au < ready ; exists ; 1993 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 58 ; 58 ; >
-      au < ready ; exists ; 1994 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 59 ; 59 ; >
-      au < ready ; exists ; 1995 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 60 ; 60 ; >
+      au < crawling ; exists ; 1994 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 59 ; 59 ; >
+      au < crawling ; exists ; 1995 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 60 ; 60 ; >
       au < ready ; exists ; 1996 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 61 ; 61 ; >
       au < ready ; exists ; 1997 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 62 ; 62 ; >
       au < ready ; exists ; 1998 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 63 ; 63 ; >
@@ -214,8 +214,8 @@
       au < ready ; exists ; 2007 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 72 ; 72 ; >
       au < ready ; exists ; 2008 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 73 ; 73 ; >
       au < ready ; exists ; 2009 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 74 ; 74 ; >
-      au < ready ; exists ; 2010 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 75 ; 75 ; >
-      au < ready ; exists ; 2011 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 76 ; 76 ; >
+      au < crawling ; exists ; 2010 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 75 ; 75 ; >
+      au < crawling ; exists ; 2011 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 76 ; 76 ; >
       au < ready ; exists ; 2012 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 77 ; 77 ; >
       au < frozen ; exists ; 2013 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 78 ; 78 ; >
       au < finished ; finished ; 2014 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 79 ; 79 ; reingest5.clockss.org:8082 >
@@ -244,11 +244,11 @@
 
       param[base_url] = http://genesdev.cshlp.org/
 
-      au < ready ; exists ; 1987 ; Genes & Development Volume 1 ; 1 ; >
+      au < crawling ; exists ; 1987 ; Genes & Development Volume 1 ; 1 ; >
       au < ready ; exists ; 1988 ; Genes & Development Volume 2 ; 2 ; >
-      au < ready ; exists ; 1989 ; Genes & Development Volume 3 ; 3 ; >
-      au < ready ; exists ; 1990 ; Genes & Development Volume 4 ; 4 ; >
-      au < ready ; exists ; 1991 ; Genes & Development Volume 5 ; 5 ; >
+      au < crawling ; exists ; 1989 ; Genes & Development Volume 3 ; 3 ; >
+      au < crawling ; exists ; 1990 ; Genes & Development Volume 4 ; 4 ; >
+      au < crawling ; exists ; 1991 ; Genes & Development Volume 5 ; 5 ; >
       au < ready ; exists ; 1992 ; Genes & Development Volume 6 ; 6 ; >
       au < ready ; exists ; 1993 ; Genes & Development Volume 7 ; 7 ; >
       au < ready ; exists ; 1994 ; Genes & Development Volume 8 ; 8 ; >
