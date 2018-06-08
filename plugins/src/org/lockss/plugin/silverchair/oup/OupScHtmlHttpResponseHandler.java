@@ -50,13 +50,17 @@ import org.lockss.util.urlconn.CacheSuccess;
 public class OupScHtmlHttpResponseHandler implements CacheResultHandler {
   private static final Logger log = Logger.getLogger(OupScHtmlHttpResponseHandler.class);
   
+  // OUP images are at expiring URLS - in this case it wasn't actually supp_zip but supposed to be image source which was the 403
+  // https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/hmg/26/3/10.1093_hmg_ddw419/2/m_ddw419_supp.zip?Expires=2147483647&Signature=MJDYDzdo...&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA
+  // PDF files use a changing Expires date and get consumed. Only supporting content uses the specific stable Expires date so use that as the pattern match
+  // oup/backfile/Content_public/[^?]+\?Expires=2147483647&Signature="
   protected static final Pattern NON_FATAL_PAT = 
-	      Pattern.compile("\\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff|pdf)$");
+	      Pattern.compile("(oup/backfile/Content_public/[^?]+\\?Expires=2147483647&Signature=|\\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)$)");
 
   @Override
   public void init(final CacheResultMap map) throws PluginException {
     log.warning("Unexpected call to init()");
-    throw new UnsupportedOperationException("Unexpected call to ScHttpResponseHandler.init()");
+    throw new UnsupportedOperationException("Unexpected call to OupScHttpResponseHandler.init()");
 
   }
 
