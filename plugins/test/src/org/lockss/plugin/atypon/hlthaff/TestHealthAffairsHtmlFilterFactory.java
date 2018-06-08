@@ -718,7 +718,7 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                                    <li><a href=\"/doi/pdf/10.1377/hlthaff.2018.test1\"><i aria-hidden=\"true\" class=\"icon-download\"></i><span>View PDF</span></a></li>\n" + 
       "                                  </ul>\n" + 
       "                                </li>\n" + 
-      "                                <li class=\"coolBar__section coolBar--permissions\"><a href=\"/servlet/linkout?type=rightslink&amp;url=startPage%3D1937%26pageCount%3D1%26author%3DMargaret%2BK.%2BSaunders%26orderBeanReset%3Dtrue%26imprint%3DHealth%2BAffairs%26volumeNum%3D36%26issueNum%3D11%26contentID%3D10.1377%252Fhlthaff.2018.test1%26title%3DMaking%2BThe%2BMost%2BOf%2BMicrofinance%2BNetworks%26pa%3D%26issn%3D0278-2715%26publisherName%3DProject%2BHOPE%26publication%3DHealth%2BAffairs%26rpt%3Dn%26endPage%3D1937%26publicationDate%3D11%252F01%252F2017\" title=\"Permissions\" class=\"coolBar__ctrl\"><i aria-hidden=\"true\" class=\"icon-lock_open\"></i><span>Permissions</span></a></li>\n" + 
+      "                                <li class=\"coolBar__section coolBar--permissions\"><a href=\"/servlet/linkout?type=rightslink&amp;url=startPage%3D1937%26pageCount%3D1\" title=\"Permissions\" class=\"coolBar__ctrl\"><i aria-hidden=\"true\" class=\"icon-lock_open\"></i><span>Permissions</span></a></li>\n" + 
       "                              </ul>\n" + 
       "                              <ul class=\"coolBar__second rlist\">\n" + 
       "                                <div class=\" col-xs-6 gutterless \">\n" + 
@@ -750,7 +750,7 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                                      <li role=\"none\" class=\"article-tool\"><a href=\"/personalize/addFavoritePublication?doi=10.1377%2Fhlthaff.2018.test1\" role=\"menuitem\"><i aria-hidden=\"true\" class=\"icon-Icon_Star-26\"></i><span>Add to favorites</span></a></li>\n" + 
       "                                      <li role=\"none\" class=\"article-tool\"><a href=\"/action/showCitFormats?doi=10.1377%2Fhlthaff.2018.test1\" role=\"menuitem\"><i aria-hidden=\"true\" class=\"icon-Icon_Download\"></i><span>Download Citations</span></a></li>\n" + 
       "                                      <li role=\"none\" class=\"article-tool\"><a href=\"/action/addCitationAlert?doi=10.1377%2Fhlthaff.2018.test1\" role=\"menuitem\"><i aria-hidden=\"true\" class=\"icon-Icon_Track-citations\"></i><span>Track Citations</span></a></li>\n" + 
-      "                                      <li role=\"none\" class=\"article-tool\"><a href=\"/servlet/linkout?type=rightslink&amp;url=startPage%3D1937%26pageCount%3D1%26author%3DMargaret%2BK.%2BSaunders%26orderBeanReset%3Dtrue%26imprint%3DHealth%2BAffairs%26volumeNum%3D36%26issueNum%3D11%26contentID%3D10.1377%252Fhlthaff.2018.test1%26title%3DMaking%2BThe%2BMost%2BOf%2BMicrofinance%2BNetworks%26pa%3D%26issn%3D0278-2715%26publisherName%3DProject%2BHOPE%26publication%3DHealth%2BAffairs%26rpt%3Dn%26endPage%3D1937%26publicationDate%3D11%252F01%252F2017\" role=\"menuitem\" target=\"blank\"><i aria-hidden=\"true\" class=\"icon-lock_open\"></i><span>Permissions</span></a></li>\n" + 
+      "                                      <li role=\"none\" class=\"article-tool\"><a href=\"/servlet/linkout?type=rightslink&amp;url=startPage%3D1937\" role=\"menuitem\" target=\"blank\"><i aria-hidden=\"true\" class=\"icon-lock_open\"></i><span>Permissions</span></a></li>\n" + 
       "                                    </ul>\n" + 
       "                                  </div>\n" + 
       "                                </div>\n" + 
@@ -936,7 +936,7 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                  <div class=\"container\">\n" + 
       "                    <div class=\"row\">\n" + 
       "                      <div class=\" col-xs-8\">\n" + 
-      "                        <div id=\"disqus_thread\"><iframe id=\"dsq-app3120\" name=\"dsq-app3120\" allowtransparency=\"true\" scrolling=\"no\" tabindex=\"0\" title=\"Disqus\" style=\"width: 1px !important; min-width: 100% !important; border: medium none !important; overflow: hidden !important; height: 529px !important;\" src=\"https://disqus.com/embed/comments/?base=default&amp;f=www-healthaffairs-org&amp;t_i=10.1377%2Fhlthaff.2018.test1&amp;t_u=https%3A%2F%2Fwww.healthaffairs.org%2Fdoi%2Ffull%2F10.1377%2Fhlthaff.2018.test1&amp;t_d=Making%20The%20Most%20Of%20Microfinance%20Networks&amp;t_t=Making%20The%20Most%20Of%20Microfinance%20Networks&amp;s_o=default#version=aa7ee9c5dfe273f777188cca72f6158d\" horizontalscrolling=\"no\" verticalscrolling=\"no\" width=\"100%\" frameborder=\"0\"></iframe></div>\n" + 
+      "                        <div id=\"disqus_thread\"><iframe></iframe></div>\n" + 
       "                        <noscript>Please enable JavaScript</noscript>\n" + 
       "                      </div>\n" + 
       "                      <div class=\" col-xs-4\"></div>\n" + 
@@ -1014,7 +1014,7 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "        </footer>\n" + 
       "      </div>\n" + 
       "    </div>\n" + 
-      "    <div style=\"visibility: hidden; height: 1px; width: 1px; position: absolute; top: -9999px; z-index: 100000;\" id=\"_atssh\"><iframe id=\"_atssh432\" title=\"AddThis utility frame\" style=\"height: 1px; width: 1px; position: absolute; top: 0px; z-index: 100000; border: 0px none; left: 0px;\" src=\"https://s7.addthis.com/static/sh.e4e8af4de595fdb10ec1459d.html#rand=0.28609905006739056&amp;iit=1527725975899&amp;tmr=load%3D1527725975693%26core%3D1527725975710%26main%3D1527725975896%26ifr%3D1527725975901&amp;cb=0&amp;cdn=0&amp;md=0&amp;kw=&amp;ab=-&amp;dh=www.healthaffairs.org&amp;dr=&amp;du=https%3A%2F%2Fwww.healthaffairs.org%2Fdoi%2Ffull%2F10.1377%2Fhlthaff.2018.test1&amp;href=https%3A%2F%2Fwww.healthaffairs.org%2Fdoi%2Ffull%2F10.1377%2Fhlthaff.2018.test1&amp;dt=Making%20The%20Most%20Of%20Microfinance%20Networks%20%7C%20Health%20Affairs&amp;dbg=0&amp;cap=tc%3D0%26ab%3D0&amp;inst=1&amp;jsl=1&amp;prod=undefined&amp;lng=en&amp;ogt=&amp;pc=men&amp;pub=xa-4faab26f2cff13a7&amp;ssl=1&amp;sid=5b0f3f9792d317f1&amp;srf=0.01&amp;ver=300&amp;xck=0&amp;xtr=0&amp;og=&amp;csi=undefined&amp;rev=v8.3.15-wp&amp;ct=1&amp;xld=1&amp;xd=1\"></iframe></div>\n" + 
+      "    <div style=\"visibility: hidden; height: 1px; width: 1px; position: absolute; top: -9999px; z-index: 100000;\" id=\"_atssh\"><iframe>stuff</iframe></div>\n" + 
       "    <style id=\"service-icons-0\"></style>\n" + 
       "    <script type=\"text/javascript\">\n" + 
       "      if (window.location.hash && window.location.hash == '#_=_') {\n" + 
@@ -1096,7 +1096,35 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                        <div class=\"epub-section clearfix\"><span class=\"epub-section__item\"><span class=\"epub-section__state\">PUBLISHED:</span><span class=\"epub-section__date\">November 2017</span></span><span class=\"epub-section__item epub-section__access\"><i aria-hidden=\"true\" class=\"icon-lock_open\"></i><span class=\"epub-section__text\">Full Access</span></span><span class=\"epub-section__item pull-right\"><a href=\"https://doi.org/10.1377/hlthaff.2018.test1\" class=\"epub-section__doi__text\">https://doi.org/10.1377/hlthaff.2018.test1</a></span></div>\n" + 
       "                        <!--+articleCoolbar()-->\n" + 
       "                        <div class=\"scroll-to-target\">\n" + 
-      "                          \n" + 
+      "                          <nav class=\"stickybar coolBar trans\">" +
+      "<div class=\"stickybar__wrapper coolBar__wrapper clearfix\" style=\"width: 756.667px; top: 157.7px;\">" +
+      "<div class=\"rlist coolBar__zone\">" +
+      "<div data-db-target-of=\"article\" id=\"articleMenu\" class=\"coolBar__drop fixed rlist\">" +
+      "<div data-target=\"article .tab .tab__nav, .coolBar--download .coolBar__drop\" data-remove=\"false\" data-target-class=\"hidden-xs hidden-sm\" data-toggle=\"transplant\" data-direction=\"from\" data-transplant=\"self\" class=\"transplant showit\">" +
+      "<div class=\"transplanted-clone\">" +
+      "<ul data-db-target-of=\"downloads\" class=\"coolBar__drop rlist w-slide--list\">" +
+      "<li><a href=\"/doi/pdf/10.1377/hlthaff.2018.test1\"><i aria-hidden=\"true\" class=\"icon-download\"></i><span>View PDF</span></a></li>" +
+      "</ul>" +
+      "</div></div></div></div>" +
+      "<ul data-cb-group=\"Article\" data-cb-group-icon=\"icon-toc\" class=\"rlist coolBar__first\">" +
+      "<li class=\"coolBar__section coolBar--download hidden-xs hidden-sm\">" +
+      "<ul data-db-target-of=\"downloads\" class=\"coolBar__drop rlist w-slide--list cloned hidden-xs hidden-sm\">" +
+      "<li><a href=\"/doi/pdf/10.1377/hlthaff.2018.test1\"><i aria-hidden=\"true\" class=\"icon-download\"></i><span>View PDF</span></a></li>" +
+      "</ul>" +
+      "</li>" +
+      "</ul>" +
+      "<ul class=\"coolBar__second rlist\">" +
+      "<div class=\" col-xs-6 gutterless \">" +
+      "<div data-db-target-of=\"9876543-21\" aria-labelledby=\"9876543-21_Ctrl\" role=\"menu\" id=\"9876543-21_Pop\" class=\"article-tools__block fixed dropBlock__holder\">" +
+      "<ul class=\"rlist w-slide--list\">" +
+      "<li role=\"none\" class=\"article-tool\">" +
+      "<a href=\"/action/showCitFormats?doi=10.1377%2Fhlthaff.2018.test1\" role=\"menuitem\"><i aria-hidden=\"true\" class=\"icon-Icon_Download\"></i><span>Download Citations</span></a>" +
+      "</li>" +
+      "</ul>" +
+      "</div></div>" +
+      "</ul>" +
+      "</div>" +
+      "</nav>\n" + 
       "                        </div>\n" + 
       "                        <div class=\"article__body \">\n" + 
       "                          <p class=\"fulltext\"></p>\n" + 
@@ -1217,7 +1245,7 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "        \n" + 
       "      </div>\n" + 
       "    </div>\n" + 
-      "    <div style=\"visibility: hidden; height: 1px; width: 1px; position: absolute; top: -9999px; z-index: 100000;\" id=\"_atssh\"><iframe id=\"_atssh432\" title=\"AddThis utility frame\" style=\"height: 1px; width: 1px; position: absolute; top: 0px; z-index: 100000; border: 0px none; left: 0px;\" src=\"https://s7.addthis.com/static/sh.e4e8af4de595fdb10ec1459d.html#rand=0.28609905006739056&amp;iit=1527725975899&amp;tmr=load%3D1527725975693%26core%3D1527725975710%26main%3D1527725975896%26ifr%3D1527725975901&amp;cb=0&amp;cdn=0&amp;md=0&amp;kw=&amp;ab=-&amp;dh=www.healthaffairs.org&amp;dr=&amp;du=https%3A%2F%2Fwww.healthaffairs.org%2Fdoi%2Ffull%2F10.1377%2Fhlthaff.2018.test1&amp;href=https%3A%2F%2Fwww.healthaffairs.org%2Fdoi%2Ffull%2F10.1377%2Fhlthaff.2018.test1&amp;dt=Making%20The%20Most%20Of%20Microfinance%20Networks%20%7C%20Health%20Affairs&amp;dbg=0&amp;cap=tc%3D0%26ab%3D0&amp;inst=1&amp;jsl=1&amp;prod=undefined&amp;lng=en&amp;ogt=&amp;pc=men&amp;pub=xa-4faab26f2cff13a7&amp;ssl=1&amp;sid=5b0f3f9792d317f1&amp;srf=0.01&amp;ver=300&amp;xck=0&amp;xtr=0&amp;og=&amp;csi=undefined&amp;rev=v8.3.15-wp&amp;ct=1&amp;xld=1&amp;xd=1\"></iframe></div>\n" + 
+      "    <div style=\"visibility: hidden; height: 1px; width: 1px; position: absolute; top: -9999px; z-index: 100000;\" id=\"_atssh\"><iframe>stuff</iframe></div>\n" + 
       "    <style id=\"service-icons-0\"></style>\n" + 
       "    <script type=\"text/javascript\">\n" + 
       "      if (window.location.hash && window.location.hash == '#_=_') {\n" + 
