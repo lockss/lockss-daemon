@@ -37,6 +37,7 @@ import java.util.regex.Pattern;
 
 import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
+import org.htmlparser.filters.OrFilter;
 import org.htmlparser.tags.CompositeTag;
 import org.htmlparser.tags.LinkTag;
 import org.htmlparser.tags.Bullet;
@@ -52,7 +53,13 @@ public class HealthAffairsHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilt
   NodeFilter[] filters = new NodeFilter[] {
       HtmlNodeFilters.tag("header"),
       HtmlNodeFilters.tag("footer"),
-      HtmlNodeFilters.tag("nav"),
+      // HtmlNodeFilters.tag("nav"),
+      HtmlNodeFilters.allExceptSubtree(
+          HtmlNodeFilters.tag("nav"),
+          new OrFilter( // HtmlCompoundTransform(
+              HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/doi/pdf/"),
+              HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/action/showCitFormats[?]"))),
+
       // Article landing - ajax tabs
       HtmlNodeFilters.tagWithAttribute("li", "id", "pane-pcw-references"),
       HtmlNodeFilters.tagWithAttribute("li", "id", "pane-pcw-related"),
@@ -71,7 +78,7 @@ public class HealthAffairsHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilt
       HtmlNodeFilters.tagWithAttribute("a", "class", "sfxLink"),
       HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/servlet/linkout[?]type="),
       HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/author/"),
-
+      
       // an insidious source of over crawling
       // 5/1/18 - adding check for pattern in the <li>
       new NodeFilter() {
