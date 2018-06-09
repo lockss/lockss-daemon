@@ -1248,26 +1248,42 @@
    >
 
     param[base_url] = http://www.ijoem.com/
+
+    {
     param[journal_issn] = 0019-5278
     comment[ijoem] =  the issns are not consistent between medknow website and the journal's website
 
-    au < manifest ; 2003 ; Indian Journal of Occupational and Environmental Medicine Volume 7 ; 2003 ; 7 >
-    au < manifest ; 2004 ; Indian Journal of Occupational and Environmental Medicine Volume 8 ; 2004 ; 8 >
-    au < manifest ; 2005 ; Indian Journal of Occupational and Environmental Medicine Volume 9 ; 2005 ; 9 >
-    au < manifest ; 2006 ; Indian Journal of Occupational and Environmental Medicine Volume 10 ; 2006 ; 10 >
-    au < manifest ; 2007 ; Indian Journal of Occupational and Environmental Medicine Volume 11 ; 2007 ; 11 >
-    au < manifest ; 2008 ; Indian Journal of Occupational and Environmental Medicine Volume 12 ; 2008 ; 12 >
-    au < manifest ; 2009 ; Indian Journal of Occupational and Environmental Medicine Volume 13 ; 2009 ; 13 >
-    au < manifest ; 2010 ; Indian Journal of Occupational and Environmental Medicine Volume 14 ; 2010 ; 14 >
     au < released ; 2011 ; Indian Journal of Occupational and Environmental Medicine Volume 15 ; 2011 ; 15 >
     au < released ; 2012 ; Indian Journal of Occupational and Environmental Medicine Volume 16 ; 2012 ; 16 >
     au < released ; 2013 ; Indian Journal of Occupational and Environmental Medicine Volume 17 ; 2013 ; 17 >
     au < released ; 2014 ; Indian Journal of Occupational and Environmental Medicine Volume 18 ; 2014 ; 18 >
     au < released ; 2015 ; Indian Journal of Occupational and Environmental Medicine Volume 19 ; 2015 ; 19 >
     au < released ; 2016 ; Indian Journal of Occupational and Environmental Medicine Volume 20 ; 2016 ; 20 >
-    au < expected ; 2017 ; Indian Journal of Occupational and Environmental Medicine Volume 21 ; 2017 ; 21 >
-    au < expected ; 2018 ; Indian Journal of Occupational and Environmental Medicine Volume 22 ; 2018 ; 22 >
 
+    }
+
+    {
+    param[journal_issn] = 0973-2284
+    #[ijoem] =  medknow website uses correct issn 06/08/2018
+
+    au < exists ; 2003 ; Indian Journal of Occupational and Environmental Medicine Volume 7 ; 2003 ; 7 >
+    au < exists ; 2004 ; Indian Journal of Occupational and Environmental Medicine Volume 8 ; 2004 ; 8 >
+    au < exists ; 2005 ; Indian Journal of Occupational and Environmental Medicine Volume 9 ; 2005 ; 9 >
+    au < exists ; 2006 ; Indian Journal of Occupational and Environmental Medicine Volume 10 ; 2006 ; 10 >
+    au < exists ; 2007 ; Indian Journal of Occupational and Environmental Medicine Volume 11 ; 2007 ; 11 >
+    au < exists ; 2008 ; Indian Journal of Occupational and Environmental Medicine Volume 12 ; 2008 ; 12 >
+    au < exists ; 2009 ; Indian Journal of Occupational and Environmental Medicine Volume 13 ; 2009 ; 13 >
+    au < exists ; 2010 ; Indian Journal of Occupational and Environmental Medicine Volume 14 ; 2010 ; 14 >
+    au < doNotProcess ; 2011 ; Indian Journal of Occupational and Environmental Medicine Volume 15 ; 2011 ; 15 >
+    au < doNotProcess ; 2012 ; Indian Journal of Occupational and Environmental Medicine Volume 16 ; 2012 ; 16 >
+    au < doNotProcess ; 2013 ; Indian Journal of Occupational and Environmental Medicine Volume 17 ; 2013 ; 17 >
+    au < doNotProcess ; 2014 ; Indian Journal of Occupational and Environmental Medicine Volume 18 ; 2014 ; 18 >
+    au < doNotProcess ; 2015 ; Indian Journal of Occupational and Environmental Medicine Volume 19 ; 2015 ; 19 >
+    au < doNotProcess ; 2016 ; Indian Journal of Occupational and Environmental Medicine Volume 20 ; 2016 ; 20 >
+    au < exists ; 2017 ; Indian Journal of Occupational and Environmental Medicine Volume 21 ; 2017 ; 21 >
+    au < exists ; 2018 ; Indian Journal of Occupational and Environmental Medicine Volume 22 ; 2018 ; 22 >
+
+    }
   }
 
   {
