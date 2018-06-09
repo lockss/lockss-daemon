@@ -8,7 +8,36 @@
     info[poller] = 8
   >
 
-    comment[eblip] = Only this one title - "Evidence Based Library and Information Practice" is participating in CLOCKSS. No other titles are forthcoming.
+    comment[eblip] = Only two titles are participating in clockss from this publisher.
+    # "Evidence Based Library and Information Practice" 
+    # "Journal of Pharmacy and Pharmaceutical Science" 
+
+    {
+    
+      title <
+        name = Journal of Pharmacy and Pharmaceutical Science ;
+        eissn = 1482-1826
+      >
+      
+        plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin 
+        param[journal_id] = jpps
+        #param[base_url] = http://ejournals.library.ualberta.ca/ 
+        implicit < status ; status2 ; year ; name ; param[year] ; volume ; param[base_url] ; hidden[proxy] >
+
+        au < exists ; exists ; 2007 ; Journal of Pharmacy and Pharmaceutical Science Volume 10 ; 2007 ; 10 ; https://journals.library.ualberta.ca/ ; >
+        au < exists ; exists ; 2008 ; Journal of Pharmacy and Pharmaceutical Science Volume 11 ; 2008 ; 11 ; https://journals.library.ualberta.ca/ ; >
+        au < exists ; exists ; 2009 ; Journal of Pharmacy and Pharmaceutical Science Volume 12 ; 2009 ; 12 ; https://journals.library.ualberta.ca/ ; >
+        au < exists ; exists ; 2010 ; Journal of Pharmacy and Pharmaceutical Science Volume 13 ; 2010 ; 13 ; https://journals.library.ualberta.ca/ ; >
+        au < exists ; exists ; 2011 ; Journal of Pharmacy and Pharmaceutical Science Volume 14 ; 2011 ; 14 ; https://journals.library.ualberta.ca/ ; >
+        au < exists ; exists ; 2012 ; Journal of Pharmacy and Pharmaceutical Science Volume 15 ; 2012 ; 15 ; https://journals.library.ualberta.ca/ ; >
+        au < exists ; exists ; 2013 ; Journal of Pharmacy and Pharmaceutical Science Volume 16 ; 2013 ; 16 ; https://journals.library.ualberta.ca/ ; >
+        au < exists ; exists ; 2014 ; Journal of Pharmacy and Pharmaceutical Science Volume 17 ; 2014 ; 17 ; https://journals.library.ualberta.ca/ ; >
+        au < exists ; exists ; 2015 ; Journal of Pharmacy and Pharmaceutical Science Volume 18 ; 2015 ; 18 ; https://journals.library.ualberta.ca/ ; >
+        au < exists ; exists ; 2016 ; Journal of Pharmacy and Pharmaceutical Science Volume 19 ; 2016 ; 19 ; https://journals.library.ualberta.ca/ ; >
+        au < exists ; exists ; 2017 ; Journal of Pharmacy and Pharmaceutical Science Volume 20 ; 2017 ; 20 ; https://journals.library.ualberta.ca/ ; >
+        au < exists ; exists ; 2018 ; Journal of Pharmacy and Pharmaceutical Science Volume 21 ; 2018 ; 21 ; https://journals.library.ualberta.ca/ ; >
+
+    }
 
     {
     
@@ -24,10 +53,10 @@
         #param[base_url] = http://ejournals.library.ualberta.ca/ 
         implicit < status ; status2 ; year ; name ; param[year] ; volume ; param[base_url] ; hidden[proxy] >
 
-        au < exists ; exists ; 2006 ; Evidence Based Library and Information Practice Volume 1 ; 2006 ; 1 ; https://ejournals.library.ualberta.ca/ ; >
-        au < exists ; exists ; 2007 ; Evidence Based Library and Information Practice Volume 2 ; 2007 ; 2 ; https://ejournals.library.ualberta.ca/ ; >
-        au < exists ; exists ; 2008 ; Evidence Based Library and Information Practice Volume 3 ; 2008 ; 3 ; https://ejournals.library.ualberta.ca/ ; >
-        au < exists ; exists ; 2009 ; Evidence Based Library and Information Practice Volume 4 ; 2009 ; 4 ; https://ejournals.library.ualberta.ca/ ; >
+        au < exists ; exists ; 2006 ; Evidence Based Library and Information Practice Volume 1 ; 2006 ; 1 ; https://journals.library.ualberta.ca/ ; > #removed the e from the url.
+        au < exists ; exists ; 2007 ; Evidence Based Library and Information Practice Volume 2 ; 2007 ; 2 ; https://journals.library.ualberta.ca/ ; > #removed the e from the url.
+        au < exists ; exists ; 2008 ; Evidence Based Library and Information Practice Volume 3 ; 2008 ; 3 ; https://journals.library.ualberta.ca/ ; > #removed the e from the url.
+        au < exists ; exists ; 2009 ; Evidence Based Library and Information Practice Volume 4 ; 2009 ; 4 ; https://journals.library.ualberta.ca/ ; > #removed the e from the url.
         au < finished ; crawling ; 2010 ; Evidence Based Library and Information Practice Volume 5 ; 2010 ; 5 ; http://ejournals.library.ualberta.ca/ ; >
         au < finished ; frozen ; 2011 ; Evidence Based Library and Information Practice Volume 6 ; 2011 ; 6 ; http://ejournals.library.ualberta.ca/ ; >
         au < finished ; finished ; 2012 ; Evidence Based Library and Information Practice Volume 7 ; 2012 ; 7 ; http://ejournals.library.ualberta.ca/ ; reingest2.clockss.org:8085 >
@@ -35,8 +64,8 @@
         au < finished ; finished ; 2014 ; Evidence Based Library and Information Practice Volume 9 ; 2014 ; 9 ; http://ejournals.library.ualberta.ca/ ; reingest3.clockss.org:8083 >
         au < finished ; finished ; 2015 ; Evidence Based Library and Information Practice Volume 10 ; 2015 ; 10 ; http://ejournals.library.ualberta.ca/ ; reingest1.clockss.org:8082 >
         au < finished ; crawling ; 2016 ; Evidence Based Library and Information Practice Volume 11 ; 2016 ; 11 ; http://ejournals.library.ualberta.ca/ ; reingest3.clockss.org:8083 >
-        au < exists ; exists ; 2017 ; Evidence Based Library and Information Practice Volume 12 ; 2017 ; 12 ; https://ejournals.library.ualberta.ca/ ; >
-        au < expected ; exists ; 2018 ; Evidence Based Library and Information Practice Volume 13 ; 2018 ; 13 ; https://ejournals.library.ualberta.ca/ ; >
+        au < exists ; exists ; 2017 ; Evidence Based Library and Information Practice Volume 12 ; 2017 ; 12 ; https://journals.library.ualberta.ca/ ; > #removed the e from the url.
+        au < expected ; exists ; 2018 ; Evidence Based Library and Information Practice Volume 13 ; 2018 ; 13 ; https://journals.library.ualberta.ca/ ; > #removed the e from the url
 
       }
       
