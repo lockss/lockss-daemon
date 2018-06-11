@@ -10984,21 +10984,6 @@
   {
 
     title <
-      name = Journal of the National Cancer Institute: JNCI ;
-      issn = 0027-8874 ;
-      eissn = 1460-2105 ;
-      issnl = 0027-8874
-    >
-
-    param[journal_id] = 
-
-    #this title was ONLY in the previous TDB listing - suppressing AU generation 
-
-  }
-
-  {
-
-    title <
       name = Journal of the Pediatric Infectious Diseases Society ;
       issn = 2048-7193 ;
       eissn = 2048-7207 ;
