@@ -111,7 +111,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
 
@@ -160,7 +160,7 @@ while (my $line = <>) {
                 $result = "--NO_TAG--"
             }
         } else {
-            $result = "--REQ_FAIL--"
+            $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
         }
         sleep(4);
 
@@ -213,7 +213,7 @@ while (my $line = <>) {
                 $result = "--NO_TAG--"
             }
         } else {
-            $result = "--REQ_FAIL--"
+            $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
         }
         sleep(4);
 
@@ -266,7 +266,7 @@ while (my $line = <>) {
                 $result = "--NO_TAG--"
             }
         } else {
-            $result = "--REQ_FAIL--"
+            $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
         }
         sleep(4);
 
@@ -292,7 +292,7 @@ while (my $line = <>) {
 #    $result = "--NO_TAG--"
 #      }
 #  } else {
-#      $result = "--REQ_FAIL--"
+#      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
 #  }
 #        sleep(4);
 
@@ -318,7 +318,7 @@ while (my $line = <>) {
               $result = "--NO_TAG--"
           }
       } else {
-          $result = "--REQ_FAIL--"
+          $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
       }
       sleep(5);
 
@@ -346,7 +346,7 @@ while (my $line = <>) {
               $result = "--NO_TAG--";
           }
       } else {
-          $result = "--REQ_FAIL--"
+          $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
       }
       sleep(5);
 
@@ -380,7 +380,7 @@ while (my $line = <>) {
               $result = "--NO_TAG--";
           }
       } else {
-          $result = "--REQ_FAIL--"
+          $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
       }
       sleep(5);
 
@@ -410,7 +410,7 @@ while (my $line = <>) {
           $result = "--NO_TAG--"
         }
       } else {
-        $result = "--REQ_FAIL--"
+        $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
       }
       sleep(4);
 
@@ -438,7 +438,7 @@ while (my $line = <>) {
     $result = "--NO_TAG--"
       }
   } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
   }
         sleep(4);
 
@@ -490,7 +490,7 @@ while (my $line = <>) {
                 }
             }
         } else {
-            $result = "--REQ_FAIL--"
+            $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
         }
         sleep(4);
 
@@ -543,7 +543,7 @@ while (my $line = <>) {
                 }
             }
         } else {
-            $result = "--REQ_FAIL--";
+            $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();;
         }
         #======================= w/o index.php
         if ($result eq "--REQ_FAIL--") {
@@ -566,7 +566,7 @@ while (my $line = <>) {
                     }
                 }
             } else {
-                $result = "--REQ_FAIL--";
+                $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();;
             }
         }
         sleep(4);
@@ -605,7 +605,7 @@ while (my $line = <>) {
                 }
             }
         } else {
-            $result = "--REQ_FAIL--"
+            $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
         }
         sleep(4);
 
@@ -629,7 +629,7 @@ while (my $line = <>) {
          $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
         sleep(4);
 
@@ -653,7 +653,7 @@ while (my $line = <>) {
 #         $result = "--NO_TAG--"
 #      }
 #    } else {
-#      $result = "--REQ_FAIL--"
+#      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
 #    }
 #        sleep(4);
 
@@ -684,7 +684,7 @@ while (my $line = <>) {
           }
         } else {
           #printf("URL: %s\n", $man_url);
-          $result = "--REQ_FAIL--"
+          $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
         }
       } else {
         #printf("URL: %s\n", $perm_url);
@@ -720,7 +720,7 @@ while (my $line = <>) {
                 $result = "--"
             }
         } else {
-            $result = "--REQ_FAIL--"
+            $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
         }
         sleep(4);
         
@@ -747,7 +747,7 @@ while (my $line = <>) {
                 $result = "--NO_TAG--"
             }
         } else {
-            $result = "--REQ_FAIL--"
+            $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
         }
         sleep(4);
         
@@ -773,7 +773,7 @@ while (my $line = <>) {
                 $result = "--"
             }
         } else {
-            $result = "--REQ_FAIL--"
+            $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
         }
         sleep(4);
         
@@ -799,7 +799,7 @@ while (my $line = <>) {
                 $result = "--NO_TAG--"
             }
         } else {
-            $result = "--REQ_FAIL--"
+            $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
         }
         sleep(4);
 
@@ -824,7 +824,7 @@ while (my $line = <>) {
                 $result = "--"
             }
         } else {
-            $result = "--REQ_FAIL--"
+            $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
         }
         sleep(4);
         
@@ -884,7 +884,7 @@ while (my $line = <>) {
               $result = "--NO_TAG--"
           }
       } else {
-          $result = "--REQ_FAIL--"
+          $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
       }
         sleep(4);
 
@@ -943,7 +943,7 @@ while (my $line = <>) {
               $result = "--NO_TAG--"
           }
       } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
   }
         sleep(4);
 
@@ -1001,7 +1001,7 @@ while (my $line = <>) {
             $result = "--NO_TAG--"
           }
       } else {
-          $result = "--REQ_FAIL--"
+          $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
       }
       sleep(4);
 
@@ -1062,7 +1062,7 @@ while (my $line = <>) {
               $result = "--NO_TAG--"
           }
       } else {
-          $result = "--REQ_FAIL--"
+          $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
       }
         sleep(4);
 # use "\w+" at beginning of match to indicate something other than needs.SourcePlugin
@@ -1099,7 +1099,7 @@ while (my $line = <>) {
               $result = "--NO_TAG--"
           }
       } else {
-          $result = "--REQ_FAIL--"
+          $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
       }
       sleep(4);
 
@@ -1125,7 +1125,7 @@ while (my $line = <>) {
 #        $result = "--NO_TAG--"
 #      }
 #    } else {
-#      $result = "--REQ_FAIL--"
+#      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
 #    }
 #    sleep(4);
 #
@@ -1151,7 +1151,7 @@ while (my $line = <>) {
 #        $result = "--NO_TAG--"
 #      }
 #    } else {
-#      $result = "--REQ_FAIL--"
+#      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
 #    }
 #    sleep(4);
 
@@ -1178,7 +1178,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
 
@@ -1228,7 +1228,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
 
@@ -1251,7 +1251,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
 
@@ -1277,7 +1277,7 @@ while (my $line = <>) {
 #        $result = "--NO_TAG--"
 #      }
 #    } else {
-#      $result = "--REQ_FAIL--"
+#      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
 #    }
 #    sleep(4);
 #
@@ -1306,7 +1306,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
 
@@ -1335,7 +1335,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
 
@@ -1363,7 +1363,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
 
@@ -1391,7 +1391,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
 
@@ -1409,7 +1409,7 @@ while (my $line = <>) {
 #        $result = "--NO_TAG--"
 #      }
 #    } else {
-#      $result = "--REQ_FAIL--"
+#      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
 #    }
 #    sleep(4);
 #
@@ -1427,7 +1427,7 @@ while (my $line = <>) {
 #        $result = "--NO_TAG--"
 #      }
 #    } else {
-#      $result = "--REQ_FAIL--"
+#      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
 #    }
 #    sleep(4);
 #
@@ -1455,7 +1455,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
 
@@ -1485,7 +1485,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
 
@@ -1513,7 +1513,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
   } elsif ($plugin eq "ClockssIngentaJournalPlugin") {
@@ -1540,7 +1540,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
   } elsif ($plugin eq "ClockssIngentaBooksPlugin") {
@@ -1568,7 +1568,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
 #  } elsif ($plugin eq "MetaPressPlugin") {
@@ -1592,7 +1592,7 @@ while (my $line = <>) {
 #        $result = "--NO_TAG--"
 #      }
 #    } else {
-#      $result = "--REQ_FAIL--"
+#      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
 #    }
 #    sleep(4);
 #  } elsif ($plugin eq "ClockssMetaPressPlugin") {
@@ -1616,7 +1616,7 @@ while (my $line = <>) {
 #        $result = "--NO_TAG--"
 #      }
 #    } else {
-#      $result = "--REQ_FAIL--"
+#      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
 #    }
 #    sleep(4);
   } elsif ($plugin eq "BloomsburyQatarPlugin") {
@@ -1643,7 +1643,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
   } elsif ($plugin eq "ClockssBloomsburyQatarPlugin") {
@@ -1667,7 +1667,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
   } elsif ($plugin eq "ClockssIOPSciencePlugin") {
@@ -1694,7 +1694,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
 
@@ -1722,7 +1722,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
 
@@ -1750,7 +1750,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
   } elsif ($plugin eq "IgiGlobalBooksPlugin") {
@@ -1785,7 +1785,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
 
@@ -1821,7 +1821,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
 
@@ -1846,7 +1846,7 @@ while (my $line = <>) {
 #        $result = "--NO_TAG--"
 #      }
 #    } else {
-#      $result = "--REQ_FAIL--"
+#      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
 #    }
 #    sleep(4);
 #
@@ -1874,7 +1874,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
 
@@ -1902,7 +1902,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
 
@@ -1941,7 +1941,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
 
@@ -1974,7 +1974,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
 
@@ -1996,7 +1996,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
 
@@ -2017,7 +2017,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
 
@@ -2038,7 +2038,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
 
@@ -2059,7 +2059,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
 
@@ -2081,7 +2081,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
 
@@ -2135,7 +2135,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
 
@@ -2175,7 +2175,7 @@ while (my $line = <>) {
 #        $result = "--NO_TAG--"
 #      }
 #    } else {
-#      $result = "--REQ_FAIL--"
+#      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
 #    }
 #    sleep(4);
 
@@ -2205,7 +2205,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
 
@@ -2234,7 +2234,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
 
@@ -2264,13 +2264,12 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
 
   } elsif (($plugin eq "MedknowPlugin") || ($plugin eq "ClockssMedknowPlugin")) {
-    $url = sprintf("%sbackissues.asp",
-      $param{base_url});
+    $url = sprintf("%sbackissues.asp", $param{base_url});
     $man_url = uri_unescape($url);
     my $req = HTTP::Request->new(GET, $man_url);
     my $resp = $ua->request($req);
@@ -2279,9 +2278,29 @@ while (my $line = <>) {
       #showBackIssue.asp?issn=0189-6725;year=2015;volume=12
       #showBackIssue.asp?issn=0022-3859;year=2016;volume=62
       #showBackIssue.asp?issn=$param{journal_issn};year=$param{year};volume=$param{volume_name}
+      # http://www.cytojournal.com/backissues.asp => http://www.cytojournal.com/browse.asp?sabs=n
+      
       if ($req->url ne $resp->request->uri) {
-              $vol_title = $resp->request->uri;
-              $result = "Redirected";
+        $vol_title = $resp->request->uri;
+        $result = "Redirected";
+        $man_url .= " => ";
+        $man_url .= $resp->request->uri;
+        # there is one allowed redirect 
+        my $i1 = index $req->url, "backissues.asp";
+        my $i2 = index $resp->request->uri, "browse.asp";
+        if (($i2 > 0) && ($i1 == $i2)) {
+          my $s1 = substr $req->url, 0, $i1;
+          my $s2 = substr $resp->request->uri, 0, $i2;
+          if (($s1 eq $s2) && (defined($man_contents) && ($man_contents =~ m/browse.asp\?date=0-$param{year}/))) {
+            if ($man_contents =~ m/<title>(.*)<\/title>/si) {
+              $vol_title = $1;
+              $vol_title =~ s/\s*\n\s*/ /g;
+              $vol_title =~ s/\s+/ /g;
+              $vol_title =~ s/: Browse articles?/ Volume $param{volume_name}/i;
+            }
+            $result = "Manifest"
+          }
+        }
       } elsif (defined($man_contents) && ($man_contents =~ m/showBackIssue.asp\?issn=$param{journal_issn};year=$param{year};volume=$param{volume_name}/)) {
         if ($man_contents =~ m/<title>(.*)<\/title>/si) {
           $vol_title = $1;
@@ -2294,7 +2313,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
 
@@ -2319,7 +2338,7 @@ while (my $line = <>) {
 #        $result = "--NO_TAG--"
 #      }
 #    } else {
-#      $result = "--REQ_FAIL--"
+#      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
 #    }
 #    sleep(4);
 #
@@ -2346,7 +2365,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
 
@@ -2373,7 +2392,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
 
@@ -2398,7 +2417,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
 
@@ -2423,7 +2442,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
 
@@ -2444,7 +2463,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
 
@@ -2466,7 +2485,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
 
@@ -2488,7 +2507,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
 
@@ -2510,7 +2529,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
 
@@ -2535,7 +2554,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
 
@@ -2560,7 +2579,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
   } elsif ($plugin eq "OupSilverchairPlugin") {
@@ -2580,7 +2599,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
 
@@ -2602,7 +2621,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--"
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
     
@@ -2625,7 +2644,7 @@ while (my $line = <>) {
               $result = "--NO_TAG--"
           }
       } else {
-          $result = "--REQ_FAIL--"
+          $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
       }
       sleep(4);
   } elsif ($plugin eq "JstorCurrentScholarshipPlugin"){
@@ -2648,7 +2667,7 @@ while (my $line = <>) {
               $result = "--NO_TAG--"
           }
       } else {
-          $result = "--REQ_FAIL--"
+          $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
       }
       sleep(4);
       
@@ -2689,7 +2708,7 @@ while (my $line = <>) {
           }
         } else {
           #printf("URL: %s\n", $man_url);
-          $result = "--REQ_FAIL--"
+          $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
         }
       } else {
         #printf("URL: %s\n", $perm_url);
