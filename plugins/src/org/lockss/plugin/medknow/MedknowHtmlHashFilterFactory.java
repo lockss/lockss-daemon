@@ -202,6 +202,7 @@ public class MedknowHtmlHashFilterFactory implements FilterFactory {
                           "sAuthor".equals(tag.getAttribute("class"))) {
                           boolean p1 = false;
                           NodeList nl = tag.getChildren();
+                          if (nl == null) return;
                           for (int sx = 0; sx < nl.size(); sx++) {
                             Node snode = nl.elementAt(sx);
                             String xmin = snode.getText();
