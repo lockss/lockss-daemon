@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -27,10 +27,10 @@
     <string>au_name</string>
     <string>"Project Hope/Health Affairs Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
-  <entry>
+  <!-- <entry>
     <string>plugin_url_consumer_factory</string>
     <string>org.lockss.plugin.atypon.hlthaff.HealthAffairsUrlConsumerFactory</string>
-  </entry>
+  </entry> -->
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.atypon.hlthaff.HealthAffairsHtmlHashFilterFactory</string>
