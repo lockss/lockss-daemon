@@ -153,6 +153,9 @@ public class TestMedknowHtmlHashFilterFactory extends LockssTestCase {
           "    <div id='a' style='display:none;background-color:#eaeaea;border:1px solid #ddd;padding:5px;'>" +
           "       abstract goes here </div></td>" +
           "  </tr>" +
+          "  <tr>\n" +
+          "    <td class=\"sAuthor\" style='line-height:18px;'></td>\n" +
+          "  </tr>\n" +
           " </table>";
 
   private static final String tocHtmlKept = 
