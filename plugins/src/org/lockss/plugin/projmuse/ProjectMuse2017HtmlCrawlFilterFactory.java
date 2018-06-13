@@ -46,13 +46,28 @@ public class ProjectMuse2017HtmlCrawlFilterFactory implements FilterFactory {
                                                String encoding)
       throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
-        HtmlNodeFilters.tagWithAttribute("div", "class", "header"),
-        HtmlNodeFilters.tagWithAttribute("div", "class", "breadcrumb"),
-        HtmlNodeFilters.tagWithAttribute("div", "class", "right_nav"),
-        HtmlNodeFilters.tagWithAttribute("div", "class", "footer"),
-        HtmlNodeFilters.tagWithAttribute("div", "id", "map"),
-        HtmlNodeFilters.tagWithAttributeRegex("a", "class", "(prev|next)issue"),
-        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/results[?].*(searchtype|section1)="),
+            HtmlNodeFilters.tagWithAttribute("div", "class", "header"),
+            HtmlNodeFilters.tagWithAttribute("div", "class", "breadcrumb"),
+            HtmlNodeFilters.tagWithAttribute("div", "class", "right_nav"),
+            HtmlNodeFilters.tagWithAttribute("div", "class", "footer"),
+            HtmlNodeFilters.tagWithAttribute("div", "id", "map"),
+            HtmlNodeFilters.tagWithAttributeRegex("a", "class", "(prev|next)issue"),
+            HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/results[?].*(searchtype|section1)="),
+            // in June 2018 launching new site - these updates based off beta site TODO - revisit after launch
+            HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
+            HtmlNodeFilters.tagWithAttribute("div", "id", "rightnav_wrap"),
+            HtmlNodeFilters.tagWithAttribute("div", "id", "footer_block"),
+            //prev|next article, prev|next issue
+            HtmlNodeFilters.tagWithAttribute("div", "id", "previous_next_interface"),
+            // breadcrumb equivalent - journal, issue links
+            // since we can't avoid picking up errata links (in line no designation) block going to issue from article
+            HtmlNodeFilters.tagWithAttribute("li", "class", "designation"),
+            // in-line links can't be helped, but this can
+            HtmlNodeFilters.tagWithAttribute("p", "class", "related-article-box"),
+            
+            
+        
+        
     };
     return new HtmlFilterInputStream(in,
                                      encoding,
