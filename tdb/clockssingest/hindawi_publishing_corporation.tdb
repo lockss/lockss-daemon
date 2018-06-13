@@ -8961,7 +8961,7 @@
     >
 
     param[journal_id] = physri
-    comment[merged] = Research Letters in Physics 2008–2009 (Merged)
+    comment[merged] = Research Letters in Physics 2008-2009 (Merged)
 
     au < manifest ; exists ; 2008 ; Research Letters in Physics Volume 2008 ; 2008 ; 2008 ; https://www.hindawi.com/ ; >
     au < manifest ; exists ; 2009 ; Research Letters in Physics Volume 2009 ; 2009 ; 2009 ; https://www.hindawi.com/ ; >
@@ -8972,8 +8972,8 @@
     au < finished ; finished ; 2014 ; Physics Research International Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2015 ; Physics Research International Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; Physics Research International Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
-    au < crawling ; exists ; 2017 ; Physics Research International Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
-    
+    au < finished ; manifest ; 2017 ; Physics Research International Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest4.clockss.org:8082 >
+    #probably cancelled. single article pdf for 2017 is already moved to archive.
     au < expected ; exists ; 2018 ; Physics Research International Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
   }
 

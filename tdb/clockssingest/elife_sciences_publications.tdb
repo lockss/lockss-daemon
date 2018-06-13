@@ -53,25 +53,13 @@
       au < finished ; crawling ; 2016 ; eLife April 2016 ; 2016/04 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; eLife May 2016 ; 2016/05 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2016 ; eLife June 2016 ; 2016/06 ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2016 ; eLife July 2016 ; 2016/07 ; >
-      au < crawling ; exists ; 2016 ; eLife August 2016 ; 2016/08 ; >
-      au < crawling ; exists ; 2016 ; eLife September 2016 ; 2016/09 ; >
-      au < crawling ; exists ; 2016 ; eLife October 2016 ; 2016/10 ; >
-      au < crawling ; exists ; 2016 ; eLife November 2016 ; 2016/11 ; >
-      au < notReady ; exists ; 2016 ; eLife December 2016 ; 2016/12 ; > #See LXQ-569.
+      au < superseded ; exists ; 2016 ; eLife July 2016 [superseded] ; 2016/07 ; > #never successfully crawled
+      au < superseded ; exists ; 2016 ; eLife August 2016 [superseded] ; 2016/08 ; > #never successfully crawled
+      au < superseded ; exists ; 2016 ; eLife September 2016 [superseded] ; 2016/09 ; > #never successfully crawled
+      au < superseded ; exists ; 2016 ; eLife October 2016 [superseded] ; 2016/10 ; > #never successfully crawled
+      au < superseded ; exists ; 2016 ; eLife November 2016 [superseded] ; 2016/11 ; > #never successfully crawled
+      au < doNotProcess ; exists ; 2016 ; eLife December 2016 ; 2016/12 ; > 
 
-      au < exists ; exists ; 2017 ; eLife January 2017 ; 2017/01 ; >
-      au < exists ; exists ; 2017 ; eLife February 2017 ; 2017/02 ; >
-      au < exists ; exists ; 2017 ; eLife March 2017 ; 2017/03 ; >
-      au < exists ; exists ; 2017 ; eLife April 2017 ; 2017/04 ; >
-      au < exists ; exists ; 2017 ; eLife May 2017 ; 2017/05 ; >
-      au < exists ; exists ; 2017 ; eLife June 2017 ; 2017/06 ; >
-      au < expected ; exists ; 2017 ; eLife July 2017 ; 2017/07 ; >
-      au < expected ; exists ; 2017 ; eLife August 2017 ; 2017/08 ; >
-      au < expected ; exists ; 2017 ; eLife September 2017 ; 2017/09 ; >
-      au < expected ; exists ; 2017 ; eLife October 2017 ; 2017/10 ; >
-      au < expected ; exists ; 2017 ; eLife November 2017 ; 2017/11 ; >
-      au < expected ; exists ; 2017 ; eLife December 2017 ; 2017/12 ; >
     }
     {
       param[base_url] = http://elifesciences.org/
