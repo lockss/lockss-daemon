@@ -1,0 +1,6 @@
+The _types.py and _clients.py files in this directory must be kept in synch
+with the WSDL for the corresponding daemon services.  If the service
+changes in a way that changes the WSDL, the _types.py and _clients.py files
+must be regenerated using wsdl2py.  If the files for either
+DaemonStatusServiceImplService or HasherServiceImplService are regenerated,
+the corresponding .patch files must be applied to the result.
