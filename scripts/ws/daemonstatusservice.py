@@ -694,7 +694,7 @@ _QUERY_AUS = {
   'lastPoll': ('Last poll', lambda r: datetimems(r.LastPoll)),
   'lastPollResult': ('Last poll result', lambda r: r.LastPollResult),
   'name': ('Name', lambda r: r.Name),
-  'newContentCrawlUrls': ('New content crawl URLs', '<NewContentCrawlUrls>'),
+  'newContentCrawlUrls': ('New content crawl URLs', lambda r: '<NewContentCrawlUrls>'),
   'peerAgreements': ('Peer agreements', lambda r: '<PeerAgreements>'),
   'pluginName': ('Plugin name', lambda r: r.PluginName),
   'publishingPlatform': ('Publishing platform', lambda r: r.PublishingPlatform),
