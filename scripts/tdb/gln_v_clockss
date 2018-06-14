@@ -37,6 +37,7 @@ shift `expr $OPTIND - 1`
 if [[ $opt_tdb_file == "" ]]
 then
   echo "springer_science_business_media.tdb" > $tpath/pairs
+  echo "taylor_and_francis.tdb" > $tpath/pairs
   ls tdb/clockssingest | grep .tdb > $tpath/ci
   ls tdb/prod | grep .tdb > $tpath/gln
   diff $tpath/ci $tpath/gln | grep "> " | sed 's/..//' > $tpath/notgln
