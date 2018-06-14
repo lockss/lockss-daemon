@@ -84,6 +84,8 @@ public class TestAuState extends LockssTestCase {
 		       lastCrawlAttempt,
 		       -1,
 		       null,
+		       -1,
+		       -1,
 		       lastTopLevelPoll,
 		       lastPollStart,
 		       -1,
@@ -123,6 +125,8 @@ public class TestAuState extends LockssTestCase {
     assertEquals(-1, aus.getLastCrawlTime());
     assertEquals(-1, aus.getLastCrawlAttempt());
     assertEquals(-1, aus.getLastCrawlResult());
+    assertEquals(-1, aus.getLastDeepCrawlTime());
+    assertEquals(-1, aus.getLastDeepCrawlDepth());
     assertFalse(aus.isCrawlActive());
     assertFalse(aus.hasCrawled());
     assertNull(historyRepo.theAuState);
@@ -134,6 +138,7 @@ public class TestAuState extends LockssTestCase {
     assertEquals(-1, aus.getLastCrawlTime());
     assertEquals(-1, aus.getLastCrawlAttempt());
     assertEquals(-1, aus.getLastCrawlResult());
+    assertEquals(-1, aus.getLastDeepCrawlTime());
     assertTrue(aus.isCrawlActive());
     assertFalse(aus.hasCrawled());
     assertNotNull(historyRepo.theAuState);
@@ -143,6 +148,7 @@ public class TestAuState extends LockssTestCase {
     aus.newCrawlFinished(Crawler.STATUS_ERROR, "Plorg");
     assertEquals(-1, aus.getLastCrawlTime());
     assertEquals(t1, aus.getLastCrawlAttempt());
+    assertEquals(-1, aus.getLastDeepCrawlTime());
     assertEquals(Crawler.STATUS_ERROR, aus.getLastCrawlResult());
     assertEquals("Plorg", aus.getLastCrawlResultMsg());
     assertFalse(aus.isCrawlActive());
@@ -153,6 +159,7 @@ public class TestAuState extends LockssTestCase {
     aus.newCrawlFinished(Crawler.STATUS_SUCCESSFUL, "Syrah");
     assertEquals(t3, aus.getLastCrawlTime());
     assertEquals(t1, aus.getLastCrawlAttempt());
+    assertEquals(-1, aus.getLastDeepCrawlTime());
     assertEquals(Crawler.STATUS_SUCCESSFUL, aus.getLastCrawlResult());
     assertEquals("Syrah", aus.getLastCrawlResultMsg());
     assertFalse(aus.isCrawlActive());
@@ -162,19 +169,35 @@ public class TestAuState extends LockssTestCase {
     aus = aus.simulateStoreLoad();
     assertEquals(t3, aus.getLastCrawlTime());
     assertEquals(t1, aus.getLastCrawlAttempt());
+    assertEquals(-1, aus.getLastDeepCrawlTime());
     assertEquals(Crawler.STATUS_SUCCESSFUL, aus.getLastCrawlResult());
     assertEquals("Syrah", aus.getLastCrawlResultMsg());
     assertFalse(aus.isCrawlActive());
     assertTrue(aus.hasCrawled());
 
     TimeBase.setSimulated(t4);
+    aus.newCrawlFinished(Crawler.STATUS_SUCCESSFUL, "Syrah", 43);
+    assertEquals(t4, aus.getLastCrawlTime());
+    assertEquals(t1, aus.getLastCrawlAttempt());
+    assertEquals(t4, aus.getLastDeepCrawlTime());
+    assertEquals(43, aus.getLastDeepCrawlDepth());
+
+    TimeBase.setSimulated(t5);
     aus.newCrawlStarted();
-    assertEquals(t3, aus.getLastCrawlTime());
+    assertEquals(t4, aus.getLastCrawlTime());
     assertEquals(t1, aus.getLastCrawlAttempt());
     assertEquals(Crawler.STATUS_SUCCESSFUL, aus.getLastCrawlResult());
     assertEquals("Syrah", aus.getLastCrawlResultMsg());
     assertTrue(aus.hasCrawled());
-  }
+
+    TimeBase.setSimulated(t6);
+    aus.newCrawlFinished(Crawler.STATUS_SUCCESSFUL, "Syrah");
+    assertEquals(t6, aus.getLastCrawlTime());
+    assertEquals(t5, aus.getLastCrawlAttempt());
+    assertEquals(t4, aus.getLastDeepCrawlTime());
+    assertEquals(43, aus.getLastDeepCrawlDepth());
+
+}
 
   public void testDaemonCrashedDuringCrawl() throws Exception {
     MyAuState aus = new MyAuState(mau, historyRepo);

@@ -103,6 +103,8 @@ public class AuWsSource extends AuWsResult {
   private boolean lastCompletedCrawlPopulated = false;
   private boolean lastCrawlPopulated = false;
   private boolean lastCrawlResultPopulated = false;
+  private boolean lastDeepCrawlTimePopulated = false;
+  private boolean lastDeepCrawlDepthPopulated = false;
   private boolean lastMetadataIndexPopulated = false;
   private boolean lastCompletedPollPopulated = false;
   private boolean lastPollPopulated = false;
@@ -424,6 +426,36 @@ public class AuWsSource extends AuWsResult {
     }
 
     return super.getLastCrawlResult();
+  }
+
+  @Override
+  public Long getLastDeepCrawlTime() {
+    if (!lastDeepCrawlTimePopulated) {
+      long lastDeepCrawlTime = getState().getLastDeepCrawlTime();
+
+      if (lastDeepCrawlTime > 0) {
+	setLastDeepCrawlTime(Long.valueOf(lastDeepCrawlTime));
+      }
+
+      lastDeepCrawlTimePopulated = true;
+    }
+
+    return super.getLastDeepCrawlTime();
+  }
+
+  @Override
+  public Integer getLastDeepCrawlDepth() {
+    if (!lastDeepCrawlDepthPopulated) {
+      int lastDeepCrawlDepth = getState().getLastDeepCrawlDepth();
+
+      if (lastDeepCrawlDepth > 0) {
+	setLastDeepCrawlDepth(Integer.valueOf(lastDeepCrawlDepth));
+      }
+
+      lastDeepCrawlDepthPopulated = true;
+    }
+
+    return super.getLastDeepCrawlDepth();
   }
 
   @Override

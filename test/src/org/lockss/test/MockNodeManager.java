@@ -143,6 +143,10 @@ public class MockNodeManager implements NodeManager {
     aus.newCrawlFinished(result, msg);
   }
 
+  public void newContentCrawlFinished(int result, String msg, int depth) {
+    aus.newCrawlFinished(result, msg, depth);
+  }
+
   public void hashFinished(CachedUrlSet cus, long hashDuration) {
     hashCalls.put(cus.getUrl(), new Long(hashDuration));
   }

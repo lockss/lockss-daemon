@@ -52,6 +52,8 @@ public class AuStatus {
   private Long lastCompletedCrawl;
   private Long lastCrawl;
   private String lastCrawlResult;
+  private Long lastDeepCrawlTime;
+  private int lastDeepCrawlDepth;
   private Long lastMetadataIndex;
   private Long lastCompletedPoll;
   private Long lastPoll;
@@ -255,6 +257,27 @@ public class AuStatus {
   }
 
   /**
+   * Provides the timestamp of the last completed deep crawl of the
+   * Archival Unit.
+   *
+   * @return a Long with the timestamp as the number of milliseconds since the
+   *         beginning of 1970.
+   */
+  public Long getLastDeepCrawlTime() {
+    return lastDeepCrawlTime;
+  }
+
+  /**
+   * Provides the requested crawl depth of the last completed deep crawl of
+   * the Archival Unit.
+   *
+   * @return an int with the depth
+   */
+  public Integer getLastDeepCrawlDepth() {
+    return lastDeepCrawlDepth;
+  }
+
+  /**
    * Provides the timestamp of the last metadata indexing of the Archival Unit.
    * 
    * @return a Long with the timestamp as the number of milliseconds since the
@@ -415,6 +438,14 @@ public class AuStatus {
     this.lastCrawlResult = lastCrawlResult;
   }
 
+  public void setLastDeepCrawlTime(Long lastDeepCrawlTime) {
+    this.lastDeepCrawlTime = lastDeepCrawlTime;
+  }
+
+  public void setLastDeepCrawlDepth(Integer lastDeepCrawlDepth) {
+    this.lastDeepCrawlDepth = lastDeepCrawlDepth;
+  }
+
   public void setLastMetadataIndex(Long lastMetadataIndex) {
     this.lastMetadataIndex = lastMetadataIndex;
   }
@@ -492,6 +523,10 @@ public class AuStatus {
     builder.append(lastCrawl);
     builder.append(", lastCrawlResult=");
     builder.append(lastCrawlResult);
+    builder.append(", lastDeepCrawlTime=");
+    builder.append(lastDeepCrawlTime);
+    builder.append(", lastDeepCrawlDepth=");
+    builder.append(lastDeepCrawlDepth);
     builder.append(", lastMetadataIndex=");
     builder.append(lastMetadataIndex);
     builder.append(", lastCompletedPoll=");

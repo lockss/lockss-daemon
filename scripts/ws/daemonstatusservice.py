@@ -70,6 +70,8 @@ def get_au_status(host, auth, auid):
   - LastCompletedPoll (numeric)
   - LastCrawl (numeric)
   - LastCrawlResult (string)
+  - LastDeepCrawlTime (numeric)
+  - LastDeepCrawlDepth (numeric)
   - LastPoll (numeric)
   - LastPollResult (string)
   - PluginName (string)
@@ -261,6 +263,8 @@ def query_aus(host, auth, select, where=None):
   - LastCompletedPoll (numeric)
   - LastCrawl (numeric)
   - LastCrawlResult (string)
+  - LastDeepCrawlTime (numeric)
+  - LastDeepCrawlDepth (numeric)
   - LastPoll (numeric)
   - LastPollResult (string)
   - Name (string)
@@ -546,6 +550,8 @@ _AU_STATUS = {
   'lastCompletedPoll': ('Last completed poll', lambda r: datetimems(r.LastCompletedPoll)),
   'lastCrawl': ('Last crawl', lambda r: datetimems(r.LastCrawl)),
   'lastCrawlResult': ('Last crawl result', lambda r: r.LastCrawlResult),
+  'lastDeepCrawlTime': ('Last deep crawl time', lambda r: datetimems(r.LastDeepCrawlTime)),
+  'lastDeepCrawlDepth': ('Last deep crawl depth', lambda r: r.LastDeepCrawlDepth),
   'lastPoll': ('Last poll', lambda r: datetimems(r.LastPoll)),
   'lastPollResult': ('Last poll result', lambda r: r.LastPollResult),
   'pluginName': ('Plugin name', lambda r: r.PluginName),
@@ -691,6 +697,8 @@ _QUERY_AUS = {
   'lastCompletedPoll': ('Last completed poll', lambda r: datetimems(r.LastCompletedPoll)),
   'lastCrawl': ('Last crawl', lambda r: datetimems(r.LastCrawl)),
   'lastCrawlResult': ('Last crawl result', lambda r: r.LastCrawlResult),
+  'lastDeepCrawlTime': ('Last deep crawl time', lambda r: datetimems(r.LastDeepCrawlTime)),
+  'lastDeepCrawlDepth': ('Last deep crawl depth', lambda r: r.LastDeepCrawlDepth),
   'lastPoll': ('Last poll', lambda r: datetimems(r.LastPoll)),
   'lastPollResult': ('Last poll result', lambda r: r.LastPollResult),
   'name': ('Name', lambda r: r.Name),
@@ -722,6 +730,8 @@ def _do_query_aus(options):
       for head, lamb in headlamb:
         if options.group_by_field: colkey = (head, host)
         else: colkey = (host, head)
+        print("head: %s" % head)
+        print("lamb: %s" % lamb)
         data[((r.AuId,), colkey)] = lamb(r)
   _output_table(options, data, ['AUID'], [[x[0] for x in headlamb], sorted(options.hosts)] if options.group_by_field else [sorted(options.hosts), [x[0] for x in headlamb]])
 

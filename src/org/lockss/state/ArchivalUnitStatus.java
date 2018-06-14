@@ -1156,6 +1156,15 @@ public class ArchivalUnitStatus
 	res.add(new StatusTable.SummaryInfo("Last Crawl Result",
 					    ColumnDescriptor.TYPE_STRING,
 					    state.getLastCrawlResultMsg()));
+	long lastDeepCrawlTime = state.getLastDeepCrawlTime();
+	if (lastDeepCrawlTime > 0) {
+	  res.add(new StatusTable.SummaryInfo("Last Deep Crawl",
+					      ColumnDescriptor.TYPE_DATE,
+					      new Long(lastDeepCrawlTime)));
+	  res.add(new StatusTable.SummaryInfo("Last Deep Crawl Depth",
+					      ColumnDescriptor.TYPE_INT,
+					      state.getLastDeepCrawlDepth()));
+	}
       }
       long lastPollStart = state.getLastPollStart();
       res.add(new StatusTable.SummaryInfo("Last Completed Poll",

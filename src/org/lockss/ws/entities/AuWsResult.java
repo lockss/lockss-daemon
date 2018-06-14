@@ -56,6 +56,8 @@ public class AuWsResult {
   private Long lastCompletedCrawl;
   private Long lastCrawl;
   private String lastCrawlResult;
+  private Long lastDeepCrawlTime;
+  private Integer lastDeepCrawlDepth;
   private Long lastMetadataIndex;
   private Long lastCompletedPoll;
   private Long lastPoll;
@@ -342,6 +344,31 @@ public class AuWsResult {
   }
 
   /**
+   * Provides the timestamp of the last deep crawl of the Archival Unit.
+   *
+   * @return a Long with the timestamp as the number of milliseconds since the
+   *         beginning of 1970.
+   */
+  public Long getLastDeepCrawlTime() {
+    return lastDeepCrawlTime;
+  }
+  public void setLastDeepCrawlTime(Long lastDeepCrawlTime) {
+    this.lastDeepCrawlTime = lastDeepCrawlTime;
+  }
+
+  /**
+   * Provides the depth of the last deep crawl of the Archival Unit.
+   *
+   * @return an Integer with the depth
+   */
+  public Integer getLastDeepCrawlDepth() {
+    return lastDeepCrawlDepth;
+  }
+  public void setLastDeepCrawlDepth(Integer lastDeepCrawlDepth) {
+    this.lastDeepCrawlDepth = lastDeepCrawlDepth;
+  }
+
+  /**
    * Provides the timestamp of the last metadata indexing of the Archival Unit.
    * 
    * @return a Long with the timestamp as the number of milliseconds since the
@@ -565,8 +592,11 @@ public class AuWsResult {
 	+ creationTime + ", crawlProxy=" + crawlProxy + ", crawlWindow="
 	+ crawlWindow + ", crawlPool=" + crawlPool + ", lastCompletedCrawl="
 	+ lastCompletedCrawl + ", lastCrawl=" + lastCrawl
-	+ ", lastCrawlResult=" + lastCrawlResult + ", lastMetadataIndex="
-	+ lastMetadataIndex + ", lastCompletedPoll=" + lastCompletedPoll
+	+ ", lastCrawlResult=" + lastCrawlResult
+	+ ", lastDeepCrawlTime=" + lastDeepCrawlTime
+	+ ", lastDeepCrawlDepth=" + lastDeepCrawlDepth
+	+ ", lastMetadataIndex=" + lastMetadataIndex
+        + ", lastCompletedPoll=" + lastCompletedPoll
 	+ ", lastPoll=" + lastPoll + ", lastPollResult=" + lastPollResult
 	+ ", currentlyCrawling=" + currentlyCrawling + ", currentlyPolling="
 	+ currentlyPolling + ", subscriptionStatus=" + subscriptionStatus

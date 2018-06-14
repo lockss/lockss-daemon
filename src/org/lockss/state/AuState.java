@@ -64,6 +64,9 @@ public class AuState implements LockssSerializable {
   protected long lastCrawlAttempt;
   protected String lastCrawlResultMsg;
   protected int lastCrawlResult;
+  protected long lastDeepCrawlTime;	// last successful deep crawl
+  protected int lastDeepCrawlDepth;	// requested depth of last
+					// successful deep crawl
   protected long lastTopLevelPoll;	// last completed PoR poll time
   protected long lastPollStart;		// last time a poll started
   protected int lastPollResult;         // ditto
@@ -126,6 +129,8 @@ public class AuState implements LockssSerializable {
 	 -1, // lastCrawlAttempt
 	 -1, // lastCrawlResult
 	 null, // lastCrawlResultMsg,
+	 -1, // lastDeepCrawlTime
+	 -1, // lastDeepCrawlDepth
 	 -1, // lastTopLevelPoll
 	 -1, // lastPollStart
 	 -1, // lastPollresult
@@ -162,6 +167,8 @@ public class AuState implements LockssSerializable {
     this.lastCrawlAttempt = aus.lastCrawlAttempt;
     this.lastCrawlResult = aus.lastCrawlResult;
     this.lastCrawlResultMsg = aus.lastCrawlResultMsg;
+    this.lastDeepCrawlTime = aus.lastDeepCrawlTime;
+    this.lastDeepCrawlDepth = aus.lastDeepCrawlDepth;
     this.lastTopLevelPoll = aus.lastTopLevelPoll;
     this.lastPollStart = aus.lastPollStart;
     this.lastPollResult = aus.lastPollResult;
@@ -194,6 +201,7 @@ public class AuState implements LockssSerializable {
   public AuState(ArchivalUnit au,
 		 long lastCrawlTime, long lastCrawlAttempt,
 		 int lastCrawlResult, String lastCrawlResultMsg,
+		 long lastDeepCrawlTime, int lastDeepCrawlDepth,
 		 long lastTopLevelPoll, long lastPollStart,
 		 int lastPollResult, String lastPollResultMsg,
 		 long pollDuration,
@@ -220,6 +228,8 @@ public class AuState implements LockssSerializable {
     this.lastCrawlAttempt = lastCrawlAttempt;
     this.lastCrawlResult = lastCrawlResult;
     this.lastCrawlResultMsg = lastCrawlResultMsg;
+    this.lastDeepCrawlTime = lastDeepCrawlDepth;
+    this.lastDeepCrawlDepth = lastDeepCrawlDepth;
     this.lastTopLevelPoll = lastTopLevelPoll;
     this.lastPollStart = lastPollStart;
     this.lastPollResult = lastPollResult;
@@ -316,6 +326,22 @@ public class AuState implements LockssSerializable {
       return CrawlerStatus.getDefaultMessage(lastCrawlResult);
     }
     return lastCrawlResultMsg;
+  }
+
+  /**
+   * Returns the last deep crawl time of the au.
+   * @return the last deep crawl time in ms
+   */
+  public long getLastDeepCrawlTime() {
+    return lastDeepCrawlTime;
+  }
+
+  /**
+   * Returns the depth of the last deep crawl of the au.
+   * @return the depth of last deep crawl
+   */
+  public int getLastDeepCrawlDepth() {
+    return lastDeepCrawlDepth;
   }
 
   /**
@@ -577,10 +603,22 @@ public class AuState implements LockssSerializable {
    * Sets the last crawl time to the current time.  Saves itself to disk.
    */
   public synchronized void newCrawlFinished(int result, String resultMsg) {
+    newCrawlFinished(result, resultMsg, -1);
+  }
+  /**
+   * Sets the last crawl time to the current time.  Saves itself to disk.
+   */
+  public synchronized void newCrawlFinished(int result, String resultMsg,
+					    int depth) {
     lastCrawlResultMsg = resultMsg;
     switch (result) {
     case Crawler.STATUS_SUCCESSFUL:
-      lastCrawlTime = TimeBase.nowMs();
+      long now = TimeBase.nowMs();
+      lastCrawlTime = now;
+      if (depth > 0) {
+	lastDeepCrawlTime = now;
+	lastDeepCrawlDepth = depth;
+      }
       // fall through
     default:
       lastCrawlResult = result;
@@ -616,6 +654,7 @@ public class AuState implements LockssSerializable {
     return new AuState(au,
 		       lastCrawlTime, lastCrawlAttempt,
 		       lastCrawlResult, lastCrawlResultMsg,
+		       lastDeepCrawlTime, lastDeepCrawlDepth,
 		       lastTopLevelPoll, lastPollStart,
 		       lastPollResult, lastPollResultMsg, pollDuration,
 		       lastTreeWalk, crawlUrls,

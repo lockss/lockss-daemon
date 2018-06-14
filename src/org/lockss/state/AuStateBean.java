@@ -56,6 +56,8 @@ public class AuStateBean extends AuState {
 				      auState.lastCrawlAttempt,
 				      auState.lastCrawlResult,
 				      auState.lastCrawlResultMsg,
+				      auState.lastDeepCrawlTime,
+				      auState.lastDeepCrawlDepth,
 				      auState.lastTopLevelPoll,
 				      auState.lastPollStart,
 				      auState.lastPollResult,
