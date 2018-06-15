@@ -74,6 +74,9 @@ public class OupScHtmlCrawlFilterFactory implements FilterFactory {
     		  
     		  //references to the article - contain links to google,pubmed - guard against internal refs
     		  HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "^ref-content"),
+    		  // and the references section may contains links to other articles in this journal
+    		  // ex:https://academic.oup.com/bja/article/118/6/811/3829424  (look for /article/117)
+    		  HtmlNodeFilters.tagWithAttributeRegex("div","class","^ref-list"),
     		  
     		  // Limit access to other issues - nav bar with drop downs
     		  HtmlNodeFilters.tagWithAttributeRegex("div", "class","^issue-browse-top"),
