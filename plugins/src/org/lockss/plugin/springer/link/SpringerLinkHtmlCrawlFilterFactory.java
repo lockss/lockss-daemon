@@ -64,6 +64,9 @@ public class SpringerLinkHtmlCrawlFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttribute("div", "class", "article-complementary-left"),
       HtmlNodeFilters.tagWithAttribute("div", "class", "document-aside"),
       
+      //citations - filter out other springer links in references
+      HtmlNodeFilters.tagWithAttribute("li", "class", "citation"),
+      
   };
   
   @Override
