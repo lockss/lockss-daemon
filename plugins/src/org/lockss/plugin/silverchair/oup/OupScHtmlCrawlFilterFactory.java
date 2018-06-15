@@ -82,6 +82,12 @@ public class OupScHtmlCrawlFilterFactory implements FilterFactory {
     		  // which are also tagged so check this to guard against other locations
     		  HtmlNodeFilters.tagWithAttributeRegex("a",  "class", "^nav-link"),
     		  
+    		  // article - author section with notes has some bogus relative links
+    		  // which redirect back to article page so are collected as content
+    		  // https://academic.oup.com/jnen/article/76/7/578/[XSLTImagePath]
+    		  HtmlNodeFilters.tagWithAttributeRegex("div", "class", "al-author-info-wrap"),
+    		  HtmlNodeFilters.tagWithAttributeRegex("dive", "class",  "widget-instance-OUP_FootnoteSection"),
+    		  
     	  })
       )
     );

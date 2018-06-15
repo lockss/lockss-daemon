@@ -187,6 +187,11 @@ log.setLevel("debug3");
     shouldCacheTest("https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/database/Issue/461/1/front-matter.pdf" +
         "?Expires=1497074690&Signature=S60KGC7x1rMgczcd6O-A__&Key-Pair-Id=APKAIULVPAVW3Q", true, au);
     
+    // some additional special items
+    shouldCacheTest("https://academic.oup.com/database/article/76/7/578/%5BXSLTImagePath%5D", false, au);
+    shouldCacheTest("https://academic.oup.com/database/article/76/7/578/[XSLTImagePath]", false, au);
+    shouldCacheTest("https://academic.oup.com/database/article/76/7/578/3850161", true, au);
+    
     // should not get crawled - LOCKSS
     shouldCacheTest("http://lockss.stanford.edu", false, au);
   }
