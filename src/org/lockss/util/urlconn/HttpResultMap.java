@@ -347,6 +347,8 @@ public class HttpResultMap implements CacheResultMap {
 		  CacheException.WarningOnly.class);
     storeMapEntry(ContentValidationException.WrongLength.class,
 		  CacheException.RetryableNetworkException_3_10S.class);
+    storeMapEntry(ContentValidationException.LogOnly.class,
+		  CacheException.WarningOnly.class);
 
     storeMapEntry(ContentValidationException.ValidatorExeception.class,
 		  CacheException.UnexpectedNoRetryFailException.class);
