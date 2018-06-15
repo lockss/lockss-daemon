@@ -96,6 +96,28 @@ public class ContentValidationException extends Exception {
     }
   }
 
+  /** A ContentValidationException that's mapped (by default) to a
+   * warning-only CacheException.  Can be used to log a validation message
+   * without causing a validation failure. */
+  public static class LogOnly extends ContentValidationException {
+
+    public LogOnly() {
+      super();
+    }
+
+    public LogOnly(String msg) {
+      super(msg);
+    }
+
+    public LogOnly(Throwable cause) {
+      super(cause);
+    }
+
+    public LogOnly(String msg, Throwable cause) {
+      super(msg, cause);
+    }
+  }
+
   /** An unexpected exception (not a subclass of
    * ContentValidationException) was thrown by a plugin-specified
    * ContentValidator. */

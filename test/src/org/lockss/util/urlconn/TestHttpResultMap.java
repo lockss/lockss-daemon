@@ -202,6 +202,11 @@ public class TestHttpResultMap extends LockssTestCase {
 				       "foo");
     assertClass(CacheException.UnretryableException.class, exception);
 
+    exception = resultMap.mapException(null, "",
+				       new ContentValidationException.LogOnly("Important warning message"),
+				       "foo");
+    assertTrue(exception instanceof CacheException.WarningOnly);
+
   }
 
   static class UnmappedContentValidationException
