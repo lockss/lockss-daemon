@@ -56,17 +56,32 @@ public class OupScHtmlCrawlFilterFactory implements FilterFactory {
     	  HtmlNodeFilterTransform.exclude(new OrFilter(new NodeFilter[] {
     		  HtmlNodeFilters.tagWithAttributeRegex("a", "class", "prev"),
     		  HtmlNodeFilters.tagWithAttributeRegex("a", "class", "next"),
+    		  // 6/15/18 - not seeing this header anymore,
     		  HtmlNodeFilters.tagWithAttributeRegex("div", "class", "master-header"),
+    		  // now seeing this one. Leaving previous in case
+    		  HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-SitePageHeader"),
+    		  HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-SitePageFooter"),
+
     		  // article left side with image of cover and nav arrows
     		  HtmlNodeFilters.tagWithAttributeRegex("div", "id", "InfoColumn"),
     		  // right side of article - all the latest, most cited, etc
     		  HtmlNodeFilters.tagWithAttributeRegex("div", "id", "Sidebar"),
-    		  // top of article - linke to correction or original article
+    		  // top of article - links to correction or original article
     		  HtmlNodeFilters.tagWithAttribute("div", "class", "articlelinks"),
     		  // don't collect the powerpoint version of images
     		  HtmlNodeFilters.tagWithAttribute("div", "class", "downloadImagesppt"),
     		  HtmlNodeFilters.tagWithAttributeRegex("a", "class", "download-slide"),
-    		  HtmlNodeFilters.tagWithAttributeRegex("div", "class","issue-browse-top"),
+    		  
+    		  //references to the article - contain links to google,pubmed - guard against internal refs
+    		  HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "^ref-content"),
+    		  
+    		  // Limit access to other issues - nav bar with drop downs
+    		  HtmlNodeFilters.tagWithAttributeRegex("div", "class","^issue-browse-top"),
+    		  // manifest/start page has hidden dropdown links to other issues
+    		  HtmlNodeFilters.tagWithAttribute("div", "class", "navbar"),
+    		  // which are also tagged so check this to guard against other locations
+    		  HtmlNodeFilters.tagWithAttributeRegex("a",  "class", "^nav-link"),
+    		  
     	  })
       )
     );
