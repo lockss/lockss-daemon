@@ -108,7 +108,7 @@
       au < testing ; exists ; 2006 ; Cold Spring Harbor Protocols Volume 2006 ; 2006 ; >
       au < ready ; exists ; 2007 ; Cold Spring Harbor Protocols Volume 2007 ; 2007 ; >
       au < ready ; exists ; 2008 ; Cold Spring Harbor Protocols Volume 2008 ; 2008 ; >
-      au < testing ; exists ; 2009 ; Cold Spring Harbor Protocols Volume 2009 ; 2009 ; >
+      au < ready ; exists ; 2009 ; Cold Spring Harbor Protocols Volume 2009 ; 2009 ; >
       au < ready ; exists ; 2010 ; Cold Spring Harbor Protocols Volume 2010 ; 2010 ; >
       au < testing ; exists ; 2011 ; Cold Spring Harbor Protocols Volume 2011 ; 2011 ; >
       au < ready ; exists ; 2012 ; Cold Spring Harbor Protocols Volume 2012 ; 2012 ; >
@@ -150,18 +150,18 @@
       au < ready ; exists ; 1940 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 8 ; 8 ; >
       au < ready ; exists ; 1941 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 9 ; 9 ; >
       au < ready ; exists ; 1942 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 10 ; 10 ; >
-      au < testing ; exists ; 1946 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 11 ; 11 ; >
+      au < ready ; exists ; 1946 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 11 ; 11 ; >
       au < crawling ; exists ; 1947 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 12 ; 12 ; >
       au < crawling ; exists ; 1948 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 13 ; 13 ; >
       au < crawling ; exists ; 1949 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 14 ; 14 ; >
-      au < testing ; exists ; 1950 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 15 ; 15 ; >
-      au < testing ; exists ; 1951 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 16 ; 16 ; >
-      au < testing ; exists ; 1952 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 17 ; 17 ; >
-      au < testing ; exists ; 1953 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 18 ; 18 ; >
-      au < testing ; exists ; 1954 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 19 ; 19 ; >
+      au < ready ; exists ; 1950 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 15 ; 15 ; >
+      au < ready ; exists ; 1951 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 16 ; 16 ; >
+      au < ready ; exists ; 1952 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 17 ; 17 ; >
+      au < ready ; exists ; 1953 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 18 ; 18 ; >
+      au < ready ; exists ; 1954 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 19 ; 19 ; >
       au < testing ; exists ; 1955 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 20 ; 20 ; >
-      au < testing ; exists ; 1956 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 21 ; 21 ; >
-      au < testing ; exists ; 1957 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 22 ; 22 ; >
+      au < ready ; exists ; 1956 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 21 ; 21 ; >
+      au < ready ; exists ; 1957 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 22 ; 22 ; >
       au < ready ; exists ; 1958 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 23 ; 23 ; >
       au < ready ; exists ; 1959 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 24 ; 24 ; >
       au < ready ; exists ; 1960 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 25 ; 25 ; >
@@ -175,8 +175,8 @@
       au < ready ; exists ; 1968 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 33 ; 33 ; >
       au < ready ; exists ; 1969 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 34 ; 34 ; >
       au < ready ; exists ; 1970 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 35 ; 35 ; >
-      au < testing ; exists ; 1971 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 36 ; 36 ; >
-      au < testing ; exists ; 1972 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 37 ; 37 ; >
+      au < ready ; exists ; 1971 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 36 ; 36 ; >
+      au < ready ; exists ; 1972 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 37 ; 37 ; >
       au < crawling ; exists ; 1973 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 38 ; 38 ; >#not i2 or i3
       au < crawling ; exists ; 1974 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 39 ; 39 ; >
       au < crawling ; exists ; 1975 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 40 ; 40 ; >
@@ -254,23 +254,23 @@
       au < frozen ; exists ; 1994 ; Genes & Development Volume 8 ; 8 ; >
       au < frozen ; exists ; 1995 ; Genes & Development Volume 9 ; 9 ; >
       au < frozen ; exists ; 1996 ; Genes & Development Volume 10 ; 10 ; >
-      au < testing ; exists ; 1997 ; Genes & Development Volume 11 ; 11 ; >
-      au < testing ; exists ; 1998 ; Genes & Development Volume 12 ; 12 ; >
-      au < testing ; exists ; 1999 ; Genes & Development Volume 13 ; 13 ; >
-      au < testing ; exists ; 2000 ; Genes & Development Volume 14 ; 14 ; >
-      au < testing ; exists ; 2001 ; Genes & Development Volume 15 ; 15 ; >
-      au < testing ; exists ; 2002 ; Genes & Development Volume 16 ; 16 ; >
-      au < testing ; exists ; 2003 ; Genes & Development Volume 17 ; 17 ; >
-      au < testing ; exists ; 2004 ; Genes & Development Volume 18 ; 18 ; >
-      au < testing ; exists ; 2005 ; Genes & Development Volume 19 ; 19 ; >
-      au < testing ; exists ; 2006 ; Genes & Development Volume 20 ; 20 ; >
-      au < testing ; exists ; 2007 ; Genes & Development Volume 21 ; 21 ; >
+      au < ready ; exists ; 1997 ; Genes & Development Volume 11 ; 11 ; >
+      au < ready ; exists ; 1998 ; Genes & Development Volume 12 ; 12 ; >
+      au < ready ; exists ; 1999 ; Genes & Development Volume 13 ; 13 ; >
+      au < ready ; exists ; 2000 ; Genes & Development Volume 14 ; 14 ; >
+      au < ready ; exists ; 2001 ; Genes & Development Volume 15 ; 15 ; >
+      au < ready ; exists ; 2002 ; Genes & Development Volume 16 ; 16 ; >
+      au < ready ; exists ; 2003 ; Genes & Development Volume 17 ; 17 ; >
+      au < ready ; exists ; 2004 ; Genes & Development Volume 18 ; 18 ; >
+      au < ready ; exists ; 2005 ; Genes & Development Volume 19 ; 19 ; >
+      au < ready ; exists ; 2006 ; Genes & Development Volume 20 ; 20 ; >
+      au < ready ; exists ; 2007 ; Genes & Development Volume 21 ; 21 ; >
       au < testing ; exists ; 2008 ; Genes & Development Volume 22 ; 22 ; >
-      au < testing ; exists ; 2009 ; Genes & Development Volume 23 ; 23 ; >
-      au < testing ; exists ; 2010 ; Genes & Development Volume 24 ; 24 ; >
-      au < testing ; exists ; 2011 ; Genes & Development Volume 25 ; 25 ; >
-      au < testing ; exists ; 2012 ; Genes & Development Volume 26 ; 26 ; >
-      au < testing ; exists ; 2013 ; Genes & Development Volume 27 ; 27 ; >
+      au < ready ; exists ; 2009 ; Genes & Development Volume 23 ; 23 ; >
+      au < ready ; exists ; 2010 ; Genes & Development Volume 24 ; 24 ; >
+      au < ready ; exists ; 2011 ; Genes & Development Volume 25 ; 25 ; >
+      au < ready ; exists ; 2012 ; Genes & Development Volume 26 ; 26 ; >
+      au < ready ; exists ; 2013 ; Genes & Development Volume 27 ; 27 ; >
       au < zapped ; finished ; 2014 ; Genes & Development Volume 28 ; 28 ; >
       au < finished ; crawling ; 2015 ; Genes & Development Volume 29 ; 29 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2016 ; Genes & Development Volume 30 ; 30 ; >
@@ -297,28 +297,28 @@
 #      param[base_url] = http://genome.cshlp.org/
 
       au < testing ; exists ; 1991-1992 ; Genome Research Volume 1 ; 1 ; https://genome.cshlp.org/ ; >
-      au < testing ; exists ; 1992-1993 ; Genome Research Volume 2 ; 2 ; https://genome.cshlp.org/ ; >
+      au < ready ; exists ; 1992-1993 ; Genome Research Volume 2 ; 2 ; https://genome.cshlp.org/ ; >
       au < testing ; exists ; 1993-1994 ; Genome Research Volume 3 ; 3 ; https://genome.cshlp.org/ ; >
-      au < testing ; exists ; 1994-1995 ; Genome Research Volume 4 ; 4 ; https://genome.cshlp.org/ ; >
-      au < testing ; exists ; 1995 ; Genome Research Volume 5 ; 5 ; https://genome.cshlp.org/ ; >
-      au < testing ; exists ; 1996 ; Genome Research Volume 6  ; 6  ; https://genome.cshlp.org/ ; >
-      au < testing ; exists ; 1997 ; Genome Research Volume 7  ; 7  ; https://genome.cshlp.org/ ; >
-      au < testing ; exists ; 1998 ; Genome Research Volume 8  ; 8  ; https://genome.cshlp.org/ ; >
-      au < testing ; exists ; 1999 ; Genome Research Volume 9  ; 9  ; https://genome.cshlp.org/ ; >
-      au < testing ; exists ; 2000 ; Genome Research Volume 10 ; 10 ; https://genome.cshlp.org/ ; >
-      au < testing ; exists ; 2001 ; Genome Research Volume 11 ; 11 ; https://genome.cshlp.org/ ; >
-      au < testing ; exists ; 2002 ; Genome Research Volume 12 ; 12 ; https://genome.cshlp.org/ ; >
-      au < testing ; exists ; 2003 ; Genome Research Volume 13 ; 13 ; https://genome.cshlp.org/ ; >
-      au < testing ; exists ; 2004 ; Genome Research Volume 14 ; 14 ; https://genome.cshlp.org/ ; >
-      au < testing ; exists ; 2005 ; Genome Research Volume 15 ; 15 ; https://genome.cshlp.org/ ; >
-      au < testing ; exists ; 2006 ; Genome Research Volume 16 ; 16 ; https://genome.cshlp.org/ ; >
-      au < testing ; exists ; 2007 ; Genome Research Volume 17 ; 17 ; https://genome.cshlp.org/ ; >
-      au < testing ; exists ; 2008 ; Genome Research Volume 18 ; 18 ; https://genome.cshlp.org/ ; >
-      au < testing ; exists ; 2009 ; Genome Research Volume 19 ; 19 ; https://genome.cshlp.org/ ; >
-      au < testing ; exists ; 2010 ; Genome Research Volume 20 ; 20 ; https://genome.cshlp.org/ ; >
-      au < testing ; exists ; 2011 ; Genome Research Volume 21 ; 21 ; https://genome.cshlp.org/ ; >
-      au < testing ; exists ; 2012 ; Genome Research Volume 22 ; 22 ; https://genome.cshlp.org/ ; >
-      au < testing ; exists ; 2013 ; Genome Research Volume 23 ; 23 ; https://genome.cshlp.org/ ; >
+      au < ready ; exists ; 1994-1995 ; Genome Research Volume 4 ; 4 ; https://genome.cshlp.org/ ; >
+      au < ready ; exists ; 1995 ; Genome Research Volume 5 ; 5 ; https://genome.cshlp.org/ ; >
+      au < ready ; exists ; 1996 ; Genome Research Volume 6  ; 6  ; https://genome.cshlp.org/ ; >
+      au < ready ; exists ; 1997 ; Genome Research Volume 7  ; 7  ; https://genome.cshlp.org/ ; >
+      au < ready ; exists ; 1998 ; Genome Research Volume 8  ; 8  ; https://genome.cshlp.org/ ; >
+      au < ready ; exists ; 1999 ; Genome Research Volume 9  ; 9  ; https://genome.cshlp.org/ ; >
+      au < ready ; exists ; 2000 ; Genome Research Volume 10 ; 10 ; https://genome.cshlp.org/ ; >
+      au < ready ; exists ; 2001 ; Genome Research Volume 11 ; 11 ; https://genome.cshlp.org/ ; >
+      au < ready ; exists ; 2002 ; Genome Research Volume 12 ; 12 ; https://genome.cshlp.org/ ; >
+      au < ready ; exists ; 2003 ; Genome Research Volume 13 ; 13 ; https://genome.cshlp.org/ ; >
+      au < ready ; exists ; 2004 ; Genome Research Volume 14 ; 14 ; https://genome.cshlp.org/ ; >
+      au < ready ; exists ; 2005 ; Genome Research Volume 15 ; 15 ; https://genome.cshlp.org/ ; >
+      au < ready ; exists ; 2006 ; Genome Research Volume 16 ; 16 ; https://genome.cshlp.org/ ; >
+      au < ready ; exists ; 2007 ; Genome Research Volume 17 ; 17 ; https://genome.cshlp.org/ ; >
+      au < ready ; exists ; 2008 ; Genome Research Volume 18 ; 18 ; https://genome.cshlp.org/ ; >
+      au < ready ; exists ; 2009 ; Genome Research Volume 19 ; 19 ; https://genome.cshlp.org/ ; >
+      au < ready ; exists ; 2010 ; Genome Research Volume 20 ; 20 ; https://genome.cshlp.org/ ; >
+      au < ready ; exists ; 2011 ; Genome Research Volume 21 ; 21 ; https://genome.cshlp.org/ ; >
+      au < ready ; exists ; 2012 ; Genome Research Volume 22 ; 22 ; https://genome.cshlp.org/ ; >
+      au < ready ; exists ; 2013 ; Genome Research Volume 23 ; 23 ; https://genome.cshlp.org/ ; >
       au < zapped ; finished ; 2014 ; Genome Research Volume 24 ; 24 ; http://genome.cshlp.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2015 ; Genome Research Volume 25 ; 25 ; http://genome.cshlp.org/ ; >
       au < deepCrawl ; exists ; 2016 ; Genome Research Volume 26 ; 26 ; http://genome.cshlp.org/ ; >
@@ -344,26 +344,26 @@
 
       param[base_url] = http://learnmem.cshlp.org/
 
-      au < testing ; exists ; 1994 ; Learning & Memory Volume 1 ; 1 ; >
-      au < testing ; exists ; 1995 ; Learning & Memory Volume 2 ; 2 ; >
-      au < testing ; exists ; 1996 ; Learning & Memory Volume 3 ; 3 ; >
-      au < testing ; exists ; 1997 ; Learning & Memory Volume 4 ; 4 ; >
-      au < testing ; exists ; 1998 ; Learning & Memory Volume 5 ; 5 ; >
-      au < testing ; exists ; 1999 ; Learning & Memory Volume 6 ; 6 ; >
-      au < testing ; exists ; 2000 ; Learning & Memory Volume 7 ; 7 ; >
-      au < testing ; exists ; 2001 ; Learning & Memory Volume 8 ; 8 ; >
-      au < testing ; exists ; 2002 ; Learning & Memory Volume 9 ; 9 ; >
-      au < testing ; exists ; 2003 ; Learning & Memory Volume 10 ; 10 ; >
-      au < testing ; exists ; 2004 ; Learning & Memory Volume 11 ; 11 ; >
-      au < testing ; exists ; 2005 ; Learning & Memory Volume 12 ; 12 ; >
-      au < testing ; exists ; 2006 ; Learning & Memory Volume 13 ; 13 ; >
-      au < testing ; exists ; 2007 ; Learning & Memory Volume 14 ; 14 ; >
-      au < testing ; exists ; 2008 ; Learning & Memory Volume 15 ; 15 ; >
-      au < testing ; exists ; 2009 ; Learning & Memory Volume 16 ; 16 ; >
-      au < testing ; exists ; 2010 ; Learning & Memory Volume 17 ; 17 ; >
-      au < testing ; exists ; 2011 ; Learning & Memory Volume 18 ; 18 ; >
-      au < testing ; exists ; 2012 ; Learning & Memory Volume 19 ; 19 ; >
-      au < testing ; exists ; 2013 ; Learning & Memory Volume 20 ; 20 ; >
+      au < ready ; exists ; 1994 ; Learning & Memory Volume 1 ; 1 ; >
+      au < ready ; exists ; 1995 ; Learning & Memory Volume 2 ; 2 ; >
+      au < ready ; exists ; 1996 ; Learning & Memory Volume 3 ; 3 ; >
+      au < ready ; exists ; 1997 ; Learning & Memory Volume 4 ; 4 ; >
+      au < ready ; exists ; 1998 ; Learning & Memory Volume 5 ; 5 ; >
+      au < ready ; exists ; 1999 ; Learning & Memory Volume 6 ; 6 ; >
+      au < ready ; exists ; 2000 ; Learning & Memory Volume 7 ; 7 ; >
+      au < ready ; exists ; 2001 ; Learning & Memory Volume 8 ; 8 ; >
+      au < ready ; exists ; 2002 ; Learning & Memory Volume 9 ; 9 ; >
+      au < ready ; exists ; 2003 ; Learning & Memory Volume 10 ; 10 ; >
+      au < ready ; exists ; 2004 ; Learning & Memory Volume 11 ; 11 ; >
+      au < ready ; exists ; 2005 ; Learning & Memory Volume 12 ; 12 ; >
+      au < ready ; exists ; 2006 ; Learning & Memory Volume 13 ; 13 ; >
+      au < ready ; exists ; 2007 ; Learning & Memory Volume 14 ; 14 ; >
+      au < ready ; exists ; 2008 ; Learning & Memory Volume 15 ; 15 ; >
+      au < ready ; exists ; 2009 ; Learning & Memory Volume 16 ; 16 ; >
+      au < ready ; exists ; 2010 ; Learning & Memory Volume 17 ; 17 ; >
+      au < ready ; exists ; 2011 ; Learning & Memory Volume 18 ; 18 ; >
+      au < ready ; exists ; 2012 ; Learning & Memory Volume 19 ; 19 ; >
+      au < ready ; exists ; 2013 ; Learning & Memory Volume 20 ; 20 ; >
       au < finished ; finished ; 2014 ; Learning & Memory Volume 21 ; 21 ; >
       au < finished ; crawling ; 2015 ; Learning & Memory Volume 22 ; 22 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2016 ; Learning & Memory Volume 23 ; 23 ; >
@@ -389,25 +389,25 @@
 
       param[base_url] = http://rnajournal.cshlp.org/
 
-      au < testing ; exists ; 1995 ; RNA Volume 1 ; 1 ; >
-      au < testing ; exists ; 1996 ; RNA Volume 2 ; 2 ; >
-      au < testing ; exists ; 1997 ; RNA Volume 3 ; 3 ; >
-      au < testing ; exists ; 1998 ; RNA Volume 4 ; 4 ; >
-      au < testing ; exists ; 1999 ; RNA Volume 5 ; 5 ; >
-      au < testing ; exists ; 2000 ; RNA Volume 6 ; 6 ; >
-      au < testing ; exists ; 2001 ; RNA Volume 7 ; 7 ; >
-      au < testing ; exists ; 2002 ; RNA Volume 8 ; 8 ; >
-      au < testing ; exists ; 2003 ; RNA Volume 9 ; 9 ; >
-      au < testing ; exists ; 2004 ; RNA Volume 10 ; 10 ; >
-      au < testing ; exists ; 2005 ; RNA Volume 11 ; 11 ; >
-      au < testing ; exists ; 2006 ; RNA Volume 12 ; 12 ; >
-      au < testing ; exists ; 2007 ; RNA Volume 13 ; 13 ; >
-      au < testing ; exists ; 2008 ; RNA Volume 14 ; 14 ; >
-      au < testing ; exists ; 2009 ; RNA Volume 15 ; 15 ; >
-      au < testing ; exists ; 2010 ; RNA Volume 16 ; 16 ; >
-      au < testing ; exists ; 2011 ; RNA Volume 17 ; 17 ; >
-      au < testing ; exists ; 2012 ; RNA Volume 18 ; 18 ; >
-      au < testing ; exists ; 2013 ; RNA Volume 19 ; 19 ; >
+      au < ready ; exists ; 1995 ; RNA Volume 1 ; 1 ; >
+      au < ready ; exists ; 1996 ; RNA Volume 2 ; 2 ; >
+      au < ready ; exists ; 1997 ; RNA Volume 3 ; 3 ; >
+      au < ready ; exists ; 1998 ; RNA Volume 4 ; 4 ; >
+      au < ready ; exists ; 1999 ; RNA Volume 5 ; 5 ; >
+      au < ready ; exists ; 2000 ; RNA Volume 6 ; 6 ; >
+      au < ready ; exists ; 2001 ; RNA Volume 7 ; 7 ; >
+      au < ready ; exists ; 2002 ; RNA Volume 8 ; 8 ; >
+      au < ready ; exists ; 2003 ; RNA Volume 9 ; 9 ; >
+      au < ready ; exists ; 2004 ; RNA Volume 10 ; 10 ; >
+      au < ready ; exists ; 2005 ; RNA Volume 11 ; 11 ; >
+      au < ready ; exists ; 2006 ; RNA Volume 12 ; 12 ; >
+      au < ready ; exists ; 2007 ; RNA Volume 13 ; 13 ; >
+      au < ready ; exists ; 2008 ; RNA Volume 14 ; 14 ; >
+      au < ready ; exists ; 2009 ; RNA Volume 15 ; 15 ; >
+      au < ready ; exists ; 2010 ; RNA Volume 16 ; 16 ; >
+      au < ready ; exists ; 2011 ; RNA Volume 17 ; 17 ; >
+      au < ready ; exists ; 2012 ; RNA Volume 18 ; 18 ; >
+      au < ready ; exists ; 2013 ; RNA Volume 19 ; 19 ; >
       au < finished ; crawling ; 2014 ; RNA Volume 20 ; 20 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2015 ; RNA Volume 21 ; 21 ; >
       au < deepCrawl ; exists ; 2016 ; RNA Volume 22 ; 22 ; >
