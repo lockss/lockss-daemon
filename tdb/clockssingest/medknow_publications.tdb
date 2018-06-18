@@ -1272,22 +1272,22 @@
     param[journal_issn] = 0973-2284
     #[ijoem] =  medknow website uses correct issn 06/08/2018
 
-    au < exists ; exists ; 2003 ; Indian Journal of Occupational and Environmental Medicine Volume 7 ; 2003 ; 7 ; >
-    au < exists ; exists ; 2004 ; Indian Journal of Occupational and Environmental Medicine Volume 8 ; 2004 ; 8 ; >
-    au < exists ; exists ; 2005 ; Indian Journal of Occupational and Environmental Medicine Volume 9 ; 2005 ; 9 ; >
-    au < exists ; exists ; 2006 ; Indian Journal of Occupational and Environmental Medicine Volume 10 ; 2006 ; 10 ; >
-    au < exists ; exists ; 2007 ; Indian Journal of Occupational and Environmental Medicine Volume 11 ; 2007 ; 11 ; >
-    au < exists ; exists ; 2008 ; Indian Journal of Occupational and Environmental Medicine Volume 12 ; 2008 ; 12 ; >
-    au < exists ; exists ; 2009 ; Indian Journal of Occupational and Environmental Medicine Volume 13 ; 2009 ; 13 ; >
-    au < exists ; exists ; 2010 ; Indian Journal of Occupational and Environmental Medicine Volume 14 ; 2010 ; 14 ; >
+    au < manifest ; exists ; 2003 ; Indian Journal of Occupational and Environmental Medicine Volume 7 ; 2003 ; 7 ; >
+    au < manifest ; exists ; 2004 ; Indian Journal of Occupational and Environmental Medicine Volume 8 ; 2004 ; 8 ; >
+    au < manifest ; exists ; 2005 ; Indian Journal of Occupational and Environmental Medicine Volume 9 ; 2005 ; 9 ; >
+    au < manifest ; exists ; 2006 ; Indian Journal of Occupational and Environmental Medicine Volume 10 ; 2006 ; 10 ; >
+    au < manifest ; exists ; 2007 ; Indian Journal of Occupational and Environmental Medicine Volume 11 ; 2007 ; 11 ; >
+    au < manifest ; exists ; 2008 ; Indian Journal of Occupational and Environmental Medicine Volume 12 ; 2008 ; 12 ; >
+    au < manifest ; exists ; 2009 ; Indian Journal of Occupational and Environmental Medicine Volume 13 ; 2009 ; 13 ; >
+    au < manifest ; exists ; 2010 ; Indian Journal of Occupational and Environmental Medicine Volume 14 ; 2010 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Indian Journal of Occupational and Environmental Medicine Volume 15 ; 2011 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Indian Journal of Occupational and Environmental Medicine Volume 16 ; 2012 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Indian Journal of Occupational and Environmental Medicine Volume 17 ; 2013 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Indian Journal of Occupational and Environmental Medicine Volume 18 ; 2014 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Indian Journal of Occupational and Environmental Medicine Volume 19 ; 2015 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Indian Journal of Occupational and Environmental Medicine Volume 20 ; 2016 ; 20 ; >
-    au < exists ; exists ; 2017 ; Indian Journal of Occupational and Environmental Medicine Volume 21 ; 2017 ; 21 ; >
-    au < exists ; exists ; 2018 ; Indian Journal of Occupational and Environmental Medicine Volume 22 ; 2018 ; 22 ; >
+    au < manifest ; exists ; 2017 ; Indian Journal of Occupational and Environmental Medicine Volume 21 ; 2017 ; 21 ; >
+    au < manifest ; exists ; 2018 ; Indian Journal of Occupational and Environmental Medicine Volume 22 ; 2018 ; 22 ; >
 
     }
 
@@ -3921,17 +3921,17 @@
     {
     param[base_url] = http://www.ojoonline.org/
 
-    au < exists ; exists ; 2008 ; Oman Journal of Ophthalmology Volume 1 ; 2008 ; 1 ; >
-    au < exists ; exists ; 2009 ; Oman Journal of Ophthalmology Volume 2 ; 2009 ; 2 ; >
-    au < exists ; exists ; 2010 ; Oman Journal of Ophthalmology Volume 3 ; 2010 ; 3 ; >
+    au < manifest ; exists ; 2008 ; Oman Journal of Ophthalmology Volume 1 ; 2008 ; 1 ; >
+    au < manifest ; exists ; 2009 ; Oman Journal of Ophthalmology Volume 2 ; 2009 ; 2 ; >
+    au < manifest ; exists ; 2010 ; Oman Journal of Ophthalmology Volume 3 ; 2010 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Oman Journal of Ophthalmology Volume 4 ; 2011 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Oman Journal of Ophthalmology Volume 5 ; 2012 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Oman Journal of Ophthalmology Volume 6 ; 2013 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Oman Journal of Ophthalmology Volume 7 ; 2014 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Oman Journal of Ophthalmology Volume 8 ; 2015 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Oman Journal of Ophthalmology Volume 9 ; 2016 ; 9 ; >
-    au < exists ; exists ; 2017 ; Oman Journal of Ophthalmology Volume 10 ; 2017 ; 10 ; >
-    au < exists ; exists ; 2018 ; Oman Journal of Ophthalmology Volume 11 ; 2018 ; 11 ; >
+    au < manifest ; exists ; 2017 ; Oman Journal of Ophthalmology Volume 10 ; 2017 ; 10 ; >
+    au < manifest ; exists ; 2018 ; Oman Journal of Ophthalmology Volume 11 ; 2018 ; 11 ; >
 
     }
 
@@ -5312,7 +5312,7 @@
 
       au < frozen ; exists ; 2016 ; Endodontology Volume 28 ; 2016 ; 28 ; >
       au < manifest ; exists ; 2017 ; Endodontology Volume 29 ; 2017 ; 29 ; >
-      au < expected ; exists ; 2018 ; Endodontology Volume 30 ; 2018 ; 30 ; >
+      au < manifest ; exists ; 2018 ; Endodontology Volume 30 ; 2018 ; 30 ; >
 
   }
 

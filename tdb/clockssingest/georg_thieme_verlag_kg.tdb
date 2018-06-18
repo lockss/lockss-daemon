@@ -897,7 +897,7 @@
     comment[years] = 2017-current
 
    au < deepCrawl ; exists ; 2017 ; 2017 ; Digestive Disease Interventions Volume 1 ; 1 ; >
-   au < expected ; exists ; 2018 ; 2018 ; Digestive Disease Interventions Volume 2 ; 2 ; >
+   au < manifest ; exists ; 2018 ; 2018 ; Digestive Disease Interventions Volume 2 ; 2 ; >
 
   }
 
@@ -2646,7 +2646,7 @@
     param[journal_id] = 10.1055/s-00031934 
     
     au < deepCrawl ; exists ; 2017 ; 2017 ; The Journal of Hip Surgery  Volume 1 ; 1 ; >
-    au < expected ; exists ; 2018 ; 2018 ; The Journal of Hip Surgery  Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2018 ; 2018 ; The Journal of Hip Surgery  Volume 2 ; 2 ; >
 
   }
 
@@ -7191,7 +7191,7 @@
     au < frozen ; exists ; 2015 ; 2015 ; Revista Iberoamericana de Cirugía de la Mano Volume 43 ; 43 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Revista Iberoamericana de Cirugía de la Mano Volume 44 ; 44 ; >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Revista Iberoamericana de Cirugía de la Mano Volume 45 ; 45 ; >
-    au < expected ; exists ; 2018 ; 2018 ; Revista Iberoamericana de Cirugía de la Mano Volume 46 ; 46 ; >
+    au < manifest ; exists ; 2018 ; 2018 ; Revista Iberoamericana de Cirugía de la Mano Volume 46 ; 46 ; >
 
   }
 
