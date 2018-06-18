@@ -55,8 +55,11 @@ public class ListObjects extends LockssServlet {
   
   private static final Logger log = Logger.getLogger(ListObjects.class);
 
+  public static final String FIELD_POLL_WEIGHT = "pollWeight";
+
   private String auid;
   private String url;
+  private List<String> fields;
   
   private ArchivalUnit au;
 
@@ -68,6 +71,7 @@ public class ListObjects extends LockssServlet {
     au = null;
     auid = null;
     url = null;
+    fields = null;
     super.resetLocals();
   }
 
@@ -91,6 +95,11 @@ public class ListObjects extends LockssServlet {
       displayError("\"type\" arg must be specified");
       return;
     }
+    String fieldParam = getParameter("fields");
+    if (!StringUtil.isNullString(fieldParam)) {
+      fields = StringUtil.breakAt(fieldParam, ",", 0, true);
+    }
+
     if (type.equalsIgnoreCase("aus")) {
       new AuNameList().execute();
     } else if (type.equalsIgnoreCase("auids")) {
@@ -245,9 +254,23 @@ public class ListObjects extends LockssServlet {
 
   /** List URLs in AU */
   class UrlList extends BaseNodeList {
+    private PatternFloatMap resultWeightMap = null;
     
+
     void printHeader() {
       wrtr.println("# URLs in " + au.getName());
+      if (fields != null) {
+	wrtr.println("# URL\t" + StringUtil.separatedString(fields, "\t"));
+	if (fields.contains(FIELD_POLL_WEIGHT)) {
+	  try {
+	    resultWeightMap = au.makeUrlPollResultWeightMap();
+	  } catch (ArchivalUnit.ConfigurationException e) {
+	    log.warning("Error building urlResultWeightMap, disabling",
+			e);
+	    fields.remove(FIELD_POLL_WEIGHT);
+	  }
+	}
+      }
     }
     
     String unitName() {
@@ -255,7 +278,27 @@ public class ListObjects extends LockssServlet {
     }
 
     void processContentCu(CachedUrl cu) {
-      wrtr.println(cu.getUrl());
+      String url = cu.getUrl();
+      wrtr.print(url);
+      if (fields != null) {
+	for (String f : fields) {
+	  switch (f) {
+	  case FIELD_POLL_WEIGHT:
+	    if (resultWeightMap != null) {
+	      wrtr.print("\t" + getUrlResultWeight(url));
+	    }
+	    break;
+	  }
+	}
+      }
+      wrtr.println();
+    }
+
+    protected float getUrlResultWeight(String url) {
+      if (resultWeightMap == null || resultWeightMap.isEmpty()) {
+	return 1.0f;
+      }
+      return resultWeightMap.getMatch(url, 1.0f);
     }
   }
 

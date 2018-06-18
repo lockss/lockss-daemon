@@ -65,6 +65,7 @@ import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 import org.lockss.util.TypedEntryMap;
 import org.lockss.util.UrlUtil;
+import org.lockss.util.PatternFloatMap;
 import org.lockss.ws.entities.AgreementTypeWsResult;
 import org.lockss.ws.entities.AuConfigurationWsResult;
 import org.lockss.ws.entities.AuWsResult;
@@ -103,7 +104,9 @@ public class AuWsSource extends AuWsResult {
   private boolean lastCompletedCrawlPopulated = false;
   private boolean lastCrawlPopulated = false;
   private boolean lastCrawlResultPopulated = false;
-  private boolean lastDeepCrawlTimePopulated = false;
+  private boolean lastDeepCrawlPopulated = false;
+  private boolean lastCompletedDeepCrawlPopulated = false;
+  private boolean lastDeepCrawlResultPopulated = false;
   private boolean lastDeepCrawlDepthPopulated = false;
   private boolean lastMetadataIndexPopulated = false;
   private boolean lastCompletedPollPopulated = false;
@@ -128,6 +131,9 @@ public class AuWsSource extends AuWsResult {
   private NodeManager nodeMgr = null;
   private AuState state = null;
   private CachedUrlSet auCachedUrlSet = null;
+  private PatternFloatMap resultWeightMap = null;
+  private boolean includePollWeight = false;
+
 
   public AuWsSource(ArchivalUnit au) {
     this.au = au;
@@ -429,18 +435,48 @@ public class AuWsSource extends AuWsResult {
   }
 
   @Override
-  public Long getLastDeepCrawlTime() {
-    if (!lastDeepCrawlTimePopulated) {
-      long lastDeepCrawlTime = getState().getLastDeepCrawlTime();
+  public Long getLastDeepCrawl() {
+    if (!lastDeepCrawlPopulated) {
+      long lastDeepCrawl = getState().getLastDeepCrawlAttempt();
 
-      if (lastDeepCrawlTime > 0) {
-	setLastDeepCrawlTime(Long.valueOf(lastDeepCrawlTime));
+      if (lastDeepCrawl > 0) {
+	setLastDeepCrawl(Long.valueOf(lastDeepCrawl));
       }
 
-      lastDeepCrawlTimePopulated = true;
+      lastDeepCrawlPopulated = true;
     }
 
-    return super.getLastDeepCrawlTime();
+    return super.getLastDeepCrawl();
+  }
+
+  @Override
+  public Long getLastCompletedDeepCrawl() {
+    if (!lastCompletedDeepCrawlPopulated) {
+      long lastCompletedDeepCrawl = getState().getLastDeepCrawlTime();
+
+      if (lastCompletedDeepCrawl > 0) {
+	setLastCompletedDeepCrawl(Long.valueOf(lastCompletedDeepCrawl));
+      }
+
+      lastCompletedDeepCrawlPopulated = true;
+    }
+
+    return super.getLastCompletedDeepCrawl();
+  }
+
+  @Override
+  public String getLastDeepCrawlResult() {
+    if (!lastDeepCrawlResultPopulated) {
+      long lastDeepCrawlAttempt = getState().getLastDeepCrawlAttempt();
+
+      if (lastDeepCrawlAttempt > 0) {
+	setLastDeepCrawlResult(state.getLastDeepCrawlResultMsg());
+      }
+
+      lastDeepCrawlResultPopulated = true;
+    }
+
+    return super.getLastDeepCrawlResult();
   }
 
   @Override
@@ -747,6 +783,14 @@ public class AuWsSource extends AuWsResult {
       // Initialize the results.
       List<UrlWsResult> results = new ArrayList<UrlWsResult>();
 
+      try {
+	resultWeightMap = au.makeUrlPollResultWeightMap();
+	includePollWeight = true;
+      } catch (ArchivalUnit.ConfigurationException e) {
+	log.warning("Error building urlResultWeightMap, disabling",
+		    e);
+      }
+
       // Loop through all the URL nodes.
       for (CachedUrlSetNode cusn : getAuCachedUrlSet().getCuIterable()) {
 	CachedUrlSet cus;
@@ -768,13 +812,15 @@ public class AuWsSource extends AuWsResult {
 	try {
 	  RepositoryNode node =
 	      getTheDaemon().getLockssRepository(au).getNode(url);
-
 	  // Get the URLproperties.
 	  UrlWsResult urlResult = new UrlWsResult();
 	  urlResult.setUrl(node.getNodeUrl());
 	  cu = au.makeCachedUrl(url);
 	  urlResult.setVersionCount(cu.getCuVersions().length);
 	  urlResult.setCurrentVersionSize(Long.valueOf(node.getContentSize()));
+	  if (includePollWeight) {
+	    urlResult.setPollWeight(getUrlResultWeight(node.getNodeUrl()));
+	  }
 
 	  // Add it to the results.
 	  results.add(urlResult);
@@ -791,6 +837,13 @@ public class AuWsSource extends AuWsResult {
     }
 
     return super.getUrls();
+  }
+
+  protected float getUrlResultWeight(String url) {
+    if (resultWeightMap == null || resultWeightMap.isEmpty()) {
+      return 1.0f;
+    }
+    return resultWeightMap.getMatch(url, 1.0f);
   }
 
   @Override

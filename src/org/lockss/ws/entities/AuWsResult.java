@@ -56,7 +56,9 @@ public class AuWsResult {
   private Long lastCompletedCrawl;
   private Long lastCrawl;
   private String lastCrawlResult;
-  private Long lastDeepCrawlTime;
+  private Long lastCompletedDeepCrawl;
+  private Long lastDeepCrawl;
+  private String lastDeepCrawlResult;
   private Integer lastDeepCrawlDepth;
   private Long lastMetadataIndex;
   private Long lastCompletedPoll;
@@ -344,16 +346,42 @@ public class AuWsResult {
   }
 
   /**
+   * Provides the timestamp of the last completed deep crawl of the
+   * Archival Unit.
+   *
+   * @return a Long with the timestamp as the number of milliseconds since the
+   *         beginning of 1970.
+   */
+  public Long getLastCompletedDeepCrawl() {
+    return lastCompletedDeepCrawl;
+  }
+  public void setLastCompletedDeepCrawl(Long lastCompletedDeepCrawl) {
+    this.lastCompletedDeepCrawl = lastCompletedDeepCrawl;
+  }
+
+  /**
    * Provides the timestamp of the last deep crawl of the Archival Unit.
    *
    * @return a Long with the timestamp as the number of milliseconds since the
    *         beginning of 1970.
    */
-  public Long getLastDeepCrawlTime() {
-    return lastDeepCrawlTime;
+  public Long getLastDeepCrawl() {
+    return lastDeepCrawl;
   }
-  public void setLastDeepCrawlTime(Long lastDeepCrawlTime) {
-    this.lastDeepCrawlTime = lastDeepCrawlTime;
+  public void setLastDeepCrawl(Long lastDeepCrawl) {
+    this.lastDeepCrawl = lastDeepCrawl;
+  }
+
+  /**
+   * Provides the result of the last deep crawl of the Archival Unit.
+   *
+   * @return a String with the last crawl result.
+   */
+  public String getLastDeepCrawlResult() {
+    return lastDeepCrawlResult;
+  }
+  public void setLastDeepCrawlResult(String lastDeepCrawlResult) {
+    this.lastDeepCrawlResult = lastDeepCrawlResult;
   }
 
   /**
@@ -593,7 +621,9 @@ public class AuWsResult {
 	+ crawlWindow + ", crawlPool=" + crawlPool + ", lastCompletedCrawl="
 	+ lastCompletedCrawl + ", lastCrawl=" + lastCrawl
 	+ ", lastCrawlResult=" + lastCrawlResult
-	+ ", lastDeepCrawlTime=" + lastDeepCrawlTime
+	+ ", lastCompletedDeepCrawl=" + lastCompletedDeepCrawl
+	+ ", lastDeepCrawl=" + lastDeepCrawl
+	+ ", lastDeepCrawlResult=" + lastDeepCrawlResult
 	+ ", lastDeepCrawlDepth=" + lastDeepCrawlDepth
 	+ ", lastMetadataIndex=" + lastMetadataIndex
         + ", lastCompletedPoll=" + lastCompletedPoll

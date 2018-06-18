@@ -381,7 +381,11 @@ public abstract class BaseCrawler implements Crawler {
    */
   public boolean doCrawl() {
     if (isWholeAU()) {
-      aus.newCrawlStarted();
+      if (req != null && req.getRefetchDepth() > 0) {
+	aus.deepCrawlStarted(req.getRefetchDepth());
+      } else {
+	aus.newCrawlStarted();
+      }
     }
     setCrawlConfig(ConfigManager.getCurrentConfig());
     crawlStatus.setProxy(proxyStatus);

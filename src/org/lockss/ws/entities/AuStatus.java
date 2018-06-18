@@ -52,7 +52,9 @@ public class AuStatus {
   private Long lastCompletedCrawl;
   private Long lastCrawl;
   private String lastCrawlResult;
-  private Long lastDeepCrawlTime;
+  private Long lastCompletedDeepCrawl;
+  private Long lastDeepCrawl;
+  private String lastDeepCrawlResult;
   private int lastDeepCrawlDepth;
   private Long lastMetadataIndex;
   private Long lastCompletedPoll;
@@ -263,8 +265,28 @@ public class AuStatus {
    * @return a Long with the timestamp as the number of milliseconds since the
    *         beginning of 1970.
    */
-  public Long getLastDeepCrawlTime() {
-    return lastDeepCrawlTime;
+  public Long getLastCompletedDeepCrawl() {
+    return lastCompletedDeepCrawl;
+  }
+
+  /**
+   * Provides the start time of the last deep crawl attempt of the
+   * Archival Unit.
+   *
+   * @return a Long with the timestamp as the number of milliseconds since the
+   *         beginning of 1970.
+   */
+  public Long getLastDeepCrawl() {
+    return lastDeepCrawl;
+  }
+
+  /**
+   * Provides the result of the last deep crawl of the Archival Unit.
+   *
+   * @return a String with the last crawl result.
+   */
+  public String getLastDeepCrawlResult() {
+    return lastDeepCrawlResult;
   }
 
   /**
@@ -438,8 +460,16 @@ public class AuStatus {
     this.lastCrawlResult = lastCrawlResult;
   }
 
-  public void setLastDeepCrawlTime(Long lastDeepCrawlTime) {
-    this.lastDeepCrawlTime = lastDeepCrawlTime;
+  public void setLastCompletedDeepCrawl(Long lastCompletedDeepCrawl) {
+    this.lastCompletedDeepCrawl = lastCompletedDeepCrawl;
+  }
+
+  public void setLastDeepCrawl(Long lastDeepCrawl) {
+    this.lastDeepCrawl = lastDeepCrawl;
+  }
+
+  public void setLastDeepCrawlResult(String lastDeepCrawlResult) {
+    this.lastDeepCrawlResult = lastDeepCrawlResult;
   }
 
   public void setLastDeepCrawlDepth(Integer lastDeepCrawlDepth) {
@@ -523,8 +553,12 @@ public class AuStatus {
     builder.append(lastCrawl);
     builder.append(", lastCrawlResult=");
     builder.append(lastCrawlResult);
-    builder.append(", lastDeepCrawlTime=");
-    builder.append(lastDeepCrawlTime);
+    builder.append(", lastCompletedDeepCrawl=");
+    builder.append(lastCompletedDeepCrawl);
+    builder.append(", lastDeepCrawl=");
+    builder.append(lastDeepCrawl);
+    builder.append(", lastDeepCrawlResult=");
+    builder.append(lastDeepCrawlResult);
     builder.append(", lastDeepCrawlDepth=");
     builder.append(lastDeepCrawlDepth);
     builder.append(", lastMetadataIndex=");
