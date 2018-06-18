@@ -159,7 +159,7 @@
       au < ready ; exists ; 1952 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 17 ; 17 ; >
       au < ready ; exists ; 1953 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 18 ; 18 ; >
       au < ready ; exists ; 1954 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 19 ; 19 ; >
-      au < testing ; exists ; 1955 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 20 ; 20 ; >
+      au < ready ; exists ; 1955 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 20 ; 20 ; >
       au < ready ; exists ; 1956 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 21 ; 21 ; >
       au < ready ; exists ; 1957 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 22 ; 22 ; >
       au < crawling ; exists ; 1958 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 23 ; 23 ; >
@@ -296,9 +296,9 @@
 
 #      param[base_url] = http://genome.cshlp.org/
 
-      au < testing ; exists ; 1991-1992 ; Genome Research Volume 1 ; 1 ; https://genome.cshlp.org/ ; >
+      au < ready ; exists ; 1991-1992 ; Genome Research Volume 1 ; 1 ; https://genome.cshlp.org/ ; >
       au < ready ; exists ; 1992-1993 ; Genome Research Volume 2 ; 2 ; https://genome.cshlp.org/ ; >
-      au < testing ; exists ; 1993-1994 ; Genome Research Volume 3 ; 3 ; https://genome.cshlp.org/ ; >
+      au < ready ; exists ; 1993-1994 ; Genome Research Volume 3 ; 3 ; https://genome.cshlp.org/ ; >
       au < ready ; exists ; 1994-1995 ; Genome Research Volume 4 ; 4 ; https://genome.cshlp.org/ ; >
       au < ready ; exists ; 1995 ; Genome Research Volume 5 ; 5 ; https://genome.cshlp.org/ ; >
       au < ready ; exists ; 1996 ; Genome Research Volume 6  ; 6  ; https://genome.cshlp.org/ ; >
