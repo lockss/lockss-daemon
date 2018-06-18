@@ -70,9 +70,9 @@
       param[journal_id] = scoms
       param[base_url] = http://www.hope.uzh.ch/
 
-      au < exists ; 1991 ; SComS: Studies in Communications Sciences Volume 1991 [abstract only] ; 1991 ; 1991 >
-      au < exists ; 1992 ; SComS: Studies in Communications Sciences Volume 1992 [abstract only] ; 1992 ; 1992 >
-      au < exists ; 1993 ; SComS: Studies in Communications Sciences Volume 1993 [abstract only] ; 1993 ; 1993 >
+      au < manifest ; 1991 ; SComS: Studies in Communications Sciences Volume 1991 [abstract only] ; 1991 ; 1991 >
+      au < manifest ; 1992 ; SComS: Studies in Communications Sciences Volume 1992 [abstract only] ; 1992 ; 1992 >
+      au < manifest ; 1993 ; SComS: Studies in Communications Sciences Volume 1993 [abstract only] ; 1993 ; 1993 >
       au < notReady ; 1994 ; SComS: Studies in Communications Sciences Volume 1994 [abstract only] ; 1994 ; 1994 > #no content
       au < notReady ; 1996 ; SComS: Studies in Communications Sciences Volume 1996 [abstract only] ; 1996 ; 1996 > #no content
       au < notReady ; 1997 ; SComS: Studies in Communications Sciences Volume 1997 [abstract only] ; 1997 ; 1997 > #no content

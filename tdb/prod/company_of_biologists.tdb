@@ -162,9 +162,9 @@
     au < HighWirePressH20Plugin ; down ; 1996 ; Development Volume 122 ; 122 >
     au < HighWirePressH20Plugin ; down ; 1996 ; Development Volume 123 ; 123 >
     au < HighWireStrVolPlugin ; superseded ; 1997 ; Development Volume 124 [superseded] ; 124 >
-    au < biologists.BiologistsDrupalPlugin ; exists ; 1997 ; Development Volume 124 ; 124 >
+    au < biologists.BiologistsDrupalPlugin ; manifest ; 1997 ; Development Volume 124 ; 124 >
     au < HighWireStrVolPlugin ; superseded ; 1998 ; Development Volume 125 [superseded] ; 125 >
-    au < biologists.BiologistsDrupalPlugin ; exists ; 1998 ; Development Volume 125 ; 125 >
+    au < biologists.BiologistsDrupalPlugin ; manifest ; 1998 ; Development Volume 125 ; 125 >
     au < HighWireStrVolPlugin ; superseded ; 1999 ; Development Volume 126 [superseded] ; 126 >
     au < biologists.BiologistsDrupalPlugin ; manifest ; 1999 ; Development Volume 126 ; 126 >
     au < HighWireStrVolPlugin ; superseded ; 2000 ; Development Volume 127 [superseded] ; 127 >
@@ -241,25 +241,25 @@
     au < biologists.BiologistsDrupalPlugin ; exists ; 1944 ; The Quarterly Journal of Microscopical Science Volume s3-85 ; s3-85 >
     au < biologists.BiologistsDrupalPlugin ; exists ; 1945 ; The Quarterly Journal of Microscopical Science Volume s3-86 ; s3-86 >
     au < biologists.BiologistsDrupalPlugin ; exists ; 1946 ; The Quarterly Journal of Microscopical Science Volume s3-87 ; s3-87 >
-    au < biologists.BiologistsDrupalPlugin ; exists ; 1947 ; The Quarterly Journal of Microscopical Science Volume s3-88 ; s3-88 >
-    au < biologists.BiologistsDrupalPlugin ; exists ; 1948 ; The Quarterly Journal of Microscopical Science Volume s3-89 ; s3-89 >
-    au < biologists.BiologistsDrupalPlugin ; exists ; 1949 ; The Quarterly Journal of Microscopical Science Volume s3-90 ; s3-90 >
-    au < biologists.BiologistsDrupalPlugin ; exists ; 1950 ; The Quarterly Journal of Microscopical Science Volume s3-91 ; s3-91 >
-    au < biologists.BiologistsDrupalPlugin ; exists ; 1951 ; The Quarterly Journal of Microscopical Science Volume s3-92 ; s3-92 >
-    au < biologists.BiologistsDrupalPlugin ; exists ; 1952 ; The Quarterly Journal of Microscopical Science Volume s3-93 ; s3-93 >
-    au < biologists.BiologistsDrupalPlugin ; exists ; 1953 ; The Quarterly Journal of Microscopical Science Volume s3-94 ; s3-94 >
-    au < biologists.BiologistsDrupalPlugin ; exists ; 1954 ; The Quarterly Journal of Microscopical Science Volume s3-95 ; s3-95 >
-    au < biologists.BiologistsDrupalPlugin ; exists ; 1955 ; The Quarterly Journal of Microscopical Science Volume s3-96 ; s3-96 >
-    au < biologists.BiologistsDrupalPlugin ; exists ; 1956 ; The Quarterly Journal of Microscopical Science Volume s3-97 ; s3-97 >
-    au < biologists.BiologistsDrupalPlugin ; exists ; 1957 ; The Quarterly Journal of Microscopical Science Volume s3-98 ; s3-98 >
-    au < biologists.BiologistsDrupalPlugin ; exists ; 1958 ; The Quarterly Journal of Microscopical Science Volume s3-99 ; s3-99 >
-    au < biologists.BiologistsDrupalPlugin ; exists ; 1959 ; The Quarterly Journal of Microscopical Science Volume s3-100 ; s3-100 >
-    au < biologists.BiologistsDrupalPlugin ; exists ; 1960 ; The Quarterly Journal of Microscopical Science Volume s3-101 ; s3-101 >
-    au < biologists.BiologistsDrupalPlugin ; exists ; 1961 ; The Quarterly Journal of Microscopical Science Volume s3-102 ; s3-102 >
-    au < biologists.BiologistsDrupalPlugin ; exists ; 1962 ; The Quarterly Journal of Microscopical Science Volume s3-103 ; s3-103 >
-    au < biologists.BiologistsDrupalPlugin ; exists ; 1963 ; The Quarterly Journal of Microscopical Science Volume s3-104 ; s3-104 >
-    au < biologists.BiologistsDrupalPlugin ; exists ; 1964 ; The Quarterly Journal of Microscopical Science Volume s3-105 ; s3-105 >
-    au < biologists.BiologistsDrupalPlugin ; exists ; 1965 ; The Quarterly Journal of Microscopical Science Volume s3-106 ; s3-106 >
+    au < biologists.BiologistsDrupalPlugin ; manifest ; 1947 ; The Quarterly Journal of Microscopical Science Volume s3-88 ; s3-88 >
+    au < biologists.BiologistsDrupalPlugin ; manifest ; 1948 ; The Quarterly Journal of Microscopical Science Volume s3-89 ; s3-89 >
+    au < biologists.BiologistsDrupalPlugin ; manifest ; 1949 ; The Quarterly Journal of Microscopical Science Volume s3-90 ; s3-90 >
+    au < biologists.BiologistsDrupalPlugin ; manifest ; 1950 ; The Quarterly Journal of Microscopical Science Volume s3-91 ; s3-91 >
+    au < biologists.BiologistsDrupalPlugin ; manifest ; 1951 ; The Quarterly Journal of Microscopical Science Volume s3-92 ; s3-92 >
+    au < biologists.BiologistsDrupalPlugin ; manifest ; 1952 ; The Quarterly Journal of Microscopical Science Volume s3-93 ; s3-93 >
+    au < biologists.BiologistsDrupalPlugin ; manifest ; 1953 ; The Quarterly Journal of Microscopical Science Volume s3-94 ; s3-94 >
+    au < biologists.BiologistsDrupalPlugin ; manifest ; 1954 ; The Quarterly Journal of Microscopical Science Volume s3-95 ; s3-95 >
+    au < biologists.BiologistsDrupalPlugin ; manifest ; 1955 ; The Quarterly Journal of Microscopical Science Volume s3-96 ; s3-96 >
+    au < biologists.BiologistsDrupalPlugin ; manifest ; 1956 ; The Quarterly Journal of Microscopical Science Volume s3-97 ; s3-97 >
+    au < biologists.BiologistsDrupalPlugin ; manifest ; 1957 ; The Quarterly Journal of Microscopical Science Volume s3-98 ; s3-98 >
+    au < biologists.BiologistsDrupalPlugin ; manifest ; 1958 ; The Quarterly Journal of Microscopical Science Volume s3-99 ; s3-99 >
+    au < biologists.BiologistsDrupalPlugin ; manifest ; 1959 ; The Quarterly Journal of Microscopical Science Volume s3-100 ; s3-100 >
+    au < biologists.BiologistsDrupalPlugin ; manifest ; 1960 ; The Quarterly Journal of Microscopical Science Volume s3-101 ; s3-101 >
+    au < biologists.BiologistsDrupalPlugin ; manifest ; 1961 ; The Quarterly Journal of Microscopical Science Volume s3-102 ; s3-102 >
+    au < biologists.BiologistsDrupalPlugin ; manifest ; 1962 ; The Quarterly Journal of Microscopical Science Volume s3-103 ; s3-103 >
+    au < biologists.BiologistsDrupalPlugin ; manifest ; 1963 ; The Quarterly Journal of Microscopical Science Volume s3-104 ; s3-104 >
+    au < biologists.BiologistsDrupalPlugin ; manifest ; 1964 ; The Quarterly Journal of Microscopical Science Volume s3-105 ; s3-105 >
+    au < biologists.BiologistsDrupalPlugin ; manifest ; 1965 ; The Quarterly Journal of Microscopical Science Volume s3-106 ; s3-106 >
     
     au < HighWirePressPlugin ; down ; 1966 ; Journal of Cell Science Volume 1 ; 1 >
     au < HighWirePressPlugin ; down ; 1967 ; Journal of Cell Science Volume 2 ; 2 >
@@ -385,10 +385,10 @@
     au < HighWirePressPlugin ; superseded ; 2008 ; Journal of Cell Science Volume 121 [superseded] ; 121 >
     au < HighWirePressPlugin ; superseded ; 2009 ; Journal of Cell Science Volume 122 [superseded] ; 122 >
     
-    au < biologists.BiologistsDrupalPlugin ; exists ; 1995 ; Journal of Cell Science Volume 108 ; 108 >
-    au < biologists.BiologistsDrupalPlugin ; exists ; 1996 ; Journal of Cell Science Volume 109 ; 109 >
-    au < biologists.BiologistsDrupalPlugin ; exists ; 1997 ; Journal of Cell Science Volume 110 ; 110 >
-    au < biologists.BiologistsDrupalPlugin ; exists ; 1998 ; Journal of Cell Science Volume 111 ; 111 >
+    au < biologists.BiologistsDrupalPlugin ; manifest ; 1995 ; Journal of Cell Science Volume 108 ; 108 >
+    au < biologists.BiologistsDrupalPlugin ; manifest ; 1996 ; Journal of Cell Science Volume 109 ; 109 >
+    au < biologists.BiologistsDrupalPlugin ; manifest ; 1997 ; Journal of Cell Science Volume 110 ; 110 >
+    au < biologists.BiologistsDrupalPlugin ; manifest ; 1998 ; Journal of Cell Science Volume 111 ; 111 >
     au < biologists.BiologistsDrupalPlugin ; manifest ; 1999 ; Journal of Cell Science Volume 112 ; 112 >
     au < biologists.BiologistsDrupalPlugin ; released ; 2000 ; Journal of Cell Science Volume 113 ; 113 >
     au < biologists.BiologistsDrupalPlugin ; released ; 2001 ; Journal of Cell Science Volume 114 ; 114 >
@@ -638,10 +638,10 @@
     au < HighWirePressPlugin ; superseded ; 2008 ; Journal of Experimental Biology Volume 211 [superseded] ; 211 >
     au < HighWirePressPlugin ; superseded ; 2009 ; Journal of Experimental Biology Volume 212 [superseded] ; 212 >
     
-    au < biologists.BiologistsDrupalPlugin ; exists ; 1995 ; Journal of Experimental Biology Volume 198 ; 198 >
+    au < biologists.BiologistsDrupalPlugin ; manifest ; 1995 ; Journal of Experimental Biology Volume 198 ; 198 >
     au < HighWirePressH20Plugin ; down ; 1996 ; Journal of Experimental Biology Volume 199 ; 199 >
-    au < biologists.BiologistsDrupalPlugin ; exists ; 1997 ; Journal of Experimental Biology Volume 200 ; 200 >
-    au < biologists.BiologistsDrupalPlugin ; exists ; 1998 ; Journal of Experimental Biology Volume 201 ; 201 >
+    au < biologists.BiologistsDrupalPlugin ; manifest ; 1997 ; Journal of Experimental Biology Volume 200 ; 200 >
+    au < biologists.BiologistsDrupalPlugin ; manifest ; 1998 ; Journal of Experimental Biology Volume 201 ; 201 >
     au < biologists.BiologistsDrupalPlugin ; manifest ; 1999 ; Journal of Experimental Biology Volume 202 ; 202 >
     au < biologists.BiologistsDrupalPlugin ; released ; 2000 ; Journal of Experimental Biology Volume 203 ; 203 >
     au < biologists.BiologistsDrupalPlugin ; released ; 2001 ; Journal of Experimental Biology Volume 204 ; 204 >
