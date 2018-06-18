@@ -7,6 +7,7 @@
   plugin = org.lockss.plugin.atypon.aps.AmPhysSocAtyponPlugin
   #pluginPrefix = org.lockss.plugin.highwire.
   implicit < status ; year ; name ; param[volume_name] >
+  param[base_url] = https://www.physiology.org/
   #Moved to Atypon ~ Jan 2018.
   
   {
@@ -19,7 +20,8 @@
       issnl = 1043-4046
     >
 
-    param[base_url] = http://advan.physiology.org/
+#    param[base_url] = http://advan.physiology.org/
+    param[journal_id] = advances
 
     {
 
@@ -78,7 +80,8 @@
       issnl = 0002-9513
     >
 
-    param[base_url] = http://ajplegacy.physiology.org/
+#    param[base_url] = http://ajplegacy.physiology.org/
+    param[journal_id] = ajplegacy
     
     au < doNotProcess ; 1898 ; American Journal of Physiology Volume 1 ; 1 >
     au < doNotProcess ; 1898-1899 ; American Journal of Physiology Volume 2 ; 2 >
@@ -323,11 +326,10 @@
       issnl = 0363-6143
     >
     
-    param[base_url] = http://ajpcell.physiology.org/
+#    param[base_url] = http://ajpcell.physiology.org/
+    param[journal_id] = ajpcell
 
     {
-    
-      comment[notReady] = manifest page is up, but the links are not working
     
       au < doNotProcess ; 1977 ; American Journal of Physiology - Cell Physiology Volume 232 ; 232 >
       au < doNotProcess ; 1977 ; American Journal of Physiology - Cell Physiology Volume 233 ; 233 >
@@ -427,7 +429,8 @@
       issnl = 0193-1849
     >
 
-    param[base_url] = http://ajpendo.physiology.org/
+#    param[base_url] = http://ajpendo.physiology.org/
+    param[journal_id] = ajpendo
 
     {
 
@@ -529,7 +532,8 @@
       issnl = 0193-1857
     >
 
-    param[base_url] = http://ajpgi.physiology.org/
+#    param[base_url] = http://ajpgi.physiology.org/
+    param[journal_id] = ajpgi
 
     {
 
@@ -631,7 +635,8 @@
       issnl = 0363-6135
     >
 
-    param[base_url] = http://ajpheart.physiology.org/
+#    param[base_url] = http://ajpheart.physiology.org/
+    param[journal_id] = ajpheart
 
     {
 
@@ -733,7 +738,8 @@
       issnl = 1040-0605
     >
 
-    param[base_url] = http://ajplung.physiology.org/
+#    param[base_url] = http://ajplung.physiology.org/
+    param[journal_id] = ajplung
 
     {
 
@@ -810,7 +816,8 @@
       issnl = 0363-6119
     >
 
-    param[base_url] = http://ajpregu.physiology.org/
+#    param[base_url] = http://ajpregu.physiology.org/
+    param[journal_id] = ajpregu
 
     {
 
@@ -911,7 +918,8 @@
       eissn = 1522-1466
     >
 
-    param[base_url] = http://ajprenal.physiology.org/
+#    param[base_url] = http://ajprenal.physiology.org/
+    param[journal_id] = ajprenal
     # other possible issn 0363-6127
     {
 
@@ -1013,7 +1021,8 @@
       issnl = 0161-7567
     >
 
-    param[base_url] = http://jap.physiology.org/
+#    param[base_url] = http://jap.physiology.org/
+    param[journal_id] = jappl
 
     {
 
@@ -1156,7 +1165,8 @@
       issnl = 0022-3077
     >
 
-    param[base_url] = http://jn.physiology.org/
+#    param[base_url] = http://jn.physiology.org/
+    param[journal_id] = jn
 
     {
 
@@ -1294,7 +1304,8 @@
       issnl = 1094-8341
     >
 
-    param[base_url] = http://physiolgenomics.physiology.org/
+#    param[base_url] = http://physiolgenomics.physiology.org/
+    param[journal_id] = physiolgenomics
 
     {
 
@@ -1363,7 +1374,8 @@
       issnl = 0031-9333
     >
 
-    param[base_url] = http://physrev.physiology.org/
+#    param[base_url] = http://physrev.physiology.org/
+    param[journal_id] = physrev
 
     {
 
@@ -1479,7 +1491,8 @@
       issnl = 1548-9221
     >
 
-    param[base_url] = http://physiologyonline.physiology.org/
+#    param[base_url] = http://physiologyonline.physiology.org/
+    param[journal_id] = physiologyonline
 
     {
 
