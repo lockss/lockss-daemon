@@ -566,7 +566,7 @@ while (my $line = <>) {
                     }
                 }
             } else {
-                $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();;
+                $result = "--REQ_FAIL--"
             }
         }
         sleep(4);
@@ -629,7 +629,7 @@ while (my $line = <>) {
          $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+      $result = "--REQ_FAIL--"
     }
         sleep(4);
 
@@ -684,7 +684,7 @@ while (my $line = <>) {
           }
         } else {
           #printf("URL: %s\n", $man_url);
-          $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+          $result = "--REQ_FAIL--"
         }
       } else {
         #printf("URL: %s\n", $perm_url);
@@ -1785,7 +1785,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+      $result = "--REQ_FAIL--"
     }
     sleep(4);
 
@@ -1821,7 +1821,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+      $result = "--REQ_FAIL--"
     }
     sleep(4);
 
@@ -2135,7 +2135,7 @@ while (my $line = <>) {
         $result = "--NO_TAG--"
       }
     } else {
-      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+      $result = "--REQ_FAIL--"
     }
     sleep(4);
 
@@ -2708,7 +2708,7 @@ while (my $line = <>) {
           }
         } else {
           #printf("URL: %s\n", $man_url);
-          $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+          $result = "--REQ_FAIL--"
         }
       } else {
         #printf("URL: %s\n", $perm_url);
