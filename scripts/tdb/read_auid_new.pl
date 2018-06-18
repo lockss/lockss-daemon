@@ -442,7 +442,8 @@ while (my $line = <>) {
   }
         sleep(4);
 
-  } elsif ($plugin eq "OJS2Plugin" || $plugin eq "CoActionPublishingPlugin") {
+#  } elsif ($plugin eq "OJS2Plugin" || $plugin eq "CoActionPublishingPlugin") {
+  } elsif ($plugin eq "OJS2Plugin") {
         $url = sprintf("%sindex.php/%s/gateway/lockss?year=%d",
             $param{base_url}, $param{journal_id}, $param{year});
         $man_url = uri_unescape($url);
@@ -609,30 +610,30 @@ while (my $line = <>) {
         }
         sleep(4);
 
-  } elsif ($plugin eq "ClockssCoActionPublishingPlugin") {
-        #Url with list of urls for issues
-        $url = sprintf("%sindex.php/%s/gateway/lockss?year=%d",
-            $param{base_url}, $param{journal_id}, $param{year});
-        $start_url = uri_unescape($url);
-        my $req_s = HTTP::Request->new(GET, $start_url);
-        my $resp_s = $ua->request($req_s);
-        #For reporting at the end
-        $man_url = $start_url ;
-    if ($resp_s->is_success) {
-      my $start_contents = $resp_s->content;
-      if (defined($start_contents) && (($start_contents =~ m/$cc_license_tag/) && ($start_contents =~ m/$cc_license_url/)) && (($start_contents =~ m/\($param{year}\)/) || ($start_contents =~ m/: $param{year}/))) {
-         if ($start_contents =~ m/meta name=.description. content=.(.*) is an international/si) {
-            $vol_title = $1;
-        }
-         $result = "Manifest"
-      } else {
-         $result = "--NO_TAG--"
-      }
-    } else {
-      $result = "--REQ_FAIL--"
-    }
-        sleep(4);
-
+#  } elsif ($plugin eq "ClockssCoActionPublishingPlugin") {
+#        #Url with list of urls for issues
+#        $url = sprintf("%sindex.php/%s/gateway/lockss?year=%d",
+#            $param{base_url}, $param{journal_id}, $param{year});
+#        $start_url = uri_unescape($url);
+#        my $req_s = HTTP::Request->new(GET, $start_url);
+#        my $resp_s = $ua->request($req_s);
+#        #For reporting at the end
+#        $man_url = $start_url ;
+#    if ($resp_s->is_success) {
+#      my $start_contents = $resp_s->content;
+#      if (defined($start_contents) && (($start_contents =~ m/$cc_license_tag/) && ($start_contents =~ m/$cc_license_url/)) && (($start_contents =~ m/\($param{year}\)/) || ($start_contents =~ m/: $param{year}/))) {
+#         if ($start_contents =~ m/meta name=.description. content=.(.*) is an international/si) {
+#            $vol_title = $1;
+#        }
+#         $result = "Manifest"
+#      } else {
+#         $result = "--NO_TAG--"
+#      }
+#    } else {
+#      $result = "--REQ_FAIL--"
+#    }
+#        sleep(4);
+#
 #  } elsif ($plugin eq "PensoftPlugin" || $plugin eq "ClockssPensoftPlugin") {
 #        #Url with list of urls for issues
 #        $url = sprintf("%sjournals/%s/archive?year=%d",
