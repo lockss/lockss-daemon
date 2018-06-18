@@ -22,8 +22,8 @@
       au < HighWirePressH20Plugin ; released ; 2013 ; Journal of the American Heart Association Volume 2 ; 2 >
       au < HighWirePressH20Plugin ; released ; 2014 ; Journal of the American Heart Association Volume 3 ; 3 >
       au < HighWirePressH20Plugin ; released ; 2015 ; Journal of the American Heart Association Volume 4 ; 4 >
-      au < aha.AHADrupalPlugin ; manifest ; 2016 ; Journal of the American Heart Association Volume 5 ; 5 >
-      au < aha.AHADrupalPlugin ; manifest ; 2017 ; Journal of the American Heart Association Volume 6 ; 6 >
+      au < aha.AHADrupalPlugin ; testing ; 2016 ; Journal of the American Heart Association Volume 5 ; 5 >
+      au < aha.AHADrupalPlugin ; testing ; 2017 ; Journal of the American Heart Association Volume 6 ; 6 >
       au < aha.AHADrupalPlugin ; manifest ; 2018 ; Journal of the American Heart Association Volume 7 ; 7 >
 
     }
@@ -79,7 +79,7 @@
       au < HighWirePressH20Plugin ; down ; 2014 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 34 ; 34 >
       au < HighWirePressH20Plugin ; down ; 2015 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 35 ; 35 >
       au < aha.AHADrupalPlugin ; released ; 2016 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 36 ; 36 >
-      au < aha.AHADrupalPlugin ; manifest ; 2017 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 37 ; 37 >
+      au < aha.AHADrupalPlugin ; testing ; 2017 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 37 ; 37 >
       au < aha.AHADrupalPlugin ; manifest ; 2018 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 38 ; 38 >
 
     }
@@ -159,26 +159,26 @@
       au < aha.AHADrupalPlugin ; manifest ; 1978 ; Circulation Volume 58 ; 58 >
       au < aha.AHADrupalPlugin ; manifest ; 1979 ; Circulation Volume 59 ; 59 >
       au < aha.AHADrupalPlugin ; manifest ; 1979 ; Circulation Volume 60 ; 60 >
-      au < aha.AHADrupalPlugin ; manifest ; 1980 ; Circulation Volume 61 ; 61 >
-      au < aha.AHADrupalPlugin ; manifest ; 1980 ; Circulation Volume 62 ; 62 >
-      au < aha.AHADrupalPlugin ; manifest ; 1981 ; Circulation Volume 63 ; 63 >
-      au < aha.AHADrupalPlugin ; manifest ; 1981 ; Circulation Volume 64 ; 64 >
-      au < aha.AHADrupalPlugin ; manifest ; 1982 ; Circulation Volume 65 ; 65 >
-      au < aha.AHADrupalPlugin ; manifest ; 1982 ; Circulation Volume 66 ; 66 >
-      au < aha.AHADrupalPlugin ; manifest ; 1983 ; Circulation Volume 67 ; 67 >
-      au < aha.AHADrupalPlugin ; manifest ; 1983 ; Circulation Volume 68 ; 68 >
-      au < aha.AHADrupalPlugin ; manifest ; 1984 ; Circulation Volume 69 ; 69 >
-      au < aha.AHADrupalPlugin ; manifest ; 1984 ; Circulation Volume 70 ; 70 >
-      au < aha.AHADrupalPlugin ; manifest ; 1985 ; Circulation Volume 71 ; 71 >
-      au < aha.AHADrupalPlugin ; manifest ; 1985 ; Circulation Volume 72 ; 72 >
-      au < aha.AHADrupalPlugin ; manifest ; 1986 ; Circulation Volume 73 ; 73 >
-      au < aha.AHADrupalPlugin ; manifest ; 1986 ; Circulation Volume 74 ; 74 >
-      au < aha.AHADrupalPlugin ; manifest ; 1987 ; Circulation Volume 75 ; 75 >
-      au < aha.AHADrupalPlugin ; manifest ; 1987 ; Circulation Volume 76 ; 76 >
-      au < aha.AHADrupalPlugin ; manifest ; 1988 ; Circulation Volume 77 ; 77 >
-      au < aha.AHADrupalPlugin ; manifest ; 1988 ; Circulation Volume 78 ; 78 >
-      au < aha.AHADrupalPlugin ; manifest ; 1989 ; Circulation Volume 79 ; 79 >
-      au < aha.AHADrupalPlugin ; manifest ; 1989 ; Circulation Volume 80 ; 80 >
+      au < aha.AHADrupalPlugin ; testing ; 1980 ; Circulation Volume 61 ; 61 >
+      au < aha.AHADrupalPlugin ; testing ; 1980 ; Circulation Volume 62 ; 62 >
+      au < aha.AHADrupalPlugin ; testing ; 1981 ; Circulation Volume 63 ; 63 >
+      au < aha.AHADrupalPlugin ; testing ; 1981 ; Circulation Volume 64 ; 64 >
+      au < aha.AHADrupalPlugin ; testing ; 1982 ; Circulation Volume 65 ; 65 >
+      au < aha.AHADrupalPlugin ; testing ; 1982 ; Circulation Volume 66 ; 66 >
+      au < aha.AHADrupalPlugin ; testing ; 1983 ; Circulation Volume 67 ; 67 >
+      au < aha.AHADrupalPlugin ; testing ; 1983 ; Circulation Volume 68 ; 68 >
+      au < aha.AHADrupalPlugin ; testing ; 1984 ; Circulation Volume 69 ; 69 >
+      au < aha.AHADrupalPlugin ; testing ; 1984 ; Circulation Volume 70 ; 70 >
+      au < aha.AHADrupalPlugin ; testing ; 1985 ; Circulation Volume 71 ; 71 >
+      au < aha.AHADrupalPlugin ; testing ; 1985 ; Circulation Volume 72 ; 72 >
+      au < aha.AHADrupalPlugin ; testing ; 1986 ; Circulation Volume 73 ; 73 >
+      au < aha.AHADrupalPlugin ; testing ; 1986 ; Circulation Volume 74 ; 74 >
+      au < aha.AHADrupalPlugin ; testing ; 1987 ; Circulation Volume 75 ; 75 >
+      au < aha.AHADrupalPlugin ; testing ; 1987 ; Circulation Volume 76 ; 76 >
+      au < aha.AHADrupalPlugin ; testing ; 1988 ; Circulation Volume 77 ; 77 >
+      au < aha.AHADrupalPlugin ; testing ; 1988 ; Circulation Volume 78 ; 78 >
+      au < aha.AHADrupalPlugin ; testing ; 1989 ; Circulation Volume 79 ; 79 >
+      au < aha.AHADrupalPlugin ; testing ; 1989 ; Circulation Volume 80 ; 80 >
       au < HighWirePressH20Plugin ; down ; 1990 ; Circulation Volume 81 ; 81 >
       au < HighWirePressH20Plugin ; down ; 1990 ; Circulation Volume 82 ; 82 >
       au < HighWirePressH20Plugin ; down ; 1991 ; Circulation Volume 83 ; 83 >
@@ -231,10 +231,10 @@
       au < HighWirePressH20Plugin ; down ; 2014 ; Circulation Volume 130 ; 130 >
       au < HighWirePressH20Plugin ; down ; 2015 ; Circulation Volume 131 ; 131 >
       au < HighWirePressH20Plugin ; down ; 2015 ; Circulation Volume 132 ; 132 >
-      au < aha.AHADrupalPlugin ; manifest ; 2016 ; Circulation Volume 133 ; 133 >
-      au < aha.AHADrupalPlugin ; manifest ; 2016 ; Circulation Volume 134 ; 134 >
+      au < aha.AHADrupalPlugin ; testing ; 2016 ; Circulation Volume 133 ; 133 >
+      au < aha.AHADrupalPlugin ; testing ; 2016 ; Circulation Volume 134 ; 134 >
       au < aha.AHADrupalPlugin ; released ; 2017 ; Circulation Volume 135 ; 135 >
-      au < aha.AHADrupalPlugin ; manifest ; 2017 ; Circulation Volume 136 ; 136 >
+      au < aha.AHADrupalPlugin ; testing ; 2017 ; Circulation Volume 136 ; 136 >
       au < aha.AHADrupalPlugin ; manifest ; 2018 ; Circulation Volume 137 ; 137 >
       au < aha.AHADrupalPlugin ; expected ; 2018 ; Circulation Volume 138 ; 138 >
 
@@ -320,26 +320,26 @@
       au < aha.AHADrupalPlugin ; manifest ; 1988 ; Circulation Research Volume 63 ; 63 >
       au < aha.AHADrupalPlugin ; manifest ; 1989 ; Circulation Research Volume 64 ; 64 >
       au < aha.AHADrupalPlugin ; manifest ; 1989 ; Circulation Research Volume 65 ; 65 >
-      au < aha.AHADrupalPlugin ; manifest ; 1990 ; Circulation Research Volume 66 ; 66 >
-      au < aha.AHADrupalPlugin ; manifest ; 1990 ; Circulation Research Volume 67 ; 67 >
-      au < aha.AHADrupalPlugin ; manifest ; 1991 ; Circulation Research Volume 68 ; 68 >
-      au < aha.AHADrupalPlugin ; manifest ; 1991 ; Circulation Research Volume 69 ; 69 >
-      au < aha.AHADrupalPlugin ; manifest ; 1992 ; Circulation Research Volume 70 ; 70 >
-      au < aha.AHADrupalPlugin ; manifest ; 1992 ; Circulation Research Volume 71 ; 71 >
-      au < aha.AHADrupalPlugin ; manifest ; 1993 ; Circulation Research Volume 72 ; 72 >
-      au < aha.AHADrupalPlugin ; manifest ; 1993 ; Circulation Research Volume 73 ; 73 >
-      au < aha.AHADrupalPlugin ; manifest ; 1994 ; Circulation Research Volume 74 ; 74 >
-      au < aha.AHADrupalPlugin ; manifest ; 1994 ; Circulation Research Volume 75 ; 75 >
-      au < aha.AHADrupalPlugin ; manifest ; 1995 ; Circulation Research Volume 76 ; 76 >
-      au < aha.AHADrupalPlugin ; manifest ; 1995 ; Circulation Research Volume 77 ; 77 >
-      au < aha.AHADrupalPlugin ; manifest ; 1996 ; Circulation Research Volume 78 ; 78 >
-      au < aha.AHADrupalPlugin ; manifest ; 1996 ; Circulation Research Volume 79 ; 79 >
-      au < aha.AHADrupalPlugin ; manifest ; 1997 ; Circulation Research Volume 80 ; 80 >
-      au < aha.AHADrupalPlugin ; manifest ; 1997 ; Circulation Research Volume 81 ; 81 >
-      au < aha.AHADrupalPlugin ; manifest ; 1998 ; Circulation Research Volume 82 ; 82 >
-      au < aha.AHADrupalPlugin ; manifest ; 1998 ; Circulation Research Volume 83 ; 83 >
-      au < aha.AHADrupalPlugin ; manifest ; 1999 ; Circulation Research Volume 84 ; 84 >
-      au < aha.AHADrupalPlugin ; manifest ; 1999 ; Circulation Research Volume 85 ; 85 >
+      au < aha.AHADrupalPlugin ; testing ; 1990 ; Circulation Research Volume 66 ; 66 >
+      au < aha.AHADrupalPlugin ; testing ; 1990 ; Circulation Research Volume 67 ; 67 >
+      au < aha.AHADrupalPlugin ; testing ; 1991 ; Circulation Research Volume 68 ; 68 >
+      au < aha.AHADrupalPlugin ; testing ; 1991 ; Circulation Research Volume 69 ; 69 >
+      au < aha.AHADrupalPlugin ; testing ; 1992 ; Circulation Research Volume 70 ; 70 >
+      au < aha.AHADrupalPlugin ; testing ; 1992 ; Circulation Research Volume 71 ; 71 >
+      au < aha.AHADrupalPlugin ; testing ; 1993 ; Circulation Research Volume 72 ; 72 >
+      au < aha.AHADrupalPlugin ; testing ; 1993 ; Circulation Research Volume 73 ; 73 >
+      au < aha.AHADrupalPlugin ; testing ; 1994 ; Circulation Research Volume 74 ; 74 >
+      au < aha.AHADrupalPlugin ; testing ; 1994 ; Circulation Research Volume 75 ; 75 >
+      au < aha.AHADrupalPlugin ; testing ; 1995 ; Circulation Research Volume 76 ; 76 >
+      au < aha.AHADrupalPlugin ; testing ; 1995 ; Circulation Research Volume 77 ; 77 >
+      au < aha.AHADrupalPlugin ; testing ; 1996 ; Circulation Research Volume 78 ; 78 >
+      au < aha.AHADrupalPlugin ; testing ; 1996 ; Circulation Research Volume 79 ; 79 >
+      au < aha.AHADrupalPlugin ; testing ; 1997 ; Circulation Research Volume 80 ; 80 >
+      au < aha.AHADrupalPlugin ; testing ; 1997 ; Circulation Research Volume 81 ; 81 >
+      au < aha.AHADrupalPlugin ; testing ; 1998 ; Circulation Research Volume 82 ; 82 >
+      au < aha.AHADrupalPlugin ; testing ; 1998 ; Circulation Research Volume 83 ; 83 >
+      au < aha.AHADrupalPlugin ; testing ; 1999 ; Circulation Research Volume 84 ; 84 >
+      au < aha.AHADrupalPlugin ; testing ; 1999 ; Circulation Research Volume 85 ; 85 >
       au < HighWirePressH20Plugin ; down ; 2000 ; Circulation Research Volume 86 ; 86 >
       au < HighWirePressH20Plugin ; down ; 2000 ; Circulation Research Volume 87 ; 87 >
       au < HighWirePressH20Plugin ; down ; 2001 ; Circulation Research Volume 88 ; 88 >
@@ -372,10 +372,10 @@
       au < HighWirePressH20Plugin ; down ; 2014 ; Circulation Research Volume 115 ; 115 >
       au < HighWirePressH20Plugin ; down ; 2015 ; Circulation Research Volume 116 ; 116 >
       au < HighWirePressH20Plugin ; down ; 2015 ; Circulation Research Volume 117 ; 117 >
-      au < aha.AHADrupalPlugin ; manifest ; 2016 ; Circulation Research Volume 118 ; 118 >
-      au < aha.AHADrupalPlugin ; manifest ; 2016 ; Circulation Research Volume 119 ; 119 >
-      au < aha.AHADrupalPlugin ; manifest ; 2017 ; Circulation Research Volume 120 ; 120 >
-      au < aha.AHADrupalPlugin ; manifest ; 2017 ; Circulation Research Volume 121 ; 121 >
+      au < aha.AHADrupalPlugin ; testing ; 2016 ; Circulation Research Volume 118 ; 118 >
+      au < aha.AHADrupalPlugin ; testing ; 2016 ; Circulation Research Volume 119 ; 119 >
+      au < aha.AHADrupalPlugin ; testing ; 2017 ; Circulation Research Volume 120 ; 120 >
+      au < aha.AHADrupalPlugin ; testing ; 2017 ; Circulation Research Volume 121 ; 121 >
       au < aha.AHADrupalPlugin ; manifest ; 2018 ; Circulation Research Volume 122 ; 122 >
       au < aha.AHADrupalPlugin ; expected ; 2018 ; Circulation Research Volume 123 ; 123 >
 
@@ -404,8 +404,8 @@
       au < HighWirePressH20Plugin ; released ; 2013 ; Circulation: Arrhythmia and Electrophysiology Volume 6 ; 6 >
       au < HighWirePressH20Plugin ; released ; 2014 ; Circulation: Arrhythmia and Electrophysiology Volume 7 ; 7 >
       au < HighWirePressH20Plugin ; released ; 2015 ; Circulation: Arrhythmia and Electrophysiology Volume 8 ; 8 >
-      au < aha.AHADrupalPlugin ; manifest ; 2016 ; Circulation: Arrhythmia and Electrophysiology Volume 9 ; 9 >
-      au < aha.AHADrupalPlugin ; manifest ; 2017 ; Circulation: Arrhythmia and Electrophysiology Volume 10 ; 10 >
+      au < aha.AHADrupalPlugin ; testing ; 2016 ; Circulation: Arrhythmia and Electrophysiology Volume 9 ; 9 >
+      au < aha.AHADrupalPlugin ; testing ; 2017 ; Circulation: Arrhythmia and Electrophysiology Volume 10 ; 10 >
       au < aha.AHADrupalPlugin ; manifest ; 2018 ; Circulation: Arrhythmia and Electrophysiology Volume 11 ; 11 >
 
     }
@@ -433,8 +433,8 @@
       au < HighWirePressH20Plugin ; released ; 2013 ; Circulation: Cardiovascular Genetics Volume 6 ; 6 >
       au < HighWirePressH20Plugin ; released ; 2014 ; Circulation: Cardiovascular Genetics Volume 7 ; 7 >
       au < HighWirePressH20Plugin ; released ; 2015 ; Circulation: Cardiovascular Genetics Volume 8 ; 8 >
-      au < aha.AHADrupalPlugin ; manifest ; 2016 ; Circulation: Cardiovascular Genetics Volume 9 ; 9 >
-      au < aha.AHADrupalPlugin ; manifest ; 2017 ; Circulation: Cardiovascular Genetics Volume 10 ; 10 >
+      au < aha.AHADrupalPlugin ; testing ; 2016 ; Circulation: Cardiovascular Genetics Volume 9 ; 9 >
+      au < aha.AHADrupalPlugin ; testing ; 2017 ; Circulation: Cardiovascular Genetics Volume 10 ; 10 >
       au < aha.AHADrupalPlugin ; manifest ; 2018 ; Circulation: Cardiovascular Genetics Volume 11 ; 11 >
 
     }
@@ -462,8 +462,8 @@
       au < HighWirePressH20Plugin ; released ; 2013 ; Circulation: Cardiovascular Imaging Volume 6 ; 6 >
       au < HighWirePressH20Plugin ; released ; 2014 ; Circulation: Cardiovascular Imaging Volume 7 ; 7 >
       au < HighWirePressH20Plugin ; released ; 2015 ; Circulation: Cardiovascular Imaging Volume 8 ; 8 >
-      au < aha.AHADrupalPlugin ; manifest ; 2016 ; Circulation: Cardiovascular Imaging Volume 9 ; 9 >
-      au < aha.AHADrupalPlugin ; manifest ; 2017 ; Circulation: Cardiovascular Imaging Volume 10 ; 10 >
+      au < aha.AHADrupalPlugin ; testing ; 2016 ; Circulation: Cardiovascular Imaging Volume 9 ; 9 >
+      au < aha.AHADrupalPlugin ; testing ; 2017 ; Circulation: Cardiovascular Imaging Volume 10 ; 10 >
       au < aha.AHADrupalPlugin ; manifest ; 2018 ; Circulation: Cardiovascular Imaging Volume 11 ; 11 >
 
     }
@@ -491,8 +491,8 @@
       au < HighWirePressH20Plugin ; released ; 2013 ; Circulation: Cardiovascular Interventions Volume 6 ; 6 >
       au < HighWirePressH20Plugin ; released ; 2014 ; Circulation: Cardiovascular Interventions Volume 7 ; 7 >
       au < HighWirePressH20Plugin ; released ; 2015 ; Circulation: Cardiovascular Interventions Volume 8 ; 8 >
-      au < aha.AHADrupalPlugin ; manifest ; 2016 ; Circulation: Cardiovascular Interventions Volume 9 ; 9 >
-      au < aha.AHADrupalPlugin ; manifest ; 2017 ; Circulation: Cardiovascular Interventions Volume 10 ; 10 >
+      au < aha.AHADrupalPlugin ; testing ; 2016 ; Circulation: Cardiovascular Interventions Volume 9 ; 9 >
+      au < aha.AHADrupalPlugin ; testing ; 2017 ; Circulation: Cardiovascular Interventions Volume 10 ; 10 >
       au < aha.AHADrupalPlugin ; manifest ; 2018 ; Circulation: Cardiovascular Interventions Volume 11 ; 11 >
 
     }
@@ -520,8 +520,8 @@
       au < HighWirePressH20Plugin ; released ; 2013 ; Circulation: Cardiovascular Quality and Outcomes Volume 6 ; 6 >
       au < HighWirePressH20Plugin ; released ; 2014 ; Circulation: Cardiovascular Quality and Outcomes Volume 7 ; 7 >
       au < HighWirePressH20Plugin ; released ; 2015 ; Circulation: Cardiovascular Quality and Outcomes Volume 8 ; 8 >
-      au < aha.AHADrupalPlugin ; manifest ; 2016 ; Circulation: Cardiovascular Quality and Outcomes Volume 9 ; 9 >
-      au < aha.AHADrupalPlugin ; manifest ; 2017 ; Circulation: Cardiovascular Quality and Outcomes Volume 10 ; 10 >
+      au < aha.AHADrupalPlugin ; testing ; 2016 ; Circulation: Cardiovascular Quality and Outcomes Volume 9 ; 9 >
+      au < aha.AHADrupalPlugin ; testing ; 2017 ; Circulation: Cardiovascular Quality and Outcomes Volume 10 ; 10 >
       au < aha.AHADrupalPlugin ; manifest ; 2018 ; Circulation: Cardiovascular Quality and Outcomes Volume 11 ; 11 >
 
     }
@@ -549,8 +549,8 @@
       au < HighWirePressH20Plugin ; released ; 2013 ; Circulation: Heart Failure Volume 6 ; 6 >
       au < HighWirePressH20Plugin ; released ; 2014 ; Circulation: Heart Failure Volume 7 ; 7 >
       au < HighWirePressH20Plugin ; released ; 2015 ; Circulation: Heart Failure Volume 8 ; 8 >
-      au < aha.AHADrupalPlugin ; manifest ; 2016 ; Circulation: Heart Failure Volume 9 ; 9 >
-      au < aha.AHADrupalPlugin ; manifest ; 2017 ; Circulation: Heart Failure Volume 10 ; 10 >
+      au < aha.AHADrupalPlugin ; testing ; 2016 ; Circulation: Heart Failure Volume 9 ; 9 >
+      au < aha.AHADrupalPlugin ; testing ; 2017 ; Circulation: Heart Failure Volume 10 ; 10 >
       au < aha.AHADrupalPlugin ; manifest ; 2018 ; Circulation: Heart Failure Volume 11 ; 11 >
 
     }
@@ -584,26 +584,26 @@
       au < aha.AHADrupalPlugin ; manifest ; 1988 ; Hypertension Volume 12 ; 12 >
       au < aha.AHADrupalPlugin ; manifest ; 1989 ; Hypertension Volume 13 ; 13 >
       au < aha.AHADrupalPlugin ; manifest ; 1989 ; Hypertension Volume 14 ; 14 >
-      au < aha.AHADrupalPlugin ; manifest ; 1990 ; Hypertension Volume 15 ; 15 >
-      au < aha.AHADrupalPlugin ; manifest ; 1990 ; Hypertension Volume 16 ; 16 >
-      au < aha.AHADrupalPlugin ; manifest ; 1991 ; Hypertension Volume 17 ; 17 >
-      au < aha.AHADrupalPlugin ; manifest ; 1991 ; Hypertension Volume 18 ; 18 >
-      au < aha.AHADrupalPlugin ; manifest ; 1992 ; Hypertension Volume 19 ; 19 >
-      au < aha.AHADrupalPlugin ; manifest ; 1992 ; Hypertension Volume 20 ; 20 >
-      au < aha.AHADrupalPlugin ; manifest ; 1993 ; Hypertension Volume 21 ; 21 >
-      au < aha.AHADrupalPlugin ; manifest ; 1993 ; Hypertension Volume 22 ; 22 >
-      au < aha.AHADrupalPlugin ; manifest ; 1994 ; Hypertension Volume 23 ; 23 >
-      au < aha.AHADrupalPlugin ; manifest ; 1994 ; Hypertension Volume 24 ; 24 >
-      au < aha.AHADrupalPlugin ; manifest ; 1995 ; Hypertension Volume 25 ; 25 >
-      au < aha.AHADrupalPlugin ; manifest ; 1995 ; Hypertension Volume 26 ; 26 >
-      au < aha.AHADrupalPlugin ; manifest ; 1996 ; Hypertension Volume 27 ; 27 >
-      au < aha.AHADrupalPlugin ; manifest ; 1996 ; Hypertension Volume 28 ; 28 >
-      au < aha.AHADrupalPlugin ; manifest ; 1997 ; Hypertension Volume 29 ; 29 >
-      au < aha.AHADrupalPlugin ; manifest ; 1997 ; Hypertension Volume 30 ; 30 >
-      au < aha.AHADrupalPlugin ; manifest ; 1998 ; Hypertension Volume 31 ; 31 >
-      au < aha.AHADrupalPlugin ; manifest ; 1998 ; Hypertension Volume 32 ; 32 >
-      au < aha.AHADrupalPlugin ; manifest ; 1999 ; Hypertension Volume 33 ; 33 >
-      au < aha.AHADrupalPlugin ; manifest ; 1999 ; Hypertension Volume 34 ; 34 >
+      au < aha.AHADrupalPlugin ; testing ; 1990 ; Hypertension Volume 15 ; 15 >
+      au < aha.AHADrupalPlugin ; testing ; 1990 ; Hypertension Volume 16 ; 16 >
+      au < aha.AHADrupalPlugin ; testing ; 1991 ; Hypertension Volume 17 ; 17 >
+      au < aha.AHADrupalPlugin ; testing ; 1991 ; Hypertension Volume 18 ; 18 >
+      au < aha.AHADrupalPlugin ; testing ; 1992 ; Hypertension Volume 19 ; 19 >
+      au < aha.AHADrupalPlugin ; testing ; 1992 ; Hypertension Volume 20 ; 20 >
+      au < aha.AHADrupalPlugin ; testing ; 1993 ; Hypertension Volume 21 ; 21 >
+      au < aha.AHADrupalPlugin ; testing ; 1993 ; Hypertension Volume 22 ; 22 >
+      au < aha.AHADrupalPlugin ; testing ; 1994 ; Hypertension Volume 23 ; 23 >
+      au < aha.AHADrupalPlugin ; testing ; 1994 ; Hypertension Volume 24 ; 24 >
+      au < aha.AHADrupalPlugin ; testing ; 1995 ; Hypertension Volume 25 ; 25 >
+      au < aha.AHADrupalPlugin ; testing ; 1995 ; Hypertension Volume 26 ; 26 >
+      au < aha.AHADrupalPlugin ; testing ; 1996 ; Hypertension Volume 27 ; 27 >
+      au < aha.AHADrupalPlugin ; testing ; 1996 ; Hypertension Volume 28 ; 28 >
+      au < aha.AHADrupalPlugin ; testing ; 1997 ; Hypertension Volume 29 ; 29 >
+      au < aha.AHADrupalPlugin ; testing ; 1997 ; Hypertension Volume 30 ; 30 >
+      au < aha.AHADrupalPlugin ; testing ; 1998 ; Hypertension Volume 31 ; 31 >
+      au < aha.AHADrupalPlugin ; testing ; 1998 ; Hypertension Volume 32 ; 32 >
+      au < aha.AHADrupalPlugin ; testing ; 1999 ; Hypertension Volume 33 ; 33 >
+      au < aha.AHADrupalPlugin ; testing ; 1999 ; Hypertension Volume 34 ; 34 >
       au < HighWirePressH20Plugin ; down ; 2000 ; Hypertension Volume 35 ; 35 >
       au < HighWirePressH20Plugin ; down ; 2000 ; Hypertension Volume 36 ; 36 >
       au < HighWirePressH20Plugin ; down ; 2001 ; Hypertension Volume 37 ; 37 >
@@ -636,10 +636,10 @@
       au < HighWirePressH20Plugin ; down ; 2014 ; Hypertension Volume 64 ; 64 >
       au < HighWirePressH20Plugin ; down ; 2015 ; Hypertension Volume 65 ; 65 >
       au < HighWirePressH20Plugin ; down ; 2015 ; Hypertension Volume 66 ; 66 >
-      au < aha.AHADrupalPlugin ; manifest ; 2016 ; Hypertension Volume 67 ; 67 >
-      au < aha.AHADrupalPlugin ; manifest ; 2016 ; Hypertension Volume 68 ; 68 >
-      au < aha.AHADrupalPlugin ; manifest ; 2017 ; Hypertension Volume 69 ; 69 >
-      au < aha.AHADrupalPlugin ; manifest ; 2017 ; Hypertension Volume 70 ; 70 >
+      au < aha.AHADrupalPlugin ; testing ; 2016 ; Hypertension Volume 67 ; 67 >
+      au < aha.AHADrupalPlugin ; testing ; 2016 ; Hypertension Volume 68 ; 68 >
+      au < aha.AHADrupalPlugin ; testing ; 2017 ; Hypertension Volume 69 ; 69 >
+      au < aha.AHADrupalPlugin ; testing ; 2017 ; Hypertension Volume 70 ; 70 >
       au < aha.AHADrupalPlugin ; manifest ; 2018 ; Hypertension Volume 71 ; 71 >
       au < aha.AHADrupalPlugin ; expected ; 2018 ; Hypertension Volume 72 ; 72 >
 
@@ -680,16 +680,16 @@
       au < aha.AHADrupalPlugin ; manifest ; 1987 ; Stroke Volume 18 ; 18 >
       au < aha.AHADrupalPlugin ; manifest ; 1988 ; Stroke Volume 19 ; 19 >
       au < aha.AHADrupalPlugin ; manifest ; 1989 ; Stroke Volume 20 ; 20 >
-      au < aha.AHADrupalPlugin ; manifest ; 1980 ; Stroke Volume 21 ; 21 >
-      au < aha.AHADrupalPlugin ; manifest ; 1981 ; Stroke Volume 22 ; 22 >
-      au < aha.AHADrupalPlugin ; manifest ; 1982 ; Stroke Volume 23 ; 23 >
-      au < aha.AHADrupalPlugin ; manifest ; 1983 ; Stroke Volume 24 ; 24 >
-      au < aha.AHADrupalPlugin ; manifest ; 1984 ; Stroke Volume 25 ; 25 >
-      au < aha.AHADrupalPlugin ; manifest ; 1985 ; Stroke Volume 26 ; 26 >
-      au < aha.AHADrupalPlugin ; manifest ; 1986 ; Stroke Volume 27 ; 27 >
-      au < aha.AHADrupalPlugin ; manifest ; 1987 ; Stroke Volume 28 ; 28 >
-      au < aha.AHADrupalPlugin ; manifest ; 1988 ; Stroke Volume 29 ; 29 >
-      au < aha.AHADrupalPlugin ; manifest ; 1999 ; Stroke Volume 30 ; 30 >
+      au < aha.AHADrupalPlugin ; testing ; 1990 ; Stroke Volume 21 ; 21 >
+      au < aha.AHADrupalPlugin ; testing ; 1991 ; Stroke Volume 22 ; 22 >
+      au < aha.AHADrupalPlugin ; testing ; 1992 ; Stroke Volume 23 ; 23 >
+      au < aha.AHADrupalPlugin ; testing ; 1993 ; Stroke Volume 24 ; 24 >
+      au < aha.AHADrupalPlugin ; testing ; 1994 ; Stroke Volume 25 ; 25 >
+      au < aha.AHADrupalPlugin ; testing ; 1995 ; Stroke Volume 26 ; 26 >
+      au < aha.AHADrupalPlugin ; testing ; 1996 ; Stroke Volume 27 ; 27 >
+      au < aha.AHADrupalPlugin ; testing ; 1997 ; Stroke Volume 28 ; 28 >
+      au < aha.AHADrupalPlugin ; testing ; 1998 ; Stroke Volume 29 ; 29 >
+      au < aha.AHADrupalPlugin ; testing ; 1999 ; Stroke Volume 30 ; 30 >
       au < HighWirePressH20Plugin ; down ; 2000 ; Stroke Volume 31 ; 31 >
       au < HighWirePressH20Plugin ; down ; 2001 ; Stroke Volume 32 ; 32 >
       au < HighWirePressH20Plugin ; down ; 2002 ; Stroke Volume 33 ; 33 >
@@ -706,8 +706,8 @@
       au < HighWirePressH20Plugin ; down ; 2013 ; Stroke Volume 44 ; 44 >
       au < HighWirePressH20Plugin ; down ; 2014 ; Stroke Volume 45 ; 45 >
       au < HighWirePressH20Plugin ; down ; 2015 ; Stroke Volume 46 ; 46 >
-      au < aha.AHADrupalPlugin ; manifest ; 2016 ; Stroke Volume 47 ; 47 >
-      au < aha.AHADrupalPlugin ; manifest ; 2017 ; Stroke Volume 48 ; 48 >
+      au < aha.AHADrupalPlugin ; testing ; 2016 ; Stroke Volume 47 ; 47 >
+      au < aha.AHADrupalPlugin ; testing ; 2017 ; Stroke Volume 48 ; 48 >
       au < aha.AHADrupalPlugin ; manifest ; 2018 ; Stroke Volume 49 ; 49 >
 
     }
