@@ -1294,8 +1294,10 @@ public class ArchivalUnitStatus
 	      new StatusTable
 	      .SrvLink("Files",
 		       AdminServletManager.SERVLET_LIST_OBJECTS,
-		       PropUtil.fromArgs("type", "files",
-					 "auid", au.getAuId())));
+		       PropUtil.fromArgs("type", "urls",
+					 "auid", au.getAuId(),
+					 "fields", "ContentType,Size,PollWeight")));
+
       if (au.getArchiveFileTypes() != null) {
 	addLink(urlLinks,
 		new StatusTable
@@ -1311,13 +1313,6 @@ public class ArchivalUnitStatus
 			 PropUtil.fromArgs("type", "filesm",
 					   "auid", au.getAuId())));
       }
-      addLink(urlLinks,
-	      new StatusTable
-	      .SrvLink("URL Weights",
-		       AdminServletManager.SERVLET_LIST_OBJECTS,
-		       PropUtil.fromArgs("type", "urls",
-					 "auid", au.getAuId(),
-					 "fields", "pollWeight")));
       if (AuUtil.hasSubstancePatterns(au)) {
 	addLink(urlLinks,
 		new StatusTable

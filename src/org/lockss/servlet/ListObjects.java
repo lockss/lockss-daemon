@@ -55,7 +55,9 @@ public class ListObjects extends LockssServlet {
   
   private static final Logger log = Logger.getLogger(ListObjects.class);
 
-  public static final String FIELD_POLL_WEIGHT = "pollWeight";
+  public static final String FIELD_POLL_WEIGHT = "PollWeight";
+  public static final String FIELD_CONTENT_TYPE = "ContentType";
+  public static final String FIELD_SIZE = "Size";
 
   private String auid;
   private String url;
@@ -100,6 +102,12 @@ public class ListObjects extends LockssServlet {
       fields = StringUtil.breakAt(fieldParam, ",", 0, true);
     }
 
+    // Backwards compatibility with old "Files"
+    if (type.equalsIgnoreCase("files")) {
+      type = "urls";
+      fields = ListUtil.list(FIELD_CONTENT_TYPE, FIELD_SIZE, FIELD_POLL_WEIGHT);
+    }    
+
     if (type.equalsIgnoreCase("aus")) {
       new AuNameList().execute();
     } else if (type.equalsIgnoreCase("auids")) {
@@ -117,8 +125,6 @@ public class ListObjects extends LockssServlet {
 	new UrlList().execute();
       } else if (type.equalsIgnoreCase("urlsm")) {
 	new UrlMemberList().execute();
-      } else if (type.equalsIgnoreCase("files")) {
-	new FileList().execute();
       } else if (type.equalsIgnoreCase("filesm")) {
 	new FileMemberList().execute();
       } else if (type.equalsIgnoreCase("suburls")) {
@@ -287,6 +293,16 @@ public class ListObjects extends LockssServlet {
 	    if (resultWeightMap != null) {
 	      wrtr.print("\t" + getUrlResultWeight(url));
 	    }
+	    break;
+	  case FIELD_CONTENT_TYPE:
+	    String contentType = cu.getContentType();
+	    if (contentType == null) {
+	      contentType = "unknown";
+	    }
+	    wrtr.print("\t" + contentType);
+	    break;
+	  case FIELD_SIZE:
+	    wrtr.print("\t" + cu.getContentSize());
 	    break;
 	  }
 	}
