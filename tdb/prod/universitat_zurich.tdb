@@ -53,9 +53,9 @@
       au < ready ; 2012 ; altrelettere Volume 2012 ; 2012 ; 2012 >
       au < ready ; 2013 ; altrelettere Volume 2013 ; 2013 ; 2013 >
       au < ready ; 2014 ; altrelettere Volume 2014 ; 2014 ; 2014 >
-      au < testing ; 2015 ; altrelettere Volume 2015 ; 2015 ; 2015 >
-      au < testing ; 2016 ; altrelettere Volume 2016 ; 2016 ; 2016 >
-      au < testing ; 2017 ; altrelettere Volume 2017 ; 2017 ; 2017 >
+      au < ready ; 2015 ; altrelettere Volume 2015 ; 2015 ; 2015 >
+      au < ready ; 2016 ; altrelettere Volume 2016 ; 2016 ; 2016 >
+      au < ready ; 2017 ; altrelettere Volume 2017 ; 2017 ; 2017 >
       au < manifest ; 2018 ; altrelettere Volume 2018 ; 2018 ; 2018 >
 
     }
@@ -95,7 +95,7 @@
       au < notReady ; 2014 ; SComS: Studies in Communications Sciences Volume 2014 ; 2014 ; 2014 > #PDF not on content page
       au < testing ; 2015 ; SComS: Studies in Communications Sciences Volume 2015 ; 2015 ; 2015 >
       au < testing ; 2016 ; SComS: Studies in Communications Sciences Volume 2016 ; 2016 ; 2016 >
-      au < testing ; 2017 ; SComS: Studies in Communications Sciences Volume 2017 ; 2017 ; 2017 >
+      au < ready ; 2017 ; SComS: Studies in Communications Sciences Volume 2017 ; 2017 ; 2017 >
       au < expected ; 2018 ; SComS: Studies in Communications Sciences Volume 2018 ; 2018 ; 2018 >
 
     }
@@ -167,31 +167,31 @@
         au < manifest ; 1946 ; Zwingliana Volume 8 (1946) ; 8 ; 1946 >
         au < manifest ; 1947 ; Zwingliana Volume 8 (1947) ; 8 ; 1947 >
         au < manifest ; 1948 ; Zwingliana Volume 8 (1948) ; 8 ; 1948 >
-        au < testing ; 1949 ; Zwingliana Volume 9 (1949) ; 9 ; 1949 >
+        au < ready ; 1949 ; Zwingliana Volume 9 (1949) ; 9 ; 1949 >
         au < testing ; 1950 ; Zwingliana Volume 9 (1950) ; 9 ; 1950 >
-        au < testing ; 1951 ; Zwingliana Volume 9 (1951) ; 9 ; 1951 >
+        au < ready ; 1951 ; Zwingliana Volume 9 (1951) ; 9 ; 1951 >
         au < testing ; 1952 ; Zwingliana Volume 9 (1952) ; 9 ; 1952 >
-        au < testing ; 1953 ; Zwingliana Volume 9 (1953) ; 9 ; 1953 >
-        au < testing ; 1954 ; Zwingliana Volume 10 (1954) ; 10 ; 1954 >
-        au < testing ; 1955 ; Zwingliana Volume 10 (1955) ; 10 ; 1955 >
-        au < testing ; 1956 ; Zwingliana Volume 10 (1956) ; 10 ; 1956 >
+        au < ready ; 1953 ; Zwingliana Volume 9 (1953) ; 9 ; 1953 >
+        au < ready ; 1954 ; Zwingliana Volume 10 (1954) ; 10 ; 1954 >
+        au < ready ; 1955 ; Zwingliana Volume 10 (1955) ; 10 ; 1955 >
+        au < ready ; 1956 ; Zwingliana Volume 10 (1956) ; 10 ; 1956 >
         au < testing ; 1957 ; Zwingliana Volume 10 (1957) ; 10 ; 1957 >
-        au < testing ; 1958 ; Zwingliana Volume 10 (1958) ; 10 ; 1958 >
-        au < testing ; 1959 ; Zwingliana Volume 11 (1959) ; 11 ; 1959 >
-        au < testing ; 1960 ; Zwingliana Volume 11 (1960) ; 11 ; 1960 >
-        au < testing ; 1961 ; Zwingliana Volume 11 (1961) ; 11 ; 1961 >
+        au < ready ; 1958 ; Zwingliana Volume 10 (1958) ; 10 ; 1958 >
+        au < ready ; 1959 ; Zwingliana Volume 11 (1959) ; 11 ; 1959 >
+        au < ready ; 1960 ; Zwingliana Volume 11 (1960) ; 11 ; 1960 >
+        au < ready ; 1961 ; Zwingliana Volume 11 (1961) ; 11 ; 1961 >
         au < testing ; 1962 ; Zwingliana Volume 11 (1962) ; 11 ; 1962 >
-        au < testing ; 1963 ; Zwingliana Volume 11 (1963) ; 11 ; 1963 >
-        au < testing ; 1964 ; Zwingliana Volume 12 (1964) ; 12 ; 1964 >
-        au < testing ; 1965 ; Zwingliana Volume 12 (1965) ; 12 ; 1965 >
+        au < ready ; 1963 ; Zwingliana Volume 11 (1963) ; 11 ; 1963 >
+        au < ready ; 1964 ; Zwingliana Volume 12 (1964) ; 12 ; 1964 >
+        au < ready ; 1965 ; Zwingliana Volume 12 (1965) ; 12 ; 1965 >
         au < testing ; 1966 ; Zwingliana Volume 12 (1966) ; 12 ; 1966 >
-        au < testing ; 1967 ; Zwingliana Volume 12 (1967) ; 12 ; 1967 >
+        au < ready ; 1967 ; Zwingliana Volume 12 (1967) ; 12 ; 1967 >
         au < testing ; 1968 ; Zwingliana Volume 12 (1968) ; 12 ; 1968 >
-        au < testing ; 1969 ; Zwingliana Volume 13 (1969) ; 13 ; 1969 >
-        au < testing ; 1970 ; Zwingliana Volume 13 (1970) ; 13 ; 1970 >
-        au < testing ; 1971 ; Zwingliana Volume 13 (1971) ; 13 ; 1971 >
-        au < testing ; 1972 ; Zwingliana Volume 13 (1972) ; 13 ; 1972 >
-        au < testing ; 1973 ; Zwingliana Volume 13 (1973) ; 13 ; 1973 >
+        au < ready ; 1969 ; Zwingliana Volume 13 (1969) ; 13 ; 1969 >
+        au < ready ; 1970 ; Zwingliana Volume 13 (1970) ; 13 ; 1970 >
+        au < ready ; 1971 ; Zwingliana Volume 13 (1971) ; 13 ; 1971 >
+        au < ready ; 1972 ; Zwingliana Volume 13 (1972) ; 13 ; 1972 >
+        au < ready ; 1973 ; Zwingliana Volume 13 (1973) ; 13 ; 1973 >
         au < released ; 1974 ; Zwingliana Volume 14 (1974) ; 14 ; 1974 >
         au < released ; 1975 ; Zwingliana Volume 14 (1975) ; 14 ; 1975 >
         au < released ; 1976 ; Zwingliana Volume 14 (1976) ; 14 ; 1976 >
