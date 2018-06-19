@@ -6064,17 +6064,13 @@
 
       param[journal_issn] = 0976-0105
       param[base_url] = http://www.jbclinpharm.org/
-      #moved to new platform.
+      #moved to new platform. https://www.jbclinpharm.org/archive.html
 
-      au < exists ; exists ; 2010 ; Journal of Basic and Clinical Pharmacy Volume 1 ; 2010 ; 1 ; >
       au < frozen ; exists ; 2011 ; Journal of Basic and Clinical Pharmacy Volume 2 ; 2011 ; 2 ; >
       au < frozen ; exists ; 2012 ; Journal of Basic and Clinical Pharmacy Volume 3 ; 2012 ; 3 ; >
       au < frozen ; exists ; 2013 ; Journal of Basic and Clinical Pharmacy Volume 4 ; 2013 ; 4 ; >
       au < frozen ; exists ; 2014 ; Journal of Basic and Clinical Pharmacy Volume 5 ; 2014 ; 5 ; >
       au < frozen ; exists ; 2015 ; Journal of Basic and Clinical Pharmacy Volume 6 ; 2015 ; 6 ; >
-      au < exists ; exists ; 2016 ; Journal of Basic and Clinical Pharmacy Volume 7 ; 2016 ; 7 ; >
-      au < expected ; exists ; 2017 ; Journal of Basic and Clinical Pharmacy Volume 8 ; 2017 ; 8 ; >
-      au < expected ; exists ; 2018 ; Journal of Basic and Clinical Pharmacy Volume 9 ; 2018 ; 9 ; >
 
   }
 
