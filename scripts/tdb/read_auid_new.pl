@@ -544,7 +544,7 @@ while (my $line = <>) {
                 }
             }
         } else {
-            $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();;
+            $result = "--REQ_FAIL--"
         }
         #======================= w/o index.php
         if ($result eq "--REQ_FAIL--") {
