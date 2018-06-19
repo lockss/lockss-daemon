@@ -4618,15 +4618,14 @@
 
       param[journal_issn] = 2141-9248
       param[base_url] = http://www.amhsr.org/
+      #move to new publisher, https://www.ajol.info/index.php/amhsr
 
-      au < released ; 2011 ; Annals of Medical and Health Sciences Research Volume 1 ; 2011 ; 1 >
-      au < released ; 2012 ; Annals of Medical and Health Sciences Research Volume 2 ; 2012 ; 2 >
-      au < released ; 2013 ; Annals of Medical and Health Sciences Research Volume 3 ; 2013 ; 3 >
-      au < released ; 2014 ; Annals of Medical and Health Sciences Research Volume 4 ; 2014 ; 4 >
-      au < released ; 2015 ; Annals of Medical and Health Sciences Research Volume 5 ; 2015 ; 5 >
-      au < released ; 2016 ; Annals of Medical and Health Sciences Research Volume 6 ; 2016 ; 6 >
-      au < expected ; 2017 ; Annals of Medical and Health Sciences Research Volume 7 ; 2017 ; 7 >
-      au < expected ; 2018 ; Annals of Medical and Health Sciences Research Volume 8 ; 2018 ; 8 >
+      au < down ; 2011 ; Annals of Medical and Health Sciences Research Volume 1 ; 2011 ; 1 >
+      au < down ; 2012 ; Annals of Medical and Health Sciences Research Volume 2 ; 2012 ; 2 >
+      au < down ; 2013 ; Annals of Medical and Health Sciences Research Volume 3 ; 2013 ; 3 >
+      au < down ; 2014 ; Annals of Medical and Health Sciences Research Volume 4 ; 2014 ; 4 >
+      au < down ; 2015 ; Annals of Medical and Health Sciences Research Volume 5 ; 2015 ; 5 >
+      au < down ; 2016 ; Annals of Medical and Health Sciences Research Volume 6 ; 2016 ; 6 >
 
   }
 
@@ -6060,14 +6059,13 @@
 
       param[journal_issn] = 2278-960X
       param[base_url] = http://www.jbcrs.org/
+      #move to new publisher, https://www.ajol.info/index.php/jbcrs
 
-      au < released ; 2012 ; Journal of Basic and Clinical Reproductive Sciences Volume 1 ; 2012 ; 1 >
-      au < released ; 2013 ; Journal of Basic and Clinical Reproductive Sciences Volume 2 ; 2013 ; 2 >
-      au < released ; 2014 ; Journal of Basic and Clinical Reproductive Sciences Volume 3 ; 2014 ; 3 >
-      au < released ; 2015 ; Journal of Basic and Clinical Reproductive Sciences Volume 4 ; 2015 ; 4 >
-      au < released ; 2016 ; Journal of Basic and Clinical Reproductive Sciences Volume 5 ; 2016 ; 5 >
-      au < expected ; 2017 ; Journal of Basic and Clinical Reproductive Sciences Volume 6 ; 2017 ; 6 >
-      au < expected ; 2018 ; Journal of Basic and Clinical Reproductive Sciences Volume 7 ; 2018 ; 7 >
+      au < down ; 2012 ; Journal of Basic and Clinical Reproductive Sciences Volume 1 ; 2012 ; 1 >
+      au < down ; 2013 ; Journal of Basic and Clinical Reproductive Sciences Volume 2 ; 2013 ; 2 >
+      au < down ; 2014 ; Journal of Basic and Clinical Reproductive Sciences Volume 3 ; 2014 ; 3 >
+      au < down ; 2015 ; Journal of Basic and Clinical Reproductive Sciences Volume 4 ; 2015 ; 4 >
+      au < down ; 2016 ; Journal of Basic and Clinical Reproductive Sciences Volume 5 ; 2016 ; 5 >
 
   }
 
