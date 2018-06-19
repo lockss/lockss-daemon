@@ -150,10 +150,10 @@ public class ProxyManager extends BaseProxyManager {
 
   /** If true, when serving cached Files that have no stored Content-Type
    * (and for which none is supplied using the plugin's
-   * <code>au_url_mime_type</code>, one will be inferred from the extension
-   * using Jetty's mechanism.  Setting this false ensures that files
-   * without Content-Type won't inadvertently get one when transferred to
-   * another cache using the audit proxy. */
+   * <code>au_url_mime_type_map</code>), one will be inferred from the
+   * extension using Jetty's mechanism.  Setting this false ensures that
+   * files without Content-Type won't inadvertently get one when
+   * transferred to another cache using the audit proxy. */
   public static final String PARAM_INFER_MIME_TYPE = PREFIX + "inferMimeType";
   public static final boolean DEFAULT_INFER_MIME_TYPE = true;
 

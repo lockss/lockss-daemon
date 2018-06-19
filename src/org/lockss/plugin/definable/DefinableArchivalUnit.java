@@ -115,7 +115,10 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
   public static final String KEY_AU_REPAIR_FROM_PEER_IF_MISSING_URL_PATTERN =
     "au_repair_from_peer_if_missing_url_pattern";
 
-  public static final String KEY_AU_URL_MIME_TYPE = "au_url_mime_type";
+  public static final String KEY_AU_URL_MIME_TYPE_OLDNAME = "au_url_mime_type";
+  public static final String KEY_AU_URL_MIME_TYPE = "au_url_mime_type_map";
+  public static final String KEY_AU_URL_MIME_VALIDATION =
+    "au_url_mime_validation_map";
 
   public static final String KEY_AU_CRAWL_COOKIE_POLICY =
     "au_crawl_cookie_policy";
@@ -416,11 +419,24 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
 
   @Override
   public PatternStringMap makeUrlMimeTypeMap() {
-    List<String> mimeTypeSpec = getElementList(KEY_AU_URL_MIME_TYPE, null);
-    if (mimeTypeSpec != null) {
+    if (definitionMap.containsKey(KEY_AU_URL_MIME_TYPE)) {
+      return makeUrlStringMap(getElementList(KEY_AU_URL_MIME_TYPE, null));
+    } else {
+      return makeUrlStringMap(getElementList(KEY_AU_URL_MIME_TYPE_OLDNAME,
+					     null));
+    }
+  }
+
+  @Override
+  public PatternStringMap makeUrlMimeValidationMap() {
+    return makeUrlStringMap(getElementList(KEY_AU_URL_MIME_VALIDATION, null));
+  }
+
+  public PatternStringMap makeUrlStringMap(List<String> spec) {
+    if (spec != null) {
       List<String> lst = new ArrayList<String>();
-      for (String pair : mimeTypeSpec) {
-	// Separate printf from MIME string, process printf, reassemble for
+      for (String pair : spec) {
+	// Separate printf from value string, process printf, reassemble for
 	// PatternStringMap
 
 	// Find the last occurrence of comma to avoid regexp quoting
@@ -430,11 +446,11 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
 					     + pair);
 	}
 	String printf = pair.substring(0, pos);
-	String mime = pair.substring(pos + 1).trim();
+	String val = pair.substring(pos + 1).trim();
 	PrintfConverter.MatchPattern mp =
 	  convertVariableRegexpString(printf, RegexpContext.Url);
 	if (mp.getRegexp() != null) {
-	  lst.add(mp.getRegexp() + "," + mime);
+	  lst.add(mp.getRegexp() + "," + val);
 	}
       }
       return new PatternStringMap(lst);

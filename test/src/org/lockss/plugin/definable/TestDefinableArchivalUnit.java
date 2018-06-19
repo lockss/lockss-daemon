@@ -1604,6 +1604,15 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertEquals(null,
 		 urlMimeTypes.getMatch("http://base.foo/bar/pdf_url/xxx"));
     
+    PatternStringMap urlMimeValidations = au.makeUrlMimeValidationMap();
+    assertEquals("application/x-systems-info-research",
+		 urlMimeValidations.getMatch("http://base.foo/J47/xyz.sir"));
+    assertEquals(null,
+		 urlMimeValidations.getMatch("http://base.foo/J47/xyz.rib"));
+    assertEquals("application/pdf",
+		 urlMimeValidations.getMatch("http://base.foo/base_path/bar/pdf_url/xxx"));
+    assertEquals(null,
+		 urlMimeValidations.getMatch("http://base.foo/bar/pdf_url/xxx"));
   }
 
   public void testNoMimeMap() throws Exception {
@@ -1839,10 +1848,36 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     Configuration auConfig = ConfigManager.fromProperties(p);
     DefinableArchivalUnit au =
       (DefinableArchivalUnit)defplug.createAu(auConfig);
-      }     
+  }
 
   HttpResultMap getHttpResultMap(DefinablePlugin plugin) {
     return (HttpResultMap)plugin.getCacheResultMap();
+  }
+
+  // Old name for au_url_mime_type_map
+  public void testUrlMimeMapOld() throws Exception {
+    MyDefinablePlugin defplug = (MyDefinablePlugin)
+      PluginTestUtil.findPlugin("org.lockss.plugin.definable.OldNamesPlugin");
+    // Configure and create an AU
+    Properties p = new Properties();
+    p.put("base_url", "http://base.foo/base_path/");
+    p.put("resolver_url", "http://resolv.er/path/");
+    p.put("journal_code", "J47");
+    p.put("year", "1984");
+    p.put("issue_set", "1,2,3,3a");
+    p.put("num_issue_range", "3-7");
+    Configuration auConfig = ConfigManager.fromProperties(p);
+    DefinableArchivalUnit au =
+      (DefinableArchivalUnit)defplug.createAu(auConfig);
+    PatternStringMap urlMimeTypes = au.makeUrlMimeTypeMap();
+    assertEquals("application/x-research-info-systems",
+		 urlMimeTypes.getMatch("http://base.foo/J47/xyz.ris"));
+    assertEquals(null,
+		 urlMimeTypes.getMatch("http://base.foo/J47/xyz.rib"));
+    assertEquals("application/pdf",
+		 urlMimeTypes.getMatch("http://base.foo/base_path/bar/pdf_url/xxx"));
+    assertEquals(null,
+		 urlMimeTypes.getMatch("http://base.foo/bar/pdf_url/xxx"));
   }
 
   public void testRateLimiterSourceDefault() throws Exception {

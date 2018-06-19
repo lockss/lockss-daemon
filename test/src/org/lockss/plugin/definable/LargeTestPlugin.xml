@@ -309,9 +309,16 @@
     </org.lockss.plugin.ArchiveFileTypes>
   </entry>
   <entry>
-    <string>au_url_mime_type</string>
+    <string>au_url_mime_type_map</string>
     <list>
       <string>.*\.ris$, application/x-research-info-systems</string>
+      <string>"%s.*/pdf_url.*", base_url,application/pdf</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_url_mime_validation_map</string>
+    <list>
+      <string>.*\.sir$, application/x-systems-info-research</string>
       <string>"%s.*/pdf_url.*", base_url,application/pdf</string>
     </list>
   </entry>
