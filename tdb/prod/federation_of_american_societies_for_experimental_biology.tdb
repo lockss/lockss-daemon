@@ -3,7 +3,7 @@
   publisher <
     name = Federation of American Societies for Experimental Biology
   >
-  #moved from HW to Atypon Jan 2018
+  #moved from HW to Atypon Jan 2018. Moved to https spring 2018.
 
   {
 
@@ -13,91 +13,98 @@
       eissn = 1530-6860 ;
       issnl = 0892-6638
     >
-
-    plugin = org.lockss.plugin.atypon.faseb.FasebAtyponPlugin
-    param[base_url] = http://www.fasebj.org/
-    implicit < status ; year ; name ; param[volume_name] >
-    param[journal_id] = fasebj
     
-    au < doNotProcess ; 1987 ; The FASEB Journal Volume 1 ; 1 >
-    au < doNotProcess ; 1988 ; The FASEB Journal Volume 2 ; 2 >
-    au < doNotProcess ; 1989 ; The FASEB Journal Volume 3 ; 3 >
-    au < doNotProcess ; 1990 ; The FASEB Journal Volume 4 ; 4 >
-    au < doNotProcess ; 1991 ; The FASEB Journal Volume 5 ; 5 >
-    au < doNotProcess ; 1992 ; The FASEB Journal Volume 6 ; 6 >
-    au < doNotProcess ; 1993 ; The FASEB Journal Volume 7 ; 7 >
-    au < doNotProcess ; 1994 ; The FASEB Journal Volume 8 ; 8 >
-    au < doNotProcess ; 1995 ; The FASEB Journal Volume 9 ; 9 >
-    au < doNotProcess ; 1996 ; The FASEB Journal Volume 10 ; 10 >
-    au < doNotProcess ; 1997 ; The FASEB Journal Volume 11 ; 11 >
-    au < doNotProcess ; 1998 ; The FASEB Journal Volume 12 ; 12 >
-    au < doNotProcess ; 1999 ; The FASEB Journal Volume 13 ; 13 >
-    au < doNotProcess ; 2000 ; The FASEB Journal Volume 14 ; 14 >
-    au < doNotProcess ; 2001 ; The FASEB Journal Volume 15 ; 15 >
-    au < doNotProcess ; 2002 ; The FASEB Journal Volume 16 ; 16 >
-    au < doNotProcess ; 2003 ; The FASEB Journal Volume 17 ; 17 >
-    au < doNotProcess ; 2004 ; The FASEB Journal Volume 18 ; 18 >
-    au < doNotProcess ; 2005 ; The FASEB Journal Volume 19 ; 19 >
-    au < doNotProcess ; 2006 ; The FASEB Journal Volume 20 ; 20 >
-    au < doNotProcess ; 2007 ; The FASEB Journal Volume 21 ; 21 >
-    au < doNotProcess ; 2008 ; The FASEB Journal Volume 22 ; 22 >
-    au < doNotProcess ; 2009 ; The FASEB Journal Volume 23 ; 23 >
-    au < doNotProcess ; 2010 ; The FASEB Journal Volume 24 ; 24 >
-    au < doNotProcess ; 2011 ; The FASEB Journal Volume 25 ; 25 >
-    au < doNotProcess ; 2012 ; The FASEB Journal Volume 26 ; 26 >
-    au < doNotProcess ; 2013 ; The FASEB Journal Volume 27 ; 27 >
-    au < doNotProcess ; 2014 ; The FASEB Journal Volume 28 ; 28 >
-    au < doNotProcess ; 2015 ; The FASEB Journal Volume 29 ; 29 >
-    au < doNotProcess ; 2016 ; The FASEB Journal Volume 30 ; 30 >
-    au < released ; 2017 ; The FASEB Journal Volume 31 ; 31 >
-    au < manifest ; 2018 ; The FASEB Journal Volume 32 ; 32 >
+    {
 
-  }
-
-  {
-
-    title <
-      name = The FASEB Journal ;
-      issn = 0892-6638 ;
-      eissn = 1530-6860 ;
-      issnl = 0892-6638
-    >
-
-    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-    param[base_url] = http://www.fasebj.org/
-    implicit < status ; year ; name ; param[volume_name] >
+      plugin = org.lockss.plugin.atypon.faseb.FasebAtyponPlugin
+      param[base_url] = https://www.fasebj.org/
+      implicit < status ; year ; name ; param[volume_name] >
+      param[journal_id] = fasebj
     
-    au < down ; 1987 ; The FASEB Journal Volume 1 ; 1 >
-    au < down ; 1988 ; The FASEB Journal Volume 2 ; 2 >
-    au < down ; 1989 ; The FASEB Journal Volume 3 ; 3 >
-    au < down ; 1990 ; The FASEB Journal Volume 4 ; 4 >
-    au < down ; 1991 ; The FASEB Journal Volume 5 ; 5 >
-    au < down ; 1992 ; The FASEB Journal Volume 6 ; 6 >
-    au < down ; 1993 ; The FASEB Journal Volume 7 ; 7 >
-    au < down ; 1994 ; The FASEB Journal Volume 8 ; 8 >
-    au < down ; 1995 ; The FASEB Journal Volume 9 ; 9 >
-    au < down ; 1996 ; The FASEB Journal Volume 10 ; 10 >
-    au < down ; 1997 ; The FASEB Journal Volume 11 ; 11 >
-    au < down ; 1998 ; The FASEB Journal Volume 12 ; 12 >
-    au < down ; 1999 ; The FASEB Journal Volume 13 ; 13 >
-    au < down ; 2000 ; The FASEB Journal Volume 14 ; 14 >
-    au < down ; 2001 ; The FASEB Journal Volume 15 ; 15 >
-    au < down ; 2002 ; The FASEB Journal Volume 16 ; 16 >
-    au < down ; 2003 ; The FASEB Journal Volume 17 ; 17 >
-    au < down ; 2004 ; The FASEB Journal Volume 18 ; 18 >
-    au < down ; 2005 ; The FASEB Journal Volume 19 ; 19 >
-    au < down ; 2006 ; The FASEB Journal Volume 20 ; 20 >
-    au < down ; 2007 ; The FASEB Journal Volume 21 ; 21 >
-    au < down ; 2008 ; The FASEB Journal Volume 22 ; 22 >
-    au < down ; 2009 ; The FASEB Journal Volume 23 ; 23 >
-    au < down ; 2010 ; The FASEB Journal Volume 24 ; 24 >
-    au < down ; 2011 ; The FASEB Journal Volume 25 ; 25 >
-    au < down ; 2012 ; The FASEB Journal Volume 26 ; 26 >
-    au < down ; 2013 ; The FASEB Journal Volume 27 ; 27 >
-    au < down ; 2014 ; The FASEB Journal Volume 28 ; 28 >
-    au < down ; 2015 ; The FASEB Journal Volume 29 ; 29 >
-    au < down ; 2016 ; The FASEB Journal Volume 30 ; 30 >
-    au < doNotProcess ; 2017 ; The FASEB Journal Volume 31 ; 31 >
+      au < doNotProcess ; 1987 ; The FASEB Journal Volume 1 ; 1 >
+      au < doNotProcess ; 1988 ; The FASEB Journal Volume 2 ; 2 >
+      au < doNotProcess ; 1989 ; The FASEB Journal Volume 3 ; 3 >
+      au < doNotProcess ; 1990 ; The FASEB Journal Volume 4 ; 4 >
+      au < doNotProcess ; 1991 ; The FASEB Journal Volume 5 ; 5 >
+      au < doNotProcess ; 1992 ; The FASEB Journal Volume 6 ; 6 >
+      au < doNotProcess ; 1993 ; The FASEB Journal Volume 7 ; 7 >
+      au < doNotProcess ; 1994 ; The FASEB Journal Volume 8 ; 8 >
+      au < doNotProcess ; 1995 ; The FASEB Journal Volume 9 ; 9 >
+      au < doNotProcess ; 1996 ; The FASEB Journal Volume 10 ; 10 >
+      au < doNotProcess ; 1997 ; The FASEB Journal Volume 11 ; 11 >
+      au < doNotProcess ; 1998 ; The FASEB Journal Volume 12 ; 12 >
+      au < doNotProcess ; 1999 ; The FASEB Journal Volume 13 ; 13 >
+      au < doNotProcess ; 2000 ; The FASEB Journal Volume 14 ; 14 >
+      au < doNotProcess ; 2001 ; The FASEB Journal Volume 15 ; 15 >
+      au < doNotProcess ; 2002 ; The FASEB Journal Volume 16 ; 16 >
+      au < doNotProcess ; 2003 ; The FASEB Journal Volume 17 ; 17 >
+      au < doNotProcess ; 2004 ; The FASEB Journal Volume 18 ; 18 >
+      au < doNotProcess ; 2005 ; The FASEB Journal Volume 19 ; 19 >
+      au < doNotProcess ; 2006 ; The FASEB Journal Volume 20 ; 20 >
+      au < doNotProcess ; 2007 ; The FASEB Journal Volume 21 ; 21 >
+      au < doNotProcess ; 2008 ; The FASEB Journal Volume 22 ; 22 >
+      au < doNotProcess ; 2009 ; The FASEB Journal Volume 23 ; 23 >
+      au < doNotProcess ; 2010 ; The FASEB Journal Volume 24 ; 24 >
+      au < doNotProcess ; 2011 ; The FASEB Journal Volume 25 ; 25 >
+      au < doNotProcess ; 2012 ; The FASEB Journal Volume 26 ; 26 >
+      au < doNotProcess ; 2013 ; The FASEB Journal Volume 27 ; 27 >
+      au < doNotProcess ; 2014 ; The FASEB Journal Volume 28 ; 28 >
+      au < doNotProcess ; 2015 ; The FASEB Journal Volume 29 ; 29 >
+      au < doNotProcess ; 2016 ; The FASEB Journal Volume 30 ; 30 >
+      au < exists ; 2017 ; The FASEB Journal Volume 31 ; 31 >
+      au < exists ; 2018 ; The FASEB Journal Volume 32 ; 32 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.atypon.faseb.FasebAtyponPlugin
+      param[base_url] = http://www.fasebj.org/
+      implicit < status ; year ; name ; param[volume_name] >
+      param[journal_id] = fasebj
+    
+      au < superseded ; 2017 ; The FASEB Journal Volume 31 [superseded] ; 31 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://www.fasebj.org/
+      implicit < status ; year ; name ; param[volume_name] >
+    
+      au < down ; 1987 ; The FASEB Journal Volume 1 ; 1 >
+      au < down ; 1988 ; The FASEB Journal Volume 2 ; 2 >
+      au < down ; 1989 ; The FASEB Journal Volume 3 ; 3 >
+      au < down ; 1990 ; The FASEB Journal Volume 4 ; 4 >
+      au < down ; 1991 ; The FASEB Journal Volume 5 ; 5 >
+      au < down ; 1992 ; The FASEB Journal Volume 6 ; 6 >
+      au < down ; 1993 ; The FASEB Journal Volume 7 ; 7 >
+      au < down ; 1994 ; The FASEB Journal Volume 8 ; 8 >
+      au < down ; 1995 ; The FASEB Journal Volume 9 ; 9 >
+      au < down ; 1996 ; The FASEB Journal Volume 10 ; 10 >
+      au < down ; 1997 ; The FASEB Journal Volume 11 ; 11 >
+      au < down ; 1998 ; The FASEB Journal Volume 12 ; 12 >
+      au < down ; 1999 ; The FASEB Journal Volume 13 ; 13 >
+      au < down ; 2000 ; The FASEB Journal Volume 14 ; 14 >
+      au < down ; 2001 ; The FASEB Journal Volume 15 ; 15 >
+      au < down ; 2002 ; The FASEB Journal Volume 16 ; 16 >
+      au < down ; 2003 ; The FASEB Journal Volume 17 ; 17 >
+      au < down ; 2004 ; The FASEB Journal Volume 18 ; 18 >
+      au < down ; 2005 ; The FASEB Journal Volume 19 ; 19 >
+      au < down ; 2006 ; The FASEB Journal Volume 20 ; 20 >
+      au < down ; 2007 ; The FASEB Journal Volume 21 ; 21 >
+      au < down ; 2008 ; The FASEB Journal Volume 22 ; 22 >
+      au < down ; 2009 ; The FASEB Journal Volume 23 ; 23 >
+      au < down ; 2010 ; The FASEB Journal Volume 24 ; 24 >
+      au < down ; 2011 ; The FASEB Journal Volume 25 ; 25 >
+      au < down ; 2012 ; The FASEB Journal Volume 26 ; 26 >
+      au < down ; 2013 ; The FASEB Journal Volume 27 ; 27 >
+      au < down ; 2014 ; The FASEB Journal Volume 28 ; 28 >
+      au < down ; 2015 ; The FASEB Journal Volume 29 ; 29 >
+      au < down ; 2016 ; The FASEB Journal Volume 30 ; 30 >
+      au < doNotProcess ; 2017 ; The FASEB Journal Volume 31 ; 31 >
+    }
 
   }
 
