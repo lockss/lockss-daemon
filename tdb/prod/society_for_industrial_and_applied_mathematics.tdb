@@ -49,7 +49,7 @@
     au < manifest ; 2003 ; Journal on Applied Dynamical Systems Volume 2 ; 2 ; https://epubs.siam.org/ >
     au < manifest ; 2004 ; Journal on Applied Dynamical Systems Volume 3 ; 3 ; https://epubs.siam.org/ >
     au < manifest ; 2005 ; Journal on Applied Dynamical Systems Volume 4 ; 4 ; https://epubs.siam.org/ >
-    au < releasing ; 2006 ; Journal on Applied Dynamical Systems Volume 5 ; 5 ; https://epubs.siam.org/ >
+    au < released ; 2006 ; Journal on Applied Dynamical Systems Volume 5 ; 5 ; https://epubs.siam.org/ >
     au < manifest ; 2007 ; Journal on Applied Dynamical Systems Volume 6 ; 6 ; https://epubs.siam.org/ >
     au < manifest ; 2008 ; Journal on Applied Dynamical Systems Volume 7 ; 7 ; https://epubs.siam.org/ >
     au < manifest ; 2009 ; Journal on Applied Dynamical Systems Volume 8 ; 8 ; https://epubs.siam.org/ >
@@ -180,7 +180,7 @@
     au < manifest ; 2006 ; Journal on Computing Volume 36 ; 36 ; https://epubs.siam.org/ >
     au < manifest ; 2007 ; Journal on Computing Volume 37 ; 37 ; https://epubs.siam.org/ >
     au < manifest ; 2008 ; Journal on Computing Volume 38 ; 38 ; https://epubs.siam.org/ >
-    au < releasing ; 2009 ; Journal on Computing Volume 39 ; 39 ; https://epubs.siam.org/ >
+    au < released ; 2009 ; Journal on Computing Volume 39 ; 39 ; https://epubs.siam.org/ >
     au < released ; 2011 ; Journal on Computing Volume 40 ; 40 ; http://epubs.siam.org/ >
     au < released ; 2012 ; Journal on Computing Volume 41 ; 41 ; http://epubs.siam.org/ >
     au < released ; 2013 ; Journal on Computing Volume 42 ; 42 ; http://epubs.siam.org/ >
@@ -202,10 +202,10 @@
 
     param[journal_id] = sjcodc
 
-    au < releasing ; 2003 ; Journal on Control and Optimization Volume 42 ; 42 ; https://epubs.siam.org/ >
-    au < releasing ; 2004 ; Journal on Control and Optimization Volume 43 ; 43 ; https://epubs.siam.org/ >
+    au < released ; 2003 ; Journal on Control and Optimization Volume 42 ; 42 ; https://epubs.siam.org/ >
+    au < released ; 2004 ; Journal on Control and Optimization Volume 43 ; 43 ; https://epubs.siam.org/ >
     au < released ; 2005 ; Journal on Control and Optimization Volume 44 ; 44 ; http://epubs.siam.org/ >
-    au < releasing ; 2006 ; Journal on Control and Optimization Volume 45 ; 45 ; https://epubs.siam.org/ >
+    au < released ; 2006 ; Journal on Control and Optimization Volume 45 ; 45 ; https://epubs.siam.org/ >
     au < manifest ; 2007 ; Journal on Control and Optimization Volume 46 ; 46 ; https://epubs.siam.org/ >
     au < manifest ; 2008 ; Journal on Control and Optimization Volume 47 ; 47 ; https://epubs.siam.org/ >
     au < manifest ; 2009 ; Journal on Control and Optimization Volume 48 ; 48 ; https://epubs.siam.org/ >
@@ -308,8 +308,8 @@
     au < manifest ; 2004-2005 ; Journal on Mathematical Analysis Volume 36 ; 36 ; https://epubs.siam.org/ >
     au < manifest ; 2005-2006 ; Journal on Mathematical Analysis Volume 37 ; 37 ; https://epubs.siam.org/ >
     au < released ; 2006-2007 ; Journal on Mathematical Analysis Volume 38 ; 38 ; http://epubs.siam.org/ >
-    au < releasing ; 2007-2008 ; Journal on Mathematical Analysis Volume 39 ; 39 ; https://epubs.siam.org/ >
-    au < releasing ; 2008-2009 ; Journal on Mathematical Analysis Volume 40 ; 40 ; https://epubs.siam.org/ >
+    au < released ; 2007-2008 ; Journal on Mathematical Analysis Volume 39 ; 39 ; https://epubs.siam.org/ >
+    au < released ; 2008-2009 ; Journal on Mathematical Analysis Volume 40 ; 40 ; https://epubs.siam.org/ >
     au < manifest ; 2009-2010 ; Journal on Mathematical Analysis Volume 41 ; 41 ; https://epubs.siam.org/ >
     au < released ; 2010 ; Journal on Mathematical Analysis Volume 42 ; 42 ; http://epubs.siam.org/ >
     au < released ; 2011 ; Journal on Mathematical Analysis Volume 43 ; 43 ; http://epubs.siam.org/ >
@@ -496,7 +496,7 @@
 
     au < manifest ; 2003 ; Theory of Probability and its Applications Volume 47 ; 47 ; https://epubs.siam.org/ >
     au < manifest ; 2004 ; Theory of Probability and its Applications Volume 48 ; 48 ; https://epubs.siam.org/ >
-    au < releasing ; 2005 ; Theory of Probability and its Applications Volume 49 ; 49 ; https://epubs.siam.org/ >
+    au < released ; 2005 ; Theory of Probability and its Applications Volume 49 ; 49 ; https://epubs.siam.org/ >
     au < manifest ; 2006 ; Theory of Probability and its Applications Volume 50 ; 50 ; https://epubs.siam.org/ >
     au < manifest ; 2007 ; Theory of Probability and its Applications Volume 51 ; 51 ; https://epubs.siam.org/ >
     au < released ; 2008 ; Theory of Probability and its Applications Volume 52 ; 52 ; http://epubs.siam.org/ >
