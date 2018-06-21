@@ -37,6 +37,7 @@ import org.apache.commons.collections4.*;
 
 import org.lockss.config.Configuration;
 import org.lockss.extractor.*;
+import org.lockss.plugin.ContentValidatorFactory;
 import org.lockss.rewriter.*;
 import org.lockss.util.*;
 
@@ -106,7 +107,13 @@ public class MimeTypeMap {
    * @since 1.68
    */
   private static MimeTypeInfo.Mutable XML = new MimeTypeInfo.Impl();
-
+  /**
+   * @sice 1.74
+   */
+  private static MimeTypeInfo.Mutable WILD = new MimeTypeInfo.Impl();
+  public static final String DEFAULT_DEFAULT_WILD_MIME_TYPE_VALIDATION_FACTORY =
+		  "org.lockss.plugin.base.MimeTypeContentValidatorFactory";
+  
   static {
     setLinkExtractorFactory(CSS,
                             DEFAULT_DEFAULT_CSS_EXTRACTOR_FACTORY,
@@ -130,6 +137,13 @@ public class MimeTypeMap {
                             null);
     DEFAULT.putMimeTypeInfo("text/xml", XML);
     DEFAULT.putMimeTypeInfo("application/xml", XML);
+ 
+    // apply a url pattern to mime-type validator if a mapping exists in the plugin that logs a warning only 
+    setContentValidatorFactory(WILD,
+            DEFAULT_DEFAULT_WILD_MIME_TYPE_VALIDATION_FACTORY,
+            null);
+    DEFAULT.putMimeTypeInfo(WILD_CARD, WILD);
+    
  }
 
   /** Called by org.lockss.config.MiscConfig */
@@ -181,6 +195,16 @@ public class MimeTypeMap {
             defFactory);
     mti.setLinkRewriterFactory(fact);
   }
+  
+  private static void setContentValidatorFactory(MimeTypeInfo.Mutable mti,
+		  String className,
+		  ContentValidatorFactory defFactory) {
+	  ContentValidatorFactory fact =
+			  (ContentValidatorFactory) newFact(className,
+					  ContentValidatorFactory.class,
+					  defFactory);
+	  mti.setContentValidatorFactory(fact);
+  }  
 
   private Map<String,MimeTypeInfo> map = new <String,MimeTypeInfo>HashMap();
   private MimeTypeMap parent;

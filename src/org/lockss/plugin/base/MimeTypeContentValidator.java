@@ -70,9 +70,6 @@ public class MimeTypeContentValidator implements ContentValidator {
 	PatternStringMap getUrlMimeValidationMap() {
 	   if (urlMimeValidationMap == null) {
 	     urlMimeValidationMap = au.makeUrlMimeValidationMap();
-	     if (urlMimeValidationMap.isEmpty()) {
-	    	  	log.warning("Calling mime type validator with empty url mime type validation map");
-	     }
 	   }
 	   return urlMimeValidationMap;
 	 }
