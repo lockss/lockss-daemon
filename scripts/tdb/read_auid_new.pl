@@ -1068,12 +1068,13 @@ while (my $line = <>) {
         sleep(4);
 
 # use "\w+" at beginning of match to indicate something other than needs.SourcePlugin
+#File transfer plugins have 3 flavors: (Warc|Source)Plugin (base+year), DirSourcePlugin (base+dir), DeliveredSourcePlugin (base + year + dir)
   } elsif (($plugin =~ m/\w+SourcePlugin/) || 
            ($plugin =~ m/\w+WarcPlugin/)) {
       if ($plugin =~ m/DeliveredSourcePlugin/) {
         $url = sprintf("%s%d/%s/", $param{base_url}, $param{year}, $param{directory});
-      } elsif ($plugin eq "ClockssElsevierDirSourcePlugin") {
-        $url = sprintf("%s%d/", $param{base_url}, $param{directory});
+      } elsif ($plugin =~ m/DirSourcePlugin/) {
+        $url = sprintf("%s%s/", $param{base_url}, $param{directory});
       } else {
         $url = sprintf("%s%d/", $param{base_url}, $param{year});
       }
