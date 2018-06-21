@@ -306,7 +306,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Cancer Informatics Volume 13 ; 13 ; cixa ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Cancer Informatics Volume 14 ; 14 ; cixa ; >
     au < ready ; exists ; 2016 ; Cancer Informatics Volume 15 ; 15 ; cixa ; >
-    au < crawling ; exists ; 2017 ; Cancer Informatics Volume 16 ; 16 ; cixa ; >
+    au < frozen ; exists ; 2017 ; Cancer Informatics Volume 16 ; 16 ; cixa ; >
     au < ready ; exists ; 2016 ; Cancer Informatics Volume 17 ; 17 ; cixa ; >
 
   }
@@ -665,7 +665,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 4 ; 4 ; tria ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 5 ; 5 ; tria ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 6 ; 6 ; tria ; >
-    au < crawling ; exists ; 2016 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 7 ; 7 ; tria ; >
+    au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 7 ; 7 ; tria ; >
     au < crawling ; exists ; 2017 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 8 ; 8 ; tria ; >
     au < manifest ; exists ; 2018 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 9 ; 9 ; tria ; >
 
@@ -860,7 +860,7 @@
     au < crawling ; exists ; 2013 ; Genomics Insights Volume 6 ; 6 ; gena ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Genomics Insights Volume 7 ; 7 ; gena ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Genomics Insights Volume 8 ; 8 ; gena ; >
-    au < crawling ; exists ; 2016 ; Genomics Insights Volume 9 ; 9 ; gena ; >
+    au < frozen ; exists ; 2016 ; Genomics Insights Volume 9 ; 9 ; gena ; >
     au < crawling ; exists ; 2017 ; Genomics Insights Volume 10 ; 10 ; gena ; >
     au < manifest ; exists ; 2018 ; Genomics Insights Volume 11 ; 11 ; gena ; >
 
@@ -1027,7 +1027,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Tryptophan Research Volume 7 ; 7 ; trya ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Tryptophan Research Volume 8 ; 8 ; trya ; >
     au < crawling ; exists ; 2016 ; International Journal of Tryptophan Research Volume 9 ; 9 ; trya ; >
-    au < crawling ; exists ; 2017 ; International Journal of Tryptophan Research Volume 10 ; 10 ; trya ; >
+    au < frozen ; exists ; 2017 ; International Journal of Tryptophan Research Volume 10 ; 10 ; trya ; >
     au < manifest ; exists ; 2018 ; International Journal of Tryptophan Research Volume 11 ; 11 ; trya ; >
 
   }
@@ -1049,7 +1049,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Japanese Clinical Medicine Volume 5 ; 5 ; jpma ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Japanese Clinical Medicine Volume 6 ; 6 ; jpma ; >
     au < testing ; exists ; 2016 ; Japanese Clinical Medicine Volume 7 ; 7 ; jpma ; >
-    au < crawling ; exists ; 2017 ; Japanese Clinical Medicine Volume 8 ; 8 ; jpma ; >
+    au < frozen ; exists ; 2017 ; Japanese Clinical Medicine Volume 8 ; 8 ; jpma ; >
     au < manifest ; exists ; 2018 ; Japanese Clinical Medicine Volume 9 ; 9 ; jpma ; >
 
   }
@@ -1138,7 +1138,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Medical Education and Curricular Development Volume 1 ; 1 ; mdea ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Medical Education and Curricular Development Volume 2 ; 2 ; mdea ; >
     au < testing ; exists ; 2016 ; Journal of Medical Education and Curricular Development Volume 3 ; 3 ; mdea ; >
-    au < crawling ; exists ; 2017 ; Journal of Medical Education and Curricular Development Volume 4 ; 4 ; mdea ; >
+    au < frozen ; exists ; 2017 ; Journal of Medical Education and Curricular Development Volume 4 ; 4 ; mdea ; >
     au < manifest ; exists ; 2018 ; Journal of Medical Education and Curricular Development Volume 5 ; 5 ; mdea ; >
 
   }
@@ -1296,7 +1296,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Ophthalmology and Eye Diseases Volume 5 ; 5 ; oeda ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Ophthalmology and Eye Diseases Volume 6 ; 6 ; oeda ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Ophthalmology and Eye Diseases Volume 7 ; 7 ; oeda ; >
-    au < crawling ; exists ; 2016 ; Ophthalmology and Eye Diseases Volume 8 ; 8 ; oeda ; >
+    au < frozen ; exists ; 2016 ; Ophthalmology and Eye Diseases Volume 8 ; 8 ; oeda ; >
     au < ready ; exists ; 2017 ; Ophthalmology and Eye Diseases Volume 9 ; 9 ; oeda ; >
     au < manifest ; exists ; 2018 ; Ophthalmology and Eye Diseases Volume 10 ; 10 ; oedb ; >
 
@@ -1384,7 +1384,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Rehabilitation Process and Outcome Volume 3 ; 3 ; rpoa ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Rehabilitation Process and Outcome Volume 4 ; 4 ; rpoa ; >
     au < crawling ; exists ; 2016 ; Rehabilitation Process and Outcome Volume 5 ; 5 ; rpoa ; >
-    au < crawling ; exists ; 2017 ; Rehabilitation Process and Outcome Volume 6 ; 6 ; rpoa ; >
+    au < frozen ; exists ; 2017 ; Rehabilitation Process and Outcome Volume 6 ; 6 ; rpoa ; >
     au < manifest ; exists ; 2018 ; Rehabilitation Process and Outcome Volume 7 ; 7 ; rpoa ; >
 
   }
