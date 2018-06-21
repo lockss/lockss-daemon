@@ -23,16 +23,16 @@
     implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
     param[journal_id] = fasebj
 
-    au < testing ; exists ; 1987 ; The FASEB Journal Volume 1 ; 1 ; >
-    au < testing ; exists ; 1988 ; The FASEB Journal Volume 2 ; 2 ; >
-    au < testing ; exists ; 1989 ; The FASEB Journal Volume 3 ; 3 ; >
-    au < testing ; exists ; 1990 ; The FASEB Journal Volume 4 ; 4 ; >
-    au < testing ; exists ; 1991 ; The FASEB Journal Volume 5 ; 5 ; >
-    au < testing ; exists ; 1992 ; The FASEB Journal Volume 6 ; 6 ; >
+    au < ready ; exists ; 1987 ; The FASEB Journal Volume 1 ; 1 ; >
+    au < ready ; exists ; 1988 ; The FASEB Journal Volume 2 ; 2 ; >
+    au < ready ; exists ; 1989 ; The FASEB Journal Volume 3 ; 3 ; >
+    au < ready ; exists ; 1990 ; The FASEB Journal Volume 4 ; 4 ; >
+    au < ready ; exists ; 1991 ; The FASEB Journal Volume 5 ; 5 ; >
+    au < ready ; exists ; 1992 ; The FASEB Journal Volume 6 ; 6 ; >
     au < testing ; exists ; 1993 ; The FASEB Journal Volume 7 ; 7 ; >
-    au < testing ; exists ; 1994 ; The FASEB Journal Volume 8 ; 8 ; >
+    au < ready ; exists ; 1994 ; The FASEB Journal Volume 8 ; 8 ; >
     au < testing ; exists ; 1995 ; The FASEB Journal Volume 9 ; 9 ; >
-    au < testing ; exists ; 1996 ; The FASEB Journal Volume 10 ; 10 ; >
+    au < ready ; exists ; 1996 ; The FASEB Journal Volume 10 ; 10 ; >
     au < testing ; exists ; 1997 ; The FASEB Journal Volume 11 ; 11 ; >
     au < testing ; exists ; 1998 ; The FASEB Journal Volume 12 ; 12 ; >
     au < testing ; exists ; 1999 ; The FASEB Journal Volume 13 ; 13 ; >
