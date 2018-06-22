@@ -100,64 +100,64 @@
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       au < aha.AHADrupalPlugin ; ready ; 1950 ; Circulation Volume 1 ; 1 >
-      au < aha.AHADrupalPlugin ; testing ; 1950 ; Circulation Volume 2 ; 2 >
+      au < aha.AHADrupalPlugin ; ready ; 1950 ; Circulation Volume 2 ; 2 >
       au < aha.AHADrupalPlugin ; ready ; 1951 ; Circulation Volume 3 ; 3 >
-      au < aha.AHADrupalPlugin ; testing ; 1951 ; Circulation Volume 4 ; 4 >
+      au < aha.AHADrupalPlugin ; ready ; 1951 ; Circulation Volume 4 ; 4 >
       au < aha.AHADrupalPlugin ; ready ; 1952 ; Circulation Volume 5 ; 5 >
-      au < aha.AHADrupalPlugin ; testing ; 1952 ; Circulation Volume 6 ; 6 >
+      au < aha.AHADrupalPlugin ; ready ; 1952 ; Circulation Volume 6 ; 6 >
       au < aha.AHADrupalPlugin ; ready ; 1953 ; Circulation Volume 7 ; 7 >
       au < aha.AHADrupalPlugin ; ready ; 1953 ; Circulation Volume 8 ; 8 >
-      au < aha.AHADrupalPlugin ; testing ; 1954 ; Circulation Volume 9 ; 9 >
-      au < aha.AHADrupalPlugin ; testing ; 1954 ; Circulation Volume 10 ; 10 >
-      au < aha.AHADrupalPlugin ; testing ; 1955 ; Circulation Volume 11 ; 11 >
+      au < aha.AHADrupalPlugin ; ready ; 1954 ; Circulation Volume 9 ; 9 >
+      au < aha.AHADrupalPlugin ; ready ; 1954 ; Circulation Volume 10 ; 10 >
+      au < aha.AHADrupalPlugin ; ready ; 1955 ; Circulation Volume 11 ; 11 >
       au < aha.AHADrupalPlugin ; ready ; 1955 ; Circulation Volume 12 ; 12 >
       au < aha.AHADrupalPlugin ; testing ; 1956 ; Circulation Volume 13 ; 13 >
-      au < aha.AHADrupalPlugin ; testing ; 1956 ; Circulation Volume 14 ; 14 >
+      au < aha.AHADrupalPlugin ; ready ; 1956 ; Circulation Volume 14 ; 14 >
       au < aha.AHADrupalPlugin ; ready ; 1957 ; Circulation Volume 15 ; 15 >
-      au < aha.AHADrupalPlugin ; testing ; 1957 ; Circulation Volume 16 ; 16 >
-      au < aha.AHADrupalPlugin ; testing ; 1958 ; Circulation Volume 17 ; 17 >
-      au < aha.AHADrupalPlugin ; testing ; 1958 ; Circulation Volume 18 ; 18 >
-      au < aha.AHADrupalPlugin ; testing ; 1959 ; Circulation Volume 19 ; 19 >
+      au < aha.AHADrupalPlugin ; ready ; 1957 ; Circulation Volume 16 ; 16 >
+      au < aha.AHADrupalPlugin ; ready ; 1958 ; Circulation Volume 17 ; 17 >
+      au < aha.AHADrupalPlugin ; ready ; 1958 ; Circulation Volume 18 ; 18 >
+      au < aha.AHADrupalPlugin ; ready ; 1959 ; Circulation Volume 19 ; 19 >
       au < aha.AHADrupalPlugin ; testing ; 1959 ; Circulation Volume 20 ; 20 >
-      au < aha.AHADrupalPlugin ; testing ; 1960 ; Circulation Volume 21 ; 21 >
+      au < aha.AHADrupalPlugin ; ready ; 1960 ; Circulation Volume 21 ; 21 >
       au < aha.AHADrupalPlugin ; ready ; 1960 ; Circulation Volume 22 ; 22 >
-      au < aha.AHADrupalPlugin ; testing ; 1961 ; Circulation Volume 23 ; 23 >
+      au < aha.AHADrupalPlugin ; ready ; 1961 ; Circulation Volume 23 ; 23 >
       au < aha.AHADrupalPlugin ; ready ; 1961 ; Circulation Volume 24 ; 24 >
       au < aha.AHADrupalPlugin ; testing ; 1962 ; Circulation Volume 25 ; 25 >
       au < aha.AHADrupalPlugin ; ready ; 1962 ; Circulation Volume 26 ; 26 >
       au < aha.AHADrupalPlugin ; ready ; 1963 ; Circulation Volume 27 ; 27 >
       au < aha.AHADrupalPlugin ; ready ; 1963 ; Circulation Volume 28 ; 28 >
-      au < aha.AHADrupalPlugin ; testing ; 1964 ; Circulation Volume 29 ; 29 >
+      au < aha.AHADrupalPlugin ; ready ; 1964 ; Circulation Volume 29 ; 29 >
       au < aha.AHADrupalPlugin ; testing ; 1964 ; Circulation Volume 30 ; 30 >
-      au < aha.AHADrupalPlugin ; testing ; 1965 ; Circulation Volume 31 ; 31 >
+      au < aha.AHADrupalPlugin ; ready ; 1965 ; Circulation Volume 31 ; 31 >
       au < aha.AHADrupalPlugin ; testing ; 1965 ; Circulation Volume 32 ; 32 >
       au < aha.AHADrupalPlugin ; ready ; 1966 ; Circulation Volume 33 ; 33 >
       au < aha.AHADrupalPlugin ; ready ; 1966 ; Circulation Volume 34 ; 34 >
       au < aha.AHADrupalPlugin ; ready ; 1967 ; Circulation Volume 35 ; 35 >
       au < aha.AHADrupalPlugin ; testing ; 1967 ; Circulation Volume 36 ; 36 >
       au < aha.AHADrupalPlugin ; ready ; 1968 ; Circulation Volume 37 ; 37 >
-      au < aha.AHADrupalPlugin ; testing ; 1968 ; Circulation Volume 38 ; 38 >
-      au < aha.AHADrupalPlugin ; testing ; 1969 ; Circulation Volume 39 ; 39 >
+      au < aha.AHADrupalPlugin ; ready ; 1968 ; Circulation Volume 38 ; 38 >
+      au < aha.AHADrupalPlugin ; ready ; 1969 ; Circulation Volume 39 ; 39 >
       au < aha.AHADrupalPlugin ; ready ; 1969 ; Circulation Volume 40 ; 40 >
-      au < aha.AHADrupalPlugin ; testing ; 1970 ; Circulation Volume 41 ; 41 >
+      au < aha.AHADrupalPlugin ; ready ; 1970 ; Circulation Volume 41 ; 41 >
       au < aha.AHADrupalPlugin ; ready ; 1970 ; Circulation Volume 42 ; 42 >
-      au < aha.AHADrupalPlugin ; testing ; 1971 ; Circulation Volume 43 ; 43 >
-      au < aha.AHADrupalPlugin ; testing ; 1971 ; Circulation Volume 44 ; 44 >
-      au < aha.AHADrupalPlugin ; testing ; 1972 ; Circulation Volume 45 ; 45 >
-      au < aha.AHADrupalPlugin ; testing ; 1972 ; Circulation Volume 46 ; 46 >
-      au < aha.AHADrupalPlugin ; testing ; 1973 ; Circulation Volume 47 ; 47 >
+      au < aha.AHADrupalPlugin ; ready ; 1971 ; Circulation Volume 43 ; 43 >
+      au < aha.AHADrupalPlugin ; ready ; 1971 ; Circulation Volume 44 ; 44 >
+      au < aha.AHADrupalPlugin ; ready ; 1972 ; Circulation Volume 45 ; 45 >
+      au < aha.AHADrupalPlugin ; ready ; 1972 ; Circulation Volume 46 ; 46 >
+      au < aha.AHADrupalPlugin ; ready ; 1973 ; Circulation Volume 47 ; 47 >
       au < aha.AHADrupalPlugin ; ready ; 1973 ; Circulation Volume 48 ; 48 >
-      au < aha.AHADrupalPlugin ; testing ; 1974 ; Circulation Volume 49 ; 49 >
-      au < aha.AHADrupalPlugin ; testing ; 1974 ; Circulation Volume 50 ; 50 >
+      au < aha.AHADrupalPlugin ; ready ; 1974 ; Circulation Volume 49 ; 49 >
+      au < aha.AHADrupalPlugin ; ready ; 1974 ; Circulation Volume 50 ; 50 >
       au < aha.AHADrupalPlugin ; ready ; 1975 ; Circulation Volume 51 ; 51 >
       au < aha.AHADrupalPlugin ; ready ; 1975 ; Circulation Volume 52 ; 52 >
-      au < aha.AHADrupalPlugin ; testing ; 1976 ; Circulation Volume 53 ; 53 >
-      au < aha.AHADrupalPlugin ; testing ; 1976 ; Circulation Volume 54 ; 54 >
-      au < aha.AHADrupalPlugin ; testing ; 1977 ; Circulation Volume 55 ; 55 >
-      au < aha.AHADrupalPlugin ; testing ; 1977 ; Circulation Volume 56 ; 56 >
-      au < aha.AHADrupalPlugin ; testing ; 1978 ; Circulation Volume 57 ; 57 >
-      au < aha.AHADrupalPlugin ; testing ; 1978 ; Circulation Volume 58 ; 58 >
-      au < aha.AHADrupalPlugin ; testing ; 1979 ; Circulation Volume 59 ; 59 >
+      au < aha.AHADrupalPlugin ; ready ; 1976 ; Circulation Volume 53 ; 53 >
+      au < aha.AHADrupalPlugin ; ready ; 1976 ; Circulation Volume 54 ; 54 >
+      au < aha.AHADrupalPlugin ; ready ; 1977 ; Circulation Volume 55 ; 55 >
+      au < aha.AHADrupalPlugin ; ready ; 1977 ; Circulation Volume 56 ; 56 >
+      au < aha.AHADrupalPlugin ; ready ; 1978 ; Circulation Volume 57 ; 57 >
+      au < aha.AHADrupalPlugin ; ready ; 1978 ; Circulation Volume 58 ; 58 >
+      au < aha.AHADrupalPlugin ; ready ; 1979 ; Circulation Volume 59 ; 59 >
       au < aha.AHADrupalPlugin ; ready ; 1979 ; Circulation Volume 60 ; 60 >
       au < aha.AHADrupalPlugin ; released ; 1980 ; Circulation Volume 61 ; 61 >
       au < aha.AHADrupalPlugin ; released ; 1980 ; Circulation Volume 62 ; 62 >
@@ -256,19 +256,19 @@
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       au < aha.AHADrupalPlugin ; testing ; 1953 ; Circulation Research Volume 1 ; 1 >
-      au < aha.AHADrupalPlugin ; testing ; 1954 ; Circulation Research Volume 2 ; 2 >
-      au < aha.AHADrupalPlugin ; testing ; 1955 ; Circulation Research Volume 3 ; 3 >
-      au < aha.AHADrupalPlugin ; testing ; 1956 ; Circulation Research Volume 4 ; 4 >
-      au < aha.AHADrupalPlugin ; testing ; 1957 ; Circulation Research Volume 5 ; 5 >
+      au < aha.AHADrupalPlugin ; ready ; 1954 ; Circulation Research Volume 2 ; 2 >
+      au < aha.AHADrupalPlugin ; ready ; 1955 ; Circulation Research Volume 3 ; 3 >
+      au < aha.AHADrupalPlugin ; ready ; 1956 ; Circulation Research Volume 4 ; 4 >
+      au < aha.AHADrupalPlugin ; ready ; 1957 ; Circulation Research Volume 5 ; 5 >
       au < aha.AHADrupalPlugin ; ready ; 1958 ; Circulation Research Volume 6 ; 6 >
-      au < aha.AHADrupalPlugin ; testing ; 1959 ; Circulation Research Volume 7 ; 7 >
-      au < aha.AHADrupalPlugin ; testing ; 1960 ; Circulation Research Volume 8 ; 8 >
-      au < aha.AHADrupalPlugin ; testing ; 1961 ; Circulation Research Volume 9 ; 9 >
-      au < aha.AHADrupalPlugin ; testing ; 1962 ; Circulation Research Volume 10 ; 10 >
+      au < aha.AHADrupalPlugin ; ready ; 1959 ; Circulation Research Volume 7 ; 7 >
+      au < aha.AHADrupalPlugin ; ready ; 1960 ; Circulation Research Volume 8 ; 8 >
+      au < aha.AHADrupalPlugin ; ready ; 1961 ; Circulation Research Volume 9 ; 9 >
+      au < aha.AHADrupalPlugin ; ready ; 1962 ; Circulation Research Volume 10 ; 10 >
       au < aha.AHADrupalPlugin ; testing ; 1962 ; Circulation Research Volume 11 ; 11 >
       au < aha.AHADrupalPlugin ; ready ; 1963 ; Circulation Research Volume 12 ; 12 >
-      au < aha.AHADrupalPlugin ; testing ; 1963 ; Circulation Research Volume 13 ; 13 >
-      au < aha.AHADrupalPlugin ; testing ; 1964 ; Circulation Research Volume 14 ; 14 >
+      au < aha.AHADrupalPlugin ; ready ; 1963 ; Circulation Research Volume 13 ; 13 >
+      au < aha.AHADrupalPlugin ; ready ; 1964 ; Circulation Research Volume 14 ; 14 >
       au < aha.AHADrupalPlugin ; ready ; 1964 ; Circulation Research Volume 15 ; 15 >
       au < aha.AHADrupalPlugin ; ready ; 1965 ; Circulation Research Volume 16 ; 16 >
       au < aha.AHADrupalPlugin ; testing ; 1965 ; Circulation Research Volume 17 ; 17 >
@@ -280,46 +280,46 @@
       au < aha.AHADrupalPlugin ; ready ; 1968 ; Circulation Research Volume 23 ; 23 >
       au < aha.AHADrupalPlugin ; ready ; 1969 ; Circulation Research Volume 24 ; 24 >
       au < aha.AHADrupalPlugin ; testing ; 1969 ; Circulation Research Volume 25 ; 25 >
-      au < aha.AHADrupalPlugin ; testing ; 1970 ; Circulation Research Volume 26 ; 26 >
-      au < aha.AHADrupalPlugin ; testing ; 1970 ; Circulation Research Volume 27 ; 27 >
+      au < aha.AHADrupalPlugin ; ready ; 1970 ; Circulation Research Volume 26 ; 26 >
+      au < aha.AHADrupalPlugin ; ready ; 1970 ; Circulation Research Volume 27 ; 27 >
       au < aha.AHADrupalPlugin ; testing ; 1971 ; Circulation Research Volume 28 ; 28 >
       au < aha.AHADrupalPlugin ; ready ; 1971 ; Circulation Research Volume 29 ; 29 >
-      au < aha.AHADrupalPlugin ; testing ; 1972 ; Circulation Research Volume 30 ; 30 >
-      au < aha.AHADrupalPlugin ; testing ; 1972 ; Circulation Research Volume 31 ; 31 >
+      au < aha.AHADrupalPlugin ; ready ; 1972 ; Circulation Research Volume 30 ; 30 >
+      au < aha.AHADrupalPlugin ; ready ; 1972 ; Circulation Research Volume 31 ; 31 >
       au < aha.AHADrupalPlugin ; testing ; 1973 ; Circulation Research Volume 32 ; 32 >
-      au < aha.AHADrupalPlugin ; testing ; 1973 ; Circulation Research Volume 33 ; 33 >
+      au < aha.AHADrupalPlugin ; ready ; 1973 ; Circulation Research Volume 33 ; 33 >
       au < aha.AHADrupalPlugin ; testing ; 1974 ; Circulation Research Volume 34 ; 34 >
-      au < aha.AHADrupalPlugin ; testing ; 1974 ; Circulation Research Volume 35 ; 35 >
+      au < aha.AHADrupalPlugin ; ready ; 1974 ; Circulation Research Volume 35 ; 35 >
       au < aha.AHADrupalPlugin ; ready ; 1975 ; Circulation Research Volume 36 ; 36 >
       au < aha.AHADrupalPlugin ; ready ; 1975 ; Circulation Research Volume 37 ; 37 >
       au < aha.AHADrupalPlugin ; ready ; 1976 ; Circulation Research Volume 38 ; 38 >
       au < aha.AHADrupalPlugin ; ready ; 1976 ; Circulation Research Volume 39 ; 39 >
-      au < aha.AHADrupalPlugin ; testing ; 1977 ; Circulation Research Volume 40 ; 40 >
-      au < aha.AHADrupalPlugin ; testing ; 1977 ; Circulation Research Volume 41 ; 41 >
-      au < aha.AHADrupalPlugin ; testing ; 1978 ; Circulation Research Volume 42 ; 42 >
-      au < aha.AHADrupalPlugin ; testing ; 1978 ; Circulation Research Volume 43 ; 43 >
+      au < aha.AHADrupalPlugin ; ready ; 1977 ; Circulation Research Volume 40 ; 40 >
+      au < aha.AHADrupalPlugin ; ready ; 1977 ; Circulation Research Volume 41 ; 41 >
+      au < aha.AHADrupalPlugin ; ready ; 1978 ; Circulation Research Volume 42 ; 42 >
+      au < aha.AHADrupalPlugin ; ready ; 1978 ; Circulation Research Volume 43 ; 43 >
       au < aha.AHADrupalPlugin ; ready ; 1979 ; Circulation Research Volume 44 ; 44 >
       au < aha.AHADrupalPlugin ; testing ; 1979 ; Circulation Research Volume 45 ; 45 >
       au < aha.AHADrupalPlugin ; ready ; 1980 ; Circulation Research Volume 46 ; 46 >
       au < aha.AHADrupalPlugin ; ready ; 1980 ; Circulation Research Volume 47 ; 47 >
-      au < aha.AHADrupalPlugin ; testing ; 1981 ; Circulation Research Volume 48 ; 48 >
-      au < aha.AHADrupalPlugin ; testing ; 1981 ; Circulation Research Volume 49 ; 49 >
+      au < aha.AHADrupalPlugin ; ready ; 1981 ; Circulation Research Volume 48 ; 48 >
+      au < aha.AHADrupalPlugin ; ready ; 1981 ; Circulation Research Volume 49 ; 49 >
       au < aha.AHADrupalPlugin ; ready ; 1982 ; Circulation Research Volume 50 ; 50 >
       au < aha.AHADrupalPlugin ; testing ; 1982 ; Circulation Research Volume 51 ; 51 >
-      au < aha.AHADrupalPlugin ; testing ; 1983 ; Circulation Research Volume 52 ; 52 >
+      au < aha.AHADrupalPlugin ; ready ; 1983 ; Circulation Research Volume 52 ; 52 >
       au < aha.AHADrupalPlugin ; ready ; 1983 ; Circulation Research Volume 53 ; 53 >
       au < aha.AHADrupalPlugin ; testing ; 1984 ; Circulation Research Volume 54 ; 54 >
       au < aha.AHADrupalPlugin ; testing ; 1984 ; Circulation Research Volume 55 ; 55 >
       au < aha.AHADrupalPlugin ; testing ; 1985 ; Circulation Research Volume 56 ; 56 >
-      au < aha.AHADrupalPlugin ; testing ; 1985 ; Circulation Research Volume 57 ; 57 >
-      au < aha.AHADrupalPlugin ; testing ; 1986 ; Circulation Research Volume 58 ; 58 >
-      au < aha.AHADrupalPlugin ; testing ; 1986 ; Circulation Research Volume 59 ; 59 >
-      au < aha.AHADrupalPlugin ; testing ; 1987 ; Circulation Research Volume 60 ; 60 >
-      au < aha.AHADrupalPlugin ; testing ; 1987 ; Circulation Research Volume 61 ; 61 >
-      au < aha.AHADrupalPlugin ; testing ; 1988 ; Circulation Research Volume 62 ; 62 >
-      au < aha.AHADrupalPlugin ; testing ; 1988 ; Circulation Research Volume 63 ; 63 >
-      au < aha.AHADrupalPlugin ; testing ; 1989 ; Circulation Research Volume 64 ; 64 >
-      au < aha.AHADrupalPlugin ; testing ; 1989 ; Circulation Research Volume 65 ; 65 >
+      au < aha.AHADrupalPlugin ; ready ; 1985 ; Circulation Research Volume 57 ; 57 >
+      au < aha.AHADrupalPlugin ; ready ; 1986 ; Circulation Research Volume 58 ; 58 >
+      au < aha.AHADrupalPlugin ; ready ; 1986 ; Circulation Research Volume 59 ; 59 >
+      au < aha.AHADrupalPlugin ; ready ; 1987 ; Circulation Research Volume 60 ; 60 >
+      au < aha.AHADrupalPlugin ; ready ; 1987 ; Circulation Research Volume 61 ; 61 >
+      au < aha.AHADrupalPlugin ; ready ; 1988 ; Circulation Research Volume 62 ; 62 >
+      au < aha.AHADrupalPlugin ; ready ; 1988 ; Circulation Research Volume 63 ; 63 >
+      au < aha.AHADrupalPlugin ; ready ; 1989 ; Circulation Research Volume 64 ; 64 >
+      au < aha.AHADrupalPlugin ; ready ; 1989 ; Circulation Research Volume 65 ; 65 >
       au < aha.AHADrupalPlugin ; released ; 1990 ; Circulation Research Volume 66 ; 66 >
       au < aha.AHADrupalPlugin ; released ; 1990 ; Circulation Research Volume 67 ; 67 >
       au < aha.AHADrupalPlugin ; released ; 1991 ; Circulation Research Volume 68 ; 68 >
@@ -571,18 +571,18 @@
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       au < aha.AHADrupalPlugin ; testing ; 1979 ; Hypertension Volume 1 ; 1 >
-      au < aha.AHADrupalPlugin ; testing ; 1980 ; Hypertension Volume 2 ; 2 >
-      au < aha.AHADrupalPlugin ; testing ; 1981 ; Hypertension Volume 3 ; 3 >
-      au < aha.AHADrupalPlugin ; testing ; 1982 ; Hypertension Volume 4 ; 4 >
-      au < aha.AHADrupalPlugin ; testing ; 1983 ; Hypertension Volume 5 ; 5 >
-      au < aha.AHADrupalPlugin ; testing ; 1984 ; Hypertension Volume 6 ; 6 >
+      au < aha.AHADrupalPlugin ; ready ; 1980 ; Hypertension Volume 2 ; 2 >
+      au < aha.AHADrupalPlugin ; ready ; 1981 ; Hypertension Volume 3 ; 3 >
+      au < aha.AHADrupalPlugin ; ready ; 1982 ; Hypertension Volume 4 ; 4 >
+      au < aha.AHADrupalPlugin ; ready ; 1983 ; Hypertension Volume 5 ; 5 >
+      au < aha.AHADrupalPlugin ; ready ; 1984 ; Hypertension Volume 6 ; 6 >
       au < aha.AHADrupalPlugin ; ready ; 1985 ; Hypertension Volume 7 ; 7 >
       au < aha.AHADrupalPlugin ; ready ; 1986 ; Hypertension Volume 8 ; 8 >
-      au < aha.AHADrupalPlugin ; testing ; 1987 ; Hypertension Volume 9 ; 9 >
-      au < aha.AHADrupalPlugin ; testing ; 1987 ; Hypertension Volume 10 ; 10 >
+      au < aha.AHADrupalPlugin ; ready ; 1987 ; Hypertension Volume 9 ; 9 >
+      au < aha.AHADrupalPlugin ; ready ; 1987 ; Hypertension Volume 10 ; 10 >
       au < aha.AHADrupalPlugin ; testing ; 1988 ; Hypertension Volume 11 ; 11 >
-      au < aha.AHADrupalPlugin ; testing ; 1988 ; Hypertension Volume 12 ; 12 >
-      au < aha.AHADrupalPlugin ; testing ; 1989 ; Hypertension Volume 13 ; 13 >
+      au < aha.AHADrupalPlugin ; ready ; 1988 ; Hypertension Volume 12 ; 12 >
+      au < aha.AHADrupalPlugin ; ready ; 1989 ; Hypertension Volume 13 ; 13 >
       au < aha.AHADrupalPlugin ; ready ; 1989 ; Hypertension Volume 14 ; 14 >
       au < aha.AHADrupalPlugin ; released ; 1990 ; Hypertension Volume 15 ; 15 >
       au < aha.AHADrupalPlugin ; released ; 1990 ; Hypertension Volume 16 ; 16 >
@@ -660,24 +660,24 @@
       param[base_url] = http://stroke.ahajournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < aha.AHADrupalPlugin ; testing ; 1970 ; Stroke Volume 1 ; 1 >
-      au < aha.AHADrupalPlugin ; testing ; 1971 ; Stroke Volume 2 ; 2 >
+      au < aha.AHADrupalPlugin ; ready ; 1970 ; Stroke Volume 1 ; 1 >
+      au < aha.AHADrupalPlugin ; ready ; 1971 ; Stroke Volume 2 ; 2 >
       au < aha.AHADrupalPlugin ; ready ; 1972 ; Stroke Volume 3 ; 3 >
       au < aha.AHADrupalPlugin ; ready ; 1973 ; Stroke Volume 4 ; 4 >
       au < aha.AHADrupalPlugin ; testing ; 1974 ; Stroke Volume 5 ; 5 >
-      au < aha.AHADrupalPlugin ; testing ; 1975 ; Stroke Volume 6 ; 6 >
-      au < aha.AHADrupalPlugin ; testing ; 1976 ; Stroke Volume 7 ; 7 >
+      au < aha.AHADrupalPlugin ; ready ; 1975 ; Stroke Volume 6 ; 6 >
+      au < aha.AHADrupalPlugin ; ready ; 1976 ; Stroke Volume 7 ; 7 >
       au < aha.AHADrupalPlugin ; ready ; 1977 ; Stroke Volume 8 ; 8 >
       au < aha.AHADrupalPlugin ; testing ; 1978 ; Stroke Volume 9 ; 9 >
       au < aha.AHADrupalPlugin ; testing ; 1979 ; Stroke Volume 10 ; 10 >
-      au < aha.AHADrupalPlugin ; testing ; 1980 ; Stroke Volume 11 ; 11 >
-      au < aha.AHADrupalPlugin ; testing ; 1981 ; Stroke Volume 12 ; 12 >
-      au < aha.AHADrupalPlugin ; testing ; 1982 ; Stroke Volume 13 ; 13 >
+      au < aha.AHADrupalPlugin ; ready ; 1980 ; Stroke Volume 11 ; 11 >
+      au < aha.AHADrupalPlugin ; ready ; 1981 ; Stroke Volume 12 ; 12 >
+      au < aha.AHADrupalPlugin ; ready ; 1982 ; Stroke Volume 13 ; 13 >
       au < aha.AHADrupalPlugin ; testing ; 1983 ; Stroke Volume 14 ; 14 >
-      au < aha.AHADrupalPlugin ; testing ; 1984 ; Stroke Volume 15 ; 15 >
+      au < aha.AHADrupalPlugin ; ready ; 1984 ; Stroke Volume 15 ; 15 >
       au < aha.AHADrupalPlugin ; testing ; 1985 ; Stroke Volume 16 ; 16 >
-      au < aha.AHADrupalPlugin ; testing ; 1986 ; Stroke Volume 17 ; 17 >
-      au < aha.AHADrupalPlugin ; testing ; 1987 ; Stroke Volume 18 ; 18 >
+      au < aha.AHADrupalPlugin ; ready ; 1986 ; Stroke Volume 17 ; 17 >
+      au < aha.AHADrupalPlugin ; ready ; 1987 ; Stroke Volume 18 ; 18 >
       au < aha.AHADrupalPlugin ; ready ; 1988 ; Stroke Volume 19 ; 19 >
       au < aha.AHADrupalPlugin ; ready ; 1989 ; Stroke Volume 20 ; 20 >
       au < aha.AHADrupalPlugin ; released ; 1990 ; Stroke Volume 21 ; 21 >
