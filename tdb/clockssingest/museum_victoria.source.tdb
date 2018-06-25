@@ -15,11 +15,13 @@
       issn = 1447-2546 ;
       eissn = 1447-2554 
     >
-    
+    # WARC content collected from https://museumsvictoria.com.au/collections-research/journals/memoirs-of-museum-victoria/    
+
     param[base_url] = http://clockss-ingest.lockss.org/warcfiles/memoirs-of-museum-victoria-released/
 
     au < readySource ; finished ; 2016 ; Memoirs of Museum Victoria WARC Content 2016 ; 2016 >
-      
+    # as of 6/25/18 - doesn't appear to have any new content after 2010; check again next year
+       
   }
 
   {
@@ -28,11 +30,13 @@
       name = Museum Victoria Science Reports WARC Content ;
       issn = 1833-0290  
     >
+    # WARC content collected from http://museumvictoria.com.au/about/books-and-journals/journals/museum-victoria-science-reports/
     
     param[base_url] = http://clockss-ingest.lockss.org/warcfiles/museum-victoria-science-reports-released/
 
     au < readySource ; finished ; 2016 ; Museum Victoria Science Reports WARC Content 2016 ; 2016 >
-    
+    # as of 6/25/18 - doesn't appear to have any new content after 2015; check again next year
+   
   }
   
 }

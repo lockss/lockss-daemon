@@ -19,10 +19,12 @@
 
     # This content was collected using wget and provided for preservation as a
     # set of WARC files
+    # WARC content collected from http://www.minsocam.org/MSA/AmMin/TOC/
 
     param[base_url] = http://clockss-ingest.lockss.org/warcfiles/american-mineralogist-released/
 
     au < readySource ; finished ; 2016 ; American Mineralogist WARC Content 2016 ; 2016 >
+    au < expected ; exists ; 2018 ; American Mineralogist WARC Content 2018 ; 2018 >
     
   }
   
@@ -35,10 +37,12 @@
     >
     # This content was collected using wget and provided for preservation as a
     # set of WARC files
+    # WARC content collected from http://www.minsocam.org/MSA/RIM/
 
     param[base_url] = http://clockss-ingest.lockss.org/warcfiles/reviews-in-mineralogy-and-geochemistry-released/
 
     au < readySource ; finished ; 2016 ; Reviews in Mineralogy and Geochemistry WARC Content 2016 ; 2016 >
+    au < expected ; exists ; 2018 ; Reviews in Mineralogy and Geochemistry WARC Content 2018 ; 2018 >
     
   }
 
