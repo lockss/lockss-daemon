@@ -40,8 +40,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Air, Soil & Water Research Volume 6 ; 6 ; aswa ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Air, Soil & Water Research Volume 7 ; 7 ; aswa ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Air, Soil & Water Research Volume 8 ; 8 ; aswa ; >
-    au < crawling ; exists ; 2016 ; Air, Soil & Water Research Volume 9 ; 9 ; aswa ; >
-    au < crawling ; exists ; 2017 ; Air, Soil & Water Research Volume 10 ; 10 ; aswa ; >
+    au < frozen ; exists ; 2016 ; Air, Soil & Water Research Volume 9 ; 9 ; aswa ; >
+    au < frozen ; exists ; 2017 ; Air, Soil & Water Research Volume 10 ; 10 ; aswa ; >
     au < manifest ; exists ; 2018 ; Air, Soil & Water Research Volume 11 ; 11 ; aswa ; >
 
   }
@@ -114,7 +114,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Bioinformatics and Biology Insights Volume 7 ; 7 ; bbia ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Bioinformatics and Biology Insights Volume 8 ; 8 ; bbia ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Bioinformatics and Biology Insights Volume 9 ; 9 ; bbia ; >
-    au < crawling ; exists ; 2016 ; Bioinformatics and Biology Insights Volume 10 ; 10 ; bbia ; >
+    au < frozen ; exists ; 2016 ; Bioinformatics and Biology Insights Volume 10 ; 10 ; bbia ; >
     au < crawling ; exists ; 2017 ; Bioinformatics and Biology Insights Volume 11 ; 11 ; bbia ; >
     au < manifest ; exists ; 2018 ; Bioinformatics and Biology Insights Volume 12 ; 12 ; bbia ; >
 
@@ -140,8 +140,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Biomarker Insights Volume 8 ; 8 ; bmia ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Biomarker Insights Volume 9 ; 9 ; bmia ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Biomarker Insights Volume 10 ; 10 ; bmia ; >
-    au < crawling ; exists ; 2016 ; Biomarker Insights Volume 11 ; 11 ; bmia ; >
-    au < crawling ; exists ; 2017 ; Biomarker Insights Volume 12 ; 12 ; bmia ; >
+    au < frozen ; exists ; 2016 ; Biomarker Insights Volume 11 ; 11 ; bmia ; >
+    au < frozen ; exists ; 2017 ; Biomarker Insights Volume 12 ; 12 ; bmia ; >
     au < manifest ; exists ; 2018 ; Biomarker Insights Volume 13 ; 13 ; bmia ; >
 
   }
@@ -208,7 +208,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Biomedical Informatics Insights Volume 5 Suppl. 1 ; 5 ; biia ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Biomedical Informatics Insights Volume 6 Suppl. 1 ; 6 ; biia ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Biomedical Informatics Insights Volume 7 ; 7 ; biia ; >
-    au < crawling ; exists ; 2016 ; Biomedical Informatics Insights Volume 8 ; 8 ; biia ; >
+    au < frozen ; exists ; 2016 ; Biomedical Informatics Insights Volume 8 ; 8 ; biia ; >
     au < crawling ; exists ; 2017 ; Biomedical Informatics Insights Volume 9 ; 9 ; biia ; >
     au < manifest ; exists ; 2018 ; Biomedical Informatics Insights Volume 10 ; 10 ; biia ; >
 
@@ -254,8 +254,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Breast Cancer: Basic and Clinical Research Volume 7 ; 7 ; bcba ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Breast Cancer: Basic and Clinical Research Volume 8 ; 8 ; bcba ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Breast Cancer: Basic and Clinical Research Volume 9 ; 9 ; bcba ; >
-    au < crawling ; exists ; 2016 ; Breast Cancer: Basic and Clinical Research Volume 10 ; 10 ; bcba ; >
-    au < crawling ; exists ; 2017 ; Breast Cancer: Basic and Clinical Research Volume 11 ; 11 ; bcba ; >
+    au < frozen ; exists ; 2016 ; Breast Cancer: Basic and Clinical Research Volume 10 ; 10 ; bcba ; >
+    au < frozen ; exists ; 2017 ; Breast Cancer: Basic and Clinical Research Volume 11 ; 11 ; bcba ; >
     au < manifest ; exists ; 2018 ; Breast Cancer: Basic and Clinical Research Volume 12 ; 12 ; bcba ; >
 
   }
@@ -279,7 +279,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Cancer Growth and Metastasis Volume 7 ; 7 ; cgma ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Cancer Growth and Metastasis Volume 8 ; 8 ; cgma ; >
     au < frozen ; exists ; 2016 ; Cancer Growth and Metastasis Volume 9 ; 9 ; cgma ; >
-    au < crawling ; exists ; 2017 ; Cancer Growth and Metastasis Volume 10 ; 10 ; cgma ; >
+    au < frozen ; exists ; 2017 ; Cancer Growth and Metastasis Volume 10 ; 10 ; cgma ; >
     au < manifest ; exists ; 2018 ; Cancer Growth and Metastasis Volume 11 ; 11 ; cgma ; >
 
   }
@@ -305,9 +305,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Cancer Informatics Volume 12 ; 12 ; cixa ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Cancer Informatics Volume 13 ; 13 ; cixa ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Cancer Informatics Volume 14 ; 14 ; cixa ; >
-    au < crawling ; exists ; 2016 ; Cancer Informatics Volume 15 ; 15 ; cixa ; >
+    au < frozen ; exists ; 2016 ; Cancer Informatics Volume 15 ; 15 ; cixa ; >
     au < frozen ; exists ; 2017 ; Cancer Informatics Volume 16 ; 16 ; cixa ; >
-    au < crawling ; exists ; 2016 ; Cancer Informatics Volume 17 ; 17 ; cixa ; >
+    au < frozen ; exists ; 2016 ; Cancer Informatics Volume 17 ; 17 ; cixa ; >
 
   }
 
@@ -329,7 +329,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 6 ; 6 ; amda ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 7 ; 7 ; amda ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 8 ; 8 ; amda ; >
-    au < crawling ; exists ; 2016 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 9 ; 9 ; amda ; >
+    au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 9 ; 9 ; amda ; >
     au < frozen ; exists ; 2017 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 10 ; 10 ; amda ; >
     au < manifest ; exists ; 2018 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 11 ; 11 ; amda ; >
 
@@ -354,7 +354,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Clinical Medicine Insights: Blood Disorders Volume 7 ; 7 ; bdxa ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Blood Disorders Volume 8 ; 8 ; bdxa ; >
     au < crawling ; exists ; 2016 ; Clinical Medicine Insights: Blood Disorders Volume 9 ; 9 ; bdxa ; >
-    au < crawling ; exists ; 2017 ; Clinical Medicine Insights: Blood Disorders Volume 10 ; 10 ; bdxa ; >
+    au < frozen ; exists ; 2017 ; Clinical Medicine Insights: Blood Disorders Volume 10 ; 10 ; bdxa ; >
     au < manifest ; exists ; 2018 ; Clinical Medicine Insights: Blood Disorders Volume 11 ; 11 ; bdxa ; >
 
   }
@@ -378,7 +378,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Clinical Medicine Insights: Cardiology Volume 7 ; 7 ; cica ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Clinical Medicine Insights: Cardiology Volume 8 ; 8 ; cica ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Cardiology Volume 9 ; 9 ; cica ; >
-    au < crawling ; exists ; 2016 ; Clinical Medicine Insights: Cardiology Volume 10 ; 10 ; cica ; >
+    au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Cardiology Volume 10 ; 10 ; cica ; >
     au < frozen ; exists ; 2017 ; Clinical Medicine Insights: Cardiology Volume 11 ; 11 ; cica ; >
     au < manifest ; exists ; 2018 ; Clinical Medicine Insights: Cardiology Volume 12 ; 12 ; cica ; >
 
@@ -403,7 +403,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Clinical Medicine Insights: Case Reports Volume 7 ; 7 ; icra ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Case Reports Volume 8 ; 8 ; icra ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Case Reports Volume 9 ; 9 ; icra ; >
-    au < crawling ; exists ; 2017 ; Clinical Medicine Insights: Case Reports Volume 10 ; 10 ; icra ; >
+    au < frozen ; exists ; 2017 ; Clinical Medicine Insights: Case Reports Volume 10 ; 10 ; icra ; >
     au < manifest ; exists ; 2018 ; Clinical Medicine Insights: Case Reports Volume 11 ; 11 ; icra ; >
 
   }
@@ -500,7 +500,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Clinical Medicine Insights: Gastroenterology Volume 7 ; 7 ; cmga ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Gastroenterology Volume 8 ; 8 ; cmga ; >
     au < crawling ; exists ; 2016 ; Clinical Medicine Insights: Gastroenterology Volume 9 ; 9 ; cmga ; >
-    au < crawling ; exists ; 2017 ; Clinical Medicine Insights: Gastroenterology Volume 10 ; 10 ; cmga ; >
+    au < frozen ; exists ; 2017 ; Clinical Medicine Insights: Gastroenterology Volume 10 ; 10 ; cmga ; >
     au < manifest ; exists ; 2018 ; Clinical Medicine Insights: Gastroenterology Volume 11 ; 11 ; cmga ; >
 
   }
@@ -525,7 +525,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Clinical Medicine Insights: Oncology Volume 8 ; 8 ; onca ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Oncology Volume 9 ; 9 ; onca ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Oncology Volume 10 ; 10 ; onca ; >
-    au < crawling ; exists ; 2017 ; Clinical Medicine Insights: Oncology Volume 11 ; 11 ; onca ; >
+    au < frozen ; exists ; 2017 ; Clinical Medicine Insights: Oncology Volume 11 ; 11 ; onca ; >
     au < manifest ; exists ; 2018 ; Clinical Medicine Insights: Oncology Volume 12 ; 12 ; onca ; >
 
   }
@@ -595,7 +595,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Clinical Medicine Insights: Psychiatry Volume 4 ; 4 ; psya ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Clinical Medicine Insights: Psychiatry Volume 5 ; 5 ; psya ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Psychiatry Volume 6 ; 6 ; psya ; >
-    au < crawling ; exists ; 2016 ; Clinical Medicine Insights: Psychiatry Volume 7 ; 7 ; psya ; >
+    au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Psychiatry Volume 7 ; 7 ; psya ; >
     au < frozen ; exists ; 2017 ; Clinical Medicine Insights: Psychiatry Volume 8 ; 8 ; psya ; >
     au < manifest ; exists ; 2018 ; Clinical Medicine Insights: Psychiatry Volume 9 ; 9 ; psya ; >
 
@@ -688,7 +688,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Clinical Medicine Insights: Urology Volume 6 ; 6 ; cmua ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Clinical Medicine Insights: Urology Volume 7 ; 7 ; cmua ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Urology Volume 8 ; 8 ; cmua ; >
-    au < crawling ; exists ; 2016 ; Clinical Medicine Insights: Urology Volume 9 ; 9 ; cmua ; >
+    au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Urology Volume 9 ; 9 ; cmua ; >
     au < frozen ; exists ; 2017 ; Clinical Medicine Insights: Urology Volume 10 ; 10 ; cmua ; >
     au < manifest ; exists ; 2018 ; Clinical Medicine Insights: Urology Volume 11 ; 11 ; cmua ; >
 
@@ -907,8 +907,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Immunology and Immunogenetics Insights Volume 5 ; 5 ; iiia ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Immunology and Immunogenetics Insights Volume 6 ; 6 ; iiia ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Immunology and Immunogenetics Insights Volume 7 ; 7 ; iiia ; >
-    au < crawling ; exists ; 2016 ; Immunology and Immunogenetics Insights Volume 8 ; 8 ; iiia ; >
-    au < crawling ; exists ; 2017 ; Immunology and Immunogenetics Insights Volume 9 ; 9 ; iiia ; >
+    au < frozen ; exists ; 2016 ; Immunology and Immunogenetics Insights Volume 8 ; 8 ; iiia ; >
+    au < frozen ; exists ; 2017 ; Immunology and Immunogenetics Insights Volume 9 ; 9 ; iiia ; >
     au < exists ; exists ; 2018 ; Immunology and Immunogenetics Insights Volume 10 ; 10 ; iiia ; >
 
   }
@@ -953,8 +953,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Infectious Diseases: Research and Treatment Volume 6 ; 6 ; idra ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Infectious Diseases: Research and Treatment Volume 7 ; 7 ; idra ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Infectious Diseases: Research and Treatment Volume 8 ; 8 ; idra ; >
-    au < crawling ; exists ; 2016 ; Infectious Diseases: Research and Treatment Volume 9 ; 9 ; idra ; >
-    au < crawling ; exists ; 2017 ; Infectious Diseases: Research and Treatment Volume 10 ; 10 ; idra ; >
+    au < frozen ; exists ; 2016 ; Infectious Diseases: Research and Treatment Volume 9 ; 9 ; idra ; >
+    au < frozen ; exists ; 2017 ; Infectious Diseases: Research and Treatment Volume 10 ; 10 ; idra ; >
     au < manifest ; exists ; 2018 ; Infectious Diseases: Research and Treatment Volume 11 ; 11 ; idra ; >
 
   }
@@ -1003,7 +1003,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Insect Science Volume 6 ; 6 ; insa ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Insect Science Volume 7 ; 7 ; insa ; >
     au < frozen ; exists ; 2016 ; International Journal of Insect Science Volume 8 ; 8 ; insa ; >
-    au < crawling ; exists ; 2017 ; International Journal of Insect Science Volume 9 ; 9 ; insa ; >
+    au < frozen ; exists ; 2017 ; International Journal of Insect Science Volume 9 ; 9 ; insa ; >
     au < manifest ; exists ; 2018 ; International Journal of Insect Science Volume 10 ; 10 ; insa ; >
 
   }
@@ -1119,7 +1119,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Journal of Experimental Neuroscience Volume 7 ; 7 ; exna ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Experimental Neuroscience Volume 8 ; 8 ; exna ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Experimental Neuroscience Volume 9 ; 9 ; exna ; >
-    au < crawling ; exists ; 2016 ; Journal of Experimental Neuroscience Volume 10 ; 10 ; exna ; >
+    au < frozen ; exists ; 2016 ; Journal of Experimental Neuroscience Volume 10 ; 10 ; exna ; >
     au < crawling ; exists ; 2017 ; Journal of Experimental Neuroscience Volume 11 ; 11 ; exna ; >
     au < manifest ; exists ; 2018 ; Journal of Experimental Neuroscience Volume 12 ; 12 ; exna ; >
 
@@ -1160,8 +1160,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Lipid Insights Volume 6 ; 6 ; lixa ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Lipid Insights Volume 7 ; 7 ; lixa ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Lipid Insights Volume 8 ; 8 ; lixa ; >
-    au < crawling ; exists ; 2016 ; Lipid Insights Volume 9 ; 9 ; lixa ; >
-    au < crawling ; exists ; 2017 ; Lipid Insights Volume 10 ; 10 ; lixa ; >
+    au < frozen ; exists ; 2016 ; Lipid Insights Volume 9 ; 9 ; lixa ; >
+    au < frozen ; exists ; 2017 ; Lipid Insights Volume 10 ; 10 ; lixa ; >
     au < manifest ; exists ; 2018 ; Lipid Insights Volume 11 ; 11 ; lixa ; >
 
   }
@@ -1183,8 +1183,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Magnetic Resonance Insights Volume 6 ; 6 ; mria ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Magnetic Resonance Insights Volume 7 ; 7 ; mria ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Magnetic Resonance Insights Volume 8 ; 8 ; mria ; >
-    au < crawling ; exists ; 2016 ; Magnetic Resonance Insights Volume 9 ; 9 ; mria ; >
-    au < crawling ; exists ; 2017 ; Magnetic Resonance Insights Volume 10 ; 10 ; mria ; >
+    au < frozen ; exists ; 2016 ; Magnetic Resonance Insights Volume 9 ; 9 ; mria ; >
+    au < frozen ; exists ; 2017 ; Magnetic Resonance Insights Volume 10 ; 10 ; mria ; >
     au < manifest ; exists ; 2018 ; Magnetic Resonance Insights Volume 11 ; 11 ; mria ; >
 
   }
@@ -1227,7 +1227,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Microbiology Insights Volume 7 ; 7 ; mbia ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Microbiology Insights Volume 8 ; 8 ; mbia ; >
     au < crawling ; exists ; 2016 ; Microbiology Insights Volume 9 ; 9 ; mbia ; >
-    au < crawling ; exists ; 2017 ; Microbiology Insights Volume 10 ; 10 ; mbia ; >
+    au < frozen ; exists ; 2017 ; Microbiology Insights Volume 10 ; 10 ; mbia ; >
     au < manifest ; exists ; 2018 ; Microbiology Insights Volume 11 ; 11 ; mbia ; >
 
   }
@@ -1250,7 +1250,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Nutrition and Metabolic Insights Volume 6 ; 6 ; nmia ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Nutrition and Metabolic Insights Volume 7 ; 7 ; nmia ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Nutrition and Metabolic Insights Volume 8 ; 8 ; nmia ; >
-    au < crawling ; exists ; 2016 ; Nutrition and Metabolic Insights Volume 9 ; 9 ; nmia ; >
+    au < frozen ; exists ; 2016 ; Nutrition and Metabolic Insights Volume 9 ; 9 ; nmia ; >
     au < frozen ; exists ; 2017 ; Nutrition and Metabolic Insights Volume 10 ; 10 ; nmia ; >
     au < manifest ; exists ; 2018 ; Nutrition and Metabolic Insights Volume 11 ; 11 ; nmia ; >
 
@@ -1274,7 +1274,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Open Journal of Cardiovascular Surgery Volume 6 ; 6 ; ojca ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Open Journal of Cardiovascular Surgery Volume 7 ; 7 ; ojca ; >
     au < frozen ; exists ; 2016 ; Open Journal of Cardiovascular Surgery Volume 8 ; 8 ; ojca ; >
-    au < crawling ; exists ; 2017 ; Open Journal of Cardiovascular Surgery Volume 9 ; 9 ; ojca ; >
+    au < frozen ; exists ; 2017 ; Open Journal of Cardiovascular Surgery Volume 9 ; 9 ; ojca ; >
     au < manifest ; exists ; 2018 ; Open Journal of Cardiovascular Surgery Volume 10 ; 10 ; ojca ; >
 
   }
@@ -1297,7 +1297,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Ophthalmology and Eye Diseases Volume 6 ; 6 ; oeda ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Ophthalmology and Eye Diseases Volume 7 ; 7 ; oeda ; >
     au < frozen ; exists ; 2016 ; Ophthalmology and Eye Diseases Volume 8 ; 8 ; oeda ; >
-    au < crawling ; exists ; 2017 ; Ophthalmology and Eye Diseases Volume 9 ; 9 ; oeda ; >
+    au < frozen ; exists ; 2017 ; Ophthalmology and Eye Diseases Volume 9 ; 9 ; oeda ; >
     au < manifest ; exists ; 2018 ; Ophthalmology and Eye Diseases Volume 10 ; 10 ; oedb ; >
 
   }
@@ -1403,8 +1403,8 @@
     au < doNotProcess ; exists ; 2010 ; Signal Transduction Insights Volume 2 ; 2 ; stia ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Signal Transduction Insights Volume 3 ; 3 ; stia ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Signal Transduction Insights Volume 4 ; 4 ; stia ; >
-    au < crawling ; exists ; 2016 ; Signal Transduction Insights Volume 5 ; 5 ; stia ; >
-    au < crawling ; exists ; 2017 ; Signal Transduction Insights Volume 6 ; 6 ; stia ; >
+    au < frozen ; exists ; 2016 ; Signal Transduction Insights Volume 5 ; 5 ; stia ; >
+    au < frozen ; exists ; 2017 ; Signal Transduction Insights Volume 6 ; 6 ; stia ; >
     au < exists ; exists ; 2018 ; Signal Transduction Insights Volume 7 ; 7 ; stia ; >
 
   }
@@ -1424,10 +1424,10 @@
     au < doNotProcess ; exists ; 2010 ; Substance Abuse: Research and Treatment Volume 4 ; 4 ; sata ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Substance Abuse: Research and Treatment Volume 5 ; 5 ; sata ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Substance Abuse: Research and Treatment Volume 6 ; 6 ; sata ; >
-    au < crawling ; exists ; 2013 ; Substance Abuse: Research and Treatment Volume 7 ; 7 ; sata ; >
+    au < frozen ; exists ; 2013 ; Substance Abuse: Research and Treatment Volume 7 ; 7 ; sata ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Substance Abuse: Research and Treatment Volume 8 ; 8 ; sata ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Substance Abuse: Research and Treatment Volume 9 ; 9 ; sata ; >
-    au < crawling ; exists ; 2016 ; Substance Abuse: Research and Treatment Volume 10 ; 10 ; sata ; >
+    au < frozen ; exists ; 2016 ; Substance Abuse: Research and Treatment Volume 10 ; 10 ; sata ; >
     au < crawling ; exists ; 2017 ; Substance Abuse: Research and Treatment Volume 11 ; 11 ; sata ; >
     au < manifest ; exists ; 2018 ; Substance Abuse: Research and Treatment Volume 12 ; 12 ; sata ; >
 
@@ -1451,8 +1451,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Tobacco Use Insights Volume 6 ; 6 ; tuia ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Tobacco Use Insights Volume 7 ; 7 ; tuia ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Tobacco Use Insights Volume 8 ; 8 ; tuia ; >
-    au < crawling ; exists ; 2016 ; Tobacco Use Insights Volume 9 ; 9 ; tuia ; >
-    au < crawling ; exists ; 2017 ; Tobacco Use Insights Volume 10 ; 10 ; tuia ; >
+    au < frozen ; exists ; 2016 ; Tobacco Use Insights Volume 9 ; 9 ; tuia ; >
+    au < frozen ; exists ; 2017 ; Tobacco Use Insights Volume 10 ; 10 ; tuia ; >
     au < manifest ; exists ; 2018 ; Tobacco Use Insights Volume 11 ; 11 ; tuia ; >
 
   }
