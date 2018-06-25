@@ -3378,7 +3378,7 @@
     param[journal_id] = dprg
     #continues = 1463-6697
 
-    au < manifest ; exists ; 2017 ; Digital Policy, Regulation and Governance Volume 19 ; 19 ; https://www.emeraldinsight.com/ ; >
+    au < ready ; exists ; 2017 ; Digital Policy, Regulation and Governance Volume 19 ; 19 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2018 ; Digital Policy, Regulation and Governance Volume 20 ; 20 ; https://www.emeraldinsight.com/ ; >
     au < expected ; exists ; 2019 ; Digital Policy, Regulation and Governance Volume 21 ; 21 ; https://www.emeraldinsight.com/ ; >
 
@@ -3608,7 +3608,7 @@
     param[journal_id] = sgpe
     #continues = 1759-751X
 
-    au < manifest ; exists ; 2017 ; Studies in Graduate and Postdoctoral Education Volume 8 ; 8 ; https://www.emeraldinsight.com/ ; >
+    au < ready ; exists ; 2017 ; Studies in Graduate and Postdoctoral Education Volume 8 ; 8 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2018 ; Studies in Graduate and Postdoctoral Education Volume 9 ; 9 ; https://www.emeraldinsight.com/ ; >
 
   }
@@ -3846,8 +3846,8 @@
     param[journal_id] = ribs
     #continued_by = 1056-9219
 
-    au < manifest ; exists ; 2016 ; Review of International Business and Strategy Volume 26 ; 26 ; https://www.emeraldinsight.com/ ; >
-    au < manifest ; exists ; 2017 ; Review of International Business and Strategy Volume 27 ; 27 ; https://www.emeraldinsight.com/ ; >
+    au < ready ; exists ; 2016 ; Review of International Business and Strategy Volume 26 ; 26 ; https://www.emeraldinsight.com/ ; >
+    au < ready ; exists ; 2017 ; Review of International Business and Strategy Volume 27 ; 27 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2018 ; Review of International Business and Strategy Volume 28 ; 28 ; https://www.emeraldinsight.com/ ; >
     au < expected ; exists ; 2019 ; Review of International Business and Strategy Volume 29 ; 29 ; https://www.emeraldinsight.com/ ; >
 
@@ -5874,7 +5874,7 @@
     param[journal_id] = jet
     #continues = 1754-9450
 
-    au < manifest ; exists ; 2017 ; Journal of Enabling Technologies Volume 11 ; 11 ; https://www.emeraldinsight.com/ ; >
+    au < ready ; exists ; 2017 ; Journal of Enabling Technologies Volume 11 ; 11 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2018 ; Journal of Enabling Technologies Volume 12 ; 12 ; https://www.emeraldinsight.com/ ; >
 
   }
@@ -9820,7 +9820,7 @@
     param[journal_id] = ils
     #continues = 0307-4803
 
-    au < manifest ; exists ; 2017 ; Information and Learning Science Volume 118 ; 118 ; https://www.emeraldinsight.com/ ; >
+    au < ready ; exists ; 2017 ; Information and Learning Science Volume 118 ; 118 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2018 ; Information and Learning Science Volume 119 ; 119 ; https://www.emeraldinsight.com/ ; >
     au < expected ; exists ; 2019 ; Information and Learning Science Volume 120 ; 120 ; https://www.emeraldinsight.com/ ; >
 
@@ -9960,8 +9960,8 @@
     param[journal_id] = dlp
     #continues = 1065-075X
 
-    au < manifest ; exists ; 2016 ; Digital Library Perspectives Volume 32 ; 32 ; https://www.emeraldinsight.com/ ; >
-    au < manifest ; exists ; 2017 ; Digital Library Perspectives Volume 33 ; 33 ; https://www.emeraldinsight.com/ ; >
+    au < ready ; exists ; 2016 ; Digital Library Perspectives Volume 32 ; 32 ; https://www.emeraldinsight.com/ ; >
+    au < ready ; exists ; 2017 ; Digital Library Perspectives Volume 33 ; 33 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2018 ; Digital Library Perspectives Volume 34 ; 34 ; https://www.emeraldinsight.com/ ; >
     au < expected ; exists ; 2019 ; Digital Library Perspectives Volume 35 ; 35 ; https://www.emeraldinsight.com/ ; >
 
@@ -11199,7 +11199,7 @@
     param[journal_id] = sajbs
     #continues = 2045-4457
 
-    au < manifest ; exists ; 2017 ; South Asian Journal of Business Studies Volume 6 ; 6 ; https://www.emeraldinsight.com/ ; >
+    au < ready ; exists ; 2017 ; South Asian Journal of Business Studies Volume 6 ; 6 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2018 ; South Asian Journal of Business Studies Volume 7 ; 7 ; https://www.emeraldinsight.com/ ; >
     au < expected ; exists ; 2019 ; South Asian Journal of Business Studies Volume 8 ; 8 ; https://www.emeraldinsight.com/ ; >
 
@@ -11322,7 +11322,7 @@
     param[journal_id] = jgoss
     #continues = 1753-8297
 
-    au < manifest ; exists ; 2017 ; Journal of Global Operations and Strategic Sourcing Volume 10 ; 10 ; https://www.emeraldinsight.com/ ; >
+    au < ready ; exists ; 2017 ; Journal of Global Operations and Strategic Sourcing Volume 10 ; 10 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2018 ; Journal of Global Operations and Strategic Sourcing Volume 11 ; 11 ; https://www.emeraldinsight.com/ ; >
     au < expected ; exists ; 2019 ; Journal of Global Operations and Strategic Sourcing Volume 12 ; 12 ; https://www.emeraldinsight.com/ ; >
 
@@ -11462,7 +11462,7 @@
     param[journal_id] = ijbpa
     #continues = 0263-080X
 
-    au < manifest ; exists ; 2017 ; International Journal of Building Pathology and Adaptation Volume 35 ; 35 ; https://www.emeraldinsight.com/ ; >
+    au < ready ; exists ; 2017 ; International Journal of Building Pathology and Adaptation Volume 35 ; 35 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2018 ; International Journal of Building Pathology and Adaptation Volume 36 ; 36 ; https://www.emeraldinsight.com/ ; >
 
   }
