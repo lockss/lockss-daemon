@@ -89,7 +89,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Biochemistry Insights Volume 6 ; 6 ; bcia ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Biochemistry Insights Volume 7 ; 7 ; bcia ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Biochemistry Insights Volume 8 ; 8 ; bcia ; >
-    au < crawling ; exists ; 2016 ; Biochemistry Insights Volume 9 ; 9 ; bcia ; >
+    au < frozen ; exists ; 2016 ; Biochemistry Insights Volume 9 ; 9 ; bcia ; >
     au < frozen ; exists ; 2017 ; Biochemistry Insights Volume 10 ; 10 ; bcia ; >
     au < expected ; exists ; 2018 ; Biochemistry Insights Volume 11 ; 11 ; bcia ; >
 
@@ -353,7 +353,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Clinical Medicine Insights: Blood Disorders Volume 6 ; 6 ; bdxa ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Clinical Medicine Insights: Blood Disorders Volume 7 ; 7 ; bdxa ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Blood Disorders Volume 8 ; 8 ; bdxa ; >
-    au < crawling ; exists ; 2016 ; Clinical Medicine Insights: Blood Disorders Volume 9 ; 9 ; bdxa ; >
+    au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Blood Disorders Volume 9 ; 9 ; bdxa ; >
     au < frozen ; exists ; 2017 ; Clinical Medicine Insights: Blood Disorders Volume 10 ; 10 ; bdxa ; >
     au < manifest ; exists ; 2018 ; Clinical Medicine Insights: Blood Disorders Volume 11 ; 11 ; bdxa ; >
 
@@ -428,7 +428,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 8 ; 8 ; craa ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 9 ; 9 ; craa ; >
     au < crawling ; exists ; 2016 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 10 ; 10 ; craa ; >
-    au < crawling ; exists ; 2017 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 11 ; 11 ; craa ; >
+    au < frozen ; exists ; 2017 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 11 ; 11 ; craa ; >
     au < manifest ; exists ; 2018 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 12 ; 12 ; craa ; >
 
   }
@@ -475,7 +475,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 6 ; 6 ; enda ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 7 ; 7 ; enda ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 8 ; 8 ; enda ; >
-    au < crawling ; exists ; 2016 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 9 ; 9 ; enda ; >
+    au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 9 ; 9 ; enda ; >
     au < frozen ; exists ; 2017 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 10 ; 10 ; enda ; >
     au < manifest ; exists ; 2018 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 11 ; 11 ; enda ; >
 
@@ -712,7 +712,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Clinical Medicine Insights: Women's Health Volume 6 ; 6 ; cmwa ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Clinical Medicine Insights: Women's Health Volume 7 ; 7 ; cmwa ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Women's Health Volume 8 ; 8 ; cmwa ; >
-    au < crawling ; exists ; 2016 ; Clinical Medicine Insights: Women's Health Volume 9 ; 9 ; cmwa ; >
+    au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Women's Health Volume 9 ; 9 ; cmwa ; >
     au < crawling ; exists ; 2017 ; Clinical Medicine Insights: Women's Health Volume 10 ; 10 ; cmwa ; >
     au < manifest ; exists ; 2018 ; Clinical Medicine Insights: Women's Health Volume 11 ; 11 ; cmwa ; >
 
@@ -737,7 +737,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Drug Target Insights Volume 7 ; 7 ; dtia ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Drug Target Insights Volume 8 ; 8 ; dtia ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Drug Target Insights Volume 9 ; 9 ; dtia ; >
-    au < crawling ; exists ; 2016 ; Drug Target Insights Volume 10 ; 10 ; dtia ; >
+    au < frozen ; exists ; 2016 ; Drug Target Insights Volume 10 ; 10 ; dtia ; >
     au < crawling ; exists ; 2017 ; Drug Target Insights Volume 11 ; 11 ; dtia ; >
     au < exists ; exists ; 2018 ; Drug Target Insights Volume 12 ; 12 ; dtia ; >
 
@@ -885,7 +885,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Health Services Insights Volume 7 ; 7 ; hisa ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Health Services Insights Volume 8 ; 8 ; hisa ; >
     au < frozen ; exists ; 2016 ; Health Services Insights Volume 9 ; 9 ; hisa ; >
-    au < crawling ; exists ; 2017 ; Health Services Insights Volume 10 ; 10 ; hisa ; >
+    au < frozen ; exists ; 2017 ; Health Services Insights Volume 10 ; 10 ; hisa ; >
     au < manifest ; exists ; 2018 ; Health Services Insights Volume 11 ; 11 ; hisa ; >
 
   }
@@ -930,7 +930,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Indian Journal of Clinical Medicine Volume 5 ; 5 ; icma ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Indian Journal of Clinical Medicine Volume 6 ; 6 ; icma ; >
     au < crawling ; exists ; 2016 ; Indian Journal of Clinical Medicine Volume 7 ; 7 ; icma ; >
-    au < crawling ; exists ; 2017 ; Indian Journal of Clinical Medicine Volume 8 ; 8 ; icma ; >
+    au < frozen ; exists ; 2017 ; Indian Journal of Clinical Medicine Volume 8 ; 8 ; icma ; >
     au < manifest ; exists ; 2018 ; Indian Journal of Clinical Medicine Volume 9 ; 9 ; icma ; >
 
   }
@@ -1120,7 +1120,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Experimental Neuroscience Volume 8 ; 8 ; exna ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Experimental Neuroscience Volume 9 ; 9 ; exna ; >
     au < frozen ; exists ; 2016 ; Journal of Experimental Neuroscience Volume 10 ; 10 ; exna ; >
-    au < crawling ; exists ; 2017 ; Journal of Experimental Neuroscience Volume 11 ; 11 ; exna ; >
+    au < frozen ; exists ; 2017 ; Journal of Experimental Neuroscience Volume 11 ; 11 ; exna ; >
     au < manifest ; exists ; 2018 ; Journal of Experimental Neuroscience Volume 12 ; 12 ; exna ; >
 
   }
@@ -1226,7 +1226,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Microbiology Insights Volume 6 ; 6 ; mbia ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Microbiology Insights Volume 7 ; 7 ; mbia ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Microbiology Insights Volume 8 ; 8 ; mbia ; >
-    au < crawling ; exists ; 2016 ; Microbiology Insights Volume 9 ; 9 ; mbia ; >
+    au < frozen ; exists ; 2016 ; Microbiology Insights Volume 9 ; 9 ; mbia ; >
     au < frozen ; exists ; 2017 ; Microbiology Insights Volume 10 ; 10 ; mbia ; >
     au < manifest ; exists ; 2018 ; Microbiology Insights Volume 11 ; 11 ; mbia ; >
 

@@ -105,7 +105,7 @@
 
       param[base_url] = http://cshprotocols.cshlp.org/
 
-      au < crawling ; exists ; 2006 ; Cold Spring Harbor Protocols Volume 2006 ; 2006 ; >
+      au < frozen ; exists ; 2006 ; Cold Spring Harbor Protocols Volume 2006 ; 2006 ; >
       au < crawling ; exists ; 2007 ; Cold Spring Harbor Protocols Volume 2007 ; 2007 ; >
       au < crawling ; exists ; 2008 ; Cold Spring Harbor Protocols Volume 2008 ; 2008 ; >
       au < crawling ; exists ; 2009 ; Cold Spring Harbor Protocols Volume 2009 ; 2009 ; >
@@ -304,7 +304,7 @@
       au < crawling ; exists ; 1996 ; Genome Research Volume 6  ; 6  ; https://genome.cshlp.org/ ; >
       au < crawling ; exists ; 1997 ; Genome Research Volume 7  ; 7  ; https://genome.cshlp.org/ ; >
       au < crawling ; exists ; 1998 ; Genome Research Volume 8  ; 8  ; https://genome.cshlp.org/ ; >
-      au < crawling ; exists ; 1999 ; Genome Research Volume 9  ; 9  ; https://genome.cshlp.org/ ; >
+      au < frozen ; exists ; 1999 ; Genome Research Volume 9  ; 9  ; https://genome.cshlp.org/ ; >
       au < crawling ; exists ; 2000 ; Genome Research Volume 10 ; 10 ; https://genome.cshlp.org/ ; >
       au < crawling ; exists ; 2001 ; Genome Research Volume 11 ; 11 ; https://genome.cshlp.org/ ; >
       au < crawling ; exists ; 2002 ; Genome Research Volume 12 ; 12 ; https://genome.cshlp.org/ ; >
@@ -317,7 +317,7 @@
       au < crawling ; exists ; 2009 ; Genome Research Volume 19 ; 19 ; https://genome.cshlp.org/ ; >
       au < crawling ; exists ; 2010 ; Genome Research Volume 20 ; 20 ; https://genome.cshlp.org/ ; >
       au < crawling ; exists ; 2011 ; Genome Research Volume 21 ; 21 ; https://genome.cshlp.org/ ; >
-      au < crawling ; exists ; 2012 ; Genome Research Volume 22 ; 22 ; https://genome.cshlp.org/ ; >
+      au < frozen ; exists ; 2012 ; Genome Research Volume 22 ; 22 ; https://genome.cshlp.org/ ; >
       au < crawling ; exists ; 2013 ; Genome Research Volume 23 ; 23 ; https://genome.cshlp.org/ ; >
       au < zapped ; finished ; 2014 ; Genome Research Volume 24 ; 24 ; http://genome.cshlp.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2015 ; Genome Research Volume 25 ; 25 ; http://genome.cshlp.org/ ; reingest1.clockss.org:8082 >
@@ -361,7 +361,7 @@
       au < crawling ; exists ; 2008 ; Learning & Memory Volume 15 ; 15 ; >
       au < crawling ; exists ; 2009 ; Learning & Memory Volume 16 ; 16 ; >
       au < crawling ; exists ; 2010 ; Learning & Memory Volume 17 ; 17 ; >
-      au < crawling ; exists ; 2011 ; Learning & Memory Volume 18 ; 18 ; >
+      au < frozen ; exists ; 2011 ; Learning & Memory Volume 18 ; 18 ; >
       au < crawling ; exists ; 2012 ; Learning & Memory Volume 19 ; 19 ; >
       au < crawling ; exists ; 2013 ; Learning & Memory Volume 20 ; 20 ; >
       au < finished ; finished ; 2014 ; Learning & Memory Volume 21 ; 21 ; >
