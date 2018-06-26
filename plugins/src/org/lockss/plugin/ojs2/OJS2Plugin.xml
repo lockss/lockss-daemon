@@ -16,7 +16,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>69</string>
+    <string>70</string>
   </entry>
 <!--
 This is a list of OJS2 Child plugins - be sure to update the child's
@@ -51,8 +51,8 @@ Note: also push this plugin to coppulpln, dkdemopln, ibictpln, italytestpln, syn
     </map>
   </entry>
   <entry>
-    <string>required_daemon_version</string> <!-- for CrawlSeed support -->
-    <string>1.70.0</string>
+    <string>required_daemon_version</string> <!-- for MimeTypeContentValidator support -->
+    <string>1.74.0</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -204,6 +204,14 @@ Note: also push this plugin to coppulpln, dkdemopln, ibictpln, italytestpln, syn
       </entry>
     </map>
   </entry>
+  <!--  tell the default base.MimeTypeContentValidator what url patters to validate by mime type -->
+  <entry>
+    <string>au_url_mime_validation_map</string>
+    <list>
+      <string>/article/download/.*$, application/pdf</string>
+      <string>/article/view/.*$, text/html</string>
+    </list>
+  </entry>  
   <entry>
     <string>plugin_cache_result_list</string>
     <list>
