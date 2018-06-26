@@ -36,10 +36,10 @@ echo "###Manifest Sage 2008" >> $t/tmp_Atypon
 
 #Atypon T&F in order by year
 #Ready
-echo "###Ready T&F 2017" > $t/tmp_TnF
-./scripts/tdb/tdbout -Y -a -Q 'plugin ~ "ClockssTaylorAndFrancisPlugin" and year is "2017" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | shuf >> $t/tmp_TnF
-echo "###Ready T&F not 2017" >> $t/tmp_TnF
-./scripts/tdb/tdbout -Y -a -Q 'plugin ~ "ClockssTaylorAndFrancisPlugin" and year is not "2017" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | shuf >> $t/tmp_TnF
+#echo "###Ready T&F 2017" > $t/tmp_TnF
+#./scripts/tdb/tdbout -Y -a -Q 'plugin ~ "ClockssTaylorAndFrancisPlugin" and year is "2017" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | shuf >> $t/tmp_TnF
+#echo "###Ready T&F not 2017" >> $t/tmp_TnF
+#./scripts/tdb/tdbout -Y -a -Q 'plugin ~ "ClockssTaylorAndFrancisPlugin" and year is not "2017" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | shuf >> $t/tmp_TnF
 
 #Misc: all but Highwire, T&F, Atypon
 #Ready
@@ -64,9 +64,9 @@ echo "*********************" >> $t/tmp_Misc
 echo "###Ready Misc Ingest5" >> $t/tmp_Misc
 ./scripts/tdb/tdbout -Y -a -Q 'au:hidden[proxy] is "reingest5.clockss.org:8082"' tdb/clockssingest/*.tdb | shuf >> $t/tmp_Misc
 
-head -n25 $t/tmp_HW | grep -v ClockssHWDrupalPlugin > $t/tmp_All
+head -n50 $t/tmp_HW | grep -v ClockssHWDrupalPlugin > $t/tmp_All
 head -n100 $t/tmp_Atypon >> $t/tmp_All
-head -n25 $t/tmp_TnF >> $t/tmp_All
+#head -n25 $t/tmp_TnF >> $t/tmp_All
 head -n100 $t/tmp_Misc | grep -v ClockssHWDrupalPlugin >> $t/tmp_All
 
 exit 0
