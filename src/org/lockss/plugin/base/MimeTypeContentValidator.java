@@ -71,6 +71,7 @@ public class MimeTypeContentValidator implements ContentValidator {
 	   if (urlMimeValidationMap == null) {
 	     urlMimeValidationMap = au.makeUrlMimeValidationMap();
 	   }
+	   // will be EMPTY not null after creation attempt
 	   return urlMimeValidationMap;
 	 }
 
@@ -91,7 +92,7 @@ public class MimeTypeContentValidator implements ContentValidator {
 				} finally {
 					AuUtil.safeRelease(cu);
 				}
-				if (!expectedMime.equalsIgnoreCase(actualMime)) {
+				if (!expectedMatchesActualMime(expectedMime,actualMime,cu)) {
 					throw getMimeTypeException();
 				}
 
@@ -99,11 +100,18 @@ public class MimeTypeContentValidator implements ContentValidator {
 		}
 	}
 
+	// default is a straight case-insensitive string comparison - we know expected is not null
+	// plugin could override this for a more complicated equivalence, which is why the cu is passed along
+	protected boolean expectedMatchesActualMime(String expectedMime, String actualMime, CachedUrl cu) {
+		return expectedMime.equalsIgnoreCase(actualMime);
+	}
+
 	protected ContentValidationException getMimeTypeException()
 	{
 		return this.exception;
 	}
 
+	// plugin could override this to use a different type of exception
 	protected void setMimeTypeException(ContentValidationException exc)
 	{
 		this.exception = exc;
