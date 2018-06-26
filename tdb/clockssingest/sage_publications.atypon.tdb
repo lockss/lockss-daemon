@@ -146,7 +146,6 @@
 
     {
 
-
       au < manifest ; exists ; 1956 ; Acta Sociologica Volume 1 ; 1 ; asja ; >
       au < manifest ; exists ; 1957 ; Acta Sociologica Volume 2 ; 2 ; asja ; >
       au < manifest ; exists ; 1958 ; Acta Sociologica Volume 3 ; 3 ; asja ; >
@@ -230,7 +229,7 @@
 
   }
 
-     {
+  {
 
      title <
        name = Acta Radiologica Open ;
@@ -258,7 +257,6 @@
     #param[base_url] = http://arj.sagepub.com/
 
     {
-
 
       au < manifest ; exists ; 2003 ; Action Research Volume 1 ; 1 ; arja ; >
       au < manifest ; exists ; 2004 ; Action Research Volume 2 ; 2 ; arja ; >
@@ -292,7 +290,6 @@
     #param[base_url] = http://alh.sagepub.com/
 
     {
-
 
       au < manifest ; exists ; 2000 ; Active Learning in Higher Education Volume 1 ; 1 ; alha ; >
       au < manifest ; exists ; 2001 ; Active Learning in Higher Education Volume 2 ; 2 ; alha ; >
@@ -329,7 +326,6 @@
     #param[base_url] = http://adb.sagepub.com/
 
     {
-
 
       au < manifest ; exists ; 1992 ; Adaptive Behavior Volume 1 ; 1 ; adba ; >
       au < manifest ; exists ; 1993 ; Adaptive Behavior Volume 2 ; 2 ; adba ; >
@@ -373,7 +369,6 @@
     #param[base_url] = http://aas.sagepub.com/
 
     {
-
 
       au < manifest ; exists ; 1969 ; Administration & Society Volume 1 ; 1 ; aasa ; >
       au < manifest ; exists ; 1970 ; Administration & Society Volume 2 ; 2 ; aasa ; >
@@ -531,7 +526,6 @@
 
     {
 
-
       au < manifest ; exists ; 1950-1951 ; Adult Education Quarterly Volume 1 ; 1 ; aeqa ; >
       au < manifest ; exists ; 1951-1952 ; Adult Education Quarterly Volume 2 ; 2 ; aeqa ; >
       au < manifest ; exists ; 1952-1953 ; Adult Education Quarterly Volume 3 ; 3 ; aeqa ; >
@@ -618,7 +612,6 @@
 
       {
 
-
         au < doNotProcess ; doNotProcess ; 1998-1999 ; Adult Learning Volume 10 ; 10 ; alxa ; >
         au < doNotProcess ; doNotProcess ; 1999-2000 ; Adult Learning Volume 11 ; 11 ; alxa ; >
         au < doNotProcess ; doNotProcess ; 2001 ; Adult Learning Volume 12 ; 12 ; alxa ; >
@@ -655,7 +648,6 @@
     #param[base_url] = http://adr.sagepub.com/
 
     {
-
 
       au < manifest ; exists ; 1987 ; Advances in Dental Research Volume 1 ; 1 ; adra ; >
       au < manifest ; exists ; 1988 ; Advances in Dental Research Volume 2 ; 2 ; adra ; >
@@ -703,7 +695,6 @@
     #param[base_url] = http://adh.sagepub.com/
 
     {
-
 
       au < manifest ; exists ; 1999 ; Advances in Developing Human Resources Volume 1 ; 1 ; adha ; >
       au < manifest ; exists ; 2000 ; Advances in Developing Human Resources Volume 2 ; 2 ; adha ; >
@@ -792,7 +783,6 @@
 
     {
 
-
       au < manifest ; exists ; 1986 ; Affilia Volume 1 ; 1 ; affa ; >
       au < manifest ; exists ; 1987 ; Affilia Volume 2 ; 2 ; affa ; >
       au < manifest ; exists ; 1988 ; Affilia Volume 3 ; 3 ; affa ; >
@@ -840,7 +830,6 @@
       #param[base_url] = http://ags.sagepub.com/
 
     {
-
 
       comment[error] = manifest page had no links for V2. Recrawling should fix. http://ags.sagepub.com/clockss-manifest/vol_2_manifest.dtl
 
@@ -1130,7 +1119,6 @@
 
     {
 
-
       au < manifest ; exists ; 1964 ; American Educational Research Journal Volume 1 ; 1 ; aera ; >
       au < manifest ; exists ; 1965 ; American Educational Research Journal Volume 2 ; 2 ; aera ; >
       au < manifest ; exists ; 1966 ; American Educational Research Journal Volume 3 ; 3 ; aera ; >
@@ -1404,7 +1392,6 @@
 
     {
 
-
       au < manifest ; exists ; 1984 ; American Journal of Hospice and Palliative Medicine Volume 1 ; 1 ; ajha ; >
       au < manifest ; exists ; 1985 ; American Journal of Hospice and Palliative Medicine Volume 2 ; 2 ; ajha ; >
       au < manifest ; exists ; 1986 ; American Journal of Hospice and Palliative Medicine Volume 3 ; 3 ; ajha ; >
@@ -1485,7 +1472,6 @@
 
     {
 
-
       au < manifest ; exists ; 2007 ; American Journal of Lifestyle Medicine Volume 1 ; 1 ; ajla ; >
       au < doNotProcess ; doNotProcess ; 2008 ; American Journal of Lifestyle Medicine Volume 2 ; 2 ; ajla ; >
       au < doNotProcess ; doNotProcess ; 2009 ; American Journal of Lifestyle Medicine Volume 3 ; 3 ; ajla ; >
@@ -1565,7 +1551,6 @@
     #param[base_url] = http://jmh.sagepub.com/
 
     {
-
 
       au < manifest ; exists ; 2007 ; American Journal of Men's Health Volume 1 ; 1 ; jmha ; >
       au < doNotProcess ; doNotProcess ; 2008 ; American Journal of Men's Health Volume 2 ; 2 ; jmha ; >
@@ -3079,6 +3064,36 @@
   {
 
     title <
+      name = Arthaniti-Journal of Economic Theory and Practice ;
+      issn = 0976-7479 ;
+      eissn = 2517-2654
+    >
+
+    #journal_id = atha
+
+      au < exists ; exists ; 2002 ; Arts and Humanities in Higher Education Volume 1 ; 1 ; atha ; >
+      au < exists ; exists ; 2003 ; Arts and Humanities in Higher Education Volume 2 ; 2 ; atha ; >
+      au < exists ; exists ; 2004 ; Arts and Humanities in Higher Education Volume 3 ; 3 ; atha ; >
+      au < exists ; exists ; 2005 ; Arts and Humanities in Higher Education Volume 4 ; 4 ; atha ; >
+      au < exists ; exists ; 2006 ; Arts and Humanities in Higher Education Volume 5 ; 5 ; atha ; >
+      au < exists ; exists ; 2007 ; Arts and Humanities in Higher Education Volume 6 ; 6 ; atha ; >
+      au < exists ; exists ; 2008 ; Arts and Humanities in Higher Education Volume 7 ; 7 ; atha ; >
+      au < exists ; exists ; 2009 ; Arts and Humanities in Higher Education Volume 8 ; 8 ; atha ; >
+      au < exists ; exists ; 2010 ; Arts and Humanities in Higher Education Volume 9 ; 9 ; atha ; >
+      au < exists ; exists ; 2011 ; Arts and Humanities in Higher Education Volume 10 ; 10 ; atha ; >
+      au < exists ; exists ; 2012 ; Arts and Humanities in Higher Education Volume 11 ; 11 ; atha ; >
+      au < exists ; exists ; 2013 ; Arts and Humanities in Higher Education Volume 12 ; 12 ; atha ; >
+      au < exists ; exists ; 2014 ; Arts and Humanities in Higher Education Volume 13 ; 13 ; atha ; >
+      au < exists ; exists ; 2015 ; Arts and Humanities in Higher Education Volume 14 ; 14 ; atha ; >
+      au < exists ; exists ; 2016 ; Arts and Humanities in Higher Education Volume 15 ; 15 ; atha ; >
+      au < exists ; exists ; 2017 ; Arts and Humanities in Higher Education Volume 16 ; 16 ; atha ; >
+      au < expected ; exists ; 2018 ; Arts and Humanities in Higher Education Volume 17 ; 17 ; atha ; >
+
+  }
+
+  {
+
+    title <
       name = Arts and Humanities in Higher Education ;
       issn = 1474-0222 ;
       eissn = 1741-265X
@@ -3086,9 +3101,7 @@
 
     #param[base_url] = http://ahh.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 2002 ; Arts and Humanities in Higher Education Volume 1 ; 1 ; ahha ; >
       au < manifest ; exists ; 2003 ; Arts and Humanities in Higher Education Volume 2 ; 2 ; ahha ; >
