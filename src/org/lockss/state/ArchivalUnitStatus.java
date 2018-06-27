@@ -1145,10 +1145,10 @@ public class ArchivalUnitStatus
 					    ColumnDescriptor.TYPE_STRING,
 					    val));
       }
-      long lastCrawlAttempt = state.getLastCrawlAttempt();
       res.add(new StatusTable.SummaryInfo("Last Completed Crawl",
 					  ColumnDescriptor.TYPE_DATE,
 					  new Long(state.getLastCrawlTime())));
+      long lastCrawlAttempt = state.getLastCrawlAttempt();
       if (lastCrawlAttempt > 0) {
 	res.add(new StatusTable.SummaryInfo("Last Crawl",
 					    ColumnDescriptor.TYPE_DATE,
@@ -1156,6 +1156,21 @@ public class ArchivalUnitStatus
 	res.add(new StatusTable.SummaryInfo("Last Crawl Result",
 					    ColumnDescriptor.TYPE_STRING,
 					    state.getLastCrawlResultMsg()));
+	long lastDeepCrawlAttempt = state.getLastDeepCrawlAttempt();
+	if (lastDeepCrawlAttempt > 0) {
+	  res.add(new StatusTable.SummaryInfo("Last Completed Deep Crawl",
+					      ColumnDescriptor.TYPE_DATE,
+					      new Long(state.getLastDeepCrawlTime())));
+	  res.add(new StatusTable.SummaryInfo("Last Deep Crawl",
+					      ColumnDescriptor.TYPE_DATE,
+					      new Long(lastDeepCrawlAttempt)));
+	  res.add(new StatusTable.SummaryInfo("Last Deep Crawl Result",
+					      ColumnDescriptor.TYPE_STRING,
+					      state.getLastDeepCrawlResultMsg()));
+	  res.add(new StatusTable.SummaryInfo("Last Deep Crawl Depth",
+					      ColumnDescriptor.TYPE_INT,
+					      state.getLastDeepCrawlDepth()));
+	}
       }
       long lastPollStart = state.getLastPollStart();
       res.add(new StatusTable.SummaryInfo("Last Completed Poll",
@@ -1279,8 +1294,10 @@ public class ArchivalUnitStatus
 	      new StatusTable
 	      .SrvLink("Files",
 		       AdminServletManager.SERVLET_LIST_OBJECTS,
-		       PropUtil.fromArgs("type", "files",
-					 "auid", au.getAuId())));
+		       PropUtil.fromArgs("type", "urls",
+					 "auid", au.getAuId(),
+					 "fields", "ContentType,Size,PollWeight")));
+
       if (au.getArchiveFileTypes() != null) {
 	addLink(urlLinks,
 		new StatusTable

@@ -56,6 +56,10 @@ public class AuWsResult {
   private Long lastCompletedCrawl;
   private Long lastCrawl;
   private String lastCrawlResult;
+  private Long lastCompletedDeepCrawl;
+  private Long lastDeepCrawl;
+  private String lastDeepCrawlResult;
+  private Integer lastCompletedDeepCrawlDepth;
   private Long lastMetadataIndex;
   private Long lastCompletedPoll;
   private Long lastPoll;
@@ -342,6 +346,58 @@ public class AuWsResult {
   }
 
   /**
+   * Provides the timestamp of the last completed deep crawl of the
+   * Archival Unit.
+   *
+   * @return a Long with the timestamp as the number of milliseconds since the
+   *         beginning of 1970.
+   */
+  public Long getLastCompletedDeepCrawl() {
+    return lastCompletedDeepCrawl;
+  }
+  public void setLastCompletedDeepCrawl(Long lastCompletedDeepCrawl) {
+    this.lastCompletedDeepCrawl = lastCompletedDeepCrawl;
+  }
+
+  /**
+   * Provides the timestamp of the last deep crawl of the Archival Unit.
+   *
+   * @return a Long with the timestamp as the number of milliseconds since the
+   *         beginning of 1970.
+   */
+  public Long getLastDeepCrawl() {
+    return lastDeepCrawl;
+  }
+  public void setLastDeepCrawl(Long lastDeepCrawl) {
+    this.lastDeepCrawl = lastDeepCrawl;
+  }
+
+  /**
+   * Provides the result of the last deep crawl of the Archival Unit.
+   *
+   * @return a String with the last crawl result.
+   */
+  public String getLastDeepCrawlResult() {
+    return lastDeepCrawlResult;
+  }
+  public void setLastDeepCrawlResult(String lastDeepCrawlResult) {
+    this.lastDeepCrawlResult = lastDeepCrawlResult;
+  }
+
+  /**
+   * Provides the depth of the last deep crawl of the Archival Unit.
+   *
+   * @return an Integer with the depth
+   */
+  public Integer getLastCompletedDeepCrawlDepth() {
+    return lastCompletedDeepCrawlDepth;
+  }
+  public void setLastCompletedDeepCrawlDepth(Integer
+					     lastCompletedDeepCrawlDepth) {
+    this.lastCompletedDeepCrawlDepth = lastCompletedDeepCrawlDepth;
+  }
+
+  /**
    * Provides the timestamp of the last metadata indexing of the Archival Unit.
    * 
    * @return a Long with the timestamp as the number of milliseconds since the
@@ -565,8 +621,13 @@ public class AuWsResult {
 	+ creationTime + ", crawlProxy=" + crawlProxy + ", crawlWindow="
 	+ crawlWindow + ", crawlPool=" + crawlPool + ", lastCompletedCrawl="
 	+ lastCompletedCrawl + ", lastCrawl=" + lastCrawl
-	+ ", lastCrawlResult=" + lastCrawlResult + ", lastMetadataIndex="
-	+ lastMetadataIndex + ", lastCompletedPoll=" + lastCompletedPoll
+	+ ", lastCrawlResult=" + lastCrawlResult
+	+ ", lastCompletedDeepCrawl=" + lastCompletedDeepCrawl
+	+ ", lastDeepCrawl=" + lastDeepCrawl
+	+ ", lastDeepCrawlResult=" + lastDeepCrawlResult
+	+ ", lastCompletedDeepCrawlDepth=" + lastCompletedDeepCrawlDepth
+	+ ", lastMetadataIndex=" + lastMetadataIndex
+        + ", lastCompletedPoll=" + lastCompletedPoll
 	+ ", lastPoll=" + lastPoll + ", lastPollResult=" + lastPollResult
 	+ ", currentlyCrawling=" + currentlyCrawling + ", currentlyPolling="
 	+ currentlyPolling + ", subscriptionStatus=" + subscriptionStatus

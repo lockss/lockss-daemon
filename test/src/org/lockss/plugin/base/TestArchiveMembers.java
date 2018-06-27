@@ -587,6 +587,11 @@ public class TestArchiveMembers extends LockssTestCase {
       return urlMimeMap;
     }
 
+    @Override
+    public PatternStringMap makeUrlMimeValidationMap() {
+      return urlMimeMap;
+    }
+
     public void setUrlMimeTypeMap(PatternStringMap map) {
       urlMimeMap = map;
     }

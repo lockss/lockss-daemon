@@ -1,0 +1,94 @@
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.definable.OldNamesPlugin</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Old Names Plugin AU, Base URL %s, Resolver URL %s, Journal Code %s, Year %d, Issues %s, Range %s", base_url, resolver_url, journal_code, year, issue_set, num_issue_range</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Old Names Plugin</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,"^(%s|%s)", base_url, resolver_url</string>
+      <string>1,"^%spublishing/journals/lockss/\?journalcode=%s&amp;year=%d", base_url, journal_code, year</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <list>
+     <string>"%spublishing/journals/lockss/?journalcode=%s&amp;year=%d", base_url, journal_code, year</string>
+     <string>"%sissuestart/issue-%s/", base_url, issue_set</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>resolver_url</key>
+        <displayName>Resolver Url</displayName>
+        <description>Resolver for xlink.rsc.org</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_code</key>
+        <displayName>Journal Code</displayName>
+        <description>The journal&apos;s short journal code</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description></description>
+        <type>2</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>issue_set</key>
+        <displayName>Issue Set</displayName>
+        <description>A comma delimited list of issues. (eg issue1, issue2)</description>
+        <type>9</type>
+        <size>20</size>
+        <definitional>false</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>num_issue_range</key>
+        <displayName>Numeric Issue Range</displayName>
+        <description>A Range of issues in the form: min-max</description>
+        <type>8</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_url_mime_type</string>
+    <list>
+      <string>.*\.ris$, application/x-research-info-systems</string>
+      <string>"%s.*/pdf_url.*", base_url,application/pdf</string>
+    </list>
+  </entry>
+</map>

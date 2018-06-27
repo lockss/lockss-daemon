@@ -52,6 +52,10 @@ public class AuStatus {
   private Long lastCompletedCrawl;
   private Long lastCrawl;
   private String lastCrawlResult;
+  private Long lastCompletedDeepCrawl;
+  private Long lastDeepCrawl;
+  private String lastDeepCrawlResult;
+  private int lastCompletedDeepCrawlDepth;
   private Long lastMetadataIndex;
   private Long lastCompletedPoll;
   private Long lastPoll;
@@ -255,6 +259,47 @@ public class AuStatus {
   }
 
   /**
+   * Provides the timestamp of the last completed deep crawl of the
+   * Archival Unit.
+   *
+   * @return a Long with the timestamp as the number of milliseconds since the
+   *         beginning of 1970.
+   */
+  public Long getLastCompletedDeepCrawl() {
+    return lastCompletedDeepCrawl;
+  }
+
+  /**
+   * Provides the start time of the last deep crawl attempt of the
+   * Archival Unit.
+   *
+   * @return a Long with the timestamp as the number of milliseconds since the
+   *         beginning of 1970.
+   */
+  public Long getLastDeepCrawl() {
+    return lastDeepCrawl;
+  }
+
+  /**
+   * Provides the result of the last deep crawl of the Archival Unit.
+   *
+   * @return a String with the last crawl result.
+   */
+  public String getLastDeepCrawlResult() {
+    return lastDeepCrawlResult;
+  }
+
+  /**
+   * Provides the requested crawl depth of the last completed deep crawl of
+   * the Archival Unit.
+   *
+   * @return an int with the depth
+   */
+  public Integer getLastCompletedDeepCrawlDepth() {
+    return lastCompletedDeepCrawlDepth;
+  }
+
+  /**
    * Provides the timestamp of the last metadata indexing of the Archival Unit.
    * 
    * @return a Long with the timestamp as the number of milliseconds since the
@@ -415,6 +460,22 @@ public class AuStatus {
     this.lastCrawlResult = lastCrawlResult;
   }
 
+  public void setLastCompletedDeepCrawl(Long lastCompletedDeepCrawl) {
+    this.lastCompletedDeepCrawl = lastCompletedDeepCrawl;
+  }
+
+  public void setLastDeepCrawl(Long lastDeepCrawl) {
+    this.lastDeepCrawl = lastDeepCrawl;
+  }
+
+  public void setLastDeepCrawlResult(String lastDeepCrawlResult) {
+    this.lastDeepCrawlResult = lastDeepCrawlResult;
+  }
+
+  public void setLastCompletedDeepCrawlDepth(Integer lastCompletedDeepCrawlDepth) {
+    this.lastCompletedDeepCrawlDepth = lastCompletedDeepCrawlDepth;
+  }
+
   public void setLastMetadataIndex(Long lastMetadataIndex) {
     this.lastMetadataIndex = lastMetadataIndex;
   }
@@ -492,6 +553,14 @@ public class AuStatus {
     builder.append(lastCrawl);
     builder.append(", lastCrawlResult=");
     builder.append(lastCrawlResult);
+    builder.append(", lastCompletedDeepCrawl=");
+    builder.append(lastCompletedDeepCrawl);
+    builder.append(", lastDeepCrawl=");
+    builder.append(lastDeepCrawl);
+    builder.append(", lastDeepCrawlResult=");
+    builder.append(lastDeepCrawlResult);
+    builder.append(", lastCompletedDeepCrawlDepth=");
+    builder.append(lastCompletedDeepCrawlDepth);
     builder.append(", lastMetadataIndex=");
     builder.append(lastMetadataIndex);
     builder.append(", lastCompletedPoll=");

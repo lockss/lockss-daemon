@@ -94,6 +94,10 @@ public class AuHelper {
   static String LAST_COMPLETED_CRAWL = "lastCompletedCrawl";
   static String LAST_CRAWL = "lastCrawl";
   static String LAST_CRAWL_RESULT = "lastCrawlResult";
+  static String LAST_COMPLETED_DEEP_CRAWL = "lastCompletedDeepCrawl";
+  static String LAST_DEEP_CRAWL = "lastDeepCrawl";
+  static String LAST_DEEP_CRAWL_RESULT = "lastDeepCrawlResult";
+  static String LAST_COMPLETED_DEEP_CRAWL_DEPTH = "lastCompletedDeepCrawlDepth";
   static String LAST_METADATA_INDEX = "lastMetadataIndex";
   static String LAST_COMPLETED_POLL = "lastCompletedPoll";
   static String LAST_POLL = "lastPoll";
@@ -140,6 +144,10 @@ public class AuHelper {
       add(LAST_COMPLETED_CRAWL);
       add(LAST_CRAWL);
       add(LAST_CRAWL_RESULT);
+      add(LAST_COMPLETED_DEEP_CRAWL);
+      add(LAST_DEEP_CRAWL);
+      add(LAST_DEEP_CRAWL_RESULT);
+      add(LAST_COMPLETED_DEEP_CRAWL_DEPTH);
       add(LAST_METADATA_INDEX);
       add(LAST_COMPLETED_POLL);
       add(LAST_POLL);
@@ -294,12 +302,19 @@ public class AuHelper {
     result.setCrawlPool(crawlPool);
 
     result.setLastCompletedCrawl(state.getLastCrawlTime());
+    result.setLastCompletedDeepCrawl(state.getLastDeepCrawlTime());
 
     long lastCrawlAttempt = state.getLastCrawlAttempt();
+    long lastDeepCrawlAttempt = state.getLastDeepCrawlAttempt();
 
     if (lastCrawlAttempt > 0) {
       result.setLastCrawl(lastCrawlAttempt);
       result.setLastCrawlResult(state.getLastCrawlResultMsg());
+    }
+    if (lastDeepCrawlAttempt > 0) {
+      result.setLastDeepCrawl(lastDeepCrawlAttempt);
+      result.setLastDeepCrawlResult(state.getLastDeepCrawlResultMsg());
+      result.setLastCompletedDeepCrawlDepth(state.getLastDeepCrawlDepth());
     }
 
     result.setLastMetadataIndex(state.getLastMetadataIndex());
@@ -643,6 +658,47 @@ public class AuHelper {
       }
 
       builder.append("lastCrawlResult=").append(result.getLastCrawlResult());
+    }
+
+    if (result.getLastCompletedDeepCrawl() != null) {
+      if (!isFirst) {
+	builder.append(", ");
+      } else {
+	isFirst = false;
+      }
+
+      builder.append("lastCompletedDeepCrawl=")
+      .append(result.getLastCompletedDeepCrawl());
+    }
+
+    if (result.getLastDeepCrawl() != null) {
+      if (!isFirst) {
+	builder.append(", ");
+      } else {
+	isFirst = false;
+      }
+
+      builder.append("lastDeepCrawl=").append(result.getLastDeepCrawl());
+    }
+
+    if (result.getLastDeepCrawlResult() != null) {
+      if (!isFirst) {
+	builder.append(", ");
+      } else {
+	isFirst = false;
+      }
+
+      builder.append("lastDeepCrawlResult=").append(result.getLastDeepCrawlResult());
+    }
+
+    if (result.getLastCompletedDeepCrawlDepth() != null) {
+      if (!isFirst) {
+	builder.append(", ");
+      } else {
+	isFirst = false;
+      }
+
+      builder.append("lastCompletedDeepCrawlDepth=").append(result.getLastCompletedDeepCrawlDepth());
     }
 
     if (result.getLastMetadataIndex() != null) {

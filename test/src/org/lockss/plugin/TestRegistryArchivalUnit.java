@@ -170,6 +170,11 @@ public class TestRegistryArchivalUnit extends LockssTestCase {
 			      321, // lastCrawlAttempt
 			      -1, // lastCrawlResult
 			      null, // lastCrawlResultMsg,
+			      -1, // lastDeepCrawlTime
+			      -1, // lastDeepCrawlAttempt
+			      -1, // lastDeepCrawlResult
+			      null, // lastDeepCrawlResultMsg,
+			      -1, // lastDeepCrawlDepth
 			      -1, // lastTopLevelPoll
 			      -1, // lastPollStart
 			      -1, // lastPollresult

@@ -658,6 +658,10 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     return PatternStringMap.EMPTY;
   }
 
+  public PatternStringMap makeUrlMimeValidationMap() {
+    return PatternStringMap.EMPTY;
+  }
+
   public PatternFloatMap makeUrlPollResultWeightMap()
       throws ArchivalUnit.ConfigurationException {
     return PatternFloatMap.EMPTY;

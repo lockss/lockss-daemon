@@ -247,10 +247,16 @@ public interface ArchivalUnit {
   public List<String> getHttpRequestHeaders();
 
   /**
-   * Construct the mapping from URL pattern MIME type to use if no
+   * Construct the mapping from URL pattern to MIME type to use if no
    * Content-Type header is present.
    */
   public PatternStringMap makeUrlMimeTypeMap();
+
+  /**
+   * Construct the mapping from URL pattern to MIME type that validator
+   * should insist on.
+   */
+  public PatternStringMap makeUrlMimeValidationMap();
 
   /**
    * Construct a list of Patterns of URLs that should be excluded from

@@ -381,7 +381,11 @@ public abstract class BaseCrawler implements Crawler {
    */
   public boolean doCrawl() {
     if (isWholeAU()) {
-      aus.newCrawlStarted();
+      if (req != null && req.getRefetchDepth() > 0) {
+	aus.deepCrawlStarted(req.getRefetchDepth());
+      } else {
+	aus.newCrawlStarted();
+      }
     }
     setCrawlConfig(ConfigManager.getCurrentConfig());
     crawlStatus.setProxy(proxyStatus);
@@ -430,12 +434,11 @@ public abstract class BaseCrawler implements Crawler {
       	appendAlertInfo(sb);
       	raiseAlert(Alert.auAlert(alert, au), sb.toString());
       
-      	NodeManager nodeManager = getDaemon().getNodeManager(au);
       	if (res) {
-      	  nodeManager.newContentCrawlFinished(Crawler.STATUS_SUCCESSFUL, null);
+      	  newContentCrawlFinished(Crawler.STATUS_SUCCESSFUL, null);
       	} else {
-      	  nodeManager.newContentCrawlFinished(crawlStatus.getCrawlStatus(),
-      					      crawlStatus.getCrawlErrorMsg());
+      	  newContentCrawlFinished(crawlStatus.getCrawlStatus(),
+				  crawlStatus.getCrawlErrorMsg());
       	}
       }
       return res;
@@ -463,6 +466,15 @@ public abstract class BaseCrawler implements Crawler {
     }
   }
 
+  void newContentCrawlFinished(int status, String msg) {
+    NodeManager nodeManager = getDaemon().getNodeManager(au);
+    if (req != null && req.getRefetchDepth() > 0) {
+      nodeManager.newContentCrawlFinished(status, null, req.getRefetchDepth());
+    } else {
+      nodeManager.newContentCrawlFinished(status, null);
+    }
+  }
+
   protected void raiseAlert(Alert alert, String text) {
     alertMgr.raiseAlert(alert, text);
   }
@@ -478,8 +490,7 @@ public abstract class BaseCrawler implements Crawler {
     }
     if (isWholeAU()) {
       NodeManager nodeManager = getDaemon().getNodeManager(au);
-      nodeManager.newContentCrawlFinished(Crawler.STATUS_ABORTED,
-					  t.getMessage());
+      newContentCrawlFinished(Crawler.STATUS_ABORTED, t.getMessage());
     }
   }
 

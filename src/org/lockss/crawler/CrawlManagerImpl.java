@@ -349,8 +349,8 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   private List<Pattern> globallyPermittedHostPatterns = Collections.EMPTY_LIST;;
   private List<Pattern> allowedPluginPermittedHosts;
 
-  private PatternIntMap crawlPriorityAuidMap;
-  private AuXpathFloatMap crawlPriorityAuMap;
+  private PatternIntMap crawlPriorityAuidMap = PatternIntMap.EMPTY;
+  private AuXpathFloatMap crawlPriorityAuMap = AuXpathFloatMap.EMPTY;
 
   private Map<String,Integer> concurrentCrawlLimitMap;
 

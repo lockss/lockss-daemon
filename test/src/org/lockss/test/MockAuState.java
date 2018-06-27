@@ -80,6 +80,11 @@ public class MockAuState extends AuState {
 	  lastCrawlAttempt,
 	  -1, //lastCrawlResult
 	  null, // lastCrawlResultMsg
+	  -1, // lastDeepCrawlTime
+	  -1, // lastDeepCrawlAttempt
+	  -1, // lastDeepCrawlResult
+	  null, // lastDeepCrawlResultMsg,
+	  -1, // lastDeepCrawlDepth
 	  lastPollTime, //lastTopLevelPoll
 	  lastPollStart,
 	  -1, // lastPollResult

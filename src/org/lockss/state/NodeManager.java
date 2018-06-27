@@ -92,6 +92,8 @@ public interface NodeManager extends LockssAuManager {
    */
   public void newContentCrawlFinished(int result, String msg);
 
+  public void newContentCrawlFinished(int result, String msg, int depth);
+
   /**
    * Alerts the NodeManager that a hash finished on a specific
    * {@link CachedUrlSet} with the specified duration.

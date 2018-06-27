@@ -37,6 +37,8 @@ import org.apache.commons.collections4.*;
 
 import org.lockss.config.Configuration;
 import org.lockss.extractor.*;
+import org.lockss.plugin.ContentValidatorFactory;
+import org.lockss.plugin.base.*;
 import org.lockss.rewriter.*;
 import org.lockss.util.*;
 
@@ -55,7 +57,7 @@ public class MimeTypeMap {
   static final String PREFIX = Configuration.PREFIX + "mimeInfo.";
 
   /*
-   * -------- CSS --------
+   * -------- CSS Defaults --------
    */
   
   public static final String PARAM_DEFAULT_CSS_EXTRACTOR_FACTORY =
@@ -71,7 +73,7 @@ public class MimeTypeMap {
   private static MimeTypeInfo.Mutable CSS = new MimeTypeInfo.Impl();
 
   /*
-   * -------- HTML --------
+   * -------- HTML Defaults --------
    */
   
   public static final String PARAM_DEFAULT_HTML_EXTRACTOR_FACTORY =
@@ -87,7 +89,7 @@ public class MimeTypeMap {
   private static MimeTypeInfo.Mutable HTML = new MimeTypeInfo.Impl();
 
   /*
-   * -------- XML --------
+   * -------- XML Defaults --------
    */
   
   /**
@@ -107,6 +109,24 @@ public class MimeTypeMap {
    */
   private static MimeTypeInfo.Mutable XML = new MimeTypeInfo.Impl();
 
+  /*
+   * -------- ALL (* / *) Defaults --------
+   */
+  
+  /**
+   * @sice 1.74
+   */
+  public static final String PARAM_DEFAULT_ALL_MIME_TYPE_VALIDATION_FACTORY =
+    PREFIX + "defaultAllMimeTypeValidationFactory";
+
+  /**
+   * @sice 1.74
+   */
+  public static final String DEFAULT_DEFAULT_ALL_MIME_TYPE_VALIDATION_FACTORY =
+    "org.lockss.plugin.base.MimeTypeContentValidatorFactory";
+
+  private static MimeTypeInfo.Mutable ALL = new MimeTypeInfo.Impl();
+  
   static {
     setLinkExtractorFactory(CSS,
                             DEFAULT_DEFAULT_CSS_EXTRACTOR_FACTORY,
@@ -130,6 +150,11 @@ public class MimeTypeMap {
                             null);
     DEFAULT.putMimeTypeInfo("text/xml", XML);
     DEFAULT.putMimeTypeInfo("application/xml", XML);
+ 
+    setContentValidatorFactory(ALL,
+			       DEFAULT_DEFAULT_ALL_MIME_TYPE_VALIDATION_FACTORY,
+			       null);
+    DEFAULT.putMimeTypeInfo(WILD_CARD, ALL);
  }
 
   /** Called by org.lockss.config.MiscConfig */
@@ -160,6 +185,13 @@ public class MimeTypeMap {
               DEFAULT_DEFAULT_XML_EXTRACTOR_FACTORY),
           new XmlLinkExtractorFactory());
     }
+
+      if (diffs.contains(PARAM_DEFAULT_ALL_MIME_TYPE_VALIDATION_FACTORY)) {
+      setContentValidatorFactory(ALL,
+          config.get(PARAM_DEFAULT_ALL_MIME_TYPE_VALIDATION_FACTORY,
+              DEFAULT_DEFAULT_ALL_MIME_TYPE_VALIDATION_FACTORY),
+          new MimeTypeContentValidatorFactory());
+    }
   }
 
   private static void setLinkExtractorFactory(MimeTypeInfo.Mutable mti,
@@ -181,6 +213,16 @@ public class MimeTypeMap {
             defFactory);
     mti.setLinkRewriterFactory(fact);
   }
+  
+  private static void setContentValidatorFactory(MimeTypeInfo.Mutable mti,
+						 String className,
+						 ContentValidatorFactory defFactory) {
+    ContentValidatorFactory fact =
+      (ContentValidatorFactory) newFact(className,
+					ContentValidatorFactory.class,
+					defFactory);
+    mti.setContentValidatorFactory(fact);
+  }  
 
   private Map<String,MimeTypeInfo> map = new <String,MimeTypeInfo>HashMap();
   private MimeTypeMap parent;

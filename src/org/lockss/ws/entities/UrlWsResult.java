@@ -38,6 +38,7 @@ public class UrlWsResult {
   private String url;
   private Integer versionCount;
   private Long currentVersionSize;
+  private Float pollWeight;
 
   public String getUrl() {
     return url;
@@ -57,10 +58,17 @@ public class UrlWsResult {
   public void setCurrentVersionSize(Long currentVersionSize) {
     this.currentVersionSize = currentVersionSize;
   }
+  public Float getPollWeight() {
+    return pollWeight;
+  }
+  public void setPollWeight(Float pollWeight) {
+    this.pollWeight = pollWeight;
+  }
 
   @Override
   public String toString() {
     return "[UrlWsResult url=" + url + ", versionCount=" + versionCount
-	+ ", currentVersionSize=" + currentVersionSize + "]";
+	+ ", currentVersionSize=" + currentVersionSize
+	+ ", pollWeight=" + pollWeight + "]";
   }
 }
