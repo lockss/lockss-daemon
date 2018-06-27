@@ -15,9 +15,9 @@
     <string>plugin_name</string>
     <string>Practical Action Publishing Books Plugin (CLOCKSS)</string>
   </entry>
+  <!-- This parent uses the book_eisbn in the crawl rules -->
   <entry>
     <string>plugin_parent</string>
-    <!-- This parent uses the book_eisbn in the crawl rules -->
     <string>org.lockss.plugin.atypon.BaseAtyponBooksPlugin</string>
   </entry>
    <entry>
