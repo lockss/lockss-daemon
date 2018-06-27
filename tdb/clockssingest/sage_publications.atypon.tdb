@@ -20811,6 +20811,26 @@
   {
 
     title <
+      name = Journal of Comorbidity ;
+      eissn = 2235-042X
+    >
+
+      #journal_id = coba
+
+      au < exists ; exists ; 2011 ; Journal of Comorbidity Volume 1 ; 1 ; coba ; >
+      au < exists ; exists ; 2012 ; Journal of Comorbidity Volume 2 ; 2 ; coba ; >
+      au < exists ; exists ; 2013 ; Journal of Comorbidity Volume 3 ; 3 ; coba ; >
+      au < exists ; exists ; 2014 ; Journal of Comorbidity Volume 4 ; 4 ; coba ; >
+      au < exists ; exists ; 2015 ; Journal of Comorbidity Volume 5 ; 5 ; coba ; >
+      au < exists ; exists ; 2016 ; Journal of Comorbidity Volume 6 ; 6 ; coba ; >
+      au < exists ; exists ; 2017 ; Journal of Comorbidity Volume 7 ; 7 ; coba ; >
+      au < exists ; exists ; 2018 ; Journal of Comorbidity Volume 8 ; 8 ; coba ; >
+
+  }
+
+  {
+
+    title <
       name = Journal of Composite Materials ;
       issn = 0021-9983 ;
       eissn = 1530-793X
