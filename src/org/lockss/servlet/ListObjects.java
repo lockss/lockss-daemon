@@ -266,16 +266,16 @@ public class ListObjects extends LockssServlet {
     void printHeader() {
       wrtr.println("# URLs in " + au.getName());
       if (fields != null) {
-	wrtr.println("# URL\t" + StringUtil.separatedString(fields, "\t"));
 	if (fields.contains(FIELD_POLL_WEIGHT)) {
 	  try {
 	    resultWeightMap = au.makeUrlPollResultWeightMap();
 	  } catch (ArchivalUnit.ConfigurationException e) {
 	    log.warning("Error building urlResultWeightMap, disabling",
 			e);
-	    fields.remove(FIELD_POLL_WEIGHT);
+	    wrtr.println("# Poll weights not included: " + e.toString());
 	  }
 	}
+	wrtr.println("# URL\t" + StringUtil.separatedString(fields, "\t"));
       }
     }
     
@@ -290,8 +290,9 @@ public class ListObjects extends LockssServlet {
 	for (String f : fields) {
 	  switch (f) {
 	  case FIELD_POLL_WEIGHT:
+	    wrtr.print("\t");
 	    if (resultWeightMap != null) {
-	      wrtr.print("\t" + getUrlResultWeight(url));
+	      wrtr.print(getUrlResultWeight(url));
 	    }
 	    break;
 	  case FIELD_CONTENT_TYPE:
