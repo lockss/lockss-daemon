@@ -862,7 +862,8 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertClass(NodeFilterHtmlLinkRewriterFactory.class,
 		au.getLinkRewriterFactory(Constants.MIME_TYPE_HTML));
     assertNull(au.getLinkRewriterFactory("text/alphabet"));
-    assertNull(au.getContentValidatorFactory("application/pdf"));
+    assertClass(MimeTypeContentValidatorFactory.class,
+		au.getContentValidatorFactory("application/pdf"));
 
     assertFalse(au.isBulkContent());
     assertNull(au.getArchiveFileTypes());

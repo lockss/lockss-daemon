@@ -34,6 +34,7 @@ package org.lockss.daemon;
 
 import org.apache.commons.collections4.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.base.*;
 import org.lockss.extractor.*;
 import org.lockss.rewriter.*;
 import org.lockss.test.*;
@@ -123,6 +124,27 @@ public class TestMimeTypeMap extends LockssTestCase {
     assertNull(mt5.getCrawlFilterFactory());
     assertTrue(mt5.getLinkExtractorFactory() instanceof XmlLinkExtractorFactory);
     assertNull(mt5.getLinkRewriterFactory());
+
+    // -------- ALL --------
+    MimeTypeInfo mt6 = MimeTypeMap.DEFAULT.getMimeTypeInfo("*/*");
+    assertNull(mt6.getHashFilterFactory());
+    assertNull(mt6.getCrawlFilterFactory());
+    assertNull(mt6.getLinkExtractorFactory());
+    assertNull(mt6.getLinkRewriterFactory());
+    assertTrue(mt6.getContentValidatorFactory() instanceof MimeTypeContentValidatorFactory);
+
+    MimeTypeInfo mta = MimeTypeMap.DEFAULT.getMimeTypeInfo("*/*");
+    ConfigurationUtil.setFromArgs(MimeTypeMap.PARAM_DEFAULT_ALL_MIME_TYPE_VALIDATION_FACTORY,
+                                  MyValidatorFact.class.getName());
+
+    assertClass(MyValidatorFact.class, mta.getContentValidatorFactory());
+  }
+
+  static class MyValidatorFact implements ContentValidatorFactory {
+    public ContentValidator createContentValidator(ArchivalUnit au,
+						   String contentType) {
+      return null;
+    }
   }
 
   public void testModifyMimeTypeInfo() {
@@ -158,7 +180,7 @@ public class TestMimeTypeMap extends LockssTestCase {
 	public boolean evaluate(MimeTypeInfo mti) {
 	  return mti.getCrawlFilterFactory() != null;
 	}}));
-    assertFalse(map.hasAnyThat(new Predicate<MimeTypeInfo>() {
+    assertTrue(map.hasAnyThat(new Predicate<MimeTypeInfo>() {
 	public boolean evaluate(MimeTypeInfo mti) {
 	  return mti.getContentValidatorFactory() != null;
 	}}));
