@@ -51,7 +51,6 @@ public class TestBaseAtyponContentValidator extends LockssTestCase {
 	static Logger log = Logger.getLogger(TestBaseAtyponContentValidator.class);
 
 
-	private static MimeTypeContentValidator defValidator;
 	private MockLockssDaemon theDaemon;
 
 	static final String PLUGIN_ID = "org.lockss.plugin.atypon.BaseAtyponPlugin";
@@ -105,6 +104,13 @@ public class TestBaseAtyponContentValidator extends LockssTestCase {
 	}
 
 
+  ContentValidator getValidator() {
+    String mimeType = "*/*";
+    ContentValidatorFactory fact =
+      BA_au.getContentValidatorFactory(mimeType);
+    return fact.createContentValidator(BA_au, mimeType);
+  }    
+
 	public void testPluginSetup() throws Exception {	
 		// make sure a valid map is specified in the plugin
 		PatternStringMap urlMimeValidationMap = BA_au.makeUrlMimeValidationMap();
@@ -116,14 +122,10 @@ public class TestBaseAtyponContentValidator extends LockssTestCase {
 		String typeList[] = {"text/html", "application/pdf", "foo/blah", };
 		for (String theType : typeList) {
 			ContentValidatorFactory deffact = BA_au.getContentValidatorFactory(theType);
-			if (deffact != null) { 
-				//ContentValidatorFactory deffact = new MimeTypeContentValidatorFactory();
-				defValidator = (MimeTypeContentValidator) deffact.createContentValidator(BA_au, theType);
-				if (defValidator == null) 
-					fail("plugin's default Mime Type Validator was null");
-			} else {
-				fail("plugin's default Mime Type Validator Factory was null for type " + theType);
-			}
+			assertNotNull("plugin's default Mime Type Validator Factory was null for type " + theType, deffact);
+			ContentValidator defValidator =
+			  deffact.createContentValidator(BA_au, theType);
+			assertNotNull("plugin's default Mime Type Validator was null", defValidator);
 		}
 	}
 
@@ -138,7 +140,7 @@ public class TestBaseAtyponContentValidator extends LockssTestCase {
 	public void testHtmlContentType() throws Exception {
 		MockCachedUrl cu;
 
-		setUp();
+		ContentValidator defValidator = getValidator();
 		for (String urlString : htmlUrls) {
 			cu = new MockCachedUrl(urlString, BA_au);
 			cu.setContent(SOMETEXT);
@@ -167,7 +169,7 @@ public class TestBaseAtyponContentValidator extends LockssTestCase {
 	public void testPdfContentType() throws Exception {
 		MockCachedUrl cu;
 
-		setUp();
+		ContentValidator defValidator = getValidator();
 		for (String urlString : pdfUrls) {
 			cu = new MockCachedUrl(urlString, BA_au);
 			cu.setContent(SOMETEXT);
@@ -196,7 +198,7 @@ public class TestBaseAtyponContentValidator extends LockssTestCase {
 	public void testOtherContentType() throws Exception {
 		MockCachedUrl cu;
 
-		setUp();
+		ContentValidator defValidator = getValidator();
 		// we know nothing about these patterns - allow any mime type at all
 		for (String urlString : unknownUrls) {
 			cu = new MockCachedUrl(urlString, BA_au);
