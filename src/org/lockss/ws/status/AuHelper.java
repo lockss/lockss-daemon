@@ -97,7 +97,7 @@ public class AuHelper {
   static String LAST_COMPLETED_DEEP_CRAWL = "lastCompletedDeepCrawl";
   static String LAST_DEEP_CRAWL = "lastDeepCrawl";
   static String LAST_DEEP_CRAWL_RESULT = "lastDeepCrawlResult";
-  static String LAST_DEEP_CRAWL_DEPTH = "lastDeepCrawlDepth";
+  static String LAST_COMPLETED_DEEP_CRAWL_DEPTH = "lastCompletedDeepCrawlDepth";
   static String LAST_METADATA_INDEX = "lastMetadataIndex";
   static String LAST_COMPLETED_POLL = "lastCompletedPoll";
   static String LAST_POLL = "lastPoll";
@@ -147,7 +147,7 @@ public class AuHelper {
       add(LAST_COMPLETED_DEEP_CRAWL);
       add(LAST_DEEP_CRAWL);
       add(LAST_DEEP_CRAWL_RESULT);
-      add(LAST_DEEP_CRAWL_DEPTH);
+      add(LAST_COMPLETED_DEEP_CRAWL_DEPTH);
       add(LAST_METADATA_INDEX);
       add(LAST_COMPLETED_POLL);
       add(LAST_POLL);
@@ -314,7 +314,7 @@ public class AuHelper {
     if (lastDeepCrawlAttempt > 0) {
       result.setLastDeepCrawl(lastDeepCrawlAttempt);
       result.setLastDeepCrawlResult(state.getLastDeepCrawlResultMsg());
-      result.setLastDeepCrawlDepth(state.getLastDeepCrawlDepth());
+      result.setLastCompletedDeepCrawlDepth(state.getLastDeepCrawlDepth());
     }
 
     result.setLastMetadataIndex(state.getLastMetadataIndex());
@@ -691,14 +691,14 @@ public class AuHelper {
       builder.append("lastDeepCrawlResult=").append(result.getLastDeepCrawlResult());
     }
 
-    if (result.getLastDeepCrawlDepth() != null) {
+    if (result.getLastCompletedDeepCrawlDepth() != null) {
       if (!isFirst) {
 	builder.append(", ");
       } else {
 	isFirst = false;
       }
 
-      builder.append("lastDeepCrawlDepth=").append(result.getLastDeepCrawlDepth());
+      builder.append("lastCompletedDeepCrawlDepth=").append(result.getLastCompletedDeepCrawlDepth());
     }
 
     if (result.getLastMetadataIndex() != null) {

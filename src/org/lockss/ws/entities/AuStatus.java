@@ -55,7 +55,7 @@ public class AuStatus {
   private Long lastCompletedDeepCrawl;
   private Long lastDeepCrawl;
   private String lastDeepCrawlResult;
-  private int lastDeepCrawlDepth;
+  private int lastCompletedDeepCrawlDepth;
   private Long lastMetadataIndex;
   private Long lastCompletedPoll;
   private Long lastPoll;
@@ -295,8 +295,8 @@ public class AuStatus {
    *
    * @return an int with the depth
    */
-  public Integer getLastDeepCrawlDepth() {
-    return lastDeepCrawlDepth;
+  public Integer getLastCompletedDeepCrawlDepth() {
+    return lastCompletedDeepCrawlDepth;
   }
 
   /**
@@ -472,8 +472,8 @@ public class AuStatus {
     this.lastDeepCrawlResult = lastDeepCrawlResult;
   }
 
-  public void setLastDeepCrawlDepth(Integer lastDeepCrawlDepth) {
-    this.lastDeepCrawlDepth = lastDeepCrawlDepth;
+  public void setLastCompletedDeepCrawlDepth(Integer lastCompletedDeepCrawlDepth) {
+    this.lastCompletedDeepCrawlDepth = lastCompletedDeepCrawlDepth;
   }
 
   public void setLastMetadataIndex(Long lastMetadataIndex) {
@@ -559,8 +559,8 @@ public class AuStatus {
     builder.append(lastDeepCrawl);
     builder.append(", lastDeepCrawlResult=");
     builder.append(lastDeepCrawlResult);
-    builder.append(", lastDeepCrawlDepth=");
-    builder.append(lastDeepCrawlDepth);
+    builder.append(", lastCompletedDeepCrawlDepth=");
+    builder.append(lastCompletedDeepCrawlDepth);
     builder.append(", lastMetadataIndex=");
     builder.append(lastMetadataIndex);
     builder.append(", lastCompletedPoll=");

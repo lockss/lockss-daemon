@@ -59,7 +59,7 @@ public class AuWsResult {
   private Long lastCompletedDeepCrawl;
   private Long lastDeepCrawl;
   private String lastDeepCrawlResult;
-  private Integer lastDeepCrawlDepth;
+  private Integer lastCompletedDeepCrawlDepth;
   private Long lastMetadataIndex;
   private Long lastCompletedPoll;
   private Long lastPoll;
@@ -389,11 +389,12 @@ public class AuWsResult {
    *
    * @return an Integer with the depth
    */
-  public Integer getLastDeepCrawlDepth() {
-    return lastDeepCrawlDepth;
+  public Integer getLastCompletedDeepCrawlDepth() {
+    return lastCompletedDeepCrawlDepth;
   }
-  public void setLastDeepCrawlDepth(Integer lastDeepCrawlDepth) {
-    this.lastDeepCrawlDepth = lastDeepCrawlDepth;
+  public void setLastCompletedDeepCrawlDepth(Integer
+					     lastCompletedDeepCrawlDepth) {
+    this.lastCompletedDeepCrawlDepth = lastCompletedDeepCrawlDepth;
   }
 
   /**
@@ -624,7 +625,7 @@ public class AuWsResult {
 	+ ", lastCompletedDeepCrawl=" + lastCompletedDeepCrawl
 	+ ", lastDeepCrawl=" + lastDeepCrawl
 	+ ", lastDeepCrawlResult=" + lastDeepCrawlResult
-	+ ", lastDeepCrawlDepth=" + lastDeepCrawlDepth
+	+ ", lastCompletedDeepCrawlDepth=" + lastCompletedDeepCrawlDepth
 	+ ", lastMetadataIndex=" + lastMetadataIndex
         + ", lastCompletedPoll=" + lastCompletedPoll
 	+ ", lastPoll=" + lastPoll + ", lastPollResult=" + lastPollResult

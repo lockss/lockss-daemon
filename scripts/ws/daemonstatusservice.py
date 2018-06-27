@@ -73,7 +73,7 @@ def get_au_status(host, auth, auid):
   - LastCompletedDeepCrawl (numeric)
   - LastDeepCrawl (numeric)
   - LastDeepCrawlResult (string)
-  - LastDeepCrawlDepth (numeric)
+  - LastCompletedDeepCrawlDepth (numeric)
   - LastPoll (numeric)
   - LastPollResult (string)
   - PluginName (string)
@@ -268,7 +268,7 @@ def query_aus(host, auth, select, where=None):
   - LastCompletedDeepCrawl (numeric)
   - LastDeepCrawl (numeric)
   - LastDeepCrawlResult (string)
-  - LastDeepCrawlDepth (numeric)
+  - LastCompletedDeepCrawlDepth (numeric)
   - LastPoll (numeric)
   - LastPollResult (string)
   - Name (string)
@@ -557,7 +557,7 @@ _AU_STATUS = {
   'lastCompletedDeepCrawl': ('Last completed deep crawl', lambda r: datetimems(r.LastCompletedDeepCrawl)),
   'lastDeepCrawl': ('Last deep crawl', lambda r: datetimems(r.LastDeepCrawl)),
   'lastDeepCrawlResult': ('Last deep crawl result',  lambda r: r.LastDeepCrawlResult),
-  'lastDeepCrawlDepth': ('Last deep crawl depth', lambda r: r.LastDeepCrawlDepth),
+  'lastCompletedDeepCrawlDepth': ('Last completed deep crawl depth', lambda r: r.LastCompletedDeepCrawlDepth),
   'lastPoll': ('Last poll', lambda r: datetimems(r.LastPoll)),
   'lastPollResult': ('Last poll result', lambda r: r.LastPollResult),
   'pluginName': ('Plugin name', lambda r: r.PluginName),
@@ -706,7 +706,7 @@ _QUERY_AUS = {
   'lastCompletedDeepCrawl': ('Last completed deep crawl', lambda r: datetimems(r.LastCompletedDeepCrawl)),
   'lastDeepCrawl': ('Last deep crawl', lambda r: datetimems(r.LastDeepCrawl)),
   'lastDeepCrawlResult': ('Last deep crawl result',  lambda r: r.LastDeepCrawlResult),
-  'lastDeepCrawlDepth': ('Last deep crawl depth', lambda r: r.LastDeepCrawlDepth),
+  'lastCompletedDeepCrawlDepth': ('Last completed deep crawl depth', lambda r: r.LastCompletedDeepCrawlDepth),
   'lastPoll': ('Last poll', lambda r: datetimems(r.LastPoll)),
   'lastPollResult': ('Last poll result', lambda r: r.LastPollResult),
   'name': ('Name', lambda r: r.Name),

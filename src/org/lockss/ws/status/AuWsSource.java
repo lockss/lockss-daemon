@@ -107,7 +107,7 @@ public class AuWsSource extends AuWsResult {
   private boolean lastDeepCrawlPopulated = false;
   private boolean lastCompletedDeepCrawlPopulated = false;
   private boolean lastDeepCrawlResultPopulated = false;
-  private boolean lastDeepCrawlDepthPopulated = false;
+  private boolean lastCompletedDeepCrawlDepthPopulated = false;
   private boolean lastMetadataIndexPopulated = false;
   private boolean lastCompletedPollPopulated = false;
   private boolean lastPollPopulated = false;
@@ -480,18 +480,18 @@ public class AuWsSource extends AuWsResult {
   }
 
   @Override
-  public Integer getLastDeepCrawlDepth() {
-    if (!lastDeepCrawlDepthPopulated) {
-      int lastDeepCrawlDepth = getState().getLastDeepCrawlDepth();
+  public Integer getLastCompletedDeepCrawlDepth() {
+    if (!lastCompletedDeepCrawlDepthPopulated) {
+      int lastCompletedDeepCrawlDepth = getState().getLastDeepCrawlDepth();
 
-      if (lastDeepCrawlDepth > 0) {
-	setLastDeepCrawlDepth(Integer.valueOf(lastDeepCrawlDepth));
+      if (lastCompletedDeepCrawlDepth > 0) {
+	setLastCompletedDeepCrawlDepth(Integer.valueOf(lastCompletedDeepCrawlDepth));
       }
 
-      lastDeepCrawlDepthPopulated = true;
+      lastCompletedDeepCrawlDepthPopulated = true;
     }
 
-    return super.getLastDeepCrawlDepth();
+    return super.getLastCompletedDeepCrawlDepth();
   }
 
   @Override
