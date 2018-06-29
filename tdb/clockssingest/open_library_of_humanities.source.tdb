@@ -53,7 +53,7 @@
     # set of WARC files
     # WARC content collected from https://ijwwe.uwp.co.uk/
 
-    param[base_url] = http://clockss-ingest.lockss.org/warcfiles/international-journal-of-welsh-writing-in-english-released/
+    param[base_url] = http://clockss-ingest.lockss.org/warcfiles/journal-of-welsh-writing-in-english-released/
 
     au < testing ; exists ; 2018 ; International Journal of Welsh Writing in English WARC Content 2018 ; 2018 ; 2018-06-25 >
 
