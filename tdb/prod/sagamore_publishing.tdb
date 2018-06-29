@@ -351,14 +351,14 @@
     {
     param[journal_id] = jnelsi
 
-    au < testing ; 2017 ; I ; JNEL Special Issues I ; 2017 ; https://js.sagamorepub.com/ >
+    au < notReady ; 2017 ; I ; JNEL Special Issues I ; 2017 ; https://js.sagamorepub.com/ > #login found
 
     }
 
     {
     param[journal_id] = jnelsi2
 
-    au < testing ; 2017 ; II ; JNEL Special Issues II ; 2017 ; https://js.sagamorepub.com/ >
+    au < notReady ; 2017 ; II ; JNEL Special Issues II ; 2017 ; https://js.sagamorepub.com/ > #login found
 
     }
   }
