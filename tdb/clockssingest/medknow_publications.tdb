@@ -5454,8 +5454,8 @@
       param[base_url] = http://www.genome-integrity.org/
 
       au < notReady ; exists ; 2015 ; Genome Integrity Volume 6 ; 2015 ; 6 ; > #500 Internal Server error.
-      au < manifest ; exists ; 2016 ; Genome Integrity Volume 7 ; 2016 ; 7 ; >
-      au < manifest ; exists ; 2017 ; Genome Integrity Volume 8 ; 2017 ; 8 ; >
+      au < notReady ; exists ; 2016 ; Genome Integrity Volume 7 ; 2016 ; 7 ; > #500 Internal Server error. http://www.genome-integrity.org/showbackIssue.asp?issn=2041-9414;year=2016;volume=7;issue=1
+      au < notReady ; exists ; 2017 ; Genome Integrity Volume 8 ; 2017 ; 8 ; > #500 Internal Server error.
       au < manifest ; exists ; 2018 ; Genome Integrity Volume 9 ; 2018 ; 9 ; >
 
   }
