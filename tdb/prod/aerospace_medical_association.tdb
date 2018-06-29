@@ -24,6 +24,8 @@
     param[journal_id] = asem 
     param[journal_issn] = 0095-6562
   
+    # changed name and issn after first issue of 2015. http://www.ingentaconnect.com/content/asma/asem
+
     au < released ; 2003 ; 74 ; Aviation, Space, and Environmental Medicine Volume 74 ; 74 >
     au < released ; 2004 ; 75 ; Aviation, Space, and Environmental Medicine Volume 75 ; 75 >
     au < released ; 2005 ; 76 ; Aviation, Space, and Environmental Medicine Volume 76 ; 76 >
@@ -36,6 +38,8 @@
     au < released ; 2012 ; 83 ; Aviation, Space, and Environmental Medicine Volume 83 ; 83 >
     au < released ; 2013 ; 84 ; Aviation, Space, and Environmental Medicine Volume 84 ; 84 >
     au < released ; 2014 ; 85 ; Aviation, Space, and Environmental Medicine Volume 85 ; 85 >
+    au < exists ; 2015 ; 86 ; Aviation, Space, and Environmental Medicine Volume 86 ; 86 >
+    #changed title after the first issue of 2015
 
   }
 
