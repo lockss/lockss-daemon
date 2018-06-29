@@ -54,7 +54,7 @@
       au < frozen ; exists ; 2012 ; Cold Spring Harbor Perspectives in Biology Volume 4 ; 4 ; >
       au < frozen ; exists ; 2013 ; Cold Spring Harbor Perspectives in Biology Volume 5 ; 5 ; >
       au < finished ; crawling ; 2014 ; Cold Spring Harbor Perspectives in Biology Volume 6 ; 6 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2015 ; Cold Spring Harbor Perspectives in Biology Volume 7 ; 7 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; Cold Spring Harbor Perspectives in Biology Volume 7 ; 7 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2016 ; Cold Spring Harbor Perspectives in Biology Volume 8 ; 8 ; >
       au < deepCrawl ; exists ; 2017 ; Cold Spring Harbor Perspectives in Biology Volume 9 ; 9 ; >
       au < manifest ; exists ; 2018 ; Cold Spring Harbor Perspectives in Biology Volume 10 ; 10 ; >
@@ -81,7 +81,7 @@
       au < crawling ; exists ; 2012 ; Cold Spring Harbor Perspectives in Medicine Volume 2 ; 2 ; >
       au < crawling ; exists ; 2013 ; Cold Spring Harbor Perspectives in Medicine Volume 3 ; 3 ; >
       au < finished ; finished ; 2014 ; Cold Spring Harbor Perspectives in Medicine Volume 4 ; 4 ; >
-      au < finished ; manifest ; 2015 ; Cold Spring Harbor Perspectives in Medicine Volume 5 ; 5 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2015 ; Cold Spring Harbor Perspectives in Medicine Volume 5 ; 5 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2016 ; Cold Spring Harbor Perspectives in Medicine Volume 6 ; 6 ; >
       au < deepCrawl ; exists ; 2017 ; Cold Spring Harbor Perspectives in Medicine Volume 7 ; 7 ; >
       au < manifest ; exists ; 2018 ; Cold Spring Harbor Perspectives in Medicine Volume 8 ; 8 ; >
@@ -114,7 +114,7 @@
       au < crawling ; exists ; 2012 ; Cold Spring Harbor Protocols Volume 2012 ; 2012 ; >
       au < crawling ; exists ; 2013 ; Cold Spring Harbor Protocols Volume 2013 ; 2013 ; >
       au < finished ; finished ; 2014 ; Cold Spring Harbor Protocols Volume 2014 ; 2014 ; >
-      au < finished ; manifest ; 2015 ; Cold Spring Harbor Protocols Volume 2015 ; 2015 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; Cold Spring Harbor Protocols Volume 2015 ; 2015 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2016 ; Cold Spring Harbor Protocols Volume 2016 ; 2016 ; >
       au < deepCrawl ; exists ; 2017 ; Cold Spring Harbor Protocols Volume 2017 ; 2017 ; >
       au < manifest ; exists ; 2018 ; Cold Spring Harbor Protocols Volume 2018 ; 2018 ; >
@@ -320,7 +320,7 @@
       au < frozen ; exists ; 2012 ; Genome Research Volume 22 ; 22 ; https://genome.cshlp.org/ ; >
       au < crawling ; exists ; 2013 ; Genome Research Volume 23 ; 23 ; https://genome.cshlp.org/ ; >
       au < zapped ; finished ; 2014 ; Genome Research Volume 24 ; 24 ; http://genome.cshlp.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2015 ; Genome Research Volume 25 ; 25 ; http://genome.cshlp.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; Genome Research Volume 25 ; 25 ; http://genome.cshlp.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2016 ; Genome Research Volume 26 ; 26 ; http://genome.cshlp.org/ ; >
       au < deepCrawl ; exists ; 2017 ; Genome Research Volume 27 ; 27 ; http://genome.cshlp.org/ ; >
       au < manifest ; exists ; 2018 ; Genome Research Volume 28 ; 28 ; https://genome.cshlp.org/ ; >

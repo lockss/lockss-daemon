@@ -1212,14 +1212,14 @@
     au < doNotProcess ; doNotProcess ; 1997 ; Immunology & Cell Biology Volume 75 ; 1997 ; 75 ; >
     au < doNotProcess ; doNotProcess ; 1998 ; Immunology & Cell Biology Volume 76 ; 1998 ; 76 ; >
     au < doNotProcess ; doNotProcess ; 1999 ; Immunology & Cell Biology Volume 77 ; 1999 ; 77 ; >
-    au < finished ; manifest ; 2000 ; Immunology & Cell Biology Volume 78 ; 2000 ; 78 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2001 ; Immunology & Cell Biology Volume 79 ; 2001 ; 79 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2002 ; Immunology & Cell Biology Volume 80 ; 2002 ; 80 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2000 ; Immunology & Cell Biology Volume 78 ; 2000 ; 78 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2001 ; Immunology & Cell Biology Volume 79 ; 2001 ; 79 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2002 ; Immunology & Cell Biology Volume 80 ; 2002 ; 80 ; reingest5.clockss.org:8082 >
     au < superseded ; exists ; 2003 ; Immunology & Cell Biology Volume 81 [superseded] ; 2003 ; 81 ; > #never completed a crawl
-    au < finished ; manifest ; 2004 ; Immunology & Cell Biology Volume 82 ; 2004 ; 82 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2005 ; Immunology & Cell Biology Volume 83 ; 2005 ; 83 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2006 ; Immunology & Cell Biology Volume 84 ; 2006 ; 84 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2007 ; Immunology & Cell Biology Volume 85 ; 2007 ; 85 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2004 ; Immunology & Cell Biology Volume 82 ; 2004 ; 82 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2005 ; Immunology & Cell Biology Volume 83 ; 2005 ; 83 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2006 ; Immunology & Cell Biology Volume 84 ; 2006 ; 84 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2007 ; Immunology & Cell Biology Volume 85 ; 2007 ; 85 ; reingest1.clockss.org:8082 >
     au < zapped ; finished ; 2008 ; Immunology & Cell Biology Volume 86 ; 2008 ; 86 ; >
     au < zapped ; finished ; 2009 ; Immunology & Cell Biology Volume 87 ; 2009 ; 87 ; >
     au < finished ; frozen ; 2010 ; Immunology & Cell Biology Volume 88 ; 2010 ; 88 ; >
