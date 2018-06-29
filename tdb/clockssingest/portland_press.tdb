@@ -495,7 +495,7 @@
     au < finished ; finished ; 2015 ; Biochemical Journal Volume 472 ; 472 ; reingest2.clockss.org:8085 >
     au < frozen ; down ; 2016 ; Biochemical Journal Volume 473 ; 473 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Biochemical Journal Volume 474 ; 474 ; >
-    au < manifest ; exists ; 2018 ; Biochemical Journal Volume 475 ; 475 ; >
+    au < exists ; exists ; 2018 ; Biochemical Journal Volume 475 ; 475 ; >
 
   }
   
@@ -555,7 +555,7 @@
     au < frozen ; down ; 2015 ; Biochemical Society Transactions Volume 43 ; 43 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Biochemical Society Transactions Volume 44 ; 44 ; >
     au < deepCrawl ; exists ; 2017 ; Biochemical Society Transactions Volume 45 ; 45 ; >
-    au < expected ; exists ; 2018 ; Biochemical Society Transactions Volume 46 ; 46 ; >
+    au < exists ; exists ; 2018 ; Biochemical Society Transactions Volume 46 ; 46 ; >
 
   }
   
@@ -610,7 +610,7 @@
     au < frozen ; exists ; 2015 ; Bioscience Reports Volume 35 ; 35 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2016 ; Bioscience Reports Volume 36 ; 36 ; >
     au < deepCrawl ; exists ; 2017 ; Bioscience Reports Volume 37 ; 37 ; >
-    au < manifest ; exists ; 2018 ; Bioscience Reports Volume 38 ; 38 ; >
+    au < exists ; exists ; 2018 ; Bioscience Reports Volume 38 ; 38 ; >
 
   }
 
@@ -662,7 +662,7 @@
     au < frozen ; exists ; 2015 ; Clinical Science Volume 129 ; 129 ; >
     au < frozen ; exists ; 2016 ; Clinical Science Volume 130 ; 130 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Clinical Science Volume 131 ; 131 ; >
-    au < expected ; exists ; 2018 ; Clinical Science Volume 132 ; 132 ; >
+    au < exists ; exists ; 2018 ; Clinical Science Volume 132 ; 132 ; >
 
   }
   
@@ -706,7 +706,7 @@
     au < finished ; finished ; 2015 ; Essays in Biochemistry Volume 59 ; 59 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2016 ; Essays in Biochemistry Volume 60 ; 60 ; >
     au < deepCrawl ; exists ; 2017 ; Essays in Biochemistry Volume 61 ; 61 ; >
-    au < manifest ; exists ; 2018 ; Essays in Biochemistry Volume 62 ; 62 ; >
+    au < exists ; exists ; 2018 ; Essays in Biochemistry Volume 62 ; 62 ; >
 
   }
   
@@ -761,7 +761,7 @@
     param[base_url] = http://www.neuronalsignaling.org/
 
     au < deepCrawl ; exists ; 2017 ; Neuronal Signaling Volume 1 ; 1 ; >
-    au < expected ; exists ; 2018 ; Neuronal Signaling Volume 2 ; 2 ; >
+    au < exists ; exists ; 2018 ; Neuronal Signaling Volume 2 ; 2 ; >
 
   }
   
