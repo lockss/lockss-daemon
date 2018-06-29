@@ -163,7 +163,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Biomarkers in Cancer Volume 5 ; 5 ; bica ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Biomarkers in Cancer Volume 6 ; 6 ; bica ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Biomarkers in Cancer Volume 7 ; 7 ; bica ; >
-    au < crawling ; exists ; 2016 ; Biomarkers in Cancer Volume 8 ; 8 ; bica ; >
+    au < frozen ; exists ; 2016 ; Biomarkers in Cancer Volume 8 ; 8 ; bica ; >
     au < frozen ; exists ; 2017 ; Biomarkers in Cancer Volume 9 ; 9 ; bica ; >
     au < manifest ; exists ; 2018 ; Biomarkers in Cancer Volume 10 ; 10 ; bica ; >
 
@@ -642,7 +642,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Clinical Medicine Insights: Therapeutics Volume 5 ; 5 ; thpa ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Clinical Medicine Insights: Therapeutics Volume 6 ; 6 ; thpa ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Therapeutics Volume 7 ; 7 ; thpa ; >
-    au < crawling ; exists ; 2016 ; Clinical Medicine Insights: Therapeutics Volume 8 ; 8 ; thpa ; >
+    au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Therapeutics Volume 8 ; 8 ; thpa ; >
     au < frozen ; exists ; 2017 ; Clinical Medicine Insights: Therapeutics Volume 9 ; 9 ; thpa ; >
     au < manifest ; exists ; 2018 ; Clinical Medicine Insights: Therapeutics Volume 10 ; 10 ; thpa ; >
 
@@ -738,7 +738,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Drug Target Insights Volume 8 ; 8 ; dtia ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Drug Target Insights Volume 9 ; 9 ; dtia ; >
     au < frozen ; exists ; 2016 ; Drug Target Insights Volume 10 ; 10 ; dtia ; >
-    au < crawling ; exists ; 2017 ; Drug Target Insights Volume 11 ; 11 ; dtia ; >
+    au < frozen ; exists ; 2017 ; Drug Target Insights Volume 11 ; 11 ; dtia ; >
     au < exists ; exists ; 2018 ; Drug Target Insights Volume 12 ; 12 ; dtia ; >
 
   }
@@ -1137,7 +1137,7 @@
 
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Medical Education and Curricular Development Volume 1 ; 1 ; mdea ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Medical Education and Curricular Development Volume 2 ; 2 ; mdea ; >
-    au < crawling ; exists ; 2016 ; Journal of Medical Education and Curricular Development Volume 3 ; 3 ; mdea ; >
+    au < frozen ; exists ; 2016 ; Journal of Medical Education and Curricular Development Volume 3 ; 3 ; mdea ; >
     au < frozen ; exists ; 2017 ; Journal of Medical Education and Curricular Development Volume 4 ; 4 ; mdea ; >
     au < manifest ; exists ; 2018 ; Journal of Medical Education and Curricular Development Volume 5 ; 5 ; mdea ; >
 

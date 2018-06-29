@@ -156,7 +156,7 @@
     au < finished ; crawling ; 2014 ; Annals of Cardiac Anaesthesia Volume 17 ; 2014 ; 17 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2015 ; Annals of Cardiac Anaesthesia Volume 18 ; 2015 ; 18 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; Annals of Cardiac Anaesthesia Volume 19 ; 2016 ; 19 ; >
-    au < crawling ; exists ; 2017 ; Annals of Cardiac Anaesthesia Volume 20 ; 2017 ; 20 ; >
+    au < frozen ; exists ; 2017 ; Annals of Cardiac Anaesthesia Volume 20 ; 2017 ; 20 ; >
     au < manifest ; exists ; 2018 ; Annals of Cardiac Anaesthesia Volume 21 ; 2018 ; 21 ; >
 
   }
@@ -5008,7 +5008,7 @@
       au < crawling ; exists ; 2012 ; Clinical Cancer Investigation Journal Volume 1 ; 2012 ; 1 ; >
       au < crawling ; exists ; 2013 ; Clinical Cancer Investigation Journal Volume 2 ; 2013 ; 2 ; >
       au < crawling ; exists ; 2014 ; Clinical Cancer Investigation Journal Volume 3 ; 2014 ; 3 ; >
-      au < crawling ; exists ; 2015 ; Clinical Cancer Investigation Journal Volume 4 ; 2015 ; 4 ; >
+      au < frozen ; exists ; 2015 ; Clinical Cancer Investigation Journal Volume 4 ; 2015 ; 4 ; >
       au < crawling ; exists ; 2016 ; Clinical Cancer Investigation Journal Volume 5 ; 2016 ; 5 ; >
       au < crawling ; exists ; 2017 ; Clinical Cancer Investigation Journal Volume 6 ; 2017 ; 6 ; >
       au < manifest ; exists ; 2018 ; Clinical Cancer Investigation Journal Volume 7 ; 2018 ; 7 ; >
@@ -5592,7 +5592,7 @@
       param[base_url] = http://www.ijdpdd.com/
 
       au < crawling ; exists ; 2014 ; Indian Journal of Dermatopathology and Diagnostic Dermatology Volume 1 ; 2014 ; 1 ; >
-      au < crawling ; exists ; 2015 ; Indian Journal of Dermatopathology and Diagnostic Dermatology Volume 2 ; 2015 ; 2 ; >
+      au < frozen ; exists ; 2015 ; Indian Journal of Dermatopathology and Diagnostic Dermatology Volume 2 ; 2015 ; 2 ; >
       au < crawling ; exists ; 2016 ; Indian Journal of Dermatopathology and Diagnostic Dermatology Volume 3 ; 2016 ; 3 ; >
       au < crawling ; exists ; 2017 ; Indian Journal of Dermatopathology and Diagnostic Dermatology Volume 4 ; 2017 ; 4 ; >
       au < manifest ; exists ; 2018 ; Indian Journal of Dermatopathology and Diagnostic Dermatology Volume 5 ; 2018 ; 5 ; >
