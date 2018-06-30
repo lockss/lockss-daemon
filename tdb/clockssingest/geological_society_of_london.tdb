@@ -144,6 +144,7 @@
     au < gsl.ClockssGSLDrupalPlugin ; deepCrawl ; exists ; 2017 ; Geological Society of London Memoirs Volume 47 ; 47 ; >
     au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 2017 ; Geological Society of London Memoirs Volume 48 ; 48 ; >
     au < gsl.ClockssGSLDrupalPlugin ; expected ; exists ; 2018 ; Geological Society of London Memoirs Volume 49 ; 49 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; expected ; exists ; 2018 ; Geological Society of London Memoirs Volume 50 ; 50 ; >
 
   }
 
@@ -592,12 +593,12 @@
     au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2017 ; Geological Society of London Special Publications Volume 432 ; 432 ; >
     au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2017 ; Geological Society of London Special Publications Volume 433 ; 433 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2016 ; Geological Society of London Special Publications Volume 434 ; 434 ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; doesNotExist ; doesNotExist ; 2016 ; Geological Society of London Special Publications Volume 435 ; 435 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 2018 ; Geological Society of London Special Publications Volume 435 ; 435 ; >
     au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2016 ; Geological Society of London Special Publications Volume 436 ; 436 ; >
     au < gsl.ClockssGSLDrupalPlugin ; frozen ; exists ; 2017 ; Geological Society of London Special Publications Volume 437 ; 437 ; >
     au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2017 ; Geological Society of London Special Publications Volume 438 ; 438 ; >
     au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 2017 ; Geological Society of London Special Publications Volume 439 ; 439 ; >
-    au < gsl.ClockssGSLDrupalPlugin ; doesNotExist ; doesNotExist ; 2017 ; Geological Society of London Special Publications Volume 440 ; 440 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 2018 ; Geological Society of London Special Publications Volume 440 ; 440 ; >
     au < gsl.ClockssGSLDrupalPlugin ; frozen ; exists ; 2017 ; Geological Society of London Special Publications Volume 441 ; 441 ; >
     au < gsl.ClockssGSLDrupalPlugin ; frozen ; exists ; 2017 ; Geological Society of London Special Publications Volume 442 ; 442 ; >
     au < gsl.ClockssGSLDrupalPlugin ; frozen ; exists ; 2017 ; Geological Society of London Special Publications Volume 443 ; 443 ; >
@@ -620,10 +621,10 @@
     au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 2018 ; Geological Society of London Special Publications Volume 460 ; 460 ; >
     au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 2018 ; Geological Society of London Special Publications Volume 461 ; 461 ; >
     au < gsl.ClockssGSLDrupalPlugin ; expected ; exists ; 2018 ; Geological Society of London Special Publications Volume 462 ; 462 ; >
-    au < gsl.ClockssGSLDrupalPlugin ; expected ; exists ; 2018 ; Geological Society of London Special Publications Volume 463 ; 463 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 2018 ; Geological Society of London Special Publications Volume 463 ; 463 ; >
     au < gsl.ClockssGSLDrupalPlugin ; expected ; exists ; 2018 ; Geological Society of London Special Publications Volume 464 ; 464 ; >
     au < gsl.ClockssGSLDrupalPlugin ; expected ; exists ; 2018 ; Geological Society of London Special Publications Volume 465 ; 465 ; >
-    au < gsl.ClockssGSLDrupalPlugin ; expected ; exists ; 2018 ; Geological Society of London Special Publications Volume 466 ; 466 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 2018 ; Geological Society of London Special Publications Volume 466 ; 466 ; >
     au < gsl.ClockssGSLDrupalPlugin ; expected ; exists ; 2018 ; Geological Society of London Special Publications Volume 467 ; 467 ; >
     au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 2018 ; Geological Society of London Special Publications Volume 468 ; 468 ; >
     au < gsl.ClockssGSLDrupalPlugin ; expected ; exists ; 2018 ; Geological Society of London Special Publications Volume 469 ; 469 ; >
