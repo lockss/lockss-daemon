@@ -87,7 +87,7 @@
     au < released ; 2014 ; 6 ; Journal of Applied Sport Management: Research that Matters Volume 6 ; 2014 ; http://js.sagamorepub.com/ >
     au < released ; 2015 ; 7 ; Journal of Applied Sport Management: Research that Matters Volume 7 ; 2015 ; http://js.sagamorepub.com/ >
     au < released ; 2016 ; 8 ; Journal of Applied Sport Management: Research that Matters Volume 8 ; 2016 ; http://js.sagamorepub.com/ >
-    au < testing ; 2017 ; 9 ; Journal of Applied Sport Management: Research that Matters Volume 9 ; 2017 ; https://js.sagamorepub.com/ >
+    au < notReady ; 2017 ; 9 ; Journal of Applied Sport Management: Research that Matters Volume 9 ; 2017 ; https://js.sagamorepub.com/ > #login found
     au < manifest ; 2018 ; 10 ; Journal of Applied Sport Management: Research that Matters Volume 10 ; 2018 ; https://js.sagamorepub.com/ >
   }
 
@@ -138,7 +138,7 @@
 
     param[journal_id] = jorel
 
-    au < manifest ; 2009 ; 1 ; Journal of Leisure Research Volume 1 ; 2009 ; https://js.sagamorepub.com/ >
+    au < testing ; 2009 ; 1 ; Journal of Leisure Research Volume 1 ; 2009 ; https://js.sagamorepub.com/ >
     au < ready ; 2010 ; 2 ; Journal of Leisure Research Volume 2 ; 2010 ; https://js.sagamorepub.com/ >
     au < ready ; 2011 ; 3 ; Journal of Leisure Research Volume 3 ; 2011 ; https://js.sagamorepub.com/ >
     au < ready ; 2012 ; 4 ; Journal of Leisure Research Volume 4 ; 2012 ; https://js.sagamorepub.com/ >
@@ -159,28 +159,28 @@
 
     param[journal_id] = jpra
 
-    au < manifest ; 1983 ; 1 ; Journal of Park and Recreation Administration Volume 1 ; 1983 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1984 ; 2 ; Journal of Park and Recreation Administration Volume 2 ; 1984 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1985 ; 3 ; Journal of Park and Recreation Administration Volume 3 ; 1985 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1986 ; 4 ; Journal of Park and Recreation Administration Volume 4 ; 1986 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1987 ; 5 ; Journal of Park and Recreation Administration Volume 5 ; 1987 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1988 ; 6 ; Journal of Park and Recreation Administration Volume 6 ; 1988 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1989 ; 7 ; Journal of Park and Recreation Administration Volume 7 ; 1989 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1990 ; 8 ; Journal of Park and Recreation Administration Volume 8 ; 1990 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1991 ; 9 ; Journal of Park and Recreation Administration Volume 9 ; 1991 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1992 ; 10 ; Journal of Park and Recreation Administration Volume 10 ; 1992 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1993 ; 11 ; Journal of Park and Recreation Administration Volume 11 ; 1993 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1994 ; 12 ; Journal of Park and Recreation Administration Volume 12 ; 1994 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1995 ; 13 ; Journal of Park and Recreation Administration Volume 13 ; 1995 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1996 ; 14 ; Journal of Park and Recreation Administration Volume 14 ; 1996 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1997 ; 15 ; Journal of Park and Recreation Administration Volume 15 ; 1997 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1998 ; 16 ; Journal of Park and Recreation Administration Volume 16 ; 1998 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1999 ; 17 ; Journal of Park and Recreation Administration Volume 17 ; 1999 ; https://js.sagamorepub.com/ >
-    au < manifest ; 2000 ; 18 ; Journal of Park and Recreation Administration Volume 18 ; 2000 ; https://js.sagamorepub.com/ >
-    au < manifest ; 2001 ; 19 ; Journal of Park and Recreation Administration Volume 19 ; 2001 ; https://js.sagamorepub.com/ >
-    au < manifest ; 2002 ; 20 ; Journal of Park and Recreation Administration Volume 20 ; 2002 ; https://js.sagamorepub.com/ >
-    au < manifest ; 2003 ; 21 ; Journal of Park and Recreation Administration Volume 21 ; 2003 ; https://js.sagamorepub.com/ >
-    au < manifest ; 2004 ; 22 ; Journal of Park and Recreation Administration Volume 22 ; 2004 ; https://js.sagamorepub.com/ >
+    au < testing ; 1983 ; 1 ; Journal of Park and Recreation Administration Volume 1 ; 1983 ; https://js.sagamorepub.com/ >
+    au < testing ; 1984 ; 2 ; Journal of Park and Recreation Administration Volume 2 ; 1984 ; https://js.sagamorepub.com/ >
+    au < testing ; 1985 ; 3 ; Journal of Park and Recreation Administration Volume 3 ; 1985 ; https://js.sagamorepub.com/ >
+    au < testing ; 1986 ; 4 ; Journal of Park and Recreation Administration Volume 4 ; 1986 ; https://js.sagamorepub.com/ >
+    au < testing ; 1987 ; 5 ; Journal of Park and Recreation Administration Volume 5 ; 1987 ; https://js.sagamorepub.com/ >
+    au < testing ; 1988 ; 6 ; Journal of Park and Recreation Administration Volume 6 ; 1988 ; https://js.sagamorepub.com/ >
+    au < testing ; 1989 ; 7 ; Journal of Park and Recreation Administration Volume 7 ; 1989 ; https://js.sagamorepub.com/ >
+    au < testing ; 1990 ; 8 ; Journal of Park and Recreation Administration Volume 8 ; 1990 ; https://js.sagamorepub.com/ >
+    au < testing ; 1991 ; 9 ; Journal of Park and Recreation Administration Volume 9 ; 1991 ; https://js.sagamorepub.com/ >
+    au < testing ; 1992 ; 10 ; Journal of Park and Recreation Administration Volume 10 ; 1992 ; https://js.sagamorepub.com/ >
+    au < testing ; 1993 ; 11 ; Journal of Park and Recreation Administration Volume 11 ; 1993 ; https://js.sagamorepub.com/ >
+    au < testing ; 1994 ; 12 ; Journal of Park and Recreation Administration Volume 12 ; 1994 ; https://js.sagamorepub.com/ >
+    au < testing ; 1995 ; 13 ; Journal of Park and Recreation Administration Volume 13 ; 1995 ; https://js.sagamorepub.com/ >
+    au < testing ; 1996 ; 14 ; Journal of Park and Recreation Administration Volume 14 ; 1996 ; https://js.sagamorepub.com/ >
+    au < testing ; 1997 ; 15 ; Journal of Park and Recreation Administration Volume 15 ; 1997 ; https://js.sagamorepub.com/ >
+    au < testing ; 1998 ; 16 ; Journal of Park and Recreation Administration Volume 16 ; 1998 ; https://js.sagamorepub.com/ >
+    au < testing ; 1999 ; 17 ; Journal of Park and Recreation Administration Volume 17 ; 1999 ; https://js.sagamorepub.com/ >
+    au < testing ; 2000 ; 18 ; Journal of Park and Recreation Administration Volume 18 ; 2000 ; https://js.sagamorepub.com/ >
+    au < testing ; 2001 ; 19 ; Journal of Park and Recreation Administration Volume 19 ; 2001 ; https://js.sagamorepub.com/ >
+    au < testing ; 2002 ; 20 ; Journal of Park and Recreation Administration Volume 20 ; 2002 ; https://js.sagamorepub.com/ >
+    au < testing ; 2003 ; 21 ; Journal of Park and Recreation Administration Volume 21 ; 2003 ; https://js.sagamorepub.com/ >
+    au < testing ; 2004 ; 22 ; Journal of Park and Recreation Administration Volume 22 ; 2004 ; https://js.sagamorepub.com/ >
     au < released ; 2005 ; 23 ; Journal of Park and Recreation Administration Volume 23 ; 2005 ; http://js.sagamorepub.com/ >
     au < released ; 2006 ; 24 ; Journal of Park and Recreation Administration Volume 24 ; 2006 ; http://js.sagamorepub.com/ >
     au < released ; 2007 ; 25 ; Journal of Park and Recreation Administration Volume 25 ; 2007 ; http://js.sagamorepub.com/ >
@@ -205,31 +205,31 @@
 
     param[journal_id] = pe
 
-    au < manifest ; 1980 ; 37 ; The Physical Educator Volume 37 ; 1980 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1981 ; 38 ; The Physical Educator Volume 38 ; 1981 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1982 ; 39 ; The Physical Educator Volume 39 ; 1982 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1983 ; 40 ; The Physical Educator Volume 40 ; 1983 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1984 ; 41 ; The Physical Educator Volume 41 ; 1984 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1985 ; 42 ; The Physical Educator Volume 42 ; 1985 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1986 ; 43 ; The Physical Educator Volume 43 ; 1986 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1987 ; 44 ; The Physical Educator Volume 44 ; 1987 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1988 ; 45 ; The Physical Educator Volume 45 ; 1988 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1989 ; 46 ; The Physical Educator Volume 46 ; 1989 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1990 ; 47 ; The Physical Educator Volume 47 ; 1990 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1991 ; 48 ; The Physical Educator Volume 48 ; 1991 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1992 ; 49 ; The Physical Educator Volume 49 ; 1992 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1993 ; 50 ; The Physical Educator Volume 50 ; 1993 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1994 ; 51 ; The Physical Educator Volume 51 ; 1994 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1995 ; 52 ; The Physical Educator Volume 52 ; 1995 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1996 ; 53 ; The Physical Educator Volume 53 ; 1996 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1997 ; 54 ; The Physical Educator Volume 54 ; 1997 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1998 ; 55 ; The Physical Educator Volume 55 ; 1998 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1999 ; 56 ; The Physical Educator Volume 56 ; 1999 ; https://js.sagamorepub.com/ >
-    au < manifest ; 2000 ; 57 ; The Physical Educator Volume 57 ; 2000 ; https://js.sagamorepub.com/ >
-    au < manifest ; 2001 ; 58 ; The Physical Educator Volume 58 ; 2001 ; https://js.sagamorepub.com/ >
-    au < manifest ; 2002 ; 59 ; The Physical Educator Volume 59 ; 2002 ; https://js.sagamorepub.com/ >
-    au < manifest ; 2003 ; 60 ; The Physical Educator Volume 60 ; 2003 ; https://js.sagamorepub.com/ >
-    au < manifest ; 2004 ; 61 ; The Physical Educator Volume 61 ; 2004 ; https://js.sagamorepub.com/ >
+    au < testing ; 1980 ; 37 ; The Physical Educator Volume 37 ; 1980 ; https://js.sagamorepub.com/ >
+    au < testing ; 1981 ; 38 ; The Physical Educator Volume 38 ; 1981 ; https://js.sagamorepub.com/ >
+    au < testing ; 1982 ; 39 ; The Physical Educator Volume 39 ; 1982 ; https://js.sagamorepub.com/ >
+    au < testing ; 1983 ; 40 ; The Physical Educator Volume 40 ; 1983 ; https://js.sagamorepub.com/ >
+    au < testing ; 1984 ; 41 ; The Physical Educator Volume 41 ; 1984 ; https://js.sagamorepub.com/ >
+    au < testing ; 1985 ; 42 ; The Physical Educator Volume 42 ; 1985 ; https://js.sagamorepub.com/ >
+    au < testing ; 1986 ; 43 ; The Physical Educator Volume 43 ; 1986 ; https://js.sagamorepub.com/ >
+    au < testing ; 1987 ; 44 ; The Physical Educator Volume 44 ; 1987 ; https://js.sagamorepub.com/ >
+    au < testing ; 1988 ; 45 ; The Physical Educator Volume 45 ; 1988 ; https://js.sagamorepub.com/ >
+    au < testing ; 1989 ; 46 ; The Physical Educator Volume 46 ; 1989 ; https://js.sagamorepub.com/ >
+    au < testing ; 1990 ; 47 ; The Physical Educator Volume 47 ; 1990 ; https://js.sagamorepub.com/ >
+    au < testing ; 1991 ; 48 ; The Physical Educator Volume 48 ; 1991 ; https://js.sagamorepub.com/ >
+    au < testing ; 1992 ; 49 ; The Physical Educator Volume 49 ; 1992 ; https://js.sagamorepub.com/ >
+    au < testing ; 1993 ; 50 ; The Physical Educator Volume 50 ; 1993 ; https://js.sagamorepub.com/ >
+    au < testing ; 1994 ; 51 ; The Physical Educator Volume 51 ; 1994 ; https://js.sagamorepub.com/ >
+    au < testing ; 1995 ; 52 ; The Physical Educator Volume 52 ; 1995 ; https://js.sagamorepub.com/ >
+    au < testing ; 1996 ; 53 ; The Physical Educator Volume 53 ; 1996 ; https://js.sagamorepub.com/ >
+    au < testing ; 1997 ; 54 ; The Physical Educator Volume 54 ; 1997 ; https://js.sagamorepub.com/ >
+    au < testing ; 1998 ; 55 ; The Physical Educator Volume 55 ; 1998 ; https://js.sagamorepub.com/ >
+    au < testing ; 1999 ; 56 ; The Physical Educator Volume 56 ; 1999 ; https://js.sagamorepub.com/ >
+    au < testing ; 2000 ; 57 ; The Physical Educator Volume 57 ; 2000 ; https://js.sagamorepub.com/ >
+    au < testing ; 2001 ; 58 ; The Physical Educator Volume 58 ; 2001 ; https://js.sagamorepub.com/ >
+    au < testing ; 2002 ; 59 ; The Physical Educator Volume 59 ; 2002 ; https://js.sagamorepub.com/ >
+    au < testing ; 2003 ; 60 ; The Physical Educator Volume 60 ; 2003 ; https://js.sagamorepub.com/ >
+    au < testing ; 2004 ; 61 ; The Physical Educator Volume 61 ; 2004 ; https://js.sagamorepub.com/ >
     au < released ; 2005 ; 62 ; The Physical Educator Volume 62 ; 2005 ; http://js.sagamorepub.com/ >
     au < released ; 2006 ; 63 ; The Physical Educator Volume 63 ; 2006 ; http://js.sagamorepub.com/ >
     au < released ; 2007 ; 64 ; The Physical Educator Volume 64 ; 2007 ; http://js.sagamorepub.com/ >
@@ -277,28 +277,28 @@
 
     param[journal_id] = trj
 
-    au < manifest ; 1983 ; 17 ; Therapeutic Recreation Journal Volume 17 ; 1983 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1984 ; 18 ; Therapeutic Recreation Journal Volume 18 ; 1984 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1985 ; 19 ; Therapeutic Recreation Journal Volume 19 ; 1985 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1986 ; 20 ; Therapeutic Recreation Journal Volume 20 ; 1986 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1987 ; 21 ; Therapeutic Recreation Journal Volume 21 ; 1987 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1988 ; 22 ; Therapeutic Recreation Journal Volume 22 ; 1988 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1989 ; 23 ; Therapeutic Recreation Journal Volume 23 ; 1989 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1990 ; 24 ; Therapeutic Recreation Journal Volume 24 ; 1990 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1991 ; 25 ; Therapeutic Recreation Journal Volume 25 ; 1991 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1992 ; 26 ; Therapeutic Recreation Journal Volume 26 ; 1992 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1993 ; 27 ; Therapeutic Recreation Journal Volume 27 ; 1993 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1994 ; 28 ; Therapeutic Recreation Journal Volume 28 ; 1994 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1995 ; 29 ; Therapeutic Recreation Journal Volume 29 ; 1995 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1996 ; 30 ; Therapeutic Recreation Journal Volume 30 ; 1996 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1997 ; 31 ; Therapeutic Recreation Journal Volume 31 ; 1997 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1998 ; 32 ; Therapeutic Recreation Journal Volume 32 ; 1998 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1999 ; 33 ; Therapeutic Recreation Journal Volume 33 ; 1999 ; https://js.sagamorepub.com/ >
-    au < manifest ; 2000 ; 34 ; Therapeutic Recreation Journal Volume 34 ; 2000 ; https://js.sagamorepub.com/ >
-    au < manifest ; 2001 ; 35 ; Therapeutic Recreation Journal Volume 35 ; 2001 ; https://js.sagamorepub.com/ >
-    au < manifest ; 2002 ; 36 ; Therapeutic Recreation Journal Volume 36 ; 2002 ; https://js.sagamorepub.com/ >
-    au < manifest ; 2003 ; 37 ; Therapeutic Recreation Journal Volume 37 ; 2003 ; https://js.sagamorepub.com/ >
-    au < manifest ; 2004 ; 38 ; Therapeutic Recreation Journal Volume 38 ; 2004 ; https://js.sagamorepub.com/ >
+    au < testing ; 1983 ; 17 ; Therapeutic Recreation Journal Volume 17 ; 1983 ; https://js.sagamorepub.com/ >
+    au < testing ; 1984 ; 18 ; Therapeutic Recreation Journal Volume 18 ; 1984 ; https://js.sagamorepub.com/ >
+    au < testing ; 1985 ; 19 ; Therapeutic Recreation Journal Volume 19 ; 1985 ; https://js.sagamorepub.com/ >
+    au < testing ; 1986 ; 20 ; Therapeutic Recreation Journal Volume 20 ; 1986 ; https://js.sagamorepub.com/ >
+    au < testing ; 1987 ; 21 ; Therapeutic Recreation Journal Volume 21 ; 1987 ; https://js.sagamorepub.com/ >
+    au < testing ; 1988 ; 22 ; Therapeutic Recreation Journal Volume 22 ; 1988 ; https://js.sagamorepub.com/ >
+    au < testing ; 1989 ; 23 ; Therapeutic Recreation Journal Volume 23 ; 1989 ; https://js.sagamorepub.com/ >
+    au < testing ; 1990 ; 24 ; Therapeutic Recreation Journal Volume 24 ; 1990 ; https://js.sagamorepub.com/ >
+    au < testing ; 1991 ; 25 ; Therapeutic Recreation Journal Volume 25 ; 1991 ; https://js.sagamorepub.com/ >
+    au < testing ; 1992 ; 26 ; Therapeutic Recreation Journal Volume 26 ; 1992 ; https://js.sagamorepub.com/ >
+    au < testing ; 1993 ; 27 ; Therapeutic Recreation Journal Volume 27 ; 1993 ; https://js.sagamorepub.com/ >
+    au < testing ; 1994 ; 28 ; Therapeutic Recreation Journal Volume 28 ; 1994 ; https://js.sagamorepub.com/ >
+    au < testing ; 1995 ; 29 ; Therapeutic Recreation Journal Volume 29 ; 1995 ; https://js.sagamorepub.com/ >
+    au < testing ; 1996 ; 30 ; Therapeutic Recreation Journal Volume 30 ; 1996 ; https://js.sagamorepub.com/ >
+    au < testing ; 1997 ; 31 ; Therapeutic Recreation Journal Volume 31 ; 1997 ; https://js.sagamorepub.com/ >
+    au < testing ; 1998 ; 32 ; Therapeutic Recreation Journal Volume 32 ; 1998 ; https://js.sagamorepub.com/ >
+    au < testing ; 1999 ; 33 ; Therapeutic Recreation Journal Volume 33 ; 1999 ; https://js.sagamorepub.com/ >
+    au < testing ; 2000 ; 34 ; Therapeutic Recreation Journal Volume 34 ; 2000 ; https://js.sagamorepub.com/ >
+    au < testing ; 2001 ; 35 ; Therapeutic Recreation Journal Volume 35 ; 2001 ; https://js.sagamorepub.com/ >
+    au < testing ; 2002 ; 36 ; Therapeutic Recreation Journal Volume 36 ; 2002 ; https://js.sagamorepub.com/ >
+    au < testing ; 2003 ; 37 ; Therapeutic Recreation Journal Volume 37 ; 2003 ; https://js.sagamorepub.com/ >
+    au < testing ; 2004 ; 38 ; Therapeutic Recreation Journal Volume 38 ; 2004 ; https://js.sagamorepub.com/ >
     au < released ; 2005 ; 39 ; Therapeutic Recreation Journal Volume 39 ; 2005 ; http://js.sagamorepub.com/ >
     au < released ; 2006 ; 40 ; Therapeutic Recreation Journal Volume 40 ; 2006 ; http://js.sagamorepub.com/ >
     au < released ; 2007 ; 41 ; Therapeutic Recreation Journal Volume 41 ; 2007 ; http://js.sagamorepub.com/ >
@@ -371,19 +371,19 @@
 
     param[journal_id] = ldmj
 
-    au < manifest ; 1989 ; 1 ; Learning Disabilities: A Multidisciplinary Journal Volume 1 ; 1989 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1991 ; 2 ; Learning Disabilities: A Multidisciplinary Journal Volume 2 ; 1991 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1992 ; 3 ; Learning Disabilities: A Multidisciplinary Journal Volume 3 ; 1992 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1993 ; 4 ; Learning Disabilities: A Multidisciplinary Journal Volume 4 ; 1993 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1994 ; 5 ; Learning Disabilities: A Multidisciplinary Journal Volume 5 ; 1994 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1995 ; 6 ; Learning Disabilities: A Multidisciplinary Journal Volume 6 ; 1995 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1996 ; 7 ; Learning Disabilities: A Multidisciplinary Journal Volume 7 ; 1996 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1997 ; 8 ; Learning Disabilities: A Multidisciplinary Journal Volume 8 ; 1997 ; https://js.sagamorepub.com/ >
-    au < manifest ; 1998 ; 9 ; Learning Disabilities: A Multidisciplinary Journal Volume 9 ; 1998 ; https://js.sagamorepub.com/ >
-    au < manifest ; 2000 ; 10 ; Learning Disabilities: A Multidisciplinary Journal Volume 10 ; 2000 ; https://js.sagamorepub.com/ >
-    au < manifest ; 2001 ; 11 ; Learning Disabilities: A Multidisciplinary Journal Volume 11 ; 2001 ; https://js.sagamorepub.com/ >
-    au < manifest ; 2003 ; 12 ; Learning Disabilities: A Multidisciplinary Journal Volume 12 ; 2003 ; https://js.sagamorepub.com/ >
-    au < manifest ; 2004 ; 13 ; Learning Disabilities: A Multidisciplinary Journal Volume 13 ; 2004 ; https://js.sagamorepub.com/ >
+    au < testing ; 1989 ; 1 ; Learning Disabilities: A Multidisciplinary Journal Volume 1 ; 1989 ; https://js.sagamorepub.com/ >
+    au < testing ; 1991 ; 2 ; Learning Disabilities: A Multidisciplinary Journal Volume 2 ; 1991 ; https://js.sagamorepub.com/ >
+    au < testing ; 1992 ; 3 ; Learning Disabilities: A Multidisciplinary Journal Volume 3 ; 1992 ; https://js.sagamorepub.com/ >
+    au < testing ; 1993 ; 4 ; Learning Disabilities: A Multidisciplinary Journal Volume 4 ; 1993 ; https://js.sagamorepub.com/ >
+    au < testing ; 1994 ; 5 ; Learning Disabilities: A Multidisciplinary Journal Volume 5 ; 1994 ; https://js.sagamorepub.com/ >
+    au < testing ; 1995 ; 6 ; Learning Disabilities: A Multidisciplinary Journal Volume 6 ; 1995 ; https://js.sagamorepub.com/ >
+    au < testing ; 1996 ; 7 ; Learning Disabilities: A Multidisciplinary Journal Volume 7 ; 1996 ; https://js.sagamorepub.com/ >
+    au < testing ; 1997 ; 8 ; Learning Disabilities: A Multidisciplinary Journal Volume 8 ; 1997 ; https://js.sagamorepub.com/ >
+    au < testing ; 1998 ; 9 ; Learning Disabilities: A Multidisciplinary Journal Volume 9 ; 1998 ; https://js.sagamorepub.com/ >
+    au < testing ; 2000 ; 10 ; Learning Disabilities: A Multidisciplinary Journal Volume 10 ; 2000 ; https://js.sagamorepub.com/ >
+    au < testing ; 2001 ; 11 ; Learning Disabilities: A Multidisciplinary Journal Volume 11 ; 2001 ; https://js.sagamorepub.com/ >
+    au < testing ; 2003 ; 12 ; Learning Disabilities: A Multidisciplinary Journal Volume 12 ; 2003 ; https://js.sagamorepub.com/ >
+    au < testing ; 2004 ; 13 ; Learning Disabilities: A Multidisciplinary Journal Volume 13 ; 2004 ; https://js.sagamorepub.com/ >
     au < released ; 2006 ; 14 ; Learning Disabilities: A Multidisciplinary Journal Volume 14 ; 2006 ; http://js.sagamorepub.com/ >
     au < released ; 2009 ; 15 ; Learning Disabilities: A Multidisciplinary Journal Volume 15 ; 2009 ; http://js.sagamorepub.com/ >
     au < released ; 2010 ; 16 ; Learning Disabilities: A Multidisciplinary Journal Volume 16 ; 2010 ; http://js.sagamorepub.com/ >
