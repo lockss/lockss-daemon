@@ -47,7 +47,7 @@
       au < frozen ; exists ; 2015 ; About Campus Volume 20 ; 20 ; acaa ; >
       au < frozen ; exists ; 2016 ; About Campus Volume 21 ; 21 ; acaa ; >
       au < manifest ; exists ; 2017 ; About Campus Volume 22 ; 22 ; acaa ; >
-      au < expected ; exists ; 2018 ; About Campus Volume 23 ; 23 ; acaa ; >
+      au < manifest ; exists ; 2018 ; About Campus Volume 23 ; 23 ; acaa ; >
 
   }
 
@@ -2845,7 +2845,7 @@
 
       au < finished ; crawling ; 2016 ; ANTYAJAA: Indian Journal of Women and Social Change Volume 1 ; 1 ; jwsa ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; ANTYAJAA: Indian Journal of Women and Social Change Volume 2 ; 2 ; jwsa ; >
-      au < expected ; exists ; 2018 ; ANTYAJAA: Indian Journal of Women and Social Change Volume 3 ; 3 ; jwsa ; >
+      au < manifest ; exists ; 2018 ; ANTYAJAA: Indian Journal of Women and Social Change Volume 3 ; 3 ; jwsa ; >
 
   }
 
@@ -3071,23 +3071,23 @@
 
     #journal_id = atha
 
-      au < exists ; exists ; 2002 ; Arts and Humanities in Higher Education Volume 1 ; 1 ; atha ; >
-      au < exists ; exists ; 2003 ; Arts and Humanities in Higher Education Volume 2 ; 2 ; atha ; >
-      au < exists ; exists ; 2004 ; Arts and Humanities in Higher Education Volume 3 ; 3 ; atha ; >
-      au < exists ; exists ; 2005 ; Arts and Humanities in Higher Education Volume 4 ; 4 ; atha ; >
-      au < exists ; exists ; 2006 ; Arts and Humanities in Higher Education Volume 5 ; 5 ; atha ; >
-      au < exists ; exists ; 2007 ; Arts and Humanities in Higher Education Volume 6 ; 6 ; atha ; >
-      au < exists ; exists ; 2008 ; Arts and Humanities in Higher Education Volume 7 ; 7 ; atha ; >
-      au < exists ; exists ; 2009 ; Arts and Humanities in Higher Education Volume 8 ; 8 ; atha ; >
-      au < exists ; exists ; 2010 ; Arts and Humanities in Higher Education Volume 9 ; 9 ; atha ; >
-      au < exists ; exists ; 2011 ; Arts and Humanities in Higher Education Volume 10 ; 10 ; atha ; >
-      au < exists ; exists ; 2012 ; Arts and Humanities in Higher Education Volume 11 ; 11 ; atha ; >
-      au < exists ; exists ; 2013 ; Arts and Humanities in Higher Education Volume 12 ; 12 ; atha ; >
-      au < exists ; exists ; 2014 ; Arts and Humanities in Higher Education Volume 13 ; 13 ; atha ; >
-      au < exists ; exists ; 2015 ; Arts and Humanities in Higher Education Volume 14 ; 14 ; atha ; >
-      au < exists ; exists ; 2016 ; Arts and Humanities in Higher Education Volume 15 ; 15 ; atha ; >
-      au < exists ; exists ; 2017 ; Arts and Humanities in Higher Education Volume 16 ; 16 ; atha ; >
-      au < expected ; exists ; 2018 ; Arts and Humanities in Higher Education Volume 17 ; 17 ; atha ; >
+      au < manifest ; exists ; 2002 ; Arts and Humanities in Higher Education Volume 1 ; 1 ; atha ; >
+      au < manifest ; exists ; 2003 ; Arts and Humanities in Higher Education Volume 2 ; 2 ; atha ; >
+      au < manifest ; exists ; 2004 ; Arts and Humanities in Higher Education Volume 3 ; 3 ; atha ; >
+      au < manifest ; exists ; 2005 ; Arts and Humanities in Higher Education Volume 4 ; 4 ; atha ; >
+      au < manifest ; exists ; 2006 ; Arts and Humanities in Higher Education Volume 5 ; 5 ; atha ; >
+      au < manifest ; exists ; 2007 ; Arts and Humanities in Higher Education Volume 6 ; 6 ; atha ; >
+      au < manifest ; exists ; 2008 ; Arts and Humanities in Higher Education Volume 7 ; 7 ; atha ; >
+      au < manifest ; exists ; 2009 ; Arts and Humanities in Higher Education Volume 8 ; 8 ; atha ; >
+      au < manifest ; exists ; 2010 ; Arts and Humanities in Higher Education Volume 9 ; 9 ; atha ; >
+      au < manifest ; exists ; 2011 ; Arts and Humanities in Higher Education Volume 10 ; 10 ; atha ; >
+      au < manifest ; exists ; 2012 ; Arts and Humanities in Higher Education Volume 11 ; 11 ; atha ; >
+      au < manifest ; exists ; 2013 ; Arts and Humanities in Higher Education Volume 12 ; 12 ; atha ; >
+      au < manifest ; exists ; 2014 ; Arts and Humanities in Higher Education Volume 13 ; 13 ; atha ; >
+      au < manifest ; exists ; 2015 ; Arts and Humanities in Higher Education Volume 14 ; 14 ; atha ; >
+      au < manifest ; exists ; 2016 ; Arts and Humanities in Higher Education Volume 15 ; 15 ; atha ; >
+      au < manifest ; exists ; 2017 ; Arts and Humanities in Higher Education Volume 16 ; 16 ; atha ; >
+      au < manifest ; exists ; 2018 ; Arts and Humanities in Higher Education Volume 17 ; 17 ; atha ; >
 
   }
 
@@ -5169,7 +5169,7 @@
       au < deepCrawl ; exists ; 2017 ; Cahiers Élisabéthains Volume 93 ; 93 ; caea ; >
       au < deepCrawl ; exists ; 2017 ; Cahiers Élisabéthains Volume 94 ; 94 ; caea ; >
       au < manifest ; exists ; 2018 ; Cahiers Élisabéthains Volume 95 ; 95 ; caea ; >
-      au < expected ; exists ; 2018 ; Cahiers Élisabéthains Volume 96 ; 96 ; caea ; >
+      au < manifest ; exists ; 2018 ; Cahiers Élisabéthains Volume 96 ; 96 ; caea ; >
       au < expected ; exists ; 2018 ; Cahiers Élisabéthains Volume 97 ; 97 ; caea ; >
 
   }
@@ -5252,7 +5252,7 @@
       au < frozen ; exists ; 2015 ; Calcutta Statistical Association Bulletin Volume 67 ; 67 ; csaa ; >
       au < finished ; crawling ; 2016 ; Calcutta Statistical Association Bulletin Volume 68 ; 68 ; csaa ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; Calcutta Statistical Association Bulletin Volume 69 ; 69 ; csaa ; >
-      au < expected ; exists ; 2018 ; Calcutta Statistical Association Bulletin Volume 70 ; 70 ; csaa ; >
+      au < manifest ; exists ; 2018 ; Calcutta Statistical Association Bulletin Volume 70 ; 70 ; csaa ; >
 
   }
 
@@ -13424,7 +13424,7 @@
 
       au < finished ; crawling ; 2016 ; Global Media and China Volume 1 ; 1 ; gcha ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2017 ; Global Media and China Volume 2 ; 2 ; gcha ; >
-      au < expected ; exists ; 2018 ; Global Media and China Volume 3 ; 3 ; gcha ; >
+      au < manifest ; exists ; 2018 ; Global Media and China Volume 3 ; 3 ; gcha ; >
 
   }
 
@@ -14774,7 +14774,7 @@
       au < frozen ; exists ; 2016 ; Hong Kong Journal of Occupational Therapy Volume 28 ; 28 ; hjoa ; >
       au < manifest ; exists ; 2017 ; Hong Kong Journal of Occupational Therapy Volume 29 ; 29 ; hjoa ; >
       au < manifest ; exists ; 2017 ; Hong Kong Journal of Occupational Therapy Volume 30 ; 30 ; hjoa ; >
-      au < expected ; exists ; 2018 ; Hong Kong Journal of Occupational Therapy Volume 31 ; 31 ; hjoa ; >
+      au < manifest ; exists ; 2018 ; Hong Kong Journal of Occupational Therapy Volume 31 ; 31 ; hjoa ; >
       au < expected ; exists ; 2018 ; Hong Kong Journal of Occupational Therapy Volume 32 ; 32 ; hjoa ; >
 
   }
@@ -15714,7 +15714,7 @@
       au < frozen ; exists ; 2015 ; Indian Journal of Human Development Volume 9 ; 9 ; jhda ; >
       au < frozen ; exists ; 2016 ; Indian Journal of Human Development Volume 10 ; 10 ; jhda ; >
       au < deepCrawl ; exists ; 2017 ; Indian Journal of Human Development Volume 11 ; 11 ; jhda ; >
-      au < expected ; exists ; 2018 ; Indian Journal of Human Development Volume 12 ; 12 ; jhda ; >
+      au < manifest ; exists ; 2018 ; Indian Journal of Human Development Volume 12 ; 12 ; jhda ; >
 
   }
 
@@ -20817,14 +20817,14 @@
 
       #journal_id = coba
 
-      au < exists ; exists ; 2011 ; Journal of Comorbidity Volume 1 ; 1 ; coba ; >
-      au < exists ; exists ; 2012 ; Journal of Comorbidity Volume 2 ; 2 ; coba ; >
-      au < exists ; exists ; 2013 ; Journal of Comorbidity Volume 3 ; 3 ; coba ; >
-      au < exists ; exists ; 2014 ; Journal of Comorbidity Volume 4 ; 4 ; coba ; >
-      au < exists ; exists ; 2015 ; Journal of Comorbidity Volume 5 ; 5 ; coba ; >
-      au < exists ; exists ; 2016 ; Journal of Comorbidity Volume 6 ; 6 ; coba ; >
-      au < exists ; exists ; 2017 ; Journal of Comorbidity Volume 7 ; 7 ; coba ; >
-      au < exists ; exists ; 2018 ; Journal of Comorbidity Volume 8 ; 8 ; coba ; >
+      au < manifest ; exists ; 2011 ; Journal of Comorbidity Volume 1 ; 1 ; coba ; >
+      au < manifest ; exists ; 2012 ; Journal of Comorbidity Volume 2 ; 2 ; coba ; >
+      au < manifest ; exists ; 2013 ; Journal of Comorbidity Volume 3 ; 3 ; coba ; >
+      au < manifest ; exists ; 2014 ; Journal of Comorbidity Volume 4 ; 4 ; coba ; >
+      au < manifest ; exists ; 2015 ; Journal of Comorbidity Volume 5 ; 5 ; coba ; >
+      au < manifest ; exists ; 2016 ; Journal of Comorbidity Volume 6 ; 6 ; coba ; >
+      au < manifest ; exists ; 2017 ; Journal of Comorbidity Volume 7 ; 7 ; coba ; >
+      au < manifest ; exists ; 2018 ; Journal of Comorbidity Volume 8 ; 8 ; coba ; >
 
   }
 
@@ -23928,7 +23928,7 @@
       au < doNotProcess ; doNotProcess ; 2015-2016 ; Journal of Industrial Textiles Volume 45 ; 45 ; jitc ; >
       au < frozen ; exists ; 2016-2017 ; Journal of Industrial Textiles Volume 46 ; 46 ; jitc ; >
       au < manifest ; exists ; 2017-2018 ; Journal of Industrial Textiles Volume 47 ; 47 ; jitc ; >
-      au < expected ; exists ; 2018-2019 ; Journal of Industrial Textiles Volume 48 ; 48 ; jitc ; >
+      au < manifest ; exists ; 2018-2019 ; Journal of Industrial Textiles Volume 48 ; 48 ; jitc ; >
 
     }
 
@@ -34151,7 +34151,7 @@
         au < doNotProcess ; doNotProcess ; 2015 ; Proceedings of the International Symposium of Human Factors and Ergonomics in Healthcare Volume 4 ; 4 ; hcsa ; >
         au < frozen ; exists ; 2016 ; Proceedings of the International Symposium of Human Factors and Ergonomics in Healthcare Volume 5 ; 5 ; hcsa ; >
         au < deepCrawl ; exists ; 2017 ; Proceedings of the International Symposium of Human Factors and Ergonomics in Healthcare Volume 6 ; 6 ; hcsa ; >
-        au < expected ; exists ; 2018 ; Proceedings of the International Symposium of Human Factors and Ergonomics in Healthcare Volume 7 ; 7 ; hcsa ; >
+        au < manifest ; exists ; 2018 ; Proceedings of the International Symposium of Human Factors and Ergonomics in Healthcare Volume 7 ; 7 ; hcsa ; >
 
     }
 
@@ -36062,7 +36062,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Race & Class Volume 57 ; 57 ; racb ; >
       au < finished ; crawling ; 2016 ; Race & Class Volume 58 ; 58 ; racb ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; Race & Class Volume 59 ; 59 ; racb ; >
-      au < expected ; exists ; 2018 ; Race & Class Volume 60 ; 60 ; racb ; >
+      au < manifest ; exists ; 2018 ; Race & Class Volume 60 ; 60 ; racb ; >
 
     }
 
@@ -42338,19 +42338,19 @@
       au < frozen ; exists ; 2014 ; Transportation Research Record Volume 2468 ; 2468 ; trra ; >
       au < frozen ; exists ; 2014 ; Transportation Research Record Volume 2469 ; 2469 ; trra ; >
 
-      au < exists ; exists ; 2017 ; Transportation Research Record Volume 2603 ; 2603 ; trra ; >
-      au < exists ; exists ; 2017 ; Transportation Research Record Volume 2604 ; 2604 ; trra ; >
-      au < exists ; exists ; 2017 ; Transportation Research Record Volume 2605 ; 2605 ; trra ; >
-      au < exists ; exists ; 2017 ; Transportation Research Record Volume 2606 ; 2606 ; trra ; >
-      au < exists ; exists ; 2017 ; Transportation Research Record Volume 2607 ; 2607 ; trra ; >
-      au < exists ; exists ; 2017 ; Transportation Research Record Volume 2608 ; 2608 ; trra ; >
-      au < exists ; exists ; 2017 ; Transportation Research Record Volume 2609 ; 2609 ; trra ; >
-      au < exists ; exists ; 2017 ; Transportation Research Record Volume 2610 ; 2610 ; trra ; >
-      au < exists ; exists ; 2017 ; Transportation Research Record Volume 2611 ; 2611 ; trra ; >
+      au < manifest ; exists ; 2017 ; Transportation Research Record Volume 2603 ; 2603 ; trra ; >
+      au < manifest ; exists ; 2017 ; Transportation Research Record Volume 2604 ; 2604 ; trra ; >
+      au < manifest ; exists ; 2017 ; Transportation Research Record Volume 2605 ; 2605 ; trra ; >
+      au < manifest ; exists ; 2017 ; Transportation Research Record Volume 2606 ; 2606 ; trra ; >
+      au < manifest ; exists ; 2017 ; Transportation Research Record Volume 2607 ; 2607 ; trra ; >
+      au < manifest ; exists ; 2017 ; Transportation Research Record Volume 2608 ; 2608 ; trra ; >
+      au < manifest ; exists ; 2017 ; Transportation Research Record Volume 2609 ; 2609 ; trra ; >
+      au < manifest ; exists ; 2017 ; Transportation Research Record Volume 2610 ; 2610 ; trra ; >
+      au < manifest ; exists ; 2017 ; Transportation Research Record Volume 2611 ; 2611 ; trra ; >
 
-      au < exists ; exists ; 2017 ; Transportation Research Record Volume 2659 ; 2659 ; trra ; >
+      au < manifest ; exists ; 2017 ; Transportation Research Record Volume 2659 ; 2659 ; trra ; >
 
-      au < exists ; exists ; 2017 ; Transportation Research Record Volume 2667 ; 2667 ; trra ; >
+      au < manifest ; exists ; 2017 ; Transportation Research Record Volume 2667 ; 2667 ; trra ; >
 
   }
 
@@ -47597,7 +47597,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Scottish Medical Journal Volume 60 ; 60 ; scma ; >
       au < frozen ; exists ; 2016 ; Scottish Medical Journal Volume 61 ; 61 ; scma ; >
       au < deepCrawl ; exists ; 2017 ; Scottish Medical Journal Volume 62 ; 62 ; scma ; >
-      au < expected ; exists ; 2018 ; Scottish Medical Journal Volume 63 ; 63 ; scma ; >
+      au < manifest ; exists ; 2018 ; Scottish Medical Journal Volume 63 ; 63 ; scma ; >
 
     }
 
