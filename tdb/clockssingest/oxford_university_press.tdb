@@ -1161,16 +1161,10 @@
       eissn = 2398-7316
     >
 
-    param[journal_id] = annhyg
+    param[journal_id] = annweh
+    #continues = 0003-4878
 
     #this title was ONLY in the publisher listing
-    au < exists ; exists ; 2010 ; 2010 ; Annals of Work Exposures and Health Volume 54 ; 54 ;  >
-    au < exists ; exists ; 2011 ; 2011 ; Annals of Work Exposures and Health Volume 55 ; 55 ;  >
-    au < exists ; exists ; 2012 ; 2012 ; Annals of Work Exposures and Health Volume 56 ; 56 ;  >
-    au < exists ; exists ; 2013 ; 2013 ; Annals of Work Exposures and Health Volume 57 ; 57 ;  >
-    au < exists ; exists ; 2014 ; 2014 ; Annals of Work Exposures and Health Volume 58 ; 58 ;  >
-    au < exists ; exists ; 2015 ; 2015 ; Annals of Work Exposures and Health Volume 59 ; 59 ;  >
-    au < exists ; exists ; 2016 ; 2016 ; Annals of Work Exposures and Health Volume 60 ; 60 ;  >
     au < exists ; exists ; 2017 ; 2017 ; Annals of Work Exposures and Health Volume 61 ; 61 ;  >
 
   }
@@ -16093,9 +16087,11 @@
       issnl = 0003-4878
     >
 
-    param[journal_id] = 
+    param[journal_id] = annhyg
+    #continued_by = 2398-7308
 
-    #this title was ONLY in the previous TDB listing - suppressing AU generation 
+    #this title was ONLY in the previous TDB listing - suppressing AU generation
+    au < exists ; exists ; 2016 ; 2016 ; Annals of Work Exposures and Health Volume 60 ; 60 ;  >
 
   }
 
