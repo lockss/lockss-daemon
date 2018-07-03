@@ -11,7 +11,16 @@
   #Moving platform 1/1/2018
   
   # do not include Aviation technologies, eissn 2029-9974
-  # preserved as a warc in source.tdb file: Baltic Journal of Road and Bridge Engineering
+  # preserved as a warc in source.tdb file: Baltic Journal of Road and Bridge Engineerin
+
+
+    # The following titles are preserves in TnF
+    # Aviation, Creativity Studies, Engineering Structures and Technologies, Geodesy and Cartography,
+    # International Journal of Strategic Property Management, Journal of Architecture and Urbanism,
+    # Journal of Business Economics and Management, Journal of Civil Engineering and Management,
+    # Journal of Environmental Engineering and Landscape Management, Mathematical Modelling and Analysis,
+    # Technological and Economic Development of Economy, Transport
+
 
   {
     title <
@@ -27,6 +36,7 @@
     param[journal_id] = btp
     implicit < status ; status2 ; year ; param[year] ; name ; volume ; hidden[proxy] >
     #this journal no longer on OJS. 20171002. See RT 8827 for news on change of platform.
+    #move to Pensoft
 
     au < doNotProcess ; exists ; 2006 ; 2006 ; Business: Theory and Practice Volume 7 ; 7 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Business: Theory and Practice Volume 8 ; 8 ; >
