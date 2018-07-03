@@ -65,7 +65,7 @@
       au < released ; 2015 ; 2015 ; Advances in Geosciences Volume 41 ; 41 ; http://www.adv-geosci.net/ ; http://www.advances-in-geosciences.net/ >
       au < manifest ; 2016 ; 2016 ; Advances in Geosciences Volume 42 ; 42 ; https://www.adv-geosci.net/ ; https://www.advances-in-geosciences.net/ >
       au < manifest ; 2017 ; 2017 ; Advances in Geosciences Volume 43 ; 43 ; https://www.adv-geosci.net/ ; https://www.advances-in-geosciences.net/ >
-      au < exists ; 2018 ; 2018 ; Advances in Geosciences Volume 44 ; 44 ; https://www.adv-geosci.net/ ; https://www.advances-in-geosciences.net/ >
+      au < manifest ; 2018 ; 2018 ; Advances in Geosciences Volume 44 ; 44 ; https://www.adv-geosci.net/ ; https://www.advances-in-geosciences.net/ >
 
    }
     
@@ -122,7 +122,7 @@
       au < released ; 2015 ; 2015 ; Advances in Science and Research Volume 12 ; 12 ; http://www.adv-sci-res.net/ ; http://www.advances-in-science-and-research.net/ >
       au < manifest ; 2016 ; 2016 ; Advances in Science and Research Volume 13 ; 13 ; https://www.adv-sci-res.net/ ; https://www.advances-in-science-and-research.net/ >
       au < released ; 2017 ; 2017 ; Advances in Science and Research Volume 14 ; 14 ; https://www.adv-sci-res.net/ ; https://www.advances-in-science-and-research.net/ >
-      au < exists ; 2018 ; 2018 ; Advances in Science and Research Volume 15 ; 15 ; https://www.adv-sci-res.net/ ; https://www.advances-in-science-and-research.net/ >
+      au < manifest ; 2018 ; 2018 ; Advances in Science and Research Volume 15 ; 15 ; https://www.adv-sci-res.net/ ; https://www.advances-in-science-and-research.net/ >
 
    }
     
@@ -181,7 +181,7 @@
       au < released ; 2015 ; 2015 ; Annales Geophysicae Volume 33 ; 33 ; http://www.ann-geophys.net/ ; http://www.annales-geophysicae.net/ >
       au < manifest ; 2016 ; 2016 ; Annales Geophysicae Volume 34 ; 34 ; https://www.ann-geophys.net/ ; https://www.annales-geophysicae.net/ >
       au < manifest ; 2017 ; 2017 ; Annales Geophysicae Volume 35 ; 35 ; https://www.ann-geophys.net/ ; https://www.annales-geophysicae.net/ >
-      au < exists ; 2018 ; 2018 ; Annales Geophysicae Volume 36 ; 36 ; https://www.ann-geophys.net/ ; https://www.annales-geophysicae.net/ >
+      au < manifest ; 2018 ; 2018 ; Annales Geophysicae Volume 36 ; 36 ; https://www.ann-geophys.net/ ; https://www.annales-geophysicae.net/ >
 
    }
     
@@ -198,22 +198,22 @@
 #      param[base_url] = http://www.archanimbreed.com/
       comment[pdf] = http://doi.fbn-dummerstorf.de/ for 2013 & 2014
 
-      au < exists ; 1999 ; 1999 ; Archives Animal Breeding Volume 42 ; 42 ; https://www.arch-anim-breed.net/ ; https://archives-animal-breeding.net/ >
-      au < exists ; 2000 ; 2000 ; Archives Animal Breeding Volume 43 ; 43 ; https://www.arch-anim-breed.net/ ; https://archives-animal-breeding.net/ >
-      au < exists ; 2001 ; 2001 ; Archives Animal Breeding Volume 44 ; 44 ; https://www.arch-anim-breed.net/ ; https://archives-animal-breeding.net/ >
-      au < exists ; 2002 ; 2002 ; Archives Animal Breeding Volume 45 ; 45 ; https://www.arch-anim-breed.net/ ; https://archives-animal-breeding.net/ >
-      au < exists ; 2003 ; 2003 ; Archives Animal Breeding Volume 46 ; 46 ; https://www.arch-anim-breed.net/ ; https://archives-animal-breeding.net/ >
-      au < exists ; 2004 ; 2004 ; Archives Animal Breeding Volume 47 ; 47 ; https://www.arch-anim-breed.net/ ; https://archives-animal-breeding.net/ >
-      au < exists ; 2005 ; 2005 ; Archives Animal Breeding Volume 48 ; 48 ; https://www.arch-anim-breed.net/ ; https://archives-animal-breeding.net/ >
-      au < exists ; 2006 ; 2006 ; Archives Animal Breeding Volume 49 ; 49 ; https://www.arch-anim-breed.net/ ; https://archives-animal-breeding.net/ >
-      au < exists ; 2007 ; 2007 ; Archives Animal Breeding Volume 50 ; 50 ; https://www.arch-anim-breed.net/ ; https://archives-animal-breeding.net/ >
-      au < exists ; 2008 ; 2008 ; Archives Animal Breeding Volume 51 ; 51 ; https://www.arch-anim-breed.net/ ; https://archives-animal-breeding.net/ >
-      au < exists ; 2009 ; 2009 ; Archives Animal Breeding Volume 52 ; 52 ; https://www.arch-anim-breed.net/ ; https://archives-animal-breeding.net/ >
-      au < exists ; 2010 ; 2010 ; Archives Animal Breeding Volume 53 ; 53 ; https://www.arch-anim-breed.net/ ; https://archives-animal-breeding.net/ >
-      au < exists ; 2011 ; 2011 ; Archives Animal Breeding Volume 54 ; 54 ; https://www.arch-anim-breed.net/ ; https://archives-animal-breeding.net/ >
-      au < exists ; 2012 ; 2012 ; Archives Animal Breeding Volume 55 ; 55 ; https://www.arch-anim-breed.net/ ; https://archives-animal-breeding.net/ >
-      au < exists ; 2013 ; 2013 ; Archives Animal Breeding Volume 56 ; 56 ; https://www.arch-anim-breed.net/ ; https://archives-animal-breeding.net/ >
-      au < exists ; 2014 ; 2014 ; Archives Animal Breeding Volume 57 ; 57 ; https://www.arch-anim-breed.net/ ; https://archives-animal-breeding.net/ >
+      au < manifest ; 1999 ; 1999 ; Archives Animal Breeding Volume 42 ; 42 ; https://www.arch-anim-breed.net/ ; https://archives-animal-breeding.net/ >
+      au < manifest ; 2000 ; 2000 ; Archives Animal Breeding Volume 43 ; 43 ; https://www.arch-anim-breed.net/ ; https://archives-animal-breeding.net/ >
+      au < manifest ; 2001 ; 2001 ; Archives Animal Breeding Volume 44 ; 44 ; https://www.arch-anim-breed.net/ ; https://archives-animal-breeding.net/ >
+      au < manifest ; 2002 ; 2002 ; Archives Animal Breeding Volume 45 ; 45 ; https://www.arch-anim-breed.net/ ; https://archives-animal-breeding.net/ >
+      au < manifest ; 2003 ; 2003 ; Archives Animal Breeding Volume 46 ; 46 ; https://www.arch-anim-breed.net/ ; https://archives-animal-breeding.net/ >
+      au < manifest ; 2004 ; 2004 ; Archives Animal Breeding Volume 47 ; 47 ; https://www.arch-anim-breed.net/ ; https://archives-animal-breeding.net/ >
+      au < manifest ; 2005 ; 2005 ; Archives Animal Breeding Volume 48 ; 48 ; https://www.arch-anim-breed.net/ ; https://archives-animal-breeding.net/ >
+      au < manifest ; 2006 ; 2006 ; Archives Animal Breeding Volume 49 ; 49 ; https://www.arch-anim-breed.net/ ; https://archives-animal-breeding.net/ >
+      au < manifest ; 2007 ; 2007 ; Archives Animal Breeding Volume 50 ; 50 ; https://www.arch-anim-breed.net/ ; https://archives-animal-breeding.net/ >
+      au < manifest ; 2008 ; 2008 ; Archives Animal Breeding Volume 51 ; 51 ; https://www.arch-anim-breed.net/ ; https://archives-animal-breeding.net/ >
+      au < manifest ; 2009 ; 2009 ; Archives Animal Breeding Volume 52 ; 52 ; https://www.arch-anim-breed.net/ ; https://archives-animal-breeding.net/ >
+      au < manifest ; 2010 ; 2010 ; Archives Animal Breeding Volume 53 ; 53 ; https://www.arch-anim-breed.net/ ; https://archives-animal-breeding.net/ >
+      au < manifest ; 2011 ; 2011 ; Archives Animal Breeding Volume 54 ; 54 ; https://www.arch-anim-breed.net/ ; https://archives-animal-breeding.net/ >
+      au < manifest ; 2012 ; 2012 ; Archives Animal Breeding Volume 55 ; 55 ; https://www.arch-anim-breed.net/ ; https://archives-animal-breeding.net/ >
+      au < manifest ; 2013 ; 2013 ; Archives Animal Breeding Volume 56 ; 56 ; https://www.arch-anim-breed.net/ ; https://archives-animal-breeding.net/ >
+      au < manifest ; 2014 ; 2014 ; Archives Animal Breeding Volume 57 ; 57 ; https://www.arch-anim-breed.net/ ; https://archives-animal-breeding.net/ >
       }
 
       {
@@ -222,7 +222,7 @@
       au < released ; 2015 ; 2015 ; Archives Animal Breeding Volume 58 ; 58 ; http://www.arch-anim-breed.net/ ; http://archives-animal-breeding.net/ >
       au < released ; 2016 ; 2016 ; Archives Animal Breeding Volume 59 ; 59 ; https://www.arch-anim-breed.net/ ; https://www.archives-animal-breeding.net/ >
       au < released ; 2017 ; 2017 ; Archives Animal Breeding Volume 60 ; 60 ; https://www.arch-anim-breed.net/ ; https://www.archives-animal-breeding.net/ >
-      au < expected ; 2018 ; 2018 ; Archives Animal Breeding Volume 61 ; 61 ; https://www.arch-anim-breed.net/ ; https://www.archives-animal-breeding.net/ >
+      au < manifest ; 2018 ; 2018 ; Archives Animal Breeding Volume 61 ; 61 ; https://www.arch-anim-breed.net/ ; https://www.archives-animal-breeding.net/ >
 
       }
 
@@ -294,7 +294,7 @@
       au < manifest ; 2016 ; 2016 ; Atmospheric Chemistry and Physics Volume 16 ; 16 ; https://www.atmos-chem-phys.net/ ; https://www.atmospheric-chemistry-and-physics.net/ >
       au < released ; 2017 ; 2017 ; Atmospheric Chemistry and Physics Volume 17 ; 17 ; https://www.atmos-chem-phys.net/ ; https://www.atmospheric-chemistry-and-physics.net/ >
     
-      au < expected ; 2018 ; 2018 ; Atmospheric Chemistry and Physics Volume 18 ; 18 ; https://www.atmos-chem-phys.net/ ; https://www.atmospheric-chemistry-and-physics.net/ >
+      au < manifest ; 2018 ; 2018 ; Atmospheric Chemistry and Physics Volume 18 ; 18 ; https://www.atmos-chem-phys.net/ ; https://www.atmospheric-chemistry-and-physics.net/ >
    }
     
 #  {
@@ -346,7 +346,7 @@
       au < manifest ; 2016 ; 2016 ; Atmospheric Measurement Techniques Volume 9 ; 9 ; https://www.atmos-meas-tech.net/ ; https://www.atmospheric-measurement-techniques.net/ >
       au < released ; 2017 ; 2017 ; Atmospheric Measurement Techniques Volume 10 ; 10 ; https://www.atmos-meas-tech.net/ ; https://www.atmospheric-measurement-techniques.net/ >
     
-      au < expected ; 2018 ; 2018 ; Atmospheric Measurement Techniques Volume 11 ; 11 ; https://www.atmos-meas-tech.net/ ; https://www.atmospheric-measurement-techniques.net/ >
+      au < manifest ; 2018 ; 2018 ; Atmospheric Measurement Techniques Volume 11 ; 11 ; https://www.atmos-meas-tech.net/ ; https://www.atmospheric-measurement-techniques.net/ >
    }
     
 #  {
@@ -395,7 +395,7 @@
       au < manifest ; 2016 ; 2016 ; Biogeosciences Volume 13 ; 13 ; https://www.biogeosciences.net/ ; https://www.biogeosciences.net/ >
       au < released ; 2017 ; 2017 ; Biogeosciences Volume 14 ; 14 ; https://www.biogeosciences.net/ ; https://www.biogeosciences.net/ >
     
-      au < expected ; 2018 ; 2018 ; Biogeosciences Volume 15 ; 15 ; https://www.biogeosciences.net/ ; https://www.biogeosciences.net/ >
+      au < manifest ; 2018 ; 2018 ; Biogeosciences Volume 15 ; 15 ; https://www.biogeosciences.net/ ; https://www.biogeosciences.net/ >
    }
     
 #  {
@@ -447,7 +447,7 @@
       au < manifest ; 2016 ; 2016 ; Climate of the Past Volume 12 ; 12 ; https://www.clim-past.net/ ; https://www.climate-of-the-past.net/ >
       au < released ; 2017 ; 2017 ; Climate of the Past Volume 13 ; 13 ; https://www.clim-past.net/ ; https://www.climate-of-the-past.net/ >
     
-      au < expected ; 2018 ; 2018 ; Climate of the Past Volume 14 ; 14 ; https://www.clim-past.net/ ; https://www.climate-of-the-past.net/ >
+      au < manifest ; 2018 ; 2018 ; Climate of the Past Volume 14 ; 14 ; https://www.clim-past.net/ ; https://www.climate-of-the-past.net/ >
    }
     
 #  {
@@ -495,7 +495,7 @@
       au < manifest ; 2016 ; 2016 ; Drinking Water Engineering and Science Volume 9 ; 9 ; https://www.drink-water-eng-sci.net/ ; https://www.drinking-water-engineering-and-science.net/ >
       au < released ; 2017 ; 2017 ; Drinking Water Engineering and Science Volume 10 ; 10 ; https://www.drink-water-eng-sci.net/ ; https://www.drinking-water-engineering-and-science.net/ >
     
-      au < expected ; 2018 ; 2018 ; Drinking Water Engineering and Science Volume 11 ; 11 ; https://www.drink-water-eng-sci.net/ ; https://www.drinking-water-engineering-and-science.net/ >
+      au < manifest ; 2018 ; 2018 ; Drinking Water Engineering and Science Volume 11 ; 11 ; https://www.drink-water-eng-sci.net/ ; https://www.drinking-water-engineering-and-science.net/ >
    }
     
 #  {
@@ -535,7 +535,7 @@
       au < manifest ; 2016 ; 2016 ; Earth Surface Dynamics Volume 4 ; 4 ; https://www.earth-surf-dynam.net/ ; https://www.earth-surface-dynamics.net/ >
       au < released ; 2017 ; 2017 ; Earth Surface Dynamics Volume 5 ; 5 ; https://www.earth-surf-dynam.net/ ; https://www.earth-surface-dynamics.net/ >
     
-      au < expected ; 2018 ; 2018 ; Earth Surface Dynamics Volume 6 ; 6 ; https://www.earth-surf-dynam.net/ ; https://www.earth-surface-dynamics.net/ >
+      au < manifest ; 2018 ; 2018 ; Earth Surface Dynamics Volume 6 ; 6 ; https://www.earth-surf-dynam.net/ ; https://www.earth-surface-dynamics.net/ >
    }
     
 #  {
@@ -573,7 +573,7 @@
       au < manifest ; 2016 ; 2016 ; Earth System Dynamics Volume 7 ; 7 ; https://www.earth-syst-dynam.net/ ; https://www.earth-system-dynamics.net/ >
       au < released ; 2017 ; 2017 ; Earth System Dynamics Volume 8 ; 8 ; https://www.earth-syst-dynam.net/ ; https://www.earth-system-dynamics.net/ >
     
-      au < expected ; 2018 ; 2018 ; Earth System Dynamics Volume 9 ; 9 ; https://www.earth-syst-dynam.net/ ; https://www.earth-system-dynamics.net/ >
+      au < manifest ; 2018 ; 2018 ; Earth System Dynamics Volume 9 ; 9 ; https://www.earth-syst-dynam.net/ ; https://www.earth-system-dynamics.net/ >
    }
     
 #  {
@@ -615,7 +615,7 @@
       au < manifest ; 2016 ; 2016 ; Earth System Science Data Volume 8 ; 8 ; https://www.earth-syst-sci-data.net/ ; https://www.earth-system-science-data.net/ >
       au < released ; 2017 ; 2017 ; Earth System Science Data Volume 9 ; 9 ; https://www.earth-syst-sci-data.net/ ; https://www.earth-system-science-data.net/ >
     
-      au < expected ; 2018 ; 2018 ; Earth System Science Data Volume 10 ; 10 ; https://www.earth-syst-sci-data.net/ ; https://www.earth-system-science-data.net/ >
+      au < manifest ; 2018 ; 2018 ; Earth System Science Data Volume 10 ; 10 ; https://www.earth-syst-sci-data.net/ ; https://www.earth-system-science-data.net/ >
    }
     
 #  {
@@ -726,7 +726,7 @@
       au < manifest ; 2016 ; 2016 ; Fossil Record Reports Volume 19 ; 19 ; https://www.foss-rec.net/ ; https://www.fossil-record.net/ >
       au < released ; 2017 ; 2017 ; Fossil Record Reports Volume 20 ; 20 ; https://www.foss-rec.net/ ; https://www.fossil-record.net/ >
     
-      au < expected ; 2018 ; 2018 ; Fossil Record Reports Volume 21 ; 21 ; https://www.foss-rec.net/ ; https://www.fossil-record.net/ >
+      au < manifest ; 2018 ; 2018 ; Fossil Record Reports Volume 21 ; 21 ; https://www.foss-rec.net/ ; https://www.fossil-record.net/ >
    }
     
   {
@@ -812,7 +812,7 @@
       au < released ; 2016 ; 2016 ; Geographica Helvetica Volume 71 ; 71 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ >
       au < released ; 2017 ; 2017 ; Geographica Helvetica Volume 72 ; 72 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ >
     
-      au < expected ; 2018 ; 2018 ; Geographica Helvetica Volume 73 ; 73 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ >
+      au < manifest ; 2018 ; 2018 ; Geographica Helvetica Volume 73 ; 73 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ >
    }
     
   {
@@ -832,7 +832,7 @@
       au < manifest ; 2016 ; 2016 ; Geoscientific Instrumentation, Methods and Data Systems Volume 5 ; 5 ; https://www.geosci-instrum-method-data-syst.net/ ; https://www.geoscientific-instrumentation-methods-and-data-systems.net/ >
       au < released ; 2017 ; 2017 ; Geoscientific Instrumentation, Methods and Data Systems Volume 6 ; 6 ; https://www.geosci-instrum-method-data-syst.net/ ; https://www.geoscientific-instrumentation-methods-and-data-systems.net/ >
     
-      au < expected ; 2018 ; 2018 ; Geoscientific Instrumentation, Methods and Data Systems Volume 7 ; 7 ; https://www.geosci-instrum-method-data-syst.net/ ; https://www.geoscientific-instrumentation-methods-and-data-systems.net/ >
+      au < manifest ; 2018 ; 2018 ; Geoscientific Instrumentation, Methods and Data Systems Volume 7 ; 7 ; https://www.geosci-instrum-method-data-syst.net/ ; https://www.geoscientific-instrumentation-methods-and-data-systems.net/ >
    }
    
 #  {
@@ -874,7 +874,7 @@
       au < manifest ; 2016 ; 2016 ; Geoscientific Model Development Volume 9 ; 9 ; https://www.geosci-model-dev.net/ ; https://www.geoscientific-model-development.net/ >
       au < manifest ; 2017 ; 2017 ; Geoscientific Model Development Volume 10 ; 10 ; https://www.geosci-model-dev.net/ ; https://www.geoscientific-model-development.net/ >
     
-      au < expected ; 2018 ; 2018 ; Geoscientific Model Development Volume 11 ; 11 ; https://www.geosci-model-dev.net/ ; https://www.geoscientific-model-development.net/ >
+      au < manifest ; 2018 ; 2018 ; Geoscientific Model Development Volume 11 ; 11 ; https://www.geosci-model-dev.net/ ; https://www.geoscientific-model-development.net/ >
    }
     
 #  {
@@ -936,7 +936,7 @@
       au < manifest ; 2016 ; 2016 ; History of Geo- and Space Sciences Volume 7 ; 7 ; https://www.hist-geo-space-sci.net/ ; https://www.history-of-geo-and-space-sciences.net/ >
       au < released ; 2017 ; 2017 ; History of Geo- and Space Sciences Volume 8 ; 8 ; https://www.hist-geo-space-sci.net/ ; https://www.history-of-geo-and-space-sciences.net/ >
     
-      au < expected ; 2018 ; 2018 ; History of Geo- and Space Sciences Volume 9 ; 9 ; https://www.hist-geo-space-sci.net/ ; https://www.history-of-geo-and-space-sciences.net/ >
+      au < manifest ; 2018 ; 2018 ; History of Geo- and Space Sciences Volume 9 ; 9 ; https://www.hist-geo-space-sci.net/ ; https://www.history-of-geo-and-space-sciences.net/ >
    }
     
   {
@@ -971,7 +971,7 @@
       au < manifest ; 2016 ; 2016 ; Hydrology and Earth System Sciences Volume 20 ; 20 ; https://www.hydrol-earth-syst-sci.net/ ; https://www.hydrology-and-earth-system-sciences.net/ >
       au < manifest ; 2017 ; 2017 ; Hydrology and Earth System Sciences Volume 21 ; 21 ; https://www.hydrol-earth-syst-sci.net/ ; https://www.hydrology-and-earth-system-sciences.net/ >
     
-      au < expected ; 2018 ; 2018 ; Hydrology and Earth System Sciences Volume 22 ; 22 ; https://www.hydrol-earth-syst-sci.net/ ; https://www.hydrology-and-earth-system-sciences.net/ >
+      au < manifest ; 2018 ; 2018 ; Hydrology and Earth System Sciences Volume 22 ; 22 ; https://www.hydrol-earth-syst-sci.net/ ; https://www.hydrology-and-earth-system-sciences.net/ >
    }
     
 #  {
@@ -1203,7 +1203,7 @@
       au < released ; 2016 ; 2016 ; Journal of Sensors and Sensor Systems Volume 5 ; 5 ; https://www.j-sens-sens-syst.net/ ; https://www.journal-of-sensors-and-sensor-systems.net/ >
       au < released ; 2017 ; 2017 ; Journal of Sensors and Sensor Systems Volume 6 ; 6 ; https://www.j-sens-sens-syst.net/ ; https://www.journal-of-sensors-and-sensor-systems.net/ >
     
-      au < expected ; 2018 ; 2018 ; Journal of Sensors and Sensor Systems Volume 7 ; 7 ; https://www.j-sens-sens-syst.net/ ; https://www.journal-of-sensors-and-sensor-systems.net/ >
+      au < manifest ; 2018 ; 2018 ; Journal of Sensors and Sensor Systems Volume 7 ; 7 ; https://www.j-sens-sens-syst.net/ ; https://www.journal-of-sensors-and-sensor-systems.net/ >
    }
    
   {
@@ -1225,7 +1225,7 @@
       au < released ; 2016 ; 2016 ; Mechanical Sciences Volume 7 ; 7 ; https://www.mech-sci.net/ ; https://www.mechanical-sciences.net/ >
       au < released ; 2017 ; 2017 ; Mechanical Sciences Volume 8 ; 8 ; https://www.mech-sci.net/ ; https://www.mechanical-sciences.net/ >
     
-      au < expected ; 2018 ; 2018 ; Mechanical Sciences Volume 9 ; 9 ; https://www.mech-sci.net/ ; https://www.mechanical-sciences.net/ >
+      au < manifest ; 2018 ; 2018 ; Mechanical Sciences Volume 9 ; 9 ; https://www.mech-sci.net/ ; https://www.mechanical-sciences.net/ >
    }
     
   {
@@ -1256,7 +1256,7 @@
       au < released ; 2016 ; 2016 ; Natural Hazards and Earth System Sciences Volume 16 ; 16 ; https://www.nat-hazards-earth-syst-sci.net/ ; https://www.natural-hazards-and-earth-system-sciences.net/ >
       au < released ; 2017 ; 2017 ; Natural Hazards and Earth System Sciences Volume 17 ; 17 ; https://www.nat-hazards-earth-syst-sci.net/ ; https://www.natural-hazards-and-earth-system-sciences.net/ >
     
-      au < expected ; 2018 ; 2018 ; Natural Hazards and Earth System Sciences Volume 18 ; 18 ; https://www.nat-hazards-earth-syst-sci.net/ ; https://www.natural-hazards-and-earth-system-sciences.net/ >
+      au < manifest ; 2018 ; 2018 ; Natural Hazards and Earth System Sciences Volume 18 ; 18 ; https://www.nat-hazards-earth-syst-sci.net/ ; https://www.natural-hazards-and-earth-system-sciences.net/ >
    }
 
 #   {
@@ -1310,7 +1310,7 @@
       au < released ; 2016 ; 2016 ; Nonlinear Processes in Geophysics Volume 23 ; 23 ; https://www.nonlin-processes-geophys.net/ ; https://www.nonlinear-processes-in-geophysics.net/ >
       au < released ; 2017 ; 2017 ; Nonlinear Processes in Geophysics Volume 24 ; 24 ; https://www.nonlin-processes-geophys.net/ ; https://www.nonlinear-processes-in-geophysics.net/ >
     
-      au < expected ; 2018 ; 2018 ; Nonlinear Processes in Geophysics Volume 25 ; 25 ; https://www.nonlin-processes-geophys.net/ ; https://www.nonlinear-processes-in-geophysics.net/ >
+      au < manifest ; 2018 ; 2018 ; Nonlinear Processes in Geophysics Volume 25 ; 25 ; https://www.nonlin-processes-geophys.net/ ; https://www.nonlinear-processes-in-geophysics.net/ >
    }
 
 #   {
@@ -1352,7 +1352,7 @@
       au < released ; 2016 ; 2016 ; Ocean Science Volume 12 ; 12 ; https://www.ocean-sci.net/ ; https://www.ocean-science.net/ >
       au < released ; 2017 ; 2017 ; Ocean Science Volume 13 ; 13 ; https://www.ocean-sci.net/ ; https://www.ocean-science.net/ >
     
-      au < expected ; 2018 ; 2018 ; Ocean Science Volume 14 ; 14 ; https://www.ocean-sci.net/ ; https://www.ocean-science.net/ >
+      au < manifest ; 2018 ; 2018 ; Ocean Science Volume 14 ; 14 ; https://www.ocean-sci.net/ ; https://www.ocean-science.net/ >
    }
     
 #  {
@@ -1411,7 +1411,7 @@
       au < released ; 2016 ; 2016 ; Primate Biology Volume 3 ; 3 ; https://www.primate-biol.net/ ; https://www.primate-biology.net/ >
       au < released ; 2017 ; 2017 ; Primate Biology Volume 4 ; 4 ; https://www.primate-biol.net/ ; https://www.primate-biology.net/ >
     
-      au < expected ; 2018 ; 2018 ; Primate Biology Volume 5 ; 5 ; https://www.primate-biol.net/ ; https://www.primate-biology.net/ >
+      au < manifest ; 2018 ; 2018 ; Primate Biology Volume 5 ; 5 ; https://www.primate-biol.net/ ; https://www.primate-biology.net/ >
    }
 
   {
@@ -1447,7 +1447,7 @@
       au < released ; 2016 ; 2016 ; Scientific Drilling Volume 20 ; 20 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ >
       au < released ; 2017 ; 2017 ; Scientific Drilling Volume 21 ; 21 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ >
     
-      au < expected ; 2018 ; 2018 ; Scientific Drilling Volume 22 ; 22 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ >
+      au < manifest ; 2018 ; 2018 ; Scientific Drilling Volume 22 ; 22 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ >
    }
     
   {
@@ -1484,7 +1484,7 @@
       au < released ; 2015 ; 2015 ; SOIL Volume 1 ; 1 ; http://www.soil-journal.net/ ; http://www.soil-journal.net/ >
       au < manifest  ; 2016 ; 2016 ; SOIL Volume 2 ; 2 ; https://www.soil-journal.net/ ; https://www.soil-journal.net/ >
       au < manifest ; 2017 ; 2017 ; SOIL Volume 3 ; 3 ; https://www.soil-journal.net/ ; https://www.soil-journal.net/ >
-      au < expected ; 2018 ; 2018 ; SOIL Volume 4 ; 4 ; https://www.soil-journal.net/ ; https://www.soil-journal.net/ >
+      au < manifest ; 2018 ; 2018 ; SOIL Volume 4 ; 4 ; https://www.soil-journal.net/ ; https://www.soil-journal.net/ >
 
    }
 
@@ -1522,7 +1522,7 @@
       au < manifest  ; 2016 ; 2016 ; Solid Earth Volume 7 ; 7 ; https://www.solid-earth.net/ ; https://www.solid-earth.net/ >
       au < released ; 2017 ; 2017 ; Solid Earth Volume 8 ; 8 ; https://www.solid-earth.net/ ; https://www.solid-earth.net/ >
     
-      au < expected ; 2018 ; 2018 ; Solid Earth Volume 9 ; 9 ; https://www.solid-earth.net/ ; https://www.solid-earth.net/ >
+      au < manifest ; 2018 ; 2018 ; Solid Earth Volume 9 ; 9 ; https://www.solid-earth.net/ ; https://www.solid-earth.net/ >
    }
     
 #  {
@@ -1599,7 +1599,7 @@
       au < manifest ; 2016 ; 2016 ; The Cryosphere Volume 10 ; 10 ; https://www.the-cryosphere.net/ ; https://www.the-cryosphere.net/ >
       au < released ; 2017 ; 2017 ; The Cryosphere Volume 11 ; 11 ; https://www.the-cryosphere.net/ ; https://www.the-cryosphere.net/ >
     
-      au < expected ; 2018 ; 2018 ; The Cryosphere Volume 12 ; 12 ; https://www.the-cryosphere.net/ ; https://www.the-cryosphere.net/ >
+      au < manifest ; 2018 ; 2018 ; The Cryosphere Volume 12 ; 12 ; https://www.the-cryosphere.net/ ; https://www.the-cryosphere.net/ >
    }
     
 #  {
@@ -1652,7 +1652,7 @@
       au < released ; 2016 ; 2016 ; Web Ecology Volume 16 ; 16 ; https://www.web-ecol.net/ ; https://www.web-ecology.net/ >
       au < released ; 2017 ; 2017 ; Web Ecology Volume 17 ; 17 ; https://www.web-ecol.net/ ; https://www.web-ecology.net/ >
     
-      au < expected ; 2018 ; 2018 ; Web Ecology Volume 18 ; 18 ; https://www.web-ecol.net/ ; https://www.web-ecology.net/ >
+      au < manifest ; 2018 ; 2018 ; Web Ecology Volume 18 ; 18 ; https://www.web-ecol.net/ ; https://www.web-ecology.net/ >
    }
     
   {
@@ -1667,7 +1667,7 @@
 
       au < released ; 2016 ; 2016 ; Wind Energy Science Volume 1 ; 1 ; https://www.wind-energ-sci.net/ ; https://www.wind-energy-science.net/ >
       au < released ; 2017 ; 2017 ; Wind Energy Science Volume 2 ; 2 ; https://www.wind-energ-sci.net/ ; https://www.wind-energy-science.net/ >
-      au < expected ; 2018 ; 2018 ; Wind Energy Science Volume 3 ; 3 ; https://www.wind-energ-sci.net/ ; https://www.wind-energy-science.net/ >
+      au < manifest ; 2018 ; 2018 ; Wind Energy Science Volume 3 ; 3 ; https://www.wind-energ-sci.net/ ; https://www.wind-energy-science.net/ >
 
    }
 
