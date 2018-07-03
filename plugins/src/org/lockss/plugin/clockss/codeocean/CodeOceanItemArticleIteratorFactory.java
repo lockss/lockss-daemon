@@ -49,18 +49,21 @@ public class CodeOceanItemArticleIteratorFactory implements ArticleIteratorFacto
 
   private static final Logger log = Logger.getLogger(CodeOceanItemArticleIteratorFactory.class);
   
-  // ROOT_TEMPLATE doesn't need to be defined as sub-tree is entire tree under base/year
-  // foo.tar.gz!/....../JID-YR-VOL-ISS-NUM.xml  
-  private static final String PATTERN_TEMPLATE = 
-      "\"^%s%s/[^/]+\\.zip$\", base_url, directory";
   
-  // Be sure to exclude all nested archives in case supplemental data is provided this way
+  //../code-ocean-released/2018/test-publisher/77d6193e-1a32-42c9-a66c-290fdee8da95.zip
+  //    which has within it "metadata/metadata.yml" along with other contents for the code module
+  //../code-ocean-released/2018/test-publisher/77d6193e-1a32-42c9-a66c-290fdee8da95.tar
+  //  this is the accompanying custom docker image 
+  private static final String PATTERN_TEMPLATE = 
+      "\"^%s%s/[^/]+/[^/]+\\.zip$\", base_url, directory";
+  
+  // Be sure to exclude all nested archives in case we ever explode the zip to look at the yaml
   protected static final Pattern NESTED_ARCHIVE_PATTERN = 
-      Pattern.compile(".*/[^/]+\\.(zip|tar|gz|tgz|tar\\.gz)$", 
+      Pattern.compile(".*/[^/]+\\.zip!/.+\\.(zip|tar|gz|tgz|tar\\.gz)$", 
           Pattern.CASE_INSENSITIVE);  
 
   private static final Pattern ZIP_PATTERN = Pattern.compile("/(.*)\\.zip$", Pattern.CASE_INSENSITIVE);
-  private static final String 	ZIP_REPLACEMENT = "/$1.xml";
+  private static final String 	ZIP_REPLACEMENT = "/$1.zip";
   // might exist, might not
   private static final String TAR_REPLACEMENT = "/$1.tar";
   
@@ -94,7 +97,8 @@ public class CodeOceanItemArticleIteratorFactory implements ArticleIteratorFacto
   @Override
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
       throws PluginException {
-    return new CodeOceanItemArticleMetadataExtractor();
+	  return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);	  
+    //return new CodeOceanItemArticleMetadataExtractor();
   }
   
   

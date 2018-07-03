@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
   <!--  metadata support for ARTICLE_TYPE_FILE -->
@@ -63,4 +63,14 @@
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.clockss.codeocean.CodeOceanItemArticleIteratorFactory</string>
   </entry>
+  <!-- we don't actually open it...just pull the information from the URL --> 
+  <entry>
+    <string>application/zip_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.clockss.codeocean.CodeOceanUrlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>  
 </map>    
