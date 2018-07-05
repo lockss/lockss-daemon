@@ -96,6 +96,7 @@ public class CodeOceanUrlMetadataExtractorFactory
 			UrlMd.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_FILE);
 			// tempting though it is FIELD_PROPRIETARY_IDENTIFIER is publication level only
 			Map<String, String> ID_MAP = new HashMap<String,String>();
+			ID_MAP.put("FileType", "code capsule");
 			ID_MAP.put("FileIdentifier", file_id);
 			UrlMd.putRaw(MetadataField.FIELD_MD_MAP.getKey(), ID_MAP);
 			// for now use the ingest year - might need to pull a real year from the metadata?
