@@ -2,4 +2,4 @@
 
 # $Id$
 
-python $(cd `dirname $0` && pwd)/$(basename $0).py "$@"
+python2 $(cd `dirname $0` && pwd)/$(basename $0).py "$@"
