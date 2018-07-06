@@ -2029,7 +2029,7 @@
     au < finished ; finished ; 2014 ; International Journal of Applied and Basic Medical Research Volume 4 ; 2014 ; 4 ; >
     au < finished ; crawling ; 2015 ; International Journal of Applied and Basic Medical Research Volume 5 ; 2015 ; 5 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2016 ; International Journal of Applied and Basic Medical Research Volume 6 ; 2016 ; 6 ; >
-    au < crawling ; exists ; 2017 ; International Journal of Applied and Basic Medical Research Volume 7 ; 2017 ; 7 ; >
+    au < frozen ; exists ; 2017 ; International Journal of Applied and Basic Medical Research Volume 7 ; 2017 ; 7 ; >
     au < manifest ; exists ; 2018 ; International Journal of Applied and Basic Medical Research Volume 8 ; 2018 ; 8 ; >
 
   }
@@ -2655,7 +2655,7 @@
     au < finished ; finished ; 2011 ; Journal of Education and Ethics in Dentistry Volume 1 ; 2011 ; 1 ; >
     au < frozen ; exists ; 2012 ; Journal of Education and Ethics in Dentistry Volume 2 ; 2012 ; 2 ; >
     au < frozen ; exists ; 2013 ; Journal of Education and Ethics in Dentistry Volume 3 ; 2013 ; 3 ; >
-    au < crawling ; exists ; 2014 ; Journal of Education and Ethics in Dentistry Volume 4 ; 2014 ; 4 ; >
+    au < frozen ; exists ; 2014 ; Journal of Education and Ethics in Dentistry Volume 4 ; 2014 ; 4 ; >
     au < crawling ; exists ; 2015 ; Journal of Education and Ethics in Dentistry Volume 5 ; 2015 ; 5 ; >
 
   }
@@ -3160,7 +3160,7 @@
     au < finished ; crawling ; 2014 ; Journal of Minimal Access Surgery Volume 10 ; 2014 ; 10 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Journal of Minimal Access Surgery Volume 11 ; 2015 ; 11 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; Journal of Minimal Access Surgery Volume 12 ; 2016 ; 12 ; >
-    au < crawling ; exists ; 2017 ; Journal of Minimal Access Surgery Volume 13 ; 2017 ; 13 ; >
+    au < frozen ; exists ; 2017 ; Journal of Minimal Access Surgery Volume 13 ; 2017 ; 13 ; >
     au < manifest ; exists ; 2018 ; Journal of Minimal Access Surgery Volume 14 ; 2018 ; 14 ; >
 
   }
@@ -4988,7 +4988,7 @@
       param[journal_issn] = 2542-4157
       param[base_url] = http://www.clinicalto.com/
 
-      au < crawling ; exists ; 2016 ; Clinical Trials in Orthopedic Disorders Volume 1 ; 2016 ; 1 ; >
+      au < frozen ; exists ; 2016 ; Clinical Trials in Orthopedic Disorders Volume 1 ; 2016 ; 1 ; >
       au < crawling ; exists ; 2017 ; Clinical Trials in Orthopedic Disorders Volume 2 ; 2017 ; 2 ; >
       au < manifest ; exists ; 2018 ; Clinical Trials in Orthopedic Disorders Volume 3 ; 2018 ; 3 ; >
 
