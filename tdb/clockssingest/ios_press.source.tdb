@@ -1,0 +1,25 @@
+{
+
+  publisher <
+    name = IOS Press ;
+    info[contract] = 2018 ;
+    info[tester] = S
+  >
+  
+  {
+  
+    title <
+       name = IOS Press Books Source Content
+    >
+    
+    plugin = org.lockss.plugin.clockss.iospress.ClockssIosPressSourcePlugin
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/iosbooks-released/
+    
+    hidden[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[directory] >
+
+    au < expected ; exists ; 2018 ; IOS Press Source Content 2018 ; 2018 >
+
+  }
+
+}
