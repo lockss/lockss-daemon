@@ -1165,6 +1165,7 @@
     #continues = 0003-4878
 
     #this title was ONLY in the publisher listing
+
     au < exists ; exists ; 2017 ; 2017 ; Annals of Work Exposures and Health Volume 61 ; 61 ;  >
 
   }
@@ -16087,11 +16088,13 @@
       issnl = 0003-4878
     >
 
-    param[journal_id] = annhyg
+    #param[journal_id] = annhyg
+    param[journal_id] = annweh #title changed to Annals of Work Exposures and Health volume 61+
     #continued_by = 2398-7308
 
     #this title was ONLY in the previous TDB listing - suppressing AU generation
-    au < exists ; exists ; 2016 ; 2016 ; Annals of Work Exposures and Health Volume 60 ; 60 ;  >
+
+    au < exists ; exists ; 2016 ; 2016 ; The Annals of Occupational Hygiene Volume 60 ; 60 ;  >
 
   }
 
