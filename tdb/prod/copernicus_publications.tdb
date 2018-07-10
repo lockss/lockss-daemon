@@ -198,22 +198,22 @@
 #      param[base_url] = http://www.archanimbreed.com/
       comment[pdf] = http://doi.fbn-dummerstorf.de/ for 2013 & 2014
 
-      au < testing ; 1999 ; 1999 ; Archives Animal Breeding Volume 42 ; 42 ; https://www.arch-anim-breed.net/ ; https://www.archives-animal-breeding.net/ >
-      au < testing ; 2000 ; 2000 ; Archives Animal Breeding Volume 43 ; 43 ; https://www.arch-anim-breed.net/ ; https://www.archives-animal-breeding.net/ >
-      au < testing ; 2001 ; 2001 ; Archives Animal Breeding Volume 44 ; 44 ; https://www.arch-anim-breed.net/ ; https://www.archives-animal-breeding.net/ >
-      au < testing ; 2002 ; 2002 ; Archives Animal Breeding Volume 45 ; 45 ; https://www.arch-anim-breed.net/ ; https://www.archives-animal-breeding.net/ >
-      au < testing ; 2003 ; 2003 ; Archives Animal Breeding Volume 46 ; 46 ; https://www.arch-anim-breed.net/ ; https://www.archives-animal-breeding.net/ >
-      au < testing ; 2004 ; 2004 ; Archives Animal Breeding Volume 47 ; 47 ; https://www.arch-anim-breed.net/ ; https://www.archives-animal-breeding.net/ >
-      au < testing ; 2005 ; 2005 ; Archives Animal Breeding Volume 48 ; 48 ; https://www.arch-anim-breed.net/ ; https://www.archives-animal-breeding.net/ >
-      au < testing ; 2006 ; 2006 ; Archives Animal Breeding Volume 49 ; 49 ; https://www.arch-anim-breed.net/ ; https://www.archives-animal-breeding.net/ >
-      au < testing ; 2007 ; 2007 ; Archives Animal Breeding Volume 50 ; 50 ; https://www.arch-anim-breed.net/ ; https://www.archives-animal-breeding.net/ >
-      au < testing ; 2008 ; 2008 ; Archives Animal Breeding Volume 51 ; 51 ; https://www.arch-anim-breed.net/ ; https://www.archives-animal-breeding.net/ >
-      au < testing ; 2009 ; 2009 ; Archives Animal Breeding Volume 52 ; 52 ; https://www.arch-anim-breed.net/ ; https://www.archives-animal-breeding.net/ >
-      au < testing ; 2010 ; 2010 ; Archives Animal Breeding Volume 53 ; 53 ; https://www.arch-anim-breed.net/ ; https://www.archives-animal-breeding.net/ >
-      au < testing ; 2011 ; 2011 ; Archives Animal Breeding Volume 54 ; 54 ; https://www.arch-anim-breed.net/ ; https://www.archives-animal-breeding.net/ >
-      au < testing ; 2012 ; 2012 ; Archives Animal Breeding Volume 55 ; 55 ; https://www.arch-anim-breed.net/ ; https://www.archives-animal-breeding.net/ >
-      au < testing ; 2013 ; 2013 ; Archives Animal Breeding Volume 56 ; 56 ; https://www.arch-anim-breed.net/ ; https://www.archives-animal-breeding.net/ >
-      au < testing ; 2014 ; 2014 ; Archives Animal Breeding Volume 57 ; 57 ; https://www.arch-anim-breed.net/ ; https://www.archives-animal-breeding.net/ >
+      au < ready ; 1999 ; 1999 ; Archives Animal Breeding Volume 42 ; 42 ; https://www.arch-anim-breed.net/ ; https://www.archives-animal-breeding.net/ >
+      au < ready ; 2000 ; 2000 ; Archives Animal Breeding Volume 43 ; 43 ; https://www.arch-anim-breed.net/ ; https://www.archives-animal-breeding.net/ >
+      au < ready ; 2001 ; 2001 ; Archives Animal Breeding Volume 44 ; 44 ; https://www.arch-anim-breed.net/ ; https://www.archives-animal-breeding.net/ >
+      au < ready ; 2002 ; 2002 ; Archives Animal Breeding Volume 45 ; 45 ; https://www.arch-anim-breed.net/ ; https://www.archives-animal-breeding.net/ >
+      au < ready ; 2003 ; 2003 ; Archives Animal Breeding Volume 46 ; 46 ; https://www.arch-anim-breed.net/ ; https://www.archives-animal-breeding.net/ >
+      au < ready ; 2004 ; 2004 ; Archives Animal Breeding Volume 47 ; 47 ; https://www.arch-anim-breed.net/ ; https://www.archives-animal-breeding.net/ >
+      au < ready ; 2005 ; 2005 ; Archives Animal Breeding Volume 48 ; 48 ; https://www.arch-anim-breed.net/ ; https://www.archives-animal-breeding.net/ >
+      au < ready ; 2006 ; 2006 ; Archives Animal Breeding Volume 49 ; 49 ; https://www.arch-anim-breed.net/ ; https://www.archives-animal-breeding.net/ >
+      au < ready ; 2007 ; 2007 ; Archives Animal Breeding Volume 50 ; 50 ; https://www.arch-anim-breed.net/ ; https://www.archives-animal-breeding.net/ >
+      au < ready ; 2008 ; 2008 ; Archives Animal Breeding Volume 51 ; 51 ; https://www.arch-anim-breed.net/ ; https://www.archives-animal-breeding.net/ >
+      au < ready ; 2009 ; 2009 ; Archives Animal Breeding Volume 52 ; 52 ; https://www.arch-anim-breed.net/ ; https://www.archives-animal-breeding.net/ >
+      au < ready ; 2010 ; 2010 ; Archives Animal Breeding Volume 53 ; 53 ; https://www.arch-anim-breed.net/ ; https://www.archives-animal-breeding.net/ >
+      au < ready ; 2011 ; 2011 ; Archives Animal Breeding Volume 54 ; 54 ; https://www.arch-anim-breed.net/ ; https://www.archives-animal-breeding.net/ >
+      au < ready ; 2012 ; 2012 ; Archives Animal Breeding Volume 55 ; 55 ; https://www.arch-anim-breed.net/ ; https://www.archives-animal-breeding.net/ >
+      au < ready ; 2013 ; 2013 ; Archives Animal Breeding Volume 56 ; 56 ; https://www.arch-anim-breed.net/ ; https://www.archives-animal-breeding.net/ >
+      au < ready ; 2014 ; 2014 ; Archives Animal Breeding Volume 57 ; 57 ; https://www.arch-anim-breed.net/ ; https://www.archives-animal-breeding.net/ >
       }
 
       {
@@ -793,18 +793,18 @@
       au < manifest ; 1997 ; 1997 ; Geographica Helvetica Volume 52 ; 52 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ >
       au < manifest ; 1998 ; 1998 ; Geographica Helvetica Volume 53 ; 53 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ >
       au < manifest ; 1999 ; 1999 ; Geographica Helvetica Volume 54 ; 54 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ >
-      au < testing ; 2000 ; 2000 ; Geographica Helvetica Volume 55 ; 55 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ >
-      au < testing ; 2001 ; 2001 ; Geographica Helvetica Volume 56 ; 56 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ >
-      au < testing ; 2002 ; 2002 ; Geographica Helvetica Volume 57 ; 57 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ >
-      au < testing ; 2003 ; 2003 ; Geographica Helvetica Volume 58 ; 58 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ >
-      au < testing ; 2004 ; 2004 ; Geographica Helvetica Volume 59 ; 59 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ >
-      au < testing ; 2005 ; 2005 ; Geographica Helvetica Volume 60 ; 60 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ >
-      au < testing ; 2006 ; 2006 ; Geographica Helvetica Volume 61 ; 61 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ >
-      au < testing ; 2007 ; 2007 ; Geographica Helvetica Volume 62 ; 62 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ >
-      au < testing ; 2008 ; 2008 ; Geographica Helvetica Volume 63 ; 63 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ >
-      au < testing ; 2009 ; 2009 ; Geographica Helvetica Volume 64 ; 64 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ >
-      au < testing ; 2010 ; 2010 ; Geographica Helvetica Volume 65 ; 65 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ >
-      au < testing ; 2011 ; 2011 ; Geographica Helvetica Volume 66 ; 66 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ >
+      au < ready ; 2000 ; 2000 ; Geographica Helvetica Volume 55 ; 55 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ >
+      au < ready ; 2001 ; 2001 ; Geographica Helvetica Volume 56 ; 56 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ >
+      au < ready ; 2002 ; 2002 ; Geographica Helvetica Volume 57 ; 57 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ >
+      au < ready ; 2003 ; 2003 ; Geographica Helvetica Volume 58 ; 58 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ >
+      au < ready ; 2004 ; 2004 ; Geographica Helvetica Volume 59 ; 59 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ >
+      au < ready ; 2005 ; 2005 ; Geographica Helvetica Volume 60 ; 60 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ >
+      au < ready ; 2006 ; 2006 ; Geographica Helvetica Volume 61 ; 61 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ >
+      au < ready ; 2007 ; 2007 ; Geographica Helvetica Volume 62 ; 62 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ >
+      au < ready ; 2008 ; 2008 ; Geographica Helvetica Volume 63 ; 63 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ >
+      au < ready ; 2009 ; 2009 ; Geographica Helvetica Volume 64 ; 64 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ >
+      au < ready ; 2010 ; 2010 ; Geographica Helvetica Volume 65 ; 65 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ >
+      au < ready ; 2011 ; 2011 ; Geographica Helvetica Volume 66 ; 66 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ >
       au < released ; 2012 ; 2012 ; Geographica Helvetica Volume 67 ; 67 ; http://www.geogr-helv.net/ ; http://www.geographica-helvetica.net/ >
       au < released ; 2013 ; 2013 ; Geographica Helvetica Volume 68 ; 68 ; http://www.geogr-helv.net/ ; http://www.geographica-helvetica.net/ >
       au < released ; 2014 ; 2014 ; Geographica Helvetica Volume 69 ; 69 ; http://www.geogr-helv.net/ ; http://www.geographica-helvetica.net/ >
@@ -1424,19 +1424,19 @@
 #      param[base_url] = http://www.sci-dril.net/
 #      param[home_url] = http://www.scientific-drilling.net/
 
-      au < testing ; 2005 ; 2005 ; Scientific Drilling Volume 1 ; 1 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ >
-      au < testing ; 2006 ; 2006 ; Scientific Drilling Volume 2 ; 2 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ >
-      au < testing ; 2006 ; 2006 ; Scientific Drilling Volume 3 ; 3 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ >
-      au < testing ; 2007 ; 2007 ; Scientific Drilling Volume 4 ; 4 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ >
-      au < testing ; 2007 ; 2007 ; Scientific Drilling Volume 5 ; 5 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ >
-      au < testing ; 2007 ; 2007 ; Scientific Drilling Volume SpecialIssue ; SpecialIssue ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ >
-      au < testing ; 2008 ; 2008 ; Scientific Drilling Volume 6 ; 6 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ >
-      au < testing ; 2009 ; 2009 ; Scientific Drilling Volume 7 ; 7 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ >
-      au < testing ; 2009 ; 2009 ; Scientific Drilling Volume 8 ; 8 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ >
-      au < testing ; 2010 ; 2010 ; Scientific Drilling Volume 9 ; 9 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ >
-      au < testing ; 2010 ; 2010 ; Scientific Drilling Volume 10 ; 10 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ >
-      au < testing ; 2011 ; 2011 ; Scientific Drilling Volume 11 ; 11 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ >
-      au < testing ; 2011 ; 2011 ; Scientific Drilling Volume 12 ; 12 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ >
+      au < ready ; 2005 ; 2005 ; Scientific Drilling Volume 1 ; 1 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ >
+      au < ready ; 2006 ; 2006 ; Scientific Drilling Volume 2 ; 2 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ >
+      au < ready ; 2006 ; 2006 ; Scientific Drilling Volume 3 ; 3 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ >
+      au < ready ; 2007 ; 2007 ; Scientific Drilling Volume 4 ; 4 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ >
+      au < ready ; 2007 ; 2007 ; Scientific Drilling Volume 5 ; 5 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ >
+      au < ready ; 2007 ; 2007 ; Scientific Drilling Volume SpecialIssue ; SpecialIssue ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ >
+      au < ready ; 2008 ; 2008 ; Scientific Drilling Volume 6 ; 6 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ >
+      au < ready ; 2009 ; 2009 ; Scientific Drilling Volume 7 ; 7 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ >
+      au < ready ; 2009 ; 2009 ; Scientific Drilling Volume 8 ; 8 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ >
+      au < ready ; 2010 ; 2010 ; Scientific Drilling Volume 9 ; 9 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ >
+      au < ready ; 2010 ; 2010 ; Scientific Drilling Volume 10 ; 10 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ >
+      au < ready ; 2011 ; 2011 ; Scientific Drilling Volume 11 ; 11 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ >
+      au < ready ; 2011 ; 2011 ; Scientific Drilling Volume 12 ; 12 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ >
       au < released ; 2012 ; 2012 ; Scientific Drilling Volume 13 ; 13 ; http://www.sci-dril.net/ ; http://www.scientific-drilling.net/ >
       au < released ; 2012 ; 2012 ; Scientific Drilling Volume 14 ; 14 ; http://www.sci-dril.net/ ; http://www.scientific-drilling.net/ >
       au < released ; 2013 ; 2013 ; Scientific Drilling Volume 15 ; 15 ; http://www.sci-dril.net/ ; http://www.scientific-drilling.net/ >
