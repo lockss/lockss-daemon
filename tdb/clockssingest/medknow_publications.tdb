@@ -2004,7 +2004,7 @@
     au < frozen ; exists ; 2011 ; Industrial Psychiatry Journal Volume 20 ; 2011 ; 20 ; >
     au < finished ; finished ; 2012 ; Industrial Psychiatry Journal Volume 21 ; 2012 ; 21 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; Industrial Psychiatry Journal Volume 22 ; 2013 ; 22 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2014 ; Industrial Psychiatry Journal Volume 23 ; 2014 ; 23 ; >
+    au < frozen ; exists ; 2014 ; Industrial Psychiatry Journal Volume 23 ; 2014 ; 23 ; >
     au < crawling ; exists ; 2015 ; Industrial Psychiatry Journal Volume 24 ; 2015 ; 24 ; >
     au < frozen ; exists ; 2016 ; Industrial Psychiatry Journal Volume 25 ; 2016 ; 25 ; >
     au < crawling ; exists ; 2017 ; Industrial Psychiatry Journal Volume 26 ; 2017 ; 26 ; >
@@ -2656,7 +2656,7 @@
     au < frozen ; exists ; 2012 ; Journal of Education and Ethics in Dentistry Volume 2 ; 2012 ; 2 ; >
     au < frozen ; exists ; 2013 ; Journal of Education and Ethics in Dentistry Volume 3 ; 2013 ; 3 ; >
     au < frozen ; exists ; 2014 ; Journal of Education and Ethics in Dentistry Volume 4 ; 2014 ; 4 ; >
-    au < crawling ; exists ; 2015 ; Journal of Education and Ethics in Dentistry Volume 5 ; 2015 ; 5 ; >
+    au < frozen ; exists ; 2015 ; Journal of Education and Ethics in Dentistry Volume 5 ; 2015 ; 5 ; >
 
   }
 
@@ -3036,7 +3036,7 @@
     au < finished ; finished ; 2013 ; Journal of Laryngology and Voice Volume 3 ; 2013 ; 3 ; >
     au < finished ; finished ; 2014 ; Journal of Laryngology and Voice Volume 4 ; 2014 ; 4 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Journal of Laryngology and Voice Volume 5 ; 2015 ; 5 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2016 ; Journal of Laryngology and Voice Volume 6 ; 2016 ; 6 ; >
+    au < frozen ; exists ; 2016 ; Journal of Laryngology and Voice Volume 6 ; 2016 ; 6 ; >
     au < frozen ; exists ; 2017 ; Journal of Laryngology and Voice Volume 7 ; 2017 ; 7 ; >
     au < expected ; exists ; 2018 ; Journal of Laryngology and Voice Volume 8 ; 2018 ; 8 ; >
 
@@ -5490,7 +5490,7 @@
       param[base_url] = http://www.heartindia.net/
 
       au < crawling ; exists ; 2013 ; Heart India Volume 1 ; 2013 ; 1 ; >
-      au < crawling ; exists ; 2014 ; Heart India Volume 2 ; 2014 ; 2 ; >
+      au < frozen ; exists ; 2014 ; Heart India Volume 2 ; 2014 ; 2 ; >
       au < crawling ; exists ; 2015 ; Heart India Volume 3 ; 2015 ; 3 ; >
       au < crawling ; exists ; 2016 ; Heart India Volume 4 ; 2016 ; 4 ; >
       au < crawling ; exists ; 2017 ; Heart India Volume 5 ; 2017 ; 5 ; >
@@ -5877,7 +5877,7 @@
 
       au < frozen ; exists ; 2015 ; International Journal of Educational and Psychological Researches Volume 1 ; 2015 ; 1 ; >
       au < deepCrawl ; exists ; 2016 ; International Journal of Educational and Psychological Researches Volume 2 ; 2016 ; 2 ; >
-      au < crawling ; exists ; 2017 ; International Journal of Educational and Psychological Researches Volume 3 ; 2017 ; 3 ; >
+      au < frozen ; exists ; 2017 ; International Journal of Educational and Psychological Researches Volume 3 ; 2017 ; 3 ; >
       au < manifest ; exists ; 2018 ; International Journal of Educational and Psychological Researches Volume 4 ; 2018 ; 4 ; >
 
   }
@@ -6210,7 +6210,7 @@
 
       au < frozen ; exists ; 2015 ; Journal of Current Research in Scientific Medicine Volume 1 ; 2015 ; 1 ; >
       au < finished ; crawling ; 2016 ; Journal of Current Research in Scientific Medicine Volume 2 ; 2016 ; 2 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2017 ; Journal of Current Research in Scientific Medicine Volume 3 ; 2017 ; 3 ; >
+      au < frozen ; exists ; 2017 ; Journal of Current Research in Scientific Medicine Volume 3 ; 2017 ; 3 ; >
       au < manifest ; exists ; 2018 ; Journal of Current Research in Scientific Medicine Volume 4 ; 2018 ; 4 ; >
 
   }
