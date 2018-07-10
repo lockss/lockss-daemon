@@ -18,7 +18,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>22</string>
+    <string>23</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -52,7 +52,8 @@
   <entry>
     <string>au_permission_url</string>
       <list>
-        <string>"%s%s/index.html", base_url, volume_name</string>
+        <string>"%s%s/index.html", to_http(base_url), volume_name</string>
+        <string>"%s%s/index.html", to_https(base_url), volume_name</string>
         <string>"%svolumes.html",to_http(base_url)</string>
         <string>"%svolumes.html",to_https(base_url)</string>
         <string>"%sindex.html",to_http(home_url)</string> 
