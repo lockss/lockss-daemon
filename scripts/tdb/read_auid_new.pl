@@ -2139,6 +2139,24 @@ while (my $line = <>) {
       } else {
         $result = "--NO_TAG--"
       }
+    } elsif ( ($url_p1 eq $url_p2) && $resp_s->is_success) {
+    # a new special case where base_url = home_Url and the permission lives at the start url
+      my $start_contents = $resp_s->content;
+      if (defined($start_contents) && 
+          ($start_contents =~ m/$article_prefix/) && 
+          ($start_contents =~ m/$cc_license_tag/) && 
+          ($start_contents =~ m/$cc_license_url/)) {
+        if ($start_contents =~ m/<title>\s*([^<]*)\s*<\//si) {
+            $vol_title = $1;
+          $vol_title =~ s/\s*\n\s*/ /g;
+          if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+            $vol_title = "\"" . $vol_title . "\"";
+          }
+        }
+        $result = "Manifest"
+      } else {
+        $result = "--NO_TAG--"
+      }
     } else {
       $result = "--REQ_FAIL--"
     }

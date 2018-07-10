@@ -18,7 +18,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>21</string>
+    <string>22</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -48,9 +48,11 @@
       <string>"%s%s/index.html", base_url, volume_name</string>
     </list>
   </entry>
+<!--  first check the start_url and if not there, look at volumes (this is OR); then AND also need permission at home_url -->
   <entry>
     <string>au_permission_url</string>
       <list>
+        <string>"%s%s/index.html", base_url, volume_name</string>
         <string>"%svolumes.html",to_http(base_url)</string>
         <string>"%svolumes.html",to_https(base_url)</string>
         <string>"%sindex.html",to_http(home_url)</string> 
