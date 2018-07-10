@@ -2120,6 +2120,7 @@ while (my $line = <>) {
       my $perm1_contents = $resp_p1->content;
       my $perm2_contents = $resp_p2->content;
       my $start_contents = $resp_s->content;
+      #TRY THE NORMAL SITUATION FIRST
       if ((defined($perm1_contents)) && 
           (defined($perm2_contents)) && 
           (defined($start_contents)) && 
@@ -2136,10 +2137,28 @@ while (my $line = <>) {
           }
         }
         $result = "Manifest"
+      } elsif ($param{home_url} eq $param{base_url})  {
+      #TRY THE WEIRD CASE NEXT - we know that $resp_s->is_success already here
+      my $start_contents = $resp_s->content;
+      if (defined($start_contents) && 
+          ($start_contents =~ m/$article_prefix/) && 
+          ($start_contents =~ m/$cc_license_tag/) && 
+          ($start_contents =~ m/$cc_license_url/)) {
+        if ($start_contents =~ m/<title>\s*([^<]*)\s*<\//si) {
+            $vol_title = $1;
+          $vol_title =~ s/\s*\n\s*/ /g;
+          if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+            $vol_title = "\"" . $vol_title . "\"";
+          }
+        }
+        $result = "Manifest"
+        } else {
+	        $result = "--NO_TAG--"
+	    }
       } else {
         $result = "--NO_TAG--"
       }
-    } elsif ( ($url_p1 eq $url_p2) && $resp_s->is_success) {
+    } elsif ( ($param{home_url} eq $param{base_url}) && $resp_s->is_success) {
     # a new special case where base_url = home_Url and the permission lives at the start url
       my $start_contents = $resp_s->content;
       if (defined($start_contents) && 
