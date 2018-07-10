@@ -13306,7 +13306,7 @@
         au < released ; 2015 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 27 ; 27 ; gtna >
         au < released ; 2016 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 28 ; 28 ; gtna >
         au < manifest ; 2017 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 29 ; 29 ; gtna >
-        au < expected ; 2018 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 30 ; 30 ; gtna >
+        au < manifest ; 2018 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 30 ; 30 ; gtna >
     }
 
     {
@@ -31080,7 +31080,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2015 ; Nanobiomedicine Volume 2 ; 2 ; naba >
         au < released ; 2016 ; Nanobiomedicine Volume 3 ; 3 ; naba >
         au < released ; 2017 ; Nanobiomedicine Volume 4 ; 4 ; naba >
-        au < expected ; 2018 ; Nanobiomedicine Volume 5 ; 5 ; naba >
+        au < manifest ; 2018 ; Nanobiomedicine Volume 5 ; 5 ; naba >
 
     }
 
@@ -32708,7 +32708,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2017 ; Otolaryngology -- Head and Neck Surgery Volume 156 ; 156 ; otoj >
         au < released ; 2017 ; Otolaryngology -- Head and Neck Surgery Volume 157 ; 157 ; otoj >
         au < manifest ; 2018 ; Otolaryngology -- Head and Neck Surgery Volume 158 ; 158 ; otoj >
-        au < expected ; 2018 ; Otolaryngology -- Head and Neck Surgery Volume 159 ; 159 ; otoj >
+        au < manifest ; 2018 ; Otolaryngology -- Head and Neck Surgery Volume 159 ; 159 ; otoj >
 
       }
 
@@ -36418,10 +36418,10 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
         #param[base_url] = http://rea.sagepub.com/
 
-        au < exists ; 2005 ; Research Ethics Volume 1 ; 1 ; reab >
-        au < exists ; 2006 ; Research Ethics Volume 2 ; 2 ; reab >
-        au < exists ; 2007 ; Research Ethics Volume 3 ; 3 ; reab >
-        au < exists ; 2008 ; Research Ethics Volume 4 ; 4 ; reab >
+        au < manifest ; 2005 ; Research Ethics Volume 1 ; 1 ; reab >
+        au < manifest ; 2006 ; Research Ethics Volume 2 ; 2 ; reab >
+        au < manifest ; 2007 ; Research Ethics Volume 3 ; 3 ; reab >
+        au < manifest ; 2008 ; Research Ethics Volume 4 ; 4 ; reab >
         au < doNotProcess ; 2009 ; Research Ethics Volume 5 ; 5 ; reab >
         au < doNotProcess ; 2010 ; Research Ethics Volume 6 ; 6 ; reab >
         au < doNotProcess ; 2011 ; Research Ethics Volume 7 ; 7 ; reab >
@@ -44969,7 +44969,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < doNotProcess ; 2015 ; Australian Journal of Education Volume 59 ; 59 ; aeda >
       au < released ; 2016 ; Australian Journal of Education Volume 60 ; 60 ; aeda >
       au < manifest ; 2017 ; Australian Journal of Education Volume 61 ; 61 ; aeda >
-      au < expected ; 2018 ; Australian Journal of Education Volume 62 ; 62 ; aeda >
+      au < manifest ; 2018 ; Australian Journal of Education Volume 62 ; 62 ; aeda >
 
     }
 
