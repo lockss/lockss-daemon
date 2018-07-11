@@ -1,0 +1,39 @@
+Manifest:
+https://www.berghahnjournals.com/lockss-manifest/journal/environment-and-society/volume/4
+wget - 200
+issue TOC:
+https://www.berghahnjournals.com/view/journals/environment-and-society/4/1/environment-and-society.4.issue-1.xml
+wget - 200
+TOC article landing 
+https://www.berghahnjournals.com/view/journals/environment-and-society/4/1/air-es040102.xml
+wget - 200
+
+TOC pdf direct link
+https://www.berghahnjournals.com/downloadpdf/journals/environment-and-society/4/1/air-es040101.xml
+wget - 302 to https://www.berghahnjournals.com/downloadpdf/journals/environment-and-society/4/1/air-es040108.pdf  
+
+
+Article landing PDF tab
+https://www.berghahnjournals.com/view/journals/environment-and-society/4/1/air-es040102.xml?pdfVersion=true
+	loads pdf in to article landing frameset
+
+Download PDF button
+https://www.berghahnjournals.com/downloadpdf/journals/environment-and-society/4/1/air-es040102.xml
+  (see above TOC pdf direct)
+
+meta tag on article landing page:
+  <meta name="citation_pdf_url" content="https://www.berghahnjournals.com/downloadpdf/journals/environment-and-society/4/1/air-es040108.pdf"></meta>
+which is:
+https://www.berghahnjournals.com/downloadpdf/journals/environment-and-society/4/1/air-es040108.pdf
+wget - 200
+
+Other links:
+printer friendly, single frame 
+https://www.berghahnjournals.com/view/journals/environment-and-society/4/1/air-es040108.xml?&print
+citation form:
+https://www.berghahnjournals.com/cite/$002fjournals$002fenvironment-and-society$002f4$002f1$002fair-es040108.xml/$N?nojs=true  
+  
+notes:  
+1. Have not yet found full text html example across the journals to check images, figures
+2. This is 
+

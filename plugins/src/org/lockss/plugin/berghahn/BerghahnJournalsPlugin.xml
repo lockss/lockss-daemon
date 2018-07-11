@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>testing</string>
+    <string>development</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -55,7 +55,8 @@
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%sview/journals/%s/%s-overview.xml", base_url, journal_id, journal_id</string>
+    <!-- https://www.berghahnjournals.com/lockss-manifest/journal/democratic-theory/volume/4 -->
+    <string>"%slockss-manifest/journal/%s/volume/%s", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -94,4 +95,25 @@
       <string>"^%sdownloadpdf/journals/%s/%s/", base_url, journal_id, volume_name</string>
     </list>
   </entry>
+ <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.berghahn.BerghahnUrlConsumerFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.berghahn.BerghahnArticleIteratorFactory</string>
+  </entry> 
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.berghahn.BerghahnArticleIteratorFactory</string>
+  </entry> 
+   <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.berghahn.BerghahnHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>      
 </map>
