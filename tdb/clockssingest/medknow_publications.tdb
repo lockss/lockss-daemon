@@ -2418,10 +2418,10 @@
     au < notReady ; exists ; 2011 ; Journal of Carcinogenesis Volume 10 ; 2011 ; 10 ; >
     au < notReady ; exists ; 2012 ; Journal of Carcinogenesis Volume 11 ; 2012 ; 11 ; >
     au < notReady ; exists ; 2013 ; Journal of Carcinogenesis Volume 12 ; 2013 ; 12 ; >
-    au < ready ; exists ; 2014 ; Journal of Carcinogenesis Volume 13 ; 2014 ; 13 ; >
+    au < crawling ; exists ; 2014 ; Journal of Carcinogenesis Volume 13 ; 2014 ; 13 ; >
     au < notReady ; exists ; 2015 ; Journal of Carcinogenesis Volume 14 ; 2015 ; 14 ; >
     au < notReady ; exists ; 2016 ; Journal of Carcinogenesis Volume 15 ; 2016 ; 15 ; >
-    au < ready ; exists ; 2017 ; Journal of Carcinogenesis Volume 16 ; 2017 ; 16 ; >
+    au < crawling ; exists ; 2017 ; Journal of Carcinogenesis Volume 16 ; 2017 ; 16 ; >
     au < manifest ; exists ; 2018 ; Journal of Carcinogenesis Volume 17 ; 2018 ; 17 ; >
 
   }
@@ -2465,7 +2465,7 @@
     au < notReady ; exists ; 2013 ; Journal of Clinical Imaging Science Volume 3 ; 2013 ; 3 ; >
     au < notReady ; exists ; 2014 ; Journal of Clinical Imaging Science Volume 4 ; 2014 ; 4 ; >
     au < notReady ; exists ; 2015 ; Journal of Clinical Imaging Science Volume 5 ; 2015 ; 5 ; >
-    au < ready ; exists ; 2016 ; Journal of Clinical Imaging Science Volume 6 ; 2016 ; 6 ; >
+    au < crawling ; exists ; 2016 ; Journal of Clinical Imaging Science Volume 6 ; 2016 ; 6 ; >
     au < notReady ; exists ; 2017 ; Journal of Clinical Imaging Science Volume 7 ; 2017 ; 7 ; >
     au < manifest ; exists ; 2018 ; Journal of Clinical Imaging Science Volume 8 ; 2018 ; 8 ; >
 
@@ -3303,7 +3303,7 @@
     au < notReady ; exists ; 2014 ; Journal of Pathology Informatics Volume 5 ; 2014 ; 5 ; >
     au < notReady ; exists ; 2015 ; Journal of Pathology Informatics Volume 6 ; 2015 ; 6 ; >
     au < notReady ; exists ; 2016 ; Journal of Pathology Informatics Volume 7 ; 2016 ; 7 ; >
-    au < ready ; exists ; 2017 ; Journal of Pathology Informatics Volume 8 ; 2017 ; 8 ; >
+    au < crawling ; exists ; 2017 ; Journal of Pathology Informatics Volume 8 ; 2017 ; 8 ; >
     au < manifest ; exists ; 2018 ; Journal of Pathology Informatics Volume 9 ; 2018 ; 9 ; >
 
   }
