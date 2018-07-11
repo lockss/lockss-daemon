@@ -8986,9 +8986,41 @@
   {
 
     title <
+      name = Journal of Forestry ;
+      issn = 0022-1201 ;
+      eissn = 1938-3746
+    >
+
+    param[journal_id] = jof
+    #content available from 1909 volume 7 to 1999 volume 97
+
+    au < exists ; exists ; 2010 ; 2010 ; Journal of Forestry Volume 98 ; 98 ;  >
+    au < exists ; exists ; 2011 ; 2011 ; Journal of Forestry Volume 99 ; 99 ;  >
+    au < exists ; exists ; 2012 ; 2012 ; Journal of Forestry Volume 100 ; 100 ;  >
+    au < exists ; exists ; 2003 ; 2003 ; Journal of Forestry Volume 101 ; 101 ;  >
+    au < exists ; exists ; 2004 ; 2004 ; Journal of Forestry Volume 102 ; 102 ;  >
+    au < exists ; exists ; 2005 ; 2005 ; Journal of Forestry Volume 103 ; 103 ;  >
+    au < exists ; exists ; 2006 ; 2006 ; Journal of Forestry Volume 104 ; 104 ;  >
+    au < exists ; exists ; 2007 ; 2007 ; Journal of Forestry Volume 105 ; 105 ;  >
+    au < exists ; exists ; 2008 ; 2008 ; Journal of Forestry Volume 106 ; 106 ;  >
+    au < exists ; exists ; 2009 ; 2009 ; Journal of Forestry Volume 107 ; 107 ;  >
+    au < exists ; exists ; 2010 ; 2010 ; Journal of Forestry Volume 108 ; 108 ;  >
+    au < exists ; exists ; 2011 ; 2011 ; Journal of Forestry Volume 109 ; 109 ;  >
+    au < exists ; exists ; 2012 ; 2012 ; Journal of Forestry Volume 110 ; 110 ;  >
+    au < exists ; exists ; 2013 ; 2013 ; Journal of Forestry Volume 111 ; 111 ;  >
+    au < exists ; exists ; 2014 ; 2014 ; Journal of Forestry Volume 112 ; 112 ;  >
+    au < exists ; exists ; 2015 ; 2015 ; Journal of Forestry Volume 113 ; 113 ;  >
+    au < exists ; exists ; 2016 ; 2016 ; Journal of Forestry Volume 114 ; 114 ;  >
+    au < exists ; exists ; 2017 ; 2017 ; Journal of Forestry Volume 115 ; 115 ;  >
+
+
+  {
+
+    title <
       name = Journal of Gerontology ;
       issn = 0022-1422
     >
+
 
     param[journal_id] = geronj
 
