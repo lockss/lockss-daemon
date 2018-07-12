@@ -79,6 +79,29 @@
   {
 
     title <
+      name = Advances in Nutrition ;
+      issn = 2161-8313 ;
+      eissn = 2156-5376 ;
+      issnl = 2161-8313
+    >
+
+    param[journal_id] = advances
+
+    au < exists ; exists ; 2010 ; 2010 ; Advances in Nutrition Volume 1 ; 1 ;  >
+    au < exists ; exists ; 2011 ; 2011 ; Advances in Nutrition Volume 2 ; 2 ;  >
+    au < exists ; exists ; 2012 ; 2012 ; Advances in Nutrition Volume 3 ; 3 ;  >
+    au < exists ; exists ; 2013 ; 2013 ; Advances in Nutrition Volume 4 ; 4 ;  >
+    au < exists ; exists ; 2014 ; 2014 ; Advances in Nutrition Volume 5 ; 5 ;  >
+    au < exists ; exists ; 2015 ; 2015 ; Advances in Nutrition Volume 6 ; 6 ;  >
+    au < exists ; exists ; 2016 ; 2016 ; Advances in Nutrition Volume 7 ; 7 ;  >
+    au < exists ; exists ; 2017 ; 2017 ; Advances in Nutrition Volume 8 ; 8 ;  >
+    au < exists ; exists ; 2018 ; 2018 ; Advances in Nutrition Volume 9 ; 9 ;  >
+
+  }
+
+  {
+
+    title <
       name = Aesthetic Surgery Journal ;
       issn = 1090-820X ;
       eissn = 1527-330X ;
@@ -499,6 +522,59 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; American Journal of Agricultural Economics Volume 97 ; 97 ;  >
     au < exists ; exists ; 2016 ; 2016 ; American Journal of Agricultural Economics Volume 98 ; 98 ;  >
     au < exists ; exists ; 2017 ; 2017 ; American Journal of Agricultural Economics Volume 99 ; 99 ;  >
+
+  }
+
+  {
+
+    title <
+      name = The American Journal of Clinical Nutrition ;
+      issn = 0002-9165 ;
+      eissn = 1938-3207 ;
+      issnl = 0002-9165
+    >
+
+    param[journal_id] = ajcn
+    #content available from 1952 volume 1 to 1999 volume 70
+
+    au < exists ; exists ; 2000 ; 2000 ; The American Journal of Clinical Nutrition Volume 71 ; 71 ;  >
+    au < exists ; exists ; 2000 ; 2000 ; The American Journal of Clinical Nutrition Volume 72 ; 72 ;  >
+    au < exists ; exists ; 2001 ; 2001 ; The American Journal of Clinical Nutrition Volume 73 ; 73 ;  >
+    au < exists ; exists ; 2001 ; 2001 ; The American Journal of Clinical Nutrition Volume 74 ; 74 ;  >
+    au < exists ; exists ; 2002 ; 2002 ; The American Journal of Clinical Nutrition Volume 75 ; 75 ;  >
+    au < exists ; exists ; 2002 ; 2002 ; The American Journal of Clinical Nutrition Volume 76 ; 76 ;  >
+    au < exists ; exists ; 2003 ; 2003 ; The American Journal of Clinical Nutrition Volume 77 ; 77 ;  >
+    au < exists ; exists ; 2003 ; 2003 ; The American Journal of Clinical Nutrition Volume 78 ; 78 ;  >
+    au < exists ; exists ; 2004 ; 2004 ; The American Journal of Clinical Nutrition Volume 79 ; 79 ;  >
+    au < exists ; exists ; 2004 ; 2004 ; The American Journal of Clinical Nutrition Volume 80 ; 80 ;  >
+    au < exists ; exists ; 2005 ; 2005 ; The American Journal of Clinical Nutrition Volume 81 ; 81 ;  >
+    au < exists ; exists ; 2005 ; 2005 ; The American Journal of Clinical Nutrition Volume 82 ; 82 ;  >
+    au < exists ; exists ; 2006 ; 2006 ; The American Journal of Clinical Nutrition Volume 83 ; 83 ;  >
+    au < exists ; exists ; 2006 ; 2006 ; The American Journal of Clinical Nutrition Volume 84 ; 84 ;  >
+    au < exists ; exists ; 2007 ; 2007 ; The American Journal of Clinical Nutrition Volume 85 ; 85 ;  >
+    au < exists ; exists ; 2007 ; 2007 ; The American Journal of Clinical Nutrition Volume 86 ; 86 ;  >
+    au < exists ; exists ; 2008 ; 2008 ; The American Journal of Clinical Nutrition Volume 87 ; 87 ;  >
+    au < exists ; exists ; 2008 ; 2008 ; The American Journal of Clinical Nutrition Volume 88 ; 88 ;  >
+    au < exists ; exists ; 2009 ; 2009 ; The American Journal of Clinical Nutrition Volume 89 ; 89 ;  >
+    au < exists ; exists ; 2009 ; 2009 ; The American Journal of Clinical Nutrition Volume 90 ; 90 ;  >
+    au < exists ; exists ; 2010 ; 2010 ; The American Journal of Clinical Nutrition Volume 91 ; 91 ;  >
+    au < exists ; exists ; 2010 ; 2010 ; The American Journal of Clinical Nutrition Volume 92 ; 92 ;  >
+    au < exists ; exists ; 2011 ; 2011 ; The American Journal of Clinical Nutrition Volume 93 ; 93 ;  >
+    au < exists ; exists ; 2011 ; 2011 ; The American Journal of Clinical Nutrition Volume 94 ; 94 ;  >
+    au < exists ; exists ; 2012 ; 2012 ; The American Journal of Clinical Nutrition Volume 95 ; 95 ;  >
+    au < exists ; exists ; 2012 ; 2012 ; The American Journal of Clinical Nutrition Volume 96 ; 96 ;  >
+    au < exists ; exists ; 2013 ; 2013 ; The American Journal of Clinical Nutrition Volume 97 ; 97 ;  >
+    au < exists ; exists ; 2013 ; 2013 ; The American Journal of Clinical Nutrition Volume 98 ; 98 ;  >
+    au < exists ; exists ; 2014 ; 2014 ; The American Journal of Clinical Nutrition Volume 99 ; 99 ;  >
+    au < exists ; exists ; 2014 ; 2014 ; The American Journal of Clinical Nutrition Volume 100 ; 100 ;  >
+    au < exists ; exists ; 2015 ; 2015 ; The American Journal of Clinical Nutrition Volume 101 ; 101 ;  >
+    au < exists ; exists ; 2015 ; 2015 ; The American Journal of Clinical Nutrition Volume 102 ; 102 ;  >
+    au < exists ; exists ; 2016 ; 2016 ; The American Journal of Clinical Nutrition Volume 103 ; 103 ;  >
+    au < exists ; exists ; 2016 ; 2016 ; The American Journal of Clinical Nutrition Volume 104 ; 104 ;  >
+    au < exists ; exists ; 2017 ; 2017 ; The American Journal of Clinical Nutrition Volume 105 ; 105 ;  >
+    au < exists ; exists ; 2017 ; 2017 ; The American Journal of Clinical Nutrition Volume 106 ; 106 ;  >
+    au < exists ; exists ; 2018 ; 2018 ; The American Journal of Clinical Nutrition Volume 107 ; 107 ;  >
+    au < expected ; exists ; 2018 ; 2018 ; The American Journal of Clinical Nutrition Volume 107 ; 107 ;  >
 
   }
 
@@ -3421,6 +3497,21 @@
   {
 
     title <
+      name = Current Developments in Nutrition ;
+      eissn = 2475-2991 ;
+      issnl = 2475-2991
+    >
+
+    param[journal_id] = cdn
+
+    au < exists ; exists ; 2017 ; 2017 ; Current Developments in Nutrition Volume 1 ; 1 ;  >
+    au < exists ; exists ; 2018 ; 2018 ; Current Developments in Nutrition Volume 2 ; 2 ;  >
+
+  }
+
+  {
+
+    title <
       name = Current Legal Problems ;
       issn = 0070-1998 ;
       eissn = 2044-8422 ;
@@ -5190,6 +5281,84 @@
     au < doNotProcess ; exists ; 1993 ; 1993 ; Forest & Conservation History Volume 37 ; 37 ;  >
     au < doNotProcess ; exists ; 1994 ; 1994 ; Forest & Conservation History Volume 38 ; 38 ;  >
     au < doNotProcess ; exists ; 1995 ; 1995 ; Forest & Conservation History Volume 39 ; 39 ;  >
+
+  }
+
+  {
+
+    title <
+      name = Forest Science ;
+      issn = 0015-749X ;
+      eissn = 1938-3738 ;
+      issnl = 0015-749X
+    >
+
+    param[journal_id] = forestscience
+
+    au < exists ; exists ; 1955 ; 1955 ; Forest Science Volume 1 ; 1 ;  >
+    au < exists ; exists ; 1956 ; 1956 ; Forest Science Volume 2 ; 2 ;  >
+    au < exists ; exists ; 1957 ; 1957 ; Forest Science Volume 3 ; 3 ;  >
+    au < exists ; exists ; 1958 ; 1958 ; Forest Science Volume 4 ; 4 ;  >
+    au < exists ; exists ; 1959 ; 1959 ; Forest Science Volume 5 ; 5 ;  >
+    au < exists ; exists ; 1960 ; 1960 ; Forest Science Volume 6 ; 6 ;  >
+    au < exists ; exists ; 1961 ; 1961 ; Forest Science Volume 7 ; 7 ;  >
+    au < exists ; exists ; 1962 ; 1962 ; Forest Science Volume 8 ; 8 ;  >
+    au < exists ; exists ; 1963 ; 1963 ; Forest Science Volume 9 ; 9 ;  >
+    au < exists ; exists ; 1964 ; 1964 ; Forest Science Volume 10 ; 10 ;  >
+    au < exists ; exists ; 1965 ; 1965 ; Forest Science Volume 11 ; 11 ;  >
+    au < exists ; exists ; 1966 ; 1966 ; Forest Science Volume 12 ; 12 ;  >
+    au < exists ; exists ; 1967 ; 1967 ; Forest Science Volume 13 ; 13 ;  >
+    au < exists ; exists ; 1968 ; 1968 ; Forest Science Volume 14 ; 14 ;  >
+    au < exists ; exists ; 1969 ; 1969 ; Forest Science Volume 15 ; 15 ;  >
+    au < exists ; exists ; 1970 ; 1970 ; Forest Science Volume 16 ; 16 ;  >
+    au < exists ; exists ; 1971 ; 1971 ; Forest Science Volume 17 ; 17 ;  >
+    au < exists ; exists ; 1972 ; 1972 ; Forest Science Volume 18 ; 18 ;  >
+    au < exists ; exists ; 1973 ; 1973 ; Forest Science Volume 19 ; 19 ;  >
+    au < exists ; exists ; 1974 ; 1974 ; Forest Science Volume 20 ; 20 ;  >
+    au < exists ; exists ; 1975 ; 1975 ; Forest Science Volume 21 ; 21 ;  >
+    au < exists ; exists ; 1976 ; 1976 ; Forest Science Volume 22 ; 22 ;  >
+    au < exists ; exists ; 1977 ; 1977 ; Forest Science Volume 23 ; 23 ;  >
+    au < exists ; exists ; 1978 ; 1978 ; Forest Science Volume 24 ; 24 ;  >
+    au < exists ; exists ; 1979 ; 1979 ; Forest Science Volume 25 ; 25 ;  >
+    au < exists ; exists ; 1980 ; 1980 ; Forest Science Volume 26 ; 26 ;  >
+    au < exists ; exists ; 1981 ; 1981 ; Forest Science Volume 27 ; 27 ;  >
+    au < exists ; exists ; 1982 ; 1982 ; Forest Science Volume 28 ; 28 ;  >
+    au < exists ; exists ; 1983 ; 1983 ; Forest Science Volume 29 ; 29 ;  >
+    au < exists ; exists ; 1984 ; 1984 ; Forest Science Volume 30 ; 30 ;  >
+    au < exists ; exists ; 1985 ; 1985 ; Forest Science Volume 31 ; 31 ;  >
+    au < exists ; exists ; 1986 ; 1986 ; Forest Science Volume 32 ; 32 ;  >
+    au < exists ; exists ; 1987 ; 1987 ; Forest Science Volume 33 ; 33 ;  >
+    au < exists ; exists ; 1988 ; 1988 ; Forest Science Volume 34 ; 34 ;  >
+    au < exists ; exists ; 1989 ; 1989 ; Forest Science Volume 35 ; 35 ;  >
+    au < exists ; exists ; 1990 ; 1990 ; Forest Science Volume 36 ; 36 ;  >
+    au < exists ; exists ; 1991 ; 1991 ; Forest Science Volume 37 ; 37 ;  >
+    au < exists ; exists ; 1992 ; 1992 ; Forest Science Volume 38 ; 38 ;  >
+    au < exists ; exists ; 1993 ; 1993 ; Forest Science Volume 39 ; 39 ;  >
+    au < exists ; exists ; 1994 ; 1994 ; Forest Science Volume 40 ; 40 ;  >
+    au < exists ; exists ; 1995 ; 1995 ; Forest Science Volume 41 ; 41 ;  >
+    au < exists ; exists ; 1996 ; 1996 ; Forest Science Volume 42 ; 42 ;  >
+    au < exists ; exists ; 1997 ; 1997 ; Forest Science Volume 43 ; 43 ;  >
+    au < exists ; exists ; 1998 ; 1998 ; Forest Science Volume 44 ; 44 ;  >
+    au < exists ; exists ; 1999 ; 1999 ; Forest Science Volume 45 ; 45 ;  >
+    au < exists ; exists ; 2000 ; 2000 ; Forest Science Volume 46 ; 46 ;  >
+    au < exists ; exists ; 2001 ; 2001 ; Forest Science Volume 47 ; 47 ;  >
+    au < exists ; exists ; 2002 ; 2002 ; Forest Science Volume 48 ; 48 ;  >
+    au < exists ; exists ; 2003 ; 2003 ; Forest Science Volume 49 ; 49 ;  >
+    au < exists ; exists ; 2004 ; 2004 ; Forest Science Volume 50 ; 50 ;  >
+    au < exists ; exists ; 2005 ; 2005 ; Forest Science Volume 51 ; 51 ;  >
+    au < exists ; exists ; 2006 ; 2006 ; Forest Science Volume 52 ; 52 ;  >
+    au < exists ; exists ; 2007 ; 2007 ; Forest Science Volume 53 ; 53 ;  >
+    au < exists ; exists ; 2008 ; 2008 ; Forest Science Volume 54 ; 54 ;  >
+    au < exists ; exists ; 2009 ; 2009 ; Forest Science Volume 55 ; 55 ;  >
+    au < exists ; exists ; 2010 ; 2010 ; Forest Science Volume 56 ; 56 ;  >
+    au < exists ; exists ; 2011 ; 2011 ; Forest Science Volume 57 ; 57 ;  >
+    au < exists ; exists ; 2012 ; 2012 ; Forest Science Volume 58 ; 58 ;  >
+    au < exists ; exists ; 2013 ; 2013 ; Forest Science Volume 59 ; 59 ;  >
+    au < exists ; exists ; 2014 ; 2014 ; Forest Science Volume 60 ; 60 ;  >
+    au < exists ; exists ; 2015 ; 2015 ; Forest Science Volume 61 ; 61 ;  >
+    au < exists ; exists ; 2016 ; 2016 ; Forest Science Volume 62 ; 62 ;  >
+    au < exists ; exists ; 2017 ; 2017 ; Forest Science Volume 63 ; 63 ;  >
+    au < exists ; exists ; 2018 ; 2018 ; Forest Science Volume 64 ; 64 ;  >
 
   }
 
@@ -9867,6 +10036,39 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Neuropathology & Experimental Neurology Volume 74 ; 74 ;  >
     au < manifest ; exists ; 2016 ; 2016 ; Journal of Neuropathology & Experimental Neurology Volume 75 ; 75 ;  >
     au < testing ; exists ; 2017 ; 2017 ; Journal of Neuropathology & Experimental Neurology Volume 76 ; 76 ;  >
+
+  }
+
+  {
+
+    title <
+      name = The Journal of Nutrition ;
+      issn = 0022-3166 ;
+      eissn = 1541-6100 ;
+      issnl = 0022-3166
+    >
+
+    param[journal_id] = jn
+    #content available from 1928 volume 1 to 1999 volume 129
+
+    au < exists ; exists ; 2000 ; 2000 ; The Journal of Nutrition Volume 130 ; 130 ;  >
+    au < exists ; exists ; 2001 ; 2001 ; The Journal of Nutrition Volume 131 ; 131 ;  >
+    au < exists ; exists ; 2002 ; 2002 ; The Journal of Nutrition Volume 132 ; 132 ;  >
+    au < exists ; exists ; 2003 ; 2003 ; The Journal of Nutrition Volume 133 ; 133 ;  >
+    au < exists ; exists ; 2004 ; 2004 ; The Journal of Nutrition Volume 134 ; 134 ;  >
+    au < exists ; exists ; 2005 ; 2005 ; The Journal of Nutrition Volume 135 ; 135 ;  >
+    au < exists ; exists ; 2006 ; 2006 ; The Journal of Nutrition Volume 136 ; 136 ;  >
+    au < exists ; exists ; 2007 ; 2007 ; The Journal of Nutrition Volume 137 ; 137 ;  >
+    au < exists ; exists ; 2008 ; 2008 ; The Journal of Nutrition Volume 138 ; 138 ;  >
+    au < exists ; exists ; 2009 ; 2009 ; The Journal of Nutrition Volume 139 ; 139 ;  >
+    au < exists ; exists ; 2010 ; 2010 ; The Journal of Nutrition Volume 140 ; 140 ;  >
+    au < exists ; exists ; 2011 ; 2011 ; The Journal of Nutrition Volume 141 ; 141 ;  >
+    au < exists ; exists ; 2012 ; 2012 ; The Journal of Nutrition Volume 142 ; 142 ;  >
+    au < exists ; exists ; 2013 ; 2013 ; The Journal of Nutrition Volume 143 ; 143 ;  >
+    au < exists ; exists ; 2014 ; 2014 ; The Journal of Nutrition Volume 144 ; 144 ;  >
+    au < exists ; exists ; 2015 ; 2015 ; The Journal of Nutrition Volume 145 ; 145 ;  >
+    au < exists ; exists ; 2016 ; 2016 ; The Journal of Nutrition Volume 146 ; 146 ;  >
+    au < exists ; exists ; 2017 ; 2017 ; The Journal of Nutrition Volume 147 ; 147 ;  >
 
   }
 
