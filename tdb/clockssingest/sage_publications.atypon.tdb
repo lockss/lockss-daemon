@@ -26781,6 +26781,20 @@
   {
 
     title <
+      name = Journal of Social Inclusion Studie ;
+      issn = 2394-4811 ;
+      eissn = 2516-6123
+    >
+
+    #journal_id = sis
+
+      au < exists ; exists ; 2018 ; Journal of Social Inclusion Studie Volume 4 ; 4 ; sisa ; >
+
+  }
+
+  {
+
+    title <
       name = Journal of Social Work ;
       issn = 1468-0173 ;
       eissn = 1741-296X
@@ -35074,6 +35088,39 @@
       au < frozen ; exists ; 2016 ; Progress in Transplantation Volume 26 ; 26 ; pitb ; >
       au < deepCrawl ; exists ; 2017 ; Progress in Transplantation Volume 27 ; 27 ; pitb ; >
       au < manifest ; exists ; 2018 ; Progress in Transplantation Volume 28 ; 28 ; pitb ; >
+
+  }
+
+  {
+    title <
+      name = Project Management Journal ;
+      issn = 8756-9728 ;
+      eissn = 1938-9507
+    >
+
+      #journal_id = pmx
+
+      au < exists ; exists ; 1998 ; Project Management Journal Volume 29 ; 29 ; pmxa ; >
+      au < exists ; exists ; 1999 ; Project Management Journal Volume 30 ; 30 ; pmxa ; >
+      au < exists ; exists ; 2000 ; Project Management Journal Volume 31 ; 31 ; pmxa ; >
+      au < exists ; exists ; 2001 ; Project Management Journal Volume 32 ; 32 ; pmxa ; >
+      au < exists ; exists ; 2002 ; Project Management Journal Volume 33 ; 33 ; pmxa ; >
+      au < exists ; exists ; 2003 ; Project Management Journal Volume 34 ; 34 ; pmxa ; >
+      au < exists ; exists ; 2004 ; Project Management Journal Volume 35 ; 35 ; pmxa ; >
+      au < exists ; exists ; 2005 ; Project Management Journal Volume 36 ; 36 ; pmxa ; >
+      au < exists ; exists ; 2006 ; Project Management Journal Volume 37 ; 37 ; pmxa ; >
+      au < exists ; exists ; 2007 ; Project Management Journal Volume 38 ; 38 ; pmxa ; >
+      au < exists ; exists ; 2008 ; Project Management Journal Volume 39 ; 39 ; pmxa ; >
+      au < exists ; exists ; 2009 ; Project Management Journal Volume 40 ; 40 ; pmxa ; >
+      au < exists ; exists ; 2010 ; Project Management Journal Volume 41 ; 41 ; pmxa ; >
+      au < exists ; exists ; 2011 ; Project Management Journal Volume 42 ; 42 ; pmxa ; >
+      au < exists ; exists ; 2012 ; Project Management Journal Volume 43 ; 43 ; pmxa ; >
+      au < exists ; exists ; 2013 ; Project Management Journal Volume 44 ; 44 ; pmxa ; >
+      au < exists ; exists ; 2014 ; Project Management Journal Volume 45 ; 45 ; pmxa ; >
+      au < exists ; exists ; 2015 ; Project Management Journal Volume 46 ; 46 ; pmxa ; >
+      au < exists ; exists ; 2016 ; Project Management Journal Volume 47 ; 47 ; pmxa ; >
+      au < exists ; exists ; 2017 ; Project Management Journal Volume 48 ; 48 ; pmxa ; >
+      au < exists ; exists ; 2018 ; Project Management Journal Volume 49 ; 49 ; pmxa ; >
 
   }
 
