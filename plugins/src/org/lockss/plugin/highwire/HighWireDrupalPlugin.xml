@@ -53,7 +53,7 @@
    -->
   <entry>
     <string>plugin_version</string>
-    <string>75</string>
+    <string>76</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -153,6 +153,8 @@
       <string>1,"^https?://%s/content(/(?![0-9]+/)[^/.]+)?/%s(/[^/.]+)?(\.toc)?$", url_host(base_url), volume_name</string>
       <!-- after content is required vol, optional issue, required page, then allowed extensions or EOL 
             page may also contain roman numerals, dot, & number (iii.2)  -->
+      <!-- iii.article_info was causing over counts, should not be collected -->
+      <string>2,"\.(article_info)$"</string>
       <!-- ASH has a new pattern for supp data http://www.bloodjournal.org/content/121/1/170/tab-figures-only -->
       <string>1,"^https?://%s/content/%s(/[^/.]+)?/(((?:([ivx]+)\.)?[^/.]+?(\.\d+)?))(|/related|/tab-figures-(data|only))$", url_host(base_url), volume_name</string>
       <!-- http://msphere.asm.org/content/1/1/masthead.1-1 was excluded -->
