@@ -20,7 +20,7 @@
     >
 
     param[base_url] = http://ammin.geoscienceworld.org/
-    #back content of American Min and Reviews in M are processed as warcs/source content.
+    #back content of American Min and Reviews in M are processed as warcs/source content. See RT: 8104
 
     {
       au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; exists ; 1976 ; American Mineralogist Volume 61 ; 61 ; >
@@ -125,7 +125,7 @@
       
     param[base_url] = http://rimg.geoscienceworld.org/
     comment[continues] = 0275-0279
-    #back content of American Min and Reviews in M are processed as warcs/source content.
+    #back content of American Min and Reviews in M are processed as warcs/source content. See RT: 8104
 
     au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; exists ; 2000 ; Reviews in Mineralogy and Geochemistry Volume 38 ; 38 ; >
     au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; exists ; 2000 ; Reviews in Mineralogy and Geochemistry Volume 39 ; 39 ; >
