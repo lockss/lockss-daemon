@@ -148,13 +148,12 @@
     <list>
       <string>1,"^https?://%s/c?lockss-manifest/[^/.]*vol_%s_manifest.html", url_host(base_url), volume_name</string>
       <string>1,"^https?://%s/content(/[^/]+)?/suppl/", url_host(base_url)</string>
-      <string>2,"^https?://%s/content/(by/(year|volume)|current|.*/article-)", url_host(base_url)</string>
+      <!-- iii.article-info was causing over counts, should not be collected -->
+      <string>2,"^https?://%s/content/(by/(year|volume)|current|.*/article-|.*\.article-info)", url_host(base_url)</string>
       <!-- after content is optional jcode, required vol, optional issue, optional .toc  -->
       <string>1,"^https?://%s/content(/(?![0-9]+/)[^/.]+)?/%s(/[^/.]+)?(\.toc)?$", url_host(base_url), volume_name</string>
       <!-- after content is required vol, optional issue, required page, then allowed extensions or EOL 
             page may also contain roman numerals, dot, & number (iii.2)  -->
-      <!-- iii.article_info was causing over counts, should not be collected -->
-      <string>2,"\.(article_info)$"</string>
       <!-- ASH has a new pattern for supp data http://www.bloodjournal.org/content/121/1/170/tab-figures-only -->
       <string>1,"^https?://%s/content/%s(/[^/.]+)?/(((?:([ivx]+)\.)?[^/.]+?(\.\d+)?))(|/related|/tab-figures-(data|only))$", url_host(base_url), volume_name</string>
       <!-- http://msphere.asm.org/content/1/1/masthead.1-1 was excluded -->

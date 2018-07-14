@@ -127,7 +127,7 @@ public class TestHighWireDrupalArticleIteratorVIPFactory extends ArticleIterator
     // found roman_numeral.number in page
     assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/iii.2");
     // XXX Should NOT match; won't be an  issue if crawl rules work
-    assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/iii.article_info");
+    assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/iii.article-info");
     // issue is now optional 
     assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1");
     assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/1.toc");
