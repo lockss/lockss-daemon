@@ -1278,7 +1278,7 @@
 #      param[base_url] = https://www.healthpsychologybulletin.com/
 
       au < deepCrawl ; exists ; 2017 ; 1 ; Health Psychology Bulletin Volume 2017 ; 2017 ; https://www.healthpsychologybulletin.com/ ; >
-      au < expected ; exists ; 2018 ; 2 ; Health Psychology Bulletin Volume 2018 ; 2018 ; https://www.healthpsychologybulletin.com/ ; >
+      au < manifest ; exists ; 2018 ; 2 ; Health Psychology Bulletin Volume 2018 ; 2018 ; https://www.healthpsychologybulletin.com/ ; >
 
   }
 
