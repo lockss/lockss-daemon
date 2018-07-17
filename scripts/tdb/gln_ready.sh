@@ -54,6 +54,7 @@ count=250
    cat $tpath/gr_common_healthy_s.txt | sed -e 's/http/https/g' >> $tpath/gr_common_healthy.txt
    #Fix Hindawi so that downloads uses http. But each non-letter character is represented by how many html characters?
    #cat $tpath/gr_common_healthy_s.txt | sed -e 's/http/https/g' | sed -e 's/https\(...downloads.hindawi.com\)/http\1/' >> $tpath/gr_common_healthy.txt
+   #https%3A%2F%2Fdownloads%2Ehindawi%2Ecom
 
 # Select a random collection of clockss AUids
    cat $tpath/gr_common_healthy.txt | sort | uniq | shuf | head -"$count" > $tpath/gr_common_shuf.txt
