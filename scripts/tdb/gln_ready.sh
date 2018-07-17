@@ -52,6 +52,8 @@ count=250
    comm -12 $tpath/gr_ingest_healthy.txt $tpath/gr_common_s.txt > $tpath/gr_common_healthy_s.txt
    #Check health using http, but before checking for manifest pages move back to https and merge with the other list
    cat $tpath/gr_common_healthy_s.txt | sed -e 's/http/https/g' >> $tpath/gr_common_healthy.txt
+   #Fix Hindawi so that downloads uses http. But each non-letter character is represented by how many html characters?
+   #cat $tpath/gr_common_healthy_s.txt | sed -e 's/http/https/g' | sed -e 's/https\(...downloads.hindawi.com\)/http\1/' >> $tpath/gr_common_healthy.txt
 
 # Select a random collection of clockss AUids
    cat $tpath/gr_common_healthy.txt | sort | uniq | shuf | head -"$count" > $tpath/gr_common_shuf.txt
