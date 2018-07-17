@@ -35,15 +35,19 @@ package org.lockss.plugin.berghahn;
 
 import java.io.IOException;
 
-import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.SimpleUrlConsumer;
 import org.lockss.util.Logger;
 
 /**
- * <p>
- * A simple UrlConsumerFactory
+ * UNUSED CURRENTLY
+ * Tho the links to the pdf are 
+ * blah/downloadpdf/x/y/z.xml
+ * which redirect to
+ * blah/downloadpdf/x/y/z.pdf
+ * after discussion we've decided to leave both versions in - so that if the pdf is ever linked to direclty, we have it
+ * 
  */
 public class BerghahnUrlConsumerFactory implements UrlConsumerFactory {
   private static final Logger log = Logger.getLogger(BerghahnUrlConsumerFactory.class);
@@ -74,7 +78,7 @@ public class BerghahnUrlConsumerFactory implements UrlConsumerFactory {
      */
     public boolean shouldStoreAtOrigUrl() throws IOException {
     	boolean should = false;
-
+/*
     	if (fud.redirectUrls != null && (fud.redirectUrls.size() > 0)) {
     		//the fetched = original but for the terminating ".xml" and ".pdf"
     		if (fud.fetchUrl.endsWith(".pdf") &&
@@ -84,6 +88,7 @@ public class BerghahnUrlConsumerFactory implements UrlConsumerFactory {
     		}
     		log.debug3("Berg redirect: " + fud.redirectUrls.size() + " " + fud.origUrl + " to " + fud.fetchUrl + " : " + should);
     	}
+    	*/
     	return should;
     }
   }

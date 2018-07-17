@@ -42,10 +42,13 @@ import org.lockss.util.Logger;
 
 /*
  * https://www.berghahnjournals.com/downloadpdf/journals/boyhood-studies/10/1/bhs100105.pdf
- * https://www.berghahnjournals.com/downloadpdf/journals/boyhood-studies/10/1/bhs100105.xml (consumed in to above)
+ * https://www.berghahnjournals.com/downloadpdf/journals/boyhood-studies/10/1/bhs100105.xml
  * https://www.berghahnjournals.com/view/journals/boyhood-studies/10/1/bhs100101.xml
- * https://www.berghahnjournals.com/view/journals/boyhood-studies/10/1/bhs100101.xml?&pdfVersion=true (WHAAA?)
  * https://www.berghahnjournals.com/view/journals/boyhood-studies/10/1/bhs100101.xml?pdfVersion=true (frameset)
+ *
+ * Also - this look like an error. Ignore it. It's the link associated with the pdf tab when you're
+ * already on the html of the pdf tab active
+ * https://www.berghahnjournals.com/view/journals/boyhood-studies/10/1/bhs100101.xml?&pdfVersion=true (WHAAA?)
  */
 
 public class BerghahnArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
@@ -57,12 +60,18 @@ public class BerghahnArticleIteratorFactory implements ArticleIteratorFactory, A
   private static final String PATTERN_TEMPLATE = 
       "\"^%s(downloadpdf|view)/journals/%s/%s/\", base_url, journal_id, volume_name";
 
-  private static final Pattern ART_LANDING_PATTERN = Pattern.compile("/view/journals/[^/]+/[^/]+/[^/]+/([^/]+)\\.xml$", Pattern.CASE_INSENSITIVE);               
-  private static final Pattern ART_PDF_PATTERN = Pattern.compile("/downloadpdf/journals/[^/]+/[^/]+/[^/]+/([^/]+)\\.pdf$", Pattern.CASE_INSENSITIVE);               
+  // (?![^/]+issue[^/]+) is a negative lookahead to exclude issue TOC pages but to allow articles through
+  // it must come before the bit that picks up the filename when it's not an issue
+  // https://www.berghahnjournals.com/view/journals/boyhood-studies/10/1/boyhood-studies.10.issue-1.xml
+  private static final Pattern ART_LANDING_PATTERN = Pattern.compile("/view/(journals/.+/(?![^/]+issue[^/]+)[^/]+)\\.xml$", Pattern.CASE_INSENSITIVE);               
+  private static final Pattern ART_PDF_PATTERN = Pattern.compile("/downloadpdf/(journals/.+/[^/]+)\\.pdf$", Pattern.CASE_INSENSITIVE);               
+  private static final Pattern ART_PDF_XML_PATTERN = Pattern.compile("/downloadpdf/(journals/.+/[^/]+)\\.xml$", Pattern.CASE_INSENSITIVE);               
+  
   // how to get from one of the above to the other
-  private final String PDF_REPLACEMENT = "/downloadpdf/journals/[^/]+/[^/]+/[^/]+/$1.pdf$"; 
-  private final String PDF_FRAME_REPLACEMENT = "/view/journals/[^/]+/[^/]+/[^/]+/$1.xml?pdfVersion=true"; //legacy
-  private final String LANDING_REPLACEMENT = "/view/journals/[^/]+/[^/]+/[^/]+/$1.xml$";
+  private final String PDF_REPLACEMENT = "/downloadpdf/$1.pdf"; 
+  private final String PDF_XML_REPLACEMENT = "/downloadpdf/$1.xml"; 
+  private final String PDF_FRAME_REPLACEMENT = "/view/$1.xml?pdfVersion=true"; //legacy
+  private final String LANDING_REPLACEMENT = "/view/$1.xml";
 
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) throws PluginException {
@@ -77,10 +86,15 @@ public class BerghahnArticleIteratorFactory implements ArticleIteratorFactory, A
         ArticleFiles.ROLE_ABSTRACT,
         ArticleFiles.ROLE_ARTICLE_METADATA);
 
-
+    // make this one primary by defining it first
     builder.addAspect(ART_PDF_PATTERN,
-        PDF_REPLACEMENT,
-        ArticleFiles.ROLE_FULL_TEXT_PDF);
+            PDF_REPLACEMENT,
+            ArticleFiles.ROLE_FULL_TEXT_PDF);
+
+    // another version
+    builder.addAspect(ART_PDF_XML_PATTERN,
+            PDF_XML_REPLACEMENT,
+            ArticleFiles.ROLE_FULL_TEXT_PDF);
 
     builder.addAspect(
         PDF_FRAME_REPLACEMENT,

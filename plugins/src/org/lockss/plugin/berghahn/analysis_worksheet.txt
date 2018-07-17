@@ -11,6 +11,8 @@ wget - 200
 TOC pdf direct link
 https://www.berghahnjournals.com/downloadpdf/journals/environment-and-society/4/1/air-es040101.xml
 wget - 302 to https://www.berghahnjournals.com/downloadpdf/journals/environment-and-society/4/1/air-es040108.pdf  
+NOTE - after discussion we've decided to collect both the link (.xml) and the final (.pdf) without UrlCOnsumer in case they ever change or 
+expose access to the pdf directly 
 
 
 Article landing PDF tab
@@ -35,5 +37,12 @@ https://www.berghahnjournals.com/cite/$002fjournals$002fenvironment-and-society$
   
 notes:  
 1. Have not yet found full text html example across the journals to check images, figures
-2. This is 
+2. Do not use url consumer - get both the downloadpdf XML and PDF suffix versions
+3. There is a wonky link
+
+Abstract tab is foo.xml
+PDF tab link is foo.xml?pdfVersion=true
+but when on the Pdf tab, the pdf tab is a new link:
+   foo.xml?&pdfVersion=true
+   which looks like an error - maybe crawl rule out or does it not matter
 
