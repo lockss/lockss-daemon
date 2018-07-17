@@ -7,7 +7,7 @@ tpath="/home/$LOGNAME/tmp"
 #mkdir -p $tpath
 
 plugin="lockss"
-count=250 
+count=25 
 
 # Make a list of AUids that are on ingest machine(s), and 'Yes' have substance, have crawled successfully.
    # Date of last successful crawl is unimportant because many good AUs have been frozen or finished.
@@ -18,10 +18,10 @@ count=250
    #set -x
    # Make a list of AUids from clockss
    #./scripts/tdb/tdbout -CZLI -a -Q "year ~ '^20' and plugin ~ '$plugin' and year !~ '2018'" tdb/clockssingest/*.tdb | grep -v TaylorAndFrancisPlugin | sort > $tpath/gr_clockss_c.txt
-   ./scripts/tdb/tdbout -CZLIF -a -Q "year ~ '^20' and plugin ~ '$plugin' and year !~ '2018'" tdb/clockssingest/*.tdb | sort > $tpath/gr_clockss_c.txt
+   ./scripts/tdb/tdbout -CZLIF -a -Q "year ~ '^20' and plugin ~ '$plugin' and year !~ '2018'" tdb/clockssingest/cop*.tdb | sort > $tpath/gr_clockss_c.txt
    # Make a list of AUids from gln
    #./scripts/tdb/tdbout -M -a -Q "year ~ '^20' and plugin ~ '$plugin' and year !~ '2018'" tdb/prod/*.tdb | grep -v TaylorAndFrancisPlugin | sort > $tpath/gr_gln_m.txt
-   ./scripts/tdb/tdbout -M -a -Q "year ~ '^20' and plugin ~ '$plugin' and year !~ '2018'" tdb/prod/*.tdb | sort > $tpath/gr_gln_m.txt
+   ./scripts/tdb/tdbout -M -a -Q "year ~ '^20' and plugin ~ '$plugin' and year !~ '2018'" tdb/prod/cop*.tdb | sort > $tpath/gr_gln_m.txt
 
    # Convert the gln list to clockss format, and start a list
    cat $tpath/gr_gln_m.txt | sed -e 's/\(\|[^\|]*\)Plugin/Clockss\1Plugin/' | sort > $tpath/gr_gln_mc.txt
@@ -30,7 +30,7 @@ count=250
 
    # Also convert the https items to http items, convert to clockss format, and start a list
    # In this script use http to compare to clockss AUs, and to look for healthy. But convert back to https to look for manifest pages.
-   cat $tpath/gr_gln_m.txt | grep https%3A | grep -v ProjectMuse2017Plugin | sed -e 's/https/http/' | sed -e 's/\(\|[^\|]*\)Plugin/Clockss\1Plugin/' | sort > $tpath/gr_gln_mcs.txt
+   cat $tpath/gr_gln_m.txt | grep https%3A | grep -v ProjectMuse2017Plugin | sed -e 's/https/http/g' | sed -e 's/\(\|[^\|]*\)Plugin/Clockss\1Plugin/' | sort > $tpath/gr_gln_mcs.txt
    # Find common items on the clockss list and the clockss-formatted gln list
    comm -12 $tpath/gr_clockss_c.txt $tpath/gr_gln_mcs.txt > $tpath/gr_common_s.txt
    #set +x
@@ -51,14 +51,14 @@ count=250
    comm -12 $tpath/gr_ingest_healthy.txt $tpath/gr_common.txt > $tpath/gr_common_healthy.txt
    comm -12 $tpath/gr_ingest_healthy.txt $tpath/gr_common_s.txt > $tpath/gr_common_healthy_s.txt
    #Check health using http, but before checking for manifest pages move back to https and merge with the other list
-   cat $tpath/gr_common_healthy_s.txt | sed -e 's/http/https/' >> $tpath/gr_common_healthy.txt
+   cat $tpath/gr_common_healthy_s.txt | sed -e 's/http/https/g' >> $tpath/gr_common_healthy.txt
 
 # Select a random collection of clockss AUids
    cat $tpath/gr_common_healthy.txt | sort | uniq | shuf | head -"$count" > $tpath/gr_common_shuf.txt
    #shuf $tpath/gr_common_healthy.txt | head -"$count" > $tpath/gr_common_shuf.txt
    #After health check, convert back to https and merge lists together
-   #shuf $tpath/gr_common_healthy_s.txt | sed 's/http/https/' | head -"$count" >> $tpath/gr_common_shuf.txt
-   #cat $tpath/gr_common_shuf_s1.txt | sed -e 's/http/https/' > $tpath/gr_common_shuf_s2.txt #this one is https. For manifest page finding.
+   #shuf $tpath/gr_common_healthy_s.txt | sed 's/http/https/g' | head -"$count" >> $tpath/gr_common_shuf.txt
+   #cat $tpath/gr_common_shuf_s1.txt | sed -e 's/http/https/g' > $tpath/gr_common_shuf_s2.txt #this one is https. For manifest page finding.
 
 # FOR All AUs
 # Does AU have a clockss and gln manifest page?
