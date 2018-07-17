@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
- Copyright (c) 2013-2015 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2018 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -1685,5 +1681,38 @@ public class TestSubscriptionManager extends LockssTestCase {
     tdb.addTdbAuFromProperties(auUp);
     title = tdb.getTdbTitlesByIssn("1144-875X").iterator().next();
     assertTrue(subManager.isSubscribable(title));
+  }
+
+  public void testAddAuConfiguration() throws TdbException {
+    // Specify the relevant properties of the archival unit.
+    Properties properties = new Properties();
+    properties.setProperty("title", "MyTitle");
+    properties.setProperty("plugin",
+	"org.lockss.plugin.simulated.SimulatedPlugin");
+    properties.setProperty("param.1.key", "root");
+    properties.setProperty("param.1.value", tempDirPath + "/0");
+    properties.setProperty("param.2.key", "base_url");
+    properties.setProperty("param.2.value", "http://www.title3.org/");
+    properties.setProperty("param.3.key", "pub_down");
+    properties.setProperty("param.3.value", "false");
+    properties.setProperty("param.4.key", "param4key");
+    properties.setProperty("param.4.value", "param4value");
+
+    // Create the archival unit.
+    TdbAu tdbAu = createTdbAu(properties);
+    assertFalse(tdbAu.isDown());
+
+    String auId = tdbAu.getAuId(pluginManager);
+    String paramPrefix = PluginManager.auConfigPrefix(auId) + ".";
+
+    Configuration config = subManager.addAuConfiguration(tdbAu, auId,
+	ConfigManager.newConfiguration());
+    log.error("config = " + config);
+
+    assertEquals(tempDirPath + "/0", config.get(paramPrefix + "root"));
+    assertEquals("http://www.title3.org/",
+	config.get(paramPrefix + "base_url"));
+    assertEquals("false", config.get(paramPrefix + "pub_down"));
+    assertEquals("param4value", config.get(paramPrefix + "param4key"));
   }
 }
