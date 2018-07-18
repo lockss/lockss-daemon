@@ -34,6 +34,9 @@ package org.lockss.plugin.berghahn;
 
 import java.net.URL;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
@@ -54,14 +57,12 @@ public class TestBerghahnArchivalUnit extends LockssTestCase {
   static final String ROOT_URL = "https://www.berghahnjournals.com/";
   static final String ROOT_HOST = "www.berghahnjournals.com"; 
   
-/*
+
   static final String bgRepairList[] = 
     {
-        "://[^/]+/(templates/jsp|(css|img|js)Jawr|pb-assets|resources|sda|wro)/",
-    "/(assets|css|img|js|wro)/.+\\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$",
-    "://[^/]+/na[0-9]+/home/(readonly|literatum)/publisher/.*(/covergifs/.*\\.jpg|\\.fp\\.png(_v[0-9]+)?)$",
+    "://[^/]+/(assets|fileasset|skin)/",
     };
-*/
+
 
   
   private static final Logger log = Logger.getLogger(TestBerghahnArchivalUnit.class);
@@ -131,8 +132,7 @@ public class TestBerghahnArchivalUnit extends LockssTestCase {
     	shouldCacheTest("https://www.berghahnjournals.com/skin/20180516/css/style.css",true, bgAu, cus); 
     	shouldCacheTest("https://www.berghahnjournals.com/skin/20180516/fonts/fontawesome-webfont.woff?v=4.4.0",true, bgAu, cus); 
     	shouldCacheTest("https://www.berghahnjournals.com/skin/20180516/img/ajax-loader.gif",true, bgAu, cus); 
-        	shouldCacheTest("https://www.berghahnjournals.com/view/journals/boyhood-studies/10/1/bhs100101.xml",true, bgAu, cus); 
-            	shouldCacheTest("https://www.berghahnjournals.com/view/journals/boyhood-studies/10/1/bhs100101.xml?&pdfVersion=true",true, bgAu, cus); 
+   	shouldCacheTest("https://www.berghahnjournals.com/view/journals/boyhood-studies/10/1/bhs100101.xml",true, bgAu, cus); 
     	shouldCacheTest("https://www.berghahnjournals.com/view/journals/boyhood-studies/10/1/bhs100101.xml?pdfVersion=true", true, bgAu, cus); 
     	shouldCacheTest("https://www.berghahnjournals.com/view/journals/boyhood-studies/10/1/boyhood-studies.10.issue-1.xml", true, bgAu, cus); 
     	shouldCacheTest("https://www.berghahnjournals.com/view/journals/boyhood-studies/large-boyhood-studies_cover.jpg", true, bgAu, cus); 
@@ -151,7 +151,10 @@ shouldCacheTest("https://www.berghahnjournals.com/search?f_0=author&q_0=Alexandr
 shouldCacheTest("https://www.berghahnjournals.com/view/journals/boyhood-studies/10/2/bhs100201.xml?print", false, bgAu, cus); 
 shouldCacheTest("https://www.berghahnjournals.com/cite/$002fjournals$002fboyhood-studies$002f10$002f2$002fbhs100201.xml/$N?nojs=true", false, bgAu, cus); 
 shouldCacheTest("https://www.berghahnjournals.com/cite/$002fjournals$002fboyhood-studies$002f10$002f2$002fbhs100202.xml/$N?nojs=true", false, bgAu, cus); 
-shouldCacheTest("https://www.berghahnjournals.com/view/journals/boyhood-studies/10/2/bhs100201.xml?pdfVersion=true&print", false, bgAu, cus); 
+shouldCacheTest("https://www.berghahnjournals.com/view/journals/boyhood-studies/10/2/bhs100201.xml?pdfVersion=true&print", false, bgAu, cus);
+// and a likely template error we are excluding (link of pdf while on pdf tab already)
+shouldCacheTest("https://www.berghahnjournals.com/view/journals/boyhood-studies/10/1/bhs100101.xml?&pdfVersion=true", false, bgAu, cus);
+
   }
 
  
@@ -179,33 +182,28 @@ shouldCacheTest("https://www.berghahnjournals.com/view/journals/boyhood-studies/
     theDaemon.getNodeManager(FooAu);
 
     // if it changes in the plugin, you might need to change the test, so verify
-  //assertEquals(Arrays.asList(baseRepairList),
-  //RegexpUtil.regexpCollection(FooAu.makeRepairFromPeerIfMissingUrlPatterns()));
-    
+    assertEquals(Arrays.asList(bgRepairList),
+    		RegexpUtil.regexpCollection(FooAu.makeRepairFromPeerIfMissingUrlPatterns()));
+
     // make sure that's the regexp that will match to the expected url string
     // this also tests the regexp (which is the same) for the weighted poll map
     List <String> repairList = ListUtil.list(
-        "http://www.emeraldinsight.com.global.prod.fastly.net/jsJawr/1470752845/bundles/core.js",
-        "http://journals.sagepub.com/templates/jsp/_style2/_sage/images/sfxbutton.gif");
-    /*
-     Pattern p0 = Pattern.compile(baseRepairList[0]);
-     Pattern p1 = Pattern.compile(baseRepairList[1]);
-     Pattern p2 = Pattern.compile(baseRepairList[2]);
-     Matcher m0, m1, m2;
-     for (String urlString : repairList) {
-       m0 = p0.matcher(urlString);
-       m1 = p1.matcher(urlString);
-       m2 = p2.matcher(urlString);
-       assertEquals(urlString, true, m0.find() || m1.find() || m2.find());
-     }
-     //and this one should fail - it needs to be weighted correctly and repaired from publisher if possible
-     String notString ="http://www.emeraldinsight.com/na101/home/literatum/publisher/emerald/books/content/books/2013/9781781902868/9781781902868-007/20160215/images/small/figure1.gif";
-     m0 = p0.matcher(notString);
-     m1 = p1.matcher(notString);
-     m2 = p2.matcher(notString);
-     assertEquals(false, m0.find() && m1.find() && m2.find());
+    		"https://www.berghahnjournals.com/assets/20180516/app/components/display/AddToDownloadButton.js",
+    		"https://www.berghahnjournals.com/assets/20180516/vendor/modernizr.min.js",
+    		"https://www.berghahnjournals.com/fileasset/header_bg.png",
+    		"https://www.berghahnjournals.com/skin/20180516/img/sortable-icon.svg");
 
-     
+    Pattern p0 = Pattern.compile(bgRepairList[0]);
+    Matcher m0;
+    for (String urlString : repairList) {
+    	m0 = p0.matcher(urlString);
+    	assertEquals(urlString, true, m0.find());
+    }
+    //and this one should fail - it needs to be weighted correctly and repaired from publisher if possible
+    String notString ="https://www.berghahnjournals.com/view/journals/boyhood-studies/10/1/bhs100103.xml";
+    m0 = p0.matcher(notString);
+    assertEquals(false, m0.find());
+
     PatternFloatMap urlPollResults = FooAu.makeUrlPollResultWeightMap();
     assertNotNull(urlPollResults);
     for (String urlString : repairList) {
@@ -214,7 +212,6 @@ shouldCacheTest("https://www.berghahnjournals.com/view/journals/boyhood-studies/
           .0001);
     }
     assertEquals(1.0, urlPollResults.getMatch(notString, (float) 1), .0001);
-    */
   }
   
 

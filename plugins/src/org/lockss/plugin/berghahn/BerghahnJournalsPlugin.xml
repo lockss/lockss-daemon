@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>development</string>
+    <string>testing</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -50,6 +50,8 @@
       <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?v=[^/]*)?$", base_url_host</string>
       <string>4,"^%s", base_url</string>
       <string>2,"^%s.*print$", base_url</string>
+      <!--  looks like an error - pdf tab while on pdf tab view has ?amp -->
+      <string>2,"^%s.*\.xml\?&amp;pdfVersion=true$", base_url</string>
       <string>1,"^%s(view|downloadpdf|abstract)/journals/%s/%s", base_url, journal_id, volume_name</string>
     </list>
   </entry>
@@ -115,5 +117,17 @@
         <string>org.lockss.plugin.berghahn.BerghahnHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <string>au_repair_from_peer_if_missing_url_pattern</string>
+    <list>
+      <string>://[^/]+/(assets|fileasset|skin)/</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_url_poll_result_weight</string>
+    <list>
+      <string>://[^/]+/(assets|fileasset|skin)/, 0</string>
+    </list>
   </entry>  
 </map>
