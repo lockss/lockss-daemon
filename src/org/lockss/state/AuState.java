@@ -67,8 +67,8 @@ public class AuState implements LockssSerializable {
   protected long lastCrawlAttempt;	// last crawl start
   protected String lastCrawlResultMsg;
   protected int lastCrawlResult;
-  protected long lastDeepCrawlTime;	// last successful deep crawl finish
-  protected long lastDeepCrawlAttempt;	// last deep crawl start
+  protected long lastDeepCrawlTime = -1; // last successful deep crawl finish
+  protected long lastDeepCrawlAttempt = -1; // last deep crawl start
   protected String lastDeepCrawlResultMsg;
   protected int lastDeepCrawlResult;
   protected int lastDeepCrawlDepth;	// requested depth of last
@@ -84,12 +84,12 @@ public class AuState implements LockssSerializable {
   protected SubstanceChecker.State hasSubstance;
   protected String substanceVersion;
   protected String metadataVersion;
-  protected long lastMetadataIndex;     // last time metadata extraction
-					// completed
-  protected long lastContentChange;     // last time a new URL version created
-  protected long lastPoPPoll;		// last completed PoP poll time
+  protected long lastMetadataIndex = -1; // last time metadata extraction
+					 // completed
+  protected long lastContentChange = -1; // last time a new URL version created
+  protected long lastPoPPoll = -1;      // last completed PoP poll time
   protected int lastPoPPollResult;	// result of last PoP poll
-  protected long lastLocalHashScan;	// last completed local hash scan
+  protected long lastLocalHashScan = -1; // last completed local hash scan
   protected int numAgreePeersLastPoR = -1; // Number of agreeing peers last PoR
   protected int numWillingRepairers = -1; // Number of willing repairers
   protected int numCurrentSuspectVersions = -1; // # URLs w/ current version suspect

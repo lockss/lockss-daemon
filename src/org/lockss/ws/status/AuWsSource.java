@@ -619,12 +619,7 @@ public class AuWsSource extends AuWsResult {
 	for (Map.Entry entry : auProperties.entrySet()) {
 	  // Get the key and value of this property.
 	  String key = (String)entry.getKey();
-	  String val = null;
-
-	  // Handle only non-null values.
-	  if (entry.getValue() != null) {
-	    val = entry.getValue().toString();
-	  }
+	  Object val = entry.getValue();
 
 	  // Find the property type from the Archival Unit configuration.
 	  ConfigParamDescr descr = getPlugin().findAuConfigDescr(key);
@@ -635,10 +630,10 @@ public class AuWsSource extends AuWsResult {
 	    // No: Check whether the property is definitional.
 	  } else if (descr.isDefinitional()) {
 	    // Yes: Place it in the appropriate list.
-	    defParams.put(key, val);
+	    defParams.put(key, valString(val, descr));
 	  } else {
 	    // No: Place it in the appropriate list.
-	    nonDefParams.put(key, val);
+	    nonDefParams.put(key, valString(val, descr));
 	  }
 	}
 
@@ -649,6 +644,29 @@ public class AuWsSource extends AuWsResult {
     }
 
     return super.getAuConfiguration();
+  }
+
+  /** Return an appropriate string representation of the config value */
+  String valString(Object val, ConfigParamDescr descr) {
+    if (val == null) {
+      return null;
+    } else if (val instanceof org.apache.oro.text.regex.Perl5Pattern) {
+      return ((org.apache.oro.text.regex.Perl5Pattern)val).getPattern();
+    } else if (descr == null) {
+      return val.toString();
+    } else {
+      switch (descr.getType()) {
+      case ConfigParamDescr.TYPE_USER_PASSWD:
+	if (val instanceof List) {
+	  List l = (List)val;
+	  return l.get(0) + ":******";
+	}
+	break;
+      default:
+	return val.toString();
+      }
+    }
+    return val.toString();
   }
 
   @Override
