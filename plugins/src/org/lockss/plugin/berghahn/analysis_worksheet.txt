@@ -45,4 +45,14 @@ PDF tab link is foo.xml?pdfVersion=true
 but when on the Pdf tab, the pdf tab is a new link:
    foo.xml?&pdfVersion=true
    which looks like an error - maybe crawl rule out or does it not matter
+   
+Citation overlay is actually from this link:
+https://www.berghahnjournals.com/cite/$002fjournals$002fboyhood-studies$002f10$002f2$002fbhs100206.xml/$N?nojs=true
+Works also without the /$N?nojs=true part - could normalize that off
+
+and the ris download is from this:
+https://www.berghahnjournals.com/cite:exportcitation/ris?t:ac=$002fjournals$002fboyhood-studies$002f10$002f2$002fbhs100206.xml/$N&t:state:client=H4sIAAAAAAAAAD2OMU7DQBBFJyQIEF0aLkAJu04kaFJGihTFQkg5wcQe7InWu5udcYgbWkouwoWoqemoUuE0dP9JT0//8wfOX0cAMJAEq5AqgxGLmoxiJNHUPRj2SsmjM0JpzwWJmTsmr8+UhEX7tWBy5VpDwoqWTXS3K+q+fm8+Lr6P72cwzOG6CE0MvleXpcI43+IerUNf2bUm9tUsh6uXU+QJG9rBGwxyuIx97Z8PMSoM28QKozkrKdzZbWhPv8RuQleHUN6LtiWT2Elmp3ZTyyTLptmjOTTuDwEwRhDnAAAA   
+but this works;
+https://www.berghahnjournals.com/cite:exportcitation/ris?t:ac=$002fjournals$002fboyhood-studies$002f10$002f2$002fbhs100206.xml
+so normalize off the args...
 
