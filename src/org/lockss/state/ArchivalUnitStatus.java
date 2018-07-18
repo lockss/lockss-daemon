@@ -1469,10 +1469,11 @@ public class ArchivalUnitStatus
       for (Map.Entry entry : paramMap.entrySet()) {
 	String key = (String)entry.getKey();
 	Object val = entry.getValue();
+	ConfigParamDescr descr = plug.findAuConfigDescr(key);
 	Map row = new HashMap();
 	row.put("key", key);
-	row.put("val", valString(val));
-	putTypeSort(row, key, au, plug);
+	row.put("val", valString(val, descr));
+	putTypeSort(row, key, au, descr);
 	rows.add(row);
       }
       TdbAu tau = au.getTdbAu();
@@ -1488,14 +1489,26 @@ public class ArchivalUnitStatus
       return rows;
     }
 
-    String valString(Object val) {
+    String valString(Object val, ConfigParamDescr descr) {
       if (val == null) {
 	return "(null)";
       } else if (val instanceof org.apache.oro.text.regex.Perl5Pattern) {
 	return ((org.apache.oro.text.regex.Perl5Pattern)val).getPattern();
-      } else {
+      } else if (descr == null) {
 	return val.toString();
+      } else {
+	switch (descr.getType()) {
+	case ConfigParamDescr.TYPE_USER_PASSWD:
+	  if (val instanceof List) {
+	    List l = (List)val;
+	    return l.get(0) + ":******";
+	  }
+	  break;
+	default:
+	  return val.toString();
+	}
       }
+      return val.toString();
     }
 
     void addTdbRows(List rows, Map<String,String> tdbMap,
@@ -1512,8 +1525,8 @@ public class ArchivalUnitStatus
       }
     }
 
-    void putTypeSort(Map row, String key, ArchivalUnit au, Plugin plug) {
-      ConfigParamDescr descr = plug.findAuConfigDescr(key);
+    void putTypeSort(Map row, String key, ArchivalUnit au,
+		     ConfigParamDescr descr) {
       // keys not in au config are computed, others are definitional or not
       // according to their ConfigParamDescr.
       if (descr == null || !au.getConfiguration().containsKey(key)) {
