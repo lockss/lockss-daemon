@@ -53,6 +53,7 @@ import org.lockss.daemon.TitleConfig;
 import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
 import org.lockss.metadata.MetadataManager;
+import org.lockss.plugin.Plugin;
 import org.lockss.plugin.PluginManager;
 import org.lockss.plugin.PluginTestUtil;
 import org.lockss.plugin.simulated.SimulatedContentGenerator;
@@ -1697,6 +1698,13 @@ public class TestSubscriptionManager extends LockssTestCase {
     properties.setProperty("param.3.value", "false");
     properties.setProperty("param.4.key", "param4key");
     properties.setProperty("param.4.value", "param4value");
+
+    // Ensure some def and some non-def params
+    Plugin plug = new SimulatedPlugin();
+    ConfigParamDescr descr = plug.findAuConfigDescr("pub_down");
+    assertFalse(descr.isDefinitional());
+    descr = plug.findAuConfigDescr("root");
+    assertTrue(descr.isDefinitional());
 
     // Create the archival unit.
     TdbAu tdbAu = createTdbAu(properties);
