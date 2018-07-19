@@ -76,6 +76,7 @@ def get_au_status(host, auth, auid):
   - LastCompletedDeepCrawlDepth (numeric)
   - LastPoll (numeric)
   - LastPollResult (string)
+  - LastMetadataIndex (numeric)
   - PluginName (string)
   - Provider (string)
   - Publisher (string)
@@ -271,6 +272,7 @@ def query_aus(host, auth, select, where=None):
   - LastCompletedDeepCrawlDepth (numeric)
   - LastPoll (numeric)
   - LastPollResult (string)
+  - LastMetadataIndex (numeric)
   - Name (string)
   - NewContentCrawlUrls (list of strings)
   - PeerAgreements, a list of records with these fields:
@@ -560,6 +562,7 @@ _AU_STATUS = {
   'lastCompletedDeepCrawlDepth': ('Last completed deep crawl depth', lambda r: r.LastCompletedDeepCrawlDepth),
   'lastPoll': ('Last poll', lambda r: datetimems(r.LastPoll)),
   'lastPollResult': ('Last poll result', lambda r: r.LastPollResult),
+  'lastMetadataIndex': ('Last metadata index', lambda r: datetimems(r.LastMetadataIndex)),
   'pluginName': ('Plugin name', lambda r: r.PluginName),
   'provider': ('Provider', lambda r: r.Provider),
   'publisher': ('Publisher', lambda r: r.Publisher),
@@ -709,6 +712,7 @@ _QUERY_AUS = {
   'lastCompletedDeepCrawlDepth': ('Last completed deep crawl depth', lambda r: r.LastCompletedDeepCrawlDepth),
   'lastPoll': ('Last poll', lambda r: datetimems(r.LastPoll)),
   'lastPollResult': ('Last poll result', lambda r: r.LastPollResult),
+  'lastMetadataIndex': ('Last metadata index', lambda r: datetimems(r.LastMetadataIndex)),
   'name': ('Name', lambda r: r.Name),
   'newContentCrawlUrls': ('New content crawl URLs', lambda r: '<NewContentCrawlUrls>'),
   'peerAgreements': ('Peer agreements', lambda r: '<PeerAgreements>'),
