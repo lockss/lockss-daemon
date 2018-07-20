@@ -4575,7 +4575,7 @@
       param[journal_issn] = 1858-6538
       param[base_url] = http://www.bijojournal.org/
 
-      au < crawling ; exists ; 2015 ; Al-Basar International Journal of Ophthalmology Volume 3 ; 2015 ; 3 ; > #transient 500 server error.
+      au < frozen ; exists ; 2015 ; Al-Basar International Journal of Ophthalmology Volume 3 ; 2015 ; 3 ; > #transient 500 server error.
       au < crawling ; exists ; 2017 ; Al-Basar International Journal of Ophthalmology Volume 4 ; 2017 ; 4 ; >
       au < expected ; exists ; 2018 ; Al-Basar International Journal of Ophthalmology Volume 5 ; 2018 ; 5 ; >
 
@@ -5083,7 +5083,7 @@
       param[journal_issn] = 2348-1471
       param[base_url] = http://www.dmrjournal.org/
 
-      au < crawling ; exists ; 2013 ; Dentistry and Medical Research Volume 1 ; 2013 ; 1 ; >
+      au < frozen ; exists ; 2013 ; Dentistry and Medical Research Volume 1 ; 2013 ; 1 ; >
       au < crawling ; exists ; 2014 ; Dentistry and Medical Research Volume 2 ; 2014 ; 2 ; >
       au < frozen ; exists ; 2015 ; Dentistry and Medical Research Volume 3 ; 2015 ; 3 ; >
       au < frozen ; exists ; 2016 ; Dentistry and Medical Research Volume 4 ; 2016 ; 4 ; >
@@ -5514,7 +5514,7 @@
       au < finished ; crawling ; 2014 ; Indian Journal of Allergy, Asthma and Immunology Volume 28 ; 2014 ; 28 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2015 ; Indian Journal of Allergy, Asthma and Immunology Volume 29 ; 2015 ; 29 ; >
       au < deepCrawl ; exists ; 2016 ; Indian Journal of Allergy, Asthma and Immunology Volume 30 ; 2016 ; 30 ; >
-      au < crawling ; exists ; 2017 ; Indian Journal of Allergy, Asthma and Immunology Volume 31 ; 2017 ; 31 ; >
+      au < frozen ; exists ; 2017 ; Indian Journal of Allergy, Asthma and Immunology Volume 31 ; 2017 ; 31 ; >
       au < manifest ; exists ; 2018 ; Indian Journal of Allergy, Asthma and Immunology Volume 32 ; 2018 ; 32 ; >
 
   }
@@ -6447,7 +6447,7 @@
       au < frozen ; exists ; 2014 ; Journal of Health Specialties Volume 2 ; 2014 ; 2 ; >
       au < frozen ; exists ; 2015 ; Journal of Health Specialties Volume 3 ; 2015 ; 3 ; >
       au < deepCrawl ; exists ; 2016 ; Journal of Health Specialties Volume 4 ; 2016 ; 4 ; >
-      au < crawling ; exists ; 2017 ; Journal of Health Specialties Volume 5 ; 2017 ; 5 ; >
+      au < frozen ; exists ; 2017 ; Journal of Health Specialties Volume 5 ; 2017 ; 5 ; >
       au < manifest ; exists ; 2018 ; Journal of Health Specialties Volume 6 ; 2018 ; 6 ; >
 
   }
