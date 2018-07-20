@@ -912,4 +912,27 @@
 
   }
 
+  {
+
+    title <
+      name = Transactions of the Historic Society of Lancashire and Cheshire ;
+      issn = 0140-332X ;
+      eissn = 2398-1601 ;
+      issnl = 0140-332X
+    >
+
+    param[journal_id] = transactions
+
+    au < exists ; 2010 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 159 ; 159 ; https://online.liverpooluniversitypress.co.uk/ >
+    au < exists ; 2011 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 160 ; 160 ; https://online.liverpooluniversitypress.co.uk/ >
+    au < exists ; 2012 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 161 ; 161 ; https://online.liverpooluniversitypress.co.uk/ >
+    au < exists ; 2013 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 162 ; 162 ; https://online.liverpooluniversitypress.co.uk/ >
+    au < exists ; 2014 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 163 ; 163 ; https://online.liverpooluniversitypress.co.uk/ >
+    au < exists ; 2015 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 164 ; 164 ; https://online.liverpooluniversitypress.co.uk/ >
+    au < exists ; 2016 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 165 ; 165 ; https://online.liverpooluniversitypress.co.uk/ >
+    au < exists ; 2017 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 166 ; 166 ; https://online.liverpooluniversitypress.co.uk/ >
+    au < expected ; 2018 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 167 ; 167 ; https://online.liverpooluniversitypress.co.uk/ >
+
+  }
+
 }
