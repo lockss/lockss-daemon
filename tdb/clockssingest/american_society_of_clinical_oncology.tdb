@@ -65,7 +65,7 @@
       au < frozen ; exists ; 2015 ; Journal of Clinical Oncology Volume 33 ; 33 ; >
       au < frozen ; exists ; 2016 ; Journal of Clinical Oncology Volume 34 ; 34 ; >
       au < deepCrawl ; exists ; 2017 ; Journal of Clinical Oncology Volume 35 ; 35 ; >
-      au < testing ; exists ; 2018 ; Journal of Clinical Oncology Volume 36 ; 36 ; >
+      au < ready ; exists ; 2018 ; Journal of Clinical Oncology Volume 36 ; 36 ; >
 
   }
 
@@ -82,7 +82,7 @@
       au < frozen ; exists ; 2015 ; Journal of Global Oncology Volume 1 ; 1 ; >
       au < frozen ; exists ; 2016 ; Journal of Global Oncology Volume 2 ; 2 ; >
       au < deepCrawl ; exists ; 2017 ; Journal of Global Oncology Volume 3 ; 3 ; >
-      au < testing ; exists ; 2018 ; Journal of Global Oncology Volume 4 ; 4 ; >
+      au < ready ; exists ; 2018 ; Journal of Global Oncology Volume 4 ; 4 ; >
 
   }
 
@@ -109,7 +109,7 @@
       au < frozen ; exists ; 2015 ; Journal of Oncology Practice Volume 11 ; 11 ; >
       au < frozen ; exists ; 2016 ; Journal of Oncology Practice Volume 12 ; 12 ; >
       au < deepCrawl ; exists ; 2017 ; Journal of Oncology Practice Volume 13 ; 13 ; >
-      au < testing ; exists ; 2018 ; Journal of Oncology Practice Volume 14 ; 14 ; >
+      au < ready ; exists ; 2018 ; Journal of Oncology Practice Volume 14 ; 14 ; >
 
   }
 
@@ -123,7 +123,7 @@
       param[journal_id] = cci
 
       au < deepCrawl ; exists ; 2017 ; JCO Clinical Cancer Informatics Volume 1 ; 1 ; >
-      au < testing ; exists ; 2018 ; JCO Clinical Cancer Informatics Volume 2 ; 2 ; >
+      au < ready ; exists ; 2018 ; JCO Clinical Cancer Informatics Volume 2 ; 2 ; >
 
   }
 
@@ -137,7 +137,7 @@
       param[journal_id] = po
 
       au < deepCrawl ; exists ; 2017 ; JCO Precision Oncology Volume 1 ; 1 ; >
-      au < testing ; exists ; 2018 ; JCO Precision Oncology Volume 2 ; 2 ; >
+      au < ready ; exists ; 2018 ; JCO Precision Oncology Volume 2 ; 2 ; >
 
   }
 
