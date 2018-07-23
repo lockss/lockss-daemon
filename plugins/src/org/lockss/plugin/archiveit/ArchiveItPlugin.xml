@@ -9,11 +9,11 @@
   </entry>
   <entry>
     <string>au_def_pause_time</string>
-    <long>6000</long>
+    <long>3000</long>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -79,7 +79,7 @@
       <org.lockss.daemon.ConfigParamDescr>
         <key>user_pass</key>
         <displayName>Username:Password</displayName>
-        <type>1</type>
+        <type>10</type>
         <size>30</size>
         <definitional>false</definitional>
         <defaultOnly>false</defaultOnly>
