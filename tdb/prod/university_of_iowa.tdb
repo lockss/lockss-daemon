@@ -11,23 +11,23 @@
       >
 
       plugin = org.lockss.plugin.bepress.BePressPlugin
-      param[base_url] = http://ir.uiowa.edu/
+      #param[base_url] = http://ir.uiowa.edu/
       param[journal_abbr] = annals-of-iowa
-      implicit < status ; year ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] ; param[base_url] >
 
-      au < released ; 2005 ; Annals at Iowa Volume 64 ; 64 >
-      au < released ; 2006 ; Annals at Iowa Volume 65 ; 65 >
-      au < released ; 2007 ; Annals at Iowa Volume 66 ; 66 >
-      au < released ; 2008 ; Annals at Iowa Volume 67 ; 67 >
-      au < released ; 2009 ; Annals at Iowa Volume 68 ; 68 >
-      au < released ; 2010 ; Annals at Iowa Volume 69 ; 69 >
-      au < released ; 2011 ; Annals at Iowa Volume 70 ; 70 >
-      au < released ; 2012 ; Annals at Iowa Volume 71 ; 71 >
-      au < released ; 2013 ; Annals at Iowa Volume 72 ; 72 >
-      au < released ; 2014 ; Annals at Iowa Volume 73 ; 73 >
-      au < released ; 2015 ; Annals at Iowa Volume 74 ; 74 >
-      au < released ; 2016 ; Annals at Iowa Volume 75 ; 75 >
-      au < manifest ; 2017 ; Annals at Iowa Volume 76 ; 76 >
+      au < released ; 2005 ; Annals at Iowa Volume 64 ; 64 ; http://ir.uiowa.edu/ >
+      au < released ; 2006 ; Annals at Iowa Volume 65 ; 65 ; http://ir.uiowa.edu/ >
+      au < released ; 2007 ; Annals at Iowa Volume 66 ; 66 ; http://ir.uiowa.edu/ >
+      au < released ; 2008 ; Annals at Iowa Volume 67 ; 67 ; http://ir.uiowa.edu/ >
+      au < released ; 2009 ; Annals at Iowa Volume 68 ; 68 ; http://ir.uiowa.edu/ >
+      au < released ; 2010 ; Annals at Iowa Volume 69 ; 69 ; http://ir.uiowa.edu/ >
+      au < released ; 2011 ; Annals at Iowa Volume 70 ; 70 ; http://ir.uiowa.edu/ >
+      au < released ; 2012 ; Annals at Iowa Volume 71 ; 71 ; http://ir.uiowa.edu/ >
+      au < released ; 2013 ; Annals at Iowa Volume 72 ; 72 ; http://ir.uiowa.edu/ >
+      au < released ; 2014 ; Annals at Iowa Volume 73 ; 73 ; http://ir.uiowa.edu/ >
+      au < released ; 2015 ; Annals at Iowa Volume 74 ; 74 ; http://ir.uiowa.edu/ >
+      au < released ; 2016 ; Annals at Iowa Volume 75 ; 75 ; http://ir.uiowa.edu/ >
+      au < manifest ; 2017 ; Annals at Iowa Volume 76 ; 76 ; https://ir.uiowa.edu/ >
 
     }
     
@@ -90,31 +90,31 @@
       >
 
       plugin = org.lockss.plugin.bepress.BePressPlugin
-      param[base_url] = http://ir.uiowa.edu/
+      #param[base_url] = http://ir.uiowa.edu/
       param[journal_abbr] = dadasur
-      implicit < status ; year ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] ; param[base_url] >
 
-      au < manifest ; 1971 ; Dada/Surrealism Volume 1 ; 1 >
-      au < manifest ; 1972 ; Dada/Surrealism Volume 2 ; 2 >
-      au < manifest ; 1973 ; Dada/Surrealism Volume 3 ; 3 >
-      au < manifest ; 1974 ; Dada/Surrealism Volume 4 ; 4 >
-      au < manifest ; 1975 ; Dada/Surrealism Volume 5 ; 5 >
-      au < manifest ; 1976 ; Dada/Surrealism Volume 6 ; 6 >
-      au < manifest ; 1977 ; Dada/Surrealism Volume 7 ; 7 >
-      au < manifest ; 1978 ; Dada/Surrealism Volume 8 ; 8 >
-      au < manifest ; 1979 ; Dada/Surrealism Volume 9 ; 9 >
-      au < manifest ; 1982 ; Dada/Surrealism Volume 10 ; 10 >
-      au < doesNotExist ; 0 ; Dada/Surrealism Volume 11 ; 11 >
-      au < manifest ; 1983 ; Dada/Surrealism Volume 12 ; 12 >
-      au < manifest ; 1984 ; Dada/Surrealism Volume 13 ; 13 >
-      au < manifest ; 1985 ; Dada/Surrealism Volume 14 ; 14 >
-      au < manifest ; 1986 ; Dada/Surrealism Volume 15 ; 15 >
-      au < manifest ; 1987 ; Dada/Surrealism Volume 16 ; 16 >
-      au < manifest ; 1988 ; Dada/Surrealism Volume 17 ; 17 >
-      au < manifest ; 1990 ; Dada/Surrealism Volume 18 ; 18 >
-      au < released ; 2013 ; Dada/Surrealism Volume 19 ; 19 >
-      au < released ; 2015 ; Dada/Surrealism Volume 20 ; 20 >
-      au < manifest ; 2017 ; Dada/Surrealism Volume 21 ; 21 >
+      au < manifest ; 1971 ; Dada/Surrealism Volume 1 ; 1 ; https://ir.uiowa.edu/ >
+      au < manifest ; 1972 ; Dada/Surrealism Volume 2 ; 2 ; https://ir.uiowa.edu/ >
+      au < manifest ; 1973 ; Dada/Surrealism Volume 3 ; 3 ; https://ir.uiowa.edu/ >
+      au < manifest ; 1974 ; Dada/Surrealism Volume 4 ; 4 ; https://ir.uiowa.edu/ >
+      au < manifest ; 1975 ; Dada/Surrealism Volume 5 ; 5 ; https://ir.uiowa.edu/ >
+      au < manifest ; 1976 ; Dada/Surrealism Volume 6 ; 6 ; https://ir.uiowa.edu/ >
+      au < manifest ; 1977 ; Dada/Surrealism Volume 7 ; 7 ; https://ir.uiowa.edu/ >
+      au < manifest ; 1978 ; Dada/Surrealism Volume 8 ; 8 ; https://ir.uiowa.edu/ >
+      au < manifest ; 1979 ; Dada/Surrealism Volume 9 ; 9 ; https://ir.uiowa.edu/ >
+      au < manifest ; 1982 ; Dada/Surrealism Volume 10 ; 10 ; https://ir.uiowa.edu/ >
+      au < doesNotExist ; 0 ; Dada/Surrealism Volume 11 ; 11 ; https://ir.uiowa.edu/ >
+      au < manifest ; 1983 ; Dada/Surrealism Volume 12 ; 12 ; https://ir.uiowa.edu/ >
+      au < manifest ; 1984 ; Dada/Surrealism Volume 13 ; 13 ; https://ir.uiowa.edu/ >
+      au < manifest ; 1985 ; Dada/Surrealism Volume 14 ; 14 ; https://ir.uiowa.edu/ >
+      au < manifest ; 1986 ; Dada/Surrealism Volume 15 ; 15 ; https://ir.uiowa.edu/ >
+      au < manifest ; 1987 ; Dada/Surrealism Volume 16 ; 16 ; https://ir.uiowa.edu/ >
+      au < manifest ; 1988 ; Dada/Surrealism Volume 17 ; 17 ; https://ir.uiowa.edu/ >
+      au < manifest ; 1990 ; Dada/Surrealism Volume 18 ; 18 ; https://ir.uiowa.edu/ >
+      au < released ; 2013 ; Dada/Surrealism Volume 19 ; 19 ; http://ir.uiowa.edu/ >
+      au < released ; 2015 ; Dada/Surrealism Volume 20 ; 20 ; http://ir.uiowa.edu/ >
+      au < manifest ; 2017 ; Dada/Surrealism Volume 21 ; 21 ; https://ir.uiowa.edu/ >
 
     }
     
@@ -142,10 +142,9 @@
       au < released ; 2009 ; Electronic Journal of Africana Bibliography Volume 11 ; 11 >
       au < released ; 2009 ; Electronic Journal of Africana Bibliography Volume 12 ; 12 >
       au < released ; 2012 ; Electronic Journal of Africana Bibliography Volume 13 ; 13 >
-      au < released ; 2014 ; Electronic Journal of Africana Bibliography Volume 14 ; 14 >
-      au < released ; 2015 ; Electronic Journal of Africana Bibliography Volume 15 ; 15 >
-      au < released ; 2016 ; Electronic Journal of Africana Bibliography Volume 16 ; 16 >
-      au < expected ; 2017 ; Electronic Journal of Africana Bibliography Volume 17 ; 17 >
+      au < released ; 2013 ; Electronic Journal of Africana Bibliography Volume 14 ; 14 >
+      au < released ; 2014 ; Electronic Journal of Africana Bibliography Volume 15 ; 15 >
+      au < released ; 2014 ; Electronic Journal of Africana Bibliography Volume 16 ; 16 >
 
     }
     
@@ -172,17 +171,17 @@
       >
 
       plugin = org.lockss.plugin.bepress.BePressPlugin
-      param[base_url] = http://ir.uiowa.edu/
+      #param[base_url] = http://ir.uiowa.edu/
       param[journal_abbr] = iowa-historical-review
-      implicit < status ; year ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] ; param[base_url] >
 
-      au < released ; 2007-2008 ; Iowa Historical Review Volume 1 ; 1 >
-      au < released ; 2011 ; Iowa Historical Review Volume 2 ; 2 >
-      au < released ; 2013 ; Iowa Historical Review Volume 3 ; 3 >
-      au < released ; 2013-2014 ; Iowa Historical Review Volume 4 ; 4 >
-      au < released ; 2015 ; Iowa Historical Review Volume 5 ; 5 >
-      au < released ; 2016 ; Iowa Historical Review Volume 6 ; 6 >
-      au < manifest ; 2017 ; Iowa Historical Review Volume 7 ; 7 >
+      au < released ; 2007-2008 ; Iowa Historical Review Volume 1 ; 1 ; http://ir.uiowa.edu/ >
+      au < released ; 2011 ; Iowa Historical Review Volume 2 ; 2 ; http://ir.uiowa.edu/ >
+      au < released ; 2013 ; Iowa Historical Review Volume 3 ; 3 ; http://ir.uiowa.edu/ >
+      au < released ; 2013-2014 ; Iowa Historical Review Volume 4 ; 4 ; http://ir.uiowa.edu/ >
+      au < released ; 2015 ; Iowa Historical Review Volume 5 ; 5 ; http://ir.uiowa.edu/ >
+      au < released ; 2016 ; Iowa Historical Review Volume 6 ; 6 ; http://ir.uiowa.edu/ >
+      au < manifest ; 2017 ; Iowa Historical Review Volume 7 ; 7 ; https://ir.uiowa.edu/ >
 
     }
     
@@ -261,16 +260,16 @@
       >
 
       plugin = org.lockss.plugin.bepress.BePressPlugin
-      param[base_url] = http://ir.uiowa.edu/
+      #param[base_url] = http://ir.uiowa.edu/
       param[journal_abbr] = mathal
-      implicit < status ; year ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] ; param[base_url] >
 
-      au < released ; 2011 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 1 ; 1 >
-      au < released ; 2012 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 2 ; 2 >
-      au < released ; 2013 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 3 ; 3 >
-      au < released ; 2015 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 4 ; 4 >
-      au < released ; 2016 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 5 ; 5 >
-      au < expected ; 2017 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 6 ; 6 >
+      au < released ; 2011 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 1 ; 1 ; http://ir.uiowa.edu/ >
+      au < released ; 2012 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 2 ; 2 ; http://ir.uiowa.edu/ >
+      au < released ; 2013 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 3 ; 3 ; http://ir.uiowa.edu/ >
+      au < released ; 2015 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 4 ; 4 ; http://ir.uiowa.edu/ >
+      au < released ; 2016 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 5 ; 5 ; http://ir.uiowa.edu/ >
+      au < expected ; 2017 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 6 ; 6 ; https://ir.uiowa.edu/ >
 
     }
     
@@ -282,19 +281,19 @@
       >
 
       plugin = org.lockss.plugin.bepress.BePressPlugin
-      param[base_url] = http://ir.uiowa.edu/
+      #param[base_url] = http://ir.uiowa.edu/
       param[journal_abbr] = mzwp
-      implicit < status ; year ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] ; param[base_url] >
 
-      au < released ; 2005 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2005 ; 2005 >
-      au < released ; 2006 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2006 ; 2006 >
-      au < released ; 2007 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2007 ; 2007 >
-      au < released ; 2011 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2011 ; 2011 >
-      au < released ; 2012 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2012 ; 2012 >
-      au < released ; 2014 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2014 ; 2014 >
-      au < released ; 2015 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2015 ; 2015 >
-      au < released ; 2016 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2016 ; 2016 >
-      au < manifest ; 2017 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2017 ; 2017 >
+      au < released ; 2005 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2005 ; 2005 ; http://ir.uiowa.edu/ >
+      au < released ; 2006 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2006 ; 2006 ; http://ir.uiowa.edu/ >
+      au < released ; 2007 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2007 ; 2007 ; http://ir.uiowa.edu/ >
+      au < released ; 2011 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2011 ; 2011 ; http://ir.uiowa.edu/ >
+      au < released ; 2012 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2012 ; 2012 ; http://ir.uiowa.edu/ >
+      au < released ; 2014 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2014 ; 2014 ; http://ir.uiowa.edu/ >
+      au < released ; 2015 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2015 ; 2015 ; http://ir.uiowa.edu/ >
+      au < released ; 2016 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2016 ; 2016 ; http://ir.uiowa.edu/ >
+      au < manifest ; 2017 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2017 ; 2017 ; https://ir.uiowa.edu/ >
 
     }
     
@@ -306,63 +305,63 @@
       >
 
       plugin = org.lockss.plugin.bepress.BePressPlugin
-      param[base_url] = http://ir.uiowa.edu/
+      #param[base_url] = http://ir.uiowa.edu/
       param[journal_abbr] = mff
-      implicit < status ; year ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] ; param[base_url] >
 
-      au < released ; 1986 ; Medieval Feminist Forum Volume 1 ; 1 >
-      au < released ; 1986 ; Medieval Feminist Forum Volume 2 ; 2 >
-      au < released ; 1987 ; Medieval Feminist Forum Volume 3 ; 3 >
-      au < released ; 1987 ; Medieval Feminist Forum Volume 4 ; 4 >
-      au < released ; 1988 ; Medieval Feminist Forum Volume 5 ; 5 >
-      au < released ; 1988 ; Medieval Feminist Forum Volume 6 ; 6 >
-      au < released ; 1989 ; Medieval Feminist Forum Volume 7 ; 7 >
-      au < released ; 1989 ; Medieval Feminist Forum Volume 8 ; 8 >
-      au < released ; 1990 ; Medieval Feminist Forum Volume 9 ; 9 >
-      au < released ; 1990 ; Medieval Feminist Forum Volume 10 ; 10 >
-      au < released ; 1991 ; Medieval Feminist Forum Volume 11 ; 11 >
-      au < released ; 1991 ; Medieval Feminist Forum Volume 12 ; 12 >
-      au < released ; 1992 ; Medieval Feminist Forum Volume 13 ; 13 >
-      au < released ; 1992 ; Medieval Feminist Forum Volume 14 ; 14 >
-      au < released ; 1993 ; Medieval Feminist Forum Volume 15 ; 15 >
-      au < released ; 1993 ; Medieval Feminist Forum Volume 16 ; 16 >
-      au < released ; 1994 ; Medieval Feminist Forum Volume 17 ; 17 >
-      au < released ; 1994 ; Medieval Feminist Forum Volume 18 ; 18 >
-      au < released ; 1995 ; Medieval Feminist Forum Volume 19 ; 19 >
-      au < released ; 1995 ; Medieval Feminist Forum Volume 20 ; 20 >
-      au < released ; 1996 ; Medieval Feminist Forum Volume 21 ; 21 >
-      au < released ; 1996 ; Medieval Feminist Forum Volume 22 ; 22 >
-      au < released ; 1997 ; Medieval Feminist Forum Volume 23 ; 23 >
-      au < released ; 1997 ; Medieval Feminist Forum Volume 24 ; 24 >
-      au < released ; 1998 ; Medieval Feminist Forum Volume 25 ; 25 >
-      au < released ; 1998 ; Medieval Feminist Forum Volume 26 ; 26 >
-      au < released ; 1999 ; Medieval Feminist Forum Volume 27 ; 27 >
-      au < released ; 1999 ; Medieval Feminist Forum Volume 28 ; 28 >
-      au < released ; 2000 ; Medieval Feminist Forum Volume 29 ; 29 >
-      au < released ; 2000 ; Medieval Feminist Forum Volume 30 ; 30 >
-      au < released ; 2001 ; Medieval Feminist Forum Volume 31 ; 31 >
-      au < released ; 2001 ; Medieval Feminist Forum Volume 32 ; 32 >
-      au < released ; 2002 ; Medieval Feminist Forum Volume 33 ; 33 >
-      au < released ; 2002 ; Medieval Feminist Forum Volume 34 ; 34 >
-      au < released ; 2003 ; Medieval Feminist Forum Volume 35 ; 35 >
-      au < released ; 2003 ; Medieval Feminist Forum Volume 36 ; 36 >
-      au < released ; 2004 ; Medieval Feminist Forum Volume 37 ; 37 >
-      au < released ; 2004 ; Medieval Feminist Forum Volume 38 ; 38 >
-      au < released ; 2005 ; Medieval Feminist Forum Volume 39 ; 39 >
-      au < released ; 2005 ; Medieval Feminist Forum Volume 40 ; 40 >
-      au < released ; 2006 ; Medieval Feminist Forum Volume 41 ; 41 >
-      au < released ; 2006 ; Medieval Feminist Forum Volume 42 ; 42 >
-      au < released ; 2007 ; Medieval Feminist Forum Volume 43 ; 43 >
-      au < released ; 2008 ; Medieval Feminist Forum Volume 44 ; 44 >
-      au < released ; 2009 ; Medieval Feminist Forum Volume 45 ; 45 >
-      au < released ; 2010 ; Medieval Feminist Forum Volume 46 ; 46 >
-      au < released ; 2011 ; Medieval Feminist Forum Volume 47 ; 47 >
-      au < released ; 2012 ; Medieval Feminist Forum Volume 48 ; 48 >
-      au < released ; 2013 ; Medieval Feminist Forum Volume 49 ; 49 >
-      au < released ; 2014 ; Medieval Feminist Forum Volume 50 ; 50 >
-      au < released ; 2015 ; Medieval Feminist Forum Volume 51 ; 51 >
-      au < released ; 2016 ; Medieval Feminist Forum Volume 52 ; 52 >
-      au < manifest ; 2017 ; Medieval Feminist Forum Volume 53 ; 53 >
+      au < released ; 1986 ; Medieval Feminist Forum Volume 1 ; 1 ; http://ir.uiowa.edu/ >
+      au < released ; 1986 ; Medieval Feminist Forum Volume 2 ; 2 ; http://ir.uiowa.edu/ >
+      au < released ; 1987 ; Medieval Feminist Forum Volume 3 ; 3 ; http://ir.uiowa.edu/ >
+      au < released ; 1987 ; Medieval Feminist Forum Volume 4 ; 4 ; http://ir.uiowa.edu/ >
+      au < released ; 1988 ; Medieval Feminist Forum Volume 5 ; 5 ; http://ir.uiowa.edu/ >
+      au < released ; 1988 ; Medieval Feminist Forum Volume 6 ; 6 ; http://ir.uiowa.edu/ >
+      au < released ; 1989 ; Medieval Feminist Forum Volume 7 ; 7 ; http://ir.uiowa.edu/ >
+      au < released ; 1989 ; Medieval Feminist Forum Volume 8 ; 8 ; http://ir.uiowa.edu/ >
+      au < released ; 1990 ; Medieval Feminist Forum Volume 9 ; 9 ; http://ir.uiowa.edu/ >
+      au < released ; 1990 ; Medieval Feminist Forum Volume 10 ; 10 ; http://ir.uiowa.edu/ >
+      au < released ; 1991 ; Medieval Feminist Forum Volume 11 ; 11 ; http://ir.uiowa.edu/ >
+      au < released ; 1991 ; Medieval Feminist Forum Volume 12 ; 12 ; http://ir.uiowa.edu/ >
+      au < released ; 1992 ; Medieval Feminist Forum Volume 13 ; 13 ; http://ir.uiowa.edu/ >
+      au < released ; 1992 ; Medieval Feminist Forum Volume 14 ; 14 ; http://ir.uiowa.edu/ >
+      au < released ; 1993 ; Medieval Feminist Forum Volume 15 ; 15 ; http://ir.uiowa.edu/ >
+      au < released ; 1993 ; Medieval Feminist Forum Volume 16 ; 16 ; http://ir.uiowa.edu/ >
+      au < released ; 1994 ; Medieval Feminist Forum Volume 17 ; 17 ; http://ir.uiowa.edu/ >
+      au < released ; 1994 ; Medieval Feminist Forum Volume 18 ; 18 ; http://ir.uiowa.edu/ >
+      au < released ; 1995 ; Medieval Feminist Forum Volume 19 ; 19 ; http://ir.uiowa.edu/ >
+      au < released ; 1995 ; Medieval Feminist Forum Volume 20 ; 20 ; http://ir.uiowa.edu/ >
+      au < released ; 1996 ; Medieval Feminist Forum Volume 21 ; 21 ; http://ir.uiowa.edu/ >
+      au < released ; 1996 ; Medieval Feminist Forum Volume 22 ; 22 ; http://ir.uiowa.edu/ >
+      au < released ; 1997 ; Medieval Feminist Forum Volume 23 ; 23 ; http://ir.uiowa.edu/ >
+      au < released ; 1997 ; Medieval Feminist Forum Volume 24 ; 24 ; http://ir.uiowa.edu/ >
+      au < released ; 1998 ; Medieval Feminist Forum Volume 25 ; 25 ; http://ir.uiowa.edu/ >
+      au < released ; 1998 ; Medieval Feminist Forum Volume 26 ; 26 ; http://ir.uiowa.edu/ >
+      au < released ; 1999 ; Medieval Feminist Forum Volume 27 ; 27 ; http://ir.uiowa.edu/ >
+      au < released ; 1999 ; Medieval Feminist Forum Volume 28 ; 28 ; http://ir.uiowa.edu/ >
+      au < released ; 2000 ; Medieval Feminist Forum Volume 29 ; 29 ; http://ir.uiowa.edu/ >
+      au < released ; 2000 ; Medieval Feminist Forum Volume 30 ; 30 ; http://ir.uiowa.edu/ >
+      au < released ; 2001 ; Medieval Feminist Forum Volume 31 ; 31 ; http://ir.uiowa.edu/ >
+      au < released ; 2001 ; Medieval Feminist Forum Volume 32 ; 32 ; http://ir.uiowa.edu/ >
+      au < released ; 2002 ; Medieval Feminist Forum Volume 33 ; 33 ; http://ir.uiowa.edu/ >
+      au < released ; 2002 ; Medieval Feminist Forum Volume 34 ; 34 ; http://ir.uiowa.edu/ >
+      au < released ; 2003 ; Medieval Feminist Forum Volume 35 ; 35 ; http://ir.uiowa.edu/ >
+      au < released ; 2003 ; Medieval Feminist Forum Volume 36 ; 36 ; http://ir.uiowa.edu/ >
+      au < released ; 2004 ; Medieval Feminist Forum Volume 37 ; 37 ; http://ir.uiowa.edu/ >
+      au < released ; 2004 ; Medieval Feminist Forum Volume 38 ; 38 ; http://ir.uiowa.edu/ >
+      au < released ; 2005 ; Medieval Feminist Forum Volume 39 ; 39 ; http://ir.uiowa.edu/ >
+      au < released ; 2005 ; Medieval Feminist Forum Volume 40 ; 40 ; http://ir.uiowa.edu/ >
+      au < released ; 2006 ; Medieval Feminist Forum Volume 41 ; 41 ; http://ir.uiowa.edu/ >
+      au < released ; 2006 ; Medieval Feminist Forum Volume 42 ; 42 ; http://ir.uiowa.edu/ >
+      au < released ; 2007 ; Medieval Feminist Forum Volume 43 ; 43 ; http://ir.uiowa.edu/ >
+      au < released ; 2008 ; Medieval Feminist Forum Volume 44 ; 44 ; http://ir.uiowa.edu/ >
+      au < released ; 2009 ; Medieval Feminist Forum Volume 45 ; 45 ; http://ir.uiowa.edu/ >
+      au < released ; 2010 ; Medieval Feminist Forum Volume 46 ; 46 ; http://ir.uiowa.edu/ >
+      au < released ; 2011 ; Medieval Feminist Forum Volume 47 ; 47 ; http://ir.uiowa.edu/ >
+      au < released ; 2012 ; Medieval Feminist Forum Volume 48 ; 48 ; http://ir.uiowa.edu/ >
+      au < released ; 2013 ; Medieval Feminist Forum Volume 49 ; 49 ; http://ir.uiowa.edu/ >
+      au < released ; 2014 ; Medieval Feminist Forum Volume 50 ; 50 ; http://ir.uiowa.edu/ >
+      au < released ; 2015 ; Medieval Feminist Forum Volume 51 ; 51 ; http://ir.uiowa.edu/ >
+      au < released ; 2016 ; Medieval Feminist Forum Volume 52 ; 52 ; http://ir.uiowa.edu/ >
+      au < manifest ; 2017 ; Medieval Feminist Forum Volume 53 ; 53 ; https://ir.uiowa.edu/ >
 
     }
     
@@ -373,23 +372,23 @@
       >
 
       plugin = org.lockss.plugin.bepress.BePressPlugin
-      param[base_url] = http://ir.uiowa.edu/
+      #param[base_url] = http://ir.uiowa.edu/
       param[journal_abbr] = poroi
-      implicit < status ; year ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] ; param[base_url] >
 
-      au < released ; 2001 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 1 ; 1 >
-      au < released ; 2003 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 2 ; 2 >
-      au < released ; 2004 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 3 ; 3 >
-      au < released ; 2005 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 4 ; 4 >
-      au < released ; 2008 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 5 ; 5 >
-      au < released ; 2009 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 6 ; 6 >
-      au < released ; 2011 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 7 ; 7 >
-      au < released ; 2012 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 8 ; 8 >
-      au < released ; 2013 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 9 ; 9 >
-      au < released ; 2014 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 10 ; 10 >
-      au < released ; 2015 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 11 ; 11 >
-      au < released ; 2016 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 12 ; 12 >
-      au < manifest ; 2017 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 13 ; 13 >
+      au < released ; 2001 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 1 ; 1 ; http://ir.uiowa.edu/ >
+      au < released ; 2003 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 2 ; 2 ; http://ir.uiowa.edu/ >
+      au < released ; 2004 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 3 ; 3 ; http://ir.uiowa.edu/ >
+      au < released ; 2005 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 4 ; 4 ; http://ir.uiowa.edu/ >
+      au < released ; 2008 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 5 ; 5 ; http://ir.uiowa.edu/ >
+      au < released ; 2009 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 6 ; 6 ; http://ir.uiowa.edu/ >
+      au < released ; 2011 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 7 ; 7 ; http://ir.uiowa.edu/ >
+      au < released ; 2012 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 8 ; 8 ; http://ir.uiowa.edu/ >
+      au < released ; 2013 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 9 ; 9 ; http://ir.uiowa.edu/ >
+      au < released ; 2014 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 10 ; 10 ; http://ir.uiowa.edu/ >
+      au < released ; 2015 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 11 ; 11 ; http://ir.uiowa.edu/ >
+      au < released ; 2016 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 12 ; 12 ; http://ir.uiowa.edu/ >
+      au < manifest ; 2017 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 13 ; 13 ; https://ir.uiowa.edu/ >
 
     }
     
@@ -400,17 +399,17 @@
       >
 
       plugin = org.lockss.plugin.bepress.BePressPlugin
-      param[base_url] = http://ir.uiowa.edu/
+      #param[base_url] = http://ir.uiowa.edu/
       param[journal_abbr] = pog
-      implicit < status ; year ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] ; param[base_url] >
 
-      au < released ; 2010 ; Proceedings in Obstetrics and Gynecology Volume 1 ; 1 >
-      au < released ; 2011 ; Proceedings in Obstetrics and Gynecology Volume 2 ; 2 >
-      au < released ; 2013 ; Proceedings in Obstetrics and Gynecology Volume 3 ; 3 >
-      au < released ; 2014 ; Proceedings in Obstetrics and Gynecology Volume 4 ; 4 >
-      au < released ; 2015 ; Proceedings in Obstetrics and Gynecology Volume 5 ; 5 >
-      au < released ; 2016 ; Proceedings in Obstetrics and Gynecology Volume 6 ; 6 >
-      au < manifest ; 2017 ; Proceedings in Obstetrics and Gynecology Volume 7 ; 7 >
+      au < released ; 2010 ; Proceedings in Obstetrics and Gynecology Volume 1 ; 1 ; http://ir.uiowa.edu/ >
+      au < released ; 2011 ; Proceedings in Obstetrics and Gynecology Volume 2 ; 2 ; http://ir.uiowa.edu/ >
+      au < released ; 2013 ; Proceedings in Obstetrics and Gynecology Volume 3 ; 3 ; http://ir.uiowa.edu/ >
+      au < released ; 2014 ; Proceedings in Obstetrics and Gynecology Volume 4 ; 4 ; http://ir.uiowa.edu/ >
+      au < released ; 2015 ; Proceedings in Obstetrics and Gynecology Volume 5 ; 5 ; http://ir.uiowa.edu/ >
+      au < released ; 2016 ; Proceedings in Obstetrics and Gynecology Volume 6 ; 6 ; http://ir.uiowa.edu/ >
+      au < manifest ; 2017 ; Proceedings in Obstetrics and Gynecology Volume 7 ; 7 ; https://ir.uiowa.edu/ >
 
     }
     
@@ -486,45 +485,45 @@
       >
 
       plugin = org.lockss.plugin.bepress.BePressPlugin
-      param[base_url] = http://ir.uiowa.edu/
+      #param[base_url] = http://ir.uiowa.edu/
       param[journal_abbr] = wwqr
-      implicit < status ; year ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] ; param[base_url] >
 
-      au < released ; 1983-1984 ; Walt Whitman Quarterly Review Volume 1 ; 1 >
-      au < released ; 1984-1985 ; Walt Whitman Quarterly Review Volume 2 ; 2 >
-      au < released ; 1985-1986 ; Walt Whitman Quarterly Review Volume 3 ; 3 >
-      au < released ; 1986-1987 ; Walt Whitman Quarterly Review Volume 4 ; 4 >
-      au < released ; 1987-1988 ; Walt Whitman Quarterly Review Volume 5 ; 5 >
-      au < released ; 1988-1989 ; Walt Whitman Quarterly Review Volume 6 ; 6 >
-      au < released ; 1989-1990 ; Walt Whitman Quarterly Review Volume 7 ; 7 >
-      au < released ; 1990-1991 ; Walt Whitman Quarterly Review Volume 8 ; 8 >
-      au < released ; 1991-1992 ; Walt Whitman Quarterly Review Volume 9 ; 9 >
-      au < released ; 1992-1993 ; Walt Whitman Quarterly Review Volume 10 ; 10 >
-      au < released ; 1993-1994 ; Walt Whitman Quarterly Review Volume 11 ; 11 >
-      au < released ; 1994-1995 ; Walt Whitman Quarterly Review Volume 12 ; 12 >
-      au < released ; 1995-1996 ; Walt Whitman Quarterly Review Volume 13 ; 13 >
-      au < released ; 1996-1997 ; Walt Whitman Quarterly Review Volume 14 ; 14 >
-      au < released ; 1997-1998 ; Walt Whitman Quarterly Review Volume 15 ; 15 >
-      au < released ; 1998-1999 ; Walt Whitman Quarterly Review Volume 16 ; 16 >
-      au < released ; 1999-2000 ; Walt Whitman Quarterly Review Volume 17 ; 17 >
-      au < released ; 2000-2001 ; Walt Whitman Quarterly Review Volume 18 ; 18 >
-      au < released ; 2001-2002 ; Walt Whitman Quarterly Review Volume 19 ; 19 >
-      au < released ; 2002-2003 ; Walt Whitman Quarterly Review Volume 20 ; 20 >
-      au < released ; 2003-2004 ; Walt Whitman Quarterly Review Volume 21 ; 21 >
-      au < released ; 2004-2005 ; Walt Whitman Quarterly Review Volume 22 ; 22 >
-      au < released ; 2005-2006 ; Walt Whitman Quarterly Review Volume 23 ; 23 >
-      au < released ; 2006-2007 ; Walt Whitman Quarterly Review Volume 24 ; 24 >
-      au < released ; 2007-2008 ; Walt Whitman Quarterly Review Volume 25 ; 25 >
-      au < released ; 2008-2009 ; Walt Whitman Quarterly Review Volume 26 ; 26 >
-      au < released ; 2009-2010 ; Walt Whitman Quarterly Review Volume 27 ; 27 >
-      au < released ; 2010-2011 ; Walt Whitman Quarterly Review Volume 28 ; 28 >
-      au < released ; 2011-2012 ; Walt Whitman Quarterly Review Volume 29 ; 29 >
-      au < released ; 2012-2013 ; Walt Whitman Quarterly Review Volume 30 ; 30 >
-      au < released ; 2013-2014 ; Walt Whitman Quarterly Review Volume 31 ; 31 >
-      au < released ; 2014-2015 ; Walt Whitman Quarterly Review Volume 32 ; 32 >
-      au < released ; 2015-2016 ; Walt Whitman Quarterly Review Volume 33 ; 33 >
-      au < manifest ; 2016-2017 ; Walt Whitman Quarterly Review Volume 34 ; 34 >
-      au < manifest ; 2017-2018 ; Walt Whitman Quarterly Review Volume 35 ; 35 >
+      au < released ; 1983-1984 ; Walt Whitman Quarterly Review Volume 1 ; 1 ; http://ir.uiowa.edu/ >
+      au < released ; 1984-1985 ; Walt Whitman Quarterly Review Volume 2 ; 2 ; http://ir.uiowa.edu/ >
+      au < released ; 1985-1986 ; Walt Whitman Quarterly Review Volume 3 ; 3 ; http://ir.uiowa.edu/ >
+      au < released ; 1986-1987 ; Walt Whitman Quarterly Review Volume 4 ; 4 ; http://ir.uiowa.edu/ >
+      au < released ; 1987-1988 ; Walt Whitman Quarterly Review Volume 5 ; 5 ; http://ir.uiowa.edu/ >
+      au < released ; 1988-1989 ; Walt Whitman Quarterly Review Volume 6 ; 6 ; http://ir.uiowa.edu/ >
+      au < released ; 1989-1990 ; Walt Whitman Quarterly Review Volume 7 ; 7 ; http://ir.uiowa.edu/ >
+      au < released ; 1990-1991 ; Walt Whitman Quarterly Review Volume 8 ; 8 ; http://ir.uiowa.edu/ >
+      au < released ; 1991-1992 ; Walt Whitman Quarterly Review Volume 9 ; 9 ; http://ir.uiowa.edu/ >
+      au < released ; 1992-1993 ; Walt Whitman Quarterly Review Volume 10 ; 10 ; http://ir.uiowa.edu/ >
+      au < released ; 1993-1994 ; Walt Whitman Quarterly Review Volume 11 ; 11 ; http://ir.uiowa.edu/ >
+      au < released ; 1994-1995 ; Walt Whitman Quarterly Review Volume 12 ; 12 ; http://ir.uiowa.edu/ >
+      au < released ; 1995-1996 ; Walt Whitman Quarterly Review Volume 13 ; 13 ; http://ir.uiowa.edu/ >
+      au < released ; 1996-1997 ; Walt Whitman Quarterly Review Volume 14 ; 14 ; http://ir.uiowa.edu/ >
+      au < released ; 1997-1998 ; Walt Whitman Quarterly Review Volume 15 ; 15 ; http://ir.uiowa.edu/ >
+      au < released ; 1998-1999 ; Walt Whitman Quarterly Review Volume 16 ; 16 ; http://ir.uiowa.edu/ >
+      au < released ; 1999-2000 ; Walt Whitman Quarterly Review Volume 17 ; 17 ; http://ir.uiowa.edu/ >
+      au < released ; 2000-2001 ; Walt Whitman Quarterly Review Volume 18 ; 18 ; http://ir.uiowa.edu/ >
+      au < released ; 2001-2002 ; Walt Whitman Quarterly Review Volume 19 ; 19 ; http://ir.uiowa.edu/ >
+      au < released ; 2002-2003 ; Walt Whitman Quarterly Review Volume 20 ; 20 ; http://ir.uiowa.edu/ >
+      au < released ; 2003-2004 ; Walt Whitman Quarterly Review Volume 21 ; 21 ; http://ir.uiowa.edu/ >
+      au < released ; 2004-2005 ; Walt Whitman Quarterly Review Volume 22 ; 22 ; http://ir.uiowa.edu/ >
+      au < released ; 2005-2006 ; Walt Whitman Quarterly Review Volume 23 ; 23 ; http://ir.uiowa.edu/ >
+      au < released ; 2006-2007 ; Walt Whitman Quarterly Review Volume 24 ; 24 ; http://ir.uiowa.edu/ >
+      au < released ; 2007-2008 ; Walt Whitman Quarterly Review Volume 25 ; 25 ; http://ir.uiowa.edu/ >
+      au < released ; 2008-2009 ; Walt Whitman Quarterly Review Volume 26 ; 26 ; http://ir.uiowa.edu/ >
+      au < released ; 2009-2010 ; Walt Whitman Quarterly Review Volume 27 ; 27 ; http://ir.uiowa.edu/ >
+      au < released ; 2010-2011 ; Walt Whitman Quarterly Review Volume 28 ; 28 ; http://ir.uiowa.edu/ >
+      au < released ; 2011-2012 ; Walt Whitman Quarterly Review Volume 29 ; 29 ; http://ir.uiowa.edu/ >
+      au < released ; 2012-2013 ; Walt Whitman Quarterly Review Volume 30 ; 30 ; http://ir.uiowa.edu/ >
+      au < released ; 2013-2014 ; Walt Whitman Quarterly Review Volume 31 ; 31 ; http://ir.uiowa.edu/ >
+      au < released ; 2014-2015 ; Walt Whitman Quarterly Review Volume 32 ; 32 ; http://ir.uiowa.edu/ >
+      au < released ; 2015-2016 ; Walt Whitman Quarterly Review Volume 33 ; 33 ; http://ir.uiowa.edu/ >
+      au < manifest ; 2016-2017 ; Walt Whitman Quarterly Review Volume 34 ; 34 ; https://ir.uiowa.edu/ >
+      au < manifest ; 2017-2018 ; Walt Whitman Quarterly Review Volume 35 ; 35 ; https://ir.uiowa.edu/ >
 
     }
     
