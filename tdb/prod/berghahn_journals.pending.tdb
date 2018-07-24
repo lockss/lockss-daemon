@@ -1,11 +1,11 @@
 {
 
   publisher <
-    name = Berghahn Journals [PENDING] ;
+    name = Berghahn Journals ;
     info[down] = pending
   >
 
-  plugin = needs.plugin #pubfactory
+  plugin = org.lockss.plugin.berghahn.BerghahnJournalsPlugin
   param[base_url] = http://www.berghahnjournals.com/
   implicit < status ; year ; name ; param[volume_name] >
 
