@@ -194,37 +194,37 @@
       >
 
       plugin = org.lockss.plugin.bepress.BePressPlugin
-      param[base_url] = http://ir.uiowa.edu/
+      #param[base_url] = http://ir.uiowa.edu/
       param[journal_abbr] = ijcs
-      implicit < status ; year ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] ; param[base_url] >
 
-      au < released ; 1993 ; Iowa Journal of Cultural Studies Volume 1993 ; 1993 >
-      au < released ; 1994 ; Iowa Journal of Cultural Studies Volume 1994 ; 1994 >
-      au < released ; 1995 ; Iowa Journal of Cultural Studies Volume 1995 ; 1995 >
-      au < released ; 1996 ; Iowa Journal of Cultural Studies Volume 1996 ; 1996 >
-      au < released ; 1997 ; Iowa Journal of Cultural Studies Volume 1997 ; 1997 >
-      au < released ; 1998 ; Iowa Journal of Cultural Studies Volume 1998 ; 1998 >
-      au < released ; 1999 ; Iowa Journal of Cultural Studies Volume 1999 ; 1999 >
-      au < released ; 2000 ; Iowa Journal of Cultural Studies Volume 2000 ; 2000 >
-      au < released ; 2001 ; Iowa Journal of Cultural Studies Volume 2001 ; 2001 >
-      au < released ; 2002 ; Iowa Journal of Cultural Studies Volume 1 ; 1 >
-      au < released ; 2002 ; Iowa Journal of Cultural Studies Volume 2 ; 2 >
-      au < released ; 2003 ; Iowa Journal of Cultural Studies Volume 3 ; 3 >
-      au < released ; 2004 ; Iowa Journal of Cultural Studies Volume 4 ; 4 >
-      au < released ; 2004 ; Iowa Journal of Cultural Studies Volume 5 ; 5 >
-      au < released ; 2005 ; Iowa Journal of Cultural Studies Volume 6 ; 6 >
-      au < released ; 2005 ; Iowa Journal of Cultural Studies Volume 7 ; 7 >
-      au < released ; 2006 ; Iowa Journal of Cultural Studies Volume 8 ; 8 >
-      au < doesNotExist ; 2006 ; Iowa Journal of Cultural Studies Volume 9 ; 9 >
-      au < released ; 2009 ; Iowa Journal of Cultural Studies Volume 10 ; 10 >
-      au < doesNotExist ; 2009 ; Iowa Journal of Cultural Studies Volume 11 ; 11 >
-      au < released ; 2010 ; Iowa Journal of Cultural Studies Volume 12 ; 12 >
-      au < doesNotExist ; 2010 ; Iowa Journal of Cultural Studies Volume 13 ; 13 >
-      au < released ; 2013 ; Iowa Journal of Cultural Studies Volume 14 ; 14 >
-      au < released ; 2014 ; Iowa Journal of Cultural Studies Volume 15 ; 15 >
-      au < released ; 2015 ; Iowa Journal of Cultural Studies Volume 16 ; 16 >
-      au < manifest ; 2016 ; Iowa Journal of Cultural Studies Volume 17 ; 17 >
-      au < expected ; 2017 ; Iowa Journal of Cultural Studies Volume 18 ; 18 >
+      au < released ; 1993 ; Iowa Journal of Cultural Studies Volume 1993 ; 1993 ; http://ir.uiowa.edu/ >
+      au < released ; 1994 ; Iowa Journal of Cultural Studies Volume 1994 ; 1994 ; http://ir.uiowa.edu/ >
+      au < released ; 1995 ; Iowa Journal of Cultural Studies Volume 1995 ; 1995 ; http://ir.uiowa.edu/ >
+      au < released ; 1996 ; Iowa Journal of Cultural Studies Volume 1996 ; 1996 ; http://ir.uiowa.edu/ >
+      au < released ; 1997 ; Iowa Journal of Cultural Studies Volume 1997 ; 1997 ; http://ir.uiowa.edu/ >
+      au < released ; 1998 ; Iowa Journal of Cultural Studies Volume 1998 ; 1998 ; http://ir.uiowa.edu/ >
+      au < released ; 1999 ; Iowa Journal of Cultural Studies Volume 1999 ; 1999 ; http://ir.uiowa.edu/ >
+      au < released ; 2000 ; Iowa Journal of Cultural Studies Volume 2000 ; 2000 ; http://ir.uiowa.edu/ >
+      au < released ; 2001 ; Iowa Journal of Cultural Studies Volume 2001 ; 2001 ; http://ir.uiowa.edu/ >
+      au < released ; 2002 ; Iowa Journal of Cultural Studies Volume 1 ; 1 ; http://ir.uiowa.edu/ >
+      au < released ; 2002 ; Iowa Journal of Cultural Studies Volume 2 ; 2 ; http://ir.uiowa.edu/ >
+      au < released ; 2003 ; Iowa Journal of Cultural Studies Volume 3 ; 3 ; http://ir.uiowa.edu/ >
+      au < released ; 2004 ; Iowa Journal of Cultural Studies Volume 4 ; 4 ; http://ir.uiowa.edu/ >
+      au < released ; 2004 ; Iowa Journal of Cultural Studies Volume 5 ; 5 ; http://ir.uiowa.edu/ >
+      au < released ; 2005 ; Iowa Journal of Cultural Studies Volume 6 ; 6 ; http://ir.uiowa.edu/ >
+      au < released ; 2005 ; Iowa Journal of Cultural Studies Volume 7 ; 7 ; http://ir.uiowa.edu/ >
+      au < released ; 2006 ; Iowa Journal of Cultural Studies Volume 8 ; 8 ; http://ir.uiowa.edu/ >
+      au < doesNotExist ; 2006 ; Iowa Journal of Cultural Studies Volume 9 ; 9 ; http://ir.uiowa.edu/ >
+      au < released ; 2009 ; Iowa Journal of Cultural Studies Volume 10 ; 10 ; http://ir.uiowa.edu/ >
+      au < doesNotExist ; 2009 ; Iowa Journal of Cultural Studies Volume 11 ; 11 ; http://ir.uiowa.edu/ >
+      au < released ; 2010 ; Iowa Journal of Cultural Studies Volume 12 ; 12 ; http://ir.uiowa.edu/ >
+      au < doesNotExist ; 2010 ; Iowa Journal of Cultural Studies Volume 13 ; 13 ; http://ir.uiowa.edu/ >
+      au < released ; 2013 ; Iowa Journal of Cultural Studies Volume 14 ; 14 ; http://ir.uiowa.edu/ >
+      au < released ; 2014 ; Iowa Journal of Cultural Studies Volume 15 ; 15 ; http://ir.uiowa.edu/ >
+      au < released ; 2015 ; Iowa Journal of Cultural Studies Volume 16 ; 16 ; http://ir.uiowa.edu/ >
+      au < manifest ; 2016 ; Iowa Journal of Cultural Studies Volume 17 ; 17 ; https://ir.uiowa.edu/ >
+      au < expected ; 2017 ; Iowa Journal of Cultural Studies Volume 18 ; 18 ; https://ir.uiowa.edu/ >
 
     }
     
