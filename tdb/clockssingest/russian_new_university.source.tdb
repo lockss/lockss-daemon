@@ -23,8 +23,8 @@
     implicit < status ; status2 ; year ; name ; param[year] >    
 
     au < readySource ; finished ; 2016 ; Cardiometry WARC Content 2016 ; 2016 >
-    au < expected ; exists ; 2018 ; Cardiometry WARC Content 2018 ; 2018 >
-    
+    au < testing ; exists ; 2018 ; Cardiometry WARC Content 2018 ; 2018 >
+
   }  
 
 }
