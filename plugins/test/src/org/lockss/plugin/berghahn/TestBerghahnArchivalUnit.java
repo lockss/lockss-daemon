@@ -149,11 +149,18 @@ shouldCacheTest("https://www.berghahnjournals.com/view/journals/boyhood-studies/
 shouldCacheTest("https://www.berghahnjournals.com/view/journals/boyhood-studies/1/1/boyhood-studies.1.issue-1.xml", false, bgAu, cus); 
 shouldCacheTest("https://www.berghahnjournals.com/search?f_0=author&q_0=Alexandra+Mountain", false, bgAu, cus); 
 shouldCacheTest("https://www.berghahnjournals.com/view/journals/boyhood-studies/10/2/bhs100201.xml?print", false, bgAu, cus); 
-shouldCacheTest("https://www.berghahnjournals.com/cite/$002fjournals$002fboyhood-studies$002f10$002f2$002fbhs100201.xml/$N?nojs=true", false, bgAu, cus); 
-shouldCacheTest("https://www.berghahnjournals.com/cite/$002fjournals$002fboyhood-studies$002f10$002f2$002fbhs100202.xml/$N?nojs=true", false, bgAu, cus); 
+//addition of citation download overlay and url normalized ris citation link
+shouldCacheTest("https://www.berghahnjournals.com/cite/$002fjournals$002fboyhood-studies$002f10$002f2$002fbhs100201.xml/$N?nojs=true", true, bgAu, cus); 
+shouldCacheTest("https://www.berghahnjournals.com/cite/$002fjournals$002fboyhood-studies$002f3$002f2$002fbhs100202.xml/$N?nojs=true", false, bgAu, cus); 
 shouldCacheTest("https://www.berghahnjournals.com/view/journals/boyhood-studies/10/2/bhs100201.xml?pdfVersion=true&print", false, bgAu, cus);
+//wrong volume
+shouldCacheTest("https://www.berghahnjournals.com/cite:exportcitation/ris?t:ac=$002fjournals$002fboyhood-studies$002f10$002f2$002fbhs100206.xml/$N&t:state:client=H4sDnAAAA", true, bgAu, cus);
+//ris
+shouldCacheTest("https://www.berghahnjournals.com/cite:exportcitation/ris?t:ac=$002fjournals$002fboyhood-studies$002f10$002f2$002fbhs100206.xml/$N", true, bgAu, cus);
 // and a likely template error we are excluding (link of pdf while on pdf tab already)
 shouldCacheTest("https://www.berghahnjournals.com/view/journals/boyhood-studies/10/1/bhs100101.xml?&pdfVersion=true", false, bgAu, cus);
+//shouldCacheTest("https://www.berghahnjournals.com/", false, bgAu, cus);
+//shouldCacheTest("https://www.berghahnjournals.com/", false, bgAu, cus);
 
   }
 
