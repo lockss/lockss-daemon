@@ -89,6 +89,8 @@ public class BerghahnHtmlHashFilterFactory implements FilterFactory {
     		    },
     		//main content of TOC and article landing page (on abstract or pdf tab)
         HtmlNodeFilters.tagWithAttribute("div", "id", "readPanel"),
+        // citation overlay for download of ris
+        HtmlNodeFilters.tagWithAttribute("div","id","previewWrapper"),
     };
     
     NodeFilter[] excludeNodes = new NodeFilter[] {
