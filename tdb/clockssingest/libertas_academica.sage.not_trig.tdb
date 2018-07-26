@@ -42,7 +42,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Air, Soil & Water Research Volume 8 ; 8 ; aswa ; >
     au < frozen ; exists ; 2016 ; Air, Soil & Water Research Volume 9 ; 9 ; aswa ; >
     au < frozen ; exists ; 2017 ; Air, Soil & Water Research Volume 10 ; 10 ; aswa ; >
-    au < testing ; exists ; 2018 ; Air, Soil & Water Research Volume 11 ; 11 ; aswa ; >
+    au < ready ; exists ; 2018 ; Air, Soil & Water Research Volume 11 ; 11 ; aswa ; >
 
   }
 
@@ -67,7 +67,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Analytical Chemistry Insights Volume 10 ; 10 ; acia ; >
     au < frozen ; exists ; 2016 ; Analytical Chemistry Insights Volume 11 ; 11 ; acia ; >
     au < frozen ; exists ; 2017 ; Analytical Chemistry Insights Volume 12 ; 12 ; acia ; >
-    au < testing ; exists ; 2018 ; Analytical Chemistry Insights Volume 13 ; 13 ; acia ; >
+    au < ready ; exists ; 2018 ; Analytical Chemistry Insights Volume 13 ; 13 ; acia ; >
 
   }
 
@@ -116,7 +116,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Bioinformatics and Biology Insights Volume 9 ; 9 ; bbia ; >
     au < frozen ; exists ; 2016 ; Bioinformatics and Biology Insights Volume 10 ; 10 ; bbia ; >
     au < frozen ; exists ; 2017 ; Bioinformatics and Biology Insights Volume 11 ; 11 ; bbia ; >
-    au < testing ; exists ; 2018 ; Bioinformatics and Biology Insights Volume 12 ; 12 ; bbia ; >
+    au < ready ; exists ; 2018 ; Bioinformatics and Biology Insights Volume 12 ; 12 ; bbia ; >
 
   }
 
@@ -142,7 +142,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Biomarker Insights Volume 10 ; 10 ; bmia ; >
     au < frozen ; exists ; 2016 ; Biomarker Insights Volume 11 ; 11 ; bmia ; >
     au < frozen ; exists ; 2017 ; Biomarker Insights Volume 12 ; 12 ; bmia ; >
-    au < testing ; exists ; 2018 ; Biomarker Insights Volume 13 ; 13 ; bmia ; >
+    au < ready ; exists ; 2018 ; Biomarker Insights Volume 13 ; 13 ; bmia ; >
 
   }
 
@@ -165,7 +165,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Biomarkers in Cancer Volume 7 ; 7 ; bica ; >
     au < frozen ; exists ; 2016 ; Biomarkers in Cancer Volume 8 ; 8 ; bica ; >
     au < frozen ; exists ; 2017 ; Biomarkers in Cancer Volume 9 ; 9 ; bica ; >
-    au < testing ; exists ; 2018 ; Biomarkers in Cancer Volume 10 ; 10 ; bica ; >
+    au < ready ; exists ; 2018 ; Biomarkers in Cancer Volume 10 ; 10 ; bica ; >
 
   }
 
@@ -187,7 +187,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Biomedical Engineering and Computational Biology Volume 6 ; 6 ; beca ; >
     au < frozen ; exists ; 2016 ; Biomedical Engineering and Computational Biology Volume 7 ; 7 ; beca ; >
     au < frozen ; exists ; 2017 ; Biomedical Engineering and Computational Biology Volume 8 ; 8 ; beca ; >
-    au < testing ; exists ; 2018 ; Biomedical Engineering and Computational Biology Volume 9 ; 9 ; beca ; >
+    au < ready ; exists ; 2018 ; Biomedical Engineering and Computational Biology Volume 9 ; 9 ; beca ; >
 
   }
 
@@ -210,7 +210,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Biomedical Informatics Insights Volume 7 ; 7 ; biia ; >
     au < frozen ; exists ; 2016 ; Biomedical Informatics Insights Volume 8 ; 8 ; biia ; >
     au < frozen ; exists ; 2017 ; Biomedical Informatics Insights Volume 9 ; 9 ; biia ; >
-    au < testing ; exists ; 2018 ; Biomedical Informatics Insights Volume 10 ; 10 ; biia ; >
+    au < ready ; exists ; 2018 ; Biomedical Informatics Insights Volume 10 ; 10 ; biia ; >
 
   }
 
@@ -232,7 +232,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Bone and Tissue Regeneration Insights Volume 6 ; 6 ; btra ; >
     au < frozen ; exists ; 2016 ; Bone and Tissue Regeneration Insights Volume 7 ; 7 ; btra ; >
     au < exists ; exists ; 2017 ; Bone and Tissue Regeneration Insights Volume 8 ; 8 ; btra ; >
-    au < testing ; exists ; 2018 ; Bone and Tissue Regeneration Insights Volume 9 ; 9 ; btra ; >
+    au < ready ; exists ; 2018 ; Bone and Tissue Regeneration Insights Volume 9 ; 9 ; btra ; >
 
   }
 
@@ -256,7 +256,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Breast Cancer: Basic and Clinical Research Volume 9 ; 9 ; bcba ; >
     au < frozen ; exists ; 2016 ; Breast Cancer: Basic and Clinical Research Volume 10 ; 10 ; bcba ; >
     au < frozen ; exists ; 2017 ; Breast Cancer: Basic and Clinical Research Volume 11 ; 11 ; bcba ; >
-    au < testing ; exists ; 2018 ; Breast Cancer: Basic and Clinical Research Volume 12 ; 12 ; bcba ; >
+    au < ready ; exists ; 2018 ; Breast Cancer: Basic and Clinical Research Volume 12 ; 12 ; bcba ; >
 
   }
 
@@ -280,7 +280,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Cancer Growth and Metastasis Volume 8 ; 8 ; cgma ; >
     au < frozen ; exists ; 2016 ; Cancer Growth and Metastasis Volume 9 ; 9 ; cgma ; >
     au < frozen ; exists ; 2017 ; Cancer Growth and Metastasis Volume 10 ; 10 ; cgma ; >
-    au < testing ; exists ; 2018 ; Cancer Growth and Metastasis Volume 11 ; 11 ; cgma ; >
+    au < ready ; exists ; 2018 ; Cancer Growth and Metastasis Volume 11 ; 11 ; cgma ; >
 
   }
 
@@ -331,7 +331,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 8 ; 8 ; amda ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 9 ; 9 ; amda ; >
     au < frozen ; exists ; 2017 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 10 ; 10 ; amda ; >
-    au < testing ; exists ; 2018 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 11 ; 11 ; amda ; >
+    au < ready ; exists ; 2018 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 11 ; 11 ; amda ; >
 
   }
 
@@ -355,7 +355,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Blood Disorders Volume 8 ; 8 ; bdxa ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Blood Disorders Volume 9 ; 9 ; bdxa ; >
     au < frozen ; exists ; 2017 ; Clinical Medicine Insights: Blood Disorders Volume 10 ; 10 ; bdxa ; >
-    au < testing ; exists ; 2018 ; Clinical Medicine Insights: Blood Disorders Volume 11 ; 11 ; bdxa ; >
+    au < ready ; exists ; 2018 ; Clinical Medicine Insights: Blood Disorders Volume 11 ; 11 ; bdxa ; >
 
   }
 
@@ -380,7 +380,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Cardiology Volume 9 ; 9 ; cica ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Cardiology Volume 10 ; 10 ; cica ; >
     au < frozen ; exists ; 2017 ; Clinical Medicine Insights: Cardiology Volume 11 ; 11 ; cica ; >
-    au < testing ; exists ; 2018 ; Clinical Medicine Insights: Cardiology Volume 12 ; 12 ; cica ; >
+    au < ready ; exists ; 2018 ; Clinical Medicine Insights: Cardiology Volume 12 ; 12 ; cica ; >
 
   }
 
@@ -404,7 +404,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Case Reports Volume 8 ; 8 ; icra ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Case Reports Volume 9 ; 9 ; icra ; >
     au < frozen ; exists ; 2017 ; Clinical Medicine Insights: Case Reports Volume 10 ; 10 ; icra ; >
-    au < testing ; exists ; 2018 ; Clinical Medicine Insights: Case Reports Volume 11 ; 11 ; icra ; >
+    au < ready ; exists ; 2018 ; Clinical Medicine Insights: Case Reports Volume 11 ; 11 ; icra ; >
 
   }
 
@@ -429,7 +429,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 9 ; 9 ; craa ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 10 ; 10 ; craa ; >
     au < frozen ; exists ; 2017 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 11 ; 11 ; craa ; >
-    au < testing ; exists ; 2018 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 12 ; 12 ; craa ; >
+    au < ready ; exists ; 2018 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 12 ; 12 ; craa ; >
 
   }
 
@@ -453,7 +453,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 8 ; 8 ; enta ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 9 ; 9 ; enta ; >
     au < frozen ; exists ; 2017 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 10 ; 10 ; enta ; >
-    au < testing ; exists ; 2018 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 11 ; 11 ; enta ; >
+    au < ready ; exists ; 2018 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 11 ; 11 ; enta ; >
 
   }
 
