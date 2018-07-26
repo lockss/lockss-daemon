@@ -92,11 +92,27 @@ public class TestBerghahnHtmlHashFilterFactory extends LockssTestCase {
 		  "<div id=\"readPanel\">" + 
 				  "    <a class=\"summary-toggle ico-summary js-summary-toggle phoneOnly\" href=\"#\"><span>Show Summary Details</span></a>\n" + 
 				  "  </div>";
-        
+  
+  private static final String citOverlayHtml =
+      "<div id=\"previewWrapper\">" +
+      "<h2>Preview Citation</h2>" +
+                    "<p style=\"\" class=\"citationPreview\" id=\"apa_book\">" +
+                        "Borovnik, M. (2017). Nighttime Navigating, <em>Transfers</em>, <em>7</em>(3), 38-55.  Retrieved Jul 26, 2018, from " +
+                    "<a target=\"_blank\" href=\"https://www.berghahnjournals.com/view/journals/transfers/7/3/trans070305.xml\">" +
+                    "https://www.berghahnjournals.com/view/journals/transfers/7/3/trans070305.xml</a>" +
+                    "</p></div>";
+  
+  private static final String citOverlayFiltered=
+      "<div id=\"previewWrapper\">" +
+                        "<p style=\"\" class=\"citationPreview\" id=\"apa_book\">" +
+                        "<a target=\"_blank\" href=\"https://www.berghahnjournals.com/view/journals/transfers/7/3/trans070305.xml\">" +
+                        "https://www.berghahnjournals.com/view/journals/transfers/7/3/trans070305.xml</a>" +
+                        "</p></div>";
   public void testFiltering() throws Exception {
 	    doFilterTest(bau, fact, manifestHtml, manifestFiltered);
 	    doFilterTest(bau, fact, tocBlockHtml, tocBlockFiltered);
-	    doFilterTest(bau, fact, artBlockHtml, artBlockFiltered);
+            doFilterTest(bau, fact, artBlockHtml, artBlockFiltered);
+            doFilterTest(bau, fact, citOverlayHtml, citOverlayFiltered);
   }
 
 }

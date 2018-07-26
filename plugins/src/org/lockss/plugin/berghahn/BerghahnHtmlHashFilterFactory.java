@@ -89,7 +89,7 @@ public class BerghahnHtmlHashFilterFactory implements FilterFactory {
     		    },
     		//main content of TOC and article landing page (on abstract or pdf tab)
         HtmlNodeFilters.tagWithAttribute("div", "id", "readPanel"),
-        // citation overlay for download of ris
+        // citation overlay for download of ris - this has download date
         HtmlNodeFilters.tagWithAttribute("div","id","previewWrapper"),
     };
     
@@ -98,6 +98,12 @@ public class BerghahnHtmlHashFilterFactory implements FilterFactory {
         new TagNameFilter("noscript"),
         // filter out comments
         HtmlNodeFilters.comment(),
+        // citation overlay for download of ris - this has download date
+        // and the ris citation has a one-time key
+        // so just keep the referring article as a way of hashing
+        HtmlNodeFilters.allExceptSubtree(
+            HtmlNodeFilters.tagWithAttribute("div", "id", "previewWrapper"),
+            HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/view/journals/")),
 
     };
     
