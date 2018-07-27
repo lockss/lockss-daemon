@@ -20,7 +20,7 @@
     param[base_url] = http://clockss-ingest.lockss.org/warcfiles/memoirs-of-museum-victoria-released/
 
     au < readySource ; finished ; 2016 ; Memoirs of Museum Victoria WARC Content 2016 ; 2016 >
-    au < testing ; expected ; 2018 ; Memoirs of Museum Victoria WARC Content 2018 ; 2018 >
+    au < readySource ; manifest ; 2018 ; Memoirs of Museum Victoria WARC Content 2018 ; 2018 >
     # check for new content before re-running
        
   }
@@ -36,7 +36,7 @@
     param[base_url] = http://clockss-ingest.lockss.org/warcfiles/museum-victoria-science-reports-released/
 
     au < readySource ; finished ; 2016 ; Museum Victoria Science Reports WARC Content 2016 ; 2016 >
-    au < testing ; expected ; 2018 ; Museum Victoria Science Reports WARC Content 2018 ; 2018 >
+    au < readySource ; manifest ; 2018 ; Museum Victoria Science Reports WARC Content 2018 ; 2018 >
     # check for new content before re-running
    
   }
