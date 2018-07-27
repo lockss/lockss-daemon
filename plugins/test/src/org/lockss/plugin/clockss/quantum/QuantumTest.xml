@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" article-type="research-article" dtd-version="1.1" xml:lang="en">
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="publisher">Quantum</journal-id>
+      <issn>2521-327X</issn>
+      <publisher>
+        <publisher-name>Verein zur Förderung des Open Access Publizierens in den Quantenwissenschaften</publisher-name>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="doi">10.22331/q-xxxx-01-01-11</article-id>
+      <title-group>
+        <article-title>
+          Test-completeness of title in quantum field theory
+        </article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Writer</surname>
+            <given-names>Stephen P.</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff-1"/>
+          <xref ref-type="aff" rid="aff-2"/>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Author</surname>
+            <given-names>Name</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff-3"/>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Smith</surname>
+            <given-names>Keith P. Q.</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff-4"/>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Smarty</surname>
+            <given-names>Samantha</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff-5"/>
+        </contrib>
+      </contrib-group>
+      <aff id="aff-3">Quantum Information Processing Group, Raytheon BBN Technologies, Cambridge, MA, USA</aff>
+      <pub-date date-type="pub" publication-format="electronic" iso-8601-date="2018-01-08">
+        <day>08</day>
+        <month>01</month>
+        <year>2018</year>
+      </pub-date>
+      <volume>2</volume>
+      <fpage>17</fpage>
+      <permissions>
+        <copyright-statement>This work is published under the Creative Commons Attribution 4.0 International (CC BY 4.0) license https://creativecommons.org/licenses/by/4.0/.</copyright-statement>
+        <copyright-year>2018</copyright-year>
+      </permissions>
+      <abstract>
+        <p>
+          Recent work has shown that quantum computers can do stuff.
+        </p>
+      </abstract>
+    </article-meta>
+  </front>
+  <body></body>
+  <back></back>
+</article>

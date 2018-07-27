@@ -99,12 +99,18 @@ implements SourceXmlSchemaHelper {
           tTitle = checkNode.getTextContent();  
           // they deliver newlines in their XML titles
           tTitle = tTitle.replace("\n", " ");
+          tTitle = tTitle.trim();
+          tTitle = tTitle.replace("  ", " ");
         } else if ("subtitle".equals(nodeName) | "journal-subtitle".equals(nodeName)) {
           tSubtitle = checkNode.getTextContent();
           tSubtitle = tSubtitle.replace("\n", " ");
+          tSubtitle = tSubtitle.trim();
+          tSubtitle = tSubtitle.replace("  ", " ");
         } else if ("alt-title".equals(nodeName)) {
           tAltTitle = checkNode.getTextContent();
           tAltTitle = tAltTitle.replace("\n",  " ");
+          tAltTitle = tAltTitle.trim();
+          tAltTitle = tAltTitle.replace("  ", " ");
         }
       }
 
