@@ -244,6 +244,29 @@ public class TestDoveHtmlFilterFactory extends LockssTestCase {
           "</ul>" +
           "</div>";
 
+  private static final String article_content_variants = 
+      "<div class=\"nope\">" +
+          "<div class=\"articles\">" +
+          "keep1" +
+          "</div>" +
+          "<div class=\"articles  \">" +
+          "keep2" +
+          "</div>" +
+          "<div class=\"articles-blah\">" +
+          "nope1" +
+          "</div>" +
+          "<div class=\"  articles\">" +
+          "nope2" +
+          "</div>" +
+          "</div>";
+  private static final String article_content_variants_filtered = 
+            "<div class=\"articles\">" +
+          "keep1" +
+          "</div>" +
+          "<div class=\"articles  \">" +
+          "keep2" +
+          "</div>";
+          
 
 
   public void testTOCFiltering() throws Exception {
@@ -273,6 +296,10 @@ public class TestDoveHtmlFilterFactory extends LockssTestCase {
         new StringInputStream(article_bit),
         Constants.DEFAULT_ENCODING);
     assertEquals(article_bit_hashfiltered, StringUtil.fromInputStream(inStream));
+    inStream = hfact.createFilteredInputStream(mau,
+        new StringInputStream(article_content_variants),
+        Constants.DEFAULT_ENCODING);
+    assertEquals(article_content_variants_filtered, StringUtil.fromInputStream(inStream));
 
   }
   

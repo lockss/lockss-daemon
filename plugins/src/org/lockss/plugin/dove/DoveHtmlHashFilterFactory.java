@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -56,7 +56,7 @@ public class DoveHtmlHashFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "volume-issues"),
       // article landing page and article full-text
       // <base>/article-title-article-J_ABBR
-      HtmlNodeFilters.tagWithAttribute("div", "class", "articles"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "^articles\\s*$"),
       
     };
     
@@ -91,5 +91,5 @@ public class DoveHtmlHashFilterFactory implements FilterFactory {
               HtmlNodeFilterTransform.exclude(new OrFilter(xfilters))
               ));
     }
-  
+
 }
