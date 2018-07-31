@@ -165,7 +165,7 @@
     au < rup.ClockssRUPDrupalPlugin ; frozen ; exists ; 1998 ; The Journal of Cell Biology Volume 141 ; 141 ; >
     au < rup.ClockssRUPDrupalPlugin ; frozen ; exists ; 1998 ; The Journal of Cell Biology Volume 142 ; 142 ; >
     au < rup.ClockssRUPDrupalPlugin ; frozen ; exists ; 1998 ; The Journal of Cell Biology Volume 143 ; 143 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1999 ; The Journal of Cell Biology Volume 144 ; 144 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1999 ; The Journal of Cell Biology Volume 144 ; 144 ; >
     au < rup.ClockssRUPDrupalPlugin ; frozen ; exists ; 1999 ; The Journal of Cell Biology Volume 145 ; 145 ; >
     au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1999 ; The Journal of Cell Biology Volume 146 ; 146 ; >
     au < rup.ClockssRUPDrupalPlugin ; frozen ; exists ; 1999 ; The Journal of Cell Biology Volume 147 ; 147 ; >
@@ -484,135 +484,135 @@
 
     param[base_url] = http://jgp.rupress.org/
       
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1918-1919 ; The Journal of General Physiology Volume 1 ; 1 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1918-1919 ; The Journal of General Physiology Volume 1 ; 1 ; >
     au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1919-1920 ; The Journal of General Physiology Volume 2 ; 2 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1920-1921 ; The Journal of General Physiology Volume 3 ; 3 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1921-1922 ; The Journal of General Physiology Volume 4 ; 4 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1922-1923 ; The Journal of General Physiology Volume 5 ; 5 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1923-1924 ; The Journal of General Physiology Volume 6 ; 6 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1924-1925 ; The Journal of General Physiology Volume 7 ; 7 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1925-1926 ; The Journal of General Physiology Volume 8 ; 8 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1926 ; The Journal of General Physiology Volume 9 ; 9 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1926-1927 ; The Journal of General Physiology Volume 10 ; 10 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1927-1928 ; The Journal of General Physiology Volume 11 ; 11 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1928-1929 ; The Journal of General Physiology Volume 12 ; 12 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1920-1921 ; The Journal of General Physiology Volume 3 ; 3 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1921-1922 ; The Journal of General Physiology Volume 4 ; 4 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1922-1923 ; The Journal of General Physiology Volume 5 ; 5 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1923-1924 ; The Journal of General Physiology Volume 6 ; 6 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1924-1925 ; The Journal of General Physiology Volume 7 ; 7 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1925-1926 ; The Journal of General Physiology Volume 8 ; 8 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1926 ; The Journal of General Physiology Volume 9 ; 9 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1926-1927 ; The Journal of General Physiology Volume 10 ; 10 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1927-1928 ; The Journal of General Physiology Volume 11 ; 11 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1928-1929 ; The Journal of General Physiology Volume 12 ; 12 ; >
     au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1929-1930 ; The Journal of General Physiology Volume 13 ; 13 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1930-1931 ; The Journal of General Physiology Volume 14 ; 14 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1931-1932 ; The Journal of General Physiology Volume 15 ; 15 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1932-1933 ; The Journal of General Physiology Volume 16 ; 16 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1933-1934 ; The Journal of General Physiology Volume 17 ; 17 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1934-1935 ; The Journal of General Physiology Volume 18 ; 18 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1935-1936 ; The Journal of General Physiology Volume 19 ; 19 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1936-1937 ; The Journal of General Physiology Volume 20 ; 20 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1937-1938 ; The Journal of General Physiology Volume 21 ; 21 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1930-1931 ; The Journal of General Physiology Volume 14 ; 14 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1931-1932 ; The Journal of General Physiology Volume 15 ; 15 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1932-1933 ; The Journal of General Physiology Volume 16 ; 16 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1933-1934 ; The Journal of General Physiology Volume 17 ; 17 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1934-1935 ; The Journal of General Physiology Volume 18 ; 18 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1935-1936 ; The Journal of General Physiology Volume 19 ; 19 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1936-1937 ; The Journal of General Physiology Volume 20 ; 20 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1937-1938 ; The Journal of General Physiology Volume 21 ; 21 ; >
     au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1938-1939 ; The Journal of General Physiology Volume 22 ; 22 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1939-1940 ; The Journal of General Physiology Volume 23 ; 23 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1940-1941 ; The Journal of General Physiology Volume 24 ; 24 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1941-1942 ; The Journal of General Physiology Volume 25 ; 25 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1942-1943 ; The Journal of General Physiology Volume 26 ; 26 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1943-1944 ; The Journal of General Physiology Volume 27 ; 27 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1944-1945 ; The Journal of General Physiology Volume 28 ; 28 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1945-1946 ; The Journal of General Physiology Volume 29 ; 29 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1946-1947 ; The Journal of General Physiology Volume 30 ; 30 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1947-1948 ; The Journal of General Physiology Volume 31 ; 31 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1939-1940 ; The Journal of General Physiology Volume 23 ; 23 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1940-1941 ; The Journal of General Physiology Volume 24 ; 24 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1941-1942 ; The Journal of General Physiology Volume 25 ; 25 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1942-1943 ; The Journal of General Physiology Volume 26 ; 26 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1943-1944 ; The Journal of General Physiology Volume 27 ; 27 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1944-1945 ; The Journal of General Physiology Volume 28 ; 28 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1945-1946 ; The Journal of General Physiology Volume 29 ; 29 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1946-1947 ; The Journal of General Physiology Volume 30 ; 30 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1947-1948 ; The Journal of General Physiology Volume 31 ; 31 ; >
     au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1948-1949 ; The Journal of General Physiology Volume 32 ; 32 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1949-1950 ; The Journal of General Physiology Volume 33 ; 33 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1950-1951 ; The Journal of General Physiology Volume 34 ; 34 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1951-1952 ; The Journal of General Physiology Volume 35 ; 35 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1952-1953 ; The Journal of General Physiology Volume 36 ; 36 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1953-1954 ; The Journal of General Physiology Volume 37 ; 37 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1954-1955 ; The Journal of General Physiology Volume 38 ; 38 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1955-1956 ; The Journal of General Physiology Volume 39 ; 39 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1956-1957 ; The Journal of General Physiology Volume 40 ; 40 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1957-1958 ; The Journal of General Physiology Volume 41 ; 41 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1958-1959 ; The Journal of General Physiology Volume 42 ; 42 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1959-1960 ; The Journal of General Physiology Volume 43 ; 43 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1960-1961 ; The Journal of General Physiology Volume 44 ; 44 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1961-1962 ; The Journal of General Physiology Volume 45 ; 45 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1962-1963 ; The Journal of General Physiology Volume 46 ; 46 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1963-1964 ; The Journal of General Physiology Volume 47 ; 47 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1964-1965 ; The Journal of General Physiology Volume 48 ; 48 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1965-1966 ; The Journal of General Physiology Volume 49 ; 49 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1966-1967 ; The Journal of General Physiology Volume 50 ; 50 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1968 ; The Journal of General Physiology Volume 51 ; 51 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1968 ; The Journal of General Physiology Volume 52 ; 52 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1969 ; The Journal of General Physiology Volume 53 ; 53 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1969 ; The Journal of General Physiology Volume 54 ; 54 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1970 ; The Journal of General Physiology Volume 55 ; 55 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1970 ; The Journal of General Physiology Volume 56 ; 56 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1971 ; The Journal of General Physiology Volume 57 ; 57 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1971 ; The Journal of General Physiology Volume 58 ; 58 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1972 ; The Journal of General Physiology Volume 59 ; 59 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1972 ; The Journal of General Physiology Volume 60 ; 60 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1973 ; The Journal of General Physiology Volume 61 ; 61 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1973 ; The Journal of General Physiology Volume 62 ; 62 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1974 ; The Journal of General Physiology Volume 63 ; 63 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1974 ; The Journal of General Physiology Volume 64 ; 64 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1975 ; The Journal of General Physiology Volume 65 ; 65 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1975 ; The Journal of General Physiology Volume 66 ; 66 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1976 ; The Journal of General Physiology Volume 67 ; 67 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1976 ; The Journal of General Physiology Volume 68 ; 68 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1977 ; The Journal of General Physiology Volume 69 ; 69 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1977 ; The Journal of General Physiology Volume 70 ; 70 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1978 ; The Journal of General Physiology Volume 71 ; 71 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1978 ; The Journal of General Physiology Volume 72 ; 72 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1979 ; The Journal of General Physiology Volume 73 ; 73 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1979 ; The Journal of General Physiology Volume 74 ; 74 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1980 ; The Journal of General Physiology Volume 75 ; 75 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1980 ; The Journal of General Physiology Volume 76 ; 76 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1981 ; The Journal of General Physiology Volume 77 ; 77 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1981 ; The Journal of General Physiology Volume 78 ; 78 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1982 ; The Journal of General Physiology Volume 79 ; 79 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1982 ; The Journal of General Physiology Volume 80 ; 80 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1983 ; The Journal of General Physiology Volume 81 ; 81 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1983 ; The Journal of General Physiology Volume 82 ; 82 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1984 ; The Journal of General Physiology Volume 83 ; 83 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1984 ; The Journal of General Physiology Volume 84 ; 84 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1985 ; The Journal of General Physiology Volume 85 ; 85 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1985 ; The Journal of General Physiology Volume 86 ; 86 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1986 ; The Journal of General Physiology Volume 87 ; 87 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1986 ; The Journal of General Physiology Volume 88 ; 88 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1987 ; The Journal of General Physiology Volume 89 ; 89 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1987 ; The Journal of General Physiology Volume 90 ; 90 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1988 ; The Journal of General Physiology Volume 91 ; 91 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1988 ; The Journal of General Physiology Volume 92 ; 92 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1989 ; The Journal of General Physiology Volume 93 ; 93 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1989 ; The Journal of General Physiology Volume 94 ; 94 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1990 ; The Journal of General Physiology Volume 95 ; 95 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1990 ; The Journal of General Physiology Volume 96 ; 96 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1991 ; The Journal of General Physiology Volume 97 ; 97 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1991 ; The Journal of General Physiology Volume 98 ; 98 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1992 ; The Journal of General Physiology Volume 99 ; 99 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1992 ; The Journal of General Physiology Volume 100 ; 100 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1949-1950 ; The Journal of General Physiology Volume 33 ; 33 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1950-1951 ; The Journal of General Physiology Volume 34 ; 34 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1951-1952 ; The Journal of General Physiology Volume 35 ; 35 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1952-1953 ; The Journal of General Physiology Volume 36 ; 36 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1953-1954 ; The Journal of General Physiology Volume 37 ; 37 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1954-1955 ; The Journal of General Physiology Volume 38 ; 38 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1955-1956 ; The Journal of General Physiology Volume 39 ; 39 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1956-1957 ; The Journal of General Physiology Volume 40 ; 40 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1957-1958 ; The Journal of General Physiology Volume 41 ; 41 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1958-1959 ; The Journal of General Physiology Volume 42 ; 42 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1959-1960 ; The Journal of General Physiology Volume 43 ; 43 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1960-1961 ; The Journal of General Physiology Volume 44 ; 44 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1961-1962 ; The Journal of General Physiology Volume 45 ; 45 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1962-1963 ; The Journal of General Physiology Volume 46 ; 46 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1963-1964 ; The Journal of General Physiology Volume 47 ; 47 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1964-1965 ; The Journal of General Physiology Volume 48 ; 48 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1965-1966 ; The Journal of General Physiology Volume 49 ; 49 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1966-1967 ; The Journal of General Physiology Volume 50 ; 50 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1968 ; The Journal of General Physiology Volume 51 ; 51 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1968 ; The Journal of General Physiology Volume 52 ; 52 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1969 ; The Journal of General Physiology Volume 53 ; 53 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1969 ; The Journal of General Physiology Volume 54 ; 54 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1970 ; The Journal of General Physiology Volume 55 ; 55 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1970 ; The Journal of General Physiology Volume 56 ; 56 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1971 ; The Journal of General Physiology Volume 57 ; 57 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1971 ; The Journal of General Physiology Volume 58 ; 58 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1972 ; The Journal of General Physiology Volume 59 ; 59 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1972 ; The Journal of General Physiology Volume 60 ; 60 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1973 ; The Journal of General Physiology Volume 61 ; 61 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1973 ; The Journal of General Physiology Volume 62 ; 62 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1974 ; The Journal of General Physiology Volume 63 ; 63 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1974 ; The Journal of General Physiology Volume 64 ; 64 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1975 ; The Journal of General Physiology Volume 65 ; 65 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1975 ; The Journal of General Physiology Volume 66 ; 66 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1976 ; The Journal of General Physiology Volume 67 ; 67 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1976 ; The Journal of General Physiology Volume 68 ; 68 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1977 ; The Journal of General Physiology Volume 69 ; 69 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1977 ; The Journal of General Physiology Volume 70 ; 70 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1978 ; The Journal of General Physiology Volume 71 ; 71 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1978 ; The Journal of General Physiology Volume 72 ; 72 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1979 ; The Journal of General Physiology Volume 73 ; 73 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1979 ; The Journal of General Physiology Volume 74 ; 74 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1980 ; The Journal of General Physiology Volume 75 ; 75 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1980 ; The Journal of General Physiology Volume 76 ; 76 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1981 ; The Journal of General Physiology Volume 77 ; 77 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1981 ; The Journal of General Physiology Volume 78 ; 78 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1982 ; The Journal of General Physiology Volume 79 ; 79 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1982 ; The Journal of General Physiology Volume 80 ; 80 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1983 ; The Journal of General Physiology Volume 81 ; 81 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1983 ; The Journal of General Physiology Volume 82 ; 82 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1984 ; The Journal of General Physiology Volume 83 ; 83 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1984 ; The Journal of General Physiology Volume 84 ; 84 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1985 ; The Journal of General Physiology Volume 85 ; 85 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1985 ; The Journal of General Physiology Volume 86 ; 86 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1986 ; The Journal of General Physiology Volume 87 ; 87 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1986 ; The Journal of General Physiology Volume 88 ; 88 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1987 ; The Journal of General Physiology Volume 89 ; 89 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1987 ; The Journal of General Physiology Volume 90 ; 90 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1988 ; The Journal of General Physiology Volume 91 ; 91 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1988 ; The Journal of General Physiology Volume 92 ; 92 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1989 ; The Journal of General Physiology Volume 93 ; 93 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1989 ; The Journal of General Physiology Volume 94 ; 94 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1990 ; The Journal of General Physiology Volume 95 ; 95 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1990 ; The Journal of General Physiology Volume 96 ; 96 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1991 ; The Journal of General Physiology Volume 97 ; 97 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1991 ; The Journal of General Physiology Volume 98 ; 98 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1992 ; The Journal of General Physiology Volume 99 ; 99 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1992 ; The Journal of General Physiology Volume 100 ; 100 ; >
     au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1993 ; The Journal of General Physiology Volume 101 ; 101 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1993 ; The Journal of General Physiology Volume 102 ; 102 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1994 ; The Journal of General Physiology Volume 103 ; 103 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1994 ; The Journal of General Physiology Volume 104 ; 104 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1995 ; The Journal of General Physiology Volume 105 ; 105 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1995 ; The Journal of General Physiology Volume 106 ; 106 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1996 ; The Journal of General Physiology Volume 107 ; 107 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1996 ; The Journal of General Physiology Volume 108 ; 108 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1997 ; The Journal of General Physiology Volume 109 ; 109 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1993 ; The Journal of General Physiology Volume 102 ; 102 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1994 ; The Journal of General Physiology Volume 103 ; 103 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1994 ; The Journal of General Physiology Volume 104 ; 104 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1995 ; The Journal of General Physiology Volume 105 ; 105 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1995 ; The Journal of General Physiology Volume 106 ; 106 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1996 ; The Journal of General Physiology Volume 107 ; 107 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1996 ; The Journal of General Physiology Volume 108 ; 108 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1997 ; The Journal of General Physiology Volume 109 ; 109 ; >
     au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1997 ; The Journal of General Physiology Volume 110 ; 110 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1998 ; The Journal of General Physiology Volume 111 ; 111 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1998 ; The Journal of General Physiology Volume 112 ; 112 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1998 ; The Journal of General Physiology Volume 111 ; 111 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1998 ; The Journal of General Physiology Volume 112 ; 112 ; >
     au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1999 ; The Journal of General Physiology Volume 113 ; 113 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1999 ; The Journal of General Physiology Volume 114 ; 114 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 2000 ; The Journal of General Physiology Volume 115 ; 115 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 2000 ; The Journal of General Physiology Volume 116 ; 116 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1999 ; The Journal of General Physiology Volume 114 ; 114 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 2000 ; The Journal of General Physiology Volume 115 ; 115 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 2000 ; The Journal of General Physiology Volume 116 ; 116 ; >
     au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 2001 ; The Journal of General Physiology Volume 117 ; 117 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 2001 ; The Journal of General Physiology Volume 118 ; 118 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 2002 ; The Journal of General Physiology Volume 119 ; 119 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 2001 ; The Journal of General Physiology Volume 118 ; 118 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 2002 ; The Journal of General Physiology Volume 119 ; 119 ; >
     au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 2002 ; The Journal of General Physiology Volume 120 ; 120 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 2003 ; The Journal of General Physiology Volume 121 ; 121 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 2003 ; The Journal of General Physiology Volume 121 ; 121 ; >
     au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 2003 ; The Journal of General Physiology Volume 122 ; 122 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 2004 ; The Journal of General Physiology Volume 123 ; 123 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 2004 ; The Journal of General Physiology Volume 124 ; 124 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 2005 ; The Journal of General Physiology Volume 125 ; 125 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 2005 ; The Journal of General Physiology Volume 126 ; 126 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 2006 ; The Journal of General Physiology Volume 127 ; 127 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 2006 ; The Journal of General Physiology Volume 128 ; 128 ; >
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 2007 ; The Journal of General Physiology Volume 129 ; 129 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 2004 ; The Journal of General Physiology Volume 123 ; 123 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 2004 ; The Journal of General Physiology Volume 124 ; 124 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 2005 ; The Journal of General Physiology Volume 125 ; 125 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 2005 ; The Journal of General Physiology Volume 126 ; 126 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 2006 ; The Journal of General Physiology Volume 127 ; 127 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 2006 ; The Journal of General Physiology Volume 128 ; 128 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 2007 ; The Journal of General Physiology Volume 129 ; 129 ; >
     au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 2007 ; The Journal of General Physiology Volume 130 ; 130 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2008 ; The Journal of General Physiology Volume 131 ; 131 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; The Journal of General Physiology Volume 132 ; 132 ; >
@@ -633,7 +633,7 @@
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2016 ; The Journal of General Physiology Volume 147 ; 147 ; reingest5.clockss.org:8082 >
     au < rup.ClockssRUPDrupalPlugin ; finished ; crawling ; 2016 ; The Journal of General Physiology Volume 148 ; 148 ; reingest5.clockss.org:8082 > # switch to Drupal 9/20/16
     au < rup.ClockssRUPDrupalPlugin ; deepCrawl ; exists ; 2017 ; The Journal of General Physiology Volume 149 ; 149 ; > # switch to Drupal 9/20/16
-    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 2018 ; The Journal of General Physiology Volume 150 ; 150 ; >
+    au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 2018 ; The Journal of General Physiology Volume 150 ; 150 ; >
 
   }
 
