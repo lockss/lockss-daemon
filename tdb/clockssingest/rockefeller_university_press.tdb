@@ -255,10 +255,10 @@
 
     param[base_url] = http://jem.rupress.org/
 
-    au < rup.ClockssRUPDrupalPlugin ; crawling ; exists ; 1896 ; The Journal of Experimental Medicine Volume 1 ; 1 ; >
+    au < rup.ClockssRUPDrupalPlugin ; frozen ; exists ; 1896 ; The Journal of Experimental Medicine Volume 1 ; 1 ; >
     au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1897 ; The Journal of Experimental Medicine Volume 2 ; 2 ; >
     au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1898 ; The Journal of Experimental Medicine Volume 3 ; 3 ; >
-    au < rup.ClockssRUPDrupalPlugin ; crawling ; exists ; 1899 ; The Journal of Experimental Medicine Volume 4 ; 4 ; >
+    au < rup.ClockssRUPDrupalPlugin ; frozen ; exists ; 1899 ; The Journal of Experimental Medicine Volume 4 ; 4 ; >
     au < rup.ClockssRUPDrupalPlugin ; crawling ; exists ; 1900-1901 ; The Journal of Experimental Medicine Volume 5 ; 5 ; >
     au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1901-1905 ; The Journal of Experimental Medicine Volume 6 ; 6 ; >
     au < rup.ClockssRUPDrupalPlugin ; crawling ; exists ; 1905 ; The Journal of Experimental Medicine Volume 7 ; 7 ; >
@@ -284,9 +284,9 @@
     au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1918 ; The Journal of Experimental Medicine Volume 27 ; 27 ; >
     au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1918 ; The Journal of Experimental Medicine Volume 28 ; 28 ; >
     au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1919 ; The Journal of Experimental Medicine Volume 29 ; 29 ; >
-    au < rup.ClockssRUPDrupalPlugin ; crawling ; exists ; 1919 ; The Journal of Experimental Medicine Volume 30 ; 30 ; >
+    au < rup.ClockssRUPDrupalPlugin ; frozen ; exists ; 1919 ; The Journal of Experimental Medicine Volume 30 ; 30 ; >
     au < rup.ClockssRUPDrupalPlugin ; crawling ; exists ; 1920 ; The Journal of Experimental Medicine Volume 31 ; 31 ; >
-    au < rup.ClockssRUPDrupalPlugin ; crawling ; exists ; 1920 ; The Journal of Experimental Medicine Volume 32 ; 32 ; >
+    au < rup.ClockssRUPDrupalPlugin ; frozen ; exists ; 1920 ; The Journal of Experimental Medicine Volume 32 ; 32 ; >
     au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1921 ; The Journal of Experimental Medicine Volume 33 ; 33 ; >
     au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1921 ; The Journal of Experimental Medicine Volume 34 ; 34 ; >
     au < rup.ClockssRUPDrupalPlugin ; frozen ; exists ; 1922 ; The Journal of Experimental Medicine Volume 35 ; 35 ; >
@@ -315,9 +315,9 @@
     au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1933 ; The Journal of Experimental Medicine Volume 58 ; 58 ; >
     au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1934 ; The Journal of Experimental Medicine Volume 59 ; 59 ; >
     au < rup.ClockssRUPDrupalPlugin ; frozen ; exists ; 1934 ; The Journal of Experimental Medicine Volume 60 ; 60 ; >
-    au < rup.ClockssRUPDrupalPlugin ; crawling ; exists ; 1935 ; The Journal of Experimental Medicine Volume 61 ; 61 ; >
+    au < rup.ClockssRUPDrupalPlugin ; frozen ; exists ; 1935 ; The Journal of Experimental Medicine Volume 61 ; 61 ; >
     au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 1935 ; The Journal of Experimental Medicine Volume 62 ; 62 ; >
-    au < rup.ClockssRUPDrupalPlugin ; crawling ; exists ; 1936 ; The Journal of Experimental Medicine Volume 63 ; 63 ; >
+    au < rup.ClockssRUPDrupalPlugin ; frozen ; exists ; 1936 ; The Journal of Experimental Medicine Volume 63 ; 63 ; >
     au < rup.ClockssRUPDrupalPlugin ; frozen ; exists ; 1936 ; The Journal of Experimental Medicine Volume 64 ; 64 ; >
     au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1937 ; The Journal of Experimental Medicine Volume 65 ; 65 ; >
     au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1937 ; The Journal of Experimental Medicine Volume 66 ; 66 ; >
@@ -334,16 +334,16 @@
     au < rup.ClockssRUPDrupalPlugin ; frozen ; exists ; 1943 ; The Journal of Experimental Medicine Volume 77 ; 77 ; >
     au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1943 ; The Journal of Experimental Medicine Volume 78 ; 78 ; >
     au < rup.ClockssRUPDrupalPlugin ; frozen ; exists ; 1944 ; The Journal of Experimental Medicine Volume 79 ; 79 ; >
-    au < rup.ClockssRUPDrupalPlugin ; crawling ; exists ; 1944 ; The Journal of Experimental Medicine Volume 80 ; 80 ; >
+    au < rup.ClockssRUPDrupalPlugin ; frozen ; exists ; 1944 ; The Journal of Experimental Medicine Volume 80 ; 80 ; >
     au < rup.ClockssRUPDrupalPlugin ; frozen ; exists ; 1945 ; The Journal of Experimental Medicine Volume 81 ; 81 ; >
     au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1945 ; The Journal of Experimental Medicine Volume 82 ; 82 ; >
     au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1946 ; The Journal of Experimental Medicine Volume 83 ; 83 ; >
     au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1946 ; The Journal of Experimental Medicine Volume 84 ; 84 ; >
-    au < rup.ClockssRUPDrupalPlugin ; crawling ; exists ; 1947 ; The Journal of Experimental Medicine Volume 85 ; 85 ; >
+    au < rup.ClockssRUPDrupalPlugin ; frozen ; exists ; 1947 ; The Journal of Experimental Medicine Volume 85 ; 85 ; >
     au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1947 ; The Journal of Experimental Medicine Volume 86 ; 86 ; >
     au < rup.ClockssRUPDrupalPlugin ; frozen ; exists ; 1948 ; The Journal of Experimental Medicine Volume 87 ; 87 ; >
     au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1948 ; The Journal of Experimental Medicine Volume 88 ; 88 ; >
-    au < rup.ClockssRUPDrupalPlugin ; crawling ; exists ; 1949 ; The Journal of Experimental Medicine Volume 89 ; 89 ; >
+    au < rup.ClockssRUPDrupalPlugin ; frozen ; exists ; 1949 ; The Journal of Experimental Medicine Volume 89 ; 89 ; >
     au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1949 ; The Journal of Experimental Medicine Volume 90 ; 90 ; >
     au < rup.ClockssRUPDrupalPlugin ; crawling ; exists ; 1950 ; The Journal of Experimental Medicine Volume 91 ; 91 ; >
     au < rup.ClockssRUPDrupalPlugin ; frozen ; exists ; 1950 ; The Journal of Experimental Medicine Volume 92 ; 92 ; >
@@ -353,13 +353,13 @@
     au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1952 ; The Journal of Experimental Medicine Volume 96 ; 96 ; >
     au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1953 ; The Journal of Experimental Medicine Volume 97 ; 97 ; >
     au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1953 ; The Journal of Experimental Medicine Volume 98 ; 98 ; >
-    au < rup.ClockssRUPDrupalPlugin ; crawling ; exists ; 1954 ; The Journal of Experimental Medicine Volume 99 ; 99 ; >
+    au < rup.ClockssRUPDrupalPlugin ; frozen ; exists ; 1954 ; The Journal of Experimental Medicine Volume 99 ; 99 ; >
     au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1954 ; The Journal of Experimental Medicine Volume 100 ; 100 ; >
     au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1955 ; The Journal of Experimental Medicine Volume 101 ; 101 ; >
     au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1955 ; The Journal of Experimental Medicine Volume 102 ; 102 ; >
     au < rup.ClockssRUPDrupalPlugin ; crawling ; exists ; 1956 ; The Journal of Experimental Medicine Volume 103 ; 103 ; >
     au < rup.ClockssRUPDrupalPlugin ; crawling ; exists ; 1956 ; The Journal of Experimental Medicine Volume 104 ; 104 ; >
-    au < rup.ClockssRUPDrupalPlugin ; crawling ; exists ; 1957 ; The Journal of Experimental Medicine Volume 105 ; 105 ; >
+    au < rup.ClockssRUPDrupalPlugin ; frozen ; exists ; 1957 ; The Journal of Experimental Medicine Volume 105 ; 105 ; >
     au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1957 ; The Journal of Experimental Medicine Volume 106 ; 106 ; >
     au < rup.ClockssRUPDrupalPlugin ; frozen ; exists ; 1958 ; The Journal of Experimental Medicine Volume 107 ; 107 ; >
     au < rup.ClockssRUPDrupalPlugin ; frozen ; exists ; 1958 ; The Journal of Experimental Medicine Volume 108 ; 108 ; >
@@ -371,7 +371,7 @@
     au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1961 ; The Journal of Experimental Medicine Volume 114 ; 114 ; >
     au < rup.ClockssRUPDrupalPlugin ; crawling ; exists ; 1962 ; The Journal of Experimental Medicine Volume 115 ; 115 ; >
     au < rup.ClockssRUPDrupalPlugin ; crawling ; exists ; 1962 ; The Journal of Experimental Medicine Volume 116 ; 116 ; >
-    au < rup.ClockssRUPDrupalPlugin ; crawling ; exists ; 1963 ; The Journal of Experimental Medicine Volume 117 ; 117 ; >
+    au < rup.ClockssRUPDrupalPlugin ; frozen ; exists ; 1963 ; The Journal of Experimental Medicine Volume 117 ; 117 ; >
     au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1963 ; The Journal of Experimental Medicine Volume 118 ; 118 ; >
     au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1964 ; The Journal of Experimental Medicine Volume 119 ; 119 ; >
     au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1964 ; The Journal of Experimental Medicine Volume 120 ; 120 ; >
@@ -389,12 +389,12 @@
     au < rup.ClockssRUPDrupalPlugin ; frozen ; exists ; 1970 ; The Journal of Experimental Medicine Volume 132 ; 132 ; >
     au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1971 ; The Journal of Experimental Medicine Volume 133 ; 133 ; >
     au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1971 ; The Journal of Experimental Medicine Volume 134 ; 134 ; >
-    au < rup.ClockssRUPDrupalPlugin ; crawling ; exists ; 1972 ; The Journal of Experimental Medicine Volume 135 ; 135 ; >
+    au < rup.ClockssRUPDrupalPlugin ; frozen ; exists ; 1972 ; The Journal of Experimental Medicine Volume 135 ; 135 ; >
     au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1972 ; The Journal of Experimental Medicine Volume 136 ; 136 ; >
-    au < rup.ClockssRUPDrupalPlugin ; crawling ; exists ; 1973 ; The Journal of Experimental Medicine Volume 137 ; 137 ; >
-    au < rup.ClockssRUPDrupalPlugin ; crawling ; exists ; 1973 ; The Journal of Experimental Medicine Volume 138 ; 138 ; >
+    au < rup.ClockssRUPDrupalPlugin ; frozen ; exists ; 1973 ; The Journal of Experimental Medicine Volume 137 ; 137 ; >
+    au < rup.ClockssRUPDrupalPlugin ; frozen ; exists ; 1973 ; The Journal of Experimental Medicine Volume 138 ; 138 ; >
     au < rup.ClockssRUPDrupalPlugin ; crawling ; exists ; 1974 ; The Journal of Experimental Medicine Volume 139 ; 139 ; >
-    au < rup.ClockssRUPDrupalPlugin ; crawling ; exists ; 1974 ; The Journal of Experimental Medicine Volume 140 ; 140 ; >
+    au < rup.ClockssRUPDrupalPlugin ; frozen ; exists ; 1974 ; The Journal of Experimental Medicine Volume 140 ; 140 ; >
     au < rup.ClockssRUPDrupalPlugin ; frozen ; exists ; 1975 ; The Journal of Experimental Medicine Volume 141 ; 141 ; >
     au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1975 ; The Journal of Experimental Medicine Volume 142 ; 142 ; >
     au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1976 ; The Journal of Experimental Medicine Volume 143 ; 143 ; >
@@ -404,10 +404,10 @@
     au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1978 ; The Journal of Experimental Medicine Volume 147 ; 147 ; >
     au < rup.ClockssRUPDrupalPlugin ; frozen ; exists ; 1978 ; The Journal of Experimental Medicine Volume 148 ; 148 ; >
     au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1979 ; The Journal of Experimental Medicine Volume 149 ; 149 ; >
-    au < rup.ClockssRUPDrupalPlugin ; crawling ; exists ; 1979 ; The Journal of Experimental Medicine Volume 150 ; 150 ; >
+    au < rup.ClockssRUPDrupalPlugin ; frozen ; exists ; 1979 ; The Journal of Experimental Medicine Volume 150 ; 150 ; >
     au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1980 ; The Journal of Experimental Medicine Volume 151 ; 151 ; >
     au < rup.ClockssRUPDrupalPlugin ; crawling ; exists ; 1980 ; The Journal of Experimental Medicine Volume 152 ; 152 ; >
-    au < rup.ClockssRUPDrupalPlugin ; crawling ; exists ; 1981 ; The Journal of Experimental Medicine Volume 153 ; 153 ; >
+    au < rup.ClockssRUPDrupalPlugin ; frozen ; exists ; 1981 ; The Journal of Experimental Medicine Volume 153 ; 153 ; >
     au < rup.ClockssRUPDrupalPlugin ; frozen ; exists ; 1981 ; The Journal of Experimental Medicine Volume 154 ; 154 ; >
     au < rup.ClockssRUPDrupalPlugin ; ready ; exists ; 1982 ; The Journal of Experimental Medicine Volume 155 ; 155 ; >
     au < rup.ClockssRUPDrupalPlugin ; crawling ; exists ; 1982 ; The Journal of Experimental Medicine Volume 156 ; 156 ; >
