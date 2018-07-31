@@ -19,10 +19,13 @@
     
     param[journal_issn] = 2313-1691
     comment[journal_id] = ag
+    #content on https://algebraicgeometry.nl/
     
-    au < manifest ; 2014 ; Algebraic Geometry Volume 2 ; 2 >
-    au < exists ; 2017 ; Algebraic Geometry Volume 3 ; 3 >
-    au < expected ; 2018 ; Algebraic Geometry Volume 4 ; 4 >
+    au < expected ; 2014 ; Algebraic Geometry Volume 1 ; 1 >
+    au < expected ; 2015 ; Algebraic Geometry Volume 2 ; 2 >
+    au < expected ; 2016 ; Algebraic Geometry Volume 3 ; 3 >
+    au < expected ; 2017 ; Algebraic Geometry Volume 4 ; 4 >
+    au < expected ; 2018 ; Algebraic Geometry Volume 5 ; 5 >
 
   }
 
