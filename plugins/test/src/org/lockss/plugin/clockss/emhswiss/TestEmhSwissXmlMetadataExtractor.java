@@ -124,7 +124,7 @@ public class TestEmhSwissXmlMetadataExtractor extends LockssTestCase {
       assertEquals(1, mdlist.size());
       ArticleMetadata mdRecord = mdlist.get(0);
       assertNotNull(mdRecord);
-      log.info(mdRecord.ppString(2));
+      //log.info(mdRecord.ppString(2));
 
     }finally {
       IOUtil.safeClose(file_input);
