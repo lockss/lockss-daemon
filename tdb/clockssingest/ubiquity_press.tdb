@@ -2,6 +2,7 @@
   publisher <
     name = Open Library of Humanities ;
     info[contract] = 2011 ;
+    info[back] = 2000 ;
     info[tester] = 8 ;
     info[poller] = 8
   >
@@ -94,10 +95,10 @@
 
       comment[publisher] = Open Library of Humanities
 #      param[base_url] = http://c21.openlibhums.org/
+      #Changed platform
 
       au < frozen ; exists ; 2016 ; 1 ; C21 Literature: journal of 21st-century writings Volume 2016 ; 2016 ; http://c21.openlibhums.org/ ; >
-      au < deepCrawl ; exists ; 2017 ; 2 ; C21 Literature: journal of 21st-century writings Volume 2017 ; 2017 ; http://c21.openlibhums.org/ ; >
-      au < exists ; exists ; 2018 ; 3 ; C21 Literature: journal of 21st-century writings Volume 2018 ; 2018 ; https://c21.openlibhums.org/ ; > #platform same, but no about page.
+      au < frozen ; exists ; 2017 ; 2 ; C21 Literature: journal of 21st-century writings Volume 2017 ; 2017 ; http://c21.openlibhums.org/ ; >
 
   }
 
