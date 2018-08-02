@@ -1379,7 +1379,7 @@
    au < finished ; finished ; 2015 ; 2015 ; Ergopraxis Volume 8 ; 8 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2016 ; 2016 ; Ergopraxis Volume 9 ; 9 ; >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Ergopraxis Volume 10 ; 10 ; >
-   au < ready ; exists ; 2018 ; 2018 ; Ergopraxis Volume 11 ; 11 ; >
+   au < crawling ; exists ; 2018 ; 2018 ; Ergopraxis Volume 11 ; 11 ; >
 
   }
 
@@ -1584,7 +1584,7 @@
    au < finished ; finished ; 2015 ; 2015 ; Experimental and Clinical Endocrinology & Diabetes Volume 123 ; 123 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2016 ; 2016 ; Experimental and Clinical Endocrinology & Diabetes Volume 124 ; 124 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Experimental and Clinical Endocrinology & Diabetes Volume 125 ; 125 ; >
-   au < ready ; exists ; 2018 ; 2018 ; Experimental and Clinical Endocrinology & Diabetes Volume 126 ; 126 ; >
+   au < crawling ; exists ; 2018 ; 2018 ; Experimental and Clinical Endocrinology & Diabetes Volume 126 ; 126 ; >
 
   }
 
@@ -1730,7 +1730,7 @@
    au < finished ; finished ; 2015 ; 2015 ; Fortschritte der Neurologie - Psychiatrie Volume 83 ; 83 ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; Fortschritte der Neurologie - Psychiatrie Volume 84 ; 84 ; reingest2.clockss.org:8085 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Fortschritte der Neurologie - Psychiatrie Volume 85 ; 85 ; >
-   au < ready ; exists ; 2018 ; 2018 ; Fortschritte der Neurologie - Psychiatrie Volume 86 ; 86 ; >
+   au < crawling ; exists ; 2018 ; 2018 ; Fortschritte der Neurologie - Psychiatrie Volume 86 ; 86 ; >
 
   }
 
@@ -1756,7 +1756,7 @@
    au < finished ; finished ; 2015 ; 2015 ; Frauenheilkunde up2date Volume 9 ; 9 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; exists ; 2016 ; 2016 ; Frauenheilkunde up2date Volume 10 ; 10 ; >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Frauenheilkunde up2date Volume 11 ; 11 ; >
-   au < ready ; exists ; 2018 ; 2018 ; Frauenheilkunde up2date Volume 12 ; 12 ; >
+   au < crawling ; exists ; 2018 ; 2018 ; Frauenheilkunde up2date Volume 12 ; 12 ; >
 
    }
 
@@ -1856,7 +1856,7 @@
    au < finished ; finished ; 2015 ; 2015 ; Gefäßmedizin Scan Volume 2 ; 2 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; Gefäßmedizin Scan Volume 3 ; 3 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Gefäßmedizin Scan Volume 4 ; 4 ; >
-   au < ready ; exists ; 2018 ; 2018 ; Gefäßmedizin Scan Volume 5 ; 5 ; >
+   au < crawling ; exists ; 2018 ; 2018 ; Gefäßmedizin Scan Volume 5 ; 5 ; >
 
   }
 
@@ -2157,7 +2157,7 @@
    au < finished ; finished ; 2015 ; 2015 ; Im OP Volume 5 ; 5 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; Im OP Volume 6 ; 6 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Im OP Volume 7 ; 7 ; >
-   au < ready ; exists ; 2018 ; 2018 ; Im OP Volume 8 ; 8 ; >
+   au < crawling ; exists ; 2018 ; 2018 ; Im OP Volume 8 ; 8 ; >
 
   }
 
@@ -2289,7 +2289,7 @@
     au < finished ; finished ; 2015 ; 2015 ; intensiv Volume 23 ; 23 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; intensiv Volume 24 ; 24 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; intensiv Volume 25 ; 25 ; >
-    au < ready ; exists ; 2018 ; 2018 ; intensiv Volume 26 ; 26 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; intensiv Volume 26 ; 26 ; >
 
   }
 
@@ -2473,7 +2473,7 @@
     comment[years] = 2017-current
 
     au < deepCrawl ; exists ; 2017 ; 2017 ; Joints Volume 1 ; 1 ; >
-    au < ready ; exists ; 2018 ; 2018 ; Joints Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Joints Volume 2 ; 2 ; >
 
   }
 
@@ -2876,7 +2876,7 @@
     au < finished ; finished ; 2015 ; 2015 ; Journal of Pediatric Intensive Care Volume 4 ; 4 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Journal of Pediatric Intensive Care Volume 5 ; 5 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Journal of Pediatric Intensive Care Volume 6 ; 6 ; >
-    au < ready ; exists ; 2018 ; 2018 ; Journal of Pediatric Intensive Care Volume 7 ; 7 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Journal of Pediatric Intensive Care Volume 7 ; 7 ; >
 
   }
 
@@ -2907,7 +2907,7 @@
     au < finished ; finished ; 2015 ; 2015 ; Journal of Pediatric Neurology Volume 13 ; 13 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Journal of Pediatric Neurology Volume 14 ; 14 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Journal of Pediatric Neurology Volume 15 ; 15 ; >
-    au < ready ; exists ; 2018 ; 2018 ; Journal of Pediatric Neurology Volume 16 ; 16 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Journal of Pediatric Neurology Volume 16 ; 16 ; >
 
   }
 
@@ -2979,7 +2979,7 @@
     au < finished ; finished ; 2015 ; 2015 ; Journal of Reconstructive Microsurgery Volume 31 ; 31 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; 2016 ; Journal of Reconstructive Microsurgery Volume 32 ; 32 ; >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Journal of Reconstructive Microsurgery Volume 33 ; 33 ; >
-    au < ready ; exists ; 2018 ; 2018 ; Journal of Reconstructive Microsurgery Volume 34 ; 34 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Journal of Reconstructive Microsurgery Volume 34 ; 34 ; >
 
   }
 
@@ -2998,7 +2998,7 @@
 
     au < finished ; crawling ; 2016 ; 2016 ; Journal of Reconstructive Microsurgery Open Volume 1 ; 1 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Journal of Reconstructive Microsurgery Open Volume 2 ; 2 ; >
-    au < ready ; exists ; 2018 ; 2018 ; Journal of Reconstructive Microsurgery Open Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Journal of Reconstructive Microsurgery Open Volume 3 ; 3 ; >
 
   }
 
@@ -3042,7 +3042,7 @@
     au < finished ; finished ; 2015 ; 2015 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 4 ; 4 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2016 ; 2016 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 5 ; 5 ; >
     au < deepCrawl ; exists ; 2017 ; 2017 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 6 ; 6 ; >
-    au < ready ; exists ; 2018 ; 2018 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 7 ; 7 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 7 ; 7 ; >
 
   }
 
@@ -3234,7 +3234,7 @@
     au < finished ; finished ; 2015 ; 2015 ; Klinische Neurophysiologie Volume 46 ; 46 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Klinische Neurophysiologie Volume 47 ; 47 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Klinische Neurophysiologie Volume 48 ; 48 ; >
-    au < ready ; exists ; 2018 ; 2018 ; Klinische Neurophysiologie Volume 49 ; 49 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Klinische Neurophysiologie Volume 49 ; 49 ; >
 
   }
 
@@ -3287,7 +3287,7 @@
     au < finished ; finished ; 2015 ; 2015 ; Klinische Pädiatrie Volume 227 ; 227 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Klinische Pädiatrie Volume 228 ; 228 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Klinische Pädiatrie Volume 229 ; 229 ; >
-    au < ready ; exists ; 2018 ; 2018 ; Klinische Pädiatrie Volume 230 ; 230 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Klinische Pädiatrie Volume 230 ; 230 ; >
 
   }
 
@@ -3575,7 +3575,7 @@
     au < finished ; finished ; 2015 ; 2015 ; Neonatologie Scan Volume 3 ; 3 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Neonatologie Scan Volume 4 ; 4 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Neonatologie Scan Volume 5 ; 5 ; >
-    au < ready ; exists ; 2018 ; 2018 ; Neonatologie Scan Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Neonatologie Scan Volume 6 ; 6 ; >
 
   }
 
@@ -3666,7 +3666,7 @@
     au < finished ; finished ; 2015 ; 2015 ; Neuropediatrics Volume 46 ; 46 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; Neuropediatrics Volume 47 ; 47 ;  >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Neuropediatrics Volume 48 ; 48 ; >
-    au < ready ; exists ; 2018 ; 2018 ; Neuropediatrics Volume 49 ; 49 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Neuropediatrics Volume 49 ; 49 ; >
 
   }
 
@@ -3825,7 +3825,7 @@
     au < finished ; finished ; 2015 ; 2015 ; Notfallmedizin up2date Volume 10 ; 10 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Notfallmedizin up2date Volume 11 ; 11 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Notfallmedizin up2date Volume 12 ; 12 ; >
-    au < ready ; exists ; 2018 ; 2018 ; Notfallmedizin up2date Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Notfallmedizin up2date Volume 13 ; 13 ; >
 
   }
 
@@ -3889,7 +3889,7 @@
     au < finished ; finished ; 2015 ; 2015 ; OP-Journal Volume 31 ; 31 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; OP-Journal Volume 32 ; 32 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; OP-Journal Volume 33 ; 33 ; >
-    au < ready ; exists ; 2018 ; 2018 ; OP-Journal Volume 34 ; 34 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; OP-Journal Volume 34 ; 34 ; >
 
   }
 
@@ -4025,7 +4025,7 @@
     au < finished ; finished ; 2015 ; 2015 ; Pädiatrie up2date Volume 10 ; 10 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Pädiatrie up2date Volume 11 ; 11 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Pädiatrie up2date Volume 12 ; 12 ; >
-    au < ready ; exists ; 2018 ; 2018 ; Pädiatrie up2date Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Pädiatrie up2date Volume 13 ; 13 ; >
 
   }
 
@@ -4263,7 +4263,7 @@
     au < finished ; finished ; 2015 ; 2015 ; PiD - Psychotherapie im Dialog Volume 16 ; 16 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; PiD - Psychotherapie im Dialog Volume 17 ; 17 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; PiD - Psychotherapie im Dialog Volume 18 ; 18 ; >
-    au < ready ; exists ; 2018 ; 2018 ; PiD - Psychotherapie im Dialog Volume 19 ; 19 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; PiD - Psychotherapie im Dialog Volume 19 ; 19 ; >
 
   }
 
@@ -4469,7 +4469,7 @@
    au < finished ; finished ; 2015 ; 2015 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 65 ; 65 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 66 ; 66 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 67 ; 67 ; >
-   au < ready ; exists ; 2018 ; 2018 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 68 ; 68 ; >
+   au < crawling ; exists ; 2018 ; 2018 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 68 ; 68 ; >
 
   }
 
@@ -4490,7 +4490,7 @@
     au < finished ; finished ; 2015 ; 2015 ; PSYCH up2date Volume 9 ; 9 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; PSYCH up2date Volume 10 ; 10 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; PSYCH up2date Volume 11 ; 11 ; >
-    au < ready ; exists ; 2018 ; 2018 ; PSYCH up2date Volume 12 ; 12 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; PSYCH up2date Volume 12 ; 12 ; >
 
   }
 
@@ -5711,7 +5711,7 @@
    au < finished ; finished ; 2015 ; 2015 ; SYNLETT Volume 26 ; 26 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; SYNLETT Volume 27 ; 27 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; SYNLETT Volume 28 ; 28 ; >
-   au < ready ; exists ; 2018 ; 2018 ; SYNLETT Volume 29 ; 29 ; >
+   au < crawling ; exists ; 2018 ; 2018 ; SYNLETT Volume 29 ; 29 ; >
 
   }
 
@@ -6263,7 +6263,7 @@
     au < finished ; finished ; 2015 ; 2015 ; Zeitschrift für Gastroenterologie Volume 53 ; 53 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Zeitschrift für Gastroenterologie Volume 54 ; 54 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Zeitschrift für Gastroenterologie Volume 55 ; 55 ; >
-    au < ready ; exists ; 2018 ; 2018 ; Zeitschrift für Gastroenterologie Volume 56 ; 56 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Zeitschrift für Gastroenterologie Volume 56 ; 56 ; >
 
   }
 
