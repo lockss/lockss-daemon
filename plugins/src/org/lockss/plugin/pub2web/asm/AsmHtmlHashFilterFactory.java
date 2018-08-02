@@ -39,10 +39,10 @@ public class AsmHtmlHashFilterFactory implements FilterFactory {
   public InputStream createFilteredInputStream(ArchivalUnit au,
       InputStream in, String encoding) {
     NodeFilter[] filters = new NodeFilter[] {
-	HtmlNodeFilters.tag("script"),
-	HtmlNodeFilters.tag("noscript"),
-	HtmlNodeFilters.tag("head"),
-	HtmlNodeFilters.tagWithAttribute("div", "id", "previewWrapper"),
+        HtmlNodeFilters.tag("script"),
+        HtmlNodeFilters.tag("noscript"),
+        HtmlNodeFilters.tag("head"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "previewWrapper"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "sidebar_right"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
@@ -65,6 +65,9 @@ public class AsmHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("li",  "class", "previousLinkContainer"),
         HtmlNodeFilters.tagWithAttribute("li",  "class", "indexLinkContainer"),
         HtmlNodeFilters.tagWithAttribute("li",  "class", "nextLinkContainer"),
+        // found generated timer id in form,
+        // http://www.asmscience.org/content/journal/microbiolspec/10.1128/microbiolspec.AID-0025-2014
+        HtmlNodeFilters.tagWithAttribute("div", "id", "recommendForm"),
 
     };
     return (new HtmlFilterInputStream(in, encoding, HtmlNodeFilterTransform.exclude(new OrFilter(filters))));
