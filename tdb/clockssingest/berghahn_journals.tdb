@@ -830,7 +830,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Nature and Culture Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Nature and Culture Volume 10 ; 10 ; >
     au < exists ; exists ; 2016 ; Nature and Culture Volume 11 ; 11 ; >
-    au < testing ; exists ; 2017 ; Nature and Culture Volume 12 ; 12 ; >
+    au < ready ; exists ; 2017 ; Nature and Culture Volume 12 ; 12 ; >
     
   }
 
@@ -890,7 +890,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Projections Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Projections Volume 9 ; 9 ; >
     au < exists ; exists ; 2016 ; Projections Volume 10 ; 10 ; >
-    au < testing ; exists ; 2017 ; Projections Volume 11 ; 11 ; >
+    au < ready ; exists ; 2017 ; Projections Volume 11 ; 11 ; >
     
   }
 
@@ -912,7 +912,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Regions & Cohesion Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Regions & Cohesion Volume 5 ; 5 ; >
     au < exists ; exists ; 2016 ; Regions & Cohesion Volume 6 ; 6 ; >
-    au < testing ; exists ; 2017 ; Regions & Cohesion Volume 7 ; 7 ; >
+    au < ready ; exists ; 2017 ; Regions & Cohesion Volume 7 ; 7 ; >
     
   }
 
@@ -935,7 +935,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Religion and Society: Advances in Research Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Religion and Society: Advances in Research Volume 6 ; 6 ; >
     au < exists ; exists ; 2016 ; Religion and Society: Advances in Research Volume 7 ; 7 ; >
-    au < testing ; exists ; 2017 ; Religion and Society: Advances in Research Volume 8 ; 8 ; >
+    au < ready ; exists ; 2017 ; Religion and Society: Advances in Research Volume 8 ; 8 ; >
    
   }
 
@@ -970,7 +970,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Sartre Studies International Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Sartre Studies International Volume 21 ; 21 ; >
     au < exists ; exists ; 2016 ; Sartre Studies International Volume 22 ; 22 ; >
-    au < testing ; exists ; 2017 ; Sartre Studies International Volume 23 ; 23 ; >
+    au < ready ; exists ; 2017 ; Sartre Studies International Volume 23 ; 23 ; >
     
   }
 
@@ -984,7 +984,7 @@
     param[journal_id] = screen-bodies
        
     au < exists ; exists ; 2016 ; Screen Bodies Volume 1 ; 1 ; >
-    au < testing ; exists ; 2017 ; Screen Bodies Volume 2 ; 2 ; >
+    au < ready ; exists ; 2017 ; Screen Bodies Volume 2 ; 2 ; >
 
   }
 
@@ -1013,7 +1013,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Sibirica Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Sibirica Volume 14 ; 14 ; >
     au < exists ; exists ; 2016 ; Sibirica Volume 15 ; 15 ; >
-    au < testing ; exists ; 2017 ; Sibirica Volume 16 ; 16 ; >
+    au < ready ; exists ; 2017 ; Sibirica Volume 16 ; 16 ; >
     
   }
 
@@ -1043,7 +1043,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Social Analysis Volume 58 ; 58 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Social Analysis Volume 59 ; 59 ; >
     au < exists ; exists ; 2016 ; Social Analysis Volume 60 ; 60 ; >
-    au < testing ; exists ; 2017 ; Social Analysis Volume 61 ; 61 ; >
+    au < ready ; exists ; 2017 ; Social Analysis Volume 61 ; 61 ; >
     
   }
 
@@ -1079,7 +1079,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Theoria Volume 61 ; 61 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Theoria Volume 62 ; 62 ; >
     au < exists ; exists ; 2016 ; Theoria Volume 63 ; 63 ; >
-    au < testing ; exists ; 2017 ; Theoria Volume 64 ; 64 ; >
+    au < ready ; exists ; 2017 ; Theoria Volume 64 ; 64 ; >
     
   }
 
@@ -1100,7 +1100,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Transfers Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Transfers Volume 5 ; 5 ; >
     au < exists ; exists ; 2016 ; Transfers Volume 6 ; 6 ; >
-    au < testing ; exists ; 2017 ; Transfers Volume 7 ; 7 ; >
+    au < ready ; exists ; 2017 ; Transfers Volume 7 ; 7 ; >
     
   }
 
