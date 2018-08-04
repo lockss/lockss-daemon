@@ -1067,6 +1067,66 @@ while (my $line = <>) {
       }
         sleep(4);
 
+  } elsif ($plugin eq "BerghahnJournalsPlugin") {
+      $url = sprintf("%slockss-manifest/journal/%s/volume/%s",
+      $param{base_url}, $param{journal_id}, $param{volume_name});
+      $man_url = uri_unescape($url);
+      my $req = HTTP::Request->new(GET, $man_url);
+      my $resp = $ua->request($req);
+      if ($resp->is_success) {
+          my $man_contents = $resp->content;
+          if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+          } elsif (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) && 
+                  ($man_contents =~ m/\/journals\/$param{journal_id}\/$param{volume_name}\//))) {
+              if ($man_contents =~ m/<h1>\s*(.*) LOCKSS Manifest Page\s*<\/h>/si) {
+                  $vol_title = $1;
+                  $vol_title =~ s/\s*\n\s*/ /g;
+                  $vol_title =~ s/ &amp\; / & /;
+                  if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+                      $vol_title = "\"" . $vol_title . "\"";
+                  }
+              }
+              $result = "Manifest";
+          } else {
+              $result = "--NO_TAG--"
+          }
+      } else {
+          $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+      }
+        sleep(4); 
+        
+  } elsif ($plugin eq "ClockssBerghahnJournalsPlugin") {
+      $url = sprintf("%slockss-manifest/journal/%s/volume/%s",
+      $param{base_url}, $param{journal_id}, $param{volume_name});
+      $man_url = uri_unescape($url);
+      my $req = HTTP::Request->new(GET, $man_url);
+      my $resp = $ua->request($req);
+      if ($resp->is_success) {
+          my $man_contents = $resp->content;
+          if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+          } elsif (defined($man_contents) && (($man_contents =~ m/$clockss_tag/) && 
+                  ($man_contents =~ m/\/journals\/$param{journal_id}\/$param{volume_name}\//))) {
+              if ($man_contents =~ m/<h1>\s*(.*) LOCKSS Manifest Page\s*<\/h>/si) {
+                  $vol_title = $1;
+                  $vol_title =~ s/\s*\n\s*/ /g;
+                  $vol_title =~ s/ &amp\; / & /;
+                  if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+                      $vol_title = "\"" . $vol_title . "\"";
+                  }
+              }
+              $result = "Manifest";
+          } else {
+              $result = "--NO_TAG--"
+          }
+      } else {
+          $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+      }
+        sleep(4);                       
+
 # use "\w+" at beginning of match to indicate something other than needs.SourcePlugin
 #File transfer plugins have 3 flavors: (Warc|Source)Plugin (base+year), DirSourcePlugin (base+dir), DeliveredSourcePlugin (base + year + dir)
   } elsif (($plugin =~ m/\w+SourcePlugin/) || 
