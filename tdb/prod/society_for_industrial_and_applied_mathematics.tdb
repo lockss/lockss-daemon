@@ -19,12 +19,12 @@
     param[journal_id] = mmsubt
 
     au < released ; 2003 ; Multiscale Modeling and Simulation Volume 1 ; 1 ; https://epubs.siam.org/ >
-    au < manifest ; 2003-2004 ; Multiscale Modeling and Simulation Volume 2 ; 2 ; https://epubs.siam.org/ >
+    au < ready ; 2003-2004 ; Multiscale Modeling and Simulation Volume 2 ; 2 ; https://epubs.siam.org/ >
     au < released ; 2005 ; Multiscale Modeling and Simulation Volume 3 ; 3 ; https://epubs.siam.org/ >
-    au < manifest ; 2005 ; Multiscale Modeling and Simulation Volume 4 ; 4 ; https://epubs.siam.org/ >
+    au < ready ; 2005 ; Multiscale Modeling and Simulation Volume 4 ; 4 ; https://epubs.siam.org/ >
     au < released ; 2006 ; Multiscale Modeling and Simulation Volume 5 ; 5 ; https://epubs.siam.org/ >
     au < released ; 2007-2008 ; Multiscale Modeling and Simulation Volume 6 ; 6 ; https://epubs.siam.org/ >
-    au < manifest ; 2008-2009 ; Multiscale Modeling and Simulation Volume 7 ; 7 ; https://epubs.siam.org/ >
+    au < ready ; 2008-2009 ; Multiscale Modeling and Simulation Volume 7 ; 7 ; https://epubs.siam.org/ >
     au < released ; 2009-2010 ; Multiscale Modeling and Simulation Volume 8 ; 8 ; http://epubs.siam.org/ >
     au < released ; 2011 ; Multiscale Modeling and Simulation Volume 9 ; 9 ; http://epubs.siam.org/ >
     au < released ; 2012 ; Multiscale Modeling and Simulation Volume 10 ; 10 ; http://epubs.siam.org/ >
@@ -143,7 +143,7 @@
       au < manifest ; 1998-1999 ; Journal on Applied Mathematics Volume 59 ; 59 ; https://epubs.siam.org/ > 
       au < manifest ; 1999-2000 ; Journal on Applied Mathematics Volume 60 ; 60 ; https://epubs.siam.org/ > 
       au < released ; 2000-2001 ; Journal on Applied Mathematics Volume 61 ; 61 ; https://epubs.siam.org/ > 
-      au < manifest ; 2001-2002 ; Journal on Applied Mathematics Volume 62 ; 62 ; https://epubs.siam.org/ > 
+      au < ready ; 2001-2002 ; Journal on Applied Mathematics Volume 62 ; 62 ; https://epubs.siam.org/ > 
       au < released ; 2002-2003 ; Journal on Applied Mathematics Volume 63 ; 63 ; https://epubs.siam.org/ > 
       au < released ; 2003-2004 ; Journal on Applied Mathematics Volume 64 ; 64 ; https://epubs.siam.org/ >
       au < released ; 2004-2005 ; Journal on Applied Mathematics Volume 65 ; 65 ; https://epubs.siam.org/ >
@@ -174,12 +174,12 @@
 
     param[journal_id] = smjcat
 
-    au < manifest ; 2003 ; Journal on Computing Volume 33 ; 33 ; https://epubs.siam.org/ >
-    au < manifest ; 2004 ; Journal on Computing Volume 34 ; 34 ; https://epubs.siam.org/ >
-    au < manifest ; 2005 ; Journal on Computing Volume 35 ; 35 ; https://epubs.siam.org/ >
+    au < ready ; 2003 ; Journal on Computing Volume 33 ; 33 ; https://epubs.siam.org/ >
+    au < ready ; 2004 ; Journal on Computing Volume 34 ; 34 ; https://epubs.siam.org/ >
+    au < ready ; 2005 ; Journal on Computing Volume 35 ; 35 ; https://epubs.siam.org/ >
     au < released ; 2006 ; Journal on Computing Volume 36 ; 36 ; https://epubs.siam.org/ >
-    au < manifest ; 2007 ; Journal on Computing Volume 37 ; 37 ; https://epubs.siam.org/ >
-    au < manifest ; 2008 ; Journal on Computing Volume 38 ; 38 ; https://epubs.siam.org/ >
+    au < ready ; 2007 ; Journal on Computing Volume 37 ; 37 ; https://epubs.siam.org/ >
+    au < ready ; 2008 ; Journal on Computing Volume 38 ; 38 ; https://epubs.siam.org/ >
     au < released ; 2009 ; Journal on Computing Volume 39 ; 39 ; https://epubs.siam.org/ >
     au < released ; 2011 ; Journal on Computing Volume 40 ; 40 ; http://epubs.siam.org/ >
     au < released ; 2012 ; Journal on Computing Volume 41 ; 41 ; http://epubs.siam.org/ >
@@ -235,8 +235,8 @@
     au < released ; 2004 ; Journal on Discrete Mathematics Volume 18 ; 18 ; https://epubs.siam.org/ >
     au < released ; 2005 ; Journal on Discrete Mathematics Volume 19 ; 19 ; https://epubs.siam.org/ >
     au < released ; 2006 ; Journal on Discrete Mathematics Volume 20 ; 20 ; https://epubs.siam.org/ >
-    au < manifest ; 2007 ; Journal on Discrete Mathematics Volume 21 ; 21 ; https://epubs.siam.org/ >
-    au < manifest ; 2008 ; Journal on Discrete Mathematics Volume 22 ; 22 ; https://epubs.siam.org/ >
+    au < ready ; 2007 ; Journal on Discrete Mathematics Volume 21 ; 21 ; https://epubs.siam.org/ >
+    au < ready ; 2008 ; Journal on Discrete Mathematics Volume 22 ; 22 ; https://epubs.siam.org/ >
     au < released ; 2008 ; Journal on Discrete Mathematics Volume 23 ; 23 ; https://epubs.siam.org/ >
     au < released ; 2010 ; Journal on Discrete Mathematics Volume 24 ; 24 ; http://epubs.siam.org/ >
     au < released ; 2011 ; Journal on Discrete Mathematics Volume 25 ; 25 ; http://epubs.siam.org/ >
@@ -361,13 +361,13 @@
 
     param[journal_id] = sjnaam
 
-    au < manifest ; 2003 ; Journal on Numerical Analysis Volume 41 ; 41 ; https://epubs.siam.org/ >
+    au < ready ; 2003 ; Journal on Numerical Analysis Volume 41 ; 41 ; https://epubs.siam.org/ >
     au < released ; 2004 ; Journal on Numerical Analysis Volume 42 ; 42 ; https://epubs.siam.org/ >
     au < released ; 2005 ; Journal on Numerical Analysis Volume 43 ; 43 ; https://epubs.siam.org/ >
     au < released ; 2006 ; Journal on Numerical Analysis Volume 44 ; 44 ; https://epubs.siam.org/ >
-    au < manifest ; 2007 ; Journal on Numerical Analysis Volume 45 ; 45 ; https://epubs.siam.org/ >
+    au < ready ; 2007 ; Journal on Numerical Analysis Volume 45 ; 45 ; https://epubs.siam.org/ >
     au < released ; 2008 ; Journal on Numerical Analysis Volume 46 ; 46 ; https://epubs.siam.org/ >
-    au < manifest ; 2008 ; Journal on Numerical Analysis Volume 47 ; 47 ; https://epubs.siam.org/ >
+    au < ready ; 2008 ; Journal on Numerical Analysis Volume 47 ; 47 ; https://epubs.siam.org/ >
     au < released ; 2010 ; Journal on Numerical Analysis Volume 48 ; 48 ; http://epubs.siam.org/ >
     au < released ; 2011 ; Journal on Numerical Analysis Volume 49 ; 49 ; http://epubs.siam.org/ >
     au < released ; 2012 ; Journal on Numerical Analysis Volume 50 ; 50 ; http://epubs.siam.org/ >
@@ -391,9 +391,9 @@
     param[journal_id] = sjope8
 
     au < released ; 2003 ; Journal on Optimization Volume 14 ; 14 ; https://epubs.siam.org/ >
-    au < manifest ; 2004 ; Journal on Optimization Volume 15 ; 15 ; https://epubs.siam.org/ >
+    au < ready ; 2004 ; Journal on Optimization Volume 15 ; 15 ; https://epubs.siam.org/ >
     au < released ; 2005 ; Journal on Optimization Volume 16 ; 16 ; https://epubs.siam.org/ >
-    au < manifest ; 2006 ; Journal on Optimization Volume 17 ; 17 ; https://epubs.siam.org/ >
+    au < ready ; 2006 ; Journal on Optimization Volume 17 ; 17 ; https://epubs.siam.org/ >
     au < released ; 2007 ; Journal on Optimization Volume 18 ; 18 ; https://epubs.siam.org/ >
     au < released ; 2008 ; Journal on Optimization Volume 19 ; 19 ; https://epubs.siam.org/ >
     au < released ; 2009 ; Journal on Optimization Volume 20 ; 20 ; https://epubs.siam.org/ >
@@ -418,7 +418,7 @@
 
     param[journal_id] = sjoce3
 
-    au < manifest ; 2003 ; Journal on Scientific Computing Volume 25 ; 25 ; https://epubs.siam.org/ >
+    au < ready ; 2003 ; Journal on Scientific Computing Volume 25 ; 25 ; https://epubs.siam.org/ >
     au < released ; 2004 ; Journal on Scientific Computing Volume 26 ; 26 ; https://epubs.siam.org/ >
     au < released ; 2005 ; Journal on Scientific Computing Volume 27 ; 27 ; https://epubs.siam.org/ >
     au < released ; 2006 ; Journal on Scientific Computing Volume 28 ; 28 ; https://epubs.siam.org/ >
@@ -495,12 +495,12 @@
     param[journal_id] = tprbau
 
     au < released ; 2003 ; Theory of Probability and its Applications Volume 47 ; 47 ; https://epubs.siam.org/ >
-    au < manifest ; 2004 ; Theory of Probability and its Applications Volume 48 ; 48 ; https://epubs.siam.org/ >
+    au < ready ; 2004 ; Theory of Probability and its Applications Volume 48 ; 48 ; https://epubs.siam.org/ >
     au < released ; 2005 ; Theory of Probability and its Applications Volume 49 ; 49 ; https://epubs.siam.org/ >
     au < released ; 2006 ; Theory of Probability and its Applications Volume 50 ; 50 ; https://epubs.siam.org/ >
-    au < manifest ; 2007 ; Theory of Probability and its Applications Volume 51 ; 51 ; https://epubs.siam.org/ >
+    au < ready ; 2007 ; Theory of Probability and its Applications Volume 51 ; 51 ; https://epubs.siam.org/ >
     au < released ; 2008 ; Theory of Probability and its Applications Volume 52 ; 52 ; http://epubs.siam.org/ >
-    au < manifest ; 2009 ; Theory of Probability and its Applications Volume 53 ; 53 ; https://epubs.siam.org/ >
+    au < ready ; 2009 ; Theory of Probability and its Applications Volume 53 ; 53 ; https://epubs.siam.org/ >
     au < released ; 2010 ; Theory of Probability and its Applications Volume 54 ; 54 ; http://epubs.siam.org/ >
     au < released ; 2011 ; Theory of Probability and its Applications Volume 55 ; 55 ; http://epubs.siam.org/ >
     au < released ; 2012 ; Theory of Probability and its Applications Volume 56 ; 56 ; http://epubs.siam.org/ >
