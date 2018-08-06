@@ -501,7 +501,7 @@
     
       param[base_url] = http://robotics.sciencemag.org/
 
-      au < exists ; exists ; 2016 ; Science Robotics Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2016 ; Science Robotics Volume 1 ; 1 ; >
       au < exists ; exists ; 2017 ; Science Robotics Volume 2 ; 2 ; >
       au < exists ; exists ; 2018 ; Science Robotics Volume 3 ; 3 ; >
 
@@ -516,7 +516,7 @@
     
       param[base_url] = http://immunology.sciencemag.org/
 
-      au < exists ; exists ; 2016 ; Science Immunology Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2016 ; Science Immunology Volume 1 ; 1 ; >
       au < exists ; exists ; 2017 ; Science Immunology Volume 2 ; 2 ; >
       au < exists ; exists ; 2018 ; Science Immunology Volume 3 ; 3 ; >
 
