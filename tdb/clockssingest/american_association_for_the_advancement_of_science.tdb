@@ -356,7 +356,7 @@
       au < frozen ; exists ; 2001 ; Science Volume 291 ; 291 ; >
       au < frozen ; exists ; 2001 ; Science Volume 292 ; 292 ; >
       au < frozen ; exists ; 2001 ; Science Volume 293 ; 293 ; >
-      au < exists ; exists ; 2001 ; Science Volume 294 ; 294 ; >
+      au < manifest ; exists ; 2001 ; Science Volume 294 ; 294 ; >
       au < frozen ; exists ; 2002 ; Science Volume 295 ; 295 ; >
       au < frozen ; exists ; 2002 ; Science Volume 296 ; 296 ; >
       au < frozen ; exists ; 2002 ; Science Volume 297 ; 297 ; >
@@ -367,11 +367,11 @@
       au < frozen ; exists ; 2003 ; Science Volume 302 ; 302 ; >
 
       au < frozen ; exists ; 2004 ; Science Volume 303 ; 303 ; >
-      au < exists ; exists ; 2004 ; Science Volume 304 ; 304 ; >
+      au < manifest ; exists ; 2004 ; Science Volume 304 ; 304 ; >
       au < frozen ; exists ; 2004 ; Science Volume 305 ; 305 ; >
       au < frozen ; exists ; 2004 ; Science Volume 306 ; 306 ; >
       au < frozen ; exists ; 2005 ; Science Volume 307 ; 307 ; >
-      au < exists ; exists ; 2005 ; Science Volume 308 ; 308 ; >
+      au < manifest ; exists ; 2005 ; Science Volume 308 ; 308 ; >
       au < frozen ; exists ; 2005 ; Science Volume 309 ; 309 ; >
       au < frozen ; exists ; 2005 ; Science Volume 310 ; 310 ; >
       au < frozen ; exists ; 2006 ; Science Volume 311 ; 311 ; >
@@ -385,7 +385,7 @@
       au < frozen ; exists ; 2008 ; Science Volume 319 ; 319 ; >
       au < frozen ; exists ; 2008 ; Science Volume 320 ; 320 ; >
       au < frozen ; exists ; 2008 ; Science Volume 321 ; 321 ; >
-      au < exists ; exists ; 2008 ; Science Volume 322 ; 322 ; >
+      au < manifest ; exists ; 2008 ; Science Volume 322 ; 322 ; >
       au < frozen ; exists ; 2009 ; Science Volume 323 ; 323 ; >
       au < frozen ; exists ; 2009 ; Science Volume 324 ; 324 ; >
       au < frozen ; exists ; 2009 ; Science Volume 325 ; 325 ; >
@@ -448,8 +448,8 @@
       au < finished ; finished ; 2014 ; Science Signaling Volume 7 ; 7 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Science Signaling Volume 8 ; 8 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2016 ; Science Signaling Volume 9 ; 9 ; reingest5.clockss.org:8082 >
-      au < exists ; exists ; 2017 ; Science Signaling Volume 10 ; 10 ; >
-      au < exists ; exists ; 2018 ; Science Signaling Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2017 ; Science Signaling Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2018 ; Science Signaling Volume 11 ; 11 ; >
 
   }
 
@@ -463,10 +463,10 @@
     
       param[base_url] = http://stm.sciencemag.org/
 
-      au < exists ; exists ; 2009 ; Science Translational Medicine Volume 1 ; 1 ; >
-      au < exists ; exists ; 2010 ; Science Translational Medicine Volume 2 ; 2 ; >
-      au < exists ; exists ; 2011 ; Science Translational Medicine Volume 3 ; 3 ; >
-      au < exists ; exists ; 2012 ; Science Translational Medicine Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2009 ; Science Translational Medicine Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2010 ; Science Translational Medicine Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2011 ; Science Translational Medicine Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2012 ; Science Translational Medicine Volume 4 ; 4 ; >
       au < frozen ; exists ; 2013 ; Science Translational Medicine Volume 5 ; 5 ; >
       au < finished ; finished ; 2014 ; Science Translational Medicine Volume 6 ; 6 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; Science Translational Medicine Volume 7 ; 7 ; reingest1.clockss.org:8082 >
@@ -487,8 +487,8 @@
 
       au < zapped ; finished ; 2015 ; Science Advances Volume 1 ; 1 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; Science Advances Volume 2 ; 2 ; reingest1.clockss.org:8082 >
-      au < exists ; exists ; 2017 ; Science Advances Volume 3 ; 3 ; >
-      au < exists ; exists ; 2018 ; Science Advances Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2017 ; Science Advances Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2018 ; Science Advances Volume 4 ; 4 ; >
 
   }
 
@@ -502,8 +502,8 @@
       param[base_url] = http://robotics.sciencemag.org/
 
       au < manifest ; exists ; 2016 ; Science Robotics Volume 1 ; 1 ; >
-      au < exists ; exists ; 2017 ; Science Robotics Volume 2 ; 2 ; >
-      au < exists ; exists ; 2018 ; Science Robotics Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2017 ; Science Robotics Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2018 ; Science Robotics Volume 3 ; 3 ; >
 
   }
 
@@ -517,8 +517,8 @@
       param[base_url] = http://immunology.sciencemag.org/
 
       au < manifest ; exists ; 2016 ; Science Immunology Volume 1 ; 1 ; >
-      au < exists ; exists ; 2017 ; Science Immunology Volume 2 ; 2 ; >
-      au < exists ; exists ; 2018 ; Science Immunology Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2017 ; Science Immunology Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2018 ; Science Immunology Volume 3 ; 3 ; >
 
   }
 
