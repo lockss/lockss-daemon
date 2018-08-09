@@ -1,5 +1,5 @@
 /*
- * $Id$
+ * $Id: $
  */
 
 /*
@@ -28,50 +28,39 @@ Except as contained in this notice, the name of Stanford University shall not
 be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
-*/
+ */
 
 package org.lockss.plugin.anu;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.io.InputStream;
 
-import org.lockss.daemon.PluginException;
+import org.htmlparser.NodeFilter;
+import org.htmlparser.filters.*;
+import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
-import org.lockss.util.Logger;
 
-public class AnuUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
-  
-  protected static final Logger log = Logger.getLogger(AnuUrlNormalizer.class);
-  
-  protected static final String REPL_STR = "[?].+$";
-  protected static final String CSS_SUFFIX = ".css?";
-  protected static final String JS_SUFFIX = ".js?";
-  
-  protected static final String ITOK_PARAM = "?itok=";
-  protected static final String REFR_PARAM = "?referer=";
-  
-  protected static final String PAGE_PARAM = "page=";
-  protected static final Pattern PAGE_PAT = Pattern.compile("[?].*(page=[0-9]+)", Pattern.CASE_INSENSITIVE);
-  
-  // aboriginal-history-journal?field_id_value=&page=1#views-view-press-publications-by-journal-publications-by-journal-container
-  
-  @Override
-  public String additionalNormalization(String url, ArchivalUnit au)
-      throws PluginException {
-    if (url.contains(CSS_SUFFIX) ||
-        url.contains(JS_SUFFIX) ||
-        url.contains(ITOK_PARAM) ||
-        url.contains(REFR_PARAM)) {
-      url = url.replaceFirst(REPL_STR, "");
-    }
-    else if (url.contains(PAGE_PARAM)) {
-      Matcher mat = PAGE_PAT.matcher(url);
-      if (mat.find()) {
-        url = url.replaceFirst(REPL_STR, "?" + mat.group(1));
-      }
-      
-    }
-    
-    return(url);
+public class AnuHtmlHashFilterFactory implements FilterFactory {
+
+  public InputStream createFilteredInputStream(ArchivalUnit au,
+                                               InputStream in,
+                                               String encoding) {
+    NodeFilter[] filters = new NodeFilter[] {
+     // filter out script
+     new TagNameFilter("script"),
+     // footer
+     HtmlNodeFilters.tagWithAttributeRegex("div", "id", "footer"),
+     // related
+     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "related"),
+     // left menu
+     // title
+     // top menu
+     // another top menu
+     // breadcrumbs
+     // spacing tags
+    };
+    return new HtmlFilterInputStream(in,
+                                     encoding,
+                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
   }
+
 }

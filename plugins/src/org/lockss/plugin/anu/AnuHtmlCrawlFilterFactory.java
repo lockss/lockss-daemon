@@ -1,5 +1,5 @@
 /*
- * $Id$
+ * $Id: $
  */
 
 /*
@@ -32,46 +32,36 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.anu;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.io.InputStream;
 
+import org.htmlparser.NodeFilter;
+import org.htmlparser.filters.*;
 import org.lockss.daemon.PluginException;
+import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
-import org.lockss.util.Logger;
 
-public class AnuUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
-  
-  protected static final Logger log = Logger.getLogger(AnuUrlNormalizer.class);
-  
-  protected static final String REPL_STR = "[?].+$";
-  protected static final String CSS_SUFFIX = ".css?";
-  protected static final String JS_SUFFIX = ".js?";
-  
-  protected static final String ITOK_PARAM = "?itok=";
-  protected static final String REFR_PARAM = "?referer=";
-  
-  protected static final String PAGE_PARAM = "page=";
-  protected static final Pattern PAGE_PAT = Pattern.compile("[?].*(page=[0-9]+)", Pattern.CASE_INSENSITIVE);
-  
-  // aboriginal-history-journal?field_id_value=&page=1#views-view-press-publications-by-journal-publications-by-journal-container
-  
+
+public class AnuHtmlCrawlFilterFactory implements FilterFactory {
+
   @Override
-  public String additionalNormalization(String url, ArchivalUnit au)
+  public InputStream createFilteredInputStream(ArchivalUnit au,
+                                               InputStream in,
+                                               String encoding)
       throws PluginException {
-    if (url.contains(CSS_SUFFIX) ||
-        url.contains(JS_SUFFIX) ||
-        url.contains(ITOK_PARAM) ||
-        url.contains(REFR_PARAM)) {
-      url = url.replaceFirst(REPL_STR, "");
-    }
-    else if (url.contains(PAGE_PARAM)) {
-      Matcher mat = PAGE_PAT.matcher(url);
-      if (mat.find()) {
-        url = url.replaceFirst(REPL_STR, "?" + mat.group(1));
-      }
-      
-    }
-    
-    return(url);
+    NodeFilter[] filters = new NodeFilter[] {
+        HtmlNodeFilters.tagWithAttribute("div", "role", "banner"),
+        // Need to allow links from navigation for the xhtml pages
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "footer"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "related"),
+
+    };
+    return new HtmlFilterInputStream(in,
+                                     encoding,
+                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
   }
+
 }
+/*
+ 
+ 
+*/
