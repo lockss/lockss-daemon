@@ -47,6 +47,7 @@ public class AnuUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
   protected static final String CSS_SUFFIX = ".css?";
   protected static final String JS_SUFFIX = ".js?";
   
+  protected static final String FID_PARAM = "?field_id_value=";
   protected static final String ITOK_PARAM = "?itok=";
   protected static final String REFR_PARAM = "?referer=";
   
@@ -60,6 +61,7 @@ public class AnuUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
       throws PluginException {
     if (url.contains(CSS_SUFFIX) ||
         url.contains(JS_SUFFIX) ||
+        url.contains(FID_PARAM) ||
         url.contains(ITOK_PARAM) ||
         url.contains(REFR_PARAM)) {
       url = url.replaceFirst(REPL_STR, "");

@@ -82,7 +82,8 @@ public class AnuHtmlLinkExtractorFactory implements LinkExtractorFactory {
                                 }
                                 String base_url = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
                                 String journal_id = au.getConfiguration().get(ConfigParamDescr.JOURNAL_ID.getKey());
-                                if (srcUrl.matches(base_url + "publications/(journals/)?" + journal_id + "([?]page=[0-9]+)?")) {
+                                // XXX may be able to simplify the test to optional ([?].*)?
+                                if (srcUrl.matches(base_url + "publications/(journals/)?" + journal_id + "([?]page=[0-9]+|[?]field_id_value=)?")) {
                                   if (url.matches(base_url + "node/[0-9]+/download")) {
                                     log.debug2("Not extracting url: " + url);
                                     return;
@@ -91,8 +92,12 @@ public class AnuHtmlLinkExtractorFactory implements LinkExtractorFactory {
                                   if ((volume_name == null) || volume_name.isEmpty()) {
                                     log.warning("No config value for volume_name found");
                                   }
-                                  else if (url.matches(base_url + "publications/(journals/)?" + journal_id + "-(issue|volume)-(?!" + volume_name + ")(?i:[0-9]+|[IVXLCDM]+)(-(.+))?$")) {
-                                    log.debug2("Not extracting url that does not match AU volume: "
+                                  // NOTE: the pattern ought to match "(issue|volume|no-[1-9]|winter)-%s" part of crawl rule
+                                  // we exclude urls that match the general rule and yet don't match the au volume
+                                  // the following matches on 20 in '2005'
+                                  // https://press.anu.edu.au/publications/journals/humanities-research-journal-series-volume-xii-no-1-2005
+                                  else if (url.matches("(?i)" + base_url + "publications/(journals/)?" + journal_id + "-(issue|volume|no-[1-9]|winter)-(?!" + volume_name + ")([0-9]+|[IVXLCDM]+)(-.+)?$")) {
+                                    log.warning("Url does not match AU volume: "
                                         + volume_name + "  " + url);
                                     return;
                                   }
