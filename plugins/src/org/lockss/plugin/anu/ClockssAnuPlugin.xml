@@ -41,6 +41,10 @@
     <string>"%spublications/%s", base_url, journal_id</string>
   </entry>
   <entry>
+    <string>au_permission_url</string>
+    <string>"%slockss.txt", base_url</string>
+  </entry>
+  <entry>
     <string>plugin_per_host_permission_path</string>
     <string>/lockss.txt</string>
   </entry>
@@ -50,8 +54,8 @@
     <string>au_permitted_host_pattern</string>
     <list>
       <string>(fonts|ajax)\.(googleapis|gstatic)\.com</string>
-      <string>press-files\.anu\.edu\.au</string> 
-<!--       <string>(press(-files)?|style)\.anu\.edu\.au</string> -->
+      <string>press-files\.anu\.edu\.au</string>
+      <!-- XXX above needed because lockss.txt missing on that domain -->
     </list>
   </entry>
   <entry>
@@ -85,10 +89,10 @@
     <list>
       <string>1,"^https?://((fonts|ajax)\.(googleapis|gstatic)\.com)/.*\.?(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff.?)(\?.*)?"</string>
       <string>1,"^https?://([^.]+\.anu\.edu\.au)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff.?)$"</string>
+      <string>1,"^https?://(press(-files)?|style)\.anu\.edu\.au/lockss.txt$"</string>
       <string>4,"^https?://(press(-files)?|style)\.anu\.edu\.au/"</string>
       <!-- in cases where there is a bad link, seems to redirect to search page, don't follow these links -->
       <string>2,"(^https?://%s/([^/]+)?$|\?search=|/authors-editors/)", url_host(base_url)</string>
-      <string>1,"^https?://(press(-files)?|style)\.anu\.edu\.au/lockss.txt$"</string>
       <string>1,"^https?://%s%spublications/(journals/)?%s(\?page=[0-9]+)?$", url_host(base_url), url_path(base_url), journal_id</string>
       <string>1,"^https?://%s%s\?p=[0-9]+$", url_host(base_url), url_path(base_url)</string>
       <string>1,"^https?://%s%snode/[0-9]+(/download)?$", url_host(base_url), url_path(base_url)</string>
