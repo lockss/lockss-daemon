@@ -47,22 +47,6 @@ public class MedknowHttpResponseHandler implements CacheResultHandler {
     throw new UnsupportedOperationException("Unexpected call to MedknowHttpResponseHandler.init()");
   }
   
-  /*public static final class NoFailRetryableNetworkException_2_10S
-  extends CacheException.RetryableNetworkException_2_10S {
-    
-    private static final long serialVersionUID = 1L;
-    
-    public NoFailRetryableNetworkException_2_10S(String message) {
-      super(message);
-    }
-    
-    @Override
-    protected void setAttributes() {
-      super.setAttributes();
-      attributeBits.clear(ATTRIBUTE_FAIL);
-    }
-  }*/
-  
   @Override
   public CacheException handleResult(ArchivalUnit au,
                                      String url,
@@ -70,11 +54,11 @@ public class MedknowHttpResponseHandler implements CacheResultHandler {
     switch (responseCode) {
       case 502:
         logger.debug2("502: " + url);
-        return new CacheException.RetryableNetworkException_2_10S("502 Bad Gateway");
+        return new CacheException.RetryableNetworkException_3_5M("502 Bad Gateway");
         
       case 503:
         logger.debug2("503: " + url);
-        return new CacheException.RetryableNetworkException_2_10S("503 Service Unavailable");
+        return new CacheException.RetryableNetworkException_3_5M("503 Service Unavailable");
         
       default:
         logger.warning("Unexpected responseCode (" + responseCode + ") in handleResult(): AU " + au.getName() + "; URL " + url);
