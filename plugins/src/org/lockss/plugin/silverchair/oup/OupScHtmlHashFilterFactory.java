@@ -119,7 +119,8 @@ public class OupScHtmlHashFilterFactory implements FilterFactory {
       
     	  HtmlNodeFilterTransform.exclude(new OrFilter(new NodeFilter[] {
     		  HtmlNodeFilters.tagWithAttributeRegex("div", "class", "comment"),
-    		  HtmlNodeFilters.tagWithAttributeRegex("div", "class", "graphic-wrap"),
+                  HtmlNodeFilters.tagWithAttributeRegex("div", "class", "graphic-wrap"),
+                  HtmlNodeFilters.tagWithAttributeRegex("div", "class", "navbar-search"),
     	  })),
     	  xform
       )
@@ -127,8 +128,10 @@ public class OupScHtmlHashFilterFactory implements FilterFactory {
     
     Reader reader = FilterUtil.getReader(filtered, encoding);
     
+    // Remove all inner tag content
+    Reader noTagFilter = new HtmlTagFilter(new StringFilter(reader, "<", " <"), new TagPair("<", ">"));
     // Remove white space
-    Reader whiteSpaceFilter = new WhiteSpaceFilter(reader);
+    Reader whiteSpaceFilter = new WhiteSpaceFilter(noTagFilter);
     InputStream ret =  new ReaderInputStream(whiteSpaceFilter);
     return ret;
     // Instrumentation
