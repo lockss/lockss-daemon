@@ -683,39 +683,6 @@
   {
   
     title <
-      name = Journal of Romance Studies ;
-      issn = 1473-3536 ;
-      eissn = 1752-2331 ;
-      issnl = 1473-3536
-      
-    > 
-    
-    param[journal_id] = XXX
-    # no longer appears to exist on Berghahn site
-       
-    au < exists ; exists ; 2001 ; Journal of Romance Studies Volume 1 ; 1 ; >
-    au < exists ; exists ; 2002 ; Journal of Romance Studies Volume 2 ; 2 ; >
-    au < exists ; exists ; 2003 ; Journal of Romance Studies Volume 3 ; 3 ; >
-    au < exists ; exists ; 2004 ; Journal of Romance Studies Volume 4 ; 4 ; >
-    au < exists ; exists ; 2005 ; Journal of Romance Studies Volume 5 ; 5 ; >
-    au < exists ; exists ; 2006 ; Journal of Romance Studies Volume 6 ; 6 ; >
-    au < exists ; exists ; 2007 ; Journal of Romance Studies Volume 7 ; 7 ; >
-    au < exists ; exists ; 2008 ; Journal of Romance Studies Volume 8 ; 8 ; >
-    au < exists ; exists ; 2009 ; Journal of Romance Studies Volume 9 ; 9 ; >
-    au < exists ; exists ; 2010 ; Journal of Romance Studies Volume 10 ; 10 ; >
-    au < doNotProcess ; doNotProcess ; 2011 ; Journal of Romance Studies Volume 11 ; 11 ; >
-    au < doNotProcess ; doNotProcess ; 2012 ; Journal of Romance Studies Volume 12 ; 12 ; >
-    au < doNotProcess ; doNotProcess ; 2013 ; Journal of Romance Studies Volume 13 ; 13 ; >
-    au < doNotProcess ; doNotProcess ; 2014 ; Journal of Romance Studies Volume 14 ; 14 ; >
-    au < doNotProcess ; doNotProcess ; 2015 ; Journal of Romance Studies Volume 15 ; 15 ; >
-    au < exists ; exists ; 2016 ; Journal of Romance Studies Volume 16 ; 16 ; >
-    au < exists ; exists ; 2017 ; Journal of Romance Studies Volume 17 ; 17 ; >
-    
-  }
-
-  {
-  
-    title <
       name = Journeys ;
       issn = 1465-2609 ;
       eissn = 1752-2358 ;

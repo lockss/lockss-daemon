@@ -209,6 +209,30 @@
   {
 
     title <
+      name = Catalan Review ;
+      issn = 0213-5949 ;
+      eissn = 2053-339X ;
+      issnl = 0213-5949
+    >
+
+    param[journal_id] = catr
+
+    au < exists ; exists ; 2009 ; Catalan Review Volume 23 ; 23 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < exists ; exists ; 2010 ; Catalan Review Volume 24 ; 24 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < exists ; exists ; 2011 ; Catalan Review Volume 25 ; 25 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < exists ; exists ; 2012 ; Catalan Review Volume 26 ; 26 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < exists ; exists ; 2013 ; Catalan Review Volume 27 ; 27 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < exists ; exists ; 2014 ; Catalan Review Volume 28 ; 28 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < exists ; exists ; 2015 ; Catalan Review Volume 29 ; 29 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < exists ; exists ; 2016 ; Catalan Review Volume 30 ; 30 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < exists ; exists ; 2017 ; Catalan Review Volume 31 ; 31 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < exists ; exists ; 2018 ; Catalan Review Volume 32 ; 32 ; https://online.liverpooluniversitypress.co.uk/ ; >
+
+  }
+
+  {
+
+    title <
       name = Contemporary French Civilization ;
       issn = 0147-9156 ;
       eissn = 2044-396X ;
@@ -465,6 +489,39 @@
     au < deepCrawl ; exists ; 2017 ; Journal of Literary & Cultural Disability Studies Volume 11 ; 11 ; http://online.liverpooluniversitypress.co.uk/ ; >
     au < manifest ; exists ; 2018 ; Journal of Literary & Cultural Disability Studies Volume 12 ; 12 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
+  }
+
+  {
+  
+    title <
+      name = Journal of Romance Studies ;
+      issn = 1473-3536 ;
+      eissn = 1752-2331 ;
+      issnl = 1473-3536
+      
+    > 
+    
+    param[journal_id] = jrs
+       
+    au < exists ; exists ; 2001 ; Journal of Romance Studies Volume 1 ; 1 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < exists ; exists ; 2002 ; Journal of Romance Studies Volume 2 ; 2 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < exists ; exists ; 2003 ; Journal of Romance Studies Volume 3 ; 3 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < exists ; exists ; 2004 ; Journal of Romance Studies Volume 4 ; 4 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < exists ; exists ; 2005 ; Journal of Romance Studies Volume 5 ; 5 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < exists ; exists ; 2006 ; Journal of Romance Studies Volume 6 ; 6 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < exists ; exists ; 2007 ; Journal of Romance Studies Volume 7 ; 7 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < exists ; exists ; 2008 ; Journal of Romance Studies Volume 8 ; 8 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < exists ; exists ; 2009 ; Journal of Romance Studies Volume 9 ; 9 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < exists ; exists ; 2010 ; Journal of Romance Studies Volume 10 ; 10 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Journal of Romance Studies Volume 11 ; 11 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Journal of Romance Studies Volume 12 ; 12 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Journal of Romance Studies Volume 13 ; 13 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; Journal of Romance Studies Volume 14 ; 14 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; Journal of Romance Studies Volume 15 ; 15 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < exists ; exists ; 2016 ; Journal of Romance Studies Volume 16 ; 16 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < exists ; exists ; 2017 ; Journal of Romance Studies Volume 17 ; 17 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < exists ; exists ; 2018 ; Journal of Romance Studies Volume 18 ; 18 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    
   }
 
   {

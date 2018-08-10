@@ -1,8 +1,7 @@
 {
 
   publisher <
-    name = Berghahn Journals ;
-    info[tester] = 3 #for now, while smoke testing
+    name = Berghahn Journals 
   >
 
   plugin = org.lockss.plugin.berghahn.BerghahnJournalsPlugin
@@ -669,40 +668,6 @@
     au < doNotProcess ; 2015 ; Journal of Educational Media, Memory, and Society Volume 7 ; 7 >
     au < exists ; 2016 ; Journal of Educational Media, Memory, and Society Volume 8 ; 8 >
     au < exists ; 2017 ; Journal of Educational Media, Memory, and Society Volume 9 ; 9 >
-    
-  }
-
-  {
-  
-    title <
-      name = Journal of Romance Studies ;
-      issn = 1473-3536 ;
-      eissn = 1752-2331 ;
-      issnl = 1473-3536
-      
-    > 
-    
-    param[journal_id] = XXX
-    #no longer appears to exist on Berghahn site
-    #param[journal_issn] = 1473-3536
-       
-    au < doNotProcess ; 2001 ; Journal of Romance Studies Volume 1 ; 1 >
-    au < doNotProcess ; 2002 ; Journal of Romance Studies Volume 2 ; 2 >
-    au < doNotProcess ; 2003 ; Journal of Romance Studies Volume 3 ; 3 >
-    au < doNotProcess ; 2004 ; Journal of Romance Studies Volume 4 ; 4 >
-    au < doNotProcess ; 2005 ; Journal of Romance Studies Volume 5 ; 5 >
-    au < doNotProcess ; 2006 ; Journal of Romance Studies Volume 6 ; 6 >
-    au < doNotProcess ; 2007 ; Journal of Romance Studies Volume 7 ; 7 >
-    au < doNotProcess ; 2008 ; Journal of Romance Studies Volume 8 ; 8 >
-    au < doNotProcess ; 2009 ; Journal of Romance Studies Volume 9 ; 9 >
-    au < doNotProcess ; 2010 ; Journal of Romance Studies Volume 10 ; 10 >
-    au < doNotProcess ; 2011 ; Journal of Romance Studies Volume 11 ; 11 >
-    au < doNotProcess ; 2012 ; Journal of Romance Studies Volume 12 ; 12 >
-    au < doNotProcess ; 2013 ; Journal of Romance Studies Volume 13 ; 13 >
-    au < doNotProcess ; 2014 ; Journal of Romance Studies Volume 14 ; 14 >
-    au < doNotProcess ; 2015 ; Journal of Romance Studies Volume 15 ; 15 >
-    au < exists ; 2016 ; Journal of Romance Studies Volume 16 ; 16 >
-    au < exists ; 2017 ; Journal of Romance Studies Volume 17 ; 17 >
     
   }
 
