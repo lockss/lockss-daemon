@@ -50,7 +50,7 @@
     <string>au_permitted_host_pattern</string>
     <list>
       <string>(fonts|ajax)\.(googleapis|gstatic)\.com</string>
-      <string>press(-files)?\.anu\.edu\.au</string> 
+      <string>press-files\.anu\.edu\.au</string> 
 <!--       <string>(press(-files)?|style)\.anu\.edu\.au</string> -->
     </list>
   </entry>
@@ -85,15 +85,15 @@
     <list>
       <string>1,"^https?://((fonts|ajax)\.(googleapis|gstatic)\.com)/.*\.?(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff.?)(\?.*)?"</string>
       <string>1,"^https?://([^.]+\.anu\.edu\.au)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff.?)$"</string>
+      <string>4,"^https?://(press(-files)?|style)\.anu\.edu\.au/"</string>
       <!-- in cases where there is a bad link, seems to redirect to search page, don't follow these links -->
-      <string>2,"(\?search=|/authors-editors/|/epub/|/mobi/)"</string>
-      <string>2,"^https?://(%s/([^/]+)?$|(dx\.)?doi\.org/)", url_host(base_url)</string>
-5      <string>1,"^https?://[^/]+/lockss.txt$"</string>
+      <string>2,"(^https?://%s/([^/]+)?$|\?search=|/authors-editors/)", url_host(base_url)</string>
+      <string>1,"^https?://(press(-files)?|style)\.anu\.edu\.au/lockss.txt$"</string>
       <string>1,"^https?://%s%spublications/(journals/)?%s(\?page=[0-9]+)?$", url_host(base_url), url_path(base_url), journal_id</string>
       <string>1,"^https?://%s%s\?p=[0-9]+$", url_host(base_url), url_path(base_url)</string>
       <string>1,"^https?://%s%snode/[0-9]+(/download)?$", url_host(base_url), url_path(base_url)</string>
       <string>1,"^https?://%s%spublications/(journals/)?%s-(issue|volume|no-[1-9]|winter)-%s(-[12n].+?)?(/download)?$", url_host(base_url), url_path(base_url), journal_id, volume_name</string>
-0      <string>1,"^https?://press-files\.anu\.edu\.au/downloads/press/[^/]+/(pdf|html)/", base_url</string>
+      <string>1,"^https?://press-files\.anu\.edu\.au/downloads/press/[^/]+/(html|media|pdf)/", base_url</string>
     </list>
   </entry>
   <entry>

@@ -6,12 +6,10 @@
     info[tester] = 0
   >
 
-    
-    plugin = needs.plugin 
+    plugin = org.lockss.plugin.anu.ClockssAnuPlugin 
     param[base_url] = https://press.anu.edu.au/
-    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+    implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
     #RT 7563
-    #WAITING FOR PLUGIN
 
   {
   
@@ -21,7 +19,7 @@
       eissn = 1837-9389
     >
     
-    param[journal_abbr] = aboriginal-history-journal
+    param[journal_id] = aboriginal-history-journal
 
     au < doNotProcess ; exists ; 1977 ; Aboriginal History Journal Volume 1 ; 1 ; >
     au < doNotProcess ; exists ; 1978 ; Aboriginal History Journal Volume 2 ; 2 ; >
@@ -61,6 +59,9 @@
     au < doNotProcess ; exists ; 2013 ; Aboriginal History Journal Volume 36 ; 36 ; >
     au < doNotProcess ; exists ; 2013 ; Aboriginal History Journal Volume 37 ; 37 ; >
     au < doNotProcess ; exists ; 2015 ; Aboriginal History Journal Volume 38 ; 38 ; >
+    au < testing ; exists ; 2016 ; Aboriginal History Journal Volume 39 ; 39 ; >
+    au < testing ; exists ; 2017 ; Aboriginal History Journal Volume 40 ; 40 ; >
+    au < testing ; exists ; 2018 ; Aboriginal History Journal Volume 41 ; 41 ; >
 
   }
 
@@ -72,9 +73,9 @@
       eissn = 1447-4735
     >
     
-    param[journal_abbr] = agenda-a-journal-of-policy-analysis-and-reform-2
+    param[journal_id] = agenda-journal-policy-analysis-and-reform
 
-    au < doNotProcess ; exists ; 1994 ; Agenda - A Journal of Policy Analysis and Reform Volume 1 ; 1 ; >
+    au < testing ; exists ; 1994 ; Agenda - A Journal of Policy Analysis and Reform Volume 1 ; 1 ; >
     au < doNotProcess ; exists ; 1995 ; Agenda - A Journal of Policy Analysis and Reform Volume 2 ; 2 ; >
     au < doNotProcess ; exists ; 1996 ; Agenda - A Journal of Policy Analysis and Reform Volume 3 ; 3 ; >
     au < doNotProcess ; exists ; 1997 ; Agenda - A Journal of Policy Analysis and Reform Volume 4 ; 4 ; >
@@ -88,14 +89,17 @@
     au < doNotProcess ; exists ; 2005 ; Agenda - A Journal of Policy Analysis and Reform Volume 12 ; 12 ; >
     au < doNotProcess ; exists ; 2006 ; Agenda - A Journal of Policy Analysis and Reform Volume 13 ; 13 ; >
     au < doNotProcess ; exists ; 2007 ; Agenda - A Journal of Policy Analysis and Reform Volume 14 ; 14 ; >
-    au < doNotProcess ; exists ; 2008 ; Agenda - A Journal of Policy Analysis and Reform Volume 15 ; 15 ; >
+    au < testing ; exists ; 2008 ; Agenda - A Journal of Policy Analysis and Reform Volume 15 ; 15 ; >
     au < doNotProcess ; exists ; 2009 ; Agenda - A Journal of Policy Analysis and Reform Volume 16 ; 16 ; >
     au < doNotProcess ; exists ; 2010 ; Agenda - A Journal of Policy Analysis and Reform Volume 17 ; 17 ; >
     au < doNotProcess ; exists ; 2011 ; Agenda - A Journal of Policy Analysis and Reform Volume 18 ; 18 ; >
     au < doNotProcess ; exists ; 2012 ; Agenda - A Journal of Policy Analysis and Reform Volume 19 ; 19 ; >
-    au < doNotProcess ; exists ; 2013 ; Agenda - A Journal of Policy Analysis and Reform Volume 20 ; 20 ; >
+    au < testing ; exists ; 2013 ; Agenda - A Journal of Policy Analysis and Reform Volume 20 ; 20 ; >
     au < doNotProcess ; exists ; 2014 ; Agenda - A Journal of Policy Analysis and Reform Volume 21 ; 21 ; >
     au < doNotProcess ; exists ; 2015 ; Agenda - A Journal of Policy Analysis and Reform Volume 22 ; 22 ; >
+    au < doNotProcess ; exists ; 2016 ; Agenda - A Journal of Policy Analysis and Reform Volume 23 ; 23 ; >
+    au < testing ; exists ; 2017 ; Agenda - A Journal of Policy Analysis and Reform Volume 24 ; 24 ; >
+    au < doNotProcess ; exists ; 2018 ; Agenda - A Journal of Policy Analysis and Reform Volume 25 ; 25 ; >
 
   }
 
@@ -107,9 +111,9 @@
       eissn = 1325-8338
     >
     
-    param[journal_abbr] = australian-humanities-review
+    param[journal_id] = australian-humanities-review
 
-    au < doNotProcess ; exists ; 2008 ; Australian Humanities Review Issue 44 ; 44 ; >
+    au < testing ; exists ; 2008 ; Australian Humanities Review Issue 44 ; 44 ; >
     au < doNotProcess ; exists ; 2008 ; Australian Humanities Review Issue 45 ; 45 ; >
     au < doNotProcess ; exists ; 2009 ; Australian Humanities Review Issue 46 ; 46 ; >
     au < doNotProcess ; exists ; 2009 ; Australian Humanities Review Issue 47 ; 47 ; >
@@ -117,7 +121,7 @@
     au < doNotProcess ; exists ; 2010 ; Australian Humanities Review Issue 49 ; 49 ; >
     au < doNotProcess ; exists ; 2011 ; Australian Humanities Review Issue 50 ; 50 ; >
     au < doNotProcess ; exists ; 2011 ; Australian Humanities Review Issue 51 ; 51 ; >
-    au < doNotProcess ; exists ; 2012 ; Australian Humanities Review Issue 52 ; 52 ; >
+    au < testing ; exists ; 2012 ; Australian Humanities Review Issue 52 ; 52 ; >
 
   }
 
@@ -129,15 +133,15 @@
       eissn = 1837-445X
     >
     
-    param[journal_abbr] = craftdesign-enquiry
+    param[journal_id] = craft-design-enquiry
 
-    au < doNotProcess ; exists ; 2009 ; craft + design enquiry issue 1 ; 1 ; >
+    au < testing ; exists ; 2009 ; craft + design enquiry issue 1 ; 1 ; >
     au < doNotProcess ; exists ; 2010 ; craft + design enquiry issue 2 ; 2 ; >
     au < doNotProcess ; exists ; 2011 ; craft + design enquiry issue 3 ; 3 ; >
     au < doNotProcess ; exists ; 2012 ; craft + design enquiry issue 4 ; 4 ; >
     au < doNotProcess ; exists ; 2013 ; craft + design enquiry issue 5 ; 5 ; >
     au < doNotProcess ; exists ; 2014 ; craft + design enquiry issue 6 ; 6 ; >
-    au < doNotProcess ; exists ; 2015 ; craft + design enquiry issue 7 ; 7 ; >
+    au < testing ; exists ; 2015 ; craft + design enquiry issue 7 ; 7 ; >
 
   }
 
@@ -149,15 +153,15 @@
       eissn = 1837-509X
     >
     
-    param[journal_abbr] = east-asia-forum-quarterly
+    param[journal_id] = east-asia-forum-quarterly
     
-    au < doNotProcess ; exists ; 2009 ; East Asia Forum Quarterly Volume 1 ; 1 ; >
+    au < testing ; exists ; 2009 ; East Asia Forum Quarterly Volume 1 ; 1 ; >
     au < doNotProcess ; exists ; 2010 ; East Asia Forum Quarterly Volume 2 ; 2 ; >
     au < doNotProcess ; exists ; 2011 ; East Asia Forum Quarterly Volume 3 ; 3 ; >
     au < doNotProcess ; exists ; 2012 ; East Asia Forum Quarterly Volume 4 ; 4 ; >
     au < doNotProcess ; exists ; 2013 ; East Asia Forum Quarterly Volume 5 ; 5 ; >
     au < doNotProcess ; exists ; 2014 ; East Asia Forum Quarterly Volume 6 ; 6 ; >
-    au < doNotProcess ; exists ; 2015 ; East Asia Forum Quarterly Volume 7 ; 7 ; >
+    au < testing ; exists ; 2015 ; East Asia Forum Quarterly Volume 7 ; 7 ; >
 
   }
 
@@ -169,24 +173,24 @@
       eissn = 1834-8491
     >
     
-    param[journal_abbr] = humanities-research-journal-series
+    param[journal_id] = humanities-research-journal-series
     
     au < doNotProcess ; exists ; 1997 ; Humanities Research Volume 1997 ; 1997 ; >
-    au < doNotProcess ; exists ; 1998 ; Humanities Research Volume 1998 ; 1998 ; >
+    au < testing ; exists ; 1998 ; Humanities Research Volume No 1 1998 ; 1998 ; >
     au < doNotProcess ; exists ; 1999 ; Humanities Research Volume 1999 ; 1999 ; >
     au < doNotProcess ; exists ; 2000 ; Humanities Research Volume 2000 ; 2000 ; >
-    au < doNotProcess ; exists ; 2001 ; Humanities Research Volume VIII ; 2001 ; >
-    au < doNotProcess ; exists ; 2002 ; Humanities Research Volume IX ; 2002 ; >
-    au < doNotProcess ; exists ; 2003 ; Humanities Research Volume X ; 2003 ; >
-    au < doNotProcess ; exists ; 2004 ; Humanities Research Volume XI ; 2004 ; >
-    au < doNotProcess ; exists ; 2005 ; Humanities Research Volume XII ; 2005 ; >
-    au < doNotProcess ; exists ; 2006 ; Humanities Research Volume XIII ; 2006 ; >
-    au < doNotProcess ; exists ; 2007 ; Humanities Research Volume XIV ; 2007 ; >
-    au < doNotProcess ; exists ; 2009 ; Humanities Research Volume XV ; 2009 ; >
-    au < doNotProcess ; exists ; 2010 ; Humanities Research Volume XVI ; 2010 ; >
-    au < doNotProcess ; exists ; 2011 ; Humanities Research Volume XVII ; 2011 ; >
-    au < doNotProcess ; exists ; 2012 ; Humanities Research Volume XVIII ; XVIII ; >
-    au < doNotProcess ; exists ; 2013 ; Humanities Research Volume XIX ; XIX ; >
+    au < doNotProcess ; exists ; 2001 ; Humanities Research Volume VIII ; vii ; >
+    au < doNotProcess ; exists ; 2002 ; Humanities Research Volume IX ; ix ; >
+    au < doNotProcess ; exists ; 2003 ; Humanities Research Volume X ; x ; >
+    au < doNotProcess ; exists ; 2004 ; Humanities Research Volume XI ; xi ; >
+    au < doNotProcess ; exists ; 2005 ; Humanities Research Volume XII ; xii ; >
+    au < doNotProcess ; exists ; 2006 ; Humanities Research Volume XIII ; xiii ; >
+    au < doNotProcess ; exists ; 2007 ; Humanities Research Volume XIV ; xiv ; >
+    au < doNotProcess ; exists ; 2009 ; Humanities Research Volume XV ; xv ; >
+    au < doNotProcess ; exists ; 2010 ; Humanities Research Volume XVI ; xvi ; >
+    au < doNotProcess ; exists ; 2011 ; Humanities Research Volume XVII ; xvii ; >
+    au < doNotProcess ; exists ; 2012 ; Humanities Research Volume XVIII ; xviii ; >
+    au < testing ; exists ; 2013 ; Humanities Research Volume XIX ; xix ; >
 
   }
 }
