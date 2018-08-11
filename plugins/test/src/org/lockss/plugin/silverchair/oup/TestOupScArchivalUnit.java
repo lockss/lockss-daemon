@@ -98,7 +98,6 @@ public class TestOupScArchivalUnit extends LockssTestCase {
     PatternMatcher matcher = RegexpUtil.getMatcher();   
     List<Pattern> patList = jsAu.makeSubstanceUrlPatterns();
 
-log.setLevel("debug3");
     for (String nextUrl : substanceList) {
       log.debug3("testing for substance: "+ nextUrl +" with pattern" + patList.get(0).getPattern());
       found = false;
@@ -197,7 +196,7 @@ log.setLevel("debug3");
   }
   
   private void shouldCacheTest(String url, boolean shouldCache, ArchivalUnit au) {
-    log.info ("shouldCacheTest url: " + url);
+    //log.info ("shouldCacheTest url: " + url);
     assertEquals(shouldCache, au.shouldBeCached(url));
   }
   

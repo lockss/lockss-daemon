@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>testing</string>
+    <string>ready</string>
   </entry>
   <!-- NOTE: this plugin uses shared code (validation, response handler) from parent directory! -->
   <entry>
@@ -10,7 +10,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>22</string>
+    <string>23</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -206,15 +206,16 @@
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
     <list>
-      <string>https?://oup\.silverchair-cdn\.com/(cassette\.axd|data)/.*(JS|CSS|\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff))(\?.*)?$</string>
+      <string>https?://academic\.oup\.com/(cassette\.axd|data|UI)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?Expires=[^?]+)?$</string>
+      <string>https?://oup\.silverchair-cdn\.com/(cassette\.axd|data|UI)/.*(JS|CSS|\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff))(\?.*)?$</string>
       <string>https?://(fonts\.googleapis\.com|cdn\.jsdelivr\.net|cdnjs\.cloudflare\.com)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?</string>
     </list>
-  </entry>wtermark
+  </entry>
   <entry>
     <string>au_url_poll_result_weight</string>
     <list>
-      <string>"\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)\?Expires=[^?]+$", 0</string>
-      <string>"https?://oup\.silverchair-cdn\.com/(cassette\.axd|data)/.*(JS|CSS|\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff))(\?.*)?$", 0</string>
+      <string>"https?://academic\.oup\.com/(cassette\.axd|data|UI)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?Expires=[^?]+)?$", 0</string>
+      <string>"https?://oup\.silverchair-cdn\.com/(cassette\.axd|data|UI)/.*(JS|CSS|\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff))(\?.*)?$", 0</string>
       <string>"https?://(fonts\.googleapis\.com|cdn\.jsdelivr\.net|cdnjs\.cloudflare\.com)/.*(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", 0</string>
     </list>
   </entry>
