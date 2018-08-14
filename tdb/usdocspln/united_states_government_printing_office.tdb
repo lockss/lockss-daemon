@@ -267,8 +267,6 @@
     au < ready ; 1953 ; Additional Government Publications 1953 ; https://www.gpo.gov/ ; 1953 >
     au < ready ; 1954 ; Additional Government Publications 1954 ; https://www.gpo.gov/ ; 1954 >
     au < ready ; 1955 ; Additional Government Publications 1955 ; https://www.gpo.gov/ ; 1955 >
-    au < manifest ; 1956 ; Additional Government Publications 1956 ; https://www.gpo.gov/ ; 1956 >
-    au < manifest ; 1957 ; Additional Government Publications 1957 ; https://www.gpo.gov/ ; 1957 >
     au < ready ; 1956 ; Additional Government Publications 1956 ; https://www.gpo.gov/ ; 1956 >
     au < ready ; 1957 ; Additional Government Publications 1957 ; https://www.gpo.gov/ ; 1957 >
     au < ready ; 1958 ; Additional Government Publications 1958 ; https://www.gpo.gov/ ; 1958 >
@@ -1359,8 +1357,8 @@
     au < notReady ; 2014 ; United States Courts 2014 ; https://www.gpo.gov/ ; 2014 > #continuously fails testing.
     au < notReady ; 2015 ; United States Courts 2015 ; https://www.gpo.gov/ ; 2015 > #continuously fails testing.
     au < notReady ; 2016 ; United States Courts 2016 ; https://www.gpo.gov/ ; 2016 > #continuously fails testing.
-    au < manifest ; 2017 ; United States Courts 2017 ; https://www.gpo.gov/ ; 2017 >
-    au < manifest ; 2018 ; United States Courts 2018 ; https://www.gpo.gov/ ; 2018 >
+    au < notReady ; 2017 ; United States Courts 2017 ; https://www.gpo.gov/ ; 2017 > #continuously fails testing.
+    au < notReady ; 2018 ; United States Courts 2018 ; https://www.gpo.gov/ ; 2018 > #continuously fails testing.
 
   }
 
