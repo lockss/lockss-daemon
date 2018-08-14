@@ -54,19 +54,8 @@
     <string>au_permitted_host_pattern</string>
     <list>
       <string>(fonts|ajax)\.(googleapis|gstatic)\.com</string>
-      <string>press-files\.anu\.edu\.au</string>
+      <!--<string>press-files\.anu\.edu\.au</string> -->
       <!-- XXX above needed because lockss.txt missing on that domain -->
-    </list>
-  </entry>
-  <entry>
-    <string>au_additional_url_stems</string>
-    <list>
-      <string>"%s", to_http(base_url)</string>
-      <string>"%s", to_https(base_url)</string>
-      <string>http://press-files.anu.edu.au/</string>
-      <string>https://press-files.anu.edu.au/</string>
-      <string>http://style.anu.edu.au/</string>
-      <string>https://style.anu.edu.au/</string>
     </list>
   </entry>
   <entry>
@@ -88,13 +77,13 @@
     <string>au_crawlrules</string>
     <list>
       <string>1,"^https?://((fonts|ajax)\.(googleapis|gstatic)\.com)/.*\.?(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff.?)(\?.*)?"</string>
-      <string>1,"^https?://([^.]+\.anu\.edu\.au)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff.?)$"</string>
+      <string>1,"^https?://(press(-files)?|style)\.anu\.edu\.au/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff.?)$"</string>
       <string>1,"^https?://(press(-files)?|style)\.anu\.edu\.au/lockss.txt$"</string>
       <string>4,"^https?://(press(-files)?|style)\.anu\.edu\.au/"</string>
       <!-- in cases where there is a bad link, seems to redirect to search page, don't follow these links -->
-      <string>2,"(^https?://%s/([^/]+)?$|\?search=|/authors-editors/)", url_host(base_url)</string>
+      <string>2,"(^https?://%s/([^/?]+)?$|\?search=|/authors-editors/)", url_host(base_url)</string>
       <string>1,"^https?://%s%spublications/(journals/)?%s(\?page=[0-9]+)?$", url_host(base_url), url_path(base_url), journal_id</string>
-      <string>1,"^https?://%s%s\?p=[0-9]+$", url_host(base_url), url_path(base_url)</string>
+      <string>1,"^https?://%s%s[?]p=[0-9]+$", url_host(base_url), url_path(base_url)</string>
       <string>1,"^https?://%s%snode/[0-9]+(/download)?$", url_host(base_url), url_path(base_url)</string>
       <string>1,"^https?://%s%spublications/(journals/)?%s-(issue|volume|no-[1-9]|winter)-%s(-[12n].+?)?(/download)?$", url_host(base_url), url_path(base_url), journal_id, volume_name</string>
       <string>1,"^https?://press-files\.anu\.edu\.au/downloads/press/[^/]+/(html|media|pdf)/", base_url</string>
@@ -153,7 +142,6 @@
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.anu.AnuHtmlHashFilterFactory</string>
   </entry>
-<!--   <entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.anu.AnuArticleIteratorFactory</string>
@@ -170,18 +158,35 @@
         <string>org.lockss.plugin.anu.AnuHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
-  </entry> -->
+  </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <string>403=org.lockss.plugin.anu.AnuHttpResponseHandler</string>
+      <string>500=org.lockss.plugin.anu.AnuHttpResponseHandler</string>
+    </list>
+  </entry>
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
     <list>
-      <string>".+[.](bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff.?)(\?.*)?$"</string>
+      <string>.+[.](bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\?.*)?$"</string>
+      <string>https://fonts\.googleapis\.com/css\?</string>
     </list>
   </entry>
   <entry>
     <!-- these will not count towards poll results but will replicate from peer if above -->
     <string>au_url_poll_result_weight</string>
     <list>
-      <string>".+[.](bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff.?)(\?.*)?$", 0</string>
+      <string>".+[.](bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\?.*)?$", 0</string>
+      <string>"https://fonts\.googleapis\.com/css\?", 0</string>
     </list>
   </entry>
+  <!--  tell the default base.MimeTypeContentValidator what url patterns to validate by mime type -->
+  <entry>
+    <string>au_url_mime_validation_map</string>
+    <list>
+      <string>\.pdf$, application/pdf</string>
+      <string>/download$, text/html</string>
+    </list>
+  </entry>  
 </map>

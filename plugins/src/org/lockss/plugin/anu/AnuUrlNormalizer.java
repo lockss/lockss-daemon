@@ -54,24 +54,22 @@ public class AnuUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
   protected static final String PAGE_PARAM = "page=";
   protected static final Pattern PAGE_PAT = Pattern.compile("[?].*(page=[0-9]+)", Pattern.CASE_INSENSITIVE);
   
-  // aboriginal-history-journal?field_id_value=&page=1#views-view-press-publications-by-journal-publications-by-journal-container
   
   @Override
   public String additionalNormalization(String url, ArchivalUnit au)
       throws PluginException {
-    if (url.contains(CSS_SUFFIX) ||
+    if (url.contains(PAGE_PARAM)) {
+      Matcher mat = PAGE_PAT.matcher(url);
+      if (mat.find()) {
+        url = url.replaceFirst(REPL_STR, "?" + mat.group(1));
+      }
+    }
+    else if (url.contains(CSS_SUFFIX) ||
         url.contains(JS_SUFFIX) ||
         url.contains(FID_PARAM) ||
         url.contains(ITOK_PARAM) ||
         url.contains(REFR_PARAM)) {
       url = url.replaceFirst(REPL_STR, "");
-    }
-    else if (url.contains(PAGE_PARAM)) {
-      Matcher mat = PAGE_PAT.matcher(url);
-      if (mat.find()) {
-        url = url.replaceFirst(REPL_STR, "?" + mat.group(1));
-      }
-      
     }
     
     return(url);

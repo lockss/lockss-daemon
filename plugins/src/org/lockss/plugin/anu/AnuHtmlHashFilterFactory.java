@@ -32,35 +32,72 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.anu;
 
+import java.io.IOException;
 import java.io.InputStream;
+import java.io.Reader;
 
+import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.*;
+import org.htmlparser.nodes.TextNode;
+import org.htmlparser.util.NodeList;
+import org.lockss.filter.FilterUtil;
+import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.util.ReaderInputStream;
 
 public class AnuHtmlHashFilterFactory implements FilterFactory {
 
+  // add a space after every ">", then remove from "<" to ">" essentially the same as xformAllTags
+  // Reader addFilteredReader = new HtmlTagFilter(new StringFilter(reader,">", "> "), new TagPair("<",">"));
+  protected static HtmlTransform xformAllTags = new HtmlTransform() {
+    @Override
+    public NodeList transform(NodeList nodeList) throws IOException {
+      NodeList nl = new NodeList();
+      for (int sx = 0; sx < nodeList.size(); sx++) {
+        Node snode = nodeList.elementAt(sx);
+        TextNode tn = new TextNode(snode.toPlainTextString() + " ");
+        nl.add(tn);
+      }
+      return nl;
+    }
+  };
+  
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding) {
-    NodeFilter[] filters = new NodeFilter[] {
-     // filter out script
-     new TagNameFilter("script"),
-     // footer
-     HtmlNodeFilters.tagWithAttributeRegex("div", "id", "footer"),
-     // related
-     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "related"),
-     // left menu
-     // title
-     // top menu
-     // another top menu
-     // breadcrumbs
-     // spacing tags
+    
+    NodeFilter[] includeNodes = new NodeFilter[] {
+        HtmlNodeFilters.tagWithAttribute("div", "id", "body-wrap"),
+        
     };
-    return new HtmlFilterInputStream(in,
-                                     encoding,
-                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+    
+    NodeFilter[] excludeNodes = new NodeFilter[] {
+      // filter out comments
+      HtmlNodeFilters.comment(),
+      // filter out script
+      new TagNameFilter("script"),
+      // header
+      HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
+      // breadcrumbs
+      HtmlNodeFilters.tagWithAttribute("div", "id", "breadcrumb"),
+      // related
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "related"),
+      // left menu
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "publication-lhs"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "business-unit"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "anu-share"),
+    };
+    
+    InputStream interStream = new HtmlFilterInputStream(in, encoding,
+        new HtmlCompoundTransform(
+            HtmlNodeFilterTransform.include(new OrFilter(includeNodes)),
+            HtmlNodeFilterTransform.exclude(new OrFilter(excludeNodes)), xformAllTags
+            ));
+    
+    Reader reader = FilterUtil.getReader(interStream, encoding);
+    return new ReaderInputStream(new WhiteSpaceFilter(reader));
   }
 
 }
