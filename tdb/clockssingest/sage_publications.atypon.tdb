@@ -3954,10 +3954,10 @@
         au < manifest ; exists ; 2004-2005 ; Behavioral Disorders Volume 30 ; 30 ; bhda ; >
         au < manifest ; exists ; 2005-2006 ; Behavioral Disorders Volume 31 ; 31 ; bhda ; >
         au < manifest ; exists ; 2006-2007 ; Behavioral Disorders Volume 32 ; 32 ; bhda ; >
-        au < doesNotExist ; doesNotExist ; 2007-2008 ; Behavioral Disorders Volume 33 ; 33 ; bhda ; >
-        au < doesNotExist ; doesNotExist ; 2008-2009 ; Behavioral Disorders Volume 34 ; 34 ; bhda ; >
-        au < doesNotExist ; doesNotExist ; 2009-2010 ; Behavioral Disorders Volume 35 ; 35 ; bhda ; >
-        au < doesNotExist ; doesNotExist ; 2010-2011 ; Behavioral Disorders Volume 36 ; 36 ; bhda ; >
+        au < manifest ; doesNotExist ; 2007-2008 ; Behavioral Disorders Volume 33 ; 33 ; bhda ; >
+        au < manifest ; doesNotExist ; 2008-2009 ; Behavioral Disorders Volume 34 ; 34 ; bhda ; >
+        au < manifest ; doesNotExist ; 2009-2010 ; Behavioral Disorders Volume 35 ; 35 ; bhda ; >
+        au < manifest ; doesNotExist ; 2010-2011 ; Behavioral Disorders Volume 36 ; 36 ; bhda ; >
         au < frozen ; exists ; 2011-2012 ; Behavioral Disorders Volume 37 ; 37 ; bhda ; >
         au < frozen ; exists ; 2012-2013 ; Behavioral Disorders Volume 38 ; 38 ; bhda ; >
         au < frozen ; exists ; 2013-2014 ; Behavioral Disorders Volume 39 ; 39 ; bhda ; >
@@ -13319,7 +13319,7 @@
       au < manifest ; exists ; 2001 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 13 ; 13 ; gtna ; >
       au < manifest ; exists ; 2002 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 14 ; 14 ; gtna ; >
       au < doesNotExist ; doesNotExist ; 2003 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 15 ; 15 ; gtna ; >
-      au < doesNotExist ; doesNotExist ; 2004 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 16 ; 16 ; gtna ; >
+      au < manifest ; doesNotExist ; 2004 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 16 ; 16 ; gtna ; >
       au < doesNotExist ; doesNotExist ; 2005 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 17 ; 17 ; gtna ; >
       au < manifest ; exists ; 2006 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 18 ; 18 ; gtna ; >
       au < manifest ; exists ; 2007 ; Giornale di Techniche Nefrologiche e Dialitiche Volume 19 ; 19 ; gtna ; >
@@ -16354,9 +16354,9 @@
       au < manifest ; exists ; 1985 ; The International Journal of Artificial Organs Volume 8 ; 8 ; jaoa ; >
       au < manifest ; exists ; 1986 ; The International Journal of Artificial Organs Volume 9 ; 9 ; jaoa ; >
       au < manifest ; exists ; 1987 ; The International Journal of Artificial Organs Volume 10 ; 10 ; jaoa ; >
-      au < doesNotExist ; doesNotExist ; 1988 ; The International Journal of Artificial Organs Volume 11 ; 11 ; jaoa ; >
-      au < doesNotExist ; doesNotExist ; 1989 ; The International Journal of Artificial Organs Volume 12 ; 12 ; jaoa ; >
-      au < doesNotExist ; doesNotExist ; 1990 ; The International Journal of Artificial Organs Volume 13 ; 13 ; jaoa ; >
+      au < manifest ; doesNotExist ; 1988 ; The International Journal of Artificial Organs Volume 11 ; 11 ; jaoa ; >
+      au < manifest ; doesNotExist ; 1989 ; The International Journal of Artificial Organs Volume 12 ; 12 ; jaoa ; >
+      au < manifest ; doesNotExist ; 1990 ; The International Journal of Artificial Organs Volume 13 ; 13 ; jaoa ; >
       au < manifest ; exists ; 1991 ; The International Journal of Artificial Organs Volume 14 ; 14 ; jaoa ; >
       au < manifest ; exists ; 1992 ; The International Journal of Artificial Organs Volume 15 ; 15 ; jaoa ; >
       au < manifest ; exists ; 1993 ; The International Journal of Artificial Organs Volume 16 ; 16 ; jaoa ; >
@@ -16497,10 +16497,10 @@
       au < manifest ; exists ; 1991 ; The International Journal of Biological Markers Volume 6 ; 6 ; jbmb ; >
       au < manifest ; exists ; 1992 ; The International Journal of Biological Markers Volume 7 ; 7 ; jbmb ; >
       au < manifest ; exists ; 1993 ; The International Journal of Biological Markers Volume 8 ; 8 ; jbmb ; >
-      au < doesNotExist ; doesNotExist ; 1994 ; The International Journal of Biological Markers Volume 9 ; 9 ; jbmb ; >
+      au < manifest ; doesNotExist ; 1994 ; The International Journal of Biological Markers Volume 9 ; 9 ; jbmb ; >
       au < manifest ; exists ; 1995 ; The International Journal of Biological Markers Volume 10 ; 10 ; jbmb ; >
-      au < doesNotExist ; doesNotExist ; 1996 ; The International Journal of Biological Markers Volume 11 ; 11 ; jbmb ; >
-      au < doesNotExist ; doesNotExist ; 1997 ; The International Journal of Biological Markers Volume 12 ; 12 ; jbmb ; >
+      au < manifest ; doesNotExist ; 1996 ; The International Journal of Biological Markers Volume 11 ; 11 ; jbmb ; >
+      au < manifest ; doesNotExist ; 1997 ; The International Journal of Biological Markers Volume 12 ; 12 ; jbmb ; >
       au < manifest ; exists ; 1998 ; The International Journal of Biological Markers Volume 13 ; 13 ; jbmb ; >
       au < manifest ; exists ; 1999 ; The International Journal of Biological Markers Volume 14 ; 14 ; jbmb ; >
       au < manifest ; exists ; 2000 ; The International Journal of Biological Markers Volume 15 ; 15 ; jbmb ; >
@@ -18266,7 +18266,7 @@
     {
 
 
-      au < doesNotExist ; doesNotExist ; 0 ; International Review of Administrative Sciences Volume 22 ; 22 ; rasa ; >
+      au < manifest ; doesNotExist ; 0 ; International Review of Administrative Sciences Volume 22 ; 22 ; rasa ; >
       au < manifest ; exists ; 1957 ; International Review of Administrative Sciences Volume 23 ; 23 ; rasb ; >
       au < manifest ; exists ; 1958 ; International Review of Administrative Sciences Volume 24 ; 24 ; rasb ; >
       au < manifest ; exists ; 1959 ; International Review of Administrative Sciences Volume 25 ; 25 ; rasb ; >
@@ -33963,7 +33963,7 @@
       au < manifest ; exists ; 1988 ; The Prison Journal Volume 68 ; 68 ; tpjd ; >
       au < manifest ; exists ; 1989 ; The Prison Journal Volume 69 ; 69 ; tpjd ; >
       au < manifest ; exists ; 1990 ; The Prison Journal Volume 70 ; 70 ; tpjd ; >
-      au < doesNotExist ; doesNotExist ; 0 ; The Prison Journal Volume 71 ; 71 ; tpjd ; >
+      au < manifest ; doesNotExist ; 0 ; The Prison Journal Volume 71 ; 71 ; tpjd ; >
       au < manifest ; exists ; 1992 ; The Prison Journal Volume 72 ; 72 ; tpjd ; >
       au < manifest ; exists ; 1993 ; The Prison Journal Volume 73 ; 73 ; tpjd ; >
       au < manifest ; exists ; 1994 ; The Prison Journal Volume 74 ; 74 ; tpjd ; >
@@ -36894,18 +36894,18 @@
     au < manifest ; exists ; 2001-2002 ; The Review of Black Political Economy Volume 29 ; 29 ; rbpa ; >
     au < manifest ; exists ; 2002-2003 ; The Review of Black Political Economy Volume 30 ; 30 ; rbpa ; >
     au < manifest ; exists ; 2003-2004 ; The Review of Black Political Economy Volume 31 ; 31 ; rbpa ; >
-    au < doesNotExist ; doesNotExist ; 2005 ; The Review of Black Political Economy Volume 32 ; 32 ; rbpa ; >
-    au < doesNotExist ; doesNotExist ; 2006 ; The Review of Black Political Economy Volume 33 ; 33 ; rbpa ; >
-    au < doesNotExist ; doesNotExist ; 2007 ; The Review of Black Political Economy Volume 34 ; 34 ; rbpa ; >
-    au < doesNotExist ; doesNotExist ; 2008 ; The Review of Black Political Economy Volume 35 ; 35 ; rbpa ; >
+    au < manifest ; doesNotExist ; 2005 ; The Review of Black Political Economy Volume 32 ; 32 ; rbpa ; >
+    au < manifest ; doesNotExist ; 2006 ; The Review of Black Political Economy Volume 33 ; 33 ; rbpa ; >
+    au < manifest ; doesNotExist ; 2007 ; The Review of Black Political Economy Volume 34 ; 34 ; rbpa ; >
+    au < manifest ; doesNotExist ; 2008 ; The Review of Black Political Economy Volume 35 ; 35 ; rbpa ; >
     au < frozen ; exists ; 2009 ; The Review of Black Political Economy Volume 36 ; 36 ; rbpa ; >
-    au < doesNotExist ; doesNotExist ; 2010 ; The Review of Black Political Economy Volume 37 ; 37 ; rbpa ; >
-    au < doesNotExist ; doesNotExist ; 2011 ; The Review of Black Political Economy Volume 38 ; 38 ; rbpa ; >
+    au < manifest ; doesNotExist ; 2010 ; The Review of Black Political Economy Volume 37 ; 37 ; rbpa ; >
+    au < manifest ; doesNotExist ; 2011 ; The Review of Black Political Economy Volume 38 ; 38 ; rbpa ; >
     au < frozen ; exists ; 2012 ; The Review of Black Political Economy Volume 39 ; 39 ; rbpa ; >
     au < frozen ; exists ; 2013 ; The Review of Black Political Economy Volume 40 ; 40 ; rbpa ; >
-    au < doesNotExist ; doesNotExist ; 2014 ; The Review of Black Political Economy Volume 41 ; 41 ; rbpa ; >
-    au < doesNotExist ; doesNotExist ; 2015 ; The Review of Black Political Economy Volume 42 ; 42 ; rbpa ; >
-    au < doesNotExist ; doesNotExist ; 2016 ; The Review of Black Political Economy Volume 43 ; 43 ; rbpa ; >
+    au < manifest ; doesNotExist ; 2014 ; The Review of Black Political Economy Volume 41 ; 41 ; rbpa ; >
+    au < manifest ; doesNotExist ; 2015 ; The Review of Black Political Economy Volume 42 ; 42 ; rbpa ; >
+    au < manifest ; doesNotExist ; 2016 ; The Review of Black Political Economy Volume 43 ; 43 ; rbpa ; >
     au < frozen ; exists ; 2017 ; The Review of Black Political Economy Volume 44 ; 44 ; rbpa ; >
     au < manifest ; exists ; 2018 ; The Review of Black Political Economy Volume 45 ; 45 ; rbpa ; >
 
@@ -37650,7 +37650,7 @@
       au < manifest ; exists ; 1985 ; Science, Technology & Human Values Volume 10 ; 10 ; sthd ; >
       au < manifest ; exists ; 1986 ; Science, Technology & Human Values Volume 11 ; 11 ; sthd ; >
       au < manifest ; exists ; 1987 ; Science, Technology & Human Values Volume 12 ; 12 ; sthd ; >
-      au < doesNotExist ; doesNotExist ; 0 ; Science, Technology & Human Values Volume 13 ; 13 ; sthd ; >
+      au < manifest ; doesNotExist ; 0 ; Science, Technology & Human Values Volume 13 ; 13 ; sthd ; >
       au < manifest ; exists ; 1989 ; Science, Technology & Human Values Volume 14 ; 14 ; sthd ; >
       au < manifest ; exists ; 1990 ; Science, Technology & Human Values Volume 15 ; 15 ; sthd ; >
       au < manifest ; exists ; 1991 ; Science, Technology & Human Values Volume 16 ; 16 ; sthd ; >
@@ -40271,8 +40271,8 @@
     au < manifest ; exists ; 1949 ; Theological Studies Volume 10 ; 10 ; tsja ; >
     au < manifest ; exists ; 1950 ; Theological Studies Volume 11 ; 11 ; tsja ; >
     au < manifest ; exists ; 1951 ; Theological Studies Volume 12 ; 12 ; tsja ; >
-    au < doesNotExist ; doesNotExist ; 1952 ; Theological Studies Volume 13 ; 13 ; tsja ; >
-    au < doesNotExist ; doesNotExist ; 1953 ; Theological Studies Volume 14 ; 14 ; tsja ; >
+    au < manifest ; doesNotExist ; 1952 ; Theological Studies Volume 13 ; 13 ; tsja ; >
+    au < manifest ; doesNotExist ; 1953 ; Theological Studies Volume 14 ; 14 ; tsja ; >
     au < manifest ; exists ; 1954 ; Theological Studies Volume 15 ; 15 ; tsja ; >
     au < manifest ; exists ; 1955 ; Theological Studies Volume 16 ; 16 ; tsja ; >
     au < manifest ; exists ; 1956 ; Theological Studies Volume 17 ; 17 ; tsja ; >
@@ -40381,16 +40381,16 @@
       au < manifest ; exists ; 1932 ; Theology Volume 25 ; 25 ; tjxa ; >
       au < manifest ; exists ; 1933 ; Theology Volume 26 ; 26 ; tjxa ; >
       au < manifest ; exists ; 1933 ; Theology Volume 27 ; 27 ; tjxa ; >
-      au < doesNotExist ; doesNotExist ; 0 ; Theology Volume 28 ; 28 ; tjxa ; >
-      au < doesNotExist ; doesNotExist ; 0 ; Theology Volume 29 ; 29 ; tjxa ; >
-      au < doesNotExist ; doesNotExist ; 0 ; Theology Volume 30 ; 30 ; tjxa ; >
-      au < doesNotExist ; doesNotExist ; 0 ; Theology Volume 31 ; 31 ; tjxa ; >
-      au < doesNotExist ; doesNotExist ; 0 ; Theology Volume 32 ; 32 ; tjxa ; >
-      au < doesNotExist ; doesNotExist ; 0 ; Theology Volume 33 ; 33 ; tjxa ; >
-      au < doesNotExist ; doesNotExist ; 0 ; Theology Volume 34 ; 34 ; tjxa ; >
-      au < doesNotExist ; doesNotExist ; 0 ; Theology Volume 35 ; 35 ; tjxa ; >
-      au < doesNotExist ; doesNotExist ; 0 ; Theology Volume 36 ; 36 ; tjxa ; >
-      au < doesNotExist ; doesNotExist ; 0 ; Theology Volume 37 ; 37 ; tjxa ; >
+      au < manifest ; doesNotExist ; 0 ; Theology Volume 28 ; 28 ; tjxa ; >
+      au < manifest ; doesNotExist ; 0 ; Theology Volume 29 ; 29 ; tjxa ; >
+      au < manifest ; doesNotExist ; 0 ; Theology Volume 30 ; 30 ; tjxa ; >
+      au < manifest ; doesNotExist ; 0 ; Theology Volume 31 ; 31 ; tjxa ; >
+      au < manifest ; doesNotExist ; 0 ; Theology Volume 32 ; 32 ; tjxa ; >
+      au < manifest ; doesNotExist ; 0 ; Theology Volume 33 ; 33 ; tjxa ; >
+      au < manifest ; doesNotExist ; 0 ; Theology Volume 34 ; 34 ; tjxa ; >
+      au < manifest ; doesNotExist ; 0 ; Theology Volume 35 ; 35 ; tjxa ; >
+      au < manifest ; doesNotExist ; 0 ; Theology Volume 36 ; 36 ; tjxa ; >
+      au < manifest ; doesNotExist ; 0 ; Theology Volume 37 ; 37 ; tjxa ; >
       au < manifest ; exists ; 1939 ; Theology Volume 38 ; 38 ; tjxa ; >
       au < manifest ; exists ; 1939 ; Theology Volume 39 ; 39 ; tjxa ; >
       au < manifest ; exists ; 1940 ; Theology Volume 40 ; 40 ; tjxa ; >
@@ -45016,9 +45016,9 @@
       au < manifest ; exists ; 1979 ; Australian Journal of Education Volume 23 ; 23 ; aeda ; >
       au < manifest ; exists ; 1980 ; Australian Journal of Education Volume 24 ; 24 ; aeda ; >
       au < manifest ; exists ; 1981 ; Australian Journal of Education Volume 25 ; 25 ; aeda ; >
-      au < doesNotExist ; doesNotExist ; 0 ; Australian Journal of Education Volume 26 ; 26 ; aeda ; >
-      au < doesNotExist ; doesNotExist ; 0 ; Australian Journal of Education Volume 27 ; 27 ; aeda ; >
-      au < doesNotExist ; doesNotExist ; 0 ; Australian Journal of Education Volume 28 ; 28 ; aeda ; >
+      au < manifest ; doesNotExist ; 0 ; Australian Journal of Education Volume 26 ; 26 ; aeda ; >
+      au < manifest ; doesNotExist ; 0 ; Australian Journal of Education Volume 27 ; 27 ; aeda ; >
+      au < manifest ; doesNotExist ; 0 ; Australian Journal of Education Volume 28 ; 28 ; aeda ; >
       au < manifest ; exists ; 1985 ; Australian Journal of Education Volume 29 ; 29 ; aeda ; >
       au < manifest ; exists ; 1986 ; Australian Journal of Education Volume 30 ; 30 ; aeda ; >
       au < manifest ; exists ; 1987 ; Australian Journal of Education Volume 31 ; 31 ; aeda ; >
