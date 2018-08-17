@@ -49,6 +49,9 @@ import org.lockss.util.Logger;
  *     article.asp?issn=0257-7941;year=2000;volume=19;issue=3;spage=123;epage=129;aulast=Jolly;type=2
  * downloadpdf.asp?issn=0257-7941;year=2000;volume=19;issue=3;spage=123;epage=129;aulast=Jolly;type=2
  * 
+ * Medknow seems to have updated some or all sites to no longer have /downloadpdf.asp links
+ * only article.asp links that redirect and get stored AtOrigUrl
+ * 
  */
 public class MedknowUrlConsumerFactory implements UrlConsumerFactory {
   private static final Logger log = Logger.getLogger(MedknowUrlConsumerFactory.class);

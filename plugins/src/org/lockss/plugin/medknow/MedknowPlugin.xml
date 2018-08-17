@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>26</string>
+    <string>27</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -32,7 +32,7 @@
       </entry>
       <entry>
         <string>Substance</string>
-        <string>3</string>
+        <string>4</string>
       </entry>
     </map>
   </entry>
@@ -97,7 +97,7 @@
       or
       base_url/article.asp?issn=0022-3859;year=2013;volume=59;issue=3;spage=179;epage=185;aulast=Singh;type=2  pdf
       -->
-        <string>"^%s(article|downloadpdf)\.asp\?issn=%s;year=[0-9]+;volume=%s.*;aulast=[^;]*(;type=2)?$", base_url, journal_issn, volume_name</string>
+        <string>"^%s(article)\.asp\?issn=%s;year=[0-9]+;volume=%s.*;aulast=[^;]*(;type=2)?$", base_url, journal_issn, volume_name</string>
       </list>
   </entry>
   <entry>
@@ -234,7 +234,16 @@
       <string>"%s(images)/.+[.](gif|jpe?g|png)$", base_url, 0</string>
       <string>"%s(js)/.+[.](js)$", base_url, 0</string>
       <!-- always a backissues.asp, however it is always being updated so disagreements happen -->
-      <string>"%s(backissues.asp)$", base_url, 0</string>
+      <string>"%s(backissues[.]asp)$", base_url, 0</string>
+      <string>"%s(downloadpdf[.]asp)$", base_url, 0</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_url_mime_validation_map</string>
+    <list>
+      <string>;type=2$, application/pdf</string>
+      <string>;type=$, text/html</string>
+      <string>;t=2$, application/x-Research-Info-Systems</string>
     </list>
   </entry>
 </map>
