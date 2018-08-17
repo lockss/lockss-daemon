@@ -225,6 +225,7 @@
     <list>
       <string>"%s(images)/.+[.](gif|jpe?g|png)$", base_url</string>
       <string>"%s(js)/.+[.](js)$", base_url</string>
+      <string>"%sdownloadpdf[.]asp", base_url</string>
     </list>
   </entry>
   <entry>
@@ -235,14 +236,14 @@
       <string>"%s(js)/.+[.](js)$", base_url, 0</string>
       <!-- always a backissues.asp, however it is always being updated so disagreements happen -->
       <string>"%s(backissues[.]asp)$", base_url, 0</string>
-      <string>"%s(downloadpdf[.]asp)$", base_url, 0</string>
+      <string>"%sdownloadpdf[.]asp", base_url, 0</string>
     </list>
   </entry>
   <entry>
     <string>au_url_mime_validation_map</string>
     <list>
       <string>;type=2$, application/pdf</string>
-      <string>;type=$, text/html</string>
+      <string>;type=0$, text/html</string>
       <string>;t=2$, application/x-Research-Info-Systems</string>
     </list>
   </entry>
