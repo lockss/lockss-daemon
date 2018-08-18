@@ -240,7 +240,7 @@ public class TestMedknowArchivalUnit extends LockssPluginTestCase {
     assertSubstanceUrl("http://www.ajrnl.com/article.asp?issn=1234-5678;year=2014;volume=33;issue=4;spage=355;epage=356;aulast=",
         au);
     //redirects to this:
-    assertSubstanceUrl("http://www.ajrnl.com/downloadpdf.asp?issn=1234-5678;year=2014;volume=33;issue=4;spage=355;epage=356;aulast=Jagannathan;type=2",
+    assertNotSubstanceUrl("http://www.ajrnl.com/downloadpdf.asp?issn=1234-5678;year=2014;volume=33;issue=4;spage=355;epage=356;aulast=Jagannathan;type=2",
         au);
     assertSubstanceUrl("http://www.ajrnl.com/article.asp?issn=1234-5678;year=2014;volume=33;issue=3;spage=239;epage=240;aulast=Phani;type=2",
         au);
