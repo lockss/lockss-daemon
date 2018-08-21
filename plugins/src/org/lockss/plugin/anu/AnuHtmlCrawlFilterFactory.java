@@ -61,7 +61,3 @@ public class AnuHtmlCrawlFilterFactory implements FilterFactory {
   }
 
 }
-/*
- 
- 
-*/

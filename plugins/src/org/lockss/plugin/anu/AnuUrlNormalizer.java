@@ -52,7 +52,7 @@ public class AnuUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
   protected static final String REFR_PARAM = "?referer=";
   
   protected static final String PAGE_PARAM = "page=";
-  protected static final Pattern PAGE_PAT = Pattern.compile("[?].*(page=[0-9]+)", Pattern.CASE_INSENSITIVE);
+  protected static final Pattern PAGE_PAT = Pattern.compile("(?<!xhtml)[?].*(page=[0-9]+)", Pattern.CASE_INSENSITIVE);
   
   
   @Override
@@ -64,7 +64,7 @@ public class AnuUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
         url = url.replaceFirst(REPL_STR, "?" + mat.group(1));
       }
     }
-    else if (url.contains(CSS_SUFFIX) ||
+    if (url.contains(CSS_SUFFIX) ||
         url.contains(JS_SUFFIX) ||
         url.contains(FID_PARAM) ||
         url.contains(ITOK_PARAM) ||

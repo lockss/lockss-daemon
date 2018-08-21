@@ -50,6 +50,7 @@ import org.lockss.extractor.LinkExtractorFactory;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.AuUtil;
 import org.lockss.util.Logger;
+import org.lockss.util.UrlUtil;
 
 // an implementation of JsoupHtmlLinkExtractor
 public class AnuHtmlLinkExtractorFactory implements LinkExtractorFactory {
@@ -102,7 +103,9 @@ public class AnuHtmlLinkExtractorFactory implements LinkExtractorFactory {
                                     return;
                                   }
                                 }
-                                url = AuUtil.normalizeHttpHttpsFromBaseUrl(au, url);
+                                if (UrlUtil.isSameHost(srcUrl, url)) {
+                                  url = AuUtil.normalizeHttpHttpsFromBaseUrl(au, url);
+                                }
                                 cb.foundLink(url);
                               }
                           });

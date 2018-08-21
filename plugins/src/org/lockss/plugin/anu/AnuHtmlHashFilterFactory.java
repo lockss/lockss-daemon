@@ -69,7 +69,12 @@ public class AnuHtmlHashFilterFactory implements FilterFactory {
                                                String encoding) {
     
     NodeFilter[] includeNodes = new NodeFilter[] {
-        HtmlNodeFilters.tagWithAttribute("div", "id", "body-wrap"),
+        HtmlNodeFilters.tag("body"),
+//        HtmlNodeFilters.tagWithAttribute("div", "id", "body-wrap"),
+//        HtmlNodeFilters.tagWithAttribute("div", "class", "article"),
+//        HtmlNodeFilters.tagWithAttribute("div", "class", "chapter"),
+//        HtmlNodeFilters.tagWithAttribute("div", "class", "section"),
+//        HtmlNodeFilters.tagWithAttribute("div", "class", "toc"),
         
     };
     
@@ -78,22 +83,36 @@ public class AnuHtmlHashFilterFactory implements FilterFactory {
       HtmlNodeFilters.comment(),
       // filter out script
       new TagNameFilter("script"),
-      // header
+      // header & footer
       HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "id", "footer"),
+      HtmlNodeFilters.tagWithAttribute("div", "id", "skipnavholder"),
+      HtmlNodeFilters.tagWithAttribute("div", "id", "print-hdr"),
       // breadcrumbs
       HtmlNodeFilters.tagWithAttribute("div", "id", "breadcrumb"),
+      HtmlNodeFilters.tagWithAttribute("div", "class", "breadcrumb"),
       // related
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "related"),
       // left menu
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "publication-lhs"),
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "business-unit"),
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "anu-share"),
+      // <div id="bnr-wrap" class="bnr-gwy-high" role="banner">
+      HtmlNodeFilters.tagWithAttribute("div", "id", "bnr-wrap"),
+      // <div id="menu" role="navigation">
+      HtmlNodeFilters.tagWithAttribute("div", "id", "menu"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "search"),
+      HtmlNodeFilters.tagWithTextRegex("a", "^(Previous|Next)$"),
+      // 
+      // 
+      // 
+      // 
     };
     
     InputStream interStream = new HtmlFilterInputStream(in, encoding,
         new HtmlCompoundTransform(
             HtmlNodeFilterTransform.include(new OrFilter(includeNodes)),
-            HtmlNodeFilterTransform.exclude(new OrFilter(excludeNodes)), xformAllTags
+            HtmlNodeFilterTransform.exclude(new OrFilter(excludeNodes)) //, xformAllTags
             ));
     
     Reader reader = FilterUtil.getReader(interStream, encoding);

@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -171,6 +171,7 @@
     <list>
       <string>.+[.](bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\?.*)?$"</string>
       <string>https://fonts\.googleapis\.com/css\?</string>
+      <string>/html/(banner|frames)\.php</string>
     </list>
   </entry>
   <entry>
@@ -179,6 +180,7 @@
     <list>
       <string>".+[.](bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\?.*)?$", 0</string>
       <string>"https://fonts\.googleapis\.com/css\?", 0</string>
+      <string>"/html/(banner|frames)\.php", 0</string>
     </list>
   </entry>
   <!--  tell the default base.MimeTypeContentValidator what url patterns to validate by mime type -->
@@ -188,5 +190,5 @@
       <string>\.pdf$, application/pdf</string>
       <string>/download$, text/html</string>
     </list>
-  </entry>  
+  </entry>
 </map>
