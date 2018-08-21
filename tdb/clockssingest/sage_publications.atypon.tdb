@@ -47,7 +47,7 @@
       au < frozen ; exists ; 2015 ; About Campus Volume 20 ; 20 ; acaa ; >
       au < frozen ; exists ; 2016 ; About Campus Volume 21 ; 21 ; acaa ; >
       au < frozen ; exists ; 2017 ; About Campus Volume 22 ; 22 ; acaa ; >
-      au < ready ; exists ; 2018 ; About Campus Volume 23 ; 23 ; acaa ; >
+      au < crawling ; exists ; 2018 ; About Campus Volume 23 ; 23 ; acaa ; >
 
   }
 
@@ -90,7 +90,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Abstracts in Anthropology Volume 71 ; 71 ; aaxa ; >
       au < finished ; crawling ; 2016 ; Abstracts in Anthropology Volume 72 ; 72 ; aaxa ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2017  ; Abstracts in Anthropology Volume 73 ; 73 ; aaxa ; >
-      au < ready ; exists ; 2018  ; Abstracts in Anthropology Volume 74 ; 74 ; aaxa ; >
+      au < crawling ; exists ; 2018  ; Abstracts in Anthropology Volume 74 ; 74 ; aaxa ; >
 
   }
 
@@ -128,7 +128,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Accounting History Volume 20 ; 20 ; acha ; >
       au < finished ; crawling ; 2016 ; Accounting History Volume 21 ; 21 ; acha ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2017 ; Accounting History Volume 22 ; 22 ; acha ; >
-      au < ready ; exists ; 2018 ; Accounting History Volume 23 ; 23 ; acha ; >
+      au < crawling ; exists ; 2018 ; Accounting History Volume 23 ; 23 ; acha ; >
 
     }
 
@@ -206,7 +206,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Acta Sociologica Volume 58 ; 58 ; asja ; >
       au < finished ; crawling ; 2016 ; Acta Sociologica Volume 59 ; 59 ; asja ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; Acta Sociologica Volume 60 ; 60 ; asja ; >
-      au < ready ; exists ; 2018 ; Acta Sociologica Volume 61 ; 61 ; asja ; >
+      au < crawling ; exists ; 2018 ; Acta Sociologica Volume 61 ; 61 ; asja ; >
 
     }
 
@@ -352,7 +352,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Adaptive Behavior Volume 23 ; 23 ; adba ; >
       au < finished ; crawling ; 2016 ; Adaptive Behavior Volume 24 ; 24 ; adba ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; Adaptive Behavior Volume 25 ; 25 ; adba ; >
-      au < ready ; exists ; 2018 ; Adaptive Behavior Volume 26 ; 26 ; adba ; >
+      au < crawling ; exists ; 2018 ; Adaptive Behavior Volume 26 ; 26 ; adba ; >
 
     }
 
@@ -419,7 +419,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Administration & Society Volume 47 ; 47 ; aasb ; >
       au < frozen ; exists ; 2016 ; Administration & Society Volume 48 ; 48 ; aasb ; >
       au < deepCrawl ; exists ; 2017 ; Administration & Society Volume 49 ; 49 ; aasb ; >
-      au < ready ; exists ; 2018 ; Administration & Society Volume 50 ; 50 ; aasb ; >
+      au < crawling ; exists ; 2018 ; Administration & Society Volume 50 ; 50 ; aasb ; >
 
     }
 
@@ -453,7 +453,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Administrative Science Quarterly Volume 60 ; 60 ; asqa ; >
       au < frozen ; exists ; 2016 ; Administrative Science Quarterly Volume 61 ; 61 ; asqa ; >
       au < deepCrawl ; exists ; 2017 ; Administrative Science Quarterly Volume 62 ; 62 ; asqa ; >
-      au < ready ; exists ; 2018 ; Administrative Science Quarterly Volume 63 ; 63 ; asqa ; >
+      au < crawling ; exists ; 2018 ; Administrative Science Quarterly Volume 63 ; 63 ; asqa ; >
 
   }
 
@@ -486,7 +486,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Adsorption Science & Technology Volume 33 ; 33 ; adta ; >
       au < finished ; crawling ; 2016 ; Adsorption Science & Technology Volume 34 ; 34 ; adta ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2017 ; Adsorption Science & Technology Volume 35 ; 35 ; adta ; >
-      au < ready ; exists ; 2018 ; Adsorption Science & Technology Volume 36 ; 36 ; adta ; >
+      au < crawling ; exists ; 2018 ; Adsorption Science & Technology Volume 36 ; 36 ; adta ; >
 
   }
 
@@ -510,7 +510,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Advances in Mechanical Engineering Volume 7 ; 7 ; adea ; >
       au < frozen ; exists ; 2016 ; Advances in Mechanical Engineering Volume 8 ; 8 ; adea ; >
       au < deepCrawl ; exists ; 2017 ; Advances in Mechanical Engineering Volume 9 ; 9 ; adea ; >
-      au < ready ; exists ; 2018 ; Advances in Mechanical Engineering Volume 10 ; 10 ; adea ; >
+      au < crawling ; exists ; 2018 ; Advances in Mechanical Engineering Volume 10 ; 10 ; adea ; >
 
   }
 
@@ -593,7 +593,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Adult Education Quarterly Volume 65 ; 65 ; aeqb ; >
       au < finished ; crawling ; 2016 ; Adult Education Quarterly Volume 66 ; 66 ; aeqb ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; Adult Education Quarterly Volume 67 ; 67 ; aeqb ; >
-      au < ready ; exists ; 2018 ; Adult Education Quarterly Volume 68 ; 68 ; aeqb ; >
+      au < crawling ; exists ; 2018 ; Adult Education Quarterly Volume 68 ; 68 ; aeqb ; >
 
     }
 
@@ -631,7 +631,7 @@
         au < doNotProcess ; doNotProcess ; 2015 ; Adult Learning Volume 26 ; 26 ; alxa ; >
         au < finished ; crawling ; 2016 ; Adult Learning Volume 27 ; 27 ; alxa ; reingest4.clockss.org:8082 >
         au < deepCrawl ; exists ; 2017 ; Adult Learning Volume 28 ; 28 ; alxa ; >
-        au < ready ; exists ; 2018 ; Adult Learning Volume 29 ; 29 ; alxa ; >
+        au < crawling ; exists ; 2018 ; Adult Learning Volume 29 ; 29 ; alxa ; >
 
       }
 
@@ -715,7 +715,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Advances in Developing Human Resources Volume 17 ; 17 ; adha ; >
       au < finished ; crawling ; 2016 ; Advances in Developing Human Resources Volume 18 ; 18 ; adha ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; Advances in Developing Human Resources Volume 19 ; 19 ; adha ; >
-      au < ready ; exists ; 2018 ; Advances in Developing Human Resources Volume 20 ; 20 ; adha ; >
+      au < crawling ; exists ; 2018 ; Advances in Developing Human Resources Volume 20 ; 20 ; adha ; >
 
     }
 
@@ -751,7 +751,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Advances in Structural Engineering Volume 18 ; 18 ; asea ; >
       au < finished ; crawling ; 2016 ; Advances in Structural Engineering Volume 19 ; 19 ; asea ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; Advances in Structural Engineering Volume 20 ; 20 ; asea ; >
-      au < ready ; exists ; 2018 ; Advances in Structural Engineering Volume 21 ; 21 ; asea ; >
+      au < crawling ; exists ; 2018 ; Advances in Structural Engineering Volume 21 ; 21 ; asea ; >
 
   }
 
@@ -839,7 +839,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Agrarian South: Journal of Political Economy Volume 4 ; 4 ; agsa ; >
       au < finished ; crawling ; 2016 ; Agrarian South: Journal of Political Economy Volume 5 ; 5 ; agsa ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; Agrarian South: Journal of Political Economy Volume 6 ; 6 ; agsa ; >
-      au < ready ; exists ; 2018 ; Agrarian South: Journal of Political Economy Volume 7 ; 7 ; agsa ; >
+      au < crawling ; exists ; 2018 ; Agrarian South: Journal of Political Economy Volume 7 ; 7 ; agsa ; >
 
     }
 
@@ -901,7 +901,7 @@
       au < frozen ; exists ; 2015 ; Allergy & Rhinology Volume 6 ; 6 ; aara ; >
       au < frozen ; exists ; 2016 ; Allergy & Rhinology Volume 7 ; 7 ; aara ; >
       au < frozen ; exists ; 2017 ; Allergy & Rhinology Volume 8 ; 8 ; aara ; >
-      au < ready ; exists ; 2018 ; Allergy & Rhinology Volume 9 ; 9 ; aara ; >
+      au < crawling ; exists ; 2018 ; Allergy & Rhinology Volume 9 ; 9 ; aara ; >
 
   }
 
@@ -927,7 +927,7 @@
       au < frozen ; exists ; 2015 ; AlterNative: An International Journal of Indigenous Peoples Volume 11 ; 11 ; alna ; >
       au < frozen ; exists ; 2016 ; AlterNative: An International Journal of Indigenous Peoples Volume 12 ; 12 ; alna ; >
       au < deepCrawl ; exists ; 2017 ; AlterNative: An International Journal of Indigenous Peoples Volume 13 ; 13 ; alna ; >
-      au < ready ; exists ; 2018 ; AlterNative: An International Journal of Indigenous Peoples Volume 14 ; 14 ; alna ; >
+      au < crawling ; exists ; 2018 ; AlterNative: An International Journal of Indigenous Peoples Volume 14 ; 14 ; alna ; >
 
   }
 
@@ -989,7 +989,7 @@
       au < frozen ; exists ; 2015 ; Alternative Law Journal Volume 40 ; 40 ; aljb ; >
       au < finished ; crawling ; 2016 ; Alternative Law Journal Volume 41 ; 41 ; aljb ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2017 ; Alternative Law Journal Volume 42 ; 42 ; aljb ; >
-      au < ready ; exists ; 2018 ; Alternative Law Journal Volume 43 ; 43 ; aljb ; >
+      au < crawling ; exists ; 2018 ; Alternative Law Journal Volume 43 ; 43 ; aljb ; >
 
   }
 
@@ -1067,7 +1067,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; American Behavioral Scientist Volume 59 ; 59 ; absb ; >
       au < frozen ; exists ; 2016 ; American Behavioral Scientist Volume 60 ; 60 ; absb ; >
       au < deepCrawl ; exists ; 2017 ; American Behavioral Scientist Volume 61 ; 61 ; absb ; >
-      au < ready ; exists ; 2018 ; American Behavioral Scientist Volume 62 ; 62 ; absb ; >
+      au < crawling ; exists ; 2018 ; American Behavioral Scientist Volume 62 ; 62 ; absb ; >
 
     }
 
@@ -1103,7 +1103,7 @@
       au < frozen ; exists ; 2015 ; The American Economist Volume 60 ; 60 ; aexb ; >
       au < finished ; crawling ; 2016 ; The American Economist Volume 61 ; 61 ; aexb ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; The American Economist Volume 62 ; 62 ; aexb ; >
-      au < ready ; exists ; 2018 ; The American Economist Volume 63 ; 63 ; aexb ; >
+      au < crawling ; exists ; 2018 ; The American Economist Volume 63 ; 63 ; aexb ; >
 
   }
 
@@ -1173,7 +1173,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; American Educational Research Journal Volume 52 ; 52 ; aera ; >
       au < frozen ; exists ; 2016 ; American Educational Research Journal Volume 53 ; 53 ; aera ; >
       au < deepCrawl ; exists ; 2017 ; American Educational Research Journal Volume 54 ; 54 ; aera ; >
-      au < ready ; exists ; 2018 ; American Educational Research Journal Volume 55 ; 55 ; aera ; >
+      au < crawling ; exists ; 2018 ; American Educational Research Journal Volume 55 ; 55 ; aera ; >
 
     }
 
@@ -1224,7 +1224,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; American Journal of Alzheimer's Disease and Other Dementias Volume 30 ; 30 ; ajae ; >
       au < frozen ; exists ; 2016 ; American Journal of Alzheimer's Disease and Other Dementias Volume 31 ; 31 ; ajae ; >
       au < deepCrawl ; exists ; 2017 ; American Journal of Alzheimer's Disease and Other Dementias Volume 32 ; 32 ; ajae ; >
-      au < ready ; exists ; 2018 ; American Journal of Alzheimer's Disease and Other Dementias Volume 33 ; 33 ; ajae ; >
+      au < crawling ; exists ; 2018 ; American Journal of Alzheimer's Disease and Other Dementias Volume 33 ; 33 ; ajae ; >
 
     }
 
@@ -1274,7 +1274,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; The American Journal of Cosmetic Surgery Volume 32 ; 32 ; acsa ; >
       au < frozen ; exists ; 2016 ; The American Journal of Cosmetic Surgery Volume 33 ; 33 ; acsa ; >
       au < deepCrawl ; exists ; 2017 ; The American Journal of Cosmetic Surgery Volume 34 ; 34 ; acsa ; >
-      au < ready ; exists ; 2018 ; The American Journal of Cosmetic Surgery Volume 35 ; 35 ; acsa ; >
+      au < crawling ; exists ; 2018 ; The American Journal of Cosmetic Surgery Volume 35 ; 35 ; acsa ; >
 
   }
 
@@ -1329,7 +1329,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; American Journal of Evaluation Volume 36 ; 36 ; ajec ; >
       au < finished ; crawling ; 2016 ; American Journal of Evaluation Volume 37 ; 37 ; ajec ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2017 ; American Journal of Evaluation Volume 38 ; 38 ; ajec ; >
-      au < ready ; exists ; 2018 ; American Journal of Evaluation Volume 39 ; 39 ; ajec ; >
+      au < crawling ; exists ; 2018 ; American Journal of Evaluation Volume 39 ; 39 ; ajec ; >
 
     }
 
@@ -1426,7 +1426,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; American Journal of Hospice and Palliative Medicine Volume 32 ; 32 ; ajhb ; >
       au < finished ; crawling ; 2016 ; American Journal of Hospice and Palliative Medicine Volume 33 ; 33 ; ajhb ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2017 ; American Journal of Hospice and Palliative Medicine Volume 34 ; 34 ; ajhb ; >
-      au < ready ; exists ; 2018 ; American Journal of Hospice and Palliative Medicine Volume 35 ; 35 ; ajhb ; >
+      au < crawling ; exists ; 2018 ; American Journal of Hospice and Palliative Medicine Volume 35 ; 35 ; ajhb ; >
 
     }
 
@@ -1456,7 +1456,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; American Journal of Law & Medicine Volume 41 ; 41 ; jlma ; >
       au < frozen ; exists ; 2016 ; American Journal of Law & Medicine Volume 42 ; 42 ; jlma ; >
       au < deepCrawl ; exists ; 2017 ; American Journal of Law & Medicine Volume 43 ; 43 ; jlma ; >
-      au < ready ; exists ; 2018 ; American Journal of Law & Medicine Volume 44 ; 44 ; jlma ; >
+      au < crawling ; exists ; 2018 ; American Journal of Law & Medicine Volume 44 ; 44 ; jlma ; >
 
   }
 
@@ -1483,7 +1483,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; American Journal of Lifestyle Medicine Volume 9 ; 9 ; ajla ; >
       au < frozen ; exists ; 2016 ; American Journal of Lifestyle Medicine Volume 10 ; 10 ; ajla ; >
       au < deepCrawl ; exists ; 2017 ; American Journal of Lifestyle Medicine Volume 11 ; 11 ; ajla ; >
-      au < ready ; exists ; 2018 ; American Journal of Lifestyle Medicine Volume 12 ; 12 ; ajla ; >
+      au < crawling ; exists ; 2018 ; American Journal of Lifestyle Medicine Volume 12 ; 12 ; ajla ; >
 
     }
 
@@ -1534,7 +1534,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; American Journal of Medical Quality Volume 30 ; 30 ; ajmb ; >
       au < frozen ; exists ; 2016 ; American Journal of Medical Quality Volume 31 ; 31 ; ajmb ; >
       au < deepCrawl ; exists ; 2017 ; American Journal of Medical Quality Volume 32 ; 32 ; ajmb ; >
-      au < ready ; exists ; 2018 ; American Journal of Medical Quality Volume 33 ; 33 ; ajmb ; >
+      au < crawling ; exists ; 2018 ; American Journal of Medical Quality Volume 33 ; 33 ; ajmb ; >
 
     }
 
@@ -1563,7 +1563,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; American Journal of Men's Health Volume 9 ; 9 ; jmha ; >
       au < finished ; crawling ; 2016 ; American Journal of Men's Health Volume 10 ; 10 ; jmha ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2017 ; American Journal of Men's Health Volume 11 ; 11 ; jmha ; >
-      au < ready ; exists ; 2018 ; American Journal of Men's Health Volume 12 ; 12 ; jmha ; >
+      au < crawling ; exists ; 2018 ; American Journal of Men's Health Volume 12 ; 12 ; jmha ; >
 
     }
 
@@ -1626,7 +1626,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; The American Journal of Sports Medicine Volume 43 ; 43 ; ajsb ; >
       au < frozen ; exists ; 2016 ; The American Journal of Sports Medicine Volume 44 ; 44 ; ajsb ; >
       au < deepCrawl ; exists ; 2017 ; The American Journal of Sports Medicine Volume 45 ; 45 ; ajsb ; >
-      au < ready ; exists ; 2018 ; The American Journal of Sports Medicine Volume 46 ; 46 ; ajsb ; >
+      au < crawling ; exists ; 2018 ; The American Journal of Sports Medicine Volume 46 ; 46 ; ajsb ; >
 
     }
 
@@ -1689,7 +1689,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; American Politics Research Volume 43 ; 43 ; aprb ; >
       au < finished ; crawling ; 2016 ; American Politics Research Volume 44 ; 44 ; aprb ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017  ; American Politics Research Volume 45 ; 45 ; aprb ; >
-      au < ready ; exists ; 2018  ; American Politics Research Volume 46 ; 46 ; aprb ; >
+      au < crawling ; exists ; 2018  ; American Politics Research Volume 46 ; 46 ; aprb ; >
 
     }
 
@@ -1755,7 +1755,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; The American Review of Public Administration Volume 45 ; 45 ; arpb ; >
       au < frozen ; exists ; 2016 ; The American Review of Public Administration Volume 46 ; 46 ; arpb ; >
       au < deepCrawl ; exists ; 2017 ; The American Review of Public Administration Volume 47 ; 47 ; arpb ; >
-      au < ready ; exists ; 2018 ; The American Review of Public Administration Volume 48 ; 48 ; arpb ; >
+      au < crawling ; exists ; 2018 ; The American Review of Public Administration Volume 48 ; 48 ; arpb ; >
 
     }
 
@@ -1787,7 +1787,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; American Sociological Review Volume 80 ; 80 ; asra ; >
       au < finished ; crawling ; 2016 ; American Sociological Review Volume 81 ; 81 ; asra ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; American Sociological Review Volume 82 ; 82 ; asra ; >
-      au < ready ; exists ; 2018 ; American Sociological Review Volume 83 ; 83 ; asra ; >
+      au < crawling ; exists ; 2018 ; American Sociological Review Volume 83 ; 83 ; asra ; >
 
     }
 
@@ -1900,7 +1900,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Angiology Volume 66 ; 66 ; anga ; >
       au < frozen ; exists ; 2016 ; Angiology Volume 67 ; 67 ; anga ; >
       au < deepCrawl ; exists ; 2017 ; Angiology Volume 68 ; 68 ; anga ; >
-      au < ready ; exists ; 2018 ; Angiology Volume 69 ; 69 ; anga ; >
+      au < crawling ; exists ; 2018 ; Angiology Volume 69 ; 69 ; anga ; >
 
     }
 
@@ -1932,7 +1932,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Animation Volume 10 ; 10 ; anma ; >
       au < finished ; crawling ; 2016 ; Animation Volume 11 ; 11 ; anma ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2017 ; Animation Volume 12 ; 12 ; anma ; >
-      au < ready ; exists ; 2018 ; Animation Volume 13 ; 13 ; anma ; >
+      au < crawling ; exists ; 2018 ; Animation Volume 13 ; 13 ; anma ; >
 
     }
 
@@ -2626,10 +2626,10 @@
       au < deepCrawl ; exists ; 2017 ; The Annals of the American Academy of Political and Social Science Volume 672 ; 672 ; anna ; >
       au < deepCrawl ; exists ; 2017 ; The Annals of the American Academy of Political and Social Science Volume 673 ; 673 ; anna ; >
       au < deepCrawl ; exists ; 2017 ; The Annals of the American Academy of Political and Social Science Volume 674 ; 674 ; anna ; >
-      au < ready ; exists ; 2018 ; The Annals of the American Academy of Political and Social Science Volume 675 ; 675 ; anna ; >
-      au < ready ; exists ; 2018 ; The Annals of the American Academy of Political and Social Science Volume 676 ; 676 ; anna ; >
-      au < ready ; exists ; 2018 ; The Annals of the American Academy of Political and Social Science Volume 677 ; 677 ; anna ; >
-      au < ready ; exists ; 2018 ; The Annals of the American Academy of Political and Social Science Volume 678 ; 678 ; anna ; >
+      au < crawling ; exists ; 2018 ; The Annals of the American Academy of Political and Social Science Volume 675 ; 675 ; anna ; >
+      au < crawling ; exists ; 2018 ; The Annals of the American Academy of Political and Social Science Volume 676 ; 676 ; anna ; >
+      au < crawling ; exists ; 2018 ; The Annals of the American Academy of Political and Social Science Volume 677 ; 677 ; anna ; >
+      au < crawling ; exists ; 2018 ; The Annals of the American Academy of Political and Social Science Volume 678 ; 678 ; anna ; >
       au < expected ; exists ; 2018 ; The Annals of the American Academy of Political and Social Science Volume 679 ; 679 ; anna ; >
       au < expected ; exists ; 2018 ; The Annals of the American Academy of Political and Social Science Volume 680 ; 680 ; anna ; >
 
@@ -2670,7 +2670,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Annals of Pharmacotherapy Volume 49 ; 49 ; aopd ; >
       au < finished ; crawling ; 2016 ; Annals of Pharmacotherapy Volume 50 ; 50 ; aopd ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2017 ; Annals of Pharmacotherapy Volume 51 ; 51 ; aopd ; >
-      au < ready ; exists ; 2018 ; Annals of Pharmacotherapy Volume 52 ; 52 ; aopd ; >
+      au < crawling ; exists ; 2018 ; Annals of Pharmacotherapy Volume 52 ; 52 ; aopd ; >
 
     }
 
@@ -2705,7 +2705,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Annals of Otology, Rhinology & Laryngology Volume 124 ; 124 ; aora ; >
       au < frozen ; exists ; 2016 ; Annals of Otology, Rhinology & Laryngology Volume 125 ; 125 ; aora ; >
       au < deepCrawl ; exists ; 2017  ; Annals of Otology, Rhinology & Laryngology Volume 126 ; 126 ; aora ; >
-      au < ready ; exists ; 2018  ; Annals of Otology, Rhinology & Laryngology Volume 127 ; 127 ; aora ; >
+      au < crawling ; exists ; 2018  ; Annals of Otology, Rhinology & Laryngology Volume 127 ; 127 ; aora ; >
 
   }
 
@@ -2724,7 +2724,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; The Anthropocene Review Volume 2 ; 2 ; anra ; >
     au < finished ; crawling ; 2016 ; The Anthropocene Review Volume 3 ; 3 ; anra ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; The Anthropocene Review Volume 4 ; 4 ; anra ; >
-    au < ready ; exists ; 2018 ; The Anthropocene Review Volume 5 ; 5 ; anra ; >
+    au < crawling ; exists ; 2018 ; The Anthropocene Review Volume 5 ; 5 ; anra ; >
 
   }
 
@@ -2759,7 +2759,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Anthropological Theory Volume 15 ; 15 ; anta ; >
       au < finished ; crawling ; 2016 ; Anthropological Theory Volume 16 ; 16 ; anta ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2017 ; Anthropological Theory Volume 17 ; 17 ; anta ; >
-      au < ready ; exists ; 2018 ; Anthropological Theory Volume 18 ; 18 ; anta ; >
+      au < crawling ; exists ; 2018 ; Anthropological Theory Volume 18 ; 18 ; anta ; >
 
     }
 
@@ -2807,7 +2807,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; The Antitrust Bulletin Volume 60 ; 60 ; abxa ; >
       au < finished ; crawling ; 2016 ; The Antitrust Bulletin Volume 61 ; 61 ; abxa ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; The Antitrust Bulletin Volume 62 ; 62 ; abxa ; >
-      au < ready ; exists ; 2018 ; The Antitrust Bulletin Volume 63 ; 63 ; abxa ; >
+      au < crawling ; exists ; 2018 ; The Antitrust Bulletin Volume 63 ; 63 ; abxa ; >
 
   }
 
@@ -2845,7 +2845,7 @@
 
       au < finished ; crawling ; 2016 ; ANTYAJAA: Indian Journal of Women and Social Change Volume 1 ; 1 ; jwsa ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; ANTYAJAA: Indian Journal of Women and Social Change Volume 2 ; 2 ; jwsa ; >
-      au < ready ; exists ; 2018 ; ANTYAJAA: Indian Journal of Women and Social Change Volume 3 ; 3 ; jwsa ; >
+      au < crawling ; exists ; 2018 ; ANTYAJAA: Indian Journal of Women and Social Change Volume 3 ; 3 ; jwsa ; >
 
   }
 
@@ -2880,7 +2880,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Applied Biosafety Volume 20 ; 20 ; apbb ; >
       au < frozen ; exists ; 2016 ; Applied Biosafety Volume 21 ; 21 ; apbb ; >
       au < deepCrawl ; exists ; 2017 ; Applied Biosafety Volume 22 ; 22 ; apbb ; >
-      au < ready ; exists ; 2018 ; Applied Biosafety Volume 23 ; 23 ; apbb ; >
+      au < crawling ; exists ; 2018 ; Applied Biosafety Volume 23 ; 23 ; apbb ; >
 
   }
 
@@ -2939,7 +2939,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Applied Psychological Measurement Volume 39 ; 39 ; apma ; >
       au < finished ; crawling ; 2016 ; Applied Psychological Measurement Volume 40 ; 40 ; apma ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017  ; Applied Psychological Measurement Volume 41 ; 41 ; apma ; >
-      au < ready ; exists ; 2018  ; Applied Psychological Measurement Volume 42 ; 42 ; apma ; >
+      au < crawling ; exists ; 2018  ; Applied Psychological Measurement Volume 42 ; 42 ; apma ; >
 
     }
 
@@ -2994,7 +2994,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Applied Spectroscopy Volume 69 ; 69 ; aspc ; >
       au < finished ; crawling ; 2016 ; Applied Spectroscopy Volume 70 ; 70 ; aspc ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2017 ; Applied Spectroscopy Volume 71 ; 71 ; aspc ; >
-      au < ready ; exists ; 2018 ; Applied Spectroscopy Volume 72 ; 72 ; aspc ; >
+      au < crawling ; exists ; 2018 ; Applied Spectroscopy Volume 72 ; 72 ; aspc ; >
 
   }
 
@@ -3055,7 +3055,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Armed Forces & Society Volume 41 ; 41 ; afsa ; >
       au < finished ; crawling ; 2016 ; Armed Forces & Society Volume 42 ; 42 ; afsa ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2017 ; Armed Forces & Society Volume 43 ; 43 ; afsa ; >
-      au < ready ; exists ; 2018 ; Armed Forces & Society Volume 44 ; 44 ; afsa ; >
+      au < crawling ; exists ; 2018 ; Armed Forces & Society Volume 44 ; 44 ; afsa ; >
 
     }
 
@@ -3087,7 +3087,7 @@
       au < frozen ; exists ; 2015 ; Arthaniti-Journal of Economic Theory and Practice Volume 14 ; 14 ; atha ; >
       au < frozen ; exists ; 2016 ; Arthaniti-Journal of Economic Theory and Practice Volume 15 ; 15 ; atha ; >
       au < frozen ; exists ; 2017 ; Arthaniti-Journal of Economic Theory and Practice Volume 16 ; 16 ; atha ; >
-      au < ready ; exists ; 2018 ; Arthaniti-Journal of Economic Theory and Practice Volume 17 ; 17 ; atha ; >
+      au < crawling ; exists ; 2018 ; Arthaniti-Journal of Economic Theory and Practice Volume 17 ; 17 ; atha ; >
 
   }
 
@@ -3119,7 +3119,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Arts and Humanities in Higher Education Volume 14 ; 14 ; ahha ; >
       au < finished ; crawling ; 2016 ; Arts and Humanities in Higher Education Volume 15 ; 15 ; ahha ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; Arts and Humanities in Higher Education Volume 16 ; 16 ; ahha ; >
-      au < ready ; exists ; 2018 ; Arts and Humanities in Higher Education Volume 17 ; 17 ; ahha ; >
+      au < crawling ; exists ; 2018 ; Arts and Humanities in Higher Education Volume 17 ; 17 ; ahha ; >
 
     }
 
@@ -3161,7 +3161,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Asian and Pacific Migration Journal Volume 24 ; 24 ; amja ; >
       au < finished ; crawling ; 2016 ; Asian and Pacific Migration Journal Volume 25 ; 25 ; amja ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; Asian and Pacific Migration Journal Volume 26 ; 26 ; amja ; >
-      au < ready ; exists ; 2018 ; Asian and Pacific Migration Journal Volume 27 ; 27 ; amja ; >
+      au < crawling ; exists ; 2018 ; Asian and Pacific Migration Journal Volume 27 ; 27 ; amja ; >
 
   }
 
@@ -3200,7 +3200,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Asian Cardiovascular and Thoracic Annals Volume 23 ; 23 ; aana ; >
     au < finished ; crawling ; 2016 ; Asian Cardiovascular and Thoracic Annals Volume 24 ; 24 ; aana ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; Asian Cardiovascular and Thoracic Annals Volume 25 ; 25 ; aana ; >
-    au < ready ; exists ; 2018 ; Asian Cardiovascular and Thoracic Annals Volume 26 ; 26 ; aana ; >
+    au < crawling ; exists ; 2018 ; Asian Cardiovascular and Thoracic Annals Volume 26 ; 26 ; aana ; >
 
   }
 
@@ -3217,7 +3217,7 @@
 
     au < finished ; crawling ; 2016 ; Asian Journal of Comparative Politics Volume 1 ; 1 ; acpa ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2017 ; Asian Journal of Comparative Politics Volume 2 ; 2 ; acpa ; >
-    au < ready ; exists ; 2018 ; Asian Journal of Comparative Politics Volume 3 ; 3 ; acpa ; >
+    au < crawling ; exists ; 2018 ; Asian Journal of Comparative Politics Volume 3 ; 3 ; acpa ; >
 
   }
 
@@ -3236,7 +3236,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Asian Journal of Legal Education Volume 2 ; 2 ; alea ; >
     au < finished ; crawling ; 2016 ; Asian Journal of Legal Education Volume 3 ; 3 ; alea ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Asian Journal of Legal Education Volume 4 ; 4 ; alea ; >
-    au < ready ; exists ; 2018 ; Asian Journal of Legal Education Volume 5 ; 5 ; alea ; >
+    au < crawling ; exists ; 2018 ; Asian Journal of Legal Education Volume 5 ; 5 ; alea ; >
 
   }
 
@@ -3268,7 +3268,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Asian Journal of Management Cases Volume 12 ; 12 ; ajca ; >
       au < finished ; crawling ; 2016 ; Asian Journal of Management Cases Volume 13 ; 13 ; ajca ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; Asian Journal of Management Cases Volume 14 ; 14 ; ajca ; >
-      au < ready ; exists ; 2018 ; Asian Journal of Management Cases Volume 15 ; 15 ; ajca ; >
+      au < crawling ; exists ; 2018 ; Asian Journal of Management Cases Volume 15 ; 15 ; ajca ; >
 
     }
 
@@ -3409,7 +3409,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Asia Pacific Media Educator Volume 25 ; 25 ; amea ; >
       au < finished ; crawling ; 2016 ; Asia Pacific Media Educator Volume 26 ; 26 ; amea ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; Asia Pacific Media Educator Volume 27 ; 27 ; amea ; >
-      au < ready ; exists ; 2018 ; Asia Pacific Media Educator Volume 28 ; 28 ; amea ; >
+      au < crawling ; exists ; 2018 ; Asia Pacific Media Educator Volume 28 ; 28 ; amea ; >
 
     }
 
@@ -3467,7 +3467,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Assessment Volume 22 ; 22 ; asma ; >
       au < finished ; crawling ; 2016 ; Assessment Volume 23 ; 23 ; asma ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2017  ; Assessment Volume 24 ; 24 ; asma ; >
-      au < ready ; exists ; 2018  ; Assessment Volume 25 ; 25 ; asma ; >
+      au < crawling ; exists ; 2018  ; Assessment Volume 25 ; 25 ; asma ; >
 
     }
 
@@ -3594,7 +3594,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Australian & New Zealand Journal of Criminology Volume 48 ; 48 ; anja ; >
       au < finished ; crawling ; 2016 ; Australian & New Zealand Journal of Criminology Volume 49 ; 49 ; anja ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2017 ; Australian & New Zealand Journal of Criminology Volume 50 ; 50 ; anja ; >
-      au < ready ; exists ; 2018 ; Australian & New Zealand Journal of Criminology Volume 51 ; 51 ; anja ; >
+      au < crawling ; exists ; 2018 ; Australian & New Zealand Journal of Criminology Volume 51 ; 51 ; anja ; >
 
     }
 
@@ -3664,7 +3664,7 @@
         au < doNotProcess ; doNotProcess ; 2015 ; Australian & New Zealand Journal of Psychiatry Volume 49 ; 49 ; anpa ; >
         au < frozen ; exists ; 2016 ; Australian & New Zealand Journal of Psychiatry Volume 50 ; 50 ; anpa ; >
         au < deepCrawl ; exists ; 2017 ; Australian & New Zealand Journal of Psychiatry Volume 51 ; 51 ; anpa ; >
-        au < ready ; exists ; 2018 ; Australian & New Zealand Journal of Psychiatry Volume 52 ; 52 ; anpa ; >
+        au < crawling ; exists ; 2018 ; Australian & New Zealand Journal of Psychiatry Volume 52 ; 52 ; anpa ; >
 
     }
 
@@ -3724,7 +3724,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Australian Journal of Management Volume 40 ; 40 ; auma ; >
       au < frozen ; exists ; 2016 ; Australian Journal of Management Volume 41 ; 41 ; auma ; >
       au < deepCrawl ; exists ; 2017 ; Australian Journal of Management Volume 42 ; 42 ; auma ; >
-      au < ready ; exists ; 2018 ; Australian Journal of Management Volume 43 ; 43 ; auma ; >
+      au < crawling ; exists ; 2018 ; Australian Journal of Management Volume 43 ; 43 ; auma ; >
 
     }
 
@@ -3768,7 +3768,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Australasian Psychiatry Volume 23 ; 23 ; apya ; >
       au < finished ; crawling ; 2016 ; Australasian Psychiatry Volume 24 ; 24 ; apya ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2017 ; Australasian Psychiatry Volume 25 ; 25 ; apya ; >
-      au < ready ; exists ; 2018 ; Australasian Psychiatry Volume 26 ; 26 ; apya ; >
+      au < crawling ; exists ; 2018 ; Australasian Psychiatry Volume 26 ; 26 ; apya ; >
 
     }
 
@@ -3809,7 +3809,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Autism Volume 19 ; 19 ; auta ; >
       au < finished ; crawling ; 2016 ; Autism Volume 20 ; 20 ; auta ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017  ; Autism Volume 21 ; 21 ; auta ; >
-      au < ready ; exists ; 2018  ; Autism Volume 22 ; 22 ; auta ; >
+      au < crawling ; exists ; 2018  ; Autism Volume 22 ; 22 ; auta ; >
 
     }
 
@@ -3826,7 +3826,7 @@
 
       au < finished ; crawling ; 2016 ; Autism & Developmental Language Impairments Volume 1 ; 1 ; dlia ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; Autism & Developmental Language Impairments Volume 2 ; 2 ; dlia ; >
-      au < ready ; exists ; 2018 ; Autism & Developmental Language Impairments Volume 3 ; 3 ; dlia ; >
+      au < crawling ; exists ; 2018 ; Autism & Developmental Language Impairments Volume 3 ; 3 ; dlia ; >
 
   }
 
@@ -3884,7 +3884,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Behavior Modification Volume 39 ; 39 ; bmoa ; >
       au < frozen ; exists ; 2016 ; Behavior Modification Volume 40 ; 40 ; bmoa ; >
       au < deepCrawl ; exists ; 2017 ; Behavior Modification Volume 41 ; 41 ; bmoa ; >
-      au < ready ; exists ; 2018 ; Behavior Modification Volume 42 ; 42 ; bmoa ; >
+      au < crawling ; exists ; 2018 ; Behavior Modification Volume 42 ; 42 ; bmoa ; >
 
     }
 
@@ -3985,7 +3985,7 @@
         au < frozen ; exists ; 2015 ; Beyond Behavior Volume 24 ; 24 ; bbxa ; >
         au < frozen ; exists ; 2016 ; Beyond Behavior Volume 25 ; 25 ; bbxa ; >
         au < deepCrawl ; exists ; 2017 ; Beyond Behavior Volume 26 ; 26 ; bbxa ; >
-        au < ready ; exists ; 2018 ; Beyond Behavior Volume 27 ; 27 ; bbxa ; >
+        au < crawling ; exists ; 2018 ; Beyond Behavior Volume 27 ; 27 ; bbxa ; >
 
   }
 
@@ -4012,7 +4012,7 @@
         au < doNotProcess ; doNotProcess ; 2015 ; The Bible Translator Volume 66 ; 66 ; tbtd ; >
         au < finished ; crawling ; 2016 ; The Bible Translator Volume 67 ; 67 ; tbtd ; reingest3.clockss.org:8083 >
         au < deepCrawl ; exists ; 2017 ; The Bible Translator Volume 68 ; 68 ; tbtd ; >
-        au < ready ; exists ; 2018 ; The Bible Translator Volume 69 ; 69 ; tbtd ; >
+        au < crawling ; exists ; 2018 ; The Bible Translator Volume 69 ; 69 ; tbtd ; >
 
       }
 
@@ -4079,7 +4079,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Biblical Theology Bulletin: Journal of Bible and Theology Volume 45 ; 45 ; btba ; >
       au < frozen ; exists ; 2016 ; Biblical Theology Bulletin: Journal of Bible and Theology Volume 46 ; 46 ; btba ; >
       au < deepCrawl ; exists ; 2017 ; Biblical Theology Bulletin: Journal of Bible and Theology Volume 47 ; 47 ; btba ; >
-      au < ready ; exists ; 2018 ; Biblical Theology Bulletin: Journal of Bible and Theology Volume 48 ; 48 ; btba ; >
+      au < crawling ; exists ; 2018 ; Biblical Theology Bulletin: Journal of Bible and Theology Volume 48 ; 48 ; btba ; >
 
     }
 
@@ -4098,7 +4098,7 @@
       au < frozen ; exists ; 2015 ; Big Data & Society Volume 2 ; 2 ; bdsa ; >
       au < finished ; crawling ; 2016 ; Big Data & Society Volume 3 ; 3 ; bdsa ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; Big Data & Society Volume 4 ; 4 ; bdsa ; >
-      au < ready ; exists ; 2018 ; Big Data & Society Volume 5 ; 5 ; bdsa ; >
+      au < crawling ; exists ; 2018 ; Big Data & Society Volume 5 ; 5 ; bdsa ; >
 
   }
 
@@ -4135,7 +4135,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Biological Research For Nursing Volume 17 ; 17 ; brna ; >
       au < frozen ; exists ; 2016 ; Biological Research For Nursing Volume 18 ; 18 ; brna ; >
       au < deepCrawl ; exists ; 2017 ; Biological Research For Nursing Volume 19 ; 19 ; brna ; >
-      au < ready ; exists ; 2018 ; Biological Research For Nursing Volume 20 ; 20 ; brna ; >
+      au < crawling ; exists ; 2018 ; Biological Research For Nursing Volume 20 ; 20 ; brna ; >
 
     }
 
@@ -4205,7 +4205,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Body & Society Volume 21 ; 21 ; boda ; >
       au < finished ; crawling ; 2016 ; Body & Society Volume 22 ; 22 ; boda ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; Body & Society Volume 23 ; 23 ; boda ; >
-      au < ready ; exists ; 2018 ; Body & Society Volume 24 ; 24 ; boda ; >
+      au < crawling ; exists ; 2018 ; Body & Society Volume 24 ; 24 ; boda ; >
 
     }
 
@@ -4273,7 +4273,7 @@
         au < doNotProcess ; doNotProcess ; 2015 ; British Journal of Music Therapy Volume 29 ; 29 ; bjmb ; >
         au < frozen ; exists ; 2016 ; British Journal of Music Therapy Volume 30 ; 30 ; bjmb ; >
         au < deepCrawl ; exists ; 2017 ; British Journal of Music Therapy Volume 31 ; 31 ; bjmb ; >
-        au < ready ; exists ; 2018 ; British Journal of Music Therapy Volume 32 ; 32 ; bjmb ; >
+        au < crawling ; exists ; 2018 ; British Journal of Music Therapy Volume 32 ; 32 ; bjmb ; >
 
   }
 
@@ -4367,7 +4367,7 @@
         au < doNotProcess ; doNotProcess ; 2015 ; The British Journal of Occupational Therapy Volume 78 ; 78 ; bjod ; >
         au < frozen ; exists ; 2016 ; The British Journal of Occupational Therapy Volume 79 ; 79 ; bjod ; >
         au < deepCrawl ; exists ; 2017 ; The British Journal of Occupational Therapy Volume 80 ; 80 ; bjod ; >
-        au < ready ; exists ; 2018 ; The British Journal of Occupational Therapy Volume 81 ; 81 ; bjod ; >
+        au < crawling ; exists ; 2018 ; The British Journal of Occupational Therapy Volume 81 ; 81 ; bjod ; >
 
   }
 
@@ -4395,7 +4395,7 @@
         au < doNotProcess ; doNotProcess ; 2015 ; British Journal of Pain Volume 9 ; 9 ; bjpb ; >
         au < frozen ; exists ; 2016 ; British Journal of Pain Volume 10 ; 10 ; bjpb ; >
         au < deepCrawl ; exists ; 2017 ; British Journal of Pain Volume 11 ; 11 ; bjpb ; >
-        au < ready ; exists ; 2018 ; British Journal of Pain Volume 12 ; 12 ; bjpb ; >
+        au < crawling ; exists ; 2018 ; British Journal of Pain Volume 12 ; 12 ; bjpb ; >
 
       }
 
@@ -4430,7 +4430,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; The British Journal of Politics and International Relations Volume 17 ; 17 ; bpia ; >
       au < frozen ; exists ; 2016 ; The British Journal of Politics and International Relations Volume 18 ; 18 ; bpia ; >
       au < deepCrawl ; exists ; 2017 ; The British Journal of Politics and International Relations Volume 19 ; 19 ; bpia ; >
-      au < ready ; exists ; 2018 ; The British Journal of Politics and International Relations Volume 20 ; 20 ; bpia ; >
+      au < crawling ; exists ; 2018 ; The British Journal of Politics and International Relations Volume 20 ; 20 ; bpia ; >
 
   }
 
@@ -4483,7 +4483,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; British Journal of Visual Impairment Volume 33 ; 33 ; jvib ; >
       au < frozen ; exists ; 2016 ; British Journal of Visual Impairment Volume 34 ; 34 ; jvib ; >
       au < deepCrawl ; exists ; 2017 ; British Journal of Visual Impairment Volume 35 ; 35 ; jvib ; >
-      au < ready ; exists ; 2018 ; British Journal of Visual Impairment Volume 36 ; 36 ; jvib ; >
+      au < crawling ; exists ; 2018 ; British Journal of Visual Impairment Volume 36 ; 36 ; jvib ; >
 
     }
 
@@ -4531,7 +4531,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; British Journalism Review Volume 26 ; 26 ; bjra ; >
       au < frozen ; exists ; 2016 ; British Journalism Review Volume 27 ; 27 ; bjra ; >
       au < deepCrawl ; exists ; 2017 ; British Journalism Review Volume 28 ; 28 ; bjra ; >
-      au < ready ; exists ; 2018 ; British Journalism Review Volume 29 ; 29 ; bjra ; >
+      au < crawling ; exists ; 2018 ; British Journalism Review Volume 29 ; 29 ; bjra ; >
 
     }
 
@@ -4566,7 +4566,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Building Acoustics Volume 22 ; 22 ; buaa ; >
       au < frozen ; exists ; 2016 ; Building Acoustics Volume 23 ; 23 ; buaa ; >
       au < deepCrawl ; exists ; 2017 ; Building Acoustics Volume 24 ; 24 ; buaa ; >
-      au < ready ; exists ; 2018 ; Building Acoustics Volume 25 ; 25 ; buaa ; >
+      au < crawling ; exists ; 2018 ; Building Acoustics Volume 25 ; 25 ; buaa ; >
 
   }
 
@@ -4622,7 +4622,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Building Services Engineering Research and Technology Volume 36 ; 36 ; bsea ; >
       au < frozen ; exists ; 2016 ; Building Services Engineering Research and Technology Volume 37 ; 37 ; bsea ; >
       au < deepCrawl ; exists ; 2017 ; Building Services Engineering Research and Technology Volume 38 ; 38 ; bsea ; >
-      au < ready ; exists ; 2018 ; Building Services Engineering Research and Technology Volume 39 ; 39 ; bsea ; >
+      au < crawling ; exists ; 2018 ; Building Services Engineering Research and Technology Volume 39 ; 39 ; bsea ; >
 
     }
 
@@ -4836,7 +4836,7 @@
       au < deepCrawl ; exists ; 2017 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 136 ; 136 ; bmsa ; >
       au < expected ; exists ; 2018 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 137 ; 137 ; bmsa ; >
       au < expected ; exists ; 2018 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 138 ; 138 ; bmsa ; >
-      au < ready ; exists ; 2018 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 139 ; 139 ; bmsa ; >
+      au < crawling ; exists ; 2018 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 139 ; 139 ; bmsa ; >
       au < expected ; exists ; 2018 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 140 ; 140 ; bmsa ; >
 
     }
@@ -4949,7 +4949,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Business & Society Volume 54 ; 54 ; basa ; >
       au < finished ; crawling ; 2016 ; Business & Society Volume 55 ; 55 ; basa ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2017  ; Business & Society Volume 56 ; 56 ; basa ; >
-      au < ready ; exists ; 2018  ; Business & Society Volume 57 ; 57 ; basa ; >
+      au < crawling ; exists ; 2018  ; Business & Society Volume 57 ; 57 ; basa ; >
 
     }
 
@@ -5093,7 +5093,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Business Information Review Volume 32 ; 32 ; bira ; >
       au < frozen ; exists ; 2016 ; Business Information Review Volume 33 ; 33 ; bira ; >
       au < deepCrawl ; exists ; 2017 ; Business Information Review Volume 34 ; 34 ; bira ; >
-      au < ready ; exists ; 2018 ; Business Information Review Volume 35 ; 35 ; bira ; >
+      au < crawling ; exists ; 2018 ; Business Information Review Volume 35 ; 35 ; bira ; >
 
     }
 
@@ -5169,7 +5169,7 @@
       au < deepCrawl ; exists ; 2017 ; Cahiers Élisabéthains Volume 93 ; 93 ; caea ; >
       au < deepCrawl ; exists ; 2017 ; Cahiers Élisabéthains Volume 94 ; 94 ; caea ; >
       au < ready ; exists ; 2018 ; Cahiers Élisabéthains Volume 95 ; 95 ; caea ; >
-      au < ready ; exists ; 2018 ; Cahiers Élisabéthains Volume 96 ; 96 ; caea ; >
+      au < crawling ; exists ; 2018 ; Cahiers Élisabéthains Volume 96 ; 96 ; caea ; >
       au < expected ; exists ; 2018 ; Cahiers Élisabéthains Volume 97 ; 97 ; caea ; >
 
   }
@@ -5252,7 +5252,7 @@
       au < frozen ; exists ; 2015 ; Calcutta Statistical Association Bulletin Volume 67 ; 67 ; csaa ; >
       au < finished ; crawling ; 2016 ; Calcutta Statistical Association Bulletin Volume 68 ; 68 ; csaa ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; Calcutta Statistical Association Bulletin Volume 69 ; 69 ; csaa ; >
-      au < ready ; exists ; 2018 ; Calcutta Statistical Association Bulletin Volume 70 ; 70 ; csaa ; >
+      au < crawling ; exists ; 2018 ; Calcutta Statistical Association Bulletin Volume 70 ; 70 ; csaa ; >
 
   }
 
@@ -5343,7 +5343,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Canadian Journal of Kidney Health and Disease Volume 2 ; 2 ; cjka ; >
       au < finished ; crawling ; 2016 ; Canadian Journal of Kidney Health and Disease Volume 3 ; 3 ; cjka ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; Canadian Journal of Kidney Health and Disease Volume 4 ; 4 ; cjka ; >
-      au < ready ; exists ; 2018 ; Canadian Journal of Kidney Health and Disease Volume 5 ; 5 ; cjka ; >
+      au < crawling ; exists ; 2018 ; Canadian Journal of Kidney Health and Disease Volume 5 ; 5 ; cjka ; >
 
   }
 
@@ -5396,7 +5396,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; The Canadian Journal of Psychiatry Volume 60 ; 60 ; cpab ; >
       au < frozen ; exists ; 2016 ; The Canadian Journal of Psychiatry Volume 61 ; 61 ; cpab ; >
       au < deepCrawl ; exists ; 2017 ; The Canadian Journal of Psychiatry Volume 62 ; 62 ; cpab ; >
-      au < ready ; exists ; 2018 ; The Canadian Journal of Psychiatry Volume 63 ; 63 ; cpab ; >
+      au < crawling ; exists ; 2018 ; The Canadian Journal of Psychiatry Volume 63 ; 63 ; cpab ; >
 
   }
 
