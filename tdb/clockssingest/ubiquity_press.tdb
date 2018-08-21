@@ -1308,7 +1308,7 @@
     info[poller] = 8
   >
 
-    provider = Ubiquity Press
+    provider = United Kingdom Serials Group
     plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
 
