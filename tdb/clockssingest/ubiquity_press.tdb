@@ -45,11 +45,11 @@
       comment[publisher] = Open Library of Humanities
 #      param[base_url] = http://www.19.bbk.ac.uk/
 
-      au < crawling ; exists ; 2005 ; 1 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2005 ; 2005 ; https://www.19.bbk.ac.uk/ ; >
-      au < crawling ; exists ; 2006 ; 2 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2006 ; 2006 ; https://www.19.bbk.ac.uk/ ; >
-      au < crawling ; exists ; 2007 ; 3 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2007 ; 2007 ; https://www.19.bbk.ac.uk/ ; >
-      au < crawling ; exists ; 2008 ; 4 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2008 ; 2008 ; https://www.19.bbk.ac.uk/ ; >
-      au < crawling ; exists ; 2009 ; 5 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2009 ; 2009 ; https://www.19.bbk.ac.uk/ ; >
+      au < frozen ; exists ; 2005 ; 1 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2005 ; 2005 ; https://www.19.bbk.ac.uk/ ; >
+      au < frozen ; exists ; 2006 ; 2 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2006 ; 2006 ; https://www.19.bbk.ac.uk/ ; >
+      au < frozen ; exists ; 2007 ; 3 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2007 ; 2007 ; https://www.19.bbk.ac.uk/ ; >
+      au < frozen ; exists ; 2008 ; 4 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2008 ; 2008 ; https://www.19.bbk.ac.uk/ ; >
+      au < frozen ; exists ; 2009 ; 5 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2009 ; 2009 ; https://www.19.bbk.ac.uk/ ; >
       au < frozen ; exists ; 2010 ; 6 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2010 ; 2010 ; http://www.19.bbk.ac.uk/ ; >
       au < frozen ; exists ; 2011 ; 7 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2011 ; 2011 ; http://www.19.bbk.ac.uk/ ; >
       au < frozen ; exists ; 2012 ; 8 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2012 ; 2012 ; http://www.19.bbk.ac.uk/ ; >
@@ -72,8 +72,8 @@
       comment[publisher] = Open Library of Humanities
 #      param[base_url] = http://www.asianetworkexchange.org/
 
-      au < crawling ; exists ; 2008 ; 16 ; ASIANetwork Exchange Volume 2008 ; 2008 ; https://www.asianetworkexchange.org/ ; >
-      au < crawling ; exists ; 2009 ; 16-17 ; ASIANetwork Exchange Volume 2009 ; 2009 ; https://www.asianetworkexchange.org/ ; >
+      au < frozen ; exists ; 2008 ; 16 ; ASIANetwork Exchange Volume 2008 ; 2008 ; https://www.asianetworkexchange.org/ ; >
+      au < frozen ; exists ; 2009 ; 16-17 ; ASIANetwork Exchange Volume 2009 ; 2009 ; https://www.asianetworkexchange.org/ ; >
       au < frozen ; exists ; 2010 ; 17-18 ; ASIANetwork Exchange Volume 2010 ; 2010 ; http://www.asianetworkexchange.org/ ; >
       au < frozen ; exists ; 2011 ; 18-19 ; ASIANetwork Exchange Volume 2011 ; 2011 ; http://www.asianetworkexchange.org/ ; >
       au < frozen ; exists ; 2012 ; 19-20 ; ASIANetwork Exchange Volume 2012 ; 2012 ; http://www.asianetworkexchange.org/ ; >
@@ -162,7 +162,7 @@
       comment[publisher] = Open Library of Humanities
 #      param[base_url] = http://www.mamsie.bbk.ac.uk/
 
-      au < crawling ; exists ; 2009 ; 1 ; Studies in the Maternal Volume 2009 ; 2009 ; https://www.mamsie.bbk.ac.uk/ ; >
+      au < frozen ; exists ; 2009 ; 1 ; Studies in the Maternal Volume 2009 ; 2009 ; https://www.mamsie.bbk.ac.uk/ ; >
       au < frozen ; exists ; 2010 ; 2 ; Studies in the Maternal Volume 2010 ; 2010 ; http://www.mamsie.bbk.ac.uk/ ; >
       au < frozen ; exists ; 2011 ; 3 ; Studies in the Maternal Volume 2011 ; 2011 ; http://www.mamsie.bbk.ac.uk/ ; >
       au < frozen ; exists ; 2012 ; 4 ; Studies in the Maternal Volume 2012 ; 2012 ; http://www.mamsie.bbk.ac.uk/ ; >
@@ -204,11 +204,11 @@
       comment[publisher] = Open Library of Humanities
 #      param[base_url] = https://journal.digitalmedievalist.org/
 
-      au < crawling ; exists ; 2005 ; 1 ; Digital Medievalist Volume 2005 ; 2005 ; https://journal.digitalmedievalist.org/ ; >
-      au < crawling ; exists ; 2006 ; 2 ; Digital Medievalist Volume 2006 ; 2006 ; https://journal.digitalmedievalist.org/ ; >
-      au < crawling ; exists ; 2007 ; 3 ; Digital Medievalist Volume 2007 ; 2007 ; https://journal.digitalmedievalist.org/ ; >
-      au < crawling ; exists ; 2008 ; 4 ; Digital Medievalist Volume 2008 ; 2008 ; https://journal.digitalmedievalist.org/ ; >
-      au < crawling ; exists ; 2009 ; 5 ; Digital Medievalist Volume 2009 ; 2009 ; https://journal.digitalmedievalist.org/ ; >
+      au < frozen ; exists ; 2005 ; 1 ; Digital Medievalist Volume 2005 ; 2005 ; https://journal.digitalmedievalist.org/ ; >
+      au < frozen ; exists ; 2006 ; 2 ; Digital Medievalist Volume 2006 ; 2006 ; https://journal.digitalmedievalist.org/ ; >
+      au < frozen ; exists ; 2007 ; 3 ; Digital Medievalist Volume 2007 ; 2007 ; https://journal.digitalmedievalist.org/ ; >
+      au < frozen ; exists ; 2008 ; 4 ; Digital Medievalist Volume 2008 ; 2008 ; https://journal.digitalmedievalist.org/ ; >
+      au < frozen ; exists ; 2009 ; 5 ; Digital Medievalist Volume 2009 ; 2009 ; https://journal.digitalmedievalist.org/ ; >
       au < doesNotExist ; doesNotExist ; 2010 ; 6 ; Digital Medievalist Volume 2010 ; 2010 ; https://journal.digitalmedievalist.org/ ; > #M exists. No articles for that year.
       au < frozen ; exists ; 2011 ; 7 ; Digital Medievalist Volume 2011 ; 2011 ; https://journal.digitalmedievalist.org/ ; >
       au < frozen ; exists ; 2012 ; 8 ; Digital Medievalist Volume 2012 ; 2012 ; https://journal.digitalmedievalist.org/ ; >
@@ -767,7 +767,7 @@
       au < frozen ; exists ; 2015 ; 2015 ; Journal of Interactive Media in Education Volume 2015 ; 2015 ; http://www-jime.open.ac.uk/ ; >
       au < finished ; crawling ; 2016 ; 2016 ; Journal of Interactive Media in Education Volume 2016 ; 2016 ; http://www-jime.open.ac.uk/ ; reingest4.clockss.org:8082 >
       au < superseded ; exists ; 2017 ; 2017 ; Journal of Interactive Media in Education Volume 2017 [superseded] ; 2017 ; http://www-jime.open.ac.uk/ ; >
-      au < crawling ; exists ; 2017 ; 2017 ; Journal of Interactive Media in Education Volume 2017 ; 2017 ; https://jime.open.ac.uk/ ; > #no www
+      au < frozen ; exists ; 2017 ; 2017 ; Journal of Interactive Media in Education Volume 2017 ; 2017 ; https://jime.open.ac.uk/ ; > #no www
       au < crawling ; exists ; 2018 ; 2018 ; Journal of Interactive Media in Education Volume 2018 ; 2018 ; https://jime.open.ac.uk/ ; > #no www
 
   }
