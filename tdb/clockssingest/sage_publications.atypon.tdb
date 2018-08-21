@@ -955,7 +955,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Alternatives: Global, Local, Political Volume 40 ; 40 ; alta ; >
       au < finished ; crawling ; 2016 ; Alternatives: Global, Local, Political Volume 41 ; 41 ; alta ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2017 ; Alternatives: Global, Local, Political Volume 42 ; 42 ; alta ; >
-      au < expected ; exists ; 2018 ; Alternatives: Global, Local, Political Volume 43 ; 43 ; alta ; >
+      au < manifest ; exists ; 2018 ; Alternatives: Global, Local, Political Volume 43 ; 43 ; alta ; >
 
     }
 
@@ -4162,7 +4162,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; BioScope: South Asian Screen Studies Volume 6 ; 6 ; bioa ; >
       au < frozen ; exists ; 2016 ; BioScope: South Asian Screen Studies Volume 7 ; 7 ; bioa ; >
       au < deepCrawl ; exists ; 2017 ; BioScope: South Asian Screen Studies Volume 8 ; 8 ; bioa ; >
-      au < expected ; exists ; 2018 ; BioScope: South Asian Screen Studies Volume 9 ; 9 ; bioa ; >
+      au < manifest ; exists ; 2018 ; BioScope: South Asian Screen Studies Volume 9 ; 9 ; bioa ; >
 
     }
 
@@ -8889,7 +8889,7 @@
       au < doNotProcess ; doNotProcess ; 2015-2016 ; A Current Bibliography on African Affairs Volume 48 ; 48 ; cbaa ; >
       au < deepCrawl ; exists ; 2016-2017 ; A Current Bibliography on African Affairs Volume 49 ; 49 ; cbaa ; >
       au < manifest ; exists ; 2017-2018 ; A Current Bibliography on African Affairs Volume 50 ; 50 ; cbaa ; >
-      au < expected ; exists ; 2018-2019 ; A Current Bibliography on African Affairs Volume 51 ; 51 ; cbaa ; >
+      au < manifest ; exists ; 2018-2019 ; A Current Bibliography on African Affairs Volume 51 ; 51 ; cbaa ; >
 
   }
 
@@ -18699,7 +18699,7 @@
       au < doNotProcess ; doNotProcess ; 2015-2016 ; Intervention in School and Clinic Volume 51 ; 51 ; iscc ; >
       au < deepCrawl ; exists ; 2016-2017 ; Intervention in School and Clinic Volume 52 ; 52 ; iscc ; >
       au < manifest ; exists ; 2017-2018 ; Intervention in School and Clinic Volume 53 ; 53 ; iscc ; >
-      au < expected ; exists ; 2018-2019 ; Intervention in School and Clinic Volume 54 ; 54 ; iscc ; >
+      au < manifest ; exists ; 2018-2019 ; Intervention in School and Clinic Volume 54 ; 54 ; iscc ; >
 
     }
 
@@ -22158,7 +22158,7 @@
       au < doNotProcess ; doNotProcess ; 2015-2016 ; Journal of Educational Technology Systems Volume 44 ; 44 ; etsa ; >
       au < deepCrawl ; exists ; 2016-2017 ; Journal of Educational Technology Systems Volume 45 ; 45 ; etsa ; >
       au < manifest ; exists ; 2017-2018 ; Journal of Educational Technology Systems Volume 46 ; 46 ; etsa ; >
-      au < expected ; exists ; 2018-2019 ; Journal of Educational Technology Systems Volume 47 ; 47 ; etsa ; >
+      au < manifest ; exists ; 2018-2019 ; Journal of Educational Technology Systems Volume 47 ; 47 ; etsa ; >
 
   }
 
@@ -23332,7 +23332,7 @@
 
       au < finished ; crawling ; 2016 ; Journal of Heritage Management Volume 1 ; 1 ; hmja ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2017 ; Journal of Heritage Management Volume 2 ; 2 ; hmja ; >
-      au < expected ; exists ; 2018 ; Journal of Heritage Management Volume 3 ; 3 ; hmja ; >
+      au < manifest ; exists ; 2018 ; Journal of Heritage Management Volume 3 ; 3 ; hmja ; >
 
   }
 
@@ -29977,7 +29977,7 @@
       au < deepCrawl ; exists ; 2017 ; Media International Australia Volume 165 ; 165 ; miad ; >
       au < manifest ; exists ; 2018 ; Media International Australia Volume 166 ; 166 ; miad ; >
       au < manifest ; exists ; 2018 ; Media International Australia Volume 167 ; 167 ; miad ; >
-      au < expected ; exists ; 2018 ; Media International Australia Volume 168 ; 168 ; miad ; >
+      au < manifest ; exists ; 2018 ; Media International Australia Volume 168 ; 168 ; miad ; >
       au < expected ; exists ; 2018 ; Media International Australia Volume 169 ; 169 ; miad ; >
 
   }

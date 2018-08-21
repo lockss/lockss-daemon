@@ -21,17 +21,17 @@
       param[base_url] = http://journal.pda.org/
       implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2000 ; PDA Journal of Pharmaceutical Science and Technology Volume 54 ; 54 ; >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2001 ; PDA Journal of Pharmaceutical Science and Technology Volume 55 ; 55 ; >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2002 ; PDA Journal of Pharmaceutical Science and Technology Volume 56 ; 56 ; >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2003 ; PDA Journal of Pharmaceutical Science and Technology Volume 57 ; 57 ; >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2004 ; PDA Journal of Pharmaceutical Science and Technology Volume 58 ; 58 ; >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2005 ; PDA Journal of Pharmaceutical Science and Technology Volume 59 ; 59 ; >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2006 ; PDA Journal of Pharmaceutical Science and Technology Volume 60 ; 60 ; >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2007 ; PDA Journal of Pharmaceutical Science and Technology Volume 61 ; 61 ; >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2008 ; PDA Journal of Pharmaceutical Science and Technology Volume 62 ; 62 ; >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2009 ; PDA Journal of Pharmaceutical Science and Technology Volume 63 ; 63 ; >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2010 ; PDA Journal of Pharmaceutical Science and Technology Volume 64 ; 64 ; >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2000 ; PDA Journal of Pharmaceutical Science and Technology Volume 54 ; 54 ; >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2001 ; PDA Journal of Pharmaceutical Science and Technology Volume 55 ; 55 ; >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2002 ; PDA Journal of Pharmaceutical Science and Technology Volume 56 ; 56 ; >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2003 ; PDA Journal of Pharmaceutical Science and Technology Volume 57 ; 57 ; >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2004 ; PDA Journal of Pharmaceutical Science and Technology Volume 58 ; 58 ; >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; PDA Journal of Pharmaceutical Science and Technology Volume 59 ; 59 ; >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; PDA Journal of Pharmaceutical Science and Technology Volume 60 ; 60 ; >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; PDA Journal of Pharmaceutical Science and Technology Volume 61 ; 61 ; >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; PDA Journal of Pharmaceutical Science and Technology Volume 62 ; 62 ; >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; PDA Journal of Pharmaceutical Science and Technology Volume 63 ; 63 ; >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; PDA Journal of Pharmaceutical Science and Technology Volume 64 ; 64 ; >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; PDA Journal of Pharmaceutical Science and Technology Volume 65 ; 65 ; >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; PDA Journal of Pharmaceutical Science and Technology Volume 66 ; 66 ; >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2013 ; PDA Journal of Pharmaceutical Science and Technology Volume 67 ; 67 ; >

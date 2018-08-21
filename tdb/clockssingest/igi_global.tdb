@@ -374,7 +374,7 @@
     au < finished ; finished ; 2014 ; International Journal of Art, Culture and Design Technologies (IJACDT) Volume 4 ; 4 ; http://www.igi-global.com/ ; reingest4.clockss.org:8082 > 
     au < finished ; finished ; 2015 ; International Journal of Art, Culture and Design Technologies (IJACDT) Volume 5 ; 5 ; http://www.igi-global.com/ ; reingest5.clockss.org:8082 > 
     au < finished ; crawling ; 2016 ; International Journal of Art, Culture and Design Technologies (IJACDT) Volume 6 ; 6 ; http://www.igi-global.com/ ; reingest1.clockss.org:8082 > 
-    au < expected ; exists ; 2017 ; International Journal of Art, Culture and Design Technologies (IJACDT) Volume 7 ; 7 ; https://www.igi-global.com/ ; > 
+    au < manifest ; exists ; 2017 ; International Journal of Art, Culture and Design Technologies (IJACDT) Volume 7 ; 7 ; https://www.igi-global.com/ ; > 
     au < expected ; exists ; 2018 ; International Journal of Art, Culture and Design Technologies (IJACDT) Volume 8 ; 8 ; https://www.igi-global.com/ ; > 
 
   }
@@ -396,7 +396,7 @@
     au < finished ; crawling ; 2015 ; International Journal of Artificial Life Research (IJALR) Volume 5 ; 5 ; http://www.igi-global.com/ ; reingest4.clockss.org:8082 > 
     au < finished ; crawling ; 2016 ; International Journal of Artificial Life Research (IJALR) Volume 6 ; 6 ; http://www.igi-global.com/ ; reingest2.clockss.org:8085 > 
     au < deepCrawl ; exists ; 2017 ; International Journal of Artificial Life Research (IJALR) Volume 7 ; 7 ; http://www.igi-global.com/ ; > 
-    au < expected ; exists ; 2018 ; International Journal of Artificial Life Research (IJALR) Volume 8 ; 8 ; https://www.igi-global.com/ ; > 
+    au < manifest ; exists ; 2018 ; International Journal of Artificial Life Research (IJALR) Volume 8 ; 8 ; https://www.igi-global.com/ ; > 
 
   }
 
@@ -559,7 +559,7 @@
     au < finished ; finished ; 2015 ; International Journal of Chemoinformatics and Chemical Engineering (IJCCE) Volume 4 ; 4 ; http://www.igi-global.com/ ; reingest4.clockss.org:8082 > 
     au < deepCrawl ; exists ; 2016 ; International Journal of Chemoinformatics and Chemical Engineering (IJCCE) Volume 5 ; 5 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2017 ; International Journal of Chemoinformatics and Chemical Engineering (IJCCE) Volume 6 ; 6 ; http://www.igi-global.com/ ; >
-    au < expected ; exists ; 2018 ; International Journal of Chemoinformatics and Chemical Engineering (IJCCE) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
+    au < manifest ; exists ; 2018 ; International Journal of Chemoinformatics and Chemical Engineering (IJCCE) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
 
   }
 
