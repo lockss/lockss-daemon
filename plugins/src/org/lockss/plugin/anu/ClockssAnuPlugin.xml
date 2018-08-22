@@ -42,7 +42,11 @@
   </entry>
   <entry>
     <string>au_permission_url</string>
-    <string>"%slockss.txt", base_url</string>
+    <list>
+      <string>"%slockss.txt", base_url</string>
+      <string>"style.anu.edu.au/lockss.txt"</string>
+      <string>"press-files.anu.edu.au/lockss.txt"</string>
+    </list>
   </entry>
   <entry>
     <string>plugin_per_host_permission_path</string>
