@@ -38,6 +38,7 @@ import java.io.Reader;
 
 import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
+import org.htmlparser.Tag;
 import org.htmlparser.filters.*;
 import org.htmlparser.nodes.TextNode;
 import org.htmlparser.util.NodeList;
@@ -70,11 +71,6 @@ public class AnuHtmlHashFilterFactory implements FilterFactory {
     
     NodeFilter[] includeNodes = new NodeFilter[] {
         HtmlNodeFilters.tag("body"),
-//        HtmlNodeFilters.tagWithAttribute("div", "id", "body-wrap"),
-//        HtmlNodeFilters.tagWithAttribute("div", "class", "article"),
-//        HtmlNodeFilters.tagWithAttribute("div", "class", "chapter"),
-//        HtmlNodeFilters.tagWithAttribute("div", "class", "section"),
-//        HtmlNodeFilters.tagWithAttribute("div", "class", "toc"),
         
     };
     
@@ -104,6 +100,16 @@ public class AnuHtmlHashFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "search"),
       HtmlNodeFilters.tagWithTextRegex("a", "^(Previous|Next)$"),
       // 
+      new NodeFilter() {
+        @Override
+        public boolean accept(Node node) {
+          // <div class="view view-authors-editors view-id-authors_editors view-display-id-pubs_authors view-dom-id-9cd04bed5c305b423aeaef99f33281e5">
+          if (HtmlNodeFilters.tagWithAttributeRegex("div", "class", "dom-id-").accept(node)) {
+            ((Tag)node).setAttribute("class", "dom-id");
+          }
+          return false;
+        }
+      },
       // 
       // 
       // 
