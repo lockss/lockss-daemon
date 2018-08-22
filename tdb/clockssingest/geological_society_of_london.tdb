@@ -634,6 +634,25 @@
   {
 
     title <
+      name = Quarterly Journal of the Geological Society of London ;
+      eissn = 0370-291X 
+    >
+
+    pluginPrefix = org.lockss.plugin.highwire.
+    param[base_url] = http://jgs.lyellcollection.org/
+    comment[continued] = 0016-7649
+    #contains volumes 1-126
+
+    au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 1966 ; Quarterly Journal of the Geological Society of London Volume 122 ; 122 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 1967 ; Quarterly Journal of the Geological Society of London Volume 123 ; 123 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 1968 ; Quarterly Journal of the Geological Society of London Volume 124 ; 124 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 1969 ; Quarterly Journal of the Geological Society of London Volume 125 ; 125 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 1970 ; Quarterly Journal of the Geological Society of London Volume 126 ; 126 ; >
+    #journal name and issn changed after 1970
+  }
+  {
+
+    title <
       name = Journal of the Geological Society of London ;
       issn = 0016-7649 ;
       eissn = 2041-479X ;
@@ -643,6 +662,7 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://jgs.lyellcollection.org/
 
+    au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 1970 ; Quarterly Journal of the Geological Society of London Volume 126 ; 126 ; >
     au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 1971 ; Journal of the Geological Society of London Volume 127 ; 127 ; >
     au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 1972 ; Journal of the Geological Society of London Volume 128 ; 128 ; >
     au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 1973 ; Journal of the Geological Society of London Volume 129 ; 129 ; >
