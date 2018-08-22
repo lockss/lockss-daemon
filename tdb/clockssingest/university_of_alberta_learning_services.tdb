@@ -24,18 +24,18 @@
         param[base_url] = https://journals.library.ualberta.ca/jpps/
         implicit < status ; status2 ; year ; name ; param[year] ; volume ; hidden[proxy] >
 
-        au < testing ; exists ; 2007 ; Journal of Pharmacy and Pharmaceutical Science Volume 10 ; 2007 ; 10 ; >
-        au < testing ; exists ; 2008 ; Journal of Pharmacy and Pharmaceutical Science Volume 11 ; 2008 ; 11 ; >
-        au < testing ; exists ; 2009 ; Journal of Pharmacy and Pharmaceutical Science Volume 12 ; 2009 ; 12 ; >
-        au < testing ; exists ; 2010 ; Journal of Pharmacy and Pharmaceutical Science Volume 13 ; 2010 ; 13 ; >
-        au < testing ; exists ; 2011 ; Journal of Pharmacy and Pharmaceutical Science Volume 14 ; 2011 ; 14 ; >
-        au < testing ; exists ; 2012 ; Journal of Pharmacy and Pharmaceutical Science Volume 15 ; 2012 ; 15 ; >
-        au < testing ; exists ; 2013 ; Journal of Pharmacy and Pharmaceutical Science Volume 16 ; 2013 ; 16 ; >
-        au < testing ; exists ; 2014 ; Journal of Pharmacy and Pharmaceutical Science Volume 17 ; 2014 ; 17 ; >
-        au < testing ; exists ; 2015 ; Journal of Pharmacy and Pharmaceutical Science Volume 18 ; 2015 ; 18 ; >
-        au < testing ; exists ; 2016 ; Journal of Pharmacy and Pharmaceutical Science Volume 19 ; 2016 ; 19 ; >
-        au < testing ; exists ; 2017 ; Journal of Pharmacy and Pharmaceutical Science Volume 20 ; 2017 ; 20 ; >
-        au < testing ; exists ; 2018 ; Journal of Pharmacy and Pharmaceutical Science Volume 21 ; 2018 ; 21 ; >
+        au < crawling ; exists ; 2007 ; Journal of Pharmacy and Pharmaceutical Science Volume 10 ; 2007 ; 10 ; >
+        au < crawling ; exists ; 2008 ; Journal of Pharmacy and Pharmaceutical Science Volume 11 ; 2008 ; 11 ; >
+        au < crawling ; exists ; 2009 ; Journal of Pharmacy and Pharmaceutical Science Volume 12 ; 2009 ; 12 ; >
+        au < crawling ; exists ; 2010 ; Journal of Pharmacy and Pharmaceutical Science Volume 13 ; 2010 ; 13 ; >
+        au < crawling ; exists ; 2011 ; Journal of Pharmacy and Pharmaceutical Science Volume 14 ; 2011 ; 14 ; >
+        au < crawling ; exists ; 2012 ; Journal of Pharmacy and Pharmaceutical Science Volume 15 ; 2012 ; 15 ; >
+        au < crawling ; exists ; 2013 ; Journal of Pharmacy and Pharmaceutical Science Volume 16 ; 2013 ; 16 ; >
+        au < crawling ; exists ; 2014 ; Journal of Pharmacy and Pharmaceutical Science Volume 17 ; 2014 ; 17 ; >
+        au < crawling ; exists ; 2015 ; Journal of Pharmacy and Pharmaceutical Science Volume 18 ; 2015 ; 18 ; >
+        au < crawling ; exists ; 2016 ; Journal of Pharmacy and Pharmaceutical Science Volume 19 ; 2016 ; 19 ; >
+        au < crawling ; exists ; 2017 ; Journal of Pharmacy and Pharmaceutical Science Volume 20 ; 2017 ; 20 ; >
+        au < crawling ; exists ; 2018 ; Journal of Pharmacy and Pharmaceutical Science Volume 21 ; 2018 ; 21 ; >
 
     }
 
