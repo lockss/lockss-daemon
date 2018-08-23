@@ -55,18 +55,18 @@
       hidden[proxy] = DIRECT
       implicit < status ; status2 ; year ; name ; param[directory] >
       
-      au < manifest ; exists ; 2017 ; Elsevier Source Content 2017_1 ; 2017_1 >
-      au < manifest ; exists ; 2017 ; Elsevier Source Content 2017_2 ; 2017_2 >
-      au < manifest ; exists ; 2017 ; Elsevier Source Content 2017_3 ; 2017_3 >
-      au < manifest ; exists ; 2017 ; Elsevier Source Content 2017_4 ; 2017_4 >
-      au < manifest ; exists ; 2017 ; Elsevier Source Content 2017_5 ; 2017_5 >
-      au < testing ; exists ; 2017 ; Elsevier Source Content 2017_6 ; 2017_6 >
-      au < manifest ; exists ; 2017 ; Elsevier Source Content 2017_7 ; 2017_7 >
-      au < manifest ; exists ; 2017 ; Elsevier Source Content 2017_8 ; 2017_8 >
-      au < manifest ; exists ; 2017 ; Elsevier Source Content 2017_9 ; 2017_9 >
-      au < manifest ; exists ; 2017 ; Elsevier Source Content 2017_10 ; 2017_10 >
-      au < manifest ; exists ; 2017 ; Elsevier Source Content 2017_11 ; 2017_11 >
-      au < manifest ; exists ; 2017 ; Elsevier Source Content 2017_12 ; 2017_12 >
+      au < readySource ; crawling ; 2017 ; Elsevier Source Content 2017_1 ; 2017_1 >
+      au < readySource ; crawling ; 2017 ; Elsevier Source Content 2017_2 ; 2017_2 >
+      au < readySource ; crawling ; 2017 ; Elsevier Source Content 2017_3 ; 2017_3 >
+      au < readySource ; crawling ; 2017 ; Elsevier Source Content 2017_4 ; 2017_4 >
+      au < readySource ; crawling ; 2017 ; Elsevier Source Content 2017_5 ; 2017_5 >
+      au < readySource ; crawling ; 2017 ; Elsevier Source Content 2017_6 ; 2017_6 >
+      au < readySource ; crawling ; 2017 ; Elsevier Source Content 2017_7 ; 2017_7 >
+      au < readySource ; crawling ; 2017 ; Elsevier Source Content 2017_8 ; 2017_8 >
+      au < readySource ; crawling ; 2017 ; Elsevier Source Content 2017_9 ; 2017_9 >
+      au < readySource ; crawling ; 2017 ; Elsevier Source Content 2017_10 ; 2017_10 >
+      au < readySource ; crawling ; 2017 ; Elsevier Source Content 2017_11 ; 2017_11 >
+      au < readySource ; crawling ; 2017 ; Elsevier Source Content 2017_12 ; 2017_12 >
       #number to be determined later
       au < manifest ; exists ; 2018 ; Elsevier Source Content 2018_1 ; 2018_1 >
       au < manifest ; exists ; 2018 ; Elsevier Source Content 2018_2 ; 2018_2 >
