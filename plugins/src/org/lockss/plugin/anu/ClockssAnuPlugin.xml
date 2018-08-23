@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -44,8 +44,8 @@
     <string>au_permission_url</string>
     <list>
       <string>"%slockss.txt", base_url</string>
-      <string>"style.anu.edu.au/lockss.txt"</string>
-      <string>"press-files.anu.edu.au/lockss.txt"</string>
+      <string>"https://style.anu.edu.au/lockss.txt"</string>
+      <string>"https://press-files.anu.edu.au/lockss.txt"</string>
     </list>
   </entry>
   <entry>
