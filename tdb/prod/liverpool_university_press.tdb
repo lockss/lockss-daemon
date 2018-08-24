@@ -980,6 +980,9 @@
 
     param[journal_id] = transactions
 
+    au < exists ; 2007 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 156 ; 156 ; https://online.liverpooluniversitypress.co.uk/ >
+    au < exists ; 2008 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 157 ; 157 ; https://online.liverpooluniversitypress.co.uk/ >
+    au < exists ; 2009 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 158 ; 158 ; https://online.liverpooluniversitypress.co.uk/ >
     au < manifest ; 2010 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 159 ; 159 ; https://online.liverpooluniversitypress.co.uk/ >
     au < manifest ; 2011 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 160 ; 160 ; https://online.liverpooluniversitypress.co.uk/ >
     au < manifest ; 2012 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 161 ; 161 ; https://online.liverpooluniversitypress.co.uk/ >
