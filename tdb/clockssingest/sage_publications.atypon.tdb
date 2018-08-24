@@ -242,7 +242,7 @@
        au < doNotProcess ; doNotProcess ; 2015 ; Acta Radiologica Open Volume 4 ; 4 ; arrb ; >
        au < finished ; crawling ; 2016 ; Acta Radiologica Open Volume 5 ; 5 ; arrb ; reingest4.clockss.org:8082 >
        au < deepCrawl ; exists ; 2017 ; Acta Radiologica Open Volume 6 ; 6 ; arrb ; >
-       au < ready ; exists ; 2018 ; Acta Radiologica Open Volume 7 ; 7 ; arrb ; >
+       au < crawling ; exists ; 2018 ; Acta Radiologica Open Volume 7 ; 7 ; arrb ; >
 
   }
 
@@ -273,7 +273,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Action Research Volume 13 ; 13 ; arja ; >
       au < finished ; crawling ; 2016 ; Action Research Volume 14 ; 14 ; arja ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2017 ; Action Research Volume 15 ; 15 ; arja ; >
-      au < ready ; exists ; 2018 ; Action Research Volume 16 ; 16 ; arja ; >
+      au < crawling ; exists ; 2018 ; Action Research Volume 16 ; 16 ; arja ; >
 
     }
 
@@ -309,7 +309,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Active Learning in Higher Education Volume 16 ; 16 ; alha ; >
       au < finished ; crawling ; 2016 ; Active Learning in Higher Education Volume 17 ; 17 ; alha ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; Active Learning in Higher Education Volume 18 ; 18 ; alha ; >
-      au < ready ; exists ; 2018 ; Active Learning in Higher Education Volume 19 ; 19 ; alha ; >
+      au < crawling ; exists ; 2018 ; Active Learning in Higher Education Volume 19 ; 19 ; alha ; >
 
     }
 
@@ -767,7 +767,7 @@
       au < frozen ; exists ; 2015 ; AERA Open Volume 1 ; 1 ; eroa ; >
       au < finished ; crawling ; 2016 ; AERA Open Volume 2 ; 2 ; eroa ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; AERA Open Volume 3 ; 3 ; eroa ; >
-      au < ready ; exists ; 2018 ; AERA Open Volume 4 ; 4 ; eroa ; >
+      au < crawling ; exists ; 2018 ; AERA Open Volume 4 ; 4 ; eroa ; >
 
   }
 
@@ -815,7 +815,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Affilia Volume 30 ; 30 ; affa ; >
       au < finished ; crawling ; 2016 ; Affilia Volume 31 ; 31 ; affa ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2017 ; Affilia Volume 32 ; 32 ; affa ; >
-      au < ready ; exists ; 2018 ; Affilia Volume 33 ; 33 ; affa ; >
+      au < crawling ; exists ; 2018 ; Affilia Volume 33 ; 33 ; affa ; >
 
     }
 
@@ -1376,7 +1376,7 @@
       au < doNotProcess ; doNotProcess ; 2014-2015 ; American Journal of Health Promotion Volume 29 ; 29 ; ahpa ; >
       au < frozen ; exists ; 2016 ; American Journal of Health Promotion Volume 30 ; 30 ; ahpa ; >
       au < deepCrawl ; exists ; 2017 ; American Journal of Health Promotion Volume 31 ; 31 ; ahpa ; >
-      au < ready ; exists ; 2018 ; American Journal of Health Promotion Volume 32 ; 32 ; ahpa ; >
+      au < crawling ; exists ; 2018 ; American Journal of Health Promotion Volume 32 ; 32 ; ahpa ; >
 
   }
 
@@ -1816,7 +1816,7 @@
       au < frozen ; exists ; 2015 ; American String Teacher Volume 65 ; 65 ; staa ; >
       au < frozen ; exists ; 2016 ; American String Teacher Volume 66 ; 66 ; staa ; >
       au < deepCrawl ; exists ; 2017 ; American String Teacher Volume 67 ; 67 ; staa ; >
-      au < ready ; exists ; 2018 ; American String Teacher Volume 68 ; 68 ; staa ; >
+      au < crawling ; exists ; 2018 ; American String Teacher Volume 68 ; 68 ; staa ; >
 
   }
 
@@ -3387,7 +3387,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Asia-Pacific Journal of Public Health Volume 27 ; 27 ; apha ; >
       au < finished ; crawling ; 2016 ; Asia-Pacific Journal of Public Health Volume 28 ; 28 ; apha ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; Asia-Pacific Journal of Public Health Volume 29 ; 29 ; apha ; >
-      au < ready ; exists ; 2018 ; Asia-Pacific Journal of Public Health Volume 30 ; 30 ; apha ; >
+      au < crawling ; exists ; 2018 ; Asia-Pacific Journal of Public Health Volume 30 ; 30 ; apha ; >
 
     }
 
@@ -3525,7 +3525,7 @@
       au < doNotProcess ; doNotProcess ; 2014-2015 ; Assessment for Effective Intervention Volume 40 ; 40 ; aeib ; >
       au < doNotProcess ; doNotProcess ; 2015-2016 ; Assessment for Effective Intervention Volume 41 ; 41 ; aeib ; >
       au < frozen ; exists ; 2016-2017 ; Assessment for Effective Intervention Volume 42 ; 42 ; aeib ; >
-      au < ready ; exists ; 2017-2018 ; Assessment for Effective Intervention Volume 43 ; 43 ; aeib ; >
+      au < crawling ; exists ; 2017-2018 ; Assessment for Effective Intervention Volume 43 ; 43 ; aeib ; >
       au < expected ; exists ; 2018-2019 ; Assessment for Effective Intervention Volume 44 ; 44 ; aeib ; >
 
     }
@@ -3964,7 +3964,7 @@
         au < frozen ; exists ; 2014-2015 ; Behavioral Disorders Volume 40 ; 40 ; bhda ; >
         au < frozen ; exists ; 2015-2016 ; Behavioral Disorders Volume 41 ; 41 ; bhda ; >
         au < deepCrawl ; exists ; 2016-2017 ; Behavioral Disorders Volume 42 ; 42 ; bhda ; >
-        au < ready ; exists ; 2017-2018 ; Behavioral Disorders Volume 43 ; 43 ; bhda ; >
+        au < crawling ; exists ; 2017-2018 ; Behavioral Disorders Volume 43 ; 43 ; bhda ; >
         au < expected ; exists ; 2018-2019 ; Behavioral Disorders Volume 44 ; 44 ; bhda ; >
 
   }
@@ -5039,7 +5039,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Business and Professional Communication Quarterly Volume 78 ; 78 ; bcqe ; >
       au < frozen ; exists ; 2016 ; Business and Professional Communication Quarterly Volume 79 ; 79 ; bcqe ; >
       au < deepCrawl ; exists ; 2017 ; Business and Professional Communication Quarterly Volume 80 ; 80 ; bcqe ; >
-      au < ready ; exists ; 2018 ; Business and Professional Communication Quarterly Volume 81 ; 81 ; bcqe ; >
+      au < crawling ; exists ; 2018 ; Business and Professional Communication Quarterly Volume 81 ; 81 ; bcqe ; >
 
     }
 
@@ -5114,7 +5114,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Business Perspectives and Research Volume 3 ; 3 ; bpra ; >
       au < frozen ; exists ; 2016 ; Business Perspectives and Research Volume 4 ; 4 ; bpra ; >
       au < deepCrawl ; exists ; 2017 ; Business Perspectives and Research Volume 5 ; 5 ; bpra ; >
-      au < ready ; exists ; 2018 ; Business Perspectives and Research Volume 6 ; 6 ; bpra ; >
+      au < crawling ; exists ; 2018 ; Business Perspectives and Research Volume 6 ; 6 ; bpra ; >
 
   }
 
@@ -5168,7 +5168,7 @@
       au < deepCrawl ; exists ; 2017 ; Cahiers Élisabéthains Volume 92 ; 92 ; caea ; >
       au < deepCrawl ; exists ; 2017 ; Cahiers Élisabéthains Volume 93 ; 93 ; caea ; >
       au < deepCrawl ; exists ; 2017 ; Cahiers Élisabéthains Volume 94 ; 94 ; caea ; >
-      au < ready ; exists ; 2018 ; Cahiers Élisabéthains Volume 95 ; 95 ; caea ; >
+      au < crawling ; exists ; 2018 ; Cahiers Élisabéthains Volume 95 ; 95 ; caea ; >
       au < crawling ; exists ; 2018 ; Cahiers Élisabéthains Volume 96 ; 96 ; caea ; >
       au < expected ; exists ; 2018 ; Cahiers Élisabéthains Volume 97 ; 97 ; caea ; >
 
@@ -5325,7 +5325,7 @@
       au < frozen ; exists ; 2014-2015 ; California Management Review Volume 57 ; 57 ; cmra ; >
       au < frozen ; exists ; 2015-2016 ; California Management Review Volume 58 ; 58 ; cmra ; >
       au < deepCrawl ; exists ; 2016-2017 ; California Management Review Volume 59 ; 59 ; cmra ; >
-      au < ready ; exists ; 2017-2018 ; California Management Review Volume 60 ; 60 ; cmra ; >
+      au < crawling ; exists ; 2017-2018 ; California Management Review Volume 60 ; 60 ; cmra ; >
       au < expected ; exists ; 2018-2019 ; California Management Review Volume 61 ; 61 ; cmra ; >
 
   }
@@ -5360,7 +5360,7 @@
 
       au < frozen ; exists ; 2016 ; Canadian Journal of Nursing Research Volume 48 ; 48 ; cjnb ; >
       au < deepCrawl ; exists ; 2017 ; Canadian Journal of Nursing Research Volume 49 ; 49 ; cjnb ; >
-      au < ready ; exists ; 2018 ; Canadian Journal of Nursing Research Volume 50 ; 50 ; cjnb ; >
+      au < crawling ; exists ; 2018 ; Canadian Journal of Nursing Research Volume 50 ; 50 ; cjnb ; >
 
   }
 
