@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -20,7 +20,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -89,7 +89,7 @@
       <string>1,"^https?://%s%spublications/(journals/)?%s(\?page=[0-9]+)?$", url_host(base_url), url_path(base_url), journal_id</string>
       <string>1,"^https?://%s%s[?]p=[0-9]+$", url_host(base_url), url_path(base_url)</string>
       <string>1,"^https?://%s%snode/[0-9]+(/download)?$", url_host(base_url), url_path(base_url)</string>
-      <string>1,"^https?://%s%spublications/(journals/)?%s-(issue|volume|no-[1-9]|winter)-%s(-[12n].+?)?(/download)?$", url_host(base_url), url_path(base_url), journal_id, volume_name</string>
+      <string>1,"^https?://%s%spublications/(journals/)?%s-(issue|volume|no-[1-9]|winter)-%s(-[12ni][^/]*?)?(/download)?$", url_host(base_url), url_path(base_url), journal_id, volume_name</string>
       <string>1,"^https?://press-files\.anu\.edu\.au/downloads/press/[^/]+/(html|media|pdf)/", base_url</string>
     </list>
   </entry>
