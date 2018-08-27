@@ -52,7 +52,7 @@
       au < manifest ; exists ; 1893 ; Science Volume ns-22 ; ns-22 ; >
       au < manifest ; exists ; 1894 ; Science Volume ns-23 ; ns-23 ; >
 
-      au < ready ; exists ; 1895 ; Science Volume 1 ; 1 ; >
+      au < crawling ; exists ; 1895 ; Science Volume 1 ; 1 ; >
       au < frozen ; exists ; 1895 ; Science Volume 2 ; 2 ; >
       au < crawling ; exists ; 1896 ; Science Volume 3 ; 3 ; >
       au < frozen ; exists ; 1896 ; Science Volume 4 ; 4 ; >
@@ -64,8 +64,8 @@
       au < ready ; exists ; 1899 ; Science Volume 10 ; 10 ; >
       au < crawling ; exists ; 1900 ; Science Volume 11 ; 11 ; >
       au < crawling ; exists ; 1900 ; Science Volume 12 ; 12 ; >
-      au < ready ; exists ; 1901 ; Science Volume 13 ; 13 ; >
-      au < ready ; exists ; 1901 ; Science Volume 14 ; 14 ; >
+      au < crawling ; exists ; 1901 ; Science Volume 13 ; 13 ; >
+      au < crawling ; exists ; 1901 ; Science Volume 14 ; 14 ; >
 
       au < ready ; exists ; 1902 ; Science Volume 15 ; 15 ; >
       au < frozen ; exists ; 1902 ; Science Volume 16 ; 16 ; >
@@ -75,8 +75,8 @@
       au < ready ; exists ; 1904 ; Science Volume 20 ; 20 ; >
       au < ready ; exists ; 1905 ; Science Volume 21 ; 21 ; >
       au < ready ; exists ; 1905 ; Science Volume 22 ; 22 ; >
-      au < ready ; exists ; 1906 ; Science Volume 23 ; 23 ; >
-      au < ready ; exists ; 1906 ; Science Volume 24 ; 24 ; >
+      au < crawling ; exists ; 1906 ; Science Volume 23 ; 23 ; >
+      au < crawling ; exists ; 1906 ; Science Volume 24 ; 24 ; >
       au < crawling ; exists ; 1907 ; Science Volume 25 ; 25 ; >
       au < frozen ; exists ; 1907 ; Science Volume 26 ; 26 ; >
       au < ready ; exists ; 1908 ; Science Volume 27 ; 27 ; >
@@ -84,79 +84,79 @@
       au < crawling ; exists ; 1909 ; Science Volume 29 ; 29 ; >
       au < ready ; exists ; 1909 ; Science Volume 30 ; 30 ; >
       au < crawling ; exists ; 1910 ; Science Volume 31 ; 31 ; >
-      au < ready ; exists ; 1910 ; Science Volume 32 ; 32 ; >
-      au < ready ; exists ; 1911 ; Science Volume 33 ; 33 ; >
+      au < crawling ; exists ; 1910 ; Science Volume 32 ; 32 ; >
+      au < crawling ; exists ; 1911 ; Science Volume 33 ; 33 ; >
       au < crawling ; exists ; 1911 ; Science Volume 34 ; 34 ; >
 
       au < ready ; exists ; 1912 ; Science Volume 35 ; 35 ; >
       au < manifest ; exists ; 1912 ; Science Volume 36 ; 36 ; >
       au < crawling ; exists ; 1913 ; Science Volume 37 ; 37 ; >
-      au < ready ; exists ; 1913 ; Science Volume 38 ; 38 ; >
+      au < crawling ; exists ; 1913 ; Science Volume 38 ; 38 ; >
       au < ready ; exists ; 1914 ; Science Volume 39 ; 39 ; >
       au < ready ; exists ; 1914 ; Science Volume 40 ; 40 ; >
-      au < ready ; exists ; 1915 ; Science Volume 41 ; 41 ; >
-      au < ready ; exists ; 1915 ; Science Volume 42 ; 42 ; >
+      au < crawling ; exists ; 1915 ; Science Volume 41 ; 41 ; >
+      au < crawling ; exists ; 1915 ; Science Volume 42 ; 42 ; >
       au < frozen ; exists ; 1916 ; Science Volume 43 ; 43 ; >
-      au < ready ; exists ; 1916 ; Science Volume 44 ; 44 ; >
+      au < crawling ; exists ; 1916 ; Science Volume 44 ; 44 ; >
       au < ready ; exists ; 1917 ; Science Volume 45 ; 45 ; >
-      au < ready ; exists ; 1917 ; Science Volume 46 ; 46 ; >
+      au < crawling ; exists ; 1917 ; Science Volume 46 ; 46 ; >
       au < ready ; exists ; 1918 ; Science Volume 47 ; 47 ; >
       au < ready ; exists ; 1918 ; Science Volume 48 ; 48 ; >
       au < crawling ; exists ; 1919 ; Science Volume 49 ; 49 ; >
       au < ready ; exists ; 1919 ; Science Volume 50 ; 50 ; >
-      au < ready ; exists ; 1920 ; Science Volume 51 ; 51 ; >
+      au < crawling ; exists ; 1920 ; Science Volume 51 ; 51 ; >
       au < ready ; exists ; 1920 ; Science Volume 52 ; 52 ; >
-      au < ready ; exists ; 1921 ; Science Volume 53 ; 53 ; >
+      au < crawling ; exists ; 1921 ; Science Volume 53 ; 53 ; >
       au < ready ; exists ; 1921 ; Science Volume 54 ; 54 ; >
 
       au < ready ; exists ; 1922 ; Science Volume 55 ; 55 ; >
-      au < ready ; exists ; 1922 ; Science Volume 56 ; 56 ; >
+      au < crawling ; exists ; 1922 ; Science Volume 56 ; 56 ; >
       au < ready ; exists ; 1923 ; Science Volume 57 ; 57 ; >
       au < ready ; exists ; 1923 ; Science Volume 58 ; 58 ; >
       au < frozen ; exists ; 1924 ; Science Volume 59 ; 59 ; >
       au < frozen ; exists ; 1924 ; Science Volume 60 ; 60 ; >
       au < crawling ; exists ; 1925 ; Science Volume 61 ; 61 ; >
       au < ready ; exists ; 1925 ; Science Volume 62 ; 62 ; >
-      au < ready ; exists ; 1926 ; Science Volume 63 ; 63 ; >
+      au < crawling ; exists ; 1926 ; Science Volume 63 ; 63 ; >
       au < ready ; exists ; 1926 ; Science Volume 64 ; 64 ; >
       au < crawling ; exists ; 1927 ; Science Volume 65 ; 65 ; >
       au < ready ; exists ; 1927 ; Science Volume 66 ; 66 ; >
       au < crawling ; exists ; 1928 ; Science Volume 67 ; 67 ; >
-      au < ready ; exists ; 1928 ; Science Volume 68 ; 68 ; >
+      au < crawling ; exists ; 1928 ; Science Volume 68 ; 68 ; >
       au < crawling ; exists ; 1929 ; Science Volume 69 ; 69 ; >
       au < frozen ; exists ; 1929 ; Science Volume 70 ; 70 ; >
       au < crawling ; exists ; 1930 ; Science Volume 71 ; 71 ; >
       au < crawling ; exists ; 1930 ; Science Volume 72 ; 72 ; >
-      au < ready ; exists ; 1931 ; Science Volume 73 ; 73 ; >
-      au < ready ; exists ; 1931 ; Science Volume 74 ; 74 ; >
+      au < crawling ; exists ; 1931 ; Science Volume 73 ; 73 ; >
+      au < crawling ; exists ; 1931 ; Science Volume 74 ; 74 ; >
 
       au < crawling ; exists ; 1932 ; Science Volume 75 ; 75 ; >
       au < crawling ; exists ; 1932 ; Science Volume 76 ; 76 ; >
       au < crawling ; exists ; 1933 ; Science Volume 77 ; 77 ; >
       au < ready ; exists ; 1933 ; Science Volume 78 ; 78 ; >
-      au < ready ; exists ; 1934 ; Science Volume 79 ; 79 ; >
-      au < ready ; exists ; 1934 ; Science Volume 80 ; 80 ; >
-      au < ready ; exists ; 1935 ; Science Volume 81 ; 81 ; >
+      au < crawling ; exists ; 1934 ; Science Volume 79 ; 79 ; >
+      au < crawling ; exists ; 1934 ; Science Volume 80 ; 80 ; >
+      au < crawling ; exists ; 1935 ; Science Volume 81 ; 81 ; >
       au < ready ; exists ; 1935 ; Science Volume 82 ; 82 ; >
       au < crawling ; exists ; 1936 ; Science Volume 83 ; 83 ; >
-      au < ready ; exists ; 1936 ; Science Volume 84 ; 84 ; >
-      au < ready ; exists ; 1937 ; Science Volume 85 ; 85 ; >
+      au < crawling ; exists ; 1936 ; Science Volume 84 ; 84 ; >
+      au < crawling ; exists ; 1937 ; Science Volume 85 ; 85 ; >
       au < ready ; exists ; 1937 ; Science Volume 86 ; 86 ; >
-      au < ready ; exists ; 1938 ; Science Volume 87 ; 87 ; >
+      au < crawling ; exists ; 1938 ; Science Volume 87 ; 87 ; >
       au < crawling ; exists ; 1938 ; Science Volume 88 ; 88 ; >
       au < frozen ; exists ; 1939 ; Science Volume 89 ; 89 ; >
       au < crawling ; exists ; 1939 ; Science Volume 90 ; 90 ; >
       au < ready ; exists ; 1940 ; Science Volume 91 ; 91 ; >
-      au < ready ; exists ; 1940 ; Science Volume 92 ; 92 ; >
+      au < crawling ; exists ; 1940 ; Science Volume 92 ; 92 ; >
       au < frozen ; exists ; 1941 ; Science Volume 93 ; 93 ; >
       au < crawling ; exists ; 1941 ; Science Volume 94 ; 94 ; >
 
-      au < ready ; exists ; 1942 ; Science Volume 95 ; 95 ; >
+      au < crawling ; exists ; 1942 ; Science Volume 95 ; 95 ; >
       au < frozen ; exists ; 1942 ; Science Volume 96 ; 96 ; >
-      au < ready ; exists ; 1943 ; Science Volume 97 ; 97 ; >
-      au < ready ; exists ; 1943 ; Science Volume 98 ; 98 ; >
+      au < crawling ; exists ; 1943 ; Science Volume 97 ; 97 ; >
+      au < crawling ; exists ; 1943 ; Science Volume 98 ; 98 ; >
       au < ready ; exists ; 1944 ; Science Volume 99 ; 99 ; >
-      au < ready ; exists ; 1944 ; Science Volume 100 ; 100 ; >
+      au < crawling ; exists ; 1944 ; Science Volume 100 ; 100 ; >
       au < ready ; exists ; 1945 ; Science Volume 101 ; 101 ; >
       au < crawling ; exists ; 1945 ; Science Volume 102 ; 102 ; >
       au < frozen ; exists ; 1946 ; Science Volume 103 ; 103 ; >
@@ -172,24 +172,24 @@
       au < crawling ; exists ; 1951 ; Science Volume 113 ; 113 ; >
       au < frozen ; exists ; 1951 ; Science Volume 114 ; 114 ; >
 
-      au < ready ; exists ; 1952 ; Science Volume 115 ; 115 ; >
+      au < crawling ; exists ; 1952 ; Science Volume 115 ; 115 ; >
       au < ready ; exists ; 1952 ; Science Volume 116 ; 116 ; >
       au < ready ; exists ; 1953 ; Science Volume 117 ; 117 ; >
-      au < ready ; exists ; 1953 ; Science Volume 118 ; 118 ; >
+      au < crawling ; exists ; 1953 ; Science Volume 118 ; 118 ; >
       au < frozen ; exists ; 1954 ; Science Volume 119 ; 119 ; >
       au < frozen ; exists ; 1954 ; Science Volume 120 ; 120 ; >
       au < ready ; exists ; 1955 ; Science Volume 121 ; 121 ; >
       au < crawling ; exists ; 1955 ; Science Volume 122 ; 122 ; >
       au < frozen ; exists ; 1956 ; Science Volume 123 ; 123 ; >
       au < ready ; exists ; 1956 ; Science Volume 124 ; 124 ; >
-      au < ready ; exists ; 1957 ; Science Volume 125 ; 125 ; >
+      au < crawling ; exists ; 1957 ; Science Volume 125 ; 125 ; >
       au < manifest ; exists ; 1957 ; Science Volume 126 ; 126 ; >
       au < manifest ; exists ; 1958 ; Science Volume 127 ; 127 ; >
       au < frozen ; exists ; 1958 ; Science Volume 128 ; 128 ; >
       au < ready ; exists ; 1959 ; Science Volume 129 ; 129 ; >
-      au < ready ; exists ; 1959 ; Science Volume 130 ; 130 ; >
+      au < crawling ; exists ; 1959 ; Science Volume 130 ; 130 ; >
       au < ready ; exists ; 1960 ; Science Volume 131 ; 131 ; >
-      au < ready ; exists ; 1960 ; Science Volume 132 ; 132 ; >
+      au < crawling ; exists ; 1960 ; Science Volume 132 ; 132 ; >
       au < crawling ; exists ; 1961 ; Science Volume 133 ; 133 ; >
       au < frozen ; exists ; 1961 ; Science Volume 134 ; 134 ; >
 
@@ -202,7 +202,7 @@
       au < crawling ; exists ; 1963 ; Science Volume 141 ; 141 ; >
       au < frozen ; exists ; 1963 ; Science Volume 142 ; 142 ; >
 
-      au < ready ; exists ; 1964 ; Science Volume 143 ; 143 ; >
+      au < crawling ; exists ; 1964 ; Science Volume 143 ; 143 ; >
       au < frozen ; exists ; 1964 ; Science Volume 144 ; 144 ; >
       au < frozen ; exists ; 1964 ; Science Volume 145 ; 145 ; >
       au < crawling ; exists ; 1964 ; Science Volume 146 ; 146 ; >
@@ -219,7 +219,7 @@
       au < frozen ; exists ; 1967 ; Science Volume 157 ; 157 ; >
       au < frozen ; exists ; 1967 ; Science Volume 158 ; 158 ; >
       au < frozen ; exists ; 1968 ; Science Volume 159 ; 159 ; >
-      au < ready ; exists ; 1968 ; Science Volume 160 ; 160 ; >
+      au < crawling ; exists ; 1968 ; Science Volume 160 ; 160 ; >
       au < frozen ; exists ; 1968 ; Science Volume 161 ; 161 ; >
       au < crawling ; exists ; 1968 ; Science Volume 162 ; 162 ; >
       au < frozen ; exists ; 1969 ; Science Volume 163 ; 163 ; >
@@ -247,7 +247,7 @@
       au < frozen ; exists ; 1974 ; Science Volume 184 ; 184 ; >
       au < frozen ; exists ; 1974 ; Science Volume 185 ; 185 ; >
       au < ready ; exists ; 1974 ; Science Volume 186 ; 186 ; >
-      au < ready ; exists ; 1975 ; Science Volume 187 ; 187 ; >
+      au < crawling ; exists ; 1975 ; Science Volume 187 ; 187 ; >
       au < frozen ; exists ; 1975 ; Science Volume 188 ; 188 ; >
       au < frozen ; exists ; 1975 ; Science Volume 189 ; 189 ; >
       au < crawling ; exists ; 1975 ; Science Volume 190 ; 190 ; >
@@ -259,7 +259,7 @@
       au < frozen ; exists ; 1977 ; Science Volume 196 ; 196 ; >
       au < crawling ; exists ; 1977 ; Science Volume 197 ; 197 ; >
       au < frozen ; exists ; 1977 ; Science Volume 198 ; 198 ; >
-      au < ready ; exists ; 1978 ; Science Volume 199 ; 199 ; >
+      au < crawling ; exists ; 1978 ; Science Volume 199 ; 199 ; >
       au < frozen ; exists ; 1978 ; Science Volume 200 ; 200 ; >
       au < frozen ; exists ; 1978 ; Science Volume 201 ; 201 ; >
       au < frozen ; exists ; 1978 ; Science Volume 202 ; 202 ; >
@@ -280,7 +280,7 @@
       au < frozen ; exists ; 1982 ; Science Volume 217 ; 217 ; >
       au < frozen ; exists ; 1982 ; Science Volume 218 ; 218 ; >
       au < frozen ; exists ; 1983 ; Science Volume 219 ; 219 ; >
-      au < ready ; exists ; 1983 ; Science Volume 220 ; 220 ; >
+      au < crawling ; exists ; 1983 ; Science Volume 220 ; 220 ; >
       au < frozen ; exists ; 1983 ; Science Volume 221 ; 221 ; >
       au < frozen ; exists ; 1983 ; Science Volume 222 ; 222 ; >
 
@@ -336,7 +336,7 @@
       au < frozen ; exists ; 1996 ; Science Volume 271 ; 271 ; >
       au < frozen ; exists ; 1996 ; Science Volume 272 ; 272 ; >
       au < frozen ; exists ; 1996 ; Science Volume 273 ; 273 ; >
-      au < ready ; exists ; 1996 ; Science Volume 274 ; 274 ; >
+      au < crawling ; exists ; 1996 ; Science Volume 274 ; 274 ; >
       au < frozen ; exists ; 1997 ; Science Volume 275 ; 275 ; >
       au < frozen ; exists ; 1997 ; Science Volume 276 ; 276 ; >
       au < frozen ; exists ; 1997 ; Science Volume 277 ; 277 ; >
@@ -367,7 +367,7 @@
       au < frozen ; exists ; 2003 ; Science Volume 302 ; 302 ; >
 
       au < frozen ; exists ; 2004 ; Science Volume 303 ; 303 ; >
-      au < ready ; exists ; 2004 ; Science Volume 304 ; 304 ; >
+      au < crawling ; exists ; 2004 ; Science Volume 304 ; 304 ; >
       au < frozen ; exists ; 2004 ; Science Volume 305 ; 305 ; >
       au < frozen ; exists ; 2004 ; Science Volume 306 ; 306 ; >
       au < frozen ; exists ; 2005 ; Science Volume 307 ; 307 ; >
@@ -465,7 +465,7 @@
 
       au < frozen ; exists ; 2009 ; Science Translational Medicine Volume 1 ; 1 ; >
       au < ready ; exists ; 2010 ; Science Translational Medicine Volume 2 ; 2 ; >
-      au < ready ; exists ; 2011 ; Science Translational Medicine Volume 3 ; 3 ; >
+      au < crawling ; exists ; 2011 ; Science Translational Medicine Volume 3 ; 3 ; >
       au < ready ; exists ; 2012 ; Science Translational Medicine Volume 4 ; 4 ; >
       au < frozen ; exists ; 2013 ; Science Translational Medicine Volume 5 ; 5 ; >
       au < finished ; finished ; 2014 ; Science Translational Medicine Volume 6 ; 6 ; reingest1.clockss.org:8082 >
@@ -517,7 +517,7 @@
       param[base_url] = http://immunology.sciencemag.org/
 
       au < crawling ; exists ; 2016 ; Science Immunology Volume 1 ; 1 ; >
-      au < ready ; exists ; 2017 ; Science Immunology Volume 2 ; 2 ; >
+      au < crawling ; exists ; 2017 ; Science Immunology Volume 2 ; 2 ; >
       au < ready ; exists ; 2018 ; Science Immunology Volume 3 ; 3 ; >
 
   }
