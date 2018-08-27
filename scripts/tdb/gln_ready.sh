@@ -7,7 +7,8 @@ tpath="/home/$LOGNAME/tmp"
 #mkdir -p $tpath
 
 plugin="lockss"
-count=250 
+#count=250
+count=25
 
 # Make a list of AUids that are on ingest machine(s), and 'Yes' have substance, have crawled successfully.
    # Date of last successful crawl is unimportant because many good AUs have been frozen or finished.
@@ -18,10 +19,10 @@ count=250
    #set -x
    # Make a list of AUids from clockss
    #./scripts/tdb/tdbout -CZLI -a -Q "year ~ '^20' and plugin ~ '$plugin' and year !~ '2018'" tdb/clockssingest/*.tdb | grep -v TaylorAndFrancisPlugin | sort > $tpath/gr_clockss_c.txt
-   ./scripts/tdb/tdbout -CZLIF -a -Q "year ~ '^20' and plugin ~ '$plugin' and year !~ '2018'" tdb/clockssingest/*.tdb | sort > $tpath/gr_clockss_c.txt
+   ./scripts/tdb/tdbout -CZLIF -a -Q "year ~ '^20' and plugin ~ '$plugin' and year !~ '2018'" tdb/clockssingest/hin*.tdb | sort > $tpath/gr_clockss_c.txt
    # Make a list of AUids from gln
    #./scripts/tdb/tdbout -M -a -Q "year ~ '^20' and plugin ~ '$plugin' and year !~ '2018'" tdb/prod/*.tdb | grep -v TaylorAndFrancisPlugin | sort > $tpath/gr_gln_m.txt
-   ./scripts/tdb/tdbout -M -a -Q "year ~ '^20' and plugin ~ '$plugin' and year !~ '2018'" tdb/prod/*.tdb | sort > $tpath/gr_gln_m.txt
+   ./scripts/tdb/tdbout -M -a -Q "year ~ '^20' and plugin ~ '$plugin' and year !~ '2018'" tdb/prod/hin*.tdb | sort > $tpath/gr_gln_m.txt
 
    # Convert the gln list to clockss format, and start a list
    cat $tpath/gr_gln_m.txt | sed -e 's/\(\|[^\|]*\)Plugin/Clockss\1Plugin/' | sort > $tpath/gr_gln_mc.txt
@@ -51,10 +52,9 @@ count=250
    comm -12 $tpath/gr_ingest_healthy.txt $tpath/gr_common.txt > $tpath/gr_common_healthy.txt
    comm -12 $tpath/gr_ingest_healthy.txt $tpath/gr_common_s.txt > $tpath/gr_common_healthy_s.txt
    #Check health using http, but before checking for manifest pages move back to https and merge with the other list
-   cat $tpath/gr_common_healthy_s.txt | sed -e 's/http/https/g' >> $tpath/gr_common_healthy.txt
-   #Fix Hindawi so that downloads uses http. But each non-letter character is represented by how many html characters?
-   #cat $tpath/gr_common_healthy_s.txt | sed -e 's/http/https/g' | sed -e 's/https\(...downloads.hindawi.com\)/http\1/' >> $tpath/gr_common_healthy.txt
-   #https%3A%2F%2Fdownloads%2Ehindawi%2Ecom
+   #cat $tpath/gr_common_healthy_s.txt | sed -e 's/http/https/g' >> $tpath/gr_common_healthy.txt
+   #Fix Hindawi so that downloads uses http. https%3A%2F%2Fdownloads%2Ehindawi%2Ecom
+   cat $tpath/gr_common_healthy_s.txt | sed -e 's/http/https/g' | sed -e 's/https\(%3A%2F%2Fdownloads%2Ehindawi%2Ecom\)/http\1/' >> $tpath/gr_common_healthy.txt
 
 # Select a random collection of clockss AUids
    cat $tpath/gr_common_healthy.txt | sort | uniq | shuf | head -"$count" > $tpath/gr_common_shuf.txt
