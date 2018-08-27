@@ -37,7 +37,7 @@
     #For all ongoing T&F deliveries - uses an arbitrary directory name, not year
     au < readySource ; crawling ; 2018 ; Taylor & Francis Source Content 2018_A ; 2018_A >
     au < readySource ; crawling ; 2018 ; Taylor & Francis Source Content 2018_B ; 2018_B >
-    au < testing ; expected ; 2018 ; Taylor & Francis Source Content 2018_C ; 2018_C >
+    au < testing ; exists ; 2018 ; Taylor & Francis Source Content 2018_C ; 2018_C >
     
 
   }
