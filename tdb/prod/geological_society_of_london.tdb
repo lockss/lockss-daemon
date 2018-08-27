@@ -643,6 +643,7 @@
 
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://jgs.lyellcollection.org/
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
     comment[continued] = 0016-7649
     #contains volumes 1-126
 
