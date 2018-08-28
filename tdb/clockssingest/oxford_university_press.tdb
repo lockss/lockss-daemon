@@ -327,8 +327,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Age and Ageing Volume 42 ; 42 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Age and Ageing Volume 43 ; 43 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Age and Ageing Volume 44 ; 44 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; Age and Ageing Volume 45 ; 45 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Age and Ageing Volume 46 ; 46 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; Age and Ageing Volume 45 ; 45 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; Age and Ageing Volume 46 ; 46 ;  >
+    au < expected ; exists ; 2018 ; 2018 ; Age and Ageing Volume 47 ; 47 ;  >
 
   }
 
@@ -396,8 +397,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Alcohol and Alcoholism Volume 48 ; 48 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Alcohol and Alcoholism Volume 49 ; 49 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Alcohol and Alcoholism Volume 50 ; 50 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; Alcohol and Alcoholism Volume 51 ; 51 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Alcohol and Alcoholism Volume 52 ; 52 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; Alcohol and Alcoholism Volume 51 ; 51 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; Alcohol and Alcoholism Volume 52 ; 52 ;  >
+    au < expected ; exists ; 2018 ; 2018 ; Alcohol and Alcoholism Volume 53 ; 53 ;  >
 
   }
 
@@ -524,8 +526,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; American Journal of Agricultural Economics Volume 95 ; 95 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; American Journal of Agricultural Economics Volume 96 ; 96 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; American Journal of Agricultural Economics Volume 97 ; 97 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; American Journal of Agricultural Economics Volume 98 ; 98 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; American Journal of Agricultural Economics Volume 99 ; 99 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; American Journal of Agricultural Economics Volume 98 ; 98 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; American Journal of Agricultural Economics Volume 99 ; 99 ;  >
+    au < expected ; exists ; 2018 ; 2018 ; American Journal of Agricultural Economics Volume 100 ; 100 ;  >
 
   }
 
@@ -557,9 +560,9 @@
     au < manifest ; exists ; 2013 ; 2013 ; The American Journal of Clinical Nutrition Volume 97-98 ; 97-98 ;  >
     au < manifest ; exists ; 2014 ; 2014 ; The American Journal of Clinical Nutrition Volume 99-100 ; 99-100 ;  >
     au < manifest ; exists ; 2015 ; 2015 ; The American Journal of Clinical Nutrition Volume 101-102 ; 101-102 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; The American Journal of Clinical Nutrition Volume 103-104 ; 103-104 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; The American Journal of Clinical Nutrition Volume 105-106 ; 105-106 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; The American Journal of Clinical Nutrition Volume 107-108 ; 107-108 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; The American Journal of Clinical Nutrition Volume 103-104 ; 103-104 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; The American Journal of Clinical Nutrition Volume 105-106 ; 105-106 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; The American Journal of Clinical Nutrition Volume 107-108 ; 107-108 ;  >
 
   }
 
@@ -591,7 +594,8 @@
     au < manifest ; exists ; 2014 ; 2014 ; American Journal of Clinical Pathology Volume 141-142 ; 141-142 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; American Journal of Clinical Pathology Volume 143-144 ; 143-144 ;  >
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; American Journal of Clinical Pathology Volume 145-146 ; 145-146 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; American Journal of Clinical Pathology Volume 147 ; 147 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; American Journal of Clinical Pathology Volume 147-148 ; 147-148 ;  >
+    au < exists ; exists ; 2018 ; 2018 ; American Journal of Clinical Pathology Volume 149-150 ; 149-150 ;  >
 
   }
 
@@ -701,8 +705,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; American Journal of Epidemiology Volume 177-178 ; 177-178 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; American Journal of Epidemiology Volume 179-180 ; 179-180 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; American Journal of Epidemiology Volume 181-182 ; 181-182 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; American Journal of Epidemiology Volume 183-184 ; 183-184 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; American Journal of Epidemiology Volume 185 ; 185 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; American Journal of Epidemiology Volume 183-184 ; 183-184 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; American Journal of Epidemiology Volume 185-186 ; 185-186 ;  >
+    au < exists ; exists ; 2018 ; 2018 ; American Journal of Epidemiology Volume 187-188 ; 187-188 ;  >
 
   }
 
@@ -747,6 +752,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; American Journal of Hypertension Volume 28 ; 28 ;  >
     au < manifest ; exists ; 2016 ; 2016 ; American Journal of Hypertension Volume 29 ; 29 ;  >
     au < manifest ; exists ; 2017 ; 2017 ; American Journal of Hypertension Volume 30 ; 30 ;  >
+    au < expected ; exists ; 2018 ; 2018 ; American Journal of Hypertension Volume 31 ; 31 ;  >
 
   }
 
@@ -772,8 +778,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; American Journal of Legal History Volume 53 ; 53 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; American Journal of Legal History Volume 54 ; 54 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; American Journal of Legal History Volume 55 ; 55 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; American Journal of Legal History Volume 56 ; 56 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; American Journal of Legal History Volume 57 ; 57 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; American Journal of Legal History Volume 56 ; 56 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; American Journal of Legal History Volume 57 ; 57 ;  >
+    au < expected ; exists ; 2018 ; 2018 ; American Journal of Legal History Volume 58 ; 58 ;  >
 
   }
 
