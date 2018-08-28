@@ -199,11 +199,11 @@
       comment[publisher] = Open Library of Humanities
 #      param[base_url] = https://journal.digitalmedievalist.org/
 
-      au < ready ; 2005 ; 1 ; Digital Medievalist Volume 2005 ; 2005 ; https://journal.digitalmedievalist.org/ >
-      au < ready ; 2006 ; 2 ; Digital Medievalist Volume 2006 ; 2006 ; https://journal.digitalmedievalist.org/ >
-      au < ready ; 2007 ; 3 ; Digital Medievalist Volume 2007 ; 2007 ; https://journal.digitalmedievalist.org/ >
-      au < ready ; 2008 ; 4 ; Digital Medievalist Volume 2008 ; 2008 ; https://journal.digitalmedievalist.org/ >
-      au < ready ; 2009 ; 5 ; Digital Medievalist Volume 2009 ; 2009 ; https://journal.digitalmedievalist.org/ >
+      au < releasing ; 2005 ; 1 ; Digital Medievalist Volume 2005 ; 2005 ; https://journal.digitalmedievalist.org/ >
+      au < releasing ; 2006 ; 2 ; Digital Medievalist Volume 2006 ; 2006 ; https://journal.digitalmedievalist.org/ >
+      au < releasing ; 2007 ; 3 ; Digital Medievalist Volume 2007 ; 2007 ; https://journal.digitalmedievalist.org/ >
+      au < releasing ; 2008 ; 4 ; Digital Medievalist Volume 2008 ; 2008 ; https://journal.digitalmedievalist.org/ >
+      au < releasing ; 2009 ; 5 ; Digital Medievalist Volume 2009 ; 2009 ; https://journal.digitalmedievalist.org/ >
       au < doesNotExist ; 2010 ; 6 ; Digital Medievalist Volume 2010 ; 2010 ; https://journal.digitalmedievalist.org/ >
       au < released ; 2011 ; 7 ; Digital Medievalist Volume 2011 ; 2011 ; https://journal.digitalmedievalist.org/ >
       au < released ; 2012 ; 8 ; Digital Medievalist Volume 2012 ; 2012 ; https://journal.digitalmedievalist.org/ >
