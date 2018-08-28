@@ -72,8 +72,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Adaptation Volume 6 ; 6 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Adaptation Volume 7 ; 7 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Adaptation Volume 8 ; 8 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; Adaptation Volume 9 ; 9 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; Adaptation Volume 10 ; 10 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; Adaptation Volume 9 ; 9 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; Adaptation Volume 10 ; 10 ;  >
     au < exists ; exists ; 2018 ; 2018 ; Adaptation Volume 11 ; 11 ;  >
 
   }
@@ -95,7 +95,7 @@
     au < manifest ; exists ; 2013 ; 2013 ; Advances in Nutrition Volume 4 ; 4 ;  >
     au < manifest ; exists ; 2014 ; 2014 ; Advances in Nutrition Volume 5 ; 5 ;  >
     au < manifest ; exists ; 2015 ; 2015 ; Advances in Nutrition Volume 6 ; 6 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; Advances in Nutrition Volume 7 ; 7 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; Advances in Nutrition Volume 7 ; 7 ;  >
     au < testing ; exists ; 2017 ; 2017 ; Advances in Nutrition Volume 8 ; 8 ;  >
     au < testing ; exists ; 2018 ; 2018 ; Advances in Nutrition Volume 9 ; 9 ;  >
 
@@ -742,7 +742,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; American Journal of Hypertension Volume 18 ; 18 ;  >
     au < doNotProcess ; exists ; 2006 ; 2006 ; American Journal of Hypertension Volume 19 ; 19 ;  >
     au < doNotProcess ; exists ; 2007 ; 2007 ; American Journal of Hypertension Volume 20 ; 20 ;  >
-    au < manifest ; exists ; 2008 ; 2008 ; American Journal of Hypertension Volume 21 ; 21 ;  >
+    au < testing ; exists ; 2008 ; 2008 ; American Journal of Hypertension Volume 21 ; 21 ;  >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; American Journal of Hypertension Volume 22 ; 22 ;  >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; American Journal of Hypertension Volume 23 ; 23 ;  >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; American Journal of Hypertension Volume 24 ; 24 ;  >
@@ -750,8 +750,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; American Journal of Hypertension Volume 26 ; 26 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; American Journal of Hypertension Volume 27 ; 27 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; American Journal of Hypertension Volume 28 ; 28 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; American Journal of Hypertension Volume 29 ; 29 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; American Journal of Hypertension Volume 30 ; 30 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; American Journal of Hypertension Volume 29 ; 29 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; American Journal of Hypertension Volume 30 ; 30 ;  >
     au < expected ; exists ; 2018 ; 2018 ; American Journal of Hypertension Volume 31 ; 31 ;  >
 
   }
@@ -812,8 +812,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; American Law and Economics Review Volume 15 ; 15 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; American Law and Economics Review Volume 16 ; 16 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; American Law and Economics Review Volume 17 ; 17 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; American Law and Economics Review Volume 18 ; 18 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; American Law and Economics Review Volume 19 ; 19 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; American Law and Economics Review Volume 18 ; 18 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; American Law and Economics Review Volume 19 ; 19 ;  >
+    au < expected ; exists ; 2018 ; 2018 ; American Law and Economics Review Volume 20 ; 20 ;  >
 
   }
 
@@ -855,8 +856,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; American Literary History Volume 25 ; 25 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; American Literary History Volume 26 ; 26 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; American Literary History Volume 27 ; 27 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; American Literary History Volume 28 ; 28 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; American Literary History Volume 29 ; 29 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; American Literary History Volume 28 ; 28 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; American Literary History Volume 29 ; 29 ;  >
+    au < expected ; exists ; 2018 ; 2018 ; American Literary History Volume 30 ; 30 ;  >
 
   }
 
@@ -960,7 +962,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Analysis Volume 73 ; 73 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Analysis Volume 74 ; 74 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Analysis Volume 75 ; 75 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; Analysis Volume 76 ; 76 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; Analysis Volume 76 ; 76 ;  >
+    au < exists ; exists ; 2017 ; 2017 ; Analysis Volume 77 ; 77 ;  >
+    au < exists ; exists ; 2018 ; 2018 ; Analysis Volume 78 ; 78 ;  >
 
   }
 
@@ -980,9 +984,9 @@
     au < manifest ; exists ; 2013 ; 2013 ; Animal Frontiers Volume 3 ; 3 ; >
     au < manifest ; exists ; 2014 ; 2014 ; Animal Frontiers Volume 4 ; 4 ; >
     au < manifest ; exists ; 2015 ; 2015 ; Animal Frontiers Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2016 ; 2016 ; Animal Frontiers Volume 6 ; 6 ; >
-    au < manifest ; exists ; 2017 ; 2017 ; Animal Frontiers Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2018 ; 2018 ; Animal Frontiers Volume 8 ; 8 ; >
+    au < testing ; exists ; 2016 ; 2016 ; Animal Frontiers Volume 6 ; 6 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Animal Frontiers Volume 7 ; 7 ; >
+    au < testing ; exists ; 2018 ; 2018 ; Animal Frontiers Volume 8 ; 8 ; >
 
   }
 
@@ -1013,9 +1017,9 @@
     au < manifest ; exists ; 2013 ; 2013 ; Journal of Animal Science Volume 90 ; 90 ; >
     au < manifest ; exists ; 2014 ; 2014 ; Journal of Animal Science Volume 91 ; 91 ; >
     au < manifest ; exists ; 2015 ; 2015 ; Journal of Animal Science Volume 92 ; 92 ; >
-    au < manifest ; exists ; 2016 ; 2016 ; Journal of Animal Science Volume 93 ; 93 ; >
-    au < manifest ; exists ; 2017 ; 2017 ; Journal of Animal Science Volume 94 ; 94 ; >
-    au < manifest ; exists ; 2018 ; 2018 ; Journal of Animal Science Volume 95 ; 95 ; >
+    au < testing ; exists ; 2016 ; 2016 ; Journal of Animal Science Volume 93 ; 93 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Journal of Animal Science Volume 94 ; 94 ; >
+    au < testing ; exists ; 2018 ; 2018 ; Journal of Animal Science Volume 95 ; 95 ; >
 
   }
 
@@ -1030,7 +1034,7 @@
 
     param[journal_id] = abm
 
-    au < manifest ; exists ; 2018 ; 2018 ; Annals of Behavioral Medicine Volume 1 ; 1 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Annals of Behavioral Medicine Volume 1 ; 1 ;  >
 
   }
 
@@ -1175,7 +1179,8 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Annals of Botany Volume 113-114 ; 113-114 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Annals of Botany Volume 115-116 ; 115-116 ;  >
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Annals of Botany Volume 117-118 ; 117-118 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Annals of Botany Volume 119-120 ; 119-120 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; Annals of Botany Volume 119-120 ; 119-120 ;  >
+    au < exists ; exists ; 2018 ; 2018 ; Annals of Botany Volume 121-122 ; 121-122 ;  >
 
   }
 
@@ -1216,8 +1221,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Annals of Oncology Volume 24 ; 24 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Annals of Oncology Volume 25 ; 25 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Annals of Oncology Volume 26 ; 26 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; Annals of Oncology Volume 27 ; 27 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Annals of Oncology Volume 28 ; 28 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; Annals of Oncology Volume 27 ; 27 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; Annals of Oncology Volume 28 ; 28 ;  >
+    au < expected ; exists ; 2018 ; 2018 ; Annals of Oncology Volume 29 ; 29 ;  >
 
   }
 
@@ -1234,7 +1240,8 @@
 
     #this title was ONLY in the publisher listing
 
-    au < manifest ; exists ; 2017 ; 2017 ; Annals of Work Exposures and Health Volume 61 ; 61 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; Annals of Work Exposures and Health Volume 61 ; 61 ;  >
+    au < expected ; exists ; 2018 ; 2018 ; Annals of Work Exposures and Health Volume 62 ; 62 ;  >
 
   }
 
@@ -1275,8 +1282,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Annals of the Entomological Society of America Volume 106 ; 106 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Annals of the Entomological Society of America Volume 107 ; 107 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Annals of the Entomological Society of America Volume 108 ; 108 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; Annals of the Entomological Society of America Volume 109 ; 109 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Annals of the Entomological Society of America Volume 110 ; 110 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; Annals of the Entomological Society of America Volume 109 ; 109 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; Annals of the Entomological Society of America Volume 110 ; 110 ;  >
+    au < expected ; exists ; 2018 ; 2018 ; Annals of the Entomological Society of America Volume 111 ; 111 ;  >
 
   }
 
@@ -1296,8 +1304,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; AoB PLANTS Volume 5 ; 5 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; AoB PLANTS Volume 6 ; 6 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; AoB PLANTS Volume 7 ; 7 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; AoB PLANTS Volume 8 ; 8 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; AoB PLANTS Volume 9 ; 9 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; AoB PLANTS Volume 8 ; 8 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; AoB PLANTS Volume 9 ; 9 ;  >
+    au < expected ; exists ; 2018 ; 2018 ; AoB PLANTS Volume 10 ; 10 ;  >
 
   }
 
@@ -1340,8 +1349,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Applied Economic Perspectives and Policy Volume 35 ; 35 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Applied Economic Perspectives and Policy Volume 36 ; 36 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Applied Economic Perspectives and Policy Volume 37 ; 37 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; Applied Economic Perspectives and Policy Volume 38 ; 38 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Applied Economic Perspectives and Policy Volume 39 ; 39 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; Applied Economic Perspectives and Policy Volume 38 ; 38 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; Applied Economic Perspectives and Policy Volume 39 ; 39 ;  >
+    au < expected ; exists ; 2018 ; 2018 ; Applied Economic Perspectives and Policy Volume 40 ; 40 ;  >
 
   }
 
@@ -1392,8 +1402,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Applied Linguistics Volume 34 ; 34 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Applied Linguistics Volume 35 ; 35 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Applied Linguistics Volume 36 ; 36 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; Applied Linguistics Volume 37 ; 37 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Applied Linguistics Volume 38 ; 38 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; Applied Linguistics Volume 37 ; 37 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; Applied Linguistics Volume 38 ; 38 ;  >
+    au < expected ; exists ; 2018 ; 2018 ; Applied Linguistics Volume 39 ; 39 ;  >
 
   }
 
@@ -1423,8 +1434,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Applied Mathematics Research eXpress Volume 2013 ; 2013 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Applied Mathematics Research eXpress Volume 2014 ; 2014 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Applied Mathematics Research eXpress Volume 2015 ; 2015 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; Applied Mathematics Research eXpress Volume 2016 ; 2016 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Applied Mathematics Research eXpress Volume 2017 ; 2017 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; Applied Mathematics Research eXpress Volume 2016 ; 2016 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; Applied Mathematics Research eXpress Volume 2017 ; 2017 ;  >
+    au < expected ; exists ; 2018 ; 2018 ; Applied Mathematics Research eXpress Volume 2018 ; 2018 ;  >
 
   }
 
@@ -1470,8 +1482,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Arbitration International Volume 29 ; 29 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Arbitration International Volume 30 ; 30 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Arbitration International Volume 31 ; 31 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; Arbitration International Volume 32 ; 32 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Arbitration International Volume 33 ; 33 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; Arbitration International Volume 32 ; 32 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; Arbitration International Volume 33 ; 33 ;  >
+    au < expected ; exists ; 2018 ; 2018 ; Arbitration International Volume 34 ; 34 ;  >
 
   }
 
@@ -1493,7 +1506,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Arbitration Law Reports and Review Volume 2005 ; 2005 ;  >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Arbitration Law Reports and Review Volume 2006 ; 2006 ;  >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Arbitration Law Reports and Review Volume 2007 ; 2007 ;  >
-    au < manifest ; exists ; 2011 ; 2011 ; Arbitration Law Reports and Review Volume 2011 ; 2011 ;  >
+    au < testing ; exists ; 2011 ; 2011 ; Arbitration Law Reports and Review Volume 2011 ; 2011 ;  >
 
   }
 
