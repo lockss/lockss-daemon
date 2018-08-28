@@ -5,7 +5,7 @@
   >
 
   plugin = org.lockss.plugin.berghahn.BerghahnJournalsPlugin
-  param[base_url] = http://www.berghahnjournals.com/
+  param[base_url] = https://www.berghahnjournals.com/
   implicit < status ; year ; name ; param[volume_name] >
 
   {
