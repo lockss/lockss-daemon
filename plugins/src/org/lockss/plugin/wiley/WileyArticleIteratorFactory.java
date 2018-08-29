@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -59,7 +59,9 @@ import org.lockss.util.Logger;
  * C/CEAT34.10.zip!/1728_hrp.wml.xml
  * </pre>
  * 
+ * Updated 8/29/18
  * Modify pattern to work with both <base_url>/<year>/ and <base_url>/<directory>/
+ * Also to handle both with and without a hash-letter subdirectory
  */
 public class WileyArticleIteratorFactory 
   implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
@@ -67,12 +69,13 @@ public class WileyArticleIteratorFactory
   protected static Logger log = 
                           Logger.getLogger(WileyArticleIteratorFactory.class);
   
-  // no need to set ROOT_TEMPLATE since all content is under <base_url>/<year>
+  // no need to set ROOT_TEMPLATE since all content is under 
+  // <base_url>/<year> or <base_url>/<directory>
   // you cannot assume files end in *.wml.xml - some end in wml2.xml and some just .xml 
   // This pattern will only pick up XML files that live
   //  in a zip files that is 2 levels below year
   protected static final String PATTERN_TEMPLATE = 
-      "\"%s[^/]+/[A-Z0-9]/[^/]+\\.zip!/.*\\.xml$\",base_url";
+      "\"%s[^/]+/([A-Z0-9]/)?[^/]+\\.zip!/.*\\.xml$\",base_url";
     
     @Override
     public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) throws PluginException {

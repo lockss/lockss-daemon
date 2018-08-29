@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2018 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,7 +32,6 @@
 
 package org.lockss.plugin.wiley;
 
-import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -51,6 +50,8 @@ import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
  * Implements a FileMetadataExtractorFactory for Wiley source content
  * Files used to write this class constructed from Wiley FTP archive:
  *      <base_url>/<year>/A/ADMA23.16.zip 
+ * or, as of 2018
+ *      <base_url>/<directory>/ADMA23.16.zip 
  *           
  * Metadata found in all xmls (full-text and abstract).
  * 
@@ -71,7 +72,7 @@ extends SourceXmlMetadataExtractorFactory {
   // there are also numerical directories possible at the level of "A" but
   // they don't follow this pattern so can't be decoded
   static private final Pattern JOURNAL_PATTERN = Pattern.compile(
-      "/wiley-[^/]+/[0-9]{4}/[A-Z]/([A-Z]+)([0-9]+)\\.([0-9]+)");
+      "/wiley-[^/]+/[^/]+/(?:[A-Z]/)?([A-Z]+)([0-9]+)\\.([0-9]+)");
   static private final Pattern XML_SUFFIX = Pattern.compile(
       "/([^/]+?)(\\.wml(2)?)?\\.xml$");
 
