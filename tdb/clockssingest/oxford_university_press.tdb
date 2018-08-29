@@ -47,8 +47,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Acta Biochimica et Biophysica Sinica Volume 45 ; 45 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Acta Biochimica et Biophysica Sinica Volume 46 ; 46 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Acta Biochimica et Biophysica Sinica Volume 47 ; 47 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; Acta Biochimica et Biophysica Sinica Volume 48 ; 48 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; Acta Biochimica et Biophysica Sinica Volume 49 ; 49 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; Acta Biochimica et Biophysica Sinica Volume 48 ; 48 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; Acta Biochimica et Biophysica Sinica Volume 49 ; 49 ;  >
     au < exists ; exists ; 2018 ; 2018 ; Acta Biochimica et Biophysica Sinica Volume 50 ; 50 ;  >
 
   }
@@ -96,8 +96,8 @@
     au < manifest ; exists ; 2014 ; 2014 ; Advances in Nutrition Volume 5 ; 5 ;  >
     au < manifest ; exists ; 2015 ; 2015 ; Advances in Nutrition Volume 6 ; 6 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; Advances in Nutrition Volume 7 ; 7 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; Advances in Nutrition Volume 8 ; 8 ;  >
-    au < testing ; exists ; 2018 ; 2018 ; Advances in Nutrition Volume 9 ; 9 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; Advances in Nutrition Volume 8 ; 8 ;  >
+    au < ready ; exists ; 2018 ; 2018 ; Advances in Nutrition Volume 9 ; 9 ;  >
 
   }
 
@@ -133,8 +133,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Aesthetic Surgery Journal Volume 33 ; 33 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Aesthetic Surgery Journal Volume 34 ; 34 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Aesthetic Surgery Journal Volume 35 ; 35 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; Aesthetic Surgery Journal Volume 36 ; 36 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; Aesthetic Surgery Journal Volume 37 ; 37 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; Aesthetic Surgery Journal Volume 36 ; 36 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; Aesthetic Surgery Journal Volume 37 ; 37 ;  >
     au < exists ; exists ; 2018 ; 2018 ; Aesthetic Surgery Journal Volume 38 ; 38 ;  >
 
   }
@@ -327,7 +327,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Age and Ageing Volume 42 ; 42 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Age and Ageing Volume 43 ; 43 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Age and Ageing Volume 44 ; 44 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; Age and Ageing Volume 45 ; 45 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; Age and Ageing Volume 45 ; 45 ;  >
     au < testing ; exists ; 2017 ; 2017 ; Age and Ageing Volume 46 ; 46 ;  >
     au < expected ; exists ; 2018 ; 2018 ; Age and Ageing Volume 47 ; 47 ;  >
 
@@ -397,8 +397,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Alcohol and Alcoholism Volume 48 ; 48 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Alcohol and Alcoholism Volume 49 ; 49 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Alcohol and Alcoholism Volume 50 ; 50 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; Alcohol and Alcoholism Volume 51 ; 51 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; Alcohol and Alcoholism Volume 52 ; 52 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; Alcohol and Alcoholism Volume 51 ; 51 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; Alcohol and Alcoholism Volume 52 ; 52 ;  >
     au < expected ; exists ; 2018 ; 2018 ; Alcohol and Alcoholism Volume 53 ; 53 ;  >
 
   }
@@ -526,7 +526,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; American Journal of Agricultural Economics Volume 95 ; 95 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; American Journal of Agricultural Economics Volume 96 ; 96 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; American Journal of Agricultural Economics Volume 97 ; 97 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; American Journal of Agricultural Economics Volume 98 ; 98 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; American Journal of Agricultural Economics Volume 98 ; 98 ;  >
     au < testing ; exists ; 2017 ; 2017 ; American Journal of Agricultural Economics Volume 99 ; 99 ;  >
     au < expected ; exists ; 2018 ; 2018 ; American Journal of Agricultural Economics Volume 100 ; 100 ;  >
 
@@ -561,8 +561,8 @@
     au < manifest ; exists ; 2014 ; 2014 ; The American Journal of Clinical Nutrition Volume 99-100 ; 99-100 ;  >
     au < manifest ; exists ; 2015 ; 2015 ; The American Journal of Clinical Nutrition Volume 101-102 ; 101-102 ;  >
     au < testing ; exists ; 2016 ; 2016 ; The American Journal of Clinical Nutrition Volume 103-104 ; 103-104 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; The American Journal of Clinical Nutrition Volume 105-106 ; 105-106 ;  >
-    au < testing ; exists ; 2018 ; 2018 ; The American Journal of Clinical Nutrition Volume 107-108 ; 107-108 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; The American Journal of Clinical Nutrition Volume 105-106 ; 105-106 ;  >
+    au < ready ; exists ; 2018 ; 2018 ; The American Journal of Clinical Nutrition Volume 107-108 ; 107-108 ;  >
 
   }
 
@@ -594,7 +594,7 @@
     au < manifest ; exists ; 2014 ; 2014 ; American Journal of Clinical Pathology Volume 141-142 ; 141-142 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; American Journal of Clinical Pathology Volume 143-144 ; 143-144 ;  >
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; American Journal of Clinical Pathology Volume 145-146 ; 145-146 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; American Journal of Clinical Pathology Volume 147-148 ; 147-148 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; American Journal of Clinical Pathology Volume 147-148 ; 147-148 ;  >
     au < exists ; exists ; 2018 ; 2018 ; American Journal of Clinical Pathology Volume 149-150 ; 149-150 ;  >
 
   }
@@ -705,8 +705,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; American Journal of Epidemiology Volume 177-178 ; 177-178 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; American Journal of Epidemiology Volume 179-180 ; 179-180 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; American Journal of Epidemiology Volume 181-182 ; 181-182 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; American Journal of Epidemiology Volume 183-184 ; 183-184 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; American Journal of Epidemiology Volume 185-186 ; 185-186 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; American Journal of Epidemiology Volume 183-184 ; 183-184 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; American Journal of Epidemiology Volume 185-186 ; 185-186 ;  >
     au < exists ; exists ; 2018 ; 2018 ; American Journal of Epidemiology Volume 187-188 ; 187-188 ;  >
 
   }
@@ -778,8 +778,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; American Journal of Legal History Volume 53 ; 53 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; American Journal of Legal History Volume 54 ; 54 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; American Journal of Legal History Volume 55 ; 55 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; American Journal of Legal History Volume 56 ; 56 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; American Journal of Legal History Volume 57 ; 57 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; American Journal of Legal History Volume 56 ; 56 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; American Journal of Legal History Volume 57 ; 57 ;  >
     au < expected ; exists ; 2018 ; 2018 ; American Journal of Legal History Volume 58 ; 58 ;  >
 
   }
@@ -1304,7 +1304,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; AoB PLANTS Volume 5 ; 5 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; AoB PLANTS Volume 6 ; 6 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; AoB PLANTS Volume 7 ; 7 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; AoB PLANTS Volume 8 ; 8 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; AoB PLANTS Volume 8 ; 8 ;  >
     au < testing ; exists ; 2017 ; 2017 ; AoB PLANTS Volume 9 ; 9 ;  >
     au < expected ; exists ; 2018 ; 2018 ; AoB PLANTS Volume 10 ; 10 ;  >
 
@@ -1551,8 +1551,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Archives of Clinical Neuropsychology Volume 28 ; 28 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Archives of Clinical Neuropsychology Volume 29 ; 29 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Archives of Clinical Neuropsychology Volume 30 ; 30 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; Archives of Clinical Neuropsychology Volume 31 ; 31 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Archives of Clinical Neuropsychology Volume 32 ; 32 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; Archives of Clinical Neuropsychology Volume 31 ; 31 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; Archives of Clinical Neuropsychology Volume 32 ; 32 ;  >
+    au < expected ; exists ; 2018 ; 2018 ; Archives of Clinical Neuropsychology Volume 33 ; 33 ;  >
 
   }
 
@@ -1575,7 +1576,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Aristotelian Society Supplementary Volume Volume 79 ; 79 ;  >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Aristotelian Society Supplementary Volume Volume 80 ; 80 ;  >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Aristotelian Society Supplementary Volume Volume 81 ; 81 ;  >
-    au < manifest ; exists ; 2008 ; 2008 ; Aristotelian Society Supplementary Volume Volume 82 ; 82 ;  >
+    au < testing ; exists ; 2008 ; 2008 ; Aristotelian Society Supplementary Volume Volume 82 ; 82 ;  >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Aristotelian Society Supplementary Volume Volume 83 ; 83 ;  >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Aristotelian Society Supplementary Volume Volume 84 ; 84 ;  >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Aristotelian Society Supplementary Volume Volume 85 ; 85 ;  >
@@ -1583,7 +1584,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Aristotelian Society Supplementary Volume Volume 87 ; 87 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Aristotelian Society Supplementary Volume Volume 88 ; 88 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Aristotelian Society Supplementary Volume Volume 89 ; 89 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; Aristotelian Society Supplementary Volume Volume 90 ; 90 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; Aristotelian Society Supplementary Volume Volume 90 ; 90 ;  >
+    au < exists ; exists ; 2017 ; 2017 ; Aristotelian Society Supplementary Volume Volume 91 ; 91 ;  >
+    au < exists ; exists ; 2018 ; 2018 ; Aristotelian Society Supplementary Volume Volume 92 ; 92 ;  >
 
   }
 
@@ -1601,16 +1604,17 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Arthropod Management Tests Volume 30 ; 30 ;  >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Arthropod Management Tests Volume 31 ; 31 ;  >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Arthropod Management Tests Volume 32 ; 32 ;  >
-    au < manifest ; exists ; 2008 ; 2008 ; Arthropod Management Tests Volume 33 ; 33 ;  >
+    au < testing ; exists ; 2008 ; 2008 ; Arthropod Management Tests Volume 33 ; 33 ;  >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Arthropod Management Tests Volume 34 ; 34 ;  >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Arthropod Management Tests Volume 35 ; 35 ;  >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Arthropod Management Tests Volume 36 ; 36 ;  >
     au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Arthropod Management Tests Volume 37 ; 37 ;  >
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Arthropod Management Tests Volume 38 ; 38 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Arthropod Management Tests Volume 39 ; 39 ;  >
-    au < manifest ; exists ; 2015 ; 2015 ; Arthropod Management Tests Volume 40 ; 40 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; Arthropod Management Tests Volume 41 ; 41 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Arthropod Management Tests Volume 42 ; 42 ;  >
+    au < testing ; exists ; 2015 ; 2015 ; Arthropod Management Tests Volume 40 ; 40 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; Arthropod Management Tests Volume 41 ; 41 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; Arthropod Management Tests Volume 42 ; 42 ;  >
+    au < expected ; exists ; 2018 ; 2018 ; Arthropod Management Tests Volume 43 ; 43 ;  >
 
   }
 
@@ -1636,7 +1640,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Astronomy & Geophysics Volume 46 ; 46 ;  >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Astronomy & Geophysics Volume 47 ; 47 ;  >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Astronomy & Geophysics Volume 48 ; 48 ;  >
-    au < manifest ; exists ; 2008 ; 2008 ; Astronomy & Geophysics Volume 49 ; 49 ;  >
+    au < testing ; exists ; 2008 ; 2008 ; Astronomy & Geophysics Volume 49 ; 49 ;  >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Astronomy & Geophysics Volume 50 ; 50 ;  >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Astronomy & Geophysics Volume 51 ; 51 ;  >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Astronomy & Geophysics Volume 52 ; 52 ;  >
@@ -1644,8 +1648,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Astronomy & Geophysics Volume 54 ; 54 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Astronomy & Geophysics Volume 55 ; 55 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Astronomy & Geophysics Volume 56 ; 56 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; Astronomy & Geophysics Volume 57 ; 57 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Astronomy & Geophysics Volume 58 ; 58 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; Astronomy & Geophysics Volume 57 ; 57 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; Astronomy & Geophysics Volume 58 ; 58 ;  >
+    au < expected ; exists ; 2018 ; 2018 ; Astronomy & Geophysics Volume 59 ; 59 ;  >
 
   }
 
