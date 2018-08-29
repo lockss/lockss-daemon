@@ -79,7 +79,10 @@ public class TestMedknowArticleIteratorFactory extends ArticleIteratorTestCase {
   
   private final String EXPECTED_ABS_URL = "http://www.afrjpaedsurg.org/article.asp?issn=0189-6725;year=2012;volume=9;issue=1;spage=3;epage=7;aulast=Ibekwe;type=0";
   private final String EXPECTED_PDF_URL = "http://www.afrjpaedsurg.org/article.asp?issn=0189-6725;year=2012;volume=9;issue=1;spage=3;epage=7;aulast=Ibekwe;type=2";
-    
+  private final String EXPECTED_HTML_URL = "http://www.afrjpaedsurg.org/article.asp?issn=0189-6725;year=2012;volume=9;issue=1;spage=3;epage=7;aulast=Ibekwe";
+  private final String EXPECTED_CITE_URL = "http://www.afrjpaedsurg.org/citation.asp?issn=0189-6725;year=2012;volume=9;issue=1;spage=3;epage=7;aulast=Ibekwe";
+  private final String EXPECTED_RIS_URL = "http://www.afrjpaedsurg.org/citeman.asp?issn=0189-6725;year=2012;volume=9;issue=1;spage=3;epage=7;aulast=Ibekwe;t=2";
+  
   protected String cuRole = null;
   ArticleMetadataExtractor.Emitter emitter;
   protected boolean emitDefaultIfNone = false;
@@ -139,7 +142,12 @@ public class TestMedknowArticleIteratorFactory extends ArticleIteratorTestCase {
     Pattern pat = getPattern(artIter);
 
     assertNotMatchesRE(pat, "http://www.afrjpaedsurg.org/article.asp?issn=0189-6725;year=2012;volume=9;issue=1;spage=3;epage=7;aulast=Ibekwe;type=wrong");
+    assertNotMatchesRE(pat, "http://www.afrjpaedsurg.org/article.asp?issn=0189-6725;year=2012;volume=9;issue=1;spage=3;epage=7");
+    assertNotMatchesRE(pat, "http://www.afrjpaedsurg.org/article.asp?issn=0189-6725;year=2012;volume=9;issue=1;spage=3;epage=7;aulast=");
+    assertNotMatchesRE(pat, "http://www.afrjpaedsurg.org/article.asp?issn=0189-6725;year=2012;volume=9;issue=1;spage=3;epage=7;aulast=Ibekwe");
     assertMatchesRE(pat, "http://www.afrjpaedsurg.org/article.asp?issn=0189-6725;year=2012;volume=9;issue=1;spage=3;epage=7;aulast=Ibekwe;type=0");
+    assertMatchesRE(pat, "http://www.afrjpaedsurg.org/article.asp?issn=0189-6725;year=2012;volume=9;issue=1;spage=3;epage=7;aulast=Ibekwe;type=2");
+    assertNotMatchesRE(pat, "http://www.afrjpaedsurg.org/article.asp?issn=0189-6725;year=2012;volume=9;issue=1;spage=3;epage=7;aulast=Ibekwe;type=1");
     assertNotMatchesRE(pat, "http://www.example.com/content/");
     assertNotMatchesRE(pat, "http://www.example.com/content/j");
     assertNotMatchesRE(pat, "http://www.example.com/content/j0123/j383.pdfwrong");
@@ -150,12 +158,16 @@ public class TestMedknowArticleIteratorFactory extends ArticleIteratorTestCase {
     
     // create urls to store in UrlCacher
     String[] urls = { BASE_URL + "article.asp?issn=0189-6725;year=2012;volume=9;issue=1;spage=3;epage=7;aulast=Ibekwe;type=0",
-                      BASE_URL + "article.asp?issn=0189-6725;year=2012;volume=9;issue=1;spage=3;epage=7;aulast=Ibekwe;type=2" };
-                                           
+                      BASE_URL + "article.asp?issn=0189-6725;year=2012;volume=9;issue=1;spage=3;epage=7;aulast=Ibekwe;type=2",
+                      BASE_URL + "article.asp?issn=0189-6725;year=2012;volume=9;issue=1;spage=3;epage=7;aulast=Ibekwe",
+                      BASE_URL + "citation.asp?issn=0189-6725;year=2012;volume=9;issue=1;spage=3;epage=7;aulast=Ibekwe",
+                      BASE_URL + "citeman.asp?issn=0189-6725;year=2012;volume=9;issue=1;spage=3;epage=7;aulast=Ibekwe;t=2"};
+    
     // get cached url content type and properties from simulated contents
     // for UrclCacher.storeContent()
     CachedUrl cuAbs = null;
     CachedUrl cuPdf = null;
+    CachedUrl cuHtml = null;
     for (CachedUrl cu : AuUtil.getCuIterable(sau)) {
         if (cuPdf == null 
             && cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_PDF)) {
@@ -165,11 +177,15 @@ public class TestMedknowArticleIteratorFactory extends ArticleIteratorTestCase {
             && cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_HTML)) {
           // log.info("abs html contenttype: " + cu.getContentType());
           cuAbs = cu;
+        } else if (cuHtml == null 
+            && cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_HTML)) {
+          // log.info("abs html contenttype: " + cu.getContentType());
+          cuHtml = cu;
         }
-	if (cuPdf != null && cuAbs != null) {
-	  break;
-	}
-    }   
+        if (cuPdf != null && cuAbs != null && cuHtml != null) {
+          break;
+        }
+    }
     // store content using cached url content type and properties
     UrlCacher uc;
     for (String url : urls) {
@@ -182,28 +198,39 @@ public class TestMedknowArticleIteratorFactory extends ArticleIteratorTestCase {
       } else if (url.contains("type=2")) {
         input = cuPdf.getUnfilteredInputStream();
         props = cuPdf.getProperties();
+      } else {
+        input = cuHtml.getUnfilteredInputStream();
+        props = cuHtml.getProperties();
       }
       UrlData ud = new UrlData(input, props, url);
       uc = au.makeUrlCacher(ud);
       uc.storeContent();
     }
- 
+
     // get article iterator, get article files and the appropriate urls according
     // to their roles.
     String [] expectedUrls = { EXPECTED_ABS_URL,
-                               EXPECTED_PDF_URL };
-    for (SubTreeArticleIterator artIter = createSubTreeIter(); artIter.hasNext(); ) {
+                               EXPECTED_PDF_URL,
+                               EXPECTED_HTML_URL,
+                               EXPECTED_CITE_URL,
+                               EXPECTED_RIS_URL};
+    int count = 0;
+    for (SubTreeArticleIterator artIter = createSubTreeIter(MetadataTarget.Any()); artIter.hasNext(); count++) {
       ArticleFiles af = artIter.next();
       String[] actualUrls = { af.getRoleUrl(ArticleFiles.ROLE_ABSTRACT),
-                              af.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_PDF) };
-                              
+                              af.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_PDF),
+                              af.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_HTML),
+                              af.getRoleUrl(ArticleFiles.ROLE_CITATION),
+                              af.getRoleUrl(ArticleFiles.ROLE_CITATION_RIS)
+                              };
       //log.info("actualUrls: " + actualUrls.length);
       for (int i = 0;i< actualUrls.length; i++) {
         //log.info("expected url: " + expectedUrls[i]);
         //log.info("  actual url: " + actualUrls[i]);
         assertEquals(expectedUrls[i], actualUrls[i]);
-      }   
+      }
     }
-  }    
+    assertEquals(count, 1);
+  }
   
 }
