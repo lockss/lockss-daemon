@@ -32,7 +32,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Anthropological Journal of European Cultures Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Anthropological Journal of European Cultures Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Anthropological Journal of European Cultures Volume 24 ; 24 ; >
-    au < testing ; exists ; 2016 ; Anthropological Journal of European Cultures Volume 25 ; 25 ; >
+    au < ready ; exists ; 2016 ; Anthropological Journal of European Cultures Volume 25 ; 25 ; >
     au < frozen ; exists ; 2017 ; Anthropological Journal of European Cultures Volume 26 ; 26 ; >
     
   }
@@ -60,7 +60,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Anthropology in Action Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Anthropology in Action Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Anthropology in Action Volume 22 ; 22 ; >
-    au < testing ; exists ; 2016 ; Anthropology in Action Volume 23 ; 23 ; >
+    au < ready ; exists ; 2016 ; Anthropology in Action Volume 23 ; 23 ; >
     au < frozen ; exists ; 2017 ; Anthropology in Action Volume 24 ; 24 ; >
     
   }
@@ -133,7 +133,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Aspasia Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Aspasia Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Aspasia Volume 9 ; 9 ; >
-    au < testing ; exists ; 2016 ; Aspasia Volume 10 ; 10 ; >
+    au < ready ; exists ; 2016 ; Aspasia Volume 10 ; 10 ; >
     au < frozen ; exists ; 2017 ; Aspasia Volume 11 ; 11 ; >
     
   }
@@ -153,10 +153,10 @@
     au < manifest ; exists ; 2008 ; Boyhood Studies Volume 2 ; 2 ; >
     au < manifest ; exists ; 2009 ; Boyhood Studies Volume 3 ; 3 ; >
     au < manifest ; exists ; 2010 ; Boyhood Studies Volume 4 ; 4 ; >
-    au < testing ; exists ; 2011 ; Boyhood Studies Volume 5 ; 5 ; >
-    au < testing ; exists ; 2012 ; Boyhood Studies Volume 6 ; 6 ; >
+    au < ready ; exists ; 2011 ; Boyhood Studies Volume 5 ; 5 ; >
+    au < ready ; exists ; 2012 ; Boyhood Studies Volume 6 ; 6 ; >
     au < ready ; exists ; 2013 ; Boyhood Studies Volume 7 ; 7 ; >
-    au < testing ; exists ; 2015 ; Boyhood Studies Volume 8 ; 8 ; >
+    au < ready ; exists ; 2015 ; Boyhood Studies Volume 8 ; 8 ; >
     au < ready ; exists ; 2016 ; Boyhood Studies Volume 9 ; 9 ; >
     au < frozen ; exists ; 2017 ; Boyhood Studies Volume 10 ; 10 ; >
     
@@ -214,8 +214,8 @@
     param[journal_id] = contention
 
     au < ready ; exists ; 2013 ; Contention Volume 1 ; 1 ; >
-    au < testing ; exists ; 2014 ; Contention Volume 2 ; 2 ; >
-    au < testing ; exists ; 2015 ; Contention Volume 3 ; 3 ; >
+    au < ready ; exists ; 2014 ; Contention Volume 2 ; 2 ; >
+    au < ready ; exists ; 2015 ; Contention Volume 3 ; 3 ; >
     au < ready ; exists ; 2016 ; Contention Volume 4 ; 4 ; >
     au < frozen ; exists ; 2017 ; Contention Volume 5 ; 5 ; >
 
@@ -327,7 +327,7 @@
 
     au < doNotProcess ; doNotProcess ; 2014 ; Democratic Theory Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Democratic Theory Volume 2 ; 2 ; >
-    au < testing ; exists ; 2016 ; Democratic Theory Volume 3 ; 3 ; >
+    au < ready ; exists ; 2016 ; Democratic Theory Volume 3 ; 3 ; >
     au < frozen ; exists ; 2017 ; Democratic Theory Volume 4 ; 4 ; >
     
   }
@@ -356,7 +356,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Durkheimian Studies Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Durkheimian Studies Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Durkheimian Studies Volume 20 ; 20 ; >
-    au < testing ; exists ; 2015 ; Durkheimian Studies Volume 21 ; 21 ; >
+    au < ready ; exists ; 2015 ; Durkheimian Studies Volume 21 ; 21 ; >
     au < ready ; exists ; 2016 ; Durkheimian Studies Volume 22 ; 22 ; >
     au < expected ; exists ; 2017 ; Durkheimian Studies Volume 23 ; 23 ; > #no issues available
     
@@ -468,7 +468,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Focaal Volume 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Focaal Volume 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Focaal Volume 2015 ; 2015 ; >
-    au < testing ; exists ; 2016 ; Focaal Volume 2016 ; 2016 ; >
+    au < ready ; exists ; 2016 ; Focaal Volume 2016 ; 2016 ; >
     au < frozen ; exists ; 2017 ; Focaal Volume 2017 ; 2017 ; >
     
   }
@@ -537,7 +537,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; German Politics and Society Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; German Politics and Society Volume 32 ; 32 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; German Politics and Society Volume 33 ; 33 ; >
-    au < testing ; exists ; 2016 ; German Politics and Society Volume 34 ; 34 ; >
+    au < ready ; exists ; 2016 ; German Politics and Society Volume 34 ; 34 ; >
     au < frozen ; exists ; 2017 ; German Politics and Society Volume 35 ; 35 ; >
     
   }
@@ -609,7 +609,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Social Quality Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Social Quality Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Social Quality Volume 5 ; 5 ; >
-    au < testing ; exists ; 2016 ; International Journal of Social Quality Volume 6 ; 6 ; >
+    au < ready ; exists ; 2016 ; International Journal of Social Quality Volume 6 ; 6 ; >
     au < frozen ; exists ; 2017 ; International Journal of Social Quality Volume 7 ; 7 ; >
     
   }
@@ -675,7 +675,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Journal of Educational Media, Memory, and Society Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Educational Media, Memory, and Society Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Educational Media, Memory, and Society Volume 7 ; 7 ; >
-    au < testing ; exists ; 2016 ; Journal of Educational Media, Memory, and Society Volume 8 ; 8 ; >
+    au < ready ; exists ; 2016 ; Journal of Educational Media, Memory, and Society Volume 8 ; 8 ; >
     au < frozen ; exists ; 2017 ; Journal of Educational Media, Memory, and Society Volume 9 ; 9 ; >
     
   }
@@ -708,7 +708,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Journeys Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journeys Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journeys Volume 16 ; 16 ; >
-    au < testing ; exists ; 2016 ; Journeys Volume 17 ; 17 ; >
+    au < ready ; exists ; 2016 ; Journeys Volume 17 ; 17 ; >
     au < frozen ; exists ; 2017 ; Journeys Volume 18 ; 18 ; >
     
   }
@@ -769,8 +769,8 @@
 
     au < doNotProcess ; doNotProcess ; 2013 ; Museum Worlds: Advances in Research Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Museum Worlds: Advances in Research Volume 2 ; 2 ; >
-    au < testing ; exists ; 2015 ; Museum Worlds: Advances in Research Volume 3 ; 3 ; >
-    au < testing ; exists ; 2016 ; Museum Worlds: Advances in Research Volume 4 ; 4 ; >
+    au < ready ; exists ; 2015 ; Museum Worlds: Advances in Research Volume 3 ; 3 ; >
+    au < ready ; exists ; 2016 ; Museum Worlds: Advances in Research Volume 4 ; 4 ; >
     au < frozen ; exists ; 2017 ; Museum Worlds: Advances in Research Volume 5 ; 5 ; >
     
   }
@@ -796,7 +796,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Nature and Culture Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Nature and Culture Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Nature and Culture Volume 10 ; 10 ; >
-    au < testing ; exists ; 2016 ; Nature and Culture Volume 11 ; 11 ; >
+    au < ready ; exists ; 2016 ; Nature and Culture Volume 11 ; 11 ; >
     au < frozen ; exists ; 2017 ; Nature and Culture Volume 12 ; 12 ; >
     
   }
@@ -901,7 +901,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Religion and Society: Advances in Research Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Religion and Society: Advances in Research Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Religion and Society: Advances in Research Volume 6 ; 6 ; >
-    au < testing ; exists ; 2016 ; Religion and Society: Advances in Research Volume 7 ; 7 ; >
+    au < ready ; exists ; 2016 ; Religion and Society: Advances in Research Volume 7 ; 7 ; >
     au < frozen ; exists ; 2017 ; Religion and Society: Advances in Research Volume 8 ; 8 ; >
    
   }
@@ -950,7 +950,7 @@
     > 
     param[journal_id] = screen-bodies
        
-    au < testing ; exists ; 2016 ; Screen Bodies Volume 1 ; 1 ; >
+    au < ready ; exists ; 2016 ; Screen Bodies Volume 1 ; 1 ; >
     au < frozen ; exists ; 2017 ; Screen Bodies Volume 2 ; 2 ; >
 
   }
@@ -979,7 +979,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Sibirica Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Sibirica Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Sibirica Volume 14 ; 14 ; >
-    au < testing ; exists ; 2016 ; Sibirica Volume 15 ; 15 ; >
+    au < ready ; exists ; 2016 ; Sibirica Volume 15 ; 15 ; >
     au < frozen ; exists ; 2017 ; Sibirica Volume 16 ; 16 ; >
     
   }
@@ -1045,7 +1045,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Theoria Volume 60 ; 60 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Theoria Volume 61 ; 61 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Theoria Volume 62 ; 62 ; >
-    au < testing ; exists ; 2016 ; Theoria Volume 63 ; 63 ; >
+    au < ready ; exists ; 2016 ; Theoria Volume 63 ; 63 ; >
     au < frozen ; exists ; 2017 ; Theoria Volume 64 ; 64 ; >
     
   }
