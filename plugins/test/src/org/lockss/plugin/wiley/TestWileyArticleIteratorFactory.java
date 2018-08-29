@@ -109,12 +109,17 @@ public class TestWileyArticleIteratorFactory extends ArticleIteratorTestCase {
     Pattern pat = getPattern(artIter);
     
     // PATTERN_TEMPLATE = 
-    // "\"%s%d/[A-Z0-9]/[^/]+\\.zip!/.*\\.pdf$\",base_url,year";
-       
+    // "\"%s[^/]+/([A-Z0-9]/)?[^/]+\\.zip!/.*\\.xml$\",base_url";
     assertNotMatchesRE(pat,
         "http://www.example.com/2011/A/XXXX27.14.zip!/1810test_ftp..wml.xmlbad");
     assertMatchesRE(pat,
         "http://www.example.com/2011/A/XXXX27.14.zip!/1810test_ftp..wml.xml");
+    assertMatchesRE(pat,
+        "http://www.example.com/2011/1/XXXX27.14.zip!/1810test_ftp..wml.xml");
+    assertMatchesRE(pat,
+        "http://www.example.com/2018_2/XXXX27.14.zip!/1810test_ftp..wml.xml");
+    assertMatchesRE(pat,
+        "http://www.example.com/2018_q/XXXX27.14.zip!/1810test_ftp..wml.xml");
   }
   
   public void testCreateArticleFiles() throws Exception {

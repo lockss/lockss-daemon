@@ -85,7 +85,7 @@ public class TestWileySourceXmlMetadataExtractorFactory extends LockssTestCase {
 
   // use journal XXXX27.14 for testing
   String realUrlBaseA = BASE_URL + "2011/A/XXXX27.14.zip!/";
-  String realUrlBase2 = BASE_URL + "2011/2/11111.1.zip!/";
+  String realUrlBase2 = BASE_URL + "2018_2/11111.1.zip!/";
   String realPdfUrlBaseA = "1810test_ftp.pdf"; 
   String realXmlUrlBaseA = "1810test_ftp.wml.xml"; 
   String realPdfUrlBase2 = "15test_ftp.pdf"; 
