@@ -41,7 +41,6 @@ import org.lockss.extractor.ArticleMetadataExtractorFactory;
 import org.lockss.extractor.BaseArticleMetadataExtractor;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.*;
-import org.lockss.util.HeaderUtil;
 import org.lockss.util.Logger;
 
 /**
@@ -72,12 +71,13 @@ public class MedknowArticleIteratorFactory
    * the plugin still requires a single year parameter but we just accept any single year in the url
    */
   private static final String ROOT_TEMPLATE = "\"%s\", base_url";
-  private static final String PATTERN_TEMPLATE = "\"^%sarticle\\.asp\\?issn=%s;year=[0-9]+;volume=%s;.*;type=[02]$\", base_url, journal_issn, volume_name";
+  private static final String PATTERN_TEMPLATE = "\"^%sarticle\\.asp\\?issn=%s;year=[0-9]+;volume=%s;(.*;type=[02]$|(?!.+;type=).*aulast=.*)\", base_url, journal_issn, volume_name";
   
   // various aspects of an article
   // DOI's can have "/"s in the suffix
   private static final Pattern PDF_PATTERN = Pattern.compile("/(article\\.asp)(\\?.*);type=2$", Pattern.CASE_INSENSITIVE);
   private static final Pattern ABSTRACT_PATTERN = Pattern.compile("/(article\\.asp)(\\?.*);type=0$", Pattern.CASE_INSENSITIVE);
+  private static final Pattern HTML_PATTERN = Pattern.compile("/(article\\.asp)(?!.+;type=)(\\?.*)$", Pattern.CASE_INSENSITIVE);
 
   // how to change from one form (aspect) of article to another
   private static final String HTML_REPLACEMENT = "/$1$2"; //take off the ";type=0" argument
@@ -103,6 +103,16 @@ public class MedknowArticleIteratorFactory
     // the ArticleFiles and if you are only counting articles (not pulling metadata) then the 
     // lower aspects aren't looked for, once you get a match.
 
+    // set up full text html to be an aspect that will trigger an ArticleFiles
+    builder.addAspect(HTML_PATTERN, HTML_REPLACEMENT,
+        ArticleFiles.ROLE_FULL_TEXT_HTML,
+        ArticleFiles.ROLE_ARTICLE_METADATA); // use for metadata if abstract doesn't exist
+
+    // set up pdf to be an aspect that will trigger an ArticleFiles
+    builder.addAspect(PDF_PATTERN,
+        PDF_REPLACEMENT,
+        ArticleFiles.ROLE_FULL_TEXT_PDF);
+
     // set up abstract to be an aspect that triggers an ArticleFiles
     // normally abstract wouldn't be sufficient, but it we can figure out the 
     // full-text html and the pdf from this, but it's hard to define
@@ -111,16 +121,6 @@ public class MedknowArticleIteratorFactory
         ABSTRACT_REPLACEMENT,
         ArticleFiles.ROLE_ABSTRACT,
         ArticleFiles.ROLE_ARTICLE_METADATA);
-
-    // set up pdf to be an aspect that will trigger an ArticleFiles
-    builder.addAspect(PDF_PATTERN,
-        PDF_REPLACEMENT,
-        ArticleFiles.ROLE_FULL_TEXT_PDF);
-
-    // set up full text html to be an aspect that will trigger an ArticleFiles
-    builder.addAspect(HTML_REPLACEMENT,
-        ArticleFiles.ROLE_FULL_TEXT_HTML,
-        ArticleFiles.ROLE_ARTICLE_METADATA); // use for metadata if abstract doesn't exist
 
     // set a role, but it isn't sufficient to trigger an ArticleFiles
     builder.addAspect(CITATION_RIS_REPLACEMENT,

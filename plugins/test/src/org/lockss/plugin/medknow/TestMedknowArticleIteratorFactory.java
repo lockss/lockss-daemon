@@ -134,17 +134,17 @@ public class TestMedknowArticleIteratorFactory extends ArticleIteratorTestCase {
   public void testRoots() throws Exception {      
     SubTreeArticleIterator artIter = createSubTreeIter();
     assertEquals(ListUtil.list("http://www.afrjpaedsurg.org/"),
-		 getRootUrls(artIter));
+        getRootUrls(artIter));
   }
-   
+
   public void testUrlsWithPrefixes() throws Exception {
     SubTreeArticleIterator artIter = createSubTreeIter();
     Pattern pat = getPattern(artIter);
 
     assertNotMatchesRE(pat, "http://www.afrjpaedsurg.org/article.asp?issn=0189-6725;year=2012;volume=9;issue=1;spage=3;epage=7;aulast=Ibekwe;type=wrong");
     assertNotMatchesRE(pat, "http://www.afrjpaedsurg.org/article.asp?issn=0189-6725;year=2012;volume=9;issue=1;spage=3;epage=7");
-    assertNotMatchesRE(pat, "http://www.afrjpaedsurg.org/article.asp?issn=0189-6725;year=2012;volume=9;issue=1;spage=3;epage=7;aulast=");
-    assertNotMatchesRE(pat, "http://www.afrjpaedsurg.org/article.asp?issn=0189-6725;year=2012;volume=9;issue=1;spage=3;epage=7;aulast=Ibekwe");
+    assertMatchesRE(pat, "http://www.afrjpaedsurg.org/article.asp?issn=0189-6725;year=2012;volume=9;issue=1;spage=3;epage=7;aulast=");
+    assertMatchesRE(pat, "http://www.afrjpaedsurg.org/article.asp?issn=0189-6725;year=2012;volume=9;issue=1;spage=3;epage=7;aulast=Ibekwe");
     assertMatchesRE(pat, "http://www.afrjpaedsurg.org/article.asp?issn=0189-6725;year=2012;volume=9;issue=1;spage=3;epage=7;aulast=Ibekwe;type=0");
     assertMatchesRE(pat, "http://www.afrjpaedsurg.org/article.asp?issn=0189-6725;year=2012;volume=9;issue=1;spage=3;epage=7;aulast=Ibekwe;type=2");
     assertNotMatchesRE(pat, "http://www.afrjpaedsurg.org/article.asp?issn=0189-6725;year=2012;volume=9;issue=1;spage=3;epage=7;aulast=Ibekwe;type=1");
