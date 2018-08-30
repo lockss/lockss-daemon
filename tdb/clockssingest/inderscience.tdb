@@ -6894,7 +6894,7 @@
       param[journal_id] = ijpam
 
       au < doNotProcess ; doNotProcess ; 2012-2014 ; International Journal of Portfolio Analysis and Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < finished ; finished ; 2015 ; International Journal of Portfolio Analysis and Management Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
+      au < deepCrawl ; down ; 2015-2019 ; International Journal of Portfolio Analysis and Management Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 > #issue 3, 4 not online
 
     }
 
@@ -6913,7 +6913,8 @@
       au < doNotProcess ; doNotProcess ; 2010-2012 ; International Journal of Postharvest Technology and Innovation Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Postharvest Technology and Innovation Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014 ; International Journal of Postharvest Technology and Innovation Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < ingNotReady ; down ; 2015-2018 ; International Journal of Postharvest Technology and Innovation Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 > #volume 5 issue 4 not online yet
+      au < deepCrawl ; down ; 2015-2017 ; International Journal of Postharvest Technology and Innovation Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
+      au < expected ; exists ; 2018-2019 ; International Journal of Postharvest Technology and Innovation Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -7065,7 +7066,7 @@
       au < doNotProcess ; doNotProcess ; 2009-2011 ; International Journal of Process Systems Engineering Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2012-2014 ; International Journal of Process Systems Engineering Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2015 ; International Journal of Process Systems Engineering Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < ingNotReady ; exists ; 2016-2018 ; International Journal of Process Systems Engineering Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; > #volume 4 issue 4 not online yet
+      au < crawling ; exists ; 2016-2018 ; International Journal of Process Systems Engineering Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; >
 
     }
 
@@ -7375,6 +7376,7 @@
       au < doNotProcess ; exists ; 2009 ; International Journal of Radio Frequency Identification Technology and Applications Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Radio Frequency Identification Technology and Applications Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2012-2015 ; International Journal of Radio Frequency Identification Technology and Applications Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; >
+      au < exists ; exists ; 2018-2019 ; International Journal of Radio Frequency Identification Technology and Applications Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -7959,7 +7961,7 @@
       param[journal_id] = ijsccps
 
       au < finished ; crawling ; 2011-2016 ; International Journal of Social Computing and Cyber-Physical Systems Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 2017-2019 ; International Journal of Social Computing and Cyber-Physical Systems Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2017-2019 ; International Journal of Social Computing and Cyber-Physical Systems Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
 
     }
 
@@ -7994,7 +7996,8 @@
       param[journal_id] = ijsnm
 
       au < finished ; finished ; 2012-2013 ; International Journal of Social Network Mining Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; >
-      au < ingNotReady ; down ; 2015-2018 ; International Journal of Social Network Mining Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 > #volume 2 issue 4 not online yet
+      au < deepCrawl ; down ; 2015-2017 ; International Journal of Social Network Mining Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
+      au < expected ; exists ; 2018-2019 ; International Journal of Social Network Mining Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -8150,7 +8153,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Strategic Change Management Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2013-2014 ; International Journal of Strategic Change Management Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; International Journal of Strategic Change Management Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < ingNotReady ; exists ; 2016-2018 ; International Journal of Strategic Change Management Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; > #volume 7 issue 2, 3 & 4 not online yet
+      au < ingNotReady ; exists ; 2016-2018 ; International Journal of Strategic Change Management Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; > #issue 3 & 4 not online yet
 
     }
 
@@ -8167,7 +8170,7 @@
 
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Strategic Engineering Asset Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014-2015 ; International Journal of Strategic Engineering Asset Management Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < ingNotReady ; exists ; 2016-2018 ; International Journal of Strategic Engineering Asset Management Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; > #volume 3 issue 2, 3 & 4 not online yet
+      au < ingNotReady ; exists ; 2016-2018 ; International Journal of Strategic Engineering Asset Management Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; > #issue 3 & 4 not online yet
 
     }
 
@@ -8249,7 +8252,7 @@
 
       au < doNotProcess ; doNotProcess ; 2008-2011 ; International Journal of Sustainable Design Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2012-2014 ; International Journal of Sustainable Design Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; >
-      au < ingNotReady ; exists ; 2016-2018 ; International Journal of Sustainable Design Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; > #volume 3 issue 2, 3 & 4 not online yet
+      au < ingNotReady ; exists ; 2016-2018 ; International Journal of Sustainable Design Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; > #issue 3 & 4 not online yet
 
     }
 
@@ -8342,6 +8345,7 @@
 
       au < finished ; finished ; 2012-2014 ; International Journal of Sustainable Materials and Structural Systems Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2015-2016 ; International Journal of Sustainable Materials and Structural Systems Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
+      au < exists ; exists ; 2017-2018 ; International Journal of Sustainable Materials and Structural Systems Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
 
     }
 
@@ -8506,7 +8510,8 @@
 
       au < doNotProcess ; exists ; 2007-2008 ; International Journal of Technoentrepreneurship Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2009-2011 ; International Journal of Technoentrepreneurship Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
-      au < ingNotReady ; down ; 2015-2018 ; International Journal of Technoentrepreneurship Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 > #volume 3 issue 4 not online yet
+      au < deepCrawl ; down ; 2015-2017 ; International Journal of Technoentrepreneurship Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
+      au < expected ; exists ; 2018-2019 ; International Journal of Technoentrepreneurship Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -8552,7 +8557,7 @@
       au < doNotProcess ; doNotProcess ; 2010-2011 ; International Journal of Technology and Globalisation Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Technology and Globalisation Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2013-2014 ; International Journal of Technology and Globalisation Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2015 ; International Journal of Technology and Globalisation Volume 8 ; 8 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
+      au < deepCrawl ; down ; 2015-2018 ; International Journal of Technology and Globalisation Volume 8 ; 8 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 > #issue3, 4 not online
 
     }
 
@@ -8601,7 +8606,8 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Technology Intelligence and Planning Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Technology Intelligence and Planning Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014-2015 ; International Journal of Technology Intelligence and Planning Volume 10 ; 10 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < ingNotReady ; exists ; 2016-2018 ; International Journal of Technology Intelligence and Planning Volume 11 ; 11 ; http://www.inderscienceonline.com/ ; > #volume 11 issue 4 not online yet
+      au < crawling ; exists ; 2016-2017 ; International Journal of Technology Intelligence and Planning Volume 11 ; 11 ; http://www.inderscienceonline.com/ ; >
+      au < expected ; exists ; 2018-2019 ; International Journal of Technology Intelligence and Planning Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -9099,7 +9105,7 @@
 
       au < doNotProcess ; exists ; 2005-2008 ; International Journal of Vehicle Information and Communication Systems Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2009-2011 ; International Journal of Vehicle Information and Communication Systems Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Vehicle Information and Communication Systems Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
+      au < exists ; exists ; 2013-2018 ; International Journal of Vehicle Information and Communication Systems Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; > #issue 4 not exists
 
     }
 
@@ -9381,7 +9387,7 @@
       param[journal_id] = ijwi
 
       au < finished ; crawling ; 2012-2016 ; International Journal of Work Innovation Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < ingNotReady ; exists ; 2017-2019 ; International Journal of Work Innovation Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; > #issue 2,3,4 not online
+      au < ingNotReady ; exists ; 2017-2019 ; International Journal of Work Innovation Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; > #issue 4 not online
 
     }
 
@@ -9543,7 +9549,7 @@
 
       param[journal_id] = lrj
 
-      au < ingNotReady ; down ; 2015-2018 ; Luxury Research Journal Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 > #issue 4 not online yet
+      au < deepCrawl ; down ; 2015-2018 ; Luxury Research Journal Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
 
     }
 
@@ -9829,7 +9835,8 @@
 
       au < finished ; crawling ; 2014-2015 ; International Journal of Automotive Composites Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; International Journal of Automotive Composites Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < ingNotReady ; exists ; 2017-2018 ; International Journal of Automotive Composites Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; > #issue 2, 3 & 4 not online
+      au < crawling ; exists ; 2017 ; International Journal of Automotive Composites Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; >
+      au < expected ; exists ; 2018 ; International Journal of Automotive Composites Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
 
   }
 
@@ -9844,6 +9851,7 @@
       param[journal_id] = ijhem
 
       au < finished ; crawling ; 2014-2016 ; International Journal of Hospitality and Event Management Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
+      au < exists ; exists ; 2018-2019 ; International Journal of Hospitality and Event Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
 
   }
 
@@ -9859,7 +9867,7 @@
 
       au < finished ; crawling ; 2014-2015 ; International Journal of Supply Chain and Operations Resilience Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2016 ; International Journal of Supply Chain and Operations Resilience Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < ingNotReady ; exists ; 2017-2018 ; International Journal of Supply Chain and Operations Resilience Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; > # issue 2, 3 & 4 not online
+      au < ingNotReady ; exists ; 2017-2018 ; International Journal of Supply Chain and Operations Resilience Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; > # issue 4 not online
 
   }
 
