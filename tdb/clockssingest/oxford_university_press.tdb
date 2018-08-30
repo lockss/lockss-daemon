@@ -47,8 +47,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Acta Biochimica et Biophysica Sinica Volume 45 ; 45 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Acta Biochimica et Biophysica Sinica Volume 46 ; 46 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Acta Biochimica et Biophysica Sinica Volume 47 ; 47 ;  >
-    au < ready ; exists ; 2016 ; 2016 ; Acta Biochimica et Biophysica Sinica Volume 48 ; 48 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; Acta Biochimica et Biophysica Sinica Volume 49 ; 49 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; Acta Biochimica et Biophysica Sinica Volume 48 ; 48 ;  >
+    au < crawling ; exists ; 2017 ; 2017 ; Acta Biochimica et Biophysica Sinica Volume 49 ; 49 ;  >
     au < exists ; exists ; 2018 ; 2018 ; Acta Biochimica et Biophysica Sinica Volume 50 ; 50 ;  >
 
   }
@@ -96,8 +96,8 @@
     au < manifest ; exists ; 2014 ; 2014 ; Advances in Nutrition Volume 5 ; 5 ;  >
     au < manifest ; exists ; 2015 ; 2015 ; Advances in Nutrition Volume 6 ; 6 ;  >
     au < frozen ; exists ; 2016 ; 2016 ; Advances in Nutrition Volume 7 ; 7 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; Advances in Nutrition Volume 8 ; 8 ;  >
-    au < ready ; exists ; 2018 ; 2018 ; Advances in Nutrition Volume 9 ; 9 ;  >
+    au < crawling ; exists ; 2017 ; 2017 ; Advances in Nutrition Volume 8 ; 8 ;  >
+    au < crawling ; exists ; 2018 ; 2018 ; Advances in Nutrition Volume 9 ; 9 ;  >
 
   }
 
@@ -133,8 +133,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Aesthetic Surgery Journal Volume 33 ; 33 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Aesthetic Surgery Journal Volume 34 ; 34 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Aesthetic Surgery Journal Volume 35 ; 35 ;  >
-    au < ready ; exists ; 2016 ; 2016 ; Aesthetic Surgery Journal Volume 36 ; 36 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; Aesthetic Surgery Journal Volume 37 ; 37 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; Aesthetic Surgery Journal Volume 36 ; 36 ;  >
+    au < crawling ; exists ; 2017 ; 2017 ; Aesthetic Surgery Journal Volume 37 ; 37 ;  >
     au < exists ; exists ; 2018 ; 2018 ; Aesthetic Surgery Journal Volume 38 ; 38 ;  >
 
   }
@@ -327,7 +327,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Age and Ageing Volume 42 ; 42 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Age and Ageing Volume 43 ; 43 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Age and Ageing Volume 44 ; 44 ;  >
-    au < ready ; exists ; 2016 ; 2016 ; Age and Ageing Volume 45 ; 45 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; Age and Ageing Volume 45 ; 45 ;  >
     au < testing ; exists ; 2017 ; 2017 ; Age and Ageing Volume 46 ; 46 ;  >
     au < expected ; exists ; 2018 ; 2018 ; Age and Ageing Volume 47 ; 47 ;  >
 
@@ -397,8 +397,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Alcohol and Alcoholism Volume 48 ; 48 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Alcohol and Alcoholism Volume 49 ; 49 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Alcohol and Alcoholism Volume 50 ; 50 ;  >
-    au < ready ; exists ; 2016 ; 2016 ; Alcohol and Alcoholism Volume 51 ; 51 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; Alcohol and Alcoholism Volume 52 ; 52 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; Alcohol and Alcoholism Volume 51 ; 51 ;  >
+    au < crawling ; exists ; 2017 ; 2017 ; Alcohol and Alcoholism Volume 52 ; 52 ;  >
     au < expected ; exists ; 2018 ; 2018 ; Alcohol and Alcoholism Volume 53 ; 53 ;  >
 
   }
@@ -526,7 +526,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; American Journal of Agricultural Economics Volume 95 ; 95 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; American Journal of Agricultural Economics Volume 96 ; 96 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; American Journal of Agricultural Economics Volume 97 ; 97 ;  >
-    au < ready ; exists ; 2016 ; 2016 ; American Journal of Agricultural Economics Volume 98 ; 98 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; American Journal of Agricultural Economics Volume 98 ; 98 ;  >
     au < testing ; exists ; 2017 ; 2017 ; American Journal of Agricultural Economics Volume 99 ; 99 ;  >
     au < expected ; exists ; 2018 ; 2018 ; American Journal of Agricultural Economics Volume 100 ; 100 ;  >
 
@@ -561,8 +561,8 @@
     au < manifest ; exists ; 2014 ; 2014 ; The American Journal of Clinical Nutrition Volume 99-100 ; 99-100 ;  >
     au < manifest ; exists ; 2015 ; 2015 ; The American Journal of Clinical Nutrition Volume 101-102 ; 101-102 ;  >
     au < testing ; exists ; 2016 ; 2016 ; The American Journal of Clinical Nutrition Volume 103-104 ; 103-104 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; The American Journal of Clinical Nutrition Volume 105-106 ; 105-106 ;  >
-    au < ready ; exists ; 2018 ; 2018 ; The American Journal of Clinical Nutrition Volume 107-108 ; 107-108 ;  >
+    au < crawling ; exists ; 2017 ; 2017 ; The American Journal of Clinical Nutrition Volume 105-106 ; 105-106 ;  >
+    au < crawling ; exists ; 2018 ; 2018 ; The American Journal of Clinical Nutrition Volume 107-108 ; 107-108 ;  >
 
   }
 
@@ -594,7 +594,7 @@
     au < manifest ; exists ; 2014 ; 2014 ; American Journal of Clinical Pathology Volume 141-142 ; 141-142 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; American Journal of Clinical Pathology Volume 143-144 ; 143-144 ;  >
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; American Journal of Clinical Pathology Volume 145-146 ; 145-146 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; American Journal of Clinical Pathology Volume 147-148 ; 147-148 ;  >
+    au < crawling ; exists ; 2017 ; 2017 ; American Journal of Clinical Pathology Volume 147-148 ; 147-148 ;  >
     au < exists ; exists ; 2018 ; 2018 ; American Journal of Clinical Pathology Volume 149-150 ; 149-150 ;  >
 
   }
@@ -705,8 +705,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; American Journal of Epidemiology Volume 177-178 ; 177-178 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; American Journal of Epidemiology Volume 179-180 ; 179-180 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; American Journal of Epidemiology Volume 181-182 ; 181-182 ;  >
-    au < ready ; exists ; 2016 ; 2016 ; American Journal of Epidemiology Volume 183-184 ; 183-184 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; American Journal of Epidemiology Volume 185-186 ; 185-186 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; American Journal of Epidemiology Volume 183-184 ; 183-184 ;  >
+    au < crawling ; exists ; 2017 ; 2017 ; American Journal of Epidemiology Volume 185-186 ; 185-186 ;  >
     au < exists ; exists ; 2018 ; 2018 ; American Journal of Epidemiology Volume 187-188 ; 187-188 ;  >
 
   }
@@ -778,8 +778,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; American Journal of Legal History Volume 53 ; 53 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; American Journal of Legal History Volume 54 ; 54 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; American Journal of Legal History Volume 55 ; 55 ;  >
-    au < ready ; exists ; 2016 ; 2016 ; American Journal of Legal History Volume 56 ; 56 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; American Journal of Legal History Volume 57 ; 57 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; American Journal of Legal History Volume 56 ; 56 ;  >
+    au < crawling ; exists ; 2017 ; 2017 ; American Journal of Legal History Volume 57 ; 57 ;  >
     au < expected ; exists ; 2018 ; 2018 ; American Journal of Legal History Volume 58 ; 58 ;  >
 
   }
@@ -984,7 +984,7 @@
     au < manifest ; exists ; 2013 ; 2013 ; Animal Frontiers Volume 3 ; 3 ; >
     au < manifest ; exists ; 2014 ; 2014 ; Animal Frontiers Volume 4 ; 4 ; >
     au < manifest ; exists ; 2015 ; 2015 ; Animal Frontiers Volume 5 ; 5 ; >
-    au < ready ; exists ; 2016 ; 2016 ; Animal Frontiers Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; Animal Frontiers Volume 6 ; 6 ; >
     au < testing ; exists ; 2017 ; 2017 ; Animal Frontiers Volume 7 ; 7 ; >
     au < testing ; exists ; 2018 ; 2018 ; Animal Frontiers Volume 8 ; 8 ; >
 
@@ -1304,7 +1304,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; AoB PLANTS Volume 5 ; 5 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; AoB PLANTS Volume 6 ; 6 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; AoB PLANTS Volume 7 ; 7 ;  >
-    au < ready ; exists ; 2016 ; 2016 ; AoB PLANTS Volume 8 ; 8 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; AoB PLANTS Volume 8 ; 8 ;  >
     au < testing ; exists ; 2017 ; 2017 ; AoB PLANTS Volume 9 ; 9 ;  >
     au < expected ; exists ; 2018 ; 2018 ; AoB PLANTS Volume 10 ; 10 ;  >
 
