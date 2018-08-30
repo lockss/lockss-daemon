@@ -7,22 +7,22 @@ tpath="/home/$LOGNAME/tmp"
 #mkdir -p $tpath
 
 plugin="lockss"
-#count=250
-count=25
+count=250
+#count=25
 
-# Make a list of AUids that are on ingest machine(s), and 'Yes' have substance, have crawled successfully.
+# Make a list of AUids that are on ingest machine(s), and 'Yes' have substance, have crawled successfully at least once.
    # Date of last successful crawl is unimportant because many good AUs have been frozen or finished.
-   # Run this separately.
+   # Run this separately, once per day.
    #./scripts/tdb/ws_get_healthy.py machine login pw | sort > $tpath/gr_ingest_healthy.txt
 
 # Make a list of AUids that are crawling in clockssingest, manifest in gln
    #set -x
    # Make a list of AUids from clockss
    #./scripts/tdb/tdbout -CZLI -a -Q "year ~ '^20' and plugin ~ '$plugin' and year !~ '2018'" tdb/clockssingest/*.tdb | grep -v TaylorAndFrancisPlugin | sort > $tpath/gr_clockss_c.txt
-   ./scripts/tdb/tdbout -CZLIF -a -Q "year ~ '^20' and plugin ~ '$plugin' and year !~ '2018'" tdb/clockssingest/hin*.tdb | sort > $tpath/gr_clockss_c.txt
+   ./scripts/tdb/tdbout -CZLIF -a -Q "year ~ '^20' and plugin ~ '$plugin' and year !~ '2018'" tdb/clockssingest/*.tdb | sort > $tpath/gr_clockss_c.txt
    # Make a list of AUids from gln
    #./scripts/tdb/tdbout -M -a -Q "year ~ '^20' and plugin ~ '$plugin' and year !~ '2018'" tdb/prod/*.tdb | grep -v TaylorAndFrancisPlugin | sort > $tpath/gr_gln_m.txt
-   ./scripts/tdb/tdbout -M -a -Q "year ~ '^20' and plugin ~ '$plugin' and year !~ '2018'" tdb/prod/hin*.tdb | sort > $tpath/gr_gln_m.txt
+   ./scripts/tdb/tdbout -M -a -Q "year ~ '^20' and plugin ~ '$plugin' and year !~ '2018'" tdb/prod/*.tdb | sort > $tpath/gr_gln_m.txt
 
    # Convert the gln list to clockss format, and start a list
    cat $tpath/gr_gln_m.txt | sed -e 's/\(\|[^\|]*\)Plugin/Clockss\1Plugin/' | sort > $tpath/gr_gln_mc.txt
@@ -39,9 +39,9 @@ count=25
 # Document Errors. AUs that are in the GLN but not in clockss
    echo "********ERRORS********" > $tpath/gr_errors.txt #create error file 
    #echo "***Manifest in GLN, but not Crawling in Clockss***" >> $tpath/gr_errors.txt
-   #comm -13 $tpath/gr_clockss_c.txt $tpath/gr_gln_mc.txt >> $tpath/gr_errors.txt
+   #comm -13 $tpath/gr_clockss_c.txt $tpath/gr_gln_mc.txt | shuf | head -10 | sed 's/^/***/' >> $tpath/gr_errors.txt
    #echo "***Not Manifest in GLN, but Crawling in Clockss***" >> $tpath/gr_errors.txt
-   #comm -23 $tpath/gr_clockss_c.txt $tpath/gr_gln_mc.txt >> $tpath/gr_errors.txt
+   #comm -23 $tpath/gr_clockss_c.txt $tpath/gr_gln_mc.txt | shuf | head -10 | sed 's/^/***/' >> $tpath/gr_errors.txt
 
 # Find items not healthy on the ingest machines.
    #echo "***M on gln. C on clockss. Not healthy on ingest machines.***" >> $tpath/gr_errors.txt
