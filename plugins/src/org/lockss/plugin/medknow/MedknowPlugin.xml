@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>29</string>
+    <string>30</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -62,7 +62,7 @@
       <!--  allow this for UrlConsumer -->
       <string>1,"^%sshowcaptcha\.asp\?RedirectUrl=",base_url</string>
       <string>1,"^%sciteman.asp\?issn=%s;year=[0-9]+;volume=%s;issue=.*;t=2$",base_url, journal_issn, volume_name</string>
-      <string>1,"^%s(showBackIssue|citation)\.asp\?issn=%s;year=[0-9]+;volume=%s", base_url, journal_issn, volume_name</string>
+      <string>1,"^%s(show[Bb]ack[Ii]ssue|citation)\.asp\?issn=%s;year=[0-9]+;volume=%s", base_url, journal_issn, volume_name</string>
       <string>1,"^%sviewimage.asp\?img=", base_url</string>
       <string>1,"^%sbrowse.asp(|\?sabs=[ny]|\?date=[0-9]{1,2}-%d)$", base_url, year</string>
     </list>
