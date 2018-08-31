@@ -161,8 +161,8 @@ implements SourceXmlSchemaHelper {
   private static String art_contrib = "AuthorList/Author";
      //FirstName,MiddleName,LastName - use value method
   private static String art_date = "publication_date";
-  private static String art_sp = "FirstPage";
-  private static String art_lp = "LastPage";
+  public static String art_sp = "FirstPage";
+  public static String art_lp = "LastPage";
   //private static String art_doi = "";
     // not yet in xml samples
   

@@ -40,15 +40,19 @@ import org.apache.commons.io.FilenameUtils;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 
+import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
+import org.lockss.plugin.CachedUrlSet;
 import org.lockss.plugin.clockss.PubMedSchemaHelper;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 
 
 /*
- * If the xml is at XML/EurRevMedPharmacolSciv21i22.xml
- * then the pdf is at ../PDF/5153-5159-MiR-155 facilitates lymphoma proliferation.pdf
+ * If the xml is at <issuedirectory>/XML/EurRevMedPharmacolSciv21i22.xml
+ * then the pdf is at <issuedirectory>/PDF/5153-5159-MiR-155 facilitates lymphoma proliferation.pdf
+ * The XML subdirectory and/or PDF subdirectory may not be there.
+ * 
  */
 
 public class VerduciXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
@@ -65,8 +69,34 @@ public class VerduciXmlMetadataExtractorFactory extends SourceXmlMetadataExtract
 
   public class VerduciPubMedXmlMetadataExtractor extends SourceXmlMetadataExtractor {
 
+    /*
+     * This class will get created for each XML file that we find.
+     * We want to store a CachedUrlList of the PDF files that exist
+     * within the same issue subdirectory as this XML file so we can 
+     * identify the appropriate PDF file for each article based on the first part
+     * of the PDF filename - which is the start page.  
+     * The file naming is very inconsistent and can't be extrapolated in its entirety.
+     * 
+     */
+    CachedUrlSet issueUrls = null;
+    
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
+      /*
+       * This will get created once for each XML file
+       * which is appropriate as the XML and corresponding PDF files
+       * live below the same issue directory 
+       */
+      if (issueUrls == null) {
+        ArchivalUnit au = cu.getArchivalUnit();
+        // get an iterable list of the cu's in this subdirectory
+        String issuePath = FilenameUtils.getPath(cu.getUrl());
+        if (issuePath.endsWith("XML/")) {
+          issuePath = issuePath.substring(0,issuePath.length() - 4); 
+        }
+        // Store a CachedUrlSet of all the urls below the issue directory
+        issueUrls = au.makeCachedUrlSet(new RangeCachedUrlSetSpec(issuePath));
+      }
       // Once you have it, just keep returning the same one. It won't change.
       if (PubMedHelper == null) {
         PubMedHelper = new PubMedSchemaHelper();
@@ -76,32 +106,57 @@ public class VerduciXmlMetadataExtractorFactory extends SourceXmlMetadataExtract
 
 
     /* 
-     * PDF file lives in sibling directory PDF/xxx.pdf
+     * Verduci's layout is inconsistent
+     * The PDF and XML both live under the same issue level subdirectory.
+     * The XML might live under an XML subdirectory below that.
+     * The PDF files might live under a PDF subdirectory
+     * either/or live just at the level of the issue directory.
+     * The PDF filename is inconsistent
      * The filename is supposedly startpage-endpage.pdf
      * and if there is no endpage, then startpage-startpage.pdf
-     * but the articletitle part is variable relative to the value in 
-     * the xml so we are requested that they send it in some other form
-     * otherwise we will need to add in an iterator to find the CU.
+     * but sometimes it's startpage-otherpage-<titleportion> or
+     * startpage-<titleportion>
+     * so we are using an iterator which lists all the files in the issue
+     * subdirectory to narrow down and find the CU
      */
     @Override
     protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
         ArticleMetadata oneAM) {
 
-      // TODO - placeholder for the prototype - will not work
-      // filename is just the same a the XML filename but with .pdf 
-      // instead of .xml
-    	//TODO - placeholder
-      String url_string = cu.getUrl();
-      String xmlPath = FilenameUtils.getPath(url_string);
-      String spage = oneAM.get(MetadataField.FIELD_START_PAGE);
-      String epage = oneAM.get(MetadataField.FIELD_END_PAGE);
-      if (epage == null) {
-    	  	epage = oneAM.get(MetadataField.FIELD_START_PAGE);
-      }
-      String pdfName = xmlPath + spage + "-" + epage;
-      log.debug3("pdfName is " + pdfName);
       List<String> returnList = new ArrayList<String>();
-      returnList.add(pdfName);
+      String spage = oneAM.getRaw(PubMedSchemaHelper.art_sp);
+      String epage = oneAM.getRaw(PubMedSchemaHelper.art_lp);
+      if (epage == null) {
+        epage = spage;
+      }
+      if (issueUrls != null) {
+        // We have a CachedUrlSet of urls below this issue directory
+        for (CachedUrl trycu : issueUrls.getCuIterable()) {
+          String tryUrl = trycu.getUrl();
+          if (FilenameUtils.getBaseName(tryUrl).startsWith(spage + "-")) {
+            log.debug3("found likely pdfName is" + tryUrl);
+            returnList.add(tryUrl);
+            break;
+          }
+        }
+        // if for some reason we don't have a CachedUrlSet or if we couldn't fine any  
+        // files in it - try for some default behavior
+        if (returnList.size() == 0) {
+          String url_string = cu.getUrl();
+          String xmlPath = FilenameUtils.getPath(url_string);
+          if (xmlPath.endsWith("XML/")) {
+            xmlPath = xmlPath.substring(0,xmlPath.length() - 4); 
+          }      
+          // 1st option - no PDF directory
+          String pdfName = xmlPath + spage + "-" + epage + ".pdf";
+          log.debug3("pdfName is " + pdfName);
+          returnList.add(pdfName);
+          // 2nd option - PDF subdirectory
+          pdfName = xmlPath + "PDF/" + spage + "-" + epage + ".pdf";
+          log.debug3("pdfName is " + pdfName);
+          returnList.add(pdfName);
+        }
+      }
       return returnList;
     }
     
