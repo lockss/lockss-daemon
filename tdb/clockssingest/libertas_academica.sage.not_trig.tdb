@@ -477,7 +477,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 8 ; 8 ; enda ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 9 ; 9 ; enda ; >
     au < frozen ; exists ; 2017 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 10 ; 10 ; enda ; >
-    au < ready ; exists ; 2018 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 11 ; 11 ; enda ; >
+    au < crawling ; exists ; 2018 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 11 ; 11 ; enda ; >
 
   }
 
@@ -501,7 +501,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Gastroenterology Volume 8 ; 8 ; cmga ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Gastroenterology Volume 9 ; 9 ; cmga ; >
     au < frozen ; exists ; 2017 ; Clinical Medicine Insights: Gastroenterology Volume 10 ; 10 ; cmga ; >
-    au < ready ; exists ; 2018 ; Clinical Medicine Insights: Gastroenterology Volume 11 ; 11 ; cmga ; >
+    au < crawling ; exists ; 2018 ; Clinical Medicine Insights: Gastroenterology Volume 11 ; 11 ; cmga ; >
 
   }
 
@@ -526,7 +526,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Oncology Volume 9 ; 9 ; onca ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Oncology Volume 10 ; 10 ; onca ; >
     au < frozen ; exists ; 2017 ; Clinical Medicine Insights: Oncology Volume 11 ; 11 ; onca ; >
-    au < ready ; exists ; 2018 ; Clinical Medicine Insights: Oncology Volume 12 ; 12 ; onca ; >
+    au < crawling ; exists ; 2018 ; Clinical Medicine Insights: Oncology Volume 12 ; 12 ; onca ; >
 
   }
 
@@ -550,7 +550,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Pathology Volume 8 ; 8 ; pata ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Pathology Volume 9 ; 9 ; pata ; >
     au < frozen ; exists ; 2017 ; Clinical Medicine Insights: Pathology Volume 10 ; 10 ; pata ; >
-    au < ready ; exists ; 2018 ; Clinical Medicine Insights: Pathology Volume 11 ; 11 ; pata ; >
+    au < crawling ; exists ; 2018 ; Clinical Medicine Insights: Pathology Volume 11 ; 11 ; pata ; >
 
   }
 
@@ -574,7 +574,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Pediatrics Volume 9 ; 9 ; pdia ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Pediatrics Volume 10 ; 10 ; pdia ; >
     au < frozen ; exists ; 2017 ; Clinical Medicine Insights: Pediatrics Volume 11 ; 11 ; pdia ; >
-    au < ready ; exists ; 2018 ; Clinical Medicine Insights: Pediatrics Volume 12 ; 12 ; pdia ; >
+    au < crawling ; exists ; 2018 ; Clinical Medicine Insights: Pediatrics Volume 12 ; 12 ; pdia ; >
 
   }
 
@@ -597,7 +597,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Psychiatry Volume 6 ; 6 ; psya ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Psychiatry Volume 7 ; 7 ; psya ; >
     au < frozen ; exists ; 2017 ; Clinical Medicine Insights: Psychiatry Volume 8 ; 8 ; psya ; >
-    au < ready ; exists ; 2018 ; Clinical Medicine Insights: Psychiatry Volume 9 ; 9 ; psya ; >
+    au < crawling ; exists ; 2018 ; Clinical Medicine Insights: Psychiatry Volume 9 ; 9 ; psya ; >
 
   }
 
@@ -621,7 +621,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Reproductive Health Volume 9 ; 9 ; reha ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Reproductive Health Volume 10 ; 10 ; reha ; >
     au < frozen ; exists ; 2017 ; Clinical Medicine Insights: Reproductive Health Volume 11 ; 11 ; reha ; >
-    au < ready ; exists ; 2018 ; Clinical Medicine Insights: Reproductive Health Volume 12 ; 12 ; reha ; >
+    au < crawling ; exists ; 2018 ; Clinical Medicine Insights: Reproductive Health Volume 12 ; 12 ; reha ; >
 
   }
 
@@ -644,7 +644,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Therapeutics Volume 7 ; 7 ; thpa ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Therapeutics Volume 8 ; 8 ; thpa ; >
     au < frozen ; exists ; 2017 ; Clinical Medicine Insights: Therapeutics Volume 9 ; 9 ; thpa ; >
-    au < ready ; exists ; 2018 ; Clinical Medicine Insights: Therapeutics Volume 10 ; 10 ; thpa ; >
+    au < crawling ; exists ; 2018 ; Clinical Medicine Insights: Therapeutics Volume 10 ; 10 ; thpa ; >
 
   }
 
@@ -667,7 +667,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 6 ; 6 ; tria ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 7 ; 7 ; tria ; >
     au < frozen ; exists ; 2017 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 8 ; 8 ; tria ; >
-    au < ready ; exists ; 2018 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 9 ; 9 ; tria ; >
+    au < crawling ; exists ; 2018 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 9 ; 9 ; tria ; >
 
   }
 
@@ -690,7 +690,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Urology Volume 8 ; 8 ; cmua ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Urology Volume 9 ; 9 ; cmua ; >
     au < frozen ; exists ; 2017 ; Clinical Medicine Insights: Urology Volume 10 ; 10 ; cmua ; >
-    au < ready ; exists ; 2018 ; Clinical Medicine Insights: Urology Volume 11 ; 11 ; cmua ; >
+    au < crawling ; exists ; 2018 ; Clinical Medicine Insights: Urology Volume 11 ; 11 ; cmua ; >
 
   }
 
@@ -714,7 +714,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Women's Health Volume 8 ; 8 ; cmwa ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Women's Health Volume 9 ; 9 ; cmwa ; >
     au < frozen ; exists ; 2017 ; Clinical Medicine Insights: Women's Health Volume 10 ; 10 ; cmwa ; >
-    au < ready ; exists ; 2018 ; Clinical Medicine Insights: Women's Health Volume 11 ; 11 ; cmwa ; >
+    au < crawling ; exists ; 2018 ; Clinical Medicine Insights: Women's Health Volume 11 ; 11 ; cmwa ; >
 
   }
 
@@ -1475,7 +1475,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Virology: Research and Treatment Volume 6 ; 6 ; vrta ; >
     au < frozen ; exists ; 2016 ; Virology: Research and Treatment Volume 7 ; 7 ; vrta ; >
     au < frozen ; exists ; 2017 ; Virology: Research and Treatment Volume 8 ; 8 ; vrta ; >
-    au < ready ; exists ; 2018 ; Virology: Research and Treatment Volume 9 ; 9 ; vrta ; >
+    au < crawling ; exists ; 2018 ; Virology: Research and Treatment Volume 9 ; 9 ; vrta ; >
 
   }
 
