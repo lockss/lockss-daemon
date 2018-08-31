@@ -8606,7 +8606,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Technology Intelligence and Planning Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Technology Intelligence and Planning Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014-2015 ; International Journal of Technology Intelligence and Planning Volume 10 ; 10 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2016-2017 ; International Journal of Technology Intelligence and Planning Volume 11 ; 11 ; http://www.inderscienceonline.com/ ; >
+      au < deepCrawl ; exists ; 2016-2017 ; International Journal of Technology Intelligence and Planning Volume 11 ; 11 ; http://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2018-2019 ; International Journal of Technology Intelligence and Planning Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -9835,7 +9835,7 @@
 
       au < finished ; crawling ; 2014-2015 ; International Journal of Automotive Composites Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; International Journal of Automotive Composites Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2017 ; International Journal of Automotive Composites Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; >
+      au < deepCrawl ; exists ; 2017 ; International Journal of Automotive Composites Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2018 ; International Journal of Automotive Composites Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
 
   }
@@ -10163,7 +10163,7 @@
 
       param[journal_id] = ijasmm
 
-      au < crawling ; exists ; 2017 ; International Journal of Additive and Subtractive Materials Manufacturing Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; >
+      au < deepCrawl ; exists ; 2017 ; International Journal of Additive and Subtractive Materials Manufacturing Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; >
       au < exists ; exists ; 2018 ; International Journal of Additive and Subtractive Materials Manufacturing Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
 
   }
@@ -10220,7 +10220,7 @@
 
       param[journal_id] = ijisdc
 
-      au < crawling ; exists ; 2017 ; International Journal of Intelligent Systems Design and Computing Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; >
+      au < deepCrawl ; exists ; 2017 ; International Journal of Intelligent Systems Design and Computing Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; >
       au < exists ; exists ; 2018 ; International Journal of Intelligent Systems Design and Computing Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
 
   }
