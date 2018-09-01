@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>testing-EJ</string>
+    <string>ready</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -30,11 +30,11 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Australian National University Press Plugin (CLOCKSS)</string>
+    <string>Australian National University Press Journals Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Australian National University Press Plugin (CLOCKSS), Base URL %s, JID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"Australian National University Press Journals Plugin (CLOCKSS), Base URL %s, JID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>au_start_url</string>
@@ -47,10 +47,6 @@
       <string>"https://style.anu.edu.au/lockss.txt"</string>
       <string>"https://press-files.anu.edu.au/lockss.txt"</string>
     </list>
-  </entry>
-  <entry>
-    <string>plugin_per_host_permission_path</string>
-    <string>/lockss.txt</string>
   </entry>
   <entry>
     <!-- the au_permitted_host_pattern must also find match in lockss-daemon config

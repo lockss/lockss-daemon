@@ -35,9 +35,11 @@ package org.lockss.plugin.anu;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
+import org.lockss.util.UrlUtil;
 
 public class AnuUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
   
@@ -73,5 +75,22 @@ public class AnuUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
     }
     
     return(url);
+  }
+
+
+  @Override
+  public String normalizeUrl(String url, ArchivalUnit au) throws PluginException {
+    /* NOTE: 
+     * Adding special handling to normalize http://press-files.anu.edu.au/ 
+     * as well as https://press.anu.edu.au/
+     * Check for same host or "press-files.anu.edu.au", then normalize
+     * This should be safe as wget of any https://press-files.anu.edu.au files did not redirect, just returned content with 200
+     * Also, if the press-files.anu.edu.au site changes protocol, we will not collect both versions of the files
+     */
+    if (UrlUtil.isSameHost(au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey()), url) ||
+        url.contains("://press-files.anu.edu.au")) {
+      url = AuUtil.normalizeHttpHttpsFromBaseUrl(au, url);
+    }
+    return additionalNormalization(url, au);
   }
 }

@@ -98,12 +98,12 @@ public class AnuHtmlLinkExtractorFactory implements LinkExtractorFactory {
                                   // the following matches on 20 in '2005'
                                   // https://press.anu.edu.au/publications/journals/humanities-research-journal-series-volume-xii-no-1-2005
                                   else if (url.matches("(?i)" + base_url + "publications/(journals/)?" + journal_id + "-(issue|volume|no-[1-9]|winter)-(?!" + volume_name + ")([0-9]+|[IVXLCDM]+)(-.+)?$")) {
-                                    log.warning("Url does not match AU volume: "
-                                        + volume_name + "  " + url);
+                                    log.debug2("Url does not match AU volume: " + volume_name + "  " + url);
                                     return;
                                   }
                                 }
-                                if (UrlUtil.isSameHost(srcUrl, url)) {
+                                if (UrlUtil.isSameHost(au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey()), url) ||
+                                    url.contains("://press-files.anu.edu.au")) {
                                   url = AuUtil.normalizeHttpHttpsFromBaseUrl(au, url);
                                 }
                                 cb.foundLink(url);
