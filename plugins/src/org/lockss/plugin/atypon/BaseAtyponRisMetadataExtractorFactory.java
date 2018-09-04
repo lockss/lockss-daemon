@@ -198,6 +198,15 @@ implements FileMetadataExtractorFactory {
         }
 
         if (ris_type.contains("CHAP")) {
+          // PROCEEDINGS ISSUE - Proceedings cannot have children of type CHAP
+          // so if the publisher is declaring items as CHAP then we shouldn't be calling
+          // this a proceeding, it should be a BOOK
+          // Note that the addTdbDefaults may override this again 
+          if (am.get(MetadataField.FIELD_PUBLICATION_TYPE) == MetadataField.PUBLICATION_TYPE_PROCEEDINGS) {
+            log.debug3("Publication type PROCEEDING has child of type BOOK CHAPTER");
+            am.replace(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_BOOK);
+          }
+          
           // just one chapter - set the article type correctly
           am.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_BOOKCHAPTER);
           if ((am.get(MetadataField.FIELD_PUBLICATION_TITLE) == null) && (am.getRaw("T2") != null)) {
