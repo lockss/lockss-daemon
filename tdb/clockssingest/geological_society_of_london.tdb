@@ -661,8 +661,8 @@
 
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://jgs.lyellcollection.org/
-
-    au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 1970 ; Quarterly Journal of the Geological Society of London Volume 126 ; 126 ; >
+    
+    #previously issn = 0370-291X for 1970 and before
     au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 1971 ; Journal of the Geological Society of London Volume 127 ; 127 ; >
     au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 1972 ; Journal of the Geological Society of London Volume 128 ; 128 ; >
     au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 1973 ; Journal of the Geological Society of London Volume 129 ; 129 ; >
