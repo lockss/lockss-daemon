@@ -535,6 +535,31 @@
   {
 
     title <
+      name = Gothic Studies ;
+      issn = 1362-7937 ;
+      eissn = 2050-456X ;
+      issnl = 1362-7937
+    >
+
+     plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+     param[journal_id] = gothic
+     #volume 13, 14 have been preserved under Manchester University Press
+     implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
+
+     au < exists ; 1999 ; Gothic Studies Volume 1 ; 1 ; https://www.euppublishing.com/ >
+     au < exists ; 2000 ; Gothic Studies Volume 2 ; 2 ; https://www.euppublishing.com/ >
+     au < exists ; 2001 ; Gothic Studies Volume 3 ; 3 ; https://www.euppublishing.com/ >
+     au < exists ; 2002 ; Gothic Studies Volume 4 ; 4 ; https://www.euppublishing.com/ >
+     au < exists ; 2003 ; Gothic Studies Volume 5 ; 5 ; https://www.euppublishing.com/ >
+     au < exists ; 2004 ; Gothic Studies Volume 6 ; 6 ; https://www.euppublishing.com/ >
+     au < doesNotExist ; 2005 ; Gothic Studies Volume 7 ; 7 ; https://www.euppublishing.com/ >
+     au < exists ; 2006 ; Gothic Studies Volume 8 ; 8 ; https://www.euppublishing.com/ >
+
+  }
+
+  {
+
+    title <
       name = Holy Land Studies: A Multidisciplinary Journal ;
       issn = 1474-9475 ;
       eissn = 1750-0125 ;
