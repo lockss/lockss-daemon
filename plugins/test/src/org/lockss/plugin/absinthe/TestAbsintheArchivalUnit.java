@@ -218,9 +218,4 @@ public class TestAbsintheArchivalUnit extends LockssTestCase {
     assertEquals("Absinthe Literary Review Plugin, Base URL http://www.bmj.com/, Year 2005", au.getName());
   }
 
-  public static void main(String[] argv) {
-    String[] testCaseList = {TestAbsintheArchivalUnit.class.getName()};
-    junit.swingui.TestRunner.main(testCaseList);
-  }
-
 }

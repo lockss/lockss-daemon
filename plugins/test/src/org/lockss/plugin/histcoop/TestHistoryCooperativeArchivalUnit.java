@@ -210,9 +210,4 @@ public class TestHistoryCooperativeArchivalUnit extends LockssTestCase {
     assertNull(au.getFilterRule("text/html"));
   }
 
-  public static void main(String[] argv) {
-    String[] testCaseList = {TestHistoryCooperativeArchivalUnit.class.getName()};
-    junit.swingui.TestRunner.main(testCaseList);
-  }
-
 }

@@ -243,9 +243,4 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
     assertNull(window); // currently the case
   }
 
-  public static void main(String[] argv) {
-    String[] testCaseList = {TestHighWireArchivalUnit.class.getName()};
-    junit.swingui.TestRunner.main(testCaseList);
-  }
-
 }

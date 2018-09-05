@@ -252,9 +252,4 @@ public class TestProjectMuseArchivalUnit extends LockssTestCase {
 	       instanceof ProjectMuseHtmlHashFilterFactory);
   }
 
-  public static void main(String[] argv) {
-    String[] testCaseList = {TestProjectMuseArchivalUnit.class.getName()};
-    junit.swingui.TestRunner.main(testCaseList);
-  }
-
 }

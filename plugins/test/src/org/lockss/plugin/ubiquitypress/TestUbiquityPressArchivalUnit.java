@@ -142,9 +142,4 @@ public class TestUbiquityPressArchivalUnit extends LockssTestCase {
     assertEquals("Ubiquity Press Plugin (CLOCKSS), Base URL http://www.presentpasts.info/, Journal ID pp, Year 2003", au.getName());
      }
 
-  public static void main(String[] argv) {
-    String[] testCaseList = {TestUbiquityPressArchivalUnit.class.getName()};
-    junit.swingui.TestRunner.main(testCaseList);
-  }
-
 }

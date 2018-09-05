@@ -190,9 +190,4 @@ public class TestCulturalLogicArchivalUnit extends LockssTestCase {
     assertNull(au.getFilterRule("text/html"));
   }
 
-  public static void main(String[] argv) {
-    String[] testCaseList = {TestCulturalLogicArchivalUnit.class.getName()};
-    junit.swingui.TestRunner.main(testCaseList);
-  }
-
 }

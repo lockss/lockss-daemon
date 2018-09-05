@@ -214,9 +214,4 @@ public class TestBlackbirdArchivalUnit extends LockssPluginTestCase {
     assertNull(au.getFilterRule("text/html"));
   }
 
-  public static void main(String[] argv) {
-    String[] testCaseList = {TestBlackbirdArchivalUnit.class.getName()};
-    junit.swingui.TestRunner.main(testCaseList);
-  }
-
 }

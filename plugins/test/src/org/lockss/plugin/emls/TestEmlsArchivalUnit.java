@@ -186,9 +186,4 @@ public class TestEmlsArchivalUnit extends LockssTestCase {
     assertEquals("1/6000", au.getRateLimiterInfo().getDefaultRate());
   }
 
-  public static void main(String[] argv) {
-    String[] testCaseList = {TestEmlsArchivalUnit.class.getName()};
-    junit.swingui.TestRunner.main(testCaseList);
-  }
-
 }
