@@ -75,8 +75,9 @@ public class TestUpdatedMinervaMetadataExtractorFactory extends LockssTestCase {
     assertNotNull(me);
     log.debug3("Extractor: " + me.toString());
     
-    ArticleMetadata am = me.extractFrom((InputStream)(new FileInputStream(
-    		new File("./plugins/test/src/org/lockss/plugin/minerva/TestMetadata.pdf"))));
+    InputStream pdfIn = this.getClass().getResourceAsStream("TestMetadata.pdf");
+    assertNotNull("TestMetadata.pdf not found", pdfIn);
+    ArticleMetadata am = me.extractFrom(pdfIn);
     assertNotNull(am);
     
     assertEquals(goodIssn, am.get(MetadataField.FIELD_ISSN));
