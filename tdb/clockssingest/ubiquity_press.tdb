@@ -739,7 +739,22 @@
   {
 
       title <
-        name = Journal of Open Health Data ;
+        name = Journal of Open Public Health Data ;
+        eissn = 2053-2407
+      >
+
+      comment[publisher] = Ubiquity Press
+#      param[base_url] = http://openhealthdata.metajnl.com/
+      # continued by Open Health Data
+
+      au < doNotProcess ; exists ; 2013 ; 1 ; Journal of Open Public Health Data Volume 2013 ; 2013 ; https://openhealthdata.metajnl.com/ ; >
+
+  }
+
+  {
+
+      title <
+        name = Open Health Data ;
         eissn = 2054-7102
       >
 
@@ -747,9 +762,10 @@
 #      param[base_url] = http://openhealthdata.metajnl.com/
       # continues Journal of Open Public Health Data
 
-      au < finished ; finished ; 2014 ; 2 ; Journal of Open Health Data Volume 2014 ; 2014 ; http://openhealthdata.metajnl.com/ ; >
-      au < finished ; finished ; 2015 ; 3 ; Journal of Open Health Data Volume 2015 ; 2015 ; http://openhealthdata.metajnl.com/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2016 ; 4 ; Journal of Open Health Data Volume 2016 ; 2016 ; http://openhealthdata.metajnl.com/ ; >
+      au < finished ; finished ; 2014 ; 2 ; Open Health Data Volume 2014 ; 2014 ; http://openhealthdata.metajnl.com/ ; >
+      au < finished ; finished ; 2015 ; 3 ; Open Health Data Volume 2015 ; 2015 ; http://openhealthdata.metajnl.com/ ; reingest5.clockss.org:8082 >
+      au < frozen ; exists ; 2016 ; 4 ; Open Health Data Volume 2016 ; 2016 ; http://openhealthdata.metajnl.com/ ; >
+      au < exists ; exists ; 2018 ; 5 ; Open Health Data Volume 2018 ; 2018 ; https://openhealthdata.metajnl.com/ ; >
 
   }
 
@@ -786,21 +802,6 @@
       au < frozen ; exists ; 2016 ; 4 ; Journal of Open Psychology Data Volume 2016 ; 2016 ; http://openpsychologydata.metajnl.com/ ; >
       au < deepCrawl ; exists ; 2017 ; 5 ; Journal of Open Psychology Data Volume 2017 ; 2017 ; http://openpsychologydata.metajnl.com/ ; >
       au < crawling ; exists ; 2018 ; 6 ; Journal of Open Psychology Data Volume 2018 ; 2018 ; https://openpsychologydata.metajnl.com/ ; >
-
-  }
-
-  {
-
-      title <
-        name = Journal of Open Public Health Data ;
-        eissn = 2053-2407
-      >
-
-      comment[publisher] = Ubiquity Press
-#      param[base_url] = http://openhealthdata.metajnl.com/
-      # continued by Journal of Open Health Data
-
-      au < doNotProcess ; exists ; 2013 ; 1 ; Journal of Open Public Health Data Volume 2013 ; 2013 ; https://openhealthdata.metajnl.com/ ; >
 
   }
 
@@ -925,24 +926,6 @@
       au < frozen ; exists ; 2016 ; 3 ; Open Journal of Bioresources Volume 2016 ; 2016 ; http://openbioresources.metajnl.com/ ; >
       au < deepCrawl ; exists ; 2017 ; 4 ; Open Journal of Bioresources Volume 2017 ; 2017 ; http://openbioresources.metajnl.com/ ; >
       au < crawling ; exists ; 2018 ; 5 ; Open Journal of Bioresources Volume 2018 ; 2018 ; https://openbioresources.metajnl.com/ ; >
-
-  }
-
-  {
-
-      title <
-        name = Journal of Open Health Data ;
-        eissn = 2054-7102
-      >
-
-      comment[publisher] = Ubiquity Press
-#      param[base_url] = https://openhealthdata.metajnl.com/
-
-      au < exists ; exists ; 2013 ; 1 ; Journal of Open Health Data Volume 2013 ; 2013 ; https://openhealthdata.metajnl.com/ ; >
-      au < exists ; exists ; 2014 ; 2 ; Journal of Open Health Data Volume 2014 ; 2014 ; https://openhealthdata.metajnl.com/ ; >
-      au < exists ; exists ; 2015 ; 3 ; Journal of Open Health Data Volume 2015 ; 2015 ; https://openhealthdata.metajnl.com/ ; >
-      au < exists ; exists ; 2016 ; 4 ; Journal of Open Health Data Volume 2016 ; 2016 ; https://openhealthdata.metajnl.com/ ; >
-      au < exists ; exists ; 2018 ; 5 ; Journal of Open Health Data Volume 2018 ; 2018 ; https://openhealthdata.metajnl.com/ ; >
 
   }
 
