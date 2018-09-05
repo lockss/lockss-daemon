@@ -32,15 +32,15 @@
     au < testing ; exists ; 1985 ; Aboriginal History Journal Volume 9 ; 9 ; >
     au < testing ; exists ; 1986 ; Aboriginal History Journal Volume 10 ; 10 ; >
     au < testing ; exists ; 1987 ; Aboriginal History Journal Volume 11 ; 11 ; >
-    au < ready ; exists ; 1988 ; Aboriginal History Journal Volume 12 ; 12 ; >
-    au < ready ; exists ; 1989 ; Aboriginal History Journal Volume 13 ; 13 ; >
-    au < ready ; exists ; 1990 ; Aboriginal History Journal Volume 14 ; 14 ; >
-    au < ready ; exists ; 1991 ; Aboriginal History Journal Volume 15 ; 15 ; >
+    au < crawling ; exists ; 1988 ; Aboriginal History Journal Volume 12 ; 12 ; >
+    au < crawling ; exists ; 1989 ; Aboriginal History Journal Volume 13 ; 13 ; >
+    au < crawling ; exists ; 1990 ; Aboriginal History Journal Volume 14 ; 14 ; >
+    au < crawling ; exists ; 1991 ; Aboriginal History Journal Volume 15 ; 15 ; >
     au < testing ; exists ; 1992 ; Aboriginal History Journal Volume 16 ; 16 ; >
     au < testing ; exists ; 1993 ; Aboriginal History Journal Volume 17 ; 17 ; >
     au < testing ; exists ; 1994 ; Aboriginal History Journal Volume 18 ; 18 ; >
     au < testing ; exists ; 1995 ; Aboriginal History Journal Volume 19 ; 19 ; >
-    au < ready ; exists ; 1996 ; Aboriginal History Journal Volume 20 ; 20 ; >
+    au < crawling ; exists ; 1996 ; Aboriginal History Journal Volume 20 ; 20 ; >
     au < testing ; exists ; 1997 ; Aboriginal History Journal Volume 21 ; 21 ; >
     au < testing ; exists ; 1998 ; Aboriginal History Journal Volume 22 ; 22 ; >
     au < testing ; exists ; 1999 ; Aboriginal History Journal Volume 23 ; 23 ; >
@@ -57,9 +57,9 @@
     au < testing ; exists ; 2011 ; Aboriginal History Journal Volume 34 ; 34 ; >
     au < testing ; exists ; 2011 ; Aboriginal History Journal Volume 35 ; 35 ; >
     au < testing ; exists ; 2013 ; Aboriginal History Journal Volume 36 ; 36 ; >
-    au < ready ; exists ; 2013 ; Aboriginal History Journal Volume 37 ; 37 ; >
-    au < ready ; exists ; 2015 ; Aboriginal History Journal Volume 38 ; 38 ; >
-    au < ready ; exists ; 2016 ; Aboriginal History Journal Volume 39 ; 39 ; >
+    au < crawling ; exists ; 2013 ; Aboriginal History Journal Volume 37 ; 37 ; >
+    au < crawling ; exists ; 2015 ; Aboriginal History Journal Volume 38 ; 38 ; >
+    au < crawling ; exists ; 2016 ; Aboriginal History Journal Volume 39 ; 39 ; >
     au < testing ; exists ; 2017 ; Aboriginal History Journal Volume 40 ; 40 ; >
     au < manifest ; exists ; 2018 ; Aboriginal History Journal Volume 41 ; 41 ; >
 
@@ -75,26 +75,26 @@
     
     param[journal_id] = agenda-journal-policy-analysis-and-reform
 
-    au < ready ; exists ; 1994 ; Agenda - A Journal of Policy Analysis and Reform Volume 1 ; 1 ; >
-    au < ready ; exists ; 1995 ; Agenda - A Journal of Policy Analysis and Reform Volume 2 ; 2 ; >
-    au < ready ; exists ; 1996 ; Agenda - A Journal of Policy Analysis and Reform Volume 3 ; 3 ; >
-    au < ready ; exists ; 1997 ; Agenda - A Journal of Policy Analysis and Reform Volume 4 ; 4 ; >
+    au < crawling ; exists ; 1994 ; Agenda - A Journal of Policy Analysis and Reform Volume 1 ; 1 ; >
+    au < crawling ; exists ; 1995 ; Agenda - A Journal of Policy Analysis and Reform Volume 2 ; 2 ; >
+    au < crawling ; exists ; 1996 ; Agenda - A Journal of Policy Analysis and Reform Volume 3 ; 3 ; >
+    au < crawling ; exists ; 1997 ; Agenda - A Journal of Policy Analysis and Reform Volume 4 ; 4 ; >
     au < testing ; exists ; 1998 ; Agenda - A Journal of Policy Analysis and Reform Volume 5 ; 5 ; >
     au < testing ; exists ; 1999 ; Agenda - A Journal of Policy Analysis and Reform Volume 6 ; 6 ; >
-    au < ready ; exists ; 2000 ; Agenda - A Journal of Policy Analysis and Reform Volume 7 ; 7 ; >
+    au < crawling ; exists ; 2000 ; Agenda - A Journal of Policy Analysis and Reform Volume 7 ; 7 ; >
     au < testing ; exists ; 2001 ; Agenda - A Journal of Policy Analysis and Reform Volume 8 ; 8 ; >
-    au < ready ; exists ; 2002 ; Agenda - A Journal of Policy Analysis and Reform Volume 9 ; 9 ; >
-    au < ready ; exists ; 2003 ; Agenda - A Journal of Policy Analysis and Reform Volume 10 ; 10 ; >
-    au < ready ; exists ; 2004 ; Agenda - A Journal of Policy Analysis and Reform Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2002 ; Agenda - A Journal of Policy Analysis and Reform Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2003 ; Agenda - A Journal of Policy Analysis and Reform Volume 10 ; 10 ; >
+    au < crawling ; exists ; 2004 ; Agenda - A Journal of Policy Analysis and Reform Volume 11 ; 11 ; >
     au < testing ; exists ; 2005 ; Agenda - A Journal of Policy Analysis and Reform Volume 12 ; 12 ; >
     au < testing ; exists ; 2006 ; Agenda - A Journal of Policy Analysis and Reform Volume 13 ; 13 ; >
     au < testing ; exists ; 2007 ; Agenda - A Journal of Policy Analysis and Reform Volume 14 ; 14 ; >
-    au < ready ; exists ; 2008 ; Agenda - A Journal of Policy Analysis and Reform Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2008 ; Agenda - A Journal of Policy Analysis and Reform Volume 15 ; 15 ; >
     au < testing ; exists ; 2009 ; Agenda - A Journal of Policy Analysis and Reform Volume 16 ; 16 ; >
     au < testing ; exists ; 2010 ; Agenda - A Journal of Policy Analysis and Reform Volume 17 ; 17 ; >
     au < testing ; exists ; 2011 ; Agenda - A Journal of Policy Analysis and Reform Volume 18 ; 18 ; >
     au < testing ; exists ; 2012 ; Agenda - A Journal of Policy Analysis and Reform Volume 19 ; 19 ; >
-    au < ready ; exists ; 2013 ; Agenda - A Journal of Policy Analysis and Reform Volume 20 ; 20 ; >
+    au < crawling ; exists ; 2013 ; Agenda - A Journal of Policy Analysis and Reform Volume 20 ; 20 ; >
     au < testing ; exists ; 2014 ; Agenda - A Journal of Policy Analysis and Reform Volume 21 ; 21 ; >
     au < testing ; exists ; 2015 ; Agenda - A Journal of Policy Analysis and Reform Volume 22 ; 22 ; >
     au < testing ; exists ; 2016 ; Agenda - A Journal of Policy Analysis and Reform Volume 23 ; 23 ; >
@@ -118,9 +118,9 @@
     au < testing ; exists ; 2011 ; ANU Undergraduate Research Journal: Volume Three ; three ; >
     au < testing ; exists ; 2012 ; ANU Undergraduate Research Journal: Volume Four ; four ; >
     au < testing ; exists ; 2013 ; ANU Undergraduate Research Journal: Volume Five ; five ; >
-    au < ready ; exists ; 2014 ; ANU Undergraduate Research Journal: Volume Six ; six ; >
+    au < crawling ; exists ; 2014 ; ANU Undergraduate Research Journal: Volume Six ; six ; >
     au < testing ; exists ; 2015 ; ANU Undergraduate Research Journal: Volume Seven ; seven ; >
-    au < ready ; exists ; 2016 ; ANU Undergraduate Research Journal: Volume Eight ; eight ; >
+    au < crawling ; exists ; 2016 ; ANU Undergraduate Research Journal: Volume Eight ; eight ; >
 
   }
 
@@ -135,12 +135,12 @@
     param[journal_id] = australian-humanities-review
 
     au < testing ; exists ; 2008 ; Australian Humanities Review Issue 44 ; 44 ; >
-    au < ready ; exists ; 2008 ; Australian Humanities Review Issue 45 ; 45 ; >
+    au < crawling ; exists ; 2008 ; Australian Humanities Review Issue 45 ; 45 ; >
     au < testing ; exists ; 2009 ; Australian Humanities Review Issue 46 ; 46 ; >
     au < testing ; exists ; 2009 ; Australian Humanities Review Issue 47 ; 47 ; >
     au < testing ; exists ; 2010 ; Australian Humanities Review Issue 48 ; 48 ; >
-    au < ready ; exists ; 2010 ; Australian Humanities Review Issue 49 ; 49 ; >
-    au < ready ; exists ; 2011 ; Australian Humanities Review Issue 50 ; 50 ; >
+    au < crawling ; exists ; 2010 ; Australian Humanities Review Issue 49 ; 49 ; >
+    au < crawling ; exists ; 2011 ; Australian Humanities Review Issue 50 ; 50 ; >
     au < testing ; exists ; 2011 ; Australian Humanities Review Issue 51 ; 51 ; >
     au < testing ; exists ; 2012 ; Australian Humanities Review Issue 52 ; 52 ; >
 
@@ -156,7 +156,7 @@
     
     param[journal_id] = burgmann-journal-research-debate-opinion
 
-    au < ready ; exists ; 2012 ; Burgmann Journal - Research Debate Opinion Issue 1 ; 1 ; >
+    au < crawling ; exists ; 2012 ; Burgmann Journal - Research Debate Opinion Issue 1 ; 1 ; >
     au < testing ; exists ; 2013 ; Burgmann Journal - Research Debate Opinion Issue 2 ; 2 ; >
     au < testing ; exists ; 2014 ; Burgmann Journal - Research Debate Opinion Issue 3 ; 3 ; >
     au < testing ; exists ; 2015 ; Burgmann Journal - Research Debate Opinion Issue 4 ; 4 ; >
@@ -176,10 +176,10 @@
 
     au < testing ; exists ; 2009 ; craft + design enquiry issue 1 ; 1 ; >
     au < testing ; exists ; 2010 ; craft + design enquiry issue 2 ; 2 ; >
-    au < ready ; exists ; 2011 ; craft + design enquiry issue 3 ; 3 ; >
+    au < crawling ; exists ; 2011 ; craft + design enquiry issue 3 ; 3 ; >
     au < testing ; exists ; 2012 ; craft + design enquiry issue 4 ; 4 ; >
     au < testing ; exists ; 2013 ; craft + design enquiry issue 5 ; 5 ; >
-    au < ready ; exists ; 2014 ; craft + design enquiry issue 6 ; 6 ; >
+    au < crawling ; exists ; 2014 ; craft + design enquiry issue 6 ; 6 ; >
     au < testing ; exists ; 2015 ; craft + design enquiry issue 7 ; 7 ; >
 
   }
@@ -201,11 +201,11 @@
     au < testing ; exists ; 2013 ; Cross-sections, The Bruce Hall Academic Journal: Volume IX ; ix ; >
     au < testing ; exists ; 2009 ; Cross-sections, The Bruce Hall Academic Journal: Volume V ; v ; >
     au < testing ; exists ; 2010 ; Cross-sections, The Bruce Hall Academic Journal: Volume VI ; vi ; >
-    au < ready ; exists ; 2011 ; Cross-sections, The Bruce Hall Academic Journal: Volume VII ; vii ; >
+    au < crawling ; exists ; 2011 ; Cross-sections, The Bruce Hall Academic Journal: Volume VII ; vii ; >
     au < testing ; exists ; 2012 ; Cross-sections, The Bruce Hall Academic Journal: Volume VIII ; viii ; >
     au < testing ; exists ; 2014 ; Cross-sections, The Bruce Hall Academic Journal: Volume X ; x ; >
-    au < ready ; exists ; 2015 ; Cross-sections, The Bruce Hall Academic Journal: Volume XI ; xi ; >
-    au < ready ; exists ; 2016 ; Cross-sections, The Bruce Hall Academic Journal: Volume XII ; xii ; >
+    au < crawling ; exists ; 2015 ; Cross-sections, The Bruce Hall Academic Journal: Volume XI ; xi ; >
+    au < crawling ; exists ; 2016 ; Cross-sections, The Bruce Hall Academic Journal: Volume XII ; xii ; >
 
   }
 
@@ -223,8 +223,8 @@
     au < testing ; exists ; 2010 ; East Asia Forum Quarterly Volume 2 ; 2 ; >
     au < testing ; exists ; 2011 ; East Asia Forum Quarterly Volume 3 ; 3 ; >
     au < testing ; exists ; 2012 ; East Asia Forum Quarterly Volume 4 ; 4 ; >
-    au < ready ; exists ; 2013 ; East Asia Forum Quarterly Volume 5 ; 5 ; >
-    au < ready ; exists ; 2014 ; East Asia Forum Quarterly Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2013 ; East Asia Forum Quarterly Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2014 ; East Asia Forum Quarterly Volume 6 ; 6 ; >
     au < testing ; exists ; 2015 ; East Asia Forum Quarterly Volume 7 ; 7 ; >
 
   }
@@ -242,7 +242,7 @@
     au < testing ; exists ; 2014 ; Human Ecology Review: Volume 20 ; 20 ; >
     au < testing ; exists ; 2015 ; Human Ecology Review: Volume 21 ; 21 ; >
     au < testing ; exists ; 2016 ; Human Ecology Review: Volume 22 ; 22 ; >
-    au < ready ; exists ; 2017 ; Human Ecology Review: Volume 23 ; 23 ; >
+    au < crawling ; exists ; 2017 ; Human Ecology Review: Volume 23 ; 23 ; >
 
   }
 
@@ -257,21 +257,21 @@
     param[journal_id] = humanities-research-journal-series
     
     au < testing ; exists ; 1997 ; Humanities Research Journal Series: 1997 ; 1997 ; >
-    au < ready ; exists ; 1998 ; Humanities Research Journal Series: 1998 ; 1998 ; >
+    au < crawling ; exists ; 1998 ; Humanities Research Journal Series: 1998 ; 1998 ; >
     au < testing ; exists ; 1999 ; Humanities Research Journal Series: 1999 ; 1999 ; >
     au < testing ; exists ; 2000 ; Humanities Research Journal Series: 2000 ; 2000 ; >
-    au < ready ; exists ; 2001 ; Humanities Research Journal Series: Volume VIII ; viii ; >
+    au < crawling ; exists ; 2001 ; Humanities Research Journal Series: Volume VIII ; viii ; >
     au < testing ; exists ; 2002 ; Humanities Research Journal Series: Volume IX ; ix ; >
     au < testing ; exists ; 2003 ; Humanities Research Journal Series: Volume X ; x ; >
     au < testing ; exists ; 2004 ; Humanities Research Journal Series: Volume XI ; xi ; >
     au < testing ; exists ; 2005 ; Humanities Research Journal Series: Volume XII ; xii ; >
     au < testing ; exists ; 2006 ; Humanities Research Journal Series: Volume XIII ; xiii ; >
-    au < ready ; exists ; 2007 ; Humanities Research Journal Series: Volume XIV ; xiv ; >
+    au < crawling ; exists ; 2007 ; Humanities Research Journal Series: Volume XIV ; xiv ; >
     au < testing ; exists ; 2009 ; Humanities Research Journal Series: Volume XV ; xv ; >
-    au < ready ; exists ; 2010 ; Humanities Research Journal Series: Volume XVI ; xvi ; >
+    au < crawling ; exists ; 2010 ; Humanities Research Journal Series: Volume XVI ; xvi ; >
     au < testing ; exists ; 2011 ; Humanities Research Journal Series: Volume XVII ; xvii ; >
     au < testing ; exists ; 2012 ; Humanities Research Journal Series: Volume XVIII ; xviii ; >
-    au < ready ; exists ; 2013 ; Humanities Research Journal Series: Volume XIX ; xix ; >
+    au < crawling ; exists ; 2013 ; Humanities Research Journal Series: Volume XIX ; xix ; >
 
   }
   
@@ -285,9 +285,9 @@
     
     param[journal_id] = international-review-environmental-history
 
-    au < ready ; exists ; 2015 ; International Review of Environmental History: Volume 1 ; 1 ; >
-    au < ready ; exists ; 2016 ; International Review of Environmental History: Volume 2 ; 2 ; >
-    au < ready ; exists ; 2017 ; International Review of Environmental History: Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2015 ; International Review of Environmental History: Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2016 ; International Review of Environmental History: Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2017 ; International Review of Environmental History: Volume 3 ; 3 ; >
     au < manifest ; exists ; 2018 ; International Review of Environmental History: Volume 4 ; 4 ; >
 
   }
@@ -335,7 +335,7 @@
     
     param[journal_id] = human-voyage-undergraduate-research-biological-anthropology
 
-    au < ready ; exists ; 2017 ; The Human Voyage: Undergraduate Research in Biological Anthropology: Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2017 ; The Human Voyage: Undergraduate Research in Biological Anthropology: Volume 1 ; 1 ; >
 
   }
 
