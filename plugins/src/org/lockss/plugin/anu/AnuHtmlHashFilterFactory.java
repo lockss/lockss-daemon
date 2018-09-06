@@ -110,9 +110,6 @@ public class AnuHtmlHashFilterFactory implements FilterFactory {
           return false;
         }
       },
-      // 
-      // 
-      // 
     };
     
     InputStream interStream = new HtmlFilterInputStream(in, encoding,
