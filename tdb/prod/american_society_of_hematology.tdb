@@ -1,8 +1,7 @@
 {
 
   publisher <
-    name = American Society of Hematology ;
-    info[tester] = 2
+    name = American Society of Hematology
   >
 
   {
@@ -110,16 +109,16 @@
       au < HighWirePressH20Plugin ; down ; 1991 ; Blood Volume 78 ; 78 >
       au < HighWirePressH20Plugin ; down ; 1992 ; Blood Volume 79 ; 79 >
       au < HighWirePressH20Plugin ; down ; 1992 ; Blood Volume 80 ; 80 >
-      au < HighWirePressH20Plugin ; down ; 1993 ; Blood Volume 81 ; 81 >
-      au < HighWirePressH20Plugin ; down ; 1993 ; Blood Volume 82 ; 82 >
-      au < HighWirePressH20Plugin ; down ; 1994 ; Blood Volume 83 ; 83 >
-      au < HighWirePressH20Plugin ; down ; 1994 ; Blood Volume 84 ; 84 >
-      au < HighWirePressH20Plugin ; down ; 1995 ; Blood Volume 85 ; 85 >
-      au < HighWirePressH20Plugin ; down ; 1995 ; Blood Volume 86 ; 86 >
-      au < HighWirePressH20Plugin ; down ; 1996 ; Blood Volume 87 ; 87 >
-      au < HighWirePressH20Plugin ; down ; 1996 ; Blood Volume 88 ; 88 >
-      au < HighWirePressH20Plugin ; down ; 1997 ; Blood Volume 89 ; 89 >
-      au < HighWirePressH20Plugin ; down ; 1997 ; Blood Volume 90 ; 90 >
+      au < HighWirePressH20Plugin ; superseded ; 1993 ; Blood Volume 81 [superseded] ; 81 >
+      au < HighWirePressH20Plugin ; superseded ; 1993 ; Blood Volume 82 [superseded] ; 82 >
+      au < HighWirePressH20Plugin ; superseded ; 1994 ; Blood Volume 83 [superseded] ; 83 >
+      au < HighWirePressH20Plugin ; superseded ; 1994 ; Blood Volume 84 [superseded] ; 84 >
+      au < HighWirePressH20Plugin ; superseded ; 1995 ; Blood Volume 85 [superseded] ; 85 >
+      au < HighWirePressH20Plugin ; superseded ; 1995 ; Blood Volume 86 [superseded] ; 86 >
+      au < HighWirePressH20Plugin ; superseded ; 1996 ; Blood Volume 87 [superseded] ; 87 >
+      au < HighWirePressH20Plugin ; superseded ; 1996 ; Blood Volume 88 [superseded] ; 88 >
+      au < HighWirePressH20Plugin ; superseded ; 1997 ; Blood Volume 89 [superseded] ; 89 >
+      au < HighWirePressH20Plugin ; superseded ; 1997 ; Blood Volume 90 [superseded] ; 90 >
       au < HighWirePressH20Plugin ; superseded ; 1998 ; Blood Volume 91 [superseded] ; 91 >
       au < HighWirePressH20Plugin ; superseded ; 1998 ; Blood Volume 92 [superseded] ; 92 >
       au < HighWirePressH20Plugin ; superseded ; 1999 ; Blood Volume 93 [superseded] ; 93 >
@@ -158,36 +157,46 @@
       param[base_url] = http://www.bloodjournal.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < ash.ASHDrupalPlugin ; manifest ; 1998 ; Blood Volume 91 ; 91 >
-      au < ash.ASHDrupalPlugin ; manifest ; 1998 ; Blood Volume 92 ; 92 >
-      au < ash.ASHDrupalPlugin ; manifest ; 1999 ; Blood Volume 93 ; 93 >
-      au < ash.ASHDrupalPlugin ; manifest ; 1999 ; Blood Volume 94 ; 94 >
-      au < ash.ASHDrupalPlugin ; manifest ; 2000 ; Blood Volume 95 ; 95 >
-      au < ash.ASHDrupalPlugin ; manifest ; 2000 ; Blood Volume 96 ; 96 >
-      au < ash.ASHDrupalPlugin ; manifest ; 2001 ; Blood Volume 97 ; 97 >
-      au < ash.ASHDrupalPlugin ; manifest ; 2001 ; Blood Volume 98 ; 98 >
-      au < ash.ASHDrupalPlugin ; manifest ; 2002 ; Blood Volume 99 ; 99 >
-      au < ash.ASHDrupalPlugin ; manifest ; 2002 ; Blood Volume 100 ; 100 >
-      au < ash.ASHDrupalPlugin ; manifest ; 2003 ; Blood Volume 101 ; 101 >
-      au < ash.ASHDrupalPlugin ; manifest ; 2003 ; Blood Volume 102 ; 102 >
-      au < ash.ASHDrupalPlugin ; manifest ; 2004 ; Blood Volume 103 ; 103 >
-      au < ash.ASHDrupalPlugin ; manifest ; 2004 ; Blood Volume 104 ; 104 >
-      au < ash.ASHDrupalPlugin ; manifest ; 2005 ; Blood Volume 105 ; 105 >
-      au < ash.ASHDrupalPlugin ; manifest ; 2005 ; Blood Volume 106 ; 106 >
-      au < ash.ASHDrupalPlugin ; manifest ; 2006 ; Blood Volume 107 ; 107 >
-      au < ash.ASHDrupalPlugin ; manifest ; 2006 ; Blood Volume 108 ; 108 >
-      au < ash.ASHDrupalPlugin ; manifest ; 2007 ; Blood Volume 109 ; 109 >
-      au < ash.ASHDrupalPlugin ; manifest ; 2007 ; Blood Volume 110 ; 110 >
-      au < ash.ASHDrupalPlugin ; manifest ; 2008 ; Blood Volume 111 ; 111 >
-      au < ash.ASHDrupalPlugin ; manifest ; 2008 ; Blood Volume 112 ; 112 >
-      au < ash.ASHDrupalPlugin ; manifest ; 2009 ; Blood Volume 113 ; 113 >
-      au < ash.ASHDrupalPlugin ; manifest ; 2009 ; Blood Volume 114 ; 114 >
-      au < ash.ASHDrupalPlugin ; manifest ; 2010 ; Blood Volume 115 ; 115 >
-      au < ash.ASHDrupalPlugin ; manifest ; 2010 ; Blood Volume 116 ; 116 >
-      au < ash.ASHDrupalPlugin ; manifest ; 2011 ; Blood Volume 117 ; 117 >
-      au < ash.ASHDrupalPlugin ; manifest ; 2011 ; Blood Volume 118 ; 118 >
-      au < ash.ASHDrupalPlugin ; manifest ; 2012 ; Blood Volume 119 ; 119 >
-      au < ash.ASHDrupalPlugin ; manifest ; 2012 ; Blood Volume 120 ; 120 >
+      au < ash.ASHDrupalPlugin ; wanted ; 1993 ; Blood Volume 81 ; 81 >
+      au < ash.ASHDrupalPlugin ; wanted ; 1993 ; Blood Volume 82 ; 82 >
+      au < ash.ASHDrupalPlugin ; wanted ; 1994 ; Blood Volume 83 ; 83 >
+      au < ash.ASHDrupalPlugin ; wanted ; 1994 ; Blood Volume 84 ; 84 >
+      au < ash.ASHDrupalPlugin ; wanted ; 1995 ; Blood Volume 85 ; 85 >
+      au < ash.ASHDrupalPlugin ; wanted ; 1995 ; Blood Volume 86 ; 86 >
+      au < ash.ASHDrupalPlugin ; wanted ; 1996 ; Blood Volume 87 ; 87 >
+      au < ash.ASHDrupalPlugin ; wanted ; 1996 ; Blood Volume 88 ; 88 >
+      au < ash.ASHDrupalPlugin ; wanted ; 1997 ; Blood Volume 89 ; 89 >
+      au < ash.ASHDrupalPlugin ; wanted ; 1997 ; Blood Volume 90 ; 90 >
+      au < ash.ASHDrupalPlugin ; wanted ; 1998 ; Blood Volume 91 ; 91 >
+      au < ash.ASHDrupalPlugin ; wanted ; 1998 ; Blood Volume 92 ; 92 >
+      au < ash.ASHDrupalPlugin ; wanted ; 1999 ; Blood Volume 93 ; 93 >
+      au < ash.ASHDrupalPlugin ; wanted ; 1999 ; Blood Volume 94 ; 94 >
+      au < ash.ASHDrupalPlugin ; wanted ; 2000 ; Blood Volume 95 ; 95 >
+      au < ash.ASHDrupalPlugin ; wanted ; 2000 ; Blood Volume 96 ; 96 >
+      au < ash.ASHDrupalPlugin ; wanted ; 2001 ; Blood Volume 97 ; 97 >
+      au < ash.ASHDrupalPlugin ; wanted ; 2001 ; Blood Volume 98 ; 98 >
+      au < ash.ASHDrupalPlugin ; wanted ; 2002 ; Blood Volume 99 ; 99 >
+      au < ash.ASHDrupalPlugin ; wanted ; 2002 ; Blood Volume 100 ; 100 >
+      au < ash.ASHDrupalPlugin ; wanted ; 2003 ; Blood Volume 101 ; 101 >
+      au < ash.ASHDrupalPlugin ; wanted ; 2003 ; Blood Volume 102 ; 102 >
+      au < ash.ASHDrupalPlugin ; wanted ; 2004 ; Blood Volume 103 ; 103 >
+      au < ash.ASHDrupalPlugin ; wanted ; 2004 ; Blood Volume 104 ; 104 >
+      au < ash.ASHDrupalPlugin ; wanted ; 2005 ; Blood Volume 105 ; 105 >
+      au < ash.ASHDrupalPlugin ; wanted ; 2005 ; Blood Volume 106 ; 106 >
+      au < ash.ASHDrupalPlugin ; wanted ; 2006 ; Blood Volume 107 ; 107 >
+      au < ash.ASHDrupalPlugin ; wanted ; 2006 ; Blood Volume 108 ; 108 >
+      au < ash.ASHDrupalPlugin ; wanted ; 2007 ; Blood Volume 109 ; 109 >
+      au < ash.ASHDrupalPlugin ; wanted ; 2007 ; Blood Volume 110 ; 110 >
+      au < ash.ASHDrupalPlugin ; wanted ; 2008 ; Blood Volume 111 ; 111 >
+      au < ash.ASHDrupalPlugin ; wanted ; 2008 ; Blood Volume 112 ; 112 >
+      au < ash.ASHDrupalPlugin ; wanted ; 2009 ; Blood Volume 113 ; 113 >
+      au < ash.ASHDrupalPlugin ; wanted ; 2009 ; Blood Volume 114 ; 114 >
+      au < ash.ASHDrupalPlugin ; wanted ; 2010 ; Blood Volume 115 ; 115 >
+      au < ash.ASHDrupalPlugin ; wanted ; 2010 ; Blood Volume 116 ; 116 >
+      au < ash.ASHDrupalPlugin ; wanted ; 2011 ; Blood Volume 117 ; 117 >
+      au < ash.ASHDrupalPlugin ; wanted ; 2011 ; Blood Volume 118 ; 118 >
+      au < ash.ASHDrupalPlugin ; wanted ; 2012 ; Blood Volume 119 ; 119 >
+      au < ash.ASHDrupalPlugin ; wanted ; 2012 ; Blood Volume 120 ; 120 >
       au < ash.ASHDrupalPlugin ; released ; 2013 ; Blood Volume 121 ; 121 >
       au < ash.ASHDrupalPlugin ; released ; 2013 ; Blood Volume 122 ; 122 >
       au < ash.ASHDrupalPlugin ; released ; 2014 ; Blood Volume 123 ; 123 >
