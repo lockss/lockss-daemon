@@ -4645,6 +4645,8 @@
       >
 
       param[journal_issn] = 2141-9248
+
+    {
       param[base_url] = http://www.amhsr.org/
       #move to new publisher, https://www.ajol.info/index.php/amhsr
 
@@ -4654,6 +4656,17 @@
       au < frozen ; exists ; 2014 ; Annals of Medical and Health Sciences Research Volume 4 ; 2014 ; 4 ; >
       au < frozen ; exists ; 2015 ; Annals of Medical and Health Sciences Research Volume 5 ; 2015 ; 5 ; >
       au < deepCrawl ; exists ; 2016 ; Annals of Medical and Health Sciences Research Volume 6 ; 2016 ; 6 ; >
+
+    }
+
+    {
+      param[base_url] = https://www.amhsr.org/
+      #move to new publisher, https://www.ajol.info/index.php/amhsr
+
+      au < exists ; exists ; 2017 ; Annals of Medical and Health Sciences Research Volume 7 ; 2017 ; 7 ; >
+      au < exists ; exists ; 2018 ; Annals of Medical and Health Sciences Research Volume 8 ; 2018 ; 8 ; >
+
+    }
 
   }
 
@@ -6085,6 +6098,8 @@
       >
 
       param[journal_issn] = 2278-960X
+
+    {
       param[base_url] = http://www.jbcrs.org/
       #move to new publisher, https://www.ajol.info/index.php/jbcrs
 
@@ -6093,6 +6108,17 @@
       au < frozen ; exists ; 2014 ; Journal of Basic and Clinical Reproductive Sciences Volume 3 ; 2014 ; 3 ; >
       au < finished ; crawling ; 2015 ; Journal of Basic and Clinical Reproductive Sciences Volume 4 ; 2015 ; 4 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2016 ; Journal of Basic and Clinical Reproductive Sciences Volume 5 ; 2016 ; 5 ; >
+
+    }
+
+    {
+      param[base_url] = https://www.jbcrs.org/
+      #move to new publisher, https://www.ajol.info/index.php/jbcrs
+
+      au < exists ; exists ; 2017 ; Journal of Basic and Clinical Reproductive Sciences Volume 6 ; 2017 ; 6 ; >
+      au < exists ; exists ; 2018 ; Journal of Basic and Clinical Reproductive Sciences Volume 7 ; 2018 ; 7 ; >
+
+    }
 
   }
 
