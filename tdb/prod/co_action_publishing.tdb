@@ -8,8 +8,8 @@
   #implicit < status ; year ; name ; volume ;  param[year] >
 
   plugin = org.lockss.plugin.taylorandfrancis.TaylorAndFrancisPlugin
-  implicit < status ; year ; name ; param[volume_name] >
-  param[base_url] = http://www.tandfonline.com/
+  implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
+  #param[base_url] = http://www.tandfonline.com/
 
   {
   
@@ -25,9 +25,9 @@
       param[journal_id] = zaie20
       # discontinued in 2013
     
-      au < released ; 2010 ; Annals of Innovation & Entrepreneurship Volume 1 ; 1 >
-      au < released ; 2011 ; Annals of Innovation & Entrepreneurship Volume 2 ; 2 >
-      au < released ; 2012 ; Annals of Innovation & Entrepreneurship Volume 3 ; 3 >
+      au < released ; 2010 ; Annals of Innovation & Entrepreneurship Volume 1 ; 1 ; http://www.tandfonline.com/ >
+      au < released ; 2011 ; Annals of Innovation & Entrepreneurship Volume 2 ; 2 ; http://www.tandfonline.com/ >
+      au < released ; 2012 ; Annals of Innovation & Entrepreneurship Volume 3 ; 3 ; http://www.tandfonline.com/ >
     
     }
     
@@ -44,14 +44,14 @@
     #param[base_url] = http://www.childlitaesthetics.net/
     param[journal_id] = zblf20
 
-    au < doNotProcess ; 2010 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 1 ; 1 >
-    au < doNotProcess ; 2011 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 2 ; 2 >
-    au < doNotProcess ; 2012 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 3 ; 3 >
-    au < doNotProcess ; 2013 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 4 ; 4 >
-    au < released ; 2014 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 5 ; 5 >
-    au < doNotProcess ; 2015 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 6 ; 6 >
-    au < released ; 2016 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 7 ; 7 >
-    au < released ; 2017 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 8 ; 8 >
+    au < doNotProcess ; 2010 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 1 ; 1 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2011 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 2 ; 2 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2012 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 3 ; 3 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2013 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 4 ; 4 ; https://www.tandfonline.com/ >
+    au < released ; 2014 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 5 ; 5 ; http://www.tandfonline.com/ >
+    au < doNotProcess ; 2015 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 6 ; 6 ; https://www.tandfonline.com/ >
+    au < released ; 2016 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 7 ; 7 ; http://www.tandfonline.com/ >
+    au < released ; 2017 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 8 ; 8 ; http://www.tandfonline.com/ >
 
   }
 
@@ -67,14 +67,14 @@
       #param[base_url] = http://diabeticfootandankle.net/
       param[journal_id] = zdfa20
 
-      au < doNotProcess ; 2010 ; Diabetic Foot & Ankle [including Supplements] Volume 1 ; 1 >
-      au < doNotProcess ; 2011 ; Diabetic Foot & Ankle [including Supplements] Volume 2 ; 2 >
-      au < doNotProcess ; 2012 ; Diabetic Foot & Ankle [including Supplements] Volume 3 ; 3 >
-      au < doNotProcess ; 2013 ; Diabetic Foot & Ankle [including Supplements] Volume 4 ; 4 >
-      au < released ; 2014 ; Diabetic Foot & Ankle [including Supplements] Volume 5 ; 5 >
-      au < doNotProcess ; 2015 ; Diabetic Foot & Ankle [including Supplements] Volume 6 ; 6 >
-      au < released ; 2016 ; Diabetic Foot & Ankle [including Supplements] Volume 7 ; 7 >
-      au < released ; 2017 ; Diabetic Foot & Ankle [including Supplements] Volume 8 ; 8 >
+      au < doNotProcess ; 2010 ; Diabetic Foot & Ankle [including Supplements] Volume 1 ; 1 ; https://www.tandfonline.com/ >
+      au < doNotProcess ; 2011 ; Diabetic Foot & Ankle [including Supplements] Volume 2 ; 2 ; https://www.tandfonline.com/ >
+      au < doNotProcess ; 2012 ; Diabetic Foot & Ankle [including Supplements] Volume 3 ; 3 ; https://www.tandfonline.com/ >
+      au < doNotProcess ; 2013 ; Diabetic Foot & Ankle [including Supplements] Volume 4 ; 4 ; https://www.tandfonline.com/ >
+      au < released ; 2014 ; Diabetic Foot & Ankle [including Supplements] Volume 5 ; 5 ; http://www.tandfonline.com/ >
+      au < doNotProcess ; 2015 ; Diabetic Foot & Ankle [including Supplements] Volume 6 ; 6 ; https://www.tandfonline.com/ >
+      au < released ; 2016 ; Diabetic Foot & Ankle [including Supplements] Volume 7 ; 7 ; http://www.tandfonline.com/ >
+      au < released ; 2017 ; Diabetic Foot & Ankle [including Supplements] Volume 8 ; 8 ; http://www.tandfonline.com/ >
       
     }
   }
@@ -90,38 +90,15 @@
     #param[base_url] = http://www.education-inquiry.net/
     param[journal_id] = zedu20
 
-    au < released ; 2010 ; Education Inquiry Volume 1 ; 1 >
-    au < released ; 2011 ; Education Inquiry Volume 2 ; 2 >
-    au < released ; 2012 ; Education Inquiry Volume 3 ; 3 >
-    au < released ; 2013 ; Education Inquiry Volume 4 ; 4 >
-    au < released ; 2014 ; Education Inquiry Volume 5 ; 5 >
-    au < doNotProcess ; 2015 ; Education Inquiry Volume 6 ; 6 >
-    au < released ; 2016 ; Education Inquiry Volume 7 ; 7 >
-    au < released ; 2017 ; Education Inquiry Volume 8 ; 8 >
+    au < released ; 2010 ; Education Inquiry Volume 1 ; 1 ; http://www.tandfonline.com/ >
+    au < released ; 2011 ; Education Inquiry Volume 2 ; 2 ; http://www.tandfonline.com/ >
+    au < released ; 2012 ; Education Inquiry Volume 3 ; 3 ; http://www.tandfonline.com/ >
+    au < released ; 2013 ; Education Inquiry Volume 4 ; 4 ; http://www.tandfonline.com/ >
+    au < released ; 2014 ; Education Inquiry Volume 5 ; 5 ; http://www.tandfonline.com/ >
+    au < doNotProcess ; 2015 ; Education Inquiry Volume 6 ; 6 ; https://www.tandfonline.com/ >
+    au < released ; 2016 ; Education Inquiry Volume 7 ; 7 ; http://www.tandfonline.com/ >
+    au < released ; 2017 ; Education Inquiry Volume 8 ; 8 ; http://www.tandfonline.com/ >
 
-  }
-
-  {
-
-    title <
-      name = Emerging Health Threats Journal ;
-      eissn = 1752-8550 ;
-      issnl = 1752-8550
-    >
-
-    #param[base_url] = http://www.eht-journal.net/
-    param[journal_id] = zehtj20
-    # vol. 4 includes Supplements 1. Discontinued. Last article published in 2015.
-
-    au < doNotProcess ; 2008 ; Emerging Health Threats Journal Volume 1 ; 1 >
-    au < doNotProcess ; 2009 ; Emerging Health Threats Journal Volume 2 ; 2 >
-    au < doNotProcess ; 2010 ; Emerging Health Threats Journal Volume 3 ; 3 >
-    au < doNotProcess ; 2011 ; Emerging Health Threats Journal [including Supplements] Volume 4 ; 4 >
-    au < doNotProcess ; 2012 ; Emerging Health Threats Journal [including Supplements] Volume 5 ; 5 >
-    au < exists ; 2013 ; Emerging Health Threats Journal [including Supplements] Volume 6 ; 6 >
-    au < exists ; 2014 ; Emerging Health Threats Journal [including Supplements] Volume 7 ; 7 >
-    au < exists ; 2015 ; Emerging Health Threats Journal [including Supplements] Volume 8 ; 8 >
-    
   }
 
   {
@@ -136,16 +113,16 @@
     #param[base_url] = http://www.ethicsandglobalpolitics.net/
     param[journal_id] = zegp20
 
-    au < doNotProcess ; 2008 ; Ethics & Global Politics Volume 1 ; 1 >
-    au < doNotProcess ; 2009 ; Ethics & Global Politics Volume 2 ; 2 >
-    au < doNotProcess ; 2010 ; Ethics & Global Politics Volume 3 ; 3 >
-    au < doNotProcess ; 2011 ; Ethics & Global Politics Volume 4 ; 4 >
-    au < doNotProcess ; 2012 ; Ethics & Global Politics Volume 5 ; 5 >
-    au < doNotProcess ; 2013 ; Ethics & Global Politics Volume 6 ; 6 >
-    au < released ; 2014 ; Ethics & Global Politics Volume 7 ; 7 >
-    au < doNotProcess ; 2015 ; Ethics & Global Politics Volume 8 ; 8 >
-    au < released ; 2016 ; Ethics & Global Politics Volume 9 ; 9 >
-    au < released ; 2017 ; Ethics & Global Politics Volume 10 ; 10 >
+    au < doNotProcess ; 2008 ; Ethics & Global Politics Volume 1 ; 1 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2009 ; Ethics & Global Politics Volume 2 ; 2 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2010 ; Ethics & Global Politics Volume 3 ; 3 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2011 ; Ethics & Global Politics Volume 4 ; 4 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2012 ; Ethics & Global Politics Volume 5 ; 5 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2013 ; Ethics & Global Politics Volume 6 ; 6 ; https://www.tandfonline.com/ >
+    au < released ; 2014 ; Ethics & Global Politics Volume 7 ; 7 ; http://www.tandfonline.com/ >
+    au < doNotProcess ; 2015 ; Ethics & Global Politics Volume 8 ; 8 ; https://www.tandfonline.com/ >
+    au < released ; 2016 ; Ethics & Global Politics Volume 9 ; 9 ; http://www.tandfonline.com/ >
+    au < released ; 2017 ; Ethics & Global Politics Volume 10 ; 10; http://www.tandfonline.com/  >
 
   }
     
@@ -160,10 +137,10 @@
     #param[base_url] = http://www.ecrj.net/
     param[journal_id] = zecr20
 
-    au < released ; 2014 ; European Clinical Respiratory Journal Volume 1 ; 1 >
-    au < doNotProcess ; 2015 ; European Clinical Respiratory Journal Volume 2 ; 2 >
-    au < released ; 2016 ; European Clinical Respiratory Journal Volume 3 ; 3 >
-    au < released ; 2017 ; European Clinical Respiratory Journal Volume 4 ; 4 >
+    au < released ; 2014 ; European Clinical Respiratory Journal Volume 1 ; 1 ; http://www.tandfonline.com/ >
+    au < doNotProcess ; 2015 ; European Clinical Respiratory Journal Volume 2 ; 2 ; https://www.tandfonline.com/ >
+    au < released ; 2016 ; European Clinical Respiratory Journal Volume 3 ; 3 ; http://www.tandfonline.com/ >
+    au < released ; 2017 ; European Clinical Respiratory Journal Volume 4 ; 4 ; http://www.tandfonline.com/ >
 
   }
 
@@ -183,14 +160,14 @@
     comment[supplement_issn_and_eissn] = issn = 2000-8198 eissn = 2000-818X
      
      
-    au < doNotProcess ; 2010 ; European Journal of Psychotraumatology [including Supplements] Volume 1 ; 1 >
-    au < doNotProcess ; 2011 ; European Journal of Psychotraumatology [including Supplements] Volume 2 ; 2 >
-    au < doNotProcess ; 2012 ; European Journal of Psychotraumatology [including Supplements] Volume 3 ; 3 >
-    au < released ; 2013 ; European Journal of Psychotraumatology [including Supplements] Volume 4 ; 4 >
-    au < released ; 2014 ; European Journal of Psychotraumatology [including Supplements] Volume 5 ; 5 >
-    au < released ; 2015 ; European Journal of Psychotraumatology [including Supplements] Volume 6 ; 6 >
-    au < released ; 2016 ; European Journal of Psychotraumatology [including Supplements] Volume 7 ; 7 >
-    au < released ; 2017 ; European Journal of Psychotraumatology [including Supplements] Volume 8 ; 8 >
+    au < doNotProcess ; 2010 ; European Journal of Psychotraumatology [including Supplements] Volume 1 ; 1 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2011 ; European Journal of Psychotraumatology [including Supplements] Volume 2 ; 2 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2012 ; European Journal of Psychotraumatology [including Supplements] Volume 3 ; 3 ; https://www.tandfonline.com/ >
+    au < released ; 2013 ; European Journal of Psychotraumatology [including Supplements] Volume 4 ; 4 ; http://www.tandfonline.com/ >
+    au < released ; 2014 ; European Journal of Psychotraumatology [including Supplements] Volume 5 ; 5 ; http://www.tandfonline.com/ >
+    au < released ; 2015 ; European Journal of Psychotraumatology [including Supplements] Volume 6 ; 6 ; http://www.tandfonline.com/ >
+    au < released ; 2016 ; European Journal of Psychotraumatology [including Supplements] Volume 7 ; 7 ; http://www.tandfonline.com/ >
+    au < released ; 2017 ; European Journal of Psychotraumatology [including Supplements] Volume 8 ; 8 ; http://www.tandfonline.com/ >
 
   }
   
@@ -209,16 +186,16 @@
 
 	comment[fnr2008] = 502 Proxy Error
 
-    au < doNotProcess ; 2008 ; Food & Nutrition Research Volume 52 ; 52 >
-    au < doNotProcess ; 2009 ; Food & Nutrition Research [including Supplements] Volume 53 ; 53 >
-    au < doNotProcess ; 2010 ; Food & Nutrition Research [including Supplements] Volume 54 ; 54 >
-    au < doNotProcess ; 2011 ; Food & Nutrition Research [including Supplements] Volume 55 ; 55 >
-    au < doNotProcess ; 2012 ; Food & Nutrition Research [including Supplements] Volume 56 ; 56 >
-    au < doNotProcess ; 2013 ; Food & Nutrition Research [including Supplements] Volume 57 ; 57 >
-    au < released ; 2014 ; Food & Nutrition Research [including Supplements] Volume 58 ; 58 >
-    au < doNotProcess ; 2015 ; Food & Nutrition Research [including Supplements] Volume 59 ; 59 >
-    au < released ; 2016 ; Food & Nutrition Research [including Supplements] Volume 60 ; 60 >
-    au < released ; 2017 ; Food & Nutrition Research [including Supplements] Volume 61 ; 61 >
+    au < doNotProcess ; 2008 ; Food & Nutrition Research Volume 52 ; 52 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2009 ; Food & Nutrition Research [including Supplements] Volume 53 ; 53 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2010 ; Food & Nutrition Research [including Supplements] Volume 54 ; 54 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2011 ; Food & Nutrition Research [including Supplements] Volume 55 ; 55 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2012 ; Food & Nutrition Research [including Supplements] Volume 56 ; 56 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2013 ; Food & Nutrition Research [including Supplements] Volume 57 ; 57 ; https://www.tandfonline.com/ >
+    au < released ; 2014 ; Food & Nutrition Research [including Supplements] Volume 58 ; 58 ; http://www.tandfonline.com/ >
+    au < doNotProcess ; 2015 ; Food & Nutrition Research [including Supplements] Volume 59 ; 59 ; https://www.tandfonline.com/ >
+    au < released ; 2016 ; Food & Nutrition Research [including Supplements] Volume 60 ; 60 ; http://www.tandfonline.com/ >
+    au < released ; 2017 ; Food & Nutrition Research [including Supplements] Volume 61 ; 61 ; http://www.tandfonline.com/ >
 
   }
 
@@ -234,16 +211,16 @@
     #param[base_url] = http://www.globalhealthaction.net/
     param[journal_id] = zgha20
 
-    au < doNotProcess ; 2008 ; Global Health Action Volume 1 ; 1 >
-    au < doNotProcess ; 2009 ; Global Health Action [including Supplements] Volume 2 ; 2 >
-    au < doNotProcess ; 2010 ; Global Health Action [including Supplements] Volume 3 ; 3 >
-    au < doNotProcess ; 2011 ; Global Health Action [including Supplements] Volume 4 ; 4 >
-    au < doNotProcess ; 2012 ; Global Health Action [including Supplements] Volume 5 ; 5 >
-    au < doNotProcess ; 2013 ; Global Health Action [including Supplements] Volume 6 ; 6 >
-    au < released ; 2014 ; Global Health Action [including Supplements] Volume 7 ; 7 >
-    au < doNotProcess ; 2015 ; Global Health Action [including Supplements] Volume 8 ; 8 >
-    au < released ; 2016 ; Global Health Action [including Supplements] Volume 9 ; 9 >
-    au < released ; 2017 ; Global Health Action [including Supplements] Volume 10 ; 10 >
+    au < doNotProcess ; 2008 ; Global Health Action Volume 1 ; 1 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2009 ; Global Health Action [including Supplements] Volume 2 ; 2 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2010 ; Global Health Action [including Supplements] Volume 3 ; 3 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2011 ; Global Health Action [including Supplements] Volume 4 ; 4 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2012 ; Global Health Action [including Supplements] Volume 5 ; 5 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2013 ; Global Health Action [including Supplements] Volume 6 ; 6 ; https://www.tandfonline.com/ >
+    au < released ; 2014 ; Global Health Action [including Supplements] Volume 7 ; 7 ; http://www.tandfonline.com/ >
+    au < doNotProcess ; 2015 ; Global Health Action [including Supplements] Volume 8 ; 8 ; https://www.tandfonline.com/ >
+    au < released ; 2016 ; Global Health Action [including Supplements] Volume 9 ; 9 ; http://www.tandfonline.com/ >
+    au < released ; 2017 ; Global Health Action [including Supplements] Volume 10 ; 10 ; http://www.tandfonline.com/ >
 
   }
 
@@ -257,13 +234,13 @@
     #param[base_url] = http://www.infectionecologyandepidemiology.net/
     param[journal_id] = ziee20
 
-    au < doNotProcess ; 2011 ; Infection Ecology & Epidemiology [including Supplements] Volume 1 ; 1 >
-    au < doNotProcess ; 2012 ; Infection Ecology & Epidemiology [including Supplements] Volume 2 ; 2 >
-    au < doNotProcess ; 2013 ; Infection Ecology & Epidemiology [including Supplements] Volume 3 ; 3 >
-    au < released ; 2014 ; Infection Ecology & Epidemiology [including Supplements] Volume 4 ; 4 >
-    au < released ; 2015 ; Infection Ecology & Epidemiology [including Supplements] Volume 5 ; 5 >
-    au < released ; 2016 ; Infection Ecology & Epidemiology [including Supplements] Volume 6 ; 6 >
-    au < released ; 2017 ; Infection Ecology & Epidemiology [including Supplements] Volume 7 ; 7 >
+    au < doNotProcess ; 2011 ; Infection Ecology & Epidemiology [including Supplements] Volume 1 ; 1 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2012 ; Infection Ecology & Epidemiology [including Supplements] Volume 2 ; 2 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2013 ; Infection Ecology & Epidemiology [including Supplements] Volume 3 ; 3 ; https://www.tandfonline.com/ >
+    au < released ; 2014 ; Infection Ecology & Epidemiology [including Supplements] Volume 4 ; 4 ; http://www.tandfonline.com/ >
+    au < released ; 2015 ; Infection Ecology & Epidemiology [including Supplements] Volume 5 ; 5 ; http://www.tandfonline.com/ >
+    au < released ; 2016 ; Infection Ecology & Epidemiology [including Supplements] Volume 6 ; 6 ; http://www.tandfonline.com/ >
+    au < released ; 2017 ; Infection Ecology & Epidemiology [including Supplements] Volume 7 ; 7 ; http://www.tandfonline.com/ >
 
   }
 
@@ -280,23 +257,23 @@
     param[journal_id] = zich20
     comment[issn] = volume 71, 2012
         
-    au < doNotProcess ; 2001 ; International Journal of Circumpolar Health [including Supplements] Volume 60 ; 60 >
-    au < doNotProcess ; 2002 ; International Journal of Circumpolar Health [including Supplements] Volume 61 ; 61 >
-    au < doNotProcess ; 2003 ; International Journal of Circumpolar Health Volume 62 ; 62 >
-    au < doNotProcess ; 2004 ; International Journal of Circumpolar Health Volume 63 ; 63 >
-    au < doNotProcess ; 2005 ; International Journal of Circumpolar Health Volume 64 ; 64 >
-    au < doNotProcess ; 2006 ; International Journal of Circumpolar Health Volume 65 ; 65 >
-    au < doNotProcess ; 2007 ; International Journal of Circumpolar Health Volume 66 ; 66 >
-    au < doNotProcess ; 2008 ; International Journal of Circumpolar Health Volume 67 ; 67 >
-    au < doNotProcess ; 2009 ; International Journal of Circumpolar Health Volume 68 ; 68 >
-    au < doNotProcess ; 2010 ; International Journal of Circumpolar Health Volume 69 ; 69 >
-    au < doNotProcess ; 2011 ; International Journal of Circumpolar Health Volume 70 ; 70 >
-    au < doNotProcess ; 2012 ; International Journal of Circumpolar Health Volume 71 ; 71 >
-    au < released ; 2013 ; International Journal of Circumpolar Health Volume 72 ; 72 >
-    au < released ; 2014 ; International Journal of Circumpolar Health Volume 73 ; 73 >
-    au < doNotProcess ; 2015 ; International Journal of Circumpolar Health Volume 74 ; 74 >
-    au < released ; 2016 ; International Journal of Circumpolar Health Volume 75 ; 75 >
-    au < released ; 2017 ; International Journal of Circumpolar Health Volume 76 ; 76 >
+    au < doNotProcess ; 2001 ; International Journal of Circumpolar Health [including Supplements] Volume 60 ; 60 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2002 ; International Journal of Circumpolar Health [including Supplements] Volume 61 ; 61 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2003 ; International Journal of Circumpolar Health Volume 62 ; 62 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2004 ; International Journal of Circumpolar Health Volume 63 ; 63 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2005 ; International Journal of Circumpolar Health Volume 64 ; 64 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2006 ; International Journal of Circumpolar Health Volume 65 ; 65 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2007 ; International Journal of Circumpolar Health Volume 66 ; 66 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2008 ; International Journal of Circumpolar Health Volume 67 ; 67 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2009 ; International Journal of Circumpolar Health Volume 68 ; 68 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2010 ; International Journal of Circumpolar Health Volume 69 ; 69 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2011 ; International Journal of Circumpolar Health Volume 70 ; 70 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2012 ; International Journal of Circumpolar Health Volume 71 ; 71 ; https://www.tandfonline.com/ >
+    au < released ; 2013 ; International Journal of Circumpolar Health Volume 72 ; 72 ; http://www.tandfonline.com/ >
+    au < released ; 2014 ; International Journal of Circumpolar Health Volume 73 ; 73 ; http://www.tandfonline.com/ >
+    au < doNotProcess ; 2015 ; International Journal of Circumpolar Health Volume 74 ; 74 ; https://www.tandfonline.com/ >
+    au < released ; 2016 ; International Journal of Circumpolar Health Volume 75 ; 75 ; http://www.tandfonline.com/ >
+    au < released ; 2017 ; International Journal of Circumpolar Health Volume 76 ; 76 ; http://www.tandfonline.com/ >
 
   }
 
@@ -312,18 +289,18 @@
     #param[base_url] = http://www.ijqhw.net/
     param[journal_id] = zqhw20
 
-    au < doNotProcess ; 2006 ; International Journal of Qualitative Studies on Health and Well-being Volume 1 ; 1 >
-    au < doNotProcess ; 2007 ; International Journal of Qualitative Studies on Health and Well-being Volume 2 ; 2 >
-    au < doNotProcess ; 2008 ; International Journal of Qualitative Studies on Health and Well-being Volume 3 ; 3 >
-    au < doNotProcess ; 2009 ; International Journal of Qualitative Studies on Health and Well-being Volume 4 ; 4 >
-    au < doNotProcess ; 2010 ; International Journal of Qualitative Studies on Health and Well-being Volume 5 ; 5 >
-    au < doNotProcess ; 2011 ; International Journal of Qualitative Studies on Health and Well-being Volume 6 ; 6 >
-    au < doNotProcess ; 2012 ; International Journal of Qualitative Studies on Health and Well-being Volume 7 ; 7 >
-    au < released ; 2013 ; International Journal of Qualitative Studies on Health and Well-being Volume 8 ; 8 >
-    au < released ; 2014 ; International Journal of Qualitative Studies on Health and Well-being Volume 9 ; 9 >
-    au < doNotProcess ; 2015 ; International Journal of Qualitative Studies on Health and Well-being Volume 10 ; 10 >
-    au < released ; 2016 ; International Journal of Qualitative Studies on Health and Well-being Volume 11 ; 11 >
-    au < released ; 2017 ; International Journal of Qualitative Studies on Health and Well-being Volume 12 ; 12 >
+    au < doNotProcess ; 2006 ; International Journal of Qualitative Studies on Health and Well-being Volume 1 ; 1 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2007 ; International Journal of Qualitative Studies on Health and Well-being Volume 2 ; 2 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2008 ; International Journal of Qualitative Studies on Health and Well-being Volume 3 ; 3 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2009 ; International Journal of Qualitative Studies on Health and Well-being Volume 4 ; 4 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2010 ; International Journal of Qualitative Studies on Health and Well-being Volume 5 ; 5 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2011 ; International Journal of Qualitative Studies on Health and Well-being Volume 6 ; 6 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2012 ; International Journal of Qualitative Studies on Health and Well-being Volume 7 ; 7 ; https://www.tandfonline.com/ >
+    au < released ; 2013 ; International Journal of Qualitative Studies on Health and Well-being Volume 8 ; 8 ; http://www.tandfonline.com/ >
+    au < released ; 2014 ; International Journal of Qualitative Studies on Health and Well-being Volume 9 ; 9 ; http://www.tandfonline.com/ >
+    au < doNotProcess ; 2015 ; International Journal of Qualitative Studies on Health and Well-being Volume 10 ; 10 ; https://www.tandfonline.com/ >
+    au < released ; 2016 ; International Journal of Qualitative Studies on Health and Well-being Volume 11 ; 11 ; http://www.tandfonline.com/ >
+    au < released ; 2017 ; International Journal of Qualitative Studies on Health and Well-being Volume 12 ; 12 ; http://www.tandfonline.com/ >
     
   }
 
@@ -338,15 +315,15 @@
     #param[base_url] = http://www.aestheticsandculture.net/
     param[journal_id] = zjac20
 
-    au < doNotProcess ; 2009 ; Journal of Aesthetics & Culture Volume 1 ; 1 >
-    au < doNotProcess ; 2010 ; Journal of Aesthetics & Culture Volume 2 ; 2 >
-    au < doNotProcess ; 2011 ; Journal of Aesthetics & Culture Volume 3 ; 3 >
-    au < doNotProcess ; 2012 ; Journal of Aesthetics & Culture Volume 4 ; 4 >
-    au < released ; 2013 ; Journal of Aesthetics & Culture Volume 5 ; 5 >
-    au < released ; 2014 ; Journal of Aesthetics & Culture Volume 6 ; 6 >
-    au < doNotProcess ; 2015 ; Journal of Aesthetics & Culture Volume 7 ; 7 >
-    au < released ; 2016 ; Journal of Aesthetics & Culture Volume 8 ; 8 >
-    au < released ; 2017 ; Journal of Aesthetics & Culture Volume 9 ; 9 >
+    au < doNotProcess ; 2009 ; Journal of Aesthetics & Culture Volume 1 ; 1 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2010 ; Journal of Aesthetics & Culture Volume 2 ; 2 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2011 ; Journal of Aesthetics & Culture Volume 3 ; 3 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2012 ; Journal of Aesthetics & Culture Volume 4 ; 4 ; https://www.tandfonline.com/ >
+    au < released ; 2013 ; Journal of Aesthetics & Culture Volume 5 ; 5 ; http://www.tandfonline.com/ >
+    au < released ; 2014 ; Journal of Aesthetics & Culture Volume 6 ; 6 ; http://www.tandfonline.com/ >
+    au < doNotProcess ; 2015 ; Journal of Aesthetics & Culture Volume 7 ; 7 ; https://www.tandfonline.com/ >
+    au < released ; 2016 ; Journal of Aesthetics & Culture Volume 8 ; 8 ; http://www.tandfonline.com/ >
+    au < released ; 2017 ; Journal of Aesthetics & Culture Volume 9 ; 9 ; http://www.tandfonline.com/ >
   }
 
   {
@@ -360,13 +337,13 @@
     #param[base_url] = http://www.jchimp.net/
     param[journal_id] = zjch20
 
-    au < doNotProcess ; 2011 ; Journal of Community Hospital Internal Medicine Perspectives Volume 1 ; 1 >
-    au < doNotProcess ; 2012 ; Journal of Community Hospital Internal Medicine Perspectives Volume 2 ; 2 >
-    au < doNotProcess ; 2013 ; Journal of Community Hospital Internal Medicine Perspectives Volume 3 ; 3 >
-    au < released ; 2014 ; Journal of Community Hospital Internal Medicine Perspectives Volume 4 ; 4 >
-    au < doNotProcess ; 2015 ; Journal of Community Hospital Internal Medicine Perspectives Volume 5 ; 5 >
-    au < released ; 2016 ; Journal of Community Hospital Internal Medicine Perspectives Volume 6 ; 6 >
-    au < released ; 2017 ; Journal of Community Hospital Internal Medicine Perspectives Volume 7 ; 7 >
+    au < doNotProcess ; 2011 ; Journal of Community Hospital Internal Medicine Perspectives Volume 1 ; 1 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2012 ; Journal of Community Hospital Internal Medicine Perspectives Volume 2 ; 2 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2013 ; Journal of Community Hospital Internal Medicine Perspectives Volume 3 ; 3 ; https://www.tandfonline.com/ >
+    au < released ; 2014 ; Journal of Community Hospital Internal Medicine Perspectives Volume 4 ; 4 ; http://www.tandfonline.com/ >
+    au < doNotProcess ; 2015 ; Journal of Community Hospital Internal Medicine Perspectives Volume 5 ; 5 ; https://www.tandfonline.com/ >
+    au < released ; 2016 ; Journal of Community Hospital Internal Medicine Perspectives Volume 6 ; 6 ; http://www.tandfonline.com/ >
+    au < released ; 2017 ; Journal of Community Hospital Internal Medicine Perspectives Volume 7 ; 7 ; http://www.tandfonline.com/ >
   }
 
   {
@@ -380,12 +357,12 @@
     #param[base_url] = http://www.jecme.eu/
     param[journal_id] = zjec20
 
-    au < released ; 2012 ; Journal of European Continuing Medical Education Volume 1 ; 1 >
-    au < released ; 2013 ; Journal of European Continuing Medical Education Volume 2 ; 2 >
-    au < released ; 2014 ; Journal of European Continuing Medical Education Volume 3 ; 3 >
-    au < doNotProcess ; 2015 ; Journal of European Continuing Medical Education Volume 4 ; 4 >
-    au < released ; 2016 ; Journal of European Continuing Medical Education Volume 5 ; 5 >
-    au < released ; 2017 ; Journal of European Continuing Medical Education Volume 6 ; 6 >
+    au < released ; 2012 ; Journal of European Continuing Medical Education Volume 1 ; 1 ; http://www.tandfonline.com/ >
+    au < released ; 2013 ; Journal of European Continuing Medical Education Volume 2 ; 2 ; http://www.tandfonline.com/ >
+    au < released ; 2014 ; Journal of European Continuing Medical Education Volume 3 ; 3 ; http://www.tandfonline.com/ >
+    au < doNotProcess ; 2015 ; Journal of European Continuing Medical Education Volume 4 ; 4 ; https://www.tandfonline.com/ >
+    au < released ; 2016 ; Journal of European Continuing Medical Education Volume 5 ; 5 ; http://www.tandfonline.com/ >
+    au < released ; 2017 ; Journal of European Continuing Medical Education Volume 6 ; 6 ; http://www.tandfonline.com/ >
 
   }
 
@@ -400,11 +377,11 @@
     #param[base_url] = http://www.jmahp.net/
     param[journal_id] = zjma20
 
-    au < released ; 2013 ; Journal of Market Access & Health Policy Volume 1 ; 1 >
-    au < released ; 2014 ; Journal of Market Access & Health Policy Volume 2 ; 2 >
-    au < doNotProcess ; 2015 ; Journal of Market Access & Health Policy Volume 3 ; 3 >
-    au < released ; 2016 ; Journal of Market Access & Health Policy Volume 4 ; 4 >
-    au < released ; 2017 ; Journal of Market Access & Health Policy Volume 5 ; 5 >
+    au < released ; 2013 ; Journal of Market Access & Health Policy Volume 1 ; 1 ; http://www.tandfonline.com/ >
+    au < released ; 2014 ; Journal of Market Access & Health Policy Volume 2 ; 2 ; http://www.tandfonline.com/ >
+    au < doNotProcess ; 2015 ; Journal of Market Access & Health Policy Volume 3 ; 3 ; https://www.tandfonline.com/ >
+    au < released ; 2016 ; Journal of Market Access & Health Policy Volume 4 ; 4 ; http://www.tandfonline.com/ >
+    au < released ; 2017 ; Journal of Market Access & Health Policy Volume 5 ; 5 ; http://www.tandfonline.com/ >
 
   }
 
@@ -419,15 +396,15 @@
     #param[base_url] = http://www.journaloforalmicrobiology.net/
     param[journal_id] = zjom20
 
-    au < doNotProcess ; 2009 ; Journal of Oral Microbiology Volume 1 ; 1 >
-    au < doNotProcess ; 2010 ; Journal of Oral Microbiology Volume 2 ; 2 >
-    au < doNotProcess ; 2011 ; Journal of Oral Microbiology Volume 3 ; 3 >
-    au < doNotProcess ; 2012 ; Journal of Oral Microbiology Volume 4 ; 4 >
-    au < released ; 2013 ; Journal of Oral Microbiology Volume 5 ; 5 >
-    au < released ; 2014 ; Journal of Oral Microbiology Volume 6 ; 6 >
-    au < doNotProcess ; 2015 ; Journal of Oral Microbiology Volume 7 ; 7 >
-    au < released ; 2016 ; Journal of Oral Microbiology Volume 8 ; 8 >
-    au < released ; 2017 ; Journal of Oral Microbiology Volume 9 ; 9 >
+    au < doNotProcess ; 2009 ; Journal of Oral Microbiology Volume 1 ; 1 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2010 ; Journal of Oral Microbiology Volume 2 ; 2 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2011 ; Journal of Oral Microbiology Volume 3 ; 3 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2012 ; Journal of Oral Microbiology Volume 4 ; 4 ; https://www.tandfonline.com/ >
+    au < released ; 2013 ; Journal of Oral Microbiology Volume 5 ; 5 ; http://www.tandfonline.com/ >
+    au < released ; 2014 ; Journal of Oral Microbiology Volume 6 ; 6 ; http://www.tandfonline.com/ >
+    au < doNotProcess ; 2015 ; Journal of Oral Microbiology Volume 7 ; 7 ; https://www.tandfonline.com/ >
+    au < released ; 2016 ; Journal of Oral Microbiology Volume 8 ; 8 ; http://www.tandfonline.com/ >
+    au < released ; 2017 ; Journal of Oral Microbiology Volume 9 ; 9 ; http://www.tandfonline.com/ >
 
   }
 
@@ -443,18 +420,18 @@
     #param[base_url] = http://www.libyanjournalofmedicine.net/
     param[journal_id] = zljm20
 
-    au < doNotProcess ; 2006 ; Libyan Journal of Medicine Volume 1 ; 1 >
-    au < doNotProcess ; 2007 ; Libyan Journal of Medicine Volume 2 ; 2 >
-    au < doNotProcess ; 2008 ; Libyan Journal of Medicine Volume 3 ; 3 >
-    au < doNotProcess ; 2009 ; Libyan Journal of Medicine Volume 4 ; 4 >
-    au < doNotProcess ; 2010 ; Libyan Journal of Medicine [including Supplements] Volume 5 ; 5 >
-    au < doNotProcess ; 2011 ; Libyan Journal of Medicine [including Supplements] Volume 6 ; 6 >
-    au < doNotProcess ; 2012 ; Libyan Journal of Medicine [including Supplements] Volume 7 ; 7 >
-    au < doNotProcess ; 2013 ; Libyan Journal of Medicine [including Supplements] Volume 8 ; 8 >
-    au < released ; 2014 ; Libyan Journal of Medicine [including Supplements] Volume 9 ; 9 >
-    au < doNotProcess ; 2015 ; Libyan Journal of Medicine [including Supplements] Volume 10 ; 10 >
-    au < released ; 2016 ; Libyan Journal of Medicine [including Supplements] Volume 11 ; 11 >
-    au < released ; 2017 ; Libyan Journal of Medicine [including Supplements] Volume 12 ; 12 >
+    au < doNotProcess ; 2006 ; Libyan Journal of Medicine Volume 1 ; 1 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2007 ; Libyan Journal of Medicine Volume 2 ; 2 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2008 ; Libyan Journal of Medicine Volume 3 ; 3 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2009 ; Libyan Journal of Medicine Volume 4 ; 4 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2010 ; Libyan Journal of Medicine [including Supplements] Volume 5 ; 5 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2011 ; Libyan Journal of Medicine [including Supplements] Volume 6 ; 6 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2012 ; Libyan Journal of Medicine [including Supplements] Volume 7 ; 7 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2013 ; Libyan Journal of Medicine [including Supplements] Volume 8 ; 8 ; https://www.tandfonline.com/ >
+    au < released ; 2014 ; Libyan Journal of Medicine [including Supplements] Volume 9 ; 9 ; http://www.tandfonline.com/ >
+    au < doNotProcess ; 2015 ; Libyan Journal of Medicine [including Supplements] Volume 10 ; 10 ; https://www.tandfonline.com/ >
+    au < released ; 2016 ; Libyan Journal of Medicine [including Supplements] Volume 11 ; 11 ; http://www.tandfonline.com/ >
+    au < released ; 2017 ; Libyan Journal of Medicine [including Supplements] Volume 12 ; 12 ; http://www.tandfonline.com/ >
 
   }
 
@@ -470,10 +447,10 @@
     param[journal_id] = zmcs20
     # discontinued in 2014
 
-    au < doNotProcess ; 2010 ; Mechanical Circulatory Support Volume 1 ; 1 >
-    au < doNotProcess ; 2011 ; Mechanical Circulatory Support Volume 2 ; 2 >
-    au < doNotProcess ; 2012 ; Mechanical Circulatory Support Volume 3 ; 3 >
-    au < released ; 2013 ; Mechanical Circulatory Support Volume 4 ; 4 >
+    au < doNotProcess ; 2010 ; Mechanical Circulatory Support Volume 1 ; 1 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2011 ; Mechanical Circulatory Support Volume 2 ; 2 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2012 ; Mechanical Circulatory Support Volume 3 ; 3 ; https://www.tandfonline.com/ >
+    au < released ; 2013 ; Mechanical Circulatory Support Volume 4 ; 4 ; http://www.tandfonline.com/ >
   }
 
   {
@@ -489,28 +466,28 @@
     #param[base_url] = http://med-ed-online.net/
     param[journal_id] = zmeo20
 
-    au < doNotProcess ; 1996 ; Medical Education Online Volume 1 ; 1 >
-    au < doNotProcess ; 1997 ; Medical Education Online Volume 2 ; 2 >
-    au < doNotProcess ; 1998 ; Medical Education Online Volume 3 ; 3 >
-    au < doNotProcess ; 1999 ; Medical Education Online Volume 4 ; 4 >
-    au < doNotProcess ; 2000 ; Medical Education Online Volume 5 ; 5 >
-    au < doNotProcess ; 2001 ; Medical Education Online Volume 6 ; 6 >
-    au < doNotProcess ; 2002 ; Medical Education Online Volume 7 ; 7 >
-    au < doNotProcess ; 2003 ; Medical Education Online Volume 8 ; 8 >
-    au < doNotProcess ; 2004 ; Medical Education Online Volume 9 ; 9 >
-    au < doNotProcess ; 2005 ; Medical Education Online Volume 10 ; 10 >
-    au < doNotProcess ; 2006 ; Medical Education Online Volume 11 ; 11 >
-    au < doNotProcess ; 2007 ; Medical Education Online Volume 12 ; 12 >
-    au < doNotProcess ; 2008 ; Medical Education Online Volume 13 ; 13 >
-    au < doNotProcess ; 2009 ; Medical Education Online Volume 14 ; 14 >
-    au < doNotProcess ; 2010 ; Medical Education Online Volume 15 ; 15 >
-    au < doNotProcess ; 2011 ; Medical Education Online Volume 16 ; 16 >
-    au < doNotProcess ; 2012 ; Medical Education Online Volume 17 ; 17 >
-    au < released ; 2013 ; Medical Education Online Volume 18 ; 18 >
-    au < released ; 2014 ; Medical Education Online Volume 19 ; 19 >
-    au < doNotProcess ; 2015 ; Medical Education Online Volume 20 ; 20 >
-    au < released ; 2016 ; Medical Education Online Volume 21 ; 21 >
-    au < released ; 2017 ; Medical Education Online Volume 22 ; 22 >
+    au < doNotProcess ; 1996 ; Medical Education Online Volume 1 ; 1 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1997 ; Medical Education Online Volume 2 ; 2 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1998 ; Medical Education Online Volume 3 ; 3 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1999 ; Medical Education Online Volume 4 ; 4 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2000 ; Medical Education Online Volume 5 ; 5 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2001 ; Medical Education Online Volume 6 ; 6 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2002 ; Medical Education Online Volume 7 ; 7 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2003 ; Medical Education Online Volume 8 ; 8 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2004 ; Medical Education Online Volume 9 ; 9 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2005 ; Medical Education Online Volume 10 ; 10 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2006 ; Medical Education Online Volume 11 ; 11 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2007 ; Medical Education Online Volume 12 ; 12 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2008 ; Medical Education Online Volume 13 ; 13 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2009 ; Medical Education Online Volume 14 ; 14 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2010 ; Medical Education Online Volume 15 ; 15 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2011 ; Medical Education Online Volume 16 ; 16 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2012 ; Medical Education Online Volume 17 ; 17 ; https://www.tandfonline.com/ >
+    au < released ; 2013 ; Medical Education Online Volume 18 ; 18 ; http://www.tandfonline.com/ >
+    au < released ; 2014 ; Medical Education Online Volume 19 ; 19 ; http://www.tandfonline.com/ >
+    au < doNotProcess ; 2015 ; Medical Education Online Volume 20 ; 20 ; https://www.tandfonline.com/ >
+    au < released ; 2016 ; Medical Education Online Volume 21 ; 21 ; http://www.tandfonline.com/ >
+    au < released ; 2017 ; Medical Education Online Volume 22 ; 22 ; http://www.tandfonline.com/ >
     }
 
   }
@@ -527,34 +504,34 @@
     #param[base_url] = http://www.microbecolhealthdis.net/
     param[journal_id] = zmeh20
 
-    au < doNotProcess ; 1988 ; Microbial Ecology in Health and Disease Volume 1 ; 1 >
-    au < doNotProcess ; 1989 ; Microbial Ecology in Health and Disease Volume 2 ; 2 >
-    au < doNotProcess ; 1990 ; Microbial Ecology in Health and Disease Volume 3 ; 3 >
-    au < doNotProcess ; 1991 ; Microbial Ecology in Health and Disease Volume 4 ; 4 >
-    au < doNotProcess ; 1992 ; Microbial Ecology in Health and Disease Volume 5 ; 5 >
-    au < doNotProcess ; 1993 ; Microbial Ecology in Health and Disease Volume 6 ; 6 >
-    au < doNotProcess ; 1994 ; Microbial Ecology in Health and Disease Volume 7 ; 7 >
-    au < doNotProcess ; 1995 ; Microbial Ecology in Health and Disease Volume 8 ; 8 >
-    au < doNotProcess ; 1996 ; Microbial Ecology in Health and Disease Volume 9 ; 9 >
-    au < doNotProcess ; 1998 ; Microbial Ecology in Health and Disease Volume 10 ; 10 >
-    au < doNotProcess ; 1999 ; Microbial Ecology in Health and Disease Volume 11 ; 11 >
-    au < doNotProcess ; 2000 ; Microbial Ecology in Health and Disease Volume 12 ; 12 >
-    au < doNotProcess ; 2001 ; Microbial Ecology in Health and Disease Volume 13 ; 13 >
-    au < doNotProcess ; 2002 ; Microbial Ecology in Health and Disease Volume 14 ; 14 >
-    au < doNotProcess ; 2003 ; Microbial Ecology in Health and Disease Volume 15 ; 15 >
-    au < doNotProcess ; 2004 ; Microbial Ecology in Health and Disease Volume 16 ; 16 >
-    au < doNotProcess ; 2005 ; Microbial Ecology in Health and Disease Volume 17 ; 17 >
-    au < doNotProcess ; 2006 ; Microbial Ecology in Health and Disease Volume 18 ; 18 >
-    au < doNotProcess ; 2007 ; Microbial Ecology in Health and Disease Volume 19 ; 19 >
-    au < doNotProcess ; 2008 ; Microbial Ecology in Health and Disease Volume 20 ; 20 >
-    au < doNotProcess ; 2009 ; Microbial Ecology in Health and Disease Volume 21 ; 21 >
-    au < doNotProcess ; 2011 ; Microbial Ecology in Health and Disease Volume 22 ; 22 >
-    au < doNotProcess ; 2012 ; Microbial Ecology in Health and Disease Volume 23 ; 23 >
-    au < released ; 2013 ; Microbial Ecology in Health and Disease Volume 24 ; 24 >
-    au < released ; 2014 ; Microbial Ecology in Health and Disease Volume 25 ; 25 >
-    au < doNotProcess ; 2015 ; Microbial Ecology in Health and Disease Volume 26 ; 26 >
-    au < released ; 2016 ; Microbial Ecology in Health and Disease Volume 27 ; 27 >
-    au < released ; 2017 ; Microbial Ecology in Health and Disease Volume 28 ; 28 >
+    au < doNotProcess ; 1988 ; Microbial Ecology in Health and Disease Volume 1 ; 1 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1989 ; Microbial Ecology in Health and Disease Volume 2 ; 2 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1990 ; Microbial Ecology in Health and Disease Volume 3 ; 3 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1991 ; Microbial Ecology in Health and Disease Volume 4 ; 4 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1992 ; Microbial Ecology in Health and Disease Volume 5 ; 5 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1993 ; Microbial Ecology in Health and Disease Volume 6 ; 6 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1994 ; Microbial Ecology in Health and Disease Volume 7 ; 7 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1995 ; Microbial Ecology in Health and Disease Volume 8 ; 8 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1996 ; Microbial Ecology in Health and Disease Volume 9 ; 9 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1998 ; Microbial Ecology in Health and Disease Volume 10 ; 10 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1999 ; Microbial Ecology in Health and Disease Volume 11 ; 11 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2000 ; Microbial Ecology in Health and Disease Volume 12 ; 12 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2001 ; Microbial Ecology in Health and Disease Volume 13 ; 13 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2002 ; Microbial Ecology in Health and Disease Volume 14 ; 14 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2003 ; Microbial Ecology in Health and Disease Volume 15 ; 15 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2004 ; Microbial Ecology in Health and Disease Volume 16 ; 16 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2005 ; Microbial Ecology in Health and Disease Volume 17 ; 17 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2006 ; Microbial Ecology in Health and Disease Volume 18 ; 18 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2007 ; Microbial Ecology in Health and Disease Volume 19 ; 19 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2008 ; Microbial Ecology in Health and Disease Volume 20 ; 20 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2009 ; Microbial Ecology in Health and Disease Volume 21 ; 21 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2011 ; Microbial Ecology in Health and Disease Volume 22 ; 22 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2012 ; Microbial Ecology in Health and Disease Volume 23 ; 23 ; https://www.tandfonline.com/ >
+    au < released ; 2013 ; Microbial Ecology in Health and Disease Volume 24 ; 24 ; http://www.tandfonline.com/ >
+    au < released ; 2014 ; Microbial Ecology in Health and Disease Volume 25 ; 25 ; http://www.tandfonline.com/ >
+    au < doNotProcess ; 2015 ; Microbial Ecology in Health and Disease Volume 26 ; 26 ; https://www.tandfonline.com/ >
+    au < released ; 2016 ; Microbial Ecology in Health and Disease Volume 27 ; 27 ; http://www.tandfonline.com/ >
+    au < released ; 2017 ; Microbial Ecology in Health and Disease Volume 28 ; 28 ; http://www.tandfonline.com/ >
 
   }
 
@@ -567,14 +544,14 @@
     >
     comment[continued_by] = 2002-2727
     #param[base_url] = http://www.nanoreviewsexperiments.net/
-    param[journal_id] = znano20
+    param[journal_id] = znano19
 
-    au < exists ; 2010 ; Nano Reviews [including Supplements] Volume 1 ; 1 >
-    au < exists ; 2011 ; Nano Reviews [including Supplements] Volume 2 ; 2 >
-    au < exists ; 2012 ; Nano Reviews [including Supplements] Volume 3 ; 3 >
-    au < exists ; 2013 ; Nano Reviews [including Supplements] Volume 4 ; 4 >
-    au < exists ; 2014 ; Nano Reviews [including Supplements] Volume 5 ; 5 >
-    au < exists ; 2015 ; Nano Reviews [including Supplements] Volume 6 ; 6 >
+    au < exists ; 2010 ; Nano Reviews [including Supplements] Volume 1 ; 1 ; https://www.tandfonline.com/ >
+    au < exists ; 2011 ; Nano Reviews [including Supplements] Volume 2 ; 2 ; https://www.tandfonline.com/ >
+    au < exists ; 2012 ; Nano Reviews [including Supplements] Volume 3 ; 3 ; https://www.tandfonline.com/ >
+    au < exists ; 2013 ; Nano Reviews [including Supplements] Volume 4 ; 4 ; https://www.tandfonline.com/ >
+    au < exists ; 2014 ; Nano Reviews [including Supplements] Volume 5 ; 5 ; https://www.tandfonline.com/ >
+    au < exists ; 2015 ; Nano Reviews [including Supplements] Volume 6 ; 6 ; https://www.tandfonline.com/ >
     #journal changed names and issn
 
   }
@@ -591,8 +568,8 @@
     #param[base_url] = http://www.nanoreviewsexperiments.net/
     param[journal_id] = zano20
 
-    au < released ; 2016 ; Nano Reviews & Experiments [including Supplements] Volume 7 ; 7 >
-    au < released ; 2017 ; Nano Reviews & Experiments [including Supplements] Volume 8 ; 8 >
+    au < released ; 2016 ; Nano Reviews & Experiments [including Supplements] Volume 7 ; 7 ; http://www.tandfonline.com/ >
+    au < released ; 2017 ; Nano Reviews & Experiments [including Supplements] Volume 8 ; 8 ; http://www.tandfonline.com/ >
 
   }
 
@@ -607,13 +584,13 @@
     #param[base_url] = http://www.pathobiologyofaging.net/
     param[journal_id] = zpba20
 
-    au < doNotProcess ; 2011 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 1 ; 1 >
-    au < doNotProcess ; 2012 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 2 ; 2 >
-    au < doNotProcess ; 2013 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 3 ; 3 >
-    au < released ; 2014 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 4 ; 4 >
-    au < doNotProcess ; 2015 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 5 ; 5 >
-    au < released ; 2016 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 6 ; 6 >
-    au < released ; 2017 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 7 ; 7 >
+    au < doNotProcess ; 2011 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 1 ; 1 ; httpd://www.tandfonline.com/ >
+    au < doNotProcess ; 2012 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 2 ; 2 ; httpd://www.tandfonline.com/ >
+    au < doNotProcess ; 2013 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 3 ; 3 ; httpd://www.tandfonline.com/ >
+    au < released ; 2014 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 4 ; 4 ; http://www.tandfonline.com/ >
+    au < doNotProcess ; 2015 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 5 ; 5 ; https://www.tandfonline.com/ >
+    au < released ; 2016 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 6 ; 6 ; http://www.tandfonline.com/ >
+    au < released ; 2017 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 7 ; 7 ; http://www.tandfonline.com/ >
 
   }
 
@@ -629,42 +606,42 @@
     #param[base_url] = http://www.polarresearch.net/
     param[journal_id] = zpor20
 
-    au < doNotProcess ; 1982 ; Polar Research Volume 1982 ; 1982 >
-    au < doNotProcess ; 1983 ; Polar Research Volume 1 ; 1 >
-    au < doNotProcess ; 1984 ; Polar Research Volume 2 ; 2 >
-    au < doNotProcess ; 1985 ; Polar Research Volume 3 ; 3 >
-    au < doNotProcess ; 1986 ; Polar Research Volume 4 ; 4 >
-    au < doNotProcess ; 1987 ; Polar Research Volume 5 ; 5 >
-    au < doNotProcess ; 1988 ; Polar Research Volume 6 ; 6 >
-    au < doNotProcess ; 1989 ; Polar Research Volume 7 ; 7 >
-    au < doNotProcess ; 1990 ; Polar Research Volume 8 ; 8 >
-    au < doNotProcess ; 1991 ; Polar Research Volumes 9-10 ; 9-10 >
-    au < doNotProcess ; 1992 ; Polar Research Volume 11 ; 11 >
-    au < doNotProcess ; 1993 ; Polar Research Volume 12 ; 12 >
-    au < doNotProcess ; 1994 ; Polar Research Volume 13 ; 13 >
-    au < doNotProcess ; 1995 ; Polar Research Volume 14 ; 14 >
-    au < doNotProcess ; 1996 ; Polar Research Volume 15 ; 15 >
-    au < doNotProcess ; 1997 ; Polar Research Volume 16 ; 16 >
-    au < doNotProcess ; 1998 ; Polar Research Volume 17 ; 17 >
-    au < doNotProcess ; 1999 ; Polar Research Volume 18 ; 18 >
-    au < doNotProcess ; 2000 ; Polar Research Volume 19 ; 19 >
-    au < doNotProcess ; 2001 ; Polar Research Volume 20 ; 20 >
-    au < doNotProcess ; 2002 ; Polar Research Volume 21 ; 21 >
-    au < doNotProcess ; 2003 ; Polar Research Volume 22 ; 22 >
-    au < doNotProcess ; 2004 ; Polar Research Volume 23 ; 23 >
-    au < doNotProcess ; 2005 ; Polar Research Volume 24 ; 24 >
-    au < doNotProcess ; 2006 ; Polar Research Volume 25 ; 25 >
-    au < doNotProcess ; 2007 ; Polar Research Volume 26 ; 26 >
-    au < doNotProcess ; 2008 ; Polar Research Volume 27 ; 27 >
-    au < doNotProcess ; 2009 ; Polar Research Volume 28 ; 28 >
-    au < doNotProcess ; 2010 ; Polar Research Volume 29 ; 29 >
-    au < doNotProcess ; 2011 ; Polar Research [including Supplements] Volume 30 ; 30 >
-    au < doNotProcess ; 2012 ; Polar Research [including Supplements] Volume 31 ; 31 >
-    au < doNotProcess ; 2013 ; Polar Research [including Supplements] Volume 32 ; 32 >
-    au < released ; 2014 ; Polar Research [including Supplements] Volume 33 ; 33 >
-    au < doNotProcess ; 2015 ; Polar Research [including Supplements] Volume 34 ; 34 >
-    au < released ; 2016 ; Polar Research [including Supplements] Volume 35 ; 35 >
-    au < released ; 2017 ; Polar Research [including Supplements] Volume 36 ; 36 >
+    au < doNotProcess ; 1982 ; Polar Research Volume 1982 ; 1982 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1983 ; Polar Research Volume 1 ; 1 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1984 ; Polar Research Volume 2 ; 2 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1985 ; Polar Research Volume 3 ; 3 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1986 ; Polar Research Volume 4 ; 4 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1987 ; Polar Research Volume 5 ; 5 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1988 ; Polar Research Volume 6 ; 6 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1989 ; Polar Research Volume 7 ; 7 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1990 ; Polar Research Volume 8 ; 8 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1991 ; Polar Research Volumes 9-10 ; 9-10 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1992 ; Polar Research Volume 11 ; 11 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1993 ; Polar Research Volume 12 ; 12 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1994 ; Polar Research Volume 13 ; 13 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1995 ; Polar Research Volume 14 ; 14 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1996 ; Polar Research Volume 15 ; 15 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1997 ; Polar Research Volume 16 ; 16 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1998 ; Polar Research Volume 17 ; 17 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1999 ; Polar Research Volume 18 ; 18 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2000 ; Polar Research Volume 19 ; 19 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2001 ; Polar Research Volume 20 ; 20 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2002 ; Polar Research Volume 21 ; 21 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2003 ; Polar Research Volume 22 ; 22 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2004 ; Polar Research Volume 23 ; 23 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2005 ; Polar Research Volume 24 ; 24 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2006 ; Polar Research Volume 25 ; 25 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2007 ; Polar Research Volume 26 ; 26 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2008 ; Polar Research Volume 27 ; 27 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2009 ; Polar Research Volume 28 ; 28 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2010 ; Polar Research Volume 29 ; 29 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2011 ; Polar Research [including Supplements] Volume 30 ; 30 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2012 ; Polar Research [including Supplements] Volume 31 ; 31 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2013 ; Polar Research [including Supplements] Volume 32 ; 32 ; https://www.tandfonline.com/ >
+    au < released ; 2014 ; Polar Research [including Supplements] Volume 33 ; 33 ; http://www.tandfonline.com/ >
+    au < doNotProcess ; 2015 ; Polar Research [including Supplements] Volume 34 ; 34 ; https://www.tandfonline.com/ >
+    au < released ; 2016 ; Polar Research [including Supplements] Volume 35 ; 35 ; http://www.tandfonline.com/ >
+    au < released ; 2017 ; Polar Research [including Supplements] Volume 36 ; 36 ; http://www.tandfonline.com/ >
 
   }
 
@@ -682,7 +659,7 @@
     #continues = 0968-7769
     #no AUs after 2011 https://www.tandfonline.com/loi/zrlt20
 
-    au < exists ; 2011 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 19 ; 19 >
+    au < exists ; 2011 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 19 ; 19 ; https://www.tandfonline.com/ >
 
   }
 
@@ -698,24 +675,24 @@
     param[journal_id] = zrlt19
     #continued_by = 2156-7069 
 
-    au < doNotProcess ; 1993 ; ALT-J: Research in Learning Technology Volume 1 ; 1 >
-    au < doNotProcess ; 1994 ; ALT-J: Research in Learning Technology Volume 2 ; 2 >
-    au < doNotProcess ; 1995 ; ALT-J: Research in Learning Technology Volume 3 ; 3 >
-    au < doNotProcess ; 1996 ; ALT-J: Research in Learning Technology Volume 4 ; 4 >
-    au < doNotProcess ; 1997 ; ALT-J: Research in Learning Technology Volume 5 ; 5 >
-    au < doNotProcess ; 1998 ; ALT-J: Research in Learning Technology Volume 6 ; 6 >
-    au < doNotProcess ; 1999 ; ALT-J: Research in Learning Technology Volume 7 ; 7 >
-    au < doNotProcess ; 2000 ; ALT-J: Research in Learning Technology Volume 8 ; 8 >
-    au < doNotProcess ; 2001 ; ALT-J: Research in Learning Technology Volume 9 ; 9 >
-    au < doNotProcess ; 2002 ; ALT-J: Research in Learning Technology Volume 10 ; 10 >
-    au < doNotProcess ; 2003 ; ALT-J: Research in Learning Technology Volume 11 ; 11 >
-    au < doNotProcess ; 2004 ; ALT-J: Research in Learning Technology Volume 12 ; 12 >
-    au < doNotProcess ; 2005 ; ALT-J: Research in Learning Technology Volume 13 ; 13 >
-    au < doNotProcess ; 2006 ; ALT-J: Research in Learning Technology Volume 14 ; 14 >
-    au < doNotProcess ; 2007 ; ALT-J: Research in Learning Technology Volume 15 ; 15 >
-    au < doNotProcess ; 2008 ; ALT-J: Research in Learning Technology Volume 16 ; 16 >
-    au < doNotProcess ; 2009 ; ALT-J: Research in Learning Technology Volume 17 ; 17 >
-    au < doNotProcess ; 2010 ; ALT-J: Research in Learning Technology Volume 18 ; 18 >
+    au < doNotProcess ; 1993 ; ALT-J: Research in Learning Technology Volume 1 ; 1 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1994 ; ALT-J: Research in Learning Technology Volume 2 ; 2 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1995 ; ALT-J: Research in Learning Technology Volume 3 ; 3 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1996 ; ALT-J: Research in Learning Technology Volume 4 ; 4 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1997 ; ALT-J: Research in Learning Technology Volume 5 ; 5 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1998 ; ALT-J: Research in Learning Technology Volume 6 ; 6 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1999 ; ALT-J: Research in Learning Technology Volume 7 ; 7 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2000 ; ALT-J: Research in Learning Technology Volume 8 ; 8 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2001 ; ALT-J: Research in Learning Technology Volume 9 ; 9 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2002 ; ALT-J: Research in Learning Technology Volume 10 ; 10 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2003 ; ALT-J: Research in Learning Technology Volume 11 ; 11 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2004 ; ALT-J: Research in Learning Technology Volume 12 ; 12 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2005 ; ALT-J: Research in Learning Technology Volume 13 ; 13 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2006 ; ALT-J: Research in Learning Technology Volume 14 ; 14 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2007 ; ALT-J: Research in Learning Technology Volume 15 ; 15 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2008 ; ALT-J: Research in Learning Technology Volume 16 ; 16 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2009 ; ALT-J: Research in Learning Technology Volume 17 ; 17 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2010 ; ALT-J: Research in Learning Technology Volume 18 ; 18 ; https://www.tandfonline.com/ >
 
   }
 
@@ -733,8 +710,8 @@
     #param[base_url] = http://www.foodandnutritionresearch.net/
     param[journal_id] = zfnr19
     
-    au < doNotProcess ; 2006 ; Scandinavian Journal of Food and Nutrition Volume 50 ; 50 >
-    au < doNotProcess ; 2007 ; Scandinavian Journal of Food and Nutrition Volume 51 ; 51 >
+    au < doNotProcess ; 2006 ; Scandinavian Journal of Food and Nutrition Volume 50 ; 50 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2007 ; Scandinavian Journal of Food and Nutrition Volume 51 ; 51 ; https://www.tandfonline.com/ >
 
   }
 
@@ -751,16 +728,16 @@
     #param[base_url] = http://www.foodandnutritionresearch.net/
     param[journal_id] = zfnr18
     
-    au < doNotProcess ; 1996 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 40 ; 40 >
-    au < doNotProcess ; 1997 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 41 ; 41 >
-    au < doNotProcess ; 1998 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 42 ; 42 >
-    au < doNotProcess ; 1999 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 43 ; 43 >
-    au < doNotProcess ; 2000 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 44 ; 44 >
-    au < doNotProcess ; 2001 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 45 ; 45 >    
-    au < doNotProcess ; 2002 ; Scandinavian Journal of Nutrition Volume 46 ; 46 >
-    au < doNotProcess ; 2003 ; Scandinavian Journal of Nutrition Volume 47 ; 47 >
-    au < doNotProcess ; 2004 ; Scandinavian Journal of Nutrition Volume 48 ; 48 >
-    au < doNotProcess ; 2005 ; Scandinavian Journal of Nutrition Volume 49 ; 49 >
+    au < doNotProcess ; 1996 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 40 ; 40 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1997 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 41 ; 41 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1998 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 42 ; 42 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1999 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 43 ; 43 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2000 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 44 ; 44 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2001 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 45 ; 45 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2002 ; Scandinavian Journal of Nutrition Volume 46 ; 46 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2003 ; Scandinavian Journal of Nutrition Volume 47 ; 47 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2004 ; Scandinavian Journal of Nutrition Volume 48 ; 48 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2005 ; Scandinavian Journal of Nutrition Volume 49 ; 49 ; https://www.tandfonline.com/ >
 
   }
 
@@ -775,13 +752,13 @@
       #param[base_url] = http://www.socioaffectiveneuroscipsychol.net/
       param[journal_id] = zsnp20
 
-      au < doNotProcess ; 2011 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 1 ; 1 >
-      au < doNotProcess ; 2012 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 2 ; 2 >
-      au < doNotProcess ; 2013 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 3 ; 3 >
-      au < released ; 2014 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 4 ; 4 >
-      au < doNotProcess ; 2015 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 5 ; 5 >
-      au < released ; 2016 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 6 ; 6 >
-      au < released ; 2017 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 7 ; 7 >
+      au < doNotProcess ; 2011 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 1 ; 1 ; https://www.tandfonline.com/ >
+      au < doNotProcess ; 2012 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 2 ; 2 ; https://www.tandfonline.com/ >
+      au < doNotProcess ; 2013 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 3 ; 3 ; https://www.tandfonline.com/ >
+      au < released ; 2014 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 4 ; 4 ; http://www.tandfonline.com/ >
+      au < doNotProcess ; 2015 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 5 ; 5 ; https://www.tandfonline.com/ >
+      au < released ; 2016 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 6 ; 6 ; http://www.tandfonline.com/ >
+      au < released ; 2017 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 7 ; 7 ; http://www.tandfonline.com/ >
 
   }
   
@@ -797,40 +774,40 @@
     param[journal_id] = zela19
     #continued_by = 1600-0870 & 1600-0889
 
-    au < doNotProcess ; 1949 ; Tellus Volume 1 ; 1 >
-    au < doNotProcess ; 1950 ; Tellus Volume 2 ; 2 >
-    au < doNotProcess ; 1951 ; Tellus Volume 3 ; 3 >
-    au < doNotProcess ; 1952 ; Tellus Volume 4 ; 4 >
-    au < doNotProcess ; 1953 ; Tellus Volume 5 ; 5 >
-    au < doNotProcess ; 1954 ; Tellus Volume 6 ; 6 >
-    au < doNotProcess ; 1955 ; Tellus Volume 7 ; 7 >
-    au < doNotProcess ; 1956 ; Tellus Volume 8 ; 8 >
-    au < doNotProcess ; 1957 ; Tellus Volume 9 ; 9 >
-    au < doNotProcess ; 1958 ; Tellus Volume 10 ; 10 >
-    au < doNotProcess ; 1959 ; Tellus Volume 11 ; 11 >
-    au < doNotProcess ; 1960 ; Tellus Volume 12 ; 12 >
-    au < doNotProcess ; 1961 ; Tellus Volume 13 ; 13 >
-    au < doNotProcess ; 1962 ; Tellus Volume 14 ; 14 >
-    au < doNotProcess ; 1963 ; Tellus Volume 15 ; 15 >
-    au < doNotProcess ; 1964 ; Tellus Volume 16 ; 16 >
-    au < doNotProcess ; 1965 ; Tellus Volume 17 ; 17 >
-    au < doNotProcess ; 1966 ; Tellus Volume 18 ; 18 >
-    au < doNotProcess ; 1967 ; Tellus Volume 19 ; 19 >
-    au < doNotProcess ; 1968 ; Tellus Volume 20 ; 20 >
-    au < doNotProcess ; 1969 ; Tellus Volume 21 ; 21 >
-    au < doNotProcess ; 1970 ; Tellus Volume 22 ; 22 >
-    au < doNotProcess ; 1971 ; Tellus Volume 23 ; 23 >
-    au < doNotProcess ; 1972 ; Tellus Volume 24 ; 24 >
-    au < doNotProcess ; 1973 ; Tellus Volume 25 ; 25 >
-    au < doNotProcess ; 1974 ; Tellus Volume 26 ; 26 >
-    au < doNotProcess ; 1975 ; Tellus Volume 27 ; 27 >
-    au < doNotProcess ; 1976 ; Tellus Volume 28 ; 28 >
-    au < doNotProcess ; 1977 ; Tellus Volume 29 ; 29 >
-    au < doNotProcess ; 1978 ; Tellus Volume 30 ; 30 >
-    au < doNotProcess ; 1979 ; Tellus Volume 31 ; 31 >
-    au < doNotProcess ; 1980 ; Tellus Volume 32 ; 32 >
-    au < doNotProcess ; 1981 ; Tellus Volume 33 ; 33 >
-    au < doNotProcess ; 1982 ; Tellus Volume 34 ; 34 >
+    au < doNotProcess ; 1949 ; Tellus Volume 1 ; 1 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1950 ; Tellus Volume 2 ; 2 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1951 ; Tellus Volume 3 ; 3 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1952 ; Tellus Volume 4 ; 4 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1953 ; Tellus Volume 5 ; 5 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1954 ; Tellus Volume 6 ; 6 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1955 ; Tellus Volume 7 ; 7 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1956 ; Tellus Volume 8 ; 8 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1957 ; Tellus Volume 9 ; 9 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1958 ; Tellus Volume 10 ; 10 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1959 ; Tellus Volume 11 ; 11 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1960 ; Tellus Volume 12 ; 12 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1961 ; Tellus Volume 13 ; 13 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1962 ; Tellus Volume 14 ; 14 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1963 ; Tellus Volume 15 ; 15 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1964 ; Tellus Volume 16 ; 16 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1965 ; Tellus Volume 17 ; 17 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1966 ; Tellus Volume 18 ; 18 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1967 ; Tellus Volume 19 ; 19 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1968 ; Tellus Volume 20 ; 20 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1969 ; Tellus Volume 21 ; 21 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1970 ; Tellus Volume 22 ; 22 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1971 ; Tellus Volume 23 ; 23 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1972 ; Tellus Volume 24 ; 24 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1973 ; Tellus Volume 25 ; 25 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1974 ; Tellus Volume 26 ; 26 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1975 ; Tellus Volume 27 ; 27 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1976 ; Tellus Volume 28 ; 28 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1977 ; Tellus Volume 29 ; 29 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1978 ; Tellus Volume 30 ; 30 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1979 ; Tellus Volume 31 ; 31 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1980 ; Tellus Volume 32 ; 32 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1981 ; Tellus Volume 33 ; 33 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1982 ; Tellus Volume 34 ; 34 ; https://www.tandfonline.com/ >
 
   }
   {
@@ -846,41 +823,41 @@
     param[journal_id] = zela20
     #continues = 0040-2826
     
-    au < doNotProcess ; 1983 ; Tellus A: Dynamic Meteorology and Oceanography Volume 35 ; 35 >
-    au < doNotProcess ; 1984 ; Tellus A: Dynamic Meteorology and Oceanography Volume 36 ; 36 >
-    au < doNotProcess ; 1985 ; Tellus A: Dynamic Meteorology and Oceanography Volume 37 ; 37 >
-    au < doNotProcess ; 1986 ; Tellus A: Dynamic Meteorology and Oceanography Volume 38 ; 38 >
-    au < doNotProcess ; 1987 ; Tellus A: Dynamic Meteorology and Oceanography Volume 39 ; 39 >
-    au < doNotProcess ; 1988 ; Tellus A: Dynamic Meteorology and Oceanography Volume 40 ; 40 >
-    au < doNotProcess ; 1989 ; Tellus A: Dynamic Meteorology and Oceanography Volume 41 ; 41 >
-    au < doNotProcess ; 1990 ; Tellus A: Dynamic Meteorology and Oceanography Volume 42 ; 42 >
-    au < doNotProcess ; 1991 ; Tellus A: Dynamic Meteorology and Oceanography Volume 43 ; 43 >
-    au < doNotProcess ; 1992 ; Tellus A: Dynamic Meteorology and Oceanography Volume 44 ; 44 >
-    au < doNotProcess ; 1993 ; Tellus A: Dynamic Meteorology and Oceanography Volume 45 ; 45 >
-    au < doNotProcess ; 1994 ; Tellus A: Dynamic Meteorology and Oceanography Volume 46 ; 46 >
-    au < doNotProcess ; 1995 ; Tellus A: Dynamic Meteorology and Oceanography Volume 47 ; 47 >
-    au < doNotProcess ; 1996 ; Tellus A: Dynamic Meteorology and Oceanography Volume 48 ; 48 >
-    au < doNotProcess ; 1997 ; Tellus A: Dynamic Meteorology and Oceanography Volume 49 ; 49 >
-    au < doNotProcess ; 1998 ; Tellus A: Dynamic Meteorology and Oceanography Volume 50 ; 50 >
-    au < doNotProcess ; 1999 ; Tellus A: Dynamic Meteorology and Oceanography Volume 51 ; 51 >
-    au < doNotProcess ; 2000 ; Tellus A: Dynamic Meteorology and Oceanography Volume 52 ; 52 >
-    au < doNotProcess ; 2001 ; Tellus A: Dynamic Meteorology and Oceanography Volume 53 ; 53 >
-    au < doNotProcess ; 2002 ; Tellus A: Dynamic Meteorology and Oceanography Volume 54 ; 54 >
-    au < doNotProcess ; 2003 ; Tellus A: Dynamic Meteorology and Oceanography Volume 55 ; 55 >
-    au < doNotProcess ; 2004 ; Tellus A: Dynamic Meteorology and Oceanography Volume 56 ; 56 >
-    au < doNotProcess ; 2005 ; Tellus A: Dynamic Meteorology and Oceanography Volume 57 ; 57 >
-    au < doNotProcess ; 2006 ; Tellus A: Dynamic Meteorology and Oceanography Volume 58 ; 58 >
-    au < doNotProcess ; 2007 ; Tellus A: Dynamic Meteorology and Oceanography Volume 59 ; 59 >
-    au < doNotProcess ; 2008 ; Tellus A: Dynamic Meteorology and Oceanography Volume 60 ; 60 >
-    au < doNotProcess ; 2009 ; Tellus A: Dynamic Meteorology and Oceanography Volume 61 ; 61 >
-    au < doNotProcess ; 2010 ; Tellus A: Dynamic Meteorology and Oceanography Volume 62 ; 62 >
-    au < doNotProcess ; 2011 ; Tellus A: Dynamic Meteorology and Oceanography Volume 63 ; 63 >
-    au < doNotProcess ; 2012 ; Tellus A: Dynamic Meteorology and Oceanography Volume 64 ; 64 >
-    au < released ; 2013 ; Tellus A: Dynamic Meteorology and Oceanography Volume 65 ; 65 >
-    au < released ; 2014 ; Tellus A: Dynamic Meteorology and Oceanography Volume 66 ; 66 >
-    au < doNotProcess ; 2015 ; Tellus A: Dynamic Meteorology and Oceanography Volume 67 ; 67 >
-    au < released ; 2016 ; Tellus A: Dynamic Meteorology and Oceanography Volume 68 ; 68 >
-    au < released ; 2017 ; Tellus A: Dynamic Meteorology and Oceanography Volume 69 ; 69 >
+    au < doNotProcess ; 1983 ; Tellus A: Dynamic Meteorology and Oceanography Volume 35 ; 35 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1984 ; Tellus A: Dynamic Meteorology and Oceanography Volume 36 ; 36 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1985 ; Tellus A: Dynamic Meteorology and Oceanography Volume 37 ; 37 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1986 ; Tellus A: Dynamic Meteorology and Oceanography Volume 38 ; 38 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1987 ; Tellus A: Dynamic Meteorology and Oceanography Volume 39 ; 39 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1988 ; Tellus A: Dynamic Meteorology and Oceanography Volume 40 ; 40 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1989 ; Tellus A: Dynamic Meteorology and Oceanography Volume 41 ; 41 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1990 ; Tellus A: Dynamic Meteorology and Oceanography Volume 42 ; 42 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1991 ; Tellus A: Dynamic Meteorology and Oceanography Volume 43 ; 43 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1992 ; Tellus A: Dynamic Meteorology and Oceanography Volume 44 ; 44 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1993 ; Tellus A: Dynamic Meteorology and Oceanography Volume 45 ; 45 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1994 ; Tellus A: Dynamic Meteorology and Oceanography Volume 46 ; 46 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1995 ; Tellus A: Dynamic Meteorology and Oceanography Volume 47 ; 47 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1996 ; Tellus A: Dynamic Meteorology and Oceanography Volume 48 ; 48 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1997 ; Tellus A: Dynamic Meteorology and Oceanography Volume 49 ; 49 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1998 ; Tellus A: Dynamic Meteorology and Oceanography Volume 50 ; 50 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1999 ; Tellus A: Dynamic Meteorology and Oceanography Volume 51 ; 51 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2000 ; Tellus A: Dynamic Meteorology and Oceanography Volume 52 ; 52 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2001 ; Tellus A: Dynamic Meteorology and Oceanography Volume 53 ; 53 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2002 ; Tellus A: Dynamic Meteorology and Oceanography Volume 54 ; 54 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2003 ; Tellus A: Dynamic Meteorology and Oceanography Volume 55 ; 55 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2004 ; Tellus A: Dynamic Meteorology and Oceanography Volume 56 ; 56 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2005 ; Tellus A: Dynamic Meteorology and Oceanography Volume 57 ; 57 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2006 ; Tellus A: Dynamic Meteorology and Oceanography Volume 58 ; 58 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2007 ; Tellus A: Dynamic Meteorology and Oceanography Volume 59 ; 59 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2008 ; Tellus A: Dynamic Meteorology and Oceanography Volume 60 ; 60 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2009 ; Tellus A: Dynamic Meteorology and Oceanography Volume 61 ; 61 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2010 ; Tellus A: Dynamic Meteorology and Oceanography Volume 62 ; 62 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2011 ; Tellus A: Dynamic Meteorology and Oceanography Volume 63 ; 63 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2012 ; Tellus A: Dynamic Meteorology and Oceanography Volume 64 ; 64 ; https://www.tandfonline.com/ >
+    au < released ; 2013 ; Tellus A: Dynamic Meteorology and Oceanography Volume 65 ; 65 ; http://www.tandfonline.com/ >
+    au < released ; 2014 ; Tellus A: Dynamic Meteorology and Oceanography Volume 66 ; 66 ; http://www.tandfonline.com/ >
+    au < doNotProcess ; 2015 ; Tellus A: Dynamic Meteorology and Oceanography Volume 67 ; 67 ; https://www.tandfonline.com/ >
+    au < released ; 2016 ; Tellus A: Dynamic Meteorology and Oceanography Volume 68 ; 68 ; http://www.tandfonline.com/ >
+    au < released ; 2017 ; Tellus A: Dynamic Meteorology and Oceanography Volume 69 ; 69 ; http://www.tandfonline.com/ >
 
   }
 
@@ -898,41 +875,41 @@
     param[journal_id] = zelb20
     #continues = 0040-2826
 
-    au < doNotProcess ; 1983 ; Tellus B: Chemical and Physical Meteorology Volume 35 ; 35 >
-    au < doNotProcess ; 1984 ; Tellus B: Chemical and Physical Meteorology Volume 36 ; 36 >
-    au < doNotProcess ; 1985 ; Tellus B: Chemical and Physical Meteorology Volume 37 ; 37 >
-    au < doNotProcess ; 1986 ; Tellus B: Chemical and Physical Meteorology Volume 38 ; 38 >
-    au < doNotProcess ; 1987 ; Tellus B: Chemical and Physical Meteorology Volume 39 ; 39 >
-    au < doNotProcess ; 1988 ; Tellus B: Chemical and Physical Meteorology Volume 40 ; 40 >
-    au < doNotProcess ; 1989 ; Tellus B: Chemical and Physical Meteorology Volume 41 ; 41 >
-    au < doNotProcess ; 1990 ; Tellus B: Chemical and Physical Meteorology Volume 42 ; 42 >
-    au < doNotProcess ; 1991 ; Tellus B: Chemical and Physical Meteorology Volume 43 ; 43 >
-    au < doNotProcess ; 1992 ; Tellus B: Chemical and Physical Meteorology Volume 44 ; 44 >
-    au < doNotProcess ; 1993 ; Tellus B: Chemical and Physical Meteorology Volume 45 ; 45 >
-    au < doNotProcess ; 1994 ; Tellus B: Chemical and Physical Meteorology Volume 46 ; 46 >
-    au < doNotProcess ; 1995 ; Tellus B: Chemical and Physical Meteorology Volume 47 ; 47 >
-    au < doNotProcess ; 1996 ; Tellus B: Chemical and Physical Meteorology Volume 48 ; 48 >
-    au < doNotProcess ; 1997 ; Tellus B: Chemical and Physical Meteorology Volume 49 ; 49 >
-    au < doNotProcess ; 1998 ; Tellus B: Chemical and Physical Meteorology Volume 50 ; 50 >
-    au < doNotProcess ; 1999 ; Tellus B: Chemical and Physical Meteorology Volume 51 ; 51 >
-    au < doNotProcess ; 2000 ; Tellus B: Chemical and Physical Meteorology Volume 52 ; 52 >
-    au < doNotProcess ; 2001 ; Tellus B: Chemical and Physical Meteorology Volume 53 ; 53 >
-    au < doNotProcess ; 2002 ; Tellus B: Chemical and Physical Meteorology Volume 54 ; 54 >
-    au < doNotProcess ; 2003 ; Tellus B: Chemical and Physical Meteorology Volume 55 ; 55 >
-    au < doNotProcess ; 2004 ; Tellus B: Chemical and Physical Meteorology Volume 56 ; 56 >
-    au < doNotProcess ; 2005 ; Tellus B: Chemical and Physical Meteorology Volume 57 ; 57 >
-    au < doNotProcess ; 2006 ; Tellus B: Chemical and Physical Meteorology Volume 58 ; 58 >
-    au < doNotProcess ; 2007 ; Tellus B: Chemical and Physical Meteorology Volume 59 ; 59 >
-    au < doNotProcess ; 2008 ; Tellus B: Chemical and Physical Meteorology Volume 60 ; 60 >
-    au < doNotProcess ; 2009 ; Tellus B: Chemical and Physical Meteorology Volume 61 ; 61 >
-    au < doNotProcess ; 2010 ; Tellus B: Chemical and Physical Meteorology Volume 62 ; 62 >
-    au < doNotProcess ; 2011 ; Tellus B: Chemical and Physical Meteorology Volume 63 ; 63 >
-    au < doNotProcess ; 2012 ; Tellus B: Chemical and Physical Meteorology Volume 64 ; 64 >
-    au < doNotProcess ; 2013 ; Tellus B: Chemical and Physical Meteorology Volume 65 ; 65 >
-    au < released ; 2014 ; Tellus B: Chemical and Physical Meteorology Volume 66 ; 66 >
-    au < doNotProcess ; 2015 ; Tellus B: Chemical and Physical Meteorology Volume 67 ; 67 >
-    au < released ; 2016 ; Tellus B: Chemical and Physical Meteorology Volume 68 ; 68 >
-    au < released ; 2017 ; Tellus B: Chemical and Physical Meteorology Volume 69 ; 69 >
+    au < doNotProcess ; 1983 ; Tellus B: Chemical and Physical Meteorology Volume 35 ; 35 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1984 ; Tellus B: Chemical and Physical Meteorology Volume 36 ; 36 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1985 ; Tellus B: Chemical and Physical Meteorology Volume 37 ; 37 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1986 ; Tellus B: Chemical and Physical Meteorology Volume 38 ; 38 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1987 ; Tellus B: Chemical and Physical Meteorology Volume 39 ; 39 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1988 ; Tellus B: Chemical and Physical Meteorology Volume 40 ; 40 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1989 ; Tellus B: Chemical and Physical Meteorology Volume 41 ; 41 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1990 ; Tellus B: Chemical and Physical Meteorology Volume 42 ; 42 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1991 ; Tellus B: Chemical and Physical Meteorology Volume 43 ; 43 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1992 ; Tellus B: Chemical and Physical Meteorology Volume 44 ; 44 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1993 ; Tellus B: Chemical and Physical Meteorology Volume 45 ; 45 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1994 ; Tellus B: Chemical and Physical Meteorology Volume 46 ; 46 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1995 ; Tellus B: Chemical and Physical Meteorology Volume 47 ; 47 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1996 ; Tellus B: Chemical and Physical Meteorology Volume 48 ; 48 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1997 ; Tellus B: Chemical and Physical Meteorology Volume 49 ; 49 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1998 ; Tellus B: Chemical and Physical Meteorology Volume 50 ; 50 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 1999 ; Tellus B: Chemical and Physical Meteorology Volume 51 ; 51 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2000 ; Tellus B: Chemical and Physical Meteorology Volume 52 ; 52 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2001 ; Tellus B: Chemical and Physical Meteorology Volume 53 ; 53 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2002 ; Tellus B: Chemical and Physical Meteorology Volume 54 ; 54 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2003 ; Tellus B: Chemical and Physical Meteorology Volume 55 ; 55 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2004 ; Tellus B: Chemical and Physical Meteorology Volume 56 ; 56 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2005 ; Tellus B: Chemical and Physical Meteorology Volume 57 ; 57 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2006 ; Tellus B: Chemical and Physical Meteorology Volume 58 ; 58 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2007 ; Tellus B: Chemical and Physical Meteorology Volume 59 ; 59 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2008 ; Tellus B: Chemical and Physical Meteorology Volume 60 ; 60 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2009 ; Tellus B: Chemical and Physical Meteorology Volume 61 ; 61 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2010 ; Tellus B: Chemical and Physical Meteorology Volume 62 ; 62 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2011 ; Tellus B: Chemical and Physical Meteorology Volume 63 ; 63 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2012 ; Tellus B: Chemical and Physical Meteorology Volume 64 ; 64 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2013 ; Tellus B: Chemical and Physical Meteorology Volume 65 ; 65 ; https://www.tandfonline.com/ >
+    au < released ; 2014 ; Tellus B: Chemical and Physical Meteorology Volume 66 ; 66 ; http://www.tandfonline.com/ >
+    au < doNotProcess ; 2015 ; Tellus B: Chemical and Physical Meteorology Volume 67 ; 67 ; https://www.tandfonline.com/ >
+    au < released ; 2016 ; Tellus B: Chemical and Physical Meteorology Volume 68 ; 68 ; http://www.tandfonline.com/ >
+    au < released ; 2017 ; Tellus B: Chemical and Physical Meteorology Volume 69 ; 69 ; http://www.tandfonline.com/ >
 
   }
 
@@ -948,9 +925,9 @@
     param[journal_id] = zvgi20
     #continues = 2000-8023
 
-    au < manifest ; 2015 ; Society, Health & Vulnerability Volume 6 ; 6 >
-    au < manifest ; 2016 ; Society, Health & Vulnerability Volume 7 ; 7 >
-    au < manifest ; 2017 ; Society, Health & Vulnerability Volume 8 ; 8 >
+    au < manifest ; 2015 ; Society, Health & Vulnerability Volume 6 ; 6 ; https://www.tandfonline.com/ >
+    au < manifest ; 2016 ; Society, Health & Vulnerability Volume 7 ; 7 ; https://www.tandfonline.com/ >
+    au < manifest ; 2017 ; Society, Health & Vulnerability Volume 8 ; 8 ; https://www.tandfonline.com/ >
 
   }
 
@@ -965,11 +942,11 @@
     param[journal_id] = zvgi19
     #continued_by = 2002-1518
 
-    au < doNotProcess ; 2010 ; Vulnerable Groups & Inclusion Volume 1 ; 1 >
-    au < doNotProcess ; 2011 ; Vulnerable Groups & Inclusion Volume 2 ; 2 >
-    au < doNotProcess ; 2012 ; Vulnerable Groups & Inclusion Volume 3 ; 3 >
-    au < released ; 2013 ; Vulnerable Groups & Inclusion Volume 4 ; 4 >
-    au < released ; 2014 ; Vulnerable Groups & Inclusion Volume 5 ; 5 >
+    au < doNotProcess ; 2010 ; Vulnerable Groups & Inclusion Volume 1 ; 1 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2011 ; Vulnerable Groups & Inclusion Volume 2 ; 2 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2012 ; Vulnerable Groups & Inclusion Volume 3 ; 3 ; https://www.tandfonline.com/ >
+    au < released ; 2013 ; Vulnerable Groups & Inclusion Volume 4 ; 4 ; http://www.tandfonline.com/ >
+    au < released ; 2014 ; Vulnerable Groups & Inclusion Volume 5 ; 5 ; http://www.tandfonline.com/ >
 
   }
 
