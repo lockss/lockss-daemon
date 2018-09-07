@@ -742,7 +742,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; American Journal of Hypertension Volume 18 ; 18 ;  >
     au < doNotProcess ; exists ; 2006 ; 2006 ; American Journal of Hypertension Volume 19 ; 19 ;  >
     au < doNotProcess ; exists ; 2007 ; 2007 ; American Journal of Hypertension Volume 20 ; 20 ;  >
-    au < testing ; exists ; 2008 ; 2008 ; American Journal of Hypertension Volume 21 ; 21 ;  >
+    au < ready ; exists ; 2008 ; 2008 ; American Journal of Hypertension Volume 21 ; 21 ;  >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; American Journal of Hypertension Volume 22 ; 22 ;  >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; American Journal of Hypertension Volume 23 ; 23 ;  >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; American Journal of Hypertension Volume 24 ; 24 ;  >
@@ -985,7 +985,7 @@
     au < manifest ; exists ; 2014 ; 2014 ; Animal Frontiers Volume 4 ; 4 ; >
     au < manifest ; exists ; 2015 ; 2015 ; Animal Frontiers Volume 5 ; 5 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Animal Frontiers Volume 6 ; 6 ; >
-    au < testing ; exists ; 2017 ; 2017 ; Animal Frontiers Volume 7 ; 7 ; >
+    au < ready ; exists ; 2017 ; 2017 ; Animal Frontiers Volume 7 ; 7 ; >
     au < crawling ; exists ; 2018 ; 2018 ; Animal Frontiers Volume 8 ; 8 ; >
 
   }
@@ -1017,8 +1017,8 @@
     au < manifest ; exists ; 2013 ; 2013 ; Journal of Animal Science Volume 90 ; 90 ; >
     au < manifest ; exists ; 2014 ; 2014 ; Journal of Animal Science Volume 91 ; 91 ; >
     au < manifest ; exists ; 2015 ; 2015 ; Journal of Animal Science Volume 92 ; 92 ; >
-    au < testing ; exists ; 2016 ; 2016 ; Journal of Animal Science Volume 93 ; 93 ; >
-    au < testing ; exists ; 2017 ; 2017 ; Journal of Animal Science Volume 94 ; 94 ; >
+    au < ready ; exists ; 2016 ; 2016 ; Journal of Animal Science Volume 93 ; 93 ; >
+    au < ready ; exists ; 2017 ; 2017 ; Journal of Animal Science Volume 94 ; 94 ; >
     au < crawling ; exists ; 2018 ; 2018 ; Journal of Animal Science Volume 95 ; 95 ; >
 
   }
@@ -1221,7 +1221,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Annals of Oncology Volume 24 ; 24 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Annals of Oncology Volume 25 ; 25 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Annals of Oncology Volume 26 ; 26 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; Annals of Oncology Volume 27 ; 27 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; Annals of Oncology Volume 27 ; 27 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; Annals of Oncology Volume 28 ; 28 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; Annals of Oncology Volume 29 ; 29 ;  >
 
@@ -1649,7 +1649,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Astronomy & Geophysics Volume 55 ; 55 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Astronomy & Geophysics Volume 56 ; 56 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; Astronomy & Geophysics Volume 57 ; 57 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; Astronomy & Geophysics Volume 58 ; 58 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; Astronomy & Geophysics Volume 58 ; 58 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; Astronomy & Geophysics Volume 59 ; 59 ;  >
 
   }
@@ -1680,8 +1680,8 @@
     au < manifest ; exists ; 2013 ; 2013 ; BJA Education Volume 13 ; 13 ;  >
     au < manifest ; exists ; 2014 ; 2014 ; BJA Education Volume 14 ; 14 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; BJA Education Volume 15 ; 15 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; BJA Education Volume 16 ; 16 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; BJA Education Volume 17 ; 17 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; BJA Education Volume 16 ; 16 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; BJA Education Volume 17 ; 17 ;  >
     au < expected ; exists ; 2018 ; 2018 ; BJA Education Volume 18 ; 18 ;  >
 
   }
@@ -1785,7 +1785,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; BJA: British Journal of Anaesthesia Volume 110-111 ; 110-111 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; BJA: British Journal of Anaesthesia Volume 112-113 ; 112-113 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; BJA: British Journal of Anaesthesia Volume 114-115 ; 114-115 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; BJA: British Journal of Anaesthesia Volume 116-117 ; 116-117 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; BJA: British Journal of Anaesthesia Volume 116-117 ; 116-117 ;  >
     au < frozen ; exists ; 2017 ; 2017 ; BJA: British Journal of Anaesthesia Volume 118-119 ; 118-119 ;  >
     au < expected ; exists ; 2018 ; 2018 ; BJA: British Journal of Anaesthesia Volume 120-121 ; 120-121 ;  >
 
@@ -1854,9 +1854,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Behavioral Ecology Volume 24 ; 24 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Behavioral Ecology Volume 25 ; 25 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Behavioral Ecology Volume 26 ; 26 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; Behavioral Ecology Volume 27 ; 27 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; Behavioral Ecology Volume 28 ; 28 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; Behavioral Ecology Volume 29 ; 29 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; Behavioral Ecology Volume 27 ; 27 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; Behavioral Ecology Volume 28 ; 28 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Behavioral Ecology Volume 29 ; 29 ;  >
 
   }
 
@@ -1915,7 +1915,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; BioScience Volume 55 ; 55 ;  >
     au < doNotProcess ; exists ; 2006 ; 2006 ; BioScience Volume 56 ; 56 ;  >
     au < doNotProcess ; exists ; 2007 ; 2007 ; BioScience Volume 57 ; 57 ;  >
-    au < testing ; exists ; 2008 ; 2008 ; BioScience Volume 58 ; 58 ;  >
+    au < ready ; exists ; 2008 ; 2008 ; BioScience Volume 58 ; 58 ;  >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; BioScience Volume 59 ; 59 ;  >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; BioScience Volume 60 ; 60 ;  >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; BioScience Volume 61 ; 61 ;  >
@@ -1923,9 +1923,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; BioScience Volume 63 ; 63 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; BioScience Volume 64 ; 64 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; BioScience Volume 65 ; 65 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; BioScience Volume 66 ; 66 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; BioScience Volume 67 ; 67 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; BioScience Volume 68 ; 68 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; BioScience Volume 66 ; 66 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; BioScience Volume 67 ; 67 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; BioScience Volume 68 ; 68 ;  >
 
   }
 
@@ -1971,9 +1971,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Bioinformatics Volume 29 ; 29 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Bioinformatics Volume 30 ; 30 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Bioinformatics Volume 31 ; 31 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; Bioinformatics Volume 32 ; 32 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; Bioinformatics Volume 33 ; 33 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; Bioinformatics Volume 34 ; 34 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; Bioinformatics Volume 32 ; 32 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; Bioinformatics Volume 33 ; 33 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Bioinformatics Volume 34 ; 34 ;  >
 
   }
 
@@ -2035,9 +2035,9 @@
     au < manifest ; exists ; 2013 ; 2013 ; Biological Journal of the Linnean Society Volume 108-110 ; 108-110 ;  >
     au < manifest ; exists ; 2014 ; 2014 ; Biological Journal of the Linnean Society Volume 111-113 ; 111-113 ;  >
     au < manifest ; exists ; 2015 ; 2015 ; Biological Journal of the Linnean Society Volume 114-116 ; 114-116 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; Biological Journal of the Linnean Society Volume 117-119 ; 117-119 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; Biological Journal of the Linnean Society Volume 120-122 ; 120-122 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; Biological Journal of the Linnean Society Volume 123-125 ; 123-125 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; Biological Journal of the Linnean Society Volume 117-119 ; 117-119 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; Biological Journal of the Linnean Society Volume 120-122 ; 120-122 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Biological Journal of the Linnean Society Volume 123-125 ; 123-125 ;  >
 
   }
 
@@ -2051,9 +2051,9 @@
     param[journal_id] = biomethods
 
     #this title was ONLY in the publisher listing
-    au < testing ; exists ; 2016 ; 2016 ; Biology Methods and Protocols Volume 1 ; 1 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; Biology Methods and Protocols Volume 1 ; 1 ;  >
     au < frozen ; exists ; 2017 ; 2017 ; Biology Methods and Protocols Volume 2 ; 2 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; Biology Methods and Protocols Volume 3 ; 3 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Biology Methods and Protocols Volume 3 ; 3 ;  >
 
   }
 
@@ -2115,9 +2115,9 @@
     au < manifest ; exists ; 2013 ; 2013 ; Biology of Reproduction Volume 88-89 ; 88-89 ;  >
     au < manifest ; exists ; 2014 ; 2014 ; Biology of Reproduction Volume 90-91 ; 90-91 ;  >
     au < manifest ; exists ; 2015 ; 2015 ; Biology of Reproduction Volume 92-93 ; 92-93 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; Biology of Reproduction Volume 94-95 ; 94-95 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; Biology of Reproduction Volume 96-97 ; 96-97 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; Biology of Reproduction Volume 98-99 ; 98-99 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; Biology of Reproduction Volume 94-95 ; 94-95 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; Biology of Reproduction Volume 96-97 ; 96-97 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Biology of Reproduction Volume 98-99 ; 98-99 ;  >
 
   }
 
@@ -2234,9 +2234,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Biometrika Volume 100 ; 100 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Biometrika Volume 101 ; 101 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Biometrika Volume 102 ; 102 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; Biometrika Volume 103 ; 103 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; Biometrika Volume 104 ; 104 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; Biometrika Volume 105 ; 105 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; Biometrika Volume 103 ; 103 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; Biometrika Volume 104 ; 104 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Biometrika Volume 105 ; 105 ;  >
 
   }
 
@@ -2257,9 +2257,9 @@
     au < manifest ; exists ; 2013 ; 2013 ; Bioscience Horizons: The International Journal of Student Research Volume 6 ; 6 ;  >
     au < manifest ; exists ; 2014 ; 2014 ; Bioscience Horizons: The International Journal of Student Research Volume 7 ; 7 ;  >
     au < manifest ; exists ; 2015 ; 2015 ; Bioscience Horizons: The International Journal of Student Research Volume 8 ; 8 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; Bioscience Horizons: The International Journal of Student Research Volume 9 ; 9 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; Bioscience Horizons: The International Journal of Student Research Volume 10 ; 10 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; Bioscience Horizons: The International Journal of Student Research Volume 11 ; 11 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; Bioscience Horizons: The International Journal of Student Research Volume 9 ; 9 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; Bioscience Horizons: The International Journal of Student Research Volume 10 ; 10 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Bioscience Horizons: The International Journal of Student Research Volume 11 ; 11 ;  >
 
   }
 
@@ -2290,9 +2290,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Biostatistics Volume 14 ; 14 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Biostatistics Volume 15 ; 15 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Biostatistics Volume 16 ; 16 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; Biostatistics Volume 17 ; 17 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; Biostatistics Volume 18 ; 18 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; Biostatistics Volume 19 ; 19 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; Biostatistics Volume 17 ; 17 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; Biostatistics Volume 18 ; 18 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Biostatistics Volume 19 ; 19 ;  >
 
   }
 
@@ -2315,9 +2315,9 @@
     au < manifest ; exists ; 2013 ; 2013 ; Botanical Journal of the Linnean Society Volume 171-173 ; 171-173 ;  >
     au < manifest ; exists ; 2014 ; 2014 ; Botanical Journal of the Linnean Society Volume 174-176 ; 174-176 ;  >
     au < manifest ; exists ; 2015 ; 2015 ; Botanical Journal of the Linnean Society Volume 177-179 ; 177-179 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; Botanical Journal of the Linnean Society Volume 180-182 ; 180-182 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; Botanical Journal of the Linnean Society Volume 183-185 ; 183-185 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; Botanical Journal of the Linnean Society Volume 186-188 ; 186-188 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; Botanical Journal of the Linnean Society Volume 180-182 ; 180-182 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; Botanical Journal of the Linnean Society Volume 183-185 ; 183-185 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Botanical Journal of the Linnean Society Volume 186-188 ; 186-188 ;  >
 
   }
 
@@ -2462,7 +2462,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Brain Volume 128 ; 128 ;  >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Brain Volume 129 ; 129 ;  >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Brain Volume 130 ; 130 ;  >
-    au < testing ; exists ; 2008 ; 2008 ; Brain Volume 131 ; 131 ;  >
+    au < ready ; exists ; 2008 ; 2008 ; Brain Volume 131 ; 131 ;  >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Brain Volume 132 ; 132 ;  >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Brain Volume 133 ; 133 ;  >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Brain Volume 134 ; 134 ;  >
@@ -2470,9 +2470,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Brain Volume 136 ; 136 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Brain Volume 137 ; 137 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Brain Volume 138 ; 138 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; Brain Volume 139 ; 139 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; Brain Volume 140 ; 140 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; Brain Volume 141 ; 141 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; Brain Volume 139 ; 139 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; Brain Volume 140 ; 140 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Brain Volume 141 ; 141 ;  >
 
   }
 
@@ -2503,9 +2503,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Briefings in Bioinformatics Volume 14 ; 14 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Briefings in Bioinformatics Volume 15 ; 15 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Briefings in Bioinformatics Volume 16 ; 16 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; Briefings in Bioinformatics Volume 17 ; 17 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; Briefings in Bioinformatics Volume 18 ; 18 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; Briefings in Bioinformatics Volume 19 ; 19 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; Briefings in Bioinformatics Volume 17 ; 17 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; Briefings in Bioinformatics Volume 18 ; 18 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Briefings in Bioinformatics Volume 19 ; 19 ;  >
 
   }
 
@@ -2526,17 +2526,17 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Briefings in Functional Genomics Volume 3 ; 3 ;  >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Briefings in Functional Genomics Volume 5 ; 5 ;  >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Briefings in Functional Genomics Volume 6 ; 6 ;  >
-    au < testing ; exists ; 2008 ; 2008 ; Briefings in Functional Genomics Volume 7 ; 7 ;  >
-    au < testing ; exists ; 2009 ; 2009 ; Briefings in Functional Genomics Volume 8 ; 8 ;  >
+    au < ready ; exists ; 2008 ; 2008 ; Briefings in Functional Genomics Volume 7 ; 7 ;  >
+    au < ready ; exists ; 2009 ; 2009 ; Briefings in Functional Genomics Volume 8 ; 8 ;  >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Briefings in Functional Genomics Volume 9 ; 9 ;  >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Briefings in Functional Genomics Volume 10 ; 10 ;  >
     au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Briefings in Functional Genomics Volume 11 ; 11 ;  >
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Briefings in Functional Genomics Volume 12 ; 12 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Briefings in Functional Genomics Volume 13 ; 13 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Briefings in Functional Genomics Volume 14 ; 14 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; Briefings in Functional Genomics Volume 15 ; 15 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; Briefings in Functional Genomics Volume 16 ; 16 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; Briefings in Functional Genomics Volume 17 ; 17 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; Briefings in Functional Genomics Volume 15 ; 15 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; Briefings in Functional Genomics Volume 16 ; 16 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Briefings in Functional Genomics Volume 17 ; 17 ;  >
 
   }
 
@@ -2629,7 +2629,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; British Medical Bulletin Volume 73-76 ; 73-76 ;  >
     au < doNotProcess ; exists ; 2006 ; 2006 ; British Medical Bulletin Volume 77-80 ; 77-80 ;  >
     au < doNotProcess ; exists ; 2007 ; 2007 ; British Medical Bulletin Volume 81-84 ; 81-84 ;  >
-    au < testing ; exists ; 2008 ; 2008 ; British Medical Bulletin Volume 85-88 ; 85-88 ;  >
+    au < ready ; exists ; 2008 ; 2008 ; British Medical Bulletin Volume 85-88 ; 85-88 ;  >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; British Medical Bulletin Volume 89-92 ; 89-92 ;  >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; British Medical Bulletin Volume 93-96 ; 93-96 ;  >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; British Medical Bulletin Volume 99-100 ; 99-100 ;  >
@@ -2637,9 +2637,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; British Medical Bulletin Volume 105-108 ; 105-108 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; British Medical Bulletin Volume 109-112 ; 109-112 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; British Medical Bulletin Volume 113-116 ; 113-116 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; British Medical Bulletin Volume 117-120 ; 117-120 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; British Medical Bulletin Volume 121-124 ; 121-124 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; British Medical Bulletin Volume 125-127 ; 125-127 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; British Medical Bulletin Volume 117-120 ; 117-120 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; British Medical Bulletin Volume 121-124 ; 121-124 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; British Medical Bulletin Volume 125-127 ; 125-127 ;  >
 
   }
 
@@ -2693,7 +2693,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; British Yearbook of International Law Volume 83 ; 83 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; British Yearbook of International Law Volume 84 ; 84 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; British Yearbook of International Law Volume 85 ; 85 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; British Yearbook of International Law Volume 86 ; 86 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; British Yearbook of International Law Volume 86 ; 86 ;  >
 
   }
 
@@ -2750,9 +2750,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; CESifo Economic Studies Volume 59 ; 59 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; CESifo Economic Studies Volume 60 ; 60 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; CESifo Economic Studies Volume 61 ; 61 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; CESifo Economic Studies Volume 62 ; 62 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; CESifo Economic Studies Volume 63 ; 63 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; CESifo Economic Studies Volume 64 ; 64 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; CESifo Economic Studies Volume 62 ; 62 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; CESifo Economic Studies Volume 63 ; 63 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; CESifo Economic Studies Volume 64 ; 64 ;  >
 
   }
 
@@ -2806,9 +2806,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Cambridge Journal of Economics Volume 37 ; 37 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Cambridge Journal of Economics Volume 38 ; 38 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Cambridge Journal of Economics Volume 39 ; 39 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; Cambridge Journal of Economics Volume 40 ; 40 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; Cambridge Journal of Economics Volume 41 ; 41 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; Cambridge Journal of Economics Volume 42 ; 42 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; Cambridge Journal of Economics Volume 40 ; 40 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; Cambridge Journal of Economics Volume 41 ; 41 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Cambridge Journal of Economics Volume 42 ; 42 ;  >
 
   }
 
@@ -2831,8 +2831,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Cambridge Journal of Regions, Economy and Society Volume 6 ; 6 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Cambridge Journal of Regions, Economy and Society Volume 7 ; 7 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Cambridge Journal of Regions, Economy and Society Volume 8 ; 8 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; Cambridge Journal of Regions, Economy and Society Volume 9 ; 9 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Cambridge Journal of Regions, Economy and Society Volume 10 ; 10 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; Cambridge Journal of Regions, Economy and Society Volume 9 ; 9 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; Cambridge Journal of Regions, Economy and Society Volume 10 ; 10 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Cambridge Journal of Regions, Economy and Society Volume 11 ; 11 ;  >
 
   }
 
@@ -2857,8 +2858,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Capital Markets Law Journal Volume 8 ; 8 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Capital Markets Law Journal Volume 9 ; 9 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Capital Markets Law Journal Volume 10 ; 10 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; Capital Markets Law Journal Volume 11 ; 11 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Capital Markets Law Journal Volume 12 ; 12 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; Capital Markets Law Journal Volume 11 ; 11 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; Capital Markets Law Journal Volume 12 ; 12 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Capital Markets Law Journal Volume 13 ; 13 ;  >
 
   }
 
@@ -2909,8 +2911,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Carcinogenesis Volume 34 ; 34 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Carcinogenesis Volume 35 ; 35 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Carcinogenesis Volume 36 ; 36 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; Carcinogenesis Volume 37 ; 37 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Carcinogenesis Volume 38 ; 38 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; Carcinogenesis Volume 37 ; 37 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; Carcinogenesis Volume 38 ; 38 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Carcinogenesis Volume 39 ; 39 ;  >
 
   }
 
@@ -2966,7 +2969,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Cardiovascular Research Volume 66-68 ; 66-68 ;  >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Cardiovascular Research Volume 69-72 ; 69-72 ;  >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Cardiovascular Research Volume 73-76 ; 73-76 ;  >
-    au < manifest ; exists ; 2008 ; 2008 ; Cardiovascular Research Volume 77-80 ; 77-80 ;  >
+    au < testing ; exists ; 2008 ; 2008 ; Cardiovascular Research Volume 77-80 ; 77-80 ;  >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Cardiovascular Research Volume 81-84 ; 81-84 ;  >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Cardiovascular Research Volume 85-88 ; 85-88 ;  >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Cardiovascular Research Volume 89-92 ; 89-92 ;  >
@@ -2974,8 +2977,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Cardiovascular Research Volume 99-100 ; 99-100 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Cardiovascular Research Volume 101-104 ; 101-104 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Cardiovascular Research Volume 105-108 ; 105-108 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; Cardiovascular Research Volume 109-112 ; 109-112 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Cardiovascular Research Volume 113 ; 113 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; Cardiovascular Research Volume 109-112 ; 109-112 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; Cardiovascular Research Volume 113 ; 113 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Cardiovascular Research Volume 114 ; 114 ;  >
 
   }
 
@@ -3015,8 +3019,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Cerebral Cortex Volume 23 ; 23 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Cerebral Cortex Volume 24 ; 24 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Cerebral Cortex Volume 25 ; 25 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; Cerebral Cortex Volume 26 ; 26 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; Cerebral Cortex Volume 26 ; 26 ;  >
     au < frozen ; exists ; 2017 ; 2017 ; Cerebral Cortex Volume 27 ; 27 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Cerebral Cortex Volume 28 ; 28 ;  >
 
   }
 
@@ -3063,7 +3068,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Chemical Senses Volume 30 ; 30 ;  >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Chemical Senses Volume 31 ; 31 ;  >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Chemical Senses Volume 32 ; 32 ;  >
-    au < manifest ; exists ; 2008 ; 2008 ; Chemical Senses Volume 33 ; 33 ;  >
+    au < testing ; exists ; 2008 ; 2008 ; Chemical Senses Volume 33 ; 33 ;  >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Chemical Senses Volume 34 ; 34 ;  >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Chemical Senses Volume 35 ; 35 ;  >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Chemical Senses Volume 36 ; 36 ;  >
@@ -3071,8 +3076,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Chemical Senses Volume 38 ; 38 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Chemical Senses Volume 39 ; 39 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Chemical Senses Volume 40 ; 40 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; Chemical Senses Volume 41 ; 41 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Chemical Senses Volume 42 ; 42 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; Chemical Senses Volume 41 ; 41 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; Chemical Senses Volume 42 ; 42 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Chemical Senses Volume 43 ; 43 ;  >
 
   }
 
@@ -3123,8 +3129,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Children & Schools Volume 35 ; 35 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Children & Schools Volume 36 ; 36 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Children & Schools Volume 37 ; 37 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; Children & Schools Volume 38 ; 38 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Children & Schools Volume 39 ; 39 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; Children & Schools Volume 38 ; 38 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; Children & Schools Volume 39 ; 39 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Children & Schools Volume 40 ; 40 ;  >
 
   }
 
@@ -3153,8 +3160,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Chinese Journal of International Law Volume 12 ; 12 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Chinese Journal of International Law Volume 13 ; 13 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Chinese Journal of International Law Volume 14 ; 14 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; Chinese Journal of International Law Volume 15 ; 15 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Chinese Journal of International Law Volume 16 ; 16 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; Chinese Journal of International Law Volume 15 ; 15 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; Chinese Journal of International Law Volume 16 ; 16 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Chinese Journal of International Law Volume 17 ; 17 ;  >
 
   }
 
@@ -3191,8 +3199,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 19 ; 19 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 20 ; 20 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 21 ; 21 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 22 ; 22 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 23 ; 23 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 22 ; 22 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 23 ; 23 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 24 ; 24 ;  >
 
   }
 
@@ -3214,8 +3223,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Classical Receptions Journal Volume 5 ; 5 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Classical Receptions Journal Volume 6 ; 6 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Classical Receptions Journal Volume 7 ; 7 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; Classical Receptions Journal Volume 8 ; 8 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Classical Receptions Journal Volume 9 ; 9 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; Classical Receptions Journal Volume 8 ; 8 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; Classical Receptions Journal Volume 9 ; 9 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Classical Receptions Journal Volume 10 ; 10 ;  >
 
   }
 
@@ -3268,8 +3278,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Clinical Infectious Diseases Volume 56-57 ; 56-57 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Clinical Infectious Diseases Volume 58-59 ; 58-59 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Clinical Infectious Diseases Volume 60-61 ; 60-61 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; Clinical Infectious Diseases Volume 62-63 ; 62-63 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Clinical Infectious Diseases Volume 64 ; 64 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; Clinical Infectious Diseases Volume 62-63 ; 62-63 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; Clinical Infectious Diseases Volume 64-65 ; 64-65 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Clinical Infectious Diseases Volume 66-67 ; 66-67 ;  >
 
   }
 
@@ -3292,8 +3303,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Clinical Kidney Journal Volume 6 ; 6 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Clinical Kidney Journal Volume 7 ; 7 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Clinical Kidney Journal Volume 8 ; 8 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; Clinical Kidney Journal Volume 9 ; 9 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Clinical Kidney Journal Volume 10 ; 10 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; Clinical Kidney Journal Volume 9 ; 9 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; Clinical Kidney Journal Volume 10 ; 10 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Clinical Kidney Journal Volume 11 ; 11 ;  >
 
   }
 
@@ -3308,7 +3320,7 @@
 
     param[journal_id] = ct
 
-    au < manifest ; exists ; 2018 ; 2018 ; Communication Theory Volume 1 ; 1 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Communication Theory Volume 1 ; 1 ;  >
 
   }
 
@@ -3323,7 +3335,7 @@
 
     param[journal_id] = ccc
 
-    au < manifest ; exists ; 2018 ; 2018 ; Communication, Culture & Critique Volume 1 ; 1 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Communication, Culture & Critique Volume 1 ; 1 ;  >
 
   }
 
@@ -3388,8 +3400,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Community Development Journal Volume 48 ; 48 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Community Development Journal Volume 49 ; 49 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Community Development Journal Volume 50 ; 50 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; Community Development Journal Volume 51 ; 51 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Community Development Journal Volume 52 ; 52 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; Community Development Journal Volume 51 ; 51 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; Community Development Journal Volume 52 ; 52 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Community Development Journal Volume 53 ; 53 ;  >
 
   }
 
@@ -3405,8 +3418,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Conservation Physiology Volume 1 ; 1 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Conservation Physiology Volume 2 ; 2 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Conservation Physiology Volume 3 ; 3 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; Conservation Physiology Volume 4 ; 4 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Conservation Physiology Volume 5 ; 5 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; Conservation Physiology Volume 4 ; 4 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; Conservation Physiology Volume 5 ; 5 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Conservation Physiology Volume 6 ; 6 ;  >
 
   }
 
@@ -3432,8 +3446,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Contemporary Women's Writing Volume 7 ; 7 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Contemporary Women's Writing Volume 8 ; 8 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Contemporary Women's Writing Volume 9 ; 9 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; Contemporary Women's Writing Volume 10 ; 10 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Contemporary Women's Writing Volume 11 ; 11 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; Contemporary Women's Writing Volume 10 ; 10 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; Contemporary Women's Writing Volume 11 ; 11 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Contemporary Women's Writing Volume 12 ; 12 ;  >
 
   }
 
@@ -3497,7 +3512,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Contributions to Political Economy Volume 32 ; 32 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Contributions to Political Economy Volume 33 ; 33 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Contributions to Political Economy Volume 34 ; 34 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; Contributions to Political Economy Volume 35 ; 35 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; Contributions to Political Economy Volume 35 ; 35 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; Contributions to Political Economy Volume 36 ; 36 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Contributions to Political Economy Volume 37 ; 37 ;  >
 
   }
 
@@ -3511,7 +3528,7 @@
 
     param[journal_id] = criticalvalues
 
-    au < manifest ; exists ; 2008 ; 2008 ; Critical Values Volume 1 ; 1 ;  >
+    au < testing ; exists ; 2008 ; 2008 ; Critical Values Volume 1 ; 1 ;  >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Critical Values Volume 2 ; 2 ;  >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Critical Values Volume 3 ; 3 ;  >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Critical Values Volume 4 ; 4 ;  >
@@ -3519,8 +3536,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Critical Values Volume 6 ; 6 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Critical Values Volume 7 ; 7 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Critical Values Volume 8 ; 8 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; Critical Values Volume 9 ; 9 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Critical Values Volume 10 ; 10 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; Critical Values Volume 9 ; 9 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; Critical Values Volume 10 ; 10 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Critical Values Volume 11 ; 11 ;  >
 
   }
 
@@ -3534,8 +3552,8 @@
 
     param[journal_id] = cdn
 
-    au < manifest ; exists ; 2017 ; 2017 ; Current Developments in Nutrition Volume 1 ; 1 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; Current Developments in Nutrition Volume 2 ; 2 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; Current Developments in Nutrition Volume 1 ; 1 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Current Developments in Nutrition Volume 2 ; 2 ;  >
 
   }
 
