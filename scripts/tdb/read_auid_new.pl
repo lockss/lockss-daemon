@@ -2754,6 +2754,33 @@ while (my $line = <>) {
     }
     sleep(4);
     
+  } elsif (($plugin eq "ClockssAnuBooksPlugin")) {
+    $url = sprintf("%spublications/%s", $param{base_url}, $param{book_uri});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    #printf("resp is %s\n",$resp->status_line);
+    if ($resp->is_success) {
+      my $man_contents = $resp->content;
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents)) {
+        # no lockss permission statement on start page. Permission statement is here: https://press.anu.edu.au/lockss.txt
+        # In order to do more better validation, would require searching all the pages for a match to the specific issue link(s)
+        # CLOCKSS only so probably okay to not do this
+        if ($man_contents =~ m/<title>(.*) - ANU Press - ANU<\/title>/si) {
+          $vol_title = $1 . ": " . $param{volume_name}
+        }
+        $result = "Manifest"
+      } else {
+        $result = "--NO_TAG--"
+      }
+    } else {
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+    }
+    sleep(4);
+    
   } elsif ($plugin eq "ClockssJstorCurrentScholarshipPlugin"){
       $url = sprintf("%sclockss-manifest/%s/%s",
       $param{base_url}, $param{journal_id}, $param{year});
