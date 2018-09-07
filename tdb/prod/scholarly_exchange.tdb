@@ -239,15 +239,16 @@
     param[base_url] = http://www.jexpclinassistreprod.com/
     param[journal_id] = JECAR
     #Journal closed to new content. Last volume 2011.
+    #Changed from ojs to word press
 
-    au < testing ; 2004 ; Journal of Experimental & Clinical Assisted Reproduction Volume 1 ; 1 ; 2004 >
-    au < testing ; 2005 ; Journal of Experimental & Clinical Assisted Reproduction Volume 2 ; 2 ; 2005 >
-    au < testing ; 2006 ; Journal of Experimental & Clinical Assisted Reproduction Volume 3 ; 3 ; 2006 >
-    au < testing ; 2007 ; Journal of Experimental & Clinical Assisted Reproduction Volume 4 ; 4 ; 2007 >
-    au < testing ; 2008 ; Journal of Experimental & Clinical Assisted Reproduction Volume 5 ; 5 ; 2008 >
-    au < testing ; 2009 ; Journal of Experimental & Clinical Assisted Reproduction Volume 6 ; 6 ; 2009 >
-    au < testing ; 2010 ; Journal of Experimental & Clinical Assisted Reproduction Volume 7 ; 7 ; 2010 >
-    au < testing ; 2011 ; Journal of Experimental & Clinical Assisted Reproduction Volume 8 ; 8 ; 2011 >
+    au < exists ; 2004 ; Journal of Experimental & Clinical Assisted Reproduction Volume 1 ; 1 ; 2004 >
+    au < exists ; 2005 ; Journal of Experimental & Clinical Assisted Reproduction Volume 2 ; 2 ; 2005 >
+    au < exists ; 2006 ; Journal of Experimental & Clinical Assisted Reproduction Volume 3 ; 3 ; 2006 >
+    au < exists ; 2007 ; Journal of Experimental & Clinical Assisted Reproduction Volume 4 ; 4 ; 2007 >
+    au < exists ; 2008 ; Journal of Experimental & Clinical Assisted Reproduction Volume 5 ; 5 ; 2008 >
+    au < exists ; 2009 ; Journal of Experimental & Clinical Assisted Reproduction Volume 6 ; 6 ; 2009 >
+    au < exists ; 2010 ; Journal of Experimental & Clinical Assisted Reproduction Volume 7 ; 7 ; 2010 >
+    au < exists ; 2011 ; Journal of Experimental & Clinical Assisted Reproduction Volume 8 ; 8 ; 2011 >
     
   }
 }
