@@ -2859,7 +2859,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Capital Markets Law Journal Volume 9 ; 9 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Capital Markets Law Journal Volume 10 ; 10 ;  >
     au < testing ; exists ; 2016 ; 2016 ; Capital Markets Law Journal Volume 11 ; 11 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; Capital Markets Law Journal Volume 12 ; 12 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; Capital Markets Law Journal Volume 12 ; 12 ;  >
     au < testing ; exists ; 2018 ; 2018 ; Capital Markets Law Journal Volume 13 ; 13 ;  >
 
   }
@@ -3129,7 +3129,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Children & Schools Volume 35 ; 35 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Children & Schools Volume 36 ; 36 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Children & Schools Volume 37 ; 37 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; Children & Schools Volume 38 ; 38 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; Children & Schools Volume 38 ; 38 ;  >
     au < testing ; exists ; 2017 ; 2017 ; Children & Schools Volume 39 ; 39 ;  >
     au < testing ; exists ; 2018 ; 2018 ; Children & Schools Volume 40 ; 40 ;  >
 
@@ -3160,7 +3160,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Chinese Journal of International Law Volume 12 ; 12 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Chinese Journal of International Law Volume 13 ; 13 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Chinese Journal of International Law Volume 14 ; 14 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; Chinese Journal of International Law Volume 15 ; 15 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; Chinese Journal of International Law Volume 15 ; 15 ;  >
     au < testing ; exists ; 2017 ; 2017 ; Chinese Journal of International Law Volume 16 ; 16 ;  >
     au < testing ; exists ; 2018 ; 2018 ; Chinese Journal of International Law Volume 17 ; 17 ;  >
 
@@ -3304,7 +3304,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Clinical Kidney Journal Volume 7 ; 7 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Clinical Kidney Journal Volume 8 ; 8 ;  >
     au < testing ; exists ; 2016 ; 2016 ; Clinical Kidney Journal Volume 9 ; 9 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; Clinical Kidney Journal Volume 10 ; 10 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; Clinical Kidney Journal Volume 10 ; 10 ;  >
     au < testing ; exists ; 2018 ; 2018 ; Clinical Kidney Journal Volume 11 ; 11 ;  >
 
   }
@@ -3335,7 +3335,7 @@
 
     param[journal_id] = ccc
 
-    au < testing ; exists ; 2018 ; 2018 ; Communication, Culture & Critique Volume 1 ; 1 ;  >
+    au < ready ; exists ; 2018 ; 2018 ; Communication, Culture & Critique Volume 1 ; 1 ;  >
 
   }
 
@@ -3528,7 +3528,7 @@
 
     param[journal_id] = criticalvalues
 
-    au < testing ; exists ; 2008 ; 2008 ; Critical Values Volume 1 ; 1 ;  >
+    au < ready ; exists ; 2008 ; 2008 ; Critical Values Volume 1 ; 1 ;  >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Critical Values Volume 2 ; 2 ;  >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Critical Values Volume 3 ; 3 ;  >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Critical Values Volume 4 ; 4 ;  >
@@ -3536,7 +3536,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Critical Values Volume 6 ; 6 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Critical Values Volume 7 ; 7 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Critical Values Volume 8 ; 8 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; Critical Values Volume 9 ; 9 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; Critical Values Volume 9 ; 9 ;  >
     au < testing ; exists ; 2017 ; 2017 ; Critical Values Volume 10 ; 10 ;  >
     au < testing ; exists ; 2018 ; 2018 ; Critical Values Volume 11 ; 11 ;  >
 
