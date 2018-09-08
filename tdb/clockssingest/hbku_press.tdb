@@ -221,6 +221,20 @@
   {
   
     title <
+      name = Journal of Information Studies & Technology (JIS&T) ;
+      eissn = 2616-4930
+    >
+
+    plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
+    param[journal_id] = jist
+
+    au < exists ; exists ; 2018 ; Information Studies & Technology Volume 2018 ; 2018 ; >
+
+  }
+  
+  {
+  
+    title <
       name = Journal of Local and Global Health Perspectives ;
       eissn = 2225-9228
     >
@@ -426,6 +440,20 @@
 
   }
 
+  {
+  
+    title <
+      name = Rule of Law and Anti-Corruption Journal ;
+      eissn = 2617-2763
+    >
+
+    plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
+    param[journal_id] = rolacc
+
+    au < exists ; exists ; 2018 ; Rule of Law and Anti-Corruption Journal Volume 2018 ; 2018 ; >
+
+  }
+  
   {
   
     title <
