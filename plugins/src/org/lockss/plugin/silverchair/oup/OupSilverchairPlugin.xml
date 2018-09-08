@@ -10,7 +10,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>23</string>
+    <string>24</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -81,7 +81,7 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^https?://((fonts|ajax)\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|cdn\.mathjax\.org)/"</string>
+      <string>1,"^https?://((fonts|ajax)\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|cdn\.mathjax\.org|cdnjs\.cloudflare\.com)/"</string>
       <!-- 	https://academic.oup.com/my-account/register?siteId=191&returnUrl= redirect to this means access failed -->
       <string>2,"^https?://%s/my-account/register", url_host(base_url)</string>
       <!-- images/figures/supplemental have Expires that will always be 2147483647 and don't redirect - allow -->
@@ -195,6 +195,8 @@
     <list>
       <string>org.lockss.plugin.ContentValidationException$WrongLength=org.lockss.plugin.silverchair.oup.OupScHtmlHttpResponseHandler</string>
       <string>org.lockss.plugin.ContentValidationException=org.lockss.plugin.silverchair.oup.OupScHtmlHttpResponseHandler</string>
+      <!-- SSL Handshake -->
+      <string>org.lockss.util.urlconn.CacheException$UnknownExceptionException=org.lockss.plugin.silverchair.oup.OupScHtmlHttpResponseHandler</string>
       <string>403=org.lockss.plugin.silverchair.oup.OupScHtmlHttpResponseHandler</string>
       <string>500=org.lockss.plugin.silverchair.oup.OupScHtmlHttpResponseHandler</string>
     </list>

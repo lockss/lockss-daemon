@@ -50,7 +50,7 @@ import org.lockss.util.urlconn.CacheSuccess;
 public class OupScHtmlHttpResponseHandler implements CacheResultHandler {
   private static final Logger log = Logger.getLogger(OupScHtmlHttpResponseHandler.class);
   
-  // OUP images are at expiring URLS - in this case it wasn't actually supp_zip but supposed to be image source which was the 403
+  // OUP images are at "stable" expiring URLS - in this case it wasn't actually supp_zip but supposed to be image source which was the 403
   // https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/hmg/26/3/10.1093_hmg_ddw419/2/m_ddw419_supp.zip?Expires=2147483647&Signature=MJDYDzdo...&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA
   // PDF files use a changing Expires date and get consumed. Only supporting content uses the specific stable Expires date so use that as the pattern match
   // oup/backfile/Content_public/[^?]+\?Expires=2147483647&Signature="
@@ -93,6 +93,8 @@ public class OupScHtmlHttpResponseHandler implements CacheResultHandler {
   public CacheException handleResult(final ArchivalUnit au, final String url, final Exception ex)
     throws PluginException {
     log.debug(ex.getMessage() + ": " + url);
+    Matcher mat = NON_FATAL_PAT.matcher(url);
+    
     
     // this checks for the specific exceptions before going to the general case and retry
     if (ex instanceof ContentValidationException.WrongLength) {
@@ -113,6 +115,16 @@ public class OupScHtmlHttpResponseHandler implements CacheResultHandler {
       // retry and no store cache exception
       return new ScRetryableNetworkException(ex);
     }
+    
+    if (ex instanceof CacheException.UnknownExceptionException) {
+      if (mat.find()) {
+        // unimportant content
+        return new ScRetryableNetworkException("Unmapped exception (non-fatal)");
+      } else {
+        log.debug3("Unmapped exception on content url");
+        return new ScRetryableNetworkException(ex);
+      }
+    }    
     
     // we should only get in here cases that we specifically map, report and retry/no fail/no store
     log.warning("Unexpected call to handleResult(): AU " + au.getName() + "; URL " + url, ex);
