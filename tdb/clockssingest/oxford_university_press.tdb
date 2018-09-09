@@ -2259,7 +2259,7 @@
     au < manifest ; exists ; 2015 ; 2015 ; Bioscience Horizons: The International Journal of Student Research Volume 8 ; 8 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; Bioscience Horizons: The International Journal of Student Research Volume 9 ; 9 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; Bioscience Horizons: The International Journal of Student Research Volume 10 ; 10 ;  >
-    au < testing ; exists ; 2018 ; 2018 ; Bioscience Horizons: The International Journal of Student Research Volume 11 ; 11 ;  >
+    au < ready ; exists ; 2018 ; 2018 ; Bioscience Horizons: The International Journal of Student Research Volume 11 ; 11 ;  >
 
   }
 
@@ -2292,7 +2292,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Biostatistics Volume 16 ; 16 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; Biostatistics Volume 17 ; 17 ;  >
     au < ready ; exists ; 2017 ; 2017 ; Biostatistics Volume 18 ; 18 ;  >
-    au < testing ; exists ; 2018 ; 2018 ; Biostatistics Volume 19 ; 19 ;  >
+    au < ready ; exists ; 2018 ; 2018 ; Biostatistics Volume 19 ; 19 ;  >
 
   }
 
@@ -2536,7 +2536,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Briefings in Functional Genomics Volume 14 ; 14 ;  >
     au < ready ; exists ; 2016 ; 2016 ; Briefings in Functional Genomics Volume 15 ; 15 ;  >
     au < ready ; exists ; 2017 ; 2017 ; Briefings in Functional Genomics Volume 16 ; 16 ;  >
-    au < testing ; exists ; 2018 ; 2018 ; Briefings in Functional Genomics Volume 17 ; 17 ;  >
+    au < ready ; exists ; 2018 ; 2018 ; Briefings in Functional Genomics Volume 17 ; 17 ;  >
 
   }
 
@@ -2858,7 +2858,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Capital Markets Law Journal Volume 8 ; 8 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Capital Markets Law Journal Volume 9 ; 9 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Capital Markets Law Journal Volume 10 ; 10 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; Capital Markets Law Journal Volume 11 ; 11 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; Capital Markets Law Journal Volume 11 ; 11 ;  >
     au < ready ; exists ; 2017 ; 2017 ; Capital Markets Law Journal Volume 12 ; 12 ;  >
     au < testing ; exists ; 2018 ; 2018 ; Capital Markets Law Journal Volume 13 ; 13 ;  >
 
@@ -2969,7 +2969,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Cardiovascular Research Volume 66-68 ; 66-68 ;  >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Cardiovascular Research Volume 69-72 ; 69-72 ;  >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Cardiovascular Research Volume 73-76 ; 73-76 ;  >
-    au < testing ; exists ; 2008 ; 2008 ; Cardiovascular Research Volume 77-80 ; 77-80 ;  >
+    au < ready ; exists ; 2008 ; 2008 ; Cardiovascular Research Volume 77-80 ; 77-80 ;  >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Cardiovascular Research Volume 81-84 ; 81-84 ;  >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Cardiovascular Research Volume 85-88 ; 85-88 ;  >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Cardiovascular Research Volume 89-92 ; 89-92 ;  >
@@ -3553,7 +3553,7 @@
     param[journal_id] = cdn
 
     au < ready ; exists ; 2017 ; 2017 ; Current Developments in Nutrition Volume 1 ; 1 ;  >
-    au < testing ; exists ; 2018 ; 2018 ; Current Developments in Nutrition Volume 2 ; 2 ;  >
+    au < ready ; exists ; 2018 ; 2018 ; Current Developments in Nutrition Volume 2 ; 2 ;  >
 
   }
 
