@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch version="4.3.5" xmlns="http://www.crossref.org/schema/4.3.5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.crossref.org/schema/4.3.5 http://data.crossref.org/schemas/crossref4.3.5.xsd"
+ xmlns:jats="http://www.ncbi.nlm.nih.gov/JATS1">
+
+    <head>
+        <doi_batch_id>ca99c8b6-888a-4e09-8d15-cc1641e4a868</doi_batch_id>
+        <timestamp>1532689265661</timestamp>
+        <depositor>
+            <depositor_name>66</depositor_name>
+            <email_address>doi@indexcopernicus.com</email_address>
+        </depositor>
+        <registrant>Index Copernicus</registrant>
+    </head>
+    <body>
+        <journal>
+            <journal_metadata>
+                <full_title>Postępy Higieny i Medycyny Doświadczalnej</full_title>
+                <abbrev_title>Postepy Hig Med Dosw</abbrev_title>
+                <issn media_type="print">0032-5449</issn>
+                <issn media_type="electronic">1732-2693</issn>
+                <doi_data>
+                    <doi>10.5604/00325449</doi>
+                    <resource>https://phmd.pl</resource>
+                </doi_data>
+            </journal_metadata>
+            <journal_issue>
+                <publication_date media_type="print">
+                    <month>1</month>
+                    <day>12</day>
+                    <year>2018</year>
+                </publication_date>
+                <journal_volume>
+                    <volume>72</volume>
+                </journal_volume>
+            </journal_issue>
+            <journal_article publication_type="full_text" language="en">
+                <titles>
+                    <title>The current state of research</title>
+                </titles>
+                <contributors>
+                    <person_name sequence="first" contributor_role="author">
+                        <given_name>Anna</given_name>
+                        <surname>Writer</surname>
+                        <affiliation>Independent Laboratory</affiliation>
+                    </person_name>
+                    <person_name sequence="additional" contributor_role="author">
+                        <given_name>Margo</given_name>
+                        <surname>Smart</surname>
+                        <affiliation>Independent Laboratory</affiliation>
+                    </person_name>
+                </contributors>
+                <jats:abstract>
+                    <jats:p>The aim of this article was to review the results of research 
+</jats:p>
+                </jats:abstract>
+                <publication_date media_type="print">
+                    <month>1</month>
+                    <day>12</day>
+                    <year>2018</year>
+                </publication_date>
+                <pages>
+                    <first_page>1</first_page>
+                    <last_page>12</last_page>
+                </pages>
+                <publisher_item>
+                    <item_number item_number_type="GICID">01.1111.1111.7979</item_number>
+                </publisher_item>
+                <doi_data>
+                    <doi>10.5604/01.1111.1111.7979</doi>
+                    <resource>https://phmd.pl/gicid/01.1111.1111.7979</resource>
+                    <collection property="text-mining">
+                        <item>
+                            <resource mime_type="application/pdf">https://phmd.pl/gicid/pdf/01.1111.1111.7979</resource>
+                        </item>
+                    </collection>
+                    <collection property="crawler-based">
+                        <item crawler="iParadigms">
+                            <resource>https://phmd.pl/gicid/pdf/01.1111.1111.7979</resource>
+                        </item>
+                    </collection>
+                </doi_data>
+            </journal_article>
+        </journal>
+    </body>
+</doi_batch>
+

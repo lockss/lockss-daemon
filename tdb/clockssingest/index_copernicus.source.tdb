@@ -1,0 +1,25 @@
+{
+
+  publisher <
+    name = Index Copernicus ;
+    info[contract] = 2018 ;
+    info[tester] = S
+  >
+  
+  {
+  
+    title <
+       name = Index Copernicus Source Content
+    >
+    
+    plugin = org.lockss.plugin.clockss.indexcopernicuss.ClockssIndexCopernicusSourcePlugin
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/indexcopernicus-released/
+    
+    hidden[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[directory] >
+
+    au < exists ; exists ; 2018 ; Index Copernicus Source Content 2018 ; 2018 >
+
+  }
+
+}
