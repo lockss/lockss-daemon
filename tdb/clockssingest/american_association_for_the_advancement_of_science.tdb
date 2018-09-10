@@ -24,33 +24,33 @@
       #content available from 1880 volume os-1 to 2009 volume 326. 4 volumes/year starting 1962. 2 volumes/year starting 1895 volume 1.
       #volume 344 File size (346438) differs from Content-Length header (461302): http://science.sciencemag.org/content/sci/suppl/2014/04/23/344.6182.380.DC1/1249656s-tables.zip
 
-      au < ready ; exists ; 1880 ; Science Volume os-1 ; os-1 ; >
-      au < ready ; exists ; 1881 ; Science Volume os-2 ; os-2 ; >
-      au < ready ; exists ; 1882 ; Science Volume os-3 ; os-3 ; >
+      au < crawling ; exists ; 1880 ; Science Volume os-1 ; os-1 ; >
+      au < crawling ; exists ; 1881 ; Science Volume os-2 ; os-2 ; >
+      au < crawling ; exists ; 1882 ; Science Volume os-3 ; os-3 ; >
 
-      au < ready ; exists ; 1883 ; Science Volume ns-1 ; ns-1 ; >
-      au < ready ; exists ; 1883 ; Science Volume ns-2 ; ns-2 ; >
-      au < ready ; exists ; 1884 ; Science Volume ns-3 ; ns-3 ; >
-      au < ready ; exists ; 1884 ; Science Volume ns-4 ; ns-4 ; >
-      au < ready ; exists ; 1885 ; Science Volume ns-5 ; ns-5 ; >
-      au < ready ; exists ; 1885 ; Science Volume ns-6 ; ns-6 ; >
-      au < ready ; exists ; 1886 ; Science Volume ns-7 ; ns-7 ; >
-      au < ready ; exists ; 1886 ; Science Volume ns-8 ; ns-8 ; >
-      au < ready ; exists ; 1887 ; Science Volume ns-9 ; ns-9 ; >
-      au < ready ; exists ; 1887 ; Science Volume ns-10 ; ns-10 ; >
-      au < ready ; exists ; 1888 ; Science Volume ns-11 ; ns-11 ; >
-      au < ready ; exists ; 1888 ; Science Volume ns-12 ; ns-12 ; >
-      au < ready ; exists ; 1889 ; Science Volume ns-13 ; ns-13 ; >
-      au < ready ; exists ; 1889 ; Science Volume ns-14 ; ns-14 ; >
-      au < ready ; exists ; 1890 ; Science Volume ns-15 ; ns-15 ; >
-      au < ready ; exists ; 1890 ; Science Volume ns-16 ; ns-16 ; >
-      au < ready ; exists ; 1891 ; Science Volume ns-17 ; ns-17 ; >
-      au < ready ; exists ; 1891 ; Science Volume ns-18 ; ns-18 ; >
-      au < ready ; exists ; 1892 ; Science Volume ns-19 ; ns-19 ; >
-      au < ready ; exists ; 1892 ; Science Volume ns-20 ; ns-20 ; >
-      au < ready ; exists ; 1893 ; Science Volume ns-21 ; ns-21 ; >
-      au < ready ; exists ; 1893 ; Science Volume ns-22 ; ns-22 ; >
-      au < ready ; exists ; 1894 ; Science Volume ns-23 ; ns-23 ; >
+      au < crawling ; exists ; 1883 ; Science Volume ns-1 ; ns-1 ; >
+      au < crawling ; exists ; 1883 ; Science Volume ns-2 ; ns-2 ; >
+      au < crawling ; exists ; 1884 ; Science Volume ns-3 ; ns-3 ; >
+      au < crawling ; exists ; 1884 ; Science Volume ns-4 ; ns-4 ; >
+      au < crawling ; exists ; 1885 ; Science Volume ns-5 ; ns-5 ; >
+      au < crawling ; exists ; 1885 ; Science Volume ns-6 ; ns-6 ; >
+      au < crawling ; exists ; 1886 ; Science Volume ns-7 ; ns-7 ; >
+      au < crawling ; exists ; 1886 ; Science Volume ns-8 ; ns-8 ; >
+      au < crawling ; exists ; 1887 ; Science Volume ns-9 ; ns-9 ; >
+      au < crawling ; exists ; 1887 ; Science Volume ns-10 ; ns-10 ; >
+      au < crawling ; exists ; 1888 ; Science Volume ns-11 ; ns-11 ; >
+      au < crawling ; exists ; 1888 ; Science Volume ns-12 ; ns-12 ; >
+      au < crawling ; exists ; 1889 ; Science Volume ns-13 ; ns-13 ; >
+      au < crawling ; exists ; 1889 ; Science Volume ns-14 ; ns-14 ; >
+      au < crawling ; exists ; 1890 ; Science Volume ns-15 ; ns-15 ; >
+      au < crawling ; exists ; 1890 ; Science Volume ns-16 ; ns-16 ; >
+      au < crawling ; exists ; 1891 ; Science Volume ns-17 ; ns-17 ; >
+      au < crawling ; exists ; 1891 ; Science Volume ns-18 ; ns-18 ; >
+      au < crawling ; exists ; 1892 ; Science Volume ns-19 ; ns-19 ; >
+      au < crawling ; exists ; 1892 ; Science Volume ns-20 ; ns-20 ; >
+      au < crawling ; exists ; 1893 ; Science Volume ns-21 ; ns-21 ; >
+      au < crawling ; exists ; 1893 ; Science Volume ns-22 ; ns-22 ; >
+      au < crawling ; exists ; 1894 ; Science Volume ns-23 ; ns-23 ; >
 
       au < frozen ; exists ; 1895 ; Science Volume 1 ; 1 ; >
       au < frozen ; exists ; 1895 ; Science Volume 2 ; 2 ; >
@@ -58,7 +58,7 @@
       au < frozen ; exists ; 1896 ; Science Volume 4 ; 4 ; >
       au < frozen ; exists ; 1897 ; Science Volume 5 ; 5 ; >
       au < frozen ; exists ; 1897 ; Science Volume 6 ; 6 ; >
-      au < ready ; exists ; 1898 ; Science Volume 7 ; 7 ; >
+      au < crawling ; exists ; 1898 ; Science Volume 7 ; 7 ; >
       au < frozen ; exists ; 1898 ; Science Volume 8 ; 8 ; >
       au < frozen ; exists ; 1899 ; Science Volume 9 ; 9 ; >
       au < frozen ; exists ; 1899 ; Science Volume 10 ; 10 ; >
@@ -89,7 +89,7 @@
       au < frozen ; exists ; 1911 ; Science Volume 34 ; 34 ; >
 
       au < frozen ; exists ; 1912 ; Science Volume 35 ; 35 ; >
-      au < ready ; exists ; 1912 ; Science Volume 36 ; 36 ; >
+      au < crawling ; exists ; 1912 ; Science Volume 36 ; 36 ; >
       au < frozen ; exists ; 1913 ; Science Volume 37 ; 37 ; >
       au < frozen ; exists ; 1913 ; Science Volume 38 ; 38 ; >
       au < frozen ; exists ; 1914 ; Science Volume 39 ; 39 ; >
@@ -183,8 +183,8 @@
       au < frozen ; exists ; 1956 ; Science Volume 123 ; 123 ; >
       au < frozen ; exists ; 1956 ; Science Volume 124 ; 124 ; >
       au < frozen ; exists ; 1957 ; Science Volume 125 ; 125 ; >
-      au < ready ; exists ; 1957 ; Science Volume 126 ; 126 ; >
-      au < ready ; exists ; 1958 ; Science Volume 127 ; 127 ; >
+      au < crawling ; exists ; 1957 ; Science Volume 126 ; 126 ; >
+      au < crawling ; exists ; 1958 ; Science Volume 127 ; 127 ; >
       au < frozen ; exists ; 1958 ; Science Volume 128 ; 128 ; >
       au < frozen ; exists ; 1959 ; Science Volume 129 ; 129 ; >
       au < frozen ; exists ; 1959 ; Science Volume 130 ; 130 ; >
