@@ -765,7 +765,7 @@
       au < finished ; finished ; 2014 ; 2 ; Open Health Data Volume 2014 ; 2014 ; http://openhealthdata.metajnl.com/ ; >
       au < finished ; finished ; 2015 ; 3 ; Open Health Data Volume 2015 ; 2015 ; http://openhealthdata.metajnl.com/ ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2016 ; 4 ; Open Health Data Volume 2016 ; 2016 ; http://openhealthdata.metajnl.com/ ; >
-      au < exists ; exists ; 2018 ; 5 ; Open Health Data Volume 2018 ; 2018 ; https://openhealthdata.metajnl.com/ ; >
+      au < manifest ; exists ; 2018 ; 5 ; Open Health Data Volume 2018 ; 2018 ; https://openhealthdata.metajnl.com/ ; >
 
   }
 
@@ -939,7 +939,7 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://journalofmore.org/
 
-      au < exists ; exists ; 2016 ; 4 ; Journal of Montessori Research & Education Volume 2016 ; 2016 ; https://journalofmore.org/ ; >
+      au < manifest ; exists ; 2016 ; 4 ; Journal of Montessori Research & Education Volume 2016 ; 2016 ; https://journalofmore.org/ ; >
       au < expected ; exists ; 2018 ; 5 ; Journal of Montessori Research & Education Volume 2018 ; 2018 ; https://journalofmore.org/ ; >
 
   }
