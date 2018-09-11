@@ -76,7 +76,9 @@ public class TestHindawiPublishingCorporationPlugin extends LockssTestCase {
   // if it changes in the plugin, you will likely need to change the test, so verify
   static final String REPAIR_FROM_PEER_REGEXP[] = 
     {
-        "\\.css(\\?ver=\\d+)?$"
+        "\\.css(\\?.*)?$",
+        "https?://((fonts|ajax)\\.googleapis\\.com|cdnjs\\.cloudflare\\.com|fast\\.fonts\\.net|images\\.hindawi\\.com)/.*\\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\\?.*)?"
+    
     };
 
   private DefinablePlugin plugin;
