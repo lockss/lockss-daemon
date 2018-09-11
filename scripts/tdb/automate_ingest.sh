@@ -8,11 +8,13 @@ echo "###Ready highwire" > $t/tmp_HW  #clear out file.
 
 #Atypon (not T&F), in order by year
 #Ready
-echo "###Ready Atypon 2018" > $t/tmp_Atypon  #clear out file
-./scripts/tdb/tdbout -Y -a -Q 'plugin ~ "typon" and year is "2018" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | shuf >> $t/tmp_Atypon
-echo "###Ready Atypon not 2018" >> $t/tmp_Atypon
-./scripts/tdb/tdbout -Y -a -Q 'plugin ~ "typon" and year is not "2018" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | shuf >> $t/tmp_Atypon
+#echo "###Ready Atypon 2019" > $t/tmp_Atypon  #clear out file
+#./scripts/tdb/tdbout -Y -a -Q 'plugin ~ "typon" and year is "2019" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | shuf >> $t/tmp_Atypon
+echo "###Ready Atypon not 2019" >> $t/tmp_Atypon
+./scripts/tdb/tdbout -Y -a -Q 'plugin ~ "typon" and year is not "2019" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | shuf >> $t/tmp_Atypon
 #Manifest
+echo "###Manifest Sage 2018" >> $t/tmp_Atypon
+./scripts/tdb/tdbout -MT -a -Q 'year ~ "2018$" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/sage_publications.atypon.tdb | shuf >> $t/tmp_Atypon
 echo "###Manifest Sage 2017" >> $t/tmp_Atypon
 ./scripts/tdb/tdbout -MT -a -Q 'year ~ "2017$" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/sage_publications.atypon.tdb | shuf >> $t/tmp_Atypon
 echo "###Manifest Sage 2016" >> $t/tmp_Atypon
