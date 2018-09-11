@@ -115,15 +115,11 @@ public class OupScHtmlHttpResponseHandler implements CacheResultHandler {
       // retry and no store cache exception
       return new ScRetryableNetworkException(ex);
     }
-    
-    if (ex instanceof CacheException.UnknownExceptionException) {
-      if (mat.find()) {
-        // unimportant content
-        return new ScRetryableNetworkException("Unmapped exception (non-fatal)");
-      } else {
-        log.debug3("Unmapped exception on content url");
-        return new ScRetryableNetworkException(ex);
-      }
+
+    if (ex instanceof javax.net.ssl.SSLHandshakeException) {
+      log.debug3("Retrying SSLHandshakeException", ex);
+      //extends CacheException.RetryableNetworkException_3_10S
+      return new ScRetryableNetworkException(ex);
     }    
     
     // we should only get in here cases that we specifically map, report and retry/no fail/no store

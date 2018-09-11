@@ -10,7 +10,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>24</string>
+    <string>25</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -196,7 +196,8 @@
       <string>org.lockss.plugin.ContentValidationException$WrongLength=org.lockss.plugin.silverchair.oup.OupScHtmlHttpResponseHandler</string>
       <string>org.lockss.plugin.ContentValidationException=org.lockss.plugin.silverchair.oup.OupScHtmlHttpResponseHandler</string>
       <!-- SSL Handshake -->
-      <string>org.lockss.util.urlconn.CacheException$UnknownExceptionException=org.lockss.plugin.silverchair.oup.OupScHtmlHttpResponseHandler</string>
+      <string>javax.net.ssl.SSLHandshakeException=org.lockss.plugin.silverchair.oup.OupScHtmlHttpResponseHandler</string>
+<!--       <string>org.lockss.util.urlconn.CacheException$UnknownExceptionException=org.lockss.plugin.silverchair.oup.OupScHtmlHttpResponseHandler</string> -->
       <string>403=org.lockss.plugin.silverchair.oup.OupScHtmlHttpResponseHandler</string>
       <string>500=org.lockss.plugin.silverchair.oup.OupScHtmlHttpResponseHandler</string>
     </list>
