@@ -275,7 +275,7 @@
       au < finished ; crawling ; 2015 ; Genes & Development Volume 29 ; 29 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2016 ; Genes & Development Volume 30 ; 30 ; >
       au < deepCrawl ; exists ; 2017 ; Genes & Development Volume 31 ; 31 ; >
-      au < ready ; exists ; 2018 ; Genes & Development Volume 32 ; 32 ; >
+      au < crawling ; exists ; 2018 ; Genes & Development Volume 32 ; 32 ; >
 
     }
 
@@ -412,7 +412,7 @@
       au < frozen ; exists ; 2015 ; RNA Volume 21 ; 21 ; >
       au < deepCrawl ; exists ; 2016 ; RNA Volume 22 ; 22 ; >
       au < deepCrawl ; exists ; 2017 ; RNA Volume 23 ; 23 ; >
-      au < ready ; exists ; 2018 ; RNA Volume 24 ; 24 ; >
+      au < crawling ; exists ; 2018 ; RNA Volume 24 ; 24 ; >
 
     }
 
