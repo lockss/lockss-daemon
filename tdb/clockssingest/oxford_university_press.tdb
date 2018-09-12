@@ -4077,7 +4077,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Economic Policy Volume 20 ; 20 ;  >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Economic Policy Volume 21 ; 21 ;  >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Economic Policy Volume 22 ; 22 ;  >
-    au < manifest ; exists ; 2008 ; 2008 ; Economic Policy Volume 23 ; 23 ;  >
+    au < testing ; exists ; 2008 ; 2008 ; Economic Policy Volume 23 ; 23 ;  >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Economic Policy Volume 24 ; 24 ;  >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Economic Policy Volume 25 ; 25 ;  >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Economic Policy Volume 26 ; 26 ;  >
@@ -4085,8 +4085,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Economic Policy Volume 28 ; 28 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Economic Policy Volume 29 ; 29 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Economic Policy Volume 30 ; 30 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; Economic Policy Volume 31 ; 31 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Economic Policy Volume 32 ; 32 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; Economic Policy Volume 31 ; 31 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; Economic Policy Volume 32 ; 32 ;  >
 
   }
 
@@ -4212,8 +4212,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; English: Journal of the English Association Volume 62 ; 62 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; English: Journal of the English Association Volume 63 ; 63 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; English: Journal of the English Association Volume 64 ; 64 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; English: Journal of the English Association Volume 65 ; 65 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; English: Journal of the English Association Volume 66 ; 66 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; English: Journal of the English Association Volume 65 ; 65 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; English: Journal of the English Association Volume 66 ; 66 ;  >
 
   }
 
@@ -4264,7 +4264,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Environmental Entomology Volume 34 ; 34 ;  >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Environmental Entomology Volume 35 ; 35 ;  >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Environmental Entomology Volume 36 ; 36 ;  >
-    au < manifest ; exists ; 2008 ; 2008 ; Environmental Entomology Volume 37 ; 37 ;  >
+    au < testing ; exists ; 2008 ; 2008 ; Environmental Entomology Volume 37 ; 37 ;  >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Environmental Entomology Volume 38 ; 38 ;  >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Environmental Entomology Volume 39 ; 39 ;  >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Environmental Entomology Volume 40 ; 40 ;  >
@@ -4272,8 +4272,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Environmental Entomology Volume 42 ; 42 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Environmental Entomology Volume 43 ; 43 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Environmental Entomology Volume 44 ; 44 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; Environmental Entomology Volume 45 ; 45 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Environmental Entomology Volume 46 ; 46 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; Environmental Entomology Volume 45 ; 45 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; Environmental Entomology Volume 46 ; 46 ;  >
 
   }
 
@@ -4286,9 +4286,9 @@
 
     param[journal_id] = eep
 
-    au < manifest ; exists ; 2015 ; 2015 ; Environmental Epigenetics Volume 1 ; 1 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; Environmental Epigenetics Volume 2 ; 2 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Environmental Epigenetics Volume 3 ; 3 ;  >
+    au < testing ; exists ; 2015 ; 2015 ; Environmental Epigenetics Volume 1 ; 1 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; Environmental Epigenetics Volume 2 ; 2 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; Environmental Epigenetics Volume 3 ; 3 ;  >
 
   }
 
@@ -4323,8 +4323,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Environmental History Volume 18 ; 18 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Environmental History Volume 19 ; 19 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Environmental History Volume 20 ; 20 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; Environmental History Volume 21 ; 21 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Environmental History Volume 22 ; 22 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; Environmental History Volume 21 ; 21 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; Environmental History Volume 22 ; 22 ;  >
 
   }
 
@@ -4408,8 +4408,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Epidemiologic Reviews Volume 35 ; 35 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Epidemiologic Reviews Volume 36 ; 36 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Epidemiologic Reviews Volume 37 ; 37 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; Epidemiologic Reviews Volume 38 ; 38 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Epidemiologic Reviews Volume 39 ; 39 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; Epidemiologic Reviews Volume 38 ; 38 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; Epidemiologic Reviews Volume 39 ; 39 ;  >
 
   }
 
@@ -4489,8 +4489,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Essays in Criticism Volume 63 ; 63 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Essays in Criticism Volume 64 ; 64 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Essays in Criticism Volume 65 ; 65 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; Essays in Criticism Volume 66 ; 66 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Essays in Criticism Volume 67 ; 67 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; Essays in Criticism Volume 66 ; 66 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; Essays in Criticism Volume 67 ; 67 ;  >
 
   }
 
@@ -4533,7 +4533,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; European Heart Journal Volume 26 ; 26 ;  >
     au < doNotProcess ; exists ; 2006 ; 2006 ; European Heart Journal Volume 27 ; 27 ;  >
     au < doNotProcess ; exists ; 2007 ; 2007 ; European Heart Journal Volume 28 ; 28 ;  >
-    au < manifest ; exists ; 2008 ; 2008 ; European Heart Journal Volume 29 ; 29 ;  >
+    au < testing ; exists ; 2008 ; 2008 ; European Heart Journal Volume 29 ; 29 ;  >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; European Heart Journal Volume 30 ; 30 ;  >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; European Heart Journal Volume 31 ; 31 ;  >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; European Heart Journal Volume 32 ; 32 ;  >
@@ -4541,8 +4541,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; European Heart Journal Volume 34 ; 34 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; European Heart Journal Volume 35 ; 35 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; European Heart Journal Volume 36 ; 36 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; European Heart Journal Volume 37 ; 37 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; European Heart Journal Volume 38 ; 38 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; European Heart Journal Volume 37 ; 37 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; European Heart Journal Volume 38 ; 38 ;  >
 
   }
 
@@ -4573,8 +4573,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; European Heart Journal - Cardiovascular Imaging Volume 14 ; 14 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; European Heart Journal - Cardiovascular Imaging Volume 15 ; 15 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; European Heart Journal - Cardiovascular Imaging Volume 16 ; 16 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; European Heart Journal - Cardiovascular Imaging Volume 17 ; 17 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; European Heart Journal - Cardiovascular Imaging Volume 18 ; 18 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; European Heart Journal - Cardiovascular Imaging Volume 17 ; 17 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; European Heart Journal - Cardiovascular Imaging Volume 18 ; 18 ;  >
 
   }
 
@@ -4589,8 +4589,8 @@
     param[journal_id] = ehjcvp
 
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 1 ; 1 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 2 ; 2 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 3 ; 3 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 2 ; 2 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 3 ; 3 ;  >
 
   }
 
@@ -4606,8 +4606,8 @@
     param[journal_id] = ehjqcco
 
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; European Heart Journal - Quality of Care and Clinical Outcomes Volume 1 ; 1 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; European Heart Journal - Quality of Care and Clinical Outcomes Volume 2 ; 2 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; European Heart Journal - Quality of Care and Clinical Outcomes Volume 3 ; 3 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; European Heart Journal - Quality of Care and Clinical Outcomes Volume 2 ; 2 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; European Heart Journal - Quality of Care and Clinical Outcomes Volume 3 ; 3 ;  >
 
   }
 
@@ -4629,7 +4629,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; European Heart Journal Supplements Volume 7 ; 7 ;  >
     au < doNotProcess ; exists ; 2006 ; 2006 ; European Heart Journal Supplements Volume 8 ; 8 ;  >
     au < doNotProcess ; exists ; 2007 ; 2007 ; European Heart Journal Supplements Volume 9 ; 9 ;  >
-    au < manifest ; exists ; 2008 ; 2008 ; European Heart Journal Supplements Volume 10 ; 10 ;  >
+    au < testing ; exists ; 2008 ; 2008 ; European Heart Journal Supplements Volume 10 ; 10 ;  >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; European Heart Journal Supplements Volume 11 ; 11 ;  >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; European Heart Journal Supplements Volume 12 ; 12 ;  >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; European Heart Journal Supplements Volume 13 ; 13 ;  >
@@ -4637,8 +4637,8 @@
     au < doesNotExist ; doesNotExist ; 2013 ; 2013 ; European Heart Journal Supplements Volume 15 ; 15 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; European Heart Journal Supplements Volume 16 ; 16 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; European Heart Journal Supplements Volume 17 ; 17 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; European Heart Journal Supplements Volume 18 ; 18 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; European Heart Journal Supplements Volume 19 ; 19 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; European Heart Journal Supplements Volume 18 ; 18 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; European Heart Journal Supplements Volume 19 ; 19 ;  >
 
   }
 
@@ -4674,7 +4674,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; European Journal of Cardio-Thoracic Surgery Volume 27-28 ; 27-28 ;  >
     au < doNotProcess ; exists ; 2006 ; 2006 ; European Journal of Cardio-Thoracic Surgery Volume 29-30 ; 29-30 ;  >
     au < doNotProcess ; exists ; 2007 ; 2007 ; European Journal of Cardio-Thoracic Surgery Volume 31-32 ; 31-32 ;  >
-    au < manifest ; exists ; 2008 ; 2008 ; European Journal of Cardio-Thoracic Surgery Volume 33-34 ; 33-34 ;  >
+    au < testing ; exists ; 2008 ; 2008 ; European Journal of Cardio-Thoracic Surgery Volume 33-34 ; 33-34 ;  >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; European Journal of Cardio-Thoracic Surgery Volume 35-36 ; 35-36 ;  >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; European Journal of Cardio-Thoracic Surgery Volume 37-38 ; 37-38 ;  >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; European Journal of Cardio-Thoracic Surgery Volume 39-40 ; 39-40 ;  >
@@ -4682,8 +4682,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; European Journal of Cardio-Thoracic Surgery Volume 43-44 ; 43-44 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; European Journal of Cardio-Thoracic Surgery Volume 45-46 ; 45-46 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; European Journal of Cardio-Thoracic Surgery Volume 47-48 ; 47-48 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; European Journal of Cardio-Thoracic Surgery Volume 49-50 ; 49-50 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; European Journal of Cardio-Thoracic Surgery Volume 51 ; 51 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; European Journal of Cardio-Thoracic Surgery Volume 49-50 ; 49-50 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; European Journal of Cardio-Thoracic Surgery Volume 51 ; 51 ;  >
 
   }
 
@@ -4739,8 +4739,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; European Journal of International Law Volume 24 ; 24 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; European Journal of International Law Volume 25 ; 25 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; European Journal of International Law Volume 26 ; 26 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; European Journal of International Law Volume 27 ; 27 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; European Journal of International Law Volume 28 ; 28 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; European Journal of International Law Volume 27 ; 27 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; European Journal of International Law Volume 28 ; 28 ;  >
 
   }
 
@@ -4789,11 +4789,11 @@
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; European Journal of Orthodontics Volume 32 ; 32 ;  >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; European Journal of Orthodontics Volume 33 ; 33 ;  >
     au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; European Journal of Orthodontics Volume 34 ; 34 ;  >
-    au < manifest ; exists ; 2013 ; 2013 ; European Journal of Orthodontics Volume 35 ; 35 ;  >
+    au < testing ; exists ; 2013 ; 2013 ; European Journal of Orthodontics Volume 35 ; 35 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; European Journal of Orthodontics Volume 36 ; 36 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; European Journal of Orthodontics Volume 37 ; 37 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; European Journal of Orthodontics Volume 38 ; 38 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; European Journal of Orthodontics Volume 39 ; 39 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; European Journal of Orthodontics Volume 38 ; 38 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; European Journal of Orthodontics Volume 39 ; 39 ;  >
 
   }
 
@@ -4833,8 +4833,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; European Journal of Public Health Volume 23 ; 23 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; European Journal of Public Health Volume 24 ; 24 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; European Journal of Public Health Volume 25 ; 25 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; European Journal of Public Health Volume 26 ; 26 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; European Journal of Public Health Volume 27 ; 27 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; European Journal of Public Health Volume 26 ; 26 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; European Journal of Public Health Volume 27 ; 27 ;  >
 
   }
 
@@ -4891,8 +4891,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; European Review of Agricultural Economics Volume 40 ; 40 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; European Review of Agricultural Economics Volume 41 ; 41 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; European Review of Agricultural Economics Volume 42 ; 42 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; European Review of Agricultural Economics Volume 43 ; 43 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; European Review of Agricultural Economics Volume 44 ; 44 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; European Review of Agricultural Economics Volume 43 ; 43 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; European Review of Agricultural Economics Volume 44 ; 44 ;  >
 
   }
 
@@ -4918,7 +4918,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; European Review of Economic History Volume 9 ; 9 ;  >
     au < doNotProcess ; exists ; 2006 ; 2006 ; European Review of Economic History Volume 10 ; 10 ;  >
     au < doNotProcess ; exists ; 2007 ; 2007 ; European Review of Economic History Volume 11 ; 11 ;  >
-    au < manifest ; exists ; 2008 ; 2008 ; European Review of Economic History Volume 12 ; 12 ;  >
+    au < testing ; exists ; 2008 ; 2008 ; European Review of Economic History Volume 12 ; 12 ;  >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; European Review of Economic History Volume 13 ; 13 ;  >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; European Review of Economic History Volume 14 ; 14 ;  >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; European Review of Economic History Volume 15 ; 15 ;  >
@@ -4926,8 +4926,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; European Review of Economic History Volume 17 ; 17 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; European Review of Economic History Volume 18 ; 18 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; European Review of Economic History Volume 19 ; 19 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; European Review of Economic History Volume 20 ; 20 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; European Review of Economic History Volume 21 ; 21 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; European Review of Economic History Volume 20 ; 20 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; European Review of Economic History Volume 21 ; 21 ;  >
 
   }
 
@@ -4973,8 +4973,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; European Sociological Review Volume 29 ; 29 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; European Sociological Review Volume 30 ; 30 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; European Sociological Review Volume 31 ; 31 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; European Sociological Review Volume 32 ; 32 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; European Sociological Review Volume 33 ; 33 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; European Sociological Review Volume 32 ; 32 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; European Sociological Review Volume 33 ; 33 ;  >
 
   }
 
@@ -4990,8 +4990,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Evolution, Medicine, and Public Health Volume 2013 ; 2013 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Evolution, Medicine, and Public Health Volume 2014 ; 2014 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Evolution, Medicine, and Public Health Volume 2015 ; 2015 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; Evolution, Medicine, and Public Health Volume 2016 ; 2016 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Evolution, Medicine, and Public Health Volume 2017 ; 2017 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; Evolution, Medicine, and Public Health Volume 2016 ; 2016 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; Evolution, Medicine, and Public Health Volume 2017 ; 2017 ;  >
 
   }
 
@@ -5047,15 +5047,17 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; FEMS Microbiology Ecology Volume 51-54 ; 51-54 ;  >
     au < doNotProcess ; exists ; 2006 ; 2006 ; FEMS Microbiology Ecology Volume 55-58 ; 55-58 ;  >
     au < doNotProcess ; exists ; 2007 ; 2007 ; FEMS Microbiology Ecology Volume 59-62 ; 59-62 ;  >
-    au < manifest ; exists ; 2008 ; 2008 ; FEMS Microbiology Ecology Volume 63-66 ; 63-66 ;  >
+    au < testing ; exists ; 2008 ; 2008 ; FEMS Microbiology Ecology Volume 63-66 ; 63-66 ;  >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; FEMS Microbiology Ecology Volume 67-70 ; 67-70 ;  >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; FEMS Microbiology Ecology Volume 71-74 ; 71-74 ;  >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; FEMS Microbiology Ecology Volume 75-78 ; 75-78 ;  >
     au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; FEMS Microbiology Ecology Volume 79-82 ; 79-82 ;  >
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; FEMS Microbiology Ecology Volume 83-86 ; 83-86 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; FEMS Microbiology Ecology Volume 87-90 ; 87-90 ;  >
-    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; FEMS Microbiology Ecology Volume 91-94 ; 91-94 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; FEMS Microbiology Ecology Volume 95-98 ; 95-98 ;  >
+    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; FEMS Microbiology Ecology Volume 91 ; 91 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; FEMS Microbiology Ecology Volume 92 ; 92 ;  >
+    au < exists ; exists ; 2017 ; 2017 ; FEMS Microbiology Ecology Volume 93 ; 93 ;  >
+    au < exists ; exists ; 2018 ; 2018 ; FEMS Microbiology Ecology Volume 94 ; 94 ;  >
 
   }
 
