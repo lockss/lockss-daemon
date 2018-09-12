@@ -1973,7 +1973,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Bioinformatics Volume 31 ; 31 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; Bioinformatics Volume 32 ; 32 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; Bioinformatics Volume 33 ; 33 ;  >
-    au < testing ; exists ; 2018 ; 2018 ; Bioinformatics Volume 34 ; 34 ;  >
+    au < ready ; exists ; 2018 ; 2018 ; Bioinformatics Volume 34 ; 34 ;  >
 
   }
 
@@ -3592,7 +3592,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Current Legal Problems Volume 66 ; 66 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Current Legal Problems Volume 67 ; 67 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Current Legal Problems Volume 68 ; 68 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; Current Legal Problems Volume 69 ; 69 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; Current Legal Problems Volume 69 ; 69 ;  >
     au < exists ; exists ; 2017 ; 2017 ; Current Legal Problems Volume 70 ; 70 ;  >
     au < expected ; exists ; 2018 ; 2018 ; Current Legal Problems Volume 71 ; 71 ;  >
 
@@ -3613,8 +3613,8 @@
     au < manifest ; exists ; 2013 ; 2013 ; Current Zoology Volume 59 ; 59 ;  >
     au < manifest ; exists ; 2014 ; 2014 ; Current Zoology Volume 60 ; 60 ;  >
     au < manifest ; exists ; 2015 ; 2015 ; Current Zoology Volume 61 ; 61 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; Current Zoology Volume 62 ; 62 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; Current Zoology Volume 63 ; 63 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; Current Zoology Volume 62 ; 62 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; Current Zoology Volume 63 ; 63 ;  >
     au < expected ; exists ; 2018 ; 2018 ; Current Zoology Volume 64 ; 64 ;  >
 
   }
@@ -3652,8 +3652,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; DNA Research Volume 20 ; 20 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; DNA Research Volume 21 ; 21 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; DNA Research Volume 22 ; 22 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; DNA Research Volume 23 ; 23 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; DNA Research Volume 24 ; 24 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; DNA Research Volume 23 ; 23 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; DNA Research Volume 24 ; 24 ;  >
     au < expected ; exists ; 2018 ; 2018 ; DNA Research Volume 25 ; 25 ;  >
 
   }
@@ -3722,7 +3722,7 @@
     au < manifest ; exists ; 2013 ; 2013 ; Digital Scholarship in the Humanities Volume 28 ; 28 ;  >
     au < manifest ; exists ; 2014 ; 2014 ; Digital Scholarship in the Humanities Volume 29 ; 29 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Digital Scholarship in the Humanities Volume 30 ; 30 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; Digital Scholarship in the Humanities Volume 31 ; 31 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; Digital Scholarship in the Humanities Volume 31 ; 31 ;  >
     au < frozen ; exists ; 2017 ; 2017 ; Digital Scholarship in the Humanities Volume 32 ; 32 ;  >
     au < expected ; exists ; 2018 ; 2018 ; Digital Scholarship in the Humanities Volume 33 ; 33 ;  >
 
@@ -3778,8 +3778,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Diplomatic History Volume 37 ; 37 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Diplomatic History Volume 38 ; 38 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Diplomatic History Volume 39 ; 39 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; Diplomatic History Volume 40 ; 40 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; Diplomatic History Volume 41 ; 41 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; Diplomatic History Volume 40 ; 40 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; Diplomatic History Volume 41 ; 41 ;  >
     au < expected ; exists ; 2018 ; 2018 ; Diplomatic History Volume 42 ; 42 ;  >
 
   }
@@ -3921,7 +3921,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; ELT Journal Volume 67 ; 67 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; ELT Journal Volume 68 ; 68 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; ELT Journal Volume 69 ; 69 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; ELT Journal Volume 70 ; 70 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; ELT Journal Volume 70 ; 70 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; ELT Journal Volume 71 ; 71 ;  >
     au < expected ; exists ; 2018 ; 2018 ; ELT Journal Volume 72 ; 72 ;  >
 
@@ -4038,7 +4038,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Early Music Volume 41 ; 41 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Early Music Volume 42 ; 42 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Early Music Volume 43 ; 43 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; Early Music Volume 44 ; 44 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; Early Music Volume 44 ; 44 ;  >
     au < exists ; exists ; 2017 ; 2017 ; Early Music Volume 45 ; 45 ;  >
     au < exists ; exists ; 2018 ; 2018 ; Early Music Volume 46 ; 46 ;  >
 
