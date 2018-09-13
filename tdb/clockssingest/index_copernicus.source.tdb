@@ -12,7 +12,7 @@
        name = Index Copernicus Source Content
     >
     
-    plugin = org.lockss.plugin.clockss.indexcopernicuss.ClockssIndexCopernicusSourcePlugin
+    plugin = org.lockss.plugin.clockss.indexcopernicus.ClockssIndexCopernicusSourcePlugin
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/indexcopernicus-released/
     
     hidden[proxy] = DIRECT
