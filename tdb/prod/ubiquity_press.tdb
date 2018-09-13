@@ -10,26 +10,6 @@
   {
 
       title <
-        name = Orbit: Writing Around Pynchon ;
-        eissn = 2047-2870
-      >
-
-      comment[publisher] = Open Library of Humanities
-#      param[base_url] = https://www.pynchon.net/
-
-      au < released ; 2012 ; 1 ; Orbit: Writing Around Pynchon Volume 2012 ; 2012 ; https://www.pynchon.net/ >
-      au < released ; 2013 ; 2 ; Orbit: Writing Around Pynchon Volume 2013 ; 2013 ; https://www.pynchon.net/ >
-      au < released ; 2014 ; 3 ; Orbit: Writing Around Pynchon Volume 2014 ; 2014 ; https://www.pynchon.net/ >
-      au < released ; 2015 ; 4 ; Orbit: Writing Around Pynchon Volume 2015 ; 2015 ; https://www.pynchon.net/ >
-      au < released ; 2016 ; 5 ; Orbit: Writing Around Pynchon Volume 2016 ; 2016 ; https://www.pynchon.net/ >
-      au < manifest ; 2017 ; 6 ; Orbit: Writing Around Pynchon Volume 2017 ; 2017 ; https://www.pynchon.net/ >
-      au < expected ; 2018 ; 7 ; Orbit: Writing Around Pynchon Volume 2018 ; 2018 ; https://www.pynchon.net/ >
-
-  }
-
-  {
-
-      title <
         name = 19: Interdisciplinary Studies in the Long Nineteenth Century ;
         eissn = 1755-1560
       >
@@ -75,22 +55,6 @@
       au < released ; 2016 ; 23 ; ASIANetwork Exchange Volume 2016 ; 2016 ; http://www.asianetworkexchange.org/ >
       au < released ; 2017 ; 24 ; ASIANetwork Exchange Volume 2017 ; 2017 ; https://www.asianetworkexchange.org/ >
       au < manifest ; 2018 ; 25 ; ASIANetwork Exchange Volume 2018 ; 2018 ; https://www.asianetworkexchange.org/ >
-
-  }
-
-  {
-
-      title <
-        name = C21 Literature: journal of 21st-century writings ;
-        eissn = 2045-5224
-      >
-
-      comment[publisher] = Open Library of Humanities
-#      param[base_url] = http://c21.openlibhums.org/
-
-      au < released ; 2016 ; 1 ; C21 Literature: journal of 21st-century writings Volume 2016 ; 2016 ; http://c21.openlibhums.org/ >
-      au < released ; 2017 ; 2 ; C21 Literature: journal of 21st-century writings Volume 2017 ; 2017 ; https://c21.openlibhums.org/ >
-      au < manifest ; 2018 ; 3 ; C21 Literature: journal of 21st-century writings Volume 2018 ; 2018 ; https://c21.openlibhums.org/ >
 
   }
 
@@ -186,48 +150,6 @@
 
   }
 
-  {
-
-      title <
-        name = Digital Medievalist ;
-        eissn = 1715-0736
-      >
-
-      comment[publisher] = Open Library of Humanities
-#      param[base_url] = https://journal.digitalmedievalist.org/
-
-      au < released ; 2005 ; 1 ; Digital Medievalist Volume 2005 ; 2005 ; https://journal.digitalmedievalist.org/ >
-      au < released ; 2006 ; 2 ; Digital Medievalist Volume 2006 ; 2006 ; https://journal.digitalmedievalist.org/ >
-      au < released ; 2007 ; 3 ; Digital Medievalist Volume 2007 ; 2007 ; https://journal.digitalmedievalist.org/ >
-      au < released ; 2008 ; 4 ; Digital Medievalist Volume 2008 ; 2008 ; https://journal.digitalmedievalist.org/ >
-      au < released ; 2009 ; 5 ; Digital Medievalist Volume 2009 ; 2009 ; https://journal.digitalmedievalist.org/ >
-      au < doesNotExist ; 2010 ; 6 ; Digital Medievalist Volume 2010 ; 2010 ; https://journal.digitalmedievalist.org/ >
-      au < released ; 2011 ; 7 ; Digital Medievalist Volume 2011 ; 2011 ; https://journal.digitalmedievalist.org/ >
-      au < released ; 2012 ; 8 ; Digital Medievalist Volume 2012 ; 2012 ; https://journal.digitalmedievalist.org/ >
-      au < released ; 2013 ; 9 ; Digital Medievalist Volume 2013 ; 2013 ; https://journal.digitalmedievalist.org/ >
-      au < released ; 2014 ; 10 ; Digital Medievalist Volume 2014 ; 2014 ; https://journal.digitalmedievalist.org/ >
-      au < released ; 2015 ; 11 ; Digital Medievalist Volume 2015 ; 2015 ; https://journal.digitalmedievalist.org/ >
-      au < released ; 2016 ; 12 ; Digital Medievalist Volume 2016 ; 2016 ; https://journal.digitalmedievalist.org/ >
-      au < released ; 2017 ; 13 ; Digital Medievalist Volume 2017 ; 2017 ; https://journal.digitalmedievalist.org/ >
-      au < manifest ; 2018 ; 14 ; Digital Medievalist Volume 2018 ; 2018 ; https://journal.digitalmedievalist.org/ >
-
-  }
-
-  {
-
-      title <
-        name = Marvell Studies ;
-        eissn = 2399-7435
-      >
-
-      comment[publisher] = Open Library of Humanities
-#      param[base_url] = https://marvell.openlibhums.org/
-
-      au < released ; 2016 ; 1 ; Marvell Studies Volume 2016 ; 2016 ; https://marvell.openlibhums.org/ >
-      au < released ; 2017 ; 2 ; Marvell Studies Volume 2017 ; 2017 ; https://marvell.openlibhums.org/ >
-      au < manifest ; 2018 ; 3 ; Marvell Studies Volume 2018 ; 2018 ; https://marvell.openlibhums.org/ >
-
-  }
 }
 {
   publisher <
