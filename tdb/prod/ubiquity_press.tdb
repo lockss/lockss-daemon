@@ -7,9 +7,6 @@
     plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
     implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
 
-    #do not include http://collabra.org/ ; COLLABRA ; issn = 2376-6832 
-    
-
   {
 
       title <
