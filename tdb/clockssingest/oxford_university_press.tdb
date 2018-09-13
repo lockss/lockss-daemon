@@ -3675,7 +3675,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Database Volume 2013 ; 2013 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Database Volume 2014 ; 2014 ;  >
     au < testing ; exists ; 2015 ; 2015 ; Database Volume 2015 ; 2015 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; Database Volume 2016 ; 2016 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; Database Volume 2016 ; 2016 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; Database Volume 2017 ; 2017 ;  >
     au < expected ; exists ; 2018 ; 2018 ; Database Volume 2018 ; 2018 ;  >
 
@@ -3822,8 +3822,8 @@
     au < manifest ; exists ; 2013 ; 2013 ; Diseases of the Esophagus Volume 26 ; 26 ;  >
     au < manifest ; exists ; 2014 ; 2014 ; Diseases of the Esophagus Volume 27 ; 27 ;  >
     au < manifest ; exists ; 2015 ; 2015 ; Diseases of the Esophagus Volume 28 ; 28 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; Diseases of the Esophagus Volume 29 ; 29 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; Diseases of the Esophagus Volume 30 ; 30 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; Diseases of the Esophagus Volume 29 ; 29 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; Diseases of the Esophagus Volume 30 ; 30 ;  >
     au < expected ; exists ; 2018 ; 2018 ; Diseases of the Esophagus Volume 31 ; 31 ;  >
 
   }
@@ -3957,7 +3957,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; EP Europace Volume 15 ; 15 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; EP Europace Volume 16 ; 16 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; EP Europace Volume 17 ; 17 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; EP Europace Volume 18 ; 18 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; EP Europace Volume 18 ; 18 ;  >
     au < testing ; exists ; 2017 ; 2017 ; EP Europace Volume 19 ; 19 ;  >
     au < expected ; exists ; 2018 ; 2018 ; EP Europace Volume 20 ; 20 ;  >
 
