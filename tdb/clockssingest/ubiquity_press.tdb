@@ -17,34 +17,7 @@
       comment[publisher] = IJS Publishing Group
 #      param[base_url] = https://www.amscasereports.com/
 
-      au < exists ; exists ; 1991 ; 1 ; Annals of Medicine and Surgery Case Reports Volume 1991 ; 1991 ; https://www.amscasereports.com/ ; >
-      au < exists ; exists ; 1992 ; 2 ; Annals of Medicine and Surgery Case Reports Volume 1992 ; 1992 ; https://www.amscasereports.com/ ; >
-      au < exists ; exists ; 1993 ; 3 ; Annals of Medicine and Surgery Case Reports Volume 1993 ; 1993 ; https://www.amscasereports.com/ ; >
-      au < exists ; exists ; 1994 ; 4 ; Annals of Medicine and Surgery Case Reports Volume 1994 ; 1994 ; https://www.amscasereports.com/ ; >
-      au < exists ; exists ; 1995 ; 5 ; Annals of Medicine and Surgery Case Reports Volume 1995 ; 1995 ; https://www.amscasereports.com/ ; >
-      au < exists ; exists ; 1996 ; 6 ; Annals of Medicine and Surgery Case Reports Volume 1996 ; 1996 ; https://www.amscasereports.com/ ; >
-      au < exists ; exists ; 1997 ; 7 ; Annals of Medicine and Surgery Case Reports Volume 1997 ; 1997 ; https://www.amscasereports.com/ ; >
-      au < exists ; exists ; 1998 ; 8 ; Annals of Medicine and Surgery Case Reports Volume 1998 ; 1998 ; https://www.amscasereports.com/ ; >
-      au < exists ; exists ; 1999 ; 9 ; Annals of Medicine and Surgery Case Reports Volume 1999 ; 1999 ; https://www.amscasereports.com/ ; >
-      au < exists ; exists ; 2000 ; 10 ; Annals of Medicine and Surgery Case Reports Volume 2000 ; 2000 ; https://www.amscasereports.com/ ; >
-      au < exists ; exists ; 2001 ; 11 ; Annals of Medicine and Surgery Case Reports Volume 2001 ; 2001 ; https://www.amscasereports.com/ ; >
-      au < exists ; exists ; 2002 ; 12 ; Annals of Medicine and Surgery Case Reports Volume 2002 ; 2002 ; https://www.amscasereports.com/ ; >
-      au < exists ; exists ; 2003 ; 13 ; Annals of Medicine and Surgery Case Reports Volume 2003 ; 2003 ; https://www.amscasereports.com/ ; >
-      au < exists ; exists ; 2004 ; 14 ; Annals of Medicine and Surgery Case Reports Volume 2004 ; 2004 ; https://www.amscasereports.com/ ; >
-      au < exists ; exists ; 2005 ; 15 ; Annals of Medicine and Surgery Case Reports Volume 2005 ; 2005 ; https://www.amscasereports.com/ ; >
-      au < exists ; exists ; 2006 ; 16 ; Annals of Medicine and Surgery Case Reports Volume 2006 ; 2006 ; https://www.amscasereports.com/ ; >
-      au < exists ; exists ; 2007 ; 17 ; Annals of Medicine and Surgery Case Reports Volume 2007 ; 2007 ; https://www.amscasereports.com/ ; >
-      au < exists ; exists ; 2008 ; 18 ; Annals of Medicine and Surgery Case Reports Volume 2008 ; 2008 ; https://www.amscasereports.com/ ; >
-      au < exists ; exists ; 2009 ; 19 ; Annals of Medicine and Surgery Case Reports Volume 2009 ; 2009 ; https://www.amscasereports.com/ ; >
-      au < exists ; exists ; 2010 ; 20 ; Annals of Medicine and Surgery Case Reports Volume 2010 ; 2010 ; https://www.amscasereports.com/ ; >
-      au < exists ; exists ; 2011 ; 21 ; Annals of Medicine and Surgery Case Reports Volume 2011 ; 2011 ; https://www.amscasereports.com/ ; >
-      au < exists ; exists ; 2012 ; 22 ; Annals of Medicine and Surgery Case Reports Volume 2012 ; 2012 ; https://www.amscasereports.com/ ; >
-      au < exists ; exists ; 2013 ; 23 ; Annals of Medicine and Surgery Case Reports Volume 2013 ; 2013 ; https://www.amscasereports.com/ ; >
-      au < exists ; exists ; 2014 ; 24 ; Annals of Medicine and Surgery Case Reports Volume 2014 ; 2014 ; https://www.amscasereports.com/ ; >
-      au < exists ; exists ; 2015 ; 25 ; Annals of Medicine and Surgery Case Reports Volume 2015 ; 2015 ; https://www.amscasereports.com/ ; >
-      au < exists ; exists ; 2016 ; 26 ; Annals of Medicine and Surgery Case Reports Volume 2016 ; 2016 ; https://www.amscasereports.com/ ; >
-      au < exists ; exists ; 2017 ; 27 ; Annals of Medicine and Surgery Case Reports Volume 2017 ; 2017 ; https://www.amscasereports.com/ ; >
-      au < expected ; exists ; 2018 ; 28 ; Annals of Medicine and Surgery Case Reports Volume 2018 ; 2018 ; https://www.amscasereports.com/ ; >
+      au < manifest ; exists ; 2018 ; 1 ; Annals of Medicine and Surgery Case Reports Volume 2018 ; 2018 ; https://www.amscasereports.com/ ; >
 
   }
 
@@ -58,7 +31,7 @@
       comment[publisher] = IJS Publishing Group
 #      param[base_url] = https://www.amsprotocols.com/
 
-      au < expected ; exists ; 2018 ; 1 ; Annals of Medicine and Surgery Protocols Volume 2018 ; 2018 ; https://www.amsprotocols.com/ ; >
+      au < manifest ; exists ; 2018 ; 1 ; Annals of Medicine and Surgery Protocols Volume 2018 ; 2018 ; https://www.amsprotocols.com/ ; >
 
   }
 
@@ -72,7 +45,7 @@
       comment[publisher] = IJS Publishing Group
 #      param[base_url] = https://ijops.com/
 
-      au < expected ; exists ; 2018 ; 1 ; International Journal of Orthoplastic Surgery Volume 2018 ; 2018 ; https://ijops.com/ ; >
+      au < manifest ; exists ; 2018 ; 1 ; International Journal of Orthoplastic Surgery Volume 2018 ; 2018 ; https://ijops.com/ ; >
 
   }
 
@@ -96,8 +69,8 @@
       comment[publisher] = Latin American Studies Association
 #      param[base_url] = https://larrlasa.org/
 
-      au < exists ; exists ; 2017 ; 1 ; Latin American Research Review Volume 2017 ; 2017 ; https://larrlasa.org/ ; >
-      au < expected ; exists ; 2018 ; 2 ; Latin American Research Review Volume 2018 ; 2018 ; https://larrlasa.org/ ; >
+      au < manifest ; exists ; 2017 ; 1 ; Latin American Research Review Volume 2017 ; 2017 ; https://larrlasa.org/ ; >
+      au < manifest ; exists ; 2018 ; 2 ; Latin American Research Review Volume 2018 ; 2018 ; https://larrlasa.org/ ; >
 
   }
 
@@ -121,11 +94,11 @@
       comment[publisher] = Levy Library Press
 #      param[base_url] = https://www.annalsofglobalhealth.org/
 
-      au < exists ; exists ; 2014 ; 1 ; Annals of Global Health Volume 2014 ; 2014 ; https://www.annalsofglobalhealth.org/ ; >
-      au < exists ; exists ; 2015 ; 2 ; Annals of Global Health Volume 2015 ; 2015 ; https://www.annalsofglobalhealth.org/ ; >
-      au < exists ; exists ; 2016 ; 3 ; Annals of Global Health Volume 2016 ; 2016 ; https://www.annalsofglobalhealth.org/ ; >
-      au < exists ; exists ; 2017 ; 4 ; Annals of Global Health Volume 2017 ; 2017 ; https://www.annalsofglobalhealth.org/ ; >
-      au < expected ; exists ; 2018 ; 5 ; Annals of Global Health Volume 2018 ; 2018 ; https://www.annalsofglobalhealth.org/ ; >
+      au < manifest ; exists ; 2014 ; 1 ; Annals of Global Health Volume 2014 ; 2014 ; https://www.annalsofglobalhealth.org/ ; >
+      au < manifest ; exists ; 2015 ; 2 ; Annals of Global Health Volume 2015 ; 2015 ; https://www.annalsofglobalhealth.org/ ; >
+      au < manifest ; exists ; 2016 ; 3 ; Annals of Global Health Volume 2016 ; 2016 ; https://www.annalsofglobalhealth.org/ ; >
+      au < manifest ; exists ; 2017 ; 4 ; Annals of Global Health Volume 2017 ; 2017 ; https://www.annalsofglobalhealth.org/ ; >
+      au < manifest ; exists ; 2018 ; 5 ; Annals of Global Health Volume 2018 ; 2018 ; https://www.annalsofglobalhealth.org/ ; >
 
   }
 
@@ -150,11 +123,11 @@
       comment[publisher] = Liverpool University Press
 #      param[base_url] = https://www.modernlanguagesopen.org/
 
-      au < exists ; exists ; 2014 ; 1 ; Modern Languages Open Volume 2014 ; 2014 ; https://www.modernlanguagesopen.org/ ; >
-      au < exists ; exists ; 2015 ; 2 ; Modern Languages Open Volume 2015 ; 2015 ; https://www.modernlanguagesopen.org/ ; >
-      au < exists ; exists ; 2016 ; 3 ; Modern Languages Open Volume 2016 ; 2016 ; https://www.modernlanguagesopen.org/ ; >
-      au < exists ; exists ; 2017 ; 4 ; Modern Languages Open Volume 2017 ; 2017 ; https://www.modernlanguagesopen.org/ ; >
-      au < expected ; exists ; 2018 ; 5 ; Modern Languages Open Volume 2018 ; 2018 ; https://www.modernlanguagesopen.org/ ; >
+      au < manifest ; exists ; 2014 ; 1 ; Modern Languages Open Volume 2014 ; 2014 ; https://www.modernlanguagesopen.org/ ; >
+      au < manifest ; exists ; 2015 ; 2 ; Modern Languages Open Volume 2015 ; 2015 ; https://www.modernlanguagesopen.org/ ; >
+      au < manifest ; exists ; 2016 ; 3 ; Modern Languages Open Volume 2016 ; 2016 ; https://www.modernlanguagesopen.org/ ; >
+      au < manifest ; exists ; 2017 ; 4 ; Modern Languages Open Volume 2017 ; 2017 ; https://www.modernlanguagesopen.org/ ; >
+      au < manifest ; exists ; 2018 ; 5 ; Modern Languages Open Volume 2018 ; 2018 ; https://www.modernlanguagesopen.org/ ; >
 
   }
 
