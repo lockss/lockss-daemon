@@ -4651,12 +4651,12 @@
       # move to https://www.amhsr.org/
       # move to new publisher, https://www.ajol.info/index.php/amhsr (both appear to be online)
 
-      au < frozen ; exists ; 2011 ; Annals of Medical and Health Sciences Research Volume 1 ; 2011 ; 1 ; >
-      au < frozen ; exists ; 2012 ; Annals of Medical and Health Sciences Research Volume 2 ; 2012 ; 2 ; >
-      au < frozen ; exists ; 2013 ; Annals of Medical and Health Sciences Research Volume 3 ; 2013 ; 3 ; >
-      au < frozen ; exists ; 2014 ; Annals of Medical and Health Sciences Research Volume 4 ; 2014 ; 4 ; > #StepOne-Fail #GoodHosts:0   DeepCrawlDone : False
-      au < frozen ; exists ; 2015 ; Annals of Medical and Health Sciences Research Volume 5 ; 2015 ; 5 ; > #StepOne-Fail #GoodHosts:0   DeepCrawlDone : False
-      au < deepCrawl ; exists ; 2016 ; Annals of Medical and Health Sciences Research Volume 6 ; 2016 ; 6 ; >
+      au < down ; exists ; 2011 ; Annals of Medical and Health Sciences Research Volume 1 ; 2011 ; 1 ; >
+      au < down ; exists ; 2012 ; Annals of Medical and Health Sciences Research Volume 2 ; 2012 ; 2 ; >
+      au < down ; exists ; 2013 ; Annals of Medical and Health Sciences Research Volume 3 ; 2013 ; 3 ; >
+      au < down ; exists ; 2014 ; Annals of Medical and Health Sciences Research Volume 4 ; 2014 ; 4 ; > #StepOne-Fail #GoodHosts:0   DeepCrawlDone : False
+      au < down ; exists ; 2015 ; Annals of Medical and Health Sciences Research Volume 5 ; 2015 ; 5 ; > #StepOne-Fail #GoodHosts:0   DeepCrawlDone : False
+      au < down ; exists ; 2016 ; Annals of Medical and Health Sciences Research Volume 6 ; 2016 ; 6 ; >
 
     }
 
