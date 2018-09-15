@@ -1,5 +1,139 @@
 {
   publisher <
+    name = IJS Publishing Group
+  >
+
+    provider = Ubiquity Press
+    plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
+    implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
+
+  {
+
+      title <
+        name = Annals of Medicine and Surgery Case Reports ;
+        eissn = 2515-8872
+      >
+
+      comment[publisher] = IJS Publishing Group
+#      param[base_url] = https://www.amscasereports.com/
+
+      au < expected ; 2018 ; 1 ; Annals of Medicine and Surgery Case Reports Volume 2018 ; 2018 ; https://www.amscasereports.com/ >
+
+  }
+
+  {
+
+      title <
+        name = Annals of Medicine and Surgery Protocols ;
+        eissn = 2515-8902
+      >
+
+      comment[publisher] = IJS Publishing Group
+#      param[base_url] = https://www.amsprotocols.com/
+
+      au < expected ; 2018 ; 1 ; Annals of Medicine and Surgery Protocols Volume 2018 ; 2018 ; https://www.amsprotocols.com/ >
+
+  }
+
+  {
+
+      title <
+        name = International Journal of Orthoplastic Surgery ;
+        eissn = 2515-7566
+      >
+
+      comment[publisher] = IJS Publishing Group
+#      param[base_url] = https://ijops.com/
+
+      au < expected ; 2018 ; 1 ; International Journal of Orthoplastic Surgery Volume 2018 ; 2018 ; https://ijops.com/ >
+
+  }
+
+}
+{
+  publisher <
+    name = Latin American Studies Association
+  >
+
+    provider = Ubiquity Press
+    plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
+    implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
+
+  {
+
+      title <
+        name = Latin American Research Review ;
+        eissn = 1542-4278
+      >
+
+      comment[publisher] = Latin American Studies Association
+#      param[base_url] = https://larrlasa.org/
+
+      au < exists ; 2017 ; 1 ; Latin American Research Review Volume 2017 ; 2017 ; https://larrlasa.org/ >
+      au < expected ; 2018 ; 2 ; Latin American Research Review Volume 2018 ; 2018 ; https://larrlasa.org/ >
+
+  }
+
+}
+{
+  publisher <
+    name = Levy Library Press
+  >
+
+    provider = Ubiquity Press
+    plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
+    implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
+
+  {
+
+      title <
+        name = Annals of Global Health ;
+        eissn = 2214-9996
+      >
+
+      comment[publisher] = Levy Library Press
+#      param[base_url] = https://www.annalsofglobalhealth.org/
+
+      au < exists ; 2014 ; 1 ; Annals of Global Health Volume 2014 ; 2014 ; https://www.annalsofglobalhealth.org/ >
+      au < exists ; 2015 ; 2 ; Annals of Global Health Volume 2015 ; 2015 ; https://www.annalsofglobalhealth.org/ >
+      au < exists ; 2016 ; 3 ; Annals of Global Health Volume 2016 ; 2016 ; https://www.annalsofglobalhealth.org/ >
+      au < exists ; 2017 ; 4 ; Annals of Global Health Volume 2017 ; 2017 ; https://www.annalsofglobalhealth.org/ >
+      au < expected ; 2018 ; 5 ; Annals of Global Health Volume 2018 ; 2018 ; https://www.annalsofglobalhealth.org/ >
+
+  }
+
+}
+{
+  publisher <
+    name = Liverpool University Press
+  >
+
+    provider = Ubiquity Press
+    plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
+    implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
+
+  {
+
+      title <
+        name = Modern Languages Open ;
+        issn = 2052-5397 ;
+        eissn = 2052-5397
+      >
+
+      comment[publisher] = Liverpool University Press
+#      param[base_url] = https://www.modernlanguagesopen.org/
+
+      au < exists ; 2014 ; 1 ; Modern Languages Open Volume 2014 ; 2014 ; https://www.modernlanguagesopen.org/ >
+      au < exists ; 2015 ; 2 ; Modern Languages Open Volume 2015 ; 2015 ; https://www.modernlanguagesopen.org/ >
+      au < exists ; 2016 ; 3 ; Modern Languages Open Volume 2016 ; 2016 ; https://www.modernlanguagesopen.org/ >
+      au < exists ; 2017 ; 4 ; Modern Languages Open Volume 2017 ; 2017 ; https://www.modernlanguagesopen.org/ >
+      au < expected ; 2018 ; 5 ; Modern Languages Open Volume 2018 ; 2018 ; https://www.modernlanguagesopen.org/ >
+
+  }
+
+}
+{
+  publisher <
     name = Open Library of Humanities
   >
 
@@ -150,6 +284,61 @@
 
   }
 
+  {
+
+      title <
+        name = Open Screens ;
+        eissn = 2516-2888
+      >
+
+      comment[publisher] = Open Library of Humanities
+#      param[base_url] = https://openscreensjournal.com/
+
+      au < expected ; 2018 ; 1 ; Open Screens Volume 2018 ; 2018 ; https://openscreensjournal.com/ >
+
+  }
+
+  {
+
+      title <
+        name = Theoretical Roman Archaeology Journal ;
+        eissn = 2515-2289
+      >
+
+      comment[publisher] = Open Library of Humanities
+#      param[base_url] = https://traj.openlibhums.org/
+
+      au < exists ; 1991 ; 1 ; Theoretical Roman Archaeology Journal Volume 1991 ; 1991 ; https://traj.openlibhums.org/ >
+      au < exists ; 1992 ; 2 ; Theoretical Roman Archaeology Journal Volume 1992 ; 1992 ; https://traj.openlibhums.org/ >
+      au < exists ; 1993 ; 3 ; Theoretical Roman Archaeology Journal Volume 1993 ; 1993 ; https://traj.openlibhums.org/ >
+      au < exists ; 1994 ; 4 ; Theoretical Roman Archaeology Journal Volume 1994 ; 1994 ; https://traj.openlibhums.org/ >
+      au < exists ; 1995 ; 5 ; Theoretical Roman Archaeology Journal Volume 1995 ; 1995 ; https://traj.openlibhums.org/ >
+      au < exists ; 1996 ; 6 ; Theoretical Roman Archaeology Journal Volume 1996 ; 1996 ; https://traj.openlibhums.org/ >
+      au < exists ; 1997 ; 7 ; Theoretical Roman Archaeology Journal Volume 1997 ; 1997 ; https://traj.openlibhums.org/ >
+      au < exists ; 1998 ; 8 ; Theoretical Roman Archaeology Journal Volume 1998 ; 1998 ; https://traj.openlibhums.org/ >
+      au < exists ; 1999 ; 9 ; Theoretical Roman Archaeology Journal Volume 1999 ; 1999 ; https://traj.openlibhums.org/ >
+      au < exists ; 2000 ; 10 ; Theoretical Roman Archaeology Journal Volume 2000 ; 2000 ; https://traj.openlibhums.org/ >
+      au < exists ; 2001 ; 11 ; Theoretical Roman Archaeology Journal Volume 2001 ; 2001 ; https://traj.openlibhums.org/ >
+      au < exists ; 2002 ; 12 ; Theoretical Roman Archaeology Journal Volume 2002 ; 2002 ; https://traj.openlibhums.org/ >
+      au < exists ; 2003 ; 13 ; Theoretical Roman Archaeology Journal Volume 2003 ; 2003 ; https://traj.openlibhums.org/ >
+      au < exists ; 2004 ; 14 ; Theoretical Roman Archaeology Journal Volume 2004 ; 2004 ; https://traj.openlibhums.org/ >
+      au < exists ; 2005 ; 15 ; Theoretical Roman Archaeology Journal Volume 2005 ; 2005 ; https://traj.openlibhums.org/ >
+      au < exists ; 2006 ; 16 ; Theoretical Roman Archaeology Journal Volume 2006 ; 2006 ; https://traj.openlibhums.org/ >
+      au < exists ; 2007 ; 17 ; Theoretical Roman Archaeology Journal Volume 2007 ; 2007 ; https://traj.openlibhums.org/ >
+      au < exists ; 2008 ; 18 ; Theoretical Roman Archaeology Journal Volume 2008 ; 2008 ; https://traj.openlibhums.org/ >
+      au < exists ; 2009 ; 19 ; Theoretical Roman Archaeology Journal Volume 2009 ; 2009 ; https://traj.openlibhums.org/ >
+      au < exists ; 2010 ; 20 ; Theoretical Roman Archaeology Journal Volume 2010 ; 2010 ; https://traj.openlibhums.org/ >
+      au < exists ; 2011 ; 21 ; Theoretical Roman Archaeology Journal Volume 2011 ; 2011 ; https://traj.openlibhums.org/ >
+      au < exists ; 2012 ; 22 ; Theoretical Roman Archaeology Journal Volume 2012 ; 2012 ; https://traj.openlibhums.org/ >
+      au < exists ; 2013 ; 23 ; Theoretical Roman Archaeology Journal Volume 2013 ; 2013 ; https://traj.openlibhums.org/ >
+      au < exists ; 2014 ; 24 ; Theoretical Roman Archaeology Journal Volume 2014 ; 2014 ; https://traj.openlibhums.org/ >
+      au < exists ; 2015 ; 25 ; Theoretical Roman Archaeology Journal Volume 2015 ; 2015 ; https://traj.openlibhums.org/ >
+      au < exists ; 2016 ; 26 ; Theoretical Roman Archaeology Journal Volume 2016 ; 2016 ; https://traj.openlibhums.org/ >
+      au < exists ; 2017 ; 27 ; Theoretical Roman Archaeology Journal Volume 2017 ; 2017 ; https://traj.openlibhums.org/ >
+      au < expected ; 2018 ; 28 ; Theoretical Roman Archaeology Journal Volume 2018 ; 2018 ; https://traj.openlibhums.org/ >
+
+  }
+
 }
 {
   publisher <
@@ -220,6 +409,26 @@
 
   {
 
+    title <
+      name = Scandinavian Journal of Disability Research ;
+      issn = 1501-7419 ;
+      eissn = 1745-3011 ;
+      issnl = 1501-7419
+    >
+
+      #publisher = Stockholm University Press
+
+    au < exists ;  1999 ; 1 ; Scandinavian Journal of Disability Research Volume 1 ; 1999 ; https://www.sjdr.se/ >
+    au < exists ;  2000 ; 2 ; Scandinavian Journal of Disability Research Volume 2 ; 2000 ; https://www.sjdr.se/ >
+    au < exists ;  2001 ; 3 ; Scandinavian Journal of Disability Research Volume 3 ; 2001 ; https://www.sjdr.se/ >
+    au < exists ;  2002 ; 4 ; Scandinavian Journal of Disability Research Volume 4 ; 2002 ; https://www.sjdr.se/ >
+    au < exists ;  2003 ; 5 ; Scandinavian Journal of Disability Research Volume 5 ; 2003 ; https://www.sjdr.se/ >
+    au < exists ; 2018 ; 20 ; Scandinavian Journal of Disability Research Volume 20 ; 2018 ; https://www.sjdr.se/ >
+
+  }
+
+  {
+
       title <
         name = Scandinavian Journal of Work and Organizational Psychology ;
         eissn = 2002-2867
@@ -264,6 +473,20 @@
       au < manifest ; 2018 ; 18 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2018 ; 2018 ; https://www.iberoamericana.se/ >
 
   }
+  {
+
+      title <
+        name = Nordic Journal of Francophone Studies/ Revue nordique des études francophones ;
+        eissn = 2003-0401
+      >
+
+      comment[publisher] = Stockholm University Press
+#      param[base_url] = https://franorfon.org/
+
+      au < expected ; 2018 ; 1 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2018 ; 2018 ; https://franorfon.org/ >
+
+  }
+
 }
 {
   publisher <
@@ -631,28 +854,29 @@
 
       comment[publisher] = Ubiquity Press
 #      param[base_url] = http://www-jime.open.ac.uk/
+#      changed to https://jime.open.ac.uk/  ####no www
+      #nothing published in 2011
 
-      au < manifest ; 1998 ; 1 ; Journal of Interactive Media in Education Volume 1998 ; 1998 ; https://www-jime.open.ac.uk/ >
-      au < manifest ; 1999 ; 2 ; Journal of Interactive Media in Education Volume 1999 ; 1999 ; https://www-jime.open.ac.uk/ >
-      au < manifest ; 2000 ; 3 ; Journal of Interactive Media in Education Volume 2000 ; 2000 ; https://www-jime.open.ac.uk/ >
-      au < manifest ; 2001 ; 4 ; Journal of Interactive Media in Education Volume 2001 ; 2001 ; https://www-jime.open.ac.uk/ >
-      au < manifest ; 2002 ; 5 ; Journal of Interactive Media in Education Volume 2002 ; 2002 ; https://www-jime.open.ac.uk/ >
-      au < manifest ; 2003 ; 6 ; Journal of Interactive Media in Education Volume 2003 ; 2003 ; https://www-jime.open.ac.uk/ >
-      au < manifest ; 2004 ; 7 ; Journal of Interactive Media in Education Volume 2004 ; 2004 ; https://www-jime.open.ac.uk/ >
-      au < manifest ; 2005 ; 8 ; Journal of Interactive Media in Education Volume 2005 ; 2005 ; https://www-jime.open.ac.uk/ >
-      au < manifest ; 2006 ; 9 ; Journal of Interactive Media in Education Volume 2006 ; 2006 ; https://www-jime.open.ac.uk/ >
-      au < manifest ; 2007 ; 10 ; Journal of Interactive Media in Education Volume 2007 ; 2007 ; https://www-jime.open.ac.uk/ >
-      au < manifest ; 2008 ; 11 ; Journal of Interactive Media in Education Volume 2008 ; 2008 ; https://www-jime.open.ac.uk/ >
-      au < manifest ; 2009 ; 12 ; Journal of Interactive Media in Education Volume 2009 ; 2009 ; https://www-jime.open.ac.uk/ >
-      au < released ; 2010 ; 13 ; Journal of Interactive Media in Education Volume 2010 ; 2010 ; http://www-jime.open.ac.uk/ >
-      au < doesNotExist ; 2011 ; 14 ; Journal of Interactive Media in Education Volume 2011 ; 2011 ; https://www-jime.open.ac.uk/ >
-      au < released ; 2012 ; 15 ; Journal of Interactive Media in Education Volume 2012 ; 2012 ; http://www-jime.open.ac.uk/ >
-      au < released ; 2013 ; 16 ; Journal of Interactive Media in Education Volume 2013 ; 2013 ; http://www-jime.open.ac.uk/ >
-      au < released ; 2014 ; 17 ; Journal of Interactive Media in Education Volume 2014 ; 2014 ; http://www-jime.open.ac.uk/ >
-      au < released ; 2015 ; 18 ; Journal of Interactive Media in Education Volume 2015 ; 2015 ; http://www-jime.open.ac.uk/ >
-      au < released ; 2016 ; 19 ; Journal of Interactive Media in Education Volume 2016 ; 2016 ; http://www-jime.open.ac.uk/ >
-      au < manifest ; 2017 ; 20 ; Journal of Interactive Media in Education Volume 2017 ; 2017 ; https://www-jime.open.ac.uk/ >
-      au < manifest ; 2018 ; 21 ; Journal of Interactive Media in Education Volume 2018 ; 2018 ; https://www-jime.open.ac.uk/ >
+      au < exists ; 1998 ; 1998 ; Journal of Interactive Media in Education Volume 1998 ; 1998 ; https://jime.open.ac.uk/ >
+      au < exists ; 1999 ; 1999 ; Journal of Interactive Media in Education Volume 1999 ; 1999 ; https://jime.open.ac.uk/ >
+      au < exists ; 2000 ; 2000 ; Journal of Interactive Media in Education Volume 2000 ; 2000 ; https://jime.open.ac.uk/ >
+      au < exists ; 2001 ; 2001 ; Journal of Interactive Media in Education Volume 2001 ; 2001 ; https://jime.open.ac.uk/ >
+      au < exists ; 2002 ; 2002 ; Journal of Interactive Media in Education Volume 2002 ; 2002 ; https://jime.open.ac.uk/ >
+      au < exists ; 2003 ; 2003 ; Journal of Interactive Media in Education Volume 2003 ; 2003 ; https://jime.open.ac.uk/ >
+      au < exists ; 2004 ; 2004 ; Journal of Interactive Media in Education Volume 2004 ; 2004 ; https://jime.open.ac.uk/ >
+      au < exists ; 2005 ; 2005 ; Journal of Interactive Media in Education Volume 2005 ; 2005 ; https://jime.open.ac.uk/ >
+      au < exists ; 2006 ; 2006 ; Journal of Interactive Media in Education Volume 2006 ; 2006 ; https://jime.open.ac.uk/ >
+      au < exists ; 2007 ; 2007 ; Journal of Interactive Media in Education Volume 2007 ; 2007 ; https://jime.open.ac.uk/ >
+      au < exists ; 2008 ; 2008 ; Journal of Interactive Media in Education Volume 2008 ; 2008 ; https://jime.open.ac.uk/ >
+      au < exists ; 2009 ; 2009 ; Journal of Interactive Media in Education Volume 2009 ; 2009 ; https://jime.open.ac.uk/ >
+      au < released ; 2010 ; 2010 ; Journal of Interactive Media in Education Volume 2010 ; 2010 ; http://www-jime.open.ac.uk/ >
+      au < released ; 2012 ; 2012 ; Journal of Interactive Media in Education Volume 2012 ; 2012 ; http://www-jime.open.ac.uk/ >
+      au < released ; 2013 ; 2013 ; Journal of Interactive Media in Education Volume 2013 ; 2013 ; http://www-jime.open.ac.uk/ >
+      au < released ; 2014 ; 2014 ; Journal of Interactive Media in Education Volume 2014 ; 2014 ; http://www-jime.open.ac.uk/ >
+      au < released ; 2015 ; 2015 ; Journal of Interactive Media in Education Volume 2015 ; 2015 ; http://www-jime.open.ac.uk/ >
+      au < released ; 2016 ; 2016 ; Journal of Interactive Media in Education Volume 2016 ; 2016 ; http://www-jime.open.ac.uk/ >
+      au < manifest ; 2017 ; 2017 ; Journal of Interactive Media in Education Volume 2017 ; 2017 ; https://jime.open.ac.uk/ >
+      au < manifest ; 2018 ; 2018 ; Journal of Interactive Media in Education Volume 2018 ; 2018 ; https://jime.open.ac.uk/ >
 
   }
 
@@ -705,7 +929,22 @@
   {
 
       title <
-        name = Journal of Open Health Data ;
+        name = Journal of Open Public Health Data ;
+        eissn = 2053-2407
+      >
+
+      comment[publisher] = Ubiquity Press
+#      param[base_url] = http://openhealthdata.metajnl.com/
+      # continued by Journal of Open Health Data
+
+      au < manifest ; 2013 ; 1 ; Journal of Open Public Health Data Volume 2013 ; 2013 ; https://openhealthdata.metajnl.com/ >
+
+  }
+
+  {
+
+      title <
+        name = Open Health Data ;
         eissn = 2054-7102
       >
 
@@ -713,9 +952,10 @@
 #      param[base_url] = http://openhealthdata.metajnl.com/
       # continues Journal of Open Public Health Data
 
-      au < released ; 2014 ; 2 ; Journal of Open Health Data Volume 2014 ; 2014 ; http://openhealthdata.metajnl.com/ >
-      au < released ; 2015 ; 3 ; Journal of Open Health Data Volume 2015 ; 2015 ; http://openhealthdata.metajnl.com/ >
-      au < released ; 2016 ; 4 ; Journal of Open Health Data Volume 2016 ; 2016 ; http://openhealthdata.metajnl.com/ >
+      au < released ; 2014 ; 2 ; Open Health Data Volume 2014 ; 2014 ; http://openhealthdata.metajnl.com/ >
+      au < released ; 2015 ; 3 ; Open Health Data Volume 2015 ; 2015 ; http://openhealthdata.metajnl.com/ >
+      au < released ; 2016 ; 4 ; Open Health Data Volume 2016 ; 2016 ; http://openhealthdata.metajnl.com/ >
+      au < exists ; 2018 ; 5 ; Open Health Data Volume 2018 ; 2018 ; https://openhealthdata.metajnl.com/ >
 
   }
 
@@ -752,21 +992,6 @@
       au < released ; 2016 ; 4 ; Journal of Open Psychology Data Volume 2016 ; 2016 ; http://openpsychologydata.metajnl.com/ >
       au < released ; 2017 ; 5 ; Journal of Open Psychology Data Volume 2017 ; 2017 ; https://openpsychologydata.metajnl.com/ >
       au < manifest ; 2018 ; 6 ; Journal of Open Psychology Data Volume 2018 ; 2018 ; https://openpsychologydata.metajnl.com/ >
-
-  }
-
-  {
-
-      title <
-        name = Journal of Open Public Health Data ;
-        eissn = 2053-2407
-      >
-
-      comment[publisher] = Ubiquity Press
-#      param[base_url] = http://openhealthdata.metajnl.com/
-      # continued by Journal of Open Health Data
-
-      au < manifest ; 2013 ; 1 ; Journal of Open Public Health Data Volume 2013 ; 2013 ; https://openhealthdata.metajnl.com/ >
 
   }
 
@@ -810,22 +1035,37 @@
   {
 
       title <
-        name = Journal of the Belgian Society of Radiology ;
+        name = JBR-BTR ;
+        issn = 0302-7430 ;
+        eissn = 1780-2393
+      >
+
+      comment[publisher] = Ubiquity Press
+#      param[base_url] = http://www.jbsr.be/
+      #volume 1-98 this title. As of volume 99, name changed to Journal of the Belgian Society of Radiology 2514-8281
+
+      au < released ; 2010 ; 94 ; JBR-BTR Volume 2010 ; 2010 ; http://www.jbsr.be/ >
+      au < released ; 2011 ; 95 ; JBR-BTR Volume 2011 ; 2011 ; http://www.jbsr.be/ >
+      au < released ; 2012 ; 96 ; JBR-BTR Volume 2012 ; 2012 ; http://www.jbsr.be/ >
+      au < released ; 2013 ; 97 ; JBR-BTR Volume 2013 ; 2013 ; http://www.jbsr.be/ >
+      au < released ; 2014 ; 98 ; JBR-BTR Volume 2014 ; 2014 ; http://www.jbsr.be/ >
+
+  }
+
+  {
+
+      title <
+        name = Journal of the Belgian Society of Radiology (JBSR) ;
         eissn = 2514-8281
       >
 
       comment[publisher] = Ubiquity Press
 #      param[base_url] = http://www.jbsr.be/
 
-      au < released ; 2010 ; 1 ; Journal of the Belgian Society of Radiology Volume 2010 ; 2010 ; http://www.jbsr.be/ >
-      au < released ; 2011 ; 2 ; Journal of the Belgian Society of Radiology Volume 2011 ; 2011 ; http://www.jbsr.be/ >
-      au < released ; 2012 ; 3 ; Journal of the Belgian Society of Radiology Volume 2012 ; 2012 ; http://www.jbsr.be/ >
-      au < released ; 2013 ; 4 ; Journal of the Belgian Society of Radiology Volume 2013 ; 2013 ; http://www.jbsr.be/ >
-      au < released ; 2014 ; 5 ; Journal of the Belgian Society of Radiology Volume 2014 ; 2014 ; http://www.jbsr.be/ >
-      au < released ; 2015 ; 6 ; Journal of the Belgian Society of Radiology Volume 2015 ; 2015 ; http://www.jbsr.be/ >
-      au < released ; 2016 ; 7 ; Journal of the Belgian Society of Radiology Volume 2016 ; 2016 ; http://www.jbsr.be/ >
-      au < released ; 2017 ; 8 ; Journal of the Belgian Society of Radiology Volume 2017 ; 2017 ; https://www.jbsr.be/ >
-      au < manifest ; 2018 ; 9 ; Journal of the Belgian Society of Radiology Volume 2018 ; 2018 ; https://www.jbsr.be/ >
+      au < released ; 2015 ; 99 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2015 ; 2015 ; http://www.jbsr.be/ >
+      au < released ; 2016 ; 100 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2016 ; 2016 ; http://www.jbsr.be/ >
+      au < released ; 2017 ; 101 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2017 ; 2017 ; https://www.jbsr.be/ >
+      au < manifest ; 2018 ; 102 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2018 ; 2018 ; https://www.jbsr.be/ >
 
   }
 
@@ -876,6 +1116,21 @@
       au < released ; 2016 ; 3 ; Open Journal of Bioresources Volume 2016 ; 2016 ; http://openbioresources.metajnl.com/ >
       au < released ; 2017 ; 4 ; Open Journal of Bioresources Volume 2017 ; 2017 ; https://openbioresources.metajnl.com/ >
       au < manifest ; 2018 ; 5 ; Open Journal of Bioresources Volume 2018 ; 2018 ; https://openbioresources.metajnl.com/ >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Montessori Research & Education ;
+        eissn = 2002-3375
+      >
+
+      comment[publisher] = Ubiquity Press
+#      param[base_url] = https://journalofmore.org/
+
+      au < exists ; 2016 ; 4 ; Journal of Montessori Research & Education Volume 2016 ; 2016 ; https://journalofmore.org/ >
+      au < expected ; 2018 ; 5 ; Journal of Montessori Research & Education Volume 2018 ; 2018 ; https://journalofmore.org/ >
 
   }
 
@@ -1079,6 +1334,180 @@
       au < manifest ; 2018 ; 2 ; Journal of Open Hardware Volume 2018 ; 2018 ; https://openhardware.metajnl.com/ >
 
   }
+  {
+
+      title <
+        name = Cultural Science Journal ;
+        eissn = 1836-0416
+      >
+
+      comment[publisher] = Ubiquity Press
+#      param[base_url] = https://culturalscience.org/
+
+      au < exists ; 2008 ; 1 ; Cultural Science Journal Volume 2008 ; 2008 ; https://culturalscience.org/ >
+      au < exists ; 2009 ; 2 ; Cultural Science Journal Volume 2009 ; 2009 ; https://culturalscience.org/ >
+      au < exists ; 2010 ; 3 ; Cultural Science Journal Volume 2010 ; 2010 ; https://culturalscience.org/ >
+      au < exists ; 2011 ; 4 ; Cultural Science Journal Volume 2011 ; 2011 ; https://culturalscience.org/ >
+      au < exists ; 2012 ; 5 ; Cultural Science Journal Volume 2012 ; 2012 ; https://culturalscience.org/ >
+      au < exists ; 2013 ; 6 ; Cultural Science Journal Volume 2013 ; 2013 ; https://culturalscience.org/ >
+      au < exists ; 2014 ; 7 ; Cultural Science Journal Volume 2014 ; 2014 ; https://culturalscience.org/ >
+      au < exists ; 2015 ; 8 ; Cultural Science Journal Volume 2015 ; 2015 ; https://culturalscience.org/ >
+      au < exists ; 2016 ; 9 ; Cultural Science Journal Volume 2016 ; 2016 ; https://culturalscience.org/ >
+      au < exists ; 2017 ; 10 ; Cultural Science Journal Volume 2017 ; 2017 ; https://culturalscience.org/ >
+      au < expected ; 2018 ; 11 ; Cultural Science Journal Volume 2018 ; 2018 ; https://culturalscience.org/ >
+
+  }
+
+  {
+
+      title <
+        name = eGEMs (Generating Evidence & Methods to improve patient outcomes) ;
+        eissn = 2327-9214
+      >
+
+      comment[publisher] = Ubiquity Press
+#      param[base_url] = https://egems.academyhealth.org/
+
+      au < exists ; 2013 ; 1 ; eGEMs (Generating Evidence & Methods to improve patient outcomes) Volume 2013 ; 2013 ; https://egems.academyhealth.org/ >
+      au < exists ; 2014 ; 2 ; eGEMs (Generating Evidence & Methods to improve patient outcomes) Volume 2014 ; 2014 ; https://egems.academyhealth.org/ >
+      au < exists ; 2015 ; 3 ; eGEMs (Generating Evidence & Methods to improve patient outcomes) Volume 2015 ; 2015 ; https://egems.academyhealth.org/ >
+      au < exists ; 2016 ; 4 ; eGEMs (Generating Evidence & Methods to improve patient outcomes) Volume 2016 ; 2016 ; https://egems.academyhealth.org/ >
+      au < exists ; 2017 ; 5 ; eGEMs (Generating Evidence & Methods to improve patient outcomes) Volume 2017 ; 2017 ; https://egems.academyhealth.org/ >
+      au < expected ; 2018 ; 6 ; eGEMs (Generating Evidence & Methods to improve patient outcomes) Volume 2018 ; 2018 ; https://egems.academyhealth.org/ >
+
+  }
+
+  {
+
+      title <
+        name = European Journal of Molecular and Clinical Medicine ;
+        eissn = 2515-8260
+      >
+
+      comment[publisher] = Ubiquity Press
+#      param[base_url] = https://www.ejmcm.com/
+
+      au < exists ; 2014 ; 1 ; European Journal of Molecular and Clinical Medicine Volume 2014 ; 2014 ; https://www.ejmcm.com/ >
+      au < exists ; 2015 ; 2 ; European Journal of Molecular and Clinical Medicine Volume 2015 ; 2015 ; https://www.ejmcm.com/ >
+      au < exists ; 2016 ; 3 ; European Journal of Molecular and Clinical Medicine Volume 2016 ; 2016 ; https://www.ejmcm.com/ >
+      au < exists ; 2017 ; 4 ; European Journal of Molecular and Clinical Medicine Volume 2017 ; 2017 ; https://www.ejmcm.com/ >
+      au < expected ; 2018 ; 5 ; European Journal of Molecular and Clinical Medicine Volume 2018 ; 2018 ; https://www.ejmcm.com/ >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Cognition ;
+        eissn = 2514-4820
+      >
+
+      comment[publisher] = Ubiquity Press
+#      param[base_url] = https://www.journalofcognition.org/
+
+      au < expected ; 2018 ; 1 ; Journal of Cognition Volume 2018 ; 2018 ; https://www.journalofcognition.org/ >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Computer Applications in Archaeology ;
+        eissn = 2514-8362
+      >
+
+      comment[publisher] = Ubiquity Press
+#      param[base_url] = https://journal.caa-international.org/
+
+      au < expected ; 2018 ; 1 ; Journal of Computer Applications in Archaeology Volume 2018 ; 2018 ; https://journal.caa-international.org/ >
+
+  }
+
+  {
+
+      title <
+        name = KULA: knowledge creation, dissemination, and preservation studies ;
+        eissn = 2398-4112
+      >
+
+      comment[publisher] = Ubiquity Press
+#      param[base_url] = https://kula.uvic.ca/
+
+      au < exists ; 2017 ; 1 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2017 ; 2017 ; https://kula.uvic.ca/ >
+      au < expected ; 2018 ; 2 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2018 ; 2018 ; https://kula.uvic.ca/ >
+
+  }
+
+  {
+
+      title <
+        name = Metaphysics ;
+        eissn = 2515-8279
+      >
+
+      comment[publisher] = Ubiquity Press
+#      param[base_url] = https://metaphysicsjournal.com/
+
+      au < expected ; 2018 ; 1 ; Metaphysics Volume 2018 ; 2018 ; https://metaphysicsjournal.com/ >
+
+  }
+
+  {
+
+      title <
+        name = Physical Activity and Health ;
+        eissn = 2515-2270
+      >
+
+      comment[publisher] = Ubiquity Press
+#      param[base_url] = https://paahjournal.com/
+
+      au < exists ; 2017 ; 1 ; Physical Activity and Health Volume 2017 ; 2017 ; https://paahjournal.com/ >
+      au < expected ; 2018 ; 2 ; Physical Activity and Health Volume 2018 ; 2018 ; https://paahjournal.com/ >
+
+  }
+
+  {
+
+      title <
+        name = Tilburg International Law Review ;
+        eissn = 2211-2596
+      >
+
+      comment[publisher] = Ubiquity Press
+#      param[base_url] = https://tilburglawreview.com/
+
+      au < exists ; 2012 ; 1 ; Tilburg International Law Review Volume 2012 ; 2012 ; https://tilburglawreview.com/ >
+      au < exists ; 2013 ; 2 ; Tilburg International Law Review Volume 2013 ; 2013 ; https://tilburglawreview.com/ >
+      au < exists ; 2014 ; 3 ; Tilburg International Law Review Volume 2014 ; 2014 ; https://tilburglawreview.com/ >
+      au < exists ; 2015 ; 4 ; Tilburg International Law Review Volume 2015 ; 2015 ; https://tilburglawreview.com/ >
+      au < exists ; 2016 ; 5 ; Tilburg International Law Review Volume 2016 ; 2016 ; https://tilburglawreview.com/ >
+      au < exists ; 2017 ; 6 ; Tilburg International Law Review Volume 2017 ; 2017 ; https://tilburglawreview.com/ >
+      au < expected ; 2018 ; 7 ; Tilburg International Law Review Volume 2018 ; 2018 ; https://tilburglawreview.com/ >
+
+  }
+
+  {
+
+      title <
+        name = Yearbook of Swiss Administrative Science ;
+        eissn = 2296-8717
+      >
+
+      comment[publisher] = Ubiquity Press
+#      param[base_url] = https://ssas.ubiquitypress.com/
+
+      au < exists ; 2010 ; 1 ; Yearbook of Swiss Administrative Science Volume 2010 ; 2010 ; https://ssas.ubiquitypress.com/ >
+      au < exists ; 2011 ; 2 ; Yearbook of Swiss Administrative Science Volume 2011 ; 2011 ; https://ssas.ubiquitypress.com/ >
+      au < exists ; 2012 ; 3 ; Yearbook of Swiss Administrative Science Volume 2012 ; 2012 ; https://ssas.ubiquitypress.com/ >
+      au < exists ; 2013 ; 4 ; Yearbook of Swiss Administrative Science Volume 2013 ; 2013 ; https://ssas.ubiquitypress.com/ >
+      au < exists ; 2014 ; 5 ; Yearbook of Swiss Administrative Science Volume 2014 ; 2014 ; https://ssas.ubiquitypress.com/ >
+      au < exists ; 2015 ; 6 ; Yearbook of Swiss Administrative Science Volume 2015 ; 2015 ; https://ssas.ubiquitypress.com/ >
+      au < exists ; 2016 ; 7 ; Yearbook of Swiss Administrative Science Volume 2016 ; 2016 ; https://ssas.ubiquitypress.com/ >
+      au < exists ; 2017 ; 8 ; Yearbook of Swiss Administrative Science Volume 2017 ; 2017 ; https://ssas.ubiquitypress.com/ >
+      au < expected ; 2018 ; 9 ; Yearbook of Swiss Administrative Science Volume 2018 ; 2018 ; https://ssas.ubiquitypress.com/ >
+
+  }
 }
 {
   publisher <
@@ -1196,11 +1625,15 @@
       comment[publisher] = University of Westminster Press
 #      param[base_url] = http://www.westminsterpapers.org/
 
-      au < doesNotExist ; 2014 ; 1 ; Westminster Papers in Communication and Culture Volume 2014 ; 2014 ; https://www.westminsterpapers.org/ >
-      au < released ; 2015 ; 2 ; Westminster Papers in Communication and Culture Volume 2015 ; 2015 ; http://www.westminsterpapers.org/ >
-      au < released ; 2016 ; 3 ; Westminster Papers in Communication and Culture Volume 2016 ; 2016 ; http://www.westminsterpapers.org/ >
-      au < released ; 2017 ; 4 ; Westminster Papers in Communication and Culture Volume 2017 ; 2017 ; https://www.westminsterpapers.org/ >
-      au < manifest ; 2018 ; 5 ; Westminster Papers in Communication and Culture Volume 2018 ; 2018 ; https://www.westminsterpapers.org/ >
+      au < exists ; 2009 ; 6 ; Westminster Papers in Communication and Culture Volume 2009 ; 2009 ; https://www.westminsterpapers.org/ >
+      au < exists ; 2010 ; 7 ; Westminster Papers in Communication and Culture Volume 2010 ; 2010 ; https://www.westminsterpapers.org/ >
+      au < exists ; 2011 ; 8 ; Westminster Papers in Communication and Culture Volume 2011 ; 2011 ; https://www.westminsterpapers.org/ >
+      au < exists ; 2012 ; 9 ; Westminster Papers in Communication and Culture Volume 2012 ; 2012 ; https://www.westminsterpapers.org/ >
+      au < exists ; 2013 ; 9 ; Westminster Papers in Communication and Culture Volume 2013 ; 2013 ; https://www.westminsterpapers.org/ >
+      au < released ; 2015 ; 10 ; Westminster Papers in Communication and Culture Volume 2015 ; 2015 ; http://www.westminsterpapers.org/ >
+      au < released ; 2016 ; 11 ; Westminster Papers in Communication and Culture Volume 2016 ; 2016 ; http://www.westminsterpapers.org/ >
+      au < released ; 2017 ; 12 ; Westminster Papers in Communication and Culture Volume 2017 ; 2017 ; https://www.westminsterpapers.org/ >
+      au < manifest ; 2018 ; 13 ; Westminster Papers in Communication and Culture Volume 2018 ; 2018 ; https://www.westminsterpapers.org/ >
 
   }
 
@@ -1602,6 +2035,91 @@
       au < released ; 2016 ; 12 ; Utrecht Law Review Volume 2016 ; 2016 ; https://www.utrechtlawreview.org/ >
       au < released ; 2017 ; 13 ; Utrecht Law Review Volume 2017 ; 2017 ; https://www.utrechtlawreview.org/ >
       au < manifest ; 2018 ; 14 ; Utrecht Law Review Volume 2018 ; 2018 ; https://www.utrechtlawreview.org/ >
+
+  }
+
+}
+{
+  publisher <
+    name = University of California Press
+  >
+
+    provider = Ubiquity Press
+    plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
+    implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
+
+  {
+
+      title <
+        name = Collabra: Psychology ;
+        eissn = 2474-7394
+      >
+
+      comment[publisher] = University of California Press
+#      param[base_url] = https://www.collabra.org/
+
+      au < exists ; 2015 ; 1 ; Collabra: Psychology Volume 2015 ; 2015 ; https://www.collabra.org/ >
+      au < exists ; 2016 ; 2 ; Collabra: Psychology Volume 2016 ; 2016 ; https://www.collabra.org/ >
+      au < exists ; 2017 ; 3 ; Collabra: Psychology Volume 2017 ; 2017 ; https://www.collabra.org/ >
+      au < expected ; 2018 ; 4 ; Collabra: Psychology Volume 2018 ; 2018 ; https://www.collabra.org/ >
+
+  }
+
+  {
+
+      title <
+        name = Elementa: Science of the Anthropocene ;
+        eissn = 2325-1026
+      >
+
+      comment[publisher] = University of California Press
+#      param[base_url] = https://www.elementascience.org/
+
+      au < exists ; 2013 ; 1 ; Elementa: Science of the Anthropocene Volume 2013 ; 2013 ; https://www.elementascience.org/ >
+      au < exists ; 2014 ; 2 ; Elementa: Science of the Anthropocene Volume 2014 ; 2014 ; https://www.elementascience.org/ >
+      au < exists ; 2015 ; 3 ; Elementa: Science of the Anthropocene Volume 2015 ; 2015 ; https://www.elementascience.org/ >
+      au < exists ; 2016 ; 4 ; Elementa: Science of the Anthropocene Volume 2016 ; 2016 ; https://www.elementascience.org/ >
+      au < exists ; 2017 ; 5 ; Elementa: Science of the Anthropocene Volume 2017 ; 2017 ; https://www.elementascience.org/ >
+      au < expected ; 2018 ; 6 ; Elementa: Science of the Anthropocene Volume 2018 ; 2018 ; https://www.elementascience.org/ >
+
+  }
+
+}
+{
+  publisher <
+    name = White Rose University Press
+  >
+
+    provider = Ubiquity Press
+    plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
+    implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
+
+  {
+
+      title <
+        name = Journal of the European Second Language Association ;
+        eissn = 2399-9101
+      >
+
+      comment[publisher] = White Rose University Press
+#      param[base_url] = https://www.euroslajournal.org/
+
+      au < exists ; 2017 ; 1 ; Journal of the European Second Language Association Volume 2017 ; 2017 ; https://www.euroslajournal.org/ >
+      au < expected ; 2018 ; 2 ; Journal of the European Second Language Association Volume 2018 ; 2018 ; https://www.euroslajournal.org/ >
+
+  }
+
+  {
+
+      title <
+        name = Undergraduate Journal of Politics and International Relations ;
+        eissn = 2398-5992
+      >
+
+      comment[publisher] = White Rose University Press
+#      param[base_url] = https://www.ujpir-journal.com/
+
+      au < expected ; 2018 ; 1 ; Undergraduate Journal of Politics and International Relations Volume 2018 ; 2018 ; https://www.ujpir-journal.com/ >
 
   }
 
