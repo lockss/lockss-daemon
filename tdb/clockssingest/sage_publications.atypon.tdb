@@ -7937,6 +7937,7 @@
     >
 
     #param[base_url] = http://cor.sagepub.com/
+    #moved to T&F January 2017
 
     {
 
@@ -7948,8 +7949,6 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Counseling Outcome Research and Evaluation Volume 5 ; 5 ; cora ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Counseling Outcome Research and Evaluation Volume 6 ; 6 ; cora ; >
       au < finished ; crawling ; 2016 ; Counseling Outcome Research and Evaluation Volume 7 ; 7 ; cora ; reingest2.clockss.org:8085 >
-      au < expected ; exists ; 2017 ; Counseling Outcome Research and Evaluation Volume 8 ; 8 ; cora ; >
-      au < expected ; exists ; 2018 ; Counseling Outcome Research and Evaluation Volume 9 ; 9 ; cora ; >
 
     }
 
@@ -10755,8 +10754,8 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Environment and Planning B: Planning and Design Volume 41 ; 41 ; epba ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Environment and Planning B: Planning and Design Volume 42 ; 42 ; epba ; >
       au < frozen ; exists ; 2016 ; Environment and Planning B: Planning and Design Volume 43 ; 43 ; epba ; >
-      au < expected ; exists ; 2017 ; Environment and Planning B: Planning and Design Volume 44 ; 44 ; epba ; >
-      au < expected ; exists ; 2018 ; Environment and Planning B: Planning and Design Volume 45 ; 45 ; epba ; >
+      au < exists ; exists ; 2017 ; Environment and Planning B: Planning and Design Volume 44 ; 44 ; epbb ; >
+      au < exists ; exists ; 2018 ; Environment and Planning B: Planning and Design Volume 45 ; 45 ; epbb ; >
 
   }
 
@@ -10783,8 +10782,8 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Environment and Planning C: Government and Policy Volume 32 ; 32 ; epca ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Environment and Planning C: Government and Policy Volume 33 ; 33 ; epca ; >
       au < frozen ; exists ; 2016 ; Environment and Planning C: Government and Policy Volume 34 ; 34 ; epca ; >
-      au < expected ; exists ; 2017 ; Environment and Planning C: Government and Policy Volume 35 ; 35 ; epca ; >
-      au < expected ; exists ; 2018 ; Environment and Planning C: Government and Policy Volume 36 ; 36 ; epca ; >
+      au < expected ; exists ; 2017 ; Environment and Planning C: Government and Policy Volume 35 ; 35 ; epcb ; >
+      au < expected ; exists ; 2018 ; Environment and Planning C: Government and Policy Volume 36 ; 36 ; epcb ; >
 
   }
 
@@ -12789,31 +12788,31 @@
     
     {
 
-
-      au < manifest ; exists ; 1995 ; Food Science and Technology International Volume 1 ; 1 ; fsta ; >
-      au < manifest ; exists ; 1996 ; Food Science and Technology International Volume 2 ; 2 ; fsta ; >
-      au < manifest ; exists ; 1997 ; Food Science and Technology International Volume 3 ; 3 ; fsta ; >
-      au < manifest ; exists ; 1998 ; Food Science and Technology International Volume 4 ; 4 ; fsta ; >
-      au < manifest ; exists ; 1999 ; Food Science and Technology International Volume 5 ; 5 ; fsta ; >
-      au < manifest ; exists ; 2000 ; Food Science and Technology International Volume 6 ; 6 ; fsta ; >
-      au < manifest ; exists ; 2001 ; Food Science and Technology International Volume 7 ; 7 ; fsta ; >
-      au < manifest ; exists ; 2002 ; Food Science and Technology International Volume 8 ; 8 ; fsta ; >
-      au < manifest ; exists ; 2003 ; Food Science and Technology International Volume 9 ; 9 ; fsta ; >
-      au < manifest ; exists ; 2004 ; Food Science and Technology International Volume 10 ; 10 ; fsta ; >
-      au < manifest ; exists ; 2005 ; Food Science and Technology International Volume 11 ; 11 ; fsta ; >
-      au < manifest ; exists ; 2006 ; Food Science and Technology International Volume 12 ; 12 ; fsta ; >
-      au < manifest ; exists ; 2007 ; Food Science and Technology International Volume 13 ; 13 ; fsta ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; Food Science and Technology International Volume 14 ; 14 ; fsta ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; Food Science and Technology International Volume 15 ; 15 ; fsta ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; Food Science and Technology International Volume 16 ; 16 ; fsta ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; Food Science and Technology International Volume 17 ; 17 ; fsta ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; Food Science and Technology International Volume 18 ; 18 ; fsta ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; Food Science and Technology International Volume 19 ; 19 ; fsta ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; Food Science and Technology International Volume 20 ; 20 ; fsta ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; Food Science and Technology International Volume 21 ; 21 ; fsta ; >
-      au < frozen ; exists ; 2016 ; Food Science and Technology International Volume 22 ; 22 ; fsta ; >
-      au < expected ; exists ; 2017 ; Food Science and Technology International Volume 23 ; 23 ; fsta ; >
-      au < expected ; exists ; 2018 ; Food Science and Technology International Volume 24 ; 24 ; fsta ; >
+      au < exists ; exists ; 1995 ; Food Science and Technology International Volume 1 ; 1 ; fstc ; >
+      au < exists ; exists ; 1996 ; Food Science and Technology International Volume 2 ; 2 ; fstc ; >
+      au < exists ; exists ; 1997 ; Food Science and Technology International Volume 3 ; 3 ; fstc ; >
+      au < exists ; exists ; 1998 ; Food Science and Technology International Volume 4 ; 4 ; fstc ; >
+      au < exists ; exists ; 1999 ; Food Science and Technology International Volume 5 ; 5 ; fstc ; >
+      au < exists ; exists ; 2000 ; Food Science and Technology International Volume 6 ; 6 ; fstc ; >
+      au < exists ; exists ; 2001 ; Food Science and Technology International Volume 7 ; 7 ; fstc ; >
+      au < exists ; exists ; 2002 ; Food Science and Technology International Volume 8 ; 8 ; fstc ; >
+      au < exists ; exists ; 2003 ; Food Science and Technology International Volume 9 ; 9 ; fstc ; >
+      au < exists ; exists ; 2004 ; Food Science and Technology International Volume 10 ; 10 ; fstc ; >
+      au < exists ; exists ; 2005 ; Food Science and Technology International Volume 11 ; 11 ; fstc ; >
+      au < exists ; exists ; 2006 ; Food Science and Technology International Volume 12 ; 12 ; fstc ; >
+      au < exists ; exists ; 2007 ; Food Science and Technology International Volume 13 ; 13 ; fstc ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; Food Science and Technology International Volume 14 ; 14 ; fstc ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; Food Science and Technology International Volume 15 ; 15 ; fstc ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; Food Science and Technology International Volume 16 ; 16 ; fstc ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; Food Science and Technology International Volume 17 ; 17 ; fstc ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; Food Science and Technology International Volume 18 ; 18 ; fstc ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; Food Science and Technology International Volume 19 ; 19 ; fstc ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; Food Science and Technology International Volume 20 ; 20 ; fstc ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; Food Science and Technology International Volume 21 ; 21 ; fstc ; >
+      au < superseded ; exists ; 2016 ; Food Science and Technology International Volume 22 [superseded] ; 22 ; fsta ; >
+      au < exists ; exists ; 2016 ; Food Science and Technology International Volume 22 ; 22 ; fstc ; >
+      au < exists ; exists ; 2017 ; Food Science and Technology International Volume 23 ; 23 ; fstc ; >
+      au < exists ; exists ; 2018 ; Food Science and Technology International Volume 24 ; 24 ; fstc ; >
 
     }
 
@@ -19855,8 +19854,8 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Biomolecular Screening Volume 19 ; 19 ; jbxa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Biomolecular Screening Volume 20 ; 20 ; jbxa ; >
       au < frozen ; exists ; 2016 ; Journal of Biomolecular Screening Volume 21 ; 21 ; jbxa ; >
-      au < expected ; exists ; 2017 ; Journal of Biomolecular Screening Volume 22 ; 22 ; jbxa ; >
-      au < expected ; exists ; 2018 ; Journal of Biomolecular Screening Volume 23 ; 23 ; jbxa ; >
+      au < exists ; exists ; 2017 ; Journal of Biomolecular Screening Volume 22 ; 22 ; jbxb ; >
+      au < exists ; exists ; 2018 ; Journal of Biomolecular Screening Volume 23 ; 23 ; jbxb ; >
 
     }
 
@@ -25840,39 +25839,40 @@
 
     {
 
-      au < manifest ; exists ; 1985 ; Journal of Planning Literature Volume 1 ; 1 ; jpla ; >
-      au < manifest ; exists ; 1987 ; Journal of Planning Literature Volume 2 ; 2 ; jpla ; >
-      au < manifest ; exists ; 1988 ; Journal of Planning Literature Volume 3 ; 3 ; jpla ; >
-      au < manifest ; exists ; 1989 ; Journal of Planning Literature Volume 4 ; 4 ; jpla ; >
-      au < manifest ; exists ; 1990 ; Journal of Planning Literature Volume 5 ; 5 ; jpla ; >
-      au < manifest ; exists ; 1991 ; Journal of Planning Literature Volume 6 ; 6 ; jpla ; >
-      au < manifest ; exists ; 1992 ; Journal of Planning Literature Volume 7 ; 7 ; jpla ; >
-      au < manifest ; exists ; 1993 ; Journal of Planning Literature Volume 8 ; 8 ; jpla ; >
-      au < manifest ; exists ; 1994 ; Journal of Planning Literature Volume 9 ; 9 ; jpla ; >
-      au < manifest ; exists ; 1995 ; Journal of Planning Literature Volume 10 ; 10 ; jpla ; >
-      au < manifest ; exists ; 1996 ; Journal of Planning Literature Volume 11 ; 11 ; jpla ; >
-      au < manifest ; exists ; 1997 ; Journal of Planning Literature Volume 12 ; 12 ; jpla ; >
-      au < manifest ; exists ; 1998 ; Journal of Planning Literature Volume 13 ; 13 ; jpla ; >
-      au < manifest ; exists ; 1999 ; Journal of Planning Literature Volume 14 ; 14 ; jpla ; >
-      au < manifest ; exists ; 2000 ; Journal of Planning Literature Volume 15 ; 15 ; jpla ; >
-      au < manifest ; exists ; 2001 ; Journal of Planning Literature Volume 16 ; 16 ; jpla ; >
-      au < manifest ; exists ; 2002 ; Journal of Planning Literature Volume 17 ; 17 ; jpla ; >
-      au < manifest ; exists ; 2003 ; Journal of Planning Literature Volume 18 ; 18 ; jpla ; >
-      au < manifest ; exists ; 2004 ; Journal of Planning Literature Volume 19 ; 19 ; jpla ; >
-      au < manifest ; exists ; 2005 ; Journal of Planning Literature Volume 20 ; 20 ; jpla ; >
-      au < manifest ; exists ; 2006 ; Journal of Planning Literature Volume 21 ; 21 ; jpla ; >
-      au < manifest ; exists ; 2007 ; Journal of Planning Literature Volume 22 ; 22 ; jpla ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; Journal of Planning Literature Volume 23 ; 23 ; jpla ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; Journal of Planning Literature Volume 24 ; 24 ; jpla ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; Journal of Planning Literature Volume 25 ; 25 ; jpla ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; Journal of Planning Literature Volume 26 ; 26 ; jpla ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; Journal of Planning Literature Volume 27 ; 27 ; jpla ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; Journal of Planning Literature Volume 28 ; 28 ; jpla ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; Journal of Planning Literature Volume 29 ; 29 ; jpla ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; Journal of Planning Literature Volume 30 ; 30 ; jpla ; >
-      au < frozen ; exists ; 2016 ; Journal of Planning Literature Volume 31 ; 31 ; jpla ; >
-      au < expected ; exists ; 2017 ; Journal of Planning Literature Volume 32 ; 32 ; jpla ; >
-      au < expected ; exists ; 2018 ; Journal of Planning Literature Volume 33 ; 33 ; jpla ; >
+      au < exists ; exists ; 1985 ; Journal of Planning Literature Volume 1 ; 1 ; jplb ; >
+      au < exists ; exists ; 1987 ; Journal of Planning Literature Volume 2 ; 2 ; jplb ; >
+      au < exists ; exists ; 1988 ; Journal of Planning Literature Volume 3 ; 3 ; jplb ; >
+      au < exists ; exists ; 1989 ; Journal of Planning Literature Volume 4 ; 4 ; jplb ; >
+      au < exists ; exists ; 1990 ; Journal of Planning Literature Volume 5 ; 5 ; jplb ; >
+      au < exists ; exists ; 1991 ; Journal of Planning Literature Volume 6 ; 6 ; jplb ; >
+      au < exists ; exists ; 1992 ; Journal of Planning Literature Volume 7 ; 7 ; jplb ; >
+      au < exists ; exists ; 1993 ; Journal of Planning Literature Volume 8 ; 8 ; jplb ; >
+      au < exists ; exists ; 1994 ; Journal of Planning Literature Volume 9 ; 9 ; jplb ; >
+      au < exists ; exists ; 1995 ; Journal of Planning Literature Volume 10 ; 10 ; jplb ; >
+      au < exists ; exists ; 1996 ; Journal of Planning Literature Volume 11 ; 11 ; jplb ; >
+      au < exists ; exists ; 1997 ; Journal of Planning Literature Volume 12 ; 12 ; jplb ; >
+      au < exists ; exists ; 1998 ; Journal of Planning Literature Volume 13 ; 13 ; jplb ; >
+      au < exists ; exists ; 1999 ; Journal of Planning Literature Volume 14 ; 14 ; jplb ; >
+      au < exists ; exists ; 2000 ; Journal of Planning Literature Volume 15 ; 15 ; jplb ; >
+      au < exists ; exists ; 2001 ; Journal of Planning Literature Volume 16 ; 16 ; jplb ; >
+      au < exists ; exists ; 2002 ; Journal of Planning Literature Volume 17 ; 17 ; jplb ; >
+      au < exists ; exists ; 2003 ; Journal of Planning Literature Volume 18 ; 18 ; jplb ; >
+      au < exists ; exists ; 2004 ; Journal of Planning Literature Volume 19 ; 19 ; jplb ; >
+      au < exists ; exists ; 2005 ; Journal of Planning Literature Volume 20 ; 20 ; jplb ; >
+      au < exists ; exists ; 2006 ; Journal of Planning Literature Volume 21 ; 21 ; jplb ; >
+      au < exists ; exists ; 2007 ; Journal of Planning Literature Volume 22 ; 22 ; jplb ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; Journal of Planning Literature Volume 23 ; 23 ; jplb ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; Journal of Planning Literature Volume 24 ; 24 ; jplb ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; Journal of Planning Literature Volume 25 ; 25 ; jplb ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; Journal of Planning Literature Volume 26 ; 26 ; jplb ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; Journal of Planning Literature Volume 27 ; 27 ; jplb ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; Journal of Planning Literature Volume 28 ; 28 ; jplb ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; Journal of Planning Literature Volume 29 ; 29 ; jplb ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; Journal of Planning Literature Volume 30 ; 30 ; jplb ; >
+      au < superseded ; exists ; 2016 ; Journal of Planning Literature Volume 31 [superseded] ; 31 ; jpla ; >
+      au < exists ; exists ; 2016 ; Journal of Planning Literature Volume 31 ; 31 ; jplb ; >
+      au < exists ; exists ; 2017 ; Journal of Planning Literature Volume 32 ; 32 ; jplb ; >
+      au < exists ; exists ; 2018 ; Journal of Planning Literature Volume 33 ; 33 ; jplb ; >
 
     }
 
@@ -28723,8 +28723,6 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Language and Linguistics Volume 15 ; 15 ; linb ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Language and Linguistics Volume 16 ; 16 ; linb ; >
       au < frozen ; exists ; 2016 ; Language and Linguistics Volume 17 ; 17 ; linb ; >
-      au < expected ; exists ; 2017 ; Language and Linguistics Volume 18 ; 18 ; linb ; >
-      au < expected ; exists ; 2018 ; Language and Linguistics Volume 19 ; 19 ; linb ; >
 
   }
 
@@ -29802,8 +29800,6 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Measurement and Evaluation in Counseling and Development Volume 47 ; 47 ; mecb ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Measurement and Evaluation in Counseling and Development Volume 48 ; 48 ; mecb ; >
       au < frozen ; exists ; 2016 ; Measurement and Evaluation in Counseling and Development Volume 49 ; 49 ; mecb ; >
-      au < expected ; exists ; 2017 ; Measurement and Evaluation in Counseling and Development Volume 50 ; 50 ; mecb ; >
-      au < expected ; exists ; 2018 ; Measurement and Evaluation in Counseling and Development Volume 51 ; 51 ; mecb ; >
 
     }
 
@@ -37371,52 +37367,53 @@
     {
 
 
-      au < manifest ; exists ; 1973 ; Scandinavian Journal of Public Health Volume 1 ; 1 ; sjpa ; >
-      au < manifest ; exists ; 1974 ; Scandinavian Journal of Public Health Volume 2 ; 2 ; sjpa ; >
-      au < manifest ; exists ; 1975 ; Scandinavian Journal of Public Health Volume 3 ; 3 ; sjpa ; >
-      au < manifest ; exists ; 1976 ; Scandinavian Journal of Public Health Volume 4 ; 4 ; sjpa ; >
-      au < manifest ; exists ; 1977 ; Scandinavian Journal of Public Health Volume 5 ; 5 ; sjpa ; >
-      au < manifest ; exists ; 1978 ; Scandinavian Journal of Public Health Volume 6 ; 6 ; sjpa ; >
-      au < manifest ; exists ; 1979 ; Scandinavian Journal of Public Health Volume 7 ; 7 ; sjpa ; >
-      au < manifest ; exists ; 1980 ; Scandinavian Journal of Public Health Volume 8 ; 8 ; sjpa ; >
-      au < manifest ; exists ; 1981 ; Scandinavian Journal of Public Health Volume 9 ; 9 ; sjpa ; >
-      au < manifest ; exists ; 1982 ; Scandinavian Journal of Public Health Volume 10 ; 10 ; sjpa ; >
-      au < manifest ; exists ; 1983 ; Scandinavian Journal of Public Health Volume 11 ; 11 ; sjpa ; >
-      au < manifest ; exists ; 1984 ; Scandinavian Journal of Public Health Volume 12 ; 12 ; sjpa ; >
-      au < manifest ; exists ; 1985 ; Scandinavian Journal of Public Health Volume 13 ; 13 ; sjpa ; >
-      au < manifest ; exists ; 1986 ; Scandinavian Journal of Public Health Volume 14 ; 14 ; sjpa ; >
-      au < manifest ; exists ; 1987 ; Scandinavian Journal of Public Health Volume 15 ; 15 ; sjpa ; >
-      au < manifest ; exists ; 1988 ; Scandinavian Journal of Public Health Volume 16 ; 16 ; sjpa ; >
-      au < manifest ; exists ; 1989 ; Scandinavian Journal of Public Health Volume 17 ; 17 ; sjpa ; >
-      au < manifest ; exists ; 1990 ; Scandinavian Journal of Public Health Volume 18 ; 18 ; sjpa ; >
-      au < manifest ; exists ; 1991 ; Scandinavian Journal of Public Health Volume 19 ; 19 ; sjpa ; >
-      au < manifest ; exists ; 1992 ; Scandinavian Journal of Public Health Volume 20 ; 20 ; sjpa ; >
-      au < manifest ; exists ; 1993 ; Scandinavian Journal of Public Health Volume 21 ; 21 ; sjpa ; >
-      au < manifest ; exists ; 1994 ; Scandinavian Journal of Public Health Volume 22 ; 22 ; sjpa ; >
-      au < manifest ; exists ; 1995 ; Scandinavian Journal of Public Health Volume 23 ; 23 ; sjpa ; >
-      au < manifest ; exists ; 1996 ; Scandinavian Journal of Public Health Volume 24 ; 24 ; sjpa ; >
-      au < manifest ; exists ; 1997 ; Scandinavian Journal of Public Health Volume 25 ; 25 ; sjpa ; >
-      au < manifest ; exists ; 1998 ; Scandinavian Journal of Public Health Volume 26 ; 26 ; sjpa ; >
-      au < manifest ; exists ; 1999 ; Scandinavian Journal of Public Health Volume 27 ; 27 ; sjpa ; >
-      au < manifest ; exists ; 2000 ; Scandinavian Journal of Public Health Volume 28 ; 28 ; sjpa ; >
-      au < manifest ; exists ; 2001 ; Scandinavian Journal of Public Health Volume 29 ; 29 ; sjpa ; >
-      au < manifest ; exists ; 2002 ; Scandinavian Journal of Public Health Volume 30 ; 30 ; sjpa ; >
-      au < manifest ; exists ; 2003 ; Scandinavian Journal of Public Health Volume 31 ; 31 ; sjpa ; >
-      au < manifest ; exists ; 2004 ; Scandinavian Journal of Public Health Volume 32 ; 32 ; sjpa ; >
-      au < manifest ; exists ; 2005 ; Scandinavian Journal of Public Health Volume 33 ; 33 ; sjpa ; >
-      au < manifest ; exists ; 2006 ; Scandinavian Journal of Public Health Volume 34 ; 34 ; sjpa ; >
-      au < manifest ; exists ; 2007 ; Scandinavian Journal of Public Health Volume 35 ; 35 ; sjpa ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; Scandinavian Journal of Public Health Volume 36 ; 36 ; sjpa ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; Scandinavian Journal of Public Health Volume 37 ; 37 ; sjpa ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; Scandinavian Journal of Public Health Volume 38 ; 38 ; sjpa ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; Scandinavian Journal of Public Health Volume 39 ; 39 ; sjpa ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; Scandinavian Journal of Public Health Volume 40 ; 40 ; sjpa ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; Scandinavian Journal of Public Health Volume 41 ; 41 ; sjpa ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; Scandinavian Journal of Public Health Volume 42 ; 42 ; sjpa ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; Scandinavian Journal of Public Health Volume 43 ; 43 ; sjpa ; >
-      au < frozen ; exists ; 2016 ; Scandinavian Journal of Public Health Volume 44 ; 44 ; sjpa ; >
-      au < expected ; exists ; 2017 ; Scandinavian Journal of Public Health Volume 45 ; 45 ; sjpa ; >
-      au < expected ; exists ; 2018 ; Scandinavian Journal of Public Health Volume 46 ; 46 ; sjpa ; >
+      au < exists ; exists ; 1973 ; Scandinavian Journal of Public Health Volume 1 ; 1 ; sjpc ; >
+      au < exists ; exists ; 1974 ; Scandinavian Journal of Public Health Volume 2 ; 2 ; sjpc ; >
+      au < exists ; exists ; 1975 ; Scandinavian Journal of Public Health Volume 3 ; 3 ; sjpc ; >
+      au < exists ; exists ; 1976 ; Scandinavian Journal of Public Health Volume 4 ; 4 ; sjpc ; >
+      au < exists ; exists ; 1977 ; Scandinavian Journal of Public Health Volume 5 ; 5 ; sjpc ; >
+      au < exists ; exists ; 1978 ; Scandinavian Journal of Public Health Volume 6 ; 6 ; sjpc ; >
+      au < exists ; exists ; 1979 ; Scandinavian Journal of Public Health Volume 7 ; 7 ; sjpc ; >
+      au < exists ; exists ; 1980 ; Scandinavian Journal of Public Health Volume 8 ; 8 ; sjpc ; >
+      au < exists ; exists ; 1981 ; Scandinavian Journal of Public Health Volume 9 ; 9 ; sjpc ; >
+      au < exists ; exists ; 1982 ; Scandinavian Journal of Public Health Volume 10 ; 10 ; sjpc ; >
+      au < exists ; exists ; 1983 ; Scandinavian Journal of Public Health Volume 11 ; 11 ; sjpc ; >
+      au < exists ; exists ; 1984 ; Scandinavian Journal of Public Health Volume 12 ; 12 ; sjpc ; >
+      au < exists ; exists ; 1985 ; Scandinavian Journal of Public Health Volume 13 ; 13 ; sjpc ; >
+      au < exists ; exists ; 1986 ; Scandinavian Journal of Public Health Volume 14 ; 14 ; sjpc ; >
+      au < exists ; exists ; 1987 ; Scandinavian Journal of Public Health Volume 15 ; 15 ; sjpc ; >
+      au < exists ; exists ; 1988 ; Scandinavian Journal of Public Health Volume 16 ; 16 ; sjpc ; >
+      au < exists ; exists ; 1989 ; Scandinavian Journal of Public Health Volume 17 ; 17 ; sjpc ; >
+      au < exists ; exists ; 1990 ; Scandinavian Journal of Public Health Volume 18 ; 18 ; sjpc ; >
+      au < exists ; exists ; 1991 ; Scandinavian Journal of Public Health Volume 19 ; 19 ; sjpc ; >
+      au < exists ; exists ; 1992 ; Scandinavian Journal of Public Health Volume 20 ; 20 ; sjpc ; >
+      au < exists ; exists ; 1993 ; Scandinavian Journal of Public Health Volume 21 ; 21 ; sjpc ; >
+      au < exists ; exists ; 1994 ; Scandinavian Journal of Public Health Volume 22 ; 22 ; sjpc ; >
+      au < exists ; exists ; 1995 ; Scandinavian Journal of Public Health Volume 23 ; 23 ; sjpc ; >
+      au < exists ; exists ; 1996 ; Scandinavian Journal of Public Health Volume 24 ; 24 ; sjpc ; >
+      au < exists ; exists ; 1997 ; Scandinavian Journal of Public Health Volume 25 ; 25 ; sjpc ; >
+      au < exists ; exists ; 1998 ; Scandinavian Journal of Public Health Volume 26 ; 26 ; sjpc ; >
+      au < exists ; exists ; 1999 ; Scandinavian Journal of Public Health Volume 27 ; 27 ; sjpc ; >
+      au < exists ; exists ; 2000 ; Scandinavian Journal of Public Health Volume 28 ; 28 ; sjpc ; >
+      au < exists ; exists ; 2001 ; Scandinavian Journal of Public Health Volume 29 ; 29 ; sjpc ; >
+      au < exists ; exists ; 2002 ; Scandinavian Journal of Public Health Volume 30 ; 30 ; sjpc ; >
+      au < exists ; exists ; 2003 ; Scandinavian Journal of Public Health Volume 31 ; 31 ; sjpc ; >
+      au < exists ; exists ; 2004 ; Scandinavian Journal of Public Health Volume 32 ; 32 ; sjpc ; >
+      au < exists ; exists ; 2005 ; Scandinavian Journal of Public Health Volume 33 ; 33 ; sjpc ; >
+      au < exists ; exists ; 2006 ; Scandinavian Journal of Public Health Volume 34 ; 34 ; sjpc ; >
+      au < exists ; exists ; 2007 ; Scandinavian Journal of Public Health Volume 35 ; 35 ; sjpc ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; Scandinavian Journal of Public Health Volume 36 ; 36 ; sjpc ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; Scandinavian Journal of Public Health Volume 37 ; 37 ; sjpc ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; Scandinavian Journal of Public Health Volume 38 ; 38 ; sjpc ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; Scandinavian Journal of Public Health Volume 39 ; 39 ; sjpc ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; Scandinavian Journal of Public Health Volume 40 ; 40 ; sjpc ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; Scandinavian Journal of Public Health Volume 41 ; 41 ; sjpc ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; Scandinavian Journal of Public Health Volume 42 ; 42 ; sjpc ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; Scandinavian Journal of Public Health Volume 43 ; 43 ; sjpc ; >
+      au < superseded ; exists ; 2016 ; Scandinavian Journal of Public Health Volume 44 [superseded] ; 44 ; sjpa ; >
+      au < exists ; exists ; 2016 ; Scandinavian Journal of Public Health Volume 44 ; 44 ; sjpc ; >
+      au < exists ; exists ; 2017 ; Scandinavian Journal of Public Health Volume 45 ; 45 ; sjpc ; >
+      au < exists ; exists ; 2018 ; Scandinavian Journal of Public Health Volume 46 ; 46 ; sjpc ; >
 
     }
 
@@ -44375,8 +44372,6 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Political Science Volume 66 ; 66 ; pnzb ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Political Science Volume 67 ; 67 ; pnzb ; >
       au < frozen ; exists ; 2016 ; Political Science Volume 68 ; 68 ; pnzb ; >
-      au < expected ; exists ; 2017 ; Political Science Volume 69 ; 69 ; pnzb ; >
-      au < expected ; exists ; 2018 ; Political Science Volume 70 ; 70 ; pnzb ; >
 
     }
 
