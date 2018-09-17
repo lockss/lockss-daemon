@@ -3593,7 +3593,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Current Legal Problems Volume 67 ; 67 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Current Legal Problems Volume 68 ; 68 ;  >
     au < ready ; exists ; 2016 ; 2016 ; Current Legal Problems Volume 69 ; 69 ;  >
-    au < exists ; exists ; 2017 ; 2017 ; Current Legal Problems Volume 70 ; 70 ;  >
+    au < manifest ; exists ; 2017 ; 2017 ; Current Legal Problems Volume 70 ; 70 ;  >
     au < expected ; exists ; 2018 ; 2018 ; Current Legal Problems Volume 71 ; 71 ;  >
 
   }
@@ -3615,7 +3615,7 @@
     au < manifest ; exists ; 2015 ; 2015 ; Current Zoology Volume 61 ; 61 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; Current Zoology Volume 62 ; 62 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; Current Zoology Volume 63 ; 63 ;  >
-    au < expected ; exists ; 2018 ; 2018 ; Current Zoology Volume 64 ; 64 ;  >
+    au < manifest ; exists ; 2018 ; 2018 ; Current Zoology Volume 64 ; 64 ;  >
 
   }
 
@@ -3654,7 +3654,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; DNA Research Volume 22 ; 22 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; DNA Research Volume 23 ; 23 ;  >
     au < ready ; exists ; 2017 ; 2017 ; DNA Research Volume 24 ; 24 ;  >
-    au < expected ; exists ; 2018 ; 2018 ; DNA Research Volume 25 ; 25 ;  >
+    au < manifest ; exists ; 2018 ; 2018 ; DNA Research Volume 25 ; 25 ;  >
 
   }
 
@@ -3677,7 +3677,7 @@
     au < testing ; exists ; 2015 ; 2015 ; Database Volume 2015 ; 2015 ;  >
     au < ready ; exists ; 2016 ; 2016 ; Database Volume 2016 ; 2016 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; Database Volume 2017 ; 2017 ;  >
-    au < expected ; exists ; 2018 ; 2018 ; Database Volume 2018 ; 2018 ;  >
+    au < manifest ; exists ; 2018 ; 2018 ; Database Volume 2018 ; 2018 ;  >
 
   }
 
@@ -3724,7 +3724,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Digital Scholarship in the Humanities Volume 30 ; 30 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; Digital Scholarship in the Humanities Volume 31 ; 31 ;  >
     au < frozen ; exists ; 2017 ; 2017 ; Digital Scholarship in the Humanities Volume 32 ; 32 ;  >
-    au < expected ; exists ; 2018 ; 2018 ; Digital Scholarship in the Humanities Volume 33 ; 33 ;  >
+    au < manifest ; exists ; 2018 ; 2018 ; Digital Scholarship in the Humanities Volume 33 ; 33 ;  >
 
   }
 
@@ -3780,7 +3780,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Diplomatic History Volume 39 ; 39 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; Diplomatic History Volume 40 ; 40 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; Diplomatic History Volume 41 ; 41 ;  >
-    au < expected ; exists ; 2018 ; 2018 ; Diplomatic History Volume 42 ; 42 ;  >
+    au < manifest ; exists ; 2018 ; 2018 ; Diplomatic History Volume 42 ; 42 ;  >
 
   }
 
@@ -3824,7 +3824,7 @@
     au < manifest ; exists ; 2015 ; 2015 ; Diseases of the Esophagus Volume 28 ; 28 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; Diseases of the Esophagus Volume 29 ; 29 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; Diseases of the Esophagus Volume 30 ; 30 ;  >
-    au < expected ; exists ; 2018 ; 2018 ; Diseases of the Esophagus Volume 31 ; 31 ;  >
+    au < manifest ; exists ; 2018 ; 2018 ; Diseases of the Esophagus Volume 31 ; 31 ;  >
 
   }
 
@@ -3923,7 +3923,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; ELT Journal Volume 69 ; 69 ;  >
     au < ready ; exists ; 2016 ; 2016 ; ELT Journal Volume 70 ; 70 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; ELT Journal Volume 71 ; 71 ;  >
-    au < expected ; exists ; 2018 ; 2018 ; ELT Journal Volume 72 ; 72 ;  >
+    au < manifest ; exists ; 2018 ; 2018 ; ELT Journal Volume 72 ; 72 ;  >
 
   }
 
@@ -3959,7 +3959,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; EP Europace Volume 17 ; 17 ;  >
     au < ready ; exists ; 2016 ; 2016 ; EP Europace Volume 18 ; 18 ;  >
     au < testing ; exists ; 2017 ; 2017 ; EP Europace Volume 19 ; 19 ;  >
-    au < expected ; exists ; 2018 ; 2018 ; EP Europace Volume 20 ; 20 ;  >
+    au < manifest ; exists ; 2018 ; 2018 ; EP Europace Volume 20 ; 20 ;  >
 
   }
 
@@ -4039,8 +4039,8 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Early Music Volume 42 ; 42 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Early Music Volume 43 ; 43 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; Early Music Volume 44 ; 44 ;  >
-    au < exists ; exists ; 2017 ; 2017 ; Early Music Volume 45 ; 45 ;  >
-    au < exists ; exists ; 2018 ; 2018 ; Early Music Volume 46 ; 46 ;  >
+    au < manifest ; exists ; 2017 ; 2017 ; Early Music Volume 45 ; 45 ;  >
+    au < manifest ; exists ; 2018 ; 2018 ; Early Music Volume 46 ; 46 ;  >
 
   }
 
@@ -5056,8 +5056,8 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; FEMS Microbiology Ecology Volume 87-90 ; 87-90 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; FEMS Microbiology Ecology Volume 91 ; 91 ;  >
     au < testing ; exists ; 2016 ; 2016 ; FEMS Microbiology Ecology Volume 92 ; 92 ;  >
-    au < exists ; exists ; 2017 ; 2017 ; FEMS Microbiology Ecology Volume 93 ; 93 ;  >
-    au < exists ; exists ; 2018 ; 2018 ; FEMS Microbiology Ecology Volume 94 ; 94 ;  >
+    au < manifest ; exists ; 2017 ; 2017 ; FEMS Microbiology Ecology Volume 93 ; 93 ;  >
+    au < manifest ; exists ; 2018 ; 2018 ; FEMS Microbiology Ecology Volume 94 ; 94 ;  >
 
   }
 
