@@ -1,0 +1,148 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>ready</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.iumj.IUMJ2018Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Indiana University Mathematics Journal 2018 Plugin</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Indiana University Mathematics Journal 2018 Plugin, Base URL %s, Year %d, Volume %s", base_url, year, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%sIUMJ/toc.php?writeyear=%d", base_url, year</string>
+  </entry>
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+        <string>au_title</string>
+        <string>"%s", base_url</string>
+      </entry>
+      <entry>
+        <string>au_volume</string>
+        <string>"%sIUMJ/toc.php?writeyear=%d", base_url, year</string>
+      </entry>
+      <entry>
+        <string>au_issue</string>
+        <string>"%sIUMJ/ISSUE/%d/%s", base_url, year, issue</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,"^%s", base_url</string>
+      <string>1,"^%sIUMJ/toc.php[?]writeyear=%d", base_url, year</string>
+      <string>1,"^%sIUMJ/(ABS|FULLTEXT|FTDLOAD)/%d/", base_url, year</string>
+      <!-- <string>1,"^%sMETA/%d/([^/])+", base_url, year</string>
+      <string>1,"^%s(Images|icons)/", base_url</string>
+      <string>1,"^%sstylesheet/([^/])+\.css$", base_url</string>
+      <string>1,"^%soai/%d/%s/([^/])+/([^/])+", base_url, year, volume_name</string>
+      (YEAR)|
+https://www.iumj.indiana.edu/oai/2017/66/6044/6044.xml
+https://www.iumj.indiana.edu/oai/2017/66/6044/6044.html
+
+https://www.iumj.indiana.edu/IUMJ/ABS/2017/6074
+https://www.iumj.indiana.edu/IUMJ/FTDLOAD/2017/66/6074/pdf
+https://www.iumj.indiana.edu/IUMJ/FTDLOAD/2017/66/6074/ps
+https://www.iumj.indiana.edu/IUMJ/FTDLOAD/2017/66/6074/ps/tgz
+https://www.iumj.indiana.edu/IUMJ/FTDLOAD/2017/66/6074/ps/zip
+       -->
+    </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^%sIUMJ/FTDLOAD/%d/%s/([^/])+/pdf$", base_url, year, volume_name</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume_name</key>
+        <displayName>Volume Name</displayName>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.iumj.IUMJHtmlHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.iumj.IUMJArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.iumj.IUMJArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>application/xml_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.iumj.IUMJXmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>1000</long>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+</map>
