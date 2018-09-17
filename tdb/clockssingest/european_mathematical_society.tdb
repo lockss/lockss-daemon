@@ -3,6 +3,7 @@
   publisher <
     name = European Mathematical Society ;
     info[contract] = 2015 ;
+    info[back] = 2010 ;
     info[tester] = 8 ;
     info[poller] = 2
   >
@@ -11,24 +12,26 @@
   param[base_url] =  https://www.ems-ph.org/
   implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
   
-  {
-  
-    title < 
-      name = Algebraic Geometry ;
-      issn = 2313-1691 ;
-      eissn = 2214-2584 
-      
-    >
-    
-    param[journal_issn] = 2313-1691
-    comment[journal_id] = ag
-    
-    au < manifest ; exists ; 2014 ; Algebraic Geometry Volume 2 ; 2 ; >
-    au < expected ; exists ; 2017 ; Algebraic Geometry Volume 3 ; 3 ; >
-    
-    au < expected ; exists ; 2018 ; Algebraic Geometry Volume 4 ; 4 ; >
-  }
-
+#  {
+#  
+#    title < 
+#      name = Algebraic Geometry ;
+#      issn = 2313-1691 ;
+#      eissn = 2214-2584 
+#      
+#    >
+#    
+#    param[journal_issn] = 2313-1691
+#    comment[journal_id] = ag
+#    #Not on ems platform. Which is like this: https://www.ems-ph.org/journals/all_issues.php?issn=2308-5827
+#    #Instead is like this: https://algebraicgeometry.nl/# (but linked from ems website)
+#
+#This journal is in the original contract, but it is not on the same platform.
+#    
+#    au < exists ; exists ; 2014 ; Algebraic Geometry Volume 2 ; 2 ; >
+#
+#  }
+#
   {
   
     title < 
