@@ -2455,8 +2455,6 @@
     au < finished ; finished ; 2014 ; 2014 ; Interventionelle Radiologie Scan Volume 2 ; 2 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Interventionelle Radiologie Scan Volume 3 ; 3 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Interventionelle Radiologie Scan Volume 4 ; 4 ; reingest5.clockss.org:8082 >
-    au < expected ; exists ; 2017 ; 2017 ; Interventionelle Radiologie Scan Volume 5 ; 5 ; >
-    au < expected ; exists ; 2018 ; 2018 ; Interventionelle Radiologie Scan Volume 6 ; 6 ; >
 
   }
 
@@ -2516,8 +2514,6 @@
     au < finished ; finished ; 2014 ; 2014 ; Journal Club Schmerzmedizin Volume 3 ; 3 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; Journal Club Schmerzmedizin Volume 4 ; 4 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; 2016 ; Journal Club Schmerzmedizin Volume 5 ; 5 ; >
-    au < expected ; exists ; 2017 ; 2017 ; Journal Club Schmerzmedizin Volume 6 ; 6 ; >
-    au < expected ; exists ; 2018 ; 2018 ; Journal Club Schmerzmedizin Volume 7 ; 7 ; >
 
   }
 
@@ -2595,8 +2591,6 @@
     #years = 2016-current
 
     au < finished ; crawling ; 2016 ; 2016 ; Journal of Clinical & Academic Ophthalmology Volume 8 ; 8 ; reingest3.clockss.org:8083 >
-    au < expected ; exists ; 2017 ; 2017 ; Journal of Clinical & Academic Ophthalmology Volume 9 ; 9 ; >
-    au < expected ; exists ; 2018 ; 2018 ; Journal of Clinical & Academic Ophthalmology Volume 10 ; 10 ; >
 
   }
 
@@ -2694,8 +2688,6 @@
 
     au < finished ; finished ; 2015 ; 2015 ; Journal of Knee Surgery Reports Volume 1 ; 1 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; 2016 ; Journal of Knee Surgery Reports Volume 2 ; 2 ; >
-    au < expected ; exists ; 2017 ; 2017 ; Journal of Knee Surgery Reports Volume 3 ; 3 ; >
-    au < expected ; exists ; 2018 ; 2018 ; Journal of Knee Surgery Reports Volume 4 ; 4 ; >
 
   }
 
@@ -2781,8 +2773,6 @@
     au < finished ; finished ; 2014 ; 2014 ; Journal of Pediatric Biochemistry Volume 4 ; 4 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Journal of Pediatric Biochemistry Volume 5 ; 5 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; Journal of Pediatric Biochemistry Volume 6 ; 6 ;  >
-    au < expected ; exists ; 2017 ; 2017 ; Journal of Pediatric Biochemistry Volume 7 ; 7 ; >
-    au < expected ; exists ; 2018 ; 2018 ; Journal of Pediatric Biochemistry Volume 8 ; 8 ; >
 
   }
 
@@ -2928,8 +2918,6 @@
     au < finished ; finished ; 2014 ; 2014 ; Journal of Pediatric Neuroradiology Volume 3 ; 3 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; Journal of Pediatric Neuroradiology Volume 4 ; 4 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; Journal of Pediatric Neuroradiology Volume 5 ; 5 ;  >
-    au < expected ; exists ; 2017 ; 2017 ; Journal of Pediatric Neuroradiology Volume 6 ; 6 ; >
-    au < expected ; exists ; 2018 ; 2018 ; Journal of Pediatric Neuroradiology Volume 7 ; 7 ; >
 
   }
 
@@ -3439,8 +3427,6 @@
     au < finished ; finished ; 2014 ; 2014 ; Lege artis Das Magazin zur ärztlichen Weiterbildung Volume 4 ; 4 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; Lege artis Das Magazin zur ärztlichen Weiterbildung Volume 5 ; 5 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Lege artis Das Magazin zur ärztlichen Weiterbildung Volume 6 ; 6 ; reingest1.clockss.org:8082 >
-    au < expected ; exists ; 2017 ; 2017 ; Lege artis Das Magazin zur ärztlichen Weiterbildung Volume 7 ; 7 ; >
-    au < expected ; exists ; 2018 ; 2018 ; Lege artis Das Magazin zur ärztlichen Weiterbildung Volume 8 ; 8 ; >
 
   }
 
@@ -3595,8 +3581,6 @@
     au < finished ; finished ; 2014 ; 2014 ; Neurochirurgie Scan Volume 2 ; 2 ; >
     au < finished ; finished ; 2015 ; 2015 ; Neurochirurgie Scan Volume 3 ; 3 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; 2016 ; Neurochirurgie Scan Volume 4 ; 4 ; >
-    au < expected ; exists ; 2017 ; 2017 ; Neurochirurgie Scan Volume 5 ; 5 ; >
-    au < expected ; exists ; 2018 ; 2018 ; Neurochirurgie Scan Volume 6 ; 6 ; >
 
   }
 
@@ -3909,8 +3893,6 @@
     au < finished ; finished ; 2014 ; 2014 ; Orthopädie und Unfallchirurgie - Mitteilungen und Nachrichten Volume 3 ; 3 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Orthopädie und Unfallchirurgie - Mitteilungen und Nachrichten Volume 4 ; 4 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Orthopädie und Unfallchirurgie - Mitteilungen und Nachrichten Volume 5 ; 5 ; reingest2.clockss.org:8085 >
-    au < expected ; exists ; 2017 ; 2017 ; Orthopädie und Unfallchirurgie - Mitteilungen und Nachrichten Volume 6 ; 6 ; >
-    au < expected ; exists ; 2018 ; 2018 ; Orthopädie und Unfallchirurgie - Mitteilungen und Nachrichten Volume 7 ; 7 ; >
 
   }
 
@@ -4401,8 +4383,6 @@
    au < finished ; finished ; 2014 ; 2014 ; Planta Medica Letters Volume 1 ; 1 ; >
    au < finished ; finished ; 2015 ; 2015 ; Planta Medica Letters Volume 2 ; 2 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; Planta Medica Letters Volume 3 ; 3 ; reingest5.clockss.org:8082 >
-   au < expected ; exists ; 2017 ; 2017 ; Planta Medica Letters Volume 4 ; 4 ; >
-   au < expected ; exists ; 2018 ; 2018 ; Planta Medica Letters Volume 5 ; 5 ; >
 
   }
 
@@ -6060,8 +6040,6 @@
    au < finished ; finished ; 2014 ; 2014 ; Urologie Scan Volume 1 ; 1 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; Urologie Scan Volume 2 ; 2 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; Urologie Scan Volume 3 ; 3 ; reingest2.clockss.org:8085 >
-   au < expected ; exists ; 2017 ; 2017 ; Urologie Scan Volume 4 ; 4 ; > 
-   au < expected ; exists ; 2018 ; 2018 ; Urologie Scan Volume 5 ; 5 ; > 
 
   }
 
