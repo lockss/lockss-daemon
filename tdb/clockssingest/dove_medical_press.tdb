@@ -376,7 +376,7 @@
     au < finished ; finished ; 2015 ; Advances and Applications in Bioinformatics and Chemistry Volume 8 ; 8 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Advances and Applications in Bioinformatics and Chemistry Volume 9 ; 9 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Advances and Applications in Bioinformatics and Chemistry Volume 10 ; 10 ; 2017 ; >
-    au < testing ; exists ; 2018 ; Advances and Applications in Bioinformatics and Chemistry Volume 11 ; 11 ; 2018 ; >
+    au < expected ; exists ; 2018 ; Advances and Applications in Bioinformatics and Chemistry Volume 11 ; 11 ; 2018 ; >
 
   }
 
@@ -489,7 +489,7 @@
     au < finished ; finished ; 2014 ; Journal of Receptor, Ligand and Channel Research Volume 7 ; 7 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Journal of Receptor, Ligand and Channel Research Volume 8 ; 8 ; 2015 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2016 ; Journal of Receptor, Ligand and Channel Research Volume 9 ; 9 ; 2016 ; reingest5.clockss.org:8082 >
-    au < testing ; exists ; 2017 ; Journal of Receptor, Ligand and Channel Research Volume 10 ; 10 ; 2017 ; >
+    au < boost ; exists ; 2018 ; Journal of Receptor, Ligand and Channel Research Volume 10 ; 10 ; 2018 ; >
     
   }
 
@@ -1415,9 +1415,8 @@
     au < finished ; crawling ; 2011 ; Neurobehavioral HIV Medicine Volume 3 ; 3 ; 2011 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Neurobehavioral HIV Medicine Volume 4 ; 4 ; 2012 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2013 ; Neurobehavioral HIV Medicine Volume 5 ; 5 ; 2013 ; reingest2.clockss.org:8085 >
-    au < doNotProcess ; doNotProcess ; 2014 ; Neurobehavioral HIV Medicine Volume 6 ; 6 ; 2014 ; >
-    au < finished ; finished ; 2015 ; Neurobehavioral HIV Medicine Volume 7 ; 7 ; 2015 ; >
-    au < finished ; crawling ; 2016 ; Neurobehavioral HIV Medicine Volume 8 ; 8 ; 2016 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Neurobehavioral HIV Medicine Volume 6 ; 6 ; 2015 ; >
+    au < finished ; crawling ; 2016 ; Neurobehavioral HIV Medicine Volume 7 ; 7 ; 2016 ; reingest5.clockss.org:8082 >
     
   }
 
@@ -1526,7 +1525,7 @@
     au < finished ; finished ; 2015 ; Clinical Audit Volume 7 ; 7 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Clinical Audit Volume 8 ; 8 ; 2016 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Clinical Audit Volume 9 ; 9 ; 2017 ; >
-    au < testing ; exists ; 2018 ; Clinical Audit Volume 10 ; 10 ; 2018 ; >
+    au < expected ; exists ; 2018 ; Clinical Audit Volume 10 ; 10 ; 2018 ; >
 
   }
 
@@ -1607,10 +1606,8 @@
     au < finished ; finished ; 2010 ; Open Access Insect Physiology Volume 2 ; 2 ; 2010 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2011 ; Open Access Insect Physiology Volume 3 ; 3 ; 2011 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Open Access Insect Physiology Volume 4 ; 4 ; 2012 ; reingest4.clockss.org:8082 >
-    au < testing ; exists ; 2013 ; Open Access Insect Physiology Volume 5 ; 5 ; 2013 ; >
-    au < testing ; exists ; 2014 ; Open Access Insect Physiology Volume 6 ; 6 ; 2014 ; >
-    au < finished ; finished ; 2015 ; Open Access Insect Physiology Volume 7 ; 7 ; 2015 ; >
-    au < finished ; crawling ; 2016 ; Open Access Insect Physiology Volume 8 ; 8 ; 2016 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Open Access Insect Physiology Volume 5 ; 5 ; 2015 ; >
+    au < finished ; crawling ; 2016 ; Open Access Insect Physiology Volume 6 ; 6 ; 2016 ; reingest1.clockss.org:8082 >
     
   }
 
@@ -2038,6 +2035,7 @@
     >
     
     param[journal_id] = 107
+    #ceased publishing in September 2018
 
     au < finished ; finished ; 2011 ; ChronoPhysiology and Therapy Volume 1 ; 1 ; 2011 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2012 ; ChronoPhysiology and Therapy Volume 2 ; 2 ; 2012 ; reingest1.clockss.org:8082 >
@@ -2046,7 +2044,6 @@
     au < finished ; finished ; 2015 ; ChronoPhysiology and Therapy Volume 5 ; 5 ; 2015 ; >
     au < finished ; crawling ; 2016 ; ChronoPhysiology and Therapy Volume 6 ; 6 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; ChronoPhysiology and Therapy Volume 7 ; 7 ; 2017 ; >
-    au < testing ; exists ; 2018 ; ChronoPhysiology and Therapy Volume 8 ; 8 ; 2018 ; >
 
   }
 
@@ -2183,7 +2180,7 @@
     au < finished ; finished ; 2015 ; Research and Reports in Forensic Medical Science Volume 5 ; 5 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Research and Reports in Forensic Medical Science Volume 6 ; 6 ; 2016 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; Research and Reports in Forensic Medical Science Volume 7 ; 7 ; 2017 ; >
-    au < testing ; exists ; 2018 ; Research and Reports in Forensic Medical Science Volume 8 ; 8 ; 2018 ; >
+    au < expected ; exists ; 2018 ; Research and Reports in Forensic Medical Science Volume 8 ; 8 ; 2018 ; >
 
   }
 
@@ -2238,7 +2235,7 @@
     au < finished ; finished ; 2011 ; Reports in Parasitology Volume 1 ; 1 ; 2011 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2012 ; Reports in Parasitology Volume 2 ; 2 ; 2012 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2013 ; Reports in Parasitology Volume 3 ; 3 ; 2013 ; reingest4.clockss.org:8082 >
-    au < testing ; exists ; 2014 ; Reports in Parasitology Volume 4 ; 4 ; 2014 ; >
+    au < doesNotExist ; doesNotExist ; 2014 ; Reports in Parasitology Volume 4 ; 4 ; 2014 ; >
     au < finished ; finished ; 2015 ; Reports in Parasitology Volume 5 ; 5 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Reports in Parasitology Volume 6 ; 6 ; 2016 ; reingest1.clockss.org:8082 >
    
@@ -2275,7 +2272,7 @@
 
     au < finished ; crawling ; 2011 ; Antibody Technology Journal Volume 1 ; 1 ; 2011 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2012 ; Antibody Technology Journal Volume 2 ; 2 ; 2012 ; reingest3.clockss.org:8083 >
-    au < testing ; exists ; 2013 ; Antibody Technology Journal Volume 3 ; 3 ; 2013 ; >
+    au < doesNotExist ; doesNotExist ; 2013 ; Antibody Technology Journal Volume 3 ; 3 ; 2013 ; >
     au < finished ; finished ; 2014 ; Antibody Technology Journal Volume 4 ; 4 ; 2014 ; >
     au < finished ; finished ; 2015 ; Antibody Technology Journal Volume 5 ; 5 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Antibody Technology Journal Volume 6 ; 6 ; 2016 ; reingest2.clockss.org:8085 >
@@ -2330,6 +2327,7 @@
     >
     
     param[journal_id] = 125
+    #ceased publishing in September 2018
 
     au < finished ; finished ; 2012 ; Neuroscience and Neuroeconomics Volume 1 ; 1 ; 2012 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2013 ; Neuroscience and Neuroeconomics Volume 2 ; 2 ; 2013 ; reingest4.clockss.org:8082 >
@@ -2337,7 +2335,6 @@
     au < finished ; finished ; 2015 ; Neuroscience and Neuroeconomics Volume 4 ; 4 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Neuroscience and Neuroeconomics Volume 5 ; 5 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Neuroscience and Neuroeconomics Volume 6 ; 6 ; 2017 ; >
-    au < testing ; exists ; 2018 ; Neuroscience and Neuroeconomics Volume 7 ; 7 ; 2018 ; >
 
   }
 
@@ -2462,6 +2459,7 @@
     >
     
     param[journal_id] = 136
+    #ceased publishing in September 2018
 
     au < finished ; crawling ; 2011 ; Orphan Drugs: Research and Reviews Volume 1 ; 1 ; 2011 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Orphan Drugs: Research and Reviews Volume 2 ; 2 ; 2012 ; reingest4.clockss.org:8082 >
@@ -2470,7 +2468,6 @@
     au < finished ; finished ; 2015 ; Orphan Drugs: Research and Reviews Volume 5 ; 5 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Orphan Drugs: Research and Reviews Volume 6 ; 6 ; 2016 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Orphan Drugs: Research and Reviews Volume 7 ; 7 ; 2017 ; >
-    au < testing ; exists ; 2018 ; Orphan Drugs: Research and Reviews Volume 8 ; 8 ; 2018 ; >
 
   }
 
@@ -2485,7 +2482,7 @@
     #ceased publishing in July 2016
 
     au < finished ; finished ; 2012 ; Nanobiosensors in Disease Diagnosis Volume 1 ; 1 ; 2012 ; reingest5.clockss.org:8082 >
-    au < testing ; exists ; 2013 ; Nanobiosensors in Disease Diagnosis Volume 2 ; 2 ; 2013 ; >
+    au < doesNotExist ; doesNotExist ; 2013 ; Nanobiosensors in Disease Diagnosis Volume 2 ; 2 ; 2013 ; >
     au < finished ; finished ; 2014 ; Nanobiosensors in Disease Diagnosis Volume 3 ; 3 ; 2014 ; >
     au < finished ; finished ; 2015 ; Nanobiosensors in Disease Diagnosis Volume 4 ; 4 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Nanobiosensors in Disease Diagnosis Volume 5 ; 5 ; 2016 ; reingest2.clockss.org:8085 >
@@ -2573,14 +2570,13 @@
     >
     
     param[journal_id] = 143
+    #ceased publishing in September 2018
 
     au < finished ; finished ; 2012 ; Journal of Biorepository Science for Applied Medicine Volume 1 ; 1 ; 2012 ; reingest3.clockss.org:8083 >
-    au < testing ; exists ; 2013 ; Journal of Biorepository Science for Applied Medicine Volume 2 ; 2 ; 2013 ; >
-    au < finished ; finished ; 2014 ; Journal of Biorepository Science for Applied Medicine Volume 3 ; 3 ; 2014 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 2015 ; Journal of Biorepository Science for Applied Medicine Volume 4 ; 4 ; 2015 ; >
-    au < finished ; crawling ; 2016 ; Journal of Biorepository Science for Applied Medicine Volume 5 ; 5 ; 2016 ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2017 ; Journal of Biorepository Science for Applied Medicine Volume 6 ; 6 ; 2017 ; >
-    au < testing ; exists ; 2018 ; Journal of Biorepository Science for Applied Medicine Volume 7 ; 7 ; 2018 ; >
+    au < finished ; finished ; 2014 ; Journal of Biorepository Science for Applied Medicine Volume 2 ; 2 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2015 ; Journal of Biorepository Science for Applied Medicine Volume 3 ; 3 ; 2015 ; >
+    au < finished ; crawling ; 2016 ; Journal of Biorepository Science for Applied Medicine Volume 4 ; 4 ; 2016 ; reingest5.clockss.org:8082 >
+    au < deepCrawl ; exists ; 2017 ; Journal of Biorepository Science for Applied Medicine Volume 5 ; 5 ; 2017 ; >
 
   }
 
@@ -2592,13 +2588,13 @@
     >
     
     param[journal_id] = 144
+    #ceased publishing in September 2018
 
     au < finished ; finished ; 2013 ; Energy and Emission Control Technologies Volume 1 ; 1 ; 2013 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Energy and Emission Control Technologies Volume 2 ; 2 ; 2014 ; >
     au < finished ; finished ; 2015 ; Energy and Emission Control Technologies Volume 3 ; 3 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Energy and Emission Control Technologies Volume 4 ; 4 ; 2016 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Energy and Emission Control Technologies Volume 5 ; 5 ; 2017 ; >
-    au < testing ; exists ; 2018 ; Energy and Emission Control Technologies Volume 6 ; 6 ; 2018 ; >
 
   }
 
