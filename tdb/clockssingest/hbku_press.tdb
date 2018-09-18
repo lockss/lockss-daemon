@@ -228,7 +228,7 @@
     plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
     param[journal_id] = jist
 
-    au < manifest ; exists ; 2018 ; Information Studies & Technology Volume 2018 ; 2018 ; >
+    au < testing ; exists ; 2018 ; Information Studies & Technology Volume 2018 ; 2018 ; >
 
   }
   
@@ -450,7 +450,7 @@
     plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
     param[journal_id] = rolacc
 
-    au < manifest ; exists ; 2018 ; Rule of Law and Anti-Corruption Journal Volume 2018 ; 2018 ; >
+    au < testing ; exists ; 2018 ; Rule of Law and Anti-Corruption Journal Volume 2018 ; 2018 ; >
 
   }
   
