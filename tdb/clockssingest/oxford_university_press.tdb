@@ -3958,7 +3958,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; EP Europace Volume 16 ; 16 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; EP Europace Volume 17 ; 17 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; EP Europace Volume 18 ; 18 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; EP Europace Volume 19 ; 19 ;  >
+    au < crawling ; exists ; 2017 ; 2017 ; EP Europace Volume 19 ; 19 ;  >
     au < testing ; exists ; 2018 ; 2018 ; EP Europace Volume 20 ; 20 ;  >
 
   }
@@ -4077,7 +4077,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Economic Policy Volume 20 ; 20 ;  >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Economic Policy Volume 21 ; 21 ;  >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Economic Policy Volume 22 ; 22 ;  >
-    au < ready ; exists ; 2008 ; 2008 ; Economic Policy Volume 23 ; 23 ;  >
+    au < crawling ; exists ; 2008 ; 2008 ; Economic Policy Volume 23 ; 23 ;  >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Economic Policy Volume 24 ; 24 ;  >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Economic Policy Volume 25 ; 25 ;  >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Economic Policy Volume 26 ; 26 ;  >
@@ -4212,7 +4212,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; English: Journal of the English Association Volume 62 ; 62 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; English: Journal of the English Association Volume 63 ; 63 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; English: Journal of the English Association Volume 64 ; 64 ;  >
-    au < ready ; exists ; 2016 ; 2016 ; English: Journal of the English Association Volume 65 ; 65 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; English: Journal of the English Association Volume 65 ; 65 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; English: Journal of the English Association Volume 66 ; 66 ;  >
 
   }
@@ -4264,7 +4264,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Environmental Entomology Volume 34 ; 34 ;  >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Environmental Entomology Volume 35 ; 35 ;  >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Environmental Entomology Volume 36 ; 36 ;  >
-    au < ready ; exists ; 2008 ; 2008 ; Environmental Entomology Volume 37 ; 37 ;  >
+    au < crawling ; exists ; 2008 ; 2008 ; Environmental Entomology Volume 37 ; 37 ;  >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Environmental Entomology Volume 38 ; 38 ;  >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Environmental Entomology Volume 39 ; 39 ;  >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Environmental Entomology Volume 40 ; 40 ;  >
@@ -4272,8 +4272,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Environmental Entomology Volume 42 ; 42 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Environmental Entomology Volume 43 ; 43 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Environmental Entomology Volume 44 ; 44 ;  >
-    au < ready ; exists ; 2016 ; 2016 ; Environmental Entomology Volume 45 ; 45 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; Environmental Entomology Volume 46 ; 46 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; Environmental Entomology Volume 45 ; 45 ;  >
+    au < crawling ; exists ; 2017 ; 2017 ; Environmental Entomology Volume 46 ; 46 ;  >
 
   }
 
@@ -4287,8 +4287,8 @@
     param[journal_id] = eep
 
     au < crawling ; exists ; 2015 ; 2015 ; Environmental Epigenetics Volume 1 ; 1 ;  >
-    au < ready ; exists ; 2016 ; 2016 ; Environmental Epigenetics Volume 2 ; 2 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; Environmental Epigenetics Volume 3 ; 3 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; Environmental Epigenetics Volume 2 ; 2 ;  >
+    au < crawling ; exists ; 2017 ; 2017 ; Environmental Epigenetics Volume 3 ; 3 ;  >
 
   }
 
@@ -4323,7 +4323,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Environmental History Volume 18 ; 18 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Environmental History Volume 19 ; 19 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Environmental History Volume 20 ; 20 ;  >
-    au < ready ; exists ; 2016 ; 2016 ; Environmental History Volume 21 ; 21 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; Environmental History Volume 21 ; 21 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; Environmental History Volume 22 ; 22 ;  >
 
   }
@@ -4489,7 +4489,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Essays in Criticism Volume 63 ; 63 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Essays in Criticism Volume 64 ; 64 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Essays in Criticism Volume 65 ; 65 ;  >
-    au < ready ; exists ; 2016 ; 2016 ; Essays in Criticism Volume 66 ; 66 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; Essays in Criticism Volume 66 ; 66 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; Essays in Criticism Volume 67 ; 67 ;  >
 
   }
@@ -4606,7 +4606,7 @@
     param[journal_id] = ehjqcco
 
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; European Heart Journal - Quality of Care and Clinical Outcomes Volume 1 ; 1 ;  >
-    au < ready ; exists ; 2016 ; 2016 ; European Heart Journal - Quality of Care and Clinical Outcomes Volume 2 ; 2 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; European Heart Journal - Quality of Care and Clinical Outcomes Volume 2 ; 2 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; European Heart Journal - Quality of Care and Clinical Outcomes Volume 3 ; 3 ;  >
 
   }
@@ -4682,8 +4682,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; European Journal of Cardio-Thoracic Surgery Volume 43-44 ; 43-44 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; European Journal of Cardio-Thoracic Surgery Volume 45-46 ; 45-46 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; European Journal of Cardio-Thoracic Surgery Volume 47-48 ; 47-48 ;  >
-    au < ready ; exists ; 2016 ; 2016 ; European Journal of Cardio-Thoracic Surgery Volume 49-50 ; 49-50 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; European Journal of Cardio-Thoracic Surgery Volume 51 ; 51 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; European Journal of Cardio-Thoracic Surgery Volume 49-50 ; 49-50 ;  >
+    au < crawling ; exists ; 2017 ; 2017 ; European Journal of Cardio-Thoracic Surgery Volume 51 ; 51 ;  >
 
   }
 
@@ -4833,7 +4833,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; European Journal of Public Health Volume 23 ; 23 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; European Journal of Public Health Volume 24 ; 24 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; European Journal of Public Health Volume 25 ; 25 ;  >
-    au < ready ; exists ; 2016 ; 2016 ; European Journal of Public Health Volume 26 ; 26 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; European Journal of Public Health Volume 26 ; 26 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; European Journal of Public Health Volume 27 ; 27 ;  >
 
   }
@@ -4891,8 +4891,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; European Review of Agricultural Economics Volume 40 ; 40 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; European Review of Agricultural Economics Volume 41 ; 41 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; European Review of Agricultural Economics Volume 42 ; 42 ;  >
-    au < ready ; exists ; 2016 ; 2016 ; European Review of Agricultural Economics Volume 43 ; 43 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; European Review of Agricultural Economics Volume 44 ; 44 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; European Review of Agricultural Economics Volume 43 ; 43 ;  >
+    au < crawling ; exists ; 2017 ; 2017 ; European Review of Agricultural Economics Volume 44 ; 44 ;  >
 
   }
 
@@ -4927,7 +4927,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; European Review of Economic History Volume 18 ; 18 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; European Review of Economic History Volume 19 ; 19 ;  >
     au < testing ; exists ; 2016 ; 2016 ; European Review of Economic History Volume 20 ; 20 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; European Review of Economic History Volume 21 ; 21 ;  >
+    au < crawling ; exists ; 2017 ; 2017 ; European Review of Economic History Volume 21 ; 21 ;  >
 
   }
 
@@ -4973,7 +4973,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; European Sociological Review Volume 29 ; 29 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; European Sociological Review Volume 30 ; 30 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; European Sociological Review Volume 31 ; 31 ;  >
-    au < ready ; exists ; 2016 ; 2016 ; European Sociological Review Volume 32 ; 32 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; European Sociological Review Volume 32 ; 32 ;  >
     au < testing ; exists ; 2017 ; 2017 ; European Sociological Review Volume 33 ; 33 ;  >
 
   }
@@ -5047,7 +5047,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; FEMS Microbiology Ecology Volume 51-54 ; 51-54 ;  >
     au < doNotProcess ; exists ; 2006 ; 2006 ; FEMS Microbiology Ecology Volume 55-58 ; 55-58 ;  >
     au < doNotProcess ; exists ; 2007 ; 2007 ; FEMS Microbiology Ecology Volume 59-62 ; 59-62 ;  >
-    au < ready ; exists ; 2008 ; 2008 ; FEMS Microbiology Ecology Volume 63-66 ; 63-66 ;  >
+    au < crawling ; exists ; 2008 ; 2008 ; FEMS Microbiology Ecology Volume 63-66 ; 63-66 ;  >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; FEMS Microbiology Ecology Volume 67-70 ; 67-70 ;  >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; FEMS Microbiology Ecology Volume 71-74 ; 71-74 ;  >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; FEMS Microbiology Ecology Volume 75-78 ; 75-78 ;  >
