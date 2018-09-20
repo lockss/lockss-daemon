@@ -32,6 +32,9 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.highwire;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import org.lockss.plugin.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
@@ -40,6 +43,14 @@ import org.lockss.util.urlconn.*;
 public class HighWireDrupalHttpResponseHandler implements CacheResultHandler {
   
   private static final Logger logger = Logger.getLogger(HighWireDrupalHttpResponseHandler.class);
+  
+  /*examples:
+   * http://science.sciencemag.org/highwire/filestream/609439/field_highwire_adjunct_files/0/D%27Angelo.MovieS1.mov 
+   * http://www.bloodjournal.org/highwire/filestream/322606/field_highwire_adjunct_files/0/FigureS1.jpg 
+   * A child can change this by extending this class and overriding the getter for the 403 pattern
+   */
+  protected static final Pattern DEFAULT_NON_FATAL_403_PAT = 
+      Pattern.compile("/filestream/[^/]+/field_highwire_adjunct_files/");  
   
   @Override
   public void init(CacheResultMap crmap) {
@@ -107,6 +118,14 @@ public class HighWireDrupalHttpResponseHandler implements CacheResultHandler {
         logger.debug2("520: " + url);
         return new CacheException.RetryableNetworkException_3_10S("520 Origin Error");
 
+      case 403: 
+        logger.debug2("403 - pattern is " + getNonFatal403Pattern().toString());
+        Matcher fmat = getNonFatal403Pattern().matcher(url);
+        if (fmat.find()) {
+          return new CacheException.NoRetryDeadLinkException("403 Foridden (non-fatal)");
+        }
+        return new CacheException.RetrySameUrlException("403 Forbidden");
+        
       default:
         logger.warning("Unexpected responseCode (" + responseCode + ") in handleResult(): AU " + au.getName() + "; URL " + url);
         throw new UnsupportedOperationException("Unexpected responseCode (" + responseCode + ")");
@@ -126,4 +145,8 @@ public class HighWireDrupalHttpResponseHandler implements CacheResultHandler {
     throw new UnsupportedOperationException("Unexpected call to handleResult(): AU " + au.getName() + "; URL " + url, ex);
   }
   
+  // Use a getter so that this can be overridden by a child plugin
+  protected Pattern getNonFatal403Pattern() {    
+    return DEFAULT_NON_FATAL_403_PAT;   
+  }  
 }
