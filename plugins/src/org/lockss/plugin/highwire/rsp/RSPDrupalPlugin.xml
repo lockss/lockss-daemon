@@ -14,7 +14,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>13</string>
+    <string>14</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -22,7 +22,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>75</string>
+    <string>78</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -41,7 +41,12 @@
       </entry>
     </map>
   </entry>
+<!--  may move this up to parent, for now test locally - don't extract from XML ... SAX parse error on suppl -->  
   <entry>
+    <string>application/xml_link_extractor_factory</string>
+    <string>org.lockss.util.None</string>
+  </entry>
+   <entry>
     <string>au_name</string>
     <string>"Royal Society Publishing Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
