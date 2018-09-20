@@ -2845,7 +2845,8 @@ while (my $line = <>) {
             if ($req->url ne $resp->request->uri) {
               $vol_title = $resp->request->uri;
               $result = "Redirected";
-            } elsif (defined($man_contents)) {
+	    #make sure there is a link to an issue
+            } elsif (defined($man_contents) && ($man_contents =~ m/articles\/index\.html\?month=$year-/)) {
                 if ($man_contents =~ m/<h1[^>]+>(\s*<a href[^>]+>)(.*)(<\/a>\s*):([^<]+)<\/h1>/si) {
                     $vol_title = "$2$4"
                 }
