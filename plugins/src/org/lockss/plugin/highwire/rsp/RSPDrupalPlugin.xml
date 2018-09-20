@@ -44,7 +44,7 @@
 <!--  may move this up to parent, for now test locally - don't extract from XML ... SAX parse error on suppl -->  
   <entry>
     <string>application/xml_link_extractor_factory</string>
-    <string>org.lockss.util.None</string>
+    <org.lockss.util.Default />
   </entry>
    <entry>
     <string>au_name</string>
