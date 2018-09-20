@@ -677,8 +677,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Advances in Dental Research Volume 26 ; 26 ; adra ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Advances in Dental Research Volume 27 ; 27 ; adra ; >
       au < finished ; crawling ; 2016 ; Advances in Dental Research Volume 28 ; 28 ; adra ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2017 ; Advances in Dental Research Volume 29 ; 29 ; adra ; >
-      au < expected ; exists ; 2018 ; Advances in Dental Research Volume 30 ; 30 ; adra ; >
+      au < crawling ; exists ; 2018 ; Advances in Dental Research Volume 29 ; 29 ; adra ; >
 
     }
 
@@ -2828,9 +2827,8 @@
       au < frozen ; exists ; 2011-2012 ; Antiviral Chemistry & Chemotherapy Volume 22 ; 22 ; avca ; >
       au < doNotProcess ; doNotProcess ; 2012-2014 ; Antiviral Chemistry & Chemotherapy Volume 23 ; 23 ; avca ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Antiviral Chemistry & Chemotherapy Volume 24 ; 24 ; avca ; >
-      au < frozen ; exists ; 2016 ; Antiviral Chemistry & Chemotherapy Volume 25 ; 25 ; avca ; >
-      au < frozen ; exists ; 2017 ; Antiviral Chemistry & Chemotherapy Volume 26 ; 26 ; avca ; >
-      au < expected ; exists ; 2018 ; Antiviral Chemistry & Chemotherapy Volume 27 ; 27 ; avca ; >
+      au < crawling ; exists ; 2017 ; Antiviral Chemistry & Chemotherapy Volume 25 ; 25 ; avca ; >
+      au < crawling ; exists ; 2018 ; Antiviral Chemistry & Chemotherapy Volume 26 ; 26 ; avca ; >
 
   }
 
@@ -46256,38 +46254,39 @@
         au < manifest ; exists ; 1984 ; Acta Radiologica Volume 25 ; 25 ; acrb ; >
         au < manifest ; exists ; 1985 ; Acta Radiologica Volume 26 ; 26 ; acrb ; >
         au < manifest ; exists ; 1986 ; Acta Radiologica Volume 27 ; 27 ; acrb ; >
-        au < manifest ; exists ; 1987 ; Acta Radiologica Volume 28 ; 28 ; acra ; >
-        au < manifest ; exists ; 1988 ; Acta Radiologica Volume 29 ; 29 ; acra ; >
-        au < manifest ; exists ; 1989 ; Acta Radiologica Volume 30 ; 30 ; acra ; >
-        au < manifest ; exists ; 1990 ; Acta Radiologica Volume 31 ; 31 ; acra ; >
-        au < manifest ; exists ; 1991 ; Acta Radiologica Volume 32 ; 32 ; acra ; >
-        au < manifest ; exists ; 1992 ; Acta Radiologica Volume 33 ; 33 ; acra ; >
-        au < manifest ; exists ; 1993 ; Acta Radiologica Volume 34 ; 34 ; acra ; >
-        au < manifest ; exists ; 1994 ; Acta Radiologica Volume 35 ; 35 ; acra ; >
-        au < manifest ; exists ; 1995 ; Acta Radiologica Volume 36 ; 36 ; acra ; >
-        au < manifest ; exists ; 1996 ; Acta Radiologica Volume 37 ; 37 ; acrc ; >
-        au < manifest ; exists ; 1997 ; Acta Radiologica Volume 38 ; 38 ; acra ; >
-        au < manifest ; exists ; 1998 ; Acta Radiologica Volume 39 ; 39 ; acra ; >
-        au < manifest ; exists ; 1999 ; Acta Radiologica Volume 40 ; 40 ; acra ; >
-        au < manifest ; exists ; 2000 ; Acta Radiologica Volume 41 ; 41 ; acra ; >
-        au < manifest ; exists ; 2001 ; Acta Radiologica Volume 42 ; 42 ; acra ; >
-        au < manifest ; exists ; 2002 ; Acta Radiologica Volume 43 ; 43 ; acra ; >
-        au < manifest ; exists ; 2003 ; Acta Radiologica Volume 44 ; 44 ; acra ; >
-        au < manifest ; exists ; 2004 ; Acta Radiologica Volume 45 ; 45 ; acra ; >
-        au < manifest ; exists ; 2005 ; Acta Radiologica Volume 46 ; 46 ; acra ; >
-        au < manifest ; exists ; 2006 ; Acta Radiologica Volume 47 ; 47 ; acra ; >
-        au < manifest ; exists ; 2007 ; Acta Radiologica Volume 48 ; 48 ; acra ; >
-        au < doNotProcess ; doNotProcess ; 2008 ; Acta Radiologica Volume 49 ; 49 ; acra ; >
-        au < doNotProcess ; doNotProcess ; 2009 ; Acta Radiologica Volume 50 ; 50 ; acra ; >
-        au < doNotProcess ; doNotProcess ; 2010 ; Acta Radiologica Volume 51 ; 51 ; acra ; >
-        au < doNotProcess ; doNotProcess ; 2011 ; Acta Radiologica Volume 52 ; 52 ; acra ; >
-        au < doNotProcess ; doNotProcess ; 2012 ; Acta Radiologica Volume 53 ; 53 ; acra ; >
-        au < doNotProcess ; doNotProcess ; 2013 ; Acta Radiologica Volume 54 ; 54 ; acra ; >
-        au < doNotProcess ; doNotProcess ; 2014 ; Acta Radiologica Volume 55 ; 55 ; acra ; >
-        au < doNotProcess ; doNotProcess ; 2015 ; Acta Radiologica Volume 56 ; 56 ; acra ; >
-        au < frozen ; exists ; 2016 ; Acta Radiologica Volume 57 ; 57 ; acra ; >
-        au < expected ; exists ; 2017 ; Acta Radiologica Volume 58 ; 58 ; acra ; >
-        au < expected ; exists ; 2018 ; Acta Radiologica Volume 59 ; 59 ; acra ; >
+        au < exists ; exists ; 1987 ; Acta Radiologica Volume 28 ; 28 ; acrc ; >
+        au < exists ; exists ; 1988 ; Acta Radiologica Volume 29 ; 29 ; acrc ; >
+        au < exists ; exists ; 1989 ; Acta Radiologica Volume 30 ; 30 ; acrc ; >
+        au < exists ; exists ; 1990 ; Acta Radiologica Volume 31 ; 31 ; acrc ; >
+        au < exists ; exists ; 1991 ; Acta Radiologica Volume 32 ; 32 ; acrc ; >
+        au < exists ; exists ; 1992 ; Acta Radiologica Volume 33 ; 33 ; acrc ; >
+        au < exists ; exists ; 1993 ; Acta Radiologica Volume 34 ; 34 ; acrc ; >
+        au < exists ; exists ; 1994 ; Acta Radiologica Volume 35 ; 35 ; acrc ; >
+        au < exists ; exists ; 1995 ; Acta Radiologica Volume 36 ; 36 ; acrc ; >
+        au < exists ; exists ; 1996 ; Acta Radiologica Volume 37 ; 37 ; acrc ; >
+        au < exists ; exists ; 1997 ; Acta Radiologica Volume 38 ; 38 ; acrc ; >
+        au < exists ; exists ; 1998 ; Acta Radiologica Volume 39 ; 39 ; acrc ; >
+        au < exists ; exists ; 1999 ; Acta Radiologica Volume 40 ; 40 ; acrc ; >
+        au < exists ; exists ; 2000 ; Acta Radiologica Volume 41 ; 41 ; acrc ; >
+        au < exists ; exists ; 2001 ; Acta Radiologica Volume 42 ; 42 ; acrc ; >
+        au < exists ; exists ; 2002 ; Acta Radiologica Volume 43 ; 43 ; acrc ; >
+        au < exists ; exists ; 2003 ; Acta Radiologica Volume 44 ; 44 ; acrc ; >
+        au < exists ; exists ; 2004 ; Acta Radiologica Volume 45 ; 45 ; acrc ; >
+        au < exists ; exists ; 2005 ; Acta Radiologica Volume 46 ; 46 ; acrc ; >
+        au < exists ; exists ; 2006 ; Acta Radiologica Volume 47 ; 47 ; acrc ; >
+        au < exists ; exists ; 2007 ; Acta Radiologica Volume 48 ; 48 ; acrc ; >
+        au < doNotProcess ; doNotProcess ; 2008 ; Acta Radiologica Volume 49 ; 49 ; acrc ; >
+        au < doNotProcess ; doNotProcess ; 2009 ; Acta Radiologica Volume 50 ; 50 ; acrc ; >
+        au < doNotProcess ; doNotProcess ; 2010 ; Acta Radiologica Volume 51 ; 51 ; acrc ; >
+        au < doNotProcess ; doNotProcess ; 2011 ; Acta Radiologica Volume 52 ; 52 ; acrc ; >
+        au < doNotProcess ; doNotProcess ; 2012 ; Acta Radiologica Volume 53 ; 53 ; acrc ; >
+        au < doNotProcess ; doNotProcess ; 2013 ; Acta Radiologica Volume 54 ; 54 ; acrc ; >
+        au < doNotProcess ; doNotProcess ; 2014 ; Acta Radiologica Volume 55 ; 55 ; acrc ; >
+        au < doNotProcess ; doNotProcess ; 2015 ; Acta Radiologica Volume 56 ; 56 ; acrc ; >
+        au < superseded ; exists ; 2016 ; Acta Radiologica Volume 57 [superseded] ; 57 ; acra ; >
+        au < exists ; exists ; 2016 ; Acta Radiologica Volume 57 ; 57 ; acrc ; >
+        au < exists ; exists ; 2017 ; Acta Radiologica Volume 58 ; 58 ; acrc ; >
+        au < exists ; exists ; 2018 ; Acta Radiologica Volume 59 ; 59 ; acrc ; >
 
     }
 
@@ -46382,8 +46381,7 @@
         au < doNotProcess ; doNotProcess ; 2014 ; Clinical Risk Volume 20 ; 20 ; crib ; >
         au < doNotProcess ; doNotProcess ; 2015 ; Clinical Risk Volume 21 ; 21 ; crib ; >
         au < finished ; crawling ; 2016 ; Clinical Risk Volume 22 ; 22 ; crib ; reingest4.clockss.org:8082 >
-        au < expected ; exists ; 2017 ; Clinical Risk Volume 23 ; 23 ; crib ; >
-        au < expected ; exists ; 2018 ; Clinical Risk Volume 24 ; 24 ; crib ; >
+        au < exists ; exists ; 2018 ; Clinical Risk Volume 23 ; 23 ; cric ; >
 
     }
 
@@ -47780,8 +47778,6 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Comprehensive Psychology Volume 3 ; 3 ; copa ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Comprehensive Psychology Volume 4 ; 4 ; copa ; >
     au < finished ; crawling ; 2016 ; Comprehensive Psychology Volume 5 ; 5 ; copa ; reingest1.clockss.org:8082 >
-    au < expected ; exists ; 2017 ; Comprehensive Psychology Volume 6 ; 6 ; copa ; >
-    au < expected ; exists ; 2018 ; Comprehensive Psychology Volume 7 ; 7 ; copa ; >
 
   }
 
@@ -47916,10 +47912,8 @@
     au < frozen ; exists ; 2016 ; Psychological Reports Volume 118 ; 118 ; prxa ; >
     au < frozen ; exists ; 2016 ; Psychological Reports Volume 119 ; 119 ; prxa ; >
     au < deepCrawl ; exists ; 2017 ; Psychological Reports Volume 120 ; 120 ; prxa ; >
-    au < frozen ; exists ; 2017 ; Psychological Reports Volume 121 ; 121 ; prxa ; >
+    au < crawling ; exists ; 2018 ; Psychological Reports Volume 121 ; 121 ; prxa ; >
     
-    au < expected ; exists ; 2018 ; Psychological Reports Volume 122 ; 122 ; prxa ; >
-    au < expected ; exists ; 2018 ; Psychological Reports Volume 123 ; 123 ; prxa ; >
   }
 
   {
@@ -48057,9 +48051,7 @@
     au < frozen ; exists ; 2016 ; Perceptual and Motor Skills Volume 122 ; 122 ; pmsb ; >
     au < frozen ; exists ; 2016 ; Perceptual and Motor Skills Volume 123 ; 123 ; pmsb ; >
     au < deepCrawl ; exists ; 2017 ; Perceptual and Motor Skills Volume 124 ; 124 ; pmsb ; >
-    au < frozen ; exists ; 2017 ; Perceptual and Motor Skills Volume 125 ; 125 ; pmsb ; >
-    au < expected ; exists ; 2018 ; Perceptual and Motor Skills Volume 126 ; 126 ; pmsb ; >
-    au < expected ; exists ; 2018 ; Perceptual and Motor Skills Volume 127 ; 127 ; pmsb ; >
+    au < crawling ; exists ; 2018 ; Perceptual and Motor Skills Volume 125 ; 125 ; pmsb ; >
 
   }
 

@@ -1262,6 +1262,7 @@ The target you have selected requires compiling under JDK 1.7.
           <include name="**/*.xml"/>   <!-- Definable plugins -->
           <include name="**/*.dat"/>
           <include name="**/*.dat.gz"/>   <!-- e.g. Muse URL normalizer mapping -->
+          <include name="**/seed_urls.txt"/>   <!-- preset a list of crawlseed urls -->
        </fileset>
        <fileset dir="${plugins.externals}" erroronmissingdir="false"> <!-- Plugin externals -->
           <include name="**/*.txt"/>
