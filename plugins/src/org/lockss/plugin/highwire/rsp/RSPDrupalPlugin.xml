@@ -14,7 +14,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>14</string>
+    <string>15</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -44,7 +44,7 @@
 <!--  may move this up to parent, for now test locally - don't extract from XML ... SAX parse error on suppl -->  
   <entry>
     <string>application/xml_link_extractor_factory</string>
-    <org.lockss.util.Default />
+    <org.lockss.util.None />
   </entry>
    <entry>
     <string>au_name</string>
