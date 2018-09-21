@@ -1,0 +1,76 @@
+Go to www.swjpcc.com
+Find and download all topic spreadsheets, volume spreadsheets.
+There will be link duplication among them but to get a superset you need them all.
+Note that they get added to so you need to download the latest copy of these plus any new ones that might have been added.
+
+On Sep 19, 2018 these were:
+
+Correspondence+11-29-16.xlsx
+Critical+Care+8-16-18.xlsx
+Critical+Care+Diagnosis+and+Gamuts+8-2-18.xlsx
+Editorials+9-3-18.xlsx
+General+Medicine+Postings+2-27-18.xls
+General+Medicine+Postings+2-9-16.xls
+Imaging+9-2-18.xlsx
+Imaging+Diagnosis+and+Gamuts+8-6-18.xlsx
+Medical+Image+of+the+Month+9-2-18.xlsx
+News+6-16-18.xlsx
+Proceedings+7-26-18.xlsx
+Pulmonary+9-1-18.xlsx
+Pulmonary+Diagnosis+and+Gamuts+9-1-18.xlsx
+Sleep+2-5-18.xls
+Ultrasounds+8-16-18.xls
+
+Volume+1+9-7-11.xls
+Volume+10.xls
+Volume+11.xls
+Volume+12.xls
+Volume+13.xls
+Volume+14.xlsx
+Volume+15.xls
+Volume+16.xlsx
+Volume+2+12-27-11.xls
+Volume+3.xlsx
+Volume+4.xlsx
+Volume+5.xls
+Volume+6.xls
+Volume+7.xls
+Volume+8.xls
+Volume+9.xls
+
+Most+Recent+Volume+6-28-17.xlsx
+Most+Recent+Volume+9-3-18.xlsx
+
+
+Open each spreadsheet and save as Excel 2014 XML format.
+Then pull out the links from the XML version of the spreadsheets in to one big sorted, uniq'd file.
+
+egrep -o 'https?://[^"]+' *.xml | egrep -o 'https?://[^"]+' | sort -u > latest.urls
+
+Then cat this list and the previous list to catch any that are no longer listed and to add in the http://www.swjpcc.com top url.
+cat seed_urls.txt latest.urls | sort -u > <date>_seed_urls.txt
+
+Check to pull out any not swjpcc base_host urls
+egrep -o "^https?://[^/]+" <date>_seed_urls.txt | sort | uniq -c
+
+Find and remove any  "w3.org" or any other urls that aren't on the base host or the two cdn hosts
+https?://www.swjpcc.com
+https?://static1.1.sqspcdn.com
+https?://ereece.squarespace.com
+
+
+404 list
+If these have crept back in, remove:
+http://www.swjpcc.com/critical-care/2013/11/2/november-2013-pulmonary-case-of-the-month-a-series-of-unfort.html
+any urls with 
+http://www.swjpcc.com/editorial/ <--note singular
+the use of plural "editorials" are the correct ones.
+the correct urls, which are otherwise included are - these ones are duplicates or incorrect
+
+or the crawl will fail because they're in the start_url list
+
+
+
+Now copy <date>_seed_urls.txt seed_urls.txt and check in. 
+NOTE download date and final count of seed_urls in the check-in comment
+
