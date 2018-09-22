@@ -61,10 +61,10 @@ import org.lockss.util.Logger;
 public class SwjpccUrlConsumerFactory implements UrlConsumerFactory {
   private static final Logger log = Logger.getLogger(SwjpccUrlConsumerFactory.class);
   
-  // Looking for PDF pattern in the original URL
-  protected static final String ORIG_STRING = "/storage/(manuscripts|pdf-version-of-articles)/.+/[^/]+[.](pdf|jpe?g)$";
-  // Probably shouldn't limit this to just jpeg and pdf - need to rework after viewing collection
-  protected static final String DEST_STRING = "/static/.+/[^/]+[.](pdf|jpe?g)(\\?token=[^/?]+)?$";
+  // This could be many suffix - pdf, image, exel, etc - require that it end with a dot-suffix
+  protected static final String ORIG_STRING = "/storage/(manuscripts|pdf-version-of-articles)/.+/[^/]+[.][a-z]+$";
+  // Will have the same filename-dot-suffix but probably not worth doing an actual comparison
+  protected static final String DEST_STRING = "/static/f/[0-9]+/[^/]+[.][a-z]+(\\?token=[^/?]+)?$";
   
   protected static final Pattern origPat = Pattern.compile(ORIG_STRING, Pattern.CASE_INSENSITIVE);
   protected static final Pattern destPat = Pattern.compile(DEST_STRING, Pattern.CASE_INSENSITIVE);
