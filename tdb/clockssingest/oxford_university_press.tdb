@@ -3615,7 +3615,7 @@
     au < manifest ; exists ; 2015 ; 2015 ; Current Zoology Volume 61 ; 61 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; Current Zoology Volume 62 ; 62 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; Current Zoology Volume 63 ; 63 ;  >
-    au < testing ; exists ; 2018 ; 2018 ; Current Zoology Volume 64 ; 64 ;  >
+    au < ready ; exists ; 2018 ; 2018 ; Current Zoology Volume 64 ; 64 ;  >
 
   }
 
@@ -3780,7 +3780,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Diplomatic History Volume 39 ; 39 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; Diplomatic History Volume 40 ; 40 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; Diplomatic History Volume 41 ; 41 ;  >
-    au < testing ; exists ; 2018 ; 2018 ; Diplomatic History Volume 42 ; 42 ;  >
+    au < ready ; exists ; 2018 ; 2018 ; Diplomatic History Volume 42 ; 42 ;  >
 
   }
 
@@ -3824,7 +3824,7 @@
     au < manifest ; exists ; 2015 ; 2015 ; Diseases of the Esophagus Volume 28 ; 28 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; Diseases of the Esophagus Volume 29 ; 29 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; Diseases of the Esophagus Volume 30 ; 30 ;  >
-    au < testing ; exists ; 2018 ; 2018 ; Diseases of the Esophagus Volume 31 ; 31 ;  >
+    au < ready ; exists ; 2018 ; 2018 ; Diseases of the Esophagus Volume 31 ; 31 ;  >
 
   }
 
@@ -3959,7 +3959,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; EP Europace Volume 17 ; 17 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; EP Europace Volume 18 ; 18 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; EP Europace Volume 19 ; 19 ;  >
-    au < testing ; exists ; 2018 ; 2018 ; EP Europace Volume 20 ; 20 ;  >
+    au < ready ; exists ; 2018 ; 2018 ; EP Europace Volume 20 ; 20 ;  >
 
   }
 
@@ -5420,13 +5420,13 @@
     au < ready ; exists ; 2008 ; 2008 ; Forest Science Volume 54 ; 54 ;  >
     au < crawling ; exists ; 2009 ; 2009 ; Forest Science Volume 55 ; 55 ;  >
     au < testing ; exists ; 2010 ; 2010 ; Forest Science Volume 56 ; 56 ;  >
-    au < testing ; exists ; 2011 ; 2011 ; Forest Science Volume 57 ; 57 ;  >
+    au < ready ; exists ; 2011 ; 2011 ; Forest Science Volume 57 ; 57 ;  >
     au < crawling ; exists ; 2012 ; 2012 ; Forest Science Volume 58 ; 58 ;  >
-    au < testing ; exists ; 2013 ; 2013 ; Forest Science Volume 59 ; 59 ;  >
-    au < testing ; exists ; 2014 ; 2014 ; Forest Science Volume 60 ; 60 ;  >
+    au < ready ; exists ; 2013 ; 2013 ; Forest Science Volume 59 ; 59 ;  >
+    au < ready ; exists ; 2014 ; 2014 ; Forest Science Volume 60 ; 60 ;  >
     au < testing ; exists ; 2015 ; 2015 ; Forest Science Volume 61 ; 61 ;  >
     au < testing ; exists ; 2016 ; 2016 ; Forest Science Volume 62 ; 62 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; Forest Science Volume 63 ; 63 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; Forest Science Volume 63 ; 63 ;  >
     au < testing ; exists ; 2018 ; 2018 ; Forest Science Volume 64 ; 64 ;  >
 
   }
