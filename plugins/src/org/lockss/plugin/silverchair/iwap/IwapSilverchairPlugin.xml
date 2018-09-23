@@ -82,7 +82,6 @@
     <string>au_crawlrules</string>
     <list>
       <string>1,"^https?://((fonts|ajax)\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|cdn\.mathjax\.org|cdnjs\.cloudflare\.com)/"</string>
-<!-- 
       <!-- images/figures/supplemental have Expires that will always be 2147483647 and don't redirect - allow -->
       <string>1,"^https?://(%s|iwa\.silverchair-cdn\.com)/iwa/content_public/journal/[^?]+\?Expires=2147483647", url_host(base_url)</string>
       <!--  NOT CURRENTLY PDFs redirect through one-time with changing expiring that stores in canonical -->
