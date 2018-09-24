@@ -107,6 +107,7 @@
       issnl = 1947-9220
     >
     param[journal_issn] = 1947-9220
+    #Out of print
 
     au < manifest ; exists ; 2010 ; International Journal of Adaptive, Resilient and Autonomic Systems (IJARAS) Volume 1 ; 1 ; https://www.igi-global.com/ ; > 
     au < finished ; crawling ; 2011 ; International Journal of Adaptive, Resilient and Autonomic Systems (IJARAS) Volume 2 ; 2 ; http://www.igi-global.com/ ; > 
@@ -224,10 +225,9 @@
     au < finished ; crawling ; 2012 ; International Journal of Ambient Computing and Intelligence (IJACI) Volume 4 ; 4 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2013 ; International Journal of Ambient Computing and Intelligence (IJACI) Volume 5 ; 5 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2014 ; International Journal of Ambient Computing and Intelligence (IJACI) Volume 6 ; 6 ; http://www.igi-global.com/ ; reingest1.clockss.org:8082 > 
-    au < frozen ; exists ; 2015 ; International Journal of Ambient Computing and Intelligence (IJACI) Volume 7 ; 7 ; http://www.igi-global.com/ ; > 
-    au < frozen ; exists ; 2016 ; International Journal of Ambient Computing and Intelligence (IJACI) Volume 8 ; 8 ; http://www.igi-global.com/ ; > 
-    au < deepCrawl ; exists ; 2017 ; International Journal of Ambient Computing and Intelligence (IJACI) Volume 9 ; 9 ; http://www.igi-global.com/ ; > 
-    au < expected ; exists ; 2018 ; International Journal of Ambient Computing and Intelligence (IJACI) Volume 10 ; 10 ; https://www.igi-global.com/ ; > 
+    au < frozen ; exists ; 2016 ; International Journal of Ambient Computing and Intelligence (IJACI) Volume 7 ; 7 ; http://www.igi-global.com/ ; >
+    au < frozen ; exists ; 2017 ; International Journal of Ambient Computing and Intelligence (IJACI) Volume 8 ; 8 ; http://www.igi-global.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; International Journal of Ambient Computing and Intelligence (IJACI) Volume 9 ; 9 ; http://www.igi-global.com/ ; >
 
   }
 
@@ -370,10 +370,9 @@
     au < finished ; crawling ; 2012 ; International Journal of Art, Culture and Design Technologies (IJACDT) Volume 2 ; 2 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2013 ; International Journal of Art, Culture and Design Technologies (IJACDT) Volume 3 ; 3 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2014 ; International Journal of Art, Culture and Design Technologies (IJACDT) Volume 4 ; 4 ; http://www.igi-global.com/ ; reingest4.clockss.org:8082 > 
-    au < finished ; finished ; 2015 ; International Journal of Art, Culture and Design Technologies (IJACDT) Volume 5 ; 5 ; http://www.igi-global.com/ ; reingest5.clockss.org:8082 > 
-    au < finished ; crawling ; 2016 ; International Journal of Art, Culture and Design Technologies (IJACDT) Volume 6 ; 6 ; http://www.igi-global.com/ ; reingest1.clockss.org:8082 > 
-    au < frozen ; exists ; 2017 ; International Journal of Art, Culture and Design Technologies (IJACDT) Volume 7 ; 7 ; https://www.igi-global.com/ ; > 
-    au < expected ; exists ; 2018 ; International Journal of Art, Culture and Design Technologies (IJACDT) Volume 8 ; 8 ; https://www.igi-global.com/ ; > 
+    au < finished ; finished ; 2016 ; International Journal of Art, Culture and Design Technologies (IJACDT) Volume 5 ; 5 ; http://www.igi-global.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; International Journal of Art, Culture and Design Technologies (IJACDT) Volume 6 ; 6 ; http://www.igi-global.com/ ; reingest1.clockss.org:8082 >
+    au < frozen ; exists ; 2018 ; International Journal of Art, Culture and Design Technologies (IJACDT) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -2023,6 +2022,7 @@
       issnl = 1947-8429
     >
     param[journal_issn] = 1947-8429
+    #Out of print
 
     au < frozen ; exists ; 2010 ; International Journal of Knowledge Society Research (IJKSR) Volume 1 ; 1 ; http://www.igi-global.com/ ; > 
     au < finished ; crawling ; 2011 ; International Journal of Knowledge Society Research (IJKSR) Volume 2 ; 2 ; http://www.igi-global.com/ ; > 
@@ -2032,7 +2032,6 @@
     au < finished ; finished ; 2015 ; International Journal of Knowledge Society Research (IJKSR) Volume 6 ; 6 ; http://www.igi-global.com/ ; reingest5.clockss.org:8082 > 
     au < deepCrawl ; exists ; 2016 ; International Journal of Knowledge Society Research (IJKSR) Volume 7 ; 7 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2017 ; International Journal of Knowledge Society Research (IJKSR) Volume 8 ; 8 ; http://www.igi-global.com/ ; > 
-    au < expected ; exists ; 2018 ; International Journal of Knowledge Society Research (IJKSR) Volume 9 ; 9 ; https://www.igi-global.com/ ; > 
 
   }
 
@@ -2138,10 +2137,9 @@
     au < finished ; crawling ; 2012 ; International Journal of Mobile Computing and Multimedia Communications (IJMCMC) Volume 4 ; 4 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2013 ; International Journal of Mobile Computing and Multimedia Communications (IJMCMC) Volume 5 ; 5 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2014 ; International Journal of Mobile Computing and Multimedia Communications (IJMCMC) Volume 6 ; 6 ; http://www.igi-global.com/ ; > 
-    au < finished ; finished ; 2015 ; International Journal of Mobile Computing and Multimedia Communications (IJMCMC) Volume 7 ; 7 ; http://www.igi-global.com/ ; reingest2.clockss.org:8085 > 
-    au < frozen ; exists ; 2016 ; International Journal of Mobile Computing and Multimedia Communications (IJMCMC) Volume 8 ; 8 ; http://www.igi-global.com/ ; > 
-    au < frozen ; exists ; 2017 ; International Journal of Mobile Computing and Multimedia Communications (IJMCMC) Volume 9 ; 9 ; https://www.igi-global.com/ ; > 
-    au < expected ; exists ; 2018 ; International Journal of Mobile Computing and Multimedia Communications (IJMCMC) Volume 10 ; 10 ; https://www.igi-global.com/ ; > 
+    au < finished ; finished ; 2016 ; International Journal of Mobile Computing and Multimedia Communications (IJMCMC) Volume 7 ; 7 ; http://www.igi-global.com/ ; reingest2.clockss.org:8085 >
+    au < frozen ; exists ; 2017 ; International Journal of Mobile Computing and Multimedia Communications (IJMCMC) Volume 8 ; 8 ; http://www.igi-global.com/ ; >
+    au < frozen ; exists ; 2018 ; International Journal of Mobile Computing and Multimedia Communications (IJMCMC) Volume 9 ; 9 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -2183,8 +2181,8 @@
     au < finished ; finished ; 2015 ; International Journal of Monitoring and Surveillance Technologies Research (IJMSTR) Volume 3 ; 3 ; http://www.igi-global.com/ ; reingest1.clockss.org:8082 > 
     au < deepCrawl ; exists ; 2016 ; International Journal of Monitoring and Surveillance Technologies Research (IJMSTR) Volume 4 ; 4 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2017 ; International Journal of Monitoring and Surveillance Technologies Research (IJMSTR) Volume 5 ; 5 ; http://www.igi-global.com/ ; > 
-    
-    au < expected ; exists ; 2018 ; International Journal of Monitoring and Surveillance Technologies Research (IJMSTR) Volume 6 ; 6 ; https://www.igi-global.com/ ; > 
+    au < expected ; exists ; 2018 ; International Journal of Monitoring and Surveillance Technologies Research (IJMSTR) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
+
   }
 
   {
