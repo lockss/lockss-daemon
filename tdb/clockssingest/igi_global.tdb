@@ -776,6 +776,7 @@
       issnl = 2155-6903
     >
     param[journal_issn] = 2155-6903
+    #Out of print
 
     au < finished ; crawling ; 2011 ; International Journal of Cyber Ethics in Education (IJCEE) Volume 1 ; 1 ; http://www.igi-global.com/ ; > 
     au < finished ; crawling ; 2012 ; International Journal of Cyber Ethics in Education (IJCEE) Volume 2 ; 2 ; http://www.igi-global.com/ ; > 
@@ -2088,13 +2089,12 @@
     param[journal_issn] = 2156-1737
 
     au < finished ; crawling ; 2011 ; International Journal of Measurement Technologies and Instrumentation Engineering (IJMTIE) Volume 1 ; 1 ; http://www.igi-global.com/ ; > 
-    au < finished ; crawling ; 2012 ; International Journal of Measurement Technologies and Instrumentation Engineering (IJMTIE) Volume 2 ; 2 ; http://www.igi-global.com/ ; > 
+    au < finished ; crawling ; 2012 ; International Journal of Measurement Technologies and Instrumentation Engineering (IJMTIE) Volume 2 ; 2 ; http://www.igi-global.com/ ; >
     au < deepCrawl ; exists ; 2013 ; International Journal of Measurement Technologies and Instrumentation Engineering (IJMTIE) Volume 3 ; 3 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2014 ; International Journal of Measurement Technologies and Instrumentation Engineering (IJMTIE) Volume 4 ; 4 ; http://www.igi-global.com/ ; reingest2.clockss.org:8085 > 
     au < finished ; crawling ; 2015 ; International Journal of Measurement Technologies and Instrumentation Engineering (IJMTIE) Volume 5 ; 5 ; http://www.igi-global.com/ ; reingest2.clockss.org:8085 > 
-    au < frozen ; exists ; 2016 ; International Journal of Measurement Technologies and Instrumentation Engineering (IJMTIE) Volume 6 ; 6 ; http://www.igi-global.com/ ; > 
-    au < exists ; exists ; 2017 ; International Journal of Measurement Technologies and Instrumentation Engineering (IJMTIE) Volume 7 ; 7 ; https://www.igi-global.com/ ; > 
-    au < exists ; exists ; 2018 ; International Journal of Measurement Technologies and Instrumentation Engineering (IJMTIE) Volume 8 ; 8 ; https://www.igi-global.com/ ; > 
+    au < frozen ; exists ; 2017 ; International Journal of Measurement Technologies and Instrumentation Engineering (IJMTIE) Volume 6 ; 6 ; http://www.igi-global.com/ ; >
+    au < expected ; exists ; 2018 ; International Journal of Measurement Technologies and Instrumentation Engineering (IJMTIE) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -2560,6 +2560,7 @@
       issnl = 2155-5028
     >
     param[journal_issn] = 2155-5028
+    #Out of print
 
     au < finished ; crawling ; 2011 ; International Journal of Signs and Semiotic Systems (IJSSS) Volume 1 ; 1 ; http://www.igi-global.com/ ; >
     au < finished ; crawling ; 2012 ; International Journal of Signs and Semiotic Systems (IJSSS) Volume 2 ; 2 ; http://www.igi-global.com/ ; >
@@ -2870,6 +2871,7 @@
       issnl = 2160-9586
     >
     param[journal_issn] = 2160-9586
+    #Out of print
 
     au < finished ; crawling ; 2012 ; International Journal of Systems Biology and Biomedical Technologies (IJSBBT) Volume 1 ; 1 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2013 ; International Journal of Systems Biology and Biomedical Technologies (IJSBBT) Volume 2 ; 2 ; http://www.igi-global.com/ ; > 
