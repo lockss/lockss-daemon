@@ -3593,7 +3593,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Current Legal Problems Volume 67 ; 67 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Current Legal Problems Volume 68 ; 68 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; Current Legal Problems Volume 69 ; 69 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; Current Legal Problems Volume 70 ; 70 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; Current Legal Problems Volume 70 ; 70 ;  >
     au < expected ; exists ; 2018 ; 2018 ; Current Legal Problems Volume 71 ; 71 ;  >
 
   }
@@ -3923,7 +3923,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; ELT Journal Volume 69 ; 69 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; ELT Journal Volume 70 ; 70 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; ELT Journal Volume 71 ; 71 ;  >
-    au < testing ; exists ; 2018 ; 2018 ; ELT Journal Volume 72 ; 72 ;  >
+    au < ready ; exists ; 2018 ; 2018 ; ELT Journal Volume 72 ; 72 ;  >
 
   }
 
@@ -4040,7 +4040,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Early Music Volume 43 ; 43 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; Early Music Volume 44 ; 44 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; Early Music Volume 45 ; 45 ;  >
-    au < testing ; exists ; 2018 ; 2018 ; Early Music Volume 46 ; 46 ;  >
+    au < ready ; exists ; 2018 ; 2018 ; Early Music Volume 46 ; 46 ;  >
 
   }
 
@@ -5056,8 +5056,8 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; FEMS Microbiology Ecology Volume 87-90 ; 87-90 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; FEMS Microbiology Ecology Volume 91 ; 91 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; FEMS Microbiology Ecology Volume 92 ; 92 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; FEMS Microbiology Ecology Volume 93 ; 93 ;  >
-    au < testing ; exists ; 2018 ; 2018 ; FEMS Microbiology Ecology Volume 94 ; 94 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; FEMS Microbiology Ecology Volume 93 ; 93 ;  >
+    au < ready ; exists ; 2018 ; 2018 ; FEMS Microbiology Ecology Volume 94 ; 94 ;  >
 
   }
 
@@ -5117,7 +5117,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; FEMS Microbiology Letters Volume 242-253 ; 242-253 ;  >
     au < doNotProcess ; exists ; 2006 ; 2006 ; FEMS Microbiology Letters Volume 254-265 ; 254-265 ;  >
     au < doNotProcess ; exists ; 2007 ; 2007 ; FEMS Microbiology Letters Volume 266-277 ; 266-277 ;  >
-    au < testing ; exists ; 2008 ; 2008 ; FEMS Microbiology Letters Volume 278-289 ; 278-289 ;  >
+    au < ready ; exists ; 2008 ; 2008 ; FEMS Microbiology Letters Volume 278-289 ; 278-289 ;  >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; FEMS Microbiology Letters Volume 290-301 ; 290-301 ;  >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; FEMS Microbiology Letters Volume 302-313 ; 302-313 ;  >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; FEMS Microbiology Letters Volume 314-325 ; 314-325 ;  >
@@ -5167,7 +5167,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; FEMS Microbiology Reviews Volume 29 ; 29 ;  >
     au < doNotProcess ; exists ; 2006 ; 2006 ; FEMS Microbiology Reviews Volume 30 ; 30 ;  >
     au < doNotProcess ; exists ; 2007 ; 2007 ; FEMS Microbiology Reviews Volume 31 ; 31 ;  >
-    au < testing ; exists ; 2008 ; 2008 ; FEMS Microbiology Reviews Volume 32 ; 32 ;  >
+    au < ready ; exists ; 2008 ; 2008 ; FEMS Microbiology Reviews Volume 32 ; 32 ;  >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; FEMS Microbiology Reviews Volume 33 ; 33 ;  >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; FEMS Microbiology Reviews Volume 34 ; 34 ;  >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; FEMS Microbiology Reviews Volume 35 ; 35 ;  >
@@ -5176,7 +5176,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; FEMS Microbiology Reviews Volume 38 ; 38 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; FEMS Microbiology Reviews Volume 39 ; 39 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; FEMS Microbiology Reviews Volume 40 ; 40 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; FEMS Microbiology Reviews Volume 41 ; 41 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; FEMS Microbiology Reviews Volume 41 ; 41 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; FEMS Microbiology Reviews Volume 42 ; 42 ;  >
 
   }
@@ -5202,7 +5202,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; FEMS Yeast Research Volume 13 ; 13 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; FEMS Yeast Research Volume 14 ; 14 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; FEMS Yeast Research Volume 15 ; 15 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; FEMS Yeast Research Volume 16 ; 16 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; FEMS Yeast Research Volume 16 ; 16 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; FEMS Yeast Research Volume 17 ; 17 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; FEMS Yeast Research Volume 18 ; 18 ;  >
 
@@ -5251,8 +5251,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Family Practice Volume 30 ; 30 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Family Practice Volume 31 ; 31 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Family Practice Volume 32 ; 32 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; Family Practice Volume 33 ; 33 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; Family Practice Volume 34 ; 34 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; Family Practice Volume 33 ; 33 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; Family Practice Volume 34 ; 34 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; Family Practice Volume 35 ; 35 ;  >
 
   }
@@ -5419,15 +5419,15 @@
     au < exists ; exists ; 2007 ; 2007 ; Forest Science Volume 53 ; 53 ;  >
     au < crawling ; exists ; 2008 ; 2008 ; Forest Science Volume 54 ; 54 ;  >
     au < crawling ; exists ; 2009 ; 2009 ; Forest Science Volume 55 ; 55 ;  >
-    au < testing ; exists ; 2010 ; 2010 ; Forest Science Volume 56 ; 56 ;  >
+    au < ready ; exists ; 2010 ; 2010 ; Forest Science Volume 56 ; 56 ;  >
     au < crawling ; exists ; 2011 ; 2011 ; Forest Science Volume 57 ; 57 ;  >
     au < crawling ; exists ; 2012 ; 2012 ; Forest Science Volume 58 ; 58 ;  >
     au < crawling ; exists ; 2013 ; 2013 ; Forest Science Volume 59 ; 59 ;  >
     au < crawling ; exists ; 2014 ; 2014 ; Forest Science Volume 60 ; 60 ;  >
-    au < testing ; exists ; 2015 ; 2015 ; Forest Science Volume 61 ; 61 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; Forest Science Volume 62 ; 62 ;  >
+    au < ready ; exists ; 2015 ; 2015 ; Forest Science Volume 61 ; 61 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; Forest Science Volume 62 ; 62 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; Forest Science Volume 63 ; 63 ;  >
-    au < testing ; exists ; 2018 ; 2018 ; Forest Science Volume 64 ; 64 ;  >
+    au < ready ; exists ; 2018 ; 2018 ; Forest Science Volume 64 ; 64 ;  >
 
   }
 
@@ -5530,8 +5530,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Forestry: An International Journal of Forest Research Volume 86 ; 86 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Forestry: An International Journal of Forest Research Volume 87 ; 87 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Forestry: An International Journal of Forest Research Volume 88 ; 88 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; Forestry: An International Journal of Forest Research Volume 89 ; 89 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; Forestry: An International Journal of Forest Research Volume 90 ; 90 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; Forestry: An International Journal of Forest Research Volume 89 ; 89 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; Forestry: An International Journal of Forest Research Volume 90 ; 90 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; Forestry: An International Journal of Forest Research Volume 91 ; 91 ;  >
 
   }
@@ -6375,7 +6375,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Holocaust and Genocide Studies Volume 28 ; 28 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Holocaust and Genocide Studies Volume 29 ; 29 ;  >
     au < testing ; exists ; 2016 ; 2016 ; Holocaust and Genocide Studies Volume 30 ; 30 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; Holocaust and Genocide Studies Volume 31 ; 31 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; Holocaust and Genocide Studies Volume 31 ; 31 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; Holocaust and Genocide Studies Volume 32 ; 32 ;  >
 
   }
@@ -7130,7 +7130,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Industrial and Corporate Change Volume 22 ; 22 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Industrial and Corporate Change Volume 23 ; 23 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Industrial and Corporate Change Volume 24 ; 24 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; Industrial and Corporate Change Volume 25 ; 25 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; Industrial and Corporate Change Volume 25 ; 25 ;  >
     au < testing ; exists ; 2017 ; 2017 ; Industrial and Corporate Change Volume 26 ; 26 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; Industrial and Corporate Change Volume 27 ; 27 ;  >
 
