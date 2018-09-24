@@ -4832,7 +4832,7 @@
       au < deepCrawl ; exists ; 2017 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 134 ; 134 ; bmsa ; >
       au < deepCrawl ; exists ; 2017 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 135 ; 135 ; bmsa ; >
       au < deepCrawl ; exists ; 2017 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 136 ; 136 ; bmsa ; >
-      au < exists ; exists ; 2018 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 137-138 ; 137-138 ; bmsa ; >
+      au < manifest ; exists ; 2018 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 137-138 ; 137-138 ; bmsa ; >
       au < crawling ; exists ; 2018 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 139 ; 139 ; bmsa ; >
       au < exists ; exists ; 2018 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 140 ; 140 ; bmsa ; >
 
@@ -7356,7 +7356,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 20 ; 20 ; chpc ; >
       au < frozen ; exists ; 2016 ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 21 ; 21 ; chpc ; >
       au < deepCrawl ; exists ; 2017 ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 22 ; 22 ; chpc ; >
-      au < exists ; exists ; 2018 ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 23 ; 23 ; chpd ; >
+      au < manifest ; exists ; 2018 ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 23 ; 23 ; chpd ; >
 
     }
 
@@ -10751,8 +10751,8 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Environment and Planning B: Planning and Design Volume 41 ; 41 ; epba ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Environment and Planning B: Planning and Design Volume 42 ; 42 ; epba ; >
       au < frozen ; exists ; 2016 ; Environment and Planning B: Planning and Design Volume 43 ; 43 ; epba ; >
-      au < exists ; exists ; 2017 ; Environment and Planning B: Planning and Design Volume 44 ; 44 ; epbb ; >
-      au < exists ; exists ; 2018 ; Environment and Planning B: Planning and Design Volume 45 ; 45 ; epbb ; >
+      au < manifest ; exists ; 2017 ; Environment and Planning B: Planning and Design Volume 44 ; 44 ; epbb ; >
+      au < manifest ; exists ; 2018 ; Environment and Planning B: Planning and Design Volume 45 ; 45 ; epbb ; >
 
   }
 
@@ -10779,8 +10779,8 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Environment and Planning C: Government and Policy Volume 32 ; 32 ; epca ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Environment and Planning C: Government and Policy Volume 33 ; 33 ; epca ; >
       au < frozen ; exists ; 2016 ; Environment and Planning C: Government and Policy Volume 34 ; 34 ; epca ; >
-      au < exists ; exists ; 2017 ; Environment and Planning C: Government and Policy Volume 35 ; 35 ; epcb ; >
-      au < exists ; exists ; 2018 ; Environment and Planning C: Government and Policy Volume 36 ; 36 ; epcb ; >
+      au < manifest ; exists ; 2017 ; Environment and Planning C: Government and Policy Volume 35 ; 35 ; epcb ; >
+      au < manifest ; exists ; 2018 ; Environment and Planning C: Government and Policy Volume 36 ; 36 ; epcb ; >
 
   }
 
@@ -12099,7 +12099,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Evaluation Review Volume 39 ; 39 ; erxb ; >
       au < frozen ; exists ; 2016 ; Evaluation Review Volume 40 ; 40 ; erxb ; >
       au < deepCrawl ; exists ; 2017 ; Evaluation Review Volume 41 ; 41 ; erxb ; >
-      au < expected ; exists ; 2018 ; Evaluation Review Volume 42 ; 42 ; erxb ; >
+      au < manifest ; exists ; 2018 ; Evaluation Review Volume 42 ; 42 ; erxb ; >
 
     }
 
@@ -12303,7 +12303,7 @@
       au < doNotProcess ; doNotProcess ; 2015-2016 ; The Expository Times Volume 127 ; 127 ; exta ; >
       au < deepCrawl ; exists ; 2016-2017 ; The Expository Times Volume 128 ; 128 ; exta ; >
       au < crawling ; exists ; 2017-2018 ; The Expository Times Volume 129 ; 129 ; exta ; >
-      au < expected ; exists ; 2018-2019 ; The Expository Times Volume 130 ; 130 ; exta ; >
+      au < manifest ; exists ; 2018-2019 ; The Expository Times Volume 130 ; 130 ; exta ; >
 
   }
 
@@ -12785,19 +12785,19 @@
     
     {
 
-      au < exists ; exists ; 1995 ; Food Science and Technology International Volume 1 ; 1 ; fstc ; >
-      au < exists ; exists ; 1996 ; Food Science and Technology International Volume 2 ; 2 ; fstc ; >
-      au < exists ; exists ; 1997 ; Food Science and Technology International Volume 3 ; 3 ; fstc ; >
-      au < exists ; exists ; 1998 ; Food Science and Technology International Volume 4 ; 4 ; fstc ; >
-      au < exists ; exists ; 1999 ; Food Science and Technology International Volume 5 ; 5 ; fstc ; >
-      au < exists ; exists ; 2000 ; Food Science and Technology International Volume 6 ; 6 ; fstc ; >
-      au < exists ; exists ; 2001 ; Food Science and Technology International Volume 7 ; 7 ; fstc ; >
-      au < exists ; exists ; 2002 ; Food Science and Technology International Volume 8 ; 8 ; fstc ; >
-      au < exists ; exists ; 2003 ; Food Science and Technology International Volume 9 ; 9 ; fstc ; >
-      au < exists ; exists ; 2004 ; Food Science and Technology International Volume 10 ; 10 ; fstc ; >
-      au < exists ; exists ; 2005 ; Food Science and Technology International Volume 11 ; 11 ; fstc ; >
-      au < exists ; exists ; 2006 ; Food Science and Technology International Volume 12 ; 12 ; fstc ; >
-      au < exists ; exists ; 2007 ; Food Science and Technology International Volume 13 ; 13 ; fstc ; >
+      au < manifest ; exists ; 1995 ; Food Science and Technology International Volume 1 ; 1 ; fstc ; >
+      au < manifest ; exists ; 1996 ; Food Science and Technology International Volume 2 ; 2 ; fstc ; >
+      au < manifest ; exists ; 1997 ; Food Science and Technology International Volume 3 ; 3 ; fstc ; >
+      au < manifest ; exists ; 1998 ; Food Science and Technology International Volume 4 ; 4 ; fstc ; >
+      au < manifest ; exists ; 1999 ; Food Science and Technology International Volume 5 ; 5 ; fstc ; >
+      au < manifest ; exists ; 2000 ; Food Science and Technology International Volume 6 ; 6 ; fstc ; >
+      au < manifest ; exists ; 2001 ; Food Science and Technology International Volume 7 ; 7 ; fstc ; >
+      au < manifest ; exists ; 2002 ; Food Science and Technology International Volume 8 ; 8 ; fstc ; >
+      au < manifest ; exists ; 2003 ; Food Science and Technology International Volume 9 ; 9 ; fstc ; >
+      au < manifest ; exists ; 2004 ; Food Science and Technology International Volume 10 ; 10 ; fstc ; >
+      au < manifest ; exists ; 2005 ; Food Science and Technology International Volume 11 ; 11 ; fstc ; >
+      au < manifest ; exists ; 2006 ; Food Science and Technology International Volume 12 ; 12 ; fstc ; >
+      au < manifest ; exists ; 2007 ; Food Science and Technology International Volume 13 ; 13 ; fstc ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Food Science and Technology International Volume 14 ; 14 ; fstc ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Food Science and Technology International Volume 15 ; 15 ; fstc ; >
       au < doNotProcess ; doNotProcess ; 2010 ; Food Science and Technology International Volume 16 ; 16 ; fstc ; >
@@ -12807,9 +12807,9 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Food Science and Technology International Volume 20 ; 20 ; fstc ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Food Science and Technology International Volume 21 ; 21 ; fstc ; >
       au < superseded ; exists ; 2016 ; Food Science and Technology International Volume 22 [superseded] ; 22 ; fsta ; >
-      au < exists ; exists ; 2016 ; Food Science and Technology International Volume 22 ; 22 ; fstc ; >
-      au < exists ; exists ; 2017 ; Food Science and Technology International Volume 23 ; 23 ; fstc ; >
-      au < exists ; exists ; 2018 ; Food Science and Technology International Volume 24 ; 24 ; fstc ; >
+      au < manifest ; exists ; 2016 ; Food Science and Technology International Volume 22 ; 22 ; fstc ; >
+      au < manifest ; exists ; 2017 ; Food Science and Technology International Volume 23 ; 23 ; fstc ; >
+      au < manifest ; exists ; 2018 ; Food Science and Technology International Volume 24 ; 24 ; fstc ; >
 
     }
 
@@ -13067,7 +13067,7 @@
       au < doNotProcess ; doNotProcess ; 2015-2016 ; General Music Today Volume 29 ; 29 ; gmtb ; >
       au < deepCrawl ; exists ; 2016-2017 ; General Music Today Volume 30 ; 30 ; gmtb ; >
       au < crawling ; exists ; 2017-2018 ; General Music Today Volume 31 ; 31 ; gmtb ; >
-      au < expected ; exists ; 2018-2019 ; General Music Today Volume 32 ; 32 ; gmtb ; >
+      au < manifest ; exists ; 2018-2019 ; General Music Today Volume 32 ; 32 ; gmtb ; >
 
     }
 
@@ -13346,7 +13346,7 @@
       au < frozen ; exists ; 2015 ; Global & Regional Health Technology Assessment Volume 2 ; 2 ; grha ; >
       au < finished ; manifest ; 2016 ; Global & Regional Health Technology Assessment Volume 3 ; 3 ; grha ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2017 ; Global & Regional Health Technology Assessment Volume 4 ; 4 ; grha ; >
-      au < exists ; exists ; 2018 ; Global & Regional Health Technology Assessment Volume 5 ; 2018 ; grha ; >
+      au < manifest ; exists ; 2018 ; Global & Regional Health Technology Assessment Volume 5 ; 2018 ; grha ; >
   }
 
   {
@@ -19851,8 +19851,8 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Biomolecular Screening Volume 19 ; 19 ; jbxa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Biomolecular Screening Volume 20 ; 20 ; jbxa ; >
       au < frozen ; exists ; 2016 ; Journal of Biomolecular Screening Volume 21 ; 21 ; jbxa ; >
-      au < exists ; exists ; 2017 ; Journal of Biomolecular Screening Volume 22 ; 22 ; jbxb ; >
-      au < exists ; exists ; 2018 ; Journal of Biomolecular Screening Volume 23 ; 23 ; jbxb ; >
+      au < manifest ; exists ; 2017 ; Journal of Biomolecular Screening Volume 22 ; 22 ; jbxb ; >
+      au < manifest ; exists ; 2018 ; Journal of Biomolecular Screening Volume 23 ; 23 ; jbxb ; >
 
     }
 
@@ -25836,28 +25836,28 @@
 
     {
 
-      au < exists ; exists ; 1985 ; Journal of Planning Literature Volume 1 ; 1 ; jplb ; >
-      au < exists ; exists ; 1987 ; Journal of Planning Literature Volume 2 ; 2 ; jplb ; >
-      au < exists ; exists ; 1988 ; Journal of Planning Literature Volume 3 ; 3 ; jplb ; >
-      au < exists ; exists ; 1989 ; Journal of Planning Literature Volume 4 ; 4 ; jplb ; >
-      au < exists ; exists ; 1990 ; Journal of Planning Literature Volume 5 ; 5 ; jplb ; >
-      au < exists ; exists ; 1991 ; Journal of Planning Literature Volume 6 ; 6 ; jplb ; >
-      au < exists ; exists ; 1992 ; Journal of Planning Literature Volume 7 ; 7 ; jplb ; >
-      au < exists ; exists ; 1993 ; Journal of Planning Literature Volume 8 ; 8 ; jplb ; >
-      au < exists ; exists ; 1994 ; Journal of Planning Literature Volume 9 ; 9 ; jplb ; >
-      au < exists ; exists ; 1995 ; Journal of Planning Literature Volume 10 ; 10 ; jplb ; >
-      au < exists ; exists ; 1996 ; Journal of Planning Literature Volume 11 ; 11 ; jplb ; >
-      au < exists ; exists ; 1997 ; Journal of Planning Literature Volume 12 ; 12 ; jplb ; >
-      au < exists ; exists ; 1998 ; Journal of Planning Literature Volume 13 ; 13 ; jplb ; >
-      au < exists ; exists ; 1999 ; Journal of Planning Literature Volume 14 ; 14 ; jplb ; >
-      au < exists ; exists ; 2000 ; Journal of Planning Literature Volume 15 ; 15 ; jplb ; >
-      au < exists ; exists ; 2001 ; Journal of Planning Literature Volume 16 ; 16 ; jplb ; >
-      au < exists ; exists ; 2002 ; Journal of Planning Literature Volume 17 ; 17 ; jplb ; >
-      au < exists ; exists ; 2003 ; Journal of Planning Literature Volume 18 ; 18 ; jplb ; >
-      au < exists ; exists ; 2004 ; Journal of Planning Literature Volume 19 ; 19 ; jplb ; >
-      au < exists ; exists ; 2005 ; Journal of Planning Literature Volume 20 ; 20 ; jplb ; >
-      au < exists ; exists ; 2006 ; Journal of Planning Literature Volume 21 ; 21 ; jplb ; >
-      au < exists ; exists ; 2007 ; Journal of Planning Literature Volume 22 ; 22 ; jplb ; >
+      au < manifest ; exists ; 1985 ; Journal of Planning Literature Volume 1 ; 1 ; jplb ; >
+      au < manifest ; exists ; 1987 ; Journal of Planning Literature Volume 2 ; 2 ; jplb ; >
+      au < manifest ; exists ; 1988 ; Journal of Planning Literature Volume 3 ; 3 ; jplb ; >
+      au < manifest ; exists ; 1989 ; Journal of Planning Literature Volume 4 ; 4 ; jplb ; >
+      au < manifest ; exists ; 1990 ; Journal of Planning Literature Volume 5 ; 5 ; jplb ; >
+      au < manifest ; exists ; 1991 ; Journal of Planning Literature Volume 6 ; 6 ; jplb ; >
+      au < manifest ; exists ; 1992 ; Journal of Planning Literature Volume 7 ; 7 ; jplb ; >
+      au < manifest ; exists ; 1993 ; Journal of Planning Literature Volume 8 ; 8 ; jplb ; >
+      au < manifest ; exists ; 1994 ; Journal of Planning Literature Volume 9 ; 9 ; jplb ; >
+      au < manifest ; exists ; 1995 ; Journal of Planning Literature Volume 10 ; 10 ; jplb ; >
+      au < manifest ; exists ; 1996 ; Journal of Planning Literature Volume 11 ; 11 ; jplb ; >
+      au < manifest ; exists ; 1997 ; Journal of Planning Literature Volume 12 ; 12 ; jplb ; >
+      au < manifest ; exists ; 1998 ; Journal of Planning Literature Volume 13 ; 13 ; jplb ; >
+      au < manifest ; exists ; 1999 ; Journal of Planning Literature Volume 14 ; 14 ; jplb ; >
+      au < manifest ; exists ; 2000 ; Journal of Planning Literature Volume 15 ; 15 ; jplb ; >
+      au < manifest ; exists ; 2001 ; Journal of Planning Literature Volume 16 ; 16 ; jplb ; >
+      au < manifest ; exists ; 2002 ; Journal of Planning Literature Volume 17 ; 17 ; jplb ; >
+      au < manifest ; exists ; 2003 ; Journal of Planning Literature Volume 18 ; 18 ; jplb ; >
+      au < manifest ; exists ; 2004 ; Journal of Planning Literature Volume 19 ; 19 ; jplb ; >
+      au < manifest ; exists ; 2005 ; Journal of Planning Literature Volume 20 ; 20 ; jplb ; >
+      au < manifest ; exists ; 2006 ; Journal of Planning Literature Volume 21 ; 21 ; jplb ; >
+      au < manifest ; exists ; 2007 ; Journal of Planning Literature Volume 22 ; 22 ; jplb ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Planning Literature Volume 23 ; 23 ; jplb ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Planning Literature Volume 24 ; 24 ; jplb ; >
       au < doNotProcess ; doNotProcess ; 2010 ; Journal of Planning Literature Volume 25 ; 25 ; jplb ; >
@@ -25867,9 +25867,9 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Planning Literature Volume 29 ; 29 ; jplb ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Planning Literature Volume 30 ; 30 ; jplb ; >
       au < superseded ; exists ; 2016 ; Journal of Planning Literature Volume 31 [superseded] ; 31 ; jpla ; >
-      au < exists ; exists ; 2016 ; Journal of Planning Literature Volume 31 ; 31 ; jplb ; >
-      au < exists ; exists ; 2017 ; Journal of Planning Literature Volume 32 ; 32 ; jplb ; >
-      au < exists ; exists ; 2018 ; Journal of Planning Literature Volume 33 ; 33 ; jplb ; >
+      au < manifest ; exists ; 2016 ; Journal of Planning Literature Volume 31 ; 31 ; jplb ; >
+      au < manifest ; exists ; 2017 ; Journal of Planning Literature Volume 32 ; 32 ; jplb ; >
+      au < manifest ; exists ; 2018 ; Journal of Planning Literature Volume 33 ; 33 ; jplb ; >
 
     }
 
@@ -34877,7 +34877,7 @@
       au < frozen ; exists ; 2015 ; Professional School Counseling Volume 19 ; 19 ; pcxa ; >
       au < frozen ; exists ; 2016 ; Professional School Counseling Volume 20 ; 20 ; pcxa ; >
       au < frozen ; exists ; 2017 ; Professional School Counseling Volume 21 ; 21 ; pcxa ; >
-      au < expected ; exists ; 2018 ; Professional School Counseling Volume 22 ; 22 ; pcxa ; >
+      au < manifest ; exists ; 2018 ; Professional School Counseling Volume 22 ; 22 ; pcxa ; >
 
   }
 
@@ -37390,15 +37390,15 @@
       au < exists ; exists ; 1996 ; Scandinavian Journal of Public Health Volume 24 ; 24 ; sjpc ; >
       au < exists ; exists ; 1997 ; Scandinavian Journal of Public Health Volume 25 ; 25 ; sjpc ; >
       au < exists ; exists ; 1998 ; Scandinavian Journal of Public Health Volume 26 ; 26 ; sjpc ; >
-      au < exists ; exists ; 1999 ; Scandinavian Journal of Public Health Volume 27 ; 27 ; sjpc ; >
-      au < exists ; exists ; 2000 ; Scandinavian Journal of Public Health Volume 28 ; 28 ; sjpc ; >
-      au < exists ; exists ; 2001 ; Scandinavian Journal of Public Health Volume 29 ; 29 ; sjpc ; >
-      au < exists ; exists ; 2002 ; Scandinavian Journal of Public Health Volume 30 ; 30 ; sjpc ; >
-      au < exists ; exists ; 2003 ; Scandinavian Journal of Public Health Volume 31 ; 31 ; sjpc ; >
-      au < exists ; exists ; 2004 ; Scandinavian Journal of Public Health Volume 32 ; 32 ; sjpc ; >
-      au < exists ; exists ; 2005 ; Scandinavian Journal of Public Health Volume 33 ; 33 ; sjpc ; >
-      au < exists ; exists ; 2006 ; Scandinavian Journal of Public Health Volume 34 ; 34 ; sjpc ; >
-      au < exists ; exists ; 2007 ; Scandinavian Journal of Public Health Volume 35 ; 35 ; sjpc ; >
+      au < manifest ; exists ; 1999 ; Scandinavian Journal of Public Health Volume 27 ; 27 ; sjpc ; >
+      au < manifest ; exists ; 2000 ; Scandinavian Journal of Public Health Volume 28 ; 28 ; sjpc ; >
+      au < manifest ; exists ; 2001 ; Scandinavian Journal of Public Health Volume 29 ; 29 ; sjpc ; >
+      au < manifest ; exists ; 2002 ; Scandinavian Journal of Public Health Volume 30 ; 30 ; sjpc ; >
+      au < manifest ; exists ; 2003 ; Scandinavian Journal of Public Health Volume 31 ; 31 ; sjpc ; >
+      au < manifest ; exists ; 2004 ; Scandinavian Journal of Public Health Volume 32 ; 32 ; sjpc ; >
+      au < manifest ; exists ; 2005 ; Scandinavian Journal of Public Health Volume 33 ; 33 ; sjpc ; >
+      au < manifest ; exists ; 2006 ; Scandinavian Journal of Public Health Volume 34 ; 34 ; sjpc ; >
+      au < manifest ; exists ; 2007 ; Scandinavian Journal of Public Health Volume 35 ; 35 ; sjpc ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Scandinavian Journal of Public Health Volume 36 ; 36 ; sjpc ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Scandinavian Journal of Public Health Volume 37 ; 37 ; sjpc ; >
       au < doNotProcess ; doNotProcess ; 2010 ; Scandinavian Journal of Public Health Volume 38 ; 38 ; sjpc ; >
@@ -37408,9 +37408,9 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Scandinavian Journal of Public Health Volume 42 ; 42 ; sjpc ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Scandinavian Journal of Public Health Volume 43 ; 43 ; sjpc ; >
       au < superseded ; exists ; 2016 ; Scandinavian Journal of Public Health Volume 44 [superseded] ; 44 ; sjpa ; >
-      au < exists ; exists ; 2016 ; Scandinavian Journal of Public Health Volume 44 ; 44 ; sjpc ; >
-      au < exists ; exists ; 2017 ; Scandinavian Journal of Public Health Volume 45 ; 45 ; sjpc ; >
-      au < exists ; exists ; 2018 ; Scandinavian Journal of Public Health Volume 46 ; 46 ; sjpc ; >
+      au < manifest ; exists ; 2016 ; Scandinavian Journal of Public Health Volume 44 ; 44 ; sjpc ; >
+      au < manifest ; exists ; 2017 ; Scandinavian Journal of Public Health Volume 45 ; 45 ; sjpc ; >
+      au < manifest ; exists ; 2018 ; Scandinavian Journal of Public Health Volume 46 ; 46 ; sjpc ; >
 
     }
 
@@ -46253,27 +46253,27 @@
         au < manifest ; exists ; 1984 ; Acta Radiologica Volume 25 ; 25 ; acrb ; >
         au < manifest ; exists ; 1985 ; Acta Radiologica Volume 26 ; 26 ; acrb ; >
         au < manifest ; exists ; 1986 ; Acta Radiologica Volume 27 ; 27 ; acrb ; >
-        au < exists ; exists ; 1987 ; Acta Radiologica Volume 28 ; 28 ; acrc ; >
-        au < exists ; exists ; 1988 ; Acta Radiologica Volume 29 ; 29 ; acrc ; >
-        au < exists ; exists ; 1989 ; Acta Radiologica Volume 30 ; 30 ; acrc ; >
-        au < exists ; exists ; 1990 ; Acta Radiologica Volume 31 ; 31 ; acrc ; >
-        au < exists ; exists ; 1991 ; Acta Radiologica Volume 32 ; 32 ; acrc ; >
-        au < exists ; exists ; 1992 ; Acta Radiologica Volume 33 ; 33 ; acrc ; >
-        au < exists ; exists ; 1993 ; Acta Radiologica Volume 34 ; 34 ; acrc ; >
-        au < exists ; exists ; 1994 ; Acta Radiologica Volume 35 ; 35 ; acrc ; >
-        au < exists ; exists ; 1995 ; Acta Radiologica Volume 36 ; 36 ; acrc ; >
-        au < exists ; exists ; 1996 ; Acta Radiologica Volume 37 ; 37 ; acrc ; >
-        au < exists ; exists ; 1997 ; Acta Radiologica Volume 38 ; 38 ; acrc ; >
-        au < exists ; exists ; 1998 ; Acta Radiologica Volume 39 ; 39 ; acrc ; >
-        au < exists ; exists ; 1999 ; Acta Radiologica Volume 40 ; 40 ; acrc ; >
-        au < exists ; exists ; 2000 ; Acta Radiologica Volume 41 ; 41 ; acrc ; >
-        au < exists ; exists ; 2001 ; Acta Radiologica Volume 42 ; 42 ; acrc ; >
-        au < exists ; exists ; 2002 ; Acta Radiologica Volume 43 ; 43 ; acrc ; >
-        au < exists ; exists ; 2003 ; Acta Radiologica Volume 44 ; 44 ; acrc ; >
-        au < exists ; exists ; 2004 ; Acta Radiologica Volume 45 ; 45 ; acrc ; >
-        au < exists ; exists ; 2005 ; Acta Radiologica Volume 46 ; 46 ; acrc ; >
-        au < exists ; exists ; 2006 ; Acta Radiologica Volume 47 ; 47 ; acrc ; >
-        au < exists ; exists ; 2007 ; Acta Radiologica Volume 48 ; 48 ; acrc ; >
+        au < manifest ; exists ; 1987 ; Acta Radiologica Volume 28 ; 28 ; acrc ; >
+        au < manifest ; exists ; 1988 ; Acta Radiologica Volume 29 ; 29 ; acrc ; >
+        au < manifest ; exists ; 1989 ; Acta Radiologica Volume 30 ; 30 ; acrc ; >
+        au < manifest ; exists ; 1990 ; Acta Radiologica Volume 31 ; 31 ; acrc ; >
+        au < manifest ; exists ; 1991 ; Acta Radiologica Volume 32 ; 32 ; acrc ; >
+        au < manifest ; exists ; 1992 ; Acta Radiologica Volume 33 ; 33 ; acrc ; >
+        au < manifest ; exists ; 1993 ; Acta Radiologica Volume 34 ; 34 ; acrc ; >
+        au < manifest ; exists ; 1994 ; Acta Radiologica Volume 35 ; 35 ; acrc ; >
+        au < manifest ; exists ; 1995 ; Acta Radiologica Volume 36 ; 36 ; acrc ; >
+        au < manifest ; exists ; 1996 ; Acta Radiologica Volume 37 ; 37 ; acrc ; >
+        au < manifest ; exists ; 1997 ; Acta Radiologica Volume 38 ; 38 ; acrc ; >
+        au < manifest ; exists ; 1998 ; Acta Radiologica Volume 39 ; 39 ; acrc ; >
+        au < manifest ; exists ; 1999 ; Acta Radiologica Volume 40 ; 40 ; acrc ; >
+        au < manifest ; exists ; 2000 ; Acta Radiologica Volume 41 ; 41 ; acrc ; >
+        au < manifest ; exists ; 2001 ; Acta Radiologica Volume 42 ; 42 ; acrc ; >
+        au < manifest ; exists ; 2002 ; Acta Radiologica Volume 43 ; 43 ; acrc ; >
+        au < manifest ; exists ; 2003 ; Acta Radiologica Volume 44 ; 44 ; acrc ; >
+        au < manifest ; exists ; 2004 ; Acta Radiologica Volume 45 ; 45 ; acrc ; >
+        au < manifest ; exists ; 2005 ; Acta Radiologica Volume 46 ; 46 ; acrc ; >
+        au < manifest ; exists ; 2006 ; Acta Radiologica Volume 47 ; 47 ; acrc ; >
+        au < manifest ; exists ; 2007 ; Acta Radiologica Volume 48 ; 48 ; acrc ; >
         au < doNotProcess ; doNotProcess ; 2008 ; Acta Radiologica Volume 49 ; 49 ; acrc ; >
         au < doNotProcess ; doNotProcess ; 2009 ; Acta Radiologica Volume 50 ; 50 ; acrc ; >
         au < doNotProcess ; doNotProcess ; 2010 ; Acta Radiologica Volume 51 ; 51 ; acrc ; >
@@ -46283,9 +46283,9 @@
         au < doNotProcess ; doNotProcess ; 2014 ; Acta Radiologica Volume 55 ; 55 ; acrc ; >
         au < doNotProcess ; doNotProcess ; 2015 ; Acta Radiologica Volume 56 ; 56 ; acrc ; >
         au < superseded ; exists ; 2016 ; Acta Radiologica Volume 57 [superseded] ; 57 ; acra ; >
-        au < exists ; exists ; 2016 ; Acta Radiologica Volume 57 ; 57 ; acrc ; >
-        au < exists ; exists ; 2017 ; Acta Radiologica Volume 58 ; 58 ; acrc ; >
-        au < exists ; exists ; 2018 ; Acta Radiologica Volume 59 ; 59 ; acrc ; >
+        au < manifest ; exists ; 2016 ; Acta Radiologica Volume 57 ; 57 ; acrc ; >
+        au < manifest ; exists ; 2017 ; Acta Radiologica Volume 58 ; 58 ; acrc ; >
+        au < manifest ; exists ; 2018 ; Acta Radiologica Volume 59 ; 59 ; acrc ; >
 
     }
 
@@ -46380,7 +46380,7 @@
         au < doNotProcess ; doNotProcess ; 2014 ; Clinical Risk Volume 20 ; 20 ; crib ; >
         au < doNotProcess ; doNotProcess ; 2015 ; Clinical Risk Volume 21 ; 21 ; crib ; >
         au < finished ; crawling ; 2016 ; Clinical Risk Volume 22 ; 22 ; crib ; reingest4.clockss.org:8082 >
-        au < exists ; exists ; 2018 ; Clinical Risk Volume 23 ; 23 ; cric ; >
+        au < manifest ; exists ; 2018 ; Clinical Risk Volume 23 ; 23 ; cric ; >
 
     }
 
