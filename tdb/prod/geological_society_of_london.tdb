@@ -647,11 +647,11 @@
     comment[continued] = 0016-7649
     #contains volumes 1-126
 
-    au < gsl.GSLDrupalPlugin ; exists ; 1966 ; Quarterly Journal of the Geological Society of London Volume 122 ; 122 >
-    au < gsl.GSLDrupalPlugin ; exists ; 1967 ; Quarterly Journal of the Geological Society of London Volume 123 ; 123 >
-    au < gsl.GSLDrupalPlugin ; exists ; 1968 ; Quarterly Journal of the Geological Society of London Volume 124 ; 124 >
-    au < gsl.GSLDrupalPlugin ; exists ; 1969 ; Quarterly Journal of the Geological Society of London Volume 125 ; 125 >
-    au < gsl.GSLDrupalPlugin ; exists ; 1970 ; Quarterly Journal of the Geological Society of London Volume 126 ; 126 >
+    au < gsl.GSLDrupalPlugin ; manifest ; 1966 ; Quarterly Journal of the Geological Society of London Volume 122 ; 122 >
+    au < gsl.GSLDrupalPlugin ; manifest ; 1967 ; Quarterly Journal of the Geological Society of London Volume 123 ; 123 >
+    au < gsl.GSLDrupalPlugin ; manifest ; 1968 ; Quarterly Journal of the Geological Society of London Volume 124 ; 124 >
+    au < gsl.GSLDrupalPlugin ; manifest ; 1969 ; Quarterly Journal of the Geological Society of London Volume 125 ; 125 >
+    au < gsl.GSLDrupalPlugin ; manifest ; 1970 ; Quarterly Journal of the Geological Society of London Volume 126 ; 126 >
     #journal name and issn changed after 1970
   }
   {
