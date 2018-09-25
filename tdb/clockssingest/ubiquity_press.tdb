@@ -539,24 +539,26 @@
 
       comment[publisher] = Ubiquity Press
 #      param[base_url] = http://www.ai-journal.com/
+#      about page (with permission statement) is at https://ai-journal.com/about/ (no www)
 
-      au < manifest ; exists ; 2000 ; 4 ; Archaeology International Volume 2000 ; 2000 ; https://www.ai-journal.com/ ; >
-      au < manifest ; exists ; 2001 ; 5 ; Archaeology International Volume 2001 ; 2001 ; https://www.ai-journal.com/ ; >
-      au < manifest ; exists ; 2002 ; 6 ; Archaeology International Volume 2002 ; 2002 ; https://www.ai-journal.com/ ; >
-      au < manifest ; exists ; 2003 ; 7 ; Archaeology International Volume 2003 ; 2003 ; https://www.ai-journal.com/ ; >
-      au < manifest ; exists ; 2004 ; 8 ; Archaeology International Volume 2004 ; 2004 ; https://www.ai-journal.com/ ; >
-      au < manifest ; exists ; 2005 ; 9 ; Archaeology International Volume 2005 ; 2005 ; https://www.ai-journal.com/ ; >
-      au < doesNotExist ; doesNotExist ; 2006 ; 10 ; Archaeology International Volume 2006 ; 2006 ; https://www.ai-journal.com/ ; > #M exists. No articles for that year.
-      au < manifest ; exists ; 2007 ; 11 ; Archaeology International Volume 2007 ; 2007 ; https://www.ai-journal.com/ ; >
-      au < manifest ; exists ; 2008 ; 12 ; Archaeology International Volume 2008 ; 2008 ; https://www.ai-journal.com/ ; >
-      au < manifest ; exists ; 2009 ; 13 ; Archaeology International Volume 2009 ; 2009 ; https://www.ai-journal.com/ ; >
-      au < doNotProcess ; exists ; 2012 ; 15 ; Archaeology International Volume 2012 ; 2012 ; https://www.ai-journal.com/ ; >
-      au < doNotProcess ; exists ; 2013 ; 16 ; Archaeology International Volume 2013 ; 2013 ; https://www.ai-journal.com/ ; >
-      au < doNotProcess ; exists ; 2014 ; 17 ; Archaeology International Volume 2014 ; 2014 ; https://www.ai-journal.com/ ; >
+      au < exists ; exists ; 2000 ; 4 ; Archaeology International Volume 2000 ; 2000 ; https://ai-journal.com/ ; >
+      au < exists ; exists ; 2001 ; 5 ; Archaeology International Volume 2001 ; 2001 ; https://ai-journal.com/ ; >
+      au < exists ; exists ; 2002 ; 6 ; Archaeology International Volume 2002 ; 2002 ; https://ai-journal.com/ ; >
+      au < exists ; exists ; 2003 ; 7 ; Archaeology International Volume 2003 ; 2003 ; https://ai-journal.com/ ; >
+      au < exists ; exists ; 2004 ; 8 ; Archaeology International Volume 2004 ; 2004 ; https://ai-journal.com/ ; >
+      au < exists ; exists ; 2005 ; 9 ; Archaeology International Volume 2005 ; 2005 ; https://ai-journal.com/ ; >
+      au < doesNotExist ; doesNotExist ; 2006 ; 10 ; Archaeology International Volume 2006 ; 2006 ; https://ai-journal.com/ ; > #M exists. No articles for that year.
+      au < exists ; exists ; 2007 ; 11 ; Archaeology International Volume 2007 ; 2007 ; https://ai-journal.com/ ; >
+      au < exists ; exists ; 2008 ; 12 ; Archaeology International Volume 2008 ; 2008 ; https://ai-journal.com/ ; >
+      au < exists ; exists ; 2009 ; 13 ; Archaeology International Volume 2009 ; 2009 ; https://ai-journal.com/ ; >
+      au < doNotProcess ; exists ; 2012 ; 15 ; Archaeology International Volume 2012 ; 2012 ; https://ai-journal.com/ ; >
+      au < doNotProcess ; exists ; 2013 ; 16 ; Archaeology International Volume 2013 ; 2013 ; https://ai-journal.com/ ; >
+      au < doNotProcess ; exists ; 2014 ; 17 ; Archaeology International Volume 2014 ; 2014 ; https://ai-journal.com/ ; >
       au < finished ; finished ; 2015 ; 18 ; Archaeology International Volume 2015 ; 2015 ; http://www.ai-journal.com/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2016 ; 19 ; Archaeology International Volume 2016 ; 2016 ; http://www.ai-journal.com/ ; >
-      au < manifest ; exists ; 2017 ; 20 ; Archaeology International Volume 2017 ; 2017 ; https://www.ai-journal.com/ ; >
-      au < expected ; exists ; 2018 ; 21 ; Archaeology International Volume 2018 ; 2018 ; https://www.ai-journal.com/ ; >
+      au < superseded ; exists ; 2016 ; 19 ; Archaeology International Volume 2016 [superseded] ; 2016 ; http://www.ai-journal.com/ ; >
+      au < exists ; exists ; 2016 ; 19 ; Archaeology International Volume 2016 ; 2016 ; http://ai-journal.com/ ; >
+      au < exists ; exists ; 2017 ; 20 ; Archaeology International Volume 2017 ; 2017 ; https://ai-journal.com/ ; >
+      au < expected ; exists ; 2018 ; 21 ; Archaeology International Volume 2018 ; 2018 ; https://ai-journal.com/ ; >
 
   }
 
