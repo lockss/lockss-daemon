@@ -27,7 +27,7 @@
     au < doNotProcess ; 2015 ; Bone & Joint 360 Volume 4 ; 4 >
     au < doNotProcess ; 2016 ; Bone & Joint 360 Volume 5 ; 5 >
     au < doNotProcess ; 2017 ; Bone & Joint 360 Volume 6 ; 6 >
-    au < expected ; 2018 ; Bone & Joint 360 Volume 7 ; 7 >
+    au < manifest ; 2018 ; Bone & Joint 360 Volume 7 ; 7 >
     }
     {
     plugin = org.lockss.plugin.highwire.besbjs.BESBJSDrupalPlugin
@@ -61,8 +61,8 @@
     au < doNotProcess ; 2014 ; Bone & Joint Research Volume 3 ; 3 >
     au < doNotProcess ; 2015 ; Bone & Joint Research Volume 4 ; 4 >
     au < doNotProcess ; 2016 ; Bone & Joint Research Volume 5 ; 5 >
-    au < expected ; 2017 ; Bone & Joint Research Volume 6 ; 6 >
-    au < expected ; 2018 ; Bone & Joint Research Volume 7 ; 7 >
+    au < manifest ; 2017 ; Bone & Joint Research Volume 6 ; 6 >
+    au < manifest ; 2018 ; Bone & Joint Research Volume 7 ; 7 >
     }
     {
     plugin = org.lockss.plugin.highwire.besbjs.BESBJSDrupalPlugin
@@ -251,9 +251,9 @@
     param[base_url] = https://online.boneandjoint.org.uk/
     param[journal_id] = eor
 
-    au < exists ; 2016 ; EFORT Open Reviews Volume 1 ; 1 >
-    au < exists ; 2017 ; EFORT Open Reviews Volume 2 ; 2 >
-    au < expected ; 2018 ; EFORT Open Reviews Volume 3 ; 3 >
+    au < manifest ; 2016 ; EFORT Open Reviews Volume 1 ; 1 >
+    au < manifest ; 2017 ; EFORT Open Reviews Volume 2 ; 2 >
+    au < manifest ; 2018 ; EFORT Open Reviews Volume 3 ; 3 >
 
   }
   
