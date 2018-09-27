@@ -92,6 +92,8 @@
     <list>
       <!-- do not pick up variants of /148-13/148-13%20Header.jpg - repeat version of masthead   -->
       <string>2,"^https?://%s/storage/(manuscripts|pdf-version-of-articles)/.*(%%20|[ ])Header\.jpe?g$", url_host(base_url)</string>
+      <!--  do not pick up html that lives under /storage/...or typo variants of that suffix -->
+      <string>2,"^https?://%s/storage/manuscripts/.*\.(html?|mht)$", url_host(base_url)</string>
       <!--  allow any of these regardless of subdirectory off base host -->
       <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?(__SQUARESPACE_CACHEVERSION|CE|styleId)=.*)?$", url_host(base_url)</string>
       <string>1,"^%sauid=.*$", base_url</string>
@@ -151,14 +153,16 @@
     <string>application/pdf_filter_factory</string>
     <string>org.lockss.plugin.springer.link.SpringerLinkScrapingPdfFilterFactory</string>
   </entry>
+-->  
   <entry>
     <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.springer.link.SpringerLinkArticleIteratorFactory</string>
+    <string>org.lockss.plugin.swjpcc.SwjpccArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.springer.link.SpringerLinkArticleIteratorFactory</string>
+    <string>org.lockss.plugin.swjpcc.SwjpccArticleIteratorFactory</string>
   </entry>
+<!-- 
   <entry>
     <string>text/html_metadata_extractor_factory_map</string>
     <map>
