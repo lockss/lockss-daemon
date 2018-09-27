@@ -500,7 +500,7 @@
       au < manifest ; 2013 ; International Journal of Aerodynamics Volume 3 ; 3 ; https://www.inderscienceonline.com/ >
       au < released ; 2014 ; International Journal of Aerodynamics Volume 4 ; 4 ; http://www.inderscienceonline.com/ >
       au < released ; 2015-2016 ; International Journal of Aerodynamics Volume 5 ; 5 ; http://www.inderscienceonline.com/ >
-      au < manifest ; 2018 ; International Journal of Aerodynamics Volume 6 ; 6 ; https://www.inderscienceonline.com/ >
+      au < manifest ; 2018-2019 ; International Journal of Aerodynamics Volume 6 ; 6 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -520,7 +520,7 @@
       au < doNotProcess ; 2009 ; International Journal of Agent-Oriented Software Engineering Volume 3 ; 3 ; https://www.inderscienceonline.com/ >
       au < doNotProcess ; 2010-2011 ; International Journal of Agent-Oriented Software Engineering Volume 4 ; 4 ; https://www.inderscienceonline.com/ >
       au < released ; 2015-2017 ; International Journal of Agent-Oriented Software Engineering Volume 5 ; 5 ; http://www.inderscienceonline.com/ >
-      au < manifest ; 2018 ; International Journal of Agent-Oriented Software Engineering Volume 6 ; 6 ; https://www.inderscienceonline.com/ >
+      au < manifest ; 2018-2019 ; International Journal of Agent-Oriented Software Engineering Volume 6 ; 6 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -990,7 +990,6 @@
       au < released ; 2013-2014 ; International Journal of Behavioural Accounting and Finance Volume 4 ; 4 ; http://www.inderscienceonline.com/ >
       au < released ; 2015 ; International Journal of Behavioural Accounting and Finance Volume 5 ; 5 ; http://www.inderscienceonline.com/ >
       au < released ; 2016-2018 ; International Journal of Behavioural Accounting and Finance Volume 6 ; 6 ; http://www.inderscienceonline.com/ > #issue 3 & 4 not online yet
-      au < expected ; 2017-2019 ; International Journal of Behavioural Accounting and Finance Volume 7 ; 7 ; http://www.inderscienceonline.com/ > #issue 3 & 4 not online yet
 
     }
 
@@ -1100,7 +1099,7 @@
 
       au < doNotProcess ; 2009-2011 ; International Journal of Biomechatronics and Biomedical Robotics Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
       au < manifest ; 2012-2013 ; International Journal of Biomechatronics and Biomedical Robotics Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
-      au < released ; 2014-2018 ; International Journal of Biomechatronics and Biomedical Robotics Volume 3 ; 3 ; http://www.inderscienceonline.com/ > #volume 3 issue 4 not online yet
+      au < released ; 2014-2015 ; International Journal of Biomechatronics and Biomedical Robotics Volume 3 ; 3 ; http://www.inderscienceonline.com/ > #issue 4 not online yet
 
 
     }
@@ -1214,7 +1213,6 @@
       au < doNotProcess ; 2011-2013 ; International Journal of Biotechnology Volume 12 ; 12 ; https://www.inderscienceonline.com/ >
       au < released ; 2014 ; International Journal of Biotechnology Volume 13 ; 13 ; http://www.inderscienceonline.com/ >
       au < released ; 2015-2018 ; International Journal of Biotechnology Volume 14 ; 14 ; http://www.inderscienceonline.com/ > #issue 4 not online yet
-      au < expected ; 2016-2019 ; International Journal of Biotechnology Volume 15 ; 15 ; http://www.inderscienceonline.com/ > #issue 4 not online yet
 
     }
 
@@ -1825,8 +1823,7 @@
 
       param[journal_id] = ijcast
 
-      au < released ; 2016-2018 ; International Journal of Complexity in Applied Science and Engineering Volume 1 ; 1 ; http://www.inderscienceonline.com/ > #volume 1 issue 2, 3 & 4 not online yet
-      au < expected ; 2017-2019 ; International Journal of Complexity in Applied Science and Engineering Volume 2 ; 2 ; http://www.inderscienceonline.com/ > #volume 2 issue 2, 3 & 4 not online yet
+      au < released ; 2016 ; International Journal of Complexity in Applied Science and Engineering Volume 1 ; 1 ; http://www.inderscienceonline.com/ > #issue 2, 3 & 4 not online yet
 
     }
 
@@ -1883,8 +1880,7 @@
 
       param[journal_id] = ijccia
 
-      au < released ; 2016-2018 ; International Journal of Computational Complexity and Intelligent Algorithms Volume 1 ; 1 ; http://www.inderscienceonline.com/ > #volume 1 issue 2, 3 & 4 not online yet
-      au < expected ; 2017-2019 ; International Journal of Computational Complexity and Intelligent Algorithms Volume 2 ; 2 ; http://www.inderscienceonline.com/ > #volume 2 issue 2, 3 & 4 not online yet
+      au < released ; 2016 ; International Journal of Computational Complexity and Intelligent Algorithms Volume 1 ; 1 ; http://www.inderscienceonline.com/ > #issue 2, 3 & 4 not online yet
 
     }
 
@@ -3273,7 +3269,7 @@
       au < doNotProcess ; 2012-2013 ; International Journal of Environment and Health Volume 6 ; 6 ; https://www.inderscienceonline.com/ >
       au < released ; 2014-2015 ; International Journal of Environment and Health Volume 7 ; 7 ; http://www.inderscienceonline.com/ >
       au < released ; 2016-2017 ; International Journal of Environment and Health Volume 8 ; 8 ; http://www.inderscienceonline.com/ >
-      au < manifest ; 2018 ; International Journal of Environment and Health Volume 9 ; 9 ; https://www.inderscienceonline.com/ >
+      au < manifest ; 2018-2019 ; International Journal of Environment and Health Volume 9 ; 9 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -3952,8 +3948,7 @@
       au < doNotProcess ; 2009-2010 ; International Journal of Granular Computing, Rough Sets and Intelligent Systems Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
       au < doNotProcess ; 2011-2012 ; International Journal of Granular Computing, Rough Sets and Intelligent Systems Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
       au < manifest ; 2013-2014 ; International Journal of Granular Computing, Rough Sets and Intelligent Systems Volume 3 ; 3 ; https://www.inderscienceonline.com/ >
-      au < released ; 2015-2017 ; International Journal of Granular Computing, Rough Sets and Intelligent Systems Volume 4 ; 4 ; http://www.inderscienceonline.com/ > #volume 4 issue 2, 3 & 4 not online yet
-      au < expected ; 2016-2018 ; International Journal of Granular Computing, Rough Sets and Intelligent Systems Volume 5 ; 5 ; http://www.inderscienceonline.com/ > #volume 5 issue 2, 3 & 5 not online yet
+      au < released ; 2015-2018 ; International Journal of Granular Computing, Rough Sets and Intelligent Systems Volume 4 ; 4 ; http://www.inderscienceonline.com/ > #volume 4 issue 2, 3 & 4 not online yet
 
     }
 
@@ -4021,7 +4016,7 @@
       au < released ; 2012-2014 ; International Journal of Happiness and Development Volume 1 ; 1 ; http://www.inderscienceonline.com/ >
       au < released ; 2015 ; International Journal of Happiness and Development Volume 2 ; 2 ; http://www.inderscienceonline.com/ >
       au < released ; 2016-2017 ; International Journal of Happiness and Development Volume 3 ; 3 ; http://www.inderscienceonline.com/ >
-      au < manifest ; 2018 ; International Journal of Happiness and Development Volume 4 ; 4 ; https://www.inderscienceonline.com/ >
+      au < manifest ; 2018-2019 ; International Journal of Happiness and Development Volume 4 ; 4 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -4130,10 +4125,9 @@
       au < doNotProcess ; 2011 ; International Journal of High Performance Systems Architecture Volume 3 ; 3 ; https://www.inderscienceonline.com/ >
       au < doNotProcess ; 2012-2013 ; International Journal of High Performance Systems Architecture Volume 4 ; 4 ; https://www.inderscienceonline.com/ >
       au < released ; 2014-2015 ; International Journal of High Performance Systems Architecture Volume 5 ; 5 ; http://www.inderscienceonline.com/ >
-      au < released ; 2016-2017 ; International Journal of High Performance Systems Architecture Volume 6 ; 6 ; https://www.inderscienceonline.com/ >
+      au < released ; 2016 ; International Journal of High Performance Systems Architecture Volume 6 ; 6 ; https://www.inderscienceonline.com/ >
       au < released ; 2017 ; International Journal of High Performance Systems Architecture Volume 7 ; 7 ; https://www.inderscienceonline.com/ >
       au < manifest ; 2018 ; International Journal of High Performance Systems Architecture Volume 8 ; 8 ; https://www.inderscienceonline.com/ >
-      au < expected ; 2018 ; International Journal of High Performance Systems Architecture Volume 9 ; 9 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -4352,7 +4346,7 @@
       au < released ; 2009-2014 ; International Journal of Industrial Electronics and Drives Volume 1 ; 1 ; http://www.inderscienceonline.com/ >
       au < released ; 2015 ; International Journal of Industrial Electronics and Drives Volume 2 ; 2 ; http://www.inderscienceonline.com/ >
       au < released ; 2016-2017 ; International Journal of Industrial Electronics and Drives Volume 3 ; 3 ; http://www.inderscienceonline.com/ >
-      au < manifest ; 2018 ; International Journal of Industrial Electronics and Drives Volume 4 ; 4 ; https://www.inderscienceonline.com/ >
+      au < manifest ; 2018-2019 ; International Journal of Industrial Electronics and Drives Volume 4 ; 4 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -4466,8 +4460,7 @@
       au < doNotProcess ; 2009-2010 ; International Journal of Information and Operations Management Education Volume 3 ; 3 ; https://www.inderscienceonline.com/ >
       au < doNotProcess ; 2011 ; International Journal of Information and Operations Management Education Volume 4 ; 4 ; https://www.inderscienceonline.com/ >
       au < released ; 2012-2014 ; International Journal of Information and Operations Management Education Volume 5 ; 5 ; http://www.inderscienceonline.com/ >
-      au < released ; 2015-2017 ; International Journal of Information and Operations Management Education Volume 6 ; 6 ; http://www.inderscienceonline.com/ > #volume 6 issue 3 & 4 not online yet
-      au < expected ; 2016-2018 ; International Journal of Information and Operations Management Education Volume 7 ; 7 ; http://www.inderscienceonline.com/ > #volume 7 issue 3 & 4 not online yet
+      au < released ; 2015-2017 ; International Journal of Information and Operations Management Education Volume 6 ; 6 ; http://www.inderscienceonline.com/ > #issue 3 & 4 not online yet
 
     }
 
@@ -4502,8 +4495,7 @@
       au < doNotProcess ; 2007 ; International Journal of Information Quality Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
       au < doNotProcess ; 2008-2011 ; International Journal of Information Quality Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
       au < released ; 2012-2014 ; International Journal of Information Quality Volume 3 ; 3 ; http://www.inderscienceonline.com/ >
-      au < released ; 2015-2017 ; International Journal of Information Quality Volume 4 ; 4 ; http://www.inderscienceonline.com/ > #volume 4 issue 3 & 4 not online yet
-      au < expected ; 2016-2018 ; International Journal of Information Quality Volume 5 ; 5 ; http://www.inderscienceonline.com/ > #volume 5 issue 3 & 5 not online yet
+      au < released ; 2015-2017 ; International Journal of Information Quality Volume 4 ; 4 ; http://www.inderscienceonline.com/ > #issue 3 & 4 not online yet
 
     }
 
@@ -5473,7 +5465,7 @@
       au < doNotProcess ; 2011 ; International Journal of Low Radiation Volume 8 ; 8 ; https://www.inderscienceonline.com/ >
       au < released ; 2013-2014 ; International Journal of Low Radiation Volume 9 ; 9 ; http://www.inderscienceonline.com/ >
       au < released ; 2015-2017 ; International Journal of Low Radiation Volume 10 ; 10 ; http://www.inderscienceonline.com/ >
-      au < expected ; 2016-2018 ; International Journal of Low Radiation Volume 11 ; 11 ; http://www.inderscienceonline.com/ >
+      au < expected ; 2018-2019 ; International Journal of Low Radiation Volume 11 ; 11 ; http://www.inderscienceonline.com/ >
 
     }
 
@@ -7024,7 +7016,7 @@
       au < manifest ; 2013 ; International Journal of Private Law Volume 6 ; 6 ; https://www.inderscienceonline.com/ >
       au < released ; 2014 ; International Journal of Private Law Volume 7 ; 7 ; http://www.inderscienceonline.com/ >
       au < released ; 2015-2017 ; International Journal of Private Law Volume 8 ; 8 ; http://www.inderscienceonline.com/ >
-      au < expected ; 2018 ; International Journal of Private Law Volume 9 ; 9 ; https://www.inderscienceonline.com/ >
+      au < expected ; 2018-2019 ; International Journal of Private Law Volume 9 ; 9 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -7739,7 +7731,7 @@
       au < doNotProcess ; 2011 ; International Journal of Services Operations and Informatics Volume 6 ; 6 ; https://www.inderscienceonline.com/ >
       au < doNotProcess ; 2012 ; International Journal of Services Operations and Informatics Volume 7 ; 7 ; https://www.inderscienceonline.com/ >
       au < released ; 2013-2017 ; International Journal of Services Operations and Informatics Volume 8 ; 8 ; https://www.inderscienceonline.com/ >
-      au < manifest ; 2014-2018 ; International Journal of Services Operations and Informatics Volume 9 ; 9 ; https://www.inderscienceonline.com/ >
+      au < manifest ; 2018-2019 ; International Journal of Services Operations and Informatics Volume 9 ; 9 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -7939,7 +7931,7 @@
 
       au < doNotProcess ; 2008-2012 ; International Journal of Social and Humanistic Computing Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
       au < released ; 2013-2017 ; International Journal of Social and Humanistic Computing Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
-      au < expected ; 2014-2018 ; International Journal of Social and Humanistic Computing Volume 3 ; 3 ; https://www.inderscienceonline.com/ >
+      au < expected ; 2018-2019 ; International Journal of Social and Humanistic Computing Volume 3 ; 3 ; https://www.inderscienceonline.com/ >
 
     }
 
