@@ -3,7 +3,6 @@
   publisher <
     name = Edinburgh University Press ;
     info[contract] = 2009 ;
-    comment[123tester] = 2 ;
     info[tester] = 5 ;
     info[poller] = 3
   >
@@ -35,6 +34,98 @@
     au < finished ; finished ; 2008 ; Africa: The Journal of the International African Institute Volume 78 ; 78 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2009 ; Africa: The Journal of the International African Institute Volume 79 ; 79 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2010 ; Africa: The Journal of the International African Institute Volume 80 ; 80 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = Afghanistan ;
+      issn = 2399-357X ;
+      eissn = 2399-3588 ;
+      issnl = 2399-357X 
+     >
+
+    param[journal_id] = afg
+
+    au < exists ; exists ; 2018 ; Afghanistan Volume 2018 ; 2018 ; https://www.euppublishing.com/ ; >
+
+  }
+
+  {
+
+    title <
+      name = Somatechnics ;
+      issn = 2044-0138 ;
+      eissn = 2044-0146 ;
+      issnl = 2044-0138 
+     >
+
+    param[journal_id] = soma
+
+    au < exists ; exists ; 2011 ; Somatechnics Volume 2011 ; 2011 ; https://www.euppublishing.com/ ; >
+    au < exists ; exists ; 2012 ; Somatechnics Volume 2012 ; 2012 ; https://www.euppublishing.com/ ; >
+    au < exists ; exists ; 2013 ; Somatechnics Volume 2013 ; 2013 ; https://www.euppublishing.com/ ; >
+    au < exists ; exists ; 2014 ; Somatechnics Volume 2014 ; 2014 ; https://www.euppublishing.com/ ; >
+    au < exists ; exists ; 2015 ; Somatechnics Volume 2015 ; 2015 ; https://www.euppublishing.com/ ; >
+    au < exists ; exists ; 2016 ; Somatechnics Volume 2016 ; 2016 ; https://www.euppublishing.com/ ; >
+    au < exists ; exists ; 2017 ; Somatechnics Volume 2017 ; 2017 ; https://www.euppublishing.com/ ; >
+    au < exists ; exists ; 2018 ; Somatechnics Volume 2018 ; 2018 ; https://www.euppublishing.com/ ; >
+
+  }
+
+  {
+
+    title <
+      name = Victoriographies – A Journal of Nineteenth-Century Writing, 1790-1914 ;
+      issn = 2044-2416 ;
+      eissn = 2044-2424 ;
+      issnl = 2044-2416 
+     >
+
+    param[journal_id] = vic
+
+    au < exists ; exists ; 2011 ; Victoriographies – A Journal of Nineteenth-Century Writing, 1790-1914 Volume 2011 ; 2011 ; https://www.euppublishing.com/ ; >
+    au < exists ; exists ; 2012 ; Victoriographies – A Journal of Nineteenth-Century Writing, 1790-1914 Volume 2012 ; 2012 ; https://www.euppublishing.com/ ; >
+    au < exists ; exists ; 2013 ; Victoriographies – A Journal of Nineteenth-Century Writing, 1790-1914 Volume 2013 ; 2013 ; https://www.euppublishing.com/ ; >
+    au < exists ; exists ; 2014 ; Victoriographies – A Journal of Nineteenth-Century Writing, 1790-1914 Volume 2014 ; 2014 ; https://www.euppublishing.com/ ; >
+    au < exists ; exists ; 2015 ; Victoriographies – A Journal of Nineteenth-Century Writing, 1790-1914 Volume 2015 ; 2015 ; https://www.euppublishing.com/ ; >
+    au < exists ; exists ; 2016 ; Victoriographies – A Journal of Nineteenth-Century Writing, 1790-1914 Volume 2016 ; 2016 ; https://www.euppublishing.com/ ; >
+    au < exists ; exists ; 2017 ; Victoriographies – A Journal of Nineteenth-Century Writing, 1790-1914 Volume 2017 ; 2017 ; https://www.euppublishing.com/ ; >
+    au < exists ; exists ; 2018 ; Victoriographies – A Journal of Nineteenth-Century Writing, 1790-1914 Volume 2018 ; 2018 ; https://www.euppublishing.com/ ; >
+
+  }
+
+  {
+
+    title <
+      name = Deleuze and Guattari Studies ;
+      issn = 2398-9777 ;
+      eissn = 2398-9785 ;
+      issnl = 2398-9777 
+     >
+
+    param[journal_id] = dlgs
+
+    au < exists ; exists ; 2018 ; Deleuze and Guattari Studies Volume 2018 ; 2018 ; https://www.euppublishing.com/ ; >
+
+  }
+
+  {
+
+    title <
+      name = CounterText ;
+      issn = 2056-4406 ;
+      eissn = 2056-4414 ;
+      issnl = 2056-4406 
+     >
+
+    param[journal_id] = count
+
+    au < exists ; exists ; 2015 ; CounterText Volume 2015 ; 2015 ; https://www.euppublishing.com/ ; >
+    au < exists ; exists ; 2016 ; CounterText Volume 2016 ; 2016 ; https://www.euppublishing.com/ ; >
+    au < exists ; exists ; 2017 ; CounterText Volume 2017 ; 2017 ; https://www.euppublishing.com/ ; >
+    au < exists ; exists ; 2018 ; CounterText Volume 2018 ; 2018 ; https://www.euppublishing.com/ ; >
 
   }
 
