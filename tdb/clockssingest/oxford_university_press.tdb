@@ -5800,7 +5800,7 @@
 
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Gastroenterology Report Volume 1 ; 1 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Gastroenterology Report Volume 2 ; 2 ;  >
-    au < ready ; exists ; 2015 ; 2015 ; Gastroenterology Report Volume 3 ; 3 ;  >
+    au < crawling ; exists ; 2015 ; 2015 ; Gastroenterology Report Volume 3 ; 3 ;  >
     au < testing ; exists ; 2016 ; 2016 ; Gastroenterology Report Volume 4 ; 4 ;  >
     au < testing ; exists ; 2017 ; 2017 ; Gastroenterology Report Volume 5 ; 5 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; Gastroenterology Report Volume 6 ; 6 ;  >
@@ -6177,7 +6177,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Health Education Research Volume 28 ; 28 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Health Education Research Volume 29 ; 29 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Health Education Research Volume 30 ; 30 ;  >
-    au < ready ; exists ; 2016 ; 2016 ; Health Education Research Volume 31 ; 31 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; Health Education Research Volume 31 ; 31 ;  >
     au < testing ; exists ; 2017 ; 2017 ; Health Education Research Volume 32 ; 32 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; Health Education Research Volume 33 ; 33 ;  >
 
@@ -6272,7 +6272,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Health Promotion International Volume 29 ; 29 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Health Promotion International Volume 30 ; 30 ;  >
     au < testing ; exists ; 2016 ; 2016 ; Health Promotion International Volume 31 ; 31 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; Health Promotion International Volume 32 ; 32 ;  >
+    au < crawling ; exists ; 2017 ; 2017 ; Health Promotion International Volume 32 ; 32 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; Health Promotion International Volume 33 ; 33 ;  >
 
   }
@@ -6407,7 +6407,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Human Molecular Genetics Volume 14 ; 14 ;  >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Human Molecular Genetics Volume 15 ; 15 ;  >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Human Molecular Genetics Volume 16 ; 16 ;  >
-    au < ready ; exists ; 2008 ; 2008 ; Human Molecular Genetics Volume 17 ; 17 ;  >
+    au < crawling ; exists ; 2008 ; 2008 ; Human Molecular Genetics Volume 17 ; 17 ;  >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Human Molecular Genetics Volume 18 ; 18 ;  >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Human Molecular Genetics Volume 19 ; 19 ;  >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Human Molecular Genetics Volume 20 ; 20 ;  >
@@ -6693,7 +6693,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; ICSID Review: Foreign Investment Law Journal Volume 22 ; 22 ;  >
     au < testing ; exists ; 2008 ; 2008 ; ICSID Review: Foreign Investment Law Journal Volume 23 ; 23 ;  >
     au < testing ; exists ; 2009 ; 2009 ; ICSID Review: Foreign Investment Law Journal Volume 24 ; 24 ;  >
-    au < ready ; exists ; 2010 ; 2010 ; ICSID Review: Foreign Investment Law Journal Volume 25 ; 25 ;  >
+    au < crawling ; exists ; 2010 ; 2010 ; ICSID Review: Foreign Investment Law Journal Volume 25 ; 25 ;  >
     au < testing ; exists ; 2011 ; 2011 ; ICSID Review: Foreign Investment Law Journal Volume 26 ; 26 ;  >
     au < testing ; exists ; 2012 ; 2012 ; ICSID Review: Foreign Investment Law Journal Volume 27 ; 27 ;  >
     au < testing ; exists ; 2013 ; 2013 ; ICSID Review: Foreign Investment Law Journal Volume 28 ; 28 ;  >
@@ -7795,7 +7795,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; International Journal of Public Opinion Research Volume 25 ; 25 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; International Journal of Public Opinion Research Volume 26 ; 26 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Journal of Public Opinion Research Volume 27 ; 27 ;  >
-    au < ready ; exists ; 2016 ; 2016 ; International Journal of Public Opinion Research Volume 28 ; 28 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; International Journal of Public Opinion Research Volume 28 ; 28 ;  >
     au < testing ; exists ; 2017 ; 2017 ; International Journal of Public Opinion Research Volume 29 ; 29 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; International Journal of Public Opinion Research Volume 30 ; 30 ;  >
 
@@ -8680,7 +8680,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Journal of Chromatographic Science Volume 51 ; 51 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Chromatographic Science Volume 52 ; 52 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Chromatographic Science Volume 53 ; 53 ;  >
-    au < ready ; exists ; 2016 ; 2016 ; Journal of Chromatographic Science Volume 54 ; 54 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; Journal of Chromatographic Science Volume 54 ; 54 ;  >
     au < testing ; exists ; 2017 ; 2017 ; Journal of Chromatographic Science Volume 55 ; 55 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; Journal of Chromatographic Science Volume 56 ; 56 ;  >
 
@@ -10247,7 +10247,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Journal of Neuropathology & Experimental Neurology Volume 66 ; 66 ;  >
     au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; Journal of Neuropathology & Experimental Neurology Volume 67 ; 67 ;  >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Journal of Neuropathology & Experimental Neurology Volume 68 ; 68 ;  >
-    au < ready ; exists ; 2010 ; 2010 ; Journal of Neuropathology & Experimental Neurology Volume 69 ; 69 ;  >
+    au < crawling ; exists ; 2010 ; 2010 ; Journal of Neuropathology & Experimental Neurology Volume 69 ; 69 ;  >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Journal of Neuropathology & Experimental Neurology Volume 70 ; 70 ;  >
     au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Journal of Neuropathology & Experimental Neurology Volume 71 ; 71 ;  >
     au < testing ; exists ; 2013 ; 2013 ; Journal of Neuropathology & Experimental Neurology Volume 72 ; 72 ;  >
