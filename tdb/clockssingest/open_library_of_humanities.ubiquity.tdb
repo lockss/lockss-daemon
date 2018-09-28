@@ -45,15 +45,15 @@
       au < manifest ; exists ; 1998 ; 20 ; Pynchon Notes Volume 1998 ; 1998 ; https://pynchonnotes.openlibhums.org/ ; >
       au < manifest ; exists ; 1999 ; 21 ; Pynchon Notes Volume 1999 ; 1999 ; https://pynchonnotes.openlibhums.org/ ; >
       au < exists ; exists ; 2000 ; 22 ; Pynchon Notes Volume 2000 ; 2000 ; https://pynchonnotes.openlibhums.org/ ; >
-      au < manifest ; exists ; 2001 ; 23 ; Pynchon Notes Volume 2001 ; 2001 ; https://pynchonnotes.openlibhums.org/ ; >
-      au < manifest ; exists ; 2002 ; 24 ; Pynchon Notes Volume 2002 ; 2002 ; https://pynchonnotes.openlibhums.org/ ; >
-      au < manifest ; exists ; 2003 ; 25 ; Pynchon Notes Volume 2003 ; 2003 ; https://pynchonnotes.openlibhums.org/ ; >
+      au < ready ; exists ; 2001 ; 23 ; Pynchon Notes Volume 2001 ; 2001 ; https://pynchonnotes.openlibhums.org/ ; >
+      au < ready ; exists ; 2002 ; 24 ; Pynchon Notes Volume 2002 ; 2002 ; https://pynchonnotes.openlibhums.org/ ; >
+      au < ready ; exists ; 2003 ; 25 ; Pynchon Notes Volume 2003 ; 2003 ; https://pynchonnotes.openlibhums.org/ ; >
       au < exists ; exists ; 2004 ; 26 ; Pynchon Notes Volume 2004 ; 2004 ; https://pynchonnotes.openlibhums.org/ ; >
       au < exists ; exists ; 2005 ; 27 ; Pynchon Notes Volume 2005 ; 2005 ; https://pynchonnotes.openlibhums.org/ ; >
       au < exists ; exists ; 2006 ; 28 ; Pynchon Notes Volume 2006 ; 2006 ; https://pynchonnotes.openlibhums.org/ ; >
       au < exists ; exists ; 2007 ; 29 ; Pynchon Notes Volume 2007 ; 2007 ; https://pynchonnotes.openlibhums.org/ ; >
-      au < manifest ; exists ; 2008 ; 30 ; Pynchon Notes Volume 2008 ; 2008 ; https://pynchonnotes.openlibhums.org/ ; >
-      au < manifest ; exists ; 2009 ; 31 ; Pynchon Notes Volume 2009 ; 2009 ; https://pynchonnotes.openlibhums.org/ ; >
+      au < ready ; exists ; 2008 ; 30 ; Pynchon Notes Volume 2008 ; 2008 ; https://pynchonnotes.openlibhums.org/ ; >
+      au < ready ; exists ; 2009 ; 31 ; Pynchon Notes Volume 2009 ; 2009 ; https://pynchonnotes.openlibhums.org/ ; >
 
   }
 
@@ -190,10 +190,10 @@
       implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
 
 
-      au < manifest ; exists ; 2015 ; 1 ; Le foucaldien Volume 2015 ; 2015 ; https://foucaldien.net/ ; >
-      au < manifest ; exists ; 2016 ; 2 ; Le foucaldien Volume 2016 ; 2016 ; https://foucaldien.net/ ; >
-      au < manifest ; exists ; 2017 ; 3 ; Le foucaldien Volume 2017 ; 2017 ; https://foucaldien.net/ ; >
-      au < manifest ; exists ; 2018 ; 4 ; Le foucaldien Volume 2018 ; 2018 ; https://foucaldien.net/ ; >
+      au < ready ; exists ; 2015 ; 1 ; Le foucaldien Volume 2015 ; 2015 ; https://foucaldien.net/ ; >
+      au < ready ; exists ; 2016 ; 2 ; Le foucaldien Volume 2016 ; 2016 ; https://foucaldien.net/ ; >
+      au < ready ; exists ; 2017 ; 3 ; Le foucaldien Volume 2017 ; 2017 ; https://foucaldien.net/ ; >
+      au < ready ; exists ; 2018 ; 4 ; Le foucaldien Volume 2018 ; 2018 ; https://foucaldien.net/ ; >
 
   }
 
@@ -210,7 +210,7 @@
       implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
 
 
-      au < manifest ; exists ; 2018 ; 1 ; Journal of Embodied Research Volume 2018 ; 2018 ; https://jer.openlibhums.org/ ; >
+      au < ready ; exists ; 2018 ; 1 ; Journal of Embodied Research Volume 2018 ; 2018 ; https://jer.openlibhums.org/ ; >
 
   }
 
@@ -245,7 +245,7 @@
       au < manifest ; exists ; 2015 ; 2015 ; Body, Space & Technology Volume 2015 ; 2015 ; https://www.bstjournal.com/ ; >
       au < manifest ; exists ; 2016 ; 2016 ; Body, Space & Technology Volume 2016 ; 2016 ; https://www.bstjournal.com/ ; >
       au < manifest ; exists ; 2017 ; 2017 ; Body, Space & Technology Volume 2017 ; 2017 ; https://www.bstjournal.com/ ; >
-      au < manifest ; exists ; 2018 ; 2018 ; Body, Space & Technology Volume 2018 ; 2018 ; https://www.bstjournal.com/ ; >
+      au < ready ; exists ; 2018 ; 2018 ; Body, Space & Technology Volume 2018 ; 2018 ; https://www.bstjournal.com/ ; >
 
   }
 
@@ -261,14 +261,14 @@
       plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
       implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
 
-      au < manifest ; exists ; 2011 ; 2011 ; Digital Studies / Le champ numérique Volume 2011 ; 2011 ; https://www.digitalstudies.org/ ; >
-      au < manifest ; exists ; 2012 ; 2012 ; Digital Studies / Le champ numérique Volume 2012 ; 2012 ; https://www.digitalstudies.org/ ; >
-      au < manifest ; exists ; 2013 ; 2013 ; Digital Studies / Le champ numérique Volume 2013 ; 2013 ; https://www.digitalstudies.org/ ; >
-      au < manifest ; exists ; 2014 ; 2014 ; Digital Studies / Le champ numérique Volume 2014 ; 2014 ; https://www.digitalstudies.org/ ; >
-      au < manifest ; exists ; 2015 ; 2015 ; Digital Studies / Le champ numérique Volume 2015 ; 2015 ; https://www.digitalstudies.org/ ; >
-      au < manifest ; exists ; 2016 ; 2016 ; Digital Studies / Le champ numérique Volume 2016 ; 2016 ; https://www.digitalstudies.org/ ; >
-      au < manifest ; exists ; 2017 ; 2017 ; Digital Studies / Le champ numérique Volume 2017 ; 2017 ; https://www.digitalstudies.org/ ; >
-      au < manifest ; exists ; 2018 ; 2018 ; Digital Studies / Le champ numérique Volume 2018 ; 2018 ; https://www.digitalstudies.org/ ; >
+      au < ready ; exists ; 2011 ; 2011 ; Digital Studies / Le champ numérique Volume 2011 ; 2011 ; https://www.digitalstudies.org/ ; >
+      au < ready ; exists ; 2012 ; 2012 ; Digital Studies / Le champ numérique Volume 2012 ; 2012 ; https://www.digitalstudies.org/ ; >
+      au < ready ; exists ; 2013 ; 2013 ; Digital Studies / Le champ numérique Volume 2013 ; 2013 ; https://www.digitalstudies.org/ ; >
+      au < ready ; exists ; 2014 ; 2014 ; Digital Studies / Le champ numérique Volume 2014 ; 2014 ; https://www.digitalstudies.org/ ; >
+      au < ready ; exists ; 2015 ; 2015 ; Digital Studies / Le champ numérique Volume 2015 ; 2015 ; https://www.digitalstudies.org/ ; >
+      au < ready ; exists ; 2016 ; 2016 ; Digital Studies / Le champ numérique Volume 2016 ; 2016 ; https://www.digitalstudies.org/ ; >
+      au < ready ; exists ; 2017 ; 2017 ; Digital Studies / Le champ numérique Volume 2017 ; 2017 ; https://www.digitalstudies.org/ ; >
+      au < ready ; exists ; 2018 ; 2018 ; Digital Studies / Le champ numérique Volume 2018 ; 2018 ; https://www.digitalstudies.org/ ; >
 
   }
 

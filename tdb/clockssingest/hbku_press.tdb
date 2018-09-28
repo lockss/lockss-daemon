@@ -228,7 +228,7 @@
     plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
     param[journal_id] = jist
 
-    au < testing ; exists ; 2018 ; Information Studies & Technology Volume 2018 ; 2018 ; >
+    au < ready ; exists ; 2018 ; Information Studies & Technology Volume 2018 ; 2018 ; >
 
   }
   
@@ -379,7 +379,7 @@
     param[journal_id] = qmj
 
     au < manifest ; exists ; 1997 ; Qatar Medical Journal Volume 1997 ; 1997 ; >
-    au < manifest ; exists ; 1998 ; Qatar Medical Journal Volume 1998 ; 1998 ; >
+    au < ready ; exists ; 1998 ; Qatar Medical Journal Volume 1998 ; 1998 ; >
     au < finished ; finished ; 2012 ; Qatar Medical Journal Volume 2012 ; 2012 ; >
     au < finished ; finished ; 2013 ; Qatar Medical Journal Volume 2013 ; 2013 ; >
     au < frozen ; exists ; 2014 ; Qatar Medical Journal Volume 2014 ; 2014 ; >
@@ -450,7 +450,7 @@
     plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
     param[journal_id] = rolacc
 
-    au < testing ; exists ; 2018 ; Rule of Law and Anti-Corruption Journal Volume 2018 ; 2018 ; >
+    au < ready ; exists ; 2018 ; Rule of Law and Anti-Corruption Journal Volume 2018 ; 2018 ; >
 
   }
   

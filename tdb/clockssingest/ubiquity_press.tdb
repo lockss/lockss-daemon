@@ -299,7 +299,7 @@
       comment[publisher] = Open Library of Humanities
 #      param[base_url] = https://openscreensjournal.com/
 
-      au < manifest ; exists ; 2018 ; 1 ; Open Screens Volume 2018 ; 2018 ; https://openscreensjournal.com/ ; >
+      au < ready ; exists ; 2018 ; 1 ; Open Screens Volume 2018 ; 2018 ; https://openscreensjournal.com/ ; >
 
   }
 
@@ -322,25 +322,25 @@
       au < manifest ; exists ; 1997 ; 7 ; Theoretical Roman Archaeology Journal Volume 1997 ; 1997 ; https://traj.openlibhums.org/ ; >
       au < manifest ; exists ; 1998 ; 8 ; Theoretical Roman Archaeology Journal Volume 1998 ; 1998 ; https://traj.openlibhums.org/ ; >
       au < manifest ; exists ; 1999 ; 9 ; Theoretical Roman Archaeology Journal Volume 1999 ; 1999 ; https://traj.openlibhums.org/ ; >
-      au < manifest ; exists ; 2000 ; 10 ; Theoretical Roman Archaeology Journal Volume 2000 ; 2000 ; https://traj.openlibhums.org/ ; >
-      au < manifest ; exists ; 2001 ; 11 ; Theoretical Roman Archaeology Journal Volume 2001 ; 2001 ; https://traj.openlibhums.org/ ; >
-      au < manifest ; exists ; 2002 ; 12 ; Theoretical Roman Archaeology Journal Volume 2002 ; 2002 ; https://traj.openlibhums.org/ ; >
-      au < manifest ; exists ; 2003 ; 13 ; Theoretical Roman Archaeology Journal Volume 2003 ; 2003 ; https://traj.openlibhums.org/ ; >
-      au < manifest ; exists ; 2004 ; 14 ; Theoretical Roman Archaeology Journal Volume 2004 ; 2004 ; https://traj.openlibhums.org/ ; >
-      au < manifest ; exists ; 2005 ; 15 ; Theoretical Roman Archaeology Journal Volume 2005 ; 2005 ; https://traj.openlibhums.org/ ; >
-      au < manifest ; exists ; 2006 ; 16 ; Theoretical Roman Archaeology Journal Volume 2006 ; 2006 ; https://traj.openlibhums.org/ ; >
-      au < manifest ; exists ; 2007 ; 17 ; Theoretical Roman Archaeology Journal Volume 2007 ; 2007 ; https://traj.openlibhums.org/ ; >
-      au < manifest ; exists ; 2008 ; 18 ; Theoretical Roman Archaeology Journal Volume 2008 ; 2008 ; https://traj.openlibhums.org/ ; >
-      au < manifest ; exists ; 2009 ; 19 ; Theoretical Roman Archaeology Journal Volume 2009 ; 2009 ; https://traj.openlibhums.org/ ; >
-      au < manifest ; exists ; 2010 ; 20 ; Theoretical Roman Archaeology Journal Volume 2010 ; 2010 ; https://traj.openlibhums.org/ ; >
-      au < manifest ; exists ; 2011 ; 21 ; Theoretical Roman Archaeology Journal Volume 2011 ; 2011 ; https://traj.openlibhums.org/ ; >
-      au < manifest ; exists ; 2012 ; 22 ; Theoretical Roman Archaeology Journal Volume 2012 ; 2012 ; https://traj.openlibhums.org/ ; >
-      au < manifest ; exists ; 2013 ; 23 ; Theoretical Roman Archaeology Journal Volume 2013 ; 2013 ; https://traj.openlibhums.org/ ; >
-      au < manifest ; exists ; 2014 ; 24 ; Theoretical Roman Archaeology Journal Volume 2014 ; 2014 ; https://traj.openlibhums.org/ ; >
-      au < manifest ; exists ; 2015 ; 25 ; Theoretical Roman Archaeology Journal Volume 2015 ; 2015 ; https://traj.openlibhums.org/ ; >
+      au < ready ; exists ; 2000 ; 10 ; Theoretical Roman Archaeology Journal Volume 2000 ; 2000 ; https://traj.openlibhums.org/ ; >
+      au < ready ; exists ; 2001 ; 11 ; Theoretical Roman Archaeology Journal Volume 2001 ; 2001 ; https://traj.openlibhums.org/ ; >
+      au < ready ; exists ; 2002 ; 12 ; Theoretical Roman Archaeology Journal Volume 2002 ; 2002 ; https://traj.openlibhums.org/ ; >
+      au < ready ; exists ; 2003 ; 13 ; Theoretical Roman Archaeology Journal Volume 2003 ; 2003 ; https://traj.openlibhums.org/ ; >
+      au < ready ; exists ; 2004 ; 14 ; Theoretical Roman Archaeology Journal Volume 2004 ; 2004 ; https://traj.openlibhums.org/ ; >
+      au < ready ; exists ; 2005 ; 15 ; Theoretical Roman Archaeology Journal Volume 2005 ; 2005 ; https://traj.openlibhums.org/ ; >
+      au < ready ; exists ; 2006 ; 16 ; Theoretical Roman Archaeology Journal Volume 2006 ; 2006 ; https://traj.openlibhums.org/ ; >
+      au < ready ; exists ; 2007 ; 17 ; Theoretical Roman Archaeology Journal Volume 2007 ; 2007 ; https://traj.openlibhums.org/ ; >
+      au < ready ; exists ; 2008 ; 18 ; Theoretical Roman Archaeology Journal Volume 2008 ; 2008 ; https://traj.openlibhums.org/ ; >
+      au < ready ; exists ; 2009 ; 19 ; Theoretical Roman Archaeology Journal Volume 2009 ; 2009 ; https://traj.openlibhums.org/ ; >
+      au < ready ; exists ; 2010 ; 20 ; Theoretical Roman Archaeology Journal Volume 2010 ; 2010 ; https://traj.openlibhums.org/ ; >
+      au < ready ; exists ; 2011 ; 21 ; Theoretical Roman Archaeology Journal Volume 2011 ; 2011 ; https://traj.openlibhums.org/ ; >
+      au < ready ; exists ; 2012 ; 22 ; Theoretical Roman Archaeology Journal Volume 2012 ; 2012 ; https://traj.openlibhums.org/ ; >
+      au < ready ; exists ; 2013 ; 23 ; Theoretical Roman Archaeology Journal Volume 2013 ; 2013 ; https://traj.openlibhums.org/ ; >
+      au < ready ; exists ; 2014 ; 24 ; Theoretical Roman Archaeology Journal Volume 2014 ; 2014 ; https://traj.openlibhums.org/ ; >
+      au < ready ; exists ; 2015 ; 25 ; Theoretical Roman Archaeology Journal Volume 2015 ; 2015 ; https://traj.openlibhums.org/ ; >
       au < manifest ; exists ; 2016 ; 26 ; Theoretical Roman Archaeology Journal Volume 2016 ; 2016 ; https://traj.openlibhums.org/ ; >
       au < exists ; exists ; 2017 ; 27 ; Theoretical Roman Archaeology Journal Volume 2017 ; 2017 ; https://traj.openlibhums.org/ ; >
-      au < manifest ; exists ; 2018 ; 28 ; Theoretical Roman Archaeology Journal Volume 2018 ; 2018 ; https://traj.openlibhums.org/ ; >
+      au < ready ; exists ; 2018 ; 28 ; Theoretical Roman Archaeology Journal Volume 2018 ; 2018 ; https://traj.openlibhums.org/ ; >
 
   }
 
@@ -492,7 +492,7 @@
       comment[publisher] = Stockholm University Press
 #      param[base_url] = https://franorfon.org/
 
-      au < manifest ; exists ; 2018 ; 1 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2018 ; 2018 ; https://franorfon.org/ ; >
+      au < ready ; exists ; 2018 ; 1 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2018 ; 2018 ; https://franorfon.org/ ; >
 
   }
 }
@@ -984,7 +984,7 @@
       au < finished ; finished ; 2014 ; 2 ; Open Health Data Volume 2014 ; 2014 ; http://openhealthdata.metajnl.com/ ; >
       au < finished ; finished ; 2015 ; 3 ; Open Health Data Volume 2015 ; 2015 ; http://openhealthdata.metajnl.com/ ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2016 ; 4 ; Open Health Data Volume 2016 ; 2016 ; http://openhealthdata.metajnl.com/ ; >
-      au < manifest ; exists ; 2018 ; 5 ; Open Health Data Volume 2018 ; 2018 ; https://openhealthdata.metajnl.com/ ; >
+      au < ready ; exists ; 2018 ; 5 ; Open Health Data Volume 2018 ; 2018 ; https://openhealthdata.metajnl.com/ ; >
 
   }
 
@@ -1158,7 +1158,7 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://journalofmore.org/
 
-      au < manifest ; exists ; 2016 ; 4 ; Journal of Montessori Research & Education Volume 2016 ; 2016 ; https://journalofmore.org/ ; >
+      au < ready ; exists ; 2016 ; 4 ; Journal of Montessori Research & Education Volume 2016 ; 2016 ; https://journalofmore.org/ ; >
       au < expected ; exists ; 2018 ; 5 ; Journal of Montessori Research & Education Volume 2018 ; 2018 ; https://journalofmore.org/ ; >
 
   }
@@ -1451,14 +1451,14 @@
       au < manifest ; exists ; 2008 ; 1 ; Cultural Science Journal Volume 2008 ; 2008 ; https://culturalscience.org/ ; >
       au < manifest ; exists ; 2009 ; 2 ; Cultural Science Journal Volume 2009 ; 2009 ; https://culturalscience.org/ ; >
       au < manifest ; exists ; 2010 ; 3 ; Cultural Science Journal Volume 2010 ; 2010 ; https://culturalscience.org/ ; >
-      au < manifest ; exists ; 2011 ; 4 ; Cultural Science Journal Volume 2011 ; 2011 ; https://culturalscience.org/ ; >
-      au < manifest ; exists ; 2012 ; 5 ; Cultural Science Journal Volume 2012 ; 2012 ; https://culturalscience.org/ ; >
-      au < manifest ; exists ; 2013 ; 6 ; Cultural Science Journal Volume 2013 ; 2013 ; https://culturalscience.org/ ; >
-      au < manifest ; exists ; 2014 ; 7 ; Cultural Science Journal Volume 2014 ; 2014 ; https://culturalscience.org/ ; >
-      au < manifest ; exists ; 2015 ; 8 ; Cultural Science Journal Volume 2015 ; 2015 ; https://culturalscience.org/ ; >
-      au < manifest ; exists ; 2016 ; 9 ; Cultural Science Journal Volume 2016 ; 2016 ; https://culturalscience.org/ ; >
-      au < manifest ; exists ; 2017 ; 10 ; Cultural Science Journal Volume 2017 ; 2017 ; https://culturalscience.org/ ; >
-      au < manifest ; exists ; 2018 ; 11 ; Cultural Science Journal Volume 2018 ; 2018 ; https://culturalscience.org/ ; >
+      au < ready ; exists ; 2011 ; 4 ; Cultural Science Journal Volume 2011 ; 2011 ; https://culturalscience.org/ ; >
+      au < ready ; exists ; 2012 ; 5 ; Cultural Science Journal Volume 2012 ; 2012 ; https://culturalscience.org/ ; >
+      au < ready ; exists ; 2013 ; 6 ; Cultural Science Journal Volume 2013 ; 2013 ; https://culturalscience.org/ ; >
+      au < ready ; exists ; 2014 ; 7 ; Cultural Science Journal Volume 2014 ; 2014 ; https://culturalscience.org/ ; >
+      au < ready ; exists ; 2015 ; 8 ; Cultural Science Journal Volume 2015 ; 2015 ; https://culturalscience.org/ ; >
+      au < ready ; exists ; 2016 ; 9 ; Cultural Science Journal Volume 2016 ; 2016 ; https://culturalscience.org/ ; >
+      au < ready ; exists ; 2017 ; 10 ; Cultural Science Journal Volume 2017 ; 2017 ; https://culturalscience.org/ ; >
+      au < ready ; exists ; 2018 ; 11 ; Cultural Science Journal Volume 2018 ; 2018 ; https://culturalscience.org/ ; >
 
   }
 
@@ -1472,12 +1472,12 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://egems.academyhealth.org/
 
-      au < manifest ; exists ; 2013 ; 1 ; eGEMs (Generating Evidence & Methods to improve patient outcomes) Volume 2013 ; 2013 ; https://egems.academyhealth.org/ ; >
-      au < manifest ; exists ; 2014 ; 2 ; eGEMs (Generating Evidence & Methods to improve patient outcomes) Volume 2014 ; 2014 ; https://egems.academyhealth.org/ ; >
-      au < manifest ; exists ; 2015 ; 3 ; eGEMs (Generating Evidence & Methods to improve patient outcomes) Volume 2015 ; 2015 ; https://egems.academyhealth.org/ ; >
-      au < manifest ; exists ; 2016 ; 4 ; eGEMs (Generating Evidence & Methods to improve patient outcomes) Volume 2016 ; 2016 ; https://egems.academyhealth.org/ ; >
-      au < manifest ; exists ; 2017 ; 5 ; eGEMs (Generating Evidence & Methods to improve patient outcomes) Volume 2017 ; 2017 ; https://egems.academyhealth.org/ ; >
-      au < manifest ; exists ; 2018 ; 6 ; eGEMs (Generating Evidence & Methods to improve patient outcomes) Volume 2018 ; 2018 ; https://egems.academyhealth.org/ ; >
+      au < ready ; exists ; 2013 ; 1 ; eGEMs (Generating Evidence & Methods to improve patient outcomes) Volume 2013 ; 2013 ; https://egems.academyhealth.org/ ; >
+      au < ready ; exists ; 2014 ; 2 ; eGEMs (Generating Evidence & Methods to improve patient outcomes) Volume 2014 ; 2014 ; https://egems.academyhealth.org/ ; >
+      au < ready ; exists ; 2015 ; 3 ; eGEMs (Generating Evidence & Methods to improve patient outcomes) Volume 2015 ; 2015 ; https://egems.academyhealth.org/ ; >
+      au < ready ; exists ; 2016 ; 4 ; eGEMs (Generating Evidence & Methods to improve patient outcomes) Volume 2016 ; 2016 ; https://egems.academyhealth.org/ ; >
+      au < ready ; exists ; 2017 ; 5 ; eGEMs (Generating Evidence & Methods to improve patient outcomes) Volume 2017 ; 2017 ; https://egems.academyhealth.org/ ; >
+      au < ready ; exists ; 2018 ; 6 ; eGEMs (Generating Evidence & Methods to improve patient outcomes) Volume 2018 ; 2018 ; https://egems.academyhealth.org/ ; >
 
   }
 
@@ -1491,11 +1491,11 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://www.ejmcm.com/
 
-      au < manifest ; exists ; 2014 ; 1 ; European Journal of Molecular and Clinical Medicine Volume 2014 ; 2014 ; https://www.ejmcm.com/ ; >
-      au < manifest ; exists ; 2015 ; 2 ; European Journal of Molecular and Clinical Medicine Volume 2015 ; 2015 ; https://www.ejmcm.com/ ; >
-      au < manifest ; exists ; 2016 ; 3 ; European Journal of Molecular and Clinical Medicine Volume 2016 ; 2016 ; https://www.ejmcm.com/ ; >
-      au < manifest ; exists ; 2017 ; 4 ; European Journal of Molecular and Clinical Medicine Volume 2017 ; 2017 ; https://www.ejmcm.com/ ; >
-      au < manifest ; exists ; 2018 ; 5 ; European Journal of Molecular and Clinical Medicine Volume 2018 ; 2018 ; https://www.ejmcm.com/ ; >
+      au < ready ; exists ; 2014 ; 1 ; European Journal of Molecular and Clinical Medicine Volume 2014 ; 2014 ; https://www.ejmcm.com/ ; >
+      au < ready ; exists ; 2015 ; 2 ; European Journal of Molecular and Clinical Medicine Volume 2015 ; 2015 ; https://www.ejmcm.com/ ; >
+      au < ready ; exists ; 2016 ; 3 ; European Journal of Molecular and Clinical Medicine Volume 2016 ; 2016 ; https://www.ejmcm.com/ ; >
+      au < ready ; exists ; 2017 ; 4 ; European Journal of Molecular and Clinical Medicine Volume 2017 ; 2017 ; https://www.ejmcm.com/ ; >
+      au < ready ; exists ; 2018 ; 5 ; European Journal of Molecular and Clinical Medicine Volume 2018 ; 2018 ; https://www.ejmcm.com/ ; >
 
   }
 
@@ -1509,7 +1509,7 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://www.journalofcognition.org/
 
-      au < manifest ; exists ; 2018 ; 1 ; Journal of Cognition Volume 2018 ; 2018 ; https://www.journalofcognition.org/ ; >
+      au < ready ; exists ; 2018 ; 1 ; Journal of Cognition Volume 2018 ; 2018 ; https://www.journalofcognition.org/ ; >
 
   }
 
@@ -1523,7 +1523,7 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://journal.caa-international.org/
 
-      au < manifest ; exists ; 2018 ; 1 ; Journal of Computer Applications in Archaeology Volume 2018 ; 2018 ; https://journal.caa-international.org/ ; >
+      au < ready ; exists ; 2018 ; 1 ; Journal of Computer Applications in Archaeology Volume 2018 ; 2018 ; https://journal.caa-international.org/ ; >
 
   }
 
@@ -1537,8 +1537,8 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://kula.uvic.ca/
 
-      au < manifest ; exists ; 2017 ; 1 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2017 ; 2017 ; https://kula.uvic.ca/ ; >
-      au < manifest ; exists ; 2018 ; 2 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2018 ; 2018 ; https://kula.uvic.ca/ ; >
+      au < ready ; exists ; 2017 ; 1 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2017 ; 2017 ; https://kula.uvic.ca/ ; >
+      au < ready ; exists ; 2018 ; 2 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2018 ; 2018 ; https://kula.uvic.ca/ ; >
 
   }
 
@@ -1552,7 +1552,7 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://metaphysicsjournal.com/
 
-      au < manifest ; exists ; 2018 ; 1 ; Metaphysics Volume 2018 ; 2018 ; https://metaphysicsjournal.com/ ; >
+      au < ready ; exists ; 2018 ; 1 ; Metaphysics Volume 2018 ; 2018 ; https://metaphysicsjournal.com/ ; >
 
   }
 
@@ -1566,8 +1566,8 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://paahjournal.com/
 
-      au < manifest ; exists ; 2017 ; 1 ; Physical Activity and Health Volume 2017 ; 2017 ; https://paahjournal.com/ ; >
-      au < manifest ; exists ; 2018 ; 2 ; Physical Activity and Health Volume 2018 ; 2018 ; https://paahjournal.com/ ; >
+      au < ready ; exists ; 2017 ; 1 ; Physical Activity and Health Volume 2017 ; 2017 ; https://paahjournal.com/ ; >
+      au < ready ; exists ; 2018 ; 2 ; Physical Activity and Health Volume 2018 ; 2018 ; https://paahjournal.com/ ; >
 
   }
 
@@ -1581,12 +1581,12 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://tilburglawreview.com/
 
-      au < manifest ; exists ; 2012 ; 1 ; Tilburg International Law Review Volume 2012 ; 2012 ; https://tilburglawreview.com/ ; >
-      au < manifest ; exists ; 2013 ; 2 ; Tilburg International Law Review Volume 2013 ; 2013 ; https://tilburglawreview.com/ ; >
-      au < manifest ; exists ; 2014 ; 3 ; Tilburg International Law Review Volume 2014 ; 2014 ; https://tilburglawreview.com/ ; >
-      au < manifest ; exists ; 2015 ; 4 ; Tilburg International Law Review Volume 2015 ; 2015 ; https://tilburglawreview.com/ ; >
-      au < manifest ; exists ; 2016 ; 5 ; Tilburg International Law Review Volume 2016 ; 2016 ; https://tilburglawreview.com/ ; >
-      au < manifest ; exists ; 2017 ; 6 ; Tilburg International Law Review Volume 2017 ; 2017 ; https://tilburglawreview.com/ ; >
+      au < ready ; exists ; 2012 ; 1 ; Tilburg International Law Review Volume 2012 ; 2012 ; https://tilburglawreview.com/ ; >
+      au < ready ; exists ; 2013 ; 2 ; Tilburg International Law Review Volume 2013 ; 2013 ; https://tilburglawreview.com/ ; >
+      au < ready ; exists ; 2014 ; 3 ; Tilburg International Law Review Volume 2014 ; 2014 ; https://tilburglawreview.com/ ; >
+      au < ready ; exists ; 2015 ; 4 ; Tilburg International Law Review Volume 2015 ; 2015 ; https://tilburglawreview.com/ ; >
+      au < ready ; exists ; 2016 ; 5 ; Tilburg International Law Review Volume 2016 ; 2016 ; https://tilburglawreview.com/ ; >
+      au < ready ; exists ; 2017 ; 6 ; Tilburg International Law Review Volume 2017 ; 2017 ; https://tilburglawreview.com/ ; >
       au < manifest ; exists ; 2018 ; 7 ; Tilburg International Law Review Volume 2018 ; 2018 ; https://tilburglawreview.com/ ; >
 
   }
