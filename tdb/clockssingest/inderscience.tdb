@@ -519,7 +519,7 @@
       au < doNotProcess ; exists ; 2008 ; International Journal of Agent-Oriented Software Engineering Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; exists ; 2009 ; International Journal of Agent-Oriented Software Engineering Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2010-2011 ; International Journal of Agent-Oriented Software Engineering Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
-      au < deepCrawl ; exists ; 2015-2017 ; International Journal of Agent-Oriented Software Engineering Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; >
+      au < frozen ; exists ; 2015-2017 ; International Journal of Agent-Oriented Software Engineering Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2018-2019 ; International Journal of Agent-Oriented Software Engineering Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -6149,7 +6149,7 @@
 
       param[journal_id] = ijmrm
 
-      au < ingNotReady ; down ; 2014-2018 ; International Journal of Migration and Residential Mobility Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2014-2018 ; International Journal of Migration and Residential Mobility Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
 
     }
 
@@ -8590,7 +8590,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Technology Intelligence and Planning Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Technology Intelligence and Planning Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014-2015 ; International Journal of Technology Intelligence and Planning Volume 10 ; 10 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016-2017 ; International Journal of Technology Intelligence and Planning Volume 11 ; 11 ; http://www.inderscienceonline.com/ ; >
+      au < frozen ; exists ; 2016-2017 ; International Journal of Technology Intelligence and Planning Volume 11 ; 11 ; http://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2018-2019 ; International Journal of Technology Intelligence and Planning Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
 
     }
