@@ -77,7 +77,7 @@
     au < manifest ; exists ; 2007 ; Commentarii Mathematici Helvetici Volume 82 ; 82 ; >
     au < manifest ; exists ; 2008 ; Commentarii Mathematici Helvetici Volume 83 ; 83 ; >
     au < manifest ; exists ; 2009 ; Commentarii Mathematici Helvetici Volume 84 ; 84 ; >
-    au < crawling ; exists ; 2010 ; Commentarii Mathematici Helvetici Volume 85 ; 85 ; >
+    au < frozen ; exists ; 2010 ; Commentarii Mathematici Helvetici Volume 85 ; 85 ; >
     au < ready ; exists ; 2011 ; Commentarii Mathematici Helvetici Volume 86 ; 86 ; >
     au < ready ; exists ; 2012 ; Commentarii Mathematici Helvetici Volume 87 ; 87 ; >
     au < ready ; exists ; 2013 ; Commentarii Mathematici Helvetici Volume 88 ; 88 ; >
@@ -114,10 +114,10 @@
     au < manifest ; exists ; 2007 ; Elemente der Mathematik Volume 62 ; 62 ; >
     au < manifest ; exists ; 2008 ; Elemente der Mathematik Volume 63 ; 63 ; >
     au < manifest ; exists ; 2009 ; Elemente der Mathematik Volume 64 ; 64 ; >
-    au < crawling ; exists ; 2010 ; Elemente der Mathematik Volume 65 ; 65 ; >
-    au < crawling ; exists ; 2011 ; Elemente der Mathematik Volume 66 ; 66 ; >
-    au < crawling ; exists ; 2012 ; Elemente der Mathematik Volume 67 ; 67 ; >
-    au < crawling ; exists ; 2013 ; Elemente der Mathematik Volume 68 ; 68 ; >
+    au < frozen ; exists ; 2010 ; Elemente der Mathematik Volume 65 ; 65 ; >
+    au < frozen ; exists ; 2011 ; Elemente der Mathematik Volume 66 ; 66 ; >
+    au < frozen ; exists ; 2012 ; Elemente der Mathematik Volume 67 ; 67 ; >
+    au < frozen ; exists ; 2013 ; Elemente der Mathematik Volume 68 ; 68 ; >
     au < ready ; exists ; 2014 ; Elemente der Mathematik Volume 69 ; 69 ; >
     au < finished ; crawling ; 2015 ; Elemente der Mathematik Volume 70 ; 70 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Elemente der Mathematik Volume 71 ; 71 ; reingest5.clockss.org:8082 >
@@ -138,7 +138,7 @@
     param[journal_issn] = 2308-2151
     comment[journal_id] = emss
     
-    au < crawling ; exists ; 2014 ; EMS Surveys in Mathematical Sciences Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2014 ; EMS Surveys in Mathematical Sciences Volume 1 ; 1 ; >
     au < finished ; crawling ; 2015 ; EMS Surveys in Mathematical Sciences Volume 2 ; 2 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; EMS Surveys in Mathematical Sciences Volume 3 ; 3 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; EMS Surveys in Mathematical Sciences Volume 4 ; 4 ; >
@@ -161,8 +161,8 @@
     au < manifest ; exists ; 2007 ; Groups, Geometry, and Dynamics Volume 1 ; 1 ; >
     au < manifest ; exists ; 2008 ; Groups, Geometry, and Dynamics Volume 2 ; 2 ; >
     au < manifest ; exists ; 2009 ; Groups, Geometry, and Dynamics Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2010 ; Groups, Geometry, and Dynamics Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2011 ; Groups, Geometry, and Dynamics Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2010 ; Groups, Geometry, and Dynamics Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2011 ; Groups, Geometry, and Dynamics Volume 5 ; 5 ; >
     au < ready ; exists ; 2012 ; Groups, Geometry, and Dynamics Volume 6 ; 6 ; >
     au < ready ; exists ; 2013 ; Groups, Geometry, and Dynamics Volume 7 ; 7 ; >
     au < ready ; exists ; 2014 ; Groups, Geometry, and Dynamics Volume 8 ; 8 ; >
@@ -197,10 +197,10 @@
     au < manifest ; exists ; 2008 ; Interfaces and Free Boundaries Volume 10 ; 10 ; >
     au < manifest ; exists ; 2009 ; Interfaces and Free Boundaries Volume 11 ; 11 ; >
     au < ready ; exists ; 2010 ; Interfaces and Free Boundaries Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2011 ; Interfaces and Free Boundaries Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2012 ; Interfaces and Free Boundaries Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2011 ; Interfaces and Free Boundaries Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2012 ; Interfaces and Free Boundaries Volume 14 ; 14 ; >
     au < ready ; exists ; 2013 ; Interfaces and Free Boundaries Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2014 ; Interfaces and Free Boundaries Volume 16 ; 16 ; >
+    au < frozen ; exists ; 2014 ; Interfaces and Free Boundaries Volume 16 ; 16 ; >
     au < finished ; crawling ; 2015 ; Interfaces and Free Boundaries Volume 17 ; 17 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Interfaces and Free Boundaries Volume 18 ; 18 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Interfaces and Free Boundaries Volume 19 ; 19 ; >
@@ -262,7 +262,7 @@
     au < manifest ; exists ; 2009 ; Journal of Noncommutative Geometry Volume 3 ; 3 ; >
     au < ready ; exists ; 2010 ; Journal of Noncommutative Geometry Volume 4 ; 4 ; >
     au < ready ; exists ; 2011 ; Journal of Noncommutative Geometry Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2012 ; Journal of Noncommutative Geometry Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2012 ; Journal of Noncommutative Geometry Volume 6 ; 6 ; >
     au < ready ; exists ; 2013 ; Journal of Noncommutative Geometry Volume 7 ; 7 ; >
     au < ready ; exists ; 2014 ; Journal of Noncommutative Geometry Volume 8 ; 8 ; >
     au < finished ; crawling ; 2015 ; Journal of Noncommutative Geometry Volume 9 ; 9 ; reingest4.clockss.org:8082 >
@@ -284,8 +284,8 @@
     param[journal_issn] = 1664-039X
     comment[journal_id] = jst
     
-    au < crawling ; exists ; 2011 ; Journal of Spectral Theory Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2012 ; Journal of Spectral Theory Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2011 ; Journal of Spectral Theory Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2012 ; Journal of Spectral Theory Volume 2 ; 2 ; >
     au < ready ; exists ; 2013 ; Journal of Spectral Theory Volume 3 ; 3 ; >
     au < ready ; exists ; 2014 ; Journal of Spectral Theory Volume 4 ; 4 ; >
     au < finished ; crawling ; 2015 ; Journal of Spectral Theory Volume 5 ; 5 ; reingest1.clockss.org:8082 >
@@ -320,8 +320,8 @@
     au < manifest ; exists ; 2009 ; Journal of the European Mathematical Society Volume 11 ; 11 ; >
     au < ready ; exists ; 2010 ; Journal of the European Mathematical Society Volume 12 ; 12 ; >
     au < ready ; exists ; 2011 ; Journal of the European Mathematical Society Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2012 ; Journal of the European Mathematical Society Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2013 ; Journal of the European Mathematical Society Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2012 ; Journal of the European Mathematical Society Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2013 ; Journal of the European Mathematical Society Volume 15 ; 15 ; >
     au < ready ; exists ; 2014 ; Journal of the European Mathematical Society Volume 16 ; 16 ; >
     au < finished ; crawling ; 2015 ; Journal of the European Mathematical Society Volume 17 ; 17 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2016 ; Journal of the European Mathematical Society Volume 18 ; 18 ; reingest4.clockss.org:8082 >
@@ -343,11 +343,11 @@
     comment[journal_id] = lem
 
     au < manifest ; exists ; 2009 ; L’Enseignement Mathématique Volume 55 ; 55 ; >
-    au < crawling ; exists ; 2010 ; L’Enseignement Mathématique Volume 56 ; 56 ; >
-    au < crawling ; exists ; 2011 ; L’Enseignement Mathématique Volume 57 ; 57 ; >
+    au < frozen ; exists ; 2010 ; L’Enseignement Mathématique Volume 56 ; 56 ; >
+    au < frozen ; exists ; 2011 ; L’Enseignement Mathématique Volume 57 ; 57 ; >
     au < ready ; exists ; 2012 ; L’Enseignement Mathématique Volume 58 ; 58 ; >
     au < ready ; exists ; 2013 ; L’Enseignement Mathématique Volume 59 ; 59 ; >
-    au < crawling ; exists ; 2014 ; L’Enseignement Mathématique Volume 60 ; 60 ; >
+    au < frozen ; exists ; 2014 ; L’Enseignement Mathématique Volume 60 ; 60 ; >
     au < finished ; crawling ; 2015 ; L’Enseignement Mathématique Volume 61 ; 61 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; L’Enseignement Mathématique Volume 62 ; 62 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2017 ; L’Enseignement Mathématique Volume 63 ; 63 ; >
@@ -372,8 +372,8 @@
     au < finished ; crawling ; 2009 ; Portugaliae Mathematica Volume 66 ; 66 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2010 ; Portugaliae Mathematica Volume 67 ; 67 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2011 ; Portugaliae Mathematica Volume 68 ; 68 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2012 ; Portugaliae Mathematica Volume 69 ; 69 ; >
-    au < crawling ; exists ; 2013 ; Portugaliae Mathematica Volume 70 ; 70 ; >
+    au < frozen ; exists ; 2012 ; Portugaliae Mathematica Volume 69 ; 69 ; >
+    au < frozen ; exists ; 2013 ; Portugaliae Mathematica Volume 70 ; 70 ; >
     au < ready ; exists ; 2014 ; Portugaliae Mathematica Volume 71 ; 71 ; >
     au < finished ; crawling ; 2015 ; Portugaliae Mathematica Volume 72 ; 72 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2016 ; Portugaliae Mathematica Volume 73 ; 73 ; reingest3.clockss.org:8083 >
@@ -440,8 +440,8 @@
     au < manifest ; exists ; 2008 ; Publications of the Research Institute for Mathematical Sciences Volume 44 ; 44 ; >
     au < manifest ; exists ; 2009 ; Publications of the Research Institute for Mathematical Sciences Volume 45 ; 45 ; >
     au < ready ; exists ; 2010 ; Publications of the Research Institute for Mathematical Sciences Volume 46 ; 46 ; >
-    au < crawling ; exists ; 2011 ; Publications of the Research Institute for Mathematical Sciences Volume 47 ; 47 ; >
-    au < crawling ; exists ; 2012 ; Publications of the Research Institute for Mathematical Sciences Volume 48 ; 48 ; >
+    au < frozen ; exists ; 2011 ; Publications of the Research Institute for Mathematical Sciences Volume 47 ; 47 ; >
+    au < frozen ; exists ; 2012 ; Publications of the Research Institute for Mathematical Sciences Volume 48 ; 48 ; >
     au < ready ; exists ; 2013 ; Publications of the Research Institute for Mathematical Sciences Volume 49 ; 49 ; >
     au < ready ; exists ; 2014 ; Publications of the Research Institute for Mathematical Sciences Volume 50 ; 50 ; >
     au < finished ; crawling ; 2015 ; Publications of the Research Institute for Mathematical Sciences Volume 51 ; 51 ; reingest4.clockss.org:8082 >
@@ -492,13 +492,13 @@
     au < manifest ; exists ; 2009 ; Rendiconti del Seminario Matematico della Università di Padova Volume 121 ; 121 ; >
     au < manifest ; exists ; 2009 ; Rendiconti del Seminario Matematico della Università di Padova Volume 122 ; 122 ; >
     au < ready ; exists ; 2010 ; Rendiconti del Seminario Matematico della Università di Padova Volume 123 ; 123 ; >
-    au < crawling ; exists ; 2010 ; Rendiconti del Seminario Matematico della Università di Padova Volume 124 ; 124 ; >
+    au < frozen ; exists ; 2010 ; Rendiconti del Seminario Matematico della Università di Padova Volume 124 ; 124 ; >
     au < ready ; exists ; 2011 ; Rendiconti del Seminario Matematico della Università di Padova Volume 125 ; 125 ; >
     au < ready ; exists ; 2011 ; Rendiconti del Seminario Matematico della Università di Padova Volume 126 ; 126 ; >
-    au < crawling ; exists ; 2012 ; Rendiconti del Seminario Matematico della Università di Padova Volume 127 ; 127 ; >
+    au < frozen ; exists ; 2012 ; Rendiconti del Seminario Matematico della Università di Padova Volume 127 ; 127 ; >
     au < ready ; exists ; 2012 ; Rendiconti del Seminario Matematico della Università di Padova Volume 128 ; 128 ; >
-    au < crawling ; exists ; 2013 ; Rendiconti del Seminario Matematico della Università di Padova Volume 129 ; 129 ; >
-    au < crawling ; exists ; 2013 ; Rendiconti del Seminario Matematico della Università di Padova Volume 130 ; 130 ; >
+    au < frozen ; exists ; 2013 ; Rendiconti del Seminario Matematico della Università di Padova Volume 129 ; 129 ; >
+    au < frozen ; exists ; 2013 ; Rendiconti del Seminario Matematico della Università di Padova Volume 130 ; 130 ; >
     au < ready ; exists ; 2014 ; Rendiconti del Seminario Matematico della Università di Padova Volume 131 ; 131 ; >
     au < ready ; exists ; 2014 ; Rendiconti del Seminario Matematico della Università di Padova Volume 132 ; 132 ; >
     au < finished ; crawling ; 2015 ; Rendiconti del Seminario Matematico della Università di Padova Volume 133 ; 133 ; reingest2.clockss.org:8085 >
@@ -529,10 +529,10 @@
     au < manifest ; exists ; 2008 ; Rendiconti Lincei - Matematica e Applicazioni Volume 19 ; 19 ; >
     au < manifest ; exists ; 2009 ; Rendiconti Lincei - Matematica e Applicazioni Volume 20 ; 20 ; >
     au < ready ; exists ; 2010 ; Rendiconti Lincei - Matematica e Applicazioni Volume 21 ; 21 ; >
-    au < crawling ; exists ; 2011 ; Rendiconti Lincei - Matematica e Applicazioni Volume 22 ; 22 ; >
-    au < crawling ; exists ; 2012 ; Rendiconti Lincei - Matematica e Applicazioni Volume 23 ; 23 ; >
+    au < frozen ; exists ; 2011 ; Rendiconti Lincei - Matematica e Applicazioni Volume 22 ; 22 ; >
+    au < frozen ; exists ; 2012 ; Rendiconti Lincei - Matematica e Applicazioni Volume 23 ; 23 ; >
     au < ready ; exists ; 2013 ; Rendiconti Lincei - Matematica e Applicazioni Volume 24 ; 24 ; >
-    au < crawling ; exists ; 2014 ; Rendiconti Lincei - Matematica e Applicazioni Volume 25 ; 25 ; >
+    au < frozen ; exists ; 2014 ; Rendiconti Lincei - Matematica e Applicazioni Volume 25 ; 25 ; >
     au < finished ; crawling ; 2015 ; Rendiconti Lincei - Matematica e Applicazioni Volume 26 ; 26 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Rendiconti Lincei - Matematica e Applicazioni Volume 27 ; 27 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; Rendiconti Lincei - Matematica e Applicazioni Volume 28 ; 28 ; >
@@ -580,7 +580,7 @@
     au < ready ; exists ; 2010 ; Revista Matemática Iberoamericana Volume 26 ; 26 ; >
     au < ready ; exists ; 2011 ; Revista Matemática Iberoamericana Volume 27 ; 27 ; >
     au < ready ; exists ; 2012 ; Revista Matemática Iberoamericana Volume 28 ; 28 ; >
-    au < crawling ; exists ; 2013 ; Revista Matemática Iberoamericana Volume 29 ; 29 ; >
+    au < frozen ; exists ; 2013 ; Revista Matemática Iberoamericana Volume 29 ; 29 ; >
     au < ready ; exists ; 2014 ; Revista Matemática Iberoamericana Volume 30 ; 30 ; >
     au < finished ; crawling ; 2015 ; Revista Matemática Iberoamericana Volume 31 ; 31 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2016 ; Revista Matemática Iberoamericana Volume 32 ; 32 ; reingest4.clockss.org:8082 >
@@ -629,11 +629,11 @@
     au < manifest ; exists ; 2007 ; Zeitschrift für Analysis und ihre Anwendungen Volume 26 ; 26 ; >
     au < manifest ; exists ; 2008 ; Zeitschrift für Analysis und ihre Anwendungen Volume 27 ; 27 ; >
     au < manifest ; exists ; 2009 ; Zeitschrift für Analysis und ihre Anwendungen Volume 28 ; 28 ; >
-    au < crawling ; exists ; 2010 ; Zeitschrift für Analysis und ihre Anwendungen Volume 29 ; 29 ; >
-    au < crawling ; exists ; 2011 ; Zeitschrift für Analysis und ihre Anwendungen Volume 30 ; 30 ; >
+    au < frozen ; exists ; 2010 ; Zeitschrift für Analysis und ihre Anwendungen Volume 29 ; 29 ; >
+    au < frozen ; exists ; 2011 ; Zeitschrift für Analysis und ihre Anwendungen Volume 30 ; 30 ; >
     au < ready ; exists ; 2012 ; Zeitschrift für Analysis und ihre Anwendungen Volume 31 ; 31 ; >
     au < ready ; exists ; 2013 ; Zeitschrift für Analysis und ihre Anwendungen Volume 32 ; 32 ; >
-    au < crawling ; exists ; 2014 ; Zeitschrift für Analysis und ihre Anwendungen Volume 33 ; 33 ; >
+    au < frozen ; exists ; 2014 ; Zeitschrift für Analysis und ihre Anwendungen Volume 33 ; 33 ; >
     au < finished ; crawling ; 2015 ; Zeitschrift für Analysis und ihre Anwendungen Volume 34 ; 34 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Zeitschrift für Analysis und ihre Anwendungen Volume 35 ; 35 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Zeitschrift für Analysis und ihre Anwendungen Volume 36 ; 36 ; >
