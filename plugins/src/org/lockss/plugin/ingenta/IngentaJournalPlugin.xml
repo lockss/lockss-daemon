@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>62</string>
+    <string>63</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -187,6 +187,11 @@
     <string>text/plain_filter_factory</string>
     <string>org.lockss.plugin.ingenta.IngentaKeywordFilterFactory</string>
   </entry>
+  <entry>
+    <!-- Validator factory for text MIME types: check landing pages for CRAWLER link -->
+    <string>text/*_content_validator_factory</string>
+    <string>org.lockss.plugin.ingenta.IngentaContentValidator$Factory</string>
+  </entry>  
   <entry>
     <string>text/html_link_extractor_factory</string>
     <string>org.lockss.plugin.ingenta.IngentaHtmlLinkExtractorFactory</string>
