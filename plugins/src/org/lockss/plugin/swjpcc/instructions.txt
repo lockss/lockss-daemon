@@ -58,19 +58,24 @@ https?://www.swjpcc.com
 https?://static1.1.sqspcdn.com
 https?://ereece.squarespace.com
 
+REMOVE THE FOLLOWING 404 LINKS FROM the seed_urls list
+These exist in the spreadsheets but no longer on the site.
+The crawl won't fail because we allow 404 on start_urls, but it means the ServeContent will show a bunch of links that won't work so it's nicer not to have them as seeds.
 
-404 list
-If these have crept back in, remove:
-http://www.swjpcc.com/critical-care/2013/11/2/november-2013-pulmonary-case-of-the-month-a-series-of-unfort.html
-any urls with 
 http://www.swjpcc.com/editorial/ <--note singular
-the use of plural "editorials" are the correct ones.
-the correct urls, which are otherwise included are - these ones are duplicates or incorrect
 
-or the crawl will fail because they're in the start_url list
+http://www.swjpcc.com/critical-care/2013/11/2/november-2013-pulmonary-case-of-the-month-a-series-of-unfort.html
+http://www.swjpcc.com/editorials/2013/9/16/who-will-benefit-and-who-will-lose-from-obamacare.html
+http://www.swjpcc.com/imaging/2013/6/5/image-of-the-week-crest-plus-ild.html
+http://www.swjpcc.com/imaging/2015/6/10/medical-image-of-the-week-pulmonary-amyloidosis.html
+http://www.swjpcc.com/imaging/2015/9/3/medical-image-of-the-week-fluorescent-urine.html
+http://www.swjpcc.com/pulmonary-journal-club/* (there are 50 of these)
+http://www.swjpcc.com/sleep-journal-club/* (there are 8 of these)
 
 
 
 Now copy <date>_seed_urls.txt seed_urls.txt and check in. 
 NOTE download date and final count of seed_urls in the check-in comment
+
+Do a test crawl and remove any 404 urls from the seed list if that was their origin.
 

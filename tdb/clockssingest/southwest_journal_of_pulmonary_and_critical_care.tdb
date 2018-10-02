@@ -5,9 +5,11 @@
     info[contract] = 2013 ;
     info[tester] = 0
   >
+
     comment[platform] = custom
     param[base_url] = http://www.swjpcc.com/
-    plugin = needs.plugin
+    plugin = org.lockss.plugin.swjpcc.ClockssSwjpccSnapshotPlugin
+    implicit < status ; status2 ; year ; name ; param[year] >
  
     {
   
@@ -15,6 +17,9 @@
       name = Southwest Journal of Pulmonary and Critical Care ;
       eissn = 2160-6773
     >
+
+
+    au < testing ; exists ; 2018 ; Southwest Journal of Pulmonary and Critical Care Snapshot Content 2018 ; 2018 >
 
 
     }

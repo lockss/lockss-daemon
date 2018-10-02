@@ -61,10 +61,18 @@ import org.lockss.util.Logger;
 public class SwjpccUrlConsumerFactory implements UrlConsumerFactory {
   private static final Logger log = Logger.getLogger(SwjpccUrlConsumerFactory.class);
   
+  /*
+   * http://www.swjpcc.com/storage/pdf-version-of-articles/volume-3/SWJPCC%20029-11.pdf
+   * redirects to:
+   * http://static1.1.sqspcdn.com/static/f/654826/13862046/1314373579613/SWJPCC+029-11.pdf?token=PG%2Fy2HQCXRvnMJZG0cSC%2FZu3c1M%3D
+   */
+  
   // This could be many suffix - pdf, image, exel, etc - require that it end with a dot-suffix
-  protected static final String ORIG_STRING = "/storage/(manuscripts|pdf-version-of-articles)/.+/[^/]+[.][a-z]+$";
+  //protected static final String ORIG_STRING = "/storage/(manuscripts|manuscript-lists|pdf-version-of-articles|website-stuff)/.+[.][a-z]+$";
+  // Don't be specific - if it redirects to static/f just consume it
+  protected static final String ORIG_STRING = "/storage/[^/]+/.+[.][a-z]+$";
   // Will have the same filename-dot-suffix but probably not worth doing an actual comparison
-  protected static final String DEST_STRING = "/static/f/[0-9]+/[^/]+[.][a-z]+(\\?token=[^/?]+)?$";
+  protected static final String DEST_STRING = "/static/f/[0-9]+/.+[.][a-z]+(\\?token=[^/?]+)?$";
   
   protected static final Pattern origPat = Pattern.compile(ORIG_STRING, Pattern.CASE_INSENSITIVE);
   protected static final Pattern destPat = Pattern.compile(DEST_STRING, Pattern.CASE_INSENSITIVE);
@@ -113,5 +121,16 @@ public class SwjpccUrlConsumerFactory implements UrlConsumerFactory {
     }
 
   }
+
+  public static Pattern getOrigPattern() {
+    // TODO Auto-generated method stub
+    return origPat;
+  }
+
+  public static Pattern getDestPattern() {
+    // TODO Auto-generated method stub
+    return destPat;
+  }
+  
 
 }

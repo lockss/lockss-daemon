@@ -70,6 +70,7 @@ ArticleMetadataExtractorFactory {
   //http://www.swjpcc.com/critical-care/2012/11/8/fatal-dynamic-hyperinflation-secondary-to-a-blood-clot-actin.html
   private static final Pattern HTML_ART_PATTERN = 
       Pattern.compile("swjpcc\\.com/[^/]+/[\\d]+{4}/[\\d]+/[\\d]+/[^/]+\\.html?$",Pattern.CASE_INSENSITIVE);
+  private static final String ISSUE_LANDING = "/issues/";
 
   /*
    * If it's there (if it has a doi)
@@ -120,8 +121,12 @@ ArticleMetadataExtractorFactory {
     @Override
     protected ArticleFiles createArticleFiles(CachedUrl cu) {
       String url = cu.getUrl();
-      //Matcher mat;
+      
       log.debug3("createArticleFiles: " + url);
+      if (url.contains(ISSUE_LANDING)) {
+        // not an article, just a volume issue listing page
+        return null;
+      }
 
       // we can't even get here without the pattern match of an html article, so no need to check
       return processFromHtml(cu);

@@ -1,11 +1,11 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>development</string>
+    <string>testing</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.swjpcc.ClockssSwjpccSeedUrlPlugin</string>
+    <string>org.lockss.plugin.swjpcc.ClockssSwjpccSnapshotPlugin</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -65,13 +65,6 @@
     <string>au_name</string>
     <string>"Southwest Journal of Pulmonary and Critical Care Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
   </entry>
-  <!-- CrawlSeed takes precedence but leave it in for safety in case daemon expects it somewhere -->
-  <!-- 
-  <entry>
-    <string>au_start_url</string>
-    <string>"%slockss.txt", base_url</string>
-  </entry>
-  -->
   <entry>
     <string>au_feature_urls</string>
     <map>
@@ -101,6 +94,8 @@
       <string>2,"^https?://%s/.*(\?(currentPage|printerFriendly)=.*|/(tag|trackback|recommend)/.*|/(atom|rdf|rsd|rss)\.xml)",  url_host(base_url)</string>
       <!--  access to the pages one level off top -->
       <string>1,"^https?://%s/[^/]+/$", url_host(base_url)</string>
+      <!--  archived volume listings:http://www.swjpcc.com/issues/2016/8/1/volume-13.html-->
+      <string>1,"^https?://%s/issues/[0-9]{4}/.*\.html", url_host(base_url)</string>
       <!--  access to html articles that sit below these specific secondary levels - most come from seed list -->
       <string>1,"^https?://%s/(arizona-ats-notes|case-presentations|correspondence|critical-care|editorials|general-medicine|imaging|news|pulmonary|sleep)(-journal-club)?/[0-9]{4}/.*\.html", url_host(base_url)</string>
       <!--do not pick up the variants of "/161-13%20Incorrect%20Panel%201.3.html under storage/manuscripts  --> 
@@ -108,6 +103,8 @@
       <!--  for now, limit some items -->
       <string>2,"^https?://%s/storage/(manuscripts|pdf-version-of-articles)/.*\.pptx?$", url_host(base_url)</string>
       <string>1,"^https?://%s/storage/(manuscripts|pdf-version-of-articles)/.*", url_host(base_url)</string>
+      <!-- the xls spreadsheets with article links and information -->
+      <string>1,"^https?://%s/storage/manuscript-lists/.*", url_host(base_url)</string>
       <!--  the content redirects through this cdn and we consume in to the original url -->
       <string>1,"^https?://static1\.1\.sqspcdn\.com/static/f/[0-9]+/.+"</string>
       <!--  ereece seems to mirror the swjpcc site - don't collect --> 
@@ -140,20 +137,8 @@
     <string>au_url_normalizer</string>
     <string>org.lockss.plugin.swjpcc.SwjpccUrlNormalizer</string>
   </entry>         
-<!-- todo 
-  <entry>
-    <string>text/html_crawl_filter_factory</string>
-    <string>org.lockss.plugin.springer.link.SpringerLinkHtmlCrawlFilterFactory</string>
-  </entry>
-  <entry>
-    <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.springer.link.SpringerLinkHtmlHashFilterFactory</string>
-  </entry>
-  <entry>
-    <string>application/pdf_filter_factory</string>
-    <string>org.lockss.plugin.springer.link.SpringerLinkScrapingPdfFilterFactory</string>
-  </entry>
--->  
+<!-- Hash filters aren't needed as this is a snapshot - collected once per year as a single source for preservation -->
+<!-- crawl filters aren't necessary as we collect pretty much everything in the snapshot -->
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.swjpcc.SwjpccArticleIteratorFactory</string>
@@ -162,17 +147,7 @@
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.swjpcc.SwjpccArticleIteratorFactory</string>
   </entry>
-<!-- 
-  <entry>
-    <string>text/html_metadata_extractor_factory_map</string>
-    <map>
-      <entry>
-        <string>*;DublinCore</string>
-        <string>org.lockss.plugin.springer.link.SpringerLinkJournalsHtmlMetadataExtractorFactory</string>
-      </entry>
-    </map>
-  </entry>
-  -->
+<!--  File metadata extractor isn't needed we use the article metadata extractor  -->
   <entry>
     <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
          org.lockss.crawler.allowedPluginPermittedHosts -->
@@ -191,16 +166,4 @@
     <string>au_def_pause_time</string>
     <long>3000</long>
   </entry>
-<!--  TO DO
-  <entry>
-    <string>au_repair_from_peer_if_missing_url_pattern</string>
-    <list>
-    </list>
-  </entry>
-  <entry>Z
-    <string>au_url_poll_result_weight</string>
-    <list>
-    </list>
-  </entry>
--->
 </map>
