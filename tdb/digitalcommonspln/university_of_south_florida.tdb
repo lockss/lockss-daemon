@@ -2549,7 +2549,7 @@
     >
 
     plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
-    param[base_url] = http://scholarcommons.usf.edu/
+    param[base_url] = https://scholarcommons.usf.edu/
     param[collection_type] = ir_series
     param[collection] = usf_patents
     implicit < status ; year ; name ; param[collection_heading] >
@@ -2564,12 +2564,12 @@
     au < manifest ; 2007 ; University of South Florida Patents 2007 ; 2007 >
     au < manifest ; 2008 ; University of South Florida Patents 2008 ; 2008 >
     au < manifest ; 2009 ; University of South Florida Patents 2009 ; 2009 >
-    au < ready ; 2010 ; University of South Florida Patents 2010 ; 2010 >
-    au < ready ; 2011 ; University of South Florida Patents 2011 ; 2011 >
-    au < ready ; 2012 ; University of South Florida Patents 2012 ; 2012 >
-    au < ready ; 2013 ; University of South Florida Patents 2013 ; 2013 >
-    au < ready ; 2014 ; University of South Florida Patents 2014 ; 2014 >
-    au < ready ; 2015 ; University of South Florida Patents 2015 ; 2015 >
+    au < manifest ; 2010 ; University of South Florida Patents 2010 ; 2010 >
+    au < manifest ; 2011 ; University of South Florida Patents 2011 ; 2011 >
+    au < manifest ; 2012 ; University of South Florida Patents 2012 ; 2012 >
+    au < manifest ; 2013 ; University of South Florida Patents 2013 ; 2013 >
+    au < manifest ; 2014 ; University of South Florida Patents 2014 ; 2014 >
+    au < manifest ; 2015 ; University of South Florida Patents 2015 ; 2015 >
     au < manifest ; 2016 ; University of South Florida Patents 2016 ; 2016 >
     au < manifest ; 2017 ; University of South Florida Patents 2017 ; 2017 >
 
@@ -2582,7 +2582,7 @@
     >
 
     plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
-    param[base_url] = http://scholarcommons.usf.edu/
+    param[base_url] = https://scholarcommons.usf.edu/
     param[collection_type] = ir_series
     param[collection] = sigs_facpub
     implicit < status ; year ; name ; param[collection_heading] >
@@ -2636,7 +2636,7 @@
     >
 
     plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
-    param[base_url] = http://scholarcommons.usf.edu/
+    param[base_url] = https://scholarcommons.usf.edu/
     param[collection_type] = ir_series
     param[collection] = qmasc_handbook
     implicit < status ; year ; name ; param[collection_heading] >
@@ -2659,7 +2659,7 @@
     >
 
     plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
-    param[base_url] = http://scholarcommons.usf.edu/
+    param[base_url] = https://scholarcommons.usf.edu/
     param[collection_type] = ir_series
     param[collection] = phy_facpub
     implicit < status ; year ; name ; param[collection_heading] >
@@ -2675,7 +2675,7 @@
     >
 
     plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
-    param[base_url] = http://scholarcommons.usf.edu/
+    param[base_url] = https://scholarcommons.usf.edu/
     param[collection_type] = ir_series
     param[collection] = phi_facpub
     implicit < status ; year ; name ; param[collection_heading] >
@@ -2691,7 +2691,7 @@
     >
 
     plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
-    param[base_url] = http://scholarcommons.usf.edu/
+    param[base_url] = https://scholarcommons.usf.edu/
     param[collection_type] = ir_series
     param[collection] = ocep_sls
     implicit < status ; year ; name ; param[collection_heading] >
@@ -2712,7 +2712,7 @@
     >
 
     plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
-    param[base_url] = http://scholarcommons.usf.edu/
+    param[base_url] = https://scholarcommons.usf.edu/
     param[collection_type] = ir_series
     param[collection] = ocep_fg
     implicit < status ; year ; name ; param[collection_heading] >
@@ -2728,7 +2728,7 @@
     >
 
     plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
-    param[base_url] = http://scholarcommons.usf.edu/
+    param[base_url] = https://scholarcommons.usf.edu/
     param[collection_type] = ir_book
     param[collection] = islac_alab_antropologia
     implicit < status ; year ; name ; param[collection_heading] >
@@ -2744,7 +2744,7 @@
     >
 
     plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryThemePlugin
-    param[base_url] = http://scholarcommons.usf.edu/
+    param[base_url] = https://scholarcommons.usf.edu/
     param[collection] = in_service_2016
     implicit < status ; year ; name ; param[collection_theme] >  
 
@@ -2759,7 +2759,7 @@
     >
 
     plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
-    param[base_url] = http://scholarcommons.usf.edu/
+    param[base_url] = https://scholarcommons.usf.edu/
     param[collection_type] = ir_series
     param[collection] = hcs_facpub
     implicit < status ; year ; name ; param[collection_heading] >
@@ -2777,7 +2777,7 @@
     >
 
     plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
-    param[base_url] = http://scholarcommons.usf.edu/
+    param[base_url] = https://scholarcommons.usf.edu/
     param[collection_type] = ir_series
     param[collection] = gey_facpub
     implicit < status ; year ; name ; param[collection_heading] >
@@ -2793,7 +2793,7 @@
     >
 
     plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
-    param[base_url] = http://scholarcommons.usf.edu/
+    param[base_url] = https://scholarcommons.usf.edu/
     param[collection_type] = ir_series
     param[collection] = fmhi_pub
     implicit < status ; year ; name ; param[collection_heading] >
@@ -2829,7 +2829,7 @@
     >
 
     plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
-    param[base_url] = http://scholarcommons.usf.edu/
+    param[base_url] = https://scholarcommons.usf.edu/
     param[collection_type] = ir_book
     param[collection] = fhm_newsletter
     implicit < status ; year ; name ; param[collection_heading] >
@@ -2847,7 +2847,7 @@
     >
 
     plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
-    param[base_url] = http://scholarcommons.usf.edu/
+    param[base_url] = https://scholarcommons.usf.edu/
     param[collection_type] = ir_series
     param[collection] = esb_facpub
     implicit < status ; year ; name ; param[collection_heading] >
@@ -2871,7 +2871,7 @@
     >
 
     plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
-    param[base_url] = http://scholarcommons.usf.edu/
+    param[base_url] = https://scholarcommons.usf.edu/
     param[collection_type] = ir_series
     param[collection] = dss_facpub
     implicit < status ; year ; name ; param[collection_heading] >
@@ -2900,7 +2900,7 @@
     >
 
     plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
-    param[base_url] = http://scholarcommons.usf.edu/
+    param[base_url] = https://scholarcommons.usf.edu/
     param[collection_type] = ir_series
     param[collection] = ehe_facpub
     implicit < status ; year ; name ; param[collection_heading] >
@@ -2921,14 +2921,14 @@
     au < manifest ; 2007 ; University of South Florida. Leadership, Counseling, Adult, Career and Higher Education Faculty Publications 2007 ; 2007 >
     au < manifest ; 2008 ; University of South Florida. Leadership, Counseling, Adult, Career and Higher Education Faculty Publications 2008 ; 2008 >
     au < manifest ; 2009 ; University of South Florida. Leadership, Counseling, Adult, Career and Higher Education Faculty Publications 2009 ; 2009 >
-    au < ready ; 2010 ; University of South Florida. Leadership, Counseling, Adult, Career and Higher Education Faculty Publications 2010 ; 2010 >
-    au < ready ; 2011 ; University of South Florida. Leadership, Counseling, Adult, Career and Higher Education Faculty Publications 2011 ; 2011 >
-    au < ready ; 2012 ; University of South Florida. Leadership, Counseling, Adult, Career and Higher Education Faculty Publications 2012 ; 2012 >
-    au < ready ; 2013 ; University of South Florida. Leadership, Counseling, Adult, Career and Higher Education Faculty Publications 2013 ; 2013 >
-    au < ready ; 2014 ; University of South Florida. Leadership, Counseling, Adult, Career and Higher Education Faculty Publications 2014 ; 2014 >
-    au < ready ; 2015 ; University of South Florida. Leadership, Counseling, Adult, Career and Higher Education Faculty Publications 2015 ; 2015 >
-    au < ready ; 2016 ; University of South Florida. Leadership, Counseling, Adult, Career and Higher Education Faculty Publications 2016 ; 2016 >
-    au < ready ; 2017 ; University of South Florida. Leadership, Counseling, Adult, Career and Higher Education Faculty Publications 2017 ; 2017 >
+    au < manifest ; 2010 ; University of South Florida. Leadership, Counseling, Adult, Career and Higher Education Faculty Publications 2010 ; 2010 >
+    au < manifest ; 2011 ; University of South Florida. Leadership, Counseling, Adult, Career and Higher Education Faculty Publications 2011 ; 2011 >
+    au < manifest ; 2012 ; University of South Florida. Leadership, Counseling, Adult, Career and Higher Education Faculty Publications 2012 ; 2012 >
+    au < manifest ; 2013 ; University of South Florida. Leadership, Counseling, Adult, Career and Higher Education Faculty Publications 2013 ; 2013 >
+    au < manifest ; 2014 ; University of South Florida. Leadership, Counseling, Adult, Career and Higher Education Faculty Publications 2014 ; 2014 >
+    au < manifest ; 2015 ; University of South Florida. Leadership, Counseling, Adult, Career and Higher Education Faculty Publications 2015 ; 2015 >
+    au < manifest ; 2016 ; University of South Florida. Leadership, Counseling, Adult, Career and Higher Education Faculty Publications 2016 ; 2016 >
+    au < manifest ; 2017 ; University of South Florida. Leadership, Counseling, Adult, Career and Higher Education Faculty Publications 2017 ; 2017 >
 
   }
 
@@ -2939,7 +2939,7 @@
     >
 
     plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
-    param[base_url] = http://scholarcommons.usf.edu/
+    param[base_url] = https://scholarcommons.usf.edu/
     param[collection_type] = ir_series
     param[collection] = dhhc_facpub
     implicit < status ; year ; name ; param[collection_heading] >
@@ -2960,7 +2960,7 @@
     >
 
     plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryThemePlugin
-    param[base_url] = http://scholarcommons.usf.edu/
+    param[base_url] = https://scholarcommons.usf.edu/
     param[collection] = clumped_isotope
     implicit < status ; year ; name ; param[collection_theme] >  
 
@@ -2975,7 +2975,7 @@
     >
 
     plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
-    param[base_url] = http://scholarcommons.usf.edu/
+    param[base_url] = https://scholarcommons.usf.edu/
     param[collection_type] = ir_series
     param[collection] = childrens_lit_textbook
     implicit < status ; year ; name ; param[collection_heading] >
@@ -2993,7 +2993,7 @@
     >
 
     plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
-    param[base_url] = http://scholarcommons.usf.edu/
+    param[base_url] = https://scholarcommons.usf.edu/
     param[collection_type] = ir_series
     param[collection] = alumni_pubs
     implicit < status ; year ; name ; param[collection_heading] >
@@ -3009,7 +3009,7 @@
     >
 
     plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryThemePlugin
-    param[base_url] = http://scholarcommons.usf.edu/
+    param[base_url] = https://scholarcommons.usf.edu/
     param[collection] = acuril_2011
     implicit < status ; year ; name ; param[collection_theme] >  
 
