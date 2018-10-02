@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>down. Waiting for publisher</string>
+    <string>testing</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>61</string>
+    <string>62</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -54,9 +54,9 @@
       <!-- all content from CDN -->
       <string>1,"^https?://(.+[.]cloudfront[.]net|cdn[.]mathjax[.]org)/."</string>
       <!-- all fonts, images, resources, css, js, etc. -->
-      <string>1,"^https?://(%s|%s|%s|docserver[.]ingentaconnect[.]com)/.*[.](css|js|eot|svg|ttf|woff.?)([?].*)?$", base_url_host, api_url_host, graphics_url_host</string>
-      <string>1,"^https?://(%s|%s|%s|docserver[.]ingentaconnect[.]com)/.*[.](bmp|gif|ico|jpe?g|png|tif?f)$", base_url_host, api_url_host, graphics_url_host</string>
-      <string>4,"^(?:%s|%s|%s)", base_url, api_url, graphics_url</string>
+      <string>1,"^https?://(%s|%s|docserver[.]ingentaconnect[.]com)/.*[.](css|js|eot|svg|ttf|woff.?)([?].*)?$", base_url_host, api_url_host</string>
+      <string>1,"^https?://(%s|%s|docserver[.]ingentaconnect[.]com)/.*[.](bmp|gif|ico|jpe?g|png|tif?f)$", base_url_host, api_url_host</string>
+      <string>4,"^(?:%s|%s)", base_url, api_url</string>
       <!--  allow option of contentone in place of content, normalized off -->
       <!--  these guard against duplicate URLS from the api_url -->
       <string>2,"^%scontent(one)?/%s/%s/[0-9]{4}/0*%s/.{8}(\?format=.*)?$", api_url, publisher_id, journal_id, volume_name</string>
@@ -66,7 +66,9 @@
       <string>1,"^(?:%s|%s)content(one)?/%s/%s/[0-9]{4}/0*%s/", base_url, api_url, publisher_id, journal_id, volume_name</string>
       <!-- special crawl rule for Maney Medieval Sermon Studies -->
       <string>1,"^(?:%s|%s)content/%s/%s/%s$", base_url, api_url, publisher_id, journal_id, volume_name</string>
+      <!-- nope
       <string>1,"^%s", graphics_url</string>
+      -->
     </list>
   </entry>
   <entry>
@@ -95,7 +97,10 @@
     <list>
       <string>"%scontent/%s?format=lockss&amp;volume=%s", base_url, journal_issn, volume_name</string>
       <string>"%scontent/%s?format=lockss&amp;volume=%s", api_url, journal_issn, volume_name</string>
-      <string>"%slockss.txt", graphics_url</string>
+      <!--  graphics.ingentaconnect.com doesn't appear to ever have been needed. Weight to zero --> 
+      <!--  if necessary we can put it in as a CDN for legacy content but no old AUs had anything other than permission -->
+      <!-- <string>"%slockss.txt", graphics_url</string> -->
+      <!-- docserver.ingentaconnect.com serves figuresand permission exists at both http/https -->
       <string>"http://docserver.ingentaconnect.com/lockss.txt"</string>
     </list>
   </entry>
@@ -119,6 +124,7 @@
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
+      <!--  legacy param - not clear it was ever needed -->
       <org.lockss.daemon.ConfigParamDescr>
         <key>graphics_url</key>
         <displayName>Graphics URL</displayName>
@@ -225,7 +231,7 @@
     <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
          org.lockss.crawler.allowedPluginPermittedHosts -->
     <string>au_permitted_host_pattern</string>
-    <string>.*[.]cloudfront[.]net|cdn[.]mathjax[.]org</string>
+    <string>.*[.]cloudfront[.]net|cdn[.]mathjax[.]org|cdnjs[.]cloudflare[.]com</string>
   </entry>
 <!-- Adding /references & ?format=bib to repair/exclude patterns due to inconsistent 
      content of no longer crawled AUs -->
@@ -240,6 +246,8 @@
     <list>
       <!-- http://www.ingentaconnect.com/css/connect/llb9.css?release=R5_1_4 -->     
       <string>"(/references|[?]format=bib|/images/[^.]+[.](gif|ico|png)|[.](css|js|eot|svg|ttf|woff.?)([?](v|release)=[^&amp;]*)?)$", 0</string>
+      <!--  we no longer pick this up and it shouldn't be weighted -->
+      <string>"graphics[.]ingentaconnect[.]com/lockss.txt", 0</string>
     </list>
   </entry>   
 </map>
