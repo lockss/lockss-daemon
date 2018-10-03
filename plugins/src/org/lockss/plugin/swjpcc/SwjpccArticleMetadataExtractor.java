@@ -54,7 +54,7 @@ import org.lockss.util.Logger;
 
 
 /*
- *  We don't actually parse any file. We actually just emit the information 
+ *  We don't actually parse any file. We  just emit the information 
  *  that we can glean from the URLs in the AF and from any info that we found 
  *  while parsing the article page in the iterator while finding the PDF link
  *  and that we stored in this custom version of the AF
@@ -105,6 +105,8 @@ public class SwjpccArticleMetadataExtractor extends BaseArticleMetadataExtractor
       am.put(MetadataField.FIELD_PUBLISHER, SWJPCC_PUB);
       am.put(MetadataField.FIELD_PUBLICATION_TITLE,  SWJPCC_PUBTITLE);
       am.put(MetadataField.FIELD_EISSN, SWJPCC_EISSN);
+      // set the access url to the full text html which is a better choice for navigation 
+      am.put(MetadataField.FIELD_ACCESS_URL, af.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_HTML));
       
       // and parsed from the page and stored on the AF
       String found = ((SwjpccArticleFiles)(af)).getFoundDoi();
