@@ -99,5 +99,12 @@ public class EdinburghUniversityPressHashHtmlFilterFactory extends BaseAtyponHtm
     return super.createFilteredInputStream(au, in, encoding, edFilter);
 
   }
+  
+  //10/2/2018 - remove white space which seems to be variable across versions
+  @Override
+  public boolean doWSFiltering() {
+    return true;
+  }
+  
 
 }

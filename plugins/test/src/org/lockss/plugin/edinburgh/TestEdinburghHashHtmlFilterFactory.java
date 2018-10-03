@@ -42,9 +42,9 @@ public class TestEdinburghHashHtmlFilterFactory extends LockssTestCase {
       + "src=\"/templates/jsp/_style2/_eup/images/icon_toolBar_pdf.gif\"/>"
       + "</a></span> </div> </div>";
 
-  private static final String withoutCitations = "<div id=\"firstPage\">"
-      + "<img src=\"/na101/home/literatum/jbctv.2006.3.1.128.fp.png_v03\""
-      + "alt=\"Free first page\" class=\"firstPageImage\"/>"
+  private static final String withoutCitations = " <div id=\"firstPage\">"
+      + " <img src=\"/na101/home/literatum/jbctv.2006.3.1.128.fp.png_v03\""
+      + "alt=\"Free first page\" class=\"firstPageImage\"/> "
       + "</div>";
 
   private static final String mainNavHtml ="<div id=\"mainNavContainer\">"
@@ -63,11 +63,11 @@ public class TestEdinburghHashHtmlFilterFactory extends LockssTestCase {
       + "<li class=\"institutionBanner institutionBannerText\"><p>\"Serials Department, Green Library\"</p></li>"
       + "</ul> </div>";
 
-  private static final String institutionBannerFiltered = "<div id=\"blah\">"
-      + "<ul id=\"mainNav\"> "
-      + "<li><p> <a href=\"/\">Home</a> </p></li>"
-      + "<li><p><a href=\"/page/infoZone/home\">Information Zone</a></p></li>"
-      + "</ul> </div>";  
+  private static final String institutionBannerFiltered = " <div id=\"blah\">"
+      + " <ul id=\"mainNav\"> "
+      + "<li> <p> <a href=\"/\">Home </a> </p> </li>"
+      + " <li> <p> <a href=\"/page/infoZone/home\">Information Zone </a> </p> </li>"
+      + " </ul> </div>";  
 
 
   private static final String emptyString = "";
@@ -119,9 +119,9 @@ public class TestEdinburghHashHtmlFilterFactory extends LockssTestCase {
       "<div class=\"authors\"><span class=\"author\"><em><a class=\"entryAuthor\" href=\"/action/doSearch?Contrib=Llewellyn+Brown\">"+
       "<span class=\"hlFld-ContribAuthor \">Llewellyn<span class=\"NLM_x\"> </span>Brown</span></a></em></span></div><p><em>Citation Information. </em>"+
       "<journal-title xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">Journal of Animation Studies</journal-title>";
-  private static final String withoutAuthorsLink = "<h2>Voice and Pronouns in Foghorn Leghorn's <i>The UnSayable</i></h2>"+
-      "<p><em>Citation Information. </em>"+
-      "<journal-title xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">Journal of Animation Studies</journal-title>";
+  private static final String withoutAuthorsLink = " <h2>Voice and Pronouns in Foghorn Leghorn's <i>The UnSayable </i> </h2>"+
+      " <p> <em>Citation Information. </em>"+
+      " <journal-title xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">Journal of Animation Studies </journal-title>";
 
   private static final String hasCurrentIssue = "<div class=\"panel_top\">"+
      "<h2>Current Issue: Sep 2011</h2><p class=\"volumeInfo\">Issue: Volume 20, Number 2</p>"+
