@@ -90,7 +90,9 @@ public class EdinburghUniversityPressHashHtmlFilterFactory extends BaseAtyponHtm
         // TOC tabbed section on TOC for listing all issues in journal
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumListOfIssuesWidget"),
         
-        // ONLY in hash filter
+        // 10/2/18 - addition of hidden empy tab for view options
+        // these aren't needed for comparison anyway
+        HtmlNodeFilters.tagWithAttribute("ul","class", "tab-nav")
 
     };
     // super.createFilteredInputStream adds Edinburgh's filter to the baseAtyponFilters
