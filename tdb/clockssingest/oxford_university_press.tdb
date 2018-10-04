@@ -5823,7 +5823,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Genome Biology and Evolution Volume 5 ; 5 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Genome Biology and Evolution Volume 6 ; 6 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Genome Biology and Evolution Volume 7 ; 7 ;  >
-    au < ready ; exists ; 2016 ; 2016 ; Genome Biology and Evolution Volume 8 ; 8 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; Genome Biology and Evolution Volume 8 ; 8 ;  >
     au < testing ; exists ; 2017 ; 2017 ; Genome Biology and Evolution Volume 9 ; 9 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; Genome Biology and Evolution Volume 10 ; 10 ;  >
 
@@ -5890,7 +5890,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Geophysical Journal International Volume 160-163 ; 160-163 ;  >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Geophysical Journal International Volume 164-167 ; 164-167 ;  >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Geophysical Journal International Volume 168-171 ; 168-171 ;  >
-    au < ready ; exists ; 2008 ; 2008 ; Geophysical Journal International Volume 172-175 ; 172-175 ;  >
+    au < crawling ; exists ; 2008 ; 2008 ; Geophysical Journal International Volume 172-175 ; 172-175 ;  >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Geophysical Journal International Volume 176-179 ; 176-179 ;  >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Geophysical Journal International Volume 180-183 ; 180-183 ;  >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Geophysical Journal International Volume 184-187 ; 184-187 ;  >
@@ -6009,13 +6009,13 @@
     param[journal_id] = gigascience
 
     #this title was ONLY in the publisher listing
-    au < testing ; exists ; 2012 ; 2012 ; GigaScience Volume 1 ; 1 ;  >
-    au < testing ; exists ; 2013 ; 2013 ; GigaScience Volume 2 ; 2 ;  >
-    au < ready ; exists ; 2014 ; 2014 ; GigaScience Volume 3 ; 3 ;  >
-    au < testing ; exists ; 2015 ; 2015 ; GigaScience Volume 4 ; 4 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; GigaScience Volume 5 ; 5 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; GigaScience Volume 6 ; 6 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; GigaScience Volume 7 ; 7 ;  >
+    au < testing ; exists ; 2012 ; 2012 ; GigaScience Volume 1 [OUP] ; 1 ;  >
+    au < testing ; exists ; 2013 ; 2013 ; GigaScience Volume 2 [OUP] ; 2 ;  >
+    au < crawling ; exists ; 2014 ; 2014 ; GigaScience Volume 3 [OUP] ; 3 ;  >
+    au < testing ; exists ; 2015 ; 2015 ; GigaScience Volume 4 [OUP] ; 4 ;  >
+    au < testing ; exists ; 2016 ; 2016 ; GigaScience Volume 5 [OUP] ; 5 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; GigaScience Volume 6 [OUP] ; 6 ;  >
+    au < manifest ; exists ; 2018 ; 2018 ; GigaScience Volume 7 [OUP] ; 7 ;  >
 
   }
 
@@ -6130,7 +6130,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Health & Social Work Volume 38 ; 38 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Health & Social Work Volume 39 ; 39 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Health & Social Work Volume 40 ; 40 ;  >
-    au < ready ; exists ; 2016 ; 2016 ; Health & Social Work Volume 41 ; 41 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; Health & Social Work Volume 41 ; 41 ;  >
     au < testing ; exists ; 2017 ; 2017 ; Health & Social Work Volume 42 ; 42 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; Health & Social Work Volume 43 ; 43 ;  >
 
@@ -6374,7 +6374,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Holocaust and Genocide Studies Volume 27 ; 27 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Holocaust and Genocide Studies Volume 28 ; 28 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Holocaust and Genocide Studies Volume 29 ; 29 ;  >
-    au < ready ; exists ; 2016 ; 2016 ; Holocaust and Genocide Studies Volume 30 ; 30 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; Holocaust and Genocide Studies Volume 30 ; 30 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; Holocaust and Genocide Studies Volume 31 ; 31 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; Holocaust and Genocide Studies Volume 32 ; 32 ;  >
 
@@ -6462,7 +6462,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Human Reproduction Volume 28 ; 28 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Human Reproduction Volume 29 ; 29 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Human Reproduction Volume 30 ; 30 ;  >
-    au < ready ; exists ; 2016 ; 2016 ; Human Reproduction Volume 31 ; 31 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; Human Reproduction Volume 31 ; 31 ;  >
     au < testing ; exists ; 2017 ; 2017 ; Human Reproduction Volume 32 ; 32 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; Human Reproduction Volume 33 ; 33 ;  >
 
@@ -6478,7 +6478,7 @@
     param[journal_id] = hropen
 
     #this title was ONLY in the publisher listing
-    au < ready ; exists ; 2017 ; 2017 ; Human Reproduction Open Volume 2017 ; 2017 ;  >
+    au < crawling ; exists ; 2017 ; 2017 ; Human Reproduction Open Volume 2017 ; 2017 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; Human Reproduction Open Volume 2018 ; 2018 ;  >
 
   }
@@ -7151,7 +7151,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Information and Inference: A Journal of the IMA Volume 3 ; 3 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Information and Inference: A Journal of the IMA Volume 4 ; 4 ;  >
     au < testing ; exists ; 2016 ; 2016 ; Information and Inference: A Journal of the IMA Volume 5 ; 5 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; Information and Inference: A Journal of the IMA Volume 6 ; 6 ;  >
+    au < crawling ; exists ; 2017 ; 2017 ; Information and Inference: A Journal of the IMA Volume 6 ; 6 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; Information and Inference: A Journal of the IMA Volume 7 ; 7 ;  >
 
   }
@@ -7299,7 +7299,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Interactive CardioVascular and Thoracic Surgery Volume 18-19 ; 18-19 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Interactive CardioVascular and Thoracic Surgery Volume 20-21 ; 20-21 ;  >
     au < testing ; exists ; 2016 ; 2016 ; Interactive CardioVascular and Thoracic Surgery Volume 22-23 ; 22-23 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; Interactive CardioVascular and Thoracic Surgery Volume 24 ; 24 ;  >
+    au < crawling ; exists ; 2017 ; 2017 ; Interactive CardioVascular and Thoracic Surgery Volume 24 ; 24 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; Interactive CardioVascular and Thoracic Surgery Volume 25 ; 25 ;  >
 
   }
@@ -7320,7 +7320,7 @@
     au < testing ; exists ; 2012 ; 2012 ; International Affairs Volume 88 ; 88 ;  >
     au < testing ; exists ; 2013 ; 2013 ; International Affairs Volume 89 ; 89 ;  >
     au < testing ; exists ; 2014 ; 2014 ; International Affairs Volume 90 ; 90 ;  >
-    au < ready ; exists ; 2015 ; 2015 ; International Affairs Volume 91 ; 91 ;  >
+    au < crawling ; exists ; 2015 ; 2015 ; International Affairs Volume 91 ; 91 ;  >
     au < testing ; exists ; 2016 ; 2016 ; International Affairs Volume 92 ; 92 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; International Affairs Volume 93 ; 93 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; International Affairs Volume 94 ; 94 ;  >
@@ -7368,7 +7368,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; International Health Volume 6 ; 6 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Health Volume 7 ; 7 ;  >
     au < testing ; exists ; 2016 ; 2016 ; International Health Volume 8 ; 8 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; International Health Volume 9 ; 9 ;  >
+    au < crawling ; exists ; 2017 ; 2017 ; International Health Volume 9 ; 9 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; International Health Volume 10 ; 10 ;  >
 
   }
@@ -8001,7 +8001,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; International Relations of the Asia-Pacific Volume 14 ; 14 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Relations of the Asia-Pacific Volume 15 ; 15 ;  >
     au < testing ; exists ; 2016 ; 2016 ; International Relations of the Asia-Pacific Volume 16 ; 16 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; International Relations of the Asia-Pacific Volume 17 ; 17 ;  >
+    au < crawling ; exists ; 2017 ; 2017 ; International Relations of the Asia-Pacific Volume 17 ; 17 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; International Relations of the Asia-Pacific Volume 18 ; 18 ;  >
 
   }
@@ -8672,7 +8672,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Journal of Chromatographic Science Volume 43 ; 43 ;  >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Journal of Chromatographic Science Volume 44 ; 44 ;  >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Journal of Chromatographic Science Volume 45 ; 45 ;  >
-    au < ready ; exists ; 2008 ; 2008 ; Journal of Chromatographic Science Volume 46 ; 46 ;  >
+    au < crawling ; exists ; 2008 ; 2008 ; Journal of Chromatographic Science Volume 46 ; 46 ;  >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Journal of Chromatographic Science Volume 47 ; 47 ;  >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Journal of Chromatographic Science Volume 48 ; 48 ;  >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Journal of Chromatographic Science Volume 49 ; 49 ;  >
@@ -8798,7 +8798,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Competition Law & Economics Volume 10 ; 10 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Competition Law & Economics Volume 11 ; 11 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; Journal of Competition Law & Economics Volume 12 ; 12 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; Journal of Competition Law & Economics Volume 13 ; 13 ;  >
+    au < crawling ; exists ; 2017 ; 2017 ; Journal of Competition Law & Economics Volume 13 ; 13 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; Journal of Competition Law & Economics Volume 14 ; 14 ;  >
 
   }
@@ -8894,7 +8894,7 @@
     au < testing ; exists ; 2013 ; 2013 ; Journal of Consumer Research Volume 39-40 ; 39-40 ;  >
     au < testing ; exists ; 2014 ; 2014 ; Journal of Consumer Research Volume 40-41 ; 40-41 ;  >
     au < testing ; exists ; 2015 ; 2015 ; Journal of Consumer Research Volume 41-42 ; 41-42 ;  >
-    au < ready ; exists ; 2016 ; 2016 ; Journal of Consumer Research Volume 42-43 ; 42-43 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; Journal of Consumer Research Volume 42-43 ; 42-43 ;  >
     au < testing ; exists ; 2017 ; 2017 ; Journal of Consumer Research Volume 43-44 ; 43-44 ;  >
     au < testing ; exists ; 2018 ; 2018 ; Journal of Consumer Research Volume 44-45 ; 44-45 ;  >
 
@@ -8937,7 +8937,7 @@
     param[journal_id] = ecco-jccs
 
     au < testing ; exists ; 2007 ; 2007 ; Journal of Crohn's and Colitis Supplements Volume 1 ; 1 ;  >
-    au < ready ; exists ; 2008 ; 2008 ; Journal of Crohn's and Colitis Supplements Volume 2 ; 2 ;  >
+    au < crawling ; exists ; 2008 ; 2008 ; Journal of Crohn's and Colitis Supplements Volume 2 ; 2 ;  >
     au < testing ; exists ; 2009 ; 2009 ; Journal of Crohn's and Colitis Supplements Volume 3 ; 3 ;  >
     au < testing ; exists ; 2010 ; 2010 ; Journal of Crohn's and Colitis Supplements Volume 4 ; 4 ;  >
 
@@ -10517,8 +10517,8 @@
 
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Professions and Organization Volume 1 ; 1 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Professions and Organization Volume 2 ; 2 ;  >
-    au < ready ; exists ; 2016 ; 2016 ; Journal of Professions and Organization Volume 3 ; 3 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; Journal of Professions and Organization Volume 4 ; 4 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; Journal of Professions and Organization Volume 3 ; 3 ;  >
+    au < crawling ; exists ; 2017 ; 2017 ; Journal of Professions and Organization Volume 4 ; 4 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; Journal of Professions and Organization Volume 5 ; 5 ;  >
 
   }
