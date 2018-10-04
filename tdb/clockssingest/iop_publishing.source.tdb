@@ -35,7 +35,7 @@
     hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[year] >
     
-    au < readySource ; frozen ; 2017 ; IOP Publishing Books Source Content 2017 ; 2017 >
+    au < readySource ; finished ; 2017 ; IOP Publishing Books Source Content 2017 ; 2017 >
     au < expected ; exists ; 2018 ; IOP Publishing Books Source Content 2018 ; 2018 >
 
   }
