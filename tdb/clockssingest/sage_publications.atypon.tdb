@@ -28121,11 +28121,7 @@
 
     #param[base_url] = http://jvm.sagepub.com/
 
-    
     {
-
-      
-      comment[notReady] = 503 Service Not Available on content3 for probe link:  http://jvm.sagepub.com/content/20/4/365.long
 
       au < manifest ; exists ; 1994 ; Journal of Vacation Marketing Volume 1 ; 1 ; jvma ; >
       au < manifest ; exists ; 1995 ; Journal of Vacation Marketing Volume 2 ; 2 ; jvma ; >
@@ -30724,10 +30720,7 @@
 
     #param[base_url] = http://mej.sagepub.com/
 
-    
     {
-
-      comment[notReady] = consistent low poll
 
       au < manifest ; exists ; 1914 ; Music Educators Journal Volume 1 ; 1 ; meja ; >
       au < manifest ; exists ; 1915 ; Music Educators Journal Volume 2 ; 2 ; mejb ; >
@@ -30917,10 +30910,7 @@
 
     #param[base_url] = http://nas.sagepub.com/
 
-    
     {
-
-      comment[notReady] = consistent low poll
 
       au < manifest ; exists ; 2001 ; NASN School Nurse Volume 16 ; 16 ; nasa ; >
       au < manifest ; exists ; 2002 ; NASN School Nurse Volume 17 ; 17 ; nasa ; >
@@ -30955,10 +30945,7 @@
 
     #param[base_url] = http://bul.sagepub.com/
 
-    
     {
-
-      comment[notReady] = consistent low poll
 
       au < manifest ; exists ; 1917 ; NASSP Bulletin Volume 1 ; 1 ; bula ; >
       au < manifest ; exists ; 1918 ; NASSP Bulletin Volume 2 ; 2 ; bula ; >
@@ -32062,8 +32049,6 @@
       #param[base_url] = http://nah.sagepub.com/
 
     {
-
-      comment[notReady] = link in manifest page incorrect
 
       au < manifest ; exists ; 1982-1983 ; Nutrition and Health Volume 1 ; 1 ; naha ; >
       au < manifest ; exists ; 1983 ; Nutrition and Health Volume 2 ; 2 ; naha ; >
@@ -35665,7 +35650,6 @@
       #param[base_url] = http://pri.sagepub.com/
 
     {
-
 
       au < doNotProcess ; doNotProcess ; 2012 ; Public Relations Inquiry Volume 1 ; 1 ; pria ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Public Relations Inquiry Volume 2 ; 2 ; pria ; >
