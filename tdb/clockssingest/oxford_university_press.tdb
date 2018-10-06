@@ -6030,8 +6030,8 @@
 
     param[journal_id] = globalsummitry
 
-    au < testing ; exists ; 2015 ; 2015 ; Global Summitry Volume 1 ; 1 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; Global Summitry Volume 2 ; 2 ;  >
+    au < ready ; exists ; 2015 ; 2015 ; Global Summitry Volume 1 ; 1 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; Global Summitry Volume 2 ; 2 ;  >
     au < testing ; exists ; 2017 ; 2017 ; Global Summitry Volume 3 ; 3 ;  >
     au < expected ; exists ; 2018 ; 2018 ; Global Summitry Volume 4 ; 4 ;  >
 
@@ -6271,7 +6271,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Health Promotion International Volume 28 ; 28 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Health Promotion International Volume 29 ; 29 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Health Promotion International Volume 30 ; 30 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; Health Promotion International Volume 31 ; 31 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; Health Promotion International Volume 31 ; 31 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; Health Promotion International Volume 32 ; 32 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; Health Promotion International Volume 33 ; 33 ;  >
 
@@ -6692,7 +6692,7 @@
     au < doNotProcess ; exists ; 2006 ; 2006 ; ICSID Review: Foreign Investment Law Journal Volume 21 ; 21 ;  >
     au < doNotProcess ; exists ; 2007 ; 2007 ; ICSID Review: Foreign Investment Law Journal Volume 22 ; 22 ;  >
     au < testing ; exists ; 2008 ; 2008 ; ICSID Review: Foreign Investment Law Journal Volume 23 ; 23 ;  >
-    au < testing ; exists ; 2009 ; 2009 ; ICSID Review: Foreign Investment Law Journal Volume 24 ; 24 ;  >
+    au < ready ; exists ; 2009 ; 2009 ; ICSID Review: Foreign Investment Law Journal Volume 24 ; 24 ;  >
     au < crawling ; exists ; 2010 ; 2010 ; ICSID Review: Foreign Investment Law Journal Volume 25 ; 25 ;  >
     au < testing ; exists ; 2011 ; 2011 ; ICSID Review: Foreign Investment Law Journal Volume 26 ; 26 ;  >
     au < testing ; exists ; 2012 ; 2012 ; ICSID Review: Foreign Investment Law Journal Volume 27 ; 27 ;  >
@@ -7318,7 +7318,7 @@
     au < testing ; exists ; 2010 ; 2010 ; International Affairs Volume 86 ; 86 ;  >
     au < testing ; exists ; 2011 ; 2011 ; International Affairs Volume 87 ; 87 ;  >
     au < ready ; exists ; 2012 ; 2012 ; International Affairs Volume 88 ; 88 ;  >
-    au < testing ; exists ; 2013 ; 2013 ; International Affairs Volume 89 ; 89 ;  >
+    au < ready ; exists ; 2013 ; 2013 ; International Affairs Volume 89 ; 89 ;  >
     au < testing ; exists ; 2014 ; 2014 ; International Affairs Volume 90 ; 90 ;  >
     au < crawling ; exists ; 2015 ; 2015 ; International Affairs Volume 91 ; 91 ;  >
     au < testing ; exists ; 2016 ; 2016 ; International Affairs Volume 92 ; 92 ;  >
@@ -7559,7 +7559,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; International Journal of Epidemiology Volume 43 ; 43 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Journal of Epidemiology Volume 44 ; 44 ;  >
     au < testing ; exists ; 2016 ; 2016 ; International Journal of Epidemiology Volume 45 ; 45 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; International Journal of Epidemiology Volume 46 ; 46 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; International Journal of Epidemiology Volume 46 ; 46 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; International Journal of Epidemiology Volume 47 ; 47 ;  >
 
   }
@@ -7690,7 +7690,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; International Journal of Lexicography Volume 27 ; 27 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Journal of Lexicography Volume 28 ; 28 ;  >
     au < testing ; exists ; 2016 ; 2016 ; International Journal of Lexicography Volume 29 ; 29 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; International Journal of Lexicography Volume 30 ; 30 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; International Journal of Lexicography Volume 30 ; 30 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; International Journal of Lexicography Volume 31 ; 31 ;  >
 
   }
@@ -8892,7 +8892,7 @@
     au < testing ; exists ; 2011 ; 2011 ; Journal of Consumer Research Volume 37-38 ; 37-38 ;  >
     au < ready ; exists ; 2012 ; 2012 ; Journal of Consumer Research Volume 38-39 ; 38-39 ;  >
     au < testing ; exists ; 2013 ; 2013 ; Journal of Consumer Research Volume 39-40 ; 39-40 ;  >
-    au < testing ; exists ; 2014 ; 2014 ; Journal of Consumer Research Volume 40-41 ; 40-41 ;  >
+    au < ready ; exists ; 2014 ; 2014 ; Journal of Consumer Research Volume 40-41 ; 40-41 ;  >
     au < testing ; exists ; 2015 ; 2015 ; Journal of Consumer Research Volume 41-42 ; 41-42 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; Journal of Consumer Research Volume 42-43 ; 42-43 ;  >
     au < testing ; exists ; 2017 ; 2017 ; Journal of Consumer Research Volume 43-44 ; 43-44 ;  >
@@ -11184,7 +11184,7 @@
     au < testing ; exists ; 2009 ; 2009 ; Journal of the American Medical Informatics Association Volume 16 ; 16 ;  >
     au < testing ; exists ; 2010 ; 2010 ; Journal of the American Medical Informatics Association Volume 17 ; 17 ;  >
     au < testing ; exists ; 2011 ; 2011 ; Journal of the American Medical Informatics Association Volume 18 ; 18 ;  >
-    au < testing ; exists ; 2012 ; 2012 ; Journal of the American Medical Informatics Association Volume 19 ; 19 ;  >
+    au < ready ; exists ; 2012 ; 2012 ; Journal of the American Medical Informatics Association Volume 19 ; 19 ;  >
     au < testing ; exists ; 2013 ; 2013 ; Journal of the American Medical Informatics Association Volume 20 ; 20 ;  >
     au < testing ; exists ; 2014 ; 2014 ; Journal of the American Medical Informatics Association Volume 21 ; 21 ;  >
     au < testing ; exists ; 2015 ; 2015 ; Journal of the American Medical Informatics Association Volume 22 ; 22 ;  >
