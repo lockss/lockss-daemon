@@ -6030,8 +6030,8 @@
 
     param[journal_id] = globalsummitry
 
-    au < ready ; exists ; 2015 ; 2015 ; Global Summitry Volume 1 ; 1 ;  >
-    au < ready ; exists ; 2016 ; 2016 ; Global Summitry Volume 2 ; 2 ;  >
+    au < crawling ; exists ; 2015 ; 2015 ; Global Summitry Volume 1 ; 1 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; Global Summitry Volume 2 ; 2 ;  >
     au < testing ; exists ; 2017 ; 2017 ; Global Summitry Volume 3 ; 3 ;  >
     au < expected ; exists ; 2018 ; 2018 ; Global Summitry Volume 4 ; 4 ;  >
 
@@ -6074,7 +6074,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Glycobiology Volume 24 ; 24 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Glycobiology Volume 25 ; 25 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; Glycobiology Volume 26 ; 26 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; Glycobiology Volume 27 ; 27 ;  >
+    au < crawling ; exists ; 2017 ; 2017 ; Glycobiology Volume 27 ; 27 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; Glycobiology Volume 28 ; 28 ;  >
 
   }
@@ -6271,7 +6271,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Health Promotion International Volume 28 ; 28 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Health Promotion International Volume 29 ; 29 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Health Promotion International Volume 30 ; 30 ;  >
-    au < ready ; exists ; 2016 ; 2016 ; Health Promotion International Volume 31 ; 31 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; Health Promotion International Volume 31 ; 31 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; Health Promotion International Volume 32 ; 32 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; Health Promotion International Volume 33 ; 33 ;  >
 
@@ -6328,7 +6328,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; History Workshop Journal Volume 75-76 ; 75-76 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; History Workshop Journal Volume 77-78 ; 77-78 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; History Workshop Journal Volume 79-80 ; 79-80 ;  >
-    au < ready ; exists ; 2016 ; 2016 ; History Workshop Journal Volume 81-82 ; 81-82 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; History Workshop Journal Volume 81-82 ; 81-82 ;  >
     au < testing ; exists ; 2017 ; 2017 ; History Workshop Journal Volume 83-84 ; 83-84 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; History Workshop Journal Volume 85-86 ; 85-86 ;  >
 
@@ -6692,14 +6692,14 @@
     au < doNotProcess ; exists ; 2006 ; 2006 ; ICSID Review: Foreign Investment Law Journal Volume 21 ; 21 ;  >
     au < doNotProcess ; exists ; 2007 ; 2007 ; ICSID Review: Foreign Investment Law Journal Volume 22 ; 22 ;  >
     au < testing ; exists ; 2008 ; 2008 ; ICSID Review: Foreign Investment Law Journal Volume 23 ; 23 ;  >
-    au < ready ; exists ; 2009 ; 2009 ; ICSID Review: Foreign Investment Law Journal Volume 24 ; 24 ;  >
+    au < crawling ; exists ; 2009 ; 2009 ; ICSID Review: Foreign Investment Law Journal Volume 24 ; 24 ;  >
     au < crawling ; exists ; 2010 ; 2010 ; ICSID Review: Foreign Investment Law Journal Volume 25 ; 25 ;  >
     au < testing ; exists ; 2011 ; 2011 ; ICSID Review: Foreign Investment Law Journal Volume 26 ; 26 ;  >
     au < testing ; exists ; 2012 ; 2012 ; ICSID Review: Foreign Investment Law Journal Volume 27 ; 27 ;  >
     au < testing ; exists ; 2013 ; 2013 ; ICSID Review: Foreign Investment Law Journal Volume 28 ; 28 ;  >
     au < testing ; exists ; 2014 ; 2014 ; ICSID Review: Foreign Investment Law Journal Volume 29 ; 29 ;  >
     au < testing ; exists ; 2015 ; 2015 ; ICSID Review: Foreign Investment Law Journal Volume 30 ; 30 ;  >
-    au < ready ; exists ; 2016 ; 2016 ; ICSID Review: Foreign Investment Law Journal Volume 31 ; 31 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; ICSID Review: Foreign Investment Law Journal Volume 31 ; 31 ;  >
     au < testing ; exists ; 2017 ; 2017 ; ICSID Review: Foreign Investment Law Journal Volume 32 ; 32 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; ICSID Review: Foreign Investment Law Journal Volume 33 ; 33 ;  >
 
@@ -7166,7 +7166,7 @@
     param[journal_id] = innovateage
 
     #this title was ONLY in the publisher listing
-    au < ready ; exists ; 2017 ; 2017 ; Innovation in Aging Volume 1 ; 1 ;  >
+    au < crawling ; exists ; 2017 ; 2017 ; Innovation in Aging Volume 1 ; 1 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; Innovation in Aging Volume 2 ; 2 ;  >
 
   }
@@ -7317,8 +7317,8 @@
     #this title was ONLY in the publisher listing
     au < testing ; exists ; 2010 ; 2010 ; International Affairs Volume 86 ; 86 ;  >
     au < testing ; exists ; 2011 ; 2011 ; International Affairs Volume 87 ; 87 ;  >
-    au < ready ; exists ; 2012 ; 2012 ; International Affairs Volume 88 ; 88 ;  >
-    au < ready ; exists ; 2013 ; 2013 ; International Affairs Volume 89 ; 89 ;  >
+    au < crawling ; exists ; 2012 ; 2012 ; International Affairs Volume 88 ; 88 ;  >
+    au < crawling ; exists ; 2013 ; 2013 ; International Affairs Volume 89 ; 89 ;  >
     au < testing ; exists ; 2014 ; 2014 ; International Affairs Volume 90 ; 90 ;  >
     au < crawling ; exists ; 2015 ; 2015 ; International Affairs Volume 91 ; 91 ;  >
     au < testing ; exists ; 2016 ; 2016 ; International Affairs Volume 92 ; 92 ;  >
@@ -7559,7 +7559,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; International Journal of Epidemiology Volume 43 ; 43 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Journal of Epidemiology Volume 44 ; 44 ;  >
     au < testing ; exists ; 2016 ; 2016 ; International Journal of Epidemiology Volume 45 ; 45 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; International Journal of Epidemiology Volume 46 ; 46 ;  >
+    au < crawling ; exists ; 2017 ; 2017 ; International Journal of Epidemiology Volume 46 ; 46 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; International Journal of Epidemiology Volume 47 ; 47 ;  >
 
   }
@@ -7598,8 +7598,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; International Journal of Law and Information Technology Volume 21 ; 21 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; International Journal of Law and Information Technology Volume 22 ; 22 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Journal of Law and Information Technology Volume 23 ; 23 ;  >
-    au < ready ; exists ; 2016 ; 2016 ; International Journal of Law and Information Technology Volume 24 ; 24 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; International Journal of Law and Information Technology Volume 25 ; 25 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; International Journal of Law and Information Technology Volume 24 ; 24 ;  >
+    au < crawling ; exists ; 2017 ; 2017 ; International Journal of Law and Information Technology Volume 25 ; 25 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; International Journal of Law and Information Technology Volume 26 ; 26 ;  >
 
   }
@@ -7690,7 +7690,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; International Journal of Lexicography Volume 27 ; 27 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Journal of Lexicography Volume 28 ; 28 ;  >
     au < testing ; exists ; 2016 ; 2016 ; International Journal of Lexicography Volume 29 ; 29 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; International Journal of Lexicography Volume 30 ; 30 ;  >
+    au < crawling ; exists ; 2017 ; 2017 ; International Journal of Lexicography Volume 30 ; 30 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; International Journal of Lexicography Volume 31 ; 31 ;  >
 
   }
@@ -7716,7 +7716,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; International Journal of Low-Carbon Technologies Volume 8 ; 8 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; International Journal of Low-Carbon Technologies Volume 9 ; 9 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Journal of Low-Carbon Technologies Volume 10 ; 10 ;  >
-    au < ready ; exists ; 2016 ; 2016 ; International Journal of Low-Carbon Technologies Volume 11 ; 11 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; International Journal of Low-Carbon Technologies Volume 11 ; 11 ;  >
     au < testing ; exists ; 2017 ; 2017 ; International Journal of Low-Carbon Technologies Volume 12 ; 12 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; International Journal of Low-Carbon Technologies Volume 13 ; 13 ;  >
 
@@ -8000,7 +8000,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; International Relations of the Asia-Pacific Volume 13 ; 13 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; International Relations of the Asia-Pacific Volume 14 ; 14 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Relations of the Asia-Pacific Volume 15 ; 15 ;  >
-    au < ready ; exists ; 2016 ; 2016 ; International Relations of the Asia-Pacific Volume 16 ; 16 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; International Relations of the Asia-Pacific Volume 16 ; 16 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; International Relations of the Asia-Pacific Volume 17 ; 17 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; International Relations of the Asia-Pacific Volume 18 ; 18 ;  >
 
@@ -8890,9 +8890,9 @@
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Journal of Consumer Research Volume 35-36 ; 35-36 ;  >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Journal of Consumer Research Volume 36-37 ; 36-37 ;  >
     au < testing ; exists ; 2011 ; 2011 ; Journal of Consumer Research Volume 37-38 ; 37-38 ;  >
-    au < ready ; exists ; 2012 ; 2012 ; Journal of Consumer Research Volume 38-39 ; 38-39 ;  >
+    au < crawling ; exists ; 2012 ; 2012 ; Journal of Consumer Research Volume 38-39 ; 38-39 ;  >
     au < testing ; exists ; 2013 ; 2013 ; Journal of Consumer Research Volume 39-40 ; 39-40 ;  >
-    au < ready ; exists ; 2014 ; 2014 ; Journal of Consumer Research Volume 40-41 ; 40-41 ;  >
+    au < crawling ; exists ; 2014 ; 2014 ; Journal of Consumer Research Volume 40-41 ; 40-41 ;  >
     au < testing ; exists ; 2015 ; 2015 ; Journal of Consumer Research Volume 41-42 ; 41-42 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; Journal of Consumer Research Volume 42-43 ; 42-43 ;  >
     au < testing ; exists ; 2017 ; 2017 ; Journal of Consumer Research Volume 43-44 ; 43-44 ;  >
@@ -9596,7 +9596,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Hip Preservation Surgery Volume 1 ; 1 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Hip Preservation Surgery Volume 2 ; 2 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; Journal of Hip Preservation Surgery Volume 3 ; 3 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; Journal of Hip Preservation Surgery Volume 4 ; 4 ;  >
+    au < crawling ; exists ; 2017 ; 2017 ; Journal of Hip Preservation Surgery Volume 4 ; 4 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; Journal of Hip Preservation Surgery Volume 5 ; 5 ;  >
 
   }
@@ -11184,7 +11184,7 @@
     au < testing ; exists ; 2009 ; 2009 ; Journal of the American Medical Informatics Association Volume 16 ; 16 ;  >
     au < testing ; exists ; 2010 ; 2010 ; Journal of the American Medical Informatics Association Volume 17 ; 17 ;  >
     au < testing ; exists ; 2011 ; 2011 ; Journal of the American Medical Informatics Association Volume 18 ; 18 ;  >
-    au < ready ; exists ; 2012 ; 2012 ; Journal of the American Medical Informatics Association Volume 19 ; 19 ;  >
+    au < crawling ; exists ; 2012 ; 2012 ; Journal of the American Medical Informatics Association Volume 19 ; 19 ;  >
     au < testing ; exists ; 2013 ; 2013 ; Journal of the American Medical Informatics Association Volume 20 ; 20 ;  >
     au < testing ; exists ; 2014 ; 2014 ; Journal of the American Medical Informatics Association Volume 21 ; 21 ;  >
     au < testing ; exists ; 2015 ; 2015 ; Journal of the American Medical Informatics Association Volume 22 ; 22 ;  >
