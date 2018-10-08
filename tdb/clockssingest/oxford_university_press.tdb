@@ -1611,7 +1611,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Arthropod Management Tests Volume 37 ; 37 ;  >
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Arthropod Management Tests Volume 38 ; 38 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Arthropod Management Tests Volume 39 ; 39 ;  >
-    au < crawling ; exists ; 2015 ; 2015 ; Arthropod Management Tests Volume 40 ; 40 ;  >
+    au < frozen ; exists ; 2015 ; 2015 ; Arthropod Management Tests Volume 40 ; 40 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; Arthropod Management Tests Volume 41 ; 41 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; Arthropod Management Tests Volume 42 ; 42 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; Arthropod Management Tests Volume 43 ; 43 ;  >
@@ -2911,7 +2911,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Carcinogenesis Volume 34 ; 34 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Carcinogenesis Volume 35 ; 35 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Carcinogenesis Volume 36 ; 36 ;  >
-    au < crawling ; exists ; 2016 ; 2016 ; Carcinogenesis Volume 37 ; 37 ;  >
+    au < frozen ; exists ; 2016 ; 2016 ; Carcinogenesis Volume 37 ; 37 ;  >
     au < frozen ; exists ; 2017 ; 2017 ; Carcinogenesis Volume 38 ; 38 ;  >
     au < testing ; exists ; 2018 ; 2018 ; Carcinogenesis Volume 39 ; 39 ;  >
 
@@ -3200,7 +3200,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 20 ; 20 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 21 ; 21 ;  >
     au < frozen ; exists ; 2016 ; 2016 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 22 ; 22 ;  >
-    au < crawling ; exists ; 2017 ; 2017 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 23 ; 23 ;  >
+    au < frozen ; exists ; 2017 ; 2017 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 23 ; 23 ;  >
     au < testing ; exists ; 2018 ; 2018 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 24 ; 24 ;  >
 
   }
@@ -3400,7 +3400,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Community Development Journal Volume 48 ; 48 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Community Development Journal Volume 49 ; 49 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Community Development Journal Volume 50 ; 50 ;  >
-    au < crawling ; exists ; 2016 ; 2016 ; Community Development Journal Volume 51 ; 51 ;  >
+    au < frozen ; exists ; 2016 ; 2016 ; Community Development Journal Volume 51 ; 51 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; Community Development Journal Volume 52 ; 52 ;  >
     au < testing ; exists ; 2018 ; 2018 ; Community Development Journal Volume 53 ; 53 ;  >
 
@@ -3652,7 +3652,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; DNA Research Volume 20 ; 20 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; DNA Research Volume 21 ; 21 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; DNA Research Volume 22 ; 22 ;  >
-    au < crawling ; exists ; 2016 ; 2016 ; DNA Research Volume 23 ; 23 ;  >
+    au < frozen ; exists ; 2016 ; 2016 ; DNA Research Volume 23 ; 23 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; DNA Research Volume 24 ; 24 ;  >
     au < crawling ; exists ; 2018 ; 2018 ; DNA Research Volume 25 ; 25 ;  >
 
@@ -3675,7 +3675,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Database Volume 2013 ; 2013 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Database Volume 2014 ; 2014 ;  >
     au < testing ; exists ; 2015 ; 2015 ; Database Volume 2015 ; 2015 ;  >
-    au < crawling ; exists ; 2016 ; 2016 ; Database Volume 2016 ; 2016 ;  >
+    au < frozen ; exists ; 2016 ; 2016 ; Database Volume 2016 ; 2016 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; Database Volume 2017 ; 2017 ;  >
     au < testing ; exists ; 2018 ; 2018 ; Database Volume 2018 ; 2018 ;  >
 
@@ -4038,7 +4038,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Early Music Volume 41 ; 41 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Early Music Volume 42 ; 42 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Early Music Volume 43 ; 43 ;  >
-    au < crawling ; exists ; 2016 ; 2016 ; Early Music Volume 44 ; 44 ;  >
+    au < frozen ; exists ; 2016 ; 2016 ; Early Music Volume 44 ; 44 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; Early Music Volume 45 ; 45 ;  >
     au < crawling ; exists ; 2018 ; 2018 ; Early Music Volume 46 ; 46 ;  >
 
@@ -4489,7 +4489,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Essays in Criticism Volume 63 ; 63 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Essays in Criticism Volume 64 ; 64 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Essays in Criticism Volume 65 ; 65 ;  >
-    au < crawling ; exists ; 2016 ; 2016 ; Essays in Criticism Volume 66 ; 66 ;  >
+    au < frozen ; exists ; 2016 ; 2016 ; Essays in Criticism Volume 66 ; 66 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; Essays in Criticism Volume 67 ; 67 ;  >
 
   }
@@ -5167,7 +5167,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; FEMS Microbiology Reviews Volume 29 ; 29 ;  >
     au < doNotProcess ; exists ; 2006 ; 2006 ; FEMS Microbiology Reviews Volume 30 ; 30 ;  >
     au < doNotProcess ; exists ; 2007 ; 2007 ; FEMS Microbiology Reviews Volume 31 ; 31 ;  >
-    au < crawling ; exists ; 2008 ; 2008 ; FEMS Microbiology Reviews Volume 32 ; 32 ;  >
+    au < frozen ; exists ; 2008 ; 2008 ; FEMS Microbiology Reviews Volume 32 ; 32 ;  >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; FEMS Microbiology Reviews Volume 33 ; 33 ;  >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; FEMS Microbiology Reviews Volume 34 ; 34 ;  >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; FEMS Microbiology Reviews Volume 35 ; 35 ;  >
@@ -7253,7 +7253,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Integrative and Comparative Biology Volume 54 ; 54 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Integrative and Comparative Biology Volume 55 ; 55 ;  >
     au < testing ; exists ; 2016 ; 2016 ; Integrative and Comparative Biology Volume 56 ; 56 ;  >
-    au < crawling ; exists ; 2017 ; 2017 ; Integrative and Comparative Biology Volume 57 ; 57 ;  >
+    au < frozen ; exists ; 2017 ; 2017 ; Integrative and Comparative Biology Volume 57 ; 57 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; Integrative and Comparative Biology Volume 58 ; 58 ;  >
 
   }
@@ -10247,7 +10247,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Journal of Neuropathology & Experimental Neurology Volume 66 ; 66 ;  >
     au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; Journal of Neuropathology & Experimental Neurology Volume 67 ; 67 ;  >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Journal of Neuropathology & Experimental Neurology Volume 68 ; 68 ;  >
-    au < crawling ; exists ; 2010 ; 2010 ; Journal of Neuropathology & Experimental Neurology Volume 69 ; 69 ;  >
+    au < frozen ; exists ; 2010 ; 2010 ; Journal of Neuropathology & Experimental Neurology Volume 69 ; 69 ;  >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Journal of Neuropathology & Experimental Neurology Volume 70 ; 70 ;  >
     au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Journal of Neuropathology & Experimental Neurology Volume 71 ; 71 ;  >
     au < testing ; exists ; 2013 ; 2013 ; Journal of Neuropathology & Experimental Neurology Volume 72 ; 72 ;  >
