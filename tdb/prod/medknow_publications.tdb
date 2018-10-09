@@ -8301,11 +8301,11 @@
       param[journal_issn] = 2349-0578
       param[base_url] = http://www.actamedicainternational.com/
 
-      au < exists ; 2014 ; Acta Medica International Volume 1 ; 2014 ; 1 >
-      au < exists ; 2015 ; Acta Medica International Volume 2 ; 2015 ; 2 >
-      au < exists ; 2016 ; Acta Medica International Volume 3 ; 2016 ; 3 >
-      au < exists ; 2017 ; Acta Medica International Volume 4 ; 2017 ; 4 >
-      au < expected ; 2018 ; Acta Medica International Volume 5 ; 2018 ; 5 >
+      au < manifest ; 2014 ; Acta Medica International Volume 1 ; 2014 ; 1 >
+      au < manifest ; 2015 ; Acta Medica International Volume 2 ; 2015 ; 2 >
+      au < manifest ; 2016 ; Acta Medica International Volume 3 ; 2016 ; 3 >
+      au < manifest ; 2017 ; Acta Medica International Volume 4 ; 2017 ; 4 >
+      au < manifest ; 2018 ; Acta Medica International Volume 5 ; 2018 ; 5 >
 
   }
 
@@ -8321,12 +8321,12 @@
       param[journal_issn] = 2321-8568
       param[base_url] = http://www.aihbonline.com/
 
-      au < exists ; 2013 ; Advances in Human Biology Volume 3 ; 2013 ; 3 >
-      au < exists ; 2014 ; Advances in Human Biology Volume 4 ; 2014 ; 4 >
-      au < exists ; 2015 ; Advances in Human Biology Volume 5 ; 2015 ; 5 >
-      au < exists ; 2016 ; Advances in Human Biology Volume 6 ; 2016 ; 6 >
-      au < exists ; 2017 ; Advances in Human Biology Volume 7 ; 2017 ; 7 >
-      au < expected ; 2018 ; Advances in Human Biology Volume 8 ; 2018 ; 8 >
+      au < manifest ; 2013 ; Advances in Human Biology Volume 3 ; 2013 ; 3 >
+      au < manifest ; 2014 ; Advances in Human Biology Volume 4 ; 2014 ; 4 >
+      au < manifest ; 2015 ; Advances in Human Biology Volume 5 ; 2015 ; 5 >
+      au < manifest ; 2016 ; Advances in Human Biology Volume 6 ; 2016 ; 6 >
+      au < manifest ; 2017 ; Advances in Human Biology Volume 7 ; 2017 ; 7 >
+      au < manifest ; 2018 ; Advances in Human Biology Volume 8 ; 2018 ; 8 >
 
   }
 
@@ -8342,7 +8342,7 @@
       param[journal_issn] = 2536-1384
       param[base_url] = http://www.asmfa.org/
 
-      au < exists ; 2017 ; Advances in Skeletal Muscle Function Assessment Volume 1 ; 2017 ; 1 >
+      au < manifest ; 2017 ; Advances in Skeletal Muscle Function Assessment Volume 1 ; 2017 ; 1 >
       au < expected ; 2018 ; Advances in Skeletal Muscle Function Assessment Volume 2 ; 2018 ; 2 >
 
   }
@@ -8359,8 +8359,8 @@
       param[journal_issn] = 2468-8452
       param[base_url] = http://www.afrijiac.org/
 
-      au < exists ; 2016 ; African Journal for Infertility and Assisted Conception Volume 1 ; 2016 ; 1 >
-      au < exists ; 2017 ; African Journal for Infertility and Assisted Conception Volume 2 ; 2017 ; 2 >
+      au < manifest ; 2016 ; African Journal for Infertility and Assisted Conception Volume 1 ; 2016 ; 1 >
+      au < manifest ; 2017 ; African Journal for Infertility and Assisted Conception Volume 2 ; 2017 ; 2 >
       au < expected ; 2018 ; African Journal for Infertility and Assisted Conception Volume 3 ; 2018 ; 3 >
 
   }
@@ -8377,12 +8377,12 @@
       param[journal_issn] = 1687-7934
       param[base_url] = http://www.asja.eg.net/
 
-      au < exists ; 2012 ; Ain-Shams Journal of Anaesthesiology Volume 5 ; 2012 ; 5 >
-      au < exists ; 2013 ; Ain-Shams Journal of Anaesthesiology Volume 6 ; 2013 ; 6 >
-      au < exists ; 2014 ; Ain-Shams Journal of Anaesthesiology Volume 7 ; 2014 ; 7 >
-      au < exists ; 2015 ; Ain-Shams Journal of Anaesthesiology Volume 8 ; 2015 ; 8 >
-      au < exists ; 2016 ; Ain-Shams Journal of Anaesthesiology Volume 9 ; 2016 ; 9 >
-      au < exists ; 2017 ; Ain-Shams Journal of Anaesthesiology Volume 10 ; 2017 ; 10 >
+      au < manifest ; 2012 ; Ain-Shams Journal of Anaesthesiology Volume 5 ; 2012 ; 5 >
+      au < manifest ; 2013 ; Ain-Shams Journal of Anaesthesiology Volume 6 ; 2013 ; 6 >
+      au < manifest ; 2014 ; Ain-Shams Journal of Anaesthesiology Volume 7 ; 2014 ; 7 >
+      au < manifest ; 2015 ; Ain-Shams Journal of Anaesthesiology Volume 8 ; 2015 ; 8 >
+      au < manifest ; 2016 ; Ain-Shams Journal of Anaesthesiology Volume 9 ; 2016 ; 9 >
+      au < manifest ; 2017 ; Ain-Shams Journal of Anaesthesiology Volume 10 ; 2017 ; 10 >
       au < expected ; 2018 ; Ain-Shams Journal of Anaesthesiology Volume 11 ; 2018 ; 11 >
 
   }
@@ -8398,8 +8398,8 @@
       param[journal_issn] = 1687-9945
       param[base_url] = http://www.ajp.eg.net/
 
-      au < exists ; 2017 ; Alexandria Journal of Pediatrics Volume 30 ; 2017 ; 30 >
-      au < expected ; 2018 ; Alexandria Journal of Pediatrics Volume 31 ; 2018 ; 31 >
+      au < manifest ; 2017 ; Alexandria Journal of Pediatrics Volume 30 ; 2017 ; 30 >
+      au < manifest ; 2018 ; Alexandria Journal of Pediatrics Volume 31 ; 2018 ; 31 >
 
   }
 
@@ -8449,15 +8449,15 @@
       param[journal_issn] = 2251-0060
       param[base_url] = http://www.atpjournal.org/
 
-      au < exists ; 2010 ; Annals of Tropical Pathology Volume 1 ; 2010 ; 1 >
-      au < exists ; 2011 ; Annals of Tropical Pathology Volume 2 ; 2011 ; 2 >
-      au < exists ; 2012 ; Annals of Tropical Pathology Volume 3 ; 2012 ; 3 >
-      au < exists ; 2013 ; Annals of Tropical Pathology Volume 4 ; 2013 ; 4 >
-      au < exists ; 2014 ; Annals of Tropical Pathology Volume 5 ; 2014 ; 5 >
-      au < exists ; 2015 ; Annals of Tropical Pathology Volume 6 ; 2015 ; 6 >
-      au < exists ; 2016 ; Annals of Tropical Pathology Volume 7 ; 2016 ; 7 >
-      au < exists ; 2017 ; Annals of Tropical Pathology Volume 8 ; 2017 ; 8 >
-      au < expected ; 2018 ; Annals of Tropical Pathology Volume 9 ; 2018 ; 9 >
+      au < manifest ; 2010 ; Annals of Tropical Pathology Volume 1 ; 2010 ; 1 >
+      au < manifest ; 2011 ; Annals of Tropical Pathology Volume 2 ; 2011 ; 2 >
+      au < manifest ; 2012 ; Annals of Tropical Pathology Volume 3 ; 2012 ; 3 >
+      au < manifest ; 2013 ; Annals of Tropical Pathology Volume 4 ; 2013 ; 4 >
+      au < manifest ; 2014 ; Annals of Tropical Pathology Volume 5 ; 2014 ; 5 >
+      au < manifest ; 2015 ; Annals of Tropical Pathology Volume 6 ; 2015 ; 6 >
+      au < manifest ; 2016 ; Annals of Tropical Pathology Volume 7 ; 2016 ; 7 >
+      au < manifest ; 2017 ; Annals of Tropical Pathology Volume 8 ; 2017 ; 8 >
+      au < manifest ; 2018 ; Annals of Tropical Pathology Volume 9 ; 2018 ; 9 >
 
   }
 
@@ -8473,8 +8473,8 @@
       param[journal_issn] = 0976-0016
       param[base_url] = http://www.apollomedicine.org/
 
-      au < exists ; 2017 ; Apollo Medicine Volume 14 ; 2017 ; 14 >
-      au < expected ; 2018 ; Apollo Medicine Volume 15 ; 2018 ; 15 >
+      au < manifest ; 2017 ; Apollo Medicine Volume 14 ; 2017 ; 14 >
+      au < manifest ; 2018 ; Apollo Medicine Volume 15 ; 2018 ; 15 >
 
   }
 
@@ -8490,8 +8490,8 @@
       param[journal_issn] = 2542-7075
       param[base_url] = http://www.arabjir.com/
 
-      au < exists ; 2017 ; Arab Journal of Interventional Radiology Volume 1 ; 2017 ; 1 >
-      au < expected ; 2018 ; Arab Journal of Interventional Radiology Volume 2 ; 2018 ; 2 >
+      au < manifest ; 2017 ; Arab Journal of Interventional Radiology Volume 1 ; 2017 ; 1 >
+      au < manifest ; 2018 ; Arab Journal of Interventional Radiology Volume 2 ; 2018 ; 2 >
 
   }
 
@@ -8507,10 +8507,10 @@
       param[journal_issn] = 2322-5327
       param[base_url] = http://www.cardiovascimaging.com/
 
-      au < exists ; 2013 ; Archives of Cardiovascular Imaging Volume 1 ; 2013 ; 1 >
-      au < exists ; 2014 ; Archives of Cardiovascular Imaging Volume 2 ; 2014 ; 2 >
-      au < exists ; 2015 ; Archives of Cardiovascular Imaging Volume 3 ; 2015 ; 3 >
-      au < exists ; 2016 ; Archives of Cardiovascular Imaging Volume 4 ; 2016 ; 4 >
+      au < manifest ; 2013 ; Archives of Cardiovascular Imaging Volume 1 ; 2013 ; 1 >
+      au < manifest ; 2014 ; Archives of Cardiovascular Imaging Volume 2 ; 2014 ; 2 >
+      au < manifest ; 2015 ; Archives of Cardiovascular Imaging Volume 3 ; 2015 ; 3 >
+      au < manifest ; 2016 ; Archives of Cardiovascular Imaging Volume 4 ; 2016 ; 4 >
       au < exists ; 2017 ; Archives of Cardiovascular Imaging Volume 5 ; 2017 ; 5 >
       au < expected ; 2018 ; Archives of Cardiovascular Imaging Volume 6 ; 2018 ; 6 >
 
@@ -8528,8 +8528,8 @@
       param[journal_issn] = 2543-1951
       param[base_url] = http://www.archms.org/
 
-      au < exists ; 2016 ; Archives of Medicine and Surgery Volume 1 ; 2016 ; 1 >
-      au < exists ; 2017 ; Archives of Medicine and Surgery Volume 2 ; 2017 ; 2 >
+      au < manifest ; 2016 ; Archives of Medicine and Surgery Volume 1 ; 2016 ; 1 >
+      au < manifest ; 2017 ; Archives of Medicine and Surgery Volume 2 ; 2017 ; 2 >
       au < expected ; 2018 ; Archives of Medicine and Surgery Volume 3 ; 2018 ; 3 >
 
   }
@@ -8546,8 +8546,8 @@
       param[journal_issn] = 2251-953X
       param[base_url] = http://www.archtrauma.com/
 
-      au < exists ; 2017 ; Archives of Trauma Research Volume 6 ; 2017 ; 6 >
-      au < expected ; 2018 ; Archives of Trauma Research Volume 7 ; 2018 ; 7 >
+      au < manifest ; 2017 ; Archives of Trauma Research Volume 6 ; 2017 ; 6 >
+      au < manifest ; 2018 ; Archives of Trauma Research Volume 7 ; 2018 ; 7 >
 
   }
 
@@ -8562,7 +8562,7 @@
       param[journal_issn] = 2589-9309
       param[base_url] = http://www.ajpn-online.org/
 
-      au < expected ; 2018 ; Asian Journal of Pediatric Nephrology Volume 1 ; 2018 ; 1 >
+      au < manifest ; 2018 ; Asian Journal of Pediatric Nephrology Volume 1 ; 2018 ; 1 >
 
   }
 
@@ -8578,8 +8578,8 @@
       param[journal_issn] = 2305-0500
       param[base_url] = http://www.apjr.net/
 
-      au < exists ; 2017 ; Asian Pacific Journal of Reproduction Volume 6 ; 2017 ; 6 >
-      au < expected ; 2018 ; Asian Pacific Journal of Reproduction Volume 7 ; 2018 ; 7 >
+      au < manifest ; 2017 ; Asian Pacific Journal of Reproduction Volume 6 ; 2017 ; 6 >
+      au < manifest ; 2018 ; Asian Pacific Journal of Reproduction Volume 7 ; 2018 ; 7 >
 
   }
 
@@ -8595,7 +8595,7 @@
       param[journal_issn] = 2221-1691
       param[base_url] = http://www.apjtb.org/
 
-      au < expected ; 2018 ; Asian Pacific Journal of Tropical Biomedicine Volume 8 ; 2018 ; 8 >
+      au < manifest ; 2018 ; Asian Pacific Journal of Tropical Biomedicine Volume 8 ; 2018 ; 8 >
 
   }
 
@@ -8611,7 +8611,7 @@
       param[journal_issn] = 1995-7645
       param[base_url] = http://www.apjtm.org/
 
-      au < expected ; 2018 ; Asian Pacific Journal of Tropical Medicine Volume 11 ; 2018 ; 11 >
+      au < manifest ; 2018 ; Asian Pacific Journal of Tropical Medicine Volume 11 ; 2018 ; 11 >
 
   }
 
@@ -8627,8 +8627,8 @@
       param[journal_issn] = 2588-9834
       param[base_url] = http://www.bmbtrj.org/
 
-      au < exists ; 2017 ; Biomedical and Biotechnology Research Journal Volume 1 ; 2017 ; 1 >
-      au < expected ; 2018 ; Biomedical and Biotechnology Research Journal Volume 2 ; 2018 ; 2 >
+      au < manifest ; 2017 ; Biomedical and Biotechnology Research Journal Volume 1 ; 2017 ; 1 >
+      au < manifest ; 2018 ; Biomedical and Biotechnology Research Journal Volume 2 ; 2018 ; 2 >
 
   }
 
@@ -8644,8 +8644,8 @@
       param[journal_issn] = 2470-7511
       param[base_url] = http://www.cardiologyplus.org/
 
-      au < exists ; 2017 ; Cardiology Plus Volume 2 ; 2017 ; 2 >
-      au < expected ; 2018 ; Cardiology Plus Volume 3 ; 2018 ; 3 >
+      au < manifest ; 2017 ; Cardiology Plus Volume 2 ; 2017 ; 2 >
+      au < manifest ; 2018 ; Cardiology Plus Volume 3 ; 2018 ; 3 >
 
   }
 
@@ -8661,8 +8661,8 @@
       param[journal_issn] = 2542-551X
       param[base_url] = http://www.cdriadvlkn.org/
 
-      au < exists ; 2017 ; Clinical Dermatology Review Volume 1 ; 2017 ; 1 >
-      au < expected ; 2018 ; Clinical Dermatology Review Volume 2 ; 2018 ; 2 >
+      au < manifest ; 2017 ; Clinical Dermatology Review Volume 1 ; 2017 ; 1 >
+      au < manifest ; 2018 ; Clinical Dermatology Review Volume 2 ; 2018 ; 2 >
 
   }
 
@@ -8677,9 +8677,9 @@
       param[journal_issn] = 0973-4651
       param[base_url] = http://www.cmijournal.org/
 
-      au < exists ; 2016 ; Current Medical Issues Volume 14 ; 2016 ; 14 >
-      au < exists ; 2017 ; Current Medical Issues Volume 15 ; 2017 ; 15 >
-      au < expected ; 2018 ; Current Medical Issues Volume 16 ; 2018 ; 16 >
+      au < manifest ; 2016 ; Current Medical Issues Volume 14 ; 2016 ; 14 >
+      au < manifest ; 2017 ; Current Medical Issues Volume 15 ; 2017 ; 15 >
+      au < manifest ; 2018 ; Current Medical Issues Volume 16 ; 2018 ; 16 >
 
   }
 
@@ -8712,7 +8712,7 @@
       param[journal_issn] = 0422-7638
       param[base_url] = http://www.ejcdt.eg.net/
 
-      au < expected ; 2018 ; Egyptian Journal of Chest Diseases and Tuberculosis Volume 67 ; 2018 ; 67 >
+      au < manifest ; 2018 ; Egyptian Journal of Chest Diseases and Tuberculosis Volume 67 ; 2018 ; 67 >
 
   }
 
@@ -8728,11 +8728,11 @@
       param[journal_issn] = 1110-1121
       param[base_url] = http://www.ejs.eg.net/
 
-      au < exists ; 2014 ; Egyptian Journal of Surgery Volume 33 ; 2014 ; 33 >
-      au < exists ; 2015 ; Egyptian Journal of Surgery Volume 34 ; 2015 ; 34 >
-      au < exists ; 2016 ; Egyptian Journal of Surgery Volume 35 ; 2016 ; 35 >
-      au < exists ; 2017 ; Egyptian Journal of Surgery Volume 36 ; 2017 ; 36 >
-      au < expected ; 2018 ; Egyptian Journal of Surgery Volume 37 ; 2018 ; 37 >
+      au < manifest ; 2014 ; Egyptian Journal of Surgery Volume 33 ; 2014 ; 33 >
+      au < manifest ; 2015 ; Egyptian Journal of Surgery Volume 34 ; 2015 ; 34 >
+      au < manifest ; 2016 ; Egyptian Journal of Surgery Volume 35 ; 2016 ; 35 >
+      au < manifest ; 2017 ; Egyptian Journal of Surgery Volume 36 ; 2017 ; 36 >
+      au < manifest ; 2018 ; Egyptian Journal of Surgery Volume 37 ; 2018 ; 37 >
 
   }
 
@@ -8748,9 +8748,9 @@
       param[journal_issn] = 2090-6021
       param[base_url] = http://www.enj.eg.net/
 
-      au < exists ; 2016 ; Egyptian Nursing Journal Volume 13 ; 2016 ; 13 >
-      au < exists ; 2017 ; Egyptian Nursing Journal Volume 14 ; 2017 ; 14 >
-      au < expected ; 2018 ; Egyptian Nursing Journal Volume 15 ; 2018 ; 15 >
+      au < manifest ; 2016 ; Egyptian Nursing Journal Volume 13 ; 2016 ; 13 >
+      au < manifest ; 2017 ; Egyptian Nursing Journal Volume 14 ; 2017 ; 14 >
+      au < manifest ; 2018 ; Egyptian Nursing Journal Volume 15 ; 2018 ; 15 >
 
   }
 
@@ -8766,8 +8766,8 @@
       param[journal_issn] = 1682-606X
       param[base_url] = http://www.e-fjs.org/
 
-      au < exists ; 2017 ; Formosan Journal of Surgery Volume 50 ; 2017 ; 50 >
-      au < expected ; 2018 ; Formosan Journal of Surgery Volume 51 ; 2018 ; 51 >
+      au < manifest ; 2017 ; Formosan Journal of Surgery Volume 50 ; 2017 ; 50 >
+      au < manifest ; 2018 ; Formosan Journal of Surgery Volume 51 ; 2018 ; 51 >
 
   }
 
@@ -8783,7 +8783,7 @@
       param[journal_issn] = 2589-6113
       param[base_url] = http://www.jglioma.com/
 
-      au < expected ; 2018 ; Glioma Volume 1 ; 2018 ; 1 >
+      au < manifest ; 2018 ; Glioma Volume 1 ; 2018 ; 1 >
 
   }
 
@@ -8799,7 +8799,7 @@
       param[journal_issn] = 2213-3070
       param[base_url] = http://www.e-gmit.com/
 
-      au < expected ; 2018 ; Gynecology and Minimally Invasive Therapy Volume 7 ; 2018 ; 7 >
+      au < manifest ; 2018 ; Gynecology and Minimally Invasive Therapy Volume 7 ; 2018 ; 7 >
 
   }
 
@@ -8815,17 +8815,17 @@
       param[journal_issn] = 2227-2437
       param[base_url] = http://www.hamdanjournal.org/
 
-      au < exists ; 2008 ; Hamdan Medical Journal Volume 1 ; 2008 ; 1 >
-      au < exists ; 2009 ; Hamdan Medical Journal Volume 2 ; 2009 ; 2 >
-      au < exists ; 2010 ; Hamdan Medical Journal Volume 3 ; 2010 ; 3 >
-      au < exists ; 2011 ; Hamdan Medical Journal Volume 4 ; 2011 ; 4 >
-      au < exists ; 2012 ; Hamdan Medical Journal Volume 5 ; 2012 ; 5 >
-      au < exists ; 2013 ; Hamdan Medical Journal Volume 6 ; 2013 ; 6 >
-      au < exists ; 2014 ; Hamdan Medical Journal Volume 7 ; 2014 ; 7 >
-      au < exists ; 2015 ; Hamdan Medical Journal Volume 8 ; 2015 ; 8 >
-      au < exists ; 2016 ; Hamdan Medical Journal Volume 9 ; 2016 ; 9 >
-      au < exists ; 2017 ; Hamdan Medical Journal Volume 10 ; 2017 ; 10 >
-      au < expected ; 2018 ; Hamdan Medical Journal Volume 11 ; 2018 ; 11 >
+      au < manifest ; 2008 ; Hamdan Medical Journal Volume 1 ; 2008 ; 1 >
+      au < manifest ; 2009 ; Hamdan Medical Journal Volume 2 ; 2009 ; 2 >
+      au < manifest ; 2010 ; Hamdan Medical Journal Volume 3 ; 2010 ; 3 >
+      au < manifest ; 2011 ; Hamdan Medical Journal Volume 4 ; 2011 ; 4 >
+      au < manifest ; 2012 ; Hamdan Medical Journal Volume 5 ; 2012 ; 5 >
+      au < manifest ; 2013 ; Hamdan Medical Journal Volume 6 ; 2013 ; 6 >
+      au < manifest ; 2014 ; Hamdan Medical Journal Volume 7 ; 2014 ; 7 >
+      au < manifest ; 2015 ; Hamdan Medical Journal Volume 8 ; 2015 ; 8 >
+      au < manifest ; 2016 ; Hamdan Medical Journal Volume 9 ; 2016 ; 9 >
+      au < manifest ; 2017 ; Hamdan Medical Journal Volume 10 ; 2017 ; 10 >
+      au < manifest ; 2018 ; Hamdan Medical Journal Volume 11 ; 2018 ; 11 >
 
   }
 
@@ -8841,7 +8841,7 @@
       param[journal_issn] = 2468-6476
       param[base_url] = http://www.heartmindjournal.org/
 
-      au < exists ; 2017 ; Heart and Mind Volume 1 ; 2017 ; 1 >
+      au < manifest ; 2017 ; Heart and Mind Volume 1 ; 2017 ; 1 >
       au < expected ; 2018 ; Heart and Mind Volume 2 ; 2018 ; 2 >
 
   }
@@ -8857,16 +8857,16 @@
       param[journal_issn] = 1947-489X
       param[base_url] = http://www.ijmbs.org/
 
-      au < exists ; 2009 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 1 ; 2009 ; 1 >
-      au < exists ; 2010 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 2 ; 2010 ; 2 >
-      au < exists ; 2011 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 3 ; 2011 ; 3 >
-      au < exists ; 2012 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 4 ; 2012 ; 4 >
-      au < exists ; 2013 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 5 ; 2013 ; 5 >
-      au < exists ; 2014 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 6 ; 2014 ; 6 >
-      au < exists ; 2015 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 7 ; 2015 ; 7 >
-      au < exists ; 2016 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 8 ; 2016 ; 8 >
-      au < exists ; 2017 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 9 ; 2017 ; 9 >
-      au < expected ; 2018 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 10 ; 2018 ; 10 >
+      au < manifest ; 2009 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 1 ; 2009 ; 1 >
+      au < manifest ; 2010 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 2 ; 2010 ; 2 >
+      au < manifest ; 2011 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 3 ; 2011 ; 3 >
+      au < manifest ; 2012 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 4 ; 2012 ; 4 >
+      au < manifest ; 2013 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 5 ; 2013 ; 5 >
+      au < manifest ; 2014 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 6 ; 2014 ; 6 >
+      au < manifest ; 2015 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 7 ; 2015 ; 7 >
+      au < manifest ; 2016 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 8 ; 2016 ; 8 >
+      au < manifest ; 2017 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 9 ; 2017 ; 9 >
+      au < manifest ; 2018 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 10 ; 2018 ; 10 >
 
   }
 
@@ -8882,9 +8882,9 @@
       param[journal_issn] = 2468-7332
       param[base_url] = http://www.ijsshortreports.com/
 
-      au < exists ; 2016 ; IJS Short Reports Volume 1 ; 2016 ; 1 >
-      au < exists ; 2017 ; IJS Short Reports Volume 2 ; 2017 ; 2 >
-      au < expected ; 2018 ; IJS Short Reports Volume 3 ; 2018 ; 3 >
+      au < manifest ; 2016 ; IJS Short Reports Volume 1 ; 2016 ; 1 >
+      au < manifest ; 2017 ; IJS Short Reports Volume 2 ; 2017 ; 2 >
+      au < manifest ; 2018 ; IJS Short Reports Volume 3 ; 2018 ; 3 >
 
   }
 
@@ -8935,9 +8935,9 @@
       param[journal_issn] = 0976-4003
       param[base_url] = http://www.ijds.in/
 
-      au < exists ; 2016 ; Indian Journal of Dental Sciences Volume 8 ; 2016 ; 8 >
-      au < exists ; 2017 ; Indian Journal of Dental Sciences Volume 9 ; 2017 ; 9 >
-      au < expected ; 2018 ; Indian Journal of Dental Sciences Volume 10 ; 2018 ; 10 >
+      au < manifest ; 2016 ; Indian Journal of Dental Sciences Volume 8 ; 2016 ; 8 >
+      au < manifest ; 2017 ; Indian Journal of Dental Sciences Volume 9 ; 2017 ; 9 >
+      au < manifest ; 2018 ; Indian Journal of Dental Sciences Volume 10 ; 2018 ; 10 >
 
   }
 
@@ -8953,13 +8953,13 @@
       param[journal_issn] = 2277-9019
       param[base_url] = http://www.ijrconline.org/
 
-      au < exists ; 2012 ; Indian Journal of Respiratory Care Volume 1 ; 2012 ; 1 >
-      au < exists ; 2013 ; Indian Journal of Respiratory Care Volume 2 ; 2013 ; 2 >
-      au < exists ; 2014 ; Indian Journal of Respiratory Care Volume 3 ; 2014 ; 3 >
-      au < exists ; 2015 ; Indian Journal of Respiratory Care Volume 4 ; 2015 ; 4 >
-      au < exists ; 2016 ; Indian Journal of Respiratory Care Volume 5 ; 2016 ; 5 >
-      au < exists ; 2017 ; Indian Journal of Respiratory Care Volume 6 ; 2017 ; 6 >
-      au < expected ; 2018 ; Indian Journal of Respiratory Care Volume 7 ; 2018 ; 7 >
+      au < manifest ; 2012 ; Indian Journal of Respiratory Care Volume 1 ; 2012 ; 1 >
+      au < manifest ; 2013 ; Indian Journal of Respiratory Care Volume 2 ; 2013 ; 2 >
+      au < manifest ; 2014 ; Indian Journal of Respiratory Care Volume 3 ; 2014 ; 3 >
+      au < manifest ; 2015 ; Indian Journal of Respiratory Care Volume 4 ; 2015 ; 4 >
+      au < manifest ; 2016 ; Indian Journal of Respiratory Care Volume 5 ; 2016 ; 5 >
+      au < manifest ; 2017 ; Indian Journal of Respiratory Care Volume 6 ; 2017 ; 6 >
+      au < manifest ; 2018 ; Indian Journal of Respiratory Care Volume 7 ; 2018 ; 7 >
 
   }
 
@@ -8978,17 +8978,17 @@
       au < exists ; 2005 ; Indian Journal of Transplantation Volume -1 ; 2005 ; -1 >
       au < exists ; 2006 ; Indian Journal of Transplantation Volume 0 ; 2006 ; 0 >
       au < exists ; 2007 ; Indian Journal of Transplantation Volume 1 ; 2007 ; 1 >
-      au < exists ; 2008 ; Indian Journal of Transplantation Volume 2 ; 2008 ; 2 >
-      au < exists ; 2009 ; Indian Journal of Transplantation Volume 3 ; 2009 ; 3 >
-      au < exists ; 2010 ; Indian Journal of Transplantation Volume 4 ; 2010 ; 4 >
-      au < exists ; 2011 ; Indian Journal of Transplantation Volume 5 ; 2011 ; 5 >
-      au < exists ; 2012 ; Indian Journal of Transplantation Volume 6 ; 2012 ; 6 >
-      au < exists ; 2013 ; Indian Journal of Transplantation Volume 7 ; 2013 ; 7 >
-      au < exists ; 2014 ; Indian Journal of Transplantation Volume 8 ; 2014 ; 8 >
-      au < exists ; 2015 ; Indian Journal of Transplantation Volume 9 ; 2015 ; 9 >
-      au < exists ; 2016 ; Indian Journal of Transplantation Volume 10 ; 2016 ; 10 >
-      au < exists ; 2017 ; Indian Journal of Transplantation Volume 11 ; 2017 ; 11 >
-      au < expected ; 2018 ; Indian Journal of Transplantation Volume 12 ; 2018 ; 12 >
+      au < manifest ; 2008 ; Indian Journal of Transplantation Volume 2 ; 2008 ; 2 >
+      au < manifest ; 2009 ; Indian Journal of Transplantation Volume 3 ; 2009 ; 3 >
+      au < manifest ; 2010 ; Indian Journal of Transplantation Volume 4 ; 2010 ; 4 >
+      au < manifest ; 2011 ; Indian Journal of Transplantation Volume 5 ; 2011 ; 5 >
+      au < manifest ; 2012 ; Indian Journal of Transplantation Volume 6 ; 2012 ; 6 >
+      au < manifest ; 2013 ; Indian Journal of Transplantation Volume 7 ; 2013 ; 7 >
+      au < manifest ; 2014 ; Indian Journal of Transplantation Volume 8 ; 2014 ; 8 >
+      au < manifest ; 2015 ; Indian Journal of Transplantation Volume 9 ; 2015 ; 9 >
+      au < manifest ; 2016 ; Indian Journal of Transplantation Volume 10 ; 2016 ; 10 >
+      au < manifest ; 2017 ; Indian Journal of Transplantation Volume 11 ; 2017 ; 11 >
+      au < manifest ; 2018 ; Indian Journal of Transplantation Volume 12 ; 2018 ; 12 >
 
   }
 
@@ -9004,7 +9004,7 @@
       param[journal_issn] = 2589-5079
       param[base_url] = http://www.isjonline.com/
 
-      au < expected ; 2018 ; Indian Spine Journal Volume 1 ; 2018 ; 1 >
+      au < manifest ; 2018 ; Indian Spine Journal Volume 1 ; 2018 ; 1 >
 
   }
 
@@ -9052,9 +9052,9 @@
       param[journal_issn] = 2542-5013
       param[base_url] = http://www.ijofo.org/
 
-      au < exists ; 2016 ; International Journal of Forensic Odontology Volume 1 ; 2016 ; 1 >
-      au < exists ; 2017 ; International Journal of Forensic Odontology Volume 2 ; 2017 ; 2 >
-      au < expected ; 2018 ; International Journal of Forensic Odontology Volume 3 ; 2018 ; 3 >
+      au < manifest ; 2016 ; International Journal of Forensic Odontology Volume 1 ; 2016 ; 1 >
+      au < manifest ; 2017 ; International Journal of Forensic Odontology Volume 2 ; 2017 ; 2 >
+      au < manifest ; 2018 ; International Journal of Forensic Odontology Volume 3 ; 2018 ; 3 >
 
   }
 
@@ -9070,7 +9070,7 @@
       param[journal_issn] = 2589-7330
       param[base_url] = http://www.cellsindentistry.org/
 
-      au < expected ; 2018 ; International Journal of Growth Factors and Stem Cells in Dentistry Volume 1 ; 2018 ; 1 >
+      au < manifest ; 2018 ; International Journal of Growth Factors and Stem Cells in Dentistry Volume 1 ; 2018 ; 1 >
 
   }
 
@@ -9086,13 +9086,13 @@
       param[journal_issn] = 2212-5531
       param[base_url] = http://www.ijmyco.org/
 
-      au < exists ; 2012 ; International Journal of Mycobacteriology Volume 1 ; 2012 ; 1 >
-      au < exists ; 2013 ; International Journal of Mycobacteriology Volume 2 ; 2013 ; 2 >
-      au < exists ; 2014 ; International Journal of Mycobacteriology Volume 3 ; 2014 ; 3 >
-      au < exists ; 2015 ; International Journal of Mycobacteriology Volume 4 ; 2015 ; 4 >
-      au < exists ; 2016 ; International Journal of Mycobacteriology Volume 5 ; 2016 ; 5 >
-      au < exists ; 2017 ; International Journal of Mycobacteriology Volume 6 ; 2017 ; 6 >
-      au < expected ; 2018 ; International Journal of Mycobacteriology Volume 7 ; 2018 ; 7 >
+      au < manifest ; 2012 ; International Journal of Mycobacteriology Volume 1 ; 2012 ; 1 >
+      au < manifest ; 2013 ; International Journal of Mycobacteriology Volume 2 ; 2013 ; 2 >
+      au < manifest ; 2014 ; International Journal of Mycobacteriology Volume 3 ; 2014 ; 3 >
+      au < manifest ; 2015 ; International Journal of Mycobacteriology Volume 4 ; 2015 ; 4 >
+      au < manifest ; 2016 ; International Journal of Mycobacteriology Volume 5 ; 2016 ; 5 >
+      au < manifest ; 2017 ; International Journal of Mycobacteriology Volume 6 ; 2017 ; 6 >
+      au < manifest ; 2018 ; International Journal of Mycobacteriology Volume 7 ; 2018 ; 7 >
 
   }
 
@@ -9107,8 +9107,8 @@
       param[journal_issn] = 2589-1723
       param[base_url] = http://www.ijofb.org/
 
-      au < exists ; 2017 ; International Journal of Orofacial Biology Volume 1 ; 2017 ; 1 >
-      au < expected ; 2018 ; International Journal of Orofacial Biology Volume 2 ; 2018 ; 2 >
+      au < manifest ; 2017 ; International Journal of Orofacial Biology Volume 1 ; 2017 ; 1 >
+      au < manifest ; 2018 ; International Journal of Orofacial Biology Volume 2 ; 2018 ; 2 >
 
   }
 
@@ -9123,8 +9123,8 @@
       param[journal_issn] = 2589-5354
       param[base_url] = http://www.ijofr.org/
 
-      au < exists ; 2017 ; International Journal of Orofacial Research Volume 2 ; 2017 ; 2 >
-      au < expected ; 2018 ; International Journal of Orofacial Research Volume 3 ; 2018 ; 3 >
+      au < manifest ; 2017 ; International Journal of Orofacial Research Volume 2 ; 2017 ; 2 >
+      au < manifest ; 2018 ; International Journal of Orofacial Research Volume 3 ; 2018 ; 3 >
 
   }
 
@@ -9140,9 +9140,9 @@
       param[journal_issn] = 2349-5243
       param[base_url] = http://www.orthodrehab.org/
 
-      au < exists ; 2016 ; International Journal of Orthodontic Rehabilitation Volume 7 ; 2016 ; 7 >
-      au < exists ; 2017 ; International Journal of Orthodontic Rehabilitation Volume 8 ; 2017 ; 8 >
-      au < expected ; 2018 ; International Journal of Orthodontic Rehabilitation Volume 9 ; 2018 ; 9 >
+      au < manifest ; 2016 ; International Journal of Orthodontic Rehabilitation Volume 7 ; 2016 ; 7 >
+      au < manifest ; 2017 ; International Journal of Orthodontic Rehabilitation Volume 8 ; 2017 ; 8 >
+      au < manifest ; 2018 ; International Journal of Orthodontic Rehabilitation Volume 9 ; 2018 ; 9 >
 
   }
 
@@ -9158,9 +9158,9 @@
       param[journal_issn] = 2468-8932
       param[base_url] = http://www.ijpedor.org/
 
-      au < exists ; 2016 ; International Journal of Pedodontic Rehabilitation Volume 1 ; 2016 ; 1 >
-      au < exists ; 2017 ; International Journal of Pedodontic Rehabilitation Volume 2 ; 2017 ; 2 >
-      au < expected ; 2018 ; International Journal of Pedodontic Rehabilitation Volume 3 ; 2018 ; 3 >
+      au < manifest ; 2016 ; International Journal of Pedodontic Rehabilitation Volume 1 ; 2016 ; 1 >
+      au < manifest ; 2017 ; International Journal of Pedodontic Rehabilitation Volume 2 ; 2017 ; 2 >
+      au < manifest ; 2018 ; International Journal of Pedodontic Rehabilitation Volume 3 ; 2018 ; 3 >
 
   }
 
