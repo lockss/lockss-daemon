@@ -27,6 +27,7 @@
     <string>au_name</string>
     <string>"Future Science Group Books Plugin (CLOCKSS), Base URL %s, eISBN %s", base_url, book_eisbn</string>
   </entry>
+  <!--  support for http to https -->
   <entry>
     <string>au_start_url</string>
     <list>
@@ -48,4 +49,4 @@
       </entry>
     </map>
   </entry>
- </map>
+</map>
