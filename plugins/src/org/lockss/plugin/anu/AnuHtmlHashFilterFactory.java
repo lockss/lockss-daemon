@@ -95,6 +95,8 @@ public class AnuHtmlHashFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "anu-share"),
       // <div id="bnr-wrap" class="bnr-gwy-high" role="banner">
       HtmlNodeFilters.tagWithAttribute("div", "id", "bnr-wrap"),
+      HtmlNodeFilters.tagWithAttribute("div", "id", "dark-tab-wrap"),
+      HtmlNodeFilters.tagWithAttribute("div", "id", "explore-wrap"),
       HtmlNodeFilters.tagWithAttribute("div", "role", "navigation"),
       HtmlNodeFilters.tagWithAttribute("div", "id", "menu"),
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "search"),
