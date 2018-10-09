@@ -22,7 +22,7 @@
     au < released ; 2014 ; 4 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 4 ; 4 ; http://scholarcommons.usf.edu/ >
     au < released ; 2015 ; 5 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 5 ; 5 ; http://scholarcommons.usf.edu/ >
     au < released ; 2016 ; 6 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 6 ; 6 ; http://scholarcommons.usf.edu/ >
-    au < exists ; 2017 ; 6 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 7 ; 7 ; https://scholarcommons.usf.edu/ >
+    au < manifest ; 2017 ; 6 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 7 ; 7 ; https://scholarcommons.usf.edu/ >
   
   }
 
@@ -42,7 +42,7 @@
     au < released ; 2014 ; 2 ; Alambique: Revista académica de ciencia ficción y fantasia / Jornal acadêmico de ficção científica e fantasía Volume 2 ; 2 ; http://scholarcommons.usf.edu/ >
     au < released ; 2015 ; 3 ; Alambique: Revista académica de ciencia ficción y fantasia / Jornal acadêmico de ficção científica e fantasía Volume 3 ; 3 ; http://scholarcommons.usf.edu/ >
     au < released ; 2016 ; 4 ; Alambique: Revista académica de ciencia ficción y fantasia / Jornal acadêmico de ficção científica e fantasía Volume 4 ; 4 ; http://scholarcommons.usf.edu/ >
-    au < exists ; 2017 ; 5 ; Alambique: Revista académica de ciencia ficción y fantasia / Jornal acadêmico de ficção científica e fantasía Volume 5 ; 5 ; https://scholarcommons.usf.edu/ >
+    au < manifest ; 2017 ; 5 ; Alambique: Revista académica de ciencia ficción y fantasia / Jornal acadêmico de ficção científica e fantasía Volume 5 ; 5 ; https://scholarcommons.usf.edu/ >
   
   }
 
@@ -73,7 +73,7 @@
     au < released ; 2013-2014 ; 8 ; Genocide Studies and Prevention Volume 8 ; 8 ; http://scholarcommons.usf.edu/ >
     au < released ; 2015 ; 9 ; Genocide Studies and Prevention Volume 9 ; 9 ; http://scholarcommons.usf.edu/ >
     au < released ; 2016 ; 10 ; Genocide Studies and Prevention Volume 10 ; 10 ; http://scholarcommons.usf.edu/ >
-    au < exists ; 2017 ; 11 ; Genocide Studies and Prevention Volume 11 ; 11 ; https://scholarcommons.usf.edu/ >
+    au < manifest ; 2017 ; 11 ; Genocide Studies and Prevention Volume 11 ; 11 ; https://scholarcommons.usf.edu/ >
 
   }
   
@@ -135,7 +135,7 @@
     au < released ; 2014 ; 43 ; International Journal of Speleology Volume 43 ; 43 ; http://scholarcommons.usf.edu/ >
     au < released ; 2015 ; 44 ; International Journal of Speleology Volume 44 ; 44 ; http://scholarcommons.usf.edu/ >
     au < released ; 2016 ; 45 ; International Journal of Speleology Volume 45 ; 45 ; http://scholarcommons.usf.edu/ >
-    au < exists ; 2017 ; 46 ; International Journal of Speleology Volume 46 ; 46 ; https://scholarcommons.usf.edu/ >
+    au < manifest ; 2017 ; 46 ; International Journal of Speleology Volume 46 ; 46 ; https://scholarcommons.usf.edu/ >
   
   }
 
@@ -154,7 +154,7 @@
     au < released ; 2008-2009 ; 1 ; Journal of African Conflicts and Peace Studies Volume 1 ; 1 ; http://scholarcommons.usf.edu/ >
     au < released ; 2013-2015 ; 2 ; Journal of African Conflicts and Peace Studies Volume 2 ; 2 ; http://scholarcommons.usf.edu/ >
     au < released ; 2016 ; 3 ; Journal of African Conflicts and Peace Studies Volume 3 ; 3 ; http://scholarcommons.usf.edu/ >
-    au < exists ; 2017 ; 4 ; Journal of African Conflicts and Peace Studies Volume 4 ; 4 ; https://scholarcommons.usf.edu/ >
+    au < manifest ; 2017 ; 4 ; Journal of African Conflicts and Peace Studies Volume 4 ; 4 ; https://scholarcommons.usf.edu/ >
   
   }
 
@@ -189,7 +189,7 @@
     au < released ; 2013 ; 16 ; Journal of Ecological Anthropology Volume 16 ; 16 ; http://scholarcommons.usf.edu/ >
     au < released ; 2014 ; 17 ; Journal of Ecological Anthropology Volume 17 ; 17 ; http://scholarcommons.usf.edu/ >
     au < released ; 2016 ; 18 ; Journal of Ecological Anthropology Volume 18 ; 18 ; http://scholarcommons.usf.edu/ >
-    au < exists ; 2017 ; 19 ; Journal of Ecological Anthropology Volume 19 ; 19 ; https://scholarcommons.usf.edu/ >
+    au < manifest ; 2017 ; 19 ; Journal of Ecological Anthropology Volume 19 ; 19 ; https://scholarcommons.usf.edu/ >
   
   }
 
@@ -206,7 +206,7 @@
     implicit < status ; year ; volume ; name ; param[volume] ; param[base_url] >
     
     au < released ; 2016 ; 1 ; Journal of Practitioner Research Volume 1 ; 1 ; http://scholarcommons.usf.edu/ >
-    au < exists ; 2017 ; 2 ; Journal of Practitioner Research Volume 2 ; 2 ; https://scholarcommons.usf.edu/ >
+    au < manifest ; 2017 ; 2 ; Journal of Practitioner Research Volume 2 ; 2 ; https://scholarcommons.usf.edu/ >
   
   }
 
@@ -222,8 +222,8 @@
     param[journal_abbr] = mca
     implicit < status ; year ; volume ; name ; param[volume] ; param[base_url] >
     
-    au < exists ; 2015 ; 1 ; Journal of Practitioner Research Volume 1 ; 1 ; https://scholarcommons.usf.edu/ >
-    au < exists ; 2016 ; 2 ; Journal of Practitioner Research Volume 2 ; 2 ; https://scholarcommons.usf.edu/ >
+    au < manifest ; 2015 ; 1 ; Journal of Practitioner Research Volume 1 ; 1 ; https://scholarcommons.usf.edu/ >
+    au < manifest ; 2016 ; 2 ; Journal of Practitioner Research Volume 2 ; 2 ; https://scholarcommons.usf.edu/ >
   
   }
 
@@ -249,7 +249,7 @@
     au < released ; 2014 ; 7 ; Journal of Strategic Security Volume 7 ; 7 ; http://scholarcommons.usf.edu/ >
     au < released ; 2015 ; 8 ; Journal of Strategic Security Volume 8 ; 8 ; http://scholarcommons.usf.edu/ >
     au < released ; 2016 ; 9 ; Journal of Strategic Security Volume 9 ; 9 ; http://scholarcommons.usf.edu/ >
-    au < exists ; 2017 ; 10 ; Journal of Strategic Security Volume 10 ; 10 ; https://scholarcommons.usf.edu/ >
+    au < manifest ; 2017 ; 10 ; Journal of Strategic Security Volume 10 ; 10 ; https://scholarcommons.usf.edu/ >
   
   }
 
@@ -274,7 +274,7 @@
     au < released ; 2014 ; 7 ; Numeracy Volume 7 ; 7 ; http://scholarcommons.usf.edu/ >
     au < released ; 2015 ; 8 ; Numeracy Volume 8 ; 8 ; http://scholarcommons.usf.edu/ >
     au < released ; 2016 ; 9 ; Numeracy Volume 9 ; 9 ; http://scholarcommons.usf.edu/ >
-    au < exists ; 2017 ; 10 ; Numeracy Volume 10 ; 10 ; https://scholarcommons.usf.edu/ >
+    au < manifest ; 2017 ; 10 ; Numeracy Volume 10 ; 10 ; https://scholarcommons.usf.edu/ >
   
   }
 
@@ -317,7 +317,7 @@
     au < released ; 2014 ; 4 ; Revista Surco Sur Volume 4 ; 4 ; http://scholarcommons.usf.edu/ >
     au < released ; 2015 ; 5 ; Revista Surco Sur Volume 5 ; 5 ; http://scholarcommons.usf.edu/ >
     au < released ; 2016 ; 6 ; Revista Surco Sur Volume 6 ; 6 ; http://scholarcommons.usf.edu/ >
-    au < exists ; 2017 ; 7 ; Revista Surco Sur Volume 7 ; 7 ; https://scholarcommons.usf.edu/ >
+    au < manifest ; 2017 ; 7 ; Revista Surco Sur Volume 7 ; 7 ; https://scholarcommons.usf.edu/ >
   
   }
 
@@ -334,7 +334,7 @@
     
     au < released ; 2013-2015 ; 1 ; Statistics in Volcanology Volume 1 ; 1 ; http://scholarcommons.usf.edu/ >
     au < released ; 2016 ; 2 ; Statistics in Volcanology Volume 2 ; 2 ; http://scholarcommons.usf.edu/ >
-    au < exists ; 2017 ; 3 ; Statistics in Volcanology Volume 3 ; 3 ; https://scholarcommons.usf.edu/ >
+    au < manifest ; 2017 ; 3 ; Statistics in Volcanology Volume 3 ; 3 ; https://scholarcommons.usf.edu/ >
   
   }
 
@@ -368,7 +368,7 @@
     au < released ; 2013 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 58 ; 58 ; http://scholarcommons.usf.edu/ >
     au < released ; 2014 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 59 ; 59 ; http://scholarcommons.usf.edu/ >
     au < released ; 2016 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 60 ; 60 ; http://scholarcommons.usf.edu/ >
-    au < exists ; 2017 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 61 ; 61 ; https://scholarcommons.usf.edu/ >
+    au < manifest ; 2017 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 61 ; 61 ; https://scholarcommons.usf.edu/ >
 
   }
 
@@ -388,7 +388,7 @@
     au < released ; 2014 ; 2 ; Suburban Sustainability Volume 2 ; 2 ; http://scholarcommons.usf.edu/ >
     au < released ; 2015 ; 3 ; Suburban Sustainability Volume 3 ; 3 ; http://scholarcommons.usf.edu/ >
     au < released ; 2016 ; 4 ; Suburban Sustainability Volume 4 ; 4 ; http://scholarcommons.usf.edu/ >
-    au < exists ; 2017 ; 5 ; Suburban Sustainability Volume 5 ; 5 ; https://scholarcommons.usf.edu/ >
+    au < manifest ; 2017 ; 5 ; Suburban Sustainability Volume 5 ; 5 ; https://scholarcommons.usf.edu/ >
   
   }
 
