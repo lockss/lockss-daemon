@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2017 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -80,6 +80,14 @@ public class HighWireDrupalHttpResponseHandler implements CacheResultHandler {
                                      int responseCode) {
     logger.debug2(url);
     switch (responseCode) {
+      case 403:
+        logger.debug2("403 - pattern is " + getNonFatal403Pattern().toString());
+        Matcher fmat = getNonFatal403Pattern().matcher(url);
+        if (fmat.find()) {
+          return new CacheException.NoRetryDeadLinkException("403 Foridden (non-fatal)");
+        }
+        return new CacheException.RetrySameUrlException("403 Forbidden");
+        
       case 500:
         logger.debug2("500: " + url);
         if (url.endsWith("_manifest.html") || 
@@ -112,19 +120,16 @@ public class HighWireDrupalHttpResponseHandler implements CacheResultHandler {
           return new CacheException.RetryableNetworkException_2_10S("504 Gateway Time-out");
         }
         return new NoFailRetryableNetworkException_2_10S("504 Gateway Time-out (non-fatal)");
-
+        
       case 520:
         // http://www.plantcell.org/content/29/2/202.full.pdf 520 Origin Error
         logger.debug2("520: " + url);
         return new CacheException.RetryableNetworkException_3_10S("520 Origin Error");
-
-      case 403: 
-        logger.debug2("403 - pattern is " + getNonFatal403Pattern().toString());
-        Matcher fmat = getNonFatal403Pattern().matcher(url);
-        if (fmat.find()) {
-          return new CacheException.NoRetryDeadLinkException("403 Foridden (non-fatal)");
-        }
-        return new CacheException.RetrySameUrlException("403 Forbidden");
+        
+      case 524:
+        // http://advances.sciencemag.org/content/3/1/e1601503.full.pdf
+        logger.debug2("524: " + url);
+        return new CacheException.RetryableNetworkException_3_10S("524: A timeout occurred"); // Cloudflare
         
       default:
         logger.warning("Unexpected responseCode (" + responseCode + ") in handleResult(): AU " + au.getName() + "; URL " + url);
@@ -146,7 +151,7 @@ public class HighWireDrupalHttpResponseHandler implements CacheResultHandler {
   }
   
   // Use a getter so that this can be overridden by a child plugin
-  protected Pattern getNonFatal403Pattern() {    
-    return DEFAULT_NON_FATAL_403_PAT;   
-  }  
+  protected Pattern getNonFatal403Pattern() {
+    return DEFAULT_NON_FATAL_403_PAT;
+  }
 }
