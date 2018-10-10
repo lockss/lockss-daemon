@@ -97,8 +97,8 @@ public class TestClockssELifeDrupalPlugin extends LockssTestCase {
     props.setProperty(BASE_URL_KEY, "http://www.example.com/");
     
     String[] starturl = new String[]{
-        "http://www.example.com/clockss-manifest/2013.html",
         "http://www.example.com/clockss-manifest/elife_2013.html",
+        "http://www.example.com/clockss-manifest/2013.html",
     };
     
     DefinableArchivalUnit au = makeAuFromProps(props);
