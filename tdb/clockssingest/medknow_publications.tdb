@@ -1160,13 +1160,14 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Indian Journal of Medical Sciences Volume 63 ; 2009 ; 63 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Indian Journal of Medical Sciences Volume 64 ; 2010 ; 64 ; >
     au < finished ; manifest ; 2011 ; Indian Journal of Medical Sciences Volume 65 ; 2011 ; 65 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2012 ; Indian Journal of Medical Sciences Volume 66 ; 2012 ; 66 ; >
+    au < finished ; manifest ; 2012 ; Indian Journal of Medical Sciences Volume 66 ; 2012 ; 66 ; reingest3.clockss.org:8083 > # only one machine collected content
     au < finished ; manifest ; 2013 ; Indian Journal of Medical Sciences Volume 67 ; 2013 ; 67 ; reingest1.clockss.org:8082 >
   }
   
   {
     param[base_url] = http://www.journal.indianjmedsci.com/
     #param[journal_issn] = ijms
+    #  Open Journal Systems 2.4.6.0
   
     au < exists ; exists ; 2016 ; Indian Journal of Medical Sciences Volume 68 ; 2013 ; 68 ; >
     au < exists ; exists ; 2017 ; Indian Journal of Medical Sciences Volume 69 ; 2013 ; 69 ; >
