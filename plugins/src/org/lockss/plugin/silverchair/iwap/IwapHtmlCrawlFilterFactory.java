@@ -43,7 +43,6 @@ import org.lockss.plugin.*;
 public class IwapHtmlCrawlFilterFactory implements FilterFactory {
 
 
-
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
@@ -51,49 +50,44 @@ public class IwapHtmlCrawlFilterFactory implements FilterFactory {
       throws PluginException {
     return new HtmlFilterInputStream(
         
-      in,
-      encoding,
-    	  HtmlNodeFilterTransform.exclude(new OrFilter(new NodeFilter[] {
-    		  HtmlNodeFilters.tagWithAttributeRegex("a", "class", "prev"),
-    		  HtmlNodeFilters.tagWithAttributeRegex("a", "class", "next"),
-    		  // 6/15/18 - not seeing this header anymore,
-    		  HtmlNodeFilters.tagWithAttributeRegex("div", "class", "master-header"),
-    		  // now seeing this one. Leaving previous in case
-    		  HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-SitePageHeader"),
-    		  HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-SitePageFooter"),
-
-    		  // article left side with image of cover and nav arrows
-    		  HtmlNodeFilters.tagWithAttributeRegex("div", "id", "InfoColumn"),
-    		  // right side of article - all the latest, most cited, etc
-    		  HtmlNodeFilters.tagWithAttributeRegex("div", "id", "Sidebar"),
-    		  // top of article - links to correction or original article
-    		  HtmlNodeFilters.tagWithAttribute("div", "class", "articlelinks"),
-    		  // don't collect the powerpoint version of images
-    		  HtmlNodeFilters.tagWithAttribute("div", "class", "downloadImagesppt"),
-    		  HtmlNodeFilters.tagWithAttributeRegex("a", "class", "download-slide"),
-    		  
-    		  //references to the article - contain links to google,pubmed - guard against internal refs
-    		  HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "^ref-content"),
-    		  // and the references section may contains links to other articles in this journal
-    		  // ex:https://academic.oup.com/bja/article/118/6/811/3829424  (look for /article/117)
-    		  HtmlNodeFilters.tagWithAttributeRegex("div","class","^ref-list"),
-    		  
-    		  // Limit access to other issues - nav bar with drop downs
-    		  HtmlNodeFilters.tagWithAttributeRegex("div", "class","^issue-browse-top"),
-    		  // manifest/start page has hidden dropdown links to other issues
-    		  HtmlNodeFilters.tagWithAttribute("div", "class", "navbar"),
-    		  // which are also tagged so check this to guard against other locations
-    		  HtmlNodeFilters.tagWithAttributeRegex("a",  "class", "^nav-link"),
-    		  
-    		  // article - author section with notes has some bogus relative links
-    		  // which redirect back to article page so are collected as content
-    		  // https://academic.oup.com/jnen/article/76/7/578/[XSLTImagePath]
-    		  HtmlNodeFilters.tagWithAttributeRegex("div", "class", "al-author-info-wrap"),
-    		  HtmlNodeFilters.tagWithAttributeRegex("dive", "class",  "widget-instance-OUP_FootnoteSection"),
-    		  
-    	  })
-      )
-    );
+        in,
+        encoding,
+        HtmlNodeFilterTransform.exclude(new OrFilter(new NodeFilter[] {
+            // remove larger blocks first
+            HtmlNodeFilters.tagWithAttributeRegex("section", "class", "master-header"),
+            HtmlNodeFilters.tagWithAttributeRegex("section", "class", "footer_wrap"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-SitePageHeader"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-SitePageFooter"),
+            // article left side with image of cover and nav arrows
+            HtmlNodeFilters.tagWithAttributeRegex("div", "id", "InfoColumn"),
+            // right side of article - all the latest, most cited, etc
+            HtmlNodeFilters.tagWithAttributeRegex("div", "id", "Sidebar"),
+            
+            // references section - contain links to google,pubmed - guard against internal refs
+            HtmlNodeFilters.tagWithAttributeRegex("div","class","^ref-list"),
+            HtmlNodeFilters.tagWithAttribute("div","class","kwd-group"),
+            // top of article - links to correction or original article
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-ArticleLinks"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-ToolboxSendEmail"),
+            // cannot remove widget-Issue, as it exists in multiple locations, some of which are needed
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "issue-browse-top"),
+            HtmlNodeFilters.tagWithAttribute("div", "class", "all-issues"),
+            // don't collect the powerpoint version of images or slides
+            HtmlNodeFilters.tagWithAttributeRegex("a", "class", "download(-slide|Imagesppt)"),
+            
+/*
+            HtmlNodeFilters.tagWithAttributeRegex("a", "class", "prev"),
+            HtmlNodeFilters.tagWithAttributeRegex("a", "class", "next"),
+            // Limit access to other issues - nav bar with drop downs
+            HtmlNodeFilters.tagWithAttribute("div", "class", "navbar"),
+            // which are also tagged so check this to guard against other locations
+            HtmlNodeFilters.tagWithAttributeRegex("a",  "class", "^nav-link"),
+*/
+            // article - author section with notes could have some bogus relative links
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "al-author-info-wrap"),
+            // HtmlNodeFilters.tagWithAttributeRegex("dive", "class",  "widget-instance-OUP_FootnoteSection"),
+            }))
+        );
   }
 
 }

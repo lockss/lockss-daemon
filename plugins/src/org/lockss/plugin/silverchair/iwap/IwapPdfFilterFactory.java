@@ -45,7 +45,6 @@ import org.lockss.util.Logger;
 /**
  * A pdf filter removes the "Downloaded from... IP:.... on.... BT-ET section
  * 
- * 
  * These are located in content stream
  * and located on each page of the document
  * @author alexohlson
@@ -55,7 +54,7 @@ public class IwapPdfFilterFactory extends ExtractingPdfFilterFactory {
   private static final Logger log = Logger.getLogger(IwapPdfFilterFactory.class);
 
   private static final String DOWNLOAD_REGEX_STRING = "^Downloaded from ";
-  private static final Pattern DOWNLOAD_PATTERN = Pattern.compile(DOWNLOAD_REGEX_STRING);  
+  private static final Pattern DOWNLOAD_PATTERN = Pattern.compile(DOWNLOAD_REGEX_STRING);
   // It's all in one BT--ET, no need to find the rest
   
   private static void doBaseTransforms(PdfDocument pdfDocument) 
@@ -69,7 +68,7 @@ public class IwapPdfFilterFactory extends ExtractingPdfFilterFactory {
 	    pdfDocument.unsetAuthor();
 	    pdfDocument.unsetTitle();
 	    pdfDocument.unsetSubject();
-	    pdfDocument.unsetKeywords();	  
+	    pdfDocument.unsetKeywords();
         PdfUtil.normalizeTrailerId(pdfDocument);
      }
 
@@ -79,20 +78,17 @@ public class IwapPdfFilterFactory extends ExtractingPdfFilterFactory {
     //log.setLevel("debug3");
     
     doBaseTransforms(pdfDocument);
-
-    ScDownloadedFromStateMachine worker = new ScDownloadedFromStateMachine(DOWNLOAD_PATTERN);
-
+    IwapDownloadedFromStateMachine worker = new IwapDownloadedFromStateMachine(DOWNLOAD_PATTERN);
     for (PdfPage pdfPage : pdfDocument.getPages()) {
       List<PdfTokenStream> pdfTokenStreams = pdfPage.getAllTokenStreams();
       for (Iterator<PdfTokenStream> iter = pdfTokenStreams.iterator(); iter.hasNext();) {
         PdfTokenStream nextTokStream = iter.next();
- 
         /*
          * NOTE - removing download strip was insufficient. Token processing
          * caused a difference in the token between settoken stream and not so 
          * do settoken on all streams so they match.
          */
-        worker.process(nextTokStream);      
+        worker.process(nextTokStream);
         List<PdfToken> pdfTokens = nextTokStream.getTokens();
         if (worker.getResult()) {
           pdfTokens.subList(worker.getBegin(), worker.getEnd() + 1).clear();
@@ -108,13 +104,13 @@ public class IwapPdfFilterFactory extends ExtractingPdfFilterFactory {
    * HERE ARE THE WORKER CLASSES THAT KNOW HOW TO REMOVE THINGS FROM PDF DOCUMENTS
    */
 
-  public static class ScDownloadedFromStateMachine extends PdfTokenStreamStateMachine {
+  public static class IwapDownloadedFromStateMachine extends PdfTokenStreamStateMachine {
 
     /* set when this worker is created */
     public static Pattern DOWNLOADED_FROM_PATTERN;
 
     // The footer is close to the bottom of each page
-    public ScDownloadedFromStateMachine(Pattern downloadPattern) {
+    public IwapDownloadedFromStateMachine(Pattern downloadPattern) {
       super(Direction.BACKWARD);
       DOWNLOADED_FROM_PATTERN = downloadPattern;
     }
@@ -125,7 +121,7 @@ public class IwapPdfFilterFactory extends ExtractingPdfFilterFactory {
         setEnd(getIndex());
         setState(1);
       }
-    } 
+    }
 
     @Override
     public void state1() throws PdfException {
@@ -144,9 +140,8 @@ public class IwapPdfFilterFactory extends ExtractingPdfFilterFactory {
         setBegin(getIndex());
         setResult(true);
         stop(); // found what we needed, stop processing this page
-      }      
+      }
     }
+  }
 
-  }  
- 
 }

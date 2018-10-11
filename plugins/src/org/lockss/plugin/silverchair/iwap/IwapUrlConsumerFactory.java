@@ -122,8 +122,8 @@ public class IwapUrlConsumerFactory implements UrlConsumerFactory {
           && getOrigPdfPattern().matcher(fud.origUrl).find()
           && (getDestPdfPattern().matcher(fud.fetchUrl).find() || wMarkFullTextPat.matcher(fud.fetchUrl).find());
       if (fud.redirectUrls != null) {
-  	    log.debug3("OUP redirect " + fud.redirectUrls.size() + ": " + fud.redirectUrls.toString());
-        log.debug3("OUP redirect: " + " " + fud.origUrl + " to " + fud.fetchUrl + " should consume?: " + should);
+        log.debug3("Iwap redirect " + fud.redirectUrls.size() + ": " + fud.redirectUrls.toString());
+        log.debug3("Iwap redirect: " + " " + fud.origUrl + " to " + fud.fetchUrl + " should consume?: " + should);
       }
       return should;
     }
