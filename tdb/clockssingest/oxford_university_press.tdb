@@ -6075,7 +6075,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Glycobiology Volume 25 ; 25 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; Glycobiology Volume 26 ; 26 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; Glycobiology Volume 27 ; 27 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; Glycobiology Volume 28 ; 28 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Glycobiology Volume 28 ; 28 ;  >
 
   }
 
@@ -6132,7 +6132,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Health & Social Work Volume 40 ; 40 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; Health & Social Work Volume 41 ; 41 ;  >
     au < ready ; exists ; 2017 ; 2017 ; Health & Social Work Volume 42 ; 42 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; Health & Social Work Volume 43 ; 43 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Health & Social Work Volume 43 ; 43 ;  >
 
   }
 
@@ -6179,7 +6179,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Health Education Research Volume 30 ; 30 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; Health Education Research Volume 31 ; 31 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; Health Education Research Volume 32 ; 32 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; Health Education Research Volume 33 ; 33 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Health Education Research Volume 33 ; 33 ;  >
 
   }
 
@@ -6226,7 +6226,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Health Policy and Planning Volume 30 ; 30 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; Health Policy and Planning Volume 31 ; 31 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; Health Policy and Planning Volume 32 ; 32 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; Health Policy and Planning Volume 33 ; 33 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Health Policy and Planning Volume 33 ; 33 ;  >
 
   }
 
@@ -6273,7 +6273,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Health Promotion International Volume 30 ; 30 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; Health Promotion International Volume 31 ; 31 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; Health Promotion International Volume 32 ; 32 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; Health Promotion International Volume 33 ; 33 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Health Promotion International Volume 33 ; 33 ;  >
 
   }
 
@@ -6330,7 +6330,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; History Workshop Journal Volume 79-80 ; 79-80 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; History Workshop Journal Volume 81-82 ; 81-82 ;  >
     au < testing ; exists ; 2017 ; 2017 ; History Workshop Journal Volume 83-84 ; 83-84 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; History Workshop Journal Volume 85-86 ; 85-86 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; History Workshop Journal Volume 85-86 ; 85-86 ;  >
 
   }
 
@@ -6376,7 +6376,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Holocaust and Genocide Studies Volume 29 ; 29 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; Holocaust and Genocide Studies Volume 30 ; 30 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; Holocaust and Genocide Studies Volume 31 ; 31 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; Holocaust and Genocide Studies Volume 32 ; 32 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Holocaust and Genocide Studies Volume 32 ; 32 ;  >
 
   }
 
@@ -6417,7 +6417,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Human Molecular Genetics Volume 24 ; 24 ;  >
     au < ready ; exists ; 2016 ; 2016 ; Human Molecular Genetics Volume 25 ; 25 ;  >
     au < frozen ; exists ; 2017 ; 2017 ; Human Molecular Genetics Volume 26 ; 26 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; Human Molecular Genetics Volume 27 ; 27 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Human Molecular Genetics Volume 27 ; 27 ;  >
 
   }
 
@@ -6464,7 +6464,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Human Reproduction Volume 30 ; 30 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; Human Reproduction Volume 31 ; 31 ;  >
     au < testing ; exists ; 2017 ; 2017 ; Human Reproduction Volume 32 ; 32 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; Human Reproduction Volume 33 ; 33 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Human Reproduction Volume 33 ; 33 ;  >
 
   }
 
@@ -6479,7 +6479,7 @@
 
     #this title was ONLY in the publisher listing
     au < crawling ; exists ; 2017 ; 2017 ; Human Reproduction Open Volume 2017 ; 2017 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; Human Reproduction Open Volume 2018 ; 2018 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Human Reproduction Open Volume 2018 ; 2018 ;  >
 
   }
 
@@ -6517,7 +6517,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Human Reproduction Update Volume 21 ; 21 ;  >
     au < testing ; exists ; 2016 ; 2016 ; Human Reproduction Update Volume 22 ; 22 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; Human Reproduction Update Volume 23 ; 23 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; Human Reproduction Update Volume 24 ; 24 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Human Reproduction Update Volume 24 ; 24 ;  >
 
   }
 
@@ -6564,7 +6564,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Human Rights Law Review Volume 15 ; 15 ;  >
     au < ready ; exists ; 2016 ; 2016 ; Human Rights Law Review Volume 16 ; 16 ;  >
     au < ready ; exists ; 2017 ; 2017 ; Human Rights Law Review Volume 17 ; 17 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; Human Rights Law Review Volume 18 ; 18 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Human Rights Law Review Volume 18 ; 18 ;  >
 
   }
 
@@ -6655,7 +6655,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; ICES Journal of Marine Science Volume 72 ; 72 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; ICES Journal of Marine Science Volume 73 ; 73 ;  >
     au < testing ; exists ; 2017 ; 2017 ; ICES Journal of Marine Science Volume 74 ; 74 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; ICES Journal of Marine Science Volume 75 ; 75 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; ICES Journal of Marine Science Volume 75 ; 75 ;  >
 
   }
 
@@ -6701,7 +6701,7 @@
     au < crawling ; exists ; 2015 ; 2015 ; ICSID Review: Foreign Investment Law Journal Volume 30 ; 30 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; ICSID Review: Foreign Investment Law Journal Volume 31 ; 31 ;  >
     au < testing ; exists ; 2017 ; 2017 ; ICSID Review: Foreign Investment Law Journal Volume 32 ; 32 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; ICSID Review: Foreign Investment Law Journal Volume 33 ; 33 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; ICSID Review: Foreign Investment Law Journal Volume 33 ; 33 ;  >
 
   }
 
@@ -6827,7 +6827,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; IMA Journal of Applied Mathematics Volume 80 ; 80 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; IMA Journal of Applied Mathematics Volume 81 ; 81 ;  >
     au < frozen ; exists ; 2017 ; 2017 ; IMA Journal of Applied Mathematics Volume 82 ; 82 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; IMA Journal of Applied Mathematics Volume 83 ; 83 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; IMA Journal of Applied Mathematics Volume 83 ; 83 ;  >
 
   }
 
@@ -6870,7 +6870,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; IMA Journal of Management Mathematics Volume 26 ; 26 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; IMA Journal of Management Mathematics Volume 27 ; 27 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; IMA Journal of Management Mathematics Volume 28 ; 28 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; IMA Journal of Management Mathematics Volume 29 ; 29 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; IMA Journal of Management Mathematics Volume 29 ; 29 ;  >
 
   }
 
@@ -6937,7 +6937,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; IMA Journal of Numerical Analysis Volume 35 ; 35 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; IMA Journal of Numerical Analysis Volume 36 ; 36 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; IMA Journal of Numerical Analysis Volume 37 ; 37 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; IMA Journal of Numerical Analysis Volume 38 ; 38 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; IMA Journal of Numerical Analysis Volume 38 ; 38 ;  >
 
   }
 
@@ -7030,7 +7030,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; ITNOW Volume 57 ; 57 ;  >
     au < testing ; exists ; 2016 ; 2016 ; ITNOW Volume 58 ; 58 ;  >
     au < testing ; exists ; 2017 ; 2017 ; ITNOW Volume 59 ; 59 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; ITNOW Volume 60 ; 60 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; ITNOW Volume 60 ; 60 ;  >
 
   }
 
@@ -7091,7 +7091,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Industrial Law Journal Volume 44 ; 44 ;  >
     au < testing ; exists ; 2016 ; 2016 ; Industrial Law Journal Volume 45 ; 45 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; Industrial Law Journal Volume 46 ; 46 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; Industrial Law Journal Volume 47 ; 47 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Industrial Law Journal Volume 47 ; 47 ;  >
 
   }
 
@@ -7132,7 +7132,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Industrial and Corporate Change Volume 24 ; 24 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; Industrial and Corporate Change Volume 25 ; 25 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; Industrial and Corporate Change Volume 26 ; 26 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; Industrial and Corporate Change Volume 27 ; 27 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Industrial and Corporate Change Volume 27 ; 27 ;  >
 
   }
 
@@ -7152,7 +7152,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Information and Inference: A Journal of the IMA Volume 4 ; 4 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; Information and Inference: A Journal of the IMA Volume 5 ; 5 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; Information and Inference: A Journal of the IMA Volume 6 ; 6 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; Information and Inference: A Journal of the IMA Volume 7 ; 7 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Information and Inference: A Journal of the IMA Volume 7 ; 7 ;  >
 
   }
 
@@ -7167,7 +7167,7 @@
 
     #this title was ONLY in the publisher listing
     au < crawling ; exists ; 2017 ; 2017 ; Innovation in Aging Volume 1 ; 1 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; Innovation in Aging Volume 2 ; 2 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Innovation in Aging Volume 2 ; 2 ;  >
 
   }
 
@@ -7181,8 +7181,8 @@
     param[journal_id] = isd
 
     #this title was ONLY in the publisher listing
-    au < manifest ; exists ; 2017 ; 2017 ; Insect Systematics and Diversity Volume 1 ; 1 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; Insect Systematics and Diversity Volume 2 ; 2 ;  >
+    au < testing ; exists ; 2017 ; 2017 ; Insect Systematics and Diversity Volume 1 ; 1 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Insect Systematics and Diversity Volume 2 ; 2 ;  >
 
   }
 
@@ -7254,7 +7254,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Integrative and Comparative Biology Volume 55 ; 55 ;  >
     au < ready ; exists ; 2016 ; 2016 ; Integrative and Comparative Biology Volume 56 ; 56 ;  >
     au < frozen ; exists ; 2017 ; 2017 ; Integrative and Comparative Biology Volume 57 ; 57 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; Integrative and Comparative Biology Volume 58 ; 58 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Integrative and Comparative Biology Volume 58 ; 58 ;  >
 
   }
 
@@ -7300,7 +7300,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Interactive CardioVascular and Thoracic Surgery Volume 20-21 ; 20-21 ;  >
     au < testing ; exists ; 2016 ; 2016 ; Interactive CardioVascular and Thoracic Surgery Volume 22-23 ; 22-23 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; Interactive CardioVascular and Thoracic Surgery Volume 24 ; 24 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; Interactive CardioVascular and Thoracic Surgery Volume 25 ; 25 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; Interactive CardioVascular and Thoracic Surgery Volume 25 ; 25 ;  >
 
   }
 
@@ -7323,7 +7323,7 @@
     au < crawling ; exists ; 2015 ; 2015 ; International Affairs Volume 91 ; 91 ;  >
     au < testing ; exists ; 2016 ; 2016 ; International Affairs Volume 92 ; 92 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; International Affairs Volume 93 ; 93 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; International Affairs Volume 94 ; 94 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; International Affairs Volume 94 ; 94 ;  >
 
   }
 
@@ -7345,7 +7345,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Data Privacy Law Volume 5 ; 5 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; International Data Privacy Law Volume 6 ; 6 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; International Data Privacy Law Volume 7 ; 7 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; International Data Privacy Law Volume 8 ; 8 ;  >
+    au < testing ; exists ; 2018 ; 2018 ; International Data Privacy Law Volume 8 ; 8 ;  >
 
   }
 
