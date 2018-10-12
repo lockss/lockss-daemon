@@ -187,7 +187,7 @@
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
     <list>
-      <string>https?://iwaponline\.com/(cassette\.axd|data|UI)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)</string>
+      <string>https?://iwaponline\.com/(cassette\.axd|Themes|UI)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)</string>
       <string>https?://(iwaponline|iwa\.silverchair-cdn)\.com/(cassette\.axd)/file/.*/(css|js)/</string>
       <string>https?://(fonts\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|cdnjs\.cloudflare\.com|iwa\.silverchair-cdn)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)</string>
     </list>
@@ -195,7 +195,7 @@
   <entry>
     <string>au_url_poll_result_weight</string>
     <list>
-      <string>"https?://iwaponline\.com/(cassette\.axd)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)", 0</string>
+      <string>"https?://iwaponline\.com/(cassette\.axd|Themes|UI)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)", 0</string>
       <string>"https?://(iwaponline|iwa\.silverchair-cdn)\.com/(cassette\.axd)/file/.*/(css|js)/", 0</string>
       <string>"https?://(fonts\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|cdnjs\.cloudflare\.com|iwa\.silverchair-cdn)/.*(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)", 0</string>
     </list>
