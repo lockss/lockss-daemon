@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -101,24 +101,27 @@ public class IwapHtmlHashFilterFactory implements FilterFactory {
       in,
       encoding,
       new HtmlCompoundTransform(
-    	  HtmlNodeFilterTransform.include(new OrFilter(new NodeFilter[] {
+          HtmlNodeFilterTransform.include(new OrFilter(new NodeFilter[] {
+              // <div class="widget-ContentBrowseByYearManifest widget-instance-IssueBrowseByYear">
+              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-Content.+Manifest"),
+              // <div id="ArticleList">
               HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-list-resources"),
-              HtmlNodeFilters.tagWithAttributeRegex("div", "id", "resourceTypeList-OUP_Issue"),
-              HtmlNodeFilters.tagWithAttributeRegex("div", "id", "ContentColumn"),
-              HtmlNodeFilters.tagWithAttributeRegex("span", "class", "content-inner-wrap"),
-              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-body"),
-              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "OUP_Issues_List"),
-              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "IssuesAndVolumeListManifest"),
-              HtmlNodeFilters.tagWithAttributeRegex("img", "class", "content-image"),
+              // <div class="widget-ArticleMainView widget-instance-ArticleMainView_Article">
+              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-ArticleMainView"),
+              // XXX ??? HtmlNodeFilters.tagWithAttributeRegex("div", "id", "ContentColumn", true),
+              // XXX ??? HtmlNodeFilters.tagWithAttributeRegex("span", "class", "content-inner-wrap"),
+              // HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-body"),
+              // HtmlNodeFilters.tagWithAttributeRegex("div", "class", "IssuesAndVolumeListManifest"),
+              // HtmlNodeFilters.tagWithAttributeRegex("img", "class", "content-image"),
               
           })),
-      
-    	  HtmlNodeFilterTransform.exclude(new OrFilter(new NodeFilter[] {
-    		  HtmlNodeFilters.tagWithAttributeRegex("div", "class", "comment"),
-                  HtmlNodeFilters.tagWithAttributeRegex("div", "class", "graphic-wrap"),
-                  HtmlNodeFilters.tagWithAttributeRegex("div", "class", "navbar-search"),
-    	  })),
-    	  xform
+
+          HtmlNodeFilterTransform.exclude(new OrFilter(new NodeFilter[] {/*
+              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "comment"),
+              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "graphic-wrap"),
+              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "navbar-search"),*/
+          })),
+          xform
       )
     );
     
@@ -128,7 +131,7 @@ public class IwapHtmlHashFilterFactory implements FilterFactory {
     Reader noTagFilter = new HtmlTagFilter(new StringFilter(reader, "<", " <"), new TagPair("<", ">"));
     // Remove white space
     Reader whiteSpaceFilter = new WhiteSpaceFilter(noTagFilter);
-    InputStream ret =  new ReaderInputStream(whiteSpaceFilter);
+    InputStream ret =  new ReaderInputStream(reader);
     return ret;
     // Instrumentation
   }
