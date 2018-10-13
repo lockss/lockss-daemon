@@ -79,6 +79,36 @@
     <string>"%s%s/issue/browse-by-year/%d", base_url, journal_id, year</string>
   </entry>
   <entry>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+        <string>au_title</string>
+        <string>"%s%s", base_url, journal_id</string>
+      </entry>
+      <entry>
+        <string>au_volume</string>https://iwaponline.com/hr/issue/browse-by-year/2017
+        <string>"%s%s/issue/browse-by-year/%d", base_url, journal_id, year</string>
+      </entry>
+      <entry>
+        <string>au_issue</string>
+        <string>"%s%s/issue/%s/%s", base_url, journal_id, volume, issue</string>
+      </entry>
+      <entry>
+        <string>au_article</string>
+        <map>
+          <entry>
+            <string>pdf</string>
+            <string>"%s%s/article-pdf/%s/%s/%s/%s/%s.pdf", base_url, journal_id, volume, issue, page, id1, id2</string>
+          </entry>
+          <entry>
+            <string>html</string>
+            <string>"%s%s/article/%s/%s/%s", base_url, journal_id, volume, issue, page, article</string>
+          </entry>
+        </map>
+      </entry>
+    </map>
+  </entry>
+  <entry>
     <string>au_crawlrules</string>
     <list>
       <string>1,"^https?://((fonts|ajax)\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|cdn\.mathjax\.org|cdnjs\.cloudflare\.com)/"</string>
