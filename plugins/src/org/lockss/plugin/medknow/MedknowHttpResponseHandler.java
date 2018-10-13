@@ -54,11 +54,11 @@ public class MedknowHttpResponseHandler implements CacheResultHandler {
     switch (responseCode) {
       case 502:
         logger.debug2("502: " + url);
-        return new CacheException.RetryableNetworkException_3_5M("502 Bad Gateway");
+        return new CacheException.RetryableNetworkException_5_5M("502 Bad Gateway");
         
       case 503:
         logger.debug2("503: " + url);
-        return new CacheException.RetryableNetworkException_3_5M("503 Service Unavailable");
+        return new CacheException.RetryableNetworkException_5_5M("503 Service Unavailable");
         
       default:
         logger.warning("Unexpected responseCode (" + responseCode + ") in handleResult(): AU " + au.getName() + "; URL " + url);
