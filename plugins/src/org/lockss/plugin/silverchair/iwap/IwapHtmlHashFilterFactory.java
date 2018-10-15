@@ -71,7 +71,7 @@ public class IwapHtmlHashFilterFactory implements FilterFactory {
               String tagName = tag.getTagName().toLowerCase();
               try {
                 if ("a".equals(tagName) ||
-                    "div".equals(tagName) ||
+                    //"div".equals(tagName) ||
                     "img".equals(tagName)) {
                   Attribute a = tag.getAttributeEx(tagName);
                   Vector<Attribute> v = new Vector<Attribute>();
@@ -106,20 +106,23 @@ public class IwapHtmlHashFilterFactory implements FilterFactory {
               HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-Content.+Manifest"),
               // <div id="ArticleList">
               HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-list-resources"),
-              // <div class="widget-ArticleMainView widget-instance-ArticleMainView_Article">
-              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-ArticleMainView"),
-              // XXX ??? HtmlNodeFilters.tagWithAttributeRegex("div", "id", "ContentColumn", true),
-              // XXX ??? HtmlNodeFilters.tagWithAttributeRegex("span", "class", "content-inner-wrap"),
-              // HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-body"),
-              // HtmlNodeFilters.tagWithAttributeRegex("div", "class", "IssuesAndVolumeListManifest"),
-              // HtmlNodeFilters.tagWithAttributeRegex("img", "class", "content-image"),
-              
+              HtmlNodeFilters.tagWithAttributeRegex("div", "id", "ContentColumn"),
           })),
 
-          HtmlNodeFilterTransform.exclude(new OrFilter(new NodeFilter[] {/*
+          HtmlNodeFilterTransform.exclude(new OrFilter(new NodeFilter[] {
+              HtmlNodeFilters.comment(),
+              HtmlNodeFilters.tag("script"),
+              HtmlNodeFilters.tagWithAttributeRegex("div","class","^ref-list"),
+              HtmlNodeFilters.tagWithAttribute("div","class","kwd-group"),
               HtmlNodeFilters.tagWithAttributeRegex("div", "class", "comment"),
               HtmlNodeFilters.tagWithAttributeRegex("div", "class", "graphic-wrap"),
-              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "navbar-search"),*/
+              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "toolbar-wrap"),
+              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "author-info-wrap"),
+              // top of article - links to correction or original article
+              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-ArticleLinks"),
+              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-Toolbox"),
+              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "copyright"),
+              // <div class="pub-history-wrap
           })),
           xform
       )

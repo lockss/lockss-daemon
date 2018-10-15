@@ -10,14 +10,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -125,7 +125,7 @@
       <!-- PDF content is going through watermarking SOME of the time; we will consume -->
       <string>1,"^https?://watermark\.silverchair\.com/[^/]+\.pdf\?token="</string>
       <!-- issue, or aspect of article; number is a volume...so far always numbers -->
-      <string>1,"^https?://%s/%s/(article(-(pdf|abstract))?|issue(-pdf)?)/[0-9]+/", url_host(base_url), journal_id</string>
+      <string>1,"^https?://%s/%s/(article(-(pdf|abstract))?(/doi/[^/]+/[^/]+)?|issue(-pdf)?)/[0-9]+/", url_host(base_url), journal_id</string>
       <!-- NOT YET SEEN - meeting abstract supplemental issues use a search query to fill toc -->
       <!--  <string>1,"^https?://%s/%s/search-results\?q=&amp;f_IssueNo=", url_host(base_url), journal_id</string>-->
       <string>1,"^https?://%s/%s/downloadcitation/[^?]+\?format=(ris|txt)", url_host(base_url), journal_id</string>
@@ -148,6 +148,11 @@
   <entry>
     <string>au_def_pause_time</string>
     <long>3000</long>
+  </entry>
+  <entry>
+    <!-- manifest to issue -->
+    <string>au_refetch_depth</string>
+    <int>2</int>
   </entry>
   <entry>
     <string>plugin_fetch_rate_limiter_source</string>
@@ -209,6 +214,13 @@
         <string>org.lockss.plugin.silverchair.ScHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <!-- SSL Handshake -->
+      <string>javax.net.ssl.SSLHandshakeException=org.lockss.plugin.silverchair.iwap.IwapHtmlHttpResponseHandler</string>
+    </list>
   </entry>
   <entry>
     <string>au_permitted_host_pattern</string>
