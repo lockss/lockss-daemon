@@ -950,9 +950,9 @@
     param[journal_id] = zvgi20
     #continues = 2000-8023
 
-    au < ready ; 2015 ; Society, Health & Vulnerability Volume 6 ; 6 ; https://www.tandfonline.com/ >
-    au < ready ; 2016 ; Society, Health & Vulnerability Volume 7 ; 7 ; https://www.tandfonline.com/ >
-    au < ready ; 2017 ; Society, Health & Vulnerability Volume 8 ; 8 ; https://www.tandfonline.com/ >
+    au < releasing ; 2015 ; Society, Health & Vulnerability Volume 6 ; 6 ; https://www.tandfonline.com/ >
+    au < releasing ; 2016 ; Society, Health & Vulnerability Volume 7 ; 7 ; https://www.tandfonline.com/ >
+    au < releasing ; 2017 ; Society, Health & Vulnerability Volume 8 ; 8 ; https://www.tandfonline.com/ >
     au < manifest ; 2018 ; Society, Health & Vulnerability Volume 9 ; 9 ; https://www.tandfonline.com/ >
 
   }
