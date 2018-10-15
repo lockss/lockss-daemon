@@ -3,6 +3,7 @@
     <string>plugin_status</string>
     <string>ready</string>
   </entry>
+  <!-- https transition enabled -->  
   <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.atypon.aiaa.AIAABooksPlugin</string>
@@ -43,8 +44,8 @@
   <entry>
     <string>plugin_url_consumer_factory</string>
     <string>org.lockss.plugin.atypon.BaseAtyponHttpToHttpsUrlConsumerFactory</string>
-  </entry>  
-<!-- end changes for https conversion -->   
+  </entry>
+  <!-- end changes for https conversion -->
   <entry>
     <string>au_name</string>
     <string>"American Institute of Aeronautics and Astronautics Books Plugin, Base URL %s, eISBN %s", base_url, book_eisbn</string>
@@ -64,9 +65,9 @@
   <entry>
     <string>text/html_link_extractor_factory</string>
     <string>org.lockss.plugin.atypon.aiaa.AIAAHtmlLinkExtractorFactory</string>
-  </entry> 
+  </entry>
   <entry>
     <string>text/html_link_rewriter_factory</string>
     <string>org.lockss.plugin.atypon.aiaa.AIAAHtmlLinkRewriterFactory</string>
-  </entry> 
+  </entry>
 </map>

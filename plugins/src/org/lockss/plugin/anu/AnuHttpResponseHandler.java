@@ -45,7 +45,7 @@ public class AnuHttpResponseHandler implements CacheResultHandler {
   private static final Logger logger = Logger.getLogger(AnuHttpResponseHandler.class);
   
   protected static final Pattern NON_FATAL_PAT = 
-      Pattern.compile("[.]jpg$");
+      Pattern.compile("[.](gif|jpg)$");
   
   @Override
   public void init(CacheResultMap crmap) {

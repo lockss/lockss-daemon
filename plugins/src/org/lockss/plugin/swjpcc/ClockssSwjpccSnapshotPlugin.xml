@@ -1,0 +1,169 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>ready</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.swjpcc.ClockssSwjpccSnapshotPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Southwest Journal of Pulmonary and Critical Care Plugin (CLOCKSS)</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+  <!--  urlGenerator -->
+    <string>required_daemon_version</string>
+    <string>1.73.0</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <!--  the year isn't really used but we collect annually so use it to track -->
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Southwest Journal of Pulmonary and Critical Care Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
+  </entry>
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+      <!--  we don't want this to default to start_url because we need the synthetic url -->
+        <string>au_volume</string>
+        <string>org.lockss.plugin.swjpcc.SwjpccFeatureUrlHelperFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <!--  don't currently have one; work around for now -->
+  <entry>
+    <string>au_permission_url</string>
+    <string>"http://clockss-ingest.lockss.org/clockss.txt"</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <!-- do not pick up variants of /148-13/148-13%20Header.jpg - repeat version of masthead   -->
+      <string>2,"^https?://%s/storage/(manuscripts|pdf-version-of-articles)/.*(%%20|[ ])Header\.jpe?g$", url_host(base_url)</string>
+      <!--  do not pick up html that lives under /storage/...or typo variants of that suffix -->
+      <string>2,"^https?://%s/storage/manuscripts/.*\.(html?|mht)$", url_host(base_url)</string>
+      <!--  allow any of these regardless of subdirectory off base host -->
+      <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?(__SQUARESPACE_CACHEVERSION|CE|styleId)=.*)?$", url_host(base_url)</string>
+      <string>1,"^%sauid=.*$", base_url</string>
+      <string>1,"^https?://%s$", url_host(base_url)</string>
+      <string>2,"^https?://%s/.*(\?(currentPage|printerFriendly)=.*|/(tag|trackback|recommend)/.*|/(atom|rdf|rsd|rss)\.xml)",  url_host(base_url)</string>
+      <!--  access to the pages one level off top -->
+      <string>1,"^https?://%s/[^/]+/$", url_host(base_url)</string>
+      <!--  archived volume listings:http://www.swjpcc.com/issues/2016/8/1/volume-13.html-->
+      <string>1,"^https?://%s/issues/[0-9]{4}/.*\.html", url_host(base_url)</string>
+      <!--  access to html articles that sit below these specific secondary levels - most come from seed list -->
+      <string>1,"^https?://%s/(arizona-ats-notes|case-presentations|correspondence|critical-care|editorials|general-medicine|imaging|news|pulmonary|sleep)(-journal-club)?/[0-9]{4}/.*\.html", url_host(base_url)</string>
+      <!--do not pick up the variants of "/161-13%20Incorrect%20Panel%201.3.html under storage/manuscripts  --> 
+      <string>2,"^https?://%s/storage/(manuscripts|pdf-version-of-articles)/.*(%%20|[ ])Panel(%%20|[ ])[^/]+\.html$", url_host(base_url)</string>
+      <!--  for now, limit some items -->
+      <string>2,"^https?://%s/storage/(manuscripts|pdf-version-of-articles)/.*\.pptx?$", url_host(base_url)</string>
+      <string>1,"^https?://%s/storage/(manuscripts|pdf-version-of-articles)/.*", url_host(base_url)</string>
+      <!-- the xls spreadsheets with article links and information -->
+      <string>1,"^https?://%s/storage/manuscript-lists/.*", url_host(base_url)</string>
+      <!--  the content redirects through this cdn and we consume in to the original url -->
+      <string>1,"^https?://static1\.1\.sqspcdn\.com/static/f/[0-9]+/.+"</string>
+      <!--  ereece seems to mirror the swjpcc site - don't collect --> 
+<!--     <string>1,"^https?://ereece\.squarespace\.com/.*"</string>      -->
+    </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^%sstorage/(manuscripts|pdf-version-of-articles)/volume.*\.pdf$", base_url</string>
+    </list>
+  </entry>
+    <entry>
+    <string>au_refetch_depth</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>plugin_crawl_seed_factory</string>
+    <string>org.lockss.plugin.swjpcc.SwjpccCrawlSeedFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_access_url_factory</string>
+    <string>org.lockss.plugin.swjpcc.SwjpccFeatureUrlHelperFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.swjpcc.SwjpccUrlConsumerFactory</string>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.swjpcc.SwjpccUrlNormalizer</string>
+  </entry>         
+<!-- Hash filters aren't needed as this is a snapshot - collected once per year as a single source for preservation -->
+<!-- crawl filters aren't necessary as we collect pretty much everything in the snapshot -->
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.swjpcc.SwjpccArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.swjpcc.SwjpccArticleIteratorFactory</string>
+  </entry>
+<!--  File metadata extractor isn't needed we use the article metadata extractor  -->
+  <entry>
+    <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
+         org.lockss.crawler.allowedPluginPermittedHosts -->
+    <string>au_permitted_host_pattern</string>
+    <list>
+      <string>www\.swjpcc\.com</string>
+      <string>static1\.1\.sqspcdn\.com</string>
+<!--      <string>ereece\.squarespace\.com</string>-->
+    </list>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+</map>

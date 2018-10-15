@@ -33,24 +33,11 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.atypon.aiaa;
 
 import java.io.InputStream;
-import java.io.Reader;
-import java.util.regex.Pattern;
 
-import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
-import org.htmlparser.Remark;
-import org.htmlparser.Text;
-import org.htmlparser.tags.Bullet;
-import org.htmlparser.tags.CompositeTag;
-import org.htmlparser.tags.Div;
-import org.htmlparser.tags.LinkTag;
-import org.htmlparser.tags.TableColumn;
-import org.lockss.filter.FilterUtil;
-import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory;
-import org.lockss.util.ReaderInputStream;
 
 public class AIAAHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
   

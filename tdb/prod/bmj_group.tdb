@@ -262,7 +262,7 @@
     au < HighWirePressH20Plugin ; down ; 2013 ; Archives of Disease in Childhood Volume 98 ; 98 ; http://adc.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2014 ; Archives of Disease in Childhood Volume 99 ; 99 ; http://adc.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2015 ; Archives of Disease in Childhood Volume 100 ; 100 ; http://adc.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; manifest ; 2016 ; Archives of Disease in Childhood Volume 101 ; 101 ; https://adc.bmj.com/ > # Unable to fetch probe permission page
+    au < bmj.BMJDrupalPlugin ; notReady ; 2016 ; Archives of Disease in Childhood Volume 101 ; 101 ; https://adc.bmj.com/ > # Unable to fetch probe permission page/login found
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Archives of Disease in Childhood Volume 102 ; 102 ; https://adc.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; Archives of Disease in Childhood Volume 103 ; 103 ; https://adc.bmj.com/ >
 
@@ -472,7 +472,7 @@
       au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; BMJ Volume 360 ; 360 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; BMJ Volume 361 ; 361 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; BMJ Volume 362 ; 362 ; https://www.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; expected ; 2018 ; BMJ Volume 363 ; 363 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; BMJ Volume 363 ; 363 ; https://www.bmj.com/ >
 
     }
 
@@ -510,7 +510,7 @@
     au < HighWirePressH20Plugin ; down ; 2015 ; BMJ Open Volume 5 ; 5 ; http://bmjopen.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2016 ; BMJ Open Volume 6 ; 6 ; https://bmjopen.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; BMJ Open Volume 7 ; 7 ; https://bmjopen.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; expected ; 2018 ; BMJ Open Volume 8 ; 8 ; https://bmjopen.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; BMJ Open Volume 8 ; 8 ; https://bmjopen.bmj.com/ >
 
   }
   

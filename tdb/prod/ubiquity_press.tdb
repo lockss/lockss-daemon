@@ -317,22 +317,22 @@
       au < manifest ; 1997 ; 7 ; Theoretical Roman Archaeology Journal Volume 1997 ; 1997 ; https://traj.openlibhums.org/ >
       au < manifest ; 1998 ; 8 ; Theoretical Roman Archaeology Journal Volume 1998 ; 1998 ; https://traj.openlibhums.org/ >
       au < manifest ; 1999 ; 9 ; Theoretical Roman Archaeology Journal Volume 1999 ; 1999 ; https://traj.openlibhums.org/ >
-      au < manifest ; 2000 ; 10 ; Theoretical Roman Archaeology Journal Volume 2000 ; 2000 ; https://traj.openlibhums.org/ >
-      au < manifest ; 2001 ; 11 ; Theoretical Roman Archaeology Journal Volume 2001 ; 2001 ; https://traj.openlibhums.org/ >
-      au < manifest ; 2002 ; 12 ; Theoretical Roman Archaeology Journal Volume 2002 ; 2002 ; https://traj.openlibhums.org/ >
-      au < manifest ; 2003 ; 13 ; Theoretical Roman Archaeology Journal Volume 2003 ; 2003 ; https://traj.openlibhums.org/ >
-      au < manifest ; 2004 ; 14 ; Theoretical Roman Archaeology Journal Volume 2004 ; 2004 ; https://traj.openlibhums.org/ >
-      au < manifest ; 2005 ; 15 ; Theoretical Roman Archaeology Journal Volume 2005 ; 2005 ; https://traj.openlibhums.org/ >
-      au < manifest ; 2006 ; 16 ; Theoretical Roman Archaeology Journal Volume 2006 ; 2006 ; https://traj.openlibhums.org/ >
-      au < manifest ; 2007 ; 17 ; Theoretical Roman Archaeology Journal Volume 2007 ; 2007 ; https://traj.openlibhums.org/ >
-      au < manifest ; 2008 ; 18 ; Theoretical Roman Archaeology Journal Volume 2008 ; 2008 ; https://traj.openlibhums.org/ >
-      au < manifest ; 2009 ; 19 ; Theoretical Roman Archaeology Journal Volume 2009 ; 2009 ; https://traj.openlibhums.org/ >
-      au < manifest ; 2010 ; 20 ; Theoretical Roman Archaeology Journal Volume 2010 ; 2010 ; https://traj.openlibhums.org/ >
-      au < manifest ; 2011 ; 21 ; Theoretical Roman Archaeology Journal Volume 2011 ; 2011 ; https://traj.openlibhums.org/ >
-      au < manifest ; 2012 ; 22 ; Theoretical Roman Archaeology Journal Volume 2012 ; 2012 ; https://traj.openlibhums.org/ >
-      au < manifest ; 2013 ; 23 ; Theoretical Roman Archaeology Journal Volume 2013 ; 2013 ; https://traj.openlibhums.org/ >
-      au < manifest ; 2014 ; 24 ; Theoretical Roman Archaeology Journal Volume 2014 ; 2014 ; https://traj.openlibhums.org/ >
-      au < manifest ; 2015 ; 25 ; Theoretical Roman Archaeology Journal Volume 2015 ; 2015 ; https://traj.openlibhums.org/ >
+      au < ready ; 2000 ; 10 ; Theoretical Roman Archaeology Journal Volume 2000 ; 2000 ; https://traj.openlibhums.org/ >
+      au < ready ; 2001 ; 11 ; Theoretical Roman Archaeology Journal Volume 2001 ; 2001 ; https://traj.openlibhums.org/ >
+      au < ready ; 2002 ; 12 ; Theoretical Roman Archaeology Journal Volume 2002 ; 2002 ; https://traj.openlibhums.org/ >
+      au < ready ; 2003 ; 13 ; Theoretical Roman Archaeology Journal Volume 2003 ; 2003 ; https://traj.openlibhums.org/ >
+      au < ready ; 2004 ; 14 ; Theoretical Roman Archaeology Journal Volume 2004 ; 2004 ; https://traj.openlibhums.org/ >
+      au < ready ; 2005 ; 15 ; Theoretical Roman Archaeology Journal Volume 2005 ; 2005 ; https://traj.openlibhums.org/ >
+      au < ready ; 2006 ; 16 ; Theoretical Roman Archaeology Journal Volume 2006 ; 2006 ; https://traj.openlibhums.org/ >
+      au < ready ; 2007 ; 17 ; Theoretical Roman Archaeology Journal Volume 2007 ; 2007 ; https://traj.openlibhums.org/ >
+      au < ready ; 2008 ; 18 ; Theoretical Roman Archaeology Journal Volume 2008 ; 2008 ; https://traj.openlibhums.org/ >
+      au < ready ; 2009 ; 19 ; Theoretical Roman Archaeology Journal Volume 2009 ; 2009 ; https://traj.openlibhums.org/ >
+      au < ready ; 2010 ; 20 ; Theoretical Roman Archaeology Journal Volume 2010 ; 2010 ; https://traj.openlibhums.org/ >
+      au < ready ; 2011 ; 21 ; Theoretical Roman Archaeology Journal Volume 2011 ; 2011 ; https://traj.openlibhums.org/ >
+      au < ready ; 2012 ; 22 ; Theoretical Roman Archaeology Journal Volume 2012 ; 2012 ; https://traj.openlibhums.org/ >
+      au < ready ; 2013 ; 23 ; Theoretical Roman Archaeology Journal Volume 2013 ; 2013 ; https://traj.openlibhums.org/ >
+      au < ready ; 2014 ; 24 ; Theoretical Roman Archaeology Journal Volume 2014 ; 2014 ; https://traj.openlibhums.org/ >
+      au < ready ; 2015 ; 25 ; Theoretical Roman Archaeology Journal Volume 2015 ; 2015 ; https://traj.openlibhums.org/ >
       au < manifest ; 2016 ; 26 ; Theoretical Roman Archaeology Journal Volume 2016 ; 2016 ; https://traj.openlibhums.org/ >
       au < exists ; 2017 ; 27 ; Theoretical Roman Archaeology Journal Volume 2017 ; 2017 ; https://traj.openlibhums.org/ >
       au < manifest ; 2018 ; 28 ; Theoretical Roman Archaeology Journal Volume 2018 ; 2018 ; https://traj.openlibhums.org/ >
@@ -476,14 +476,14 @@
   {
 
       title <
-        name = Nordic Journal of Francophone Studies/ Revue nordique des �tudes francophones ;
+        name = Nordic Journal of Francophone Studies/ Revue nordique des études francophones ;
         eissn = 2003-0401
       >
 
       comment[publisher] = Stockholm University Press
 #      param[base_url] = https://franorfon.org/
 
-      au < manifest ; 2018 ; 1 ; Nordic Journal of Francophone Studies/ Revue nordique des �tudes francophones Volume 2018 ; 2018 ; https://franorfon.org/ >
+      au < manifest ; 2018 ; 1 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2018 ; 2018 ; https://franorfon.org/ >
 
   }
 
@@ -681,6 +681,7 @@
 
       #publisher = Ubiquity Press
 
+      au < doNotProcess ; 2018 ; 1 ; Future Cities and Environment Volume 2018 ; 2018 ; https://futurecitiesandenvironment.com/ >
       au < manifest ; 2018 ; 1 ; Future Cities and Environment Volume 2018 ; 2018 ; https://www.futurecitiesandenvironment.com/ >
 
   }
@@ -713,9 +714,9 @@
 #      param[base_url] = http://www.govafricajournal.org/
       # No longer publishing. Moved to https://gaj.ubiquitypress.com/
 
-      au < doesNotExist ; 2014 ; 1 ; Governance in Africa Volume 2014 ; 2014 ; https://www.govafricajournal.org/ >
-      au < doesNotExist ; 2015 ; 2 ; Governance in Africa Volume 2015 ; 2015 ; https://www.govafricajournal.org/ >
-      au < released ; 2016 ; 3 ; Governance in Africa Volume 2016 ; 2016 ; http://www.govafricajournal.org/ >
+      au < doNotProcess ; 2014 ; 1 ; Governance in Africa Volume 2014 ; 2014 ; https://www.govafricajournal.org/ >
+      au < doNotProcess ; 2015 ; 2 ; Governance in Africa Volume 2015 ; 2015 ; https://www.govafricajournal.org/ >
+      au < down ; 2016 ; 3 ; Governance in Africa Volume 2016 ; 2016 ; http://www.govafricajournal.org/ >
 
   }
 
@@ -853,8 +854,23 @@
       >
 
       comment[publisher] = Ubiquity Press
+
+    {
 #      param[base_url] = http://www-jime.open.ac.uk/
+#      do not use this
+      #nothing published in 2011
+
+      au < superseded ; 2010 ; 2010 ; Journal of Interactive Media in Education Volume 2010 [superseded] ; 2010 ; http://www-jime.open.ac.uk/ >
+      au < superseded ; 2012 ; 2012 ; Journal of Interactive Media in Education Volume 2012 [superseded] ; 2012 ; http://www-jime.open.ac.uk/ >
+      au < superseded ; 2013 ; 2013 ; Journal of Interactive Media in Education Volume 2013 [superseded] ; 2013 ; http://www-jime.open.ac.uk/ >
+      au < superseded ; 2014 ; 2014 ; Journal of Interactive Media in Education Volume 2014 [superseded] ; 2014 ; http://www-jime.open.ac.uk/ >
+      au < superseded ; 2015 ; 2015 ; Journal of Interactive Media in Education Volume 2015 [superseded] ; 2015 ; http://www-jime.open.ac.uk/ >
+      au < superseded ; 2016 ; 2016 ; Journal of Interactive Media in Education Volume 2016 [superseded] ; 2016 ; http://www-jime.open.ac.uk/ >
+      au < doNotProcess ; 2017 ; 2017 ; Journal of Interactive Media in Education Volume 2017 ; 2017 ; http://www-jime.open.ac.uk/ >
+    }
+    {
 #      changed to https://jime.open.ac.uk/  ####no www
+#      use this
       #nothing published in 2011
 
       au < manifest ; 1998 ; 1998 ; Journal of Interactive Media in Education Volume 1998 ; 1998 ; https://jime.open.ac.uk/ >
@@ -869,15 +885,15 @@
       au < manifest ; 2007 ; 2007 ; Journal of Interactive Media in Education Volume 2007 ; 2007 ; https://jime.open.ac.uk/ >
       au < manifest ; 2008 ; 2008 ; Journal of Interactive Media in Education Volume 2008 ; 2008 ; https://jime.open.ac.uk/ >
       au < manifest ; 2009 ; 2009 ; Journal of Interactive Media in Education Volume 2009 ; 2009 ; https://jime.open.ac.uk/ >
-      au < released ; 2010 ; 2010 ; Journal of Interactive Media in Education Volume 2010 ; 2010 ; http://www-jime.open.ac.uk/ >
-      au < released ; 2012 ; 2012 ; Journal of Interactive Media in Education Volume 2012 ; 2012 ; http://www-jime.open.ac.uk/ >
-      au < released ; 2013 ; 2013 ; Journal of Interactive Media in Education Volume 2013 ; 2013 ; http://www-jime.open.ac.uk/ >
-      au < released ; 2014 ; 2014 ; Journal of Interactive Media in Education Volume 2014 ; 2014 ; http://www-jime.open.ac.uk/ >
-      au < released ; 2015 ; 2015 ; Journal of Interactive Media in Education Volume 2015 ; 2015 ; http://www-jime.open.ac.uk/ >
-      au < released ; 2016 ; 2016 ; Journal of Interactive Media in Education Volume 2016 ; 2016 ; http://www-jime.open.ac.uk/ >
-      au < manifest ; 2017 ; 2017 ; Journal of Interactive Media in Education Volume 2017 ; 2017 ; https://jime.open.ac.uk/ >
+      au < manifest ; 2010 ; 2010 ; Journal of Interactive Media in Education Volume 2010 ; 2010 ; https://jime.open.ac.uk/ >
+      au < manifest ; 2012 ; 2012 ; Journal of Interactive Media in Education Volume 2012 ; 2012 ; https://jime.open.ac.uk/ >
+      au < manifest ; 2013 ; 2013 ; Journal of Interactive Media in Education Volume 2013 ; 2013 ; https://jime.open.ac.uk/ >
+      au < manifest ; 2014 ; 2014 ; Journal of Interactive Media in Education Volume 2014 ; 2014 ; https://jime.open.ac.uk/ >
+      au < manifest ; 2015 ; 2015 ; Journal of Interactive Media in Education Volume 2015 ; 2015 ; https://jime.open.ac.uk/ >
+      au < manifest ; 2016 ; 2016 ; Journal of Interactive Media in Education Volume 2016 ; 2016 ; https://jime.open.ac.uk/ >
+      au < ready ; 2017 ; 2017 ; Journal of Interactive Media in Education Volume 2017 ; 2017 ; https://jime.open.ac.uk/ >
       au < manifest ; 2018 ; 2018 ; Journal of Interactive Media in Education Volume 2018 ; 2018 ; https://jime.open.ac.uk/ >
-
+    }
   }
 
   {
@@ -1129,7 +1145,7 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://journalofmore.org/
 
-      au < manifest ; 2016 ; 4 ; Journal of Montessori Research & Education Volume 2016 ; 2016 ; https://journalofmore.org/ >
+      au < ready ; 2016 ; 4 ; Journal of Montessori Research & Education Volume 2016 ; 2016 ; https://journalofmore.org/ >
       au < expected ; 2018 ; 5 ; Journal of Montessori Research & Education Volume 2018 ; 2018 ; https://journalofmore.org/ >
 
   }
@@ -1159,38 +1175,52 @@
       >
 
       comment[publisher] = Ubiquity Press
+    {
+       #www. don't use this.
 #      param[base_url] = http://www.pia-journal.co.uk/
 
-      au < manifest ; 1990 ; 1 ; Papers from the Institute of Archaeology Volume 1990 ; 1990 ; https://www.pia-journal.co.uk/ >
-      au < manifest ; 1991 ; 2 ; Papers from the Institute of Archaeology Volume 1991 ; 1991 ; https://www.pia-journal.co.uk/ >
-      au < manifest ; 1992 ; 3 ; Papers from the Institute of Archaeology Volume 1992 ; 1992 ; https://www.pia-journal.co.uk/ >
-      au < manifest ; 1993 ; 4 ; Papers from the Institute of Archaeology Volume 1993 ; 1993 ; https://www.pia-journal.co.uk/ >
-      au < manifest ; 1994 ; 5 ; Papers from the Institute of Archaeology Volume 1994 ; 1994 ; https://www.pia-journal.co.uk/ >
-      au < manifest ; 1995 ; 6 ; Papers from the Institute of Archaeology Volume 1995 ; 1995 ; https://www.pia-journal.co.uk/ >
-      au < manifest ; 1996 ; 7 ; Papers from the Institute of Archaeology Volume 1996 ; 1996 ; https://www.pia-journal.co.uk/ >
-      au < manifest ; 1997 ; 8 ; Papers from the Institute of Archaeology Volume 1997 ; 1997 ; https://www.pia-journal.co.uk/ >
-      au < manifest ; 1998 ; 9 ; Papers from the Institute of Archaeology Volume 1998 ; 1998 ; https://www.pia-journal.co.uk/ >
-      au < manifest ; 1999 ; 10 ; Papers from the Institute of Archaeology Volume 1999 ; 1999 ; https://www.pia-journal.co.uk/ >
-      au < manifest ; 2000 ; 11 ; Papers from the Institute of Archaeology Volume 2000 ; 2000 ; https://www.pia-journal.co.uk/ >
-      au < manifest ; 2001 ; 12 ; Papers from the Institute of Archaeology Volume 2001 ; 2001 ; https://www.pia-journal.co.uk/ >
-      au < manifest ; 2002 ; 13 ; Papers from the Institute of Archaeology Volume 2002 ; 2002 ; https://www.pia-journal.co.uk/ >
-      au < manifest ; 2003 ; 14 ; Papers from the Institute of Archaeology Volume 2003 ; 2003 ; https://www.pia-journal.co.uk/ >
-      au < manifest ; 2004 ; 15 ; Papers from the Institute of Archaeology Volume 2004 ; 2004 ; https://www.pia-journal.co.uk/ >
-      au < manifest ; 2005 ; 16 ; Papers from the Institute of Archaeology Volume 2005 ; 2005 ; https://www.pia-journal.co.uk/ >
-      au < manifest ; 2006 ; 17 ; Papers from the Institute of Archaeology Volume 2006 ; 2006 ; https://www.pia-journal.co.uk/ >
-      au < manifest ; 2007 ; 18 ; Papers from the Institute of Archaeology Volume 2007 ; 2007 ; https://www.pia-journal.co.uk/ >
-      au < doesNotExist ; 2008 ; 19 ; Papers from the Institute of Archaeology Volume 2008 ; 2008 ; https://www.pia-journal.co.uk/ >
-      au < manifest ; 2009 ; 20 ; Papers from the Institute of Archaeology Volume 2009 ; 2009 ; https://www.pia-journal.co.uk/ >
-      au < released ; 2010 ; 21 ; Papers from the Institute of Archaeology Volume 2010 ; 2010 ; http://www.pia-journal.co.uk/ >
-      au < manifest ; 2011 ; 22 ; Papers from the Institute of Archaeology Volume 2011 ; 2011 ; https://www.pia-journal.co.uk/ >
-      au < manifest ; 2012 ; 23 ; Papers from the Institute of Archaeology Volume 2012 ; 2012 ; https://www.pia-journal.co.uk/ >
-      au < manifest ; 2013 ; 24 ; Papers from the Institute of Archaeology Volume 2013 ; 2013 ; https://www.pia-journal.co.uk/ >
-      au < manifest ; 2014 ; 25 ; Papers from the Institute of Archaeology Volume 2014 ; 2014 ; https://www.pia-journal.co.uk/ >
-      au < released ; 2015 ; 26 ; Papers from the Institute of Archaeology Volume 2015 ; 2015 ; http://www.pia-journal.co.uk/ >
-      au < released ; 2016 ; 27 ; Papers from the Institute of Archaeology Volume 2016 ; 2016 ; http://www.pia-journal.co.uk/ >
-      au < manifest ; 2017 ; 28 ; Papers from the Institute of Archaeology Volume 2017 ; 2017 ; https://www.pia-journal.co.uk/ >
-      au < expected ; 2018 ; 29 ; Papers from the Institute of Archaeology Volume 2018 ; 2018 ; https://www.pia-journal.co.uk/ >
+      au < superseded ; 2010 ; 21 ; Papers from the Institute of Archaeology Volume 2010 [superseded] ; 2010 ; http://www.pia-journal.co.uk/ >
+      au < doNotProcess ; 2011 ; 22 ; Papers from the Institute of Archaeology Volume 2011 ; 2011 ; https://www.pia-journal.co.uk/ >
+      au < doNotProcess ; 2012 ; 23 ; Papers from the Institute of Archaeology Volume 2012 ; 2012 ; https://www.pia-journal.co.uk/ >
+      au < doNotProcess ; 2013 ; 24 ; Papers from the Institute of Archaeology Volume 2013 ; 2013 ; https://www.pia-journal.co.uk/ >
+      au < doNotProcess ; 2014 ; 25 ; Papers from the Institute of Archaeology Volume 2014 ; 2014 ; https://www.pia-journal.co.uk/ >
+      au < superseded ; 2015 ; 26 ; Papers from the Institute of Archaeology Volume 2015 [superseded] ; 2015 ; http://www.pia-journal.co.uk/ >
+      au < superseded ; 2016 ; 27 ; Papers from the Institute of Archaeology Volume 2016 [superseded] ; 2016 ; http://www.pia-journal.co.uk/ >
+    }
+    {
+       #no www. do use this.
+#      param[base_url] = https://pia-journal.co.uk/
 
+      au < manifest ; 1990 ; 1 ; Papers from the Institute of Archaeology Volume 1990 ; 1990 ; https://pia-journal.co.uk/ >
+      au < manifest ; 1991 ; 2 ; Papers from the Institute of Archaeology Volume 1991 ; 1991 ; https://pia-journal.co.uk/ >
+      au < manifest ; 1992 ; 3 ; Papers from the Institute of Archaeology Volume 1992 ; 1992 ; https://pia-journal.co.uk/ >
+      au < manifest ; 1993 ; 4 ; Papers from the Institute of Archaeology Volume 1993 ; 1993 ; https://pia-journal.co.uk/ >
+      au < manifest ; 1994 ; 5 ; Papers from the Institute of Archaeology Volume 1994 ; 1994 ; https://pia-journal.co.uk/ >
+      au < manifest ; 1995 ; 6 ; Papers from the Institute of Archaeology Volume 1995 ; 1995 ; https://pia-journal.co.uk/ >
+      au < manifest ; 1996 ; 7 ; Papers from the Institute of Archaeology Volume 1996 ; 1996 ; https://pia-journal.co.uk/ >
+      au < manifest ; 1997 ; 8 ; Papers from the Institute of Archaeology Volume 1997 ; 1997 ; https://pia-journal.co.uk/ >
+      au < manifest ; 1998 ; 9 ; Papers from the Institute of Archaeology Volume 1998 ; 1998 ; https://pia-journal.co.uk/ >
+      au < manifest ; 1999 ; 10 ; Papers from the Institute of Archaeology Volume 1999 ; 1999 ; https://pia-journal.co.uk/ >
+      au < manifest ; 2000 ; 11 ; Papers from the Institute of Archaeology Volume 2000 ; 2000 ; https://pia-journal.co.uk/ >
+      au < manifest ; 2001 ; 12 ; Papers from the Institute of Archaeology Volume 2001 ; 2001 ; https://pia-journal.co.uk/ >
+      au < manifest ; 2002 ; 13 ; Papers from the Institute of Archaeology Volume 2002 ; 2002 ; https://pia-journal.co.uk/ >
+      au < manifest ; 2003 ; 14 ; Papers from the Institute of Archaeology Volume 2003 ; 2003 ; https://pia-journal.co.uk/ >
+      au < manifest ; 2004 ; 15 ; Papers from the Institute of Archaeology Volume 2004 ; 2004 ; https://pia-journal.co.uk/ >
+      au < manifest ; 2005 ; 16 ; Papers from the Institute of Archaeology Volume 2005 ; 2005 ; https://pia-journal.co.uk/ >
+      au < manifest ; 2006 ; 17 ; Papers from the Institute of Archaeology Volume 2006 ; 2006 ; https://pia-journal.co.uk/ >
+      au < manifest ; 2007 ; 18 ; Papers from the Institute of Archaeology Volume 2007 ; 2007 ; https://pia-journal.co.uk/ >
+      au < exists ; 2008 ; 19 ; Papers from the Institute of Archaeology Volume 2008 ; 2008 ; https://pia-journal.co.uk/ >
+      au < manifest ; 2009 ; 20 ; Papers from the Institute of Archaeology Volume 2009 ; 2009 ; https://pia-journal.co.uk/ >
+      au < manifest ; 2010 ; 21 ; Papers from the Institute of Archaeology Volume 2010 ; 2010 ; https://pia-journal.co.uk/ >
+      au < manifest ; 2011 ; 22 ; Papers from the Institute of Archaeology Volume 2011 ; 2011 ; https://pia-journal.co.uk/ >
+      au < manifest ; 2012 ; 23 ; Papers from the Institute of Archaeology Volume 2012 ; 2012 ; https://pia-journal.co.uk/ >
+      au < manifest ; 2013 ; 24 ; Papers from the Institute of Archaeology Volume 2013 ; 2013 ; https://pia-journal.co.uk/ >
+      au < manifest ; 2014 ; 25 ; Papers from the Institute of Archaeology Volume 2014 ; 2014 ; https://pia-journal.co.uk/ >
+      au < manifest ; 2015 ; 26 ; Papers from the Institute of Archaeology Volume 2015 ; 2015 ; https://pia-journal.co.uk/ >
+      au < ready ; 2016 ; 27 ; Papers from the Institute of Archaeology Volume 2016 ; 2016 ; https://pia-journal.co.uk/ >
+      au < ready ; 2017 ; 28 ; Papers from the Institute of Archaeology Volume 2017 ; 2017 ; https://pia-journal.co.uk/ >
+      au < expected ; 2018 ; 29 ; Papers from the Institute of Archaeology Volume 2018 ; 2018 ; https://pia-journal.co.uk/ >
+    }
   }
 
   {
@@ -1201,19 +1231,27 @@
       >
 
       comment[publisher] = Ubiquity Press
-#      param[base_url] = http://www.presentpasts.info/
+    {
+#      param[base_url] = http://www.presentpasts.info/  #www. don't use this
 
-      au < doesNotExist ; 2009 ; 1 ; Present Pasts Volume 2009 ; 2009 ; https://www.presentpasts.info/ >
-      au < released ; 2010 ; 2 ; Present Pasts Volume 2010 ; 2010 ; http://www.presentpasts.info/ >
-      au < manifest ; 2011 ; 3 ; Present Pasts Volume 2011 ; 2011 ; https://www.presentpasts.info/ >
-      au < doesNotExist ; 2012 ; 4 ; Present Pasts Volume 2012 ; 2012 ; https://www.presentpasts.info/ >
-      au < manifest ; 2013 ; 5 ; Present Pasts Volume 2013 ; 2013 ; https://www.presentpasts.info/ >
-      au < manifest ; 2014 ; 6 ; Present Pasts Volume 2014 ; 2014 ; https://www.presentpasts.info/ >
-      au < released ; 2015 ; 7 ; Present Pasts Volume 2015 ; 2015 ; http://www.presentpasts.info/ >
-      au < released ; 2016 ; 8 ; Present Pasts Volume 2016 ; 2016 ; http://www.presentpasts.info/ >
-      au < manifest ; 2017 ; 9 ; Present Pasts Volume 2017 ; 2017 ; https://www.presentpasts.info/ >
-      au < expected ; 2018 ; 10 ; Present Pasts Volume 2018 ; 2018 ; https://www.presentpasts.info/ >
+      au < superseded ; 2010 ; 2 ; Present Pasts Volume 2010 [superseded] ; 2010 ; http://www.presentpasts.info/ >
+      au < superseded ; 2015 ; 7 ; Present Pasts Volume 2015 [superseded] ; 2015 ; http://www.presentpasts.info/ >
+      au < superseded ; 2016 ; 8 ; Present Pasts Volume 2016 [superseded] ; 2016 ; http://www.presentpasts.info/ >
+    }
+    {
+#      param[base_url] = http://presentpasts.info/ #no www. use this
 
+      au < doesNotExist ; 2009 ; 1 ; Present Pasts Volume 2009 ; 2009 ; https://presentpasts.info/ >
+      au < manifest ; 2010 ; 2 ; Present Pasts Volume 2010 ; 2010 ; https://presentpasts.info/ >
+      au < manifest ; 2011 ; 3 ; Present Pasts Volume 2011 ; 2011 ; https://presentpasts.info/ >
+      au < doesNotExist ; 2012 ; 4 ; Present Pasts Volume 2012 ; 2012 ; https://presentpasts.info/ >
+      au < manifest ; 2013 ; 5 ; Present Pasts Volume 2013 ; 2013 ; https://presentpasts.info/ >
+      au < manifest ; 2014 ; 6 ; Present Pasts Volume 2014 ; 2014 ; https://presentpasts.info/ >
+      au < manifest ; 2015 ; 7 ; Present Pasts Volume 2015 ; 2015 ; https://presentpasts.info/ >
+      au < ready ; 2016 ; 8 ; Present Pasts Volume 2016 ; 2016 ; https://presentpasts.info/ >
+      au < ready ; 2017 ; 9 ; Present Pasts Volume 2017 ; 2017 ; https://presentpasts.info/ >
+      au < expected ; 2018 ; 10 ; Present Pasts Volume 2018 ; 2018 ; https://presentpasts.info/ >
+    }
   }
 
   {
@@ -1251,16 +1289,29 @@
       >
 
       comment[publisher] = Ubiquity Press
-#      param[base_url] = http://www.secularismandnonreligion.org/
+    {
+       #www. don't use this.
+#      param[base_url] = https://www.secularismandnonreligion.org/
 
-      au < manifest ; 2012 ; 1 ; Secularism and Nonreligion Volume 2012 ; 2012 ; https://www.secularismandnonreligion.org/ >
-      au < manifest ; 2013 ; 2 ; Secularism and Nonreligion Volume 2013 ; 2013 ; https://www.secularismandnonreligion.org/ >
-      au < manifest ; 2014 ; 3 ; Secularism and Nonreligion Volume 2014 ; 2014 ; https://www.secularismandnonreligion.org/ >
-      au < released ; 2015 ; 4 ; Secularism and Nonreligion Volume 2015 ; 2015 ; http://www.secularismandnonreligion.org/ >
-      au < released ; 2016 ; 5 ; Secularism and Nonreligion Volume 2016 ; 2016 ; http://www.secularismandnonreligion.org/ >
-      au < manifest ; 2017 ; 6 ; Secularism and Nonreligion Volume 2017 ; 2017 ; https://www.secularismandnonreligion.org/ >
-      au < manifest ; 2018 ; 7 ; Secularism and Nonreligion Volume 2018 ; 2018 ; https://www.secularismandnonreligion.org/ >
+      au < doNotProcess ; 2012 ; 1 ; Secularism and Nonreligion Volume 2012 ; 2012 ; https://www.secularismandnonreligion.org/ >
+      au < doNotProcess ; 2013 ; 2 ; Secularism and Nonreligion Volume 2013 ; 2013 ; https://www.secularismandnonreligion.org/ >
+      au < doNotProcess ; 2014 ; 3 ; Secularism and Nonreligion Volume 2014 ; 2014 ; https://www.secularismandnonreligion.org/ >
+      au < superseded ; 2015 ; 4 ; Secularism and Nonreligion Volume 2015 [superseded] ; 2015 ; http://www.secularismandnonreligion.org/ >
+      au < superseded ; 2016 ; 5 ; Secularism and Nonreligion Volume 2016 [superseded] ; 2016 ; http://www.secularismandnonreligion.org/ >
+      au < doNotProcess ; 2017 ; 6 ; Secularism and Nonreligion Volume 2017 ; 2017 ; https://www.secularismandnonreligion.org/ >
+    }
+    {
+       #no www. do use this.
+#      param[base_url] = https://secularismandnonreligion.org/
 
+      au < manifest ; 2012 ; 1 ; Secularism and Nonreligion Volume 2012 ; 2012 ; https://secularismandnonreligion.org/ >
+      au < manifest ; 2013 ; 2 ; Secularism and Nonreligion Volume 2013 ; 2013 ; https://secularismandnonreligion.org/ >
+      au < manifest ; 2014 ; 3 ; Secularism and Nonreligion Volume 2014 ; 2014 ; https://secularismandnonreligion.org/ >
+      au < manifest ; 2015 ; 4 ; Secularism and Nonreligion Volume 2015 ; 2015 ; https://secularismandnonreligion.org/ >
+      au < ready ; 2016 ; 5 ; Secularism and Nonreligion Volume 2016 ; 2016 ; https://secularismandnonreligion.org/ >
+      au < ready ; 2017 ; 6 ; Secularism and Nonreligion Volume 2017 ; 2017 ; https://secularismandnonreligion.org/ >
+      au < manifest ; 2018 ; 7 ; Secularism and Nonreligion Volume 2018 ; 2018 ; https://secularismandnonreligion.org/ >
+    }
   }
 
   {
@@ -1291,18 +1342,33 @@
       >
 
       comment[publisher] = Ubiquity Press
+    {
+       #has www. do not use. even though you can.
 #      param[base_url] = http://www.utrechtjournal.org/
 
-      au < released ; 2010 ; 1 ; Utrecht Journal of International and European Law Volume 2010 ; 2010 ; http://www.utrechtjournal.org/ >
-      au < manifest ; 2011 ; 2 ; Utrecht Journal of International and European Law Volume 2011 ; 2011 ; https://www.utrechtjournal.org/ >
-      au < manifest ; 2012 ; 3 ; Utrecht Journal of International and European Law Volume 2012 ; 2012 ; https://www.utrechtjournal.org/ >
-      au < manifest ; 2013 ; 4 ; Utrecht Journal of International and European Law Volume 2013 ; 2013 ; https://www.utrechtjournal.org/ >
-      au < manifest ; 2014 ; 5 ; Utrecht Journal of International and European Law Volume 2014 ; 2014 ; https://www.utrechtjournal.org/ >
-      au < released ; 2015 ; 6 ; Utrecht Journal of International and European Law Volume 2015 ; 2015 ; http://www.utrechtjournal.org/ >
-      au < released ; 2016 ; 7 ; Utrecht Journal of International and European Law Volume 2016 ; 2016 ; http://www.utrechtjournal.org/ >
-      au < manifest ; 2017 ; 8 ; Utrecht Journal of International and European Law Volume 2017 ; 2017 ; https://www.utrechtjournal.org/ >
-      au < manifest ; 2018 ; 9 ; Utrecht Journal of International and European Law Volume 2018 ; 2018 ; https://www.utrechtjournal.org/ >
+      au < superseded ; 2010 ; 1 ; Utrecht Journal of International and European Law Volume 2010 [superseded] ; 2010 ; http://www.utrechtjournal.org/ >
+      au < doNotProcess ; 2011 ; 2 ; Utrecht Journal of International and European Law Volume 2011 ; 2011 ; https://www.utrechtjournal.org/ >
+      au < doNotProcess ; 2012 ; 3 ; Utrecht Journal of International and European Law Volume 2012 ; 2012 ; https://www.utrechtjournal.org/ >
+      au < doNotProcess ; 2013 ; 4 ; Utrecht Journal of International and European Law Volume 2013 ; 2013 ; https://www.utrechtjournal.org/ >
+      au < doNotProcess ; 2014 ; 5 ; Utrecht Journal of International and European Law Volume 2014 ; 2014 ; https://www.utrechtjournal.org/ >
+      au < superseded ; 2015 ; 6 ; Utrecht Journal of International and European Law Volume 2015 [superseded] ; 2015 ; http://www.utrechtjournal.org/ >
+      au < superseded ; 2016 ; 7 ; Utrecht Journal of International and European Law Volume 2016 [superseded] ; 2016 ; http://www.utrechtjournal.org/ >
+      au < doNotProcess ; 2017 ; 8 ; Utrecht Journal of International and European Law Volume 2017 ; 2017 ; https://www.utrechtjournal.org/ >
+    }
+    {
+       #no www. use this
+#      param[base_url] = https://utrechtjournal.org/
 
+      au < manifest ; 2010 ; 1 ; Utrecht Journal of International and European Law Volume 2010 ; 2010 ; https://utrechtjournal.org/ >
+      au < manifest ; 2011 ; 2 ; Utrecht Journal of International and European Law Volume 2011 ; 2011 ; https://utrechtjournal.org/ >
+      au < manifest ; 2012 ; 3 ; Utrecht Journal of International and European Law Volume 2012 ; 2012 ; https://utrechtjournal.org/ >
+      au < manifest ; 2013 ; 4 ; Utrecht Journal of International and European Law Volume 2013 ; 2013 ; https://utrechtjournal.org/ >
+      au < manifest ; 2014 ; 5 ; Utrecht Journal of International and European Law Volume 2014 ; 2014 ; https://utrechtjournal.org/ >
+      au < manifest ; 2015 ; 6 ; Utrecht Journal of International and European Law Volume 2015 ; 2015 ; https://utrechtjournal.org/ >
+      au < ready ; 2016 ; 7 ; Utrecht Journal of International and European Law Volume 2016 ; 2016 ; https://utrechtjournal.org/ >
+      au < ready ; 2017 ; 8 ; Utrecht Journal of International and European Law Volume 2017 ; 2017 ; https://utrechtjournal.org/ >
+      au < manifest ; 2018 ; 9 ; Utrecht Journal of International and European Law Volume 2018 ; 2018 ; https://utrechtjournal.org/ >
+    }
   }
 
   {
@@ -1347,13 +1413,13 @@
       au < manifest ; 2008 ; 1 ; Cultural Science Journal Volume 2008 ; 2008 ; https://culturalscience.org/ >
       au < manifest ; 2009 ; 2 ; Cultural Science Journal Volume 2009 ; 2009 ; https://culturalscience.org/ >
       au < manifest ; 2010 ; 3 ; Cultural Science Journal Volume 2010 ; 2010 ; https://culturalscience.org/ >
-      au < manifest ; 2011 ; 4 ; Cultural Science Journal Volume 2011 ; 2011 ; https://culturalscience.org/ >
-      au < manifest ; 2012 ; 5 ; Cultural Science Journal Volume 2012 ; 2012 ; https://culturalscience.org/ >
-      au < manifest ; 2013 ; 6 ; Cultural Science Journal Volume 2013 ; 2013 ; https://culturalscience.org/ >
-      au < manifest ; 2014 ; 7 ; Cultural Science Journal Volume 2014 ; 2014 ; https://culturalscience.org/ >
-      au < manifest ; 2015 ; 8 ; Cultural Science Journal Volume 2015 ; 2015 ; https://culturalscience.org/ >
-      au < manifest ; 2016 ; 9 ; Cultural Science Journal Volume 2016 ; 2016 ; https://culturalscience.org/ >
-      au < manifest ; 2017 ; 10 ; Cultural Science Journal Volume 2017 ; 2017 ; https://culturalscience.org/ >
+      au < ready ; 2011 ; 4 ; Cultural Science Journal Volume 2011 ; 2011 ; https://culturalscience.org/ >
+      au < ready ; 2012 ; 5 ; Cultural Science Journal Volume 2012 ; 2012 ; https://culturalscience.org/ >
+      au < ready ; 2013 ; 6 ; Cultural Science Journal Volume 2013 ; 2013 ; https://culturalscience.org/ >
+      au < ready ; 2014 ; 7 ; Cultural Science Journal Volume 2014 ; 2014 ; https://culturalscience.org/ >
+      au < ready ; 2015 ; 8 ; Cultural Science Journal Volume 2015 ; 2015 ; https://culturalscience.org/ >
+      au < ready ; 2016 ; 9 ; Cultural Science Journal Volume 2016 ; 2016 ; https://culturalscience.org/ >
+      au < ready ; 2017 ; 10 ; Cultural Science Journal Volume 2017 ; 2017 ; https://culturalscience.org/ >
       au < manifest ; 2018 ; 11 ; Cultural Science Journal Volume 2018 ; 2018 ; https://culturalscience.org/ >
 
   }
@@ -1368,11 +1434,11 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://egems.academyhealth.org/
 
-      au < manifest ; 2013 ; 1 ; eGEMs (Generating Evidence & Methods to improve patient outcomes) Volume 2013 ; 2013 ; https://egems.academyhealth.org/ >
-      au < manifest ; 2014 ; 2 ; eGEMs (Generating Evidence & Methods to improve patient outcomes) Volume 2014 ; 2014 ; https://egems.academyhealth.org/ >
-      au < manifest ; 2015 ; 3 ; eGEMs (Generating Evidence & Methods to improve patient outcomes) Volume 2015 ; 2015 ; https://egems.academyhealth.org/ >
-      au < manifest ; 2016 ; 4 ; eGEMs (Generating Evidence & Methods to improve patient outcomes) Volume 2016 ; 2016 ; https://egems.academyhealth.org/ >
-      au < manifest ; 2017 ; 5 ; eGEMs (Generating Evidence & Methods to improve patient outcomes) Volume 2017 ; 2017 ; https://egems.academyhealth.org/ >
+      au < ready ; 2013 ; 1 ; eGEMs (Generating Evidence & Methods to improve patient outcomes) Volume 2013 ; 2013 ; https://egems.academyhealth.org/ >
+      au < ready ; 2014 ; 2 ; eGEMs (Generating Evidence & Methods to improve patient outcomes) Volume 2014 ; 2014 ; https://egems.academyhealth.org/ >
+      au < ready ; 2015 ; 3 ; eGEMs (Generating Evidence & Methods to improve patient outcomes) Volume 2015 ; 2015 ; https://egems.academyhealth.org/ >
+      au < ready ; 2016 ; 4 ; eGEMs (Generating Evidence & Methods to improve patient outcomes) Volume 2016 ; 2016 ; https://egems.academyhealth.org/ >
+      au < ready ; 2017 ; 5 ; eGEMs (Generating Evidence & Methods to improve patient outcomes) Volume 2017 ; 2017 ; https://egems.academyhealth.org/ >
       au < manifest ; 2018 ; 6 ; eGEMs (Generating Evidence & Methods to improve patient outcomes) Volume 2018 ; 2018 ; https://egems.academyhealth.org/ >
 
   }
@@ -1387,10 +1453,10 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://www.ejmcm.com/
 
-      au < manifest ; 2014 ; 1 ; European Journal of Molecular and Clinical Medicine Volume 2014 ; 2014 ; https://www.ejmcm.com/ >
-      au < manifest ; 2015 ; 2 ; European Journal of Molecular and Clinical Medicine Volume 2015 ; 2015 ; https://www.ejmcm.com/ >
-      au < manifest ; 2016 ; 3 ; European Journal of Molecular and Clinical Medicine Volume 2016 ; 2016 ; https://www.ejmcm.com/ >
-      au < manifest ; 2017 ; 4 ; European Journal of Molecular and Clinical Medicine Volume 2017 ; 2017 ; https://www.ejmcm.com/ >
+      au < ready ; 2014 ; 1 ; European Journal of Molecular and Clinical Medicine Volume 2014 ; 2014 ; https://www.ejmcm.com/ >
+      au < ready ; 2015 ; 2 ; European Journal of Molecular and Clinical Medicine Volume 2015 ; 2015 ; https://www.ejmcm.com/ >
+      au < ready ; 2016 ; 3 ; European Journal of Molecular and Clinical Medicine Volume 2016 ; 2016 ; https://www.ejmcm.com/ >
+      au < ready ; 2017 ; 4 ; European Journal of Molecular and Clinical Medicine Volume 2017 ; 2017 ; https://www.ejmcm.com/ >
       au < manifest ; 2018 ; 5 ; European Journal of Molecular and Clinical Medicine Volume 2018 ; 2018 ; https://www.ejmcm.com/ >
 
   }
@@ -1433,7 +1499,7 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://kula.uvic.ca/
 
-      au < manifest ; 2017 ; 1 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2017 ; 2017 ; https://kula.uvic.ca/ >
+      au < ready ; 2017 ; 1 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2017 ; 2017 ; https://kula.uvic.ca/ >
       au < manifest ; 2018 ; 2 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2018 ; 2018 ; https://kula.uvic.ca/ >
 
   }
@@ -1462,7 +1528,7 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://paahjournal.com/
 
-      au < manifest ; 2017 ; 1 ; Physical Activity and Health Volume 2017 ; 2017 ; https://paahjournal.com/ >
+      au < ready ; 2017 ; 1 ; Physical Activity and Health Volume 2017 ; 2017 ; https://paahjournal.com/ >
       au < manifest ; 2018 ; 2 ; Physical Activity and Health Volume 2018 ; 2018 ; https://paahjournal.com/ >
 
   }
@@ -1477,12 +1543,12 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://tilburglawreview.com/
 
-      au < manifest ; 2012 ; 1 ; Tilburg International Law Review Volume 2012 ; 2012 ; https://tilburglawreview.com/ >
-      au < manifest ; 2013 ; 2 ; Tilburg International Law Review Volume 2013 ; 2013 ; https://tilburglawreview.com/ >
-      au < manifest ; 2014 ; 3 ; Tilburg International Law Review Volume 2014 ; 2014 ; https://tilburglawreview.com/ >
-      au < manifest ; 2015 ; 4 ; Tilburg International Law Review Volume 2015 ; 2015 ; https://tilburglawreview.com/ >
-      au < manifest ; 2016 ; 5 ; Tilburg International Law Review Volume 2016 ; 2016 ; https://tilburglawreview.com/ >
-      au < manifest ; 2017 ; 6 ; Tilburg International Law Review Volume 2017 ; 2017 ; https://tilburglawreview.com/ >
+      au < ready ; 2012 ; 1 ; Tilburg International Law Review Volume 2012 ; 2012 ; https://tilburglawreview.com/ >
+      au < ready ; 2013 ; 2 ; Tilburg International Law Review Volume 2013 ; 2013 ; https://tilburglawreview.com/ >
+      au < ready ; 2014 ; 3 ; Tilburg International Law Review Volume 2014 ; 2014 ; https://tilburglawreview.com/ >
+      au < ready ; 2015 ; 4 ; Tilburg International Law Review Volume 2015 ; 2015 ; https://tilburglawreview.com/ >
+      au < ready ; 2016 ; 5 ; Tilburg International Law Review Volume 2016 ; 2016 ; https://tilburglawreview.com/ >
+      au < ready ; 2017 ; 6 ; Tilburg International Law Review Volume 2017 ; 2017 ; https://tilburglawreview.com/ >
       au < manifest ; 2018 ; 7 ; Tilburg International Law Review Volume 2018 ; 2018 ; https://tilburglawreview.com/ >
 
   }
@@ -1505,7 +1571,7 @@
       au < manifest ; 2015 ; 6 ; Yearbook of Swiss Administrative Science Volume 2015 ; 2015 ; https://ssas.ubiquitypress.com/ >
       au < manifest ; 2016 ; 7 ; Yearbook of Swiss Administrative Science Volume 2016 ; 2016 ; https://ssas.ubiquitypress.com/ >
       au < manifest ; 2017 ; 8 ; Yearbook of Swiss Administrative Science Volume 2017 ; 2017 ; https://ssas.ubiquitypress.com/ >
-      au < expected ; 2018 ; 9 ; Yearbook of Swiss Administrative Science Volume 2018 ; 2018 ; https://ssas.ubiquitypress.com/ >
+      au < manifest ; 2018 ; 9 ; Yearbook of Swiss Administrative Science Volume 2018 ; 2018 ; https://ssas.ubiquitypress.com/ >
 
   }
 }
@@ -1626,10 +1692,10 @@
 #      param[base_url] = http://www.westminsterpapers.org/
 
       au < manifest ; 2009 ; 6 ; Westminster Papers in Communication and Culture Volume 2009 ; 2009 ; https://www.westminsterpapers.org/ >
-      au < manifest ; 2010 ; 7 ; Westminster Papers in Communication and Culture Volume 2010 ; 2010 ; https://www.westminsterpapers.org/ >
-      au < manifest ; 2011 ; 8 ; Westminster Papers in Communication and Culture Volume 2011 ; 2011 ; https://www.westminsterpapers.org/ >
-      au < manifest ; 2012 ; 9 ; Westminster Papers in Communication and Culture Volume 2012 ; 2012 ; https://www.westminsterpapers.org/ >
-      au < manifest ; 2013 ; 9 ; Westminster Papers in Communication and Culture Volume 2013 ; 2013 ; https://www.westminsterpapers.org/ >
+      au < ready ; 2010 ; 7 ; Westminster Papers in Communication and Culture Volume 2010 ; 2010 ; https://www.westminsterpapers.org/ >
+      au < ready ; 2011 ; 8 ; Westminster Papers in Communication and Culture Volume 2011 ; 2011 ; https://www.westminsterpapers.org/ >
+      au < ready ; 2012 ; 9 ; Westminster Papers in Communication and Culture Volume 2012 ; 2012 ; https://www.westminsterpapers.org/ >
+      au < ready ; 2013 ; 9 ; Westminster Papers in Communication and Culture Volume 2013 ; 2013 ; https://www.westminsterpapers.org/ >
       au < released ; 2015 ; 10 ; Westminster Papers in Communication and Culture Volume 2015 ; 2015 ; http://www.westminsterpapers.org/ >
       au < released ; 2016 ; 11 ; Westminster Papers in Communication and Culture Volume 2016 ; 2016 ; http://www.westminsterpapers.org/ >
       au < released ; 2017 ; 12 ; Westminster Papers in Communication and Culture Volume 2017 ; 2017 ; https://www.westminsterpapers.org/ >
@@ -1910,25 +1976,25 @@
   {
 
       title <
-        name = RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE ;
+        name = RELIEF - REVUE Ã‰LECTRONIQUE DE LITTÃ‰RATURE FRANÃ‡AISE ;
         eissn = 1873-5045
       >
 
       comment[publisher] = Utrecht University Library
 #      param[base_url] = https://www.revue-relief.org/
 
-      au < manifest ; 2007 ; 1 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2007 ; 2007 ; https://www.revue-relief.org/ >
-      au < manifest ; 2008 ; 2 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2008 ; 2008 ; https://www.revue-relief.org/ >
-      au < manifest ; 2009 ; 3 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2009 ; 2009 ; https://www.revue-relief.org/ >
-      au < released ; 2010 ; 4 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2010 ; 2010 ; https://www.revue-relief.org/ >
-      au < released ; 2011 ; 5 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2011 ; 2011 ; https://www.revue-relief.org/ >
-      au < released ; 2012 ; 6 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2012 ; 2012 ; https://www.revue-relief.org/ >
-      au < released ; 2013 ; 7 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2013 ; 2013 ; https://www.revue-relief.org/ >
-      au < released ; 2014 ; 8 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2014 ; 2014 ; https://www.revue-relief.org/ >
-      au < released ; 2015 ; 9 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2015 ; 2015 ; https://www.revue-relief.org/ >
-      au < released ; 2016 ; 10 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2016 ; 2016 ; https://www.revue-relief.org/ >
-      au < released ; 2017 ; 11 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2017 ; 2017 ; https://www.revue-relief.org/ >
-      au < manifest ; 2018 ; 12 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2018 ; 2018 ; https://www.revue-relief.org/ >
+      au < manifest ; 2007 ; 1 ; RELIEF - REVUE Ã‰LECTRONIQUE DE LITTÃ‰RATURE FRANÃ‡AISE Volume 2007 ; 2007 ; https://www.revue-relief.org/ >
+      au < manifest ; 2008 ; 2 ; RELIEF - REVUE Ã‰LECTRONIQUE DE LITTÃ‰RATURE FRANÃ‡AISE Volume 2008 ; 2008 ; https://www.revue-relief.org/ >
+      au < manifest ; 2009 ; 3 ; RELIEF - REVUE Ã‰LECTRONIQUE DE LITTÃ‰RATURE FRANÃ‡AISE Volume 2009 ; 2009 ; https://www.revue-relief.org/ >
+      au < released ; 2010 ; 4 ; RELIEF - REVUE Ã‰LECTRONIQUE DE LITTÃ‰RATURE FRANÃ‡AISE Volume 2010 ; 2010 ; https://www.revue-relief.org/ >
+      au < released ; 2011 ; 5 ; RELIEF - REVUE Ã‰LECTRONIQUE DE LITTÃ‰RATURE FRANÃ‡AISE Volume 2011 ; 2011 ; https://www.revue-relief.org/ >
+      au < released ; 2012 ; 6 ; RELIEF - REVUE Ã‰LECTRONIQUE DE LITTÃ‰RATURE FRANÃ‡AISE Volume 2012 ; 2012 ; https://www.revue-relief.org/ >
+      au < released ; 2013 ; 7 ; RELIEF - REVUE Ã‰LECTRONIQUE DE LITTÃ‰RATURE FRANÃ‡AISE Volume 2013 ; 2013 ; https://www.revue-relief.org/ >
+      au < released ; 2014 ; 8 ; RELIEF - REVUE Ã‰LECTRONIQUE DE LITTÃ‰RATURE FRANÃ‡AISE Volume 2014 ; 2014 ; https://www.revue-relief.org/ >
+      au < released ; 2015 ; 9 ; RELIEF - REVUE Ã‰LECTRONIQUE DE LITTÃ‰RATURE FRANÃ‡AISE Volume 2015 ; 2015 ; https://www.revue-relief.org/ >
+      au < released ; 2016 ; 10 ; RELIEF - REVUE Ã‰LECTRONIQUE DE LITTÃ‰RATURE FRANÃ‡AISE Volume 2016 ; 2016 ; https://www.revue-relief.org/ >
+      au < released ; 2017 ; 11 ; RELIEF - REVUE Ã‰LECTRONIQUE DE LITTÃ‰RATURE FRANÃ‡AISE Volume 2017 ; 2017 ; https://www.revue-relief.org/ >
+      au < manifest ; 2018 ; 12 ; RELIEF - REVUE Ã‰LECTRONIQUE DE LITTÃ‰RATURE FRANÃ‡AISE Volume 2018 ; 2018 ; https://www.revue-relief.org/ >
 
   }
 

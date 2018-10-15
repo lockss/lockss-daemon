@@ -2,6 +2,7 @@
   publisher <
     name = BioScientifica
   >
+  #####Moved to pubfactory
 {
     title <
       name = Echo Research and Practice ;
@@ -14,11 +15,11 @@
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.echorespract.com/
 
-      au < released ; 2014 ; Echo Research and Practice Volume 1 ; 1 >
-      au < released ; 2015 ; Echo Research and Practice Volume 2 ; 2 >
-      au < released ; 2016 ; Echo Research and Practice Volume 3 ; 3 >
-      au < released ; 2017 ; Echo Research and Practice Volume 4 ; 4 >
-      au < manifest ; 2018 ; Echo Research and Practice Volume 5 ; 5 >
+      au < down ; 2014 ; Echo Research and Practice Volume 1 ; 1 >
+      au < down ; 2015 ; Echo Research and Practice Volume 2 ; 2 >
+      au < down ; 2016 ; Echo Research and Practice Volume 3 ; 3 >
+      au < down ; 2017 ; Echo Research and Practice Volume 4 ; 4 >
+      au < doNotProcess ; 2018 ; Echo Research and Practice Volume 5 ; 5 >
 
   }
   
@@ -35,13 +36,13 @@
       param[base_url] = http://www.endocrineconnections.com/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < HighWirePressH20Plugin ; released ; 2012 ; Endocrine Connections Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; released ; 2013 ; Endocrine Connections Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; released ; 2014 ; Endocrine Connections Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; released ; 2015 ; Endocrine Connections Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; released ; 2016 ; Endocrine Connections Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; released ; 2017 ; Endocrine Connections Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; manifest ; 2018 ; Endocrine Connections Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; down ; 2012 ; Endocrine Connections Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; down ; 2013 ; Endocrine Connections Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; down ; 2014 ; Endocrine Connections Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; down ; 2015 ; Endocrine Connections Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; down ; 2016 ; Endocrine Connections Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; down ; 2017 ; Endocrine Connections Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2018 ; Endocrine Connections Volume 7 ; 7 >
 
     }
 
@@ -63,13 +64,13 @@
 
       au < HighWirePressH20Plugin ; exists ; 1993 ; European Journal of Endocrinology Volume 128 ; 128 >
       au < HighWirePressH20Plugin ; exists ; 1993 ; European Journal of Endocrinology Volume 129 ; 129 >
-      au < HighWirePressH20Plugin ; released ; 1994 ; European Journal of Endocrinology Volume 130 ; 130 >
-      au < HighWirePressH20Plugin ; released ; 1994 ; European Journal of Endocrinology Volume 131 ; 131 >
-      au < HighWirePressH20Plugin ; released ; 1995 ; European Journal of Endocrinology Volume 132 ; 132 >
-      au < HighWirePressH20Plugin ; released ; 1995 ; European Journal of Endocrinology Volume 133 ; 133 >
-      au < HighWirePressH20Plugin ; released ; 1996 ; European Journal of Endocrinology Volume 134 ; 134 >
-      au < HighWirePressH20Plugin ; released ; 1996 ; European Journal of Endocrinology Volume 135 ; 135 >
-      au < HighWirePressH20Plugin ; released ; 1997 ; European Journal of Endocrinology Volume 136 ; 136 >
+      au < HighWirePressH20Plugin ; down ; 1994 ; European Journal of Endocrinology Volume 130 ; 130 >
+      au < HighWirePressH20Plugin ; down ; 1994 ; European Journal of Endocrinology Volume 131 ; 131 >
+      au < HighWirePressH20Plugin ; down ; 1995 ; European Journal of Endocrinology Volume 132 ; 132 >
+      au < HighWirePressH20Plugin ; down ; 1995 ; European Journal of Endocrinology Volume 133 ; 133 >
+      au < HighWirePressH20Plugin ; down ; 1996 ; European Journal of Endocrinology Volume 134 ; 134 >
+      au < HighWirePressH20Plugin ; down ; 1996 ; European Journal of Endocrinology Volume 135 ; 135 >
+      au < HighWirePressH20Plugin ; down ; 1997 ; European Journal of Endocrinology Volume 136 ; 136 >
       au < HighWirePressPlugin ; down ; 1997 ; European Journal of Endocrinology Volume 137 ; 137 >
       au < HighWirePressPlugin ; down ; 1998 ; European Journal of Endocrinology Volume 138 ; 138 >
       au < HighWirePressPlugin ; down ; 1998 ; European Journal of Endocrinology Volume 139 ; 139 >
@@ -97,22 +98,22 @@
       au < HighWirePressPlugin ; down ; 2009 ; European Journal of Endocrinology Volume 161 ; 161 >
       au < HighWirePressPlugin ; down ; 2010 ; European Journal of Endocrinology Volume 162 ; 162 >
       au < HighWirePressPlugin ; down ; 2010 ; European Journal of Endocrinology Volume 163 ; 163 >
-      au < HighWirePressH20Plugin ; released ; 2011 ; European Journal of Endocrinology Volume 164 ; 164 >
-      au < HighWirePressH20Plugin ; released ; 2011 ; European Journal of Endocrinology Volume 165 ; 165 >
-      au < HighWirePressH20Plugin ; released ; 2012 ; European Journal of Endocrinology Volume 166 ; 166 >
-      au < HighWirePressH20Plugin ; released ; 2012 ; European Journal of Endocrinology Volume 167 ; 167 >
-      au < HighWirePressH20Plugin ; released ; 2013 ; European Journal of Endocrinology Volume 168 ; 168 >
-      au < HighWirePressH20Plugin ; released ; 2013 ; European Journal of Endocrinology Volume 169 ; 169 >
-      au < HighWirePressH20Plugin ; released ; 2014 ; European Journal of Endocrinology Volume 170 ; 170 >
-      au < HighWirePressH20Plugin ; released ; 2014 ; European Journal of Endocrinology Volume 171 ; 171 >
-      au < HighWirePressH20Plugin ; released ; 2015 ; European Journal of Endocrinology Volume 172 ; 172 >
-      au < HighWirePressH20Plugin ; released ; 2015 ; European Journal of Endocrinology Volume 173 ; 173 >
-      au < HighWirePressH20Plugin ; released ; 2016 ; European Journal of Endocrinology Volume 174 ; 174 >
-      au < HighWirePressH20Plugin ; released ; 2016 ; European Journal of Endocrinology Volume 175 ; 175 >
-      au < HighWirePressH20Plugin ; released ; 2017 ; European Journal of Endocrinology Volume 176 ; 176 >
-      au < HighWirePressH20Plugin ; released ; 2017 ; European Journal of Endocrinology Volume 177 ; 177 >
-      au < HighWirePressH20Plugin ; manifest ; 2018 ; European Journal of Endocrinology Volume 178 ; 178 >
-      au < HighWirePressH20Plugin ; manifest ; 2018 ; European Journal of Endocrinology Volume 179 ; 179 >
+      au < HighWirePressH20Plugin ; down ; 2011 ; European Journal of Endocrinology Volume 164 ; 164 >
+      au < HighWirePressH20Plugin ; down ; 2011 ; European Journal of Endocrinology Volume 165 ; 165 >
+      au < HighWirePressH20Plugin ; down ; 2012 ; European Journal of Endocrinology Volume 166 ; 166 >
+      au < HighWirePressH20Plugin ; down ; 2012 ; European Journal of Endocrinology Volume 167 ; 167 >
+      au < HighWirePressH20Plugin ; down ; 2013 ; European Journal of Endocrinology Volume 168 ; 168 >
+      au < HighWirePressH20Plugin ; down ; 2013 ; European Journal of Endocrinology Volume 169 ; 169 >
+      au < HighWirePressH20Plugin ; down ; 2014 ; European Journal of Endocrinology Volume 170 ; 170 >
+      au < HighWirePressH20Plugin ; down ; 2014 ; European Journal of Endocrinology Volume 171 ; 171 >
+      au < HighWirePressH20Plugin ; down ; 2015 ; European Journal of Endocrinology Volume 172 ; 172 >
+      au < HighWirePressH20Plugin ; down ; 2015 ; European Journal of Endocrinology Volume 173 ; 173 >
+      au < HighWirePressH20Plugin ; down ; 2016 ; European Journal of Endocrinology Volume 174 ; 174 >
+      au < HighWirePressH20Plugin ; down ; 2016 ; European Journal of Endocrinology Volume 175 ; 175 >
+      au < HighWirePressH20Plugin ; down ; 2017 ; European Journal of Endocrinology Volume 176 ; 176 >
+      au < HighWirePressH20Plugin ; down ; 2017 ; European Journal of Endocrinology Volume 177 ; 177 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2018 ; European Journal of Endocrinology Volume 178 ; 178 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2018 ; European Journal of Endocrinology Volume 179 ; 179 >
 
     }
 
@@ -272,22 +273,22 @@
       au < HighWirePressPlugin ; down ; 2009 ; Reproduction Volume 138 ; 138 >
       au < HighWirePressPlugin ; down ; 2010 ; Reproduction Volume 139 ; 139 >
       au < HighWirePressPlugin ; down ; 2010 ; Reproduction Volume 140 ; 140 >
-      au < HighWirePressH20Plugin ; released ; 2011 ; Reproduction Volume 141 ; 141 >
-      au < HighWirePressH20Plugin ; released ; 2011 ; Reproduction Volume 142 ; 142 >
-      au < HighWirePressH20Plugin ; released ; 2012 ; Reproduction Volume 143 ; 143 >
-      au < HighWirePressH20Plugin ; released ; 2012 ; Reproduction Volume 144 ; 144 >
-      au < HighWirePressH20Plugin ; released ; 2013 ; Reproduction Volume 145 ; 145 >
-      au < HighWirePressH20Plugin ; released ; 2013 ; Reproduction Volume 146 ; 146 >
-      au < HighWirePressH20Plugin ; released ; 2014 ; Reproduction Volume 147 ; 147 >
-      au < HighWirePressH20Plugin ; released ; 2014 ; Reproduction Volume 148 ; 148 >
-      au < HighWirePressH20Plugin ; released ; 2015 ; Reproduction Volume 149 ; 149 >
-      au < HighWirePressH20Plugin ; released ; 2015 ; Reproduction Volume 150 ; 150 >
-      au < HighWirePressH20Plugin ; released ; 2016 ; Reproduction Volume 151 ; 151 >
-      au < HighWirePressH20Plugin ; released ; 2016 ; Reproduction Volume 152 ; 152 >
-      au < HighWirePressH20Plugin ; released ; 2017 ; Reproduction Volume 153 ; 153 >
-      au < HighWirePressH20Plugin ; released ; 2017 ; Reproduction Volume 154 ; 154 >
-      au < HighWirePressH20Plugin ; manifest ; 2018 ; Reproduction Volume 155 ; 155 >
-      au < HighWirePressH20Plugin ; manifest ; 2018 ; Reproduction Volume 156 ; 156 >
+      au < HighWirePressH20Plugin ; down ; 2011 ; Reproduction Volume 141 ; 141 >
+      au < HighWirePressH20Plugin ; down ; 2011 ; Reproduction Volume 142 ; 142 >
+      au < HighWirePressH20Plugin ; down ; 2012 ; Reproduction Volume 143 ; 143 >
+      au < HighWirePressH20Plugin ; down ; 2012 ; Reproduction Volume 144 ; 144 >
+      au < HighWirePressH20Plugin ; down ; 2013 ; Reproduction Volume 145 ; 145 >
+      au < HighWirePressH20Plugin ; down ; 2013 ; Reproduction Volume 146 ; 146 >
+      au < HighWirePressH20Plugin ; down ; 2014 ; Reproduction Volume 147 ; 147 >
+      au < HighWirePressH20Plugin ; down ; 2014 ; Reproduction Volume 148 ; 148 >
+      au < HighWirePressH20Plugin ; down ; 2015 ; Reproduction Volume 149 ; 149 >
+      au < HighWirePressH20Plugin ; down ; 2015 ; Reproduction Volume 150 ; 150 >
+      au < HighWirePressH20Plugin ; down ; 2016 ; Reproduction Volume 151 ; 151 >
+      au < HighWirePressH20Plugin ; down ; 2016 ; Reproduction Volume 152 ; 152 >
+      au < HighWirePressH20Plugin ; down ; 2017 ; Reproduction Volume 153 ; 153 >
+      au < HighWirePressH20Plugin ; down ; 2017 ; Reproduction Volume 154 ; 154 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2018 ; Reproduction Volume 155 ; 155 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2018 ; Reproduction Volume 156 ; 156 >
 
     }
 
@@ -306,11 +307,11 @@
       param[base_url] = http://ror.reproduction-online.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; 1996 ; Reviews of Reproduction Volume 1 ; 1 >
-      au < released ; 1997 ; Reviews of Reproduction Volume 2 ; 2 >
-      au < released ; 1998 ; Reviews of Reproduction Volume 3 ; 3 >
-      au < released ; 1999 ; Reviews of Reproduction Volume 4 ; 4 >
-      au < released ; 2000 ; Reviews of Reproduction Volume 5 ; 5 >
+      au < down ; 1996 ; Reviews of Reproduction Volume 1 ; 1 >
+      au < down ; 1997 ; Reviews of Reproduction Volume 2 ; 2 >
+      au < down ; 1998 ; Reviews of Reproduction Volume 3 ; 3 >
+      au < down ; 1999 ; Reviews of Reproduction Volume 4 ; 4 >
+      au < down ; 2000 ; Reviews of Reproduction Volume 5 ; 5 >
       
     }
     

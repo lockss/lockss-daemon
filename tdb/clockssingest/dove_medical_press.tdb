@@ -376,7 +376,6 @@
     au < finished ; finished ; 2015 ; Advances and Applications in Bioinformatics and Chemistry Volume 8 ; 8 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Advances and Applications in Bioinformatics and Chemistry Volume 9 ; 9 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Advances and Applications in Bioinformatics and Chemistry Volume 10 ; 10 ; 2017 ; >
-    au < expected ; exists ; 2018 ; Advances and Applications in Bioinformatics and Chemistry Volume 11 ; 11 ; 2018 ; >
 
   }
 
@@ -489,7 +488,7 @@
     au < finished ; finished ; 2014 ; Journal of Receptor, Ligand and Channel Research Volume 7 ; 7 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Journal of Receptor, Ligand and Channel Research Volume 8 ; 8 ; 2015 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2016 ; Journal of Receptor, Ligand and Channel Research Volume 9 ; 9 ; 2016 ; reingest5.clockss.org:8082 >
-    au < testing ; exists ; 2018 ; Journal of Receptor, Ligand and Channel Research Volume 10 ; 10 ; 2018 ; >
+    au < crawling ; exists ; 2018 ; Journal of Receptor, Ligand and Channel Research Volume 10 ; 10 ; 2018 ; >
     
   }
 
@@ -1482,7 +1481,7 @@
     au < finished ; finished ; 2015 ; Pathology and Laboratory Medicine International Volume 7 ; 7 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Pathology and Laboratory Medicine International Volume 8 ; 8 ; 2016 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Pathology and Laboratory Medicine International Volume 9 ; 9 ; 2017 ; >
-    au < ready ; exists ; 2018 ; Pathology and Laboratory Medicine International Volume 10 ; 10 ; 2018 ; >
+    au < crawling ; exists ; 2018 ; Pathology and Laboratory Medicine International Volume 10 ; 10 ; 2018 ; >
 
   }
 
@@ -1525,7 +1524,7 @@
     au < finished ; finished ; 2015 ; Clinical Audit Volume 7 ; 7 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Clinical Audit Volume 8 ; 8 ; 2016 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Clinical Audit Volume 9 ; 9 ; 2017 ; >
-    au < expected ; exists ; 2018 ; Clinical Audit Volume 10 ; 10 ; 2018 ; >
+    au < crawling ; exists ; 2018 ; Clinical Audit Volume 10 ; 10 ; 2018 ; >
 
   }
 
@@ -1675,7 +1674,7 @@
     au < finished ; finished ; 2015 ; Adolescent Health, Medicine and Therapeutics Volume 6 ; 6 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Adolescent Health, Medicine and Therapeutics Volume 7 ; 7 ; 2016 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; Adolescent Health, Medicine and Therapeutics Volume 8 ; 8 ; 2017 ; >
-    au < ready ; exists ; 2018 ; Adolescent Health, Medicine and Therapeutics Volume 9 ; 9 ; 2018 ; >
+    au < crawling ; exists ; 2018 ; Adolescent Health, Medicine and Therapeutics Volume 9 ; 9 ; 2018 ; >
 
   }
 
@@ -1739,7 +1738,7 @@
     au < finished ; finished ; 2015 ; Advances in Medical Education and Practice Volume 6 ; 6 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Advances in Medical Education and Practice Volume 7 ; 7 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Advances in Medical Education and Practice Volume 8 ; 8 ; 2017 ; >
-    au < testing ; exists ; 2018 ; Advances in Medical Education and Practice Volume 9 ; 9 ; 2018 ; >
+    au < crawling ; exists ; 2018 ; Advances in Medical Education and Practice Volume 9 ; 9 ; 2018 ; >
 
   }
 
@@ -1781,7 +1780,7 @@
     au < finished ; finished ; 2015 ; Research and Reports in Biology Volume 6 ; 6 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Research and Reports in Biology Volume 7 ; 7 ; 2016 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; Research and Reports in Biology Volume 8 ; 8 ; 2017 ; >
-    au < ready ; exists ; 2018 ; Research and Reports in Biology Volume 9 ; 9 ; 2018 ; >
+    au < crawling ; exists ; 2018 ; Research and Reports in Biology Volume 9 ; 9 ; 2018 ; >
 
   }
 
@@ -1823,7 +1822,7 @@
     au < finished ; finished ; 2015 ; Research Reports in Clinical Cardiology Volume 6 ; 6 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Research Reports in Clinical Cardiology Volume 7 ; 7 ; 2016 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Research Reports in Clinical Cardiology Volume 8 ; 8 ; 2017 ; >
-    au < ready ; exists ; 2018 ; Research Reports in Clinical Cardiology Volume 9 ; 9 ; 2018 ; >
+    au < crawling ; exists ; 2018 ; Research Reports in Clinical Cardiology Volume 9 ; 9 ; 2018 ; >
 
   }
 
@@ -1843,7 +1842,7 @@
     au < finished ; finished ; 2015 ; Comparative Effectiveness Research Volume 5 ; 5 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Comparative Effectiveness Research Volume 6 ; 6 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Comparative Effectiveness Research Volume 7 ; 7 ; 2017 ; >
-    au < ready ; exists ; 2018 ; Comparative Effectiveness Research Volume 8 ; 8 ; 2018 ; >
+    au < crawling ; exists ; 2018 ; Comparative Effectiveness Research Volume 8 ; 8 ; 2018 ; >
 
   }
 
@@ -1864,7 +1863,7 @@
     au < finished ; finished ; 2015 ; Substance Abuse and Rehabilitation Volume 6 ; 6 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Substance Abuse and Rehabilitation Volume 7 ; 7 ; 2016 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Substance Abuse and Rehabilitation Volume 8 ; 8 ; 2017 ; >
-    au < ready ; exists ; 2018 ; Substance Abuse and Rehabilitation Volume 9 ; 9 ; 2018 ; >
+    au < crawling ; exists ; 2018 ; Substance Abuse and Rehabilitation Volume 9 ; 9 ; 2018 ; >
 
   }
 
@@ -1904,7 +1903,7 @@
     au < finished ; finished ; 2015 ; Advances in Genomics and Genetics Volume 5 ; 5 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Advances in Genomics and Genetics Volume 6 ; 6 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Advances in Genomics and Genetics Volume 7 ; 7 ; 2017 ; >
-    au < ready ; exists ; 2018 ; Advances in Genomics and Genetics Volume 8 ; 8 ; 2018 ; >
+    au < crawling ; exists ; 2018 ; Advances in Genomics and Genetics Volume 8 ; 8 ; 2018 ; >
 
   }
 
@@ -1924,7 +1923,7 @@
     au < finished ; finished ; 2015 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 5 ; 5 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 6 ; 6 ; 2016 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 7 ; 7 ; 2017 ; >
-    au < ready ; exists ; 2018 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 8 ; 8 ; 2018 ; >
+    au < crawling ; exists ; 2018 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 8 ; 8 ; 2018 ; >
 
   }
 
@@ -2141,7 +2140,7 @@
     au < finished ; finished ; 2015 ; Medicolegal and Bioethics Volume 5 ; 5 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Medicolegal and Bioethics Volume 6 ; 6 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Medicolegal and Bioethics Volume 7 ; 7 ; 2017 ; >
-    au < ready ; exists ; 2018 ; Medicolegal and Bioethics Volume 8 ; 8 ; 2018 ; >
+    au < crawling ; exists ; 2018 ; Medicolegal and Bioethics Volume 8 ; 8 ; 2018 ; >
 
   }
 
@@ -2180,7 +2179,6 @@
     au < finished ; finished ; 2015 ; Research and Reports in Forensic Medical Science Volume 5 ; 5 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Research and Reports in Forensic Medical Science Volume 6 ; 6 ; 2016 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; Research and Reports in Forensic Medical Science Volume 7 ; 7 ; 2017 ; >
-    au < expected ; exists ; 2018 ; Research and Reports in Forensic Medical Science Volume 8 ; 8 ; 2018 ; >
 
   }
 
@@ -2295,7 +2293,7 @@
     au < finished ; finished ; 2015 ; Open Access Medical Statistics Volume 5 ; 5 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Open Access Medical Statistics Volume 6 ; 6 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Open Access Medical Statistics Volume 7 ; 7 ; 2017 ; >
-    au < ready ; exists ; 2018 ; Open Access Medical Statistics Volume 8 ; 8 ; 2018 ; >
+    au < crawling ; exists ; 2018 ; Open Access Medical Statistics Volume 8 ; 8 ; 2018 ; >
 
   }
 
@@ -2315,7 +2313,7 @@
     au < finished ; finished ; 2015 ; Psoriasis: Targets and Therapy Volume 5 ; 5 ; 2015 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2016 ; Psoriasis: Targets and Therapy Volume 6 ; 6 ; 2016 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Psoriasis: Targets and Therapy Volume 7 ; 7 ; 2017 ; >
-    au < ready ; exists ; 2018 ; Psoriasis: Targets and Therapy Volume 8 ; 8 ; 2018 ; >
+    au < crawling ; exists ; 2018 ; Psoriasis: Targets and Therapy Volume 8 ; 8 ; 2018 ; >
 
   }
 
@@ -2521,7 +2519,7 @@
     au < finished ; finished ; 2014 ; Smart Homecare Technology and TeleHealth Volume 2 ; 2 ; 2014 ; >
     au < finished ; finished ; 2015 ; Smart Homecare Technology and TeleHealth Volume 3 ; 3 ; 2015 ; >
     au < deepCrawl ; exists ; 2017 ; Smart Homecare Technology and TeleHealth Volume 4 ; 4 ; 2017 ; >
-    au < ready ; exists ; 2018 ; Smart Homecare Technology and TeleHealth Volume 5 ; 5 ; 2018 ; >
+    au < crawling ; exists ; 2018 ; Smart Homecare Technology and TeleHealth Volume 5 ; 5 ; 2018 ; >
 
   }
 
@@ -2649,7 +2647,7 @@
     au < finished ; finished ; 2015 ; Journal of Parkinsonism & Restless Legs Syndrome Volume 5 ; 5 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Journal of Parkinsonism & Restless Legs Syndrome Volume 6 ; 6 ; 2016 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Journal of Parkinsonism & Restless Legs Syndrome Volume 7 ; 7 ; 2017 ; >
-    au < ready ; exists ; 2018 ; Journal of Parkinsonism & Restless Legs Syndrome Volume 8 ; 8 ; 2018 ; >
+    au < crawling ; exists ; 2018 ; Journal of Parkinsonism & Restless Legs Syndrome Volume 8 ; 8 ; 2018 ; >
 
   }
 
@@ -2666,7 +2664,7 @@
     au < finished ; finished ; 2015 ; Journal of Hepatocellular Carcinoma Volume 2 ; 2 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Journal of Hepatocellular Carcinoma Volume 3 ; 3 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Journal of Hepatocellular Carcinoma Volume 4 ; 4 ; 2017 ; >
-    au < ready ; exists ; 2018 ; Journal of Hepatocellular Carcinoma Volume 5 ; 5 ; 2018 ; >
+    au < crawling ; exists ; 2018 ; Journal of Hepatocellular Carcinoma Volume 5 ; 5 ; 2018 ; >
 
   }
 
@@ -2684,7 +2682,7 @@
     au < finished ; finished ; 2015 ; Hypoxia Volume 3 ; 3 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Hypoxia Volume 4 ; 4 ; 2016 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Hypoxia Volume 5 ; 5 ; 2017 ; >
-    au < ready ; exists ; 2018 ; Hypoxia Volume 6 ; 6 ; 2018 ; >
+    au < crawling ; exists ; 2018 ; Hypoxia Volume 6 ; 6 ; 2018 ; >
 
   }
 
@@ -2701,7 +2699,7 @@
     au < finished ; finished ; 2015 ; Metalloproteinases In Medicine Volume 2 ; 2 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Metalloproteinases In Medicine Volume 3 ; 3 ; 2016 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; Metalloproteinases In Medicine Volume 4 ; 4 ; 2017 ; >
-    au < ready ; exists ; 2018 ; Metalloproteinases In Medicine Volume 5 ; 5 ; 2018 ; >
+    au < crawling ; exists ; 2018 ; Metalloproteinases In Medicine Volume 5 ; 5 ; 2018 ; >
 
   }
 
@@ -2737,7 +2735,7 @@
     au < finished ; finished ; 2015 ; Journal of Vascular Diagnostics and Interventions Volume 3 ; 3 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Journal of Vascular Diagnostics and Interventions Volume 4 ; 4 ; 2016 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; Journal of Vascular Diagnostics and Interventions Volume 5 ; 5 ; 2017 ; >
-    au < ready ; exists ; 2018 ; Journal of Vascular Diagnostics and Interventions Volume 6 ; 6 ; 2018 ; >
+    au < crawling ; exists ; 2018 ; Journal of Vascular Diagnostics and Interventions Volume 6 ; 6 ; 2018 ; >
 
   }
 
@@ -2754,7 +2752,7 @@
     au < finished ; finished ; 2015 ; Chronic Wound Care Management and Research Volume 2 ; 2 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Chronic Wound Care Management and Research Volume 3 ; 3 ; 2016 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Chronic Wound Care Management and Research Volume 4 ; 4 ; 2017 ; >
-    au < ready ; exists ; 2018 ; Chronic Wound Care Management and Research Volume 5 ; 5 ; 2018 ; >
+    au < crawling ; exists ; 2018 ; Chronic Wound Care Management and Research Volume 5 ; 5 ; 2018 ; >
 
   }
   {
@@ -2770,7 +2768,7 @@
     au < finished ; finished ; 2015 ; Robotic Surgery: Research and Reviews Volume 2 ; 2 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Robotic Surgery: Research and Reviews Volume 3 ; 3 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Robotic Surgery: Research and Reviews Volume 4 ; 4 ; 2017 ; >
-    au < ready ; exists ; 2018 ; Robotic Surgery: Research and Reviews Volume 5 ; 5 ; 2018 ; >
+    au < crawling ; exists ; 2018 ; Robotic Surgery: Research and Reviews Volume 5 ; 5 ; 2018 ; >
 
   }
 
@@ -2803,7 +2801,7 @@
     au < finished ; finished ; 2015 ; Innovation and Entrepreneurship in Health Volume 2 ; 2 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Innovation and Entrepreneurship in Health Volume 3 ; 3 ; 2016 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Innovation and Entrepreneurship in Health Volume 4 ; 4 ; 2017 ; >
-    au < ready ; exists ; 2018 ; Innovation and Entrepreneurship in Health Volume 5 ; 5 ; 2018 ; >
+    au < crawling ; exists ; 2018 ; Innovation and Entrepreneurship in Health Volume 5 ; 5 ; 2018 ; >
 
   }
 
@@ -2819,7 +2817,7 @@
     au < finished ; finished ; 2015 ; Advanced Health Care Technologies Volume 1 ; 1 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Advanced Health Care Technologies Volume 2 ; 2 ; 2016 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; Advanced Health Care Technologies Volume 3 ; 3 ; 2017 ; >
-    au < ready ; exists ; 2018 ; Advanced Health Care Technologies Volume 4 ; 4 ; 2018 ; >
+    au < crawling ; exists ; 2018 ; Advanced Health Care Technologies Volume 4 ; 4 ; 2018 ; >
 
   }
 

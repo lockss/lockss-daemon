@@ -21,11 +21,11 @@
     param[base_url] = http://repository.edm-forum.org/
     param[journal_abbr] = egems
 
-    au < released ; 2013 ; eGEMs Volume 1 ; 1 >
-    au < released ; 2014 ; eGEMs Volume 2 ; 2 >
-    au < released ; 2015 ; eGEMs Volume 3 ; 3 >
-    au < released ; 2016 ; eGEMs Volume 4 ; 4 >
-    au < manifest ; 2017 ; eGEMs Volume 5 ; 5 >
+    au < down ; 2013 ; eGEMs Volume 1 ; 1 >
+    au < down ; 2014 ; eGEMs Volume 2 ; 2 >
+    au < down ; 2015 ; eGEMs Volume 3 ; 3 >
+    au < down ; 2016 ; eGEMs Volume 4 ; 4 >
+    au < doNotProcess ; 2017 ; eGEMs Volume 5 ; 5 >
 
     }
     {

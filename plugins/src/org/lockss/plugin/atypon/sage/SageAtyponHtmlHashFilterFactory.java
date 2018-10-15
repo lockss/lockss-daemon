@@ -96,7 +96,13 @@ public class SageAtyponHtmlHashFilterFactory
 	 //showCitation - included on article page - not a standalone for this plugin
 	 //showPopup&citart <body class="popupBody">
 	   HtmlNodeFilters.tagWithAttributeRegex("body","class","popupBody"),
-	   
+	 /*
+	  * 10/2/2018 - updates due to skin change
+	  */
+	   //TOC still uses tocContent; /full/ and /figure/ still use literatumPublicationContentWidget
+	   // article abstract now has <div class="widget accessDenialWidget none articleContent widget-non....>
+	   HtmlNodeFilters.tagWithAttributeRegex("div","class"," articleContent ")
+
 
 	};
     NodeFilter[] excludeNodes = new NodeFilter[] {

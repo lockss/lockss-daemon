@@ -198,6 +198,13 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
             HtmlNodeFilters.tagWithAttribute("span", "class","ref-lnk"), //in-line rollover ref info
             //Figures
             //showCit
+            
+            /* 
+             * Noticed changes in 10/2/2018 - views counts on TOC
+             */
+            HtmlNodeFilters.tagWithAttributeRegex("span", "class", "access-icon"),
+            HtmlNodeFilters.tagWithAttribute("div", "class", "metrics-panel"),
+            
             new NodeFilter() {
               @Override
               public boolean accept(Node node) {

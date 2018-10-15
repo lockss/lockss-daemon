@@ -10,7 +10,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>International Water Association Publishing</string>
+    <string>International Water Association Publishing (Legacy)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -43,6 +43,6 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"International Water Association Publishing Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
+    <string>"International Water Association Publishing Plugin (Legacy), Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
 </map>

@@ -96,7 +96,7 @@
       au < finished ; finished ; 2015 ; 2015 ; Advances in Radio Science 2014 Volume 13 ; 13 ; http://www.adv-radio-sci.net/ ; http://www.advances-in-radio-science.net/ ; >
       au < frozen ; exists ; 2016 ; 2016 ; Advances in Radio Science 2015 Volume 14 ; 14 ; https://www.adv-radio-sci.net/ ; https://www.advances-in-radio-science.net/ ; >
       au < deepCrawl ; exists ; 2017 ; 2017 ; Advances in Radio Science 2016 Volume 15 ; 15 ; https://www.adv-radio-sci.net/ ; https://www.advances-in-radio-science.net/ ; >
-      au < manifest ; exists ; 2018 ; 2018 ; Advances in Radio Science 2017 Volume 16 ; 16 ; https://www.adv-radio-sci.net/ ; https://www.advances-in-radio-science.net/ ; >
+      au < crawling ; exists ; 2018 ; 2018 ; Advances in Radio Science 2017 Volume 16 ; 16 ; https://www.adv-radio-sci.net/ ; https://www.advances-in-radio-science.net/ ; >
 
    }
 
@@ -1103,31 +1103,31 @@
       au < finished ; finished ; 2014 ; 2014 ; ISPRS Annals Volume II-6 ; II-6 ; http://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; http://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
       au < finished ; finished ; 2014 ; 2014 ; ISPRS Annals Volume II-7 ; II-7 ; http://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; http://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014 ; 2014 ; ISPRS Annals Volume II-8 ; II-8 ; http://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; http://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
-      au < manifest ; exists ; 2015 ; 2015 ; ISPRS Annals Volume II-1/W1 ; II-1-W1 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
-      au < manifest ; exists ; 2015 ; 2015 ; ISPRS Annals Volume II-2/W2 ; II-2-W2 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
+      au < frozen ; exists ; 2015 ; 2015 ; ISPRS Annals Volume II-1/W1 ; II-1-W1 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
+      au < frozen ; exists ; 2015 ; 2015 ; ISPRS Annals Volume II-2/W2 ; II-2-W2 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
       au < finished ; finished ; 2015 ; 2015 ; ISPRS Annals Volume II-3/W4 ; II-3-W4 ; http://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; http://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
-      au < manifest ; exists ; 2015 ; 2015 ; ISPRS Annals Volume II-3/W5 ; II-3-W5 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
-      au < manifest ; exists ; 2015 ; 2015 ; ISPRS Annals Volume II-4/W2 ; II-4-W2 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
-      au < manifest ; exists ; 2015 ; 2015 ; ISPRS Annals Volume II-5/W3 ; II-5-W3 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
-      au < manifest ; exists ; 2016 ; 2016 ; ISPRS Annals Volume III-1 ; III-1 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
-      au < manifest ; exists ; 2016 ; 2016 ; ISPRS Annals Volume III-2 ; III-2 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
-      au < manifest ; exists ; 2016 ; 2016 ; ISPRS Annals Volume III-3 ; III-3 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
-      au < manifest ; exists ; 2016 ; 2016 ; ISPRS Annals Volume III-4 ; III-4 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
-      au < manifest ; exists ; 2016 ; 2016 ; ISPRS Annals Volume III-5 ; III-5 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
-      au < manifest ; exists ; 2016 ; 2016 ; ISPRS Annals Volume III-6 ; III-6 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
-      au < manifest ; exists ; 2016 ; 2016 ; ISPRS Annals Volume III-7 ; III-7 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
-      au < manifest ; exists ; 2016 ; 2016 ; ISPRS Annals Volume III-8 ; III-8 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
-      au < manifest ; exists ; 2016 ; 2016 ; ISPRS Annals Volume IV-2/W1 ; IV-2-W1 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
-      au < manifest ; exists ; 2016 ; 2016 ; ISPRS Annals Volume IV-4/W1 ; IV-4-W1 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
-      au < manifest ; exists ; 2017 ; 2017 ; ISPRS Annals Volume IV-1/W1 ; IV-1-W1 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
-      au < manifest ; exists ; 2017 ; 2017 ; ISPRS Annals Volume IV-4/W2 ; IV-4-W2 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
-      au < manifest ; exists ; 2017 ; 2017 ; ISPRS Annals Volume IV-2/W2 ; IV-2-W2 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
-      au < manifest ; exists ; 2017 ; 2017 ; ISPRS Annals Volume IV-2/W3 ; IV-2-W3 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
-      au < manifest ; exists ; 2017 ; 2017 ; ISPRS Annals Volume IV-2/W4 ; IV-2-W4 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
-      au < manifest ; exists ; 2017 ; 2017 ; ISPRS Annals Volume IV-4/W3 ; IV-4-W3 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
-      au < manifest ; exists ; 2017 ; 2017 ; ISPRS Annals Volume IV-4/W4 ; IV-4-W4 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
-      au < manifest ; exists ; 2017 ; 2017 ; ISPRS Annals Volume IV-4/W5 ; IV-4-W5 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
-      au < manifest ; exists ; 2017 ; 2017 ; ISPRS Annals Volume IV-5/W1 ; IV-5-W1 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
+      au < frozen ; exists ; 2015 ; 2015 ; ISPRS Annals Volume II-3/W5 ; II-3-W5 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
+      au < frozen ; exists ; 2015 ; 2015 ; ISPRS Annals Volume II-4/W2 ; II-4-W2 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
+      au < frozen ; exists ; 2015 ; 2015 ; ISPRS Annals Volume II-5/W3 ; II-5-W3 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
+      au < frozen ; exists ; 2016 ; 2016 ; ISPRS Annals Volume III-1 ; III-1 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
+      au < frozen ; exists ; 2016 ; 2016 ; ISPRS Annals Volume III-2 ; III-2 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
+      au < frozen ; exists ; 2016 ; 2016 ; ISPRS Annals Volume III-3 ; III-3 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
+      au < frozen ; exists ; 2016 ; 2016 ; ISPRS Annals Volume III-4 ; III-4 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
+      au < frozen ; exists ; 2016 ; 2016 ; ISPRS Annals Volume III-5 ; III-5 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
+      au < frozen ; exists ; 2016 ; 2016 ; ISPRS Annals Volume III-6 ; III-6 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
+      au < frozen ; exists ; 2016 ; 2016 ; ISPRS Annals Volume III-7 ; III-7 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
+      au < frozen ; exists ; 2016 ; 2016 ; ISPRS Annals Volume III-8 ; III-8 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
+      au < frozen ; exists ; 2016 ; 2016 ; ISPRS Annals Volume IV-2/W1 ; IV-2-W1 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
+      au < frozen ; exists ; 2016 ; 2016 ; ISPRS Annals Volume IV-4/W1 ; IV-4-W1 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
+      au < frozen ; exists ; 2017 ; 2017 ; ISPRS Annals Volume IV-1/W1 ; IV-1-W1 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
+      au < frozen ; exists ; 2017 ; 2017 ; ISPRS Annals Volume IV-4/W2 ; IV-4-W2 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
+      au < frozen ; exists ; 2017 ; 2017 ; ISPRS Annals Volume IV-2/W2 ; IV-2-W2 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
+      au < frozen ; exists ; 2017 ; 2017 ; ISPRS Annals Volume IV-2/W3 ; IV-2-W3 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
+      au < frozen ; exists ; 2017 ; 2017 ; ISPRS Annals Volume IV-2/W4 ; IV-2-W4 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
+      au < frozen ; exists ; 2017 ; 2017 ; ISPRS Annals Volume IV-4/W3 ; IV-4-W3 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
+      au < frozen ; exists ; 2017 ; 2017 ; ISPRS Annals Volume IV-4/W4 ; IV-4-W4 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
+      au < frozen ; exists ; 2017 ; 2017 ; ISPRS Annals Volume IV-4/W5 ; IV-4-W5 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
+      au < frozen ; exists ; 2017 ; 2017 ; ISPRS Annals Volume IV-5/W1 ; IV-5-W1 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
 
    }
 
@@ -1324,7 +1324,7 @@
       au < frozen ; exists ; 2014 ; 2014 ; Journal of Micropalaeontology Volume 33 ; 33 ; https://www.j-micropalaeontol.net/ ; https://www.journal-of-micropalaeontology.net/ ; >
       au < frozen ; exists ; 2015 ; 2015 ; Journal of Micropalaeontology Volume 34 ; 34 ; https://www.j-micropalaeontol.net/ ; https://www.journal-of-micropalaeontology.net/ ; >
       au < frozen ; exists ; 2016 ; 2016 ; Journal of Micropalaeontology Volume 35 ; 35 ; https://www.j-micropalaeontol.net/ ; https://www.journal-of-micropalaeontology.net/ ; >
-      au < finished ; manifest ; 2017 ; 2017 ; Journal of Micropalaeontology Volume 36 ; 36 ; https://www.j-micropalaeontol.net/ ; https://www.journal-of-micropalaeontology.net/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2017 ; 2017 ; Journal of Micropalaeontology Volume 36 ; 36 ; https://www.j-micropalaeontol.net/ ; https://www.journal-of-micropalaeontology.net/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2018 ; 2018 ; Journal of Micropalaeontology Volume 37 ; 37 ; https://www.j-micropalaeontol.net/ ; https://www.journal-of-micropalaeontology.net/ ; >
 
   }

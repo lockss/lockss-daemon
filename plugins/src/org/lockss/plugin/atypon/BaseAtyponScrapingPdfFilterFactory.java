@@ -156,10 +156,15 @@ public class BaseAtyponScrapingPdfFilterFactory extends ExtractingPdfFilterFacto
    * For those publishers that provide one - remove any front page added 
    * to PDF files based on the defined FrontPagePattern 
    * Showing up in T&F but only from certain IP addresses...so sporadic
+   * 
+   * TF isn't generating a front page so 1 page pdfs get reduced to zero
+   * Front page shows up for reader; not for wget
+   * TODO - figure out how to identify front page so we don't remove a REAL front
+   * page for multi-page documents. 
    */
   protected void removeFrontPage(PdfDocument pdfDocument)
       throws PdfException {
-    if (pdfDocument.getNumberOfPages() > 0) {
+    if (pdfDocument.getNumberOfPages() > 1) {
       PdfTokenStreamStateMachine worker = new FrontPageStateMachine(getFrontPagePattern());
       worker.process(pdfDocument.getPage(0).getPageTokenStream());
       if (worker.getResult()) {

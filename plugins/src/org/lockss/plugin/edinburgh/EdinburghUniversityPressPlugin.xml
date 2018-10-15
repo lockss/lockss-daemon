@@ -3,6 +3,7 @@
    <string>plugin_status</string>
    <string>ready</string>
   </entry>
+  <!-- https transition enabled -->  
   <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin</string>
@@ -13,7 +14,7 @@
   </entry>  
   <entry>
     <string>plugin_version</string>
-    <string>48</string>
+    <string>50</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -21,7 +22,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>88</string>
+    <string>94</string>
   </entry>  
   <entry>
     <string>au_name</string>

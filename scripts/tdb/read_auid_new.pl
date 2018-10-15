@@ -2832,6 +2832,33 @@ while (my $line = <>) {
       }
       sleep(4);
       
+  } elsif (($plugin eq "PeerJ2016Plugin") || ($plugin eq "ClockssPeerJ2016Plugin")) {
+        $url = sprintf("%sarchives/?year=%s&journal=%s",
+          $param{base_url}, $param{volume_name}, $param{journal_id});
+        $man_url = uri_unescape($url);
+        my $year = $param{volume_name};
+        my $req = HTTP::Request->new(GET, $man_url);
+        my $resp = $ua->request($req);
+        if ($resp->is_success) {
+            my $man_contents = $resp->content;
+            #no lockss permission statement on start page. Permission statement is here: https://peerj.com/lockss.txt
+            if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+	    #make sure there is a link to an issue
+            } elsif (defined($man_contents) && ($man_contents =~ m/articles\/index\.html\?month=$year-/)) {
+                if ($man_contents =~ m/<h1[^>]+>(\s*<a href[^>]+>)(.*)(<\/a>\s*):([^<]+)<\/h1>/si) {
+                    $vol_title = "$2$4"
+                }
+                $result = "Manifest"
+            } else {
+                $result = "--"
+            }
+        } else {
+            $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+        }
+        sleep(4);
+
   } elsif (($plugin eq "IUCrOaiPlugin") || ($plugin eq "ClockssIUCrOaiPlugin")) {
     #permission is different from start
     $url = sprintf("%se/issues/2010/lockss.html", $param{base_url});

@@ -3,6 +3,7 @@
   publisher <
     name = Geological Society of London ;
     info[contract] = 2013 ;
+    info[back] = 2010 ;
     info[tester] = 8 ;
     info[poller] = 2
   >
@@ -643,11 +644,11 @@
     comment[continued] = 0016-7649
     #contains volumes 1-126
 
-    au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 1966 ; Quarterly Journal of the Geological Society of London Volume 122 ; 122 ; >
-    au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 1967 ; Quarterly Journal of the Geological Society of London Volume 123 ; 123 ; >
-    au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 1968 ; Quarterly Journal of the Geological Society of London Volume 124 ; 124 ; >
-    au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 1969 ; Quarterly Journal of the Geological Society of London Volume 125 ; 125 ; >
-    au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 1970 ; Quarterly Journal of the Geological Society of London Volume 126 ; 126 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 1966 ; Quarterly Journal of the Geological Society of London Volume 122 ; 122 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 1967 ; Quarterly Journal of the Geological Society of London Volume 123 ; 123 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 1968 ; Quarterly Journal of the Geological Society of London Volume 124 ; 124 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 1969 ; Quarterly Journal of the Geological Society of London Volume 125 ; 125 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 1970 ; Quarterly Journal of the Geological Society of London Volume 126 ; 126 ; >
     #journal name and issn changed after 1970
   }
   {

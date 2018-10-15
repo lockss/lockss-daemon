@@ -3,6 +3,7 @@
     <string>plugin_status</string>
     <string>ready</string>
   </entry>
+  <!-- https transition enabled -->  
   <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.atypon.aiaa.AIAAPlugin</string>
@@ -13,9 +14,9 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>29</string>
+    <string>30</string>
   </entry>
-<!--  updating out of sync with parent, must have own feature_version_map -->  
+<!--  updating out of sync with parent, must have own feature_version_map -->
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
@@ -32,14 +33,14 @@
         <string>6</string>
       </entry>
     </map>
-  </entry>  
+  </entry>
   <entry>
     <string>plugin_parent</string>
     <string>org.lockss.plugin.atypon.BaseAtyponPlugin</string>
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>86</string>
+    <string>91</string>
   </entry>
   <!--  override start url from parent to support http to https conversion -->
   <entry>
@@ -61,8 +62,8 @@
   <entry>
     <string>plugin_url_consumer_factory</string>
     <string>org.lockss.plugin.atypon.BaseAtyponHttpToHttpsUrlConsumerFactory</string>
-  </entry>  
-<!-- end changes for https conversion -->    
+  </entry>
+  <!-- end changes for https conversion -->
   <entry>
     <string>au_name</string>
     <string>"American Institute of Aeronautics and Astronautics Journals Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
@@ -86,5 +87,5 @@
   <entry>
     <string>text/html_link_rewriter_factory</string>
     <string>org.lockss.plugin.atypon.aiaa.AIAAHtmlLinkRewriterFactory</string>
-  </entry>   
+  </entry>
 </map>

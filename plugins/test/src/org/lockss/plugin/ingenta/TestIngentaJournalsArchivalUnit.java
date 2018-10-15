@@ -124,7 +124,7 @@ public class TestIngentaJournalsArchivalUnit extends LockssTestCase {
 
     // permission page or start_url
     shouldCacheTest("http://docserver.ingentaconnect.com/lockss.txt", true, FooAu, cus);
-    shouldCacheTest("http://graphics.ingentaconnect.com/lockss.txt", true, FooAu, cus);
+    shouldCacheTest("http://graphics.ingentaconnect.com/lockss.txt", false, FooAu, cus);
     shouldCacheTest("http://www.ingentaconnect.com/content/1111-1111?format=clockss&volume=23", true, FooAu, cus);
     shouldCacheTest("http://www.ingentaconnect.com/content/foo/myjid/2011/00000023/00000001/art00002", true, FooAu, cus);
     shouldCacheTest("http://www.ingentaconnect.com/content/foo/myjid/2011/00000023/00000001/art00002?format=ris", true, FooAu, cus);

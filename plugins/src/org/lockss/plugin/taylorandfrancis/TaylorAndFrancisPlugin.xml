@@ -3,6 +3,7 @@
     <string>plugin_status</string>
     <string>ready</string>
   </entry>
+  <!-- https transition enabled -->  
   <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.taylorandfrancis.TaylorAndFrancisPlugin</string>
@@ -17,7 +18,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>107</string>
+    <string>109</string>
   </entry>
 <!-- Now a child of BaseAtypon which lives in a different directory "atypon" -->
   <entry>
@@ -26,7 +27,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>90</string>
+    <string>94</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
