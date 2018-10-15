@@ -9382,6 +9382,21 @@
   {
 
     title <
+      name = Journal of Geophysics and Engineering ;
+      issn = 1742-2132 ;
+      eissn = 1742-2140 ;
+      issnl = 1742-2132
+    >
+
+    param[journal_id] = jge
+
+    au < expected ; exists ; 2018 ; 2018 ; Journal of Geophysics and Engineering Volume 15 ; 15 ;  >
+
+  }
+
+  {
+
+    title <
       name = Journal of Gerontology ;
       issn = 0022-1422
     >

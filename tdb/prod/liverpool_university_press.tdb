@@ -13,6 +13,34 @@
   {
 
     title <
+      name = Archives ;
+      issn = 0003-9535 ;
+      eissn = 2516-8975 ;
+      issnl = 0003-9535
+    >
+
+    param[journal_id] = archives
+
+    au < exists ; 2006 ; Archives Volume 31 ; 31 ; https://online.liverpooluniversitypress.co.uk/ >
+    au < exists ; 2007 ; Archives Volume 32 ; 32 ; https://online.liverpooluniversitypress.co.uk/ >
+    au < exists ; 2008 ; Archives Volume 33 ; 33 ; https://online.liverpooluniversitypress.co.uk/ >
+    au < exists ; 2009 ; Archives Volume 34 ; 34 ; https://online.liverpooluniversitypress.co.uk/ >
+    au < exists ; 2010 ; Archives Volume 35 ; 35 ; https://online.liverpooluniversitypress.co.uk/ >
+    au < exists ; 2011 ; Archives Volume 36 ; 36 ; https://online.liverpooluniversitypress.co.uk/ >
+    au < exists ; 2012 ; Archives Volume 37 ; 37 ; https://online.liverpooluniversitypress.co.uk/ >
+    au < exists ; 2013 ; Archives Volume 38 ; 38 ; https://online.liverpooluniversitypress.co.uk/ >
+    au < exists ; 2013 ; Archives Volume 39 ; 39 ; https://online.liverpooluniversitypress.co.uk/ >
+    au < exists ; 2014 ; Archives Volume 40 ; 40 ; https://online.liverpooluniversitypress.co.uk/ >
+    au < exists ; 2015 ; Archives Volume 50 ; 50 ; https://online.liverpooluniversitypress.co.uk/ >
+    au < exists ; 2016 ; Archives Volume 51 ; 51 ; https://online.liverpooluniversitypress.co.uk/ >
+    au < exists ; 2017 ; Archives Volume 52 ; 52 ; https://online.liverpooluniversitypress.co.uk/ >
+    au < exists ; 2018 ; Archives Volume 53 ; 53 ; https://online.liverpooluniversitypress.co.uk/ >
+
+  }
+
+  {
+
+    title <
       name = Australian Journal of French Studies ;
       issn = 0004-9468 ;
       eissn = 2046-2913 ;
@@ -409,6 +437,32 @@
     au < released ; 2016 ; Historical Studies in Industrial Relations Volume 37 ; 37 ; http://online.liverpooluniversitypress.co.uk/ >
     au < released ; 2017 ; Historical Studies in Industrial Relations Volume 38 ; 38 ; https://online.liverpooluniversitypress.co.uk/ >
     au < manifest ; 2018 ; Historical Studies in Industrial Relations Volume 39 ; 39 ; https://online.liverpooluniversitypress.co.uk/ >
+
+  }
+
+  {
+
+    title <
+      name = The Indexer: the international journal of indexing ;
+      issn = 0019-4131 ;
+      eissn = 1756-0632 ;
+      issnl = 0019-4131
+    >
+
+    param[journal_id] = index
+
+    au < exists ; 2006-2007 ; The Indexer: the international journal of indexing Volume 25 ; 25 ; https://online.liverpooluniversitypress.co.uk/ >
+    au < exists ; 2008 ; The Indexer: the international journal of indexing Volume 26 ; 26 ; https://online.liverpooluniversitypress.co.uk/ >
+    au < exists ; 2009 ; The Indexer: the international journal of indexing Volume 27 ; 27 ; https://online.liverpooluniversitypress.co.uk/ >
+    au < exists ; 2010 ; The Indexer: the international journal of indexing Volume 28 ; 28 ; https://online.liverpooluniversitypress.co.uk/ >
+    au < exists ; 2011 ; The Indexer: the international journal of indexing Volume 29 ; 29 ; https://online.liverpooluniversitypress.co.uk/ >
+    au < exists ; 2012 ; The Indexer: the international journal of indexing Volume 30 ; 30 ; https://online.liverpooluniversitypress.co.uk/ >
+    au < exists ; 2013 ; The Indexer: the international journal of indexing Volume 31 ; 31 ; https://online.liverpooluniversitypress.co.uk/ >
+    au < exists ; 2014 ; The Indexer: the international journal of indexing Volume 32 ; 32 ; https://online.liverpooluniversitypress.co.uk/ >
+    au < exists ; 2015 ; The Indexer: the international journal of indexing Volume 33 ; 33 ; https://online.liverpooluniversitypress.co.uk/ >
+    au < exists ; 2016 ; The Indexer: the international journal of indexing Volume 34 ; 34 ; https://online.liverpooluniversitypress.co.uk/ >
+    au < exists ; 2017 ; The Indexer: the international journal of indexing Volume 35 ; 35 ; https://online.liverpooluniversitypress.co.uk/ >
+    au < exists ; 2018 ; The Indexer: the international journal of indexing Volume 36 ; 36 ; https://online.liverpooluniversitypress.co.uk/ >
 
   }
 
