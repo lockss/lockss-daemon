@@ -5993,7 +5993,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; German History Volume 31 ; 31 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; German History Volume 32 ; 32 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; German History Volume 33 ; 33 ;  >
-    au < ready ; exists ; 2016 ; 2016 ; German History Volume 34 ; 34 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; German History Volume 34 ; 34 ;  >
     au < testing ; exists ; 2017 ; 2017 ; German History Volume 35 ; 35 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; German History Volume 36 ; 36 ;  >
 
@@ -6122,7 +6122,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Health & Social Work Volume 30 ; 30 ;  >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Health & Social Work Volume 31 ; 31 ;  >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Health & Social Work Volume 32 ; 32 ;  >
-    au < ready ; exists ; 2008 ; 2008 ; Health & Social Work Volume 33 ; 33 ;  >
+    au < crawling ; exists ; 2008 ; 2008 ; Health & Social Work Volume 33 ; 33 ;  >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Health & Social Work Volume 34 ; 34 ;  >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Health & Social Work Volume 35 ; 35 ;  >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Health & Social Work Volume 36 ; 36 ;  >
@@ -6415,7 +6415,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Human Molecular Genetics Volume 22 ; 22 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Human Molecular Genetics Volume 23 ; 23 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Human Molecular Genetics Volume 24 ; 24 ;  >
-    au < ready ; exists ; 2016 ; 2016 ; Human Molecular Genetics Volume 25 ; 25 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; Human Molecular Genetics Volume 25 ; 25 ;  >
     au < frozen ; exists ; 2017 ; 2017 ; Human Molecular Genetics Volume 26 ; 26 ;  >
     au < testing ; exists ; 2018 ; 2018 ; Human Molecular Genetics Volume 27 ; 27 ;  >
 
@@ -6532,7 +6532,7 @@
 
     param[journal_id] = hcr
 
-    au < ready ; exists ; 2018 ; 2018 ; Human Communication Research Volume 1 ; 1 ;  >
+    au < crawling ; exists ; 2018 ; 2018 ; Human Communication Research Volume 1 ; 1 ;  >
 
   }
 
@@ -7029,7 +7029,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; ITNOW Volume 56 ; 56 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; ITNOW Volume 57 ; 57 ;  >
     au < testing ; exists ; 2016 ; 2016 ; ITNOW Volume 58 ; 58 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; ITNOW Volume 59 ; 59 ;  >
+    au < crawling ; exists ; 2017 ; 2017 ; ITNOW Volume 59 ; 59 ;  >
     au < testing ; exists ; 2018 ; 2018 ; ITNOW Volume 60 ; 60 ;  >
 
   }
@@ -7558,7 +7558,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; International Journal of Epidemiology Volume 42 ; 42 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; International Journal of Epidemiology Volume 43 ; 43 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Journal of Epidemiology Volume 44 ; 44 ;  >
-    au < ready ; exists ; 2016 ; 2016 ; International Journal of Epidemiology Volume 45 ; 45 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; International Journal of Epidemiology Volume 45 ; 45 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; International Journal of Epidemiology Volume 46 ; 46 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; International Journal of Epidemiology Volume 47 ; 47 ;  >
 
@@ -7689,7 +7689,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; International Journal of Lexicography Volume 26 ; 26 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; International Journal of Lexicography Volume 27 ; 27 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Journal of Lexicography Volume 28 ; 28 ;  >
-    au < ready ; exists ; 2016 ; 2016 ; International Journal of Lexicography Volume 29 ; 29 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; International Journal of Lexicography Volume 29 ; 29 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; International Journal of Lexicography Volume 30 ; 30 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; International Journal of Lexicography Volume 31 ; 31 ;  >
 
@@ -8025,7 +8025,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; International Studies Perspectives Volume 6 ; 6 ;  >
     au < doNotProcess ; exists ; 2006 ; 2006 ; International Studies Perspectives Volume 7 ; 7 ;  >
     au < doNotProcess ; exists ; 2007 ; 2007 ; International Studies Perspectives Volume 8 ; 8 ;  >
-    au < ready ; exists ; 2008 ; 2008 ; International Studies Perspectives Volume 9 ; 9 ;  >
+    au < crawling ; exists ; 2008 ; 2008 ; International Studies Perspectives Volume 9 ; 9 ;  >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; International Studies Perspectives Volume 10 ; 10 ;  >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; International Studies Perspectives Volume 11 ; 11 ;  >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; International Studies Perspectives Volume 12 ; 12 ;  >
@@ -8817,7 +8817,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Journal of Complex Networks Volume 1 ; 1 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Complex Networks Volume 2 ; 2 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Complex Networks Volume 3 ; 3 ;  >
-    au < ready ; exists ; 2016 ; 2016 ; Journal of Complex Networks Volume 4 ; 4 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; Journal of Complex Networks Volume 4 ; 4 ;  >
     au < testing ; exists ; 2017 ; 2017 ; Journal of Complex Networks Volume 5 ; 5 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; Journal of Complex Networks Volume 6 ; 6 ;  >
 
@@ -8895,7 +8895,7 @@
     au < crawling ; exists ; 2014 ; 2014 ; Journal of Consumer Research Volume 40-41 ; 40-41 ;  >
     au < ready ; exists ; 2015 ; 2015 ; Journal of Consumer Research Volume 41-42 ; 41-42 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; Journal of Consumer Research Volume 42-43 ; 42-43 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; Journal of Consumer Research Volume 43-44 ; 43-44 ;  >
+    au < crawling ; exists ; 2017 ; 2017 ; Journal of Consumer Research Volume 43-44 ; 43-44 ;  >
     au < testing ; exists ; 2018 ; 2018 ; Journal of Consumer Research Volume 44-45 ; 44-45 ;  >
 
   }
@@ -8985,7 +8985,7 @@
     au < crawling ; exists ; 2009 ; 2009 ; Journal of Crustacean Biology Volume 29 ; 29 ;  >
     au < crawling ; exists ; 2010 ; 2010 ; Journal of Crustacean Biology Volume 30 ; 30 ;  >
     au < testing ; exists ; 2011 ; 2011 ; Journal of Crustacean Biology Volume 31 ; 31 ;  >
-    au < ready ; exists ; 2012 ; 2012 ; Journal of Crustacean Biology Volume 32 ; 32 ;  >
+    au < crawling ; exists ; 2012 ; 2012 ; Journal of Crustacean Biology Volume 32 ; 32 ;  >
     au < testing ; exists ; 2013 ; 2013 ; Journal of Crustacean Biology Volume 33 ; 33 ;  >
     au < testing ; exists ; 2014 ; 2014 ; Journal of Crustacean Biology Volume 34 ; 34 ;  >
     au < testing ; exists ; 2015 ; 2015 ; Journal of Crustacean Biology Volume 35 ; 35 ;  >
@@ -9805,7 +9805,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of International Economic Law Volume 17 ; 17 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of International Economic Law Volume 18 ; 18 ;  >
     au < testing ; exists ; 2016 ; 2016 ; Journal of International Economic Law Volume 19 ; 19 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; Journal of International Economic Law Volume 20 ; 20 ;  >
+    au < crawling ; exists ; 2017 ; 2017 ; Journal of International Economic Law Volume 20 ; 20 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; Journal of International Economic Law Volume 21 ; 21 ;  >
 
   }
@@ -9864,7 +9864,7 @@
     param[journal_id] = jole
 
     au < testing ; exists ; 2016 ; 2016 ; Journal of Language Evolution Volume 1 ; 1 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; Journal of Language Evolution Volume 2 ; 2 ;  >
+    au < crawling ; exists ; 2017 ; 2017 ; Journal of Language Evolution Volume 2 ; 2 ;  >
     au < testing ; exists ; 2018 ; 2018 ; Journal of Language Evolution Volume 3 ; 3 ;  >
 
   }
