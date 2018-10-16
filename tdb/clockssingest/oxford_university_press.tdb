@@ -1221,7 +1221,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Annals of Oncology Volume 24 ; 24 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Annals of Oncology Volume 25 ; 25 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Annals of Oncology Volume 26 ; 26 ;  >
-    au < crawling ; exists ; 2016 ; 2016 ; Annals of Oncology Volume 27 ; 27 ;  >
+    au < frozen ; exists ; 2016 ; 2016 ; Annals of Oncology Volume 27 ; 27 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; Annals of Oncology Volume 28 ; 28 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; Annals of Oncology Volume 29 ; 29 ;  >
 
@@ -2534,7 +2534,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Briefings in Functional Genomics Volume 12 ; 12 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Briefings in Functional Genomics Volume 13 ; 13 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Briefings in Functional Genomics Volume 14 ; 14 ;  >
-    au < crawling ; exists ; 2016 ; 2016 ; Briefings in Functional Genomics Volume 15 ; 15 ;  >
+    au < frozen ; exists ; 2016 ; 2016 ; Briefings in Functional Genomics Volume 15 ; 15 ;  >
     au < frozen ; exists ; 2017 ; 2017 ; Briefings in Functional Genomics Volume 16 ; 16 ;  >
     au < crawling ; exists ; 2018 ; 2018 ; Briefings in Functional Genomics Volume 17 ; 17 ;  >
 
@@ -3921,8 +3921,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; ELT Journal Volume 67 ; 67 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; ELT Journal Volume 68 ; 68 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; ELT Journal Volume 69 ; 69 ;  >
-    au < crawling ; exists ; 2016 ; 2016 ; ELT Journal Volume 70 ; 70 ;  >
-    au < crawling ; exists ; 2017 ; 2017 ; ELT Journal Volume 71 ; 71 ;  >
+    au < frozen ; exists ; 2016 ; 2016 ; ELT Journal Volume 70 ; 70 ;  >
+    au < frozen ; exists ; 2017 ; 2017 ; ELT Journal Volume 71 ; 71 ;  >
     au < crawling ; exists ; 2018 ; 2018 ; ELT Journal Volume 72 ; 72 ;  >
 
   }
@@ -3958,7 +3958,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; EP Europace Volume 16 ; 16 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; EP Europace Volume 17 ; 17 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; EP Europace Volume 18 ; 18 ;  >
-    au < crawling ; exists ; 2017 ; 2017 ; EP Europace Volume 19 ; 19 ;  >
+    au < frozen ; exists ; 2017 ; 2017 ; EP Europace Volume 19 ; 19 ;  >
     au < crawling ; exists ; 2018 ; 2018 ; EP Europace Volume 20 ; 20 ;  >
 
   }
@@ -4324,7 +4324,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Environmental History Volume 19 ; 19 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Environmental History Volume 20 ; 20 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; Environmental History Volume 21 ; 21 ;  >
-    au < crawling ; exists ; 2017 ; 2017 ; Environmental History Volume 22 ; 22 ;  >
+    au < frozen ; exists ; 2017 ; 2017 ; Environmental History Volume 22 ; 22 ;  >
 
   }
 
@@ -4590,7 +4590,7 @@
 
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 1 ; 1 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 2 ; 2 ;  >
-    au < crawling ; exists ; 2017 ; 2017 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 3 ; 3 ;  >
+    au < frozen ; exists ; 2017 ; 2017 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 3 ; 3 ;  >
 
   }
 
@@ -4789,7 +4789,7 @@
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; European Journal of Orthodontics Volume 32 ; 32 ;  >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; European Journal of Orthodontics Volume 33 ; 33 ;  >
     au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; European Journal of Orthodontics Volume 34 ; 34 ;  >
-    au < crawling ; exists ; 2013 ; 2013 ; European Journal of Orthodontics Volume 35 ; 35 ;  >
+    au < frozen ; exists ; 2013 ; 2013 ; European Journal of Orthodontics Volume 35 ; 35 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; European Journal of Orthodontics Volume 36 ; 36 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; European Journal of Orthodontics Volume 37 ; 37 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; European Journal of Orthodontics Volume 38 ; 38 ;  >
@@ -5268,7 +5268,7 @@
     param[journal_id] = fqs
 
     #this title was ONLY in the publisher listing
-    au < crawling ; exists ; 2017 ; 2017 ; Food Quality and Safety Volume 1 ; 1 ;  >
+    au < frozen ; exists ; 2017 ; 2017 ; Food Quality and Safety Volume 1 ; 1 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; Food Quality and Safety Volume 2 ; 2 ;  >
 
   }
@@ -5800,7 +5800,7 @@
 
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Gastroenterology Report Volume 1 ; 1 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Gastroenterology Report Volume 2 ; 2 ;  >
-    au < crawling ; exists ; 2015 ; 2015 ; Gastroenterology Report Volume 3 ; 3 ;  >
+    au < frozen ; exists ; 2015 ; 2015 ; Gastroenterology Report Volume 3 ; 3 ;  >
     au < testing ; exists ; 2016 ; 2016 ; Gastroenterology Report Volume 4 ; 4 ;  >
     au < testing ; exists ; 2017 ; 2017 ; Gastroenterology Report Volume 5 ; 5 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; Gastroenterology Report Volume 6 ; 6 ;  >
@@ -7299,7 +7299,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Interactive CardioVascular and Thoracic Surgery Volume 18-19 ; 18-19 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Interactive CardioVascular and Thoracic Surgery Volume 20-21 ; 20-21 ;  >
     au < testing ; exists ; 2016 ; 2016 ; Interactive CardioVascular and Thoracic Surgery Volume 22-23 ; 22-23 ;  >
-    au < crawling ; exists ; 2017 ; 2017 ; Interactive CardioVascular and Thoracic Surgery Volume 24 ; 24 ;  >
+    au < frozen ; exists ; 2017 ; 2017 ; Interactive CardioVascular and Thoracic Surgery Volume 24 ; 24 ;  >
     au < testing ; exists ; 2018 ; 2018 ; Interactive CardioVascular and Thoracic Surgery Volume 25 ; 25 ;  >
 
   }
@@ -7318,7 +7318,7 @@
     au < testing ; exists ; 2010 ; 2010 ; International Affairs Volume 86 ; 86 ;  >
     au < testing ; exists ; 2011 ; 2011 ; International Affairs Volume 87 ; 87 ;  >
     au < crawling ; exists ; 2012 ; 2012 ; International Affairs Volume 88 ; 88 ;  >
-    au < crawling ; exists ; 2013 ; 2013 ; International Affairs Volume 89 ; 89 ;  >
+    au < frozen ; exists ; 2013 ; 2013 ; International Affairs Volume 89 ; 89 ;  >
     au < testing ; exists ; 2014 ; 2014 ; International Affairs Volume 90 ; 90 ;  >
     au < crawling ; exists ; 2015 ; 2015 ; International Affairs Volume 91 ; 91 ;  >
     au < testing ; exists ; 2016 ; 2016 ; International Affairs Volume 92 ; 92 ;  >
@@ -8066,7 +8066,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; International Studies Quarterly Volume 57 ; 57 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; International Studies Quarterly Volume 58 ; 58 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Studies Quarterly Volume 59 ; 59 ;  >
-    au < crawling ; exists ; 2016 ; 2016 ; International Studies Quarterly Volume 60 ; 60 ;  >
+    au < frozen ; exists ; 2016 ; 2016 ; International Studies Quarterly Volume 60 ; 60 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; International Studies Quarterly Volume 61 ; 61 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; International Studies Quarterly Volume 62 ; 62 ;  >
 
@@ -8480,7 +8480,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Journal of Analytical Toxicology Volume 37 ; 37 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Analytical Toxicology Volume 38 ; 38 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Analytical Toxicology Volume 39 ; 39 ;  >
-    au < crawling ; exists ; 2016 ; 2016 ; Journal of Analytical Toxicology Volume 40 ; 40 ;  >
+    au < frozen ; exists ; 2016 ; 2016 ; Journal of Analytical Toxicology Volume 40 ; 40 ;  >
     au < testing ; exists ; 2017 ; 2017 ; Journal of Analytical Toxicology Volume 41 ; 41 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; Journal of Analytical Toxicology Volume 42 ; 42 ;  >
 
@@ -8558,7 +8558,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Antitrust Enforcement Volume 2 ; 2 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Antitrust Enforcement Volume 3 ; 3 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; Journal of Antitrust Enforcement Volume 4 ; 4 ;  >
-    au < crawling ; exists ; 2017 ; 2017 ; Journal of Antitrust Enforcement Volume 5 ; 5 ;  >
+    au < frozen ; exists ; 2017 ; 2017 ; Journal of Antitrust Enforcement Volume 5 ; 5 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; Journal of Antitrust Enforcement Volume 6 ; 6 ;  >
 
   }
@@ -10295,7 +10295,7 @@
     au < exists ; exists ; 2006 ; 2006 ; The Journal of Nutrition Volume 136 ; 136 ;  >
     au < exists ; exists ; 2007 ; 2007 ; The Journal of Nutrition Volume 137 ; 137 ;  >
     au < testing ; exists ; 2008 ; 2008 ; The Journal of Nutrition Volume 138 ; 138 ;  >
-    au < crawling ; exists ; 2009 ; 2009 ; The Journal of Nutrition Volume 139 ; 139 ;  >
+    au < frozen ; exists ; 2009 ; 2009 ; The Journal of Nutrition Volume 139 ; 139 ;  >
     au < testing ; exists ; 2010 ; 2010 ; The Journal of Nutrition Volume 140 ; 140 ;  >
     au < testing ; exists ; 2011 ; 2011 ; The Journal of Nutrition Volume 141 ; 141 ;  >
     au < testing ; exists ; 2012 ; 2012 ; The Journal of Nutrition Volume 142 ; 142 ;  >
