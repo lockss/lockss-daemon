@@ -5644,7 +5644,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; French History Volume 27 ; 27 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; French History Volume 28 ; 28 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; French History Volume 29 ; 29 ;  >
-    au < ready ; exists ; 2016 ; 2016 ; French History Volume 30 ; 30 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; French History Volume 30 ; 30 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; French History Volume 31 ; 31 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; French History Volume 32 ; 32 ;  >
 
@@ -7467,7 +7467,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; International Journal for Quality in Health Care Volume 25 ; 25 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; International Journal for Quality in Health Care Volume 26 ; 26 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Journal for Quality in Health Care Volume 27 ; 27 ;  >
-    au < ready ; exists ; 2016 ; 2016 ; International Journal for Quality in Health Care Volume 28 ; 28 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; International Journal for Quality in Health Care Volume 28 ; 28 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; International Journal for Quality in Health Care Volume 29 ; 29 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; International Journal for Quality in Health Care Volume 30 ; 30 ;  >
 
@@ -7796,7 +7796,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; International Journal of Public Opinion Research Volume 26 ; 26 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Journal of Public Opinion Research Volume 27 ; 27 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; International Journal of Public Opinion Research Volume 28 ; 28 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; International Journal of Public Opinion Research Volume 29 ; 29 ;  >
+    au < crawling ; exists ; 2017 ; 2017 ; International Journal of Public Opinion Research Volume 29 ; 29 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; International Journal of Public Opinion Research Volume 30 ; 30 ;  >
 
   }
@@ -8611,7 +8611,7 @@
     au < manifest ; exists ; 2014 ; 2014 ; Journal of Burn Care & Research Volume 35 ; 35 ;  >
     au < manifest ; exists ; 2015 ; 2015 ; Journal of Burn Care & Research Volume 36 ; 36 ;  >
     au < manifest ; exists ; 2016 ; 2016 ; Journal of Burn Care & Research Volume 37 ; 37 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; Journal of Burn Care & Research Volume 38 ; 38 ;  >
+    au < crawling ; exists ; 2017 ; 2017 ; Journal of Burn Care & Research Volume 38 ; 38 ;  >
     au < testing ; exists ; 2018 ; 2018 ; Journal of Burn Care & Research Volume 39 ; 39 ;  >
 
   }
@@ -8869,7 +8869,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Conflict and Security Law Volume 19 ; 19 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Conflict and Security Law Volume 20 ; 20 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; Journal of Conflict and Security Law Volume 21 ; 21 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; Journal of Conflict and Security Law Volume 22 ; 22 ;  >
+    au < crawling ; exists ; 2017 ; 2017 ; Journal of Conflict and Security Law Volume 22 ; 22 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; Journal of Conflict and Security Law Volume 23 ; 23 ;  >
 
   }
@@ -8893,7 +8893,7 @@
     au < crawling ; exists ; 2012 ; 2012 ; Journal of Consumer Research Volume 38-39 ; 38-39 ;  >
     au < testing ; exists ; 2013 ; 2013 ; Journal of Consumer Research Volume 39-40 ; 39-40 ;  >
     au < crawling ; exists ; 2014 ; 2014 ; Journal of Consumer Research Volume 40-41 ; 40-41 ;  >
-    au < ready ; exists ; 2015 ; 2015 ; Journal of Consumer Research Volume 41-42 ; 41-42 ;  >
+    au < crawling ; exists ; 2015 ; 2015 ; Journal of Consumer Research Volume 41-42 ; 41-42 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; Journal of Consumer Research Volume 42-43 ; 42-43 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; Journal of Consumer Research Volume 43-44 ; 43-44 ;  >
     au < testing ; exists ; 2018 ; 2018 ; Journal of Consumer Research Volume 44-45 ; 44-45 ;  >
@@ -9897,7 +9897,7 @@
     au < testing ; exists ; 2014 ; 2014 ; Journal of Law and the Biosciences Volume 1 ; 1 ;  >
     au < testing ; exists ; 2015 ; 2015 ; Journal of Law and the Biosciences Volume 2 ; 2 ;  >
     au < testing ; exists ; 2016 ; 2016 ; Journal of Law and the Biosciences Volume 3 ; 3 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; Journal of Law and the Biosciences Volume 4 ; 4 ;  >
+    au < crawling ; exists ; 2017 ; 2017 ; Journal of Law and the Biosciences Volume 4 ; 4 ;  >
     au < testing ; exists ; 2018 ; 2018 ; Journal of Law and the Biosciences Volume 5 ; 5 ;  >
 
   }
@@ -11433,7 +11433,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Journal of the International Commission on Radiation Units and Measurements Volume 7 ; 7 ;  >
     au < testing ; exists ; 2008 ; 2008 ; Journal of the International Commission on Radiation Units and Measurements Volume 8 ; 8 ;  >
     au < testing ; exists ; 2009 ; 2009 ; Journal of the International Commission on Radiation Units and Measurements Volume 9 ; 9 ;  >
-    au < ready ; exists ; 2010 ; 2010 ; Journal of the International Commission on Radiation Units and Measurements Volume 10 ; 10 ;  >
+    au < crawling ; exists ; 2010 ; 2010 ; Journal of the International Commission on Radiation Units and Measurements Volume 10 ; 10 ;  >
     au < testing ; exists ; 2011 ; 2011 ; Journal of the International Commission on Radiation Units and Measurements Volume 11 ; 11 ;  >
     au < testing ; exists ; 2012 ; 2012 ; Journal of the International Commission on Radiation Units and Measurements Volume 12 ; 12 ;  >
     au < testing ; exists ; 2013 ; 2013 ; Journal of the International Commission on Radiation Units and Measurements Volume 13 ; 13 ;  >
@@ -11790,7 +11790,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; MELUS Volume 38 ; 38 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; MELUS Volume 39 ; 39 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; MELUS Volume 40 ; 40 ;  >
-    au < ready ; exists ; 2016 ; 2016 ; MELUS Volume 41 ; 41 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; MELUS Volume 41 ; 41 ;  >
     au < testing ; exists ; 2017 ; 2017 ; MELUS Volume 42 ; 42 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; MELUS Volume 43 ; 43 ;  >
 
