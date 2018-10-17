@@ -8883,16 +8883,16 @@
   {
 
       title <
-        name = Indian Anaesthetists’ Forum ;
+        name = Indian Anaesthetists' Forum ;
         eissn = 0973-0311
       >
 
       param[journal_issn] = 0973-0311
       param[base_url] = http://www.theiaforum.org/
 
-      au < exists ; exists ; 2016 ; Indian Anaesthetists’ Forum Volume 17 ; 2016 ; 17 ; >
-      au < exists ; exists ; 2017 ; Indian Anaesthetists’ Forum Volume 18 ; 2017 ; 18 ; >
-      au < expected ; exists ; 2018 ; Indian Anaesthetists’ Forum Volume 19 ; 2018 ; 19 ; >
+      au < exists ; exists ; 2016 ; Indian Anaesthetists' Forum Volume 17 ; 2016 ; 17 ; >
+      au < exists ; exists ; 2017 ; Indian Anaesthetists' Forum Volume 18 ; 2017 ; 18 ; >
+      au < expected ; exists ; 2018 ; Indian Anaesthetists' Forum Volume 19 ; 2018 ; 19 ; >
 
   }
 
@@ -9141,7 +9141,7 @@
   {
 
       title <
-        name = International Journal of Students’ Research ;
+        name = International Journal of Students' Research ;
         issn = 2321-6662 ;
         eissn = 2230-7095
       >
@@ -9149,14 +9149,14 @@
       param[journal_issn] = 2321-6662
       param[base_url] = http://www.ijsronline.net/
 
-      au < exists ; exists ; 2011 ; International Journal of Students’ Research Volume 1 ; 2011 ; 1 ; >
-      au < exists ; exists ; 2012 ; International Journal of Students’ Research Volume 2 ; 2012 ; 2 ; >
-      au < exists ; exists ; 2013 ; International Journal of Students’ Research Volume 3 ; 2013 ; 3 ; >
-      au < exists ; exists ; 2014 ; International Journal of Students’ Research Volume 4 ; 2014 ; 4 ; >
-      au < exists ; exists ; 2015 ; International Journal of Students’ Research Volume 5 ; 2015 ; 5 ; >
-      au < exists ; exists ; 2016 ; International Journal of Students’ Research Volume 6 ; 2016 ; 6 ; >
-      au < exists ; exists ; 2017 ; International Journal of Students’ Research Volume 7 ; 2017 ; 7 ; >
-      au < expected ; exists ; 2018 ; International Journal of Students’ Research Volume 8 ; 2018 ; 8 ; >
+      au < exists ; exists ; 2011 ; Journal of Students' Research Volume 1 ; 2011 ; 1 ; >
+      au < exists ; exists ; 2012 ; Journal of Students' Research Volume 2 ; 2012 ; 2 ; >
+      au < exists ; exists ; 2013 ; International Journal of Students' Research Volume 3 ; 2013 ; 3 ; >
+      au < exists ; exists ; 2014 ; International Journal of Students' Research Volume 4 ; 2014 ; 4 ; >
+      au < exists ; exists ; 2015 ; International Journal of Students' Research Volume 5 ; 2015 ; 5 ; >
+      au < exists ; exists ; 2016 ; International Journal of Students' Research Volume 6 ; 2016 ; 6 ; >
+      au < exists ; exists ; 2017 ; International Journal of Students' Research Volume 7 ; 2017 ; 7 ; >
+      au < expected ; exists ; 2018 ; International Journal of Students' Research Volume 8 ; 2018 ; 8 ; >
 
   }
 
