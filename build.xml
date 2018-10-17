@@ -250,31 +250,31 @@ Args:
   <property name="commons.lang.jar"
 				  value="${lib}/commons-lang-2.6.jar"/>
   <property name="commons.lang3.jar"
-				  value="${lib}/commons-lang3-3.4.jar"/>
+				  value="${lib}/commons-lang3-3.8.1.jar"/>
   <property name="commons.cli.jar"
-  				  value="${lib}/commons-cli-1.3.1.jar"/>
+  				  value="${lib}/commons-cli-1.4.jar"/>
   <property name="commons.collections.jar"
   				  value="${lib}/commons-collections-3.2.2.jar"/>
   <property name="commons.collections4.jar"
-	 			  value="${lib}/commons-collections4-4.1.jar"/>
+	 			  value="${lib}/commons-collections4-4.2.jar"/>
   <property name="commons.configuration.jar"
                   value="${lib}/commons-configuration-1.10.jar"/>
   <property name="commons.logging.jar"
   				  value="${lib}/commons-logging-1.2.jar"/>
   <property name="commons.codec.jar"
-  				  value="${lib}/commons-codec-1.10.jar"/>
+  				  value="${lib}/commons-codec-1.11.jar"/>
   <property name="commons.compress.jar"
-  				  value="${lib}/commons-compress-1.10.jar"/>
+  				  value="${lib}/commons-compress-1.18.jar"/>
   <property name="commons.httpclient.jar"
   			value="${lib}/commons-httpclient-3.0-rc4.jar"/>
   <property name="commons.io.jar"
-	        value="${lib}/commons-io-2.4.jar" />
+	        value="${lib}/commons-io-2.6.jar" />
   <property name="commons.jxpath.jar"
 				  value="${lib}/commons-jxpath-1.3.jar"/>
   <property name="commons.beanutils.jar"
-				  value="${lib}/commons-beanutils-1.9.2.jar"/>
+				  value="${lib}/commons-beanutils-1.9.3.jar"/>
     <property name="commons.validator.jar"
-              value="${lib}/commons-validator-1.5.0.jar"/>
+              value="${lib}/commons-validator-1.6.jar"/>
   <!-- gettext jars, for i18n -->
   <property name="gettext.tasks.jar"
             value="${lib}/gettext-ant-tasks-0.9.7.jar"/>
@@ -334,16 +334,16 @@ Args:
   <property name="httpclient.jar" value="${lib}/httpclient-4.3.1.jar"/>
 
   <!-- PDFBox -->
-  <property name="pdfbox.version" value="1.8.11" />
+  <property name="pdfbox.version" value="1.8.16" />
   <property name="pdfbox.jar" value="${lib}/pdfbox-${pdfbox.version}.jar" />
   <!-- Next 8 JARs needed by PDFBox: -->
   <property name="fontbox.jar" value="${lib}/fontbox-${pdfbox.version}.jar" />
   <property name="jempbox.jar" value="${lib}/jempbox-${pdfbox.version}.jar" />
   <property name="xmpbox.jar" value="${lib}/xmpbox-${pdfbox.version}.jar" />
-  <property name="bouncycastle.version" value="jdk15on-154" />
+  <property name="bouncycastle.version" value="jdk15on-160" />
   <property name="bouncycastle-provider.jar" value="${lib}/bcprov-${bouncycastle.version}.jar" />
   <property name="bouncycastle-mail.jar" value="${lib}/bcmail-${bouncycastle.version}.jar" />
-  <property name="icu4j.version" value="56_1" />
+  <property name="icu4j.version" value="63_1" />
   <property name="icu4j.jar" value="${lib}/icu4j-${icu4j.version}.jar" />
   <property name="icu4j-charset.jar" value="${lib}/icu4j-charset-${icu4j.version}.jar" />
   <property name="icu4j-localespi.jar" value="${lib}/icu4j-localespi-${icu4j.version}.jar" />
@@ -365,11 +365,11 @@ Args:
 
   <property name="ext.javadoc"
                       value="http://documents.lockss.org/gamma-libs/" />
-  <!-- Needed by ajax crawler -->
-  <property name="jackson-core.jar" value="${lib}/jackson-core-2.3.2.jar" />
-  <property name="jackson-databind.jar" value="${lib}/jackson-databind-2.3.2.jar" />
-  <property name="jackson-annotations.jar" value="${lib}/jackson-annotations-2.3.0.jar" />
-  <property name="crawljax-lockss-bridge.jar" value="${lib}/crawljax-lockss-bridge.jar" />
+  <!-- Needed by entitlement registry -->
+  <property name="jackson.version" value="2.9.7" />
+  <property name="jackson-core.jar" value="${lib}/jackson-core-${jackson.version}.jar" />
+  <property name="jackson-databind.jar" value="${lib}/jackson-databind-${jackson.version}.jar" />
+  <property name="jackson-annotations.jar" value="${lib}/jackson-annotations-${jackson.version}.jar" />
 
   <property name="antlr.runtime.jar" value="${lib}/antlr-runtime-4.5.3.jar" />
   <property name="antlr.tools.jar" value="${lib}/antlr-4.5.3-complete.jar" />
@@ -493,7 +493,6 @@ Args:
     <pathelement path="${commons.httpclient.jar}" />
     <pathelement path="${commons.io.jar}" />
     <pathelement path="${commons.jxpath.jar}" />
-    <pathelement path="${commons.compress.jar}" />
     <pathelement path="${commons.validator.jar}" />
     <pathelement path="${truezip-kernel.jar}" />
     <pathelement path="${truezip-file.jar}" />
@@ -574,11 +573,10 @@ Args:
     <pathelement path="${gentlyWEB-utils.jar}" />
 	<!-- Needed for DB migration-->
 	<pathelement path="${getopt.jar}" />
-    <!-- Needed by AJAX crawler-->
-      <pathelement path="${jackson-annotations.jar}" />
+    <!-- Needed by entitlement registry -->
+    <pathelement path="${jackson-annotations.jar}" />
     <pathelement path="${jackson-core.jar}" />
     <pathelement path="${jackson-databind.jar}" />
-    <pathelement path="${crawljax-lockss-bridge.jar}" />
     <!-- Needed for TDB tools: -->
     <pathelement path="${antlr.runtime.jar}" />
     <!-- Needed by XOAI -->
@@ -1332,16 +1330,6 @@ The target you have selected requires compiling under JDK 1.7.
        <include name="**/*.java"/>
      </javacelem>
     </dojavac>
-  </target>
-  <!-- ==================================================================== -->
-  <target name="install-ajax"
-          depends="require.java.home,require.maven.home"
-          description="Compile and copy the LOCKSS ajax bridge jar">
-    <maven basedir="${ajax}"
-           goal="package"
-           resultproperty="maven.build.result"/>
-    <copy file="${ajax.target}/crawljax-lockss-bridge-1.0.jar"
-          tofile="${lib}/crawljax-lockss-bridge.jar"/>
   </target>
 
   <!-- ==================================================================== -->
