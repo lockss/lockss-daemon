@@ -118,11 +118,12 @@ public class IwapHtmlHashFilterFactory implements FilterFactory {
               HtmlNodeFilters.tagWithAttributeRegex("div", "class", "graphic-wrap"),
               HtmlNodeFilters.tagWithAttributeRegex("div", "class", "toolbar-wrap"),
               HtmlNodeFilters.tagWithAttributeRegex("div", "class", "author-info-wrap"),
+              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pub-history-wrap"),
               // top of article - links to correction or original article
               HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-ArticleLinks"),
               HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-Toolbox"),
               HtmlNodeFilters.tagWithAttributeRegex("div", "class", "copyright"),
-              // <div class="pub-history-wrap
+              HtmlNodeFilters.tagWithAttributeRegex("i", "class", "icon-availability"),
           })),
           xform
       )
@@ -134,7 +135,7 @@ public class IwapHtmlHashFilterFactory implements FilterFactory {
     Reader noTagFilter = new HtmlTagFilter(new StringFilter(reader, "<", " <"), new TagPair("<", ">"));
     // Remove white space
     Reader whiteSpaceFilter = new WhiteSpaceFilter(noTagFilter);
-    InputStream ret =  new ReaderInputStream(reader);
+    InputStream ret =  new ReaderInputStream(whiteSpaceFilter);
     return ret;
     // Instrumentation
   }
