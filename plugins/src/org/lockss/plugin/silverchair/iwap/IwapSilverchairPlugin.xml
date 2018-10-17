@@ -10,7 +10,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -214,6 +214,12 @@
         <string>org.lockss.plugin.silverchair.ScHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <string>au_url_mime_validation_map</string>
+    <list>
+      <string>pdf/.+\.pdf, application/pdf</string>
+    </list>
   </entry>
   <entry>
     <string>plugin_cache_result_list</string>
