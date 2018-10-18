@@ -7,10 +7,10 @@
 
   plugin = org.lockss.plugin.royalsocietyofchemistry.RSC2014Plugin
   implicit < status ; year ; name ; param[volume_name] ; param[year] >
-  param[base_url] = http://pubs.rsc.org/
-  param[resolver_url] = http://xlink.rsc.org/
-  param[graphics_url] = http://sod-a.rsc-cdn.org/
-  param[base_url2] = http://www.rsc.org/
+  param[base_url] = https://pubs.rsc.org/
+  param[resolver_url] = https://xlink.rsc.org/
+  param[graphics_url] = https://sod-a.rsc-cdn.org/
+  param[base_url2] = https://www.rsc.org/
 
   comment[Ready] = PD-64,PD-1021 - resolved
 
