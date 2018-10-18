@@ -2637,7 +2637,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; British Medical Bulletin Volume 105-108 ; 105-108 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; British Medical Bulletin Volume 109-112 ; 109-112 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; British Medical Bulletin Volume 113-116 ; 113-116 ;  >
-    au < crawling ; exists ; 2016 ; 2016 ; British Medical Bulletin Volume 117-120 ; 117-120 ;  >
+    au < frozen ; exists ; 2016 ; 2016 ; British Medical Bulletin Volume 117-120 ; 117-120 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; British Medical Bulletin Volume 121-124 ; 121-124 ;  >
     au < crawling ; exists ; 2018 ; 2018 ; British Medical Bulletin Volume 125-127 ; 125-127 ;  >
 
@@ -2858,8 +2858,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Capital Markets Law Journal Volume 8 ; 8 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Capital Markets Law Journal Volume 9 ; 9 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Capital Markets Law Journal Volume 10 ; 10 ;  >
-    au < crawling ; exists ; 2016 ; 2016 ; Capital Markets Law Journal Volume 11 ; 11 ;  >
-    au < crawling ; exists ; 2017 ; 2017 ; Capital Markets Law Journal Volume 12 ; 12 ;  >
+    au < frozen ; exists ; 2016 ; 2016 ; Capital Markets Law Journal Volume 11 ; 11 ;  >
+    au < frozen ; exists ; 2017 ; 2017 ; Capital Markets Law Journal Volume 12 ; 12 ;  >
     au < testing ; exists ; 2018 ; 2018 ; Capital Markets Law Journal Volume 13 ; 13 ;  >
 
   }
@@ -4408,7 +4408,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Epidemiologic Reviews Volume 35 ; 35 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Epidemiologic Reviews Volume 36 ; 36 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Epidemiologic Reviews Volume 37 ; 37 ;  >
-    au < crawling ; exists ; 2016 ; 2016 ; Epidemiologic Reviews Volume 38 ; 38 ;  >
+    au < frozen ; exists ; 2016 ; 2016 ; Epidemiologic Reviews Volume 38 ; 38 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; Epidemiologic Reviews Volume 39 ; 39 ;  >
 
   }
@@ -4574,7 +4574,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; European Heart Journal - Cardiovascular Imaging Volume 15 ; 15 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; European Heart Journal - Cardiovascular Imaging Volume 16 ; 16 ;  >
     au < frozen ; exists ; 2016 ; 2016 ; European Heart Journal - Cardiovascular Imaging Volume 17 ; 17 ;  >
-    au < crawling ; exists ; 2017 ; 2017 ; European Heart Journal - Cardiovascular Imaging Volume 18 ; 18 ;  >
+    au < frozen ; exists ; 2017 ; 2017 ; European Heart Journal - Cardiovascular Imaging Volume 18 ; 18 ;  >
 
   }
 
@@ -4991,7 +4991,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Evolution, Medicine, and Public Health Volume 2014 ; 2014 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Evolution, Medicine, and Public Health Volume 2015 ; 2015 ;  >
     au < frozen ; exists ; 2016 ; 2016 ; Evolution, Medicine, and Public Health Volume 2016 ; 2016 ;  >
-    au < crawling ; exists ; 2017 ; 2017 ; Evolution, Medicine, and Public Health Volume 2017 ; 2017 ;  >
+    au < frozen ; exists ; 2017 ; 2017 ; Evolution, Medicine, and Public Health Volume 2017 ; 2017 ;  >
 
   }
 
@@ -6271,7 +6271,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Health Promotion International Volume 28 ; 28 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Health Promotion International Volume 29 ; 29 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Health Promotion International Volume 30 ; 30 ;  >
-    au < crawling ; exists ; 2016 ; 2016 ; Health Promotion International Volume 31 ; 31 ;  >
+    au < frozen ; exists ; 2016 ; 2016 ; Health Promotion International Volume 31 ; 31 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; Health Promotion International Volume 32 ; 32 ;  >
     au < testing ; exists ; 2018 ; 2018 ; Health Promotion International Volume 33 ; 33 ;  >
 
@@ -6698,7 +6698,7 @@
     au < crawling ; exists ; 2012 ; 2012 ; ICSID Review: Foreign Investment Law Journal Volume 27 ; 27 ;  >
     au < crawling ; exists ; 2013 ; 2013 ; ICSID Review: Foreign Investment Law Journal Volume 28 ; 28 ;  >
     au < crawling ; exists ; 2014 ; 2014 ; ICSID Review: Foreign Investment Law Journal Volume 29 ; 29 ;  >
-    au < crawling ; exists ; 2015 ; 2015 ; ICSID Review: Foreign Investment Law Journal Volume 30 ; 30 ;  >
+    au < frozen ; exists ; 2015 ; 2015 ; ICSID Review: Foreign Investment Law Journal Volume 30 ; 30 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; ICSID Review: Foreign Investment Law Journal Volume 31 ; 31 ;  >
     au < testing ; exists ; 2017 ; 2017 ; ICSID Review: Foreign Investment Law Journal Volume 32 ; 32 ;  >
     au < testing ; exists ; 2018 ; 2018 ; ICSID Review: Foreign Investment Law Journal Volume 33 ; 33 ;  >
@@ -7368,7 +7368,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; International Health Volume 6 ; 6 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Health Volume 7 ; 7 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; International Health Volume 8 ; 8 ;  >
-    au < crawling ; exists ; 2017 ; 2017 ; International Health Volume 9 ; 9 ;  >
+    au < frozen ; exists ; 2017 ; 2017 ; International Health Volume 9 ; 9 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; International Health Volume 10 ; 10 ;  >
 
   }
@@ -7690,7 +7690,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; International Journal of Lexicography Volume 27 ; 27 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Journal of Lexicography Volume 28 ; 28 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; International Journal of Lexicography Volume 29 ; 29 ;  >
-    au < crawling ; exists ; 2017 ; 2017 ; International Journal of Lexicography Volume 30 ; 30 ;  >
+    au < frozen ; exists ; 2017 ; 2017 ; International Journal of Lexicography Volume 30 ; 30 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; International Journal of Lexicography Volume 31 ; 31 ;  >
 
   }
@@ -7717,7 +7717,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; International Journal of Low-Carbon Technologies Volume 9 ; 9 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Journal of Low-Carbon Technologies Volume 10 ; 10 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; International Journal of Low-Carbon Technologies Volume 11 ; 11 ;  >
-    au < crawling ; exists ; 2017 ; 2017 ; International Journal of Low-Carbon Technologies Volume 12 ; 12 ;  >
+    au < frozen ; exists ; 2017 ; 2017 ; International Journal of Low-Carbon Technologies Volume 12 ; 12 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; International Journal of Low-Carbon Technologies Volume 13 ; 13 ;  >
 
   }
@@ -8538,7 +8538,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Journal of Antimicrobial Chemotherapy Volume 68 ; 68 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Antimicrobial Chemotherapy Volume 69 ; 69 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Antimicrobial Chemotherapy Volume 70 ; 70 ;  >
-    au < crawling ; exists ; 2016 ; 2016 ; Journal of Antimicrobial Chemotherapy Volume 71 ; 71 ;  >
+    au < frozen ; exists ; 2016 ; 2016 ; Journal of Antimicrobial Chemotherapy Volume 71 ; 71 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; Journal of Antimicrobial Chemotherapy Volume 72 ; 72 ;  >
     au < manifest ; exists ; 2018 ; 2018 ; Journal of Antimicrobial Chemotherapy Volume 73 ; 73 ;  >
 
