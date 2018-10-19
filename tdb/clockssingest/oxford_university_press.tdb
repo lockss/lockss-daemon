@@ -6757,7 +6757,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; ILAR Journal Volume 54 ; 54 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; ILAR Journal Volume 54-55 ; 54-55 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; ILAR Journal Volume 56 ; 56 ;  >
-    au < ready ; exists ; 2016 ; 2016 ; ILAR Journal Volume 57 ; 57 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; ILAR Journal Volume 57 ; 57 ;  >
     au < testing ; exists ; 2017 ; 2017 ; ILAR Journal Volume 58 ; 58 ;  >
     au < expected ; exists ; 2018 ; 2018 ; ILAR Journal Volume 59 ; 59 ;  >
 
@@ -7028,7 +7028,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; ITNOW Volume 55 ; 55 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; ITNOW Volume 56 ; 56 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; ITNOW Volume 57 ; 57 ;  >
-    au < ready ; exists ; 2016 ; 2016 ; ITNOW Volume 58 ; 58 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; ITNOW Volume 58 ; 58 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; ITNOW Volume 59 ; 59 ;  >
     au < testing ; exists ; 2018 ; 2018 ; ITNOW Volume 60 ; 60 ;  >
 
@@ -7298,7 +7298,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Interactive CardioVascular and Thoracic Surgery Volume 16-17 ; 16-17 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Interactive CardioVascular and Thoracic Surgery Volume 18-19 ; 18-19 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Interactive CardioVascular and Thoracic Surgery Volume 20-21 ; 20-21 ;  >
-    au < ready ; exists ; 2016 ; 2016 ; Interactive CardioVascular and Thoracic Surgery Volume 22-23 ; 22-23 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; Interactive CardioVascular and Thoracic Surgery Volume 22-23 ; 22-23 ;  >
     au < frozen ; exists ; 2017 ; 2017 ; Interactive CardioVascular and Thoracic Surgery Volume 24 ; 24 ;  >
     au < testing ; exists ; 2018 ; 2018 ; Interactive CardioVascular and Thoracic Surgery Volume 25 ; 25 ;  >
 
@@ -7866,7 +7866,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; International Journal of Transitional Justice Volume 8 ; 8 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Journal of Transitional Justice Volume 9 ; 9 ;  >
     au < testing ; exists ; 2016 ; 2016 ; International Journal of Transitional Justice Volume 10 ; 10 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; International Journal of Transitional Justice Volume 11 ; 11 ;  >
+    au < crawling ; exists ; 2017 ; 2017 ; International Journal of Transitional Justice Volume 11 ; 11 ;  >
     au < testing ; exists ; 2018 ; 2018 ; International Journal of Transitional Justice Volume 12 ; 12 ;  >
 
   }
@@ -8306,7 +8306,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of African Economies Volume 23 ; 23 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of African Economies Volume 24 ; 24 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; Journal of African Economies Volume 25 ; 25 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; Journal of African Economies Volume 26 ; 26 ;  >
+    au < crawling ; exists ; 2017 ; 2017 ; Journal of African Economies Volume 26 ; 26 ;  >
     au < testing ; exists ; 2018 ; 2018 ; Journal of African Economies Volume 27 ; 27 ;  >
 
   }
@@ -8755,7 +8755,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Church and State Volume 56 ; 56 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Church and State Volume 57 ; 57 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; Journal of Church and State Volume 58 ; 58 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; Journal of Church and State Volume 59 ; 59 ;  >
+    au < crawling ; exists ; 2017 ; 2017 ; Journal of Church and State Volume 59 ; 59 ;  >
     au < testing ; exists ; 2018 ; 2018 ; Journal of Church and State Volume 60 ; 60 ;  >
 
   }
@@ -8771,7 +8771,7 @@
 
     param[journal_id] = joc
 
-    au < ready ; exists ; 2018 ; 2018 ; Journal of Communication Volume 1 ; 1 ;  >
+    au < crawling ; exists ; 2018 ; 2018 ; Journal of Communication Volume 1 ; 1 ;  >
 
   }
 
@@ -9880,7 +9880,7 @@
 
     au < testing ; exists ; 2016 ; 2016 ; Journal of Language Evolution Volume 1 ; 1 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; Journal of Language Evolution Volume 2 ; 2 ;  >
-    au < ready ; exists ; 2018 ; 2018 ; Journal of Language Evolution Volume 3 ; 3 ;  >
+    au < crawling ; exists ; 2018 ; 2018 ; Journal of Language Evolution Volume 3 ; 3 ;  >
 
   }
 
@@ -10070,7 +10070,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Molecular Cell Biology Volume 6 ; 6 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Molecular Cell Biology Volume 7 ; 7 ;  >
     au < testing ; exists ; 2016 ; 2016 ; Journal of Molecular Cell Biology Volume 8 ; 8 ;  >
-    au < ready ; exists ; 2017 ; 2017 ; Journal of Molecular Cell Biology Volume 9 ; 9 ;  >
+    au < crawling ; exists ; 2017 ; 2017 ; Journal of Molecular Cell Biology Volume 9 ; 9 ;  >
     au < testing ; exists ; 2018 ; 2018 ; Journal of Molecular Cell Biology Volume 10 ; 10 ;  >
 
   }
