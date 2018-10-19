@@ -5783,8 +5783,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; French Studies Bulletin Volume 34 ; 34 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; French Studies Bulletin Volume 35 ; 35 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; French Studies Bulletin Volume 36 ; 36 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; French Studies Bulletin Volume 37 ; 37 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; French Studies Bulletin Volume 38 ; 38 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; French Studies Bulletin Volume 37 ; 37 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; French Studies Bulletin Volume 38 ; 38 ;  >
     au < testing ; exists ; 2018 ; 2018 ; French Studies Bulletin Volume 39 ; 39 ;  >
 
   }
@@ -6009,12 +6009,12 @@
     param[journal_id] = gigascience
 
     #this title was ONLY in the publisher listing
-    au < testing ; exists ; 2012 ; 2012 ; GigaScience Volume 1 [OUP] ; 1 ;  >
+    au < ready ; exists ; 2012 ; 2012 ; GigaScience Volume 1 [OUP] ; 1 ;  >
     au < testing ; exists ; 2013 ; 2013 ; GigaScience Volume 2 [OUP] ; 2 ;  >
     au < crawling ; exists ; 2014 ; 2014 ; GigaScience Volume 3 [OUP] ; 3 ;  >
     au < crawling ; exists ; 2015 ; 2015 ; GigaScience Volume 4 [OUP] ; 4 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; GigaScience Volume 5 [OUP] ; 5 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; GigaScience Volume 6 [OUP] ; 6 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; GigaScience Volume 6 [OUP] ; 6 ;  >
     au < testing ; exists ; 2018 ; 2018 ; GigaScience Volume 7 [OUP] ; 7 ;  >
 
   }
@@ -7498,7 +7498,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; International Journal of Constitutional Law Volume 12 ; 12 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Journal of Constitutional Law Volume 13 ; 13 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; International Journal of Constitutional Law Volume 14 ; 14 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; International Journal of Constitutional Law Volume 15 ; 15 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; International Journal of Constitutional Law Volume 15 ; 15 ;  >
     au < testing ; exists ; 2018 ; 2018 ; International Journal of Constitutional Law Volume 16 ; 16 ;  >
 
   }
@@ -8105,8 +8105,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; International Studies Review Volume 15 ; 15 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; International Studies Review Volume 16 ; 16 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Studies Review Volume 17 ; 17 ;  >
-    au < testing ; exists ; 2016 ; 2016 ; International Studies Review Volume 18 ; 18 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; International Studies Review Volume 19 ; 19 ;  >
+    au < ready ; exists ; 2016 ; 2016 ; International Studies Review Volume 18 ; 18 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; International Studies Review Volume 19 ; 19 ;  >
     au < testing ; exists ; 2018 ; 2018 ; International Studies Review Volume 20 ; 20 ;  >
 
   }
@@ -8612,7 +8612,7 @@
     au < manifest ; exists ; 2015 ; 2015 ; Journal of Burn Care & Research Volume 36 ; 36 ;  >
     au < manifest ; exists ; 2016 ; 2016 ; Journal of Burn Care & Research Volume 37 ; 37 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; Journal of Burn Care & Research Volume 38 ; 38 ;  >
-    au < testing ; exists ; 2018 ; 2018 ; Journal of Burn Care & Research Volume 39 ; 39 ;  >
+    au < ready ; exists ; 2018 ; 2018 ; Journal of Burn Care & Research Volume 39 ; 39 ;  >
 
   }
 
@@ -8938,7 +8938,7 @@
 
     au < testing ; exists ; 2007 ; 2007 ; Journal of Crohn's and Colitis Supplements Volume 1 ; 1 ;  >
     au < crawling ; exists ; 2008 ; 2008 ; Journal of Crohn's and Colitis Supplements Volume 2 ; 2 ;  >
-    au < testing ; exists ; 2009 ; 2009 ; Journal of Crohn's and Colitis Supplements Volume 3 ; 3 ;  >
+    au < ready ; exists ; 2009 ; 2009 ; Journal of Crohn's and Colitis Supplements Volume 3 ; 3 ;  >
     au < crawling ; exists ; 2010 ; 2010 ; Journal of Crohn's and Colitis Supplements Volume 4 ; 4 ;  >
 
   }
@@ -9008,7 +9008,7 @@
 
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Cybersecurity Volume 1 ; 1 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; Journal of Cybersecurity Volume 2 ; 2 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; Journal of Cybersecurity Volume 3 ; 3 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; Journal of Cybersecurity Volume 3 ; 3 ;  >
     au < expected ; exists ; 2018 ; 2018 ; Journal of Cybersecurity Volume 4 ; 4 ;  >
 
   }
@@ -9053,7 +9053,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Design History Volume 27 ; 27 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Design History Volume 28 ; 28 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; Journal of Design History Volume 29 ; 29 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; Journal of Design History Volume 30 ; 30 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; Journal of Design History Volume 30 ; 30 ;  >
     au < testing ; exists ; 2018 ; 2018 ; Journal of Design History Volume 31 ; 31 ;  >
 
   }
@@ -9119,7 +9119,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Journal of Economic Geography Volume 5 ; 5 ;  >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Journal of Economic Geography Volume 6 ; 6 ;  >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Journal of Economic Geography Volume 7 ; 7 ;  >
-    au < testing ; exists ; 2008 ; 2008 ; Journal of Economic Geography Volume 8 ; 8 ;  >
+    au < ready ; exists ; 2008 ; 2008 ; Journal of Economic Geography Volume 8 ; 8 ;  >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Journal of Economic Geography Volume 9 ; 9 ;  >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Journal of Economic Geography Volume 10 ; 10 ;  >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Journal of Economic Geography Volume 11 ; 11 ;  >
@@ -11202,7 +11202,7 @@
     au < crawling ; exists ; 2012 ; 2012 ; Journal of the American Medical Informatics Association Volume 19 ; 19 ;  >
     au < testing ; exists ; 2013 ; 2013 ; Journal of the American Medical Informatics Association Volume 20 ; 20 ;  >
     au < testing ; exists ; 2014 ; 2014 ; Journal of the American Medical Informatics Association Volume 21 ; 21 ;  >
-    au < testing ; exists ; 2015 ; 2015 ; Journal of the American Medical Informatics Association Volume 22 ; 22 ;  >
+    au < ready ; exists ; 2015 ; 2015 ; Journal of the American Medical Informatics Association Volume 22 ; 22 ;  >
     au < testing ; exists ; 2016 ; 2016 ; Journal of the American Medical Informatics Association Volume 23 ; 23 ;  >
     au < testing ; exists ; 2017 ; 2017 ; Journal of the American Medical Informatics Association Volume 24 ; 24 ;  >
     au < testing ; exists ; 2018 ; 2018 ; Journal of the American Medical Informatics Association Volume 25 ; 25 ;  >
@@ -11613,7 +11613,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Literary Imagination Volume 16 ; 16 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Literary Imagination Volume 17 ; 17 ;  >
     au < testing ; exists ; 2016 ; 2016 ; Literary Imagination Volume 18 ; 18 ;  >
-    au < testing ; exists ; 2017 ; 2017 ; Literary Imagination Volume 19 ; 19 ;  >
+    au < ready ; exists ; 2017 ; 2017 ; Literary Imagination Volume 19 ; 19 ;  >
     au < testing ; exists ; 2018 ; 2018 ; Literary Imagination Volume 20 ; 20 ;  >
 
   }
