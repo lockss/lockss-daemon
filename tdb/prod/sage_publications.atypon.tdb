@@ -11040,6 +11040,31 @@
   {
 
     title <
+      name = European View ;
+      issn = 1781-6858 ;
+      eissn = 1865-5831
+    >
+
+    #journal_id = euv
+
+    au < exists ; 2007 ; European View Volume 6 ; 6 ; euva >
+    au < exists ; 2008 ; European View Volume 7 ; 7 ; euva >
+    au < exists ; 2009 ; European View Volume 8 ; 8 ; euva >
+    au < exists ; 2010 ; European View Volume 9 ; 9 ; euva >
+    au < exists ; 2011 ; European View Volume 10 ; 10 ; euva >
+    au < exists ; 2012 ; European View Volume 11 ; 11 ; euva >
+    au < exists ; 2013 ; European View Volume 12 ; 12 ; euva >
+    au < exists ; 2014 ; European View Volume 13 ; 13 ; euva >
+    au < exists ; 2015 ; European View Volume 14 ; 14 ; euva >
+    au < exists ; 2016 ; European View Volume 15 ; 15 ; euva >
+    au < exists ; 2017 ; European View Volume 16 ; 16 ; euva >
+    au < exists ; 2018 ; European View Volume 17 ; 17 ; euva >
+
+  }
+
+  {
+
+    title <
       name = European Educational Research Journal ;
       eissn = 1474-9041 ;
       issnl = 1474-9041
@@ -12956,6 +12981,21 @@
         au < manifest ; 2018 ; Games and Culture Volume 13 ; 13 ; gaca >
 
       }
+
+    }
+
+    {
+
+      title <
+        name = Gender and the Genome ;
+        issn = 2470-2897 ;
+        eissn = 2470-2900
+      >
+
+      #journal_id = gng
+
+        au < exists ; 2017  ; Gender and the Genome Volume 1 ; 1 ; gnga >
+        au < exists ; 2018  ; Gender and the Genome Volume 2 ; 2 ; gnga >
 
     }
 
@@ -32395,6 +32435,33 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
   }
 
     {
+  
+      title <
+        name = Nuclear Receptor Signaling ;
+        eissn = 1550-7629
+      >
+  
+      #journal_id = nrs
+  
+        au < exists ; 2003 ; Nuclear Receptor Signaling Volume 1 ; 1 ; nrsa >
+        au < exists ; 2004 ; Nuclear Receptor Signaling Volume 2 ; 2 ; nrsa >
+        au < exists ; 2005 ; Nuclear Receptor Signaling Volume 3 ; 3 ; nrsa >
+        au < exists ; 2006 ; Nuclear Receptor Signaling Volume 4 ; 4 ; nrsa >
+        au < exists ; 2007 ; Nuclear Receptor Signaling Volume 5 ; 5 ; nrsa >
+        au < exists ; 2008 ; Nuclear Receptor Signaling Volume 6 ; 6 ; nrsa >
+        au < exists ; 2009 ; Nuclear Receptor Signaling Volume 7 ; 7 ; nrsa >
+        au < exists ; 2010 ; Nuclear Receptor Signaling Volume 8 ; 8 ; nrsa >
+        au < exists ; 2011 ; Nuclear Receptor Signaling Volume 9 ; 9 ; nrsa >
+        au < exists ; 2012 ; Nuclear Receptor Signaling Volume 10 ; 10 ; nrsa >
+        au < exists ; 2013 ; Nuclear Receptor Signaling Volume 11 ; 11 ; nrsa >
+        au < exists ; 2014 ; Nuclear Receptor Signaling Volume 12 ; 12 ; nrsa >
+        au < exists ; 2015 ; Nuclear Receptor Signaling Volume 13 ; 13 ; nrsa >
+        au < exists ; 2016 ; Nuclear Receptor Signaling Volume 14 ; 14 ; nrsa >
+        au < exists ; 2018 ; Nuclear Receptor Signaling Volume 15 ; 15 ; nrsa >
+  
+    }
+
+    {
 
       title <
         name = Nursing Ethics ;
@@ -35337,6 +35404,37 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2018 ; Progress in Physical Geography Volume 42 ; 42 ; ppga >
 
       }
+
+    }
+
+    {
+
+      title <
+        name = Progress in Rubber, Plastics and Recycling Technology ;
+        issn = 1477-7606 ;
+        eissn = 1478-2413
+      >
+
+        #journal_id = prpa
+
+        au < exists ; 2001 ; Progress in Rubber, Plastics and Recycling Technology Volume 17 ; 17 ; prpa >
+        au < exists ; 2002 ; Progress in Rubber, Plastics and Recycling Technology Volume 18 ; 18 ; prpa >
+        au < exists ; 2003 ; Progress in Rubber, Plastics and Recycling Technology Volume 19 ; 19 ; prpa >
+        au < exists ; 2004 ; Progress in Rubber, Plastics and Recycling Technology Volume 20 ; 20 ; prpa >
+        au < exists ; 2005 ; Progress in Rubber, Plastics and Recycling Technology Volume 21 ; 21 ; prpa >
+        au < exists ; 2006 ; Progress in Rubber, Plastics and Recycling Technology Volume 22 ; 22 ; prpa >
+        au < exists ; 2007 ; Progress in Rubber, Plastics and Recycling Technology Volume 23 ; 23 ; prpa >
+        au < exists ; 2008 ; Progress in Rubber, Plastics and Recycling Technology Volume 24 ; 24 ; prpa >
+        au < exists ; 2009 ; Progress in Rubber, Plastics and Recycling Technology Volume 25 ; 25 ; prpa >
+        au < exists ; 2010 ; Progress in Rubber, Plastics and Recycling Technology Volume 26 ; 26 ; prpa >
+        au < exists ; 2011 ; Progress in Rubber, Plastics and Recycling Technology Volume 27 ; 27 ; prpa >
+        au < exists ; 2012 ; Progress in Rubber, Plastics and Recycling Technology Volume 28 ; 28 ; prpa >
+        au < exists ; 2013 ; Progress in Rubber, Plastics and Recycling Technology Volume 29 ; 29 ; prpa >
+        au < exists ; 2014 ; Progress in Rubber, Plastics and Recycling Technology Volume 30 ; 30 ; prpa >
+        au < exists ; 2015 ; Progress in Rubber, Plastics and Recycling Technology Volume 31 ; 31 ; prpa >
+        au < exists ; 2016 ; Progress in Rubber, Plastics and Recycling Technology Volume 32 ; 32 ; prpa >
+        au < exists ; 2017 ; Progress in Rubber, Plastics and Recycling Technology Volume 33 ; 33 ; prpa >
+        au < exists ; 2018 ; Progress in Rubber, Plastics and Recycling Technology Volume 34 ; 34 ; prpa >
 
     }
 
@@ -43082,7 +43180,15 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
     >
 
       #journal_id = tmj
+      #content available from 1947 volume 33 to 1999 volume 85
 
+      au < exists ; 2000 ; Tumori Journal Volume 86 ; 86 ; tmja >
+      au < exists ; 2001 ; Tumori Journal Volume 87 ; 87 ; tmja >
+      au < exists ; 2002 ; Tumori Journal Volume 88 ; 88 ; tmja >
+      au < exists ; 2003 ; Tumori Journal Volume 89 ; 89 ; tmja >
+      au < exists ; 2004 ; Tumori Journal Volume 90 ; 90 ; tmja >
+      au < exists ; 2005 ; Tumori Journal Volume 91 ; 91 ; tmja >
+      au < exists ; 2006 ; Tumori Journal Volume 92 ; 92 ; tmja >
       au < manifest ; 2007 ; Tumori Journal Volume 93 ; 93 ; tmja >
       au < released ; 2008 ; Tumori Journal Volume 94 ; 94 ; tmja >
       au < released ; 2009 ; Tumori Journal Volume 95 ; 95 ; tmja >
@@ -43374,6 +43480,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       >
 
       #param[journal_id] = urj
+      #content available from 1965 volume 32 to 1994 volume 61
 
         au < manifest ; 2003 ; Urologia Journal Volume 70 ; 70 ; urja >
         au < manifest ; 2004 ; Urologia Journal Volume 71 ; 71 ; urja >

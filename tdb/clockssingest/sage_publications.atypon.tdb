@@ -9759,9 +9759,7 @@
 
     #param[base_url] = http://eep.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1986 ; East European Politics & Societies Volume 1 ; 1 ; eepa ; >
       au < manifest ; exists ; 1987 ; East European Politics & Societies Volume 2 ; 2 ; eepa ; >
@@ -9810,9 +9808,7 @@
 
     #param[base_url] = http://eid.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1980 ; Economic and Industrial Democracy Volume 1 ; 1 ; eida ; >
       au < manifest ; exists ; 1981 ; Economic and Industrial Democracy Volume 2 ; 2 ; eida ; >
@@ -11060,6 +11056,31 @@
       au < crawling ; exists ; 2018 ; Ethnography Volume 19 ; 19 ; etha ; >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = European View ;
+      issn = 1781-6858 ;
+      eissn = 1865-5831
+    >
+
+    #journal_id = euv
+
+    au < exists ; exists ; 2007 ; European View Volume 6 ; 6 ; euva ; >
+    au < exists ; exists ; 2008 ; European View Volume 7 ; 7 ; euva ; >
+    au < exists ; exists ; 2009 ; European View Volume 8 ; 8 ; euva ; >
+    au < exists ; exists ; 2010 ; European View Volume 9 ; 9 ; euva ; >
+    au < exists ; exists ; 2011 ; European View Volume 10 ; 10 ; euva ; >
+    au < exists ; exists ; 2012 ; European View Volume 11 ; 11 ; euva ; >
+    au < exists ; exists ; 2013 ; European View Volume 12 ; 12 ; euva ; >
+    au < exists ; exists ; 2014 ; European View Volume 13 ; 13 ; euva ; >
+    au < exists ; exists ; 2015 ; European View Volume 14 ; 14 ; euva ; >
+    au < exists ; exists ; 2016 ; European View Volume 15 ; 15 ; euva ; >
+    au < exists ; exists ; 2017 ; European View Volume 16 ; 16 ; euva ; >
+    au < exists ; exists ; 2018 ; European View Volume 17 ; 17 ; euva ; >
 
   }
 
@@ -12992,6 +13013,21 @@
   {
 
     title <
+      name = Gender and the Genome ;
+      issn = 2470-2897 ;
+      eissn = 2470-2900
+    >
+
+    #journal_id = gng
+
+      au < exists ; exists ; 2017  ; Gender and the Genome Volume 1 ; 1 ; gnga ; >
+      au < exists ; exists ; 2018  ; Gender and the Genome Volume 2 ; 2 ; gnga ; >
+
+  }
+
+  {
+
+    title <
       name = Gender & Society ;
       issn = 0891-2432 ;
       eissn = 1552-3977
@@ -12999,9 +13035,7 @@
 
     #param[base_url] = http://gas.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1987 ; Gender & Society Volume 1 ; 1 ; gasa ; >
       au < manifest ; exists ; 1988 ; Gender & Society Volume 2 ; 2 ; gasa ; >
@@ -32176,6 +32210,33 @@
   {
 
     title <
+      name = Nuclear Receptor Signaling ;
+      eissn = 1550-7629
+    >
+
+    #journal_id = nrs
+
+      au < exists ; exists ; 2003 ; Nuclear Receptor Signaling Volume 1 ; 1 ; nrsa ; >
+      au < exists ; exists ; 2004 ; Nuclear Receptor Signaling Volume 2 ; 2 ; nrsa ; >
+      au < exists ; exists ; 2005 ; Nuclear Receptor Signaling Volume 3 ; 3 ; nrsa ; >
+      au < exists ; exists ; 2006 ; Nuclear Receptor Signaling Volume 4 ; 4 ; nrsa ; >
+      au < exists ; exists ; 2007 ; Nuclear Receptor Signaling Volume 5 ; 5 ; nrsa ; >
+      au < exists ; exists ; 2008 ; Nuclear Receptor Signaling Volume 6 ; 6 ; nrsa ; >
+      au < exists ; exists ; 2009 ; Nuclear Receptor Signaling Volume 7 ; 7 ; nrsa ; >
+      au < exists ; exists ; 2010 ; Nuclear Receptor Signaling Volume 8 ; 8 ; nrsa ; >
+      au < exists ; exists ; 2011 ; Nuclear Receptor Signaling Volume 9 ; 9 ; nrsa ; >
+      au < exists ; exists ; 2012 ; Nuclear Receptor Signaling Volume 10 ; 10 ; nrsa ; >
+      au < exists ; exists ; 2013 ; Nuclear Receptor Signaling Volume 11 ; 11 ; nrsa ; >
+      au < exists ; exists ; 2014 ; Nuclear Receptor Signaling Volume 12 ; 12 ; nrsa ; >
+      au < exists ; exists ; 2015 ; Nuclear Receptor Signaling Volume 13 ; 13 ; nrsa ; >
+      au < exists ; exists ; 2016 ; Nuclear Receptor Signaling Volume 14 ; 14 ; nrsa ; >
+      au < exists ; exists ; 2018 ; Nuclear Receptor Signaling Volume 15 ; 15 ; nrsa ; >
+
+  }
+
+  {
+
+    title <
       name = Nursing Ethics ;
       issn = 0969-7330 ;
       eissn = 1477-0989
@@ -32183,9 +32244,7 @@
 
     #param[base_url] = http://nej.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1994 ; Nursing Ethics Volume 1 ; 1 ; neja ; >
       au < manifest ; exists ; 1995 ; Nursing Ethics Volume 2 ; 2 ; neja ; >
@@ -34225,7 +34284,7 @@
       au < manifest ; exists ; 1988 ; The Prison Journal Volume 68 ; 68 ; tpjd ; >
       au < manifest ; exists ; 1989 ; The Prison Journal Volume 69 ; 69 ; tpjd ; >
       au < manifest ; exists ; 1990 ; The Prison Journal Volume 70 ; 70 ; tpjd ; >
-      au < manifest ; exists ; 0 ; The Prison Journal Volume 71 ; 71 ; tpjd ; >
+      au < manifest ; exists ; 1991 ; The Prison Journal Volume 71 ; 71 ; tpjd ; >
       au < manifest ; exists ; 1992 ; The Prison Journal Volume 72 ; 72 ; tpjd ; >
       au < manifest ; exists ; 1993 ; The Prison Journal Volume 73 ; 73 ; tpjd ; >
       au < manifest ; exists ; 1994 ; The Prison Journal Volume 74 ; 74 ; tpjd ; >
@@ -35193,9 +35252,7 @@
 
     #param[base_url] = http://phg.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1977 ; Progress in Human Geography Volume 1 ; 1 ; phga ; >
       au < manifest ; exists ; 1978 ; Progress in Human Geography Volume 2 ; 2 ; phga ; >
@@ -35254,9 +35311,7 @@
 
     #param[base_url] = http://ppg.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1977 ; Progress in Physical Geography Volume 1 ; 1 ; ppga ; >
       au < manifest ; exists ; 1978 ; Progress in Physical Geography Volume 2 ; 2 ; ppga ; >
@@ -35302,6 +35357,37 @@
       au < crawling ; exists ; 2018 ; Progress in Physical Geography Volume 42 ; 42 ; ppga ; >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = Progress in Rubber, Plastics and Recycling Technology ;
+      issn = 1477-7606 ;
+      eissn = 1478-2413
+    >
+
+      #journal_id = prpa
+
+      au < exists ; exists ; 2001 ; Progress in Rubber, Plastics and Recycling Technology Volume 17 ; 17 ; prpa ; >
+      au < exists ; exists ; 2002 ; Progress in Rubber, Plastics and Recycling Technology Volume 18 ; 18 ; prpa ; >
+      au < exists ; exists ; 2003 ; Progress in Rubber, Plastics and Recycling Technology Volume 19 ; 19 ; prpa ; >
+      au < exists ; exists ; 2004 ; Progress in Rubber, Plastics and Recycling Technology Volume 20 ; 20 ; prpa ; >
+      au < exists ; exists ; 2005 ; Progress in Rubber, Plastics and Recycling Technology Volume 21 ; 21 ; prpa ; >
+      au < exists ; exists ; 2006 ; Progress in Rubber, Plastics and Recycling Technology Volume 22 ; 22 ; prpa ; >
+      au < exists ; exists ; 2007 ; Progress in Rubber, Plastics and Recycling Technology Volume 23 ; 23 ; prpa ; >
+      au < exists ; exists ; 2008 ; Progress in Rubber, Plastics and Recycling Technology Volume 24 ; 24 ; prpa ; >
+      au < exists ; exists ; 2009 ; Progress in Rubber, Plastics and Recycling Technology Volume 25 ; 25 ; prpa ; >
+      au < exists ; exists ; 2010 ; Progress in Rubber, Plastics and Recycling Technology Volume 26 ; 26 ; prpa ; >
+      au < exists ; exists ; 2011 ; Progress in Rubber, Plastics and Recycling Technology Volume 27 ; 27 ; prpa ; >
+      au < exists ; exists ; 2012 ; Progress in Rubber, Plastics and Recycling Technology Volume 28 ; 28 ; prpa ; >
+      au < exists ; exists ; 2013 ; Progress in Rubber, Plastics and Recycling Technology Volume 29 ; 29 ; prpa ; >
+      au < exists ; exists ; 2014 ; Progress in Rubber, Plastics and Recycling Technology Volume 30 ; 30 ; prpa ; >
+      au < exists ; exists ; 2015 ; Progress in Rubber, Plastics and Recycling Technology Volume 31 ; 31 ; prpa ; >
+      au < exists ; exists ; 2016 ; Progress in Rubber, Plastics and Recycling Technology Volume 32 ; 32 ; prpa ; >
+      au < exists ; exists ; 2017 ; Progress in Rubber, Plastics and Recycling Technology Volume 33 ; 33 ; prpa ; >
+      au < exists ; exists ; 2018 ; Progress in Rubber, Plastics and Recycling Technology Volume 34 ; 34 ; prpa ; >
 
   }
 
@@ -43060,7 +43146,15 @@
     >
 
       #journal_id = tmj
+      #content available from 1947 volume 33 to 1999 volume 85
 
+      au < exists ; exists ; 2000 ; Tumori Journal Volume 86 ; 86 ; tmja ; >
+      au < exists ; exists ; 2001 ; Tumori Journal Volume 87 ; 87 ; tmja ; >
+      au < exists ; exists ; 2002 ; Tumori Journal Volume 88 ; 88 ; tmja ; >
+      au < exists ; exists ; 2003 ; Tumori Journal Volume 89 ; 89 ; tmja ; >
+      au < exists ; exists ; 2004 ; Tumori Journal Volume 90 ; 90 ; tmja ; >
+      au < exists ; exists ; 2005 ; Tumori Journal Volume 91 ; 91 ; tmja ; >
+      au < exists ; exists ; 2006 ; Tumori Journal Volume 92 ; 92 ; tmja ; >
       au < manifest ; exists ; 2007 ; Tumori Journal Volume 93 ; 93 ; tmja ; >
       au < frozen ; exists ; 2008 ; Tumori Journal Volume 94 ; 94 ; tmja ; >
       au < frozen ; exists ; 2009 ; Tumori Journal Volume 95 ; 95 ; tmja ; >
@@ -43350,6 +43444,7 @@
     >
 
     #param[journal_id] = urj
+    #content available from 1965 volume 32 to 1994 volume 61
 
       au < manifest ; exists ; 2003 ; Urologia Journal Volume 70 ; 70 ; urja ; >
       au < manifest ; exists ; 2004 ; Urologia Journal Volume 71 ; 71 ; urja ; >
