@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,12 +33,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.atypon.rsna;
 
 import java.io.InputStream;
-import java.util.regex.Pattern;
 
-import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
-import org.htmlparser.tags.CompositeTag;
-import org.htmlparser.tags.LinkTag;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.plugin.*;
@@ -50,7 +46,29 @@ public class RsnaHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory
       // links from full text to related or previous articles
       // see: http://pubs.rsna.org/doi/full/10.1148/radiol.2016164024
       HtmlNodeFilters.tagWithAttribute("a", "class", "ext-link"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "header"),
+      HtmlNodeFilters.tag("header"),
+      HtmlNodeFilters.tag("footer"),
+      // in case there are links in the preview text
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "toc-item__abstract"),
+      HtmlNodeFilters.tagWithAttributeRegex("span", "class", "article__breadcrumbs"),
+      // Article landing - ajax tabs
+      HtmlNodeFilters.tagWithAttribute("li", "id", "pane-pcw-references"),
+      HtmlNodeFilters.tagWithAttribute("li", "id", "pane-pcw-related"),
+      //HtmlNodeFilters.tagWithAttribute("div", "class", "article__references"),
+      HtmlNodeFilters.tagWithAttribute("section", "class", "article__metrics"),
+      //HtmlNodeFilters.tagWithAttribute("section", "class", "article__keyword"),
+      
+      HtmlNodeFilters.allExceptSubtree(
+          HtmlNodeFilters.tagWithAttribute("div", "class", "article-tools"),
+            HtmlNodeFilters.tagWithAttributeRegex(
+                   "a", "href", "/action/showCitFormats\\?")),
+      // never want these links, excluded lists was too long
+      HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/author/"),
+      // HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/servlet/linkout[?]"),
+      // HtmlNodeFilters.tagWithAttributeRegex("li", "class", "(correction|latest-version)"),
   };
+  
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding)
