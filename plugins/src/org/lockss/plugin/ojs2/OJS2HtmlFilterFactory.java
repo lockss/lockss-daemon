@@ -132,6 +132,10 @@ public class OJS2HtmlFilterFactory implements FilterFactory {
     // see child JidcOJS2Plugin - variable tage on <input...>
     //<input type="hidden" name="csrfToken" value="7e623e1a0c9edb10734972ee46286898">
     HtmlNodeFilters.tagWithAttribute("input", "name", "csrfToken"),
+    // view counter for Urology Journal article pages
+    // http://journals.sbmu.ac.ir/urolj/index.php/uj/article/view/1241
+    HtmlNodeFilters.tagWithAttribute("span", "class", "numberCircle"),
+
   };
   
   @Override
