@@ -36,6 +36,7 @@ import java.io.*;
 
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.util.IOUtil;
 import org.lockss.util.StringUtil;
 import org.lockss.util.HeaderUtil;
 
@@ -60,12 +61,15 @@ public class IwapContentValidator {
           StringUtil.endsWithIgnoreCase(url, GIF_EXT)) {
         throw new ContentValidationException("URL MIME type mismatch");
       } else {
+        InputStreamReader ireader = null;
         try {
-          if (StringUtil.containsString(new InputStreamReader(cu.getUnfilteredInputStream(), cu.getEncoding()), RESRICTED_ACCESS_STRING)) {
+          ireader = new InputStreamReader(cu.getUnfilteredInputStream(),cu.getEncoding());
+          if (StringUtil.containsString(ireader, RESRICTED_ACCESS_STRING)) {
             throw new ContentValidationException("Found access restricted text");
           }
         } finally {
-          cu.release();
+          IOUtil.safeClose(ireader);
+          AuUtil.safeRelease(cu);
         }
       }
     }
