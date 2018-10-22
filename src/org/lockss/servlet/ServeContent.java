@@ -688,6 +688,16 @@ public class ServeContent extends LockssServlet {
     if (au != null) {
       Collection<String> starts = au.getAccessUrls();
       if (!starts.isEmpty()) {
+	// look for a start URL with content
+	for (String startUrl : starts) {
+	  CachedUrl scu = au.makeCachedUrl(startUrl);
+	  if (scu.hasContent()) {
+	    url = startUrl;
+	    handleUrlRequest();
+	    return true;
+	  }
+	}
+	// if none found, use first start URL
 	url = starts.iterator().next();
 	handleUrlRequest();
 	return true;
