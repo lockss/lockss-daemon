@@ -88,6 +88,7 @@ public class ProjectMuse2017HtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tag("script"),
         HtmlNodeFilters.comment(),
         HtmlNodeFilters.tag("head"),
+        HtmlNodeFilters.tagWithAttribute("p", "class", "reflinks"),
         /*
          * From older versions of the filter (may be moot) 
           // Main content area
