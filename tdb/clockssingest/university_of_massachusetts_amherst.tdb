@@ -19,15 +19,15 @@
     >
     
     plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
-    param[base_url] = http://scholarworks.umass.edu/
+    #param[base_url] = http://scholarworks.umass.edu/
         param[journal_abbr] = rasenna
-    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+    implicit < status ; status2 ; year ; name ; param[volume] ; param[base_url] ; hidden[proxy] >
 
-    au < manifest ; exists ; 2007 ; Rasenna: Journal of the Center for Etruscan Studies Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2009 ; Rasenna: Journal of the Center for Etruscan Studies volume 2 ; 2 ; >
-    au < manifest ; exists ; 2011 ; Rasenna: Journal of the Center for Etruscan Studies Volume 3 ; 3 ; >
-    au < finished ; finished ; 2014 ; Rasenna: Journal of the Center for Etruscan Studies Volume 4 ; 4 ; >
-    au < finished ; finished ; 2016 ; Rasenna: Journal of the Center for Etruscan Studies Volume 5 ; 5 ; reingest1.clockss.org:8082 >
+    au < manifest ; exists ; 2007 ; Rasenna: Journal of the Center for Etruscan Studies Volume 1 ; 1 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 2009 ; Rasenna: Journal of the Center for Etruscan Studies volume 2 ; 2 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 2011 ; Rasenna: Journal of the Center for Etruscan Studies Volume 3 ; 3 ; https://scholarworks.umass.edu/ ; >
+    au < finished ; finished ; 2014 ; Rasenna: Journal of the Center for Etruscan Studies Volume 4 ; 4 ; http://scholarworks.umass.edu/ ; >
+    au < finished ; finished ; 2016 ; Rasenna: Journal of the Center for Etruscan Studies Volume 5 ; 5 ; http://scholarworks.umass.edu/ ; reingest1.clockss.org:8082 >
 
   }
 
@@ -56,17 +56,17 @@
     >
     
     plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
-    param[base_url] = http://scholarworks.umass.edu/
+    #param[base_url] = http://scholarworks.umass.edu/
     param[journal_abbr] = cpo
-    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+    implicit < status ; status2 ; year ; name ; param[volume] ; param[base_url] ; hidden[proxy] >
 
-    au < finished ; finished ; 2012 ; communication +1 Volume 1 ; 1 ; >
-    au < finished ; finished ; 2013 ; communication +1 Volume 2 ; 2 ; >
-    au < finished ; finished ; 2014 ; communication +1 Volume 3 ; 3 ; >
-    au < finished ; finished ; 2015 ; communication +1 Volume 4 ; 4 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2016 ; communication +1 Volume 5 ; 5 ; >
-    au < deepCrawl ; exists ; 2017 ; communication +1 Volume 6 ; 6 ; >
-    au < expected ; exists ; 2018 ; communication +1 Volume 7 ; 7 ; >
+    au < finished ; finished ; 2012 ; communication +1 Volume 1 ; 1 ; http://scholarworks.umass.edu/ ; >
+    au < finished ; finished ; 2013 ; communication +1 Volume 2 ; 2 ; http://scholarworks.umass.edu/ ; >
+    au < finished ; finished ; 2014 ; communication +1 Volume 3 ; 3 ; http://scholarworks.umass.edu/ ; >
+    au < finished ; finished ; 2015 ; communication +1 Volume 4 ; 4 ; http://scholarworks.umass.edu/ ; reingest1.clockss.org:8082 >
+    au < frozen ; exists ; 2016 ; communication +1 Volume 5 ; 5 ; http://scholarworks.umass.edu/ ; >
+    au < deepCrawl ; exists ; 2017 ; communication +1 Volume 6 ; 6 ; http://scholarworks.umass.edu/ ; >
+    au < expected ; exists ; 2018 ; communication +1 Volume 7 ; 7 ; https://scholarworks.umass.edu/ ; >
 
   }
   
@@ -78,7 +78,7 @@
     >
     
     plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
-    param[base_url] = http://scholarworks.umass.edu/
+    param[base_url] = https://scholarworks.umass.edu/
     param[journal_abbr] = cibs
     implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
     
@@ -108,15 +108,15 @@
     >
     
     plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
-    param[base_url] = http://scholarworks.umass.edu/
+    #param[base_url] = http://scholarworks.umass.edu/
     param[journal_abbr] = edge
-    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+    implicit < status ; status2 ; year ; name ; param[volume] ; param[base_url] ; hidden[proxy] >
 
-    au < manifest ; exists ; 2009 ; EDGE - A Graduate Journal for German and Scandinavian Studies Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2011 ; EDGE - A Graduate Journal for German and Scandinavian Studies Volume 2 ; 2 ; >
-    au < finished ; finished ; 2013 ; EDGE - A Graduate Journal for German and Scandinavian Studies Volume 3 ; 3 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 2014 ; EDGE - A Graduate Journal for German and Scandinavian Studies Volume 4 ; 4 ; >
-    au < finished ; finished ; 2015 ; EDGE - A Graduate Journal for German and Scandinavian Studies Volume 5 ; 5 ; reingest2.clockss.org:8085 >
+    au < manifest ; exists ; 2009 ; EDGE - A Graduate Journal for German and Scandinavian Studies Volume 1 ; 1 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 2011 ; EDGE - A Graduate Journal for German and Scandinavian Studies Volume 2 ; 2 ; https://scholarworks.umass.edu/ ; >
+    au < finished ; finished ; 2013 ; EDGE - A Graduate Journal for German and Scandinavian Studies Volume 3 ; 3 ; http://scholarworks.umass.edu/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; EDGE - A Graduate Journal for German and Scandinavian Studies Volume 4 ; 4 ; http://scholarworks.umass.edu/ ; >
+    au < finished ; finished ; 2015 ; EDGE - A Graduate Journal for German and Scandinavian Studies Volume 5 ; 5 ; http://scholarworks.umass.edu/ ; reingest2.clockss.org:8085 >
 
   }
   
@@ -128,7 +128,7 @@
     >
     
     plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
-    param[base_url] = http://scholarworks.umass.edu/
+    param[base_url] = https://scholarworks.umass.edu/
     param[journal_abbr] = heliotropia
     implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
 
@@ -153,7 +153,7 @@
     # this title is no longer being published according to bepress site
     
     plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
-    param[base_url] = http://scholarworks.umass.edu/
+    param[base_url] = https://scholarworks.umass.edu/
     param[journal_abbr] = intljssw
     implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
 
@@ -172,26 +172,26 @@
     >
     
     plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
-    param[base_url] = http://scholarworks.umass.edu/
+    #param[base_url] = http://scholarworks.umass.edu/
     param[journal_abbr] = jhfm
-    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+    implicit < status ; status2 ; year ; name ; param[volume] ; param[base_url] ; hidden[proxy] >
 
-    au < manifest ; exists ; 1997 ; The Journal of Hospitality Financial Management Volume 5 ; 5 ; >
-    au < manifest ; exists ; 1998 ; The Journal of Hospitality Financial Management Volume 6 ; 6 ; >
-    au < manifest ; exists ; 1999 ; The Journal of Hospitality Financial Management Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2000 ; The Journal of Hospitality Financial Management Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2001 ; The Journal of Hospitality Financial Management Volume 9 ; 9  ; >
-    au < manifest ; exists ; 2002 ; The Journal of Hospitality Financial Management Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2003 ; The Journal of Hospitality Financial Management Volume 11 ; 11 ; >
-    au < manifest ; exists ; 2004 ; The Journal of Hospitality Financial Management Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2005 ; The Journal of Hospitality Financial Management Volume 13 ; 13 ; >
-    au < manifest ; exists ; 2006 ; The Journal of Hospitality Financial Management Volume 14 ; 14 ; >
-    au < manifest ; exists ; 2007 ; The Journal of Hospitality Financial Management Volume 15 ; 15 ; >
-    au < manifest ; exists ; 2008 ; The Journal of Hospitality Financial Management Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2009 ; The Journal of Hospitality Financial Management Volume 17 ; 17 ; >
-    au < manifest ; exists ; 2010 ; The Journal of Hospitality Financial Management Volume 18 ; 18 ; >
-    au < manifest ; exists ; 2011 ; The Journal of Hospitality Financial Management Volume 19 ; 19 ; >
-    au < finished ; finished ; 2012 ; The Journal of Hospitality Financial Management Volume 20 [Dig Commons] ; 20 ; >
+    au < manifest ; exists ; 1997 ; The Journal of Hospitality Financial Management Volume 5 ; 5 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 1998 ; The Journal of Hospitality Financial Management Volume 6 ; 6 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 1999 ; The Journal of Hospitality Financial Management Volume 7 ; 7 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 2000 ; The Journal of Hospitality Financial Management Volume 8 ; 8 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 2001 ; The Journal of Hospitality Financial Management Volume 9 ; 9 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 2002 ; The Journal of Hospitality Financial Management Volume 10 ; 10 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 2003 ; The Journal of Hospitality Financial Management Volume 11 ; 11 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 2004 ; The Journal of Hospitality Financial Management Volume 12 ; 12 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 2005 ; The Journal of Hospitality Financial Management Volume 13 ; 13 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 2006 ; The Journal of Hospitality Financial Management Volume 14 ; 14 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 2007 ; The Journal of Hospitality Financial Management Volume 15 ; 15 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 2008 ; The Journal of Hospitality Financial Management Volume 16 ; 16 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 2009 ; The Journal of Hospitality Financial Management Volume 17 ; 17 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 2010 ; The Journal of Hospitality Financial Management Volume 18 ; 18 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 2011 ; The Journal of Hospitality Financial Management Volume 19 ; 19 ; https://scholarworks.umass.edu/ ; >
+    au < finished ; finished ; 2012 ; The Journal of Hospitality Financial Management Volume 20 [Dig Commons] ; 20 ; http://scholarworks.umass.edu/ ; >
     
   }
   
