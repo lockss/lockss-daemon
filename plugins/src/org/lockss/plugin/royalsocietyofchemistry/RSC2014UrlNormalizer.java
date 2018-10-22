@@ -36,7 +36,6 @@ import org.apache.commons.lang.StringUtils;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
-import org.lockss.util.StringUtil;
 
 /*
  * Lower-case the url
@@ -47,27 +46,31 @@ import org.lockss.util.StringUtil;
  * to http://xlink.rsc.org/?doi=b712109a
  */
 
-public class RSC2014UrlNormalizer implements UrlNormalizer {
+public class RSC2014UrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
   
   private static final Logger log = Logger.getLogger(RSC2014UrlNormalizer.class);
   
   /*  Note: this assumes that all AUs have same params, this way we set the urls once
+   * This must support both http and https so we really want just the base_url_host and 
+   * resolver_url_host
    *       param[base_url] = http://pubs.rsc.org/
    *       param[resolver_url] = http://xlink.rsc.org/
    */
-  private static String content_url = "";
-  private static String resolver_url = "";
+  private static String content_url_host = "";
+  private static String resolver_url_host = "";
   
-  public String normalizeUrl(String url, ArchivalUnit au)
+  public String additionalNormalization(String url, ArchivalUnit au)
       throws PluginException {
     
-    if (content_url.isEmpty()) {
-      content_url = au.getConfiguration().get("base_url") + "en/content/";
-      resolver_url = au.getConfiguration().get("resolver_url");
+    if (content_url_host.isEmpty()) {
+      content_url_host = StringUtils.substringAfter(au.getConfiguration().get("base_url"),"://") + "en/content/";
+      resolver_url_host = StringUtils.substringAfter(au.getConfiguration().get("resolver_url"), "://");
     }
-    if (StringUtil.startsWithIgnoreCase(url, content_url) || 
-        StringUtil.startsWithIgnoreCase(url, resolver_url)) {
-      url = StringUtils.lowerCase(url);
+    // if the url is either a content url or a redirect url make sure it's lower case
+    String testurl = StringUtils.lowerCase(url);
+    if (testurl.contains(content_url_host) || 
+        testurl.contains(resolver_url_host)) {
+      url = testurl;
     }
     return url;
   }
