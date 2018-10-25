@@ -12642,9 +12642,7 @@
 
     #param[base_url] = http://fmx.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1989 ; Field Methods Volume 1 ; 1 ; fmxa ; >
       au < manifest ; exists ; 1990 ; Field Methods Volume 2 ; 2 ; fmxa ; >
@@ -12686,18 +12684,18 @@
     title <
       name = FIIB Business Review ;
       issn = 2319-7145 ;
-      eissn = 2319-7145
+      eissn = 2455-2658
     >
 
     #journal_id = fib
 
-      au < manifest ; exists ; 2011-2012 ; Field Methods Volume 1 ; 1 ; fiba ; >
-      au < manifest ; exists ; 2013 ; Field Methods Volume 2 ; 2 ; fiba ; >
-      au < manifest ; exists ; 2014 ; Field Methods Volume 3 ; 3 ; fiba ; >
-      au < manifest ; exists ; 2015 ; Field Methods Volume 4 ; 4 ; fiba ; >
-      au < manifest ; exists ; 2016 ; Field Methods Volume 5 ; 5 ; fiba ; >
-      au < manifest ; exists ; 2017 ; Field Methods Volume 6 ; 6 ; fiba ; >
-      au < manifest ; exists ; 2018 ; Field Methods Volume 7 ; 7 ; fiba ; >
+      au < manifest ; exists ; 2011-2012 ; FIIB Business Review Volume 1 ; 1 ; fiba ; >
+      au < manifest ; exists ; 2013 ; FIIB Business Review Volume 2 ; 2 ; fiba ; >
+      au < manifest ; exists ; 2014 ; FIIB Business Review Volume 3 ; 3 ; fiba ; >
+      au < manifest ; exists ; 2015 ; FIIB Business Review Volume 4 ; 4 ; fiba ; >
+      au < manifest ; exists ; 2016 ; FIIB Business Review Volume 5 ; 5 ; fiba ; >
+      au < manifest ; exists ; 2017 ; FIIB Business Review Volume 6 ; 6 ; fiba ; >
+      au < manifest ; exists ; 2018 ; FIIB Business Review Volume 7 ; 7 ; fiba ; >
 
   }
 
