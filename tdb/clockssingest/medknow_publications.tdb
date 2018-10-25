@@ -585,7 +585,7 @@
    >
 
     param[base_url] = http://www.drjjournal.net/
-    param[journal_issn] = 1742-6413
+    param[journal_issn] = 1735-3327
 
     au < exists ; exists ; 2015 ; Dental Research Journal Volume 12 ; 2015 ; 12 ; >
     au < exists ; exists ; 2016 ; Dental Research Journal Volume 13 ; 2016 ; 13 ; >
@@ -1169,9 +1169,9 @@
     #param[journal_issn] = ijms
     #  Open Journal Systems 2.4.6.0
   
-    au < exists ; exists ; 2016 ; Indian Journal of Medical Sciences Volume 68 ; 2013 ; 68 ; >
-    au < exists ; exists ; 2017 ; Indian Journal of Medical Sciences Volume 69 ; 2013 ; 69 ; >
-    au < expected ; exists ; 2018 ; Indian Journal of Medical Sciences Volume 70 ; 2013 ; 70 ; >
+    au < notReady ; exists ; 2016 ; Indian Journal of Medical Sciences Volume 68 ; 2013 ; 68 ; >
+    au < notReady ; exists ; 2017 ; Indian Journal of Medical Sciences Volume 69 ; 2013 ; 69 ; >
+    au < notReady ; exists ; 2018 ; Indian Journal of Medical Sciences Volume 70 ; 2013 ; 70 ; >
 
   }
 
@@ -2131,25 +2131,26 @@
 
   }
 
-#  {
-#    title <
-#      name = International Journal of Preventive Medicine ;
-#      issn = 2008-7802 ;
-#      eissn = 2008-8213 ;
-#      issnl = 2008-7802
-#    >
-#
-#    param[base_url] = http://www.ijpvmjournal.net/
-#    param[journal_issn] = 2008-7802
-#
-#    au < exists ; exists ; 2010 ; International Journal of Preventive Medicine Volume 1 ; 2010 ; 1 ; >
-#    au < exists ; exists ; 2011 ; International Journal of Preventive Medicine Volume 2 ; 2011 ; 2 ; >
-#    au < exists ; exists ; 2012 ; International Journal of Preventive Medicine Volume 3 ; 2012 ; 3 ; >
-#    au < exists ; exists ; 2013 ; International Journal of Preventive Medicine Volume 4 ; 2013 ; 4 ; >
-#    au < expected ; exists ; 2014 ; International Journal of Preventive Medicine Volume 5 ; 2014 ; 5 ; >
-#
-#  }
-#
+  {
+    title <
+      name = International Journal of Preventive Medicine ;
+      issn = 2008-7802 ;
+      eissn = 2008-8213 ;
+      issnl = 2008-7802
+    >
+
+    param[base_url] = http://www.ijpvmjournal.net/
+    param[journal_issn] = 2008-7802
+    # http://www.ijpvmjournal.net/backissues.asp redirects to /browse.asp
+
+    au < notReady ; exists ; 2010 ; International Journal of Preventive Medicine Volume 1 ; 2010 ; 1 ; >
+    au < notReady ; exists ; 2011 ; International Journal of Preventive Medicine Volume 2 ; 2011 ; 2 ; >
+    au < notReady ; exists ; 2012 ; International Journal of Preventive Medicine Volume 3 ; 2012 ; 3 ; >
+    au < notReady ; exists ; 2013 ; International Journal of Preventive Medicine Volume 4 ; 2013 ; 4 ; >
+    au < notReady ; exists ; 2014 ; International Journal of Preventive Medicine Volume 5 ; 2014 ; 5 ; >
+
+  }
+
   {
     title <
       name = International Journal of Shoulder Surgery ;
@@ -3529,12 +3530,12 @@
     au < manifest ; exists ; 2010 ; Journal of the International Clinical Dental Research Organization Volume 2 ; 2010 ; 2 ; >
     au < finished ; finished ; 2011 ; Journal of the International Clinical Dental Research Organization Volume 3 ; 2011 ; 3 ; >
     au < finished ; finished ; 2012 ; Journal of the International Clinical Dental Research Organization Volume 4 ; 2012 ; 4 ; reingest2.clockss.org:8085 >
-    au < exists ; exists ; 2013 ; Journal of the International Clinical Dental Research Organization Volume 5 ; 2012 ; 5 ; >
-    au < exists ; exists ; 2014 ; Journal of the International Clinical Dental Research Organization Volume 6 ; 2012 ; 6 ; >
-    au < exists ; exists ; 2015 ; Journal of the International Clinical Dental Research Organization Volume 7 ; 2012 ; 7 ; >
-    au < exists ; exists ; 2016 ; Journal of the International Clinical Dental Research Organization Volume 8 ; 2012 ; 8 ; >
-    au < exists ; exists ; 2017 ; Journal of the International Clinical Dental Research Organization Volume 9 ; 2012 ; 9 ; >
-    au < expected ; exists ; 2018 ; Journal of the International Clinical Dental Research Organization Volume 10 ; 2012 ; 10 ; >
+    au < exists ; exists ; 2013 ; Journal of the International Clinical Dental Research Organization Volume 5 ; 2013 ; 5 ; >
+    au < exists ; exists ; 2014 ; Journal of the International Clinical Dental Research Organization Volume 6 ; 2014 ; 6 ; >
+    au < exists ; exists ; 2015 ; Journal of the International Clinical Dental Research Organization Volume 7 ; 2015 ; 7 ; >
+    au < exists ; exists ; 2016 ; Journal of the International Clinical Dental Research Organization Volume 8 ; 2016 ; 8 ; >
+    au < exists ; exists ; 2017 ; Journal of the International Clinical Dental Research Organization Volume 9 ; 2017 ; 9 ; >
+    au < expected ; exists ; 2018 ; Journal of the International Clinical Dental Research Organization Volume 10 ; 2018 ; 10 ; >
 
   }
 
@@ -8388,9 +8389,8 @@
       param[journal_issn] = 2589-3505
       param[base_url] = http://www.aiaohns.in/
 
-      au < exists ; exists ; 2016 ; Annals of Indian Academy of Otorhinolaryngology Head and Neck Surgery Volume 1 ; 2016 ; 1 ; >
-      au < exists ; exists ; 2017 ; Annals of Indian Academy of Otorhinolaryngology Head and Neck Surgery Volume 2 ; 2017 ; 2 ; >
-      au < expected ; exists ; 2018 ; Annals of Indian Academy of Otorhinolaryngology Head and Neck Surgery Volume 3 ; 2018 ; 3 ; >
+      au < exists ; exists ; 2017 ; Annals of Indian Academy of Otorhinolaryngology Head and Neck Surgery Volume 1 ; 2017 ; 1 ; >
+      au < expected ; exists ; 2018 ; Annals of Indian Academy of Otorhinolaryngology Head and Neck Surgery Volume 2 ; 2018 ; 2 ; >
 
   }
 
@@ -8405,6 +8405,7 @@
 
       param[journal_issn] = 2588-8358
       param[base_url] = http://www.anip.co.in/
+      #no backissues.asp page
 
       au < exists ; exists ; 2017 ; Annals of Indian Psychiatry Volume 1 ; 2017 ; 1 ; >
       au < expected ; exists ; 2018 ; Annals of Indian Psychiatry Volume 2 ; 2018 ; 2 ; >
@@ -8484,8 +8485,7 @@
       au < manifest ; exists ; 2014 ; Archives of Cardiovascular Imaging Volume 2 ; 2014 ; 2 ; >
       au < manifest ; exists ; 2015 ; Archives of Cardiovascular Imaging Volume 3 ; 2015 ; 3 ; >
       au < manifest ; exists ; 2016 ; Archives of Cardiovascular Imaging Volume 4 ; 2016 ; 4 ; >
-      au < exists ; exists ; 2017 ; Archives of Cardiovascular Imaging Volume 5 ; 2017 ; 5 ; >
-      au < expected ; exists ; 2018 ; Archives of Cardiovascular Imaging Volume 6 ; 2018 ; 6 ; >
+      au < expected ; exists ; 2018 ; Archives of Cardiovascular Imaging Volume 5 ; 2018 ; 5 ; >
 
   }
 
@@ -8667,9 +8667,9 @@
       param[journal_issn] = 1687-6997
       param[base_url] = http://www.jcrs.eg.net/
 
-      au < exists ; exists ; 2016 ; Egyptian Journal of Cataract and Refractive Surgery Volume 21 ; 2016 ; 21 ; >
-      au < exists ; exists ; 2017 ; Egyptian Journal of Cataract and Refractive Surgery Volume 22 ; 2017 ; 22 ; >
-      au < expected ; exists ; 2018 ; Egyptian Journal of Cataract and Refractive Surgery Volume 23 ; 2018 ; 23 ; >
+      au < exists ; exists ; 2016 ; Egyptian Journal of Cataract and Refractive Surgery Volume 22 ; 2016 ; 22 ; >
+      au < exists ; exists ; 2017 ; Egyptian Journal of Cataract and Refractive Surgery Volume 23 ; 2017 ; 23 ; >
+      au < expected ; exists ; 2018 ; Egyptian Journal of Cataract and Refractive Surgery Volume 24 ; 2018 ; 24 ; >
 
   }
 
@@ -8870,7 +8870,7 @@
         eissn = 2589-0611
       >
 
-      param[journal_issn] = 2589-0603
+      param[journal_issn] = WKMP-0143
       param[base_url] = http://www.e-ijas.org/
 
       au < exists ; exists ; 2016 ; Imam Journal of Applied Sciences Volume 1 ; 2016 ; 1 ; >
@@ -8884,10 +8884,11 @@
 
       title <
         name = Indian Anaesthetists' Forum ;
+        issn = 2589-7934 ;
         eissn = 0973-0311
       >
 
-      param[journal_issn] = 0973-0311
+      param[journal_issn] = 2589-7934
       param[base_url] = http://www.theiaforum.org/
 
       au < exists ; exists ; 2016 ; Indian Anaesthetists' Forum Volume 17 ; 2016 ; 17 ; >
@@ -8948,9 +8949,7 @@
       param[journal_issn] = 2212-0017
       param[base_url] = http://www.ijtonline.in/
 
-      au < exists ; exists ; 2005 ; Indian Journal of Transplantation Volume -1 ; 2005 ; -1 ; >
-      au < exists ; exists ; 2006 ; Indian Journal of Transplantation Volume 0 ; 2006 ; 0 ; >
-      au < exists ; exists ; 2007 ; Indian Journal of Transplantation Volume 1 ; 2007 ; 1 ; >
+      au < exists ; exists ; 2005 ; Indian Journal of Transplantation Volume 1 ; 2005 ; 1 ; >
       au < manifest ; exists ; 2008 ; Indian Journal of Transplantation Volume 2 ; 2008 ; 2 ; >
       au < manifest ; exists ; 2009 ; Indian Journal of Transplantation Volume 3 ; 2009 ; 3 ; >
       au < manifest ; exists ; 2010 ; Indian Journal of Transplantation Volume 4 ; 2010 ; 4 ; >
@@ -9005,7 +9004,7 @@
         eissn = 2589-1731
       >
 
-      param[journal_issn] = 2589-1731
+      param[journal_issn] = WKMP-0139
       param[base_url] = http://www.ijcpc.org/
 
       au < exists ; exists ; 2017 ; International Journal of Clinicopathological Correlation Volume 1 ; 2017 ; 1 ; >
@@ -9169,7 +9168,7 @@
         eissn = 2405-8181
       >
 
-      param[journal_issn] = 2618-6012
+      param[journal_issn] = 2405-8181
       param[base_url] = http://www.ijcva.com/
 
       au < expected ; exists ; 2018 ; International Journal of the Cardiovascular Academy Volume 4 ; 2018 ; 4 ; >
@@ -9286,7 +9285,7 @@
         eissn = 2078-7685
       >
 
-      param[journal_issn] = 2543-3288
+      param[journal_issn] = 2078-7685
       param[base_url] = http://www.journalofdiabetology.org/
 
       au < exists ; exists ; 2010 ; Journal of Diabetology Volume 1 ; 2010 ; 1 ; >
@@ -9525,8 +9524,7 @@
       param[journal_issn] = 2395-1540
       param[base_url] = http://www.jrnm.in/
 
-      au < exists ; exists ; 2016 ; Journal of Renal Nutrition and Metabolism Volume 1 ; 2016 ; 1 ; >
-      au < exists ; exists ; 2017 ; Journal of Renal Nutrition and Metabolism Volume 2 ; 2017 ; 2 ; >
+      au < exists ; exists ; 2016 ; Journal of Renal Nutrition and Metabolism Volume 2 ; 2016 ; 2 ; >
       au < manifest ; exists ; 2018 ; Journal of Renal Nutrition and Metabolism Volume 3 ; 2018 ; 3 ; >
 
   }
@@ -9561,7 +9559,7 @@
         eissn = 2589-1669
       >
 
-      param[journal_issn] = 2589-1669
+      param[journal_issn] = WKMP-0149
       param[base_url] = http://www.jsss-journal.com/
 
       au < exists ; exists ; 2017 ; Journal of Spinal Studies and Surgery Volume 1 ; 2017 ; 1 ; >
@@ -9649,10 +9647,10 @@
 
       title <
         name = Libyan International Medical University Journal ;
-        eissn = 2519-139x
+        eissn = 2519-139X
       >
 
-      param[journal_issn] = 2519-139x
+      param[journal_issn] = 2519-139X
       param[base_url] = http://journal.limu.edu.ly/
 
       au < exists ; exists ; 2016 ; Libyan International Medical University Journal Volume 1 ; 2016 ; 1 ; >

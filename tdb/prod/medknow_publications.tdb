@@ -8910,16 +8910,16 @@
   {
 
       title <
-        name = Indian Anaesthetists’ Forum ;
+        name = Indian Anaesthetistsâ€™ Forum ;
         eissn = 0973-0311
       >
 
       param[journal_issn] = 0973-0311
       param[base_url] = http://www.theiaforum.org/
 
-      au < exists ; 2016 ; Indian Anaesthetists’ Forum Volume 17 ; 2016 ; 17 >
-      au < exists ; 2017 ; Indian Anaesthetists’ Forum Volume 18 ; 2017 ; 18 >
-      au < expected ; 2018 ; Indian Anaesthetists’ Forum Volume 19 ; 2018 ; 19 >
+      au < exists ; 2016 ; Indian Anaesthetistsâ€™ Forum Volume 17 ; 2016 ; 17 >
+      au < exists ; 2017 ; Indian Anaesthetistsâ€™ Forum Volume 18 ; 2017 ; 18 >
+      au < expected ; 2018 ; Indian Anaesthetistsâ€™ Forum Volume 19 ; 2018 ; 19 >
 
   }
 
@@ -8975,9 +8975,7 @@
       param[journal_issn] = 2212-0017
       param[base_url] = http://www.ijtonline.in/
 
-      au < exists ; 2005 ; Indian Journal of Transplantation Volume -1 ; 2005 ; -1 >
-      au < exists ; 2006 ; Indian Journal of Transplantation Volume 0 ; 2006 ; 0 >
-      au < exists ; 2007 ; Indian Journal of Transplantation Volume 1 ; 2007 ; 1 >
+      au < exists ; 2005 ; Indian Journal of Transplantation Volume 1 ; 2005 ; 1 >
       au < manifest ; 2008 ; Indian Journal of Transplantation Volume 2 ; 2008 ; 2 >
       au < manifest ; 2009 ; Indian Journal of Transplantation Volume 3 ; 2009 ; 3 >
       au < manifest ; 2010 ; Indian Journal of Transplantation Volume 4 ; 2010 ; 4 >
@@ -9168,7 +9166,7 @@
   {
 
       title <
-        name = International Journal of Students’ Research ;
+        name = International Journal of Studentsâ€™ Research ;
         issn = 2321-6662 ;
         eissn = 2230-7095
       >
@@ -9176,14 +9174,14 @@
       param[journal_issn] = 2321-6662
       param[base_url] = http://www.ijsronline.net/
 
-      au < exists ; 2011 ; International Journal of Students’ Research Volume 1 ; 2011 ; 1 >
-      au < exists ; 2012 ; International Journal of Students’ Research Volume 2 ; 2012 ; 2 >
-      au < exists ; 2013 ; International Journal of Students’ Research Volume 3 ; 2013 ; 3 >
-      au < exists ; 2014 ; International Journal of Students’ Research Volume 4 ; 2014 ; 4 >
-      au < exists ; 2015 ; International Journal of Students’ Research Volume 5 ; 2015 ; 5 >
-      au < exists ; 2016 ; International Journal of Students’ Research Volume 6 ; 2016 ; 6 >
-      au < exists ; 2017 ; International Journal of Students’ Research Volume 7 ; 2017 ; 7 >
-      au < expected ; 2018 ; International Journal of Students’ Research Volume 8 ; 2018 ; 8 >
+      au < exists ; 2011 ; International Journal of Studentsâ€™ Research Volume 1 ; 2011 ; 1 >
+      au < exists ; 2012 ; International Journal of Studentsâ€™ Research Volume 2 ; 2012 ; 2 >
+      au < exists ; 2013 ; International Journal of Studentsâ€™ Research Volume 3 ; 2013 ; 3 >
+      au < exists ; 2014 ; International Journal of Studentsâ€™ Research Volume 4 ; 2014 ; 4 >
+      au < exists ; 2015 ; International Journal of Studentsâ€™ Research Volume 5 ; 2015 ; 5 >
+      au < exists ; 2016 ; International Journal of Studentsâ€™ Research Volume 6 ; 2016 ; 6 >
+      au < exists ; 2017 ; International Journal of Studentsâ€™ Research Volume 7 ; 2017 ; 7 >
+      au < expected ; 2018 ; International Journal of Studentsâ€™ Research Volume 8 ; 2018 ; 8 >
 
   }
 
@@ -9676,10 +9674,10 @@
 
       title <
         name = Libyan International Medical University Journal ;
-        eissn = 2519-139x
+        eissn = 2519-139X
       >
 
-      param[journal_issn] = 2519-139x
+      param[journal_issn] = 2519-139X
       param[base_url] = http://journal.limu.edu.ly/
 
       au < exists ; 2016 ; Libyan International Medical University Journal Volume 1 ; 2016 ; 1 >
