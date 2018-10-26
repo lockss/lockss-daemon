@@ -40,6 +40,7 @@ import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.CachedUrl;
+import org.lockss.plugin.clockss.JatsPublishingSchemaHelper;
 import org.lockss.plugin.clockss.Onix3BooksSchemaHelper;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
@@ -49,6 +50,7 @@ public class IosPressXmlMetadataExtractorFactory extends SourceXmlMetadataExtrac
   private static final Logger log = Logger.getLogger(IosPressXmlMetadataExtractorFactory.class);
 
   private static SourceXmlSchemaHelper Onix3Helper = null;
+  private static SourceXmlSchemaHelper JatsHelper = null;
 
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
@@ -58,14 +60,22 @@ public class IosPressXmlMetadataExtractorFactory extends SourceXmlMetadataExtrac
   }
 
   public class IosPressXmlMetadataExtractor extends SourceXmlMetadataExtractor {
+    private static final String BOOKPATH = "iosbooks-released";
 
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
       // Once you have it, just keep returning the same one. It won't change.
-      if (Onix3Helper == null) {
-        Onix3Helper = new Onix3BooksSchemaHelper();
+      if ((cu.getUrl()).contains(BOOKPATH)) {
+        if (Onix3Helper == null) {
+          Onix3Helper = new Onix3BooksSchemaHelper();
+        }
+        return Onix3Helper;
+      } else { 
+        if (JatsHelper == null) {
+          JatsHelper = new JatsPublishingSchemaHelper();
+        }
+        return JatsHelper;
       }
-      return Onix3Helper;
     }
 
 
@@ -74,14 +84,41 @@ public class IosPressXmlMetadataExtractorFactory extends SourceXmlMetadataExtrac
     protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
         ArticleMetadata oneAM) {
 
-
-      String filenameValue = oneAM.getRaw(Onix3BooksSchemaHelper.ONIX_RR);
-      String cuBase = FilenameUtils.getFullPath(cu.getUrl());
-      String fullPathFile = cuBase + filenameValue + ".pdf";
+      String url_string = cu.getUrl();
       List<String> returnList = new ArrayList<String>();
-      returnList.add(fullPathFile);
-      return returnList;
+      if (helper == Onix3Helper) {
+        String filenameValue = oneAM.getRaw(Onix3BooksSchemaHelper.ONIX_RR);
+        String cuBase = FilenameUtils.getFullPath(url_string);
+        String fullPathFile = cuBase + filenameValue + ".pdf";
+        log.debug3("pdfName is " + fullPathFile);
+        returnList.add(fullPathFile);
+      } else {
+        // filename is just the same a the XML filename but with .pdf 
+        // instead of .xml
+        String pdfName = url_string.substring(0,url_string.length() - 3) + "pdf";
+        log.debug3("pdfName is " + pdfName);
+        returnList.add(pdfName);
+      }
+      return returnList;        
     }
 
+    @Override
+    protected void postCookProcess(SourceXmlSchemaHelper schemaHelper, 
+        CachedUrl cu, ArticleMetadata thisAM) {
+
+      log.debug3("in iospress postCookProcess");
+      if (schemaHelper == JatsHelper) {
+        //If we didn't get a valid date value, use the copyright year if it's there
+        if (thisAM.get(MetadataField.FIELD_DATE) == null) {
+          if (thisAM.getRaw(JatsPublishingSchemaHelper.JATS_date) != null) {
+            thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_date));
+          } else {// last chance
+            thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_edate));
+          }
+        }
+      }
+
+    }    
+    
   }
 }

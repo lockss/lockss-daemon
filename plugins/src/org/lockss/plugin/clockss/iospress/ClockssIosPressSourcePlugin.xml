@@ -44,6 +44,7 @@
     <string>au_substance_url_pattern</string>
     <list>
       <!--iosbooks-released/2018/IOS_Press/9781607501244.pdf-->
+      <!--ios-released/2018/2015/6-1/nib-6-1-nib150103/nib-6-1-nib150103.pdf -->
       <string>"^%s%s/.+\.pdf$", base_url, directory</string>
     </list>
   </entry>
