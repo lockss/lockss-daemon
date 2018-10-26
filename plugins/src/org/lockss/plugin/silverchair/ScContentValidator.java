@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2016 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -47,7 +47,30 @@ public class ScContentValidator {
   protected static final String JPEG_EXT = ".jpeg";
   protected static final String MAINTENANCE_STRING = "This site is down for maintenance";
   
-  public static class TextTypeValidator implements ContentValidator {
+  public static class ScTextTypeValidator implements ContentValidator {
+    
+    private String invalidString;
+    private String maintenanceString;
+    private String patternString;
+    
+    public String getInvalidString() {
+      return "";
+    }
+    
+    public String getMaintenanceString() {
+      return MAINTENANCE_STRING;
+    }
+    
+    public String getPatternString() {
+      return "";
+    }
+    
+    public ScTextTypeValidator() {
+      super();
+      this.invalidString = getInvalidString();
+      this.maintenanceString = getMaintenanceString();
+      this.patternString = getPatternString();
+    }
     
     public void validate(CachedUrl cu)
         throws ContentValidationException, PluginException, IOException {
@@ -59,28 +82,109 @@ public class ScContentValidator {
           StringUtil.endsWithIgnoreCase(url, JPEG_EXT)) {
         throw new ContentValidationException("URL MIME type mismatch");
       } else {
-    	try {
-    	  if (StringUtil.containsString(new InputStreamReader(cu.getUnfilteredInputStream(), cu.getEncoding()), MAINTENANCE_STRING)) {
-    		  throw new ContentValidationException("Found error page");
-    	  }
-    	} finally {
-    		cu.release();
-    	}
+        try {
+          if (!invalidString.isEmpty()) {
+            if (StringUtil.containsString(new InputStreamReader(cu.getUnfilteredInputStream(), cu.getEncoding()), invalidString)) {
+              throw new ContentValidationException("Found invalid page");
+            }
+          }
+          if (!maintenanceString.isEmpty()) {
+            if (StringUtil.containsString(new InputStreamReader(cu.getUnfilteredInputStream(), cu.getEncoding()), maintenanceString)) {
+              throw new ContentValidationException("Found maintenance page");
+            }
+          }
+          if (!patternString.isEmpty()) {
+            if (containsPattern(new InputStreamReader(cu.getUnfilteredInputStream(), cu.getEncoding()), patternString)) {
+              throw new ContentValidationException("Found pattern in page");
+            }
+          }
+        } finally {
+          cu.release();
+        }
       }
     }
   }
   
   public static class Factory implements ContentValidatorFactory {
+    
     public ContentValidator createContentValidator(ArchivalUnit au, String contentType) {
       switch (HeaderUtil.getMimeTypeFromContentType(contentType)) {
       case "text/html":
       case "text/*":
-        return new TextTypeValidator();
+        ScTextTypeValidator sttv = new ScTextTypeValidator();
+        return sttv;
       default:
         return null;
       }
     }
   }
   
+
+  /**
+   * Scans through the reader looking for the String str; case sensitive
+   * @param reader Reader to search; it will be at least partially consumed
+   * @return true if the string is found, false if the end of reader is
+   * reached without finding the string
+   */
+  public static boolean containsPattern(Reader reader, String regex)
+      throws IOException {
+    return containsPattern(reader, regex, false);
+  }
+
+  public static boolean containsPattern(Reader reader, String regex,
+                       int buffSize)
+      throws IOException {
+    return containsPattern(reader, regex, false, buffSize);
+  }
+
+  public static boolean containsPattern(Reader reader, String regex,
+                       boolean ignoreCase)
+      throws IOException {
+    return containsPattern(reader, regex, ignoreCase, 4096);
+  }
+
+  /**
+   * Scans through the reader looking for the pattern String regex
+   * @param reader Reader to search; it will be at least partially consumed
+   * @param ignoreCase whether to ignore case or not
+   * @return true if the string is found, false if the end of reader is
+   * reached without finding the pattern string
+   */
+  public static boolean containsPattern(Reader reader, String regex,
+                       boolean ignoreCase, int buffSize)
+      throws IOException {
+    if (reader == null) {
+      throw new NullPointerException("Called with a null reader");
+    } else if (regex == null) {
+      throw new NullPointerException("Called with a null pattern String");
+    } else if (regex.length() == 0) {
+      throw new IllegalArgumentException("Called with a blank pattern String");
+    } else if (buffSize <= 0) {
+      throw new IllegalArgumentException("Called with a buffSize < 0");
+    }
+
+    int strlen = regex.length();
+    // simplify boundary conditions by ensuring buffer always larger than search string
+    buffSize = Math.max(buffSize, strlen * 2);
+    int shiftSize = buffSize - (strlen - 1);
+
+    int flags = ignoreCase ? java.util.regex.Pattern.CASE_INSENSITIVE : 0;
+    java.util.regex.Pattern pat = java.util.regex.Pattern.compile(regex, flags);
+    StringBuilder sb = new StringBuilder(buffSize);
+
+    while (StringUtil.fillFromReader(reader, sb, buffSize - sb.length())) {
+      java.util.regex.Matcher m1 = pat.matcher(sb);
+      if (m1.find()) {
+        return true;
+      }
+      if (sb.length() < buffSize) {
+        // avoid unnecessary shift on final iteration
+        return false;
+      }
+      sb.delete(0, shiftSize);
+    }
+    return false;
+  }
+
 }
 

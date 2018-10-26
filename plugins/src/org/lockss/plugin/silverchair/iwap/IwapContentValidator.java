@@ -32,60 +32,45 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.silverchair.iwap;
 
-import java.io.*;
 
-import org.lockss.daemon.*;
 import org.lockss.plugin.*;
-import org.lockss.util.IOUtil;
-import org.lockss.util.StringUtil;
+import org.lockss.plugin.silverchair.ScContentValidator;
 import org.lockss.util.HeaderUtil;
 
-public class IwapContentValidator {
+public class IwapContentValidator extends ScContentValidator {
   
-  protected static final String PDF_EXT = ".pdf";
-  protected static final String PNG_EXT = ".png";
-  protected static final String JPG_EXT = ".jpg";
-  protected static final String GIF_EXT = ".gif";
-  protected static final String RESRICTED_ACCESS_STRING = "article-top-info-user-restricted-options";
-  
-  public static class TextTypeValidator implements ContentValidator {
+  public static class IwapTextTypeValidator extends ScTextTypeValidator {
     
-    public void validate(CachedUrl cu)
-        throws ContentValidationException, PluginException, IOException {
-      // validate based on extension (ie .pdf or .jpg)
-      String url = cu.getUrl();
-      url = url.replaceAll("[?].+", "");
-      if (StringUtil.endsWithIgnoreCase(url, PDF_EXT) ||
-          StringUtil.endsWithIgnoreCase(url, PNG_EXT) ||
-          StringUtil.endsWithIgnoreCase(url, JPG_EXT) ||
-          StringUtil.endsWithIgnoreCase(url, GIF_EXT)) {
-        throw new ContentValidationException("URL MIME type mismatch");
-      } else {
-        InputStreamReader ireader = null;
-        try {
-          ireader = new InputStreamReader(cu.getUnfilteredInputStream(),cu.getEncoding());
-          if (StringUtil.containsString(ireader, RESRICTED_ACCESS_STRING)) {
-            throw new ContentValidationException("Found access restricted text");
-          }
-        } finally {
-          IOUtil.safeClose(ireader);
-          AuUtil.safeRelease(cu);
-        }
-      }
+    private static final String RESTRICTED_ACCESS_STRING = "article-top-info-user-restricted-options";
+    private static final String EXPIRES_PAT_STRING = "[?]Expires=(2147483647)";
+    // ?Expires=2147483647&
+    
+    
+    @Override
+    public String getInvalidString() {
+      return RESTRICTED_ACCESS_STRING;
     }
+    
+    @Override
+    public String getPatternString() {
+      return EXPIRES_PAT_STRING;
+    }
+    
   }
   
-  public static class Factory implements ContentValidatorFactory {
+  public static class Factory extends ScContentValidator.Factory {
+    
+    @Override
     public ContentValidator createContentValidator(ArchivalUnit au, String contentType) {
       switch (HeaderUtil.getMimeTypeFromContentType(contentType)) {
       case "text/html":
       case "text/*":
-        return new TextTypeValidator();
+        IwapTextTypeValidator ittv = new IwapTextTypeValidator();
+        return ittv;
       default:
         return null;
       }
     }
   }
-  
 }
 

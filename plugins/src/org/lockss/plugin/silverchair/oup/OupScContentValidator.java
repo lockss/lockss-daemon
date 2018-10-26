@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2017 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,53 +32,31 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.silverchair.oup;
 
-import java.io.*;
 
-import org.lockss.daemon.*;
 import org.lockss.plugin.*;
-import org.lockss.util.StringUtil;
+import org.lockss.plugin.silverchair.ScContentValidator;
 import org.lockss.util.HeaderUtil;
 
-public class OupScContentValidator {
+public class OupScContentValidator extends ScContentValidator {
   
-  protected static final String PDF_EXT = ".pdf";
-  protected static final String PNG_EXT = ".png";
-  protected static final String JPG_EXT = ".jpg";
-  protected static final String JPEG_EXT = ".jpeg";
-  protected static final String RIS_EXT = "=ris";
-  protected static final String MAINTENANCE_STRING = "Sorry for the inconvenience, we are performing some maintenance at the moment. We will be back online shortly";
-  
-  public static class TextTypeValidator implements ContentValidator {
+  public static class OupTextTypeValidator extends ScTextTypeValidator {
     
-    public void validate(CachedUrl cu)
-        throws ContentValidationException, PluginException, IOException {
-      // validate based on extension (ie .pdf or .jpg)
-      String url = cu.getUrl();
-      if (StringUtil.endsWithIgnoreCase(url, PDF_EXT) ||
-          StringUtil.endsWithIgnoreCase(url, PNG_EXT) ||
-          StringUtil.endsWithIgnoreCase(url, JPG_EXT) ||
-          StringUtil.endsWithIgnoreCase(url, JPEG_EXT)) {
-        throw new ContentValidationException("URL MIME type mismatch");
-      } else {
-//          StringUtil.endsWithIgnoreCase(url, RIS_EXT) ris is always text/plain - so just look for the maintenance string
-        if (true) // XXX check for small size first
-        try {
-          if (StringUtil.containsString(new InputStreamReader(cu.getUnfilteredInputStream(), cu.getEncoding()), MAINTENANCE_STRING)) {
-            throw new ContentValidationException("Found maintenance page");
-          }
-        } finally {
-          cu.release();
-        }
-      }
+    private static final String MAINTENANCE_STRING = "Sorry for the inconvenience, we are performing some maintenance at the moment. We will be back online shortly";
+//    private static final String RESTRICTED_ACCESS_STRING = "article-top-info-user-restricted-options";
+//    private static final String EXPIRES_PAT_STRING = "[?]Expires=(2147483647)";
+    
+    @Override
+    public String getMaintenanceString() {
+      return MAINTENANCE_STRING;
     }
   }
   
-  public static class Factory implements ContentValidatorFactory {
+  public static class Factory extends ScContentValidator.Factory {
     public ContentValidator createContentValidator(ArchivalUnit au, String contentType) {
       switch (HeaderUtil.getMimeTypeFromContentType(contentType)) {
       case "text/html":
       case "text/*":
-        return new TextTypeValidator();
+        return new OupTextTypeValidator();
       default:
         return null;
       }
