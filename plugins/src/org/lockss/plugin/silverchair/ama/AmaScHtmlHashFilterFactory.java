@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2017 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,16 +35,13 @@ package org.lockss.plugin.silverchair.ama;
 import java.io.*;
 
 import org.htmlparser.NodeFilter;
-import org.htmlparser.filters.OrFilter;
 import org.lockss.daemon.PluginException;
-import org.lockss.filter.*;
-import org.lockss.filter.HtmlTagFilter.TagPair;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.silverchair.ScHtmlHashFilterFactory;
 import org.lockss.util.Logger;
-import org.lockss.util.ReaderInputStream;
 
-public class AmaScHtmlHashFilterFactory implements FilterFactory {
+public class AmaScHtmlHashFilterFactory extends ScHtmlHashFilterFactory {
 
   /*
    * AMA = American Medical Association (http://jamanetwork.com/)
@@ -52,38 +49,37 @@ public class AmaScHtmlHashFilterFactory implements FilterFactory {
   private static final Logger log = Logger.getLogger(AmaScHtmlHashFilterFactory.class);
   
   @Override
+  protected boolean doSpecialFilter() {
+    return false;
+  }
+
+  @Override
+  protected boolean doXForm() {
+    return false;
+  }
+
+  @Override
   public InputStream createFilteredInputStream(final ArchivalUnit au,
                                                InputStream in,
                                                String encoding)
       throws PluginException {
     
-    InputStream filtered = new HtmlFilterInputStream(
-      in,
-      encoding,
-      new HtmlCompoundTransform(
-          HtmlNodeFilterTransform.include(new OrFilter(new NodeFilter[] {
-              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "Issues[^ \"]+Manifest"),
-              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "issue-(-info|group)"),
-              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(article-content|full-text)"),
-          })),
-          HtmlNodeFilterTransform.exclude(new OrFilter(new NodeFilter[] {
-              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(widget-(article[^ ]*link|EditorsChoice|LinkedContent|WidgetLoader))"),
-              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(nav|(artmet|login)-modal|social-share)"),
-              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(cme-info|no-access|reference|related|ymal)"),
-              HtmlNodeFilters.tagWithAttributeRegex("div", "id", "(metrics|(reference|related)-tab|register)"),
-              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(badges|movable-ad|sidebar)"),
-              HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "toolbar"),
-              HtmlNodeFilters.tagWithAttributeRegex("a", "class", "(download-ppt|related)"),
-              HtmlNodeFilters.tagWithAttributeRegex("a", "class", "comments"),
-              HtmlNodeFilters.tag("script"),
-          })))
-    );
+    NodeFilter[] includeFilters = new NodeFilter[] {
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "Issues[^ \"]+Manifest"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "issue-(-info|group)"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(article-content|full-text)"),
+    };
     
-    Reader reader = FilterUtil.getReader(filtered, encoding);
-    // Remove all inner tag content
-    Reader noTagFilter = new HtmlTagFilter(new StringFilter(reader, "<", " <"), new TagPair("<", ">"));
-    // Remove white space
-    Reader whiteSpaceFilter = new WhiteSpaceFilter(noTagFilter);
-    return new ReaderInputStream(whiteSpaceFilter);
+    NodeFilter[] moreFilters = new NodeFilter[] {
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(widget-(article[^ ]*link|EditorsChoice|LinkedContent|WidgetLoader))"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(nav|(artmet|login)-modal|social-share)"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(cme-info|no-access|reference|related|ymal)"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "(metrics|(reference|related)-tab|register)"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(badges|movable-ad|sidebar)"),
+        HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "toolbar"),
+        HtmlNodeFilters.tagWithAttributeRegex("a", "class", "(download-ppt|related)"),
+    };
+    
+    return createFilteredInputStream(au, in, encoding, includeFilters, moreFilters);
   }
 }
