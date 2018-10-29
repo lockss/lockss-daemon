@@ -88,7 +88,7 @@ public class TestCambridgeMetadataExtractor extends LockssTestCase {
 
 
   private static final String realXMLFile = "JatsXmlTest.xml";
-  private static final String realSgmFile = "SgmTest.xml";
+  private static final String realSgmFile = "SgmTest.sgm";
 
   public void testFromJatsPublishingXMLFile() throws Exception {
     InputStream file_input = null;
