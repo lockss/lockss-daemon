@@ -32,22 +32,12 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 
 package org.lockss.plugin.silverchair.iwap;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.util.*;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.lockss.daemon.PluginException;
-import org.lockss.extractor.*;
-import org.lockss.plugin.*;
-import org.lockss.util.IOUtil;
+import org.lockss.plugin.silverchair.BaseScArticleIteratorFactory;
 import org.lockss.util.Logger;
 
-public class IwapArticleIteratorFactory
-    implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
-  
-  protected static Logger log = Logger.getLogger(IwapArticleIteratorFactory.class);
+public class IwapArticleIteratorFactory extends BaseScArticleIteratorFactory {
   
   private static final String ROOT_TEMPLATE = "\"%s%s/article\", base_url, journal_id";
   private static final String PATTERN_TEMPLATE = "\"^%s%s/article(-abstract)?/\", base_url, journal_id";
@@ -56,95 +46,39 @@ public class IwapArticleIteratorFactory
   private static final String HTML_REPLACEMENT = "/article/$1/$2";
   private static final String ABSTRACT_REPLACEMENT = "/article-abstract/$1/$2";
   private static final String CITATION_REPLACEMENT = "/downloadcitation/$1?format=ris";
+  // <meta name="citation_pdf_url" 
   protected static final Pattern PDF_PATTERN = Pattern.compile(
       "<meta[\\s]*name=\"citation_pdf_url\"[\\s]*content=\"(.+/article-pdf/[^.]+\\.pdf)\"", Pattern.CASE_INSENSITIVE);
   
-  @Override
-  public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
-                                                      MetadataTarget target)
-      throws PluginException {
-    SubTreeArticleIteratorBuilder builder = localBuilderCreator(au);
-    builder.setSpec(target,
-                    ROOT_TEMPLATE,
-                    PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
-    builder.addAspect(HTML_PATTERN,
-                      HTML_REPLACEMENT,
-                      ArticleFiles.ROLE_FULL_TEXT_HTML);
-    builder.addAspect(ABSTRACT_REPLACEMENT,
-                      ArticleFiles.ROLE_ABSTRACT);
-    builder.addAspect(CITATION_REPLACEMENT,
-                      ArticleFiles.ROLE_CITATION);
-    builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA,
-                                  ArticleFiles.ROLE_CITATION,
-                                  ArticleFiles.ROLE_ABSTRACT,
-                                  ArticleFiles.ROLE_FULL_TEXT_HTML);
-    return builder.getSubTreeArticleIterator();
+  protected static Logger getLog() {
+    return Logger.getLogger(IwapArticleIteratorFactory.class);
   }
-  
-  protected SubTreeArticleIteratorBuilder localBuilderCreator(ArchivalUnit au) { 
-    return new SubTreeArticleIteratorBuilder(au) {
-      
-      @Override
-      protected BuildableSubTreeArticleIterator instantiateBuildableIterator() {
-        
-        
-        return new BuildableSubTreeArticleIterator(au, spec) {
-          
-          @Override
-          protected ArticleFiles createArticleFiles(CachedUrl cu) {
-            // Since 1.64 createArticleFiles can return ArticleFiles
-            ArticleFiles af = super.createArticleFiles(cu);
-            
-            if (af != null && spec.getTarget() != null && !spec.getTarget().isArticle()) {
-              guessPdf(af);
-            }
-            return af;
-          }
-        };
-      }
-      
-      protected void guessPdf(ArticleFiles af) {
-        CachedUrl cu = af.getRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML);
-        if (cu == null || !cu.hasContent()) {
-          return;
-        }
-        BufferedReader bReader = null;
-        try {
-          bReader = new BufferedReader(new InputStreamReader(
-              cu.getUnfilteredInputStream(), cu.getEncoding())
-              );
-          
-          Matcher mat;
-          // go through the cached URL content line by line
-          // if a match is found, look for valid url & content
-          // if found then set the role for ROLE_FULL_TEXT_PDF
-          for (String line = bReader.readLine(); line != null; line = bReader.readLine()) {
-            mat = PDF_PATTERN.matcher(line);
-            if (mat.find()) {
-              String pdfUrl = mat.group(1);
-              CachedUrl pdfCu = au.makeCachedUrl(pdfUrl);
-              if (pdfCu != null && pdfCu.hasContent()) {
-                af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
-              }
-              break;
-            }
-          }
-        } catch (Exception e) {
-          // probably not serious, so warn
-          log.warning(e + " : Looking for citation_pdf_url");
-        }
-        finally {
-          IOUtil.safeClose(bReader);
-          cu.release();
-        }
-      }
-    };
+
+  protected static String getRootTemplate() {
+    return ROOT_TEMPLATE;
   }
-  
-    @Override
-  public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
-      throws PluginException {
-    return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
+
+  protected static String getPatternTemplate() {
+    return PATTERN_TEMPLATE;
   }
-  
+
+  protected static Pattern getHtmlPattern() {
+    return HTML_PATTERN;
+  }
+
+  protected static String getHtmlReplacement() {
+    return HTML_REPLACEMENT;
+  }
+
+  protected static String getAbstractReplacement() {
+    return ABSTRACT_REPLACEMENT;
+  }
+
+  protected static String getCitationReplacement() {
+    return CITATION_REPLACEMENT;
+  }
+
+  protected static Pattern getPdfPattern() {
+    return PDF_PATTERN;
+  }
 }

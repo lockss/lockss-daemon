@@ -38,22 +38,20 @@ import org.htmlparser.NodeFilter;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.silverchair.ScHtmlHashFilterFactory;
+import org.lockss.plugin.silverchair.BaseScHtmlHashFilterFactory;
 import org.lockss.util.Logger;
 
-public class AmaScHtmlHashFilterFactory extends ScHtmlHashFilterFactory {
+public class AmaScHtmlHashFilterFactory extends BaseScHtmlHashFilterFactory {
 
   /*
    * AMA = American Medical Association (http://jamanetwork.com/)
    */
   private static final Logger log = Logger.getLogger(AmaScHtmlHashFilterFactory.class);
   
-  @Override
-  protected boolean doSpecialFilter() {
+  protected boolean doExtraSpecialFilter() {
     return false;
   }
 
-  @Override
   protected boolean doXForm() {
     return false;
   }
@@ -70,7 +68,7 @@ public class AmaScHtmlHashFilterFactory extends ScHtmlHashFilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(article-content|full-text)"),
     };
     
-    NodeFilter[] moreFilters = new NodeFilter[] {
+    NodeFilter[] moreExcludeFilters = new NodeFilter[] {
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(widget-(article[^ ]*link|EditorsChoice|LinkedContent|WidgetLoader))"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(nav|(artmet|login)-modal|social-share)"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(cme-info|no-access|reference|related|ymal)"),
@@ -80,6 +78,6 @@ public class AmaScHtmlHashFilterFactory extends ScHtmlHashFilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("a", "class", "(download-ppt|related)"),
     };
     
-    return createFilteredInputStream(au, in, encoding, includeFilters, moreFilters);
+    return createFilteredInputStream(au, in, encoding, includeFilters, moreExcludeFilters);
   }
 }

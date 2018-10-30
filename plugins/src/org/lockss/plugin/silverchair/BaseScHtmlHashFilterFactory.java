@@ -53,7 +53,7 @@ import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 import org.lockss.util.ReaderInputStream;
 
-public class ScHtmlHashFilterFactory implements FilterFactory {
+public class BaseScHtmlHashFilterFactory implements FilterFactory {
 
   /*
    * ASH - American Speech Language, Hearing (1 ex: http://lshss.pubs.asha.org/)
@@ -63,7 +63,7 @@ public class ScHtmlHashFilterFactory implements FilterFactory {
    *    we no longer support SPIE preservation
    *    
    */
-  private static final Logger log = Logger.getLogger(ScHtmlHashFilterFactory.class);
+  private static final Logger log = Logger.getLogger(BaseScHtmlHashFilterFactory.class);
   
   // HTML transform to remove generated attributes like <a href="...?Expires">
   protected static HtmlTransform xform = new HtmlTransform() {
@@ -102,7 +102,7 @@ public class ScHtmlHashFilterFactory implements FilterFactory {
     }
   };
   
-  protected static NodeFilter[] baseSCFilters = new NodeFilter[] {
+  protected static NodeFilter[] baseSCExcludeFilters = new NodeFilter[] {
       // DROP scripts, styles, comments
       HtmlNodeFilters.tag("script"),
       HtmlNodeFilters.tag("noscript"),
@@ -208,12 +208,12 @@ public class ScHtmlHashFilterFactory implements FilterFactory {
    * Also removes pdf(plus) file sizes.
    */
   protected InputStream createFilteredInputStream(final ArchivalUnit au, InputStream in, String encoding,
-      NodeFilter[] includeNodes, NodeFilter[] moreNodes) {
+      NodeFilter[] includeNodes, NodeFilter[] moreExcludeNodes) {
     
-    NodeFilter[] excludeNodes = baseSCFilters;
-    if (moreNodes != null) {
-      excludeNodes  = Arrays.copyOf(baseSCFilters, baseSCFilters.length + moreNodes.length);
-      System.arraycopy(moreNodes, 0, excludeNodes, baseSCFilters.length, moreNodes.length);
+    NodeFilter[] excludeNodes = baseSCExcludeFilters;
+    if (moreExcludeNodes != null) {
+      excludeNodes  = Arrays.copyOf(baseSCExcludeFilters, baseSCExcludeFilters.length + moreExcludeNodes.length);
+      System.arraycopy(moreExcludeNodes, 0, excludeNodes, baseSCExcludeFilters.length, moreExcludeNodes.length);
     }
 
     /*
@@ -244,7 +244,7 @@ public class ScHtmlHashFilterFactory implements FilterFactory {
     Reader whiteSpaceFilter = new WhiteSpaceFilter(noTagFilter);
     InputStream ret;
 
-    if (doSpecialFilter()) {
+    if (doExtraSpecialFilter()) {
       // All instances of "Systemic Infection" have been replaced with Sepsis on AMA
       ret = new ReaderInputStream(new StringFilter(whiteSpaceFilter, "systemic infection", "sepsis"));
     } else {
@@ -269,7 +269,7 @@ public class ScHtmlHashFilterFactory implements FilterFactory {
   /*
    * Silverchair children should turn off special conversion
    */
-  protected boolean doSpecialFilter() {
+  protected boolean doExtraSpecialFilter() {
     return true;
   }
   
@@ -286,7 +286,7 @@ public class ScHtmlHashFilterFactory implements FilterFactory {
                                      "/tmp/e3/art4",
                                      "/tmp/e3/art5",
                                      "/tmp/e3/art6")) {
-      IOUtils.copy(new ScHtmlHashFilterFactory().createFilteredInputStream(null, new FileInputStream(file), null),
+      IOUtils.copy(new BaseScHtmlHashFilterFactory().createFilteredInputStream(null, new FileInputStream(file), null),
                    new FileOutputStream(file + ".out"));
     }
   }

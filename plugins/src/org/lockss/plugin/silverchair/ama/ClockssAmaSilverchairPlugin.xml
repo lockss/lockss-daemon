@@ -148,7 +148,7 @@
     <string>org.lockss.plugin.silverchair.ama.AmaScHtmlCrawlFilterFactory</string>
   </entry>
   <entry>
-    <string>au_crawl_depth</string>
+    <string>au_refetch_depth</string>
     <int>2</int>
   </entry>
   <entry>
@@ -170,7 +170,7 @@
   <entry>
     <!-- Validator factory for text MIME types -->
     <string>text/*_content_validator_factory</string>
-    <string>org.lockss.plugin.silverchair.ScContentValidator$Factory</string>
+    <string>org.lockss.plugin.silverchair.BaseScContentValidator$Factory</string>
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
@@ -213,8 +213,8 @@
   <entry>
     <string>plugin_cache_result_list</string>
     <list>
-      <!-- string>405=org.lockss.plugin.silverchair.ScHtmlHttpResponseHandler</string> -->
-      <string>org.lockss.plugin.ContentValidationException=org.lockss.plugin.silverchair.ScHtmlHttpResponseHandler</string>
+      <!-- string>405=org.lockss.plugin.silverchair.BaseScHtmlHttpResponseHandler</string> -->
+      <string>org.lockss.plugin.ContentValidationException=org.lockss.plugin.silverchair.BaseScHtmlHttpResponseHandler</string>
     </list>
   </entry>
   <entry>

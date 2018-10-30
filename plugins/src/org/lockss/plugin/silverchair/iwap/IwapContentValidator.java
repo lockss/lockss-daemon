@@ -34,42 +34,33 @@ package org.lockss.plugin.silverchair.iwap;
 
 
 import org.lockss.plugin.*;
-import org.lockss.plugin.silverchair.ScContentValidator;
-import org.lockss.util.HeaderUtil;
+import org.lockss.plugin.silverchair.BaseScContentValidator;
 
-public class IwapContentValidator extends ScContentValidator {
+public class IwapContentValidator extends BaseScContentValidator {
   
   public static class IwapTextTypeValidator extends ScTextTypeValidator {
-    
+
     private static final String RESTRICTED_ACCESS_STRING = "article-top-info-user-restricted-options";
-    private static final String EXPIRES_PAT_STRING = "[?]Expires=(2147483647)";
-    // ?Expires=2147483647&
-    
-    
+    private static final String EXPIRES_PAT_STRING = "[?]Expires=(?!2147483647)";
+
     @Override
     public String getInvalidString() {
       return RESTRICTED_ACCESS_STRING;
     }
-    
+
     @Override
     public String getPatternString() {
       return EXPIRES_PAT_STRING;
     }
-    
+
+    public ContentValidator getTextTypeValidator() {
+      return new IwapTextTypeValidator();
+    }
   }
-  
-  public static class Factory extends ScContentValidator.Factory {
-    
-    @Override
-    public ContentValidator createContentValidator(ArchivalUnit au, String contentType) {
-      switch (HeaderUtil.getMimeTypeFromContentType(contentType)) {
-      case "text/html":
-      case "text/*":
-        IwapTextTypeValidator ittv = new IwapTextTypeValidator();
-        return ittv;
-      default:
-        return null;
-      }
+
+  public static class Factory extends BaseScContentValidator.Factory {
+    public ContentValidator getTextTypeValidator() {
+      return new IwapTextTypeValidator();
     }
   }
 }

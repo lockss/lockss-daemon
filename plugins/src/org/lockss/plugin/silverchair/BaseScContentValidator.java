@@ -39,7 +39,7 @@ import org.lockss.plugin.*;
 import org.lockss.util.StringUtil;
 import org.lockss.util.HeaderUtil;
 
-public class ScContentValidator {
+public class BaseScContentValidator {
   
   protected static final String PDF_EXT = ".pdf";
   protected static final String PNG_EXT = ".png";
@@ -53,6 +53,13 @@ public class ScContentValidator {
     private String maintenanceString;
     private String patternString;
     
+    public ScTextTypeValidator() {
+      super();
+      this.invalidString = getInvalidString();
+      this.maintenanceString = getMaintenanceString();
+      this.patternString = getPatternString();
+    }
+    
     public String getInvalidString() {
       return "";
     }
@@ -64,22 +71,20 @@ public class ScContentValidator {
     public String getPatternString() {
       return "";
     }
-    
-    public ScTextTypeValidator() {
-      super();
-      this.invalidString = getInvalidString();
-      this.maintenanceString = getMaintenanceString();
-      this.patternString = getPatternString();
+
+    public boolean invalidFileExt(String url) {
+      return 
+          StringUtil.endsWithIgnoreCase(url, PDF_EXT) ||
+          StringUtil.endsWithIgnoreCase(url, PNG_EXT) ||
+          StringUtil.endsWithIgnoreCase(url, JPG_EXT) ||
+          StringUtil.endsWithIgnoreCase(url, JPEG_EXT);
     }
     
     public void validate(CachedUrl cu)
         throws ContentValidationException, PluginException, IOException {
       // validate based on extension (ie .pdf or .jpg)
       String url = cu.getUrl();
-      if (StringUtil.endsWithIgnoreCase(url, PDF_EXT) ||
-          StringUtil.endsWithIgnoreCase(url, PNG_EXT) ||
-          StringUtil.endsWithIgnoreCase(url, JPG_EXT) ||
-          StringUtil.endsWithIgnoreCase(url, JPEG_EXT)) {
+      if (invalidFileExt(url)) {
         throw new ContentValidationException("URL MIME type mismatch");
       } else {
         try {
@@ -93,7 +98,8 @@ public class ScContentValidator {
               throw new ContentValidationException("Found maintenance page");
             }
           }
-          if (!patternString.isEmpty()) {
+          if (!patternString.isEmpty() &&
+              !patternString.contains("*") && !patternString.contains("+") &&!patternString.contains("{")) {
             if (containsPattern(new InputStreamReader(cu.getUnfilteredInputStream(), cu.getEncoding()), patternString)) {
               throw new ContentValidationException("Found pattern in page");
             }
@@ -105,22 +111,7 @@ public class ScContentValidator {
     }
   }
   
-  public static class Factory implements ContentValidatorFactory {
-    
-    public ContentValidator createContentValidator(ArchivalUnit au, String contentType) {
-      switch (HeaderUtil.getMimeTypeFromContentType(contentType)) {
-      case "text/html":
-      case "text/*":
-        ScTextTypeValidator sttv = new ScTextTypeValidator();
-        return sttv;
-      default:
-        return null;
-      }
-    }
-  }
-  
-
-  /**
+   /**
    * Scans through the reader looking for the String str; case sensitive
    * @param reader Reader to search; it will be at least partially consumed
    * @return true if the string is found, false if the end of reader is
@@ -145,6 +136,10 @@ public class ScContentValidator {
 
   /**
    * Scans through the reader looking for the pattern String regex
+   * NOTE: !!!!!!!!!!
+   * The pattern may not contain pattern wildcards (*, +, or {n,m}) as the pattern might not match 
+   * within the contents of the buffer, but would in the contents of the entire reader
+   * 
    * @param reader Reader to search; it will be at least partially consumed
    * @param ignoreCase whether to ignore case or not
    * @return true if the string is found, false if the end of reader is
@@ -184,6 +179,24 @@ public class ScContentValidator {
       sb.delete(0, shiftSize);
     }
     return false;
+  }
+
+  public static class Factory implements ContentValidatorFactory {
+
+    public ContentValidator createContentValidator(ArchivalUnit au, String contentType) {
+      switch (HeaderUtil.getMimeTypeFromContentType(contentType)) {
+      case "text/html":
+      case "text/*":
+        // XXX get method to  text type validator
+        return getTextTypeValidator();
+      default:
+        return null;
+      }
+    }
+
+    public ContentValidator getTextTypeValidator() {
+      return new ScTextTypeValidator();
+    }
   }
 
 }

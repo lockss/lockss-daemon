@@ -33,48 +33,18 @@
 package org.lockss.plugin.silverchair.iwap;
 
 import org.lockss.daemon.PluginException;
-import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.silverchair.ScHtmlHttpResponseHandler.ScRetryableNetworkException;
+import org.lockss.plugin.silverchair.BaseScHtmlHttpResponseHandler;
 import org.lockss.util.Logger;
 
-import org.lockss.util.urlconn.CacheException;
-import org.lockss.util.urlconn.CacheResultHandler;
 import org.lockss.util.urlconn.CacheResultMap;
 
-public class IwapHtmlHttpResponseHandler implements CacheResultHandler {
+public class IwapHtmlHttpResponseHandler extends BaseScHtmlHttpResponseHandler {
   private static final Logger log = Logger.getLogger(IwapHtmlHttpResponseHandler.class);
   
   @Override
   public void init(final CacheResultMap map) throws PluginException {
     log.warning("Unexpected call to init()");
     throw new UnsupportedOperationException("Unexpected call to IwapHttpResponseHandler.init()");
-
-  }
-
-  @Override
-  public CacheException handleResult(final ArchivalUnit au, final String url, final int code) throws PluginException {
-    log.debug(code + ": " + url);
-    switch (code) {
-      default:
-        log.warning("Unexpected responseCode (" + code + ") in handleResult(): AU " + au.getName() + "; URL " + url);
-        throw new UnsupportedOperationException("Unexpected responseCode (" + code + ")");
-    }
-  }
-
-  @Override
-  public CacheException handleResult(final ArchivalUnit au, final String url, final Exception ex)
-    throws PluginException {
-    log.debug(ex.getMessage() + ": " + url);
-    
-    if (ex instanceof javax.net.ssl.SSLHandshakeException) {
-      log.debug3("Retrying SSLHandshakeException", ex);
-      //extends CacheException.RetryableNetworkException_3_10S
-      return new ScRetryableNetworkException(ex);
-    }
-    
-    // we should only get in here cases that we specifically map, report and retry/no fail/no store
-    log.warning("Unexpected call to handleResult(): AU " + au.getName() + "; URL " + url, ex);
-    return new ScRetryableNetworkException(ex);
   }
   
 }

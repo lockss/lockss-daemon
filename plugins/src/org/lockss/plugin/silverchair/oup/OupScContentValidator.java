@@ -33,17 +33,29 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.silverchair.oup;
 
 
-import org.lockss.plugin.*;
-import org.lockss.plugin.silverchair.ScContentValidator;
-import org.lockss.util.HeaderUtil;
+import org.lockss.plugin.ContentValidator;
+import org.lockss.plugin.silverchair.BaseScContentValidator;
 
-public class OupScContentValidator extends ScContentValidator {
+public class OupScContentValidator extends BaseScContentValidator {
   
   public static class OupTextTypeValidator extends ScTextTypeValidator {
     
+    // files like https://academic.oup.com/view-large/figure/112575428/aww280f5.png
+    // are html wrapped around an image <img class="content-image" src="https://oup.silverchair-cdn.com/....
+    
+    private static final String VIEW_LARGE_FIG_STRING = "/view-large/figure/";
+    
+    @Override
+    public boolean invalidFileExt(String url) {
+      if (url.contains(VIEW_LARGE_FIG_STRING)) {
+        return false;
+      }
+      return super.invalidFileExt(url);
+    }
+
     private static final String MAINTENANCE_STRING = "Sorry for the inconvenience, we are performing some maintenance at the moment. We will be back online shortly";
-//    private static final String RESTRICTED_ACCESS_STRING = "article-top-info-user-restricted-options";
-//    private static final String EXPIRES_PAT_STRING = "[?]Expires=(2147483647)";
+    //    private static final String RESTRICTED_ACCESS_STRING = "article-top-info-user-restricted-options";
+    //    private static final String EXPIRES_PAT_STRING = "[?]Expires=(2147483647)";
     
     @Override
     public String getMaintenanceString() {
@@ -51,15 +63,9 @@ public class OupScContentValidator extends ScContentValidator {
     }
   }
   
-  public static class Factory extends ScContentValidator.Factory {
-    public ContentValidator createContentValidator(ArchivalUnit au, String contentType) {
-      switch (HeaderUtil.getMimeTypeFromContentType(contentType)) {
-      case "text/html":
-      case "text/*":
-        return new OupTextTypeValidator();
-      default:
-        return null;
-      }
+  public static class Factory extends BaseScContentValidator.Factory {
+    public ContentValidator getTextTypeValidator() {
+      return new OupTextTypeValidator();
     }
   }
   

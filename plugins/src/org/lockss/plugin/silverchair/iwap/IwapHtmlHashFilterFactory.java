@@ -38,17 +38,15 @@ import org.htmlparser.NodeFilter;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.silverchair.ScHtmlHashFilterFactory;
+import org.lockss.plugin.silverchair.BaseScHtmlHashFilterFactory;
 import org.lockss.util.Logger;
 
-public class IwapHtmlHashFilterFactory extends ScHtmlHashFilterFactory {
+public class IwapHtmlHashFilterFactory extends BaseScHtmlHashFilterFactory {
 
-  @Override
-  protected boolean doSpecialFilter() {
+  protected boolean doExtraSpecialFilter() {
     return false;
   }
 
-  @Override
   protected boolean doXForm() {
     return true;
   }
@@ -69,13 +67,13 @@ public class IwapHtmlHashFilterFactory extends ScHtmlHashFilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", "ContentColumn"),
     };
     
-    NodeFilter[] moreFilters = new NodeFilter[] {
+    NodeFilter[] moreExcludeFilters = new NodeFilter[] {
         HtmlNodeFilters.tagWithAttributeRegex("div","class","^ref-list"),
         HtmlNodeFilters.tagWithAttribute("div","class","kwd-group"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "author-info-wrap"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pub-history-wrap"),
     };
     
-    return createFilteredInputStream(au, in, encoding, includeFilters, moreFilters);
+    return createFilteredInputStream(au, in, encoding, includeFilters, moreExcludeFilters);
   }
 }

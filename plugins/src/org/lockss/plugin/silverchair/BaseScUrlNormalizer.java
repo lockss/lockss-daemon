@@ -30,32 +30,24 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.silverchair.oup;
-
-import java.util.regex.*;
+package org.lockss.plugin.silverchair;
 
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.silverchair.BaseScUrlNormalizer;
 
 /**
  * <p>
- * URLs on OUP meeting abstract articles have param ?searchresult=1, which can be removed
+ * Child plugins on Silverchair can override
  * </p>
  * <ul>
- * <li><code>https://academic.oup.com/ageing/article/46/suppl_1/i39/3828923?searchresult=1</code></li>
- * <li>https://academic.oup.com/ageing/article/46/suppl_1/i39/3828923</li>
+ * <li><code>http://jamanetwork.com/journals/jama/fullarticle/2174029?linkid=12694817</code></li>
+ * <li>http://jamanetwork.com/journals/jama/fullarticle/2174029</li>
  * </ul>
  */
-public class OupScUrlNormalizer extends BaseScUrlNormalizer {
+public class BaseScUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
 
-  private static final Pattern RESULT_PATTERN = Pattern.compile("[?]searchresult=\\d+$", Pattern.CASE_INSENSITIVE);
-  private static final String RESULT_CANONICAL = "";
-  
-  
   @Override
   public String additionalNormalization(String url, ArchivalUnit au) throws PluginException {
-    url = RESULT_PATTERN.matcher(url).replaceFirst(RESULT_CANONICAL);
     return url;
   }
   

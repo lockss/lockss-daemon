@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2017 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,13 +32,11 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.silverchair.ama;
 
-import java.io.IOException;
 import java.util.regex.Pattern;
 
 import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.HttpToHttpsUrlConsumer;
-import org.lockss.plugin.base.SimpleUrlConsumer;
 import org.lockss.util.Logger;
 
 /**

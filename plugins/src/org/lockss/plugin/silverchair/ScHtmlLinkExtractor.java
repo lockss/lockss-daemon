@@ -41,6 +41,7 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 
+@Deprecated
 public class ScHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
 
   private static final Logger logger = Logger.getLogger(ScHtmlLinkExtractor.class);

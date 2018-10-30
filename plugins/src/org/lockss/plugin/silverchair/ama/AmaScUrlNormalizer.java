@@ -36,6 +36,7 @@ import java.util.regex.*;
 
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.silverchair.BaseScUrlNormalizer;
 
 /**
  * <p>
@@ -46,7 +47,7 @@ import org.lockss.plugin.*;
  * <li>http://jamanetwork.com/journals/jama/fullarticle/2174029</li>
  * </ul>
  */
-public class AmaScUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
+public class AmaScUrlNormalizer extends BaseScUrlNormalizer {
 
   private static final Pattern LINKID_PATTERN = Pattern.compile("[?]linkid=\\d+$", Pattern.CASE_INSENSITIVE);
   private static final String LINKID_CANONICAL = "";
