@@ -112,7 +112,7 @@ implements SourceXmlSchemaHelper {
   private static String pub_eissn = "issue/jinfo/eissn";
   private static String pub_volume = "issue/pubinfo/vid";
   private static String pub_issue = "issue/pubinfo/iid";
-  private static String pub_year = "issue/pubinfo/cd[@year]";
+  private static String pub_year = "issue/pubinfo/cd/@year";
   // article level
   // The title that does not have the purpose attribute set is the choice
   private static String art_title = "artcon/genhdr/tig/atl[not(@purpose)]";

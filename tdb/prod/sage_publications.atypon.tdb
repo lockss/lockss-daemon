@@ -3975,7 +3975,7 @@
         au < released ; 2015-2016 ; Behavioral Disorders Volume 41 ; 41 ; bhda >
         au < released ; 2016-2017 ; Behavioral Disorders Volume 42 ; 42 ; bhda >
         au < manifest ; 2017-2018 ; Behavioral Disorders Volume 43 ; 43 ; bhda >
-        au < expected ; 2018-2019 ; Behavioral Disorders Volume 44 ; 44 ; bhda >
+        au < manifest ; 2018-2019 ; Behavioral Disorders Volume 44 ; 44 ; bhda >
 
   }
 
@@ -5194,7 +5194,7 @@
   
         au < manifest ; 2018 ; Cahiers Élisabéthains Volume 95 ; 95 ; caea >
         au < manifest ; 2018 ; Cahiers Élisabéthains Volume 96 ; 96 ; caea >
-        au < expected ; 2018 ; Cahiers Élisabéthains Volume 97 ; 97 ; caea >
+        au < manifest ; 2018 ; Cahiers Élisabéthains Volume 97 ; 97 ; caea >
     }
 
     {
@@ -5349,7 +5349,7 @@
       au < released ; 2015-2016 ; California Management Review Volume 58 ; 58 ; cmra >
       au < released ; 2016-2017 ; California Management Review Volume 59 ; 59 ; cmra >
       au < manifest ; 2017-2018 ; California Management Review Volume 60 ; 60 ; cmra >
-      au < expected ; 2018-2019 ; California Management Review Volume 61 ; 61 ; cmra >
+      au < manifest ; 2018-2019 ; California Management Review Volume 61 ; 61 ; cmra >
 
   }
  
@@ -5724,8 +5724,39 @@
         au < released ; 2015 ; Cell Transplantation Volume 24 ; 24 ; clla >
         au < released ; 2016 ; Cell Transplantation Volume 25 ; 25 ; clla >
         au < released ; 2017 ; Cell Transplantation Volume 26 ; 26 ; clla >
-  
         au < manifest ; 2018 ; Cell Transplantation Volume 27 ; 27 ; clla >
+
+    }
+
+    {
+
+      title <
+        name = Cellular Polymers ;
+        issn = 0262-4893 ;
+        eissn = 1478-2421
+      >
+
+      #journal_id = crp
+
+        au < manifest ; 2001 ; Cellular Polymers Volume 20 ; 20 ; crpa >
+        au < manifest ; 2002 ; Cellular Polymers Volume 21 ; 21 ; crpa >
+        au < manifest ; 2003 ; Cellular Polymers Volume 22 ; 22 ; crpa >
+        au < manifest ; 2004 ; Cellular Polymers Volume 23 ; 23 ; crpa >
+        au < manifest ; 2005 ; Cellular Polymers Volume 24 ; 24 ; crpa >
+        au < manifest ; 2006 ; Cellular Polymers Volume 25 ; 25 ; crpa >
+        au < manifest ; 2007 ; Cellular Polymers Volume 26 ; 26 ; crpa >
+        au < manifest ; 2008 ; Cellular Polymers Volume 27 ; 27 ; crpa >
+        au < manifest ; 2009 ; Cellular Polymers Volume 28 ; 28 ; crpa >
+        au < manifest ; 2010 ; Cellular Polymers Volume 29 ; 29 ; crpa >
+        au < manifest ; 2011 ; Cellular Polymers Volume 30 ; 30 ; crpa >
+        au < manifest ; 2012 ; Cellular Polymers Volume 31 ; 31 ; crpa >
+        au < manifest ; 2013 ; Cellular Polymers Volume 32 ; 32 ; crpa >
+        au < manifest ; 2014 ; Cellular Polymers Volume 33 ; 33 ; crpa >
+        au < manifest ; 2015 ; Cellular Polymers Volume 34 ; 34 ; crpa >
+        au < manifest ; 2016 ; Cellular Polymers Volume 35 ; 35 ; crpa >
+        au < manifest ; 2017 ; Cellular Polymers Volume 36 ; 36 ; crpa >
+        au < manifest ; 2018 ; Cellular Polymers Volume 37 ; 37 ; crpa >
+
     }
 
     {
@@ -6953,7 +6984,7 @@
         au < manifest ; 2015-2016 ; Communication Disorders Quarterly Volume 37 ; 37 ; cdqc >
         au < released ; 2016-2017 ; Communication Disorders Quarterly Volume 38 ; 38 ; cdqc >
         au < manifest ; 2017-2018 ; Communication Disorders Quarterly Volume 39 ; 39 ; cdqc >
-        au < expected ; 2018-2019 ; Communication Disorders Quarterly Volume 40 ; 40 ; cdqc >
+        au < manifest ; 2018-2019 ; Communication Disorders Quarterly Volume 40 ; 40 ; cdqc >
 
       }
 
@@ -9033,7 +9064,7 @@
         au < manifest ; 2015-2016 ; Currents in Biblical Research Volume 14 ; 14 ; cbib >
         au < released ; 2016-2017 ; Currents in Biblical Research Volume 15 ; 15 ; cbib >
         au < manifest ; 2017-2018 ; Currents in Biblical Research Volume 16 ; 16 ; cbib >
-        au < expected ; 2018-2019 ; Currents in Biblical Research Volume 17 ; 17 ; cbib >
+        au < manifest ; 2018-2019 ; Currents in Biblical Research Volume 17 ; 17 ; cbib >
 
       }
 
@@ -11009,6 +11040,31 @@
   {
 
     title <
+      name = European View ;
+      issn = 1781-6858 ;
+      eissn = 1865-5831
+    >
+
+    #journal_id = euv
+
+    au < manifest ; 2007 ; European View Volume 6 ; 6 ; euva >
+    au < manifest ; 2008 ; European View Volume 7 ; 7 ; euva >
+    au < manifest ; 2009 ; European View Volume 8 ; 8 ; euva >
+    au < manifest ; 2010 ; European View Volume 9 ; 9 ; euva >
+    au < manifest ; 2011 ; European View Volume 10 ; 10 ; euva >
+    au < manifest ; 2012 ; European View Volume 11 ; 11 ; euva >
+    au < manifest ; 2013 ; European View Volume 12 ; 12 ; euva >
+    au < manifest ; 2014 ; European View Volume 13 ; 13 ; euva >
+    au < manifest ; 2015 ; European View Volume 14 ; 14 ; euva >
+    au < manifest ; 2016 ; European View Volume 15 ; 15 ; euva >
+    au < manifest ; 2017 ; European View Volume 16 ; 16 ; euva >
+    au < manifest ; 2018 ; European View Volume 17 ; 17 ; euva >
+
+  }
+
+  {
+
+    title <
       name = European Educational Research Journal ;
       eissn = 1474-9041 ;
       issnl = 1474-9041
@@ -12512,7 +12568,7 @@
         au < manifest ; 2015-2016 ; Feminist Theology Volume 24 ; 24 ; ftha >
         au < released ; 2016-2017 ; Feminist Theology Volume 25 ; 25 ; ftha >
         au < manifest ; 2017-2018 ; Feminist Theology Volume 26 ; 26 ; ftha >
-        au < expected ; 2018-2019 ; Feminist Theology Volume 27 ; 27 ; ftha >
+        au < manifest ; 2018-2019 ; Feminist Theology Volume 27 ; 27 ; ftha >
 
       }
 
@@ -12600,6 +12656,26 @@
         au < manifest ; 2018 ; Field Methods Volume 30 ; 30 ; fmxd >
 
       }
+
+    }
+
+    {
+
+      title <
+        name = FIIB Business Review ;
+        issn = 2319-7145 ;
+        eissn = 2455-2658
+      >
+
+      #journal_id = fib
+
+        au < manifest ; 2011-2012 ; FIIB Business Review Volume 1 ; 1 ; fiba >
+        au < manifest ; 2013 ; FIIB Business Review Volume 2 ; 2 ; fiba >
+        au < manifest ; 2014 ; FIIB Business Review Volume 3 ; 3 ; fiba >
+        au < manifest ; 2015 ; FIIB Business Review Volume 4 ; 4 ; fiba >
+        au < manifest ; 2016 ; FIIB Business Review Volume 5 ; 5 ; fiba >
+        au < manifest ; 2017 ; FIIB Business Review Volume 6 ; 6 ; fiba >
+        au < manifest ; 2018 ; FIIB Business Review Volume 7 ; 7 ; fiba >
 
     }
 
@@ -12905,6 +12981,21 @@
         au < manifest ; 2018 ; Games and Culture Volume 13 ; 13 ; gaca >
 
       }
+
+    }
+
+    {
+
+      title <
+        name = Gender and the Genome ;
+        issn = 2470-2897 ;
+        eissn = 2470-2900
+      >
+
+      #journal_id = gng
+
+        au < manifest ; 2017  ; Gender and the Genome Volume 1 ; 1 ; gnga >
+        au < manifest ; 2018  ; Gender and the Genome Volume 2 ; 2 ; gnga >
 
     }
 
@@ -15842,8 +15933,8 @@
         au < released ; 2011-2012 ; The Indian Economic Journal Volume 59 ; 59 ; ieja >
         au < released ; 2012-2013 ; The Indian Economic Journal Volume 60 ; 60 ; ieja >
 
-        au < ready ; 2016 ; The Indian Economic Journal Volume 64 ; 64 ; ieja >
-        au < ready ; 2017 ; The Indian Economic Journal Volume 65 ; 65 ; ieja >
+        au < released ; 2016 ; The Indian Economic Journal Volume 64 ; 64 ; ieja >
+        au < released ; 2017 ; The Indian Economic Journal Volume 65 ; 65 ; ieja >
         au < expected ; 2018 ; The Indian Economic Journal Volume 66 ; 66 ; ieja >
 
     }
@@ -18546,7 +18637,7 @@
         au < released ; 2014 ; International Studies Volume 51 ; 51 ; isqa >
         au < released ; 2015 ; International Studies Volume 52 ; 52 ; isqa >
         au < released ; 2016 ; International Studies Volume 53 ; 53 ; isqa >
-        au < ready ; 2017 ; International Studies Volume 54 ; 54 ; isqa >
+        au < released ; 2017 ; International Studies Volume 54 ; 54 ; isqa >
         au < manifest ; 2018 ; International Studies Volume 55 ; 55 ; isqa >
 
       }
@@ -18793,7 +18884,7 @@
         au < manifest ; 2015-2016 ; Journal for the Study of the Old Testament Volume 40 ; 40 ; jota >
         au < released ; 2016-2017 ; Journal for the Study of the Old Testament Volume 41 ; 41 ; jota >
         au < manifest ; 2017-2018 ; Journal for the Study of the Old Testament Volume 42 ; 42 ; jota >
-        au < expected ; 2018-2019 ; Journal for the Study of the Old Testament Volume 43 ; 43 ; jota >
+        au < manifest ; 2018-2019 ; Journal for the Study of the Old Testament Volume 43 ; 43 ; jota >
 
       }
 
@@ -18839,7 +18930,7 @@
         au < manifest ; 2015-2016 ; Journal for the Study of the Pseudepigrapha Volume 25 ; 25 ; jspa >
         au < released ; 2016-2017 ; Journal for the Study of the Pseudepigrapha Volume 26 ; 26 ; jspa >
         au < manifest ; 2017-2018 ; Journal for the Study of the Pseudepigrapha Volume 27 ; 27 ; jspa >
-        au < expected ; 2018-2019 ; Journal for the Study of the Pseudepigrapha Volume 28 ; 28 ; jspa >
+        au < manifest ; 2018-2019 ; Journal for the Study of the Pseudepigrapha Volume 28 ; 28 ; jspa >
 
       }
 
@@ -23059,7 +23150,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < released ; 2015-2016 ; Journal of General Management Volume 41 ; 41 ; gema >
       au < released ; 2016-2017 ; Journal of General Management Volume 42 ; 42 ; gema >
       au < manifest ; 2017-2018 ; Journal of General Management Volume 43 ; 43 ; gema >
-      au < expected ; 2018-2019 ; Journal of General Management Volume 44 ; 44 ; gema >
+      au < manifest ; 2018-2019 ; Journal of General Management Volume 44 ; 44 ; gema >
 
   }
 
@@ -24234,6 +24325,38 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
   {
 
     title <
+      name = Journal of International Marketing ;
+      issn = 1069-031X ;
+      eissn = 1547-7215
+    >
+
+    #journal_id = jig
+
+      au < manifest ; 2000 ; Journal of International Marketing Volume 8 ; 8 ; jiga >
+      au < manifest ; 2000-2001 ; Journal of International Marketing Volume 9 ; 9 ; jiga >
+      au < manifest ; 2002 ; Journal of International Marketing Volume 10 ; 10 ; jiga >
+      au < manifest ; 2003 ; Journal of International Marketing Volume 11 ; 11 ; jiga >
+      au < manifest ; 2004 ; Journal of International Marketing Volume 12 ; 12 ; jiga >
+      au < manifest ; 2005 ; Journal of International Marketing Volume 13 ; 13 ; jiga >
+      au < manifest ; 2006 ; Journal of International Marketing Volume 14 ; 14 ; jiga >
+      au < manifest ; 2007 ; Journal of International Marketing Volume 15 ; 15 ; jiga >
+      au < manifest ; 2008 ; Journal of International Marketing Volume 16 ; 16 ; jiga >
+      au < manifest ; 2009 ; Journal of International Marketing Volume 17 ; 17 ; jiga >
+      au < manifest ; 2010 ; Journal of International Marketing Volume 18 ; 18 ; jiga >
+      au < manifest ; 2011 ; Journal of International Marketing Volume 19 ; 19 ; jiga >
+      au < manifest ; 2012 ; Journal of International Marketing Volume 20 ; 20 ; jiga >
+      au < manifest ; 2013 ; Journal of International Marketing Volume 21 ; 21 ; jiga >
+      au < manifest ; 2014 ; Journal of International Marketing Volume 22 ; 22 ; jiga >
+      au < manifest ; 2015 ; Journal of International Marketing Volume 23 ; 23 ; jiga >
+      au < manifest ; 2016 ; Journal of International Marketing Volume 24 ; 24 ; jiga >
+      au < manifest ; 2017 ; Journal of International Marketing Volume 25 ; 25 ; jiga >
+      au < manifest ; 2018 ; Journal of International Marketing Volume 26 ; 26 ; jiga >
+
+  }
+
+  {
+
+    title <
       name = Journal of International Political Theory ;
       issn = 1755-0882 ;
       eissn = 1755-1722
@@ -25050,6 +25173,38 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
     {
 
       title <
+        name = Journal of Marketing Research ;
+        issn = 0022-2437 ;
+        eissn = 1547-7193
+      >
+
+      #journal_id = mrj
+
+        au < manifest ; 2000 ; Journal of Marketing Research Volume 37 ; 37 ; mrja >
+        au < manifest ; 2001 ; Journal of Marketing Research Volume 38 ; 38 ; mrja >
+        au < manifest ; 2002 ; Journal of Marketing Research Volume 39 ; 39 ; mrja >
+        au < manifest ; 2003 ; Journal of Marketing Research Volume 40 ; 40 ; mrja >
+        au < manifest ; 2004 ; Journal of Marketing Research Volume 41 ; 41 ; mrja >
+        au < manifest ; 2005 ; Journal of Marketing Research Volume 42 ; 42 ; mrja >
+        au < manifest ; 2006 ; Journal of Marketing Research Volume 43 ; 43 ; mrja >
+        au < manifest ; 2007 ; Journal of Marketing Research Volume 44 ; 44 ; mrja >
+        au < manifest ; 2008 ; Journal of Marketing Research Volume 45 ; 45 ; mrja >
+        au < manifest ; 2009 ; Journal of Marketing Research Volume 46 ; 46 ; mrja >
+        au < manifest ; 2010 ; Journal of Marketing Research Volume 47 ; 47 ; mrja >
+        au < manifest ; 2011 ; Journal of Marketing Research Volume 48 ; 48 ; mrja >
+        au < manifest ; 2012 ; Journal of Marketing Research Volume 49 ; 49 ; mrja >
+        au < manifest ; 2013 ; Journal of Marketing Research Volume 50 ; 50 ; mrja >
+        au < manifest ; 2014 ; Journal of Marketing Research Volume 51 ; 51 ; mrja >
+        au < manifest ; 2015 ; Journal of Marketing Research Volume 52 ; 52 ; mrja >
+        au < manifest ; 2016 ; Journal of Marketing Research Volume 53 ; 53 ; mrja >
+        au < manifest ; 2017 ; Journal of Marketing Research Volume 54 ; 54 ; mrja >
+        au < manifest ; 2018 ; Journal of Marketing Research Volume 55 ; 55 ; mrja >
+
+    }
+
+    {
+
+      title <
         name = Journal of Material Culture ;
         issn = 1359-1835 ;
         eissn = 1460-3586 ;
@@ -25238,6 +25393,24 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
     {
 
       title <
+        name = Journal of National Law University Delhi ;
+        issn = 2277-4017 ;
+        eissn = 2516-8851
+      >
+
+        #journal_id = jlu
+
+        au < manifest ; 2013 ; Journal of National Law University Delhi Volume 1 ; 1 ; jlub >
+        au < manifest ; 2014 ; Journal of National Law University Delhi Volume 2 ; 2 ; jlub >
+        au < manifest ; 2015 ; Journal of National Law University Delhi Volume 3 ; 3 ; jlub >
+        au < manifest ; 2016 ; Journal of National Law University Delhi Volume 4 ; 4 ; jlub >
+        au < manifest ; 2018 ; Journal of National Law University Delhi Volume 5 ; 5 ; jlub >
+
+    }
+
+    {
+
+      title <
         name = Journal of Near Infrared Spectroscopy ;
         issn = 0967-0335 ;
         eissn = 1751-6552
@@ -25271,6 +25444,20 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2016 ; Journal of Near Infrared Spectroscopy Volume 24 ; 24 ; jnsa >
         au < released ; 2017 ; Journal of Near Infrared Spectroscopy Volume 25 ; 25 ; jnsa >
         au < manifest ; 2018 ; Journal of Near Infrared Spectroscopy Volume 26 ; 26 ; jnsa >
+
+    }
+
+    {
+
+      title <
+        name = Journal of Neonatology ;
+        issn = 0973-2179 ;
+        eissn = 0973-2187
+      >
+
+      #jounral_id = nnt
+
+        au < manifest ; 2018 ; Journal of Neonatology Volume 32 ; 32 ; nnta >
 
     }
 
@@ -25997,17 +26184,51 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
     {
 
       title <
+        name = Psoriasis Forum ;
+        issn = 1089-3504
+      >
+
+        #param[journal_id] = jps
+        #continued_by = 2475-5303
+
+        au < manifest ; 1995 ; Psoriasis Forum Volume 1a ; 1a ; jpsb >
+        au < manifest ; 1996 ; Psoriasis Forum Volume 2a ; 2a ; jpsb >
+        au < manifest ; 1997 ; Psoriasis Forum Volume 3a ; 3a ; jpsb >
+        au < manifest ; 1998 ; Psoriasis Forum Volume 4a ; 4a ; jpsb >
+        au < manifest ; 1999 ; Psoriasis Forum Volume 5a ; 5a ; jpsb >
+        au < manifest ; 2000 ; Psoriasis Forum Volume 6a ; 6a ; jpsb >
+        au < manifest ; 2001 ; Psoriasis Forum Volume 7a ; 7a ; jpsb >
+        au < manifest ; 2002 ; Psoriasis Forum Volume 8a ; 8a ; jpsb >
+        au < manifest ; 2003 ; Psoriasis Forum Volume 9a ; 9a ; jpsb >
+        au < manifest ; 2004 ; Psoriasis Forum Volume 10a ; 10a ; jpsb >
+        au < manifest ; 2005 ; Psoriasis Forum Volume 11a ; 11a ; jpsb >
+        au < manifest ; 2006 ; Psoriasis Forum Volume 12a ; 12a ; jpsb >
+        au < manifest ; 2007 ; Psoriasis Forum Volume 13a ; 13a ; jpsb >
+        au < manifest ; 2008 ; Psoriasis Forum Volume 14a ; 14a ; jpsb >
+        au < manifest ; 2009 ; Psoriasis Forum Volume 15a ; 15a ; jpsb >
+        au < manifest ; 2010 ; Psoriasis Forum Volume 16a ; 16a ; jpsb >
+        au < manifest ; 2011 ; Psoriasis Forum Volume 17a ; 17a ; jpsb >
+        au < manifest ; 2012 ; Psoriasis Forum Volume 18a ; 18a ; jpsb >
+        au < manifest ; 2013 ; Psoriasis Forum Volume 19a ; 19a ; jpsb >
+        au < manifest ; 2014 ; Psoriasis Forum Volume 20a ; 20a ; jpsb >
+        au < manifest ; 2015 ; Psoriasis Forum Volume 21a ; 21a ; jpsb >
+
+    }
+
+    {
+
+      title <
         name = Journal of Psoriasis and Psoriatic Arthritis ;
         issn = 2475-5303 ;
         eissn = 2475-5311
       >
 
         #param[journal_id] = jps
+        #continues = 1089-3504
 
         au < released ; 2015-2016 ; Journal of Psoriasis and Psoriatic Arthritis Volume 1 ; 1 ; jpsa >
         au < released ; 2016-2017 ; Journal of Psoriasis and Psoriatic Arthritis Volume 2 ; 2 ; jpsa >
-        au < manifest ; 2017-2018 ; Journal of Psoriasis and Psoriatic Arthritis Volume 3 ; 3 ; jpsa >
-        au < expected ; 2018-2019 ; Journal of Psoriasis and Psoriatic Arthritis Volume 4 ; 4 ; jpsa >
+        au < manifest ; 2018 ; Journal of Psoriasis and Psoriatic Arthritis Volume 3 ; 3 ; jpsa >
 
     }
 
@@ -26178,6 +26399,38 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2018 ; Journal of Psychopharmacology Volume 32 ; 32 ; jopa >
 
       }
+
+    }
+
+    {
+
+      title <
+        name = Journal of Public Policy & Marketing ;
+        issn = 0748-6766 ;
+        eissn = 1547-7207
+      >
+
+      #journal_id = ppo
+
+        au < manifest ; 2000 ; Journal of Public Policy & Marketing Volume 19 ; 19 ; ppoa >
+        au < manifest ; 2001 ; Journal of Public Policy & Marketing Volume 20 ; 20 ; ppoa >
+        au < manifest ; 2002 ; Journal of Public Policy & Marketing Volume 21 ; 21 ; ppoa >
+        au < manifest ; 2003 ; Journal of Public Policy & Marketing Volume 22 ; 22 ; ppoa >
+        au < manifest ; 2004 ; Journal of Public Policy & Marketing Volume 23 ; 23 ; ppoa >
+        au < manifest ; 2005 ; Journal of Public Policy & Marketing Volume 24 ; 24 ; ppoa >
+        au < manifest ; 2006 ; Journal of Public Policy & Marketing Volume 25 ; 25 ; ppoa >
+        au < manifest ; 2007 ; Journal of Public Policy & Marketing Volume 26 ; 26 ; ppoa >
+        au < manifest ; 2008 ; Journal of Public Policy & Marketing Volume 27 ; 27 ; ppoa >
+        au < manifest ; 2009 ; Journal of Public Policy & Marketing Volume 28 ; 28 ; ppoa >
+        au < manifest ; 2010 ; Journal of Public Policy & Marketing Volume 29 ; 29 ; ppoa >
+        au < manifest ; 2011 ; Journal of Public Policy & Marketing Volume 30 ; 30 ; ppoa >
+        au < manifest ; 2012 ; Journal of Public Policy & Marketing Volume 31 ; 31 ; ppoa >
+        au < manifest ; 2013 ; Journal of Public Policy & Marketing Volume 32 ; 32 ; ppoa >
+        au < manifest ; 2014 ; Journal of Public Policy & Marketing Volume 33 ; 33 ; ppoa >
+        au < manifest ; 2015 ; Journal of Public Policy & Marketing Volume 34 ; 34 ; ppoa >
+        au < manifest ; 2016 ; Journal of Public Policy & Marketing Volume 35 ; 35 ; ppoa >
+        au < manifest ; 2017 ; Journal of Public Policy & Marketing Volume 36 ; 36 ; ppoa >
+        au < manifest ; 2018 ; Journal of Public Policy & Marketing Volume 37 ; 37 ; ppoa >
 
     }
 
@@ -26602,9 +26855,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
         au < released ; 2016 ; Journal of Scleroderma and Related Disorders Volume 1 ; 1 ; jsoa >
         au < released ; 2017 ; Journal of Scleroderma and Related Disorders Volume 2 ; 2 ; jsoa >
-        au < released ; 2017 ; Journal of Scleroderma and Related Disorders Volume 3 ; 3 ; jsoa >
-        au < expected ; 2018 ; Journal of Scleroderma and Related Disorders Volume 4 ; 4 ; jsoa >
-        au < expected ; 2018 ; Journal of Scleroderma and Related Disorders Volume 5 ; 5 ; jsoa >
+        au < released ; 2018 ; Journal of Scleroderma and Related Disorders Volume 3 ; 3 ; jsoa >
 
     }
 
@@ -28612,6 +28863,26 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2002 ; Journal of Wide Bandgap Materials Volume 10 ; 10 ; jwba >
 
       }
+
+    }
+
+    {
+
+      title <
+        name = Journal on Migration and Human Security ;
+        issn = 2331-5024 ;
+        eissn = 2330-2488 ;
+        issnl = 2331-5024
+      >
+
+      #journal_id = mhs
+
+      au < manifest ; 2013 ; Journal on Migration and Human Security Volume 1 ; 1 ; mhsa >
+      au < manifest ; 2014 ; Journal on Migration and Human Security Volume 2 ; 2 ; mhsa >
+      au < manifest ; 2015 ; Journal on Migration and Human Security Volume 3 ; 3 ; mhsa >
+      au < manifest ; 2016 ; Journal on Migration and Human Security Volume 4 ; 4 ; mhsa >
+      au < manifest ; 2017 ; Journal on Migration and Human Security Volume 5 ; 5 ; mhsa >
+      au < expected ; 2018 ; Journal on Migration and Human Security Volume 6 ; 6 ; mhsa >
 
     }
 
@@ -32164,6 +32435,33 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
   }
 
     {
+  
+      title <
+        name = Nuclear Receptor Signaling ;
+        eissn = 1550-7629
+      >
+  
+      #journal_id = nrs
+  
+        au < manifest ; 2003 ; Nuclear Receptor Signaling Volume 1 ; 1 ; nrsa >
+        au < manifest ; 2004 ; Nuclear Receptor Signaling Volume 2 ; 2 ; nrsa >
+        au < manifest ; 2005 ; Nuclear Receptor Signaling Volume 3 ; 3 ; nrsa >
+        au < manifest ; 2006 ; Nuclear Receptor Signaling Volume 4 ; 4 ; nrsa >
+        au < manifest ; 2007 ; Nuclear Receptor Signaling Volume 5 ; 5 ; nrsa >
+        au < manifest ; 2008 ; Nuclear Receptor Signaling Volume 6 ; 6 ; nrsa >
+        au < manifest ; 2009 ; Nuclear Receptor Signaling Volume 7 ; 7 ; nrsa >
+        au < manifest ; 2010 ; Nuclear Receptor Signaling Volume 8 ; 8 ; nrsa >
+        au < manifest ; 2011 ; Nuclear Receptor Signaling Volume 9 ; 9 ; nrsa >
+        au < manifest ; 2012 ; Nuclear Receptor Signaling Volume 10 ; 10 ; nrsa >
+        au < manifest ; 2013 ; Nuclear Receptor Signaling Volume 11 ; 11 ; nrsa >
+        au < manifest ; 2014 ; Nuclear Receptor Signaling Volume 12 ; 12 ; nrsa >
+        au < manifest ; 2015 ; Nuclear Receptor Signaling Volume 13 ; 13 ; nrsa >
+        au < manifest ; 2016 ; Nuclear Receptor Signaling Volume 14 ; 14 ; nrsa >
+        au < manifest ; 2018 ; Nuclear Receptor Signaling Volume 15 ; 15 ; nrsa >
+  
+    }
+
+    {
 
       title <
         name = Nursing Ethics ;
@@ -32398,7 +32696,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < released ; 2017 ; OMEGA - Journal of Death and Dying Volume 75 ; 75 ; omea >
       au < released ; 2017 ; OMEGA - Journal of Death and Dying Volume 76 ; 76 ; omea >
       au < manifest ; 2018 ; OMEGA - Journal of Death and Dying Volume 77 ; 77 ; omea >
-      au < expected ; 2018 ; OMEGA - Journal of Death and Dying Volume 78 ; 78 ; omea >
+      au < manifest ; 2018 ; OMEGA - Journal of Death and Dying Volume 78 ; 78 ; omea >
       au < expected ; 2018 ; OMEGA - Journal of Death and Dying Volume 79 ; 79 ; omea >
 
   }
@@ -33871,6 +34169,59 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
   {
 
     title <
+      name = Polymers and Polymer Composites ;
+      issn = 0967-3911 ;
+      eissn = 1478-2391
+    >
+
+      #journal_id = ppc
+
+      au < manifest ; 2001 ; Polymers and Polymer Composites Volume 9  ; 9 ; ppca >
+      au < manifest ; 2002 ; Polymers and Polymer Composites Volume 10 ; 10 ; ppca >
+      au < manifest ; 2003 ; Polymers and Polymer Composites Volume 11 ; 11 ; ppca >
+      au < manifest ; 2004 ; Polymers and Polymer Composites Volume 12 ; 12 ; ppca >
+      au < manifest ; 2005 ; Polymers and Polymer Composites Volume 13 ; 13 ; ppca >
+      au < manifest ; 2006 ; Polymers and Polymer Composites Volume 14 ; 14 ; ppca >
+      au < manifest ; 2007 ; Polymers and Polymer Composites Volume 15 ; 15 ; ppca >
+      au < manifest ; 2008 ; Polymers and Polymer Composites Volume 16 ; 16 ; ppca >
+      au < manifest ; 2009 ; Polymers and Polymer Composites Volume 17 ; 17 ; ppca >
+      au < manifest ; 2010 ; Polymers and Polymer Composites Volume 18 ; 18 ; ppca >
+      au < manifest ; 2011 ; Polymers and Polymer Composites Volume 19 ; 19 ; ppca >
+      au < manifest ; 2012 ; Polymers and Polymer Composites Volume 20 ; 20 ; ppca >
+      au < manifest ; 2013 ; Polymers and Polymer Composites Volume 21 ; 21 ; ppca >
+      au < manifest ; 2014 ; Polymers and Polymer Composites Volume 22 ; 22 ; ppca >
+      au < manifest ; 2015 ; Polymers and Polymer Composites Volume 23 ; 23 ; ppca >
+      au < manifest ; 2016 ; Polymers and Polymer Composites Volume 24 ; 24 ; ppca >
+      au < manifest ; 2017 ; Polymers and Polymer Composites Volume 25 ; 25 ; ppca >
+      au < manifest ; 2018 ; Polymers and Polymer Composites Volume 26 ; 26 ; ppca >
+
+  }
+
+  {
+
+    title <
+      name = Polymers from Renewable Resources ;
+      issn = 2041-2479 ;
+      eissn = 2045-1377
+    >
+
+      #journal_id = prr
+
+      au < manifest ; 2010 ; Polymers from Renewable Resources Volume 1 ; 1 ; prra >
+      au < manifest ; 2011 ; Polymers from Renewable Resources Volume 2 ; 2 ; prra >
+      au < manifest ; 2012 ; Polymers from Renewable Resources Volume 3 ; 3 ; prra >
+      au < manifest ; 2013 ; Polymers from Renewable Resources Volume 4 ; 4 ; prra >
+      au < manifest ; 2014 ; Polymers from Renewable Resources Volume 5 ; 5 ; prra >
+      au < manifest ; 2015 ; Polymers from Renewable Resources Volume 6 ; 6 ; prra >
+      au < manifest ; 2016 ; Polymers from Renewable Resources Volume 7 ; 7 ; prra >
+      au < manifest ; 2017 ; Polymers from Renewable Resources Volume 8 ; 8 ; prra >
+      au < manifest ; 2018 ; Polymers from Renewable Resources Volume 9 ; 9 ; prra >
+
+  }
+
+  {
+
+    title <
       name = Power and Education ;
       eissn = 1757-7438 ;
       issnl = 1757-7438
@@ -35053,6 +35404,37 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2018 ; Progress in Physical Geography Volume 42 ; 42 ; ppga >
 
       }
+
+    }
+
+    {
+
+      title <
+        name = Progress in Rubber, Plastics and Recycling Technology ;
+        issn = 1477-7606 ;
+        eissn = 1478-2413
+      >
+
+        #journal_id = prpa
+
+        au < exists ; 2001 ; Progress in Rubber, Plastics and Recycling Technology Volume 17 ; 17 ; prpa >
+        au < manifest ; 2002 ; Progress in Rubber, Plastics and Recycling Technology Volume 18 ; 18 ; prpa >
+        au < manifest ; 2003 ; Progress in Rubber, Plastics and Recycling Technology Volume 19 ; 19 ; prpa >
+        au < manifest ; 2004 ; Progress in Rubber, Plastics and Recycling Technology Volume 20 ; 20 ; prpa >
+        au < manifest ; 2005 ; Progress in Rubber, Plastics and Recycling Technology Volume 21 ; 21 ; prpa >
+        au < manifest ; 2006 ; Progress in Rubber, Plastics and Recycling Technology Volume 22 ; 22 ; prpa >
+        au < manifest ; 2007 ; Progress in Rubber, Plastics and Recycling Technology Volume 23 ; 23 ; prpa >
+        au < manifest ; 2008 ; Progress in Rubber, Plastics and Recycling Technology Volume 24 ; 24 ; prpa >
+        au < manifest ; 2009 ; Progress in Rubber, Plastics and Recycling Technology Volume 25 ; 25 ; prpa >
+        au < manifest ; 2010 ; Progress in Rubber, Plastics and Recycling Technology Volume 26 ; 26 ; prpa >
+        au < manifest ; 2011 ; Progress in Rubber, Plastics and Recycling Technology Volume 27 ; 27 ; prpa >
+        au < manifest ; 2012 ; Progress in Rubber, Plastics and Recycling Technology Volume 28 ; 28 ; prpa >
+        au < manifest ; 2013 ; Progress in Rubber, Plastics and Recycling Technology Volume 29 ; 29 ; prpa >
+        au < manifest ; 2014 ; Progress in Rubber, Plastics and Recycling Technology Volume 30 ; 30 ; prpa >
+        au < manifest ; 2015 ; Progress in Rubber, Plastics and Recycling Technology Volume 31 ; 31 ; prpa >
+        au < manifest ; 2016 ; Progress in Rubber, Plastics and Recycling Technology Volume 32 ; 32 ; prpa >
+        au < manifest ; 2017 ; Progress in Rubber, Plastics and Recycling Technology Volume 33 ; 33 ; prpa >
+        au < manifest ; 2018 ; Progress in Rubber, Plastics and Recycling Technology Volume 34 ; 34 ; prpa >
 
     }
 
@@ -41270,7 +41652,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2018 ; Thesis Eleven Volume 145 ; 145 ; thea >
         au < manifest ; 2018 ; Thesis Eleven Volume 146 ; 146 ; thea >
         au < manifest ; 2018 ; Thesis Eleven Volume 147 ; 147 ; thea >
-        au < expected ; 2018 ; Thesis Eleven Volume 148 ; 148 ; thea >
+        au < manifest ; 2018 ; Thesis Eleven Volume 148 ; 148 ; thea >
         au < expected ; 2018 ; Thesis Eleven Volume 149 ; 149 ; thea >
 
       }
@@ -41803,6 +42185,59 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
     #param[journal_id] = trr
 
+      au < manifest ; 1996 ; Transportation Research Record Volume 1517 ; 1517 ; trra >
+      au < doesNotExist ; 1996 ; Transportation Research Record Volume 1518 ; 1518 ; trra >
+      au < manifest ; 1996 ; Transportation Research Record Volume 1519 ; 1519 ; trra >
+      au < doesNotExist ; 1996 ; Transportation Research Record Volume 1520 ; 1520 ; trra >
+      au < doesNotExist ; 1996 ; Transportation Research Record Volume 1521 ; 1521 ; trra >
+      au < manifest ; 1996 ; Transportation Research Record Volume 1522 ; 1522 ; trra >
+      au < doesNotExist ; 1996 ; Transportation Research Record Volume 1523 ; 1523 ; trra >
+      au < doesNotExist ; 1996 ; Transportation Research Record Volume 1524 ; 1524 ; trra >
+      au < doesNotExist ; 1996 ; Transportation Research Record Volume 1525 ; 1525 ; trra >
+      au < doesNotExist ; 1996 ; Transportation Research Record Volume 1526 ; 1526 ; trra >
+      au < manifest ; 1996 ; Transportation Research Record Volume 1527 ; 1527 ; trra >
+      au < manifest ; 1996 ; Transportation Research Record Volume 1528 ; 1528 ; trra >
+      au < manifest ; 1996 ; Transportation Research Record Volume 1529 ; 1529 ; trra >
+      au < manifest ; 1996 ; Transportation Research Record Volume 1530 ; 1530 ; trra >
+      au < manifest ; 1996 ; Transportation Research Record Volume 1531 ; 1531 ; trra >
+      au < manifest ; 1996 ; Transportation Research Record Volume 1532 ; 1532 ; trra >
+      au < exists ; 1996 ; Transportation Research Record Volume 1533 ; 1533 ; trra >
+      au < manifest ; 1996 ; Transportation Research Record Volume 1534 ; 1534 ; trra >
+      au < manifest ; 1996 ; Transportation Research Record Volume 1535 ; 1535 ; trra >
+      au < manifest ; 1996 ; Transportation Research Record Volume 1536 ; 1536 ; trra >
+      au < manifest ; 1996 ; Transportation Research Record Volume 1537 ; 1537 ; trra >
+      au < manifest ; 1996 ; Transportation Research Record Volume 1538 ; 1538 ; trra >
+      au < manifest ; 1996 ; Transportation Research Record Volume 1539 ; 1539 ; trra >
+      au < manifest ; 1996 ; Transportation Research Record Volume 1540 ; 1540 ; trra >
+      au < manifest ; 1996 ; Transportation Research Record Volume 1541 ; 1541 ; trra >
+      au < exists ; 1996 ; Transportation Research Record Volume 1542 ; 1542 ; trra >
+      au < manifest ; 1996 ; Transportation Research Record Volume 1543 ; 1543 ; trra >
+      au < manifest ; 1996 ; Transportation Research Record Volume 1544 ; 1544 ; trra >
+      au < exists ; 1996 ; Transportation Research Record Volume 1545 ; 1545 ; trra >
+      au < manifest ; 1996 ; Transportation Research Record Volume 1546 ; 1546 ; trra >
+      au < manifest ; 1996 ; Transportation Research Record Volume 1547 ; 1547 ; trra >
+      au < manifest ; 1996 ; Transportation Research Record Volume 1548 ; 1548 ; trra >
+      au < manifest ; 1996 ; Transportation Research Record Volume 1549 ; 1549 ; trra >
+      au < manifest ; 1996 ; Transportation Research Record Volume 1550 ; 1550 ; trra >
+      au < manifest ; 1996 ; Transportation Research Record Volume 1551 ; 1551 ; trra >
+      au < exists ; 1996 ; Transportation Research Record Volume 1552 ; 1552 ; trra >
+      au < exists ; 1996 ; Transportation Research Record Volume 1553 ; 1553 ; trra >
+      au < manifest ; 1996 ; Transportation Research Record Volume 1554 ; 1554 ; trra >
+      au < exists ; 1996 ; Transportation Research Record Volume 1555 ; 1555 ; trra >
+      au < manifest ; 1996 ; Transportation Research Record Volume 1556 ; 1556 ; trra >
+      au < manifest ; 1996 ; Transportation Research Record Volume 1557 ; 1557 ; trra >
+      au < manifest ; 1996 ; Transportation Research Record Volume 1558 ; 1558 ; trra >
+      au < manifest ; 1996 ; Transportation Research Record Volume 1559 ; 1559 ; trra >
+      au < manifest ; 1996 ; Transportation Research Record Volume 1560 ; 1560 ; trra >
+      au < manifest ; 1996 ; Transportation Research Record Volume 1561 ; 1561 ; trra >
+      au < manifest ; 1996 ; Transportation Research Record Volume 1562 ; 1562 ; trra >
+      au < manifest ; 1996 ; Transportation Research Record Volume 1563 ; 1563 ; trra >
+      au < manifest ; 1996 ; Transportation Research Record Volume 1564 ; 1564 ; trra >
+      au < manifest ; 1996 ; Transportation Research Record Volume 1565 ; 1565 ; trra >
+      au < manifest ; 1996 ; Transportation Research Record Volume 1566 ; 1566 ; trra >
+
+      au < manifest ; 1997 ; Transportation Research Record Volume 1570 ; 1570 ; trra >
+
       au < manifest ; 2005 ; Transportation Research Record Volume 1901 ; 1901 ; trra >
       au < manifest ; 2005 ; Transportation Research Record Volume 1902 ; 1902 ; trra >
       au < manifest ; 2005 ; Transportation Research Record Volume 1903 ; 1903 ; trra >
@@ -41844,6 +42279,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < manifest ; 2005 ; Transportation Research Record Volume 1939 ; 1939 ; trra >
       au < manifest ; 2005 ; Transportation Research Record Volume 1940 ; 1940 ; trra >
       au < manifest ; 2005 ; Transportation Research Record Volume 1941 ; 1941 ; trra >
+
       au < manifest ; 2006 ; Transportation Research Record Volume 1942 ; 1942 ; trra >
       au < manifest ; 2006 ; Transportation Research Record Volume 1943 ; 1943 ; trra >
       au < manifest ; 2006 ; Transportation Research Record Volume 1944 ; 1944 ; trra >
@@ -41891,6 +42327,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < manifest ; 2006 ; Transportation Research Record Volume 1986 ; 1986 ; trra >
       au < manifest ; 2006 ; Transportation Research Record Volume 1987 ; 1987 ; trra >
       au < manifest ; 2006 ; Transportation Research Record Volume 1988 ; 1988 ; trra >
+
       au < manifest ; 2007 ; Transportation Research Record Volume 1989-1 ; 1989-1 ; trra >
       au < manifest ; 2007 ; Transportation Research Record Volume 1989-2 ; 1989-2 ; trra >
       au < manifest ; 2007 ; Transportation Research Record Volume 1990 ; 1990 ; trra >
@@ -41944,6 +42381,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < manifest ; 2007 ; Transportation Research Record Volume 2038 ; 2038 ; trra >
       au < manifest ; 2007 ; Transportation Research Record Volume 2039 ; 2039 ; trra >
       au < manifest ; 2007 ; Transportation Research Record Volume 2040 ; 2040 ; trra >
+
       au < released ; 2008 ; Transportation Research Record Volume 2041 ; 2041 ; trra >
       au < released ; 2008 ; Transportation Research Record Volume 2042 ; 2042 ; trra >
       au < released ; 2008 ; Transportation Research Record Volume 2043 ; 2043 ; trra >
@@ -41993,6 +42431,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < released ; 2008 ; Transportation Research Record Volume 2087 ; 2087 ; trra >
       au < released ; 2008 ; Transportation Research Record Volume 2088 ; 2088 ; trra >
       au < released ; 2008 ; Transportation Research Record Volume 2089 ; 2089 ; trra >
+
       au < released ; 2009 ; Transportation Research Record Volume 2090 ; 2090 ; trra >
       au < released ; 2009 ; Transportation Research Record Volume 2091 ; 2091 ; trra >
       au < released ; 2009 ; Transportation Research Record Volume 2092 ; 2092 ; trra >
@@ -42044,6 +42483,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < released ; 2009 ; Transportation Research Record Volume 2138 ; 2138 ; trra >
       au < released ; 2009 ; Transportation Research Record Volume 2139 ; 2139 ; trra >
       au < released ; 2009 ; Transportation Research Record Volume 2140 ; 2140 ; trra >
+
       au < released ; 2010 ; Transportation Research Record Volume 2141 ; 2141 ; trra >
       au < released ; 2010 ; Transportation Research Record Volume 2142 ; 2142 ; trra >
       au < released ; 2010 ; Transportation Research Record Volume 2143 ; 2143 ; trra >
@@ -42106,6 +42546,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < released ; 2010 ; Transportation Research Record Volume 2200 ; 2200 ; trra >
       au < released ; 2010 ; Transportation Research Record Volume 2201 ; 2201 ; trra >
       au < released ; 2010 ; Transportation Research Record Volume 2202 ; 2202 ; trra >
+
       au < released ; 2011 ; Transportation Research Record Volume 2203 ; 2203 ; trra >
       au < released ; 2011 ; Transportation Research Record Volume 2204 ; 2204 ; trra >
       au < released ; 2011 ; Transportation Research Record Volume 2205 ; 2205 ; trra >
@@ -42169,6 +42610,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < released ; 2011 ; Transportation Research Record Volume 2263 ; 2263 ; trra >
       au < released ; 2011 ; Transportation Research Record Volume 2264 ; 2264 ; trra >
       au < released ; 2011 ; Transportation Research Record Volume 2265 ; 2265 ; trra >
+
       au < released ; 2012 ; Transportation Research Record Volume 2266 ; 2266 ; trra >
       au < released ; 2012 ; Transportation Research Record Volume 2267 ; 2267 ; trra >
       au < released ; 2012 ; Transportation Research Record Volume 2268 ; 2268 ; trra >
@@ -42228,6 +42670,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < released ; 2012 ; Transportation Research Record Volume 2322 ; 2322 ; trra >
       au < released ; 2012 ; Transportation Research Record Volume 2323 ; 2323 ; trra >
       au < released ; 2012 ; Transportation Research Record Volume 2324 ; 2324 ; trra >
+
       au < released ; 2013 ; Transportation Research Record Volume 2325 ; 2325 ; trra >
       au < released ; 2013 ; Transportation Research Record Volume 2326 ; 2326 ; trra >
       au < released ; 2013 ; Transportation Research Record Volume 2327 ; 2327 ; trra >
@@ -42259,7 +42702,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < released ; 2013 ; Transportation Research Record Volume 2353 ; 2353 ; trra >
       au < released ; 2013 ; Transportation Research Record Volume 2354 ; 2354 ; trra >
       au < released ; 2013 ; Transportation Research Record Volume 2355 ; 2355 ; trra >
-      au < exists ; 2013 ; Transportation Research Record Volume 2356 ; 2356 ; trra >
+      au < doesNotExist ; 2013 ; Transportation Research Record Volume 2356 ; 2356 ; trra >
       au < released ; 2013 ; Transportation Research Record Volume 2357 ; 2357 ; trra >
       au < released ; 2013 ; Transportation Research Record Volume 2358 ; 2358 ; trra >
       au < released ; 2013 ; Transportation Research Record Volume 2359 ; 2359 ; trra >
@@ -42303,6 +42746,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < released ; 2013 ; Transportation Research Record Volume 2397 ; 2397 ; trra >
       au < released ; 2013 ; Transportation Research Record Volume 2398 ; 2398 ; trra >
       au < released ; 2013 ; Transportation Research Record Volume 2399 ; 2399 ; trra >
+
       au < released ; 2014 ; Transportation Research Record Volume 2400 ; 2400 ; trra >
       au < released ; 2014 ; Transportation Research Record Volume 2401 ; 2401 ; trra >
       au < released ; 2014 ; Transportation Research Record Volume 2402 ; 2402 ; trra >
@@ -42374,6 +42818,97 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < released ; 2014 ; Transportation Research Record Volume 2468 ; 2468 ; trra >
       au < released ; 2014 ; Transportation Research Record Volume 2469 ; 2469 ; trra >
 
+      au < manifest ; 2015 ; Transportation Research Record Volume 2471 ; 2471 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2472 ; 2472 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2473 ; 2473 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2474 ; 2474 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2475 ; 2475 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2476 ; 2476 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2477 ; 2477 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2478 ; 2478 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2479 ; 2479 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2480 ; 2480 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2481 ; 2481 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2482 ; 2482 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2483 ; 2483 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2484 ; 2484 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2485 ; 2485 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2486 ; 2486 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2487 ; 2487 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2488 ; 2488 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2489 ; 2489 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2490 ; 2490 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2491 ; 2491 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2492 ; 2492 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2493 ; 2493 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2494 ; 2494 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2495 ; 2495 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2496 ; 2496 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2497 ; 2497 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2498 ; 2498 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2499 ; 2499 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2500 ; 2500 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2501 ; 2501 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2502 ; 2502 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2503 ; 2503 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2504 ; 2504 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2505 ; 2505 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2506 ; 2506 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2507 ; 2507 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2508 ; 2508 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2509 ; 2509 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2510 ; 2510 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2511 ; 2511 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2512 ; 2512 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2513 ; 2513 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2514 ; 2514 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2515 ; 2515 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2516 ; 2516 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2517 ; 2517 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2518 ; 2518 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2519 ; 2519 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2520 ; 2520 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2521 ; 2521 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2522 ; 2522 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2523 ; 2523 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2524 ; 2524 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2525 ; 2525 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2526 ; 2526 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2527 ; 2527 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2528 ; 2528 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2529 ; 2529 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2530 ; 2530 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2531 ; 2531 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2532 ; 2532 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2533 ; 2533 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2534 ; 2534 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2535 ; 2535 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2536 ; 2536 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2537 ; 2537 ; trra >
+      au < manifest ; 2015 ; Transportation Research Record Volume 2538 ; 2538 ; trra >
+
+      au < manifest ; 2016 ; Transportation Research Record Volume 2539 ; 2539 ; trra >
+      au < doesNotExist ; 2016 ; Transportation Research Record Volume 2540 ; 2540 ; trra >
+      au < doesNotExist ; 2016 ; Transportation Research Record Volume 2541 ; 2541 ; trra >
+      au < manifest ; 2016 ; Transportation Research Record Volume 2542 ; 2542 ; trra >
+      au < manifest ; 2016 ; Transportation Research Record Volume 2543 ; 2543 ; trra >
+      au < doesNotExist ; 2016 ; Transportation Research Record Volume 2544 ; 2544 ; trra >
+      au < doesNotExist ; 2016 ; Transportation Research Record Volume 2545 ; 2545 ; trra >
+      au < doesNotExist ; 2016 ; Transportation Research Record Volume 2546 ; 2546 ; trra >
+      au < doesNotExist ; 2016 ; Transportation Research Record Volume 2547 ; 2547 ; trra >
+      au < manifest ; 2016 ; Transportation Research Record Volume 2548 ; 2548 ; trra >
+      au < doesNotExist ; 2016 ; Transportation Research Record Volume 2549 ; 2549 ; trra >
+      au < manifest ; 2016 ; Transportation Research Record Volume 2550 ; 2550 ; trra >
+      au < doesNotExist ; 2016 ; Transportation Research Record Volume 2551 ; 2551 ; trra >
+      au < doesNotExist ; 2016 ; Transportation Research Record Volume 2552 ; 2552 ; trra >
+      au < manifest ; 2016 ; Transportation Research Record Volume 2553 ; 2553 ; trra >
+      au < doesNotExist ; 2016 ; Transportation Research Record Volume 2554 ; 2554 ; trra >
+      au < doesNotExist ; 2016 ; Transportation Research Record Volume 2555 ; 2555 ; trra >
+      au < doesNotExist ; 2016 ; Transportation Research Record Volume 2556 ; 2556 ; trra >
+      au < doesNotExist ; 2016 ; Transportation Research Record Volume 2557 ; 2557 ; trra >
+      au < doesNotExist ; 2016 ; Transportation Research Record Volume 2558 ; 2558 ; trra >
+      au < manifest ; 2016 ; Transportation Research Record Volume 2559 ; 2559 ; trra >
+
       au < released ; 2017 ; Transportation Research Record Volume 2603 ; 2603 ; trra >
       au < released ; 2017 ; Transportation Research Record Volume 2604 ; 2604 ; trra >
       au < released ; 2017 ; Transportation Research Record Volume 2605 ; 2605 ; trra >
@@ -42383,10 +42918,66 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < released ; 2017 ; Transportation Research Record Volume 2609 ; 2609 ; trra >
       au < released ; 2017 ; Transportation Research Record Volume 2610 ; 2610 ; trra >
       au < released ; 2017 ; Transportation Research Record Volume 2611 ; 2611 ; trra >
-
+      au < manifest ; 2017 ; Transportation Research Record Volume 2612 ; 2612 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2613 ; 2613 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2614 ; 2614 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2615 ; 2615 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2616 ; 2616 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2617 ; 2617 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2618 ; 2618 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2619 ; 2619 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2620 ; 2620 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2621 ; 2621 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2622 ; 2622 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2623 ; 2623 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2624 ; 2624 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2625 ; 2625 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2626 ; 2626 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2627 ; 2627 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2628 ; 2628 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2629 ; 2629 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2630 ; 2630 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2631 ; 2631 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2632 ; 2632 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2633 ; 2633 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2634 ; 2634 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2635 ; 2635 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2636 ; 2636 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2637 ; 2637 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2638 ; 2638 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2639 ; 2639 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2640 ; 2640 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2641 ; 2641 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2642 ; 2642 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2643 ; 2643 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2644 ; 2644 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2645 ; 2645 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2646 ; 2646 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2647 ; 2647 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2648 ; 2648 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2649 ; 2649 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2650 ; 2650 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2651 ; 2651 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2652 ; 2652 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2653 ; 2653 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2654 ; 2654 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2655 ; 2655 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2656 ; 2656 ; trra >
+      au < exists ; 2017 ; Transportation Research Record Volume 2657 ; 2657 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2658 ; 2658 ; trra >
       au < released ; 2017 ; Transportation Research Record Volume 2659 ; 2659 ; trra >
-
+      au < manifest ; 2017 ; Transportation Research Record Volume 2660 ; 2660 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2661 ; 2661 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2662 ; 2662 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2663 ; 2663 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2664 ; 2664 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2665 ; 2665 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2666 ; 2666 ; trra >
       au < released ; 2017 ; Transportation Research Record Volume 2667 ; 2667 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2668 ; 2668 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2669 ; 2669 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2670 ; 2670 ; trra >
+      au < manifest ; 2017 ; Transportation Research Record Volume 2671 ; 2671 ; trra >
 
     }
 
@@ -42589,7 +43180,15 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
     >
 
       #journal_id = tmj
+      #content available from 1947 volume 33 to 1999 volume 85
 
+      au < manifest ; 2000 ; Tumori Journal Volume 86 ; 86 ; tmja >
+      au < manifest ; 2001 ; Tumori Journal Volume 87 ; 87 ; tmja >
+      au < manifest ; 2002 ; Tumori Journal Volume 88 ; 88 ; tmja >
+      au < manifest ; 2003 ; Tumori Journal Volume 89 ; 89 ; tmja >
+      au < manifest ; 2004 ; Tumori Journal Volume 90 ; 90 ; tmja >
+      au < manifest ; 2005 ; Tumori Journal Volume 91 ; 91 ; tmja >
+      au < manifest ; 2006 ; Tumori Journal Volume 92 ; 92 ; tmja >
       au < manifest ; 2007 ; Tumori Journal Volume 93 ; 93 ; tmja >
       au < released ; 2008 ; Tumori Journal Volume 94 ; 94 ; tmja >
       au < released ; 2009 ; Tumori Journal Volume 95 ; 95 ; tmja >
@@ -42881,6 +43480,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       >
 
       #param[journal_id] = urj
+      #content available from 1965 volume 32 to 1994 volume 61
 
         au < manifest ; 2003 ; Urologia Journal Volume 70 ; 70 ; urja >
         au < manifest ; 2004 ; Urologia Journal Volume 71 ; 71 ; urja >
@@ -44780,7 +45380,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2015 ; Sociological Methodology Volume 45 ; 45 ; smxa >
         au < released ; 2016 ; Sociological Methodology Volume 46 ; 46 ; smxa >
         au < released ; 2017 ; Sociological Methodology Volume 47 ; 47 ; smxa >
-        au < expected ; 2018 ; Sociological Methodology Volume 48 ; 48 ; smxa >
+        au < manifest ; 2018 ; Sociological Methodology Volume 48 ; 48 ; smxa >
 
       }
 
@@ -44811,8 +45411,8 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < released ; 2009 ; Sociological Research Online Volume 14 ; 14 ; sroa >
       au < manifest ; 2010 ; Sociological Research Online Volume 15 ; 15 ; sroa >
       au < manifest ; 2011 ; Sociological Research Online Volume 16 ; 16 ; sroa >
-      au < ready ; 2012 ; Sociological Research Online Volume 17 ; 17 ; sroa >
-      au < ready ; 2013 ; Sociological Research Online Volume 18 ; 18 ; sroa >
+      au < released ; 2012 ; Sociological Research Online Volume 17 ; 17 ; sroa >
+      au < released ; 2013 ; Sociological Research Online Volume 18 ; 18 ; sroa >
       au < manifest ; 2014 ; Sociological Research Online Volume 19 ; 19 ; sroa >
       au < manifest ; 2015 ; Sociological Research Online Volume 20 ; 20 ; sroa >
       au < manifest ; 2016 ; Sociological Research Online Volume 21 ; 21 ; sroa >
@@ -46929,6 +47529,106 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
     {
 
       title <
+        name = International Migration Review ;
+        issn = 0197-9183 ;
+        eissn = 1747-7379 ;
+        issnl = 0197-9183
+      >
+
+        #journal_id = mrx
+
+        au < manifest ; 1964 ; International Migration Review Volume 1_OS ; 1_OS ; mrxb >
+        au < manifest ; 1965 ; International Migration Review Volume 2_OS ; 2_OS ; mrxb >
+        au < manifest ; 1966 ; International Migration Review Volume 3_OS ; 3_OS ; mrxb >
+        au < manifest ; 1966-1967 ; International Migration Review Volume 1 ; 1 ; mrxb >
+        au < manifest ; 1965-1968 ; International Migration Review Volume 2 ; 2 ; mrxb >
+        au < manifest ; 1968-1969 ; International Migration Review Volume 3 ; 3 ; mrxb >
+        au < manifest ; 1969-1970 ; International Migration Review Volume 4 ; 4 ; mrxa >
+        au < manifest ; 1971 ; International Migration Review Volume 5 ; 5 ; mrxa >
+        au < manifest ; 1972 ; International Migration Review Volume 6 ; 6 ; mrxa >
+        au < manifest ; 1973 ; International Migration Review Volume 7 ; 7 ; mrxa >
+        au < manifest ; 1974 ; International Migration Review Volume 8 ; 8 ; mrxa >
+        au < manifest ; 1975 ; International Migration Review Volume 9 ; 9 ; mrxa >
+        au < manifest ; 1976 ; International Migration Review Volume 10 ; 10 ; mrxa >
+        au < manifest ; 1977 ; International Migration Review Volume 11 ; 11 ; mrxa >
+        au < manifest ; 1978 ; International Migration Review Volume 12 ; 12 ; mrxa >
+        au < manifest ; 1979 ; International Migration Review Volume 13 ; 13 ; mrxa >
+        au < manifest ; 1980 ; International Migration Review Volume 14 ; 14 ; mrxa >
+        au < manifest ; 1981 ; International Migration Review Volume 15 ; 15 ; mrxa >
+        au < manifest ; 1982 ; International Migration Review Volume 16 ; 16 ; mrxa >
+        au < manifest ; 1983 ; International Migration Review Volume 17 ; 17 ; mrxa >
+        au < manifest ; 1984 ; International Migration Review Volume 18 ; 18 ; mrxa >
+        au < manifest ; 1985 ; International Migration Review Volume 19 ; 19 ; mrxa >
+        au < manifest ; 1986 ; International Migration Review Volume 20 ; 20 ; mrxa >
+        au < manifest ; 1987 ; International Migration Review Volume 21 ; 21 ; mrxa >
+        au < manifest ; 1988 ; International Migration Review Volume 22 ; 22 ; mrxa >
+        au < manifest ; 1989 ; International Migration Review Volume 23 ; 23 ; mrxa >
+        au < manifest ; 1990 ; International Migration Review Volume 24 ; 24 ; mrxa >
+        au < manifest ; 1991 ; International Migration Review Volume 25 ; 25 ; mrxa >
+        au < manifest ; 1992 ; International Migration Review Volume 26 ; 26 ; mrxa >
+        au < manifest ; 1993 ; International Migration Review Volume 27 ; 27 ; mrxa >
+        au < manifest ; 1994 ; International Migration Review Volume 28 ; 28 ; mrxa >
+        au < manifest ; 1995 ; International Migration Review Volume 29 ; 29 ; mrxa >
+        au < manifest ; 1996 ; International Migration Review Volume 30 ; 30 ; mrxa >
+        au < manifest ; 1997 ; International Migration Review Volume 31 ; 31 ; mrxa >
+        au < manifest ; 1998 ; International Migration Review Volume 32 ; 32 ; mrxa >
+        au < manifest ; 1999 ; International Migration Review Volume 33 ; 33 ; mrxa >
+        au < manifest ; 2000 ; International Migration Review Volume 34 ; 34 ; mrxa >
+        au < manifest ; 2001 ; International Migration Review Volume 35 ; 35 ; mrxa >
+        au < manifest ; 2002 ; International Migration Review Volume 36 ; 36 ; mrxa >
+        au < manifest ; 2003 ; International Migration Review Volume 37 ; 37 ; mrxa >
+        au < manifest ; 2004 ; International Migration Review Volume 38 ; 38 ; mrxa >
+        au < manifest ; 2005 ; International Migration Review Volume 39 ; 39 ; mrxa >
+        au < manifest ; 2006 ; International Migration Review Volume 40 ; 40 ; mrxa >
+        au < manifest ; 2007 ; International Migration Review Volume 41 ; 41 ; mrxa >
+        au < manifest ; 2008 ; International Migration Review Volume 42 ; 42 ; mrxa >
+        au < manifest ; 2009 ; International Migration Review Volume 43 ; 43 ; mrxa >
+        au < manifest ; 2010 ; International Migration Review Volume 44 ; 44 ; mrxa >
+        au < manifest ; 2011 ; International Migration Review Volume 45 ; 45 ; mrxa >
+        au < manifest ; 2012 ; International Migration Review Volume 46 ; 46 ; mrxa >
+        au < manifest ; 2013 ; International Migration Review Volume 47 ; 47 ; mrxa >
+        au < manifest ; 2014 ; International Migration Review Volume 48 ; 48 ; mrxa >
+        au < manifest ; 2015 ; International Migration Review Volume 49 ; 49 ; mrxa >
+        au < manifest ; 2016 ; International Migration Review Volume 50 ; 50 ; mrxa >
+        au < manifest ; 2017 ; International Migration Review Volume 51 ; 51 ; mrxa >
+        au < manifest ; 2018 ; International Migration Review Volume 52 ; 52 ; mrxa >
+
+    }
+
+    {
+
+      title <
+        name = International Polymer Science and Technology ;
+        issn = 0307-174X ;
+        eissn = 1478-2405
+      >
+
+        #journal_id = ipr
+
+        au < manifest ; 2001 ; International Polymer Science and Technology Volume 28 ; 28 ; ipra >
+        au < manifest ; 2002 ; International Polymer Science and Technology Volume 29 ; 29 ; ipra >
+        au < manifest ; 2003 ; International Polymer Science and Technology Volume 30 ; 30 ; ipra >
+        au < manifest ; 2004 ; International Polymer Science and Technology Volume 31 ; 31 ; ipra >
+        au < manifest ; 2005 ; International Polymer Science and Technology Volume 32 ; 32 ; ipra >
+        au < manifest ; 2006 ; International Polymer Science and Technology Volume 33 ; 33 ; ipra >
+        au < manifest ; 2007 ; International Polymer Science and Technology Volume 34 ; 34 ; ipra >
+        au < manifest ; 2008 ; International Polymer Science and Technology Volume 35 ; 35 ; ipra >
+        au < manifest ; 2009 ; International Polymer Science and Technology Volume 36 ; 36 ; ipra >
+        au < manifest ; 2010 ; International Polymer Science and Technology Volume 37 ; 37 ; ipra >
+        au < manifest ; 2011 ; International Polymer Science and Technology Volume 38 ; 38 ; ipra >
+        au < manifest ; 2012 ; International Polymer Science and Technology Volume 39 ; 39 ; ipra >
+        au < manifest ; 2013 ; International Polymer Science and Technology Volume 40 ; 40 ; ipra >
+        au < manifest ; 2014 ; International Polymer Science and Technology Volume 41 ; 41 ; ipra >
+        au < manifest ; 2015 ; International Polymer Science and Technology Volume 42 ; 42 ; ipra >
+        au < manifest ; 2016 ; International Polymer Science and Technology Volume 43 ; 43 ; ipra >
+        au < manifest ; 2017 ; International Polymer Science and Technology Volume 44 ; 44 ; ipra >
+        au < manifest ; 2018 ; International Polymer Science and Technology Volume 45 ; 45 ; ipra >
+
+    }
+
+    {
+
+      title <
         name = Journal of Health Services Research & Policy ;
         issn = 1355-8196 ;
         eissn = 1758-1060 ;
@@ -48228,6 +48928,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
     #param[journal_id] = sear
     #param[journal_issn] = 0967-828X
+    # move to T&F 2019
 
     au < manifest ; 2000 ; South East Asia Research Volume 8 ; 8 ; sera >
     au < manifest ; 2001 ; South East Asia Research Volume 9 ; 9 ; sera >

@@ -33,24 +33,25 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.silverchair.iwap;
 
 import java.io.*;
-import java.util.Vector;
 
-import org.htmlparser.Attribute;
 import org.htmlparser.NodeFilter;
-import org.htmlparser.Tag;
-import org.htmlparser.filters.OrFilter;
-import org.htmlparser.util.NodeList;
-import org.htmlparser.util.ParserException;
-import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.daemon.PluginException;
-import org.lockss.filter.*;
-import org.lockss.filter.HtmlTagFilter.TagPair;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.silverchair.ScHtmlHashFilterFactory;
 import org.lockss.util.Logger;
-import org.lockss.util.ReaderInputStream;
 
-public class IwapHtmlHashFilterFactory implements FilterFactory {
+public class IwapHtmlHashFilterFactory extends ScHtmlHashFilterFactory {
+
+  @Override
+  protected boolean doSpecialFilter() {
+    return false;
+  }
+
+  @Override
+  protected boolean doXForm() {
+    return true;
+  }
 
   private static final Logger log = Logger.getLogger(IwapHtmlHashFilterFactory.class);
   
@@ -60,79 +61,21 @@ public class IwapHtmlHashFilterFactory implements FilterFactory {
                                                String encoding)
       throws PluginException {
     
-    // HTML transform to remove generated attributes like <a href="...?Expires">
-    HtmlTransform xform = new HtmlTransform() {
-      @Override
-      public NodeList transform(NodeList nodeList) throws IOException {
-        try {
-          nodeList.visitAllNodesWith(new NodeVisitor() {
-            @Override
-            public void visitTag(Tag tag) {
-              String tagName = tag.getTagName().toLowerCase();
-              try {
-                if ("a".equals(tagName) ||
-                    "div".equals(tagName) ||
-                    "img".equals(tagName)) {
-                  Attribute a = tag.getAttributeEx(tagName);
-                  Vector<Attribute> v = new Vector<Attribute>();
-                  v.add(a);
-                  if (tag.isEmptyXmlTag()) {
-                    Attribute end = tag.getAttributeEx("/");
-                    v.add(end);
-                  }
-                  tag.setAttributesEx(v);
-                }
-                super.visitTag(tag);
-              }
-              catch (Exception exc) {
-                log.debug2("Internal error (visitor)", exc); // Ignore this tag and move on
-              }
-            }
-          });
-        }
-        catch (ParserException pe) {
-          log.debug2("Internal error (parser)", pe); // Bail
-        }
-        return nodeList;
-      }
+    NodeFilter[] includeFilters = new NodeFilter[] {
+        // <div class="widget-ContentBrowseByYearManifest widget-instance-IssueBrowseByYear">
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-Content.+Manifest"),
+        // <div id="ArticleList">
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-list-resources"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "ContentColumn"),
     };
     
-    InputStream filtered = new HtmlFilterInputStream(
-      in,
-      encoding,
-      new HtmlCompoundTransform(
-          HtmlNodeFilterTransform.include(new OrFilter(new NodeFilter[] {
-              // <div class="widget-ContentBrowseByYearManifest widget-instance-IssueBrowseByYear">
-              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-Content.+Manifest"),
-              // <div id="ArticleList">
-              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-list-resources"),
-              // <div class="widget-ArticleMainView widget-instance-ArticleMainView_Article">
-              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-ArticleMainView"),
-              // XXX ??? HtmlNodeFilters.tagWithAttributeRegex("div", "id", "ContentColumn", true),
-              // XXX ??? HtmlNodeFilters.tagWithAttributeRegex("span", "class", "content-inner-wrap"),
-              // HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-body"),
-              // HtmlNodeFilters.tagWithAttributeRegex("div", "class", "IssuesAndVolumeListManifest"),
-              // HtmlNodeFilters.tagWithAttributeRegex("img", "class", "content-image"),
-              
-          })),
-
-          HtmlNodeFilterTransform.exclude(new OrFilter(new NodeFilter[] {/*
-              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "comment"),
-              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "graphic-wrap"),
-              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "navbar-search"),*/
-          })),
-          xform
-      )
-    );
+    NodeFilter[] moreFilters = new NodeFilter[] {
+        HtmlNodeFilters.tagWithAttributeRegex("div","class","^ref-list"),
+        HtmlNodeFilters.tagWithAttribute("div","class","kwd-group"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "author-info-wrap"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pub-history-wrap"),
+    };
     
-    Reader reader = FilterUtil.getReader(filtered, encoding);
-    
-    // Remove all inner tag content
-    Reader noTagFilter = new HtmlTagFilter(new StringFilter(reader, "<", " <"), new TagPair("<", ">"));
-    // Remove white space
-    Reader whiteSpaceFilter = new WhiteSpaceFilter(noTagFilter);
-    InputStream ret =  new ReaderInputStream(reader);
-    return ret;
-    // Instrumentation
+    return createFilteredInputStream(au, in, encoding, includeFilters, moreFilters);
   }
 }

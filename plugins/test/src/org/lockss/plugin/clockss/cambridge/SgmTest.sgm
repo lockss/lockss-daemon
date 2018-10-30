@@ -1,0 +1,54 @@
+<!DOCTYPE article SYSTEM "cupjnl2_2.dtd">
+<article dtdver="2.2" type="HEAD">
+<header>
+<issue>
+<pinfo>
+<pnm>Cambridge University Press</pnm>
+<loc>New York, USA</loc>
+</pinfo>
+<jinfo>
+<jid>PAX</jid>
+<jtl>Palliative &amp; Supportive Care</jtl>
+<jabt>Pall Supp Care</jabt>
+<issn>1478-9515</issn>
+<eissn>1478-9523</eissn>
+</jinfo>
+<pubinfo>
+<vid>5</vid>
+<iid>3</iid>
+<cd year="2007" month="9">
+</pubinfo>
+</issue>
+<artcon>
+<genhdr language="EN">
+<artinfo>
+<aid>00047</aid>
+<doi>10.1111/Sxxxxx</doi>
+<altid><pii>Sxxxxx</pii></altid>
+<artty artty="RA">
+<dispart>Essay/Personal Reflections</dispart>
+<ppct count="9">
+<ppf ord="12">315</ppf><ppl>323</ppl>
+<crn crt="full">2007 Cambridge University Press</crn>
+</artinfo>
+<tig>
+<atl>A title goes here</atl>
+<atl purpose="recto" abbrev="abatl">Title summer camp</atl>
+<atl purpose="verso" abbrev="abau">Name</atl>
+</tig>
+<aug>
+<au><fnms>Sherry R.</fnms><snm>Name</snm><orf rid="a1"><orf rid="c1">
+<norm>Name SR</norm>
+</au>
+<aff><oid id="a1"><onm>Blah</onm>, Bronx, New York 10461, <cny>USA</cny></aff>
+<aff type="cor"><oid id="c1">Corresponding author: Sherry R. Name, Director , <onm>Blah</onm>, 1 Road, Bronx, NY 10461, <cny>USA</cny>. E-mail: <ead>foo@blah.org</ead></aff>
+</aug>
+<abs source="PR">
+<p>The need to facilitate.</p></abs>
+<kwdg>
+<kwd>CFoo</kwd>
+</kwdg>
+</genhdr>
+</artcon>
+</header>
+</article>

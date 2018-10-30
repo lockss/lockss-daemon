@@ -188,6 +188,12 @@ public class TestOJS2HtmlFilterFactory extends LockssTestCase {
 + "<input name=\"query\" value=\"\" type=\"text\" aria-label=\"Search Query\"> "
 + "<button type=\"submit\"> Search </button>";
 
+  private static final String circleHtml =
+      "<div id=\"keepme\"><span class=\"numberCircle\">65</span></div>";
+  private static final String circleHtmlFiltered =
+      "<div id=\"keepme\"></div>";
+
+  
   public void testSidebarKeywordCloudFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(sidebarKeywordCloudHtml),
@@ -292,6 +298,12 @@ public class TestOJS2HtmlFilterFactory extends LockssTestCase {
                 Constants.DEFAULT_ENCODING);
             
             assertEquals(inputTagFiltered, StringUtil.fromInputStream(actIn));
+            
+    actIn = fact.createFilteredInputStream(mau,
+                new StringInputStream(circleHtml),
+                Constants.DEFAULT_ENCODING);
+
+            assertEquals(circleHtmlFiltered, StringUtil.fromInputStream(actIn));            
 
   }
 

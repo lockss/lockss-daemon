@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>development - EJ</string>
+    <string>testing</string>
   </entry>
   <!-- NOTE: this plugin uses shared code (validation, response handler) from parent directory! -->
   <entry>
@@ -10,14 +10,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>2</string>
+        <string>4</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -115,7 +115,6 @@
       <!-- images/figures/supplemental have Expires that will always be 2147483647 and don't redirect - allow -->
       <string>1,"^https?://(%s|iwa\.silverchair-cdn\.com)/iwa/content_public/journal/[^?]+\?Expires=2147483647", url_host(base_url)</string>
       <!-- NOT CURRENTLY PDFs redirect through one-time with changing expiring that stores in canonical -->
-      <!--  <string>1,"^https?://(%s|iwa\.silverchair-cdn\.com)/iwa/content_public/journal/%s/[^?]+[.]pdf\?Expires=", url_host(base_url), journal_id</string> -->
       <!-- allow any other item, but if it has Expires it's a content image and it has to be stable-->
       <string>2,"^https?://(%s|iwa\.silverchair-cdn\.com).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)\?Expires=.*$", url_host(base_url)</string>
       <!-- but allow any other items that do NOT have expiry - they're just support images, fonts, etc -->
@@ -125,7 +124,7 @@
       <!-- PDF content is going through watermarking SOME of the time; we will consume -->
       <string>1,"^https?://watermark\.silverchair\.com/[^/]+\.pdf\?token="</string>
       <!-- issue, or aspect of article; number is a volume...so far always numbers -->
-      <string>1,"^https?://%s/%s/(article(-(pdf|abstract))?|issue(-pdf)?)/[0-9]+/", url_host(base_url), journal_id</string>
+      <string>1,"^https?://%s/%s/(article(-(pdf|abstract))?(/doi/[^/]+/[^/]+)?|issue(-pdf)?)/[0-9]+/", url_host(base_url), journal_id</string>
       <!-- NOT YET SEEN - meeting abstract supplemental issues use a search query to fill toc -->
       <!--  <string>1,"^https?://%s/%s/search-results\?q=&amp;f_IssueNo=", url_host(base_url), journal_id</string>-->
       <string>1,"^https?://%s/%s/downloadcitation/[^?]+\?format=(ris|txt)", url_host(base_url), journal_id</string>
@@ -150,6 +149,11 @@
     <long>3000</long>
   </entry>
   <entry>
+    <!-- manifest to issue -->
+    <string>au_refetch_depth</string>
+    <int>2</int>
+  </entry>
+  <entry>
     <string>plugin_fetch_rate_limiter_source</string>
     <string>host:base_url</string>
   </entry>
@@ -161,12 +165,6 @@
     <string>plugin_url_consumer_factory</string>
     <string>org.lockss.plugin.silverchair.iwap.IwapUrlConsumerFactory</string>
   </entry>
-  <!-- 
-  <entry>
-    <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.silverchair.iwap.IwapUrlNormalizer</string>
-  </entry>
--->
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.silverchair.iwap.IwapHtmlHashFilterFactory</string>
@@ -211,6 +209,24 @@
     </map>
   </entry>
   <entry>
+    <string>au_url_mime_validation_map</string>
+    <list>
+      <string>pdf/.+\.pdf, application/pdf</string>
+    </list>
+  </entry>
+  <entry>
+    <!-- Validator factory for text MIME types: check pages for restricted access text -->
+    <string>text/*_content_validator_factory</string>
+    <string>org.lockss.plugin.silverchair.iwap.IwapContentValidator$Factory</string>
+  </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <!-- SSL Handshake -->
+      <string>javax.net.ssl.SSLHandshakeException=org.lockss.plugin.silverchair.iwap.IwapHtmlHttpResponseHandler</string>
+    </list>
+  </entry>
+  <entry>
     <string>au_permitted_host_pattern</string>
     <string>"(fonts|ajax)\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|[^.]+\.silverchair-?cdn\.com|cdn\.mathjax\.org|cdnjs\.cloudflare\.com|watermark\.silverchair\.com"</string>
   </entry>
@@ -218,7 +234,7 @@
     <string>au_repair_from_peer_if_missing_url_pattern</string>
     <list>
       <string>https?://iwaponline\.com/(cassette\.axd|Themes|UI)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)</string>
-      <string>https?://(iwaponline|iwa\.silverchair-cdn)\.com/(cassette\.axd)/file/.*/(css|js)/</string>
+      <string>https?://(iwaponline|iwa\.silverchair-cdn)\.com/(cassette\.axd/file/.*/(css|js)/|[^.]+/back_matter\.pdf\?Expires=2147483647)</string>
       <string>https?://(fonts\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|cdnjs\.cloudflare\.com|iwa\.silverchair-cdn)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)</string>
     </list>
   </entry>
@@ -226,7 +242,7 @@
     <string>au_url_poll_result_weight</string>
     <list>
       <string>"https?://iwaponline\.com/(cassette\.axd|Themes|UI)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)", 0</string>
-      <string>"https?://(iwaponline|iwa\.silverchair-cdn)\.com/(cassette\.axd)/file/.*/(css|js)/", 0</string>
+      <string>"https?://(iwaponline|iwa\.silverchair-cdn)\.com/(cassette\.axd/file/.*/(css|js)/|[^.]+/back_matter\.pdf\?Expires=2147483647)", 0</string>
       <string>"https?://(fonts\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|cdnjs\.cloudflare\.com|iwa\.silverchair-cdn)/.*(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)", 0</string>
     </list>
   </entry>

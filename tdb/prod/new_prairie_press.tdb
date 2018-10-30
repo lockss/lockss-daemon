@@ -162,19 +162,19 @@
     {
     
       plugin = org.lockss.plugin.bepress.BePressPlugin
-      implicit < status ; year ; name ; param[volume] >
-      param[base_url] = http://newprairiepress.org/
+      implicit < status ; year ; name ; param[volume] ; param[base_url] >
+      #param[base_url] = http://newprairiepress.org/
       param[journal_abbr] = jft
 
-      au < doNotProcess ; 2010 ; Journal of Financial Therapy Volume 1 ; 1 >
-      au < doNotProcess ; 2011 ; Journal of Financial Therapy Volume 2 ; 2 >
-      au < doNotProcess ; 2012 ; Journal of Financial Therapy Volume 3 ; 3 >
-      au < released ; 2013 ; Journal of Financial Therapy Volume 4 ; 4 >
-      au < released ; 2014 ; Journal of Financial Therapy Volume 5 ; 5 >
-      au < released ; 2015 ; Journal of Financial Therapy Volume 6 ; 6 >
-      au < released ; 2016 ; Journal of Financial Therapy Volume 7 ; 7 >
-      au < manifest ; 2017 ; Journal of Financial Therapy Volume 8 ; 8 >
-      au < expected ; 2018 ; Journal of Financial Therapy Volume 9 ; 9 >
+      au < doNotProcess ; 2010 ; Journal of Financial Therapy Volume 1 ; 1 ; https://newprairiepress.org/ >
+      au < doNotProcess ; 2011 ; Journal of Financial Therapy Volume 2 ; 2 ; https://newprairiepress.org/ >
+      au < doNotProcess ; 2012 ; Journal of Financial Therapy Volume 3 ; 3 ; https://newprairiepress.org/ >
+      au < released ; 2013 ; Journal of Financial Therapy Volume 4 ; 4 ; http://newprairiepress.org/ >
+      au < released ; 2014 ; Journal of Financial Therapy Volume 5 ; 5 ; http://newprairiepress.org/ >
+      au < released ; 2015 ; Journal of Financial Therapy Volume 6 ; 6 ; http://newprairiepress.org/ >
+      au < released ; 2016 ; Journal of Financial Therapy Volume 7 ; 7 ; http://newprairiepress.org/ >
+      au < manifest ; 2017 ; Journal of Financial Therapy Volume 8 ; 8 ; https://newprairiepress.org/ >
+      au < expected ; 2018 ; Journal of Financial Therapy Volume 9 ; 9 ; https://newprairiepress.org/ >
 
     }
   }
@@ -228,18 +228,18 @@
     {
     
       plugin = org.lockss.plugin.bepress.BePressPlugin
-      implicit < status ; year ; name ; param[volume] >
-      param[base_url] = http://newprairiepress.org/
+      implicit < status ; year ; name ; param[volume] ; param[base_url]>
+      #param[base_url] = http://newprairiepress.org/
       param[journal_abbr] = culsproceedings
 
-      au < doNotProcess ; 2011 ; Kansas Library Association College and University Libraries Section Proceedings Volume 1 ; 1 >
-      au < doNotProcess ; 2012 ; Kansas Library Association College and University Libraries Section Proceedings Volume 2 ; 2 >
-      au < released ; 2013 ; Kansas Library Association College and University Libraries Section Proceedings Volume 3 ; 3 >
-      au < released ; 2014 ; Kansas Library Association College and University Libraries Section Proceedings Volume 4 ; 4 >
-      au < released ; 2015 ; Kansas Library Association College and University Libraries Section Proceedings Volume 5 ; 5 >
-      au < released ; 2016 ; Kansas Library Association College and University Libraries Section Proceedings Volume 6 ; 6 >
-      au < manifest ; 2017 ; Kansas Library Association College and University Libraries Section Proceedings Volume 7 ; 7 >
-      au < expected ; 2018 ; Kansas Library Association College and University Libraries Section Proceedings Volume 8 ; 8 >
+      au < doNotProcess ; 2011 ; Kansas Library Association College and University Libraries Section Proceedings Volume 1 ; 1 ; https://newprairiepress.org/ >
+      au < doNotProcess ; 2012 ; Kansas Library Association College and University Libraries Section Proceedings Volume 2 ; 2 ; https://newprairiepress.org/ >
+      au < released ; 2013 ; Kansas Library Association College and University Libraries Section Proceedings Volume 3 ; 3 ; http://newprairiepress.org/ >
+      au < released ; 2014 ; Kansas Library Association College and University Libraries Section Proceedings Volume 4 ; 4 ; http://newprairiepress.org/ >
+      au < released ; 2015 ; Kansas Library Association College and University Libraries Section Proceedings Volume 5 ; 5 ; http://newprairiepress.org/ >
+      au < released ; 2016 ; Kansas Library Association College and University Libraries Section Proceedings Volume 6 ; 6 ; http://newprairiepress.org/ >
+      au < manifest ; 2017 ; Kansas Library Association College and University Libraries Section Proceedings Volume 7 ; 7 ; https://newprairiepress.org/ >
+      au < expected ; 2018 ; Kansas Library Association College and University Libraries Section Proceedings Volume 8 ; 8 ; https://newprairiepress.org/ >
 
     }
   }
@@ -269,23 +269,23 @@
     {
     
       plugin = org.lockss.plugin.bepress.BePressPlugin
-      implicit < status ; year ; name ; param[volume] >
-      param[base_url] = http://newprairiepress.org/
+      implicit < status ; year ; name ; param[volume] ; param[base_url] >
+      #param[base_url] = http://newprairiepress.org/
       param[journal_abbr] = ojrrp
 
-      au < doNotProcess ; 2006 ; Online Journal of Rural Research & Policy Volume 1 ; 1 >
-      au < doNotProcess ; 2007 ; Online Journal of Rural Research & Policy Volume 2 ; 2 >
-      au < doNotProcess ; 2008 ; Online Journal of Rural Research & Policy Volume 3 ; 3 >
-      au < doNotProcess ; 2009 ; Online Journal of Rural Research & Policy Volume 4 ; 4 >
-      au < doNotProcess ; 2010 ; Online Journal of Rural Research & Policy Volume 5 ; 5 >
-      au < doNotProcess ; 2011 ; Online Journal of Rural Research & Policy Volume 6 ; 6 >
-      au < doNotProcess ; 2012 ; Online Journal of Rural Research & Policy Volume 7 ; 7 >
-      au < released ; 2013 ; Online Journal of Rural Research & Policy Volume 8 ; 8 >
-      au < released ; 2014 ; Online Journal of Rural Research & Policy Volume 9 ; 9 >
-      au < released ; 2015 ; Online Journal of Rural Research & Policy Volume 10 ; 10 >
-      au < released ; 2016 ; Online Journal of Rural Research & Policy Volume 11 ; 11 >
-      au < manifest ; 2017 ; Online Journal of Rural Research & Policy Volume 12 ; 12 >
-      au < manifest ; 2018 ; Online Journal of Rural Research & Policy Volume 13 ; 13 >
+      au < doNotProcess ; 2006 ; Online Journal of Rural Research & Policy Volume 1 ; 1 ; https://newprairiepress.org/ >
+      au < doNotProcess ; 2007 ; Online Journal of Rural Research & Policy Volume 2 ; 2 ; https://newprairiepress.org/ >
+      au < doNotProcess ; 2008 ; Online Journal of Rural Research & Policy Volume 3 ; 3 ; https://newprairiepress.org/ >
+      au < doNotProcess ; 2009 ; Online Journal of Rural Research & Policy Volume 4 ; 4 ; https://newprairiepress.org/ >
+      au < doNotProcess ; 2010 ; Online Journal of Rural Research & Policy Volume 5 ; 5 ; https://newprairiepress.org/ >
+      au < doNotProcess ; 2011 ; Online Journal of Rural Research & Policy Volume 6 ; 6 ; https://newprairiepress.org/ >
+      au < doNotProcess ; 2012 ; Online Journal of Rural Research & Policy Volume 7 ; 7 ; https://newprairiepress.org/ >
+      au < released ; 2013 ; Online Journal of Rural Research & Policy Volume 8 ; 8 ; http://newprairiepress.org/ >
+      au < released ; 2014 ; Online Journal of Rural Research & Policy Volume 9 ; 9 ; http://newprairiepress.org/ >
+      au < released ; 2015 ; Online Journal of Rural Research & Policy Volume 10 ; 10 ; http://newprairiepress.org/ >
+      au < released ; 2016 ; Online Journal of Rural Research & Policy Volume 11 ; 11 ; http://newprairiepress.org/ >
+      au < manifest ; 2017 ; Online Journal of Rural Research & Policy Volume 12 ; 12 ; https://newprairiepress.org/ >
+      au < manifest ; 2018 ; Online Journal of Rural Research & Policy Volume 13 ; 13 ; https://newprairiepress.org/ >
 
     }
   }
@@ -300,7 +300,7 @@
     
       plugin = org.lockss.plugin.bepress.BePressPlugin
       implicit < status ; year ; name ; param[volume] >
-      param[base_url] = http://newprairiepress.org/
+      param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = burgonsociety
 
       au < manifest ; 2001 ; Transactions of the Burgon Society Volume 1 ; 1 >

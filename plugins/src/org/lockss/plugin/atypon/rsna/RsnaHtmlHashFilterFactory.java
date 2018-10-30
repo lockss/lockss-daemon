@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -80,12 +80,12 @@ public class RsnaHtmlHashFilterFactory
         // abs, ref - contents only
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
                                           "literatumPublicationContentWidget"),
-        // early 2017- changed to <div class                                      
+        // early 2017- changed to <div class
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
                                               "downloadCitationsWidget"),
-       //http://pubs.rsna.org/action/showPopup?citid=citart1&id=eq3&doi=10.1148%2Fradiol.2016151832
+        //http://pubs.rsna.org/action/showPopup?citid=citart1&id=eq3&doi=10.1148%2Fradiol.2016151832
         HtmlNodeFilters.tagWithAttributeRegex("body", "class", "popupBody"),
-                                                                                                                
+        
     };
     
     // handled by parent: script, sfxlink, stylesheet, pdfplus file sise
@@ -97,9 +97,9 @@ public class RsnaHtmlHashFilterFactory
         // on toc - button "test SA-CME" next to each article
         HtmlNodeFilters.tagWithAttributeRegex("div", "class",
                 "btn-holder"),
-                                              
+        
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-                                              "articleMetaDrop"),            
+                                              "articleMetaDrop"),
     
     };
     return super.createFilteredInputStream(au, in, encoding, 
