@@ -35,14 +35,13 @@ package org.lockss.plugin.silverchair.oup;
 
 import java.util.regex.Pattern;
 
-import org.lockss.daemon.PluginException;
 import org.lockss.plugin.silverchair.BaseScHtmlHttpResponseHandler;
 import org.lockss.util.Logger;
-import org.lockss.util.urlconn.CacheResultMap;
 
 public class OupScHtmlHttpResponseHandler extends BaseScHtmlHttpResponseHandler {
+
   private static final Logger log = Logger.getLogger(OupScHtmlHttpResponseHandler.class);
-  
+
   // OUP images are at "stable" expiring URLS - in this case it wasn't actually supp_zip but supposed to be image source which was the 403
   // https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/hmg/26/3/10.1093_hmg_ddw419/2/m_ddw419_supp.zip?Expires=2147483647&Signature=MJDYDzdo...&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA
   // PDF files use a changing Expires date and get consumed. Only supporting content uses the specific stable Expires date so use that as the pattern match
@@ -55,10 +54,4 @@ public class OupScHtmlHttpResponseHandler extends BaseScHtmlHttpResponseHandler 
     return NON_FATAL_PAT;
   }
 
-  @Override
-  public void init(final CacheResultMap map) throws PluginException {
-    log.warning("Unexpected call to init()");
-    throw new UnsupportedOperationException("Unexpected call to OupScHttpResponseHandler.init()");
-  }
-  
 }

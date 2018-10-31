@@ -39,35 +39,50 @@ import org.lockss.plugin.*;
 import org.lockss.util.StringUtil;
 import org.lockss.util.HeaderUtil;
 
-public class BaseScContentValidator {
-  
+public class BaseScContentValidatorFactory implements ContentValidatorFactory {
+
   protected static final String PDF_EXT = ".pdf";
   protected static final String PNG_EXT = ".png";
   protected static final String JPG_EXT = ".jpg";
   protected static final String JPEG_EXT = ".jpeg";
   protected static final String MAINTENANCE_STRING = "This site is down for maintenance";
-  
+
+  public ContentValidator getTextTypeValidator() {
+    return new ScTextTypeValidator();
+  }
+
+  public ContentValidator createContentValidator(ArchivalUnit au, String contentType) {
+    switch (HeaderUtil.getMimeTypeFromContentType(contentType)) {
+    case "text/html":
+    case "text/*":
+      // XXX get method to  text type validator
+      return getTextTypeValidator();
+    default:
+      return null;
+    }
+  }
+
   public static class ScTextTypeValidator implements ContentValidator {
-    
+
     private String invalidString;
     private String maintenanceString;
     private String patternString;
-    
+
     public ScTextTypeValidator() {
       super();
       this.invalidString = getInvalidString();
       this.maintenanceString = getMaintenanceString();
       this.patternString = getPatternString();
     }
-    
+
     public String getInvalidString() {
       return "";
     }
-    
+
     public String getMaintenanceString() {
       return MAINTENANCE_STRING;
     }
-    
+
     public String getPatternString() {
       return "";
     }
@@ -79,7 +94,7 @@ public class BaseScContentValidator {
           StringUtil.endsWithIgnoreCase(url, JPG_EXT) ||
           StringUtil.endsWithIgnoreCase(url, JPEG_EXT);
     }
-    
+
     public void validate(CachedUrl cu)
         throws ContentValidationException, PluginException, IOException {
       // validate based on extension (ie .pdf or .jpg)
@@ -109,95 +124,76 @@ public class BaseScContentValidator {
         }
       }
     }
-  }
-  
-   /**
-   * Scans through the reader looking for the String str; case sensitive
-   * @param reader Reader to search; it will be at least partially consumed
-   * @return true if the string is found, false if the end of reader is
-   * reached without finding the string
-   */
-  public static boolean containsPattern(Reader reader, String regex)
-      throws IOException {
-    return containsPattern(reader, regex, false);
-  }
 
-  public static boolean containsPattern(Reader reader, String regex,
-                       int buffSize)
-      throws IOException {
-    return containsPattern(reader, regex, false, buffSize);
-  }
-
-  public static boolean containsPattern(Reader reader, String regex,
-                       boolean ignoreCase)
-      throws IOException {
-    return containsPattern(reader, regex, ignoreCase, 4096);
-  }
-
-  /**
-   * Scans through the reader looking for the pattern String regex
-   * NOTE: !!!!!!!!!!
-   * The pattern may not contain pattern wildcards (*, +, or {n,m}) as the pattern might not match 
-   * within the contents of the buffer, but would in the contents of the entire reader
-   * 
-   * @param reader Reader to search; it will be at least partially consumed
-   * @param ignoreCase whether to ignore case or not
-   * @return true if the string is found, false if the end of reader is
-   * reached without finding the pattern string
-   */
-  public static boolean containsPattern(Reader reader, String regex,
-                       boolean ignoreCase, int buffSize)
-      throws IOException {
-    if (reader == null) {
-      throw new NullPointerException("Called with a null reader");
-    } else if (regex == null) {
-      throw new NullPointerException("Called with a null pattern String");
-    } else if (regex.length() == 0) {
-      throw new IllegalArgumentException("Called with a blank pattern String");
-    } else if (buffSize <= 0) {
-      throw new IllegalArgumentException("Called with a buffSize < 0");
+    /**
+     * Scans through the reader looking for the String str; case sensitive
+     * @param reader Reader to search; it will be at least partially consumed
+     * @return true if the string is found, false if the end of reader is
+     * reached without finding the string
+     */
+    public static boolean containsPattern(Reader reader, String regex)
+        throws IOException {
+      return containsPattern(reader, regex, false);
     }
 
-    int strlen = regex.length();
-    // simplify boundary conditions by ensuring buffer always larger than search string
-    buffSize = Math.max(buffSize, strlen * 2);
-    int shiftSize = buffSize - (strlen - 1);
+    public static boolean containsPattern(Reader reader, String regex,
+        int buffSize)
+            throws IOException {
+      return containsPattern(reader, regex, false, buffSize);
+    }
 
-    int flags = ignoreCase ? java.util.regex.Pattern.CASE_INSENSITIVE : 0;
-    java.util.regex.Pattern pat = java.util.regex.Pattern.compile(regex, flags);
-    StringBuilder sb = new StringBuilder(buffSize);
+    public static boolean containsPattern(Reader reader, String regex,
+        boolean ignoreCase)
+            throws IOException {
+      return containsPattern(reader, regex, ignoreCase, 4096);
+    }
 
-    while (StringUtil.fillFromReader(reader, sb, buffSize - sb.length())) {
-      java.util.regex.Matcher m1 = pat.matcher(sb);
-      if (m1.find()) {
-        return true;
+    /**
+     * Scans through the reader looking for the pattern String regex
+     * NOTE: !!!!!!!!!!
+     * The pattern may not contain pattern wildcards (*, +, or {n,m}) as the pattern might not match 
+     * within the contents of the buffer, but would in the contents of the entire reader
+     * 
+     * @param reader Reader to search; it will be at least partially consumed
+     * @param ignoreCase whether to ignore case or not
+     * @return true if the string is found, false if the end of reader is
+     * reached without finding the pattern string
+     */
+    public static boolean containsPattern(Reader reader, String regex,
+        boolean ignoreCase, int buffSize)
+            throws IOException {
+      if (reader == null) {
+        throw new NullPointerException("Called with a null reader");
+      } else if (regex == null) {
+        throw new NullPointerException("Called with a null pattern String");
+      } else if (regex.length() == 0) {
+        throw new IllegalArgumentException("Called with a blank pattern String");
+      } else if (buffSize <= 0) {
+        throw new IllegalArgumentException("Called with a buffSize < 0");
       }
-      if (sb.length() < buffSize) {
-        // avoid unnecessary shift on final iteration
-        return false;
+
+      int strlen = regex.length();
+      // simplify boundary conditions by ensuring buffer always larger than search string
+      buffSize = Math.max(buffSize, strlen * 2);
+      int shiftSize = buffSize - (strlen - 1);
+
+      int flags = ignoreCase ? java.util.regex.Pattern.CASE_INSENSITIVE : 0;
+      java.util.regex.Pattern pat = java.util.regex.Pattern.compile(regex, flags);
+      StringBuilder sb = new StringBuilder(buffSize);
+
+      while (StringUtil.fillFromReader(reader, sb, buffSize - sb.length())) {
+        java.util.regex.Matcher m1 = pat.matcher(sb);
+        if (m1.find()) {
+          return true;
+        }
+        if (sb.length() < buffSize) {
+          // avoid unnecessary shift on final iteration
+          return false;
+        }
+        sb.delete(0, shiftSize);
       }
-      sb.delete(0, shiftSize);
-    }
-    return false;
-  }
-
-  public static class Factory implements ContentValidatorFactory {
-
-    public ContentValidator createContentValidator(ArchivalUnit au, String contentType) {
-      switch (HeaderUtil.getMimeTypeFromContentType(contentType)) {
-      case "text/html":
-      case "text/*":
-        // XXX get method to  text type validator
-        return getTextTypeValidator();
-      default:
-        return null;
-      }
-    }
-
-    public ContentValidator getTextTypeValidator() {
-      return new ScTextTypeValidator();
+      return false;
     }
   }
-
 }
 

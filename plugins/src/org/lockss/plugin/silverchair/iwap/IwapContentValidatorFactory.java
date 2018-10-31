@@ -34,9 +34,9 @@ package org.lockss.plugin.silverchair.iwap;
 
 
 import org.lockss.plugin.*;
-import org.lockss.plugin.silverchair.BaseScContentValidator;
+import org.lockss.plugin.silverchair.BaseScContentValidatorFactory;
 
-public class IwapContentValidator extends BaseScContentValidator {
+public class IwapContentValidatorFactory extends BaseScContentValidatorFactory {
   
   public static class IwapTextTypeValidator extends ScTextTypeValidator {
 
@@ -52,16 +52,9 @@ public class IwapContentValidator extends BaseScContentValidator {
     public String getPatternString() {
       return EXPIRES_PAT_STRING;
     }
-
-    public ContentValidator getTextTypeValidator() {
-      return new IwapTextTypeValidator();
-    }
   }
 
-  public static class Factory extends BaseScContentValidator.Factory {
-    public ContentValidator getTextTypeValidator() {
-      return new IwapTextTypeValidator();
-    }
+  public ContentValidator getTextTypeValidator() {
+    return new IwapTextTypeValidator();
   }
 }
-

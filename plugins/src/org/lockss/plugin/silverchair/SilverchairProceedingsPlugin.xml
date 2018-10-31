@@ -125,7 +125,7 @@
     <entry>
       <!-- Validator factory for text MIME types -->
       <string>text/*_content_validator_factory</string>
-      <string>org.lockss.plugin.silverchair.BaseScContentValidator$Factory</string>
+      <string>org.lockss.plugin.silverchair.BaseScContentValidatorFactory</string>
     </entry>
     <entry>
       <string>application/json_filter_factory</string>

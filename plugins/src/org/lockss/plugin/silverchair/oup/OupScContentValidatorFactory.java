@@ -28,27 +28,43 @@ Except as contained in this notice, the name of Stanford University shall not
 be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
-*/
-
-package org.lockss.plugin.silverchair;
-
-import org.lockss.daemon.*;
-import org.lockss.plugin.*;
-
-/**
- * <p>
- * Child plugins on Silverchair can override
- * </p>
- * <ul>
- * <li><code>http://jamanetwork.com/journals/jama/fullarticle/2174029?linkid=12694817</code></li>
- * <li>http://jamanetwork.com/journals/jama/fullarticle/2174029</li>
- * </ul>
  */
-public class BaseScUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
 
-  @Override
-  public String additionalNormalization(String url, ArchivalUnit au) throws PluginException {
-    return url;
+package org.lockss.plugin.silverchair.oup;
+
+
+import org.lockss.plugin.ContentValidator;
+import org.lockss.plugin.silverchair.BaseScContentValidatorFactory;
+
+public class OupScContentValidatorFactory extends BaseScContentValidatorFactory {
+
+  public static class OupTextTypeValidator extends ScTextTypeValidator {
+
+    // files like https://academic.oup.com/view-large/figure/112575428/aww280f5.png
+    // are html wrapped around an image <img class="content-image" src="https://oup.silverchair-cdn.com/....
+
+    private static final String VIEW_LARGE_FIG_STRING = "/view-large/figure/";
+
+    @Override
+    public boolean invalidFileExt(String url) {
+      if (url.contains(VIEW_LARGE_FIG_STRING)) {
+        return false;
+      }
+      return super.invalidFileExt(url);
+    }
+
+    private static final String MAINTENANCE_STRING = "Sorry for the inconvenience, we are performing some maintenance at the moment. We will be back online shortly";
+    //    private static final String RESTRICTED_ACCESS_STRING = "article-top-info-user-restricted-options";
+    //    private static final String EXPIRES_PAT_STRING = "[?]Expires=(2147483647)";
+
+    @Override
+    public String getMaintenanceString() {
+      return MAINTENANCE_STRING;
+    }
   }
-  
+
+  public ContentValidator getTextTypeValidator() {
+    return new OupTextTypeValidator();
+  }
+
 }

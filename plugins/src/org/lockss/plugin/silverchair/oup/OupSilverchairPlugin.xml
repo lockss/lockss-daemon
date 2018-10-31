@@ -96,7 +96,7 @@
       <string>1,"^https?://oup\.silverchair-cdn\.com/.*(CSS|JS|\.pdf)(\?.*)?$"</string>
       <!--  PDF content is going through watermarking SOME of the time; we will consume -->
       <string>1,"^https?://watermark\.silverchair\.com/[^/]+\.pdf\?token="</string>
-      <!--  redundant version of issue, now filtered out of crawl -->      
+      <!--  redundant version of issue, now filtered out of crawl -->
       <string>2,"^https?://%s/%s/issue/(volume/)?[^?]+\?browseBy=volume", url_host(base_url), journal_id</string>
       <!-- don't allow bad releative link ending in [XSLTImagePath] -->
       <string>2,"^https?://%s/%s/(article(-(pdf|abstract))?|issue(-pdf)?)/(volume/)?([0-9i]+|doi).*/(%%5B|\[)XSLTImagePath(%%5D|\])$", url_host(base_url), journal_id</string>
@@ -131,9 +131,15 @@
     <string>host:base_url</string>
   </entry>
   <entry>
+    <string>au_url_mime_validation_map</string>
+    <list>
+      <string>/view-large/figure/, text/html</string>
+    </list>
+  </entry>
+  <entry>
     <!-- Validator factory for text MIME types -->
     <string>text/*_content_validator_factory</string>
-    <string>org.lockss.plugin.silverchair.oup.OupScContentValidator$Factory</string>
+    <string>org.lockss.plugin.silverchair.oup.OupScContentValidatorFactory</string>
   </entry>
   <entry>
     <string>text/html_crawl_filter_factory</string>
@@ -146,18 +152,18 @@
   <entry>
     <string>au_url_normalizer</string>
     <string>org.lockss.plugin.silverchair.oup.OupScUrlNormalizer</string>
-  </entry>  
+  </entry>
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.silverchair.oup.OupScHtmlHashFilterFactory</string>
   </entry>
   <entry>
     <string>application/pdf_filter_factory</string>
-    <string>org.lockss.plugin.silverchair.oup.OupScPdfFilterFactory</string>
-  </entry>  
+    <string>org.lockss.plugin.silverchair.BaseScPdfFilterFactory</string>
+  </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.silverchair.oup.OupScArticleIteratorFactory</string>
+    <string>org.lockss.plugin.silverchair.BaseScArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
@@ -197,7 +203,6 @@
       <string>org.lockss.plugin.ContentValidationException=org.lockss.plugin.silverchair.oup.OupScHtmlHttpResponseHandler</string>
       <!-- SSL Handshake -->
       <string>javax.net.ssl.SSLHandshakeException=org.lockss.plugin.silverchair.oup.OupScHtmlHttpResponseHandler</string>
-<!--       <string>org.lockss.util.urlconn.CacheException$UnknownExceptionException=org.lockss.plugin.silverchair.oup.OupScHtmlHttpResponseHandler</string> -->
       <string>403=org.lockss.plugin.silverchair.oup.OupScHtmlHttpResponseHandler</string>
       <string>500=org.lockss.plugin.silverchair.oup.OupScHtmlHttpResponseHandler</string>
     </list>

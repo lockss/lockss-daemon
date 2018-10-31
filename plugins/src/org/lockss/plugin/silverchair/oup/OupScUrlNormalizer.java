@@ -36,7 +36,6 @@ import java.util.regex.*;
 
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.silverchair.BaseScUrlNormalizer;
 
 /**
  * <p>
@@ -47,16 +46,15 @@ import org.lockss.plugin.silverchair.BaseScUrlNormalizer;
  * <li>https://academic.oup.com/ageing/article/46/suppl_1/i39/3828923</li>
  * </ul>
  */
-public class OupScUrlNormalizer extends BaseScUrlNormalizer {
+public class OupScUrlNormalizer implements UrlNormalizer {
 
   private static final Pattern RESULT_PATTERN = Pattern.compile("[?]searchresult=\\d+$", Pattern.CASE_INSENSITIVE);
   private static final String RESULT_CANONICAL = "";
-  
-  
+
   @Override
-  public String additionalNormalization(String url, ArchivalUnit au) throws PluginException {
+  public String normalizeUrl(String url, ArchivalUnit au) throws PluginException {
     url = RESULT_PATTERN.matcher(url).replaceFirst(RESULT_CANONICAL);
     return url;
   }
-  
+
 }

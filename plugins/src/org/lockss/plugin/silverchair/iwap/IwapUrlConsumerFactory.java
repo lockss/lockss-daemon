@@ -34,8 +34,6 @@ package org.lockss.plugin.silverchair.iwap;
 
 import java.util.regex.Pattern;
 
-import org.lockss.daemon.Crawler.CrawlerFacade;
-import org.lockss.plugin.*;
 import org.lockss.plugin.silverchair.BaseScUrlConsumerFactory;
 import org.lockss.util.Logger;
 /**
@@ -49,19 +47,17 @@ public class IwapUrlConsumerFactory extends BaseScUrlConsumerFactory {
   //or
   //https://iwaoponline.com/hr/article-pdf/x/y/z/6650409/afw017.pdf
   // it doesn't really matter if it ends in PDF - if it redirects from a canonical to a temporary, we ought to consume
-
-  // TODO: have not yet seen this occur. We go through watermark. Leave in place because it seems likely 
-  public static final String DEL_URL = "/(issue|article)-pdf/";
+  private static final String DEL_URL = "/(issue|article)-pdf/";
   // will redirect to: 
   // https://iwa.silverchair-cdn.com/iwa/backfile/content_public/journal/hr/....
-  public static final String DOC_URL = "/content_public/journal/[^?]+";
-  public static final String DOC_ARGS = "\\?Expires=[^&]+&Signature=[^&]+&Key-Pair-Id=.+$";
+  private static final String DOC_URL = "/content_public/journal/[^?]+";
+  private static final String DOC_ARGS = "\\?Expires=[^&]+&Signature=[^&]+&Key-Pair-Id=.+$";
   // or if through watermarking to:
   // https://watermark.silverchair.com/front_matter.pdf?token=AQECAHi208
-  public static final String WMARK_URL = "watermark[.]silverchair[.]com/[^?]+";
+  private static final String WMARK_URL = "watermark[.]silverchair[.]com/[^?]+";
 
-  public static final String ORIG_FULLTEXT_STRING = DEL_URL;
-  public static final String DEST_FULLTEXT_STRING = DOC_URL +  DOC_ARGS;
+  private static final String ORIG_FULLTEXT_STRING = DEL_URL;
+  private static final String DEST_FULLTEXT_STRING = DOC_URL +  DOC_ARGS;
 
   protected final static Pattern origFullTextPat = Pattern.compile(ORIG_FULLTEXT_STRING, Pattern.CASE_INSENSITIVE);
   protected final static Pattern destFullTextPat = Pattern.compile(DEST_FULLTEXT_STRING, Pattern.CASE_INSENSITIVE);
@@ -77,28 +73,6 @@ public class IwapUrlConsumerFactory extends BaseScUrlConsumerFactory {
 
   public static Pattern getWaterMarkPattern() {
     return wMarkFullTextPat;
-  }
-
-  @Override
-  public UrlConsumer createUrlConsumer(CrawlerFacade facade, FetchedUrlData fud) {
-    return new IwapUrlConsumer(facade, fud);
-  }
-
-  /**
-   * <p>
-   * A custom URL consumer that identifies specific redirect chains and stores the
-   * content at the origin of the chain (e.g. to support collecting and repairing
-   * redirect chains that begin with fixed URLs but end with one-time URLs).
-   * 
-   * </p>
-   * 
-   */
-  public class IwapUrlConsumer extends ScUrlConsumer {
-
-    public IwapUrlConsumer(CrawlerFacade facade,
-        FetchedUrlData fud) {
-      super(facade, fud);
-    }
   }
 
 }
