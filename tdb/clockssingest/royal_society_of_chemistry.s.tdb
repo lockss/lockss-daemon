@@ -12,7 +12,7 @@
   param[base_url] = https://pubs.rsc.org/
   #this is still at http
   param[resolver_url] = http://xlink.rsc.org/
-  #required parameters but now CDN settings so it doesn't matter what they're set to
+  #required parameters but now CDN settings so it doesn't matter what they're set to - no longer used by plugin
   param[graphics_url] = https://sod-a.rsc-cdn.org/
   param[base_url2] = https://www.rsc.org/
 
@@ -362,9 +362,9 @@
       au < doNotProcess ; doNotProcess ; 2017 ; Faraday Discussions Volume 204 ; 204 ; 2017 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; Faraday Discussions Volume 205 ; 205 ; 2017 ; >
 
-      au < manifest ; exists ; 2018 ; Faraday Discussions Volume 206 ; 206 ; 2018 ; >
+      au < testing ; exists ; 2018 ; Faraday Discussions Volume 206 ; 206 ; 2018 ; >
       au < manifest ; exists ; 2018 ; Faraday Discussions Volume 207 ; 207 ; 2018 ; >
-      au < manifest ; exists ; 2018 ; Faraday Discussions Volume 208 ; 208 ; 2018 ; >
+      au < testing ; exists ; 2018 ; Faraday Discussions Volume 208 ; 208 ; 2018 ; >
       au < manifest ; exists ; 2018 ; Faraday Discussions Volume 209 ; 209 ; 2018 ; >
       au < manifest ; exists ; 2018 ; Faraday Discussions Volume 210 ; 210 ; 2018 ; >
       au < manifest ; exists ; 2018 ; Faraday Discussions Volume 211 ; 211 ; 2018 ; >
@@ -417,7 +417,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Integrative Biology Volume 7 ; 7 ; 2015 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; Integrative Biology Volume 8 ; 8 ; 2016 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; Integrative Biology Volume 9 ; 9 ; 2017 ; >
-      au < manifest ; exists ; 2018 ; Integrative Biology Volume 10 ; 10 ; 2018 ; >
+      au < testing ; exists ; 2018 ; Integrative Biology Volume 10 ; 10 ; 2018 ; >
 
   }
 
@@ -762,7 +762,7 @@
       au < exists ; exists ; 1996 ; Analytical Communications Volume 33 ; 33 ; 1996 ; >
       au < manifest ; exists ; 1997 ; Analytical Communications Volume 34 ; 34 ; 1997 ; >
       au < manifest ; exists ; 1998 ; Analytical Communications Volume 35 ; 35 ; 1998 ; >
-      au < manifest ; exists ; 1999 ; Analytical Communications Volume 36 ; 36 ; 1999 ; >
+      au < testing ; exists ; 1999 ; Analytical Communications Volume 36 ; 36 ; 1999 ; >
 
   }
 
@@ -1348,7 +1348,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 3 ; 3 ; 2015 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; doNotProcess ; 2016 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 4 ; 4 ; 2016 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 5 ; 5 ; 2017 ; >
-      au < manifest ; exists ; 2018 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 6 ; 6 ; 2018 ; >
+      au < testing ; exists ; 2018 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 6 ; 6 ; 2018 ; >
 
   }
 

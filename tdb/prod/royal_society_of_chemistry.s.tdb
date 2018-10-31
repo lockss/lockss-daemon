@@ -73,7 +73,7 @@
       au < doNotProcess ; 2015 ; Analytical Methods Volume 7 ; 7 ; 2015 >
       au < doNotProcess ; 2016 ; Analytical Methods Volume 8 ; 8 ; 2016 >
       au < doNotProcess ; 2017 ; Analytical Methods Volume 9 ; 9 ; 2017 >
-      au < manifest ; 2018 ; Analytical Methods Volume 10 ; 10 ; 2018 >
+      au < testing ; 2018 ; Analytical Methods Volume 10 ; 10 ; 2018 >
 
     }
   }
@@ -772,7 +772,7 @@
       au < doNotProcess ; 2015 ; Physical Chemistry Chemical Physics Volume 17 ; 17 ; 2015 >
       au < doNotProcess ; 2016 ; Physical Chemistry Chemical Physics Volume 18 ; 18 ; 2016 >
       au < doNotProcess ; 2017 ; Physical Chemistry Chemical Physics Volume 19 ; 19 ; 2017 >
-      au < manifest ; 2018 ; Physical Chemistry Chemical Physics Volume 20 ; 20 ; 2018 >
+      au < testing ; 2018 ; Physical Chemistry Chemical Physics Volume 20 ; 20 ; 2018 >
 
   }
 
@@ -1194,7 +1194,7 @@
       au < doNotProcess ; 2015 ; Environmental Science: Water Research & Technology Volume 1 ; 1 ; 2015 >
       au < doNotProcess ; 2016 ; Environmental Science: Water Research & Technology Volume 2 ; 2 ; 2016 >
       au < doNotProcess ; 2017 ; Environmental Science: Water Research & Technology Volume 3 ; 3 ; 2017 >
-      au < manifest ; 2018 ; Environmental Science: Water Research & Technology Volume 4 ; 4 ; 2018 >
+      au < testing ; 2018 ; Environmental Science: Water Research & Technology Volume 4 ; 4 ; 2018 >
 
   }
 
@@ -1408,7 +1408,7 @@
       au < doNotProcess ; 2015 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 3 ; 3 ; 2015 >
       au < doNotProcess ; 2016 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 4 ; 4 ; 2016 >
       au < doNotProcess ; 2017 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 5 ; 5 ; 2017 >
-      au < manifest ; 2018 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 6 ; 6 ; 2018 >
+      au < testing ; 2018 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 6 ; 6 ; 2018 >
 
   }
 
@@ -2486,7 +2486,7 @@
       param[journal_code] = rc
 
       au < manifest ; 1998 ; Russian Chemical Reviews Volume 67 ; 67 ; 1998 >
-      au < manifest ; 1999 ; Russian Chemical Reviews Volume 68 ; 68 ; 1999 >
+      au < testing ; 1999 ; Russian Chemical Reviews Volume 68 ; 68 ; 1999 >
       au < manifest ; 2000 ; Russian Chemical Reviews Volume 69 ; 69 ; 2000 >
       au < manifest ; 2001 ; Russian Chemical Reviews Volume 70 ; 70 ; 2001 >
       au < manifest ; 2002 ; Russian Chemical Reviews Volume 71 ; 71 ; 2002 >
