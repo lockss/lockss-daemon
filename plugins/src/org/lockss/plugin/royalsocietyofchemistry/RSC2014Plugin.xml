@@ -14,7 +14,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>26</string>
+    <string>27</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -90,7 +90,7 @@
       <string>2,"^(?:%s)en/Error/", base_url</string>
 <!--      <string>1,"^%s", graphics_url</string> -->
   <!--  two CDN type support hosts and base url for non-content files -->
-      <string>1,"^https?://(?:(sod-a\.)?rsc-cdn\.org|www\.rsc\.org|%s)/.*[.](?:bmp|css|ico|gif|jpe?g|js(?:[?]ver=[^&amp;]+)?|mol|png|tif?f)$", base_url_host</string>
+      <string>1,"^https?://(?:(sod-a|www)\.rsc-cdn\.org|www\.rsc\.org|%s)/.*[.](?:bmp|css|ico|gif|jpe?g|js(?:[?]ver=[^&amp;]+)?|mol|png|tif?f)$", base_url_host</string>
       <string>4,"^https?://(?:%s|%s)/", base_url_host, resolver_url_host</string>
       <string>2,"^https?://(?:%s/en/(?:account/|error/|content/openurl/|.*iscitedby=)|%s/[?]doi=[^&amp;]+&amp;newsite=1)", base_url_host, resolver_url_host</string>
       <string>1,"^https?://%s/(?:services/images/|en/content/openurlimage/|en/journals/lockss[?]journalcode=%s&amp;volume=%s&amp;year=%d&amp;issue=)", base_url_host, journal_code, volume_name, year</string>
@@ -259,7 +259,7 @@
     <!-- these will not count towards poll results but will replicate from peer if above 1.69.5 -->
     <string>au_url_poll_result_weight</string>
     <list>
-      <string>"sod-a\.rsc-cdn\.org/(pubs-core/|.*logo[.]png)", 0</string>
+      <string>"\.rsc-cdn\.org/(pubs-core/|.*logo[.]png)", 0</string>
       <string>"[.](css|js)($|\?)", 0</string>
     </list>
   </entry>
