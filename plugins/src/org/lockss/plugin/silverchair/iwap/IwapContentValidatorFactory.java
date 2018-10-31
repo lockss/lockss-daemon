@@ -41,7 +41,8 @@ public class IwapContentValidatorFactory extends BaseScContentValidatorFactory {
   public static class IwapTextTypeValidator extends ScTextTypeValidator {
 
     private static final String RESTRICTED_ACCESS_STRING = "article-top-info-user-restricted-options";
-    private static final String EXPIRES_PAT_STRING = "[?]Expires=(?!2147483647)";
+    // the pattern is essentially long enough to contain 2 patterns to ensure the match does not give a false positive
+    private static final String EXPIRES_PAT_STRING = "[?]Expires=(?!2147483647).......................";
 
     @Override
     public String getInvalidString() {
