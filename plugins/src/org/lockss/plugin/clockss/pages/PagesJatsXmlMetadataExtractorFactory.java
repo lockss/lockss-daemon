@@ -43,29 +43,54 @@ import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.JatsPublishingSchemaHelper;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 
 
 public class PagesJatsXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
   private static final Logger log = Logger.getLogger(PagesJatsXmlMetadataExtractorFactory.class);
 
   private static SourceXmlSchemaHelper JatsPublishingHelper = null;
+  private static SourceXmlSchemaHelper IssueHelper = null;
 
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
       String contentType)
           throws PluginException {
-    return new JatsPublishingSourceXmlMetadataExtractor();
+    return new PagesPublishingSourceXmlMetadataExtractor();
   }
 
-  public class JatsPublishingSourceXmlMetadataExtractor extends SourceXmlMetadataExtractor {
-
+  public class PagesPublishingSourceXmlMetadataExtractor extends SourceXmlMetadataExtractor {
+    
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
-      // Once you have it, just keep returning the same one. It won't change.
-      if (JatsPublishingHelper == null) {
-        JatsPublishingHelper = new JatsPublishingSchemaHelper();
+      throw new ShouldNotHappenException("This version of the schema setup cannot be used for this plugin");
+    }
+
+    @Override
+    protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu, Document doc) {
+
+      if (doc == null) return null;
+      Element root = doc.getDocumentElement();
+      if (root == null) return null;
+      String rootName = root.getNodeName();
+
+      log.debug3("rootName : " + rootName);
+      if ("issue-xml".equals(rootName)) {
+        log.debug3("getting issue helper");
+        // Once you have it, just keep returning the same one. It won't change.
+        if (IssueHelper == null) {
+          IssueHelper = new IssueSchemaHelper();
+        }
+        return IssueHelper;
+      } else {
+        log.debug3("getting Jats helper");
+        // Once you have it, just keep returning the same one. It won't change.
+        if (JatsPublishingHelper == null) {
+          JatsPublishingHelper = new JatsPublishingSchemaHelper();
+        }
+        return JatsPublishingHelper;
       }
-      return JatsPublishingHelper;
     }
 
 
@@ -78,6 +103,7 @@ public class PagesJatsXmlMetadataExtractorFactory extends SourceXmlMetadataExtra
 
       // filename is just the same a the XML filename but with .pdf 
       // instead of .xml
+      // TODO - the issue_xml might use a different correlation
       String url_string = cu.getUrl();
       String pdfName = url_string.substring(0,url_string.length() - 3) + "pdf";
       log.debug3("pdfName is " + pdfName);
@@ -91,18 +117,29 @@ public class PagesJatsXmlMetadataExtractorFactory extends SourceXmlMetadataExtra
         CachedUrl cu, ArticleMetadata thisAM) {
 
       log.debug3("in Pages postCookProcess");
-      //publication title - use publisher id
-      if (thisAM.get(MetadataField.FIELD_PUBLICATION_TITLE) == null) {
-        if (thisAM.getRaw(JatsPublishingSchemaHelper.JATS_jid_publisher) != null) {
-          thisAM.put(MetadataField.FIELD_PUBLICATION_TITLE, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_jid_publisher));
+      if (schemaHelper == IssueHelper) {
+        // This is a whole issue in one PDF file 
+        //publication title - use publisher id
+        // but there is an issue title so leave the title as an "article title"
+        if (thisAM.get(MetadataField.FIELD_PUBLICATION_TITLE) == null) {
+          if (thisAM.getRaw(IssueSchemaHelper.IX_jid_publisher) != null) {
+            thisAM.put(MetadataField.FIELD_PUBLICATION_TITLE, thisAM.getRaw(IssueSchemaHelper.IX_jid_publisher));
+          }
         }
-      }
-      //If we didn't get a valid date value, use the copyright year if it's there
-      if (thisAM.get(MetadataField.FIELD_DATE) == null) {
-        if (thisAM.getRaw(JatsPublishingSchemaHelper.JATS_date) != null) {
-          thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_date));
-        } else {// last chance
-          thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_edate));
+      } else {
+        //publication title - use publisher id
+        if (thisAM.get(MetadataField.FIELD_PUBLICATION_TITLE) == null) {
+          if (thisAM.getRaw(JatsPublishingSchemaHelper.JATS_jid_publisher) != null) {
+            thisAM.put(MetadataField.FIELD_PUBLICATION_TITLE, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_jid_publisher));
+          }
+        }
+        //If we didn't get a valid date value, use the copyright year if it's there
+        if (thisAM.get(MetadataField.FIELD_DATE) == null) {
+          if (thisAM.getRaw(JatsPublishingSchemaHelper.JATS_date) != null) {
+            thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_date));
+          } else {// last chance
+            thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_edate));
+          }
         }
       }
     }
