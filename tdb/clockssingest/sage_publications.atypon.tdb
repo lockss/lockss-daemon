@@ -25113,6 +25113,38 @@
   {
 
     title <
+      name = Journal of Marketing ;
+      issn = 0022-2429 ;
+      eissn = 1547-7185
+    >
+
+    #journal_id = jmx
+
+      au < exists ; exists ; 2000 ; Journal of Marketing Volume 64 ; 64 ; jmxa ; >
+      au < exists ; exists ; 2001 ; Journal of Marketing Volume 65 ; 65 ; jmxa ; >
+      au < exists ; exists ; 2002 ; Journal of Marketing Volume 66 ; 66 ; jmxa ; >
+      au < exists ; exists ; 2003 ; Journal of Marketing Volume 67 ; 67 ; jmxa ; >
+      au < exists ; exists ; 2004 ; Journal of Marketing Volume 68 ; 68 ; jmxa ; >
+      au < exists ; exists ; 2005 ; Journal of Marketing Volume 69 ; 69 ; jmxa ; >
+      au < exists ; exists ; 2006 ; Journal of Marketing Volume 70 ; 70 ; jmxa ; >
+      au < exists ; exists ; 2007 ; Journal of Marketing Volume 71 ; 71 ; jmxa ; >
+      au < exists ; exists ; 2008 ; Journal of Marketing Volume 72 ; 72 ; jmxa ; >
+      au < exists ; exists ; 2009 ; Journal of Marketing Volume 73 ; 73 ; jmxa ; >
+      au < exists ; exists ; 2010 ; Journal of Marketing Volume 74 ; 74 ; jmxa ; >
+      au < exists ; exists ; 2011 ; Journal of Marketing Volume 75 ; 75 ; jmxa ; >
+      au < exists ; exists ; 2012 ; Journal of Marketing Volume 76 ; 76 ; jmxa ; >
+      au < exists ; exists ; 2013 ; Journal of Marketing Volume 77 ; 77 ; jmxa ; >
+      au < exists ; exists ; 2014 ; Journal of Marketing Volume 78 ; 78 ; jmxa ; >
+      au < exists ; exists ; 2015 ; Journal of Marketing Volume 79 ; 79 ; jmxa ; >
+      au < exists ; exists ; 2016 ; Journal of Marketing Volume 80 ; 80 ; jmxa ; >
+      au < exists ; exists ; 2017 ; Journal of Marketing Volume 81 ; 81 ; jmxa ; >
+      au < exists ; exists ; 2018 ; Journal of Marketing Volume 82 ; 82 ; jmxa ; >
+
+  }
+
+  {
+
+    title <
       name = Journal of Marketing Education ;
       issn = 0273-4753 ;
       eissn = 1552-6550
@@ -32219,7 +32251,7 @@
       au < manifest ; exists ; 2005 ; Nuclear Receptor Signaling Volume 3 ; 3 ; nrsa ; >
       au < manifest ; exists ; 2006 ; Nuclear Receptor Signaling Volume 4 ; 4 ; nrsa ; >
       au < manifest ; exists ; 2007 ; Nuclear Receptor Signaling Volume 5 ; 5 ; nrsa ; >
-      au < manifest ; exists ; 2008 ; Nuclear Receptor Signaling Volume 6 ; 6 ; nrsa ; >
+      au < crawling ; exists ; 2008 ; Nuclear Receptor Signaling Volume 6 ; 6 ; nrsa ; >
       au < crawling ; exists ; 2009 ; Nuclear Receptor Signaling Volume 7 ; 7 ; nrsa ; >
       au < crawling ; exists ; 2010 ; Nuclear Receptor Signaling Volume 8 ; 8 ; nrsa ; >
       au < crawling ; exists ; 2011 ; Nuclear Receptor Signaling Volume 9 ; 9 ; nrsa ; >
@@ -35375,7 +35407,7 @@
       au < manifest ; exists ; 2005 ; Progress in Rubber, Plastics and Recycling Technology Volume 21 ; 21 ; prpa ; >
       au < manifest ; exists ; 2006 ; Progress in Rubber, Plastics and Recycling Technology Volume 22 ; 22 ; prpa ; >
       au < manifest ; exists ; 2007 ; Progress in Rubber, Plastics and Recycling Technology Volume 23 ; 23 ; prpa ; >
-      au < manifest ; exists ; 2008 ; Progress in Rubber, Plastics and Recycling Technology Volume 24 ; 24 ; prpa ; >
+      au < crawling ; exists ; 2008 ; Progress in Rubber, Plastics and Recycling Technology Volume 24 ; 24 ; prpa ; >
       au < crawling ; exists ; 2009 ; Progress in Rubber, Plastics and Recycling Technology Volume 25 ; 25 ; prpa ; >
       au < crawling ; exists ; 2010 ; Progress in Rubber, Plastics and Recycling Technology Volume 26 ; 26 ; prpa ; >
       au < crawling ; exists ; 2011 ; Progress in Rubber, Plastics and Recycling Technology Volume 27 ; 27 ; prpa ; >

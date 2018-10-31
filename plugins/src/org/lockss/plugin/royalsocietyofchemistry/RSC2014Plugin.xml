@@ -1,7 +1,7 @@
 <map>
   <entry>
    <string>plugin_status</string>
-   <string>down - moved to https</string>
+   <string>testing - moved to https</string>
   </entry>
   <!-- https transition enabled -->  
   <entry>
@@ -14,7 +14,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>25</string>
+    <string>26</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -171,11 +171,11 @@
 <!--  See also the urlnormalizer -->
   <entry>
     <string>plugin_url_fetcher_factory</string>
-    <string>org.lockss.plugin.base.HttpToHttpsUrlFetcherFactory</string>
+    <string>org.lockss.plugin.royalsocietyofchemistry.RSC2014HttpToHttpsUrlFetcherFactory</string>
   </entry>
   <entry>
     <string>plugin_url_consumer_factory</string>
-    <string>org.lockss.plugin.base.HttpToHttpsUrlConsumerFactory</string>
+    <string>org.lockss.plugin.royalsocietyofchemistry.RSC2014HttpToHttpsUrlConsumerFactory</string>
   </entry>
   <!-- end changes for https conversion -->  
   <entry>

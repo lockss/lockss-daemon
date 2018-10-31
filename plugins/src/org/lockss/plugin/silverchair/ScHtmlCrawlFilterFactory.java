@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -78,8 +78,9 @@ public class ScHtmlCrawlFilterFactory implements FilterFactory {
           // DROP right column: related content, etc.
           // KEEP links to article views, citation files, etc.
           // [AMA, SPIE]
-          HtmlNodeFilters.allExceptSubtree(HtmlNodeFilters.tagWithAttributeRegex("div", "class", "portletColumn"),
-                                           HtmlNodeFilters.tagWithAttribute("div", "id", "scm6MainContent_ToolBox")),
+          HtmlNodeFilters.allExceptSubtree(
+              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "portletColumn"),
+              HtmlNodeFilters.tagWithAttribute("div", "id", "scm6MainContent_ToolBox")),
           // DROP link to previous/next article [AMA, SPIE]
           HtmlNodeFilters.tagWithAttributeRegex("a", "class", "prev"),
           HtmlNodeFilters.tagWithAttributeRegex("a", "class", "next"),

@@ -32,102 +32,47 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.silverchair.iwap;
 
-import java.io.IOException;
 import java.util.regex.Pattern;
 
-import org.lockss.daemon.Crawler.CrawlerFacade;
-import org.lockss.plugin.*;
-import org.lockss.plugin.base.SimpleUrlConsumer;
+import org.lockss.plugin.silverchair.BaseScUrlConsumerFactory;
 import org.lockss.util.Logger;
 /**
  * @since 1.67.5 
  */
-public class IwapUrlConsumerFactory implements UrlConsumerFactory {
+public class IwapUrlConsumerFactory extends BaseScUrlConsumerFactory {
+  
   private static final Logger log = Logger.getLogger(IwapUrlConsumerFactory.class);
 
   //https://iwaponline.com/hr/issue-pdf/x/y/z/q
-    //or
+  //or
   //https://iwaoponline.com/hr/article-pdf/x/y/z/6650409/afw017.pdf
   // it doesn't really matter if it ends in PDF - if it redirects from a canonical to a temporary, we ought to consume
-  
-  // TODO: have not yet seen this occur. We go through watermark. Leave in place because it seems likely 
-  public static final String DEL_URL = "/(issue|article)-pdf/";
+  private static final String DEL_URL = "/(issue|article)-pdf/";
   // will redirect to: 
   // https://iwa.silverchair-cdn.com/iwa/backfile/content_public/journal/hr/....
-  public static final String DOC_URL = "/content_public/journal/[^?]+";
-  public static final String DOC_ARGS = "\\?Expires=[^&]+&Signature=[^&]+&Key-Pair-Id=.+$";
+  private static final String DOC_URL = "/content_public/journal/[^?]+";
+  private static final String DOC_ARGS = "\\?Expires=[^&]+&Signature=[^&]+&Key-Pair-Id=.+$";
   // or if through watermarking to:
   // https://watermark.silverchair.com/front_matter.pdf?token=AQECAHi208
-  public static final String WMARK_URL = "watermark[.]silverchair[.]com/[^?]+";
+  private static final String WMARK_URL = "watermark[.]silverchair[.]com/[^?]+";
 
-  public static final String ORIG_FULLTEXT_STRING = DEL_URL;
-  public static final String DEST_FULLTEXT_STRING = DOC_URL +  DOC_ARGS;
+  private static final String ORIG_FULLTEXT_STRING = DEL_URL;
+  private static final String DEST_FULLTEXT_STRING = DOC_URL +  DOC_ARGS;
 
-  protected static final Pattern origFullTextPat = Pattern.compile(ORIG_FULLTEXT_STRING, Pattern.CASE_INSENSITIVE);
-  protected static final Pattern destFullTextPat = Pattern.compile(DEST_FULLTEXT_STRING, Pattern.CASE_INSENSITIVE);
-  protected static final Pattern wMarkFullTextPat = Pattern.compile(WMARK_URL, Pattern.CASE_INSENSITIVE);
-  
+  protected final static Pattern origFullTextPat = Pattern.compile(ORIG_FULLTEXT_STRING, Pattern.CASE_INSENSITIVE);
+  protected final static Pattern destFullTextPat = Pattern.compile(DEST_FULLTEXT_STRING, Pattern.CASE_INSENSITIVE);
+  protected final static Pattern wMarkFullTextPat = Pattern.compile(WMARK_URL, Pattern.CASE_INSENSITIVE);
+
   public static Pattern getOrigPdfPattern() {
     return origFullTextPat;
   }
-  
+
   public static Pattern getDestPdfPattern() {
     return destFullTextPat;
   }
-  
-  @Override
-  public UrlConsumer createUrlConsumer(CrawlerFacade facade, FetchedUrlData fud) {
-    return new IwapUrlConsumer(facade, fud);
-  }
 
-  /**
-   * <p>
-   * A custom URL consumer that identifies specific redirect chains and stores the
-   * content at the origin of the chain (e.g. to support collecting and repairing
-   * redirect chains that begin with fixed URLs but end with one-time URLs).
-   * 
-   * </p>
-   * 
-   */
-  public class IwapUrlConsumer extends SimpleUrlConsumer {
-
-    public IwapUrlConsumer(CrawlerFacade facade,
-        FetchedUrlData fud) {
-      super(facade, fud);
-    }
-    
-    @Override
-    public void consume() throws IOException {
-      if (shouldStoreAtOrigUrl()) {
-        storeAtOrigUrl();
-      }
-      super.consume();
-    }
-
-    /**
-     * <p>
-     * Determines if a particular redirect chain should cause content to be stored
-     * only at the origin URL ({@link FetchedUrlData#origUrl}).
-     * </p>
-     * 
-     * @return True if and only if the fetched URL data represents a particular
-     *         redirect chain that should cause content to be stored only at the
-     *         origin URL.
-     * @since 1.67.5
-     */
-    protected boolean shouldStoreAtOrigUrl() {
-      boolean should =  fud.redirectUrls != null
-          && fud.redirectUrls.size() == 1
-          && fud.redirectUrls.get(0).equals(fud.fetchUrl)
-          && getOrigPdfPattern().matcher(fud.origUrl).find()
-          && (getDestPdfPattern().matcher(fud.fetchUrl).find() || wMarkFullTextPat.matcher(fud.fetchUrl).find());
-      if (fud.redirectUrls != null) {
-        log.debug3("Iwap redirect " + fud.redirectUrls.size() + ": " + fud.redirectUrls.toString());
-        log.debug3("Iwap redirect: " + " " + fud.origUrl + " to " + fud.fetchUrl + " should consume?: " + should);
-      }
-      return should;
-    }
-
+  public static Pattern getWaterMarkPattern() {
+    return wMarkFullTextPat;
   }
 
 }

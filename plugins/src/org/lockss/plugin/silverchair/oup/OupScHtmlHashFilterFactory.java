@@ -38,15 +38,15 @@ import org.htmlparser.NodeFilter;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.silverchair.ScHtmlHashFilterFactory;
+import org.lockss.plugin.silverchair.BaseScHtmlHashFilterFactory;
 import org.lockss.util.Logger;
 
-public class OupScHtmlHashFilterFactory extends ScHtmlHashFilterFactory {
+public class OupScHtmlHashFilterFactory extends BaseScHtmlHashFilterFactory {
 
   private static final Logger log = Logger.getLogger(OupScHtmlHashFilterFactory.class);
   
   @Override
-  protected boolean doSpecialFilter() {
+  protected boolean doExtraSpecialFilter() {
     return false;
   }
 
@@ -67,10 +67,10 @@ public class OupScHtmlHashFilterFactory extends ScHtmlHashFilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("img", "class", "content-image"),
     };
     
-    NodeFilter[] moreFilters = new NodeFilter[] {
+    NodeFilter[] moreExcludeFilters = new NodeFilter[] {
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "navbar-search"),
     };
     
-    return createFilteredInputStream(au, in, encoding, includeFilters, moreFilters);
+    return createFilteredInputStream(au, in, encoding, includeFilters, moreExcludeFilters);
   }
 }

@@ -40,13 +40,13 @@ import org.lockss.test.*;
 public class TestScHtmlHashFilterFactory extends LockssTestCase {
   static String ENC = Constants.DEFAULT_ENCODING;
   
-  private ScHtmlHashFilterFactory fact;
+  private BaseScHtmlHashFilterFactory fact;
   private MockArchivalUnit mau;
   
   @Override
   public void setUp() throws Exception {
     super.setUp();
-    fact = new ScHtmlHashFilterFactory();
+    fact = new BaseScHtmlHashFilterFactory();
     mau = new MockArchivalUnit();
   }
   

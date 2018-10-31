@@ -100,7 +100,6 @@ public class TestSilverchairArchivalUnit extends LockssTestCase {
   
   public void testCheckSubstanceRules() throws Exception {
     boolean found;
-    URL base = new URL(ROOT_URL);
     ArchivalUnit jsAu = makeAu("72","2012");
     PatternMatcher matcher = RegexpUtil.getMatcher();   
     List<Pattern> patList = jsAu.makeSubstanceUrlPatterns();
@@ -125,8 +124,6 @@ log.setLevel("debug3");
       }
       assertEquals(false,found);
     }
-
   }
-
 }
 

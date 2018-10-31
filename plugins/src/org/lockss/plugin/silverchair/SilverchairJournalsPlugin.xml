@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>49</string>
+    <string>50</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -77,7 +77,7 @@
    <list>
     <string>"%sLOCKSS/ListOfIssues.aspx?resourceId=%d&amp;year=%d", to_http(base_url), resource_id, year</string>
     <string>"%sLOCKSS/ListOfIssues.aspx?resourceId=%d&amp;year=%d", to_https(base_url), resource_id, year</string>
-    </list>    
+    </list>
   </entry>
   <entry>
   <!-- crawl examples
@@ -123,7 +123,7 @@
   </entry>
   <entry>
     <string>plugin_url_consumer_factory</string>
-    <string>org.lockss.plugin.silverchair.ScUrlConsumerFactory</string>
+    <string>org.lockss.plugin.silverchair.BaseScUrlConsumerFactory</string>
   </entry>
   <entry>
     <string>au_url_normalizer</string>
@@ -134,7 +134,7 @@
     <string>org.lockss.plugin.silverchair.ScHtmlLinkRewriterFactory</string>
   </entry>
   <entry>
-    <string>au_crawl_depth</string>
+    <string>au_refetch_depth</string>
     <int>2</int>
   </entry>
   <entry>
@@ -152,11 +152,11 @@
   <entry>
     <!-- Validator factory for text MIME types -->
     <string>text/*_content_validator_factory</string>
-    <string>org.lockss.plugin.silverchair.ScContentValidator$Factory</string>
+    <string>org.lockss.plugin.silverchair.BaseScContentValidatorFactory</string>
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.silverchair.ScHtmlHashFilterFactory</string>
+    <string>org.lockss.plugin.silverchair.BaseScHtmlHashFilterFactory</string>
   </entry>
   <entry>
     <string>application/json_filter_factory</string>
@@ -212,7 +212,7 @@
     <list>
       <!-- Mismatched actual length from Content-Length header should be ignored-->
       <string>org.lockss.plugin.ContentValidationException$WrongLength=org.lockss.util.urlconn.CacheSuccess</string>
-      <string>org.lockss.plugin.ContentValidationException=org.lockss.plugin.silverchair.ScHtmlHttpResponseHandler</string>
+      <string>org.lockss.plugin.ContentValidationException=org.lockss.plugin.silverchair.BaseScHtmlHttpResponseHandler</string>
     </list>
   </entry>
   <entry>

@@ -48,7 +48,7 @@ import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.base.DefaultUrlCacher;
 import org.lockss.plugin.definable.*;
-import org.lockss.plugin.silverchair.ScHtmlHttpResponseHandler.ScRetryableNetworkException;
+import org.lockss.plugin.silverchair.BaseScHtmlHttpResponseHandler.ScRetryableNetworkException;
 
 public class TestOupResponseHandler extends LockssTestCase {
 

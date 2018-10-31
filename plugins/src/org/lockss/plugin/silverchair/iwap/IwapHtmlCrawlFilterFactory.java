@@ -75,17 +75,8 @@ public class IwapHtmlCrawlFilterFactory implements FilterFactory {
             // don't collect the powerpoint version of images or slides
             HtmlNodeFilters.tagWithAttributeRegex("a", "class", "download(-slide|Imagesppt)"),
             
-/*
-            HtmlNodeFilters.tagWithAttributeRegex("a", "class", "prev"),
-            HtmlNodeFilters.tagWithAttributeRegex("a", "class", "next"),
-            // Limit access to other issues - nav bar with drop downs
-            HtmlNodeFilters.tagWithAttribute("div", "class", "navbar"),
-            // which are also tagged so check this to guard against other locations
-            HtmlNodeFilters.tagWithAttributeRegex("a",  "class", "^nav-link"),
-*/
             // article - author section with notes could have some bogus relative links
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "al-author-info-wrap"),
-            // HtmlNodeFilters.tagWithAttributeRegex("dive", "class",  "widget-instance-OUP_FootnoteSection"),
             }))
         );
   }

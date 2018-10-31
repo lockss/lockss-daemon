@@ -1017,8 +1017,8 @@
     au < manifest ; exists ; 2013 ; 2013 ; Journal of Animal Science Volume 90 ; 90 ; >
     au < manifest ; exists ; 2014 ; 2014 ; Journal of Animal Science Volume 91 ; 91 ; >
     au < manifest ; exists ; 2015 ; 2015 ; Journal of Animal Science Volume 92 ; 92 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; Journal of Animal Science Volume 93 ; 93 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; Journal of Animal Science Volume 94 ; 94 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; Journal of Animal Science Volume 93 ; 93 ; >
+    au < frozen ; exists ; 2017 ; 2017 ; Journal of Animal Science Volume 94 ; 94 ; >
     au < crawling ; exists ; 2018 ; 2018 ; Journal of Animal Science Volume 95 ; 95 ; >
 
   }
@@ -1612,7 +1612,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Arthropod Management Tests Volume 38 ; 38 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Arthropod Management Tests Volume 39 ; 39 ;  >
     au < frozen ; exists ; 2015 ; 2015 ; Arthropod Management Tests Volume 40 ; 40 ;  >
-    au < crawling ; exists ; 2016 ; 2016 ; Arthropod Management Tests Volume 41 ; 41 ;  >
+    au < frozen ; exists ; 2016 ; 2016 ; Arthropod Management Tests Volume 41 ; 41 ;  >
     au < frozen ; exists ; 2017 ; 2017 ; Arthropod Management Tests Volume 42 ; 42 ;  >
     au < testing ; exists ; 2018 ; 2018 ; Arthropod Management Tests Volume 43 ; 43 ;  >
 
@@ -1915,7 +1915,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; BioScience Volume 55 ; 55 ;  >
     au < doNotProcess ; exists ; 2006 ; 2006 ; BioScience Volume 56 ; 56 ;  >
     au < doNotProcess ; exists ; 2007 ; 2007 ; BioScience Volume 57 ; 57 ;  >
-    au < crawling ; exists ; 2008 ; 2008 ; BioScience Volume 58 ; 58 ;  >
+    au < frozen ; exists ; 2008 ; 2008 ; BioScience Volume 58 ; 58 ;  >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; BioScience Volume 59 ; 59 ;  >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; BioScience Volume 60 ; 60 ;  >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; BioScience Volume 61 ; 61 ;  >
@@ -1924,7 +1924,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; BioScience Volume 64 ; 64 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; BioScience Volume 65 ; 65 ;  >
     au < frozen ; exists ; 2016 ; 2016 ; BioScience Volume 66 ; 66 ;  >
-    au < crawling ; exists ; 2017 ; 2017 ; BioScience Volume 67 ; 67 ;  >
+    au < frozen ; exists ; 2017 ; 2017 ; BioScience Volume 67 ; 67 ;  >
     au < crawling ; exists ; 2018 ; 2018 ; BioScience Volume 68 ; 68 ;  >
 
   }
@@ -2832,7 +2832,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Cambridge Journal of Regions, Economy and Society Volume 7 ; 7 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Cambridge Journal of Regions, Economy and Society Volume 8 ; 8 ;  >
     au < frozen ; exists ; 2016 ; 2016 ; Cambridge Journal of Regions, Economy and Society Volume 9 ; 9 ;  >
-    au < crawling ; exists ; 2017 ; 2017 ; Cambridge Journal of Regions, Economy and Society Volume 10 ; 10 ;  >
+    au < frozen ; exists ; 2017 ; 2017 ; Cambridge Journal of Regions, Economy and Society Volume 10 ; 10 ;  >
     au < testing ; exists ; 2018 ; 2018 ; Cambridge Journal of Regions, Economy and Society Volume 11 ; 11 ;  >
 
   }
@@ -2969,7 +2969,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Cardiovascular Research Volume 66-68 ; 66-68 ;  >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Cardiovascular Research Volume 69-72 ; 69-72 ;  >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Cardiovascular Research Volume 73-76 ; 73-76 ;  >
-    au < crawling ; exists ; 2008 ; 2008 ; Cardiovascular Research Volume 77-80 ; 77-80 ;  >
+    au < frozen ; exists ; 2008 ; 2008 ; Cardiovascular Research Volume 77-80 ; 77-80 ;  >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Cardiovascular Research Volume 81-84 ; 81-84 ;  >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Cardiovascular Research Volume 85-88 ; 85-88 ;  >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Cardiovascular Research Volume 89-92 ; 89-92 ;  >
@@ -3129,8 +3129,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Children & Schools Volume 35 ; 35 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Children & Schools Volume 36 ; 36 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Children & Schools Volume 37 ; 37 ;  >
-    au < crawling ; exists ; 2016 ; 2016 ; Children & Schools Volume 38 ; 38 ;  >
-    au < crawling ; exists ; 2017 ; 2017 ; Children & Schools Volume 39 ; 39 ;  >
+    au < frozen ; exists ; 2016 ; 2016 ; Children & Schools Volume 38 ; 38 ;  >
+    au < frozen ; exists ; 2017 ; 2017 ; Children & Schools Volume 39 ; 39 ;  >
     au < testing ; exists ; 2018 ; 2018 ; Children & Schools Volume 40 ; 40 ;  >
 
   }
@@ -3160,7 +3160,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Chinese Journal of International Law Volume 12 ; 12 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Chinese Journal of International Law Volume 13 ; 13 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Chinese Journal of International Law Volume 14 ; 14 ;  >
-    au < crawling ; exists ; 2016 ; 2016 ; Chinese Journal of International Law Volume 15 ; 15 ;  >
+    au < frozen ; exists ; 2016 ; 2016 ; Chinese Journal of International Law Volume 15 ; 15 ;  >
     au < frozen ; exists ; 2017 ; 2017 ; Chinese Journal of International Law Volume 16 ; 16 ;  >
     au < testing ; exists ; 2018 ; 2018 ; Chinese Journal of International Law Volume 17 ; 17 ;  >
 
@@ -3304,7 +3304,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Clinical Kidney Journal Volume 7 ; 7 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Clinical Kidney Journal Volume 8 ; 8 ;  >
     au < frozen ; exists ; 2016 ; 2016 ; Clinical Kidney Journal Volume 9 ; 9 ;  >
-    au < crawling ; exists ; 2017 ; 2017 ; Clinical Kidney Journal Volume 10 ; 10 ;  >
+    au < frozen ; exists ; 2017 ; 2017 ; Clinical Kidney Journal Volume 10 ; 10 ;  >
     au < testing ; exists ; 2018 ; 2018 ; Clinical Kidney Journal Volume 11 ; 11 ;  >
 
   }
@@ -3593,7 +3593,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Current Legal Problems Volume 67 ; 67 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Current Legal Problems Volume 68 ; 68 ;  >
     au < frozen ; exists ; 2016 ; 2016 ; Current Legal Problems Volume 69 ; 69 ;  >
-    au < crawling ; exists ; 2017 ; 2017 ; Current Legal Problems Volume 70 ; 70 ;  >
+    au < frozen ; exists ; 2017 ; 2017 ; Current Legal Problems Volume 70 ; 70 ;  >
     au < expected ; exists ; 2018 ; 2018 ; Current Legal Problems Volume 71 ; 71 ;  >
 
   }
@@ -3613,7 +3613,7 @@
     au < manifest ; exists ; 2013 ; 2013 ; Current Zoology Volume 59 ; 59 ;  >
     au < manifest ; exists ; 2014 ; 2014 ; Current Zoology Volume 60 ; 60 ;  >
     au < manifest ; exists ; 2015 ; 2015 ; Current Zoology Volume 61 ; 61 ;  >
-    au < crawling ; exists ; 2016 ; 2016 ; Current Zoology Volume 62 ; 62 ;  >
+    au < frozen ; exists ; 2016 ; 2016 ; Current Zoology Volume 62 ; 62 ;  >
     au < frozen ; exists ; 2017 ; 2017 ; Current Zoology Volume 63 ; 63 ;  >
     au < crawling ; exists ; 2018 ; 2018 ; Current Zoology Volume 64 ; 64 ;  >
 
@@ -3676,7 +3676,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Database Volume 2014 ; 2014 ;  >
     au < testing ; exists ; 2015 ; 2015 ; Database Volume 2015 ; 2015 ;  >
     au < frozen ; exists ; 2016 ; 2016 ; Database Volume 2016 ; 2016 ;  >
-    au < crawling ; exists ; 2017 ; 2017 ; Database Volume 2017 ; 2017 ;  >
+    au < frozen ; exists ; 2017 ; 2017 ; Database Volume 2017 ; 2017 ;  >
     au < testing ; exists ; 2018 ; 2018 ; Database Volume 2018 ; 2018 ;  >
 
   }
@@ -3770,7 +3770,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Diplomatic History Volume 29 ; 29 ;  >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Diplomatic History Volume 30 ; 30 ;  >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Diplomatic History Volume 31 ; 31 ;  >
-    au < crawling ; exists ; 2008 ; 2008 ; Diplomatic History Volume 32 ; 32 ;  >
+    au < frozen ; exists ; 2008 ; 2008 ; Diplomatic History Volume 32 ; 32 ;  >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Diplomatic History Volume 33 ; 33 ;  >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Diplomatic History Volume 34 ; 34 ;  >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Diplomatic History Volume 35 ; 35 ;  >
@@ -4085,7 +4085,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Economic Policy Volume 28 ; 28 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Economic Policy Volume 29 ; 29 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Economic Policy Volume 30 ; 30 ;  >
-    au < crawling ; exists ; 2016 ; 2016 ; Economic Policy Volume 31 ; 31 ;  >
+    au < frozen ; exists ; 2016 ; 2016 ; Economic Policy Volume 31 ; 31 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; Economic Policy Volume 32 ; 32 ;  >
 
   }
@@ -4286,9 +4286,9 @@
 
     param[journal_id] = eep
 
-    au < crawling ; exists ; 2015 ; 2015 ; Environmental Epigenetics Volume 1 ; 1 ;  >
+    au < frozen ; exists ; 2015 ; 2015 ; Environmental Epigenetics Volume 1 ; 1 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; Environmental Epigenetics Volume 2 ; 2 ;  >
-    au < crawling ; exists ; 2017 ; 2017 ; Environmental Epigenetics Volume 3 ; 3 ;  >
+    au < frozen ; exists ; 2017 ; 2017 ; Environmental Epigenetics Volume 3 ; 3 ;  >
 
   }
 
@@ -4674,7 +4674,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; European Journal of Cardio-Thoracic Surgery Volume 27-28 ; 27-28 ;  >
     au < doNotProcess ; exists ; 2006 ; 2006 ; European Journal of Cardio-Thoracic Surgery Volume 29-30 ; 29-30 ;  >
     au < doNotProcess ; exists ; 2007 ; 2007 ; European Journal of Cardio-Thoracic Surgery Volume 31-32 ; 31-32 ;  >
-    au < crawling ; exists ; 2008 ; 2008 ; European Journal of Cardio-Thoracic Surgery Volume 33-34 ; 33-34 ;  >
+    au < frozen ; exists ; 2008 ; 2008 ; European Journal of Cardio-Thoracic Surgery Volume 33-34 ; 33-34 ;  >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; European Journal of Cardio-Thoracic Surgery Volume 35-36 ; 35-36 ;  >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; European Journal of Cardio-Thoracic Surgery Volume 37-38 ; 37-38 ;  >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; European Journal of Cardio-Thoracic Surgery Volume 39-40 ; 39-40 ;  >
@@ -4891,7 +4891,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; European Review of Agricultural Economics Volume 40 ; 40 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; European Review of Agricultural Economics Volume 41 ; 41 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; European Review of Agricultural Economics Volume 42 ; 42 ;  >
-    au < crawling ; exists ; 2016 ; 2016 ; European Review of Agricultural Economics Volume 43 ; 43 ;  >
+    au < frozen ; exists ; 2016 ; 2016 ; European Review of Agricultural Economics Volume 43 ; 43 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; European Review of Agricultural Economics Volume 44 ; 44 ;  >
 
   }
@@ -4974,7 +4974,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; European Sociological Review Volume 30 ; 30 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; European Sociological Review Volume 31 ; 31 ;  >
     au < frozen ; exists ; 2016 ; 2016 ; European Sociological Review Volume 32 ; 32 ;  >
-    au < crawling ; exists ; 2017 ; 2017 ; European Sociological Review Volume 33 ; 33 ;  >
+    au < frozen ; exists ; 2017 ; 2017 ; European Sociological Review Volume 33 ; 33 ;  >
 
   }
 
@@ -5287,7 +5287,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Foreign Policy Analysis Volume 1 ; 1 ;  >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Foreign Policy Analysis Volume 2 ; 2 ;  >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Foreign Policy Analysis Volume 3 ; 3 ;  >
-    au < crawling ; exists ; 2008 ; 2008 ; Foreign Policy Analysis Volume 4 ; 4 ;  >
+    au < frozen ; exists ; 2008 ; 2008 ; Foreign Policy Analysis Volume 4 ; 4 ;  >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Foreign Policy Analysis Volume 5 ; 5 ;  >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Foreign Policy Analysis Volume 6 ; 6 ;  >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Foreign Policy Analysis Volume 7 ; 7 ;  >
@@ -5295,7 +5295,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Foreign Policy Analysis Volume 9 ; 9 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Foreign Policy Analysis Volume 10 ; 10 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Foreign Policy Analysis Volume 11 ; 11 ;  >
-    au < crawling ; exists ; 2016 ; 2016 ; Foreign Policy Analysis Volume 12 ; 12 ;  >
+    au < frozen ; exists ; 2016 ; 2016 ; Foreign Policy Analysis Volume 12 ; 12 ;  >
     au < frozen ; exists ; 2017 ; 2017 ; Foreign Policy Analysis Volume 13 ; 13 ;  >
     au < testing ; exists ; 2018 ; 2018 ; Foreign Policy Analysis Volume 14 ; 14 ;  >
 
@@ -5424,8 +5424,8 @@
     au < crawling ; exists ; 2012 ; 2012 ; Forest Science Volume 58 ; 58 ;  >
     au < crawling ; exists ; 2013 ; 2013 ; Forest Science Volume 59 ; 59 ;  >
     au < frozen ; exists ; 2014 ; 2014 ; Forest Science Volume 60 ; 60 ;  >
-    au < crawling ; exists ; 2015 ; 2015 ; Forest Science Volume 61 ; 61 ;  >
-    au < crawling ; exists ; 2016 ; 2016 ; Forest Science Volume 62 ; 62 ;  >
+    au < frozen ; exists ; 2015 ; 2015 ; Forest Science Volume 61 ; 61 ;  >
+    au < frozen ; exists ; 2016 ; 2016 ; Forest Science Volume 62 ; 62 ;  >
     au < frozen ; exists ; 2017 ; 2017 ; Forest Science Volume 63 ; 63 ;  >
     au < crawling ; exists ; 2018 ; 2018 ; Forest Science Volume 64 ; 64 ;  >
 
@@ -5645,7 +5645,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; French History Volume 28 ; 28 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; French History Volume 29 ; 29 ;  >
     au < frozen ; exists ; 2016 ; 2016 ; French History Volume 30 ; 30 ;  >
-    au < crawling ; exists ; 2017 ; 2017 ; French History Volume 31 ; 31 ;  >
+    au < frozen ; exists ; 2017 ; 2017 ; French History Volume 31 ; 31 ;  >
     au < testing ; exists ; 2018 ; 2018 ; French History Volume 32 ; 32 ;  >
 
   }
@@ -6031,7 +6031,7 @@
     param[journal_id] = globalsummitry
 
     au < crawling ; exists ; 2015 ; 2015 ; Global Summitry Volume 1 ; 1 ;  >
-    au < crawling ; exists ; 2016 ; 2016 ; Global Summitry Volume 2 ; 2 ;  >
+    au < frozen ; exists ; 2016 ; 2016 ; Global Summitry Volume 2 ; 2 ;  >
     au < testing ; exists ; 2017 ; 2017 ; Global Summitry Volume 3 ; 3 ;  >
     au < expected ; exists ; 2018 ; 2018 ; Global Summitry Volume 4 ; 4 ;  >
 
@@ -6178,7 +6178,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Health Education Research Volume 29 ; 29 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Health Education Research Volume 30 ; 30 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; Health Education Research Volume 31 ; 31 ;  >
-    au < crawling ; exists ; 2017 ; 2017 ; Health Education Research Volume 32 ; 32 ;  >
+    au < frozen ; exists ; 2017 ; 2017 ; Health Education Research Volume 32 ; 32 ;  >
     au < testing ; exists ; 2018 ; 2018 ; Health Education Research Volume 33 ; 33 ;  >
 
   }
@@ -6407,7 +6407,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Human Molecular Genetics Volume 14 ; 14 ;  >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Human Molecular Genetics Volume 15 ; 15 ;  >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Human Molecular Genetics Volume 16 ; 16 ;  >
-    au < crawling ; exists ; 2008 ; 2008 ; Human Molecular Genetics Volume 17 ; 17 ;  >
+    au < frozen ; exists ; 2008 ; 2008 ; Human Molecular Genetics Volume 17 ; 17 ;  >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Human Molecular Genetics Volume 18 ; 18 ;  >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Human Molecular Genetics Volume 19 ; 19 ;  >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Human Molecular Genetics Volume 20 ; 20 ;  >
@@ -6692,7 +6692,7 @@
     au < doNotProcess ; exists ; 2006 ; 2006 ; ICSID Review: Foreign Investment Law Journal Volume 21 ; 21 ;  >
     au < doNotProcess ; exists ; 2007 ; 2007 ; ICSID Review: Foreign Investment Law Journal Volume 22 ; 22 ;  >
     au < crawling ; exists ; 2008 ; 2008 ; ICSID Review: Foreign Investment Law Journal Volume 23 ; 23 ;  >
-    au < crawling ; exists ; 2009 ; 2009 ; ICSID Review: Foreign Investment Law Journal Volume 24 ; 24 ;  >
+    au < frozen ; exists ; 2009 ; 2009 ; ICSID Review: Foreign Investment Law Journal Volume 24 ; 24 ;  >
     au < frozen ; exists ; 2010 ; 2010 ; ICSID Review: Foreign Investment Law Journal Volume 25 ; 25 ;  >
     au < frozen ; exists ; 2011 ; 2011 ; ICSID Review: Foreign Investment Law Journal Volume 26 ; 26 ;  >
     au < crawling ; exists ; 2012 ; 2012 ; ICSID Review: Foreign Investment Law Journal Volume 27 ; 27 ;  >
@@ -6825,7 +6825,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; IMA Journal of Applied Mathematics Volume 78 ; 78 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; IMA Journal of Applied Mathematics Volume 79 ; 79 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; IMA Journal of Applied Mathematics Volume 80 ; 80 ;  >
-    au < crawling ; exists ; 2016 ; 2016 ; IMA Journal of Applied Mathematics Volume 81 ; 81 ;  >
+    au < frozen ; exists ; 2016 ; 2016 ; IMA Journal of Applied Mathematics Volume 81 ; 81 ;  >
     au < frozen ; exists ; 2017 ; 2017 ; IMA Journal of Applied Mathematics Volume 82 ; 82 ;  >
     au < testing ; exists ; 2018 ; 2018 ; IMA Journal of Applied Mathematics Volume 83 ; 83 ;  >
 
@@ -7317,10 +7317,10 @@
     #this title was ONLY in the publisher listing
     au < crawling ; exists ; 2010 ; 2010 ; International Affairs Volume 86 ; 86 ;  >
     au < frozen ; exists ; 2011 ; 2011 ; International Affairs Volume 87 ; 87 ;  >
-    au < crawling ; exists ; 2012 ; 2012 ; International Affairs Volume 88 ; 88 ;  >
+    au < frozen ; exists ; 2012 ; 2012 ; International Affairs Volume 88 ; 88 ;  >
     au < frozen ; exists ; 2013 ; 2013 ; International Affairs Volume 89 ; 89 ;  >
     au < crawling ; exists ; 2014 ; 2014 ; International Affairs Volume 90 ; 90 ;  >
-    au < crawling ; exists ; 2015 ; 2015 ; International Affairs Volume 91 ; 91 ;  >
+    au < frozen ; exists ; 2015 ; 2015 ; International Affairs Volume 91 ; 91 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; International Affairs Volume 92 ; 92 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; International Affairs Volume 93 ; 93 ;  >
     au < testing ; exists ; 2018 ; 2018 ; International Affairs Volume 94 ; 94 ;  >
@@ -7865,7 +7865,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; International Journal of Transitional Justice Volume 7 ; 7 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; International Journal of Transitional Justice Volume 8 ; 8 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Journal of Transitional Justice Volume 9 ; 9 ;  >
-    au < crawling ; exists ; 2016 ; 2016 ; International Journal of Transitional Justice Volume 10 ; 10 ;  >
+    au < frozen ; exists ; 2016 ; 2016 ; International Journal of Transitional Justice Volume 10 ; 10 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; International Journal of Transitional Justice Volume 11 ; 11 ;  >
     au < testing ; exists ; 2018 ; 2018 ; International Journal of Transitional Justice Volume 12 ; 12 ;  >
 
@@ -8105,7 +8105,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; International Studies Review Volume 15 ; 15 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; International Studies Review Volume 16 ; 16 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Studies Review Volume 17 ; 17 ;  >
-    au < crawling ; exists ; 2016 ; 2016 ; International Studies Review Volume 18 ; 18 ;  >
+    au < frozen ; exists ; 2016 ; 2016 ; International Studies Review Volume 18 ; 18 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; International Studies Review Volume 19 ; 19 ;  >
     au < testing ; exists ; 2018 ; 2018 ; International Studies Review Volume 20 ; 20 ;  >
 
@@ -9373,7 +9373,7 @@
     au < testing ; exists ; 2013 ; 2013 ; Journal of Forestry Volume 111 ; 111 ;  >
     au < testing ; exists ; 2014 ; 2014 ; Journal of Forestry Volume 112 ; 112 ;  >
     au < testing ; exists ; 2015 ; 2015 ; Journal of Forestry Volume 113 ; 113 ;  >
-    au < crawling ; exists ; 2016 ; 2016 ; Journal of Forestry Volume 114 ; 114 ;  >
+    au < frozen ; exists ; 2016 ; 2016 ; Journal of Forestry Volume 114 ; 114 ;  >
     au < testing ; exists ; 2017 ; 2017 ; Journal of Forestry Volume 115 ; 115 ;  >
     au < testing ; exists ; 2018 ; 2018 ; Journal of Forestry Volume 116 ; 116 ;  >
 
@@ -9611,7 +9611,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Hip Preservation Surgery Volume 1 ; 1 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Hip Preservation Surgery Volume 2 ; 2 ;  >
     au < frozen ; exists ; 2016 ; 2016 ; Journal of Hip Preservation Surgery Volume 3 ; 3 ;  >
-    au < crawling ; exists ; 2017 ; 2017 ; Journal of Hip Preservation Surgery Volume 4 ; 4 ;  >
+    au < frozen ; exists ; 2017 ; 2017 ; Journal of Hip Preservation Surgery Volume 4 ; 4 ;  >
     au < testing ; exists ; 2018 ; 2018 ; Journal of Hip Preservation Surgery Volume 5 ; 5 ;  >
 
   }
