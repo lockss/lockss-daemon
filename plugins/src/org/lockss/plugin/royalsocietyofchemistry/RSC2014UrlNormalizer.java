@@ -44,14 +44,20 @@ import org.lockss.util.Logger;
  * 
  * and http://xlink.rsc.org/?DOI=B712109A
  * to http://xlink.rsc.org/?doi=b712109a
+ * 
+ * Note that the vanilla BaseUrlHttpHttpsUrlNormalizer is fine because
+ * only the base_url has changed to https
+ * The resolver_url is still at http and the base_url2 and graphics_url are
+ * more like CDN support
  */
 
 public class RSC2014UrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
   
   private static final Logger log = Logger.getLogger(RSC2014UrlNormalizer.class);
   
-  /*  Note: this assumes that all AUs have same params, this way we set the urls once
-   * This must support both http and https so we really want just the base_url_host and 
+  /* 
+   * Since this happens after the Http to Https normalization we can assume the 
+   * protocol has already been made to match the params, but to be safe use host only
    * resolver_url_host
    *       param[base_url] = http://pubs.rsc.org/
    *       param[resolver_url] = http://xlink.rsc.org/
@@ -62,6 +68,11 @@ public class RSC2014UrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
   public String additionalNormalization(String url, ArchivalUnit au)
       throws PluginException {
     
+    /*
+     * Since this happens after the HttpToHttps normalization, we know that we match our 
+     * base_url/resolver_url protocol 
+     */
+    log.debug3("url in :" + url);
     if (content_url_host.isEmpty()) {
       content_url_host = StringUtils.substringAfter(au.getConfiguration().get("base_url"),"://") + "en/content/";
       resolver_url_host = StringUtils.substringAfter(au.getConfiguration().get("resolver_url"), "://");
@@ -72,6 +83,7 @@ public class RSC2014UrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
         testurl.contains(resolver_url_host)) {
       url = testurl;
     }
+    log.debug3("url out :" + url);
     return url;
   }
 
