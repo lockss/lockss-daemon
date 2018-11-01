@@ -18,7 +18,8 @@
   
     title <
       name = Hydrology Research ;
-      eissn = 0029-1277 ;
+      issn = 0029-1277 ;
+      eissn = 2224-7955 ;
       issnl = 0029-1277
     >
 
@@ -81,7 +82,8 @@
   
     title <
       name = Journal of Water and Climate Change ;
-      eissn = 2040-2244 ;
+      issn = 2040-2244 ;
+      eissn = 2408-9354 ;
       issnl = 2040-2244
     >
 
@@ -103,7 +105,8 @@
   
     title <
       name = Journal of Water and Health ;
-      eissn = 1477-8920 ;
+      issn = 1477-8920 ;
+      eissn = 1996-7829 ;
       issnl = 1477-8920
     >
 
@@ -132,7 +135,8 @@
   
     title <
       name = Journal of Water Reuse and Desalination ;
-      eissn = 2220-1319 ;
+      issn = 2220-1319 ;
+      eissn = 2408-9370 ;
       issnl = 2220-1319
     >
 
@@ -153,7 +157,8 @@
   
     title <
       name = Journal of Water, Sanitation and Hygiene for Development ;
-      eissn = 2043-9083 ;
+      issn = 2043-9083 ;
+      eissn = 2408-9362 ;
       issnl = 2043-9083
     >
 
@@ -174,7 +179,8 @@
   
     title <
       name = Journal of Water Supply: Research and Technology - Aqua ;
-      eissn = 0003-7214 ;
+      issn = 0003-7214 ;
+      eissn = 1605-3974 ;
       issnl = 0003-7214
     >
 
@@ -208,7 +214,8 @@
   
     title <
       name = Journal of Hydroinformatics ;
-      eissn = 1464-7141 ;
+      issn = 1464-7141 ;
+      eissn = 1465-1734 ;
       issnl = 1464-7141
     >
 
@@ -267,7 +274,8 @@
   
     title <
       name = Water Policy ;
-      eissn = 1366-7017 ;
+      issn = 1366-7017 ;
+      eissn = 1996-9759 ;
       issnl = 1366-7017
     >
 
@@ -295,12 +303,14 @@
   {
   
     title <
-      name = Water Quality Research Journal of Canada ;
-      eissn = 1201-3080 ;
+      name = Water Quality Research Journal ;
+      issn = 1201-3080 ;
+      eissn = 2408-9443 ;
       issnl = 1201-3080
     >
 
     param[base_url] = http://wqrjc.iwaponline.com/
+#      name = Water Quality Research Journal of Canada ; title removed the of Canada in 2018
 
     au < doNotProcess ; exists ; 2011 ; Water Quality Research Journal of Canada Volume 46 ; 46 ; >
     au < doNotProcess ; exists ; 2012 ; Water Quality Research Journal of Canada Volume 47 ; 47 ; >
@@ -317,7 +327,8 @@
   
     title <
       name = Water Science and Technology ;
-      eissn = 0273-1223 ;
+      issn = 0273-1223 ;
+      eissn = 1996-9732 ;      
       issnl = 0273-1223
     >
 
@@ -395,7 +406,8 @@
   
     title <
       name = Water Science and Technology: Water Supply ;
-      eissn = 1606-9749 ;
+      issn = 1606-9749 ;
+      eissn = 1607-0798 ;      
       issnl = 1606-9749
     >
 
