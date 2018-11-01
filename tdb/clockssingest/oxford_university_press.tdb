@@ -1305,7 +1305,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; AoB PLANTS Volume 6 ; 6 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; AoB PLANTS Volume 7 ; 7 ;  >
     au < frozen ; exists ; 2016 ; 2016 ; AoB PLANTS Volume 8 ; 8 ;  >
-    au < crawling ; exists ; 2017 ; 2017 ; AoB PLANTS Volume 9 ; 9 ;  >
+    au < frozen ; exists ; 2017 ; 2017 ; AoB PLANTS Volume 9 ; 9 ;  >
     au < testing ; exists ; 2018 ; 2018 ; AoB PLANTS Volume 10 ; 10 ;  >
 
   }
@@ -3068,7 +3068,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Chemical Senses Volume 30 ; 30 ;  >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Chemical Senses Volume 31 ; 31 ;  >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Chemical Senses Volume 32 ; 32 ;  >
-    au < crawling ; exists ; 2008 ; 2008 ; Chemical Senses Volume 33 ; 33 ;  >
+    au < frozen ; exists ; 2008 ; 2008 ; Chemical Senses Volume 33 ; 33 ;  >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Chemical Senses Volume 34 ; 34 ;  >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Chemical Senses Volume 35 ; 35 ;  >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Chemical Senses Volume 36 ; 36 ;  >
@@ -3446,7 +3446,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Contemporary Women's Writing Volume 7 ; 7 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Contemporary Women's Writing Volume 8 ; 8 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Contemporary Women's Writing Volume 9 ; 9 ;  >
-    au < crawling ; exists ; 2016 ; 2016 ; Contemporary Women's Writing Volume 10 ; 10 ;  >
+    au < frozen ; exists ; 2016 ; 2016 ; Contemporary Women's Writing Volume 10 ; 10 ;  >
     au < frozen ; exists ; 2017 ; 2017 ; Contemporary Women's Writing Volume 11 ; 11 ;  >
     au < testing ; exists ; 2018 ; 2018 ; Contemporary Women's Writing Volume 12 ; 12 ;  >
 
@@ -3653,7 +3653,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; DNA Research Volume 21 ; 21 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; DNA Research Volume 22 ; 22 ;  >
     au < frozen ; exists ; 2016 ; 2016 ; DNA Research Volume 23 ; 23 ;  >
-    au < crawling ; exists ; 2017 ; 2017 ; DNA Research Volume 24 ; 24 ;  >
+    au < frozen ; exists ; 2017 ; 2017 ; DNA Research Volume 24 ; 24 ;  >
     au < crawling ; exists ; 2018 ; 2018 ; DNA Research Volume 25 ; 25 ;  >
 
   }
@@ -4213,7 +4213,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; English: Journal of the English Association Volume 63 ; 63 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; English: Journal of the English Association Volume 64 ; 64 ;  >
     au < frozen ; exists ; 2016 ; 2016 ; English: Journal of the English Association Volume 65 ; 65 ;  >
-    au < crawling ; exists ; 2017 ; 2017 ; English: Journal of the English Association Volume 66 ; 66 ;  >
+    au < frozen ; exists ; 2017 ; 2017 ; English: Journal of the English Association Volume 66 ; 66 ;  >
 
   }
 
@@ -4892,7 +4892,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; European Review of Agricultural Economics Volume 41 ; 41 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; European Review of Agricultural Economics Volume 42 ; 42 ;  >
     au < frozen ; exists ; 2016 ; 2016 ; European Review of Agricultural Economics Volume 43 ; 43 ;  >
-    au < crawling ; exists ; 2017 ; 2017 ; European Review of Agricultural Economics Volume 44 ; 44 ;  >
+    au < frozen ; exists ; 2017 ; 2017 ; European Review of Agricultural Economics Volume 44 ; 44 ;  >
 
   }
 
@@ -5125,7 +5125,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; FEMS Microbiology Letters Volume 338-349 ; 338-349 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; FEMS Microbiology Letters Volume 350-361 ; 350-361 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; FEMS Microbiology Letters Volume 362 ; 362 ;  >
-    au < crawling ; exists ; 2016 ; 2016 ; FEMS Microbiology Letters Volume 363 ; 363 ;  >
+    au < frozen ; exists ; 2016 ; 2016 ; FEMS Microbiology Letters Volume 363 ; 363 ;  >
     au < manifest ; exists ; 2016 ; 2017 ; FEMS Microbiology Letters Volume 364 ; 364 ;  >
     au < manifest ; exists ; 2016 ; 2018 ; FEMS Microbiology Letters Volume 365 ; 365 ;  >
 
@@ -5202,7 +5202,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; FEMS Yeast Research Volume 13 ; 13 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; FEMS Yeast Research Volume 14 ; 14 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; FEMS Yeast Research Volume 15 ; 15 ;  >
-    au < crawling ; exists ; 2016 ; 2016 ; FEMS Yeast Research Volume 16 ; 16 ;  >
+    au < frozen ; exists ; 2016 ; 2016 ; FEMS Yeast Research Volume 16 ; 16 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; FEMS Yeast Research Volume 17 ; 17 ;  >
     au < testing ; exists ; 2018 ; 2018 ; FEMS Yeast Research Volume 18 ; 18 ;  >
 
@@ -5420,8 +5420,8 @@
     au < frozen ; exists ; 2008 ; 2008 ; Forest Science Volume 54 ; 54 ;  >
     au < frozen ; exists ; 2009 ; 2009 ; Forest Science Volume 55 ; 55 ;  >
     au < frozen ; exists ; 2010 ; 2010 ; Forest Science Volume 56 ; 56 ;  >
-    au < crawling ; exists ; 2011 ; 2011 ; Forest Science Volume 57 ; 57 ;  >
-    au < crawling ; exists ; 2012 ; 2012 ; Forest Science Volume 58 ; 58 ;  >
+    au < frozen ; exists ; 2011 ; 2011 ; Forest Science Volume 57 ; 57 ;  >
+    au < frozen ; exists ; 2012 ; 2012 ; Forest Science Volume 58 ; 58 ;  >
     au < crawling ; exists ; 2013 ; 2013 ; Forest Science Volume 59 ; 59 ;  >
     au < frozen ; exists ; 2014 ; 2014 ; Forest Science Volume 60 ; 60 ;  >
     au < frozen ; exists ; 2015 ; 2015 ; Forest Science Volume 61 ; 61 ;  >
@@ -5823,7 +5823,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Genome Biology and Evolution Volume 5 ; 5 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Genome Biology and Evolution Volume 6 ; 6 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Genome Biology and Evolution Volume 7 ; 7 ;  >
-    au < crawling ; exists ; 2016 ; 2016 ; Genome Biology and Evolution Volume 8 ; 8 ;  >
+    au < frozen ; exists ; 2016 ; 2016 ; Genome Biology and Evolution Volume 8 ; 8 ;  >
     au < testing ; exists ; 2017 ; 2017 ; Genome Biology and Evolution Volume 9 ; 9 ;  >
     au < testing ; exists ; 2018 ; 2018 ; Genome Biology and Evolution Volume 10 ; 10 ;  >
 
@@ -5993,7 +5993,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; German History Volume 31 ; 31 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; German History Volume 32 ; 32 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; German History Volume 33 ; 33 ;  >
-    au < crawling ; exists ; 2016 ; 2016 ; German History Volume 34 ; 34 ;  >
+    au < frozen ; exists ; 2016 ; 2016 ; German History Volume 34 ; 34 ;  >
     au < testing ; exists ; 2017 ; 2017 ; German History Volume 35 ; 35 ;  >
     au < testing ; exists ; 2018 ; 2018 ; German History Volume 36 ; 36 ;  >
 
@@ -6011,9 +6011,9 @@
     #this title was ONLY in the publisher listing
     au < frozen ; exists ; 2012 ; 2012 ; GigaScience Volume 1 [OUP] ; 1 ;  >
     au < crawling ; exists ; 2013 ; 2013 ; GigaScience Volume 2 [OUP] ; 2 ;  >
-    au < crawling ; exists ; 2014 ; 2014 ; GigaScience Volume 3 [OUP] ; 3 ;  >
+    au < frozen ; exists ; 2014 ; 2014 ; GigaScience Volume 3 [OUP] ; 3 ;  >
     au < frozen ; exists ; 2015 ; 2015 ; GigaScience Volume 4 [OUP] ; 4 ;  >
-    au < crawling ; exists ; 2016 ; 2016 ; GigaScience Volume 5 [OUP] ; 5 ;  >
+    au < frozen ; exists ; 2016 ; 2016 ; GigaScience Volume 5 [OUP] ; 5 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; GigaScience Volume 6 [OUP] ; 6 ;  >
     au < testing ; exists ; 2018 ; 2018 ; GigaScience Volume 7 [OUP] ; 7 ;  >
 
@@ -6030,7 +6030,7 @@
 
     param[journal_id] = globalsummitry
 
-    au < crawling ; exists ; 2015 ; 2015 ; Global Summitry Volume 1 ; 1 ;  >
+    au < frozen ; exists ; 2015 ; 2015 ; Global Summitry Volume 1 ; 1 ;  >
     au < frozen ; exists ; 2016 ; 2016 ; Global Summitry Volume 2 ; 2 ;  >
     au < testing ; exists ; 2017 ; 2017 ; Global Summitry Volume 3 ; 3 ;  >
     au < expected ; exists ; 2018 ; 2018 ; Global Summitry Volume 4 ; 4 ;  >
@@ -7089,7 +7089,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Industrial Law Journal Volume 42 ; 42 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Industrial Law Journal Volume 43 ; 43 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Industrial Law Journal Volume 44 ; 44 ;  >
-    au < crawling ; exists ; 2016 ; 2016 ; Industrial Law Journal Volume 45 ; 45 ;  >
+    au < frozen ; exists ; 2016 ; 2016 ; Industrial Law Journal Volume 45 ; 45 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; Industrial Law Journal Volume 46 ; 46 ;  >
     au < testing ; exists ; 2018 ; 2018 ; Industrial Law Journal Volume 47 ; 47 ;  >
 
@@ -7298,7 +7298,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Interactive CardioVascular and Thoracic Surgery Volume 16-17 ; 16-17 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Interactive CardioVascular and Thoracic Surgery Volume 18-19 ; 18-19 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Interactive CardioVascular and Thoracic Surgery Volume 20-21 ; 20-21 ;  >
-    au < crawling ; exists ; 2016 ; 2016 ; Interactive CardioVascular and Thoracic Surgery Volume 22-23 ; 22-23 ;  >
+    au < frozen ; exists ; 2016 ; 2016 ; Interactive CardioVascular and Thoracic Surgery Volume 22-23 ; 22-23 ;  >
     au < frozen ; exists ; 2017 ; 2017 ; Interactive CardioVascular and Thoracic Surgery Volume 24 ; 24 ;  >
     au < testing ; exists ; 2018 ; 2018 ; Interactive CardioVascular and Thoracic Surgery Volume 25 ; 25 ;  >
 
@@ -7343,7 +7343,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; International Data Privacy Law Volume 3 ; 3 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; International Data Privacy Law Volume 4 ; 4 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Data Privacy Law Volume 5 ; 5 ;  >
-    au < crawling ; exists ; 2016 ; 2016 ; International Data Privacy Law Volume 6 ; 6 ;  >
+    au < frozen ; exists ; 2016 ; 2016 ; International Data Privacy Law Volume 6 ; 6 ;  >
     au < frozen ; exists ; 2017 ; 2017 ; International Data Privacy Law Volume 7 ; 7 ;  >
     au < testing ; exists ; 2018 ; 2018 ; International Data Privacy Law Volume 8 ; 8 ;  >
 
@@ -7716,7 +7716,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; International Journal of Low-Carbon Technologies Volume 8 ; 8 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; International Journal of Low-Carbon Technologies Volume 9 ; 9 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Journal of Low-Carbon Technologies Volume 10 ; 10 ;  >
-    au < crawling ; exists ; 2016 ; 2016 ; International Journal of Low-Carbon Technologies Volume 11 ; 11 ;  >
+    au < frozen ; exists ; 2016 ; 2016 ; International Journal of Low-Carbon Technologies Volume 11 ; 11 ;  >
     au < frozen ; exists ; 2017 ; 2017 ; International Journal of Low-Carbon Technologies Volume 12 ; 12 ;  >
     au < testing ; exists ; 2018 ; 2018 ; International Journal of Low-Carbon Technologies Volume 13 ; 13 ;  >
 
@@ -7751,7 +7751,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; International Journal of Neuropsychopharmacology Volume 16 ; 16 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; International Journal of Neuropsychopharmacology Volume 17 ; 17 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Journal of Neuropsychopharmacology Volume 18 ; 18 ;  >
-    au < crawling ; exists ; 2016 ; 2016 ; International Journal of Neuropsychopharmacology Volume 19 ; 19 ;  >
+    au < frozen ; exists ; 2016 ; 2016 ; International Journal of Neuropsychopharmacology Volume 19 ; 19 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; International Journal of Neuropsychopharmacology Volume 20 ; 20 ;  >
     au < testing ; exists ; 2018 ; 2018 ; International Journal of Neuropsychopharmacology Volume 21 ; 21 ;  >
 
@@ -7795,7 +7795,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; International Journal of Public Opinion Research Volume 25 ; 25 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; International Journal of Public Opinion Research Volume 26 ; 26 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Journal of Public Opinion Research Volume 27 ; 27 ;  >
-    au < crawling ; exists ; 2016 ; 2016 ; International Journal of Public Opinion Research Volume 28 ; 28 ;  >
+    au < frozen ; exists ; 2016 ; 2016 ; International Journal of Public Opinion Research Volume 28 ; 28 ;  >
     au < frozen ; exists ; 2017 ; 2017 ; International Journal of Public Opinion Research Volume 29 ; 29 ;  >
     au < testing ; exists ; 2018 ; 2018 ; International Journal of Public Opinion Research Volume 30 ; 30 ;  >
 
@@ -8025,7 +8025,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; International Studies Perspectives Volume 6 ; 6 ;  >
     au < doNotProcess ; exists ; 2006 ; 2006 ; International Studies Perspectives Volume 7 ; 7 ;  >
     au < doNotProcess ; exists ; 2007 ; 2007 ; International Studies Perspectives Volume 8 ; 8 ;  >
-    au < crawling ; exists ; 2008 ; 2008 ; International Studies Perspectives Volume 9 ; 9 ;  >
+    au < frozen ; exists ; 2008 ; 2008 ; International Studies Perspectives Volume 9 ; 9 ;  >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; International Studies Perspectives Volume 10 ; 10 ;  >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; International Studies Perspectives Volume 11 ; 11 ;  >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; International Studies Perspectives Volume 12 ; 12 ;  >
@@ -8241,7 +8241,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Japanese Journal of Clinical Oncology Volume 43 ; 43 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Japanese Journal of Clinical Oncology Volume 44 ; 44 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Japanese Journal of Clinical Oncology Volume 45 ; 45 ;  >
-    au < crawling ; exists ; 2016 ; 2016 ; Japanese Journal of Clinical Oncology Volume 46 ; 46 ;  >
+    au < frozen ; exists ; 2016 ; 2016 ; Japanese Journal of Clinical Oncology Volume 46 ; 46 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; Japanese Journal of Clinical Oncology Volume 47 ; 47 ;  >
     au < testing ; exists ; 2018 ; 2018 ; Japanese Journal of Clinical Oncology Volume 48 ; 48 ;  >
 
@@ -8557,7 +8557,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Journal of Antitrust Enforcement Volume 1 ; 1 ;  >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Antitrust Enforcement Volume 2 ; 2 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Antitrust Enforcement Volume 3 ; 3 ;  >
-    au < crawling ; exists ; 2016 ; 2016 ; Journal of Antitrust Enforcement Volume 4 ; 4 ;  >
+    au < frozen ; exists ; 2016 ; 2016 ; Journal of Antitrust Enforcement Volume 4 ; 4 ;  >
     au < frozen ; exists ; 2017 ; 2017 ; Journal of Antitrust Enforcement Volume 5 ; 5 ;  >
     au < testing ; exists ; 2018 ; 2018 ; Journal of Antitrust Enforcement Volume 6 ; 6 ;  >
 
@@ -8672,7 +8672,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Journal of Chromatographic Science Volume 43 ; 43 ;  >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Journal of Chromatographic Science Volume 44 ; 44 ;  >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Journal of Chromatographic Science Volume 45 ; 45 ;  >
-    au < crawling ; exists ; 2008 ; 2008 ; Journal of Chromatographic Science Volume 46 ; 46 ;  >
+    au < frozen ; exists ; 2008 ; 2008 ; Journal of Chromatographic Science Volume 46 ; 46 ;  >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Journal of Chromatographic Science Volume 47 ; 47 ;  >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Journal of Chromatographic Science Volume 48 ; 48 ;  >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Journal of Chromatographic Science Volume 49 ; 49 ;  >
@@ -8890,9 +8890,9 @@
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Journal of Consumer Research Volume 35-36 ; 35-36 ;  >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Journal of Consumer Research Volume 36-37 ; 36-37 ;  >
     au < crawling ; exists ; 2011 ; 2011 ; Journal of Consumer Research Volume 37-38 ; 37-38 ;  >
-    au < crawling ; exists ; 2012 ; 2012 ; Journal of Consumer Research Volume 38-39 ; 38-39 ;  >
+    au < frozen ; exists ; 2012 ; 2012 ; Journal of Consumer Research Volume 38-39 ; 38-39 ;  >
     au < crawling ; exists ; 2013 ; 2013 ; Journal of Consumer Research Volume 39-40 ; 39-40 ;  >
-    au < crawling ; exists ; 2014 ; 2014 ; Journal of Consumer Research Volume 40-41 ; 40-41 ;  >
+    au < frozen ; exists ; 2014 ; 2014 ; Journal of Consumer Research Volume 40-41 ; 40-41 ;  >
     au < crawling ; exists ; 2015 ; 2015 ; Journal of Consumer Research Volume 41-42 ; 41-42 ;  >
     au < frozen ; exists ; 2016 ; 2016 ; Journal of Consumer Research Volume 42-43 ; 42-43 ;  >
     au < crawling ; exists ; 2017 ; 2017 ; Journal of Consumer Research Volume 43-44 ; 43-44 ;  >
@@ -8986,7 +8986,7 @@
     au < crawling ; exists ; 2010 ; 2010 ; Journal of Crustacean Biology Volume 30 ; 30 ;  >
     au < frozen ; exists ; 2011 ; 2011 ; Journal of Crustacean Biology Volume 31 ; 31 ;  >
     au < crawling ; exists ; 2012 ; 2012 ; Journal of Crustacean Biology Volume 32 ; 32 ;  >
-    au < crawling ; exists ; 2013 ; 2013 ; Journal of Crustacean Biology Volume 33 ; 33 ;  >
+    au < frozen ; exists ; 2013 ; 2013 ; Journal of Crustacean Biology Volume 33 ; 33 ;  >
     au < crawling ; exists ; 2014 ; 2014 ; Journal of Crustacean Biology Volume 34 ; 34 ;  >
     au < frozen ; exists ; 2015 ; 2015 ; Journal of Crustacean Biology Volume 35 ; 35 ;  >
     au < crawling ; exists ; 2016 ; 2016 ; Journal of Crustacean Biology Volume 36 ; 36 ;  >
@@ -9635,7 +9635,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Human Rights Practice Volume 6 ; 6 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Human Rights Practice Volume 7 ; 7 ;  >
     au < testing ; exists ; 2016 ; 2016 ; Journal of Human Rights Practice Volume 8 ; 8 ;  >
-    au < crawling ; exists ; 2017 ; 2017 ; Journal of Human Rights Practice Volume 9 ; 9 ;  >
+    au < frozen ; exists ; 2017 ; 2017 ; Journal of Human Rights Practice Volume 9 ; 9 ;  >
     au < testing ; exists ; 2018 ; 2018 ; Journal of Human Rights Practice Volume 10 ; 10 ;  >
 
   }
@@ -10662,7 +10662,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Radiation Research Volume 55 ; 55 ;  >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Radiation Research Volume 56 ; 56 ;  >
     au < testing ; exists ; 2016 ; 2016 ; Journal of Radiation Research Volume 57 ; 57 ;  >
-    au < crawling ; exists ; 2017 ; 2017 ; Journal of Radiation Research Volume 58 ; 58 ;  >
+    au < frozen ; exists ; 2017 ; 2017 ; Journal of Radiation Research Volume 58 ; 58 ;  >
     au < testing ; exists ; 2018 ; 2018 ; Journal of Radiation Research Volume 59 ; 59 ;  >
 
   }
