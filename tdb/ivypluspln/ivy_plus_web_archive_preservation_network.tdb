@@ -12,6 +12,7 @@
 
     plugin = org.lockss.plugin.archiveit.ArchiveItPlugin
     param[base_url] = https://partner.archive-it.org/
+    # This is pre-processed by add_nondef_param
     hidden[up] = UP
     nondefparam[content_domain] = partner.archive-it.org
     implicit < status ; name ; param[collection] >
