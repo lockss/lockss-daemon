@@ -10,7 +10,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>26</string>
+    <string>27</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -167,7 +167,7 @@
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.silverchair.oup.OupScArticleIteratorFactory</string>
+    <string>org.lockss.plugin.silverchair.BaseScArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>text/plain_metadata_extractor_factory_map</string>
