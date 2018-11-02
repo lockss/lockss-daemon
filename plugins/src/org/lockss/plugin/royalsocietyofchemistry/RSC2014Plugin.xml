@@ -247,7 +247,7 @@
   <entry>
     <string>au_permitted_host_pattern</string>
     <list>
-      <string>www\.rsc-cdn\.org</string>
+      <string>"www\.rsc-cdn\.org"</string>
       <string>"sod-a\.rsc-cdn\.org"</string>
       <string>"www\.rsc\.org"</string>
     </list>
