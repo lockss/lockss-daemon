@@ -14,7 +14,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>27</string>
+    <string>28</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -240,12 +240,16 @@
     <string>au_def_new_content_crawl</string>
     <long>1209600000</long>
   </entry>
+ <!-- au_permitted_host_pattern:
+       Necessary for using global hosts (eg cdn) (instead of using base_url2, graphics_url),
+       Also, au_permitted_host_pattern must find match in lockss-daemon config
+  -->
   <entry>
     <string>au_permitted_host_pattern</string>
     <list>
       <string>www\.rsc-cdn\.org</string>
       <string>"sod-a\.rsc-cdn\.org"</string>
-      <string>"www\.rsc\.com"</string>
+      <string>"www\.rsc\.org"</string>
     </list>
   </entry>  
   <entry>
