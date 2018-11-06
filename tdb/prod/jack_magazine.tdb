@@ -15,6 +15,7 @@
     rights = openaccess
     plugin = org.lockss.plugin.jackmagazine.JackMagazinePlugin
     param[base_url] = http://www.jackmagazine.com/
+    #no longer exists, website is empty
     implicit < status ; year ; name ; param[volume_name] ; param[num_issue_range] >
     
     comment[ceased] = Stopped publishing after issue 11 in 2009. 
@@ -22,8 +23,8 @@
     comment[v2] = manifest page has volume 5-7. http://www.jackmagazine.com/lockss/volume2.html. Do NOT change param.
     comment[v3] = no manifest page exists.
     
-    au < released ; 2000-2002 ; Jack Magazine Volume 1 ; 1 ; 1-4 >
-    au < released ; 2002-2004 ; Jack Magazine Volume 2 ; 2 ; 5-8 >
+    au < down ; 2000-2002 ; Jack Magazine Volume 1 ; 1 ; 1-4 >
+    au < down ; 2002-2004 ; Jack Magazine Volume 2 ; 2 ; 5-8 >
     au < doNotProcess ; 2005-2009 ; Jack Magazine Volume 3 ; 3 ; 9-11 >
   
   }
