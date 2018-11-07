@@ -4,8 +4,8 @@
     name = Claremont College Library
   >
     plugin = org.lockss.plugin.bepress.BePressPlugin 
-    implicit < status ; year ; name ; param[volume] >
-    param[base_url] = http://scholarship.claremont.edu/
+    implicit < status ; year ; name ; param[volume] ; param[base_url] >
+    #param[base_url] = http://scholarship.claremont.edu/
 
   {
   
@@ -17,20 +17,20 @@
     
     param[journal_abbr] = aliso
 
-    au < released ; 2007 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 23 ; 23 >
-    au < released ; 2007 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 24 ; 24 >
-    au < released ; 2008 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 25 ; 25 >
-    au < released ; 2008 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 26 ; 26 >
-    au < released ; 2009 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 27 ; 27 >
-    au < released ; 2010 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 28 ; 28 >
-    au < released ; 2011 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 29 ; 29 >
-    au < released ; 2012 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 30 ; 30 >
-    au < released ; 2013 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 31 ; 31 >
-    au < released ; 2014 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 32 ; 32 >
-    au < released ; 2015 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 33 ; 33 >
-    au < released ; 2016 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 34 ; 34 >
-    au < notReady ; 2017 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 35 ; 35 > #embargoed for one year. through Oct 2018.
-    au < notReady ; 2018 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 36 ; 36 > #embargoed for one year. through Oct 2019.
+    au < released ; 2007 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 23 ; 23 ; http://scholarship.claremont.edu/ >
+    au < released ; 2007 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 24 ; 24 ; http://scholarship.claremont.edu/ >
+    au < released ; 2008 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 25 ; 25 ; http://scholarship.claremont.edu/ >
+    au < released ; 2008 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 26 ; 26 ; http://scholarship.claremont.edu/ >
+    au < released ; 2009 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 27 ; 27 ; http://scholarship.claremont.edu/ >
+    au < released ; 2010 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 28 ; 28 ; http://scholarship.claremont.edu/ >
+    au < released ; 2011 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 29 ; 29 ; http://scholarship.claremont.edu/ >
+    au < released ; 2012 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 30 ; 30 ; http://scholarship.claremont.edu/ >
+    au < released ; 2013 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 31 ; 31 ; http://scholarship.claremont.edu/ >
+    au < released ; 2014 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 32 ; 32 ; http://scholarship.claremont.edu/ >
+    au < released ; 2015 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 33 ; 33 ; http://scholarship.claremont.edu/ >
+    au < released ; 2016 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 34 ; 34 ; http://scholarship.claremont.edu/ >
+    au < notReady ; 2017 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 35 ; 35 ; https://scholarship.claremont.edu/ > #embargoed for one year. through Oct 2018.
+    au < notReady ; 2018 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 36 ; 36 ; https://scholarship.claremont.edu/ > #embargoed for one year. through Oct 2019.
 
   }
 
@@ -44,18 +44,18 @@
     
     param[journal_abbr] = urceu
 
-    au < released ; 2007 ; Claremont-UC Undergraduate Research Conference Journal Volume 2007 ; 2007 >
-    au < released ; 2008 ; Claremont-UC Undergraduate Research Conference Journal Volume 2008 ; 2008 >
-    au < released ; 2009 ; Claremont-UC Undergraduate Research Conference Journal Volume 2009 ; 2009 >
-    au < released ; 2010 ; Claremont-UC Undergraduate Research Conference Journal Volume 2010 ; 2010 >
-    au < released ; 2011 ; Claremont-UC Undergraduate Research Conference Journal Volume 2011 ; 2011 >
-    au < released ; 2012 ; Claremont-UC Undergraduate Research Conference Journal Volume 2012 ; 2012 >
-    au < released ; 2013 ; Claremont-UC Undergraduate Research Conference Journal Volume 2013 ; 2013 >
-    au < released ; 2014 ; Claremont-UC Undergraduate Research Conference Journal Volume 2014 ; 2014 >
-    au < released ; 2015 ; Claremont-UC Undergraduate Research Conference Journal Volume 2015 ; 2015 >
-    au < released ; 2016 ; Claremont-UC Undergraduate Research Conference Journal Volume 2016 ; 2016 >
-    au < released ; 2017 ; Claremont-UC Undergraduate Research Conference Journal Volume 2017 ; 2017 >
-    au < expected ; 2018 ; Claremont-UC Undergraduate Research Conference Journal Volume 2018 ; 2018 >
+    au < released ; 2007 ; Claremont-UC Undergraduate Research Conference Journal Volume 2007 ; 2007 ; http://scholarship.claremont.edu/ >
+    au < released ; 2008 ; Claremont-UC Undergraduate Research Conference Journal Volume 2008 ; 2008 ; http://scholarship.claremont.edu/ >
+    au < released ; 2009 ; Claremont-UC Undergraduate Research Conference Journal Volume 2009 ; 2009 ; http://scholarship.claremont.edu/ >
+    au < released ; 2010 ; Claremont-UC Undergraduate Research Conference Journal Volume 2010 ; 2010 ; http://scholarship.claremont.edu/ >
+    au < released ; 2011 ; Claremont-UC Undergraduate Research Conference Journal Volume 2011 ; 2011 ; http://scholarship.claremont.edu/ >
+    au < released ; 2012 ; Claremont-UC Undergraduate Research Conference Journal Volume 2012 ; 2012 ; http://scholarship.claremont.edu/ >
+    au < released ; 2013 ; Claremont-UC Undergraduate Research Conference Journal Volume 2013 ; 2013 ; http://scholarship.claremont.edu/ >
+    au < released ; 2014 ; Claremont-UC Undergraduate Research Conference Journal Volume 2014 ; 2014 ; http://scholarship.claremont.edu/ >
+    au < released ; 2015 ; Claremont-UC Undergraduate Research Conference Journal Volume 2015 ; 2015 ; http://scholarship.claremont.edu/ >
+    au < released ; 2016 ; Claremont-UC Undergraduate Research Conference Journal Volume 2016 ; 2016 ; http://scholarship.claremont.edu/ >
+    au < released ; 2017 ; Claremont-UC Undergraduate Research Conference Journal Volume 2017 ; 2017 ; http://scholarship.claremont.edu/ >
+    au < expected ; 2018 ; Claremont-UC Undergraduate Research Conference Journal Volume 2018 ; 2018 ; https://scholarship.claremont.edu/ >
 
   }
 
@@ -68,8 +68,8 @@
     
     param[journal_abbr] = five
 
-    au < released ; 2012 ; FIVE: The Claremont Colleges Journal of Undergraduate Academic Writing Volume 1 ; 1 >
-    au < released ; 2013 ; FIVE: The Claremont Colleges Journal of Undergraduate Academic Writing Volume 2 ; 2 >
+    au < released ; 2012 ; FIVE: The Claremont Colleges Journal of Undergraduate Academic Writing Volume 1 ; 1 ; http://scholarship.claremont.edu/ >
+    au < released ; 2013 ; FIVE: The Claremont Colleges Journal of Undergraduate Academic Writing Volume 2 ; 2 ; http://scholarship.claremont.edu/ >
     
   }
 
@@ -82,14 +82,14 @@
     
     param[journal_abbr] = jhm
 
-    au < released ; 2011 ; Journal of Humanistic Mathematics Volume 1 ; 1 >
-    au < released ; 2012 ; Journal of Humanistic Mathematics Volume 2 ; 2 >
-    au < released ; 2013 ; Journal of Humanistic Mathematics Volume 3 ; 3 >
-    au < released ; 2014 ; Journal of Humanistic Mathematics Volume 4 ; 4 >
-    au < released ; 2015 ; Journal of Humanistic Mathematics Volume 5 ; 5 >
-    au < released ; 2016 ; Journal of Humanistic Mathematics Volume 6 ; 6 >
-    au < released ; 2017 ; Journal of Humanistic Mathematics Volume 7 ; 7 >
-    au < manifest ; 2018 ; Journal of Humanistic Mathematics Volume 8 ; 8 >
+    au < released ; 2011 ; Journal of Humanistic Mathematics Volume 1 ; 1 ; http://scholarship.claremont.edu/ >
+    au < released ; 2012 ; Journal of Humanistic Mathematics Volume 2 ; 2 ; http://scholarship.claremont.edu/ >
+    au < released ; 2013 ; Journal of Humanistic Mathematics Volume 3 ; 3 ; http://scholarship.claremont.edu/ >
+    au < released ; 2014 ; Journal of Humanistic Mathematics Volume 4 ; 4 ; http://scholarship.claremont.edu/ >
+    au < released ; 2015 ; Journal of Humanistic Mathematics Volume 5 ; 5 ; http://scholarship.claremont.edu/ >
+    au < released ; 2016 ; Journal of Humanistic Mathematics Volume 6 ; 6 ; http://scholarship.claremont.edu/ >
+    au < released ; 2017 ; Journal of Humanistic Mathematics Volume 7 ; 7 ; http://scholarship.claremont.edu/ >
+    au < manifest ; 2018 ; Journal of Humanistic Mathematics Volume 8 ; 8 ; https://scholarship.claremont.edu/ >
 
   }
 
@@ -102,8 +102,8 @@
     
     param[journal_abbr] = lux
 
-    au < released ; 2012 ; LUX: A Journal of Transdisciplinary Writing and Research Volume 2 ; 2 >
-    au < released ; 2013 ; LUX: A Journal of Transdisciplinary Writing and Research Volume 3 ; 3 >
+    au < released ; 2012 ; LUX: A Journal of Transdisciplinary Writing and Research Volume 2 ; 2 ; http://scholarship.claremont.edu/ >
+    au < released ; 2013 ; LUX: A Journal of Transdisciplinary Writing and Research Volume 3 ; 3 ; http://scholarship.claremont.edu/ >
     
   }
 
@@ -117,10 +117,10 @@
     
     param[journal_abbr] = mimejournal
 
-    au < released ; 2005 ; Mime Journal Volume 23 ; 23 >
-    au < released ; 2013 ; Mime Journal Volume 24 ; 24 >
-    au < released ; 2014 ; Mime Journal Volume 25 ; 25 >
-    au < exists ; 2017 ; Mime Journal Volume 26 ; 26 >
+    au < released ; 2005 ; Mime Journal Volume 23 ; 23 ; http://scholarship.claremont.edu/ >
+    au < released ; 2013 ; Mime Journal Volume 24 ; 24 ; http://scholarship.claremont.edu/ >
+    au < released ; 2014 ; Mime Journal Volume 25 ; 25 ; http://scholarship.claremont.edu/ >
+    au < exists ; 2017 ; Mime Journal Volume 26 ; 26 ; https://scholarship.claremont.edu/ >
 
   }
 
@@ -133,10 +133,10 @@
     
     param[journal_abbr] = passwords
 
-    au < released ; 2009 ; Passwords Volume 10 ; 10 >
-    au < released ; 2010 ; Passwords Volume 11 ; 11 >
-    au < released ; 2011 ; Passwords Volume 12 ; 12 >
-    au < released ; 2012 ; Passwords Volume 13 ; 13 >
+    au < released ; 2009 ; Passwords Volume 10 ; 10 ; http://scholarship.claremont.edu/ >
+    au < released ; 2010 ; Passwords Volume 11 ; 11 ; http://scholarship.claremont.edu/ >
+    au < released ; 2011 ; Passwords Volume 12 ; 12 ; http://scholarship.claremont.edu/ >
+    au < released ; 2012 ; Passwords Volume 13 ; 13 ; http://scholarship.claremont.edu/ >
     
   }
 
@@ -150,28 +150,28 @@
     
     param[journal_abbr] = ppr
 
-    au < exists ; 1988 ; Performance Practice Review Volume 1 ; 1 >
-    au < exists ; 1989 ; Performance Practice Review Volume 2 ; 2 >
-    au < exists ; 1990 ; Performance Practice Review Volume 3 ; 3 >
-    au < exists ; 1991 ; Performance Practice Review Volume 4 ; 4 >
-    au < exists ; 1992 ; Performance Practice Review Volume 5 ; 5 >
-    au < exists ; 1993 ; Performance Practice Review Volume 6 ; 6 >
-    au < exists ; 1994 ; Performance Practice Review Volume 7 ; 7 >
-    au < released ; 1995 ; Performance Practice Review Volume 8 ; 8 >
-    au < released ; 1996 ; Performance Practice Review Volume 9 ; 9 >
-    au < released ; 1997 ; Performance Practice Review Volume 10 ; 10 >
-    au < released ; 2006 ; Performance Practice Review Volume 11 ; 11 >
-    au < released ; 2007 ; Performance Practice Review Volume 12 ; 12 >
-    au < released ; 2008 ; Performance Practice Review Volume 13 ; 13 >
-    au < released ; 2009 ; Performance Practice Review Volume 14 ; 14 >
-    au < released ; 2010 ; Performance Practice Review Volume 15 ; 15 >
-    au < released ; 2011 ; Performance Practice Review Volume 16 ; 16 >
-    au < released ; 2012 ; Performance Practice Review Volume 17 ; 17 >
-    au < released ; 2013 ; Performance Practice Review Volume 18 ; 18 >
-    au < released ; 2014 ; Performance Practice Review Volume 19 ; 19 >
-    au < released ; 2015 ; Performance Practice Review Volume 20 ; 20 >
-    au < released ; 2017 ; Performance Practice Review Volume 21 ; 21 >
-    au < released ; 2018 ; Performance Practice Review Volume 22 ; 22 >
+    au < exists ; 1988 ; Performance Practice Review Volume 1 ; 1 ; https://scholarship.claremont.edu/ >
+    au < exists ; 1989 ; Performance Practice Review Volume 2 ; 2 ; https://scholarship.claremont.edu/ >
+    au < exists ; 1990 ; Performance Practice Review Volume 3 ; 3 ; https://scholarship.claremont.edu/ >
+    au < exists ; 1991 ; Performance Practice Review Volume 4 ; 4 ; https://scholarship.claremont.edu/ >
+    au < exists ; 1992 ; Performance Practice Review Volume 5 ; 5 ; https://scholarship.claremont.edu/ >
+    au < exists ; 1993 ; Performance Practice Review Volume 6 ; 6 ; https://scholarship.claremont.edu/ >
+    au < exists ; 1994 ; Performance Practice Review Volume 7 ; 7 ; https://scholarship.claremont.edu/ >
+    au < released ; 1995 ; Performance Practice Review Volume 8 ; 8 ; http://scholarship.claremont.edu/ >
+    au < released ; 1996 ; Performance Practice Review Volume 9 ; 9 ; http://scholarship.claremont.edu/ >
+    au < released ; 1997 ; Performance Practice Review Volume 10 ; 10 ; http://scholarship.claremont.edu/ >
+    au < released ; 2006 ; Performance Practice Review Volume 11 ; 11 ; http://scholarship.claremont.edu/ >
+    au < released ; 2007 ; Performance Practice Review Volume 12 ; 12 ; http://scholarship.claremont.edu/ >
+    au < released ; 2008 ; Performance Practice Review Volume 13 ; 13 ; http://scholarship.claremont.edu/ >
+    au < released ; 2009 ; Performance Practice Review Volume 14 ; 14 ; http://scholarship.claremont.edu/ >
+    au < released ; 2010 ; Performance Practice Review Volume 15 ; 15 ; http://scholarship.claremont.edu/ >
+    au < released ; 2011 ; Performance Practice Review Volume 16 ; 16 ; http://scholarship.claremont.edu/ >
+    au < released ; 2012 ; Performance Practice Review Volume 17 ; 17 ; http://scholarship.claremont.edu/ >
+    au < released ; 2013 ; Performance Practice Review Volume 18 ; 18 ; http://scholarship.claremont.edu/ >
+    au < released ; 2014 ; Performance Practice Review Volume 19 ; 19 ; http://scholarship.claremont.edu/ >
+    au < released ; 2015 ; Performance Practice Review Volume 20 ; 20 ; http://scholarship.claremont.edu/ >
+    au < released ; 2017 ; Performance Practice Review Volume 21 ; 21 ; http://scholarship.claremont.edu/ >
+    au < released ; 2018 ; Performance Practice Review Volume 22 ; 22 ; http://scholarship.claremont.edu/ >
 
   }
 
@@ -184,10 +184,10 @@
     
     param[journal_abbr] = steam
 
-    au < released ; 2014 ; The STEAM Journal Volume 1 ; 1 >
-    au < released ; 2015-2016 ; The STEAM Journal Volume 2 ; 2 >
-    au < released ; 2017 ; The STEAM Journal Volume 3 ; 3 >
-    au < expected ; 2018 ; The STEAM Journal Volume 4 ; 4 >
+    au < released ; 2014 ; The STEAM Journal Volume 1 ; 1 ; http://scholarship.claremont.edu/ >
+    au < released ; 2015-2016 ; The STEAM Journal Volume 2 ; 2 ; http://scholarship.claremont.edu/ >
+    au < released ; 2017 ; The STEAM Journal Volume 3 ; 3 ; http://scholarship.claremont.edu/ >
+    au < expected ; 2018 ; The STEAM Journal Volume 4 ; 4 ; https://scholarship.claremont.edu/ >
 
   }
 
@@ -200,11 +200,11 @@
     
     param[journal_abbr] = codee
 
-    au < released ; 2012 ; CODEE Journal Volume 7 ; 7 >
-    au < released ; 2013 ; CODEE Journal Volume 8 ; 8 >
-    au < released ; 2014 ; CODEE Journal Volume 9 ; 9 >
-    au < released ; 2015 ; CODEE Journal Volume 10 ; 10 >
-    au < released ; 2016 ; CODEE Journal Volume 11 ; 11 >
+    au < released ; 2012 ; CODEE Journal Volume 7 ; 7 ; http://scholarship.claremont.edu/ >
+    au < released ; 2013 ; CODEE Journal Volume 8 ; 8 ; http://scholarship.claremont.edu/ >
+    au < released ; 2014 ; CODEE Journal Volume 9 ; 9 ; http://scholarship.claremont.edu/ >
+    au < released ; 2015 ; CODEE Journal Volume 10 ; 10 ; http://scholarship.claremont.edu/ >
+    au < released ; 2016 ; CODEE Journal Volume 11 ; 11 ; http://scholarship.claremont.edu/ >
 
   }
 
@@ -217,7 +217,7 @@
     # Issue 1 to Issue 27, all under vol 1.
     param[journal_abbr] = hmnj
 
-    au < released ; 1987-2004 ; Humanistic Mathematics Network Journal (HMNJ) Volume 1 ; 1 >
+    au < released ; 1987-2004 ; Humanistic Mathematics Network Journal (HMNJ) Volume 1 ; 1 ; http://scholarship.claremont.edu/ >
     
   }
 
