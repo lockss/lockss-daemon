@@ -133,13 +133,19 @@ public class PdfBoxXObjectTokenStream extends PdfBoxTokenStream {
 //PB2       pdXObjectForm = new PDXObjectForm(newPdStream);
       pdXObjectForm = new PDFormXObject(newPdStream);
       pdXObjectForm.setResources(getStreamResources());
-      Map<String, PDXObject> xobjects = parentResources.getXObjects();
-      boolean found = true; // Bug? False here then true before 'break'? (Harmless)
-      for (Map.Entry<String, PDXObject> ent : xobjects.entrySet()) {
-        String key = ent.getKey();
-        PDXObject val = ent.getValue();
+//PB2      Map<String, PDXObject> xobjects = parentResources.getXObjects();
+      Iterable<COSName> xobjects = parentResources.getXObjectNames();
+//PB2       boolean found = true; // Bug? False here then true before 'break'? (Harmless)
+      boolean found = false;
+//PB2       for (Map.Entry<String, PDXObject> ent : xobjects.entrySet()) {
+      for (COSName cosName : xobjects) {
+//PB2         String key = ent.getKey();
+//PB2         PDXObject val = ent.getValue();
+	PDXObject val = parentResources.getXObject(cosName);
         if (val == oldForm) {
-          xobjects.put(key, pdXObjectForm);
+//PB2           xobjects.put(key, pdXObjectForm);
+          val = pdXObjectForm;
+          parentResources.put(cosName, val);
           /*
            * IMPLEMENTATION NOTE
            * 
@@ -154,7 +160,8 @@ public class PdfBoxXObjectTokenStream extends PdfBoxTokenStream {
            * Java 6 agreed together and those running Java 7 agreed together.
            * Use a sorted map instead (added in 1.68.3).
            */ 
-          parentResources.setXObjects(new TreeMap<String, PDXObject>(xobjects));
+//PB2           parentResources.setXObjects(new TreeMap<String, PDXObject>(xobjects));
+          found = true;
           break;
         }
       }
