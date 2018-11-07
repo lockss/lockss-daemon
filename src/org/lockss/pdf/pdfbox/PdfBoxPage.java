@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,7 +33,9 @@ import java.util.*;
 
 import org.apache.pdfbox.cos.*;
 import org.apache.pdfbox.pdmodel.*;
-import org.apache.pdfbox.pdmodel.graphics.xobject.*;
+//PB2 import org.apache.pdfbox.pdmodel.graphics.xobject.*;
+import org.apache.pdfbox.pdmodel.graphics.PDXObject;
+import org.apache.pdfbox.pdmodel.graphics.form.PDFormXObject;
 import org.lockss.pdf.*;
 import org.lockss.util.Logger;
 
@@ -91,7 +89,13 @@ public class PdfBoxPage implements PdfPage {
      * (line 140) or PDCcitt (line 144) or PDPixelMap (line 153).
      * The latter three have a common supertype, PDXObjectImage.
      */
-    return (PDXObject)(pdResources.getXObjects().get(name));
+//PB2     return (PDXObject)(pdResources.getXObjects().get(name));
+    try {
+      return pdResources.getXObject(COSName.getPDFName(name));
+    } catch (IOException ioe) {
+      throw new PdfException("Failed to get the PDXObject", ioe);
+    }
+
   }
 
   /**
@@ -130,7 +134,8 @@ public class PdfBoxPage implements PdfPage {
      * stream, except one, PDXObjectForm, which represents a form
      * XObject i.e. a token stream.
      */
-    return xObject instanceof PDXObjectForm;
+//PB2     return xObject instanceof PDXObjectForm;
+    return xObject instanceof PDFormXObject;
   }
 
   /**
@@ -172,7 +177,8 @@ public class PdfBoxPage implements PdfPage {
     List<InputStream> ret = new ArrayList<InputStream>();
     PdfTokenStream pageTokenStream = getPageTokenStream();
     // Use findResources(), not getResources() (inspired by getAllTokenStreams() below)
-    recursivelyFindByteStreams(pageTokenStream, pdPage.findResources(), ret);
+//PB2     recursivelyFindByteStreams(pageTokenStream, pdPage.findResources(), ret);
+    recursivelyFindByteStreams(pageTokenStream, pdPage.getResources(), ret);
     return ret;
   }
   
@@ -182,7 +188,8 @@ public class PdfBoxPage implements PdfPage {
     PdfTokenStream pageTokenStream = getPageTokenStream();
     ret.add(pageTokenStream);
     // Use findResources(), not getResources() (e.g. PDFBox 1.8.7 PDFTextStripper.java line 460)
-    recursivelyFindTokenStreams(pageTokenStream, pdPage.findResources(), ret);
+//PB2     recursivelyFindTokenStreams(pageTokenStream, pdPage.findResources(), ret);
+    recursivelyFindTokenStreams(pageTokenStream, pdPage.getResources(), ret);
     return ret;
   }
 
@@ -200,7 +207,8 @@ public class PdfBoxPage implements PdfPage {
      * PDAnnotation factory call in getAnnotations() (PDFBox 1.6.0:
      * PDPage line 780).
      */
-    COSDictionary pageDictionary = pdPage.getCOSDictionary();
+//PB2     COSDictionary pageDictionary = pdPage.getCOSDictionary();
+    COSDictionary pageDictionary = pdPage.getCOSObject();
     COSArray annots = (COSArray)pageDictionary.getDictionaryObject(COSName.ANNOTS);
     if (annots == null) {
       return new ArrayList<PdfToken>();
@@ -225,7 +233,8 @@ public class PdfBoxPage implements PdfPage {
   
   @Override
   public void setAnnotations(List<PdfToken> annotations) {
-    pdPage.getCOSDictionary().setItem(COSName.ANNOTS, PdfBoxTokens.asCOSArray(annotations));
+//PB2     pdPage.getCOSDictionary().setItem(COSName.ANNOTS, PdfBoxTokens.asCOSArray(annotations));
+    pdPage.getCOSObject().setItem(COSName.ANNOTS, PdfBoxTokens.asCOSArray(annotations));
   }
 
   /**
@@ -276,7 +285,8 @@ public class PdfBoxPage implements PdfPage {
               }
             }
             else {
-              PDXObjectForm pdxObjectForm = (PDXObjectForm)xObject;
+//PB2               PDXObjectForm pdxObjectForm = (PDXObjectForm)xObject;
+              PDFormXObject pdxObjectForm = (PDFormXObject)xObject;
               PdfBoxXObjectTokenStream referencedTokenStream =
                   getDocument().getDocumentFactory().makeXObjectTokenStream(PdfBoxPage.this,
                                                                             Arrays.asList(pdxObjectForm,
@@ -324,7 +334,8 @@ public class PdfBoxPage implements PdfPage {
           if (operand.isName()) {
             PDXObject xObject = getPDXObjectByName(pdResources, operand.getName());
             if (isTokenStream(xObject)) {
-              PDXObjectForm pdxObjectForm = (PDXObjectForm)xObject;
+//PB2               PDXObjectForm pdxObjectForm = (PDXObjectForm)xObject;
+              PDFormXObject pdxObjectForm = (PDFormXObject)xObject;
               PdfBoxXObjectTokenStream referencedTokenStream =
                   getDocument().getDocumentFactory().makeXObjectTokenStream(PdfBoxPage.this,
                                                                             Arrays.asList(pdxObjectForm,

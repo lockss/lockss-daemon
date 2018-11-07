@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,9 +33,10 @@ import java.util.*;
 
 import javax.xml.transform.TransformerException;
 
-import org.apache.jempbox.xmp.XMPMetadata;
+//PB2 import org.apache.jempbox.xmp.XMPMetadata;
+//PB2 import org.apache.xmpbox.XMPMetadata;
 import org.apache.pdfbox.cos.COSDictionary;
-import org.apache.pdfbox.exceptions.COSVisitorException;
+//PB2 import org.apache.pdfbox.exceptions.COSVisitorException;
 import org.apache.pdfbox.pdmodel.*;
 import org.apache.pdfbox.pdmodel.common.PDMetadata;
 import org.lockss.pdf.*;
@@ -181,12 +178,12 @@ public class PdfBoxDocument implements PdfDocument {
 
   @Override
   public Calendar getCreationDate() throws PdfException {
-    try {
-      return pdDocument.getDocumentInformation().getCreationDate();
-    }
-    catch (IOException ioe) {
-      throw new PdfException("Error processing the creation date", ioe);
-    }
+//PB2     try {
+    return pdDocument.getDocumentInformation().getCreationDate();
+//PB2     }
+//PB2     catch (IOException ioe) {
+//PB2       throw new PdfException("Error processing the creation date", ioe);
+//PB2     }
   }
 
   @Override
@@ -211,16 +208,17 @@ public class PdfBoxDocument implements PdfDocument {
 
   @Override
   public String getMetadata() throws PdfException {
-    try {
+//PB2     try {
       PDMetadata metadata = pdDocument.getDocumentCatalog().getMetadata();
       if (metadata == null) {
         return null;
       }
-      return metadata.getInputStreamAsString();
-    }
-    catch (IOException ioe) {
-      throw new PdfException("Error converting metadata stream to string", ioe);
-    }
+//PB2       return metadata.getInputStreamAsString();
+      return metadata.getCOSObject().toTextString();
+//PB2     }
+//PB2     catch (IOException ioe) {
+//PB2       throw new PdfException("Error converting metadata stream to string", ioe);
+//PB2     }
   }
 
   @Override
@@ -239,12 +237,12 @@ public class PdfBoxDocument implements PdfDocument {
 
   @Override
   public Calendar getModificationDate() throws PdfException {
-    try {
-      return pdDocument.getDocumentInformation().getModificationDate();
-    }
-    catch (IOException ioe) {
-      throw new PdfException("Error processing the modification date", ioe);
-    }
+//PB2     try {
+    return pdDocument.getDocumentInformation().getModificationDate();
+//PB2     }
+//PB2     catch (IOException ioe) {
+//PB2       throw new PdfException("Error processing the modification date", ioe);
+//PB2     }
   }
 
   @Override
@@ -261,7 +259,8 @@ public class PdfBoxDocument implements PdfDocument {
      * PDDocumentCatalog line 205) states that all the elements in the
      * returned list are of type PDPage.
      */
-    return getDocumentFactory().makePage(this, /*(PDPage)*/pdDocument.getDocumentCatalog().getAllPages().get(index));
+//PB2     return getDocumentFactory().makePage(this, /*(PDPage)*/pdDocument.getDocumentCatalog().getAllPages().get(index));
+    return getDocumentFactory().makePage(this, /*(PDPage)*/pdDocument.getDocumentCatalog().getPages().get(index));
   }
 
   @Override
@@ -274,8 +273,11 @@ public class PdfBoxDocument implements PdfDocument {
      * returned list are of type PDPage.
      */
     List<PdfPage> ret = new ArrayList<PdfPage>();
-    for (Object obj : pdDocument.getDocumentCatalog().getAllPages()) {
-      ret.add(getDocumentFactory().makePage(this, /*(PDPage)*/obj));
+//PB2     for (Object obj : pdDocument.getDocumentCatalog().getAllPages()) {
+    Iterator<PDPage> iter = pdDocument.getDocumentCatalog().getPages().iterator();
+    while (iter.hasNext()) {
+//PB2       ret.add(getDocumentFactory().makePage(this, /*(PDPage)*/obj));
+      ret.add(getDocumentFactory().makePage(this, iter.next()));
     }
     return ret;
   }
@@ -314,13 +316,13 @@ public class PdfBoxDocument implements PdfDocument {
     if (closed) {
       throw new PdfException("PDF document already closed");
     }
-    try {
-      pdDocument.save(outputStream);
-    }
-    catch (COSVisitorException cve) {
-      log.debug2("Error saving PDF document", cve);
-      throw new PdfException("Error saving PDF document", cve);
-    }
+//PB2     try {
+    pdDocument.save(outputStream);
+//PB2    }
+//PB2     catch (COSVisitorException cve) {
+//PB2       log.debug2("Error saving PDF document", cve);
+//PB2       throw new PdfException("Error saving PDF document", cve);
+//PB2     }
   }
 
   @Override
@@ -360,7 +362,8 @@ public class PdfBoxDocument implements PdfDocument {
      */
     try {
       InputStream is = new ByteArrayInputStream(metadata.getBytes(Constants.ENCODING_ISO_8859_1));
-      pdDocument.getDocumentCatalog().setMetadata(new PDMetadata(pdDocument, is, false));
+//PB2       pdDocument.getDocumentCatalog().setMetadata(new PDMetadata(pdDocument, is, false));
+      pdDocument.getDocumentCatalog().setMetadata(new PDMetadata(pdDocument, is));
     }
     catch (UnsupportedEncodingException uee) {
       // Shouldn't happen, ISO-8859-1 is guaranteed to exist

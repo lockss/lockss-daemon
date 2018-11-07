@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,7 +35,9 @@ import org.apache.pdfbox.cos.COSName;
 import org.apache.pdfbox.pdfwriter.ContentStreamWriter;
 import org.apache.pdfbox.pdmodel.PDResources;
 import org.apache.pdfbox.pdmodel.common.PDStream;
-import org.apache.pdfbox.pdmodel.graphics.xobject.*;
+//PB2 import org.apache.pdfbox.pdmodel.graphics.*;
+import org.apache.pdfbox.pdmodel.graphics.PDXObject;
+import org.apache.pdfbox.pdmodel.graphics.form.PDFormXObject;
 import org.lockss.pdf.*;
 import org.lockss.util.Logger;
 
@@ -74,7 +72,8 @@ public class PdfBoxXObjectTokenStream extends PdfBoxTokenStream {
    * 
    * @since 1.56
    */
-  protected PDXObjectForm pdXObjectForm;
+//PB2   protected PDXObjectForm pdXObjectForm;
+  protected PDFormXObject pdXObjectForm;
   
   /**
    * <p>
@@ -111,7 +110,8 @@ public class PdfBoxXObjectTokenStream extends PdfBoxTokenStream {
    * @since 1.67.6
    */
   public PdfBoxXObjectTokenStream(PdfBoxPage pdfBoxPage,
-                                  PDXObjectForm pdXObjectForm,
+//PB2                                   PDXObjectForm pdXObjectForm,
+                                  PDFormXObject pdXObjectForm,
                                   PDResources parentResources,
                                   PDResources ownResources) {
     super(pdfBoxPage);
@@ -123,12 +123,15 @@ public class PdfBoxXObjectTokenStream extends PdfBoxTokenStream {
   @Override
   public void setTokens(List<PdfToken> newTokens) throws PdfException {
     try {
-      PDXObjectForm oldForm = pdXObjectForm;
+//PB2       PDXObjectForm oldForm = pdXObjectForm;
+      PDFormXObject oldForm = pdXObjectForm;
       PDStream newPdStream = makeNewPdStream();
-      newPdStream.getStream().setName(COSName.SUBTYPE, PDXObjectForm.SUB_TYPE);
+//PB2       newPdStream.getStream().setName(COSName.SUBTYPE, PDXObjectForm.SUB_TYPE);
+      newPdStream.getStream().setName(COSName.SUBTYPE, "Form");
       ContentStreamWriter tokenWriter = new ContentStreamWriter(newPdStream.createOutputStream());
       tokenWriter.writeTokens(PdfBoxTokens.unwrapList(newTokens));
-      pdXObjectForm = new PDXObjectForm(newPdStream);
+//PB2       pdXObjectForm = new PDXObjectForm(newPdStream);
+      pdXObjectForm = new PDFormXObject(newPdStream);
       pdXObjectForm.setResources(getStreamResources());
       Map<String, PDXObject> xobjects = parentResources.getXObjects();
       boolean found = true; // Bug? False here then true before 'break'? (Harmless)

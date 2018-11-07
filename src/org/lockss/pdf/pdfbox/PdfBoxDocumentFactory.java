@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,11 +31,12 @@ package org.lockss.pdf.pdfbox;
 import java.io.*;
 import java.util.List;
 
-import org.apache.pdfbox.exceptions.*;
+//PB2 import org.apache.pdfbox.exceptions.*;
 import org.apache.pdfbox.pdfparser.PDFParser;
 import org.apache.pdfbox.pdmodel.*;
 import org.apache.pdfbox.pdmodel.common.PDStream;
-import org.apache.pdfbox.pdmodel.graphics.xobject.PDXObjectForm;
+//PB2 import org.apache.pdfbox.pdmodel.graphics.xobject.PDXObjectForm;
+import org.apache.pdfbox.pdmodel.graphics.form.PDFormXObject;
 import org.lockss.pdf.*;
 import org.lockss.util.IOUtil;
 
@@ -69,9 +66,9 @@ public class PdfBoxDocumentFactory implements PdfDocumentFactory {
       processAfterParse(pdDocument);
       return makeDocument(this, pdDocument);
     }
-    catch (CryptographyException ce) {
-      throw new PdfCryptographyException(ce);
-    }
+//PB2     catch (CryptographyException ce) {
+//PB2       throw new PdfCryptographyException(ce);
+//PB2     }
     catch (IOException ioe) {
       throw new PdfException(ioe);
     }
@@ -149,7 +146,8 @@ public class PdfBoxDocumentFactory implements PdfDocumentFactory {
       throws PdfException {
     List<?> varargs = (List<?>)pdfTokenStreamObject;
     return new PdfBoxXObjectTokenStream((PdfBoxPage)pdfPage,
-                                        (PDXObjectForm)varargs.get(0),
+//PB2                                        (PDXObjectForm)varargs.get(0),
+                                        (PDFormXObject)varargs.get(0),
                                         (PDResources)varargs.get(1),
                                         (PDResources)varargs.get(2));
   }
@@ -193,7 +191,8 @@ public class PdfBoxDocumentFactory implements PdfDocumentFactory {
    * @since 1.67
    */
   protected void processAfterParse(PDDocument pdDocument)
-      throws CryptographyException, IOException {
+//PB2      throws CryptographyException, IOException {
+      throws IOException {
     pdDocument.setAllSecurityToBeRemoved(true);
     if (pdDocument.isEncrypted()) {
       pdDocument.decrypt("");

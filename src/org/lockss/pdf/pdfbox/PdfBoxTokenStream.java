@@ -35,6 +35,7 @@ package org.lockss.pdf.pdfbox;
 import java.io.IOException;
 import java.util.*;
 
+import org.apache.pdfbox.cos.COSName;
 import org.apache.pdfbox.pdmodel.PDResources;
 import org.apache.pdfbox.pdmodel.common.PDStream;
 import org.apache.pdfbox.pdmodel.font.PDFont;
@@ -88,7 +89,8 @@ public abstract class PdfBoxTokenStream implements PdfTokenStream {
       if (pdStream == null) {
         return new ArrayList<PdfToken>(); // Blank page with null stream
       }
-      List<PdfToken> tokens = PdfBoxTokens.convertList(pdStream.getStream().getStreamTokens());
+//PB2       List<PdfToken> tokens = PdfBoxTokens.convertList(pdStream.getStream().getStreamTokens());
+      List<PdfToken> tokens = PdfBoxTokens.convertList(pdStream.getCOSObject().getStreamTokens());
       decodeStringsWithFontContext(tokens);
       return tokens;
     }
@@ -147,7 +149,12 @@ public abstract class PdfBoxTokenStream implements PdfTokenStream {
         if (streamResources == null) {
           throw new PdfException("Current context has no PDResources instance");
         }
-        currentFont = (PDFont)streamResources.getFonts().get(fontName.getName());
+//PB2         currentFont = (PDFont)streamResources.getFonts().get(fontName.getName());
+        try {
+          currentFont = (PDFont)streamResources.getFont(COSName.getPDFName(fontName.getName()));
+        } catch (IOException ioe) {
+          throw new PdfException(String.format("Font '%s' not found", fontName.getName()));              
+        }
         if (currentFont == null) {
           throw new PdfException(String.format("Font '%s' not found", fontName.getName()));              
         }
@@ -157,26 +164,31 @@ public abstract class PdfBoxTokenStream implements PdfTokenStream {
           throw new PdfException(String.format("No font set at index %d", i));              
         }
         // See PDFBox 1.8.2, PDFStreamEngine, lines 387-514
-        StringBuilder sb = new StringBuilder();
-        byte[] bytes = PdfBoxTokens.asCOSString(token).getBytes();
-        int codeLength = 1;
-        for (int j = 0; j < bytes.length; j += codeLength) {
-          codeLength = 1;
-          String str;
-          try {
-            str = currentFont.encode(bytes, j, codeLength);
-            if (str == null && j + 1 < bytes.length) {
-              codeLength++;
-              str = currentFont.encode(bytes, j, codeLength);
-            }
-          } catch (IOException ioe) {
-            throw new PdfException(String.format("Error decoding string at index %d", i), ioe);
-          }
-          if (str != null) {
-            sb.append(str);
-          }
+//SB2         StringBuilder sb = new StringBuilder();
+//SB2         byte[] bytes = PdfBoxTokens.asCOSString(token).getBytes();
+//SB2         int codeLength = 1;
+//SB2         for (int j = 0; j < bytes.length; j += codeLength) {
+//SB2           codeLength = 1;
+//SB2           String str;
+//SB2           try {
+//SB2             str = currentFont.encode(bytes, j, codeLength);
+//SB2             if (str == null && j + 1 < bytes.length) {
+//SB2               codeLength++;
+//SB2               str = currentFont.encode(bytes, j, codeLength);
+//SB2             }
+//SB2           } catch (IOException ioe) {
+//SB2             throw new PdfException(String.format("Error decoding string at index %d", i), ioe);
+//SB2           }
+//SB2           if (str != null) {
+//SB2             sb.append(str);
+//SB2           }
+//SB2         }
+//SB2         tokens.set(i, factory.makeString(sb.toString()));
+        try {
+          tokens.set(i, factory.makeString(new String(currentFont.encode(token.getString()))));
+        } catch (IOException ioe) {
+          throw new PdfException(String.format("Token '%s' cannot be encoded", token));              
         }
-        tokens.set(i, factory.makeString(sb.toString()));
       }
       else if (token.isArray()) {
         List<PdfToken> array = token.getArray();

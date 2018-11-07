@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -38,7 +34,8 @@ import java.util.concurrent.*;
 
 import org.apache.commons.collections.map.LRUMap;
 import org.apache.pdfbox.cos.*;
-import org.apache.pdfbox.util.PDFOperator;
+//PB2 import org.apache.pdfbox.util.PDFOperator;
+import org.apache.pdfbox.contentstream.operator.Operator;
 import org.lockss.pdf.*;
 import org.lockss.util.Logger;
 
@@ -295,7 +292,8 @@ public class PdfBoxTokens {
      * @param pdfOperator A {@link PDFOperator} instance.
      * @since 1.56
      */
-    private Token(PDFOperator pdfOperator) {
+//PB2     private Token(PDFOperator pdfOperator) {
+    private Token(Operator pdfOperator) {
       this.token = pdfOperator;
     }
     
@@ -412,8 +410,10 @@ public class PdfBoxTokens {
      * @return Wrapped object cast to {@link PDFOperator}.
      * @since 1.56
      */
-    private PDFOperator asPDFOperator() {
-      return (PDFOperator)token;
+//PB2      private PDFOperator asPDFOperator() {
+    private Operator asPDFOperator() {
+//PB2       return (PDFOperator)token;
+      return (Operator)token;
     }
     
   }
@@ -424,8 +424,10 @@ public class PdfBoxTokens {
    * </p>
    * @since 1.56
    */
-  protected static final ConcurrentMap<PDFOperator, Token> cachedOperators =
-      new ConcurrentHashMap<PDFOperator, Token>();
+//PB2   protected static final ConcurrentMap<PDFOperator, Token> cachedOperators =
+  protected static final ConcurrentMap<Operator, Token> cachedOperators =
+//PB2       new ConcurrentHashMap<PDFOperator, Token>();
+      new ConcurrentHashMap<Operator, Token>();
 
   /**
    * <p>As of this writing, COSName defines 292 common names. Other
@@ -554,9 +556,11 @@ public class PdfBoxTokens {
             return makeObject((COSObject)obj);
           }
         });
-        put(PDFOperator.class, new Converter() {
+//PB2         put(PDFOperator.class, new Converter() {
+        put(Operator.class, new Converter() {
           @Override public PdfToken convert(Object obj) {
-            return makeOperator((PDFOperator)obj); 
+//PB2             return makeOperator((PDFOperator)obj); 
+            return makeOperator((Operator)obj); 
           }
         });
         put(COSString.class, new Converter() {
@@ -831,7 +835,8 @@ public class PdfBoxTokens {
    * @return The {@link PDFOperator} instance represented by the token.
    * @since 1.56
    */
-  protected static PDFOperator asPDFOperator(PdfToken pdfToken) {
+//PB2   protected static PDFOperator asPDFOperator(PdfToken pdfToken) {
+  protected static Operator asPDFOperator(PdfToken pdfToken) {
     return asToken(pdfToken).asPDFOperator();
   }
   
@@ -843,8 +848,10 @@ public class PdfBoxTokens {
    * @return A {@link PDFOperator} instance.
    * @since 1.56
    */
-  protected static PDFOperator asPDFOperator(String operator) {
-    return PDFOperator.getOperator(operator);
+//PB2   protected static PDFOperator asPDFOperator(String operator) {
+  protected static Operator asPDFOperator(String operator) {
+//PB2     return PDFOperator.getOperator(operator);
+    return Operator.getOperator(operator);
   }
 
   /**
@@ -1083,8 +1090,10 @@ public class PdfBoxTokens {
    * @return A string value.
    * @since 1.56
    */
-  protected static String getOperator(PDFOperator pdfOperator) {
-    return pdfOperator.getOperation();
+//PB2   protected static String getOperator(PDFOperator pdfOperator) {
+  protected static String getOperator(Operator pdfOperator) {
+//PB2     return pdfOperator.getOperation();
+    return pdfOperator.getName();
   }
   
   /**
@@ -1240,7 +1249,8 @@ public class PdfBoxTokens {
    * @since 1.56
    */
   protected static boolean isOperator(Object obj) {
-    return obj instanceof PDFOperator;
+//PB2     return obj instanceof PDFOperator;
+    return obj instanceof Operator;
   }
   
   /**
@@ -1485,7 +1495,8 @@ public class PdfBoxTokens {
    * @return A PDF token.
    * @since 1.56
    */
-  protected static PdfToken makeOperator(PDFOperator operator) {
+//PB2   protected static PdfToken makeOperator(PDFOperator operator) {
+  protected static PdfToken makeOperator(Operator operator) {
     Token cachedToken = cachedOperators.get(operator);
     if (cachedToken != null) {
       // Operator already cached
@@ -1501,7 +1512,8 @@ public class PdfBoxTokens {
      * them either. (PDFBox 1.6.0: PDFOperator.getOperator() line
      * 63).
      */
-    String opcode = operator.getOperation();
+//PB2     String opcode = operator.getOperation();
+    String opcode = operator.getName();
     if (   PdfOpcodes.BEGIN_IMAGE_OBJECT.equals(opcode)
         || PdfOpcodes.BEGIN_IMAGE_DATA.equals(opcode)) {
       // Don't cache 'BI' and 'ID' operators

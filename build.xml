@@ -334,11 +334,12 @@ Args:
   <property name="httpclient.jar" value="${lib}/httpclient-4.3.1.jar"/>
 
   <!-- PDFBox -->
-  <property name="pdfbox.version" value="1.8.16" />
+  <!--PB2 property name="pdfbox.version" value="1.8.16" / -->
+  <property name="pdfbox.version" value="2.0.12" />
   <property name="pdfbox.jar" value="${lib}/pdfbox-${pdfbox.version}.jar" />
   <!-- Next 8 JARs needed by PDFBox: -->
   <property name="fontbox.jar" value="${lib}/fontbox-${pdfbox.version}.jar" />
-  <property name="jempbox.jar" value="${lib}/jempbox-${pdfbox.version}.jar" />
+  <!--PB2 property name="jempbox.jar" value="${lib}/jempbox-${pdfbox.version}.jar" / -->
   <property name="xmpbox.jar" value="${lib}/xmpbox-${pdfbox.version}.jar" />
   <property name="bouncycastle.version" value="jdk15on-160" />
   <property name="bouncycastle-provider.jar" value="${lib}/bcprov-${bouncycastle.version}.jar" />
@@ -529,7 +530,7 @@ Args:
     <pathelement path="${pdfbox.jar}" />
     <!-- Next 7 needed by PDFBox: -->
     <pathelement path="${fontbox.jar}" />
-    <pathelement path="${jempbox.jar}" />
+    <!--PB2 pathelement path="${jempbox.jar}" / -->
     <pathelement path="${bouncycastle-provider.jar}" />
     <pathelement path="${bouncycastle-mail.jar}" />
     <pathelement path="${icu4j.jar}" />
