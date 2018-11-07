@@ -55,8 +55,8 @@
     au < released ; 2015 ; Claremont-UC Undergraduate Research Conference Journal Volume 2015 ; 2015 >
     au < released ; 2016 ; Claremont-UC Undergraduate Research Conference Journal Volume 2016 ; 2016 >
     au < released ; 2017 ; Claremont-UC Undergraduate Research Conference Journal Volume 2017 ; 2017 >
-    
     au < expected ; 2018 ; Claremont-UC Undergraduate Research Conference Journal Volume 2018 ; 2018 >
+
   }
 
   {
@@ -89,8 +89,8 @@
     au < released ; 2015 ; Journal of Humanistic Mathematics Volume 5 ; 5 >
     au < released ; 2016 ; Journal of Humanistic Mathematics Volume 6 ; 6 >
     au < released ; 2017 ; Journal of Humanistic Mathematics Volume 7 ; 7 >
-    
     au < manifest ; 2018 ; Journal of Humanistic Mathematics Volume 8 ; 8 >
+
   }
 
   {
@@ -102,7 +102,6 @@
     
     param[journal_abbr] = lux
 
-    au < exists ; 2011 ; LUX: A Journal of Transdisciplinary Writing and Research Volume 1 ; 1 >
     au < released ; 2012 ; LUX: A Journal of Transdisciplinary Writing and Research Volume 2 ; 2 >
     au < released ; 2013 ; LUX: A Journal of Transdisciplinary Writing and Research Volume 3 ; 3 >
     
@@ -118,10 +117,11 @@
     
     param[journal_abbr] = mimejournal
 
-    au < released ; 2003 ; Mime Journal Volume 23 ; 23 >
+    au < released ; 2005 ; Mime Journal Volume 23 ; 23 >
     au < released ; 2013 ; Mime Journal Volume 24 ; 24 >
     au < released ; 2014 ; Mime Journal Volume 25 ; 25 >
-    
+    au < exists ; 2017 ; Mime Journal Volume 26 ; 26 >
+
   }
 
   {
@@ -150,9 +150,16 @@
     
     param[journal_abbr] = ppr
 
-    au < released ; 2003 ; Performance Practice Review Volume 8 ; 8 >
-    au < released ; 2004 ; Performance Practice Review Volume 9 ; 9 >
-    au < released ; 2005 ; Performance Practice Review Volume 10 ; 10 >
+    au < exists ; 1988 ; Performance Practice Review Volume 1 ; 1 >
+    au < exists ; 1989 ; Performance Practice Review Volume 2 ; 2 >
+    au < exists ; 1990 ; Performance Practice Review Volume 3 ; 3 >
+    au < exists ; 1991 ; Performance Practice Review Volume 4 ; 4 >
+    au < exists ; 1992 ; Performance Practice Review Volume 5 ; 5 >
+    au < exists ; 1993 ; Performance Practice Review Volume 6 ; 6 >
+    au < exists ; 1994 ; Performance Practice Review Volume 7 ; 7 >
+    au < released ; 1995 ; Performance Practice Review Volume 8 ; 8 >
+    au < released ; 1996 ; Performance Practice Review Volume 9 ; 9 >
+    au < released ; 1997 ; Performance Practice Review Volume 10 ; 10 >
     au < released ; 2006 ; Performance Practice Review Volume 11 ; 11 >
     au < released ; 2007 ; Performance Practice Review Volume 12 ; 12 >
     au < released ; 2008 ; Performance Practice Review Volume 13 ; 13 >
@@ -163,10 +170,9 @@
     au < released ; 2013 ; Performance Practice Review Volume 18 ; 18 >
     au < released ; 2014 ; Performance Practice Review Volume 19 ; 19 >
     au < released ; 2015 ; Performance Practice Review Volume 20 ; 20 >
-    au < released ; 2016 ; Performance Practice Review Volume 21 ; 21 >
-    au < released ; 2017 ; Performance Practice Review Volume 22 ; 22 >
-    
-    au < expected ; 2018 ; Performance Practice Review Volume 23 ; 23 >
+    au < released ; 2017 ; Performance Practice Review Volume 21 ; 21 >
+    au < released ; 2018 ; Performance Practice Review Volume 22 ; 22 >
+
   }
 
   {
@@ -179,11 +185,10 @@
     param[journal_abbr] = steam
 
     au < released ; 2014 ; The STEAM Journal Volume 1 ; 1 >
-    au < released ; 2015 ; The STEAM Journal Volume 2 ; 2 >
-    au < released ; 2016 ; The STEAM Journal Volume 3 ; 3 >
-    au < expected ; 2017 ; The STEAM Journal Volume 4 ; 4 >
-    
-    au < expected ; 2018 ; The STEAM Journal Volume 5 ; 5 >
+    au < released ; 2015-2016 ; The STEAM Journal Volume 2 ; 2 >
+    au < released ; 2017 ; The STEAM Journal Volume 3 ; 3 >
+    au < expected ; 2018 ; The STEAM Journal Volume 4 ; 4 >
+
   }
 
   {
@@ -200,9 +205,7 @@
     au < released ; 2014 ; CODEE Journal Volume 9 ; 9 >
     au < released ; 2015 ; CODEE Journal Volume 10 ; 10 >
     au < released ; 2016 ; CODEE Journal Volume 11 ; 11 >
-    au < expected ; 2017 ; CODEE Journal Volume 12 ; 12 >
-    
-    au < expected ; 2018 ; CODEE Journal Volume 13 ; 13 >
+
   }
 
   {
