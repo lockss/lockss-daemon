@@ -168,22 +168,20 @@
       au < down ; 2009 ; Journal of Biomedical Discovery and Collaboration Volume 4 ; 4 ; 2009 >
       au < down ; 2010 ; Journal of Biomedical Discovery and Collaboration Volume 5 ; 5 ; 2010 >
       au < down ; 2011 ; Journal of Biomedical Discovery and Collaboration Volume 6 ; 6 ; 2011 >
-      au < down ; 2012 ; Journal of Biomedical Discovery and Collaboration Volume 7 ; 7 ; 2012 >
+      au < down ; 2016 ; Journal of Biomedical Discovery and Collaboration Volume 7 ; 7 ; 2016 >
       
     }
 
     {
     
-      param[base_url] = http://journals.uic.edu/ojs/
+      param[base_url] = https://journals.uic.edu/ojs/
       param[journal_id] = jbdc
     
       au < doNotProcess ; 2009 ; Journal of Biomedical Discovery and Collaboration Volume 4 ; 4 ; 2009 >
       au < doNotProcess ; 2010 ; Journal of Biomedical Discovery and Collaboration Volume 5 ; 5 ; 2010 >
       au < doNotProcess ; 2011 ; Journal of Biomedical Discovery and Collaboration Volume 6 ; 6 ; 2011 >
-      au < doNotProcess ; 2012 ; Journal of Biomedical Discovery and Collaboration Volume 7 ; 7 ; 2012 >
-      au < expected ; 2013 ; Journal of Biomedical Discovery and Collaboration Volume 8 ; 8 ; 2013 >
-      au < expected ; 2014 ; Journal of Biomedical Discovery and Collaboration Volume 9 ; 9 ; 2014 >
-      
+      au < doNotProcess ; 2016 ; Journal of Biomedical Discovery and Collaboration Volume 7 ; 7 ; 2016 >
+
     }
 
   }
