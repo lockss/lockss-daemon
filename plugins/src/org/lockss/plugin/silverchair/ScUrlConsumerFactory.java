@@ -41,26 +41,8 @@ import org.lockss.util.Logger;
 /**
  * @since 1.68
  */
-public class BaseScUrlConsumerFactory implements UrlConsumerFactory {
-  private static final Logger log = Logger.getLogger(BaseScUrlConsumerFactory.class);
-
-  public static final String CANON_PDF_URL = "data/journals/[^&?]+\\.pdf$";
-  public static final String TO_PDF_URL = ".ashx\\?url=/data/journals/[^&?]+\\.pdf$";
-
-  protected static Pattern canonPdfPat = Pattern.compile(CANON_PDF_URL, Pattern.CASE_INSENSITIVE);
-  protected static Pattern destPdfPat = Pattern.compile(TO_PDF_URL, Pattern.CASE_INSENSITIVE);
-
-  public static Pattern getOrigPdfPattern() {
-    return canonPdfPat;
-  }
-
-  public static Pattern getDestPdfPattern() {
-    return destPdfPat;
-  }
-
-  public static Pattern getWaterMarkPattern() {
-    return null;
-  }
+public class ScUrlConsumerFactory implements UrlConsumerFactory {
+  private static final Logger log = Logger.getLogger(ScUrlConsumerFactory.class);
 
   @Override
   public UrlConsumer createUrlConsumer(CrawlerFacade facade, FetchedUrlData fud) {
@@ -88,41 +70,30 @@ public class BaseScUrlConsumerFactory implements UrlConsumerFactory {
    */
   public class ScUrlConsumer extends HttpToHttpsUrlConsumer {
 
-    public ScUrlConsumer(CrawlerFacade facade, FetchedUrlData fud) {
+    public static final String CANON_PDF_URL = "data/journals/[^&?]+\\.pdf$";
+    public static final String TO_PDF_URL = ".ashx\\?url=/data/journals/[^&?]+\\.pdf$";
+ 
+    protected Pattern canonPdfPat = Pattern.compile(CANON_PDF_URL, Pattern.CASE_INSENSITIVE);
+    protected Pattern destPdfPat = Pattern.compile(TO_PDF_URL, Pattern.CASE_INSENSITIVE);
+
+    public ScUrlConsumer(CrawlerFacade facade,
+        FetchedUrlData fud) {
       super(facade, fud);
     }
 
-    /**
-     * <p>
-     * Determines if a particular redirect chain should cause content to be stored
-     * only at the origin URL ({@link FetchedUrlData#origUrl}).
-     * </p>
-     * 
-     * @return True if and only if the fetched URL data represents a particular
-     *         redirect chain that should cause content to be stored only at the
-     *         origin URL.
-     * @since 1.67.5
-     */
+
     @Override
     public boolean shouldStoreAtOrigUrl() {
       // handle vanilla redirect from http to https
       boolean should = super.shouldStoreAtOrigUrl();
       if (!should) {
-        if (fud.redirectUrls != null
-            && fud.redirectUrls.size() >= 1) {
-          Pattern op = getOrigPdfPattern();
-          Pattern dp = getDestPdfPattern();
-          // a more complicated redirect, which *may* include the https redirection as well
-          // http://foo.pdf --> https://foo.pdf --> http://pdfaccess.ashx?url=foo --> https://pdfaccess.ashx?url=foo
-          // or some permutation thereof - stay flexible
-          should = op.matcher(fud.origUrl).find() && dp.matcher(fud.fetchUrl).find();
-          if (!should) {
-            Pattern wm = getWaterMarkPattern();
-            if (wm != null) {
-              should = op.matcher(fud.origUrl).find() && wm.matcher(fud.fetchUrl).find();
-            }
-          }
-        }
+    	  // a more complicated redirect, which *may* include the https redirection as well
+    	  // http://foo.pdf --> https://foo.pdf --> http://pdfaccess.ashx?url=foo --> https://pdfaccess.ashx?url=foo
+    	  // or some permutation thereof - stay flexible
+      should =  fud.redirectUrls != null
+          && fud.redirectUrls.size() >= 1
+          && destPdfPat.matcher(fud.fetchUrl).find()
+          && canonPdfPat.matcher(fud.origUrl).find();
       }
       if (fud.redirectUrls != null) {
   	    log.debug3("Sc redirects " + fud.redirectUrls.size() + ": " + fud.redirectUrls.toString());
@@ -130,6 +101,7 @@ public class BaseScUrlConsumerFactory implements UrlConsumerFactory {
       }
       return should;
     }
+
   }
 
 }
