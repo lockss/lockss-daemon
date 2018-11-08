@@ -220,14 +220,16 @@ echo "CLOCKSS. Titles with no AUs"
 scripts/tdb/tdbout -j tdb/clockssingest/*.tdb | sort -u > $tpath/AllTitlesC.txt
 scripts/tdb/tdbout --any-and-all -c publisher,title,issn,eissn tdb/clockssingest/*.tdb | sort -u > $tpath/TitlesWAUsC.txt
 echo "Total Num Titles with no AUs"
+#diff $tpath/AllTitlesC.txt $tpath/TitlesWAUsC.txt | grep "< " | wc -l
+#echo "Not incl Springer SBM, AIAA, Annual Reviews, or Medknow"
+#diff $tpath/AllTitlesC.txt $tpath/TitlesWAUsC.txt | grep "< " | grep -v "Springer Science+Business Media" | grep -v "American Institute of Aeronautics and Astronautics" | grep -v "Annual Reviews," | grep -v "Medknow Publications" | wc -l
+#diff $tpath/AllTitlesC.txt $tpath/TitlesWAUsC.txt | grep "< " | grep -v "Springer Science+Business Media" | grep -v "American Institute of Aeronautics and Astronautics" | grep -v "Annual Reviews," | grep -v "Medknow Publications" | head -n20
 diff $tpath/AllTitlesC.txt $tpath/TitlesWAUsC.txt | grep "< " | wc -l
-echo "Not incl Springer SBM, AIAA, Annual Reviews, or Medknow"
-diff $tpath/AllTitlesC.txt $tpath/TitlesWAUsC.txt | grep "< " | grep -v "Springer Science+Business Media" | grep -v "American Institute of Aeronautics and Astronautics" | grep -v "Annual Reviews," | grep -v "Medknow Publications" | wc -l
-diff $tpath/AllTitlesC.txt $tpath/TitlesWAUsC.txt | grep "< " | grep -v "Springer Science+Business Media" | grep -v "American Institute of Aeronautics and Astronautics" | grep -v "Annual Reviews," | grep -v "Medknow Publications" | head -n20
+diff $tpath/AllTitlesC.txt $tpath/TitlesWAUsC.txt | grep "< " | head -n20
 echo "---------------------"
 echo "---------------------"
 echo "Missing Slashes"
-grep "param\[base_url\]" tdb/*/*.tdb | grep "http.*://" | grep -v "/\s*$"
+grep "param\[base_url\]" tdb/*/*.tdb | grep "http.*://" | grep -v "/\s*$" | grep -v ":\s*#" | grep -v "\/\s*#"
 echo "---------------------"
 echo "---------------------"
 

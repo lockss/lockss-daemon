@@ -8114,21 +8114,6 @@
   {
 
     title <
-      name = JAMIA ;
-      issn = 1067-5027 ;
-      eissn = 1527-974X ;
-      issnl = 1067-5027
-    >
-
-    param[journal_id] = 
-
-    #this title was ONLY in the previous TDB listing - suppressing AU generation 
-
-  }
-
-  {
-
-    title <
       name = JNCI Monographs ;
       issn = 1052-6773 ;
       eissn = 1745-6614 ;
