@@ -112,6 +112,7 @@ public class BaseScHtmlHashFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "comment"),
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "graphic-wrap"),
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "toolbar-wrap"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "^ref-list"),
       // DROP eventual "Free"/"Open Access" text/icon [AMA/SPIE TOC/article]
       HtmlNodeFilters.tagWithAttributeRegex("span", "class", "freeArticle"), // [AMA TOC/article]
       HtmlNodeFilters.tagWithText("h4", "Open Access"), // [SPIE TOC/article]
@@ -181,7 +182,7 @@ public class BaseScHtmlHashFilterFactory implements FilterFactory {
       throws PluginException {
     
     NodeFilter[] includeFilters = new NodeFilter[] {
-        // KEEP manifest page content [AMA, SPIE, ASH]                                                   
+        // KEEP manifest page content [AMA, SPIE, ASH]
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "-IssuesAndVolumeListManifest"),
         // KEEP main area of TOCs [AMA, SPIE]
         HtmlNodeFilters.tagWithAttribute("div", "class", "articleBodyContainer"),
