@@ -1,31 +1,31 @@
-{
-
-  publisher <
-    name = Institution of Engineering and Technology (IET) ;
-    info[contract] = 2012 ;
-    info[tester] = 0
-  >
-
-  plugin = needs.plugin
-  comment[plugin] = pub2web, possibly called ClockssIETLinkBookPlugin
-  param[base_url] = http://digital-library.theiet.org/
-
-  {
-
-    implicit < status ; status2 ; year ; isbn ; eisbn ; param[isbn] ; volume ; name ; hidden[proxy] >
-
-    {
-  
-    title < 
-      name = Business compliance ;
-      type = bookSeries 
-      
-      >
-      # series string - /bus-comp/
-      
-
-    }   
-
+#{
+#
+#  publisher <
+#    name = Institution of Engineering and Technology (IET) ;
+#    info[contract] = 2012 ;
+#    info[tester] = 0
+#  >
+#
+#  plugin = needs.plugin
+#  comment[plugin] = pub2web, possibly called ClockssIETLinkBookPlugin
+#  param[base_url] = http://digital-library.theiet.org/
+#
+#  {
+#
+#    implicit < status ; status2 ; year ; isbn ; eisbn ; param[isbn] ; volume ; name ; hidden[proxy] >
+#
+#    {
+#  
+#    title < 
+#      name = Business compliance ;
+#      type = bookSeries 
+#      
+#      >
+#      # series string - /bus-comp/
+#      
+#
+#    }   
+#
 #    {
 #  
 #    title < 
@@ -359,7 +359,7 @@
 #
 # 
 #      
- }
- 
-
-}
+# }
+# 
+#
+#}

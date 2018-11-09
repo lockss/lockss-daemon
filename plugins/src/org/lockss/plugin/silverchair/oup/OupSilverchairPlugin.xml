@@ -10,14 +10,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>26</string>
+    <string>28</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>10</string>
+        <string>11</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -147,7 +147,7 @@
   </entry>
   <entry>
     <string>plugin_url_consumer_factory</string>
-    <string>org.lockss.plugin.silverchair.oup.OupScUrlConsumerFactory</string>
+    <string>org.lockss.plugin.silverchair.BaseScUrlConsumerFactory</string>
   </entry>
   <entry>
     <string>au_url_normalizer</string>
@@ -167,7 +167,7 @@
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.silverchair.oup.OupScArticleIteratorFactory</string>
+    <string>org.lockss.plugin.silverchair.BaseScArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>text/plain_metadata_extractor_factory_map</string>

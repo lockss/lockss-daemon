@@ -11072,7 +11072,7 @@
     au < manifest ; exists ; 2007 ; European View Volume 6 ; 6 ; euva ; >
     au < crawling ; exists ; 2008 ; European View Volume 7 ; 7 ; euva ; >
     au < crawling ; exists ; 2009 ; European View Volume 8 ; 8 ; euva ; >
-    au < crawling ; exists ; 2010 ; European View Volume 9 ; 9 ; euva ; >
+    au < frozen ; exists ; 2010 ; European View Volume 9 ; 9 ; euva ; >
     au < crawling ; exists ; 2011 ; European View Volume 10 ; 10 ; euva ; >
     au < crawling ; exists ; 2012 ; European View Volume 11 ; 11 ; euva ; >
     au < crawling ; exists ; 2013 ; European View Volume 12 ; 12 ; euva ; >
@@ -21850,7 +21850,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Drug Education Volume 45 ; 45 ; drea ; >
       au < frozen ; exists ; 2016 ; Journal of Drug Education Volume 46 ; 46 ; drea ; >
       au < frozen ; exists ; 2017 ; Journal of Drug Education Volume 47 ; 47 ; drea ; >
-      au < expected ; exists ; 2018 ; Journal of Drug Education Volume 48 ; 48 ; drea ; >
+      au < manifest ; exists ; 2018 ; Journal of Drug Education Volume 48 ; 48 ; drea ; >
   }
 
   {
@@ -24354,10 +24354,10 @@
       au < crawling ; exists ; 2011 ; Journal of International Marketing Volume 19 ; 19 ; jiga ; >
       au < crawling ; exists ; 2012 ; Journal of International Marketing Volume 20 ; 20 ; jiga ; >
       au < crawling ; exists ; 2013 ; Journal of International Marketing Volume 21 ; 21 ; jiga ; >
-      au < crawling ; exists ; 2014 ; Journal of International Marketing Volume 22 ; 22 ; jiga ; >
+      au < frozen ; exists ; 2014 ; Journal of International Marketing Volume 22 ; 22 ; jiga ; >
       au < crawling ; exists ; 2015 ; Journal of International Marketing Volume 23 ; 23 ; jiga ; >
       au < crawling ; exists ; 2016 ; Journal of International Marketing Volume 24 ; 24 ; jiga ; >
-      au < crawling ; exists ; 2017 ; Journal of International Marketing Volume 25 ; 25 ; jiga ; >
+      au < frozen ; exists ; 2017 ; Journal of International Marketing Volume 25 ; 25 ; jiga ; >
       au < crawling ; exists ; 2018 ; Journal of International Marketing Volume 26 ; 26 ; jiga ; >
 
   }
@@ -24505,7 +24505,7 @@
 
       #continues = 2211-0682
 
-      au < crawling ; exists ; 2017 ; SLAS TECHNOLOGY: Translating Life Sciences Innovation Volume 22 ; 22 ; jlad ; >
+      au < frozen ; exists ; 2017 ; SLAS TECHNOLOGY: Translating Life Sciences Innovation Volume 22 ; 22 ; jlad ; >
       au < crawling ; exists ; 2018 ; SLAS TECHNOLOGY: Translating Life Sciences Innovation Volume 23 ; 23 ; jlad ; >
 
   }
@@ -25120,25 +25120,25 @@
 
     #journal_id = jmx
 
-      au < exists ; exists ; 2000 ; Journal of Marketing Volume 64 ; 64 ; jmxa ; >
-      au < exists ; exists ; 2001 ; Journal of Marketing Volume 65 ; 65 ; jmxa ; >
-      au < exists ; exists ; 2002 ; Journal of Marketing Volume 66 ; 66 ; jmxa ; >
-      au < exists ; exists ; 2003 ; Journal of Marketing Volume 67 ; 67 ; jmxa ; >
-      au < exists ; exists ; 2004 ; Journal of Marketing Volume 68 ; 68 ; jmxa ; >
-      au < exists ; exists ; 2005 ; Journal of Marketing Volume 69 ; 69 ; jmxa ; >
-      au < exists ; exists ; 2006 ; Journal of Marketing Volume 70 ; 70 ; jmxa ; >
-      au < exists ; exists ; 2007 ; Journal of Marketing Volume 71 ; 71 ; jmxa ; >
-      au < exists ; exists ; 2008 ; Journal of Marketing Volume 72 ; 72 ; jmxa ; >
-      au < exists ; exists ; 2009 ; Journal of Marketing Volume 73 ; 73 ; jmxa ; >
-      au < exists ; exists ; 2010 ; Journal of Marketing Volume 74 ; 74 ; jmxa ; >
-      au < exists ; exists ; 2011 ; Journal of Marketing Volume 75 ; 75 ; jmxa ; >
-      au < exists ; exists ; 2012 ; Journal of Marketing Volume 76 ; 76 ; jmxa ; >
-      au < exists ; exists ; 2013 ; Journal of Marketing Volume 77 ; 77 ; jmxa ; >
-      au < exists ; exists ; 2014 ; Journal of Marketing Volume 78 ; 78 ; jmxa ; >
-      au < exists ; exists ; 2015 ; Journal of Marketing Volume 79 ; 79 ; jmxa ; >
-      au < exists ; exists ; 2016 ; Journal of Marketing Volume 80 ; 80 ; jmxa ; >
-      au < exists ; exists ; 2017 ; Journal of Marketing Volume 81 ; 81 ; jmxa ; >
-      au < exists ; exists ; 2018 ; Journal of Marketing Volume 82 ; 82 ; jmxa ; >
+      au < manifest ; exists ; 2000 ; Journal of Marketing Volume 64 ; 64 ; jmxa ; >
+      au < manifest ; exists ; 2001 ; Journal of Marketing Volume 65 ; 65 ; jmxa ; >
+      au < manifest ; exists ; 2002 ; Journal of Marketing Volume 66 ; 66 ; jmxa ; >
+      au < manifest ; exists ; 2003 ; Journal of Marketing Volume 67 ; 67 ; jmxa ; >
+      au < manifest ; exists ; 2004 ; Journal of Marketing Volume 68 ; 68 ; jmxa ; >
+      au < manifest ; exists ; 2005 ; Journal of Marketing Volume 69 ; 69 ; jmxa ; >
+      au < manifest ; exists ; 2006 ; Journal of Marketing Volume 70 ; 70 ; jmxa ; >
+      au < manifest ; exists ; 2007 ; Journal of Marketing Volume 71 ; 71 ; jmxa ; >
+      au < manifest ; exists ; 2008 ; Journal of Marketing Volume 72 ; 72 ; jmxa ; >
+      au < manifest ; exists ; 2009 ; Journal of Marketing Volume 73 ; 73 ; jmxa ; >
+      au < manifest ; exists ; 2010 ; Journal of Marketing Volume 74 ; 74 ; jmxa ; >
+      au < manifest ; exists ; 2011 ; Journal of Marketing Volume 75 ; 75 ; jmxa ; >
+      au < manifest ; exists ; 2012 ; Journal of Marketing Volume 76 ; 76 ; jmxa ; >
+      au < manifest ; exists ; 2013 ; Journal of Marketing Volume 77 ; 77 ; jmxa ; >
+      au < manifest ; exists ; 2014 ; Journal of Marketing Volume 78 ; 78 ; jmxa ; >
+      au < manifest ; exists ; 2015 ; Journal of Marketing Volume 79 ; 79 ; jmxa ; >
+      au < manifest ; exists ; 2016 ; Journal of Marketing Volume 80 ; 80 ; jmxa ; >
+      au < manifest ; exists ; 2017 ; Journal of Marketing Volume 81 ; 81 ; jmxa ; >
+      au < manifest ; exists ; 2018 ; Journal of Marketing Volume 82 ; 82 ; jmxa ; >
 
   }
 
@@ -26442,9 +26442,9 @@
       au < crawling ; exists ; 2012 ; Journal of Public Policy & Marketing Volume 31 ; 31 ; ppoa ; >
       au < crawling ; exists ; 2013 ; Journal of Public Policy & Marketing Volume 32 ; 32 ; ppoa ; >
       au < crawling ; exists ; 2014 ; Journal of Public Policy & Marketing Volume 33 ; 33 ; ppoa ; >
-      au < crawling ; exists ; 2015 ; Journal of Public Policy & Marketing Volume 34 ; 34 ; ppoa ; >
+      au < frozen ; exists ; 2015 ; Journal of Public Policy & Marketing Volume 34 ; 34 ; ppoa ; >
       au < crawling ; exists ; 2016 ; Journal of Public Policy & Marketing Volume 35 ; 35 ; ppoa ; >
-      au < crawling ; exists ; 2017 ; Journal of Public Policy & Marketing Volume 36 ; 36 ; ppoa ; >
+      au < frozen ; exists ; 2017 ; Journal of Public Policy & Marketing Volume 36 ; 36 ; ppoa ; >
       au < crawling ; exists ; 2018 ; Journal of Public Policy & Marketing Volume 37 ; 37 ; ppoa ; >
 
   }
@@ -31604,7 +31604,7 @@
       au < crawling ; exists ; 2018 ; National Institute Economic Review Volume 243 ; 243 ; nera ; >
       au < crawling ; exists ; 2018 ; National Institute Economic Review Volume 244 ; 244 ; nera ; >
       au < crawling ; exists ; 2018 ; National Institute Economic Review Volume 245 ; 245 ; nera ; >
-      au < expected ; exists ; 2018 ; National Institute Economic Review Volume 246 ; 246 ; nera ; >
+      au < manifest ; exists ; 2018 ; National Institute Economic Review Volume 246 ; 246 ; nera ; >
 
     }
 
@@ -34182,7 +34182,7 @@
       au < crawling ; exists ; 2014 ; Polymers and Polymer Composites Volume 22 ; 22 ; ppca ; >
       au < crawling ; exists ; 2015 ; Polymers and Polymer Composites Volume 23 ; 23 ; ppca ; >
       au < crawling ; exists ; 2016 ; Polymers and Polymer Composites Volume 24 ; 24 ; ppca ; >
-      au < crawling ; exists ; 2017 ; Polymers and Polymer Composites Volume 25 ; 25 ; ppca ; >
+      au < frozen ; exists ; 2017 ; Polymers and Polymer Composites Volume 25 ; 25 ; ppca ; >
       au < crawling ; exists ; 2018 ; Polymers and Polymer Composites Volume 26 ; 26 ; ppca ; >
 
   }
@@ -35412,7 +35412,7 @@
       au < crawling ; exists ; 2010 ; Progress in Rubber, Plastics and Recycling Technology Volume 26 ; 26 ; prpa ; >
       au < crawling ; exists ; 2011 ; Progress in Rubber, Plastics and Recycling Technology Volume 27 ; 27 ; prpa ; >
       au < crawling ; exists ; 2012 ; Progress in Rubber, Plastics and Recycling Technology Volume 28 ; 28 ; prpa ; >
-      au < crawling ; exists ; 2013 ; Progress in Rubber, Plastics and Recycling Technology Volume 29 ; 29 ; prpa ; >
+      au < frozen ; exists ; 2013 ; Progress in Rubber, Plastics and Recycling Technology Volume 29 ; 29 ; prpa ; >
       au < crawling ; exists ; 2014 ; Progress in Rubber, Plastics and Recycling Technology Volume 30 ; 30 ; prpa ; >
       au < crawling ; exists ; 2015 ; Progress in Rubber, Plastics and Recycling Technology Volume 31 ; 31 ; prpa ; >
       au < crawling ; exists ; 2016 ; Progress in Rubber, Plastics and Recycling Technology Volume 32 ; 32 ; prpa ; >
@@ -42836,14 +42836,14 @@
       au < crawling ; exists ; 2015 ; Transportation Research Record Volume 2488 ; 2488 ; trra ; >
       au < crawling ; exists ; 2015 ; Transportation Research Record Volume 2489 ; 2489 ; trra ; >
       au < crawling ; exists ; 2015 ; Transportation Research Record Volume 2490 ; 2490 ; trra ; >
-      au < crawling ; exists ; 2015 ; Transportation Research Record Volume 2491 ; 2491 ; trra ; >
+      au < frozen ; exists ; 2015 ; Transportation Research Record Volume 2491 ; 2491 ; trra ; >
       au < crawling ; exists ; 2015 ; Transportation Research Record Volume 2492 ; 2492 ; trra ; >
       au < crawling ; exists ; 2015 ; Transportation Research Record Volume 2493 ; 2493 ; trra ; >
       au < crawling ; exists ; 2015 ; Transportation Research Record Volume 2494 ; 2494 ; trra ; >
       au < crawling ; exists ; 2015 ; Transportation Research Record Volume 2495 ; 2495 ; trra ; >
       au < crawling ; exists ; 2015 ; Transportation Research Record Volume 2496 ; 2496 ; trra ; >
       au < crawling ; exists ; 2015 ; Transportation Research Record Volume 2497 ; 2497 ; trra ; >
-      au < crawling ; exists ; 2015 ; Transportation Research Record Volume 2498 ; 2498 ; trra ; >
+      au < frozen ; exists ; 2015 ; Transportation Research Record Volume 2498 ; 2498 ; trra ; >
       au < crawling ; exists ; 2015 ; Transportation Research Record Volume 2499 ; 2499 ; trra ; >
       au < crawling ; exists ; 2015 ; Transportation Research Record Volume 2500 ; 2500 ; trra ; >
       au < crawling ; exists ; 2015 ; Transportation Research Record Volume 2501 ; 2501 ; trra ; >
@@ -42879,7 +42879,7 @@
       au < crawling ; exists ; 2015 ; Transportation Research Record Volume 2531 ; 2531 ; trra ; >
       au < crawling ; exists ; 2015 ; Transportation Research Record Volume 2532 ; 2532 ; trra ; >
       au < crawling ; exists ; 2015 ; Transportation Research Record Volume 2533 ; 2533 ; trra ; >
-      au < crawling ; exists ; 2015 ; Transportation Research Record Volume 2534 ; 2534 ; trra ; >
+      au < frozen ; exists ; 2015 ; Transportation Research Record Volume 2534 ; 2534 ; trra ; >
       au < crawling ; exists ; 2015 ; Transportation Research Record Volume 2535 ; 2535 ; trra ; >
       au < crawling ; exists ; 2015 ; Transportation Research Record Volume 2536 ; 2536 ; trra ; >
       au < crawling ; exists ; 2015 ; Transportation Research Record Volume 2537 ; 2537 ; trra ; >
@@ -42894,7 +42894,7 @@
       au < doesNotExist ; doesNotExist ; 2016 ; Transportation Research Record Volume 2545 ; 2545 ; trra ; >
       au < doesNotExist ; doesNotExist ; 2016 ; Transportation Research Record Volume 2546 ; 2546 ; trra ; >
       au < doesNotExist ; doesNotExist ; 2016 ; Transportation Research Record Volume 2547 ; 2547 ; trra ; >
-      au < crawling ; exists ; 2016 ; Transportation Research Record Volume 2548 ; 2548 ; trra ; >
+      au < frozen ; exists ; 2016 ; Transportation Research Record Volume 2548 ; 2548 ; trra ; >
       au < doesNotExist ; doesNotExist ; 2016 ; Transportation Research Record Volume 2549 ; 2549 ; trra ; >
       au < crawling ; exists ; 2016 ; Transportation Research Record Volume 2550 ; 2550 ; trra ; >
       au < doesNotExist ; doesNotExist ; 2016 ; Transportation Research Record Volume 2551 ; 2551 ; trra ; >
@@ -42905,7 +42905,7 @@
       au < doesNotExist ; doesNotExist ; 2016 ; Transportation Research Record Volume 2556 ; 2556 ; trra ; >
       au < doesNotExist ; doesNotExist ; 2016 ; Transportation Research Record Volume 2557 ; 2557 ; trra ; >
       au < doesNotExist ; doesNotExist ; 2016 ; Transportation Research Record Volume 2558 ; 2558 ; trra ; >
-      au < crawling ; exists ; 2016 ; Transportation Research Record Volume 2559 ; 2559 ; trra ; >
+      au < frozen ; exists ; 2016 ; Transportation Research Record Volume 2559 ; 2559 ; trra ; >
 
       au < frozen ; exists ; 2017 ; Transportation Research Record Volume 2603 ; 2603 ; trra ; >
       au < frozen ; exists ; 2017 ; Transportation Research Record Volume 2604 ; 2604 ; trra ; >
@@ -42916,20 +42916,20 @@
       au < frozen ; exists ; 2017 ; Transportation Research Record Volume 2609 ; 2609 ; trra ; >
       au < frozen ; exists ; 2017 ; Transportation Research Record Volume 2610 ; 2610 ; trra ; >
       au < frozen ; exists ; 2017 ; Transportation Research Record Volume 2611 ; 2611 ; trra ; >
-      au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2612 ; 2612 ; trra ; >
+      au < frozen ; exists ; 2017 ; Transportation Research Record Volume 2612 ; 2612 ; trra ; >
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2613 ; 2613 ; trra ; >
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2614 ; 2614 ; trra ; >
-      au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2615 ; 2615 ; trra ; >
-      au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2616 ; 2616 ; trra ; >
+      au < frozen ; exists ; 2017 ; Transportation Research Record Volume 2615 ; 2615 ; trra ; >
+      au < frozen ; exists ; 2017 ; Transportation Research Record Volume 2616 ; 2616 ; trra ; >
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2617 ; 2617 ; trra ; >
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2618 ; 2618 ; trra ; >
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2619 ; 2619 ; trra ; >
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2620 ; 2620 ; trra ; >
-      au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2621 ; 2621 ; trra ; >
+      au < frozen ; exists ; 2017 ; Transportation Research Record Volume 2621 ; 2621 ; trra ; >
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2622 ; 2622 ; trra ; >
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2623 ; 2623 ; trra ; >
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2624 ; 2624 ; trra ; >
-      au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2625 ; 2625 ; trra ; >
+      au < frozen ; exists ; 2017 ; Transportation Research Record Volume 2625 ; 2625 ; trra ; >
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2626 ; 2626 ; trra ; >
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2627 ; 2627 ; trra ; >
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2628 ; 2628 ; trra ; >
@@ -42941,7 +42941,7 @@
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2634 ; 2634 ; trra ; >
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2635 ; 2635 ; trra ; >
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2636 ; 2636 ; trra ; >
-      au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2637 ; 2637 ; trra ; >
+      au < frozen ; exists ; 2017 ; Transportation Research Record Volume 2637 ; 2637 ; trra ; >
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2638 ; 2638 ; trra ; >
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2639 ; 2639 ; trra ; >
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2640 ; 2640 ; trra ; >
@@ -42949,11 +42949,11 @@
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2642 ; 2642 ; trra ; >
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2643 ; 2643 ; trra ; >
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2644 ; 2644 ; trra ; >
-      au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2645 ; 2645 ; trra ; >
+      au < frozen ; exists ; 2017 ; Transportation Research Record Volume 2645 ; 2645 ; trra ; >
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2646 ; 2646 ; trra ; >
       au < frozen ; exists ; 2017 ; Transportation Research Record Volume 2647 ; 2647 ; trra ; >
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2648 ; 2648 ; trra ; >
-      au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2649 ; 2649 ; trra ; >
+      au < frozen ; exists ; 2017 ; Transportation Research Record Volume 2649 ; 2649 ; trra ; >
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2650 ; 2650 ; trra ; >
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2651 ; 2651 ; trra ; >
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2652 ; 2652 ; trra ; >
@@ -42970,7 +42970,7 @@
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2663 ; 2663 ; trra ; >
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2664 ; 2664 ; trra ; >
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2665 ; 2665 ; trra ; >
-      au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2666 ; 2666 ; trra ; >
+      au < frozen ; exists ; 2017 ; Transportation Research Record Volume 2666 ; 2666 ; trra ; >
       au < frozen ; exists ; 2017 ; Transportation Research Record Volume 2667 ; 2667 ; trra ; >
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2668 ; 2668 ; trra ; >
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2669 ; 2669 ; trra ; >
@@ -45445,7 +45445,7 @@
       au < frozen ; exists ; 2013 ; Sociological Research Online Volume 18 ; 18 ; sroa ; >
       au < crawling ; exists ; 2014 ; Sociological Research Online Volume 19 ; 19 ; sroa ; >
       au < frozen ; exists ; 2015 ; Sociological Research Online Volume 20 ; 20 ; sroa ; >
-      au < crawling ; exists ; 2016 ; Sociological Research Online Volume 21 ; 21 ; sroa ; >
+      au < frozen ; exists ; 2016 ; Sociological Research Online Volume 21 ; 21 ; sroa ; >
       au < notReady ; exists ; 2017 ; Sociological Research Online Volume 22 ; 22 ; sroa ; > #X_X error for pdf
       au < crawling ; exists ; 2018 ; Sociological Research Online Volume 23 ; 23 ; sroa ; >
   }
@@ -47663,7 +47663,7 @@
         au < crawling ; exists ; 2013 ; International Polymer Science and Technology Volume 40 ; 40 ; ipra ; >
         au < crawling ; exists ; 2014 ; International Polymer Science and Technology Volume 41 ; 41 ; ipra ; >
         au < crawling ; exists ; 2015 ; International Polymer Science and Technology Volume 42 ; 42 ; ipra ; >
-        au < crawling ; exists ; 2016 ; International Polymer Science and Technology Volume 43 ; 43 ; ipra ; >
+        au < frozen ; exists ; 2016 ; International Polymer Science and Technology Volume 43 ; 43 ; ipra ; >
         au < crawling ; exists ; 2017 ; International Polymer Science and Technology Volume 44 ; 44 ; ipra ; >
         au < crawling ; exists ; 2018 ; International Polymer Science and Technology Volume 45 ; 45 ; ipra ; >
 

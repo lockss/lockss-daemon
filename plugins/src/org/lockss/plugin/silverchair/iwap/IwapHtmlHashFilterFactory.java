@@ -68,8 +68,7 @@ public class IwapHtmlHashFilterFactory extends BaseScHtmlHashFilterFactory {
     };
     
     NodeFilter[] moreExcludeFilters = new NodeFilter[] {
-        HtmlNodeFilters.tagWithAttributeRegex("div","class","^ref-list"),
-        HtmlNodeFilters.tagWithAttribute("div","class","kwd-group"),
+        HtmlNodeFilters.tagWithAttribute("div","class", "kwd-group"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "author-info-wrap"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pub-history-wrap"),
     };

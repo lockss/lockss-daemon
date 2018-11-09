@@ -7,6 +7,7 @@
 
       plugin = org.lockss.plugin.atypon.GenericAtyponPlugin
       implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = https://journals.aom.org/
   {
      #Journal: Academy of Management Proceedings
      #url: http://proceedings.aom.org/site/misc/archive.xhtml
@@ -22,7 +23,7 @@
     >
     
     {
-      param[base_url] = https://amd.aom.org/
+      #param[base_url] = https://amd.aom.org/
       param[journal_id] = amd
   
       au < doNotProcess ; 2015 ; Academy of Management Discoveries (AMD) Volume 1 ; 1 >
@@ -44,7 +45,7 @@
     
     {
       
-      param[base_url] = https://amle.aom.org/
+      #param[base_url] = https://amle.aom.org/
       param[journal_id] = amle
 
       au < doNotProcess ; 2002 ; Academy of Management Learning and Education (AMLE) Volume 1 ; 1 >
@@ -61,7 +62,7 @@
       au < doNotProcess ; 2013 ; Academy of Management Learning and Education (AMLE) Volume 12 ; 12 >
       au < doNotProcess ; 2014 ; Academy of Management Learning and Education (AMLS) Volume 13 ; 13 >
       au < doNotProcess ; 2015 ; Academy of Management Learning and Education (AMLS) Volume 14 ; 14 >
-      au < doNotProcess ; 2016 ; Academy of Management Learning and Education (AMLE) Volume 15 ; 15 > #login found
+      au < expected ; 2016 ; Academy of Management Learning and Education (AMLE) Volume 15 ; 15 >
       au < doNotProcess ; 2017 ; Academy of Management Learning and Education (AMLE) Volume 16 ; 16 >
       au < expected ; 2018 ; Academy of Management Learning and Education (AMLE) Volume 17 ; 17 >
 
@@ -80,7 +81,7 @@
     
     {
       
-      param[base_url] = https://amj.aom.org/
+      #param[base_url] = https://amj.aom.org/
       param[journal_id] = amj
 
       au < doNotProcess ; 1958 ; Academy of Management Journal (AMJ) Volume 1 ; 1 >
@@ -141,7 +142,7 @@
       au < doNotProcess ; 2013 ; Academy of Management Journal (AMJ) Volume 56 ; 56 >
       au < doNotProcess ; 2014 ; Academy of Management Journal (AMJ) Volume 57 ; 57 >
       au < doNotProcess ; 2015 ; Academy of Management Journal (AMJ) Volume 58 ; 58 >
-      au < doNotProcess ; 2016 ; Academy of Management Journal (AMJ) Volume 59 ; 59 > #login found
+      au < expected ; 2016 ; Academy of Management Journal (AMJ) Volume 59 ; 59 >
       au < doNotProcess ; 2017 ; Academy of Management Journal (AMJ) Volume 60 ; 60 >
       au < expected ; 2018 ; Academy of Management Journal (AMJ) Volume 61 ; 61 >
 
@@ -160,7 +161,7 @@
     
     {
 
-      param[base_url] = https://amr.aom.org/
+      #param[base_url] = https://amr.aom.org/
       param[journal_id] = amr
 
       au < doNotProcess ; 1976 ; Academy of Management Review (AMR) Volume 1 ; 1 >
@@ -222,7 +223,7 @@
     
     {
 
-      param[base_url] = https://amp.aom.org/
+      #param[base_url] = https://amp.aom.org/
       param[journal_id] = amp
 
       au < doNotProcess ; 1987 ; Academy of Management Perspectives (AMP) Volume 1 ; 1 >

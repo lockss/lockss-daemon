@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2018 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -44,28 +44,45 @@ import org.lockss.util.Logger;
 public class BaseScUrlConsumerFactory implements UrlConsumerFactory {
   private static final Logger log = Logger.getLogger(BaseScUrlConsumerFactory.class);
 
-  public static final String CANON_PDF_URL = "data/journals/[^&?]+\\.pdf$";
-  public static final String TO_PDF_URL = ".ashx\\?url=/data/journals/[^&?]+\\.pdf$";
+  //https://iwaponline.com/hr/issue-pdf/x/y/z/q
+  //https://iwaoponline.com/hr/article-pdf/x/y/z/6650409/afw017.pdf
+  // or
+  //https://academic.oup.com/ageing/issue-pdf/45/1/10919248
+  //https://academic.oup.com/ageing/article-pdf/45/2/323/6650409/afw017.pdf
+  // it doesn't really matter if it ends in PDF - if it redirects from a canonical to a temporary, we ought to consume
+  private static final String DEL_URL = "/(issue|article)-pdf/";
+  // will redirect to: 
+  // https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/ageing/45/2/10.1093_ageing_afw017/3/afw017.pdf?Expires=...
+  private static final String DOC_URL = "/backfile/Content_public/Journal/[^?]+";
+  private static final String DOC_ARGS = "\\?Expires=[^&]+&Signature=[^&]+&Key-Pair-Id=.+$";
+  // or if through watermarking to:
+  // https://watermark.silverchair.com/front_matter.pdf?token=AQECAHi208
+  private static final String WMARK_URL = "watermark[.]silverchair[.]com/[^?]+";
 
-  protected static Pattern canonPdfPat = Pattern.compile(CANON_PDF_URL, Pattern.CASE_INSENSITIVE);
-  protected static Pattern destPdfPat = Pattern.compile(TO_PDF_URL, Pattern.CASE_INSENSITIVE);
+  private static final String ORIG_FULLTEXT_STRING = DEL_URL;
+  private static final String DEST_FULLTEXT_STRING = DOC_URL +  DOC_ARGS;
 
-  public static Pattern getOrigPdfPattern() {
-    return canonPdfPat;
+  protected static final Pattern origFullTextPat = Pattern.compile(ORIG_FULLTEXT_STRING, Pattern.CASE_INSENSITIVE);
+  protected static final Pattern destFullTextPat = Pattern.compile(DEST_FULLTEXT_STRING, Pattern.CASE_INSENSITIVE);
+  protected static final Pattern wMarkFullTextPat = Pattern.compile(WMARK_URL, Pattern.CASE_INSENSITIVE);
+
+  public Pattern getOrigPdfPattern() {
+    return origFullTextPat;
   }
 
-  public static Pattern getDestPdfPattern() {
-    return destPdfPat;
+  public Pattern getDestPdfPattern() {
+    return destFullTextPat;
   }
 
-  public static Pattern getWaterMarkPattern() {
-    return null;
+  public Pattern getWaterMarkPattern() {
+    return wMarkFullTextPat;
   }
+
 
   @Override
   public UrlConsumer createUrlConsumer(CrawlerFacade facade, FetchedUrlData fud) {
-    log.debug3("Creating a Silverchair UrlConsumer");
-    return new ScUrlConsumer(facade, fud);
+    log.debug3("Creating a base Silverchair UrlConsumer");
+    return new BaseScUrlConsumer(facade, fud);
   }
 
   /**
@@ -73,22 +90,12 @@ public class BaseScUrlConsumerFactory implements UrlConsumerFactory {
    * A custom URL consumer that identifies specific redirect chains and stores the
    * content at the origin of the chain (e.g. to support collecting and repairing
    * redirect chains that begin with fixed URLs but end with one-time URLs).
-   * American Speech Language Hearing uses Silverchair.
-   * PDF links start at:
-   *   http://lshss.pubs.asha.org/data/Journals/LSHSS/935447/LSHSS_47_3_181.pdf
-   *   http://lshss.pubs.asha.org/data/Journals/LSHSS/935254/LSHSS-15-0011edwards_SupplAppB.pdf
-   * and redirect to:
-   *    pdfaccess.ashx?url=/data/journals/lshss/935254/lshss_47_2_123.pdf
-   *    pdfaccess.ashx?url=/data/journals/lshss/935254/lshss-15-0011edwards_supplappb.pdf
-   * store the content at the original url (which is also identified as the 
-   * <meta name="citation_pdf_url" 
-   *      content="http://lshss.pubs.asha.org/data/journals/lshss/935447/lshss_47_3_181.pdf" /> 
    * 
    * @since 1.67.5
    */
-  public class ScUrlConsumer extends HttpToHttpsUrlConsumer {
+  public class BaseScUrlConsumer extends HttpToHttpsUrlConsumer {
 
-    public ScUrlConsumer(CrawlerFacade facade, FetchedUrlData fud) {
+    public BaseScUrlConsumer(CrawlerFacade facade, FetchedUrlData fud) {
       super(facade, fud);
     }
 

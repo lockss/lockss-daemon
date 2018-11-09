@@ -114,30 +114,30 @@ echo "----------------------"
 echo " "
 #
 # Find duplicate auids in the ibictpln title database
-echo "---------------------"
-echo "---------------------"
-scripts/tdb/tdbout -AXEa tdb/ibictpln/*.tdb | sort > $tpath/allAUs
-uniq $tpath/allAUs > $tpath/dedupedAUs
-allAUs=`cat $tpath/allAUs | wc -l`
-uniqAUs=`cat $tpath/dedupedAUs | wc -l`
-echo "IBICT. All AUids = $allAUs"
-echo "IBICT. AUids without duplicates = $uniqAUs"
-diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
+#echo "---------------------"
+#echo "---------------------"
+#scripts/tdb/tdbout -AXEa tdb/ibictpln/*.tdb | sort > $tpath/allAUs
+#uniq $tpath/allAUs > $tpath/dedupedAUs
+#allAUs=`cat $tpath/allAUs | wc -l`
+#uniqAUs=`cat $tpath/dedupedAUs | wc -l`
+#echo "IBICT. All AUids = $allAUs"
+#echo "IBICT. AUids without duplicates = $uniqAUs"
+#diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
 #
 # Find duplicate name/plugin pairs in the ibictpln title database
-echo "---------------------"
-scripts/tdb/tdbout -AXE -c plugin,name tdb/ibictpln/*.tdb | sort > $tpath/allAUs
-uniq $tpath/allAUs > $tpath/dedupedAUs
-allAUs=`cat $tpath/allAUs | wc -l`
-uniqAUs=`cat $tpath/dedupedAUs | wc -l`
-echo "IBICT. All plugin/names = $allAUs"
-echo "IBICT. Plugin/names without duplicates = $uniqAUs"
-diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
+#echo "---------------------"
+#scripts/tdb/tdbout -AXE -c plugin,name tdb/ibictpln/*.tdb | sort > $tpath/allAUs
+#uniq $tpath/allAUs > $tpath/dedupedAUs
+#allAUs=`cat $tpath/allAUs | wc -l`
+#uniqAUs=`cat $tpath/dedupedAUs | wc -l`
+#echo "IBICT. All plugin/names = $allAUs"
+#echo "IBICT. Plugin/names without duplicates = $uniqAUs"
+#diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
 #
 # Find number of AUs ready for release in the ibictpln title database
-echo "----------------------"
-./scripts/tdb/tdbout -Y -t status tdb/ibictpln/*.tdb | sort | uniq -c
-echo " "
+#echo "----------------------"
+#./scripts/tdb/tdbout -Y -t status tdb/ibictpln/*.tdb | sort | uniq -c
+#echo " "
 #
 # Find duplicate auids in the whole database. Not exists or expected
 #echo "---------------------"
@@ -189,17 +189,17 @@ scripts/tdb/tdbout -t publisher,title,issn,eissn tdb/clockssingest/*.tdb | sed '
 scripts/tdb/scrub_table.pl $tpath/issn
 #
 # Find issn problems in ibictpln title database
-echo "---------------------"
-echo "---------------------"
-echo "IBICT. ISSN issues"
-scripts/tdb/tdbout -t publisher,title,issn,eissn tdb/ibictpln/*.tdb | sort -u > $tpath/issn
-scripts/tdb/scrub_table.pl $tpath/issn
+#echo "---------------------"
+#echo "---------------------"
+#echo "IBICT. ISSN issues"
+#scripts/tdb/tdbout -t publisher,title,issn,eissn tdb/ibictpln/*.tdb | sort -u > $tpath/issn
+#scripts/tdb/scrub_table.pl $tpath/issn
 #
 # Find Muse titles that don't have attr[journal_id]
-echo "---------------------"
-echo "---------------------"
-echo "GLN. Muse. Titles missing journal_id"
-scripts/tdb/tdbout -MTNYP -t publisher,param[journal_dir] -Q '(plugin ~ "ProjectMusePlugin" and (attr[journal_id] is not set or attr[journal_id] is ""))' tdb/prod/*.tdb | sort -u
+#echo "---------------------"
+#echo "---------------------"
+#echo "GLN. Muse. Titles missing journal_id"
+#scripts/tdb/tdbout -MTNYP -t publisher,param[journal_dir] -Q '(plugin ~ "ProjectMusePlugin" and (attr[journal_id] is not set or attr[journal_id] is ""))' tdb/prod/*.tdb | sort -u
 #
 # Find Titles that don't have AUs
 echo "---------------------"
@@ -220,14 +220,16 @@ echo "CLOCKSS. Titles with no AUs"
 scripts/tdb/tdbout -j tdb/clockssingest/*.tdb | sort -u > $tpath/AllTitlesC.txt
 scripts/tdb/tdbout --any-and-all -c publisher,title,issn,eissn tdb/clockssingest/*.tdb | sort -u > $tpath/TitlesWAUsC.txt
 echo "Total Num Titles with no AUs"
+#diff $tpath/AllTitlesC.txt $tpath/TitlesWAUsC.txt | grep "< " | wc -l
+#echo "Not incl Springer SBM, AIAA, Annual Reviews, or Medknow"
+#diff $tpath/AllTitlesC.txt $tpath/TitlesWAUsC.txt | grep "< " | grep -v "Springer Science+Business Media" | grep -v "American Institute of Aeronautics and Astronautics" | grep -v "Annual Reviews," | grep -v "Medknow Publications" | wc -l
+#diff $tpath/AllTitlesC.txt $tpath/TitlesWAUsC.txt | grep "< " | grep -v "Springer Science+Business Media" | grep -v "American Institute of Aeronautics and Astronautics" | grep -v "Annual Reviews," | grep -v "Medknow Publications" | head -n20
 diff $tpath/AllTitlesC.txt $tpath/TitlesWAUsC.txt | grep "< " | wc -l
-echo "Not incl Springer SBM, AIAA, Annual Reviews, or Medknow"
-diff $tpath/AllTitlesC.txt $tpath/TitlesWAUsC.txt | grep "< " | grep -v "Springer Science+Business Media" | grep -v "American Institute of Aeronautics and Astronautics" | grep -v "Annual Reviews," | grep -v "Medknow Publications" | wc -l
-diff $tpath/AllTitlesC.txt $tpath/TitlesWAUsC.txt | grep "< " | grep -v "Springer Science+Business Media" | grep -v "American Institute of Aeronautics and Astronautics" | grep -v "Annual Reviews," | grep -v "Medknow Publications" | head -n20
+diff $tpath/AllTitlesC.txt $tpath/TitlesWAUsC.txt | grep "< " | head -n20
 echo "---------------------"
 echo "---------------------"
 echo "Missing Slashes"
-grep "param\[base_url\]" tdb/*/*.tdb | grep "http.*://" | grep -v "/\s*$"
+grep "param\[base_url\]" tdb/*/*.tdb | grep "http.*://" | grep -v "/\s*$" | grep -v ":\s*#" | grep -v "\/\s*#"
 echo "---------------------"
 echo "---------------------"
 
