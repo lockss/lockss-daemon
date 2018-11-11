@@ -12,10 +12,10 @@ echo "*Status typos gln: "
 scripts/tdb/tdbout -t status tdb/prod/*.tdb | sort | uniq -c | grep -vw manifest | grep -vw released | grep -vw expected | grep -vw exists | grep -vw testing | grep -vw wanted | grep -vw ready | grep -vw down | grep -vw superseded | grep -vw doNotProcess | grep -vw notReady | grep -vw doesNotExist
 echo "*Status variations clockssingest: "
 scripts/tdb/tdbout -c status,status2 tdb/clockssingest/*.tdb | sort | uniq -c | sort -n | grep -vw "manifest,exists" | grep -vw "crawling,exists" | grep -vw "finished,crawling" | grep -vw "exists,exists" | grep -vw "down,crawling" | grep -vw "doNotProcess,doNotProcess" | grep -vw "expected,exists" | grep -vw "testing,exists" | grep -vw "notReady,exists" | grep -vw "ingNotReady,exists" | grep -vw "zapped,finished" | grep -vw "doesNotExist,doesNotExist"
-echo "*Status typos ibictpln: "
-scripts/tdb/tdbout -t status tdb/ibictpln/*.tdb | grep -vx manifest | grep -vx released | grep -vx expected | grep -vx exists | grep -vx testing | grep -vx wanted | grep -vx ready | grep -vx down | grep -vx superseded | grep -vx doNotProcess | grep -vx notReady | grep -vx doesNotExist
-echo "*Status typos coppulpln: "
-scripts/tdb/tdbout -t status tdb/coppulpln/*.tdb | grep -vx manifest | grep -vx released | grep -vx expected | grep -vx exists | grep -vx testing | grep -vx wanted | grep -vx ready | grep -vx down | grep -vx superseded | grep -vx doNotProcess | grep -vx notReady | grep -vx doesNotExist
+#echo "*Status typos ibictpln: "
+#scripts/tdb/tdbout -t status tdb/ibictpln/*.tdb | grep -vx manifest | grep -vx released | grep -vx expected | grep -vx exists | grep -vx testing | grep -vx wanted | grep -vx ready | grep -vx down | grep -vx superseded | grep -vx doNotProcess | grep -vx notReady | grep -vx doesNotExist
+#echo "*Status typos coppulpln: "
+#scripts/tdb/tdbout -t status tdb/coppulpln/*.tdb | grep -vx manifest | grep -vx released | grep -vx expected | grep -vx exists | grep -vx testing | grep -vx wanted | grep -vx ready | grep -vx down | grep -vx superseded | grep -vx doNotProcess | grep -vx notReady | grep -vx doesNotExist
 #
 # Find plugins listed in tdb files, that don't exist
 echo "---------------------"
@@ -62,8 +62,8 @@ echo "GLN. Plugin/names without duplicates = $uniqAUs"
 diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
 #
 # Find duplicate released names in the gln title database
-echo "---------------------"
-echo "Duplicate Released Names. Commented out."
+#echo "---------------------"
+#echo "Duplicate Released Names. Commented out."
 #scripts/tdb/tdbout -P -c name tdb/prod/*.tdb | sort > $tpath/allAUs
 #uniq $tpath/allAUs > $tpath/dedupedAUs
 #allAUs=`cat $tpath/allAUs | wc -l`
