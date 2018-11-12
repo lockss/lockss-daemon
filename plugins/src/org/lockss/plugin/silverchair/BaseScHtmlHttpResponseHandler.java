@@ -110,9 +110,13 @@ public class BaseScHtmlHttpResponseHandler implements CacheResultHandler {
     
     // handle retryable exceptions ; URL MIME type mismatch 
     if (ex instanceof ContentValidationException) {
-      log.warning("Warning - retry/no fail/no store " + url);
-      // retry and no store cache exception
-      return new ScRetryableNetworkException(ex);
+      if (url.contains(".pdf")) {
+        log.warning("Warning - retry/no fail/no store " + url);
+        // retry and no store cache exception
+        return new ScRetryableNetworkException(ex);
+      }
+      // log.warning(url, ex);
+      return new CacheException.WarningOnly(ex.getMessage() + " (non-fatal/storing)");
     }
 
     if (ex instanceof javax.net.ssl.SSLHandshakeException) {

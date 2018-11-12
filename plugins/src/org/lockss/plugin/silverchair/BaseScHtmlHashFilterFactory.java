@@ -173,6 +173,9 @@ public class BaseScHtmlHashFilterFactory implements FilterFactory {
       // copyright date did not have a tag suitable for filtering, using containing tag for ASHA
       HtmlNodeFilters.tagWithAttribute("div", "id", "getCitation"),
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "copyright"),
+      // changeable
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-metadata"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "terms-wrapper"),
   };
   
   @Override

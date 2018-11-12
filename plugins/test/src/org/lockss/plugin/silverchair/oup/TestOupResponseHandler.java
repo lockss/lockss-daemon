@@ -39,6 +39,7 @@ import java.util.*;
 import org.lockss.repository.LockssRepository;
 import org.lockss.test.*;
 import org.lockss.util.CIProperties;
+import org.lockss.util.Constants;
 import org.lockss.util.Logger;
 import org.lockss.util.urlconn.CacheException;
 import org.lockss.util.urlconn.HttpResultMap;
@@ -145,6 +146,38 @@ public class TestOupResponseHandler extends LockssTestCase {
     assertTrue(cacher.wasStored);
   }
   
+  public void testShouldCacheWrongMimeType() throws Exception {
+    Properties props = new Properties();
+    props.setProperty(BASE_URL_KEY, ROOT_URL);
+    props.setProperty(YEAR_KEY, "2017");
+    props.setProperty(JID_KEY, "xxx");
+    DefinableArchivalUnit OUPau = makeAuFromProps(props);
+    LockssRepository repo =
+        (LockssRepository)theDaemon.newAuManager(LockssDaemon.LOCKSS_REPOSITORY,
+            OUPau);
+    theDaemon.setLockssRepository(repo, OUPau);
+    repo.startService();
+    String url = ROOT_URL + "UI/app/img/favicon-32x32.png";
+    CIProperties cprops = new CIProperties();
+    
+    cprops.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "image/png");
+    UrlData ud = new UrlData(new StringInputStream(TEXT), cprops, url);
+    MyDefaultUrlCacher cacher = new MyDefaultUrlCacher(OUPau, ud);
+    try {
+      cacher.storeContent();
+      // storeContent() should have thrown WrongLength, but is mapped to no_store/no_fail exception and returns
+    } catch (CacheException e) {
+      // fail("storeContent() shouldn't have thrown", e);
+      assertClass(CacheException.RetryableException.class, e);
+    } catch (Exception x) {
+      fail("storeContent() shouldn't have thrown", x);
+    }
+    
+    assertTrue(cacher.wasStored);
+  }
+  
+  
+  // new ContentValidationException("URL MIME type mismatch");
   
   // DefaultUrlCacher that remembers that it stored
   private class MyDefaultUrlCacher extends DefaultUrlCacher {

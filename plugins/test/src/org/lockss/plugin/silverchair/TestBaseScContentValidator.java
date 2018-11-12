@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2017 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -30,7 +30,7 @@ in this Software without prior written authorization from Stanford University.
 
  */
 
-package org.lockss.plugin.silverchair.iwap;
+package org.lockss.plugin.silverchair;
 
 import org.lockss.test.*;
 import org.lockss.util.*;
@@ -46,36 +46,34 @@ import org.lockss.plugin.definable.DefinableArchivalUnit;
 import org.lockss.plugin.definable.DefinablePlugin;
 
 // super class for this plugin - variants defined within it
-public class TestIwapContentValidator extends LockssTestCase {
+public class TestBaseScContentValidator extends LockssTestCase {
 
-	static Logger log = Logger.getLogger(TestIwapContentValidator.class);
+	static Logger log = Logger.getLogger(TestBaseScContentValidator.class);
 
 	private MockLockssDaemon theDaemon;
 
-	static final String PLUGIN_ID = "org.lockss.plugin.silverchair.iwap.ClockssIwapSilverchairPlugin";
+	static final String PLUGIN_ID = "org.lockss.plugin.silverchair.ClockssSilverchairJournalsPlugin";
 	static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
     static final String YEAR_KEY = ConfigParamDescr.YEAR.getKey();
-    static final String JRNL_ID_KEY = "journal_id";
+    static final String RES_ID_KEY = "resource_id";
     public static final String BASE_URL = "http://www.example.com/";
 
     private static final String SOMETEXT1 = "----------------------text goes here--------------------------------";
-    private static final String SOMETEXT2 = "<div id=\"article-top-info-user-restricted-options\">-nope </div>---";
+    private static final String SOMETEXT2 = "-------------------<div> This site is down for maintenance </div>---";
     private static final String SOMETEXT3 = "-----48_3_cover.png?Expires=2147483647&amp;Signature=---------------";
-    private static final String SOMETEXT4 = "-----48_3_cover.png?Expires=9876543210&amp;Signature=---------------";
     private static final int LEN = SOMETEXT1.length();
 
     private DefinableArchivalUnit defAu;
 
     static final String htmlUrls[] =
       {
-          BASE_URL + "journals/jid/article-abstract/00418",
-          BASE_URL + "journals/jid/fullarticle/00418",
-          BASE_URL + "journals/jid/fullarticle/00418",
+          BASE_URL + "journals/rid/article-abstract/00418",
+          BASE_URL + "journals/rid/fullarticle/00418",
+          BASE_URL + "journals/rid/fullarticle/00418",
       };
     static final String nonHtmlUrls[] =
       {
-          BASE_URL + "view-large/figure/44950976/lfv07701.jpeg",
-          BASE_URL + "journals/jid/articlepdf/00417/evp1500002.pdf",
+          BASE_URL + "journals/rid/articlepdf/00417/evp1500002.pdf",
           BASE_URL + "doi/pdf/10.1108/XYZ-01-2017-00418.pdf",
           BASE_URL + "journals/jid/article/00417/art001.jpeg",
           BASE_URL + "journals/jid/article/00417/art001.jpg",
@@ -90,16 +88,15 @@ public class TestIwapContentValidator extends LockssTestCase {
       };
 
 
-
     public void setUp() throws Exception {
       super.setUp();
       setUpDiskSpace();
       theDaemon = getMockLockssDaemon();
-      theDaemon.getHashService();	
+      theDaemon.getHashService();
 
       Properties props = new Properties();
       props.setProperty(YEAR_KEY, "2016");
-      props.setProperty(JRNL_ID_KEY, "jid");
+      props.setProperty(RES_ID_KEY, "987");
       props.setProperty(BASE_URL_KEY, BASE_URL);
       Configuration config = ConfigurationUtil.fromProps(props);
 
@@ -163,15 +160,6 @@ public class TestIwapContentValidator extends LockssTestCase {
         cu.setContent(SOMETEXT3);
         // should NOT throw
         defValidator.validate(cu);
-        cu.setContent(SOMETEXT4);
-        // SHOULD throw
-        try {
-          defValidator.validate(cu);
-          fail("Bad cu should throw exception " + cu.getUrl());
-        } catch (Exception e) {
-          log.warning(urlString, e);
-          // okay, fall-thru
-        }
       }
     }
 

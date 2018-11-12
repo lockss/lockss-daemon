@@ -10,14 +10,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>28</string>
+    <string>29</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>11</string>
+        <string>12</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -134,6 +134,7 @@
     <string>au_url_mime_validation_map</string>
     <list>
       <string>/view-large/figure/, text/html</string>
+      <string>.png($|[?]), image/png</string>
     </list>
   </entry>
   <entry>
