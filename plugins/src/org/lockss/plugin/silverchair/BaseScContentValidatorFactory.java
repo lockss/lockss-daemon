@@ -38,6 +38,7 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.util.StringUtil;
 import org.lockss.util.HeaderUtil;
+import org.lockss.util.IOUtil;
 
 public class BaseScContentValidatorFactory implements ContentValidatorFactory {
 
@@ -102,24 +103,33 @@ public class BaseScContentValidatorFactory implements ContentValidatorFactory {
       if (invalidFileExt(url)) {
         throw new ContentValidationException("URL MIME type mismatch");
       } else {
+        Reader rdr = null;
         try {
+          rdr = new InputStreamReader(cu.getUnfilteredInputStream(), cu.getEncoding());
           if (!invalidString.isEmpty()) {
-            if (StringUtil.containsString(new InputStreamReader(cu.getUnfilteredInputStream(), cu.getEncoding()), invalidString)) {
+            if (StringUtil.containsString(rdr, invalidString)) {
               throw new ContentValidationException("Found invalid page");
             }
+            IOUtil.safeClose(rdr);
+            rdr = new InputStreamReader(cu.getUnfilteredInputStream(), cu.getEncoding());
           }
           if (!maintenanceString.isEmpty()) {
-            if (StringUtil.containsString(new InputStreamReader(cu.getUnfilteredInputStream(), cu.getEncoding()), maintenanceString)) {
+            if (StringUtil.containsString(rdr, maintenanceString)) {
               throw new ContentValidationException("Found maintenance page");
             }
+            IOUtil.safeClose(rdr);
+            rdr = new InputStreamReader(cu.getUnfilteredInputStream(), cu.getEncoding());
           }
           if (!patternString.isEmpty() &&
               !patternString.contains("*") && !patternString.contains("+") &&!patternString.contains("{")) {
-            if (containsPattern(new InputStreamReader(cu.getUnfilteredInputStream(), cu.getEncoding()), patternString)) {
+            if (containsPattern(rdr, patternString)) {
               throw new ContentValidationException("Found pattern in page");
             }
+            IOUtil.safeClose(rdr);
+            rdr = new InputStreamReader(cu.getUnfilteredInputStream(), cu.getEncoding());
           }
         } finally {
+          IOUtil.safeClose(rdr);
           cu.release();
         }
       }

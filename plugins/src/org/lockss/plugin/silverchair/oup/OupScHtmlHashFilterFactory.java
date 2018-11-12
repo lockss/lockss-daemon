@@ -65,11 +65,12 @@ public class OupScHtmlHashFilterFactory extends BaseScHtmlHashFilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "OUP_Issues_List"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "IssuesAndVolumeListManifest"),
         HtmlNodeFilters.tagWithAttributeRegex("img", "class", "content-image"),
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "terms-wrapper"),
     };
     
     NodeFilter[] moreExcludeFilters = new NodeFilter[] {
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "navbar-search"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-metadata"), // XXX duplicated in parent
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "terms-wrapper"), // XXX duplicated in parent
     };
     
     return createFilteredInputStream(au, in, encoding, includeFilters, moreExcludeFilters);
