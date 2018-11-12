@@ -58,7 +58,7 @@ public class TestOJS2Plugin extends LockssTestCase {
   // Note diff: java regex & vs. xml &amp;
   // if it changes in the plugin, you will likely need to change the test, so verify
   static final String  OJS2_REPAIR_FROM_PEER_REGEXP1 = 
-	      "/(libs?|site|images|js|public|ads)/.+[.](css|gif|png|jpe?g|js)([?]((itok|v)=)?[^&]+)?$";
+	      "/(libs?|site|images|js|public|ads)/.+[.](css|eot|gif|png|jpe?g|js|svg|ttf|woff)([?]((itok|v)=)?[^&]+)?$";
   static final String  OJS2_REPAIR_FROM_PEER_REGEXP2 = 
 	      "/page/css([?]name=.*)?$";
   
