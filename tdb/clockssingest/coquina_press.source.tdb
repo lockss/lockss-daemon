@@ -19,6 +19,7 @@
     # set of WARC files
     # WARC collected from https://palaeo-electronica.org/
     
+    provider = IUScholarWorks
     plugin = org.lockss.plugin.clockss.warc.ClockssWarcPlugin
     param[base_url] = http://clockss-ingest.lockss.org/warcfiles/palaeontologia-electronica-released/
     hidden[proxy] = DIRECT 
