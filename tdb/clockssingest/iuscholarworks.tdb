@@ -14,7 +14,7 @@
   {
     title <
       name = Analecta ;
-      issn = 2574-1799
+      eissn = 2574-1799
     >
 
       param[journal_id] = iusbanalecta
@@ -132,6 +132,25 @@
 
   {
     title <
+      name = Ethnomusicology Translations ;
+      eissn = 2473-6422
+    >
+
+      param[journal_id] = emt
+
+      au < exists ; exists ; 2015 ; 2015 ; Ethnomusicology Translations Volume 1 ; 1 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 2016 ; 2016 ; Ethnomusicology Translations Volume 2 ; 2 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 2016 ; 2016 ; Ethnomusicology Translations Volume 3 ; 3 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 2016 ; 2016 ; Ethnomusicology Translations Volume 4 ; 4 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 2017 ; 2017 ; Ethnomusicology Translations Volume 5 ; 5 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 2017 ; 2017 ; Ethnomusicology Translations Volume 6 ; 6 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 2018 ; 2018 ; Ethnomusicology Translations Volume 7 ; 7 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 2018 ; 2018 ; Ethnomusicology Translations Volume 8 ; 8 ; https://scholarworks.iu.edu/journals/ ; >
+
+  }
+
+  {
+    title <
       name = Hindsight: Journal of Optometry History ;
       eissn = 2374-3271 
     >
@@ -148,7 +167,7 @@
       au < frozen ; exists ; 2015 ; 2015 ; Hindsight: Journal of Optemetry History Volume 46 ; 46 ; https://scholarworks.iu.edu/journals/ ; >
       au < frozen ; exists ; 2016 ; 2016 ; Hindsight: Journal of Optemetry History Volume 47 ; 47 ; https://scholarworks.iu.edu/journals/ ; >
       au < deepCrawl ; exists ; 2017 ; 2017 ; Hindsight: Journal of Optemetry History Volume 48 ; 48 ; https://scholarworks.iu.edu/journals/ ; >
-      au < expected ; exists ; 2018 ; 2018 ; Hindsight: Journal of Optemetry History Volume 49 ; 49 ; https://scholarworks.iu.edu/journals/ ; >
+      au < notReady ; exists ; 2018 ; 2018 ; Hindsight: Journal of Optemetry History Volume 49 ; 49 ; https://scholarworks.iu.edu/journals/ ; >
 
   }
 
@@ -180,6 +199,20 @@
 
   {
     title <
+      name = The Hoosier Science Teacher ;
+      issn = 0734-3833 ;
+      eissn = 2475-451X
+    >
+
+      param[journal_id] = thst
+
+      au < exists ; exists ; 2017 ; 2017 ; The Hoosier Science Teacher Volume 40 ; 40 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 2018 ; 2018 ; The Hoosier Science Teacher Volume 41 ; 41 ; https://scholarworks.iu.edu/journals/ ; >
+
+  }
+
+  {
+    title <
       name = Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies ;
       eissn = 2158-9089 
     >
@@ -200,7 +233,8 @@
   {
     title <
       name = Indiana University Bookman ;
-      eissn = 0019-6800
+      issn = 0019-6800 ;
+      eissn = 2373-9339
     >
 
       param[journal_id] = bookman
