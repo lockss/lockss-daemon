@@ -999,13 +999,11 @@ public class TestAmPsychPubHtmlFilterFactory extends LockssTestCase {
       "                                          EDITOR'S NOTE\n" + 
       "                                        </h1>\n" + 
       "                                      </div>\n" + 
-      "                                      <div class=\"articleMetaDrop publicationContentDropZone\" data-pb-dropzone=\"articleMetaDropZone\">\n" + 
-      "                                      </div>\n" + 
+      "                                      \n" + 
       "                                      <div class=\"publicationContentAuthors\">\n" + 
       "                                        <div class=\"hlFld-ContribAuthor\"></div>\n" + 
       "                                      </div>\n" + 
-      "                                      <div class=\"articleMetaDrop publicationContentDropZone publicationContentDropZone1\" data-pb-dropzone=\"articleMetaDropZone1\">\n" + 
-      "                                      </div>\n" + 
+      "                                      \n" + 
       "                                      <div class=\"authInfo authInfoLink\" style=\"display: none;\"><a href=\"#\" onclick=\"scrollToAuthAndArtInformation();\">View Author and Article Information</a></div>\n" + 
       "                                      <div>\n" + 
       "                                      </div>\n" + 

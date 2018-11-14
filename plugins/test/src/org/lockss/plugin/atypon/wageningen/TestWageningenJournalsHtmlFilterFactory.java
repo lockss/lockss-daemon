@@ -172,7 +172,7 @@ public class TestWageningenJournalsHtmlFilterFactory extends LockssTestCase {
       " </div>";
   
   private static final String withArticleMetaDrop =
-       "<div class=\"widget literatumPublicationContentWidget none  " +
+      "<div class=\"widget literatumPublicationContentWidget none  " +
       "widget-none\" id=\"1ca\">" +
       "<div class=\"articleMetaDrop publicationContentDropZone\" " +
       "data-pb-dropzone=\"articleMetaDropZone\">" +
@@ -185,31 +185,27 @@ public class TestWageningenJournalsHtmlFilterFactory extends LockssTestCase {
       "widget-none\" >" +
       " </div>";
             
-   private static final String withArticleToolsExceptDownloadCitation2 =
-       "<div class=\"block\">" +  
-       "<section class=\"widget literatumArticleToolsWidget none " +
-       "margin-bottom-15px widget-regular  widget-border-toggle\" " +
-       "id=\"3a3\">" +
-       "<div class=\"articleTools\">" +
-       "<ul class=\"linkList blockLinks separators centered\">" +
-       "<li class=\"addToFavs\"><a href=\"/linktoaddfav\">" +
-       "Add to Fav</a></li>" +
-       "<li class=\"email\"><a href=\"/linktoemail\">Email friends</a></li>" +
-       "<li class=\"downloadCitations\">" +
-       "<a href=\"/action/showCitFormats?doi=11.1111%jid.2013.2\">" +
-       "Send to Citation Mgr</a>" +
-       "</li></ul></div>" +
-       "</section>" +
-       "</div>";
+  private static final String withArticleToolsExceptDownloadCitation2 =
+      "<div class=\"block\">" +  
+      "<section class=\"widget literatumArticleToolsWidget none " +
+      "margin-bottom-15px widget-regular  widget-border-toggle\" " +
+      "id=\"3a3\">" +
+      "<div class=\"articleTools\">" +
+      "<ul class=\"linkList blockLinks separators centered\">" +
+      "<li class=\"addToFavs\"><a href=\"/linktoaddfav\">" +
+      "Add to Fav</a></li>" +
+      "<li class=\"email\"><a href=\"/linktoemail\">Email friends</a></li>" +
+      "<li class=\"downloadCitations\">" +
+      "<a href=\"/action/showCitFormats?doi=11.1111%jid.2013.2\">" +
+      "Send to Citation Mgr</a>" +
+      "</li></ul></div>" +
+      "</section>" +
+      "</div>";
   
   private static final String articleToolsFilteredStr2 = 
       " <section class=\"widget literatumArticleToolsWidget none " +
       "margin-bottom-15px widget-regular widget-border-toggle\" >" +
-      " <div class=\"articleTools\">" +
-      " <ul class=\"linkList blockLinks separators centered\">" +
-      " <li class=\"downloadCitations\">" +
-      " <a href=\"/action/showCitFormats?doi=11.1111%jid.2013.2\">" +
-      "Send to Citation Mgr </a> </li> </ul> </div> </section>";
+      " </section>";
   
   private static final String tooltipHtml =
       "<div class=\"literatumPublicationContentWidget\">" +
