@@ -104,7 +104,7 @@ public class BaseAtyponRisFilterFactory implements FilterFactory {
       // if we have  data, see if it matches the RIS pattern
       if (aLine != null && RIS_PATTERN.matcher(aLine).find()) {
         return getRisFilterReader(encoding, inBuf).toInputStream(encoding);
-      } 
+      }
       return inBuf; // If not a RIS file, just return reset file
     } catch (UnsupportedEncodingException e) {
       log.debug2("Internal error (unsupported encoding)", e);

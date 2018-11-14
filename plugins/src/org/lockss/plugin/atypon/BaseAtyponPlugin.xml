@@ -18,7 +18,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>94</string>
+    <string>95</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -115,6 +115,7 @@
       <string>2,"^https?://%s/doi/.*/googleAnalyticsPlugin\.js$", url_host(base_url)</string>
       <string>2,"^https?://%s/.*/www\.tandf\.co\.uk/", url_host(base_url)</string>
       <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)(_v[0-9]+|\?v=[0-9.]+|\?[a-z0-9]+)?$", url_host(base_url)</string>
+      <string>1,"^https?://((fonts|ajax)\.googleapis\.com)/"</string>
       <string>1,"^https?://(cdn\.nejm\.org)/."</string>
       <string>1,"^https?://faseb-prod-cdn\.literatumonline\.com/journals/content/fasebj/"</string>
       <!-- 15:32:20.525: Warning: 5-BaseUrlFetcher: Redirected to excluded URL: 
@@ -318,6 +319,7 @@
   <entry>
     <string>au_permitted_host_pattern</string>
     <list>
+      <string>(fonts|ajax)\.googleapis\.com</string>
       <string>"cdn\.nejm\.org"</string>
       <!-- www.emeraldinsight.com.global.prod.fastly.net for some js files -->
       <string>"%s\.global\.prod\.fastly\.net", url_host(base_url)</string>
