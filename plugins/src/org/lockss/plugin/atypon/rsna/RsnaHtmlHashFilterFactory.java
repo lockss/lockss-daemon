@@ -43,9 +43,8 @@ import org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory;
 
 // Keeps contents only (includeNodes), then hashes out unwanted nodes 
 // within the content (excludeNodes).
-public class RsnaHtmlHashFilterFactory 
-  extends BaseAtyponHtmlHashFilterFactory  {
-     
+public class RsnaHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
+  
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in, 
@@ -88,19 +87,12 @@ public class RsnaHtmlHashFilterFactory
         
     };
     
-    // handled by parent: script, sfxlink, stylesheet, pdfplus file sise
+    // handled by parent: script, sfxlink, stylesheet, pdfplus file size
     // <head> tag, <li> item has the text "Cited by", accessIcon, 
+    // publicationToolContainer, articleMetaDrop
     NodeFilter[] excludeNodes = new NodeFilter[] {       
-        // toc - select pulldown menu under volume title
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class",
-            "publicationToolContainer"),
         // on toc - button "test SA-CME" next to each article
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class",
-                "btn-holder"),
-        
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-                                              "articleMetaDrop"),
-    
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "btn-holder"),
     };
     return super.createFilteredInputStream(au, in, encoding, 
                                            includeNodes, excludeNodes);

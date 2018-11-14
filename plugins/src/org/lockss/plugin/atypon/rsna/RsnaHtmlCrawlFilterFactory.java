@@ -32,13 +32,17 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.atypon.rsna;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.InputStream;
 
+import org.apache.commons.io.IOUtils;
 import org.htmlparser.NodeFilter;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.plugin.*;
 import org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory;
+import org.lockss.util.Constants;
 
 public class RsnaHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory {
 
@@ -53,19 +57,15 @@ public class RsnaHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "toc-item__abstract"),
       HtmlNodeFilters.tagWithAttributeRegex("span", "class", "article__breadcrumbs"),
       // Article landing - ajax tabs
-      HtmlNodeFilters.tagWithAttribute("li", "id", "pane-pcw-references"),
-      HtmlNodeFilters.tagWithAttribute("li", "id", "pane-pcw-related"),
-      //HtmlNodeFilters.tagWithAttribute("div", "class", "article__references"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article__references"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "id", "related"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "related"),
       HtmlNodeFilters.tagWithAttribute("section", "class", "article__metrics"),
-      //HtmlNodeFilters.tagWithAttribute("section", "class", "article__keyword"),
       
-      HtmlNodeFilters.allExceptSubtree(
-          HtmlNodeFilters.tagWithAttribute("div", "class", "article-tools"),
-            HtmlNodeFilters.tagWithAttributeRegex(
-                   "a", "href", "/action/showCitFormats\\?")),
       // never want these links, excluded lists was too long
       HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/author/"),
-      // HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/servlet/linkout[?]"),
+      HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/servlet/linkout[?]"),
+      // did nor see any of these
       // HtmlNodeFilters.tagWithAttributeRegex("li", "class", "(correction|latest-version)"),
   };
   
@@ -76,4 +76,22 @@ public class RsnaHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory
     return super.createFilteredInputStream(au, in, encoding, filters);
   }
 
+  public static void main(String[] args) throws Exception {
+    String file1 = "/home/etenbrink/workspace/data/rsna1.html";
+    String file2 = "/home/etenbrink/workspace/data/rsna2.html";
+    String file3 = "/home/etenbrink/workspace/data/rsna3.html";
+    String file4 = "/home/etenbrink/workspace/data/rsna4.html";
+    IOUtils.copy(new RsnaHtmlCrawlFilterFactory().createFilteredInputStream(null, 
+        new FileInputStream(file1), Constants.ENCODING_UTF_8), 
+        new FileOutputStream(file1 + ".out"));
+    IOUtils.copy(new RsnaHtmlCrawlFilterFactory().createFilteredInputStream(null,
+        new FileInputStream(file2), Constants.ENCODING_UTF_8),
+        new FileOutputStream(file2 + ".out"));
+    IOUtils.copy(new RsnaHtmlCrawlFilterFactory().createFilteredInputStream(null,
+        new FileInputStream(file3), Constants.ENCODING_UTF_8),
+        new FileOutputStream(file3 + ".out"));
+    IOUtils.copy(new RsnaHtmlCrawlFilterFactory().createFilteredInputStream(null,
+        new FileInputStream(file4), Constants.ENCODING_UTF_8),
+        new FileOutputStream(file4 + ".out"));
+  }
 }
