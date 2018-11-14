@@ -74,16 +74,11 @@ public class RsnaHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
           }
         },
         // toc - contents only
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "tocListWidget"),
-        
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "table-of-content"),
         // abs, ref - contents only
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-                                          "literatumPublicationContentWidget"),
-        // early 2017- changed to <div class
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-                                              "downloadCitationsWidget"),
-        //http://pubs.rsna.org/action/showPopup?citid=citart1&id=eq3&doi=10.1148%2Fradiol.2016151832
-        HtmlNodeFilters.tagWithAttributeRegex("body", "class", "popupBody"),
+        HtmlNodeFilters.tag("article"),
+        // citation
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "articleList"),
         
     };
     

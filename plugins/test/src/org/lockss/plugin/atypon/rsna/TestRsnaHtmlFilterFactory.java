@@ -67,14 +67,32 @@ public class TestRsnaHtmlFilterFactory extends LockssTestCase {
           "</p>" +
           "<p  xmlns:oasis=\"http://www.niso.org/\">Radiology 2016;279(3):" +
           "<a class=\"ext-link\" href=\"http://pubs.rsna.org/doi/abs/10.1148/radiol.2015151256\" target=\"_blank\">" +
-          "827–837</a> DOI:10.1148/radiol.2015151256</p>" +
+          "827-837</a> DOI:10.1148/radiol.2015151256</p>" +
           "<b>Erratum in:</b>" +
           "<p>Radiology 2016;280(1):328 DOI:10.1148/radiol.2016164016</p>" +
-          "<!-- /fulltext content -->" +
-          "        </article>";      
+          "<ul>\n" + 
+          "<li id=\"pane-pcw-references\" aria-labelledby=\"pane-pcw-referencescon\" role=\"tabpanel\" class=\"tab__pane\">" +
+          "<div class=\"article__references\" style=\"\"><p class=\"explanation__text\"></p><h2>References</h2>" +
+          "<ul class=\"rlist separator\">" +
+          "<li id=\"r1\" class=\"references__item\">" +
+          "<span class=\"references__note\"><span class=\"references__label\">1.  </span>" +
+          "<span class=\"references__authors\"><span data-id=\"a1\" title=\"Gillams A\">Gillams A</span>,  " +
+          "<span data-id=\"a3\" title=\"Ahmed M\">Ahmed M</span> " +
+          "<span class=\"references__authors__others\">et al</span></span>. " +
+          "<span class=\"references__article-title\">Thermal ablation meeting 2013</span>. " +
+          "<span class=\"references__source\"><strong>Eur Radiol</strong></span> " +
+          "<span class=\"references__year\">2015</span>;25(12):3438-3454. doi:10.1007/s00330-015-3779-z" +
+          "<a href=\"/servlet/linkout?suffix=r1&amp;dbid=16&amp%2Fs00330-015-3779-z\">Crossref</a>, </span>" +
+          "</li>\n" + 
+          "</ul>\n" +
+          "</div>\n" + 
+          "</li>\n" + 
+          "</ul>\n" +
+          "<!-- /fulltext content -->\n" +
+          "        </article>";
 
 
-  private static final String artLinkContentFiltered = 
+  private static final String artLinkContentCrawlFiltered = 
       "<article class=\"article\">" +
           "<p class=\"fulltext\"></p>" +
           "<p>" +
@@ -84,9 +102,25 @@ public class TestRsnaHtmlFilterFactory extends LockssTestCase {
           " DOI:10.1148/radiol.2015151256</p>" +
           "<b>Erratum in:</b>" +
           "<p>Radiology 2016;280(1):328 DOI:10.1148/radiol.2016164016</p>" +
-          "<!-- /fulltext content -->" +
-          "        </article>";      
+          "<ul>\n" + 
+          "<li id=\"pane-pcw-references\" aria-labelledby=\"pane-pcw-referencescon\" role=\"tabpanel\" class=\"tab__pane\">" +
+          "\n" + 
+          "</li>\n" + 
+          "</ul>\n" +
+          "<!-- /fulltext content -->\n" +
+          "        </article>";
 
+  private static final String artLinkContentHashFiltered = 
+      " <article class=\"article\">" +
+          " <p class=\"fulltext\"> </p>" +
+          " <p> <b>Originally published in: </b> </p>" +
+          " <p xmlns:oasis=\"http://www.niso.org/\">Radiology 2016;279(3):" +
+          " <a class=\"ext-link\" href=\"http://pubs.rsna.org/doi/abs/10.1148/radiol.2015151256\" target=\"_blank\">827-837 </a>" +
+          " DOI:10.1148/radiol.2015151256 </p>" +
+          " <b>Erratum in: </b>" +
+          " <p>Radiology 2016;280(1):328 DOI:10.1148/radiol.2016164016 </p>" +
+          " <ul> <li aria-labelledby=\"pane-pcw-referencescon\" role=\"tabpanel\" class=\"tab__pane\"> </li> </ul>" +
+          " </article>";
 
   protected ArchivalUnit createAu()
       throws ArchivalUnit.ConfigurationException {
@@ -131,19 +165,18 @@ public class TestRsnaHtmlFilterFactory extends LockssTestCase {
   public static class TestCrawl extends TestRsnaHtmlFilterFactory {
     public void testFiltering() throws Exception {
       variantFact = new RsnaHtmlCrawlFilterFactory();
-      doFilterTest(mau, variantFact, artLinkContent, artLinkContentFiltered); 
-          
-    }    
+      doFilterTest(mau, variantFact, artLinkContent, artLinkContentCrawlFiltered); 
+    }
   }
 
   // Variant to test with Hash Filter
-   public static class TestHash extends TestRsnaHtmlFilterFactory {   
-     public void testFiltering() throws Exception {
+  public static class TestHash extends TestRsnaHtmlFilterFactory {   
+    public void testFiltering() throws Exception {
       variantFact = new RsnaHtmlHashFilterFactory();
- 
-     }
+      doFilterTest(mau, variantFact, artLinkContent, artLinkContentHashFiltered); 
+    }
   }
-  
+
   public static Test suite() {
     return variantSuites(new Class[] {
         TestCrawl.class,
