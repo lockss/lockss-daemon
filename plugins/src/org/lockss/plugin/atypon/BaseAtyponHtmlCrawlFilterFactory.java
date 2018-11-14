@@ -122,7 +122,6 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttribute("li", "class", "reference"),
     // T&F: <ul class=\"references numeric-ordered-list\" id=\"references-Section\">
     HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "^references"),
-    HtmlNodeFilters.tagWithAttribute("li", "class", "reference"),
     //maney, future-science (also in child...will remove later)
     HtmlNodeFilters.tagWithAttribute("table", "class", "references"),
 
@@ -134,7 +133,6 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
           HtmlNodeFilters.tagWithAttributeRegex(
                  "a", "href", "/action/showCitFormats\\?")),
     
-                 
     // related content from Related tab of Errata full text
     // http://press.endocrine.org/doi/full/10.1210/en.2013-1802
     HtmlNodeFilters.tagWithAttribute("div", "id", "relatedContent"),
