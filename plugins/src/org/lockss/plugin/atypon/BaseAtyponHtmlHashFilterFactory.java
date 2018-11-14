@@ -93,17 +93,24 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
     HtmlNodeFilters.tag("noscript"),
     //filter out comments after everything else so child plugins can use for filtering
     //HtmlNodeFilters.comment(),
+    HtmlNodeFilters.tag("style"),
     
     HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
     HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
+    // pageHeader/Footer
+    HtmlNodeFilters.tagWithAttribute("div", "id", "pageHeader"),
+    HtmlNodeFilters.tagWithAttribute("div", "id", "pageFooter"),
+    HtmlNodeFilters.tagWithAttribute("div", "class", "pageHeader"),
+    HtmlNodeFilters.tagWithAttribute("div", "class", "pageFooter"),
     
     // sections that may show up with this skin - from CRAWL filter
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumBookIssueNavigation"),
     // http://www.birpublications.org/toc/bjr/88/1052
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumMostReadWidget"),
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumMostCitedWidget"),
-    HtmlNodeFilters.tagWithAttributeRegex("div",  "class","literatumMostRecentWidget"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumMostRecentWidget"),
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumListOfIssuesWidget"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumListOfIssuesResponsiveWidget"),
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumBreadcrumbs"),
     //seen in TandF but likely to spread
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumArticleMetricsWidget"),
@@ -112,6 +119,7 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
     //http://press.endocrine.org/doi/full/10.1210/en.2013-1159
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "doubleClickAdWidget"),
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumInstitutionBanner"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumContentItemDownloadCount"),
     
     // crossref to site library
     HtmlNodeFilters.tagWithAttribute("a", "class", "sfxLink"),
@@ -126,6 +134,21 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
     // some size notes are within an identifying span
     // (see future science on an article page
     HtmlNodeFilters.tagWithAttribute("span", "class", "fileSize"),
+    
+    // toc - select pulldown menu under volume title
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "publicationToolContainer"),
+    // on article page
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "articleMetaDrop"),
+    // listed author links href= a varying numletter sequence
+    HtmlNodeFilters.tagWithAttributeRegex("a", "class", "tooltipTrigger"), 
+    HtmlNodeFilters.tagWithAttribute("div", "class", "ui-helper-hidden-accessible"),
+    // invisible jump to form whose choice labels have changed
+    HtmlNodeFilters.tagWithAttribute("div", "class", "sectionJumpTo"),
+    HtmlNodeFilters.tagWithAttribute("div", "class", "article__references"),
+    // we don't need to leave in the showCitFormats part of this for hashing
+    HtmlNodeFilters.tagWithAttribute("div", "class", "articleTools"),
+    // toc - article type seems to change and this isn't important
+    HtmlNodeFilters.tagWithAttribute("span", "class", "ArticleType"),
     
     // A number of children add a link item "Cited By" only after the article
     // has been cited...remove the entire list item - look for text pattern
