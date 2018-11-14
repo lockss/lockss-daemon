@@ -209,7 +209,7 @@ public class TestBIRAtyponHtmlFilterFactory extends LockssTestCase {
           "<div id=\"MathJax_Message\" style=\"display: none;\"></div>" +
           "</div>";
       
-    private static final String withArticleToolsWidgetExceptDownloadCitation =  
+    /*private static final String withArticleToolsWidgetExceptDownloadCitation =  
       "<div class=\"block\">" +  
           "<div class=\"widget literatumArticleToolsWidget\" id=\"594\">" +
           "<div class=\"articleTools\">" +
@@ -221,7 +221,7 @@ public class TestBIRAtyponHtmlFilterFactory extends LockssTestCase {
           "</div>";
     
     private static final String articleToolsWidgetFiltered = 
-            " Download Citation ";
+            " Download Citation ";*/
     
     private static final String withCitedby =
       "<div class=\"block\">" + 
@@ -352,10 +352,11 @@ public class TestBIRAtyponHtmlFilterFactory extends LockssTestCase {
                      filteredStr);         
         doFilterTest(bau, variantFact, withSocialMedia, filteredStr); 
         doFilterTest(bau, variantFact, withImpactFactorBlock, filteredStr); 
-        doFilterTest(bau, variantFact, withMathJaxMessage, filteredStr);         
-        doFilterTest(bau, variantFact, 
-                     withArticleToolsWidgetExceptDownloadCitation, 
-                     articleToolsWidgetFiltered);
+        doFilterTest(bau, variantFact, withMathJaxMessage, filteredStr);
+        // removed as all filtered
+//        doFilterTest(bau, variantFact, 
+//                     withArticleToolsWidgetExceptDownloadCitation, 
+//                     articleToolsWidgetFiltered);
         doFilterTest(bau, variantFact, withCitedby, filteredStr); 
         doFilterTest(bau, variantFact, withSectionJumpTo, filteredStr);         
         doFilterTest(bau, variantFact, mostReadHtml , mostReadHtmlFiltered);
