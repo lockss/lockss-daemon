@@ -176,6 +176,7 @@ public class BaseScHtmlHashFilterFactory implements FilterFactory {
       // changeable
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-metadata"),
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "terms-wrapper"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "related.topic"),
   };
   
   @Override

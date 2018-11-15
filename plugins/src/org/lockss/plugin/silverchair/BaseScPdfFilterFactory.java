@@ -42,15 +42,15 @@ import org.lockss.plugin.*;
 
 public class BaseScPdfFilterFactory extends ExtractingPdfFilterFactory {
 
-  private static final String DEFAULT_DOWNLOAD_REGEX = "^Downloaded from ";
+  private static final String DEFAULT_DOWNLOAD_REGEX = "^Downloaded (by|from) ";
   private static final Pattern DEFAULT_DOWNLOAD_PATTERN = Pattern.compile(DEFAULT_DOWNLOAD_REGEX);
 
   public boolean doRemoveAllDocumentInfo() {
-    return false;
+    return true;
   }
 
   public boolean doRemoveDownloadStrip() {
-    return false;
+    return true;
   }
   /* and set the correct string to use for this publisher */
   public Pattern getDownloadPattern() {
