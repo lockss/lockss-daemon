@@ -106,10 +106,15 @@ public class RsnaHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
   }
 
   @Override
-  public boolean doTagIDFiltering() {
+  public boolean doTagRemovalFiltering() {
     return true;
   }
-  
+
+  @Override
+  public boolean doHttpsConversion() {
+    return true;
+  }
+
   @Override
   public boolean doWSFiltering() {
     return true;
