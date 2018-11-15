@@ -84,11 +84,15 @@ public class MimeTypeContentValidator implements ContentValidator {
 			String expectedMime = getUrlMimeValidationMap().getMatch(url);
 			if (expectedMime != null) {
 				String actualMime = null;
-				log.debug("Expected mime type: " + expectedMime + " for " + url);
 				try {
 					// this requires a close
 					actualMime =
 							HeaderUtil.getMimeTypeFromContentType(cu.getContentType());
+					log.debug2("Expected mime type for: " +
+						   url + ": " + expectedMime +
+						   ", was: " + actualMime);
+				} catch (Exception e) {
+				  log.error("Checking mime type of: " + url, e);
 				} finally {
 					AuUtil.safeRelease(cu);
 				}
