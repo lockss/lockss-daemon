@@ -57,6 +57,8 @@ public class RsnaHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "toc-item__abstract"),
       HtmlNodeFilters.tagWithAttributeRegex("span", "class", "article__breadcrumbs"),
       // Article landing - ajax tabs
+      HtmlNodeFilters.tagWithAttribute("li", "id", "pane-pcw-references"),
+      HtmlNodeFilters.tagWithAttribute("li", "id", "pane-pcw-related"),
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article__references"),
       HtmlNodeFilters.tagWithAttributeRegex("div", "id", "related"),
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "related"),
@@ -77,10 +79,10 @@ public class RsnaHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory
   }
 
   public static void main(String[] args) throws Exception {
-    String file1 = "/home/etenbrink/workspace/data/rsna1.html";
-    String file2 = "/home/etenbrink/workspace/data/rsna2.html";
-    String file3 = "/home/etenbrink/workspace/data/rsna3.html";
-    String file4 = "/home/etenbrink/workspace/data/rsna4.html";
+    String file1 = "/tmp/data/rsna1.html";
+    String file2 = "/tmp/data/rsna2.html";
+    String file3 = "/tmp/data/rsna3.html";
+    String file4 = "/tmp/data/rsna4.html";
     IOUtils.copy(new RsnaHtmlCrawlFilterFactory().createFilteredInputStream(null, 
         new FileInputStream(file1), Constants.ENCODING_UTF_8), 
         new FileOutputStream(file1 + ".out"));

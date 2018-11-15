@@ -103,9 +103,7 @@ public class TestRsnaHtmlFilterFactory extends LockssTestCase {
           "<b>Erratum in:</b>" +
           "<p>Radiology 2016;280(1):328 DOI:10.1148/radiol.2016164016</p>" +
           "<ul>\n" + 
-          "<li id=\"pane-pcw-references\" aria-labelledby=\"pane-pcw-referencescon\" role=\"tabpanel\" class=\"tab__pane\">" +
           "\n" + 
-          "</li>\n" + 
           "</ul>\n" +
           "<!-- /fulltext content -->\n" +
           "        </article>";
