@@ -33,31 +33,60 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.royalsocietyofchemistry;
 
 import java.io.*;
-
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.util.StringUtil;
 import org.lockss.util.HeaderUtil;
+import org.lockss.util.IOUtil;
+import org.lockss.util.Logger;
 
 public class RSCContentValidator {
-  
-  protected static final String PDF_1 = "/articlepdf/";
-  protected static final String PDF_2 = "/chapterpdf/";
-  
-  public static class TextTypeValidator implements ContentValidator {
-    
-    public void validate(CachedUrl cu)
-        throws ContentValidationException, PluginException, IOException {
-      // validate based on pdf type url (ie .pdf or .jpg)
-      String url = cu.getUrl();
-      if ((StringUtil.indexOfIgnoreCase(url, PDF_1) > 0) ||
-          (StringUtil.indexOfIgnoreCase(url, PDF_2) > 0)) {
-        //We want this to try and fetch again - this exception gets mapped to retry
-        throw new ContentValidationException("URL MIME type mismatch");
-      }
-    }
-  }
-  
+	
+	private static final Logger log = Logger.getLogger(RSCContentValidator.class);
+
+	protected static final String PDF_1 = "/articlepdf/";
+	protected static final String PDF_2 = "/chapterpdf/";
+
+	//http://pubs.rsc.org/en/content/articlelanding/2016/fo/c6fo00030d
+	//http://pubs.rsc.org/en/journals/lockss?journalcode=fo&volume=7&year=2016&issue=10  
+
+
+	/*
+  <title>  Access Denied</title><link rel="shortcut icon" href="https://www.rsc-cdn....">
+</head><body><div>Access Denied</div>
+...
+	 */
+	private static final String ACCESS_DENIED_STRING = "Access Denied";
+
+
+	public static class TextTypeValidator implements ContentValidator {
+
+		public void validate(CachedUrl cu)
+				throws ContentValidationException, PluginException, IOException {
+			// validate based on pdf type url (ie .pdf or .jpg)
+			String url = cu.getUrl();
+			if ((StringUtil.indexOfIgnoreCase(url, PDF_1) > 0) ||
+					(StringUtil.indexOfIgnoreCase(url, PDF_2) > 0)) {
+				//We want this to try and fetch again - this exception gets mapped to retry
+				throw new ContentValidationException("URL MIME type mismatch");
+			}
+
+			/* if this is a TOC or article landing page */
+
+			if (url.contains("/articlelanding/") || url.contains("&issue=")) { 
+				Reader reader = new BufferedReader(cu.openForReading());
+				try {
+					if (StringUtil.containsString(reader,ACCESS_DENIED_STRING,true)) {
+						throw new ContentValidationException("Found access denied page");
+					}
+				} finally {
+					IOUtil.safeClose(reader);
+					cu.release();
+				}
+			}			
+		}
+	}
+
   public static class Factory implements ContentValidatorFactory {
     public ContentValidator createContentValidator(ArchivalUnit au, String contentType) {
       switch (HeaderUtil.getMimeTypeFromContentType(contentType)) {
