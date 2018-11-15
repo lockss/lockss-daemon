@@ -167,6 +167,12 @@ public class ProxyManager extends BaseProxyManager {
     PREFIX + "allowBindLocalAddresses";
   public static final List<String> DEFAULT_ALLOW_BIND_LOCAL_ADDRESSES = null;
 
+  /** If true, URLs in requests that contain an AUID will be normalized.
+   * Set false only to reproduce previous, buggy behavior */
+  public static final String PARAM_NORMALIZE_AUID_REQUEST =
+    PREFIX + "normalizeAuidRequest";
+  public static final boolean DEFAULT_NORMALIZE_AUID_REQUEST = true;
+
   /** If true, successive accesses to recently accessed content on the
    * cache does not trigger a request to the publisher */
   static final String PARAM_URL_CACHE_ENABLED = PREFIX + "urlCache.enabled";
@@ -307,6 +313,8 @@ public class ProxyManager extends BaseProxyManager {
     DEFAULT_COPY_STORED_RESPONSE_HEADERS;
   private List<String> paramAllowBindLocalAddresses =
     DEFAULT_ALLOW_BIND_LOCAL_ADDRESSES;
+  private boolean paramNormalizeAuidRequest =
+    DEFAULT_NORMALIZE_AUID_REQUEST;
 
 
   public void setConfig(Configuration config, Configuration prevConfig,
@@ -354,6 +362,9 @@ public class ProxyManager extends BaseProxyManager {
       paramAllowBindLocalAddresses =
 	config.getList(PARAM_ALLOW_BIND_LOCAL_ADDRESSES,
 		       DEFAULT_ALLOW_BIND_LOCAL_ADDRESSES);
+      paramNormalizeAuidRequest =
+	config.getBoolean(PARAM_NORMALIZE_AUID_REQUEST,
+			  DEFAULT_NORMALIZE_AUID_REQUEST);
       paramCopyStoredResponseHeaders =
 	config.getBoolean(PARAM_COPY_STORED_RESPONSE_HEADERS,
 			  DEFAULT_COPY_STORED_RESPONSE_HEADERS);
@@ -598,6 +609,10 @@ public class ProxyManager extends BaseProxyManager {
 
   public boolean isCopyStoredResponseHeaders() {
     return paramCopyStoredResponseHeaders;
+  }
+
+  public boolean isNormalizeAuidRequest() {
+    return paramNormalizeAuidRequest;
   }
 
   public List<String> getAllowedLocalAddress() {
