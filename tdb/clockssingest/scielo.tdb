@@ -25587,8 +25587,8 @@
   {
 
     title <
-      name = Revista Diacrítica ;
-      issn = 0807-8967
+      name = Revista Diacrítica 
+      #issn = 0807-8967  #malformed issn. incorrect check digit.
     >
 
     param[base_url] = http://www.scielo.mec.pt/
@@ -28464,8 +28464,8 @@
   {
 
     title <
-      name = Revista Tecnología en Marcha ;
-      eissn = 0379-3962
+      name = Revista Tecnología en Marcha 
+      #eissn = 0379-3962  # this issn is malformed. incorrect check digit
     >
 
     param[base_url] = http://www.scielo.sa.cr/
