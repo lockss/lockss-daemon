@@ -108,7 +108,16 @@ public class TestRsnaHtmlFilterFactory extends LockssTestCase {
           "<!-- /fulltext content -->\n" +
           "        </article>";
 
-  private static final String artLinkContentHashFiltered = 
+  private static final String artLinkContentHashFiltered1 = 
+      "" +
+          " Originally published in:" +
+          " Radiology 2016;279(3):" +
+          " 827-837" +
+          " DOI:10.1148/radiol.2015151256" +
+          " Erratum in:" +
+          " Radiology 2016;280(1):328 DOI:10.1148/radiol.2016164016" +
+          " ";
+  private static final String artLinkContentHashFiltered2 = 
       " <article class=\"article\">" +
           " <p class=\"fulltext\"> </p>" +
           " <p> <b>Originally published in: </b> </p>" +
@@ -171,7 +180,7 @@ public class TestRsnaHtmlFilterFactory extends LockssTestCase {
   public static class TestHash extends TestRsnaHtmlFilterFactory {   
     public void testFiltering() throws Exception {
       variantFact = new RsnaHtmlHashFilterFactory();
-      doFilterTest(mau, variantFact, artLinkContent, artLinkContentHashFiltered); 
+      doFilterTest(mau, variantFact, artLinkContent, artLinkContentHashFiltered1); 
     }
   }
 
