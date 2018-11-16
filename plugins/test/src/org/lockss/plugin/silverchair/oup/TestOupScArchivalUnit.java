@@ -186,6 +186,8 @@ public class TestOupScArchivalUnit extends LockssTestCase {
     shouldCacheTest("https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/database/Issue/461/1/front-matter.pdf" +
         "?Expires=1497074690&Signature=S60KGC7x1rMgczcd6O-A__&Key-Pair-Id=APKAIULVPAVW3Q", true, au);
     
+    // www. embedded in url
+    shouldCacheTest(ROOT_URL + "database/article/2433123/ProtoBug-functional-families-from-the-complete/www.foo.bar?param", false, au);
     // some additional special items
     shouldCacheTest("https://academic.oup.com/database/article/76/7/578/%5BXSLTImagePath%5D", false, au);
     shouldCacheTest("https://academic.oup.com/database/article/76/7/578/[XSLTImagePath]", false, au);

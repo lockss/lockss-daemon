@@ -10,14 +10,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>29</string>
+    <string>30</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>12</string>
+        <string>14</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -98,14 +98,15 @@
       <string>1,"^https?://watermark\.silverchair\.com/[^/]+\.pdf\?token="</string>
       <!--  redundant version of issue, now filtered out of crawl -->
       <string>2,"^https?://%s/%s/issue/(volume/)?[^?]+\?browseBy=volume", url_host(base_url), journal_id</string>
-      <!-- don't allow bad releative link ending in [XSLTImagePath] -->
+      <!-- don't allow bad relative link ending in [XSLTImagePath] -->
       <string>2,"^https?://%s/%s/(article(-(pdf|abstract))?|issue(-pdf)?)/(volume/)?([0-9i]+|doi).*/(%%5B|\[)XSLTImagePath(%%5D|\])$", url_host(base_url), journal_id</string>
-      <!-- TODO - fix this - negative lookahead doesn't work after .* because it is applied as 'after pattern' -->
-      <string>1,"^https?://%s/%s/(article(-(pdf|abstract))?|issue(-pdf)?)/(volume/)?([0-9i]+|doi).*(?!/www\.)", url_host(base_url), journal_id</string>
+      <!-- negative lookahead for www... -->
+--    <string>1,"^https?://%s/%s/(article(-(pdf|abstract))?|issue(-pdf)?)/(volume/)?([0-9i]+|doi)(?!.*/www\.)", url_host(base_url), journal_id</string>
       <!-- meeting abstract supplemental issues use a search query to fill toc -->
       <!--  https://academic.oup.com/ageing/search-results?q=&f_IssueNo=suppl_1&f_Volume=46&f_TocCategories=Clinical%20quality -->
       <string>1,"^https?://%s/%s/search-results\?q=&amp;f_IssueNo=", url_host(base_url), journal_id</string>
       <string>1,"^https?://%s/%s/downloadcitation/[^?]+\?format=ris", url_host(base_url), journal_id</string>
+      <string>1,"^https?://%s/view-large/[^?/]+$", url_host(base_url)</string>
     </list>
   </entry>
   <entry>

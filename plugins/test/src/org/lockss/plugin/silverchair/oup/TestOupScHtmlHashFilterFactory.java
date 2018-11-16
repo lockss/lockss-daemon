@@ -50,10 +50,11 @@ public class TestOupScHtmlHashFilterFactory extends LockssTestCase {
     mau = new MockArchivalUnit();
   }
   
-  private static final String notIncluded = "<div id=\"ContentColumn\">\n" +
+  private static final String notIncluded =
+    "<div id=\"ContentColumn\">x\n" +
     "<div class=\"ad-banner\">\n" +
     "<div class=\"widget widget-AdBlock widget-instance-HeaderAd\">\n" +
-    "<div id=\"adBlockHeader\" style=' '>\n" +
+    "<div id=\"adBlockHeader\">\n" +
     "<script>\n" +
     "googletag.cmd.push(function () { googletag.display('adBlockHeader'); });\n" +
     "</script>\n" +
@@ -62,16 +63,20 @@ public class TestOupScHtmlHashFilterFactory extends LockssTestCase {
     "</div>\n" +
     "</div>\n";
   
-  private static final String notIncludedFiltered = " ";
+  private static final String notIncludedFiltered = " x ";
   
-  private static final String withLinksComments = "<div class=\"article-body\">\n" +
-      "Hello World <div class=\"graphic-wrap\"><a href=\"link\">link text</a></div> More Text\n" + 
+  private static final String withLinksComments =
+      "<div id=\"ContentColumn\">\n" +
+      "Hello World <div class=\"article-body\">\n" +
+      "<div class=\"graphic-wrap\"><a href=\"link\">link text</a></div> More Text\n" + 
       "<div class=\"comment-body__wrap\">\n" + 
       "Comments" + 
       "</div>\n" + 
+      "</div>\n" + 
       "</div>";
   
-  private static final String withoutLinksComments = " Hello World More Text ";
+  // demonstrates that 2 copies of article body are included
+  private static final String withoutLinksComments = " Hello World More Text More Text ";
   
   /*
    */

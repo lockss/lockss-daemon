@@ -34,11 +34,13 @@ package org.lockss.plugin.silverchair.oup;
 
 import java.io.*;
 
+import org.apache.commons.io.IOUtils;
 import org.htmlparser.NodeFilter;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.silverchair.BaseScHtmlHashFilterFactory;
+import org.lockss.util.Constants;
 import org.lockss.util.Logger;
 
 public class OupScHtmlHashFilterFactory extends BaseScHtmlHashFilterFactory {
@@ -59,20 +61,47 @@ public class OupScHtmlHashFilterFactory extends BaseScHtmlHashFilterFactory {
     NodeFilter[] includeFilters = new NodeFilter[] {
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-list-resources"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", "resourceTypeList-OUP_Issue"),
-        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "ContentColumn"),
-        HtmlNodeFilters.tagWithAttributeRegex("span", "class", "content-inner-wrap"),
+        // We were including 2 copies of the article-body, when contained within the ContentColumn
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-body"),
+//        HtmlNodeFilters.allExceptSubtree(
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "ContentColumn"),
+//            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-body")),
+        HtmlNodeFilters.tagWithAttributeRegex("span", "class", "content-inner-wrap"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "OUP_Issues_List"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "IssuesAndVolumeListManifest"),
-        HtmlNodeFilters.tagWithAttributeRegex("img", "class", "content-image"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-instance-OUP_(Figure)?ViewLarge"),
     };
     
     NodeFilter[] moreExcludeFilters = new NodeFilter[] {
+        HtmlNodeFilters.tag("script"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "navbar-search"),
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-metadata"), // XXX duplicated in parent
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "terms-wrapper"), // XXX duplicated in parent
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-(Related|[^ ]+Metadata)"),
+        HtmlNodeFilters.allExceptSubtree(
+            HtmlNodeFilters.tagWithAttribute("div", "id", "authorInfo_OUP_ArticleTop_Info_Widget"),
+            HtmlNodeFilters.tagWithAttribute("div", "class", "name-role-wrap")),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "issue-browse__supplement-list-wrap"),
+        // HtmlNodeFilters.tagWithAttributeRegex("img", "class", "content-image"),
     };
     
     return createFilteredInputStream(au, in, encoding, includeFilters, moreExcludeFilters);
+  }
+  
+  public static void main(String[] args) throws Exception {
+    String file1 = "/tmp/data/oup1.html";
+    String file2 = "/tmp/data/oup2.html";
+    String file3 = "/tmp/data/oup3.html";
+    String file4 = "/tmp/data/oup4.html";
+    IOUtils.copy(new OupScHtmlHashFilterFactory().createFilteredInputStream(null, 
+        new FileInputStream(file1), Constants.ENCODING_UTF_8), 
+        new FileOutputStream(file1 + ".hout"));
+    IOUtils.copy(new OupScHtmlHashFilterFactory().createFilteredInputStream(null,
+        new FileInputStream(file2), Constants.ENCODING_UTF_8),
+        new FileOutputStream(file2 + ".hout"));
+    IOUtils.copy(new OupScHtmlHashFilterFactory().createFilteredInputStream(null,
+        new FileInputStream(file3), Constants.ENCODING_UTF_8),
+        new FileOutputStream(file3 + ".hout"));
+    IOUtils.copy(new OupScHtmlHashFilterFactory().createFilteredInputStream(null,
+        new FileInputStream(file4), Constants.ENCODING_UTF_8),
+        new FileOutputStream(file4 + ".hout"));
   }
 }
