@@ -34,13 +34,11 @@ package org.lockss.plugin.silverchair.oup;
 
 import java.io.*;
 
-import org.apache.commons.io.IOUtils;
 import org.htmlparser.NodeFilter;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.silverchair.BaseScHtmlHashFilterFactory;
-import org.lockss.util.Constants;
 import org.lockss.util.Logger;
 
 public class OupScHtmlHashFilterFactory extends BaseScHtmlHashFilterFactory {
@@ -86,22 +84,4 @@ public class OupScHtmlHashFilterFactory extends BaseScHtmlHashFilterFactory {
     return createFilteredInputStream(au, in, encoding, includeFilters, moreExcludeFilters);
   }
   
-  public static void main(String[] args) throws Exception {
-    String file1 = "/tmp/data/oup1.html";
-    String file2 = "/tmp/data/oup2.html";
-    String file3 = "/tmp/data/oup3.html";
-    String file4 = "/tmp/data/oup4.html";
-    IOUtils.copy(new OupScHtmlHashFilterFactory().createFilteredInputStream(null, 
-        new FileInputStream(file1), Constants.ENCODING_UTF_8), 
-        new FileOutputStream(file1 + ".hout"));
-    IOUtils.copy(new OupScHtmlHashFilterFactory().createFilteredInputStream(null,
-        new FileInputStream(file2), Constants.ENCODING_UTF_8),
-        new FileOutputStream(file2 + ".hout"));
-    IOUtils.copy(new OupScHtmlHashFilterFactory().createFilteredInputStream(null,
-        new FileInputStream(file3), Constants.ENCODING_UTF_8),
-        new FileOutputStream(file3 + ".hout"));
-    IOUtils.copy(new OupScHtmlHashFilterFactory().createFilteredInputStream(null,
-        new FileInputStream(file4), Constants.ENCODING_UTF_8),
-        new FileOutputStream(file4 + ".hout"));
-  }
 }

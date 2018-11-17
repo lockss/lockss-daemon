@@ -239,7 +239,7 @@ public class BaseScHtmlHashFilterFactory implements FilterFactory {
               HtmlNodeFilterTransform.exclude(new OrFilter(excludeNodes)));
     }
 
-    InputStream filtered = new HtmlFilterInputStream(in, encoding, compoundTransform);
+    InputStream filtered = new HtmlFilterInputStream(in, encoding, encoding, compoundTransform);
     Reader reader = FilterUtil.getReader(filtered, encoding);
 
     // Remove all inner tag content
@@ -282,18 +282,4 @@ public class BaseScHtmlHashFilterFactory implements FilterFactory {
     return false;
   }
   
-  public static void main(String[] args) throws Exception {
-    for (String file : Arrays.asList("/tmp/e3/man1",
-                                     "/tmp/e3/toc1",
-                                     "/tmp/e3/art1",
-                                     "/tmp/e3/art2",
-                                     "/tmp/e3/art3",
-                                     "/tmp/e3/art4",
-                                     "/tmp/e3/art5",
-                                     "/tmp/e3/art6")) {
-      IOUtils.copy(new BaseScHtmlHashFilterFactory().createFilteredInputStream(null, new FileInputStream(file), null),
-                   new FileOutputStream(file + ".out"));
-    }
-  }
-
 }
