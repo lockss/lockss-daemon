@@ -439,60 +439,65 @@
     title <
       name = Journal of Student Research at Indiana University East
     >
-
-      param[journal_id] = jsriue
+iue iue
+      param[journal_id] = jsr
       #no issn/eissn
-
-      au < exists ; exists ; 2017 ; 2017 ; Journal of Student Research at Indiana University East Volume 1 ; 1 ; https://scholarworks.iu.edu/journals/ ; >
-      au < expected ; exists ; 2018 ; 2018 ; Journal of Student Research at Indiana University East Volume 2 ; 2 ; https://scholarworks.iu.edu/journals/ ; >
+20172017
+      au < exists ; exists ; ; 20 ; ; 20 ; Journal of Student Research at Indiana University East Volume 1 ; 1 ; https://scholarworks.iu.edu/journals/ ; >
+      au < expected ; exists     18     18 ; Journal of Student Research at Indiana University East Volume 2 ; 2 ; https://scholarworks.iu.edu/journals/ ; >
 
   }
 
   {
-    title <
-      name = Liberian Studies Journal ;
+    title < Jou Jou
+      name = Liberian Studies    rna
       eissn = 0024-1989
     >
 
       param[journal_id] = lsj
-
-      au < exists ; exists ; 1968 ; 1968 ; Liberian Studies Journal Volume 1 (1968) ; 1 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 1969 ; 1969 ; Liberian Studies Journal Volume 1 (1969) ; 1 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 1970 ; 1970 ; Liberian Studies Journal Volume 3 ; 3 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 1971 ; 1971 ; Liberian Studies Journal Volume 3-4 ; 3-4 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 1972 ; 1972 ; Liberian Studies Journal Volume 4 ; 4 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 1973 ; 1973 ; Liberian Studies Journal Volume 5 ; 5 ; https://scholarworks.iu.edu/journals/ ; >
+19681968
+      au < exists ; exists ; 1969 ; 1969 ; Liberian Studies Journal Volume 1 (1968) ; 1 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 1970 ; 1970 ; Liberian Studies Journal Volume 1 (1969) ; 1 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 1971 ; 1971 ; Liberian Studies Journal Volume 3 ; 3 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 1972 ; 1972 ; Liberian Studies Journal Volume 3-4 ; 3-4 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 1973 ; 1973 ; Liberian Studies Journal Volume 4-5 ; 4-5 ; https://scholarworks.iu.edu/journals/ ; >
       au < exists ; exists ; 1974 ; 1974 ; Liberian Studies Journal Volume 5 ; 5 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 1974 ; 1974 ; Liberian Studies Journal Volume 6 ; 6 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 1975 ; 1975 ; Liberian Studies Journal Volume 7 ; 7 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 1976 ; 1976 ; Liberian Studies Journal Volume 8 ; 8 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 1977 ; 1977 ; Liberian Studies Journal Volume 9 ; 9 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 1978 ; 1978 ; Liberian Studies Journal Volume 10 ; 10 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 1979 ; 1979 ; Liberian Studies Journal Volume 11 ; 11 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 2010 ; 2012 ; Liberian Studies Journal Volume 12 ; 12 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 2013 ; 2013 ; Liberian Studies Journal Volume 13 ; 13 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 2014 ; 2014 ; Liberian Studies Journal Volume 14 ; 14 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 2015 ; 2015 ; Liberian Studies Journal Volume 15 ; 15 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 2016 ; 2016 ; Liberian Studies Journal Volume 16 ; 16 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 2017 ; 2017 ; Liberian Studies Journal Volume 17 ; 17 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 2008 ; 2008 ; Liberian Studies Journal Volume 18 ; 18 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 2009 ; 2009 ; Liberian Studies Journal Volume 19 ; 19 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 2010 ; 2010 ; Liberian Studies Journal Volume 20 ; 20 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 2011 ; 2011 ; Liberian Studies Journal Volume 21 ; 21 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 2012 ; 2012 ; Liberian Studies Journal Volume 22 ; 22 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 2013 ; 2013 ; Liberian Studies Journal Volume 23 ; 23 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 2014 ; 2014 ; Liberian Studies Journal Volume 24 ; 24 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 2015 ; 2015 ; Liberian Studies Journal Volume 25 ; 25 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 2016 ; 2016 ; Liberian Studies Journal Volume 26 ; 26 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 2017 ; 2017 ; Liberian Studies Journal Volume 27 ; 27 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 2008 ; 2008 ; Liberian Studies Journal Volume 28 ; 28 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 2009 ; 2009 ; Liberian Studies Journal Volume 29 ; 29 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 2010 ; 2010 ; Liberian Studies Journal Volume 30 ; 30 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 2011 ; 2011 ; Liberian Studies Journal Volume 31 ; 31 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 2012 ; 2012 ; Liberian Studies Journal Volume 32 ; 32 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 2013 ; 2013 ; Liberian Studies Journal Volume 33 ; 33 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 2014 ; 2014 ; Liberian Studies Journal Volume 34 ; 34 ; https://scholarworks.iu.edu/journals/ ; >
-      au < exists ; exists ; 2015 ; 2015 ; Liberian Studies Journal Volume 35 ; 35 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 1975 ; 1975 ; Liberian Studies Journal Volume 6 ; 6 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 1976 ; 1976 ; Liberian Studies Journal Volume 7 ; 7 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 1977 ; 1977 ; Liberian Studies Journal Volume 7 ; 7 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 1978 ; 1978 ; Liberian Studies Journal Volume 8 ; 8 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 1979 ; 1979 ; Liberian Studies Journal Volume 8 ; 8 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 1980 ; 1980 ; Liberian Studies Journal Volume 9 ; 9 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 1981 ; 1981 ; Liberian Studies Journal Volume 9 ; 9 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 1982 ; 1982 ; Liberian Studies Journal Volume 10 ; 10 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 1983 ; 1983 ; Liberian Studies Journal Volume 10 ; 10 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 1984 ; 1984 ; Liberian Studies Journal Volume 10 ; 10 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 1985 ; 1985 ; Liberian Studies Journal Volume 10 ; 10 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 1986 ; 1986 ; Liberian Studies Journal Volume 11 ; 11 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 1987 ; 1987 ; Liberian Studies Journal Volume 12 ; 12 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 1988 ; 1988 ; Liberian Studies Journal Volume 13 ; 13 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 1989 ; 1989 ; Liberian Studies Journal Volume 24 ; 24 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 1990 ; 1990 ; Liberian Studies Journal Volume 25 ; 25 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 1991 ; 1991 ; Liberian Studies Journal Volume 26 ; 26 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 1992 ; 1992 ; Liberian Studies Journal Volume 27 ; 27 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 1993 ; 1993 ; Liberian Studies Journal Volume 28 ; 28 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 1994 ; 1994 ; Liberian Studies Journal Volume 29 ; 29 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 1995 ; 1995 ; Liberian Studies Journal Volume 20 ; 20 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 1996 ; 1996 ; Liberian Studies Journal Volume 21 ; 21 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 1997 ; 1997 ; Liberian Studies Journal Volume 22 ; 22 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 1998 ; 1998 ; Liberian Studies Journal Volume 23 ; 23 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 1999 ; 1999 ; Liberian Studies Journal Volume 24 ; 24 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 2000 ; 2000 ; Liberian Studies Journal Volume 25 ; 25 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 2001 ; 2001 ; Liberian Studies Journal Volume 26 ; 26 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 2002 ; 2002 ; Liberian Studies Journal Volume 27 ; 27 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 2003 ; 2003 ; Liberian Studies Journal Volume 28 ; 28 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 2004 ; 2004 ; Liberian Studies Journal Volume 29 ; 29 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 2005 ; 2005 ; Liberian Studies Journal Volume 30 ; 30 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 2006 ; 2006 ; Liberian Studies Journal Volume 31 ; 31 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 2007 ; 2007 ; Liberian Studies Journal Volume 32 ; 32 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 2008 ; 2008 ; Liberian Studies Journal Volume 33 ; 33 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 2009 ; 2009 ; Liberian Studies Journal Volume 34 ; 34 ; https://scholarworks.iu.edu/journals/ ; >
+      au < exists ; exists ; 2010 ; 2010 ; Liberian Studies Journal Volume 35 ; 35 ; https://scholarworks.iu.edu/journals/ ; >
 
   }
 
