@@ -439,23 +439,22 @@
     title <
       name = Journal of Student Research at Indiana University East
     >
-iue iue
       param[journal_id] = jsr
       #no issn/eissn
-20172017
-      au < exists ; exists ; ; 20 ; ; 20 ; Journal of Student Research at Indiana University East Volume 1 ; 1 ; https://scholarworks.iu.edu/journals/ ; >
-      au < expected ; exists     18     18 ; Journal of Student Research at Indiana University East Volume 2 ; 2 ; https://scholarworks.iu.edu/journals/ ; >
+
+      au < exists ; exists ; 2017 ;2017 ; Journal of Student Research at Indiana University East Volume 1 ; 1 ; https://scholarworks.iu.edu/journals/ ; >
+      au < expected ; exists ; 2018 ; 2018 ; Journal of Student Research at Indiana University East Volume 2 ; 2 ; https://scholarworks.iu.edu/journals/ ; >
 
   }
 
   {
-    title < Jou Jou
-      name = Liberian Studies    rna
+    title <
+      name = Liberian Studies ;
       eissn = 0024-1989
     >
 
       param[journal_id] = lsj
-19681968
+
       au < exists ; exists ; 1969 ; 1969 ; Liberian Studies Journal Volume 1 (1968) ; 1 ; https://scholarworks.iu.edu/journals/ ; >
       au < exists ; exists ; 1970 ; 1970 ; Liberian Studies Journal Volume 1 (1969) ; 1 ; https://scholarworks.iu.edu/journals/ ; >
       au < exists ; exists ; 1971 ; 1971 ; Liberian Studies Journal Volume 3 ; 3 ; https://scholarworks.iu.edu/journals/ ; >
