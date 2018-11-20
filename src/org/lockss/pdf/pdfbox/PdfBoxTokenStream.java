@@ -36,6 +36,7 @@ import java.io.IOException;
 import java.util.*;
 
 import org.apache.pdfbox.cos.COSName;
+import org.apache.pdfbox.pdfparser.PDFStreamParser;
 import org.apache.pdfbox.pdmodel.PDResources;
 import org.apache.pdfbox.pdmodel.common.PDStream;
 import org.apache.pdfbox.pdmodel.font.PDFont;
@@ -84,18 +85,34 @@ public abstract class PdfBoxTokenStream implements PdfTokenStream {
   
   @Override
   public List<PdfToken> getTokens() throws PdfException {
+    List<PdfToken> tokens = new ArrayList<PdfToken>();
+    PDStream pdStream = getPdStream();
+    if (pdStream == null) {
+      return tokens; // Blank page with null stream
+    }
+    PDFStreamParser pdfStreamParser = null;
     try {
-      PDStream pdStream = getPdStream();
-      if (pdStream == null) {
-        return new ArrayList<PdfToken>(); // Blank page with null stream
+      pdfStreamParser = new PDFStreamParser(pdStream);
+      Iterator<Object> iter = pdfStreamParser.getTokenIterator();
+      while (iter.hasNext()) {
+        tokens.add(PdfBoxTokens.convertOne(iter.next()));
       }
-//PB2       List<PdfToken> tokens = PdfBoxTokens.convertList(pdStream.getStream().getStreamTokens());
-      List<PdfToken> tokens = PdfBoxTokens.convertList(pdStream.getCOSObject().getStreamTokens());
       decodeStringsWithFontContext(tokens);
       return tokens;
     }
     catch (IOException ioe) {
       throw new PdfException(ioe);
+    }
+    finally {
+      // "safeClose()" for a PDFStreamParser
+      if (pdfStreamParser != null) {
+        try {
+          pdfStreamParser.close();
+        }
+        catch (IOException ioe) {
+          // ignore
+        }
+      }
     }
   }
 
