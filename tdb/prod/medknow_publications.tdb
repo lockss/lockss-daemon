@@ -568,33 +568,23 @@
 
   }
 
-#  {
-#    title <
-#      name = Dental Research Journal ;
-#      issn = 1735-3327 ;
-#      eissn = 2008-0255 ;
-#      issnl = 1735-3327
-#   >
-#
-#    param[base_url] = http://drj.mui.ac.ir/index.php/drj/
-#    # looks like ojs
-#
-#    au < doNotProcess ; 2003 ; Dental Research Journal Volume 1 (2003) ; 2003 ; 1 >
-#    au < doNotProcess ; 2004 ; Dental Research Journal Volume 1 (2004) ; 2004 ; 1 >
-#    au < doNotProcess ; 2005 ; Dental Research Journal Volume 2 ; 2005 ; 2 >
-#    au < doNotProcess ; 2006 ; Dental Research Journal Volume 3 ; 2006 ; 3 >
-#    au < doNotProcess ; 2007 ; Dental Research Journal Volume 4 ; 2007 ; 4 >
-#    au < doNotProcess ; 2008 ; Dental Research Journal Volume 5 ; 2008 ; 5 >
-#    au < doNotProcess ; 2009 ; Dental Research Journal Volume 6 ; 2009 ; 6 >
-#    au < doNotProcess ; 2010 ; Dental Research Journal Volume 7 ; 2010 ; 7 >
-#    au < doNotProcess ; 2011 ; Dental Research Journal Volume 8 ; 2011 ; 8 >
-#    au < doNotProcess ; 2012 ; Dental Research Journal Volume 9 ; 2012 ; 9 >
-#    au < doNotProcess ; 2013 ; Dental Research Journal Volume 10 ; 2013 ; 10 >
-#    au < doNotProcess ; 2014 ; Dental Research Journal Volume 11 ; 2014 ; 11 >
-#    au < doNotProcess ; 2015 ; Dental Research Journal Volume 12 ; 2015 ; 12 >
-#    au < doNotProcess ; 2016 ; Dental Research Journal Volume 13 ; 2016 ; 13 >
-#
-#  }
+  {
+    title <
+      name = Dental Research Journal ;
+      issn = 1735-3327 ;
+      eissn = 2008-0255 ;
+      issnl = 1735-3327
+   >
+
+    param[base_url] = http://www.drjjournal.net/
+    param[journal_issn] = 1735-3327
+
+    au < exists ; 2015 ; Dental Research Journal Volume 12 ; 2015 ; 12 >
+    au < exists ; 2016 ; Dental Research Journal Volume 13 ; 2016 ; 13 >
+    au < exists ; 2017 ; Dental Research Journal Volume 14 ; 2017 ; 14 >
+    au < exists ; 2018 ; Dental Research Journal Volume 15 ; 2018 ; 15 >
+
+  }
 
   {
     title <
@@ -2131,24 +2121,25 @@
 
   }
 
-#  {
-#    title <
-#      name = International Journal of Preventive Medicine ;
-#      issn = 2008-7802 ;
-#      eissn = 2008-8213 ; 
-#      issnl = 2008-7802 
-#    >
-#
-#    param[base_url] = http://ijpm.mui.ac.ir/index.php/ijpm/
-#    comment[ijpm] = the url structure is the new version
-#
-#    au < exists ; 2010 ; International Journal of Preventive Medicine Volume 1 ; 2010 ; 1 >
-#    au < exists ; 2011 ; International Journal of Preventive Medicine Volume 2 ; 2011 ; 2 >
-#    au < exists ; 2012 ; International Journal of Preventive Medicine Volume 3 ; 2012 ; 3 >
-#    au < exists ; 2013 ; International Journal of Preventive Medicine Volume 4 ; 2013 ; 4 >
-#    au < expected ; 2014 ; International Journal of Preventive Medicine Volume 5 ; 2014 ; 5 >
-#
-#  }
+  {
+    title <
+      name = International Journal of Preventive Medicine ;
+      issn = 2008-7802 ;
+      eissn = 2008-8213 ;
+      issnl = 2008-7802
+    >
+
+    param[base_url] = http://www.ijpvmjournal.net/
+    param[journal_issn] = 2008-7802
+    # http://www.ijpvmjournal.net/backissues.asp redirects to /browse.asp
+
+    au < notReady ; 2010 ; International Journal of Preventive Medicine Volume 1 ; 2010 ; 1 >
+    au < notReady ; 2011 ; International Journal of Preventive Medicine Volume 2 ; 2011 ; 2 >
+    au < notReady ; 2012 ; International Journal of Preventive Medicine Volume 3 ; 2012 ; 3 >
+    au < notReady ; 2013 ; International Journal of Preventive Medicine Volume 4 ; 2013 ; 4 >
+    au < notReady ; 2014 ; International Journal of Preventive Medicine Volume 5 ; 2014 ; 5 >
+
+  }
         
   {
     title <
@@ -2224,32 +2215,25 @@
 
   }
 
-#  {
-#    title <
-#      name = Iranian Journal of Nursing and Midwifery Research ;
-#      issn = 1735-9066 ;
-#      eissn = 2228-5504 ;
-#      issnl = 1735-9066
-#   >
-#
-#    param[base_url] = http://ijnmr.mui.ac.ir/index.php/ijnmr/
-#    comment[ijnmr] = the url structure is the new version
-#
-#    au < exists ; 2002 ; Iranian Journal of Nursing and Midwifery Research Volume 7 ; 2002 ; 7 >
-#    au < exists ; 2003 ; Iranian Journal of Nursing and Midwifery Research Volume 8 ; 2003 ; 8 >
-#    au < exists ; 2004 ; Iranian Journal of Nursing and Midwifery Research Volume 9 ; 2004 ; 9 >
-#    au < exists ; 2005 ; Iranian Journal of Nursing and Midwifery Research Volume 10 ; 2005 ; 10 >
-#    au < exists ; 2006 ; Iranian Journal of Nursing and Midwifery Research Volume 11 ; 2006 ; 11 >
-#    au < exists ; 2007 ; Iranian Journal of Nursing and Midwifery Research Volume 12 ; 2007 ; 12 >
-#    au < exists ; 2008 ; Iranian Journal of Nursing and Midwifery Research Volume 13 ; 2008 ; 13 >
-#    au < exists ; 2009 ; Iranian Journal of Nursing and Midwifery Research Volume 14 ; 2009 ; 14 >
-#    au < exists ; 2010 ; Iranian Journal of Nursing and Midwifery Research Volume 15 ; 2010 ; 15 >
-#    au < exists ; 2011 ; Iranian Journal of Nursing and Midwifery Research Volume 16 ; 2011 ; 16 >
-#    au < exists ; 2012 ; Iranian Journal of Nursing and Midwifery Research Volume 17 ; 2012 ; 17 >
-#    au < expected ; 2013 ; Iranian Journal of Nursing and Midwifery Research Volume 18 ; 2013 ; 18 >
-#    au < expected ; 2014 ; Iranian Journal of Nursing and Midwifery Research Volume 19 ; 2014 ; 19 >
-#
-#  }
+  {
+    title <
+      name = Iranian Journal of Nursing and Midwifery Research ;
+      issn = 1735-9066 ;
+      eissn = 2228-5504 ;
+      issnl = 1735-9066
+   >
+
+    param[base_url] = http://www.ijnmrjournal.net/
+    #param[base_url] = http://ijnmr.mui.ac.ir/index.php/ijnmr/
+    param[journal_issn] = 1735-9066
+
+    au < exists ; 2014 ; Iranian Journal of Nursing and Midwifery Research Volume 19 ; 2014 ; 19 >
+    au < exists ; 2015 ; Iranian Journal of Nursing and Midwifery Research Volume 20 ; 2015 ; 20 >
+    au < exists ; 2016 ; Iranian Journal of Nursing and Midwifery Research Volume 21 ; 2016 ; 21 >
+    au < exists ; 2017 ; Iranian Journal of Nursing and Midwifery Research Volume 22 ; 2017 ; 22 >
+    au < exists ; 2018 ; Iranian Journal of Nursing and Midwifery Research Volume 23 ; 2018 ; 23 >
+
+  }
 
   {
     title <
@@ -4118,28 +4102,22 @@
 #
 #  }  
         
-#  {
-#    title <
-#      name = Research in Pharmaceutical Sciences ;
-#      issn = 1735-5362 ;
-#      eissn = 1735-9414 ;
-#      issnl = 1735-5362
-#    >
-#
-#    param[base_url] = http://rps.mui.ac.ir/index.php/jrps/
-#    comment[jrps] = the url structure is the new version
-#
-#    au < exists ; 2006 ; Research in Pharmaceutical Sciences Volume 1 ; 2006 ; 1 >
-#    au < exists ; 2007 ; Research in Pharmaceutical Sciences Volume 2 ; 2007 ; 2 >
-#    au < exists ; 2008 ; Research in Pharmaceutical Sciences Volume 3 ; 2008 ; 3 >
-#    au < exists ; 2009 ; Research in Pharmaceutical Sciences Volume 4 ; 2009 ; 4 >
-#    au < exists ; 2010 ; Research in Pharmaceutical Sciences Volume 5 ; 2010 ; 5 >
-#    au < exists ; 2011 ; Research in Pharmaceutical Sciences Volume 6 ; 2011 ; 6 >
-#    au < exists ; 2012 ; Research in Pharmaceutical Sciences Volume 7 ; 2012 ; 7 >
-#    au < exists ; 2013 ; Research in Pharmaceutical Sciences Volume 8 ; 2013 ; 8 >
-#    au < expected ; 2014 ; Research in Pharmaceutical Sciences Volume 9 ; 2014 ; 9 >
-#
-#  }  
+  {
+    title <
+      name = Research in Pharmaceutical Sciences ;
+      issn = 1735-5362 ;
+      eissn = 1735-9414 ;
+      issnl = 1735-5362
+    >
+    param[base_url] = http://www.rpsjournal.net/
+    #param[base_url] = http://rps.mui.ac.ir/index.php/jrps/
+    comment[jrps] = the url structure is the new version
+
+    au < exists ; 2016 ; Research in Pharmaceutical Sciences Volume 11 ; 2016 ; 11 >
+    au < exists ; 2017 ; Research in Pharmaceutical Sciences Volume 12 ; 2017 ; 12 >
+    au < exists ; 2018 ; Research in Pharmaceutical Sciences Volume 13 ; 2018 ; 13 >
+
+  }
     
   {
     title <
@@ -5608,7 +5586,7 @@
   {
 
       title <
-        name = Indian Journal of Health Sciences ;
+        name = Indian Journal of Health Sciences and Biomedical Research ;
         issn = 2349-5006 ;
         eissn = 2349-6681
       >
@@ -5616,11 +5594,11 @@
       param[journal_issn] = 2349-5006
       param[base_url] = http://www.ijournalhs.org/
 
-      au < released ; 2014 ; Indian Journal of Health Sciences Volume 7 ; 2014 ; 7 >
-      au < released ; 2015 ; Indian Journal of Health Sciences Volume 8 ; 2015 ; 8 >
-      au < released ; 2016 ; Indian Journal of Health Sciences Volume 9 ; 2016 ; 9 >
-      au < released ; 2017 ; Indian Journal of Health Sciences Volume 10 ; 2017 ; 10 >
-      au < manifest ; 2018 ; Indian Journal of Health Sciences Volume 11 ; 2018 ; 11 >
+      au < released ; 2014 ; Indian Journal of Health Sciences and Biomedical Research Volume 7 ; 2014 ; 7 >
+      au < released ; 2015 ; Indian Journal of Health Sciences and Biomedical Research Volume 8 ; 2015 ; 8 >
+      au < released ; 2016 ; Indian Journal of Health Sciences and Biomedical Research Volume 9 ; 2016 ; 9 >
+      au < released ; 2017 ; Indian Journal of Health Sciences and Biomedical Research Volume 10 ; 2017 ; 10 >
+      au < manifest ; 2018 ; Indian Journal of Health Sciences and Biomedical Research Volume 11 ; 2018 ; 11 >
 
   }
 
@@ -8910,16 +8888,17 @@
   {
 
       title <
-        name = Indian Anaesthetistsâ€™ Forum ;
+        name = Indian Anaesthetists' Forum ;
+        issn = 2589-7934 ;
         eissn = 0973-0311
       >
 
       param[journal_issn] = 0973-0311
       param[base_url] = http://www.theiaforum.org/
 
-      au < exists ; 2016 ; Indian Anaesthetistsâ€™ Forum Volume 17 ; 2016 ; 17 >
-      au < exists ; 2017 ; Indian Anaesthetistsâ€™ Forum Volume 18 ; 2017 ; 18 >
-      au < expected ; 2018 ; Indian Anaesthetistsâ€™ Forum Volume 19 ; 2018 ; 19 >
+      au < exists ; 2016 ; Indian Anaesthetists' Forum Volume 17 ; 2016 ; 17 >
+      au < exists ; 2017 ; Indian Anaesthetists' Forum Volume 18 ; 2017 ; 18 >
+      au < exists ; 2018 ; Indian Anaesthetists' Forum Volume 19 ; 2018 ; 19 >
 
   }
 
@@ -9166,7 +9145,7 @@
   {
 
       title <
-        name = International Journal of Studentsâ€™ Research ;
+        name = International Journal of Students' Research ;
         issn = 2321-6662 ;
         eissn = 2230-7095
       >
@@ -9174,14 +9153,14 @@
       param[journal_issn] = 2321-6662
       param[base_url] = http://www.ijsronline.net/
 
-      au < manifest ; 2011 ; International Journal of Studentsâ€™ Research Volume 1 ; 2011 ; 1 >
-      au < manifest ; 2012 ; International Journal of Studentsâ€™ Research Volume 2 ; 2012 ; 2 >
-      au < manifest ; 2013 ; International Journal of Studentsâ€™ Research Volume 3 ; 2013 ; 3 >
-      au < manifest ; 2014 ; International Journal of Studentsâ€™ Research Volume 4 ; 2014 ; 4 >
-      au < manifest ; 2015 ; International Journal of Studentsâ€™ Research Volume 5 ; 2015 ; 5 >
-      au < manifest ; 2016 ; International Journal of Studentsâ€™ Research Volume 6 ; 2016 ; 6 >
-      au < manifest ; 2017 ; International Journal of Studentsâ€™ Research Volume 7 ; 2017 ; 7 >
-      au < expected ; 2018 ; International Journal of Studentsâ€™ Research Volume 8 ; 2018 ; 8 >
+      au < manifest ; 2011 ; International Journal of Students' Research Volume 1 ; 2011 ; 1 >
+      au < manifest ; 2012 ; International Journal of Students' Research Volume 2 ; 2012 ; 2 >
+      au < manifest ; 2013 ; International Journal of Students' Research Volume 3 ; 2013 ; 3 >
+      au < manifest ; 2014 ; International Journal of Students' Research Volume 4 ; 2014 ; 4 >
+      au < manifest ; 2015 ; International Journal of Students' Research Volume 5 ; 2015 ; 5 >
+      au < manifest ; 2016 ; International Journal of Students' Research Volume 6 ; 2016 ; 6 >
+      au < manifest ; 2017 ; International Journal of Students' Research Volume 7 ; 2017 ; 7 >
+      au < expected ; 2018 ; International Journal of Students' Research Volume 8 ; 2018 ; 8 >
 
   }
 
