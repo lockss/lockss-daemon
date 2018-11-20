@@ -55,7 +55,7 @@
     au < released ; 2015 ; Claremont-UC Undergraduate Research Conference Journal Volume 2015 ; 2015 ; http://scholarship.claremont.edu/ >
     au < released ; 2016 ; Claremont-UC Undergraduate Research Conference Journal Volume 2016 ; 2016 ; http://scholarship.claremont.edu/ >
     au < released ; 2017 ; Claremont-UC Undergraduate Research Conference Journal Volume 2017 ; 2017 ; http://scholarship.claremont.edu/ >
-    au < expected ; 2018 ; Claremont-UC Undergraduate Research Conference Journal Volume 2018 ; 2018 ; https://scholarship.claremont.edu/ >
+    au < manifest ; 2018 ; Claremont-UC Undergraduate Research Conference Journal Volume 2018 ; 2018 ; https://scholarship.claremont.edu/ >
 
   }
 
@@ -120,7 +120,7 @@
     au < released ; 2005 ; Mime Journal Volume 23 ; 23 ; http://scholarship.claremont.edu/ >
     au < released ; 2013 ; Mime Journal Volume 24 ; 24 ; http://scholarship.claremont.edu/ >
     au < released ; 2014 ; Mime Journal Volume 25 ; 25 ; http://scholarship.claremont.edu/ >
-    au < exists ; 2017 ; Mime Journal Volume 26 ; 26 ; https://scholarship.claremont.edu/ >
+    au < manifest ; 2017 ; Mime Journal Volume 26 ; 26 ; https://scholarship.claremont.edu/ >
 
   }
 
@@ -150,13 +150,13 @@
     
     param[journal_abbr] = ppr
 
-    au < exists ; 1988 ; Performance Practice Review Volume 1 ; 1 ; https://scholarship.claremont.edu/ >
-    au < exists ; 1989 ; Performance Practice Review Volume 2 ; 2 ; https://scholarship.claremont.edu/ >
-    au < exists ; 1990 ; Performance Practice Review Volume 3 ; 3 ; https://scholarship.claremont.edu/ >
-    au < exists ; 1991 ; Performance Practice Review Volume 4 ; 4 ; https://scholarship.claremont.edu/ >
-    au < exists ; 1992 ; Performance Practice Review Volume 5 ; 5 ; https://scholarship.claremont.edu/ >
-    au < exists ; 1993 ; Performance Practice Review Volume 6 ; 6 ; https://scholarship.claremont.edu/ >
-    au < exists ; 1994 ; Performance Practice Review Volume 7 ; 7 ; https://scholarship.claremont.edu/ >
+    au < manifest ; 1988 ; Performance Practice Review Volume 1 ; 1 ; https://scholarship.claremont.edu/ >
+    au < manifest ; 1989 ; Performance Practice Review Volume 2 ; 2 ; https://scholarship.claremont.edu/ >
+    au < manifest ; 1990 ; Performance Practice Review Volume 3 ; 3 ; https://scholarship.claremont.edu/ >
+    au < manifest ; 1991 ; Performance Practice Review Volume 4 ; 4 ; https://scholarship.claremont.edu/ >
+    au < manifest ; 1992 ; Performance Practice Review Volume 5 ; 5 ; https://scholarship.claremont.edu/ >
+    au < manifest ; 1993 ; Performance Practice Review Volume 6 ; 6 ; https://scholarship.claremont.edu/ >
+    au < manifest ; 1994 ; Performance Practice Review Volume 7 ; 7 ; https://scholarship.claremont.edu/ >
     au < released ; 1995 ; Performance Practice Review Volume 8 ; 8 ; http://scholarship.claremont.edu/ >
     au < released ; 1996 ; Performance Practice Review Volume 9 ; 9 ; http://scholarship.claremont.edu/ >
     au < released ; 1997 ; Performance Practice Review Volume 10 ; 10 ; http://scholarship.claremont.edu/ >
