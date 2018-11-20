@@ -2446,14 +2446,12 @@
 
     >
     param[journal_id] = 10.1055/s-00024754
-    comment[years] = 2013-current
+    comment[years] = 2013-2016
 
     au < released ; 2013 ; 2013 ; Interventionelle Radiologie Scan Volume 1 ; 1 >
     au < released ; 2014 ; 2014 ; Interventionelle Radiologie Scan Volume 2 ; 2 >
     au < released ; 2015 ; 2015 ; Interventionelle Radiologie Scan Volume 3 ; 3 >
     au < released ; 2016 ; 2016 ; Interventionelle Radiologie Scan Volume 4 ; 4 >
-    au < expected ; 2017 ; 2017 ; Interventionelle Radiologie Scan Volume 5 ; 5 >
-    au < expected ; 2018 ; 2018 ; Interventionelle Radiologie Scan Volume 6 ; 6 >
 
   }
 
@@ -2506,15 +2504,13 @@
 
     >
     param[journal_id] = 10.1055/s-00023618
-    comment[years] = 2012-current
+    comment[years] = 2012-2016
 
     au < released ; 2012 ; 2012 ; Journal Club Schmerzmedizin Volume 1 ; 1 >
     au < released ; 2013 ; 2013 ; Journal Club Schmerzmedizin Volume 2 ; 2 >
     au < released ; 2014 ; 2014 ; Journal Club Schmerzmedizin Volume 3 ; 3 >
     au < released ; 2015 ; 2015 ; Journal Club Schmerzmedizin Volume 4 ; 4 >
     au < released ; 2016 ; 2016 ; Journal Club Schmerzmedizin Volume 5 ; 5 >
-    au < expected ; 2017 ; 2017 ; Journal Club Schmerzmedizin Volume 6 ; 6 >
-    au < expected ; 2018 ; 2018 ; Journal Club Schmerzmedizin Volume 7 ; 7 >
 
   }
 
@@ -2589,11 +2585,9 @@
     >
 
     param[journal_id] = 10.1055/s-00028776 
-    #years = 2016-current
+    #years = 2016
 
     au < released ; 2016 ; 2016 ; Journal of Clinical & Academic Ophthalmology Volume 8 ; 8 >
-    au < expected ; 2017 ; 2017 ; Journal of Clinical & Academic Ophthalmology Volume 9 ; 9 >
-    au < expected ; 2018 ; 2018 ; Journal of Clinical & Academic Ophthalmology Volume 10 ; 10 >
 
   }
 
@@ -2687,12 +2681,10 @@
 
     >
     param[journal_id] = 10.1055/s-00025473
-    comment[years] = 2015-current
+    comment[years] = 2015-2016
 
     au < released ; 2015 ; 2015 ; Journal of Knee Surgery Reports Volume 1 ; 1 >
     au < released ; 2016 ; 2016 ; Journal of Knee Surgery Reports Volume 2 ; 2 >
-    au < expected ; 2017 ; 2017 ; Journal of Knee Surgery Reports Volume 3 ; 3 >
-    au < expected ; 2018 ; 2018 ; Journal of Knee Surgery Reports Volume 4 ; 4 >
 
   }
 
@@ -2770,7 +2762,7 @@
 
     >
     param[journal_id] = 10.1055/s-00029022
-    comment[years] = 2010-current
+    comment[years] = 2010-2016
 
     au < released ; 2010 ; 2010 ; Journal of Pediatric Biochemistry Volume 1 ; 1 >
     au < released ; 2012 ; 2012 ; Journal of Pediatric Biochemistry Volume 2 ; 2 >
@@ -2778,8 +2770,6 @@
     au < released ; 2014 ; 2014 ; Journal of Pediatric Biochemistry Volume 4 ; 4 >
     au < released ; 2015 ; 2015 ; Journal of Pediatric Biochemistry Volume 5 ; 5 >
     au < released ; 2016 ; 2016 ; Journal of Pediatric Biochemistry Volume 6 ; 6 >
-    au < expected ; 2017 ; 2017 ; Journal of Pediatric Biochemistry Volume 7 ; 7 >
-    au < expected ; 2018 ; 2018 ; Journal of Pediatric Biochemistry Volume 8 ; 8 >
 
   }
 
@@ -2918,15 +2908,13 @@
 
     >
     param[journal_id] = 10.1055/s-00029169
-    comment[years] = 2012-current
+    comment[years] = 2012-2016
 
     au < released ; 2012 ; 2012 ; Journal of Pediatric Neuroradiology Volume 1 ; 1 >
     au < released ; 2013 ; 2013 ; Journal of Pediatric Neuroradiology Volume 2 ; 2 >
     au < released ; 2014 ; 2014 ; Journal of Pediatric Neuroradiology Volume 3 ; 3 >
     au < released ; 2015 ; 2015 ; Journal of Pediatric Neuroradiology Volume 4 ; 4 >
     au < released ; 2016 ; 2016 ; Journal of Pediatric Neuroradiology Volume 5 ; 5 >
-    au < expected ; 2017 ; 2017 ; Journal of Pediatric Neuroradiology Volume 6 ; 6 >
-    au < expected ; 2018 ; 2018 ; Journal of Pediatric Neuroradiology Volume 7 ; 7 >
 
   }
 
@@ -3428,7 +3416,7 @@
 
     >
     param[journal_id] = 10.1055/s-00000168
-    comment[years] = 2011-current
+    comment[years] = 2011-2016
 
     au < released ; 2011 ; 2011 ; Lege artis Das Magazin zur ärztlichen Weiterbildung Volume 1 ; 1 >
     au < released ; 2012 ; 2012 ; Lege artis Das Magazin zur ärztlichen Weiterbildung Volume 2 ; 2 >
@@ -3436,8 +3424,6 @@
     au < released ; 2014 ; 2014 ; Lege artis Das Magazin zur ärztlichen Weiterbildung Volume 4 ; 4 >
     au < released ; 2015 ; 2015 ; Lege artis Das Magazin zur ärztlichen Weiterbildung Volume 5 ; 5 >
     au < released ; 2016 ; 2016 ; Lege artis Das Magazin zur ärztlichen Weiterbildung Volume 6 ; 6 >
-    au < expected ; 2017 ; 2017 ; Lege artis Das Magazin zur ärztlichen Weiterbildung Volume 7 ; 7 >
-    au < expected ; 2018 ; 2018 ; Lege artis Das Magazin zur ärztlichen Weiterbildung Volume 8 ; 8 >
 
   }
 
@@ -3586,14 +3572,12 @@
 
     >
     param[journal_id] = 10.1055/s-00024713
-    comment[years] = 2013-current
+    comment[years] = 2013-2016
 
     au < released ; 2013 ; 2013 ; Neurochirurgie Scan Volume 1 ; 1 >
     au < released ; 2014 ; 2014 ; Neurochirurgie Scan Volume 2 ; 2 >
     au < released ; 2015 ; 2015 ; Neurochirurgie Scan Volume 3 ; 3 >
     au < released ; 2016 ; 2016 ; Neurochirurgie Scan Volume 4 ; 4 >
-    au < expected ; 2017 ; 2017 ; Neurochirurgie Scan Volume 5 ; 5 >
-    au < expected ; 2018 ; 2018 ; Neurochirurgie Scan Volume 6 ; 6 >
 
   }
 
@@ -3899,16 +3883,13 @@
 
     >
     param[journal_id] = 10.1055/s-00000179
-    comment[years] = 2012-current
-    # coming online soon as of July 2012
+    comment[years] = 2012-2016
 
     au < released ; 2012 ; 2012 ; Orthopädie und Unfallchirurgie - Mitteilungen und Nachrichten Volume 1 ; 1 >
     au < released ; 2013 ; 2013 ; Orthopädie und Unfallchirurgie - Mitteilungen und Nachrichten Volume 2 ; 2 >
     au < released ; 2014 ; 2014 ; Orthopädie und Unfallchirurgie - Mitteilungen und Nachrichten Volume 3 ; 3 >
     au < released ; 2015 ; 2015 ; Orthopädie und Unfallchirurgie - Mitteilungen und Nachrichten Volume 4 ; 4 >
     au < released ; 2016 ; 2016 ; Orthopädie und Unfallchirurgie - Mitteilungen und Nachrichten Volume 5 ; 5 >
-    au < expected ; 2017 ; 2017 ; Orthopädie und Unfallchirurgie - Mitteilungen und Nachrichten Volume 6 ; 6 >
-    au < expected ; 2018 ; 2018 ; Orthopädie und Unfallchirurgie - Mitteilungen und Nachrichten Volume 7 ; 7 >
 
   }
 
@@ -4394,13 +4375,11 @@
 
     >
     param[journal_id] = 10.1055/s-00027015
-    comment[years] = 2014-current
+    comment[years] = 2014-2016
 
    au < released ; 2014 ; 2014 ; Planta Medica Letters Volume 1 ; 1 >
    au < released ; 2015 ; 2015 ; Planta Medica Letters Volume 2 ; 2 >
    au < released ; 2016 ; 2016 ; Planta Medica Letters Volume 3 ; 3 >
-   au < expected ; 2017 ; 2017 ; Planta Medica Letters Volume 4 ; 4 >
-   au < expected ; 2018 ; 2018 ; Planta Medica Letters Volume 5 ; 5 >
 
   }
 
@@ -6036,6 +6015,7 @@
 
     >
     param[journal_id] = 10.1055/s-00028422
+    #years = 2015-current
 
    au < released ; 2015 ; 2015 ; Ultrasound International Open Volume 1 ; 1 >
    au < released ; 2016 ; 2016 ; Ultrasound International Open Volume 2 ; 2 >
@@ -6054,12 +6034,11 @@
 
     >
     param[journal_id] = 10.1055/s-00026982
+    #years = 2014-2016
 
    au < released ; 2014 ; 2014 ; Urologie Scan Volume 1 ; 1 >
    au < released ; 2015 ; 2015 ; Urologie Scan Volume 2 ; 2 >
    au < released ; 2016 ; 2016 ; Urologie Scan Volume 3 ; 3 >
-   au < expected ; 2017 ; 2017 ; Urologie Scan Volume 4 ; 4 >
-   au < expected ; 2018 ; 2018 ; Urologie Scan Volume 5 ; 5 >
 
   }
 
