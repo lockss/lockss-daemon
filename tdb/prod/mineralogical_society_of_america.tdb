@@ -120,6 +120,7 @@
     param[base_url] = http://rimg.geoscienceworld.org/
     comment[continues] = 0275-0279
 
+    au < gsw.GSWDrupalPlugin ; doNotProcess ; 2000 ; Reviews in Mineralogy and Geochemistry Volume 38 ; 38 >
     au < gsw.GSWDrupalPlugin ; doNotProcess ; 2000 ; Reviews in Mineralogy and Geochemistry Volume 39 ; 39 >
     au < gsw.GSWDrupalPlugin ; doNotProcess ; 2000 ; Reviews in Mineralogy and Geochemistry Volume 40 ; 40 >
     au < gsw.GSWDrupalPlugin ; doNotProcess ; 2000 ; Reviews in Mineralogy and Geochemistry Volume 41 ; 41 >
