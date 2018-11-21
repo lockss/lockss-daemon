@@ -31,6 +31,7 @@ package org.lockss.plugin.springer;
 import java.util.Iterator;
 import java.util.regex.*;
 
+import org.apache.commons.lang3.StringUtils;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.ArticleMetadataExtractorFactory;
@@ -87,6 +88,8 @@ public class SpringerSourceArticleIteratorFactory implements ArticleIteratorFact
     // break it in to three parts in order to find the corresponding xml.Meta file
 	//1. is  /<notslash>.zip!  to anchor top of content sequence
     protected static Pattern PATTERN = Pattern.compile("(/[^/]+\\.zip!/[A-Z]+=.*/)(BodyRef/PDF/)([^/]+)(\\.pdf)$", Pattern.CASE_INSENSITIVE);
+    //ART=54253/40278_2018_54253_Article.xml
+    protected static Pattern ODD_META_PATTERN = Pattern.compile("(/ART=[^/]+/[^_]+_[^_]+)_([^_]+)_Article\\.xml$", Pattern.CASE_INSENSITIVE);
     
     
     protected SpringerArticleIterator(ArchivalUnit au,
@@ -120,17 +123,52 @@ public class SpringerSourceArticleIteratorFactory implements ArticleIteratorFact
       return af;
     }
     
+    
+    /*
+     * Springer has added in some variants.
+     * USUALLY, the path looks like this:
+     * PDF      ./JOU=40317/VOL=2018.6/ISU=1/ART=159/BodyRef/PDF/40317_2018_Article_159.pdf
+     * XML      ./JOU=40317/VOL=2018.6/ISU=1/ART=159/40317_2018_Article_159.xml
+     * XML.META ./JOU=40317/VOL=2018.6/ISU=1/ART=159/40317_2018_Article_159.xml.Meta
+     * where the xml/xml.Meta are the same filename as that found under BodyRef/PDF
+     * But now we're also seeing:
+     * PDF      ./JOU=40278/VOL=2018.1727/ISU=1/ART=54253/BodyRef/PDF/40278_2018_54253_OnlinePDF.pdf
+     * XML      ./JOU=40278/VOL=2018.1727/ISU=1/ART=54253/40278_2018_54253_Article.xml
+     * XML.META ./JOU=40278/VOL=2018.1727/ISU=1/ART=54253/40278_2018_Article_54253.xml.Meta
+     * where the XML replaces OnlinePDF with Article
+     * and the XML.META swaps the Article and article number
+     * yeesh.
+     * 
+     * $1 = all the path up to the "BodyRef/PDF/"
+     * $3 = the filename after the "BodyRef/PDF/" and before ".pdf"
+     */
     protected void guessAdditionalFiles(ArticleFiles af, Matcher mat) {
-      CachedUrl metadataCu = au.makeCachedUrl(mat.replaceFirst("$1$3.xml.Meta"));
-      log.debug3("guessAdditionalFiles metadataCu: " + metadataCu);
-      CachedUrl xmlCu = au.makeCachedUrl(mat.replaceFirst("$1$3.xml"));
+    	CachedUrl metadataCu;
+    	CachedUrl xmlCu;
 
-      boolean setMD = false;
-      if ((metadataCu != null) && (metadataCu.hasContent())) {
-        setMD = true;
-        af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, metadataCu);
-        log.debug3("setting ROLE_ARTICLE_METADATA: " + metadataCu.getUrl());
-      }
+    	String pdfName = mat.group(3);
+    	if(StringUtils.containsIgnoreCase(pdfName,"OnlinePDF")) {
+    		String newName = StringUtils.replaceIgnoreCase(pdfName, "OnlinePDF", "Article");
+    		String xmlurl = mat.replaceFirst("$1") + newName + ".xml";
+    		xmlCu = au.makeCachedUrl(xmlurl);
+    		Matcher xmat = ODD_META_PATTERN.matcher(xmlurl);
+    		if (xmat.find()) {
+    			metadataCu = au.makeCachedUrl(xmat.replaceFirst("$1_Article_$2.xml.Meta"));        	  
+    		} else {
+    			// try the same as the XML name
+    			metadataCu = au.makeCachedUrl(mat.replaceFirst(xmlurl + ".Meta"));
+    		}
+    	} else {
+    		metadataCu = au.makeCachedUrl(mat.replaceFirst("$1$3.xml.Meta"));
+    		xmlCu = au.makeCachedUrl(mat.replaceFirst("$1$3.xml"));
+    	}
+    	log.debug3("guessAdditionalFiles metadataCu: " + metadataCu + " and xmlCu: " + xmlCu);
+    	boolean setMD = false;
+    	if ((metadataCu != null) && (metadataCu.hasContent())) {
+    		setMD = true;
+    		af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, metadataCu);
+    		log.debug3("setting ROLE_ARTICLE_METADATA: " + metadataCu.getUrl());
+    	}
       
       if ((xmlCu != null) && (xmlCu.hasContent())) {
         // this will be our backup if the ".xml.Meta wasn't there

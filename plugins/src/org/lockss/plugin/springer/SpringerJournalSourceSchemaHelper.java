@@ -111,6 +111,30 @@ implements SourceXmlSchemaHelper {
     }
   };
   
+  /** 
+   * A version of XmlDomMetadataExtractor.TEXT_VALUE
+   * that strips out newlines and condenses extra spaces down to one
+   * Useful for titles, descriptive text, keywords, etc
+   * Springer has <emphasis> <superscript> and other formatting nodes
+   * and therefore might write a title across many lines
+   * While we strip out the tags, we should also remove any newlines. 
+   */
+  static private final NodeValue CLEAN_TEXT_VALUE = new NodeValue() {
+    @Override
+    public String getValue(Node node) {
+      if (node == null) {
+        return null;
+      }
+      
+      String longVal = node.getTextContent();
+      if (longVal != null) {
+    	  longVal = longVal.replace("\n", " ");
+    	  return longVal.trim().replaceAll(" +", " ");
+      }
+      return null;
+    }
+  };
+  
   private static String journalNode = "/Publisher/Journal";
   
   // the journalNode will be our article node to start since there is only 
@@ -156,12 +180,14 @@ private static String Keyword = "Volume/Issue/Article/ArticleHeader/KeywordGroup
     nodeMap.put(CopyrightYear, XmlDomMetadataExtractor.TEXT_VALUE);
     nodeMap.put(ArticleDOI, XmlDomMetadataExtractor.TEXT_VALUE);
     nodeMap.put(Language, XmlDomMetadataExtractor.TEXT_VALUE);
-    nodeMap.put(ArticleTitle, XmlDomMetadataExtractor.TEXT_VALUE);
+    // remove newlines with VALUE extractor
+    //nodeMap.put(ArticleTitle, XmlDomMetadataExtractor.TEXT_VALUE);
+    nodeMap.put(ArticleTitle, CLEAN_TEXT_VALUE);
     nodeMap.put(ArticleFirstPage, XmlDomMetadataExtractor.TEXT_VALUE);
     nodeMap.put(ArticleLastPage, XmlDomMetadataExtractor.TEXT_VALUE);
     nodeMap.put(AuthorName, AUTHOR_VALUE);
-    nodeMap.put(Para, XmlDomMetadataExtractor.TEXT_VALUE);
-    nodeMap.put(Keyword, XmlDomMetadataExtractor.TEXT_VALUE);
+    nodeMap.put(Para, CLEAN_TEXT_VALUE);
+    nodeMap.put(Keyword, CLEAN_TEXT_VALUE);
   }
 
   /** Map of raw xpath key to cooked MetadataField */
