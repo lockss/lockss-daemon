@@ -44,12 +44,15 @@ import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
+import org.lockss.plugin.PluginTestUtil;
 import org.lockss.plugin.definable.*;
+import org.lockss.plugin.ojs2.TestOJS2MetadataExtractor;
 import org.lockss.test.*;
 import org.lockss.util.ListUtil;
 import org.lockss.util.RegexpUtil;
 import org.lockss.util.urlconn.CacheException;
 import org.lockss.util.urlconn.HttpResultMap;
+import org.opensaml.xml.signature.Y;
 
 public class TestHighWireDrupalPlugin extends LockssTestCase {
   
@@ -356,7 +359,35 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
     log.info ("shouldCacheTest url: " + url);
     assertEquals(shouldCache, au.shouldBeCached(url));
   }
-  
+
+  public void testShouldCrawlSubDomain() throws Exception {
+
+    String BASE_URL = "http://dev.biologists.org";
+    String VOLUME_NUMBER = "145";
+
+    String SAMPLE_VALID_VIDEO_URL = "http://movie.biologists.com/video/10.1242/dev.135319/video-1";
+
+    log.debug3("shouldCrawlSubDomain url: " + SAMPLE_VALID_VIDEO_URL);
+
+    Properties props = new Properties();
+    props.setProperty(BASE_URL_KEY, BASE_URL);
+    props.setProperty(VOL_KEY, VOLUME_NUMBER);
+
+    DefinableArchivalUnit au = null;
+    try {
+      au = makeAuFromProps(props);
+    }
+    catch (ConfigurationException ex) {
+    }
+    theDaemon.getLockssRepository(au);
+
+    //Real sample video url
+    shouldCacheTest(SAMPLE_VALID_VIDEO_URL, true, au);
+    shouldCacheTest("http://www.example.com/video/video-1", false, au);
+    shouldCacheTest("http://movie.biologists.com/fakevideo/video-1", false, au);
+    shouldCacheTest("http://fakemovie.biologists.com/videos/video-1", false, au);
+  }
+
   // from au_exclude_urls_from_polls_pattern in plugins/src/org/lockss/plugin/highwire/HighWireDrupalPlugin.xml
   // if it changes in the plugin, you will likely need to change the test, so verify
   //    ^http(?!.*/highwire/filestream/.*)(?!.*\.pdf)(?!.*/content/[^/]+/suppl/.*)|html$
@@ -367,8 +398,7 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
         "^http(.+)/twi[ls]\\.",
         "^http(.+)/findings\\.",
     };
-  
-  
+
   public void testPollSpecial() throws Exception {
     String ROOT_URL = "http://www.example.com/";
     Properties props = new Properties();
