@@ -31,10 +31,12 @@ package org.lockss.pdf.pdfbox;
 import java.io.*;
 import java.util.List;
 
+import org.apache.pdfbox.io.MemoryUsageSetting;
 //PB2 import org.apache.pdfbox.exceptions.*;
 import org.apache.pdfbox.pdfparser.PDFParser;
 import org.apache.pdfbox.pdmodel.*;
 import org.apache.pdfbox.pdmodel.common.PDStream;
+import org.apache.pdfbox.pdmodel.encryption.StandardDecryptionMaterial;
 //PB2 import org.apache.pdfbox.pdmodel.graphics.xobject.PDXObjectForm;
 import org.apache.pdfbox.pdmodel.graphics.form.PDFormXObject;
 import org.lockss.pdf.*;
@@ -170,9 +172,9 @@ public class PdfBoxDocumentFactory implements PdfDocumentFactory {
    */
   protected PDDocument makePdDocument(InputStream pdfInputStream)
       throws IOException {
-    PDFParser pdfParser = new PDFParser(pdfInputStream);
-    pdfParser.parse(); // Probably closes the input stream
-    PDDocument pdDocument = pdfParser.getPDDocument();
+    PDDocument pdDocument = PDDocument.load(pdfInputStream,
+                                            "",
+                                            MemoryUsageSetting.setupMixed(20L * org.apache.commons.io.FileUtils.ONE_MB));
     return pdDocument;
   }
   
@@ -184,19 +186,13 @@ public class PdfBoxDocumentFactory implements PdfDocumentFactory {
    * 
    * @param pdDocument
    *          A freshly parsed {@link PDDocument} instance
-   * @throws CryptographyException
-   *           if a cryptography exception is thrown
    * @throws IOException
    *           if an I/O exception is thrown
    * @since 1.67
    */
   protected void processAfterParse(PDDocument pdDocument)
-//PB2      throws CryptographyException, IOException {
       throws IOException {
     pdDocument.setAllSecurityToBeRemoved(true);
-    if (pdDocument.isEncrypted()) {
-      pdDocument.decrypt("");
-    }
   }
   
 }

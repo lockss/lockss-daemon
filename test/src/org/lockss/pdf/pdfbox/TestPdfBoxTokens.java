@@ -32,7 +32,8 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.pdf.pdfbox;
 
-import org.apache.pdfbox.util.*;
+import org.apache.pdfbox.contentstream.operator.Operator;
+import org.apache.pdfbox.cos.COSDictionary;
 import org.lockss.pdf.*;
 import org.lockss.pdf.pdfbox.PdfBoxTokens;
 import org.lockss.test.LockssTestCase;
@@ -45,7 +46,7 @@ public class TestPdfBoxTokens extends LockssTestCase {
     assertEquals(expected, PdfBoxTokens.cachedOperators.size());
     
     // Verify that typical operators are cached, e.g. 'BT'
-    PDFOperator bt1 = PDFOperator.getOperator(PdfOpcodes.BEGIN_TEXT_OBJECT);
+    Operator bt1 = Operator.getOperator(PdfOpcodes.BEGIN_TEXT_OBJECT);
     PdfToken tok1 = PdfBoxTokens.makeOperator(bt1);
     ++expected; // Previous line should have cached one more operator
     assertTrue(tok1.isOperator());
@@ -57,9 +58,9 @@ public class TestPdfBoxTokens extends LockssTestCase {
     
     // Verify that 'BI' operators don't get cached
     assertEquals(expected, PdfBoxTokens.cachedOperators.size());
-    PDFOperator bi1 = PDFOperator.getOperator(PdfOpcodes.BEGIN_IMAGE_OBJECT);
+    Operator bi1 = Operator.getOperator(PdfOpcodes.BEGIN_IMAGE_OBJECT);
     bi1.setImageData("abc".getBytes());
-    bi1.setImageParameters(new ImageParameters());
+    bi1.setImageParameters(new COSDictionary());
     PdfToken tok3 = PdfBoxTokens.makeOperator(bi1);
     assertTrue(tok3.isOperator());
     assertEquals(PdfOpcodes.BEGIN_IMAGE_OBJECT, tok3.getOperator());
@@ -69,9 +70,9 @@ public class TestPdfBoxTokens extends LockssTestCase {
     assertEquals(expected, PdfBoxTokens.cachedOperators.size());
 
     // Same thing with 'ID' operators
-    PDFOperator id1 = PDFOperator.getOperator(PdfOpcodes.BEGIN_IMAGE_DATA);
+    Operator id1 = Operator.getOperator(PdfOpcodes.BEGIN_IMAGE_DATA);
     bi1.setImageData("def".getBytes());
-    bi1.setImageParameters(new ImageParameters());
+    bi1.setImageParameters(new COSDictionary());
     PdfToken tok5 = PdfBoxTokens.makeOperator(id1);
     assertEquals(expected, PdfBoxTokens.cachedOperators.size());
     PdfToken tok6 = PdfBoxTokens.makeOperator(id1);

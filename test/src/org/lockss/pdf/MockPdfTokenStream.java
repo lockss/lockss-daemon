@@ -35,10 +35,10 @@ package org.lockss.pdf;
 import java.io.*;
 import java.util.*;
 
+import org.apache.pdfbox.contentstream.operator.Operator;
 import org.apache.pdfbox.cos.*;
-import org.apache.pdfbox.io.RandomAccessBuffer;
+import org.apache.pdfbox.io.*;
 import org.apache.pdfbox.pdfparser.PDFStreamParser;
-import org.apache.pdfbox.util.PDFOperator;
 import org.lockss.test.StringInputStream;
 
 public class MockPdfTokenStream implements PdfTokenStream {
@@ -50,14 +50,14 @@ public class MockPdfTokenStream implements PdfTokenStream {
    * Makes a fake PDF token stream from parsing the given input stream.
    * </p>
    * 
-   * @param inputStream
-   *          An input stream of PDF token stream source.
+   * @param sourceString
+   *          A source string of PDF tokens.
    * @throws IOException
    *           if parsing fails or an I/O error occurs.
    * @since 1.67
    */
-  public MockPdfTokenStream(InputStream inputStream) throws IOException {
-    PDFStreamParser parser = new PDFStreamParser(inputStream, new RandomAccessBuffer());
+  public MockPdfTokenStream(String inputString) throws IOException {
+    PDFStreamParser parser = new PDFStreamParser(inputString.getBytes());
     parser.parse();
     List<Object> pdfBoxTokens = parser.getTokens();
     this.pdfTokens = new ArrayList<PdfToken>(pdfBoxTokens.size());
@@ -128,8 +128,8 @@ public class MockPdfTokenStream implements PdfTokenStream {
     else if (pdfBoxToken instanceof COSString) {
       return tf.makeString(((COSString)pdfBoxToken).getString());
     }
-    else if (pdfBoxToken instanceof PDFOperator) {
-      return tf.makeOperator(((PDFOperator)pdfBoxToken).getOperation());
+    else if (pdfBoxToken instanceof Operator) {
+      return tf.makeOperator(((Operator)pdfBoxToken).getName());
     }
     else {
       throw new IOException(String.format("Unexpected type: %s \"%s\"",
@@ -152,7 +152,7 @@ public class MockPdfTokenStream implements PdfTokenStream {
    * @since 1.67
    */
   public static MockPdfTokenStream parse(String sourceString) throws IOException {
-    return new MockPdfTokenStream(new StringInputStream(sourceString));
+    return new MockPdfTokenStream(sourceString);
   }
 
 }

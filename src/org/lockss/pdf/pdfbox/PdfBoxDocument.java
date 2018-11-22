@@ -31,19 +31,26 @@ package org.lockss.pdf.pdfbox;
 import java.io.*;
 import java.util.*;
 
-import javax.xml.transform.TransformerException;
+import javax.xml.parsers.*;
+import javax.xml.transform.*;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 
+import org.apache.commons.io.output.ByteArrayOutputStream;
 //PB2 import org.apache.jempbox.xmp.XMPMetadata;
 //PB2 import org.apache.xmpbox.XMPMetadata;
 import org.apache.pdfbox.cos.COSDictionary;
 //PB2 import org.apache.pdfbox.exceptions.COSVisitorException;
 import org.apache.pdfbox.pdmodel.*;
 import org.apache.pdfbox.pdmodel.common.PDMetadata;
+import org.apache.xmpbox.XMPMetadata;
+import org.apache.xmpbox.xml.*;
 import org.lockss.pdf.*;
 import org.lockss.pdf.PdfDocument;
 import org.lockss.pdf.PdfPage;
 import org.lockss.util.*;
 import org.w3c.dom.Document;
+import org.xml.sax.SAXException;
 
 /**
  * <p>
@@ -228,10 +235,27 @@ public class PdfBoxDocument implements PdfDocument {
       if (metadata == null) {
         return null;
       }
-      return metadata.exportXMPMetadata().getXMPDocument();
+      /*
+       * IMPLEMENTATION NOTE
+       * 
+       * Rough edge of converting from 1.8.x to 2.0.x: XMPBox doesn't give
+       * access to the Document directly. Do the same parsing as XmpDomParser.
+       */
+      DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+      dbf.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
+      dbf.setFeature("http://xml.org/sax/features/external-general-entities", false);
+      dbf.setFeature("http://xml.org/sax/features/external-parameter-entities", false);
+      dbf.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false);
+      dbf.setXIncludeAware(false);
+      dbf.setExpandEntityReferences(false);
+      dbf.setIgnoringComments(true);
+      dbf.setNamespaceAware(true);
+      DocumentBuilder db = dbf.newDocumentBuilder();
+      db.setErrorHandler(null);
+      return db.parse(metadata.exportXMPMetadata());
     }
-    catch (IOException ioe) {
-      throw new PdfException("Error parsing XMP data", ioe);
+    catch (ParserConfigurationException | IOException | SAXException exc) {
+      throw new PdfException("Error parsing XMP data into a Document", exc);
     }
   }
 
@@ -378,13 +402,12 @@ public class PdfBoxDocument implements PdfDocument {
   @Override
   public void setMetadataFromXmp(Document xmpDocument) throws PdfException {
     try {
-      pdDocument.getDocumentCatalog().getMetadata().importXMPMetadata(new XMPMetadata(xmpDocument));
+      ByteArrayOutputStream baos = new ByteArrayOutputStream();
+      TransformerFactory.newInstance().newTransformer().transform(new DOMSource(xmpDocument), new StreamResult(baos));
+      pdDocument.getDocumentCatalog().setMetadata(new PDMetadata(pdDocument, baos.toInputStream()));
     }
-    catch (IOException ioe) {
-      throw new PdfException("Error converting XMP document to metadata", ioe);
-    }
-    catch (TransformerException te) {
-      throw new PdfException("Error converting XMP document to metadata", te);
+    catch (TransformerException | IOException exc) {
+      throw new PdfException("Error converting XMP document to metadata", exc);
     }
   }
 

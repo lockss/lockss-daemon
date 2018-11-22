@@ -93,26 +93,14 @@ public abstract class PdfBoxTokenStream implements PdfTokenStream {
     PDFStreamParser pdfStreamParser = null;
     try {
       pdfStreamParser = new PDFStreamParser(pdStream);
-      Iterator<Object> iter = pdfStreamParser.getTokenIterator();
-      while (iter.hasNext()) {
-        tokens.add(PdfBoxTokens.convertOne(iter.next()));
+      for (Object tok = pdfStreamParser.parseNextToken() ; tok != null ; tok = pdfStreamParser.parseNextToken()) {
+        tokens.add(PdfBoxTokens.convertOne(tok));
       }
       decodeStringsWithFontContext(tokens);
       return tokens;
     }
     catch (IOException ioe) {
       throw new PdfException(ioe);
-    }
-    finally {
-      // "safeClose()" for a PDFStreamParser
-      if (pdfStreamParser != null) {
-        try {
-          pdfStreamParser.close();
-        }
-        catch (IOException ioe) {
-          // ignore
-        }
-      }
     }
   }
 
