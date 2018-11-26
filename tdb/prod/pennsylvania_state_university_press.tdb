@@ -6,37 +6,37 @@
   
   comment[platform] = Jstor never processed and ProjectMuse for GLN
   
-  {
-  
-    title <
-      name = 14th Century English Mystics Newsletter ;
-      issn = 0737-5840 ;
-      issnl = 0737-5840
-    >
-    
-    {
-      plugin = org.lockss.plugin.jstor.JstorPlugin
-      comment[needs_plugin] = years 1974-1983 on JSTOR/PSU Press
-      comment[continued_by] = 0742-5503
-      param[base_url] = http://www.jstor.org/
-      param[base_url2] = https://www.jstor.org/
-      implicit < status ; year ; name ; param[volume_name] >
-
-      param[journal_id] = 14centengmystnew
-
-      au < doNotProcess ; 1974-1975 ; 14th Century English Mystics Newsletter Volume 1 ; 1 >
-      au < doNotProcess ; 1976 ; 14th Century English Mystics Newsletter Volume 2 ; 2 >
-      au < doNotProcess ; 1977 ; 14th Century English Mystics Newsletter Volume 3 ; 3 >
-      au < doNotProcess ; 1978 ; 14th Century English Mystics Newsletter Volume 4 ; 4 >
-      au < doNotProcess ; 1979 ; 14th Century English Mystics Newsletter Volume 5 ; 5 >
-      au < doNotProcess ; 1980 ; 14th Century English Mystics Newsletter Volume 6 ; 6 >
-      au < doNotProcess ; 1981 ; 14th Century English Mystics Newsletter Volume 7 ; 7 >
-      au < doNotProcess ; 1982 ; 14th Century English Mystics Newsletter Volume 8 ; 8 >
-      au < doNotProcess ; 1983 ; 14th Century English Mystics Newsletter Volume 9 ; 9 >
-
-    }
-    
-  }
+#  {
+#  
+#    title <
+#      name = 14th Century English Mystics Newsletter ;
+#      issn = 0737-5840 ;
+#      issnl = 0737-5840
+#    >
+#    
+#    {
+#      plugin = org.lockss.plugin.jstor.JstorPlugin
+#      comment[needs_plugin] = years 1974-1983 on JSTOR/PSU Press
+#      comment[continued_by] = 0742-5503
+#      param[base_url] = http://www.jstor.org/
+#      param[base_url2] = https://www.jstor.org/
+#      implicit < status ; year ; name ; param[volume_name] >
+#
+#      param[journal_id] = 14centengmystnew
+#
+#      au < doNotProcess ; 1974-1975 ; 14th Century English Mystics Newsletter Volume 1 ; 1 >
+#      au < doNotPSrocess ; 1976 ; 14th Century English Mystics Newsletter Volume 2 ; 2 >
+#      au < doNotProcess ; 1977 ; 14th Century English Mystics Newsletter Volume 3 ; 3 >
+#      au < doNotProcess ; 1978 ; 14th Century English Mystics Newsletter Volume 4 ; 4 >
+#      au < doNotProcess ; 1979 ; 14th Century English Mystics Newsletter Volume 5 ; 5 >
+#      au < doNotProcess ; 1980 ; 14th Century English Mystics Newsletter Volume 6 ; 6 >
+#      au < doNotProcess ; 1981 ; 14th Century English Mystics Newsletter Volume 7 ; 7 >
+#      au < doNotProcess ; 1982 ; 14th Century English Mystics Newsletter Volume 8 ; 8 >
+#      au < doNotProcess ; 1983 ; 14th Century English Mystics Newsletter Volume 9 ; 9 >
+#
+#    }
+#    
+#  }
   
   {
   
@@ -1558,53 +1558,53 @@
     
   }
 
-  {
-  
-    title <
-      name = Mystics Quarterly ;
-      issn = 0742-5503 ;
-      issnl = 0742-5503
-    >
-    
-    {
-      
-      plugin = org.lockss.plugin.jstor.JstorPlugin
-      param[base_url] = http://www.jstor.org/
-      param[base_url2] = https://www.jstor.org/
-      implicit < status ; year ; name ; param[volume_name] >
-      comment[continued_by] = 1947-6566
-      comment[continues] = 0737-5840
-      param[journal_id] = mysticsquarterly
-      
-      au < doNotProcess ; 1984 ; Mystics Quarterly Volume 10 ; 10 >
-      au < doNotProcess ; 1985 ; Mystics Quarterly Volume 11 ; 11 >
-      au < doNotProcess ; 1986 ; Mystics Quarterly Volume 12 ; 12 >
-      au < doNotProcess ; 1987 ; Mystics Quarterly Volume 13 ; 13 >
-      au < doNotProcess ; 1988 ; Mystics Quarterly Volume 14 ; 14 >
-      au < doNotProcess ; 1989 ; Mystics Quarterly Volume 15 ; 15 >
-      au < doNotProcess ; 1990 ; Mystics Quarterly Volume 16 ; 16 >
-      au < doNotProcess ; 1991 ; Mystics Quarterly Volume 17 ; 17 >
-      au < doNotProcess ; 1992 ; Mystics Quarterly Volume 18 ; 18 >
-      au < doNotProcess ; 1993 ; Mystics Quarterly Volume 19 ; 19 >
-      au < doNotProcess ; 1994 ; Mystics Quarterly Volume 20 ; 20 >
-      au < doNotProcess ; 1995 ; Mystics Quarterly Volume 21 ; 21 >
-      au < doNotProcess ; 1996 ; Mystics Quarterly Volume 22 ; 22 >
-      au < doNotProcess ; 1997 ; Mystics Quarterly Volume 23 ; 23 >
-      au < doNotProcess ; 1998 ; Mystics Quarterly Volume 24 ; 24 >
-      au < doNotProcess ; 1999 ; Mystics Quarterly Volume 25 ; 25 >
-      au < doNotProcess ; 2000 ; Mystics Quarterly Volume 26 ; 26 >
-      au < doNotProcess ; 2001 ; Mystics Quarterly Volume 27 ; 27 >
-      au < doNotProcess ; 2002 ; Mystics Quarterly Volume 28 ; 28 >
-      au < doNotProcess ; 2003 ; Mystics Quarterly Volume 29 ; 29 >
-      au < doNotProcess ; 2004 ; Mystics Quarterly Volume 30 ; 30 >
-      au < doNotProcess ; 2005 ; Mystics Quarterly Volume 31 ; 31 >
-      au < doNotProcess ; 2006 ; Mystics Quarterly Volume 32 ; 32 >
-      au < doNotProcess ; 2007 ; Mystics Quarterly Volume 33 ; 33 >
-      au < doNotProcess ; 2008 ; Mystics Quarterly Volume 34 ; 34 >
-      au < doNotProcess ; 2009 ; Mystics Quarterly Volume 35 ; 35 >
-    }
-    
-  }
+#  {
+#  
+#    title <
+#      name = Mystics Quarterly ;
+#      issn = 0742-5503 ;
+#      issnl = 0742-5503
+#    >
+#    
+#    {
+#      
+#      plugin = org.lockss.plugin.jstor.JstorPlugin
+#      param[base_url] = http://www.jstor.org/
+#      param[base_url2] = https://www.jstor.org/
+#      implicit < status ; year ; name ; param[volume_name] >
+#      comment[continued_by] = 1947-6566
+#      comment[continues] = 0737-5840
+#      param[journal_id] = mysticsquarterly
+#      
+#      au < doNotProcess ; 1984 ; Mystics Quarterly Volume 10 ; 10 >
+#      au < doNotProcess ; 1985 ; Mystics Quarterly Volume 11 ; 11 >
+#      au < doNotProcess ; 1986 ; Mystics Quarterly Volume 12 ; 12 >
+#      au < doNotProcess ; 1987 ; Mystics Quarterly Volume 13 ; 13 >
+#      au < doNotProcess ; 1988 ; Mystics Quarterly Volume 14 ; 14 >
+#      au < doNotProcess ; 1989 ; Mystics Quarterly Volume 15 ; 15 >
+#      au < doNotProcess ; 1990 ; Mystics Quarterly Volume 16 ; 16 >
+#      au < doNotProcess ; 1991 ; Mystics Quarterly Volume 17 ; 17 >
+#      au < doNotProcess ; 1992 ; Mystics Quarterly Volume 18 ; 18 >
+#      au < doNotProcess ; 1993 ; Mystics Quarterly Volume 19 ; 19 >
+#      au < doNotProcess ; 1994 ; Mystics Quarterly Volume 20 ; 20 >
+#      au < doNotProcess ; 1995 ; Mystics Quarterly Volume 21 ; 21 >
+#      au < doNotProcess ; 1996 ; Mystics Quarterly Volume 22 ; 22 >
+#      au < doNotProcess ; 1997 ; Mystics Quarterly Volume 23 ; 23 >
+#      au < doNotProcess ; 1998 ; Mystics Quarterly Volume 24 ; 24 >
+#      au < doNotProcess ; 1999 ; Mystics Quarterly Volume 25 ; 25 >
+#      au < doNotProcess ; 2000 ; Mystics Quarterly Volume 26 ; 26 >
+#      au < doNotProcess ; 2001 ; Mystics Quarterly Volume 27 ; 27 >
+#      au < doNotProcess ; 2002 ; Mystics Quarterly Volume 28 ; 28 >
+#      au < doNotProcess ; 2003 ; Mystics Quarterly Volume 29 ; 29 >
+#      au < doNotProcess ; 2004 ; Mystics Quarterly Volume 30 ; 30 >
+#      au < doNotProcess ; 2005 ; Mystics Quarterly Volume 31 ; 31 >
+#      au < doNotProcess ; 2006 ; Mystics Quarterly Volume 32 ; 32 >
+#      au < doNotProcess ; 2007 ; Mystics Quarterly Volume 33 ; 33 >
+#      au < doNotProcess ; 2008 ; Mystics Quarterly Volume 34 ; 34 >
+#      au < doNotProcess ; 2009 ; Mystics Quarterly Volume 35 ; 35 >
+#    }
+#    
+#  }
 
   {
   
