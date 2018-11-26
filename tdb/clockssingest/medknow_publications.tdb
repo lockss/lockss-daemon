@@ -590,7 +590,7 @@
     au < manifest ; exists ; 2015 ; Dental Research Journal Volume 12 ; 2015 ; 12 ; >
     au < manifest ; exists ; 2016 ; Dental Research Journal Volume 13 ; 2016 ; 13 ; >
     au < manifest ; exists ; 2017 ; Dental Research Journal Volume 14 ; 2017 ; 14 ; >
-    au < exists ; exists ; 2018 ; Dental Research Journal Volume 15 ; 2018 ; 15 ; >
+    au < manifest ; exists ; 2018 ; Dental Research Journal Volume 15 ; 2018 ; 15 ; >
 
   }
 
@@ -4536,7 +4536,7 @@
 
       au < finished ; crawling ; 2016 ; Al-Azhar Assiut Medical Journal Volume 14 ; 2016 ; 14 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2017 ; Al-Azhar Assiut Medical Journal Volume 15 ; 2017 ; 15 ; >
-      au < expected ; exists ; 2018 ; Al-Azhar Assiut Medical Journal Volume 16 ; 2018 ; 16 ; >
+      au < manifest ; exists ; 2018 ; Al-Azhar Assiut Medical Journal Volume 16 ; 2018 ; 16 ; >
 
   }
 
@@ -5685,7 +5685,7 @@
       au < finished ; crawling ; 2015 ; Indian Journal of Oral Health and Research Volume 1 ; 2015 ; 1 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2016 ; Indian Journal of Oral Health and Research Volume 2 ; 2016 ; 2 ; >
       au < finished ; crawling ; 2017 ; Indian Journal of Oral Health and Research Volume 3 ; 2017 ; 3 ; reingest5.clockss.org:8082 >
-      au < expected ; exists ; 2018 ; Indian Journal of Oral Health and Research Volume 4 ; 2018 ; 4 ; >
+      au < manifest ; exists ; 2018 ; Indian Journal of Oral Health and Research Volume 4 ; 2018 ; 4 ; >
 
   }
 
