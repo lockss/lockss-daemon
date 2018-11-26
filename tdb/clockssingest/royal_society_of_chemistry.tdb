@@ -363,13 +363,6 @@
       au < superseded ; exists ; 2018 ; Faraday Discussions Volume 206 [superseded] ; 206 ; 2018 ; >
       au < superseded ; exists ; 2018 ; Faraday Discussions Volume 207 [superseded] ; 207 ; 2018 ; >
       au < superseded ; exists ; 2018 ; Faraday Discussions Volume 208 [superseded] ; 208 ; 2018 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; Faraday Discussions Volume 209 ; 209 ; 2018 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; Faraday Discussions Volume 210 ; 210 ; 2018 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; Faraday Discussions Volume 211 ; 211 ; 2018 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; Faraday Discussions Volume 212 ; 212 ; 2018 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; Faraday Discussions Volume 213 ; 213 ; 2018 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; Faraday Discussions Volume 214 ; 214 ; 2018 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; Faraday Discussions Volume 215 ; 215 ; 2018 ; >
 
   }
 
@@ -444,8 +437,8 @@
   {
 
     title <
-      name = Journal of the Chemical Society, Faraday Transactions: Physical Chemistry in Condensed Phases ;
-      issn = 0300-9599
+      name = Journal of the Chemical Society, Faraday Transactions ;
+      issn = 0956-5000
     >
 
       param[journal_code] = ft
