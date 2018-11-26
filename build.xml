@@ -3094,7 +3094,7 @@ Test results in ${test.results}
       <catch>
         <echo>*** Failed temp checkout left in
           *** ${temp.build.dir}
-          *** Use clean-tempbuild target to delete it.</echo>
+          *** To delete it, use clean-tempbuild target.</echo>
         <fail message="Recursive build failed."/>
       </catch>
     </trycatch>
