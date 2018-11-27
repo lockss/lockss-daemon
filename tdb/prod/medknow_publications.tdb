@@ -550,21 +550,21 @@
     # instead of by a listing like this: http://www.jcnonweb.com/backissues.asp
     # has a lockss permission statement http://www.cytojournal.com/lockss.txt
 
-    au < notReady ; 2004 ; CytoJournal Volume 2004 ; 2004 ; 2004 >
-    au < notReady ; 2005 ; CytoJournal Volume 2005 ; 2005 ; 2005 >
-    au < notReady ; 2006 ; CytoJournal Volume 2006 ; 2006 ; 2006 >
-    au < notReady ; 2007 ; CytoJournal Volume 2007 ; 2007 ; 2007 >
-    au < notReady ; 2008 ; CytoJournal Volume 2008 ; 2008 ; 2008 >
-    au < notReady ; 2009 ; CytoJournal Volume 2009 ; 2009 ; 2009 >
-    au < notReady ; 2010 ; CytoJournal Volume 2010 ; 2010 ; 2010 >
-    au < notReady ; 2011 ; CytoJournal Volume 2011 ; 2011 ; 2011 >
-    au < notReady ; 2012 ; CytoJournal Volume 2012 ; 2012 ; 2012 >
-    au < notReady ; 2013 ; CytoJournal Volume 2013 ; 2013 ; 2013 >
-    au < notReady ; 2014 ; CytoJournal Volume 2014 ; 2014 ; 2014 >
-    au < notReady ; 2015 ; CytoJournal Volume 2015 ; 2015 ; 2015 >
-    au < notReady ; 2016 ; CytoJournal Volume 2016 ; 2016 ; 2016 >
-    au < notReady ; 2017 ; CytoJournal Volume 2017 ; 2017 ; 2017 >
-    au < notReady ; 2018 ; CytoJournal Volume 2018 ; 2018 ; 2018 >
+    au < notReady ; 2004 ; CytoJournal Volume 2004 ; 2004 ; 1 >
+    au < notReady ; 2005 ; CytoJournal Volume 2005 ; 2005 ; 2 >
+    au < notReady ; 2006 ; CytoJournal Volume 2006 ; 2006 ; 3 >
+    au < notReady ; 2007 ; CytoJournal Volume 2007 ; 2007 ; 4 >
+    au < notReady ; 2008 ; CytoJournal Volume 2008 ; 2008 ; 5 >
+    au < notReady ; 2009 ; CytoJournal Volume 2009 ; 2009 ; 6 >
+    au < notReady ; 2010 ; CytoJournal Volume 2010 ; 2010 ; 7 >
+    au < notReady ; 2011 ; CytoJournal Volume 2011 ; 2011 ; 8 >
+    au < notReady ; 2012 ; CytoJournal Volume 2012 ; 2012 ; 9 >
+    au < notReady ; 2013 ; CytoJournal Volume 2013 ; 2013 ; 10 >
+    au < notReady ; 2014 ; CytoJournal Volume 2014 ; 2014 ; 11 >
+    au < notReady ; 2015 ; CytoJournal Volume 2015 ; 2015 ; 12 >
+    au < notReady ; 2016 ; CytoJournal Volume 2016 ; 2016 ; 13 >
+    au < notReady ; 2017 ; CytoJournal Volume 2017 ; 2017 ; 14 >
+    au < notReady ; 2018 ; CytoJournal Volume 2018 ; 2018 ; 15 >
 
   }
 
@@ -2161,8 +2161,6 @@
     au < released ; 2014 ; International Journal of Shoulder Surgery Volume 8 ; 2014 ; 8 >
     au < released ; 2015 ; International Journal of Shoulder Surgery Volume 9 ; 2015 ; 9 >
     au < released ; 2016 ; International Journal of Shoulder Surgery Volume 10 ; 2016 ; 10 >
-    au < expected ; 2017 ; International Journal of Shoulder Surgery Volume 11 ; 2017 ; 11 >
-    au < expected ; 2018 ; International Journal of Shoulder Surgery Volume 12 ; 2018 ; 12 >
 
   }
 
@@ -2941,6 +2939,8 @@
     au < released ; 2014 ; Journal of Interdisciplinary Dentistry Volume 4 ; 2014 ; 4 >
     au < released ; 2015 ; Journal of Interdisciplinary Dentistry Volume 5 ; 2015 ; 5 >
     au < released ; 2016 ; Journal of Interdisciplinary Dentistry Volume 6 ; 2016 ; 6 >
+    au < exists ; 2017 ; Journal of Interdisciplinary Dentistry Volume 7 ; 2017 ; 7 >
+    au < exists ; 2018 ; Journal of Interdisciplinary Dentistry Volume 8 ; 2018 ; 8 >
 
   }
 
@@ -3195,6 +3195,8 @@
     au < released ; 2014 ; Journal of Neurosciences in Rural Practice Volume 5 ; 2014 ; 5 >
     au < released ; 2015 ; Journal of Neurosciences in Rural Practice Volume 6 ; 2015 ; 6 >
     au < released ; 2016 ; Journal of Neurosciences in Rural Practice Volume 7 ; 2016 ; 7 >
+    au < exists ; 2017 ; Journal of Neurosciences in Rural Practice Volume 8 ; 2017 ; 8 >
+    au < exists ; 2018 ; Journal of Neurosciences in Rural Practice Volume 9 ; 2018 ; 9 >
 
   }
   
@@ -3513,12 +3515,12 @@
     au < manifest ; 2010 ; Journal of the International Clinical Dental Research Organization Volume 2 ; 2010 ; 2 >
     au < released ; 2011 ; Journal of the International Clinical Dental Research Organization Volume 3 ; 2011 ; 3 >
     au < released ; 2012 ; Journal of the International Clinical Dental Research Organization Volume 4 ; 2012 ; 4 >
-    au < exists ; 2013 ; Journal of the International Clinical Dental Research Organization Volume 5 ; 2012 ; 5 >
-    au < exists ; 2014 ; Journal of the International Clinical Dental Research Organization Volume 6 ; 2012 ; 6 >
-    au < exists ; 2015 ; Journal of the International Clinical Dental Research Organization Volume 7 ; 2012 ; 7 >
-    au < exists ; 2016 ; Journal of the International Clinical Dental Research Organization Volume 8 ; 2012 ; 8 >
-    au < exists ; 2017 ; Journal of the International Clinical Dental Research Organization Volume 9 ; 2012 ; 9 >
-    au < expected ; 2018 ; Journal of the International Clinical Dental Research Organization Volume 10 ; 2012 ; 10 >
+    au < exists ; 2013 ; Journal of the International Clinical Dental Research Organization Volume 5 ; 2013 ; 5 >
+    au < exists ; 2014 ; Journal of the International Clinical Dental Research Organization Volume 6 ; 2014 ; 6 >
+    au < exists ; 2015 ; Journal of the International Clinical Dental Research Organization Volume 7 ; 2015 ; 7 >
+    au < exists ; 2016 ; Journal of the International Clinical Dental Research Organization Volume 8 ; 2016 ; 8 >
+    au < exists ; 2017 ; Journal of the International Clinical Dental Research Organization Volume 9 ; 2017 ; 9 >
+    au < expected ; 2018 ; Journal of the International Clinical Dental Research Organization Volume 10 ; 2018 ; 10 >
 
   }
     
@@ -3656,8 +3658,6 @@
     au < released ; 2014 ; Mens Sana Monographs Volume 12 ; 2014 ; 12 >
     au < released ; 2015 ; Mens Sana Monographs Volume 13 ; 2015 ; 13 >
     au < released ; 2016 ; Mens Sana Monographs Volume 14 ; 2016 ; 14 >
-    au < expected ; 2017 ; Mens Sana Monographs Volume 15 ; 2017 ; 15 >
-    au < expected ; 2018 ; Mens Sana Monographs Volume 16 ; 2018 ; 16 >
 
   }
 
@@ -4455,11 +4455,13 @@
       param[base_url] = http://www.advbiores.net/
       #browse. no back issues page.
 
-      au < notReady ; 2014 ; Advanced Biomedical Research Volume 1 ; 2014 ; 1 >
-      au < notReady ; 2015 ; Advanced Biomedical Research Volume 2 ; 2015 ; 2 >
-      au < notReady ; 2016 ; Advanced Biomedical Research Volume 3 ; 2016 ; 3 >
-      au < notReady ; 2017 ; Advanced Biomedical Research Volume 4 ; 2017 ; 4 >
-      au < notReady ; 2018 ; Advanced Biomedical Research Volume 5 ; 2018 ; 5 >
+      au < notReady ; 2012 ; Advanced Biomedical Research Volume 1 ; 2012 ; 1 >
+      au < notReady ; 2013 ; Advanced Biomedical Research Volume 2 ; 2013 ; 2 >
+      au < notReady ; 2014 ; Advanced Biomedical Research Volume 3 ; 2014 ; 3 >
+      au < notReady ; 2015 ; Advanced Biomedical Research Volume 4 ; 2015 ; 4 >
+      au < notReady ; 2016 ; Advanced Biomedical Research Volume 5 ; 2016 ; 5 >
+      au < notReady ; 2017 ; Advanced Biomedical Research Volume 6 ; 2017 ; 6 >
+      au < notReady ; 2018 ; Advanced Biomedical Research Volume 7 ; 2018 ; 7 >
 
   }
 
@@ -5376,8 +5378,6 @@
       au < released ; 2014 ; European Journal of Prosthodontics Volume 2 ; 2014 ; 2 >
       au < released ; 2015 ; European Journal of Prosthodontics Volume 3 ; 2015 ; 3 >
       au < released ; 2016 ; European Journal of Prosthodontics Volume 4 ; 2016 ; 4 >
-      au < expected ; 2017 ; European Journal of Prosthodontics Volume 5 ; 2017 ; 5 >
-      au < expected ; 2018 ; European Journal of Prosthodontics Volume 6 ; 2018 ; 6 >
 
   }
 
@@ -5524,8 +5524,6 @@
 
       au < released ; 2015 ; Indian Journal of Cerebral Palsy Volume 1 ; 2015 ; 1 >
       au < released ; 2016 ; Indian Journal of Cerebral Palsy Volume 2 ; 2016 ; 2 >
-      au < expected ; 2017 ; Indian Journal of Cerebral Palsy Volume 3 ; 2017 ; 3 >
-      au < expected ; 2018 ; Indian Journal of Cerebral Palsy Volume 4 ; 2018 ; 4 >
 
   }
 
@@ -5543,8 +5541,6 @@
       au < released ; 2014 ; Indian Journal of Dentistry Volume 5 ; 2014 ; 5 >
       au < released ; 2015 ; Indian Journal of Dentistry Volume 6 ; 2015 ; 6 >
       au < released ; 2016 ; Indian Journal of Dentistry Volume 7 ; 2016 ; 7 >
-      au < expected ; 2017 ; Indian Journal of Dentistry Volume 8 ; 2017 ; 8 >
-      au < expected ; 2018 ; Indian Journal of Dentistry Volume 9 ; 2018 ; 9 >
 
   }
 
@@ -5687,8 +5683,6 @@
       au < released ; 2014 ; Indian Journal of Oral Sciences Volume 5 ; 2014 ; 5 >
       au < released ; 2015 ; Indian Journal of Oral Sciences Volume 6 ; 2015 ; 6 >
       au < released ; 2016 ; Indian Journal of Oral Sciences Volume 7 ; 2016 ; 7 >
-      au < expected ; 2017 ; Indian Journal of Oral Sciences Volume 8 ; 2017 ; 8 >
-      au < expected ; 2018 ; Indian Journal of Oral Sciences Volume 9 ; 2018 ; 9 >
 
   }
 
@@ -6311,8 +6305,6 @@
 
       au < released ; 2015 ; Journal of Earth, Environment and Health Sciences Volume 1 ; 2015 ; 1 >
       au < released ; 2016 ; Journal of Earth, Environment and Health Sciences Volume 2 ; 2016 ; 2 >
-      au < expected ; 2017 ; Journal of Earth, Environment and Health Sciences Volume 3 ; 2017 ; 3 >
-      au < expected ; 2018 ; Journal of Earth, Environment and Health Sciences Volume 4 ; 2018 ; 4 >
 
   }
 
@@ -6742,8 +6734,6 @@
       au < released ; 2014 ; Journal of Obesity and Metabolic Research Volume 1 ; 2014 ; 1 >
       au < released ; 2015 ; Journal of Obesity and Metabolic Research Volume 2 ; 2015 ; 2 >
       au < released ; 2016 ; Journal of Obesity and Metabolic Research Volume 3 ; 2016 ; 3 >
-      au < expected ; 2017 ; Journal of Obesity and Metabolic Research Volume 4 ; 2017 ; 4 >
-      au < expected ; 2018 ; Journal of Obesity and Metabolic Research Volume 5 ; 2018 ; 5 >
 
   }
 
@@ -6847,8 +6837,6 @@
       au < released ; 2014 ; Journal of Orthodontic Research Volume 2 ; 2014 ; 2 >
       au < released ; 2015 ; Journal of Orthodontic Research Volume 3 ; 2015 ; 3 >
       au < released ; 2016 ; Journal of Orthodontic Research Volume 4 ; 2016 ; 4 >
-      au < expected ; 2017 ; Journal of Orthodontic Research Volume 5 ; 2017 ; 5 >
-      au < expected ; 2018 ; Journal of Orthodontic Research Volume 6 ; 2018 ; 6 >
 
   }
 
@@ -6980,8 +6968,6 @@
       au < released ; 2014 ; Journal of Restorative Dentistry Volume 2 ; 2014 ; 2 >
       au < released ; 2015 ; Journal of Restorative Dentistry Volume 3 ; 2015 ; 3 >
       au < released ; 2016 ; Journal of Restorative Dentistry Volume 4 ; 2016 ; 4 >
-      au < expected ; 2017 ; Journal of Restorative Dentistry Volume 5 ; 2017 ; 5 >
-      au < expected ; 2018 ; Journal of Restorative Dentistry Volume 6 ; 2018 ; 6 >
 
   }
 
@@ -7341,8 +7327,6 @@
 
       au < released ; 2015 ; Nigerian Journal of Health Sciences Volume 15 ; 2015 ; 15 >
       au < released ; 2016 ; Nigerian Journal of Health Sciences Volume 16 ; 2016 ; 16 >
-      au < expected ; 2017 ; Nigerian Journal of Health Sciences Volume 17 ; 2017 ; 17 >
-      au < expected ; 2018 ; Nigerian Journal of Health Sciences Volume 18 ; 2018 ; 18 >
 
   }
 
@@ -7398,8 +7382,6 @@
       au < released ; 2013 ; Nigerian Journal of Surgical Research Volume 15 ; 2013 ; 15 >
       au < released ; 2015 ; Nigerian Journal of Surgical Research Volume 16 ; 2015 ; 16 >
       au < released ; 2016 ; Nigerian Journal of Surgical Research Volume 17 ; 2016 ; 17 >
-      au < expected ; 2017 ; Nigerian Journal of Surgical Research Volume 18 ; 2017 ; 18 >
-      au < expected ; 2018 ; Nigerian Journal of Surgical Research Volume 19 ; 2018 ; 19 >
 
   }
 
@@ -7473,8 +7455,6 @@
       au < released ; 2014 ; North American Journal of Medical Sciences Volume 6 ; 2014 ; 6 >
       au < manifest ; 2015 ; North American Journal of Medical Sciences Volume 7 ; 2015 ; 7 >
       au < released ; 2016 ; North American Journal of Medical Sciences Volume 8 ; 2016 ; 8 >
-      au < expected ; 2017 ; North American Journal of Medical Sciences Volume 9 ; 2017 ; 9 >
-      au < expected ; 2018 ; North American Journal of Medical Sciences Volume 10 ; 2018 ; 10 >
 
   }
 
@@ -7491,8 +7471,6 @@
       au < released ; 2014 ; Oncobiology and Targets Volume 1 ; 2014 ; 1 >
       au < released ; 2015 ; Oncobiology and Targets Volume 2 ; 2015 ; 2 >
       au < released ; 2016 ; Oncobiology and Targets Volume 3 ; 2016 ; 3 >
-      au < expected ; 2017 ; Oncobiology and Targets Volume 4 ; 2017 ; 4 >
-      au < expected ; 2018 ; Oncobiology and Targets Volume 5 ; 2018 ; 5 >
 
   }
 
@@ -7508,8 +7486,6 @@
       param[base_url] = http://www.pajr.eg.net/
 
       au < released ; 2016 ; Pan Arab Journal of Rhinology Volume 6 ; 2016 ; 6 >
-      au < expected ; 2017 ; Pan Arab Journal of Rhinology Volume 7 ; 2017 ; 7 >
-      au < expected ; 2018 ; Pan Arab Journal of Rhinology Volume 8 ; 2018 ; 8 >
 
   }
 
@@ -7772,8 +7748,6 @@
       au < released ; 2014 ; Sifa Medical Journal Volume 1 ; 2014 ; 1 >
       au < released ; 2015 ; Sifa Medical Journal Volume 2 ; 2015 ; 2 >
       au < released ; 2016 ; Sifa Medical Journal Volume 3 ; 2016 ; 3 >
-      au < expected ; 2017 ; Sifa Medical Journal Volume 4 ; 2017 ; 4 >
-      au < expected ; 2018 ; Sifa Medical Journal Volume 5 ; 2018 ; 5 >
 
   }
 
@@ -7951,8 +7925,6 @@
 
       au < released ; 2015 ; The Egyptian Journal of Neurology, Psychiatry and Neurosurgery Volume 52 ; 2015 ; 52 >
       au < released ; 2016 ; The Egyptian Journal of Neurology, Psychiatry and Neurosurgery Volume 53 ; 2016 ; 53 >
-      au < expected ; 2017 ; The Egyptian Journal of Neurology, Psychiatry and Neurosurgery Volume 54 ; 2017 ; 54 >
-      au < expected ; 2018 ; The Egyptian Journal of Neurology, Psychiatry and Neurosurgery Volume 55 ; 2018 ; 55 >
 
   }
 
@@ -8060,8 +8032,6 @@
       au < released ; 2014 ; The Journal of National Accreditation Board for Hospitals & Healthcare Providers Volume 1 ; 2014 ; 1 >
       au < released ; 2015 ; The Journal of National Accreditation Board for Hospitals & Healthcare Providers Volume 2 ; 2015 ; 2 >
       au < released ; 2016 ; The Journal of National Accreditation Board for Hospitals & Healthcare Providers Volume 3 ; 2016 ; 3 >
-      au < expected ; 2017 ; The Journal of National Accreditation Board for Hospitals & Healthcare Providers Volume 4 ; 2017 ; 4 >
-      au < expected ; 2018 ; The Journal of National Accreditation Board for Hospitals & Healthcare Providers Volume 5 ; 2018 ; 5 >
 
   }
 
@@ -8393,9 +8363,8 @@
       param[journal_issn] = 2589-3505
       param[base_url] = http://www.aiaohns.in/
 
-      au < exists ; 2016 ; Annals of Indian Academy of Otorhinolaryngology Head and Neck Surgery Volume 1 ; 2016 ; 1 >
-      au < exists ; 2017 ; Annals of Indian Academy of Otorhinolaryngology Head and Neck Surgery Volume 2 ; 2017 ; 2 >
-      au < expected ; 2018 ; Annals of Indian Academy of Otorhinolaryngology Head and Neck Surgery Volume 3 ; 2018 ; 3 >
+      au < exists ; 2017 ; Annals of Indian Academy of Otorhinolaryngology Head and Neck Surgery Volume 1 ; 2017 ; 1 >
+      au < expected ; 2018 ; Annals of Indian Academy of Otorhinolaryngology Head and Neck Surgery Volume 2 ; 2018 ; 2 >
 
   }
 
@@ -8489,8 +8458,7 @@
       au < manifest ; 2014 ; Archives of Cardiovascular Imaging Volume 2 ; 2014 ; 2 >
       au < manifest ; 2015 ; Archives of Cardiovascular Imaging Volume 3 ; 2015 ; 3 >
       au < manifest ; 2016 ; Archives of Cardiovascular Imaging Volume 4 ; 2016 ; 4 >
-      au < exists ; 2017 ; Archives of Cardiovascular Imaging Volume 5 ; 2017 ; 5 >
-      au < expected ; 2018 ; Archives of Cardiovascular Imaging Volume 6 ; 2018 ; 6 >
+      au < expected ; 2018 ; Archives of Cardiovascular Imaging Volume 5 ; 2018 ; 5 >
 
   }
 
@@ -8672,9 +8640,9 @@
       param[journal_issn] = 1687-6997
       param[base_url] = http://www.jcrs.eg.net/
 
-      au < exists ; 2016 ; Egyptian Journal of Cataract and Refractive Surgery Volume 21 ; 2016 ; 21 >
-      au < exists ; 2017 ; Egyptian Journal of Cataract and Refractive Surgery Volume 22 ; 2017 ; 22 >
-      au < expected ; 2018 ; Egyptian Journal of Cataract and Refractive Surgery Volume 23 ; 2018 ; 23 >
+      au < exists ; 2016 ; Egyptian Journal of Cataract and Refractive Surgery Volume 22 ; 2016 ; 22 >
+      au < exists ; 2017 ; Egyptian Journal of Cataract and Refractive Surgery Volume 23 ; 2017 ; 23 >
+      au < expected ; 2018 ; Egyptian Journal of Cataract and Refractive Surgery Volume 24 ; 2018 ; 24 >
 
   }
 
@@ -8875,7 +8843,7 @@
         eissn = 2589-0611
       >
 
-      param[journal_issn] = 2589-0603
+      param[journal_issn] = WKMP-0143
       param[base_url] = http://www.e-ijas.org/
 
       au < exists ; 2016 ; Imam Journal of Applied Sciences Volume 1 ; 2016 ; 1 >
@@ -8893,7 +8861,7 @@
         eissn = 0973-0311
       >
 
-      param[journal_issn] = 0973-0311
+      param[journal_issn] = 2589-7934
       param[base_url] = http://www.theiaforum.org/
 
       au < exists ; 2016 ; Indian Anaesthetists' Forum Volume 17 ; 2016 ; 17 >
@@ -9009,7 +8977,7 @@
         eissn = 2589-1731
       >
 
-      param[journal_issn] = 2589-1731
+      param[journal_issn] = WKMP-0139
       param[base_url] = http://www.ijcpc.org/
 
       au < exists ; 2017 ; International Journal of Clinicopathological Correlation Volume 1 ; 2017 ; 1 >
@@ -9173,10 +9141,10 @@
         eissn = 2405-8181
       >
 
-      param[journal_issn] = 2618-6012
+      param[journal_issn] = 2405-8181
       param[base_url] = http://www.ijcva.com/
 
-      au < expected ; 2018 ; International Journal of the Cardiovascular Academy Volume 4 ; 2018 ; 4 >
+      au < exists ; 2018 ; International Journal of the Cardiovascular Academy Volume 4 ; 2018 ; 4 >
 
   }
 
@@ -9290,7 +9258,7 @@
         eissn = 2078-7685
       >
 
-      param[journal_issn] = 2543-3288
+      param[journal_issn] = 2078-7685
       param[base_url] = http://www.journalofdiabetology.org/
 
       au < exists ; 2010 ; Journal of Diabetology Volume 1 ; 2010 ; 1 >
@@ -9529,8 +9497,7 @@
       param[journal_issn] = 2395-1540
       param[base_url] = http://www.jrnm.in/
 
-      au < exists ; 2016 ; Journal of Renal Nutrition and Metabolism Volume 1 ; 2016 ; 1 >
-      au < exists ; 2017 ; Journal of Renal Nutrition and Metabolism Volume 2 ; 2017 ; 2 >
+      au < exists ; 2016 ; Journal of Renal Nutrition and Metabolism Volume 2 ; 2016 ; 2 >
       au < manifest ; 2018 ; Journal of Renal Nutrition and Metabolism Volume 3 ; 2018 ; 3 >
 
   }
@@ -9565,7 +9532,7 @@
         eissn = 2589-1669
       >
 
-      param[journal_issn] = 2589-1669
+      param[journal_issn] = WKMP-0149
       param[base_url] = http://www.jsss-journal.com/
 
       au < exists ; 2017 ; Journal of Spinal Studies and Surgery Volume 1 ; 2017 ; 1 >

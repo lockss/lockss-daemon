@@ -572,7 +572,7 @@
     au < notReady ; exists ; 2015 ; CytoJournal Volume 2015 ; 2015 ; 12 ; >
     au < notReady ; exists ; 2016 ; CytoJournal Volume 2016 ; 2016 ; 13 ; > #Found a login page for pdf
     au < notReady ; exists ; 2017 ; CytoJournal Volume 2017 ; 2017 ; 14 ; > #Found a login page for pdf
-    au < manifest ; exists ; 2018 ; CytoJournal Volume 2018 ; 2018 ; 15 ; >
+    au < notReady ; exists ; 2018 ; CytoJournal Volume 2018 ; 2018 ; 15 ; >
 
   }
 
@@ -643,6 +643,8 @@
     au < manifest ; exists ; 2008 ; Hepatitis B Annual Volume 5 ; 2008 ; 5 ; >
     au < manifest ; exists ; 2009 ; Hepatitis B Annual Volume 6 ; 2009 ; 6 ; >
     au < manifest ; exists ; 2010 ; Hepatitis B Annual Volume 7 ; 2010 ; 7 ; >
+    au < manifest ; exists ; 2011 ; Hepatitis B Annual Volume 8 ; 2011 ; 8 ; >
+    au < manifest ; exists ; 2012 ; Hepatitis B Annual Volume 9 ; 2012 ; 9 ; >
 
   }
 
@@ -4476,13 +4478,13 @@
       param[base_url] = http://www.advbiores.net/
       #browse. no back issues page.
 
-      au < manifest ; exists ; 2012 ; Advanced Biomedical Research Volume 1 ; 2012 ; 1 ; >
-      au < manifest ; exists ; 2013 ; Advanced Biomedical Research Volume 2 ; 2013 ; 2 ; >
-      au < manifest ; exists ; 2014 ; Advanced Biomedical Research Volume 3 ; 2014 ; 3 ; >
-      au < manifest ; exists ; 2015 ; Advanced Biomedical Research Volume 4 ; 2015 ; 4 ; >
+      au < notReady ; exists ; 2012 ; Advanced Biomedical Research Volume 1 ; 2012 ; 1 ; >
+      au < notReady ; exists ; 2013 ; Advanced Biomedical Research Volume 2 ; 2013 ; 2 ; >
+      au < notReady ; exists ; 2014 ; Advanced Biomedical Research Volume 3 ; 2014 ; 3 ; >
+      au < notReady ; exists ; 2015 ; Advanced Biomedical Research Volume 4 ; 2015 ; 4 ; >
       au < notReady ; exists ; 2016 ; Advanced Biomedical Research Volume 5 ; 2016 ; 5 ; > #no substance
-      au < manifest ; exists ; 2017 ; Advanced Biomedical Research Volume 6 ; 2017 ; 6 ; >
-      au < manifest ; exists ; 2018 ; Advanced Biomedical Research Volume 7 ; 2018 ; 7 ; >
+      au < notReady ; exists ; 2017 ; Advanced Biomedical Research Volume 6 ; 2017 ; 6 ; >
+      au < notReady ; exists ; 2018 ; Advanced Biomedical Research Volume 7 ; 2018 ; 7 ; >
 
   }
 
@@ -6573,6 +6575,8 @@
       au < finished ; crawling ; 2014 ; Journal of Indian Speech Language & Hearing Association Volume 28 ; 2014 ; 28 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2015 ; Journal of Indian Speech Language & Hearing Association Volume 29 ; 2015 ; 29 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; Journal of Indian Speech Language & Hearing Association Volume 30 ; 2016 ; 30 ; reingest1.clockss.org:8082 > # 500 server error
+      au < exists ; exists ; 2017 ; Journal of Indian Speech Language & Hearing Association Volume 31 ; 2017 ; 31 ; > 
+      au < exists ; exists ; 2018 ; Journal of Indian Speech Language & Hearing Association Volume 32 ; 2018 ; 32 ; > 
 
   }
 
