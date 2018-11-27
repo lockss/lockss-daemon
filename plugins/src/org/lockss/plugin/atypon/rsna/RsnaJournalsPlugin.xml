@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -38,7 +38,7 @@
   <!--  also for https conversion -->
   <entry>
     <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.atypon.BaseAtyponHttpHttpsUrlNormalizer</string>
+    <string>org.lockss.plugin.atypon.rsna.RsnaUrlNormalizer</string>
   </entry>
   <entry>
     <string>plugin_url_fetcher_factory</string>
