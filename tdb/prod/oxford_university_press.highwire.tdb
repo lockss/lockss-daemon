@@ -7628,7 +7628,7 @@
     param[base_url] = http://fs.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume] >
 
-    au < down ; 2006 ; French Studies: A Quarterly Review Volume 60 ; 60 >
+    au < down ; 2006 ; French Studies Volume 60 ; 60 >
 
     }
 
@@ -7638,76 +7638,76 @@
     param[base_url] = http://fs.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; doNotProcess ; 1947 ; French Studies: A Quarterly Review Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1948 ; French Studies: A Quarterly Review Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1949 ; French Studies: A Quarterly Review Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1950 ; French Studies: A Quarterly Review Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1951 ; French Studies: A Quarterly Review Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1952 ; French Studies: A Quarterly Review Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1953 ; French Studies: A Quarterly Review Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1954 ; French Studies: A Quarterly Review Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1955 ; French Studies: A Quarterly Review Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1956 ; French Studies: A Quarterly Review Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1957 ; French Studies: A Quarterly Review Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1958 ; French Studies: A Quarterly Review Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1959 ; French Studies: A Quarterly Review Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1960 ; French Studies: A Quarterly Review Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1961 ; French Studies: A Quarterly Review Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1962 ; French Studies: A Quarterly Review Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1963 ; French Studies: A Quarterly Review Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1964 ; French Studies: A Quarterly Review Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1965 ; French Studies: A Quarterly Review Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1966 ; French Studies: A Quarterly Review Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1967 ; French Studies: A Quarterly Review Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1968 ; French Studies: A Quarterly Review Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1969 ; French Studies: A Quarterly Review Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1970 ; French Studies: A Quarterly Review Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1971 ; French Studies: A Quarterly Review Volume 25 ; 25 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1972 ; French Studies: A Quarterly Review Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1973 ; French Studies: A Quarterly Review Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1974 ; French Studies: A Quarterly Review Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1975 ; French Studies: A Quarterly Review Volume 29 ; 29 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1976 ; French Studies: A Quarterly Review Volume 30 ; 30 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1977 ; French Studies: A Quarterly Review Volume 31 ; 31 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1978 ; French Studies: A Quarterly Review Volume 32 ; 32 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1979 ; French Studies: A Quarterly Review Volume 33 ; 33 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1980 ; French Studies: A Quarterly Review Volume 34 ; 34 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1981 ; French Studies: A Quarterly Review Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1982 ; French Studies: A Quarterly Review Volume 36 ; 36 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1983 ; French Studies: A Quarterly Review Volume 37 ; 37 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1984 ; French Studies: A Quarterly Review Volume 38 ; 38 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1985 ; French Studies: A Quarterly Review Volume 39 ; 39 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1986 ; French Studies: A Quarterly Review Volume 40 ; 40 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1987 ; French Studies: A Quarterly Review Volume 41 ; 41 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1988 ; French Studies: A Quarterly Review Volume 42 ; 42 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1989 ; French Studies: A Quarterly Review Volume 43 ; 43 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1990 ; French Studies: A Quarterly Review Volume 44 ; 44 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1991 ; French Studies: A Quarterly Review Volume 45 ; 45 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1992 ; French Studies: A Quarterly Review Volume 46 ; 46 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1993 ; French Studies: A Quarterly Review Volume 47 ; 47 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1994 ; French Studies: A Quarterly Review Volume 48 ; 48 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1995 ; French Studies: A Quarterly Review Volume 49 ; 49 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1996 ; French Studies: A Quarterly Review Volume 50 ; 50 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1997 ; French Studies: A Quarterly Review Volume 51 ; 51 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1998 ; French Studies: A Quarterly Review Volume 52 ; 52 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 1999 ; French Studies: A Quarterly Review Volume 53 ; 53 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2000 ; French Studies: A Quarterly Review Volume 54 ; 54 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; French Studies: A Quarterly Review Volume 55 ; 55 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; French Studies: A Quarterly Review Volume 56 ; 56 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2003 ; French Studies: A Quarterly Review Volume 57 ; 57 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2004 ; French Studies: A Quarterly Review Volume 58 ; 58 >
-    au < HighWireStrVolPlugin ; down ; 2005 ; French Studies: A Quarterly Review Volume 59 ; 59 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; French Studies: A Quarterly Review Volume 60 ; 60 >
-    au < HighWireStrVolPlugin ; down ; 2007 ; French Studies: A Quarterly Review Volume 61 ; 61 >
-    au < HighWirePressH20Plugin ; down ; 2008 ; French Studies: A Quarterly Review Volume 62 ; 62 >
-    au < HighWirePressH20Plugin ; down ; 2009 ; French Studies: A Quarterly Review Volume 63 ; 63 >
-    au < HighWirePressH20Plugin ; down ; 2010 ; French Studies: A Quarterly Review Volume 64 ; 64 >
-    au < HighWirePressH20Plugin ; down ; 2011 ; French Studies: A Quarterly Review Volume 65 ; 65 >
-    au < HighWirePressH20Plugin ; down ; 2012 ; French Studies: A Quarterly Review Volume 66 ; 66 >
-    au < HighWirePressH20Plugin ; down ; 2013 ; French Studies: A Quarterly Review Volume 67 ; 67 >
-    au < HighWirePressH20Plugin ; down ; 2014 ; French Studies: A Quarterly Review Volume 68 ; 68 >
-    au < HighWirePressH20Plugin ; down ; 2015 ; French Studies: A Quarterly Review Volume 69 ; 69 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2016 ; French Studies: A Quarterly Review Volume 70 ; 70 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1947 ; French Studies Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1948 ; French Studies Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1949 ; French Studies Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1950 ; French Studies Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1951 ; French Studies Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1952 ; French Studies Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1953 ; French Studies Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1954 ; French Studies Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1955 ; French Studies Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1956 ; French Studies Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1957 ; French Studies Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1958 ; French Studies Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1959 ; French Studies Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1960 ; French Studies Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1961 ; French Studies Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1962 ; French Studies Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1963 ; French Studies Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1964 ; French Studies Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1965 ; French Studies Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1966 ; French Studies Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1967 ; French Studies Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1968 ; French Studies Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1969 ; French Studies Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1970 ; French Studies Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1971 ; French Studies Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1972 ; French Studies Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1973 ; French Studies Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1974 ; French Studies Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1975 ; French Studies Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1976 ; French Studies Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1977 ; French Studies Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1978 ; French Studies Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1979 ; French Studies Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1980 ; French Studies Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1981 ; French Studies Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1982 ; French Studies Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1983 ; French Studies Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1984 ; French Studies Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1985 ; French Studies Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1986 ; French Studies Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1987 ; French Studies Volume 41 ; 41 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1988 ; French Studies Volume 42 ; 42 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1989 ; French Studies Volume 43 ; 43 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1990 ; French Studies Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1991 ; French Studies Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1992 ; French Studies Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1993 ; French Studies Volume 47 ; 47 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1994 ; French Studies Volume 48 ; 48 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1995 ; French Studies Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1996 ; French Studies Volume 50 ; 50 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1997 ; French Studies Volume 51 ; 51 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1998 ; French Studies Volume 52 ; 52 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1999 ; French Studies Volume 53 ; 53 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2000 ; French Studies Volume 54 ; 54 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; French Studies Volume 55 ; 55 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; French Studies Volume 56 ; 56 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2003 ; French Studies Volume 57 ; 57 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2004 ; French Studies Volume 58 ; 58 >
+    au < HighWireStrVolPlugin ; down ; 2005 ; French Studies Volume 59 ; 59 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; French Studies Volume 60 ; 60 >
+    au < HighWireStrVolPlugin ; down ; 2007 ; French Studies Volume 61 ; 61 >
+    au < HighWirePressH20Plugin ; down ; 2008 ; French Studies Volume 62 ; 62 >
+    au < HighWirePressH20Plugin ; down ; 2009 ; French Studies Volume 63 ; 63 >
+    au < HighWirePressH20Plugin ; down ; 2010 ; French Studies Volume 64 ; 64 >
+    au < HighWirePressH20Plugin ; down ; 2011 ; French Studies Volume 65 ; 65 >
+    au < HighWirePressH20Plugin ; down ; 2012 ; French Studies Volume 66 ; 66 >
+    au < HighWirePressH20Plugin ; down ; 2013 ; French Studies Volume 67 ; 67 >
+    au < HighWirePressH20Plugin ; down ; 2014 ; French Studies Volume 68 ; 68 >
+    au < HighWirePressH20Plugin ; down ; 2015 ; French Studies Volume 69 ; 69 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2016 ; French Studies Volume 70 ; 70 >
 
     }
 

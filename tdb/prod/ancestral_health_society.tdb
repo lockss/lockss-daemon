@@ -13,13 +13,13 @@
     >
     
     plugin = org.lockss.plugin.bepress.BePressPlugin 
-    param[base_url] = http://jevohealth.com/
+    #param[base_url] = http://jevohealth.com/
     param[journal_abbr] = journal
-    implicit < status ; year ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume] ; param[base_url] >
 
-    au < released ; 2013 ; Journal of Evolution and Health Volume 1 ; 1 >
-    au < manifest ; 2017 ; Journal of Evolution and Health Volume 2 ; 2 >
-    au < expected ; 2018 ; Journal of Evolution and Health Volume 3 ; 3 >
+    au < released ; 2013 ; Journal of Evolution and Health Volume 1 ; 1 ; http://jevohealth.com/ >
+    au < exists ; 2017 ; Journal of Evolution and Health Volume 2 ; 2 ; https://jevohealth.com/ >
+    au < expected ; 2018 ; Journal of Evolution and Health Volume 3 ; 3 ; https://jevohealth.com/ >
 
   }
 

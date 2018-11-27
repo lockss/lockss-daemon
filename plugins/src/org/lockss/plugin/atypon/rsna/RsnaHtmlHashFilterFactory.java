@@ -82,11 +82,9 @@ public class RsnaHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "tocListWidget"),
         // abs, ref - contents only
         HtmlNodeFilters.tag("article"),
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-            "literatumPublicationContentWidget"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumPublicationContentWidget"),
         // early 2017- changed to <div class
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-            "downloadCitationsWidget"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "downloadCitationsWidget"),
         // http://pubs.rsna.org/action/showPopup?citid=citart1&id=eq3&doi=10.1148%2Fradiol.2016151832
         HtmlNodeFilters.tagWithAttributeRegex("body", "class", "popupBody"),
         // citation
@@ -100,6 +98,9 @@ public class RsnaHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
     NodeFilter[] excludeNodes = new NodeFilter[] {       
         // on toc - button "test SA-CME" next to each article
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "btn-holder"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "header"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article__aside"),
+        HtmlNodeFilters.tagWithAttribute("section", "class", "article__metrics"),
     };
     return super.createFilteredInputStream(au, in, encoding, 
                                            includeNodes, excludeNodes);
@@ -128,14 +129,14 @@ public class RsnaHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
     IOUtils.copy(new RsnaHtmlHashFilterFactory().createFilteredInputStream(null, 
         new FileInputStream(file1), Constants.ENCODING_UTF_8), 
         new FileOutputStream(file1 + ".hout"));
-    IOUtils.copy(new RsnaHtmlHashFilterFactory().createFilteredInputStream(null,
-        new FileInputStream(file2), Constants.ENCODING_UTF_8),
-        new FileOutputStream(file2 + ".hout"));
-    IOUtils.copy(new RsnaHtmlHashFilterFactory().createFilteredInputStream(null,
-        new FileInputStream(file3), Constants.ENCODING_UTF_8),
-        new FileOutputStream(file3 + ".hout"));
-    IOUtils.copy(new RsnaHtmlHashFilterFactory().createFilteredInputStream(null,
-        new FileInputStream(file4), Constants.ENCODING_UTF_8),
-        new FileOutputStream(file4 + ".hout"));
+//    IOUtils.copy(new RsnaHtmlHashFilterFactory().createFilteredInputStream(null,
+//        new FileInputStream(file2), Constants.ENCODING_UTF_8),
+//        new FileOutputStream(file2 + ".hout"));
+//    IOUtils.copy(new RsnaHtmlHashFilterFactory().createFilteredInputStream(null,
+//        new FileInputStream(file3), Constants.ENCODING_UTF_8),
+//        new FileOutputStream(file3 + ".hout"));
+//    IOUtils.copy(new RsnaHtmlHashFilterFactory().createFilteredInputStream(null,
+//        new FileInputStream(file4), Constants.ENCODING_UTF_8),
+//        new FileOutputStream(file4 + ".hout"));
   }
 }
