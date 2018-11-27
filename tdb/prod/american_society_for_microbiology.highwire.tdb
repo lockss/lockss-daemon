@@ -965,6 +965,23 @@
 
     }
   
+#    {
+#      title <
+#        name = Microbiology Resource Announcements ;
+#        issn = ? 
+#      >
+#      param[base_url] = https://mra.asm.org/
+#
+#      au < asm.ASMDrupalPlugin ; exists ; 2013 ; Microbiology Resource Announcements Volume 1 ; 1 >
+#      au < asm.ASMDrupalPlugin ; exists ; 2014 ; Microbiology Resource Announcements Volume 2 ; 2 >
+#      au < asm.ASMDrupalPlugin ; exists ; 2015 ; Microbiology Resource Announcements Volume 3 ; 3 >
+#      au < asm.ASMDrupalPlugin ; exists ; 2016 ; Microbiology Resource Announcements Volume 4 ; 4 >
+#      au < asm.ASMDrupalPlugin ; exists ; 2017 ; Microbiology Resource Announcements Volume 5 ; 5 >
+#      au < asm.ASMDrupalPlugin ; exists ; 2018 ; Microbiology Resource Announcements Volume 6 ; 6 >
+#      au < asm.ASMDrupalPlugin ; exists ; 2018 ; Microbiology Resource Announcements Volume 7 ; 7 >
+#
+#    }
+#  
   }
 
 }
