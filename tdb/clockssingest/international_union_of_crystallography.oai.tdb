@@ -56,15 +56,15 @@
 
     au < deepCrawl ; exists ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 January ; 2017-01 ; >
     au < deepCrawl ; exists ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 February ; 2017-02 ; >
-    au < frozen ; exists ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 March ; 2017-03 ; >
-    au < frozen ; exists ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 April ; 2017-04 ; >
+    au < finished ; manifest ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 March ; 2017-03 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 April ; 2017-04 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 May ; 2017-05 ; >
     au < deepCrawl ; exists ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 June ; 2017-06 ; >
     au < deepCrawl ; exists ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 July ; 2017-07 ; >
     au < deepCrawl ; exists ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 August ; 2017-08 ; >
     au < deepCrawl ; exists ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 September ; 2017-09 ; >
-    au < frozen ; exists ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 October ; 2017-10 ; >
-    au < frozen ; exists ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 November ; 2017-11 ; >
+    au < finished ; manifest ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 October ; 2017-10 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 November ; 2017-11 ; reingest4.clockss.org:8082 >
     au < doesNotExist ; doesNotExist ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 December ; 2017-12 ; > # No records within date
 
     au < crawling ; exists ; 2018 ; 74 ; Acta Crystallographica Section E: Crystallographic Communications Volume 74 January ; 2018-01 ; >
@@ -395,16 +395,16 @@
     au < frozen ; exists ; 2016 ; 1 ; IUCrData Volume 1 December ; 2016-12 ; >
     
     au < frozen ; exists ; 2017 ; 2 ; IUCrData Volume 2 January ; 2017-01 ; >
-    au < frozen ; exists ; 2017 ; 2 ; IUCrData Volume 2 February ; 2017-02 ; >
-    au < frozen ; exists ; 2017 ; 2 ; IUCrData Volume 2 March ; 2017-03 ; >
-    au < frozen ; exists ; 2017 ; 2 ; IUCrData Volume 2 April ; 2017-04 ; >
-    au < frozen ; exists ; 2017 ; 2 ; IUCrData Volume 2 May ; 2017-05 ; >
-    au < frozen ; exists ; 2017 ; 2 ; IUCrData Volume 2 June ; 2017-06 ; >
-    au < frozen ; exists ; 2017 ; 2 ; IUCrData Volume 2 July ; 2017-07 ; >
-    au < frozen ; exists ; 2017 ; 2 ; IUCrData Volume 2 August ; 2017-08 ; >
-    au < frozen ; exists ; 2017 ; 2 ; IUCrData Volume 2 September ; 2017-09 ; >
-    au < frozen ; exists ; 2017 ; 2 ; IUCrData Volume 2 October ; 2017-10 ; >
-    au < frozen ; exists ; 2017 ; 2 ; IUCrData Volume 2 November ; 2017-11 ; >
+    au < finished ; manifest ; 2017 ; 2 ; IUCrData Volume 2 February ; 2017-02 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2017 ; 2 ; IUCrData Volume 2 March ; 2017-03 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2017 ; 2 ; IUCrData Volume 2 April ; 2017-04 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2017 ; 2 ; IUCrData Volume 2 May ; 2017-05 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2017 ; 2 ; IUCrData Volume 2 June ; 2017-06 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2017 ; 2 ; IUCrData Volume 2 July ; 2017-07 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2017 ; 2 ; IUCrData Volume 2 August ; 2017-08 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2017 ; 2 ; IUCrData Volume 2 September ; 2017-09 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2017 ; 2 ; IUCrData Volume 2 October ; 2017-10 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2017 ; 2 ; IUCrData Volume 2 November ; 2017-11 ; reingest4.clockss.org:8082 >
     au < testing ; exists ; 2017 ; 2 ; IUCrData Volume 2 December ; 2017-12 ; >
     
     au < crawling ; exists ; 2018 ; 3 ; IUCrData Volume 3 January ; 2018-01 ; >
