@@ -62,8 +62,8 @@ echo "GLN. Plugin/names without duplicates = $uniqAUs"
 diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
 #
 # Find duplicate released names in the gln title database
-#echo "---------------------"
-#echo "Duplicate Released Names. Commented out."
+echo "---------------------"
+echo "GLN. Duplicate Released Names. Commented out."
 #scripts/tdb/tdbout -P -c name tdb/prod/*.tdb | sort > $tpath/allAUs
 #uniq $tpath/allAUs > $tpath/dedupedAUs
 #allAUs=`cat $tpath/allAUs | wc -l`
@@ -100,13 +100,14 @@ diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
 #
 # Find duplicate released names in the clockss title database
 echo "---------------------"
-scripts/tdb/tdbout -PCZI -c name tdb/clockssingest/*.tdb | sort > $tpath/allAUs
-uniq $tpath/allAUs > $tpath/dedupedAUs
-allAUs=`cat $tpath/allAUs | wc -l`
-uniqAUs=`cat $tpath/dedupedAUs | wc -l`
-echo "CLOCKSS. All Released names = $allAUs"
-echo "CLOCKSS. Released names without duplicates = $uniqAUs"
-diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
+echo "Clockss. Duplicate Released Names. Commented out."
+#scripts/tdb/tdbout -PCZI -c name tdb/clockssingest/*.tdb | sort > $tpath/allAUs
+#uniq $tpath/allAUs > $tpath/dedupedAUs
+#allAUs=`cat $tpath/allAUs | wc -l`
+#uniqAUs=`cat $tpath/dedupedAUs | wc -l`
+#echo "CLOCKSS. All Released names = $allAUs"
+#echo "CLOCKSS. Released names without duplicates = $uniqAUs"
+#diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
 #
 # Find number of AUs ready for release in the clockssingest title database
 echo "----------------------"
