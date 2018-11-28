@@ -3,7 +3,7 @@
 
 /*
 
-Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,12 +37,15 @@ import java.util.regex.Pattern;
 
 import org.jsoup.nodes.Element;
 import org.jsoup.nodes.Node;
+import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.extractor.HtmlFormExtractor;
 import org.lockss.extractor.JsoupHtmlLinkExtractor;
 import org.lockss.extractor.LinkExtractorFactory;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.AuUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
+import org.lockss.util.UrlUtil;
 
 /* Jstor needs its own LinkExtractor so that it can generate a link
  * for citation download from the DOI information stored on TOC pages.
@@ -88,8 +91,6 @@ implements LinkExtractorFactory {
                                     generators) {
       super(enableStats, processForms, restrictors, generators);
       registerScriptTagExtractor();
-      
-      // TODO Auto-generated constructor stub
     }
 
 
@@ -112,7 +113,11 @@ implements LinkExtractorFactory {
           if (!StringUtil.isNullString(scriptHtml)) {
             Matcher mat = SCRIPT_SRC_PAT.matcher(scriptHtml);
             if (mat.find()) {
-              cb.foundLink(mat.group(1));
+              String url = mat.group(1);
+              if (UrlUtil.isSameHost(au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey()), url)) {
+                url = AuUtil.normalizeHttpHttpsFromBaseUrl(au, url);
+              }
+              cb.foundLink(url);
             }
           }
           super.tagBegin(node, au, cb);

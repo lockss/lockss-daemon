@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>down. moved to https</string>
+    <string>testing. moved to https</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>12</string>
+    <string>13</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -36,18 +36,22 @@
     <string>required_daemon_version</string>
     <!-- url consumer with storeAtOrigUrl convenience method -->
     <string>1.68.0</string>
-  </entry>  
+  </entry>
   <entry>
     <string>plugin_publishing_platform</string>
     <string>JSTOR</string>
-  </entry>    
+  </entry>
   <entry>
     <string>au_name</string>
     <string>"JSTOR Current Scholarship Plugin, Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
   </entry>
+  <!--  start urls to support http to https conversion -->
   <entry>
     <string>au_start_url</string>
-    <string>"%sclockss-manifest/%s/%d", base_url, journal_id, year</string>
+    <list>
+      <string>"%sclockss-manifest/%s/%d", to_http(base_url), journal_id, year</string>
+      <string>"%sclockss-manifest/%s/%d", to_https(base_url), journal_id, year</string>
+    </list>
   </entry>
   <entry>
     <string>au_crawlrules</string>
@@ -70,24 +74,24 @@
     //http://www.jstor.org/stable/get_asset/10.5325/chaucerrev.50.3-4.0220?path=XXXX
      -->
     <list>
-      <string>1,"^https?://assets\.adobedtm\.com/"</string>    
-      <string>1,"^%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(\?(v|appId)=.+)?$", base_url</string>
+      <string>1,"^https?://assets\.adobedtm\.com/"</string>
+      <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(\?(v|appId)=.+)?$", url_host(base_url)</string>
       <!--  spider trap if it's like other Atypon; doesn't matter what the intermed dir is-->
-      <string>2,"^%s(doi|citation)/[^/]+/[0-9.]+/[-.9]+$", base_url</string>
-      <string>2,"^%sstable/([^/]+/)?[0-9.]+/[-.9]+$", base_url</string>
+      <string>2,"^https?://%s/(doi|citation)/[^/]+/[0-9.]+/[-.9]+$", url_host(base_url)</string>
+      <string>2,"^https?://%s/stable/([^/]+/)?[0-9.]+/[-.9]+$", url_host(base_url)</string>
       <!-- regular/new style -->
       <!--  unfortunately amerjarch uses aja as prefix on article poriton of doi, so can't require journal_id -->
-      <string>1,"^%sstable/(pdf/)?[.0-9]+/[a-z]+\.", base_url, journal_id</string>
+      <string>1,"^https?://%s/stable/(pdf/)?[.0-9]+/[a-z]+\.", url_host(base_url)</string>
       <!-- legacy style -->
-      <string>1,"^%sstable/[0-9.]+/i[0-9]+$", base_url</string>
-      <string>1,"^%sstable/i[0-9]+$", base_url</string>
-      <string>1,"^%sstable/([0-9.]+/)?[0-9]+$", base_url</string>
-      <string>1,"^%sstable/pdf/[0-9]+\.pdf", base_url</string>
+      <string>1,"^https?://%s/stable/[0-9.]+/i[0-9]+$", url_host(base_url)</string>
+      <string>1,"^https?://%s/stable/i[0-9]+$", url_host(base_url)</string>
+      <string>1,"^https?://%s/stable/([0-9.]+/)?[0-9]+$", url_host(base_url)</string>
+      <string>1,"^https?://%s/stable/pdf/[0-9]+\.pdf", url_host(base_url)</string>
       <!--  citation support -->
-      <string>1,"^%sdoi/xml/[.0-9]+/", base_url</string>
-      <string>1,"^%scitation/(info|ris|text)/[.0-9]+/", base_url</string>
+      <string>1,"^https?://%s/doi/xml/[.0-9]+/", url_host(base_url)</string>
+      <string>1,"^https?://%s/citation/(info|ris|text)/[.0-9]+/", url_host(base_url)</string>
       <!--  images - for now leave this very open -->
-      <string>1,"^%sstable/get_asset/", base_url</string>
+      <string>1,"^https?://%s/stable/get_asset/", url_host(base_url)</string>
     </list>
   </entry>
   <entry>
@@ -111,23 +115,23 @@
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
-            <org.lockss.daemon.ConfigParamDescr>
-                <key>year</key>
-                <displayName>Year</displayName>
-                <description>Four digit year (e.g., 2004)</description>
-                <type>4</type>
-                <size>4</size>
-                <definitional>true</definitional>
-                <defaultOnly>false</defaultOnly>
-            </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
     </list>
-  </entry>  
+  </entry>
   <entry>
-     <string>au_substance_url_pattern</string>
-     <list>
-       <!--  newer use two part doi as article identifier and end in pdf -->
-       <!--  legacy uses article identifier and end in pdf -->
-        <string>"^%sstable/pdf/([.0-9]+/)?[^/?&amp;]+\.pdf$", base_url</string>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <!--  newer use two part doi as article identifier and end in pdf -->
+      <!--  legacy uses article identifier and end in pdf -->
+      <string>"^https?://%s/stable/pdf/([.0-9]+/)?[^/?&amp;]+\.pdf$", url_host(base_url)</string>
     </list>
   </entry>
   <entry>
@@ -136,7 +140,7 @@
       <string>403=org.lockss.plugin.jstor.JstorCSHttpResponseHandler</string>
       <string>503=org.lockss.plugin.jstor.JstorCSHttpResponseHandler</string>
     </list>
-  </entry>  
+  </entry>
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.jstor.JstorCSHtmlHashFilterFactory</string>
@@ -174,17 +178,21 @@
         <string>org.lockss.plugin.jstor.JstorRisMetadataExtractorFactory</string>
       </entry>
     </map>
-  </entry>  
-  <!-- redirect gets swallowed so no need for normalizing off arguments
+  </entry>
+  <!--  also for https conversion -->
   <entry>
     <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.jstor.JstorUrlNormalizer</string>
+    <string>org.lockss.plugin.BaseUrlHttpHttpsUrlNormalizer</string>
   </entry>
-  -->
+  <entry>
+    <string>plugin_url_fetcher_factory</string>
+    <string>org.lockss.plugin.base.HttpToHttpsUrlFetcherFactory</string>
+  </entry>
   <entry>
     <string>plugin_url_consumer_factory</string>
     <string>org.lockss.plugin.jstor.JstorCSUrlConsumerFactory</string>
-  </entry>  
+  </entry>
+  <!-- end changes for https conversion -->
   <entry>
     <string>text/html_link_extractor_factory</string>
     <string>org.lockss.plugin.jstor.JstorHtmlLinkExtractorFactory</string>
@@ -193,7 +201,7 @@
     <string>au_permitted_host_pattern</string>
     <string>"assets\.adobedtm\.com"</string>
   </entry>
-      <!--  versioning or variants for style support -->  
+      <!--  versioning or variants for style support -->
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
     <!-- base_url /assets/ if ends .css, .js, .gif, .png, jpg, .jpeg etc
@@ -206,7 +214,7 @@
   </entry>
   <!-- don't worry about polling for those low-importance files that will 
        repair from peer in time (eg due to versioning, etc) -->
-   <entry>
+  <entry>
     <string>au_url_poll_result_weight</string>
     <list>
       <string>://[^/]+/assets/.+\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$, 0</string>
@@ -224,5 +232,5 @@
   <entry>
     <string>plugin_au_config_user_msg</string>
     <string>JSTOR hosts this archival unit (AU) and may require you to register the IP address of this LOCKSS box as a crawler. For more information, visit the &lt;a href=&apos;http://www.lockss.org/support/use-a-lockss-box/adding-titles/publisher-ip-address-registration-contacts-for-global-lockss-network/&apos;&gt;LOCKSS IP address registration page&lt;/a&gt;.</string>
-  </entry>  
+  </entry>
 </map>

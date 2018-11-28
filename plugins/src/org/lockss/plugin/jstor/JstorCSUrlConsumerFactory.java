@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,12 +37,14 @@ import java.util.regex.Pattern;
 
 import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.plugin.*;
-import org.lockss.plugin.base.SimpleUrlConsumer;
+import org.lockss.plugin.base.HttpToHttpsUrlConsumer;
+import org.lockss.plugin.base.HttpToHttpsUrlConsumerFactory;
 import org.lockss.util.Logger;
+import org.lockss.util.UrlUtil;
 /**
  * @since 1.68.0 with storeAtOrigUrl()
  */
-public class JstorCSUrlConsumerFactory implements UrlConsumerFactory {
+public class JstorCSUrlConsumerFactory extends HttpToHttpsUrlConsumerFactory {
   private static final Logger log = Logger.getLogger(JstorCSUrlConsumerFactory.class);
 
   @Override
@@ -86,7 +88,7 @@ public class JstorCSUrlConsumerFactory implements UrlConsumerFactory {
    *       
    * @since 1.68.0
    */
-  public class JstorCSUrlConsumer extends SimpleUrlConsumer {
+  public class JstorCSUrlConsumer extends HttpToHttpsUrlConsumer {
 
     // originating string must be highly flexible because it could take several forms
     // no worry about inadvertently catching issue, because the html wouldn't redirect
@@ -141,10 +143,11 @@ public class JstorCSUrlConsumerFactory implements UrlConsumerFactory {
         log.debug3("FUD: " + fud.toString());
       }
       boolean should =  fud.redirectUrls != null
-          && ( (fud.redirectUrls.size() == 1 && fud.redirectUrls.get(0).equals(fud.fetchUrl))
-              || (fud.redirectUrls.size() == 2 && fud.redirectUrls.get(1).equals(fud.fetchUrl)) ) 
-              && destFullTextPat.matcher(fud.fetchUrl).find()
-              && origFullTextPat.matcher(fud.origUrl).find();
+          && ((fud.redirectUrls.size() == 1 && fud.redirectUrls.get(0).equals(fud.fetchUrl))
+              || (fud.redirectUrls.size() == 2 && fud.redirectUrls.get(1).equals(fud.fetchUrl))
+              || (UrlUtil.isHttpUrl(fud.origUrl) && UrlUtil.isHttpsUrl(fud.fetchUrl)))
+          && destFullTextPat.matcher(fud.fetchUrl).find()
+          && origFullTextPat.matcher(fud.origUrl).find();
       return should;
     }
 
@@ -157,7 +160,7 @@ public class JstorCSUrlConsumerFactory implements UrlConsumerFactory {
           ((String)fud.headers.get(CachedUrl.PROPERTY_CONTENT_TYPE)).contains("text/html"));
       log.debug3("is image original content type incorrect? " + isWrong);
       return isWrong;
-    }    
+    }
 
     // We only go in to this routine if we know the content-type is set (not null) 
     private void correctContentTypeHeader() {

@@ -37,6 +37,7 @@ import org.htmlparser.filters.*;
 import org.htmlparser.nodes.TextNode;
 import org.htmlparser.tags.*;
 import org.lockss.filter.FilterUtil;
+import org.lockss.filter.StringFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
@@ -79,8 +80,8 @@ public class JstorCSHtmlHashFilterFactory implements FilterFactory {
               }
               return false;
             }
-          },          
- 
+          },
+
           // toc - contents only
           HtmlNodeFilters.tagWithAttribute("div", "class", "toc-view"),
           // citation/info
@@ -100,7 +101,7 @@ public class JstorCSHtmlHashFilterFactory implements FilterFactory {
           HtmlNodeFilters.tagWithAttribute("ul","id","export-bulk-drop"),
           
           // the value of data-issue-key is variable - just remove the associated tag
-          HtmlNodeFilters.tagWithAttributeRegex("div", "data-issue-key", ".*"),
+          HtmlNodeFilters.tagWithAttribute("div", "data-issue-key"),
 
       };
       return getFilteredInputStream(au, in, encoding,
@@ -125,7 +126,8 @@ public class JstorCSHtmlHashFilterFactory implements FilterFactory {
                  );
       
       Reader reader = FilterUtil.getReader(filtered, encoding);
-      return new ReaderInputStream(reader); 
+      Reader httpFilter = new StringFilter(reader, "http:", "https:");
+      return new ReaderInputStream(httpFilter); 
     }
   
 }

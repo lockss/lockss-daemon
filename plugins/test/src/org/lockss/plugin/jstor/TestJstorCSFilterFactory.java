@@ -68,7 +68,7 @@ public class TestJstorCSFilterFactory extends LockssTestCase {
 
   private static final String manifestHtmlFiltered =
       "<ul>\n" +
-          "  <li><a href=\"http://www.jstor.org/stable/10.2972/hesperia.84.issue-1\">10.2972/hesperia.84.issue-1</a></li>\n" +
+          "  <li><a href=\"https://www.jstor.org/stable/10.2972/hesperia.84.issue-1\">10.2972/hesperia.84.issue-1</a></li>\n" +
           "</ul>";
 
 

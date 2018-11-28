@@ -57,7 +57,7 @@ public class TestJstorCSArchivalUnit extends LockssTestCase {
   static final String JID_KEY = ConfigParamDescr.JOURNAL_ID.getKey();
   static final String YEAR_KEY = ConfigParamDescr.YEAR.getKey();
   static final String ROOT_URL = "http://www.jstor.org/"; 
-  
+  static final String ROOTS_URL = "https://www.jstor.org/"; 
   static Logger log = Logger.getLogger(TestJstorCSArchivalUnit.class);
   
   static final String PLUGIN_ID = "org.lockss.plugin.jstor.JstorCurrentScholarshipPlugin";
@@ -69,12 +69,13 @@ public class TestJstorCSArchivalUnit extends LockssTestCase {
   // turn the &amp; to &
   static final String jstorSubstanceList[] = 
     {
-    "^http\\:\\/\\/www\\.jstor\\.org\\/stable/pdf/([.0-9]+/)?[^/?&]+\\.pdf$",
+    // "^http\\:\\/\\/www\\.jstor\\.org\\/stable/pdf/([.0-9]+/)?[^/?&]+\\.pdf$",
+    "^https?://www\\.jstor\\.org/stable/pdf/([.0-9]+/)?[^/?&]+\\.pdf$", // different string normalization
     };
   static final String jstorRepairList[] = 
     {
     "://[^/]+/assets/.+\\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$",
-    "://assets\\.adobedtm\\.com/.+\\.(css|gif|jpe?g|js|png)$",    
+    "://assets\\.adobedtm\\.com/.+\\.(css|gif|jpe?g|js|png)$",
     };  
   
   public void setUp() throws Exception {
@@ -127,12 +128,15 @@ public class TestJstorCSArchivalUnit extends LockssTestCase {
     //manifest page
     //http://www.jstor.org/clockss-manifest/hesperia/2015
     shouldCacheTest(ROOT_URL+"clockss-manifest/xxxx/2015", true, JSAu, cus);    
+    shouldCacheTest(ROOTS_URL+"clockss-manifest/xxxx/2015", true, JSAu, cus);    
 
     // YES: toc page reached off a manifest page
     //http://www.jstor.org/stable/10.2972/hesperia.84.issue-3
     //http://www.jstor.org/stable/i40044030
-    shouldCacheTest(ROOT_URL+"stable/10.2972/xxxx.84.issue-3", true, JSAu, cus);    
+    shouldCacheTest(ROOT_URL+"stable/10.2972/xxxx.84.issue-3", true, JSAu, cus);
     shouldCacheTest(ROOT_URL+"stable/10.2972/i40044030", true, JSAu, cus);
+    shouldCacheTest(ROOTS_URL+"stable/10.2972/xxxx.84.issue-3", true, JSAu, cus);
+    shouldCacheTest(ROOTS_URL+"stable/10.2972/i40044030", true, JSAu, cus);
     // alternate version of legacy index on prev/next links
     shouldCacheTest(ROOT_URL+"stable/i40044030", true, JSAu, cus);    
 
@@ -147,22 +151,33 @@ public class TestJstorCSArchivalUnit extends LockssTestCase {
     shouldCacheTest(ROOT_URL+"stable/10.2972/xxxx.84.3.0515", true, JSAu, cus);
     shouldCacheTest(ROOT_URL+"stable/pdf/10.2972/xxxx.84.3.0515.pdf", true, JSAu, cus);
     shouldCacheTest(ROOT_URL+"doi/xml/10.2972/xxxx.84.3.0515", true, JSAu, cus);
+    shouldCacheTest(ROOTS_URL+"stable/10.2972/xxxx.84.3.0515", true, JSAu, cus);
+    shouldCacheTest(ROOTS_URL+"stable/pdf/10.2972/xxxx.84.3.0515.pdf", true, JSAu, cus);
+    shouldCacheTest(ROOTS_URL+"doi/xml/10.2972/xxxx.84.3.0515", true, JSAu, cus);
     // old style article pages from hesperia
     shouldCacheTest(ROOT_URL+"stable/40981057", true, JSAu, cus);
     shouldCacheTest(ROOT_URL+"stable/10.2307/40981054", true, JSAu, cus);
     shouldCacheTest(ROOT_URL+"stable/pdf/40981057.pdf", true, JSAu, cus);
     shouldCacheTest(ROOT_URL+"doi/xml/10.2307/40981057", true, JSAu, cus);    
+    shouldCacheTest(ROOTS_URL+"stable/40981057", true, JSAu, cus);
+    shouldCacheTest(ROOTS_URL+"stable/10.2307/40981054", true, JSAu, cus);
+    shouldCacheTest(ROOTS_URL+"stable/pdf/40981057.pdf", true, JSAu, cus);
+    shouldCacheTest(ROOTS_URL+"doi/xml/10.2307/40981057", true, JSAu, cus);    
     
     // YES -version of PDF with argument -- it will get swallowed as redirect
     shouldCacheTest(ROOT_URL+"stable/pdf/11.1111/xxxx.-abc.12G.pdf?acceptTC=true&coverpage=false", true, JSAu, cus);
+    shouldCacheTest(ROOTS_URL+"stable/pdf/11.1111/xxxx.-abc.12G.pdf?acceptTC=true&coverpage=false", true, JSAu, cus);
     
     //american journal of archaeology uses alernative to journal_id as doi component "aja" not "amerjarch"
     shouldCacheTest(ROOT_URL+"stable/10.3764/aja.120.4.0603", true, JSAu, cus);
     shouldCacheTest(ROOT_URL+"stable/pdf/10.3764/aja.120.4.0603.pdf", true, JSAu, cus);
+    shouldCacheTest(ROOTS_URL+"stable/10.3764/aja.120.4.0603", true, JSAu, cus);
+    shouldCacheTest(ROOTS_URL+"stable/pdf/10.3764/aja.120.4.0603.pdf", true, JSAu, cus);
     
     //image from full-text - this url is consistent for this image
     // came from http://www.jstor.org/stable/10.5325/critphilrace.3.1.0028
     shouldCacheTest(ROOT_URL + "stable/get_asset/10.5325/critphilrace.3.1.0028?path=czM6Ly9zZXF1b2lhLWNlZGFyL2NpZC1wcm9kLTEvNzQ3YzEyNWMvMzRlMy8zMWExLzg2ZDcvZDA2OGMwZTBiMTRlL2NyaXRwaGlscmFjZS4zLjEuaXNzdWUtMS9jcml0cGhpbHJhY2UuMy4xLjAwMjgvZ3JhcGhpYy9jcml0cGhpbHJhY2UuMy4xLjAwMjgtZjAxLnRpZl9fLi5NRURJVU0uR0lG", true, JSAu, cus);
+    shouldCacheTest(ROOTS_URL + "stable/get_asset/10.5325/critphilrace.3.1.0028?path=czM6Ly9zZXF1b2lhLWNlZGFyL2NpZC1wcm9kLTEvNzQ3YzEyNWMvMzRlMy8zMWExLzg2ZDcvZDA2OGMwZTBiMTRlL2NyaXRwaGlscmFjZS4zLjEuaXNzdWUtMS9jcml0cGhpbHJhY2UuMy4xLjAwMjgvZ3JhcGhpYy9jcml0cGhpbHJhY2UuMy4xLjAwMjgtZjAxLnRpZl9fLi5NRURJVU0uR0lG", true, JSAu, cus);
     
     // YES - citation download information 
     //http://www.jstor.org/citation/info/10.2972/hesperia.84.3.0515
@@ -172,8 +187,13 @@ public class TestJstorCSArchivalUnit extends LockssTestCase {
     shouldCacheTest(ROOT_URL+"citation/info/10.2307/40981057", true, JSAu, cus);
     shouldCacheTest(ROOT_URL+"citation/ris/10.2307/40981057", true, JSAu, cus);
     shouldCacheTest(ROOT_URL+"citation/text/10.2307/40981057", true, JSAu, cus);
+    shouldCacheTest(ROOTS_URL+"citation/info/10.2972/xxxx.84.3.0515", true, JSAu, cus);
+    shouldCacheTest(ROOTS_URL+"citation/info/10.2307/40981057", true, JSAu, cus);
+    shouldCacheTest(ROOTS_URL+"citation/ris/10.2307/40981057", true, JSAu, cus);
+    shouldCacheTest(ROOTS_URL+"citation/text/10.2307/40981057", true, JSAu, cus);
     //but not
     shouldCacheTest(ROOT_URL+"citation/refworks/10.2307/40981057", false, JSAu, cus);
+    shouldCacheTest(ROOTS_URL+"citation/refworks/10.2307/40981057", false, JSAu, cus);
     
     // support files
     //http://www.jstor.org/px/xhr/api/v1/collector/pxPixel.gif?appId=PXu4K0s8nX
@@ -185,6 +205,7 @@ public class TestJstorCSArchivalUnit extends LockssTestCase {
     // Now a couple that shouldn't get crawled
     // avoid spider trap
     shouldCacheTest(ROOT_URL+"stable/11.1111/99.9999-99999", false, JSAu, cus);
+    shouldCacheTest(ROOTS_URL+"stable/11.1111/99.9999-99999", false, JSAu, cus);
     // LOCKSS
     shouldCacheTest("http://lockss.stanford.edu", false, JSAu, cus);
     // other sites

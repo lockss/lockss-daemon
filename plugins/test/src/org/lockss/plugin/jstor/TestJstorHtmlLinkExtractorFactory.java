@@ -42,7 +42,7 @@ import org.lockss.plugin.PluginTestUtil;
 import org.lockss.plugin.jstor.JstorHtmlLinkExtractorFactory.JstorHtmlLinkExtractor;
 import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.LockssTestCase;
-import org.lockss.test.MockArchivalUnit;
+//import org.lockss.test.MockArchivalUnit;
 import org.lockss.test.MockLockssDaemon;
 import org.lockss.util.Constants;
 import org.lockss.util.SetUtil;
@@ -51,7 +51,7 @@ import org.lockss.util.SetUtil;
 public class TestJstorHtmlLinkExtractorFactory extends LockssTestCase {
 
   protected MockLockssDaemon daemon;
-  private MockArchivalUnit m_mau;
+  //private MockArchivalUnit m_mau;
   private ArchivalUnit jsau;
   private ArchivalUnit JsCsau;
 
