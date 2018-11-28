@@ -32,17 +32,18 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.atypon.rsna;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.InputStream;
 
-import org.apache.commons.io.IOUtils;
+//import java.io.FileInputStream;
+//import java.io.FileOutputStream;
+//import org.apache.commons.io.IOUtils;
+//import org.lockss.util.Constants;
+
 import org.htmlparser.NodeFilter;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.plugin.*;
 import org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory;
-import org.lockss.util.Constants;
 
 public class RsnaHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory {
 
@@ -78,7 +79,7 @@ public class RsnaHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory
     return super.createFilteredInputStream(au, in, encoding, filters);
   }
 
-  public static void main(String[] args) throws Exception {
+  /*public static void main(String[] args) throws Exception {
     String file1 = "/tmp/data/rsna1.html";
     String file2 = "/tmp/data/rsna2.html";
     String file3 = "/tmp/data/rsna3.html";
@@ -95,5 +96,5 @@ public class RsnaHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory
     IOUtils.copy(new RsnaHtmlCrawlFilterFactory().createFilteredInputStream(null,
         new FileInputStream(file4), Constants.ENCODING_UTF_8),
         new FileOutputStream(file4 + ".out"));
-  }
+  }*/
 }
