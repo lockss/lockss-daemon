@@ -64,7 +64,7 @@
     au < released ; 2014 ; The International Review of Research in Open and Distance Learning Volume 15 ; 15 ; 2014 >
     au < released ; 2015 ; The International Review of Research in Open and Distance Learning Volume 16 ; 16 ; 2015 >
     au < released ; 2016 ; The International Review of Research in Open and Distance Learning Volume 17 ; 17 ; 2016 >
-    au < manifest ; 2017 ; The International Review of Research in Open and Distance Learning Volume 18 ; 18 ; 2017 >
+    au < doNotProcess ; 2017 ; The International Review of Research in Open and Distance Learning Volume 18 ; 18 ; 2017 >
   
   }
   
@@ -80,8 +80,8 @@
     implicit < status ; year ; name ; volume ; param[year] >
     {
     au < exists ; 2014 ; International Journal of E-Learning & Distance Education / Revue internationale de l'apprentissage en ligne et de l'enseignement à distance Volume 2014 ; 29 ; 2014 >
-    au < exists ; 2015 ; International Journal of E-Learning & Distance Education / Revue internationale de l'apprentissage en ligne et de l'enseignement à distance Volume 2015 ; 30 ; 2015 >
-    au < expected ; 2016 ; International Journal of E-Learning & Distance Education / Revue internationale de l'apprentissage en ligne et de l'enseignement à distance Volume 2016 ; 31 ; 2016 >
+    au < doNotProcess ; 2015 ; International Journal of E-Learning & Distance Education / Revue internationale de l'apprentissage en ligne et de l'enseignement à distance Volume 2015 ; 30 ; 2015 >
+    au < doNotProcess ; 2016 ; International Journal of E-Learning & Distance Education / Revue internationale de l'apprentissage en ligne et de l'enseignement à distance Volume 2016 ; 31 ; 2016 >
     }
     {
     # changed name. Archived volumes moved to http://www.ijede.ca/index.php/jde/pages/view/jdearchive
@@ -186,7 +186,7 @@
     au < released ; 2013 ; The Trumpeter Volume 29 ; 29 ; 2013 >
     au < released ; 2014 ; The Trumpeter Volume 30 ; 30 ; 2014 >
     au < released ; 2015 ; The Trumpeter Volume 31 ; 31 ; 2015 >
-    au < manifest ; 2016 ; The Trumpeter Volume 32 ; 32 ; 2016 >
+    au < doNotProcess ; 2016 ; The Trumpeter Volume 32 ; 32 ; 2016 >
 
   }
     
