@@ -148,7 +148,9 @@ public class SpringerSourceArticleIteratorFactory implements ArticleIteratorFact
 
     	String pdfName = mat.group(3);
     	if(StringUtils.containsIgnoreCase(pdfName,"OnlinePDF")) {
-    		String newName = StringUtils.replaceIgnoreCase(pdfName, "OnlinePDF", "Article");
+    		//replaceIgnoreCase needs to wait for daemon > 1.74.2 to get necessary commons jar
+    		//String newName = StringUtils.replaceIgnoreCase(pdfName, "OnlinePDF", "Article");
+    		String newName = StringUtils.replace(pdfName, "OnlinePDF", "Article");
     		String xmlurl = mat.replaceFirst("$1") + newName + ".xml";
     		xmlCu = au.makeCachedUrl(xmlurl);
     		Matcher xmat = ODD_META_PATTERN.matcher(xmlurl);
