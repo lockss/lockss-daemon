@@ -175,6 +175,19 @@
   }
 
   {
+
+    title <
+      name = Journal of Information Studies & Technology (JIS&T) ;
+      eissn = 2616-4930
+    >
+
+    param[journal_id] = jist
+
+    au < exists ; 2018 ; Journal of Information Studies & Technology Volume 2018 ; 2018 >
+
+  }
+
+  {
   
     title <
       name = Journal of Local and Global Health Perspectives ;
@@ -329,6 +342,19 @@
     au < released ; 2016 ; QScience Proceedings Volume 2016 ; 2016 >
     au < released ; 2017 ; QScience Proceedings Volume 2017 ; 2017 >
     au < expected ; 2018 ; QScience Proceedings Volume 2018 ; 2018 >
+
+  }
+
+  {
+
+    title <
+      name = Rule of Law and Anti-Corruption Journal ;
+      eissn = 2617-2763
+    >
+
+    param[journal_id] = rolacc
+
+    au < exists ; 2018 ; Rule of Law and Anti-Corruption Journal Volume 2018 ; 2018 >
 
   }
 
