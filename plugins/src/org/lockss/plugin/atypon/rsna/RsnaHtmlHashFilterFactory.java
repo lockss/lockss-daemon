@@ -99,7 +99,7 @@ public class RsnaHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
     // handled by parent: script, sfxlink, stylesheet, pdfplus file size
     // <head> tag, <li> item has the text "Cited by", accessIcon, 
     // publicationToolContainer, articleMetaDrop
-    NodeFilter[] excludeNodes = new NodeFilter[] {       
+    NodeFilter[] excludeNodes = new NodeFilter[] {
         // on toc - button "test SA-CME" next to each article
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "btn-holder"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "header"),
@@ -110,6 +110,8 @@ public class RsnaHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", "relatedContent"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(articleMeta|copyright|tocHeading)"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "publicationContent(Authors|Doi|Licence)"),
+        // for older content
+        HtmlNodeFilters.tagWithAttribute("table", "class", "references"),
     };
     return super.createFilteredInputStream(au, in, encoding, 
                                            includeNodes, excludeNodes);
@@ -117,11 +119,6 @@ public class RsnaHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
 
   @Override
   public boolean doTagRemovalFiltering() {
-    return true;
-  }
-
-  @Override
-  public boolean doHttpsConversion() {
     return true;
   }
 
