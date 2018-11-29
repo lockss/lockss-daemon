@@ -36,14 +36,13 @@ import java.util.regex.Pattern;
 
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.*;
-import org.lockss.plugin.atypon.BaseAtyponHttpHttpsUrlNormalizer;
+import org.lockss.plugin.atypon.BaseAtyponUrlNormalizer;
 import org.lockss.util.Logger;
-
 
 /*
  * Adds in the RSNA specific normalizations
  */
-public class RsnaUrlNormalizer extends BaseAtyponHttpHttpsUrlNormalizer {
+public class RsnaUrlNormalizer extends BaseAtyponUrlNormalizer {
   protected static Logger log = Logger.getLogger(RsnaUrlNormalizer.class);
   /*
     https://pubs.rsna.org/products/rsna/fonts/icomoon/icomoon.eot?yq99jl
@@ -53,16 +52,14 @@ public class RsnaUrlNormalizer extends BaseAtyponHttpHttpsUrlNormalizer {
    */
   protected static final Pattern FONT_ARG_PATTERN = Pattern.compile("(\\.(:?eot|svg|ttf|woff))\\?.+$");
 
-    @Override 
-    public String additionalNormalization(String url, ArchivalUnit au)
-      throws PluginException {
-      
-      // some font files have an argument that isn't needed
-      String returnString = FONT_ARG_PATTERN.matcher(url).replaceFirst("$1");
-      if (!returnString.equals(url)) {
-        log.debug3("normalized font url: " + returnString);
-        url = returnString;
-      }
-      return super.additionalNormalization(url, au);
+  @Override
+  public String normalizeUrl(String url, ArchivalUnit au) throws PluginException {
+    // some font files have an argument that isn't needed
+    String returnString = FONT_ARG_PATTERN.matcher(url).replaceFirst("$1");
+    if (!returnString.equals(url)) {
+      log.debug3("normalized font url: " + returnString);
+      url = returnString;
     }
+    return super.normalizeUrl(url, au);
+  }
 }
