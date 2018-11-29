@@ -7235,7 +7235,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Compensation & Benefits Review Volume 46 ; 46 ; cbrb ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Compensation & Benefits Review Volume 47 ; 47 ; cbrb ; >
       au < finished ; crawling ; 2016 ; Compensation & Benefits Review Volume 48 ; 48 ; cbrb ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2017 ; Compensation & Benefits Review Volume 49 ; 49 ; cbrb ; >
+      au < finished ; manifest ; 2017 ; Compensation & Benefits Review Volume 49 ; 49 ; cbrb ; reingest1.clockss.org:8082 >
       au < expected ; exists ; 2018 ; Compensation & Benefits Review Volume 50 ; 50 ; cbrb ; >
 
     }
@@ -13426,7 +13426,7 @@
       au < frozen ; exists ; 2014 ; Global & Regional Health Technology Assessment Volume 1 ; 1 ; grha ; >
       au < frozen ; exists ; 2015 ; Global & Regional Health Technology Assessment Volume 2 ; 2 ; grha ; >
       au < finished ; crawling ; 2016 ; Global & Regional Health Technology Assessment Volume 3 ; 3 ; grha ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2017 ; Global & Regional Health Technology Assessment Volume 4 ; 4 ; grha ; >
+      au < finished ; manifest ; 2017 ; Global & Regional Health Technology Assessment Volume 4 ; 4 ; grha ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2018 ; Global & Regional Health Technology Assessment Volume 5 ; 2018 ; grha ; >
   }
 
@@ -13605,7 +13605,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Global Journal of Emerging Market Economies Volume 6 ; 6 ; emea ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Global Journal of Emerging Market Economies Volume 7 ; 7 ; emea ; >
       au < finished ; crawling ; 2016 ; Global Journal of Emerging Market Economies Volume 8 ; 8 ; emea ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2017 ; Global Journal of Emerging Market Economies Volume 9 ; 9 ; emea ; >
+      au < finished ; manifest ; 2017 ; Global Journal of Emerging Market Economies Volume 9 ; 9 ; emea ; reingest3.clockss.org:8083 >
       au < expected ; exists ; 2018 ; Global Journal of Emerging Market Economies Volume 10 ; 10 ; emea ; >
 
     }
@@ -14266,7 +14266,7 @@
       au < frozen ; exists ; 2014 ; Heart International Volume 9 ; 9 ; heia ; >
       au < frozen ; exists ; 2015 ; Heart International Volume 10 ; 10 ; heia ; >
       au < finished ; crawling ; 2016 ; Heart International Volume 11 ; 11 ; heia ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2017 ; Heart International Volume 12 ; 12 ; heia ; >
+      au < finished ; manifest ; 2017 ; Heart International Volume 12 ; 12 ; heia ; reingest4.clockss.org:8082 >
       au < expected ; exists ; 2018 ; Heart International Volume 13 ; 13 ; heia ; >
 
   }
@@ -14819,7 +14819,7 @@
       au < frozen ; exists ; 2014 ; Hong Kong Journal of Emergency Medicine Volume 21 ; 21 ; hkja ; >
       au < frozen ; exists ; 2015 ; Hong Kong Journal of Emergency Medicine Volume 22 ; 22 ; hkja ; >
       au < frozen ; exists ; 2016 ; Hong Kong Journal of Emergency Medicine Volume 23 ; 23 ; hkja ; >
-      au < frozen ; exists ; 2017 ; Hong Kong Journal of Emergency Medicine Volume 24 ; 24 ; hkja ; >
+      au < finished ; manifest ; 2017 ; Hong Kong Journal of Emergency Medicine Volume 24 ; 24 ; hkja ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2018 ; Hong Kong Journal of Emergency Medicine Volume 25 ; 25 ; hkja ; >
 
   }
@@ -14844,8 +14844,8 @@
       au < frozen ; exists ; 2015 ; Hong Kong Journal of Occupational Therapy Volume 26 ; 26 ; hjoa ; >
       au < frozen ; exists ; 2016 ; Hong Kong Journal of Occupational Therapy Volume 27 ; 27 ; hjoa ; >
       au < finished ; manifest ; 2016 ; Hong Kong Journal of Occupational Therapy Volume 28 ; 28 ; hjoa ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2017 ; Hong Kong Journal of Occupational Therapy Volume 29 ; 29 ; hjoa ; >
-      au < frozen ; exists ; 2017 ; Hong Kong Journal of Occupational Therapy Volume 30 ; 30 ; hjoa ; >
+      au < finished ; manifest ; 2017 ; Hong Kong Journal of Occupational Therapy Volume 29 ; 29 ; hjoa ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; Hong Kong Journal of Occupational Therapy Volume 30 ; 30 ; hjoa ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2018 ; Hong Kong Journal of Occupational Therapy Volume 31 ; 31 ; hjoa ; >
       au < expected ; exists ; 2018 ; Hong Kong Journal of Occupational Therapy Volume 32 ; 32 ; hjoa ; >
 
@@ -15663,7 +15663,7 @@
       au < frozen ; exists ; 2012-2013 ; The Indian Economic Journal Volume 60 ; 60 ; ieja ; >
 
       au < frozen ; exists ; 2016 ; The Indian Economic Journal Volume 64 ; 64 ; ieja ; >
-      au < frozen ; exists ; 2017 ; The Indian Economic Journal Volume 65 ; 65 ; ieja ; >
+      au < finished ; manifest ; 2017 ; The Indian Economic Journal Volume 65 ; 65 ; ieja ; reingest3.clockss.org:8083 >
       au < expected ; exists ; 2018 ; The Indian Economic Journal Volume 66 ; 66 ; ieja ; >
 
   }
@@ -18705,7 +18705,7 @@
       au < frozen ; exists ; 2014 ; International Studies Volume 51 ; 51 ; isqa ; >
       au < frozen ; exists ; 2015 ; International Studies Volume 52 ; 52 ; isqa ; >
       au < frozen ; exists ; 2016 ; International Studies Volume 53 ; 53 ; isqa ; >
-      au < frozen ; exists ; 2017 ; International Studies Volume 54 ; 54 ; isqa ; >
+      au < finished ; manifest ; 2017 ; International Studies Volume 54 ; 54 ; isqa ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2018 ; International Studies Volume 55 ; 55 ; isqa ; >
 
     }
@@ -22429,7 +22429,7 @@
       au < frozen ; exists ; 2014 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 6 ; 6 ; peva ; >
       au < frozen ; exists ; 2015 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 7 ; 7 ; peva ; >
       au < frozen ; exists ; 2016 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 8 ; 8 ; peva ; >
-      au < frozen ; exists ; 2017 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 9 ; 9 ; peva ; >
+      au < finished ; manifest ; 2017 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 9 ; 9 ; peva ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2018 ; Journal of Endometriosis and Pelvic Pain Disorders Volume 10 ; 10 ; peva ; >
   }
 
@@ -22796,7 +22796,7 @@
       au < frozen ; exists ; 2014 ; Journal of Experimental Psychopathology Volume 5 ; 5 ; eppa ; >
       au < frozen ; exists ; 2015 ; Journal of Experimental Psychopathology Volume 6 ; 6 ; eppa ; >
       au < frozen ; exists ; 2016 ; Journal of Experimental Psychopathology Volume 7 ; 7 ; eppa ; >
-      au < frozen ; exists ; 2017 ; Journal of Experimental Psychopathology Volume 8 ; 8 ; eppa ; >
+      au < finished ; manifest ; 2017 ; Journal of Experimental Psychopathology Volume 8 ; 8 ; eppa ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2018 ; Journal of Experimental Psychopathology Volume 9 ; 9 ; eppa ; >
 
   }
@@ -23560,7 +23560,7 @@
       au < doNotProcess ; doNotProcess ; 2013-2014 ; Journal of Historical Research in Music Education Volume 35 ; 35 ; jhrb ; >
       au < doNotProcess ; doNotProcess ; 2014-2015 ; Journal of Historical Research in Music Education Volume 36 ; 36 ; jhrb ; >
       au < doNotProcess ; doNotProcess ; 2015-2016 ; Journal of Historical Research in Music Education Volume 37 ; 37 ; jhrb ; >
-      au < frozen ; exists ; 2016-2017 ; Journal of Historical Research in Music Education Volume 38 ; 38 ; jhrb ; >
+      au < finished ; manifest ; 2016-2017 ; Journal of Historical Research in Music Education Volume 38 ; 38 ; jhrb ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2017-2018 ; Journal of Historical Research in Music Education Volume 39 ; 39 ; jhrb ; >
       au < manifest ; exists ; 2018-2019 ; Journal of Historical Research in Music Education Volume 40 ; 40 ; jhrb ; >
 
@@ -26244,7 +26244,7 @@
       #continues = 1089-3504
 
       au < frozen ; exists ; 2015-2016 ; Journal of Psoriasis and Psoriatic Arthritis Volume 1 ; 1 ; jpsa ; >
-      au < frozen ; exists ; 2016-2017 ; Journal of Psoriasis and Psoriatic Arthritis Volume 2 ; 2 ; jpsa ; >
+      au < finished ; manifest ; 2016-2017 ; Journal of Psoriasis and Psoriatic Arthritis Volume 2 ; 2 ; jpsa ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2018 ; Journal of Psoriasis and Psoriatic Arthritis Volume 3 ; 3 ; jpsa ; >
 
   }
@@ -26310,7 +26310,7 @@
       au < frozen ; exists ; 2014 ; Journal of Psychology and Theology Volume 42 ; 42 ; ptja ; >
       au < frozen ; exists ; 2015 ; Journal of Psychology and Theology Volume 43 ; 43 ; ptja ; >
       au < frozen ; exists ; 2016 ; Journal of Psychology and Theology Volume 44 ; 44 ; ptja ; >
-      au < frozen ; exists ; 2017 ; Journal of Psychology and Theology Volume 45 ; 45 ; ptja ; >
+      au < finished ; manifest ; 2017 ; Journal of Psychology and Theology Volume 45 ; 45 ; ptja ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2018 ; Journal of Psychology and Theology Volume 46 ; 46 ; ptja ; >
 
   }
@@ -27307,7 +27307,7 @@
       au < frozen ; exists ; 2014 ; Journal of Spiritual Formation and Soul Care Volume 7 ; 7 ; jsfa ; >
       au < frozen ; exists ; 2015 ; Journal of Spiritual Formation and Soul Care Volume 8 ; 8 ; jsfa ; >
       au < frozen ; exists ; 2016 ; Journal of Spiritual Formation and Soul Care Volume 9 ; 9 ; jsfa ; >
-      au < frozen ; exists ; 2017 ; Journal of Spiritual Formation and Soul Care Volume 10 ; 10 ; jsfa ; >
+      au < finished ; manifest ; 2017 ; Journal of Spiritual Formation and Soul Care Volume 10 ; 10 ; jsfa ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2018 ; Journal of Spiritual Formation and Soul Care Volume 11 ; 11 ; jsfa ; >
 
   }
@@ -28449,7 +28449,7 @@
       au < frozen ; exists ; 2014 ; Journal for Vascular Ultrasound Volume 38 ; 38 ; jvua ; >
       au < frozen ; exists ; 2015 ; Journal for Vascular Ultrasound Volume 39 ; 39 ; jvua ; >
       au < frozen ; exists ; 2016 ; Journal for Vascular Ultrasound Volume 40 ; 40 ; jvua ; >
-      au < frozen ; exists ; 2017 ; Journal for Vascular Ultrasound Volume 41 ; 41 ; jvua ; >
+      au < finished ; manifest ; 2017 ; Journal for Vascular Ultrasound Volume 41 ; 41 ; jvua ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2018 ; Journal for Vascular Ultrasound Volume 42 ; 42 ; jvua ; >
 
   }
@@ -30470,7 +30470,7 @@
 
         au < frozen ; exists ; 2015 ; Nephrology @ Point of Care Volume 1 ; 1 ; npca ; >
         au < frozen ; exists ; 2016 ; Nephrology @ Point of Care Volume 2 ; 2 ; npca ; >
-        au < frozen ; exists ; 2017 ; Nephrology @ Point of Care Volume 3 ; 3 ; npca ; >
+        au < finished ; manifest ; 2017 ; Nephrology @ Point of Care Volume 3 ; 3 ; npca ; reingest2.clockss.org:8085 >
         au < crawling ; exists ; 2018 ; Nephrology @ Point of Care Volume 4 ; 4 ; npca ; >
     }
 
@@ -35485,7 +35485,7 @@
       au < frozen ; exists ; 2014 ; Project Management Journal Volume 45 ; 45 ; pmxa ; >
       au < frozen ; exists ; 2015 ; Project Management Journal Volume 46 ; 46 ; pmxa ; >
       au < frozen ; exists ; 2016 ; Project Management Journal Volume 47 ; 47 ; pmxa ; >
-      au < frozen ; exists ; 2017 ; Project Management Journal Volume 48 ; 48 ; pmxa ; >
+      au < finished ; manifest ; 2017 ; Project Management Journal Volume 48 ; 48 ; pmxa ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2018 ; Project Management Journal Volume 49 ; 49 ; pmxa ; >
 
   }
@@ -36396,7 +36396,7 @@
       au < frozen ; exists ; 2014 ; Quarterly Journal of Experimental Psychology Volume 67 ; 67 ; qjpd ; >
       au < frozen ; exists ; 2015 ; Quarterly Journal of Experimental Psychology Volume 68 ; 68 ; qjpd ; >
       au < frozen ; exists ; 2016 ; Quarterly Journal of Experimental Psychology Volume 69 ; 69 ; qjpd ; >
-      au < frozen ; exists ; 2017 ; Quarterly Journal of Experimental Psychology Volume 70 ; 70 ; qjpd ; >
+      au < finished ; manifest ; 2017 ; Quarterly Journal of Experimental Psychology Volume 70 ; 70 ; qjpd ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2018 ; Quarterly Journal of Experimental Psychology Volume 71 ; 71 ; qjpd ; >
 
 
@@ -39599,7 +39599,7 @@
       au < frozen ; exists ; 2014 ; South Asian Survey Volume 21 ; 21 ; sasa ; >
       au < frozen ; exists ; 2015 ; South Asian Survey Volume 22 ; 22 ; sasa ; >
       au < frozen ; exists ; 2016 ; South Asian Survey Volume 23 ; 23 ; sasa ; >
-      au < frozen ; exists ; 2017 ; South Asian Survey Volume 24 ; 24 ; sasa ; >
+      au < finished ; manifest ; 2017 ; South Asian Survey Volume 24 ; 24 ; sasa ; reingest5.clockss.org:8082 >
       au < expected ; exists ; 2018 ; South Asian Survey Volume 25 ; 25 ; sasa ; >
 
     }
@@ -39876,7 +39876,7 @@
       au < frozen ; exists ; 2014 ; String Research Journal Volume 5 ; 5 ; srja ; >
       au < frozen ; exists ; 2015 ; String Research Journal Volume 6 ; 6 ; srja ; >
       au < finished ; crawling ; 2016 ; String Research Journal Volume 7 ; 7 ; srja ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2017 ; String Research Journal Volume 8 ; 8 ; srja ; >
+      au < finished ; manifest ; 2017 ; String Research Journal Volume 8 ; 8 ; srja ; reingest1.clockss.org:8082 >
       au < expected ; exists ; 2018 ; String Research Journal Volume 9 ; 9 ; srja ; >
 
   }
@@ -42908,14 +42908,14 @@
       au < frozen ; exists ; 2016 ; Transportation Research Record Volume 2559 ; 2559 ; trra ; >
 
       au < frozen ; exists ; 2017 ; Transportation Research Record Volume 2603 ; 2603 ; trra ; >
-      au < frozen ; exists ; 2017 ; Transportation Research Record Volume 2604 ; 2604 ; trra ; >
+      au < finished ; manifest ; 2017 ; Transportation Research Record Volume 2604 ; 2604 ; trra ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2017 ; Transportation Research Record Volume 2605 ; 2605 ; trra ; >
-      au < frozen ; exists ; 2017 ; Transportation Research Record Volume 2606 ; 2606 ; trra ; >
+      au < finished ; manifest ; 2017 ; Transportation Research Record Volume 2606 ; 2606 ; trra ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2017 ; Transportation Research Record Volume 2607 ; 2607 ; trra ; >
-      au < frozen ; exists ; 2017 ; Transportation Research Record Volume 2608 ; 2608 ; trra ; >
+      au < finished ; manifest ; 2017 ; Transportation Research Record Volume 2608 ; 2608 ; trra ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2017 ; Transportation Research Record Volume 2609 ; 2609 ; trra ; >
       au < frozen ; exists ; 2017 ; Transportation Research Record Volume 2610 ; 2610 ; trra ; >
-      au < frozen ; exists ; 2017 ; Transportation Research Record Volume 2611 ; 2611 ; trra ; >
+      au < finished ; manifest ; 2017 ; Transportation Research Record Volume 2611 ; 2611 ; trra ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2017 ; Transportation Research Record Volume 2612 ; 2612 ; trra ; >
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2613 ; 2613 ; trra ; >
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2614 ; 2614 ; trra ; >
@@ -42929,7 +42929,7 @@
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2622 ; 2622 ; trra ; >
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2623 ; 2623 ; trra ; >
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2624 ; 2624 ; trra ; >
-      au < frozen ; exists ; 2017 ; Transportation Research Record Volume 2625 ; 2625 ; trra ; >
+      au < finished ; manifest ; 2017 ; Transportation Research Record Volume 2625 ; 2625 ; trra ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2626 ; 2626 ; trra ; >
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2627 ; 2627 ; trra ; >
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2628 ; 2628 ; trra ; >
@@ -42941,7 +42941,7 @@
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2634 ; 2634 ; trra ; >
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2635 ; 2635 ; trra ; >
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2636 ; 2636 ; trra ; >
-      au < frozen ; exists ; 2017 ; Transportation Research Record Volume 2637 ; 2637 ; trra ; >
+      au < finished ; manifest ; 2017 ; Transportation Research Record Volume 2637 ; 2637 ; trra ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2638 ; 2638 ; trra ; >
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2639 ; 2639 ; trra ; >
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2640 ; 2640 ; trra ; >
@@ -42962,7 +42962,7 @@
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2655 ; 2655 ; trra ; >
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2656 ; 2656 ; trra ; >
       au < exists ; exists ; 2017 ; Transportation Research Record Volume 2657 ; 2657 ; trra ; >
-      au < frozen ; exists ; 2017 ; Transportation Research Record Volume 2658 ; 2658 ; trra ; >
+      au < finished ; manifest ; 2017 ; Transportation Research Record Volume 2658 ; 2658 ; trra ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2017 ; Transportation Research Record Volume 2659 ; 2659 ; trra ; >
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2660 ; 2660 ; trra ; >
       au < crawling ; exists ; 2017 ; Transportation Research Record Volume 2661 ; 2661 ; trra ; >
@@ -45746,7 +45746,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Asia-Pacific Journal of Management Research and Innovation Volume 10 ; 10 ; abrb ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Asia-Pacific Journal of Management Research and Innovation Volume 11 ; 11 ; abrb ; >
     au < finished ; crawling ; 2016 ; Asia-Pacific Journal of Management Research and Innovation Volume 12 ; 12 ; abrb ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; Asia-Pacific Journal of Management Research and Innovation Volume 13 ; 13 ; abrb ; >
+    au < finished ; manifest ; 2017 ; Asia-Pacific Journal of Management Research and Innovation Volume 13 ; 13 ; abrb ; reingest4.clockss.org:8082 >
     au < expected ; exists ; 2018 ; Asia-Pacific Journal of Management Research and Innovation Volume 14 ; 14 ; abrb ; >
 
     }
