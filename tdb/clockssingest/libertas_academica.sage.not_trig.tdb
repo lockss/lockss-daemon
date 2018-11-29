@@ -66,7 +66,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Analytical Chemistry Insights Volume 9 ; 9 ; acia ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Analytical Chemistry Insights Volume 10 ; 10 ; acia ; >
     au < frozen ; exists ; 2016 ; Analytical Chemistry Insights Volume 11 ; 11 ; acia ; >
-    au < frozen ; exists ; 2017 ; Analytical Chemistry Insights Volume 12 ; 12 ; acia ; >
+    au < finished ; manifest ; 2017 ; Analytical Chemistry Insights Volume 12 ; 12 ; acia ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2018 ; Analytical Chemistry Insights Volume 13 ; 13 ; acia ; >
 
   }
@@ -90,7 +90,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Biochemistry Insights Volume 7 ; 7 ; bcia ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Biochemistry Insights Volume 8 ; 8 ; bcia ; >
     au < frozen ; exists ; 2016 ; Biochemistry Insights Volume 9 ; 9 ; bcia ; >
-    au < frozen ; exists ; 2017 ; Biochemistry Insights Volume 10 ; 10 ; bcia ; >
+    au < finished ; manifest ; 2017 ; Biochemistry Insights Volume 10 ; 10 ; bcia ; reingest5.clockss.org:8082 >
     au < expected ; exists ; 2018 ; Biochemistry Insights Volume 11 ; 11 ; bcia ; >
 
   }
@@ -115,7 +115,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Bioinformatics and Biology Insights Volume 8 ; 8 ; bbia ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Bioinformatics and Biology Insights Volume 9 ; 9 ; bbia ; >
     au < frozen ; exists ; 2016 ; Bioinformatics and Biology Insights Volume 10 ; 10 ; bbia ; >
-    au < frozen ; exists ; 2017 ; Bioinformatics and Biology Insights Volume 11 ; 11 ; bbia ; >
+    au < finished ; manifest ; 2017 ; Bioinformatics and Biology Insights Volume 11 ; 11 ; bbia ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2018 ; Bioinformatics and Biology Insights Volume 12 ; 12 ; bbia ; >
 
   }
@@ -164,7 +164,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Biomarkers in Cancer Volume 6 ; 6 ; bica ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Biomarkers in Cancer Volume 7 ; 7 ; bica ; >
     au < frozen ; exists ; 2016 ; Biomarkers in Cancer Volume 8 ; 8 ; bica ; >
-    au < frozen ; exists ; 2017 ; Biomarkers in Cancer Volume 9 ; 9 ; bica ; >
+    au < finished ; manifest ; 2017 ; Biomarkers in Cancer Volume 9 ; 9 ; bica ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2018 ; Biomarkers in Cancer Volume 10 ; 10 ; bica ; >
 
   }
@@ -255,7 +255,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Breast Cancer: Basic and Clinical Research Volume 8 ; 8 ; bcba ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Breast Cancer: Basic and Clinical Research Volume 9 ; 9 ; bcba ; >
     au < frozen ; exists ; 2016 ; Breast Cancer: Basic and Clinical Research Volume 10 ; 10 ; bcba ; >
-    au < frozen ; exists ; 2017 ; Breast Cancer: Basic and Clinical Research Volume 11 ; 11 ; bcba ; >
+    au < finished ; manifest ; 2017 ; Breast Cancer: Basic and Clinical Research Volume 11 ; 11 ; bcba ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2018 ; Breast Cancer: Basic and Clinical Research Volume 12 ; 12 ; bcba ; >
 
   }
@@ -279,7 +279,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Cancer Growth and Metastasis Volume 7 ; 7 ; cgma ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Cancer Growth and Metastasis Volume 8 ; 8 ; cgma ; >
     au < frozen ; exists ; 2016 ; Cancer Growth and Metastasis Volume 9 ; 9 ; cgma ; >
-    au < frozen ; exists ; 2017 ; Cancer Growth and Metastasis Volume 10 ; 10 ; cgma ; >
+    au < finished ; manifest ; 2017 ; Cancer Growth and Metastasis Volume 10 ; 10 ; cgma ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2018 ; Cancer Growth and Metastasis Volume 11 ; 11 ; cgma ; >
 
   }
@@ -330,7 +330,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 7 ; 7 ; amda ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 8 ; 8 ; amda ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 9 ; 9 ; amda ; >
-    au < frozen ; exists ; 2017 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 10 ; 10 ; amda ; >
+    au < finished ; manifest ; 2017 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 10 ; 10 ; amda ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2018 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 11 ; 11 ; amda ; >
 
   }
@@ -354,7 +354,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Clinical Medicine Insights: Blood Disorders Volume 7 ; 7 ; bdxa ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Blood Disorders Volume 8 ; 8 ; bdxa ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Blood Disorders Volume 9 ; 9 ; bdxa ; >
-    au < frozen ; exists ; 2017 ; Clinical Medicine Insights: Blood Disorders Volume 10 ; 10 ; bdxa ; >
+    au < finished ; manifest ; 2017 ; Clinical Medicine Insights: Blood Disorders Volume 10 ; 10 ; bdxa ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2018 ; Clinical Medicine Insights: Blood Disorders Volume 11 ; 11 ; bdxa ; >
 
   }
@@ -452,7 +452,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 7 ; 7 ; enta ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 8 ; 8 ; enta ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 9 ; 9 ; enta ; >
-    au < frozen ; exists ; 2017 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 10 ; 10 ; enta ; >
+    au < finished ; manifest ; 2017 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 10 ; 10 ; enta ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2018 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 11 ; 11 ; enta ; >
 
   }
@@ -476,7 +476,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 7 ; 7 ; enda ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 8 ; 8 ; enda ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 9 ; 9 ; enda ; >
-    au < frozen ; exists ; 2017 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 10 ; 10 ; enda ; >
+    au < finished ; manifest ; 2017 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 10 ; 10 ; enda ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2018 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 11 ; 11 ; enda ; >
 
   }
@@ -500,7 +500,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Clinical Medicine Insights: Gastroenterology Volume 7 ; 7 ; cmga ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Gastroenterology Volume 8 ; 8 ; cmga ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Gastroenterology Volume 9 ; 9 ; cmga ; >
-    au < frozen ; exists ; 2017 ; Clinical Medicine Insights: Gastroenterology Volume 10 ; 10 ; cmga ; >
+    au < finished ; manifest ; 2017 ; Clinical Medicine Insights: Gastroenterology Volume 10 ; 10 ; cmga ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2018 ; Clinical Medicine Insights: Gastroenterology Volume 11 ; 11 ; cmga ; >
 
   }
@@ -525,7 +525,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Clinical Medicine Insights: Oncology Volume 8 ; 8 ; onca ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Oncology Volume 9 ; 9 ; onca ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Oncology Volume 10 ; 10 ; onca ; >
-    au < frozen ; exists ; 2017 ; Clinical Medicine Insights: Oncology Volume 11 ; 11 ; onca ; >
+    au < finished ; manifest ; 2017 ; Clinical Medicine Insights: Oncology Volume 11 ; 11 ; onca ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2018 ; Clinical Medicine Insights: Oncology Volume 12 ; 12 ; onca ; >
 
   }
