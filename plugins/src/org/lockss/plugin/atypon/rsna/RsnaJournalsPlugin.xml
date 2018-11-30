@@ -43,4 +43,18 @@
     <string>application/pdf_filter_factory</string>
     <string>org.lockss.plugin.atypon.BaseAtyponScrapingPdfFilterFactory</string>
   </entry>
+  <!--  tell the default base.MimeTypeContentValidator what url patterns to validate by mime type -->
+  <entry>
+    <string>au_url_mime_validation_map</string>
+    <list>
+      <string>\.pdf$, application/pdf</string>
+      <string>/doi/pdf, application/pdf</string>
+      <string>\.gif$, image/gif</string>
+      <string>\.jpe?g$, image/jpeg</string>
+      <string>\.png, image/png</string>
+      <string>/toc/, text/html</string>
+      <string>/doi/(abs|figure|full)/, text/html</string>
+      <string>\.mp4$, video/mp4</string>
+    </list>
+  </entry>
 </map>
