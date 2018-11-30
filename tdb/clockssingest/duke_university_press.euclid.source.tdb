@@ -4,23 +4,24 @@
     name = Duke University Press ;
     info[contract] = 2012 ;
     info[tester] = S
-    #WAITING FOR PLUGIN
   >
 
   {
 
     title <
-      name = Duke Mathematical Journal ;
-      issn = 0012-7094 ;
-      eissn = 1547-7398
+      name = Duke University Press Source Content
+
     >
 
-      plugin = needs.SourcePlugin
+      # More than one journal
+	  #Duke Mathematical Journal 
+	  #issn = 0012-7094 ; eissn = 1547-7398
+
+      plugin = org.lockss.plugin.clockss.duke.ClockssDukeEuclidSourcePlugin
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/dukeupress-released/
       implicit < status ; status2 ; year ; name ; param[directory] >
 
-      #TODO make sure that this is just the one journal - or else change the title
-      au < expected ; exists ; 2018 ; Duke University Press Mathematical Journal Source Content 2018 ; 2018 >
+      au < expected ; exists ; 2018 ; Duke University Press Source Content 2018 ; 2018 >
 
     }
 
