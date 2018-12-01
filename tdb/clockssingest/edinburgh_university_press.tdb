@@ -6,6 +6,10 @@
     info[tester] = 5 ;
     info[poller] = 3
   >
+  
+  #anph - Ancient Philosophy Today coming in 2019
+  #ncpf - Nineteenth-Century Popular Fiction coming in 2019
+  #sch - Scottish Church History coming in 2019
 
   plugin = org.lockss.plugin.edinburgh.ClockssEdinburghUniversityPressPlugin
 #  param[base_url] = http://www.euppublishing.com/
@@ -369,6 +373,27 @@
     au < crawling ; exists ; 2018 ; Corpora Volume 13 ; 13 ; https://www.euppublishing.com/ ; >
 
   }
+  
+    {
+
+    title <
+      name = Cultural History ;
+      issn = 2045-290X ;
+      eissn = 2045-2918 ;
+      issnl = 2045-290X 
+     >
+
+    param[journal_id] = cult
+
+    au < testing ; exists ; 2012 ; Cultural History Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
+    au < testing ; exists ; 2013 ; Cultural History Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
+    au < testing ; exists ; 2014 ; Cultural History Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
+    au < testing ; exists ; 2015 ; Cultural History Volume 4 ; 4 ; https://www.euppublishing.com/ ; >
+    au < testing ; exists ; 2016 ; Cultural History Volume 5 ; 5 ; https://www.euppublishing.com/ ; >
+    au < testing ; exists ; 2017 ; Cultural History Volume 6 ; 6 ; https://www.euppublishing.com/ ; >
+    au < testing ; exists ; 2018 ; Cultural History Volume 7 ; 7 ; https://www.euppublishing.com/ ; >
+
+  }
 
   {
 
@@ -562,6 +587,17 @@
      au < manifest ; exists ; 2004 ; Gothic Studies Volume 6 ; 6 ; https://www.euppublishing.com/ ; >
      au < doesNotExist ; doesNotExist ; 2005 ; Gothic Studies Volume 7 ; 7 ; https://www.euppublishing.com/ ; >
      au < manifest ; exists ; 2006 ; Gothic Studies Volume 8 ; 8 ; https://www.euppublishing.com/ ; >
+     au < exists ; exists ; 2007 ; Gothic Studies Volume 9 ; 9 ; https://www.euppublishing.com/ ; >
+     au < exists ; exists ; 2008 ; Gothic Studies Volume 10 ; 10 ; https://www.euppublishing.com/ ; >
+     au < exists ; exists ; 2009 ; Gothic Studies Volume 11 ; 11 ; https://www.euppublishing.com/ ; >
+     au < exists ; exists ; 2010 ; Gothic Studies Volume 12 ; 12 ; https://www.euppublishing.com/ ; >
+     au < exists ; exists ; 2011 ; Gothic Studies Volume 13 ; 13 ; https://www.euppublishing.com/ ; >
+     au < exists ; exists ; 2012 ; Gothic Studies Volume 14 ; 14 ; https://www.euppublishing.com/ ; >
+     au < exists ; exists ; 2013 ; Gothic Studies Volume 15 ; 15 ; https://www.euppublishing.com/ ; >
+     au < exists ; exists ; 2014 ; Gothic Studies Volume 16 ; 16 ; https://www.euppublishing.com/ ; >
+     au < exists ; exists ; 2015 ; Gothic Studies Volume 17 ; 17 ; https://www.euppublishing.com/ ; >
+     au < exists ; exists ; 2016 ; Gothic Studies Volume 18 ; 18 ; https://www.euppublishing.com/ ; >
+     au < exists ; exists ; 2017 ; Gothic Studies Volume 19 ; 19 ; https://www.euppublishing.com/ ; >
 
   }
 
