@@ -60,7 +60,9 @@ public class TestRsnaHtmlFilterFactory extends LockssTestCase {
   
   
   private static final String artLinkContent = 
-      "<article class=\"article\">" +
+      "<div class=\"literatumPublicationContentWidget\">\n" +
+          "Random text\n" +
+          "<article class=\"article\">" +
           "<p class=\"fulltext\"></p>" +
           "<p>" +
           "<b>Originally published in:</b>" +
@@ -89,11 +91,14 @@ public class TestRsnaHtmlFilterFactory extends LockssTestCase {
           "</li>\n" + 
           "</ul>\n" +
           "<!-- /fulltext content -->\n" +
-          "        </article>";
+          "        </article>\n" +
+          "</div>";
 
 
   private static final String artLinkContentCrawlFiltered = 
-      "<article class=\"article\">" +
+      "<div class=\"literatumPublicationContentWidget\">\n" +
+          "Random text\n" +
+          "<article class=\"article\">" +
           "<p class=\"fulltext\"></p>" +
           "<p>" +
           "<b>Originally published in:</b>" +
@@ -106,10 +111,12 @@ public class TestRsnaHtmlFilterFactory extends LockssTestCase {
           "\n" + 
           "</ul>\n" +
           "<!-- /fulltext content -->\n" +
-          "        </article>";
+          "        </article>\n" +
+          "</div>";
 
   private static final String artLinkContentHashFiltered1 = 
       "" +
+          " Random text" +
           " Originally published in:" +
           " Radiology 2016;279(3):" +
           " 827-837" +
@@ -118,7 +125,9 @@ public class TestRsnaHtmlFilterFactory extends LockssTestCase {
           " Radiology 2016;280(1):328 DOI:10.1148/radiol.2016164016" +
           " ";
   private static final String artLinkContentHashFiltered2 = 
-      " <article class=\"article\">" +
+      "<div class=\"literatumPublicationContentWidget\">\n" +
+          "Random text\n" +
+          " <article class=\"article\">" +
           " <p class=\"fulltext\"> </p>" +
           " <p> <b>Originally published in: </b> </p>" +
           " <p xmlns:oasis=\"http://www.niso.org/\">Radiology 2016;279(3):" +
