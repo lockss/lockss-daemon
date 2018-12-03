@@ -665,7 +665,7 @@
     au < finished ; crawling ; 2013 ; Indian Dermatology Online Journal Volume 4 ; 2013 ; 4 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2014 ; Indian Dermatology Online Journal Volume 5 ; 2014 ; 5 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2015 ; Indian Dermatology Online Journal Volume 6 ; 2015 ; 6 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2016 ; Indian Dermatology Online Journal Volume 7 ; 2016 ; 7 ; >
+    au < finished ; manifest ; 2016 ; Indian Dermatology Online Journal Volume 7 ; 2016 ; 7 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Indian Dermatology Online Journal Volume 8 ; 2017 ; 8 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2018 ; Indian Dermatology Online Journal Volume 9 ; 2018 ; 9 ; >
 
@@ -964,7 +964,7 @@
     au < finished ; crawling ; 2014 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 80 ; 2014 ; 80 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2015 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 81 ; 2015 ; 81 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2016 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 82 ; 2016 ; 82 ; >
-    au < frozen ; exists ; 2017 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 83 ; 2017 ; 83 ; >
+    au < finished ; manifest ; 2017 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 83 ; 2017 ; 83 ; >
     au < crawling ; exists ; 2018 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 84 ; 2018 ; 84 ; >
 
   }
@@ -2016,7 +2016,7 @@
     param[base_url] = http://www.ijabmr.org/
     param[journal_issn] = 2229-516X
 
-    au < frozen ; exists ; 2011 ; International Journal of Applied and Basic Medical Research Volume 1 ; 2011 ; 1 ; >
+    au < finished ; manifest ; 2011 ; International Journal of Applied and Basic Medical Research Volume 1 ; 2011 ; 1 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2012 ; International Journal of Applied and Basic Medical Research Volume 2 ; 2012 ; 2 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; International Journal of Applied and Basic Medical Research Volume 3 ; 2013 ; 3 ; >
     au < finished ; finished ; 2014 ; International Journal of Applied and Basic Medical Research Volume 4 ; 2014 ; 4 ; >
@@ -2191,7 +2191,7 @@
     au < manifest ; exists ; 2009 ; International Journal of Trichology Volume 1 ; 2009 ; 1 ; >
     au < manifest ; exists ; 2010 ; International Journal of Trichology Volume 2 ; 2010 ; 2 ; >
     au < finished ; crawling ; 2011 ; International Journal of Trichology Volume 3 ; 2011 ; 3 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2012 ; International Journal of Trichology Volume 4 ; 2012 ; 4 ; >
+    au < finished ; manifest ; 2012 ; International Journal of Trichology Volume 4 ; 2012 ; 4 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2013 ; International Journal of Trichology Volume 5 ; 2013 ; 5 ; reingest1.clockss.org:8082 >
     au < notReady ; exists ; 2014 ; International Journal of Trichology Volume 6 ; 2014 ; 6 ; >
     au < finished ; crawling ; 2015 ; International Journal of Trichology Volume 7 ; 2015 ; 7 ; reingest2.clockss.org:8085 >
@@ -2993,7 +2993,7 @@
 
     au < manifest ; exists ; 2009 ; Journal of Laboratory Physicians Volume 1 ; 2009 ; 1 ; >
     au < manifest ; exists ; 2010 ; Journal of Laboratory Physicians Volume 2 ; 2010 ; 2 ; >
-    au < frozen ; exists ; 2011 ; Journal of Laboratory Physicians Volume 3 ; 2011 ; 3 ; >
+    au < finished ; manifest ; 2011 ; Journal of Laboratory Physicians Volume 3 ; 2011 ; 3 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Journal of Laboratory Physicians Volume 4 ; 2012 ; 4 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2013 ; Journal of Laboratory Physicians Volume 5 ; 2013 ; 5 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2014 ; Journal of Laboratory Physicians Volume 6 ; 2014 ; 6 ; reingest5.clockss.org:8082 >
@@ -4681,7 +4681,7 @@
       param[base_url] = http://www.archintsurg.org/
 
       au < finished ; crawling ; 2012 ; Archives of International Surgery Volume 2 ; 2012 ; 2 ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2013 ; Archives of International Surgery Volume 3 ; 2013 ; 3 ; >
+      au < finished ; manifest ; 2013 ; Archives of International Surgery Volume 3 ; 2013 ; 3 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2014 ; Archives of International Surgery Volume 4 ; 2014 ; 4 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; Archives of International Surgery Volume 5 ; 2015 ; 5 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2016 ; Archives of International Surgery Volume 6 ; 2016 ; 6 ; >
@@ -5203,7 +5203,7 @@
       param[base_url] = http://www.new.ejpsy.eg.net/
 
       au < finished ; crawling ; 2012 ; Egyptian Journal of Psychiatry Volume 33 ; 2012 ; 33 ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2013 ; Egyptian Journal of Psychiatry Volume 34 ; 2013 ; 34 ; >
+      au < finished ; manifest ; 2013 ; Egyptian Journal of Psychiatry Volume 34 ; 2013 ; 34 ; reingest1.clockss.org:8082 >
       au < notReady ; exists ; 2014 ; Egyptian Journal of Psychiatry Volume 35 ; 2014 ; 35 ; > #500 error. see http://www.new.ejpsy.eg.net/article.asp?issn=1110-1105;year=2014;volume=35;issue=3;spage=115;epage=126;aulast=Salem;type=2
       au < finished ; crawling ; 2015 ; Egyptian Journal of Psychiatry Volume 36 ; 2015 ; 36 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2016 ; Egyptian Journal of Psychiatry Volume 37 ; 2016 ; 37 ; >
@@ -5319,7 +5319,7 @@
       param[base_url] = http://www.eusjournal.com/
 
       au < frozen ; exists ; 2012 ; Endoscopic Ultrasound Volume 1 ; 2012 ; 1 ; >
-      au < frozen ; exists ; 2013 ; Endoscopic Ultrasound Volume 2 ; 2013 ; 2 ; >
+      au < finished ; manifest ; 2013 ; Endoscopic Ultrasound Volume 2 ; 2013 ; 2 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2014 ; Endoscopic Ultrasound Volume 3 ; 2014 ; 3 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; Endoscopic Ultrasound Volume 4 ; 2015 ; 4 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2016 ; Endoscopic Ultrasound Volume 5 ; 2016 ; 5 ; >
@@ -5377,7 +5377,7 @@
       param[base_url] = http://www.ejgd.org/
 
       au < frozen ; exists ; 2012 ; European Journal of General Dentistry Volume 1 ; 2012 ; 1 ; >
-      au < frozen ; exists ; 2013 ; European Journal of General Dentistry Volume 2 ; 2013 ; 2 ; >
+      au < finished ; manifest ; 2013 ; European Journal of General Dentistry Volume 2 ; 2013 ; 2 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2014 ; European Journal of General Dentistry Volume 3 ; 2014 ; 3 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; European Journal of General Dentistry Volume 4 ; 2015 ; 4 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2016 ; European Journal of General Dentistry Volume 5 ; 2016 ; 5 ; >
