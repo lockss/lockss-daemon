@@ -384,7 +384,7 @@
       comment[publisher] = Stockholm University Press
 #      param[base_url] = http://www.designsforlearning.nu/
 
-      au < ready ; exists ; 2008 ; 1 ; Designs for Learning Volume 2008 ; 2008 ; https://www.designsforlearning.nu/ ; >
+      au < crawling ; exists ; 2008 ; 1 ; Designs for Learning Volume 2008 ; 2008 ; https://www.designsforlearning.nu/ ; >
       au < crawling ; exists ; 2009 ; 2 ; Designs for Learning Volume 2009 ; 2009 ; https://www.designsforlearning.nu/ ; >
       au < frozen ; exists ; 2010 ; 3 ; Designs for Learning Volume 2010 ; 2010 ; http://www.designsforlearning.nu/ ; >
       au < frozen ; exists ; 2011 ; 4 ; Designs for Learning Volume 2011 ; 2011 ; http://www.designsforlearning.nu/ ; >
@@ -847,7 +847,7 @@
       au < manifest ; exists ; 1998 ; 4-5 ; Journal of Conservation and Museum Studies Volume 1998 ; 1998 ; https://www.jcms-journal.com/ ; >
       au < manifest ; exists ; 1999 ; 6 ; Journal of Conservation and Museum Studies Volume 1999 ; 1999 ; https://www.jcms-journal.com/ ; >
       au < crawling ; exists ; 2001 ; 7 ; Journal of Conservation and Museum Studies Volume 2001 ; 2001 ; https://www.jcms-journal.com/ ; >
-      au < ready ; exists ; 2002 ; 8 ; Journal of Conservation and Museum Studies Volume 2002 ; 2002 ; https://www.jcms-journal.com/ ; >
+      au < crawling ; exists ; 2002 ; 8 ; Journal of Conservation and Museum Studies Volume 2002 ; 2002 ; https://www.jcms-journal.com/ ; >
       au < doNotProcess ; exists ; 2011 ; 9 ; Journal of Conservation and Museum Studies Volume 2011 ; 2011 ; https://www.jcms-journal.com/ ; >
       au < doNotProcess ; exists ; 2012 ; 10 ; Journal of Conservation and Museum Studies Volume 2012 ; 2012 ; https://www.jcms-journal.com/ ; >
       au < doNotProcess ; exists ; 2013 ; 11 ; Journal of Conservation and Museum Studies Volume 2013 ; 2013 ; https://www.jcms-journal.com/ ; >
@@ -1239,7 +1239,7 @@
       au < crawling ; exists ; 2000 ; 11 ; Papers from the Institute of Archaeology Volume 2000 ; 2000 ; https://pia-journal.co.uk/ ; >
       au < frozen ; exists ; 2001 ; 12 ; Papers from the Institute of Archaeology Volume 2001 ; 2001 ; https://pia-journal.co.uk/ ; >
       au < crawling ; exists ; 2002 ; 13 ; Papers from the Institute of Archaeology Volume 2002 ; 2002 ; https://pia-journal.co.uk/ ; >
-      au < ready ; exists ; 2003 ; 14 ; Papers from the Institute of Archaeology Volume 2003 ; 2003 ; https://pia-journal.co.uk/ ; >
+      au < crawling ; exists ; 2003 ; 14 ; Papers from the Institute of Archaeology Volume 2003 ; 2003 ; https://pia-journal.co.uk/ ; >
       au < frozen ; exists ; 2004 ; 15 ; Papers from the Institute of Archaeology Volume 2004 ; 2004 ; https://pia-journal.co.uk/ ; >
       au < frozen ; exists ; 2005 ; 16 ; Papers from the Institute of Archaeology Volume 2005 ; 2005 ; https://pia-journal.co.uk/ ; >
       au < crawling ; exists ; 2006 ; 17 ; Papers from the Institute of Archaeology Volume 2006 ; 2006 ; https://pia-journal.co.uk/ ; >
@@ -1325,7 +1325,7 @@
       au < crawling ; exists ; 2005 ; 1 ; Psychologica Belgica Volume 2005 ; 2005 ; https://www.psychologicabelgica.com/ ; >
       au < frozen ; exists ; 2006 ; 2 ; Psychologica Belgica Volume 2006 ; 2006 ; https://www.psychologicabelgica.com/ ; >
       au < crawling ; exists ; 2007 ; 3 ; Psychologica Belgica Volume 2007 ; 2007 ; https://www.psychologicabelgica.com/ ; >
-      au < ready ; exists ; 2008 ; 4 ; Psychologica Belgica Volume 2008 ; 2008 ; https://www.psychologicabelgica.com/ ; >
+      au < crawling ; exists ; 2008 ; 4 ; Psychologica Belgica Volume 2008 ; 2008 ; https://www.psychologicabelgica.com/ ; >
       au < crawling ; exists ; 2009 ; 5 ; Psychologica Belgica Volume 2009 ; 2009 ; https://www.psychologicabelgica.com/ ; >
       au < doNotProcess ; exists ; 2010 ; 6 ; Psychologica Belgica Volume 2010 ; 2010 ; https://www.psychologicabelgica.com/ ; >
       au < doNotProcess ; exists ; 2011 ; 7 ; Psychologica Belgica Volume 2011 ; 2011 ; https://www.psychologicabelgica.com/ ; >
@@ -1660,7 +1660,7 @@
       comment[publisher] = University of Westminster Press
 #      param[base_url] = http://www.entsportslawjournal.com/
 
-      au < ready ; exists ; 2002 ; 1 ; Entertainment and Sports Law Journal Volume 2002 ; 2002 ; https://www.entsportslawjournal.com/ ; >
+      au < crawling ; exists ; 2002 ; 1 ; Entertainment and Sports Law Journal Volume 2002 ; 2002 ; https://www.entsportslawjournal.com/ ; >
       au < frozen ; exists ; 2003 ; 2 ; Entertainment and Sports Law Journal Volume 2003 ; 2003 ; https://www.entsportslawjournal.com/ ; >
       au < crawling ; exists ; 2005 ; 3 ; Entertainment and Sports Law Journal Volume 2005 ; 2005 ; https://www.entsportslawjournal.com/ ; >
       au < frozen ; exists ; 2006 ; 4 ; Entertainment and Sports Law Journal Volume 2006 ; 2006 ; https://www.entsportslawjournal.com/ ; >
@@ -1811,7 +1811,7 @@
       au < frozen ; exists ; 2004 ; 2 ; ERLACS Volume 2004 ; 2004 ; https://www.erlacs.org/ ; >
       au < frozen ; exists ; 2005 ; 3 ; ERLACS Volume 2005 ; 2005 ; https://www.erlacs.org/ ; >
       au < crawling ; exists ; 2006 ; 4 ; ERLACS Volume 2006 ; 2006 ; https://www.erlacs.org/ ; >
-      au < ready ; exists ; 2007 ; 5 ; ERLACS Volume 2007 ; 2007 ; https://www.erlacs.org/ ; >
+      au < crawling ; exists ; 2007 ; 5 ; ERLACS Volume 2007 ; 2007 ; https://www.erlacs.org/ ; >
       au < frozen ; exists ; 2008 ; 6 ; ERLACS Volume 2008 ; 2008 ; https://www.erlacs.org/ ; >
       au < crawling ; exists ; 2009 ; 7 ; ERLACS Volume 2009 ; 2009 ; https://www.erlacs.org/ ; >
       au < frozen ; exists ; 2010 ; 8 ; ERLACS Volume 2010 ; 2010 ; http://www.erlacs.org/ ; >
