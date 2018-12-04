@@ -39,11 +39,11 @@
       hidden[proxy] = DIRECT
       implicit < status ; status2 ; year ; name ; param[directory] >
       
-      au < readySource ; crawling ; 2018 ; Springer Source Content 2018_1 ; 2018_1 >
-      au < readySource ; crawling ; 2018 ; Springer Source Content 2018_2 ; 2018_2 >
-      au < readySource ; crawling ; 2018 ; Springer Source Content 2018_3 ; 2018_3 >
-      au < readySource ; crawling ; 2018 ; Springer Source Content 2018_4 ; 2018_4 >
-      au < readySource ; crawling ; 2018 ; Springer Source Content 2018_5 ; 2018_5 >
+      au < readySource ; frozen ; 2018 ; Springer Source Content 2018_1 ; 2018_1 >
+      au < readySource ; frozen ; 2018 ; Springer Source Content 2018_2 ; 2018_2 >
+      au < readySource ; frozen ; 2018 ; Springer Source Content 2018_3 ; 2018_3 >
+      au < readySource ; frozen ; 2018 ; Springer Source Content 2018_4 ; 2018_4 >
+      au < readySource ; frozen ; 2018 ; Springer Source Content 2018_5 ; 2018_5 >
       au < readySource ; crawling ; 2018 ; Springer Source Content 2018_6 ; 2018_6 >
 
       
