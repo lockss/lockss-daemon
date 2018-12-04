@@ -184,7 +184,7 @@
 
     param[journal_id] = jist
 
-    au < exists ; 2018 ; Journal of Information Studies & Technology Volume 2018 ; 2018 >
+    au < manifest ; 2018 ; Journal of Information Studies & Technology Volume 2018 ; 2018 >
 
   }
 
@@ -324,7 +324,7 @@
     au < released ; 2015 ; QScience Connect Volume 2015 ; 2015 >
     au < released ; 2016 ; QScience Connect Volume 2016 ; 2016 >
     au < released ; 2017 ; QScience Connect Volume 2017 ; 2017 >
-    au < exists ; 2018 ; QScience Connect Volume 2018 ; 2018 >
+    au < manifest ; 2018 ; QScience Connect Volume 2018 ; 2018 >
 
   }
 
@@ -356,7 +356,7 @@
 
     param[journal_id] = rolacc
 
-    au < exists ; 2018 ; Rule of Law and Anti-Corruption Journal Volume 2018 ; 2018 >
+    au < manifest ; 2018 ; Rule of Law and Anti-Corruption Journal Volume 2018 ; 2018 >
 
   }
 
