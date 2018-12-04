@@ -53,8 +53,8 @@
     param[journal_id] = cs 
     
     au < finished ; finished ; 2015 ; PeerJ Computer Science Volume 2015 ; 2015 ; >
-    au < crawling ; exists ; 2016 ; PeerJ Computer Science Volume 2016 ; 2016 ; >
-    au < crawling ; exists ; 2017 ; PeerJ Computer Science Volume 2017 ; 2017 ; >
+    au < frozen ; exists ; 2016 ; PeerJ Computer Science Volume 2016 ; 2016 ; >
+    au < frozen ; exists ; 2017 ; PeerJ Computer Science Volume 2017 ; 2017 ; >
     au < crawling ; exists ; 2018 ; PeerJ Computer Science Volume 2018 ; 2018 ; >
     }
   }

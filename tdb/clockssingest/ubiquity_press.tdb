@@ -484,10 +484,10 @@
       au < crawling ; exists ; 2003 ; 33 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2003 ; 2003 ; https://www.iberoamericana.se/ ; >
       au < frozen ; exists ; 2004 ; 34 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2004 ; 2004 ; https://www.iberoamericana.se/ ; >
       au < crawling ; exists ; 2005 ; 35 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2005 ; 2005 ; https://www.iberoamericana.se/ ; >
-      au < crawling ; exists ; 2006 ; 36 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2006 ; 2006 ; https://www.iberoamericana.se/ ; >
+      au < frozen ; exists ; 2006 ; 36 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2006 ; 2006 ; https://www.iberoamericana.se/ ; >
       au < frozen ; exists ; 2007 ; 37 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2007 ; 2007 ; https://www.iberoamericana.se/ ; >
       au < doesNotExist ; doesNotExist ; 2008 ; 38 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2008 ; 2008 ; https://www.iberoamericana.se/ ; > #M exists. No articles for that year.
-      au < crawling ; exists ; 2009 ; 39 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2009 ; 2009 ; https://www.iberoamericana.se/ ; >
+      au < frozen ; exists ; 2009 ; 39 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2009 ; 2009 ; https://www.iberoamericana.se/ ; >
       au < frozen ; exists ; 2010 ; 40 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2010 ; 2010 ; https://www.iberoamericana.se/ ; >
       au < frozen ; exists ; 2011 ; 41 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2011 ; 2011 ; https://www.iberoamericana.se/ ; >
       au < frozen ; exists ; 2012 ; 42 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2012 ; 2012 ; https://www.iberoamericana.se/ ; >
@@ -643,9 +643,9 @@
       au < crawling ; exists ; 2001 ; 11 ; Bulletin of the History of Archaeology Volume 2001 ; 2001 ; https://www.archaeologybulletin.org/ ; >
       au < frozen ; exists ; 2002 ; 12 ; Bulletin of the History of Archaeology Volume 2002 ; 2002 ; https://www.archaeologybulletin.org/ ; >
       au < frozen ; exists ; 2003 ; 13 ; Bulletin of the History of Archaeology Volume 2003 ; 2003 ; https://www.archaeologybulletin.org/ ; >
-      au < crawling ; exists ; 2004 ; 14 ; Bulletin of the History of Archaeology Volume 2004 ; 2004 ; https://www.archaeologybulletin.org/ ; >
+      au < frozen ; exists ; 2004 ; 14 ; Bulletin of the History of Archaeology Volume 2004 ; 2004 ; https://www.archaeologybulletin.org/ ; >
       au < frozen ; exists ; 2005 ; 15 ; Bulletin of the History of Archaeology Volume 2005 ; 2005 ; https://www.archaeologybulletin.org/ ; >
-      au < crawling ; exists ; 2006 ; 16 ; Bulletin of the History of Archaeology Volume 2006 ; 2006 ; https://www.archaeologybulletin.org/ ; >
+      au < frozen ; exists ; 2006 ; 16 ; Bulletin of the History of Archaeology Volume 2006 ; 2006 ; https://www.archaeologybulletin.org/ ; >
       au < crawling ; exists ; 2007 ; 17 ; Bulletin of the History of Archaeology Volume 2007 ; 2007 ; https://www.archaeologybulletin.org/ ; >
       au < frozen ; exists ; 2008 ; 18 ; Bulletin of the History of Archaeology Volume 2008 ; 2008 ; https://www.archaeologybulletin.org/ ; >
       au < frozen ; exists ; 2009 ; 19 ; Bulletin of the History of Archaeology Volume 2009 ; 2009 ; https://www.archaeologybulletin.org/ ; >
@@ -765,11 +765,11 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = http://www.ijic.org/
 
-      au < crawling ; exists ; 2000 ; 1 ; International Journal of Integrated Care Volume 2000 ; 2000 ; https://www.ijic.org/ ; >
+      au < frozen ; exists ; 2000 ; 1 ; International Journal of Integrated Care Volume 2000 ; 2000 ; https://www.ijic.org/ ; >
       au < crawling ; exists ; 2001 ; 2 ; International Journal of Integrated Care Volume 2001 ; 2001 ; https://www.ijic.org/ ; >
-      au < crawling ; exists ; 2002 ; 3 ; International Journal of Integrated Care Volume 2002 ; 2002 ; https://www.ijic.org/ ; >
+      au < frozen ; exists ; 2002 ; 3 ; International Journal of Integrated Care Volume 2002 ; 2002 ; https://www.ijic.org/ ; >
       au < frozen ; exists ; 2003 ; 4 ; International Journal of Integrated Care Volume 2003 ; 2003 ; https://www.ijic.org/ ; >
-      au < crawling ; exists ; 2004 ; 5 ; International Journal of Integrated Care Volume 2004 ; 2004 ; https://www.ijic.org/ ; >
+      au < frozen ; exists ; 2004 ; 5 ; International Journal of Integrated Care Volume 2004 ; 2004 ; https://www.ijic.org/ ; >
       au < frozen ; exists ; 2005 ; 6 ; International Journal of Integrated Care Volume 2005 ; 2005 ; https://www.ijic.org/ ; >
       au < frozen ; exists ; 2006 ; 7 ; International Journal of Integrated Care Volume 2006 ; 2006 ; https://www.ijic.org/ ; >
       au < frozen ; exists ; 2007 ; 8 ; International Journal of Integrated Care Volume 2007 ; 2007 ; https://www.ijic.org/ ; >
@@ -912,7 +912,7 @@
       au < manifest ; exists ; 1999 ; 1999 ; Journal of Interactive Media in Education Volume 1999 ; 1999 ; https://jime.open.ac.uk/ ; >
       au < crawling ; exists ; 2000 ; 2000 ; Journal of Interactive Media in Education Volume 2000 ; 2000 ; https://jime.open.ac.uk/ ; >
       au < crawling ; exists ; 2001 ; 2001 ; Journal of Interactive Media in Education Volume 2001 ; 2001 ; https://jime.open.ac.uk/ ; >
-      au < crawling ; exists ; 2002 ; 2002 ; Journal of Interactive Media in Education Volume 2002 ; 2002 ; https://jime.open.ac.uk/ ; >
+      au < frozen ; exists ; 2002 ; 2002 ; Journal of Interactive Media in Education Volume 2002 ; 2002 ; https://jime.open.ac.uk/ ; >
       au < frozen ; exists ; 2003 ; 2003 ; Journal of Interactive Media in Education Volume 2003 ; 2003 ; https://jime.open.ac.uk/ ; >
       au < crawling ; exists ; 2004 ; 2004 ; Journal of Interactive Media in Education Volume 2004 ; 2004 ; https://jime.open.ac.uk/ ; >
       au < crawling ; exists ; 2005 ; 2005 ; Journal of Interactive Media in Education Volume 2005 ; 2005 ; https://jime.open.ac.uk/ ; >
@@ -920,7 +920,7 @@
       au < frozen ; exists ; 2007 ; 2007 ; Journal of Interactive Media in Education Volume 2007 ; 2007 ; https://jime.open.ac.uk/ ; >
       au < frozen ; exists ; 2008 ; 2008 ; Journal of Interactive Media in Education Volume 2008 ; 2008 ; https://jime.open.ac.uk/ ; >
       au < frozen ; exists ; 2009 ; 2009 ; Journal of Interactive Media in Education Volume 2009 ; 2009 ; https://jime.open.ac.uk/ ; >
-      au < crawling ; exists ; 2010 ; 2010 ; Journal of Interactive Media in Education Volume 2010 ; 2010 ; https://jime.open.ac.uk/ ; >
+      au < frozen ; exists ; 2010 ; 2010 ; Journal of Interactive Media in Education Volume 2010 ; 2010 ; https://jime.open.ac.uk/ ; >
       au < frozen ; exists ; 2012 ; 2012 ; Journal of Interactive Media in Education Volume 2012 ; 2012 ; https://jime.open.ac.uk/ ; >
       au < crawling ; exists ; 2013 ; 2013 ; Journal of Interactive Media in Education Volume 2013 ; 2013 ; https://jime.open.ac.uk/ ; >
       au < frozen ; exists ; 2014 ; 2014 ; Journal of Interactive Media in Education Volume 2014 ; 2014 ; https://jime.open.ac.uk/ ; >
@@ -943,7 +943,7 @@
 
       au < crawling ; exists ; 2006 ; 1 ; Journal of Molecular Signaling Volume 2006 ; 2006 ; https://www.jmolecularsignaling.com/ ; >
       au < frozen ; exists ; 2007 ; 2 ; Journal of Molecular Signaling Volume 2007 ; 2007 ; https://www.jmolecularsignaling.com/ ; >
-      au < crawling ; exists ; 2008 ; 3 ; Journal of Molecular Signaling Volume 2008 ; 2008 ; https://www.jmolecularsignaling.com/ ; >
+      au < frozen ; exists ; 2008 ; 3 ; Journal of Molecular Signaling Volume 2008 ; 2008 ; https://www.jmolecularsignaling.com/ ; >
       au < crawling ; exists ; 2009 ; 4 ; Journal of Molecular Signaling Volume 2009 ; 2009 ; https://www.jmolecularsignaling.com/ ; >
       au < frozen ; exists ; 2010 ; 5 ; Journal of Molecular Signaling Volume 2010 ; 2010 ; http://www.jmolecularsignaling.com/ ; >
       au < frozen ; exists ; 2011 ; 6 ; Journal of Molecular Signaling Volume 2011 ; 2011 ; http://www.jmolecularsignaling.com/ ; >
@@ -1241,7 +1241,7 @@
       au < crawling ; exists ; 2002 ; 13 ; Papers from the Institute of Archaeology Volume 2002 ; 2002 ; https://pia-journal.co.uk/ ; >
       au < ready ; exists ; 2003 ; 14 ; Papers from the Institute of Archaeology Volume 2003 ; 2003 ; https://pia-journal.co.uk/ ; >
       au < frozen ; exists ; 2004 ; 15 ; Papers from the Institute of Archaeology Volume 2004 ; 2004 ; https://pia-journal.co.uk/ ; >
-      au < crawling ; exists ; 2005 ; 16 ; Papers from the Institute of Archaeology Volume 2005 ; 2005 ; https://pia-journal.co.uk/ ; >
+      au < frozen ; exists ; 2005 ; 16 ; Papers from the Institute of Archaeology Volume 2005 ; 2005 ; https://pia-journal.co.uk/ ; >
       au < crawling ; exists ; 2006 ; 17 ; Papers from the Institute of Archaeology Volume 2006 ; 2006 ; https://pia-journal.co.uk/ ; >
       au < frozen ; exists ; 2007 ; 18 ; Papers from the Institute of Archaeology Volume 2007 ; 2007 ; https://pia-journal.co.uk/ ; >
       au < doesNotExist ; doesNotExist ; 2008 ; 19 ; Papers from the Institute of Archaeology Volume 2008 ; 2008 ; https://pia-journal.co.uk/ ; > #M exists. No articles for that year.
@@ -1809,7 +1809,7 @@
 
       au < frozen ; exists ; 2003 ; 1 ; ERLACS Volume 2003 ; 2003 ; https://www.erlacs.org/ ; >
       au < frozen ; exists ; 2004 ; 2 ; ERLACS Volume 2004 ; 2004 ; https://www.erlacs.org/ ; >
-      au < crawling ; exists ; 2005 ; 3 ; ERLACS Volume 2005 ; 2005 ; https://www.erlacs.org/ ; >
+      au < frozen ; exists ; 2005 ; 3 ; ERLACS Volume 2005 ; 2005 ; https://www.erlacs.org/ ; >
       au < crawling ; exists ; 2006 ; 4 ; ERLACS Volume 2006 ; 2006 ; https://www.erlacs.org/ ; >
       au < ready ; exists ; 2007 ; 5 ; ERLACS Volume 2007 ; 2007 ; https://www.erlacs.org/ ; >
       au < frozen ; exists ; 2008 ; 6 ; ERLACS Volume 2008 ; 2008 ; https://www.erlacs.org/ ; >
@@ -1857,7 +1857,7 @@
       comment[publisher] = Utrecht University Library
 #      param[base_url] = http://www.iacajournal.org/
 
-      au < crawling ; exists ; 2008 ; 1 ; International Journal for Court Administration Volume 2008 ; 2008 ; https://www.iacajournal.org/ ; >
+      au < frozen ; exists ; 2008 ; 1 ; International Journal for Court Administration Volume 2008 ; 2008 ; https://www.iacajournal.org/ ; >
       au < frozen ; exists ; 2009 ; 2 ; International Journal for Court Administration Volume 2009 ; 2009 ; https://www.iacajournal.org/ ; >
       au < frozen ; exists ; 2010 ; 3 ; International Journal for Court Administration Volume 2010 ; 2010 ; http://www.iacajournal.org/ ; >
       au < frozen ; exists ; 2011 ; 4 ; International Journal for Court Administration Volume 2011 ; 2011 ; http://www.iacajournal.org/ ; >
@@ -1987,7 +1987,7 @@
 
       au < frozen ; exists ; 2007 ; 1 ; RELIEF Volume 2007 ; 2007 ; https://www.revue-relief.org/ ; >
       au < frozen ; exists ; 2008 ; 2 ; RELIEF Volume 2008 ; 2008 ; https://www.revue-relief.org/ ; >
-      au < crawling ; exists ; 2009 ; 3 ; RELIEF Volume 2009 ; 2009 ; https://www.revue-relief.org/ ; >
+      au < frozen ; exists ; 2009 ; 3 ; RELIEF Volume 2009 ; 2009 ; https://www.revue-relief.org/ ; >
       au < frozen ; exists ; 2010 ; 4 ; RELIEF Volume 2010 ; 2010 ; https://www.revue-relief.org/ ; >
       au < frozen ; exists ; 2011 ; 5 ; RELIEF Volume 2011 ; 2011 ; https://www.revue-relief.org/ ; >
       au < frozen ; exists ; 2012 ; 6 ; RELIEF Volume 2012 ; 2012 ; https://www.revue-relief.org/ ; >
@@ -2170,7 +2170,7 @@
       au < doesNotExist ; doesNotExist ; 2002 ; 15 ; Serials: The Journal for the Serials Community Volume 2002 ; 2002 ; https://serials.uksg.org/ ; > #M exists. No articles for that year.
       au < crawling ; exists ; 2003 ; 16 ; Serials: The Journal for the Serials Community Volume 2003 ; 2003 ; https://serials.uksg.org/ ; >
       au < frozen ; exists ; 2004 ; 17 ; Serials: The Journal for the Serials Community Volume 2004 ; 2004 ; https://serials.uksg.org/ ; >
-      au < crawling ; exists ; 2005 ; 18 ; Serials: The Journal for the Serials Community Volume 2005 ; 2005 ; https://serials.uksg.org/ ; >
+      au < frozen ; exists ; 2005 ; 18 ; Serials: The Journal for the Serials Community Volume 2005 ; 2005 ; https://serials.uksg.org/ ; >
       au < crawling ; exists ; 2006 ; 19 ; Serials: The Journal for the Serials Community Volume 2006 ; 2006 ; https://serials.uksg.org/ ; >
       au < frozen ; exists ; 2007 ; 20 ; Serials: The Journal for the Serials Community Volume 2007 ; 2007 ; https://serials.uksg.org/ ; >
       au < frozen ; exists ; 2008 ; 21 ; Serials: The Journal for the Serials Community Volume 2008 ; 2008 ; https://serials.uksg.org/ ; >
