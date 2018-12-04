@@ -69,7 +69,7 @@ public class TestIgiGlobalPlugin extends LockssPluginTestCase {
 	
 	// from au_url_poll_result_weight in plugins/src/org/lockss/plugin/igiglobal/IgiGlobalPlugin.xml
 	// if it changes in the plugin, you will likely need to change the test, so verify
-	static final String  IGI_REPAIR_FROM_PEER_REGEXP1 = "(?i)://[^/]+/(images|jquery|sourcecontent)/.*[.](bmp|gif|ico|jpe?g|png|tif?f)$";
+	static final String  IGI_REPAIR_FROM_PEER_REGEXP1 = "(?i)://[^/]+/(images|.*jquery.*|sourcecontent)/.*[.](bmp|gif|ico|jpe?g|png|tif?f)$";
 	static final String  IGI_REPAIR_FROM_PEER_REGEXP2 = "[.](css|js)$";
 
   public void setUp() throws Exception {
