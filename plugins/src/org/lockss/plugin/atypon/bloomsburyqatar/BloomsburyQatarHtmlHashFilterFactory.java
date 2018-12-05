@@ -53,9 +53,9 @@ public class BloomsburyQatarHtmlHashFilterFactory extends BaseAtyponHtmlHashFilt
         HtmlNodeFilters.tagWithAttribute("div", "id", "hiddenCommentsDiv"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "hiddenSupplDiv"),
         
-        HtmlNodeFilters.tagWithAttributeRegex("div",  "class",  "addthis_toolbox"),
-        HtmlNodeFilters.tagWithAttributeRegex("div",  "class",  "fb-comments"),
-        HtmlNodeFilters.tagWithAttributeRegex("div",  "id",  "wibiya"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "addthis_toolbox"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "fb-comments"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "wibiya"),
     };
 
     // super.createFilteredInputStream adds bqfilter to the baseAtyponFilters
