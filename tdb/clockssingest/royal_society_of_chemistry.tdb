@@ -1264,11 +1264,12 @@
   {
 
       title <
-        name = Journal and Proceedings of the Institute of Chemistry of Great Britain and Ireland ;
+        name = Journal of the Royal Institute of Chemistry ;
         issn = 0368-3958
       >
 
       comment[years] = Published 1920-1949
+      #name Journal of the Royal Institute of Chemistry 1950-1964
       param[journal_code] = jg
 
       au < doNotProcess ; doNotProcess ; 1920 ; Journal and Proceedings of the Institute of Chemistry of Great Britain and Ireland Volume 44 ; 44 ; 1920 ; >
@@ -2215,11 +2216,12 @@
   {
 
       title <
-        name = Proceedings of the Institute of Chemistry of Great Britain and Ireland ;
+        name = Journal of the Royal Institute of Chemistry ;
         issn = 0368-3958
       >
 
       comment[years] = Published 1877-1919
+      #name Journal of the Royal Institute of Chemistry for 1950-1964
       param[journal_code] = pg
 
       au < doNotProcess ; doNotProcess ; 1877 ; Proceedings of the Institute of Chemistry of Great Britain and Ireland Volume 1 ; 1 ; 1877 ; >
