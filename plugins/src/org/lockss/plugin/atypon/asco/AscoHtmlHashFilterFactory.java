@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -51,42 +51,31 @@ public class AscoHtmlHashFilterFactory
                                                String encoding) {
     NodeFilter[] filters = new NodeFilter[] {
         // handled by parent: script, sfxlink, stylesheet
-
-        HtmlNodeFilters.tag("style"),
-        
+        // style
         // page header: login, register, etc., and journal menu such as
         // subscribe, alerts, ...
-        // subscribe, alerts, ...
         HtmlNodeFilters.tagWithAttribute("header", "class", "page-header"),
-        // page footer
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pageFooter"),
         
         // toc - middle column; right column is literatumAd
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "toc-tools"),
         // article right column; right column is literatumAd
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-tools"),
         
-        HtmlNodeFilters.tagWithAttribute("div", "class", "sectionJumpTo"),
-        
         //showCitationsPage just verify the articleList info
         HtmlNodeFilters.allExceptSubtree(
             HtmlNodeFilters.tagWithAttributeRegex(
                 "div", "class", "downloadCitationsWidget"),
-                HtmlNodeFilters.tagWithAttribute(
-                    "div", "class", "articleList")),        
-        
-        // toc - article type seems to change and this isn't important
-        HtmlNodeFilters.tagWithAttribute("span", "class", "ArticleType"),
-        // on full text and referenes page the ways to linkout to the reference get                                                                                                                   
-        // added to (GoogleScholar, Medline, ISI, abstract, etc)                                                                                                                                      
-        // leave the content (NLM_article-title, NLM_year, etc),                                                                                                                                      
-        // but remove everything else (links and punctuation between options)  
-        HtmlNodeFilters.allExceptSubtree(
             HtmlNodeFilters.tagWithAttribute(
-                "table", "class", "references"),
-                HtmlNodeFilters.tagWithAttributeRegex(
-                    "span", "class", "NLM_")),
- 
+                "div", "class", "articleList")), 
+        
+        // on full text and referenes page the ways to linkout to the reference get 
+        // added to (GoogleScholar, Medline, ISI, abstract, etc) 
+        // leave the content (NLM_article-title, NLM_year, etc), 
+        // but remove everything else (links and punctuation between options) 
+        HtmlNodeFilters.allExceptSubtree(
+            HtmlNodeFilters.tagWithAttribute("table", "class", "references"),
+            HtmlNodeFilters.tagWithAttributeRegex("span", "class", "NLM_")),
+
     };
     // super.createFilteredInputStream adds bir filter to the baseAtyponFilters
     // and returns the filtered input stream using an array of NodeFilters that 
@@ -94,18 +83,14 @@ public class AscoHtmlHashFilterFactory
     return super.createFilteredInputStream(au, in, encoding, filters);
   }
 
-  
   public boolean doTagRemovalFiltering() {
     return true;
   }
-   
+
   @Override
   public boolean doWSFiltering() {
     return true;
   }
 
 }
-
-
-
 

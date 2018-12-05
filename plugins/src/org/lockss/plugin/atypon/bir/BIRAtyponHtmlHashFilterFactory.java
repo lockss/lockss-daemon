@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,23 +32,18 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.atypon.bir;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.InputStream;
 
-import org.apache.commons.io.IOUtils;
 import org.htmlparser.NodeFilter;
 import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory;
-import org.lockss.plugin.atypon.nrcresearchpress.NrcPdfFilterFactory;
 import org.lockss.util.Logger;
 
 public class BIRAtyponHtmlHashFilterFactory 
   extends BaseAtyponHtmlHashFilterFactory {
 
   private static final Logger log = Logger.getLogger(BIRAtyponHtmlHashFilterFactory.class);
-  
 
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
@@ -56,32 +51,18 @@ public class BIRAtyponHtmlHashFilterFactory
                                                String encoding) {
     NodeFilter[] filters = new NodeFilter[] {
         // handled by parent: script, sfxlink, stylesheet
-
-        HtmlNodeFilters.tag("noscript"),
+        // literatumArticleToolsWidget
         
-        // toc - first top block ad
-        // http://www.birpublications.org/toc/bjr/87/1044
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumAd"),
-        // page header: login, register, etc., and journal menu such as
-        // subscribe, alerts, ...
-        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "pageHeader"),
-        // page footer
-        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "pageFooter"),
         // toc - BJR logo image right below pageHeader
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
                                               "^widget general-image"),
         // toc, abs, full, ref - menu above breadcrumbs
-        HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "menuXml"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "menuXml"),
         // toc - free.gif image tied to an abs
-        HtmlNodeFilters.tagWithAttributeRegex("img",  "src", "free.gif"),   
-        // toc - access icon container
-        HtmlNodeFilters.tagWithAttribute("td", "class", "accessIconContainer"),
+        HtmlNodeFilters.tagWithAttributeRegex("img", "src", "free.gif"),
         // toc - pulldown with sections - may add citedby later
         HtmlNodeFilters.tagWithAttribute("div", "class", 
-                                         "publicationTooldropdownContainer"), 
-        // toc - right column, current issue
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-                                              "literatumBookIssueNavigation"),
+                                         "publicationTooldropdownContainer"),
         // toc, abs - share social media
         HtmlNodeFilters.tagWithAttributeRegex("div", "class",
                                               "general-bookmark-share"),
@@ -91,51 +72,30 @@ public class BIRAtyponHtmlHashFilterFactory
         // ref - this seems unused but may get turned on
         // http://www.birpublications.org/doi/ref/10.1259/bjr.20130571
         HtmlNodeFilters.tagWithAttribute("div",  "id", "MathJax_Message"),
-        // full - section choose pulldown appeared in multiple sections
-        // http://www.birpublications.org/doi/full/10.1259/dmfr.20120050
-        HtmlNodeFilters.tagWithAttribute("div",  "class", "sectionJumpTo"),
-        // toc, abs, full, text and ref right column - most read 
-        // http://www.birpublications.org/toc/bjr/88/1052
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-                                              "literatumMostReadWidget"),
-        // abs - right column all literatumArticleToolsWidget 
-        // except Download Citation
-        // http://www.birpublications.org/doi/abs/10.1259/bjr.20140472                                      
+        // on full text and references page the ways to linkout to the reference get 
+        // added to (GoogleScholar, Medline, ISI, abstract, etc) 
+        // leave the content (NLM_article-title, NLM_year, etc), 
+        // but remove everything else (links and punctuation between options) 
         HtmlNodeFilters.allExceptSubtree(
-            HtmlNodeFilters.tagWithAttributeRegex( 
-                "div", "class", "literatumArticleToolsWidget"),
-                HtmlNodeFilters.tagWithAttributeRegex(
-                    "a", "href", "/action/showCitFormats\\?")),
-        // on full text and referenes page the ways to linkout to the reference get                                                                                                                   
-        // added to (GoogleScholar, Medline, ISI, abstract, etc)                                                                                                                                      
-        // leave the content (NLM_article-title, NLM_year, etc),                                                                                                                                      
-        // but remove everything else (links and punctuation between options)  
-        HtmlNodeFilters.allExceptSubtree(
-            HtmlNodeFilters.tagWithAttribute(
-                "table", "class", "references"),
-                HtmlNodeFilters.tagWithAttributeRegex(
-                    "span", "class", "NLM_")),
-                    
- 
+            HtmlNodeFilters.tagWithAttribute("table", "class", "references"),
+            HtmlNodeFilters.tagWithAttributeRegex("span", "class", "NLM_")),
+
     };
     // super.createFilteredInputStream adds bir filter to the baseAtyponFilters
     // and returns the filtered input stream using an array of NodeFilters that 
     // combine the two arrays of NodeFilters.
     return super.createFilteredInputStream(au, in, encoding, filters);
   }
-
   
+  @Override
   public boolean doTagRemovalFiltering() {
     return true;
   }
-   
+  
   @Override
   public boolean doWSFiltering() {
     return true;
   }
 
 }
-
-
-
 
