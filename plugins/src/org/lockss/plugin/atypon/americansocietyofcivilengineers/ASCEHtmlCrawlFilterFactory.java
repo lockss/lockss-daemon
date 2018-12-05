@@ -64,8 +64,6 @@ public class ASCEHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory
     /*
      * This section is from 2017+ - skin change
      */
-    // TOC - links to all other issues
-    HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "literatumListOfIssuesResponsiveWidget"),      
     // Article landing - ajax tabs
     HtmlNodeFilters.tagWithAttributeRegex("div",  "id", "recommendedtabcontent"),
     HtmlNodeFilters.tagWithAttributeRegex("div",  "id", "reftabcontent"),

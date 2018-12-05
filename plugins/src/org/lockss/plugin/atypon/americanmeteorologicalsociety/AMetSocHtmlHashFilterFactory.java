@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -49,11 +49,9 @@ import org.lockss.util.Logger;
 import org.lockss.util.ReaderInputStream;
 
 /* 
- * Don't extend BaseAtyponHtmlHashFilterFactory because we need to do more 
- * extensive filtering with spaces, etc.
+ * Previously: Didn't extend BaseAtyponHtmlHashFilterFactory
  * 
- * TODO: re-analyze. AMetSoc has changed skins and may now be a candidate
- * for inheritance
+ * Now: Extends and does more extensive filtering with spaces, etc.
  */
 public class AMetSocHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
 
@@ -64,8 +62,8 @@ public class AMetSocHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactor
       InputStream in,
       String encoding) {
     NodeFilter[] filters = new NodeFilter[] {
-        // May be empty, may contain "free" glif if appropriate
-        HtmlNodeFilters.tagWithAttribute("div",  "class", "accessLegend"),
+        // May be empty, may contain "free" gif if appropriate
+        HtmlNodeFilters.tagWithAttribute("div", "class", "accessLegend"),
         // Contains "current issue" link which will change over time
         HtmlNodeFilters.tagWithAttribute("div", "id", "journalNavPanel"),
         // Contains "current issue" link which will change over time
@@ -83,9 +81,6 @@ public class AMetSocHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactor
         HtmlNodeFilters.tagWithTextRegex("h6","^(\\s|(&nbsp;))*$"),
         
         //From CRAWL filter
-        // toc and article page
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pageHeader"),
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pageFooter"),
         //next-prev on article page
         HtmlNodeFilters.tagWithAttribute("div", "class", "navigationLinkHolder"),
         //stuff in the right column - might also be filtered as literatumAd
@@ -93,16 +88,6 @@ public class AMetSocHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactor
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "rightColumnModule"),
         //TOC - tab for special collections
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "topicalIndex"),
-        // we don't need to leave in the showCitFormats part of this for hashing
-        HtmlNodeFilters.tagWithAttribute("div", "class", "articleTools"),
-        //From base parent CRAWL filter
-        // sections that may show up with this skin                                          
-        // http://www.birpublications.org/toc/bjr/88/1052
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumMostReadWidget"),    
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumMostCitedWidget"),
-        HtmlNodeFilters.tagWithAttributeRegex("div",  "class","literatumMostRecentWidget"),                                      
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumListOfIssuesWidget"),
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumBreadcrumbs"),
     };
 
     // super will add in the base nodeset and also do span-id transform
@@ -111,13 +96,12 @@ public class AMetSocHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactor
     // Also need white space filter to condense multiple white spaces down to 1
     Reader reader = FilterUtil.getReader(superFiltered, encoding);
 
-    // first subsitute plain white space for &nbsp;
+    // first substitute plain white space for &nbsp;
     String[][] unifySpaces = new String[][] { 
         // inconsistent use of nbsp v empty space - do this replacement first
         {"&nbsp;", " "}, 
     };
-    Reader NBSPFilter = StringFilter.makeNestedFilter(reader,
-        unifySpaces, false);   
+    Reader NBSPFilter = StringFilter.makeNestedFilter(reader, unifySpaces, false);
 
     //now consolidate white space before doing additional tagfilter stuff
     Reader WSReader = new WhiteSpaceFilter(NBSPFilter);
@@ -125,7 +109,6 @@ public class AMetSocHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactor
 
     // jeez. bogus occasional addition of trailing space in "ref nowrap "
     String[][] findAndReplace = new String[][] {
-        // use of &nbsp; or " " inconsistent over time
         {"ref nowrap ", "ref nowrap"}, 
     };
 

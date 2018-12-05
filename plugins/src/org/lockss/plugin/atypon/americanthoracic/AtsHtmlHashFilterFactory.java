@@ -83,20 +83,15 @@ public class AtsHtmlHashFilterFactory
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
                                               "downloadCitationsWidget"),
         // showPopup&citid=citart1
-        HtmlNodeFilters.tagWithAttributeRegex("body", "class", "popupBody")                                              
-                                                                                                                
+        HtmlNodeFilters.tagWithAttributeRegex("body", "class", "popupBody")
+        
     };
     
-    // handled by parent: script, sfxlink, stylesheet, pdfplus file sise
+    // handled by parent: script, sfxlink, stylesheet, pdfplus file size
     // <head> tag, <li> item has the text "Cited by", accessIcon, 
-    NodeFilter[] excludeNodes = new NodeFilter[] {       
-        // toc - select pulldown menu under volume title
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class",
-                                              "publicationToolContainer"),
-        // on article page
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-                                              "articleMetaDrop"),            
-    
+    // publicationToolContainer, articleMetaDrop
+    NodeFilter[] excludeNodes = new NodeFilter[] {
+        
     };
     return super.createFilteredInputStream(au, in, encoding, 
                                            includeNodes, excludeNodes);

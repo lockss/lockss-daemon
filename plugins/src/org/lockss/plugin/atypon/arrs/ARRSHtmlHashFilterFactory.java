@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -47,46 +47,43 @@ public class ARRSHtmlHashFilterFactory
       InputStream in, String encoding) {
     
     NodeFilter[] filters = new NodeFilter[] {
-        
+
         // Covered by BaseAtypon:
         // header - <div id="header">
         // footer - <div id="footer">
         // Open URL sfxLink
-        
         // from toc - accessIcon
-        // http://www.ajronline.org/toc/ajr/201/6
-        HtmlNodeFilters.tagWithAttributeRegex("img", "class", "accessIcon"),
-        
+
         // from toc - credit icon
         // http://www.ajronline.org/toc/ajr/201/6
         HtmlNodeFilters.tagWithAttributeRegex("img", "class", "CMESAM"),
-        
+
         // from toc, abs, full, suppl - whole left sidebar
-	// http://www.ajronline.org/doi/full/10.2214/AJR.12.10221
+        // http://www.ajronline.org/doi/full/10.2214/AJR.12.10221
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", 
-                                              "dropzone-Left-Sidebar"),  
-                                              
+                                              "dropzone-Left-Sidebar"),
+
         // from abs, full - Previous Article|Next Article
         // http://www.ajronline.org/doi/abs/10.2214/AJR.12.10039
-        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "articleToolsNav"),   
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "articleToolsNav"),
 
-	// from abs, full - Recommended Articles
-	// http://www.ajronline.org/doi/full/10.2214/AJR.12.9120
-	HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-	                                      "type-recommendedArticles"),  
+        // from abs, full - Recommended Articles
+        // http://www.ajronline.org/doi/full/10.2214/AJR.12.9120
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
+                                             "type-recommendedArticles"),
 
-	// from abs - share/email button below article title
-	// http://www.ajronline.org/doi/full/10.2214/AJR.12.10221
-	HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-	                                      "articleAdditionalLinks"), 
-	                                      
-	// from abs, full - 'Choose' pulldown near References section
-	// some page collected with 'CITING ARTICLES', some without
-	// http://www.ajronline.org/doi/full/10.2214/AJR.12.9121                                     
-	HtmlNodeFilters.tagWithAttribute("table", "class", "sectionHeading"),                                       
-               
+        // from abs - share/email button below article title
+        // http://www.ajronline.org/doi/full/10.2214/AJR.12.10221
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
+            "articleAdditionalLinks"),
+
+        // from abs, full - 'Choose' pulldown near References section
+        // some page collected with 'CITING ARTICLES', some without
+        // http://www.ajronline.org/doi/full/10.2214/AJR.12.9121
+        HtmlNodeFilters.tagWithAttribute("table", "class", "sectionHeading"),
+
     };
-    
+
     // super.createFilteredInputStream adds filters to the baseAtyponFilters
     // and returns the filtered input stream using an array of NodeFilters that 
     // combine the two arrays of NodeFilters.
@@ -97,10 +94,10 @@ public class ARRSHtmlHashFilterFactory
   public boolean doTagIDFiltering() {
     return true;
   }
-   
+
   @Override
   public boolean doWSFiltering() {
     return true;
   }
-    
+
 }

@@ -64,18 +64,18 @@ public class ASCEHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
          * This section is from < 2017
          */
         // <header> filtered in BaseAtypon
-	HtmlNodeFilters.tagWithAttribute("div", "id", "issueNav"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "issueNav"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", "tocTools"),
         HtmlNodeFilters.tagWithAttributeRegex("td", "class", "toggle"),
-	//article, toc: <div class="dropzone ui-corner-all " 
-	// id="dropzone-Left-Sidebar"> - tornados ad, session history.
-	HtmlNodeFilters.tagWithAttribute("div", "id", "dropzone-Left-Sidebar"),	
-	//toc: <div class="citation tocCitation">
-	HtmlNodeFilters.tagWithAttribute("div", "class", "citation tocCitation"),
-	// footer and footer_message filtered in BaseAtypon
-	// removing keywords section, author names from html page 
-	//  - some versions have "action/doSearch..."
-	HtmlNodeFilters.tagWithAttribute("div", "class", "abstractKeywords"),
+        //article, toc: <div class="dropzone ui-corner-all " 
+        // id="dropzone-Left-Sidebar"> - tornados ad, session history.
+        HtmlNodeFilters.tagWithAttribute("div", "id", "dropzone-Left-Sidebar"),	
+        //toc: <div class="citation tocCitation">
+        HtmlNodeFilters.tagWithAttribute("div", "class", "citation tocCitation"),
+        // footer and footer_message filtered in BaseAtypon
+        // removing keywords section, author names from html page 
+        //  - some versions have "action/doSearch..."
+        HtmlNodeFilters.tagWithAttribute("div", "class", "abstractKeywords"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "artAuthors"),
         // removing a doi link that sometimes has a class name
         HtmlNodeFilters.tagWithAttribute("a", "class", "ShowPdfGa"),
@@ -86,16 +86,10 @@ public class ASCEHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
          * This section is for 2017+
          */
         // TOC - links to all other issues
-        HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "pageHeader"),      
-        HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "pageFooter"),      
-        HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "journalMetaBackground"),      
-        HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "literatumListOfIssuesResponsiveWidget"),      
-        HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "literatumContentItemDownloadCount"),      
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "journalMetaBackground"),
         // Article landing - ajax tabs
-        HtmlNodeFilters.tagWithAttributeRegex("div",  "id", "recommendedtabcontent"),
-        HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "editorialRelated"),
-
-        
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "recommendedtabcontent"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "editorialRelated"),
 
     };
     
