@@ -66,10 +66,14 @@ public class TestJstorCSFilterFactory extends LockssTestCase {
           "</html>";
 
 
-  private static final String manifestHtmlFiltered =
+  private static final String manifestHtmlFiltered0 =
       "<ul>\n" +
           "  <li><a href=\"https://www.jstor.org/stable/10.2972/hesperia.84.issue-1\">10.2972/hesperia.84.issue-1</a></li>\n" +
           "</ul>";
+  private static final String manifestHtmlFiltered =
+      "" +
+          " 10.2972/hesperia.84.issue-1" +
+          " ";
 
 
   private static final String html1 = 
@@ -108,10 +112,14 @@ public class TestJstorCSFilterFactory extends LockssTestCase {
           "    </dl>" +
           "</div>" +     
           "</div></div>";
-  private static final String html2_filtered =
+  private static final String html2_filtered0 =
       "<div class=\"toc-view\"></div>" +
           "<div class=\"journal_description mtm\"><strong>Description:</strong> <i>Foo</i> is published quarterly." +
           "</div>";
+  private static final String html2_filtered =
+      "" +
+          " Description: Foo is published quarterly." +
+          " ";
   /*
    *  Compare Html and HtmlFiltered
    */
@@ -125,7 +133,7 @@ public class TestJstorCSFilterFactory extends LockssTestCase {
   public void testTocFiltering() throws Exception {
     InputStream actIn = hashfact.createFilteredInputStream(mau,
         new StringInputStream(html1), Constants.DEFAULT_ENCODING);
-    assertEquals("<div class=\"toc-view\"></div>", StringUtil.fromInputStream(actIn));
+    assertEquals(" ", StringUtil.fromInputStream(actIn));
     actIn = hashfact.createFilteredInputStream(mau,
         new StringInputStream(html2), Constants.DEFAULT_ENCODING);
     assertEquals(html2_filtered, StringUtil.fromInputStream(actIn)); 

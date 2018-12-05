@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>13</string>
+    <string>14</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -75,7 +75,7 @@
      -->
     <list>
       <string>1,"^https?://assets\.adobedtm\.com/"</string>
-      <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(\?(v|appId)=.+)?$", url_host(base_url)</string>
+      <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff.?)(\?(v|appId)=.+)?$", url_host(base_url)</string>
       <!--  spider trap if it's like other Atypon; doesn't matter what the intermed dir is-->
       <string>2,"^https?://%s/(doi|citation)/[^/]+/[0-9.]+/[-.9]+$", url_host(base_url)</string>
       <string>2,"^https?://%s/stable/([^/]+/)?[0-9.]+/[-.9]+$", url_host(base_url)</string>
@@ -228,6 +228,20 @@
   <entry>
     <string>au_def_new_content_crawl</string>
     <long>1209600000</long>
+  </entry>
+  <!--  tell the default base.MimeTypeContentValidator what url patterns to validate by mime type -->
+  <entry>
+    <string>au_url_mime_validation_map</string>
+    <list>
+      <string>\.pdf$, application/pdf</string>
+      <string>/doi/pdf, application/pdf</string>
+      <string>\.gif$, image/gif</string>
+      <string>\.jpe?g$, image/jpeg</string>
+      <string>\.png, image/png</string>
+      <string>/toc/, text/html</string>
+      <string>/doi/(abs|figure|full)/, text/html</string>
+      <string>\.mp4$, video/mp4</string>
+    </list>
   </entry>
   <entry>
     <string>plugin_au_config_user_msg</string>

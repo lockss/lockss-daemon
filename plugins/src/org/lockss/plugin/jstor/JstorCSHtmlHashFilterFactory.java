@@ -1,7 +1,7 @@
 
 /*
 
-Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -29,17 +29,28 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.jstor;
 
-import java.io.*;
+import java.io.InputStream;
+import java.io.Reader;
 import java.util.regex.Pattern;
 
-import org.htmlparser.*;
-import org.htmlparser.filters.*;
+import org.htmlparser.Node;
+import org.htmlparser.NodeFilter;
+import org.htmlparser.filters.OrFilter;
 import org.htmlparser.nodes.TextNode;
-import org.htmlparser.tags.*;
+import org.htmlparser.tags.BulletList;
+import org.htmlparser.tags.CompositeTag;
+import org.htmlparser.tags.HeadingTag;
 import org.lockss.filter.FilterUtil;
+import org.lockss.filter.HtmlTagFilter;
+import org.lockss.filter.HtmlTagFilter.TagPair;
 import org.lockss.filter.StringFilter;
-import org.lockss.filter.html.*;
-import org.lockss.plugin.*;
+import org.lockss.filter.WhiteSpaceFilter;
+import org.lockss.filter.html.HtmlCompoundTransform;
+import org.lockss.filter.html.HtmlFilterInputStream;
+import org.lockss.filter.html.HtmlNodeFilterTransform;
+import org.lockss.filter.html.HtmlNodeFilters;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.FilterFactory;
 import org.lockss.util.Logger;
 import org.lockss.util.ReaderInputStream;
 
@@ -118,16 +129,31 @@ public class JstorCSHtmlHashFilterFactory implements FilterFactory {
       if (includeNodes == null) {
         throw new NullPointerException("includeNodes array is null!");
       }   
-      InputStream filtered;
-      filtered = new HtmlFilterInputStream(in, encoding,
-                   new HtmlCompoundTransform(
-                       HtmlNodeFilterTransform.include(new OrFilter(includeNodes)),
-                       HtmlNodeFilterTransform.exclude(new OrFilter(excludeNodes)))
-                 );
       
-      Reader reader = FilterUtil.getReader(filtered, encoding);
-      Reader httpFilter = new StringFilter(reader, "http:", "https:");
-      return new ReaderInputStream(httpFilter); 
+      HtmlCompoundTransform combinedFiltered = new HtmlCompoundTransform(
+          HtmlNodeFilterTransform.include(new OrFilter(includeNodes)),
+          HtmlNodeFilterTransform.exclude(new OrFilter(excludeNodes)));
+      // InputStream filtered = new HtmlFilterInputStream(in, encoding, combinedFiltered);
+      
+      //Reader reader = FilterUtil.getReader(filtered, encoding);
+      //Reader httpFilter = new StringFilter(reader, "https:", "http:");
+      //return new ReaderInputStream(httpFilter);
+      
+      InputStream is = new HtmlFilterInputStream(in, encoding, combinedFiltered);
+      String[][] strArray = new String[][] {
+        // inconsistent use of nbsp v empty space - do this replacement first
+        {"&nbsp;", " "},
+        {"https:", "http:"},
+        {"<", " <"},
+      };
+      Reader tagFilter = StringFilter.makeNestedFilter(FilterUtil.getReader(is, encoding), strArray, false);
+      /*
+       * additional processing -
+       *    removal of all tags and removal of WS & https conversion
+       */
+      tagFilter = new HtmlTagFilter(tagFilter, new TagPair("<", ">"));
+      
+      return new ReaderInputStream(new WhiteSpaceFilter(tagFilter));
     }
   
 }

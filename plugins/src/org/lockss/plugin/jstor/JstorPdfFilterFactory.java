@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,8 +32,12 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.jstor;
 
+//import java.io.FileInputStream;
+//import java.io.FileOutputStream;
+//import java.io.OutputStream;
 import java.util.List;
 
+//import org.apache.commons.io.IOUtils;
 import org.lockss.filter.pdf.*;
 import org.lockss.pdf.*;
 import org.lockss.plugin.ArchivalUnit;
@@ -45,6 +49,9 @@ import org.lockss.util.Logger;
 public class JstorPdfFilterFactory extends ExtractingPdfFilterFactory {
   
   private static final Logger logger = Logger.getLogger(JstorPdfFilterFactory.class);
+
+  public static final String DOWNLOADED_FROM = "This content downloaded from ";
+  public static final String ALL_USE = "All use subject to http";
 
 /*
  * On each page there is a footer that says (equiv of):
@@ -71,9 +78,7 @@ public class JstorPdfFilterFactory extends ExtractingPdfFilterFactory {
  *6599    [operator:Q]
  *6600    [operator:Q]
  */
-  public static class JstorDownloadedFromWorker extends PdfTokenStreamWorker {
-
-    public static final String DOWNLOADED_FROM = "This content downloaded from ";
+  public static class JstorTokenStreamWorker extends PdfTokenStreamWorker {
 
     private boolean result;
     
@@ -83,9 +88,12 @@ public class JstorPdfFilterFactory extends ExtractingPdfFilterFactory {
     
     private int state;
     
+    private String target;
+    
     // The footer is close to the bottom of each page
-    public JstorDownloadedFromWorker() {
+    public JstorTokenStreamWorker(String target) {
       super(Direction.BACKWARD);
+      this.target = target;
     }
     
     @Override
@@ -106,7 +114,7 @@ public class JstorPdfFilterFactory extends ExtractingPdfFilterFactory {
         } break;
         
         case 1: { // We have found an ET object
-          if (isShowTextStartsWith(DOWNLOADED_FROM)) {
+          if (isShowTextStartsWith(target)) {
             ++state; // It's the one we want
           }
           else if (isBeginTextObject()) { // not the BT-ET we were looking for
@@ -143,7 +151,7 @@ public class JstorPdfFilterFactory extends ExtractingPdfFilterFactory {
       beginIndex = endIndex = -1;
     }
     
-  }  
+  }
 
   @Override
   public void transform(ArchivalUnit au,
@@ -155,25 +163,87 @@ public class JstorPdfFilterFactory extends ExtractingPdfFilterFactory {
     pdfDocument.unsetCreator();
     pdfDocument.unsetLanguage();
     pdfDocument.unsetProducer();
-    pdfDocument.unsetKeywords();    
+    pdfDocument.unsetKeywords();
 
-    JstorDownloadedFromWorker worker = new JstorDownloadedFromWorker();
+    JstorTokenStreamWorker worker1 = new JstorTokenStreamWorker(DOWNLOADED_FROM);
+    JstorTokenStreamWorker worker2 = new JstorTokenStreamWorker(ALL_USE);
     boolean firstPage = true;
     for (PdfPage pdfPage : pdfDocument.getPages()) {
       PdfTokenStream pdfTokenStream = pdfPage.getPageTokenStream();
-      worker.process(pdfTokenStream);
-      if (firstPage && !worker.result) {
+      worker1.process(pdfTokenStream);
+      if (firstPage && !worker1.result) {
         return; // This PDF needs no further processing
       }
-      if (worker.result) {
+      if (worker1.result) {
         List<PdfToken> tokens = pdfTokenStream.getTokens();
-        logger.debug3("REMOVE FROM: " + worker.beginIndex + " TO: " + worker.endIndex);
-        tokens.subList(worker.beginIndex, worker.endIndex + 1).clear(); // The +1 is normal substring/sublist indexing (upper bound is exclusive)
+        logger.debug3("REMOVE FROM: " + worker1.beginIndex + " TO: " + worker1.endIndex);
+        tokens.subList(worker1.beginIndex, worker1.endIndex + 1).clear(); // The +1 is normal substring/sublist indexing (upper bound is exclusive)
         pdfTokenStream.setTokens(tokens);
       }
       firstPage = false;
+      /*
+       * May decide to attempt to remove both strings using a single worker
+       * Would be somewhat more complex and content may not always have both strings
+       */
+      pdfTokenStream = pdfPage.getPageTokenStream();
+      worker2.process(pdfTokenStream);
+      if (worker2.result) {
+        List<PdfToken> tokens = pdfTokenStream.getTokens();
+        logger.debug3("REMOVE FROM: " + worker2.beginIndex + " TO: " + worker2.endIndex);
+        tokens.subList(worker2.beginIndex, worker2.endIndex + 1).clear(); // The +1 is normal substring/sublist indexing (upper bound is exclusive)
+        pdfTokenStream.setTokens(tokens);
+      }
     }
   }
-  
+
+  /*@Override
+  public PdfTransform<PdfDocument> getDocumentTransform(ArchivalUnit au, OutputStream os) {
+    return new BaseDocumentExtractingTransform(os) {
+      @Override
+      public PdfTransform<PdfPage> getPageTransform() {
+        return new BasePageExtractingTransform(os) {
+          @Override
+          public void transform(ArchivalUnit au, PdfPage pdfPage) throws PdfException {
+            this.au = au;
+            this.pdfPage = pdfPage;
+            
+            // Use a worker to extract all PDF strings
+            PdfTokenStreamWorker worker = new PdfTokenStreamWorker() {
+              @Override public void operatorCallback() throws PdfException {
+                // 'Tj', '\'' and '"'
+                if (isShowText() || isNextLineShowText() || isSetSpacingNextLineShowText()) {
+                  outputString(getTokens().get(getIndex() - 1).getString());
+                }
+                // 'TJ'
+                else if (isShowTextGlyphPositioning()) {
+                  for (PdfToken token : getTokens().get(getIndex() - 1).getArray()) {
+                    if (token.isString()) {
+                      outputString(token.getString());
+                    }
+                  }
+                }
+              }
+            };
+            
+            // Apply the worker to every token stream in the page
+            for (PdfTokenStream pdfTokenStream : pdfPage.getAllTokenStreams()) {
+              worker.process(pdfTokenStream);
+            }
+          }
+        };
+      }
+    };
+  }*/
+
+  /*public static void main(String[] args) throws Exception {
+    String[] files = new String[] {
+        "/tmp/data/jstor1.pdf",
+        "/tmp/data/jstor2.pdf",
+    }; 
+    for (String file : files) {
+      IOUtils.copy(new JstorPdfFilterFactory().createFilteredInputStream(null, new FileInputStream(file), null),
+                   new FileOutputStream(file + ".out"));
+    }
+  }*/
 
 }
