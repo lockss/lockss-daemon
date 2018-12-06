@@ -34,6 +34,8 @@ package org.lockss.plugin.americanmathematicalsociety;
 
 import java.net.*;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.lockss.test.*;
 import org.lockss.util.ListUtil;
@@ -44,6 +46,8 @@ import org.lockss.extractor.*;
 import org.lockss.plugin.ArchivalUnit.*;
 import org.lockss.plugin.definable.*;
 import org.lockss.plugin.wrapper.WrapperUtil;
+import org.lockss.util.PatternFloatMap;
+import org.lockss.util.RegexpUtil;
 
 public class TestAmericanMathematicalSocietyPlugin extends LockssTestCase {
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
@@ -206,5 +210,68 @@ public class TestAmericanMathematicalSocietyPlugin extends LockssTestCase {
     log.info ("shouldCacheTest url: " + url);
     assertEquals(shouldCache, au.shouldBeCached(url));
   }
-  
+
+  public void testPollandRepair() throws Exception {
+
+    String[] pollAndRepair = {
+            ".+[.](bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\\?.*)?$"
+    };
+
+    Properties props = new Properties();
+    props.setProperty(BASE_URL_KEY, "http://www.example.org");
+    props.setProperty(JOURNAL_ID_KEY, "journal_od");
+    props.setProperty(YEAR_KEY, "2003");
+
+    Configuration config = ConfigurationUtil.fromProps(props);
+    DefinableArchivalUnit au = (DefinableArchivalUnit)plugin.createAu(config);
+
+    try {
+      au = makeAuFromProps(props);
+    }
+    catch (ConfigurationException ex) {
+    }
+
+    theDaemon.getLockssRepository(au);
+
+    assertEquals(Arrays.asList(pollAndRepair),
+            RegexpUtil.regexpCollection(au.makeRepairFromPeerIfMissingUrlPatterns()));
+
+    List <String> repaireList = ListUtil.list(
+            "http://www.ams.org/css/2018_slidenav.css",
+            "http://www.ams.org/fontawesome/css/all.css",
+            "http://www.ams.org/journals/javascript/bull_nav.js",
+            "http://www.ams.org/publications/journals/images/bull-mh-1904.gif",
+            "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js",
+            "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js",
+            "https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOXOhs.ttf",
+            "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css",
+            "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/fonts/glyphicons-halflings-regular.eot",
+            "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/fonts/glyphicons-halflings-regular.svg",
+            "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/fonts/glyphicons-halflings-regular.ttf",
+            "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/fonts/glyphicons-halflings-regular.woff",
+            "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/fonts/glyphicons-halflings-regular.woff2",
+            "http://www.ams.org/images/content/footer-line.png",
+            "http://www.ams.org/images/rssBullet.gif"
+
+    );
+
+    Pattern p0 = Pattern.compile(pollAndRepair[0]);
+    Matcher m0;
+
+    for (String urlString : repaireList) {
+      m0 = p0.matcher(urlString);
+
+      assertEquals(urlString, true, m0.find());
+    }
+
+    // Failed case
+    String wrongString = "http://www.ams.org/fontawesome/css/all.less";
+    m0 = p0.matcher(wrongString);
+
+    assertEquals(false, m0.find());
+
+    PatternFloatMap urlPollResults = au.makeUrlPollResultWeightMap();
+
+    assertNotNull(urlPollResults);
+  }
 }
