@@ -23,21 +23,21 @@
     param[base_url] = http://dmd.aspetjournals.org/
 
     au < aspet.ClockssASPETDrupalPlugin ; ready ; exists ; 1973 ; Drug Metabolism and Disposition Volume 1 ; 1 ; >
-    au < aspet.ClockssASPETDrupalPlugin ; testing ; exists ; 1974 ; Drug Metabolism and Disposition Volume 2 ; 2 ; >
+    au < aspet.ClockssASPETDrupalPlugin ; ready ; exists ; 1974 ; Drug Metabolism and Disposition Volume 2 ; 2 ; >
     au < aspet.ClockssASPETDrupalPlugin ; ready ; exists ; 1975 ; Drug Metabolism and Disposition Volume 3 ; 3 ; >
     au < aspet.ClockssASPETDrupalPlugin ; ready ; exists ; 1976 ; Drug Metabolism and Disposition Volume 4 ; 4 ; >
     au < aspet.ClockssASPETDrupalPlugin ; ready ; exists ; 1977 ; Drug Metabolism and Disposition Volume 5 ; 5 ; >
     au < aspet.ClockssASPETDrupalPlugin ; ready ; exists ; 1978 ; Drug Metabolism and Disposition Volume 6 ; 6 ; >
     au < aspet.ClockssASPETDrupalPlugin ; ready ; exists ; 1979 ; Drug Metabolism and Disposition Volume 7 ; 7 ; >
     au < aspet.ClockssASPETDrupalPlugin ; ready ; exists ; 1980 ; Drug Metabolism and Disposition Volume 8 ; 8 ; >
-    au < aspet.ClockssASPETDrupalPlugin ; testing ; exists ; 1981 ; Drug Metabolism and Disposition Volume 9 ; 9 ; >
+    au < aspet.ClockssASPETDrupalPlugin ; ready ; exists ; 1981 ; Drug Metabolism and Disposition Volume 9 ; 9 ; >
     au < aspet.ClockssASPETDrupalPlugin ; ready ; exists ; 1982 ; Drug Metabolism and Disposition Volume 10 ; 10 ; >
-    au < aspet.ClockssASPETDrupalPlugin ; testing ; exists ; 1983 ; Drug Metabolism and Disposition Volume 11 ; 11 ; >
+    au < aspet.ClockssASPETDrupalPlugin ; ready ; exists ; 1983 ; Drug Metabolism and Disposition Volume 11 ; 11 ; >
     au < aspet.ClockssASPETDrupalPlugin ; ready ; exists ; 1984 ; Drug Metabolism and Disposition Volume 12 ; 12 ; >
     au < aspet.ClockssASPETDrupalPlugin ; testing ; exists ; 1985 ; Drug Metabolism and Disposition Volume 13 ; 13 ; >
     au < aspet.ClockssASPETDrupalPlugin ; testing ; exists ; 1986 ; Drug Metabolism and Disposition Volume 14 ; 14 ; >
-    au < aspet.ClockssASPETDrupalPlugin ; testing ; exists ; 1987 ; Drug Metabolism and Disposition Volume 15 ; 15 ; >
-    au < aspet.ClockssASPETDrupalPlugin ; testing ; exists ; 1988 ; Drug Metabolism and Disposition Volume 16 ; 16 ; >
+    au < aspet.ClockssASPETDrupalPlugin ; ready ; exists ; 1987 ; Drug Metabolism and Disposition Volume 15 ; 15 ; >
+    au < aspet.ClockssASPETDrupalPlugin ; ready ; exists ; 1988 ; Drug Metabolism and Disposition Volume 16 ; 16 ; >
     au < aspet.ClockssASPETDrupalPlugin ; ready ; exists ; 1989 ; Drug Metabolism and Disposition Volume 17 ; 17 ; >
     au < aspet.ClockssASPETDrupalPlugin ; ready ; exists ; 1990 ; Drug Metabolism and Disposition Volume 18 ; 18 ; >
     au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 1991 ; Drug Metabolism and Disposition Volume 19 ; 19 ; >
