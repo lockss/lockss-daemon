@@ -101,8 +101,6 @@ public class FasebHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory 
         // article page
         HtmlNodeFilters.tag("nav"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(response)"),
-        // references page
-        HtmlNodeFilters.tagWithAttribute("div", "class", "article__references"),
         HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "corrections"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pagination"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "search-result__(follow|nav|meta)"),

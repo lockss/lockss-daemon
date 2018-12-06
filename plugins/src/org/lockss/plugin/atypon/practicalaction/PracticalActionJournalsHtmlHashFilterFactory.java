@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -83,12 +83,12 @@ extends BaseAtyponHtmlHashFilterFactory  {
                Node liParent = node.getParent();
                if (liParent instanceof BodyTag) {
                  return true;
-               }                
+               }
             }
             return false;
           }
         },
-        // showCitFormats html form page - section with article information                                           
+        // showCitFormats html form page - section with article information
         HtmlNodeFilters.tagWithAttribute("div", "class", "articleList"),
         // showPopup html page - references, information, tables - just plain text
         HtmlNodeFilters.tagWithAttribute("body", "class", "popupBody"),
@@ -106,18 +106,7 @@ extends BaseAtyponHtmlHashFilterFactory  {
     // handled by parent: script, sfxlink, stylesheet, pdfplus file sise
     // <head> tag, <li> item has the text "Cited by", accessIcon, 
     NodeFilter[] excludeNodes = new NodeFilter[] {
-        // toc - select pulldown menu under volume title
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class",
-                                              "publicationToolContainer"),
-        // abs - scattering - potentially generated code added (like
-        // Endocrine Society)                                      
-        // http://www.developmentbookshelf.com/doi/abs/10.3362/1755-1986.2014.004
-                                              HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-                                                  "articleMetaDrop"),
-        // tooltip ref link with changing href hash number
-         HtmlNodeFilters.tagWithAttribute("a", "class", 
-                                              "tooltipTrigger infoIcon")
-                                              
+      // All exclude filters are in the parent
     };
     return super.createFilteredInputStream(au, in, encoding, 
                                            includeNodes, excludeNodes);

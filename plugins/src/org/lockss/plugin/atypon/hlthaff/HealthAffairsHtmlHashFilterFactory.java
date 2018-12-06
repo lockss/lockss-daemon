@@ -86,9 +86,6 @@ public class HealthAffairsHtmlHashFilterFactory
     // handled by parent: script, sfxlink, stylesheet, pdfplus file size
     // <head> tag, <li> item has the text "Cited by", accessIcon, 
     NodeFilter[] excludeNodes = new NodeFilter[] {
-        // toc - select pulldown menu under volume title
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class",
-                                              "publicationToolContainer"),
         // on article page <div class="article__breadcrumbs">
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "scroll-to-target"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article__breadcrumbs"),

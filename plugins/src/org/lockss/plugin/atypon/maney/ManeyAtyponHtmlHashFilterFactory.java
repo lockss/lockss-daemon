@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -48,23 +48,10 @@ public class ManeyAtyponHtmlHashFilterFactory
     NodeFilter[] filters = new NodeFilter[] {
         // handled by parent: script, sfxlink, stylesheet, pdfplus file sise
         
-        // toc - pageHeader - top down to breadcrumbs, above journalHeader
-        // http://www.maneyonline.com/toc/his/36/4
-        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "pageHeader"),
-        // pageFooter
-        HtmlNodeFilters.tagWithAttribute("div", "id", "pageFooter"),
         //  toc - right below breadcrumbs, journal section with current
         HtmlNodeFilters.tagWithAttribute("div",  "id", "Journal Header"),
         // under TOC issue information, select all access icons and dropdown
         HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "access-options"),
-        // toc - access icon status of article
-        HtmlNodeFilters.tagWithAttribute("td", "class" ,"accessIconContainer"),
-        //  toc - ad above News & Alerts
-        // http://www.maneyonline.com/toc/his/36/4
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumAd"),
-        // toc - Prev/Next - probably not a problem, but not content either
-        HtmlNodeFilters.tagWithAttributeRegex("div",  "class", 
-                                              "literatumBookIssueNavigation"),                                            
         // abs, full, ref - compact journal header box on right column
         // http://www.maneyonline.com/doi/abs/10.1179/1743676113Y.0000000112
         HtmlNodeFilters.tagWithAttribute("div", "id", "compactJournalHeader"),
@@ -74,25 +61,16 @@ public class ManeyAtyponHtmlHashFilterFactory
         // all pages - verify email message appears in certain content
         // machines but not all
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-                                            "literatumMailVerificationWidget"),
-        // abs - potential issue like 'corrigendum' from a figure page of
-        // Endocrine Society
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-                                              "articleMetaDrop"), 
+                                              "literatumMailVerificationWidget"),
         // abs - right sidebar - Citation part
         HtmlNodeFilters.tagWithAttributeRegex("div",  "class", 
                                               "literatumContentItemCitation"),
-        // full - section choose pulldown appeared in multiple sections
-        HtmlNodeFilters.tagWithAttribute("div",  "class", "sectionJumpTo"),
         // toc - Full/Open access
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
                                               "tocListDropZone"),
         // toc - unused - potential issue
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-                                              "tocListtDropZone2"),                                                                                    
-        // toc - For selected items dropdown next to Full/Open access                                   
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-                                              "publicationToolContainer"),       
+                                              "tocListtDropZone2"),
         // toc, abs, full, ref - News & alerts box near bottom
         // with About this Journal and Editors & Editorial Board tabs  and
         // right column Most read/Most cited/Editor's Choice
@@ -115,8 +93,8 @@ public class ManeyAtyponHtmlHashFilterFactory
         HtmlNodeFilters.allExceptSubtree(
             HtmlNodeFilters.tagWithAttributeRegex( 
                 "section", "class", "widget-titlebar"),
-                HtmlNodeFilters.tagWithAttributeRegex(
-                    "a", "href", "/action/showCitFormats\\?"))
+            HtmlNodeFilters.tagWithAttributeRegex(
+                "a", "href", "/action/showCitFormats\\?"))
     };
 
     // super.createFilteredInputStream adds maney filters to the 
@@ -130,12 +108,12 @@ public class ManeyAtyponHtmlHashFilterFactory
   public boolean doTagIDFiltering() {
     return true;
   }
-     
+  
   // turn on white space filter
   @Override
   public boolean doWSFiltering() {
     return true;
   }
-    
+  
 }
 

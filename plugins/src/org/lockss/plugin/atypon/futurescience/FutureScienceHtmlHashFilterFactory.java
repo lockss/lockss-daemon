@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -98,7 +98,7 @@ public class FutureScienceHtmlHashFilterFactory extends BaseAtyponHtmlHashFilter
         //NOTE - there may still be an issue with extra spaces added when image is present
         HtmlNodeFilters.tagWithAttributeRegex("img", "src", "/images/free.gif$", true),
 
-        new NodeFilter() {      
+        new NodeFilter() {
           // look for a <td> that has a comment <!-- placeholder id=null....--> child somewhere in it. If it's there remove it.
           @Override public boolean accept(Node node) {
             if (!(node instanceof TableColumn) && (!(node instanceof Div))) return false;
@@ -131,15 +131,14 @@ public class FutureScienceHtmlHashFilterFactory extends BaseAtyponHtmlHashFilter
             }
           }
         }
-
     };
- 
-  // super.createFilteredInputStream adds FS filter to the baseAtyponFilters
-  // and returns the filtered input stream using an array of NodeFilters that 
-  // combine the two arrays of NodeFilters and then applies a tag filter. 
-  // Comments get removed by the tag filter, but that happens after the other filtering
-  return super.createFilteredInputStream(au, in, encoding, fsfilters);
-}
+
+    // super.createFilteredInputStream adds FS filter to the baseAtyponFilters
+    // and returns the filtered input stream using an array of NodeFilters that 
+    // combine the two arrays of NodeFilters and then applies a tag filter. 
+    // Comments get removed by the tag filter, but that happens after the other filtering
+    return super.createFilteredInputStream(au, in, encoding, fsfilters);
+  }
   
   @Override
   public boolean doWSFiltering() {
@@ -156,7 +155,6 @@ public class FutureScienceHtmlHashFilterFactory extends BaseAtyponHtmlHashFilter
   public boolean doHttpsConversion() {
     return true;
   }
-  
 
 }
 

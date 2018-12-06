@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,7 +34,6 @@ package org.lockss.plugin.atypon.markallen;
 
 import java.io.InputStream;
 import org.htmlparser.NodeFilter;
-import org.htmlparser.filters.TagNameFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory;
@@ -52,16 +51,6 @@ public class MarkAllenHtmlHashFilterFactory
     NodeFilter[] filters = new NodeFilter[] {
         // handled by parent: script, sfxlink, stylesheet
         
-        new TagNameFilter("noscript"),
-
-        // from toc - institution banner
-        // http://www.magonlinelibrary.com/doi/ref/10.12968/bjom.2013.21.10.701
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-                                              "literatumInstitutionBanner"),
-        // from toc - top page ad and all other ads with class LiteratumAd
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumAd"),
-        // from toc - pageHeader - has links to current issue
-        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "pageHeader"),
         // from toc - ad panel has link to other issue 
         // http://www.magonlinelibrary.com/toc/bjom/21/10
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
@@ -69,42 +58,30 @@ public class MarkAllenHtmlHashFilterFactory
         // for toc - social media
         HtmlNodeFilters.tagWithAttributeRegex("div", "class",
                                               "general-bookmark-share"),
-        // from toc - access icon container 
-        HtmlNodeFilters.tagWithAttribute("td", "class", "accessIconContainer"),      
         // middle column ad of an article - all article tools with 
         // class literatumArticleToolsWidget except Download Citations
         // http://www.magonlinelibrary.com/doi/abs/10.12968/bjom.2013.21.10.701
         HtmlNodeFilters.allExceptSubtree(
             HtmlNodeFilters.tagWithAttributeRegex( 
                 "div", "class", "literatumArticleToolsWidget"),
-                HtmlNodeFilters.tagWithAttributeRegex(
-                    "a", "href", "/action/showCitFormats\\?")),   
-        // from full text - Downloaded count
-        // http://www.magonlinelibrary.com/doi/full/10.12968/bjom.2013.21.10.692            
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class",
-                                              "literatumContentItemDownloadCount"),            
-        // toc, abs, full, text and ref right column - most read 
-        // http://www.magonlinelibrary.com/doi/full/10.12968/bjom.2013.21.10.688
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-                                              "literatumMostReadWidget"),
-        // pageFooter
-        HtmlNodeFilters.tagWithAttribute("div", "id", "pageFooter"),
- 
+            HtmlNodeFilters.tagWithAttributeRegex(
+                "a", "href", "/action/showCitFormats\\?")),
+        
     };
     // super.createFilteredInputStream adds filters to the baseAtyponFilters
     // and returns the filtered input stream using an array of NodeFilters that 
     // combine the two arrays of NodeFilters.
     return super.createFilteredInputStream(au, in, encoding, filters);
   }
-  
+
   @Override
   public boolean doTagIDFiltering() {
     return true;
   }
-   
+
   @Override
   public boolean doWSFiltering() {
     return true;
   }
-    
+
 }

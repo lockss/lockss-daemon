@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -45,7 +45,7 @@ import org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory;
 // within the content (excludeNodes).
 public class LiverpoolHtmlHashFilterFactory 
   extends BaseAtyponHtmlHashFilterFactory  {
-     
+  
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in, 
@@ -79,7 +79,7 @@ public class LiverpoolHtmlHashFilterFactory
                Node liParent = node.getParent();
                if (liParent instanceof BodyTag) {
                  return true;
-               }                
+               } 
             }
             return false;
           }
@@ -94,27 +94,18 @@ public class LiverpoolHtmlHashFilterFactory
                                           "literatumPublicationContentWidget"),
         // showCitFormats
         // http://online.liverpooluniversitypress.co.uk/action/
-        //                           showCitFormats?doi=10.3828%2Fbjcs.2013.3                                      
+        //                           showCitFormats?doi=10.3828%2Fbjcs.2013.3 
         HtmlNodeFilters.tagWithAttributeRegex("section", "class", 
                                               "downloadCitationsWidget"),
-        // early 2017- changed to <div class                                      
+        // early 2017- changed to <div class 
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-                                              "downloadCitationsWidget"),                                              
-                                                                                                                
+                                              "downloadCitationsWidget"), 
     };
     
     // handled by parent: script, sfxlink, stylesheet, pdfplus file sise
     // <head> tag, <li> item has the text "Cited by", accessIcon, 
-    NodeFilter[] excludeNodes = new NodeFilter[] {       
-        // toc - select pulldown menu under volume title
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class",
-                                              "publicationToolContainer"),
-        // abs - scattering - potentially generated code added (like
-        // Endocrine Society)                                      
-        // http://online.liverpooluniversitypress.co.uk/doi/abs/10.3828/bjcs.2013.5
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-                                              "articleMetaDrop"),            
-    
+    NodeFilter[] excludeNodes = new NodeFilter[] { 
+      // All exclude filters are in the parent
     };
     return super.createFilteredInputStream(au, in, encoding, 
                                            includeNodes, excludeNodes);

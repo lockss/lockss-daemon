@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -45,7 +45,7 @@ import org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory;
 // within the content (excludeNodes).
 public class WageningenJournalsHtmlHashFilterFactory 
   extends BaseAtyponHtmlHashFilterFactory  {
-     
+  
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in, 
@@ -79,7 +79,7 @@ public class WageningenJournalsHtmlHashFilterFactory
                Node liParent = node.getParent();
                if (liParent instanceof BodyTag) {
                  return true;
-               }  
+               }
             }
             return false;
           }
@@ -90,42 +90,26 @@ public class WageningenJournalsHtmlHashFilterFactory
         // abs, ref, suppl - contents only
         // http://www.wageningenacademic.com/doi/abs/10.3920/BM2012.0069
         // http://www.wageningenacademic.com/doi/suppl/10.3920/BM2013.0039
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class",
                                           "literatumPublicationContentWidget"),
-        // abs, ref, suppl - right side bar - Article/Chapter tools 
-        HtmlNodeFilters.tagWithAttributeRegex("section", "class", 
-                                              "literatumArticleToolsWidget"),                                
+        // abs, ref, suppl - right side bar - Article/Chapter tools
+        HtmlNodeFilters.tagWithAttributeRegex("section", "class",
+                                              "literatumArticleToolsWidget"),
         // showCitFormats
         // http://www.wageningenacademic.com/action/
         //                          showCitFormats?doi=10.3920%2FBM2012.0069
         HtmlNodeFilters.tagWithAttributeRegex("section", "class", 
                                               "downloadCitationsWidget"),
-        // early 2017- changed to <div class                                      
+        // early 2017- changed to <div class 
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
                                               "downloadCitationsWidget"),
-                                                                  
+  
     };
-    
+  
     // handled by parent: script, sfxlink, stylesheet, pdf file sise
     // <head> tag, <li> item has the text "Cited by", accessIcon, 
     NodeFilter[] excludeNodes = new NodeFilter[] {
-        // toc - select pulldown menu under volume title
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class",
-                                              "publicationToolContainer"),
-        // abs - scattering - potentially generated code added (like
-        // Endocrine Society)                                      
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-                                              "articleMetaDrop"),
-       // abs, full, ref - any page with listed author links
-       // the href= a varying numletter sequence
-       HtmlNodeFilters.tagWithAttributeRegex("a", "class", "tooltipTrigger"),                                       
-       HtmlNodeFilters.tagWithAttribute("div", "class", "ui-helper-hidden-accessible"),                                       
-       // abs - all right column except Citation Mgr (download citations)
-       HtmlNodeFilters.allExceptSubtree(
-           HtmlNodeFilters.tagWithAttributeRegex("div", "class", "articleTools"),
-             HtmlNodeFilters.tagWithAttributeRegex(
-                    "a", "href", "/action/showCitFormats\\?")),                                           
-                                                    
+      // All exclude filters are in the parent
     };
     return super.createFilteredInputStream(au, in, encoding, 
                                            includeNodes, excludeNodes);

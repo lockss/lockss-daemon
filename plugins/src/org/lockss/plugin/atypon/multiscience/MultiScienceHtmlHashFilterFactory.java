@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -45,7 +45,7 @@ import org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory;
 // within the content (excludeNodes).
 public class MultiScienceHtmlHashFilterFactory 
   extends BaseAtyponHtmlHashFilterFactory  {
-     
+  
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in, 
@@ -83,30 +83,19 @@ public class MultiScienceHtmlHashFilterFactory
         // http://multi-science.atypon.com/doi/abs/10.1260/1756-8250.6.1.43
         // http://multi-science.atypon.com/doi/ref/10.1260/1756-8250.6.1.61
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-                                          "literatumPublicationContentWidget"),                               
+                                          "literatumPublicationContentWidget"),
         // showCitFormats
         // http://multi-science.atypon.com/action/
         //                      showCitFormats?doi=10.1260%2F1756-8250.6.1.43
         HtmlNodeFilters.tagWithAttributeRegex("section", "class", 
                                               "downloadCitationsWidget"),
-                                                                  
+        
     };
     
     // handled by parent: script, sfxlink, stylesheet, pdfplus file sise
     // <head> tag, <li> item has the text "Cited by", accessIcon, 
     NodeFilter[] excludeNodes = new NodeFilter[] {
-        // toc - select pulldown menu under volume title
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class",
-                                              "publicationToolContainer"),
-        // abs - scattering - potentially generated code added (like
-        // Endocrine Society)                                      
-        // http://multi-science.atypon.com/doi/abs/10.1260/1756-8250.6.1.43
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-                                              "articleMetaDrop"),                                                                                     
-       // abs, full, ref - any page with listed author links
-       // the href= a varying numletter sequence
-       HtmlNodeFilters.tagWithAttributeRegex("a", "class", "tooltipTrigger"),                                       
-       HtmlNodeFilters.tagWithAttribute("div", "class", "ui-helper-hidden-accessible"),                                                             
+      // All exclude filters are in the parent
     };
     return super.createFilteredInputStream(au, in, encoding, 
                                            includeNodes, excludeNodes);

@@ -32,12 +32,9 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.atypon.sage;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.util.Vector;
 
-import org.apache.commons.io.IOUtils;
 import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.tags.Bullet;
@@ -45,7 +42,6 @@ import org.htmlparser.tags.BulletList;
 import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory;
-import org.lockss.plugin.atypon.BaseAtyponRisFilterFactory;
 import org.lockss.util.Logger;
 
 
@@ -107,40 +103,28 @@ public class SageAtyponHtmlHashFilterFactory
 	};
     NodeFilter[] excludeNodes = new NodeFilter[] {
         // handled by parent: script, sfxlink, stylesheet
-
-        HtmlNodeFilters.tag("noscript"),
-        HtmlNodeFilters.tag("style"),
-        // toc - first top block ad
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumAd"),
+        // literatumAd, style
         // page header: login, register, etc., and journal menu such as
         // subscribe, alerts, ...
         HtmlNodeFilters.tagWithAttribute("header", "class", "page-header"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "journalNavContainer"),
-        // page footer
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pageFooter"),
         // toc - Right column
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
                                               "TOCRightColumn"),
         // article right column
         HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "articleRightColumn"),
-
-        // invisible jump to form whose choice labels have changed
-        HtmlNodeFilters.tagWithAttribute("div", "class", "sectionJumpTo"),
-        // toc - access icon container - haven't seen but common for Atypon
-        HtmlNodeFilters.tagWithAttribute("td", "class", "accessIconContainer"),
-        // toc - article type seems to change and this isn't important
-        HtmlNodeFilters.tagWithAttribute("span", "class", "ArticleType"),
-        // on full text and referenes page the ways to linkout to the reference get                                                                                                                   
-        // added to (GoogleScholar, Medline, ISI, abstract, etc)                                                                                                                                      
-        // leave the content (NLM_article-title, NLM_year, etc),                                                                                                                                      
-        // but remove everything else (links and punctuation between options)  
+        
+        // on full text and references page the ways to linkout to the reference get
+        // added to (GoogleScholar, Medline, ISI, abstract, etc)
+        // leave the content (NLM_article-title, NLM_year, etc),
+        // but remove everything else (links and punctuation between options)
         HtmlNodeFilters.allExceptSubtree(
             HtmlNodeFilters.tagWithAttribute(
                 "table", "class", "references"),
-                HtmlNodeFilters.tagWithAttributeRegex(
-                    "span", "class", "NLM_")),
+            HtmlNodeFilters.tagWithAttributeRegex(
+                "span", "class", "NLM_")),
         //5/10/18 - some additions due to changes; some would repair in time but will slow finishing
-        // this is a hack - the refrences would leave this but at some point Sage stopped using it for
+        // this is a hack - the references would leave this but at some point Sage stopped using it for
         // reference author names so just remove it from the older versions of content
         HtmlNodeFilters.tagWithAttribute("span","class","NLM_string-name"),
         //keywords have been added to all abs,etc
@@ -149,13 +133,13 @@ public class SageAtyponHtmlHashFilterFactory
         HtmlNodeFilters.tagWithAttribute("a","class","doiWidgetLnk"),
         HtmlNodeFilters.tagWithAttribute("div","class","publicationContentDoi"),
         HtmlNodeFilters.tagWithAttribute("div","id","articleInfo"),
- 
+
     };
     
     //1. First remove all comments because the use of comments with nested <script> blocks is
     //causing problems for the parser.
-    //<!--script>                                                                                                                                                                                             
-    //</script><script>                                                                                                                                                                                       
+    //<!--script>
+    //</script><script>
     //</script-->
     InputStream noComment = filterComments(in, encoding);
     return super.createFilteredInputStream(au, noComment, encoding, includeNodes, excludeNodes);
@@ -173,7 +157,4 @@ public class SageAtyponHtmlHashFilterFactory
   }
 
 }
-
-
-
 
