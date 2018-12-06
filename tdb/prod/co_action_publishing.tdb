@@ -626,6 +626,7 @@
     
     #param[base_url] = http://www.polarresearch.net/
     param[journal_id] = zpor20
+    #move to Open Academia in 2019
 
     au < doNotProcess ; 1982 ; Polar Research Volume 1982 ; 1982 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 1983 ; Polar Research Volume 1 ; 1 ; https://www.tandfonline.com/ >
