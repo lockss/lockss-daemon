@@ -214,8 +214,8 @@ public class TestAmericanMathematicalSocietyPlugin extends LockssTestCase {
   public void testPollandRepair() throws Exception {
 
     String[] pollAndRepair = {
-            ".+[.](bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\\?.*)?$",
-            "^https?:\\/\\/[^\\/]+\\/(publications|images)\\/.*\\/?[^\\s\\/]+\\.gif$"
+            ".+[.](bmp|css|dfont|eot|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\\?.*)?$",
+            "^https?://[^/]+/(publications|images)/.*\\.gif$"
     };
 
     Properties props = new Properties();
