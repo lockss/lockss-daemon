@@ -108,14 +108,14 @@ public class BaseScContentValidatorFactory implements ContentValidatorFactory {
           rdr = new InputStreamReader(cu.getUnfilteredInputStream(), cu.getEncoding());
           if (!invalidString.isEmpty()) {
             if (StringUtil.containsString(rdr, invalidString)) {
-              throw new ContentValidationException("Found invalid page");
+              throw new ContentValidationException("Found page with: " + invalidString);
             }
             IOUtil.safeClose(rdr);
             rdr = new InputStreamReader(cu.getUnfilteredInputStream(), cu.getEncoding());
           }
           if (!maintenanceString.isEmpty()) {
             if (StringUtil.containsString(rdr, maintenanceString)) {
-              throw new ContentValidationException("Found maintenance page");
+              throw new ContentValidationException("Found maintenance page: " + maintenanceString);
             }
             IOUtil.safeClose(rdr);
             rdr = new InputStreamReader(cu.getUnfilteredInputStream(), cu.getEncoding());
@@ -123,7 +123,7 @@ public class BaseScContentValidatorFactory implements ContentValidatorFactory {
           if (!patternString.isEmpty() &&
               !patternString.contains("*") && !patternString.contains("+") &&!patternString.contains("{")) {
             if (containsPattern(rdr, patternString)) {
-              throw new ContentValidationException("Found pattern in page");
+              throw new ContentValidationException("Found pattern (" + patternString + ") in page");
             }
             IOUtil.safeClose(rdr);
             rdr = new InputStreamReader(cu.getUnfilteredInputStream(), cu.getEncoding());
