@@ -98,13 +98,17 @@ public class JstorCSHtmlHashFilterFactory implements FilterFactory {
           // citation/info
           HtmlNodeFilters.tagWithAttribute("div", "id", "citationBody"),
           // for those papers that have full text html
-          HtmlNodeFilters.tagWithAttribute("div", "id", "full_text_tab_contents"),
+          HtmlNodeFilters.allExceptSubtree(
+              HtmlNodeFilters.tagWithAttribute("div", "id", "full_text_tab_contents"),
+              HtmlNodeFilters.tag("article")),
+          // As of Dec 2018 there is an article tag for full text html but not a <div id="full_text_tab_contents"
+          HtmlNodeFilters.tag("article"),
           // must pick small portion of journal_info or it will hash0 - parts of it are ever changing
           // http://www.jstor.org/stable/10.5325/pennhistory.82.1.0001?item_view=journal_info
           HtmlNodeFilters.tagWithAttributeRegex("div", "class", "journal_description"),
       };
       
-      NodeFilter[] excludeNodes = new NodeFilter[] {       
+      NodeFilter[] excludeNodes = new NodeFilter[] {
           HtmlNodeFilters.tagWithAttribute("div","id","citation-tools"),
           // the span will change over time
           HtmlNodeFilters.tagWithAttribute("div","id","journal_info_drop"),
@@ -113,7 +117,9 @@ public class JstorCSHtmlHashFilterFactory implements FilterFactory {
           
           // the value of data-issue-key is variable - just remove the associated tag
           HtmlNodeFilters.tagWithAttribute("div", "data-issue-key"),
-
+          // additional filtering
+          HtmlNodeFilters.tagWithAttribute("div", "class", "keywords"),
+          HtmlNodeFilters.tagWithAttribute("section", "class", "references"),
       };
       return getFilteredInputStream(au, in, encoding,
           includeNodes, excludeNodes);
@@ -133,17 +139,12 @@ public class JstorCSHtmlHashFilterFactory implements FilterFactory {
       HtmlCompoundTransform combinedFiltered = new HtmlCompoundTransform(
           HtmlNodeFilterTransform.include(new OrFilter(includeNodes)),
           HtmlNodeFilterTransform.exclude(new OrFilter(excludeNodes)));
-      // InputStream filtered = new HtmlFilterInputStream(in, encoding, combinedFiltered);
-      
-      //Reader reader = FilterUtil.getReader(filtered, encoding);
-      //Reader httpFilter = new StringFilter(reader, "https:", "http:");
-      //return new ReaderInputStream(httpFilter);
       
       InputStream is = new HtmlFilterInputStream(in, encoding, combinedFiltered);
       String[][] strArray = new String[][] {
         // inconsistent use of nbsp v empty space - do this replacement first
         {"&nbsp;", " "},
-        {"https:", "http:"},
+        {"http:", "https:"},
         {"<", " <"},
       };
       Reader tagFilter = StringFilter.makeNestedFilter(FilterUtil.getReader(is, encoding), strArray, false);
