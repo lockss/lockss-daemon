@@ -158,7 +158,7 @@
     </list>
   </entry>
   <entry>
-    these will not count towards poll results but will replicate from peer if above
+    <!--these will not count towards poll results but will replicate from peer if above-->
     <string>au_url_poll_result_weight</string>
     <list>
       <string>".+[.](bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\?.*)?$", 0</string>
