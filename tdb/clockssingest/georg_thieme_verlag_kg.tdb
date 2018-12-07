@@ -257,7 +257,7 @@
     au < doNotProcess ; exists ; 2006 ; 2006 ; Aktuelle Rheumatologie Volume 33 ; 33 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Aktuelle Rheumatologie Volume 34 ; 34 ; >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Aktuelle Rheumatologie Volume 35 ; 35 ; >
-    au < testing ; exists ; 2009 ; 2009 ; Aktuelle Rheumatologie Volume 36 ; 36 ; >
+    au < ready ; exists ; 2009 ; 2009 ; Aktuelle Rheumatologie Volume 36 ; 36 ; >
     au < finished ; finished ; 2010 ; 2010 ; Aktuelle Rheumatologie Volume 37 ; 37 ; >
     au < finished ; finished ; 2011 ; 2011 ; Aktuelle Rheumatologie Volume 38 ; 38 ; >
     au < finished ; finished ; 2012 ; 2012 ; Aktuelle Rheumatologie Volume 39 ; 39 ; >
@@ -956,7 +956,7 @@
    au < doNotProcess ; exists ; 2006 ; 2006 ; Diabetologie und Stoffwechsel Volume 1 ; 1 ; >
    au < doNotProcess ; exists ; 2007 ; 2007 ; Diabetologie und Stoffwechsel Volume 2 ; 2 ; >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Diabetologie und Stoffwechsel Volume 3 ; 3 ; >
-   au < testing ; exists ; 2009 ; 2009 ; Diabetologie und Stoffwechsel Volume 4 ; 4 ; >
+   au < ready ; exists ; 2009 ; 2009 ; Diabetologie und Stoffwechsel Volume 4 ; 4 ; >
    au < finished ; finished ; 2010 ; 2010 ; Diabetologie und Stoffwechsel Volume 5 ; 5 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2011 ; 2011 ; Diabetologie und Stoffwechsel Volume 6 ; 6 ; >
    au < finished ; finished ; 2012 ; 2012 ; Diabetologie und Stoffwechsel Volume 7 ; 7 ; reingest2.clockss.org:8085 >
@@ -1140,7 +1140,7 @@
    au < doNotProcess ; exists ; 2006 ; 2006 ; DMW - Deutsche Medizinische Wochenschrift Volume 132 ; 132 ; >
    au < doNotProcess ; exists ; 2007 ; 2007 ; DMW - Deutsche Medizinische Wochenschrift Volume 133 ; 133 ; >
    au < doNotProcess ; exists ; 2008 ; 2008 ; DMW - Deutsche Medizinische Wochenschrift Volume 134 ; 134 ; >
-   au < testing ; exists ; 2009 ; 2009 ; DMW - Deutsche Medizinische Wochenschrift Volume 135 ; 135 ; >
+   au < ready ; exists ; 2009 ; 2009 ; DMW - Deutsche Medizinische Wochenschrift Volume 135 ; 135 ; >
    au < finished ; finished ; 2010 ; 2010 ; DMW - Deutsche Medizinische Wochenschrift Volume 136 ; 136 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2011 ; 2011 ; DMW - Deutsche Medizinische Wochenschrift Volume 137 ; 137 ; >
    au < finished ; finished ; 2012 ; 2012 ; DMW - Deutsche Medizinische Wochenschrift Volume 138 ; 138 ; reingest2.clockss.org:8085 >
@@ -1198,7 +1198,7 @@
    au < doNotProcess ; exists ; 2006 ; 2006 ; Endo-Praxis Volume 22 ; 22 ; >
    au < doNotProcess ; exists ; 2007 ; 2007 ; Endo-Praxis Volume 23 ; 23 ; >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Endo-Praxis Volume 24 ; 24 ; >
-   au < testing ; exists ; 2009 ; 2009 ; Endo-Praxis Volume 25 ; 25 ; >
+   au < ready ; exists ; 2009 ; 2009 ; Endo-Praxis Volume 25 ; 25 ; >
    au < finished ; finished ; 2010 ; 2010 ; Endo-Praxis Volume 26 ; 26 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2011 ; 2011 ; Endo-Praxis Volume 27 ; 27 ; >
    au < finished ; finished ; 2012 ; 2012 ; Endo-Praxis Volume 28 ; 28 ; >
@@ -1315,7 +1315,7 @@
    au < doNotProcess ; exists ; 2006 ; 2006 ; Endoscopy heute Volume 19 ; 19 ; >
    au < doNotProcess ; exists ; 2007 ; 2007 ; Endoscopy heute Volume 20 ; 20 ; >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Endoscopy heute Volume 21 ; 21 ; >
-   au < testing ; exists ; 2009 ; 2009 ; Endoscopy heute Volume 22 ; 22 ; >
+   au < ready ; exists ; 2009 ; 2009 ; Endoscopy heute Volume 22 ; 22 ; >
    au < finished ; finished ; 2010 ; 2010 ; Endoscopy heute Volume 23 ; 23 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2011 ; 2011 ; Endoscopy heute Volume 24 ; 24 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2012 ; 2012 ; Endoscopy heute Volume 25 ; 25 ; >
@@ -1747,7 +1747,7 @@
 
    au < doNotProcess ; exists ; 2007 ; 2007 ; Frauenheilkunde up2date Volume 1 ; 1 ; >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Frauenheilkunde up2date Volume 2 ; 2 ; >
-   au < testing ; exists ; 2009 ; 2009 ; Frauenheilkunde up2date Volume 3 ; 3 ; >
+   au < ready ; exists ; 2009 ; 2009 ; Frauenheilkunde up2date Volume 3 ; 3 ; >
    au < finished ; finished ; 2010 ; 2010 ; Frauenheilkunde up2date Volume 4 ; 4 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2011 ; 2011 ; Frauenheilkunde up2date Volume 5 ; 5 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2012 ; 2012 ; Frauenheilkunde up2date Volume 6 ; 6 ; reingest2.clockss.org:8085 >
@@ -1912,7 +1912,7 @@
    au < doNotProcess ; exists ; 2006 ; 2006 ; Gesundheitswesen Das Volume 70 ; 70 ; >
    au < doNotProcess ; exists ; 2007 ; 2007 ; Gesundheitswesen Das Volume 71 ; 71 ; >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Gesundheitswesen Das Volume 72 ; 72 ; >
-   au < testing ; exists ; 2009 ; 2009 ; Gesundheitswesen Das Volume 73 ; 73 ; >
+   au < ready ; exists ; 2009 ; 2009 ; Gesundheitswesen Das Volume 73 ; 73 ; >
    au < finished ; finished ; 2010 ; 2010 ; Gesundheitswesen Das Volume 74 ; 74 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2011 ; 2011 ; Gesundheitswesen Das Volume 75 ; 75 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2012 ; 2012 ; Gesundheitswesen Das Volume 76 ; 76 ; reingest2.clockss.org:8085 >

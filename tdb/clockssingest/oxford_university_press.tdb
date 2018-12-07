@@ -49,7 +49,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Acta Biochimica et Biophysica Sinica Volume 47 ; 47 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Acta Biochimica et Biophysica Sinica Volume 48 ; 48 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Acta Biochimica et Biophysica Sinica Volume 49 ; 49 ; reingest1.clockss.org:8082 >
-    au < testing ; exists ; 2018 ; 2018 ; Acta Biochimica et Biophysica Sinica Volume 50 ; 50 ; >
+    au < ready ; exists ; 2018 ; 2018 ; Acta Biochimica et Biophysica Sinica Volume 50 ; 50 ; >
 
   }
 
@@ -74,7 +74,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Adaptation Volume 8 ; 8 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Adaptation Volume 9 ; 9 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Adaptation Volume 10 ; 10 ; >
-    au < testing ; exists ; 2018 ; 2018 ; Adaptation Volume 11 ; 11 ; >
+    au < ready ; exists ; 2018 ; 2018 ; Adaptation Volume 11 ; 11 ; >
 
   }
 
@@ -135,7 +135,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Aesthetic Surgery Journal Volume 35 ; 35 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Aesthetic Surgery Journal Volume 36 ; 36 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Aesthetic Surgery Journal Volume 37 ; 37 ; reingest2.clockss.org:8085 >
-    au < testing ; exists ; 2018 ; 2018 ; Aesthetic Surgery Journal Volume 38 ; 38 ; >
+    au < ready ; exists ; 2018 ; 2018 ; Aesthetic Surgery Journal Volume 38 ; 38 ; >
 
   }
 
