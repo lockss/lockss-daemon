@@ -214,7 +214,8 @@ public class TestAmericanMathematicalSocietyPlugin extends LockssTestCase {
   public void testPollandRepair() throws Exception {
 
     String[] pollAndRepair = {
-            ".+[.](bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\\?.*)?$"
+            ".+[.](bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\\?.*)?$",
+            "^https?:\\/\\/[^\\/]+\\/(publications|images)\\/.*\\/?[^\\s\\/]+\\.gif$"
     };
 
     Properties props = new Properties();
@@ -251,24 +252,36 @@ public class TestAmericanMathematicalSocietyPlugin extends LockssTestCase {
             "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/fonts/glyphicons-halflings-regular.woff",
             "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/fonts/glyphicons-halflings-regular.woff2",
             "http://www.ams.org/images/content/footer-line.png",
+            "http://www.ams.org/publications/journals/images/bull-mh-2006.gif",
+            "http://www.ams.org/publications/journals/images/journal.cover.bull.gif",
             "http://www.ams.org/images/rssBullet.gif"
 
     );
 
     Pattern p0 = Pattern.compile(pollAndRepair[0]);
-    Matcher m0;
+    Pattern p1 = Pattern.compile(pollAndRepair[1]);
+
+    Matcher m0, m1;
 
     for (String urlString : repaireList) {
       m0 = p0.matcher(urlString);
+      m1 = p1.matcher(urlString);
 
-      assertEquals(urlString, true, m0.find());
+      assertEquals(urlString, true, m0.find() || m1.find());
     }
 
     // Failed case
-    String wrongString = "http://www.ams.org/fontawesome/css/all.less";
-    m0 = p0.matcher(wrongString);
+    List<String>  wrongStringList = ListUtil.list(
+            "http://www.ams.org/fontawesome/css/all.less",
+            "http://www.ams.org/journals/bull/2018-55-04/S0273-0979-2018-01639-X/images/img5.gif");
 
-    assertEquals(false, m0.find());
+    for (String urlString : wrongStringList) {
+      m0 = p0.matcher(urlString);
+      m1 = p1.matcher(urlString);
+
+      assertEquals(urlString, false, m0.find() &&  m1.find());
+    }
+
 
     PatternFloatMap urlPollResults = au.makeUrlPollResultWeightMap();
 
