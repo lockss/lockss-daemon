@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -39,33 +39,5 @@
         <long>100</long>
       </entry>
     </map>
-  </entry>
-  <entry>
-    <!-- these will not count towards poll results but will replicate from peer if above -->
-    <string>au_url_poll_result_weight</string>
-    <list>
-      <string>".+[.](bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\?.*)?$", 0</string>
-    </list>
-  </entry>
-  <!--  versioning or variants for style support -->
-  <entry>
-    <string>au_repair_from_peer_if_missing_url_pattern</string>
-    <list>
-      <string>.+[.](bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\?.*)?$</string>
-    </list>
-  </entry>
-  <entry>
-    <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
-         org.lockss.crawler.allowedPluginPermittedHosts -->
-    <string>au_permitted_host_pattern</string>
-    <list>
-      <string>(fonts|ajax)\.googleapis\.com</string>
-      <string>.+\.jquery\.com</string>
-      <string>.+\.gstatic\.com</string>
-      <string>.+\.bootstrapcdn\.com</string>
-      <string>.+\.mathjax\.org</string>
-      <string>.+\maxcdn\.bootstrapcdn\.com</string>
-      <string>.+\ajax\.googleapis\.com</string>
-    </list>
   </entry>
 </map>
