@@ -45,6 +45,7 @@ import org.apache.pdfbox.pdmodel.common.PDMetadata;
 import org.lockss.pdf.*;
 import org.lockss.pdf.PdfDocument;
 import org.lockss.pdf.PdfPage;
+import org.lockss.pdf.pdfbox.PdfBoxTokenFactory.Dic;
 import org.lockss.util.*;
 import org.w3c.dom.Document;
 
@@ -301,7 +302,7 @@ public class PdfBoxDocument implements PdfDocument {
     if (trailer == null) {
       trailer = new COSDictionary();
     }
-    return PdfBoxTokens.getDictionary(trailer);
+    return PdfBoxTokenFactory.convertOne(trailer).getDictionary();
   }
 
   @Override
@@ -407,7 +408,7 @@ public class PdfBoxDocument implements PdfDocument {
 
   @Override
   public void setTrailer(Map<String, PdfToken> trailerMapping) {
-    pdDocument.getDocument().setTrailer(PdfBoxTokens.asCOSDictionary(trailerMapping));
+    pdDocument.getDocument().setTrailer((COSDictionary)Dic.of(trailerMapping).toPdfBoxObject());
   }
 
   @Override

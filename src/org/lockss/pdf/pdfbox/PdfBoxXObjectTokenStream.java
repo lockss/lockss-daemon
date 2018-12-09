@@ -127,7 +127,7 @@ public class PdfBoxXObjectTokenStream extends PdfBoxTokenStream {
       PDStream newPdStream = makeNewPdStream();
       newPdStream.getStream().setName(COSName.SUBTYPE, PDXObjectForm.SUB_TYPE);
       ContentStreamWriter tokenWriter = new ContentStreamWriter(newPdStream.createOutputStream());
-      tokenWriter.writeTokens(PdfBoxTokens.unwrapList(newTokens));
+      tokenWriter.writeTokens(PdfBoxTokenFactory.unconvertList(newTokens));
       pdXObjectForm = new PDXObjectForm(newPdStream);
       pdXObjectForm.setResources(getStreamResources());
       Map<String, PDXObject> xobjects = parentResources.getXObjects();

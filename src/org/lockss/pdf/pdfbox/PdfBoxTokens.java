@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.pdf.pdfbox;
 
-import java.io.IOException;
+import java.io.*;
 import java.util.*;
 import java.util.concurrent.*;
 
@@ -271,7 +271,7 @@ public class PdfBoxTokens {
    * @author Thib Guicherd-Callin
    * @since 1.56
    */
-  private static class Token implements PdfToken {
+  private static class Token implements PdfToken, Serializable {
 
     /**
      * <p>

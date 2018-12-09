@@ -84,7 +84,7 @@ public class PdfBoxPageTokenStream extends PdfBoxTokenStream {
     try {
       PDStream newPdStream = makeNewPdStream();
       ContentStreamWriter tokenWriter = new ContentStreamWriter(newPdStream.createOutputStream());
-      tokenWriter.writeTokens(PdfBoxTokens.unwrapList(newTokens));
+      tokenWriter.writeTokens(PdfBoxTokenFactory.unconvertList(newTokens));
       pdfBoxPage.pdPage.setContents(newPdStream);
     }
     catch (IOException ioe) {
