@@ -275,6 +275,8 @@ Args:
 				  value="${lib}/commons-beanutils-1.9.3.jar"/>
     <property name="commons.validator.jar"
               value="${lib}/commons-validator-1.6.jar"/>
+  <property name="commons.primitives.jar"
+				  value="${lib}/commons-primitives-1.0.jar"/>
   <!-- gettext jars, for i18n -->
   <property name="gettext.tasks.jar"
             value="${lib}/gettext-ant-tasks-0.9.7.jar"/>
@@ -494,6 +496,7 @@ Args:
     <pathelement path="${commons.io.jar}" />
     <pathelement path="${commons.jxpath.jar}" />
     <pathelement path="${commons.validator.jar}" />
+    <pathelement path="${commons.primitives.jar}" />
     <pathelement path="${truezip-kernel.jar}" />
     <pathelement path="${truezip-file.jar}" />
     <pathelement path="${truezip-driver-file.jar}" />
