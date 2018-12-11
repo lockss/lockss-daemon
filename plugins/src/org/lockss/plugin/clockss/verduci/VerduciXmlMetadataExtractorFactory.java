@@ -104,9 +104,9 @@ public class VerduciXmlMetadataExtractorFactory extends SourceXmlMetadataExtract
     			if (xmat.find()) {
     				issuePath = xmat.group(1);
     			}
-    			// Store a CachedUrlSet of all the urls below the issue directory
-    			issueUrls = au.makeCachedUrlSet(new RangeCachedUrlSetSpec(issuePath));
     		}
+			// Store a CachedUrlSet of all the urls below the issue directory
+			issueUrls = au.makeCachedUrlSet(new RangeCachedUrlSetSpec(issuePath));
     	}
     	// Once you have it, just keep returning the same one. It won't change.
     	if (PubMedHelper == null) {
