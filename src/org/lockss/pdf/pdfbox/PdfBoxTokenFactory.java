@@ -686,8 +686,9 @@ public class PdfBoxTokenFactory implements PdfTokenFactory {
     return ((Tok)pdfToken).toPdfBoxObject();
   }
   
+  /* not unlimited! */
   public static List<Object> unconvertList(List<PdfToken> pdfTokens) {
-    List<Object> ret = (pdfTokens.size() <= 100000) ? new ArrayList<Object>(pdfTokens.size()) : new FileBackedList<Object>();
+    List<Object> ret = new ArrayList<Object>(pdfTokens.size());
     for (PdfToken pdfToken : pdfTokens) {
       ret.add(unconvertOne(pdfToken));
     }

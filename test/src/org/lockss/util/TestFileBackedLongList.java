@@ -7,6 +7,8 @@ import org.lockss.test.LockssTestCase;
 
 public class TestFileBackedLongList extends LockssTestCase {
 
+  protected static final int SIZE = 1_000_000;
+  
   protected File file;
   
   @Override
@@ -23,7 +25,7 @@ public class TestFileBackedLongList extends LockssTestCase {
   }
   
   public void testPopulateAndTraverse() throws Exception {
-    int size = 10000;
+    int size = SIZE;
     FileBackedLongList list = null;
     try {
       list = new FileBackedLongList(file);
@@ -61,7 +63,7 @@ public class TestFileBackedLongList extends LockssTestCase {
   }
   
   public void testAddAndRemove() throws Exception {
-    int size = 10000;
+    int size = SIZE;
     FileBackedLongList list = null;
     try {
       list = new FileBackedLongList(file);
@@ -91,6 +93,11 @@ public class TestFileBackedLongList extends LockssTestCase {
         assertEquals(i - 1, list.get(i));
       }
       assertEquals(-1L, list.removeElementAt(999));
+      for (int i = 0 ; i < size ; ++i) {
+        assertEquals(i, list.get(i));
+      }
+      list.add(999, -1L);
+      list.subList(999, 1000).clear();
       for (int i = 0 ; i < size ; ++i) {
         assertEquals(i, list.get(i));
       }

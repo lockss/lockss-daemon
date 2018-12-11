@@ -32,13 +32,21 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.silverchair;
 
+import java.io.*;
 import java.util.Iterator;
 import java.util.List;
 import java.util.regex.Pattern;
 
+import org.apache.commons.compress.utils.IOUtils;
+import org.apache.pdfbox.cos.COSName;
 import org.lockss.filter.pdf.*;
 import org.lockss.pdf.*;
+import org.lockss.pdf.pdfbox.PdfBoxTokens;
 import org.lockss.plugin.*;
+
+import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
+import com.fasterxml.jackson.annotation.PropertyAccessor;
+import com.fasterxml.jackson.databind.*;
 
 public class BaseScPdfFilterFactory extends ExtractingPdfFilterFactory {
 
@@ -158,4 +166,14 @@ public class BaseScPdfFilterFactory extends ExtractingPdfFilterFactory {
       }
     }
   }
+  
+  public static void main(String[] args) throws Exception {
+    String file = "/tmp/btw336.pdf";
+    IOUtils.copy(new BaseScPdfFilterFactory().createFilteredInputStream(null,
+                                                                    new FileInputStream(file),
+                                                                    null),
+                 new FileOutputStream(file + ".out"));
+  }
+  
+
 }
