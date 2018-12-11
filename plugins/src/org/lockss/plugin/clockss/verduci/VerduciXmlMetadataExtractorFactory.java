@@ -34,6 +34,8 @@ package org.lockss.plugin.clockss.verduci;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.lockss.util.*;
 import org.apache.commons.io.FilenameUtils;
@@ -59,6 +61,12 @@ public class VerduciXmlMetadataExtractorFactory extends SourceXmlMetadataExtract
   private static final Logger log = Logger.getLogger(VerduciXmlMetadataExtractorFactory.class);
 
   private static SourceXmlSchemaHelper PubMedHelper = null;
+  /*
+   * If <dir> is the issue_directory
+   * XML could be in <dir>/XML/ or <dir>/XML FILES or <dir>/XML FILE or in 1 case, just <dir>
+   */
+  protected static final Pattern XML_DIR_PATTERN = 
+	      Pattern.compile("(.*)/XML( FILE(S)?)?/$", Pattern.CASE_INSENSITIVE);  
 
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
@@ -79,7 +87,7 @@ public class VerduciXmlMetadataExtractorFactory extends SourceXmlMetadataExtract
      * 
      */
     CachedUrlSet issueUrls = null;
-    
+
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
       /*
@@ -87,21 +95,24 @@ public class VerduciXmlMetadataExtractorFactory extends SourceXmlMetadataExtract
        * which is appropriate as the XML and corresponding PDF files
        * live below the same issue directory 
        */
-      if (issueUrls == null) {
-        ArchivalUnit au = cu.getArchivalUnit();
-        // get an iterable list of the cu's in this subdirectory
-        String issuePath = FilenameUtils.getPath(cu.getUrl());
-        if (issuePath.endsWith("XML/")) {
-          issuePath = issuePath.substring(0,issuePath.length() - 4); 
-        }
-        // Store a CachedUrlSet of all the urls below the issue directory
-        issueUrls = au.makeCachedUrlSet(new RangeCachedUrlSetSpec(issuePath));
-      }
-      // Once you have it, just keep returning the same one. It won't change.
-      if (PubMedHelper == null) {
-        PubMedHelper = new PubMedSchemaHelper();
-      }
-      return PubMedHelper;
+    	if (issueUrls == null) {
+    		ArchivalUnit au = cu.getArchivalUnit();
+    		// get an iterable list of the cu's in this subdirectory
+    		String issuePath = FilenameUtils.getPath(cu.getUrl());
+    		if (issuePath.contains("/XML")) {
+    			Matcher xmat = XML_DIR_PATTERN.matcher(issuePath);
+    			if (xmat.find()) {
+    				issuePath = xmat.group(1);
+    			}
+    			// Store a CachedUrlSet of all the urls below the issue directory
+    			issueUrls = au.makeCachedUrlSet(new RangeCachedUrlSetSpec(issuePath));
+    		}
+    	}
+    	// Once you have it, just keep returning the same one. It won't change.
+    	if (PubMedHelper == null) {
+    		PubMedHelper = new PubMedSchemaHelper();
+    	}
+    	return PubMedHelper;
     }
 
 
