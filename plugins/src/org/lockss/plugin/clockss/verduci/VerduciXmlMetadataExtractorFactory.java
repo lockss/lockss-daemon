@@ -66,7 +66,7 @@ public class VerduciXmlMetadataExtractorFactory extends SourceXmlMetadataExtract
    * XML could be in <dir>/XML/ or <dir>/XML FILES or <dir>/XML FILE or in 1 case, just <dir>
    */
   protected static final Pattern XML_DIR_PATTERN = 
-	      Pattern.compile("(.*)/XML( FILE(S)?)?/$", Pattern.CASE_INSENSITIVE);  
+	      Pattern.compile("(.*)/XML(( |%20)FILE(S)?)?/$", Pattern.CASE_INSENSITIVE);  
 
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
