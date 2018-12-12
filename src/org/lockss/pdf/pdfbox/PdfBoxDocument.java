@@ -45,7 +45,7 @@ import org.apache.pdfbox.pdmodel.common.PDMetadata;
 import org.lockss.pdf.*;
 import org.lockss.pdf.PdfDocument;
 import org.lockss.pdf.PdfPage;
-import org.lockss.pdf.pdfbox.PdfBoxTokenFactory.Dic;
+import org.lockss.pdf.pdfbox.PdfBoxTokens.Dic;
 import org.lockss.util.*;
 import org.w3c.dom.Document;
 
@@ -302,7 +302,7 @@ public class PdfBoxDocument implements PdfDocument {
     if (trailer == null) {
       trailer = new COSDictionary();
     }
-    return PdfBoxTokenFactory.convertOne(trailer).getDictionary();
+    return PdfBoxTokens.convertOne(trailer).getDictionary();
   }
 
   @Override

@@ -56,7 +56,7 @@ public class PdfBoxDocumentFactory implements PdfDocumentFactory {
 
   @Override
   public PdfTokenFactory getTokenFactory() {
-    return PdfBoxTokenFactory.getInstance();
+    return PdfBoxTokens.getFactory();
   }
   
   @Override

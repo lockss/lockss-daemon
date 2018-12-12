@@ -15,7 +15,7 @@ and/or other materials provided with the distribution.
 
 3. Neither the name of the copyright holder nor the names of its contributors
 may be used to endorse or promote products derived from this software without
-specific prior written permission. 
+specific prior written permission.
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
 AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
@@ -304,8 +304,14 @@ public class FileBackedLongList extends RandomAccessLongList {
     try {
       // If the underlying MeMoryByteBuffer capacity has been reached, double it
       if (lbuf.capacity() == size) {
-        mbbuf.force();
-        mbbuf = chan.map(MapMode.READ_WRITE, 0, 2 * mbbuf.capacity()); // FIXME
+        // Evict old buffer
+        MappedByteBuffer oldBuf = mbbuf;
+        int len = (2 * oldBuf.capacity() <= Integer.MAX_VALUE) ? 2 * oldBuf.capacity() : Integer.MAX_VALUE;
+        oldBuf.force();
+        CountingRandomAccessFile.unmap(oldBuf);
+        oldBuf = null;
+        // Allocate new buffer
+        mbbuf = chan.map(MapMode.READ_WRITE, 0, len);
         lbuf = mbbuf.asLongBuffer();
       }
       // Starting from the end, move chunks of BUFFER elements up by one
@@ -355,11 +361,12 @@ public class FileBackedLongList extends RandomAccessLongList {
    * @since 1.75
    */
   public void release() {
-    mbbuf.force();
     IOUtils.closeQuietly(craf);
     craf = null;
     IOUtils.closeQuietly(chan);
     chan = null;
+    mbbuf.force();
+    CountingRandomAccessFile.unmap(mbbuf);
     mbbuf = null;
     lbuf = null;
     if (deleteFile) {

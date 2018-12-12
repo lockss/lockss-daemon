@@ -39,7 +39,7 @@ import org.apache.pdfbox.cos.*;
 import org.apache.pdfbox.pdmodel.*;
 import org.apache.pdfbox.pdmodel.graphics.xobject.*;
 import org.lockss.pdf.*;
-import org.lockss.pdf.pdfbox.PdfBoxTokenFactory.*;
+import org.lockss.pdf.pdfbox.PdfBoxTokens.*;
 import org.lockss.util.Logger;
 
 /**
@@ -206,7 +206,7 @@ public class PdfBoxPage implements PdfPage {
     if (annots == null) {
       return new ArrayList<PdfToken>();
     }
-    return PdfBoxTokenFactory.convertOne(annots).getArray();
+    return PdfBoxTokens.convertOne(annots).getArray();
   }
 
   @Override

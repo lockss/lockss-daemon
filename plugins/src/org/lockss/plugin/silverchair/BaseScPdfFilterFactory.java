@@ -38,15 +38,9 @@ import java.util.List;
 import java.util.regex.Pattern;
 
 import org.apache.commons.compress.utils.IOUtils;
-import org.apache.pdfbox.cos.COSName;
 import org.lockss.filter.pdf.*;
 import org.lockss.pdf.*;
-import org.lockss.pdf.pdfbox.PdfBoxTokens;
 import org.lockss.plugin.*;
-
-import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-import com.fasterxml.jackson.annotation.PropertyAccessor;
-import com.fasterxml.jackson.databind.*;
 
 public class BaseScPdfFilterFactory extends ExtractingPdfFilterFactory {
 

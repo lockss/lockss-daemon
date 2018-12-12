@@ -106,7 +106,7 @@ public abstract class PdfBoxTokenStream implements PdfTokenStream {
           ((ArrayList<PdfToken>)tokens).trimToSize();
           tokens = newList;
         }
-        tokens.add(PdfBoxTokenFactory.convertOne(iter.next()));
+        tokens.add(PdfBoxTokens.convertOne(iter.next()));
       }
       decodeStringsWithFontContext(tokens);
       return tokens;

@@ -15,7 +15,7 @@ and/or other materials provided with the distribution.
 
 3. Neither the name of the copyright holder nor the names of its contributors
 may be used to endorse or promote products derived from this software without
-specific prior written permission. 
+specific prior written permission.
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
 AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
@@ -34,6 +34,9 @@ POSSIBILITY OF SUCH DAMAGE.
 package org.lockss.util;
 
 import java.io.*;
+import java.lang.reflect.Method;
+import java.nio.MappedByteBuffer;
+import java.security.*;
 
 /**
  * <p>
@@ -530,6 +533,53 @@ public class CountingRandomAccessFile extends RandomAccessFile {
     File ret = File.createTempFile(CountingRandomAccessFile.class.getSimpleName(), ".bin");
     ret.deleteOnExit();
     return ret;
+  }
+  
+  /**
+   * @see https://www.programcreek.com/java-api-examples/index.php?source_dir=cp-common-utils-master/core/main/src/com/complexible/common/io/MMapUtil.java
+   */
+  protected static final boolean unmapSupported;
+  
+  static {
+    boolean ret;
+    try {
+        Class.forName("sun.misc.Cleaner"); 
+        Class.forName("java.nio.DirectByteBuffer").getMethod("cleaner"); 
+        ret = true; 
+    } 
+    catch (Exception e) { 
+        ret = false;
+    }
+    unmapSupported = ret;
+  }
+  
+  /**
+   * 
+   * @param mbbuf
+   * @return
+   * @see https://www.programcreek.com/java-api-examples/index.php?source_dir=cp-common-utils-master/core/main/src/com/complexible/common/io/MMapUtil.java
+   */
+  public static boolean unmap(final MappedByteBuffer mbbuf) {
+    if (unmapSupported) {
+      try { 
+        AccessController.doPrivileged(new PrivilegedExceptionAction<Object>() { 
+          public Object run() throws Exception { 
+            final Method getCleanerMethod = mbbuf.getClass().getMethod("cleaner"); 
+            getCleanerMethod.setAccessible(true); 
+            final Object cleaner = getCleanerMethod.invoke(mbbuf); 
+            if (cleaner != null) { 
+              cleaner.getClass().getMethod("clean").invoke(cleaner); 
+            } 
+            return null; 
+          } 
+        }); 
+        return true; 
+      } 
+      catch (PrivilegedActionException exc) { 
+        // ignore
+      } 
+    }
+    return false;
   }
 
 }

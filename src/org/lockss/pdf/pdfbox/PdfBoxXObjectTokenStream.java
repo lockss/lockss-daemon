@@ -129,7 +129,7 @@ public class PdfBoxXObjectTokenStream extends PdfBoxTokenStream {
       ContentStreamWriter tokenWriter = new ContentStreamWriter(newPdStream.createOutputStream());
       for (int i = 0 ; i < newTokens.size() ; i += 10000) {
         int len = newTokens.size() - i > 10_000 ? 10_000 : newTokens.size() - i;
-        tokenWriter.writeTokens(PdfBoxTokenFactory.unconvertList(newTokens.subList(i, i + len)));
+        tokenWriter.writeTokens(PdfBoxTokens.unconvertList(newTokens.subList(i, i + len)));
       }
       pdXObjectForm = new PDXObjectForm(newPdStream);
       pdXObjectForm.setResources(getStreamResources());

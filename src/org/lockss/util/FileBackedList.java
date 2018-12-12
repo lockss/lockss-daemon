@@ -15,7 +15,7 @@ and/or other materials provided with the distribution.
 
 3. Neither the name of the copyright holder nor the names of its contributors
 may be used to endorse or promote products derived from this software without
-specific prior written permission. 
+specific prior written permission.
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
 AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
@@ -256,7 +256,7 @@ public class FileBackedList<E> extends AbstractList<E> {
     int chunkNum = chunks.size() - 1;
     Chunk lastChunk = chunks.get(chunkNum);
     long ret = lastChunk.endOffset;
-    if (lastChunk.endOffset - lastChunk.beginOffset + bytes.length > CHUNK) {
+    if (lastChunk.endOffset - lastChunk.beginOffset + bytes.length + 4 > CHUNK) {
       lastChunk = new Chunk(lastChunk.endOffset, lastChunk.endOffset);
       chunks.add(lastChunk);
       ++chunkNum;
@@ -282,13 +282,17 @@ public class FileBackedList<E> extends AbstractList<E> {
     if (ret == null) {
       // Potentially evict a buffer
       Collection<MappedByteBuffer> before = buffers.values();
-      ret = chan.map(MapMode.READ_WRITE, chunks.get(chunkNum).beginOffset, CHUNK);
-      buffers.put(chunkNum, ret);
+      buffers.put(chunkNum, null); // dummy value
       Collection<MappedByteBuffer> after = buffers.values();
       before.removeAll(after); // before now contains zero or one evicted buffer
       for (Iterator<MappedByteBuffer> iter = before.iterator() ; iter.hasNext() ; ) {
-        iter.next().force(); // flush to disk
+        MappedByteBuffer oldBuf = iter.next();
+        CountingRandomAccessFile.unmap(oldBuf);
+        oldBuf = null;
       }
+      // Allocate new buffer
+      ret = chan.map(MapMode.READ_WRITE, chunks.get(chunkNum).beginOffset, CHUNK);
+      buffers.put(chunkNum, ret); // real value
     }
     return ret;
   }
