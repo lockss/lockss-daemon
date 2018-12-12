@@ -304,7 +304,8 @@ public class FileBackedLongList extends RandomAccessLongList {
     try {
       // If the underlying MeMoryByteBuffer capacity has been reached, double it
       if (lbuf.capacity() == size) {
-        mbbuf = chan.map(MapMode.READ_WRITE, 0, 2 * mbbuf.capacity());
+        mbbuf.force();
+        mbbuf = chan.map(MapMode.READ_WRITE, 0, 2 * mbbuf.capacity()); // FIXME
         lbuf = mbbuf.asLongBuffer();
       }
       // Starting from the end, move chunks of BUFFER elements up by one
@@ -354,8 +355,11 @@ public class FileBackedLongList extends RandomAccessLongList {
    * @since 1.75
    */
   public void release() {
+    mbbuf.force();
     IOUtils.closeQuietly(craf);
+    craf = null;
     IOUtils.closeQuietly(chan);
+    chan = null;
     mbbuf = null;
     lbuf = null;
     if (deleteFile) {
