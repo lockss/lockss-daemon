@@ -42,6 +42,7 @@ import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 
 import org.lockss.plugin.CachedUrl;
+import org.lockss.plugin.clockss.CrossRefSchemaHelper;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 
@@ -61,6 +62,7 @@ public class AimsCrossrefXmlMetadataExtractorFactory extends SourceXmlMetadataEx
   private static final Logger log = Logger.getLogger(AimsCrossrefXmlMetadataExtractorFactory.class);
 
   private static SourceXmlSchemaHelper AimsCRPublishingHelper = null;
+  private static final String AIMS_PUBLISHER = "American Institute of Mathematical Sciences";
 
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
@@ -75,7 +77,7 @@ public class AimsCrossrefXmlMetadataExtractorFactory extends SourceXmlMetadataEx
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
       // Once you have it, just keep returning the same one. It won't change.
       if (AimsCRPublishingHelper == null) {
-        AimsCRPublishingHelper = new AimsCRSchemaHelper();
+          AimsCRPublishingHelper = new CrossRefSchemaHelper();
       }
       return AimsCRPublishingHelper;
     }
@@ -90,6 +92,10 @@ public class AimsCrossrefXmlMetadataExtractorFactory extends SourceXmlMetadataEx
      *     foo.zip!/proc.2015.0085.pdf
      * which is at the same level as the crossref.xml and uses the 2nd part of the doi as filename
      * 
+     * 2018 the file naming changed completely. 
+     * Now the PDF filename is
+     * doi_first/JID.YEAR.ISSUE.FIRSTPAGE/Paper.pdf
+     * 
      */
     @Override
     protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
@@ -98,13 +104,21 @@ public class AimsCrossrefXmlMetadataExtractorFactory extends SourceXmlMetadataEx
       String cuBase = FilenameUtils.getFullPath(cu.getUrl());
       String doiValue = oneAM.getRaw(helper.getFilenameXPathKey());
       String doiSecond = StringUtils.substringAfter(doiValue, "/");
+      String doiFirst = StringUtils.substringBefore(doiValue, "/");
+      //2017 options
       String pdfName = cuBase + doiValue + "/paper.pdf";
       String altName = cuBase + doiSecond + ".pdf";
-      log.debug3("pdfName is " + pdfName);
+      //2018 options
+      String pubJID = oneAM.getRaw(CrossRefSchemaHelper.pub_abbrev);
+      String pubYear = oneAM.getRaw(CrossRefSchemaHelper.pub_year);
+      String pubIssue = oneAM.getRaw(CrossRefSchemaHelper.pub_issue);
+      String artPage = oneAM.getRaw(CrossRefSchemaHelper.art_sp);
+      String name2018 = cuBase + doiFirst + "/" + pubJID + "." + pubYear + "." + pubIssue + "." + artPage + "/Paper.pdf";
+      log.debug3("looking for: " + pdfName + " or " + altName + " or " + name2018);
       List<String> returnList = new ArrayList<String>();
       returnList.add(pdfName);
       returnList.add(altName);
-      //log.info("looking for: " + pdfName + " or " + altName);
+      returnList.add(name2018);
       return returnList;
     }
     
@@ -113,6 +127,11 @@ public class AimsCrossrefXmlMetadataExtractorFactory extends SourceXmlMetadataEx
         CachedUrl cu, ArticleMetadata thisAM) {
 
       log.debug3("in AIMS postCookProcess");
+      String pname = thisAM.get(MetadataField.FIELD_PUBLISHER);
+      if (!(AIMS_PUBLISHER.equals(pname))) {
+    	  	// the CrossRef schema helper cooks this so be sure
+            thisAM.replace(MetadataField.FIELD_PUBLISHER,AIMS_PUBLISHER);
+        }
     }
 
   }

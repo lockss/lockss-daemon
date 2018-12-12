@@ -150,17 +150,18 @@ implements SourceXmlSchemaHelper {
   // The following are all relative to the article node
   // from the immediately preceding sibling -
   private static String pub_title = "preceding-sibling::journal_metadata[1]/full_title";
+  public static String pub_abbrev = "preceding-sibling::journal_metadata[1]/abbrev_title";
   private static String pub_issn = "preceding-sibling::journal_metadata[1]/issn";
-  private static String pub_year = "preceding-sibling::journal_issue[1]/publication_date/year";
+  public static String pub_year = "preceding-sibling::journal_issue[1]/publication_date/year";
   private static String pub_volume = "preceding-sibling::journal_issue[1]/journal_volume/volume";
-  private static String pub_issue = "preceding-sibling::journal_issue[1]/issue";
+  public static String pub_issue = "preceding-sibling::journal_issue[1]/issue";
   private static String pub_issue_month = "preceding-sibling::journal_issue[1]/publication_date/month";
   
   private static String art_title = "titles/title";
-  private static String art_contrib = "contributors/person_name";
+    private static String art_contrib = "contributors/person_name";
      //given_name, surname
   private static String art_date = "publication_date";
-  private static String art_sp = "pages/first_page";
+  public static String art_sp = "pages/first_page";
   private static String art_lp = "pages/last_page";
   private static String art_doi = "doi_data/doi";
   public static String art_resource = "doi_data/resource";
@@ -174,7 +175,8 @@ implements SourceXmlSchemaHelper {
   static private final Map<String,XPathValue>     
   articleMap = new HashMap<String,XPathValue>();
   static {
-    articleMap.put(pub_title, XmlDomMetadataExtractor.TEXT_VALUE); 
+	articleMap.put(pub_title, XmlDomMetadataExtractor.TEXT_VALUE); 
+	articleMap.put(pub_abbrev, XmlDomMetadataExtractor.TEXT_VALUE); 
     articleMap.put(pub_issn, XmlDomMetadataExtractor.TEXT_VALUE); 
     articleMap.put(pub_volume, XmlDomMetadataExtractor.TEXT_VALUE); 
     articleMap.put(pub_issue, XmlDomMetadataExtractor.TEXT_VALUE); 
