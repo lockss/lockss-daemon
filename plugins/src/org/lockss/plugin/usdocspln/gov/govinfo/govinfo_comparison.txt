@@ -1,0 +1,73 @@
+FDSys site goes down 12/14/18.  New site (govinfo) can't be harvested until stable prerendered landing pages
+are available. The estimate for this is Jan/Feb 2019
+But while both sites are up, here's a comparative analysis
+Note - also API support is also coming but currently doesn't support publication date, only modification date which wouldn't 
+support closed AU sets.
+
+FDSYS
+https://www.gpo.gov/smap/fdsys/sitemap_2018/2018_DCPD_sitemap.xml
+pull loc nodes:
+https://www.gpo.gov/fdsys/pkg/DCPD-201800002/content-detail.html
+https://www.gpo.gov/fdsys/pkg/DCPD-201800002/html/DCPD-201800002.htm
+https://www.gpo.gov/fdsys/pkg/DCPD-201800002/pdf/DCPD-201800002.pdf
+https://www.gpo.gov/fdsys/pkg/DCPD-201800002/mods.xml
+
+And the special rules are for the federal register
+https://www.gpo.gov/smap/fdsys/sitemap_2018/2018_FR_sitemap.xml
+to
+https://www.gpo.gov/fdsys/pkg/FR-2018-12-06/content-detail.html
+to
+"Entire Issue:
+https://www.gpo.gov/fdsys/pkg/FR-2018-12-06/pdf/FR-2018-12-06.pdf
+https://www.gpo.gov/fdsys/pkg/FR-2018-12-06/xml/FR-2018-12-06.xml
+https://www.gpo.gov/fdsys/search/getfrtoc.action?selectedDate=2018-12-06
+https://www.gpo.gov/fdsys/pkg/FR-2018-12-06/mods.xml
+and then on the same page there are links to actual document in context:
+https://www.gpo.gov/fdsys/#
+
+At TOC
+https://www.gpo.gov/fdsys/search/getfrtoc.action?selectedDate=2018-12-06
+https://www.gpo.gov/fdsys/pkg/FR-2018-12-06/pdf/2018-26434.pdf
+https://www.gpo.gov/fdsys/pkg/FR-2018-12-06/html/2018-26434.htm
+"more..."
+https://www.gpo.gov/fdsys/search/pagedetails.action?granuleId=2018-26434&packageId=FR-2018-12-06&acCode=FR&collectionCode=FR
+leads to standard landing page for this document
+https://www.gpo.gov/fdsys/pkg/FR-2018-12-06/pdf/2018-26434.pdf
+(this is what the url normalizer is dealing with)
+
+
+GovInfo Site
+note - old site didn't extract metadata - we could/should
+note - old site used normalizer because of serach type urls. We may not need
+but won't know until we can crawl.
+
+https://www.govinfo.gov/sitemap/DCPD_sitemap_index.xml
+https://www.govinfo.gov/sitemap/DCPD_2018_sitemap.xml
+https://www.govinfo.gov/app/details/DCPD-201800002
+https://www.govinfo.gov/content/pkg/DCPD-201800002/html/DCPD-201800002.htm
+https://www.govinfo.gov/content/pkg/DCPD-201800002/pdf/DCPD-201800002.pdf
+https://www.govinfo.gov/metadata/pkg/DCPD-201800002/mods.xml
+
+NO
+https://www.govinfo.gov/content/pkg/DCPD-201800002.zip
+
+Looking at equivalent FR for the new site....
+
+https://www.govinfo.gov/sitemap/FR_2018_sitemap.xml
+https://www.govinfo.gov/app/details/FR-2018-01-02
+https://www.govinfo.gov/content/pkg/FR-2018-01-02/pdf/FR-2018-01-02.pdf
+https://www.govinfo.gov/content/pkg/FR-2018-01-02/xml/FR-2018-01-02.xml
+https://www.govinfo.gov/metadata/pkg/FR-2018-01-02/mods.xml
+document in context tab
+"TOC" https://www.govinfo.gov/app/frtoc/2018-01-02
+https://www.govinfo.gov/content/pkg/FR-2018-01-02/xml/FR-2018-01-02.xml
+https://www.govinfo.gov/content/pkg/FR-2018-01-02/pdf/FR-2018-01-02.pdf
+https://www.govinfo.gov/app/details/FR-2018-01-02
+
+at TOC
+https://www.govinfo.gov/app/frtoc/2018-01-02
+https://www.govinfo.gov/content/pkg/FR-2018-01-02/pdf/2017-28167.pdf
+https://www.govinfo.gov/content/pkg/FR-2018-01-02/html/2017-28167.htm
+"details"
+https://www.govinfo.gov/app/details/FR-2018-01-02/2017-28167
+"document in context tab" and "related documents" tab -> generated as accessed
