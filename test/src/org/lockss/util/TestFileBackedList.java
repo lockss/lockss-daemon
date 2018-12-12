@@ -7,6 +7,8 @@ import org.lockss.test.LockssTestCase;
 
 public class TestFileBackedList extends LockssTestCase {
 
+  protected static final int SIZE = 1_000_000;
+  
   protected File file;
   
   @Override
@@ -22,7 +24,7 @@ public class TestFileBackedList extends LockssTestCase {
   }
   
   public void testUse() throws Exception {
-    int size = 10000;
+    int size = SIZE;
     FileBackedList<Object> list = new FileBackedList<Object>(giantListIterator(size), file);
     assertEquals(size, list.size());
     // Forward traversal
