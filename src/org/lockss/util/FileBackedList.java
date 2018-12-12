@@ -217,9 +217,7 @@ public class FileBackedList<E> extends AbstractList<E> {
     if (fileBackedLongList != null) {
       fileBackedLongList.release();
       fileBackedLongList = null;
-      if (deleteFile) {
-        new File(file.getPath() + ".longs").delete();
-      }
+      new File(file.getPath() + ".longs").delete(); // FIXME
     }
     offsets = null;
     if (deleteFile) {
