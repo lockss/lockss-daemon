@@ -25,11 +25,11 @@
     au < aspet.ClockssASPETDrupalPlugin ; crawling ; exists ; 1973 ; Drug Metabolism and Disposition Volume 1 ; 1 ; >
     au < aspet.ClockssASPETDrupalPlugin ; crawling ; exists ; 1974 ; Drug Metabolism and Disposition Volume 2 ; 2 ; >
     au < aspet.ClockssASPETDrupalPlugin ; crawling ; exists ; 1975 ; Drug Metabolism and Disposition Volume 3 ; 3 ; >
-    au < aspet.ClockssASPETDrupalPlugin ; crawling ; exists ; 1976 ; Drug Metabolism and Disposition Volume 4 ; 4 ; >
+    au < aspet.ClockssASPETDrupalPlugin ; frozen ; exists ; 1976 ; Drug Metabolism and Disposition Volume 4 ; 4 ; >
     au < aspet.ClockssASPETDrupalPlugin ; crawling ; exists ; 1977 ; Drug Metabolism and Disposition Volume 5 ; 5 ; >
     au < aspet.ClockssASPETDrupalPlugin ; crawling ; exists ; 1978 ; Drug Metabolism and Disposition Volume 6 ; 6 ; >
     au < aspet.ClockssASPETDrupalPlugin ; crawling ; exists ; 1979 ; Drug Metabolism and Disposition Volume 7 ; 7 ; >
-    au < aspet.ClockssASPETDrupalPlugin ; crawling ; exists ; 1980 ; Drug Metabolism and Disposition Volume 8 ; 8 ; >
+    au < aspet.ClockssASPETDrupalPlugin ; frozen ; exists ; 1980 ; Drug Metabolism and Disposition Volume 8 ; 8 ; >
     au < aspet.ClockssASPETDrupalPlugin ; crawling ; exists ; 1981 ; Drug Metabolism and Disposition Volume 9 ; 9 ; >
     au < aspet.ClockssASPETDrupalPlugin ; crawling ; exists ; 1982 ; Drug Metabolism and Disposition Volume 10 ; 10 ; >
     au < aspet.ClockssASPETDrupalPlugin ; crawling ; exists ; 1983 ; Drug Metabolism and Disposition Volume 11 ; 11 ; >
@@ -85,8 +85,8 @@
 
     {
     
-    au < aspet.ClockssASPETDrupalPlugin ; crawling ; exists ; 1909-1910 ; Journal of Pharmacology and Experimental Therapeutics Volume 1 ; 1 ; >
-    au < aspet.ClockssASPETDrupalPlugin ; crawling ; exists ; 1910-1911 ; Journal of Pharmacology and Experimental Therapeutics Volume 2 ; 2 ; >
+    au < aspet.ClockssASPETDrupalPlugin ; frozen ; exists ; 1909-1910 ; Journal of Pharmacology and Experimental Therapeutics Volume 1 ; 1 ; >
+    au < aspet.ClockssASPETDrupalPlugin ; frozen ; exists ; 1910-1911 ; Journal of Pharmacology and Experimental Therapeutics Volume 2 ; 2 ; >
     au < aspet.ClockssASPETDrupalPlugin ; manifest ; exists ; 1911-1912 ; Journal of Pharmacology and Experimental Therapeutics Volume 3 ; 3 ; >
     au < aspet.ClockssASPETDrupalPlugin ; manifest ; exists ; 1912-1913 ; Journal of Pharmacology and Experimental Therapeutics Volume 4 ; 4 ; >
     au < aspet.ClockssASPETDrupalPlugin ; manifest ; exists ; 1913-1914 ; Journal of Pharmacology and Experimental Therapeutics Volume 5 ; 5 ; >
