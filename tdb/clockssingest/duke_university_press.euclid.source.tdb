@@ -21,8 +21,7 @@
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/dukeupress-released/
       implicit < status ; status2 ; year ; name ; param[directory] >
 
-	 # tested/ready as soon as the content moves to production
-      au < testing ; exists ; 2018 ; Duke University Press Source Content 2018 ; 2018 >
+      au < readySource ; manifest ; 2018 ; Duke University Press Source Content 2018 ; 2018 >
 
     }
 
