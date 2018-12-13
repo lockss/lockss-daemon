@@ -38,7 +38,7 @@ import java.util.*;
 import javax.xml.transform.TransformerException;
 
 import org.apache.jempbox.xmp.XMPMetadata;
-import org.apache.pdfbox.cos.COSDictionary;
+import org.apache.pdfbox.cos.*;
 import org.apache.pdfbox.exceptions.COSVisitorException;
 import org.apache.pdfbox.pdmodel.*;
 import org.apache.pdfbox.pdmodel.common.PDMetadata;
@@ -298,11 +298,29 @@ public class PdfBoxDocument implements PdfDocument {
 
   @Override
   public Map<String, PdfToken> getTrailer() {
+    /* IMPLEMENTATION NOTE
+     * 
+     * Contrary to our initial understanding, the trailer dictionary is not
+     * just the dictionary that typically only contains the ID at the very end
+     * of the document source code; it's really the real root dictionary, which
+     * contains ID and Size but also Info (another dictionary) and Root, the
+     * logical root dictionary (catalog). Converting it leads to converting the
+     * entire object graph, which fails on COSStream. Special-case this part;
+     * but this should probably lead to deprecating #setTrailer(Map) in favor
+     * of redefining #getTrailer() as retsurning a live mapping that need not be
+     * stored.
+     */
+    Map<String, PdfToken> ret = new LinkedHashMap<String, PdfToken>();
     COSDictionary trailer = pdDocument.getDocument().getTrailer();
-    if (trailer == null) {
-      trailer = new COSDictionary();
+    if (trailer != null) {
+      for (Map.Entry<COSName, COSBase> ent : trailer.entrySet()) {
+        COSBase val = ent.getValue();
+        if (!(val instanceof COSObject)) {
+          ret.put(ent.getKey().getName(), PdfBoxTokens.convertOne(val));
+        }
+      }
     }
-    return PdfBoxTokens.convertOne(trailer).getDictionary();
+    return ret;
   }
 
   @Override
@@ -408,7 +426,11 @@ public class PdfBoxDocument implements PdfDocument {
 
   @Override
   public void setTrailer(Map<String, PdfToken> trailerMapping) {
-    pdDocument.getDocument().setTrailer((COSDictionary)Dic.of(trailerMapping).toPdfBoxObject());
+    /* See important IMPLEMENTATION NOTE in #getTrailer() */
+    COSDictionary trailer = pdDocument.getDocument().getTrailer();
+    for (Map.Entry<String, PdfToken> ent : trailerMapping.entrySet()) {
+      trailer.setItem(ent.getKey(), (COSBase)PdfBoxTokens.unconvertOne(ent.getValue()));
+    }
   }
 
   @Override

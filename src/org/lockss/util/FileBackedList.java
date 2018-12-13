@@ -34,7 +34,7 @@ POSSIBILITY OF SUCH DAMAGE.
 package org.lockss.util;
 
 import java.io.*;
-import java.nio.MappedByteBuffer;
+import java.nio.*;
 import java.nio.channels.FileChannel;
 import java.nio.channels.FileChannel.MapMode;
 import java.util.*;
@@ -44,13 +44,115 @@ import org.apache.commons.collections4.map.LRUMap;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.io.output.ByteArrayOutputStream;
 
-public class FileBackedList<E> extends AbstractList<E> {
+/**
+ * <p>
+ * A concrete implementation of {@link AbstractList}that is backed by
+ * memory-mapped files rather than main memory.
+ * </p>
+ * <p>
+ * This class implements {@link AutoCloseable} so it can be used in a
+ * try-with-resources block. Although {@link #close()} will be called by
+ * {@link #finalize()} when the instance is garbage-collected, you should
+ * call {@link #close()} appropriately, whether with try-with-resources,
+ * try/finally, or some other means.
+ * </p>
+ * <p>
+ * The underlying implementation uses a {@link CountingRandomAccessFile}
+ * and views it as a succession of chunks, that are accessed via
+ * {@link MappedByteBuffer} instances. The {@link MappedByteBuffer} for each
+ * chunk is opened with a length of exactly {@link #CHUNK} bytes even though
+ * each chunk is at most {@link #CHUNK} bytes, but this class is constructed in
+ * such a way that chunks and chunk accesses are strictly non-overlapping. To
+ * avoid running out of handles, an {@link LRUMap} cache is used to keep up to
+ * {@link #CHUNKS} most recently-accessed chunks, while less-recently used
+ * chunks are evicted.
+ * </p>
+ * <p>
+ * This backing byte array does not slide when list elements are altered,
+ * inserted or removed; rather, new elements are appended to the end and the
+ * list of internal file offsets for each list element is updated. This internal
+ * list is a {@link ArrayLongList} instance up to {@link #OFFSETS} list
+ * elements. Beyond that, it switches to a {@link FileBackedLongList} so as not
+ * to grow excessively in main memory.
+ * </p>
+ * 
+ * @since 1.75
+ * @see Chunk
+ */
+public class FileBackedList<E>
+    extends AbstractList<E>
+    implements AutoCloseable {
 
+  /**
+   * <p>
+   * The length of a chunk's {@link MappedByteBuffer}.
+   * </p>
+   * 
+   * @since 1.75
+   */
   protected static final int CHUNK = 1024 * 1024 * 1024; // 1GB
-  
+
+  /**
+   * <p>
+   * The maximum number of chunks that can be kept live in the cache.
+   * </p>
+   * 
+   * @since 1.75
+   * @see #buffers
+   */
+  protected static final int CHUNKS = 3;
+
+  /**
+   * <p>
+   * The number of list items beyond which the internal list of {@code long}
+   * offsets is streamed to disk using a {@link FileBackedLongList}.
+   * </p>
+   * 
+   * @since 1.75
+   */
+  protected static final int OFFSETS = 1_000_000;
+
+  /**
+   * <p>
+   * A pair of offsets describing a disk chunk; {@link #beginOffset} is
+   * inclusive and {@link endOffset} is exclusive, like the beginning and
+   * ending indices of {@link String#substring(int, int)} or
+   * {@link List#subList(int, int)}.
+   * </p>
+   * 
+   * @since 1.75
+   */
   public static class Chunk {
-    long beginOffset;
-    long endOffset;
+    
+    /**
+     * <p>
+     * The beginning offset(inclusive).
+     * </p>
+     * 
+     * @since 1.75
+     */
+    private long beginOffset;
+
+    /**
+     * <p>
+     * The ending offset(exclusive).
+     * </p>
+     * 
+     * @since 1.75
+     */
+    private long endOffset;
+    
+    /**
+     * <p>
+     * Makes a new chunk.
+     * </p>
+     * 
+     * @param beginOffset
+     *          The beginning offset (inclusive).
+     * @param endOffset
+     *          The ending offset (exclusive).
+     * @since 1.75
+     */
     public Chunk(long beginOffset, long endOffset) {
       this.beginOffset = beginOffset;
       this.endOffset = endOffset;
@@ -58,22 +160,103 @@ public class FileBackedList<E> extends AbstractList<E> {
     
   }
   
+  /**
+   * <p>
+   * The {@link File} backing this list.
+   * </p>
+   * 
+   * @since 1.75
+   */
   protected File file;
   
+  /**
+   * <p>
+   * Whether the file backing this list must be deleted when the list is
+   * garbage-collected or {@link #close()} is called; should be false when the
+   * list was instantiated with a user-provided file and true when
+   * instantiated with a constructed-provided temporary file.
+   * </p>
+   * 
+   * @since 1.75
+   * @see #file
+   */
   protected boolean deleteFile;
   
-  protected RandomAccessFile craf;
+  /**
+   * <p>
+   * The {@link CountingRandomAccessFile} backing this list.
+   * </p>
+   * 
+   * @since 1.75
+   * @see CountingRandomAccessFile
+   * @see #file
+   */
+  protected CountingRandomAccessFile craf;
   
+  /**
+   * <p>
+   * The {@link FileChannel} backing this list.
+   * </p>
+   * 
+   * @since 1.75
+   * @see #craf
+   */
   protected FileChannel chan;
   
+  /**
+   * <p>
+   * The list of offsets in the backing file of each element in the list.
+   * </p>
+   * <p>
+   * This is either the value of {@link #arrayLongList} or
+   * {@link #fileBackedLongList}, which have their own fields because they do
+   * not both have the same API for use in {@link #close()}.
+   * </p>
+   * 
+   * @since 1.75
+   */
   protected LongList offsets;
-  
+
+  /**
+   * <p>
+   * An {@link ArrayLongList} used if the offset list is deemed small enough to
+   * fit in main memory.
+   * </p>
+   * 
+   * @since 1.75
+   * @see #offsets
+   */
   protected ArrayLongList arrayLongList;
   
+  /**
+   * <p>
+   * A {@link FileBackedLongList} used if the offset list is deemed too large to
+   * fit in main memory.
+   * </p>
+   * 
+   * @since 1.75
+   * @see #offsets
+   */
   protected FileBackedLongList fileBackedLongList;
 
+  /**
+   * <p>
+   * A list of allocated chunks.
+   * </p>
+   * 
+   * @since 1.75
+   * @see Chunk
+   */
   protected List<Chunk> chunks;
-  
+
+  /**
+   * <p>
+   * An {@link LRUMap} instances keeping up to {@link #CHUNKS} most-recently
+   * used chunks' {@link MappedByteBuffer} instances.
+   * </p>
+   * 
+   * @since 1.75
+   */
   protected LRUMap<Integer, MappedByteBuffer> buffers;
   
   public FileBackedList() throws IOError {
@@ -146,7 +329,7 @@ public class FileBackedList<E> extends AbstractList<E> {
       this.offsets = arrayLongList;
       this.chunks = new ArrayList<Chunk>();
       chunks.add(new Chunk(0L, 0L));
-      this.buffers = new LRUMap<Integer, MappedByteBuffer>(3);
+      this.buffers = new LRUMap<Integer, MappedByteBuffer>(CHUNKS);
       buffers.put(0, chan.map(MapMode.READ_WRITE, 0L, CHUNK));
       populate(iterator);
     }
@@ -162,7 +345,7 @@ public class FileBackedList<E> extends AbstractList<E> {
     }
     try {
       offsets.add(index, append(element));
-      if (size() > 1_000_000 && fileBackedLongList == null) {
+      if (size() > OFFSETS && fileBackedLongList == null) {
         // Starting to get too large for main memory; go to disk also
         fileBackedLongList = new FileBackedLongList(file.getPath() + ".longs");
         for (LongIterator iter = arrayLongList.iterator() ; iter.hasNext() ; ) {
@@ -177,6 +360,43 @@ public class FileBackedList<E> extends AbstractList<E> {
     catch (IOException exc) {
       throw new IOError(exc);
     }
+  }
+  
+  /**
+   * <p>
+   * Releases all resources associated with this list; using the list after
+   * closing it results in unspecified error conditions.
+   * </p>
+   * 
+   * @since 1.75
+   */
+  @Override
+  public void close() {
+    for (MappedByteBuffer mbbuf : buffers.values()) {
+      mbbuf.force();
+      CountingRandomAccessFile.unmap(mbbuf);
+    }
+    buffers.clear();
+    buffers = null;
+    IOUtils.closeQuietly(craf);
+    craf = null;
+    IOUtils.closeQuietly(chan);
+    chan = null;
+    if (arrayLongList != null) {
+      arrayLongList.clear(); // see Commons Primitives 1.0 note in constructor
+      arrayLongList.trimToSize();
+      arrayLongList = null;
+    }
+    if (fileBackedLongList != null) {
+      fileBackedLongList.close();
+      fileBackedLongList = null;
+      new File(file.getPath() + ".longs").delete(); // FIXME
+    }
+    offsets = null;
+    if (deleteFile) {
+      file.delete();
+    }
+    file = null;
   }
   
   @Override
@@ -197,33 +417,6 @@ public class FileBackedList<E> extends AbstractList<E> {
     catch (IOException exc) {
       throw new IOError(exc);
     }
-  }
-  
-  public void release() {
-    for (MappedByteBuffer mbbuf : buffers.values()) {
-      mbbuf.force();
-    }
-    IOUtils.closeQuietly(craf);
-    craf = null;
-    IOUtils.closeQuietly(chan);
-    chan = null;
-    buffers.clear();
-    buffers = null;
-    if (arrayLongList != null) {
-      arrayLongList.clear();
-      arrayLongList.trimToSize();
-      arrayLongList = null;
-    }
-    if (fileBackedLongList != null) {
-      fileBackedLongList.release();
-      fileBackedLongList = null;
-      new File(file.getPath() + ".longs").delete(); // FIXME
-    }
-    offsets = null;
-    if (deleteFile) {
-      file.delete();
-    }
-    file = null;
   }
   
   @Override
@@ -274,7 +467,7 @@ public class FileBackedList<E> extends AbstractList<E> {
   @Override
   protected void finalize() throws Throwable {
     super.finalize();
-    release();
+    close();
   }
   
   protected MappedByteBuffer getBufferByChunkNumber(int chunkNum) throws IOException {

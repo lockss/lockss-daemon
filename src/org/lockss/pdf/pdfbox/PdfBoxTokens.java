@@ -511,7 +511,7 @@ public class PdfBoxTokens {
     }
     
     public static Obj of(COSObject cosObject) {
-      return of(convertOne(cosObject.getCOSObject()),
+      return of(convertOne(cosObject.getObject()),
                 cosObject.getObjectNumber().longValue(),
                 cosObject.getGenerationNumber().longValue());
     }
@@ -743,7 +743,7 @@ public class PdfBoxTokens {
         return Nul.getInstance();
       }
     });
-    convertToPdfToken.put(COSNull.class, new Converter<PdfToken>() {
+    convertToPdfToken.put(COSObject.class, new Converter<PdfToken>() {
       @Override
       public PdfToken convert(Object obj) {
         return Obj.of((COSObject)obj);
@@ -798,6 +798,26 @@ public class PdfBoxTokens {
 
   public static Object unconvertOne(PdfToken pdfToken) {
     return ((Tok)pdfToken).toPdfBoxObject();
+  }
+
+//  public static void main(String[] args) throws Exception {
+//    COSDictionary trailer = new PdfBoxDocumentFactory().makeDocument(new FileInputStream("/tmp/btw336.pdf")).pdDocument.getDocument().getTrailer();
+//    for (Map.Entry<COSName, COSBase> ent : trailer.entrySet()) {
+//      COSName key = ent.getKey();
+//      COSBase val = ent.getValue();
+//      System.out.format("key=%s type=%s value=%s\n", key.getName(), val.getClass().getCanonicalName(), val.toString());
+//    }
+//  }
+  
+  public static void main(String[] args) throws Exception {
+    PdfBoxDocument d = new PdfBoxDocumentFactory().makeDocument(new FileInputStream("/tmp/btw336.pdf"));
+    PdfUtil.normalizeTrailerId(d);
+    COSDictionary trailer = d.pdDocument.getDocument().getTrailer();
+    for (Map.Entry<COSName, COSBase> ent : trailer.entrySet()) {
+      COSName key = ent.getKey();
+      COSBase val = ent.getValue();
+      System.out.format("key=%s type=%s value=%s\n", key.getName(), val.getClass().getCanonicalName(), val.toString());
+    }
   }
   
 }

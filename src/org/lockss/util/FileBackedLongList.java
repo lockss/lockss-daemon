@@ -49,6 +49,13 @@ import org.apache.commons.io.IOUtils;
  * memory-mapped file rather than main memory.
  * </p>
  * <p>
+ * This class implements {@link AutoCloseable} so it can be used in a
+ * try-with-resources block. Although {@link #close()} will be called by
+ * {@link #finalize()} when the instance is garbage-collected, you should
+ * call {@link #close()} appropriately, whether with try-with-resources,
+ * try/finally, or some other means.
+ * </p>
+ * <p>
  * The underlying implementation uses a {@link LongBuffer} around a
  * {@link MemoryByteBuffer} around a {@link FileChannel} around a
  * {@link CountingRandomAccessFile} (this is similar to using an
@@ -62,7 +69,9 @@ import org.apache.commons.io.IOUtils;
  * 
  * @since 1.75
  */
-public class FileBackedLongList extends RandomAccessLongList {
+public class FileBackedLongList
+    extends RandomAccessLongList
+    implements AutoCloseable {
 
   /**
    * <p>
@@ -85,8 +94,8 @@ public class FileBackedLongList extends RandomAccessLongList {
   /**
    * <p>
    * Whether the file backing this list must be deleted when the list is
-   * garbage-collected or {@link #release()} is called; should be false when
-   * the list was instantiated with a user-provided file and true when
+   * garbage-collected or {@link #close()} is called; should be false when the
+   * list was instantiated with a user-provided file and true when
    * instantiated with a constructed-provided temporary file.
    * </p>
    * 
@@ -338,11 +347,30 @@ public class FileBackedLongList extends RandomAccessLongList {
     }
   }
   
+  /**
+   * <p>
+   * Releases all resources associated with this list; using the list after
+   * closing it results in unspecified error conditions.
+   * </p>
+   * 
+   * @since 1.75
+   */
   @Override
-  protected void finalize() throws Throwable {
-    release();
+  public void close() {
+    mbbuf.force();
+    CountingRandomAccessFile.unmap(mbbuf);
+    mbbuf = null;
+    IOUtils.closeQuietly(craf);
+    craf = null;
+    IOUtils.closeQuietly(chan);
+    chan = null;
+    lbuf = null;
+    if (deleteFile) {
+      file.delete();
+    }
+    size = -1;
   }
-
+  
   @Override
   public long get(int index) {
     if (index < 0 || index >= size) {
@@ -352,29 +380,6 @@ public class FileBackedLongList extends RandomAccessLongList {
     return lbuf.get(index);
   }
 
-  /**
-   * <p>
-   * Releases all resources associated with this list; accessing the list after
-   * releasing it results in unspecified error conditions.
-   * </p>
-   * 
-   * @since 1.75
-   */
-  public void release() {
-    IOUtils.closeQuietly(craf);
-    craf = null;
-    IOUtils.closeQuietly(chan);
-    chan = null;
-    mbbuf.force();
-    CountingRandomAccessFile.unmap(mbbuf);
-    mbbuf = null;
-    lbuf = null;
-    if (deleteFile) {
-      file.delete();
-    }
-    size = -1;
-  }
-  
   @Override
   public long removeElementAt(int index) {
     // Remember the old value
@@ -410,6 +415,12 @@ public class FileBackedLongList extends RandomAccessLongList {
     return size;
   }  
     
+  @Override
+  protected void finalize() throws Throwable {
+    super.finalize();
+    close();
+  }
+
   /**
    * <p>
    * The number of bytes of the element type ({@value} for {@code long}).
