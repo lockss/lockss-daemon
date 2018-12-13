@@ -17,6 +17,32 @@
     param[publisher_id] = manup
 
 
+    {
+
+      title <
+        name = Bulletin of the John Rylands Library ;
+        issn = 2054-9318 ;
+        eissn = 2054-9326 ;
+        issnl = 2054-9318
+      >
+
+     param[journal_id] = bjrl
+     param[journal_issn] = 2054-9326
+
+	# Why are 2003-2006 dNP - they weren't processed previously
+     au < doNotProcess ; doNotProcess ; 2003 ; Bulletin of the John Rylands Library Volume 85 ; 85 ; >
+     au < doNotProcess ; doNotProcess ; 2004 ; Bulletin of the John Rylands Library Volume 86 ; 86 ; >
+     au < doNotProcess ; doNotProcess ; 2005 ; Bulletin of the John Rylands Library Volume 87 ; 87 ; >
+     au < doNotProcess ; doNotProcess ; 2006 ; Bulletin of the John Rylands Library Volume 88 ; 88 ; >
+     au < doNotProcess ; doNotProcess ; 2012-2013 ; Bulletin of the John Rylands Library Volume 89 ; 89 ; >
+     au < doNotProcess ; doNotProcess ; 2014 ; Bulletin of the John Rylands Library Volume 90 ; 90 ; >
+     au < testing ; exists ; 2015 ; Bulletin of the John Rylands Library Volume 91 ; 91 ; >
+     au < testing ; exists ; 2016 ; Bulletin of the John Rylands Library Volume 92 ; 92 ; >
+     au < testing ; exists ; 2017 ; Bulletin of the John Rylands Library Volume 93 ; 93 ; >
+     au < testing ; exists ; 2018 ; Bulletin of the John Rylands Library Volume 94 ; 94 ; >
+
+    }
+
 
     {
     title <
@@ -63,6 +89,41 @@
     au < exists ; exists ; 2018 ; Human Remains and Violence Volume 4 ; 4 ; >
 
     }
+
+   {
+    title <
+      name = Redescriptions: Political Thought, Conceptual History and Feminist Theory ;
+      issn = 2308-0906 ;
+      eissn = 2308-0914 ;
+      issnl = 2308-0906
+    >
+
+     param[journal_id] = redes
+     param[journal_issn] = 2308-0906
+
+	# not sure why 1997-2010 are dNP - they weren't processed previously
+     au < doNotProcess ; doNotProcess ; 1997 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 1 ; 1 ; >
+     au < doNotProcess ; doNotProcess ; 1998 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 2 ; 2 ; >
+     au < doNotProcess ; doNotProcess ; 1999 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 3 ; 3 ; >
+     au < doNotProcess ; doNotProcess ; 2000 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 4 ; 4 ; >
+     au < doNotProcess ; doNotProcess ; 2001 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 5 ; 5 ; >
+     au < doNotProcess ; doNotProcess ; 2002 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 6 ; 6 ; >
+     au < doNotProcess ; doNotProcess ; 2003 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 7 ; 7 ; >
+     au < doNotProcess ; doNotProcess ; 2004 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 8 ; 8 ; >
+     au < doNotProcess ; doNotProcess ; 2005 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 9 ; 9 ; >
+     au < doNotProcess ; doNotProcess ; 2006 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 10 ; 10 ; >
+     au < doNotProcess ; doNotProcess ; 2007 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 11 ; 11 ; >
+     au < doNotProcess ; doNotProcess ; 2008 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 12 ; 12 ; >
+     au < doNotProcess ; doNotProcess ; 2009 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 13 ; 13 ; >
+     au < doNotProcess ; doNotProcess ; 2010 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 14 ; 14 ; >
+     au < doNotProcess ; doNotProcess ; 2011 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 15 ; 15 ; >
+     au < doNotProcess ; doNotProcess ; 2012-2013 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 16 ; 16 ; >
+     au < testing ; exists ; 2014 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 17 ; 17 ; >
+     au < testing ; exists ; 2015 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 18 ; 18 ; >
+     au < testing ; exists ; 2016 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 19 ; 19 ; >
+     au < testing ; exists ; 2017 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 20 ; 20 ; >
+
+    }    
 
     {
     title <
