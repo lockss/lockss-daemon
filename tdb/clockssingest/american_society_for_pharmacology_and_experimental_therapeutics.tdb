@@ -22,7 +22,7 @@
 
     param[base_url] = http://dmd.aspetjournals.org/
 
-    au < aspet.ClockssASPETDrupalPlugin ; crawling ; exists ; 1973 ; Drug Metabolism and Disposition Volume 1 ; 1 ; >
+    au < aspet.ClockssASPETDrupalPlugin ; frozen ; exists ; 1973 ; Drug Metabolism and Disposition Volume 1 ; 1 ; >
     au < aspet.ClockssASPETDrupalPlugin ; frozen ; exists ; 1974 ; Drug Metabolism and Disposition Volume 2 ; 2 ; >
     au < aspet.ClockssASPETDrupalPlugin ; frozen ; exists ; 1975 ; Drug Metabolism and Disposition Volume 3 ; 3 ; >
     au < aspet.ClockssASPETDrupalPlugin ; frozen ; exists ; 1976 ; Drug Metabolism and Disposition Volume 4 ; 4 ; >
@@ -38,7 +38,7 @@
     au < aspet.ClockssASPETDrupalPlugin ; frozen ; exists ; 1986 ; Drug Metabolism and Disposition Volume 14 ; 14 ; >
     au < aspet.ClockssASPETDrupalPlugin ; frozen ; exists ; 1987 ; Drug Metabolism and Disposition Volume 15 ; 15 ; >
     au < aspet.ClockssASPETDrupalPlugin ; frozen ; exists ; 1988 ; Drug Metabolism and Disposition Volume 16 ; 16 ; >
-    au < aspet.ClockssASPETDrupalPlugin ; crawling ; exists ; 1989 ; Drug Metabolism and Disposition Volume 17 ; 17 ; >
+    au < aspet.ClockssASPETDrupalPlugin ; frozen ; exists ; 1989 ; Drug Metabolism and Disposition Volume 17 ; 17 ; >
     au < aspet.ClockssASPETDrupalPlugin ; frozen ; exists ; 1990 ; Drug Metabolism and Disposition Volume 18 ; 18 ; >
     au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 1991 ; Drug Metabolism and Disposition Volume 19 ; 19 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1992 ; Drug Metabolism and Disposition Volume 20 ; 20 ; >
