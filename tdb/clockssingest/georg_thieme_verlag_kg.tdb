@@ -100,7 +100,7 @@
     au < doNotProcess ; exists ; 2006 ; 2006 ; Aktuelle Dermatologie Volume 32 ; 32 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Aktuelle Dermatologie Volume 33 ; 33 ; >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Aktuelle Dermatologie Volume 34 ; 34 ; >
-    au < testing ; exists ; 2009 ; 2009 ; Aktuelle Dermatologie Volume 35 ; 35 ; >
+    au < ready ; exists ; 2009 ; 2009 ; Aktuelle Dermatologie Volume 35 ; 35 ; >
     au < finished ; finished ; 2010 ; 2010 ; Aktuelle Dermatologie Volume 36 ; 36 ; >
     au < finished ; finished ; 2011 ; 2011 ; Aktuelle Dermatologie Volume 37 ; 37 ; >
     au < finished ; finished ; 2012 ; 2012 ; Aktuelle Dermatologie Volume 38 ; 38 ; reingest2.clockss.org:8085 >
@@ -856,7 +856,7 @@
    au < doNotProcess ; exists ; 2006 ; 2006 ; Deutsche Zeitschrift für Onkologie Volume 38 ; 38 ; >
    au < doNotProcess ; exists ; 2007 ; 2007 ; Deutsche Zeitschrift für Onkologie Volume 39 ; 39 ; >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Deutsche Zeitschrift für Onkologie Volume 40 ; 40 ; >
-   au < testing ; exists ; 2009 ; 2009 ; Deutsche Zeitschrift für Onkologie Volume 41 ; 41 ; >
+   au < ready ; exists ; 2009 ; 2009 ; Deutsche Zeitschrift für Onkologie Volume 41 ; 41 ; >
    au < finished ; finished ; 2010 ; 2010 ; Deutsche Zeitschrift für Onkologie Volume 42 ; 42 ; >
    au < finished ; finished ; 2011 ; 2011 ; Deutsche Zeitschrift für Onkologie Volume 43 ; 43 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2012 ; 2012 ; Deutsche Zeitschrift für Onkologie Volume 44 ; 44 ; >
@@ -1171,7 +1171,7 @@
    au < doNotProcess ; exists ; 2006 ; 2006 ; Deutsche Zeitschrift für Osteopathie Volume 4 ; 4 ; >
    au < doNotProcess ; exists ; 2007 ; 2007 ; Deutsche Zeitschrift für Osteopathie Volume 5 ; 5 ; >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Deutsche Zeitschrift für Osteopathie Volume 6 ; 6 ; >
-   au < testing ; exists ; 2009 ; 2009 ; Deutsche Zeitschrift für Osteopathie Volume 7 ; 7 ; >
+   au < ready ; exists ; 2009 ; 2009 ; Deutsche Zeitschrift für Osteopathie Volume 7 ; 7 ; >
    au < finished ; finished ; 2010 ; 2010 ; Deutsche Zeitschrift für Osteopathie Volume 8 ; 8 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2011 ; 2011 ; Deutsche Zeitschrift für Osteopathie Volume 9 ; 9 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2012 ; 2012 ; Deutsche Zeitschrift für Osteopathie Volume 10 ; 10 ; >
@@ -1370,7 +1370,7 @@
     comment[years] = 2008-current
 
    au < doNotProcess ; exists ; 2008 ; 2008 ; Ergopraxis Volume 1 ; 1 ; >
-   au < testing ; exists ; 2009 ; 2009 ; Ergopraxis Volume 2 ; 2 ; >
+   au < ready ; exists ; 2009 ; 2009 ; Ergopraxis Volume 2 ; 2 ; >
    au < finished ; finished ; 2010 ; 2010 ; Ergopraxis Volume 3 ; 3 ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2011 ; 2011 ; Ergopraxis Volume 4 ; 4 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2012 ; 2012 ; Ergopraxis Volume 5 ; 5 ; reingest2.clockss.org:8085 >
@@ -1397,7 +1397,7 @@
     au < doNotProcess ; exists ; 2006 ; 2006 ; Ergoscience Volume 1 ; 1 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Ergoscience Volume 2 ; 2 ; >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Ergoscience Volume 3 ; 3 ; >
-    au < testing ; exists ; 2009 ; 2009 ; Ergoscience Volume 4 ; 4 ; >
+    au < ready ; exists ; 2009 ; 2009 ; Ergoscience Volume 4 ; 4 ; >
     au < finished ; finished ; 2010 ; 2010 ; Ergoscience Volume 5 ; 5 ; >
 
   }
@@ -1422,7 +1422,7 @@
    au < doNotProcess ; exists ; 2006 ; 2006 ; Ernährung & Medizin Volume 21 ; 21 ; >
    au < doNotProcess ; exists ; 2007 ; 2007 ; Ernährung & Medizin Volume 22 ; 22 ; >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Ernährung & Medizin Volume 23 ; 23 ; >
-   au < testing ; exists ; 2009 ; 2009 ; Ernährung & Medizin Volume 24 ; 24 ; >
+   au < ready ; exists ; 2009 ; 2009 ; Ernährung & Medizin Volume 24 ; 24 ; >
    au < finished ; finished ; 2010 ; 2010 ; Ernährung & Medizin Volume 25 ; 25 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2011 ; 2011 ; Ernährung & Medizin Volume 26 ; 26 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2012 ; 2012 ; Ernährung & Medizin Volume 27 ; 27 ; >
@@ -1668,7 +1668,7 @@
 
    au < doNotProcess ; exists ; 2007 ; 2007 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 14 ; 14 ; >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 15 ; 15 ; >
-   au < testing ; exists ; 2009 ; 2009 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 16 ; 16 ; >
+   au < ready ; exists ; 2009 ; 2009 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 16 ; 16 ; >
    au < finished ; finished ; 2010 ; 2010 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 17 ; 17 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2011 ; 2011 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 18 ; 18 ; >
    au < finished ; finished ; 2012 ; 2012 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 19 ; 19 ; reingest2.clockss.org:8085 >
@@ -1721,7 +1721,7 @@
    au < doNotProcess ; exists ; 2006 ; 2006 ; Fortschritte der Neurologie - Psychiatrie Volume 74 ; 74 ; >
    au < doNotProcess ; exists ; 2007 ; 2007 ; Fortschritte der Neurologie - Psychiatrie Volume 75 ; 75 ; >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Fortschritte der Neurologie - Psychiatrie Volume 76 ; 76 ; >
-   au < testing ; exists ; 2009 ; 2009 ; Fortschritte der Neurologie - Psychiatrie Volume 77 ; 77 ; >
+   au < ready ; exists ; 2009 ; 2009 ; Fortschritte der Neurologie - Psychiatrie Volume 77 ; 77 ; >
    au < finished ; finished ; 2010 ; 2010 ; Fortschritte der Neurologie - Psychiatrie Volume 78 ; 78 ; >
    au < finished ; finished ; 2011 ; 2011 ; Fortschritte der Neurologie - Psychiatrie Volume 79 ; 79 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2012 ; 2012 ; Fortschritte der Neurologie - Psychiatrie Volume 80 ; 80 ; reingest2.clockss.org:8085 >
@@ -1775,7 +1775,7 @@
    au < doNotProcess ; exists ; 2006 ; 2006 ; Gastroenterologie up2dat Volume 2 ; 2 ; >
    au < doNotProcess ; exists ; 2007 ; 2007 ; Gastroenterologie up2dat Volume 3 ; 3 ; >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Gastroenterologie up2dat Volume 4 ; 4 ; >
-   au < testing ; exists ; 2009 ; 2009 ; Gastroenterologie up2dat Volume 5 ; 5 ; >
+   au < ready ; exists ; 2009 ; 2009 ; Gastroenterologie up2dat Volume 5 ; 5 ; >
    au < finished ; finished ; 2010 ; 2010 ; Gastroenterologie up2dat Volume 6 ; 6 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2011 ; 2011 ; Gastroenterologie up2dat Volume 7 ; 7 ; >
    au < finished ; finished ; 2012 ; 2012 ; Gastroenterologie up2dat Volume 8 ; 8 ; >
@@ -1879,7 +1879,7 @@
    au < doNotProcess ; exists ; 2006 ; 2006 ; Gesundheitsökonomie & Qualitätsmanagement Volume 11 ; 11 ; >
    au < doNotProcess ; exists ; 2007 ; 2007 ; Gesundheitsökonomie & Qualitätsmanagement Volume 12 ; 12 ; >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Gesundheitsökonomie & Qualitätsmanagement Volume 13 ; 13 ; >
-   au < testing ; exists ; 2009 ; 2009 ; Gesundheitsökonomie & Qualitätsmanagement Volume 14 ; 14 ; >
+   au < ready ; exists ; 2009 ; 2009 ; Gesundheitsökonomie & Qualitätsmanagement Volume 14 ; 14 ; >
    au < finished ; finished ; 2010 ; 2010 ; Gesundheitsökonomie & Qualitätsmanagement Volume 15 ; 15 ; >
    au < finished ; finished ; 2011 ; 2011 ; Gesundheitsökonomie & Qualitätsmanagement Volume 16 ; 16 ; >
    au < finished ; finished ; 2012 ; 2012 ; Gesundheitsökonomie & Qualitätsmanagement Volume 17 ; 17 ; reingest2.clockss.org:8085 >
@@ -1968,7 +1968,7 @@
    au < doNotProcess ; exists ; 2006 ; 2006 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 38 ; 38 ; >
    au < doNotProcess ; exists ; 2007 ; 2007 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 39 ; 39 ; >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 40 ; 40 ; >
-   au < testing ; exists ; 2009 ; 2009 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 41 ; 41 ; >
+   au < ready ; exists ; 2009 ; 2009 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 41 ; 41 ; >
    au < finished ; finished ; 2010 ; 2010 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 42 ; 42 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2011 ; 2011 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 43 ; 43 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2012 ; 2012 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 44 ; 44 ; reingest2.clockss.org:8085 >
