@@ -18,7 +18,7 @@
   <entry>
     <string>plugin_parent_version</string>
     <string>22</string>
-  </entry>      
+  </entry>
   <entry>
     <string>plugin_name</string>
     <string>Institution of Engineering and Technology Journals Plugin (CLOCKSS)</string>
@@ -36,7 +36,7 @@
     <list>
     <!-- Parent article pattern: /content/journal/[journal_id]/[article_id] IET article pattern /content/journals/[article_id]  -->
       <string>2,"^%sjs/sgm/issue_toc_headings_ahah.js$", base_url</string>
-      <string>1,"^https?://(%s|cdn[.]mathjax[.]org|code[.]jquery[.]com)/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)(\?([0-9]+|config=|v=).*)?$", url_host(base_url)</string>
+      <string>1,"^https?://(%s|cdn[.]mathjax[.]org|code[.]jquery[.]com)/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff.?)(\?([0-9]+|config=|v=).*)?$", url_host(base_url)</string>
       <!-- Crawl rule out bad citation files (?fmt=xxxx) in favor of /cite/xxxx -->
       <string>2,"^%scontent/(journals?|suppddata)/[0-9]{2}\.[0-9]{4}/%s[^?]+\?fmt=[^/&amp;]+$", base_url, journal_id</string>
       <!-- Do not collect issue level citations -->
@@ -72,13 +72,13 @@
     <list>
       <string>500=org.lockss.plugin.pub2web.Pub2WebHttpResponseHandler</string>
     </list>
-  </entry>  
+  </entry>
   <entry>
-    <string>text/html_crawl_filter_factory</string> 
+    <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.pub2web.iet.IetHtmlCrawlFilterFactory</string>
   </entry>
   <entry>
-    <string>text/html_filter_factory</string> 
+    <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.pub2web.iet.IetHtmlHashFilterFactory</string>
   </entry>
   <entry>
