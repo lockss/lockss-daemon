@@ -96,12 +96,9 @@ public abstract class PdfBoxTokenStream implements PdfTokenStream {
       pdfStreamParser = new PDFStreamParser(pdStream.getStream());
       Iterator<Object> iter = pdfStreamParser.getTokenIterator();
       while (iter.hasNext()) {
-        if (tokens.size() > 0 && tokens.size() % 1000000 == 0) {
-          System.out.println(tokens.size()); // FIXME
-        }
-        if (tokens.size() == 100000) {
+        if (tokens.size() == 100_000) {
           // List becoming too large for main memory
-          List<PdfToken> newList = new FileBackedList<PdfToken>(tokens, "/home/thibwork/deleteme1.bin"); // FIXME
+          List<PdfToken> newList = new FileBackedList<PdfToken>();
           tokens.clear();
           ((ArrayList<PdfToken>)tokens).trimToSize();
           tokens = newList;

@@ -43,14 +43,44 @@ import org.apache.pdfbox.cos.*;
 import org.apache.pdfbox.util.*;
 import org.lockss.pdf.*;
 
+/**
+ * <p>
+ * A new non-wrapping, {@link Serializable} implementation of the
+ * {@link PdfToken} family, based on PDFBox 1.8.16.
+ * </p>
+ * 
+ * @since 1.75
+ * @see PdfToken
+ * @see PdfTokenFactory
+ */
 public class PdfBoxTokens {
 
+  /**
+   * <p>
+   * A functional interface for a conversion (which in Java 8 should simply be a
+   * lambda).
+   * </p>
+   *
+   * @param <T>
+   *          The type into which this converter converts.
+   * @since 1.75
+   */
   public interface Converter<T> {
     
     T convert(Object obj);
     
   }
   
+  /**
+   * <p>
+   * A parent class for PDF tokens, that returns {@code false} on every query
+   * and throws on every getter {@link UnsupportedOperationException}, and also
+   * defines a conversion back to PDFBox objects.
+   * </p>
+   *
+   * @since 1.75
+   * @see #toPdfBoxObject()
+   */
   public static abstract class Tok implements PdfToken, Serializable {
 
     @Override
@@ -147,11 +177,28 @@ public class PdfBoxTokens {
     public boolean isString() {
       return false;
     }
-    
+
+    /**
+     * <p>
+     * Turn this object back into a PDFBox object ({@link COSBase} or
+     * {@link PDFOperator}).
+     * </p>
+     * 
+     * @return A PDFBox object.
+     * @since 1.75
+     */
     public abstract Object toPdfBoxObject();
     
   }
   
+  /**
+   * <p>
+   * A PDF array.
+   * </p>
+   * 
+   * @since 1.75
+   * @see COSArray
+   */
   public static class Arr extends Tok {
     
     private List<PdfToken> value;
@@ -198,6 +245,14 @@ public class PdfBoxTokens {
     
   }
   
+  /**
+   * <p>
+   * A PDF boolean.
+   * </p>
+   * 
+   * @since 1.75
+   * @see COSBoolean
+   */
   public static class Boo extends Tok {
     
     private boolean value;
@@ -239,6 +294,14 @@ public class PdfBoxTokens {
     
   }
   
+  /**
+   * <p>
+   * A PDF dictionary.
+   * </p>
+   * 
+   * @since 1.75
+   * @see COSDictionary
+   */
   public static class Dic extends Tok {
     
     private Map<String, PdfToken> value;
@@ -283,6 +346,14 @@ public class PdfBoxTokens {
     
   }
   
+  /**
+   * <p>
+   * A PDF float.
+   * </p>
+   * 
+   * @since 1.75
+   * @see COSFloat
+   */
   public static class Flo extends Tok {
     
     private float value;
@@ -316,6 +387,14 @@ public class PdfBoxTokens {
     
   }
   
+  /**
+   * <p>
+   * A PDF integer.
+   * </p>
+   * 
+   * @since 1.75
+   * @see COSInteger
+   */
   public static class Int extends Tok {
     
     private long value;
@@ -364,6 +443,14 @@ public class PdfBoxTokens {
     
   }
   
+  /**
+   * <p>
+   * A PDF name.
+   * </p>
+   * 
+   * @since 1.75
+   * @see COSName
+   */
   public static class Nam extends Tok {
     
     private String value;
@@ -431,6 +518,14 @@ public class PdfBoxTokens {
     
   }
   
+  /**
+   * <p>
+   * A PDF null.
+   * </p>
+   * 
+   * @since 1.75
+   * @see COSNull
+   */
   public static class Nul extends Tok {
     
     private Nul() {
@@ -459,6 +554,14 @@ public class PdfBoxTokens {
 
   }
   
+  /**
+   * <p>
+   * A PDF object token.
+   * </p>
+   * 
+   * @since 1.75
+   * @see COSObject
+   */
   public static class Obj extends Tok {
     
     private PdfToken value;
@@ -518,6 +621,14 @@ public class PdfBoxTokens {
     
   }
   
+  /**
+   * <p>
+   * A PDF operator.
+   * </p>
+   * 
+   * @since 1.75
+   * @see PDFOperator
+   */
   public static class Op extends Tok {
     
     private String value;
@@ -588,6 +699,14 @@ public class PdfBoxTokens {
     
   }
   
+  /**
+   * <p>
+   * A PDF string.
+   * </p>
+   * 
+   * @since 1.75
+   * @see COSString
+   */
   public static class Str extends Tok {
     
     private String value;
@@ -621,6 +740,14 @@ public class PdfBoxTokens {
     
   }
   
+  /**
+   * <p>
+   * A PDF token factory based on {@link Tok}.
+   * </p>
+   * 
+   * @since 1.75
+   * @see Tok
+   */
   public static class Factory implements PdfTokenFactory {
 
     private Factory() {
@@ -691,12 +818,28 @@ public class PdfBoxTokens {
     
     private static final Factory instance = new Factory();
 
+    /**
+     * <p>
+     * Gets an instance of this class.
+     * </p>
+     * 
+     * @return An instance of this class.
+     * @since 1.75
+     * @see #instance
+     */
     public static Factory getInstance() {
       return instance;
     }
     
   }
-    
+
+  /**
+   * <p>
+   * Map of {@link PdfToken} converters.
+   * </p>
+   * 
+   * @since 1.75
+   */
   private static final Map<Class<?>, Converter<PdfToken>> convertToPdfToken;
   
   static {
@@ -763,7 +906,16 @@ public class PdfBoxTokens {
     });
   }
   
-  /* not unlimited! */
+  /**
+   * <p>
+   * Convenience method to convert a list with {@link #convertOne(Object)}.
+   * </p>
+   * 
+   * @param pdfBoxObjects
+   *          A list of PDFBox objects ({@link CODBase} or {@link PDFOperator}).
+   * @return A list of {@link Tok} instances.
+   * @since 1.75
+   */
   public static List<PdfToken> convertList(List<Object> pdfBoxObjects) {
     List<PdfToken> ret = new ArrayList<PdfToken>(pdfBoxObjects.size());
     for (Object pdfBoxObject : pdfBoxObjects) {
@@ -772,6 +924,21 @@ public class PdfBoxTokens {
     return ret;
   }
   
+  /**
+   * <p>
+   * Converts one PDFBox object ({@link CODBase} or {@link PDFOperator}) to a
+   * {@link Tok} instance.
+   * </p>
+   * 
+   * @param pdfBoxObject
+   *          A PDFBox instance.
+   * @return A {@link Tok} instance.
+   * @throws IllegalStateException
+   *           If the given object is not of a recognized type. In particular,
+   *           {@link COSStream} is not supported.
+   * @since 1.75
+   * @see #convertToPdfToken
+   */
   public static PdfToken convertOne(Object pdfBoxObject) {
     if (pdfBoxObject == null) {
       return Nul.getInstance();
@@ -783,11 +950,30 @@ public class PdfBoxTokens {
     return converter.convert(pdfBoxObject);
   }
 
+  /**
+   * <p>
+   * Convenience call to {@link Factory#getInstance()}.
+   * </p>
+   * 
+   * @return A {@link Factory} instance.
+   * @since 1.75
+   */
   public static Factory getFactory() {
     return Factory.getInstance();
   }
   
-  /* not unlimited! */
+  /**
+   * <p>
+   * Convenience method to unconvert a list with
+   * {@link #unconvertOne(PdfToken)}.
+   * </p>
+   * 
+   * @param pdfTokens
+   *          A list of {@link PdfToken} instances that are really {@link Tok}
+   *          instances.
+   * @return A list of PDFBox objects ({@link CODBase} or {@link PDFOperator}).
+   * @since 1.75
+   */
   public static List<Object> unconvertList(List<PdfToken> pdfTokens) {
     List<Object> ret = new ArrayList<Object>(pdfTokens.size());
     for (PdfToken pdfToken : pdfTokens) {
@@ -796,28 +982,19 @@ public class PdfBoxTokens {
     return ret;
   }
 
+  /**
+   * <p>
+   * Converts a {@link Tok} instance back to a PDFBox object ({@link CODBase} or
+   * {@link PDFOperator}).
+   * </p>
+   * 
+   * @param pdfToken
+   *          A {@link PdfToken} instance that is really a {@link Tok} instance.
+   * @return A PDFBox object ({@link CODBase} or {@link PDFOperator}).
+   * @since 1.75
+   */
   public static Object unconvertOne(PdfToken pdfToken) {
     return ((Tok)pdfToken).toPdfBoxObject();
   }
 
-//  public static void main(String[] args) throws Exception {
-//    COSDictionary trailer = new PdfBoxDocumentFactory().makeDocument(new FileInputStream("/tmp/btw336.pdf")).pdDocument.getDocument().getTrailer();
-//    for (Map.Entry<COSName, COSBase> ent : trailer.entrySet()) {
-//      COSName key = ent.getKey();
-//      COSBase val = ent.getValue();
-//      System.out.format("key=%s type=%s value=%s\n", key.getName(), val.getClass().getCanonicalName(), val.toString());
-//    }
-//  }
-  
-  public static void main(String[] args) throws Exception {
-    PdfBoxDocument d = new PdfBoxDocumentFactory().makeDocument(new FileInputStream("/tmp/btw336.pdf"));
-    PdfUtil.normalizeTrailerId(d);
-    COSDictionary trailer = d.pdDocument.getDocument().getTrailer();
-    for (Map.Entry<COSName, COSBase> ent : trailer.entrySet()) {
-      COSName key = ent.getKey();
-      COSBase val = ent.getValue();
-      System.out.format("key=%s type=%s value=%s\n", key.getName(), val.getClass().getCanonicalName(), val.toString());
-    }
-  }
-  
 }

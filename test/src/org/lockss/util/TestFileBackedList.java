@@ -1,90 +1,115 @@
+/*
+
+Copyright (c) 2000-2018, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+*/
+
 package org.lockss.util;
 
-import java.io.*;
 import java.util.*;
 
 import org.lockss.test.LockssTestCase;
 
+/**
+ * <p>
+ * Unit tests for the {@link FileBackedList} class.
+ * </p>
+ * 
+ * @since 1.75
+ */
 public class TestFileBackedList extends LockssTestCase {
 
-  protected static final int SIZE = 1_000_000;
-  
-  protected File file;
-  
-  @Override
-  public void setUp() throws Exception {
-    super.setUp();
-    this.file = FileBackedList.createTempFile();
-  }
-
-  @Override
-  public void tearDown() throws Exception {
-    super.tearDown();
-    file.delete();
-  }
-  
   public void testUse() throws Exception {
-    int size = SIZE;
-    FileBackedList<Object> list = new FileBackedList<Object>(giantListIterator(size), file);
-    assertEquals(size, list.size());
-    // Forward traversal
-    for (int i = 0 ; i < size ; ++i) {
-      assertEquals(giantListGet(i), list.get(i));
+    try (FileBackedList<Object> list = new FileBackedList<Object>(giantListIterator(SIZE))) {
+      assertEquals(SIZE, list.size());
+      // Forward traversal
+      for (int i = 0 ; i < SIZE ; ++i) {
+        assertEquals(giantListGet(i), list.get(i));
+      }
+      // Backward traversal
+      for (int i = SIZE - 1 ; i >= 0 ; --i) {
+        assertEquals(giantListGet(i), list.get(i));
+      }
+      // Forward Iterator traversal
+      Iterator<Object> iterator = list.iterator();
+      for (int i = 0 ; i < SIZE ; ++i) {
+        assertTrue(iterator.hasNext());
+        assertEquals(giantListGet(i), iterator.next());
+      }
+      // Backward ListIterator traversal
+      ListIterator<Object> listIterator = list.listIterator(list.size());
+      for (int i = SIZE - 1 ; i >= 0 ; --i) {
+        assertTrue(listIterator.hasPrevious());
+        assertEquals(giantListGet(i), listIterator.previous());
+      }
+      // Negate all Integers
+      for (int i = 0 ; i < SIZE ; i += 6) {
+        int num = i / 6;
+        assertEquals(num, list.set(i, -((Integer)giantListGet(i)).intValue()));
+      }
+      for (int i = 0 ; i < SIZE ; ++i) {
+        assertEquals((i % 6 == 0) ? -((Integer)giantListGet(i)).intValue() : giantListGet(i), list.get(i));
+      }
+      // Add an element
+      list.add(0, "hello");
+      assertEquals(SIZE + 1, list.size());
+      assertEquals("hello", list.get(0));
+      for (int i = 0 ; i < SIZE ; ++i) {
+        assertEquals((i % 6 == 0) ? -((Integer)giantListGet(i)).intValue() : giantListGet(i), list.get(i + 1));
+      }
+      // Remove an element
+      list.remove(0);
+      assertEquals(SIZE, list.size());
+      for (int i = 0 ; i < SIZE ; ++i) {
+        assertEquals((i % 6 == 0) ? -((Integer)giantListGet(i)).intValue() : giantListGet(i), list.get(i));
+      }
+      // Sublist
+      List<Object> sublist = list.subList(6, 12);
+      for (int i = 0 ; i < sublist.size() ; ++i) {
+        assertEquals(list.get(i + 6), sublist.get(i));
+      }
+      sublist.clear();
+      assertEquals(SIZE - 6, list.size());
+      for (int i = 0 ; i < 6 ; ++i) {
+        assertEquals((i % 6 == 0) ? -((Integer)giantListGet(i)).intValue() : giantListGet(i), list.get(i));
+      }
+      for (int i = 6 ; i < SIZE - 6 ; ++i) {
+        assertEquals((i % 6 == 0) ? -((Integer)giantListGet(i + 6)).intValue() : giantListGet(i + 6), list.get(i));
+      }
+      // Other operations
+      assertTrue(list.contains(new Float(2.1234f)));
+      assertEquals(7, list.indexOf(new Float(2.1234f)));
     }
-    // Backward traversal
-    for (int i = size - 1 ; i >= 0 ; --i) {
-      assertEquals(giantListGet(i), list.get(i));
-    }
-    // Forward Iterator traversal
-    Iterator<Object> iterator = list.iterator();
-    for (int i = 0 ; i < size ; ++i) {
-      assertTrue(iterator.hasNext());
-      assertEquals(giantListGet(i), iterator.next());
-    }
-    // Backward ListIterator traversal
-    ListIterator<Object> listIterator = list.listIterator(list.size());
-    for (int i = size - 1 ; i >= 0 ; --i) {
-      assertTrue(listIterator.hasPrevious());
-      assertEquals(giantListGet(i), listIterator.previous());
-    }
-    // Negate all Integers
-    for (int i = 0 ; i < size ; i += 6) {
-      int num = i / 6;
-      assertEquals(num, list.set(i, -((Integer)giantListGet(i)).intValue()));
-    }
-    for (int i = 0 ; i < size ; ++i) {
-      assertEquals((i % 6 == 0) ? -((Integer)giantListGet(i)).intValue() : giantListGet(i), list.get(i));
-    }
-    // Add an element
-    list.add(0, "hello");
-    assertEquals(size + 1, list.size());
-    assertEquals("hello", list.get(0));
-    for (int i = 0 ; i < size ; ++i) {
-      assertEquals((i % 6 == 0) ? -((Integer)giantListGet(i)).intValue() : giantListGet(i), list.get(i + 1));
-    }
-    // Remove an element
-    list.remove(0);
-    assertEquals(size, list.size());
-    for (int i = 0 ; i < size ; ++i) {
-      assertEquals((i % 6 == 0) ? -((Integer)giantListGet(i)).intValue() : giantListGet(i), list.get(i));
-    }
-    // Sublist
-    List<Object> sublist = list.subList(6, 12);
-    for (int i = 0 ; i < sublist.size() ; ++i) {
-      assertEquals(list.get(i + 6), sublist.get(i));
-    }
-    sublist.clear();
-    assertEquals(size - 6, list.size());
-    for (int i = 0 ; i < 6 ; ++i) {
-      assertEquals((i % 6 == 0) ? -((Integer)giantListGet(i)).intValue() : giantListGet(i), list.get(i));
-    }
-    for (int i = 6 ; i < size - 6 ; ++i) {
-      assertEquals((i % 6 == 0) ? -((Integer)giantListGet(i + 6)).intValue() : giantListGet(i + 6), list.get(i));
-    }
-    // Other operations
-    assertTrue(list.contains(new Float(2.1234f)));
-    assertEquals(7, list.indexOf(new Float(2.1234f)));
   }
+  
+  protected static final int SIZE = 1_000_000;
   
   public static Object giantListGet(int listIndex) {
     int num = listIndex / 6;

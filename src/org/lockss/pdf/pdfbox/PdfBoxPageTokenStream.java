@@ -84,7 +84,7 @@ public class PdfBoxPageTokenStream extends PdfBoxTokenStream {
     try {
       PDStream newPdStream = makeNewPdStream();
       ContentStreamWriter tokenWriter = new ContentStreamWriter(newPdStream.createOutputStream());
-      for (int i = 0 ; i < newTokens.size() ; i += 10000) {
+      for (int i = 0 ; i < newTokens.size() ; i += 10_000) {
         int len = newTokens.size() - i > 10_000 ? 10_000 : newTokens.size() - i;
         tokenWriter.writeTokens(PdfBoxTokens.unconvertList(newTokens.subList(i, i + len)));
       }

@@ -52,13 +52,13 @@ import org.apache.commons.io.output.ByteArrayOutputStream;
  * <p>
  * This class implements {@link AutoCloseable} so it can be used in a
  * try-with-resources block. Although {@link #close()} will be called by
- * {@link #finalize()} when the instance is garbage-collected, you should
- * call {@link #close()} appropriately, whether with try-with-resources,
- * try/finally, or some other means.
+ * {@link #finalize()} when the instance is garbage-collected, you should call
+ * {@link #close()} appropriately, whether with try-with-resources, try/finally,
+ * or some other means.
  * </p>
  * <p>
- * The underlying implementation uses a {@link CountingRandomAccessFile}
- * and views it as a succession of chunks, that are accessed via
+ * The underlying implementation uses a {@link CountingRandomAccessFile} and
+ * views it as a succession of chunks, that are accessed via
  * {@link MappedByteBuffer} instances. The {@link MappedByteBuffer} for each
  * chunk is opened with a length of exactly {@link #CHUNK} bytes even though
  * each chunk is at most {@link #CHUNK} bytes, but this class is constructed in
@@ -76,41 +76,15 @@ import org.apache.commons.io.output.ByteArrayOutputStream;
  * to grow excessively in main memory.
  * </p>
  * 
+ * @param <T>
+ *          The type of element held by this list. <b>Currently this needs to be
+ *          a {@link Serializable} type.
  * @since 1.75
  * @see Chunk
  */
 public class FileBackedList<E>
     extends AbstractList<E>
     implements AutoCloseable {
-
-  /**
-   * <p>
-   * The length of a chunk's {@link MappedByteBuffer}.
-   * </p>
-   * 
-   * @since 1.75
-   */
-  protected static final int CHUNK = 1024 * 1024 * 1024; // 1GB
-
-  /**
-   * <p>
-   * The maximum number of chunks that can be kept live in the cache.
-   * </p>
-   * 
-   * @since 1.75
-   * @see #buffers
-   */
-  protected static final int CHUNKS = 3;
-
-  /**
-   * <p>
-   * The number of list items beyond which the internal list of {@code long}
-   * offsets is streamed to disk using a {@link FileBackedLongList}.
-   * </p>
-   * 
-   * @since 1.75
-   */
-  protected static final int OFFSETS = 1_000_000;
 
   /**
    * <p>
@@ -159,7 +133,7 @@ public class FileBackedList<E>
     }
     
   }
-  
+
   /**
    * <p>
    * The {@link File} backing this list.
@@ -168,7 +142,7 @@ public class FileBackedList<E>
    * @since 1.75
    */
   protected File file;
-  
+
   /**
    * <p>
    * Whether the file backing this list must be deleted when the list is
@@ -181,7 +155,7 @@ public class FileBackedList<E>
    * @see #file
    */
   protected boolean deleteFile;
-  
+
   /**
    * <p>
    * The {@link CountingRandomAccessFile} backing this list.
@@ -216,7 +190,7 @@ public class FileBackedList<E>
    * @since 1.75
    */
   protected LongList offsets;
-
+  
   /**
    * <p>
    * An {@link ArrayLongList} used if the offset list is deemed small enough to
@@ -238,7 +212,7 @@ public class FileBackedList<E>
    * @see #offsets
    */
   protected FileBackedLongList fileBackedLongList;
-
+  
   /**
    * <p>
    * A list of allocated chunks.
@@ -259,83 +233,257 @@ public class FileBackedList<E>
    */
   protected LRUMap<Integer, MappedByteBuffer> buffers;
   
-  public FileBackedList() throws IOError {
+  /**
+   * <p>
+   * Makes a new list, initially empty, backed by a freshly created temporary
+   * file.
+   * </p>
+   * 
+   * @throws FileNotFoundException
+   *           If some error occurs while opening or creating
+   *           the temporary file.
+   * @throws IOException
+   *           If the file once opened cannot be truncated to zero bytes.
+   * @since 1.75
+   * @see #FileBackedList(Iterator, File)
+   * @see #createTempFile()
+   */
+  public FileBackedList()
+      throws FileNotFoundException, IOException {
     this(Collections.<E>emptyIterator(),
          createTempFile());
     this.deleteFile = true;
   }
 
-  public FileBackedList(String filePath) throws IOError {
-    this(Collections.<E>emptyIterator(),
-         new File(filePath));
-  }
-  
-  public FileBackedList(File file) throws IOError {
-    this(Collections.<E>emptyIterator(),
-         file);
-  }
-  
-  public FileBackedList(Iterator<E> iterator) throws IOError {
-    this(iterator,
-         createTempFile());
-    this.deleteFile = true;
-  }
-  
-  public FileBackedList(Collection<E> coll) throws IOError {
+  /**
+   * <p>
+   * Makes a new list from the given collection, backed by a freshly created
+   * temporary file.
+   * </p>
+   * 
+   * @param coll
+   *          A collection.
+   * @throws FileNotFoundException
+   *           If some error occurs while opening or creating
+   *           the temporary file.
+   * @throws IOException
+   *           If the file once opened cannot be truncated to zero bytes.
+   * @since 1.75
+   * @see #FileBackedList(Iterator, File)
+   * @see #createTempFile()
+   */
+  public FileBackedList(Collection<E> coll)
+      throws FileNotFoundException, IOException {
     this(coll.iterator(),
          createTempFile());
     this.deleteFile = true;
   }
 
-  public FileBackedList(Iterator<E> iterator,
-                        String filePath)
-      throws IOError {
-    this(iterator,
-         new File(filePath));
-  }
-  
-  public FileBackedList(Collection<E> coll,
-                        String filePath)
-      throws IOError {
-    this(coll.iterator(),
-         new File(filePath));
-  }
-  
+  /**
+   * <p>
+   * Makes a new list from the given collection, backed by the given file.
+   * </p>
+   * 
+   * @param coll
+   *          A collection.
+   * @param file
+   *          The file backing the list. <b>If the file already exists, the file
+   *          will be overwritten with an empty file.</b>
+   * @throws FileNotFoundException
+   *           If the given file object does not denote an existing, writable
+   *           regular file and a new regular file of that name cannot be
+   *           created, or if some other error occurs while opening or creating
+   *           the file.
+   * @throws IOException
+   *           If the given file once opened cannot be truncated to zero bytes,
+   *           or if an error occurs during memory mapping of the file.
+   * @since 1.75
+   * @see #FileBackedList(Iterator, File)
+   */
   public FileBackedList(Collection<E> coll,
                         File file) 
-      throws IOError {
+      throws FileNotFoundException, IOException {
     this(coll.iterator(),
          file);
   }
   
+  /**
+   * <p>
+   * Makes a new list from the given collection, backed by the file with the
+   * given name.
+   * </p>
+   * 
+   * @param coll
+   *          A collection.
+   * @param name
+   *          The name of the file backing the list. <b>If the file already
+   *          exists, the file will be overwritten with an empty file.</b>
+   * @throws FileNotFoundException
+   *           If the given file object does not denote an existing, writable
+   *           regular file and a new regular file of that name cannot be
+   *           created, or if some other error occurs while opening or creating
+   *           the file.
+   * @throws IOException
+   *           If the given file once opened cannot be truncated to zero bytes,
+   *           or if an error occurs during memory mapping of the file.
+   * @since 1.75
+   * @see #FileBackedList(Iterator, File)
+   */
+  public FileBackedList(Collection<E> coll,
+                        String name)
+      throws FileNotFoundException, IOException {
+    this(coll.iterator(),
+         new File(name));
+  }
+
+  /**
+   * <p>
+   * Makes a new list, initially empty, backed by the given file.
+   * </p>
+   * 
+   * @param file
+   *          The file backing the list. <b>If the file already exists, the file
+   *          will be overwritten with an empty file.</b>
+   * @throws FileNotFoundException
+   *           If the given file object does not denote an existing, writable
+   *           regular file and a new regular file of that name cannot be
+   *           created, or if some other error occurs while opening or creating
+   *           the file.
+   * @throws IOException
+   *           If the given file once opened cannot be truncated to zero bytes,
+   *           or if an error occurs during memory mapping of the file.
+   * @since 1.75
+   * @see #FileBackedList(Iterator, File)
+   */
+  public FileBackedList(File file)
+      throws FileNotFoundException, IOException {
+    this(Collections.<E>emptyIterator(),
+         file);
+  }
+  
+  /**
+   * <p>
+   * Makes a new list from the given iterator, backed by a freshly created
+   * temporary file.
+   * </p>
+   * 
+   * @param iterator
+   *          An iterator.
+   * @throws FileNotFoundException
+   *           If some error occurs while opening or creating
+   *           the temporary file.
+   * @throws IOException
+   *           If the file once opened cannot be truncated to zero bytes.
+   * @since 1.75
+   * @see #FileBackedList(Iterator, File)
+   * @see #createTempFile()
+   */
+  public FileBackedList(Iterator<E> iterator)
+      throws FileNotFoundException, IOException {
+    this(iterator,
+         createTempFile());
+    this.deleteFile = true;
+  }
+  
+  /**
+   * <p>
+   * Makes a new list from the given iterator, backed by the given file.
+   * </p>
+   * 
+   * @param iterator
+   *          An iterator.
+   * @param file
+   *          The file backing the list. <b>If the file already exists, the file
+   *          will be overwritten with an empty file.</b>
+   * @throws FileNotFoundException
+   *           If the given file object does not denote an existing, writable
+   *           regular file and a new regular file of that name cannot be
+   *           created, or if some other error occurs while opening or creating
+   *           the file.
+   * @throws IOException
+   *           If the given file once opened cannot be truncated to zero bytes,
+   *           or if an error occurs during memory mapping of the file.
+   * @since 1.75
+   * @see CountingRandomAccessFile#CountingRandomAccessFile(File, String, boolean)
+   * @see FileChannel#map(MapMode, long, long)
+   */
   public FileBackedList(Iterator<E> iterator,
-                        File file) 
-      throws IOError {
-    try {
-      this.file = file;
-      this.deleteFile = false; // reset by some constructors
-      this.craf = new CountingRandomAccessFile(file, CountingRandomAccessFile.MODE_READ_WRITE, false);
-      this.chan = craf.getChannel();
-      this.arrayLongList = new ArrayLongList() {
-        @Override
-        public void clear() {
-          // Slightly less horrible than what Commons Primitives 1.0 does
-          for (int i = size() - 1 ; i >= 0 ; --i) {
-            removeElementAt(i);
-          }
+                        File file)
+      throws FileNotFoundException, IOException {
+    this.file = file;
+    this.deleteFile = false; // reset by some constructors
+    this.craf = new CountingRandomAccessFile(file, CountingRandomAccessFile.MODE_READ_WRITE, false);
+    this.chan = craf.getChannel();
+    this.arrayLongList = new ArrayLongList() {
+      @Override
+      public void clear() {
+        // Slightly less horrible than what Commons Primitives 1.0 does
+        for (int i = size() - 1 ; i >= 0 ; --i) {
+          removeElementAt(i);
         }
-      };
-      this.fileBackedLongList = null;
-      this.offsets = arrayLongList;
-      this.chunks = new ArrayList<Chunk>();
-      chunks.add(new Chunk(0L, 0L));
-      this.buffers = new LRUMap<Integer, MappedByteBuffer>(CHUNKS);
-      buffers.put(0, chan.map(MapMode.READ_WRITE, 0L, CHUNK));
-      populate(iterator);
-    }
-    catch (IOException exc) {
-      throw new IOError(exc);
-    }
+      }
+    };
+    this.fileBackedLongList = null;
+    this.offsets = arrayLongList;
+    this.chunks = new ArrayList<Chunk>();
+    chunks.add(new Chunk(0L, 0L));
+    this.buffers = new LRUMap<Integer, MappedByteBuffer>(CHUNKS);
+    buffers.put(0, chan.map(MapMode.READ_WRITE, 0L, CHUNK));
+    populate(iterator);
+  }
+  
+  /**
+   * <p>
+   * Makes a new list from the given iterator, backed by the file with the
+   * given name.
+   * </p>
+   * 
+   * @param iterator
+   *          An iterator.
+   * @param name
+   *          The name of the file backing the list. <b>If the file already
+   *          exists, the file will be overwritten with an empty file.</b>
+   * @throws FileNotFoundException
+   *           If the given file object does not denote an existing, writable
+   *           regular file and a new regular file of that name cannot be
+   *           created, or if some other error occurs while opening or creating
+   *           the file.
+   * @throws IOException
+   *           If the given file once opened cannot be truncated to zero bytes,
+   *           or if an error occurs during memory mapping of the file.
+   * @since 1.75
+   * @see #FileBackedList(Iterator, File)
+   */
+  public FileBackedList(Iterator<E> iterator,
+                        String name)
+      throws FileNotFoundException, IOException {
+    this(iterator,
+         new File(name));
+  }
+
+  /**
+   * <p>
+   * Makes a new list, initially empty, backed by the file with the given name.
+   * </p>
+   * 
+   * @param name
+   *          The name of the file backing the list. <b>If the file already
+   *          exists, the file will be overwritten with an empty file.</b>
+   * @throws FileNotFoundException
+   *           If the given file object does not denote an existing, writable
+   *           regular file and a new regular file of that name cannot be
+   *           created, or if some other error occurs while opening or creating
+   *           the file.
+   * @throws IOException
+   *           If the given file once opened cannot be truncated to zero bytes,
+   *           or if an error occurs during memory mapping of the file.
+   * @since 1.75
+   * @see #FileBackedList(Iterator, File)
+   */
+  public FileBackedList(String name)
+      throws FileNotFoundException, IOException {
+    this(Collections.<E>emptyIterator(),
+         new File(name));
   }
   
   @Override
@@ -347,7 +495,7 @@ public class FileBackedList<E>
       offsets.add(index, append(element));
       if (size() > OFFSETS && fileBackedLongList == null) {
         // Starting to get too large for main memory; go to disk also
-        fileBackedLongList = new FileBackedLongList(file.getPath() + ".longs");
+        fileBackedLongList = new FileBackedLongList(getLongsFile());
         for (LongIterator iter = arrayLongList.iterator() ; iter.hasNext() ; ) {
           fileBackedLongList.add(iter.next());
         }
@@ -390,7 +538,7 @@ public class FileBackedList<E>
     if (fileBackedLongList != null) {
       fileBackedLongList.close();
       fileBackedLongList = null;
-      new File(file.getPath() + ".longs").delete(); // FIXME
+      getLongsFile().delete();
     }
     offsets = null;
     if (deleteFile) {
@@ -442,7 +590,20 @@ public class FileBackedList<E>
   public int size() {
     return offsets.size();
   }
-
+  
+  /**
+   * <p>
+   * Appends a new element to the end of the list and returns the offset where
+   * the appended bytes begin.
+   * </p>
+   * 
+   * @param element
+   *          An element.
+   * @return The offset where the appended element begins.
+   * @throws IOException
+   *           If an error occurs in memory mapping.
+   * @since 1.75
+   */
   protected long append(E element) throws IOException {
     byte[] bytes = toBytes(element);
     // Allocate new chunk if necessary
@@ -463,13 +624,26 @@ public class FileBackedList<E>
     lastChunk.endOffset += bytes.length;
     return ret;
   }
-
+  
   @Override
   protected void finalize() throws Throwable {
     super.finalize();
     close();
   }
   
+  /**
+   * <p>
+   * Returns the given chunk's {@link MappedByteBuffer}, possibly memory mapping
+   * it and evicting a lesser-used one.
+   * </p>
+   * 
+   * @param chunkNum
+   *          A chunk number.
+   * @return A ready {@link MappedByteBuffer} instance.
+   * @throws IOException
+   *           If an error occurs while allocating a memory-mapped buffer.
+   * @since 1.75
+   */
   protected MappedByteBuffer getBufferByChunkNumber(int chunkNum) throws IOException {
     MappedByteBuffer ret = buffers.get(chunkNum);
     if (ret == null) {
@@ -489,8 +663,20 @@ public class FileBackedList<E>
     }
     return ret;
   }
-  
+
+  /**
+   * <p>
+   * Translates a file offset in a chunk number.
+   * </p>
+   * 
+   * @param offset
+   *          A file offset.
+   * @return A chunk number such that the offset is in the designated chunk.
+   * @since 1.75
+   * @see #chunks
+   */
   protected int getChunkNumberByOffset(long offset) {
+    // Binary search on the chunks
     int low = 0;
     int high = chunks.size() - 1;
     while (low <= high) {
@@ -508,6 +694,10 @@ public class FileBackedList<E>
     }
     return -1; // should not happen
   }
+
+  protected File getLongsFile() {
+    return new File(file.getPath() + ".longs");
+  }
   
   protected void populate(Iterator<E> iterator) throws IOException {
     while (iterator.hasNext()) {
@@ -515,23 +705,40 @@ public class FileBackedList<E>
     }
   }
   
+  /**
+   * <p>
+   * The length of a chunk's {@link MappedByteBuffer}.
+   * </p>
+   * 
+   * @since 1.75
+   */
+  protected static final int CHUNK = 1024 * 1024 * 1024; // 1GB
+  
+  /**
+   * <p>
+   * The maximum number of chunks that can be kept live in the cache.
+   * </p>
+   * 
+   * @since 1.75
+   * @see #buffers
+   */
+  protected static final int CHUNKS = 3;
+  
+  /**
+   * <p>
+   * The number of list items beyond which the internal list of {@code long}
+   * offsets is streamed to disk using a {@link FileBackedLongList}.
+   * </p>
+   * 
+   * @since 1.75
+   */
+  protected static final int OFFSETS = 1_000_000;
+  
   protected static File createTempFile() throws IOError {
     try {
       File tempFile = File.createTempFile(FileBackedList.class.getSimpleName(), ".bin");
       tempFile.deleteOnExit();
       return tempFile;
-    }
-    catch (IOException exc) {
-      throw new IOError(exc);
-    }
-  }
-  
-  protected static byte[] toBytes(Object obj) throws IOError {
-    try {
-      ByteArrayOutputStream baos = new ByteArrayOutputStream();
-      ObjectOutputStream oos = new ObjectOutputStream(baos);
-      oos.writeObject(obj);
-      return baos.toByteArray();
     }
     catch (IOException exc) {
       throw new IOError(exc);
@@ -545,6 +752,18 @@ public class FileBackedList<E>
       return ois.readObject();
     }
     catch (ClassNotFoundException | IOException exc) {
+      throw new IOError(exc);
+    }
+  }
+  
+  protected static byte[] toBytes(Object obj) throws IOError {
+    try {
+      ByteArrayOutputStream baos = new ByteArrayOutputStream();
+      ObjectOutputStream oos = new ObjectOutputStream(baos);
+      oos.writeObject(obj);
+      return baos.toByteArray();
+    }
+    catch (IOException exc) {
       throw new IOError(exc);
     }
   }
