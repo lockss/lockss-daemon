@@ -141,6 +141,10 @@ public class TestFileBackedList extends LockssTestCase {
         }
         return giantListGet(counter++);
       }
+      @Override
+      public void remove() {
+        throw new UnsupportedOperationException();
+      }
     };
   }
 
