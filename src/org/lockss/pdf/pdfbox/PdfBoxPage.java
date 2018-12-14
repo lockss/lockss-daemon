@@ -39,6 +39,7 @@ import org.apache.pdfbox.cos.*;
 import org.apache.pdfbox.pdmodel.*;
 import org.apache.pdfbox.pdmodel.graphics.xobject.*;
 import org.lockss.pdf.*;
+import org.lockss.pdf.pdfbox.PdfBoxTokens.*;
 import org.lockss.util.Logger;
 
 /**
@@ -205,7 +206,7 @@ public class PdfBoxPage implements PdfPage {
     if (annots == null) {
       return new ArrayList<PdfToken>();
     }
-    return PdfBoxTokens.getArray(annots);
+    return PdfBoxTokens.convertOne(annots).getArray();
   }
 
   @Override
@@ -225,7 +226,7 @@ public class PdfBoxPage implements PdfPage {
   
   @Override
   public void setAnnotations(List<PdfToken> annotations) {
-    pdPage.getCOSDictionary().setItem(COSName.ANNOTS, PdfBoxTokens.asCOSArray(annotations));
+    pdPage.getCOSDictionary().setItem(COSName.ANNOTS, (COSArray)Arr.of(annotations).toPdfBoxObject());
   }
 
   /**
@@ -260,7 +261,7 @@ public class PdfBoxPage implements PdfPage {
            * not copy the byte array, nor does ByteArrayInputStream
            * (http://docs.oracle.com/javase/1.5.0/docs/api/java/io/ByteArrayInputStream.html#ByteArrayInputStream%28byte[]%29).
            */
-          ret.add(new ByteArrayInputStream(PdfBoxTokens.asPDFOperator(getOperator()).getImageData()));
+          ret.add(new ByteArrayInputStream(((Op)getOperator()).getImageData()));
         }
         // 'Do'
         else if (isInvokeXObject()) {

@@ -108,7 +108,9 @@ public class MockPdfTokenFactory implements PdfTokenFactory {
   }
 
   @Override
-  public PdfToken makeObject(final PdfToken value) {
+  public PdfToken makeObject(final PdfToken value,
+                             long objectNumber,
+                             long generationNumber) {
     return new MockPdfToken() {
       @Override public PdfToken getObject() { return value; }
       @Override public boolean isObject() { return true; }

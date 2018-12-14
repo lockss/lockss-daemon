@@ -140,13 +140,22 @@ public interface PdfTokenFactory {
   
   /**
    * <p>
-   * Creates a PDF object from the given value.
+   * Creates a PDF object from the given value, object number and generation
+   * number.
    * </p>
-   * @param value A non-<code>null</code> PDF token.
+   * 
+   * @param value
+   *          A non-<code>null</code> PDF token.
+   * @param objectNumber
+   *          A PDF object number.
+   * @param generationNumber
+   *          A PDF generation number.
    * @return A PDF token.
-   * @since 1.56.3
+   * @since 1.75
    */
-  PdfToken makeObject(PdfToken value);
+  PdfToken makeObject(PdfToken value,
+                      long objectNumber,
+                      long generationNumber);
   
   /**
    * <p>

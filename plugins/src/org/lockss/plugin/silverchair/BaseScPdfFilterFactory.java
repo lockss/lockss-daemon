@@ -163,15 +163,4 @@ public class BaseScPdfFilterFactory extends ExtractingPdfFilterFactory {
     }
   }
   
-  /*public static void main(String[] args) throws Exception {
-    String[] files = new String[] {
-        "/tmp/data/oup00.pdf",
-        //"/tmp/data/oup2.pdf",
-    };
-    for (String file : files) {
-      IOUtils.copy(new BaseScPdfFilterFactory().createFilteredInputStream(null, new FileInputStream(file), null),
-          new FileOutputStream(file + ".out"));
-    }
-  }*/
-
 }
