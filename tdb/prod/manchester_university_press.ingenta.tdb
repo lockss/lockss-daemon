@@ -9,8 +9,6 @@
 
   {
     plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
 
     comment[platform] = Ingenta
@@ -26,6 +24,8 @@
         issnl = 2054-9318
       >
 
+     param[base_url] = https://www.ingentaconnect.com/
+     param[api_url] = https://api.ingentaconnect.com/
      param[journal_id] = bjrl
      param[journal_issn] = 2054-9326
 
@@ -54,21 +54,36 @@
       param[journal_id] = fs
       param[journal_issn] = 1469-0314
 
-      au < released ; 2004 ; Film Studies Volume 4 ; 4 >
-      au < released ; 2004 ; Film Studies Volume 5 ; 5 >
-      au < released ; 2005 ; Film Studies Volume 6 ; 6 >
-      au < released ; 2005 ; Film Studies Volume 7 ; 7 >
-      au < released ; 2006 ; Film Studies Volume 8 ; 8 >
-      au < released ; 2006 ; Film Studies Volume 9 ; 9 >
-      au < released ; 2007 ; Film Studies Volume 10 ; 10 >
-      au < released ; 2007 ; Film Studies Volume 11 ; 11 >
-      au < released ; 2015 ; Film Studies Volume 12 ; 12 >
-      au < released ; 2015 ; Film Studies Volume 13 ; 13 >
-      au < released ; 2016 ; Film Studies Volume 14 ; 14 >
-      au < released ; 2016 ; Film Studies Volume 15 ; 15 >
-      au < released ; 2017 ; Film Studies Volume 16 ; 16 >
-      au < notReady ; 2017 ; Film Studies Volume 17 ; 17 >
-      au < expected ; 2018 ; Film Studies Volume 18 ; 18 >
+
+     {
+       param[base_url] = http://www.ingentaconnect.com/
+       param[api_url] = http://api.ingentaconnect.com/
+
+     
+        au < released ; 2004 ; Film Studies Volume 4 ; 4 >
+        au < released ; 2004 ; Film Studies Volume 5 ; 5 >
+        au < released ; 2005 ; Film Studies Volume 6 ; 6 >
+        au < released ; 2005 ; Film Studies Volume 7 ; 7 >
+        au < released ; 2006 ; Film Studies Volume 8 ; 8 >
+        au < released ; 2006 ; Film Studies Volume 9 ; 9 >
+        au < released ; 2007 ; Film Studies Volume 10 ; 10 >
+        au < released ; 2007 ; Film Studies Volume 11 ; 11 >
+        au < released ; 2015 ; Film Studies Volume 12 ; 12 >
+        au < released ; 2015 ; Film Studies Volume 13 ; 13 >
+        au < released ; 2016 ; Film Studies Volume 14 ; 14 >
+        au < released ; 2016 ; Film Studies Volume 15 ; 15 >
+        au < released ; 2017 ; Film Studies Volume 16 ; 16 >
+      
+      }
+      {
+       param[base_url] = https://www.ingentaconnect.com/
+       param[api_url] = https://api.ingentaconnect.com/
+      
+        au < notReady ; 2017 ; Film Studies Volume 17 ; 17 >
+        au < expected ; 2018 ; Film Studies Volume 18 ; 18 >
+
+      }
+      
 
     }
 
@@ -82,11 +97,23 @@
     param[journal_id] = hrv
     param[journal_issn] = 2054-2240
 
-    au < released ; 2015 ; Human Remains and Violence Volume 1 ; 1 >
-    au < released ; 2016 ; Human Remains and Violence Volume 2 ; 2 >
-    au < released ; 2017 ; Human Remains and Violence Volume 3 ; 3 >
-    au < manifest ; 2018 ; Human Remains and Violence Volume 4 ; 4 >
+   {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+   
+      au < released ; 2015 ; Human Remains and Violence Volume 1 ; 1 >
+      au < released ; 2016 ; Human Remains and Violence Volume 2 ; 2 >
+      au < released ; 2017 ; Human Remains and Violence Volume 3 ; 3 >
 
+    }
+
+    {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+     
+      au < manifest ; 2018 ; Human Remains and Violence Volume 4 ; 4 >
+
+    }
     }
 
    {
@@ -97,6 +124,8 @@
       issnl = 2308-0906
     >
 
+     param[base_url] = https://www.ingentaconnect.com/
+     param[api_url] = https://api.ingentaconnect.com/
      param[journal_id] = redes
      param[journal_issn] = 2308-0906
 
@@ -133,6 +162,8 @@
       issnl = 0268-117X
     >
     
+     param[base_url] = http://www.ingentaconnect.com/
+     param[api_url] = http://api.ingentaconnect.com/
      param[journal_id] = tsc 
      param[journal_issn] = 0268-117X
      
@@ -159,6 +190,8 @@
       issnl = 1471-4787
     >
     
+     param[base_url] = http://www.ingentaconnect.com/
+     param[api_url] = http://api.ingentaconnect.com/
      param[journal_id] = vcb 
      param[journal_issn] = 1471-4787
      
