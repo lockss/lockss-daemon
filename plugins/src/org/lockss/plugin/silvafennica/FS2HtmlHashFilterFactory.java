@@ -37,6 +37,10 @@ import java.io.*;
 import org.apache.commons.io.input.CountingInputStream;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.OrFilter;
+//import org.htmlparser.Node;
+//import org.htmlparser.tags.Span;
+//import org.htmlparser.tags.ParagraphTag;
+//import org.htmlparser.util.NodeList;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.*;
 import org.lockss.filter.HtmlTagFilter.TagPair;
@@ -45,104 +49,59 @@ import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 import org.lockss.util.ReaderInputStream;
 
+
 public class FS2HtmlHashFilterFactory implements FilterFactory {
 
-  /*
-   * 
-   */
   private static final Logger log = Logger.getLogger(FS2HtmlHashFilterFactory.class);
   
   protected static NodeFilter[] excludeFilters = new NodeFilter[] {
       // DROP scripts, styles, comments
-      HtmlNodeFilters.tag("script"),
+      /*HtmlNodeFilters.tag("script"),
       HtmlNodeFilters.tag("noscript"),
       HtmlNodeFilters.tag("style"),
       HtmlNodeFilters.comment(),
-//      HtmlNodeFilters.tagWithAttributeRegex("a", "class", "comment"),
-//      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "comment"),
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(header|menu|footer)"),
-      HtmlNodeFilters.tagWithAttribute("p", "class", "references"),
-//      HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/article/[0-9]+/(author|ref|selected)/"),
-//      HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/issue//?(author|keyword)/"),
-      
-//      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "graphic-wrap"),
-//      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "toolbar-wrap"),
-//      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "^ref-list"),
-//      // DROP eventual "Free"/"Open Access" text/icon [AMA/SPIE TOC/article]
-//      HtmlNodeFilters.tagWithAttributeRegex("span", "class", "freeArticle"), // [AMA TOC/article]
-//      HtmlNodeFilters.tagWithText("h4", "Open Access"), // [SPIE TOC/article]
-//      HtmlNodeFilters.tagWithAttributeRegex("i", "class", "icon-availability"),
-//      // DROP RSS and e-mail alert buttons [AMA/SPIE TOC]
-//      HtmlNodeFilters.tagWithAttribute("div", "class", "subscribe"),
-//      // DROP expand/collapse buttons [AMA/SPIE TOC]
-//      HtmlNodeFilters.tagWithAttribute("div", "class", "expandCollapse"),
-//      // DROP previous/next article link text [AMA/SPIE TOC/article]
-//      // (also in crawl filter)
-//      HtmlNodeFilters.tagWithAttribute("a", "class", "prev"),
-//      HtmlNodeFilters.tagWithAttribute("a", "class", "next"),
-//      // DROP designated separator
-//      // [AMA article]: vertical bar in breadcrumb
-//      // [SPIE article]: semicolon between authors
-//      HtmlNodeFilters.tagWithAttribute("span", "class", "separator"),
-//      // DROP text size picker [AMA/SPIE article]
-//      HtmlNodeFilters.tagWithAttribute("div", "class", "textSize"),
-//      // DROP internal jump links [AMA/SPIE article]
-//      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "contentJumpLinks"),
-//      // DROP sections appended to end of main area [AMA/SPIE article]
-//      HtmlNodeFilters.tagWithAttribute("div", "id", "divSignInSubscriptionUpsell"),
-//      HtmlNodeFilters.tagWithAttribute("div", "class", "relatedArticlesMobile"),
-//      HtmlNodeFilters.tagWithAttribute("div", "class", "collectionsMobile"),
-//      // DROP parts of figures/tables other than captions [AMA/SPIE article/figures/tables]
-//      HtmlNodeFilters.allExceptSubtree(HtmlNodeFilters.tagWithAttributeRegex("div", "class", "figureSection"),
-//          new OrFilter(HtmlNodeFilters.tagWithAttributeRegex("h6", "class", "figureLabel"), // [AMA article/figures]
-//              HtmlNodeFilters.tagWithAttribute("div", "class", "figureCaption"))), // [AMA/SPIE article/figures]
-//      HtmlNodeFilters.allExceptSubtree(HtmlNodeFilters.tagWithAttributeRegex("div", "class", "tableSection"),
-//          new OrFilter(HtmlNodeFilters.tagWithAttribute("div", "class", "tableCaption"), // [SPIE article/tables]
-//              HtmlNodeFilters.tagWithAttributeRegex("span", "class", "^Table "))), // [AMA article/tables]
-//      HtmlNodeFilters.tagWithAttributeRegex("span", "class", "^Figure "), // freeform, e.g. http://jama.jamanetwork.com/article.aspx?articleid=1487499 [AMA]
-//      // DROP Letters(7), CME(8), Citing(9) & Responses(10) tabs and panels [AMA  article]
-//      // DROP Figures(3),Tables(4) because they are in random order when presented outside
-//      // of the Article(1) view
-//      // [SPIE]: has only (10) for now
-//      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "tab(3|4|7|8|9|10)Div"),
-//      HtmlNodeFilters.tagWithAttributeRegex("div", "id", "^tab(3|4|7|8|9|10)$"),
-//      // DROP external links in References [AMA/SPIE article/references]
-//      HtmlNodeFilters.tagWithAttributeRegex("span", "class", "pubmedLink"), // [AMA article/references]
-//      HtmlNodeFilters.tagWithAttributeRegex("span", "class", "crossrefDoi"), // [AMA/SPIE article/references]
-//      // First page preview sometimes appears, sometimes not [AMA article]
-//      HtmlNodeFilters.tagWithAttribute("div", "id", "divFirstPagePreview"),
-//      HtmlNodeFilters.tagWithAttribute("div", "class", "adPortlet"), // rightside ads
-//      HtmlNodeFilters.tagWithAttribute("div", "class", "portletContentHolder"), // rightside
-//      // related content and metrics
-//      //figure links
-//      HtmlNodeFilters.tagWithAttribute("div", "class", "figurelinks"),
-//      //figures section changes
-//      HtmlNodeFilters.tagWithAttribute("div", "class", "abstractFigures"),
-//      // ASHA - additions
-//      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-AltmetricLink"),
-//      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-CitingArticles"),
-//      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-ArticleLinks"),
-//      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-Toolbox"),
-//      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "access-state-logos"),
-//      HtmlNodeFilters.tagWithAttributeRegex("span", "class", "article-groups"),
-//      // copyright date did not have a tag suitable for filtering, using containing tag for ASHA
-//      HtmlNodeFilters.tagWithAttribute("div", "id", "getCitation"),
-//      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "copyright"),
-//      // changeable
-//      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-metadata"),
-//      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "terms-wrapper"),
-//      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "related.topic"),
+      HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
+      HtmlNodeFilters.tagWithAttribute("ul", "id", "address_list"),
+      HtmlNodeFilters.tagWithAttribute("ul", "class", "highlights"),
+      HtmlNodeFilters.tagWithAttribute("div", "id", "article_index"),
+      HtmlNodeFilters.tagWithAttribute("p", "class", "references"),*/
+      /*new NodeFilter() {
+        @Override public boolean accept(Node node) {
+          if (!(node instanceof Span)) return false;
+          String allText = ((CompositeTag)node).toPlainTextString();
+          
+          if ((allText == null) || !(allText.contentEquals("Views")) ) return false;
+          
+          String classAttr = ((CompositeTag)node).getAttribute("class");
+          // figure out if we meet either situation to warrant checking the text value
+          if ((classAttr == null) || !(classAttr.contentEquals("abs-titles")) ) return false;
+          
+          // could be the Views count in the parent
+          Node parentNode = node.getParent();
+          if ( (parentNode != null) && (parentNode instanceof ParagraphTag) ) {
+            parentNode.setChildren(null);
+          }
+          return false;
+        }
+      },*/
+      // related content and metrics
   };
   
-  NodeFilter[] includeFilters = new NodeFilter[] {
-      // <div class="column_2">
-      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "column_2"),
-//      HtmlNodeFilters.tagWithAttribute("div", "class", "articleBodyContainer"),
-//      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "contentColumn"),
-//      HtmlNodeFilters.tagWithAttribute("span", "class", "citationCopyPaste"),
-//      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "content-section"),
-//      HtmlNodeFilters.tagWithAttribute("div", "id", "ArticleList"),
-//      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "leftColumn"),
+  protected static NodeFilter[] includeFilters = new NodeFilter[] {
+      // TOC, only the bare minimum included for article counts
+      HtmlNodeFilters.tagWithAttribute("div", "class", "article_list_item_section1"),
+      // only one container for all articles seen
+      // HtmlNodeFilters.tagWithAttributeRegex("div", "class", "column_2"),
+      // HtmlNodeFilters.tagWithAttributeRegex("div", "id", "_idContainer"),
+      HtmlNodeFilters.tag("h1"),
+      HtmlNodeFilters.tag("h2"),
+      HtmlNodeFilters.tagWithAttribute("p", "class", "body-text"),
+      // https://www.silvafennica.fi/raw/1442
+      HtmlNodeFilters.tagWithAttribute("div", "id", "raw_content"),
+      // https://www.silvafennica.fi/large_tables/article1514_table1.html
+      // could use <table class="article_table">, but would cause lots of duplication in the main article
+      HtmlNodeFilters.tagWithAttribute("td", "class", "table-caption"),
   };
   
   @Override
@@ -163,14 +122,19 @@ public class FS2HtmlHashFilterFactory implements FilterFactory {
     InputStream filtered = new HtmlFilterInputStream(in, encoding, encoding, compoundTransform);
     Reader reader = FilterUtil.getReader(filtered, encoding);
 
+    String[][] unifySpaces = new String[][] {
+      // inconsistent use of utf8 whitespace - do this replacement first
+      {"\u2009", " "},
+      {"&nbsp;", " "},
+      {"<", " <"},
+    };
+    Reader altSpaceFilter = StringFilter.makeNestedFilter(reader, unifySpaces, false);
     // Remove all inner tag content
-    Reader noTagFilter = new HtmlTagFilter(new StringFilter(reader, "<", " <"), new TagPair("<", ">"));
-
+    Reader noTagFilter = new HtmlTagFilter(altSpaceFilter, new TagPair("<", ">"));
     // Remove white space
     Reader whiteSpaceFilter = new WhiteSpaceFilter(noTagFilter);
-    InputStream ret;
-
-    ret = new ReaderInputStream(whiteSpaceFilter);
+    // for testing or development use altSpaceFilter in the call below
+    InputStream ret = new ReaderInputStream(whiteSpaceFilter);
     // Instrumentation
     return new CountingInputStream(ret) {
       @Override

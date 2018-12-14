@@ -56,7 +56,6 @@ public class FS2HtmlCrawlFilterFactory implements FilterFactory {
             HtmlNodeFilters.tagWithAttribute("div", "class", "column_1"),
             HtmlNodeFilters.allExceptSubtree(
                 HtmlNodeFilters.tagWithAttribute("div", "class", "column_3"),
-
                 HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/export/[0-9]+")),
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(header|menu|footer)"),
             HtmlNodeFilters.tagWithAttribute("p", "class", "references"),

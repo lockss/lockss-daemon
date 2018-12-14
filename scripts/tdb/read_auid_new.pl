@@ -2959,6 +2959,28 @@ while (my $line = <>) {
     }
     sleep(4);
     
+  } elsif ($plugin eq "ClockssSilvaFennicaPlugin") {
+    #Url with list of articles https://www.silvafennica.fi/issue/sf/volume/50
+    $url = sprintf("%sissue/%s/volume/%s",
+        $param{base_url}, $param{journal_id}, $param{volume_name});
+    $start_url = uri_unescape($url);
+    my $req_s = HTTP::Request->new(GET, $start_url);
+    my $resp_s = $ua->request($req_s);
+    #For reporting at the end
+    $man_url = $start_url;
+    if ($resp_s->is_success) {
+      my $start_contents = $resp_s->content;
+      if (defined($start_contents) && ($start_contents =~ m/>(Silva Fennica vol. $param{volume_name})</)) {
+        $vol_title = $1;
+        $result = "Manifest"
+      } else {
+        $result = "--NO_TAG--"
+      }
+    } else {
+      $result = "--REQ_FAIL--"
+    }
+    sleep(4);
+    
   }
   
   if($result eq "Plugin Unknown") {
