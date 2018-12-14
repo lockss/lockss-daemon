@@ -81,9 +81,25 @@ public class IngentaPdfFilterFactory implements FilterFactory {
   private FilterFactory maneyFiltFact = new ManeyPublishingPdfFilterFactory();
   private FilterFactory paafFiltFact = new PacificAffairsPdfFilterFactory();
   private FilterFactory whpFiltFact = new WhiteHorsePressPdfFilterFactory();
+  private FilterFactory manupFiltFact = new ManUPPdfFilterFactory();
   
   /*
-   * Example: PDF from http://www.ingentaconnect.com/content/whp/eh/2014/00000020/00000001/art00005
+   * Example: PDF from 
+http://www.ingentaconnect.com/content/whp/eh/2014/00000020/00000001/art00005
+q
+0.86275 0.86275 0.86275 rg
+/Xi0 10 Tf
+BT
+1 0 0 1 188.97 25 Tm
+/Xi0 10 Tf
+(? = username)Tj
+1 0 0 1 149.51 15 Tm
+($REMOTE_ASSR = IP address)Tj
+1 0 0 1 128.38 5 Tm
+(Fri, 14 Dec 2018 18:03:17 = Date & Time)Tj
+ET
+Q
+q
    */
   protected static class WhiteHorsePressPdfFilterFactory extends SimplePdfFilterFactory {
     
@@ -222,6 +238,74 @@ public class IngentaPdfFilterFactory implements FilterFactory {
   }
   
   /*
+   * q
+   * 0.86275 0.86275 0.86275 rg
+   * /Xi0 10 Tf
+   * BT
+   * 1 0 0 1 136.44 28.99 Tm
+   * /Xi0 10 Tf
+   * (IP: 5.10.31.151 On: Fri, 14 Dec 2018 14:59:01)Tj
+   * 1 0 0 1 193.15 18.99 Tm
+   * (Delivered by Ingenta)Tj
+   * ET
+   * Q
+   * q
+   */
+  protected static class ManUPPdfFilterFactory extends SimplePdfFilterFactory {
+	    
+	    protected static class ManUPWorker extends PdfTokenStreamStateMachine {
+	      
+	      private static final Logger log = Logger.getLogger(ManUPWorker.class);
+	      protected static final Pattern DELIVERED_BY =
+	              Pattern.compile("IP: .* On:");
+	          
+	      public ManUPWorker() {
+		        super(log);
+		      }
+	          
+	          @Override
+	          public void state0() throws PdfException {
+	            if (isBeginTextObject()) {
+	              setBegin(getIndex());
+	              setState(1);
+	            }
+	          }
+	          
+	          @Override
+	          public void state1() throws PdfException {
+	            if (isShowTextFind(DELIVERED_BY)) {
+	              setState(2);
+	            }
+	            else if (isEndTextObject()) {
+	              setState(0);
+	            }
+	          }
+	          
+	          @Override
+	          public void state2() throws PdfException {
+	            if (isEndTextObject()) {
+	              setEnd(getIndex());
+	              setResult(true);
+	              stop(); 
+	            }
+	          }
+	        }
+	        
+	        public void transform(ArchivalUnit au, PdfDocument pdfDocument) throws PdfException {
+	          ManUPWorker worker = new ManUPWorker();
+	          doNormalizeMetadata(pdfDocument); // modification date and id
+	          for (PdfPage pdfPage : pdfDocument.getPages()) {
+	            PdfTokenStream pdfTokenStream = pdfPage.getPageTokenStream();
+	            worker.process(pdfTokenStream);
+	            List<PdfToken> tokens = pdfTokenStream.getTokens();
+	            if (worker.getResult()) {
+	              tokens.subList(worker.getBegin(), worker.getEnd() + 1).clear();
+	            }
+	            pdfTokenStream.setTokens(tokens);
+	          }
+	        }
+  }
+  /*
    * Filter factory for each different transform because some publisher transforms are
    * simple transforms and some extracting.
    */
@@ -342,7 +426,7 @@ public class IngentaPdfFilterFactory implements FilterFactory {
       case ALPSP: case ARN: case LSE: case IGSOC:
         return normExtractFiltFact.createFilteredInputStream(au, in, encoding);
         
-      case BERGHAHN: case MANUP: case WAB: case UNKNOWN:
+      case BERGHAHN: case WAB: case UNKNOWN:
         return normFiltFact.createFilteredInputStream(au, in, encoding);
         
       case MANEY:
@@ -352,8 +436,11 @@ public class IngentaPdfFilterFactory implements FilterFactory {
         return paafFiltFact.createFilteredInputStream(au, in, encoding);
         
       case WHP:
-        return whpFiltFact.createFilteredInputStream(au, in, encoding);
-        
+          return whpFiltFact.createFilteredInputStream(au, in, encoding);
+
+      case MANUP:
+          return manupFiltFact.createFilteredInputStream(au, in, encoding);
+          
       default:
         return in;
     }
@@ -365,7 +452,7 @@ public class IngentaPdfFilterFactory implements FilterFactory {
         "/tmp/document2.pdf",
     }; 
     for (String file : files) {
-      IOUtils.copy(new PacificAffairsPdfFilterFactory().createFilteredInputStream(null, new FileInputStream(file), null),
+      IOUtils.copy(new ManUPPdfFilterFactory().createFilteredInputStream(null, new FileInputStream(file), null),
                    new FileOutputStream(file + ".out"));
     }
   }
