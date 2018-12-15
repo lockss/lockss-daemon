@@ -45,7 +45,7 @@ import java.security.*;
  * If the file is resized externally, the results are unspecified.
  * </p>
  *
- * @since 1.75
+ * @since 1.74.4
  * @see RandomAccessFile
  * @see #getFilePointer()
  * @see #length()
@@ -57,7 +57,7 @@ public class CountingRandomAccessFile extends RandomAccessFile {
    * The {@link File} backing this {@link RandomAccessFile}.
    * </p>
    * 
-   * @since 1.75
+   * @since 1.74.4
    */
   protected File file;
 
@@ -70,7 +70,7 @@ public class CountingRandomAccessFile extends RandomAccessFile {
    * constructed-provided temporary file.
    * </p>
    * 
-   * @since 1.75
+   * @since 1.74.4
    * @see #file
    */
   protected boolean deleteFile;
@@ -80,7 +80,7 @@ public class CountingRandomAccessFile extends RandomAccessFile {
    * The cached length of this {@link RandomAccessFile}.
    * </p>
    * 
-   * @since 1.75
+   * @since 1.74.4
    */
   protected long length;
 
@@ -89,7 +89,7 @@ public class CountingRandomAccessFile extends RandomAccessFile {
    * The cached file pointer of this {@link RandomAccessFile}.
    * </p>
    * 
-   * @since 1.75
+   * @since 1.74.4
    */
   protected long pointer;
   
@@ -111,7 +111,7 @@ public class CountingRandomAccessFile extends RandomAccessFile {
    *           the temporary file.
    * @throws IOException
    *           If the file once opened cannot be truncated to zero bytes.
-   * @since 1.75
+   * @since 1.74.4
    * @see #createTempFile()
    * @see #DEFAULT_MODE
    * @see #DEFAULT_APPEND
@@ -142,7 +142,7 @@ public class CountingRandomAccessFile extends RandomAccessFile {
    * @throws IOException
    *           If the given file once opened cannot be truncated to zero bytes
    *           in an opening mode other than {@link #MODE_READ_ONLY}.
-   * @since 1.75
+   * @since 1.74.4
    * @see #DEFAULT_MODE
    * @see #DEFAULT_APPEND
    */
@@ -175,7 +175,7 @@ public class CountingRandomAccessFile extends RandomAccessFile {
    * @throws IOException
    *           If the given file once opened cannot be truncated to zero bytes
    *           in an opening mode other than {@link #MODE_READ_ONLY}.
-   * @since 1.75
+   * @since 1.74.4
    * @see #DEFAULT_APPEND
    */
   public CountingRandomAccessFile(File file,
@@ -212,7 +212,7 @@ public class CountingRandomAccessFile extends RandomAccessFile {
    * @throws IOException
    *           If the given file once opened cannot be truncated to zero bytes
    *           in an opening mode other than {@link #MODE_READ_ONLY}.
-   * @since 1.75
+   * @since 1.74.4
    */
   public CountingRandomAccessFile(File file,
                                   String mode,
@@ -259,7 +259,7 @@ public class CountingRandomAccessFile extends RandomAccessFile {
    * @throws IOException
    *           If the given file once opened cannot be truncated to zero bytes
    *           in an opening mode other than {@link #MODE_READ_ONLY}.
-   * @since 1.75
+   * @since 1.74.4
    * @see #CountingRandomAccessFile(File, String, boolean)
    * @see #DEFAULT_MODE
    * @see #DEFAULT_APPEND
@@ -294,7 +294,7 @@ public class CountingRandomAccessFile extends RandomAccessFile {
    * @throws IOException
    *           If the given file once opened cannot be truncated to zero bytes
    *           in an opening mode other than {@link #MODE_READ_ONLY}.
-   * @since 1.75
+   * @since 1.74.4
    * @see #CountingRandomAccessFile(File, String, boolean)
    * @see #DEFAULT_APPEND
    */
@@ -333,7 +333,7 @@ public class CountingRandomAccessFile extends RandomAccessFile {
    * @throws IOException
    *           If the given file once opened cannot be truncated to zero bytes
    *           in an opening mode other than {@link #MODE_READ_ONLY}.
-   * @since 1.75
+   * @since 1.74.4
    * @see #CountingRandomAccessFile(File, String, boolean)
    */
   public CountingRandomAccessFile(String name,
@@ -458,7 +458,7 @@ public class CountingRandomAccessFile extends RandomAccessFile {
    * The default append mode used by this class (@{value}).
    * </p>
    * 
-   * @since 1.75
+   * @since 1.74.4
    * @see #CountingRandomAccessFile()
    * @see #CountingRandomAccessFile(File)
    * @see #CountingRandomAccessFile(String)
@@ -472,7 +472,7 @@ public class CountingRandomAccessFile extends RandomAccessFile {
    * The read-only mode of {@link RandomAccessFile} ({@value}).
    * </p>
    * 
-   * @since 1.75
+   * @since 1.74.4
    */
   public static final String MODE_READ_ONLY = "r";
 
@@ -481,7 +481,7 @@ public class CountingRandomAccessFile extends RandomAccessFile {
    * The read-write mode of {@link RandomAccessFile} ({@value}).
    * </p>
    * 
-   * @since 1.75
+   * @since 1.74.4
    */
   public static final String MODE_READ_WRITE = "rw";
 
@@ -491,7 +491,7 @@ public class CountingRandomAccessFile extends RandomAccessFile {
    * ({@value}).
    * </p>
    * 
-   * @since 1.75
+   * @since 1.74.4
    */
   public static final String MODE_READ_WRITE_CONTENT = "rwd";
 
@@ -501,7 +501,7 @@ public class CountingRandomAccessFile extends RandomAccessFile {
    * {@link RandomAccessFile} ({@value}).
    * </p>
    * 
-   * @since 1.75
+   * @since 1.74.4
    */
   public static final String MODE_READ_WRITE_CONTENT_METADATA = "rws";
 
@@ -510,7 +510,7 @@ public class CountingRandomAccessFile extends RandomAccessFile {
    * The default {@link RandomAccessFile} mode used by this class ({@value}).
    * </p>
    * 
-   * @since 1.75
+   * @since 1.74.4
    * @see #MODE_READ_WRITE
    * @see #CountingRandomAccessFile()
    * @see #CountingRandomAccessFile(File)
@@ -526,7 +526,7 @@ public class CountingRandomAccessFile extends RandomAccessFile {
    * @return A freshly created temporary file.
    * @throws IOException
    *           If a file could not be created.
-   * @since 1.75
+   * @since 1.74.4
    * @see File#createTempFile(String, String)
    */
   protected static File createTempFile() throws IOException {

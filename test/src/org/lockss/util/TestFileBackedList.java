@@ -42,7 +42,7 @@ import org.lockss.test.LockssTestCase;
  * Unit tests for the {@link FileBackedList} class.
  * </p>
  * 
- * @since 1.75
+ * @since 1.74.4
  */
 public class TestFileBackedList extends LockssTestCase {
 
@@ -109,7 +109,7 @@ public class TestFileBackedList extends LockssTestCase {
     }
   }
   
-  protected static final int SIZE = 1_000_000;
+  protected static final int SIZE = 100_000;
   
   public static Object giantListGet(int listIndex) {
     int num = listIndex / 6;

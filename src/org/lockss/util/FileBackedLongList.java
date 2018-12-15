@@ -67,7 +67,7 @@ import org.apache.commons.io.IOUtils;
  * over a standard {@RandomAccessFile}.
  * </p>
  * 
- * @since 1.75
+ * @since 1.74.4
  */
 public class FileBackedLongList
     extends RandomAccessLongList
@@ -78,7 +78,7 @@ public class FileBackedLongList
    * The number of elements in this list.
    * </p>
    * 
-   * @since 1.75
+   * @since 1.74.4
    */
   protected int size;
 
@@ -87,7 +87,7 @@ public class FileBackedLongList
    * The {@link File} backing this list.
    * </p>
    * 
-   * @since 1.75
+   * @since 1.74.4
    */
   protected File file;
 
@@ -99,7 +99,7 @@ public class FileBackedLongList
    * instantiated with a constructed-provided temporary file.
    * </p>
    * 
-   * @since 1.75
+   * @since 1.74.4
    * @see #file
    */
   protected boolean deleteFile;
@@ -109,7 +109,7 @@ public class FileBackedLongList
    * The {@link CountingRandomAccessFile} backing this list.
    * </p>
    * 
-   * @since 1.75
+   * @since 1.74.4
    * @see CountingRandomAccessFile
    * @see #file
    */
@@ -120,7 +120,7 @@ public class FileBackedLongList
    * The {@link FileChannel} backing this list.
    * </p>
    * 
-   * @since 1.75
+   * @since 1.74.4
    * @see #craf
    */
   protected FileChannel chan;
@@ -130,7 +130,7 @@ public class FileBackedLongList
    * The {@link MappedByteBuffer} backing this list.
    * </p>
    * 
-   * @since 1.75
+   * @since 1.74.4
    * @see #chan
    */
   protected MappedByteBuffer mbbuf;
@@ -140,7 +140,7 @@ public class FileBackedLongList
    * The {@link LongBuffer} backing this list.
    * </p>
    * 
-   * @since 1.75
+   * @since 1.74.4
    * @see #mbbuf
    */
   protected LongBuffer lbuf;
@@ -156,7 +156,7 @@ public class FileBackedLongList
    *           the temporary file.
    * @throws IOException
    *           If the file once opened cannot be truncated to zero bytes.
-   * @since 1.75
+   * @since 1.74.4
    * @see #FileBackedLongList(File, int)
    * @see #createTempFile()
    * @see #DEFAULT_INITIAL_CAPACITY
@@ -184,7 +184,7 @@ public class FileBackedLongList
    *           the file.
    * @throws IOException
    *           If the given file once opened cannot be truncated to zero bytes.
-   * @since 1.75
+   * @since 1.74.4
    * @see #FileBackedLongList(File, int)
    * @see #DEFAULT_INITIAL_CAPACITY
    */
@@ -212,7 +212,7 @@ public class FileBackedLongList
    *           the file.
    * @throws IOException
    *           If the given file once opened cannot be truncated to zero bytes.
-   * @since 1.75
+   * @since 1.74.4
    * @see CountingRandomAccessFile#CountingRandomAccessFile(File, String, boolean)
    */
   public FileBackedLongList(File file,
@@ -240,7 +240,7 @@ public class FileBackedLongList
    *           the temporary file.
    * @throws IOException
    *           If the given file once opened cannot be truncated to zero bytes.
-   * @since 1.75
+   * @since 1.74.4
    * @see #FileBackedLongList(File, int)
    * @see #createTempFile()
    */
@@ -267,7 +267,7 @@ public class FileBackedLongList
    *           the file.
    * @throws IOException
    *           If the given file once opened cannot be truncated to zero bytes.
-   * @since 1.75
+   * @since 1.74.4
    * @see #FileBackedLongList(File, int)
    * @see #DEFAULT_INITIAL_CAPACITY
    */
@@ -295,7 +295,7 @@ public class FileBackedLongList
    *           the file.
    * @throws IOException
    *           If the given file once opened cannot be truncated to zero bytes.
-   * @since 1.75
+   * @since 1.74.4
    * @see #FileBackedLongList(File, int)
    */
   public FileBackedLongList(String name,
@@ -311,7 +311,7 @@ public class FileBackedLongList
       throw new IndexOutOfBoundsException(Integer.toString(index));
     }
     try {
-      // If the underlying MeMoryByteBuffer capacity has been reached, double it
+      // If the underlying MemoryByteBuffer capacity has been reached, double it
       if (lbuf.capacity() == size) {
         // Evict old buffer
         MappedByteBuffer oldBuf = mbbuf;
@@ -353,11 +353,11 @@ public class FileBackedLongList
    * closing it results in unspecified error conditions.
    * </p>
    * 
-   * @since 1.75
+   * @since 1.74.4
    */
   @Override
   public void close() {
-    mbbuf.force();
+    force();
     CountingRandomAccessFile.unmap(mbbuf);
     mbbuf = null;
     IOUtils.closeQuietly(craf);
@@ -369,6 +369,19 @@ public class FileBackedLongList
       file.delete();
     }
     size = -1;
+  }
+  
+  /**
+   * <p>
+   * Forces (flushes) the memory-mapped buffer.
+   * </p>
+   * 
+   * @since 1.74.4
+   * @see #mbbuf
+   * @see MappedByteBuffer#force()
+   */
+  public void force() {
+    mbbuf.force();
   }
   
   @Override
@@ -426,7 +439,7 @@ public class FileBackedLongList
    * The number of bytes of the element type ({@value} for {@code long}).
    * </p>
    * 
-   * @since 1.75
+   * @since 1.74.4
    */
   protected static final int BYTES = 8;
   
@@ -436,7 +449,7 @@ public class FileBackedLongList
    * down during addition or deletion.
    * </p>
    * 
-   * @since 1.75
+   * @since 1.74.4
    */
   protected static final int BUFFER = 1024;
 
@@ -445,7 +458,7 @@ public class FileBackedLongList
    * Default initial element capacity ({@value}).
    * </p>
    * 
-   * @since 1.75
+   * @since 1.74.4
    * @see #FileBackedLongList()
    * @see #FileBackedLongList(File)
    * @see #FileBackedLongList(String)
@@ -460,7 +473,7 @@ public class FileBackedLongList
    * @return A freshly created temporary file.
    * @throws IOException
    *           If a file could not be created.
-   * @since 1.75
+   * @since 1.74.4
    * @see File#createTempFile(String, String)
    */
   protected static File createTempFile() throws IOException {

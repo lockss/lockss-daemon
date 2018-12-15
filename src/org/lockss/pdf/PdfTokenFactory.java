@@ -151,7 +151,7 @@ public interface PdfTokenFactory {
    * @param generationNumber
    *          A PDF generation number.
    * @return A PDF token.
-   * @since 1.75
+   * @since 1.74.4
    */
   PdfToken makeObject(PdfToken value,
                       long objectNumber,

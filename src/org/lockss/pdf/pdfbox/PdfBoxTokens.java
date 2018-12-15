@@ -49,7 +49,7 @@ import org.lockss.pdf.*;
  * {@link PdfToken} family, based on PDFBox 1.8.16.
  * </p>
  * 
- * @since 1.75
+ * @since 1.74.4
  * @see PdfToken
  * @see PdfTokenFactory
  */
@@ -63,7 +63,7 @@ public class PdfBoxTokens {
    *
    * @param <T>
    *          The type into which this converter converts.
-   * @since 1.75
+   * @since 1.74.4
    */
   public interface Converter<T> {
     
@@ -78,7 +78,7 @@ public class PdfBoxTokens {
    * defines a conversion back to PDFBox objects.
    * </p>
    *
-   * @since 1.75
+   * @since 1.74.4
    * @see #toPdfBoxObject()
    */
   public static abstract class Tok implements PdfToken, Serializable {
@@ -185,7 +185,7 @@ public class PdfBoxTokens {
      * </p>
      * 
      * @return A PDFBox object.
-     * @since 1.75
+     * @since 1.74.4
      */
     public abstract Object toPdfBoxObject();
     
@@ -196,7 +196,7 @@ public class PdfBoxTokens {
    * A PDF array.
    * </p>
    * 
-   * @since 1.75
+   * @since 1.74.4
    * @see COSArray
    */
   public static class Arr extends Tok {
@@ -250,7 +250,7 @@ public class PdfBoxTokens {
    * A PDF boolean.
    * </p>
    * 
-   * @since 1.75
+   * @since 1.74.4
    * @see COSBoolean
    */
   public static class Boo extends Tok {
@@ -299,7 +299,7 @@ public class PdfBoxTokens {
    * A PDF dictionary.
    * </p>
    * 
-   * @since 1.75
+   * @since 1.74.4
    * @see COSDictionary
    */
   public static class Dic extends Tok {
@@ -351,7 +351,7 @@ public class PdfBoxTokens {
    * A PDF float.
    * </p>
    * 
-   * @since 1.75
+   * @since 1.74.4
    * @see COSFloat
    */
   public static class Flo extends Tok {
@@ -392,7 +392,7 @@ public class PdfBoxTokens {
    * A PDF integer.
    * </p>
    * 
-   * @since 1.75
+   * @since 1.74.4
    * @see COSInteger
    */
   public static class Int extends Tok {
@@ -448,7 +448,7 @@ public class PdfBoxTokens {
    * A PDF name.
    * </p>
    * 
-   * @since 1.75
+   * @since 1.74.4
    * @see COSName
    */
   public static class Nam extends Tok {
@@ -523,7 +523,7 @@ public class PdfBoxTokens {
    * A PDF null.
    * </p>
    * 
-   * @since 1.75
+   * @since 1.74.4
    * @see COSNull
    */
   public static class Nul extends Tok {
@@ -559,7 +559,7 @@ public class PdfBoxTokens {
    * A PDF object token.
    * </p>
    * 
-   * @since 1.75
+   * @since 1.74.4
    * @see COSObject
    */
   public static class Obj extends Tok {
@@ -626,7 +626,7 @@ public class PdfBoxTokens {
    * A PDF operator.
    * </p>
    * 
-   * @since 1.75
+   * @since 1.74.4
    * @see PDFOperator
    */
   public static class Op extends Tok {
@@ -704,7 +704,7 @@ public class PdfBoxTokens {
    * A PDF string.
    * </p>
    * 
-   * @since 1.75
+   * @since 1.74.4
    * @see COSString
    */
   public static class Str extends Tok {
@@ -745,7 +745,7 @@ public class PdfBoxTokens {
    * A PDF token factory based on {@link Tok}.
    * </p>
    * 
-   * @since 1.75
+   * @since 1.74.4
    * @see Tok
    */
   public static class Factory implements PdfTokenFactory {
@@ -824,7 +824,7 @@ public class PdfBoxTokens {
      * </p>
      * 
      * @return An instance of this class.
-     * @since 1.75
+     * @since 1.74.4
      * @see #instance
      */
     public static Factory getInstance() {
@@ -838,7 +838,7 @@ public class PdfBoxTokens {
    * Map of {@link PdfToken} converters.
    * </p>
    * 
-   * @since 1.75
+   * @since 1.74.4
    */
   private static final Map<Class<?>, Converter<PdfToken>> convertToPdfToken;
   
@@ -914,7 +914,7 @@ public class PdfBoxTokens {
    * @param pdfBoxObjects
    *          A list of PDFBox objects ({@link CODBase} or {@link PDFOperator}).
    * @return A list of {@link Tok} instances.
-   * @since 1.75
+   * @since 1.74.4
    */
   public static List<PdfToken> convertList(List<Object> pdfBoxObjects) {
     List<PdfToken> ret = new ArrayList<PdfToken>(pdfBoxObjects.size());
@@ -936,7 +936,7 @@ public class PdfBoxTokens {
    * @throws IllegalStateException
    *           If the given object is not of a recognized type. In particular,
    *           {@link COSStream} is not supported.
-   * @since 1.75
+   * @since 1.74.4
    * @see #convertToPdfToken
    */
   public static PdfToken convertOne(Object pdfBoxObject) {
@@ -956,7 +956,7 @@ public class PdfBoxTokens {
    * </p>
    * 
    * @return A {@link Factory} instance.
-   * @since 1.75
+   * @since 1.74.4
    */
   public static Factory getFactory() {
     return Factory.getInstance();
@@ -972,7 +972,7 @@ public class PdfBoxTokens {
    *          A list of {@link PdfToken} instances that are really {@link Tok}
    *          instances.
    * @return A list of PDFBox objects ({@link CODBase} or {@link PDFOperator}).
-   * @since 1.75
+   * @since 1.74.4
    */
   public static List<Object> unconvertList(List<PdfToken> pdfTokens) {
     List<Object> ret = new ArrayList<Object>(pdfTokens.size());
@@ -991,7 +991,7 @@ public class PdfBoxTokens {
    * @param pdfToken
    *          A {@link PdfToken} instance that is really a {@link Tok} instance.
    * @return A PDFBox object ({@link CODBase} or {@link PDFOperator}).
-   * @since 1.75
+   * @since 1.74.4
    */
   public static Object unconvertOne(PdfToken pdfToken) {
     return ((Tok)pdfToken).toPdfBoxObject();
