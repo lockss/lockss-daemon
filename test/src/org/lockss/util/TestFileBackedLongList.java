@@ -41,7 +41,7 @@ import org.lockss.test.LockssTestCase;
  * Unit tests for the {@link FileBackedLongList} class.
  * </p>
  * 
- * @since 1.75
+ * @since 1.74.4
  * @see FileBackedLongList
  */
 public class TestFileBackedLongList extends LockssTestCase {
