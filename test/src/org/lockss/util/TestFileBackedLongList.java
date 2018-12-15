@@ -139,6 +139,6 @@ public class TestFileBackedLongList extends LockssTestCase {
     }
   }
 
-  protected static final int SIZE = 1_000_000;
+  protected static final int SIZE = 500_000;
   
 }

@@ -311,7 +311,7 @@ public class FileBackedLongList
       throw new IndexOutOfBoundsException(Integer.toString(index));
     }
     try {
-      // If the underlying MeMoryByteBuffer capacity has been reached, double it
+      // If the underlying MemoryByteBuffer capacity has been reached, double it
       if (lbuf.capacity() == size) {
         // Evict old buffer
         MappedByteBuffer oldBuf = mbbuf;
@@ -357,7 +357,7 @@ public class FileBackedLongList
    */
   @Override
   public void close() {
-    mbbuf.force();
+    force();
     CountingRandomAccessFile.unmap(mbbuf);
     mbbuf = null;
     IOUtils.closeQuietly(craf);
@@ -369,6 +369,19 @@ public class FileBackedLongList
       file.delete();
     }
     size = -1;
+  }
+  
+  /**
+   * <p>
+   * Forces (flushes) the memory-mapped buffer.
+   * </p>
+   * 
+   * @since 1.75
+   * @see #mbbuf
+   * @see MappedByteBuffer#force()
+   */
+  public void force() {
+    mbbuf.force();
   }
   
   @Override

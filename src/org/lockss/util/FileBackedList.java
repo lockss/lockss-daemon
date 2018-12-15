@@ -136,6 +136,41 @@ public class FileBackedList<E>
 
   /**
    * <p>
+   * A version of {@link LRUMap} that forces (flushes) and unmaps the evicted
+   * {@link MappedByteBuffer} entry.
+   * </p>
+   * 
+   * @since 1.75
+   * @see #removeLRU(LinkEntry)
+   * @see CountingRandomAccessFile#unmap(MappedByteBuffer)
+   */
+  public static class UnmapLRUMap extends LRUMap<Integer, MappedByteBuffer> {
+
+    /**
+     * <p>
+     * Makes a new instance with the given maximum size.
+     * </p>
+     * 
+     * @param maxSize
+     *          The map's maximum size.
+     * @since 1.75
+     */
+    public UnmapLRUMap(int maxSize) {
+      super(maxSize);
+    }
+    
+    @Override
+    protected boolean removeLRU(LinkEntry<Integer, MappedByteBuffer> entry) {
+      MappedByteBuffer mbbuf = entry.getValue();
+      mbbuf.force();
+      CountingRandomAccessFile.unmap(mbbuf); // Unmap evicted buffer
+      return true;
+    }
+    
+  }
+  
+  /**
+   * <p>
    * The {@link File} backing this list.
    * </p>
    * 
@@ -427,7 +462,7 @@ public class FileBackedList<E>
     this.offsets = arrayLongList;
     this.chunks = new ArrayList<Chunk>();
     chunks.add(new Chunk(0L, 0L));
-    this.buffers = new LRUMap<Integer, MappedByteBuffer>(CHUNKS);
+    this.buffers = new UnmapLRUMap(CHUNKS);
     buffers.put(0, chan.map(MapMode.READ_WRITE, 0L, CHUNK));
     populate(iterator);
   }
@@ -520,8 +555,8 @@ public class FileBackedList<E>
    */
   @Override
   public void close() {
+    force();
     for (MappedByteBuffer mbbuf : buffers.values()) {
-      mbbuf.force();
       CountingRandomAccessFile.unmap(mbbuf);
     }
     buffers.clear();
@@ -545,6 +580,21 @@ public class FileBackedList<E>
       file.delete();
     }
     file = null;
+  }
+  
+  /**
+   * <p>
+   * Forces (flushes) all live memory-mapped buffers.
+   * </p>
+   * 
+   * @since 1.75
+   * @see #buffers
+   * @see MappedByteBuffer#force()
+   */
+  public void force() {
+    for (MappedByteBuffer mbbuf : buffers.values()) {
+      mbbuf.force();
+    }
   }
   
   @Override
@@ -585,12 +635,12 @@ public class FileBackedList<E>
       throw new IOError(exc);
     }
   }
-  
+
   @Override
   public int size() {
     return offsets.size();
   }
-  
+
   /**
    * <p>
    * Appends a new element to the end of the list and returns the offset where
@@ -606,10 +656,10 @@ public class FileBackedList<E>
    */
   protected long append(E element) throws IOException {
     byte[] bytes = toBytes(element);
-    // Allocate new chunk if necessary
     int chunkNum = chunks.size() - 1;
     Chunk lastChunk = chunks.get(chunkNum);
-    long ret = lastChunk.endOffset;
+    long ret = lastChunk.endOffset; // return value is current end of the file
+    // Allocate new chunk if necessary
     if (lastChunk.endOffset - lastChunk.beginOffset + bytes.length + 4 > CHUNK) {
       lastChunk = new Chunk(lastChunk.endOffset, lastChunk.endOffset);
       chunks.add(lastChunk);
@@ -619,18 +669,17 @@ public class FileBackedList<E>
     MappedByteBuffer mbbuf = getBufferByChunkNumber(chunkNum);
     mbbuf.position((int)(lastChunk.endOffset - lastChunk.beginOffset));
     mbbuf.putInt(bytes.length);
-    lastChunk.endOffset += 4;
     mbbuf.put(bytes);
-    lastChunk.endOffset += bytes.length;
+    lastChunk.endOffset += 4 + bytes.length;
     return ret;
   }
-  
+
   @Override
   protected void finalize() throws Throwable {
     super.finalize();
     close();
   }
-  
+
   /**
    * <p>
    * Returns the given chunk's {@link MappedByteBuffer}, possibly memory mapping
@@ -647,26 +696,15 @@ public class FileBackedList<E>
   protected MappedByteBuffer getBufferByChunkNumber(int chunkNum) throws IOException {
     MappedByteBuffer ret = buffers.get(chunkNum);
     if (ret == null) {
-      // Potentially evict a buffer
-      Collection<MappedByteBuffer> before = buffers.values();
-      buffers.put(chunkNum, null); // dummy value
-      Collection<MappedByteBuffer> after = buffers.values();
-      before.removeAll(after); // before now contains zero or one evicted buffer
-      for (Iterator<MappedByteBuffer> iter = before.iterator() ; iter.hasNext() ; ) {
-        MappedByteBuffer oldBuf = iter.next();
-        CountingRandomAccessFile.unmap(oldBuf);
-        oldBuf = null;
-      }
-      // Allocate new buffer
       ret = chan.map(MapMode.READ_WRITE, chunks.get(chunkNum).beginOffset, CHUNK);
-      buffers.put(chunkNum, ret); // real value
+      buffers.put(chunkNum, ret);
     }
     return ret;
   }
 
   /**
    * <p>
-   * Translates a file offset in a chunk number.
+   * Translates a file offset into a chunk number.
    * </p>
    * 
    * @param offset
@@ -712,7 +750,7 @@ public class FileBackedList<E>
    * 
    * @since 1.75
    */
-  protected static final int CHUNK = 1024 * 1024 * 1024; // 1GB
+  protected static final int CHUNK = 16 * 1024 * 1024; // 256MB
   
   /**
    * <p>
@@ -722,7 +760,7 @@ public class FileBackedList<E>
    * @since 1.75
    * @see #buffers
    */
-  protected static final int CHUNKS = 3;
+  protected static final int CHUNKS = 4;
   
   /**
    * <p>
@@ -732,17 +770,12 @@ public class FileBackedList<E>
    * 
    * @since 1.75
    */
-  protected static final int OFFSETS = 1_000_000;
+  protected static final int OFFSETS = 500_000;
   
-  protected static File createTempFile() throws IOError {
-    try {
-      File tempFile = File.createTempFile(FileBackedList.class.getSimpleName(), ".bin");
-      tempFile.deleteOnExit();
-      return tempFile;
-    }
-    catch (IOException exc) {
-      throw new IOError(exc);
-    }
+  protected static File createTempFile() throws IOException {
+    File tempFile = File.createTempFile(FileBackedList.class.getSimpleName(), ".bin");
+    tempFile.deleteOnExit();
+    return tempFile;
   }
   
   protected static Object fromBytes(byte[] bytes) throws IOError {
