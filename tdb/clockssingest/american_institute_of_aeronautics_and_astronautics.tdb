@@ -42,7 +42,7 @@
     au < frozen ; exists ; 1971 ; AIAA Journal Volume 9 ; 9 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1972 ; AIAA Journal Volume 10 ; 10 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1973 ; AIAA Journal Volume 11 ; 11 ; https://arc.aiaa.org/ ; >
-    au < ready ; exists ; 1974 ; AIAA Journal Volume 12 ; 12 ; https://arc.aiaa.org/ ; >
+    au < crawling ; exists ; 1974 ; AIAA Journal Volume 12 ; 12 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1975 ; AIAA Journal Volume 13 ; 13 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1976 ; AIAA Journal Volume 14 ; 14 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1977 ; AIAA Journal Volume 15 ; 15 ; https://arc.aiaa.org/ ; >
@@ -52,10 +52,10 @@
     au < frozen ; exists ; 1981 ; AIAA Journal Volume 19 ; 19 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1982 ; AIAA Journal Volume 20 ; 20 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1983 ; AIAA Journal Volume 21 ; 21 ; https://arc.aiaa.org/ ; >
-    au < ready ; exists ; 1984 ; AIAA Journal Volume 22 ; 22 ; https://arc.aiaa.org/ ; >
-    au < ready ; exists ; 1985 ; AIAA Journal Volume 23 ; 23 ; https://arc.aiaa.org/ ; >
-    au < ready ; exists ; 1986 ; AIAA Journal Volume 24 ; 24 ; https://arc.aiaa.org/ ; >
-    au < ready ; exists ; 1987 ; AIAA Journal Volume 25 ; 25 ; https://arc.aiaa.org/ ; >
+    au < crawling ; exists ; 1984 ; AIAA Journal Volume 22 ; 22 ; https://arc.aiaa.org/ ; >
+    au < crawling ; exists ; 1985 ; AIAA Journal Volume 23 ; 23 ; https://arc.aiaa.org/ ; >
+    au < crawling ; exists ; 1986 ; AIAA Journal Volume 24 ; 24 ; https://arc.aiaa.org/ ; >
+    au < crawling ; exists ; 1987 ; AIAA Journal Volume 25 ; 25 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1988 ; AIAA Journal Volume 26 ; 26 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1989 ; AIAA Journal Volume 27 ; 27 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1990 ; AIAA Journal Volume 28 ; 28 ; https://arc.aiaa.org/ ; >
@@ -72,12 +72,12 @@
     au < frozen ; exists ; 2001 ; AIAA Journal Volume 39 ; 39 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2002 ; AIAA Journal Volume 40 ; 40 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2003 ; AIAA Journal Volume 41 ; 41 ; https://arc.aiaa.org/ ; >
-    au < ready ; exists ; 2004 ; AIAA Journal Volume 42 ; 42 ; https://arc.aiaa.org/ ; >
+    au < crawling ; exists ; 2004 ; AIAA Journal Volume 42 ; 42 ; https://arc.aiaa.org/ ; >
     au < zapped ; finished ; 2005 ; AIAA Journal Volume 43 ; 43 ; http://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2006 ; AIAA Journal Volume 44 ; 44 ; https://arc.aiaa.org/ ; >
     au < zapped ; finished ; 2007 ; AIAA Journal Volume 45 ; 45 ; http://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2008 ; AIAA Journal Volume 46 ; 46 ; http://arc.aiaa.org/ ; >
-    au < ready ; exists ; 2009 ; AIAA Journal Volume 47 ; 47 ; https://arc.aiaa.org/ ; >
+    au < crawling ; exists ; 2009 ; AIAA Journal Volume 47 ; 47 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2010 ; AIAA Journal Volume 48 ; 48 ; https://arc.aiaa.org/ ; >
     au < finished ; finished ; 2011 ; AIAA Journal Volume 49 ; 49 ; http://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2012 ; AIAA Journal Volume 50 ; 50 ; http://arc.aiaa.org/ ; >
@@ -103,17 +103,17 @@
 
     au < frozen ; exists ; 1993 ; Air Traffic Control Quarterly Volume 1 ; 1 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1994 ; Air Traffic Control Quarterly Volume 2 ; 2 ; https://arc.aiaa.org/ ; >
-    au < ready ; exists ; 1995 ; Air Traffic Control Quarterly Volume 3 ; 3 ; https://arc.aiaa.org/ ; >
+    au < crawling ; exists ; 1995 ; Air Traffic Control Quarterly Volume 3 ; 3 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1996 ; Air Traffic Control Quarterly Volume 4 ; 4 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1997 ; Air Traffic Control Quarterly Volume 5 ; 5 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1998 ; Air Traffic Control Quarterly Volume 6 ; 6 ; https://arc.aiaa.org/ ; >
     au < crawling ; exists ; 1999 ; Air Traffic Control Quarterly Volume 7 ; 7 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2000 ; Air Traffic Control Quarterly Volume 8 ; 8 ; https://arc.aiaa.org/ ; >
-    au < ready ; exists ; 2001 ; Air Traffic Control Quarterly Volume 9 ; 9 ; https://arc.aiaa.org/ ; >
-    au < ready ; exists ; 2002 ; Air Traffic Control Quarterly Volume 10 ; 10 ; https://arc.aiaa.org/ ; >
-    au < ready ; exists ; 2003 ; Air Traffic Control Quarterly Volume 11 ; 11 ; https://arc.aiaa.org/ ; >
+    au < crawling ; exists ; 2001 ; Air Traffic Control Quarterly Volume 9 ; 9 ; https://arc.aiaa.org/ ; >
+    au < crawling ; exists ; 2002 ; Air Traffic Control Quarterly Volume 10 ; 10 ; https://arc.aiaa.org/ ; >
+    au < crawling ; exists ; 2003 ; Air Traffic Control Quarterly Volume 11 ; 11 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2004 ; Air Traffic Control Quarterly Volume 12 ; 12 ; https://arc.aiaa.org/ ; >
-    au < ready ; exists ; 2005 ; Air Traffic Control Quarterly Volume 13 ; 13 ; https://arc.aiaa.org/ ; >
+    au < crawling ; exists ; 2005 ; Air Traffic Control Quarterly Volume 13 ; 13 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2006 ; Air Traffic Control Quarterly Volume 14 ; 14 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2007 ; Air Traffic Control Quarterly Volume 15 ; 15 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2008 ; Air Traffic Control Quarterly Volume 16 ; 16 ; https://arc.aiaa.org/ ; >
@@ -200,7 +200,7 @@
     au < testing ; exists ; 1964 ; Journal of Aircraft Volume 1 ; 1 ; https://arc.aiaa.org/ ; >
     au < testing ; exists ; 1965 ; Journal of Aircraft Volume 2 ; 2 ; https://arc.aiaa.org/ ; >
     au < testing ; exists ; 1966 ; Journal of Aircraft Volume 3 ; 3 ; https://arc.aiaa.org/ ; >
-    au < ready ; exists ; 1967 ; Journal of Aircraft Volume 4 ; 4 ; https://arc.aiaa.org/ ; >
+    au < crawling ; exists ; 1967 ; Journal of Aircraft Volume 4 ; 4 ; https://arc.aiaa.org/ ; >
     au < testing ; exists ; 1968 ; Journal of Aircraft Volume 5 ; 5 ; https://arc.aiaa.org/ ; >
     au < testing ; exists ; 1969 ; Journal of Aircraft Volume 6 ; 6 ; https://arc.aiaa.org/ ; >
     au < testing ; exists ; 1970 ; Journal of Aircraft Volume 7 ; 7 ; https://arc.aiaa.org/ ; >
