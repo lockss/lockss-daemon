@@ -1,8 +1,9 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>down. Convert to https</string>
+    <string>ready</string>
   </entry>
+  <!-- https transition enabled -->
   <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.atypon.sage.ClockssSageAtyponJournalsPlugin</string>
