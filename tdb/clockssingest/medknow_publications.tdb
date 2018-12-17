@@ -1135,7 +1135,6 @@
       issnl = 0019-5359
    >
 
-  {
     param[base_url] = http://www.indianjmedsci.org/
     param[journal_issn] = 0019-5359
     #changed platform. changed format.
@@ -1164,21 +1163,10 @@
     au < finished ; crawling ; 2011 ; Indian Journal of Medical Sciences Volume 65 ; 2011 ; 65 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2012 ; Indian Journal of Medical Sciences Volume 66 ; 2012 ; 66 ; reingest3.clockss.org:8083 > # only one machine collected content
     au < finished ; crawling ; 2013 ; Indian Journal of Medical Sciences Volume 67 ; 2013 ; 67 ; reingest1.clockss.org:8082 >
+    # Moved to OJS
+
   }
   
-  {
-    param[base_url] = http://www.journal.indianjmedsci.com/
-    #param[journal_issn] = ijms
-    #  Open Journal Systems 2.4.6.0
-  
-    au < notReady ; exists ; 2016 ; Indian Journal of Medical Sciences Volume 68 ; 2013 ; 68 ; >
-    au < notReady ; exists ; 2017 ; Indian Journal of Medical Sciences Volume 69 ; 2013 ; 69 ; >
-    au < notReady ; exists ; 2018 ; Indian Journal of Medical Sciences Volume 70 ; 2013 ; 70 ; >
-
-  }
-
-  }
-
   {
     title <
       name = Indian Journal of Nephrology ;
