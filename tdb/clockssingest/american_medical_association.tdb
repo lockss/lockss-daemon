@@ -99,6 +99,21 @@
   {
 
     title <
+      name = JAMA Network Open ;
+      issn = 2574-3805 ;
+      issnl = 2574-3805
+    >
+
+    param[resource_id] = 187
+    param[journal_id] = jamanetworkopen
+    
+    au < testing ; exists ; 2018 ; JAMA Network Open Volume 1 ; 2018 ; https://jamanetwork.com/ ; >
+  
+  }
+
+  {
+
+    title <
       name = JAMA Neurology ;
       issn = 0003-9942 ;
       eissn = 1538-3687 ;
