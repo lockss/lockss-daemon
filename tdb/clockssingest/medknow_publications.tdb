@@ -8308,7 +8308,7 @@
       param[journal_issn] = 2536-1384
       param[base_url] = http://www.asmfa.org/
 
-      au < manifest ; exists ; 2017 ; Advances in Skeletal Muscle Function Assessment Volume 1 ; 2017 ; 1 ; ; >
+      au < notReady ; exists ; 2017 ; Advances in Skeletal Muscle Function Assessment Volume 1 ; 2017 ; 1 ; ; >
       au < expected ; exists ; 2018 ; Advances in Skeletal Muscle Function Assessment Volume 2 ; 2018 ; 2 ; ; >
 
   }
@@ -8399,8 +8399,8 @@
       param[base_url] = http://www.anip.co.in/
       #no backissues.asp page
 
-      au < manifest ; exists ; 2017 ; Annals of Indian Psychiatry Volume 1 ; 2017 ; 1 ; ; >
-      au < manifest ; exists ; 2018 ; Annals of Indian Psychiatry Volume 2 ; 2018 ; 2 ; ; >
+      au < notReady ; exists ; 2017 ; Annals of Indian Psychiatry Volume 1 ; 2017 ; 1 ; ; >
+      au < notReady ; exists ; 2018 ; Annals of Indian Psychiatry Volume 2 ; 2018 ; 2 ; ; >
 
   }
 
@@ -8439,8 +8439,8 @@
       param[journal_issn] = 0976-0016
       param[base_url] = http://www.apollomedicine.org/
 
-      au < manifest ; exists ; 2017 ; Apollo Medicine Volume 14 ; 2017 ; 14 ; ; >
-      au < manifest ; exists ; 2018 ; Apollo Medicine Volume 15 ; 2018 ; 15 ; ; >
+      au < notReady ; exists ; 2017 ; Apollo Medicine Volume 14 ; 2017 ; 14 ; ; >
+      au < notReady ; exists ; 2018 ; Apollo Medicine Volume 15 ; 2018 ; 15 ; ; >
 
   }
 
@@ -8511,8 +8511,8 @@
       param[journal_issn] = 2251-953X
       param[base_url] = http://www.archtrauma.com/
 
-      au < manifest ; exists ; 2017 ; Archives of Trauma Research Volume 6 ; 2017 ; 6 ; ; >
-      au < manifest ; exists ; 2018 ; Archives of Trauma Research Volume 7 ; 2018 ; 7 ; ; >
+      au < notReady ; exists ; 2017 ; Archives of Trauma Research Volume 6 ; 2017 ; 6 ; ; >
+      au < notReady ; exists ; 2018 ; Archives of Trauma Research Volume 7 ; 2018 ; 7 ; ; >
 
   }
 
@@ -8527,7 +8527,7 @@
       param[journal_issn] = 2589-9309
       param[base_url] = http://www.ajpn-online.org/
 
-      au < manifest ; exists ; 2018 ; Asian Journal of Pediatric Nephrology Volume 1 ; 2018 ; 1 ; ; >
+      au < notReady ; exists ; 2018 ; Asian Journal of Pediatric Nephrology Volume 1 ; 2018 ; 1 ; ; >
 
   }
 
@@ -8543,8 +8543,8 @@
       param[journal_issn] = 2305-0500
       param[base_url] = http://www.apjr.net/
 
-      au < manifest ; exists ; 2017 ; Asian Pacific Journal of Reproduction Volume 6 ; 2017 ; 6 ; ; >
-      au < manifest ; exists ; 2018 ; Asian Pacific Journal of Reproduction Volume 7 ; 2018 ; 7 ; ; >
+      au < notReady ; exists ; 2017 ; Asian Pacific Journal of Reproduction Volume 6 ; 2017 ; 6 ; ; >
+      au < notReady ; exists ; 2018 ; Asian Pacific Journal of Reproduction Volume 7 ; 2018 ; 7 ; ; >
 
   }
 
@@ -8560,7 +8560,7 @@
       param[journal_issn] = 2221-1691
       param[base_url] = http://www.apjtb.org/
 
-      au < manifest ; exists ; 2018 ; Asian Pacific Journal of Tropical Biomedicine Volume 8 ; 2018 ; 8 ; ; >
+      au < notReady ; exists ; 2018 ; Asian Pacific Journal of Tropical Biomedicine Volume 8 ; 2018 ; 8 ; ; >
 
   }
 
@@ -8576,7 +8576,7 @@
       param[journal_issn] = 1995-7645
       param[base_url] = http://www.apjtm.org/
 
-      au < manifest ; exists ; 2018 ; Asian Pacific Journal of Tropical Medicine Volume 11 ; 2018 ; 11 ; ; >
+      au < notReady ; exists ; 2018 ; Asian Pacific Journal of Tropical Medicine Volume 11 ; 2018 ; 11 ; ; >
 
   }
 
@@ -8677,7 +8677,7 @@
       param[journal_issn] = 0422-7638
       param[base_url] = http://www.ejcdt.eg.net/
 
-      au < manifest ; exists ; 2018 ; Egyptian Journal of Chest Diseases and Tuberculosis Volume 67 ; 2018 ; 67 ; ; >
+      au < notReady ; exists ; 2018 ; Egyptian Journal of Chest Diseases and Tuberculosis Volume 67 ; 2018 ; 67 ; ; >
 
   }
 
