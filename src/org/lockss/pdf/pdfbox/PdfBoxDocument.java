@@ -43,8 +43,6 @@ import org.apache.pdfbox.cos.COSDictionary;
 //PB2 import org.apache.pdfbox.exceptions.COSVisitorException;
 import org.apache.pdfbox.pdmodel.*;
 import org.apache.pdfbox.pdmodel.common.PDMetadata;
-import org.apache.xmpbox.XMPMetadata;
-import org.apache.xmpbox.xml.*;
 import org.lockss.pdf.*;
 import org.lockss.pdf.PdfDocument;
 import org.lockss.pdf.PdfPage;

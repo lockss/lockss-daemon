@@ -1,2 +1,2 @@
 #!/bin/sh
-test/scripts/run-class org.apache.pdfbox.PDFDebugger "$@"
+test/scripts/run-class -classpath lib/pdfbox-debugger-*.jar org.apache.pdfbox.debugger.PDFDebugger "$@"
