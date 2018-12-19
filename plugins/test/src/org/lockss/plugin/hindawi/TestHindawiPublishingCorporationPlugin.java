@@ -76,9 +76,7 @@ public class TestHindawiPublishingCorporationPlugin extends LockssTestCase {
   // if it changes in the plugin, you will likely need to change the test, so verify
   static final String REPAIR_FROM_PEER_REGEXP[] = 
     {
-        "\\.css(\\?.*)?$",
-        "https?://((fonts|ajax)\\.googleapis\\.com|cdnjs\\.cloudflare\\.com|fast\\.fonts\\.net|images\\.hindawi\\.com)/.*\\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\\?.*)?"
-    
+            ".+[.](bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff.?)(\\?.*)?$"
     };
 
   private DefinablePlugin plugin;
@@ -159,17 +157,89 @@ public class TestHindawiPublishingCorporationPlugin extends LockssTestCase {
       m0 = p0.matcher(urlString);
       assertEquals(urlString, true, m0.find());
     }
-    //and this one should fail - it needs to be weighted correctly and repaired from publisher if possible
+    //and this one should success - it needs to be weighted correctly and repaired from publisher if possible
     String notString = ROOT_URL + "img/close-icon.png";
     m0 = p0.matcher(notString);
-    assertEquals(false, m0.find());
+    assertEquals(true, m0.find());
     
     PatternFloatMap urlPollResults = au.makeUrlPollResultWeightMap();
     assertNotNull(urlPollResults);
     for (String urlString : repairList) {
       assertEquals(0.0, urlPollResults.getMatch(urlString, (float) 1), .0001);
     }
-    assertEquals(1.0, urlPollResults.getMatch(notString, (float) 1), .0001);
+    assertEquals(0.0, urlPollResults.getMatch(notString, (float) 1), .0001);
+  }
+
+  public void testPollAndRepair() throws Exception {
+
+
+    Properties props = new Properties();
+    props.setProperty(BASE_URL_KEY, "http://www.example.com");
+    props.setProperty(JOURNAL_ID_KEY, "journal_id");
+    props.setProperty(DOWNLOAD_URL_KEY, "http://downloads.example.com");
+    props.setProperty(VOLUME_NAME_KEY, "2003");
+
+    Configuration config = ConfigurationUtil.fromProps(props);
+    DefinableArchivalUnit au = (DefinableArchivalUnit)plugin.createAu(config);
+
+    List <String> repaireList = ListUtil.list(
+            "http://www.hindawi.com/images/arr_select.gif",
+            "http://www.hindawi.com/images/arr_select.svg",
+            "http://www.hindawi.com/images/arr_select2.svg",
+            "http://www.hindawi.com/images/reprint.svg",
+            "http://www.hindawi.com/scripts/jquery.magnific-popup-initializer.js",
+            "http://www.hindawi.com/images/apple-touch-icon-precomposed.png",
+            "http://www.hindawi.com/images/why_publish.jpg",
+            "http://www.hindawi.com/images/warning_1.gif",
+            "http://www.hindawi.com/scripts/menu.js?ver=2",
+            "http://www.hindawi.com/images/office.png",
+            "http://www.hindawi.com/images/apple-touch-icon-144x144.png",
+            "http://www.hindawi.com/images/apple-touch-icon-precomposed.png",
+            "http://www.hindawi.com/scripts/jquery.magnific-popup.js",
+            "http://www.hindawi.com/images/arr_select2.svg",
+            "http://www.hindawi.com/css/site.css",
+            "http://www.hindawi.com/static/page.css",
+            "http://www.hindawi.com/images/apple-touch-icon-precomposed-2312312.png",
+            "http://www.hindawi.com/scripts/jquery.magnific-popup-231231231231.js",
+            "http://www.hindawi.com/images/arr_select2-3241324343.svg",
+            "http://www.hindawi.com/css/site-231231312.css"
+
+    );
+
+    Pattern p0 = Pattern.compile(REPAIR_FROM_PEER_REGEXP[0]);
+
+    Matcher m0;
+
+    for (String urlString : repaireList) {
+      m0 = p0.matcher(urlString);
+
+      assertEquals(urlString, true, m0.find());
+    }
+
+    // Failed case
+    List<String>  wrongStringList = ListUtil.list(
+            "http://www.hindawi.com/journals/ahci/2017/6787504/reprint",
+            "http://www.hindawi.com/journals/ahci/2017/8962762/cta",
+            "http://www.hindawi.com/journals/ahci/2017/6131575/ref",
+            "http://www.hindawi.com/journals/ahci/2017/7219098/abs",
+            "http://downloads.hindawi.com/journals/acisc/2017/5680398.epub",
+            "http://www.hindawi.com/journals/acisc/2017/3481709",
+            "http://downloads.hindawi.com/journals/acisc/2017/5680398.pdf",
+            "http://www.hindawi.com/images/warning_1.gif2",
+            "http://www.hindawi.com/scripts/jquery.magnific-popup-initializer.ts",
+            "http://www.hindawi.com/scripts/jquery.magnific-popup-initializer.less",
+            "http://www.hindawi.com/images/apple-touch-icon-precomposed-2312312.p2g"
+    );
+
+    for (String urlString : wrongStringList) {
+      m0 = p0.matcher(urlString);
+
+      assertEquals(urlString, false, m0.find());
+    }
+
+    PatternFloatMap urlPollResults = au.makeUrlPollResultWeightMap();
+
+    assertNotNull(urlPollResults);
   }
   
 }
