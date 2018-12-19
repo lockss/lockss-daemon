@@ -26,19 +26,19 @@
   </entry>
   <entry>
     <string>plugin_parent</string>
-    <string>org.lockss.plugin.clockss.ClockssDirSourcePlugin</string>
+    <string>org.lockss.plugin.clockss.ClockssDeliveredSourcePlugin</string>
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>1</string>
-  </entry>  
+    <string>3</string>
+  </entry>
   <entry>
     <string>au_name</string>
-    <string>"IOP Publishing Source Plugin (CLOCKSS), Base URL %s, Directory %s", base_url, directory</string>
+    <string>"IOP Publishing Delivered Source Plugin (CLOCKSS), Base URL %s, Year %d, Directory %s", base_url, year, directory</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>IOP Publishing Source Plugin (CLOCKSS)</string>
+    <string>IOP Publishing Delivered Source Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_archive_file_types</string>
@@ -48,7 +48,7 @@
     <string>au_substance_url_pattern</string>
     <list>
       <!-- http://clockss-ingest.lockss.org/sourcefiles/iop-released/2015/20-10-2015/0004-637X.tar.gz -->
-      <string>"^%s%s/.+\.tar.gz$", base_url, directory</string>
+      <string>"^%s%d/%s/.+\.tar.gz$", base_url, year, directory</string>
     </list>
   </entry>
   <entry>
