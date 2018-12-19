@@ -10,7 +10,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>9</string>
+    <string>10</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -231,6 +231,7 @@
     <string>au_repair_from_peer_if_missing_url_pattern</string>
     <list>
       <string>[.](css|js)(\?.+)?$</string>
+      <string>silverchair-?cdn\.com/UI/app/</string>
     </list>
   </entry>
   <entry>
@@ -238,6 +239,7 @@
     <string>au_url_poll_result_weight</string>
     <list>
       <string>"[.](css|js)(\?.+)?$", 0</string>
+      <string>"silverchair-?cdn\.com/UI/app/", 0</string>
     </list>
   </entry>
   <entry>
