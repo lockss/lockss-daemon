@@ -101,7 +101,7 @@ public class FS2HtmlHashFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttribute("div", "id", "raw_content"),
       // https://www.silvafennica.fi/large_tables/article1514_table1.html
       // could use <table class="article_table">, but would cause lots of duplication in the main article
-      HtmlNodeFilters.tagWithAttribute("td", "class", "table-caption"),
+      HtmlNodeFilters.tagWithAttribute("td", "class", "No-Table-Style table-caption"),
   };
   
   @Override
