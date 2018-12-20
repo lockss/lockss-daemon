@@ -385,12 +385,12 @@
 
     param[journal_id] = cult
 
-    au < crawling ; exists ; 2012 ; Cultural History Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 2013 ; Cultural History Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 2012 ; Cultural History Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 2013 ; Cultural History Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
     au < testing ; exists ; 2014 ; Cultural History Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 2015 ; Cultural History Volume 4 ; 4 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 2015 ; Cultural History Volume 4 ; 4 ; https://www.euppublishing.com/ ; >
     au < testing ; exists ; 2016 ; Cultural History Volume 5 ; 5 ; https://www.euppublishing.com/ ; > #testing by EDINA (aro)
-    au < crawling ; exists ; 2017 ; Cultural History Volume 6 ; 6 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 2017 ; Cultural History Volume 6 ; 6 ; https://www.euppublishing.com/ ; >
     au < testing ; exists ; 2018 ; Cultural History Volume 7 ; 7 ; https://www.euppublishing.com/ ; > #testing by EDINA (aro)
 
   }
