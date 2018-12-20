@@ -3,7 +3,7 @@
     name = Wageningen Academic Publishers ;
     info[contract] = 2013 ;
     info[tester] = 5 ;
-    info[poller] = 3
+    info[poller] = 3 #by EDINA for testing
   >
   {
     plugin = org.lockss.plugin.atypon.wageningen.ClockssWageningenJournalsPlugin
