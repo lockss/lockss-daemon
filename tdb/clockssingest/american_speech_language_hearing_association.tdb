@@ -231,5 +231,44 @@
 
   }
 
+  {
+    title <
+      name = ASHA Leader ;
+      eissn = 1085-9586 
+    >
+
+      param[journal_id] = leader
+
+      au < exists ; exists ; 2010 ; ASHA Leader Volume 15 ; 15 ; >
+      au < exists ; exists ; 2011 ; ASHA Leader Volume 16 ; 16 ; >
+      au < exists ; exists ; 2012 ; ASHA Leader Volume 17 ; 17 ; >
+      au < exists ; exists ; 2013 ; ASHA Leader Volume 18 ; 18 ; >
+      au < exists ; exists ; 2014 ; ASHA Leader Volume 19 ; 19 ; >
+      au < exists ; exists ; 2015 ; ASHA Leader Volume 20 ; 20 ; >
+      au < exists ; exists ; 2016 ; ASHA Leader Volume 21 ; 21 ; >
+      au < exists ; exists ; 2017 ; ASHA Leader Volume 22 ; 22 ; >
+      au < exists ; exists ; 2018 ; ASHA Leader Volume 23 ; 23 ; >
+  }
+
+  {
+    title <
+      name = Perspectives of the ASHA Special Interest Groups ;
+      issn = 2381-4764 ;
+      eissn = 2381-473X 
+    >
+
+      param[journal_id] = persp
+
+      au < exists ; exists ; 2010 ; Perspectives of the ASHA Special Interest Groups Volume 10 ; 10 ; >
+      au < exists ; exists ; 2011 ; Perspectives of the ASHA Special Interest Groups Volume 11 ; 11 ; >
+      au < exists ; exists ; 2012 ; Perspectives of the ASHA Special Interest Groups Volume 12 ; 12 ; >
+      au < exists ; exists ; 2013 ; Perspectives of the ASHA Special Interest Groups Volume 13 ; 13 ; >
+      au < exists ; exists ; 2014 ; Perspectives of the ASHA Special Interest Groups Volume 14 ; 14 ; >
+      au < exists ; exists ; 2015 ; Perspectives of the ASHA Special Interest Groups Volume 15 ; 15 ; >
+      au < exists ; exists ; 2016 ; Perspectives of the ASHA Special Interest Groups Volume 16 ; 16 ; >
+      au < exists ; exists ; 2017 ; Perspectives of the ASHA Special Interest Groups Volume 17 ; 17 ; >
+      au < exists ; exists ; 2018 ; Perspectives of the ASHA Special Interest Groups Volume 18 ; 18 ; >
+  }
+
 }
 
