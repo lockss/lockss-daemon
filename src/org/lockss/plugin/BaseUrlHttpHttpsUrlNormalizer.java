@@ -39,7 +39,7 @@ import org.lockss.util.UrlUtil;
  * <p>
  * A URL normalizer that first forces an incoming URL to have the same HTTP or
  * HTTPS protocol as the AU's base URL ({@link ConfigParamDescr#BASE_URL}) if
- * it is on the same hose, before applying other normalization.
+ * it is on the same host, before applying other normalization.
  * </p>
  * 
  * @author Thib Guicherd-Callin
