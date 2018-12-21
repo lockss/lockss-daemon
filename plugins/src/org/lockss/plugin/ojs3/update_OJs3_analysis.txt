@@ -1,0 +1,130 @@
+NOTES from dicussion with Thib for post brak
+
+Try to avoid orphan content by not being to definitive on the AU
+
+The start_url might exist both with and without the index.php so we can't just probe but the
+/archives page seems to indicate the consistent path stem (and the one the articles will hang from)
+
+Trying to allow modification later will also involve consuming or normalizing to 
+otherwwise handle a mid course transition of the content - basically the URLS will have changed.
+We could normalize to help existing AUs to continue if the only difference was index.php or not...
+
+Param thoughts
+Ccan't do base + extra bit + jid because 'extra bit' is sometimes null
+Attrs?
+Is there a way to use optional attr as extra bit rather than a param? 
+and then use the crawl seed to build up with the attr - which could change even after release?
+
+But if we could normalize from anyway:
+foo.com/index.php/journal/foo/article to foo.com/foo/article
+starting with 
+param base_url = foo.com
+param start_stem = index.php/journal/foo
+the crawl seed would just have to overrule the original start_url with the shortened one?
+and the crawl rules would have to continue to have optional pattern matching
+
+TODO - PURSUE after break - use of attr in crawl seed - if it's null, just put together base_url and journal_id
+if it's not null then base_url + extra bit + journal_id
+
+
+article iterator needs a lot of efficiency.
+
+
+OJS3 both exist with permission, but no issues - need patch
+https://ojs.aut.ac.nz/applied-finance-letters/gateway/lockss?year=2017
+https://ojs.aut.ac.nz/applied-finance-letters/gateway/clockss?year=2017
+https://ojs.aut.ac.nz/pacific-journalism-review/gateway/lockss?year=2017
+https://ojs.aut.ac.nz/pacific-journalism-review/gateway/clockss?year=2017
+
+     	   toc: https://ojs.aut.ac.nz/applied-finance-letters/issue/view/12
+	   art: https://ojs.aut.ac.nz/applied-finance-letters/article/view/80
+	   pdf: https://ojs.aut.ac.nz/applied-finance-letters/article/view/75/64
+base_url = https://ojs.aut.ac.nz/
+start_stem = applied-finance-letters
+
+https://cimonline.ca/index.php/cim/gateway/lockss?year=2017
+
+	toc: https://cimonline.ca/index.php/cim/issue/view/1943
+	art: https://cimonline.ca/index.php/cim/article/view/29125
+	pdf: https://cimonline.ca/index.php/cim/article/view/29125/21679
+
+base_url = https://cimonline.ca/
+start_stem = index.php/cim
+
+https://www.ejobsat.cz/journal/index.php/ejobsat/gateway/lockss?year=2017
+	
+	toc: https://journal.ejobsat.cz/index.php/ejobsat/issue/view/3
+	art: https://journal.ejobsat.cz/index.php/ejobsat/article/view/39
+	pdf: https://journal.ejobsat.cz/index.php/ejobsat/article/view/39/pdf_15
+
+base_url = https://journal.ejobsat.cz/
+start_stem = index.php/ejobsa
+
+http://josotl.indiana.edu/index.php/josotl/gateway/lockss?year=2017
+https://jotlt.indiana.edu/index.php/jotlt/gateway/lockss?year=2017
+
+	toc: https://scholarworks.iu.edu/journals/index.php/jotlt/issue/view/1127
+	art: https://scholarworks.iu.edu/journals/index.php/jotlt/article/view/12990
+	pdf: https://scholarworks.iu.edu/journals/index.php/jotlt/article/view/12990/19703
+
+base_url = https://scholarworks.iu.edu/
+start_stem = journals/index.php/jotlt
+
+found and confirmed with ojs3
+THESE ONES NEED index.php
+http://epress.lib.uts.edu.au/journals/index.php/cjlg/gateway/lockss?year=2017
+http://epress.lib.uts.edu.au/journals/index.php/AJCEB/gateway/lockss?year=2017
+http://epress.lib.uts.edu.au/journals/index.php/mcs/gateway/lockss?year=2017
+http://epress.lib.uts.edu.au/journals/index.php/csrj/gateway/lockss?year=2017
+http://epress.lib.uts.edu.au/journals/index.php/ijcre/gateway/lockss?year=2017
+http://epress.lib.uts.edu.au/journals/index.php/ijrlp/gateway/lockss?year=2017
+http://epress.lib.uts.edu.au/journals/index.php/lnj/gateway/lockss?year=2017
+http://epress.lib.uts.edu.au/journals/index.php/opm/gateway/lockss?year=2017
+http://epress.lib.uts.edu.au/journals/index.php/portal/gateway/lockss?year=2017
+http://epress.lib.uts.edu.au/journals/index.php/phrj/gateway/lockss?year=2017
+http://epress.lib.uts.edu.au/journals/index.php/sydney_journal/gateway/lockss?year=2017
+
+	toc: https://epress.lib.uts.edu.au/journals/index.php/sydney_journal/issue/view/142
+	art: https://epress.lib.uts.edu.au/journals/index.php/sydney_journal/article/view/1861
+	pdf: https://epress.lib.uts.edu.au/journals/index.php/sydney_journal/article/view/1861/1953
+
+NEEDS index.php
+http://www.antitraffickingreview.org/index.php/atrjournal/gateway/lockss?year=2017
+
+	toc: http://www.antitraffickingreview.org/index.php/atrjournal/issue/view/16
+	art: http://www.antitraffickingreview.org/index.php/atrjournal/article/view/225
+	full: http://www.antitraffickingreview.org/index.php/atrjournal/article/view/225/210
+	pdf: http://www.antitraffickingreview.org/index.php/atrjournal/article/view/225/209
+
+DOESN'T NEED INDEX.PHP
+(https://earlytheatre.org/index.php/earlytheatre/gateway/lockss?year=2017)
+https://earlytheatre.org/earlytheatre/gateway/lockss?year=2017
+	toc: https://earlytheatre.org/earlytheatre/issue/view/280
+	art: https://earlytheatre.org/earlytheatre/article/view/2995
+	pdf: https://earlytheatre.org/earlytheatre/article/view/2995/2808
+
+THESE ALL EXISTS WITHOUT INDEX....
+https://mulpress.mcmaster.ca/index.php/globallabour/gateway/lockss?year=2017
+https://mulpress.mcmaster.ca/index.php/hro-ors/gateway/lockss?year=2017
+https://mulpress.mcmaster.ca/index.php/ijsap/gateway/lockss?year=2017
+https://mulpress.mcmaster.ca/index.php/russelljournal/gateway/lockss?year=2017
+https://mulpress.mcmaster.ca/ijsap/gateway/lockss?year=2017
+https://mulpress.mcmaster.ca/index.php/sophiejournal/gateway/lockss?year=2017
+	toc: https://mulpress.mcmaster.ca/ijsap/issue/view/348
+	art: https://mulpress.mcmaster.ca/ijsap/article/view/3207
+	pdf: https://mulpress.mcmaster.ca/ijsap/article/view/3207/3044
+
+DOESN'NEED INDEX
+https://jhaponline.org/index.php/jhap/gateway/lockss?year=2017
+https://jhaponline.org/jhap/gateway/lockss?year=2017
+
+http://threatenedtaxa.org/index.php/JoTT/gateway/lockss?year=2017
+https://journals.library.ualberta.ca/jpps/index.php/JPPS/gateway/lockss?year=2017
+  TOC: https://journals.library.ualberta.ca/jpps/index.php/JPPS/issue/view/1953
+  art: https://journals.library.ualberta.ca/jpps/index.php/JPPS/article/view/30077
+  pdf: https://journals.library.ualberta.ca/jpps/index.php/JPPS/article/view/30077/21460
+https://journals.library.ualberta.ca/eblip/index.php/EBLIP/gateway/lockss?year=2017
+
+
+Working with OJS3
+https://www.jidc.org/index.php/journal/gateway/lockss?year=2017
