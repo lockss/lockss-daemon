@@ -43,7 +43,7 @@
     au < doNotProcess ; exists ; 2006 ; 2006 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 41 ; 41 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 42 ; 42 ; >
     au < doNotProcess ; exists ; 2008 ; 2008 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 43 ; 43 ; >
-    au < crawling ; exists ; 2009 ; 2009 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 44 ; 44 ; >
+    au < frozen ; exists ; 2009 ; 2009 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 44 ; 44 ; >
     au < finished ; finished ; 2010 ; 2010 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 45 ; 45 ; >
     au < finished ; finished ; 2011 ; 2011 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 46 ; 46 ; >
     au < finished ; finished ; 2012 ; 2012 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 47 ; 47 ; reingest1.clockss.org:8082 >
@@ -562,7 +562,7 @@
     au < doNotProcess ; exists ; 2006 ; 2006 ; Arzneimittelforschung Volume 56 ; 56 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Arzneimittelforschung Volume 57 ; 57 ; >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Arzneimittelforschung Volume 58 ; 58 ; >
-    au < crawling ; exists ; 2009 ; 2009 ; Arzneimittelforschung Volume 59 ; 59 ; >
+    au < frozen ; exists ; 2009 ; 2009 ; Arzneimittelforschung Volume 59 ; 59 ; >
     au < finished ; finished ; 2010 ; 2010 ; Arzneimittelforschung Volume 60 ; 60 ; >
     au < finished ; finished ; 2011 ; 2011 ; Arzneimittelforschung Volume 61 ; 61 ; >
     au < finished ; finished ; 2012 ; 2012 ; Arzneimittelforschung Volume 62 ; 62 ; >
@@ -746,7 +746,7 @@
     comment[years] = 2008-current
 
     au < doNotProcess ; exists ; 2008 ; 2008 ; Craniomaxillofacial Trauma & Reconstruction Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2009 ; 2009 ; Craniomaxillofacial Trauma & Reconstruction Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2009 ; 2009 ; Craniomaxillofacial Trauma & Reconstruction Volume 2 ; 2 ; >
     au < finished ; finished ; 2010 ; 2010 ; Craniomaxillofacial Trauma & Reconstruction Volume 3 ; 3 ; >
     au < finished ; finished ; 2011 ; 2011 ; Craniomaxillofacial Trauma & Reconstruction Volume 4 ; 4 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2012 ; 2012 ; Craniomaxillofacial Trauma & Reconstruction Volume 5 ; 5 ; reingest1.clockss.org:8082 >
@@ -1345,7 +1345,7 @@
    au < doNotProcess ; exists ; 2006 ; 2006 ; Erfahrungsheilkunde Volume 55 ; 55 ; >
    au < doNotProcess ; exists ; 2007 ; 2007 ; Erfahrungsheilkunde Volume 56 ; 56 ; >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Erfahrungsheilkunde Volume 57 ; 57 ; >
-   au < crawling ; exists ; 2009 ; 2009 ; Erfahrungsheilkunde Volume 58 ; 58 ; >
+   au < frozen ; exists ; 2009 ; 2009 ; Erfahrungsheilkunde Volume 58 ; 58 ; >
    au < finished ; finished ; 2010 ; 2010 ; Erfahrungsheilkunde Volume 59 ; 59 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2011 ; 2011 ; Erfahrungsheilkunde Volume 60 ; 60 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2012 ; 2012 ; Erfahrungsheilkunde Volume 61 ; 61 ; >
@@ -1512,7 +1512,7 @@
     param[journal_id] = 10.1055/s-00000152
     comment[years] = 2009
 
-    au < crawling ; exists ; 2009 ; 2009 ; Evidence-Based Spine Surgery Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2009 ; 2009 ; Evidence-Based Spine Surgery Volume 5 ; 5 ; >
 
   }
 
@@ -2061,7 +2061,7 @@
    au < doNotProcess ; exists ; 2006 ; 2006 ; Homoeopathic Links Volume 19 ; 19 ; >
    au < doNotProcess ; exists ; 2007 ; 2007 ; Homoeopathic Links Volume 20 ; 20 ; >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Homoeopathic Links Volume 21 ; 21 ; >
-   au < crawling ; exists ; 2009 ; 2009 ; Homoeopathic Links Volume 22 ; 22 ; >
+   au < frozen ; exists ; 2009 ; 2009 ; Homoeopathic Links Volume 22 ; 22 ; >
    au < finished ; finished ; 2010 ; 2010 ; Homoeopathic Links Volume 23 ; 23 ; >
    au < finished ; finished ; 2011 ; 2011 ; Homoeopathic Links Volume 24 ; 24 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2012 ; 2012 ; Homoeopathic Links Volume 25 ; 25 ; reingest2.clockss.org:8085 >
