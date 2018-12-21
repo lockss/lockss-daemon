@@ -47,17 +47,22 @@ import org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory;
  * 
  */
 public class AmericanSpeechLanguageHearingAssocHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory {
-  
+
   NodeFilter[] filters = new NodeFilter[] {
-      
-      // NOTE: overcrawling is an occasional issue with in-line references to "original article"
-      
-      HtmlNodeFilters.tag("header"),
-      HtmlNodeFilters.tag("footer"),
-      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "page-top-banner"),
-      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "w-slide"),
-      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "col-lg-4"),
-      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "actionsbar")
+          // NOTE: overcrawling is an occasional issue with in-line references to "original article"
+          HtmlNodeFilters.tag("header"),
+          HtmlNodeFilters.tag("footer"),
+          HtmlNodeFilters.tagWithAttributeRegex("div", "class", "page-top-banner"),
+          HtmlNodeFilters.tagWithAttributeRegex("div", "class", "publication__menu"),
+          HtmlNodeFilters.tagWithAttributeRegex("div", "class", "actionsbar"),
+          //Remove the social media and advertisement part
+          HtmlNodeFilters.tagWithAttributeRegex("div", "class", "social-menus"),
+          //Remove "Previous/Next" navigation
+          HtmlNodeFilters.tagWithAttributeRegex("div", "class", "table-of-content__navigation"),
+          //Remove the birdview image
+          HtmlNodeFilters.tagWithAttributeRegex("div", "class", "current-issue"),
+          HtmlNodeFilters.tagWithAttributeRegex("div", "class", "advertisement")
+
   };
   
   public InputStream createFilteredInputStream(ArchivalUnit au,
