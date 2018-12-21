@@ -287,7 +287,7 @@
     au < crawling ; exists ; 1964 ; Mathematics of Computation Volume 18 ; 1964 ; >
     au < crawling ; exists ; 1965 ; Mathematics of Computation Volume 19 ; 1965 ; >
     au < crawling ; exists ; 1966 ; Mathematics of Computation Volume 20 ; 1966 ; >
-    au < ready ; exists ; 1967 ; Mathematics of Computation Volume 21 ; 1967 ; >
+    au < crawling ; exists ; 1967 ; Mathematics of Computation Volume 21 ; 1967 ; >
     au < frozen ; exists ; 1968 ; Mathematics of Computation Volume 22 ; 1968 ; >
     au < crawling ; exists ; 1969 ; Mathematics of Computation Volume 23 ; 1969 ; >
     au < crawling ; exists ; 1970 ; Mathematics of Computation Volume 24 ; 1970 ; >
@@ -389,11 +389,11 @@
     
     param[journal_id] = proc
       
-    au < ready ; exists ; 2007 ; Proceedings of the American Mathematical Society Volume 135 ; 2007 ; >
-    au < ready ; exists ; 2008 ; Proceedings of the American Mathematical Society Volume 136 ; 2008 ; >
-    au < ready ; exists ; 2009 ; Proceedings of the American Mathematical Society Volume 137 ; 2009 ; >
+    au < crawling ; exists ; 2007 ; Proceedings of the American Mathematical Society Volume 135 ; 2007 ; >
+    au < crawling ; exists ; 2008 ; Proceedings of the American Mathematical Society Volume 136 ; 2008 ; >
+    au < crawling ; exists ; 2009 ; Proceedings of the American Mathematical Society Volume 137 ; 2009 ; >
     au < ready ; exists ; 2010 ; Proceedings of the American Mathematical Society Volume 138 ; 2010 ; >
-    au < ready ; exists ; 2011 ; Proceedings of the American Mathematical Society Volume 139 ; 2011 ; >
+    au < crawling ; exists ; 2011 ; Proceedings of the American Mathematical Society Volume 139 ; 2011 ; >
     au < finished ; finished ; 2012 ; Proceedings of the American Mathematical Society Volume 140 ; 2012 ; >
     au < finished ; finished ; 2013 ; Proceedings of the American Mathematical Society Volume 141 ; 2013 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Proceedings of the American Mathematical Society Volume 142 ; 2014 ; >
@@ -435,16 +435,16 @@
     
     param[journal_id] = ert
 
-    au < ready ; exists ; 1997 ; Representation Theory Volume 1 ; 1997 ; >
-    au < ready ; exists ; 1998 ; Representation Theory Volume 2 ; 1998 ; >
-    au < ready ; exists ; 1999 ; Representation Theory Volume 3 ; 1999 ; >
+    au < crawling ; exists ; 1997 ; Representation Theory Volume 1 ; 1997 ; >
+    au < crawling ; exists ; 1998 ; Representation Theory Volume 2 ; 1998 ; >
+    au < crawling ; exists ; 1999 ; Representation Theory Volume 3 ; 1999 ; >
     au < testing ; exists ; 2000 ; Representation Theory Volume 4 ; 2000 ; >
-    au < ready ; exists ; 2001 ; Representation Theory Volume 5 ; 2001 ; >
+    au < crawling ; exists ; 2001 ; Representation Theory Volume 5 ; 2001 ; >
     au < crawling ; exists ; 2002 ; Representation Theory Volume 6 ; 2002 ; >
     au < crawling ; exists ; 2003 ; Representation Theory Volume 7 ; 2003 ; >
     au < testing ; exists ; 2004 ; Representation Theory Volume 8 ; 2004 ; >
     au < testing ; exists ; 2005 ; Representation Theory Volume 9 ; 2005 ; >
-    au < ready ; exists ; 2006 ; Representation Theory Volume 10 ; 2006 ; >
+    au < crawling ; exists ; 2006 ; Representation Theory Volume 10 ; 2006 ; >
     au < testing ; exists ; 2007 ; Representation Theory Volume 11 ; 2007 ; >
     au < testing ; exists ; 2008 ; Representation Theory Volume 12 ; 2008 ; >
     au < testing ; exists ; 2009 ; Representation Theory Volume 13 ; 2009 ; >
@@ -472,7 +472,7 @@
     
     param[journal_id] = spmj
 
-    au < ready ; exists ; 2004 ; St. Petersburg Mathematical Journal Volume 15 ; 2004 ; >
+    au < crawling ; exists ; 2004 ; St. Petersburg Mathematical Journal Volume 15 ; 2004 ; >
     au < crawling ; exists ; 2005 ; St. Petersburg Mathematical Journal Volume 16 ; 2005 ; >
     au < crawling ; exists ; 2006 ; St. Petersburg Mathematical Journal Volume 17 ; 2006 ; >
     au < testing ; exists ; 2007 ; St. Petersburg Mathematical Journal Volume 18 ; 2007 ; >
@@ -504,12 +504,12 @@
     
     au < crawling ; exists ; 2004 ; Theory of Probability and Mathematical Statistics Volume 68-69 ; 2004 ; >
     au < crawling ; exists ; 2005 ; Theory of Probability and Mathematical Statistics Volume 70-71 ; 2005 ; >
-    au < ready ; exists ; 2006 ; Theory of Probability and Mathematical Statistics Volume 72-73 ; 2006 ; >
+    au < crawling ; exists ; 2006 ; Theory of Probability and Mathematical Statistics Volume 72-73 ; 2006 ; >
     au < ready ; exists ; 2007 ; Theory of Probability and Mathematical Statistics Volume 74-75 ; 2007 ; >
-    au < ready ; exists ; 2008 ; Theory of Probability and Mathematical Statistics Volume 76-77 ; 2008 ; >
-    au < ready ; exists ; 2009 ; Theory of Probability and Mathematical Statistics Volume 78-79 ; 2009 ; >
+    au < crawling ; exists ; 2008 ; Theory of Probability and Mathematical Statistics Volume 76-77 ; 2008 ; >
+    au < crawling ; exists ; 2009 ; Theory of Probability and Mathematical Statistics Volume 78-79 ; 2009 ; >
     au < crawling ; exists ; 2010 ; Theory of Probability and Mathematical Statistics Volume 80-81 ; 2010 ; >
-    au < ready ; exists ; 2011 ; Theory of Probability and Mathematical Statistics Volume 82-83 ; 2011 ; >
+    au < crawling ; exists ; 2011 ; Theory of Probability and Mathematical Statistics Volume 82-83 ; 2011 ; >
     au < finished ; finished ; 2012 ; Theory of Probability and Mathematical Statistics Volume 84 ; 2012 ; >
     au < finished ; finished ; 2013 ; Theory of Probability and Mathematical Statistics Volume 85 ; 2013 ; >
     au < finished ; finished ; 2014 ; Theory of Probability and Mathematical Statistics Volume 86 ; 2014 ; >
@@ -532,9 +532,9 @@
     
     param[journal_id] = tran
     
-    au < ready ; exists ; 2007 ; Transactions of the American Mathematical Society Volume 359 ; 2007 ; >
-    au < ready ; exists ; 2008 ; Transactions of the American Mathematical Society Volume 360 ; 2008 ; >
-    au < ready ; exists ; 2009 ; Transactions of the American Mathematical Society Volume 361 ; 2009 ; >
+    au < crawling ; exists ; 2007 ; Transactions of the American Mathematical Society Volume 359 ; 2007 ; >
+    au < crawling ; exists ; 2008 ; Transactions of the American Mathematical Society Volume 360 ; 2008 ; >
+    au < crawling ; exists ; 2009 ; Transactions of the American Mathematical Society Volume 361 ; 2009 ; >
     au < testing ; exists ; 2010 ; Transactions of the American Mathematical Society Volume 362 ; 2010 ; >
     au < testing ; exists ; 2011 ; Transactions of the American Mathematical Society Volume 363 ; 2011 ; >
     au < finished ; finished ; 2012 ; Transactions of the American Mathematical Society Volume 364 ; 2012 ; >
@@ -576,13 +576,13 @@
     
     param[journal_id] = mosc
     
-    au < ready ; exists ; 2004 ; Transactions of the Moscow Mathematical Society Volume 65 ; 2004 ; >
+    au < crawling ; exists ; 2004 ; Transactions of the Moscow Mathematical Society Volume 65 ; 2004 ; >
     au < ready ; exists ; 2005 ; Transactions of the Moscow Mathematical Society Volume 66 ; 2005 ; >
-    au < ready ; exists ; 2006 ; Transactions of the Moscow Mathematical Society Volume 67 ; 2006 ; >
+    au < crawling ; exists ; 2006 ; Transactions of the Moscow Mathematical Society Volume 67 ; 2006 ; >
     au < crawling ; exists ; 2007 ; Transactions of the Moscow Mathematical Society Volume 68 ; 2007 ; >
     au < crawling ; exists ; 2008 ; Transactions of the Moscow Mathematical Society Volume 69 ; 2008 ; >
     au < testing ; exists ; 2009 ; Transactions of the Moscow Mathematical Society Volume 70 ; 2009 ; >
-    au < ready ; exists ; 2010 ; Transactions of the Moscow Mathematical Society Volume 71 ; 2010 ; >
+    au < crawling ; exists ; 2010 ; Transactions of the Moscow Mathematical Society Volume 71 ; 2010 ; >
     au < ready ; exists ; 2011 ; Transactions of the Moscow Mathematical Society Volume 72 ; 2011 ; >
     au < finished ; finished ; 2012 ; Transactions of the Moscow Mathematical Society Volume 73 ; 2012 ; >
     au < finished ; finished ; 2013 ; Transactions of the Moscow Mathematical Society Volume 74 ; 2013 ; >
@@ -590,7 +590,7 @@
     au < finished ; finished ; 2015 ; Transactions of the Moscow Mathematical Society Volume 76 ; 2015 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2016 ; Transactions of the Moscow Mathematical Society Volume 77 ; 2016 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Transactions of the Moscow Mathematical Society Volume 78 ; 2017 ; reingest1.clockss.org:8082 >
-    au < ready ; exists ; 2018 ; Transactions of the Moscow Mathematical Society Volume 79 ; 2018 ; >
+    au < crawling ; exists ; 2018 ; Transactions of the Moscow Mathematical Society Volume 79 ; 2018 ; >
 
   }
 
