@@ -110,7 +110,6 @@ public class TestAmericanSpeechLanguageHearingAssocHtmlCrawlFilterFactory extend
   }
 
   private static String tocContentCrawlFiltered = "";
-
   {
     try {
       String currentDirectory = System.getProperty("user.dir");
@@ -122,12 +121,56 @@ public class TestAmericanSpeechLanguageHearingAssocHtmlCrawlFilterFactory extend
     }
   }
 
+  private static String doiFullContent = "";
+  {
+    try {
+      String currentDirectory = System.getProperty("user.dir");
+      String pathname = currentDirectory +
+              "/plugins/test/src/org/lockss/plugin/atypon/americanspeechlanguagehearingassoc/doiFullContent.html";
+      doiFullContent = FileUtils.readFileToString(new File(pathname), Constants.DEFAULT_ENCODING);
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+  }
+
+  private static String doiFullContentCrawlFiltered = "";
+  {
+    try {
+      String currentDirectory = System.getProperty("user.dir");
+      String pathname = currentDirectory +
+              "/plugins/test/src/org/lockss/plugin/atypon/americanspeechlanguagehearingassoc/doiFullContentCrawlFiltered.html";
+      doiFullContentCrawlFiltered  = FileUtils.readFileToString(new File(pathname), Constants.DEFAULT_ENCODING);
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+  }
+
+  private static String doiAbsContent = "";
+  {
+    try {
+      String currentDirectory = System.getProperty("user.dir");
+      String pathname = currentDirectory +
+              "/plugins/test/src/org/lockss/plugin/atypon/americanspeechlanguagehearingassoc/doiAbsContent.html";
+      doiAbsContent = FileUtils.readFileToString(new File(pathname), Constants.DEFAULT_ENCODING);
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+  }
+
+  private static String doiAbsContentCrawlFiltered = "";
+  {
+    try {
+      String currentDirectory = System.getProperty("user.dir");
+      String pathname = currentDirectory +
+              "/plugins/test/src/org/lockss/plugin/atypon/americanspeechlanguagehearingassoc/doiAbsContentCrawlFiltered.html";
+      doiAbsContentCrawlFiltered  = FileUtils.readFileToString(new File(pathname), Constants.DEFAULT_ENCODING);
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+  }
 
   private static final String tocContentHashFiltered = "";
 
-  private static final String art1Content = "";
-
-  private static final String art1ContentCrawlFiltered = "";
 
   private static final String art1ContentHashFiltered = "";
 
@@ -155,14 +198,14 @@ public class TestAmericanSpeechLanguageHearingAssocHtmlCrawlFilterFactory extend
 
       try {
         String filteredStr = StringUtil.fromInputStream(actIn);
-/*
-        Write to a file for easy comparision for debugging purpose
+
+        //Write to a file for easy comparision for debugging purpose
 
         String currentDirectory = System.getProperty("user.dir");
         String pathname = currentDirectory +
                 "/plugins/test/src/org/lockss/plugin/atypon/americanspeechlanguagehearingassoc/generated.html";
         FileUtils.writeStringToFile(new File(pathname),filteredStr,Constants.DEFAULT_ENCODING);
-*/
+
         assertEquals(expectedStr, filteredStr);
       } catch (IOException e) {
         e.printStackTrace();
@@ -194,9 +237,23 @@ public class TestAmericanSpeechLanguageHearingAssocHtmlCrawlFilterFactory extend
     int tocContentLen = tocContent.length();
     int tocContentCrawlFilteredLen = tocContentCrawlFiltered.length();
 
+    int doiFullContentLen = doiFullContent.length();
+    int doiFullContentCrawlFilteredLen = doiFullContentCrawlFiltered.length();
+
+    int doiAbsContentLen = doiAbsContent.length();
+    int doiAbsContentCrawlFilteredLen = doiAbsContentCrawlFiltered.length();
+
     assertTrue(tocContentLen > 0);
     assertTrue(tocContentCrawlFilteredLen > 0);
     assertTrue(tocContentLen > tocContentCrawlFilteredLen);
+
+    assertTrue(doiFullContentLen > 0);
+    assertTrue(doiFullContentCrawlFilteredLen > 0);
+    assertTrue(doiFullContentLen > doiFullContentCrawlFilteredLen);
+
+    assertTrue(doiAbsContentLen > 0);
+    assertTrue(doiAbsContentCrawlFilteredLen > 0);
+    assertTrue(doiAbsContentLen > doiAbsContentCrawlFilteredLen);
   }
 
   // Variant to test with Crawl Filter
@@ -205,8 +262,8 @@ public class TestAmericanSpeechLanguageHearingAssocHtmlCrawlFilterFactory extend
       variantFact = new AmericanSpeechLanguageHearingAssocHtmlCrawlFilterFactory();
       doFilterTest(mau, variantFact, manifestContent, manifestContent);
       doFilterTest(mau, variantFact, tocContent, tocContentCrawlFiltered);
-      //doFilterTest(mau, variantFact, art1Content, art1ContentCrawlFiltered);
-      //doFilterTest(mau, variantFact, citContent, citContent);
+      doFilterTest(mau, variantFact, doiFullContent, doiFullContentCrawlFiltered);
+      doFilterTest(mau, variantFact, doiAbsContent, doiAbsContentCrawlFiltered);
     }
   }
 

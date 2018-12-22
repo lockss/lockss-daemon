@@ -52,16 +52,30 @@ public class AmericanSpeechLanguageHearingAssocHtmlCrawlFilterFactory extends Ba
           // NOTE: overcrawling is an occasional issue with in-line references to "original article"
           HtmlNodeFilters.tag("header"),
           HtmlNodeFilters.tag("footer"),
+
+          // Remove from toc page
           HtmlNodeFilters.tagWithAttributeRegex("div", "class", "page-top-banner"),
+          // Remove from toc page
           HtmlNodeFilters.tagWithAttributeRegex("div", "class", "publication__menu"),
+          // Remove from toc page
           HtmlNodeFilters.tagWithAttributeRegex("div", "class", "actionsbar"),
-          //Remove the social media and advertisement part
+          // Remove from toc page
           HtmlNodeFilters.tagWithAttributeRegex("div", "class", "social-menus"),
-          //Remove "Previous/Next" navigation
+          // Remove from toc page
           HtmlNodeFilters.tagWithAttributeRegex("div", "class", "table-of-content__navigation"),
-          //Remove the birdview image
+          // Remove from toc page, this is the birdview image
           HtmlNodeFilters.tagWithAttributeRegex("div", "class", "current-issue"),
-          HtmlNodeFilters.tagWithAttributeRegex("div", "class", "advertisement")
+          // Remove from toc page
+          HtmlNodeFilters.tagWithAttributeRegex("div", "class", "advertisement"),
+
+          // Remove from doi/full page
+          HtmlNodeFilters.tagWithAttributeRegex("div", "class", "page-top-panel"),
+          // Remove from doi/full page
+          HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "tab__nav"),
+          // Remove from doi/full page
+          HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "tab__content"),
+          // Remove from doi/full page
+          HtmlNodeFilters.tagWithAttributeRegex("div", "class", "eCommercePurchaseAccessWidget")
 
   };
   
