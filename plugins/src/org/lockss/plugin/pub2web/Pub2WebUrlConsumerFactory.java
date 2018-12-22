@@ -141,12 +141,7 @@ public class Pub2WebUrlConsumerFactory implements UrlConsumerFactory {
     public void consume() throws IOException {
       if (shouldStoreRedirectsAtOrigUrl()) {
         // SimpleUrlConsumer stores at fud.origUrl, and processes the redirect
-        //TODO: 1.68 - do all the following by calling method:SimpleUrlConsumer.storeAtOrigUrl()
-        log.debug3("swallowing redirection - use orig: " + fud.origUrl + "not fetch: " + fud.fetchUrl);
-        fud.redirectUrls = null;
-        fud.fetchUrl = null;
-        fud.headers.remove(CachedUrl.PROPERTY_REDIRECTED_TO);
-        fud.headers.put(CachedUrl.PROPERTY_CONTENT_URL, fud.origUrl);
+        storeAtOrigUrl();
       }
       super.consume();
     }
@@ -164,7 +159,6 @@ public class Pub2WebUrlConsumerFactory implements UrlConsumerFactory {
      */
     protected boolean shouldStoreRedirectsAtOrigUrl() {
       boolean should =  fud.redirectUrls != null
-          && fud.redirectUrls.size() == 1
           && fud.redirectUrls.get(0).equals(fud.fetchUrl)
           && destFullTextPat.matcher(fud.fetchUrl).find()
           && origFullTextPat.matcher(fud.origUrl).find();

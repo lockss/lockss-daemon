@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2017 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -42,6 +42,7 @@ import org.htmlparser.tags.Div;
 import org.htmlparser.tags.LinkTag;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.AuUtil;
 import org.lockss.rewriter.*;
 import org.lockss.servlet.ServletUtil.LinkTransform;
 import org.lockss.util.Logger;
@@ -87,7 +88,7 @@ public class MsHtmlLinkRewriterFactory implements LinkRewriterFactory {
     
     fact.addAttrToRewrite(AJAX_ATTR);
     fact.addAttrToRewrite(FULL_TEXT_ATTR);
-    fact.addPostXform(new PostFilter());
+    fact.addPostXform(new PostFilter(au));
     
     return fact.createLinkRewriter(mimeType, au, in, encoding, url, xfm);
   }
@@ -102,9 +103,11 @@ public class MsHtmlLinkRewriterFactory implements LinkRewriterFactory {
     protected static Node mediaTabNode;
     protected static String supplUrl;
     protected static Node supplTabNode;
+    protected static ArchivalUnit thisau;
     
-    public PostFilter() {
+    public PostFilter(ArchivalUnit au) {
       super();
+      thisau = au;
       htmlUrl = null;
       htmlLinkNode = null;
       mediaUrl = null;
@@ -119,6 +122,7 @@ public class MsHtmlLinkRewriterFactory implements LinkRewriterFactory {
           Attribute ftAttr = ((TagNode)node).getAttributeEx(FULL_TEXT_ATTR);
           if (ftAttr != null) {
             htmlUrl = ftAttr.getValue();
+            htmlUrl = AuUtil.normalizeHttpHttpsFromBaseUrl(thisau, htmlUrl);
             if (htmlLinkNode != null) {
               ((TagNode)htmlLinkNode).setAttribute("href", htmlUrl);
               ((TagNode)htmlLinkNode).setAttribute("target", "_blank");
@@ -139,12 +143,14 @@ public class MsHtmlLinkRewriterFactory implements LinkRewriterFactory {
               String cl = classAttr.getValue();
               if (cl.contains("dataandmedia")) {
                 mediaUrl = ajaxAttr.getValue();
+                mediaUrl = AuUtil.normalizeHttpHttpsFromBaseUrl(thisau, mediaUrl);
                 if (mediaTabNode != null) {
                   ((TagNode)mediaTabNode).setAttribute("href", mediaUrl);
                   ((TagNode)mediaTabNode).setAttribute("target", "_blank");
                 }
               } else if (cl.contains("supplement")) {
                 supplUrl = ajaxAttr.getValue();
+                supplUrl = AuUtil.normalizeHttpHttpsFromBaseUrl(thisau, supplUrl);
                 if (supplTabNode != null) {
                   ((TagNode)supplTabNode).setAttribute("href", supplUrl);
                   ((TagNode)supplTabNode).setAttribute("target", "_blank");

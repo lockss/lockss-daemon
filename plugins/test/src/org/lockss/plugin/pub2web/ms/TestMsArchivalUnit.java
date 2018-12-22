@@ -34,16 +34,12 @@ package org.lockss.plugin.pub2web.ms;
 
 import java.net.URL;
 import java.util.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
-import org.apache.commons.lang.StringUtils;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.BaseCachedUrlSet;
 import org.lockss.plugin.definable.*;
-import org.lockss.state.AuState;
 import org.lockss.test.*;
 import org.lockss.util.*;
 
@@ -99,7 +95,7 @@ public class TestMsArchivalUnit extends LockssTestCase {
 
   public void testShouldCacheProperPages() throws Exception {
     String REAL_ROOT= "http://jgv.microbiologyresearch.org/";
-    String OTHER_ROOT = "http://www.microbiologyresearch.org/";
+    String OTHER_ROOT = "https://www.microbiologyresearch.org/";
     URL base = new URL(REAL_ROOT);
     ArchivalUnit  msau = makeAu(base, 96, "jgv");
     theDaemon.getLockssRepository(msau);
@@ -167,22 +163,9 @@ public class TestMsArchivalUnit extends LockssTestCase {
 
   }
 
-  
-
-
   private void shouldCacheTest(String url, boolean shouldCache,
       ArchivalUnit au, CachedUrlSet cus) {
     assertEquals(shouldCache, au.shouldBeCached(url));
-  }
-
-  public void testStartUrlConstruction() throws Exception {
-    URL url = new URL(ROOT_URL);
-
-    // 4 digit
-    String expected = ROOT_URL+"content/journal/foo/clockssissues?volume=123";
- 
-    DefinableArchivalUnit au = makeAu(url, 123, "foo");
-    assertEquals(ListUtil.list(expected), au.getStartUrls());
   }
 
 

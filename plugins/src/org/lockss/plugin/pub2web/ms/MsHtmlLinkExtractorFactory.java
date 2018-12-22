@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -43,6 +43,7 @@ import org.lockss.extractor.*;
 import org.lockss.extractor.JsoupHtmlLinkExtractor.SimpleTagLinkExtractor;
 import org.lockss.extractor.LinkExtractor.Callback;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.AuUtil;
 import org.lockss.util.Logger;
 
 /* an implementation of JsoupHtmlLinkExtractor  */
@@ -125,6 +126,7 @@ implements LinkExtractorFactory {
       // Are we an article landing page?
       if ( (srcUrl != null) && landingMat.matches()) {
         String base_url = landingMat.group(1);
+        base_url = AuUtil.normalizeHttpHttpsFromBaseUrl(au, base_url);
         if (DIV_TAG.equals(node.nodeName())) {
           String idVal = node.attr(ID_ATTR);
           String ftVal = node.attr(FULL_TEXT_ATTR);

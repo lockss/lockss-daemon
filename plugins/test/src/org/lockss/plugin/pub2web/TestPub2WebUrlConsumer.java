@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -47,7 +47,7 @@ public class TestPub2WebUrlConsumer extends LockssTestCase {
       "http://jmm.microbiologyresearch.org/deliver/fulltext/jmm/64/10/000143-S2.xlsx?itemId=/content/suppdata/jmm/10.1099/jmm.0.000143-2&mimeType=xlsx&isFastTrackArticle=",
       "http://www.asmscience.org/deliver/fulltext/microbiolspec/2/6/AID-0022-2014.pdf?itemId=/content/journal/microbiolspec/10.1128/microbiolspec.AID-0022-2014&mimeType=pdf",
       "http://www.asmscience.org/deliver/fulltext/microbiolspec/3/2/PLAS_0039_2014_supp.xlsx?itemId=/content/suppdata/microbiolspec/10.1128/microbiolspec.PLAS-0039-2014-1&mimeType=vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-      "http://jmmcr.microbiologyresearch.org/deliver/fulltext/supplementary-figures_jmmcr.0.000015.pdf?itemId=/content/jmmcr.0.000015&mimeType=pdf"
+      "https://jmmcr.microbiologyresearch.org/deliver/fulltext/supplementary-figures_jmmcr.0.000015.pdf?itemId=/content/jmmcr.0.000015&mimeType=pdf"
       );
 
   Set<String> destinationUrls = SetUtil.set(
@@ -56,7 +56,7 @@ public class TestPub2WebUrlConsumer extends LockssTestCase {
       "http://www.microbiologyresearch.org/docserver/fulltext/jmm/64/2/000003d.mov?expires=1462410093&id=id&accname=guest&checksum=A08CAEA24F33D984D2843F8A14980366",
       "http://www.microbiologyresearch.org/docserver/fulltext/jmm/64/10/1216_jmm000143.pdf?expires=1462991102&id=id&accname=sgid025717&checksum=8533A66F9933B18C28BD5042672B66E4",
       "http://www.microbiologyresearch.org/docserver/fulltext/mgen/1/1/000001.pdf?expires=1472240373&id=id&accname=guest&checksum=BB2B5F904726B8D614BF63E8898665F1",
-      "http://www.microbiologyresearch.org/docserver/fulltext/supplementary-figures_jmmcr.0.000015.pdf?expires=1472241881&id=id&accname=guest&checksum=B525FA14B2C3EAE641F814853E58678E"
+      "https://www.microbiologyresearch.org/docserver/fulltext/supplementary-figures_jmmcr.0.000015.pdf?expires=1472241881&id=id&accname=guest&checksum=B525FA14B2C3EAE641F814853E58678E"
       );
 
 

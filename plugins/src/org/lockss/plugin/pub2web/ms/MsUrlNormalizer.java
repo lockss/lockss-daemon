@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -30,29 +30,23 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.pub2web.iet;
+package org.lockss.plugin.pub2web.ms;
 
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.pub2web.Pub2WebUrlNormalizer;
 import org.lockss.util.Logger;
-import org.lockss.util.UrlUtil;;
 
 
-public class IetUrlNormalizer extends Pub2WebUrlNormalizer {
-  protected static Logger log = 
-      Logger.getLogger(IetUrlNormalizer.class);
-
-  protected static final String HTML_STRING = "&mimeType=html";
-   
+public class MsUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
+  
+  protected static Logger log = Logger.getLogger(MsUrlNormalizer.class);
+  
   @Override
-  public String normalizeUrl(String url, ArchivalUnit au) throws PluginException {
-    if(url.contains(HTML_STRING)) {
-      //Part of the URL query string that is used to build a crawler stable
-      //full text URL is unexpectedly URL encoded in IET, so decode before passing to parent
-      url = UrlUtil.decodeUrl(url);
-    }
-    return super.normalizeUrl(url, au);
+  public String additionalNormalization(String url, ArchivalUnit au) throws PluginException {
+    Pub2WebUrlNormalizer un = new Pub2WebUrlNormalizer();
+    url = un.normalizeUrl(url, au);
+    return url;
   }
 
 }

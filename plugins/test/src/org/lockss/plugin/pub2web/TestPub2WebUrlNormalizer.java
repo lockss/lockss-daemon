@@ -53,7 +53,7 @@ public class TestPub2WebUrlNormalizer extends LockssTestCase {
   static final String JID_KEY = ConfigParamDescr.JOURNAL_ID.getKey();
   static final String VOL_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
   static final String ROOT_URL = "http://www.jrnl.com/"; //this is not a real url
-  static final String BOOK_ROOT_URL = "http://www.book.com/"; //this is not a real url
+  static final String BOOK_ROOT_URL = "https://www.book.com/"; //this is not a real url
   
   public void testUrlNormalizer() throws Exception {
     
@@ -75,26 +75,30 @@ public class TestPub2WebUrlNormalizer extends LockssTestCase {
     
     UrlNormalizer normalizer = new Pub2WebUrlNormalizer();
     // TOC
-    assertEquals("http://jgv.microbiologyresearch.org/content/journal/jgv/96/12",
-            normalizer.normalizeUrl("http://jgv.microbiologyresearch.org/content/journal/jgv/96/12", au));
+    assertEquals(               "http://jgv.microbiologyresearch.org/content/journal/jgv/96/12",
+        normalizer.normalizeUrl("http://jgv.microbiologyresearch.org/content/journal/jgv/96/12", au));
     // TOC PDF
-    assertEquals("http://jgv.microbiologyresearch.org/deliver/fulltext/jgv/96/12/toc.pdf?itemId=/content/journal/jgv/96/12/tocpdf1&mimeType=pdf",
-            normalizer.normalizeUrl("http://jgv.microbiologyresearch.org/deliver/fulltext/jgv/96/12/toc.pdf?itemId=/content/journal/jgv/96/12/tocpdf1&mimeType=pdf", au));
+    assertEquals(               "http://jgv.microbiologyresearch.org/deliver/fulltext/jgv/96/12/toc.pdf?itemId=/content/journal/jgv/96/12/tocpdf1&mimeType=pdf",
+        normalizer.normalizeUrl("http://jgv.microbiologyresearch.org/deliver/fulltext/jgv/96/12/toc.pdf?itemId=/content/journal/jgv/96/12/tocpdf1&mimeType=pdf", au));
     // TOC section render list
-    assertEquals("http://jgv.microbiologyresearch.org/articles/renderlist.action?fmt=ahah&items=http://sgm.metastore.ingenta.com/content/journal/jgv/10.1099/jgv.0.000294,http://sgm.metastore.ingenta.com/content/journal/jgv/10.1099/jgv.0.000314",
-            normalizer.normalizeUrl("http://jgv.microbiologyresearch.org/articles/renderlist.action?fmt=ahah&items=http://sgm.metastore.ingenta.com/content/journal/jgv/10.1099/jgv.0.000294,http://sgm.metastore.ingenta.com/content/journal/jgv/10.1099/jgv.0.000314", au));
+    assertEquals(               "http://jgv.microbiologyresearch.org/articles/renderlist.action?fmt=ahah&items=http://sgm.metastore.ingenta.com/content/journal/jgv/10.1099/jgv.0.000294,http://sgm.metastore.ingenta.com/content/journal/jgv/10.1099/jgv.0.000314",
+        normalizer.normalizeUrl("http://jgv.microbiologyresearch.org/articles/renderlist.action?fmt=ahah&items=http://sgm.metastore.ingenta.com/content/journal/jgv/10.1099/jgv.0.000294,http://sgm.metastore.ingenta.com/content/journal/jgv/10.1099/jgv.0.000314", au));
     // abstract or landing page
-    assertEquals("http://jgv.microbiologyresearch.org/content/journal/jgv/10.1099/jgv.0.000298",
-            normalizer.normalizeUrl("http://jgv.microbiologyresearch.org/content/journal/jgv/10.1099/jgv.0.000298", au));
+    assertEquals(               "http://jgv.microbiologyresearch.org/content/journal/jgv/10.1099/jgv.0.000298",
+        normalizer.normalizeUrl("http://jgv.microbiologyresearch.org/content/journal/jgv/10.1099/jgv.0.000298", au));
     // PDF link
-    assertEquals("http://jgv.microbiologyresearch.org/content/journal/jgv/10.1099/vir.0.069625-0?crawler=true&mimetype=application/pdf",
+    assertEquals(               "http://jgv.microbiologyresearch.org/content/journal/jgv/10.1099/vir.0.069625-0?crawler=true&mimetype=application/pdf",
         normalizer.normalizeUrl("http://jgv.microbiologyresearch.org/deliver/fulltext/jgv/96/2/420_vir069625.pdf?itemId=/content/journal/jgv/10.1099/vir.0.069625-0&mimeType=pdf&isFastTrackArticle=", au));
     // HTML link
-    assertEquals("http://jgv.microbiologyresearch.org/content/journal/jgv/10.1099/vir.0.069625-0?crawler=true&mimetype=html",
+    assertEquals(               "http://jgv.microbiologyresearch.org/content/journal/jgv/10.1099/vir.0.069625-0?crawler=true&mimetype=html",
         normalizer.normalizeUrl("http://jgv.microbiologyresearch.org/deliver/fulltext/jgv/96/2/420.html?itemId=/content/journal/jgv/10.1099/vir.0.069625-0&mimeType=html&fmt=ahah", au));
     
-    assertNotEquals("", 
-        normalizer.normalizeUrl("http://", au));
+    assertEquals(               ROOT_URL + "content/journal/jgv/10.1099/vir.0.069625-0?crawler=true&mimetype=application/pdf",
+        normalizer.normalizeUrl(ROOT_URL + "deliver/fulltext/jgv/96/2/420_vir069625.pdf?itemId=/content/journal/jgv/10.1099/vir.0.069625-0&mimeType=pdf&isFastTrackArticle=", au));
+    assertEquals(               BOOK_ROOT_URL + "content/journal/jgv/10.1099/vir.0.069625-0?crawler=true&mimetype=application/pdf",
+        normalizer.normalizeUrl(BOOK_ROOT_URL + "deliver/fulltext/jgv/96/2/420_vir069625.pdf?itemId=/content/journal/jgv/10.1099/vir.0.069625-0&mimeType=pdf&isFastTrackArticle=", au));
+    assertNotEquals("http://jgv.microbiologyresearch.org/content/journal/jgv/10.1099/jgv.0.000298",
+        normalizer.normalizeUrl("https://jgv.microbiologyresearch.org/content/journal/jgv/10.1099/jgv.0.000298", au));
   }
   
 }
