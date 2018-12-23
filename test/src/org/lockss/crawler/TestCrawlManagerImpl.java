@@ -1714,14 +1714,14 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 
       ConfigurationUtil.addFromArgs(CrawlManagerImpl.PARAM_CRAWL_PRIORITY_AU_MAP,
 				    "[tdbAu/year <= '2002'],10;" +
-				    "[tdbAu/year >= '2002'],12;");
+				    "[tdbAu/year >= '2002'],-20000;");
 
       crawlManager.setReqPriority(req1);
       crawlManager.setReqPriority(req2);
       crawlManager.setReqPriority(req3);
       assertEquals(10, req1.getPriority());
       assertEquals(10, req2.getPriority());
-      assertEquals(12, req3.getPriority());
+      assertEquals(-20000, req3.getPriority());
 
       // Remove param, ensure priority map gets removed
       ConfigurationUtil.resetConfig();

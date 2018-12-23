@@ -979,8 +979,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     for (PoolCrawlers pc : poolMap.values()) {
       for (Crawler crawler : pc.getCrawlers()) {
 	ArchivalUnit au = crawler.getAu();
-	int pri = crawlPriorityAuidMap.getMatch(au.getAuId(), 0,
-						ABORT_CRAWL_PRIORITY);
+        int pri = getAuPriority(au, ABORT_CRAWL_PRIORITY);
 	if (pri <= ABORT_CRAWL_PRIORITY) {
 	  abortCrawlers.add(crawler);
 	}
@@ -2013,7 +2012,11 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   }
 
   public int getAuPriority(ArchivalUnit au) {
-    return Math.round(crawlPriorityAuMap.getMatch(au, crawlPriorityAuidMap.getMatch(au.getAuId())));
+    return getAuPriority(au, Integer.MAX_VALUE);
+  }
+
+  public int getAuPriority(ArchivalUnit au, int maxPri) {
+    return Math.round(crawlPriorityAuMap.getMatch(au, crawlPriorityAuidMap.getMatch(au.getAuId(), 0, maxPri), (float)maxPri));
   }
 
   /** Orders AUs (wrapped in CrawlReq) by crawl priority:<ol>
