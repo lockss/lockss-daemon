@@ -1,0 +1,76 @@
+{
+
+  publisher <
+    name = University of Michigan Press;
+    info[contract] = 2018 ;
+    info[tester] = 3 ;
+    info[poller] = 3 ;
+    comment[platform] = Fulcrum
+  >
+
+  plugin = org.lockss.plugin.fulcrum.ClockssUniversityofMichiganBooksPlugin
+  param[base_url] = https://www.fulcrum.org/
+  implicit < status ; status2 ; year ; isbn ; eisbn ; param[book_uri] ; name ; hidden[proxy] >  
+
+  {
+  
+    title <
+      name = University of Michigan Press Ebooks (EBC) ;
+      type = bookSeries
+    >
+    #nope
+    au < exists ; exists ; 2018 ; 9780472037254 ; 9780472123681 ; concern/monographs/8623hz604 ; Yiddish Empire: The Vilna Troupe, Jewish Theater, and the Art of Itinerancy (978-0-472-12368-1) ; >
+    au < exists ; exists ; 2018 ; 9780472900862 ; 9780472074037 ; concern/monographs/0z708x360 ; Sites of Translation: What Multilinguals Can Teach Us about Digital Writing and Rhetoric (978-0-472-07403-7) ; >
+    au < exists ; exists ; 2018 ; 9780472130641 ; 9780472900923 ; concern/monographs/4f16c366k ; In the Red: The Politics of Public Debt Accumulation in Developed Countries (978-0-472-90092-3) ; >
+    au < exists ; exists ; 2018 ; 9780472900855 ; 9780472130634 ; concern/monographs/cr56n175s ; Transforming Gender and Emotion: The Butterfly Lovers Story in China and Korea (978-0-472-13063-4) ; >
+    au < exists ; exists ; 2018 ; 9780472053728 ; 9780472073726 ; concern/monographs/cz30pt311 ; Early Film Culture in Hong Kong, Taiwan, and Republican China: Kaleidoscopic Histories (978-0-472-07372-6) ; >
+    au < exists ; exists ; 2017 ; 9780472123414 ; 9780472900725 ; concern/monographs/1c18dg49d ; Academic Ableism: Disability and Higher Education (978-0-472-90072-5) ; >
+    au < exists ; exists ; 2017 ; 9780472130313 ; 9780472900756 ; concern/monographs/ng451j20p ; China and the West: Music, Representation, and Reception (978-0-472-90075-6) ; >
+    au < exists ; exists ; 2017 ; 9780472073412 ; 9780472053414 ; concern/monographs/x346d490f ; The Distinction of Peace: A Social Analysis of Peacebuilding (978-0-472-05341-4) ; >
+    au < exists ; exists ; 2017 ; 9780472073405 ; 9780472900817 ; concern/monographs/6395w792p ; The Jazz Republic: Music, Race, and American Culture in Weimar Germany (978-0-472-90081-7) ; >
+    au < exists ; exists ; 2016 ; 9780472130177 ; 9780472122455 ; concern/monographs/1544bp88b ; Strange Science: Investigating the Limits of Knowledge in the Victorian Age (978-0-472-12245-5) ; >
+    au < exists ; exists ; 2016 ; 9780472122356 ; 9780472053254 ; concern/monographs/z603qz15t ; Just Vibrations: The Purpose of Sounding Good (978-0-472-05325-4) ; >
+    au < exists ; exists ; 2016 ; 9780472053148 ; 9780472073146 ; concern/monographs/nc580n28n ; Alienation Effects: Performance and Self-Management in Yugoslavia, 1945-91 (978-0-472-07314-6) ; >
+    au < exists ; exists ; 2016 ; 9780472900596 ; 9780472119905 ; concern/monographs/x633f184j ; Beyond the Bauhaus: Cultural Modernity in Breslau, 1918-33 (978-0-472-11990-5) ; >
+    au < exists ; exists ; 2016 ; 9780472119813 ; 9780472121816 ; concern/monographs/ff365594n ; Dreams for Dead Bodies: Blackness, Labor, and the Corpus of American Detective Fiction (978-0-472-12181-6) ; >
+    au < exists ; exists ; 2016 ; 9780472900619 ; 9780472121809 ; concern/monographs/qr46r149x ; Spectacular Disappearances: Celebrity and Privacy, 1696-1801 (978-0-472-12180-9) ; >
+    au < exists ; exists ; 2015 ; 9780472073047 ; 9780472900060 ; concern/monographs/bz60cw978 ; Manifesto for the Humanities: Transforming Doctoral Education in Good Enough Times (978-0-472-90006-0) ; >
+    au < exists ; exists ; 2016 ; 9780472073030 ; 9780472053032 ; concern/monographs/sn009z47b ; The Chatter of the Visible: Montage and Narrative in Weimar Germany (978-0-472-05303-2) ; >
+    au < exists ; exists ; 2016 ; 9780472073023 ; 9780472900671 ; concern/monographs/2801pg99r ; Risk Criticism: Precautionary Reading in an Age of Environmental Uncertainty (978-0-472-90067-1) ; >
+    au < exists ; exists ; 2016 ; 9780472121663 ; 9780472119769 ; concern/monographs/6h440t162 ; Refining Child Pornography Law: Crime, Language, and Social Consequences (978-0-472-11976-9) ; >
+    au < exists ; exists ; 2015 ; 9780472121601 ; 9780472072996 ; concern/monographs/h702q709t ; Campaign Finance and Political Polarization: When Purists Prevail (978-0-472-07299-6) ; >
+    au < exists ; exists ; 2016 ; 9780472900626 ; 9780472119738 ; concern/monographs/3f462619j ; Mixed-Member Electoral Systems in Constitutional Context: Taiwan, Japan, and Beyond (978-0-472-11973-8) ; >
+    au < exists ; exists ; 2016 ; 9780472052950 ; 9780472072958 ; concern/monographs/8c97kr13g ; Imperfect Creatures: Vermin, Literature, and the Sciences of Life, 1600-1740 (978-0-472-07295-8) ; >
+    au < exists ; exists ; 2016 ; 9780472072941 ; 9780472121540 ; concern/monographs/w0892b877 ; The Resonance of Unseen Things: Poetics, Power, Captivity, and UFOs in the American Uncanny (978-0-472-12154-0) ; >
+    au < exists ; exists ; 2015 ; 9780472900688 ; 9780472121311 ; concern/monographs/7m01bm58g ; Traces of the Old, Uses of the New: The Emergence of Digital Literary Studies (978-0-472-12131-1) ; >
+    au < exists ; exists ; 2014 ; 9780472120499 ; 9780472119363 ; concern/monographs/wp988k626 ; Making News at the New York Times (978-0-472-11936-3) ; >
+    au < exists ; exists ; 2014 ; 9780472900022 ; 9780472029662 ; concern/monographs/0r967450h ; Law, Liberty, and the Pursuit of Terrorism (978-0-472-02966-2) ; >
+    au < exists ; exists ; 2013 ; 9780472119073 ; 9780472036332 ; concern/monographs/m039k5667 ; Passionate Amateurs: Theatre, Communism, and Love (978-0-472-03633-2) ; >
+    au < exists ; exists ; 2013 ; 9780472036578 ; 9780472029525 ; concern/monographs/7d278t687 ; Partisan Gerrymandering and the Construction of American Democracy (978-0-472-02952-5) ; >
+    au < exists ; exists ; 2013 ; 9780472118724 ; 9780472035885 ; concern/monographs/zs25x9106 ; Early Start: Preschool Politics in the United States (978-0-472-03588-5) ; >
+    au < exists ; exists ; 2012 ; 9780472051717 ; 9780472900800 ; concern/monographs/x059c814k ; Architecture and Modern Literature (978-0-472-90080-0) ; >
+    au < exists ; exists ; 2011 ; 9780472900794 ; 9780472027750 ; concern/monographs/5h73pw85g ; Veto Power: Institutional Design in the European Union (978-0-472-02775-0) ; >
+    au < exists ; exists ; 2011 ; 9780472027583 ; 9780472117833 ; concern/monographs/tm70mv886 ; Printing and Prophecy: Prognostication and Media Change 1450-1550 (978-0-472-11783-3) ; >
+    #nope
+    au < exists ; exists ; 2018 ; 9780472124411 ; 9780472131075 ; concern/monographs/q811kk505 ; The Politics of Millennials: Political Beliefs and Policy Preferences of America's Most Diverse Generation (978-0-472-13107-5) ; >
+    au < exists ; exists ; 2018 ; 9780472901081 ; 9780472073818 ; concern/monographs/1831ck58v ; Gaming the Stage: Playable Media and the Rise of English Commercial Theater ; >
+    #nope - super complicated
+    au < exists ; exists ; 2016 ;  ; 9780472999002 ; n009w229r ; A Mid-Republican House From Gabii ; >
+    #nope
+    au < exists ; exists ; 2018 ; 9780472053742 ; 9780472999002 ; concern/monographs/fj2362114 ; Selma and the Liuzzo Murder Trials: The First Modern Civil Rights Convictions ; >
+    #has media
+    au < exists ; exists ; 2014 ; 9780472051991 ; 9780472029532 ; concern/monographs/br86b359j ; Animal Acts: Performing Species Today ; >
+    
+  }
+  {
+  
+    title <
+      name = University of Michigan Press ACLS Humanities E-Book (HEB) ;
+      type = bookSeries
+    >
+
+    au < exists ; exists ; 2013 ; 9780520275140 ; 9780520275133 ; concern/monographs/w3763750t ; Fresh fruit, broken bodies: migrant farmworkers in the United States ; >
+    #not yet
+    
+  }
+}
