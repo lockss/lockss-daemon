@@ -79,20 +79,37 @@ public class AmericanSpeechLanguageHearingAssocHtmlHashFilterFactory extends Bas
         },
         // toc - contents only
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "table-of-content"),
-        
+        // doi full content
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article__body")
     };
-    
-    // handled by parent: script, sfxlink, stylesheet, pdfplus file sise
-    // <head> tag, <li> item has the text "Cited by", accessIcon, 
+
     NodeFilter[] excludeNodes = new NodeFilter[] {
-        // toc - should be okay
-        // on article page
-        HtmlNodeFilters.tag("header"),
-        HtmlNodeFilters.tag("footer"),
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "page-top-banner"),
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "w-slide"),
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "col-lg-4"),
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "actionsbar")
+      HtmlNodeFilters.tag("header"),
+      HtmlNodeFilters.tag("footer"),
+
+      // Remove from toc page
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "page-top-banner"),
+      // Remove from toc page
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "publication__menu"),
+      // Remove from toc page
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "actionsbar"),
+      // Remove from toc page
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "social-menus"),
+      // Remove from toc page
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "table-of-content__navigation"),
+      // Remove from toc page, this is the birdview image
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "current-issue"),
+      // Remove from toc page
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "advertisement"),
+
+      // Remove from doi/full page
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "page-top-panel"),
+      // Remove from doi/full page
+      HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "tab__nav"),
+      // Remove from doi/full page
+      HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "tab__content"),
+      // Remove from doi/full page
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "eCommercePurchaseAccessWidget")
     };
     return super.createFilteredInputStream(au, in, encoding, 
                                            includeNodes, excludeNodes);
