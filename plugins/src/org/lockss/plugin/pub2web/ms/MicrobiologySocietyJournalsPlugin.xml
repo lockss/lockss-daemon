@@ -71,4 +71,14 @@
     <string>text/html_link_rewriter_factory</string>
     <string>org.lockss.plugin.pub2web.ms.MsHtmlLinkRewriterFactory</string>
   </entry>
+  <entry>
+    <string>au_url_mime_validation_map</string>
+    <list>
+      <string>mimetype=(application/)?pdf, application/pdf</string>
+      <string>mimetype=text/html, text/html</string>
+      <string>\.gif$, image/gif</string>
+      <string>\.jpe?g$, image/jpeg</string>
+      <string>\.png, image/png</string>
+    </list>
+  </entry>
 </map>
