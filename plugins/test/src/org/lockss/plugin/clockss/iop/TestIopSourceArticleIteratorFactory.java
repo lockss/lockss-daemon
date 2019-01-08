@@ -85,6 +85,13 @@ public class TestIopSourceArticleIteratorFactory extends ArticleIteratorTestCase
     assertNotMatchesRE(pat, "http://clockss-ingest.lockss.org/sourcefiles/iop-released/2015/20-10-2015/0004-637X.tar.gz!/0004-637X/805/1/18/apj_805_1_18o.pdf");
     assertNotMatchesRE(pat, "http://clockss-ingest.lockss.org/sourcefiles/iop-released/2015/20-10-2015/0004-637X.tar.gz!/0004-637X/805/1/18/manifest.xml");
 
+    // support for new variants with iop-delivered content
+    assertMatchesRE(pat, "http://clockss-ingest.lockss.org/sourcefiles/iop-released/2015/20-10-2015/0004-637X.tar.gz!/0004-637X/805/1/18/apj_805_1_18.article");
+    assertNotMatchesRE(pat, "http://clockss-ingest.lockss.org/sourcefiles/iop-released/2015/HD1_1/0253-6102.tar.gz!/0253-6102/63/1/14/ctp_63_1_014.pdf");    
+    assertMatchesRE(pat, "http://clockss-ingest.lockss.org/sourcefiles/iop-released/2015/HD1_1/0253-6102.tar.gz!/0253-6102/63/1/14/ctp_63_1_014.article");    
+    assertMatchesRE(pat, "http://clockss-ingest.lockss.org/sourcefiles/iop-released/2015/HD1_1/0253-6102.tar.gz!/0253-6102/63/1/14/ctp_63_1_014.xml");    
+    assertNotMatchesRE(pat, "http://clockss-ingest.lockss.org/sourcefiles/iop-released/2015/HD1_1/0253-6102.tar.gz!/0253-6102/63/1/14/.artiel");    
+
     
   }
 

@@ -57,17 +57,27 @@ public class IopSourceXmlArticleIteratorFactory implements ArticleIteratorFactor
   // pattern
   // ...iop-released/2015/20-10-2015/0004-637X/805/1/18/apj_805_1_18.(pdf|xml)
   // end pattern with a number (they have article number as final portion of filename)
+  // Shared with IopDeliveredSourcePlugin
+  // ..iop-delivered/2018/HD1_1/0004-637X/805/1/18/apj_805_1_18.(pdf|xml)
   // to exclude manifest.xml since negative lookahead didn't work
+  // With delivered source seeing some foo123.pdf without foo123.xml but WITH foo123.article
+  // try using that ONLY if there is no foo.xml available
+  // do not iterate on /file/dir/.article - only on /file/dir/foo123.article
+  
   private static final String PATTERN_TEMPLATE = 
-      "\"^%s%d/[^/]+/[0-9-X]+\\.tar\\.gz!/.*[0-9]\\.xml$\", base_url, year";
+      "\"^%s%d/[^/]+/[0-9-X]+\\.tar\\.gz!/.*[0-9]\\.(article|xml)$\", base_url, year";
 
   private static final Pattern XML_PATTERN = Pattern.compile("/(.*)\\.xml$", Pattern.CASE_INSENSITIVE);
   private static final String XML_REPLACEMENT = "/$1.xml";
+  private static final Pattern ART_PATTERN = Pattern.compile("/(.*)\\.article$", Pattern.CASE_INSENSITIVE);
+  private static final String ART_REPLACEMENT = "/$1.article";
   private static final String PDF_REPLACEMENT = "/$1.pdf";
   // I do not know what this is at the moment
   private static final String WEIRD_PDF_REPLACEMENT = "/$1o.pdf";
   private static final String MANUSCRIPT_REPLACEMENT = "/$1am.pdf";
   private static final String ROLE_MANUSCRIPT = "AuthorManuscriptPdf";
+  private static final String ROLE_BACKUP_METADATA = "ArticleXml";
+  private static final String ROLE_PRIMARY_METADATA = "JatsXml";
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
@@ -87,7 +97,14 @@ public class IopSourceXmlArticleIteratorFactory implements ArticleIteratorFactor
     // set up XML to be an aspect that will trigger an ArticleFiles to feed the metadata extractor
     builder.addAspect(XML_PATTERN,
         XML_REPLACEMENT,
+        ROLE_PRIMARY_METADATA,
         ArticleFiles.ROLE_ARTICLE_METADATA);
+
+    // set up article to be an aspect that will trigger an ArticleFiles to feed the metadata extractor
+    // but only when a .xml isn't available
+    builder.addAspect(ART_PATTERN,
+        ART_REPLACEMENT,
+        ROLE_BACKUP_METADATA);
     
     // While we can't identify articles that are *just* PDF which is why they
     // can't trigger an articlefiles by themselves, we can identify them
@@ -96,6 +113,10 @@ public class IopSourceXmlArticleIteratorFactory implements ArticleIteratorFactor
         ArticleFiles.ROLE_FULL_TEXT_PDF);
     builder.addAspect(MANUSCRIPT_REPLACEMENT,
         ROLE_MANUSCRIPT);
+    
+    builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA,
+    		ROLE_PRIMARY_METADATA,
+    		ROLE_BACKUP_METADATA);
     
     //Now set the order for the full text cu
     builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF,

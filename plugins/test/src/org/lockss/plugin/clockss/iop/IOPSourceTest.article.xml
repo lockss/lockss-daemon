@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE header SYSTEM "http://ej.iop.org/dtd/header.dtd">
+<header>
+  <ident>
+    <issn>0253-6102</issn>
+	<volume>55</volume>
+	<issue>1</issue>
+	<artnum>010203</artnum>
+	<ecs></ecs>
+	<ej1></ej1>
+	<ej2></ej2>
+    <serial></serial>
+    <inspec></inspec>
+	<pii></pii>
+    <doi>10.1088/0029-5515/XX/1/123456</doi>
+	<attributes art_type="edit" text_type="full"/> 
+    <!--INSERT(art_focus)-->
+   <pages range="010203 (2pp)" type="article" start="010203" extent="2"/>
+	<availability services="ej"/>         
+  </ident>
+ 
+  <title> <surtitle>Editorial</surtitle> 
+  <title_full lang="en">2013 <I>Nuclear Fusion</I> Prize Acceptance Speech</title_full> 
+  <title_toc lang="en">2013 <I>Nuclear Fusion</I> Prize Acceptance Speech</title_toc> </title> 
+  <authors position="bottom"> 
+  <author>D. Acceptor</author> 
+
+  <author_granular order="given-surname">
+			<given>D.</given>
+			<surname>Acceptor</surname>
+		</author_granular>
+    
+    
+
+    
+  <authors_toc>D. Acceptor</authors_toc>
+  </authors>
+
+  <dates> 
+  <date_cover readable="January 2015">2015-01-01</date_cover> 
+  <date_history /> 
+  <date_alert></date_alert> 
+  <date_modified checkedby="szk">2015-01-01</date_modified> 
+  </dates> 
+  <subjects> 
+  </subjects> 
+  <text> 
+  <header_text lang="en" heading=""> 
+  
+<P>I would like to express gratitude</P>
+
+
+   </header_text>    
+   <fulltext  />
+   <copyright_text/>
+</text>
+</header>
