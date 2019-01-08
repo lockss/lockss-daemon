@@ -31,10 +31,9 @@ in this Software without prior written authorization from Stanford University.
 */
 
 
-package org.lockss.plugin.atypon.americanspeechlanguagehearingassoc;
+package org.lockss.plugin.atypon.aslha;
 
 import java.io.*;
-import java.nio.ByteBuffer;
 
 import junit.framework.Test;
 
@@ -153,7 +152,7 @@ public class TestAmericanSpeechLanguageHearingAssocHtmlCrawlFilterFactory extend
     try {
       String currentDirectory = System.getProperty("user.dir");
       String pathname = currentDirectory +
-              "/plugins/test/src/org/lockss/plugin/atypon/americanspeechlanguagehearingassoc/" + fname;
+              "/plugins/test/src/org/lockss/plugin/atypon/aslha/" + fname;
      htmlContent  = FileUtils.readFileToString(new File(pathname), Constants.DEFAULT_ENCODING);
     } catch (IOException e) {
       e.printStackTrace();

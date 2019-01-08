@@ -30,7 +30,7 @@
 
  */
 
-package org.lockss.plugin.atypon.americanspeechlanguagehearingassoc;
+package org.lockss.plugin.atypon.aslha;
 
 import org.lockss.plugin.atypon.BaseAtyponScrapingPdfFilterFactory;
 

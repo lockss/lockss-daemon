@@ -30,7 +30,7 @@ in this Software without prior written authorization from Stanford University.
 
  */
 
-package org.lockss.plugin.atypon.americanspeechlanguagehearingassoc;
+package org.lockss.plugin.atypon.aslha;
 
 import java.io.InputStream;
 import java.util.Vector;

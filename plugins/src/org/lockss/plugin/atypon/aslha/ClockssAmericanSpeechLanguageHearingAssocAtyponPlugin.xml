@@ -1,11 +1,11 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>Development</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.atypon.americanspeechlanguagehearingassoc.ClockssAmericanSpeechLanguageHearingAssocAtyponPlugin</string>
+    <string>org.lockss.plugin.atypon.aslha.ClockssAmericanSpeechLanguageHearingAssocAtyponPlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -17,7 +17,7 @@
   </entry>
   <entry>
     <string>plugin_parent</string>
-    <string>org.lockss.plugin.atypon.americanspeechlanguagehearingassoc.AmericanSpeechLanguageHearingAssocAtyponPlugin</string>
+    <string>org.lockss.plugin.atypon.aslha.AmericanSpeechLanguageHearingAssocAtyponPlugin</string>
   </entry>
   <entry>
     <string>plugin_parent_version</string>
