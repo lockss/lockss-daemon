@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2019 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -55,11 +55,29 @@ public class MarkAllenHtmlCrawlFilterFactory
     // from toc - below pageHeader, ad panel has link to other issue
     // http://www.magonlinelibrary.com/toc/bjom/21/10
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "genericSlideshow"),
-                                          
-    // tabb'd section in the right column -                
+    
+    // tabb'd section in the right column -
     // can't be in parent - all tabs would get affected, even in content
     // TODO - look at alternative, but for now the only tabs are in right column
-    HtmlNodeFilters.tagWithAttribute("div", "aria-relevant", "additions"),                  
+    HtmlNodeFilters.tagWithAttribute("div", "aria-relevant", "additions"),
+    // XXX add to parent and remove here
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "^references"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "id", "trendmd", true),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "trendmd", true),
+    
+    HtmlNodeFilters.tag("header"),
+    HtmlNodeFilters.tag("footer"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "journalHeader"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "content-navigation"),
+    // in case there are links in the preview text
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "toc-item__abstract"),
+    // Article landing - ajax tabs
+    HtmlNodeFilters.tagWithAttribute("li", "id", "pane-pcw-references"),
+    HtmlNodeFilters.tagWithAttribute("li", "id", "pane-pcw-related"),
+    // never want these links, excluded lists was too long
+    HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/author/"),
+    // XXX not sure if needed, but ...
+    HtmlNodeFilters.tagWithAttributeRegex("li", "class", "(correction|latest-version)"),
   };
 
   @Override
