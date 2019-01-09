@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -51,6 +51,13 @@
       <string>"^%s%d/%s/.+\.tar.gz$", base_url, year, directory</string>
     </list>
   </entry>
+  <!-- some metadata is in .article files which are xml but not recognized as such -->
+  <entry>
+    <string>au_url_mime_type_map</string>
+    <list>
+      <string>.*\.article$,text/xml</string>
+    </list>
+  </entry>  
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.clockss.iop.IopSourceXmlArticleIteratorFactory</string>
