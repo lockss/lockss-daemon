@@ -18,7 +18,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>95</string>
+    <string>96</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -114,7 +114,7 @@
       <string>2,"^https?://%s/imgJawr/[^/]+/templates/jsp/_style2/_tandf/images/favicon\.png$", url_host(base_url)</string>
       <string>2,"^https?://%s/doi/.*/googleAnalyticsPlugin\.js$", url_host(base_url)</string>
       <string>2,"^https?://%s/.*/www\.tandf\.co\.uk/", url_host(base_url)</string>
-      <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)(_v[0-9]+|\?v=[0-9.]+|\?[a-z0-9]+)?$", url_host(base_url)</string>
+      <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)(_v[0-9]+|\?v=[0-9.]+|\?[a-z0-9]+)?$", url_host(base_url)</string>
       <string>1,"^https?://((fonts|ajax)\.googleapis\.com)/"</string>
       <string>1,"^https?://(cdn\.nejm\.org)/."</string>
       <string>1,"^https?://faseb-prod-cdn\.literatumonline\.com/journals/content/fasebj/"</string>
@@ -232,7 +232,7 @@
       <string>403=org.lockss.plugin.atypon.BaseAtyponHttpResponseHandler</string>
     </list>
   </entry>
-  <!--  tell the default base.MimeTypeContentValidator what url patters to validate by mime type -->
+  <!--  tell the default base.MimeTypeContentValidator what url patterns to validate by mime type -->
   <entry>
     <string>au_url_mime_validation_map</string>
     <list>
@@ -336,7 +336,7 @@
            ex: ..home/literatum/.../ijpe.2015.1.issue-3/ijpe.2015.071062/20150811/ijpe.2015.071062.fp.png_v03 
          -->
     <list>
-      <string>://[^/]+/(templates/jsp|(css|img|js)Jawr|pb-assets|resources|sda|wro)/</string>
+      <string>://[^/]+/(templates/jsp|(css|img|js)Jawr|pb-assets|resources|sda|wro|products/photo-theme)/</string>
       <string>/(assets|css|img|js|wro)/.+\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$</string>
       <string>://[^/]+/na[0-9]+/home/(readonly|literatum)/publisher/.*(/covergifs/.*\.jpg|\.fp\.png(_v[0-9]+)?)$</string>
     </list>
@@ -346,7 +346,7 @@
   <entry>
     <string>au_url_poll_result_weight</string>
     <list>
-      <string>://[^/]+/(templates/jsp|(css|img|js)Jawr|pb-assets|resources|sda|wro)/, 0</string>
+      <string>://[^/]+/(templates/jsp|(css|img|js)Jawr|pb-assets|resources|sda|wro|products/photo-theme)/, 0</string>
       <string>/(assets|css|img|js|wro)/.+\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$, 0</string>
       <string>://[^/]+/na[0-9]+/home/(readonly|literatum)/publisher/.*(/covergifs/.*\.jpg|\.fp\.png(_v[0-9]+)?)$, 0</string>
     </list>

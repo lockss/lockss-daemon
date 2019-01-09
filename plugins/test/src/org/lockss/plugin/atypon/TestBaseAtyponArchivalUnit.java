@@ -65,7 +65,7 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
 
   static final String baseRepairList[] = 
     {
-    "://[^/]+/(templates/jsp|(css|img|js)Jawr|pb-assets|resources|sda|wro)/",
+    "://[^/]+/(templates/jsp|(css|img|js)Jawr|pb-assets|resources|sda|wro|products/photo-theme)/",
     "/(assets|css|img|js|wro)/.+\\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$",
     "://[^/]+/na[0-9]+/home/(readonly|literatum)/publisher/.*(/covergifs/.*\\.jpg|\\.fp\\.png(_v[0-9]+)?)$",
     };

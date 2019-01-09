@@ -60,10 +60,6 @@ public class MarkAllenHtmlCrawlFilterFactory
     // can't be in parent - all tabs would get affected, even in content
     // TODO - look at alternative, but for now the only tabs are in right column
     HtmlNodeFilters.tagWithAttribute("div", "aria-relevant", "additions"),
-    // XXX add to parent and remove here
-    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "^references"),
-    HtmlNodeFilters.tagWithAttributeRegex("div", "id", "trendmd", true),
-    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "trendmd", true),
     
     HtmlNodeFilters.tag("header"),
     HtmlNodeFilters.tag("footer"),
@@ -71,13 +67,9 @@ public class MarkAllenHtmlCrawlFilterFactory
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "content-navigation"),
     // in case there are links in the preview text
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "toc-item__abstract"),
-    // Article landing - ajax tabs
-    HtmlNodeFilters.tagWithAttribute("li", "id", "pane-pcw-references"),
-    HtmlNodeFilters.tagWithAttribute("li", "id", "pane-pcw-related"),
-    // References
-    HtmlNodeFilters.tagWithAttributeRegex("li", "class", "references__item"),
     // never want these links, excluded lists was too long
     HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/author/"),
+    HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/servlet/linkout[?]type="),
     // XXX not sure if needed, but ...
     HtmlNodeFilters.tagWithAttributeRegex("li", "class", "(correction|latest-version)"),
   };
