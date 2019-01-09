@@ -74,6 +74,8 @@ public class MarkAllenHtmlCrawlFilterFactory
     // Article landing - ajax tabs
     HtmlNodeFilters.tagWithAttribute("li", "id", "pane-pcw-references"),
     HtmlNodeFilters.tagWithAttribute("li", "id", "pane-pcw-related"),
+    // References
+    HtmlNodeFilters.tagWithAttributeRegex("li", "class", "references__item"),
     // never want these links, excluded lists was too long
     HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/author/"),
     // XXX not sure if needed, but ...

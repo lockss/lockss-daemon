@@ -53,6 +53,7 @@ public class TestIopXmlMetadataExtractor extends LockssTestCase {
   private static String BASE_URL = "http://www.source.org/";
   private static String TAR_GZ = "0022-3727.tar.gz!/";
   private static final String xml_url = BASE_URL + "2015/" + TAR_GZ + "0022-3727/48/35/355104/d_48_35_355104.xml";
+  private static final String art_xml_url = BASE_URL + "2015/" + TAR_GZ + "0022-3727/48/35/355104/d_48_35_355104.article";
   private static final String pdf_url = BASE_URL + "2015/" + TAR_GZ + "0022-3727/48/35/355104/d_48_35_355104.pdf";
 
   public void setUp() throws Exception {
@@ -100,14 +101,14 @@ public class TestIopXmlMetadataExtractor extends LockssTestCase {
       CIProperties xmlHeader = new CIProperties();    
       xmlHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
       MockCachedUrl mcu = mau.addUrl(xml_url, true, true, xmlHeader);
+      MockCachedUrl altmcu = mau.addUrl(art_xml_url, true, true, xmlHeader); // make sure we prioritize the xml version
       // Now add all the pdf files in our AU since we check for them before emitting
       mau.addUrl(pdf_url, true, true, xmlHeader);
-
       mcu.setContent(string_input);
       mcu.setContentSize(string_input.length());
       mcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
 
-      FileMetadataExtractor me = new  IopJatsXmlMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/xml");
+      FileMetadataExtractor me = new  IopArticleXmlMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/xml");
       FileMetadataListExtractor mle =
           new FileMetadataListExtractor(me);
       List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), mcu);
@@ -127,6 +128,45 @@ public class TestIopXmlMetadataExtractor extends LockssTestCase {
     }
 
   }
+  
+  private static final String realArticleXMLFile = "IOPSourceTest.article.xml";
+
+  
+  public void testFromArticleXMLFile() throws Exception {
+	    InputStream file_input = null;
+	    try {
+	      file_input = getResourceAsStream(realArticleXMLFile);
+	      String string_input = StringUtil.fromInputStream(file_input);
+	      IOUtil.safeClose(file_input);
+
+	      CIProperties xmlHeader = new CIProperties();    
+	      xmlHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
+	      MockCachedUrl mcu = mau.addUrl(art_xml_url, true, true, xmlHeader);
+	      // Now add all the pdf files in our AU since we check for them before emitting
+	      mau.addUrl(pdf_url, true, true, xmlHeader);
+	      mcu.setContent(string_input);
+	      mcu.setContentSize(string_input.length());
+	      mcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
+
+	      FileMetadataExtractor me = new  IopArticleXmlMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/xml");
+	      FileMetadataListExtractor mle =
+	          new FileMetadataListExtractor(me);
+	      List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), mcu);
+	      assertNotEmpty(mdlist);
+	      assertEquals(1, mdlist.size());
+
+	      // check each returned md against expected values
+	      Iterator<ArticleMetadata> mdIt = mdlist.iterator();
+	      ArticleMetadata mdRecord = null;
+	      while (mdIt.hasNext()) {
+	        mdRecord = (ArticleMetadata) mdIt.next();
+	        log.info(mdRecord.ppString(2));
+	      }
+	    }finally {
+	      IOUtil.safeClose(file_input);
+	    }
+
+	  }  
 
   private static final int ISSN_INDEX = 0;
   private static final int DOI_INDEX = 1;
