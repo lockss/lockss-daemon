@@ -37,6 +37,7 @@ import java.io.*;
 
 import junit.framework.Test;
 
+import org.lockss.plugin.atypon.seg.TestSEGArchivalUnit;
 import org.lockss.util.*;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
@@ -59,7 +60,7 @@ public class TestAmericanSpeechLanguageHearingAssocHtmlCrawlFilterFactory extend
   PluginManager pluginMgr;
 
   private static final String PLUGIN_ID =
-          "org.lockss.plugin.atypon.americanspeechlanguagehearingassoc.AmericanSpeechLanguageHearingAssocAtyponPlugin";
+          "org.lockss.plugin.atypon.aslha.AmericanSpeechLanguageHearingAssocAtyponPlugin";
 
   private static final String manifestContent =
       "<html>\n" +
@@ -386,8 +387,7 @@ public class TestAmericanSpeechLanguageHearingAssocHtmlCrawlFilterFactory extend
           "</body>\n" +
           "</html>";
 
-  private static String tocContentCrawlFiltered =
-          "<html lang=\"en\">\n" +
+  private static String tocContentCrawlFiltered = "<html lang=\"en\">\n" +
           "<head>\n" +
           "head section content\n" +
           "</head>\n" +
@@ -408,7 +408,18 @@ public class TestAmericanSpeechLanguageHearingAssocHtmlCrawlFilterFactory extend
           "                                    <div class=\"hidden-lg hidden-md\">\n" +
           "                                        <div class=\"transplant showit\" ></div>\n" +
           "                                    </div>\n" +
-          "                                    \n" +
+          "                                    <div class=\"actionsbar actionsbar__has__sections\">\n" +
+          "                                        <ul class=\"rlist sections-navigation\">\n" +
+          "                                            <li class=\"sections-block-container\">\n" +
+          "                                                <a data-db-target-for=\"sectionsNavigation\" data-slide-clone=\"self\" data-slide-target=\"#sectionsNavigation_Pop\" href=\"#\">\n" +
+          "                                                    <i aria-hidden=\"true\" class=\"icon-list\"></i>\n" +
+          "                                                    Sections\n" +
+          "                                                </a>\n" +
+          "                                                <ul class=\"rlist sections-block\" data-db-target-of=\"sectionsNavigation\" id=\"sectionsNavigation_Pop\">\n" +
+          "                                                </ul>\n" +
+          "                                            </li>\n" +
+          "                                        </ul>\n" +
+          "                                    </div>\n" +
           "                                    <div class=\"table-of-content\">\n" +
           "                                        <div class=\"titled_issues\">\n" +
           "                                            <h4 id=\"h_d221375e37\" class=\"titled_issues__title to-section\">Clinical Focus</h4>\n" +
@@ -1484,8 +1495,74 @@ public class TestAmericanSpeechLanguageHearingAssocHtmlCrawlFilterFactory extend
           "                                </div>\n" +
           "                            </div>\n" +
           "                            <p><a href=\"https://doi.org/part1/part2\" class=\"citation__doi__link\">https://doi.org/part1/part2</a></p>\n" +
-          "                            \n" +
-          "                            \n" +
+          "                            <div class=\"actionsbar actionsbar__standalone\">\n" +
+          "                                <div class=\"actions-block-container\">\n" +
+          "                                    <div><a href=\"/doi/full/part1/part2\" class=\"main-link\"><i class=\"icon-subject\"></i><span>View Full Text</span></a></div>\n" +
+          "                                    <div>\n" +
+          "                                        <a href=\"#\"  class=\"main-link\"><i aria-hidden=\"true\" class=\"icon-PDF\"></i><span>PDF</span></a>\n" +
+          "                                        <ul data-db-target-of=\"article-downloads-list\" id=\"article-downloads-list_Pop\" class=\"rlist\">\n" +
+          "                                            <li><a href=\"/doi/abs/part1/part2\"><i aria-hidden=\"true\" class=\"icon-download\"></i><span>View Abstract</span></a></li>\n" +
+          "                                            <li><a href=\"/doi/pdf/part1/part2\"><i aria-hidden=\"true\" class=\"icon-PDF\"></i><span>View PDF</span></a></li>\n" +
+          "                                        </ul>\n" +
+          "                                    </div>\n" +
+          "                                    <div>\n" +
+          "                                        <a href=\"#\"><i aria-hidden=\"true\" class=\"icon-build\"></i><span>Tools</span></a>\n" +
+          "                                        <ul  class=\"rlist\">\n" +
+          "                                            <li role=\"presentation\" class=\"article-tool\"><a href=\"/personalize/test\" role=\"menuitem\"><i aria-hidden=\"true\" class=\"icon-star\"></i><span>Add to favorites</span></a></li>\n" +
+          "                                            <li role=\"presentation\" class=\"article-tool\"><a href=\"/action/test\" role=\"menuitem\"><i aria-hidden=\"true\" class=\"icon-download\"></i><span>Download Citations</span></a></li>\n" +
+          "                                            <li role=\"presentation\" class=\"article-tool\"><a href=\"/action/test\" role=\"menuitem\"><i aria-hidden=\"true\" class=\"icon-my_location\"></i><span>Track Citations</span></a></li>\n" +
+          "                                        </ul>\n" +
+          "                                    </div>\n" +
+          "                                    <div>\n" +
+          "                                       <a href=\"#\"  data-slide-clone=\"self\"><i aria-hidden=\"true\" class=\"icon-share\"></i><span>Share</span></a>\n" +
+          "                                        <ul  class=\"rlist w-slide--list addthis addthis_toolbox addthis_default_style addthis_32x32_style share__block \">\n" +
+          "                                            <div class=\"pb-dropzone\" data-pb-dropzone=\"shareBlock\"></div>\n" +
+          "                                            <li><a class=\"addthis_button_facebook\"><i aria-hidden=\"true\" class=\"at-icon-wrapper icon-facebook\"></i><span>Facebook</span></a></li>\n" +
+          "                                            <li><a class=\"addthis_button_twitter\"><i aria-hidden=\"true\" class=\"at-icon-wrapper icon-twitter\"></i><span>Twitter</span></a></li>\n" +
+          "                                            <li><a class=\"addthis_button_linkedin\"><i aria-hidden=\"true\" class=\"at-icon-wrapper icon-linkedin\"></i><span>Linked In</span></a></li>\n" +
+          "                                            <li><a class=\"addthis_button_email\"><i aria-hidden=\"true\" class=\"at-icon-wrapper icon-mail\"></i><span>Email</span></a></li>\n" +
+          "                                        </ul>\n" +
+          "                                    </div>\n" +
+          "                                </div>\n" +
+          "                            </div>\n" +
+          "                            <div class=\"actionsbar actionsbar__has__sections\">\n" +
+          "                                <ul class=\"rlist sections-navigation\">\n" +
+          "                                    <li class=\"sections-block-container not-visible\">\n" +
+          "                                        <a href=\"#\" data-db-target-for=\"sectionsNavigation\" data-slide-target=\"#sectionsNavigation_Pop\" data-slide-clone=\"self\"><i aria-hidden=\"true\" class=\"icon-list\"></i>Sections</a>\n" +
+          "                                        <ul data-db-target-of=\"sectionsNavigation\" id=\"sectionsNavigation_Pop\" class=\"rlist sections-block\"></ul>\n" +
+          "                                    </li>\n" +
+          "                                    <li class=\"article-navigation-items-separator not-visible\"></li>\n" +
+          "                                    <li class=\"article-tabs-block-container hidden-md hidden-lg\"><a href=\"#\" data-slide-target=\"article .tab--slide\" data-remove=\"false\" class=\"w-slide__btn\"><i aria-hidden=\"true\" class=\"icon-sort\"></i><span>About</span></a></li>\n" +
+          "                                </ul>\n" +
+          "                                <div class=\"actions-block-container\">\n" +
+          "                                    <div><a href=\"/doi/full/part1/part2\" class=\"main-link\"><i class=\"icon-subject\"></i><span>View Full Text</span></a></div>\n" +
+          "                                    <div>\n" +
+          "                                        <a href=\"#\"  class=\"main-link\"><i aria-hidden=\"true\" class=\"icon-PDF\"></i><span>PDF</span></a>\n" +
+          "                                        <ul data-db-target-of=\"article-downloads-list\" id=\"article-downloads-list_Pop\" class=\"rlist\">\n" +
+          "                                            <li><a href=\"/doi/abs/part1/part2\"><i aria-hidden=\"true\" class=\"icon-download\"></i><span>View Abstract</span></a></li>\n" +
+          "                                            <li><a href=\"/doi/pdf/part1/part2\"><i aria-hidden=\"true\" class=\"icon-PDF\"></i><span>View PDF</span></a></li>\n" +
+          "                                        </ul>\n" +
+          "                                    </div>\n" +
+          "                                    <div>\n" +
+          "                                        <a href=\"#\"><i aria-hidden=\"true\" class=\"icon-build\"></i><span>Tools</span></a>\n" +
+          "                                        <ul  class=\"rlist\">\n" +
+          "                                            <li role=\"presentation\" class=\"article-tool\"><a href=\"/personalize/test\" role=\"menuitem\"><i aria-hidden=\"true\" class=\"icon-star\"></i><span>Add to favorites</span></a></li>\n" +
+          "                                            <li role=\"presentation\" class=\"article-tool\"><a href=\"/action/test\" role=\"menuitem\"><i aria-hidden=\"true\" class=\"icon-download\"></i><span>Download Citations</span></a></li>\n" +
+          "                                            <li role=\"presentation\" class=\"article-tool\"><a href=\"/action/test\" role=\"menuitem\"><i aria-hidden=\"true\" class=\"icon-my_location\"></i><span>Track Citations</span></a></li>\n" +
+          "                                        </ul>\n" +
+          "                                    </div>\n" +
+          "                                    <div>\n" +
+          "                                       <a href=\"#\"  data-slide-clone=\"self\"><i aria-hidden=\"true\" class=\"icon-share\"></i><span>Share</span></a>\n" +
+          "                                        <ul  class=\"rlist w-slide--list addthis addthis_toolbox addthis_default_style addthis_32x32_style share__block \">\n" +
+          "                                            <div class=\"pb-dropzone\" data-pb-dropzone=\"shareBlock\"></div>\n" +
+          "                                            <li><a class=\"addthis_button_facebook\"><i aria-hidden=\"true\" class=\"at-icon-wrapper icon-facebook\"></i><span>Facebook</span></a></li>\n" +
+          "                                            <li><a class=\"addthis_button_twitter\"><i aria-hidden=\"true\" class=\"at-icon-wrapper icon-twitter\"></i><span>Twitter</span></a></li>\n" +
+          "                                            <li><a class=\"addthis_button_linkedin\"><i aria-hidden=\"true\" class=\"at-icon-wrapper icon-linkedin\"></i><span>Linked In</span></a></li>\n" +
+          "                                            <li><a class=\"addthis_button_email\"><i aria-hidden=\"true\" class=\"at-icon-wrapper icon-mail\"></i><span>Email</span></a></li>\n" +
+          "                                        </ul>\n" +
+          "                                    </div>\n" +
+          "                                </div>\n" +
+          "                            </div>\n" +
           "                            <div class=\"article__body \">\n" +
           "                                <!-- abstract content -->\n" +
           "                                <div class=\"hlFld-Abstract\">\n" +
@@ -2136,8 +2213,7 @@ public class TestAmericanSpeechLanguageHearingAssocHtmlCrawlFilterFactory extend
           "</body>\n" +
           "</html>";
 
-  private static String doiPdfContentCrawlFiltered =
-          "<html lang=\"en\" >\n" +
+  private static String doiPdfContentCrawlFiltered = "<html lang=\"en\" >\n" +
           "<head data-pb-dropzone=\"head\">\n" +
           "    header section\n" +
           "</head>\n" +
@@ -2153,7 +2229,7 @@ public class TestAmericanSpeechLanguageHearingAssocHtmlCrawlFilterFactory extend
           "                        \n" +
           "                    </div>\n" +
           "                </div>\n" +
-          "                <article>\n" +
+          "                <article >\n" +
           "                    <div class=\"row\">\n" +
           "                        <div class=\"col-sm-8 col-md-8 article__content\">\n" +
           "                            <div class=\"citation\">\n" +
@@ -2199,8 +2275,74 @@ public class TestAmericanSpeechLanguageHearingAssocHtmlCrawlFilterFactory extend
           "                                </div>\n" +
           "                            </div>\n" +
           "                            <p><a href=\"https://doi.org/part1/part2\" class=\"citation__doi__link\">https://doi.org/part1/part2</a></p>\n" +
-          "                            \n" +
-          "                            \n" +
+          "                            <div class=\"actionsbar actionsbar__standalone\">\n" +
+          "                                <div class=\"actions-block-container\">\n" +
+          "                                    <div><a href=\"/doi/full/part1/part2\" class=\"main-link\"><i class=\"icon-subject\"></i><span>View Full Text</span></a></div>\n" +
+          "                                    <div>\n" +
+          "                                        <a href=\"#\"  class=\"main-link\"><i aria-hidden=\"true\" class=\"icon-PDF\"></i><span>PDF</span></a>\n" +
+          "                                        <ul data-db-target-of=\"article-downloads-list\" id=\"article-downloads-list_Pop\" class=\"rlist\">\n" +
+          "                                            <li><a href=\"/doi/abs/part1/part2\"><i aria-hidden=\"true\" class=\"icon-download\"></i><span>View Abstract</span></a></li>\n" +
+          "                                            <li><a href=\"/doi/pdf/part1/part2\"><i aria-hidden=\"true\" class=\"icon-PDF\"></i><span>View PDF</span></a></li>\n" +
+          "                                        </ul>\n" +
+          "                                    </div>\n" +
+          "                                    <div>\n" +
+          "                                        <a href=\"#\" ><i aria-hidden=\"true\" class=\"icon-build\"></i><span>Tools</span></a>\n" +
+          "                                        <ul  class=\"rlist\">\n" +
+          "                                            <li role=\"presentation\" class=\"article-tool\"><a href=\"/personalize/addFavoritePublication?doi=10.1044%2F2018_AJSLP-17-0013\" role=\"menuitem\"><i aria-hidden=\"true\" class=\"icon-star\"></i><span>Add to favorites</span></a></li>\n" +
+          "                                            <li role=\"presentation\" class=\"article-tool\"><a href=\"/action/showCitFormats?doi=10.1044%2F2018_AJSLP-17-0013\" role=\"menuitem\"><i aria-hidden=\"true\" class=\"icon-download\"></i><span>Download Citations</span></a></li>\n" +
+          "                                            <li role=\"presentation\" class=\"article-tool\"><a href=\"/action/addCitationAlert?doi=10.1044%2F2018_AJSLP-17-0013\" role=\"menuitem\"><i aria-hidden=\"true\" class=\"icon-my_location\"></i><span>Track Citations</span></a></li>\n" +
+          "                                        </ul>\n" +
+          "                                    </div>\n" +
+          "                                    <div>\n" +
+          "                                       <a href=\"#\"  data-slide-clone=\"self\"><i aria-hidden=\"true\" class=\"icon-share\"></i><span>Share</span></a>\n" +
+          "                                        <ul  class=\"rlist w-slide--list addthis addthis_toolbox addthis_default_style addthis_32x32_style share__block \">\n" +
+          "                                            <div class=\"pb-dropzone\" data-pb-dropzone=\"shareBlock\"></div>\n" +
+          "                                            <li><a class=\"addthis_button_facebook\"><i aria-hidden=\"true\" class=\"at-icon-wrapper icon-facebook\"></i><span>Facebook</span></a></li>\n" +
+          "                                            <li><a class=\"addthis_button_twitter\"><i aria-hidden=\"true\" class=\"at-icon-wrapper icon-twitter\"></i><span>Twitter</span></a></li>\n" +
+          "                                            <li><a class=\"addthis_button_linkedin\"><i aria-hidden=\"true\" class=\"at-icon-wrapper icon-linkedin\"></i><span>Linked In</span></a></li>\n" +
+          "                                            <li><a class=\"addthis_button_email\"><i aria-hidden=\"true\" class=\"at-icon-wrapper icon-mail\"></i><span>Email</span></a></li>\n" +
+          "                                        </ul>\n" +
+          "                                    </div>\n" +
+          "                                </div>\n" +
+          "                            </div>\n" +
+          "                            <div class=\"actionsbar actionsbar__has__sections\">\n" +
+          "                                <ul class=\"rlist sections-navigation\">\n" +
+          "                                    <li class=\"sections-block-container not-visible\">\n" +
+          "                                        <a href=\"#\" data-db-target-for=\"sectionsNavigation\" data-slide-target=\"#sectionsNavigation_Pop\" data-slide-clone=\"self\"><i aria-hidden=\"true\" class=\"icon-list\"></i>Sections</a>\n" +
+          "                                        <ul data-db-target-of=\"sectionsNavigation\" id=\"sectionsNavigation_Pop\" class=\"rlist sections-block\"></ul>\n" +
+          "                                    </li>\n" +
+          "                                    <li class=\"article-navigation-items-separator not-visible\"></li>\n" +
+          "                                    <li class=\"article-tabs-block-container hidden-md hidden-lg\"><a href=\"#\" data-slide-target=\"article .tab--slide\" data-remove=\"false\" class=\"w-slide__btn\"><i aria-hidden=\"true\" class=\"icon-sort\"></i><span>About</span></a></li>\n" +
+          "                                </ul>\n" +
+          "                                <div class=\"actions-block-container\">\n" +
+          "                                    <div><a href=\"/doi/full/part1/part2\" class=\"main-link\"><i class=\"icon-subject\"></i><span>View Full Text</span></a></div>\n" +
+          "                                    <div>\n" +
+          "                                        <a href=\"#\"  class=\"main-link\"><i aria-hidden=\"true\" class=\"icon-PDF\"></i><span>PDF</span></a>\n" +
+          "                                        <ul data-db-target-of=\"article-downloads-list\" id=\"article-downloads-list_Pop\" class=\"rlist\">\n" +
+          "                                            <li><a href=\"/doi/abs/part1/part2\"><i aria-hidden=\"true\" class=\"icon-download\"></i><span>View Abstract</span></a></li>\n" +
+          "                                            <li><a href=\"/doi/pdf/part1/part2\"><i aria-hidden=\"true\" class=\"icon-PDF\"></i><span>View PDF</span></a></li>\n" +
+          "                                        </ul>\n" +
+          "                                    </div>\n" +
+          "                                    <div>\n" +
+          "                                        <a href=\"#\"><i aria-hidden=\"true\" class=\"icon-build\"></i><span>Tools</span></a>\n" +
+          "                                        <ul  class=\"rlist\">\n" +
+          "                                            <li role=\"presentation\" class=\"article-tool\"><a href=\"/personalize/addFavoritePublication?doi=10.1044%2F2018_AJSLP-17-0013\" role=\"menuitem\"><i aria-hidden=\"true\" class=\"icon-star\"></i><span>Add to favorites</span></a></li>\n" +
+          "                                            <li role=\"presentation\" class=\"article-tool\"><a href=\"/action/showCitFormats?doi=10.1044%2F2018_AJSLP-17-0013\" role=\"menuitem\"><i aria-hidden=\"true\" class=\"icon-download\"></i><span>Download Citations</span></a></li>\n" +
+          "                                            <li role=\"presentation\" class=\"article-tool\"><a href=\"/action/addCitationAlert?doi=10.1044%2F2018_AJSLP-17-0013\" role=\"menuitem\"><i aria-hidden=\"true\" class=\"icon-my_location\"></i><span>Track Citations</span></a></li>\n" +
+          "                                        </ul>\n" +
+          "                                    </div>\n" +
+          "                                    <div>\n" +
+          "                                       <a href=\"#\"  data-slide-clone=\"self\"><i aria-hidden=\"true\" class=\"icon-share\"></i><span>Share</span></a>\n" +
+          "                                        <ul  class=\"rlist w-slide--list addthis addthis_toolbox addthis_default_style addthis_32x32_style share__block \">\n" +
+          "                                            <div class=\"pb-dropzone\" data-pb-dropzone=\"shareBlock\"></div>\n" +
+          "                                            <li><a class=\"addthis_button_facebook\"><i aria-hidden=\"true\" class=\"at-icon-wrapper icon-facebook\"></i><span>Facebook</span></a></li>\n" +
+          "                                            <li><a class=\"addthis_button_twitter\"><i aria-hidden=\"true\" class=\"at-icon-wrapper icon-twitter\"></i><span>Twitter</span></a></li>\n" +
+          "                                            <li><a class=\"addthis_button_linkedin\"><i aria-hidden=\"true\" class=\"at-icon-wrapper icon-linkedin\"></i><span>Linked In</span></a></li>\n" +
+          "                                            <li><a class=\"addthis_button_email\"><i aria-hidden=\"true\" class=\"at-icon-wrapper icon-mail\"></i><span>Email</span></a></li>\n" +
+          "                                        </ul>\n" +
+          "                                    </div>\n" +
+          "                                </div>\n" +
+          "                            </div>\n" +
           "                            <div class=\"article__body \">\n" +
           "                                <!-- abstract content -->\n" +
           "                                <div class=\"hlFld-Abstract\">\n" +
@@ -2296,10 +2438,8 @@ public class TestAmericanSpeechLanguageHearingAssocHtmlCrawlFilterFactory extend
           "            </div>\n" +
           "        </div>\n" +
           "        \n" +
-
           "    </div>\n" +
           "</div>\n" +
-
           "</body>\n" +
           "</html>";
 
@@ -2335,6 +2475,7 @@ public class TestAmericanSpeechLanguageHearingAssocHtmlCrawlFilterFactory extend
 
       try {
         filteredStr = StringUtil.fromInputStream(actIn);
+
       } catch (IOException e) {
         e.printStackTrace();
       }
@@ -2440,19 +2581,18 @@ public class TestAmericanSpeechLanguageHearingAssocHtmlCrawlFilterFactory extend
       compareContentLineByLine(unicodeFilteredStr, unicodeExpectedStr);
     }
 
-
     public void testFullContentFiltering() throws Exception {
       String unicodeFilteredStr = getFilteredContent(mau, variantCrawlFact, doiFullContent);
       String unicodeExpectedStr = doiFullContentCrawlFiltered;
       compareContentLineByLine(unicodeFilteredStr, unicodeExpectedStr);
     }
 
-
     public void testAbsContentFiltering() throws Exception {
       String unicodeFilteredStr = getUTF8String(getFilteredContent(mau, variantCrawlFact, doiAbsContent));
       String unicodeExpectedStr = getUTF8String(doiAbsContentCrawlFiltered);
       compareContentLineByLine(unicodeFilteredStr, unicodeExpectedStr);
     }
+
 
     public void testPdfContentFiltering() throws Exception {
       String unicodeFilteredStr = getFilteredContent(mau, variantCrawlFact, doiPdfContent);

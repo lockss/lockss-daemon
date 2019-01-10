@@ -58,7 +58,11 @@ public class AmericanSpeechLanguageHearingAssocHtmlCrawlFilterFactory extends Ba
           // Remove from toc page
           HtmlNodeFilters.tagWithAttributeRegex("div", "class", "publication__menu"),
           // Remove from toc page
-          HtmlNodeFilters.tagWithAttributeRegex("div", "class", "actionsbar"),
+          // Need to download citation from this div
+          HtmlNodeFilters.allExceptSubtree(
+                  HtmlNodeFilters.tagWithAttribute("div", "class", "actionsbar"),
+                  HtmlNodeFilters.tagWithAttributeRegex(
+                          "a", "href", "/action/showCitFormats\\?")),
           // Remove from toc page
           HtmlNodeFilters.tagWithAttributeRegex("div", "class", "social-menus"),
           // Remove from toc page
