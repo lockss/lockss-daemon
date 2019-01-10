@@ -59,6 +59,10 @@ public class TestAmericanSpeechLanguageHearingAssocHtmlCrawlFilterFactory extend
   MockLockssDaemon daemon;
   PluginManager pluginMgr;
 
+  private static Logger log = Logger.getLogger(
+          TestAmericanSpeechLanguageHearingAssocHtmlCrawlFilterFactory.class);
+
+
   private static final String PLUGIN_ID =
           "org.lockss.plugin.atypon.aslha.AmericanSpeechLanguageHearingAssocAtyponPlugin";
 
@@ -1598,12 +1602,8 @@ public class TestAmericanSpeechLanguageHearingAssocHtmlCrawlFilterFactory extend
           "                                    <p class=\"explanation__text\"></p>\n" +
           "                                    <h2>References</h2>\n" +
           "                                    <ul class=\"rlist separator\">\n" +
-          "                                        <li id=\"bib77\" class=\" references__item \">\n" +
-          "                                                    li content\n" +
-          "                                        </li>\n" +
-          "                                        <li id=\"bib1\" class=\" references__item \">\n" +
-          "                                                    li content\n" +
-          "                                        </li>\n" +
+          "                                        \n" +
+          "                                        \n" +
           "                                    </ul>\n" +
           "                                </div>\n" +
           "                                <div   class=\"response\">\n" +
@@ -2382,24 +2382,7 @@ public class TestAmericanSpeechLanguageHearingAssocHtmlCrawlFilterFactory extend
           "                                    <p class=\"explanation__text\"></p>\n" +
           "                                    <h2>References</h2>\n" +
           "                                    <ul class=\"rlist separator\">\n" +
-          "                                        <li id=\"bib1\" class=\"references__item \">\n" +
-          "                                       <span xmlns:xje=\"link\" xmlns:fn=\"link\" class=\"references__note\">\n" +
-          "                                          (\n" +
-          "                                          <span class=\"references__year\">1995</span>).\n" +
-          "                                          <span class=\"references__article-title\">some content</span>.\n" +
-          "                                          <span class=\"references__source\">\n" +
-          "                                          <strong>Neurotoxicology and Teratology</strong>\n" +
-          "                                          </span>,\n" +
-          "                                          <b>17</b>(4), 445â\u0080\u0093462.\n" +
-          "                                          <a class=\"references__doi\" href=\"https://doi.org/\">\n" +
-          "                                          <span class=\"references__doi__label\">\n" +
-          "                                          DOI:\n" +
-          "                                          </span>https://doi.org/part1/part2\n" +
-          "                                          </a>\n" +
-          "                                          <span class=\"references__suffix\"><a class=\"google-scholar\" href=\"http://scholar.google.com/scholar_lookup?hl=en&publication_year=someyear\"target=\"_blank\">Find this author on Google Scholar</a>\n" +
-          "                                          </span>\n" +
-          "                                       </span>\n" +
-          "                                        </li>\n" +
+          "                                        \n" +
           "                                    </ul>\n" +
           "                                </div>\n" +
           "                                <div   class=\"response\">\n" +
@@ -2460,10 +2443,6 @@ public class TestAmericanSpeechLanguageHearingAssocHtmlCrawlFilterFactory extend
     return conf;
   }
 
-  private static String getUTF8String(String str) {
-    return java.nio.charset.StandardCharsets.UTF_8.encode(str).toString();
-  }
-
   private static String getFilteredContent(ArchivalUnit au, FilterFactory fact, String nameToHash) {
 
     InputStream actIn;
@@ -2475,7 +2454,6 @@ public class TestAmericanSpeechLanguageHearingAssocHtmlCrawlFilterFactory extend
 
       try {
         filteredStr = StringUtil.fromInputStream(actIn);
-
       } catch (IOException e) {
         e.printStackTrace();
       }
@@ -2588,11 +2566,10 @@ public class TestAmericanSpeechLanguageHearingAssocHtmlCrawlFilterFactory extend
     }
 
     public void testAbsContentFiltering() throws Exception {
-      String unicodeFilteredStr = getUTF8String(getFilteredContent(mau, variantCrawlFact, doiAbsContent));
-      String unicodeExpectedStr = getUTF8String(doiAbsContentCrawlFiltered);
+      String unicodeFilteredStr = getFilteredContent(mau, variantCrawlFact, doiAbsContent);
+      String unicodeExpectedStr = doiAbsContentCrawlFiltered;
       compareContentLineByLine(unicodeFilteredStr, unicodeExpectedStr);
     }
-
 
     public void testPdfContentFiltering() throws Exception {
       String unicodeFilteredStr = getFilteredContent(mau, variantCrawlFact, doiPdfContent);
@@ -2603,7 +2580,6 @@ public class TestAmericanSpeechLanguageHearingAssocHtmlCrawlFilterFactory extend
   }
 
   public static class TestHash extends TestAmericanSpeechLanguageHearingAssocHtmlCrawlFilterFactory {
-
     public void testManifestHash() throws Exception {
       String unicodeFilteredStr = getFilteredContent(mau, variantHashFact, manifestContent);
       String unicodeExpectedStr = manifestHashFiltered;
@@ -2625,7 +2601,6 @@ public class TestAmericanSpeechLanguageHearingAssocHtmlCrawlFilterFactory extend
       assertEquals(unicodeFilteredStr, unicodeExpectedStr);
     }
 
-
     public void testAbsContentHash() throws Exception {
       String unicodeFilteredStr = getFilteredContent(mau, variantHashFact, doiAbsContent);
       String unicodeExpectedStr = doiAbsContentHashFiltered;
@@ -2637,7 +2612,6 @@ public class TestAmericanSpeechLanguageHearingAssocHtmlCrawlFilterFactory extend
       String unicodeExpectedStr = doiPdfContentHashFiltered;
       assertEquals(unicodeFilteredStr, unicodeExpectedStr);
     }
-
   }
 
   public static Test suite() {
