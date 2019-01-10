@@ -127,6 +127,7 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "doubleClickAdWidget"),
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumInstitutionBanner"),
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumContentItemDownloadCount"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "data-widget-def", "literatumContentItemDownloadCount"),
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "articleCount"),
     
     // crossref to site library

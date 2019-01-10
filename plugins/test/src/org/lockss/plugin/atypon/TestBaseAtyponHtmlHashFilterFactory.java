@@ -295,9 +295,22 @@ public class TestBaseAtyponHtmlHashFilterFactory extends LockssTestCase {
         "<li>" +
         "<a class=\"icon-tables\" href=\"javascript:void(0);\" id=\"tables\">Tables</a>" +
         "</li>" +
-        "</ul>";        
-
-
+        "</ul>";
+  
+  private static final String withMetrics = 
+      "<h3>Metrics</h3>\n" + 
+      "  <div data-widget-def=\"literatumContentItemDownloadCount\" data-widget-id=\"id\" class=\"article-downloads\">\n" + 
+      "                Downloaded 15 times\n" + 
+      "  </div>\n" + 
+      "  <div id=\"doi_altmetric_drawer_area\">\n" + 
+      "    <div data-badge-details=\"right\" data-badge-type=\"donut\" data-doi=\"10.1152/jn.00002.2017\" data-hide-no-mentions=\"true\" class=\"altmetric-embed\">\n" + 
+      "    </div>\n" + 
+      "  </div>";
+    private static final String withoutMetrics =
+        "<h3>Metrics</h3>\n" +
+        "  \n" +
+        "  ";
+    
   
   /*
    *  Compare Html and HtmlHashFiltered
@@ -343,6 +356,12 @@ public class TestBaseAtyponHtmlHashFilterFactory extends LockssTestCase {
     InputStream actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(withStylesheet), Constants.DEFAULT_ENCODING);
     assertEquals(withoutStylesheet, StringUtil.fromInputStream(actIn));
+  }
+  
+  public void testMetrics() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(withMetrics), Constants.DEFAULT_ENCODING);
+    assertEquals(withoutMetrics, StringUtil.fromInputStream(actIn));
   }
   
   public void testAccessIcon() throws Exception {
