@@ -1,0 +1,31 @@
+{
+
+  publisher <
+    name = Journal of Advanced Engineering and Computation ;
+    info[contract] = 2018 ;
+    info[tester] = 8 ;
+    info[poller] = 8
+  >
+
+    plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
+    implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
+
+    {
+
+      title < 
+        name = Journal of Advanced Engineering and Computation  ;
+        eissn = 2588-123X ;
+        issn = 1859-2244
+      
+      >
+      param[base_url] = http://jaec.vn/
+      param[journal_id] = JAEC
+
+ 
+      au < testing ; exists ; 2017 ; Journal of Advanced Engineering and Computation Volume 1 ; 1 ; 2017 ; > 
+      au < testing ; exists ; 2018 ; Journal of Advanced Engineering and Computation Volume 12 ; 2 ; 2018 ; >
+
+    }
+
+}
+
