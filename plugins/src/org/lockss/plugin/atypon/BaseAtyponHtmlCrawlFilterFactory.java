@@ -85,7 +85,6 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
     //see http://ascopubs.org/doi/abs/10.1200/jco.2008.26.15_suppl.1027 right column
     // we avoid the whole right column, but this seems like a good general catch
     HtmlNodeFilters.tagWithAttributeRegex("div","class", "relatedArticlesWidget"),
-   
     
     // Since overcrawling is a constant problem for Atypon, put common
     // next article-previous article link for safety; 
@@ -117,14 +116,24 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
     // there are a variety of ways these blocks are identified, but 
     // these are unlikely to be used anywhere else so put in parent
     // emerald, AIAA
-    HtmlNodeFilters.tagWithAttribute("div", "class", "references"),
+    // widen match for MarkAllen
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "^references"),
     // ASCE
     HtmlNodeFilters.tagWithAttribute("li", "class", "reference"),
     // T&F: <ul class=\"references numeric-ordered-list\" id=\"references-Section\">
     HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "^references"),
-    //maney, future-science (also in child...will remove later)
+    HtmlNodeFilters.tagWithAttributeRegex("ol", "class", "^references"),
+    //maney, future-science
     HtmlNodeFilters.tagWithAttribute("table", "class", "references"),
-
+    // Article landing - ajax tabs
+    HtmlNodeFilters.tagWithAttribute("li", "id", "pane-pcw-references"),
+    HtmlNodeFilters.tagWithAttribute("li", "id", "pane-pcw-related"),
+    // References
+    HtmlNodeFilters.tagWithAttributeRegex("li", "class", "references__item"),
+    // more common tags
+    HtmlNodeFilters.tagWithAttributeRegex("div", "id", "(altmetric|trendmd)", true),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(altmetric|trendmd)", true),
+    
     // This used to be Regex but that was too broad and was a problem for Sage
     // Did an analysis and made it specific to the class
     // Publishers that need more will have to ask for it themselves

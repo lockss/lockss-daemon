@@ -51,6 +51,7 @@ public class MarkAllenHtmlHashFilterFactory
     NodeFilter[] filters = new NodeFilter[] {
         // handled by parent: script, sfxlink, stylesheet
         
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "articleCount"),
         // from toc - ad panel has link to other issue 
         // http://www.magonlinelibrary.com/toc/bjom/21/10
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
@@ -66,7 +67,7 @@ public class MarkAllenHtmlHashFilterFactory
                 "div", "class", "literatumArticleToolsWidget"),
             HtmlNodeFilters.tagWithAttributeRegex(
                 "a", "href", "/action/showCitFormats\\?")),
-        
+        // articleCountSection
     };
     // super.createFilteredInputStream adds filters to the baseAtyponFilters
     // and returns the filtered input stream using an array of NodeFilters that 

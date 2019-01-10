@@ -95,6 +95,8 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
     //HtmlNodeFilters.comment(),
     HtmlNodeFilters.tag("style"),
     
+    HtmlNodeFilters.tag("header"),
+    HtmlNodeFilters.tag("footer"),
     HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
     HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
     // pageHeader/Footer
@@ -102,6 +104,11 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttribute("div", "id", "pageFooter"),
     HtmlNodeFilters.tagWithAttribute("div", "class", "pageHeader"),
     HtmlNodeFilters.tagWithAttribute("div", "class", "pageFooter"),
+    
+    HtmlNodeFilters.tag("nav"),
+    // more common tags
+    HtmlNodeFilters.tagWithAttributeRegex("div", "id", "(altmetric|trendmd)", true),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(altmetric|trendmd)", true),
     
     // sections that may show up with this skin - from CRAWL filter
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumBookIssueNavigation"),
@@ -120,6 +127,7 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "doubleClickAdWidget"),
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumInstitutionBanner"),
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumContentItemDownloadCount"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "articleCount"),
     
     // crossref to site library
     HtmlNodeFilters.tagWithAttribute("a", "class", "sfxLink"),
