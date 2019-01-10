@@ -68,7 +68,7 @@ public class MarkAllenHtmlCrawlFilterFactory
     // in case there are links in the preview text
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "toc-item__abstract"),
     // never want these links, excluded lists was too long
-    HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/author/"),
+    HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/(author|keyword|personalize)/"),
     HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/servlet/linkout[?]type="),
     // XXX not sure if needed, but ...
     HtmlNodeFilters.tagWithAttributeRegex("li", "class", "(correction|latest-version)"),

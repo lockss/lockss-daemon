@@ -82,14 +82,14 @@ public class TestMarkAllenHtmlFilterFactory
   // from toc - ad panel has link to other issue 
   // http://www.magonlinelibrary.com/toc/bjom/21/10
   private static final String withGenericSlideshow =
-      "<div class=\"block\">" +  
+      "<div class=\"block\">" +
           "<div class=\"widget genericSlideshow none  widget-none  widget-compact-all\" id=\"b98\">" +
           "<div class=\"widget-body body body-none  body-compact-all\">" +
           "<div class=\"slides\">" +
           "<div class=\"widget-body body body-none \"><img src=\"/rawimage/jid-22-10.gif\"</div>" +
           "<p><a href=\"http://www.magonlinelibrary.com/doi/full/10.12968/bjom.2014.22.10.694\" id=\"jidlink\">read</a></p>" +
           "</div></div></div>" +
-          "</div>";  
+          "</div>";
   
   // toc, abs, full, text and ref right column - most read 
   // http://www.magonlinelibrary.com/doi/full/10.12968/bjom.2013.21.10.688
@@ -132,10 +132,10 @@ public class TestMarkAllenHtmlFilterFactory
           "<div class=\"widget-body body body-none \">" +
           "<a href=\"/toc/jid/current\"><img src=\"/logos.png\"></a></div>" +
           "</div></div></div></div></div></div>" +
-          "</div>";     
+          "</div>";
   
   // for toc - social media
-  private static final String withSocialMedia =  
+  private static final String withSocialMedia = 
       "<div class=\"block\">" +
           "<div class=\"widget general-bookmark-share alignCenter " +
           "addthisborder widget-none\" id=\"d62\">" +
@@ -146,10 +146,10 @@ public class TestMarkAllenHtmlFilterFactory
           "</div>";
   
   // from toc - access icon container 
-  private static final String withAccessIconContainer =  
+  private static final String withAccessIconContainer = 
       "<div class=\"block\">" +
         "<td class=\"accessIconContainer\"><div></div></td>" +
-      "</div>"; 
+      "</div>";
   
   // middle column ad of an article - all article tools with 
   // class literatumArticleToolsWidget except Download Citations
@@ -176,7 +176,7 @@ public class TestMarkAllenHtmlFilterFactory
           " <a href=\"/action/showCitFormats?" +
           "doi=11.11111%2Fjid.2013.111\">Download citation </a> </li> </ul>" +
           " </div>" +
-          " </div>";  
+          " </div>";
    
   // from full text - Downloaded count
   // http://www.magonlinelibrary.com/doi/full/10.12968/bjom.2013.21.10.692
@@ -187,7 +187,7 @@ public class TestMarkAllenHtmlFilterFactory
          "</div>";
   
   // pageFooter
-  private static final String withPageFooter =  
+  private static final String withPageFooter = 
       "<div class=\"block\">" +
           "<div class=\"widget pageFooter \" id=\"pageFooter\">" +
           "<div class=\"widget-body body body-none \">" +
@@ -196,7 +196,7 @@ public class TestMarkAllenHtmlFilterFactory
           "<h3>ABOUT</h3>" +
           "<ul><li><a href=\"/page/privacy\">Site privacy</a></li></ul>" +
           "</div></div></div></div>" +
-          "</div>";     
+          "</div>";
   
   // http://www.magonlinelibrary.com/doi/full/10.12968/bjnn.2014.10.1.13
   private static final String withCitedby =
@@ -204,11 +204,11 @@ public class TestMarkAllenHtmlFilterFactory
           "<ul><li>" +
           "<a href=\"/doi/citedby/11.1111/jid.20129999\"> Cited by </a>" +
           "</li></ul>" +
-          "</div>"; 
+          "</div>";
   private static final String withoutCitedby =
       " <div class=\"block\">" + 
           " <ul> </ul>" +
-          " </div>";  
+          " </div>";
   
   protected ArchivalUnit createAu()
       throws ArchivalUnit.ConfigurationException {
@@ -226,7 +226,7 @@ public class TestMarkAllenHtmlFilterFactory
   private static void doFilterTest(ArchivalUnit au, 
       FilterFactory fact, String nameToHash, String expectedStr) 
           throws PluginException, IOException {
-    InputStream actIn; 
+    InputStream actIn;
     actIn = fact.createFilteredInputStream(au, 
         new StringInputStream(nameToHash), Constants.DEFAULT_ENCODING);
     assertEquals(expectedStr, StringUtil.fromInputStream(actIn));
@@ -253,9 +253,9 @@ public class TestMarkAllenHtmlFilterFactory
   public static class TestCrawl extends TestMarkAllenHtmlFilterFactory {
     public void testFiltering() throws Exception {
       variantFact = new MarkAllenHtmlCrawlFilterFactory();
-      doFilterTest(maau, variantFact, withGenericSlideshow, filteredCrawlStr); 
-      doFilterTest(maau, variantFact, withLiteratumMostReadWidget, filteredCrawlStr);    
-    }    
+      doFilterTest(maau, variantFact, withGenericSlideshow, filteredCrawlStr);
+      doFilterTest(maau, variantFact, withLiteratumMostReadWidget, filteredCrawlStr);
+    }
   }
 
   // Variant to test with Hash Filter
@@ -266,7 +266,7 @@ public class TestMarkAllenHtmlFilterFactory
                    filteredStr);
       doFilterTest(maau, variantFact, withLiteratumAd, filteredStr);
       doFilterTest(maau, variantFact, withPageHeader, filteredStr);
-      doFilterTest(maau, variantFact, withGenericSlideshow, filteredStr); 
+      doFilterTest(maau, variantFact, withGenericSlideshow, filteredStr);
       doFilterTest(maau, variantFact, withSocialMedia, filteredStr);
       doFilterTest(maau, variantFact, withAccessIconContainer, filteredStr);
       doFilterTest(maau, variantFact, 
@@ -276,7 +276,7 @@ public class TestMarkAllenHtmlFilterFactory
                    filteredStr);
       doFilterTest(maau, variantFact, withLiteratumMostReadWidget, filteredStr);
       doFilterTest(maau, variantFact, withPageFooter, filteredStr);
-      doFilterTest(maau, variantFact, withCitedby, withoutCitedby); 
+      doFilterTest(maau, variantFact, withCitedby, withoutCitedby);
     }
   }
   
