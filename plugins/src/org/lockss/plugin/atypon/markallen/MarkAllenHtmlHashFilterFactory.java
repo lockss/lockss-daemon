@@ -51,7 +51,6 @@ public class MarkAllenHtmlHashFilterFactory
     NodeFilter[] filters = new NodeFilter[] {
         // handled by parent: script, sfxlink, stylesheet
         
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "articleCount"),
         // from toc - ad panel has link to other issue 
         // http://www.magonlinelibrary.com/toc/bjom/21/10
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
@@ -73,6 +72,11 @@ public class MarkAllenHtmlHashFilterFactory
     // and returns the filtered input stream using an array of NodeFilters that 
     // combine the two arrays of NodeFilters.
     return super.createFilteredInputStream(au, in, encoding, filters);
+  }
+
+  @Override
+  public boolean doHttpsConversion() {
+    return true;
   }
 
   @Override

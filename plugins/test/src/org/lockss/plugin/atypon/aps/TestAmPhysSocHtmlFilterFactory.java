@@ -933,10 +933,7 @@ public class TestAmPhysSocHtmlFilterFactory extends LockssTestCase {
       "    <div data-widget-def=\"literatumContentItemDownloadCount\" data-widget-id=\"id\" class=\"article-downloads\">\n" + 
       "                Downloaded 15 times\n" + 
       "    </div>\n" + 
-      "    <div id=\"doi_altmetric_drawer_area\">\n" + 
-      "       <div data-badge-details=\"right\" data-badge-type=\"donut\" data-doi=\"10.1152/jn.00002.2017\" data-hide-no-mentions=\"true\" class=\"altmetric-embed\">\n" + 
-      "       </div>\n" + 
-      "    </div>\n" + 
+      "    \n" + 
       " </li>\n" + 
       " <li class=\"tab__spinner\"><img src=\"/pb-assets/images/spinner.gif\" id=\"spinner\" style=\"width: 100%\"/></li>\n" + 
       " </ul>\n" + 

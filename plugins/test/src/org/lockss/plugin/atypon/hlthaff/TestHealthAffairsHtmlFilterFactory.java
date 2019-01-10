@@ -1252,8 +1252,7 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "          window.location.hash = '';\n" + 
       "      }\n" + 
       "    </script>\n" + 
-      "    <div class=\"altmetric-embed altmetric-popover altmetric-right\" data-uuid=\"9876543-21\" id=\"_altmetric_popover_el\" style=\"margin: 0px; display: none;\">\n" + 
-      "    </div>\n" + 
+      "    \n" + 
       "    <ul class=\"ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all quickSearchAutocomplete\" id=\"ui-id-1\" tabindex=\"0\" style=\"display: none;\"></ul>\n" + 
       "  </body>\n" + 
       "</html>";
