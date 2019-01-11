@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>32</string>
+    <string>33</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -218,6 +218,13 @@
     <list>
       <string>502=org.lockss.plugin.medknow.MedknowHttpResponseHandler</string>
       <string>503=org.lockss.plugin.medknow.MedknowHttpResponseHandler</string>
+      <!-- Invalid content-type file. Captures cases like html returned instead of PDF 
+        Make no store/no_fail due to html returned for PDF
+        we will count on polls to catch errors where no content was stored -->
+      <string>org.lockss.plugin.ContentValidationException$WrongLength=org.lockss.plugin.medknow.MedknowHttpResponseHandler</string>
+      <string>org.lockss.plugin.ContentValidationException=org.lockss.plugin.medknow.MedknowHttpResponseHandler</string>
+      <!-- SSL Handshake -->
+      <string>javax.net.ssl.SSLHandshakeException=org.lockss.plugin.medknow.MedknowHttpResponseHandler</string>
     </list>
   </entry>
   <entry>
@@ -248,5 +255,10 @@
       <string>;type=0$, text/html</string>
       <string>;t=2$, application/x-Research-Info-Systems</string>
     </list>
+  </entry>
+  <entry>
+    <!-- Validator factory for text MIME types -->
+    <string>text/*_content_validator_factory</string>
+    <string>org.lockss.plugin.medknow.MedknowContentValidatorFactory</string>
   </entry>
 </map>

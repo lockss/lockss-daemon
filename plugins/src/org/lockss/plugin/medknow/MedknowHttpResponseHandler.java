@@ -35,6 +35,7 @@ package org.lockss.plugin.medknow;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
+import org.lockss.util.urlconn.CacheException.RetryableNetworkException_2_10S;
 
 
 public class MedknowHttpResponseHandler implements CacheResultHandler {
@@ -70,8 +71,54 @@ public class MedknowHttpResponseHandler implements CacheResultHandler {
   public CacheException handleResult(ArchivalUnit au,
                                      String url,
                                      Exception ex) {
+    // this checks for the specific exceptions before going to the general case and retry
+    if (ex instanceof ContentValidationException.WrongLength) {
+      logger.warning("Wrong length - not storing file " + url);
+      // retry and no store cache exception
+      return new RetryableNoFailException_2_10S(ex);
+    }
+    
+    // handle retryable exceptions ; URL MIME type mismatch for pages like 
+    if (ex instanceof ContentValidationException) {
+      logger.warning("Warning - retry/no fail/no store " + url);
+      // retry and no store cache exception
+      return new RetryableNoFailException_2_10S(ex);
+    }
+    
+    if (ex instanceof javax.net.ssl.SSLHandshakeException) {
+      logger.warning("Warning - SSLHandshakeException " + url);
+      return new RetryableNetworkException_2_10S(ex);
+    }
+    
+    // we should only get in her cases that we specifically map...be very unhappy
     logger.warning("Unexpected call to handleResult(): AU " + au.getName() + "; URL " + url, ex);
     throw new UnsupportedOperationException("Unexpected call to handleResult(): AU " + au.getName() + "; URL " + url, ex);
+  }
+  
+  /** Retryable & no fail network error; two tries with 10 second delay */
+  protected static class RetryableNoFailException_2_10S
+    extends RetryableNetworkException_2_10S {
+    
+    public RetryableNoFailException_2_10S() {
+      super();
+    }
+    
+    public RetryableNoFailException_2_10S(String message) {
+      super(message);
+    }
+    
+    /** Create this if details of causal exception are more relevant. */
+    public RetryableNoFailException_2_10S(Exception e) {
+      super(e);
+    }
+    
+    @Override
+    protected void setAttributes() {
+      super.setAttributes();
+      attributeBits.clear(ATTRIBUTE_FAIL);
+      attributeBits.set(ATTRIBUTE_NO_STORE);
+    }
+    
   }
   
 }
