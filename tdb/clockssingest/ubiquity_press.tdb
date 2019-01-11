@@ -21,7 +21,7 @@
       comment[publisher] = IJS Publishing Group
 #      param[base_url] = https://www.amscasereports.com/
 
-      au < ready ; exists ; 2018 ; 1 ; Annals of Medicine and Surgery Case Reports Volume 2018 ; 2018 ; https://www.amscasereports.com/ ; >
+      au < crawling ; exists ; 2018 ; 1 ; Annals of Medicine and Surgery Case Reports Volume 2018 ; 2018 ; https://www.amscasereports.com/ ; >
 
   }
 
@@ -35,7 +35,7 @@
       comment[publisher] = IJS Publishing Group
 #      param[base_url] = https://www.amsprotocols.com/
 
-      au < ready ; exists ; 2018 ; 1 ; Annals of Medicine and Surgery Protocols Volume 2018 ; 2018 ; https://www.amsprotocols.com/ ; >
+      au < crawling ; exists ; 2018 ; 1 ; Annals of Medicine and Surgery Protocols Volume 2018 ; 2018 ; https://www.amsprotocols.com/ ; >
 
   }
 
@@ -49,7 +49,7 @@
       comment[publisher] = IJS Publishing Group
 #      param[base_url] = https://ijops.com/
 
-      au < ready ; exists ; 2018 ; 1 ; International Journal of Orthoplastic Surgery Volume 2018 ; 2018 ; https://ijops.com/ ; >
+      au < crawling ; exists ; 2018 ; 1 ; International Journal of Orthoplastic Surgery Volume 2018 ; 2018 ; https://ijops.com/ ; >
 
   }
 
@@ -78,8 +78,8 @@
       comment[publisher] = Latin American Studies Association
 #      param[base_url] = https://larrlasa.org/
 
-      au < ready ; exists ; 2017 ; 1 ; Latin American Research Review Volume 2017 ; 2017 ; https://larrlasa.org/ ; >
-      au < ready ; exists ; 2018 ; 2 ; Latin American Research Review Volume 2018 ; 2018 ; https://larrlasa.org/ ; >
+      au < crawling ; exists ; 2017 ; 1 ; Latin American Research Review Volume 2017 ; 2017 ; https://larrlasa.org/ ; >
+      au < crawling ; exists ; 2018 ; 2 ; Latin American Research Review Volume 2018 ; 2018 ; https://larrlasa.org/ ; >
 
   }
 
@@ -107,11 +107,11 @@
       comment[publisher] = Levy Library Press
 #      param[base_url] = https://www.annalsofglobalhealth.org/
 
-      au < ready ; exists ; 2014 ; 1 ; Annals of Global Health Volume 2014 ; 2014 ; https://www.annalsofglobalhealth.org/ ; >
-      au < ready ; exists ; 2015 ; 2 ; Annals of Global Health Volume 2015 ; 2015 ; https://www.annalsofglobalhealth.org/ ; >
-      au < ready ; exists ; 2016 ; 3 ; Annals of Global Health Volume 2016 ; 2016 ; https://www.annalsofglobalhealth.org/ ; >
-      au < ready ; exists ; 2017 ; 4 ; Annals of Global Health Volume 2017 ; 2017 ; https://www.annalsofglobalhealth.org/ ; >
-      au < ready ; exists ; 2018 ; 5 ; Annals of Global Health Volume 2018 ; 2018 ; https://www.annalsofglobalhealth.org/ ; >
+      au < crawling ; exists ; 2014 ; 1 ; Annals of Global Health Volume 2014 ; 2014 ; https://www.annalsofglobalhealth.org/ ; >
+      au < crawling ; exists ; 2015 ; 2 ; Annals of Global Health Volume 2015 ; 2015 ; https://www.annalsofglobalhealth.org/ ; >
+      au < crawling ; exists ; 2016 ; 3 ; Annals of Global Health Volume 2016 ; 2016 ; https://www.annalsofglobalhealth.org/ ; >
+      au < crawling ; exists ; 2017 ; 4 ; Annals of Global Health Volume 2017 ; 2017 ; https://www.annalsofglobalhealth.org/ ; >
+      au < crawling ; exists ; 2018 ; 5 ; Annals of Global Health Volume 2018 ; 2018 ; https://www.annalsofglobalhealth.org/ ; >
 
   }
 
@@ -139,11 +139,11 @@
       comment[publisher] = Liverpool University Press
 #      param[base_url] = https://www.modernlanguagesopen.org/
 
-      au < ready ; exists ; 2014 ; 1 ; Modern Languages Open Volume 2014 ; 2014 ; https://www.modernlanguagesopen.org/ ; >
-      au < ready ; exists ; 2015 ; 2 ; Modern Languages Open Volume 2015 ; 2015 ; https://www.modernlanguagesopen.org/ ; >
-      au < ready ; exists ; 2016 ; 3 ; Modern Languages Open Volume 2016 ; 2016 ; https://www.modernlanguagesopen.org/ ; >
-      au < ready ; exists ; 2017 ; 4 ; Modern Languages Open Volume 2017 ; 2017 ; https://www.modernlanguagesopen.org/ ; >
-      au < ready ; exists ; 2018 ; 5 ; Modern Languages Open Volume 2018 ; 2018 ; https://www.modernlanguagesopen.org/ ; >
+      au < crawling ; exists ; 2014 ; 1 ; Modern Languages Open Volume 2014 ; 2014 ; https://www.modernlanguagesopen.org/ ; >
+      au < crawling ; exists ; 2015 ; 2 ; Modern Languages Open Volume 2015 ; 2015 ; https://www.modernlanguagesopen.org/ ; >
+      au < crawling ; exists ; 2016 ; 3 ; Modern Languages Open Volume 2016 ; 2016 ; https://www.modernlanguagesopen.org/ ; >
+      au < crawling ; exists ; 2017 ; 4 ; Modern Languages Open Volume 2017 ; 2017 ; https://www.modernlanguagesopen.org/ ; >
+      au < crawling ; exists ; 2018 ; 5 ; Modern Languages Open Volume 2018 ; 2018 ; https://www.modernlanguagesopen.org/ ; >
 
   }
 
@@ -580,7 +580,7 @@
       au < superseded ; exists ; 2016 ; 19 ; Archaeology International Volume 2016 [superseded] ; 2016 ; http://www.ai-journal.com/ ; >
       au < frozen ; exists ; 2016 ; 19 ; Archaeology International Volume 2016 ; 2016 ; https://ai-journal.com/ ; >
       au < frozen ; exists ; 2017 ; 20 ; Archaeology International Volume 2017 ; 2017 ; https://ai-journal.com/ ; >
-      au < ready ; exists ; 2018 ; 21 ; Archaeology International Volume 2018 ; 2018 ; https://ai-journal.com/ ; >
+      au < crawling ; exists ; 2018 ; 21 ; Archaeology International Volume 2018 ; 2018 ; https://ai-journal.com/ ; >
 
   }
 
@@ -1953,7 +1953,7 @@
 
       au < manifest ; exists ; 1999 ; 1 ; LIBER Quarterly Volume 1999 ; 1999 ; https://www.liberquarterly.eu/ ; >
       au < frozen ; exists ; 2000 ; 2 ; LIBER Quarterly Volume 2000 ; 2000 ; https://www.liberquarterly.eu/ ; >
-      au < ready ; exists ; 2001 ; 3 ; LIBER Quarterly Volume 2001 ; 2001 ; https://www.liberquarterly.eu/ ; >
+      au < crawling ; exists ; 2001 ; 3 ; LIBER Quarterly Volume 2001 ; 2001 ; https://www.liberquarterly.eu/ ; >
       au < frozen ; exists ; 2002 ; 4 ; LIBER Quarterly Volume 2002 ; 2002 ; https://www.liberquarterly.eu/ ; >
       au < frozen ; exists ; 2003 ; 5 ; LIBER Quarterly Volume 2003 ; 2003 ; https://www.liberquarterly.eu/ ; >
       au < frozen ; exists ; 2004 ; 6 ; LIBER Quarterly Volume 2004 ; 2004 ; https://www.liberquarterly.eu/ ; >
@@ -2018,7 +2018,7 @@
       au < frozen ; exists ; 2015 ; 5 ; Religion and Gender Volume 2015 ; 2015 ; https://www.religionandgender.org/ ; >
       au < frozen ; exists ; 2016 ; 6 ; Religion and Gender Volume 2016 ; 2016 ; https://www.religionandgender.org/ ; >
       au < deepCrawl ; exists ; 2017 ; 7 ; Religion and Gender Volume 2017 ; 2017 ; https://www.religionandgender.org/ ; >
-      au < ready ; exists ; 2018 ; 8 ; Religion and Gender Volume 2018 ; 2018 ; https://www.religionandgender.org/ ; >
+      au < crawling ; exists ; 2018 ; 8 ; Religion and Gender Volume 2018 ; 2018 ; https://www.religionandgender.org/ ; >
 
   }
 
@@ -2204,10 +2204,10 @@
       comment[publisher] = University of California Press
 #      param[base_url] = https://www.collabra.org/
 
-      au < ready ; exists ; 2015 ; 1 ; Collabra: Psychology Volume 2015 ; 2015 ; https://www.collabra.org/ ; >
-      au < ready ; exists ; 2016 ; 2 ; Collabra: Psychology Volume 2016 ; 2016 ; https://www.collabra.org/ ; >
-      au < ready ; exists ; 2017 ; 3 ; Collabra: Psychology Volume 2017 ; 2017 ; https://www.collabra.org/ ; >
-      au < ready ; exists ; 2018 ; 4 ; Collabra: Psychology Volume 2018 ; 2018 ; https://www.collabra.org/ ; >
+      au < crawling ; exists ; 2015 ; 1 ; Collabra: Psychology Volume 2015 ; 2015 ; https://www.collabra.org/ ; >
+      au < crawling ; exists ; 2016 ; 2 ; Collabra: Psychology Volume 2016 ; 2016 ; https://www.collabra.org/ ; >
+      au < crawling ; exists ; 2017 ; 3 ; Collabra: Psychology Volume 2017 ; 2017 ; https://www.collabra.org/ ; >
+      au < crawling ; exists ; 2018 ; 4 ; Collabra: Psychology Volume 2018 ; 2018 ; https://www.collabra.org/ ; >
 
   }
 
@@ -2221,12 +2221,12 @@
       comment[publisher] = University of California Press
 #      param[base_url] = https://www.elementascience.org/
 
-      au < ready ; exists ; 2013 ; 1 ; Elementa: Science of the Anthropocene Volume 2013 ; 2013 ; https://www.elementascience.org/ ; >
-      au < ready ; exists ; 2014 ; 2 ; Elementa: Science of the Anthropocene Volume 2014 ; 2014 ; https://www.elementascience.org/ ; >
-      au < ready ; exists ; 2015 ; 3 ; Elementa: Science of the Anthropocene Volume 2015 ; 2015 ; https://www.elementascience.org/ ; >
-      au < ready ; exists ; 2016 ; 4 ; Elementa: Science of the Anthropocene Volume 2016 ; 2016 ; https://www.elementascience.org/ ; >
-      au < ready ; exists ; 2017 ; 5 ; Elementa: Science of the Anthropocene Volume 2017 ; 2017 ; https://www.elementascience.org/ ; >
-      au < ready ; exists ; 2018 ; 6 ; Elementa: Science of the Anthropocene Volume 2018 ; 2018 ; https://www.elementascience.org/ ; >
+      au < crawling ; exists ; 2013 ; 1 ; Elementa: Science of the Anthropocene Volume 2013 ; 2013 ; https://www.elementascience.org/ ; >
+      au < crawling ; exists ; 2014 ; 2 ; Elementa: Science of the Anthropocene Volume 2014 ; 2014 ; https://www.elementascience.org/ ; >
+      au < crawling ; exists ; 2015 ; 3 ; Elementa: Science of the Anthropocene Volume 2015 ; 2015 ; https://www.elementascience.org/ ; >
+      au < crawling ; exists ; 2016 ; 4 ; Elementa: Science of the Anthropocene Volume 2016 ; 2016 ; https://www.elementascience.org/ ; >
+      au < crawling ; exists ; 2017 ; 5 ; Elementa: Science of the Anthropocene Volume 2017 ; 2017 ; https://www.elementascience.org/ ; >
+      au < crawling ; exists ; 2018 ; 6 ; Elementa: Science of the Anthropocene Volume 2018 ; 2018 ; https://www.elementascience.org/ ; >
 
   }
 
@@ -2254,8 +2254,8 @@
       comment[publisher] = White Rose University Press
 #      param[base_url] = https://www.euroslajournal.org/
 
-      au < ready ; exists ; 2017 ; 1 ; Journal of the European Second Language Association Volume 2017 ; 2017 ; https://www.euroslajournal.org/ ; >
-      au < ready ; exists ; 2018 ; 2 ; Journal of the European Second Language Association Volume 2018 ; 2018 ; https://www.euroslajournal.org/ ; >
+      au < crawling ; exists ; 2017 ; 1 ; Journal of the European Second Language Association Volume 2017 ; 2017 ; https://www.euroslajournal.org/ ; >
+      au < crawling ; exists ; 2018 ; 2 ; Journal of the European Second Language Association Volume 2018 ; 2018 ; https://www.euroslajournal.org/ ; >
 
   }
 
@@ -2269,7 +2269,7 @@
       comment[publisher] = White Rose University Press
 #      param[base_url] = https://www.ujpir-journal.com/
 
-      au < ready ; exists ; 2018 ; 1 ; Undergraduate Journal of Politics and International Relations Volume 2018 ; 2018 ; https://www.ujpir-journal.com/ ; >
+      au < crawling ; exists ; 2018 ; 1 ; Undergraduate Journal of Politics and International Relations Volume 2018 ; 2018 ; https://www.ujpir-journal.com/ ; >
 
   }
 
