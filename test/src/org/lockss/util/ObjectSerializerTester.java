@@ -151,7 +151,7 @@ public abstract class ObjectSerializerTester extends XMLTestCase {
                                          ObjectSerializer deserializer1,
                                          ObjectSerializer deserializer2)
               throws Exception {
-            File tempFile = File.createTempFile("testfile", ".xml");
+            File tempFile = FileUtil.createTempFile("testfile", ".xml");
             tempFile.deleteOnExit();
             serializer.serialize(tempFile, original);
             result1 = serializer.deserialize(tempFile);
@@ -164,7 +164,7 @@ public abstract class ObjectSerializerTester extends XMLTestCase {
                                          ObjectSerializer deserializer1,
                                          ObjectSerializer deserializer2)
               throws Exception {
-            File tempFile = File.createTempFile("testfile", ".xml");
+            File tempFile = FileUtil.createTempFile("testfile", ".xml");
             tempFile.deleteOnExit();
             serializer.serialize(tempFile.toString(), original);
             result1 = serializer.deserialize(tempFile.toString());
@@ -234,7 +234,7 @@ public abstract class ObjectSerializerTester extends XMLTestCase {
 
         try {
           // Create a bad input file
-          actions[action].file = File.createTempFile("testfile", ".xml");
+          actions[action].file = FileUtil.createTempFile("testfile", ".xml");
           actions[action].file.deleteOnExit();
           FileWriter writer = new FileWriter(actions[action].file);
           writer.write("BAD INPUT");
@@ -321,7 +321,7 @@ public abstract class ObjectSerializerTester extends XMLTestCase {
         this.action = action;
       }
       public File createTempFile(String prefix, String suffix, File directory) throws IOException {
-        File tmp = File.createTempFile(prefix, suffix, directory);
+        File tmp = FileUtil.createTempFile(prefix, suffix, directory);
         tmp.deleteOnExit();
         action.file = new File(tmp.toString()) {
           public boolean renameTo(File dest) {
@@ -341,7 +341,7 @@ public abstract class ObjectSerializerTester extends XMLTestCase {
         new RememberFile() {
           public void doSomething(ObjectSerializer serializer) throws Exception {
             serializer.tempFileFactory = new RenameFails(this);
-            File tempFile = File.createTempFile("testfile", ".xml");
+            File tempFile = FileUtil.createTempFile("testfile", ".xml");
             tempFile.deleteOnExit();
             serializer.serialize(tempFile, obj);
           }
@@ -350,7 +350,7 @@ public abstract class ObjectSerializerTester extends XMLTestCase {
         new RememberFile() {
           public void doSomething(ObjectSerializer serializer) throws Exception {
             serializer.tempFileFactory = new RenameFails(this);
-            File tempFile = File.createTempFile("testfile", ".xml");
+            File tempFile = FileUtil.createTempFile("testfile", ".xml");
             tempFile.deleteOnExit();
             serializer.serialize(tempFile.toString(), obj);
           }
@@ -408,7 +408,7 @@ public abstract class ObjectSerializerTester extends XMLTestCase {
         new DoSomething() {
           public void doSomething(ObjectSerializer serializer) throws Exception {
             serializer.tempFileFactory = createTempFileFails;
-            File tempFile = File.createTempFile("testfile", ".xml");
+            File tempFile = FileUtil.createTempFile("testfile", ".xml");
             tempFile.deleteOnExit();
             serializer.serialize(tempFile, obj);
           }
@@ -417,7 +417,7 @@ public abstract class ObjectSerializerTester extends XMLTestCase {
         new DoSomething() {
           public void doSomething(ObjectSerializer serializer) throws Exception {
             serializer.tempFileFactory = createTempFileFails;
-            File tempFile = File.createTempFile("testfile", ".xml");
+            File tempFile = FileUtil.createTempFile("testfile", ".xml");
             tempFile.deleteOnExit();
             serializer.serialize(tempFile.toString(), obj);
           }
@@ -514,7 +514,7 @@ public abstract class ObjectSerializerTester extends XMLTestCase {
         // With a File
         new SerializeInspect() {
           public void doSomething(ObjectSerializer serializer) throws Exception {
-            File tempFile = File.createTempFile("testfile", ".xml");
+            File tempFile = FileUtil.createTempFile("testfile", ".xml");
             tempFile.deleteOnExit();
             serializer.serialize(tempFile, original);
             result = new FileReader(tempFile);
@@ -523,7 +523,7 @@ public abstract class ObjectSerializerTester extends XMLTestCase {
         // With a String
         new SerializeInspect() {
           public void doSomething(ObjectSerializer serializer) throws Exception {
-            File tempFile = File.createTempFile("testfile", ".xml");
+            File tempFile = FileUtil.createTempFile("testfile", ".xml");
             tempFile.deleteOnExit();
             serializer.serialize(tempFile.toString(), original);
             result = new FileReader(tempFile.toString());
@@ -727,7 +727,7 @@ public abstract class ObjectSerializerTester extends XMLTestCase {
         // With a File and a LockssSerializable
         new DoSomething() {
           public void doSomething(ObjectSerializer serializer) throws Exception {
-            File tempFile = File.createTempFile("testfile", ".xml");
+            File tempFile = FileUtil.createTempFile("testfile", ".xml");
             tempFile.deleteOnExit();
             serializer.serialize(tempFile, (LockssSerializable)null);
           }
@@ -735,7 +735,7 @@ public abstract class ObjectSerializerTester extends XMLTestCase {
         // With a File and a Serializable
         new DoSomething() {
           public void doSomething(ObjectSerializer serializer) throws Exception {
-            File tempFile = File.createTempFile("testfile", ".xml");
+            File tempFile = FileUtil.createTempFile("testfile", ".xml");
             tempFile.deleteOnExit();
             serializer.serialize(tempFile, (Serializable)null);
           }
@@ -743,7 +743,7 @@ public abstract class ObjectSerializerTester extends XMLTestCase {
         // With a String and a LockssSerializable
         new DoSomething() {
           public void doSomething(ObjectSerializer serializer) throws Exception {
-            File tempFile = File.createTempFile("testfile", ".xml");
+            File tempFile = FileUtil.createTempFile("testfile", ".xml");
             tempFile.deleteOnExit();
             serializer.serialize(tempFile.toString(), (LockssSerializable)null);
           }
@@ -751,7 +751,7 @@ public abstract class ObjectSerializerTester extends XMLTestCase {
         // With a String and a Serializable
         new DoSomething() {
           public void doSomething(ObjectSerializer serializer) throws Exception {
-            File tempFile = File.createTempFile("testfile", ".xml");
+            File tempFile = FileUtil.createTempFile("testfile", ".xml");
             tempFile.deleteOnExit();
             serializer.serialize(tempFile.toString(), (Serializable)null);
           }
@@ -871,7 +871,7 @@ public abstract class ObjectSerializerTester extends XMLTestCase {
           public void doRoundTrip(ObjectSerializer serializer,
                                   ObjectSerializer deserializer)
               throws Exception {
-            File tempFile = File.createTempFile("testfile", ".xml");
+            File tempFile = FileUtil.createTempFile("testfile", ".xml");
             tempFile.deleteOnExit();
             serializer.serialize(tempFile, original);
             result = deserializer.deserialize(tempFile);
@@ -882,7 +882,7 @@ public abstract class ObjectSerializerTester extends XMLTestCase {
           public void doRoundTrip(ObjectSerializer serializer,
                                   ObjectSerializer deserializer)
               throws Exception {
-            File tempFile = File.createTempFile("testfile", ".xml");
+            File tempFile = FileUtil.createTempFile("testfile", ".xml");
             tempFile.deleteOnExit();
             serializer.serialize(tempFile.toString(), original);
             result = deserializer.deserialize(tempFile.toString());
@@ -893,7 +893,7 @@ public abstract class ObjectSerializerTester extends XMLTestCase {
           public void doRoundTrip(ObjectSerializer serializer,
                                   ObjectSerializer deserializer)
               throws Exception {
-            File tempFile = File.createTempFile("#testfile", ".xml");
+            File tempFile = FileUtil.createTempFile("#testfile", ".xml");
             tempFile.deleteOnExit();
             serializer.serialize(tempFile, original);
             result = deserializer.deserialize(tempFile);
@@ -904,7 +904,7 @@ public abstract class ObjectSerializerTester extends XMLTestCase {
           public void doRoundTrip(ObjectSerializer serializer,
                                   ObjectSerializer deserializer)
               throws Exception {
-            File tempFile = File.createTempFile("#testfile", ".xml");
+            File tempFile = FileUtil.createTempFile("#testfile", ".xml");
             tempFile.deleteOnExit();
             serializer.serialize(tempFile.toString(), original);
             result = deserializer.deserialize(tempFile.toString());

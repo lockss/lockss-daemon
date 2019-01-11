@@ -280,7 +280,7 @@ public class TestConfigParamDescr extends LockssTestCase {
   public void testPostUnnarshalResolve() throws Exception {
     XStreamSerializer serializer = new XStreamSerializer();
     for (int ix = 0 ; ix < ConfigParamDescr.DEFAULT_DESCR_ARRAY.length ; ++ix) {
-      File file = File.createTempFile("testfile", ".xml");
+      File file = FileUtil.createTempFile("testfile", ".xml");
       file.deleteOnExit();
       serializer.serialize(file, ConfigParamDescr.DEFAULT_DESCR_ARRAY[ix]);
       assertSame(ConfigParamDescr.DEFAULT_DESCR_ARRAY[ix],

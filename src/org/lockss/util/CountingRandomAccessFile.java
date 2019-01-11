@@ -530,7 +530,7 @@ public class CountingRandomAccessFile extends RandomAccessFile {
    * @see File#createTempFile(String, String)
    */
   protected static File createTempFile() throws IOException {
-    File ret = File.createTempFile(CountingRandomAccessFile.class.getSimpleName(), ".bin");
+    File ret = FileUtil.createTempFile(CountingRandomAccessFile.class.getSimpleName(), ".bin");
     ret.deleteOnExit();
     return ret;
   }

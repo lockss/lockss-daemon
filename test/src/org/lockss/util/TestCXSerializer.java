@@ -77,7 +77,7 @@ public class TestCXSerializer extends ObjectSerializerTester {
           logger.debug("Begin with deserializer " + deserializer);
 
           // Assign a file to the action
-          actions[action].file = File.createTempFile("testfile", ".xml");
+          actions[action].file = FileUtil.createTempFile("testfile", ".xml");
           actions[action].file.deleteOnExit();
 
           // Serialize in Castor format

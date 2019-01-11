@@ -101,7 +101,7 @@ public class TestPeerIdentity extends LockssTestCase {
     ObjectSerializer serializer = new XStreamSerializer();
     ObjectSerializer deserializer = new XStreamSerializer(daemon);
 
-    File temp1 = File.createTempFile("tmp", ".xml");
+    File temp1 = FileUtil.createTempFile("tmp", ".xml");
     temp1.deleteOnExit();
     PeerIdentity pidv1 = new PeerIdentity("12.34.56.78");
     serializer.serialize(temp1, pidv1);
@@ -109,7 +109,7 @@ public class TestPeerIdentity extends LockssTestCase {
     assertEquals(pidv1.getIdString(), back1.getIdString());
     assertEquals(pidv1.getPeerAddress(), back1.getPeerAddress());
 
-    File temp3 = File.createTempFile("tmp", ".xml");
+    File temp3 = FileUtil.createTempFile("tmp", ".xml");
     temp3.deleteOnExit();
     PeerIdentity pidv3 =
       new PeerIdentity(IDUtil.ipAddrToKey("87.65.43.21", "999"));
