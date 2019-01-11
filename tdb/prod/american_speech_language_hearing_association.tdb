@@ -5,7 +5,7 @@
   
   comment[moving] = Publisher moved from Silverchair to Atypon.
   
-  plugin = org.lockss.plugin.atypon.GenericAtyponPlugin
+  plugin = org.lockss.plugin.atypon.aslha.AmericanSpeechLanguageHearingAssocAtyponPlugin
   param[base_url] = https://pubs.asha.org/
   implicit < status ; year ; name ; param[volume_name] >
 
