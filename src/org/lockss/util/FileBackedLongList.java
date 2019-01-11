@@ -477,7 +477,7 @@ public class FileBackedLongList
    * @see File#createTempFile(String, String)
    */
   protected static File createTempFile() throws IOException {
-    File ret = File.createTempFile(FileBackedLongList.class.getSimpleName(), ".bin");
+    File ret = FileUtil.createTempFile(FileBackedLongList.class.getSimpleName(), ".bin");
     ret.deleteOnExit();
     return ret;
   }

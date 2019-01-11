@@ -2230,7 +2230,7 @@ public class ConfigManager implements LockssManager {
       throw new RuntimeException("No cache config dir");
     }
     // Write to a temp file and rename
-    File tempfile = File.createTempFile("tmp_config", ".tmp", cacheConfigDir);
+    File tempfile = FileUtil.createTempFile("tmp_config", ".tmp", cacheConfigDir);
     OutputStream os = new FileOutputStream(tempfile);
     // Add fileversion iff it's not already there.
     Properties addtl = null;
@@ -2278,7 +2278,7 @@ public class ConfigManager implements LockssManager {
       throw new RuntimeException("No cache config dir");
     }
     // Write to a temp file and rename
-    File tempfile = File.createTempFile("tmp_config", ".tmp", cacheConfigDir);
+    File tempfile = FileUtil.createTempFile("tmp_config", ".tmp", cacheConfigDir);
     StringUtil.toFile(tempfile, text);
     File cfile = new File(cacheConfigDir, cacheConfigFileName);
     if (!PlatformUtil.updateAtomically(tempfile, cfile)) {

@@ -141,7 +141,7 @@ public class TestLcapIdentity extends LockssTestCase {
     ObjectSerializer serializer = new XStreamSerializer();
     ObjectSerializer deserializer = new XStreamSerializer(daemon);
 
-    File temp1 = File.createTempFile("tmp", ".xml");
+    File temp1 = FileUtil.createTempFile("tmp", ".xml");
     temp1.deleteOnExit();
     PeerIdentity pidv1 = new PeerIdentity("12.34.56.78");
     LcapIdentity lid1 = new LcapIdentity(pidv1, "12.34.56.78");
@@ -151,7 +151,7 @@ public class TestLcapIdentity extends LockssTestCase {
     assertEquals(lid1.m_address.getAddress(),
                  back1.m_address.getAddress());
 
-    File temp3 = File.createTempFile("tmp", ".xml");
+    File temp3 = FileUtil.createTempFile("tmp", ".xml");
     temp3.deleteOnExit();
     PeerIdentity pidv3 =
       new PeerIdentity(IDUtil.ipAddrToKey("87.65.43.21", "999"));

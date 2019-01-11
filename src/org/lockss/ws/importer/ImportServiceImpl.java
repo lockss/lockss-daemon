@@ -65,14 +65,7 @@ import org.lockss.plugin.Plugin;
 import org.lockss.plugin.PluginManager;
 import org.lockss.plugin.UrlCacher;
 import org.lockss.plugin.UrlData;
-import org.lockss.util.ByteArray;
-import org.lockss.util.CIProperties;
-import org.lockss.util.IOUtil;
-import org.lockss.util.Logger;
-import org.lockss.util.PropUtil;
-import org.lockss.util.StreamUtil;
-import org.lockss.util.StringUtil;
-import org.lockss.util.TimeBase;
+import org.lockss.util.*;
 import org.lockss.ws.entities.ImportWsParams;
 import org.lockss.ws.entities.ImportWsResult;
 import org.lockss.ws.entities.LockssWebServicesFault;
@@ -478,7 +471,7 @@ public class ImportServiceImpl implements ImportService {
     File tmpFile = null;
 
     try {
-      tmpFile = File.createTempFile("imported", "", null);
+      tmpFile = FileUtil.createTempFile("imported", "", null);
     } catch (IOException ioe) {
       wsResult.setIsSuccess(Boolean.FALSE);
       wsResult.setMessage("Cannot create temporary file: " + ioe.getMessage());

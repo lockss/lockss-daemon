@@ -104,7 +104,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     File dir2 = new File(dir1, "bacds");
     assertNull(null, dir2.listFiles());
     // dir list of non-dir returns null
-    File file1 = File.createTempFile("xxx", ".tmp", dir1);
+    File file1 = FileUtil.createTempFile("xxx", ".tmp", dir1);
     assertTrue(file1.exists());
     assertNull(null, file1.listFiles());
   }

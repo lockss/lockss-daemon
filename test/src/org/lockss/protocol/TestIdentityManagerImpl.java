@@ -705,7 +705,7 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
 	@Override
 	public void storeIdentityAgreements(AuAgreements auAgreements) {
 	  try {
-	    agreementFile = File.createTempFile("id_agreement", ".xml");
+	    agreementFile = FileUtil.createTempFile("id_agreement", ".xml");
 	  } catch (IOException e) {
 	    fail("couldn't create temp file", e);
 	  }

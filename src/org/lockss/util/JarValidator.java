@@ -79,7 +79,7 @@ public class JarValidator {
     try {
       validatePluginJar(cu);
       cuis = cu.getUnfilteredInputStream();
-      f = File.createTempFile("plugin-", ".jar", m_pluginDir);
+      f = FileUtil.createTempFile("plugin-", ".jar", m_pluginDir);
       fos = new FileOutputStream(f);
       StreamUtil.copy(cuis, fos);
     } finally {

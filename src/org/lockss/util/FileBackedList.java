@@ -773,7 +773,7 @@ public class FileBackedList<E>
   protected static final int OFFSETS = 500_000;
   
   protected static File createTempFile() throws IOException {
-    File tempFile = File.createTempFile(FileBackedList.class.getSimpleName(), ".bin");
+    File tempFile = FileUtil.createTempFile(FileBackedList.class.getSimpleName(), ".bin");
     tempFile.deleteOnExit();
     return tempFile;
   }

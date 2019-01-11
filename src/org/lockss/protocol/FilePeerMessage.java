@@ -72,7 +72,7 @@ class FilePeerMessage extends PeerMessage {
     if (hasData() || isOutputOpen) {
       throw new IllegalStateException("PeerMessage already open for output");
     }
-    File file = File.createTempFile("msg", ".data", dir);
+    File file = FileUtil.createTempFile("msg", ".data", dir);
     isOutputOpen = true;
     dir = null;
     outStream = new MsgOutputStream(file);
