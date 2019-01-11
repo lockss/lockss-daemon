@@ -182,17 +182,17 @@
     
     au < frozen ; exists ; 1997 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 1 ; 1997 ; >
     au < crawling ; exists ; 1998 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 2 ; 1998 ; >
-    au < crawling ; exists ; 1999 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 3 ; 1999 ; >
-    au < crawling ; exists ; 2000 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 4 ; 2000 ; >
+    au < frozen ; exists ; 1999 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 3 ; 1999 ; >
+    au < frozen ; exists ; 2000 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 4 ; 2000 ; >
     au < crawling ; exists ; 2001 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 5 ; 2001 ; >
     au < frozen ; exists ; 2002 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 6 ; 2002 ; >
     au < frozen ; exists ; 2003 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 7 ; 2003 ; >
     au < frozen ; exists ; 2004 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 8 ; 2004 ; >
-    au < crawling ; exists ; 2005 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 9 ; 2005 ; >
+    au < frozen ; exists ; 2005 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 9 ; 2005 ; >
     au < testing ; exists ; 2006 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 10 ; 2006 ; >
     au < crawling ; exists ; 2007 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 11 ; 2007 ; >
     au < crawling ; exists ; 2008 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 12 ; 2008 ; >
-    au < crawling ; exists ; 2009 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 13 ; 2009 ; >
+    au < frozen ; exists ; 2009 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 13 ; 2009 ; >
     au < frozen ; exists ; 2010 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 14 ; 2010 ; >
     au < frozen ; exists ; 2011 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 15 ; 2011 ; >
     au < finished ; finished ; 2012 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 16 ; 2012 ; >
@@ -217,30 +217,30 @@
     
     param[journal_id] = jams
     
-    au < crawling ; exists ; 1988 ; Journal of the American Mathematical Society Volume 1 ; 1988 ; >
+    au < frozen ; exists ; 1988 ; Journal of the American Mathematical Society Volume 1 ; 1988 ; >
     au < testing ; exists ; 1989 ; Journal of the American Mathematical Society Volume 2 ; 1989 ; >
     au < crawling ; exists ; 1990 ; Journal of the American Mathematical Society Volume 3 ; 1990 ; >
     au < crawling ; exists ; 1991 ; Journal of the American Mathematical Society Volume 4 ; 1991 ; >
     au < frozen ; exists ; 1992 ; Journal of the American Mathematical Society Volume 5 ; 1992 ; >
-    au < crawling ; exists ; 1993 ; Journal of the American Mathematical Society Volume 6 ; 1993 ; >
-    au < crawling ; exists ; 1994 ; Journal of the American Mathematical Society Volume 7 ; 1994 ; >
+    au < frozen ; exists ; 1993 ; Journal of the American Mathematical Society Volume 6 ; 1993 ; >
+    au < frozen ; exists ; 1994 ; Journal of the American Mathematical Society Volume 7 ; 1994 ; >
     au < crawling ; exists ; 1995 ; Journal of the American Mathematical Society Volume 8 ; 1995 ; >
     au < crawling ; exists ; 1996 ; Journal of the American Mathematical Society Volume 9 ; 1996 ; >
     au < crawling ; exists ; 1997 ; Journal of the American Mathematical Society Volume 10 ; 1997 ; >
     au < crawling ; exists ; 1998 ; Journal of the American Mathematical Society Volume 11 ; 1998 ; >
-    au < crawling ; exists ; 1999 ; Journal of the American Mathematical Society Volume 12 ; 1999 ; >
-    au < crawling ; exists ; 2000 ; Journal of the American Mathematical Society Volume 13 ; 2000 ; >
+    au < frozen ; exists ; 1999 ; Journal of the American Mathematical Society Volume 12 ; 1999 ; >
+    au < frozen ; exists ; 2000 ; Journal of the American Mathematical Society Volume 13 ; 2000 ; >
     au < frozen ; exists ; 2001 ; Journal of the American Mathematical Society Volume 14 ; 2001 ; >
     au < frozen ; exists ; 2002 ; Journal of the American Mathematical Society Volume 15 ; 2002 ; >
     au < crawling ; exists ; 2003 ; Journal of the American Mathematical Society Volume 16 ; 2003 ; >
     au < crawling ; exists ; 2004 ; Journal of the American Mathematical Society Volume 17 ; 2004 ; >
-    au < crawling ; exists ; 2005 ; Journal of the American Mathematical Society Volume 18 ; 2005 ; >
-    au < crawling ; exists ; 2006 ; Journal of the American Mathematical Society Volume 19 ; 2006 ; >
-    au < crawling ; exists ; 2007 ; Journal of the American Mathematical Society Volume 20 ; 2007 ; >
-    au < crawling ; exists ; 2008 ; Journal of the American Mathematical Society Volume 21 ; 2008 ; >
-    au < crawling ; exists ; 2009 ; Journal of the American Mathematical Society Volume 22 ; 2009 ; >
-    au < crawling ; exists ; 2010 ; Journal of the American Mathematical Society Volume 23 ; 2010 ; >
-    au < crawling ; exists ; 2011 ; Journal of the American Mathematical Society Volume 24 ; 2011 ; >
+    au < frozen ; exists ; 2005 ; Journal of the American Mathematical Society Volume 18 ; 2005 ; >
+    au < frozen ; exists ; 2006 ; Journal of the American Mathematical Society Volume 19 ; 2006 ; >
+    au < frozen ; exists ; 2007 ; Journal of the American Mathematical Society Volume 20 ; 2007 ; >
+    au < frozen ; exists ; 2008 ; Journal of the American Mathematical Society Volume 21 ; 2008 ; >
+    au < frozen ; exists ; 2009 ; Journal of the American Mathematical Society Volume 22 ; 2009 ; >
+    au < frozen ; exists ; 2010 ; Journal of the American Mathematical Society Volume 23 ; 2010 ; >
+    au < frozen ; exists ; 2011 ; Journal of the American Mathematical Society Volume 24 ; 2011 ; >
     au < finished ; finished ; 2012 ; Journal of the American Mathematical Society Volume 25 ; 2012 ; >
     au < finished ; finished ; 2013 ; Journal of the American Mathematical Society Volume 26 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of the American Mathematical Society Volume 27 ; 2014 ; >
@@ -263,75 +263,75 @@
 
     param[journal_id] = mcom
     
-    au < crawling ; exists ; 1943 ; Mathematics of Computation Volume 1 (1943) ; 1943 ; >
-    au < crawling ; exists ; 1944 ; Mathematics of Computation Volume 1 (1944) ; 1944 ; >
-    au < crawling ; exists ; 1945 ; Mathematics of Computation Volume 1 (1945) ; 1945 ; >
-    au < crawling ; exists ; 1946 ; Mathematics of Computation Volume 2 (1946) ; 1946 ; >
-    au < crawling ; exists ; 1947 ; Mathematics of Computation Volume 2 (1947) ; 1947 ; >
+    au < frozen ; exists ; 1943 ; Mathematics of Computation Volume 1 (1943) ; 1943 ; >
+    au < frozen ; exists ; 1944 ; Mathematics of Computation Volume 1 (1944) ; 1944 ; >
+    au < frozen ; exists ; 1945 ; Mathematics of Computation Volume 1 (1945) ; 1945 ; >
+    au < frozen ; exists ; 1946 ; Mathematics of Computation Volume 2 (1946) ; 1946 ; >
+    au < frozen ; exists ; 1947 ; Mathematics of Computation Volume 2 (1947) ; 1947 ; >
     au < frozen ; exists ; 1948 ; Mathematics of Computation Volume 3 (1948) ; 1948 ; >
-    au < crawling ; exists ; 1949 ; Mathematics of Computation Volume 3 (1949) ; 1949 ; >
-    au < crawling ; exists ; 1950 ; Mathematics of Computation Volume 4 ; 1950 ; >
+    au < frozen ; exists ; 1949 ; Mathematics of Computation Volume 3 (1949) ; 1949 ; >
+    au < frozen ; exists ; 1950 ; Mathematics of Computation Volume 4 ; 1950 ; >
     au < frozen ; exists ; 1951 ; Mathematics of Computation Volume 5 ; 1951 ; >
-    au < crawling ; exists ; 1952 ; Mathematics of Computation Volume 6 ; 1952 ; >
+    au < frozen ; exists ; 1952 ; Mathematics of Computation Volume 6 ; 1952 ; >
     au < crawling ; exists ; 1953 ; Mathematics of Computation Volume 7 ; 1953 ; >
-    au < crawling ; exists ; 1954 ; Mathematics of Computation Volume 8 ; 1954 ; >
-    au < crawling ; exists ; 1955 ; Mathematics of Computation Volume 9 ; 1955 ; >
-    au < crawling ; exists ; 1956 ; Mathematics of Computation Volume 10 ; 1956 ; >
-    au < crawling ; exists ; 1957 ; Mathematics of Computation Volume 11 ; 1957 ; >
-    au < crawling ; exists ; 1958 ; Mathematics of Computation Volume 12 ; 1958 ; >
+    au < frozen ; exists ; 1954 ; Mathematics of Computation Volume 8 ; 1954 ; >
+    au < frozen ; exists ; 1955 ; Mathematics of Computation Volume 9 ; 1955 ; >
+    au < frozen ; exists ; 1956 ; Mathematics of Computation Volume 10 ; 1956 ; >
+    au < frozen ; exists ; 1957 ; Mathematics of Computation Volume 11 ; 1957 ; >
+    au < frozen ; exists ; 1958 ; Mathematics of Computation Volume 12 ; 1958 ; >
     au < crawling ; exists ; 1959 ; Mathematics of Computation Volume 13 ; 1959 ; >
     au < crawling ; exists ; 1960 ; Mathematics of Computation Volume 14 ; 1960 ; >
-    au < crawling ; exists ; 1961 ; Mathematics of Computation Volume 15 ; 1961 ; >
+    au < frozen ; exists ; 1961 ; Mathematics of Computation Volume 15 ; 1961 ; >
     au < crawling ; exists ; 1962 ; Mathematics of Computation Volume 16 ; 1962 ; >
-    au < crawling ; exists ; 1963 ; Mathematics of Computation Volume 17 ; 1963 ; >
+    au < frozen ; exists ; 1963 ; Mathematics of Computation Volume 17 ; 1963 ; >
     au < crawling ; exists ; 1964 ; Mathematics of Computation Volume 18 ; 1964 ; >
     au < crawling ; exists ; 1965 ; Mathematics of Computation Volume 19 ; 1965 ; >
-    au < crawling ; exists ; 1966 ; Mathematics of Computation Volume 20 ; 1966 ; >
-    au < crawling ; exists ; 1967 ; Mathematics of Computation Volume 21 ; 1967 ; >
+    au < frozen ; exists ; 1966 ; Mathematics of Computation Volume 20 ; 1966 ; >
+    au < frozen ; exists ; 1967 ; Mathematics of Computation Volume 21 ; 1967 ; >
     au < frozen ; exists ; 1968 ; Mathematics of Computation Volume 22 ; 1968 ; >
-    au < crawling ; exists ; 1969 ; Mathematics of Computation Volume 23 ; 1969 ; >
-    au < crawling ; exists ; 1970 ; Mathematics of Computation Volume 24 ; 1970 ; >
-    au < crawling ; exists ; 1971 ; Mathematics of Computation Volume 25 ; 1971 ; >
-    au < crawling ; exists ; 1972 ; Mathematics of Computation Volume 26 ; 1972 ; >
+    au < frozen ; exists ; 1969 ; Mathematics of Computation Volume 23 ; 1969 ; >
+    au < frozen ; exists ; 1970 ; Mathematics of Computation Volume 24 ; 1970 ; >
+    au < frozen ; exists ; 1971 ; Mathematics of Computation Volume 25 ; 1971 ; >
+    au < frozen ; exists ; 1972 ; Mathematics of Computation Volume 26 ; 1972 ; >
     au < frozen ; exists ; 1973 ; Mathematics of Computation Volume 27 ; 1973 ; >
-    au < crawling ; exists ; 1974 ; Mathematics of Computation Volume 28 ; 1974 ; >
+    au < frozen ; exists ; 1974 ; Mathematics of Computation Volume 28 ; 1974 ; >
     au < crawling ; exists ; 1975 ; Mathematics of Computation Volume 29 ; 1975 ; >
-    au < crawling ; exists ; 1976 ; Mathematics of Computation Volume 30 ; 1976 ; >
-    au < crawling ; exists ; 1977 ; Mathematics of Computation Volume 31 ; 1977 ; >
-    au < crawling ; exists ; 1978 ; Mathematics of Computation Volume 32 ; 1978 ; >
+    au < frozen ; exists ; 1976 ; Mathematics of Computation Volume 30 ; 1976 ; >
+    au < frozen ; exists ; 1977 ; Mathematics of Computation Volume 31 ; 1977 ; >
+    au < frozen ; exists ; 1978 ; Mathematics of Computation Volume 32 ; 1978 ; >
     au < crawling ; exists ; 1979 ; Mathematics of Computation Volume 33 ; 1979 ; >
-    au < crawling ; exists ; 1980 ; Mathematics of Computation Volume 34-35 ; 1980 ; >
+    au < frozen ; exists ; 1980 ; Mathematics of Computation Volume 34-35 ; 1980 ; >
     au < crawling ; exists ; 1981 ; Mathematics of Computation Volume 36-37 ; 1981 ; >
-    au < crawling ; exists ; 1982 ; Mathematics of Computation Volume 38-39 ; 1982 ; >
-    au < crawling ; exists ; 1983 ; Mathematics of Computation Volume 40-41 ; 1983 ; >
-    au < crawling ; exists ; 1984 ; Mathematics of Computation Volume 42-43 ; 1984 ; >
-    au < crawling ; exists ; 1985 ; Mathematics of Computation Volume 44-45 ; 1985 ; >
-    au < crawling ; exists ; 1986 ; Mathematics of Computation Volume 46-47 ; 1986 ; >
-    au < crawling ; exists ; 1987 ; Mathematics of Computation Volume 48-49 ; 1987 ; >
-    au < crawling ; exists ; 1988 ; Mathematics of Computation Volume 50-51 ; 1988 ; >
-    au < crawling ; exists ; 1989 ; Mathematics of Computation Volume 52-53 ; 1989 ; >
+    au < frozen ; exists ; 1982 ; Mathematics of Computation Volume 38-39 ; 1982 ; >
+    au < frozen ; exists ; 1983 ; Mathematics of Computation Volume 40-41 ; 1983 ; >
+    au < frozen ; exists ; 1984 ; Mathematics of Computation Volume 42-43 ; 1984 ; >
+    au < frozen ; exists ; 1985 ; Mathematics of Computation Volume 44-45 ; 1985 ; >
+    au < frozen ; exists ; 1986 ; Mathematics of Computation Volume 46-47 ; 1986 ; >
+    au < frozen ; exists ; 1987 ; Mathematics of Computation Volume 48-49 ; 1987 ; >
+    au < frozen ; exists ; 1988 ; Mathematics of Computation Volume 50-51 ; 1988 ; >
+    au < frozen ; exists ; 1989 ; Mathematics of Computation Volume 52-53 ; 1989 ; >
     au < frozen ; exists ; 1990 ; Mathematics of Computation Volume 54-55 ; 1990 ; >
     au < crawling ; exists ; 1991 ; Mathematics of Computation Volume 56-57 ; 1991 ; >
     au < crawling ; exists ; 1992 ; Mathematics of Computation Volume 58-59 ; 1992 ; >
-    au < crawling ; exists ; 1993 ; Mathematics of Computation Volume 60-61 ; 1993 ; >
-    au < crawling ; exists ; 1994 ; Mathematics of Computation Volume 62-63 ; 1994 ; >
-    au < crawling ; exists ; 1995 ; Mathematics of Computation Volume 64 ; 1995 ; >
-    au < crawling ; exists ; 1996 ; Mathematics of Computation Volume 65 ; 1996 ; >
-    au < crawling ; exists ; 1997 ; Mathematics of Computation Volume 66 ; 1997 ; >
+    au < frozen ; exists ; 1993 ; Mathematics of Computation Volume 60-61 ; 1993 ; >
+    au < frozen ; exists ; 1994 ; Mathematics of Computation Volume 62-63 ; 1994 ; >
+    au < frozen ; exists ; 1995 ; Mathematics of Computation Volume 64 ; 1995 ; >
+    au < frozen ; exists ; 1996 ; Mathematics of Computation Volume 65 ; 1996 ; >
+    au < frozen ; exists ; 1997 ; Mathematics of Computation Volume 66 ; 1997 ; >
     au < crawling ; exists ; 1998 ; Mathematics of Computation Volume 67 ; 1998 ; >
-    au < crawling ; exists ; 1999 ; Mathematics of Computation Volume 68 ; 1999 ; >
-    au < crawling ; exists ; 2000 ; Mathematics of Computation Volume 69 ; 2000 ; >
+    au < frozen ; exists ; 1999 ; Mathematics of Computation Volume 68 ; 1999 ; >
+    au < frozen ; exists ; 2000 ; Mathematics of Computation Volume 69 ; 2000 ; >
     au < crawling ; exists ; 2001 ; Mathematics of Computation Volume 70 ; 2001 ; >
     au < crawling ; exists ; 2002 ; Mathematics of Computation Volume 71 ; 2002 ; >
-    au < crawling ; exists ; 2003 ; Mathematics of Computation Volume 72 ; 2003 ; >
+    au < frozen ; exists ; 2003 ; Mathematics of Computation Volume 72 ; 2003 ; >
     au < crawling ; exists ; 2004 ; Mathematics of Computation Volume 73 ; 2004 ; >
-    au < crawling ; exists ; 2005 ; Mathematics of Computation Volume 74 ; 2005 ; >
+    au < frozen ; exists ; 2005 ; Mathematics of Computation Volume 74 ; 2005 ; >
     au < crawling ; exists ; 2006 ; Mathematics of Computation Volume 75 ; 2006 ; >
-    au < crawling ; exists ; 2007 ; Mathematics of Computation Volume 76 ; 2007 ; >
-    au < crawling ; exists ; 2008 ; Mathematics of Computation Volume 77 ; 2008 ; >
-    au < crawling ; exists ; 2009 ; Mathematics of Computation Volume 78 ; 2009 ; >
-    au < crawling ; exists ; 2010 ; Mathematics of Computation Volume 79 ; 2010 ; >
-    au < crawling ; exists ; 2011 ; Mathematics of Computation Volume 80 ; 2011 ; >
+    au < frozen ; exists ; 2007 ; Mathematics of Computation Volume 76 ; 2007 ; >
+    au < frozen ; exists ; 2008 ; Mathematics of Computation Volume 77 ; 2008 ; >
+    au < frozen ; exists ; 2009 ; Mathematics of Computation Volume 78 ; 2009 ; >
+    au < frozen ; exists ; 2010 ; Mathematics of Computation Volume 79 ; 2010 ; >
+    au < frozen ; exists ; 2011 ; Mathematics of Computation Volume 80 ; 2011 ; >
     au < finished ; finished ; 2012 ; Mathematics of Computation Volume 81 ; 2012 ; >
     au < finished ; finished ; 2013 ; Mathematics of Computation Volume 82 ; 2013 ; >
     au < finished ; finished ; 2014 ; Mathematics of Computation Volume 83 ; 2014 ; >
@@ -391,9 +391,9 @@
       
     au < crawling ; exists ; 2007 ; Proceedings of the American Mathematical Society Volume 135 ; 2007 ; >
     au < crawling ; exists ; 2008 ; Proceedings of the American Mathematical Society Volume 136 ; 2008 ; >
-    au < crawling ; exists ; 2009 ; Proceedings of the American Mathematical Society Volume 137 ; 2009 ; >
+    au < frozen ; exists ; 2009 ; Proceedings of the American Mathematical Society Volume 137 ; 2009 ; >
     au < ready ; exists ; 2010 ; Proceedings of the American Mathematical Society Volume 138 ; 2010 ; >
-    au < crawling ; exists ; 2011 ; Proceedings of the American Mathematical Society Volume 139 ; 2011 ; >
+    au < frozen ; exists ; 2011 ; Proceedings of the American Mathematical Society Volume 139 ; 2011 ; >
     au < finished ; finished ; 2012 ; Proceedings of the American Mathematical Society Volume 140 ; 2012 ; >
     au < finished ; finished ; 2013 ; Proceedings of the American Mathematical Society Volume 141 ; 2013 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Proceedings of the American Mathematical Society Volume 142 ; 2014 ; >
@@ -435,13 +435,13 @@
     
     param[journal_id] = ert
 
-    au < crawling ; exists ; 1997 ; Representation Theory Volume 1 ; 1997 ; >
-    au < crawling ; exists ; 1998 ; Representation Theory Volume 2 ; 1998 ; >
-    au < crawling ; exists ; 1999 ; Representation Theory Volume 3 ; 1999 ; >
+    au < frozen ; exists ; 1997 ; Representation Theory Volume 1 ; 1997 ; >
+    au < frozen ; exists ; 1998 ; Representation Theory Volume 2 ; 1998 ; >
+    au < frozen ; exists ; 1999 ; Representation Theory Volume 3 ; 1999 ; >
     au < testing ; exists ; 2000 ; Representation Theory Volume 4 ; 2000 ; >
-    au < crawling ; exists ; 2001 ; Representation Theory Volume 5 ; 2001 ; >
+    au < frozen ; exists ; 2001 ; Representation Theory Volume 5 ; 2001 ; >
     au < crawling ; exists ; 2002 ; Representation Theory Volume 6 ; 2002 ; >
-    au < crawling ; exists ; 2003 ; Representation Theory Volume 7 ; 2003 ; >
+    au < frozen ; exists ; 2003 ; Representation Theory Volume 7 ; 2003 ; >
     au < testing ; exists ; 2004 ; Representation Theory Volume 8 ; 2004 ; >
     au < testing ; exists ; 2005 ; Representation Theory Volume 9 ; 2005 ; >
     au < crawling ; exists ; 2006 ; Representation Theory Volume 10 ; 2006 ; >
@@ -472,9 +472,9 @@
     
     param[journal_id] = spmj
 
-    au < crawling ; exists ; 2004 ; St. Petersburg Mathematical Journal Volume 15 ; 2004 ; >
+    au < frozen ; exists ; 2004 ; St. Petersburg Mathematical Journal Volume 15 ; 2004 ; >
     au < crawling ; exists ; 2005 ; St. Petersburg Mathematical Journal Volume 16 ; 2005 ; >
-    au < crawling ; exists ; 2006 ; St. Petersburg Mathematical Journal Volume 17 ; 2006 ; >
+    au < frozen ; exists ; 2006 ; St. Petersburg Mathematical Journal Volume 17 ; 2006 ; >
     au < testing ; exists ; 2007 ; St. Petersburg Mathematical Journal Volume 18 ; 2007 ; >
     au < ready ; exists ; 2008 ; St. Petersburg Mathematical Journal Volume 19 ; 2008 ; >
     au < ready ; exists ; 2009 ; St. Petersburg Mathematical Journal Volume 20 ; 2009 ; >
@@ -502,14 +502,14 @@
     
     param[journal_id] = tpms
     
-    au < crawling ; exists ; 2004 ; Theory of Probability and Mathematical Statistics Volume 68-69 ; 2004 ; >
-    au < crawling ; exists ; 2005 ; Theory of Probability and Mathematical Statistics Volume 70-71 ; 2005 ; >
-    au < crawling ; exists ; 2006 ; Theory of Probability and Mathematical Statistics Volume 72-73 ; 2006 ; >
+    au < frozen ; exists ; 2004 ; Theory of Probability and Mathematical Statistics Volume 68-69 ; 2004 ; >
+    au < frozen ; exists ; 2005 ; Theory of Probability and Mathematical Statistics Volume 70-71 ; 2005 ; >
+    au < frozen ; exists ; 2006 ; Theory of Probability and Mathematical Statistics Volume 72-73 ; 2006 ; >
     au < ready ; exists ; 2007 ; Theory of Probability and Mathematical Statistics Volume 74-75 ; 2007 ; >
     au < crawling ; exists ; 2008 ; Theory of Probability and Mathematical Statistics Volume 76-77 ; 2008 ; >
-    au < crawling ; exists ; 2009 ; Theory of Probability and Mathematical Statistics Volume 78-79 ; 2009 ; >
-    au < crawling ; exists ; 2010 ; Theory of Probability and Mathematical Statistics Volume 80-81 ; 2010 ; >
-    au < crawling ; exists ; 2011 ; Theory of Probability and Mathematical Statistics Volume 82-83 ; 2011 ; >
+    au < frozen ; exists ; 2009 ; Theory of Probability and Mathematical Statistics Volume 78-79 ; 2009 ; >
+    au < frozen ; exists ; 2010 ; Theory of Probability and Mathematical Statistics Volume 80-81 ; 2010 ; >
+    au < frozen ; exists ; 2011 ; Theory of Probability and Mathematical Statistics Volume 82-83 ; 2011 ; >
     au < finished ; finished ; 2012 ; Theory of Probability and Mathematical Statistics Volume 84 ; 2012 ; >
     au < finished ; finished ; 2013 ; Theory of Probability and Mathematical Statistics Volume 85 ; 2013 ; >
     au < finished ; finished ; 2014 ; Theory of Probability and Mathematical Statistics Volume 86 ; 2014 ; >
@@ -532,9 +532,9 @@
     
     param[journal_id] = tran
     
-    au < crawling ; exists ; 2007 ; Transactions of the American Mathematical Society Volume 359 ; 2007 ; >
+    au < frozen ; exists ; 2007 ; Transactions of the American Mathematical Society Volume 359 ; 2007 ; >
     au < crawling ; exists ; 2008 ; Transactions of the American Mathematical Society Volume 360 ; 2008 ; >
-    au < crawling ; exists ; 2009 ; Transactions of the American Mathematical Society Volume 361 ; 2009 ; >
+    au < frozen ; exists ; 2009 ; Transactions of the American Mathematical Society Volume 361 ; 2009 ; >
     au < testing ; exists ; 2010 ; Transactions of the American Mathematical Society Volume 362 ; 2010 ; >
     au < testing ; exists ; 2011 ; Transactions of the American Mathematical Society Volume 363 ; 2011 ; >
     au < finished ; finished ; 2012 ; Transactions of the American Mathematical Society Volume 364 ; 2012 ; >
@@ -578,11 +578,11 @@
     
     au < crawling ; exists ; 2004 ; Transactions of the Moscow Mathematical Society Volume 65 ; 2004 ; >
     au < ready ; exists ; 2005 ; Transactions of the Moscow Mathematical Society Volume 66 ; 2005 ; >
-    au < crawling ; exists ; 2006 ; Transactions of the Moscow Mathematical Society Volume 67 ; 2006 ; >
-    au < crawling ; exists ; 2007 ; Transactions of the Moscow Mathematical Society Volume 68 ; 2007 ; >
-    au < crawling ; exists ; 2008 ; Transactions of the Moscow Mathematical Society Volume 69 ; 2008 ; >
+    au < frozen ; exists ; 2006 ; Transactions of the Moscow Mathematical Society Volume 67 ; 2006 ; >
+    au < frozen ; exists ; 2007 ; Transactions of the Moscow Mathematical Society Volume 68 ; 2007 ; >
+    au < frozen ; exists ; 2008 ; Transactions of the Moscow Mathematical Society Volume 69 ; 2008 ; >
     au < testing ; exists ; 2009 ; Transactions of the Moscow Mathematical Society Volume 70 ; 2009 ; >
-    au < crawling ; exists ; 2010 ; Transactions of the Moscow Mathematical Society Volume 71 ; 2010 ; >
+    au < frozen ; exists ; 2010 ; Transactions of the Moscow Mathematical Society Volume 71 ; 2010 ; >
     au < ready ; exists ; 2011 ; Transactions of the Moscow Mathematical Society Volume 72 ; 2011 ; >
     au < finished ; finished ; 2012 ; Transactions of the Moscow Mathematical Society Volume 73 ; 2012 ; >
     au < finished ; finished ; 2013 ; Transactions of the Moscow Mathematical Society Volume 74 ; 2013 ; >
