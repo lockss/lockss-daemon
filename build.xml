@@ -438,8 +438,10 @@ Args:
   <property name="gentlyWEB-utils.jar" value="${lib}/gentlyWEB-utils-1.1.jar" />
 
   <!-- Needed by OIOSAML -->
+  <!-- FYI: actually version 1.8 -->
   <property name="commons-digester-commons-digester.jar"
     value="${lib}/commons-digester-commons-digester.jar" />
+  <!-- FYI: actually version 1.2.1 -->
   <property name="commons-fileupload-commons-fileupload.jar"
   	value="${lib}/commons-fileupload-commons-fileupload.jar" />
   <property name="esapi-2.0GA.jar" value="${lib}/esapi-2.0GA.jar" />
