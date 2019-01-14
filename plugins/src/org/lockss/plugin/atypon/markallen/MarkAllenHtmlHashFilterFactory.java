@@ -66,8 +66,10 @@ public class MarkAllenHtmlHashFilterFactory
                 "div", "class", "literatumArticleToolsWidget"),
             HtmlNodeFilters.tagWithAttributeRegex(
                 "a", "href", "/action/showCitFormats\\?")),
-        // articleCountSection
+        
+        HtmlNodeFilters.tagWithAttributeRegex("span", "class", "article__(access|breadcrumb)"),
         HtmlNodeFilters.tagWithAttribute("section", "class", "article__keyword"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "figure-viewer"),
     };
     // super.createFilteredInputStream adds filters to the baseAtyponFilters
     // and returns the filtered input stream using an array of NodeFilters that 
