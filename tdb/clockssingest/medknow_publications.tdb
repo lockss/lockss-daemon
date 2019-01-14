@@ -587,8 +587,8 @@
     param[base_url] = http://www.drjjournal.net/
     param[journal_issn] = 1735-3327
 
-    au < crawling ; exists ; 2015 ; Dental Research Journal Volume 12 ; 2015 ; 12 ; ; >
-    au < crawling ; exists ; 2016 ; Dental Research Journal Volume 13 ; 2016 ; 13 ; ; >
+    au < frozen ; exists ; 2015 ; Dental Research Journal Volume 12 ; 2015 ; 12 ; ; >
+    au < frozen ; exists ; 2016 ; Dental Research Journal Volume 13 ; 2016 ; 13 ; ; >
     au < frozen ; exists ; 2017 ; Dental Research Journal Volume 14 ; 2017 ; 14 ; ; >
     au < crawling ; exists ; 2018 ; Dental Research Journal Volume 15 ; 2018 ; 15 ; ; >
 
@@ -2228,8 +2228,8 @@
 
     au < frozen ; exists ; 2014 ; Iranian Journal of Nursing and Midwifery Research Volume 19 ; 2014 ; 19 ; ; >
     au < frozen ; exists ; 2015 ; Iranian Journal of Nursing and Midwifery Research Volume 20 ; 2015 ; 20 ; ; >
-    au < crawling ; exists ; 2016 ; Iranian Journal of Nursing and Midwifery Research Volume 21 ; 2016 ; 21 ; ; >
-    au < crawling ; exists ; 2017 ; Iranian Journal of Nursing and Midwifery Research Volume 22 ; 2017 ; 22 ; ; >
+    au < frozen ; exists ; 2016 ; Iranian Journal of Nursing and Midwifery Research Volume 21 ; 2016 ; 21 ; ; >
+    au < frozen ; exists ; 2017 ; Iranian Journal of Nursing and Midwifery Research Volume 22 ; 2017 ; 22 ; ; >
     au < crawling ; exists ; 2018 ; Iranian Journal of Nursing and Midwifery Research Volume 23 ; 2018 ; 23 ; ; >
 
   }
@@ -3521,7 +3521,7 @@
     au < finished ; finished ; 2011 ; Journal of the International Clinical Dental Research Organization Volume 3 ; 2011 ; 3 ; ; >
     au < finished ; finished ; 2012 ; Journal of the International Clinical Dental Research Organization Volume 4 ; 2012 ; 4 ; ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2013 ; Journal of the International Clinical Dental Research Organization Volume 5 ; 2013 ; 5 ; ; >
-    au < crawling ; exists ; 2014 ; Journal of the International Clinical Dental Research Organization Volume 6 ; 2014 ; 6 ; ; >
+    au < frozen ; exists ; 2014 ; Journal of the International Clinical Dental Research Organization Volume 6 ; 2014 ; 6 ; ; >
     au < frozen ; exists ; 2015 ; Journal of the International Clinical Dental Research Organization Volume 7 ; 2015 ; 7 ; ; >
     au < frozen ; exists ; 2016 ; Journal of the International Clinical Dental Research Organization Volume 8 ; 2016 ; 8 ; ; >
     au < frozen ; exists ; 2017 ; Journal of the International Clinical Dental Research Organization Volume 9 ; 2017 ; 9 ; ; >
@@ -8290,7 +8290,7 @@
       au < frozen ; exists ; 2013 ; Advances in Human Biology Volume 3 ; 2013 ; 3 ; ; >
       au < frozen ; exists ; 2014 ; Advances in Human Biology Volume 4 ; 2014 ; 4 ; ; >
       au < frozen ; exists ; 2015 ; Advances in Human Biology Volume 5 ; 2015 ; 5 ; ; >
-      au < crawling ; exists ; 2016 ; Advances in Human Biology Volume 6 ; 2016 ; 6 ; ; >
+      au < frozen ; exists ; 2016 ; Advances in Human Biology Volume 6 ; 2016 ; 6 ; ; >
       au < frozen ; exists ; 2017 ; Advances in Human Biology Volume 7 ; 2017 ; 7 ; ; >
       au < crawling ; exists ; 2018 ; Advances in Human Biology Volume 8 ; 2018 ; 8 ; ; >
 
@@ -8346,8 +8346,8 @@
       au < frozen ; exists ; 2012 ; Ain-Shams Journal of Anaesthesiology Volume 5 ; 2012 ; 5 ; ; >
       au < frozen ; exists ; 2013 ; Ain-Shams Journal of Anaesthesiology Volume 6 ; 2013 ; 6 ; ; >
       au < frozen ; exists ; 2014 ; Ain-Shams Journal of Anaesthesiology Volume 7 ; 2014 ; 7 ; ; >
-      au < crawling ; exists ; 2015 ; Ain-Shams Journal of Anaesthesiology Volume 8 ; 2015 ; 8 ; ; >
-      au < crawling ; exists ; 2016 ; Ain-Shams Journal of Anaesthesiology Volume 9 ; 2016 ; 9 ; ; >
+      au < frozen ; exists ; 2015 ; Ain-Shams Journal of Anaesthesiology Volume 8 ; 2015 ; 8 ; ; >
+      au < frozen ; exists ; 2016 ; Ain-Shams Journal of Anaesthesiology Volume 9 ; 2016 ; 9 ; ; >
       au < frozen ; exists ; 2017 ; Ain-Shams Journal of Anaesthesiology Volume 10 ; 2017 ; 10 ; ; >
       au < expected ; exists ; 2018 ; Ain-Shams Journal of Anaesthesiology Volume 11 ; 2018 ; 11 ; ; >
 
@@ -8381,7 +8381,7 @@
       param[journal_issn] = 2589-3505
       param[base_url] = http://www.aiaohns.in/
 
-      au < crawling ; exists ; 2017 ; Annals of Indian Academy of Otorhinolaryngology Head and Neck Surgery Volume 1 ; 2017 ; 1 ; ; >
+      au < frozen ; exists ; 2017 ; Annals of Indian Academy of Otorhinolaryngology Head and Neck Surgery Volume 1 ; 2017 ; 1 ; ; >
       au < manifest ; exists ; 2018 ; Annals of Indian Academy of Otorhinolaryngology Head and Neck Surgery Volume 2 ; 2018 ; 2 ; ; >
 
   }
@@ -8626,7 +8626,7 @@
       param[journal_issn] = 2542-551X
       param[base_url] = http://www.cdriadvlkn.org/
 
-      au < crawling ; exists ; 2017 ; Clinical Dermatology Review Volume 1 ; 2017 ; 1 ; ; >
+      au < frozen ; exists ; 2017 ; Clinical Dermatology Review Volume 1 ; 2017 ; 1 ; ; >
       au < crawling ; exists ; 2018 ; Clinical Dermatology Review Volume 2 ; 2018 ; 2 ; ; >
 
   }
@@ -8695,7 +8695,7 @@
 
       au < frozen ; exists ; 2014 ; Egyptian Journal of Surgery Volume 33 ; 2014 ; 33 ; ; >
       au < frozen ; exists ; 2015 ; Egyptian Journal of Surgery Volume 34 ; 2015 ; 34 ; ; >
-      au < crawling ; exists ; 2016 ; Egyptian Journal of Surgery Volume 35 ; 2016 ; 35 ; ; >
+      au < frozen ; exists ; 2016 ; Egyptian Journal of Surgery Volume 35 ; 2016 ; 35 ; ; >
       au < manifest ; exists ; 2017 ; Egyptian Journal of Surgery Volume 36 ; 2017 ; 36 ; ; >
       au < manifest ; exists ; 2018 ; Egyptian Journal of Surgery Volume 37 ; 2018 ; 37 ; ; >
 
