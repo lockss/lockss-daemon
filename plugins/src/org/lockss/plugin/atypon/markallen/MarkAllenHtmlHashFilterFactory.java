@@ -67,6 +67,7 @@ public class MarkAllenHtmlHashFilterFactory
             HtmlNodeFilters.tagWithAttributeRegex(
                 "a", "href", "/action/showCitFormats\\?")),
         // articleCountSection
+        HtmlNodeFilters.tagWithAttribute("section", "class", "article__keyword"),
     };
     // super.createFilteredInputStream adds filters to the baseAtyponFilters
     // and returns the filtered input stream using an array of NodeFilters that 
