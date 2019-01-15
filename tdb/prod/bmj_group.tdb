@@ -148,7 +148,7 @@
     au < HighWirePressH20Plugin ; down ; 2015 ; Annals of the Rheumatic Diseases Volume 75 ; 75 ; http://ard.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2016 ; Annals of the Rheumatic Diseases Volume 76 ; 76 ; https://ard.bmj.com/ > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Annals of the Rheumatic Diseases Volume 77 ; 77 ; https://ard.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; expected ; 2018 ; Annals of the Rheumatic Diseases Volume 78 ; 78 ; https://ard.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; Annals of the Rheumatic Diseases Volume 78 ; 78 ; https://ard.bmj.com/ >
 
   }
 
@@ -529,7 +529,7 @@
       au < HighWirePressH20Plugin ; down ; 2015 ; BMJ Open Diabetes Research & Care Volume 3 ; 3 ; http://drc.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; manifest ; 2016 ; BMJ Open Diabetes Research & Care Volume 4 ; 4 ; https://drc.bmj.com/ > # Unable to fetch probe permission page
       au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; BMJ Open Diabetes Research & Care Volume 5 ; 5 ; https://drc.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; expected ; 2018 ; BMJ Open Diabetes Research & Care Volume 6 ; 6 ; https://drc.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; BMJ Open Diabetes Research & Care Volume 6 ; 6 ; https://drc.bmj.com/ >
 
   }
   
@@ -558,7 +558,7 @@
     au < HighWirePressH20Plugin ; down ; 2015 ; BMJ Open Respiratory Research Volume 2 ; 2 ; http://bmjopenrespres.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2016 ; BMJ Open Respiratory Research Volume 3 ; 3 ; https://bmjopenrespres.bmj.com/ > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; BMJ Open Respiratory Research Volume 4 ; 4 ; https://bmjopenrespres.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; expected ; 2018 ; BMJ Open Respiratory Research Volume 5 ; 5 ; https://bmjopenrespres.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; BMJ Open Respiratory Research Volume 5 ; 5 ; https://bmjopenrespres.bmj.com/ >
 
   }
   
@@ -1007,7 +1007,7 @@
     au < HighWirePressH20Plugin ; down ; 2015 ; OpenHeart Volume 2 ; 2 ; http://openheart.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2016 ; OpenHeart Volume 3 ; 3 ; https://openheart.bmj.com/ > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; OpenHeart Volume 4 ; 4 ; https://openheart.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; expected ; 2018 ; OpenHeart Volume 5 ; 5 ; https://openheart.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; OpenHeart Volume 5 ; 5 ; https://openheart.bmj.com/ >
 
   }
 
@@ -2080,7 +2080,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       au < HighWirePressH20Plugin ; down ; 2015 ; Lupus Science & Medicine Volume 2 ; 2 ; http://lupus.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; manifest ; 2016 ; Lupus Science & Medicine Volume 3 ; 3 ; https://lupus.bmj.com/ > # Unable to fetch probe permission page
       au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Lupus Science & Medicine Volume 4 ; 4 ; https://lupus.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; expected ; 2018 ; Lupus Science & Medicine Volume 5 ; 5 ; https://lupus.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; Lupus Science & Medicine Volume 5 ; 5 ; https://lupus.bmj.com/ >
 
     }
     
