@@ -752,7 +752,7 @@
     au < manifest ; exists ; 2015 ; 2015 ; American Journal of Health-System Pharmacy Volume 72 ; 72 ; >
     au < manifest ; exists ; 2016 ; 2016 ; American Journal of Health-System Pharmacy Volume 73 ; 73 ; >
     au < frozen ; exists ; 2017 ; 2017 ; American Journal of Health-System Pharmacy Volume 74 ; 74 ; >
-    au < testing ; exists ; 2018 ; 2018 ; American Journal of Health-System Pharmacy Volume 75 ; 75 ; >
+    au < ready ; exists ; 2018 ; 2018 ; American Journal of Health-System Pharmacy Volume 75 ; 75 ; >
 
   }
 
@@ -6812,7 +6812,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; ICES Journal of Marine Science Volume 71 ; 71 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; ICES Journal of Marine Science Volume 72 ; 72 ; >
     au < frozen ; exists ; 2016 ; 2016 ; ICES Journal of Marine Science Volume 73 ; 73 ; >
-    au < testing ; exists ; 2017 ; 2017 ; ICES Journal of Marine Science Volume 74 ; 74 ; >
+    au < ready ; exists ; 2017 ; 2017 ; ICES Journal of Marine Science Volume 74 ; 74 ; >
     au < testing ; exists ; 2018 ; 2018 ; ICES Journal of Marine Science Volume 75 ; 75 ; >
 
   }
@@ -13001,7 +13001,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Nephrology Dialysis Transplantation Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Nephrology Dialysis Transplantation Volume 30 ; 30 ; >
     au < manifest ; exists ; 2016 ; 2016 ; Nephrology Dialysis Transplantation Volume 31 ; 31 ; >
-    au < testing ; exists ; 2017 ; 2017 ; Nephrology Dialysis Transplantation Volume 32 ; 32 ; >
+    au < ready ; exists ; 2017 ; 2017 ; Nephrology Dialysis Transplantation Volume 32 ; 32 ; >
     au < testing ; exists ; 2018 ; 2018 ; Nephrology Dialysis Transplantation Volume 33 ; 33 ; >
 
   }
@@ -13035,7 +13035,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Neuro-Oncology Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Neuro-Oncology Volume 17 ; 17 ; >
     au < manifest ; exists ; 2016 ; 2016 ; Neuro-Oncology Volume 18 ; 18 ; >
-    au < testing ; exists ; 2017 ; 2017 ; Neuro-Oncology Volume 19 ; 19 ; >
+    au < ready ; exists ; 2017 ; 2017 ; Neuro-Oncology Volume 19 ; 19 ; >
     au < testing ; exists ; 2018 ; 2018 ; Neuro-Oncology Volume 20 ; 20 ; >
 
   }
@@ -15640,7 +15640,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Schizophrenia Bulletin Volume 40 ; 40 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Schizophrenia Bulletin Volume 41 ; 41 ; >
     au < manifest ; exists ; 2016 ; 2016 ; Schizophrenia Bulletin Volume 42 ; 42 ; >
-    au < testing ; exists ; 2017 ; 2017 ; Schizophrenia Bulletin Volume 43 ; 43 ; >
+    au < ready ; exists ; 2017 ; 2017 ; Schizophrenia Bulletin Volume 43 ; 43 ; >
     au < testing ; exists ; 2018 ; 2018 ; Schizophrenia Bulletin Volume 44 ; 44 ; >
 
   }
@@ -15894,7 +15894,7 @@
     au < manifest ; exists ; 2014 ; 2014 ; Sleep Volume 37 ; 37 ; >
     au < manifest ; exists ; 2015 ; 2015 ; Sleep Volume 38 ; 38 ; >
     au < manifest ; exists ; 2016 ; 2016 ; Sleep Volume 39 ; 39 ; >
-    au < testing ; exists ; 2017 ; 2017 ; Sleep Volume 40 ; 40 ; >
+    au < ready ; exists ; 2017 ; 2017 ; Sleep Volume 40 ; 40 ; >
     au < testing ; exists ; 2018 ; 2018 ; Sleep Volume 41 ; 41 ; >
 
   }
