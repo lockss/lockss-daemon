@@ -177,25 +177,25 @@
       param[journal_id] = palo
       implicit < status ; year ; name ; param[volume_name] >
       
-      au < released ; 2000 ; PALAIOS Volume 15 [BioOne] ; 15 >
-      au < released ; 2001 ; PALAIOS Volume 16 [BioOne] ; 16 >
-      au < released ; 2002 ; PALAIOS Volume 17 [BioOne] ; 17 >
-      au < released ; 2003 ; PALAIOS Volume 18 [BioOne] ; 18 >
-      au < released ; 2004 ; PALAIOS Volume 19 [BioOne] ; 19 >
+      au < down ; 2000 ; PALAIOS Volume 15 [BioOne] ; 15 >
+      au < down ; 2001 ; PALAIOS Volume 16 [BioOne] ; 16 >
+      au < down ; 2002 ; PALAIOS Volume 17 [BioOne] ; 17 >
+      au < down ; 2003 ; PALAIOS Volume 18 [BioOne] ; 18 >
+      au < down ; 2004 ; PALAIOS Volume 19 [BioOne] ; 19 >
       au < doNotProcess ; 2005 ; PALAIOS Volume 20 [BioOne] ; 20 >
-      au < released ; 2006 ; PALAIOS Volume 21 [BioOne] ; 21 >
-      au < released ; 2007 ; PALAIOS Volume 22 [BioOne] ; 22 >
-      au < released ; 2008 ; PALAIOS Volume 23 [BioOne] ; 23 >
-      au < released ; 2009 ; PALAIOS Volume 24 [BioOne] ; 24 >
-      au < released ; 2010 ; PALAIOS Volume 25 [BioOne] ; 25 >
-      au < released ; 2011 ; PALAIOS Volume 26 [BioOne] ; 26 >
-      au < released ; 2012 ; PALAIOS Volume 27 [BioOne] ; 27 >
-      au < released ; 2013 ; PALAIOS Volume 28 [BioOne] ; 28 >
-      au < released ; 2014 ; PALAIOS Volume 29 [BioOne] ; 29 >
-      au < released ; 2015 ; PALAIOS Volume 30 [BioOne] ; 30 >
-      au < released ; 2016 ; PALAIOS Volume 31 [BioOne] ; 31 >
-      au < released ; 2017 ; PALAIOS Volume 32 [BioOne] ; 32 >
-      au < released ; 2018 ; PALAIOS Volume 33 [BioOne] ; 33 >
+      au < down ; 2006 ; PALAIOS Volume 21 [BioOne] ; 21 >
+      au < down ; 2007 ; PALAIOS Volume 22 [BioOne] ; 22 >
+      au < down ; 2008 ; PALAIOS Volume 23 [BioOne] ; 23 >
+      au < down ; 2009 ; PALAIOS Volume 24 [BioOne] ; 24 >
+      au < down ; 2010 ; PALAIOS Volume 25 [BioOne] ; 25 >
+      au < down ; 2011 ; PALAIOS Volume 26 [BioOne] ; 26 >
+      au < down ; 2012 ; PALAIOS Volume 27 [BioOne] ; 27 >
+      au < down ; 2013 ; PALAIOS Volume 28 [BioOne] ; 28 >
+      au < down ; 2014 ; PALAIOS Volume 29 [BioOne] ; 29 >
+      au < down ; 2015 ; PALAIOS Volume 30 [BioOne] ; 30 >
+      au < down ; 2016 ; PALAIOS Volume 31 [BioOne] ; 31 >
+      au < down ; 2017 ; PALAIOS Volume 32 [BioOne] ; 32 >
+      au < down ; 2018 ; PALAIOS Volume 33 [BioOne] ; 33 >
 
     }
 

@@ -33,15 +33,15 @@
       comment[notReady1] = http://www.bioone.org/action/showFullPopup?doi=10.1111%2Fj.1558-5646.2008.00579.x&id=t01
       comment[notReady2] = http://www.bioone.org/action/showFullPopup?doi=10.1111%2Fj.1558-5646.2008.00583.x&id=t01
 
-      au < released ; 2000 ; Evolution Volume 54 ; 54 >
-      au < released ; 2001 ; Evolution Volume 55 ; 55 >
+      au < down ; 2000 ; Evolution Volume 54 ; 54 >
+      au < down ; 2001 ; Evolution Volume 55 ; 55 >
       au < notReady ; 2002 ; Evolution Volume 56 ; 56 >
-      au < released ; 2003 ; Evolution Volume 57 ; 57 >
+      au < down ; 2003 ; Evolution Volume 57 ; 57 >
       au < notReady ; 2004 ; Evolution Volume 58 ; 58 >
       au < doNotProcess ; 2005 ; Evolution Volume 59 ; 59 >
-      au < released ; 2006 ; Evolution Volume 60 ; 60 >
-      au < released ; 2007 ; Evolution Volume 61 ; 61 >
-      au < released ; 2008 ; Evolution Volume 62 ; 62 >
+      au < down ; 2006 ; Evolution Volume 60 ; 60 >
+      au < down ; 2007 ; Evolution Volume 61 ; 61 >
+      au < down ; 2008 ; Evolution Volume 62 ; 62 >
       au < doNotProcess ; 2009 ; Evolution Volume 63 ; 63 >
 
     }

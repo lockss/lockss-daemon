@@ -17,25 +17,25 @@
     param[journal_id] = noat
     # stop processing volume 1 to volume 3, publisher reuse the volume numbers on special issues
     
-    au < released ; 2008 ; Journal of the North Atlantic Volume A ; 1 > #content may contain volume 1 and/or sp1/1
-    au < released ; 2009 ; Journal of the North Atlantic Volume B ; 2 > #content may contain volume 2 and/or sp2/1 and sp2/2
-    au < released ; 2010 ; Journal of the North Atlantic Volume C ; 3 > #content may contain volume 3 and/or sp3
+    au < down ; 2008 ; Journal of the North Atlantic Volume A ; 1 > #content may contain volume 1 and/or sp1/1
+    au < down ; 2009 ; Journal of the North Atlantic Volume B ; 2 > #content may contain volume 2 and/or sp2/1 and sp2/2
+    au < down ; 2010 ; Journal of the North Atlantic Volume C ; 3 > #content may contain volume 3 and/or sp3
 
-    au < released ; 2012 ; Journal of the North Atlantic Special Number 018 ; 018 >
-    au < released ; 2012 ; Journal of the North Atlantic Special Number 19 ; 19 >
-    au < released ; 2013 ; Journal of the North Atlantic Special Number 20 ; 20 >
-    au < released ; 2013 ; Journal of the North Atlantic Special Number 21 ; 21 >
-    au < released ; 2013 ; Journal of the North Atlantic Special Number 22 ; 22 >
-    au < released ; 2014 ; Journal of the North Atlantic Special Number 23 ; 23 >
-    au < released ; 2014 ; Journal of the North Atlantic Special Number 24 ; 24 >
-    au < released ; 2014 ; Journal of the North Atlantic Special Number 25 ; 25 >
-    au < released ; 2015 ; Journal of the North Atlantic Special Number 27 ; 27 >
-    au < released ; 2015 ; Journal of the North Atlantic Special Number 28 ; 28 >
-    au < released ; 2016 ; Journal of the North Atlantic Special Number 29 ; 29 >
-    au < released ; 2016 ; Journal of the North Atlantic Special Number 30 ; 30 >
-    au < released ; 2017 ; Journal of the North Atlantic Special Number 31 ; 31 >
-    au < released ; 2017 ; Journal of the North Atlantic Special Number 32 ; 32 >
-    au < released ; 2017 ; Journal of the North Atlantic Special Number 33 ; 33 >
+    au < down ; 2012 ; Journal of the North Atlantic Special Number 018 ; 018 >
+    au < down ; 2012 ; Journal of the North Atlantic Special Number 19 ; 19 >
+    au < down ; 2013 ; Journal of the North Atlantic Special Number 20 ; 20 >
+    au < down ; 2013 ; Journal of the North Atlantic Special Number 21 ; 21 >
+    au < down ; 2013 ; Journal of the North Atlantic Special Number 22 ; 22 >
+    au < down ; 2014 ; Journal of the North Atlantic Special Number 23 ; 23 >
+    au < down ; 2014 ; Journal of the North Atlantic Special Number 24 ; 24 >
+    au < down ; 2014 ; Journal of the North Atlantic Special Number 25 ; 25 >
+    au < down ; 2015 ; Journal of the North Atlantic Special Number 27 ; 27 >
+    au < down ; 2015 ; Journal of the North Atlantic Special Number 28 ; 28 >
+    au < down ; 2016 ; Journal of the North Atlantic Special Number 29 ; 29 >
+    au < down ; 2016 ; Journal of the North Atlantic Special Number 30 ; 30 >
+    au < down ; 2017 ; Journal of the North Atlantic Special Number 31 ; 31 >
+    au < down ; 2017 ; Journal of the North Atlantic Special Number 32 ; 32 >
+    au < down ; 2017 ; Journal of the North Atlantic Special Number 33 ; 33 >
     au < manifest ; 2018 ; Journal of the North Atlantic Special Number 34 ; 34 >
 
     au < superseded ; 2012-2013 ; Journal of the North Atlantic Special Volume 4 [superseded] ; 4 >
@@ -44,15 +44,15 @@
     au < superseded ; 2014 ; Journal of the North Atlantic Special Volume 7 [superseded] ; 7 >
     au < superseded ; 2015 ; Journal of the North Atlantic Special Volume 8 [superseded] ; 8 >
 
-    au < released ; 2009-2010 ; Journal of the North Atlantic Special Volume 1 Part A ; 101 >
-    au < released ; 2009-2011 ; Journal of the North Atlantic Special Volume 1 Part B ; 102 >
-    au < released ; 2009-2010 ; Journal of the North Atlantic Special Volume 2 ; 201 >
-    au < released ; 2011-2012 ; Journal of the North Atlantic Special Volume 3 ; 301 >
-    au < released ; 2012-2013 ; Journal of the North Atlantic Special Volume 4 ; 401 >
-    au < released ; 2013 ; Journal of the North Atlantic Special Volume 5 ; 501 >
-    au < released ; 2014 ; Journal of the North Atlantic Special Volume 6 ; 601 >
-    au < released ; 2015 ; Journal of the North Atlantic Special Volume 9 ; 901 >
-    au < released ; 2017 ; Journal of the North Atlantic Special Volume 10 ; 1001 >
+    au < down ; 2009-2010 ; Journal of the North Atlantic Special Volume 1 Part A ; 101 >
+    au < down ; 2009-2011 ; Journal of the North Atlantic Special Volume 1 Part B ; 102 >
+    au < down ; 2009-2010 ; Journal of the North Atlantic Special Volume 2 ; 201 >
+    au < down ; 2011-2012 ; Journal of the North Atlantic Special Volume 3 ; 301 >
+    au < down ; 2012-2013 ; Journal of the North Atlantic Special Volume 4 ; 401 >
+    au < down ; 2013 ; Journal of the North Atlantic Special Volume 5 ; 501 >
+    au < down ; 2014 ; Journal of the North Atlantic Special Volume 6 ; 601 >
+    au < down ; 2015 ; Journal of the North Atlantic Special Volume 9 ; 901 >
+    au < down ; 2017 ; Journal of the North Atlantic Special Volume 10 ; 1001 >
   }
   
 }

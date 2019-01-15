@@ -17,14 +17,14 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = jore
 
-      au < released ; 2010 ; Journal of Resources and Ecology Volume 1 ; 1 >
-      au < released ; 2011 ; Journal of Resources and Ecology Volume 2 ; 2 >
-      au < released ; 2012 ; Journal of Resources and Ecology Volume 3 ; 3 >
-      au < released ; 2013 ; Journal of Resources and Ecology Volume 4 ; 4 >
-      au < released ; 2014 ; Journal of Resources and Ecology Volume 5 ; 5 >
-      au < released ; 2015 ; Journal of Resources and Ecology Volume 6 ; 6 >
-      au < released ; 2016 ; Journal of Resources and Ecology Volume 7 ; 7 >
-      au < released ; 2017 ; Journal of Resources and Ecology Volume 8 ; 8 >
+      au < down ; 2010 ; Journal of Resources and Ecology Volume 1 ; 1 >
+      au < down ; 2011 ; Journal of Resources and Ecology Volume 2 ; 2 >
+      au < down ; 2012 ; Journal of Resources and Ecology Volume 3 ; 3 >
+      au < down ; 2013 ; Journal of Resources and Ecology Volume 4 ; 4 >
+      au < down ; 2014 ; Journal of Resources and Ecology Volume 5 ; 5 >
+      au < down ; 2015 ; Journal of Resources and Ecology Volume 6 ; 6 >
+      au < down ; 2016 ; Journal of Resources and Ecology Volume 7 ; 7 >
+      au < down ; 2017 ; Journal of Resources and Ecology Volume 8 ; 8 >
       au < manifest ; 2018 ; Journal of Resources and Ecology Volume 9 ; 9 >
 
     }

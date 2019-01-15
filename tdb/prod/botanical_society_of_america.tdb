@@ -59,11 +59,11 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = apps
 
-      au < released ; 2013 ; Applications in Plant Sciences Volume 1 ; 1 >
-      au < released ; 2014 ; Applications in Plant Sciences Volume 2 ; 2 >
-      au < released ; 2015 ; Applications in Plant Sciences Volume 3 ; 3 >
-      au < released ; 2016 ; Applications in Plant Sciences Volume 4 ; 4 >
-      au < released ; 2017 ; Applications in Plant Sciences Volume 5 ; 5 >
+      au < down ; 2013 ; Applications in Plant Sciences Volume 1 ; 1 >
+      au < down ; 2014 ; Applications in Plant Sciences Volume 2 ; 2 >
+      au < down ; 2015 ; Applications in Plant Sciences Volume 3 ; 3 >
+      au < down ; 2016 ; Applications in Plant Sciences Volume 4 ; 4 >
+      au < down ; 2017 ; Applications in Plant Sciences Volume 5 ; 5 >
       au < manifest ; 2018 ; Applications in Plant Sciences Volume 6 ; 6 >
 
     }

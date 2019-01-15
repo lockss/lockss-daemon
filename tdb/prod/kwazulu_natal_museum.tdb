@@ -57,14 +57,14 @@
       param[journal_id] = afin
       implicit < status ; year ; name ; param[volume_name] >
     
-      au < released ; 2008 ; African Invertebrates Volume 49 ; 49 >
-      au < released ; 2009 ; African Invertebrates Volume 50 ; 50 >
-      au < released ; 2010 ; African Invertebrates Volume 51 ; 51 >
-      au < released ; 2011 ; African Invertebrates Volume 52 ; 52 >
-      au < released ; 2012 ; African Invertebrates Volume 53 ; 53 >
-      au < released ; 2013 ; African Invertebrates Volume 54 ; 54 >
-      au < released ; 2014 ; African Invertebrates Volume 55 ; 55 >
-      au < released ; 2015 ; African Invertebrates Volume 56 ; 56 >
+      au < down ; 2008 ; African Invertebrates Volume 49 ; 49 >
+      au < down ; 2009 ; African Invertebrates Volume 50 ; 50 >
+      au < down ; 2010 ; African Invertebrates Volume 51 ; 51 >
+      au < down ; 2011 ; African Invertebrates Volume 52 ; 52 >
+      au < down ; 2012 ; African Invertebrates Volume 53 ; 53 >
+      au < down ; 2013 ; African Invertebrates Volume 54 ; 54 >
+      au < down ; 2014 ; African Invertebrates Volume 55 ; 55 >
+      au < down ; 2015 ; African Invertebrates Volume 56 ; 56 >
 
     }
 

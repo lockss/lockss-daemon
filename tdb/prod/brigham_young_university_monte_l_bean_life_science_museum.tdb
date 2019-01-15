@@ -17,16 +17,16 @@
     param[journal_id] = mwna
     implicit < status ; year ; name ; param[volume_name] >
     
-    au < released ; 2002 ; Monographs of the Western North American Naturalist Volume 1 ; 1 >
-    au < released ; 2004 ; Monographs of the Western North American Naturalist Volume 2 ; 2 >
-    au < released ; 2007 ; Monographs of the Western North American Naturalist Volume 3 ; 3 >
-    au < released ; 2008 ; Monographs of the Western North American Naturalist Volume 4 ; 4 >
-    au < released ; 2011 ; Monographs of the Western North American Naturalist Volume 5 ; 5 >
-    au < released ; 2013 ; Monographs of the Western North American Naturalist Volume 6 ; 6 >
-    au < released ; 2014 ; Monographs of the Western North American Naturalist Volume 7 ; 7 >
-    au < released ; 2015 ; Monographs of the Western North American Naturalist Volume 8 ; 8 >
-    au < released ; 2016 ; Monographs of the Western North American Naturalist Volume 9 ; 9 >
-    au < released ; 2017 ; Monographs of the Western North American Naturalist Volume 10 ; 10 >
+    au < down ; 2002 ; Monographs of the Western North American Naturalist Volume 1 ; 1 >
+    au < down ; 2004 ; Monographs of the Western North American Naturalist Volume 2 ; 2 >
+    au < down ; 2007 ; Monographs of the Western North American Naturalist Volume 3 ; 3 >
+    au < down ; 2008 ; Monographs of the Western North American Naturalist Volume 4 ; 4 >
+    au < down ; 2011 ; Monographs of the Western North American Naturalist Volume 5 ; 5 >
+    au < down ; 2013 ; Monographs of the Western North American Naturalist Volume 6 ; 6 >
+    au < down ; 2014 ; Monographs of the Western North American Naturalist Volume 7 ; 7 >
+    au < down ; 2015 ; Monographs of the Western North American Naturalist Volume 8 ; 8 >
+    au < down ; 2016 ; Monographs of the Western North American Naturalist Volume 9 ; 9 >
+    au < down ; 2017 ; Monographs of the Western North American Naturalist Volume 10 ; 10 >
     au < expected ; 2018 ; Monographs of the Western North American Naturalist Volume 11 ; 11 >
 
   }
