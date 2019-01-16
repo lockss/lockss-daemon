@@ -80,7 +80,9 @@ public class AmericanSpeechLanguageHearingAssocHtmlHashFilterFactory extends Bas
         // toc - contents only
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "table-of-content"),
         // doi full content
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article__body")
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article__body"),
+        // Download Citations page
+        HtmlNodeFilters.tagWithAttribute("div", "class", "articleList"),
     };
 
     NodeFilter[] excludeNodes = new NodeFilter[] {
