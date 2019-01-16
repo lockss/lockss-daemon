@@ -1,20 +1,20 @@
 {
     publisher <
-        name =  European Mathematical Society  ; 
-        info[contract] =  2015  ; 
-        info[back] =  1900  ; 
-        info[tester] =  8  ; 
-        info[poller] =  2  
+        name = European Mathematical Society ; 
+        info[contract] = 2015 ; 
+        info[back] = 1900 ; 
+        info[tester] = 8 ; 
+        info[poller] = 2  
   >
     plugin = org.lockss.plugin.europeanmathematicalsociety.ClockssEuropeanMathematicalSocietyBooksPlugin
-    param[base_url] =  https://www.ems-ph.org/
+    param[base_url] = https://www.ems-ph.org/
     implicit < status ; status2 ; year ; isbn ; eisbn ; name ; param[book_number] ; hidden[proxy] >
 
 
   {
     title <
-      name =  EMS Monographs in Mathematics  ; 
-      type =  bookSeries
+      name = EMS Monographs in Mathematics ; 
+      type = bookSeries
 
     >
       au < finished ; finished ; 2015 ; 978-3-03719-136-1 ; 978-3-03719-636-6 ; A Spinorial Approach to Riemannian and Conformal Geometry ; 194 ; reingest5.clockss.org:8082  >
@@ -28,8 +28,8 @@
 
   {
     title <
-      name =  EMS Series in Industrial and Applied Mathematics  ; 
-      type =  bookSeries
+      name = EMS Series in Industrial and Applied Mathematics ; 
+      type = bookSeries
 
     >
       au < finished ; finished ; 2014 ; 978-3-03719-137-8 ; 978-3-03719-637-3 ; MATHEON - Mathematics for Key Technologies ; 177 ; reingest5.clockss.org:8082  >
@@ -38,8 +38,8 @@
 
   {
     title <
-      name =  EMS Series of Congress Reports  ; 
-      type =  bookSeries
+      name = EMS Series of Congress Reports ; 
+      type = bookSeries
 
     >
       au < exists ; exists ; 2017 ; 978-3-03719-171-2 ; 978-3-03719-671-7 ; Representation Theory – Current Trends and Perspectives ; 216 ; >
@@ -58,8 +58,8 @@
 
   {
     title <
-      name =  EMS Series of Lectures in Mathematics  ; 
-      type =  bookSeries
+      name = EMS Series of Lectures in Mathematics ; 
+      type = bookSeries
 
     >
       au < frozen ; exists ; 2016 ; 978-3-03719-168-2 ; 978-3-03719-668-7 ; Dynamics Done with Your Bare Hands ; 211 ; >
@@ -93,8 +93,8 @@
 
   {
     title <
-      name =  EMS Textbooks in Mathematics  ; 
-      type =  bookSeries
+      name = EMS Textbooks in Mathematics ; 
+      type = bookSeries
 
     >
       au < frozen ; exists ; 2016 ; 978-3-03719-159-0 ; 978-3-03719-659-5 ; Measure and Integration ; 201 ; >
@@ -120,8 +120,8 @@
 
   {
     title <
-      name =  EMS Tracts in Mathematics  ; 
-      type =  bookSeries
+      name = EMS Tracts in Mathematics ; 
+      type = bookSeries
 
     >
       au < exists ; exists ; 2017 ; 978-3-03719-169-9 ; 978-3-03719-669-4 ; Bound States of the Magnetic Schrödinger Operator ; 212 ; >
@@ -156,8 +156,8 @@
 
   {
     title <
-      name =  ESI Lectures in Mathematics and Physics  ; 
-      type =  bookSeries
+      name = ESI Lectures in Mathematics and Physics ; 
+      type = bookSeries
 
     >
       au < frozen ; exists ; 2013 ; 978-3-03719-121-7 ; 978-3-03719-621-2 ; Erwin Schrödinger - 50 Years After ; 163 ; >
@@ -174,35 +174,35 @@
 
   {
     title <
-      name =  European Mathematical Society Books  ; 
-      type =  bookSeries
+      name = European Mathematical Society Books ; 
+      type = bookSeries
 
     >
-      au < exist ; exist ; 2019 ; 978-3-03719-192-7 ; 978-3-03719-692-2 ; The Shock Development Problem ; 238 ; >
-      au < exist ; exist ; 2019 ; 978-3-03719-195-8 ; 978-3-03719-695-3 ; Function Spaces with Dominating Mixed Smoothness ; 241 ; >
-      au < exist ; exist ; 2018 ; 978-3-03719-190-3 ; 978-3-03719-690-8 ; Boundary Behavior of Solutions to Elliptic Equations in General Domains ; 236 ; >
-      au < exist ; exist ; 2018 ; 978-3-03719-176-7 ; 978-3-03719-676-2 ; European Congress of Mathematics ; 220 ; >
-      au < exist ; exist ; 2018 ; 978-3-03719-187-3 ; 978-3-03719-687-8 ; An Introduction to KacMoody Groups over Fields ; 232 ; >
-      au < exist ; exist ; 2018 ; 978-3-03719-186-6 ; 978-3-03719-686-1 ; "Non-Linear Partial Differential Equations, Mathematical Physics, and Stochastic Analysis" ; 231 ; >
-      au < exist ; exist ; 2018 ; 978-3-03719-188-0 ; 978-3-03719-688-5 ; A Brief Introduction to Spectral Graph Theory ; 233 ; >
-      au < exist ; exist ; 2018 ; 978-3-03719-181-1 ; 978-3-03719-681-6 ; "Regular, Quasi-regular and Induced Representations of Infinite-dimensional Groups" ; 225 ; >
-      au < exist ; exist ; 2018 ; 978-3-03719-189-7 ; 978-3-03719-689-2 ; Geometric and Topological Aspects of Coxeter Groups and Buildings ; 234 ; >
-      au < exist ; exist ; 2018 ; 978-3-03719-185-9 ; 978-3-03719-685-4 ; Local Representation Theory and Simple Groups ; 230 ; >
-      au < exist ; exist ; 2018 ; 978-3-03719-184-2 ; 978-3-03719-684-7 ; Lectures in Model Theory ; 229 ; >
-      au < exist ; exist ; 2018 ; 978-3-03719-183-5 ; 978-3-03719-683-0 ; Linear Forms in Logarithms and Applications ; 228 ; >
-      au < exist ; exist ; 2018 ; 978-3-03719-178-1 ; 978-3-03719-678-6 ; Shape Variation and Optimization ; 222 ; >
-      au < exist ; exist ; 2018 ; 978-3-03719-135-4 ; 978-3-03719-635-9 ; Foundations of Rigid Geometry I ; 227 ; >
-      au < exist ; exist ; 2018 ; 978-3-03719-182-8 ; 978-3-03719-682-3 ; "Schubert Varieties, Equivariant Cohomology and Characteristic Classes" ; 226 ; >
-      au < exist ; exist ; 2017 ; 978-3-03719-177-4 ; 978-3-03719-677-9 ; Interviews with the Abel Prize Laureates 20032016 ; 221 ; >
-      au < exist ; exist ; 2017 ; 978-3-03719-180-4 ; 978-3-03719-680-9 ; Higher-Dimensional Knots According to Michel Kervaire ; 224 ; >
-      au < exist ; exist ; 2017 ; 978-3-03719-179-8 ; 978-3-03719-679-3 ; A Course In Error-Correcting Codes ; 223 ; >
-      au < exist ; exist ; 2017 ; 978-3-03719-174-3 ; 978-3-03719-674-8 ; Frobenius Algebras II ; 219 ; >
-      au < exist ; exist ; 2017 ; 978-3-03719-175-0 ; 978-3-03719-675-5 ; Functional Analysis and Operator Theory for Quantum Physics ; 218 ; >
-      au < exist ; exist ; 2017 ; 978-3-03719-172-9 ; 978-3-03719-672-4 ; PDE Models for Chemotaxis and Hydrodynamics in Supercritical Function Spaces ; 217 ; >
-      au < exist ; exist ; 2017 ; 978-3-03719-173-6 ; 978-3-03719-673-1 ; Asymptotic Theory of Transaction Costs ; 215 ; >
-      au < exist ; exist ; 2016 ; 978-3-03719-165-1 ; 978-3-03719-665-6 ; Free Probability and Operator Algebras ; 208 ; >
-      au < exist ; exist ; 2016 ; 978-3-03719-157-6 ; 978-3-03719-657-1 ; Absolute Arithmetic and F1-Geometry ; 204 ; >
-      au < exist ; exist ; 2016 ; 978-3-03719-164-4 ; 978-3-03719-664-9 ; Mathematics and Society ; 207 ; >
+      au < exists ; exists ; 2019 ; 978-3-03719-192-7 ; 978-3-03719-692-2 ; The Shock Development Problem ; 238 ; >
+      au < exists ; exists ; 2019 ; 978-3-03719-195-8 ; 978-3-03719-695-3 ; Function Spaces with Dominating Mixed Smoothness ; 241 ; >
+      au < exists ; exists ; 2018 ; 978-3-03719-190-3 ; 978-3-03719-690-8 ; Boundary Behavior of Solutions to Elliptic Equations in General Domains ; 236 ; >
+      au < exists ; exists ; 2018 ; 978-3-03719-176-7 ; 978-3-03719-676-2 ; European Congress of Mathematics ; 220 ; >
+      au < exists ; exists ; 2018 ; 978-3-03719-187-3 ; 978-3-03719-687-8 ; An Introduction to KacMoody Groups over Fields ; 232 ; >
+      au < exists ; exists ; 2018 ; 978-3-03719-186-6 ; 978-3-03719-686-1 ; "Non-Linear Partial Differential Equations, Mathematical Physics, and Stochastic Analysis" ; 231 ; >
+      au < exists ; exists ; 2018 ; 978-3-03719-188-0 ; 978-3-03719-688-5 ; A Brief Introduction to Spectral Graph Theory ; 233 ; >
+      au < exists ; exists ; 2018 ; 978-3-03719-181-1 ; 978-3-03719-681-6 ; "Regular, Quasi-regular and Induced Representations of Infinite-dimensional Groups" ; 225 ; >
+      au < exists ; exists ; 2018 ; 978-3-03719-189-7 ; 978-3-03719-689-2 ; Geometric and Topological Aspects of Coxeter Groups and Buildings ; 234 ; >
+      au < exists ; exists ; 2018 ; 978-3-03719-185-9 ; 978-3-03719-685-4 ; Local Representation Theory and Simple Groups ; 230 ; >
+      au < exists ; exists ; 2018 ; 978-3-03719-184-2 ; 978-3-03719-684-7 ; Lectures in Model Theory ; 229 ; >
+      au < exists ; exists ; 2018 ; 978-3-03719-183-5 ; 978-3-03719-683-0 ; Linear Forms in Logarithms and Applications ; 228 ; >
+      au < exists ; exists ; 2018 ; 978-3-03719-178-1 ; 978-3-03719-678-6 ; Shape Variation and Optimization ; 222 ; >
+      au < exists ; exists ; 2018 ; 978-3-03719-135-4 ; 978-3-03719-635-9 ; Foundations of Rigid Geometry I ; 227 ; >
+      au < exists ; exists ; 2018 ; 978-3-03719-182-8 ; 978-3-03719-682-3 ; "Schubert Varieties, Equivariant Cohomology and Characteristic Classes" ; 226 ; >
+      au < exists ; exists ; 2017 ; 978-3-03719-177-4 ; 978-3-03719-677-9 ; Interviews with the Abel Prize Laureates 20032016 ; 221 ; >
+      au < exists ; exists ; 2017 ; 978-3-03719-180-4 ; 978-3-03719-680-9 ; Higher-Dimensional Knots According to Michel Kervaire ; 224 ; >
+      au < exists ; exists ; 2017 ; 978-3-03719-179-8 ; 978-3-03719-679-3 ; A Course In Error-Correcting Codes ; 223 ; >
+      au < exists ; exists ; 2017 ; 978-3-03719-174-3 ; 978-3-03719-674-8 ; Frobenius Algebras II ; 219 ; >
+      au < exists ; exists ; 2017 ; 978-3-03719-175-0 ; 978-3-03719-675-5 ; Functional Analysis and Operator Theory for Quantum Physics ; 218 ; >
+      au < exists ; exists ; 2017 ; 978-3-03719-172-9 ; 978-3-03719-672-4 ; PDE Models for Chemotaxis and Hydrodynamics in Supercritical Function Spaces ; 217 ; >
+      au < exists ; exists ; 2017 ; 978-3-03719-173-6 ; 978-3-03719-673-1 ; Asymptotic Theory of Transaction Costs ; 215 ; >
+      au < exists ; exists ; 2016 ; 978-3-03719-165-1 ; 978-3-03719-665-6 ; Free Probability and Operator Algebras ; 208 ; >
+      au < exists ; exists ; 2016 ; 978-3-03719-157-6 ; 978-3-03719-657-1 ; Absolute Arithmetic and F1-Geometry ; 204 ; >
+      au < exists ; exists ; 2016 ; 978-3-03719-164-4 ; 978-3-03719-664-9 ; Mathematics and Society ; 207 ; >
       au < finished ; finished ; 2014 ; 978-3-03719-120-0 ; 978-3-03719-620-5 ; European Congress of Mathematics Kraków, 2 - 7 July, 2012 ; 170 ; reingest2.clockss.org:8085  >
       au < frozen ; exists ; 2011 ; 978-3-03719-088-3 ; 978-3-03719-588-8 ; The Blind Spot ; 136 ; >
       au < frozen ; exists ; 2010 ; 978-3-03719-089-0 ; 978-3-03719-589-5 ; math.ch/100 ; 120 ; >
@@ -218,8 +218,8 @@
 
   {
     title <
-      name =  Heritage of European Mathematics  ; 
-      type =  bookSeries
+      name = Heritage of European Mathematics ; 
+      type = bookSeries
 
     >
       au < frozen ; exists ; 2016 ; 978-3-03719-145-3 ; 978-3-03719-645-8 ; Uniformization of Riemann Surfaces ; 198 ; >
@@ -238,8 +238,8 @@
 
   {
     title <
-      name =  IRMA Lectures in Mathematics and Theoretical Physics  ; 
-      type =  bookSeries
+      name = IRMA Lectures in Mathematics and Theoretical Physics ; 
+      type = bookSeries
 
     >
       au < frozen ; exists ; 2016 ; 978-3-03719-161-3 ; 978-3-03719-661-8 ; Handbook of Teichmüller Theory, Volume VI ; 202 ; >
@@ -269,8 +269,8 @@
 
   {
     title <
-      name =  The QGM Master Class Series  ; 
-      type =  bookSeries
+      name = The QGM Master Class Series ; 
+      type = bookSeries
 
     >
       au < frozen ; exists ; 2012 ; 978-3-03719-108-8 ; 978-3-03719-608-3 ; Lectures on Algebraic Categorification ; 148 ; >
@@ -280,8 +280,8 @@
 
   {
     title <
-      name =  Zurich Lectures in Advanced Mathematics  ; 
-      type =  bookSeries
+      name = Zurich Lectures in Advanced Mathematics ; 
+      type = bookSeries
 
     >
       au < exists ; exists ; 2017 ; 978-3-03719-170-5 ; 978-3-03719-670-0 ; The Monge-Ampère Equation and Its Applications ; 213 ; >
