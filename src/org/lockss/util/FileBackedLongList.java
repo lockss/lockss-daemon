@@ -75,6 +75,15 @@ public class FileBackedLongList
 
   /**
    * <p>
+   * Whether this auto-closeable object has been closed.
+   * </p>
+   * 
+   * @since 1.74.7
+   */
+  protected boolean closed;
+  
+  /**
+   * <p>
    * The number of elements in this list.
    * </p>
    * 
@@ -218,6 +227,7 @@ public class FileBackedLongList
   public FileBackedLongList(File file,
                             int initialCapacity)
       throws FileNotFoundException, IOException {
+    this.closed = false;
     this.size = 0;
     this.file = file;
     this.deleteFile = false; // reset by some constructors
@@ -357,18 +367,22 @@ public class FileBackedLongList
    */
   @Override
   public void close() {
-    force();
-    CountingRandomAccessFile.unmap(mbbuf);
-    mbbuf = null;
-    IOUtils.closeQuietly(craf);
-    craf = null;
-    IOUtils.closeQuietly(chan);
-    chan = null;
-    lbuf = null;
-    if (deleteFile) {
-      file.delete();
+    if (!closed) {
+      closed = true;
+      force();
+      CountingRandomAccessFile.unmap(mbbuf);
+      mbbuf = null;
+      IOUtils.closeQuietly(craf);
+      craf = null;
+      IOUtils.closeQuietly(chan);
+      chan = null;
+      lbuf = null;
+      if (deleteFile) {
+        file.delete();
+      }
+      file = null;
+      size = -1;
     }
-    size = -1;
   }
   
   /**
@@ -381,7 +395,9 @@ public class FileBackedLongList
    * @see MappedByteBuffer#force()
    */
   public void force() {
-    mbbuf.force();
+    if (mbbuf != null) {
+      mbbuf.force();
+    }
   }
   
   @Override
@@ -430,8 +446,12 @@ public class FileBackedLongList
     
   @Override
   protected void finalize() throws Throwable {
-    super.finalize();
-    close();
+    try {
+      close();
+    }
+    finally {
+      super.finalize();
+    }
   }
 
   /**

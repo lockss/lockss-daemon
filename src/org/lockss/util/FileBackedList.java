@@ -171,6 +171,15 @@ public class FileBackedList<E>
   
   /**
    * <p>
+   * Whether this auto-closeable object has been closed.
+   * </p>
+   * 
+   * @since 1.74.7
+   */
+  protected boolean closed;
+  
+  /**
+   * <p>
    * The {@link File} backing this list.
    * </p>
    * 
@@ -445,6 +454,7 @@ public class FileBackedList<E>
   public FileBackedList(Iterator<E> iterator,
                         File file)
       throws FileNotFoundException, IOException {
+    this.closed = false;
     this.file = file;
     this.deleteFile = false; // reset by some constructors
     this.craf = new CountingRandomAccessFile(file, CountingRandomAccessFile.MODE_READ_WRITE, false);
@@ -529,15 +539,7 @@ public class FileBackedList<E>
     try {
       offsets.add(index, append(element));
       if (size() > OFFSETS && fileBackedLongList == null) {
-        // Starting to get too large for main memory; go to disk also
-        fileBackedLongList = new FileBackedLongList(getLongsFile());
-        for (LongIterator iter = arrayLongList.iterator() ; iter.hasNext() ; ) {
-          fileBackedLongList.add(iter.next());
-        }
-        arrayLongList.clear(); // see Commons Primitives 1.0 note in constructor
-        arrayLongList.trimToSize();
-        arrayLongList = null;
-        offsets = fileBackedLongList;
+        flushOffsetsToDisk();
       }
     }
     catch (IOException exc) {
@@ -555,31 +557,34 @@ public class FileBackedList<E>
    */
   @Override
   public void close() {
-    force();
-    for (MappedByteBuffer mbbuf : buffers.values()) {
-      CountingRandomAccessFile.unmap(mbbuf);
+    if (!closed) {
+      closed = true;
+      force();
+      for (MappedByteBuffer mbbuf : buffers.values()) {
+        CountingRandomAccessFile.unmap(mbbuf);
+      }
+      buffers.clear();
+      buffers = null;
+      IOUtils.closeQuietly(craf);
+      craf = null;
+      IOUtils.closeQuietly(chan);
+      chan = null;
+      if (arrayLongList != null) {
+        arrayLongList.clear(); // see Commons Primitives 1.0 note in constructor
+        arrayLongList.trimToSize();
+        arrayLongList = null;
+      }
+      if (fileBackedLongList != null) {
+        fileBackedLongList.close();
+        fileBackedLongList = null;
+        getLongsFile().delete();
+      }
+      offsets = null;
+      if (deleteFile) {
+        file.delete();
+      }
+      file = null;
     }
-    buffers.clear();
-    buffers = null;
-    IOUtils.closeQuietly(craf);
-    craf = null;
-    IOUtils.closeQuietly(chan);
-    chan = null;
-    if (arrayLongList != null) {
-      arrayLongList.clear(); // see Commons Primitives 1.0 note in constructor
-      arrayLongList.trimToSize();
-      arrayLongList = null;
-    }
-    if (fileBackedLongList != null) {
-      fileBackedLongList.close();
-      fileBackedLongList = null;
-      getLongsFile().delete();
-    }
-    offsets = null;
-    if (deleteFile) {
-      file.delete();
-    }
-    file = null;
   }
   
   /**
@@ -594,6 +599,9 @@ public class FileBackedList<E>
   public void force() {
     for (MappedByteBuffer mbbuf : buffers.values()) {
       mbbuf.force();
+    }
+    if (fileBackedLongList != null) {
+      fileBackedLongList.force();
     }
   }
   
@@ -676,10 +684,38 @@ public class FileBackedList<E>
 
   @Override
   protected void finalize() throws Throwable {
-    super.finalize();
-    close();
+    try {
+      close();
+    }
+    finally {
+      super.finalize();
+    }
   }
 
+  /**
+   * <p>
+   * Flushes the list of offsets from {@link ArrayLongList} to
+   * {@link FileBackedLongList} (used in testing).
+   * </p>
+   * 
+   * @throws IOException
+   *           if there is an I/O error creating the on-disk list of longs.
+   * @since 1.74.7
+   */
+  protected void flushOffsetsToDisk() throws IOException {
+    if (fileBackedLongList == null) {
+      // Starting to get too large for main memory; go to disk also
+      fileBackedLongList = new FileBackedLongList(getLongsFile());
+      for (LongIterator iter = arrayLongList.iterator() ; iter.hasNext() ; ) {
+        fileBackedLongList.add(iter.next());
+      }
+      arrayLongList.clear(); // see Commons Primitives 1.0 note in constructor
+      arrayLongList.trimToSize();
+      arrayLongList = null;
+      offsets = fileBackedLongList;
+    }
+  }
+  
   /**
    * <p>
    * Returns the given chunk's {@link MappedByteBuffer}, possibly memory mapping

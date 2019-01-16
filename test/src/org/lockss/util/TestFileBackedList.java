@@ -33,6 +33,7 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.util;
 
+import java.io.File;
 import java.util.*;
 
 import org.lockss.test.LockssTestCase;
@@ -109,6 +110,39 @@ public class TestFileBackedList extends LockssTestCase {
     }
   }
   
+  public void testCloseWrongOrder() throws Exception {
+    FileBackedList<Object> list = new FileBackedList<Object>(giantListIterator(500));
+    assertNotNull(list.arrayLongList);
+    assertNull(list.fileBackedLongList);
+    assertSame(list.offsets, list.arrayLongList);
+    list.flushOffsetsToDisk();
+    assertNull(list.arrayLongList);
+    assertNotNull(list.fileBackedLongList);
+    assertSame(list.offsets, list.fileBackedLongList);
+    // Simulate garbage collector finalizing the file-backed long list before the file-backed list
+    assertFalse(list.fileBackedLongList.closed);
+    list.fileBackedLongList.close();
+    assertTrue(list.fileBackedLongList.closed);
+    // Subsequently finalizing the file-backed list should not throw
+    assertFalse(list.closed);
+    list.close();
+    assertTrue(list.closed);
+  }
+  
+  public void testFileDeletion() throws Exception {
+    FileBackedList<Object> list = new FileBackedList<Object>(giantListIterator(500));
+    File base = list.file;
+    assertTrue(base.exists());
+    File longs = list.getLongsFile();
+    assertFalse(longs.exists());
+    list.flushOffsetsToDisk();
+    assertTrue(longs.exists());
+    // Closing the list should cause the files to be deleted
+    list.close();
+    assertFalse(base.exists());
+    assertFalse(longs.exists());
+  }
+
   protected static final int SIZE = 100_000;
   
   public static Object giantListGet(int listIndex) {
