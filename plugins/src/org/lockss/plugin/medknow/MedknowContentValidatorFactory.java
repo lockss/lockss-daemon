@@ -42,6 +42,7 @@ import org.lockss.util.IOUtil;
 
 public class MedknowContentValidatorFactory implements ContentValidatorFactory {
 
+  protected static final String VIEWIMAGE = "viewimage.asp?img=";
   protected static final String PDF_EXT = ".pdf";
   protected static final String PNG_EXT = ".png";
   protected static final String JPG_EXT = ".jpg";
@@ -76,11 +77,11 @@ public class MedknowContentValidatorFactory implements ContentValidatorFactory {
     }
 
     public boolean invalidFileExt(String url) {
-      return 
-          StringUtil.endsWithIgnoreCase(url, PDF_EXT) ||
-          StringUtil.endsWithIgnoreCase(url, PNG_EXT) ||
-          StringUtil.endsWithIgnoreCase(url, JPG_EXT) ||
-          StringUtil.endsWithIgnoreCase(url, JPEG_EXT);
+      return !url.contains(VIEWIMAGE) &&
+          (StringUtil.endsWithIgnoreCase(url, PDF_EXT) ||
+           StringUtil.endsWithIgnoreCase(url, PNG_EXT) ||
+           StringUtil.endsWithIgnoreCase(url, JPG_EXT) ||
+           StringUtil.endsWithIgnoreCase(url, JPEG_EXT));
     }
 
     public void validate(CachedUrl cu)

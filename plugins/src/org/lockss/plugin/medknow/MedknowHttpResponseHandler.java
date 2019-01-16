@@ -73,12 +73,12 @@ public class MedknowHttpResponseHandler implements CacheResultHandler {
                                      Exception ex) {
     // this checks for the specific exceptions before going to the general case and retry
     if (ex instanceof ContentValidationException.WrongLength) {
-      logger.warning("Wrong length - not storing file " + url);
-      // retry and no store cache exception
-      return new RetryableNoFailException_2_10S(ex);
+      logger.warning("Wrong length - storing file " + url);
+      // ignore and continue
+      return new CacheSuccess();
     }
     
-    // handle retryable exceptions ; URL MIME type mismatch for pages like 
+    // handle retryable exceptions ; URL MIME type mismatch
     if (ex instanceof ContentValidationException) {
       logger.warning("Warning - retry/no fail/no store " + url);
       // retry and no store cache exception
