@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.pdf.pdfbox;
 
 import java.io.*;
+import java.lang.ref.WeakReference;
 import java.util.*;
 
 import javax.xml.transform.TransformerException;
@@ -45,7 +46,6 @@ import org.apache.pdfbox.pdmodel.common.PDMetadata;
 import org.lockss.pdf.*;
 import org.lockss.pdf.PdfDocument;
 import org.lockss.pdf.PdfPage;
-import org.lockss.pdf.pdfbox.PdfBoxTokens.Dic;
 import org.lockss.util.*;
 import org.w3c.dom.Document;
 
@@ -120,6 +120,16 @@ public class PdfBoxDocument implements PdfDocument {
    * </p>
    */
   private String openStackTrace;
+
+  /**
+   * <p>
+   * List of weak references to auto-closeable objects to be cleaned up when the
+   * document is closed.
+   * </p>
+   * 
+   * @since 1.74.7
+   */
+  protected List<WeakReference<AutoCloseable>> autoCloseables;
   
   /**
    * <p>
@@ -152,6 +162,7 @@ public class PdfBoxDocument implements PdfDocument {
     this.pdfBoxDocumentFactory = pdfBoxDocumentFactory;
     this.pdDocument = pdDocument;
     this.closed = false;
+    this.autoCloseables = new ArrayList<WeakReference<AutoCloseable>>();
 
     StringBuilder sb = new StringBuilder();
     for (StackTraceElement e : Thread.currentThread().getStackTrace()) {
@@ -164,14 +175,30 @@ public class PdfBoxDocument implements PdfDocument {
 
   @Override
   public void close() throws PdfException {
-    try {
-      log.debug2("Closing PDF document explicitly");
+    if (!closed) {
       closed = true;
-      pdDocument.close();
-    }
-    catch (IOException ioe) {
-      log.debug2("Exception closing PDF document explicitly", ioe);
-      throw new PdfException(ioe);
+      try {
+        log.debug2("Closing PDF document explicitly");
+        pdDocument.close();
+        for (WeakReference<AutoCloseable> wref : autoCloseables) {
+          try {
+            AutoCloseable ac = wref.get();
+            if (ac != null) {
+              ac.close();
+            }
+          }
+          catch (Exception exc) {
+            // ignore
+          }
+        }
+      }
+      catch (IOException ioe) {
+        log.debug2("Exception closing PDF document explicitly", ioe);
+        throw new PdfException(ioe);
+      }
+      finally {
+        autoCloseables.clear();
+      }
     }
   }
 
@@ -489,7 +516,7 @@ public class PdfBoxDocument implements PdfDocument {
       if (!closed) {
         // Starts with newline, doesn't end with one, see constructor
         log.warning("Closing PDF document implicitly in finalizer; creation context:" + openStackTrace);
-        pdDocument.close();
+        close();
       }
     }
     catch (Exception exc) {

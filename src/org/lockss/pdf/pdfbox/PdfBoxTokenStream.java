@@ -34,6 +34,7 @@ POSSIBILITY OF SUCH DAMAGE.
 package org.lockss.pdf.pdfbox;
 
 import java.io.*;
+import java.lang.ref.WeakReference;
 import java.util.*;
 
 import org.apache.pdfbox.cos.COSString;
@@ -103,9 +104,13 @@ public abstract class PdfBoxTokenStream implements PdfTokenStream {
             && tokens.size() == CurrentConfig.getIntParam(PARAM_FILE_BACKED_LISTS_THRESHOLD,
                                                           DEFAULT_FILE_BACKED_LISTS_THRESHOLD)) {
           // List becoming too large for main memory
-          List<PdfToken> newList = new FileBackedList<PdfToken>(tokens);
+          FileBackedList<PdfToken> newList = new FileBackedList<PdfToken>(tokens);
+          // Clean up old list
           tokens.clear();
           ((ArrayList<PdfToken>)tokens).trimToSize();
+          // Put new list in cleanup queue
+          getPage().getDocument().autoCloseables.add(new WeakReference<AutoCloseable>(newList));
+          // Start using this new list
           tokens = newList;
         }
         tokens.add(PdfBoxTokens.convertOne(iter.next()));

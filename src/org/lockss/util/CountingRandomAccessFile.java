@@ -351,14 +351,10 @@ public class CountingRandomAccessFile extends RandomAccessFile {
       super.close();
     }
     finally {
-      try {
-        if (deleteFile) {
-          file.delete();
-        }
+      if (deleteFile && file != null) {
+        file.delete();
       }
-      catch (Throwable thr) {
-        // ignore
-      }
+      file = null;
     }
   }
   
@@ -560,7 +556,7 @@ public class CountingRandomAccessFile extends RandomAccessFile {
    * @see https://www.programcreek.com/java-api-examples/index.php?source_dir=cp-common-utils-master/core/main/src/com/complexible/common/io/MMapUtil.java
    */
   public static boolean unmap(final MappedByteBuffer mbbuf) {
-    if (unmapSupported) {
+    if (unmapSupported && mbbuf != null) {
       try { 
         AccessController.doPrivileged(new PrivilegedExceptionAction<Object>() { 
           public Object run() throws Exception { 
@@ -579,7 +575,7 @@ public class CountingRandomAccessFile extends RandomAccessFile {
         // ignore
       } 
     }
-    return false;
+    return mbbuf == null;
   }
 
 }
