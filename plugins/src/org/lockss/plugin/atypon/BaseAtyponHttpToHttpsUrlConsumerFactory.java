@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2019 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -79,13 +79,13 @@ public class BaseAtyponHttpToHttpsUrlConsumerFactory implements UrlConsumerFacto
      * which will normalize to
      * http://arc.aiaa.org/action/showCitFormats?doi=10.2514%2F1.C032918
      * 
-     * Found another odd change -   
+     * Found another odd change -
      * http://ajph.aphapublications.org/action/showPopup?citid=citart1&id=fd2%20fd4&doi=10.2105%2FAJPH.2011.300237
      * became
-     * 	https://ajph.aphapublications.org/action/showPopup?citid=citart1&id=fd2+fd4&doi=10.2105%2FAJPH.2011.300237
+     * https://ajph.aphapublications.org/action/showPopup?citid=citart1&id=fd2+fd4&doi=10.2105%2FAJPH.2011.300237
      * Note the encoding of the "+"
      * I think it's safe to generalize this as the first part of the url up to the ? is the same and not worry
-     * about the aregs might or might not be encoded
+     * about the args might or might not be encoded
      *    http://foo.com/showCitFormats?doi=<anything> 
      *    http://foo.com/action/showPopup?citid=<anything> 
      * finally - allow for the / to %2F in the doi portion of a "doi/full/10.1111/blah url
@@ -93,22 +93,24 @@ public class BaseAtyponHttpToHttpsUrlConsumerFactory implements UrlConsumerFacto
      * 
      */
     public boolean shouldStoreAtOrigUrl() {
-    	boolean should = false;
-    	if (AuUtil.isBaseUrlHttp(au)
-    			&& fud.redirectUrls != null
-    			&& fud.redirectUrls.size() >= 1
-    			&& UrlUtil.isHttpUrl(fud.origUrl)
-    			&& UrlUtil.isHttpsUrl(fud.fetchUrl)) {
-    		String origBase = StringUtils.substringBefore(UrlUtil.stripProtocol(fud.origUrl),"?");
-    		String fetchBase = StringUtils.substringBefore(UrlUtil.stripProtocol(fud.fetchUrl),"?");
-    		should = (origBase.equals(fetchBase) ||
-    				origBase.equals(fetchBase.replace("%2F","/")));
-    	    if (fud.redirectUrls != null) {
-    	    	    log.debug3("BA redirect " + fud.redirectUrls.size() + ": " + fud.redirectUrls.toString());
-    	        log.debug3("BA redirect: " + " " + fud.origUrl + " to " + fud.fetchUrl + " should consume?: " + should);
-    	    }
-    	}
-    	return should;
+      boolean should = false;
+      if (AuUtil.isBaseUrlHttp(au)
+          && fud.redirectUrls != null
+          && fud.redirectUrls.size() >= 1
+          && UrlUtil.isHttpUrl(fud.origUrl)
+          && UrlUtil.isHttpsUrl(fud.fetchUrl)) {
+        String origBase = StringUtils.substringBefore(UrlUtil.stripProtocol(fud.origUrl),"?");
+        String fetchBase = StringUtils.substringBefore(UrlUtil.stripProtocol(fud.fetchUrl),"?");
+        should = (
+            origBase.equals(fetchBase) ||
+            origBase.equals(fetchBase.replaceFirst("/doi/[^/]+/", "/doi/")) ||
+            origBase.equals(fetchBase.replace("%2F","/")));
+        if (fud.redirectUrls != null) {
+          log.debug3("BA redirect " + fud.redirectUrls.size() + ": " + fud.redirectUrls.toString());
+          log.debug3("BA redirect: " + " " + fud.origUrl + " to " + fud.fetchUrl + " should consume?: " + should);
+        }
+      }
+      return should;
     }
  }
  

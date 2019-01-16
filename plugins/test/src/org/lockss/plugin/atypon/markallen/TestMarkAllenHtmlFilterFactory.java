@@ -60,8 +60,8 @@ public class TestMarkAllenHtmlFilterFactory
   
   private static final String filteredCrawlStr = 
       "<div class=\"block\"></div>";
-  private static final String filteredStr = 
-      " <div class=\"block\"> </div>";
+  private static final String filteredStr = " ";
+      //" <div class=\"block\"> </div>";
    
   // test for pdf and pdfplus file size
   // is in TestBaseAtyponHtmlHashFilterFactory since the html is similar
@@ -169,14 +169,15 @@ public class TestMarkAllenHtmlFilterFactory
           "</div>";
   
   private static final String ArticleToolsWidgetFiltered = 
-      " <div class=\"block\">" +
+      " Download citation ";
+      /*" <div class=\"block\">" +
           " <div class=\"widget literatumArticleToolsWidget\" >" +
           " <ul class=\"linkList blockLinks separators centered\">" +
           " <li class=\"downloadCitations\">" +
           " <a href=\"/action/showCitFormats?" +
           "doi=11.11111%2Fjid.2013.111\">Download citation </a> </li> </ul>" +
           " </div>" +
-          " </div>";
+          " </div>";*/
    
   // from full text - Downloaded count
   // http://www.magonlinelibrary.com/doi/full/10.12968/bjom.2013.21.10.692
@@ -205,10 +206,6 @@ public class TestMarkAllenHtmlFilterFactory
           "<a href=\"/doi/citedby/11.1111/jid.20129999\"> Cited by </a>" +
           "</li></ul>" +
           "</div>";
-  private static final String withoutCitedby =
-      " <div class=\"block\">" + 
-          " <ul> </ul>" +
-          " </div>";
   
   protected ArchivalUnit createAu()
       throws ArchivalUnit.ConfigurationException {
@@ -276,7 +273,7 @@ public class TestMarkAllenHtmlFilterFactory
                    filteredStr);
       doFilterTest(maau, variantFact, withLiteratumMostReadWidget, filteredStr);
       doFilterTest(maau, variantFact, withPageFooter, filteredStr);
-      doFilterTest(maau, variantFact, withCitedby, withoutCitedby);
+      doFilterTest(maau, variantFact, withCitedby, filteredStr);
     }
   }
   

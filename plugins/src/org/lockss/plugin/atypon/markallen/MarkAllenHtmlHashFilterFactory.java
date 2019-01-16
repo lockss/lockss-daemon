@@ -83,7 +83,7 @@ public class MarkAllenHtmlHashFilterFactory
   }
 
   @Override
-  public boolean doTagIDFiltering() {
+  public boolean doTagRemovalFiltering() {
     return true;
   }
 
