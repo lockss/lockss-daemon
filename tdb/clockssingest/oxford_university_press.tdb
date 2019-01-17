@@ -14206,33 +14206,54 @@
     au < doNotProcess ; exists ; 1989 ; 1989 ; Pathogens and Disease Volume 1 [1989] ; 1 ; >
     au < doNotProcess ; exists ; 1990 ; 1990 ; Pathogens and Disease Volume 2 ; 2 ; >
     au < doNotProcess ; exists ; 1991 ; 1991 ; Pathogens and Disease Volume 3 ; 3 ; >
-    au < doNotProcess ; exists ; 1992 ; 1992 ; Pathogens and Disease Volume 4 ; 4 ; >
-    au < doNotProcess ; exists ; 1993 ; 1993 ; Pathogens and Disease Volume 6 ; 6 ; >
-    au < doNotProcess ; exists ; 1994 ; 1994 ; Pathogens and Disease Volume 8 ; 8 ; >
-    au < doNotProcess ; exists ; 1995 ; 1995 ; Pathogens and Disease Volume 10 ; 10 ; >
-    au < doNotProcess ; exists ; 1996 ; 1996 ; Pathogens and Disease Volume 13 ; 13 ; >
-    au < doNotProcess ; exists ; 1997 ; 1997 ; Pathogens and Disease Volume 17 ; 17 ; >
-    au < doNotProcess ; exists ; 1998 ; 1998 ; Pathogens and Disease Volume 20 ; 20 ; >
-    au < doNotProcess ; exists ; 1999 ; 1999 ; Pathogens and Disease Volume 23 ; 23 ; >
-    au < doNotProcess ; exists ; 2000 ; 2000 ; Pathogens and Disease Volume 27 ; 27 ; >
-    au < doNotProcess ; exists ; 2001 ; 2001 ; Pathogens and Disease Volume 30 ; 30 ; >
-    au < doNotProcess ; exists ; 2002 ; 2002 ; Pathogens and Disease Volume 32 ; 32 ; >
-    au < doNotProcess ; exists ; 2003 ; 2003 ; Pathogens and Disease Volume 35 ; 35 ; >
-    au < doNotProcess ; exists ; 2004 ; 2004 ; Pathogens and Disease Volume 40 ; 40 ; >
-    au < doNotProcess ; exists ; 2005 ; 2005 ; Pathogens and Disease Volume 43 ; 43 ; >
-    au < doNotProcess ; exists ; 2006 ; 2006 ; Pathogens and Disease Volume 46 ; 46 ; >
-    au < doNotProcess ; exists ; 2007 ; 2007 ; Pathogens and Disease Volume 49 ; 49 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; Pathogens and Disease Volume 52 ; 52 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; Pathogens and Disease Volume 55 ; 55 ; >
-    au < manifest ; exists ; 2010 ; 2010 ; Pathogens and Disease Volume 58 ; 58 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; Pathogens and Disease Volume 61 ; 61 ; >
-    au < manifest ; exists ; 2012 ; 2012 ; Pathogens and Disease Volume 64 ; 64 ; >
+    au < doNotProcess ; exists ; 1992 ; 1992 ; Pathogens and Disease Volume 4-5 ; 4-5 ; >
+    au < doNotProcess ; exists ; 1993 ; 1993 ; Pathogens and Disease Volume 6-7 ; 6-7 ; >
+    au < doNotProcess ; exists ; 1994 ; 1994 ; Pathogens and Disease Volume 8-9 ; 8-9 ; >
+    au < doNotProcess ; exists ; 1995 ; 1995 ; Pathogens and Disease Volume 10-12 ; 10-12 ; >
+    au < doNotProcess ; exists ; 1996 ; 1996 ; Pathogens and Disease Volume 13-16 ; 13-16 ; >
+    au < doNotProcess ; exists ; 1997 ; 1997 ; Pathogens and Disease Volume 17-19 ; 17-19 ; >
+    au < doNotProcess ; exists ; 1998 ; 1998 ; Pathogens and Disease Volume 20-22 ; 20-22 ; >
+    au < doNotProcess ; exists ; 1999 ; 1999 ; Pathogens and Disease Volume 23-24 ; 23-24 ; >
+    au < doNotProcess ; exists ; 2000 ; 2000 ; Pathogens and Disease Volume 27-29 ; 27-29 ; >
+    au < doNotProcess ; exists ; 2001 ; 2001 ; Pathogens and Disease Volume 30-31 ; 30-31 ; >
+    au < doNotProcess ; exists ; 2002 ; 2002 ; Pathogens and Disease Volume 32-34 ; 32-34 ; >
+    au < doNotProcess ; exists ; 2003 ; 2003 ; Pathogens and Disease Volume 35-39 ; 35-39 ; >
+    au < doNotProcess ; exists ; 2004 ; 2004 ; Pathogens and Disease Volume 40-42 ; 40-42 ; >
+    au < doNotProcess ; exists ; 2005 ; 2005 ; Pathogens and Disease Volume 43-45 ; 43-45 ; >
+    au < doNotProcess ; exists ; 2006 ; 2006 ; Pathogens and Disease Volume 46-48 ; 46-48 ; >
+    au < doNotProcess ; exists ; 2007 ; 2007 ; Pathogens and Disease Volume 49-51 ; 49-51 ; >
+    au < manifest ; exists ; 2008 ; 2008 ; Pathogens and Disease Volume 52-54 ; 52-54 ; >
+    au < manifest ; exists ; 2009 ; 2009 ; Pathogens and Disease Volume 55-57 ; 55-57 ; >
+    au < manifest ; exists ; 2010 ; 2010 ; Pathogens and Disease Volume 58-60 ; 58-60 ; >
+    au < manifest ; exists ; 2011 ; 2011 ; Pathogens and Disease Volume 61-63 ; 61-63 ; >
+    au < manifest ; exists ; 2012 ; 2012 ; Pathogens and Disease Volume 64-66 ; 64-66 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Pathogens and Disease Volume 67-69 ; 67-69 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Pathogens and Disease Volume 70-72 ; 70-72 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Pathogens and Disease Volume 73 ; 73 ; >
     au < manifest ; exists ; 2016 ; 2016 ; Pathogens and Disease Volume 74 ; 74 ; >
     au < crawling ; exists ; 2017 ; 2017 ; Pathogens and Disease Volume 75 ; 75 ; >
     au < testing ; exists ; 2018 ; 2018 ; Pathogens and Disease Volume 76 ; 76 ; >
+
+  }
+
+  {
+
+    title <
+      name = Pathology Patterns Reviews ;
+      issn = 1542-2305 ;
+      eissn = 2327-9761 ;
+      issnl = 1542-2305
+    >
+
+    param[journal_id] = ppr
+
+    au < exists ; exists ; 2000 ; 2000 ; Pathology Patterns Reviews Volume 113-114 ; 113-114 ; >
+    au < exists ; exists ; 2001 ; 2001 ; Pathology Patterns Reviews Volume 115-116 ; 115-116 ; >
+    au < exists ; exists ; 2002 ; 2002 ; Pathology Patterns Reviews Volume 117-118 ; 117-118 ; >
+    au < exists ; exists ; 2003 ; 2003 ; Pathology Patterns Reviews Volume 119-120 ; 119-120 ; >
+    au < exists ; exists ; 2004 ; 2004 ; Pathology Patterns Reviews Volume 121-122 ; 121-122 ; >
+    au < exists ; exists ; 2005 ; 2005 ; Pathology Patterns Reviews Volume 123-124 ; 123-124 ; >
+    au < exists ; exists ; 2006 ; 2006 ; Pathology Patterns Reviews Volume 125-126 ; 125-126 ; >
 
   }
 
@@ -20335,6 +20356,7 @@
     >
 
     param[journal_id] = zoolinnean
+    #content available from 1856 volume 1 to 2009 volume 157
 
     #this title was ONLY in the publisher listing
     au < manifest ; exists ; 2010 ; 2010 ; Zoological Journal of the Linnean Society Volume 158-160 ; 158-160 ; >
