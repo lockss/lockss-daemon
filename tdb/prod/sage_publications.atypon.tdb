@@ -25603,79 +25603,6 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
     {
 
       title <
-        name = Journal of Peace Research ;
-        issn = 0022-3433 ;
-        eissn = 1460-3578 ;
-        issnl = 0022-3433
-      >
-
-      {
-
-        #param[base_url] = http://jpr.sagepub.com/
-
-        au < manifest ; 1964 ; Journal of Peace Research Volume 1 ; 1 ; jpra ; https://journals.sagepub.com/ >
-        au < manifest ; 1965 ; Journal of Peace Research Volume 2 ; 2 ; jpra ; https://journals.sagepub.com/ >
-        au < manifest ; 1966 ; Journal of Peace Research Volume 3 ; 3 ; jpra ; https://journals.sagepub.com/ >
-        au < manifest ; 1967 ; Journal of Peace Research Volume 4 ; 4 ; jpra ; https://journals.sagepub.com/ >
-        au < manifest ; 1968 ; Journal of Peace Research Volume 5 ; 5 ; jpra ; https://journals.sagepub.com/ >
-        au < manifest ; 1969 ; Journal of Peace Research Volume 6 ; 6 ; jpra ; https://journals.sagepub.com/ >
-        au < manifest ; 1970 ; Journal of Peace Research Volume 7 ; 7 ; jpra ; https://journals.sagepub.com/ >
-        au < manifest ; 1971 ; Journal of Peace Research Volume 8 ; 8 ; jpra ; https://journals.sagepub.com/ >
-        au < manifest ; 1972 ; Journal of Peace Research Volume 9 ; 9 ; jpra ; https://journals.sagepub.com/ >
-        au < manifest ; 1973 ; Journal of Peace Research Volume 10 ; 10 ; jpra ; https://journals.sagepub.com/ >
-        au < manifest ; 1974 ; Journal of Peace Research Volume 11 ; 11 ; jpra ; https://journals.sagepub.com/ >
-        au < manifest ; 1975 ; Journal of Peace Research Volume 12 ; 12 ; jpra ; https://journals.sagepub.com/ >
-        au < manifest ; 1976 ; Journal of Peace Research Volume 13 ; 13 ; jpra ; https://journals.sagepub.com/ >
-        au < manifest ; 1977 ; Journal of Peace Research Volume 14 ; 14 ; jpra ; https://journals.sagepub.com/ >
-        au < manifest ; 1978 ; Journal of Peace Research Volume 15 ; 15 ; jpra ; https://journals.sagepub.com/ >
-        au < manifest ; 1979 ; Journal of Peace Research Volume 16 ; 16 ; jpra ; https://journals.sagepub.com/ >
-        au < manifest ; 1980 ; Journal of Peace Research Volume 17 ; 17 ; jpra ; https://journals.sagepub.com/ >
-        au < manifest ; 1981 ; Journal of Peace Research Volume 18 ; 18 ; jpra ; https://journals.sagepub.com/ >
-        au < manifest ; 1982 ; Journal of Peace Research Volume 19 ; 19 ; jpra ; https://journals.sagepub.com/ >
-        au < manifest ; 1983 ; Journal of Peace Research Volume 20 ; 20 ; jpra ; https://journals.sagepub.com/ >
-        au < manifest ; 1984 ; Journal of Peace Research Volume 21 ; 21 ; jpra ; https://journals.sagepub.com/ >
-        au < manifest ; 1985 ; Journal of Peace Research Volume 22 ; 22 ; jpra ; https://journals.sagepub.com/ >
-        au < manifest ; 1986 ; Journal of Peace Research Volume 23 ; 23 ; jpra ; https://journals.sagepub.com/ >
-        au < manifest ; 1987 ; Journal of Peace Research Volume 24 ; 24 ; jpra ; https://journals.sagepub.com/ >
-        au < manifest ; 1988 ; Journal of Peace Research Volume 25 ; 25 ; jpra ; https://journals.sagepub.com/ >
-        au < manifest ; 1989 ; Journal of Peace Research Volume 26 ; 26 ; jpra ; https://journals.sagepub.com/ >
-        au < manifest ; 1990 ; Journal of Peace Research Volume 27 ; 27 ; jpra ; https://journals.sagepub.com/ >
-        au < manifest ; 1991 ; Journal of Peace Research Volume 28 ; 28 ; jpra ; https://journals.sagepub.com/ >
-        au < manifest ; 1992 ; Journal of Peace Research Volume 29 ; 29 ; jpra ; https://journals.sagepub.com/ >
-        au < manifest ; 1993 ; Journal of Peace Research Volume 30 ; 30 ; jpra ; https://journals.sagepub.com/ >
-        au < manifest ; 1994 ; Journal of Peace Research Volume 31 ; 31 ; jpra ; https://journals.sagepub.com/ >
-        au < manifest ; 1995 ; Journal of Peace Research Volume 32 ; 32 ; jpra ; https://journals.sagepub.com/ >
-        au < manifest ; 1996 ; Journal of Peace Research Volume 33 ; 33 ; jpra ; https://journals.sagepub.com/ >
-        au < manifest ; 1997 ; Journal of Peace Research Volume 34 ; 34 ; jpra ; https://journals.sagepub.com/ >
-        au < manifest ; 1998 ; Journal of Peace Research Volume 35 ; 35 ; jpra ; https://journals.sagepub.com/ >
-        au < manifest ; 1999 ; Journal of Peace Research Volume 36 ; 36 ; jpra ; https://journals.sagepub.com/ >
-        au < manifest ; 2000 ; Journal of Peace Research Volume 37 ; 37 ; jpra ; https://journals.sagepub.com/ >
-        au < manifest ; 2001 ; Journal of Peace Research Volume 38 ; 38 ; jpra ; https://journals.sagepub.com/ >
-        au < manifest ; 2002 ; Journal of Peace Research Volume 39 ; 39 ; jpra ; https://journals.sagepub.com/ >
-        au < manifest ; 2003 ; Journal of Peace Research Volume 40 ; 40 ; jpra ; https://journals.sagepub.com/ >
-        au < manifest ; 2004 ; Journal of Peace Research Volume 41 ; 41 ; jpra ; https://journals.sagepub.com/ >
-        au < doNotProcess ; 2005 ; Journal of Peace Research Volume 42 ; 42 ; jpra ; https://journals.sagepub.com/ >
-        au < doNotProcess ; 2006 ; Journal of Peace Research Volume 43 ; 43 ; jpra ; https://journals.sagepub.com/ >
-        au < doNotProcess ; 2007 ; Journal of Peace Research Volume 44 ; 44 ; jpra ; https://journals.sagepub.com/ >
-        au < doNotProcess ; 2008 ; Journal of Peace Research Volume 45 ; 45 ; jpra ; https://journals.sagepub.com/ >
-        au < doNotProcess ; 2009 ; Journal of Peace Research Volume 46 ; 46 ; jpra ; https://journals.sagepub.com/ >
-        au < doNotProcess ; 2010 ; Journal of Peace Research Volume 47 ; 47 ; jpra ; https://journals.sagepub.com/ >
-        au < doNotProcess ; 2011 ; Journal of Peace Research Volume 48 ; 48 ; jpra ; https://journals.sagepub.com/ >
-        au < doNotProcess ; 2012 ; Journal of Peace Research Volume 49 ; 49 ; jpra ; https://journals.sagepub.com/ >
-        au < doNotProcess ; 2013 ; Journal of Peace Research Volume 50 ; 50 ; jpra ; https://journals.sagepub.com/ >
-        au < doNotProcess ; 2014 ; Journal of Peace Research Volume 51 ; 51 ; jpra ; https://journals.sagepub.com/ >
-        au < doNotProcess ; 2015 ; Journal of Peace Research Volume 52 ; 52 ; jpra ; https://journals.sagepub.com/ >
-        au < released ; 2016 ; Journal of Peace Research Volume 53 ; 53 ; jpra ; http://journals.sagepub.com/ >
-        au < released ; 2017 ; Journal of Peace Research Volume 54 ; 54 ; jpra ; http://journals.sagepub.com/ >
-        au < manifest ; 2018 ; Journal of Peace Research Volume 55 ; 55 ; jpra ; https://journals.sagepub.com/ >
-
-      }
-
-    }
-
-    {
-
-      title <
         name = Journal of Parenteral and Enteral Nutrition ;
         issn = 0148-6071 ;
         eissn = 1941-2444 ;
@@ -25783,6 +25710,107 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < released ; 2016 ; Journal of Patient Experience Volume 3 ; 3 ; jpxa ; http://journals.sagepub.com/ >
       au < released ; 2017 ; Journal of Patient Experience Volume 4 ; 4 ; jpxa ; http://journals.sagepub.com/ >
       au < manifest ; 2018 ; Journal of Patient Experience Volume 5 ; 5 ; jpxa ; https://journals.sagepub.com/ >
+
+    }
+
+    {
+
+      title <
+        name = Journal of Peace Research ;
+        issn = 0022-3433 ;
+        eissn = 1460-3578 ;
+        issnl = 0022-3433
+      >
+
+      {
+
+        #param[base_url] = http://jpr.sagepub.com/
+
+        au < manifest ; 1964 ; Journal of Peace Research Volume 1 ; 1 ; jpra ; https://journals.sagepub.com/ >
+        au < manifest ; 1965 ; Journal of Peace Research Volume 2 ; 2 ; jpra ; https://journals.sagepub.com/ >
+        au < manifest ; 1966 ; Journal of Peace Research Volume 3 ; 3 ; jpra ; https://journals.sagepub.com/ >
+        au < manifest ; 1967 ; Journal of Peace Research Volume 4 ; 4 ; jpra ; https://journals.sagepub.com/ >
+        au < manifest ; 1968 ; Journal of Peace Research Volume 5 ; 5 ; jpra ; https://journals.sagepub.com/ >
+        au < manifest ; 1969 ; Journal of Peace Research Volume 6 ; 6 ; jpra ; https://journals.sagepub.com/ >
+        au < manifest ; 1970 ; Journal of Peace Research Volume 7 ; 7 ; jpra ; https://journals.sagepub.com/ >
+        au < manifest ; 1971 ; Journal of Peace Research Volume 8 ; 8 ; jpra ; https://journals.sagepub.com/ >
+        au < manifest ; 1972 ; Journal of Peace Research Volume 9 ; 9 ; jpra ; https://journals.sagepub.com/ >
+        au < manifest ; 1973 ; Journal of Peace Research Volume 10 ; 10 ; jpra ; https://journals.sagepub.com/ >
+        au < manifest ; 1974 ; Journal of Peace Research Volume 11 ; 11 ; jpra ; https://journals.sagepub.com/ >
+        au < manifest ; 1975 ; Journal of Peace Research Volume 12 ; 12 ; jpra ; https://journals.sagepub.com/ >
+        au < manifest ; 1976 ; Journal of Peace Research Volume 13 ; 13 ; jpra ; https://journals.sagepub.com/ >
+        au < manifest ; 1977 ; Journal of Peace Research Volume 14 ; 14 ; jpra ; https://journals.sagepub.com/ >
+        au < manifest ; 1978 ; Journal of Peace Research Volume 15 ; 15 ; jpra ; https://journals.sagepub.com/ >
+        au < manifest ; 1979 ; Journal of Peace Research Volume 16 ; 16 ; jpra ; https://journals.sagepub.com/ >
+        au < manifest ; 1980 ; Journal of Peace Research Volume 17 ; 17 ; jpra ; https://journals.sagepub.com/ >
+        au < manifest ; 1981 ; Journal of Peace Research Volume 18 ; 18 ; jpra ; https://journals.sagepub.com/ >
+        au < manifest ; 1982 ; Journal of Peace Research Volume 19 ; 19 ; jpra ; https://journals.sagepub.com/ >
+        au < manifest ; 1983 ; Journal of Peace Research Volume 20 ; 20 ; jpra ; https://journals.sagepub.com/ >
+        au < manifest ; 1984 ; Journal of Peace Research Volume 21 ; 21 ; jpra ; https://journals.sagepub.com/ >
+        au < manifest ; 1985 ; Journal of Peace Research Volume 22 ; 22 ; jpra ; https://journals.sagepub.com/ >
+        au < manifest ; 1986 ; Journal of Peace Research Volume 23 ; 23 ; jpra ; https://journals.sagepub.com/ >
+        au < manifest ; 1987 ; Journal of Peace Research Volume 24 ; 24 ; jpra ; https://journals.sagepub.com/ >
+        au < manifest ; 1988 ; Journal of Peace Research Volume 25 ; 25 ; jpra ; https://journals.sagepub.com/ >
+        au < manifest ; 1989 ; Journal of Peace Research Volume 26 ; 26 ; jpra ; https://journals.sagepub.com/ >
+        au < manifest ; 1990 ; Journal of Peace Research Volume 27 ; 27 ; jpra ; https://journals.sagepub.com/ >
+        au < manifest ; 1991 ; Journal of Peace Research Volume 28 ; 28 ; jpra ; https://journals.sagepub.com/ >
+        au < manifest ; 1992 ; Journal of Peace Research Volume 29 ; 29 ; jpra ; https://journals.sagepub.com/ >
+        au < manifest ; 1993 ; Journal of Peace Research Volume 30 ; 30 ; jpra ; https://journals.sagepub.com/ >
+        au < manifest ; 1994 ; Journal of Peace Research Volume 31 ; 31 ; jpra ; https://journals.sagepub.com/ >
+        au < manifest ; 1995 ; Journal of Peace Research Volume 32 ; 32 ; jpra ; https://journals.sagepub.com/ >
+        au < manifest ; 1996 ; Journal of Peace Research Volume 33 ; 33 ; jpra ; https://journals.sagepub.com/ >
+        au < manifest ; 1997 ; Journal of Peace Research Volume 34 ; 34 ; jpra ; https://journals.sagepub.com/ >
+        au < manifest ; 1998 ; Journal of Peace Research Volume 35 ; 35 ; jpra ; https://journals.sagepub.com/ >
+        au < manifest ; 1999 ; Journal of Peace Research Volume 36 ; 36 ; jpra ; https://journals.sagepub.com/ >
+        au < manifest ; 2000 ; Journal of Peace Research Volume 37 ; 37 ; jpra ; https://journals.sagepub.com/ >
+        au < manifest ; 2001 ; Journal of Peace Research Volume 38 ; 38 ; jpra ; https://journals.sagepub.com/ >
+        au < manifest ; 2002 ; Journal of Peace Research Volume 39 ; 39 ; jpra ; https://journals.sagepub.com/ >
+        au < manifest ; 2003 ; Journal of Peace Research Volume 40 ; 40 ; jpra ; https://journals.sagepub.com/ >
+        au < manifest ; 2004 ; Journal of Peace Research Volume 41 ; 41 ; jpra ; https://journals.sagepub.com/ >
+        au < doNotProcess ; 2005 ; Journal of Peace Research Volume 42 ; 42 ; jpra ; https://journals.sagepub.com/ >
+        au < doNotProcess ; 2006 ; Journal of Peace Research Volume 43 ; 43 ; jpra ; https://journals.sagepub.com/ >
+        au < doNotProcess ; 2007 ; Journal of Peace Research Volume 44 ; 44 ; jpra ; https://journals.sagepub.com/ >
+        au < doNotProcess ; 2008 ; Journal of Peace Research Volume 45 ; 45 ; jpra ; https://journals.sagepub.com/ >
+        au < doNotProcess ; 2009 ; Journal of Peace Research Volume 46 ; 46 ; jpra ; https://journals.sagepub.com/ >
+        au < doNotProcess ; 2010 ; Journal of Peace Research Volume 47 ; 47 ; jpra ; https://journals.sagepub.com/ >
+        au < doNotProcess ; 2011 ; Journal of Peace Research Volume 48 ; 48 ; jpra ; https://journals.sagepub.com/ >
+        au < doNotProcess ; 2012 ; Journal of Peace Research Volume 49 ; 49 ; jpra ; https://journals.sagepub.com/ >
+        au < doNotProcess ; 2013 ; Journal of Peace Research Volume 50 ; 50 ; jpra ; https://journals.sagepub.com/ >
+        au < doNotProcess ; 2014 ; Journal of Peace Research Volume 51 ; 51 ; jpra ; https://journals.sagepub.com/ >
+        au < doNotProcess ; 2015 ; Journal of Peace Research Volume 52 ; 52 ; jpra ; https://journals.sagepub.com/ >
+        au < released ; 2016 ; Journal of Peace Research Volume 53 ; 53 ; jpra ; http://journals.sagepub.com/ >
+        au < released ; 2017 ; Journal of Peace Research Volume 54 ; 54 ; jpra ; http://journals.sagepub.com/ >
+        au < manifest ; 2018 ; Journal of Peace Research Volume 55 ; 55 ; jpra ; https://journals.sagepub.com/ >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of Peacebuilding & Development ;
+        issn = 1542-3166 ;
+        eissn = 2165-7440 ;
+        issnl = 1542-3166
+      >
+
+      #journal_id = jpda
+      #doNotProcess = process in T&F
+
+      au < doNotProcess ; 2002-2004 ; Journal of Peacebuilding & Development Volume 1 ; 1 ; jpda ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 2004-2006 ; Journal of Peacebuilding & Development Volume 2 ; 2 ; jpda ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 2006-2007 ; Journal of Peacebuilding & Development Volume 3 ; 3 ; jpda ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 2008-2009 ; Journal of Peacebuilding & Development Volume 4 ; 4 ; jpda ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 2009-2010 ; Journal of Peacebuilding & Development Volume 5 ; 5 ; jpda ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 2011 ; Journal of Peacebuilding & Development Volume 6 ; 6 ; jpda ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 2012 ; Journal of Peacebuilding & Development Volume 7 ; 7 ; jpda ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 2013 ; Journal of Peacebuilding & Development Volume 8 ; 8 ; jpda ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 2014 ; Journal of Peacebuilding & Development Volume 9 ; 9 ; jpda ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 2015 ; Journal of Peacebuilding & Development Volume 10 ; 10 ; jpda ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 2016 ; Journal of Peacebuilding & Development Volume 11 ; 11 ; jpda ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 2017 ; Journal of Peacebuilding & Development Volume 12 ; 12 ; jpda ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 2018 ; Journal of Peacebuilding & Development Volume 13 ; 13 ; jpda ; https://journals.sagepub.com/ >
 
     }
 
