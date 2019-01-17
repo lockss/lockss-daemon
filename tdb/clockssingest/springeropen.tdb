@@ -1899,6 +1899,7 @@
         param[base_url] = http://www.nzjforestryscience.com/
         param[journal_issn] = 1179-5395
         comment[platform] = BioMedCentralPlugin
+        #move to Scion in 2019
   
         au < doNotProcess ; exists ; 2013 ; New Zealand Journal of Forestry Science Volume 43 ; 43 ; >
         au < frozen ; exists ; 2014 ; New Zealand Journal of Forestry Science Volume 44 ; 44 ; >
