@@ -316,7 +316,7 @@ public class FileBackedLongList
   }
   
   @Override
-  public void add(int index, long element) throws IOError {
+  public void add(int index, long element) throws RuntimeException {
     if (index < 0 || index > size) {
       throw new IndexOutOfBoundsException(Integer.toString(index));
     }
@@ -353,7 +353,7 @@ public class FileBackedLongList
       ++size;
     }
     catch (IOException exc) {
-      throw new IOError(exc);
+      throw new RuntimeException(exc);
     }
   }
   
