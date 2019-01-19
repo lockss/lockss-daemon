@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2019 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.pensoft.oai;
 
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.regex.Pattern;
 
@@ -54,18 +55,19 @@ implements ArticleIteratorFactory,
   protected static final String ROOT_TEMPLATE = "\"%s\", base_url"; 
 
   protected static final String PATTERN_TEMPLATE =
-      "\"^%sarticles.php\\?id=[0-9]+$\", base_url";
-  
+      "\"^%sarticle(/|s[.]php[?]id=)[0-9]+$\", base_url";
+
   protected static final Pattern ABSTRACT_PATTERN = Pattern.compile(
-	       "articles.php\\?id=([0-9]+)$",
-	       Pattern.CASE_INSENSITIVE);
+      "article(?:/|s[.]php[?]id=)([0-9]+)$",
+      Pattern.CASE_INSENSITIVE);
 
   //Some are full text HTML and some are abtracts
   //Abstract = http://zookeys.pensoft.net/articles.php?id=1929
   //Full Text = http://bdj.pensoft.net/articles.php?id=995
-  protected static final String ABSTRACT_REPLACEMENT = "articles.php\\?id=$1";
+  protected static final String ABSTRACT_0_REPLACEMENT = "articles.php?id=$1";
+  protected static final String ABSTRACT_1_REPLACEMENT = "article/$1";
   //http://zookeys.pensoft.net/lib/ajax_srv/article_elements_srv.php?action=download_pdf&item_id=1929
-  protected static final String PDF_REPLACEMENT = "lib/ajax_srv/article_elements_srv\\.php\\?action=download_pdf&item_id=$1";
+  protected static final String PDF_REPLACEMENT = "lib/ajax_srv/article_elements_srv.php?action=download_pdf&item_id=$1";
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) 
@@ -74,15 +76,14 @@ implements ArticleIteratorFactory,
 
     builder.setSpec(target,
         ROOT_TEMPLATE, PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
-    
-    builder.addAspect(
-    		ABSTRACT_PATTERN,
-            ABSTRACT_REPLACEMENT,
+
+    builder.addAspect(ABSTRACT_PATTERN,
+        Arrays.asList(ABSTRACT_0_REPLACEMENT, ABSTRACT_1_REPLACEMENT),
         ArticleFiles.ROLE_ABSTRACT, 
         ArticleFiles.ROLE_ARTICLE_METADATA);
-    
+
     builder.addAspect(
-            PDF_REPLACEMENT,
+        PDF_REPLACEMENT,
         ArticleFiles.ROLE_FULL_TEXT_PDF);
 
     builder.setFullTextFromRoles(

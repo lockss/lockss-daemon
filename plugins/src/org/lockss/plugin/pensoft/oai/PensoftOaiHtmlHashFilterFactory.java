@@ -61,6 +61,7 @@ public class PensoftOaiHtmlHashFilterFactory implements FilterFactory {
      HtmlNodeFilters.tagWithAttribute("div", "class", "P-Article-References-For-Baloon"),
      HtmlNodeFilters.tagWithAttribute("div", "id", "ArticleBaloon"),
      HtmlNodeFilters.tagWithAttribute("div", "class", "P-clear"),
+     HtmlNodeFilters.tagWithAttribute("ul", "class", "references"),
      
      // found in http://compcytogen.pensoft.net/articles.php?id=5304
      // <link type="text/css" href="/lib/css/layout.css?v=1472563221" values change
