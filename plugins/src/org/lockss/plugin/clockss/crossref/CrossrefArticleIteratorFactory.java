@@ -1,10 +1,10 @@
 /*
- * $Id:
+ * $Id$
  */
 
 /*
 
-Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -30,43 +30,46 @@ in this Software without prior written authorization from Stanford University.
 
  */
 
-package org.lockss.plugin.clockss.codeocean;
+package org.lockss.plugin.clockss.crossref;
 
 import java.util.Iterator;
-import java.util.regex.Pattern;
+import java.util.regex.*;
 
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 
-//
-// A  variation on the generic CLOCKSS source article iterator
-// it iterates over the delivered zip files and allows the metadata extractor to count items.
-// a ".tar" file of the same base
-//
-public class CodeOceanItemArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory  {
+/*
+ * Special file-transfer snapshot
+ * We go to their site and download a tar.gz that is generated monthly.
+ * Currently we only do this annually.
+ * The targ.gz contents are stored in tar.gz.manifest but isn't a complete listing
+ * because many of the items have nested contents.
+ * We do not open the archive we simply preserve and record the basic information
+ * and size in the metadata database.
+ * 
+ */
 
-  private static final Logger log = Logger.getLogger(CodeOceanItemArticleIteratorFactory.class);
+public class CrossrefArticleIteratorFactory
+implements ArticleIteratorFactory,
+ArticleMetadataExtractorFactory {
+
+  private static final Logger log =
+      Logger.getLogger(CrossrefArticleIteratorFactory.class);  
   
-  
-  //../code-ocean-released/2018/test-publisher/77d6193e-1a32-42c9-a66c-290fdee8da95.zip
-  //    which has within it "metadata/metadata.yml" along with other contents for the code module
-  //../code-ocean-released/2018/test-publisher/77d6193e-1a32-42c9-a66c-290fdee8da95.tar
-  //  this is the accompanying custom docker image 
+  //../crossref-released/2018/20180709_all.xml.tar.gz
   private static final String PATTERN_TEMPLATE = 
-      "\"^%s%s/[^/]+/[^/]+\\.zip$\", base_url, directory";
+      "\"^%s%s/[^/]+\\.tar\\.gz$\", base_url, directory";
   
-  // Be sure to exclude all nested archives in case we ever explode the zip to look at the yaml
+  // Be sure to exclude all nested archives
   protected static final Pattern NESTED_ARCHIVE_PATTERN = 
       Pattern.compile(".*/[^/]+\\.zip!/.+\\.(zip|tar|gz|tgz|tar\\.gz)$", 
           Pattern.CASE_INSENSITIVE);  
 
-  private static final Pattern ZIP_PATTERN = Pattern.compile("/(.*)\\.zip$", Pattern.CASE_INSENSITIVE);
-  private static final String 	ZIP_REPLACEMENT = "/$1.zip";
-  // might exist, might not
-  private static final String TAR_REPLACEMENT = "/$1.tar";
-  
+  private static final Pattern ITEM_PATTERN = Pattern.compile("/(.*)\\.tar\\.gz$", Pattern.CASE_INSENSITIVE);
+  private static final String 	ITEM_REPLACEMENT = "/$1.tar.gz";
+
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
                                                       MetadataTarget target)
@@ -79,27 +82,19 @@ public class CodeOceanItemArticleIteratorFactory implements ArticleIteratorFacto
         .setPatternTemplate(PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE)
         .setExcludeSubTreePattern(NESTED_ARCHIVE_PATTERN));
     
-
-    // set up ZIP to be an aspect that will trigger an ArticleFiles to feed the metadata extractor
-    builder.addAspect(ZIP_PATTERN,
-        ZIP_REPLACEMENT,
+    // set up tar.gz as the only item we care to count
+    builder.addAspect(ITEM_PATTERN,
+        ITEM_REPLACEMENT,
         ArticleFiles.ROLE_ARTICLE_METADATA);
-    
-    // tar files represent the docker config of the equivalent zip code modul
-    // associate them but they aren't themselves a code module
-    builder.addAspect(TAR_REPLACEMENT,
-        ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS);
-
 
     return builder.getSubTreeArticleIterator();
   }
-  
-  @Override
+
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
       throws PluginException {
-	  return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);	  
-    //return new CodeOceanItemArticleMetadataExtractor();
+    return new CrossrefArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
+
   }
-  
-  
+
+
 }

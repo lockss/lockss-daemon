@@ -5,11 +5,11 @@
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.clockss.codeocean.ClockssCodeOceanSourcePlugin</string>
+    <string>org.lockss.plugin.clockss.crossref.ClockssCrossrefSourcePlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>1</string>
   </entry>
   <entry>
   <!--  metadata support for ARTICLE_TYPE_FILE -->
@@ -39,28 +39,27 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Code Ocean Source Plugin (CLOCKSS), Base URL %s, Directory %s", base_url, directory</string>
+    <string>"Crossref Source Plugin (CLOCKSS), Base URL %s, Directory %s", base_url, directory</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Code Ocean Source Plugin (CLOCKSS)</string>
+    <string>Crossref Source Plugin (CLOCKSS)</string>
   </entry>
 <!--  not unpacking archives -->
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-    <!-- .zip is the code, data, environment, configuration  -->
-    <!-- .tar is docker image of the environment  -->
-      <string>"^%s%s/.+\.zip$", base_url, directory</string>
+    <!-- large single archive of content + manifest listing -->
+      <string>"^%s%s/.+\.tar\.gz$", base_url, directory</string>
     </list>
   </entry>
   <entry>
-  <!--  we are simply counting the delivered zip items without looking inside them -->
+  <!--  we are simply reporting the size of the tar without looking inside -->
     <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.clockss.codeocean.CodeOceanArticleIteratorFactory</string>
+    <string>org.lockss.plugin.clockss.crossref.CrossrefArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.clockss.codeocean.CodeOceanArticleIteratorFactory</string>
+    <string>org.lockss.plugin.clockss.crossref.CrossrefArticleIteratorFactory</string>
   </entry>
 </map>    
