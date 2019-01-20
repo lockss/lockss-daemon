@@ -166,7 +166,7 @@ public abstract class GenericHasher implements CachedUrlSetHasher {
     if (isTrace) log.debug3(numBytes+" bytes left to hash in this step");
 
     int totalBytesHashed = 0;
-    while (bytesLeftToHash > 0) {
+    while (bytesLeftToHash > 0 && !Thread.currentThread().isInterrupted()) {
       if (curNode == null) {
 	curNode = getNextNode();
 	if (curNode != null) {

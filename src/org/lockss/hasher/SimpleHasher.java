@@ -112,7 +112,23 @@ public class SimpleHasher {
    * The possible statuses of a hasher.
    */
   public static enum HasherStatus {
-    NotStarted, Init, Starting, Running, Done, Error, RequestError;
+    NotStarted(false),
+    Init(false),
+    Starting(false),
+    Running(false),
+    Done(true),
+    Error(true),
+    RequestError(true);
+
+    final boolean isDone;
+
+    HasherStatus(boolean isDone) {
+      this.isDone = isDone;
+    }
+    public boolean isDone() {
+      return isDone;
+    }
+
    }
 
   /**
@@ -243,10 +259,10 @@ public class SimpleHasher {
     if (header != null) {
       blockOuts.println(header);
     }
-    BlockHasher hasher = new BlockHasher(cus, 1,
-					 initHasherDigests(),
-					 initHasherByteArrays(),
-					 new BlockEventHandler(blockOuts));
+    BlockHasher hasher = newBlockHasher(cus, 1,
+					initHasherDigests(),
+					initHasherByteArrays(),
+					new BlockEventHandler(blockOuts));
 
     hasher.setIncludeUrl(isIncludeUrl);
     hasher.setExcludeSuspectVersions(isExcludeSuspectVersions);
@@ -259,11 +275,29 @@ public class SimpleHasher {
         log.warning("Error building weightMap", e);
       }
     }
-    doHash(hasher);
-    if (footer != null) {
-      blockOuts.println(footer);
+    try {
+      doHash(hasher);
+      if (footer != null) {
+	blockOuts.println(footer);
+      }
+    } catch (RuntimeInterruptedException e) {
+      if (e.getCause() != null) {
+	blockOuts.println("\nAborted: " + e.getCause().getMessage());
+      } else {
+	blockOuts.println("\nAborted: " + e.getMessage());
+      }
+      throw e;
+    } catch (InterruptedIOException e) {
+      blockOuts.println("\nAborted: " + e.getMessage());
+      throw e;
+    } catch (Exception e) {
+      blockOuts.println("\nError: " + e.toString());
+      throw e;
+    } finally {
+      blockOuts.close();
+      // ensure files closed if terminated early, harmless otherwise
+      hasher.abortHash();
     }
-    blockOuts.close();
   }
 
   private void initDigest(MessageDigest digest) {
@@ -273,6 +307,14 @@ public class SimpleHasher {
     if (verifier != null) {
       digest.update(verifier, 0, verifier.length);
     }
+  }
+
+  protected BlockHasher newBlockHasher(CachedUrlSet cus,
+				       int maxVersions,
+				       MessageDigest[] digests,
+				       byte[][] initByteArrays,
+				       BlockHasher.EventHandler cb) {
+    return  new BlockHasher(cus, maxVersions, digests, initByteArrays, cb);
   }
 
   private byte[][] initHasherByteArrays() {
@@ -292,8 +334,16 @@ public class SimpleHasher {
     long startTime = TimeBase.nowMs();
     while (!cush.finished()) {
       bytesHashed += cush.hashStep(nbytes);
+      elapsedTime = TimeBase.msSince(startTime);
+
+      // Check whether the thread has been interrupted (e.g., by the future
+      // being cancel()ed) and exit if so
+      if (Thread.currentThread().interrupted()) {
+	log.warning("Hash interrupted, aborting: " +
+		    cush.getCachedUrlSet().getArchivalUnit());
+	throw new RuntimeInterruptedException("Thread interrupted");
+      }
     }
-    elapsedTime = TimeBase.msSince(startTime);
   }
 
   private MessageDigest[] initHasherDigests() {
@@ -314,16 +364,19 @@ public class SimpleHasher {
       filesHashed++;
       HashBlock.Version ver = block.currentVersion();
       if (ver != null) {
+	String out;
 	if (ver.getHashError() != null) {
 	  // Pylorus' diff() depends upon the first 20 characters of this string
-	  outs.println("Hash error (see log)        " + block.getUrl());
+	  out =  "Hash error (see log)        " + block.getUrl();
 	} else {
 	  if(isIncludeWeight) {
-	    outs.println(byteString(ver.getHashes()[0]) + "   " + getUrlResultWeight(block.getUrl()) + "   " + block.getUrl());
+	    out = byteString(ver.getHashes()[0]) + "   " + getUrlResultWeight(block.getUrl()) + "   " + block.getUrl();
 	  } else {
-	    outs.println(byteString(ver.getHashes()[0]) + "   " + block.getUrl());
+	    out = byteString(ver.getHashes()[0]) + "   " + block.getUrl();
 	  }
 	}
+	log.debug3(out);
+	outs.println(out);
       }
     }
 
@@ -423,15 +476,18 @@ public class SimpleHasher {
 	      result);
 	  break;
 	}
-
-	result.setBytesHashed(getBytesHashed());
-	result.setFilesHashed(getFilesHashed());
-	result.setElapsedTime(getElapsedTime());
-	result.setRunnerStatus(HasherStatus.Done);
+	fillInResult(result, HasherStatus.Done, null);
+      } catch (RuntimeInterruptedException e) {
+	if (e.getCause() != null) {
+	  fillInResult(result, HasherStatus.Error, e.getCause().getMessage());
+	} else {
+	  fillInResult(result, HasherStatus.Error, e.getMessage());
+	}
+      } catch (InterruptedIOException e) {
+	fillInResult(result, HasherStatus.Error, e.getMessage());
       } catch (Exception e) {
 	log.warning("hash()", e);
-	result.setRunnerStatus(HasherStatus.Error);
-	result.setRunnerError("Error hashing: " + e.toString());
+	fillInResult(result, HasherStatus.Error, "Error hashing: " + e.toString());
       } catch (Error e) {
 	try {
 	  log.warning("hash()", e);
@@ -450,6 +506,14 @@ public class SimpleHasher {
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+  }
+
+  void fillInResult(HasherResult result, HasherStatus status, String errmsg) {
+    result.setRunnerStatus(status);
+    result.setRunnerError(errmsg);
+    result.setBytesHashed(getBytesHashed());
+    result.setFilesHashed(getFilesHashed());
+    result.setElapsedTime(getElapsedTime());
   }
 
   /**
@@ -997,6 +1061,10 @@ public class SimpleHasher {
 	  hash(params, result);
 	  triggerWDogOnExit(false);
 	  setThreadName("HashCUS: idle");
+	  // Ensure we don't leave thread interrupt flag on
+	  if (Thread.currentThread().interrupted()) {
+	    log.debug("Thread interrupt flag was on when SimpleHasher finished");
+	  }
 	}
 
 	@Override

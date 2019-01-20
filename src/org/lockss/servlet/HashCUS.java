@@ -220,7 +220,7 @@ public class HashCUS extends LockssServlet {
       listRequests(resType, params, result);
       return;
     } else if (ACTION_DELETE.equals(action)) {
-      cancelRequest(reqId);
+      deleteRequest(reqId);
       listRequests(resType, params, result);
       return;
     } else if (ACTION_HASH.equals(action)) {
@@ -335,10 +335,13 @@ public class HashCUS extends LockssServlet {
 	tbl.newCell();
 	String statStr = div("RequestStatus",
 	    entryResult.getRunnerStatus().toString());
-	if (entryResult.getRunnerStatus() == HasherStatus.Done
-	    && entryResult.getBlockFile() != null) {
+	if (entryResult.getBlockFile() != null &&
+	    entryResult.getBlockFile().exists()) {
 	  statStr = fileLink(statStr, entryResult.getBlockFile(), "HashFile",
 	      false, entryRequest);
+	}
+	if (!StringUtil.isNullString(entryResult.getRunnerError())) {
+	  statStr += " " + entryResult.getRunnerError();
 	}
 	tbl.add(statStr);
 
@@ -377,7 +380,7 @@ public class HashCUS extends LockssServlet {
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
 
-  // Cancel or Delete
+  // Cancel
   void cancelRequest(String reqId) {
     final String DEBUG_HEADER = "cancelRequest(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "reqId = " + reqId);
@@ -390,24 +393,73 @@ public class HashCUS extends LockssServlet {
       errMsg = "No such background hash: " + reqId;
       return;
     }
+    StringBuilder sb = new StringBuilder();
+    sb.append("Background hash " + reqId + " ");
     switch (backgroundResult.getRunnerStatus()) {
     case NotStarted:
+      sb.append("hadn't started ");
+      break;
     case Init:
     case Starting:
     case Running: 
-      Future<Void> fut = backgroundResult.getFuture();
-      if (fut != null) {
-	fut.cancel(true);
-      }
+      sb.append("cancelled");
       break;
     default:
+      sb.append("unknown state");
     }
+    doCancel(backgroundResult);
+    statusMsg = sb.toString();
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  // Delete
+  void deleteRequest(String reqId) {
+    final String DEBUG_HEADER = "deleteRequest(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "reqId = " + reqId);
+    if (StringUtil.isNullString(reqId)) {
+      errMsg = "Must supply req_id";
+      return;
+    }
+    HasherResult backgroundResult = getResultData(reqId);
+    if (backgroundResult == null) {
+      errMsg = "No such background hash: " + reqId;
+      return;
+    }
+    StringBuilder sb = new StringBuilder();
+    sb.append("Background hash " + reqId + " ");
+    switch (backgroundResult.getRunnerStatus()) {
+    case NotStarted:
+      sb.append("hadn't started ");
+      break;
+    case Init:
+    case Starting:
+    case Running:
+      sb.append("deleted");
+      break;
+    default:
+      sb.append("unknown state");
+    }
+    doCancel(backgroundResult);
+
     FileUtil.safeDeleteFile(backgroundResult.getBlockFile());
     FileUtil.safeDeleteFile(backgroundResult.getRecordFile());
 
     delRequest(reqId);
-    statusMsg = "Background hash " + reqId + " deleted";
+    statusMsg = sb.toString();
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  void doCancel(HasherResult result) {
+    Future<Void> fut = result.getFuture();
+    if (fut != null) {
+      fut.cancel(true);
+    }
+    switch (result.getRunnerStatus()) {
+    case NotStarted:
+      result.setRunnerStatus(HasherStatus.Error);
+      result.setRunnerError("Hash cancelled");
+      break;
+    }
   }
 
   void checkStatus(String reqId, HasherResult result) {

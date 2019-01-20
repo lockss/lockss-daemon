@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.hasher;
 
 import java.util.*;
+import java.util.concurrent.*;
 import java.io.*;
 import java.security.*;
 import org.lockss.test.*;
@@ -51,6 +52,8 @@ import org.lockss.protocol.LcapMessage;
 import org.lockss.repository.*;
 
 public class TestSimpleHasher extends LockssTestCase {
+  static final Logger log = Logger.getLogger(TestSimpleHasher.class);
+
   static final String HASH_ALG = "SHA-1";
 
   static final String BASE_URL = "http://www.test.com/blah/";
@@ -78,8 +81,10 @@ public class TestSimpleHasher extends LockssTestCase {
   MockArchivalUnit mau = null;
   MockAuState maus;
 
+  @Override
   public void setUp() throws Exception {
     super.setUp();
+    TimeBase.setReal();
     daemon = getMockLockssDaemon();
     tempDirPath = setUpDiskSpace();
     mau = new MockArchivalUnit(new MockPlugin(daemon), "maud");
@@ -363,6 +368,268 @@ public class TestSimpleHasher extends LockssTestCase {
     hasher.hash(params, result);
     assertEquals(HasherStatus.Done, result.getRunnerStatus());
     assertNull(result.getRunnerError());
+  }
+
+  public void testAsynch() throws Exception {
+    HasherParams params = new HasherParams("foo", false);
+    MySimpleHasher hasher = new MySimpleHasher(null);
+    HasherResult result = new HasherResult();
+    params.setAuId(mau.getAuId());
+    mau.addUrl("http://abc.baz/", "12345678901234567890");
+    mau.addUrl("http://foo.bar/", "cont");
+    mau.populateAuCachedUrlSet();
+    maus.setSuppressRecomputeNumCurrentSuspectVersions(true);
+
+    File blockFile = FileTestUtil.tempFile("hashtest", ".tmp");
+    result.setBlockFile(blockFile);
+
+    hasher.startHashingThread(params, result);
+    // Wait for it to finish
+    result.waitDone(Deadline.in(TIMEOUT_SHOULDNT));
+
+    assertEquals(HasherStatus.Done, result.getRunnerStatus());
+    assertEquals(24, hasher.getBytesHashed());
+    assertEquals(24, result.getBytesHashed());
+    assertEquals(2, hasher.getFilesHashed());
+    assertEquals(2, result.getFilesHashed());
+    String out = StringUtil.fromFile(blockFile);
+    assertMatchesRE("Block hashes from foo, ", out);
+    assertMatchesRE("AU: MockAU", out);
+    assertMatchesRE("72E9A547FBB17BEB5B5EA139F68F91EEA1ED3E1D +http://foo.bar/",
+		    out);
+    assertMatchesRE("7E0A1242BD8EF9044F27DCA45F5F72AD5A1125BF +http://abc.baz/",
+		    out);
+  }
+
+  // Excplicit future.cancel() while hash thread is computing (so must
+  // notice that thread is interrupted)
+  public void testAsynchCancelWhileRunning() throws Exception {
+    HasherParams params = new HasherParams("foo", false);
+    MySimpleHasher hasher = new MySimpleHasher(null);
+    HasherResult result = new HasherResult();
+    params.setAuId(mau.getAuId());
+    mau.addUrl("http://foo.bar/", "cont");
+    mau.populateAuCachedUrlSet();
+    maus.setSuppressRecomputeNumCurrentSuspectVersions(true);
+
+    File blockFile = FileTestUtil.tempFile("hashtest", ".tmp");
+    result.setBlockFile(blockFile);
+
+    SimpleBinarySemaphore openSem = hasher.getOpenWaitSem();
+    hasher.startHashingThread(params, result);
+    hasher.getStartedSem().take();
+    hasher.spinWhileTrue(true);
+    openSem.give();
+    Deadline.in(1000).sleep();
+    Future fut = result.getFuture();
+    fut.cancel(true);
+    Deadline.in(1000).sleep();
+    hasher.spinWhileTrue(false);
+
+    try {
+      fut.get();
+      fail("Expected hash to be cancelled");
+    } catch (CancellationException e) {
+    }
+    result.waitDone(Deadline.in(TIMEOUT_SHOULDNT));
+
+    assertEquals(HasherStatus.Error, result.getRunnerStatus());
+    assertEquals(4, hasher.getBytesHashed());
+    assertEquals(1, hasher.getFilesHashed());
+    assertEquals(1, result.getFilesHashed());
+    String out = StringUtil.fromFile(blockFile);
+    assertMatchesRE("Block hashes from foo, ", out);
+    assertMatchesRE("AU: MockAU", out);
+    assertMatchesRE("72E9A547FBB17BEB5B5EA139F68F91EEA1ED3E1D +http://foo.bar/",
+		    out);
+
+  }
+
+  // Excplicit future.cancel() while thread waiting in Semaphore.  Causes
+  // InterruptedException to be throws, but SimpleBinarySemaphore catches
+  // that and (now) sets thread interrupt flag
+  public void testAsynchCancelInSem() throws Exception {
+    HasherParams params = new HasherParams("foo", false);
+    MySimpleHasher hasher = new MySimpleHasher(null);
+    HasherResult result = new HasherResult();
+    params.setAuId(mau.getAuId());
+    mau.addUrl("http://abc.baz/", "12345678901234567890");
+    mau.addUrl("http://foo.bar/", "cont");
+    mau.populateAuCachedUrlSet();
+    maus.setSuppressRecomputeNumCurrentSuspectVersions(true);
+
+    File blockFile = FileTestUtil.tempFile("hashtest", ".tmp");
+    result.setBlockFile(blockFile);
+
+    SimpleBinarySemaphore openSem = hasher.getOpenWaitSem();
+    hasher.startHashingThread(params, result);
+    hasher.getStartedSem().take();
+    Future fut = result.getFuture();
+    fut.cancel(true);
+    Deadline.in(1000).sleep();
+    openSem.give();
+
+    try {
+      fut.get();
+      fail("Expected hash to be cancelled");
+    } catch (CancellationException e) {
+    }
+    result.waitDone(Deadline.in(TIMEOUT_SHOULDNT));
+
+    assertEquals(HasherStatus.Error, result.getRunnerStatus());
+    assertEquals(20, hasher.getBytesHashed());
+    assertEquals(1, hasher.getFilesHashed());
+    assertEquals(1, result.getFilesHashed());
+    String out = StringUtil.fromFile(blockFile);
+    assertMatchesRE("Block hashes from foo, ", out);
+    assertMatchesRE("AU: MockAU", out);
+    assertMatchesRE("7E0A1242BD8EF9044F27DCA45F5F72AD5A1125BF +http://abc.baz/",
+		    out);
+    assertNotMatchesRE("http://foo.bar/", out);
+    assertMatchesRE("Aborted: Thread interrupted", out);
+  }
+
+  // Cause an InterruptedIOException to be thrown (approximatly) during an
+  // I/O operation
+  public void testAsynchCancelInterruptedIOException() throws Exception {
+    String URL = "http://foo.bar/";
+
+    HasherParams params = new HasherParams("foo", false);
+    MySimpleHasher hasher = new MySimpleHasher(null);
+
+    hasher.throwOnRead(URL, new InterruptedIOException("Simulated interrupt"));
+
+    HasherResult result = new HasherResult();
+    params.setAuId(mau.getAuId());
+    mau.addUrl("http://abc.baz/", "12345678901234567890");
+    mau.addUrl(URL, "cont1234");
+    mau.populateAuCachedUrlSet();
+    maus.setSuppressRecomputeNumCurrentSuspectVersions(true);
+
+    File blockFile = FileTestUtil.tempFile("hashtest", ".tmp");
+    result.setBlockFile(blockFile);
+
+    SimpleBinarySemaphore openSem = hasher.getOpenWaitSem();
+    hasher.startHashingThread(params, result);
+    hasher.getStartedSem().take();
+    assertEquals(HasherStatus.Running, result.getRunnerStatus());
+    Future fut = result.getFuture();
+    fut.cancel(true);
+    Deadline.in(100).sleep();
+    openSem.give();
+
+    try {
+      fut.get();
+      fail("Expected hash to be cancelled");
+    } catch (CancellationException e) {
+    }
+    result.waitDone(Deadline.in(TIMEOUT_SHOULDNT));
+    assertEquals(HasherStatus.Error, result.getRunnerStatus());
+    // number of bytes hashed not reliable after interrupt
+//     assertEquals(0, hasher.getBytesHashed());
+    assertEquals(1, hasher.getFilesHashed());
+    assertEquals(1, result.getFilesHashed());
+    String out = StringUtil.fromFile(blockFile);
+    assertMatchesRE("Block hashes from foo, ", out);
+    assertMatchesRE("AU: MockAU", out);
+    assertMatchesRE("7E0A1242BD8EF9044F27DCA45F5F72AD5A1125BF +http://abc.baz/",
+		    out);
+
+  }
+
+
+  static class MySimpleHasher extends SimpleHasher {
+    volatile boolean spinWhileTrue = false;
+    MyBlockHasher bh;
+    SimpleBinarySemaphore startedSem = new SimpleBinarySemaphore();
+    SimpleBinarySemaphore openWaitSem;
+    Map<String,RuntimeException> throwOnOpen = new HashMap<>();
+    Map<String,IOException> throwOnRead = new HashMap<>();
+
+    public MySimpleHasher(MessageDigest digest) {
+      super(digest);
+    }
+
+    protected BlockHasher newBlockHasher(CachedUrlSet cus,
+					 int maxVersions,
+					 MessageDigest[] digests,
+					 byte[][] initByteArrays,
+					 BlockHasher.EventHandler cb) {
+      bh = new MyBlockHasher(cus, maxVersions, digests, initByteArrays, cb);
+      return bh;
+    }
+
+    SimpleBinarySemaphore getStartedSem() {
+      return startedSem;
+    }
+
+    SimpleBinarySemaphore getOpenWaitSem() {
+      if (openWaitSem == null) {
+	openWaitSem = new SimpleBinarySemaphore();
+      }
+      return openWaitSem;
+    }
+
+    public void throwOnOpen(String url, RuntimeException rte) {
+      throwOnOpen.put(url, rte);
+    }
+
+    public void throwOnRead(String url, IOException ioe) {
+      throwOnRead.put(url, ioe);
+    }
+
+    protected MyBlockHasher getBlockHasher() {
+      return bh;
+    }
+
+    public void spinWhileTrue(boolean val) {
+      spinWhileTrue = val;
+    }
+
+    class MyBlockHasher extends BlockHasher {
+      // vars that logically belong here are in MySimpleHasher for ease of
+      // access.  (This object isn't created until the thread starts.)
+
+      public MyBlockHasher(CachedUrlSet cus, MessageDigest[] digests,
+			   byte[][]initByteArrays, EventHandler cb) {
+	super(cus, digests, initByteArrays, cb);
+
+      }
+
+      public MyBlockHasher(CachedUrlSet cus, int maxVersions,
+			   MessageDigest[] digests,
+			   byte[][]initByteArrays, EventHandler cb) {
+	super(cus, maxVersions, digests, initByteArrays, cb);
+      }
+
+      @Override
+      protected InputStream getInputStream(CachedUrl cu) {
+	startedSem.give();
+	if (openWaitSem != null) openWaitSem.take();
+	while (spinWhileTrue) ;
+
+	RuntimeException rte = throwOnOpen.get(cu.getUrl());
+	if (rte != null) {
+	  rte.fillInStackTrace();
+	  throw rte;
+	}
+	IOException ioe = throwOnRead.get(cu.getUrl());
+	if (ioe != null) {
+	  ioe.fillInStackTrace();
+	  if (ioe instanceof InterruptedIOException) {
+	    Thread.currentThread().interrupt();
+	  }
+	  return new ThrowingInputStream(super.getInputStream(cu), ioe, null);
+	}
+	return super.getInputStream(cu);
+      }
+
+      @Override
+      protected long hashNodeUpToNumBytes(int numBytes) {
+	while (spinWhileTrue) ;
+	return super.hashNodeUpToNumBytes(numBytes);
+      }
+    }
   }
 
   public void testProcessParams() throws Exception {
