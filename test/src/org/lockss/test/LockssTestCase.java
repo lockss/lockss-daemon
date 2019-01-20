@@ -215,6 +215,11 @@ public class LockssTestCase extends TestCase {
       // will create a new instance of the test case, and get a different
       // doLaters list
     }
+
+    // Interrupters can result in the thread interrupt flag being set.
+    // Clear it here to ensure it doesn't affect ensuing tests.
+    Thread.interrupted();
+
     // XXX this should be folded into LockssDaemon shutdown
     ConfigManager cfg = ConfigManager.getConfigManager();
     if (cfg != null) {

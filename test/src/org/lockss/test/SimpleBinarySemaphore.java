@@ -51,6 +51,8 @@ public class SimpleBinarySemaphore {
       try {
 	this.wait();
       } catch (InterruptedException e) {
+	// Exit, preserving interrupted state
+	Thread.currentThread().interrupt();
 	if (state) {
 	  break;
 	} else {
