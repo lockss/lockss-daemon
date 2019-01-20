@@ -35,6 +35,7 @@ import java.io.File;
 import java.io.OutputStream;
 import java.util.Arrays;
 import java.util.concurrent.Future;
+import org.lockss.util.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrlSet;
 import org.lockss.hasher.SimpleHasher.HasherStatus;
@@ -42,6 +43,7 @@ import org.lockss.hasher.SimpleHasher.HashType;
 import org.lockss.hasher.SimpleHasher.ResultEncoding;
 
 public class HasherResult {
+  private static final Logger log = Logger.getLogger(HasherResult.class);
 
   private HashType hashType;
   private ResultEncoding resultEncoding;
@@ -58,6 +60,7 @@ public class HasherResult {
   private Future<Void> future;
   private String runnerError;
   private HasherStatus runnerStatus = HasherStatus.NotStarted;
+  private OneShotSemaphore doneSem = new OneShotSemaphore();
   private byte[] hashResult;
   private long bytesHashed;
   private int filesHashed;
@@ -181,7 +184,19 @@ public class HasherResult {
   }
 
   public void setRunnerStatus(HasherStatus runnerStatus) {
+    log.debug2("setRunnerStatus("+runnerStatus+")");
     this.runnerStatus = runnerStatus;
+    if (runnerStatus.isDone()) {
+      doneSem.fill();
+    }
+  }
+
+  public boolean isDone() {
+    return doneSem.isFull();
+  }
+
+  public boolean waitDone(Deadline until) throws InterruptedException {
+    return doneSem.waitFull(until);
   }
 
   public byte[] getHashResult() {

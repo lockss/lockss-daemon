@@ -510,6 +510,10 @@ public class BlockHasher extends GenericHasher {
 	}
 	IOUtil.safeClose(is);
 	is = null;
+	// Exit if thread has been interrupted
+	if (Thread.currentThread().isInterrupted()) {
+	  throw new RuntimeInterruptedException(e);
+	}
       }
     }
     if (is == null && vix == (cuVersions.length - 1)) {
