@@ -81,7 +81,7 @@
     <string>au_substance_url_pattern</string>
     <list>
       <string>"^https?://%s/lib/ajax_srv/generate_pdf\.php\?document_id=[0-9]+&amp;(readonly_preview=1)?$", url_host(base_url)</string>
-      <string>"^https?://%s/article/[0-9]+/download/pdf/$", url_host(base_url)</string>
+      <string>"^https?://%s/article/[0-9]+/download/pdf/?$", url_host(base_url)</string>
     </list>
   </entry>
   <entry>
@@ -150,6 +150,10 @@
     </map>
   </entry>
   <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.pensoft.oai.PensoftOaiUrlConsumerFactory</string>
+  </entry>
+  <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
     <list>
       <string>[.](css|js|svg)([?].+)?$</string>
@@ -170,7 +174,8 @@
   <entry>
     <string>au_url_mime_validation_map</string>
     <list>
-      <string>/download/pdf/, application/pdf</string>
+      <string>ajax_srv/generate_pdf\.php\?document_id=, application/pdf</string>
+      <string>/download/pdf/?, application/pdf</string>
     </list>
   </entry>
   <entry>

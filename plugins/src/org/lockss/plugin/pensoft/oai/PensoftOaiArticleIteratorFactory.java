@@ -55,10 +55,10 @@ implements ArticleIteratorFactory,
   protected static final String ROOT_TEMPLATE = "\"%s\", base_url"; 
 
   protected static final String PATTERN_TEMPLATE =
-      "\"^%sarticle(/|s[.]php[?]id=)[0-9]+$\", base_url";
+      "\"^%sarticle(/|s[.]php[?]id=)[0-9]+/?$\", base_url";
 
   protected static final Pattern ABSTRACT_PATTERN = Pattern.compile(
-      "article(?:/|s[.]php[?]id=)([0-9]+)$",
+      "article(?:/|s[.]php[?]id=)([0-9]+)/?$",
       Pattern.CASE_INSENSITIVE);
 
   //Some are full text HTML and some are abtracts
@@ -67,7 +67,9 @@ implements ArticleIteratorFactory,
   protected static final String ABSTRACT_0_REPLACEMENT = "articles.php?id=$1";
   protected static final String ABSTRACT_1_REPLACEMENT = "article/$1";
   //http://zookeys.pensoft.net/lib/ajax_srv/article_elements_srv.php?action=download_pdf&item_id=1929
-  protected static final String PDF_REPLACEMENT = "lib/ajax_srv/article_elements_srv.php?action=download_pdf&item_id=$1";
+  //protected static final String PDF_REPLACEMENT 
+  protected static final String PDF_0_REPLACEMENT = "lib/ajax_srv/article_elements_srv.php?action=download_pdf&item_id=$1";
+  protected static final String PDF_1_REPLACEMENT = "article/$1/download/pdf/";
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) 
@@ -83,7 +85,7 @@ implements ArticleIteratorFactory,
         ArticleFiles.ROLE_ARTICLE_METADATA);
 
     builder.addAspect(
-        PDF_REPLACEMENT,
+        Arrays.asList(PDF_1_REPLACEMENT, PDF_0_REPLACEMENT),
         ArticleFiles.ROLE_FULL_TEXT_PDF);
 
     builder.setFullTextFromRoles(
