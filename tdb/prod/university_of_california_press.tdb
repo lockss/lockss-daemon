@@ -1386,34 +1386,35 @@
     >
 
       param[base_url] = http://rac.ucpress.edu/
+      #move to Cambridge University Press
 
-      au < manifest ; 1991 ; Religion and American Culture: A Journal of Interpretation Volume 1 ; 1 >
-      au < manifest ; 1992 ; Religion and American Culture: A Journal of Interpretation Volume 2 ; 2 >
-      au < manifest ; 1993 ; Religion and American Culture: A Journal of Interpretation Volume 3 ; 3 >
-      au < manifest ; 1994 ; Religion and American Culture: A Journal of Interpretation Volume 4 ; 4 >
-      au < manifest ; 1995 ; Religion and American Culture: A Journal of Interpretation Volume 5 ; 5 >
-      au < manifest ; 1996 ; Religion and American Culture: A Journal of Interpretation Volume 6 ; 6 >
-      au < manifest ; 1997 ; Religion and American Culture: A Journal of Interpretation Volume 7 ; 7 >
-      au < manifest ; 1998 ; Religion and American Culture: A Journal of Interpretation Volume 8 ; 8 >
-      au < manifest ; 1999 ; Religion and American Culture: A Journal of Interpretation Volume 9 ; 9 >
-      au < manifest ; 2000 ; Religion and American Culture: A Journal of Interpretation Volume 10 ; 10 >
-      au < manifest ; 2001 ; Religion and American Culture: A Journal of Interpretation Volume 11 ; 11 >
-      au < manifest ; 2002 ; Religion and American Culture: A Journal of Interpretation Volume 12 ; 12 >
-      au < manifest ; 2003 ; Religion and American Culture: A Journal of Interpretation Volume 13 ; 13 >
-      au < manifest ; 2004 ; Religion and American Culture: A Journal of Interpretation Volume 14 ; 14 >
-      au < manifest ; 2005 ; Religion and American Culture: A Journal of Interpretation Volume 15 ; 15 >
-      au < manifest ; 2006 ; Religion and American Culture: A Journal of Interpretation Volume 16 ; 16 >
-      au < manifest ; 2007 ; Religion and American Culture: A Journal of Interpretation Volume 17 ; 17 >
-      au < manifest ; 2008 ; Religion and American Culture: A Journal of Interpretation Volume 18 ; 18 >
-      au < manifest ; 2009 ; Religion and American Culture: A Journal of Interpretation Volume 19 ; 19 >
-      au < notReady ; 2010 ; Religion and American Culture: A Journal of Interpretation Volume 20 ; 20 >#probe link redirects
-      au < released ; 2011 ; Religion and American Culture: A Journal of Interpretation Volume 21 ; 21 >
-      au < released ; 2012 ; Religion and American Culture: A Journal of Interpretation Volume 22 ; 22 >
-      au < released ; 2013 ; Religion and American Culture: A Journal of Interpretation Volume 23 ; 23 >
-      au < released ; 2014 ; Religion and American Culture: A Journal of Interpretation Volume 24 ; 24 >
-      au < released ; 2015 ; Religion and American Culture: A Journal of Interpretation Volume 25 ; 25 >
-      au < released ; 2016 ; Religion and American Culture: A Journal of Interpretation Volume 26 ; 26 >
-      au < expected ; 2017 ; Religion and American Culture: A Journal of Interpretation Volume 27 ; 27 >
+      au < doNotProcess ; 1991 ; Religion and American Culture: A Journal of Interpretation Volume 1 ; 1 >
+      au < doNotProcess ; 1992 ; Religion and American Culture: A Journal of Interpretation Volume 2 ; 2 >
+      au < doNotProcess ; 1993 ; Religion and American Culture: A Journal of Interpretation Volume 3 ; 3 >
+      au < doNotProcess ; 1994 ; Religion and American Culture: A Journal of Interpretation Volume 4 ; 4 >
+      au < doNotProcess ; 1995 ; Religion and American Culture: A Journal of Interpretation Volume 5 ; 5 >
+      au < doNotProcess ; 1996 ; Religion and American Culture: A Journal of Interpretation Volume 6 ; 6 >
+      au < doNotProcess ; 1997 ; Religion and American Culture: A Journal of Interpretation Volume 7 ; 7 >
+      au < doNotProcess ; 1998 ; Religion and American Culture: A Journal of Interpretation Volume 8 ; 8 >
+      au < doNotProcess ; 1999 ; Religion and American Culture: A Journal of Interpretation Volume 9 ; 9 >
+      au < doNotProcess ; 2000 ; Religion and American Culture: A Journal of Interpretation Volume 10 ; 10 >
+      au < doNotProcess ; 2001 ; Religion and American Culture: A Journal of Interpretation Volume 11 ; 11 >
+      au < doNotProcess ; 2002 ; Religion and American Culture: A Journal of Interpretation Volume 12 ; 12 >
+      au < doNotProcess ; 2003 ; Religion and American Culture: A Journal of Interpretation Volume 13 ; 13 >
+      au < doNotProcess ; 2004 ; Religion and American Culture: A Journal of Interpretation Volume 14 ; 14 >
+      au < doNotProcess ; 2005 ; Religion and American Culture: A Journal of Interpretation Volume 15 ; 15 >
+      au < doNotProcess ; 2006 ; Religion and American Culture: A Journal of Interpretation Volume 16 ; 16 >
+      au < doNotProcess ; 2007 ; Religion and American Culture: A Journal of Interpretation Volume 17 ; 17 >
+      au < doNotProcess ; 2008 ; Religion and American Culture: A Journal of Interpretation Volume 18 ; 18 >
+      au < doNotProcess ; 2009 ; Religion and American Culture: A Journal of Interpretation Volume 19 ; 19 >
+      au < doNotProcess ; 2010 ; Religion and American Culture: A Journal of Interpretation Volume 20 ; 20 >
+      au < down ; 2011 ; Religion and American Culture: A Journal of Interpretation Volume 21 ; 21 >
+      au < down ; 2012 ; Religion and American Culture: A Journal of Interpretation Volume 22 ; 22 >
+      au < down ; 2013 ; Religion and American Culture: A Journal of Interpretation Volume 23 ; 23 >
+      au < down ; 2014 ; Religion and American Culture: A Journal of Interpretation Volume 24 ; 24 >
+      au < down ; 2015 ; Religion and American Culture: A Journal of Interpretation Volume 25 ; 25 >
+      au < down ; 2016 ; Religion and American Culture: A Journal of Interpretation Volume 26 ; 26 >
+      au < doNotProcess ; 2017 ; Religion and American Culture: A Journal of Interpretation Volume 27 ; 27 >
 
   }
 
