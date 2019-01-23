@@ -48,7 +48,7 @@
     <string>au_substance_url_pattern</string>
     <list>
       <!-- http://clockss-ingest.lockss.org/sourcefiles/iop-released/2019_1/20-10-2019/0004-637X.tar.gz -->
-      <string>"^%s%d/.+\.tar.gz$", base_url, directory</string>
+      <string>"^%s%s/.+\.tar.gz$", base_url, directory</string>
     </list>
   </entry>
   <!-- some metadata is in .article files which are xml but not recognized as such -->
