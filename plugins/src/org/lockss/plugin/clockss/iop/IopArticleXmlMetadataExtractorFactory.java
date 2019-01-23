@@ -126,7 +126,8 @@ public class IopArticleXmlMetadataExtractorFactory extends SourceXmlMetadataExtr
 	     IOPIssnTitleMap.put("1882-0778","Applied Physics Express");
 	     IOPIssnTitleMap.put("2040-8978","Journal of Optics ");
 	     IOPIssnTitleMap.put("2041-8205","The Astrophysical Journal Letters");
-	     IOPIssnTitleMap.put("2043-6262","Advances in Natural Sciences: Nanoscience and Nanotechnology ");
+	     IOPIssnTitleMap.put("2043-6262","Advances in Natural Sciences: Nanoscience and Nanotechnology");
+	     IOPIssnTitleMap.put("0953-8585","Physics World");
 	     //EISSN from here down; no print ISSN for title
 	     IOPIssnTitleMap.put("2053-1583","2D Materials");
 	     IOPIssnTitleMap.put("2057-1976","Biomedical Physics & Engineering Express");
