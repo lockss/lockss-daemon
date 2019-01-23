@@ -46,12 +46,13 @@ import org.lockss.util.Logger;
 // this one just excludes manifest.xml files - not the xml of the actual articles
 // Also - since we're customizing anyway; pick up the pdf files with a 
 // replacement.
+// Also - with 2019 we now support a string for a year - eg 2019_1, 2019_B, etc. So can't use the "year" param
 //
 public class IopSourceXmlArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory  {
 
   private static final Logger log = Logger.getLogger(IopSourceXmlArticleIteratorFactory.class);
   
-  // ROOT_TEMPLATE doesn't need to be defined as sub-tree is entire tree under base/year
+  // ROOT_TEMPLATE doesn't need to be defined as sub-tree is entire tree under base/year or base/directory
   // This pattern is specific to IOP - exclude the manifest.xml XML
   // and since we're customizing, we might as well also pick up the PDF from the
   // pattern
@@ -65,7 +66,7 @@ public class IopSourceXmlArticleIteratorFactory implements ArticleIteratorFactor
   // do not iterate on /file/dir/.article - only on /file/dir/foo123.article
   
   private static final String PATTERN_TEMPLATE = 
-      "\"^%s%d/[^/]+/[0-9-X]+\\.tar\\.gz!/.*[0-9]\\.(article|xml)$\", base_url, year";
+      "\"^%s/[^/]+/[^/]+/[0-9-X]+\\.tar\\.gz!/.*[0-9]\\.(article|xml)$\", base_url";
 
   private static final Pattern XML_PATTERN = Pattern.compile("/(.*)\\.xml$", Pattern.CASE_INSENSITIVE);
   private static final String XML_REPLACEMENT = "/$1.xml";

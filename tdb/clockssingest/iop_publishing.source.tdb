@@ -12,18 +12,31 @@
        name = IOP Publishing Source Content
     >
     
-    plugin = org.lockss.plugin.clockss.iop.ClockssIopSourcePlugin
-    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/iop-released/
-    hidden[proxy] = DIRECT
-    implicit < status ; status2 ; year ; name ; param[year] >
+    {
     
-    au < readySource ; finished ; 2015 ; IOP Publishing Source Content 2015 ; 2015 >
-    au < readySource ; finished ; 2016 ; IOP Publishing Source Content 2016 ; 2016 >
-    au < readySource ; frozen ; 2017 ; IOP Publishing Source Content 2017 ; 2017 >
-    au < readySource ; crawling ; 2018 ; IOP Publishing Source Content 2018 ; 2018 >
-    au < testing ; exists ; 2019 ; IOP Publishing Source Content 2019 ; 2019 >
+      plugin = org.lockss.plugin.clockss.iop.ClockssIopSourcePlugin
+      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/iop-released/
+      hidden[proxy] = DIRECT
+      implicit < status ; status2 ; year ; name ; param[year] >
+    
+      au < readySource ; finished ; 2015 ; IOP Publishing Source Content 2015 ; 2015 >
+      au < readySource ; finished ; 2016 ; IOP Publishing Source Content 2016 ; 2016 >
+      au < readySource ; frozen ; 2017 ; IOP Publishing Source Content 2017 ; 2017 >
+      au < readySource ; crawling ; 2018 ; IOP Publishing Source Content 2018 ; 2018 >
 
-  }
+    }
+
+    {
+  
+      plugin = org.lockss.plugin.clockss.iop.ClockssIopDirSourcePlugin
+      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/iop-released/
+      hidden[proxy] = DIRECT
+      implicit < status ; status2 ; year ; name ; param[directory] >
+  
+      au < testing ; exists ; 2019 ; IOP Publishing Source Content 2019_1 ; 2019_1 >
+  
+    }
+  }  
   
   {
   
