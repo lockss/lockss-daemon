@@ -50,8 +50,10 @@ public class PensoftOaiHtmlHashFilterFactory implements FilterFactory {
                                                String encoding) {
     NodeFilter[] filters = new NodeFilter[] {
      //filter out script
+     new TagNameFilter("noscript"),
      new TagNameFilter("script"),
      new TagNameFilter("style"),
+     new TagNameFilter("head"),
      
      HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
      //popup stuff may change
@@ -61,7 +63,8 @@ public class PensoftOaiHtmlHashFilterFactory implements FilterFactory {
      HtmlNodeFilters.tagWithAttribute("div", "class", "P-Article-References-For-Baloon"),
      HtmlNodeFilters.tagWithAttribute("div", "id", "ArticleBaloon"),
      HtmlNodeFilters.tagWithAttribute("div", "class", "P-clear"),
-     HtmlNodeFilters.tagWithAttribute("ul", "class", "references"),
+     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "reflist"),
+     HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "references"),
      
      // found in http://compcytogen.pensoft.net/articles.php?id=5304
      // <link type="text/css" href="/lib/css/layout.css?v=1472563221" values change

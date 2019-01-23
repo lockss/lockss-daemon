@@ -61,7 +61,7 @@ implements ArticleIteratorFactory,
       "article(?:/|s[.]php[?]id=)([0-9]+)/?$",
       Pattern.CASE_INSENSITIVE);
 
-  //Some are full text HTML and some are abtracts
+  //Some are full text HTML and some are abstracts
   //Abstract = http://zookeys.pensoft.net/articles.php?id=1929
   //Full Text = http://bdj.pensoft.net/articles.php?id=995
   protected static final String ABSTRACT_0_REPLACEMENT = "articles.php?id=$1";
