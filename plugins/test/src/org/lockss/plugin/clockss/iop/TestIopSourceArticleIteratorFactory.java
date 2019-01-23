@@ -67,7 +67,7 @@ public class TestIopSourceArticleIteratorFactory extends ArticleIteratorTestCase
     Pattern pat = getPattern(artIter);
 
     assertNotMatchesRE(pat, "http://wrong-ingest.lockss.org/sourcefiles/iop-released/2015/20-10-2015/0953-4075.tar.gz!/0953-4075/48/19/194001/b_48_19_194001.xml");
-    assertNotMatchesRE(pat, "http://clockss-ingest.lockss.org/sourcefiles/iop-released/2011/20-10-2015/0953-4075.tar.gz!/0953-4075/48/19/194001/b_48_19_194001.xml");
+    assertNotMatchesRE(pat, "http://clockss-ingest.lockss.org/sourcefiles/iop-released/2011/extra/20-10-2015/0953-4075.tar.gz!/0953-4075/48/19/194001/b_48_19_194001.xml");
     //excluding manifest xml files
     assertNotMatchesRE(pat, "http://clockss-ingest.lockss.org/sourcefiles/iop-released/2015/20-10-2015/0953-4075.tar.gz!/0953-4075/48/19/194001/manifest.xml");
     assertNotMatchesRE(pat, "http://clockss-ingest.lockss.org/sourcefiles/iop-released/2015/20-10-2015/0022-3727.tar.gz!/0022-3727/48/35/355104/manifest.xml");
