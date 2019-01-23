@@ -66,7 +66,7 @@ public class IopSourceXmlArticleIteratorFactory implements ArticleIteratorFactor
   // do not iterate on /file/dir/.article - only on /file/dir/foo123.article
   
   private static final String PATTERN_TEMPLATE = 
-      "\"^%s/[^/]+/[^/]+/[0-9-X]+\\.tar\\.gz!/.*[0-9]\\.(article|xml)$\", base_url";
+      "\"^%s[^/]+/[^/]+/[0-9-X]+\\.tar\\.gz!/.*[0-9]\\.(article|xml)$\", base_url";
 
   private static final Pattern XML_PATTERN = Pattern.compile("/(.*)\\.xml$", Pattern.CASE_INSENSITIVE);
   private static final String XML_REPLACEMENT = "/$1.xml";
