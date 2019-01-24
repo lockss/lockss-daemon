@@ -70,7 +70,7 @@
       <string>1,"^https?://%s/article/[0-9]+/?$", url_host(base_url)</string>
       <string>1,"^https?://%s/auid=.*$", url_host(base_url)</string>
       <string>1,"^https?://%s/lib/ajax_srv/article_elements_srv\.php\?action=download_pdf&amp;item_id=[0-9]+$", url_host(base_url)</string>
-      <string>1,"^https?://%s/lib/ajax_srv/generate_pdf\.php\?document_id=[0-9]+&amp;(readonly_preview=1)?$", url_host(base_url)</string>
+      <string>1,"^https?://%s/lib/ajax_srv/generate_pdf\.php\?document_id=[0-9]+", url_host(base_url)</string>
       <!-- There are content patterns available for preservation, including an html page with images and captions -->
       <string>1,"^https?://%s/article/[0-9]+/zoom/.", url_host(base_url)</string>
       <string>1,"^https?://%s/article/[0-9]+/download/pdf/?$", url_host(base_url)</string>
@@ -80,7 +80,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^https?://%s/lib/ajax_srv/generate_pdf\.php\?document_id=[0-9]+&amp;(readonly_preview=1)?$", url_host(base_url)</string>
+      <string>"^https?://%s/lib/ajax_srv/generate_pdf\.php\?document_id=[0-9]+", url_host(base_url)</string>
       <string>"^https?://%s/article/[0-9]+/download/pdf/?$", url_host(base_url)</string>
     </list>
   </entry>
