@@ -76,6 +76,13 @@ public class EdinburghUniversityPressCrawlHtmlFilterFactory extends BaseAtyponHt
         // TOC tabbed section on TOC for listing all issues in journal - in parent
         //HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumListOfIssuesWidget"),
         
+        //1/24/19 
+        //class="widget pageFooter none  widget-none  widget-compact-all"
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pageFooter"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pageHeader"),
+        //verified specificity of right column tagging still in place
+        //verified prev/next still handled by parent filter 
+        
     };
     return super.createFilteredInputStream(au, in, encoding, edFilters);
   }
