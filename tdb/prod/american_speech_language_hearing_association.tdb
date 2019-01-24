@@ -6,7 +6,7 @@
   comment[moving] = Publisher moved from Silverchair to Atypon.
   
   plugin = org.lockss.plugin.atypon.aslha.AmericanSpeechLanguageHearingAssocAtyponPlugin
-  param[base_url] = https://pubs.asha.org/
+  #param[base_url] = https://pubs.asha.org/
   implicit < status ; year ; name ; param[volume_name] >
 
   {
@@ -18,6 +18,7 @@
     >
 
       param[journal_id] = aja
+      param[base_url] = https://pubs.asha.org/
 
       au < exists ; 1992 ; American Journal of Audiology Volume 1 ; 1 >
       au < exists ; 1993 ; American Journal of Audiology Volume 2 ; 2 >
@@ -58,6 +59,7 @@
     >
 
       param[journal_id] = ajslp
+      param[base_url] = https://pubs.asha.org/
 
       au < exists ; 1992 ; American Journal of Speech-Language Pathology Volume 1 ; 1 >
       au < exists ; 1993 ; American Journal of Speech-Language Pathology Volume 2 ; 2 >
@@ -98,6 +100,7 @@
     >
 
       param[journal_id] = jslhr
+      param[base_url] = https://pubs.asha.org/
 
       au < exists ; 1958 ; Journal of Speech, Language, and Hearing Research Volume 1 ; 1 >
       au < exists ; 1959 ; Journal of Speech, Language, and Hearing Research Volume 2 ; 2 >
@@ -172,6 +175,7 @@
     >
 
       param[journal_id] = lshss
+      param[base_url] = https://pubs.asha.org/
 
       au < exists ; 1970 ; Language, Speech, and Hearing Services in Schools Volume 1 ; 1 >
       au < exists ; 1972 ; Language, Speech, and Hearing Services in Schools Volume 3 ; 3 >
@@ -231,6 +235,7 @@
     >
 
       param[journal_id] = leader
+      param[base_url] = https://leader.pubs.asha.org/
 
       au < exists ; 2010 ; ASHA Leader Volume 15 ; 15 >
       au < exists ; 2011 ; ASHA Leader Volume 16 ; 16 >
@@ -251,6 +256,7 @@
     >
 
       param[journal_id] = persp
+      param[base_url] = https://pubs.asha.org/
 
       au < exists ; 2010 ; Perspectives of the ASHA Special Interest Groups Volume 10 ; 10 >
       au < exists ; 2011 ; Perspectives of the ASHA Special Interest Groups Volume 11 ; 11 >
@@ -258,9 +264,9 @@
       au < exists ; 2013 ; Perspectives of the ASHA Special Interest Groups Volume 13 ; 13 >
       au < exists ; 2014 ; Perspectives of the ASHA Special Interest Groups Volume 14 ; 14 >
       au < exists ; 2015 ; Perspectives of the ASHA Special Interest Groups Volume 15 ; 15 >
-      au < exists ; 2016 ; Perspectives of the ASHA Special Interest Groups Volume 16 ; 16 >
-      au < exists ; 2017 ; Perspectives of the ASHA Special Interest Groups Volume 17 ; 17 >
-      au < exists ; 2018 ; Perspectives of the ASHA Special Interest Groups Volume 18 ; 18 >
+      au < exists ; exists ; 2016 ; Perspectives of the ASHA Special Interest Groups Volume 1 ; 1 ; >
+      au < exists ; exists ; 2017 ; Perspectives of the ASHA Special Interest Groups Volume 2 ; 2 ; >
+      au < testing ; exists ; 2018 ; Perspectives of the ASHA Special Interest Groups Volume 3 ; 3 ; >
   }
 
 }
