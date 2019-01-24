@@ -92,7 +92,13 @@ public class EdinburghUniversityPressHashHtmlFilterFactory extends BaseAtyponHtm
         
         // 10/2/18 - addition of hidden empy tab for view options
         // these aren't needed for comparison anyway
-        HtmlNodeFilters.tagWithAttribute("ul","class", "tab-nav")
+        HtmlNodeFilters.tagWithAttribute("ul","class", "tab-nav"),
+        
+        // 1/24/19 - html tagging appears to have changed
+        //class="widget pageFooter none  widget-none  widget-compact-all"
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pageFooter"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pageHeader"),
+        //verified specificity of right column tagging still in place
 
     };
     // super.createFilteredInputStream adds Edinburgh's filter to the baseAtyponFilters
