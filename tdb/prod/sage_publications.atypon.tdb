@@ -24302,6 +24302,53 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
     }
 
+  {
+
+    title <
+      name = Journal of Information Technology ;
+      issn = 0268-3962 ;
+      eissn = 1466-4437 ;
+      issnl = 0268-3962
+    >
+
+    #journal_id = jin
+
+    au < exists ; 1986 ; Journal of Information Technology Volume 1 ; 1 ; jina ; https://journals.sagepub.com/ >
+    au < exists ; 1987 ; Journal of Information Technology Volume 2 ; 2 ; jina ; https://journals.sagepub.com/ >
+    au < exists ; 1988 ; Journal of Information Technology Volume 3 ; 3 ; jina ; https://journals.sagepub.com/ >
+    au < exists ; 1989 ; Journal of Information Technology Volume 4 ; 4 ; jina ; https://journals.sagepub.com/ >
+    au < exists ; 1990 ; Journal of Information Technology Volume 5 ; 5 ; jina ; https://journals.sagepub.com/ >
+    au < exists ; 1991 ; Journal of Information Technology Volume 6 ; 6 ; jina ; https://journals.sagepub.com/ >
+    au < exists ; 1992 ; Journal of Information Technology Volume 7 ; 7 ; jina ; https://journals.sagepub.com/ >
+    au < exists ; 1993 ; Journal of Information Technology Volume 8 ; 8 ; jina ; https://journals.sagepub.com/ >
+    au < exists ; 1994 ; Journal of Information Technology Volume 9 ; 9 ; jina ; https://journals.sagepub.com/ >
+    au < exists ; 1995 ; Journal of Information Technology Volume 10 ; 10 ; jina ; https://journals.sagepub.com/ >
+    au < exists ; 1996 ; Journal of Information Technology Volume 11 ; 11 ; jina ; https://journals.sagepub.com/ >
+    au < exists ; 1997 ; Journal of Information Technology Volume 12 ; 12 ; jina ; https://journals.sagepub.com/ >
+    au < exists ; 1998 ; Journal of Information Technology Volume 13 ; 13 ; jina ; https://journals.sagepub.com/ >
+    au < exists ; 1999 ; Journal of Information Technology Volume 14 ; 14 ; jina ; https://journals.sagepub.com/ >
+    au < exists ; 2000 ; Journal of Information Technology Volume 15 ; 15 ; jina ; https://journals.sagepub.com/ >
+    au < exists ; 2001 ; Journal of Information Technology Volume 16 ; 16 ; jina ; https://journals.sagepub.com/ >
+    au < exists ; 2002 ; Journal of Information Technology Volume 17 ; 17 ; jina ; https://journals.sagepub.com/ >
+    au < exists ; 2003 ; Journal of Information Technology Volume 18 ; 18 ; jina ; https://journals.sagepub.com/ >
+    au < exists ; 2004 ; Journal of Information Technology Volume 19 ; 19 ; jina ; https://journals.sagepub.com/ >
+    au < exists ; 2005 ; Journal of Information Technology Volume 20 ; 20 ; jina ; https://journals.sagepub.com/ >
+    au < exists ; 2006 ; Journal of Information Technology Volume 21 ; 21 ; jina ; https://journals.sagepub.com/ >
+    au < exists ; 2007 ; Journal of Information Technology Volume 22 ; 22 ; jina ; https://journals.sagepub.com/ >
+    au < exists ; 2008 ; Journal of Information Technology Volume 23 ; 23 ; jina ; https://journals.sagepub.com/ >
+    au < exists ; 2009 ; Journal of Information Technology Volume 24 ; 24 ; jina ; https://journals.sagepub.com/ >
+    au < exists ; 2010 ; Journal of Information Technology Volume 25 ; 25 ; jina ; https://journals.sagepub.com/ >
+    au < exists ; 2011 ; Journal of Information Technology Volume 26 ; 26 ; jina ; https://journals.sagepub.com/ >
+    au < exists ; 2012 ; Journal of Information Technology Volume 27 ; 27 ; jina ; https://journals.sagepub.com/ >
+    au < exists ; 2013 ; Journal of Information Technology Volume 28 ; 28 ; jina ; https://journals.sagepub.com/ >
+    au < exists ; 2014 ; Journal of Information Technology Volume 29 ; 29 ; jina ; https://journals.sagepub.com/ >
+    au < exists ; 2015 ; Journal of Information Technology Volume 30 ; 30 ; jina ; https://journals.sagepub.com/ >
+    au < exists ; 2016 ; Journal of Information Technology Volume 31 ; 31 ; jina ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2017 ; Journal of Information Technology Volume 32 ; 32 ; jina ; https://journals.sagepub.com/ >
+    au < exists ; 2018 ; Journal of Information Technology Volume 33 ; 33 ; jina ; https://journals.sagepub.com/ >
+
+  }
+
     {
 
       title <
@@ -24347,7 +24394,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       title <
         name = Journal of Intelligent Material Systems and Structures ;
         issn = 1045-389X ;
-        eissn = 1530-8138 
+        eissn = 1530-8138
       >
 
       {
