@@ -366,7 +366,7 @@
       au < crawling ; exists ; 2018 ; Faraday Discussions Volume 209 ; 209 ; 2018 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2018 ; Faraday Discussions Volume 210 ; 210 ; 2018 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2018 ; Faraday Discussions Volume 211 ; 211 ; 2018 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2018 ; Faraday Discussions Volume 212 ; 212 ; 2018 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2018 ; Faraday Discussions Volume 212 ; 212 ; 2018 ; https://pubs.rsc.org/ ; >
       au < expected ; exists ; 2018 ; Faraday Discussions Volume 213 ; 213 ; 2018 ; https://pubs.rsc.org/ ; >
       au < expected ; exists ; 2018 ; Faraday Discussions Volume 214 ; 214 ; 2018 ; https://pubs.rsc.org/ ; >
       au < expected ; exists ; 2018 ; Faraday Discussions Volume 215 ; 215 ; 2018 ; https://pubs.rsc.org/ ; >
@@ -1366,7 +1366,7 @@
       au < frozen ; exists ; 2015 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 3 ; 3 ; 2015 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2016 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 4 ; 4 ; 2016 ; http://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2017 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 5 ; 5 ; 2017 ; http://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2018 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 6 ; 6 ; 2018 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2018 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 6 ; 6 ; 2018 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -2371,7 +2371,7 @@
       au < frozen ; exists ; 2015 ; RSC Advances Volume 5 ; 5 ; 2015 ; http://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2016 ; RSC Advances Volume 6 ; 6 ; 2016 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; RSC Advances Volume 7 ; 7 ; 2017 ; http://pubs.rsc.org/ ; >
-      au < testing ; exists ; 2018 ; RSC Advances Volume 8 ; 8 ; 2018 ; https://pubs.rsc.org/ ; >
+      au < ready ; exists ; 2018 ; RSC Advances Volume 8 ; 8 ; 2018 ; https://pubs.rsc.org/ ; >
 
   }
 
