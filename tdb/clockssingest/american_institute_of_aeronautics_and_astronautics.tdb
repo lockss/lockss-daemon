@@ -342,7 +342,7 @@
     au < frozen ; exists ; 1967 ; Journal of Hydronautics Volume 1 ; 1 ; https://arc.aiaa.org/ ; >
     au < testing ; exists ; 1968 ; Journal of Hydronautics Volume 2 ; 2 ; https://arc.aiaa.org/ ; >
     au < testing ; exists ; 1969 ; Journal of Hydronautics Volume 3 ; 3 ; https://arc.aiaa.org/ ; >
-    au < ready ; exists ; 1970 ; Journal of Hydronautics Volume 4 ; 4 ; https://arc.aiaa.org/ ; >
+    au < crawling ; exists ; 1970 ; Journal of Hydronautics Volume 4 ; 4 ; https://arc.aiaa.org/ ; >
     au < testing ; exists ; 1971 ; Journal of Hydronautics Volume 5 ; 5 ; https://arc.aiaa.org/ ; >
     au < testing ; exists ; 1972 ; Journal of Hydronautics Volume 6 ; 6 ; https://arc.aiaa.org/ ; >
     au < testing ; exists ; 1973 ; Journal of Hydronautics Volume 7 ; 7 ; https://arc.aiaa.org/ ; >
@@ -380,7 +380,7 @@
     au < testing ; exists ; 1995 ; Journal of Propulsion and Power Volume 11 ; 11 ; https://arc.aiaa.org/ ; >
     au < testing ; exists ; 1996 ; Journal of Propulsion and Power Volume 12 ; 12 ; https://arc.aiaa.org/ ; >
     au < testing ; exists ; 1997 ; Journal of Propulsion and Power Volume 13 ; 13 ; https://arc.aiaa.org/ ; >
-    au < ready ; exists ; 1998 ; Journal of Propulsion and Power Volume 14 ; 14 ; https://arc.aiaa.org/ ; >
+    au < crawling ; exists ; 1998 ; Journal of Propulsion and Power Volume 14 ; 14 ; https://arc.aiaa.org/ ; >
     au < testing ; exists ; 1999 ; Journal of Propulsion and Power Volume 15 ; 15 ; https://arc.aiaa.org/ ; >
     au < testing ; exists ; 2000 ; Journal of Propulsion and Power Volume 16 ; 16 ; https://arc.aiaa.org/ ; >
     au < testing ; exists ; 2001 ; Journal of Propulsion and Power Volume 17 ; 17 ; https://arc.aiaa.org/ ; >
@@ -428,7 +428,7 @@
     au < testing ; exists ; 1975 ; Journal of Spacecraft and Rockets Volume 12 ; 12 ; https://arc.aiaa.org/ ; >
     au < testing ; exists ; 1976 ; Journal of Spacecraft and Rockets Volume 13 ; 13 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1977 ; Journal of Spacecraft and Rockets Volume 14 ; 14 ; https://arc.aiaa.org/ ; >
-    au < ready ; exists ; 1978 ; Journal of Spacecraft and Rockets Volume 15 ; 15 ; https://arc.aiaa.org/ ; >
+    au < crawling ; exists ; 1978 ; Journal of Spacecraft and Rockets Volume 15 ; 15 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1979 ; Journal of Spacecraft and Rockets Volume 16 ; 16 ; https://arc.aiaa.org/ ; >
     au < testing ; exists ; 1980 ; Journal of Spacecraft and Rockets Volume 17 ; 17 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1981 ; Journal of Spacecraft and Rockets Volume 18 ; 18 ; https://arc.aiaa.org/ ; >
@@ -436,18 +436,18 @@
     au < frozen ; exists ; 1983 ; Journal of Spacecraft and Rockets Volume 20 ; 20 ; https://arc.aiaa.org/ ; >
     au < testing ; exists ; 1984 ; Journal of Spacecraft and Rockets Volume 21 ; 21 ; https://arc.aiaa.org/ ; >
     au < testing ; exists ; 1985 ; Journal of Spacecraft and Rockets Volume 22 ; 22 ; https://arc.aiaa.org/ ; >
-    au < ready ; exists ; 1986 ; Journal of Spacecraft and Rockets Volume 23 ; 23 ; https://arc.aiaa.org/ ; >
+    au < crawling ; exists ; 1986 ; Journal of Spacecraft and Rockets Volume 23 ; 23 ; https://arc.aiaa.org/ ; >
     au < testing ; exists ; 1987 ; Journal of Spacecraft and Rockets Volume 24 ; 24 ; https://arc.aiaa.org/ ; >
     au < testing ; exists ; 1988 ; Journal of Spacecraft and Rockets Volume 25 ; 25 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1989 ; Journal of Spacecraft and Rockets Volume 26 ; 26 ; https://arc.aiaa.org/ ; >
     au < testing ; exists ; 1990 ; Journal of Spacecraft and Rockets Volume 27 ; 27 ; https://arc.aiaa.org/ ; >
     au < testing ; exists ; 1991 ; Journal of Spacecraft and Rockets Volume 28 ; 28 ; https://arc.aiaa.org/ ; >
-    au < ready ; exists ; 1992 ; Journal of Spacecraft and Rockets Volume 29 ; 29 ; https://arc.aiaa.org/ ; >
+    au < crawling ; exists ; 1992 ; Journal of Spacecraft and Rockets Volume 29 ; 29 ; https://arc.aiaa.org/ ; >
     au < testing ; exists ; 1993 ; Journal of Spacecraft and Rockets Volume 30 ; 30 ; https://arc.aiaa.org/ ; >
     au < testing ; exists ; 1994 ; Journal of Spacecraft and Rockets Volume 31 ; 31 ; https://arc.aiaa.org/ ; >
     au < testing ; exists ; 1995 ; Journal of Spacecraft and Rockets Volume 32 ; 32 ; https://arc.aiaa.org/ ; >
     au < testing ; exists ; 1996 ; Journal of Spacecraft and Rockets Volume 33 ; 33 ; https://arc.aiaa.org/ ; >
-    au < ready ; exists ; 1997 ; Journal of Spacecraft and Rockets Volume 34 ; 34 ; https://arc.aiaa.org/ ; >
+    au < crawling ; exists ; 1997 ; Journal of Spacecraft and Rockets Volume 34 ; 34 ; https://arc.aiaa.org/ ; >
     au < testing ; exists ; 1998 ; Journal of Spacecraft and Rockets Volume 35 ; 35 ; https://arc.aiaa.org/ ; >
     au < testing ; exists ; 1999 ; Journal of Spacecraft and Rockets Volume 36 ; 36 ; https://arc.aiaa.org/ ; >
     au < testing ; exists ; 2000 ; Journal of Spacecraft and Rockets Volume 37 ; 37 ; https://arc.aiaa.org/ ; >
@@ -484,7 +484,7 @@
 
     au < testing ; exists ; 1987 ; Journal of Thermophysics and Heat Transfer Volume 1 ; 1 ; https://arc.aiaa.org/ ; >
     au < testing ; exists ; 1988 ; Journal of Thermophysics and Heat Transfer Volume 2 ; 2 ; https://arc.aiaa.org/ ; >
-    au < ready ; exists ; 1989 ; Journal of Thermophysics and Heat Transfer Volume 3 ; 3 ; https://arc.aiaa.org/ ; >
+    au < crawling ; exists ; 1989 ; Journal of Thermophysics and Heat Transfer Volume 3 ; 3 ; https://arc.aiaa.org/ ; >
     au < testing ; exists ; 1990 ; Journal of Thermophysics and Heat Transfer Volume 4 ; 4 ; https://arc.aiaa.org/ ; >
     au < testing ; exists ; 1991 ; Journal of Thermophysics and Heat Transfer Volume 5 ; 5 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1992 ; Journal of Thermophysics and Heat Transfer Volume 6 ; 6 ; https://arc.aiaa.org/ ; >
@@ -492,7 +492,7 @@
     au < testing ; exists ; 1994 ; Journal of Thermophysics and Heat Transfer Volume 8 ; 8 ; https://arc.aiaa.org/ ; >
     au < testing ; exists ; 1995 ; Journal of Thermophysics and Heat Transfer Volume 9 ; 9 ; https://arc.aiaa.org/ ; >
     au < testing ; exists ; 1996 ; Journal of Thermophysics and Heat Transfer Volume 10 ; 10 ; https://arc.aiaa.org/ ; >
-    au < ready ; exists ; 1997 ; Journal of Thermophysics and Heat Transfer Volume 11 ; 11 ; https://arc.aiaa.org/ ; >
+    au < crawling ; exists ; 1997 ; Journal of Thermophysics and Heat Transfer Volume 11 ; 11 ; https://arc.aiaa.org/ ; >
     au < testing ; exists ; 1998 ; Journal of Thermophysics and Heat Transfer Volume 12 ; 12 ; https://arc.aiaa.org/ ; >
     au < testing ; exists ; 1999 ; Journal of Thermophysics and Heat Transfer Volume 13 ; 13 ; https://arc.aiaa.org/ ; >
     au < testing ; exists ; 2000 ; Journal of Thermophysics and Heat Transfer Volume 14 ; 14 ; https://arc.aiaa.org/ ; >
