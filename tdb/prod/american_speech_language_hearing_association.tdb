@@ -178,6 +178,7 @@
       param[base_url] = https://pubs.asha.org/
 
       au < exists ; 1970 ; Language, Speech, and Hearing Services in Schools Volume 1 ; 1 >
+      au < exists ; 1971 ; Language, Speech, and Hearing Services in Schools Volume 2 ; 2 >
       au < exists ; 1972 ; Language, Speech, and Hearing Services in Schools Volume 3 ; 3 >
       au < exists ; 1973 ; Language, Speech, and Hearing Services in Schools Volume 4 ; 4 >
       au < exists ; 1974 ; Language, Speech, and Hearing Services in Schools Volume 5 ; 5 >
@@ -237,6 +238,17 @@
       param[journal_id] = leader
       param[base_url] = https://leader.pubs.asha.org/
 
+      au < exists ; 1999 ; ASHA Leader Volume 4 ; 4 >
+      au < exists ; 2000 ; ASHA Leader Volume 5 ; 5 >
+      au < exists ; 2001 ; ASHA Leader Volume 6 ; 6 >
+      au < exists ; 2002 ; ASHA Leader Volume 7 ; 7 >
+      au < exists ; 2003 ; ASHA Leader Volume 8 ; 8 >
+      au < exists ; 2004 ; ASHA Leader Volume 9 ; 9 >
+      au < exists ; 2005 ; ASHA Leader Volume 10 ; 10 >
+      au < exists ; 2006 ; ASHA Leader Volume 11 ; 11 >
+      au < exists ; 2007 ; ASHA Leader Volume 12 ; 12 >
+      au < exists ; 2008 ; ASHA Leader Volume 13 ; 13 >
+      au < exists ; 2009 ; ASHA Leader Volume 14 ; 14 >
       au < exists ; 2010 ; ASHA Leader Volume 15 ; 15 >
       au < exists ; 2011 ; ASHA Leader Volume 16 ; 16 >
       au < exists ; 2012 ; ASHA Leader Volume 17 ; 17 >
@@ -258,15 +270,9 @@
       param[journal_id] = persp
       param[base_url] = https://pubs.asha.org/
 
-      au < exists ; 2010 ; Perspectives of the ASHA Special Interest Groups Volume 10 ; 10 >
-      au < exists ; 2011 ; Perspectives of the ASHA Special Interest Groups Volume 11 ; 11 >
-      au < exists ; 2012 ; Perspectives of the ASHA Special Interest Groups Volume 12 ; 12 >
-      au < exists ; 2013 ; Perspectives of the ASHA Special Interest Groups Volume 13 ; 13 >
-      au < exists ; 2014 ; Perspectives of the ASHA Special Interest Groups Volume 14 ; 14 >
-      au < exists ; 2015 ; Perspectives of the ASHA Special Interest Groups Volume 15 ; 15 >
-      au < exists ; exists ; 2016 ; Perspectives of the ASHA Special Interest Groups Volume 1 ; 1 ; >
-      au < exists ; exists ; 2017 ; Perspectives of the ASHA Special Interest Groups Volume 2 ; 2 ; >
-      au < testing ; exists ; 2018 ; Perspectives of the ASHA Special Interest Groups Volume 3 ; 3 ; >
+      au < exists ; 2016 ; Perspectives of the ASHA Special Interest Groups Volume 1 ; 1 >
+      au < exists ; 2017 ; Perspectives of the ASHA Special Interest Groups Volume 2 ; 2 >
+      au < exists ; 2018 ; Perspectives of the ASHA Special Interest Groups Volume 3 ; 3 >
   }
 
 }
