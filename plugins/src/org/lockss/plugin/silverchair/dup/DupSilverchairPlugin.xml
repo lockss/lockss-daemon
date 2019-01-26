@@ -1,0 +1,206 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>development</string>
+  </entry>
+  <!-- NOTE: this plugin uses shared code (validation, response handler) from parent directory! -->
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.silverchair.dup.DupSilverchairPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+     <!-- no store content validation -->
+    <string>1.72.0</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Duke University Press Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_id</key>
+        <displayName>Journal Identifier</displayName>
+        <description>Identifier for journal</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Duke University Press Plugin, Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%s%s/list-of-issues/%d", base_url, journal_id, year</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"^https?://((fonts|ajax)\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|cdn\.mathjax\.org|cdnjs\.cloudflare\.com)/"</string>
+      <!-- images/figures/supplemental have Expires that will always be 2147483647 and don't redirect - allow -->
+      <!-- https://dup.silverchair-cdn.com/dup/Content_public/Journal/jmems/Issue/49/1/1/m_jme_49_1_cover.png?Expires=2147483647&Signature=3w__&Key-Pair-Id=A -->
+      <string>1,"^https?://(%s|dup\.silverchair-cdn\.com/dup/backfile/Content_public/Journal/[^?]+\?Expires=2147483647", url_host(base_url)</string>
+      <!--  PDFs redirect through one-time with changing expiring that stores in canonical -->
+      <string>1,"^https?://(%s|dup\.silverchair-cdn\.com)/dup/backfile/Content_public/Journal/%s/[^?]+[.]pdf\?Expires=", url_host(base_url), journal_id</string>
+      <!--  allow any other item, but if it has Expires it's a content image and it has to be stable-->
+      <string>2,"^https?://(%s|dup\.silverchair-cdn\.com).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)\?Expires=.*$", url_host(base_url)</string>
+      <!--  but allow any other items that do NOT have expiry - they're just support images, fonts, etc -->
+      <string>1,"^https?://(%s|dup\.silverchair-cdn\.com).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", url_host(base_url)</string>
+      <!--  pdf can go through regardless of Expiry because it gets consumed, and JS and CSS have no expiry -->
+      <string>1,"^https?://dup\.silverchair-cdn\.com/.*(CSS|JS|\.pdf)(\?.*)?$"</string>
+      <!--  PDF content is going through watermarking SOME of the time; we will consume -->
+      <string>1,"^https?://watermark\.silverchair\.com/[^/]+\.pdf\?token="</string>
+      <string>1,"^https?://%s/%s/downloadcitation/[^?]+\?format=ris", url_host(base_url), journal_id</string>
+      <string>1,"^https?://%s/view-large/[^?/]+$", url_host(base_url)</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^%s%s/article-pdf/.+\.pdf$", base_url, journal_id</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_refetch_depth</string>
+    <int>2</int>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+  <entry>
+    <string>plugin_fetch_rate_limiter_source</string>
+    <string>host:base_url</string>
+  </entry>
+  <entry>
+    <!-- Validator factory for text MIME types -->
+    <string>text/*_content_validator_factory</string>
+    <string>org.lockss.plugin.silverchair.BaseScContentValidatorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.silverchair.BaseScHtmlCrawlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.silverchair.BaseScUrlConsumerFactory</string>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.silverchair.BaseScUrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.silverchair.BaseScHtmlHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.silverchair.BaseScPdfFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.silverchair.BaseScArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.silverchair.BaseScArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/plain_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;RIS</string>
+        <string>org.lockss.plugin.silverchair.ScRisMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>application/x-research-info-systems_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;RIS</string>
+        <string>org.lockss.plugin.silverchair.ScRisMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.silverchair.ScHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_permitted_host_pattern</string>
+    <string>"(fonts|ajax)\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|[^.]+\.silverchair-?cdn\.com|cdn\.mathjax\.org|cdnjs\.cloudflare\.com|watermark\.silverchair\.com"</string>
+  </entry>
+<!-- CUSTOMIZE For DUP
+  <entry>
+    <string>au_repair_from_peer_if_missing_url_pattern</string>
+    <list>
+      <string>https?://read\.dukeupress\.edu/(cassette\.axd|data|UI)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?Expires=[^?]+)?$</string>
+      <string>https?://oup\.silverchair-cdn\.com/(cassette\.axd|data|UI)/.*(JS|CSS|\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff))(\?.*)?$</string>
+      <string>https?://(fonts\.googleapis\.com|cdn\.jsdelivr\.net|cdnjs\.cloudflare\.com)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_url_poll_result_weight</string>
+    <list>
+      <string>"https?://academic\.oup\.com/(cassette\.axd|data|UI)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?Expires=[^?]+)?$", 0</string>
+      <string>"https?://oup\.silverchair-cdn\.com/(cassette\.axd|data|UI)/.*(JS|CSS|\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff))(\?.*)?$", 0</string>
+      <string>"https?://(fonts\.googleapis\.com|cdn\.jsdelivr\.net|cdnjs\.cloudflare\.com)/.*(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", 0</string>
+    </list>
+  </entry>
+  -->
+</map>
