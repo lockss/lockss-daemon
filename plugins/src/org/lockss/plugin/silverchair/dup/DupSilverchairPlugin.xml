@@ -84,7 +84,7 @@
       <string>1,"^https?://((fonts|ajax)\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|cdn\.mathjax\.org|cdnjs\.cloudflare\.com)/"</string>
       <!-- images/figures/supplemental have Expires that will always be 2147483647 and don't redirect - allow -->
       <!-- https://dup.silverchair-cdn.com/dup/Content_public/Journal/jmems/Issue/49/1/1/m_jme_49_1_cover.png?Expires=2147483647&Signature=3w__&Key-Pair-Id=A -->
-      <string>1,"^https?://(%s|dup\.silverchair-cdn\.com/dup/backfile/Content_public/Journal/[^?]+\?Expires=2147483647", url_host(base_url)</string>
+      <string>1,"^https?://(%s|dup\.silverchair-cdn\.com)/dup/backfile/Content_public/Journal/[^?]+\?Expires=2147483647", url_host(base_url)</string>
       <!--  PDFs redirect through one-time with changing expiring that stores in canonical -->
       <string>1,"^https?://(%s|dup\.silverchair-cdn\.com)/dup/backfile/Content_public/Journal/%s/[^?]+[.]pdf\?Expires=", url_host(base_url), journal_id</string>
       <!--  allow any other item, but if it has Expires it's a content image and it has to be stable-->
@@ -126,18 +126,22 @@
     <string>text/*_content_validator_factory</string>
     <string>org.lockss.plugin.silverchair.BaseScContentValidatorFactory</string>
   </entry>
+  <!-- 
   <entry>
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.silverchair.BaseScHtmlCrawlFilterFactory</string>
   </entry>
+  -->
   <entry>
     <string>plugin_url_consumer_factory</string>
     <string>org.lockss.plugin.silverchair.BaseScUrlConsumerFactory</string>
   </entry>
+  <!-- 
   <entry>
     <string>au_url_normalizer</string>
     <string>org.lockss.plugin.silverchair.BaseScUrlNormalizer</string>
   </entry>
+  -->
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.silverchair.BaseScHtmlHashFilterFactory</string>
