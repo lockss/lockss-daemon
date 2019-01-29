@@ -43,6 +43,7 @@ import org.lockss.extractor.BaseArticleMetadataExtractor;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
+import org.lockss.util.UrlUtil;
 
 public class PensoftOaiArticleIteratorFactory
 implements ArticleIteratorFactory,
@@ -50,12 +51,6 @@ implements ArticleIteratorFactory,
 
   protected static Logger log = 
       Logger.getLogger(PensoftOaiArticleIteratorFactory.class);
-
-  // params from tdb file corresponding to AU
-  protected static final String ROOT_TEMPLATE = "\"%s\", base_url"; 
-
-  protected static final String PATTERN_TEMPLATE =
-      "\"^%sarticle(/|s[.]php[?]id=)[0-9]+/?$\", base_url";
 
   protected static final Pattern ABSTRACT_PATTERN = Pattern.compile(
       "article(?:/|s[.]php[?]id=)([0-9]+)/?$",
@@ -76,8 +71,17 @@ implements ArticleIteratorFactory,
       throws PluginException {
     SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
 
+    String strip_base = UrlUtil.stripProtocol(au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey()));
+    // params from tdb file corresponding to AU
+    final String ROOT_TEMPLATE0 = "\"https://" + strip_base + "\"";
+    final String ROOT_TEMPLATE1 = "\"http://" + strip_base + "\"";
+
+    final String PATTERN_TEMPLATE =
+        "\"^https?://" + strip_base + "article(/|s[.]php[?]id=)[0-9]+/?$\"";
+
     builder.setSpec(target,
-        ROOT_TEMPLATE, PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
+        Arrays.asList(ROOT_TEMPLATE0, ROOT_TEMPLATE1),
+        PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
 
     builder.addAspect(ABSTRACT_PATTERN,
         Arrays.asList(ABSTRACT_0_REPLACEMENT, ABSTRACT_1_REPLACEMENT),
