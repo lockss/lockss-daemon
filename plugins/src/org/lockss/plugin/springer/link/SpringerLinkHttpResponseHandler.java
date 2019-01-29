@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2019 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,10 +36,14 @@ import org.lockss.daemon.PluginException;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 import org.lockss.util.urlconn.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class SpringerLinkHttpResponseHandler implements CacheResultHandler {
 
   private static final Logger logger = Logger.getLogger(SpringerLinkHttpResponseHandler.class);
+  protected static final Pattern NON_FATAL_PAT =
+      Pattern.compile("^http(s)?://static-content.springer.com/(esm|image)?/art[^/]+/MediaObjects/");
 
   @Override
   public void init(CacheResultMap crmap) {
@@ -54,6 +58,14 @@ public class SpringerLinkHttpResponseHandler implements CacheResultHandler {
       throws PluginException {
     logger.debug2(String.format("URL %s with %d", url, responseCode));
     switch (responseCode) {
+      case 403:
+        logger.debug3("403");
+        Matcher mat = NON_FATAL_PAT.matcher(url);
+        if (mat.find()) {
+            return new CacheException.NoRetryDeadLinkException("403 Forbidden (non-fatal)");
+        } else {
+            return new CacheException.NoRetryDeadLinkException("403 Forbidden error");
+        }
       case 404:
         logger.debug3("404");
         if(url.contains("MediaObjects")) {
