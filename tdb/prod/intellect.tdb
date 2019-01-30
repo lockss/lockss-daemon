@@ -5,8 +5,6 @@
   >
   
     plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
     param[publisher_id] = intellect
     implicit < status ; year ; name ; param[volume_name] >
@@ -18,9 +16,12 @@
         eissn = 2042-7883
       >
       
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       param[journal_id] = ap3
       param[journal_issn] = 2042-7875
-      
+
       au < released ; 2011-2012 ; Animation Practice, Process & Production Volume 1 ; 1 >
       au < released ; 2012 ; Animation Practice, Process & Production Volume 2 ; 2 >
       au < released ; 2013 ; Animation Practice, Process & Production Volume 3 ; 3 >
@@ -36,13 +37,25 @@
       param[journal_id] = atr
       param[journal_issn] = 2049-3010
       
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2012-2014 ; Applied Theatre Research Volume 1 ; 1 >
       au < released ; 2014 ; Applied Theatre Research Volume 2 ; 2 >
       au < released ; 2015 ; Applied Theatre Research Volume 3 ; 3 >
       au < released ; 2016 ; Applied Theatre Research Volume 4 ; 4 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Applied Theatre Research Volume 5 ; 5 >
       au < manifest ; 2018 ; Applied Theatre Research Volume 6 ; 6 >
 
+      }
     }
 
     {
@@ -56,14 +69,26 @@
       param[journal_issn] = 2042-793X
       # content published 2 years later
       
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2011 ; Art & the Public Sphere Volume 1 ; 1 >
       au < released ; 2012 ; Art & the Public Sphere Volume 2 ; 2 >
       au < released ; 2013-2014 ; Art & the Public Sphere Volume 3 ; 3 >
       au < released ; 2015 ; Art & the Public Sphere Volume 4 ; 4 >
       au < released ; 2016 ; Art & the Public Sphere Volume 5 ; 5 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Art & the Public Sphere Volume 6 ; 6 >
       au < manifest ; 2018 ; Art & the Public Sphere Volume 7 ; 7 >
 
+      }
     }
 
     {
@@ -76,6 +101,10 @@
       param[journal_id] = adche
       param[journal_issn] = 1474-273X
       
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2002-2003 ; Art, Design & Communication in Higher Education Volume 1 ; 1 >
       au < released ; 2003-2004 ; Art, Design & Communication in Higher Education Volume 2 ; 2 >
       au < released ; 2004 ; Art, Design & Communication in Higher Education Volume 3 ; 3 >
@@ -91,9 +120,17 @@
       au < released ; 2014 ; Art, Design & Communication in Higher Education Volume 13 ; 13 >
       au < released ; 2015 ; Art, Design & Communication in Higher Education Volume 14 ; 14 >
       au < released ; 2016 ; Art, Design & Communication in Higher Education Volume 15 ; 15 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Art, Design & Communication in Higher Education Volume 16 ; 16 >
       au < manifest ; 2018 ; Art, Design & Communication in Higher Education Volume 17 ; 17 >
 
+      }
     }
 
     {
@@ -106,6 +143,10 @@
       param[journal_id] = ac
       param[journal_issn] = 1059-440X
       
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 1993 ; Asian Cinema Volume 5 ; 5 >
       au < released ; 1993 ; Asian Cinema Volume 6 ; 6 >
       au < released ; 1995 ; Asian Cinema Volume 7 ; 7 >
@@ -129,9 +170,17 @@
       au < released ; 2014 ; Asian Cinema Volume 25 ; 25 >
       au < released ; 2015 ; Asian Cinema Volume 26 ; 26 >
       au < released ; 2016 ; Asian Cinema Volume 27 ; 27 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Asian Cinema Volume 28 ; 28 >
       au < manifest ; 2018 ; Asian Cinema Volume 29 ; 29 >
 
+      }
     }
 
     {
@@ -144,14 +193,26 @@
       param[journal_id] = ajpc
       param[journal_issn] = 2045-5852
       
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2011 ; The Australasian Journal of Popular Culture Volume 1 ; 1 >
       au < released ; 2012-2013 ; The Australasian Journal of Popular Culture Volume 2 ; 2 >
       au < released ; 2014 ; The Australasian Journal of Popular Culture Volume 3 ; 3 >
       au < released ; 2015 ; The Australasian Journal of Popular Culture Volume 4 ; 4 >
       au < released ; 2016 ; The Australasian Journal of Popular Culture Volume 5 ; 5 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; The Australasian Journal of Popular Culture Volume 6 ; 6 >
       au < manifest ; 2018 ; The Australasian Journal of Popular Culture Volume 7 ; 7 >
 
+      }
     }
     
     {
@@ -164,15 +225,27 @@
       param[journal_id] = bsr
       param[journal_issn] = 1354-8697
       
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2007 ; Baha'i Studies Review Volume 14 ; 14 >
       au < released ; 2009 ; Baha'i Studies Review Volume 15 ; 15 >
       au < released ; 2010 ; Baha'i Studies Review Volume 16 ; 16 >
       au < released ; 2012 ; Baha'i Studies Review Volume 17 ; 17 >
       au < released ; 2012 ; Baha'i Studies Review Volume 18 ; 18 >
       au < released ; 2016 ; Baha'i Studies Review Volume 19 ; 19 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Baha'i Studies Review Volume 20 ; 20 >
       au < expected ; 2018 ; Baha'i Studies Review Volume 21 ; 21 >
 
+      }
     }
 
     {
@@ -185,14 +258,26 @@
       param[journal_id] = btwo
       param[journal_issn] = 2042-8022
 
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2011-2012 ; Book 2.0 Volume 1 ; 1 >
       au < released ; 2013 ; Book 2.0 Volume 2 ; 2 >
       au < released ; 2014 ; Book 2.0 Volume 3 ; 3 >
       au < released ; 2015 ; Book 2.0 Volume 4 ; 4 >
       au < released ; 2016 ; Book 2.0 Volume 5 ; 5 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Book 2.0 Volume 6 ; 6 >
       au < manifest ; 2018 ; Book 2.0 Volume 7 ; 7 >
 
+      }
     }
 
     {
@@ -205,6 +290,10 @@
       param[journal_id] = cjcs
       param[journal_issn] = 1757-1898
 
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2009 ; Catalan Journal of Communication & Cultural Studies Volume 1 ; 1 >
       au < released ; 2010 ; Catalan Journal of Communication & Cultural Studies Volume 2 ; 2 >
       au < released ; 2011 ; Catalan Journal of Communication & Cultural Studies Volume 3 ; 3 >
@@ -213,9 +302,17 @@
       au < released ; 2014 ; Catalan Journal of Communication & Cultural Studies Volume 6 ; 6 >
       au < released ; 2015 ; Catalan Journal of Communication & Cultural Studies Volume 7 ; 7 >
       au < released ; 2016 ; Catalan Journal of Communication & Cultural Studies Volume 8 ; 8 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Catalan Journal of Communication & Cultural Studies Volume 9 ; 9 >
       au < manifest ; 2018 ; Catalan Journal of Communication & Cultural Studies Volume 10 ; 10 >
 
+      }
     }
 
     {
@@ -228,6 +325,10 @@
       param[journal_id] = chor
       param[journal_issn] = 2040-5669
 
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2011 ; Choreographic Practices Volume 1 ; 1 >
       au < released ; 2012 ; Choreographic Practices Volume 2 ; 2 >
       au < released ; 2012 ; Choreographic Practices Volume 3 ; 3 >
@@ -235,9 +336,17 @@
       au < released ; 2014 ; Choreographic Practices Volume 5 ; 5 >
       au < released ; 2015 ; Choreographic Practices Volume 6 ; 6 >
       au < released ; 2016 ; Choreographic Practices Volume 7 ; 7 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Choreographic Practices Volume 8 ; 8 >
       au < manifest ; 2018 ; Choreographic Practices Volume 9 ; 9 >
 
+      }
     }
 
     {
@@ -250,6 +359,10 @@
       param[journal_id] = ctl
       param[journal_issn] = 1751-1917
       
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2010-2011 ; Citizenship Teaching and Learning Volume 6 ; 6 >
       au < released ; 2011-2012 ; Citizenship Teaching and Learning Volume 7 ; 7 >
       au < released ; 2012 ; Citizenship Teaching and Learning Volume 8 ; 8 >
@@ -257,9 +370,17 @@
       au < released ; 2014 ; Citizenship Teaching and Learning Volume 10 ; 10 >
       au < released ; 2015 ; Citizenship Teaching and Learning Volume 11 ; 11 >
       au < released ; 2016 ; Citizenship Teaching and Learning Volume 12 ; 12 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Citizenship Teaching and Learning Volume 13 ; 13 >
       au < expected ; 2018 ; Citizenship Teaching and Learning Volume 14 ; 14 >
 
+      }
     }
 
     {
@@ -271,7 +392,9 @@
 
       param[journal_id] = cost
       param[journal_issn] = 2040-610X
-      
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       comment[moved] = moved to Routledge/T&F
       
       au < superseded ; 2010 ; Comedy Studies Volume 1 [superseded] ; 1 >
@@ -291,6 +414,10 @@
       param[journal_id] = crre
       param[journal_issn] = 2040-4689
       
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2010 ; Craft Research Volume 1 ; 1 >
       au < released ; 2011 ; Craft Research Volume 2 ; 2 >
       au < released ; 2012 ; Craft Research Volume 3 ; 3 >
@@ -298,9 +425,17 @@
       au < released ; 2014 ; Craft Research Volume 5 ; 5 >
       au < released ; 2015 ; Craft Research Volume 6 ; 6 >
       au < released ; 2016 ; Craft Research Volume 7 ; 7 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Craft Research Volume 8 ; 8 >
       au < manifest ; 2018 ; Craft Research Volume 9 ; 9 >
 
+      }
     }
 
     {
@@ -312,7 +447,9 @@
 
       param[journal_id] = cij
       param[journal_issn] = 1751-0694
-      
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       comment[moved] = moved to Routledge/T&F.
       
       au < superseded ; 2008-2009 ; Creative Industries Journal Volume 1 [superseded] ; 1 >
@@ -334,6 +471,10 @@
       param[journal_id] = csfb
       param[journal_issn] = 2040-4417
       
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2010 ; Critical Studies in Fashion & Beauty Volume 1 ; 1 >
       au < released ; 2011 ; Critical Studies in Fashion & Beauty Volume 2 ; 2 >
       au < released ; 2012 ; Critical Studies in Fashion & Beauty Volume 3 ; 3 >
@@ -341,9 +482,17 @@
       au < released ; 2014 ; Critical Studies in Fashion & Beauty Volume 5 ; 5 >
       au < released ; 2015 ; Critical Studies in Fashion & Beauty Volume 6 ; 6 >
       au < released ; 2016 ; Critical Studies in Fashion & Beauty Volume 7 ; 7 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Critical Studies in Fashion & Beauty Volume 8 ; 8 >
       au < manifest ; 2018 ; Critical Studies in Fashion & Beauty Volume 9 ; 9 >
 
+      }
     }
 
     {
@@ -356,6 +505,10 @@
       param[journal_id] = cjmc
       param[journal_issn] = 2040-4344
       
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2010 ; Crossings: Journal of Migration & Culture Volume 1 ; 1 >
       au < released ; 2011 ; Crossings: Journal of Migration & Culture Volume 2 ; 2 >
       au < released ; 2012 ; Crossings: Journal of Migration & Culture Volume 3 ; 3 >
@@ -363,9 +516,17 @@
       au < released ; 2014 ; Crozzings: Journal of Migration & Culture Volume 5 ; 5 >
       au < released ; 2015 ; Crozzings: Journal of Migration & Culture Volume 6 ; 6 >
       au < released ; 2016 ; Crozzings: Journal of Migration & Culture Volume 7 ; 7 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Crozzings: Journal of Migration & Culture Volume 8 ; 8 >
       au < manifest ; 2018 ; Crozzings: Journal of Migration & Culture Volume 9 ; 9 >
 
+      }
     }
 
     {
@@ -378,13 +539,25 @@
       param[journal_id] = des
       param[journal_issn] = 2043-068X
       
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2011 ; Design Ecologies Volume 1 ; 1 >
       au < released ; 2012 ; Design Ecologies Volume 2 ; 2 >
       au < released ; 2013 ; Design Ecologies Volume 3 ; 3 >
       au < released ; 2016 ; Design Ecologies Volume 4 ; 4 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Design Ecologies Volume 5 ; 5 >
       au < manifest ; 2018 ; Design Ecologies Volume 6 ; 6 >
 
+      }
     }
 
     {
@@ -397,6 +570,10 @@
       param[journal_id] = ejpc
       param[journal_issn] = 1757-1952
       
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2009-2010 ; Empedocles: European Journal for the Philosophy of Communication Volume 1 ; 1 >
       au < released ; 2011 ; Empedocles: European Journal for the Philosophy of Communication Volume 2 ; 2 >
       au < released ; 2011-2012 ; Empedocles: European Journal for the Philosophy of Communication Volume 3 ; 3 >
@@ -404,9 +581,17 @@
       au < released ; 2015 ; Empedocles: European journal for the Philosophy of Communication Volume 5 ; 5 >
       au < released ; 2015 ; Empedocles: European journal for the Philosophy of Communication Volume 6 ; 6 >
       au < released ; 2016 ; Empedocles: European journal for the Philosophy of Communication Volume 7 ; 7 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Empedocles: European journal for the Philosophy of Communication Volume 8 ; 8 >
       au < manifest ; 2018 ; Empedocles: European journal for the Philosophy of Communication Volume 9 ; 9 >
 
+      }
     }
 
     {
@@ -419,6 +604,10 @@
       param[journal_id] = ejac
       param[journal_issn] = 1466-0407
       
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2001-2002 ; European Journal of American Culture Volume 20 ; 20 >
       au < released ; 2002 ; European Journal of American Culture Volume 21 ; 21 >
       au < released ; 2003 ; European Journal of American Culture Volume 22 ; 22 >
@@ -435,9 +624,17 @@
       au < released ; 2014 ; European Journal of American Culture Volume 33 ; 33 >
       au < released ; 2015 ; European Journal of American Culture Volume 34 ; 34 >
       au < released ; 2016 ; European Journal of American Culture Volume 35 ; 35 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; European Journal of American Culture Volume 36 ; 36 >
       au < manifest ; 2018 ; European Journal of American Culture Volume 37 ; 37 >
 
+      }
     }
     
     {
@@ -450,6 +647,10 @@
       param[journal_id] = eme
       param[journal_issn] = 1539-7785
       
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2007 ; Explorations in Media Ecology Volume 6 ; 6 >
       au < released ; 2008 ; Explorations in Media Ecology Volume 7 ; 7 >
       au < released ; 2009 ; Explorations in Media Ecology Volume 8 ; 8 >
@@ -460,9 +661,17 @@
       au < released ; 2014 ; Explorations in Media Ecology Volume 13 ; 13 >
       au < released ; 2015 ; Explorations in Media Ecology Volume 14 ; 14 >
       au < released ; 2016 ; Explorations in Media Ecology Volume 15 ; 15 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Explorations in Media Ecology Volume 16 ; 16 >
       au < manifest ; 2018 ; Explorations in Media Ecology Volume 17 ; 17 >
 
+      }
     }
     
     {
@@ -475,6 +684,10 @@
       param[journal_id] = fint
       param[journal_issn] = 1651-6826
       
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2003 ; Film International Volume 1 ; 1 >
       au < released ; 2004 ; Film International Volume 2 ; 2 >
       au < released ; 2005 ; Film International Volume 3 ; 3 >
@@ -489,9 +702,17 @@
       au < released ; 2014 ; Film International Volume 12 ; 12 >
       au < released ; 2015 ; Film International Volume 13 ; 13 >
       au < released ; 2016 ; Film International Volume 14 ; 14 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Film International Volume 15 ; 15 >
       au < manifest ; 2018 ; Film International Volume 16 ; 16 >
 
+      }
     }
 
     {
@@ -504,6 +725,10 @@
       param[journal_id] = fm
       param[journal_issn] = 2042-1869
       
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2010-2011 ; Film Matters Volume 1 ; 1 >
       au < released ; 2011 ; Film Matters Volume 2 ; 2 >
       au < released ; 2012 ; Film Matters Volume 3 ; 3 >
@@ -511,9 +736,17 @@
       au < released ; 2014 ; Film Matters Volume 5 ; 5 >
       au < released ; 2015 ; Film Matters Volume 6 ; 6 >
       au < released ; 2016 ; Film Matters Volume 7 ; 7 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Film Matters Volume 8 ; 8 >
       au < manifest ; 2018 ; Film Matters Volume 9 ; 9 >
 
+      }
     }
 
     {
@@ -526,14 +759,26 @@
       param[journal_id] = ffc
       param[journal_issn] = 2044-2823
       
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2011-2012 ; Film, Fashion & Consumption Volume 1 ; 1 >
       au < released ; 2013 ; Film, Fashion & Consumption Volume 2 ; 2 >
       au < released ; 2014 ; Film, Fasnion & Consumption Volume 3 ; 3 >
       au < released ; 2015 ; Film, Fasnion & Consumption Volume 4 ; 4 >
       au < released ; 2016 ; Film, Fasnion & Consumption Volume 5 ; 5 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Film, Fasnion & Consumption Volume 6 ; 6 >
       au < manifest ; 2018 ; Film, Fasnion & Consumption Volume 7 ; 7 >
 
+      }
     }
 
     {
@@ -545,6 +790,10 @@
       param[journal_id] = host
       param[journal_issn] = 2040-3275
 
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2010 ; Horror Studies Volume 1 ; 1 >
       au < released ; 2011 ; Horror Studies Volume 2 ; 2 >
       au < released ; 2012 ; Horror Studies Volume 3 ; 3 >
@@ -552,9 +801,17 @@
       au < released ; 2014 ; Horror Studies Volume 5 ; 5 >
       au < released ; 2015 ; Horror Studies Volume 6 ; 6 >
       au < released ; 2016 ; Horror Studies Volume 7 ; 7 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Horror Studies Volume 8 ; 8 >
- 
       au < manifest ; 2018 ; Horror Studies Volume 9 ; 9 >
+
+      }
     }
 
     {
@@ -566,15 +823,27 @@
       param[journal_id] = hosp
       param[journal_issn] = 2042-7913
 
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2011-2012 ; Hospitality & Society Volume 1 ; 1 >
       au < released ; 2012 ; Hospitality & Society Volume 2 ; 2 >
       au < released ; 2013 ; Hospitality & Society Volume 3 ; 3 >
       au < released ; 2014 ; Hospitality & Society Volume 4 ; 4 >
       au < released ; 2015 ; Hospitality & Society Volume 5 ; 5 >
       au < released ; 2016 ; Hospitality & Society Volume 6 ; 6 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Hospitality & Society Volume 7 ; 7 >
       au < manifest ; 2018 ; Hospitality & Society Volume 8 ; 8 >
 
+      }
     }
 
     {
@@ -586,6 +855,10 @@
       param[journal_id] = iscc
       param[journal_issn] = 1757-2681
 
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2009-2011 ; Interactions: Studies in Communication & Culture Volume 1 ; 1 >
       au < released ; 2012 ; Interactions: Studies in Communication & Culture Volume 2 ; 2 >
       au < released ; 2012 ; Interactions: Studies in Communication & Culture Volume 3 ; 3 >
@@ -593,9 +866,17 @@
       au < released ; 2014 ; Interactions: Studies in Communication & Culture Volume 5 ; 5 >
       au < released ; 2015 ; Interactions: Studies in Communication & Culture Volume 6 ; 6 >
       au < released ; 2016 ; Interactions: Studies in Communication & Culture Volume 7 ; 7 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Interactions: Studies in Communication & Culture Volume 8 ; 8 >
- 
       au < manifest ; 2018 ; Interactions: Studies in Communication & Culture Volume 9 ; 9 >
+
+      }
     }
 
     {
@@ -607,6 +888,10 @@
       param[journal_id] = ijcm
       param[journal_issn] = 1752-6299
 
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2007-2009 ; International Journal of Community Music Volume 1 ; 1 >
       au < released ; 2009 ; International Journal of Community Music Volume 2 ; 2 >
       au < released ; 2010 ; International Journal of Community Music Volume 3 ; 3 >
@@ -616,9 +901,17 @@
       au < released ; 2014 ; International Journal of Community Music Volume 7 ; 7 >
       au < released ; 2015 ; International Journal of Community Music Volume 8 ; 8 >
       au < released ; 2016 ; International Journal of Community Music Volume 9 ; 9 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; International Journal of Community Music Volume 10 ; 10 >
       au < manifest ; 2018 ; International Journal of Community Music Volume 11 ; 11 >
 
+      }
     }
 
     {
@@ -630,6 +923,10 @@
       param[journal_id] = ijcis
       param[journal_issn] = 1751-2867
 
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2006-2007 ; International Journal of Contemporary Iraqi Studies Volume 1 ; 1 >
       au < released ; 2008-2009 ; International Journal of Contemporary Iraqi Studies Volume 2 ; 2 >
       au < released ; 2009 ; International Journal of Contemporary Iraqi Studies Volume 3 ; 3 >
@@ -640,9 +937,17 @@
       au < released ; 2014 ; International Journal of Contemporary Iraqi Studies Volume 8 ; 8 >
       au < released ; 2015 ; International Journal of Contemporary Iraqi Studies Volume 9 ; 9 >
       au < released ; 2016 ; International Journal of Contemporary Iraqi Studies Volume 10 ; 10 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; International Journal of Contemporary Iraqi Studies Volume 11 ; 11 >
       au < manifest ; 2018 ; International Journal of Contemporary Iraqi Studies Volume 12 ; 12 >
 
+      }
     }
 
     {
@@ -654,6 +959,10 @@
       param[journal_id] = jdtv
       param[journal_issn] = 2040-4182
 
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2010 ; International Journal of Digital Television Volume 1 ; 1 >
       au < released ; 2011 ; International Journal of Digital Television Volume 2 ; 2 >
       au < released ; 2012 ; International Journal of Digital Television Volume 3 ; 3 >
@@ -661,9 +970,17 @@
       au < released ; 2014 ; International Journal of Digital Television Volume 5 ; 5 >
       au < released ; 2015 ; International Journal of Digital Television Volume 6 ; 6 >
       au < released ; 2016 ; International Journal of Digital Television Volume 7 ; 7 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; International Journal of Digital Television Volume 8 ; 8 >
- 
       au < manifest ; 2018 ; International Journal of Digital Television Volume 9 ; 9 >
+
+      }
     }
 
     {
@@ -674,6 +991,10 @@
       >
       param[journal_id] = eta
       param[journal_issn] = 1743-5234
+
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
 
       au < released ; 2005 ; International Journal of Education through Art Volume 1 ; 1 >
       au < released ; 2006 ; International Journal of Education through Art Volume 2 ; 2 >
@@ -687,9 +1008,17 @@
       au < released ; 2014 ; International Journal of Education through Art Volume 10 ; 10 >
       au < released ; 2015 ; International Journal of Education through Art Volume 11 ; 11 >
       au < released ; 2016 ; International Journal of Education through Art Volume 12 ; 12 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; International Journal of Education through Art Volume 13 ; 13 >
       au < manifest ; 2018 ; International Journal of Education through Art Volume 14 ; 14 >
 
+      }
     }
     
     {
@@ -700,6 +1029,10 @@
       >
       param[journal_id] = ijfs
       param[journal_issn] = 1368-2679
+
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
 
       au < released ; 2002 ; International Journal of Francophone Studies Volume 4 ; 4 >
       au < released ; 2003 ; International Journal of Francophone Studies Volume 5 ; 5 >
@@ -717,9 +1050,17 @@
       au < released ; 2014 ; International Journal of Francophone Studies Volume 17 ; 17 >
       au < released ; 2015 ; International Journal of Francophone Studies Volume 18 ; 18 >
       au < released ; 2016 ; International Journal of Francophone Studies Volume 19 ; 19 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; International Journal of Francophone Studies Volume 20 ; 20 >
       au < manifest ; 2018 ; International Journal of Francophone Studies Volume 21 ; 21 >
 
+      }
     }
     
     {
@@ -730,6 +1071,10 @@
       >
       param[journal_id] = ijis
       param[journal_issn] = 1364-971X
+
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
 
       au < released ; 2001 ; International Journal of Iberian Studies Volume 14 ; 14 >
       au < released ; 2002-2003 ; International Journal of Iberian Studies Volume 15 ; 15 >
@@ -747,9 +1092,17 @@
       au < released ; 2014 ; International Journal of Iberian Studies Volume 27 ; 27 >
       au < released ; 2015 ; International Journal of Iberian Studies Volume 28 ; 28 >
       au < released ; 2016 ; International Journal of Iberian Studies Volume 29 ; 29 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; International Journal of Iberian Studies Volume 30 ; 30 >
       au < manifest ; 2018 ; International Journal of Iberian Studies Volume 31 ; 31 >
 
+      }
     }
     
     {
@@ -762,14 +1115,26 @@
       param[journal_id] = ijia
       param[journal_issn] = 2045-5895
 
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2012 ; International Journal of Islamic Architecture Volume 1 ; 1 >
       au < released ; 2013 ; International Journal of Islamic Architecture Volume 2 ; 2 >
       au < released ; 2014 ; International Journal of Islamic Architecture Volume 3 ; 3 >
       au < released ; 2015 ; International Journal of Islamic Architecture Volume 4 ; 4 >
       au < released ; 2016 ; International Journal of Islamic Architecture Volume 5 ; 5 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; International Journal of Islamic Architecture Volume 6 ; 6 >
       au < manifest ; 2018 ; International Journal of Islamic Architecture Volume 7 ; 7 >
 
+      }
     }
     
     {
@@ -781,6 +1146,10 @@
       
       param[journal_id] = mcp
       param[journal_issn] = 1740-8296
+
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
 
       au < released ; 2005 ; International Journal of Media & Cultural Politics Volume 1 ; 1 >
       au < released ; 2006-2007 ; International Journal of Media & Cultural Politics Volume 2 ; 2 >
@@ -794,9 +1163,17 @@
       au < released ; 2014 ; International Journal of Media & Cultural Politics Volume 10 ; 10 >
       au < released ; 2015 ; International Journal of Media & Cultural Politics Volume 11 ; 11 >
       au < released ; 2016 ; International Journal of Media & Cultural Politics Volume 12 ; 12 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; International Journal of Media & Cultural Politics Volume 13 ; 13 >
       au < manifest ; 2018 ; International Journal of Media & Cultural Politics Volume 14 ; 14 >
 
+      }
     }
 
     {
@@ -807,7 +1184,9 @@
       >
       param[journal_id] = padm
       param[journal_issn] = 1479-4713
-      
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       # No manifest pages at all. Moved to Routledge. http://www.ingentaconnect.com/content/1479-4713
 
       au < down ; 2005 ; International Journal of Performance Arts and Digital Media Volume 1 ; 1 >
@@ -831,6 +1210,10 @@
       param[journal_id] = tmsd
       param[journal_issn] = 1474-2748
 
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2002 ; International Journal of Technology Management & Sustainable Development Volume 1 ; 1 >
       au < released ; 2003-2004 ; International Journal of Technology Management & Sustainable Development Volume 2 ; 2 >
       au < released ; 2004 ; International Journal of Technology Management & Sustainable Development Volume 3 ; 3 >
@@ -846,9 +1229,17 @@
       au < released ; 2014 ; International Journal of Technology Management & Sustainable Development Volume 13 ; 13 >
       au < released ; 2015 ; International Journal of Technology Management & Sustainable Development Volume 14 ; 14 >
       au < released ; 2016 ; International Journal of Technology Management & Sustainable Development Volume 15 ; 15 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; International Journal of Technology Management & Sustainable Development Volume 16 ; 16 >
       au < manifest ; 2018 ; International Journal of Technology Management & Sustainable Development Volume 17 ; 17 >
 
+      }
     }
 
     {
@@ -860,6 +1251,10 @@
       param[journal_id] = jafp
       param[journal_issn] = 1753-6421
 
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2007-2009 ; Journal of Adaptation in Film & Performance Volume 1 ; 1 >
       au < released ; 2009 ; Journal of Adaptation in Film & Performance Volume 2 ; 2 >
       au < released ; 2010-2011 ; Journal of Adaptation in Film & Performance Volume 3 ; 3 >
@@ -869,9 +1264,17 @@
       au < released ; 2014 ; Journal of Adaptation in Film & Performance Volume 7 ; 7 >
       au < released ; 2015 ; Journal of Adaptation in Film & Performance Volume 8 ; 8 >
       au < released ; 2016 ; Journal of Adaptation in Film & Performance Volume 9 ; 9 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Journal of Adaptation in Film & Performance Volume 10 ; 10 >
       au < manifest ; 2018 ; Journal of Adaptation in Film & Performance Volume 11 ; 11 >
 
+      }
     }
 
     {
@@ -883,6 +1286,10 @@
       param[journal_id] = jac
       param[journal_issn] = 1754-9221
 
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2009 ; Journal of African Cinemas Volume 1 ; 1 >
       au < released ; 2010 ; Journal of African Cinemas Volume 2 ; 2 >
       au < released ; 2011 ; Journal of African Cinemas Volume 3 ; 3 >
@@ -891,9 +1298,17 @@
       au < released ; 2014 ; Journal of African Cinemas Volume 6 ; 6 >
       au < released ; 2015 ; Journal of African Cinemas Volume 7 ; 7 >
       au < released ; 2016 ; Journal of African Cinemas Volume 8 ; 8 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Journal of African Cinemas Volume 9 ; 9 >
       au < manifest ; 2018 ; Journal of African Cinemas Volume 10 ; 10 >
 
+      }
     }
 
     {
@@ -905,6 +1320,10 @@
       param[journal_id] = jams
       param[journal_issn] = 2040-199X
 
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2009 ; Journal of African Media Studies Volume 1 ; 1 >
       au < released ; 2010 ; Journal of African Media Studies Volume 2 ; 2 >
       au < released ; 2011 ; Journal of African Media Studies Volume 3 ; 3 >
@@ -913,9 +1332,17 @@
       au < released ; 2014 ; Journal of African Media Studies Volume 6 ; 6 >
       au < released ; 2015 ; Journal of African Media Studies Volume 7 ; 7 >
       au < released ; 2016 ; Journal of African Media Studies Volume 8 ; 8 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Journal of African Media Studies Volume 9 ; 9 >
       au < manifest ; 2018 ; Journal of African Media Studies Volume 10 ; 10 >
 
+      }
     }
 
     {
@@ -927,6 +1354,10 @@
       param[journal_id] = jaah
       param[journal_issn] = 2040-2457
 
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2010 ; Journal of Applied Arts & Health Volume 1 ; 1 >
       au < released ; 2011 ; Journal of Applied Arts & Health Volume 2 ; 2 >
       au < released ; 2012 ; Journal of Applied Arts & Health Volume 3 ; 3 >
@@ -934,9 +1365,17 @@
       au < released ; 2014 ; Journal of Applied Arts & Health Volume 5 ; 5 >
       au < released ; 2015 ; Journal of Applied Arts & Health Volume 6 ; 6 >
       au < released ; 2016 ; Journal of Applied Arts & Health Volume 7 ; 7 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Journal of Applied Arts & Health Volume 8 ; 8 >
       au < manifest ; 2018 ; Journal of Applied Arts & Health Volume 9 ; 9 >
 
+      }
     }
 
     {
@@ -948,6 +1387,10 @@
       param[journal_id] = jammr
       param[journal_issn] = 1751-9411
 
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2007-2009 ; Journal of Arab & Muslim Media Research Volume 1 ; 1 >
       au < released ; 2009 ; Journal of Arab & Muslim Media Research Volume 2 ; 2 >
       au < released ; 2010 ; Journal of Arab & Muslim Media Research Volume 3 ; 3 >
@@ -957,9 +1400,17 @@
       au < released ; 2014 ; Journal of Arab & Muslim Media Research Volume 7 ; 7 >
       au < released ; 2015 ; Journal of Arab & Muslim Media Research Volume 8 ; 8 >
       au < released ; 2016 ; Journal of Arab & Muslim Media Research Volume 9 ; 9 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Journal of Arab & Muslim Media Research Volume 10 ; 10 >
       au < manifest ; 2018 ; Journal of Arab & Muslim Media Research Volume 11 ; 11 >
 
+      }
     }
 
     {
@@ -970,6 +1421,8 @@
       >
       param[journal_id] = jaac
       param[journal_issn] = 1757-1936
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
 
       au < released ; 2009-2011 ; Journal of Arts & Communities Volume 1 ; 1 >
       au < released ; 2011 ; Journal of Arts & Communities Volume 2 ; 2 >
@@ -989,7 +1442,9 @@
       >
       param[journal_id] = jcc
       param[journal_issn] = 1750-8061
-      
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       comment[moved] = moved to Routledge/T&F
 
       au < down ; 2006-2007 ; Journal of Chinese Cinemas Volume 1 ; 1 >
@@ -1011,14 +1466,26 @@
       param[journal_id] = jcs
       param[journal_issn] = 2045-5836
 
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2012 ; Journal of Curatorial Studies Volume 1 ; 1 >
       au < released ; 2013 ; Journal of Curatorial Studies Volume 2 ; 2 >
       au < released ; 2014 ; Journal of Curatorial Studies Volume 3 ; 3 >
       au < released ; 2015 ; Journal of Curatorial Studies Volume 4 ; 4 >
       au < released ; 2016 ; Journal of Curatorial Studies Volume 5 ; 5 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Journal of Curatorial Studies Volume 6 ; 6 >
       au < manifest ; 2018 ; Journal of Curatorial Studies Volume 7 ; 7 >
 
+      }
     }
 
     {
@@ -1030,6 +1497,10 @@
       param[journal_id] = jdsp
       param[journal_issn] = 1757-1871
 
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2009 ; Journal of Dance & Somatic Practices Volume 1 ; 1 >
       au < released ; 2010 ; Journal of Dance & Somatic Practices Volume 2 ; 2 >
       au < released ; 2011 ; Journal of Dance & Somatic Practices Volume 3 ; 3 >
@@ -1038,9 +1509,17 @@
       au < released ; 2014 ; Journal of Dance & Somatic Practices Volume 6 ; 6 >
       au < released ; 2015 ; Journal of Dance & Somatic Practices Volume 7 ; 7 >
       au < released ; 2016 ; Journal of Dance & Somatic Practices Volume 8 ; 8 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Journal of Dance & Somatic Practices Volume 9 ; 9 >
       au < manifest ; 2018 ; Journal of Dance & Somatic Practices Volume 10 ; 10 >
 
+      }
     }
 
     {
@@ -1053,6 +1532,10 @@
       param[journal_id] = jepc
       param[journal_issn] = 2040-6134
 
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2010 ; Journal of European Popular Culture Volume 1 ; 1 >
       au < released ; 2011 ; Journal of European Popular Culture Volume 2 ; 2 >
       au < released ; 2012 ; Journal of European Popular Culture Volume 3 ; 3 >
@@ -1060,9 +1543,17 @@
       au < released ; 2014 ; Journal of European Popular Culture Volume 5 ; 5 >
       au < released ; 2015 ; Journal of European Popular Culture Volume 6 ; 6 >
       au < released ; 2016 ; Journal of European Popular Culture Volume 7 ; 7 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Journal of European Popular Culture Volume 8 ; 8 >
       au < manifest ; 2018 ; Journal of European Popular Culture Volume 9 ; 9 >
 
+      }
     }
 
     {
@@ -1075,13 +1566,25 @@
       param[journal_id] = jfs
       param[journal_issn] = 2046-6692
 
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2012-2013 ; The Journal of Fandom Studies Volume 1 ; 1 >
       au < released ; 2014 ; The Journal of Fandom Studies Volume 2 ; 2 >
       au < released ; 2015 ; The Journal of Fandom Studies Volume 3 ; 3 >
       au < released ; 2016 ; The Journal of Fandom Studies Volume 4 ; 4 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; The Journal of Fandom Studies Volume 5 ; 5 >
       au < manifest ; 2018 ; The Journal of Fandom Studies Volume 6 ; 6 >
 
+      }
     }
 
     {
@@ -1094,6 +1597,10 @@
       param[journal_id] = jgvw
       param[journal_issn] = 1757-191X
 
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2009 ; Journal of Gaming & Virtual Worlds Volume 1 ; 1 >
       au < released ; 2010 ; Journal of Gaming & Virtual Worlds Volume 2 ; 2 >
       au < released ; 2011 ; Journal of Gaming & Virtual Worlds Volume 3 ; 3 >
@@ -1102,9 +1609,17 @@
       au < released ; 2014 ; Journal of Gaming & Virtual Worlds Volume 6 ; 6 >
       au < released ; 2015 ; Journal of Gaming & Virtual Worlds Volume 7 ; 7 >
       au < released ; 2016 ; Journal of Gaming & Virtual Worlds Volume 8 ; 8 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Journal of Gaming & Virtual Worlds Volume 9 ; 9 >
       au < manifest ; 2018 ; Journal of Gaming & Virtual Worlds Volume 10 ; 10 >
 
+      }
     }
 
     {
@@ -1117,13 +1632,25 @@
       param[journal_id] = jicms
       param[journal_issn] = 2047-7368
 
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2012-2013 ; Journal of Italian Cinema and Media Studies Volume 1 ; 1 >
       au < released ; 2014 ; Journal of Italian Cinema and Media Studies Volume 2 ; 2 >
       au < released ; 2015 ; Journal of Italian Cinema and Media Studies Volume 3 ; 3 >
       au < released ; 2016 ; Journal of Italian Cinema and Media Studies Volume 4 ; 4 >
       au < released ; 2017 ; Journal of Italian Cinema and Media Studies Volume 5 ; 5 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2018 ; Journal of Italian Cinema and Media Studies Volume 6 ; 6 >
 
+      }
     }
     
     {
@@ -1135,7 +1662,9 @@
       
       param[journal_id] = jjkc
       param[journal_issn] = 1756-4905
-      
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       comment[moved] = moved to Routledge/T&F
 
       au < superseded ; 2009 ; Journal of Japanese and Korean Cinema Volume 1 [superseded] ; 1 >
@@ -1155,6 +1684,8 @@
       
       param[journal_id] = jmp
       param[journal_issn] = 1468-2753
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
 
       # No manifest pages at all. Moved to Routledge. http://www.ingentaconnect.com/content/1468-2753
 
@@ -1184,6 +1715,10 @@
       param[journal_id] = jmte
       param[journal_issn] = 1752-7066
 
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2007-2008 ; Journal of Music, Technology & Education Volume 1 ; 1 >
       au < released ; 2009 ; Journal of Music, Technology & Education Volume 2 ; 2 >
       au < released ; 2010-2011 ; Journal of Music, Technology & Education Volume 3 ; 3 >
@@ -1193,9 +1728,17 @@
       au < released ; 2014 ; Journal of Music, Technology & Education Volume 7 ; 7 >
       au < released ; 2015 ; Journal of Music, Technology & Education Volume 8 ; 8 >
       au < released ; 2016 ; Journal of Music, Technology & Education Volume 9 ; 9 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Journal of Music, Technology & Education Volume 10 ; 10 >
       au < manifest ; 2018 ; Journal of Music, Technology & Education Volume 11 ; 11 >
 
+      }
     }
 
     {
@@ -1207,13 +1750,25 @@
       param[journal_id] = nzps
       param[journal_issn] = 2050-4039 
 
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2013 ; Journal of New Zealand & Pacific Studies Volume 1 ; 1 >
       au < released ; 2014 ; Journal of New Zealand & Pacific Studies Volume 2 ; 2 >
       au < released ; 2015 ; Journal of New Zealand & Pacific Studies Volume 3 ; 3 >
       au < released ; 2016 ; Journal of New Zealand & Pacific Studies Volume 4 ; 4 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Journal of New Zealand & Pacific Studies Volume 5 ; 5 >
       au < manifest ; 2018 ; Journal of New Zealand & Pacific Studies Volume 6 ; 6 >
 
+      }
     }
 
     {
@@ -1224,7 +1779,9 @@
       >
       param[journal_id] = jotsc
       param[journal_issn] = 1477-9633
-      
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       comment[moved] = moved to maney
 
       au < down ; 2004 ; Journal of Organisational Transformation & Social Change Volume 1 ; 1 >
@@ -1246,13 +1803,25 @@
       param[journal_id] = jptv
       param[journal_issn] = 2046-9861
 
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2013 ; Journal of Popular Television Volume 1 ; 1 >
       au < released ; 2014 ; Journal of Popular Television Volume 2 ; 2 >
       au < released ; 2015 ; Journal of Popular Television Volume 3 ; 3 >
       au < released ; 2016 ; Journal of Popular Television Volume 4 ; 4 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Journal of Popular Television Volume 5 ; 5 >
       au < manifest ; 2018 ; Journal of Popular Television Volume 6 ; 6 >
 
+      }
     }
 
     {
@@ -1264,15 +1833,27 @@
       param[journal_id] = jsca
       param[journal_issn] = 2042-7891
 
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2010-2011 ; Journal of Scandinavian Cinema Volume 1 ; 1 >
       au < released ; 2012 ; Journal of Scandinavian Cinema Volume 2 ; 2 >
       au < released ; 2013 ; Journal of Scandinavian Cinema Volume 3 ; 3 >
       au < released ; 2014 ; Journal of Scandinavian Cinema Volume 4 ; 4 >
       au < released ; 2015 ; Journal of Scandinavian Cinema Volume 5 ; 5 >
       au < released ; 2016 ; Journal of Scandinavian Cinema Volume 6 ; 6 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Journal of Scandinavian Cinema Volume 7 ; 7 >
       au < manifest ; 2018 ; Journal of Scandinavian Cinema Volume 8 ; 8 >
 
+      }
     }
 
     {
@@ -1284,6 +1865,10 @@
       param[journal_id] = josc
       param[journal_issn] = 1759-7137
 
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2010 ; Journal of Screenwriting Volume 1 ; 1 >
       au < released ; 2011 ; Journal of Screenwriting Volume 2 ; 2 >
       au < released ; 2011-2012 ; Journal of Screenwriting Volume 3 ; 3 >
@@ -1291,9 +1876,17 @@
       au < released ; 2014 ; Journal of Screenwriting Volume 5 ; 5 >
       au < released ; 2015 ; Journal of Screenwriting Volume 6 ; 6 >
       au < released ; 2016 ; Journal of Screenwriting Volume 7 ; 7 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Journal of Screenwriting Volume 8 ; 8 >
       au < manifest ; 2018 ; Journal of Screenwriting Volume 9 ; 9 >
 
+      }
     }
 
     {
@@ -1304,7 +1897,9 @@
       >
       param[journal_id] = jvap
       param[journal_issn] = 1470-2029
-      
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       comment[publisher] = Journal moved to Routledge/T&F. Still on Ingenta.
 
       au < down ; 2001-2002 ; Journal of Visual Art Practice Volume 1 ; 1 >
@@ -1332,6 +1927,8 @@
       
       param[journal_id] = jwcs
       param[journal_issn] = 1752-6272
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
 
       au < down ; 2007-2008 ; Journal of War & Culture Studies Volume 1 ; 1 >
       au < down ; 2009 ; Journal of War & Culture Studies Volume 2 ; 2 >
@@ -1350,6 +1947,10 @@
       param[journal_id] = jwcp
       param[journal_issn] = 1753-5190
 
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2007-2008 ; Journal of Writing in Creative Practice Volume 1 ; 1 >
       au < released ; 2009 ; Journal of Writing in Creative Practice Volume 2 ; 2 >
       au < released ; 2010 ; Journal of Writing in Creative Practice Volume 3 ; 3 >
@@ -1359,9 +1960,17 @@
       au < released ; 2014 ; Journal of Writing in Creative Practice Volume 7 ; 7 >
       au < released ; 2015 ; Journal of Writing in Creative Practice Volume 8 ; 8 >
       au < released ; 2016 ; Journal of Writing in Creative Practice Volume 9 ; 9 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Journal of Writing in Creative Practice Volume 10 ; 10 >
       au < manifest ; 2018 ; Journal of Writing in Creative Practice Volume 11 ; 11 >
 
+      }
     }
 
     {
@@ -1380,15 +1989,27 @@
       param[journal_id] = mecr
       param[journal_issn] = 2040-3550
 
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2010-2011 ; Metaverse Creativity Volume 1 ; 1 >
       au < released ; 2012 ; Metaverse Creativity Volume 2 ; 2 >
       au < released ; 2013 ; Metaverse Creativity Volume 3 ; 3 >
       au < released ; 2014 ; Metaverse Creativity Volume 4 ; 4 >
       au < released ; 2015 ; Metaverse Creativity Volume 5 ; 5 >
       au < released ; 2016 ; Metaverse Creativity Volume 6 ; 6 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Metaverse Creativity Volume 7 ; 7 >
       au < expected ; 2018 ; Metaverse Creativity Volume 8 ; 8 >
 
+      }
     }
 
     {
@@ -1400,14 +2021,26 @@
       param[journal_id] = miraj
       param[journal_issn] = 2045-6298
 
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2012 ; Moving Image Review & Art Journal (MIRAJ) Volume 1 ; 1 >
       au < released ; 2013 ; Moving Image Review & Art Journal (MIRAJ) Volume 2 ; 2 >
       au < released ; 2014 ; Moving Image Review & Art Journal (MIRAJ) Volume 3 ; 3 >
       au < released ; 2015 ; Moving Image Review & Art Journal (MIRAJ) Volume 4 ; 4 >
       au < released ; 2016 ; Moving Image Review & Art Journal (MIRAJ) Volume 5 ; 5 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Moving Image Review & Art Journal (MIRAJ) Volume 6 ; 6 >
       au < manifest ; 2018 ; Moving Image Review & Art Journal (MIRAJ) Volume 7 ; 7 >
 
+      }
     }
 
     {
@@ -1419,6 +2052,8 @@
       
       param[journal_id] = nc
       param[journal_issn] = 1474-2756
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
 
       au < released ; 2002-2003 ; New Cinemas: Journal of Contemporary Film Volume 1 ; 1 >
       au < released ; 2004 ; New Cinemas: Journal of Contemporary Film Volume 2 ; 2 >
@@ -1446,6 +2081,10 @@
       param[journal_id] = nl
       param[journal_issn] = 1601-829X
 
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2007 ; Northern Lights: Film and Media Studies Yearbook Volume 5 ; 5 >
       au < released ; 2008 ; Northern Lights: Film and Media Studies Yearbook Volume 6 ; 6 >
       au < released ; 2009 ; Northern Lights: Film and Media Studies Yearbook Volume 7 ; 7 >
@@ -1456,9 +2095,17 @@
       au < released ; 2014 ; Northern Lights: Film and Media Studies Yearbook Volume 12 ; 12 >
       au < released ; 2015 ; Northern Lights: Film and Media Studies Yearbook Volume 13 ; 13 >
       au < released ; 2016 ; Northern Lights: Film and Media Studies Yearbook Volume 14 ; 14 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Northern Lights: Film and Media Studies Yearbook Volume 15 ; 15 >
       au < manifest ; 2018 ; Northern Lights: Film and Media Studies Yearbook Volume 16 ; 16 >
 
+      }
     }
 
     {
@@ -1471,15 +2118,27 @@
       param[journal_id] = peet
       param[journal_issn] = 1757-1979
     
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2010-2011 ; Performing Ethos: An International Journal of Ethics in Theatre and Performance Volume 1 ; 1 >
       au < released ; 2012 ; Performing Ethos: An International Journal of Ethics in Theatre and Performance Volume 2 ; 2 >
       au < released ; 2012 ; Performing Ethos: An International Journal of Ethics in Theatre and Performance Volume 3 ; 3 >
       au < released ; 2013-2015 ; Performing Ethos: An International Journal of Ethics in Theatre and Performance Volume 4 ; 4 >
       au < released ; 2015 ; Performing Ethos: An International Journal of Ethics in Theatre and Performance Volume 5 ; 5 >
       au < released ; 2016 ; Performing Ethos: An International Journal of Ethics in Theatre and Performance Volume 6 ; 6 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Performing Ethos: An International Journal of Ethics in Theatre and Performance Volume 7 ; 7 >
       au < manifest ; 2018 ; Performing Ethos: An International Journal of Ethics in Theatre and Performance Volume 8 ; 8 >
 
+      }
     }
 
     {
@@ -1491,14 +2150,26 @@
       param[journal_id] = pi
       param[journal_issn] = 2043-1015
     
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2012-2013 ; Performing Islam Volume 1 ; 1 >
       au < released ; 2013 ; Performing Islam Volume 2 ; 2 >
       au < released ; 2014 ; Performing Islam Volume 3 ; 3 >
       au < released ; 2015 ; Performing Islam Volume 4 ; 4 >
       au < released ; 2016 ; Performing Islam Volume 5 ; 5 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Performing Islam Volume 6 ; 6 >
       au < expected ; 2018 ; Performing Islam Volume 7 ; 7 >
 
+      }
     }
 
     {
@@ -1511,6 +2182,10 @@
       param[journal_id] = pop
       param[journal_issn] = 2040-3682
     
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2010 ; Philosophy of Photography Volume 1 ; 1 >
       au < released ; 2011-2012 ; Philosophy of Photography Volume 2 ; 2 >
       au < released ; 2012 ; Philosophy of Photography Volume 3 ; 3 >
@@ -1518,9 +2193,17 @@
       au < released ; 2014 ; Philosophy of Photography Volume 5 ; 5 >
       au < released ; 2015 ; Philosophy of Photography Volume 6 ; 6 >
       au < released ; 2016 ; Philosophy of Photography Volume 7 ; 7 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Philosophy of Photography Volume 8 ; 8 >
       au < manifest ; 2018 ; Philosophy of Photography Volume 9 ; 9 >
 
+      }
     }
 
     {
@@ -1533,6 +2216,10 @@
       param[journal_id] = pjss
       param[journal_issn] = 1476-413X
     
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2002-2003 ; Portuguese Journal of Social Science Volume 1 ; 1 >
       au < released ; 2003-2004 ; Portuguese Journal of Social Science Volume 2 ; 2 >
       au < released ; 2004 ; Portuguese Journal of Social Science Volume 3 ; 3 >
@@ -1548,9 +2235,17 @@
       au < released ; 2014 ; Portuguese Journal of Social Science Volume 13 ; 13 >
       au < released ; 2015 ; Portuguese Journal of Social Science Volume 14 ; 14 >
       au < released ; 2016 ; Portuguese Journal of Social Science Volume 15 ; 15 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Portuguese Journal of Social Science Volume 16 ; 16 >
       au < manifest ; 2018 ; Portuguese Journal of Social Science Volume 17 ; 17 >
 
+      }
     }
 
     {
@@ -1561,7 +2256,9 @@
       >
       param[journal_id] = post
       param[journal_issn] = 2040-3704
-    
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2010-2011 ; The Poster Volume 1 ; 1 >
       au < released ; 2011-2012 ; The Poster Volume 2 ; 2 >
       au < released ; 2015 ; The Poster Volume 3 ; 3 >
@@ -1578,14 +2275,26 @@
       param[journal_id] = public
       param[journal_issn] = 0845-4450
 
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2012 ; PUBLIC: Art, Culture, Ideas Volume 23 ; 23 >
       au < released ; 2013 ; PUBLIC: Art, Culture, Ideas Volume 24 ; 24 >
       au < released ; 2014 ; PUBLIC: Art, Culture, Ideas Volume 25 ; 25 >
       au < released ; 2015 ; PUBLIC: Art, Culture, Ideas Volume 26 ; 26 >
       au < released ; 2016 ; PUBLIC: Art, Culture, Ideas Volume 27 ; 27 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; PUBLIC: Art, Culture, Ideas Volume 28 ; 28 >
-      
       au < manifest ; 2018 ; PUBLIC: Art, Culture, Ideas Volume 29 ; 29 >
+
+      }
     }
     
     {
@@ -1597,14 +2306,26 @@
       param[journal_id] = punk
       param[journal_issn] = 2044-1983
     
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2011-2012 ; Punk & Post Punk Volume 1 ; 1 >
       au < released ; 2013 ; Punk & Post Punk Volume 2 ; 2 >
       au < released ; 2014 ; Punk & Post Punk Volume 3 ; 3 >
       au < released ; 2015 ; Punk & Post Punk Volume 4 ; 4 >
       au < released ; 2016 ; Punk & Post Punk Volume 5 ; 5 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Punk & Post Punk Volume 6 ; 6 >
       au < manifest ; 2018 ; Punk & Post Punk Volume 7 ; 7 >
 
+      }
     }
 
     {
@@ -1617,6 +2338,10 @@
       param[journal_id] = rj
       param[journal_issn] = 1476-4504
     
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2003-2004 ; The Radio Journal: International Studies in Broadcast & Audio Media Volume 1 ; 1 >
       au < released ; 2004 ; The Radio Journal: International Studies in Broadcast & Audio Media Volume 2 ; 2 >
       au < released ; 2005 ; The Radio Journal: International Studies in Broadcast & Audio Media Volume 3 ; 3 >
@@ -1631,9 +2356,17 @@
       au < released ; 2014 ; The Radio Journal: International Studies in Broadcast & Audio Media Volume 12 ; 12 >
       au < released ; 2015 ; The Radio Journal: International Studies in Broadcast & Audio Media Volume 13 ; 13 >
       au < released ; 2016 ; The Radio Journal: International Studies in Broadcast & Audio Media Volume 14 ; 14 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; The Radio Journal: International Studies in Broadcast & Audio Media Volume 15 ; 15 >
       au < manifest ; 2018 ; The Radio Journal: International Studies in Broadcast & Audio Media Volume 16 ; 16 >
 
+      }
     }
 
     {
@@ -1644,13 +2377,25 @@
       param[journal_id] = scene
       param[journal_issn] = 2044-3714
     
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2012-2013 ; Scene Volume 1 ; 1 >
       au < released ; 2014 ; Scene Volume 2 ; 2 >
       au < released ; 2015 ; Scene Volume 3 ; 3 >
       au < released ; 2016 ; Scene Volume 4 ; 4 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Scene Volume 5 ; 5 >
       au < expected ; 2018 ; Scene Volume 6 ; 6 >
 
+      }
     }
 
     {
@@ -1663,15 +2408,27 @@
       param[journal_id] = fict
       param[journal_issn] = 2043-0701
     
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2011-2012 ; Short Fiction in Theory & Practice Volume 1 ; 1 >
       au < released ; 2012 ; Short Fiction in Theory & Practice Volume 2 ; 2 >
       au < released ; 2013 ; Short Fiction in Theory & Practice Volume 3 ; 3 >
       au < released ; 2014 ; Short Fiction in Theory & Practice Volume 4 ; 4 >
       au < released ; 2015 ; Short Fiction in Theory & Practice Volume 5 ; 5 >
       au < released ; 2016 ; Short Fiction in Theory & Practice Volume 6 ; 6 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Short Fiction in Theory & Practice Volume 7 ; 7 >
       au < manifest ; 2018 ; Short Fiction in Theory & Practice Volume 8 ; 8 >
 
+      }
     }
 
     {
@@ -1683,15 +2440,27 @@
       param[journal_id] = sfs
       param[journal_issn] = 2042-7824
     
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2010-2011 ; Short Film Studies Volume 1 ; 1 >
       au < released ; 2012 ; Short Film Studies Volume 2 ; 2 >
       au < released ; 2012-2013 ; Short Film Studies Volume 3 ; 3 >
       au < released ; 2014 ; Short Film Studies Volume 4 ; 4 >
       au < released ; 2015 ; Short Film Studies Volume 5 ; 5 >
       au < released ; 2016 ; Short Film Studies Volume 6 ; 6 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Short Film Studies Volume 7 ; 7 >
       au < manifest ; 2018 ; Short Film Studies Volume 8 ; 8 >
 
+      }
     }
 
     {
@@ -1704,6 +2473,10 @@
       param[journal_id] = ts
       param[journal_issn] = 1751-4193
     
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2007-2008 ; The Soundtrack Volume 1 ; 1 >
       au < released ; 2009 ; The Soundtrack Volume 2 ; 2 >
       au < released ; 2010 ; The Soundtrack Volume 3 ; 3 >
@@ -1712,9 +2485,17 @@
       au < released ; 2014 ; The Soundtrack Volume 6 ; 6 >
       au < released ; 2015 ; The Soundtrack Volume 7 ; 7 >
       au < released ; 2016 ; The Soundtrack Volume 8 ; 8 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; The Soundtrack Volume 9 ; 9 >
       au < expected ; 2018 ; The Soundtrack Volume 10 ; 10 >
 
+      }
     }
 
     {
@@ -1725,7 +2506,9 @@
       >
       param[journal_id] = sac
       param[journal_issn] = 1750-3175
-      
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       comment[publisher] = journal moved to Routledge. http://www.ingentaconnect.com/content/1750-3175
     
       au < down ; 2007 ; Studies in Australasian Cinema Volume 1 ; 1 >
@@ -1747,6 +2530,10 @@
       param[journal_id] = stic
       param[journal_issn] = 2040-3232
     
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2010 ; Studies in Comics Volume 1 ; 1 >
       au < released ; 2011-2012 ; Studies in Comics Volume 2 ; 2 >
       au < released ; 2012 ; Studies in Comics Volume 3 ; 3 >
@@ -1754,9 +2541,17 @@
       au < released ; 2014 ; Studies in Comics Volume 5 ; 5 >
       au < released ; 2015 ; Studies in Comics Volume 6 ; 6 >
       au < released ; 2016 ; Studies in Comics Volume 7 ; 7 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Studies in Comics Volume 8 ; 8 >
       au < manifest ; 2018 ; Studies in Comics Volume 9 ; 9 >
 
+      }
     }
 
     {
@@ -1768,7 +2563,9 @@
 
       param[journal_id] = sdf
       param[journal_issn] = 1750-3280
-      
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       comment[moved] = Moved to Routledge/T&F. 
     
       au < down ; 2007 ; Studies in Documentary Film Volume 1 ; 1 >
@@ -1790,7 +2587,9 @@
 
       param[journal_id] = seec
       param[journal_issn] = 2040-350X
-      
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       comment[moved] = moved to Routledge/T&F
     
       au < superseded ; 2010 ; Studies in Eastern European Cinema Volume 1 [superseded] ; 1 >
@@ -1809,7 +2608,9 @@
 
       param[journal_id] = sec
       param[journal_issn] = 1741-1548
-      
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       comment[moved] = Moved to Routledge/T&F.
     
       au < down ; 2004 ; Studies in European Cinema Volume 1 ; 1 >
@@ -1836,7 +2637,9 @@
 
       param[journal_id] = sfc
       param[journal_issn] = 1471-5880
-    
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < down ; 2001 ; Studies in French Cinema Volume 1 ; 1 >
       au < down ; 2002 ; Studies in French Cinema Volume 2 ; 2 >
       au < down ; 2003 ; Studies in French Cinema Volume 3 ; 3 >
@@ -1862,8 +2665,11 @@
 
       param[journal_id] = shc
       param[journal_issn] = 1478-0488
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       comment[continued_by] = 2050-4837
-     
+
       au < released ; 2004-2005 ; Studies in Hispanic Cinemas Volume 1 ; 1 >
       au < released ; 2005-2006 ; Studies in Hispanic Cinemas Volume 2 ; 2 >
       au < released ; 2006-2007 ; Studies in Hispanic Cinemas Volume 3 ; 3 >
@@ -1886,6 +2692,10 @@
       param[journal_id] = smt
       param[journal_issn] = 1750-3167
       
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2006-2007 ; Studies in Musical Theatre Volume 1 ; 1 >
       au < released ; 2008 ; Studies in Musical Theatre Volume 2 ; 2 >
       au < released ; 2009 ; Studies in Musical Theatre Volume 3 ; 3 >
@@ -1896,9 +2706,17 @@
       au < released ; 2014 ; Studies in Musical Theatre Volume 8 ; 8 >
       au < released ; 2015 ; Studies in Musical Theatre Volume 9 ; 9 >
       au < released ; 2016 ; Studies in Musical Theatre Volume 10 ; 10 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Studies in Musical Theatre Volume 11 ; 11 >
       au < manifest ; 2018 ; Studies in Musical Theatre Volume 12 ; 12 >
 
+      }
     }
 
     {
@@ -1910,7 +2728,9 @@
 
       param[journal_id] = srcs
       param[journal_issn] = 1750-3132
-      
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       comment[publisher] = moved to Routledge, but still on Ingenta.
       
       au < down ; 2007 ; Studies in Russian and Soviet Cinema Volume 1 ; 1 >
@@ -1932,6 +2752,10 @@
       param[journal_id] = safm
       param[journal_issn] = 1756-4921
     
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2009 ; Studies in South Asian Film & Media Volume 1 ; 1 >
       au < released ; 2010-2011 ; Studies in South Asian Film & Media Volume 2 ; 2 >
       au < released ; 2012 ; Studies in South Asian Film & Media Volume 3 ; 3 >
@@ -1940,9 +2764,17 @@
       au < released ; 2014-2015 ; Studies in South Asian Film & Media Volume 6 ; 6 >
       au < released ; 2016 ; Studies in South Asian Film & Media Volume 7 ; 7 >
       au < released ; 2016 ; Studies in South Asian Film & Media Volume 8 ; 8 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Studies in South Asian Film & Media Volume 9 ; 9 >
-    
       au < expected ; 2018 ; Studies in South Asian Film & Media Volume 10 ; 10 >
+
+      }
     }
 
     {
@@ -1956,13 +2788,25 @@
       param[journal_issn] = 2050-4837
       comment[continus] = 1478-0488
      
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2013 ; Studies in Spanish & Latin American Cinemas Volume 10 ; 10 >
       au < released ; 2014 ; Studies in Spanish & Latin American Cinemas Volume 11 ; 11 >
       au < released ; 2015 ; Studies in Spanish & Latin American Cinemas Volume 12 ; 12 >
       au < released ; 2016 ; Studies in Spanish & Latin American Cinemas Volume 13 ; 13 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Studies in Spanish & Latin American Cinemas Volume 14 ; 14 >
       au < manifest ; 2018 ; Studies in Spanish & Latin American Cinemas Volume 15 ; 15 >
 
+      }
     }
 
     {
@@ -1973,7 +2817,9 @@
       >
       param[journal_id] = stp
       param[journal_issn] = 1468-2761
-      
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       comment[moved] = journal moved to Routledge/Taylor and Francis.
     
       au < down ; 2001-2002 ; Studies in Theatre and Performance Volume 21 ; 21 >
@@ -2002,6 +2848,10 @@
       param[journal_id] = ta
       param[journal_issn] = 1477-965X
       
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2003 ; Technoetic Arts Volume 1 ; 1 >
       au < released ; 2004 ; Technoetic Arts Volume 2 ; 2 >
       au < released ; 2005 ; Technoetic Arts Volume 3 ; 3 >
@@ -2016,9 +2866,17 @@
       au < released ; 2014 ; Technoetic Arts Volume 12 ; 12 >
       au < released ; 2015 ; Technoetic Arts Volume 13 ; 13 >
       au < released ; 2016 ; Technoetic Arts Volume 14 ; 14 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Technoetic Arts Volume 15 ; 15 >
       au < manifest ; 2018 ; Technoetic Arts Volume 16 ; 16 >
 
+      }
     }
 
     {
@@ -2030,7 +2888,9 @@
 
       param[journal_id] = trac
       param[journal_issn] = 2040-3526
-      
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       comment[publisher] = moved to Routledge. No subscription. http://www.ingentaconnect.com/content/2040-3526
       
       au < superseded ; 2010 ; Transnational Cinemas Volume 1 [superseded] ; 1 >
@@ -2049,7 +2909,9 @@
 
       param[journal_id] = ubiq
       param[journal_issn] = 2045-6271
-      
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2012 ; Ubiquity: The Journal of Pervasive Media Volume 1 ; 1 >
       au < released ; 2013 ; Ubiquity: The Journal of Pervasive Media Volume 2 ; 2 >
       au < released ; 2014 ; Ubiquity: The Journal of Pervasive Media Volume 3 ; 3 >
@@ -2067,14 +2929,26 @@
       param[journal_id] = viq
       param[journal_issn] = 2045-5879
       
+      {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2011-2012 ; Visual Inquiry: Learning & Teaching Art Volume 1 ; 1 >
       au < released ; 2013 ; Visual Inquiry: Learning & Teaching Art Volume 2 ; 2 >
       au < released ; 2014 ; Visual Inquiry: Learning & Teaching Art Volume 3 ; 3 >
       au < released ; 2015 ; Visual Inquiry: Learning & Teaching Art Volume 4 ; 4 >
       au < released ; 2016 ; Visual Inquiry: Learning & Teaching Art Volume 5 ; 5 >
+
+      }
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
       au < manifest ; 2017 ; Visual Inquiry: Learning & Teaching Art Volume 6 ; 6 >
       au < manifest ; 2018 ; Visual Inquiry: Learning & Teaching Art Volume 7 ; 7 >
 
+      }
     }
 
 }
