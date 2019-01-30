@@ -85,6 +85,7 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
     //see http://ascopubs.org/doi/abs/10.1200/jco.2008.26.15_suppl.1027 right column
     // we avoid the whole right column, but this seems like a good general catch
     HtmlNodeFilters.tagWithAttributeRegex("div","class", "relatedArticlesWidget"),
+    HtmlNodeFilters.tagWithAttributeRegex("div","id", "relatedArticlesColumn"),
     
     // Since overcrawling is a constant problem for Atypon, put common
     // next article-previous article link for safety; 
