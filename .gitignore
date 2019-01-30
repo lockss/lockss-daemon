@@ -85,6 +85,7 @@ local.properties
 *test/classes
 test/results/*
 test/run-classpath
+test/run-classpath-win
 test/test-classpath
 test/test-p-classpath
 generated/*
