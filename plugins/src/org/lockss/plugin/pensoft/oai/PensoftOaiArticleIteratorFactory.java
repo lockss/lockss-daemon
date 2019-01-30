@@ -55,6 +55,9 @@ implements ArticleIteratorFactory,
   protected static final Pattern ABSTRACT_PATTERN = Pattern.compile(
       "article(?:/|s[.]php[?]id=)([0-9]+)/?$",
       Pattern.CASE_INSENSITIVE);
+  protected static final Pattern PDF_PATTERN = Pattern.compile(
+      "article/([0-9]+)/download/pdf/?$",
+      Pattern.CASE_INSENSITIVE);
 
   //Some are full text HTML and some are abstracts
   //Abstract = http://zookeys.pensoft.net/articles.php?id=1929
@@ -62,7 +65,6 @@ implements ArticleIteratorFactory,
   protected static final String ABSTRACT_0_REPLACEMENT = "articles.php?id=$1";
   protected static final String ABSTRACT_1_REPLACEMENT = "article/$1";
   //http://zookeys.pensoft.net/lib/ajax_srv/article_elements_srv.php?action=download_pdf&item_id=1929
-  //protected static final String PDF_REPLACEMENT 
   protected static final String PDF_0_REPLACEMENT = "lib/ajax_srv/article_elements_srv.php?action=download_pdf&item_id=$1";
   protected static final String PDF_1_REPLACEMENT = "article/$1/download/pdf/";
   
@@ -72,23 +74,18 @@ implements ArticleIteratorFactory,
     SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
 
     String strip_base = UrlUtil.stripProtocol(au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey()));
-    // params from tdb file corresponding to AU
-    final String ROOT_TEMPLATE0 = "\"https://" + strip_base + "\"";
-    final String ROOT_TEMPLATE1 = "\"http://" + strip_base + "\"";
-
     final String PATTERN_TEMPLATE =
-        "\"^https?://" + strip_base + "article(/|s[.]php[?]id=)[0-9]+/?$\"";
-
-    builder.setSpec(target,
-        Arrays.asList(ROOT_TEMPLATE0, ROOT_TEMPLATE1),
-        PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
+        "\"^https?://" + strip_base + "article(?:/|s[.]php[?]id=)([0-9]+)(/download/pdf)?/?$\"";
+    builder.setSpec(new SubTreeArticleIterator.Spec()
+        .setTarget(target)
+        .setPatternTemplate(PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE));
 
     builder.addAspect(ABSTRACT_PATTERN,
         Arrays.asList(ABSTRACT_0_REPLACEMENT, ABSTRACT_1_REPLACEMENT),
         ArticleFiles.ROLE_ABSTRACT, 
         ArticleFiles.ROLE_ARTICLE_METADATA);
 
-    builder.addAspect(
+    builder.addAspect(PDF_PATTERN,
         Arrays.asList(PDF_1_REPLACEMENT, PDF_0_REPLACEMENT),
         ArticleFiles.ROLE_FULL_TEXT_PDF);
 
