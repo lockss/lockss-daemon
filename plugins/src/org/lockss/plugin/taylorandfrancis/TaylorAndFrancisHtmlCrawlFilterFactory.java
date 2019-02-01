@@ -96,7 +96,10 @@ public class TaylorAndFrancisHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlF
     // see http://www.tandfonline.com/doi/full/10.1080/12265934.2016.1182053
     HtmlNodeFilters.tagWithAttributeRegex("ul",  "class", "^references"),     
     // if has "doi/mlt" will crawl filter out - but remove in case it doesn't
-    HtmlNodeFilters.tagWithAttribute("li",  "class", "relatedArticleLink"),     
+    HtmlNodeFilters.tagWithAttribute("li",  "class", "relatedArticleLink"),
+    
+    // 2/1/19 - erratum <--> original link on article page in keyword section
+    HtmlNodeFilters.tagWithAttribute("div","class","related-original"),
 
     //do not follow breadcrumb back to TOC in case of overcrawl to article
     HtmlNodeFilters.tagWithAttribute("div", "id", "breadcrumb"),
