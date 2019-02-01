@@ -7,9 +7,12 @@
     info[poller] = 3
   >
   
-  #anph - Ancient Philosophy Today coming in 2019
+  (no content yet on 1/31/19 for these three new titles)
+  #anph - Ancient Philosophy Today coming in 2019 
   #ncpf - Nineteenth-Century Popular Fiction coming in 2019
   #sch - Scottish Church History coming in 2019
+  
+  #gothic - Gothic Studies transferred from ManUP 2019 (all volumes 1999 V1 +)
 
   plugin = org.lockss.plugin.edinburgh.ClockssEdinburghUniversityPressPlugin
 #  param[base_url] = http://www.euppublishing.com/
@@ -1155,6 +1158,7 @@
     au < frozen ; exists ; 2016 ; The New Soundtrack Volume 6 ; 6 ; http://www.euppublishing.com/ ; >
     au < deepCrawl ; exists ; 2017 ; The New Soundtrack Volume 7 ; 7 ; http://www.euppublishing.com/ ; >
     au < crawling ; exists ; 2018 ; The New Soundtrack Volume 8 ; 8 ; https://www.euppublishing.com/ ; >
+    #ceased publication at the end of 2018 as per publisher in RT #9509
 
   }
 
