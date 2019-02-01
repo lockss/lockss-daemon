@@ -93,6 +93,7 @@
       <string>1,"^https?://(%s|dup\.silverchair-cdn\.com).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", url_host(base_url)</string>
       <!--  pdf can go through regardless of Expiry because it gets consumed, and JS and CSS have no expiry -->
       <string>1,"^https?://dup\.silverchair-cdn\.com/.*(CSS|JS|\.pdf)(\?.*)?$"</string>
+      <string>1,"^https?://%s/%s/(article(-(pdf|abstract))?|issue(-pdf)?)/(volume/)?([0-9i]+|doi)(?!.*/www\.)", url_host(base_url), journal_id</string>
       <!--  PDF content is going through watermarking SOME of the time; we will consume -->
       <string>1,"^https?://watermark\.silverchair\.com/[^/]+\.pdf\?token="</string>
       <string>1,"^https?://%s/%s/downloadcitation/[^?]+\?format=ris", url_host(base_url), journal_id</string>
