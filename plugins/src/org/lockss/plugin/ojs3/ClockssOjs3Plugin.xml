@@ -2,11 +2,11 @@
   <!-- Different start/permission - otherwise ClockssOJS2Plugin.xml inherited from OJS2Plugin.xml. -->  
   <entry>
     <string>plugin_status</string>
-    <string>testing</string>
+    <string>development</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.ojs3.ClockssOJS3Plugin</string>
+    <string>org.lockss.plugin.ojs3.ClockssOjs3Plugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -14,7 +14,7 @@
   </entry>
   <entry>
     <string>plugin_parent</string>
-    <string>org.lockss.plugin.ojs3.OJS3Plugin</string>
+    <string>org.lockss.plugin.ojs3.Ojs3Plugin</string>
   </entry>
   <entry>
     <string>plugin_parent_version</string>
@@ -28,10 +28,16 @@
     <string>au_name</string>
     <string>"Open Journal Systems Plugin (OJS 3.x for CLOCKSS), Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
   </entry>
+<!--  The default. The start_stem attribute is inserted as needed by the crawl seed -->  
   <entry>
     <string>au_start_url</string>
-    <string>"%sindex.php/%s/gateway/clockss?year=%d", base_url, journal_id, year</string>
-  </entry>  
+    <string>"%s%s/gateway/clockss?year=%d", base_url, journal_id, year</string>
+  </entry>
+  <!--  must be defined here again because we redefine the start_url -->
+ <entry>
+    <string>plugin_crawl_seed_factory</string>
+    <string>org.lockss.plugin.ojs3.Ojs3CrawlSeedFactory</string>
+  </entry>   
   <!--  permission is on the start_url for this version -->
   <entry>
     <string>clockss_override</string>

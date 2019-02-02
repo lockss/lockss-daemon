@@ -1,6 +1,6 @@
 NOTES from dicussion with Thib for post brak
 
-Try to avoid orphan content by not being to definitive on the AU
+Try to avoid orphan content by not being too definitive on the AU
 
 The start_url might exist both with and without the index.php so we can't just probe but the
 /archives page seems to indicate the consistent path stem (and the one the articles will hang from)
