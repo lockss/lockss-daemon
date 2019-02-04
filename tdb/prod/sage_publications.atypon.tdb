@@ -9033,7 +9033,6 @@
 
       #param[base_url] = http://cba.sagepub.com/
       #content available from 1968 volume 1 to 1999 volume 29
-      #missing volume 36 to 39
 
       au < manifest ; 1999-2000 ; A Current Bibliography on African Affairs Volume 30 ; 30 ; cbaa ; https://journals.sagepub.com/ >
       au < manifest ; 2000-2001 ; A Current Bibliography on African Affairs Volume 31 ; 31 ; cbaa ; https://journals.sagepub.com/ >
@@ -9043,6 +9042,8 @@
       au < manifest ; 2004-2005 ; A Current Bibliography on African Affairs Volume 35 ; 35 ; cbaa ; https://journals.sagepub.com/ >
       au < manifest ; 2005-2006 ; A Current Bibliography on African Affairs Volume 36 ; 36 ; cbaa ; https://journals.sagepub.com/ >
       au < manifest ; 2006-2007 ; A Current Bibliography on African Affairs Volume 37 ; 37 ; cbaa ; https://journals.sagepub.com/ >
+      au < exists ; 2006 ; A Current Bibliography on African Affairs Volume 38 ; 38 ; cbaa ; https://journals.sagepub.com/ >
+      au < exists ; 2006-2007 ; A Current Bibliography on African Affairs Volume 39 ; 39 ; cbaa ; https://journals.sagepub.com/ >
       au < released ; 2007-2008 ; A Current Bibliography on African Affairs Volume 40 ; 40 ; cbaa ; http://journals.sagepub.com/ >
       au < released ; 2008-2009 ; A Current Bibliography on African Affairs Volume 41 ; 41 ; cbaa ; http://journals.sagepub.com/ >
       au < released ; 2009-2010 ; A Current Bibliography on African Affairs Volume 42 ; 42 ; cbaa ; http://journals.sagepub.com/ >
