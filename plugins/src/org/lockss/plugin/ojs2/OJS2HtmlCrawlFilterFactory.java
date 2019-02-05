@@ -73,6 +73,11 @@ public class OJS2HtmlCrawlFilterFactory implements FilterFactory {
         
         // do not get links that contain https?%25...
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "https?[%]25"),
+        
+        //Athabasca is now putting ALL issue volumes on the manifest page in the footer
+        // see http://jrp.icaap.org/index.php/jrp/gateway/lockss?year=2018
+        HtmlNodeFilters.tagWithAttribute("div", "id", "pageFooter"),
+        
     };
     return new HtmlFilterInputStream(in,
                                      encoding,
