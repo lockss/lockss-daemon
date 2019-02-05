@@ -13205,8 +13205,8 @@
   {
 
     title <
-      name = Journal of the International Commission on Radiation Units and Measurements ;
-      alt_title = Journal of the International Commission on Radiation Units and Measurements ;
+      name = Journal of the ICRU ;
+      alt_title = Journal of the ICRU ;
       issn = 1473-6691 ;
       eissn = 1742-3422 ;
       issnl = 1473-6691
@@ -13220,7 +13220,7 @@
     param[base_url] = http://jicru.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume] >
 
-    au < down ; 2006 ; Journal of the International Commission on Radiation Units and Measurements Volume 6 ; 6 >
+    au < down ; 2006 ; Journal of the ICRU Volume 6 ; 6 >
 
     }
 
@@ -13230,20 +13230,20 @@
     param[base_url] = http://jicru.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; Journal of the International Commission on Radiation Units and Measurements Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; Journal of the International Commission on Radiation Units and Measurements Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2003 ; Journal of the International Commission on Radiation Units and Measurements Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2004 ; Journal of the International Commission on Radiation Units and Measurements Volume 4 ; 4 >
-    au < HighWireStrVolPlugin ; down ; 2005 ; Journal of the International Commission on Radiation Units and Measurements Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Journal of the International Commission on Radiation Units and Measurements Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; down ; 2007 ; Journal of the International Commission on Radiation Units and Measurements Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; down ; 2008 ; Journal of the International Commission on Radiation Units and Measurements Volume 8 ; 8 >
-    au < HighWirePressPlugin ; down ; 2009 ; Journal of the International Commission on Radiation Units and Measurements Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; down ; 2010 ; Journal of the International Commission on Radiation Units and Measurements Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; down ; 2011 ; Journal of the International Commission on Radiation Units and Measurements Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; down ; 2012 ; Journal of the International Commission on Radiation Units and Measurements Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; Journal of the International Commission on Radiation Units and Measurements Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; Journal of the International Commission on Radiation Units and Measurements Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; Journal of the ICRU Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; Journal of the ICRU Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2003 ; Journal of the ICRU Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2004 ; Journal of the ICRU Volume 4 ; 4 >
+    au < HighWireStrVolPlugin ; down ; 2005 ; Journal of the ICRU Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Journal of the ICRU Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; down ; 2007 ; Journal of the ICRU Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; down ; 2008 ; Journal of the ICRU Volume 8 ; 8 >
+    au < HighWirePressPlugin ; down ; 2009 ; Journal of the ICRU Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; down ; 2010 ; Journal of the ICRU Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; down ; 2011 ; Journal of the ICRU Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; down ; 2012 ; Journal of the ICRU Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; Journal of the ICRU Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; Journal of the ICRU Volume 14 ; 14 >
 
     }
 
