@@ -14374,7 +14374,7 @@
   {
 
     title <
-      name = Journal of the International Commission on Radiation Units and Measurements ;
+      name = Journal of the ICRU ;
       alt_title = Journal of the ICRU ;
       issn = 1473-6691 ;
       eissn = 1742-3422 ;
@@ -14388,8 +14388,8 @@
     param[base_url] = http://jicru.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < zapped ; finished ; 2008 ; Journal of the International Commission on Radiation Units and Measurements Volume 8 ; 8 ; >
-    au < superseded ; finished ; 2009 ; Journal of the International Commission on Radiation Units and Measurements Volume 9 [superseded] ; 9 ; >
+    au < zapped ; finished ; 2008 ; Journal of the ICRU Volume 8 ; 8 ; >
+    au < superseded ; finished ; 2009 ; Journal of the ICRU Volume 9 [superseded] ; 9 ; >
 
     }
 
@@ -14398,20 +14398,20 @@
     param[base_url] = http://jicru.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < doNotProcess ; exists ; 2001 ; Journal of the International Commission on Radiation Units and Measurements Volume 1 ; 1 ; >
-    au < doNotProcess ; exists ; 2002 ; Journal of the International Commission on Radiation Units and Measurements Volume 2 ; 2 ; >
-    au < doNotProcess ; exists ; 2003 ; Journal of the International Commission on Radiation Units and Measurements Volume 3 ; 3 ; >
-    au < doNotProcess ; exists ; 2004 ; Journal of the International Commission on Radiation Units and Measurements Volume 4 ; 4 ; >
-    au < doNotProcess ; exists ; 2005 ; Journal of the International Commission on Radiation Units and Measurements Volume 5 ; 5 ; >
-    au < doNotProcess ; exists ; 2006 ; Journal of the International Commission on Radiation Units and Measurements Volume 6 ; 6 ; >
-    au < doNotProcess ; exists ; 2007 ; Journal of the International Commission on Radiation Units and Measurements Volume 7 ; 7 ; >
-    au < doNotProcess ; doNotProcess ; 2008 ; Journal of the International Commission on Radiation Units and Measurements Volume 8 ; 8 ; >
-    au < finished ; frozen ; 2009 ; Journal of the International Commission on Radiation Units and Measurements Volume 9 ; 9 ; >
-    au < finished ; finished ; 2010 ; Journal of the International Commission on Radiation Units and Measurements Volume 10 ; 10 ; >
-    au < finished ; finished ; 2011 ; Journal of the International Commission on Radiation Units and Measurements Volume 11 ; 11 ; >
-    au < finished ; finished ; 2012 ; Journal of the International Commission on Radiation Units and Measurements Volume 12 ; 12 ; >
-    au < doNotProcess ; exists ; 2013 ; Journal of the International Commission on Radiation Units and Measurements Volume 13 ; 13 ; >
-    au < doNotProcess ; exists ; 2014 ; Journal of the International Commission on Radiation Units and Measurements Volume 14 ; 14 ; >
+    au < doNotProcess ; exists ; 2001 ; Journal of the ICRU Volume 1 ; 1 ; >
+    au < doNotProcess ; exists ; 2002 ; Journal of the ICRU Volume 2 ; 2 ; >
+    au < doNotProcess ; exists ; 2003 ; Journal of the ICRU Volume 3 ; 3 ; >
+    au < doNotProcess ; exists ; 2004 ; Journal of the ICRU Volume 4 ; 4 ; >
+    au < doNotProcess ; exists ; 2005 ; Journal of the ICRU Volume 5 ; 5 ; >
+    au < doNotProcess ; exists ; 2006 ; Journal of the ICRU Volume 6 ; 6 ; >
+    au < doNotProcess ; exists ; 2007 ; Journal of the ICRU Volume 7 ; 7 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Journal of the ICRU Volume 8 ; 8 ; >
+    au < finished ; frozen ; 2009 ; Journal of the ICRU Volume 9 ; 9 ; >
+    au < finished ; finished ; 2010 ; Journal of the ICRU Volume 10 ; 10 ; >
+    au < finished ; finished ; 2011 ; Journal of the ICRU Volume 11 ; 11 ; >
+    au < finished ; finished ; 2012 ; Journal of the ICRU Volume 12 ; 12 ; >
+    au < doNotProcess ; exists ; 2013 ; Journal of the ICRU Volume 13 ; 13 ; >
+    au < doNotProcess ; exists ; 2014 ; Journal of the ICRU Volume 14 ; 14 ; >
 
     }
 

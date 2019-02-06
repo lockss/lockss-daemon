@@ -111,9 +111,8 @@
       eissn = 2398-9785 ;
       issnl = 2398-9777 
      >
-
-    param[journal_id] = dlgs
-
+  {
+    param[journal_id] = dls
     au < exists ; exists ; 2007 ; Deleuze and Guattari Studies Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
     au < exists ; exists ; 2008 ; Deleuze and Guattari Studies Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
     au < exists ; exists ; 2009 ; Deleuze and Guattari Studies Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
@@ -125,8 +124,12 @@
     au < exists ; exists ; 2015 ; Deleuze and Guattari Studies Volume 9 ; 9 ; https://www.euppublishing.com/ ; >
     au < exists ; exists ; 2016 ; Deleuze and Guattari Studies Volume 10 ; 10 ; https://www.euppublishing.com/ ; >
     au < exists ; exists ; 2017 ; Deleuze and Guattari Studies Volume 11 ; 11 ; https://www.euppublishing.com/ ; >
+  }
+  {
+    param[journal_id] = dlgs
     au < crawling ; exists ; 2018 ; Deleuze and Guattari Studies Volume 12 ; 12 ; https://www.euppublishing.com/ ; >
 
+  }
   }
 
   {
