@@ -14,7 +14,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>30</string>
+    <string>31</string>
   </entry>
 <!--  updating out of sync with parent, must have own feature_version_map -->
   <entry>
@@ -26,7 +26,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>24</string>
+        <string>25</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -40,7 +40,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>91</string>
+    <string>98</string>
   </entry>
   <!--  override start url from parent to support http to https conversion -->
   <entry>
