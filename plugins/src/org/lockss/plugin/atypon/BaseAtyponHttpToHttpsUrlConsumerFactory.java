@@ -72,6 +72,13 @@ public class BaseAtyponHttpToHttpsUrlConsumerFactory implements UrlConsumerFacto
      * HTTP-defined and there has been a single-hop redirect from an HTTP URL to
      * the exactly corresponding HTTPS URL.
      * With the additional exception that 
+     * https://www.emeraldinsight.com/doi/10.1108/SAMPJ-02-2016-0006
+     * redirects to
+     * https://www.emeraldinsight.com/doi/full/10.1108/SAMPJ-02-2016-0006
+     * and 
+     * http://www.emeraldinsight.com/doi/abs/10.1108/SAMPJ-02-2016-0006
+     * redirects to:
+     * https://www.emeraldinsight.com/doi/full/10.1108/SAMPJ-02-2016-0006
      * 
      * http://arc.aiaa.org/action/showCitFormats?doi=10.2514/1.C032918
      * redirects to:
@@ -104,6 +111,7 @@ public class BaseAtyponHttpToHttpsUrlConsumerFactory implements UrlConsumerFacto
         should = (
             origBase.equals(fetchBase) ||
             origBase.equals(fetchBase.replaceFirst("/doi/[^/]+/", "/doi/")) ||
+            origBase.replaceFirst("/doi/[^/]+/", "/doi/").equals(fetchBase.replaceFirst("/doi/[^/]+/", "/doi/")) ||
             origBase.equals(fetchBase.replace("%2F","/")));
         if (fud.redirectUrls != null) {
           log.debug3("BA redirect " + fud.redirectUrls.size() + ": " + fud.redirectUrls.toString());

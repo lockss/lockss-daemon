@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2019 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -64,7 +64,7 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
   protected static final Pattern corrections = Pattern.compile("( |&nbsp;)*(Original Article|Corrigendum|Corrigenda|Correction(s)?|Errata|Erratum)( |&nbsp;)*", Pattern.CASE_INSENSITIVE);
   protected static NodeFilter[] baseAtyponFilters = new NodeFilter[] {
     
-    HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "citedBySection"),
     // toc, abs, full, text and ref right column - most read 
     // toc - right column, current issue or book landing page
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumBookIssueNavigation"),
