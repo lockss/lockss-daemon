@@ -11536,7 +11536,7 @@
       eissn = 1742-3422
     >
 
-    param[journal_id] = jICRU
+    param[journal_id] = jicru
 
     #this title was ONLY in the publisher listing. Moved to Sage after 2014.
     au < doNotProcess ; exists ; 1961 ; 1961 ; Journal of the ICRU Volume os5 ; os5 ; >
