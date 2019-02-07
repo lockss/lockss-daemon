@@ -25969,6 +25969,46 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
     {
 
       title <
+        name = British Journal of Orthodontics ;
+        issn = 0301-228X
+      >
+
+      #journal_id = joo
+      #continued_by = 1465-3125
+      #doNotProcess = Processed in T&F
+
+      au < doNotProcess ; 1973-1974 ; British Journal of Orthodontics Volume 1 [Sage] ; 1 ; jooc ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 1975 ; British Journal of Orthodontics Volume 2 [Sage] ; 2 ; jooc ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 1976 ; British Journal of Orthodontics Volume 3 [Sage] ; 3 ; jooc ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 1977 ; British Journal of Orthodontics Volume 4 [Sage] ; 4 ; jooc ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 1978 ; British Journal of Orthodontics Volume 5 [Sage] ; 5 ; jooc ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 1979 ; British Journal of Orthodontics Volume 6 [Sage] ; 6 ; jooc ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 1980 ; British Journal of Orthodontics Volume 7 [Sage] ; 7 ; jooc ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 1981 ; British Journal of Orthodontics Volume 8 [Sage] ; 8 ; jooc ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 1982 ; British Journal of Orthodontics Volume 9 [Sage] ; 9 ; jooc ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 1983 ; British Journal of Orthodontics Volume 10 [Sage] ; 10 ; jooc ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 1984 ; British Journal of Orthodontics Volume 11 [Sage] ; 11 ; jooc ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 1985 ; British Journal of Orthodontics Volume 12 [Sage] ; 12 ; jooc ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 1986 ; British Journal of Orthodontics Volume 13 [Sage] ; 13 ; jooc ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 1987 ; British Journal of Orthodontics Volume 14 [Sage] ; 14 ; jooc ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 1988 ; British Journal of Orthodontics Volume 15 [Sage] ; 15 ; jooc ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 1989 ; British Journal of Orthodontics Volume 16 [Sage] ; 16 ; jooc ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 1990 ; British Journal of Orthodontics Volume 17 [Sage] ; 17 ; jooc ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 1991 ; British Journal of Orthodontics Volume 18 [Sage] ; 18 ; jooc ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 1992 ; British Journal of Orthodontics Volume 19 [Sage] ; 19 ; jooc ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 1993 ; British Journal of Orthodontics Volume 20 [Sage] ; 20 ; jooc ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 1994 ; British Journal of Orthodontics Volume 21 [Sage] ; 21 ; jooc ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 1995 ; British Journal of Orthodontics Volume 22 [Sage] ; 22 ; jooc ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 1996 ; British Journal of Orthodontics Volume 23 [Sage] ; 23 ; jooc ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 1997 ; British Journal of Orthodontics Volume 24 [Sage] ; 24 ; jooc ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 1998 ; British Journal of Orthodontics Volume 25 [Sage] ; 25 ; jooc ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 1999 ; British Journal of Orthodontics Volume 26 [Sage] ; 26 ; jooc ; https://journals.sagepub.com/ >
+
+    }
+
+    {
+
+      title <
         name = Journal of Orthodontics ;
         issn = 1465-3125 ;
         eissn = 1465-3133
@@ -25977,8 +26017,25 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       #journal_id = joo
       #doNotProcess = Processed in T&F
 
-      au < doNotProcess ; 2017 ; Journal of Orthodontics Volume 44 ; 44 ; jooa ; https://journals.sagepub.com/ >
-      au < doNotProcess ; 2018 ; Journal of Orthodontics Volume 45 ; 45 ; jooa ; https://journals.sagepub.com/ >
+      au < manifest ; 2000 ; Journal of Orthodontics Volume 27 [Sage] ; 27 ; jooa ; https://journals.sagepub.com/ >
+      au < manifest ; 2001 ; Journal of Orthodontics Volume 28 [Sage] ; 28 ; jooa ; https://journals.sagepub.com/ >
+      au < manifest ; 2002 ; Journal of Orthodontics Volume 29 [Sage] ; 29 ; jooa ; https://journals.sagepub.com/ >
+      au < manifest ; 2003 ; Journal of Orthodontics Volume 30 [Sage] ; 30 ; jooa ; https://journals.sagepub.com/ >
+      au < manifest ; 2004 ; Journal of Orthodontics Volume 31 [Sage] ; 31 ; jooa ; https://journals.sagepub.com/ >
+      au < manifest ; 2005 ; Journal of Orthodontics Volume 32 [Sage] ; 32 ; jooa ; https://journals.sagepub.com/ >
+      au < manifest ; 2006 ; Journal of Orthodontics Volume 33 [Sage] ; 33 ; jooa ; https://journals.sagepub.com/ >
+      au < manifest ; 2007 ; Journal of Orthodontics Volume 34 [Sage] ; 34 ; jooa ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 2008 ; Journal of Orthodontics Volume 35 [Sage] ; 35 ; jooa ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 2009 ; Journal of Orthodontics Volume 36 [Sage] ; 36 ; jooa ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 2010 ; Journal of Orthodontics Volume 37 [Sage] ; 37 ; jooa ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 2011 ; Journal of Orthodontics Volume 38 [Sage] ; 38 ; jooa ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 2012 ; Journal of Orthodontics Volume 39 [Sage] ; 39 ; jooa ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 2013 ; Journal of Orthodontics Volume 40 [Sage] ; 40 ; jooa ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 2014 ; Journal of Orthodontics Volume 41 [Sage] ; 41 ; jooa ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 2015 ; Journal of Orthodontics Volume 42 [Sage] ; 42 ; jooa ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 2016 ; Journal of Orthodontics Volume 43 [Sage] ; 43 ; jooa ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 2017 ; Journal of Orthodontics Volume 44 [Sage] ; 44 ; jooa ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 2018 ; Journal of Orthodontics Volume 45 [Sage] ; 45 ; jooa ; https://journals.sagepub.com/ >
 
     }
 
