@@ -421,14 +421,14 @@ public class TestEndocrineSocietyHtmlFilterFactory
           "<a href=\"/servlet/linkout?suffix=\" onclick=\"newWindow(this.href);return false\">Medline</a>" +
           "</div>";
   
-  private static final String withReferenceLinksFiltered =
-      " <div class=\"references\" > <span class=\"NLM_string-name\">Author Foo <span class=\"NLM_given-names\">" +
-          "A </span> </span> <span class=\"NLM_string-name\">Costa <span class=\"NLM_given-names\">RH </span>" +
-          " </span> <span class=\"NLM_string-name\">Gannon <span class=\"NLM_given-names\">M </span> </span>" +
-          " <span class=\"NLM_article-title\">Article Title Goes here </span>" +
-          " <span class=\"NLM_year\">2008 </span>" +
-          " <span class=\"NLM_fpage\">3069 </span> <span class=\"NLM_lpage\">3077 </span>" +
-          " </div>";
+  private static final String withReferenceLinksFiltered = "";
+//      " <div class=\"references\" > <span class=\"NLM_string-name\">Author Foo <span class=\"NLM_given-names\">" +
+//          "A </span> </span> <span class=\"NLM_string-name\">Costa <span class=\"NLM_given-names\">RH </span>" +
+//          " </span> <span class=\"NLM_string-name\">Gannon <span class=\"NLM_given-names\">M </span> </span>" +
+//          " <span class=\"NLM_article-title\">Article Title Goes here </span>" +
+//          " <span class=\"NLM_year\">2008 </span>" +
+//          " <span class=\"NLM_fpage\">3069 </span> <span class=\"NLM_lpage\">3077 </span>" +
+//          " </div>";
   
   
   protected ArchivalUnit createAu()
