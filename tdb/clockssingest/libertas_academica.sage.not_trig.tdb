@@ -165,7 +165,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Biomarkers in Cancer Volume 7 ; 7 ; bica ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Biomarkers in Cancer Volume 8 ; 8 ; bica ; http://journals.sagepub.com/ ; >
     au < finished ; crawling ; 2017 ; Biomarkers in Cancer Volume 9 ; 9 ; bica ; http://journals.sagepub.com/ ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2018 ; Biomarkers in Cancer Volume 10 ; 10 ; bica ; http://journals.sagepub.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Biomarkers in Cancer Volume 10 ; 10 ; bica ; http://journals.sagepub.com/ ; >
 
   }
 
@@ -187,7 +187,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Biomedical Engineering and Computational Biology Volume 6 ; 6 ; beca ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Biomedical Engineering and Computational Biology Volume 7 ; 7 ; beca ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2017 ; Biomedical Engineering and Computational Biology Volume 8 ; 8 ; beca ; http://journals.sagepub.com/ ; >
-    au < crawling ; exists ; 2018 ; Biomedical Engineering and Computational Biology Volume 9 ; 9 ; beca ; http://journals.sagepub.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Biomedical Engineering and Computational Biology Volume 9 ; 9 ; beca ; http://journals.sagepub.com/ ; >
 
   }
 
@@ -331,7 +331,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 8 ; 8 ; amda ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 9 ; 9 ; amda ; http://journals.sagepub.com/ ; >
     au < finished ; crawling ; 2017 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 10 ; 10 ; amda ; http://journals.sagepub.com/ ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2018 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 11 ; 11 ; amda ; http://journals.sagepub.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 11 ; 11 ; amda ; http://journals.sagepub.com/ ; >
 
   }
 
@@ -477,7 +477,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 8 ; 8 ; enda ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 9 ; 9 ; enda ; http://journals.sagepub.com/ ; >
     au < finished ; crawling ; 2017 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 10 ; 10 ; enda ; http://journals.sagepub.com/ ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 11 ; 11 ; enda ; http://journals.sagepub.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 11 ; 11 ; enda ; http://journals.sagepub.com/ ; >
 
   }
 
@@ -526,7 +526,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Oncology Volume 9 ; 9 ; onca ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Oncology Volume 10 ; 10 ; onca ; http://journals.sagepub.com/ ; >
     au < finished ; crawling ; 2017 ; Clinical Medicine Insights: Oncology Volume 11 ; 11 ; onca ; http://journals.sagepub.com/ ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2018 ; Clinical Medicine Insights: Oncology Volume 12 ; 12 ; onca ; http://journals.sagepub.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Clinical Medicine Insights: Oncology Volume 12 ; 12 ; onca ; http://journals.sagepub.com/ ; >
 
   }
 
@@ -690,7 +690,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Urology Volume 8 ; 8 ; cmua ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Urology Volume 9 ; 9 ; cmua ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2017 ; Clinical Medicine Insights: Urology Volume 10 ; 10 ; cmua ; http://journals.sagepub.com/ ; >
-    au < crawling ; exists ; 2018 ; Clinical Medicine Insights: Urology Volume 11 ; 11 ; cmua ; http://journals.sagepub.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Clinical Medicine Insights: Urology Volume 11 ; 11 ; cmua ; http://journals.sagepub.com/ ; >
 
   }
 
@@ -1385,7 +1385,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Rehabilitation Process and Outcome Volume 4 ; 4 ; rpoa ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Rehabilitation Process and Outcome Volume 5 ; 5 ; rpoa ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2017 ; Rehabilitation Process and Outcome Volume 6 ; 6 ; rpoa ; http://journals.sagepub.com/ ; >
-    au < crawling ; exists ; 2018 ; Rehabilitation Process and Outcome Volume 7 ; 7 ; rpoa ; http://journals.sagepub.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Rehabilitation Process and Outcome Volume 7 ; 7 ; rpoa ; http://journals.sagepub.com/ ; >
 
   }
 
