@@ -76,7 +76,7 @@
       au < finished ; finished ; 2015 ; Interpersona: An International Journal on Personal Relationships Volume 9 ; 9 ; 2015 ; http://interpersona.psychopen.eu/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2016 ; Interpersona: An International Journal on Personal Relationships Volume 10 ; 10 ; 2016 ; http://interpersona.psychopen.eu/ ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2017 ; Interpersona: An International Journal on Personal Relationships Volume 11 ; 11 ; 2017 ; https://interpersona.psychopen.eu/ ; >
-      au < crawling ; exists ; 2018 ; Interpersona: An International Journal on Personal Relationships Volume 12 ; 12 ; 2018 ; https://interpersona.psychopen.eu/ ; >
+      au < deepCrawl ; exists ; 2018 ; Interpersona: An International Journal on Personal Relationships Volume 12 ; 12 ; 2018 ; https://interpersona.psychopen.eu/ ; >
 
   }
 
@@ -111,7 +111,7 @@
       au < frozen ; exists ; 2015 ; Journal of Social and Political Psychology Volume 3 ; 3 ; 2015 ; http://jspp.psychopen.eu/ ; >
       au < finished ; crawling ; 2016 ; Journal of Social and Political Psychology Volume 4 ; 4 ; 2016 ; http://jspp.psychopen.eu/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; Journal of Social and Political Psychology Volume 5 ; 5 ; 2017 ; https://jspp.psychopen.eu/ ; >
-      au < crawling ; exists ; 2018 ; Journal of Social and Political Psychology Volume 6 ; 6 ; 2018 ; https://jspp.psychopen.eu/ ; >
+      au < deepCrawl ; exists ; 2018 ; Journal of Social and Political Psychology Volume 6 ; 6 ; 2018 ; https://jspp.psychopen.eu/ ; >
 
   }
 

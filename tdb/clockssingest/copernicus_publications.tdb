@@ -391,7 +391,7 @@
       au < zapped ; finished ; 2015 ; 2015 ; Biogeosciences Volume 12 ; 12 ; http://www.biogeosciences.net/ ; http://www.biogeosciences.net/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2016 ; 2016 ; Biogeosciences Volume 13 ; 13 ; http://www.biogeosciences.net/ ; http://www.biogeosciences.net/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2017 ; 2017 ; Biogeosciences Volume 14 ; 14 ; https://www.biogeosciences.net/ ; https://www.biogeosciences.net/ ; >
-      au < crawling ; exists ; 2018 ; 2018 ; Biogeosciences Volume 15 ; 15 ; https://www.biogeosciences.net/ ; https://www.biogeosciences.net/ ; >
+      au < deepCrawl ; exists ; 2018 ; 2018 ; Biogeosciences Volume 15 ; 15 ; https://www.biogeosciences.net/ ; https://www.biogeosciences.net/ ; >
 
    }
 
@@ -1452,7 +1452,7 @@
       au < finished ; finished ; 2015 ; 2015 ; Nonlinear Processes in Geophysics Volume 22 ; 22 ; http://www.nonlin-processes-geophys.net/ ; http://www.nonlinear-processes-in-geophysics.net/ ; >
       au < frozen ; exists ; 2016 ; 2016 ; Nonlinear Processes in Geophysics Volume 23 ; 23 ; https://www.nonlin-processes-geophys.net/ ; https://www.nonlinear-processes-in-geophysics.net/ ; >
       au < deepCrawl ; exists ; 2017 ; 2017 ; Nonlinear Processes in Geophysics Volume 24 ; 24 ; https://www.nonlin-processes-geophys.net/ ; https://www.nonlinear-processes-in-geophysics.net/ ; >
-      au < crawling ; exists ; 2018 ; 2018 ; Nonlinear Processes in Geophysics Volume 25 ; 25 ; https://www.nonlin-processes-geophys.net/ ; https://www.nonlinear-processes-in-geophysics.net/ ; >
+      au < deepCrawl ; exists ; 2018 ; 2018 ; Nonlinear Processes in Geophysics Volume 25 ; 25 ; https://www.nonlin-processes-geophys.net/ ; https://www.nonlinear-processes-in-geophysics.net/ ; >
 
    }
 

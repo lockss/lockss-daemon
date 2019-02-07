@@ -337,7 +337,7 @@
     au < zapped ; finished ; 2015 ; Journal of Computing in Civil Engineering Volume 29 ; 29 ; http://ascelibrary.org/ ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2016 ; Journal of Computing in Civil Engineering Volume 30 ; 30 ; http://ascelibrary.org/ ; >
     au < finished ; crawling ; 2017 ; Journal of Computing in Civil Engineering Volume 31 ; 31 ; https://ascelibrary.org/ ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; Journal of Computing in Civil Engineering Volume 32 ; 32 ; https://ascelibrary.org/ ; >
+    au < deepCrawl ; exists ; 2018 ; Journal of Computing in Civil Engineering Volume 32 ; 32 ; https://ascelibrary.org/ ; >
 
   }
 
@@ -698,7 +698,7 @@
     au < zapped ; finished ; 2015 ; Journal of Hydraulic Engineering Volume 141 ; 141 ; http://ascelibrary.org/ ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2016 ; Journal of Hydraulic Engineering Volume 142 ; 142 ; http://ascelibrary.org/ ; >
     au < finished ; crawling ; 2017 ; Journal of Hydraulic Engineering Volume 143 ; 143 ; https://ascelibrary.org/ ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; Journal of Hydraulic Engineering Volume 144 ; 144 ; https://ascelibrary.org/ ; >
+    au < deepCrawl ; exists ; 2018 ; Journal of Hydraulic Engineering Volume 144 ; 144 ; https://ascelibrary.org/ ; >
 
   }
 
@@ -967,7 +967,7 @@
     au < finished ; finished ; 2015 ; Journal of Professional Issues in Engineering Education and Practice Volume 141 ; 141 ; http://ascelibrary.org/ ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Journal of Professional Issues in Engineering Education and Practice Volume 142 ; 142 ; http://ascelibrary.org/ ; >
     au < finished ; crawling ; 2017 ; Journal of Professional Issues in Engineering Education and Practice Volume 143 ; 143 ; https://ascelibrary.org/ ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; Journal of Professional Issues in Engineering Education and Practice Volume 144 ; 144 ; https://ascelibrary.org/ ; >
+    au < deepCrawl ; exists ; 2018 ; Journal of Professional Issues in Engineering Education and Practice Volume 144 ; 144 ; https://ascelibrary.org/ ; >
 
   }
 
@@ -1377,7 +1377,7 @@
     au < finished ; finished ; 2015 ; Practice Periodical on Structural Design & Construction Volume 20 ; 20 ; http://ascelibrary.org/ ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Practice Periodical on Structural Design & Construction Volume 21 ; 21 ; http://ascelibrary.org/ ; >
     au < finished ; crawling ; 2017 ; Practice Periodical on Structural Design & Construction Volume 22 ; 22 ; https://ascelibrary.org/ ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2018 ; Practice Periodical on Structural Design & Construction Volume 23 ; 23 ; https://ascelibrary.org/ ; >
+    au < deepCrawl ; exists ; 2018 ; Practice Periodical on Structural Design & Construction Volume 23 ; 23 ; https://ascelibrary.org/ ; >
 
   }
 

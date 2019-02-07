@@ -192,7 +192,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; JAMA Otolaryngology - Head & Neck Surgery Volume 141 ; 2015 ; https://jamanetwork.com/ ; >
     au < finished ; crawling ; 2016 ; JAMA Otolaryngology - Head & Neck Surgery Volume 142 ; 2016 ; http://jamanetwork.com/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; JAMA Otolaryngology - Head & Neck Surgery Volume 143 ; 2017 ; http://jamanetwork.com/ ; >
-    au < crawling ; exists ; 2018 ; JAMA Otolaryngology - Head & Neck Surgery Volume 144 ; 2018 ; https://jamanetwork.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; JAMA Otolaryngology - Head & Neck Surgery Volume 144 ; 2018 ; https://jamanetwork.com/ ; >
 
   }
 
@@ -300,7 +300,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; JAMA: The Journal of the American Medical Association Volume 313-314 ; 2015 ; https://jamanetwork.com/ ; >
     au < finished ; crawling ; 2016 ; JAMA: The Journal of the American Medical Association Volume 315-316 ; 2016 ; http://jamanetwork.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; JAMA: The Journal of the American Medical Association Volume 317-318 ; 2017 ; http://jamanetwork.com/ ; >
-    au < crawling ; exists ; 2018 ; JAMA: The Journal of the American Medical Association Volume 319-320 ; 2018 ; https://jamanetwork.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; JAMA: The Journal of the American Medical Association Volume 319-320 ; 2018 ; https://jamanetwork.com/ ; >
 
   }
 

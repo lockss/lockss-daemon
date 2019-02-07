@@ -340,7 +340,7 @@
     au < finished ; finished ; 2015 ; 2015 ; Aktuelle Urologie Volume 46 ; 46 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Aktuelle Urologie Volume 47 ; 47 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Aktuelle Urologie Volume 48 ; 48 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Aktuelle Urologie Volume 49 ; 49 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Aktuelle Urologie Volume 49 ; 49 ; >
 
    }
 
@@ -991,7 +991,7 @@
    au < finished ; finished ; 2015 ; 2015 ; Dialyse aktuell Volume 10 ; 10 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; exists ; 2016 ; 2016 ; Dialyse aktuell Volume 11 ; 11 ; >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Dialyse aktuell Volume 12 ; 12 ; >
-   au < crawling ; exists ; 2018 ; 2018 ; Dialyse aktuell Volume 13 ; 13 ; >
+   au < deepCrawl ; exists ; 2018 ; 2018 ; Dialyse aktuell Volume 13 ; 13 ; >
 
   }
 
@@ -1273,7 +1273,7 @@
    au < zapped ; finished ; 2015 ; 2015 ; Endoscopy Volume 47 ; 47 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2016 ; 2016 ; Endoscopy Volume 48 ; 48 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Endoscopy Volume 49 ; 49 ; >
-   au < crawling ; exists ; 2018 ; 2018 ; Endoscopy Volume 50 ; 50 ; >
+   au < deepCrawl ; exists ; 2018 ; 2018 ; Endoscopy Volume 50 ; 50 ; >
 
   }
 
@@ -1977,7 +1977,7 @@
    au < finished ; finished ; 2015 ; 2015 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 47 ; 47 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; down ; 2016 ; 2016 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 48 ; 48 ;  >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 49 ; 49 ; >
-   au < crawling ; exists ; 2018 ; 2018 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 50 ; 50 ; >
+   au < deepCrawl ; exists ; 2018 ; 2018 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 50 ; 50 ; >
 
   }
 
@@ -2240,7 +2240,7 @@
    au < finished ; finished ; 2015 ; 2015 ; Informationen aus Orthodontie & Kieferorthopädie Volume 47 ; 47 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; down ; 2016 ; 2016 ; Informationen aus Orthodontie & Kieferorthopädie Volume 48 ; 48 ;  >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Informationen aus Orthodontie & Kieferorthopädie Volume 49 ; 49 ; >
-   au < crawling ; exists ; 2018 ; 2018 ; Informationen aus Orthodontie & Kieferorthopädie Volume 50 ; 50 ; >
+   au < deepCrawl ; exists ; 2018 ; 2018 ; Informationen aus Orthodontie & Kieferorthopädie Volume 50 ; 50 ; >
 
   }
 
@@ -2545,7 +2545,7 @@
     #years = 2017
 
    au < deepCrawl ; exists ; 2017 ; 2017 ; Journal of Academic Ophtalmology Volume 9 ; 9 ; >
-   au < crawling ; exists ; 2018 ; 2018 ; Journal of Academic Ophtalmology Volume 10 ; 10 ; >
+   au < deepCrawl ; exists ; 2018 ; 2018 ; Journal of Academic Ophtalmology Volume 10 ; 10 ; >
 
   }
 
@@ -3058,7 +3058,7 @@
     au < finished ; finished ; 2015 ; 2015 ; Kardiologie up2date Volume 11 ; 11 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Kardiologie up2date Volume 12 ; 12 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Kardiologie up2date Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Kardiologie up2date Volume 14 ; 14 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Kardiologie up2date Volume 14 ; 14 ; >
 
   }
 
@@ -3406,7 +3406,7 @@
     au < finished ; finished ; 2015 ; 2015 ; Laryngo-Rhino-Otologie Volume 94 ; 94 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Laryngo-Rhino-Otologie Volume 95 ; 95 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Laryngo-Rhino-Otologie Volume 96 ; 96 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Laryngo-Rhino-Otologie Volume 97 ; 97 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Laryngo-Rhino-Otologie Volume 97 ; 97 ; >
 
   }
 
@@ -3650,7 +3650,7 @@
     au < finished ; finished ; 2015 ; 2015 ; Neuropediatrics Volume 46 ; 46 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; Neuropediatrics Volume 47 ; 47 ;  >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Neuropediatrics Volume 48 ; 48 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Neuropediatrics Volume 49 ; 49 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Neuropediatrics Volume 49 ; 49 ; >
 
   }
 
@@ -4007,7 +4007,7 @@
     au < finished ; finished ; 2015 ; 2015 ; Pädiatrie up2date Volume 10 ; 10 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Pädiatrie up2date Volume 11 ; 11 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Pädiatrie up2date Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Pädiatrie up2date Volume 13 ; 13 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Pädiatrie up2date Volume 13 ; 13 ; >
 
   }
 
@@ -4053,7 +4053,7 @@
     au < finished ; finished ; 2015 ; 2015 ; pferde spiegel Volume 18 ; 18 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; pferde spiegel Volume 19 ; 19 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; pferde spiegel Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; pferde spiegel Volume 21 ; 21 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; pferde spiegel Volume 21 ; 21 ; >
 
   }
 
@@ -4219,7 +4219,7 @@
     au < finished ; finished ; 2015 ; 2015 ; physioscience Volume 11 ; 11 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; physioscience Volume 12 ; 12 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; physioscience Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; physioscience Volume 14 ; 14 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; physioscience Volume 14 ; 14 ; >
 
   }
 
@@ -4743,7 +4743,7 @@
     #years = 2017-current
 
    au < deepCrawl ; exists ; 2017 ; 2017 ; Revista Chilena de Ortopedia y Traumatología Volume 1 ; 1 ; >
-   au < crawling ; exists ; 2018 ; 2018 ; Revista Chilena de Ortopedia y Traumatología Volume 2 ; 2 ; >
+   au < deepCrawl ; exists ; 2018 ; 2018 ; Revista Chilena de Ortopedia y Traumatología Volume 2 ; 2 ; >
 
   }
 
@@ -5279,7 +5279,7 @@
     au < finished ; finished ; 2015 ; 2015 ; Seminars in Speech and Language Volume 36 ; 36 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2016 ; 2016 ; Seminars in Speech and Language Volume 37 ; 37 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Seminars in Speech and Language Volume 38 ; 38 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Seminars in Speech and Language Volume 39 ; 39 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Seminars in Speech and Language Volume 39 ; 39 ; >
 
   }
 
@@ -5605,7 +5605,7 @@
    au < finished ; finished ; 2015 ; 2015 ; Suchttherapie Volume 16 ; 16 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2016 ; 2016 ; Suchttherapie Volume 17 ; 17 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Suchttherapie Volume 18 ; 18 ; >
-   au < crawling ; exists ; 2018 ; 2018 ; Suchttherapie Volume 19 ; 19 ; >
+   au < deepCrawl ; exists ; 2018 ; 2018 ; Suchttherapie Volume 19 ; 19 ; >
 
   }
 
@@ -5698,7 +5698,7 @@
    au < finished ; finished ; 2015 ; 2015 ; SYNLETT Volume 26 ; 26 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; SYNLETT Volume 27 ; 27 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; SYNLETT Volume 28 ; 28 ; >
-   au < crawling ; exists ; 2018 ; 2018 ; SYNLETT Volume 29 ; 29 ; >
+   au < deepCrawl ; exists ; 2018 ; 2018 ; SYNLETT Volume 29 ; 29 ; >
 
   }
 
@@ -6012,7 +6012,7 @@
     au < finished ; finished ; 2015 ; 2015 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 36 ; 36 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 37 ; 37 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 38 ; 38 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 39 ; 39 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 39 ; 39 ; >
 
   }
 
@@ -6250,7 +6250,7 @@
     au < finished ; finished ; 2015 ; 2015 ; Zeitschrift für Gastroenterologie Volume 53 ; 53 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Zeitschrift für Gastroenterologie Volume 54 ; 54 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Zeitschrift für Gastroenterologie Volume 55 ; 55 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Zeitschrift für Gastroenterologie Volume 56 ; 56 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Zeitschrift für Gastroenterologie Volume 56 ; 56 ; >
 
   }
 
@@ -6387,7 +6387,7 @@
     au < finished ; finished ; 2015 ; 2015 ; Zeitschrift für Komplementärmedizin Volume 7 ; 7 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Zeitschrift für Komplementärmedizin Volume 8 ; 8 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Zeitschrift für Komplementärmedizin Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Zeitschrift für Komplementärmedizin Volume 10 ; 10 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Zeitschrift für Komplementärmedizin Volume 10 ; 10 ; >
 
   }
 
@@ -6441,7 +6441,7 @@
     au < finished ; finished ; 2015 ; 2015 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 153 ; 153 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 154 ; 154 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 155 ; 155 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 156 ; 156 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 156 ; 156 ; >
 
   }
 
@@ -6898,7 +6898,7 @@
     comment[years] = 2017-current
 
     au < deepCrawl ; exists ; 2017 ; 2017 ; Indian Journal of Cardiovascular Disease in Women WINCARS Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Indian Journal of Cardiovascular Disease in Women WINCARS Volume 2 ; 2 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Indian Journal of Cardiovascular Disease in Women WINCARS Volume 2 ; 2 ; >
 
   }
 
@@ -7176,7 +7176,7 @@
     au < frozen ; exists ; 2015 ; 2015 ; Revista Iberoamericana de Cirugía de la Mano Volume 43 ; 43 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Revista Iberoamericana de Cirugía de la Mano Volume 44 ; 44 ; >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Revista Iberoamericana de Cirugía de la Mano Volume 45 ; 45 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Revista Iberoamericana de Cirugía de la Mano Volume 46 ; 46 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Revista Iberoamericana de Cirugía de la Mano Volume 46 ; 46 ; >
 
   }
 
@@ -7209,7 +7209,7 @@
     comment[years] = 2017-current
 
     au < deepCrawl ; exists ; 2017 ; 2017 ; TH Open Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; TH Open Volume 2 ; 2 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; TH Open Volume 2 ; 2 ; >
 
   }
 

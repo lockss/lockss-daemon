@@ -256,7 +256,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Breast Cancer: Basic and Clinical Research Volume 9 ; 9 ; bcba ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Breast Cancer: Basic and Clinical Research Volume 10 ; 10 ; bcba ; http://journals.sagepub.com/ ; >
     au < finished ; crawling ; 2017 ; Breast Cancer: Basic and Clinical Research Volume 11 ; 11 ; bcba ; http://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; Breast Cancer: Basic and Clinical Research Volume 12 ; 12 ; bcba ; http://journals.sagepub.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Breast Cancer: Basic and Clinical Research Volume 12 ; 12 ; bcba ; http://journals.sagepub.com/ ; >
 
   }
 
@@ -429,7 +429,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 9 ; 9 ; craa ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 10 ; 10 ; craa ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2017 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 11 ; 11 ; craa ; http://journals.sagepub.com/ ; >
-    au < crawling ; exists ; 2018 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 12 ; 12 ; craa ; http://journals.sagepub.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 12 ; 12 ; craa ; http://journals.sagepub.com/ ; >
 
   }
 
@@ -453,7 +453,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 8 ; 8 ; enta ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 9 ; 9 ; enta ; http://journals.sagepub.com/ ; >
     au < finished ; crawling ; 2017 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 10 ; 10 ; enta ; http://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 11 ; 11 ; enta ; http://journals.sagepub.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 11 ; 11 ; enta ; http://journals.sagepub.com/ ; >
 
   }
 
@@ -501,7 +501,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Gastroenterology Volume 8 ; 8 ; cmga ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Gastroenterology Volume 9 ; 9 ; cmga ; http://journals.sagepub.com/ ; >
     au < finished ; crawling ; 2017 ; Clinical Medicine Insights: Gastroenterology Volume 10 ; 10 ; cmga ; http://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; Clinical Medicine Insights: Gastroenterology Volume 11 ; 11 ; cmga ; http://journals.sagepub.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Clinical Medicine Insights: Gastroenterology Volume 11 ; 11 ; cmga ; http://journals.sagepub.com/ ; >
 
   }
 
@@ -550,7 +550,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Pathology Volume 8 ; 8 ; pata ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Pathology Volume 9 ; 9 ; pata ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2017 ; Clinical Medicine Insights: Pathology Volume 10 ; 10 ; pata ; http://journals.sagepub.com/ ; >
-    au < crawling ; exists ; 2018 ; Clinical Medicine Insights: Pathology Volume 11 ; 11 ; pata ; http://journals.sagepub.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Clinical Medicine Insights: Pathology Volume 11 ; 11 ; pata ; http://journals.sagepub.com/ ; >
 
   }
 
@@ -862,7 +862,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Genomics Insights Volume 8 ; 8 ; gena ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Genomics Insights Volume 9 ; 9 ; gena ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2017 ; Genomics Insights Volume 10 ; 10 ; gena ; http://journals.sagepub.com/ ; >
-    au < crawling ; exists ; 2018 ; Genomics Insights Volume 11 ; 11 ; gena ; http://journals.sagepub.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Genomics Insights Volume 11 ; 11 ; gena ; http://journals.sagepub.com/ ; >
 
   }
 
@@ -1139,7 +1139,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Medical Education and Curricular Development Volume 2 ; 2 ; mdea ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Journal of Medical Education and Curricular Development Volume 3 ; 3 ; mdea ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2017 ; Journal of Medical Education and Curricular Development Volume 4 ; 4 ; mdea ; http://journals.sagepub.com/ ; >
-    au < crawling ; exists ; 2018 ; Journal of Medical Education and Curricular Development Volume 5 ; 5 ; mdea ; http://journals.sagepub.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Journal of Medical Education and Curricular Development Volume 5 ; 5 ; mdea ; http://journals.sagepub.com/ ; >
 
   }
 
@@ -1275,7 +1275,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Open Journal of Cardiovascular Surgery Volume 7 ; 7 ; ojca ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Open Journal of Cardiovascular Surgery Volume 8 ; 8 ; ojca ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2017 ; Open Journal of Cardiovascular Surgery Volume 9 ; 9 ; ojca ; http://journals.sagepub.com/ ; >
-    au < crawling ; exists ; 2018 ; Open Journal of Cardiovascular Surgery Volume 10 ; 10 ; ojca ; http://journals.sagepub.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Open Journal of Cardiovascular Surgery Volume 10 ; 10 ; ojca ; http://journals.sagepub.com/ ; >
 
   }
 
@@ -1321,7 +1321,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Palliative Care: Research and Treatment Volume 8 ; 8 ; pcra ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Palliative Care: Research and Treatment Volume 9 ; 9 ; pcra ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2017 ; Palliative Care: Research and Treatment Volume 10 ; 10 ; pcra ; http://journals.sagepub.com/ ; >
-    au < crawling ; exists ; 2018 ; Palliative Care: Research and Treatment Volume 11 ; 11 ; pcra ; http://journals.sagepub.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Palliative Care: Research and Treatment Volume 11 ; 11 ; pcra ; http://journals.sagepub.com/ ; >
 
   }
 

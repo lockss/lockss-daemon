@@ -72,7 +72,7 @@
     au < frozen ; exists ; 2016 ; Breast Cancer Management Volume 5 ; 5 ; http://www.futuremedicine.com/ ; >
     au < frozen ; exists ; 2017 ; Breast Cancer Management Volume 6 ; 6 ; https://www.futuremedicine.com/ ; >
   
-    au < crawling ; exists ; 2018 ; Breast Cancer Management Volume 7 ; 7 ; https://www.futuremedicine.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Breast Cancer Management Volume 7 ; 7 ; https://www.futuremedicine.com/ ; >
   }
 
   {
@@ -563,7 +563,7 @@
     au < frozen ; exists ; 2016 ; Lung Cancer Management Volume 5 ; 5 ; http://www.futuremedicine.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Lung Cancer Management Volume 6 ; 6 ; https://www.futuremedicine.com/ ; >
     
-    au < crawling ; exists ; 2018 ; Lung Cancer Management Volume 7 ; 7 ; https://www.futuremedicine.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Lung Cancer Management Volume 7 ; 7 ; https://www.futuremedicine.com/ ; >
   }
 
   {
@@ -607,7 +607,7 @@
     au < frozen ; exists ; 2016 ; Nanomedicine Volume 11 ; 11 ; http://www.futuremedicine.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Nanomedicine Volume 12 ; 12 ; https://www.futuremedicine.com/ ; >
     
-    au < crawling ; exists ; 2018 ; Nanomedicine Volume 13 ; 13 ; https://www.futuremedicine.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Nanomedicine Volume 13 ; 13 ; https://www.futuremedicine.com/ ; >
   }
 
   {
@@ -627,7 +627,7 @@
     au < frozen ; exists ; 2015 ; Neurodegenerative Disease Management Volume 5 ; 5 ; http://www.futuremedicine.com/ ; >
     au < frozen ; exists ; 2016 ; Neurodegenerative Disease Management Volume 6 ; 6 ; http://www.futuremedicine.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Neurodegenerative Disease Management Volume 7 ; 7 ; https://www.futuremedicine.com/ ; >
-    au < crawling ; exists ; 2018 ; Neurodegenerative Disease Management Volume 8 ; 8 ; https://www.futuremedicine.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Neurodegenerative Disease Management Volume 8 ; 8 ; https://www.futuremedicine.com/ ; >
 
   }
 

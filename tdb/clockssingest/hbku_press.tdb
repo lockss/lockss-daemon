@@ -228,7 +228,7 @@
     plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
     param[journal_id] = jist
 
-    au < crawling ; exists ; 2018 ; Journal of Information Studies & Technology Volume 2018 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Journal of Information Studies & Technology Volume 2018 ; 2018 ; >
 
   }
   
@@ -365,7 +365,7 @@
 
       au < finished ; finished ; 2014 ; Qatar Foundation Annual Research Conference Proceedings Volume 1 ; 1 ; >
       au < finished ; crawling ; 2016 ; Qatar Foundation Annual Research Conference Proceedings Volume 2016 ; 2016 ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2018 ; Qatar Foundation Annual Research Conference Proceedings Volume 2018 ; 2018 ; >
+      au < deepCrawl ; exists ; 2018 ; Qatar Foundation Annual Research Conference Proceedings Volume 2018 ; 2018 ; >
 
   }
 
