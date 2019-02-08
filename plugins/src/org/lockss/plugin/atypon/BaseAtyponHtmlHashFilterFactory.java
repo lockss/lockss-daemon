@@ -153,7 +153,7 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttribute("div", "class", "ui-helper-hidden-accessible"),
     // invisible jump to form whose choice labels have changed
     HtmlNodeFilters.tagWithAttribute("div", "class", "sectionJumpTo"),
-    HtmlNodeFilters.tagWithAttribute("div", "class", "article__references"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "references"),
     // we don't need to leave in the showCitFormats part of this for hashing
     HtmlNodeFilters.tagWithAttribute("div", "class", "articleTools"),
     // toc - article type seems to change and this isn't important

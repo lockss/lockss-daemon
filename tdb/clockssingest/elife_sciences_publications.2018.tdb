@@ -6,8 +6,8 @@
     info[poller] = 2
   >
 
-  plugin = needs.plugin
-  #############plugin = org.lockss.plugin.elifesciences.ClockssELifeSciences2018Plugin  ###########plugin not checked into repository as of 6/11/2018
+  
+  plugin = org.lockss.plugin.elifesciences.ClockssELifeSciences2018Plugin
   implicit < status ; status2 ; year ; name ; param[year] ; param[month] ; hidden[proxy] >
   
   

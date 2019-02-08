@@ -49,7 +49,7 @@
     au < finished ; crawling ; 2016 ; Annales de l’Institut Henri Poincaré D Volume 3 ; 3 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; Annales de l’Institut Henri Poincaré D Volume 4 ; 4 ; >
     
-    au < crawling ; exists ; 2018 ; Annales de l’Institut Henri Poincaré D Volume 5 ; 5 ; >
+    au < deepCrawl ; exists ; 2018 ; Annales de l’Institut Henri Poincaré D Volume 5 ; 5 ; >
   }
 
   {
@@ -86,7 +86,7 @@
     au < finished ; crawling ; 2016 ; Commentarii Mathematici Helvetici Volume 91 ; 91 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2017 ; Commentarii Mathematici Helvetici Volume 92 ; 92 ; >
     
-    au < crawling ; exists ; 2018 ; Commentarii Mathematici Helvetici Volume 93 ; 93 ; >
+    au < deepCrawl ; exists ; 2018 ; Commentarii Mathematici Helvetici Volume 93 ; 93 ; >
   }
 
   {
@@ -242,7 +242,7 @@
     au < finished ; crawling ; 2016 ; Journal of Fractal Geometry Volume 3 ; 3 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2017 ; Journal of Fractal Geometry Volume 4 ; 4 ; >
     
-    au < crawling ; exists ; 2018 ; Journal of Fractal Geometry Volume 5 ; 5 ; >
+    au < deepCrawl ; exists ; 2018 ; Journal of Fractal Geometry Volume 5 ; 5 ; >
   }
 
   {
@@ -292,7 +292,7 @@
     au < finished ; crawling ; 2016 ; Journal of Spectral Theory Volume 6 ; 6 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; Journal of Spectral Theory Volume 7 ; 7 ; >
     
-    au < crawling ; exists ; 2018 ; Journal of Spectral Theory Volume 8 ; 8 ; >
+    au < deepCrawl ; exists ; 2018 ; Journal of Spectral Theory Volume 8 ; 8 ; >
   }
 
   {
@@ -448,7 +448,7 @@
     au < finished ; crawling ; 2016 ; Publications of the Research Institute for Mathematical Sciences Volume 52 ; 52 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Publications of the Research Institute for Mathematical Sciences Volume 53 ; 53 ; >
     
-    au < crawling ; exists ; 2018 ; Publications of the Research Institute for Mathematical Sciences Volume 54 ; 54 ; >
+    au < deepCrawl ; exists ; 2018 ; Publications of the Research Institute for Mathematical Sciences Volume 54 ; 54 ; >
   }
 
   {
@@ -508,8 +508,8 @@
     au < deepCrawl ; exists ; 2017 ; Rendiconti del Seminario Matematico della Università di Padova Volume 137 ; 137 ; >
     au < finished ; crawling ; 2017 ; Rendiconti del Seminario Matematico della Università di Padova Volume 138 ; 138 ; reingest3.clockss.org:8083 >
     
-    au < crawling ; exists ; 2018 ; Rendiconti del Seminario Matematico della Università di Padova Volume 139 ; 139 ; >
-    au < crawling ; exists ; 2018 ; Rendiconti del Seminario Matematico della Università di Padova Volume 140 ; 140 ; >
+    au < deepCrawl ; exists ; 2018 ; Rendiconti del Seminario Matematico della Università di Padova Volume 139 ; 139 ; >
+    au < deepCrawl ; exists ; 2018 ; Rendiconti del Seminario Matematico della Università di Padova Volume 140 ; 140 ; >
   }
 
   {
@@ -537,7 +537,7 @@
     au < finished ; crawling ; 2016 ; Rendiconti Lincei - Matematica e Applicazioni Volume 27 ; 27 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; Rendiconti Lincei - Matematica e Applicazioni Volume 28 ; 28 ; >
     
-    au < crawling ; exists ; 2018 ; Rendiconti Lincei - Matematica e Applicazioni Volume 29 ; 29 ; >
+    au < deepCrawl ; exists ; 2018 ; Rendiconti Lincei - Matematica e Applicazioni Volume 29 ; 29 ; >
   }
 
   {
@@ -586,7 +586,7 @@
     au < finished ; crawling ; 2016 ; Revista Matemática Iberoamericana Volume 32 ; 32 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Revista Matemática Iberoamericana Volume 33 ; 33 ; >
     
-    au < crawling ; exists ; 2018 ; Revista Matemática Iberoamericana Volume 34 ; 34 ; >
+    au < deepCrawl ; exists ; 2018 ; Revista Matemática Iberoamericana Volume 34 ; 34 ; >
   }
 
   {

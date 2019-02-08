@@ -18,7 +18,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>35</string>
+    <string>36</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -109,6 +109,12 @@
     </list>
   </entry>
   <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^https?://%s/doi/(pdf|pdfplus|full)/[.0-9]+/[^\?&amp;]+$", url_host(base_url)</string>
+    </list>
+  </entry>
+  <entry>
     <string>au_def_new_content_crawl</string>
     <long>1209600000</long>
   </entry>
@@ -126,12 +132,7 @@
     <string>host:base_url</string>
   </entry>
   <entry>
-    <string>au_substance_url_pattern</string>
-    <list>
-      <string>"^https?://%s/doi/(pdf|pdfplus|full)/[.0-9]+/[^\?&amp;]+$", url_host(base_url)</string>
-    </list>
-  </entry>
-  <entry>
+<!--  this is actually used to look for redirection  -->
     <string>plugin_substance_predicate_factory</string>
     <string>org.lockss.plugin.atypon.BaseAtyponSubstancePredicateFactory</string>
   </entry>
@@ -153,6 +154,31 @@
     <string>au_url_normalizer</string>
     <string>org.lockss.plugin.atypon.BaseAtyponUrlNormalizer</string>
   </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <!-- Invalid content-type file. Captures cases like html returned instead of PDF 
+        Make no store/no_fail due to html returned for http://caseconnector.jbjs.org/content/2/2/e16
+        we will count on polls to catch errors where no content was stored -->
+      <string>org.lockss.plugin.ContentValidationException=org.lockss.plugin.atypon.BaseAtyponHttpResponseHandler</string>
+      <string>500=org.lockss.plugin.atypon.BaseAtyponHttpResponseHandler</string>
+    </list>
+  </entry>
+  <!--  tell the default base.MimeTypeContentValidator what url patterns to validate by mime type -->
+  <entry>
+    <string>au_url_mime_validation_map</string>
+    <list>
+      <string>/doi/pdf(plus)?/, application/pdf</string>
+      <string>/doi/(abs|full)/, text/html</string>
+    </list>
+  </entry>
+  <!-- Validator factory for text MIME types -->
+  <!--  and this would no longer be necessary
+  <entry>
+    <string>text/*_content_validator_factory</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponContentValidator$Factory</string>
+  </entry>
+  -->
   <entry>
     <string>text/html_link_extractor_factory</string>
     <string>org.lockss.plugin.atypon.BaseAtyponHtmlLinkExtractorFactory</string>
@@ -211,21 +237,6 @@
       </entry>
     </map>
   </entry>
-  <entry>
-    <string>plugin_cache_result_list</string>
-    <list>
-      <!-- Invalid content-type file. Captures cases like html returned instead of PDF 
-        Make no store/no_fail due to html returned for http://caseconnector.jbjs.org/content/2/2/e16
-        we will count on polls to catch errors where no content was stored -->
-      <string>org.lockss.plugin.ContentValidationException=org.lockss.plugin.atypon.BaseAtyponHttpResponseHandler</string>
-      <string>500=org.lockss.plugin.atypon.BaseAtyponHttpResponseHandler</string>
-    </list>
-  </entry>
-  <entry>
-    <!-- Validator factory for text MIME types -->
-    <string>text/*_content_validator_factory</string>
-    <string>org.lockss.plugin.atypon.BaseAtyponContentValidator$Factory</string>
-  </entry>
   <!-- au_permitted_host_pattern:
        Necessary for using global hosts (eg cdn) (instead of using base_url2),
        Until unwieldy, confine these settings to BaseAtyponParent
@@ -243,8 +254,8 @@
          OR /(img|css|js)/ if ends .css, .js, etc 
          -->
     <list>
-    <string>://[^/]+/(templates/jsp|(css|img|js)Jawr|pb-assets|resources|sda|wro)/</string>
-    <string>/(assets|css|img|js|wro)/.+\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$</string>
+      <string>://[^/]+/(templates/jsp|(css|img|js)Jawr|pb-assets|resources|sda|wro)/</string>
+      <string>/(assets|css|img|js|wro)/.+\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$</string>
     </list>
   </entry>
   <!-- don't worry about polling for those low-importance files that will 

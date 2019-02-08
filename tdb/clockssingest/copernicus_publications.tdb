@@ -96,7 +96,7 @@
       au < finished ; finished ; 2015 ; 2015 ; Advances in Radio Science 2014 Volume 13 ; 13 ; http://www.adv-radio-sci.net/ ; http://www.advances-in-radio-science.net/ ; >
       au < frozen ; exists ; 2016 ; 2016 ; Advances in Radio Science 2015 Volume 14 ; 14 ; https://www.adv-radio-sci.net/ ; https://www.advances-in-radio-science.net/ ; >
       au < deepCrawl ; exists ; 2017 ; 2017 ; Advances in Radio Science 2016 Volume 15 ; 15 ; https://www.adv-radio-sci.net/ ; https://www.advances-in-radio-science.net/ ; >
-      au < crawling ; exists ; 2018 ; 2018 ; Advances in Radio Science 2017 Volume 16 ; 16 ; https://www.adv-radio-sci.net/ ; https://www.advances-in-radio-science.net/ ; >
+      au < deepCrawl ; exists ; 2018 ; 2018 ; Advances in Radio Science 2017 Volume 16 ; 16 ; https://www.adv-radio-sci.net/ ; https://www.advances-in-radio-science.net/ ; >
 
    }
 
@@ -391,7 +391,7 @@
       au < zapped ; finished ; 2015 ; 2015 ; Biogeosciences Volume 12 ; 12 ; http://www.biogeosciences.net/ ; http://www.biogeosciences.net/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2016 ; 2016 ; Biogeosciences Volume 13 ; 13 ; http://www.biogeosciences.net/ ; http://www.biogeosciences.net/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2017 ; 2017 ; Biogeosciences Volume 14 ; 14 ; https://www.biogeosciences.net/ ; https://www.biogeosciences.net/ ; >
-      au < crawling ; exists ; 2018 ; 2018 ; Biogeosciences Volume 15 ; 15 ; https://www.biogeosciences.net/ ; https://www.biogeosciences.net/ ; >
+      au < deepCrawl ; exists ; 2018 ; 2018 ; Biogeosciences Volume 15 ; 15 ; https://www.biogeosciences.net/ ; https://www.biogeosciences.net/ ; >
 
    }
 
@@ -569,7 +569,7 @@
       au < finished ; finished ; 2015 ; 2015 ; Earth System Dynamics Volume 6 ; 6 ; http://www.earth-syst-dynam.net/ ; http://www.earth-system-dynamics.net/ ; >
       au < finished ; crawling ; 2016 ; 2016 ; Earth System Dynamics Volume 7 ; 7 ; http://www.earth-syst-dynam.net/ ; http://www.earth-system-dynamics.net/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; 2017 ; Earth System Dynamics Volume 8 ; 8 ; https://www.earth-syst-dynam.net/ ; https://www.earth-system-dynamics.net/ ; >
-      au < crawling ; exists ; 2018 ; 2018 ; Earth System Dynamics Volume 9 ; 9 ; https://www.earth-syst-dynam.net/ ; https://www.earth-system-dynamics.net/ ; >
+      au < deepCrawl ; exists ; 2018 ; 2018 ; Earth System Dynamics Volume 9 ; 9 ; https://www.earth-syst-dynam.net/ ; https://www.earth-system-dynamics.net/ ; >
 
    }
 
@@ -744,7 +744,7 @@
       au < frozen ; exists ; 2015 ; 2015 ; E&G Quaternary Science Journal Volume 64 ; 64 ; https://www.eg-quaternary-sci-j.net/ ; https://www.eg-quaternary-science-journal.net/ ; >
       au < frozen ; exists ; 2016 ; 2016 ; E&G Quaternary Science Journal Volume 65 ; 65 ; https://www.eg-quaternary-sci-j.net/ ; https://www.eg-quaternary-science-journal.net/ ; >
       au < finished ; crawling ; 2017 ; 2017 ; E&G Quaternary Science Journal Volume 66 ; 66 ; https://www.eg-quaternary-sci-j.net/ ; https://www.eg-quaternary-science-journal.net/ ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2018 ; 2018 ; E&G Quaternary Science Journal Volume 67 ; 67 ; https://www.eg-quaternary-sci-j.net/ ; https://www.eg-quaternary-science-journal.net/ ; >
+      au < deepCrawl ; exists ; 2018 ; 2018 ; E&G Quaternary Science Journal Volume 67 ; 67 ; https://www.eg-quaternary-sci-j.net/ ; https://www.eg-quaternary-science-journal.net/ ; >
 
   }
 
@@ -906,7 +906,7 @@
       au < finished ; finished ; 2015 ; 2015 ; Geoscientific Instrumentation, Methods and Data Systems Volume 4 ; 4 ; http://www.geosci-instrum-method-data-syst.net/ ; http://www.geoscientific-instrumentation-methods-and-data-systems.net/ ; >
       au < finished ; crawling ; 2016 ; 2016 ; Geoscientific Instrumentation, Methods and Data Systems Volume 5 ; 5 ; http://www.geosci-instrum-method-data-syst.net/ ; http://www.geoscientific-instrumentation-methods-and-data-systems.net/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2017 ; 2017 ; Geoscientific Instrumentation, Methods and Data Systems Volume 6 ; 6 ; https://www.geosci-instrum-method-data-syst.net/ ; https://www.geoscientific-instrumentation-methods-and-data-systems.net/ ; >
-      au < crawling ; exists ; 2018 ; 2018 ; Geoscientific Instrumentation, Methods and Data Systems Volume 7 ; 7 ; https://www.geosci-instrum-method-data-syst.net/ ; https://www.geoscientific-instrumentation-methods-and-data-systems.net/ ; >
+      au < deepCrawl ; exists ; 2018 ; 2018 ; Geoscientific Instrumentation, Methods and Data Systems Volume 7 ; 7 ; https://www.geosci-instrum-method-data-syst.net/ ; https://www.geoscientific-instrumentation-methods-and-data-systems.net/ ; >
 
    }
 
@@ -1452,7 +1452,7 @@
       au < finished ; finished ; 2015 ; 2015 ; Nonlinear Processes in Geophysics Volume 22 ; 22 ; http://www.nonlin-processes-geophys.net/ ; http://www.nonlinear-processes-in-geophysics.net/ ; >
       au < frozen ; exists ; 2016 ; 2016 ; Nonlinear Processes in Geophysics Volume 23 ; 23 ; https://www.nonlin-processes-geophys.net/ ; https://www.nonlinear-processes-in-geophysics.net/ ; >
       au < deepCrawl ; exists ; 2017 ; 2017 ; Nonlinear Processes in Geophysics Volume 24 ; 24 ; https://www.nonlin-processes-geophys.net/ ; https://www.nonlinear-processes-in-geophysics.net/ ; >
-      au < crawling ; exists ; 2018 ; 2018 ; Nonlinear Processes in Geophysics Volume 25 ; 25 ; https://www.nonlin-processes-geophys.net/ ; https://www.nonlinear-processes-in-geophysics.net/ ; >
+      au < deepCrawl ; exists ; 2018 ; 2018 ; Nonlinear Processes in Geophysics Volume 25 ; 25 ; https://www.nonlin-processes-geophys.net/ ; https://www.nonlinear-processes-in-geophysics.net/ ; >
 
    }
 
@@ -1494,7 +1494,7 @@
       au < finished ; finished ; 2015 ; 2015 ; Ocean Science Volume 11 ; 11 ; http://www.ocean-sci.net/ ; http://www.ocean-science.net/ ; >
       au < frozen ; exists ; 2016 ; 2016 ; Ocean Science Volume 12 ; 12 ; https://www.ocean-sci.net/ ; https://www.ocean-science.net/ ; >
       au < deepCrawl ; exists ; 2017 ; 2017 ; Ocean Science Volume 13 ; 13 ; https://www.ocean-sci.net/ ; https://www.ocean-science.net/ ; >
-      au < crawling ; exists ; 2018 ; 2018 ; Ocean Science Volume 14 ; 14 ; https://www.ocean-sci.net/ ; https://www.ocean-science.net/ ; >
+      au < deepCrawl ; exists ; 2018 ; 2018 ; Ocean Science Volume 14 ; 14 ; https://www.ocean-sci.net/ ; https://www.ocean-science.net/ ; >
 
    }
 
@@ -1770,7 +1770,7 @@
       au < zapped ; finished ; 2015 ; 2015 ; The Cryosphere Volume 9 ; 9 ; http://www.the-cryosphere.net/ ; http://www.the-cryosphere.net/ ; >
       au < finished ; crawling ; 2016 ; 2016 ; The Cryosphere Volume 10 ; 10 ; http://www.the-cryosphere.net/ ; http://www.the-cryosphere.net/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; 2017 ; The Cryosphere Volume 11 ; 11 ; https://www.the-cryosphere.net/ ; https://www.the-cryosphere.net/ ; >
-      au < crawling ; exists ; 2018 ; 2018 ; The Cryosphere Volume 12 ; 12 ; https://www.the-cryosphere.net/ ; https://www.the-cryosphere.net/ ; >
+      au < deepCrawl ; exists ; 2018 ; 2018 ; The Cryosphere Volume 12 ; 12 ; https://www.the-cryosphere.net/ ; https://www.the-cryosphere.net/ ; >
 
    }
 
