@@ -71,12 +71,14 @@ public class Pub2WebHttpsUrlConsumerFactory extends Pub2WebUrlConsumerFactory {
     }
 
     public boolean shouldStoreAtOrigUrlVanilla() {
+
       return AuUtil.isBaseUrlHttp(au)
-             && fud.redirectUrls != null
-             && fud.fetchUrl.equals(fud.redirectUrls.get(0))
-             && UrlUtil.isHttpUrl(fud.origUrl)
-             && UrlUtil.isHttpsUrl(fud.fetchUrl)
-             && UrlUtil.stripProtocol(fud.origUrl).equals(UrlUtil.stripProtocol(fud.fetchUrl));
+              && fud.redirectUrls != null
+              && fud.redirectUrls.size() >= 1
+              && UrlUtil.isHttpUrl(fud.origUrl)
+              && UrlUtil.isHttpsUrl(fud.fetchUrl)
+              && UrlUtil.stripProtocol(fud.origUrl).equals(UrlUtil.stripProtocol(fud.fetchUrl));
+
     }
   }
 

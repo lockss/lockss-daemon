@@ -158,10 +158,12 @@ public class Pub2WebUrlConsumerFactory implements UrlConsumerFactory {
      * @since 1.67.5
      */
     protected boolean shouldStoreRedirectsAtOrigUrl() {
+
       boolean should =  fud.redirectUrls != null
-          && fud.redirectUrls.get(0).equals(fud.fetchUrl)
-          && destFullTextPat.matcher(fud.fetchUrl).find()
-          && origFullTextPat.matcher(fud.origUrl).find();
+              && fud.redirectUrls.size() >= 1
+              && destFullTextPat.matcher(fud.fetchUrl).find()
+              && origFullTextPat.matcher(fud.origUrl).find();
+
       if (!should) {
         log.debug3("NOT swallowing this redirect");
       }
