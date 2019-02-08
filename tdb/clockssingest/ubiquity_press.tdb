@@ -21,7 +21,7 @@
       comment[publisher] = IJS Publishing Group
 #      param[base_url] = https://www.amscasereports.com/
 
-      au < crawling ; exists ; 2018 ; 1 ; Annals of Medicine and Surgery Case Reports Volume 2018 ; 2018 ; https://www.amscasereports.com/ ; >
+      au < deepCrawl ; exists ; 2018 ; 1 ; Annals of Medicine and Surgery Case Reports Volume 2018 ; 2018 ; https://www.amscasereports.com/ ; >
 
   }
 
@@ -259,7 +259,7 @@
       au < finished ; finished ; 2015 ; 1 ; Open Library of Humanities Volume 2015 ; 2015 ; https://olh.openlibhums.org/ ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2016 ; 2 ; Open Library of Humanities Volume 2016 ; 2016 ; https://olh.openlibhums.org/ ; >
       au < deepCrawl ; exists ; 2017 ; 3 ; Open Library of Humanities Volume 2017 ; 2017 ; https://olh.openlibhums.org/ ; >
-      au < crawling ; exists ; 2018 ; 4 ; Open Library of Humanities Volume 2018 ; 2018 ; https://olh.openlibhums.org/ ; >
+      au < deepCrawl ; exists ; 2018 ; 4 ; Open Library of Humanities Volume 2018 ; 2018 ; https://olh.openlibhums.org/ ; >
 
   }
 
@@ -315,7 +315,7 @@
       comment[publisher] = Open Library of Humanities
 #      param[base_url] = https://openscreensjournal.com/
 
-      au < crawling ; exists ; 2018 ; 1 ; Open Screens Volume 2018 ; 2018 ; https://openscreensjournal.com/ ; >
+      au < deepCrawl ; exists ; 2018 ; 1 ; Open Screens Volume 2018 ; 2018 ; https://openscreensjournal.com/ ; >
 
   }
 
@@ -782,7 +782,7 @@
       au < frozen ; exists ; 2015 ; 16 ; International Journal of Integrated Care Volume 2015 ; 2015 ; http://www.ijic.org/ ; >
       au < finished ; crawling ; 2016 ; 17 ; International Journal of Integrated Care Volume 2016 ; 2016 ; http://www.ijic.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2017 ; 18 ; International Journal of Integrated Care Volume 2017 ; 2017 ; http://www.ijic.org/ ; >
-      au < crawling ; exists ; 2018 ; 19 ; International Journal of Integrated Care Volume 2018 ; 2018 ; https://www.ijic.org/ ; >
+      au < deepCrawl ; exists ; 2018 ; 19 ; International Journal of Integrated Care Volume 2018 ; 2018 ; https://www.ijic.org/ ; >
 
   }
 
@@ -926,7 +926,7 @@
       au < frozen ; exists ; 2015 ; 2015 ; Journal of Interactive Media in Education Volume 2015 ; 2015 ; https://jime.open.ac.uk/ ; >
       au < doNotProcess ; exists ; 2016 ; 2016 ; Journal of Interactive Media in Education Volume 2016 ; 2016 ; https://jime.open.ac.uk/ ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2017 ; 2017 ; Journal of Interactive Media in Education Volume 2017 ; 2017 ; https://jime.open.ac.uk/ ; > #no www
-      au < crawling ; exists ; 2018 ; 2018 ; Journal of Interactive Media in Education Volume 2018 ; 2018 ; https://jime.open.ac.uk/ ; > #no www
+      au < deepCrawl ; exists ; 2018 ; 2018 ; Journal of Interactive Media in Education Volume 2018 ; 2018 ; https://jime.open.ac.uk/ ; > #no www
     }
   }
 
@@ -1368,7 +1368,7 @@
       au < doNotProcess ; exists ; 2015 ; 4 ; Secularism and Nonreligion Volume 2015 ; 2015 ; https://secularismandnonreligion.org/ ; >
       au < frozen ; exists ; 2016 ; 5 ; Secularism and Nonreligion Volume 2016 ; 2016 ; https://secularismandnonreligion.org/ ; >
       au < deepCrawl ; exists ; 2017 ; 6 ; Secularism and Nonreligion Volume 2017 ; 2017 ; https://secularismandnonreligion.org/ ; >
-      au < crawling ; exists ; 2018 ; 7 ; Secularism and Nonreligion Volume 2018 ; 2018 ; https://secularismandnonreligion.org/ ; >
+      au < deepCrawl ; exists ; 2018 ; 7 ; Secularism and Nonreligion Volume 2018 ; 2018 ; https://secularismandnonreligion.org/ ; >
 
     }
   }
@@ -1437,7 +1437,7 @@
 #      param[base_url] = https://openhardware.metajnl.com/
 
       au < deepCrawl ; exists ; 2017 ; 1 ; Journal of Open Hardware Volume 2017 ; 2017 ; https://openhardware.metajnl.com/ ; >
-      au < crawling ; exists ; 2018 ; 2 ; Journal of Open Hardware Volume 2018 ; 2018 ; https://openhardware.metajnl.com/ ; >
+      au < deepCrawl ; exists ; 2018 ; 2 ; Journal of Open Hardware Volume 2018 ; 2018 ; https://openhardware.metajnl.com/ ; >
 
   }
   {
@@ -1553,7 +1553,7 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://metaphysicsjournal.com/
 
-      au < crawling ; exists ; 2018 ; 1 ; Metaphysics Volume 2018 ; 2018 ; https://metaphysicsjournal.com/ ; >
+      au < deepCrawl ; exists ; 2018 ; 1 ; Metaphysics Volume 2018 ; 2018 ; https://metaphysicsjournal.com/ ; >
 
   }
 
@@ -1891,7 +1891,7 @@
       au < frozen ; exists ; 2015 ; 9 ; International Journal of the Commons Volume 2015 ; 2015 ; https://www.thecommonsjournal.org/ ; >
       au < frozen ; exists ; 2016 ; 10 ; International Journal of the Commons Volume 2016 ; 2016 ; https://www.thecommonsjournal.org/ ; >
       au < deepCrawl ; exists ; 2017 ; 11 ; International Journal of the Commons Volume 2017 ; 2017 ; https://www.thecommonsjournal.org/ ; >
-      au < crawling ; exists ; 2018 ; 12 ; International Journal of the Commons Volume 2018 ; 2018 ; https://www.thecommonsjournal.org/ ; >
+      au < deepCrawl ; exists ; 2018 ; 12 ; International Journal of the Commons Volume 2018 ; 2018 ; https://www.thecommonsjournal.org/ ; >
 
   }
 
@@ -2260,7 +2260,7 @@
 #      param[base_url] = https://www.euroslajournal.org/
 
       au < frozen ; exists ; 2017 ; 1 ; Journal of the European Second Language Association Volume 2017 ; 2017 ; https://www.euroslajournal.org/ ; >
-      au < crawling ; exists ; 2018 ; 2 ; Journal of the European Second Language Association Volume 2018 ; 2018 ; https://www.euroslajournal.org/ ; >
+      au < deepCrawl ; exists ; 2018 ; 2 ; Journal of the European Second Language Association Volume 2018 ; 2018 ; https://www.euroslajournal.org/ ; >
 
   }
 
@@ -2274,7 +2274,7 @@
       comment[publisher] = White Rose University Press
 #      param[base_url] = https://www.ujpir-journal.com/
 
-      au < crawling ; exists ; 2018 ; 1 ; Undergraduate Journal of Politics and International Relations Volume 2018 ; 2018 ; https://www.ujpir-journal.com/ ; >
+      au < deepCrawl ; exists ; 2018 ; 1 ; Undergraduate Journal of Politics and International Relations Volume 2018 ; 2018 ; https://www.ujpir-journal.com/ ; >
 
   }
 }

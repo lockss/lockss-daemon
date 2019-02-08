@@ -562,7 +562,7 @@
     au < manifest ; exists ; 2015 ; 2015 ; The American Journal of Clinical Nutrition Volume 101-102 ; 101-102 ; >
     au < frozen ; exists ; 2016 ; 2016 ; The American Journal of Clinical Nutrition Volume 103-104 ; 103-104 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The American Journal of Clinical Nutrition Volume 105-106 ; 105-106 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; The American Journal of Clinical Nutrition Volume 107-108 ; 107-108 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; The American Journal of Clinical Nutrition Volume 107-108 ; 107-108 ; >
 
   }
 
@@ -1754,7 +1754,7 @@
     au < manifest ; exists ; 2015 ; 2015 ; The Auk: Ornithological Advances Volume 130 ; 130 ; >
     au < testing ; exists ; 2016 ; 2016 ; The Auk: Ornithological Advances Volume 131 ; 131 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Auk: Ornithological Advances Volume 132 ; 132 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; The Auk: Ornithological Advances Volume 133 ; 133 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; The Auk: Ornithological Advances Volume 133 ; 133 ; >
 
   }
 
@@ -2141,7 +2141,7 @@
     au < manifest ; exists ; 2015 ; 2015 ; Biological Journal of the Linnean Society Volume 114-116 ; 114-116 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Biological Journal of the Linnean Society Volume 117-119 ; 117-119 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Biological Journal of the Linnean Society Volume 120-122 ; 120-122 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; 2018 ; Biological Journal of the Linnean Society Volume 123-125 ; 123-125 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Biological Journal of the Linnean Society Volume 123-125 ; 123-125 ; >
 
   }
 
@@ -2609,7 +2609,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Briefings in Bioinformatics Volume 16 ; 16 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Briefings in Bioinformatics Volume 17 ; 17 ; > #configuration: not polling on ingest machines 12/6/18 ARO PDF issue
     au < finished ; crawling ; 2017 ; 2017 ; Briefings in Bioinformatics Volume 18 ; 18 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2018 ; 2018 ; Briefings in Bioinformatics Volume 19 ; 19 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Briefings in Bioinformatics Volume 19 ; 19 ; >
 
   }
 
@@ -2937,7 +2937,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Cambridge Journal of Regions, Economy and Society Volume 8 ; 8 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Cambridge Journal of Regions, Economy and Society Volume 9 ; 9 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Cambridge Journal of Regions, Economy and Society Volume 10 ; 10 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2018 ; 2018 ; Cambridge Journal of Regions, Economy and Society Volume 11 ; 11 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Cambridge Journal of Regions, Economy and Society Volume 11 ; 11 ; >
 
   }
 
@@ -3017,7 +3017,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Carcinogenesis Volume 36 ; 36 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Carcinogenesis Volume 37 ; 37 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Carcinogenesis Volume 38 ; 38 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Carcinogenesis Volume 39 ; 39 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Carcinogenesis Volume 39 ; 39 ; >
 
   }
 
@@ -3439,7 +3439,7 @@
 
     param[journal_id] = ccc
 
-    au < crawling ; exists ; 2018 ; 2018 ; Communication, Culture & Critique Volume 1 ; 1 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Communication, Culture & Critique Volume 1 ; 1 ; >
 
   }
 
@@ -3812,7 +3812,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; DNA Research Volume 22 ; 22 ; >
     au < frozen ; exists ; 2016 ; 2016 ; DNA Research Volume 23 ; 23 ; >
     au < finished ; crawling ; 2017 ; 2017 ; DNA Research Volume 24 ; 24 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; 2018 ; DNA Research Volume 25 ; 25 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; DNA Research Volume 25 ; 25 ; >
 
   }
 
@@ -10041,7 +10041,7 @@
     au < testing ; exists ; 2015 ; 2015 ; Journal of Law and the Biosciences Volume 2 ; 2 ; >
     au < testing ; exists ; 2016 ; 2016 ; Journal of Law and the Biosciences Volume 3 ; 3 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Journal of Law and the Biosciences Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Journal of Law and the Biosciences Volume 5 ; 5 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Journal of Law and the Biosciences Volume 5 ; 5 ; >
 
   }
 
@@ -11209,7 +11209,7 @@
 
     param[journal_id] = jvc
 
-    au < crawling ; exists ; 2018 ; 2018 ; Journal of Victorian Culture Volume 1 ; 1 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Journal of Victorian Culture Volume 1 ; 1 ; >
 
   }
 
@@ -11877,7 +11877,7 @@
     au < frozen ; exists ; 2015 ; 2015 ; London Review of International Law Volume 3 ; 3 ; >
     au < frozen ; exists ; 2016 ; 2016 ; London Review of International Law Volume 4 ; 4 ; >
     au < testing ; exists ; 2017 ; 2017 ; London Review of International Law Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; London Review of International Law Volume 6 ; 6 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; London Review of International Law Volume 6 ; 6 ; >
 
   }
 

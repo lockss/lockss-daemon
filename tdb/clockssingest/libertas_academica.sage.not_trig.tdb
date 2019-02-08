@@ -116,7 +116,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Bioinformatics and Biology Insights Volume 9 ; 9 ; bbia ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Bioinformatics and Biology Insights Volume 10 ; 10 ; bbia ; http://journals.sagepub.com/ ; >
     au < finished ; crawling ; 2017 ; Bioinformatics and Biology Insights Volume 11 ; 11 ; bbia ; http://journals.sagepub.com/ ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2018 ; Bioinformatics and Biology Insights Volume 12 ; 12 ; bbia ; http://journals.sagepub.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Bioinformatics and Biology Insights Volume 12 ; 12 ; bbia ; http://journals.sagepub.com/ ; >
 
   }
 
@@ -574,7 +574,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Pediatrics Volume 9 ; 9 ; pdia ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Pediatrics Volume 10 ; 10 ; pdia ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2017 ; Clinical Medicine Insights: Pediatrics Volume 11 ; 11 ; pdia ; http://journals.sagepub.com/ ; >
-    au < crawling ; exists ; 2018 ; Clinical Medicine Insights: Pediatrics Volume 12 ; 12 ; pdia ; http://journals.sagepub.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Clinical Medicine Insights: Pediatrics Volume 12 ; 12 ; pdia ; http://journals.sagepub.com/ ; >
 
   }
 
@@ -621,7 +621,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Reproductive Health Volume 9 ; 9 ; reha ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Reproductive Health Volume 10 ; 10 ; reha ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2017 ; Clinical Medicine Insights: Reproductive Health Volume 11 ; 11 ; reha ; http://journals.sagepub.com/ ; >
-    au < crawling ; exists ; 2018 ; Clinical Medicine Insights: Reproductive Health Volume 12 ; 12 ; reha ; http://journals.sagepub.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Clinical Medicine Insights: Reproductive Health Volume 12 ; 12 ; reha ; http://journals.sagepub.com/ ; >
 
   }
 
@@ -739,7 +739,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Drug Target Insights Volume 9 ; 9 ; dtia ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Drug Target Insights Volume 10 ; 10 ; dtia ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2017 ; Drug Target Insights Volume 11 ; 11 ; dtia ; http://journals.sagepub.com/ ; >
-    au < crawling ; exists ; 2018 ; Drug Target Insights Volume 12 ; 12 ; dtia ; http://journals.sagepub.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Drug Target Insights Volume 12 ; 12 ; dtia ; http://journals.sagepub.com/ ; >
 
   }
 
@@ -763,7 +763,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Environmental Health Insights Volume 9 ; 9 ; ehia ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Environmental Health Insights Volume 10 ; 10 ; ehia ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2017 ; Environmental Health Insights Volume 11 ; 11 ; ehia ; http://journals.sagepub.com/ ; >
-    au < crawling ; exists ; 2018 ; Environmental Health Insights Volume 12 ; 12 ; ehia ; http://journals.sagepub.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Environmental Health Insights Volume 12 ; 12 ; ehia ; http://journals.sagepub.com/ ; >
 
   }
 
@@ -790,7 +790,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Evolutionary Bioinformatics Volume 11 ; 11 ; evba ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Evolutionary Bioinformatics Volume 12 ; 12 ; evba ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2017 ; Evolutionary Bioinformatics Volume 13 ; 13 ; evba ; http://journals.sagepub.com/ ; >
-    au < crawling ; exists ; 2018 ; Evolutionary Bioinformatics Volume 14 ; 14 ; evba ; http://journals.sagepub.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Evolutionary Bioinformatics Volume 14 ; 14 ; evba ; http://journals.sagepub.com/ ; >
 
   }
 
@@ -886,7 +886,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Health Services Insights Volume 8 ; 8 ; hisa ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Health Services Insights Volume 9 ; 9 ; hisa ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2017 ; Health Services Insights Volume 10 ; 10 ; hisa ; http://journals.sagepub.com/ ; >
-    au < crawling ; exists ; 2018 ; Health Services Insights Volume 11 ; 11 ; hisa ; http://journals.sagepub.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Health Services Insights Volume 11 ; 11 ; hisa ; http://journals.sagepub.com/ ; >
 
   }
 
@@ -1475,7 +1475,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Virology: Research and Treatment Volume 6 ; 6 ; vrta ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Virology: Research and Treatment Volume 7 ; 7 ; vrta ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2017 ; Virology: Research and Treatment Volume 8 ; 8 ; vrta ; http://journals.sagepub.com/ ; >
-    au < crawling ; exists ; 2018 ; Virology: Research and Treatment Volume 9 ; 9 ; vrta ; http://journals.sagepub.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Virology: Research and Treatment Volume 9 ; 9 ; vrta ; http://journals.sagepub.com/ ; >
 
   }
 

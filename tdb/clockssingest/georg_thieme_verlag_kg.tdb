@@ -215,7 +215,7 @@
     au < finished ; finished ; 2015 ; 2015 ; Aktuelle Neurologie Volume 42 ; 42 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2016 ; 2016 ; Aktuelle Neurologie Volume 43 ; 43 ; >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Aktuelle Neurologie Volume 44 ; 44 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Aktuelle Neurologie Volume 45 ; 45 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Aktuelle Neurologie Volume 45 ; 45 ; >
 
   }
 
@@ -266,7 +266,7 @@
     au < finished ; finished ; 2015 ; 2015 ; Aktuelle Rheumatologie Volume 42 ; 42 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Aktuelle Rheumatologie Volume 43 ; 43 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Aktuelle Rheumatologie Volume 44 ; 44 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Aktuelle Rheumatologie Volume 45 ; 45 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Aktuelle Rheumatologie Volume 45 ; 45 ; >
 
   }
 
@@ -479,7 +479,7 @@
     au < finished ; finished ; 2015 ; 2015 ; American Journal of Perinatology Volume 32 ; 32 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; American Journal of Perinatology Volume 33 ; 33 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; American Journal of Perinatology Volume 34 ; 34 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; American Journal of Perinatology Volume 35 ; 35 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; American Journal of Perinatology Volume 35 ; 35 ; >
 
    }
 
@@ -729,7 +729,7 @@
     au < finished ; finished ; 2015 ; 2015 ; Clinics in Colon and Rectal Surgery Volume 28 ; 028 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Clinics in Colon and Rectal Surgery Volume 29 ; 29 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Clinics in Colon and Rectal Surgery Volume 30 ; 30 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Clinics in Colon and Rectal Surgery Volume 31 ; 31 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Clinics in Colon and Rectal Surgery Volume 31 ; 31 ; >
 
   }
 
@@ -1379,7 +1379,7 @@
    au < finished ; finished ; 2015 ; 2015 ; Ergopraxis Volume 8 ; 8 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2016 ; 2016 ; Ergopraxis Volume 9 ; 9 ; >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Ergopraxis Volume 10 ; 10 ; >
-   au < crawling ; exists ; 2018 ; 2018 ; Ergopraxis Volume 11 ; 11 ; >
+   au < deepCrawl ; exists ; 2018 ; 2018 ; Ergopraxis Volume 11 ; 11 ; >
 
   }
 
@@ -1584,7 +1584,7 @@
    au < finished ; finished ; 2015 ; 2015 ; Experimental and Clinical Endocrinology & Diabetes Volume 123 ; 123 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2016 ; 2016 ; Experimental and Clinical Endocrinology & Diabetes Volume 124 ; 124 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Experimental and Clinical Endocrinology & Diabetes Volume 125 ; 125 ; >
-   au < crawling ; exists ; 2018 ; 2018 ; Experimental and Clinical Endocrinology & Diabetes Volume 126 ; 126 ; >
+   au < deepCrawl ; exists ; 2018 ; 2018 ; Experimental and Clinical Endocrinology & Diabetes Volume 126 ; 126 ; >
 
   }
 
@@ -2435,7 +2435,7 @@
     au < finished ; finished ; 2015 ; 2015 ; International Journal of Sports Medicine Volume 36 ; 36 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; International Journal of Sports Medicine Volume 37 ; 37 ;  >
     au < deepCrawl ; exists ; 2017 ; 2017 ; International Journal of Sports Medicine Volume 38 ; 38 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; International Journal of Sports Medicine Volume 39 ; 39 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; International Journal of Sports Medicine Volume 39 ; 39 ; >
 
   }
 
@@ -3222,7 +3222,7 @@
     au < finished ; finished ; 2015 ; 2015 ; Klinische Neurophysiologie Volume 46 ; 46 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Klinische Neurophysiologie Volume 47 ; 47 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Klinische Neurophysiologie Volume 48 ; 48 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Klinische Neurophysiologie Volume 49 ; 49 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Klinische Neurophysiologie Volume 49 ; 49 ; >
 
   }
 
@@ -5805,7 +5805,7 @@
    au < finished ; finished ; 2015 ; 2015 ; team-konkret Volume 11 ; 11 ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; team-konkret Volume 12 ; 12 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; team-konkret Volume 13 ; 13 ; >
-   au < crawling ; exists ; 2018 ; 2018 ; team-konkret Volume 14 ; 14 ; >
+   au < deepCrawl ; exists ; 2018 ; 2018 ; team-konkret Volume 14 ; 14 ; >
 
   }
 
@@ -6362,7 +6362,7 @@
     au < finished ; finished ; 2015 ; 2015 ; Zeitschrift für Klassische Homöopathie Volume 59 ; 59 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Zeitschrift für Klassische Homöopathie Volume 60 ; 60 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Zeitschrift für Klassische Homöopathie Volume 61 ; 61 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Zeitschrift für Klassische Homöopathie Volume 62 ; 62 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Zeitschrift für Klassische Homöopathie Volume 62 ; 62 ; >
 
   }
 
@@ -6734,7 +6734,7 @@
     au < finished ; finished ; 2015 ; 2015 ; ZWR - Das Deutsche Zahnärzteblatt Volume 124 ; 124 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; 2016 ; ZWR - Das Deutsche Zahnärzteblatt Volume 125 ; 125 ; >
     au < deepCrawl ; exists ; 2017 ; 2017 ; ZWR - Das Deutsche Zahnärzteblatt Volume 126 ; 126 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; ZWR - Das Deutsche Zahnärzteblatt Volume 127 ; 127 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; ZWR - Das Deutsche Zahnärzteblatt Volume 127 ; 127 ; >
 
   }
 
@@ -6777,7 +6777,7 @@
     au < frozen ; exists ; 2015 ; 2015 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 9 ; 9 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 10 ; 10 ; >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 12 ; 12 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 12 ; 12 ; >
 
   }
 
@@ -6801,7 +6801,7 @@
     au < frozen ; exists ; 2015 ; 2015 ; Applied Clinical Informatics Volume 6 ; 6 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Applied Clinical Informatics Volume 7 ; 7 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Applied Clinical Informatics Volume 8 ; 8 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; 2018 ; Applied Clinical Informatics Volume 9 ; 9 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Applied Clinical Informatics Volume 9 ; 9 ; >
 
   }
 
@@ -6930,7 +6930,7 @@
     comment[years] = 2017-current
 
     au < deepCrawl ; exists ; 2017 ; 2017 ; Journal of Child Science Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Journal of Child Science Volume 8 ; 8 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Journal of Child Science Volume 8 ; 8 ; >
 
   }
 
@@ -7103,7 +7103,7 @@
     au < frozen ; exists ; 2015 ; 2015 ; Osteologie Volume 24 ; 24 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Osteologie Volume 25 ; 25 ; >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Osteologie Volume 26 ; 26 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Osteologie Volume 27 ; 27 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Osteologie Volume 27 ; 27 ; >
 
   }
 
