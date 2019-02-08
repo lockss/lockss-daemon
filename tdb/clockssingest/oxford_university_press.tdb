@@ -15001,7 +15001,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Public Opinion Quarterly Volume 77 ; 77 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Public Opinion Quarterly Volume 78 ; 78 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Public Opinion Quarterly Volume 79 ; 79 ; >
-    au < testing ; exists ; 2016 ; 2016 ; Public Opinion Quarterly Volume 80 ; 80 ; >
+    au < ready ; exists ; 2016 ; 2016 ; Public Opinion Quarterly Volume 80 ; 80 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Public Opinion Quarterly Volume 81 ; 81 ; >
     au < testing ; exists ; 2018 ; 2018 ; Public Opinion Quarterly Volume 82 ; 82 ; >
 
@@ -15660,7 +15660,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Schizophrenia Bulletin Volume 39 ; 39 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Schizophrenia Bulletin Volume 40 ; 40 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Schizophrenia Bulletin Volume 41 ; 41 ; >
-    au < testing ; exists ; 2016 ; 2016 ; Schizophrenia Bulletin Volume 42 ; 42 ; >
+    au < ready ; exists ; 2016 ; 2016 ; Schizophrenia Bulletin Volume 42 ; 42 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Schizophrenia Bulletin Volume 43 ; 43 ; >
     au < testing ; exists ; 2018 ; 2018 ; Schizophrenia Bulletin Volume 44 ; 44 ; >
 
@@ -15783,7 +15783,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Screen Volume 54 ; 54 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Screen Volume 55 ; 55 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Screen Volume 56 ; 56 ; >
-    au < testing ; exists ; 2016 ; 2016 ; Screen Volume 57 ; 57 ; >
+    au < ready ; exists ; 2016 ; 2016 ; Screen Volume 57 ; 57 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Screen Volume 58 ; 58 ; >
     au < testing ; exists ; 2018 ; 2018 ; Screen Volume 59 ; 59 ; >
 
@@ -16194,7 +16194,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Social Problems Volume 60 ; 60 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Social Problems Volume 61 ; 61 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Social Problems Volume 62 ; 62 ; >
-    au < testing ; exists ; 2016 ; 2016 ; Social Problems Volume 63 ; 63 ; >
+    au < ready ; exists ; 2016 ; 2016 ; Social Problems Volume 63 ; 63 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Social Problems Volume 64 ; 64 ; >
     au < testing ; exists ; 2018 ; 2018 ; Social Problems Volume 65 ; 65 ; >
 
@@ -18033,7 +18033,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; The Journal of Law, Economics, and Organization Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; The Journal of Law, Economics, and Organization Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The Journal of Law, Economics, and Organization Volume 31 ; 31 ; >
-    au < testing ; exists ; 2016 ; 2016 ; The Journal of Law, Economics, and Organization Volume 32 ; 32 ; >
+    au < ready ; exists ; 2016 ; 2016 ; The Journal of Law, Economics, and Organization Volume 32 ; 32 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Journal of Law, Economics, and Organization Volume 33 ; 33 ; >
     au < testing ; exists ; 2018 ; 2018 ; The Journal of Law, Economics, and Organization Volume 34 ; 34 ; >
 
@@ -18248,7 +18248,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; The Journal of World Energy Law & Business Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; The Journal of World Energy Law & Business Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The Journal of World Energy Law & Business Volume 8 ; 8 ; >
-    au < testing ; exists ; 2016 ; 2016 ; The Journal of World Energy Law & Business Volume 9 ; 9 ; >
+    au < ready ; exists ; 2016 ; 2016 ; The Journal of World Energy Law & Business Volume 9 ; 9 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Journal of World Energy Law & Business Volume 10 ; 10 ; >
     au < testing ; exists ; 2018 ; 2018 ; The Journal of World Energy Law & Business Volume 11 ; 11 ; >
 
@@ -19262,7 +19262,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; The Review of Corporate Finance Studies Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; The Review of Corporate Finance Studies Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The Review of Corporate Finance Studies Volume 4 ; 4 ; >
-    au < testing ; exists ; 2016 ; 2016 ; The Review of Corporate Finance Studies Volume 5 ; 5 ; >
+    au < ready ; exists ; 2016 ; 2016 ; The Review of Corporate Finance Studies Volume 5 ; 5 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Review of Corporate Finance Studies Volume 6 ; 6 ; >
     au < testing ; exists ; 2018 ; 2018 ; The Review of Corporate Finance Studies Volume 7 ; 7 ; >
 
@@ -20251,7 +20251,7 @@
     param[journal_id] = workar
 
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Work, Aging and Retirement Volume 1 ; 1 ; >
-    au < testing ; exists ; 2016 ; 2016 ; Work, Aging and Retirement Volume 2 ; 2 ; >
+    au < ready ; exists ; 2016 ; 2016 ; Work, Aging and Retirement Volume 2 ; 2 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Work, Aging and Retirement Volume 3 ; 3 ; >
     au < testing ; exists ; 2018 ; 2018 ; Work, Aging and Retirement Volume 4 ; 4 ; >
 
@@ -20365,7 +20365,7 @@
     au < manifest ; exists ; 2013 ; 2013 ; Zoological Journal of the Linnean Society Volume 167-169 ; 167-169 ; >
     au < manifest ; exists ; 2014 ; 2014 ; Zoological Journal of the Linnean Society Volume 170-172 ; 170-172 ; >
     au < manifest ; exists ; 2015 ; 2015 ; Zoological Journal of the Linnean Society Volume 173-175 ; 173-175 ; >
-    au < testing ; exists ; 2016 ; 2016 ; Zoological Journal of the Linnean Society Volume 176-178 ; 176-178 ; >
+    au < ready ; exists ; 2016 ; 2016 ; Zoological Journal of the Linnean Society Volume 176-178 ; 176-178 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Zoological Journal of the Linnean Society Volume 179-181 ; 179-181 ; >
     au < testing ; exists ; 2018 ; 2018 ; Zoological Journal of the Linnean Society Volume 182-184 ; 182-184 ; >
 
