@@ -54,9 +54,15 @@
     <list>
       <!-- curated CDN list with terminators -->
       <string>1,"^https?://(.+\.cloudfront.net/assets|use\.typekit\.net)/[^?]*\.(css|js)", url_host(base_url)</string>
-      <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)([?][0-9]+)?$", url_host(base_url)</string>
-      <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)([?][0-9]+)?$", url_host(base_url)</string>
+      <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff2?)([?][0-9]+)?$", url_host(base_url)</string>
+      <string>2,"^https?://%s/%s\.(atom|json|rss)", url_host(base_url), book_uri</string>
+      <string>2,"^https?://%s/%s.*&amp;(sort|per_page|view)=", url_host(base_url), book_uri</string>
+      <!--  %% is the way to represent a percent in a crawl rule -->
+      <string>2,"^https?://%s/%s\?f%%5B", url_host(base_url), book_uri</string>
+      <!--  a strange redundant argument that causes a 503 -->
+      <string>2,"^https?://%s/%s.*\?utf8=", url_host(base_url), book_uri</string>
       <string>1,"^https?://%s/%s", url_host(base_url), book_uri</string>
+      <string>1,"^https?://%sfile_sets", url_host(base_url)</string>
       <string>1,"^https?://%s/(downloads|epubs)/", url_host(base_url)</string>
     </list>
   </entry>
@@ -128,6 +134,7 @@
     </list>
   </entry>
   <!--  tell the default base.MimeTypeContentValidator what url patterns to validate by mime type -->
+  <!--  this won't work - it could be PDF also -->
   <entry>
     <string>au_url_mime_validation_map</string>
     <list>
