@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,31 +33,29 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.elifesciences;
 
 import java.io.InputStream;
+
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.*;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 
-public class ELife2018HtmlHashFilterFactory2 implements FilterFactory {
+public class ELife2018HtmlCrawlFilterFactory implements FilterFactory {
 	
-  private static final Logger log = Logger.getLogger(ELife2018HtmlHashFilterFactory2.class);
-  
+  private static final Logger log = Logger.getLogger(ELife2018HtmlCrawlFilterFactory.class);
 
-  
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding) {
     NodeFilter[] filters = new NodeFilter[] {
-     //filter out script, noscript
-     HtmlNodeFilters.tag("script"),
+     HtmlNodeFilters.tagWithAttribute("header", "class", "section-header"),
 
-     
     };
-    InputStream filtered =  new HtmlFilterInputStream(in, encoding,
-    		HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
-    return filtered;
+    return new HtmlFilterInputStream(in,
+                                     encoding,
+                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
   }
 
 }
+
 
