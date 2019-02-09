@@ -57,9 +57,12 @@ public class EmeraldGroupHtmlCrawlFilterFactory
     // toc, abs, full -  right column
     // there are 2 data-pb-dropzone="right", one of them is part of the top ad
     // it's not unique tag, but I think it's OK for Emerald
-    // http://www.emeraldinsight.com/toc/aaaj/26/8                                          
-    HtmlNodeFilters.tagWithAttribute("div", "data-pb-dropzone", "right"),
-    // from abs - all Articles Options and Tools except Download Citation   
+    // http://www.emeraldinsight.com/toc/aaaj/26/8
+    // at some point, options was placed under <div data-pb-dropzone="right"
+    HtmlNodeFilters.allExceptSubtree(
+        HtmlNodeFilters.tagWithAttribute("div", "data-pb-dropzone", "right"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "options")),
+    // from abs - all Articles Options and Tools except Download Citation
     // <div class="options">
     HtmlNodeFilters.allExceptSubtree(
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "options"),
@@ -71,11 +74,11 @@ public class EmeraldGroupHtmlCrawlFilterFactory
     // tabb'd section in the right column -                
     // can't be in parent - all tabs would get affected, even in content
     // TODO - look at alternative, but for now the only tabs are in right column
-    HtmlNodeFilters.tagWithAttribute("div", "aria-relevant", "additions"),  
+    HtmlNodeFilters.tagWithAttribute("div", "aria-relevant", "additions"),
     // toc and article page
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pageHeader"),
-    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pageFooter"),    
-                
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pageFooter"),
+
   };
 
   @Override
