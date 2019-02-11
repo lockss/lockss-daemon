@@ -111,7 +111,7 @@
       au < frozen ; exists ; 2015 ; 2 ; Annals of Global Health Volume 2015 ; 2015 ; https://www.annalsofglobalhealth.org/ ; >
       au < frozen ; exists ; 2016 ; 3 ; Annals of Global Health Volume 2016 ; 2016 ; https://www.annalsofglobalhealth.org/ ; >
       au < frozen ; exists ; 2017 ; 4 ; Annals of Global Health Volume 2017 ; 2017 ; https://www.annalsofglobalhealth.org/ ; >
-      au < crawling ; exists ; 2018 ; 5 ; Annals of Global Health Volume 2018 ; 2018 ; https://www.annalsofglobalhealth.org/ ; >
+      au < deepCrawl ; exists ; 2018 ; 5 ; Annals of Global Health Volume 2018 ; 2018 ; https://www.annalsofglobalhealth.org/ ; >
 
   }
 
@@ -209,7 +209,7 @@
       au < frozen ; exists ; 2015 ; 22 ; ASIANetwork Exchange Volume 2015 ; 2015 ; http://www.asianetworkexchange.org/ ; >
       au < frozen ; exists ; 2016 ; 23 ; ASIANetwork Exchange Volume 2016 ; 2016 ; http://www.asianetworkexchange.org/ ; >
       au < deepCrawl ; exists ; 2017 ; 24 ; ASIANetwork Exchange Volume 2017 ; 2017 ; http://www.asianetworkexchange.org/ ; >
-      au < crawling ; exists ; 2018 ; 25 ; ASIANetwork Exchange Volume 2018 ; 2018 ; https://www.asianetworkexchange.org/ ; >
+      au < deepCrawl ; exists ; 2018 ; 25 ; ASIANetwork Exchange Volume 2018 ; 2018 ; https://www.asianetworkexchange.org/ ; >
 
   }
 
@@ -356,7 +356,7 @@
       au < frozen ; exists ; 2015 ; 25 ; Theoretical Roman Archaeology Journal Volume 2015 ; 2015 ; https://traj.openlibhums.org/ ; >
       au < manifest ; exists ; 2016 ; 26 ; Theoretical Roman Archaeology Journal Volume 2016 ; 2016 ; https://traj.openlibhums.org/ ; >#does not exist. start url has articles from 2015.
       au < doesNotExist ; doesNotExist ; 2017 ; 27 ; Theoretical Roman Archaeology Journal Volume 2017 ; 2017 ; https://traj.openlibhums.org/ ; >
-      au < crawling ; exists ; 2018 ; 28 ; Theoretical Roman Archaeology Journal Volume 2018 ; 2018 ; https://traj.openlibhums.org/ ; >
+      au < deepCrawl ; exists ; 2018 ; 28 ; Theoretical Roman Archaeology Journal Volume 2018 ; 2018 ; https://traj.openlibhums.org/ ; >
 
   }
 
@@ -798,7 +798,7 @@
 
       au < frozen ; exists ; 2016 ; 1 ; International Review of Social Psychology Volume 2016 ; 2016 ; http://www.rips-irsp.com/ ; >
       au < deepCrawl ; exists ; 2017 ; 2 ; International Review of Social Psychology Volume 2017 ; 2017 ; http://www.rips-irsp.com/ ; >
-      au < crawling ; exists ; 2018 ; 3 ; International Review of Social Psychology Volume 2018 ; 2018 ; https://www.rips-irsp.com/ ; >
+      au < deepCrawl ; exists ; 2018 ; 3 ; International Review of Social Psychology Volume 2018 ; 2018 ; https://www.rips-irsp.com/ ; >
 
   }
 
@@ -1041,7 +1041,7 @@
       au < finished ; finished ; 2015 ; 3 ; Journal of Open Psychology Data Volume 2015 ; 2015 ; http://openpsychologydata.metajnl.com/ ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2016 ; 4 ; Journal of Open Psychology Data Volume 2016 ; 2016 ; http://openpsychologydata.metajnl.com/ ; >
       au < deepCrawl ; exists ; 2017 ; 5 ; Journal of Open Psychology Data Volume 2017 ; 2017 ; http://openpsychologydata.metajnl.com/ ; >
-      au < crawling ; exists ; 2018 ; 6 ; Journal of Open Psychology Data Volume 2018 ; 2018 ; https://openpsychologydata.metajnl.com/ ; >
+      au < deepCrawl ; exists ; 2018 ; 6 ; Journal of Open Psychology Data Volume 2018 ; 2018 ; https://openpsychologydata.metajnl.com/ ; >
 
   }
 
@@ -1131,7 +1131,7 @@
 
       au < frozen ; exists ; 2016 ; 1 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2016 ; 2016 ; http://www.journal-labphon.org/ ; >
       au < deepCrawl ; exists ; 2017 ; 2 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2017 ; 2017 ; http://www.journal-labphon.org/ ; >
-      au < crawling ; exists ; 2018 ; 3 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2018 ; 2018 ; https://www.journal-labphon.org/ ; >
+      au < deepCrawl ; exists ; 2018 ; 3 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2018 ; 2018 ; https://www.journal-labphon.org/ ; >
 
   }
 
@@ -1510,7 +1510,7 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://www.journalofcognition.org/
 
-      au < crawling ; exists ; 2018 ; 1 ; Journal of Cognition Volume 2018 ; 2018 ; https://www.journalofcognition.org/ ; >
+      au < deepCrawl ; exists ; 2018 ; 1 ; Journal of Cognition Volume 2018 ; 2018 ; https://www.journalofcognition.org/ ; >
 
   }
 
@@ -1539,7 +1539,7 @@
 #      param[base_url] = https://kula.uvic.ca/
 
       au < frozen ; exists ; 2017 ; 1 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2017 ; 2017 ; https://kula.uvic.ca/ ; >
-      au < crawling ; exists ; 2018 ; 2 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2018 ; 2018 ; https://kula.uvic.ca/ ; >
+      au < deepCrawl ; exists ; 2018 ; 2 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2018 ; 2018 ; https://kula.uvic.ca/ ; >
 
   }
 
@@ -1677,7 +1677,7 @@
       au < finished ; finished ; 2015 ; 10 ; Westminster Papers in Communication and Culture Volume 2015 ; 2015 ; http://www.westminsterpapers.org/ ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2016 ; 11 ; Westminster Papers in Communication and Culture Volume 2016 ; 2016 ; http://www.westminsterpapers.org/ ; >
       au < deepCrawl ; exists ; 2017 ; 12 ; Westminster Papers in Communication and Culture Volume 2017 ; 2017 ; http://www.westminsterpapers.org/ ; >
-      au < crawling ; exists ; 2018 ; 13 ; Westminster Papers in Communication and Culture Volume 2018 ; 2018 ; https://www.westminsterpapers.org/ ; >
+      au < deepCrawl ; exists ; 2018 ; 13 ; Westminster Papers in Communication and Culture Volume 2018 ; 2018 ; https://www.westminsterpapers.org/ ; >
 
   }
 
@@ -1802,7 +1802,7 @@
       au < frozen ; exists ; 2015 ; 13 ; ERLACS Volume 2015 ; 2015 ; http://www.erlacs.org/ ; >
       au < finished ; crawling ; 2016 ; 14 ; ERLACS Volume 2016 ; 2016 ; http://www.erlacs.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2017 ; 15 ; ERLACS Volume 2017 ; 2017 ; http://www.erlacs.org/ ; >
-      au < crawling ; exists ; 2018 ; 16 ; ERLACS Volume 2018 ; 2018 ; https://www.erlacs.org/ ; >
+      au < deepCrawl ; exists ; 2018 ; 16 ; ERLACS Volume 2018 ; 2018 ; https://www.erlacs.org/ ; >
 
   }
 
@@ -2207,7 +2207,7 @@
       au < frozen ; exists ; 2015 ; 3 ; Elementa: Science of the Anthropocene Volume 2015 ; 2015 ; https://www.elementascience.org/ ; >
       au < frozen ; exists ; 2016 ; 4 ; Elementa: Science of the Anthropocene Volume 2016 ; 2016 ; https://www.elementascience.org/ ; >
       au < frozen ; exists ; 2017 ; 5 ; Elementa: Science of the Anthropocene Volume 2017 ; 2017 ; https://www.elementascience.org/ ; >
-      au < crawling ; exists ; 2018 ; 6 ; Elementa: Science of the Anthropocene Volume 2018 ; 2018 ; https://www.elementascience.org/ ; >
+      au < deepCrawl ; exists ; 2018 ; 6 ; Elementa: Science of the Anthropocene Volume 2018 ; 2018 ; https://www.elementascience.org/ ; >
 
   }
 

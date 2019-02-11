@@ -825,7 +825,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; American Journal of Legal History Volume 55 ; 55 ; >
     au < frozen ; exists ; 2016 ; 2016 ; American Journal of Legal History Volume 56 ; 56 ; >
     au < finished ; crawling ; 2017 ; 2017 ; American Journal of Legal History Volume 57 ; 57 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2018 ; 2018 ; American Journal of Legal History Volume 58 ; 58 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; American Journal of Legal History Volume 58 ; 58 ; >
 
   }
 
@@ -903,7 +903,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; American Literary History Volume 27 ; 27 ; >
     au < frozen ; exists ; 2016 ; 2016 ; American Literary History Volume 28 ; 28 ; >
     au < finished ; crawling ; 2017 ; 2017 ; American Literary History Volume 29 ; 29 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; 2018 ; American Literary History Volume 30 ; 30 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; American Literary History Volume 30 ; 30 ; >
 
   }
 
@@ -1079,7 +1079,7 @@
 
     param[journal_id] = abm
 
-    au < crawling ; exists ; 2018 ; 2018 ; Annals of Behavioral Medicine Volume 1 ; 1 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Annals of Behavioral Medicine Volume 1 ; 1 ; >
 
   }
 
@@ -3424,7 +3424,7 @@
 
     param[journal_id] = ct
 
-    au < crawling ; exists ; 2018 ; 2018 ; Communication Theory Volume 1 ; 1 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Communication Theory Volume 1 ; 1 ; >
 
   }
 
@@ -3560,7 +3560,7 @@
     au < manifest ; exists ; 2015 ; 2015 ; The Condor: Ornithological Applications Volume 117 ; 117 ; >
     au < testing ; exists ; 2016 ; 2016 ; The Condor: Ornithological Applications Volume 118 ; 118 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Condor: Ornithological Applications Volume 119 ; 119 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; The Condor: Ornithological Applications Volume 120 ; 120 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; The Condor: Ornithological Applications Volume 120 ; 120 ; >
 
   }
 
@@ -3773,7 +3773,7 @@
     au < manifest ; exists ; 2015 ; 2015 ; Current Zoology Volume 61 ; 61 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Current Zoology Volume 62 ; 62 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Current Zoology Volume 63 ; 63 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2018 ; 2018 ; Current Zoology Volume 64 ; 64 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Current Zoology Volume 64 ; 64 ; >
 
   }
 
@@ -3882,7 +3882,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Digital Scholarship in the Humanities Volume 30 ; 30 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Digital Scholarship in the Humanities Volume 31 ; 31 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Digital Scholarship in the Humanities Volume 32 ; 32 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; 2018 ; Digital Scholarship in the Humanities Volume 33 ; 33 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Digital Scholarship in the Humanities Volume 33 ; 33 ; >
 
   }
 
@@ -6622,7 +6622,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Human Reproduction Volume 30 ; 30 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Human Reproduction Volume 31 ; 31 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Human Reproduction Volume 32 ; 32 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Human Reproduction Volume 33 ; 33 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Human Reproduction Volume 33 ; 33 ; >
 
   }
 
@@ -19755,7 +19755,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The Year's Work in English Studies Volume 94 ; 94 ; >
     au < testing ; exists ; 2016 ; 2016 ; The Year's Work in English Studies Volume 95 ; 95 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Year's Work in English Studies Volume 96 ; 96 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; The Year's Work in English Studies Volume 97 ; 97 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; The Year's Work in English Studies Volume 97 ; 97 ; >
 
   }
 

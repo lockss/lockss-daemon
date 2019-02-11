@@ -28,7 +28,7 @@
       au < finished ; crawling ; 2015 ; Cold Spring Harbor Molecular Case Studies Volume 1 ; 1 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; Cold Spring Harbor Molecular Case Studies Volume 2 ; 2 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; Cold Spring Harbor Molecular Case Studies Volume 3 ; 3 ; >
-      au < crawling ; exists ; 2018 ; Cold Spring Harbor Molecular Case Studies Volume 4 ; 4 ; >
+      au < deepCrawl ; exists ; 2018 ; Cold Spring Harbor Molecular Case Studies Volume 4 ; 4 ; >
 
     }
 
@@ -117,7 +117,7 @@
       au < finished ; crawling ; 2015 ; Cold Spring Harbor Protocols Volume 2015 ; 2015 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2016 ; Cold Spring Harbor Protocols Volume 2016 ; 2016 ; >
       au < deepCrawl ; exists ; 2017 ; Cold Spring Harbor Protocols Volume 2017 ; 2017 ; >
-      au < crawling ; exists ; 2018 ; Cold Spring Harbor Protocols Volume 2018 ; 2018 ; >
+      au < deepCrawl ; exists ; 2018 ; Cold Spring Harbor Protocols Volume 2018 ; 2018 ; >
 
     }
     

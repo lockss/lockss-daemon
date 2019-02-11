@@ -67,7 +67,7 @@
       au < finished ; finished ; 2015 ; 2015 ; Advances in Geosciences Volume 41 ; 41 ; http://www.adv-geosci.net/ ; http://www.advances-in-geosciences.net/ ; >
       au < finished ; crawling ; 2016 ; 2016 ; Advances in Geosciences Volume 42 ; 42 ; http://www.adv-geosci.net/ ; http://www.advances-in-geosciences.net/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; 2017 ; Advances in Geosciences Volume 43 ; 43 ; https://www.adv-geosci.net/ ; https://www.advances-in-geosciences.net/ ; >
-      au < crawling ; exists ; 2018 ; 2018 ; Advances in Geosciences Volume 44 ; 44 ; https://www.adv-geosci.net/ ; https://www.advances-in-geosciences.net/ ; >
+      au < deepCrawl ; exists ; 2018 ; 2018 ; Advances in Geosciences Volume 44 ; 44 ; https://www.adv-geosci.net/ ; https://www.advances-in-geosciences.net/ ; >
 
    }
 
@@ -886,7 +886,7 @@
       au < finished ; finished ; 2015 ; 2015 ; Geographica Helvetica Volume 70 ; 70 ; http://www.geogr-helv.net/ ; http://www.geographica-helvetica.net/ ; >
       au < finished ; crawling ; 2016 ; 2016 ; Geographica Helvetica Volume 71 ; 71 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; 2017 ; Geographica Helvetica Volume 72 ; 72 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ ; >
-      au < crawling ; exists ; 2018 ; 2018 ; Geographica Helvetica Volume 73 ; 73 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ ; >
+      au < deepCrawl ; exists ; 2018 ; 2018 ; Geographica Helvetica Volume 73 ; 73 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ ; >
 
    }
 
@@ -1325,7 +1325,7 @@
       au < frozen ; exists ; 2015 ; 2015 ; Journal of Micropalaeontology Volume 34 ; 34 ; https://www.j-micropalaeontol.net/ ; https://www.journal-of-micropalaeontology.net/ ; >
       au < frozen ; exists ; 2016 ; 2016 ; Journal of Micropalaeontology Volume 35 ; 35 ; https://www.j-micropalaeontol.net/ ; https://www.journal-of-micropalaeontology.net/ ; >
       au < finished ; crawling ; 2017 ; 2017 ; Journal of Micropalaeontology Volume 36 ; 36 ; https://www.j-micropalaeontol.net/ ; https://www.journal-of-micropalaeontology.net/ ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2018 ; 2018 ; Journal of Micropalaeontology Volume 37 ; 37 ; https://www.j-micropalaeontol.net/ ; https://www.journal-of-micropalaeontology.net/ ; >
+      au < deepCrawl ; exists ; 2018 ; 2018 ; Journal of Micropalaeontology Volume 37 ; 37 ; https://www.j-micropalaeontol.net/ ; https://www.journal-of-micropalaeontology.net/ ; >
 
   }
 
@@ -1553,7 +1553,7 @@
       au < finished ; finished ; 2015 ; 2015 ; Primate Biology Volume 2 ; 2 ; http://www.primate-biol.net/ ; http://www.primate-biology.net/ ; >
       au < finished ; crawling ; 2016 ; 2016 ; Primate Biology Volume 3 ; 3 ; https://www.primate-biol.net/ ; https://www.primate-biology.net/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; 2017 ; Primate Biology Volume 4 ; 4 ; https://www.primate-biol.net/ ; https://www.primate-biology.net/ ; >
-      au < crawling ; exists ; 2018 ; 2018 ; Primate Biology Volume 5 ; 5 ; https://www.primate-biol.net/ ; https://www.primate-biology.net/ ; >
+      au < deepCrawl ; exists ; 2018 ; 2018 ; Primate Biology Volume 5 ; 5 ; https://www.primate-biol.net/ ; https://www.primate-biology.net/ ; >
 
    }
 
