@@ -914,18 +914,18 @@
     param[base_url] = http://trn.lyellcollection.org/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < down ; 1811 ; Transactions of the Geological Society of London Series 1 Volume 1 ; S1-1 >
-    au < down ; 1814 ; Transactions of the Geological Society of London Series 1 Volume 2 ; S1-2 >
-    au < down ; 1816 ; Transactions of the Geological Society of London Series 1 Volume 3 ; S1-3 >
-    au < down ; 1817 ; Transactions of the Geological Society of London Series 1 Volume 4 ; S1-4 >
-    au < down ; 1821 ; Transactions of the Geological Society of London Series 1 Volume 5 ; S1-5 >
-    au < down ; 1822-1824 ; Transactions of the Geological Society of London Series 2 Volume 1 ; S2-1 >
-    au < down ; 1826-1828 ; Transactions of the Geological Society of London Series 2 Volume 2 ; S2-2 >
-    au < down ; 1829-1835 ; Transactions of the Geological Society of London Series 2 Volume 3 ; S2-3 >
-    au < down ; 1835-1836 ; Transactions of the Geological Society of London Series 2 Volume 4 ; S2-4 >
-    au < down ; 1837-1840 ; Transactions of the Geological Society of London Series 2 Volume 5 ; S2-5 >
-    au < down ; 1841-1842 ; Transactions of the Geological Society of London Series 2 Volume 6 ; S2-6 >
-    au < down ; 1845-1856 ; Transactions of the Geological Society of London Series 2 Volume 7 ; S2-7 >
+    au < down ; 1811 ; Transactions of the Geological Society of London Series 1 Volume 1 ; s1-1 >
+    au < down ; 1814 ; Transactions of the Geological Society of London Series 1 Volume 2 ; s1-2 >
+    au < down ; 1816 ; Transactions of the Geological Society of London Series 1 Volume 3 ; s1-3 >
+    au < down ; 1817 ; Transactions of the Geological Society of London Series 1 Volume 4 ; s1-4 >
+    au < down ; 1821 ; Transactions of the Geological Society of London Series 1 Volume 5 ; s1-5 >
+    au < down ; 1822-1824 ; Transactions of the Geological Society of London Series 2 Volume 1 ; s2-1 >
+    au < down ; 1826-1828 ; Transactions of the Geological Society of London Series 2 Volume 2 ; s2-2 >
+    au < down ; 1829-1835 ; Transactions of the Geological Society of London Series 2 Volume 3 ; s2-3 >
+    au < down ; 1835-1836 ; Transactions of the Geological Society of London Series 2 Volume 4 ; s2-4 >
+    au < down ; 1837-1840 ; Transactions of the Geological Society of London Series 2 Volume 5 ; s2-5 >
+    au < down ; 1841-1842 ; Transactions of the Geological Society of London Series 2 Volume 6 ; s2-6 >
+    au < down ; 1845-1856 ; Transactions of the Geological Society of London Series 2 Volume 7 ; s2-7 >
 
   }
 
