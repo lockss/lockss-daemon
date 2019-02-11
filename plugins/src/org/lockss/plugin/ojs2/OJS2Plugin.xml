@@ -17,7 +17,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>73</string>
+    <string>74</string>
   </entry>
 <!--
 This is a list of OJS2 Child plugins - be sure to update the child's
@@ -25,6 +25,7 @@ plugin_parent_version number to match, then update the child's plugin_version
 number:
 
 org.lockss.plugin.ojs2.ClockssOJS2Plugin
+org.lockss.plugin.jidc.ClockssJidcOJS2Plugin (only differs from ClockssOJS2 on start_url)
 ca.athabascau.plugin.jrp.JournalOfResearchPracticePlugin               (coppulpln, synergiespln?)
 org.lockss.plugin.biologicinstitute.ClockssBiologicInstitutePlugin     (deprecated)
 org.lockss.plugin.coactionpublishing.CoActionPublishingPlugin          (deprecated)

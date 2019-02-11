@@ -272,7 +272,7 @@
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.atypon.BaseAtyponArticleIteratorFactory</string>
   </entry>
-   <entry>
+  <entry>
     <string>text/html_metadata_extractor_factory_map</string>
     <map>
       <entry>
@@ -283,22 +283,22 @@
   </entry>
 <!--  oddly, ris files are text/plain -->
   <entry>
-  <string>text/plain_metadata_extractor_factory_map</string>
-  <map>
-    <entry>
-    <string>*;RIS</string>
-    <string>org.lockss.plugin.atypon.BaseAtyponRisMetadataExtractorFactory</string>
-   </entry>
-  </map>
+    <string>text/plain_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;RIS</string>
+        <string>org.lockss.plugin.atypon.BaseAtyponRisMetadataExtractorFactory</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>application/x-research-info-systems_metadata_extractor_factory_map</string>
     <map>
       <entry>
-    <string>*;RIS</string>
-    <string>org.lockss.plugin.atypon.BaseAtyponRisMetadataExtractorFactory</string>
-   </entry>
-  </map>
+        <string>*;RIS</string>
+        <string>org.lockss.plugin.atypon.BaseAtyponRisMetadataExtractorFactory</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>application/pdf_metadata_extractor_factory_map</string>

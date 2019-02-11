@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>13</string>
+    <string>15</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -17,7 +17,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>22</string>
+    <string>24</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -27,44 +27,62 @@
     <string>au_name</string>
     <string>"Institution of Engineering and Technology Journals Plugin (CLOCKSS), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
+  <!--  override start url from parent to support http to https conversion -->
   <entry>
     <string>au_start_url</string>
-    <string>"%scontent/journals/%s/clockssissues?volume=%s", base_url, journal_id, volume_name</string>
+    <list>
+      <string>"%scontent/journals/%s/clockssissues?volume=%s", to_https(base_url), journal_id, volume_name</string>
+      <string>"%scontent/journals/%s/clockssissues?volume=%s", to_http(base_url), journal_id, volume_name</string>
+    </list>
   </entry>
+  <!--  also for https conversion -->
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.pub2web.iet.IetUrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>plugin_url_fetcher_factory</string>
+    <string>org.lockss.plugin.base.HttpToHttpsUrlFetcherFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.pub2web.Pub2WebHttpsUrlConsumerFactory</string>
+  </entry>
+  <!-- end changes for https conversion -->
   <entry>
     <string>au_crawlrules</string>
     <list>
     <!-- Parent article pattern: /content/journal/[journal_id]/[article_id] IET article pattern /content/journals/[article_id]  -->
-      <string>2,"^%sjs/sgm/issue_toc_headings_ahah.js$", base_url</string>
+      <string>2,"^https?://%s/js/sgm/issue_toc_headings_ahah.js$",  url_host(base_url)</string>
       <string>1,"^https?://(%s|cdn[.]mathjax[.]org|code[.]jquery[.]com)/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff.?)(\?([0-9]+|config=|v=).*)?$", url_host(base_url)</string>
       <!-- Crawl rule out bad citation files (?fmt=xxxx) in favor of /cite/xxxx -->
-      <string>2,"^%scontent/(journals?|suppddata)/[0-9]{2}\.[0-9]{4}/%s[^?]+\?fmt=[^/&amp;]+$", base_url, journal_id</string>
+      <string>2,"^https?://%s/content/(journals?|suppddata)/[0-9]{2}\.[0-9]{4}/%s[^?]+\?fmt=[^/&amp;]+$",  url_host(base_url), journal_id</string>
       <!-- Do not collect issue level citations -->
-      <string>2,"^%scontent/journals?/%s/%s/[^/]+/cite/", base_url, journal_id, volume_name</string>
+      <string>2,"^https?://%s/content/journals?/%s/%s/[^/]+/cite/",  url_host(base_url), journal_id, volume_name</string>
       <!--  toc and subsections -->
-      <string>1,"^%scontent/journals?/%s/%s/", base_url, journal_id, volume_name</string>
-      <string>1,"^%sarticles/renderlist\.action\?fmt=ahah&amp;items=.*", base_url</string>
+      <string>1,"^https?://%s/content/journals?/%s/%s/",  url_host(base_url), journal_id, volume_name</string>
+      <string>1,"^https?://%s/sarticles/renderlist\.action\?fmt=ahah&amp;items=.*",  url_host(base_url)</string>
       <!-- [DO WE NEED THIS restriction] pick up articles, articleID will start with journalcode (el.1234 or el_1234)-->
-      <string>2,"^%scontent/journals?/[0-9]{2}\.[0-9]{4}/%s[^?]+\?term=.*&amp;db=pubmed$", base_url, journal_id</string>
-      <string>1,"^%scontent/(journals?|suppddata)/[0-9]{2}\.[0-9]{4}/%s", base_url, journal_id</string>
+      <string>2,"^https?://%s/content/journals?/[0-9]{2}\.[0-9]{4}/%s[^?]+\?term=.*&amp;db=pubmed$",  url_host(base_url), journal_id</string>
+      <string>1,"^https?://%s/content/(journals?|suppddata)/[0-9]{2}\.[0-9]{4}/%s",  url_host(base_url), journal_id</string>
       <!--  for media, no journal subdir - trying to keep it restricted to media -->
       <!-- TODO: too limited for MS? -->
-      <string>1,"^%scontent/[0-9]{2}\.[0-9]{4}/%s[^/]+\.(ufig|fig||tab|T)[A-Za-z0-9-]+$", base_url, journal_id</string>
+      <string>1,"^https?://%s/content/[0-9]{2}\.[0-9]{4}/%s[^/]+\.(ufig|fig||tab|T)[A-Za-z0-9-]+$",  url_host(base_url), journal_id</string>
       <!-- deliver/fulltext is starting URL for full-text - we normalize it to something else -->
-      <string>1,"^%sdeliver/fulltext/%s/%s/", base_url, journal_id, volume_name</string>
+      <string>1,"^https?://%s/deliver/fulltext/%s/%s/",  url_host(base_url), journal_id, volume_name</string>
       <!--  some oddball supplementary data, restrict to start with supp? -->
-      <string>1,"^%sdeliver/fulltext/supp", base_url</string>
+      <string>1,"^https?://%s/deliver/fulltext/supp",  url_host(base_url)</string>
       <!--  some content - images, supp data, etc -->
-      <string>1,"^%sdocserver(/ahah)?/fulltext/%s/%s/", base_url, journal_id, volume_name</string>
+      <string>1,"^https?://%s/docserver(/ahah)?/fulltext/%s/%s/",  url_host(base_url), journal_id, volume_name</string>
       <!--  inconsistent for some supplementary data, restrict to start with supp?? -->
-      <string>1,"^%sdocserver(/ahah)?/fulltext/supp", base_url</string>s
+      <string>1,"^https?://%s/docserver(/ahah)?/fulltext/supp",  url_host(base_url)</string>
     </list>
   </entry>
   <entry>
   <!--  no journal_id level directory after journals -->
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%scontent/journals?/[^/]+/[^/]+\?crawler=true&amp;mimetype=application/pdf$", base_url</string>
+      <string>"^https?://%s/content/journals?/[^/]+/[^/]+\?crawler=true&amp;mimetype=application/pdf$",  url_host(base_url)</string>
     </list>
   </entry>
   <entry>
@@ -80,10 +98,6 @@
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.pub2web.iet.IetHtmlHashFilterFactory</string>
-  </entry>
-  <entry>
-    <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.pub2web.iet.IetUrlNormalizer</string>
   </entry>
   <entry>
     <string>text/html_link_extractor_factory</string>

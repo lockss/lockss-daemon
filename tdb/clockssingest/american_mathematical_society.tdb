@@ -201,7 +201,7 @@
     au < finished ; finished ; 2015 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 19 ; 2015 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2016 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 20 ; 2016 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2017 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 21 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 22 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 22 ; 2018 ; >
 
   }
     
@@ -342,40 +342,40 @@
 
   }
     
-  {
-  
-    title < 
-      name = Notices of the American Mathematical Society ;
-      issn = 0002-9920 ;
-      eissn = 1088-9477
-    >
-    
-    # RT#7568, doNotProcess. PD-1209. Will be available to clockss in 2017
-    
-    param[journal_id] = notices
-    
-    au < doNotProcess ; exists ; 1995 ; Notices of the American Mathematical Society Volume 42 ; 1995 ; >
-    au < doNotProcess ; exists ; 1996 ; Notices of the American Mathematical Society Volume 43 ; 1996 ; >
-    au < doNotProcess ; exists ; 1997 ; Notices of the American Mathematical Society Volume 44 ; 1997 ; >
-    au < doNotProcess ; exists ; 1998 ; Notices of the American Mathematical Society Volume 45 ; 1998 ; >
-    au < doNotProcess ; exists ; 1999 ; Notices of the American Mathematical Society Volume 46 ; 1999 ; >
-    au < doNotProcess ; exists ; 2000 ; Notices of the American Mathematical Society Volume 47 ; 2000 ; >
-    au < doNotProcess ; exists ; 2001 ; Notices of the American Mathematical Society Volume 48 ; 2001 ; >
-    au < doNotProcess ; exists ; 2002 ; Notices of the American Mathematical Society Volume 49 ; 2002 ; >
-    au < doNotProcess ; exists ; 2003 ; Notices of the American Mathematical Society Volume 50 ; 2003 ; >
-    au < doNotProcess ; exists ; 2004 ; Notices of the American Mathematical Society Volume 51 ; 2004 ; >
-    au < doNotProcess ; exists ; 2005 ; Notices of the American Mathematical Society Volume 52 ; 2005 ; >
-    au < doNotProcess ; exists ; 2006 ; Notices of the American Mathematical Society Volume 53 ; 2006 ; >
-    au < doNotProcess ; exists ; 2007 ; Notices of the American Mathematical Society Volume 54 ; 2007 ; >
-    au < doNotProcess ; exists ; 2008 ; Notices of the American Mathematical Society Volume 55 ; 2008 ; >
-    au < doNotProcess ; exists ; 2009 ; Notices of the American Mathematical Society Volume 56 ; 2009 ; >
-    au < doNotProcess ; exists ; 2010 ; Notices of the American Mathematical Society Volume 57 ; 2010 ; >
-    au < doNotProcess ; exists ; 2011 ; Notices of the American Mathematical Society Volume 58 ; 2011 ; >
-    au < doNotProcess ; exists ; 2012 ; Notices of the American Mathematical Society Volume 59 ; 2012 ; >
-    au < doNotProcess ; exists ; 2013 ; Notices of the American Mathematical Society Volume 60 ; 2013 ; >
-    au < doNotProcess ; exists ; 2014 ; Notices of the American Mathematical Society Volume 61 ; 2014 ; >
-
-  }
+#  {
+#  
+#    title < 
+#      name = Notices of the American Mathematical Society ;
+#      issn = 0002-9920 ;
+#      eissn = 1088-9477
+#    >
+#    
+#    #RT7568, doNotProcess. PD-1209. Publisher says: do not include. they may make it available after redesign in 2017
+#    
+#    param[journal_id] = notices
+#    
+#    au < doNotProcess ; exists ; 1995 ; Notices of the American Mathematical Society Volume 42 ; 1995 ; >
+#    au < doNotProcess ; exists ; 1996 ; Notices of the American Mathematical Society Volume 43 ; 1996 ; >
+#    au < doNotProcess ; exists ; 1997 ; Notices of the American Mathematical Society Volume 44 ; 1997 ; >
+#    au < doNotProcess ; exists ; 1998 ; Notices of the American Mathematical Society Volume 45 ; 1998 ; >
+#    au < doNotProcess ; exists ; 1999 ; Notices of the American Mathematical Society Volume 46 ; 1999 ; >
+#    au < doNotProcess ; exists ; 2000 ; Notices of the American Mathematical Society Volume 47 ; 2000 ; >
+#    au < doNotProcess ; exists ; 2001 ; Notices of the American Mathematical Society Volume 48 ; 2001 ; >
+#    au < doNotProcess ; exists ; 2002 ; Notices of the American Mathematical Society Volume 49 ; 2002 ; >
+#    au < doNotProcess ; exists ; 2003 ; Notices of the American Mathematical Society Volume 50 ; 2003 ; >
+#    au < doNotProcess ; exists ; 2004 ; Notices of the American Mathematical Society Volume 51 ; 2004 ; >
+#    au < doNotProcess ; exists ; 2005 ; Notices of the American Mathematical Society Volume 52 ; 2005 ; >
+#    au < doNotProcess ; exists ; 2006 ; Notices of the American Mathematical Society Volume 53 ; 2006 ; >
+#    au < doNotProcess ; exists ; 2007 ; Notices of the American Mathematical Society Volume 54 ; 2007 ; >
+#    au < doNotProcess ; exists ; 2008 ; Notices of the American Mathematical Society Volume 55 ; 2008 ; >
+#    au < doNotProcess ; exists ; 2009 ; Notices of the American Mathematical Society Volume 56 ; 2009 ; >
+#    au < doNotProcess ; exists ; 2010 ; Notices of the American Mathematical Society Volume 57 ; 2010 ; >
+#    au < doNotProcess ; exists ; 2011 ; Notices of the American Mathematical Society Volume 58 ; 2011 ; >
+#    au < doNotProcess ; exists ; 2012 ; Notices of the American Mathematical Society Volume 59 ; 2012 ; >
+#    au < doNotProcess ; exists ; 2013 ; Notices of the American Mathematical Society Volume 60 ; 2013 ; >
+#    au < doNotProcess ; exists ; 2014 ; Notices of the American Mathematical Society Volume 61 ; 2014 ; >
+#
+#  }
 
   {
   
@@ -456,7 +456,7 @@
     au < finished ; finished ; 2015 ; Representation Theory Volume 19 ; 2015 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Representation Theory Volume 20 ; 2016 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; Representation Theory Volume 21 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Representation Theory Volume 22 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Representation Theory Volume 22 ; 2018 ; >
 
   }
     

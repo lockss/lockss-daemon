@@ -37,7 +37,7 @@
     au < finished ; finished ; 2015 ; Therapeutics and Clinical Risk Management Volume 11 ; 11 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Therapeutics and Clinical Risk Management Volume 12 ; 12 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Therapeutics and Clinical Risk Management Volume 13 ; 13 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Therapeutics and Clinical Risk Management Volume 14 ; 14 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Therapeutics and Clinical Risk Management Volume 14 ; 14 ; 2018 ; >
 
   }
 
@@ -63,7 +63,7 @@
     au < finished ; finished ; 2015 ; Vascular Health and Risk Management Volume 11 ; 11 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Vascular Health and Risk Management Volume 12 ; 12 ; 2016 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Vascular Health and Risk Management Volume 13 ; 13 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Vascular Health and Risk Management Volume 14 ; 14 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Vascular Health and Risk Management Volume 14 ; 14 ; 2018 ; >
 
   }
 
@@ -89,7 +89,7 @@
     au < finished ; finished ; 2015 ; Neuropsychiatric Disease and Treatment Volume 11 ; 11 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Neuropsychiatric Disease and Treatment Volume 12 ; 12 ; 2016 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; Neuropsychiatric Disease and Treatment Volume 13 ; 13 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Neuropsychiatric Disease and Treatment Volume 14 ; 14 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Neuropsychiatric Disease and Treatment Volume 14 ; 14 ; 2018 ; >
 
   }
 
@@ -114,7 +114,7 @@
     au < finished ; finished ; 2015 ; Clinical Interventions in Aging Volume 10 ; 10 ; 2015 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Clinical Interventions in Aging Volume 11 ; 11 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Clinical Interventions in Aging Volume 12 ; 12 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Clinical Interventions in Aging Volume 13 ; 13 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Clinical Interventions in Aging Volume 13 ; 13 ; 2018 ; >
 
   }
 
@@ -187,7 +187,7 @@
     au < finished ; finished ; 2015 ; Journal of Multidisciplinary Healthcare Volume 8 ; 8 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Journal of Multidisciplinary Healthcare Volume 9 ; 9 ; 2016 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Journal of Multidisciplinary Healthcare Volume 10 ; 10 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Journal of Multidisciplinary Healthcare Volume 11 ; 11 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Journal of Multidisciplinary Healthcare Volume 11 ; 11 ; 2018 ; >
 
   }
 
@@ -236,7 +236,7 @@
     au < finished ; finished ; 2015 ; Clinical Ophthalmology Volume 9 ; 9 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Clinical Ophthalmology Volume 10 ; 10 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Clinical Ophthalmology Volume 11 ; 11 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Clinical Ophthalmology Volume 12 ; 12 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Clinical Ophthalmology Volume 12 ; 12 ; 2018 ; >
 
   }
 
@@ -259,7 +259,7 @@
     au < finished ; finished ; 2015 ; Nanotechnology, Science and Applications Volume 8 ; 8 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Nanotechnology, Science and Applications Volume 9 ; 9 ; 2016 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Nanotechnology, Science and Applications Volume 10 ; 10 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Nanotechnology, Science and Applications Volume 11 ; 11 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Nanotechnology, Science and Applications Volume 11 ; 11 ; 2018 ; >
 
   }
 
@@ -307,7 +307,7 @@
     au < finished ; finished ; 2015 ; Patient Preference and Adherence Volume 9 ; 9 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Patient Preference and Adherence Volume 10 ; 10 ; 2016 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Patient Preference and Adherence Volume 11 ; 11 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Patient Preference and Adherence Volume 12 ; 12 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Patient Preference and Adherence Volume 12 ; 12 ; 2018 ; >
 
   }
 
@@ -330,7 +330,7 @@
     au < zapped ; finished ; 2015 ; OncoTargets and Therapy Volume 8 ; 8 ; 2015 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; OncoTargets and Therapy Volume 9 ; 9 ; 2016 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; OncoTargets and Therapy Volume 10 ; 10 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; OncoTargets and Therapy Volume 11 ; 11 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; OncoTargets and Therapy Volume 11 ; 11 ; 2018 ; >
 
   }
 
@@ -353,7 +353,7 @@
     au < finished ; finished ; 2015 ; Medical Devices: Evidence and Research Volume 8 ; 8 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Medical Devices: Evidence and Research Volume 9 ; 9 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Medical Devices: Evidence and Research Volume 10 ; 10 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Medical Devices: Evidence and Research Volume 11 ; 11 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Medical Devices: Evidence and Research Volume 11 ; 11 ; 2018 ; >
 
   }
 
@@ -444,7 +444,7 @@
     au < finished ; finished ; 2015 ; Infection and Drug Resistance Volume 8 ; 8 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Infection and Drug Resistance Volume 9 ; 9 ; 2016 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Infection and Drug Resistance Volume 10 ; 10 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Infection and Drug Resistance Volume 11 ; 11 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Infection and Drug Resistance Volume 11 ; 11 ; 2018 ; >
 
   }
 
@@ -488,7 +488,7 @@
     au < finished ; finished ; 2014 ; Journal of Receptor, Ligand and Channel Research Volume 7 ; 7 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Journal of Receptor, Ligand and Channel Research Volume 8 ; 8 ; 2015 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2016 ; Journal of Receptor, Ligand and Channel Research Volume 9 ; 9 ; 2016 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; Journal of Receptor, Ligand and Channel Research Volume 10 ; 10 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Journal of Receptor, Ligand and Channel Research Volume 10 ; 10 ; 2018 ; >
     
   }
 
@@ -808,7 +808,7 @@
     au < finished ; finished ; 2015 ; Drug, Healthcare and Patient Safety Volume 7 ; 7 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Drug, Healthcare and Patient Safety Volume 8 ; 8 ; 2016 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Drug, Healthcare and Patient Safety Volume 9 ; 9 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Drug, Healthcare and Patient Safety Volume 10 ; 10 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Drug, Healthcare and Patient Safety Volume 10 ; 10 ; 2018 ; >
 
   }
 
@@ -853,7 +853,7 @@
     au < finished ; finished ; 2015 ; International Medical Case Reports Journal Volume 8 ; 8 ; 2015 ; >
     au < finished ; crawling ; 2016 ; International Medical Case Reports Journal Volume 9 ; 9 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; International Medical Case Reports Journal Volume 10 ; 10 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; International Medical Case Reports Journal Volume 11 ; 11 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; International Medical Case Reports Journal Volume 11 ; 11 ; 2018 ; >
 
   }
 
@@ -875,7 +875,7 @@
     au < finished ; finished ; 2015 ; Open Access Emergency Medicine Volume 7 ; 7 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Open Access Emergency Medicine Volume 8 ; 8 ; 2016 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Open Access Emergency Medicine Volume 9 ; 9 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Open Access Emergency Medicine Volume 10 ; 10 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Open Access Emergency Medicine Volume 10 ; 10 ; 2018 ; >
 
   }
 
@@ -963,7 +963,7 @@
     au < finished ; finished ; 2015 ; Open Access Journal of Clinical Trials Volume 7 ; 7 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Open Access Journal of Clinical Trials Volume 8 ; 8 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Open Access Journal of Clinical Trials Volume 9 ; 9 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Open Access Journal of Clinical Trials Volume 10 ; 10 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Open Access Journal of Clinical Trials Volume 10 ; 10 ; 2018 ; >
 
   }
 
@@ -1030,7 +1030,7 @@
     au < finished ; finished ; 2015 ; Clinical, Cosmetic and Investigational Dentistry Volume 7 ; 7 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Clinical, Cosmetic and Investigational Dentistry Volume 8 ; 8 ; 2016 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Clinical, Cosmetic and Investigational Dentistry Volume 9 ; 9 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Clinical, Cosmetic and Investigational Dentistry Volume 10 ; 10 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Clinical, Cosmetic and Investigational Dentistry Volume 10 ; 10 ; 2018 ; >
 
   }
 
@@ -1162,7 +1162,7 @@
     au < finished ; finished ; 2015 ; Virus Adaptation and Treatment Volume 7 ; 7 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Virus Adaptation and Treatment Volume 8 ; 8 ; 2016 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; Virus Adaptation and Treatment Volume 9 ; 9 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Virus Adaptation and Treatment Volume 10 ; 10 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Virus Adaptation and Treatment Volume 10 ; 10 ; 2018 ; >
 
   }
 
@@ -1242,7 +1242,7 @@
     au < finished ; finished ; 2015 ; Clinical Pharmacology: Advances and Applications Volume 7 ; 7 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Clinical Pharmacology: Advances and Applications Volume 8 ; 8 ; 2016 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Clinical Pharmacology: Advances and Applications Volume 9 ; 9 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Clinical Pharmacology: Advances and Applications Volume 10 ; 10 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Clinical Pharmacology: Advances and Applications Volume 10 ; 10 ; 2018 ; >
 
   }
 
@@ -1330,7 +1330,7 @@
     au < finished ; finished ; 2015 ; Nutrition and Dietary Supplements Volume 7 ; 7 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Nutrition and Dietary Supplements Volume 8 ; 8 ; 2016 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; Nutrition and Dietary Supplements Volume 9 ; 9 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Nutrition and Dietary Supplements Volume 10 ; 10 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Nutrition and Dietary Supplements Volume 10 ; 10 ; 2018 ; >
 
   }
 
@@ -1352,7 +1352,7 @@
     au < finished ; finished ; 2015 ; Orthopedic Research and Reviews Volume 7 ; 7 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Orthopedic Research and Reviews Volume 8 ; 8 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Orthopedic Research and Reviews Volume 9 ; 9 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Orthopedic Research and Reviews Volume 10 ; 10 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Orthopedic Research and Reviews Volume 10 ; 10 ; 2018 ; >
 
   }
 
@@ -1395,7 +1395,7 @@
     au < finished ; finished ; 2015 ; Open Access Journal of Contraception Volume 6 ; 6 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Open Access Journal of Contraception Volume 7 ; 7 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Open Access Journal of Contraception Volume 8 ; 8 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Open Access Journal of Contraception Volume 9 ; 9 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Open Access Journal of Contraception Volume 9 ; 9 ; 2018 ; >
 
   }
 
@@ -1459,7 +1459,7 @@
     au < finished ; finished ; 2015 ; Eye and Brain Volume 7 ; 7 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Eye and Brain Volume 8 ; 8 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Eye and Brain Volume 9 ; 9 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Eye and Brain Volume 10 ; 10 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Eye and Brain Volume 10 ; 10 ; 2018 ; >
 
   }
 
@@ -1524,7 +1524,7 @@
     au < finished ; finished ; 2015 ; Clinical Audit Volume 7 ; 7 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Clinical Audit Volume 8 ; 8 ; 2016 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Clinical Audit Volume 9 ; 9 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Clinical Audit Volume 10 ; 10 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Clinical Audit Volume 10 ; 10 ; 2018 ; >
 
   }
 
@@ -1674,7 +1674,7 @@
     au < finished ; finished ; 2015 ; Adolescent Health, Medicine and Therapeutics Volume 6 ; 6 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Adolescent Health, Medicine and Therapeutics Volume 7 ; 7 ; 2016 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; Adolescent Health, Medicine and Therapeutics Volume 8 ; 8 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Adolescent Health, Medicine and Therapeutics Volume 9 ; 9 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Adolescent Health, Medicine and Therapeutics Volume 9 ; 9 ; 2018 ; >
 
   }
 
@@ -1717,7 +1717,7 @@
     au < finished ; finished ; 2015 ; Journal of Healthcare Leadership Volume 7 ; 7 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Journal of Healthcare Leadership Volume 8 ; 8 ; 2016 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Journal of Healthcare Leadership Volume 9 ; 9 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Journal of Healthcare Leadership Volume 10 ; 10 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Journal of Healthcare Leadership Volume 10 ; 10 ; 2018 ; >
 
   }
 
@@ -1738,7 +1738,7 @@
     au < finished ; finished ; 2015 ; Advances in Medical Education and Practice Volume 6 ; 6 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Advances in Medical Education and Practice Volume 7 ; 7 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Advances in Medical Education and Practice Volume 8 ; 8 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Advances in Medical Education and Practice Volume 9 ; 9 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Advances in Medical Education and Practice Volume 9 ; 9 ; 2018 ; >
 
   }
 
@@ -1780,7 +1780,7 @@
     au < finished ; finished ; 2015 ; Research and Reports in Biology Volume 6 ; 6 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Research and Reports in Biology Volume 7 ; 7 ; 2016 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; Research and Reports in Biology Volume 8 ; 8 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Research and Reports in Biology Volume 9 ; 9 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Research and Reports in Biology Volume 9 ; 9 ; 2018 ; >
 
   }
 
@@ -1801,7 +1801,7 @@
     au < finished ; finished ; 2015 ; Pragmatic and Observational Research Volume 6 ; 6 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Pragmatic and Observational Research Volume 7 ; 7 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Pragmatic and Observational Research Volume 8 ; 8 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Pragmatic and Observational Research Volume 9 ; 9 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Pragmatic and Observational Research Volume 9 ; 9 ; 2018 ; >
 
   }
 
@@ -1822,7 +1822,7 @@
     au < finished ; finished ; 2015 ; Research Reports in Clinical Cardiology Volume 6 ; 6 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Research Reports in Clinical Cardiology Volume 7 ; 7 ; 2016 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Research Reports in Clinical Cardiology Volume 8 ; 8 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Research Reports in Clinical Cardiology Volume 9 ; 9 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Research Reports in Clinical Cardiology Volume 9 ; 9 ; 2018 ; >
 
   }
 
@@ -1842,7 +1842,7 @@
     au < finished ; finished ; 2015 ; Comparative Effectiveness Research Volume 5 ; 5 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Comparative Effectiveness Research Volume 6 ; 6 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Comparative Effectiveness Research Volume 7 ; 7 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Comparative Effectiveness Research Volume 8 ; 8 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Comparative Effectiveness Research Volume 8 ; 8 ; 2018 ; >
 
   }
 
@@ -1883,7 +1883,7 @@
     au < finished ; finished ; 2015 ; Degenerative Neurological and Neuromuscular Disease Volume 5 ; 5 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Degenerative Neurological and Neuromuscular Disease Volume 6 ; 6 ; 2016 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; Degenerative Neurological and Neuromuscular Disease Volume 7 ; 7 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Degenerative Neurological and Neuromuscular Disease Volume 8 ; 8 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Degenerative Neurological and Neuromuscular Disease Volume 8 ; 8 ; 2018 ; >
 
   }
 
@@ -1903,7 +1903,7 @@
     au < finished ; finished ; 2015 ; Advances in Genomics and Genetics Volume 5 ; 5 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Advances in Genomics and Genetics Volume 6 ; 6 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Advances in Genomics and Genetics Volume 7 ; 7 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Advances in Genomics and Genetics Volume 8 ; 8 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Advances in Genomics and Genetics Volume 8 ; 8 ; 2018 ; >
 
   }
 
@@ -2063,7 +2063,7 @@
     au < finished ; finished ; 2015 ; Veterinary Medicine: Research and Reports Volume 6 ; 6 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Veterinary Medicine: Research and Reports Volume 7 ; 7 ; 2016 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Veterinary Medicine: Research and Reports Volume 8 ; 8 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Veterinary Medicine: Research and Reports Volume 9 ; 9 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Veterinary Medicine: Research and Reports Volume 9 ; 9 ; 2018 ; >
 
   }
 
@@ -2216,7 +2216,7 @@
     au < finished ; finished ; 2015 ; Current Biomarker Findings Volume 5 ; 5 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Current Biomarker Findings Volume 6 ; 6 ; 2016 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Current Biomarker Findings Volume 7 ; 7 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Current Biomarker Findings Volume 8 ; 8 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Current Biomarker Findings Volume 8 ; 8 ; 2018 ; >
 
   }
 
@@ -2445,7 +2445,7 @@
     au < finished ; finished ; 2015 ; Integrated Pharmacy Research and Practice Volume 4 ; 4 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Integrated Pharmacy Research and Practice Volume 5 ; 5 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Integrated Pharmacy Research and Practice Volume 6 ; 6 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Integrated Pharmacy Research and Practice Volume 7 ; 7 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Integrated Pharmacy Research and Practice Volume 7 ; 7 ; 2018 ; >
 
   }
 
@@ -2519,7 +2519,7 @@
     au < finished ; finished ; 2014 ; Smart Homecare Technology and TeleHealth Volume 2 ; 2 ; 2014 ; >
     au < finished ; finished ; 2015 ; Smart Homecare Technology and TeleHealth Volume 3 ; 3 ; 2015 ; >
     au < deepCrawl ; exists ; 2017 ; Smart Homecare Technology and TeleHealth Volume 4 ; 4 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Smart Homecare Technology and TeleHealth Volume 5 ; 5 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Smart Homecare Technology and TeleHealth Volume 5 ; 5 ; 2018 ; >
 
   }
 
@@ -2627,7 +2627,7 @@
     au < finished ; finished ; 2015 ; International Journal of Clinical Transfusion Medicine Volume 3 ; 3 ; 2015 ; >
     au < finished ; crawling ; 2016 ; International Journal of Clinical Transfusion Medicine Volume 4 ; 4 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; International Journal of Clinical Transfusion Medicine Volume 5 ; 5 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; International Journal of Clinical Transfusion Medicine Volume 6 ; 6 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; International Journal of Clinical Transfusion Medicine Volume 6 ; 6 ; 2018 ; >
 
   }
 
@@ -2682,7 +2682,7 @@
     au < finished ; finished ; 2015 ; Hypoxia Volume 3 ; 3 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Hypoxia Volume 4 ; 4 ; 2016 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Hypoxia Volume 5 ; 5 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Hypoxia Volume 6 ; 6 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Hypoxia Volume 6 ; 6 ; 2018 ; >
 
   }
 
@@ -2717,7 +2717,7 @@
     au < finished ; finished ; 2015 ; Journal of Neurorestoratology Volume 3 ; 3 ; 2015 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Journal of Neurorestoratology Volume 4 ; 4 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Journal of Neurorestoratology Volume 5 ; 5 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Journal of Neurorestoratology Volume 6 ; 6 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Journal of Neurorestoratology Volume 6 ; 6 ; 2018 ; >
 
   }
 
@@ -2768,7 +2768,7 @@
     au < finished ; finished ; 2015 ; Robotic Surgery: Research and Reviews Volume 2 ; 2 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Robotic Surgery: Research and Reviews Volume 3 ; 3 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Robotic Surgery: Research and Reviews Volume 4 ; 4 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Robotic Surgery: Research and Reviews Volume 5 ; 5 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Robotic Surgery: Research and Reviews Volume 5 ; 5 ; 2018 ; >
 
   }
 
@@ -2801,7 +2801,7 @@
     au < finished ; finished ; 2015 ; Innovation and Entrepreneurship in Health Volume 2 ; 2 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Innovation and Entrepreneurship in Health Volume 3 ; 3 ; 2016 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Innovation and Entrepreneurship in Health Volume 4 ; 4 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Innovation and Entrepreneurship in Health Volume 5 ; 5 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Innovation and Entrepreneurship in Health Volume 5 ; 5 ; 2018 ; >
 
   }
 

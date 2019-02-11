@@ -111,20 +111,10 @@
       eissn = 2398-9785 ;
       issnl = 2398-9777 
      >
+     #name changed and journal_id changed from dls (2007-2017) to dlgs (starting 2018)
 
     param[journal_id] = dlgs
-
-    au < exists ; exists ; 2007 ; Deleuze and Guattari Studies Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
-    au < exists ; exists ; 2008 ; Deleuze and Guattari Studies Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
-    au < exists ; exists ; 2009 ; Deleuze and Guattari Studies Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
-    au < exists ; exists ; 2010 ; Deleuze and Guattari Studies Volume 4 ; 4 ; https://www.euppublishing.com/ ; >
-    au < exists ; exists ; 2011 ; Deleuze and Guattari Studies Volume 5 ; 5 ; https://www.euppublishing.com/ ; >
-    au < exists ; exists ; 2012 ; Deleuze and Guattari Studies Volume 6 ; 6 ; https://www.euppublishing.com/ ; >
-    au < exists ; exists ; 2013 ; Deleuze and Guattari Studies Volume 7 ; 7 ; https://www.euppublishing.com/ ; >
-    au < exists ; exists ; 2014 ; Deleuze and Guattari Studies Volume 8 ; 8 ; https://www.euppublishing.com/ ; >
-    au < exists ; exists ; 2015 ; Deleuze and Guattari Studies Volume 9 ; 9 ; https://www.euppublishing.com/ ; >
-    au < exists ; exists ; 2016 ; Deleuze and Guattari Studies Volume 10 ; 10 ; https://www.euppublishing.com/ ; >
-    au < exists ; exists ; 2017 ; Deleuze and Guattari Studies Volume 11 ; 11 ; https://www.euppublishing.com/ ; >
+    #no volumes before 2018. See comment above.
     au < crawling ; exists ; 2018 ; Deleuze and Guattari Studies Volume 12 ; 12 ; https://www.euppublishing.com/ ; >
 
   }
@@ -143,7 +133,7 @@
     au < frozen ; exists ; 2015 ; CounterText Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
     au < frozen ; exists ; 2016 ; CounterText Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
     au < frozen ; exists ; 2017 ; CounterText Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 2018 ; CounterText Volume 4 ; 4 ; https://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; CounterText Volume 4 ; 4 ; https://www.euppublishing.com/ ; >
 
   }
 
@@ -346,7 +336,7 @@
     au < finished ; finished ; 2015 ; Comparative Critical Studies Volume 12 ; 12 ; http://www.euppublishing.com/ ; >
     au < frozen ; exists ; 2016 ; Comparative Critical Studies Volume 13 ; 13 ; http://www.euppublishing.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Comparative Critical Studies Volume 14 ; 14 ; http://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 2018 ; Comparative Critical Studies Volume 15 ; 15 ; https://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Comparative Critical Studies Volume 15 ; 15 ; https://www.euppublishing.com/ ; >
 
   }
 
@@ -373,7 +363,7 @@
     au < finished ; finished ; 2015 ; Corpora Volume 10 ; 10 ; http://www.euppublishing.com/ ; >
     au < frozen ; exists ; 2016 ; Corpora Volume 11 ; 11 ; http://www.euppublishing.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Corpora Volume 12 ; 12 ; http://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 2018 ; Corpora Volume 13 ; 13 ; https://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Corpora Volume 13 ; 13 ; https://www.euppublishing.com/ ; >
 
   }
   
@@ -392,9 +382,9 @@
     au < frozen ; exists ; 2013 ; Cultural History Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
     au < frozen ; exists ; 2014 ; Cultural History Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
     au < frozen ; exists ; 2015 ; Cultural History Volume 4 ; 4 ; https://www.euppublishing.com/ ; >
-    au < frozen ; exists ; 2016 ; Cultural History Volume 5 ; 5 ; https://www.euppublishing.com/ ; > #testing by EDINA (aro)
+    au < frozen ; exists ; 2016 ; Cultural History Volume 5 ; 5 ; https://www.euppublishing.com/ ; >
     au < frozen ; exists ; 2017 ; Cultural History Volume 6 ; 6 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 2018 ; Cultural History Volume 7 ; 7 ; https://www.euppublishing.com/ ; > #testing by EDINA (aro)
+    au < deepCrawl ; exists ; 2018 ; Cultural History Volume 7 ; 7 ; https://www.euppublishing.com/ ; >
 
   }
 
@@ -427,7 +417,7 @@
     au < finished ; finished ; 2015 ; Dance Research Volume 33 ; 33 ; http://www.euppublishing.com/ ; >
     au < frozen ; exists ; 2016 ; Dance Research Volume 34 ; 34 ; http://www.euppublishing.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Dance Research Volume 35 ; 35 ; http://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 2018 ; Dance Research Volume 36 ; 36 ; https://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Dance Research Volume 36 ; 36 ; https://www.euppublishing.com/ ; >
 
   }
 
@@ -441,6 +431,7 @@
      >
 
     param[journal_id] = dls
+    #name changed and journal_id changed from dls (2007-2017) to dlgs (starting 2018)
 
     au < finished ; finished ; 2007 ; Deleuze Studies Volume 1 ; 1 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2008 ; Deleuze Studies Volume 2 ; 2 ; http://www.euppublishing.com/ ; >
@@ -453,8 +444,7 @@
     au < finished ; finished ; 2015 ; Deleuze Studies Volume 9 ; 9 ; http://www.euppublishing.com/ ; >
     au < frozen ; exists ; 2016 ; Deleuze Studies Volume 10 ; 10 ; http://www.euppublishing.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Deleuze Studies Volume 11 ; 11 ; http://www.euppublishing.com/ ; >
-    au < expected ; exists ; 2018 ; Deleuze Studies Volume 12 ; 12 ; https://www.euppublishing.com/ ; >
-
+    #no volumes after 2017. See note above.
   }
 
   {
@@ -553,8 +543,8 @@
      au < frozen ; exists ; 2012 ; Film-Philosophy Volume 6 ; 6 ; https://www.euppublishing.com/ ; >
      au < frozen ; exists ; 2013 ; Film-Philosophy Volume 7 ; 7 ; https://www.euppublishing.com/ ; >
      au < manifest ; exists ; 2004 ; Film-Philosophy Volume 8 ; 8 ; https://www.euppublishing.com/ ; >
-     au < testing ; exists ; 2005 ; Film-Philosophy Volume 9 ; 9 ; https://www.euppublishing.com/ ; > #testing by EDINA (aro)
-     au < testing ; exists ; 2006 ; Film-Philosophy Volume 10 ; 10 ; https://www.euppublishing.com/ ; > #testing by EDINA (aro)
+     au < manifest ; exists ; 2005 ; Film-Philosophy Volume 9 ; 9 ; https://www.euppublishing.com/ ; > #testing by EDINA (aro)
+     au < manifest ; exists ; 2006 ; Film-Philosophy Volume 10 ; 10 ; https://www.euppublishing.com/ ; > #testing by EDINA (aro)
      au < manifest ; exists ; 2007 ; Film-Philosophy Volume 11 ; 11 ; https://www.euppublishing.com/ ; >
      au < manifest ; exists ; 2008 ; Film-Philosophy Volume 12 ; 12 ; https://www.euppublishing.com/ ; >
      au < frozen ; exists ; 2009 ; Film-Philosophy Volume 13 ; 13 ; https://www.euppublishing.com/ ; >
@@ -650,7 +640,7 @@
      au < finished ; finished ; 2015 ; Journal of Holy Land and Palestine Studies Volume 14 ; 14 ; http://www.euppublishing.com/ ; >
      au < frozen ; exists ; 2016 ; Journal of Holy Land and Palestine Studies Volume 15 ; 15 ; http://www.euppublishing.com/ ; >
      au < deepCrawl ; exists ; 2017 ; Journal of Holy Land and Palestine Studies Volume 16 ; 16 ; http://www.euppublishing.com/ ; >
-     au < crawling ; exists ; 2018 ; Journal of Holy Land and Palestine Studies Volume 17 ; 17 ; https://www.euppublishing.com/ ; >
+     au < deepCrawl ; exists ; 2018 ; Journal of Holy Land and Palestine Studies Volume 17 ; 17 ; https://www.euppublishing.com/ ; >
 
   }
 
@@ -739,7 +729,7 @@
     au < finished ; finished ; 2015 ; International Journal of Humanities and Arts Computing Volume 9 (2015) ; 9 ; http://www.euppublishing.com/ ; >
     au < frozen ; down ; 2016 ; International Journal of Humanities and Arts Computing Volume 10 (2016) ; 10 ; http://www.euppublishing.com/ ; >
     au < deepCrawl ; down ; 2017 ; International Journal of Humanities and Arts Computing Volume 11 (2017) ; 11 ; http://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 2018 ; International Journal of Humanities and Arts Computing Volume 12 (2018) ; 12 ; http://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; International Journal of Humanities and Arts Computing Volume 12 (2018) ; 12 ; http://www.euppublishing.com/ ; >
     au < superseded ; notReady ; 2019 ; International Journal of Humanities and Arts Computing Volume 13 (2019) [to delete] ; 13 ; http://www.euppublishing.com/ ; >
     au < superseded ; notReady ; 2020 ; International Journal of Humanities and Arts Computing Volume 14 (2020) [to delete] ; 14 ; http://www.euppublishing.com/ ; >
 
@@ -768,7 +758,7 @@
     au < finished ; finished ; 2015 ; International Research in Children's Literature Volume 8 ; 8 ; http://www.euppublishing.com/ ; >
     au < frozen ; exists ; 2016 ; International Research in Children's Literature Volume 9 ; 9 ; http://www.euppublishing.com/ ; >
     au < deepCrawl ; exists ; 2017 ; International Research in Children's Literature Volume 10 ; 10 ; http://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 2018 ; International Research in Children's Literature Volume 11 ; 11 ; https://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; International Research in Children's Literature Volume 11 ; 11 ; https://www.euppublishing.com/ ; >
 
   }
 
@@ -818,7 +808,7 @@
     au < finished ; finished ; 2015 ; Journal of Beckett Studies Volume 24 ; 24 ; http://www.euppublishing.com/ ; >
     au < frozen ; exists ; 2016 ; Journal of Beckett Studies Volume 25 ; 25 ; http://www.euppublishing.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Journal of Beckett Studies Volume 26 ; 26 ; http://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 2018 ; Journal of Beckett Studies Volume 27 ; 27 ; https://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Journal of Beckett Studies Volume 27 ; 27 ; https://www.euppublishing.com/ ; >
 
   }
 
@@ -927,7 +917,7 @@
     au < finished ; finished ; 2015 ; Journal of Qur'anic Studies Volume 17 ; 17 ; http://www.euppublishing.com/ ; >
     au < frozen ; exists ; 2016 ; Journal of Qur'anic Studies Volume 18 ; 18 ; http://www.euppublishing.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Journal of Qur'anic Studies Volume 19 ; 19 ; http://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 2018 ; Journal of Qur'anic Studies Volume 20 ; 20 ; https://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Journal of Qur'anic Studies Volume 20 ; 20 ; https://www.euppublishing.com/ ; >
 
   }
 
@@ -1282,7 +1272,7 @@
     au < finished ; finished ; 2015 ; Oxford Literary Review Volume 37 ; 37 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2016 ; Oxford Literary Review Volume 38 ; 38 ; http://www.euppublishing.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Oxford Literary Review Volume 39 ; 39 ; http://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 2018 ; Oxford Literary Review Volume 40 ; 40 ; https://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Oxford Literary Review Volume 40 ; 40 ; https://www.euppublishing.com/ ; >
 
   }
 
@@ -1481,7 +1471,7 @@
       au < finished ; finished ; 2015 ; Scottish Affairs Volume 24 ; 24 ; http://www.euppublishing.com/ ; >
       au < frozen ; exists ; 2016 ; Scottish Affairs Volume 25 ; 25 ; http://www.euppublishing.com/ ; >
       au < deepCrawl ; exists ; 2017 ; Scottish Affairs Volume 26 ; 26 ; http://www.euppublishing.com/ ; >
-      au < crawling ; exists ; 2018 ; Scottish Affairs Volume 27 ; 27 ; https://www.euppublishing.com/ ; >
+      au < deepCrawl ; exists ; 2018 ; Scottish Affairs Volume 27 ; 27 ; https://www.euppublishing.com/ ; >
 
   }
 
@@ -1623,7 +1613,7 @@
     au < finished ; finished ; 2015 ; Studies in World Christianity Volume 21 ; 21 ; http://www.euppublishing.com/ ; >
     au < frozen ; exists ; 2016 ; Studies in World Christianity Volume 22 ; 22 ; http://www.euppublishing.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Studies in World Christianity Volume 23 ; 23 ; http://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 2018 ; Studies in World Christianity Volume 24 ; 24 ; https://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Studies in World Christianity Volume 24 ; 24 ; https://www.euppublishing.com/ ; >
 
   }
 
@@ -1654,7 +1644,7 @@
     au < finished ; finished ; 2015 ; Translation and Literature Volume 24 ; 24 ; http://www.euppublishing.com/ ; >
     au < frozen ; exists ; 2016 ; Translation and Literature Volume 25 ; 25 ; http://www.euppublishing.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Translation and Literature Volume 26 ; 26 ; http://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 2018 ; Translation and Literature Volume 27 ; 27 ; https://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Translation and Literature Volume 27 ; 27 ; https://www.euppublishing.com/ ; >
 
   }
 
@@ -1679,7 +1669,7 @@
     au < finished ; finished ; 2015 ; Word Structure Volume 8 ; 8 ; http://www.euppublishing.com/ ; >
     au < frozen ; exists ; 2016 ; Word Structure Volume 9 ; 9 ; http://www.euppublishing.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Word Structure Volume 10 ; 10 ; http://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 2018 ; Word Structure Volume 11 ; 11 ; https://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Word Structure Volume 11 ; 11 ; https://www.euppublishing.com/ ; >
 
   }
 

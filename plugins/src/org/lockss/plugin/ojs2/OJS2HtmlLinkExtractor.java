@@ -28,7 +28,7 @@ Except as contained in this notice, the name of Stanford University shall not
 be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
-*/
+ */
 
 package org.lockss.plugin.ojs2;
 
@@ -45,134 +45,154 @@ import org.lockss.util.*;
 
 public class OJS2HtmlLinkExtractor extends GoslingHtmlLinkExtractor {
 
-  protected static final Logger log = Logger.getLogger(OJS2HtmlLinkExtractor.class);
-  
-  protected static final String NAME = "name";
-  protected static final String PDF_NAME = "citation_pdf_url";
-  protected static final String FT_NAME = "citation_fulltext_html_url";
-  protected static final String CONTENT = "content";
+	protected static final Logger log = Logger.getLogger(OJS2HtmlLinkExtractor.class);
 
-  protected static final Pattern OPEN_RT_WINDOW_PATTERN =
-      Pattern.compile("javascript:openRTWindow\\('([^']*)'\\);", Pattern.CASE_INSENSITIVE);
-  
-  protected static final Pattern IFRAME_PDF_VIEWER_PATTERN =
-      Pattern.compile("/plugins/generic/pdfJsViewer/pdf\\.js/web/viewer\\.html\\?file=([^&]+)", Pattern.CASE_INSENSITIVE);
-  
-  protected static final Pattern JLA_ARTICLE_PATTERN = Pattern.compile(
-      "(http://www[.]logicandanalysis[.]org/index.php/jla/article/view/[\\d]+)/[\\d]+$");
-  
-  @Override
-  public void extractUrls(final ArchivalUnit au, InputStream in, String encoding, final String srcUrl,
-      final Callback cb) throws IOException {
-    
-    super.extractUrls(au, in, encoding, srcUrl,
-        new Callback() {
-          @Override
-          public void foundLink(String url) {
-            if (au != null) {
-              if (UrlUtil.isSameHost(srcUrl, url)) {
-                url = AuUtil.normalizeHttpHttpsFromBaseUrl(au, url);
-              }
-            }
-            cb.foundLink(url);
-          }
-        }
-    );
-  }
-  
-  @Override
-  protected String extractLinkFromTag(StringBuffer link,
-                                      ArchivalUnit au,
-                                      Callback cb)
-      throws IOException {
-    switch (link.charAt(0)) {
-      case 'a':
-      case 'A':
-        if (beginsWithTag(link, ATAG)) {
-          // <a href="...">
-          String href = getAttributeValue(HREF, link);
-          if (href != null) {
-            // javascript:openRTWindow(url);
-            Matcher mat = OPEN_RT_WINDOW_PATTERN.matcher(href);
-            if (mat.find()) {
-              if (baseUrl == null) { baseUrl = new URL(srcUrl); } // Copycat of parseLink()
-              cb.foundLink(resolveUri(baseUrl, mat.group(1)));
-            }
-            mat = JLA_ARTICLE_PATTERN.matcher(href);
-            if (mat.find()) {
-              String url = mat.group(1);
-              cb.foundLink(url);
-            }
-          }
-        }
-        break;
-        
-      case 'f':
-      case 'F':
-        if (beginsWithTag(link, FORMTAG)) {
-          // <form action="...">
-          String action = getAttributeValue("action", link);
-          if (action != null) {
-            // javascript:openRTWindow(url);
-            Matcher mat = OPEN_RT_WINDOW_PATTERN.matcher(action);
-            if (mat.find()) {
-              if (baseUrl == null) { baseUrl = new URL(srcUrl); } // Copycat of parseLink()
-              cb.foundLink(resolveUri(baseUrl, mat.group(1)));
-            }
-          }
-        }
-        break;
+	protected static final String NAME = "name";
+	protected static final String PDF_NAME = "citation_pdf_url";
+	protected static final String FT_NAME = "citation_fulltext_html_url";
+	protected static final String CONTENT = "content";
 
-      case 'i':
-      case 'I':
-        if (beginsWithTag(link, IFRAMETAG)) {
-          // <iframe src="...">
-          String src = getAttributeValue(SRC, link);
-          if (src != null) {
-            // <baseurl?>/plugins/generic/pdfJsViewer/pdf.js/web/viewer.html?file=<encodedurl>
-            Matcher mat = IFRAME_PDF_VIEWER_PATTERN.matcher(src);
-            if (mat.find()) {
-              if (baseUrl == null) { baseUrl = new URL(srcUrl); } // Copycat of parseLink()
-              cb.foundLink(resolveUri(baseUrl, URLDecoder.decode(mat.group(1), "UTF-8")));
-            }
-          }
-        }
-        break;
-        
-      case 'm':
-      case 'M':
-        if (beginsWithTag(link, METATAG)) {
-          if (REFRESH.equalsIgnoreCase(getAttributeValue(HTTP_EQUIV, link))) {
-            String value = getAttributeValue(HTTP_EQUIV_CONTENT, link);
-            if (value != null) {
-              // <meta http-equiv="refresh" content="...">
-              int i = value.indexOf(";url=");
-              if (i >= 0) {
-                String refreshUrl = value.substring(i+5);
-                // javascript:openRTWindow(url);
-                Matcher mat = OPEN_RT_WINDOW_PATTERN.matcher(refreshUrl);
-                if (mat.find()) {
-                  if (baseUrl == null) { baseUrl = new URL(srcUrl); } // Copycat of parseLink()
-                  cb.foundLink(resolveUri(baseUrl, mat.group(1)));
-                }
-              }
-            }
-          } else {
-            if (PDF_NAME.equalsIgnoreCase(getAttributeValue(NAME, link)) ||
-                FT_NAME.equalsIgnoreCase(getAttributeValue(NAME, link))) {
-              
-              String url = getAttributeValue(CONTENT, link);
-              if (url != null) {
-                cb.foundLink(url);
-              }
-            }
-          }
-        }
-        break;
-    }
-    
-    return super.extractLinkFromTag(link, au, cb);
-  }
-  
+	// instead of a crawl filter, limit which links are foundon which pages
+	protected static final String MANIFEST_PATH = "/gateway/";
+	protected static final String TOC_PATH = "/issue/view/";
+	protected static final Pattern LAND_PAT = Pattern.compile("/article/view/[^/]+$", Pattern.CASE_INSENSITIVE);
+
+
+	protected static final Pattern OPEN_RT_WINDOW_PATTERN =
+			Pattern.compile("javascript:openRTWindow\\('([^']*)'\\);", Pattern.CASE_INSENSITIVE);
+
+	protected static final Pattern IFRAME_PDF_VIEWER_PATTERN =
+			Pattern.compile("/plugins/generic/pdfJsViewer/pdf\\.js/web/viewer\\.html\\?file=([^&]+)", Pattern.CASE_INSENSITIVE);
+
+	protected static final Pattern JLA_ARTICLE_PATTERN = Pattern.compile(
+			"(http://www[.]logicandanalysis[.]org/index.php/jla/article/view/[\\d]+)/[\\d]+$");
+
+	@Override
+	public void extractUrls(final ArchivalUnit au, InputStream in, String encoding, final String srcUrl,
+			final Callback cb) throws IOException {
+
+		super.extractUrls(au, in, encoding, srcUrl,
+				new Callback() {
+			@Override
+			public void foundLink(String url) {
+				// If the found url is an issue TOC then we should only "find" it on a manifest
+				// to avoid overcrawling
+				if ((url.contains(TOC_PATH)) && !(srcUrl.contains(MANIFEST_PATH))) {
+					log.debug3("Suppressing found link: " + url + " from page " + srcUrl);
+					return;
+				}
+				// if the found url is for an article landing page, we should only "find"
+				// it on an issue TOC to avoid overcrawling
+				Matcher landMat = LAND_PAT.matcher(url);
+				if (landMat.find() && !(srcUrl.contains(TOC_PATH))) {
+					log.debug3("Suppressing found link: " + url + " from page " + srcUrl);
+					return;
+				}
+				// Now just do whatever else is needed
+				if (au != null) {
+					if (UrlUtil.isSameHost(srcUrl, url)) {
+						url = AuUtil.normalizeHttpHttpsFromBaseUrl(au, url);
+					}
+				}
+				cb.foundLink(url);
+			}
+		}
+				);
+	}
+
+	@Override
+	protected String extractLinkFromTag(StringBuffer link,
+			ArchivalUnit au,
+			Callback cb)
+					throws IOException {
+		switch (link.charAt(0)) {
+		case 'a':
+		case 'A':
+			if (beginsWithTag(link, ATAG)) {
+				// <a href="...">
+				String href = getAttributeValue(HREF, link);
+				if (href != null) {
+					// javascript:openRTWindow(url);
+					Matcher mat = OPEN_RT_WINDOW_PATTERN.matcher(href);
+					if (mat.find()) {
+						if (baseUrl == null) { baseUrl = new URL(srcUrl); } // Copycat of parseLink()
+						cb.foundLink(resolveUri(baseUrl, mat.group(1)));
+					}
+					mat = JLA_ARTICLE_PATTERN.matcher(href);
+					if (mat.find()) {
+						String url = mat.group(1);
+						cb.foundLink(url);
+					}
+				}
+			}
+			break;
+
+		case 'f':
+		case 'F':
+			if (beginsWithTag(link, FORMTAG)) {
+				// <form action="...">
+				String action = getAttributeValue("action", link);
+				if (action != null) {
+					// javascript:openRTWindow(url);
+					Matcher mat = OPEN_RT_WINDOW_PATTERN.matcher(action);
+					if (mat.find()) {
+						if (baseUrl == null) { baseUrl = new URL(srcUrl); } // Copycat of parseLink()
+						cb.foundLink(resolveUri(baseUrl, mat.group(1)));
+					}
+				}
+			}
+			break;
+
+		case 'i':
+		case 'I':
+			if (beginsWithTag(link, IFRAMETAG)) {
+				// <iframe src="...">
+				String src = getAttributeValue(SRC, link);
+				if (src != null) {
+					// <baseurl?>/plugins/generic/pdfJsViewer/pdf.js/web/viewer.html?file=<encodedurl>
+					Matcher mat = IFRAME_PDF_VIEWER_PATTERN.matcher(src);
+					if (mat.find()) {
+						if (baseUrl == null) { baseUrl = new URL(srcUrl); } // Copycat of parseLink()
+						cb.foundLink(resolveUri(baseUrl, URLDecoder.decode(mat.group(1), "UTF-8")));
+					}
+				}
+			}
+			break;
+
+		case 'm':
+		case 'M':
+			if (beginsWithTag(link, METATAG)) {
+				if (REFRESH.equalsIgnoreCase(getAttributeValue(HTTP_EQUIV, link))) {
+					String value = getAttributeValue(HTTP_EQUIV_CONTENT, link);
+					if (value != null) {
+						// <meta http-equiv="refresh" content="...">
+						int i = value.indexOf(";url=");
+						if (i >= 0) {
+							String refreshUrl = value.substring(i+5);
+							// javascript:openRTWindow(url);
+							Matcher mat = OPEN_RT_WINDOW_PATTERN.matcher(refreshUrl);
+							if (mat.find()) {
+								if (baseUrl == null) { baseUrl = new URL(srcUrl); } // Copycat of parseLink()
+								cb.foundLink(resolveUri(baseUrl, mat.group(1)));
+							}
+						}
+					}
+				} else {
+					if (PDF_NAME.equalsIgnoreCase(getAttributeValue(NAME, link)) ||
+							FT_NAME.equalsIgnoreCase(getAttributeValue(NAME, link))) {
+
+						String url = getAttributeValue(CONTENT, link);
+						if (url != null) {
+							cb.foundLink(url);
+						}
+					}
+				}
+			}
+			break;
+		}
+
+		return super.extractLinkFromTag(link, au, cb);
+	}
+
 }
 
