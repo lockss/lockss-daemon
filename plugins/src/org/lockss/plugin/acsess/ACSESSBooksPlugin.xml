@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>8</string>
+    <string>9</string>
   </entry>
     <entry>
     <string>plugin_name</string>
@@ -88,6 +88,13 @@
       <string>"^%spublications/books/(articles|pdfs)/%s/%s[^?]*", base_url, series_id, book_id</string>
     </list>
   </entry>
+  <entry>
+    <string>au_url_mime_validation_map</string>
+    <list>
+      <string>publications/books/pdfs/[^/]+/[^?]+, application/pdf</string>
+      <string>publications/books/(abstracts|articles)/[^/]+/[^?]+, text/html</string>
+    </list>
+  </entry>  
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.acsess.ACSESSJournalsHtmlHashFilterFactory</string>
