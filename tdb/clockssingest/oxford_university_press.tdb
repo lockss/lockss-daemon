@@ -528,7 +528,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; American Journal of Agricultural Economics Volume 97 ; 97 ; >
     au < frozen ; exists ; 2016 ; 2016 ; American Journal of Agricultural Economics Volume 98 ; 98 ; >
     au < frozen ; exists ; 2017 ; 2017 ; American Journal of Agricultural Economics Volume 99 ; 99 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; American Journal of Agricultural Economics Volume 100 ; 100 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; American Journal of Agricultural Economics Volume 100 ; 100 ; >
 
   }
 
@@ -1009,7 +1009,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Analysis Volume 75 ; 75 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Analysis Volume 76 ; 76 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Analysis Volume 77 ; 77 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Analysis Volume 78 ; 78 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Analysis Volume 78 ; 78 ; >
 
   }
 
@@ -1960,7 +1960,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Behavioral Ecology Volume 26 ; 26 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Behavioral Ecology Volume 27 ; 27 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Behavioral Ecology Volume 28 ; 28 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; 2018 ; Behavioral Ecology Volume 29 ; 29 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Behavioral Ecology Volume 29 ; 29 ; >
 
   }
 
@@ -2912,7 +2912,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Cambridge Journal of Economics Volume 39 ; 39 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Cambridge Journal of Economics Volume 40 ; 40 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Cambridge Journal of Economics Volume 41 ; 41 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; 2018 ; Cambridge Journal of Economics Volume 42 ; 42 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Cambridge Journal of Economics Volume 42 ; 42 ; >
 
   }
 
@@ -3506,7 +3506,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Community Development Journal Volume 50 ; 50 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Community Development Journal Volume 51 ; 51 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Community Development Journal Volume 52 ; 52 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2018 ; 2018 ; Community Development Journal Volume 53 ; 53 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Community Development Journal Volume 53 ; 53 ; >
 
   }
 
@@ -3672,7 +3672,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Contributions to Political Economy Volume 34 ; 34 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Contributions to Political Economy Volume 35 ; 35 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Contributions to Political Economy Volume 36 ; 36 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Contributions to Political Economy Volume 37 ; 37 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Contributions to Political Economy Volume 37 ; 37 ; >
 
   }
 
@@ -3696,7 +3696,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Critical Values Volume 8 ; 8 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Critical Values Volume 9 ; 9 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Critical Values Volume 10 ; 10 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; 2018 ; Critical Values Volume 11 ; 11 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Critical Values Volume 11 ; 11 ; >
 
   }
 
@@ -3835,7 +3835,7 @@
     au < notReady ; exists ; 2015 ; 2015 ; Database Volume 2015 ; 2015 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Database Volume 2016 ; 2016 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Database Volume 2017 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Database Volume 2018 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Database Volume 2018 ; 2018 ; >
 
   }
 
@@ -3982,7 +3982,7 @@
     au < manifest ; exists ; 2015 ; 2015 ; Diseases of the Esophagus Volume 28 ; 28 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Diseases of the Esophagus Volume 29 ; 29 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Diseases of the Esophagus Volume 30 ; 30 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; 2018 ; Diseases of the Esophagus Volume 31 ; 31 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Diseases of the Esophagus Volume 31 ; 31 ; >
 
   }
 
@@ -4198,7 +4198,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Early Music Volume 43 ; 43 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Early Music Volume 44 ; 44 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Early Music Volume 45 ; 45 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2018 ; 2018 ; Early Music Volume 46 ; 46 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Early Music Volume 46 ; 46 ; >
 
   }
 
@@ -5585,7 +5585,7 @@
     au < frozen ; exists ; 2015 ; 2015 ; Forest Science Volume 61 ; 61 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Forest Science Volume 62 ; 62 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Forest Science Volume 63 ; 63 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2018 ; 2018 ; Forest Science Volume 64 ; 64 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Forest Science Volume 64 ; 64 ; >
 
   }
 
@@ -5961,7 +5961,7 @@
     au < frozen ; exists ; 2015 ; 2015 ; Gastroenterology Report Volume 3 ; 3 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Gastroenterology Report Volume 4 ; 4 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Gastroenterology Report Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Gastroenterology Report Volume 6 ; 6 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Gastroenterology Report Volume 6 ; 6 ; >
 
   }
 
@@ -7188,7 +7188,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; ITNOW Volume 57 ; 57 ; >
     au < frozen ; exists ; 2016 ; 2016 ; ITNOW Volume 58 ; 58 ; >
     au < finished ; crawling ; 2017 ; 2017 ; ITNOW Volume 59 ; 59 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; 2018 ; ITNOW Volume 60 ; 60 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; ITNOW Volume 60 ; 60 ; >
 
   }
 
@@ -7657,7 +7657,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Journal of Constitutional Law Volume 13 ; 13 ; >
     au < frozen ; exists ; 2016 ; 2016 ; International Journal of Constitutional Law Volume 14 ; 14 ; >
     au < finished ; crawling ; 2017 ; 2017 ; International Journal of Constitutional Law Volume 15 ; 15 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; 2018 ; International Journal of Constitutional Law Volume 16 ; 16 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; International Journal of Constitutional Law Volume 16 ; 16 ; >
 
   }
 
@@ -8914,7 +8914,7 @@
 
     param[journal_id] = joc
 
-    au < crawling ; exists ; 2018 ; 2018 ; Journal of Communication Volume 1 ; 1 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Journal of Communication Volume 1 ; 1 ; >
 
   }
 

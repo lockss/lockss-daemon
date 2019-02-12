@@ -419,7 +419,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; European Comic Art Volume 8 ; 8 ; >
     au < frozen ; exists ; 2016 ; European Comic Art Volume 9 ; 9 ; >
     au < finished ; crawling ; 2017 ; European Comic Art Volume 10 ; 10 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2018 ; European Comic Art Volume 11 ; 11 ; >
+    au < deepCrawl ; exists ; 2018 ; European Comic Art Volume 11 ; 11 ; >
     
   }
 
@@ -555,7 +555,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; German Politics and Society Volume 33 ; 33 ; >
     au < frozen ; exists ; 2016 ; German Politics and Society Volume 34 ; 34 ; >
     au < finished ; crawling ; 2017 ; German Politics and Society Volume 35 ; 35 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; German Politics and Society Volume 36 ; 36 ; >
+    au < deepCrawl ; exists ; 2018 ; German Politics and Society Volume 36 ; 36 ; >
     
   }
 
@@ -630,7 +630,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Social Quality Volume 5 ; 5 ; >
     au < frozen ; exists ; 2016 ; International Journal of Social Quality Volume 6 ; 6 ; >
     au < finished ; crawling ; 2017 ; International Journal of Social Quality Volume 7 ; 7 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; International Journal of Social Quality Volume 8 ; 8 ; >
+    au < deepCrawl ; exists ; 2018 ; International Journal of Social Quality Volume 8 ; 8 ; >
     
   }
 
@@ -699,7 +699,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Educational Media, Memory, and Society Volume 7 ; 7 ; >
     au < frozen ; exists ; 2016 ; Journal of Educational Media, Memory, and Society Volume 8 ; 8 ; >
     au < finished ; crawling ; 2017 ; Journal of Educational Media, Memory, and Society Volume 9 ; 9 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; Journal of Educational Media, Memory, and Society Volume 10 ; 10 ; >
+    au < deepCrawl ; exists ; 2018 ; Journal of Educational Media, Memory, and Society Volume 10 ; 10 ; >
     
   }
 
@@ -1014,7 +1014,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Sibirica Volume 14 ; 14 ; >
     au < frozen ; exists ; 2016 ; Sibirica Volume 15 ; 15 ; >
     au < finished ; crawling ; 2017 ; Sibirica Volume 16 ; 16 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2018 ; Sibirica Volume 17 ; 17 ; >
+    au < deepCrawl ; exists ; 2018 ; Sibirica Volume 17 ; 17 ; >
     
   }
 
@@ -1082,7 +1082,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Theoria Volume 62 ; 62 ; >
     au < frozen ; exists ; 2016 ; Theoria Volume 63 ; 63 ; >
     au < finished ; crawling ; 2017 ; Theoria Volume 64 ; 64 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; Theoria Volume 65 ; 65 ; >
+    au < deepCrawl ; exists ; 2018 ; Theoria Volume 65 ; 65 ; >
     
   }
 

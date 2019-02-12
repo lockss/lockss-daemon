@@ -42,7 +42,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Air, Soil & Water Research Volume 8 ; 8 ; aswa ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Air, Soil & Water Research Volume 9 ; 9 ; aswa ; http://journals.sagepub.com/ ; >
     au < finished ; crawling ; 2017 ; Air, Soil & Water Research Volume 10 ; 10 ; aswa ; http://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; Air, Soil & Water Research Volume 11 ; 11 ; aswa ; http://journals.sagepub.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Air, Soil & Water Research Volume 11 ; 11 ; aswa ; http://journals.sagepub.com/ ; >
 
   }
 
@@ -355,7 +355,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Blood Disorders Volume 8 ; 8 ; bdxa ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Blood Disorders Volume 9 ; 9 ; bdxa ; http://journals.sagepub.com/ ; >
     au < finished ; crawling ; 2017 ; Clinical Medicine Insights: Blood Disorders Volume 10 ; 10 ; bdxa ; http://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; Clinical Medicine Insights: Blood Disorders Volume 11 ; 11 ; bdxa ; http://journals.sagepub.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Clinical Medicine Insights: Blood Disorders Volume 11 ; 11 ; bdxa ; http://journals.sagepub.com/ ; >
 
   }
 
@@ -714,7 +714,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Women's Health Volume 8 ; 8 ; cmwa ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Women's Health Volume 9 ; 9 ; cmwa ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2017 ; Clinical Medicine Insights: Women's Health Volume 10 ; 10 ; cmwa ; http://journals.sagepub.com/ ; >
-    au < crawling ; exists ; 2018 ; Clinical Medicine Insights: Women's Health Volume 11 ; 11 ; cmwa ; http://journals.sagepub.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Clinical Medicine Insights: Women's Health Volume 11 ; 11 ; cmwa ; http://journals.sagepub.com/ ; >
 
   }
 
@@ -909,7 +909,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Immunology and Immunogenetics Insights Volume 7 ; 7 ; iiia ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Immunology and Immunogenetics Insights Volume 8 ; 8 ; iiia ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2017 ; Immunology and Immunogenetics Insights Volume 9 ; 9 ; iiia ; http://journals.sagepub.com/ ; >
-    au < crawling ; exists ; 2018 ; Immunology and Immunogenetics Insights Volume 10 ; 10 ; iiia ; http://journals.sagepub.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Immunology and Immunogenetics Insights Volume 10 ; 10 ; iiia ; http://journals.sagepub.com/ ; >
 
   }
 
@@ -1121,7 +1121,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Experimental Neuroscience Volume 9 ; 9 ; exna ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Journal of Experimental Neuroscience Volume 10 ; 10 ; exna ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2017 ; Journal of Experimental Neuroscience Volume 11 ; 11 ; exna ; http://journals.sagepub.com/ ; >
-    au < crawling ; exists ; 2018 ; Journal of Experimental Neuroscience Volume 12 ; 12 ; exna ; http://journals.sagepub.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Journal of Experimental Neuroscience Volume 12 ; 12 ; exna ; http://journals.sagepub.com/ ; >
 
   }
 
@@ -1429,7 +1429,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Substance Abuse: Research and Treatment Volume 9 ; 9 ; sata ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Substance Abuse: Research and Treatment Volume 10 ; 10 ; sata ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2017 ; Substance Abuse: Research and Treatment Volume 11 ; 11 ; sata ; http://journals.sagepub.com/ ; >
-    au < crawling ; exists ; 2018 ; Substance Abuse: Research and Treatment Volume 12 ; 12 ; sata ; http://journals.sagepub.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Substance Abuse: Research and Treatment Volume 12 ; 12 ; sata ; http://journals.sagepub.com/ ; >
 
   }
 
