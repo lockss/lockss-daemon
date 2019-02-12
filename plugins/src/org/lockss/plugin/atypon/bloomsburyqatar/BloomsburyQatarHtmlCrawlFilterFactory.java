@@ -67,7 +67,7 @@ public class BloomsburyQatarHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFi
       // the tab with references for the article which could lead to other articles
       HtmlNodeFilters.tagWithAttribute("div", "id", "referencesTab"),
       
-      
+      HtmlNodeFilters.tagWithAttribute("a", "class", "ext-link"),
   };
 
   @Override
