@@ -10764,8 +10764,24 @@
     >
 
       #param[base_url] = http://art.sagepub.com/
-      # content available from 1983 volume 1 to 1999 volume 17
 
+      au < exists ; 1983 ; Empirical Studies of the Arts Volume 1 ; 1 ; arta ; https://journals.sagepub.com/ >
+      au < exists ; 1984 ; Empirical Studies of the Arts Volume 2 ; 2 ; arta ; https://journals.sagepub.com/ >
+      au < exists ; 1985 ; Empirical Studies of the Arts Volume 3 ; 3 ; arta ; https://journals.sagepub.com/ >
+      au < exists ; 1986 ; Empirical Studies of the Arts Volume 4 ; 4 ; arta ; https://journals.sagepub.com/ >
+      au < exists ; 1987 ; Empirical Studies of the Arts Volume 5 ; 5 ; arta ; https://journals.sagepub.com/ >
+      au < exists ; 1988 ; Empirical Studies of the Arts Volume 6 ; 6 ; arta ; https://journals.sagepub.com/ >
+      au < exists ; 1989 ; Empirical Studies of the Arts Volume 7 ; 7 ; arta ; https://journals.sagepub.com/ >
+      au < exists ; 1990 ; Empirical Studies of the Arts Volume 8 ; 8 ; arta ; https://journals.sagepub.com/ >
+      au < exists ; 1991 ; Empirical Studies of the Arts Volume 9 ; 9 ; arta ; https://journals.sagepub.com/ >
+      au < exists ; 1992 ; Empirical Studies of the Arts Volume 10 ; 10 ; arta ; https://journals.sagepub.com/ >
+      au < exists ; 1993 ; Empirical Studies of the Arts Volume 11 ; 11 ; arta ; https://journals.sagepub.com/ >
+      au < exists ; 1994 ; Empirical Studies of the Arts Volume 12 ; 12 ; arta ; https://journals.sagepub.com/ >
+      au < exists ; 1995 ; Empirical Studies of the Arts Volume 13 ; 13 ; arta ; https://journals.sagepub.com/ >
+      au < exists ; 1996 ; Empirical Studies of the Arts Volume 14 ; 14 ; arta ; https://journals.sagepub.com/ >
+      au < exists ; 1997 ; Empirical Studies of the Arts Volume 15 ; 15 ; arta ; https://journals.sagepub.com/ >
+      au < exists ; 1998 ; Empirical Studies of the Arts Volume 16 ; 16 ; arta ; https://journals.sagepub.com/ >
+      au < exists ; 1999 ; Empirical Studies of the Arts Volume 17 ; 17 ; arta ; https://journals.sagepub.com/ >
       au < manifest ; 2000 ; Empirical Studies of the Arts Volume 18 ; 18 ; arta ; https://journals.sagepub.com/ >
       au < manifest ; 2001 ; Empirical Studies of the Arts Volume 19 ; 19 ; arta ; https://journals.sagepub.com/ >
       au < manifest ; 2002 ; Empirical Studies of the Arts Volume 20 ; 20 ; arta ; https://journals.sagepub.com/ >
@@ -10798,6 +10814,15 @@
 
       #param[base_url] = http://eae.sagepub.com/
 
+      au < exists ; 1990 ; Energy & Environment Volume 1 ; 1 ; eaea ; https://journals.sagepub.com/ >
+      au < exists ; 1991 ; Energy & Environment Volume 2 ; 2 ; eaea ; https://journals.sagepub.com/ >
+      au < exists ; 1992 ; Energy & Environment Volume 3 ; 3 ; eaea ; https://journals.sagepub.com/ >
+      au < exists ; 1993 ; Energy & Environment Volume 4 ; 4 ; eaea ; https://journals.sagepub.com/ >
+      au < exists ; 1994 ; Energy & Environment Volume 5 ; 5 ; eaea ; https://journals.sagepub.com/ >
+      au < exists ; 1995 ; Energy & Environment Volume 6 ; 6 ; eaea ; https://journals.sagepub.com/ >
+      au < exists ; 1996 ; Energy & Environment Volume 7 ; 7 ; eaea ; https://journals.sagepub.com/ >
+      au < exists ; 1997 ; Energy & Environment Volume 8 ; 8 ; eaea ; https://journals.sagepub.com/ >
+      au < exists ; 1998 ; Energy & Environment Volume 9 ; 9 ; eaea ; https://journals.sagepub.com/ >
       au < manifest ; 1999 ; Energy & Environment Volume 10 ; 10 ; eaea ; https://journals.sagepub.com/ >
       au < manifest ; 2000 ; Energy & Environment Volume 11 ; 11 ; eaea ; https://journals.sagepub.com/ >
       au < manifest ; 2001 ; Energy & Environment Volume 12 ; 12 ; eaea ; https://journals.sagepub.com/ >
@@ -10831,6 +10856,23 @@
 
       #param[base_url] = http://eea.sagepub.com/
 
+      au < exists ; 1981-1982 ; Energy Exploration & Exploitation Volume 1 ; 1 ; eeaa ; https://journals.sagepub.com/ >
+      au < exists ; 1983-1984 ; Energy Exploration & Exploitation Volume 2 ; 2 ; eeaa ; https://journals.sagepub.com/ >
+      au < doesNotExist ; 1985 ; Energy Exploration & Exploitation Volume 3 ; 3 ; eeaa ; https://journals.sagepub.com/ >
+      au < exists ; 1986 ; Energy Exploration & Exploitation Volume 4 ; 4 ; eeaa ; https://journals.sagepub.com/ >
+      au < exists ; 1987 ; Energy Exploration & Exploitation Volume 5 ; 5 ; eeaa ; https://journals.sagepub.com/ >
+      au < exists ; 1988 ; Energy Exploration & Exploitation Volume 6 ; 6 ; eeaa ; https://journals.sagepub.com/ >
+      au < exists ; 1989 ; Energy Exploration & Exploitation Volume 7 ; 7 ; eeaa ; https://journals.sagepub.com/ >
+      au < exists ; 1990 ; Energy Exploration & Exploitation Volume 8 ; 8 ; eeaa ; https://journals.sagepub.com/ >
+      au < exists ; 1991 ; Energy Exploration & Exploitation Volume 9 ; 9 ; eeaa ; https://journals.sagepub.com/ >
+      au < exists ; 1992 ; Energy Exploration & Exploitation Volume 10 ; 10 ; eeaa ; https://journals.sagepub.com/ >
+      au < exists ; 1993 ; Energy Exploration & Exploitation Volume 11 ; 11 ; eeaa ; https://journals.sagepub.com/ >
+      au < exists ; 1994 ; Energy Exploration & Exploitation Volume 12 ; 12 ; eeaa ; https://journals.sagepub.com/ >
+      au < exists ; 1995 ; Energy Exploration & Exploitation Volume 13 ; 13 ; eeaa ; https://journals.sagepub.com/ >
+      au < exists ; 1996 ; Energy Exploration & Exploitation Volume 14 ; 14 ; eeaa ; https://journals.sagepub.com/ >
+      au < doesNotExist ; 1997 ; Energy Exploration & Exploitation Volume 15 ; 15 ; eeaa ; https://journals.sagepub.com/ >
+      au < doesNotExist ; 1998 ; Energy Exploration & Exploitation Volume 16 ; 16 ; eeaa ; https://journals.sagepub.com/ >
+      au < exists ; 1999 ; Energy Exploration & Exploitation Volume 17 ; 17 ; eeaa ; https://journals.sagepub.com/ >
       au < manifest ; 2000 ; Energy Exploration & Exploitation Volume 18 ; 18 ; eeaa ; https://journals.sagepub.com/ >
       au < manifest ; 2001 ; Energy Exploration & Exploitation Volume 19 ; 19 ; eeaa ; https://journals.sagepub.com/ >
       au < manifest ; 2002 ; Energy Exploration & Exploitation Volume 20 ; 20 ; eeaa ; https://journals.sagepub.com/ >
@@ -10939,8 +10981,38 @@
     >
 
       #param[base_url] = http://epn.sagepub.com/
-      #content available from 1977 volume 9 to 2007 volume 39 
 
+      au < exists ; 1969 ; Environment and Planning A Volume 1 ; 1 ; epna ; https://journals.sagepub.com/ >
+      au < exists ; 1970 ; Environment and Planning A Volume 2 ; 2 ; epna ; https://journals.sagepub.com/ >
+      au < exists ; 1971 ; Environment and Planning A Volume 3 ; 3 ; epna ; https://journals.sagepub.com/ >
+      au < exists ; 1972 ; Environment and Planning A Volume 4 ; 4 ; epna ; https://journals.sagepub.com/ >
+      au < exists ; 1973 ; Environment and Planning A Volume 5 ; 5 ; epna ; https://journals.sagepub.com/ >
+      au < exists ; 1974 ; Environment and Planning A Volume 6 ; 6 ; epna ; https://journals.sagepub.com/ >
+      au < exists ; 1975 ; Environment and Planning A Volume 7 ; 7 ; epna ; https://journals.sagepub.com/ >
+      au < exists ; 1976 ; Environment and Planning A Volume 8 ; 8 ; epna ; https://journals.sagepub.com/ >
+      au < exists ; 1977 ; Environment and Planning A Volume 9 ; 9 ; epna ; https://journals.sagepub.com/ >
+      au < exists ; 1978 ; Environment and Planning A Volume 10 ; 10 ; epna ; https://journals.sagepub.com/ >
+      au < exists ; 1979 ; Environment and Planning A Volume 11 ; 11 ; epna ; https://journals.sagepub.com/ >
+      au < exists ; 1980 ; Environment and Planning A Volume 12 ; 12 ; epna ; https://journals.sagepub.com/ >
+      au < exists ; 1981 ; Environment and Planning A Volume 13 ; 13 ; epna ; https://journals.sagepub.com/ >
+      au < exists ; 1982 ; Environment and Planning A Volume 14 ; 14 ; epna ; https://journals.sagepub.com/ >
+      au < exists ; 1983 ; Environment and Planning A Volume 15 ; 15 ; epna ; https://journals.sagepub.com/ >
+      au < exists ; 1984 ; Environment and Planning A Volume 16 ; 16 ; epna ; https://journals.sagepub.com/ >
+      au < exists ; 1985 ; Environment and Planning A Volume 17 ; 17 ; epna ; https://journals.sagepub.com/ >
+      au < exists ; 1986 ; Environment and Planning A Volume 18 ; 18 ; epna ; https://journals.sagepub.com/ >
+      au < exists ; 1987 ; Environment and Planning A Volume 19 ; 19 ; epna ; https://journals.sagepub.com/ >
+      au < exists ; 1988 ; Environment and Planning A Volume 20 ; 20 ; epna ; https://journals.sagepub.com/ >
+      au < exists ; 1989 ; Environment and Planning A Volume 21 ; 21 ; epna ; https://journals.sagepub.com/ >
+      au < exists ; 1990 ; Environment and Planning A Volume 22 ; 22 ; epna ; https://journals.sagepub.com/ >
+      au < exists ; 1991 ; Environment and Planning A Volume 23 ; 23 ; epna ; https://journals.sagepub.com/ >
+      au < exists ; 1992 ; Environment and Planning A Volume 24 ; 24 ; epna ; https://journals.sagepub.com/ >
+      au < exists ; 1993 ; Environment and Planning A Volume 25 ; 25 ; epna ; https://journals.sagepub.com/ >
+      au < exists ; 1994 ; Environment and Planning A Volume 26 ; 26 ; epna ; https://journals.sagepub.com/ >
+      au < exists ; 1995 ; Environment and Planning A Volume 27 ; 27 ; epna ; https://journals.sagepub.com/ >
+      au < exists ; 1996 ; Environment and Planning A Volume 28 ; 28 ; epna ; https://journals.sagepub.com/ >
+      au < exists ; 1997 ; Environment and Planning A Volume 29 ; 29 ; epna ; https://journals.sagepub.com/ >
+      au < exists ; 1998 ; Environment and Planning A Volume 30 ; 30 ; epna ; https://journals.sagepub.com/ >
+      au < exists ; 1999 ; Environment and Planning A Volume 31 ; 31 ; epna ; https://journals.sagepub.com/ >
       au < manifest ; 2000 ; Environment and Planning A Volume 32 ; 32 ; epna ; https://journals.sagepub.com/ >
       au < manifest ; 2001 ; Environment and Planning A Volume 33 ; 33 ; epna ; https://journals.sagepub.com/ >
       au < manifest ; 2002 ; Environment and Planning A Volume 34 ; 34 ; epna ; https://journals.sagepub.com/ >
@@ -10972,8 +11044,38 @@
     >
 
       #param[base_url] = http://epb.sagepub.com/
-      #content available from 1976 volume 3 to 2007 volume 34 
 
+      au < exists ; 1974 ; Environment and Planning B: Planning and Design Volume 1 ; 1 ; epba ; https://journals.sagepub.com/ >
+      au < exists ; 1975 ; Environment and Planning B: Planning and Design Volume 2 ; 2 ; epba ; https://journals.sagepub.com/ >
+      au < exists ; 1976 ; Environment and Planning B: Planning and Design Volume 3 ; 3 ; epba ; https://journals.sagepub.com/ >
+      au < exists ; 1977 ; Environment and Planning B: Planning and Design Volume 4 ; 4 ; epba ; https://journals.sagepub.com/ >
+      au < exists ; 1978 ; Environment and Planning B: Planning and Design Volume 5 ; 5 ; epba ; https://journals.sagepub.com/ >
+      au < exists ; 1979 ; Environment and Planning B: Planning and Design Volume 6 ; 6 ; epba ; https://journals.sagepub.com/ >
+      au < exists ; 1980 ; Environment and Planning B: Planning and Design Volume 7 ; 7 ; epba ; https://journals.sagepub.com/ >
+      au < exists ; 1981 ; Environment and Planning B: Planning and Design Volume 8 ; 8 ; epba ; https://journals.sagepub.com/ >
+      au < exists ; 1982 ; Environment and Planning B: Planning and Design Volume 9 ; 9 ; epba ; https://journals.sagepub.com/ >
+      au < exists ; 1983 ; Environment and Planning B: Planning and Design Volume 10 ; 10 ; epba ; https://journals.sagepub.com/ >
+      au < exists ; 1984 ; Environment and Planning B: Planning and Design Volume 11 ; 11 ; epba ; https://journals.sagepub.com/ >
+      au < exists ; 1985 ; Environment and Planning B: Planning and Design Volume 12 ; 12 ; epba ; https://journals.sagepub.com/ >
+      au < exists ; 1986 ; Environment and Planning B: Planning and Design Volume 13 ; 13 ; epba ; https://journals.sagepub.com/ >
+      au < exists ; 1987 ; Environment and Planning B: Planning and Design Volume 14 ; 14 ; epba ; https://journals.sagepub.com/ >
+      au < exists ; 1988 ; Environment and Planning B: Planning and Design Volume 15 ; 15 ; epba ; https://journals.sagepub.com/ >
+      au < exists ; 1989 ; Environment and Planning B: Planning and Design Volume 16 ; 16 ; epba ; https://journals.sagepub.com/ >
+      au < exists ; 1990 ; Environment and Planning B: Planning and Design Volume 17 ; 17 ; epba ; https://journals.sagepub.com/ >
+      au < exists ; 1991 ; Environment and Planning B: Planning and Design Volume 18 ; 18 ; epba ; https://journals.sagepub.com/ >
+      au < exists ; 1992 ; Environment and Planning B: Planning and Design Volume 19 ; 19 ; epba ; https://journals.sagepub.com/ >
+      au < exists ; 1993 ; Environment and Planning B: Planning and Design Volume 20 ; 20 ; epba ; https://journals.sagepub.com/ >
+      au < exists ; 1994 ; Environment and Planning B: Planning and Design Volume 21 ; 21 ; epba ; https://journals.sagepub.com/ >
+      au < exists ; 1995 ; Environment and Planning B: Planning and Design Volume 22 ; 22 ; epba ; https://journals.sagepub.com/ >
+      au < exists ; 1996 ; Environment and Planning B: Planning and Design Volume 23 ; 23 ; epba ; https://journals.sagepub.com/ >
+      au < exists ; 1997 ; Environment and Planning B: Planning and Design Volume 24 ; 24 ; epba ; https://journals.sagepub.com/ >
+      au < exists ; 1998 ; Environment and Planning B: Planning and Design Volume 25 ; 25 ; epba ; https://journals.sagepub.com/ >
+      au < exists ; 1999 ; Environment and Planning B: Planning and Design Volume 26 ; 26 ; epba ; https://journals.sagepub.com/ >
+      au < exists ; 2000 ; Environment and Planning B: Planning and Design Volume 27 ; 27 ; epba ; https://journals.sagepub.com/ >
+      au < exists ; 2001 ; Environment and Planning B: Planning and Design Volume 28 ; 28 ; epba ; https://journals.sagepub.com/ >
+      au < exists ; 2002 ; Environment and Planning B: Planning and Design Volume 29 ; 29 ; epba ; https://journals.sagepub.com/ >
+      au < exists ; 2003 ; Environment and Planning B: Planning and Design Volume 30 ; 30 ; epba ; https://journals.sagepub.com/ >
+      au < exists ; 2004 ; Environment and Planning B: Planning and Design Volume 31 ; 31 ; epba ; https://journals.sagepub.com/ >
       au < manifest ; 2005 ; Environment and Planning B: Planning and Design Volume 32 ; 32 ; epba ; https://journals.sagepub.com/ >
       au < manifest ; 2006 ; Environment and Planning B: Planning and Design Volume 33 ; 33 ; epba ; https://journals.sagepub.com/ >
       au < manifest ; 2007 ; Environment and Planning B: Planning and Design Volume 34 ; 34 ; epba ; https://journals.sagepub.com/ >
@@ -11000,8 +11102,29 @@
     >
 
       #param[base_url] = http://epc.sagepub.com/
-      #content available from 1983 volume 1 to 2007 volume 25 
 
+      au < exists ; 1983 ; Environment and Planning C: Government and Policy Volume 1 ; 1 ; epca ; https://journals.sagepub.com/ >
+      au < exists ; 1984 ; Environment and Planning C: Government and Policy Volume 2 ; 2 ; epca ; https://journals.sagepub.com/ >
+      au < exists ; 1985 ; Environment and Planning C: Government and Policy Volume 3 ; 3 ; epca ; https://journals.sagepub.com/ >
+      au < exists ; 1986 ; Environment and Planning C: Government and Policy Volume 4 ; 4 ; epca ; https://journals.sagepub.com/ >
+      au < exists ; 1987 ; Environment and Planning C: Government and Policy Volume 5 ; 5 ; epca ; https://journals.sagepub.com/ >
+      au < exists ; 1988 ; Environment and Planning C: Government and Policy Volume 6 ; 6 ; epca ; https://journals.sagepub.com/ >
+      au < exists ; 1989 ; Environment and Planning C: Government and Policy Volume 7 ; 7 ; epca ; https://journals.sagepub.com/ >
+      au < exists ; 1990 ; Environment and Planning C: Government and Policy Volume 8 ; 8 ; epca ; https://journals.sagepub.com/ >
+      au < exists ; 1991 ; Environment and Planning C: Government and Policy Volume 9 ; 9 ; epca ; https://journals.sagepub.com/ >
+      au < exists ; 1992 ; Environment and Planning C: Government and Policy Volume 10 ; 10 ; epca ; https://journals.sagepub.com/ >
+      au < exists ; 1993 ; Environment and Planning C: Government and Policy Volume 11 ; 11 ; epca ; https://journals.sagepub.com/ >
+      au < exists ; 1994 ; Environment and Planning C: Government and Policy Volume 12 ; 12 ; epca ; https://journals.sagepub.com/ >
+      au < exists ; 1995 ; Environment and Planning C: Government and Policy Volume 13 ; 13 ; epca ; https://journals.sagepub.com/ >
+      au < exists ; 1996 ; Environment and Planning C: Government and Policy Volume 14 ; 14 ; epca ; https://journals.sagepub.com/ >
+      au < exists ; 1997 ; Environment and Planning C: Government and Policy Volume 15 ; 15 ; epca ; https://journals.sagepub.com/ >
+      au < exists ; 1998 ; Environment and Planning C: Government and Policy Volume 16 ; 16 ; epca ; https://journals.sagepub.com/ >
+      au < exists ; 1999 ; Environment and Planning C: Government and Policy Volume 17 ; 17 ; epca ; https://journals.sagepub.com/ >
+      au < exists ; 2000 ; Environment and Planning C: Government and Policy Volume 18 ; 18 ; epca ; https://journals.sagepub.com/ >
+      au < exists ; 2001 ; Environment and Planning C: Government and Policy Volume 19 ; 19 ; epca ; https://journals.sagepub.com/ >
+      au < exists ; 2002 ; Environment and Planning C: Government and Policy Volume 20 ; 20 ; epca ; https://journals.sagepub.com/ >
+      au < exists ; 2003 ; Environment and Planning C: Government and Policy Volume 21 ; 21 ; epca ; https://journals.sagepub.com/ >
+      au < exists ; 2004 ; Environment and Planning C: Government and Policy Volume 22 ; 22 ; epca ; https://journals.sagepub.com/ >
       au < manifest ; 2005 ; Environment and Planning C: Government and Policy Volume 23 ; 23 ; epca ; https://journals.sagepub.com/ >
       au < manifest ; 2006 ; Environment and Planning C: Government and Policy Volume 24 ; 24 ; epca ; https://journals.sagepub.com/ >
       au < manifest ; 2007 ; Environment and Planning C: Government and Policy Volume 25 ; 25 ; epca ; https://journals.sagepub.com/ >
@@ -11028,8 +11151,32 @@
     >
 
       #param[base_url] = http://epd.sagepub.com/
-      #content available from 2002 volume 20 to 2007 volume 25 
 
+      au < exists ; 1983 ; Environment and Planning D: Society and Space Volume 1 ; 1 ; epda ; https://journals.sagepub.com/ >
+      au < exists ; 1984 ; Environment and Planning D: Society and Space Volume 2 ; 2 ; epda ; https://journals.sagepub.com/ >
+      au < exists ; 1985 ; Environment and Planning D: Society and Space Volume 3 ; 3 ; epda ; https://journals.sagepub.com/ >
+      au < exists ; 1986 ; Environment and Planning D: Society and Space Volume 4 ; 4 ; epda ; https://journals.sagepub.com/ >
+      au < exists ; 1987 ; Environment and Planning D: Society and Space Volume 5 ; 5 ; epda ; https://journals.sagepub.com/ >
+      au < exists ; 1988 ; Environment and Planning D: Society and Space Volume 6 ; 6 ; epda ; https://journals.sagepub.com/ >
+      au < exists ; 1989 ; Environment and Planning D: Society and Space Volume 7 ; 7 ; epda ; https://journals.sagepub.com/ >
+      au < exists ; 1990 ; Environment and Planning D: Society and Space Volume 8 ; 8 ; epda ; https://journals.sagepub.com/ >
+      au < exists ; 1991 ; Environment and Planning D: Society and Space Volume 9 ; 9 ; epda ; https://journals.sagepub.com/ >
+      au < exists ; 1992 ; Environment and Planning D: Society and Space Volume 10 ; 10 ; epda ; https://journals.sagepub.com/ >
+      au < exists ; 1993 ; Environment and Planning D: Society and Space Volume 11 ; 11 ; epda ; https://journals.sagepub.com/ >
+      au < exists ; 1994 ; Environment and Planning D: Society and Space Volume 12 ; 12 ; epda ; https://journals.sagepub.com/ >
+      au < exists ; 1995 ; Environment and Planning D: Society and Space Volume 13 ; 13 ; epda ; https://journals.sagepub.com/ >
+      au < exists ; 1996 ; Environment and Planning D: Society and Space Volume 14 ; 14 ; epda ; https://journals.sagepub.com/ >
+      au < exists ; 1997 ; Environment and Planning D: Society and Space Volume 15 ; 15 ; epda ; https://journals.sagepub.com/ >
+      au < exists ; 1998 ; Environment and Planning D: Society and Space Volume 16 ; 16 ; epda ; https://journals.sagepub.com/ >
+      au < exists ; 1999 ; Environment and Planning D: Society and Space Volume 17 ; 17 ; epda ; https://journals.sagepub.com/ >
+      au < exists ; 2000 ; Environment and Planning D: Society and Space Volume 18 ; 18 ; epda ; https://journals.sagepub.com/ >
+      au < exists ; 2001 ; Environment and Planning D: Society and Space Volume 19 ; 19 ; epda ; https://journals.sagepub.com/ >
+      au < exists ; 2002 ; Environment and Planning D: Society and Space Volume 20 ; 20 ; epda ; https://journals.sagepub.com/ >
+      au < exists ; 2003 ; Environment and Planning D: Society and Space Volume 21 ; 21 ; epda ; https://journals.sagepub.com/ >
+      au < exists ; 2004 ; Environment and Planning D: Society and Space Volume 22 ; 22 ; epda ; https://journals.sagepub.com/ >
+      au < exists ; 2005 ; Environment and Planning D: Society and Space Volume 23 ; 23 ; epda ; https://journals.sagepub.com/ >
+      au < exists ; 2006 ; Environment and Planning D: Society and Space Volume 24 ; 24 ; epda ; https://journals.sagepub.com/ >
+      au < exists ; 2007 ; Environment and Planning D: Society and Space Volume 25 ; 25 ; epda ; https://journals.sagepub.com/ >
       au < doNotProcess ; 2008 ; Environment and Planning D: Society and Space Volume 26 ; 26 ; epda ; https://journals.sagepub.com/ >
       au < doNotProcess ; 2009 ; Environment and Planning D: Society and Space Volume 27 ; 27 ; epda ; https://journals.sagepub.com/ >
       au < doNotProcess ; 2010 ; Environment and Planning D: Society and Space Volume 28 ; 28 ; epda ; https://journals.sagepub.com/ >
@@ -11129,6 +11276,10 @@
 
       #param[base_url] = http://elj.sagepub.com/
 
+      au < exists ; 1999 ; Environmental Law Review Volume 1 ; 1 ; elja ; https://journals.sagepub.com/ >
+      au < exists ; 2000 ; Environmental Law Review Volume 2 ; 2 ; elja ; https://journals.sagepub.com/ >
+      au < exists ; 2001 ; Environmental Law Review Volume 3 ; 3 ; elja ; https://journals.sagepub.com/ >
+      au < exists ; 2002 ; Environmental Law Review Volume 4 ; 4 ; elja ; https://journals.sagepub.com/ >
       au < manifest ; 2003 ; Environmental Law Review Volume 5 ; 5 ; elja ; https://journals.sagepub.com/ >
       au < manifest ; 2004 ; Environmental Law Review Volume 6 ; 6 ; elja ; https://journals.sagepub.com/ >
       au < manifest ; 2005 ; Environmental Law Review Volume 7 ; 7 ; elja ; https://journals.sagepub.com/ >
@@ -11147,6 +11298,37 @@
       au < manifest ; 2018 ; Environmental Law Review Volume 20 ; 20 ; elja ; https://journals.sagepub.com/ >
 
   }
+
+    {
+
+      title <
+        name = Epilepsy Currents ;
+        issn = 1535-7597 ;
+        issn = 1535-7511
+      >
+
+      #journal_id = epi
+
+        au < exists ; 2001 ; Epilepsy Currents Volume 1 ; 1 ; epib ; https://journals.sagepub.com/ >
+        au < exists ; 2002 ; Epilepsy Currents Volume 2 ; 2 ; epib ; https://journals.sagepub.com/ >
+        au < exists ; 2003 ; Epilepsy Currents Volume 3 ; 3 ; epib ; https://journals.sagepub.com/ >
+        au < exists ; 2004 ; Epilepsy Currents Volume 4 ; 4 ; epib ; https://journals.sagepub.com/ >
+        au < exists ; 2005 ; Epilepsy Currents Volume 5 ; 5 ; epib ; https://journals.sagepub.com/ >
+        au < exists ; 2006 ; Epilepsy Currents Volume 6 ; 6 ; epib ; https://journals.sagepub.com/ >
+        au < exists ; 2007 ; Epilepsy Currents Volume 7 ; 7 ; epib ; https://journals.sagepub.com/ >
+        au < exists ; 2008 ; Epilepsy Currents Volume 8 ; 8 ; epib ; https://journals.sagepub.com/ >
+        au < exists ; 2009 ; Epilepsy Currents Volume 9 ; 9 ; epib ; https://journals.sagepub.com/ >
+        au < exists ; 2010 ; Epilepsy Currents Volume 10 ; 10 ; epib ; https://journals.sagepub.com/ >
+        au < exists ; 2011 ; Epilepsy Currents Volume 11 ; 11 ; epib ; https://journals.sagepub.com/ >
+        au < exists ; 2012 ; Epilepsy Currents Volume 12 ; 12 ; epib ; https://journals.sagepub.com/ >
+        au < exists ; 2013 ; Epilepsy Currents Volume 13 ; 13 ; epib ; https://journals.sagepub.com/ >
+        au < exists ; 2014 ; Epilepsy Currents Volume 14 ; 14 ; epib ; https://journals.sagepub.com/ >
+        au < exists ; 2015 ; Epilepsy Currents Volume 15 ; 15 ; epib ; https://journals.sagepub.com/ >
+        au < exists ; 2016 ; Epilepsy Currents Volume 16 ; 16 ; epib ; https://journals.sagepub.com/ >
+        au < exists ; 2017 ; Epilepsy Currents Volume 17 ; 17 ; epib ; https://journals.sagepub.com/ >
+        au < exists ; 2018 ; Epilepsy Currents Volume 18 ; 18 ; epib ; https://journals.sagepub.com/ >
+
+    }
 
     {
       title <
@@ -12833,6 +13015,65 @@
         au < manifest ; 2018 ; Feminist Theory Volume 19 ; 19 ; ftya ; https://journals.sagepub.com/ >
 
       }
+
+    }
+
+    {
+
+       title <
+         name = Federal Law Review ;
+         issn = 0067-205X ;
+         eissn = 1444-6928
+       >
+
+       #journal_id = flr
+
+        au < exists ; 1964 ; Federal Law Review Volume 1 ; 1 ; flra ; https://journals.sagepub.com/ >
+        au < exists ; 1966-1967 ; Federal Law Review Volume 2 ; 2 ; flra ; https://journals.sagepub.com/ >
+        au < exists ; 1968-1969 ; Federal Law Review Volume 3 ; 3 ; flra ; https://journals.sagepub.com/ >
+        au < exists ; 1970-1971 ; Federal Law Review Volume 4 ; 4 ; flra ; https://journals.sagepub.com/ >
+        au < exists ; 1972-1973 ; Federal Law Review Volume 5 ; 5 ; flra ; https://journals.sagepub.com/ >
+        au < exists ; 1974-1975 ; Federal Law Review Volume 6 ; 6 ; flra ; https://journals.sagepub.com/ >
+        au < exists ; 1976 ; Federal Law Review Volume 7 ; 7 ; flra ; https://journals.sagepub.com/ >
+        au < exists ; 1977 ; Federal Law Review Volume 8 ; 8 ; flra ; https://journals.sagepub.com/ >
+        au < exists ; 1978 ; Federal Law Review Volume 9 ; 9 ; flra ; https://journals.sagepub.com/ >
+        au < exists ; 1979 ; Federal Law Review Volume 10 ; 10 ; flra ; https://journals.sagepub.com/ >
+        au < exists ; 1980 ; Federal Law Review Volume 11 ; 11 ; flra ; https://journals.sagepub.com/ >
+        au < exists ; 1981 ; Federal Law Review Volume 12 ; 12 ; flra ; https://journals.sagepub.com/ >
+        au < exists ; 1982-1983 ; Federal Law Review Volume 13 ; 13 ; flra ; https://journals.sagepub.com/ >
+        au < exists ; 1983-1984 ; Federal Law Review Volume 14 ; 14 ; flra ; https://journals.sagepub.com/ >
+        au < exists ; 1984-1985 ; Federal Law Review Volume 15 ; 15 ; flra ; https://journals.sagepub.com/ >
+        au < exists ; 1986 ; Federal Law Review Volume 16 ; 16 ; flra ; https://journals.sagepub.com/ >
+        au < exists ; 1987 ; Federal Law Review Volume 17 ; 17 ; flra ; https://journals.sagepub.com/ >
+        au < exists ; 1989 ; Federal Law Review Volume 18 ; 18 ; flra ; https://journals.sagepub.com/ >
+        au < exists ; 1990 ; Federal Law Review Volume 19 ; 19 ; flra ; https://journals.sagepub.com/ >
+        au < exists ; 1991 ; Federal Law Review Volume 20 ; 20 ; flra ; https://journals.sagepub.com/ >
+        au < exists ; 1992-1993 ; Federal Law Review Volume 21 ; 21 ; flra ; https://journals.sagepub.com/ >
+        au < exists ; 1994 ; Federal Law Review Volume 22 ; 22 ; flra ; https://journals.sagepub.com/ >
+        au < exists ; 1995 ; Federal Law Review Volume 23 ; 23 ; flra ; https://journals.sagepub.com/ >
+        au < exists ; 1996 ; Federal Law Review Volume 24 ; 24 ; flra ; https://journals.sagepub.com/ >
+        au < exists ; 1997 ; Federal Law Review Volume 25 ; 25 ; flra ; https://journals.sagepub.com/ >
+        au < exists ; 1998 ; Federal Law Review Volume 26 ; 26 ; flra ; https://journals.sagepub.com/ >
+        au < exists ; 1999 ; Federal Law Review Volume 27 ; 27 ; flra ; https://journals.sagepub.com/ >
+        au < exists ; 2000 ; Federal Law Review Volume 28 ; 28 ; flra ; https://journals.sagepub.com/ >
+        au < exists ; 2001 ; Federal Law Review Volume 29 ; 29 ; flra ; https://journals.sagepub.com/ >
+        au < exists ; 2002 ; Federal Law Review Volume 30 ; 30 ; flra ; https://journals.sagepub.com/ >
+        au < exists ; 2003 ; Federal Law Review Volume 31 ; 31 ; flra ; https://journals.sagepub.com/ >
+        au < exists ; 2004 ; Federal Law Review Volume 32 ; 32 ; flra ; https://journals.sagepub.com/ >
+        au < exists ; 2005 ; Federal Law Review Volume 33 ; 33 ; flra ; https://journals.sagepub.com/ >
+        au < exists ; 2006 ; Federal Law Review Volume 34 ; 34 ; flra ; https://journals.sagepub.com/ >
+        au < exists ; 2007 ; Federal Law Review Volume 35 ; 35 ; flra ; https://journals.sagepub.com/ >
+        au < exists ; 2008 ; Federal Law Review Volume 36 ; 36 ; flra ; https://journals.sagepub.com/ >
+        au < exists ; 2009 ; Federal Law Review Volume 37 ; 37 ; flra ; https://journals.sagepub.com/ >
+        au < exists ; 2000 ; Federal Law Review Volume 38 ; 38 ; flra ; https://journals.sagepub.com/ >
+        au < exists ; 2011 ; Federal Law Review Volume 39 ; 39 ; flra ; https://journals.sagepub.com/ >
+        au < exists ; 2012 ; Federal Law Review Volume 40 ; 40 ; flra ; https://journals.sagepub.com/ >
+        au < exists ; 2013 ; Federal Law Review Volume 41 ; 41 ; flra ; https://journals.sagepub.com/ >
+        au < exists ; 2014 ; Federal Law Review Volume 42 ; 42 ; flra ; https://journals.sagepub.com/ >
+        au < exists ; 2015 ; Federal Law Review Volume 43 ; 43 ; flra ; https://journals.sagepub.com/ >
+        au < exists ; 2016 ; Federal Law Review Volume 44 ; 44 ; flra ; https://journals.sagepub.com/ >
+        au < exists ; 2017 ; Federal Law Review Volume 45 ; 45 ; flra ; https://journals.sagepub.com/ >
+        au < exists ; 2018 ; Federal Law Review Volume 46 ; 46 ; flra ; https://journals.sagepub.com/ >
 
     }
 
