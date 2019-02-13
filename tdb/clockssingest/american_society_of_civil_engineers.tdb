@@ -747,7 +747,7 @@
     au < zapped ; finished ; 2015 ; Journal of Irrigation and Drainage Engineering Volume 141 ; 141 ; http://ascelibrary.org/ ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Journal of Irrigation and Drainage Engineering Volume 142 ; 142 ; http://ascelibrary.org/ ; >
     au < finished ; crawling ; 2017 ; Journal of Irrigation and Drainage Engineering Volume 143 ; 143 ; https://ascelibrary.org/ ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; Journal of Irrigation and Drainage Engineering Volume 144 ; 144 ; https://ascelibrary.org/ ; >
+    au < deepCrawl ; exists ; 2018 ; Journal of Irrigation and Drainage Engineering Volume 144 ; 144 ; https://ascelibrary.org/ ; >
 
   }
 
@@ -1038,7 +1038,7 @@
     au < zapped ; finished ; 2015 ; Journal of Structural Engineering Volume 141 ; 141 ; http://ascelibrary.org/ ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2016 ; Journal of Structural Engineering Volume 142 ; 142 ; http://ascelibrary.org/ ; >
     au < finished ; crawling ; 2017 ; Journal of Structural Engineering Volume 143 ; 143 ; https://ascelibrary.org/ ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; Journal of Structural Engineering Volume 144 ; 144 ; https://ascelibrary.org/ ; >
+    au < deepCrawl ; exists ; 2018 ; Journal of Structural Engineering Volume 144 ; 144 ; https://ascelibrary.org/ ; >
 
   }
 

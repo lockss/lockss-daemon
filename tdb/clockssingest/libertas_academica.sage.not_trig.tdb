@@ -380,7 +380,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Cardiology Volume 9 ; 9 ; cica ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Cardiology Volume 10 ; 10 ; cica ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2017 ; Clinical Medicine Insights: Cardiology Volume 11 ; 11 ; cica ; http://journals.sagepub.com/ ; >
-    au < crawling ; exists ; 2018 ; Clinical Medicine Insights: Cardiology Volume 12 ; 12 ; cica ; http://journals.sagepub.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Clinical Medicine Insights: Cardiology Volume 12 ; 12 ; cica ; http://journals.sagepub.com/ ; >
 
   }
 
@@ -667,7 +667,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 6 ; 6 ; tria ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 7 ; 7 ; tria ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2017 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 8 ; 8 ; tria ; http://journals.sagepub.com/ ; >
-    au < crawling ; exists ; 2018 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 9 ; 9 ; tria ; http://journals.sagepub.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 9 ; 9 ; tria ; http://journals.sagepub.com/ ; >
 
   }
 
@@ -1228,7 +1228,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Microbiology Insights Volume 8 ; 8 ; mbia ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Microbiology Insights Volume 9 ; 9 ; mbia ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2017 ; Microbiology Insights Volume 10 ; 10 ; mbia ; http://journals.sagepub.com/ ; >
-    au < crawling ; exists ; 2018 ; Microbiology Insights Volume 11 ; 11 ; mbia ; http://journals.sagepub.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Microbiology Insights Volume 11 ; 11 ; mbia ; http://journals.sagepub.com/ ; >
 
   }
 
