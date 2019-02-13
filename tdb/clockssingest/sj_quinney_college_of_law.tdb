@@ -1,0 +1,53 @@
+{
+  publisher <
+    name = S.J. Quinney College of Law ;
+    info[contract] = 2012 ;
+    info[tester] = 5 ;
+    info[poller] = 6
+  >
+
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+
+  {
+
+      title <
+        name = Utah Law Review ;
+        eissn = 0042-1448
+      >
+
+      comment[publisher] = S.J. Quinney College of Law
+      param[base_url] = http://dc.law.utah.edu
+      param[journal_id] = ulr
+
+      au < exists ; exists ; 2014 ; Utah Law Review Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; Utah Law Review Volume 2015 ; 2015 ; >
+      au < exists ; exists ; 2016 ; Utah Law Review Volume 2016 ; 2016 ; >
+      au < exists ; exists ; 2017 ; Utah Law Review Volume 2017 ; 2017 ; >
+      au < expected ; exists ; 2018 ; Utah Law Review Volume 2018 ; 2018 ; >
+      au < expected ; exists ; 2019 ; Utah Law Review Volume 2019 ; 2019 ; >
+
+  }
+
+  {
+
+      title <
+        name = Utah Law Review ;
+        eissn = 0042-1448
+      >
+
+      #Supplement. Utah Law Review (title). Utah Law Review OnLaw (AU name)
+      comment[publisher] = S.J. Quinney College of Law
+      param[base_url] = http://dc.law.utah.edu
+      param[journal_id] = onlaw
+
+      au < exists ; exists ; 2014 ; Utah Law Review OnLaw Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; Utah Law Review OnLaw Volume 2015 ; 2015 ; >
+      au < exists ; exists ; 2016 ; Utah Law Review OnLaw Volume 2016 ; 2016 ; >
+      au < exists ; exists ; 2017 ; Utah Law Review OnLaw Volume 2017 ; 2017 ; >
+      au < expected ; exists ; 2018 ; Utah Law Review OnLaw Volume 2018 ; 2018 ; >
+      au < expected ; exists ; 2019 ; Utah Law Review OnLaw Volume 2019 ; 2019 ; >
+
+  }
+
+}

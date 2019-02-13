@@ -1,0 +1,29 @@
+{
+  publisher <
+    name = Case Western Reserve University, Weatherhead School of Management ;
+    info[contract] = 2012 ;
+    info[tester] = 5 ;
+    info[poller] = 6
+  >
+
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+
+  {
+
+      title <
+        name = Engaged Management Review ;
+        eissn = 2375-8643
+      >
+
+      comment[publisher] = Case Western Reserve University, Weatherhead School of Management
+      param[base_url] = http://commons.case.edu
+      param[journal_id] = emr
+
+      au < exists ; exists ; 2017 ; Engaged Management Review Volume 1 ; 1 ; >
+      au < expected ; exists ; 2018 ; Engaged Management Review Volume 2 ; 2 ; >
+      au < expected ; exists ; 2019 ; Engaged Management Review Volume 3 ; 3 ; >
+
+  }
+
+}
