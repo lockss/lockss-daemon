@@ -275,7 +275,7 @@
       au < finished ; crawling ; 2015 ; Genes & Development Volume 29 ; 29 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2016 ; Genes & Development Volume 30 ; 30 ; >
       au < deepCrawl ; exists ; 2017 ; Genes & Development Volume 31 ; 31 ; >
-      au < crawling ; exists ; 2018 ; Genes & Development Volume 32 ; 32 ; >
+      au < deepCrawl ; exists ; 2018 ; Genes & Development Volume 32 ; 32 ; >
 
     }
 
@@ -323,7 +323,7 @@
       au < finished ; crawling ; 2015 ; Genome Research Volume 25 ; 25 ; http://genome.cshlp.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2016 ; Genome Research Volume 26 ; 26 ; http://genome.cshlp.org/ ; >
       au < deepCrawl ; exists ; 2017 ; Genome Research Volume 27 ; 27 ; http://genome.cshlp.org/ ; >
-      au < crawling ; exists ; 2018 ; Genome Research Volume 28 ; 28 ; https://genome.cshlp.org/ ; >
+      au < deepCrawl ; exists ; 2018 ; Genome Research Volume 28 ; 28 ; https://genome.cshlp.org/ ; >
 
     }
 

@@ -466,7 +466,7 @@
     au < frozen ; exists ; 2015 ; The Indexer: the international journal of indexing Volume 33 ; 33 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 2016 ; The Indexer: the international journal of indexing Volume 34 ; 34 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 2017 ; The Indexer: the international journal of indexing Volume 35 ; 35 ; https://online.liverpooluniversitypress.co.uk/ ; >
-    au < crawling ; exists ; 2018 ; The Indexer: the international journal of indexing Volume 36 ; 36 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < deepCrawl ; exists ; 2018 ; The Indexer: the international journal of indexing Volume 36 ; 36 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
   {
@@ -573,7 +573,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Romance Studies Volume 15 ; 15 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 2016 ; Journal of Romance Studies Volume 16 ; 16 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 2017 ; Journal of Romance Studies Volume 17 ; 17 ; https://online.liverpooluniversitypress.co.uk/ ; >
-    au < crawling ; exists ; 2018 ; Journal of Romance Studies Volume 18 ; 18 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < deepCrawl ; exists ; 2018 ; Journal of Romance Studies Volume 18 ; 18 ; https://online.liverpooluniversitypress.co.uk/ ; >
     
   }
 
@@ -815,7 +815,7 @@
     au < frozen ; exists ; 2016 ; Quebec Studies Volume 62 ; 62 ; http://online.liverpooluniversitypress.co.uk/ ; >
     au < deepCrawl ; exists ; 2017 ; Quebec Studies Volume 63 ; 63 ; http://online.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 2017 ; Quebec Studies Volume 64 ; 64 ; http://online.liverpooluniversitypress.co.uk/ ; >
-    au < crawling ; exists ; 2018 ; Quebec Studies Volume 65 ; 65 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < deepCrawl ; exists ; 2018 ; Quebec Studies Volume 65 ; 65 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < crawling ; exists ; 2018 ; Quebec Studies Volume 66 ; 66 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
@@ -841,7 +841,7 @@
     au < frozen ; exists ; 2015 ; Science Fiction Film and Television Volume 8 ; 8 ; http://online.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 2016 ; Science Fiction Film and Television Volume 9 ; 9 ; http://online.liverpooluniversitypress.co.uk/ ; >
     au < deepCrawl ; exists ; 2017 ; Science Fiction Film and Television Volume 10 ; 10 ; http://online.liverpooluniversitypress.co.uk/ ; >
-    au < crawling ; exists ; 2018 ; Science Fiction Film and Television Volume 11 ; 11 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < deepCrawl ; exists ; 2018 ; Science Fiction Film and Television Volume 11 ; 11 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
 

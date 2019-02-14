@@ -35,7 +35,7 @@
       comment[publisher] = IJS Publishing Group
 #      param[base_url] = https://www.amsprotocols.com/
 
-      au < crawling ; exists ; 2018 ; 1 ; Annals of Medicine and Surgery Protocols Volume 2018 ; 2018 ; https://www.amsprotocols.com/ ; >
+      au < deepCrawl ; exists ; 2018 ; 1 ; Annals of Medicine and Surgery Protocols Volume 2018 ; 2018 ; https://www.amsprotocols.com/ ; >
 
   }
 
@@ -143,7 +143,7 @@
       au < frozen ; exists ; 2015 ; 2 ; Modern Languages Open Volume 2015 ; 2015 ; https://www.modernlanguagesopen.org/ ; >
       au < frozen ; exists ; 2016 ; 3 ; Modern Languages Open Volume 2016 ; 2016 ; https://www.modernlanguagesopen.org/ ; >
       au < frozen ; exists ; 2017 ; 4 ; Modern Languages Open Volume 2017 ; 2017 ; https://www.modernlanguagesopen.org/ ; >
-      au < crawling ; exists ; 2018 ; 5 ; Modern Languages Open Volume 2018 ; 2018 ; https://www.modernlanguagesopen.org/ ; >
+      au < deepCrawl ; exists ; 2018 ; 5 ; Modern Languages Open Volume 2018 ; 2018 ; https://www.modernlanguagesopen.org/ ; >
 
   }
 
@@ -301,7 +301,7 @@
       au < finished ; finished ; 2015 ; 5 ; The Comics Grid: Journal of Comics Scholarship Volume 2015 ; 2015 ; http://www.comicsgrid.com/ ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2016 ; 6 ; The Comics Grid: Journal of Comics Scholarship Volume 2016 ; 2016 ; http://www.comicsgrid.com/ ; >
       au < deepCrawl ; exists ; 2017 ; 7 ; The Comics Grid: Journal of Comics Scholarship Volume 2017 ; 2017 ; http://www.comicsgrid.com/ ; >
-      au < crawling ; exists ; 2018 ; 8 ; The Comics Grid: Journal of Comics Scholarship Volume 2018 ; 2018 ; https://www.comicsgrid.com/ ; >
+      au < deepCrawl ; exists ; 2018 ; 8 ; The Comics Grid: Journal of Comics Scholarship Volume 2018 ; 2018 ; https://www.comicsgrid.com/ ; >
 
   }
 
@@ -393,7 +393,7 @@
       au < finished ; finished ; 2014 ; 7 ; Designs for Learning Volume 2014 ; 2014 ; http://www.designsforlearning.nu/ ; >
       au < frozen ; exists ; 2016 ; 8 ; Designs for Learning Volume 2016 ; 2016 ; http://www.designsforlearning.nu/ ; >
       au < deepCrawl ; exists ; 2017 ; 9 ; Designs for Learning Volume 2017 ; 2017 ; http://www.designsforlearning.nu/ ; >
-      au < crawling ; exists ; 2018 ; 10 ; Designs for Learning Volume 2018 ; 2018 ; https://www.designsforlearning.nu/ ; >
+      au < deepCrawl ; exists ; 2018 ; 10 ; Designs for Learning Volume 2018 ; 2018 ; https://www.designsforlearning.nu/ ; >
 
   }
 
@@ -411,7 +411,7 @@
       au < frozen ; exists ; 2014 ; 1 ; Karib: Nordic Journal for Caribbean Studies Volume 2014 ; 2014 ; https://www.karib.no/ ; >
       au < frozen ; exists ; 2015 ; 2 ; Karib: Nordic Journal for Caribbean Studies Volume 2015 ; 2015 ; https://www.karib.no/ ; >
       au < frozen ; exists ; 2017 ; 3 ; Karib: Nordic Journal for Caribbean Studies Volume 2017 ; 2017 ; https://www.karib.no/ ; >
-      au < crawling ; exists ; 2018 ; 4 ; Karib: Nordic Journal for Caribbean Studies Volume 2018 ; 2018 ; https://www.karib.no/ ; >
+      au < deepCrawl ; exists ; 2018 ; 4 ; Karib: Nordic Journal for Caribbean Studies Volume 2018 ; 2018 ; https://www.karib.no/ ; >
 
   }
 
@@ -703,7 +703,7 @@
       au < finished ; finished ; 2015 ; 14 ; Data Science Journal Volume 2015 ; 2015 ; http://datascience.codata.org/ ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2016 ; 15 ; Data Science Journal Volume 2016 ; 2016 ; http://datascience.codata.org/ ; >
       au < deepCrawl ; exists ; 2017 ; 16 ; Data Science Journal Volume 2017 ; 2017 ; http://datascience.codata.org/ ; >
-      au < crawling ; exists ; 2018 ; 17 ; Data Science Journal Volume 2018 ; 2018 ; https://datascience.codata.org/ ; >
+      au < deepCrawl ; exists ; 2018 ; 17 ; Data Science Journal Volume 2018 ; 2018 ; https://datascience.codata.org/ ; >
 
   }
 
@@ -827,7 +827,7 @@
       au < finished ; finished ; 2015 ; 13 ; Journal of Circadian Rhythms Volume 2015 ; 2015 ; http://www.jcircadianrhythms.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2016 ; 14 ; Journal of Circadian Rhythms Volume 2016 ; 2016 ; http://www.jcircadianrhythms.com/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2017 ; 15 ; Journal of Circadian Rhythms Volume 2017 ; 2017 ; http://www.jcircadianrhythms.com/ ; >
-      au < crawling ; exists ; 2018 ; 16 ; Journal of Circadian Rhythms Volume 2018 ; 2018 ; https://www.jcircadianrhythms.com/ ; >
+      au < deepCrawl ; exists ; 2018 ; 16 ; Journal of Circadian Rhythms Volume 2018 ; 2018 ; https://www.jcircadianrhythms.com/ ; >
 
   }
 
@@ -1005,7 +1005,7 @@
       au < finished ; finished ; 2014 ; 2 ; Open Health Data Volume 2014 ; 2014 ; http://openhealthdata.metajnl.com/ ; >
       au < finished ; finished ; 2015 ; 3 ; Open Health Data Volume 2015 ; 2015 ; http://openhealthdata.metajnl.com/ ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2016 ; 4 ; Open Health Data Volume 2016 ; 2016 ; http://openhealthdata.metajnl.com/ ; >
-      au < crawling ; exists ; 2018 ; 5 ; Open Health Data Volume 2018 ; 2018 ; https://openhealthdata.metajnl.com/ ; >
+      au < deepCrawl ; exists ; 2018 ; 5 ; Open Health Data Volume 2018 ; 2018 ; https://openhealthdata.metajnl.com/ ; >
 
   }
 
@@ -1060,7 +1060,7 @@
       au < finished ; finished ; 2015 ; 3 ; Journal of Open Research Software Volume 2015 ; 2015 ; http://openresearchsoftware.metajnl.com/ ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2016 ; 4 ; Journal of Open Research Software Volume 2016 ; 2016 ; http://openresearchsoftware.metajnl.com/ ; >
       au < deepCrawl ; exists ; 2017 ; 5 ; Journal of Open Research Software Volume 2017 ; 2017 ; http://openresearchsoftware.metajnl.com/ ; >
-      au < crawling ; exists ; 2018 ; 6 ; Journal of Open Research Software Volume 2018 ; 2018 ; https://openresearchsoftware.metajnl.com/ ; >
+      au < deepCrawl ; exists ; 2018 ; 6 ; Journal of Open Research Software Volume 2018 ; 2018 ; https://openresearchsoftware.metajnl.com/ ; >
 
   }
 
@@ -1753,7 +1753,7 @@
       au < frozen ; exists ; 2015 ; 46 ; BMGN - Low Countries Historical Review Volume 2015 ; 2015 ; http://www.bmgn-lchr.nl/ ; >
       au < finished ; crawling ; 2016 ; 47 ; BMGN - Low Countries Historical Review Volume 2016 ; 2016 ; http://www.bmgn-lchr.nl/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2017 ; 48 ; BMGN - Low Countries Historical Review Volume 2017 ; 2017 ; http://www.bmgn-lchr.nl/ ; >
-      au < crawling ; exists ; 2018 ; 49 ; BMGN - Low Countries Historical Review Volume 2018 ; 2018 ; https://www.bmgn-lchr.nl/ ; >
+      au < deepCrawl ; exists ; 2018 ; 49 ; BMGN - Low Countries Historical Review Volume 2018 ; 2018 ; https://www.bmgn-lchr.nl/ ; >
 
   }
 
@@ -2188,7 +2188,7 @@
       au < frozen ; exists ; 2015 ; 1 ; Collabra: Psychology Volume 2015 ; 2015 ; https://www.collabra.org/ ; >
       au < frozen ; exists ; 2016 ; 2 ; Collabra: Psychology Volume 2016 ; 2016 ; https://www.collabra.org/ ; >
       au < frozen ; exists ; 2017 ; 3 ; Collabra: Psychology Volume 2017 ; 2017 ; https://www.collabra.org/ ; >
-      au < crawling ; exists ; 2018 ; 4 ; Collabra: Psychology Volume 2018 ; 2018 ; https://www.collabra.org/ ; >
+      au < deepCrawl ; exists ; 2018 ; 4 ; Collabra: Psychology Volume 2018 ; 2018 ; https://www.collabra.org/ ; >
 
   }
 

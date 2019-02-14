@@ -881,7 +881,7 @@
     comment[years] = 2017-current
 
    au < deepCrawl ; exists ; 2017 ; 2017 ; Die Wirbelsäule Volume 1 ; 1 ; >
-   au < crawling ; exists ; 2018 ; 2018 ; Die Wirbelsäule Volume 2 ; 2 ; >
+   au < deepCrawl ; exists ; 2018 ; 2018 ; Die Wirbelsäule Volume 2 ; 2 ; >
 
   }
 
@@ -1180,7 +1180,7 @@
    au < finished ; finished ; 2015 ; 2015 ; Deutsche Zeitschrift für Osteopathie Volume 13 ; 13 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2016 ; 2016 ; Deutsche Zeitschrift für Osteopathie Volume 14 ; 14 ; reingest2.clockss.org:8085 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Deutsche Zeitschrift für Osteopathie Volume 15 ; 15 ; >
-   au < crawling ; exists ; 2018 ; 2018 ; Deutsche Zeitschrift für Osteopathie Volume 16 ; 16 ; >
+   au < deepCrawl ; exists ; 2018 ; 2018 ; Deutsche Zeitschrift für Osteopathie Volume 16 ; 16 ; >
 
   }
 
@@ -1207,7 +1207,7 @@
    au < finished ; finished ; 2015 ; 2015 ; Endo-Praxis Volume 31 ; 31 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2016 ; 2016 ; Endo-Praxis Volume 32 ; 32 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Endo-Praxis Volume 33 ; 33 ; >
-   au < crawling ; exists ; 2018 ; 2018 ; Endo-Praxis Volume 34 ; 34 ; >
+   au < deepCrawl ; exists ; 2018 ; 2018 ; Endo-Praxis Volume 34 ; 34 ; >
 
   }
 
@@ -1431,7 +1431,7 @@
    au < finished ; finished ; 2015 ; 2015 ; Ernährung & Medizin Volume 30 ; 030 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; Ernährung & Medizin Volume 31 ; 31 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Ernährung & Medizin Volume 32 ; 32 ; >
-   au < crawling ; exists ; 2018 ; 2018 ; Ernährung & Medizin Volume 33 ; 33 ; >
+   au < deepCrawl ; exists ; 2018 ; 2018 ; Ernährung & Medizin Volume 33 ; 33 ; >
 
   }
 
@@ -1838,7 +1838,7 @@
    au < finished ; finished ; 2015 ; 2015 ; Geburtshilfe und Frauenheilkunde Volume 75 ; 75 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2016 ; 2016 ; Geburtshilfe und Frauenheilkunde Volume 76 ; 76 ; >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Geburtshilfe und Frauenheilkunde Volume 77 ; 77 ; >
-   au < crawling ; exists ; 2018 ; 2018 ; Geburtshilfe und Frauenheilkunde Volume 78 ; 78 ; >
+   au < deepCrawl ; exists ; 2018 ; 2018 ; Geburtshilfe und Frauenheilkunde Volume 78 ; 78 ; >
 
   }
 
@@ -2606,7 +2606,7 @@
     #years = 2017-current
 
     au < deepCrawl ; exists ; 2017 ; 2017 ; Journal of Clinical Interventional Radiology Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Journal of Clinical Interventional Radiology Volume 2 ; 2 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Journal of Clinical Interventional Radiology Volume 2 ; 2 ; >
 
   }
 
@@ -2624,7 +2624,7 @@
 
     au < finished ; crawling ; 2016 ; 2016 ; Journal of Hand and Microsurgery Volume 8 ; 8 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Journal of Hand and Microsurgery Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Journal of Hand and Microsurgery Volume 10 ; 10 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Journal of Hand and Microsurgery Volume 10 ; 10 ; >
 
   }
 
@@ -2640,7 +2640,7 @@
     param[journal_id] = 10.1055/s-00031934 
     
     au < deepCrawl ; exists ; 2017 ; 2017 ; The Journal of Hip Surgery  Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; The Journal of Hip Surgery  Volume 2 ; 2 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; The Journal of Hip Surgery  Volume 2 ; 2 ; >
 
   }
 
@@ -3114,7 +3114,7 @@
     au < finished ; finished ; 2015 ; 2015 ; Klinikarzt Der Volume 44 ; 44 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Klinikarzt Der Volume 45 ; 45 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Klinikarzt Der Volume 46 ; 46 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Klinikarzt Der Volume 47 ; 47 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Klinikarzt Der Volume 47 ; 47 ; >
 
   }
 
@@ -3561,7 +3561,7 @@
     au < finished ; finished ; 2015 ; 2015 ; Neonatologie Scan Volume 3 ; 3 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Neonatologie Scan Volume 4 ; 4 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Neonatologie Scan Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Neonatologie Scan Volume 6 ; 6 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Neonatologie Scan Volume 6 ; 6 ; >
 
   }
 
@@ -3673,7 +3673,7 @@
     au < finished ; finished ; 2015 ; 2015 ; Neuroradiologie Scan Volume 5 ; 5 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Neuroradiologie Scan Volume 6 ; 6 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Neuroradiologie Scan Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Neuroradiologie Scan Volume 8 ; 8 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Neuroradiologie Scan Volume 8 ; 8 ; >
 
   }
 
@@ -4357,7 +4357,7 @@
    au < finished ; finished ; 2015 ; 2015 ; Planta Medica Volume 81 ; 81 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; Planta Medica Volume 82 ; 82 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Planta Medica Volume 83 ; 83 ; >
-   au < crawling ; exists ; 2018 ; 2018 ; Planta Medica Volume 84 ; 84 ; >
+   au < deepCrawl ; exists ; 2018 ; 2018 ; Planta Medica Volume 84 ; 84 ; >
 
   }
 
@@ -4982,7 +4982,7 @@
    au < finished ; finished ; 2015 ; 2015 ; Seminars in Liver Disease Volume 35 ; 35 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2016 ; 2016 ; Seminars in Liver Disease Volume 36 ; 36 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Seminars in Liver Disease Volume 37 ; 37 ; >
-   au < crawling ; exists ; 2018 ; 2018 ; Seminars in Liver Disease Volume 38 ; 38 ; >
+   au < deepCrawl ; exists ; 2018 ; 2018 ; Seminars in Liver Disease Volume 38 ; 38 ; >
 
   }
 
@@ -5624,7 +5624,7 @@
     au < finished ; finished ; 2015 ; 2015 ; The Surgery Journal Volume 1 ; 1 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; The Surgery Journal Volume 2 ; 2 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; The Surgery Journal Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; The Surgery Journal Volume 4 ; 4 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; The Surgery Journal Volume 4 ; 4 ; >
 
   }
 

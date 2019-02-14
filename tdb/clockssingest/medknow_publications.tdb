@@ -1195,7 +1195,7 @@
     au < finished ; crawling ; 2015 ; Indian Journal of Nephrology Volume 25 ; 2015 ; 25 ; ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; Indian Journal of Nephrology Volume 26 ; 2016 ; 26 ; ; >
     au < finished ; crawling ; 2017 ; Indian Journal of Nephrology Volume 27 ; 2017 ; 27 ; ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; Indian Journal of Nephrology Volume 28 ; 2018 ; 28 ; ; >
+    au < deepCrawl ; exists ; 2018 ; Indian Journal of Nephrology Volume 28 ; 2018 ; 28 ; ; >
 
   }
 
@@ -1222,7 +1222,7 @@
     au < finished ; crawling ; 2015 ; Indian Journal of Nuclear Medicine Volume 30 ; 2015 ; 30 ; ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; Indian Journal of Nuclear Medicine Volume 31 ; 2016 ; 31 ; ; >
     au < finished ; crawling ; 2017 ; Indian Journal of Nuclear Medicine Volume 32 ; 2017 ; 32 ; ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; Indian Journal of Nuclear Medicine Volume 33 ; 2018 ; 33 ; ; >
+    au < deepCrawl ; exists ; 2018 ; Indian Journal of Nuclear Medicine Volume 33 ; 2018 ; 33 ; ; >
 
   }
 
@@ -1438,7 +1438,7 @@
     au < finished ; finished ; 2015 ; Indian Journal of Otology Volume 21 ; 2015 ; 21 ; ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2016 ; Indian Journal of Otology Volume 22 ; 2016 ; 22 ; ; >
     au < finished ; crawling ; 2017 ; Indian Journal of Otology Volume 23 ; 2017 ; 23 ; ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; Indian Journal of Otology Volume 24 ; 2018 ; 24 ; ; >
+    au < deepCrawl ; exists ; 2018 ; Indian Journal of Otology Volume 24 ; 2018 ; 24 ; ; >
 
   }
 
@@ -2230,7 +2230,7 @@
     au < frozen ; exists ; 2015 ; Iranian Journal of Nursing and Midwifery Research Volume 20 ; 2015 ; 20 ; ; >
     au < frozen ; exists ; 2016 ; Iranian Journal of Nursing and Midwifery Research Volume 21 ; 2016 ; 21 ; ; >
     au < frozen ; exists ; 2017 ; Iranian Journal of Nursing and Midwifery Research Volume 22 ; 2017 ; 22 ; ; >
-    au < crawling ; exists ; 2018 ; Iranian Journal of Nursing and Midwifery Research Volume 23 ; 2018 ; 23 ; ; >
+    au < deepCrawl ; exists ; 2018 ; Iranian Journal of Nursing and Midwifery Research Volume 23 ; 2018 ; 23 ; ; >
 
   }
 
@@ -2439,7 +2439,7 @@
     au < notReady ; exists ; 2015 ; Journal of Clinical Imaging Science Volume 5 ; 2015 ; 5 ; ; >
     au < frozen ; exists ; 2016 ; Journal of Clinical Imaging Science Volume 6 ; 2016 ; 6 ; ; >
     au < notReady ; exists ; 2017 ; Journal of Clinical Imaging Science Volume 7 ; 2017 ; 7 ; ; >
-    au < crawling ; exists ; 2018 ; Journal of Clinical Imaging Science Volume 8 ; 2018 ; 8 ; ; >
+    au < deepCrawl ; exists ; 2018 ; Journal of Clinical Imaging Science Volume 8 ; 2018 ; 8 ; ; >
 
   }
 
@@ -3199,7 +3199,7 @@
     au < finished ; crawling ; 2015 ; Journal of Neurosciences in Rural Practice Volume 6 ; 2015 ; 6 ; ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; Journal of Neurosciences in Rural Practice Volume 7 ; 2016 ; 7 ; ; >
     au < finished ; crawling ; 2017 ; Journal of Neurosciences in Rural Practice Volume 8 ; 2017 ; 8 ; ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2018 ; Journal of Neurosciences in Rural Practice Volume 9 ; 2018 ; 9 ; ; >
+    au < deepCrawl ; exists ; 2018 ; Journal of Neurosciences in Rural Practice Volume 9 ; 2018 ; 9 ; ; >
 
   }
 
@@ -3862,7 +3862,7 @@
     au < finished ; crawling ; 2015 ; Noise and Health Volume 17 ; 2015 ; 17 ; ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; Noise and Health Volume 18 ; 2016 ; 18 ; ; >
     au < finished ; crawling ; 2017 ; Noise and Health Volume 19 ; 2017 ; 19 ; ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; Noise and Health Volume 20 ; 2018 ; 20 ; ; >
+    au < deepCrawl ; exists ; 2018 ; Noise and Health Volume 20 ; 2018 ; 20 ; ; >
 
   }
 
@@ -3926,7 +3926,7 @@
     au < finished ; finished ; 2015 ; Perspectives in Clinical Research Volume 6 ; 2015 ; 6 ; ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; Perspectives in Clinical Research Volume 7 ; 2016 ; 7 ; ; >
     au < finished ; crawling ; 2017 ; Perspectives in Clinical Research Volume 8 ; 2017 ; 8 ; ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2018 ; Perspectives in Clinical Research Volume 9 ; 2018 ; 9 ; ; >
+    au < deepCrawl ; exists ; 2018 ; Perspectives in Clinical Research Volume 9 ; 2018 ; 9 ; ; >
 
   }
 
@@ -4861,7 +4861,7 @@
       au < finished ; crawling ; 2015 ; Bulletin of Faculty of Physical Therapy Volume 20 ; 2015 ; 20 ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2016 ; Bulletin of Faculty of Physical Therapy Volume 21 ; 2016 ; 21 ; ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2017 ; Bulletin of Faculty of Physical Therapy Volume 22 ; 2017 ; 22 ; ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2018 ; Bulletin of Faculty of Physical Therapy Volume 23 ; 2018 ; 23 ; ; >
+      au < deepCrawl ; exists ; 2018 ; Bulletin of Faculty of Physical Therapy Volume 23 ; 2018 ; 23 ; ; >
 
   }
 
@@ -5049,7 +5049,7 @@
       au < finished ; crawling ; 2015 ; Dental Hypotheses Volume 6 ; 2015 ; 6 ; ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2016 ; Dental Hypotheses Volume 7 ; 2016 ; 7 ; ; >
       au < frozen ; exists ; 2017 ; Dental Hypotheses Volume 8 ; 2017 ; 8 ; ; >
-      au < crawling ; exists ; 2018 ; Dental Hypotheses Volume 9 ; 2018 ; 9 ; ; >
+      au < deepCrawl ; exists ; 2018 ; Dental Hypotheses Volume 9 ; 2018 ; 9 ; ; >
 
   }
 
@@ -5312,7 +5312,7 @@
       au < finished ; crawling ; 2015 ; Endoscopic Ultrasound Volume 4 ; 2015 ; 4 ; ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2016 ; Endoscopic Ultrasound Volume 5 ; 2016 ; 5 ; ; >
       au < finished ; crawling ; 2017 ; Endoscopic Ultrasound Volume 6 ; 2017 ; 6 ; ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2018 ; Endoscopic Ultrasound Volume 7 ; 2018 ; 7 ; ; >
+      au < deepCrawl ; exists ; 2018 ; Endoscopic Ultrasound Volume 7 ; 2018 ; 7 ; ; >
 
   }
 
@@ -6150,7 +6150,7 @@
       au < finished ; crawling ; 2015 ; Journal of Clinical Ophthalmology and Research Volume 3 ; 2015 ; 3 ; ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; Journal of Clinical Ophthalmology and Research Volume 4 ; 2016 ; 4 ; ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; Journal of Clinical Ophthalmology and Research Volume 5 ; 2017 ; 5 ; ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2018 ; Journal of Clinical Ophthalmology and Research Volume 6 ; 2018 ; 6 ; ; >
+      au < deepCrawl ; exists ; 2018 ; Journal of Clinical Ophthalmology and Research Volume 6 ; 2018 ; 6 ; ; >
 
   }
 
@@ -6376,7 +6376,7 @@
       au < finished ; crawling ; 2015 ; Journal of Geriatric Mental Health Volume 2 ; 2015 ; 2 ; ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; Journal of Geriatric Mental Health Volume 3 ; 2016 ; 3 ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; Journal of Geriatric Mental Health Volume 4 ; 2017 ; 4 ; ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2018 ; Journal of Geriatric Mental Health Volume 5 ; 2018 ; 5 ; ; >
+      au < deepCrawl ; exists ; 2018 ; Journal of Geriatric Mental Health Volume 5 ; 2018 ; 5 ; ; >
 
   }
 
@@ -6966,7 +6966,7 @@
       au < finished ; crawling ; 2015 ; Journal of Research in Pharmacy Practice Volume 4 ; 2015 ; 4 ; ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; Journal of Research in Pharmacy Practice Volume 5 ; 2016 ; 5 ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2017 ; Journal of Research in Pharmacy Practice Volume 6 ; 2017 ; 6 ; ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2018 ; Journal of Research in Pharmacy Practice Volume 7 ; 2018 ; 7 ; ; >
+      au < deepCrawl ; exists ; 2018 ; Journal of Research in Pharmacy Practice Volume 7 ; 2018 ; 7 ; ; >
 
   }
 
@@ -7361,7 +7361,7 @@
       au < finished ; crawling ; 2015 ; Nigerian Journal of Ophthalmology Volume 23 ; 2015 ; 23 ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; Nigerian Journal of Ophthalmology Volume 24 ; 2016 ; 24 ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; Nigerian Journal of Ophthalmology Volume 25 ; 2017 ; 25 ; ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2018 ; Nigerian Journal of Ophthalmology Volume 26 ; 2018 ; 26 ; ; >
+      au < deepCrawl ; exists ; 2018 ; Nigerian Journal of Ophthalmology Volume 26 ; 2018 ; 26 ; ; >
 
   }
 
@@ -7555,7 +7555,7 @@
       au < finished ; crawling ; 2015 ; Research and Opinion in Anesthesia and Intensive Care Volume 2 ; 2015 ; 2 ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; Research and Opinion in Anesthesia and Intensive Care Volume 3 ; 2016 ; 3 ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; Research and Opinion in Anesthesia and Intensive Care Volume 4 ; 2017 ; 4 ; ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2018 ; Research and Opinion in Anesthesia and Intensive Care Volume 5 ; 2018 ; 5 ; ; >
+      au < deepCrawl ; exists ; 2018 ; Research and Opinion in Anesthesia and Intensive Care Volume 5 ; 2018 ; 5 ; ; >
 
   }
 
@@ -7670,7 +7670,7 @@
       au < finished ; crawling ; 2015 ; Saudi Journal of Medicine and Medical Sciences Volume 3 ; 2015 ; 3 ; ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; Saudi Journal of Medicine and Medical Sciences Volume 4 ; 2016 ; 4 ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; Saudi Journal of Medicine and Medical Sciences Volume 5 ; 2017 ; 5 ; ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2018 ; Saudi Journal of Medicine and Medical Sciences Volume 6 ; 2018 ; 6 ; ; >
+      au < deepCrawl ; exists ; 2018 ; Saudi Journal of Medicine and Medical Sciences Volume 6 ; 2018 ; 6 ; ; >
 
   }
 
@@ -7788,7 +7788,7 @@
       au < finished ; crawling ; 2015 ; SRM Journal of Research in Dental Sciences Volume 6 ; 2015 ; 6 ; ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; SRM Journal of Research in Dental Sciences Volume 7 ; 2016 ; 7 ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2017 ; SRM Journal of Research in Dental Sciences Volume 8 ; 2017 ; 8 ; ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2018 ; SRM Journal of Research in Dental Sciences Volume 9 ; 2018 ; 9 ; ; >
+      au < deepCrawl ; exists ; 2018 ; SRM Journal of Research in Dental Sciences Volume 9 ; 2018 ; 9 ; ; >
 
   }
 
@@ -8065,7 +8065,7 @@
 
       au < finished ; crawling ; 2016 ; The National Medical Journal of India Volume 29 ; 2016 ; 29 ; ; reingest5.clockss.org:8082 > #no permission see http://www.nmji.in/lockss.txt
       au < finished ; crawling ; 2017 ; The National Medical Journal of India Volume 30 ; 2017 ; 30 ; ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2018 ; The National Medical Journal of India Volume 31 ; 2018 ; 31 ; ; >
+      au < deepCrawl ; exists ; 2018 ; The National Medical Journal of India Volume 31 ; 2018 ; 31 ; ; >
 
   }
 
@@ -8145,7 +8145,7 @@
 
       au < finished ; crawling ; 2016 ; Translational Surgery Volume 1 ; 2016 ; 1 ; ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2017 ; Translational Surgery Volume 2 ; 2017 ; 2 ; ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2018 ; Translational Surgery Volume 3 ; 2018 ; 3 ; ; >
+      au < deepCrawl ; exists ; 2018 ; Translational Surgery Volume 3 ; 2018 ; 3 ; ; >
 
   }
 
@@ -8179,7 +8179,7 @@
 
       au < finished ; crawling ; 2016 ; Tropical Journal of Obstetrics and Gynaecology Volume 33 ; 2016 ; 33 ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2017 ; Tropical Journal of Obstetrics and Gynaecology Volume 34 ; 2017 ; 34 ; ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2018 ; Tropical Journal of Obstetrics and Gynaecology Volume 35 ; 2018 ; 35 ; ; >
+      au < deepCrawl ; exists ; 2018 ; Tropical Journal of Obstetrics and Gynaecology Volume 35 ; 2018 ; 35 ; ; >
 
   }
 

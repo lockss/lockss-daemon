@@ -142,7 +142,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Biomarker Insights Volume 10 ; 10 ; bmia ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Biomarker Insights Volume 11 ; 11 ; bmia ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2017 ; Biomarker Insights Volume 12 ; 12 ; bmia ; http://journals.sagepub.com/ ; >
-    au < crawling ; exists ; 2018 ; Biomarker Insights Volume 13 ; 13 ; bmia ; http://journals.sagepub.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Biomarker Insights Volume 13 ; 13 ; bmia ; http://journals.sagepub.com/ ; >
 
   }
 
@@ -210,7 +210,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Biomedical Informatics Insights Volume 7 ; 7 ; biia ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Biomedical Informatics Insights Volume 8 ; 8 ; biia ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2017 ; Biomedical Informatics Insights Volume 9 ; 9 ; biia ; http://journals.sagepub.com/ ; >
-    au < crawling ; exists ; 2018 ; Biomedical Informatics Insights Volume 10 ; 10 ; biia ; http://journals.sagepub.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Biomedical Informatics Insights Volume 10 ; 10 ; biia ; http://journals.sagepub.com/ ; >
 
   }
 
@@ -404,7 +404,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Case Reports Volume 8 ; 8 ; icra ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Case Reports Volume 9 ; 9 ; icra ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2017 ; Clinical Medicine Insights: Case Reports Volume 10 ; 10 ; icra ; http://journals.sagepub.com/ ; >
-    au < crawling ; exists ; 2018 ; Clinical Medicine Insights: Case Reports Volume 11 ; 11 ; icra ; http://journals.sagepub.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Clinical Medicine Insights: Case Reports Volume 11 ; 11 ; icra ; http://journals.sagepub.com/ ; >
 
   }
 
@@ -838,7 +838,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Genetics & Epigenetics Volume 7 ; 7 ; gaea ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Genetics & Epigenetics Volume 8 ; 8 ; gaea ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2017 ; Genetics & Epigenetics Volume 9 ; 9 ; gaea ; http://journals.sagepub.com/ ; >
-    au < crawling ; exists ; 2018 ; Genetics & Epigenetics Volume 10 ; 10 ; gaea ; http://journals.sagepub.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Genetics & Epigenetics Volume 10 ; 10 ; gaea ; http://journals.sagepub.com/ ; >
 
   }
 
@@ -1185,7 +1185,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Magnetic Resonance Insights Volume 8 ; 8 ; mria ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Magnetic Resonance Insights Volume 9 ; 9 ; mria ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2017 ; Magnetic Resonance Insights Volume 10 ; 10 ; mria ; http://journals.sagepub.com/ ; >
-    au < crawling ; exists ; 2018 ; Magnetic Resonance Insights Volume 11 ; 11 ; mria ; http://journals.sagepub.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Magnetic Resonance Insights Volume 11 ; 11 ; mria ; http://journals.sagepub.com/ ; >
 
   }
 

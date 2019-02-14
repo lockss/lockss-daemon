@@ -450,7 +450,7 @@
     plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
     param[journal_id] = rolacc
 
-    au < crawling ; exists ; 2018 ; Rule of Law and Anti-Corruption Journal Volume 2018 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Rule of Law and Anti-Corruption Journal Volume 2018 ; 2018 ; >
 
   }
   

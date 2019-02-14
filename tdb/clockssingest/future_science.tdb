@@ -88,7 +88,7 @@
     au < frozen ; exists ; 2016 ; BioTechniques Volume 61 ; 61 ; https://www.future-science.com/ ; >
     au < frozen ; exists ; 2017 ; BioTechniques Volume 62 ; 62 ; https://www.future-science.com/ ; >
     au < frozen ; exists ; 2017 ; BioTechniques Volume 63 ; 63 ; https://www.future-science.com/ ; >
-    au < crawling ; exists ; 2018 ; BioTechniques Volume 64 ; 64 ; https://www.future-science.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; BioTechniques Volume 64 ; 64 ; https://www.future-science.com/ ; >
     au < deepCrawl ; exists ; 2018 ; BioTechniques Volume 65 ; 65 ; https://www.future-science.com/ ; >
 
   }
@@ -214,7 +214,7 @@
     au < finished ; finished ; 2015 ; Pharmaceutical Patent Analyst Volume 4 ; 4 ; http://www.future-science.com/ ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Pharmaceutical Patent Analyst Volume 5 ; 5 ; http://www.future-science.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Pharmaceutical Patent Analyst Volume 6 ; 6 ; https://www.future-science.com/ ; >
-    au < crawling ; exists ; 2018 ; Pharmaceutical Patent Analyst Volume 7 ; 7 ; https://www.future-science.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Pharmaceutical Patent Analyst Volume 7 ; 7 ; https://www.future-science.com/ ; >
 
   }
 
