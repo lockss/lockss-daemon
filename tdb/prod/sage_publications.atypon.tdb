@@ -924,6 +924,28 @@
 
     {
       title <
+        name = Africa Spectrum ;
+        issn = 0002-0397 ;
+        issn = 1868-6869
+      >
+
+        #journal_id = afr
+
+        au < exists ; 2009 ; Africa Spectrum Volume 44 ; 44 ; afra ; https://journals.sagepub.com/ >
+        au < exists ; 2010 ; Africa Spectrum Volume 45 ; 45 ; afra ; https://journals.sagepub.com/ >
+        au < exists ; 2011 ; Africa Spectrum Volume 46 ; 46 ; afra ; https://journals.sagepub.com/ >
+        au < exists ; 2012 ; Africa Spectrum Volume 47 ; 47 ; afra ; https://journals.sagepub.com/ >
+        au < exists ; 2013 ; Africa Spectrum Volume 48 ; 48 ; afra ; https://journals.sagepub.com/ >
+        au < exists ; 2014 ; Africa Spectrum Volume 49 ; 49 ; afra ; https://journals.sagepub.com/ >
+        au < exists ; 2015 ; Africa Spectrum Volume 50 ; 50 ; afra ; https://journals.sagepub.com/ >
+        au < exists ; 2016 ; Africa Spectrum Volume 51 ; 51 ; afra ; https://journals.sagepub.com/ >
+        au < exists ; 2017 ; Africa Spectrum Volume 52 ; 52 ; afra ; https://journals.sagepub.com/ >
+        au < exists ; 2018 ; Africa Spectrum Volume 53 ; 53 ; afra ; https://journals.sagepub.com/ >
+
+    }
+
+    {
+      title <
         name = Agrarian South: Journal of Political Economy ;
         issn = 2277-9760
       >
@@ -7039,6 +7061,32 @@
     {
 
       title <
+        name = Collections: A Journal for Museum and Archives Professionals ;
+        issn = 1550-1906
+      >
+
+        #journal_id = cjx
+
+        au < exists ; 2004 ; Collections: A Journal for Museum and Archives Professionals Volume 1 ; 1 ; cjxa ; https://journals.sagepub.com/ >
+        au < exists ; 2005-2006 ; Collections: A Journal for Museum and Archives Professionals Volume 2 ; 2 ; cjxa ; https://journals.sagepub.com/ >
+        au < exists ; 2007 ; Collections: A Journal for Museum and Archives Professionals Volume 3 ; 3 ; cjxa ; https://journals.sagepub.com/ >
+        au < exists ; 2008 ; Collections: A Journal for Museum and Archives Professionals Volume 4 ; 4 ; cjxa ; https://journals.sagepub.com/ >
+        au < exists ; 2009 ; Collections: A Journal for Museum and Archives Professionals Volume 5 ; 5 ; cjxa ; https://journals.sagepub.com/ >
+        au < exists ; 2010 ; Collections: A Journal for Museum and Archives Professionals Volume 6 ; 6 ; cjxa ; https://journals.sagepub.com/ >
+        au < exists ; 2011 ; Collections: A Journal for Museum and Archives Professionals Volume 7 ; 7 ; cjxa ; https://journals.sagepub.com/ >
+        au < exists ; 2012 ; Collections: A Journal for Museum and Archives Professionals Volume 8 ; 8 ; cjxa ; https://journals.sagepub.com/ >
+        au < exists ; 2013 ; Collections: A Journal for Museum and Archives Professionals Volume 9 ; 9 ; cjxa ; https://journals.sagepub.com/ >
+        au < exists ; 2014 ; Collections: A Journal for Museum and Archives Professionals Volume 10 ; 10 ; cjxa ; https://journals.sagepub.com/ >
+        au < exists ; 2015 ; Collections: A Journal for Museum and Archives Professionals Volume 11 ; 11 ; cjxa ; https://journals.sagepub.com/ >
+        au < exists ; 2016 ; Collections: A Journal for Museum and Archives Professionals Volume 12 ; 12 ; cjxa ; https://journals.sagepub.com/ >
+        au < exists ; 2017 ; Collections: A Journal for Museum and Archives Professionals Volume 13 ; 13 ; cjxa ; https://journals.sagepub.com/ >
+        au < exists ; 2018 ; Collections: A Journal for Museum and Archives Professionals Volume 14 ; 14 ; cjxa ; https://journals.sagepub.com/ >
+
+    }
+
+    {
+
+      title <
         name = Common Law World Review ;
         issn = 1473-7795 ;
         eissn = 1740-5556 ;
@@ -7046,7 +7094,7 @@
       >
     
         #param[base_url] = http://clw.sagepub.com/
-    
+
         au < manifest ; 2003 ; Common Law World Review Volume 32 ; 32 ; clwb ; https://journals.sagepub.com/ >
         au < manifest ; 2004 ; Common Law World Review Volume 33 ; 33 ; clwb ; https://journals.sagepub.com/ >
         au < manifest ; 2005 ; Common Law World Review Volume 34 ; 34 ; clwb ; https://journals.sagepub.com/ >
@@ -22025,31 +22073,76 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
     }
 
-  {
+    {
 
-    title <
-      name = Journal of Cutaneous Medicine and Surgery ;
-      issn = 1203-4754 ;
-      eissn = 1615-7109
-    >
+      title <
+        name = Journal of Current Chinese Affairs ;
+        issn = 1868-1026 ;
+        eissn = 1868-4874
+      >
 
-      #param[base_url] = http://cms.sagepub.com/
+        #journal_id = cca
 
-      au < manifest ; 2006 ; Journal of Cutaneous Medicine and Surgery Volume 10 ; 10 ; cmsa ; https://journals.sagepub.com/ >
-      au < manifest ; 2007 ; Journal of Cutaneous Medicine and Surgery Volume 11 ; 11 ; cmsa ; https://journals.sagepub.com/ >
-      au < released ; 2008 ; Journal of Cutaneous Medicine and Surgery Volume 12 ; 12 ; cmsa ; http://journals.sagepub.com/ >
-      au < released ; 2009 ; Journal of Cutaneous Medicine and Surgery Volume 13 ; 13 ; cmsa ; http://journals.sagepub.com/ >
-      au < released ; 2010 ; Journal of Cutaneous Medicine and Surgery Volume 14 ; 14 ; cmsa ; http://journals.sagepub.com/ >
-      au < released ; 2011 ; Journal of Cutaneous Medicine and Surgery Volume 15 ; 15 ; cmsa ; http://journals.sagepub.com/ >
-      au < released ; 2012 ; Journal of Cutaneous Medicine and Surgery Volume 16 ; 16 ; cmsa ; http://journals.sagepub.com/ >
-      au < released ; 2013 ; Journal of Cutaneous Medicine and Surgery Volume 17 ; 17 ; cmsa ; http://journals.sagepub.com/ >
-      au < doNotProcess ; 2014 ; Journal of Cutaneous Medicine and Surgery Volume 18 ; 18 ; cmsa ; https://journals.sagepub.com/ >
-      au < doNotProcess ; 2015 ; Journal of Cutaneous Medicine and Surgery Volume 19 ; 19 ; cmsa ; https://journals.sagepub.com/ >
-      au < released ; 2016 ; Journal of Cutaneous Medicine and Surgery Volume 20 ; 20 ; cmsa ; http://journals.sagepub.com/ >
-      au < released ; 2017 ; Journal of Cutaneous Medicine and Surgery Volume 21 ; 21 ; cmsa ; http://journals.sagepub.com/ >
-      
-      au < manifest ; 2018 ; Journal of Cutaneous Medicine and Surgery Volume 22 ; 22 ; cmsa ; https://journals.sagepub.com/ >
-  }
+        au < exists ; 2009 ; Journal of Current Chinese Affairs Volume 38 ; 38 ; ccaa ; https://journals.sagepub.com/ >
+        au < exists ; 2010 ; Journal of Current Chinese Affairs Volume 39 ; 39 ; ccaa ; https://journals.sagepub.com/ >
+        au < exists ; 2011 ; Journal of Current Chinese Affairs Volume 40 ; 40 ; ccaa ; https://journals.sagepub.com/ >
+        au < exists ; 2012 ; Journal of Current Chinese Affairs Volume 41 ; 41 ; ccaa ; https://journals.sagepub.com/ >
+        au < exists ; 2013 ; Journal of Current Chinese Affairs Volume 42 ; 42 ; ccaa ; https://journals.sagepub.com/ >
+        au < exists ; 2014 ; Journal of Current Chinese Affairs Volume 43 ; 43 ; ccaa ; https://journals.sagepub.com/ >
+        au < exists ; 2015 ; Journal of Current Chinese Affairs Volume 44 ; 44 ; ccaa ; https://journals.sagepub.com/ >
+        au < exists ; 2016 ; Journal of Current Chinese Affairs Volume 45 ; 45 ; ccaa ; https://journals.sagepub.com/ >
+        au < exists ; 2017 ; Journal of Current Chinese Affairs Volume 46 ; 46 ; ccaa ; https://journals.sagepub.com/ >
+
+    }
+
+    {
+
+      title <
+        name = Journal of Current Southeast Asian Affairs ;
+        issn = 1868-1034 ;
+        eissn = 1868-4882
+      >
+
+        #journal_id = saa
+
+        au < exists ; 2009 ; Journal of Current Southeast Asian Affairs Volume 28 ; 28 ; saaa ; https://journals.sagepub.com/ >
+        au < exists ; 2010 ; Journal of Current Southeast Asian Affairs Volume 29 ; 29 ; saaa ; https://journals.sagepub.com/ >
+        au < exists ; 2011 ; Journal of Current Southeast Asian Affairs Volume 30 ; 30 ; saaa ; https://journals.sagepub.com/ >
+        au < exists ; 2012 ; Journal of Current Southeast Asian Affairs Volume 31 ; 31 ; saaa ; https://journals.sagepub.com/ >
+        au < exists ; 2013 ; Journal of Current Southeast Asian Affairs Volume 32 ; 32 ; saaa ; https://journals.sagepub.com/ >
+        au < exists ; 2014 ; Journal of Current Southeast Asian Affairs Volume 33 ; 33 ; saaa ; https://journals.sagepub.com/ >
+        au < exists ; 2015 ; Journal of Current Southeast Asian Affairs Volume 34 ; 34 ; saaa ; https://journals.sagepub.com/ >
+        au < exists ; 2016 ; Journal of Current Southeast Asian Affairs Volume 35 ; 35 ; saaa ; https://journals.sagepub.com/ >
+        au < exists ; 2017 ; Journal of Current Southeast Asian Affairs Volume 36 ; 36 ; saaa ; https://journals.sagepub.com/ >
+        au < exists ; 2018 ; Journal of Current Southeast Asian Affairs Volume 37 ; 37 ; saaa ; https://journals.sagepub.com/ >
+
+    }
+
+    {
+
+      title <
+        name = Journal of Cutaneous Medicine and Surgery ;
+        issn = 1203-4754 ;
+        eissn = 1615-7109
+      >
+
+        #param[base_url] = http://cms.sagepub.com/
+
+        au < manifest ; 2006 ; Journal of Cutaneous Medicine and Surgery Volume 10 ; 10 ; cmsa ; https://journals.sagepub.com/ >
+        au < manifest ; 2007 ; Journal of Cutaneous Medicine and Surgery Volume 11 ; 11 ; cmsa ; https://journals.sagepub.com/ >
+        au < released ; 2008 ; Journal of Cutaneous Medicine and Surgery Volume 12 ; 12 ; cmsa ; http://journals.sagepub.com/ >
+        au < released ; 2009 ; Journal of Cutaneous Medicine and Surgery Volume 13 ; 13 ; cmsa ; http://journals.sagepub.com/ >
+        au < released ; 2010 ; Journal of Cutaneous Medicine and Surgery Volume 14 ; 14 ; cmsa ; http://journals.sagepub.com/ >
+        au < released ; 2011 ; Journal of Cutaneous Medicine and Surgery Volume 15 ; 15 ; cmsa ; http://journals.sagepub.com/ >
+        au < released ; 2012 ; Journal of Cutaneous Medicine and Surgery Volume 16 ; 16 ; cmsa ; http://journals.sagepub.com/ >
+        au < released ; 2013 ; Journal of Cutaneous Medicine and Surgery Volume 17 ; 17 ; cmsa ; http://journals.sagepub.com/ >
+        au < doNotProcess ; 2014 ; Journal of Cutaneous Medicine and Surgery Volume 18 ; 18 ; cmsa ; https://journals.sagepub.com/ >
+        au < doNotProcess ; 2015 ; Journal of Cutaneous Medicine and Surgery Volume 19 ; 19 ; cmsa ; https://journals.sagepub.com/ >
+        au < released ; 2016 ; Journal of Cutaneous Medicine and Surgery Volume 20 ; 20 ; cmsa ; http://journals.sagepub.com/ >
+        au < released ; 2017 ; Journal of Cutaneous Medicine and Surgery Volume 21 ; 21 ; cmsa ; http://journals.sagepub.com/ >
+        au < manifest ; 2018 ; Journal of Cutaneous Medicine and Surgery Volume 22 ; 22 ; cmsa ; https://journals.sagepub.com/ >
+
+    }
 
     {
 
@@ -26911,6 +27004,29 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
     {
 
       title <
+        name = Journal of Politics in Latin America ;
+        issn = 1866-802X ;
+        eissn = 1868-4890
+      >
+
+        #journal_id = pla
+
+        au < exists ; 2009 ; Journal of Politics in Latin America Volume 1 ; 1 ; plaa ; https://journals.sagepub.com/ >
+        au < exists ; 2010 ; Journal of Politics in Latin America Volume 2 ; 2 ; plaa ; https://journals.sagepub.com/ >
+        au < exists ; 2011 ; Journal of Politics in Latin America Volume 3 ; 3 ; plaa ; https://journals.sagepub.com/ >
+        au < exists ; 2012 ; Journal of Politics in Latin America Volume 4 ; 4 ; plaa ; https://journals.sagepub.com/ >
+        au < exists ; 2013 ; Journal of Politics in Latin America Volume 5 ; 5 ; plaa ; https://journals.sagepub.com/ >
+        au < exists ; 2014 ; Journal of Politics in Latin America Volume 6 ; 6 ; plaa ; https://journals.sagepub.com/ >
+        au < exists ; 2015 ; Journal of Politics in Latin America Volume 7 ; 7 ; plaa ; https://journals.sagepub.com/ >
+        au < exists ; 2016 ; Journal of Politics in Latin America Volume 8 ; 8 ; plaa ; https://journals.sagepub.com/ >
+        au < exists ; 2017 ; Journal of Politics in Latin America Volume 9 ; 9 ; plaa ; https://journals.sagepub.com/ >
+        au < exists ; 2018 ; Journal of Politics in Latin America Volume 10 ; 10 ; plaa ; https://journals.sagepub.com/ >
+
+    }
+
+    {
+
+      title <
         name = Journal of Positive Behavior Interventions ;
         issn = 1098-3007 ;
         eissn = 1538-4772 ;
@@ -27595,6 +27711,46 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2018 ; Journal of Sandwich Structures and Materials Volume 20 ; 20 ; jsma ; https://journals.sagepub.com/ >
 
       }
+
+    }
+
+    {
+
+      title <
+        name = Journal of School Leadership ;
+        issn = 1052-6846
+      >
+
+        #journal_id = jsl
+
+        au < exists ; 1991 ; Journal of School Leadership Volume 1 ; 1 ; jsla ; https://journals.sagepub.com/ >
+        au < exists ; 1992 ; Journal of School Leadership Volume 2 ; 2 ; jsla ; https://journals.sagepub.com/ >
+        au < exists ; 1993 ; Journal of School Leadership Volume 3 ; 3 ; jsla ; https://journals.sagepub.com/ >
+        au < exists ; 1994 ; Journal of School Leadership Volume 4 ; 4 ; jsla ; https://journals.sagepub.com/ >
+        au < exists ; 1995 ; Journal of School Leadership Volume 5 ; 5 ; jsla ; https://journals.sagepub.com/ >
+        au < exists ; 1996 ; Journal of School Leadership Volume 6 ; 6 ; jsla ; https://journals.sagepub.com/ >
+        au < exists ; 1997 ; Journal of School Leadership Volume 7 ; 7 ; jsla ; https://journals.sagepub.com/ >
+        au < exists ; 1998 ; Journal of School Leadership Volume 8 ; 8 ; jsla ; https://journals.sagepub.com/ >
+        au < exists ; 1999 ; Journal of School Leadership Volume 9 ; 9 ; jsla ; https://journals.sagepub.com/ >
+        au < exists ; 2000 ; Journal of School Leadership Volume 10 ; 10 ; jsla ; https://journals.sagepub.com/ >
+        au < exists ; 2001 ; Journal of School Leadership Volume 11 ; 11 ; jsla ; https://journals.sagepub.com/ >
+        au < exists ; 2002 ; Journal of School Leadership Volume 12 ; 12 ; jsla ; https://journals.sagepub.com/ >
+        au < exists ; 2003 ; Journal of School Leadership Volume 13 ; 13 ; jsla ; https://journals.sagepub.com/ >
+        au < exists ; 2004 ; Journal of School Leadership Volume 14 ; 14 ; jsla ; https://journals.sagepub.com/ >
+        au < exists ; 2005 ; Journal of School Leadership Volume 15 ; 15 ; jsla ; https://journals.sagepub.com/ >
+        au < exists ; 2006 ; Journal of School Leadership Volume 16 ; 16 ; jsla ; https://journals.sagepub.com/ >
+        au < exists ; 2007 ; Journal of School Leadership Volume 17 ; 17 ; jsla ; https://journals.sagepub.com/ >
+        au < exists ; 2008 ; Journal of School Leadership Volume 18 ; 18 ; jsla ; https://journals.sagepub.com/ >
+        au < exists ; 2009 ; Journal of School Leadership Volume 19 ; 19 ; jsla ; https://journals.sagepub.com/ >
+        au < exists ; 2010 ; Journal of School Leadership Volume 20 ; 20 ; jsla ; https://journals.sagepub.com/ >
+        au < exists ; 2011 ; Journal of School Leadership Volume 21 ; 21 ; jsla ; https://journals.sagepub.com/ >
+        au < exists ; 2012 ; Journal of School Leadership Volume 22 ; 22 ; jsla ; https://journals.sagepub.com/ >
+        au < exists ; 2013 ; Journal of School Leadership Volume 23 ; 23 ; jsla ; https://journals.sagepub.com/ >
+        au < exists ; 2014 ; Journal of School Leadership Volume 24 ; 24 ; jsla ; https://journals.sagepub.com/ >
+        au < exists ; 2015 ; Journal of School Leadership Volume 25 ; 25 ; jsla ; https://journals.sagepub.com/ >
+        au < exists ; 2016 ; Journal of School Leadership Volume 26 ; 26 ; jsla ; https://journals.sagepub.com/ >
+        au < exists ; 2017 ; Journal of School Leadership Volume 27 ; 27 ; jsla ; https://journals.sagepub.com/ >
+        au < exists ; 2018 ; Journal of School Leadership Volume 28 ; 28 ; jsla ; https://journals.sagepub.com/ >
 
     }
 
