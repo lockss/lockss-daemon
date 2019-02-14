@@ -50,17 +50,20 @@ public class TestScHtmlHashFilterFactory extends LockssTestCase {
     mau = new MockArchivalUnit();
   }
   
-  private static final String notIncluded = "<div class=\"ad-banner\">\n" +
+  private static final String notIncluded =
+    "<div class=\"content-section\">x\n" +
+    "<div class=\"ad-banner\">\n" +
     "<div class=\"widget widget-AdBlock widget-instance-HeaderAd\">\n" +
     "<div id=\"adBlockHeader\" style=' '>\n" +
     "<script>\n" +
     "googletag.cmd.push(function () { googletag.display('adBlockHeader'); });\n" +
-    "</script>/n" +
+    "</script>\n" +
+    "</div>\n" +
     "</div>\n" +
     "</div>\n" +
     "</div>\n";
   
-  private static final String notIncludedFiltered = "";
+  private static final String notIncludedFiltered = " x ";
   
   private static final String withArticleIcons = 
       "<div class=\"articleBodyContainer\">\n" +
