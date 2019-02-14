@@ -9,14 +9,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>11</string>
+    <string>13</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -81,10 +81,12 @@
       <string>1,"^https?://(press(-files)?|style)\.anu\.edu\.au/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff.?)$"</string>
       <string>1,"^https?://(press(-files)?|style)\.anu\.edu\.au/lockss.txt$"</string>
       <string>4,"^https?://(press(-files)?|style)\.anu\.edu\.au/"</string>
+      <!--  start_url now redirects to version without publications and we need to allow this before next rule -->
+      <string>1,"^https?://%s/%s(\?page=[0-9]+)?$", url_host(base_url), journal_id</string>
       <!-- in cases where there is a bad link, seems to redirect to search page, don't follow these links -->
       <string>2,"(^https?://%s/([^/?]+)?$|\?search=|/authors-editors/)", url_host(base_url)</string>
-      <!-- start url has publications/ but redirects to version without publications/ -->
-      <string>1,"^https?://%s%s(publications/)?(journals/)?%s(\?page=[0-9]+)?$", url_host(base_url), url_path(base_url), journal_id</string>
+      <!-- start url has publications/ but redirects to version without publications/ now allowed above -->
+      <string>1,"^https?://%s%spublications/(journals/)?%s(\?page=[0-9]+)?$", url_host(base_url), url_path(base_url), journal_id</string>
       <string>1,"^https?://%s%s[?]p=[0-9]+$", url_host(base_url), url_path(base_url)</string>
       <string>1,"^https?://%s%snode/[0-9]+(/download)?$", url_host(base_url), url_path(base_url)</string>
       <string>1,"^https?://%s%spublications/(journals/)?%s-(issue|volume|no-[1-9]|winter)-%s(-[12ni][^/]*?)?(/download)?$", url_host(base_url), url_path(base_url), journal_id, volume_name</string>

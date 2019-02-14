@@ -51,8 +51,10 @@ implements ArticleIteratorFactory,
   
   // params from tdb file corresponding to AU
   protected static final String ROOT_TEMPLATE = "\"%spublications/\", base_url";
+  //make the pattern after the journal id and volume number more general, we were missing content
+  // could be -2015, or -issue-xy or (add more examples here)
   protected static final String PATTERN_TEMPLATE =
-      "\"^%spublications/(?:journals/)?(?!.+/download$)%s-(issue|volume|no-[1-9]|winter)-%s(-[12n].+?)?$\", base_url, journal_id, volume_name";
+      "\"^%spublications/(?:journals/)?(?!.+/download$)%s-(issue|volume|no-[1-9]|winter)-%s(-[a-z0-9].+?)?$\", base_url, journal_id, volume_name";
   
   private static final Pattern LANDING_PATTERN = Pattern.compile(
       "^((https?://[^/]+/)publications/(?:journals/)?([^/]+))$",
