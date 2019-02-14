@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -170,6 +170,9 @@
     <string>au_url_mime_validation_map</string>
     <list>
       <string>\.pdf$, application/pdf</string>
+      <string>node/[0-9]+$, text/html</string>
+      <string>downloads/press/[^/]+/html/.+\.x?html, text/html</string>
+      <!--  terminating download doesn't appear to exist any more but no harm to leave it in -->
       <string>/download$, text/html</string>
     </list>
   </entry>
