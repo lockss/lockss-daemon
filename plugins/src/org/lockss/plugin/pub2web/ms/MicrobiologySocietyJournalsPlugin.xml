@@ -35,20 +35,7 @@
       <string>"%scontent/journal/%s/lockssissues?volume=%s", to_http(base_url), journal_id, volume_name</string>
     </list>
   </entry>
-  <!--  also for https conversion -->
-  <entry>
-    <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.pub2web.ms.MsUrlNormalizer</string>
-  </entry>
-  <entry>
-    <string>plugin_url_fetcher_factory</string>
-    <string>org.lockss.plugin.base.HttpToHttpsUrlFetcherFactory</string>
-  </entry>
-  <entry>
-    <string>plugin_url_consumer_factory</string>
-    <string>org.lockss.plugin.pub2web.Pub2WebHttpsUrlConsumerFactory</string>
-  </entry>
-  <!-- end changes for https conversion -->
+  <!-- Http to Https transition handled at pub2web base level-->
   <entry>
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.pub2web.ms.MsHtmlCrawlFilterFactory</string>

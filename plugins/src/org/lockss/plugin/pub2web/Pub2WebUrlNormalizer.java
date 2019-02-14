@@ -41,7 +41,7 @@ import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 
 
-public class Pub2WebUrlNormalizer implements UrlNormalizer {
+public class Pub2WebUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
   protected static Logger log = 
       Logger.getLogger(Pub2WebUrlNormalizer.class);
   protected static final String SUFFIX = "&isFastTrackArticle=";
@@ -94,8 +94,8 @@ public class Pub2WebUrlNormalizer implements UrlNormalizer {
  *     
  */
   @Override
-  public String normalizeUrl(String url, ArchivalUnit au) throws PluginException {
- 
+  public String additionalNormalization(String url, ArchivalUnit au) throws PluginException {
+
     if (url.contains(";jsessionid=")) {
       url = url.replaceFirst(";jsessionid=[^?]+", "");
     }

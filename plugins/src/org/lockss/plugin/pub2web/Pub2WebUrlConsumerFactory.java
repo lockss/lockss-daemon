@@ -116,9 +116,9 @@ public class Pub2WebUrlConsumerFactory implements UrlConsumerFactory {
   public class Pub2WebUrlConsumer extends SimpleUrlConsumer {
 
     public static final String DEL_URL = "deliver/fulltext/";
-    public static final String DEL_ARGS = "\\?itemId=[^&]+&mimeType=[^&]+";
+    public static final String DEL_ARGS = "\\?itemId=[^&]+(&|&amp;)mimeType=[^&]+";
     public static final String DOC_URL = "docserver/fulltext/";
-    public static final String DOC_ARGS = "\\?expires=[^&]+&id=id&accname=[^&]+&checksum=.+$";
+    public static final String DOC_ARGS = "\\?expires=[^&]+(&|&amp;)id=id&accname=[^&]+(&|&amp;)checksum=.+$";
 
     // This needs to be pretty broad because we can't know what format (suffixes) of supplementary
     // data the publisher will end up supporting. Just check that the redirect starts at a 

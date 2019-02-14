@@ -155,11 +155,27 @@
     <!-- examples
        article PDF content gets normalized to the crawler version
        http://jgv.microbiologyresearch.org/content/journal/jgv/10.1099/vir.0.070219-0?crawwler=true&mimetype=application/pdf
+       IET example:
+       http://digital-library.theiet.org/content/journals/10.1049/iet-syb.2015.0051?crawler=true&mimetype=application/pdf
     -->
     <list>
-      <string>"^%scontent/journal/%s/[^/]+/[^/]+\?crawler=true&amp;mimetype=application/pdf$", base_url, journal_id</string>
+      <string>"^%s/content/journals?(/%s)?/[^/]+/[^/]+\?crawler=true&amp;mimetype=application/pdf$",  base_url, journal_id</string>
     </list>
   </entry>
+  <!--  also for https conversion -->
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.pub2web.Pub2WebUrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>plugin_url_fetcher_factory</string>
+    <string>org.lockss.plugin.base.HttpToHttpsUrlFetcherFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.pub2web.Pub2WebHttpsUrlConsumerFactory</string>
+  </entry>
+  <!-- end changes for https conversion -->
   <!--  recrawl depth is 3 because the start_url lists the issue TOCs but
   the actual article listing is on another page that is extracted from the TOC landing page
   e.g.
@@ -217,10 +233,6 @@
   <entry>
     <string>plugin_fetch_rate_limiter_source</string>
     <string>plugin</string>
-  </entry>
-  <entry>
-    <string>plugin_url_consumer_factory</string>
-    <string>org.lockss.plugin.pub2web.Pub2WebUrlConsumerFactory</string>
   </entry>
   <entry>
     <string>application/pdf_filter_factory</string>

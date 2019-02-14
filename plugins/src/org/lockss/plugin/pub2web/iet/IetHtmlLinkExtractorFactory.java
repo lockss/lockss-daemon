@@ -44,6 +44,7 @@ import org.lockss.extractor.*;
 import org.lockss.extractor.JsoupHtmlLinkExtractor.SimpleTagLinkExtractor;
 import org.lockss.extractor.LinkExtractor.Callback;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.AuUtil;
 import org.lockss.util.Logger;
 
 /* 
@@ -74,13 +75,13 @@ implements LinkExtractorFactory {
 
 
   protected void registerExtractors(JsoupHtmlLinkExtractor extractor) {
-    extractor.registerTagExtractor(DIV_TAG, new MsDivTagLinkExtractor(ID_ATTR));
+    extractor.registerTagExtractor(DIV_TAG, new IetDivTagLinkExtractor(ID_ATTR));
     
   }
 
-  public static class MsDivTagLinkExtractor extends SimpleTagLinkExtractor {
+  public static class IetDivTagLinkExtractor extends SimpleTagLinkExtractor {
 
-    public MsDivTagLinkExtractor(String attr) {
+    public IetDivTagLinkExtractor(String attr) {
       super(attr);
     }
 
@@ -98,6 +99,7 @@ implements LinkExtractorFactory {
       // Are we an article landing page?
       if ( (srcUrl != null) && landingMat.matches()) {
         String base_url = landingMat.group(1);
+        base_url = AuUtil.normalizeHttpHttpsFromBaseUrl(au, base_url);
         if (DIV_TAG.equals(node.nodeName())) {
           String idVal = node.attr(ID_ATTR);
           if ( idVal!= null && FULLTEXT_ID_VAL.equals(idVal)) {
