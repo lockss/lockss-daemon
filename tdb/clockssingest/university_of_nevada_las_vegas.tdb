@@ -34,4 +34,21 @@
 
   }
 
+  {
+  
+    title < 
+      name = Journal of Research in Technical Careers ;
+      eissn = 2578-2118
+    >
+    
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
+    param[base_url] = http://digitalscholarship.unlv.edu/
+    param[journal_abbr] = jrtc
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+
+    au < exists ; exists ; 2017 ; Journal of Research in Technical Careers Volume 1 ; 1 ; >
+    au < exists ; exists ; 2018 ; Journal of Research in Technical Careers Volume 2 ; 2 ; >
+
+  }
+
 }

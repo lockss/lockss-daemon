@@ -1031,7 +1031,7 @@
     au < manifest ; exists ; 2015 ; 2015 ; Animal Frontiers Volume 5 ; 5 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Animal Frontiers Volume 6 ; 6 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Animal Frontiers Volume 7 ; 7 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; 2018 ; Animal Frontiers Volume 8 ; 8 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Animal Frontiers Volume 8 ; 8 ; >
 
   }
 
@@ -1529,7 +1529,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Arbitration International Volume 31 ; 31 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Arbitration International Volume 32 ; 32 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Arbitration International Volume 33 ; 33 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; 2018 ; Arbitration International Volume 34 ; 34 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Arbitration International Volume 34 ; 34 ; >
 
   }
 
@@ -1659,7 +1659,7 @@
     au < frozen ; exists ; 2015 ; 2015 ; Arthropod Management Tests Volume 40 ; 40 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Arthropod Management Tests Volume 41 ; 41 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Arthropod Management Tests Volume 42 ; 42 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Arthropod Management Tests Volume 43 ; 43 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Arthropod Management Tests Volume 43 ; 43 ; >
 
   }
 
@@ -2964,7 +2964,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Capital Markets Law Journal Volume 10 ; 10 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Capital Markets Law Journal Volume 11 ; 11 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Capital Markets Law Journal Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Capital Markets Law Journal Volume 13 ; 13 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Capital Markets Law Journal Volume 13 ; 13 ; >
 
   }
 
@@ -3711,7 +3711,7 @@
     param[journal_id] = cdn
 
     au < finished ; crawling ; 2017 ; 2017 ; Current Developments in Nutrition Volume 1 ; 1 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; 2018 ; Current Developments in Nutrition Volume 2 ; 2 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Current Developments in Nutrition Volume 2 ; 2 ; >
 
   }
 
@@ -5983,7 +5983,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Genome Biology and Evolution Volume 7 ; 7 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Genome Biology and Evolution Volume 8 ; 8 ; >
     au < testing ; exists ; 2017 ; 2017 ; Genome Biology and Evolution Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Genome Biology and Evolution Volume 10 ; 10 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Genome Biology and Evolution Volume 10 ; 10 ; >
 
   }
 
@@ -6384,7 +6384,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Health Policy and Planning Volume 30 ; 30 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Health Policy and Planning Volume 31 ; 31 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Health Policy and Planning Volume 32 ; 32 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; 2018 ; Health Policy and Planning Volume 33 ; 33 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Health Policy and Planning Volume 33 ; 33 ; >
 
   }
 
@@ -6431,7 +6431,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Health Promotion International Volume 30 ; 30 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Health Promotion International Volume 31 ; 31 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Health Promotion International Volume 32 ; 32 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2018 ; 2018 ; Health Promotion International Volume 33 ; 33 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Health Promotion International Volume 33 ; 33 ; >
 
   }
 
@@ -6488,7 +6488,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; History Workshop Journal Volume 79-80 ; 79-80 ; >
     au < frozen ; exists ; 2016 ; 2016 ; History Workshop Journal Volume 81-82 ; 81-82 ; >
     au < frozen ; exists ; 2017 ; 2017 ; History Workshop Journal Volume 83-84 ; 83-84 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; History Workshop Journal Volume 85-86 ; 85-86 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; History Workshop Journal Volume 85-86 ; 85-86 ; >
 
   }
 
@@ -6690,7 +6690,7 @@
 
     param[journal_id] = hcr
 
-    au < crawling ; exists ; 2018 ; 2018 ; Human Communication Research Volume 1 ; 1 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Human Communication Research Volume 1 ; 1 ; >
 
   }
 
@@ -7150,7 +7150,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; ISLE: Interdisciplinary Studies in Literature and Environment Volume 22 ; 22 ; >
     au < frozen ; exists ; 2016 ; 2016 ; ISLE: Interdisciplinary Studies in Literature and Environment Volume 23 ; 23 ; >
     au < frozen ; exists ; 2017 ; 2017 ; ISLE: Interdisciplinary Studies in Literature and Environment Volume 24 ; 24 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; ISLE: Interdisciplinary Studies in Literature and Environment Volume 25 ; 25 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; ISLE: Interdisciplinary Studies in Literature and Environment Volume 25 ; 25 ; >
 
   }
 
@@ -9533,7 +9533,7 @@
 
     param[journal_id] = jge
 
-    au < crawling ; exists ; 2018 ; 2018 ; Journal of Geophysics and Engineering Volume 15 ; 15 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Journal of Geophysics and Engineering Volume 15 ; 15 ; >
 
   }
 
@@ -12590,7 +12590,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 446-454 ; 446-454 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Monthly Notices of the Royal Astronomical Society Volume 455-463 ; 455-463 ; >
     au < testing ; exists ; 2017 ; 2017 ; Monthly Notices of the Royal Astronomical Society Volume 464-472 ; 464-472 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Monthly Notices of the Royal Astronomical Society Volume 473-482 ; 473-482 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Monthly Notices of the Royal Astronomical Society Volume 473-482 ; 473-482 ; >
 
   }
 

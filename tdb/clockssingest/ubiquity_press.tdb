@@ -716,7 +716,7 @@
 
       #publisher = Ubiquity Press
 
-      au < crawling ; exists ; 2018 ; 1 ; Future Cities and Environment Volume 2018 ; 2018 ; https://futurecitiesandenvironment.com/ ; >
+      au < deepCrawl ; exists ; 2018 ; 1 ; Future Cities and Environment Volume 2018 ; 2018 ; https://futurecitiesandenvironment.com/ ; >
 
   }
 
@@ -1478,7 +1478,7 @@
       au < frozen ; exists ; 2015 ; 3 ; eGEMs Volume 2015 ; 2015 ; https://egems.academyhealth.org/ ; >
       au < frozen ; exists ; 2016 ; 4 ; eGEMs Volume 2016 ; 2016 ; https://egems.academyhealth.org/ ; >
       au < frozen ; exists ; 2017 ; 5 ; eGEMs Volume 2017 ; 2017 ; https://egems.academyhealth.org/ ; >
-      au < crawling ; exists ; 2018 ; 6 ; eGEMs Volume 2018 ; 2018 ; https://egems.academyhealth.org/ ; >
+      au < deepCrawl ; exists ; 2018 ; 6 ; eGEMs Volume 2018 ; 2018 ; https://egems.academyhealth.org/ ; >
 
   }
 
@@ -1847,7 +1847,7 @@
       au < frozen ; exists ; 2015 ; 8 ; International Journal for Court Administration Volume 2015 ; 2015 ; http://www.iacajournal.org/ ; >
       au < finished ; crawling ; 2016 ; 9 ; International Journal for Court Administration Volume 2016 ; 2016 ; http://www.iacajournal.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2017 ; 10 ; International Journal for Court Administration Volume 2017 ; 2017 ; http://www.iacajournal.org/ ; >
-      au < crawling ; exists ; 2018 ; 11 ; International Journal for Court Administration Volume 2018 ; 2018 ; https://www.iacajournal.org/ ; >
+      au < deepCrawl ; exists ; 2018 ; 11 ; International Journal for Court Administration Volume 2018 ; 2018 ; https://www.iacajournal.org/ ; >
 
   }
 

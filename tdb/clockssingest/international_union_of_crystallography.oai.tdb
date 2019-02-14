@@ -67,12 +67,12 @@
     au < finished ; crawling ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 November ; 2017-11 ; reingest4.clockss.org:8082 >
     au < doesNotExist ; doesNotExist ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 December ; 2017-12 ; > # No records within date
 
-    au < crawling ; exists ; 2018 ; 74 ; Acta Crystallographica Section E: Crystallographic Communications Volume 74 January ; 2018-01 ; >
+    au < deepCrawl ; exists ; 2018 ; 74 ; Acta Crystallographica Section E: Crystallographic Communications Volume 74 January ; 2018-01 ; >
     au < deepCrawl ; exists ; 2018 ; 74 ; Acta Crystallographica Section E: Crystallographic Communications Volume 74 February ; 2018-02 ; >
     au < crawling ; exists ; 2018 ; 74 ; Acta Crystallographica Section E: Crystallographic Communications Volume 74 March ; 2018-03 ; >
     au < notReady ; exists ; 2018 ; 74 ; Acta Crystallographica Section E: Crystallographic Communications Volume 74 April ; 2018-04 ; > #no substance. Likely no records for date
     au < deepCrawl ; exists ; 2018 ; 74 ; Acta Crystallographica Section E: Crystallographic Communications Volume 74 May ; 2018-05 ; >
-    au < crawling ; exists ; 2018 ; 74 ; Acta Crystallographica Section E: Crystallographic Communications Volume 74 June ; 2018-06 ; >
+    au < deepCrawl ; exists ; 2018 ; 74 ; Acta Crystallographica Section E: Crystallographic Communications Volume 74 June ; 2018-06 ; >
     au < deepCrawl ; exists ; 2018 ; 74 ; Acta Crystallographica Section E: Crystallographic Communications Volume 74 July ; 2018-07 ; >
     au < deepCrawl ; exists ; 2018 ; 74 ; Acta Crystallographica Section E: Crystallographic Communications Volume 74 August ; 2018-08 ; >
     au < deepCrawl ; exists ; 2018 ; 74 ; Acta Crystallographica Section E: Crystallographic Communications Volume 74 September ; 2018-09 ; >
@@ -351,7 +351,7 @@
     au < doesNotExist ; doesNotExist ; 2017 ; 4 ; IUCrJ Volume 4 November ; 2017-11 ; > # No records within date
     au < doesNotExist ; doesNotExist ; 2017 ; 4 ; IUCrJ Volume 4 December ; 2017-12 ; > # No records within date
 
-    au < crawling ; exists ; 2018 ; 5 ; IUCrJ Volume 5 January ; 2018-01 ; >
+    au < deepCrawl ; exists ; 2018 ; 5 ; IUCrJ Volume 5 January ; 2018-01 ; >
     au < deepCrawl ; exists ; 2018 ; 5 ; IUCrJ Volume 5 February ; 2018-02 ; >
     au < deepCrawl ; exists ; 2018 ; 5 ; IUCrJ Volume 5 March ; 2018-03 ; >
     au < crawling ; exists ; 2018 ; 5 ; IUCrJ Volume 5 April ; 2018-04 ; >
@@ -410,13 +410,13 @@
     au < crawling ; exists ; 2018 ; 3 ; IUCrData Volume 3 January ; 2018-01 ; >
     au < crawling ; exists ; 2018 ; 3 ; IUCrData Volume 3 February ; 2018-02 ; >
     au < deepCrawl ; exists ; 2018 ; 3 ; IUCrData Volume 3 March ; 2018-03 ; >
-    au < crawling ; exists ; 2018 ; 3 ; IUCrData Volume 3 April ; 2018-04 ; >
+    au < deepCrawl ; exists ; 2018 ; 3 ; IUCrData Volume 3 April ; 2018-04 ; >
     au < crawling ; exists ; 2018 ; 3 ; IUCrData Volume 3 May ; 2018-05 ; >
     au < deepCrawl ; exists ; 2018 ; 3 ; IUCrData Volume 3 June ; 2018-06 ; >
     au < deepCrawl ; exists ; 2018 ; 3 ; IUCrData Volume 3 July ; 2018-07 ; >
     au < deepCrawl ; exists ; 2018 ; 3 ; IUCrData Volume 3 August ; 2018-08 ; >
-    au < crawling ; exists ; 2018 ; 3 ; IUCrData Volume 3 September ; 2018-09 ; >
-    au < crawling ; exists ; 2018 ; 3 ; IUCrData Volume 3 October ; 2018-10 ; >
+    au < deepCrawl ; exists ; 2018 ; 3 ; IUCrData Volume 3 September ; 2018-09 ; >
+    au < deepCrawl ; exists ; 2018 ; 3 ; IUCrData Volume 3 October ; 2018-10 ; >
     au < crawling ; exists ; 2018 ; 3 ; IUCrData Volume 3 November ; 2018-11 ; >
     au < crawling ; exists ; 2018 ; 3 ; IUCrData Volume 3 December ; 2018-12 ; >
 

@@ -1,0 +1,378 @@
+{
+  publisher <
+    name = Fordham University School of Law ;
+    info[contract] = 2012 ;
+    info[tester] = 5 ;
+    info[poller] = 6
+  >
+
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+
+  {
+
+      title <
+        name = Fordham Environmental Law Review ;
+        eissn = 1559-4785
+      >
+
+      comment[publisher] = Fordham University School of Law
+      param[base_url] = http://ir.lawnet.fordham.edu
+      param[journal_id] = elr
+
+      au < exists ; exists ; 1989 ; Fordham Environmental Law Review Volume 1 ; 1 ; >
+      au < exists ; exists ; 1990 ; Fordham Environmental Law Review Volume 2 ; 2 ; >
+      au < exists ; exists ; 1991 ; Fordham Environmental Law Review Volume 3 ; 3 ; >
+      au < exists ; exists ; 1992 ; Fordham Environmental Law Review Volume 4 ; 4 ; >
+      au < exists ; exists ; 1993 ; Fordham Environmental Law Review Volume 5 ; 5 ; >
+      au < exists ; exists ; 1994 ; Fordham Environmental Law Review Volume 6 ; 6 ; >
+      au < exists ; exists ; 1995 ; Fordham Environmental Law Review Volume 7 ; 7 ; >
+      au < exists ; exists ; 1996 ; Fordham Environmental Law Review Volume 8 ; 8 ; >
+      au < exists ; exists ; 1997 ; Fordham Environmental Law Review Volume 9 ; 9 ; >
+      au < exists ; exists ; 1998 ; Fordham Environmental Law Review Volume 10 ; 10 ; >
+      au < exists ; exists ; 1999 ; Fordham Environmental Law Review Volume 11 ; 11 ; >
+      au < exists ; exists ; 2000 ; Fordham Environmental Law Review Volume 12 ; 12 ; >
+      au < exists ; exists ; 2001 ; Fordham Environmental Law Review Volume 13 ; 13 ; >
+      au < exists ; exists ; 2002 ; Fordham Environmental Law Review Volume 14 ; 14 ; >
+      au < exists ; exists ; 2003 ; Fordham Environmental Law Review Volume 15 ; 15 ; >
+      au < exists ; exists ; 2004 ; Fordham Environmental Law Review Volume 16 ; 16 ; >
+      au < exists ; exists ; 2005 ; Fordham Environmental Law Review Volume 17 ; 17 ; >
+      au < exists ; exists ; 2006 ; Fordham Environmental Law Review Volume 18 ; 18 ; >
+      au < exists ; exists ; 2007 ; Fordham Environmental Law Review Volume 19 ; 19 ; >
+      au < exists ; exists ; 2008 ; Fordham Environmental Law Review Volume 20 ; 20 ; >
+      au < exists ; exists ; 2009 ; Fordham Environmental Law Review Volume 21 ; 21 ; >
+      au < exists ; exists ; 2010 ; Fordham Environmental Law Review Volume 22 ; 22 ; >
+      au < exists ; exists ; 2011 ; Fordham Environmental Law Review Volume 23 ; 23 ; >
+      au < exists ; exists ; 2012 ; Fordham Environmental Law Review Volume 24 ; 24 ; >
+      au < exists ; exists ; 2013 ; Fordham Environmental Law Review Volume 25 ; 25 ; >
+      au < exists ; exists ; 2014 ; Fordham Environmental Law Review Volume 26 ; 26 ; >
+      au < exists ; exists ; 2015 ; Fordham Environmental Law Review Volume 27 ; 27 ; >
+      au < exists ; exists ; 2016 ; Fordham Environmental Law Review Volume 28 ; 28 ; >
+      au < exists ; exists ; 2017 ; Fordham Environmental Law Review Volume 29 ; 29 ; >
+      au < expected ; exists ; 2018 ; Fordham Environmental Law Review Volume 30 ; 30 ; >
+      au < expected ; exists ; 2019 ; Fordham Environmental Law Review Volume 31 ; 31 ; >
+
+  }
+
+  {
+
+      title <
+        name = Fordham Intellectual Property, Media & Entertainment Law Journal ;
+        eissn = 1079-9699
+      >
+
+      comment[publisher] = Fordham University School of Law
+      param[base_url] = http://ir.lawnet.fordham.edu
+      param[journal_id] = iplj
+
+      au < exists ; exists ; 1990 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 1 ; 1 ; >
+      au < exists ; exists ; 1991 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 2 ; 2 ; >
+      au < exists ; exists ; 1992 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 3 ; 3 ; >
+      au < exists ; exists ; 1993 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 4 ; 4 ; >
+      au < exists ; exists ; 1994 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 5 ; 5 ; >
+      au < exists ; exists ; 1995 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 6 ; 6 ; >
+      au < exists ; exists ; 1996 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 7 ; 7 ; >
+      au < exists ; exists ; 1997 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 8 ; 8 ; >
+      au < exists ; exists ; 1998 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 9 ; 9 ; >
+      au < exists ; exists ; 1999 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 10 ; 10 ; >
+      au < exists ; exists ; 2000 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 11 ; 11 ; >
+      au < exists ; exists ; 2001 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 12 ; 12 ; >
+      au < exists ; exists ; 2002 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 13 ; 13 ; >
+      au < exists ; exists ; 2003 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 14 ; 14 ; >
+      au < exists ; exists ; 2004 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 15 ; 15 ; >
+      au < exists ; exists ; 2005 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 16 ; 16 ; >
+      au < exists ; exists ; 2006 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 17 ; 17 ; >
+      au < exists ; exists ; 2007 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 18 ; 18 ; >
+      au < exists ; exists ; 2008 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 19 ; 19 ; >
+      au < exists ; exists ; 2009 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 20 ; 20 ; >
+      au < exists ; exists ; 2010 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 21 ; 21 ; >
+      au < exists ; exists ; 2011 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 22 ; 22 ; >
+      au < exists ; exists ; 2012 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 23 ; 23 ; >
+      au < exists ; exists ; 2013 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 24 ; 24 ; >
+      au < exists ; exists ; 2014 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 25 ; 25 ; >
+      au < exists ; exists ; 2015 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 26 ; 26 ; >
+      au < exists ; exists ; 2016 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 27 ; 27 ; >
+      au < exists ; exists ; 2017 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 28 ; 28 ; >
+      au < expected ; exists ; 2018 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 29 ; 29 ; >
+      au < expected ; exists ; 2019 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 30 ; 30 ; >
+
+  }
+
+  {
+
+      title <
+        name = Fordham International Law Journal ;
+        eissn = 0747-9395
+      >
+
+      comment[publisher] = Fordham University School of Law
+      param[base_url] = http://ir.lawnet.fordham.edu
+      param[journal_id] = ilj
+
+      au < exists ; exists ; 1977 ; Fordham International Law Journal Volume 1 ; 1 ; >
+      au < exists ; exists ; 1978 ; Fordham International Law Journal Volume 2 ; 2 ; >
+      au < exists ; exists ; 1979 ; Fordham International Law Journal Volume 3 ; 3 ; >
+      au < exists ; exists ; 1980 ; Fordham International Law Journal Volume 4 ; 4 ; >
+      au < exists ; exists ; 1981 ; Fordham International Law Journal Volume 5 ; 5 ; >
+      au < exists ; exists ; 1982 ; Fordham International Law Journal Volume 6 ; 6 ; >
+      au < exists ; exists ; 1983 ; Fordham International Law Journal Volume 7 ; 7 ; >
+      au < exists ; exists ; 1984 ; Fordham International Law Journal Volume 8 ; 8 ; >
+      au < exists ; exists ; 1985 ; Fordham International Law Journal Volume 9 ; 9 ; >
+      au < exists ; exists ; 1986 ; Fordham International Law Journal Volume 10 ; 10 ; >
+      au < exists ; exists ; 1987 ; Fordham International Law Journal Volume 11 ; 11 ; >
+      au < exists ; exists ; 1988 ; Fordham International Law Journal Volume 12 ; 12 ; >
+      au < exists ; exists ; 1989 ; Fordham International Law Journal Volume 13 ; 13 ; >
+      au < exists ; exists ; 1990 ; Fordham International Law Journal Volume 14 ; 14 ; >
+      au < exists ; exists ; 1991 ; Fordham International Law Journal Volume 15 ; 15 ; >
+      au < exists ; exists ; 1992 ; Fordham International Law Journal Volume 16 ; 16 ; >
+      au < exists ; exists ; 1993 ; Fordham International Law Journal Volume 17 ; 17 ; >
+      au < exists ; exists ; 1994 ; Fordham International Law Journal Volume 18 ; 18 ; >
+      au < exists ; exists ; 1995 ; Fordham International Law Journal Volume 19 ; 19 ; >
+      au < exists ; exists ; 1996 ; Fordham International Law Journal Volume 20 ; 20 ; >
+      au < exists ; exists ; 1997 ; Fordham International Law Journal Volume 21 ; 21 ; >
+      au < exists ; exists ; 1998 ; Fordham International Law Journal Volume 22 ; 22 ; >
+      au < exists ; exists ; 1999 ; Fordham International Law Journal Volume 23 ; 23 ; >
+      au < exists ; exists ; 2000 ; Fordham International Law Journal Volume 24 ; 24 ; >
+      au < exists ; exists ; 2001 ; Fordham International Law Journal Volume 25 ; 25 ; >
+      au < exists ; exists ; 2002 ; Fordham International Law Journal Volume 26 ; 26 ; >
+      au < exists ; exists ; 2003 ; Fordham International Law Journal Volume 27 ; 27 ; >
+      au < exists ; exists ; 2004 ; Fordham International Law Journal Volume 28 ; 28 ; >
+      au < exists ; exists ; 2005 ; Fordham International Law Journal Volume 29 ; 29 ; >
+      au < exists ; exists ; 2006 ; Fordham International Law Journal Volume 30 ; 30 ; >
+      au < exists ; exists ; 2007 ; Fordham International Law Journal Volume 31 ; 31 ; >
+      au < exists ; exists ; 2008 ; Fordham International Law Journal Volume 32 ; 32 ; >
+      au < exists ; exists ; 2009 ; Fordham International Law Journal Volume 33 ; 33 ; >
+      au < exists ; exists ; 2010 ; Fordham International Law Journal Volume 34 ; 34 ; >
+      au < exists ; exists ; 2011 ; Fordham International Law Journal Volume 35 ; 35 ; >
+      au < exists ; exists ; 2012 ; Fordham International Law Journal Volume 36 ; 36 ; >
+      au < exists ; exists ; 2013 ; Fordham International Law Journal Volume 37 ; 37 ; >
+      au < exists ; exists ; 2014 ; Fordham International Law Journal Volume 38 ; 38 ; >
+      au < exists ; exists ; 2015 ; Fordham International Law Journal Volume 39 ; 39 ; >
+      au < exists ; exists ; 2016 ; Fordham International Law Journal Volume 40 ; 40 ; >
+      au < exists ; exists ; 2017 ; Fordham International Law Journal Volume 41 ; 41 ; >
+      au < expected ; exists ; 2018 ; Fordham International Law Journal Volume 42 ; 42 ; >
+      au < expected ; exists ; 2019 ; Fordham International Law Journal Volume 43 ; 43 ; >
+
+  }
+
+  {
+
+      title <
+        name = Fordham Journal of Corporate & Finance Law ;
+        eissn = 1532-303X
+      >
+
+      comment[publisher] = Fordham University School of Law
+      param[base_url] = http://ir.lawnet.fordham.edu
+      param[journal_id] = jcfl
+
+      au < exists ; exists ; 1996 ; Fordham Journal of Corporate & Finance Law Volume 1 ; 1 ; >
+      au < exists ; exists ; 1997 ; Fordham Journal of Corporate & Finance Law Volume 2 ; 2 ; >
+      au < exists ; exists ; 1998 ; Fordham Journal of Corporate & Finance Law Volume 3 ; 3 ; >
+      au < exists ; exists ; 1999 ; Fordham Journal of Corporate & Finance Law Volume 4 ; 4 ; >
+      au < exists ; exists ; 2000 ; Fordham Journal of Corporate & Finance Law Volume 5 ; 5 ; >
+      au < exists ; exists ; 2001 ; Fordham Journal of Corporate & Finance Law Volume 6 ; 6 ; >
+      au < exists ; exists ; 2002 ; Fordham Journal of Corporate & Finance Law Volume 7 ; 7 ; >
+      au < exists ; exists ; 2003 ; Fordham Journal of Corporate & Finance Law Volume 8 ; 8 ; >
+      au < exists ; exists ; 2004 ; Fordham Journal of Corporate & Finance Law Volume 9 ; 9 ; >
+      au < exists ; exists ; 2005 ; Fordham Journal of Corporate & Finance Law Volume 10 ; 10 ; >
+      au < exists ; exists ; 2006 ; Fordham Journal of Corporate & Finance Law Volume 11 ; 11 ; >
+      au < exists ; exists ; 2007 ; Fordham Journal of Corporate & Finance Law Volume 12 ; 12 ; >
+      au < exists ; exists ; 2008 ; Fordham Journal of Corporate & Finance Law Volume 13 ; 13 ; >
+      au < exists ; exists ; 2009 ; Fordham Journal of Corporate & Finance Law Volume 14 ; 14 ; >
+      au < exists ; exists ; 2010 ; Fordham Journal of Corporate & Finance Law Volume 15 ; 15 ; >
+      au < exists ; exists ; 2011 ; Fordham Journal of Corporate & Finance Law Volume 16 ; 16 ; >
+      au < exists ; exists ; 2012 ; Fordham Journal of Corporate & Finance Law Volume 17 ; 17 ; >
+      au < exists ; exists ; 2013 ; Fordham Journal of Corporate & Finance Law Volume 18 ; 18 ; >
+      au < exists ; exists ; 2014 ; Fordham Journal of Corporate & Finance Law Volume 19 ; 19 ; >
+      au < exists ; exists ; 2015 ; Fordham Journal of Corporate & Finance Law Volume 20 ; 20 ; >
+      au < exists ; exists ; 2016 ; Fordham Journal of Corporate & Finance Law Volume 21 ; 21 ; >
+      au < exists ; exists ; 2017 ; Fordham Journal of Corporate & Finance Law Volume 22 ; 22 ; >
+      au < expected ; exists ; 2018 ; Fordham Journal of Corporate & Finance Law Volume 23 ; 23 ; >
+      au < expected ; exists ; 2019 ; Fordham Journal of Corporate & Finance Law Volume 24 ; 24 ; >
+
+  }
+
+  {
+
+      title <
+        name = Fordham Law Review ;
+        eissn = 0015-704X
+      >
+
+      comment[publisher] = Fordham University School of Law
+      param[base_url] = http://ir.lawnet.fordham.edu
+      param[journal_id] = flr
+
+      au < exists ; exists ; 1914 ; Fordham Law Review Volume 1 ; 1 ; >
+      au < exists ; exists ; 1915 ; Fordham Law Review Volume 2 ; 2 ; >
+      au < exists ; exists ; 1916 ; Fordham Law Review Volume 3 ; 3 ; >
+      au < exists ; exists ; 1917 ; Fordham Law Review Volume 4 ; 4 ; >
+      au < exists ; exists ; 1918 ; Fordham Law Review Volume 5 ; 5 ; >
+      au < exists ; exists ; 1919 ; Fordham Law Review Volume 6 ; 6 ; >
+      au < exists ; exists ; 1920 ; Fordham Law Review Volume 7 ; 7 ; >
+      au < exists ; exists ; 1921 ; Fordham Law Review Volume 8 ; 8 ; >
+      au < exists ; exists ; 1922 ; Fordham Law Review Volume 9 ; 9 ; >
+      au < exists ; exists ; 1923 ; Fordham Law Review Volume 10 ; 10 ; >
+      au < exists ; exists ; 1924 ; Fordham Law Review Volume 11 ; 11 ; >
+      au < exists ; exists ; 1925 ; Fordham Law Review Volume 12 ; 12 ; >
+      au < exists ; exists ; 1926 ; Fordham Law Review Volume 13 ; 13 ; >
+      au < exists ; exists ; 1927 ; Fordham Law Review Volume 14 ; 14 ; >
+      au < exists ; exists ; 1928 ; Fordham Law Review Volume 15 ; 15 ; >
+      au < exists ; exists ; 1929 ; Fordham Law Review Volume 16 ; 16 ; >
+      au < exists ; exists ; 1930 ; Fordham Law Review Volume 17 ; 17 ; >
+      au < exists ; exists ; 1931 ; Fordham Law Review Volume 18 ; 18 ; >
+      au < exists ; exists ; 1932 ; Fordham Law Review Volume 19 ; 19 ; >
+      au < exists ; exists ; 1933 ; Fordham Law Review Volume 20 ; 20 ; >
+      au < exists ; exists ; 1934 ; Fordham Law Review Volume 21 ; 21 ; >
+      au < exists ; exists ; 1935 ; Fordham Law Review Volume 22 ; 22 ; >
+      au < exists ; exists ; 1936 ; Fordham Law Review Volume 23 ; 23 ; >
+      au < exists ; exists ; 1937 ; Fordham Law Review Volume 24 ; 24 ; >
+      au < exists ; exists ; 1938 ; Fordham Law Review Volume 25 ; 25 ; >
+      au < exists ; exists ; 1939 ; Fordham Law Review Volume 26 ; 26 ; >
+      au < exists ; exists ; 1940 ; Fordham Law Review Volume 27 ; 27 ; >
+      au < exists ; exists ; 1941 ; Fordham Law Review Volume 28 ; 28 ; >
+      au < exists ; exists ; 1942 ; Fordham Law Review Volume 29 ; 29 ; >
+      au < exists ; exists ; 1943 ; Fordham Law Review Volume 30 ; 30 ; >
+      au < exists ; exists ; 1944 ; Fordham Law Review Volume 31 ; 31 ; >
+      au < exists ; exists ; 1945 ; Fordham Law Review Volume 32 ; 32 ; >
+      au < exists ; exists ; 1946 ; Fordham Law Review Volume 33 ; 33 ; >
+      au < exists ; exists ; 1947 ; Fordham Law Review Volume 34 ; 34 ; >
+      au < exists ; exists ; 1948 ; Fordham Law Review Volume 35 ; 35 ; >
+      au < exists ; exists ; 1949 ; Fordham Law Review Volume 36 ; 36 ; >
+      au < exists ; exists ; 1950 ; Fordham Law Review Volume 37 ; 37 ; >
+      au < exists ; exists ; 1951 ; Fordham Law Review Volume 38 ; 38 ; >
+      au < exists ; exists ; 1952 ; Fordham Law Review Volume 39 ; 39 ; >
+      au < exists ; exists ; 1953 ; Fordham Law Review Volume 40 ; 40 ; >
+      au < exists ; exists ; 1954 ; Fordham Law Review Volume 41 ; 41 ; >
+      au < exists ; exists ; 1955 ; Fordham Law Review Volume 42 ; 42 ; >
+      au < exists ; exists ; 1956 ; Fordham Law Review Volume 43 ; 43 ; >
+      au < exists ; exists ; 1957 ; Fordham Law Review Volume 44 ; 44 ; >
+      au < exists ; exists ; 1958 ; Fordham Law Review Volume 45 ; 45 ; >
+      au < exists ; exists ; 1959 ; Fordham Law Review Volume 46 ; 46 ; >
+      au < exists ; exists ; 1960 ; Fordham Law Review Volume 47 ; 47 ; >
+      au < exists ; exists ; 1961 ; Fordham Law Review Volume 48 ; 48 ; >
+      au < exists ; exists ; 1962 ; Fordham Law Review Volume 49 ; 49 ; >
+      au < exists ; exists ; 1963 ; Fordham Law Review Volume 50 ; 50 ; >
+      au < exists ; exists ; 1964 ; Fordham Law Review Volume 51 ; 51 ; >
+      au < exists ; exists ; 1965 ; Fordham Law Review Volume 52 ; 52 ; >
+      au < exists ; exists ; 1966 ; Fordham Law Review Volume 53 ; 53 ; >
+      au < exists ; exists ; 1967 ; Fordham Law Review Volume 54 ; 54 ; >
+      au < exists ; exists ; 1968 ; Fordham Law Review Volume 55 ; 55 ; >
+      au < exists ; exists ; 1969 ; Fordham Law Review Volume 56 ; 56 ; >
+      au < exists ; exists ; 1970 ; Fordham Law Review Volume 57 ; 57 ; >
+      au < exists ; exists ; 1971 ; Fordham Law Review Volume 58 ; 58 ; >
+      au < exists ; exists ; 1972 ; Fordham Law Review Volume 59 ; 59 ; >
+      au < exists ; exists ; 1973 ; Fordham Law Review Volume 60 ; 60 ; >
+      au < exists ; exists ; 1974 ; Fordham Law Review Volume 61 ; 61 ; >
+      au < exists ; exists ; 1975 ; Fordham Law Review Volume 62 ; 62 ; >
+      au < exists ; exists ; 1976 ; Fordham Law Review Volume 63 ; 63 ; >
+      au < exists ; exists ; 1977 ; Fordham Law Review Volume 64 ; 64 ; >
+      au < exists ; exists ; 1978 ; Fordham Law Review Volume 65 ; 65 ; >
+      au < exists ; exists ; 1979 ; Fordham Law Review Volume 66 ; 66 ; >
+      au < exists ; exists ; 1980 ; Fordham Law Review Volume 67 ; 67 ; >
+      au < exists ; exists ; 1981 ; Fordham Law Review Volume 68 ; 68 ; >
+      au < exists ; exists ; 1982 ; Fordham Law Review Volume 69 ; 69 ; >
+      au < exists ; exists ; 1983 ; Fordham Law Review Volume 70 ; 70 ; >
+      au < exists ; exists ; 1984 ; Fordham Law Review Volume 71 ; 71 ; >
+      au < exists ; exists ; 1985 ; Fordham Law Review Volume 72 ; 72 ; >
+      au < exists ; exists ; 1986 ; Fordham Law Review Volume 73 ; 73 ; >
+      au < exists ; exists ; 1987 ; Fordham Law Review Volume 74 ; 74 ; >
+      au < exists ; exists ; 1988 ; Fordham Law Review Volume 75 ; 75 ; >
+      au < exists ; exists ; 1989 ; Fordham Law Review Volume 76 ; 76 ; >
+      au < exists ; exists ; 1990 ; Fordham Law Review Volume 77 ; 77 ; >
+      au < exists ; exists ; 1991 ; Fordham Law Review Volume 78 ; 78 ; >
+      au < exists ; exists ; 1992 ; Fordham Law Review Volume 79 ; 79 ; >
+      au < exists ; exists ; 1993 ; Fordham Law Review Volume 80 ; 80 ; >
+      au < exists ; exists ; 1994 ; Fordham Law Review Volume 81 ; 81 ; >
+      au < exists ; exists ; 1995 ; Fordham Law Review Volume 82 ; 82 ; >
+      au < exists ; exists ; 1996 ; Fordham Law Review Volume 83 ; 83 ; >
+      au < exists ; exists ; 1997 ; Fordham Law Review Volume 84 ; 84 ; >
+      au < exists ; exists ; 1998 ; Fordham Law Review Volume 85 ; 85 ; >
+      au < exists ; exists ; 1999 ; Fordham Law Review Volume 86 ; 86 ; >
+      au < exists ; exists ; 2000 ; Fordham Law Review Volume 87 ; 87 ; >
+      au < exists ; exists ; 2001 ; Fordham Law Review Volume 88 ; 88 ; >
+      au < exists ; exists ; 2002 ; Fordham Law Review Volume 89 ; 89 ; >
+      au < exists ; exists ; 2003 ; Fordham Law Review Volume 90 ; 90 ; >
+      au < exists ; exists ; 2004 ; Fordham Law Review Volume 91 ; 91 ; >
+      au < exists ; exists ; 2005 ; Fordham Law Review Volume 92 ; 92 ; >
+      au < exists ; exists ; 2006 ; Fordham Law Review Volume 93 ; 93 ; >
+      au < exists ; exists ; 2007 ; Fordham Law Review Volume 94 ; 94 ; >
+      au < exists ; exists ; 2008 ; Fordham Law Review Volume 95 ; 95 ; >
+      au < exists ; exists ; 2009 ; Fordham Law Review Volume 96 ; 96 ; >
+      au < exists ; exists ; 2010 ; Fordham Law Review Volume 97 ; 97 ; >
+      au < exists ; exists ; 2011 ; Fordham Law Review Volume 98 ; 98 ; >
+      au < exists ; exists ; 2012 ; Fordham Law Review Volume 99 ; 99 ; >
+      au < exists ; exists ; 2013 ; Fordham Law Review Volume 100 ; 100 ; >
+      au < exists ; exists ; 2014 ; Fordham Law Review Volume 101 ; 101 ; >
+      au < exists ; exists ; 2015 ; Fordham Law Review Volume 102 ; 102 ; >
+      au < exists ; exists ; 2016 ; Fordham Law Review Volume 103 ; 103 ; >
+      au < exists ; exists ; 2017 ; Fordham Law Review Volume 104 ; 104 ; >
+      au < expected ; exists ; 2018 ; Fordham Law Review Volume 105 ; 105 ; >
+      au < expected ; exists ; 2019 ; Fordham Law Review Volume 106 ; 106 ; >
+
+  }
+
+  {
+
+      title <
+        name = Fordham Urban Law Journal ;
+        eissn = 0199-4646
+      >
+
+      comment[publisher] = Fordham University School of Law
+      param[base_url] = http://ir.lawnet.fordham.edu
+      param[journal_id] = ulj
+
+      au < exists ; exists ; 1972 ; Fordham Urban Law Journal Volume 1 ; 1 ; >
+      au < exists ; exists ; 1973 ; Fordham Urban Law Journal Volume 2 ; 2 ; >
+      au < exists ; exists ; 1974 ; Fordham Urban Law Journal Volume 3 ; 3 ; >
+      au < exists ; exists ; 1975 ; Fordham Urban Law Journal Volume 4 ; 4 ; >
+      au < exists ; exists ; 1976 ; Fordham Urban Law Journal Volume 5 ; 5 ; >
+      au < exists ; exists ; 1977 ; Fordham Urban Law Journal Volume 6 ; 6 ; >
+      au < exists ; exists ; 1978 ; Fordham Urban Law Journal Volume 7 ; 7 ; >
+      au < exists ; exists ; 1979 ; Fordham Urban Law Journal Volume 8 ; 8 ; >
+      au < exists ; exists ; 1980 ; Fordham Urban Law Journal Volume 9 ; 9 ; >
+      au < exists ; exists ; 1981 ; Fordham Urban Law Journal Volume 10 ; 10 ; >
+      au < exists ; exists ; 1982 ; Fordham Urban Law Journal Volume 11 ; 11 ; >
+      au < exists ; exists ; 1983 ; Fordham Urban Law Journal Volume 12 ; 12 ; >
+      au < exists ; exists ; 1984 ; Fordham Urban Law Journal Volume 13 ; 13 ; >
+      au < exists ; exists ; 1985 ; Fordham Urban Law Journal Volume 14 ; 14 ; >
+      au < exists ; exists ; 1986 ; Fordham Urban Law Journal Volume 15 ; 15 ; >
+      au < exists ; exists ; 1987 ; Fordham Urban Law Journal Volume 16 ; 16 ; >
+      au < exists ; exists ; 1988 ; Fordham Urban Law Journal Volume 17 ; 17 ; >
+      au < exists ; exists ; 1989 ; Fordham Urban Law Journal Volume 18 ; 18 ; >
+      au < exists ; exists ; 1990 ; Fordham Urban Law Journal Volume 19 ; 19 ; >
+      au < exists ; exists ; 1991 ; Fordham Urban Law Journal Volume 20 ; 20 ; >
+      au < exists ; exists ; 1992 ; Fordham Urban Law Journal Volume 21 ; 21 ; >
+      au < exists ; exists ; 1993 ; Fordham Urban Law Journal Volume 22 ; 22 ; >
+      au < exists ; exists ; 1994 ; Fordham Urban Law Journal Volume 23 ; 23 ; >
+      au < exists ; exists ; 1995 ; Fordham Urban Law Journal Volume 24 ; 24 ; >
+      au < exists ; exists ; 1996 ; Fordham Urban Law Journal Volume 25 ; 25 ; >
+      au < exists ; exists ; 1997 ; Fordham Urban Law Journal Volume 26 ; 26 ; >
+      au < exists ; exists ; 1998 ; Fordham Urban Law Journal Volume 27 ; 27 ; >
+      au < exists ; exists ; 1999 ; Fordham Urban Law Journal Volume 28 ; 28 ; >
+      au < exists ; exists ; 2000 ; Fordham Urban Law Journal Volume 29 ; 29 ; >
+      au < exists ; exists ; 2001 ; Fordham Urban Law Journal Volume 30 ; 30 ; >
+      au < exists ; exists ; 2002 ; Fordham Urban Law Journal Volume 31 ; 31 ; >
+      au < exists ; exists ; 2003 ; Fordham Urban Law Journal Volume 32 ; 32 ; >
+      au < exists ; exists ; 2004 ; Fordham Urban Law Journal Volume 33 ; 33 ; >
+      au < exists ; exists ; 2005 ; Fordham Urban Law Journal Volume 34 ; 34 ; >
+      au < exists ; exists ; 2006 ; Fordham Urban Law Journal Volume 35 ; 35 ; >
+      au < exists ; exists ; 2007 ; Fordham Urban Law Journal Volume 36 ; 36 ; >
+      au < exists ; exists ; 2008 ; Fordham Urban Law Journal Volume 37 ; 37 ; >
+      au < exists ; exists ; 2009 ; Fordham Urban Law Journal Volume 38 ; 38 ; >
+      au < exists ; exists ; 2010 ; Fordham Urban Law Journal Volume 39 ; 39 ; >
+      au < exists ; exists ; 2011 ; Fordham Urban Law Journal Volume 40 ; 40 ; >
+      au < exists ; exists ; 2012 ; Fordham Urban Law Journal Volume 41 ; 41 ; >
+      au < exists ; exists ; 2013 ; Fordham Urban Law Journal Volume 42 ; 42 ; >
+      au < exists ; exists ; 2014 ; Fordham Urban Law Journal Volume 43 ; 43 ; >
+      au < exists ; exists ; 2015 ; Fordham Urban Law Journal Volume 44 ; 44 ; >
+      au < exists ; exists ; 2016 ; Fordham Urban Law Journal Volume 45 ; 45 ; >
+      au < exists ; exists ; 2017 ; Fordham Urban Law Journal Volume 46 ; 46 ; >
+      au < expected ; exists ; 2018 ; Fordham Urban Law Journal Volume 47 ; 47 ; >
+      au < expected ; exists ; 2019 ; Fordham Urban Law Journal Volume 48 ; 48 ; >
+
+  }
+
+}

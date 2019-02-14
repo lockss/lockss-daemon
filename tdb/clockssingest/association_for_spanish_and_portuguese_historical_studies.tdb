@@ -1,0 +1,35 @@
+{
+  publisher <
+    name = Association for Spanish and Portuguese Historical Studies ;
+    info[contract] = 2012 ;
+    info[tester] = 5 ;
+    info[poller] = 6
+  >
+
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+
+  {
+
+      title <
+        name = Bulletin for Spanish and Portuguese Historical Studies ;
+        eissn = 0739-182X
+      >
+
+      comment[publisher] = Association for Spanish and Portuguese Historical Studies
+      param[base_url] = http://digitalcommons.asphs.net
+      param[journal_id] = bsphs
+
+      au < exists ; exists ; 2011 ; Bulletin for Spanish and Portuguese Historical Studies Volume 35 ; 35 ; >
+      au < exists ; exists ; 2012 ; Bulletin for Spanish and Portuguese Historical Studies Volume 36 ; 36 ; >
+      au < exists ; exists ; 2013 ; Bulletin for Spanish and Portuguese Historical Studies Volume 37 ; 37 ; >
+      au < exists ; exists ; 2014 ; Bulletin for Spanish and Portuguese Historical Studies Volume 38 ; 38 ; >
+      au < exists ; exists ; 2015 ; Bulletin for Spanish and Portuguese Historical Studies Volume 39 ; 39 ; >
+      au < exists ; exists ; 2016 ; Bulletin for Spanish and Portuguese Historical Studies Volume 40 ; 40 ; >
+      au < exists ; exists ; 2017 ; Bulletin for Spanish and Portuguese Historical Studies Volume 41 ; 41 ; >
+      au < expected ; exists ; 2018 ; Bulletin for Spanish and Portuguese Historical Studies Volume 42 ; 42 ; >
+      au < expected ; exists ; 2019 ; Bulletin for Spanish and Portuguese Historical Studies Volume 43 ; 43 ; >
+
+  }
+
+}

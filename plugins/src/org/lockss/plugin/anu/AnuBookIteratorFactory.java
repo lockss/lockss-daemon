@@ -57,6 +57,8 @@ implements ArticleIteratorFactory,
       "^((https?://[^/]+/)publications/(.+))$",
       Pattern.CASE_INSENSITIVE);
   private static final String LANDING_REPLACEMENT = "$1";
+  /* this link is no longer provided on the article landing page - it doesn't exist any more*/
+  /* leave this in for previously preserved content */  
   private static final String DOWNLOAD_REPLACEMENT = "$1/download";
   
   // https://press.anu.edu.au/publications/service-company-vol-2
@@ -64,6 +66,8 @@ implements ArticleIteratorFactory,
   // https://press.anu.edu.au/node/249/download
   // http://press-files.anu.edu.au/downloads/press/p25701/pdf/book.pdf
   // Later if needed, we can add scraping to get the full text PDF link
+  // NOTE - the raw metadata has: citation_pdf_url which we could use to get a PDF url 
+  
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) 

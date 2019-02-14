@@ -1,0 +1,30 @@
+{
+  publisher <
+    name = McFarland Center for Religion Ethics and Culture ;
+    info[contract] = 2012 ;
+    info[tester] = 5 ;
+    info[poller] = 6
+  >
+
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+
+  {
+
+      title <
+        name = Journal of Global Catholicism ;
+        eissn = 2475-6423
+      >
+
+      comment[publisher] = McFarland Center for Religion Ethics and Culture
+      param[base_url] = https://crossworks.holycross.edu
+      param[journal_id] = jgc
+
+      au < exists ; exists ; 2016 ; Journal of Global Catholicism Volume 1 ; 1 ; >
+      au < exists ; exists ; 2017 ; Journal of Global Catholicism Volume 2 ; 2 ; >
+      au < expected ; exists ; 2018 ; Journal of Global Catholicism Volume 3 ; 3 ; >
+      au < expected ; exists ; 2019 ; Journal of Global Catholicism Volume 4 ; 4 ; >
+
+  }
+
+}
