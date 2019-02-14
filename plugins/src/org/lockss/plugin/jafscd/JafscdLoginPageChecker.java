@@ -78,27 +78,32 @@ public class JafscdLoginPageChecker implements LoginPageChecker {
                              Reader reader)
       throws IOException,
              PluginException {
-	    if ("text/html".equalsIgnoreCase(HeaderUtil.getMimeTypeFromContentType(props.getProperty("Content-Type")))) {
-	    	BufferedReader bReader = new BufferedReader(reader);
-	    	int volPage;
-	    	//Go through line by line if we are at one of the pages we know pdf links for and 
-	    	//they aren't there then we don't have access and we return true
-			for (String line = bReader.readLine(); line != null; line = bReader.readLine()) {										
-				line = line.trim();										
-				if(line.contains("<base")){
-					//Is this one of our selected pages
-					volPage = checkForUrl(line);
-					//If we didn't find a url we were looking for then we're done
-					if(volPage == -1) {
-						return false;
-					}
-					//We found a url we are looking for now check for pdf
-					return checkReaderForString(bReader, PDFS.get(volPage));
-				}
-			}
-	    }
-	    return false;
-	  }
+    if ("text/html".equalsIgnoreCase(HeaderUtil.getMimeTypeFromContentType(props.getProperty("Content-Type")))) {
+      BufferedReader bReader = new BufferedReader(reader);
+      try {
+        int volPage;
+        //Go through line by line if we are at one of the pages we know pdf links for and 
+        //they aren't there then we don't have access and we return true
+        for (String line = bReader.readLine(); line != null; line = bReader.readLine()) {
+          line = line.trim();
+          if(line.contains("<base")){
+            //Is this one of our selected pages
+            volPage = checkForUrl(line);
+            //If we didn't find a url we were looking for then we're done
+            if(volPage == -1) {
+              return false;
+            }
+            //We found a url we are looking for now check for pdf
+            return checkReaderForString(bReader, PDFS.get(volPage));
+          }
+        }
+      }
+      finally {
+        IOUtil.safeClose(bReader);
+      }
+    }
+    return false;
+  }
 	  
 	  public int checkForUrl(String line) {
 		  for(int i = 0 ; i<URLS.size() ; i++) {
