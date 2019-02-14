@@ -76,6 +76,7 @@ public class BePressHttpToHttpsUrlConsumerFactory extends HttpToHttpsUrlConsumer
     // 2. for TOC they're currently going from http to https and then back to http so allow for any number of 
     //    redirection hops so long as the end = the start after normalization.
     //
+    @Override
     public boolean shouldStoreAtOrigUrl() {
     	log.debug3("FUD: " + fud.toString());
     	log.debug3("FUD fetch: " + fud.fetchUrl);
@@ -92,6 +93,7 @@ public class BePressHttpToHttpsUrlConsumerFactory extends HttpToHttpsUrlConsumer
           && (UrlUtil.stripProtocol(fud.origUrl).equals(UrlUtil.stripProtocol(fud.fetchUrl)) ||
         		  UrlUtil.stripProtocol(fud.origUrl).equals(UrlUtil.stripProtocol(normFetch)) ||
         		  UrlUtil.stripProtocol(fud.origUrl).equals(UrlUtil.stripProtocol(noSlashFetch)));
+      // return super.shouldStoreAtOrigUrl();
     }
  }
  
