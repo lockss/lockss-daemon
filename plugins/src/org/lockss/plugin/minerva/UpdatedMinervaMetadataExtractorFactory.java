@@ -102,7 +102,7 @@ public class UpdatedMinervaMetadataExtractorFactory
 		
 		pdf.close();
 		doc.close();
-    	
+    	// XXX not closed  IOUtil.safeClose(bReader);
     	return am;
     }
     
