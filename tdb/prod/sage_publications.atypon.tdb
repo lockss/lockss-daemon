@@ -35268,6 +35268,32 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
     {
 
       title <
+        name = Pro Ecclesia ;
+        issn = 1063-8512 ;
+        eissn = 2631-8334
+      >
+
+        #journal_id = pre
+
+        au < exists ; 2006 ; Pro Ecclesia Volume 15 ; 15 ; prea ; https://journals.sagepub.com/ >
+        au < exists ; 2007 ; Pro Ecclesia Volume 16 ; 16 ; prea ; https://journals.sagepub.com/ >
+        au < exists ; 2008 ; Pro Ecclesia Volume 17 ; 17 ; prea ; https://journals.sagepub.com/ >
+        au < exists ; 2009 ; Pro Ecclesia Volume 18 ; 18 ; prea ; https://journals.sagepub.com/ >
+        au < exists ; 2010 ; Pro Ecclesia Volume 19 ; 19 ; prea ; https://journals.sagepub.com/ >
+        au < exists ; 2011 ; Pro Ecclesia Volume 20 ; 20 ; prea ; https://journals.sagepub.com/ >
+        au < exists ; 2012 ; Pro Ecclesia Volume 21 ; 21 ; prea ; https://journals.sagepub.com/ >
+        au < exists ; 2013 ; Pro Ecclesia Volume 22 ; 22 ; prea ; https://journals.sagepub.com/ >
+        au < exists ; 2014 ; Pro Ecclesia Volume 23 ; 23 ; prea ; https://journals.sagepub.com/ >
+        au < exists ; 2015 ; Pro Ecclesia Volume 24 ; 24 ; prea ; https://journals.sagepub.com/ >
+        au < exists ; 2016 ; Pro Ecclesia Volume 25 ; 25 ; prea ; https://journals.sagepub.com/ >
+        au < exists ; 2017 ; Pro Ecclesia Volume 26 ; 26 ; prea ; https://journals.sagepub.com/ >
+        au < exists ; 2018 ; Pro Ecclesia Volume 27 ; 27 ; prea ; https://journals.sagepub.com/ >
+
+    }
+
+    {
+
+      title <
         name = Probation Journal ;
         issn = 0264-5505 ;
         eissn = 1741-3079 ;
@@ -49956,6 +49982,45 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
     au < released ; 2016 ; Industry and Higher Education Volume 30 ; 30 ; ihea ; http://journals.sagepub.com/ >
     au < released ; 2017 ; Industry and Higher Education Volume 31 ; 31 ; ihea ; http://journals.sagepub.com/ >
     au < manifest ; 2018 ; Industry and Higher Education Volume 32 ; 32 ; ihea ; https://journals.sagepub.com/ >
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Educational Reform ;
+      issn = 1056-7879
+    >
+
+    #param[journal_id] = ref
+
+    au < exists ; 1992 ; International Journal of Educational Reform Volume 1 ; 1 ; refa ; https://journals.sagepub.com/ >
+    au < exists ; 1993 ; International Journal of Educational Reform Volume 2 ; 2 ; refa ; https://journals.sagepub.com/ >
+    au < exists ; 1994 ; International Journal of Educational Reform Volume 3 ; 3 ; refa ; https://journals.sagepub.com/ >
+    au < exists ; 1995 ; International Journal of Educational Reform Volume 4 ; 4 ; refa ; https://journals.sagepub.com/ >
+    au < exists ; 1996 ; International Journal of Educational Reform Volume 5 ; 5 ; refa ; https://journals.sagepub.com/ >
+    au < exists ; 1997 ; International Journal of Educational Reform Volume 6 ; 6 ; refa ; https://journals.sagepub.com/ >
+    au < exists ; 1998 ; International Journal of Educational Reform Volume 7 ; 7 ; refa ; https://journals.sagepub.com/ >
+    au < exists ; 1999 ; International Journal of Educational Reform Volume 8 ; 8 ; refa ; https://journals.sagepub.com/ >
+    au < exists ; 2000 ; International Journal of Educational Reform Volume 9 ; 9 ; refa ; https://journals.sagepub.com/ >
+    au < exists ; 2001 ; International Journal of Educational Reform Volume 10 ; 10 ; refa ; https://journals.sagepub.com/ >
+    au < exists ; 2002 ; International Journal of Educational Reform Volume 11 ; 11 ; refa ; https://journals.sagepub.com/ >
+    au < exists ; 2003 ; International Journal of Educational Reform Volume 12 ; 12 ; refa ; https://journals.sagepub.com/ >
+    au < exists ; 2004 ; International Journal of Educational Reform Volume 13 ; 13 ; refa ; https://journals.sagepub.com/ >
+    au < exists ; 2005 ; International Journal of Educational Reform Volume 14 ; 14 ; refa ; https://journals.sagepub.com/ >
+    au < exists ; 2006 ; International Journal of Educational Reform Volume 15 ; 15 ; refa ; https://journals.sagepub.com/ >
+    au < exists ; 2007 ; International Journal of Educational Reform Volume 16 ; 16 ; refa ; https://journals.sagepub.com/ >
+    au < exists ; 2008 ; International Journal of Educational Reform Volume 17 ; 17 ; refa ; https://journals.sagepub.com/ >
+    au < exists ; 2009 ; International Journal of Educational Reform Volume 18 ; 18 ; refa ; https://journals.sagepub.com/ >
+    au < exists ; 2010 ; International Journal of Educational Reform Volume 19 ; 19 ; refa ; https://journals.sagepub.com/ >
+    au < exists ; 2011 ; International Journal of Educational Reform Volume 20 ; 20 ; refa ; https://journals.sagepub.com/ >
+    au < exists ; 2012 ; International Journal of Educational Reform Volume 21 ; 21 ; refa ; https://journals.sagepub.com/ >
+    au < exists ; 2013 ; International Journal of Educational Reform Volume 22 ; 22 ; refa ; https://journals.sagepub.com/ >
+    au < exists ; 2014 ; International Journal of Educational Reform Volume 23 ; 23 ; refa ; https://journals.sagepub.com/ >
+    au < exists ; 2015 ; International Journal of Educational Reform Volume 24 ; 24 ; refa ; https://journals.sagepub.com/ >
+    au < exists ; 2016 ; International Journal of Educational Reform Volume 25 ; 25 ; refa ; https://journals.sagepub.com/ >
+    au < exists ; 2017 ; International Journal of Educational Reform Volume 26 ; 26 ; refa ; https://journals.sagepub.com/ >
+    au < exists ; 2018 ; International Journal of Educational Reform Volume 27 ; 27 ; refa ; https://journals.sagepub.com/ >
 
   }
 
