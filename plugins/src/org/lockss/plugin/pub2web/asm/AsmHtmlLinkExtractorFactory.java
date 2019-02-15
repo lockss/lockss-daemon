@@ -44,6 +44,7 @@ import org.lockss.extractor.*;
 import org.lockss.extractor.JsoupHtmlLinkExtractor.SimpleTagLinkExtractor;
 import org.lockss.extractor.LinkExtractor.Callback;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.AuUtil;
 import org.lockss.util.Logger;
 
 /* an implementation of JsoupHtmlLinkExtractor  */
@@ -136,7 +137,7 @@ implements LinkExtractorFactory {
         log.debug3("...it's an article, book or chapter landing page");
         // build up a DOI value with html encoding of the slash"
         String base_url = landingMat.group(1);
-
+        base_url = AuUtil.normalizeHttpHttpsFromBaseUrl(au, base_url);
         String idVal = node.attr(ID_ATTR); // what the "id" attri is set to
         String ftVal = node.attr(FULL_TEXT_ATTR); // what the data-fullTextUrl is set to
         if ( idVal!= null && FULLTEXT_ID_VAL.equals(idVal) && ftVal != null & !(StringUtils.isEmpty(ftVal))) {

@@ -173,7 +173,7 @@
   </entry>
   <entry>
     <string>plugin_url_consumer_factory</string>
-    <string>org.lockss.plugin.pub2web.Pub2WebHttpsUrlConsumerFactory</string>
+    <string>org.lockss.plugin.pub2web.Pub2WebUrlConsumerFactory</string>
   </entry>
   <!-- end changes for https conversion -->
   <!--  recrawl depth is 3 because the start_url lists the issue TOCs but
@@ -238,10 +238,6 @@
     <string>application/pdf_filter_factory</string>
     <string>org.lockss.plugin.pub2web.Pub2WebPdfFilterFactory</string>
   </entry>
-  <entry>
-    <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.pub2web.Pub2WebUrlNormalizer</string>
-  </entry>
 <!--  child plugins should define their own crawl filter/html filter until we see patterns -->
 <!--  child plugins will also probably need their own link extractor  -->
   <entry>
@@ -260,5 +256,21 @@
         <string>org.lockss.plugin.pub2web.Pub2WebHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <string>500=org.lockss.plugin.pub2web.Pub2WebHttpResponseHandler</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_url_mime_validation_map</string>
+    <list>
+      <string>mimetype=(application/)?pdf, application/pdf</string>
+      <string>mimetype=text/html, text/html</string>
+      <string>\.gif$, image/gif</string>
+      <string>\.jpe?g$, image/jpeg</string>
+      <string>\.png, image/png</string>
+    </list>
   </entry>
 </map>

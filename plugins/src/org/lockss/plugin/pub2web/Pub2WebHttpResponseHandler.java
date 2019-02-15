@@ -39,6 +39,7 @@ import org.lockss.plugin.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 
+
 /*
  * a 500 error gets served when the citation download file isn't available. 
  * don't let this be fatal. Just continue. 
@@ -49,6 +50,8 @@ public class Pub2WebHttpResponseHandler implements CacheResultHandler {
   // child can override through getter to extend or change the pattern
   protected static final Pattern DEFAULT_NON_FATAL_500_PAT = 
       Pattern.compile("/cite/(bibtex|endnote|plaintext|refworks)");
+  //The following pattern used to resides inside MicrobiologySociety
+  protected static final Pattern NON_FATAL_PAT = Pattern.compile("/supp-?data");
   
   private static final Logger logger = Logger.getLogger(Pub2WebHttpResponseHandler.class);
 
@@ -65,9 +68,13 @@ public class Pub2WebHttpResponseHandler implements CacheResultHandler {
     logger.debug2(url);
     switch (responseCode) {
       case 500:
-        logger.debug2("500 - pattern is " + getNonFatal500Pattern().toString());
-        Matcher smat = getNonFatal500Pattern().matcher(url);
-        if (smat.find()) {
+        logger.debug2("500 - default pattern is " + getDefaultNonFatal500Pattern().toString());
+        logger.debug2("500 -  pattern is " + getNonFatal500Pattern().toString());
+
+        Matcher smat = getDefaultNonFatal500Pattern().matcher(url);
+        Matcher mat = getNonFatal500Pattern().matcher(url);
+
+        if (smat.find() || mat.find()) {
           return new CacheException.NoRetryDeadLinkException("500 Internal Server Error (non-fatal)");
         } else {
           return new CacheException.RetrySameUrlException("500 Internal Server Error");
@@ -86,8 +93,13 @@ public class Pub2WebHttpResponseHandler implements CacheResultHandler {
   }
 
   // Use a getter so that this can be overridden by a child plugin
-  protected Pattern getNonFatal500Pattern() {    
+  protected Pattern getDefaultNonFatal500Pattern() {
     return DEFAULT_NON_FATAL_500_PAT;   
+  }
+
+  // Use a getter so that this can be overridden by a child plugin
+  protected Pattern getNonFatal500Pattern() {
+    return NON_FATAL_PAT;
   }
   
 }

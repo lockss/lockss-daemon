@@ -36,12 +36,7 @@
     </list>
   </entry>
   <!-- Http to Https transition handled at pub2web base level-->
-  <entry>
-    <string>plugin_cache_result_list</string>
-    <list>
-      <string>500=org.lockss.plugin.pub2web.Pub2WebHttpResponseHandler</string>
-    </list>
-  </entry>
+  <!--plugin_cache_result_list logic move to parent level-->
   <entry>
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.pub2web.iet.IetHtmlCrawlFilterFactory</string>

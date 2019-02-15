@@ -39,6 +39,8 @@ import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.SimpleUrlConsumer;
 import org.lockss.util.Logger;
+import org.lockss.util.UrlUtil;
+
 /**
  * @since 1.67.5 
  */
@@ -139,10 +141,16 @@ public class Pub2WebUrlConsumerFactory implements UrlConsumerFactory {
 
     @Override
     public void consume() throws IOException {
-      if (shouldStoreRedirectsAtOrigUrl()) {
-        // SimpleUrlConsumer stores at fud.origUrl, and processes the redirect
-        storeAtOrigUrl();
+
+      boolean should = shouldStoreAtOrigUrlVanilla();
+      if (!should) {
+        // a more complicated redirect, which *may* include the https redirection as well
+        if (shouldStoreRedirectsAtOrigUrl()) {
+          // SimpleUrlConsumer stores at fud.origUrl, and processes the redirect
+          storeAtOrigUrl();
+        }
       }
+      
       super.consume();
     }
 
@@ -168,6 +176,17 @@ public class Pub2WebUrlConsumerFactory implements UrlConsumerFactory {
         log.debug3("NOT swallowing this redirect");
       }
       return should;
+    }
+
+    public boolean shouldStoreAtOrigUrlVanilla() {
+
+      return AuUtil.isBaseUrlHttp(au)
+              && fud.redirectUrls != null
+              && fud.redirectUrls.size() >= 1
+              && UrlUtil.isHttpUrl(fud.origUrl)
+              && UrlUtil.isHttpsUrl(fud.fetchUrl)
+              && UrlUtil.stripProtocol(fud.origUrl).equals(UrlUtil.stripProtocol(fud.fetchUrl));
+
     }
 
   }
