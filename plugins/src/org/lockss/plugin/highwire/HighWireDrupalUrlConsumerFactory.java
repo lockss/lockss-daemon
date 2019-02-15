@@ -113,8 +113,7 @@ public class HighWireDrupalUrlConsumerFactory implements UrlConsumerFactory {
       if (!should) {
         Matcher destMat = null;
         should = (fud.redirectUrls != null
-            && fud.redirectUrls.size() == 1
-            && fud.redirectUrls.get(0).equals(fud.fetchUrl)
+            && fud.redirectUrls.size() >= 1
             && (destMat = destPat.matcher(fud.fetchUrl)).find()
             && origPat.matcher(fud.origUrl).find());
         if (should) {
