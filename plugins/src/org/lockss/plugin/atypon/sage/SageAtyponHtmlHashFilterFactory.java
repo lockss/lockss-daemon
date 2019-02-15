@@ -113,7 +113,9 @@ public class SageAtyponHtmlHashFilterFactory
                                               "TOCRightColumn"),
         // article right column
         HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "articleRightColumn"),
-        
+        // article pre-footer, removes Access Options (login, purchase)
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "accessDenialDropZone"),
+
         // on full text and references page the ways to linkout to the reference get
         // added to (GoogleScholar, Medline, ISI, abstract, etc)
         // leave the content (NLM_article-title, NLM_year, etc),

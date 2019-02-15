@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2019 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -115,6 +115,14 @@ public class TestSageHtmlFilterFactory extends LockssTestCase {
 
   private static final String tocContentFiltered = 
 		  " Articles Assault of Police ";
+  
+  private static final String articleAccessDenialContent =
+    "<div class=\"accessDenialDropZone1\" data-pb-dropzone=\"accessDenialDropZone1\">" +
+    "</div>" +
+    "<div class=\"accessDenialDropZone2\" data-pb-dropzone=\"accessDenialDropZone2\">" +
+    "</div>" ;
+
+  private static final String articleAccessDenialContentFiltered = "" ;
  
   protected ArchivalUnit createAu()
       throws ArchivalUnit.ConfigurationException {
@@ -171,6 +179,7 @@ public class TestSageHtmlFilterFactory extends LockssTestCase {
        variantFact = new SageAtyponHtmlHashFilterFactory();
        doFilterTest(mau, variantFact, manifestContent, manifestHashFiltered);
        doFilterTest(mau, variantFact, tocContent, tocContentFiltered);       
+       doFilterTest(mau, variantFact, articleAccessDenialContent, articleAccessDenialContentFiltered);       
      }
    }
    
