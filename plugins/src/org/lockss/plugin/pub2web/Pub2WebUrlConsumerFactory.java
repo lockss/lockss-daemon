@@ -142,12 +142,12 @@ public class Pub2WebUrlConsumerFactory implements UrlConsumerFactory {
     @Override
     public void consume() throws IOException {
 
-      boolean should = shouldStoreAtOrigUrlVanilla();
+      // a more complicated redirect, which *may* include the https redirection as well
+      boolean should = shouldStoreRedirectsAtOrigUrl();
       if (!should) {
-        // a more complicated redirect, which *may* include the https redirection as well
-        if (shouldStoreRedirectsAtOrigUrl()) {
-          // SimpleUrlConsumer stores at fud.origUrl, and processes the redirect
-          storeAtOrigUrl();
+          if (shouldStoreAtOrigUrlVanilla()) {
+             // SimpleUrlConsumer stores at fud.origUrl, and processes the redirect
+            storeAtOrigUrl();
         }
       }
       
