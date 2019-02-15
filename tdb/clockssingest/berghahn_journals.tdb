@@ -63,7 +63,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Anthropology in Action Volume 22 ; 22 ; >
     au < frozen ; exists ; 2016 ; Anthropology in Action Volume 23 ; 23 ; >
     au < finished ; crawling ; 2017 ; Anthropology in Action Volume 24 ; 24 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2018 ; Anthropology in Action Volume 25 ; 25 ; >
+    au < deepCrawl ; exists ; 2018 ; Anthropology in Action Volume 25 ; 25 ; >
     
   }
 
@@ -225,7 +225,7 @@
     au < frozen ; exists ; 2015 ; Contention Volume 3 ; 3 ; >
     au < frozen ; exists ; 2016 ; Contention Volume 4 ; 4 ; >
     au < finished ; crawling ; 2017 ; Contention Volume 5 ; 5 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; Contention Volume 6 ; 6 ; >
+    au < deepCrawl ; exists ; 2018 ; Contention Volume 6 ; 6 ; >
 
   }
 

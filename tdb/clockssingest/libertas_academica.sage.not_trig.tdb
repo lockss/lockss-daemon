@@ -67,7 +67,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Analytical Chemistry Insights Volume 10 ; 10 ; acia ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Analytical Chemistry Insights Volume 11 ; 11 ; acia ; http://journals.sagepub.com/ ; >
     au < finished ; crawling ; 2017 ; Analytical Chemistry Insights Volume 12 ; 12 ; acia ; http://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; Analytical Chemistry Insights Volume 13 ; 13 ; acia ; http://journals.sagepub.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Analytical Chemistry Insights Volume 13 ; 13 ; acia ; http://journals.sagepub.com/ ; >
 
   }
 
@@ -232,7 +232,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Bone and Tissue Regeneration Insights Volume 6 ; 6 ; btra ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Bone and Tissue Regeneration Insights Volume 7 ; 7 ; btra ; http://journals.sagepub.com/ ; >
     au < exists ; exists ; 2017 ; Bone and Tissue Regeneration Insights Volume 8 ; 8 ; btra ; http://journals.sagepub.com/ ; >
-    au < crawling ; exists ; 2018 ; Bone and Tissue Regeneration Insights Volume 9 ; 9 ; btra ; http://journals.sagepub.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Bone and Tissue Regeneration Insights Volume 9 ; 9 ; btra ; http://journals.sagepub.com/ ; >
 
   }
 
@@ -644,7 +644,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Therapeutics Volume 7 ; 7 ; thpa ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Therapeutics Volume 8 ; 8 ; thpa ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2017 ; Clinical Medicine Insights: Therapeutics Volume 9 ; 9 ; thpa ; http://journals.sagepub.com/ ; >
-    au < crawling ; exists ; 2018 ; Clinical Medicine Insights: Therapeutics Volume 10 ; 10 ; thpa ; http://journals.sagepub.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Clinical Medicine Insights: Therapeutics Volume 10 ; 10 ; thpa ; http://journals.sagepub.com/ ; >
 
   }
 
@@ -1050,7 +1050,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Japanese Clinical Medicine Volume 6 ; 6 ; jpma ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Japanese Clinical Medicine Volume 7 ; 7 ; jpma ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2017 ; Japanese Clinical Medicine Volume 8 ; 8 ; jpma ; http://journals.sagepub.com/ ; >
-    au < crawling ; exists ; 2018 ; Japanese Clinical Medicine Volume 9 ; 9 ; jpma ; http://journals.sagepub.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Japanese Clinical Medicine Volume 9 ; 9 ; jpma ; http://journals.sagepub.com/ ; >
 
   }
 
@@ -1453,7 +1453,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Tobacco Use Insights Volume 8 ; 8 ; tuia ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Tobacco Use Insights Volume 9 ; 9 ; tuia ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2017 ; Tobacco Use Insights Volume 10 ; 10 ; tuia ; http://journals.sagepub.com/ ; >
-    au < crawling ; exists ; 2018 ; Tobacco Use Insights Volume 11 ; 11 ; tuia ; http://journals.sagepub.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Tobacco Use Insights Volume 11 ; 11 ; tuia ; http://journals.sagepub.com/ ; >
 
   }
 

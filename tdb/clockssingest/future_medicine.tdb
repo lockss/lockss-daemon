@@ -524,7 +524,7 @@
     param[journal_id] = 3dp
 
     au < deepCrawl ; exists ; 2017 ; Journal of 3D Printing in Medicine Volume 1 ; 1 ; https://www.futuremedicine.com/ ; >
-    au < crawling ; exists ; 2018 ; Journal of 3D Printing in Medicine Volume 2 ; 2 ; https://www.futuremedicine.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Journal of 3D Printing in Medicine Volume 2 ; 2 ; https://www.futuremedicine.com/ ; >
 
   }
 
@@ -742,7 +742,7 @@
     au < frozen ; exists ; 2016 ; Pharmacogenomics Volume 17 ; 17 ; http://www.futuremedicine.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Pharmacogenomics Volume 18 ; 18 ; https://www.futuremedicine.com/ ; >
     
-    au < crawling ; exists ; 2018 ; Pharmacogenomics Volume 19 ; 19 ; https://www.futuremedicine.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Pharmacogenomics Volume 19 ; 19 ; https://www.futuremedicine.com/ ; >
   }
 
    {

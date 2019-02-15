@@ -501,7 +501,7 @@
     au < finished ; finished ; 2015 ; 2015 ; American Journal of Perinatology Reports Volume 5 ; 5 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; 2016 ; American Journal of Perinatology Reports Volume 6 ; 6 ; >
     au < deepCrawl ; exists ; 2017 ; 2017 ; American Journal of Perinatology Reports Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; American Journal of Perinatology Reports Volume 8 ; 8 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; American Journal of Perinatology Reports Volume 8 ; 8 ; >
 
    }
 
@@ -637,7 +637,7 @@
       au < finished ; finished ; 2015 ; 2015 ; B&G Bewegungstherapie und Gesundheitssport Volume 31 ; 31 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2016 ; 2016 ; B&G Bewegungstherapie und Gesundheitssport Volume 32 ; 32 ; >
       au < deepCrawl ; exists ; 2017 ; 2017 ; B&G Bewegungstherapie und Gesundheitssport Volume 33 ; 33 ; >
-      au < crawling ; exists ; 2018 ; 2018 ; B&G Bewegungstherapie und Gesundheitssport Volume 34 ; 34 ; >
+      au < deepCrawl ; exists ; 2018 ; 2018 ; B&G Bewegungstherapie und Gesundheitssport Volume 34 ; 34 ; >
 
   }
 
@@ -865,7 +865,7 @@
    au < finished ; finished ; 2015 ; 2015 ; Deutsche Zeitschrift für Onkologie Volume 47 ; 47 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; Deutsche Zeitschrift für Onkologie Volume 48 ; 48 ; reingest2.clockss.org:8085 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Deutsche Zeitschrift für Onkologie Volume 49 ; 49 ; >
-   au < crawling ; exists ; 2018 ; 2018 ; Deutsche Zeitschrift für Onkologie Volume 50 ; 50 ; >
+   au < deepCrawl ; exists ; 2018 ; 2018 ; Deutsche Zeitschrift für Onkologie Volume 50 ; 50 ; >
 
   }
 
@@ -1756,7 +1756,7 @@
    au < finished ; finished ; 2015 ; 2015 ; Frauenheilkunde up2date Volume 9 ; 9 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; exists ; 2016 ; 2016 ; Frauenheilkunde up2date Volume 10 ; 10 ; >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Frauenheilkunde up2date Volume 11 ; 11 ; >
-   au < crawling ; exists ; 2018 ; 2018 ; Frauenheilkunde up2date Volume 12 ; 12 ; >
+   au < deepCrawl ; exists ; 2018 ; 2018 ; Frauenheilkunde up2date Volume 12 ; 12 ; >
 
    }
 
@@ -1856,7 +1856,7 @@
    au < finished ; finished ; 2015 ; 2015 ; Gefäßmedizin Scan Volume 2 ; 2 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; Gefäßmedizin Scan Volume 3 ; 3 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Gefäßmedizin Scan Volume 4 ; 4 ; >
-   au < crawling ; exists ; 2018 ; 2018 ; Gefäßmedizin Scan Volume 5 ; 5 ; >
+   au < deepCrawl ; exists ; 2018 ; 2018 ; Gefäßmedizin Scan Volume 5 ; 5 ; >
 
   }
 
@@ -2207,7 +2207,7 @@
    au < finished ; crawling ; 2015 ; 2015 ; Indian Journal of Neurotrauma Volume 12 ; 12 ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; Indian Journal of Neurotrauma Volume 13 ; 13 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Indian Journal of Neurotrauma Volume 14 ; 14 ; >
-   au < crawling ; exists ; 2018 ; 2018 ; Indian Journal of Neurotrauma Volume 15 ; 15 ; >
+   au < deepCrawl ; exists ; 2018 ; 2018 ; Indian Journal of Neurotrauma Volume 15 ; 15 ; >
 
   }
 
@@ -3455,7 +3455,7 @@
     au < finished ; finished ; 2015 ; 2015 ; manuelletherapie Volume 19 ; 19 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; manuelletherapie Volume 20 ; 20 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; manuelletherapie Volume 21 ; 21 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; manuelletherapie Volume 22 ; 22 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; manuelletherapie Volume 22 ; 22 ; >
 
   }
 
@@ -4630,7 +4630,7 @@
    au < finished ; finished ; 2015 ; 2015 ; Radiologie up2date Volume 15 ; 15 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2016 ; 2016 ; Radiologie up2date Volume 16 ; 16 ; reingest1.clockss.org:8082 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Radiologie up2date Volume 17 ; 17 ; >
-   au < crawling ; exists ; 2018 ; 2018 ; Radiologie up2date Volume 18 ; 18 ; >
+   au < deepCrawl ; exists ; 2018 ; 2018 ; Radiologie up2date Volume 18 ; 18 ; >
 
   }
 
@@ -4828,7 +4828,7 @@
     au < finished ; finished ; 2015 ; 2015 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 187 ; 187 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 188 ; 188 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 189 ; 189 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 190 ; 190 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 190 ; 190 ; >
 
   }
 
@@ -5019,7 +5019,7 @@
    au < finished ; finished ; 2015 ; 2015 ; Seminars in Musculoskeletal Radiology Volume 19 ; 19 ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; Seminars in Musculoskeletal Radiology Volume 20 ; 20 ; reingest1.clockss.org:8082 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Seminars in Musculoskeletal Radiology Volume 21 ; 21 ; >
-   au < crawling ; exists ; 2018 ; 2018 ; Seminars in Musculoskeletal Radiology Volume 22 ; 22 ; >
+   au < deepCrawl ; exists ; 2018 ; 2018 ; Seminars in Musculoskeletal Radiology Volume 22 ; 22 ; >
 
   }
 
@@ -5189,7 +5189,7 @@
    au < finished ; finished ; 2015 ; 2015 ; Seminars in Reproductive Medicine Volume 33 ; 33 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2016 ; 2016 ; Seminars in Reproductive Medicine Volume 34 ; 34 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Seminars in Reproductive Medicine Volume 35 ; 35 ; >
-   au < crawling ; exists ; 2018 ; 2018 ; Seminars in Reproductive Medicine Volume 36 ; 36 ; >
+   au < deepCrawl ; exists ; 2018 ; 2018 ; Seminars in Reproductive Medicine Volume 36 ; 36 ; >
 
   }
 
@@ -6548,7 +6548,7 @@
     au < finished ; finished ; 2015 ; 2015 ; Zeitschrift für Phytotherapie Volume 36 ; 36 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Zeitschrift für Phytotherapie Volume 37 ; 37 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Zeitschrift für Phytotherapie Volume 38 ; 38 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Zeitschrift für Phytotherapie Volume 39 ; 39 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Zeitschrift für Phytotherapie Volume 39 ; 39 ; >
 
   }
 
@@ -7288,7 +7288,7 @@
     comment[years] = 2017-current
 
     au < deepCrawl ; exists ; 2017 ; 2017 ; Yearbook of Medical Informatics Volume 26 ; 26 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Yearbook of Medical Informatics Volume 27 ; 27 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Yearbook of Medical Informatics Volume 27 ; 27 ; >
 
   }
 

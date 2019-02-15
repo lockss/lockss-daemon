@@ -49,7 +49,7 @@
       comment[publisher] = IJS Publishing Group
 #      param[base_url] = https://ijops.com/
 
-      au < crawling ; exists ; 2018 ; 1 ; International Journal of Orthoplastic Surgery Volume 2018 ; 2018 ; https://ijops.com/ ; >
+      au < deepCrawl ; exists ; 2018 ; 1 ; International Journal of Orthoplastic Surgery Volume 2018 ; 2018 ; https://ijops.com/ ; >
 
   }
 
@@ -429,7 +429,7 @@
       au < finished ; finished ; 2015 ; 2 ; Rural Landscapes: Society, Environment, History Volume 2015 ; 2015 ; http://www.rurallandscapesjournal.com/ ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2016 ; 3 ; Rural Landscapes: Society, Environment, History Volume 2016 ; 2016 ; http://www.rurallandscapesjournal.com/ ; >
       au < deepCrawl ; exists ; 2017 ; 4 ; Rural Landscapes: Society, Environment, History Volume 2017 ; 2017 ; http://www.rurallandscapesjournal.com/ ; >
-      au < crawling ; exists ; 2018 ; 5 ; Rural Landscapes: Society, Environment, History Volume 2018 ; 2018 ; https://www.rurallandscapesjournal.com/ ; >
+      au < deepCrawl ; exists ; 2018 ; 5 ; Rural Landscapes: Society, Environment, History Volume 2018 ; 2018 ; https://www.rurallandscapesjournal.com/ ; >
 
   }
 
@@ -509,7 +509,7 @@
       comment[publisher] = Stockholm University Press
 #      param[base_url] = https://franorfon.org/
 
-      au < crawling ; exists ; 2018 ; 1 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2018 ; 2018 ; https://franorfon.org/ ; >
+      au < deepCrawl ; exists ; 2018 ; 1 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2018 ; 2018 ; https://franorfon.org/ ; >
 
   }
 }
@@ -580,7 +580,7 @@
       au < superseded ; exists ; 2016 ; 19 ; Archaeology International Volume 2016 [superseded] ; 2016 ; http://www.ai-journal.com/ ; >
       au < frozen ; exists ; 2016 ; 19 ; Archaeology International Volume 2016 ; 2016 ; https://ai-journal.com/ ; >
       au < frozen ; exists ; 2017 ; 20 ; Archaeology International Volume 2017 ; 2017 ; https://ai-journal.com/ ; >
-      au < crawling ; exists ; 2018 ; 21 ; Archaeology International Volume 2018 ; 2018 ; https://ai-journal.com/ ; >
+      au < deepCrawl ; exists ; 2018 ; 21 ; Archaeology International Volume 2018 ; 2018 ; https://ai-journal.com/ ; >
 
   }
 
@@ -599,7 +599,7 @@
       au < frozen ; exists ; 2015 ; 3 ; Architectural Histories Volume 2015 ; 2015 ; http://journal.eahn.org/ ; >
       au < finished ; crawling ; 2016 ; 4 ; Architectural Histories Volume 2016 ; 2016 ; http://journal.eahn.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2017 ; 5 ; Architectural Histories Volume 2017 ; 2017 ; http://journal.eahn.org/ ; >
-      au < crawling ; exists ; 2018 ; 6 ; Architectural Histories Volume 2018 ; 2018 ; https://journal.eahn.org/ ; >
+      au < deepCrawl ; exists ; 2018 ; 6 ; Architectural Histories Volume 2018 ; 2018 ; https://journal.eahn.org/ ; >
 
   }
 
@@ -615,7 +615,7 @@
 
       au < frozen ; exists ; 2016 ; 1 ; ARENA Journal of Architectural Research Volume 2016 ; 2016 ; http://ajar.arena-architecture.eu/ ; >
       au < deepCrawl ; exists ; 2017 ; 2 ; ARENA Journal of Architectural Research Volume 2017 ; 2017 ; http://ajar.arena-architecture.eu/ ; >
-      au < crawling ; exists ; 2018 ; 3 ; ARENA Journal of Architectural Research Volume 2018 ; 2018 ; https://ajar.arena-architecture.eu/ ; >
+      au < deepCrawl ; exists ; 2018 ; 3 ; ARENA Journal of Architectural Research Volume 2018 ; 2018 ; https://ajar.arena-architecture.eu/ ; >
 
   }
 
@@ -657,7 +657,7 @@
       au < finished ; finished ; 2015 ; 25 ; Bulletin of the History of Archaeology Volume 2015 ; 2015 ; http://www.archaeologybulletin.org/ ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2016 ; 26 ; Bulletin of the History of Archaeology Volume 2016 ; 2016 ; http://www.archaeologybulletin.org/ ; >
       au < deepCrawl ; exists ; 2017 ; 27 ; Bulletin of the History of Archaeology Volume 2017 ; 2017 ; http://www.archaeologybulletin.org/ ; >
-      au < crawling ; exists ; 2018 ; 28 ; Bulletin of the History of Archaeology Volume 2018 ; 2018 ; https://www.archaeologybulletin.org/ ; >
+      au < deepCrawl ; exists ; 2018 ; 28 ; Bulletin of the History of Archaeology Volume 2018 ; 2018 ; https://www.archaeologybulletin.org/ ; >
 
   }
 
@@ -952,7 +952,7 @@
       au < finished ; finished ; 2015 ; 10 ; Journal of Molecular Signaling Volume 2015 ; 2015 ; http://www.jmolecularsignaling.com/ ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2016 ; 11 ; Journal of Molecular Signaling Volume 2016 ; 2016 ; http://www.jmolecularsignaling.com/ ; >
       au < deepCrawl ; exists ; 2017 ; 12 ; Journal of Molecular Signaling Volume 2017 ; 2017 ; http://www.jmolecularsignaling.com/ ; >
-      au < crawling ; exists ; 2018 ; 13 ; Journal of Molecular Signaling Volume 2018 ; 2018 ; https://www.jmolecularsignaling.com/ ; >
+      au < deepCrawl ; exists ; 2018 ; 13 ; Journal of Molecular Signaling Volume 2018 ; 2018 ; https://www.jmolecularsignaling.com/ ; >
 
   }
 
@@ -1022,7 +1022,7 @@
       au < finished ; finished ; 2015 ; 1 ; Journal of Open Humanities Data Volume 2015 ; 2015 ; http://openhumanitiesdata.metajnl.com/ ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2016 ; 2 ; Journal of Open Humanities Data Volume 2016 ; 2016 ; http://openhumanitiesdata.metajnl.com/ ; >
       au < deepCrawl ; exists ; 2017 ; 3 ; Journal of Open Humanities Data Volume 2017 ; 2017 ; http://openhumanitiesdata.metajnl.com/ ; >
-      au < crawling ; exists ; 2018 ; 4 ; Journal of Open Humanities Data Volume 2018 ; 2018 ; https://openhumanitiesdata.metajnl.com/ ; >
+      au < deepCrawl ; exists ; 2018 ; 4 ; Journal of Open Humanities Data Volume 2018 ; 2018 ; https://openhumanitiesdata.metajnl.com/ ; >
 
   }
 
@@ -1951,7 +1951,7 @@
       au < frozen ; exists ; 2015 ; 17 ; LIBER Quarterly Volume 2015 ; 2015 ; https://www.liberquarterly.eu/ ; >
       au < frozen ; exists ; 2016 ; 18 ; LIBER Quarterly Volume 2016 ; 2016 ; https://www.liberquarterly.eu/ ; >
       au < deepCrawl ; exists ; 2017 ; 19 ; LIBER Quarterly Volume 2017 ; 2017 ; https://www.liberquarterly.eu/ ; >
-      au < crawling ; exists ; 2018 ; 20 ; LIBER Quarterly Volume 2018 ; 2018 ; https://www.liberquarterly.eu/ ; >
+      au < deepCrawl ; exists ; 2018 ; 20 ; LIBER Quarterly Volume 2018 ; 2018 ; https://www.liberquarterly.eu/ ; >
 
   }
 
@@ -2082,7 +2082,7 @@
       au < frozen ; exists ; 2015 ; 11 ; Utrecht Law Review Volume 2015 ; 2015 ; https://www.utrechtlawreview.org/ ; >
       au < frozen ; exists ; 2016 ; 12 ; Utrecht Law Review Volume 2016 ; 2016 ; https://www.utrechtlawreview.org/ ; >
       au < deepCrawl ; exists ; 2017 ; 13 ; Utrecht Law Review Volume 2017 ; 2017 ; https://www.utrechtlawreview.org/ ; >
-      au < crawling ; exists ; 2018 ; 14 ; Utrecht Law Review Volume 2018 ; 2018 ; https://www.utrechtlawreview.org/ ; >
+      au < deepCrawl ; exists ; 2018 ; 14 ; Utrecht Law Review Volume 2018 ; 2018 ; https://www.utrechtlawreview.org/ ; >
 
   }
 
@@ -2307,7 +2307,7 @@
       au < finished ; finished ; 2015 ; 4 ; Stability: International Journal of Security & Development Volume 2015 ; 2015 ; http://www.stabilityjournal.org/ ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2016 ; 5 ; Stability: International Journal of Security & Development Volume 2016 ; 2016 ; http://www.stabilityjournal.org/ ; >
       au < deepCrawl ; exists ; 2017 ; 6 ; Stability: International Journal of Security & Development Volume 2017 ; 2017 ; http://www.stabilityjournal.org/ ; >
-      au < crawling ; exists ; 2018 ; 7 ; Stability: International Journal of Security & Development Volume 2018 ; 2018 ; https://www.stabilityjournal.org/ ; >
+      au < deepCrawl ; exists ; 2018 ; 7 ; Stability: International Journal of Security & Development Volume 2018 ; 2018 ; https://www.stabilityjournal.org/ ; >
 
   }
 

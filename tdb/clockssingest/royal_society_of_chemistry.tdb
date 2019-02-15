@@ -206,7 +206,7 @@
       au < deepCrawl ; exists ; 2015 ; Chemistry Education Research and Practice Volume 16 ; 16 ; 2015 ; http://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2016 ; Chemistry Education Research and Practice Volume 17 ; 17 ; 2016 ; http://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2017 ; Chemistry Education Research and Practice Volume 18 ; 18 ; 2017 ; http://pubs.rsc.org/ ; >
-      au < crawling ; exists ; 2018 ; Chemistry Education Research and Practice Volume 19 ; 19 ; 2018 ; http://pubs.rsc.org/ ; >
+      au < deepCrawl ; exists ; 2018 ; Chemistry Education Research and Practice Volume 19 ; 19 ; 2018 ; http://pubs.rsc.org/ ; >
 
   }
 
@@ -360,13 +360,13 @@
       au < deepCrawl ; exists ; 2017 ; Faraday Discussions Volume 204 ; 204 ; 2017 ; http://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2017 ; Faraday Discussions Volume 205 ; 205 ; 2017 ; http://pubs.rsc.org/ ; >
 
-      au < crawling ; exists ; 2018 ; Faraday Discussions Volume 206 ; 206 ; 2018 ; http://pubs.rsc.org/ ; >
-      au < crawling ; exists ; 2018 ; Faraday Discussions Volume 207 ; 207 ; 2018 ; http://pubs.rsc.org/ ; >
+      au < deepCrawl ; exists ; 2018 ; Faraday Discussions Volume 206 ; 206 ; 2018 ; http://pubs.rsc.org/ ; >
+      au < deepCrawl ; exists ; 2018 ; Faraday Discussions Volume 207 ; 207 ; 2018 ; http://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2018 ; Faraday Discussions Volume 208 ; 208 ; 2018 ; http://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2018 ; Faraday Discussions Volume 209 ; 209 ; 2018 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2018 ; Faraday Discussions Volume 210 ; 210 ; 2018 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2018 ; Faraday Discussions Volume 211 ; 211 ; 2018 ; https://pubs.rsc.org/ ; >
-      au < crawling ; exists ; 2018 ; Faraday Discussions Volume 212 ; 212 ; 2018 ; https://pubs.rsc.org/ ; >
+      au < deepCrawl ; exists ; 2018 ; Faraday Discussions Volume 212 ; 212 ; 2018 ; https://pubs.rsc.org/ ; >
       au < expected ; exists ; 2018 ; Faraday Discussions Volume 213 ; 213 ; 2018 ; https://pubs.rsc.org/ ; >
       au < expected ; exists ; 2018 ; Faraday Discussions Volume 214 ; 214 ; 2018 ; https://pubs.rsc.org/ ; >
       au < expected ; exists ; 2018 ; Faraday Discussions Volume 215 ; 215 ; 2018 ; https://pubs.rsc.org/ ; >
@@ -529,7 +529,7 @@
       au < deepCrawl ; exists ; 2015 ; Metallomics Volume 7 ; 7 ; 2015 ; http://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2016 ; Metallomics Volume 8 ; 8 ; 2016 ; http://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2017 ; Metallomics Volume 9 ; 9 ; 2017 ; http://pubs.rsc.org/ ; >
-      au < crawling ; exists ; 2018 ; Metallomics Volume 10 ; 10 ; 2018 ; https://pubs.rsc.org/ ; >
+      au < deepCrawl ; exists ; 2018 ; Metallomics Volume 10 ; 10 ; 2018 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -566,7 +566,7 @@
 
       au < frozen ; exists ; 2016 ; Molecular Systems Design and Engineering Volume 1 ; 1 ; 2016 ; http://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2017 ; Molecular Systems Design and Engineering Volume 2 ; 2 ; 2017 ; http://pubs.rsc.org/ ; >
-      au < crawling ; exists ; 2018 ; Molecular Systems Design and Engineering Volume 3 ; 3 ; 2018 ; https://pubs.rsc.org/ ; >
+      au < deepCrawl ; exists ; 2018 ; Molecular Systems Design and Engineering Volume 3 ; 3 ; 2018 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -2386,7 +2386,7 @@
 
       au < frozen ; exists ; 2016 ; Reaction Chemistry & Engineering Volume 1 ; 1 ; 2016 ; http://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2017 ; Reaction Chemistry & Engineering Volume 2 ; 2 ; 2017 ; http://pubs.rsc.org/ ; >
-      au < crawling ; exists ; 2018 ; Reaction Chemistry & Engineering Volume 3 ; 3 ; 2018 ; https://pubs.rsc.org/ ; >
+      au < deepCrawl ; exists ; 2018 ; Reaction Chemistry & Engineering Volume 3 ; 3 ; 2018 ; https://pubs.rsc.org/ ; >
 
   }
 

@@ -82,7 +82,7 @@
       au < frozen ; exists ; 2015 ; Journal of Global Oncology Volume 1 ; 1 ; >
       au < frozen ; exists ; 2016 ; Journal of Global Oncology Volume 2 ; 2 ; >
       au < deepCrawl ; exists ; 2017 ; Journal of Global Oncology Volume 3 ; 3 ; >
-      au < crawling ; exists ; 2018 ; Journal of Global Oncology Volume 4 ; 4 ; >
+      au < deepCrawl ; exists ; 2018 ; Journal of Global Oncology Volume 4 ; 4 ; >
 
   }
 
@@ -137,7 +137,7 @@
       param[journal_id] = po
 
       au < deepCrawl ; exists ; 2017 ; JCO Precision Oncology Volume 1 ; 1 ; >
-      au < crawling ; exists ; 2018 ; JCO Precision Oncology Volume 2 ; 2 ; >
+      au < deepCrawl ; exists ; 2018 ; JCO Precision Oncology Volume 2 ; 2 ; >
 
   }
 
