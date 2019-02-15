@@ -45,6 +45,8 @@ import org.lockss.plugin.*;
  Article files:
 - abs: https://dl.sciencesocieties.org/publications/aj/abstracts/106/1/57
        https://dl.sciencesocieties.org/publications/jeq/abstracts/27/5/JEQ0270051094
+       cannot assume issue is numeric - could be S1, Supplement_1, 5_Supplement, etc
+       https://dl.sciencesocieties.org/publications/cs/articles/57/supplement1/S-73
 - preview html landing: https://dl.sciencesocieties.org/publications/cns/abstracts/47/1/20/preview
 - html full text: https://dl.sciencesocieties.org/publications/aj/articles/106/1/57
                   https://dl.sciencesocieties.org/publications/aj/articles/106/3/1070a
@@ -79,22 +81,24 @@ public class ACSESSJournalsArticleIteratorFactory
   private static final String ROOT_TEMPLATE = "\"%spublications/\", base_url";
   
   // pattern template must include all primary aspects
-  // abstracts, preview pdf abstracts, html full text, and pdf full text  
+  // abstracts, preview pdf abstracts, html full text, and pdf full text
+  // path just after volume isn't just a number - could be supplement, etc
   private static final String PATTERN_TEMPLATE = 
-      "\"^%spublications/%s/(abstracts|articles|pdfs)/\\d+/\\d+/[^?/]+(/preview)?$\", base_url, journal_id";
+      "\"^%spublications/%s/(abstracts|articles|pdfs)/%s/[^/]+/[^?/]+(/preview)?$\", base_url, journal_id, volume_name";
   
   // primary aspects need their own patterns
+  // the PATTERN is already limiting to this one volume so don't require it to be any particular format
   private Pattern HTML_PATTERN = Pattern.compile(      
-      "/publications/([^/]+)/articles/(\\d+)/(\\d+)/([^/]+)$", Pattern.CASE_INSENSITIVE);
+      "/publications/([^/]+)/articles/([^/]+)/([^/]+)/([^/]+)$", Pattern.CASE_INSENSITIVE);
   private static final String HTML_REPLACEMENT = "/publications/$1/articles/$2/$3/$4";
   private Pattern ABSTRACT_PATTERN = Pattern.compile(      
-      "/publications/([^/]+)/abstracts/(\\d+)/(\\d+)/([^/]+)$", Pattern.CASE_INSENSITIVE);
+      "/publications/([^/]+)/abstracts/([^/]+)/([^/]+)/([^/]+)$", Pattern.CASE_INSENSITIVE);
   private static final String ABSTRACT_REPLACEMENT = "/publications/$1/abstracts/$2/$3/$4";    
   private Pattern PREVIEW_PDF_ABSTRACT_PATTERN = Pattern.compile(      
-      "/publications/([^/]+)/abstracts/(\\d+)/(\\d+)/([^/]+)/preview$", Pattern.CASE_INSENSITIVE);
+      "/publications/([^/]+)/abstracts/([^/]+)/([^/]+)/([^/]+)/preview$", Pattern.CASE_INSENSITIVE);
   private static final String PREVIEW_HTML_LANDING_REPLACEMENT = "/publications/$1/abstracts/$2/$3/$4/preview";
   private Pattern PDF_PATTERN = Pattern.compile(      
-      "/publications/([^/]+)/pdfs/(\\d+)/(\\d+)/([^/]+)$", Pattern.CASE_INSENSITIVE);
+      "/publications/([^/]+)/pdfs/([^/]+)/([^/]+)/([^/]+)$", Pattern.CASE_INSENSITIVE);
   private static final String PDF_REPLACEMENT = "/publications/$1/pdfs/$2/$3/$4";
 
   private static final String TABLES_REPLACEMENT = "/publications/$1/articles/$2/$3/$4?show-t-f=tables&wrapper=no";
