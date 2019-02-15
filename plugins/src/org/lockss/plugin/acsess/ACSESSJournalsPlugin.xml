@@ -111,6 +111,7 @@
         - MARC: https://dl.sciencesocieties.org/publications/citation-manager/down/marc/aj/106/5/1677
         - RefWorks: https://dl.sciencesocieties.org/publications/citation-manager/down/refworks/aj/106/5/1677
       -->
+      <!-- since the final part is optional, it's also useless - anything that matches the first part will work -->
       <string>1,"^%spublications/%s/(tocs|ibas)/%s(/[^/?]+)?", base_url, journal_id, volume_name</string>
       <string>1,"^%spublications/%s/(abstracts|articles|pdfs)/%s/[0-9]+/[^/]+(/preview)?", base_url, journal_id, volume_name</string>      
       <string>1,"^%spublications/%s/supplements/%s/", base_url, journal_id, volume_name</string>
