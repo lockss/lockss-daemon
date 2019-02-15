@@ -37,6 +37,7 @@
         au < released ; 2014 ; American Literary Scholarship Volume 2014 ; 12107 >
 
     }
+
     {
     title <
       name = American Literature ;
@@ -56,6 +57,7 @@
         au < released ; 2004 ; American Literature Volume 76 [2004] ; 2474 >
 
     }
+
     {
     title <
       name = American Speech ;
@@ -75,6 +77,7 @@
         au < released ; 2004 ; American Speech Volume 79 [2004] ; 2480 >
 
     }
+
     {
     title <
       name = Camera Obscura: Feminism, Culture, and Media Studies ;
@@ -93,6 +96,7 @@
         au < released ; 2004 ; Camera Obscura Volume 19 [2004 (55-57)] ; 2501 >
 
     }
+
     {
     title <
       name = Common Knowledge ;
@@ -122,6 +126,7 @@
         au < released ; 2017 ; Common Knowledge Volume 23 [2017] ; 12256 >
 
     }
+
     {
     title <
       name = Comparative Studies of South Asia, Africa and the Middle East ;
@@ -152,6 +157,7 @@
         au < released ; 2016 ; Comparative Studies of South Asia, Africa and the Middle East Volume 36 [2016] ; 11162 >
 
     }
+
     {
     title <
       name = Cultural Politics ;
@@ -177,6 +183,7 @@
         au < released ; 2016 ; Cultural Politics Volume 12 [2016] ; 11137 >
 
     }
+
     {
     title <
       name = East Asian Science, Technology and Society: An International Journal ;
@@ -199,6 +206,7 @@
         au < released ; 2017 ; East Asian Science, Technology and Society: An International Journal Volume 11 [2017] ; 12370 >
 
     }
+
     {
     title <
       name = Eighteenth-Century Life ;
@@ -234,6 +242,24 @@
         au < released ; 2017 ; Eighteenth-Century Life Volume 41 [2017] ; 12232 >
 
     }
+
+    {
+    title <
+      name = English Language Notes ;
+      issn = 0013-8282  ;
+      eissn = 2573-3575  ;
+      issnl = 0013-8282
+
+    >
+
+      attr[journal_id] = 721
+
+        au < exists ; 2016 ; English Language Notes Volume 54 [2016] ; 13805 >
+        au < exists ; 2017 ; English Language Notes Volume 55 [2017] ; 13804 >
+        au < exists ; 2018 ; English Language Notes Volume 56 [2018] ; 13549 >
+
+    }
+
     {
     title <
       name = Ethnohistory ;
@@ -253,6 +279,7 @@
         au < released ; 2004 ; Ethnohistory Volume 51 [2004] ; 2438 >
 
     }
+
     {
     title <
       name = French Historical Studies ;
@@ -272,6 +299,7 @@
         au < released ; 2004 ; French Historical Studies Volume 27 [2004] ; 1755 >
 
     }
+
     {
     title <
       name = GLQ: A Journal of Lesbian and Gay Studies ;
@@ -304,6 +332,7 @@
         au < released ; 2017 ; GLQ: A Journal of Lesbian and Gay Studies Volume 23 [2017] ; 12270 >
 
     }
+
     {
     title <
       name = Hispanic American Historical Review ;
@@ -323,6 +352,7 @@
         au < released ; 2004 ; Hispanic American Historical Review Volume 84 [2004] ; 1772 >
 
     }
+
     {
     title <
       name = History of Political Economy ;
@@ -342,6 +372,7 @@
         au < released ; 2004 ; History of Political Economy Volume 36 [2004] ; 2468 >
 
     }
+
     {
     title <
       name = Hopscotch: A Cultural Review ;
@@ -357,6 +388,7 @@
         au < released ; 2000-2001 ; Hopscotch: A Cultural Review Volume 2 [2000-2001] ; 253 >
 
     }
+
     {
     title <
       name = Journal of Chinese Literature and Culture ;
@@ -373,6 +405,7 @@
         au < released ; 2016 ; Journal of Chinese Literature and Culture Volume 3 [2016] ; 11212 >
 
     }
+
     {
     title <
       name = Journal of Health Politics, Policy and Law ;
@@ -393,6 +426,45 @@
         au < doesNotExist ; 2005 ; Journal of Health Politics, Policy and Law Volume 30 [2005] ; 3853 >
 
     }
+
+    {
+    title <
+      name = Journal of Korean Studies ;
+      issn = 2158-1665  ;
+      eissn = 0731-1613  ;
+      issnl = 2158-1665
+
+    >
+
+      attr[journal_id] = 515
+
+        au < exists ; 1969-1971 ; Journal of Korean Studies Volume 1 [1969-1971] ; 6784 >
+        au < exists ; 1979 ; Journal of Korean Studies Volume 1 [1979] ; 6888 >
+        au < exists ; 1980 ; Journal of Korean Studies Volume 2 [1980] ; 6748    >
+        au < exists ; 1981 ; Journal of Korean Studies Volume 3 [1981] ; 6752 >
+        au < exists ; 1982-1983 ; Journal of Korean Studies Volume 4 [1982-1983] ; 6720 >
+        au < exists ; 1984 ; Journal of Korean Studies Volume 5 [1984] ; 6751 >
+        au < exists ; 1988-1989 ; Journal of Korean Studies Volume 6 [1988-1989] ; 6777 >
+        au < exists ; 1990 ; Journal of Korean Studies Volume 7 [1990] ; 6778 >
+        au < exists ; 1992 ; Journal of Korean Studies Volume 8 [1992] ; 6779 >
+        au < exists ; 2004 ; Journal of Korean Studies Volume 9 [2004] ; 6805 >
+        au < exists ; 2005 ; Journal of Korean Studies Volume 10 [2005] ; 6806 >
+        au < exists ; 2006 ; Journal of Korean Studies Volume 11 [2006] ; 6807 >
+        au < exists ; 2007 ; Journal of Korean Studies Volume 12 [2007] ; 6895 >
+        au < exists ; 2008 ; Journal of Korean Studies Volume 13 [2008] ; 6797 >
+        au < exists ; 2009 ; Journal of Korean Studies Volume 14 [2009] ; 6750 >
+        au < exists ; 2010 ; Journal of Korean Studies Volume 15 [2010] ; 6734 >
+        au < exists ; 2011 ; Journal of Korean Studies Volume 16 [2011] ; 7375 >
+        au < exists ; 2012 ; Journal of Korean Studies Volume 17 [2012] ; 8385 >
+        au < exists ; 2013 ; Journal of Korean Studies Volume 18 [2013] ; 9169 >
+        au < exists ; 2014 ; Journal of Korean Studies Volume 19 [2014] ; 10076 >
+        au < exists ; 2015 ; Journal of Korean Studies Volume 20 [2015] ; 10685 >
+        au < exists ; 2016 ; Journal of Korean Studies Volume 21 [2016] ; 11218 >
+        au < exists ; 2017 ; Journal of Korean Studies Volume 22 [2017] ; 12901 >
+        au < exists ; 2018 ; Journal of Korean Studies Volume 23 [2018] ; 13548 >
+
+    }
+
     {
     title <
       name = Journal of Medieval and Early Modern Studies ;
@@ -412,6 +484,7 @@
         au < released ; 2004 ; Journal of Medieval and Early Modern Studies Volume 34 [2004] ; 2427 >
 
     }
+
     {
     title <
       name = MLQ: Modern Language Quarterly ;
@@ -431,6 +504,7 @@
         au < released ; 2004 ; MLQ: Modern Language Quarterly Volume 65 [2004] ; 2422 >
 
     }
+
     {
     title <
       name = Mediterranean Quarterly ;
@@ -462,6 +536,7 @@
         au < released ; 2016 ; Mediterranean Quarterly Volume 27 [2016] ; 11144 >
 
     }
+
     {
     title <
       name = Nepantla: Views from South ;
@@ -479,6 +554,7 @@
         au < released ; 2003 ; Nepantla: Views from South Volume 4 [2003] ; 845 >
 
     }
+
     {
     title <
       name = Nka: Journal of Contemporary African Art ;
@@ -525,6 +601,7 @@
         au < released ; 2016 ; Nka: Journal of Contemporary African Art Number 38-39 [November 2016] ; 12200 >
 
     }
+
     {
     title <
       name = Pedagogy ;
@@ -555,6 +632,7 @@
         au < released ; 2017 ; Pedagogy Volume 17 [2017] ; 12221 >
 
     }
+
     {
     title <
       name = Poetics Today ;
@@ -574,6 +652,7 @@
         au < released ; 2004 ; Poetics Today Volume 25 [2004] ; 2487 >
 
     }
+
     {
     title <
       name = Public Culture ;
@@ -593,6 +672,7 @@
         au < released ; 2004 ; Public Culture Volume 16 [2004] ; 2467 >
 
     }
+
     {
     title <
       name = Radical History Review ;
@@ -618,6 +698,7 @@
         au < released ; 2004 ; Radical History Review Issue 90 [Fall 2004] ; 2568 >
 
     }
+
     {
     title <
       name = Small Axe ;
@@ -648,6 +729,7 @@
         au < released ; 2017 ; Small Axe Volume 21 [2017] ; 12492 >
 
     }
+
     {
     title <
       name = Social Science History ;
@@ -680,6 +762,7 @@
         au < released ; 2017 ; Social Science History Volume 41 [2017] ; 12344 >
 
     }
+
     {
     title <
       name = Social Text ;
@@ -699,6 +782,7 @@
         au < released ; 2004 ; Social Text Volume 22 [2004 (78-81)] ; 2470 >
 
     }
+
     {
     title <
       name = Minnesota Review ;
@@ -762,6 +846,7 @@
         au < released ; 2016 ; Minnesota Review Issue 87 [2016 (New Series)] ; 12133 >
 
     }
+
     {
     title <
       name = The South Atlantic Quarterly ;
@@ -781,6 +866,7 @@
         au < released ; 2004 ; The South Atlantic Quarterly Volume 103 [2004] ; 1756 >
 
     }
+
     {
     title <
       name = Theater ;
@@ -800,6 +886,7 @@
         au < released ; 2004 ; Theater Volume 34 [2004] ; 2444 >
 
     }
+
     {
     title <
       name = Tikkun ;
@@ -825,6 +912,7 @@
         au < released ; 2017 ; Tikkun Volume 32 [2017] ; 12339 >
 
     }
+
     {
     title <
       name = Twentieth-Century Literature ;
@@ -841,6 +929,7 @@
         au < released ; 2017 ; Twentieth-Century Literature Volume 63 [2017] ; 12475 >
 
     }
+
     {
     title <
       name = boundary 2 ;
@@ -860,6 +949,7 @@
         au < released ; 2004 ; boundary 2 Volume 31 [2004] ; 2469 >
 
     }
+
     {
     title <
       name = differences: A Journal of Feminist Cultural Studies ;
@@ -879,6 +969,7 @@
         au < released ; 2004 ; differences: A Journal of Feminist Cultural Studies Volume 15 [2004] ; 2492 >
 
     }
+
     {
     title <
       name = positions: east asia cultures critique ;
