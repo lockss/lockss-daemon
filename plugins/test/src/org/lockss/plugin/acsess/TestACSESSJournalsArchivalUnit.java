@@ -148,6 +148,13 @@ public class TestACSESSJournalsArchivalUnit  extends LockssTestCase {
    shouldCacheTest(ROOT_URL + "publications/abstracts/" + VOL + "/1/57", false, aau, cus); 
     // LOCKSS
     shouldCacheTest("https://lockss.stanford.edu", false, aau, cus);
+    
+    // Addition of rule to support TOC pages for supplemental issues
+    //https://dl.sciencesocieties.org/publications/cs/tocs/57/supplement1
+    //https://dl.sciencesocieties.org/publications/cs/tocs/50/Supplement_1
+    shouldCacheTest(ROOT_URL + "publications/" + JID + "/tocs/" + VOL + "/supplement1", true, aau, cus);
+    shouldCacheTest(ROOT_URL + "publications/" + JID + "/tocs/" + VOL + "/Supplement_1", true, aau, cus);
+    
   }
   
   private void shouldCacheTest(String url, boolean shouldCache,
