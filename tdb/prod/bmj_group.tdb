@@ -55,9 +55,9 @@
     au < HighWirePressH20Plugin ; down ; 2013 ; Acupuncture in Medicine Volume 31 ; 31 ; http://aim.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2014 ; Acupuncture in Medicine Volume 32 ; 32 ; http://aim.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2015 ; Acupuncture in Medicine Volume 33 ; 33 ; http://aim.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; manifest ; 2016 ; Acupuncture in Medicine Volume 34 ; 34 ; https://aim.bmj.com/ > # Unable to fetch probe permission page
-    au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Acupuncture in Medicine Volume 35 ; 35 ; https://aim.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; Acupuncture in Medicine Volume 36 ; 36 ; https://aim.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; doNotProcess ; 2016 ; Acupuncture in Medicine Volume 34 ; 34 ; https://aim.bmj.com/ > # Unable to fetch probe permission page
+    au < bmj.BMJDrupalPlugin ; doNotProcess ; 2017 ; Acupuncture in Medicine Volume 35 ; 35 ; https://aim.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; doNotProcess ; 2018 ; Acupuncture in Medicine Volume 36 ; 36 ; https://aim.bmj.com/ >
 
   }
 

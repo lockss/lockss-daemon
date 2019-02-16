@@ -299,7 +299,6 @@
 
     {
 
-
       au < doNotProcess ; 2000 ; Active Learning in Higher Education Volume 1 ; 1 ; alha ; https://journals.sagepub.com/ >
       au < doNotProcess ; 2001 ; Active Learning in Higher Education Volume 2 ; 2 ; alha ; https://journals.sagepub.com/ >
       au < doNotProcess ; 2002 ; Active Learning in Higher Education Volume 3 ; 3 ; alha ; https://journals.sagepub.com/ >
@@ -331,41 +330,42 @@
         eissn = 1759-9873
       >
 
-        #journal_id = aim
+      #journal_id = aim
+      #doNotProcess = processed in BMJ
 
-      au < manifest ; 1983 ; Acupuncture in Medicine Volume 1 ; 1 ; aima ; https://journals.sagepub.com/ >
-      au < manifest ; 1984 ; Acupuncture in Medicine Volume 2 ; 2 ; aima ; https://journals.sagepub.com/ >
-      au < manifest ; 1985 ; Acupuncture in Medicine Volume 3 ; 3 ; aima ; https://journals.sagepub.com/ >
-      au < manifest ; 1986 ; Acupuncture in Medicine Volume 4 ; 4 ; aima ; https://journals.sagepub.com/ >
-      au < manifest ; 1987 ; Acupuncture in Medicine Volume 5 ; 5 ; aima ; https://journals.sagepub.com/ >
-      au < manifest ; 1988 ; Acupuncture in Medicine Volume 6 ; 6 ; aima ; https://journals.sagepub.com/ >
-      au < manifest ; 1989 ; Acupuncture in Medicine Volume 7 ; 7 ; aima ; https://journals.sagepub.com/ >
-      au < manifest ; 1990 ; Acupuncture in Medicine Volume 8 ; 8 ; aima ; https://journals.sagepub.com/ >
-      au < manifest ; 1991 ; Acupuncture in Medicine Volume 9 ; 9 ; aima ; https://journals.sagepub.com/ >
-      au < manifest ; 1992 ; Acupuncture in Medicine Volume 10 ; 10 ; aima ; https://journals.sagepub.com/ >
-      au < manifest ; 1993 ; Acupuncture in Medicine Volume 11 ; 11 ; aima ; https://journals.sagepub.com/ >
-      au < manifest ; 1994 ; Acupuncture in Medicine Volume 12 ; 12 ; aima ; https://journals.sagepub.com/ >
-      au < manifest ; 1995 ; Acupuncture in Medicine Volume 13 ; 13 ; aima ; https://journals.sagepub.com/ >
-      au < manifest ; 1996 ; Acupuncture in Medicine Volume 14 ; 14 ; aima ; https://journals.sagepub.com/ >
-      au < manifest ; 1997 ; Acupuncture in Medicine Volume 15 ; 15 ; aima ; https://journals.sagepub.com/ >
-      au < manifest ; 1998 ; Acupuncture in Medicine Volume 16 ; 16 ; aima ; https://journals.sagepub.com/ >
-      au < manifest ; 1999 ; Acupuncture in Medicine Volume 17 ; 17 ; aima ; https://journals.sagepub.com/ >
-      au < manifest ; 2000 ; Acupuncture in Medicine Volume 18 ; 18 ; aima ; https://journals.sagepub.com/ >
-      au < manifest ; 2001 ; Acupuncture in Medicine Volume 19 ; 19 ; aima ; https://journals.sagepub.com/ >
-      au < manifest ; 2002 ; Acupuncture in Medicine Volume 20 ; 20 ; aima ; https://journals.sagepub.com/ >
-      au < manifest ; 2003 ; Acupuncture in Medicine Volume 21 ; 21 ; aima ; https://journals.sagepub.com/ >
-      au < manifest ; 2004 ; Acupuncture in Medicine Volume 22 ; 22 ; aima ; https://journals.sagepub.com/ >
-      au < manifest ; 2005 ; Acupuncture in Medicine Volume 23 ; 23 ; aima ; https://journals.sagepub.com/ >
-      au < manifest ; 2006 ; Acupuncture in Medicine Volume 24 ; 24 ; aima ; https://journals.sagepub.com/ >
-      au < manifest ; 2007 ; Acupuncture in Medicine Volume 25 ; 25 ; aima ; https://journals.sagepub.com/ >
-      au < manifest ; 2008 ; Acupuncture in Medicine Volume 26 ; 26 ; aima ; https://journals.sagepub.com/ >
-      au < manifest ; 2009 ; Acupuncture in Medicine Volume 27 ; 27 ; aima ; https://journals.sagepub.com/ >
-      au < manifest ; 2010 ; Acupuncture in Medicine Volume 28 ; 28 ; aima ; https://journals.sagepub.com/ >
-      au < manifest ; 2011 ; Acupuncture in Medicine Volume 29 ; 29 ; aima ; https://journals.sagepub.com/ >
-      au < manifest ; 2012 ; Acupuncture in Medicine Volume 30 ; 30 ; aima ; https://journals.sagepub.com/ >
-      au < manifest ; 2013 ; Acupuncture in Medicine Volume 31 ; 31 ; aima ; https://journals.sagepub.com/ >
-      au < manifest ; 2014 ; Acupuncture in Medicine Volume 32 ; 32 ; aima ; https://journals.sagepub.com/ >
-      au < manifest ; 2015 ; Acupuncture in Medicine Volume 33 ; 33 ; aima ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 1983 ; Acupuncture in Medicine Volume 1 ; 1 ; aima ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 1984 ; Acupuncture in Medicine Volume 2 ; 2 ; aima ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 1985 ; Acupuncture in Medicine Volume 3 ; 3 ; aima ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 1986 ; Acupuncture in Medicine Volume 4 ; 4 ; aima ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 1987 ; Acupuncture in Medicine Volume 5 ; 5 ; aima ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 1988 ; Acupuncture in Medicine Volume 6 ; 6 ; aima ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 1989 ; Acupuncture in Medicine Volume 7 ; 7 ; aima ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 1990 ; Acupuncture in Medicine Volume 8 ; 8 ; aima ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 1991 ; Acupuncture in Medicine Volume 9 ; 9 ; aima ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 1992 ; Acupuncture in Medicine Volume 10 ; 10 ; aima ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 1993 ; Acupuncture in Medicine Volume 11 ; 11 ; aima ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 1994 ; Acupuncture in Medicine Volume 12 ; 12 ; aima ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 1995 ; Acupuncture in Medicine Volume 13 ; 13 ; aima ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 1996 ; Acupuncture in Medicine Volume 14 ; 14 ; aima ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 1997 ; Acupuncture in Medicine Volume 15 ; 15 ; aima ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 1998 ; Acupuncture in Medicine Volume 16 ; 16 ; aima ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 1999 ; Acupuncture in Medicine Volume 17 ; 17 ; aima ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 2000 ; Acupuncture in Medicine Volume 18 ; 18 ; aima ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 2001 ; Acupuncture in Medicine Volume 19 ; 19 ; aima ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 2002 ; Acupuncture in Medicine Volume 20 ; 20 ; aima ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 2003 ; Acupuncture in Medicine Volume 21 ; 21 ; aima ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 2004 ; Acupuncture in Medicine Volume 22 ; 22 ; aima ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 2005 ; Acupuncture in Medicine Volume 23 ; 23 ; aima ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 2006 ; Acupuncture in Medicine Volume 24 ; 24 ; aima ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 2007 ; Acupuncture in Medicine Volume 25 ; 25 ; aima ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 2008 ; Acupuncture in Medicine Volume 26 ; 26 ; aima ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 2009 ; Acupuncture in Medicine Volume 27 ; 27 ; aima ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 2010 ; Acupuncture in Medicine Volume 28 ; 28 ; aima ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 2011 ; Acupuncture in Medicine Volume 29 ; 29 ; aima ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 2012 ; Acupuncture in Medicine Volume 30 ; 30 ; aima ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 2013 ; Acupuncture in Medicine Volume 31 ; 31 ; aima ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 2014 ; Acupuncture in Medicine Volume 32 ; 32 ; aima ; https://journals.sagepub.com/ >
+      au < doNotProcess ; 2015 ; Acupuncture in Medicine Volume 33 ; 33 ; aima ; https://journals.sagepub.com/ >
       au < manifest ; 2016 ; Acupuncture in Medicine Volume 34 ; 34 ; aima ; https://journals.sagepub.com/ >
       au < manifest ; 2017 ; Acupuncture in Medicine Volume 35 ; 35 ; aima ; https://journals.sagepub.com/ >
       au < manifest ; 2018 ; Acupuncture in Medicine Volume 36 ; 36 ; aima ; https://journals.sagepub.com/ >
