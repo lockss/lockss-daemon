@@ -3006,8 +3006,25 @@
       >
 
         #param[base_url] = http://avc.sagepub.com/
-        #content available from 1990 volume 1 to 2008 volume 19
 
+        au < exists ; 1990 ; Antiviral Chemistry & Chemotherapy Volume 1 ; 1 ; avca ; https://journals.sagepub.com/ >
+        au < exists ; 1991 ; Antiviral Chemistry & Chemotherapy Volume 2 ; 2 ; avca ; https://journals.sagepub.com/ >
+        au < exists ; 1992 ; Antiviral Chemistry & Chemotherapy Volume 3 ; 3 ; avca ; https://journals.sagepub.com/ >
+        au < exists ; 1993 ; Antiviral Chemistry & Chemotherapy Volume 4 ; 4 ; avca ; https://journals.sagepub.com/ >
+        au < exists ; 1994 ; Antiviral Chemistry & Chemotherapy Volume 5 ; 5 ; avca ; https://journals.sagepub.com/ >
+        au < exists ; 1995 ; Antiviral Chemistry & Chemotherapy Volume 6 ; 6 ; avca ; https://journals.sagepub.com/ >
+        au < exists ; 1996 ; Antiviral Chemistry & Chemotherapy Volume 7 ; 7 ; avca ; https://journals.sagepub.com/ >
+        au < exists ; 1997 ; Antiviral Chemistry & Chemotherapy Volume 8 ; 8 ; avca ; https://journals.sagepub.com/ >
+        au < exists ; 1998 ; Antiviral Chemistry & Chemotherapy Volume 9 ; 9 ; avca ; https://journals.sagepub.com/ >
+        au < exists ; 1999 ; Antiviral Chemistry & Chemotherapy Volume 10 ; 10 ; avca ; https://journals.sagepub.com/ >
+        au < exists ; 2000 ; Antiviral Chemistry & Chemotherapy Volume 11 ; 11 ; avca ; https://journals.sagepub.com/ >
+        au < exists ; 2001 ; Antiviral Chemistry & Chemotherapy Volume 12 ; 12 ; avca ; https://journals.sagepub.com/ >
+        au < exists ; 2002 ; Antiviral Chemistry & Chemotherapy Volume 13 ; 13 ; avca ; https://journals.sagepub.com/ >
+        au < exists ; 2003 ; Antiviral Chemistry & Chemotherapy Volume 14 ; 14 ; avca ; https://journals.sagepub.com/ >
+        au < exists ; 2004 ; Antiviral Chemistry & Chemotherapy Volume 15 ; 15 ; avca ; https://journals.sagepub.com/ >
+        au < exists ; 2005 ; Antiviral Chemistry & Chemotherapy Volume 16 ; 16 ; avca ; https://journals.sagepub.com/ >
+        au < exists ; 2006 ; Antiviral Chemistry & Chemotherapy Volume 17 ; 17 ; avca ; https://journals.sagepub.com/ >
+        au < exists ; 2007 ; Antiviral Chemistry & Chemotherapy Volume 18 ; 18 ; avca ; https://journals.sagepub.com/ >
         au < released ; 2008-2009 ; Antiviral Chemistry & Chemotherapy Volume 19 ; 19 ; avca ; http://journals.sagepub.com/ >
         au < released ; 2009-2010 ; Antiviral Chemistry & Chemotherapy Volume 20 ; 20 ; avca ; http://journals.sagepub.com/ >
         au < released ; 2010-2011 ; Antiviral Chemistry & Chemotherapy Volume 21 ; 21 ; avca ; http://journals.sagepub.com/ >
@@ -3023,7 +3040,7 @@
 
     title <
       name = ANTYAJAA: Indian Journal of Women and Social Change ;
-      issn = 2455-6327 
+      issn = 2455-6327
     >
 
         #param[base_url] = http://jws.sagepub.com/
