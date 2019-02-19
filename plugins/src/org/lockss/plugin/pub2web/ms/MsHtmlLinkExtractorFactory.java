@@ -126,19 +126,20 @@ implements LinkExtractorFactory {
       // Are we an article landing page?
       if ( (srcUrl != null) && landingMat.matches()) {
         String base_url = landingMat.group(1);
-        base_url = AuUtil.normalizeHttpHttpsFromBaseUrl(au, base_url);
         if (DIV_TAG.equals(node.nodeName())) {
           String idVal = node.attr(ID_ATTR);
           String ftVal = node.attr(FULL_TEXT_ATTR);
           String ajVal = node.attr(AJAX_ATTR);
           if ( ajVal != null & !(StringUtils.isEmpty(ajVal))) {
             String newUrl = base_url + ajVal;
+            newUrl = AuUtil.normalizeHttpHttpsFromBaseUrl(au, newUrl);
             log.debug3("create ajax URL: " + newUrl);
             cb.foundLink(newUrl);
             // if it was this, no need to do anything further with this div
             return;
           } else if ( idVal!= null && FULLTEXT_ID_VAL.equals(idVal) && ftVal != null & !(StringUtils.isEmpty(ftVal))) {
             String newUrl = base_url + ftVal;
+            newUrl = AuUtil.normalizeHttpHttpsFromBaseUrl(au, newUrl);
             log.debug3("create fulltext URL: " + newUrl);
             cb.foundLink(newUrl);
             // if it was this, no need to do anything further with this div

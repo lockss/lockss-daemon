@@ -264,10 +264,11 @@ public class TestPub2WebArchivalUnit extends LockssTestCase {
   public void testStartUrlConstruction() throws Exception {
     URL url = new URL(ROOT_URL);
 
-    String expected = ROOT_URL+"content/journal/foo/clockssissues?volume=123";
+    String expected = ROOTS_URL+"content/journal/foo/clockssissues?volume=123";
+    String expected2 = ROOT_URL+"content/journal/foo/clockssissues?volume=123";
  
     DefinableArchivalUnit au = makeAu(ASM_PLUGIN_ID,url, 123, "foo");
-    assertEquals(ListUtil.list(expected), au.getStartUrls());
+    assertEquals(ListUtil.list(expected,expected2), au.getStartUrls());
   }
 
   public void testMSStartUrlConstruction() throws Exception {

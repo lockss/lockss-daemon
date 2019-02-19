@@ -99,7 +99,6 @@ implements LinkExtractorFactory {
       // Are we an article landing page?
       if ( (srcUrl != null) && landingMat.matches()) {
         String base_url = landingMat.group(1);
-        base_url = AuUtil.normalizeHttpHttpsFromBaseUrl(au, base_url);
         if (DIV_TAG.equals(node.nodeName())) {
           String idVal = node.attr(ID_ATTR);
           if ( idVal!= null && FULLTEXT_ID_VAL.equals(idVal)) {
@@ -107,6 +106,7 @@ implements LinkExtractorFactory {
               //find children of the identified div that are plain text. That's our link
               if(childNode instanceof TextNode) {
                 String newUrl = base_url + ((TextNode)childNode).text();
+                newUrl = AuUtil.normalizeHttpHttpsFromBaseUrl(au, newUrl);
                 log.debug3("create fulltext URL: " + newUrl);
                 cb.foundLink(newUrl);
                 return;

@@ -137,11 +137,11 @@ implements LinkExtractorFactory {
         log.debug3("...it's an article, book or chapter landing page");
         // build up a DOI value with html encoding of the slash"
         String base_url = landingMat.group(1);
-        base_url = AuUtil.normalizeHttpHttpsFromBaseUrl(au, base_url);
         String idVal = node.attr(ID_ATTR); // what the "id" attri is set to
         String ftVal = node.attr(FULL_TEXT_ATTR); // what the data-fullTextUrl is set to
         if ( idVal!= null && FULLTEXT_ID_VAL.equals(idVal) && ftVal != null & !(StringUtils.isEmpty(ftVal))) {
           String newUrl = base_url + ftVal;
+          newUrl = AuUtil.normalizeHttpHttpsFromBaseUrl(au, newUrl);
           log.debug3("create fulltext URL: " + newUrl);
           cb.foundLink(newUrl);
           // if it was this, no need to do anything further with this div
@@ -171,6 +171,7 @@ implements LinkExtractorFactory {
               } else {
                 newUrl = base_url + figure_table_val;
               }
+              newUrl = AuUtil.normalizeHttpHttpsFromBaseUrl(au, newUrl);
               log.debug3("create new URL: " + newUrl);
               cb.foundLink(newUrl);
               // if it was this, no need to do anything further with this link
@@ -198,6 +199,7 @@ implements LinkExtractorFactory {
           if ( tVal != null && tVal.contains(ARTICLES_URL_SNIPPET)) {
             log.debug3("...and we matched that expected URL for toc article generator");
             String newUrl = base_url + tVal;
+            newUrl = AuUtil.normalizeHttpHttpsFromBaseUrl(au, newUrl);
             log.debug3("create new URL: " + newUrl);
             cb.foundLink(newUrl);
             // if it was this, no need to do anything further with this link
