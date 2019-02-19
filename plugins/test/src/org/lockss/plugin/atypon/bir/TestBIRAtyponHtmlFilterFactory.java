@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2019 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -273,12 +273,8 @@ public class TestBIRAtyponHtmlFilterFactory extends LockssTestCase {
             "</td>" +
             "</tr>" +
             "</table>";
-    private static final String referencesTableFiltered = 
-            " Foo BL" +
-            " Smith BS" +
-            " Infection: prevention and management" +
-            " 2012 " +
-            "411 19 ";
+    // updated to use more drastic Reference table filter from parent
+    private static final String referencesTableFiltered =  "";
 
     private static final String mostReadHtmlFiltered = 
         " BOO ";   

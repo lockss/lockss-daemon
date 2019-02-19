@@ -48,7 +48,7 @@
     au < gsl.ClockssGSLDrupalPlugin ; frozen ; exists ; 2012 ; Engineering Geology Special Publications Volume 25 ; 25 ; >
     au < gsl.ClockssGSLDrupalPlugin ; frozen ; exists ; 2012 ; Engineering Geology Special Publications Volume 26 ; 26 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2016 ; Engineering Geology Special Publications Volume 27 ; 27 ; reingest3.clockss.org:8083 >
-    au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 2017 ; Engineering Geology Special Publications Volume 28 ; 28 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 2017 ; Engineering Geology Special Publications Volume 28 ; 28 ; >
     au < gsl.ClockssGSLDrupalPlugin ; expected ; exists ; 2018 ; Engineering Geology Special Publications Volume 29 ; 29 ; >
 
   }
@@ -143,7 +143,7 @@
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Geological Society of London Memoirs Volume 45 ; 45 ; reingest2.clockss.org:8085 >
     au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2016 ; Geological Society of London Memoirs Volume 46 ; 46 ; >
     au < gsl.ClockssGSLDrupalPlugin ; deepCrawl ; exists ; 2017 ; Geological Society of London Memoirs Volume 47 ; 47 ; >
-    au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 2017 ; Geological Society of London Memoirs Volume 48 ; 48 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 2017 ; Geological Society of London Memoirs Volume 48 ; 48 ; >
     au < gsl.ClockssGSLDrupalPlugin ; expected ; exists ; 2018 ; Geological Society of London Memoirs Volume 49 ; 49 ; >
     au < gsl.ClockssGSLDrupalPlugin ; expected ; exists ; 2018 ; Geological Society of London Memoirs Volume 50 ; 50 ; >
 
@@ -586,7 +586,7 @@
     au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2016 ; Geological Society of London Special Publications Volume 424 ; 424 ; reingest1.clockss.org:8082 >
     au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2016 ; Geological Society of London Special Publications Volume 425 ; 425 ; reingest2.clockss.org:8085 >
     au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2016 ; Geological Society of London Special Publications Volume 426 ; 426 ; reingest3.clockss.org:8083 >
-    au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 2016 ; Geological Society of London Special Publications Volume 427 ; 427 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 2016 ; Geological Society of London Special Publications Volume 427 ; 427 ; >
     au < gsl.ClockssGSLDrupalPlugin ; frozen ; exists ; 2016 ; Geological Society of London Special Publications Volume 428 ; 428 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2016 ; Geological Society of London Special Publications Volume 429 ; 429 ; reingest4.clockss.org:8082 >
     au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2016 ; Geological Society of London Special Publications Volume 430 ; 430 ; reingest5.clockss.org:8082 >
@@ -594,45 +594,45 @@
     au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2017 ; Geological Society of London Special Publications Volume 432 ; 432 ; >
     au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2017 ; Geological Society of London Special Publications Volume 433 ; 433 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2016 ; Geological Society of London Special Publications Volume 434 ; 434 ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 2018 ; Geological Society of London Special Publications Volume 435 ; 435 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 2018 ; Geological Society of London Special Publications Volume 435 ; 435 ; >
     au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2016 ; Geological Society of London Special Publications Volume 436 ; 436 ; >
     au < gsl.ClockssGSLDrupalPlugin ; frozen ; exists ; 2017 ; Geological Society of London Special Publications Volume 437 ; 437 ; >
     au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2017 ; Geological Society of London Special Publications Volume 438 ; 438 ; >
-    au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 2017 ; Geological Society of London Special Publications Volume 439 ; 439 ; >
-    au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 2018 ; Geological Society of London Special Publications Volume 440 ; 440 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 2017 ; Geological Society of London Special Publications Volume 439 ; 439 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 2018 ; Geological Society of London Special Publications Volume 440 ; 440 ; >
     au < gsl.ClockssGSLDrupalPlugin ; frozen ; exists ; 2017 ; Geological Society of London Special Publications Volume 441 ; 441 ; >
     au < gsl.ClockssGSLDrupalPlugin ; frozen ; exists ; 2017 ; Geological Society of London Special Publications Volume 442 ; 442 ; >
     au < gsl.ClockssGSLDrupalPlugin ; frozen ; exists ; 2017 ; Geological Society of London Special Publications Volume 443 ; 443 ; >
     au < gsl.ClockssGSLDrupalPlugin ; frozen ; exists ; 2017 ; Geological Society of London Special Publications Volume 444 ; 444 ; >
     au < gsl.ClockssGSLDrupalPlugin ; frozen ; exists ; 2017 ; Geological Society of London Special Publications Volume 445 ; 445 ; >
     au < gsl.ClockssGSLDrupalPlugin ; frozen ; exists ; 2017 ; Geological Society of London Special Publications Volume 446 ; 446 ; >
-    au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 2017 ; Geological Society of London Special Publications Volume 447 ; 447 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 2017 ; Geological Society of London Special Publications Volume 447 ; 447 ; >
     au < gsl.ClockssGSLDrupalPlugin ; frozen ; exists ; 2017 ; Geological Society of London Special Publications Volume 448 ; 448 ; >
     au < gsl.ClockssGSLDrupalPlugin ; frozen ; exists ; 2017 ; Geological Society of London Special Publications Volume 449 ; 449 ; >
-    au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 2018 ; Geological Society of London Special Publications Volume 450 ; 450 ; >
-    au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 2018 ; Geological Society of London Special Publications Volume 451 ; 451 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 2018 ; Geological Society of London Special Publications Volume 450 ; 450 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 2018 ; Geological Society of London Special Publications Volume 451 ; 451 ; >
     au < gsl.ClockssGSLDrupalPlugin ; frozen ; exists ; 2017 ; Geological Society of London Special Publications Volume 452 ; 452 ; >
-    au < gsl.ClockssGSLDrupalPlugin ; expected ; exists ; 2018 ; Geological Society of London Special Publications Volume 453 ; 453 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 2018 ; Geological Society of London Special Publications Volume 453 ; 453 ; >
     au < gsl.ClockssGSLDrupalPlugin ; frozen ; exists ; 2017 ; Geological Society of London Special Publications Volume 454 ; 454 ; >
-    au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 2018 ; Geological Society of London Special Publications Volume 455 ; 455 ; >
-    au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 2018 ; Geological Society of London Special Publications Volume 456 ; 456 ; >
-    au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 2017 ; Geological Society of London Special Publications Volume 457 ; 457 ; >
-    au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 2017 ; Geological Society of London Special Publications Volume 458 ; 458 ; >
-    au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 2018 ; Geological Society of London Special Publications Volume 459 ; 459 ; >
-    au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 2018 ; Geological Society of London Special Publications Volume 460 ; 460 ; >
-    au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 2018 ; Geological Society of London Special Publications Volume 461 ; 461 ; >
-    au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 2018 ; Geological Society of London Special Publications Volume 462 ; 462 ; >
-    au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 2018 ; Geological Society of London Special Publications Volume 463 ; 463 ; >
-    au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 2018 ; Geological Society of London Special Publications Volume 464 ; 464 ; >
-    au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 2018 ; Geological Society of London Special Publications Volume 465 ; 465 ; >
-    au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 2018 ; Geological Society of London Special Publications Volume 466 ; 466 ; >
-    au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 2018 ; Geological Society of London Special Publications Volume 467 ; 467 ; >
-    au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 2018 ; Geological Society of London Special Publications Volume 468 ; 468 ; >
-    au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 2018 ; Geological Society of London Special Publications Volume 469 ; 469 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 2018 ; Geological Society of London Special Publications Volume 455 ; 455 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 2018 ; Geological Society of London Special Publications Volume 456 ; 456 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 2017 ; Geological Society of London Special Publications Volume 457 ; 457 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 2017 ; Geological Society of London Special Publications Volume 458 ; 458 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 2018 ; Geological Society of London Special Publications Volume 459 ; 459 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 2018 ; Geological Society of London Special Publications Volume 460 ; 460 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 2018 ; Geological Society of London Special Publications Volume 461 ; 461 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 2018 ; Geological Society of London Special Publications Volume 462 ; 462 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 2018 ; Geological Society of London Special Publications Volume 463 ; 463 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 2018 ; Geological Society of London Special Publications Volume 464 ; 464 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 2018 ; Geological Society of London Special Publications Volume 465 ; 465 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 2018 ; Geological Society of London Special Publications Volume 466 ; 466 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 2018 ; Geological Society of London Special Publications Volume 467 ; 467 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 2018 ; Geological Society of London Special Publications Volume 468 ; 468 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 2018 ; Geological Society of London Special Publications Volume 469 ; 469 ; >
     au < gsl.ClockssGSLDrupalPlugin ; expected ; exists ; 2018 ; Geological Society of London Special Publications Volume 470 ; 470 ; >
     au < gsl.ClockssGSLDrupalPlugin ; expected ; exists ; 2018 ; Geological Society of London Special Publications Volume 471 ; 471 ; >
-    au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 2018 ; Geological Society of London Special Publications Volume 472 ; 472 ; >
-    au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 2018 ; Geological Society of London Special Publications Volume 473 ; 473 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 2018 ; Geological Society of London Special Publications Volume 472 ; 472 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 2018 ; Geological Society of London Special Publications Volume 473 ; 473 ; >
 
   }
 
@@ -913,7 +913,7 @@
 
     au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 1811 ; Transactions of the Geological Society of London Series 1 Volume 1 ; S1-1 ; >
     au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 1814 ; Transactions of the Geological Society of London Series 1 Volume 2 ; S1-2 ; >
-    au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 1816 ; Transactions of the Geological Society of London Series 1 Volume 3 ; S1-3 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 1816 ; Transactions of the Geological Society of London Series 1 Volume 3 ; S1-3 ; >
     au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 1817 ; Transactions of the Geological Society of London Series 1 Volume 4 ; S1-4 ; >
     au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 1821 ; Transactions of the Geological Society of London Series 1 Volume 5 ; S1-5 ; >
     au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 1822-1824 ; Transactions of the Geological Society of London Series 2 Volume 1 ; S2-1 ; >

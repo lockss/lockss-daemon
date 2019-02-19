@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2019 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -158,6 +158,9 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttribute("div", "class", "articleTools"),
     // toc - article type seems to change and this isn't important
     HtmlNodeFilters.tagWithAttribute("span", "class", "ArticleType"),
+    // abs (some Sage Atypon) - table of references on abs page
+    HtmlNodeFilters.tagWithAttribute("table", "class", "references"),
+    HtmlNodeFilters.tagWithAttribute("div", "id", "relatedContent"),
     
     // A number of children add a link item "Cited By" only after the article
     // has been cited...remove the entire list item - look for text pattern
