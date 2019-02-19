@@ -64,6 +64,7 @@
     au < finished ; manifest ; 2016 ; Contemporary Mathematics 2016 ; 2016 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Contemporary Mathematics 2017 ; 2017 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2018 ; Contemporary Mathematics 2018 ; 2018 ; reingest2.clockss.org:8085 >
+#assign a reingest - the plugin is currently set up to collect one copy and has no hash filter
 
     }
 
@@ -123,7 +124,7 @@
     au < finished ; manifest ; 2016 ; Mathematical Surveys and Monographs 2016 ; 2016 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Mathematical Surveys and Monographs 2017 ; 2017 ; reingest2.clockss.org:8085 >
     au < exists ; exists ; 2018 ; Mathematical Surveys and Monographs 2018 ; 2018 ; >
-
+#assign a reingest - the plugin is currently set up to collect one copy and has no hash filter
     }
 
     {
@@ -205,6 +206,7 @@
     au < finished ; crawling ; 2016 ; Memoirs of the American Mathematical Society 2016 ; 2016 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Memoirs of the American Mathematical Society 2017 ; 2017 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2018 ; Memoirs of the American Mathematical Society 2018 ; 2018 ; reingest1.clockss.org:8082 >
+#assign a reingest - the plugin is currently set up to collect one copy and has no hash filter
 
     }
 
