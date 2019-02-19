@@ -143,14 +143,18 @@ public class Pub2WebUrlConsumerFactory implements UrlConsumerFactory {
     public void consume() throws IOException {
 
       // a more complicated redirect, which *may* include the https redirection as well
+      // This handles deliver to docserver case
       boolean should = shouldStoreRedirectsAtOrigUrl();
+
       if (!should) {
-          if (shouldStoreAtOrigUrlVanilla()) {
-             // SimpleUrlConsumer stores at fud.origUrl, and processes the redirect
-            storeAtOrigUrl();
-        }
+          should = shouldStoreAtOrigUrlVanilla();
       }
-      
+
+      if (should) {
+        // SimpleUrlConsumer stores at fud.origUrl, and processes the redirect
+        storeAtOrigUrl();
+      }
+
       super.consume();
     }
 
@@ -173,19 +177,25 @@ public class Pub2WebUrlConsumerFactory implements UrlConsumerFactory {
               && origFullTextPat.matcher(fud.origUrl).find();
 
       if (!should) {
-        log.debug3("NOT swallowing this redirect");
+        log.debug3("NOT swallowing this redirect by shouldStoreRedirectsAtOrigUrl");
       }
       return should;
     }
 
     public boolean shouldStoreAtOrigUrlVanilla() {
 
-      return AuUtil.isBaseUrlHttp(au)
+      boolean should = AuUtil.isBaseUrlHttp(au)
               && fud.redirectUrls != null
               && fud.redirectUrls.size() >= 1
               && UrlUtil.isHttpUrl(fud.origUrl)
               && UrlUtil.isHttpsUrl(fud.fetchUrl)
               && UrlUtil.stripProtocol(fud.origUrl).equals(UrlUtil.stripProtocol(fud.fetchUrl));
+
+      if (!should) {
+        log.debug3("NOT swallowing this redirect by shouldStoreAtOrigUrlVanilla function");
+      }
+
+      return should;
 
     }
 
