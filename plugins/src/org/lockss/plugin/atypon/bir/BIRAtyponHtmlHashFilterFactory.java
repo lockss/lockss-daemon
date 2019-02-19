@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2018 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2019 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -76,9 +76,11 @@ public class BIRAtyponHtmlHashFilterFactory
         // added to (GoogleScholar, Medline, ISI, abstract, etc) 
         // leave the content (NLM_article-title, NLM_year, etc), 
         // but remove everything else (links and punctuation between options) 
-        HtmlNodeFilters.allExceptSubtree(
-            HtmlNodeFilters.tagWithAttribute("table", "class", "references"),
-            HtmlNodeFilters.tagWithAttributeRegex("span", "class", "NLM_")),
+        // 2/2019: now inheriting parent hash filter that removes all of the reference table
+        // draconian, but less to worry about.
+        //HtmlNodeFilters.allExceptSubtree(
+        //    HtmlNodeFilters.tagWithAttribute("table", "class", "references"),
+        //    HtmlNodeFilters.tagWithAttributeRegex("span", "class", "NLM_")),
 
     };
     // super.createFilteredInputStream adds bir filter to the baseAtyponFilters

@@ -1,6 +1,6 @@
 /*  $Id$
  
- Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2019 Board of Trustees of Leland Stanford Jr. University,
 
  all rights reserved.
 
@@ -306,10 +306,30 @@ public class TestBaseAtyponHtmlHashFilterFactory extends LockssTestCase {
       "    <div data-badge-details=\"right\" data-badge-type=\"donut\" data-doi=\"10.1152/jn.00002.2017\" data-hide-no-mentions=\"true\" class=\"altmetric-embed\">\n" + 
       "    </div>\n" + 
       "  </div>";
-    private static final String withoutMetrics =
+  private static final String withoutMetrics =
         "<h3>Metrics</h3>\n" +
         "  \n" +
         "  ";
+
+  private static final String withTableReferences = 
+        "Hello<table border=\"0\" class=\"references\"> " +
+        "<tr>" +
+        "<td>Hello</td>" +
+        "<td>Kitty</td>" +
+        "<\tr>" +
+        "<tr>" +
+        "<td>Hello</td>" +
+        "<td>World</td>" +
+        "<\tr>" +
+        "</table>World" ;
+  private static final String withoutTableReferences = 
+        "HelloWorld" ;
+
+  private static final String withRelatedContent = 
+        "Hello<div class=\"tab tab-pane\" id=\"relatedContent\">" +
+        "</div>World" ;
+  private static final String withoutRelatedContent = 
+        "HelloWorld" ;
     
   
   /*
@@ -362,6 +382,18 @@ public class TestBaseAtyponHtmlHashFilterFactory extends LockssTestCase {
     InputStream actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(withMetrics), Constants.DEFAULT_ENCODING);
     assertEquals(withoutMetrics, StringUtil.fromInputStream(actIn));
+  }
+
+  public void testTableRef() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(withTableReferences), Constants.DEFAULT_ENCODING);
+    assertEquals(withoutTableReferences, StringUtil.fromInputStream(actIn));
+  }
+  
+  public void testRelatedContent() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(withRelatedContent), Constants.DEFAULT_ENCODING);
+    assertEquals(withoutRelatedContent, StringUtil.fromInputStream(actIn));
   }
   
   public void testAccessIcon() throws Exception {

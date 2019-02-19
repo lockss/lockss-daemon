@@ -118,8 +118,13 @@ public class TestSageHtmlFilterFactory extends LockssTestCase {
   
   private static final String articleAccessDenialContent =
     "<div class=\"accessDenialDropZone1\" data-pb-dropzone=\"accessDenialDropZone1\">" +
+    "Hello World" +
     "</div>" +
     "<div class=\"accessDenialDropZone2\" data-pb-dropzone=\"accessDenialDropZone2\">" +
+    "Hello Kitty" +
+    "</div>" +
+    "<div id=\"accessDenialWidget\">" +
+    "Hello Sailor" +
     "</div>" ;
 
   private static final String articleAccessDenialContentFiltered = "" ;
