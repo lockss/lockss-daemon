@@ -143,7 +143,7 @@ public class Pub2WebUrlConsumerFactory implements UrlConsumerFactory {
 		@Override
 		public boolean shouldStoreAtOrigUrl() {
 			// Let the parent handle all standard http to https consumption - one hop only
-			boolean should = super.shouldStoreAtOrigUrl();
+			boolean should = shouldStoreRedirectsAtOrigUrl();
 			// If that failed, then see if this case should be part of pub2web specific consumption
 			// which will also handle http to https as part of longer redirect chain
 			// because the patterns checked are independent of protocol
@@ -159,59 +159,22 @@ public class Pub2WebUrlConsumerFactory implements UrlConsumerFactory {
 			}
 			return should;
 		}
+
+		/*
+		Same as super shouldStoreAtOrigUrl but allow for multiple hops.
+		 */
+		protected boolean shouldStoreRedirectsAtOrigUrl() {
+
+			boolean should =  fud.redirectUrls != null
+							&& fud.redirectUrls.size() >= 1
+							&& destFullTextPat.matcher(fud.fetchUrl).find()
+							&& origFullTextPat.matcher(fud.origUrl).find();
+
+			if (!should) {
+				log.debug3("NOT swallowing this redirect by shouldStoreRedirectsAtOrigUrl");
+			}
+			return should;
+		}
 	}
 }
-
-    
-    /*
-    @Override
-    public void consume() throws IOException {
-
-      // a more complicated redirect, which *may* include the https redirection as well
-      // This handles deliver to docserver case
-      boolean should = shouldStoreRedirectsAtOrigUrl();
-
-      if (!should) {
-          should = shouldStoreAtOrigUrlVanilla();
-      }
-
-      if (should) {
-        // SimpleUrlConsumer stores at fud.origUrl, and processes the redirect
-        storeAtOrigUrl();
-      }
-
-      super.consume();
-    }
-
-
-    protected boolean shouldStoreRedirectsAtOrigUrl() {
-
-      boolean should =  fud.redirectUrls != null
-              && fud.redirectUrls.size() >= 1
-              && destFullTextPat.matcher(fud.fetchUrl).find()
-              && origFullTextPat.matcher(fud.origUrl).find();
-
-      if (!should) {
-        log.debug3("NOT swallowing this redirect by shouldStoreRedirectsAtOrigUrl");
-      }
-      return should;
-    }
-
-    public boolean shouldStoreAtOrigUrlVanilla() {
-
-      boolean should = AuUtil.isBaseUrlHttp(au)
-              && fud.redirectUrls != null
-              && fud.redirectUrls.size() >= 1
-              && UrlUtil.isHttpUrl(fud.origUrl)
-              && UrlUtil.isHttpsUrl(fud.fetchUrl)
-              && UrlUtil.stripProtocol(fud.origUrl).equals(UrlUtil.stripProtocol(fud.fetchUrl));
-
-      if (!should) {
-        log.debug3("NOT swallowing this redirect by shouldStoreAtOrigUrlVanilla function");
-      }
-
-      return should;
-
-    }
-    */
 
