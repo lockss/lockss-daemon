@@ -186,7 +186,7 @@ public class GeorgThiemeVerlagHtmlMetadataExtractorFactory implements FileMetada
   	  id = id.trim().replaceAll("-", "");
   	  Matcher protocol_match = PROTOCOL_PATTERN.matcher(id);
   	  if (protocol_match.find()) {
-  		  return id.substring(0, protocol_match.end());
+  		  return id.substring(protocol_match.end());
   	  }
   	  return id;
     }

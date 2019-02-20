@@ -36,6 +36,8 @@ import org.lockss.config.*;
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.atypon.BaseAtyponMetadataUtil;
+import org.lockss.plugin.georgthiemeverlag.GeorgThiemeVerlagHtmlMetadataExtractorFactory.GeorgThiemeVerlagHtmlMetadataExtractor;
 import org.lockss.plugin.simulated.*;
 
 /**
@@ -106,6 +108,32 @@ public class TestGeorgThiemeVerlagHtmlMetadataExtractorFactory extends LockssTes
     return conf;
   }
 
+  /*
+   * Test utility functions
+   */
+  public void testNormalizeIdValue() throws Exception {
+
+	  	//issn
+	    assertEquals(GeorgThiemeVerlagHtmlMetadataExtractor.normalize_id("1111-2222"),"11112222"); 
+	    assertEquals(GeorgThiemeVerlagHtmlMetadataExtractor.normalize_id("  1111-2222"),"11112222"); 
+	    assertEquals(GeorgThiemeVerlagHtmlMetadataExtractor.normalize_id("1111-2222  "),"11112222"); 
+	    assertEquals(GeorgThiemeVerlagHtmlMetadataExtractor.normalize_id("11112222"),"11112222"); 
+	    assertEquals(GeorgThiemeVerlagHtmlMetadataExtractor.normalize_id("eissn: 1111-2222"),"11112222"); 
+	    assertEquals(GeorgThiemeVerlagHtmlMetadataExtractor.normalize_id("eissN:    1111-2222"),"11112222"); 
+	    assertEquals(GeorgThiemeVerlagHtmlMetadataExtractor.normalize_id("issN:    1111-2222"),"11112222"); 
+	    assertEquals(GeorgThiemeVerlagHtmlMetadataExtractor.normalize_id(" issN:    1111-2222"),"11112222"); 
+	    //isbn       
+	    assertEquals(GeorgThiemeVerlagHtmlMetadataExtractor.normalize_id("978-0-89118-196-5"),"9780891181965"); 
+	    assertEquals(GeorgThiemeVerlagHtmlMetadataExtractor.normalize_id("  978-0-89118-196-5"),"9780891181965"); 
+	    assertEquals(GeorgThiemeVerlagHtmlMetadataExtractor.normalize_id("9-7-8-0-89118-196-5"),"9780891181965"); 
+	    assertEquals(GeorgThiemeVerlagHtmlMetadataExtractor.normalize_id("978-0-89118-196-5   "),"9780891181965"); 
+	    assertEquals(GeorgThiemeVerlagHtmlMetadataExtractor.normalize_id("9780891181965"),"9780891181965"); 
+	    assertEquals(GeorgThiemeVerlagHtmlMetadataExtractor.normalize_id("isbn: 978-0-89118-196-5 "),"9780891181965"); 
+	    assertEquals(GeorgThiemeVerlagHtmlMetadataExtractor.normalize_id("EISBn:   978-0-89118-196-5  "),"9780891181965"); 
+
+}  
+  
+  
   String goodDate = "2010/08/25";
   String goodSubject = "Subj";
   String goodArticle = "Some Article Title";
