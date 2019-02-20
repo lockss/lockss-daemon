@@ -334,11 +334,16 @@
          OR base_url + na10x/home/..../covergifs/..*.jpg (inderscience, temporarily provided)
          OR base_url + na10x/home/.*.fp.png (inderscience, tempoarily provided firstpage of article)
            ex: ..home/literatum/.../ijpe.2015.1.issue-3/ijpe.2015.071062/20150811/ijpe.2015.071062.fp.png_v03 
+           ex2: ..content/wefo/2019/15200434-34.1/15200434-34.1/20181226/15200434-34.1.cover.jpg
+         OR (added as a separate line in case removed later)
+         we are seeing datestamp variation of the figures/tables urls over time; for now just replicate and ignore
+           base_url + na10x/home/.../images/
          -->
     <list>
       <string>://[^/]+/(templates/jsp|(css|img|js)Jawr|fonts|pb-assets|resources|sda|wro|products/photo-theme)/</string>
       <string>/(assets|css|img|js|wro)/.+\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$</string>
-      <string>://[^/]+/na[0-9]+/home/(readonly|literatum)/publisher/.*(/covergifs/.*\.jpg|\.fp\.png(_v[0-9]+)?)$</string>
+      <string>://[^/]+/na[0-9]+/home/(readonly|literatum)/publisher/.*(cover\.jpg|/covergifs/.*\.jpg|\.fp\.png(_v[0-9]+)?)$</string>
+      <string>://[^/]+/na[0-9]+/home/(readonly|literatum)/publisher/.*/images/.*\.(gif|jpe?g|png)$</string>
     </list>
   </entry>
   <!-- don't worry about polling for those low-importance files that will 
@@ -348,7 +353,9 @@
     <list>
       <string>://[^/]+/(templates/jsp|(css|img|js)Jawr|fonts|pb-assets|resources|sda|wro|products/photo-theme)/, 0</string>
       <string>/(assets|css|img|js|wro)/.+\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$, 0</string>
-      <string>://[^/]+/na[0-9]+/home/(readonly|literatum)/publisher/.*(/covergifs/.*\.jpg|\.fp\.png(_v[0-9]+)?)$, 0</string>
+      <string>://[^/]+/na[0-9]+/home/(readonly|literatum)/publisher/.*(cover\.jpg|/covergifs/.*\.jpg|\.fp\.png(_v[0-9]+)?)$, 0</string>
+      <!--  we are seeing datestamp variation of the figures/tables urls over time; for now just replicate and ignore -->      
+      <string>://[^/]+/na[0-9]+/home/(readonly|literatum)/publisher/.*/images/.*\.(gif|jpe?g|png)$, 0</string>
     </list>
   </entry>
   <!-- GLN children require a plugin_au_config_user_msg, which can be a printf -->

@@ -18,7 +18,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>37</string>
+    <string>38</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -252,10 +252,14 @@
     <string>au_repair_from_peer_if_missing_url_pattern</string>
     <!-- base_url host or cdn host + templates/jsp/. or any of (img|css|js)Jawr/ or sda/
          OR /(img|css|js)/ if ends .css, .js, etc 
+         Adding in the replication of images under na101/... because of changing date path
+	     in two separate patterns for now as the second one represents content images
          -->
     <list>
       <string>://[^/]+/(templates/jsp|(css|img|js)Jawr|pb-assets|resources|sda|wro)/</string>
       <string>/(assets|css|img|js|wro)/.+\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$</string>
+      <string>://[^/]+/na[0-9]+/home/(readonly|literatum)/publisher/.*(cover\.jpg|/covergifs/.*\.jpg|\.fp\.png(_v[0-9]+)?)$</string>
+      <string>://[^/]+/na[0-9]+/home/(readonly|literatum)/publisher/.*/images/.*\.(gif|jpe?g|png)$</string>
     </list>
   </entry>
   <!-- don't worry about polling for those low-importance files that will 
@@ -265,6 +269,9 @@
     <list>
       <string>://[^/]+/(templates/jsp|(css|img|js)Jawr|pb-assets|resources|sda|wro)/, 0</string>
       <string>/(assets|css|img|js|wro)/.+\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$, 0</string>
+      <string>://[^/]+/na[0-9]+/home/(readonly|literatum)/publisher/.*(cover\.jpg|/covergifs/.*\.jpg|\.fp\.png(_v[0-9]+)?)$, 0</string>
+      <!--  we are seeing datestamp variation of the figures/tables urls over time; for now just replicate and ignore -->      
+      <string>://[^/]+/na[0-9]+/home/(readonly|literatum)/publisher/.*/images/.*\.(gif|jpe?g|png)$, 0</string>
     </list>
   </entry>
   <!-- GLN children require a plugin_au_config_user_msg, which can be a printf -->

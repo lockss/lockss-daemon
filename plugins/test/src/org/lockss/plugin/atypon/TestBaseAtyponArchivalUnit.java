@@ -67,13 +67,16 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     {
     "://[^/]+/(templates/jsp|(css|img|js)Jawr|fonts|pb-assets|resources|sda|wro|products/photo-theme)/",
     "/(assets|css|img|js|wro)/.+\\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$",
-    "://[^/]+/na[0-9]+/home/(readonly|literatum)/publisher/.*(/covergifs/.*\\.jpg|\\.fp\\.png(_v[0-9]+)?)$",
+    "://[^/]+/na[0-9]+/home/(readonly|literatum)/publisher/.*(cover\\.jpg|/covergifs/.*\\.jpg|\\.fp\\.png(_v[0-9]+)?)$",
+    "://[^/]+/na[0-9]+/home/(readonly|literatum)/publisher/.*/images/.*\\.(gif|jpe?g|png)$",
     };
 
   static final String bookRepairList[] = 
     {
     "://[^/]+/(templates/jsp|(css|img|js)Jawr|pb-assets|resources|sda|wro)/",
     "/(assets|css|img|js|wro)/.+\\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$",
+    "://[^/]+/na[0-9]+/home/(readonly|literatum)/publisher/.*(cover\\.jpg|/covergifs/.*\\.jpg|\\.fp\\.png(_v[0-9]+)?)$",
+    "://[^/]+/na[0-9]+/home/(readonly|literatum)/publisher/.*/images/.*\\.(gif|jpe?g|png)$",
     };
 
   
@@ -436,6 +439,7 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
         "http://www.inderscienceonline.com/na102/home/readonly/publisher/indersci/journals/covergifs/ijlt/cover.jpg",
         "http://www.inderscienceonline.com/na101/home/literatum/publisher/indersci/journals/covergifs/ijlt/cover.jpg",
         "http://www.inderscienceonline.com/na101/home/literatum/publisher/indersci/journals/content/ijpe/2015/ijpe.2015.1.issue-3/ijpe.2015.071062/20150811/ijpe.2015.071062.fp.png_v03",
+        "https://journals.ametsoc.org/na101/home/literatum/publisher/ams/journals/content/wefo/2019/15200434-34.1/15200434-34.1/20181226/15200434-34.1.cover.jpg",
         //variant on pb-assets in now defunct Maney
         "http://www.maneyonline.com/pb/assets/raw/sub-hist.png",
         "http://www.emeraldinsight.com/wro/product.css",
@@ -444,12 +448,14 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
      Pattern p0 = Pattern.compile(baseRepairList[0]);
      Pattern p1 = Pattern.compile(baseRepairList[1]);
      Pattern p2 = Pattern.compile(baseRepairList[2]);
-     Matcher m0, m1, m2;
+     Pattern p3 = Pattern.compile(baseRepairList[3]);
+     Matcher m0, m1, m2, m3;
      for (String urlString : repairList) {
        m0 = p0.matcher(urlString);
        m1 = p1.matcher(urlString);
        m2 = p2.matcher(urlString);
-       assertEquals(urlString, true, m0.find() || m1.find() || m2.find());
+       m3 = p3.matcher(urlString);
+       assertEquals(urlString, true, m0.find() || m1.find() || m2.find() || m3.find());
      }
      //and this one should fail - it needs to be weighted correctly and repaired from publisher if possible
      String notString ="http://www.emeraldinsight.com/na101/home/literatum/publisher/emerald/books/content/books/2013/9781781902868/9781781902868-007/20160215/images/small/figure1.gif";
@@ -457,6 +463,11 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
      m1 = p1.matcher(notString);
      m2 = p2.matcher(notString);
      assertEquals(false, m0.find() && m1.find() && m2.find());
+     //except now we've added a pattern to allow it so on pattern 3 it should pass - this might be temporary
+     // note that the above is no longer there, it now lives at
+     // https://www.emeraldinsight.com/na101/home/literatum/publisher/emerald/books/content/books/2013/9781781902868/9781781902868-007/20170623/images/small/figure1.gif 
+     m3 = p3.matcher(notString);
+     assertEquals(true, m3.find());
 
      
     PatternFloatMap urlPollResults = FooAu.makeUrlPollResultWeightMap();
@@ -466,7 +477,9 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
           urlPollResults.getMatch(urlString, (float) 1),
           .0001);
     }
-    assertEquals(1.0, urlPollResults.getMatch(notString, (float) 1), .0001);
+    // This for now weights to zero also
+    //assertEquals(1.0, urlPollResults.getMatch(notString, (float) 1), .0001);
+    assertEquals(0.0, urlPollResults.getMatch(notString, (float) 1), .0001);
   }
   
   public void testPollSpecialBooks() throws Exception {
@@ -492,17 +505,26 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
         "http://www.emeraldinsight.com/pb/css/t1459270391157-v1459207566000/head_14_18_329.css");
     Pattern p0 = Pattern.compile(baseRepairList[0]);
     Pattern p1 = Pattern.compile(baseRepairList[1]);
-    Matcher m0, m1;
+    Pattern p2 = Pattern.compile(baseRepairList[2]);
+    Pattern p3 = Pattern.compile(baseRepairList[3]);
+    Matcher m0, m1, m2, m3;
     for (String urlString : repairList) {
       m0 = p0.matcher(urlString);
       m1 = p1.matcher(urlString);
-      assertEquals(urlString, true, m0.find() || m1.find());
+      m2 = p2.matcher(urlString);
+      m3 = p3.matcher(urlString);
+      assertEquals(urlString, true, m0.find() || m1.find() || m2.find() || m3.find());
     }
      //and this one should fail - it needs to be weighted correctly and repaired from publisher if possible
      String notString ="http://www.emeraldinsight.com/na101/home/literatum/publisher/emerald/books/content/books/2013/9781781902868/9781781902868-007/20160215/images/small/figure1.gif";
      m0 = p0.matcher(notString);
      m1 = p1.matcher(notString);
-     assertEquals(false, m0.find() && m1.find());
+     m2 = p2.matcher(notString);
+     assertEquals(false, m0.find() && m1.find() || m2.find());
+     // now it passes with the final regex
+     m3 = p3.matcher(notString);
+     assertEquals(true, m3.find());
+     
 
      
     PatternFloatMap urlPollResults = FooBookAu.makeUrlPollResultWeightMap();
@@ -512,7 +534,9 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
           urlPollResults.getMatch(urlString, (float) 1),
           .0001);
     }
-    assertEquals(1.0, urlPollResults.getMatch(notString, (float) 1), .0001);
+    //assertEquals(1.0, urlPollResults.getMatch(notString, (float) 1), .0001);
+    //this now is weighted to zero
+    assertEquals(0.0, urlPollResults.getMatch(notString, (float) 1), .0001);
   }
 
 
