@@ -6467,7 +6467,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Health & Social Work Volume 40 ; 40 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Health & Social Work Volume 41 ; 41 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Health & Social Work Volume 42 ; 42 ; reingest4.clockss.org:8082 >
-    au < testing ; exists ; 2018 ; 2018 ; Health & Social Work Volume 43 ; 43 ; >
+    au < ready ; exists ; 2018 ; 2018 ; Health & Social Work Volume 43 ; 43 ; >
 
   }
 
@@ -7036,7 +7036,7 @@
     au < frozen ; exists ; 2015 ; 2015 ; ICSID Review: Foreign Investment Law Journal Volume 30 ; 30 ; >
     au < frozen ; exists ; 2016 ; 2016 ; ICSID Review: Foreign Investment Law Journal Volume 31 ; 31 ; >
     au < frozen ; exists ; 2017 ; 2017 ; ICSID Review: Foreign Investment Law Journal Volume 32 ; 32 ; >
-    au < testing ; exists ; 2018 ; 2018 ; ICSID Review: Foreign Investment Law Journal Volume 33 ; 33 ; >
+    au < ready ; exists ; 2018 ; 2018 ; ICSID Review: Foreign Investment Law Journal Volume 33 ; 33 ; >
 
   }
 
@@ -7093,7 +7093,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; ILAR Journal Volume 54-55 ; 54-55 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; ILAR Journal Volume 56 ; 56 ; >
     au < frozen ; exists ; 2016 ; 2016 ; ILAR Journal Volume 57 ; 57 ; >
-    au < testing ; exists ; 2017 ; 2017 ; ILAR Journal Volume 58 ; 58 ; >
+    au < ready ; exists ; 2017 ; 2017 ; ILAR Journal Volume 58 ; 58 ; >
     au < expected ; exists ; 2018 ; 2018 ; ILAR Journal Volume 59 ; 59 ; >
 
   }
@@ -7589,7 +7589,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Integrative and Comparative Biology Volume 55 ; 55 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Integrative and Comparative Biology Volume 56 ; 56 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Integrative and Comparative Biology Volume 57 ; 57 ; >
-    au < testing ; exists ; 2018 ; 2018 ; Integrative and Comparative Biology Volume 58 ; 58 ; >
+    au < ready ; exists ; 2018 ; 2018 ; Integrative and Comparative Biology Volume 58 ; 58 ; >
 
   }
 
@@ -7770,7 +7770,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Immunology Volume 27 ; 27 ; >
     au < frozen ; exists ; 2016 ; 2016 ; International Immunology Volume 28 ; 28 ; >
     au < frozen ; exists ; 2017 ; 2017 ; International Immunology Volume 29 ; 29 ; >
-    au < testing ; exists ; 2018 ; 2018 ; International Immunology Volume 30 ; 30 ; >
+    au < ready ; exists ; 2018 ; 2018 ; International Immunology Volume 30 ; 30 ; >
 
   }
 
@@ -13618,7 +13618,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Nucleic Acids Research Volume 42 ; 42 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Nucleic Acids Research Volume 43 ; 43 ; >
     au < testing ; exists ; 2016 ; 2016 ; Nucleic Acids Research Volume 44 ; 44 ; >
-    au < testing ; exists ; 2017 ; 2017 ; Nucleic Acids Research Volume 45 ; 45 ; >
+    au < ready ; exists ; 2017 ; 2017 ; Nucleic Acids Research Volume 45 ; 45 ; >
     au < testing ; exists ; 2018 ; 2018 ; Nucleic Acids Research Volume 46 ; 46 ; >
 
   }
