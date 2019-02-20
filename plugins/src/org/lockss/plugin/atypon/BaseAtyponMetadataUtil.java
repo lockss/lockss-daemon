@@ -3,7 +3,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2019 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -38,9 +38,7 @@ import java.util.regex.Pattern;
 
 import org.apache.commons.lang.StringUtils;
 import org.lockss.config.TdbAu;
-import org.lockss.config.TdbPublisher;
 import org.lockss.daemon.ConfigParamDescr;
-import org.lockss.daemon.TitleConfig;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.MetadataField;
 import org.lockss.plugin.ArchivalUnit;
@@ -62,7 +60,8 @@ public class BaseAtyponMetadataUtil {
   
   private static final String BOOK_EISBN_PARAM = "book_eisbn";
   private static final String AU_TYPE = "type";
-  private static final Pattern PROTOCOL_PATTERN = Pattern.compile("^(e)isbn:(\\s)*", Pattern.CASE_INSENSITIVE);
+  private static final Pattern PROTOCOL_PATTERN = Pattern.compile("^(e)?is(b|s)n:(\\s)*", Pattern.CASE_INSENSITIVE);
+
   /**
    * html "dc.*" information may not contain publication title and volume
    * ris information usually does.
@@ -96,14 +95,14 @@ public class BaseAtyponMetadataUtil {
     
     // if we do an ISSN check, then we can bypass checking the title later, which is trickier
     Boolean checkedISSN = false;
-    String AU_ISSN = (tdbau == null) ? null : normalize_isbn(tdbau.getPrintIsbn());
-    String AU_EISSN = (tdbau == null) ? null : normalize_isbn(tdbau.getEissn());
+    String AU_ISSN = (tdbau == null) ? null : normalize_id(tdbau.getPrintIssn());
+    String AU_EISSN = (tdbau == null) ? null : normalize_id(tdbau.getEissn());
     // If the tdb lists both values for issn, then check with our found values
     // If we only list one value then don't use this check - what if the au
     // only had the EISSN and the article only listed the ISSN - false negative
     if ( !(StringUtils.isEmpty(AU_ISSN) || StringUtils.isEmpty(AU_EISSN)) ){
-      String foundEISSN = normalize_isbn(am.get(MetadataField.FIELD_EISSN));
-      String foundISSN = normalize_isbn(am.get(MetadataField.FIELD_ISSN));
+      String foundEISSN = normalize_id(am.get(MetadataField.FIELD_EISSN));
+      String foundISSN = normalize_id(am.get(MetadataField.FIELD_ISSN));
       checkedISSN = true;
       // don't go crazy. If the EISSN is there and matches, just move on
       if (foundEISSN != null) { 
@@ -215,8 +214,8 @@ public class BaseAtyponMetadataUtil {
 
     // Use the book information from the ArticleMetadata
     // remove leading protocol and "-" and extraneous spaces
-    String foundEISBN = normalize_isbn(am.get(MetadataField.FIELD_EISBN));
-    String foundISBN = normalize_isbn(am.get(MetadataField.FIELD_ISBN));
+    String foundEISBN = normalize_id(am.get(MetadataField.FIELD_EISBN));
+    String foundISBN = normalize_id(am.get(MetadataField.FIELD_ISBN));
 
     // If we got nothing, just return, we can't validate
     if (StringUtils.isEmpty(foundEISBN) &&
@@ -228,7 +227,7 @@ public class BaseAtyponMetadataUtil {
     // Get the AU's volume name from the AU properties. This must be set
     TypedEntryMap tfProps = au.getProperties();
     String AU_EISBN = tfProps.getString(BOOK_EISBN_PARAM);
-    String AU_ISBN = (tdbau == null) ? null : normalize_isbn(tdbau.getPrintIsbn());
+    String AU_ISBN = (tdbau == null) ? null : normalize_id(tdbau.getPrintIsbn());
     
     // this is a param...it can't be null, but be safe
     if (AU_EISBN == null) {
@@ -322,16 +321,19 @@ public class BaseAtyponMetadataUtil {
     return outTitle;
   }
   
-  public static String normalize_isbn(String isbn) {
-    if (isbn == null) {return null;}
-    isbn = isbn.trim().replaceAll("-", "");
-    Matcher protocol_match = PROTOCOL_PATTERN.matcher(isbn);
+  
+  /* 
+   * This could work for both ISBN and ISSN type ids
+   */
+  public static String normalize_id(String id) {
+    if (id == null) {return null;}
+    id = id.trim().replaceAll("-", "");
+    Matcher protocol_match = PROTOCOL_PATTERN.matcher(id);
     if (protocol_match.find()) {
-      return isbn.substring(0, protocol_match.end());
+      return id.substring(protocol_match.end());
     }
-    return isbn;
+    return id;
   }
-
 
   /*
    *  We can do a little additional cleanup

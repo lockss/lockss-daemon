@@ -142,6 +142,28 @@ public class TestBaseAtyponMetadataExtractor extends LockssTestCase {
 
     
   }
+  
+  public void testNormalizeIdValue() throws Exception {
+
+	  	//issn
+	    assertEquals(BaseAtyponMetadataUtil.normalize_id("1111-2222"),"11112222"); 
+	    assertEquals(BaseAtyponMetadataUtil.normalize_id("  1111-2222"),"11112222"); 
+	    assertEquals(BaseAtyponMetadataUtil.normalize_id("1111-2222  "),"11112222"); 
+	    assertEquals(BaseAtyponMetadataUtil.normalize_id("11112222"),"11112222"); 
+	    assertEquals(BaseAtyponMetadataUtil.normalize_id("eissn: 1111-2222"),"11112222"); 
+	    assertEquals(BaseAtyponMetadataUtil.normalize_id("eissN:    1111-2222"),"11112222"); 
+	    assertEquals(BaseAtyponMetadataUtil.normalize_id("issN:    1111-2222"),"11112222"); 
+	    assertEquals(BaseAtyponMetadataUtil.normalize_id(" issN:    1111-2222"),"11112222"); 
+	    //isbn
+	    assertEquals(BaseAtyponMetadataUtil.normalize_id("978-0-89118-196-5"),"9780891181965"); 
+	    assertEquals(BaseAtyponMetadataUtil.normalize_id("  978-0-89118-196-5"),"9780891181965"); 
+	    assertEquals(BaseAtyponMetadataUtil.normalize_id("9-7-8-0-89118-196-5"),"9780891181965"); 
+	    assertEquals(BaseAtyponMetadataUtil.normalize_id("978-0-89118-196-5   "),"9780891181965"); 
+	    assertEquals(BaseAtyponMetadataUtil.normalize_id("9780891181965"),"9780891181965"); 
+	    assertEquals(BaseAtyponMetadataUtil.normalize_id("isbn: 978-0-89118-196-5 "),"9780891181965"); 
+	    assertEquals(BaseAtyponMetadataUtil.normalize_id("EISBn:   978-0-89118-196-5  "),"9780891181965"); 
+  
+  }
 
   /**
    * Configuration method. 
