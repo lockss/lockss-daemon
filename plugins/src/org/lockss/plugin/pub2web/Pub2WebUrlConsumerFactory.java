@@ -115,11 +115,14 @@ public class Pub2WebUrlConsumerFactory implements UrlConsumerFactory {
 	 *   &checksum=BAE31918F398930F23AA6FF787ADEA8   
 	 *      
 	 * @since 1.67.5
+	 *
+	 * http://mic.microbiologyresearch.org/deliver/fulltext/micro/164/12/1567_micro000734.pdf?itemId=/content/journal/micro/10.1099/mic.0.000734mimeType=application/pdf
+	 * Certain .PDF urls passed in without "&" in front of "mimeType", still need to handle it in order to avoid multiple copies saved
 	 */
 	public class Pub2WebUrlConsumer extends HttpToHttpsUrlConsumer {
 
 		public static final String DEL_URL = "deliver/fulltext/";
-		public static final String DEL_ARGS = "\\?itemId=[^&]+(&|&amp;)mimeType=[^&]+";
+		public static final String DEL_ARGS = "\\?itemId=[^&]+(&|&amp;)?mimeType=[^&]+";
 		public static final String DOC_URL = "docserver/fulltext/";
 		public static final String DOC_ARGS = "\\?expires=[^&]+(&|&amp;)id=id&accname=[^&]+(&|&amp;)checksum=.+$";
 
@@ -165,10 +168,12 @@ public class Pub2WebUrlConsumerFactory implements UrlConsumerFactory {
 		 */
 		protected boolean shouldStoreRedirectsAtOrigUrl() {
 
-			boolean should =  fud.redirectUrls != null
+			boolean should = AuUtil.isBaseUrlHttp(au)
+							&& fud.redirectUrls != null
 							&& fud.redirectUrls.size() >= 1
-							&& destFullTextPat.matcher(fud.fetchUrl).find()
-							&& origFullTextPat.matcher(fud.origUrl).find();
+							&& UrlUtil.isHttpUrl(fud.origUrl)
+							&& UrlUtil.isHttpsUrl(fud.fetchUrl)
+							&& UrlUtil.stripProtocol(fud.origUrl).equals(UrlUtil.stripProtocol(fud.fetchUrl));
 
 			if (!should) {
 				log.debug3("NOT swallowing this redirect by shouldStoreRedirectsAtOrigUrl");
