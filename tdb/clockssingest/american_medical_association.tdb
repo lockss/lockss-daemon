@@ -92,7 +92,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; JAMA Internal Medicine Volume 175 ; 2015 ; https://jamanetwork.com/ ; >
     au < finished ; crawling ; 2016 ; JAMA Internal Medicine Volume 176 ; 2016 ; http://jamanetwork.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; JAMA Internal Medicine Volume 177 ; 2017 ; http://jamanetwork.com/ ; >
-    au < crawling ; exists ; 2018 ; JAMA Internal Medicine Volume 178 ; 2018 ; https://jamanetwork.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; JAMA Internal Medicine Volume 178 ; 2018 ; https://jamanetwork.com/ ; >
 
   }
 

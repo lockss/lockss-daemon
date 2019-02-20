@@ -138,7 +138,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Aspasia Volume 9 ; 9 ; >
     au < frozen ; exists ; 2016 ; Aspasia Volume 10 ; 10 ; >
     au < finished ; crawling ; 2017 ; Aspasia Volume 11 ; 11 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; Aspasia Volume 12 ; 12 ; >
+    au < deepCrawl ; exists ; 2018 ; Aspasia Volume 12 ; 12 ; >
     
   }
 
@@ -607,7 +607,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Historical Reflections/Reflexions Historiques Volume 41 ; 41 ; >
     au < frozen ; exists ; 2016 ; Historical Reflections/Reflexions Historiques Volume 42 ; 42 ; >
     au < finished ; crawling ; 2017 ; Historical Reflections/Reflexions Historiques Volume 43 ; 43 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2018 ; Historical Reflections/Reflexions Historiques Volume 44 ; 44 ; >
+    au < deepCrawl ; exists ; 2018 ; Historical Reflections/Reflexions Historiques Volume 44 ; 44 ; >
     
   }
 
@@ -886,7 +886,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Projections Volume 9 ; 9 ; >
     au < frozen ; exists ; 2016 ; Projections Volume 10 ; 10 ; >
     au < finished ; crawling ; 2017 ; Projections Volume 11 ; 11 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; Projections Volume 12 ; 12 ; >
+    au < deepCrawl ; exists ; 2018 ; Projections Volume 12 ; 12 ; >
     
   }
 

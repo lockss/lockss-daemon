@@ -124,7 +124,7 @@
       au < finished ; finished ; 2015 ; 2015 ; Advances in Science and Research Volume 12 ; 12 ; http://www.adv-sci-res.net/ ; http://www.advances-in-science-and-research.net/ ; >
       au < finished ; crawling ; 2016 ; 2016 ; Advances in Science and Research Volume 13 ; 13 ; http://www.adv-sci-res.net/ ; http://www.advances-in-science-and-research.net/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2017 ; 2017 ; Advances in Science and Research Volume 14 ; 14 ; https://www.adv-sci-res.net/ ; https://www.advances-in-science-and-research.net/ ; >
-      au < crawling ; exists ; 2018 ; 2018 ; Advances in Science and Research Volume 15 ; 15 ; https://www.adv-sci-res.net/ ; https://www.advances-in-science-and-research.net/ ; >
+      au < deepCrawl ; exists ; 2018 ; 2018 ; Advances in Science and Research Volume 15 ; 15 ; https://www.adv-sci-res.net/ ; https://www.advances-in-science-and-research.net/ ; >
 
    }
 
@@ -290,7 +290,7 @@
       au < finished ; finished ; 2015 ; 2015 ; Atmospheric Chemistry and Physics Volume 15 ; 15 ; http://www.atmos-chem-phys.net/ ; http://www.atmospheric-chemistry-and-physics.net/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; 2016 ; Atmospheric Chemistry and Physics Volume 16 ; 16 ; http://www.atmos-chem-phys.net/ ; http://www.atmospheric-chemistry-and-physics.net/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2017 ; 2017 ; Atmospheric Chemistry and Physics Volume 17 ; 17 ; https://www.atmos-chem-phys.net/ ; https://www.atmospheric-chemistry-and-physics.net/ ; >
-      au < crawling ; exists ; 2018 ; 2018 ; Atmospheric Chemistry and Physics Volume 18 ; 18 ; https://www.atmos-chem-phys.net/ ; https://www.atmospheric-chemistry-and-physics.net/ ; >
+      au < deepCrawl ; exists ; 2018 ; 2018 ; Atmospheric Chemistry and Physics Volume 18 ; 18 ; https://www.atmos-chem-phys.net/ ; https://www.atmospheric-chemistry-and-physics.net/ ; >
 
    }
 
@@ -1045,7 +1045,7 @@
       au < finished ; finished ; 2015 ; 2015 ; Hydrology and Earth System Sciences Volume 19 ; 19 ; http://www.hydrol-earth-syst-sci.net/ ; http://www.hydrology-and-earth-system-sciences.net/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2016 ; 2016 ; Hydrology and Earth System Sciences Volume 20 ; 20 ; http://www.hydrol-earth-syst-sci.net/ ; http://www.hydrology-and-earth-system-sciences.net/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; 2017 ; Hydrology and Earth System Sciences Volume 21 ; 21 ; https://www.hydrol-earth-syst-sci.net/ ; https://www.hydrology-and-earth-system-sciences.net/ ; >
-      au < crawling ; exists ; 2018 ; 2018 ; Hydrology and Earth System Sciences Volume 22 ; 22 ; https://www.hydrol-earth-syst-sci.net/ ; https://www.hydrology-and-earth-system-sciences.net/ ; >
+      au < deepCrawl ; exists ; 2018 ; 2018 ; Hydrology and Earth System Sciences Volume 22 ; 22 ; https://www.hydrol-earth-syst-sci.net/ ; https://www.hydrology-and-earth-system-sciences.net/ ; >
 
    }
 
@@ -1618,7 +1618,7 @@
       au < finished ; finished ; 2015 ; 2015 ; Scientific Drilling Volume 19 ; 19 ; http://www.sci-dril.net/ ; http://www.scientific-drilling.net/ ; >
       au < finished ; crawling ; 2016 ; 2016 ; Scientific Drilling Volume 20 ; 20 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; 2017 ; Scientific Drilling Volume 21 ; 21 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ ; >
-      au < crawling ; exists ; 2018 ; 2018 ; Scientific Drilling Volume 22 ; 22 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ ; >
+      au < deepCrawl ; exists ; 2018 ; 2018 ; Scientific Drilling Volume 22 ; 22 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ ; >
 
    }
 
@@ -1824,7 +1824,7 @@
       au < finished ; finished ; 2015 ; 2015 ; Web Ecology Volume 15 ; 15 ; http://www.web-ecol.net/ ; http://www.web-ecology.net/ ; >
       au < finished ; crawling ; 2016 ; 2016 ; Web Ecology Volume 16 ; 16 ; https://www.web-ecol.net/ ; https://www.web-ecology.net/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; 2017 ; Web Ecology Volume 17 ; 17 ; https://www.web-ecol.net/ ; https://www.web-ecology.net/ ; >
-      au < crawling ; exists ; 2018 ; 2018 ; Web Ecology Volume 18 ; 18 ; https://www.web-ecol.net/ ; https://www.web-ecology.net/ ; >
+      au < deepCrawl ; exists ; 2018 ; 2018 ; Web Ecology Volume 18 ; 18 ; https://www.web-ecol.net/ ; https://www.web-ecology.net/ ; >
 
    }
 

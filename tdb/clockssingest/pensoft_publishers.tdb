@@ -71,7 +71,7 @@
     au < notReady ; exists ; 2015 ; 10 ; BioRisk Volume 2015 [abstract only] ; 2015 ; https://biorisk.pensoft.net/ ; > #no substance.
     au < frozen ; exists ; 2016 ; 11 ; BioRisk Volume 2016 ; 2016 ; https://biorisk.pensoft.net/ ; >
     au < frozen ; exists ; 2017 ; 12 ; BioRisk Volume 2017 ; 2017 ; https://biorisk.pensoft.net/ ; >
-    au < crawling ; exists ; 2018 ; 13 ; BioRisk Volume 2018 ; 2018 ; https://biorisk.pensoft.net/ ; >
+    au < deepCrawl ; exists ; 2018 ; 13 ; BioRisk Volume 2018 ; 2018 ; https://biorisk.pensoft.net/ ; >
   
    }
    
@@ -241,7 +241,7 @@
     au < frozen ; exists ; 2015 ; 38 ; Nota Lepidopterologica Volume 2015 ; 2015 ; http://nl.pensoft.net/ ; >
     au < frozen ; exists ; 2016 ; 39 ; Nota Lepidopterologica Volume 2016 ; 2016 ; https://nl.pensoft.net/ ; >
     au < frozen ; exists ; 2017 ; 40 ; Nota Lepidopterologica Volume 2017 ; 2017 ; https://nl.pensoft.net/ ; >
-    au < crawling ; exists ; 2018 ; 41 ; Nota Lepidopterologica Volume 2018 ; 2018 ; https://nl.pensoft.net/ ; >
+    au < deepCrawl ; exists ; 2018 ; 41 ; Nota Lepidopterologica Volume 2018 ; 2018 ; https://nl.pensoft.net/ ; >
 
    }
     

@@ -597,7 +597,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Psychiatry Volume 6 ; 6 ; psya ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Psychiatry Volume 7 ; 7 ; psya ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2017 ; Clinical Medicine Insights: Psychiatry Volume 8 ; 8 ; psya ; http://journals.sagepub.com/ ; >
-    au < crawling ; exists ; 2018 ; Clinical Medicine Insights: Psychiatry Volume 9 ; 9 ; psya ; http://journals.sagepub.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Clinical Medicine Insights: Psychiatry Volume 9 ; 9 ; psya ; http://journals.sagepub.com/ ; >
 
   }
 
@@ -815,7 +815,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Gene Regulation and Systems Biology Volume 9 ; 9 ; grsa ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Gene Regulation and Systems Biology Volume 10 ; 10 ; grsa ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2017 ; Gene Regulation and Systems Biology Volume 11 ; 11 ; grsa ; http://journals.sagepub.com/ ; >
-    au < crawling ; exists ; 2018 ; Gene Regulation and Systems Biology Volume 12 ; 12 ; grsa ; http://journals.sagepub.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Gene Regulation and Systems Biology Volume 12 ; 12 ; grsa ; http://journals.sagepub.com/ ; >
 
   }
 

@@ -852,7 +852,7 @@
      
     param[journal_id] = ink
 
-    au < crawling ; exists ; 2018 ; Journal of Inklings Studies Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Journal of Inklings Studies Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
 
   }
 
@@ -1304,7 +1304,7 @@
     au < finished ; finished ; 2015 ; Paragraph Volume 38 ; 38 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2016 ; Paragraph Volume 39 ; 39 ; http://www.euppublishing.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Paragraph Volume 40 ; 40 ; http://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 2018 ; Paragraph Volume 41 ; 41 ; https://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Paragraph Volume 41 ; 41 ; https://www.euppublishing.com/ ; >
 
   }
 
@@ -1370,7 +1370,7 @@
     au < finished ; finished ; 2015 ; Romanticism Volume 21 ; 21 ; http://www.euppublishing.com/ ; >
     au < frozen ; exists ; 2016 ; Romanticism Volume 22 ; 22 ; http://www.euppublishing.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Romanticism Volume 23 ; 23 ; http://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 2018 ; Romanticism Volume 24 ; 24 ; https://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Romanticism Volume 24 ; 24 ; https://www.euppublishing.com/ ; >
 
   }
 
@@ -1581,7 +1581,7 @@
     au < finished ; finished ; 2015 ; Scottish Historical Review Volume 94 ; 94 ; http://www.euppublishing.com/ ; >
     au < frozen ; exists ; 2016 ; Scottish Historical Review Volume 95 ; 95 ; http://www.euppublishing.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Scottish Historical Review Volume 96 ; 96 ; http://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 2018 ; Scottish Historical Review Volume 97 ; 97 ; https://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Scottish Historical Review Volume 97 ; 97 ; https://www.euppublishing.com/ ; >
 
   }
 
@@ -1736,7 +1736,7 @@
        au < doNotProcess ; doNotProcess ; 2015 ; Costume Volume 49 ; 49 ; https://www.euppublishing.com/ ; >
        au < doNotProcess ; exists ; 2016 ; Costume Volume 50 ; 50 ; https://www.euppublishing.com/ ; >
        au < deepCrawl ; exists ; 2017 ; Costume Volume 51 ; 51 ; http://www.euppublishing.com/ ; > #moving to edinburgh
-       au < crawling ; exists ; 2018 ; Costume Volume 52 ; 52 ; https://www.euppublishing.com/ ; >
+       au < deepCrawl ; exists ; 2018 ; Costume Volume 52 ; 52 ; https://www.euppublishing.com/ ; >
 
      }  
      

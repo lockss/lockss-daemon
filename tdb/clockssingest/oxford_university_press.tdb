@@ -49,7 +49,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Acta Biochimica et Biophysica Sinica Volume 47 ; 47 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Acta Biochimica et Biophysica Sinica Volume 48 ; 48 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Acta Biochimica et Biophysica Sinica Volume 49 ; 49 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; 2018 ; Acta Biochimica et Biophysica Sinica Volume 50 ; 50 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Acta Biochimica et Biophysica Sinica Volume 50 ; 50 ; >
 
   }
 
@@ -1396,7 +1396,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Applied Economic Perspectives and Policy Volume 37 ; 37 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Applied Economic Perspectives and Policy Volume 38 ; 38 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Applied Economic Perspectives and Policy Volume 39 ; 39 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Applied Economic Perspectives and Policy Volume 40 ; 40 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Applied Economic Perspectives and Policy Volume 40 ; 40 ; >
 
   }
 
@@ -2029,7 +2029,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; BioScience Volume 65 ; 65 ; >
     au < frozen ; exists ; 2016 ; 2016 ; BioScience Volume 66 ; 66 ; >
     au < frozen ; exists ; 2017 ; 2017 ; BioScience Volume 67 ; 67 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; BioScience Volume 68 ; 68 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; BioScience Volume 68 ; 68 ; >
 
   }
 
@@ -2396,7 +2396,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Biostatistics Volume 16 ; 16 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Biostatistics Volume 17 ; 17 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Biostatistics Volume 18 ; 18 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; 2018 ; Biostatistics Volume 19 ; 19 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Biostatistics Volume 19 ; 19 ; >
 
   }
 
@@ -2421,7 +2421,7 @@
     au < manifest ; exists ; 2015 ; 2015 ; Botanical Journal of the Linnean Society Volume 177-179 ; 177-179 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Botanical Journal of the Linnean Society Volume 180-182 ; 180-182 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Botanical Journal of the Linnean Society Volume 183-185 ; 183-185 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; 2018 ; Botanical Journal of the Linnean Society Volume 186-188 ; 186-188 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Botanical Journal of the Linnean Society Volume 186-188 ; 186-188 ; >
 
   }
 
@@ -3329,7 +3329,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Classical Receptions Journal Volume 7 ; 7 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Classical Receptions Journal Volume 8 ; 8 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Classical Receptions Journal Volume 9 ; 9 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; 2018 ; Classical Receptions Journal Volume 10 ; 10 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Classical Receptions Journal Volume 10 ; 10 ; >
 
   }
 
@@ -3384,7 +3384,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Clinical Infectious Diseases Volume 60-61 ; 60-61 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Clinical Infectious Diseases Volume 62-63 ; 62-63 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Clinical Infectious Diseases Volume 64-65 ; 64-65 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Clinical Infectious Diseases Volume 66-67 ; 66-67 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Clinical Infectious Diseases Volume 66-67 ; 66-67 ; >
 
   }
 
@@ -3606,7 +3606,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Contemporary Women's Writing Volume 9 ; 9 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Contemporary Women's Writing Volume 10 ; 10 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Contemporary Women's Writing Volume 11 ; 11 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; 2018 ; Contemporary Women's Writing Volume 12 ; 12 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Contemporary Women's Writing Volume 12 ; 12 ; >
 
   }
 
@@ -4117,7 +4117,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; EP Europace Volume 17 ; 17 ; >
     au < frozen ; exists ; 2016 ; 2016 ; EP Europace Volume 18 ; 18 ; >
     au < frozen ; exists ; 2017 ; 2017 ; EP Europace Volume 19 ; 19 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; EP Europace Volume 20 ; 20 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; EP Europace Volume 20 ; 20 ; >
 
   }
 
@@ -5539,7 +5539,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; FEMS Yeast Research Volume 15 ; 15 ; >
     au < frozen ; exists ; 2016 ; 2016 ; FEMS Yeast Research Volume 16 ; 16 ; >
     au < finished ; crawling ; 2017 ; 2017 ; FEMS Yeast Research Volume 17 ; 17 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; 2018 ; FEMS Yeast Research Volume 18 ; 18 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; FEMS Yeast Research Volume 18 ; 18 ; >
 
   }
 
@@ -6711,7 +6711,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Holocaust and Genocide Studies Volume 29 ; 29 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Holocaust and Genocide Studies Volume 30 ; 30 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Holocaust and Genocide Studies Volume 31 ; 31 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2018 ; 2018 ; Holocaust and Genocide Studies Volume 32 ; 32 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Holocaust and Genocide Studies Volume 32 ; 32 ; >
 
   }
 
@@ -10222,7 +10222,7 @@
 
     au < frozen ; exists ; 2016 ; 2016 ; Journal of Language Evolution Volume 1 ; 1 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Journal of Language Evolution Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Journal of Language Evolution Volume 3 ; 3 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Journal of Language Evolution Volume 3 ; 3 ; >
 
   }
 

@@ -511,7 +511,7 @@
     au < finished ; finished ; 2015 ; Local and Regional Anesthesia Volume 8 ; 8 ; 2015 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2016 ; Local and Regional Anesthesia Volume 9 ; 9 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Local and Regional Anesthesia Volume 10 ; 10 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Local and Regional Anesthesia Volume 11 ; 11 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Local and Regional Anesthesia Volume 11 ; 11 ; 2018 ; >
 
   }
 
@@ -534,7 +534,7 @@
     au < finished ; finished ; 2015 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 8 ; 8 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 9 ; 9 ; 2016 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 10 ; 10 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 11 ; 11 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 11 ; 11 ; 2018 ; >
 
   }
 
@@ -580,7 +580,7 @@
     au < finished ; finished ; 2015 ; Clinical and Experimental Gastroenterology Volume 8 ; 8 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Clinical and Experimental Gastroenterology Volume 9 ; 9 ; 2016 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Clinical and Experimental Gastroenterology Volume 10 ; 10 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Clinical and Experimental Gastroenterology Volume 11 ; 11 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Clinical and Experimental Gastroenterology Volume 11 ; 11 ; 2018 ; >
 
   }
 
@@ -919,7 +919,7 @@
     au < finished ; finished ; 2015 ; Reports in Medical Imaging Volume 8 ; 8 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Reports in Medical Imaging Volume 9 ; 9 ; 2016 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Reports in Medical Imaging Volume 10 ; 10 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Reports in Medical Imaging Volume 11 ; 11 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Reports in Medical Imaging Volume 11 ; 11 ; 2018 ; >
 
   }
 
@@ -1075,7 +1075,7 @@
     au < finished ; finished ; 2015 ; Risk Management and Healthcare Policy Volume 8 ; 7 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Risk Management and Healthcare Policy Volume 9 ; 9 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Risk Management and Healthcare Policy Volume 10 ; 10 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Risk Management and Healthcare Policy Volume 11 ; 11 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Risk Management and Healthcare Policy Volume 11 ; 11 ; 2018 ; >
 
   }
 
@@ -1923,7 +1923,7 @@
     au < finished ; finished ; 2015 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 5 ; 5 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 6 ; 6 ; 2016 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 7 ; 7 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 8 ; 8 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 8 ; 8 ; 2018 ; >
 
   }
 
@@ -2140,7 +2140,7 @@
     au < finished ; finished ; 2015 ; Medicolegal and Bioethics Volume 5 ; 5 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Medicolegal and Bioethics Volume 6 ; 6 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Medicolegal and Bioethics Volume 7 ; 7 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Medicolegal and Bioethics Volume 8 ; 8 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Medicolegal and Bioethics Volume 8 ; 8 ; 2018 ; >
 
   }
 
@@ -2647,7 +2647,7 @@
     au < finished ; finished ; 2015 ; Journal of Parkinsonism & Restless Legs Syndrome Volume 5 ; 5 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Journal of Parkinsonism & Restless Legs Syndrome Volume 6 ; 6 ; 2016 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Journal of Parkinsonism & Restless Legs Syndrome Volume 7 ; 7 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Journal of Parkinsonism & Restless Legs Syndrome Volume 8 ; 8 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Journal of Parkinsonism & Restless Legs Syndrome Volume 8 ; 8 ; 2018 ; >
 
   }
 
@@ -2699,7 +2699,7 @@
     au < finished ; finished ; 2015 ; Metalloproteinases In Medicine Volume 2 ; 2 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Metalloproteinases In Medicine Volume 3 ; 3 ; 2016 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; Metalloproteinases In Medicine Volume 4 ; 4 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Metalloproteinases In Medicine Volume 5 ; 5 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Metalloproteinases In Medicine Volume 5 ; 5 ; 2018 ; >
 
   }
 
@@ -2817,7 +2817,7 @@
     au < finished ; finished ; 2015 ; Advanced Health Care Technologies Volume 1 ; 1 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Advanced Health Care Technologies Volume 2 ; 2 ; 2016 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; Advanced Health Care Technologies Volume 3 ; 3 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Advanced Health Care Technologies Volume 4 ; 4 ; 2018 ; >
+    au < deepCrawl ; exists ; 2018 ; Advanced Health Care Technologies Volume 4 ; 4 ; 2018 ; >
 
   }
 
