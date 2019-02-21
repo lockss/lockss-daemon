@@ -445,6 +445,19 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
         "http://www.emeraldinsight.com/wro/product.css",
         "http://journals.sagepub.com/pb/css/t1486049682000-v1486049682000/head_1_6_7.css",
         "http://journals.sagepub.com/templates/jsp/_style2/_sage/images/sfxbutton.gif");
+    
+    List <String> notRepairList = ListUtil.list(
+            "https://journals.ametsoc.org/toc/wefo/33/5",
+            "https://journals.ametsoc.org/doi/suppl/10.1175/WAF-D-18-0019.1/suppl_file/10.1175_WAF-D-18-0019.s1.pdf",
+            "https://journals.ametsoc.org/doi/full/foo/blah",
+            "https://journals.ametsoc.org/doi/pdf/foo/blah",
+            "https://journals.ametsoc.org/doi/pdfplus/foo/blah",
+            "https://journals.ametsoc.org/doi/abs/foo/blah",
+            "https://journals.ametsoc.org/doi/full/foo/imagecover.pdf",
+            "https://journals.ametsoc.org/action/showCitFormats?doi=10.1175%2FWAF-D-18-0046.1",
+            "https://journals.ametsoc.org/action/downloadCitation?doi=10.1175%2FWAF-D-17-0120.1&format=ris&include=cit"
+            ); 
+    
      Pattern p0 = Pattern.compile(baseRepairList[0]);
      Pattern p1 = Pattern.compile(baseRepairList[1]);
      Pattern p2 = Pattern.compile(baseRepairList[2]);
@@ -457,18 +470,26 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
        m3 = p3.matcher(urlString);
        assertEquals(urlString, true, m0.find() || m1.find() || m2.find() || m3.find());
      }
+
+     for (String urlString : notRepairList) {
+         m0 = p0.matcher(urlString);
+         m1 = p1.matcher(urlString);
+         m2 = p2.matcher(urlString);
+         m3 = p3.matcher(urlString);
+         assertEquals(urlString, false, m0.find() || m1.find() || m2.find() || m3.find());
+       }
+     
      //and this one should fail - it needs to be weighted correctly and repaired from publisher if possible
-     String notString ="http://www.emeraldinsight.com/na101/home/literatum/publisher/emerald/books/content/books/2013/9781781902868/9781781902868-007/20160215/images/small/figure1.gif";
-     m0 = p0.matcher(notString);
-     m1 = p1.matcher(notString);
-     m2 = p2.matcher(notString);
+     String na101String ="http://www.emeraldinsight.com/na101/home/literatum/publisher/emerald/books/content/books/2013/9781781902868/9781781902868-007/20160215/images/small/figure1.gif";
+     m0 = p0.matcher(na101String);
+     m1 = p1.matcher(na101String);
+     m2 = p2.matcher(na101String);
      assertEquals(false, m0.find() && m1.find() && m2.find());
-     //except now we've added a pattern to allow it so on pattern 3 it should pass - this might be temporary
+     //except now we've added a pattern to allow it so on pattern 3 it should pass
      // note that the above is no longer there, it now lives at
      // https://www.emeraldinsight.com/na101/home/literatum/publisher/emerald/books/content/books/2013/9781781902868/9781781902868-007/20170623/images/small/figure1.gif 
-     m3 = p3.matcher(notString);
+     m3 = p3.matcher(na101String);
      assertEquals(true, m3.find());
-
      
     PatternFloatMap urlPollResults = FooAu.makeUrlPollResultWeightMap();
     assertNotNull(urlPollResults);
@@ -477,9 +498,8 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
           urlPollResults.getMatch(urlString, (float) 1),
           .0001);
     }
-    // This for now weights to zero also
-    //assertEquals(1.0, urlPollResults.getMatch(notString, (float) 1), .0001);
-    assertEquals(0.0, urlPollResults.getMatch(notString, (float) 1), .0001);
+    // This pattern is still weighted even though it is replicated
+    assertEquals(1.0, urlPollResults.getMatch(na101String, (float) 1), .0001);
   }
   
   public void testPollSpecialBooks() throws Exception {
@@ -515,7 +535,6 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
       m3 = p3.matcher(urlString);
       assertEquals(urlString, true, m0.find() || m1.find() || m2.find() || m3.find());
     }
-     //and this one should fail - it needs to be weighted correctly and repaired from publisher if possible
      String notString ="http://www.emeraldinsight.com/na101/home/literatum/publisher/emerald/books/content/books/2013/9781781902868/9781781902868-007/20160215/images/small/figure1.gif";
      m0 = p0.matcher(notString);
      m1 = p1.matcher(notString);
@@ -534,9 +553,8 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
           urlPollResults.getMatch(urlString, (float) 1),
           .0001);
     }
-    //assertEquals(1.0, urlPollResults.getMatch(notString, (float) 1), .0001);
-    //this now is weighted to zero
-    assertEquals(0.0, urlPollResults.getMatch(notString, (float) 1), .0001);
+    // despite replicating, this still is weighted
+    assertEquals(1.0, urlPollResults.getMatch(notString, (float) 1), .0001);
   }
 
 
