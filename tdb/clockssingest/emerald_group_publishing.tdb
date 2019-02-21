@@ -27,7 +27,7 @@
     au < finished ; finished ; 2014 ; Academia Revista Latinoamericana de Administración Volume 27 ; 27 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Academia Revista Latinoamericana de Administración Volume 28 ; 28 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2016 ; Academia Revista Latinoamericana de Administración Volume 29 ; 29 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2017 ; Academia Revista Latinoamericana de Administración Volume 30 ; 30 ; https://www.emeraldinsight.com/ ; >
+    au < frozen ; exists ; 2017 ; Academia Revista Latinoamericana de Administración Volume 30 ; 30 ; https://www.emeraldinsight.com/ ; >
     au < deepCrawl ; exists ; 2018 ; Academia Revista Latinoamericana de Administración Volume 31 ; 31 ; https://www.emeraldinsight.com/ ; >
 
   }
@@ -2437,7 +2437,7 @@
     au < finished ; crawling ; 2014 ; Equality, Diversity and Inclusion: An International Journal Volume 33 ; 33 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2015 ; Equality, Diversity and Inclusion: An International Journal Volume 34 ; 34 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Equality, Diversity and Inclusion: An International Journal Volume 35 ; 35 ; http://www.emeraldinsight.com/ ; >
-    au < crawling ; exists ; 2017 ; Equality, Diversity and Inclusion: An International Journal Volume 36 ; 36 ; https://www.emeraldinsight.com/ ; >
+    au < frozen ; exists ; 2017 ; Equality, Diversity and Inclusion: An International Journal Volume 36 ; 36 ; https://www.emeraldinsight.com/ ; >
     au < deepCrawl ; exists ; 2018 ; Equality, Diversity and Inclusion: An International Journal Volume 37 ; 37 ; https://www.emeraldinsight.com/ ; >
 
   }
@@ -2786,7 +2786,7 @@
     au < finished ; crawling ; 2014 ; Grey Systems: Theory and Application Volume 4 ; 4 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Grey Systems: Theory and Application Volume 5 ; 5 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Grey Systems: Theory and Application Volume 6 ; 6 ; http://www.emeraldinsight.com/ ; >
-    au < crawling ; exists ; 2017 ; Grey Systems: Theory and Application Volume 7 ; 7 ; https://www.emeraldinsight.com/ ; >
+    au < frozen ; exists ; 2017 ; Grey Systems: Theory and Application Volume 7 ; 7 ; https://www.emeraldinsight.com/ ; >
     au < deepCrawl ; exists ; 2018 ; Grey Systems: Theory and Application Volume 8 ; 8 ; https://www.emeraldinsight.com/ ; >
 
   }
@@ -2893,7 +2893,7 @@
     au < finished ; finished ; 2014 ; Higher Education, Skills and Work-based Learning Volume 4 ; 4 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Higher Education, Skills and Work-based Learning Volume 5 ; 5 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2016 ; Higher Education, Skills and Work-based Learning Volume 6 ; 6 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2017 ; Higher Education, Skills and Work-based Learning Volume 7 ; 7 ; https://www.emeraldinsight.com/ ; >
+    au < frozen ; exists ; 2017 ; Higher Education, Skills and Work-based Learning Volume 7 ; 7 ; https://www.emeraldinsight.com/ ; >
     au < deepCrawl ; exists ; 2018 ; Higher Education, Skills and Work-based Learning Volume 8 ; 8 ; https://www.emeraldinsight.com/ ; >
 
   }
