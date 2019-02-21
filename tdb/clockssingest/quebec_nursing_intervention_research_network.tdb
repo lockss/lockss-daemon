@@ -17,7 +17,7 @@
       >
 
       comment[publisher] = Quebec Nursing Intervention Research Network
-      param[base_url] = https://snahp-sips.ca
+      param[base_url] = https://snahp-sips.ca/
       param[journal_id] = journal
 
       au < expected ; exists ; 2018 ; Science of Nursing and Health Practices-Science infirmière et pratiques en santé (SNAHP-SIPS) Volume 1 ; 1 ; >
