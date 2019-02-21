@@ -429,7 +429,7 @@
     au < finished ; finished ; 2015 ; 2015 ; Allgemein- und Viszeralchirurgie up2date Volume 9 ; 9 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Allgemein- und Viszeralchirurgie up2date Volume 10 ; 10 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Allgemein- und Viszeralchirurgie up2date Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Allgemein- und Viszeralchirurgie up2date Volume 12 ; 12 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Allgemein- und Viszeralchirurgie up2date Volume 12 ; 12 ; >
 
    }
 
@@ -2157,7 +2157,7 @@
    au < finished ; finished ; 2015 ; 2015 ; Im OP Volume 5 ; 5 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; Im OP Volume 6 ; 6 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Im OP Volume 7 ; 7 ; >
-   au < crawling ; exists ; 2018 ; 2018 ; Im OP Volume 8 ; 8 ; >
+   au < deepCrawl ; exists ; 2018 ; 2018 ; Im OP Volume 8 ; 8 ; >
 
   }
 
@@ -2289,7 +2289,7 @@
     au < finished ; finished ; 2015 ; 2015 ; intensiv Volume 23 ; 23 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; intensiv Volume 24 ; 24 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; intensiv Volume 25 ; 25 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; intensiv Volume 26 ; 26 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; intensiv Volume 26 ; 26 ; >
 
   }
 
@@ -2493,7 +2493,7 @@
     au < finished ; finished ; 2015 ; 2015 ; Journal Club AINS Volume 4 ; 4 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; Journal Club AINS Volume 5 ; 5 ;  >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Journal Club AINS Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Journal Club AINS Volume 7 ; 7 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Journal Club AINS Volume 7 ; 7 ; >
 
   }
 
@@ -2729,7 +2729,7 @@
     au < finished ; crawling ; 2015 ; 2015 ; Journal of Neurological Surgery Part B : Skull Base Volume 76 ; 76 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Journal of Neurological Surgery Part B : Skull Base Volume 77 ; 77 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Journal of Neurological Surgery Part B : Skull Base Volume 78 ; 78 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Journal of Neurological Surgery Part B : Skull Base Volume 79 ; 79 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Journal of Neurological Surgery Part B : Skull Base Volume 79 ; 79 ; >
 
   }
 
@@ -2794,7 +2794,7 @@
     au < finished ; finished ; 2015 ; 2015 ; Journal of Pediatric Epilepsy Volume 4 ; 4 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; Journal of Pediatric Epilepsy Volume 5 ; 5 ;  >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Journal of Pediatric Epilepsy Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Journal of Pediatric Epilepsy Volume 7 ; 7 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Journal of Pediatric Epilepsy Volume 7 ; 7 ; >
 
   }
 
@@ -2866,7 +2866,7 @@
     au < finished ; finished ; 2015 ; 2015 ; Journal of Pediatric Intensive Care Volume 4 ; 4 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Journal of Pediatric Intensive Care Volume 5 ; 5 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Journal of Pediatric Intensive Care Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Journal of Pediatric Intensive Care Volume 7 ; 7 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Journal of Pediatric Intensive Care Volume 7 ; 7 ; >
 
   }
 
@@ -3167,7 +3167,7 @@
     au < finished ; finished ; 2015 ; 2015 ; Klinische Monatsblätter für Augenheilkunde Volume 232 ; 232 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; 2016 ; Klinische Monatsblätter für Augenheilkunde Volume 233 ; 233 ; >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Klinische Monatsblätter für Augenheilkunde Volume 234 ; 234 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Klinische Monatsblätter für Augenheilkunde Volume 235 ; 235 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Klinische Monatsblätter für Augenheilkunde Volume 235 ; 235 ; >
 
   }
 
@@ -3304,7 +3304,7 @@
     au < finished ; finished ; 2015 ; 2015 ; kma - Das Gesundheitswirtschaftsmagazin Volume 20 ; 20 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; down ; 2016 ; 2016 ; kma - Das Gesundheitswirtschaftsmagazin Volume 21 ; 21 ;  >
     au < deepCrawl ; exists ; 2017 ; 2017 ; kma - Das Gesundheitswirtschaftsmagazin Volume 22 ; 22 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; kma - Das Gesundheitswirtschaftsmagazin Volume 23 ; 23 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; kma - Das Gesundheitswirtschaftsmagazin Volume 23 ; 23 ; >
 
   }
 
@@ -3731,7 +3731,7 @@
     au < finished ; finished ; 2015 ; 2015 ; Notarzt Der Volume 31 ; 31 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Notarzt Der Volume 32 ; 32 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Notarzt Der Volume 33 ; 33 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Notarzt Der Volume 34 ; 34 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Notarzt Der Volume 34 ; 34 ; >
 
   }
 
@@ -6030,7 +6030,7 @@
    au < finished ; finished ; 2015 ; 2015 ; Ultrasound International Open Volume 1 ; 1 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; Ultrasound International Open Volume 2 ; 2 ; reingest1.clockss.org:8082 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Ultrasound International Open Volume 3 ; 3 ; >
-   au < crawling ; exists ; 2018 ; 2018 ; Ultrasound International Open Volume 4 ; 4 ; >
+   au < deepCrawl ; exists ; 2018 ; 2018 ; Ultrasound International Open Volume 4 ; 4 ; >
 
   }
 
@@ -6615,7 +6615,7 @@
     au < finished ; finished ; 2015 ; 2015 ; Zeitschrift für Chirurgie Volume 140 ; 140 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 2016 ; Zeitschrift für Chirurgie Volume 141 ; 141 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Zeitschrift für Chirurgie Volume 142 ; 142 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Zeitschrift für Chirurgie Volume 143 ; 143 ; >
+    au < deepCrawl ; exists ; 2018 ; 2018 ; Zeitschrift für Chirurgie Volume 143 ; 143 ; >
 
   }
 

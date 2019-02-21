@@ -219,7 +219,7 @@
       au < superseded ; exists ; 2016 ; 2016 ; Archives Animal Breeding Volume 59 [superseded] ; 59 ; http://www.arch-anim-breed.net/ ; http://archives-animal-breeding.net/ ; >
       au < frozen ; exists ; 2016 ; 2016 ; Archives Animal Breeding Volume 59 ; 59 ; https://www.arch-anim-breed.net/ ; https://www.archives-animal-breeding.net/ ; >
       au < deepCrawl ; exists ; 2017 ; 2017 ; Archives Animal Breeding Volume 60 ; 60 ; https://www.arch-anim-breed.net/ ; https://www.archives-animal-breeding.net/ ; >
-      au < crawling ; exists ; 2018 ; 2018 ; Archives Animal Breeding Volume 61 ; 61 ; https://www.arch-anim-breed.net/ ; https://www.archives-animal-breeding.net/ ; >
+      au < deepCrawl ; exists ; 2018 ; 2018 ; Archives Animal Breeding Volume 61 ; 61 ; https://www.arch-anim-breed.net/ ; https://www.archives-animal-breeding.net/ ; >
 
       }
 
@@ -948,7 +948,7 @@
       au < finished ; finished ; 2015 ; 2015 ; Geoscientific Model Development Volume 8 ; 8 ; http://www.geosci-model-dev.net/ ; http://www.geoscientific-model-development.net/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2016 ; 2016 ; Geoscientific Model Development Volume 9 ; 9 ; http://www.geosci-model-dev.net/ ; http://www.geoscientific-model-development.net/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; 2017 ; Geoscientific Model Development Volume 10 ; 10 ; https://www.geosci-model-dev.net/ ; https://www.geoscientific-model-development.net/ ; >
-      au < crawling ; exists ; 2018 ; 2018 ; Geoscientific Model Development Volume 11 ; 11 ; https://www.geosci-model-dev.net/ ; https://www.geoscientific-model-development.net/ ; >
+      au < deepCrawl ; exists ; 2018 ; 2018 ; Geoscientific Model Development Volume 11 ; 11 ; https://www.geosci-model-dev.net/ ; https://www.geoscientific-model-development.net/ ; >
 
    }
 

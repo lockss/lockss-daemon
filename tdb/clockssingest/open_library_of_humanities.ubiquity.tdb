@@ -193,7 +193,7 @@
       au < frozen ; exists ; 2015 ; 1 ; Le foucaldien Volume 2015 ; 2015 ; https://foucaldien.net/ ; >
       au < frozen ; exists ; 2016 ; 2 ; Le foucaldien Volume 2016 ; 2016 ; https://foucaldien.net/ ; >
       au < frozen ; exists ; 2017 ; 3 ; Le foucaldien Volume 2017 ; 2017 ; https://foucaldien.net/ ; >
-      au < crawling ; exists ; 2018 ; 4 ; Le foucaldien Volume 2018 ; 2018 ; https://foucaldien.net/ ; >
+      au < deepCrawl ; exists ; 2018 ; 4 ; Le foucaldien Volume 2018 ; 2018 ; https://foucaldien.net/ ; >
 
   }
 
@@ -210,7 +210,7 @@
       implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
 
 
-      au < crawling ; exists ; 2018 ; 1 ; Journal of Embodied Research Volume 2018 ; 2018 ; https://jer.openlibhums.org/ ; >
+      au < deepCrawl ; exists ; 2018 ; 1 ; Journal of Embodied Research Volume 2018 ; 2018 ; https://jer.openlibhums.org/ ; >
 
   }
 

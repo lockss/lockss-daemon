@@ -104,7 +104,7 @@
     au < finished ; crawling ; 2015 ; Active and Passive Electronic Components Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Active and Passive Electronic Components Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Active and Passive Electronic Components Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
-    au < crawling ; exists ; 2018 ; Active and Passive Electronic Components Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Active and Passive Electronic Components Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
 
   }
   
@@ -373,7 +373,7 @@
     au < finished ; finished ; 2015 ; Advances in Chemistry Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Advances in Chemistry Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Advances in Chemistry Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
-    au < crawling ; exists ; 2018 ; Advances in Chemistry Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Advances in Chemistry Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
 
   }
 
@@ -1294,7 +1294,7 @@
     au < finished ; finished ; 2015 ; Advances in Public Health Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2016 ; Advances in Public Health Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Advances in Public Health Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
-    au < crawling ; exists ; 2018 ; Advances in Public Health Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Advances in Public Health Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
 
   }
 
@@ -1562,7 +1562,7 @@
     au < frozen ; exists ; 2016 ; Anatomy Research International Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Anatomy Research International Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
       
-    au < crawling ; exists ; 2018 ; Anatomy Research International Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Anatomy Research International Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
   } 
 
   {
@@ -2167,7 +2167,7 @@
     au < finished ; finished ; 2015 ; Case Reports in Dermatological Medicine Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Case Reports in Dermatological Medicine Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Case Reports in Dermatological Medicine Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
-    au < crawling ; exists ; 2018 ; Case Reports in Dermatological Medicine Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Case Reports in Dermatological Medicine Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
 
   }
 
@@ -2293,7 +2293,7 @@
     au < finished ; finished ; 2015 ; Case Reports in Hepatology Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Case Reports in Hepatology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Case Reports in Hepatology Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
-    au < crawling ; exists ; 2018 ; Case Reports in Hepatology Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Case Reports in Hepatology Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
 
   }
 
@@ -2484,7 +2484,7 @@
     au < zapped ; finished ; 2015 ; Case Reports in Orthopedics Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2016 ; Case Reports in Orthopedics Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Case Reports in Orthopedics Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
-    au < crawling ; exists ; 2018 ; Case Reports in Orthopedics Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Case Reports in Orthopedics Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
 
   }
   
@@ -2505,7 +2505,7 @@
     au < finished ; finished ; 2015 ; Case Reports in Otolaryngology Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Case Reports in Otolaryngology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Case Reports in Otolaryngology Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
-    au < crawling ; exists ; 2018 ; Case Reports in Otolaryngology Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Case Reports in Otolaryngology Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
 
   }
 
@@ -3435,7 +3435,7 @@
     au < zapped ; finished ; 2015 ; Gastroenterology Research and Practice Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Gastroenterology Research and Practice Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; Gastroenterology Research and Practice Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
-    au < crawling ; exists ; 2018 ; Gastroenterology Research and Practice Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Gastroenterology Research and Practice Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
 
   }
 
@@ -5197,7 +5197,7 @@
     au < finished ; crawling ; 2015 ; International Journal of Reproductive Medicine Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; International Journal of Reproductive Medicine Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
     au < deepCrawl ; exists ; 2017 ; International Journal of Reproductive Medicine Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
-    au < crawling ; exists ; 2018 ; International Journal of Reproductive Medicine Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; International Journal of Reproductive Medicine Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
 
   }
 
@@ -5587,7 +5587,7 @@
     au < finished ; crawling ; 2016 ; Journal of Aging Research Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2017 ; Journal of Aging Research Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
     
-    au < crawling ; exists ; 2018 ; Journal of Aging Research Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Journal of Aging Research Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
   }
 
   {
@@ -6719,7 +6719,7 @@
     #Content published prior to 2017 is hosted on the Wiley Online Library.
 
     au < deepCrawl ; exists ; 2017 ; Journal of Food Quality Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
-    au < crawling ; exists ; 2018 ; Journal of Food Quality Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Journal of Food Quality Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
 
   }
 
@@ -7948,7 +7948,7 @@
     au < deepCrawl ; exists ; 2016 ; Journal of Skin Cancer Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Journal of Skin Cancer Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
     
-    au < crawling ; exists ; 2018 ; Journal of Skin Cancer Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Journal of Skin Cancer Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
   }
 
   {
@@ -9553,7 +9553,7 @@
     au < deepCrawl ; exists ; 2016 ; Stroke Research and Treatment Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Stroke Research and Treatment Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
     
-    au < crawling ; exists ; 2018 ; Stroke Research and Treatment Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
+    au < deepCrawl ; exists ; 2018 ; Stroke Research and Treatment Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
   }
   
   {
