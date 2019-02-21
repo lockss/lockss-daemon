@@ -69,8 +69,8 @@
 
     #param[base_url] = http://veterinaryrecord.bmj.com/
 
-    au < bmj.BMJDrupalPlugin ; testing ; 1950 ; Veterinary Record Volume 62 [tables of contents only] ; 62 ; https://veterinaryrecord.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; testing ; 1951 ; Veterinary Record Volume 63 [tables of contents only] ; 63 ; https://veterinaryrecord.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 1950 ; Veterinary Record Volume 62 [tables of contents only] ; 62 ; https://veterinaryrecord.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 1951 ; Veterinary Record Volume 63 [tables of contents only] ; 63 ; https://veterinaryrecord.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; doesNotExist ; 0 ; Veterinary Record Volume 64 ; 64 ; https://veterinaryrecord.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; doesNotExist ; 0 ; Veterinary Record Volume 65 ; 65 ; https://veterinaryrecord.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; doesNotExist ; 0 ; Veterinary Record Volume 66 ; 66 ; https://veterinaryrecord.bmj.com/ >
