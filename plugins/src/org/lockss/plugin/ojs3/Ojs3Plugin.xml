@@ -97,19 +97,23 @@
   </entry>
   -->
   <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.ojs3.Ojs3HtmlHashFilterFactory</string>
+  </entry>
+  <entry>
     <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.ojs2.OJS2ArticleIteratorFactory</string>
+    <string>org.lockss.plugin.ojs3.Ojs3ArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.ojs2.OJS2ArticleIteratorFactory</string>
+    <string>org.lockss.plugin.ojs3.Ojs3ArticleIteratorFactory</string>
   </entry>
  <entry>
     <string>text/html_metadata_extractor_factory_map</string>
     <map>
       <entry>
         <string>*</string>
-        <string>org.lockss.plugin.ojs2.OJS2HtmlMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.ojs3.Ojs3HtmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>
@@ -126,9 +130,8 @@
     <string>au_refetch_depth</string>
     <int>2</int>
   </entry>
+<!-- 
   <entry>
-    <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
-         org.lockss.crawler.allowedPluginPermittedHosts= -->
     <string>au_permitted_host_pattern</string>
     <list>
       <string>.+\.cloudfront\.net</string>
@@ -138,6 +141,7 @@
       <string>(fonts|ajax)\.googleapis\.com</string>
     </list>
   </entry>
+  -->
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
     <list>
