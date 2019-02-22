@@ -1689,7 +1689,7 @@
       au < finished ; finished ; 2015 ; International Journal of Cloud Computing Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; International Journal of Cloud Computing Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; International Journal of Cloud Computing Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2018 ; International Journal of Cloud Computing Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
+      au < deepCrawl ; exists ; 2018 ; International Journal of Cloud Computing Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -4393,7 +4393,7 @@
       au < finished ; crawling ; 2017 ; International Journal of Information and Communication Technology Volume 10 ; 10 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; International Journal of Information and Communication Technology Volume 11 ; 11 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2018 ; International Journal of Information and Communication Technology Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
-      au < crawling ; exists ; 2018 ; International Journal of Information and Communication Technology Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; >
+      au < deepCrawl ; exists ; 2018 ; International Journal of Information and Communication Technology Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -7684,7 +7684,7 @@
       au < finished ; crawling ; 2017 ; International Journal of Services and Operations Management Volume 27 ; 27 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2017 ; International Journal of Services and Operations Management Volume 28 ; 28 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018 ; International Journal of Services and Operations Management Volume 29 ; 29 ; https://www.inderscienceonline.com/ ; >
-      au < crawling ; exists ; 2018 ; International Journal of Services and Operations Management Volume 30 ; 30 ; https://www.inderscienceonline.com/ ; >
+      au < deepCrawl ; exists ; 2018 ; International Journal of Services and Operations Management Volume 30 ; 30 ; https://www.inderscienceonline.com/ ; >
       au < deepCrawl ; exists ; 2018 ; International Journal of Services and Operations Management Volume 31 ; 31 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -9139,7 +9139,7 @@
       au < finished ; finished ; 2013-2014 ; International Journal of Vehicle Performance Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; >
       au < finished ; crawling ; 2015-2016 ; International Journal of Vehicle Performance Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2017 ; International Journal of Vehicle Performance Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
-      au < crawling ; exists ; 2018 ; International Journal of Vehicle Performance Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
+      au < deepCrawl ; exists ; 2018 ; International Journal of Vehicle Performance Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
 
     }
 
