@@ -96,21 +96,11 @@ implements SourceXmlSchemaHelper {
         Node checkNode = elementChildren.item(j);
         String nodeName = checkNode.getNodeName();
         if ("journal-title".equals(nodeName) | "article-title".equals(nodeName)) {
-          tTitle = checkNode.getTextContent();  
-          // they deliver newlines in their XML titles
-          tTitle = tTitle.replace("\n", " ");
-          tTitle = tTitle.trim();
-          tTitle = tTitle.replace("  ", " ");
+          tTitle = normalizeTitle(checkNode.getTextContent());  
         } else if ("subtitle".equals(nodeName) | "journal-subtitle".equals(nodeName)) {
-          tSubtitle = checkNode.getTextContent();
-          tSubtitle = tSubtitle.replace("\n", " ");
-          tSubtitle = tSubtitle.trim();
-          tSubtitle = tSubtitle.replace("  ", " ");
+          tSubtitle = normalizeTitle(checkNode.getTextContent());
         } else if ("alt-title".equals(nodeName)) {
-          tAltTitle = checkNode.getTextContent();
-          tAltTitle = tAltTitle.replace("\n",  " ");
-          tAltTitle = tAltTitle.trim();
-          tAltTitle = tAltTitle.replace("  ", " ");
+          tAltTitle = normalizeTitle(checkNode.getTextContent());
         }
       }
 
@@ -130,6 +120,19 @@ implements SourceXmlSchemaHelper {
       log.debug3("title found: " + valbuilder.toString());
       return valbuilder.toString();
     }
+
+    
+    /*
+     * Titles often come with newlines and extraneous spaces - clean them up
+     */
+	private String normalizeTitle(String textContent) {
+        // they deliver newlines in their XML titles
+		if (textContent == null) return null;
+		//String cleanContent = textContent.replace("\n", " ");
+		// It may be a variety of whitespace - line feed, etc
+        String cleanContent = textContent.trim().replaceAll("\\s+", " ");
+        return cleanContent;
+	}
   };
   
   /* 
