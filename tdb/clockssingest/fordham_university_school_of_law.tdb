@@ -18,7 +18,7 @@
 
       comment[publisher] = Fordham University School of Law
       param[base_url] = http://ir.lawnet.fordham.edu/
-      param[journal_id] = elr
+      param[journal_abbr] = elr
 
       au < exists ; exists ; 1989 ; Fordham Environmental Law Review Volume 1 ; 1 ; >
       au < exists ; exists ; 1990 ; Fordham Environmental Law Review Volume 2 ; 2 ; >
@@ -63,7 +63,7 @@
 
       comment[publisher] = Fordham University School of Law
       param[base_url] = http://ir.lawnet.fordham.edu/
-      param[journal_id] = iplj
+      param[journal_abbr] = iplj
 
       au < exists ; exists ; 1990 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 1 ; 1 ; >
       au < exists ; exists ; 1991 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 2 ; 2 ; >
@@ -107,7 +107,7 @@
 
       comment[publisher] = Fordham University School of Law
       param[base_url] = http://ir.lawnet.fordham.edu/
-      param[journal_id] = ilj
+      param[journal_abbr] = ilj
 
       au < exists ; exists ; 1977 ; Fordham International Law Journal Volume 1 ; 1 ; >
       au < exists ; exists ; 1978 ; Fordham International Law Journal Volume 2 ; 2 ; >
@@ -164,7 +164,7 @@
 
       comment[publisher] = Fordham University School of Law
       param[base_url] = http://ir.lawnet.fordham.edu/
-      param[journal_id] = jcfl
+      param[journal_abbr] = jcfl
 
       au < exists ; exists ; 1996 ; Fordham Journal of Corporate & Finance Law Volume 1 ; 1 ; >
       au < exists ; exists ; 1997 ; Fordham Journal of Corporate & Finance Law Volume 2 ; 2 ; >
@@ -202,7 +202,7 @@
 
       comment[publisher] = Fordham University School of Law
       param[base_url] = http://ir.lawnet.fordham.edu/
-      param[journal_id] = flr
+      param[journal_abbr] = flr
 
       au < exists ; exists ; 1914 ; Fordham Law Review Volume 1 ; 1 ; >
       au < exists ; exists ; 1915 ; Fordham Law Review Volume 2 ; 2 ; >
@@ -322,7 +322,7 @@
 
       comment[publisher] = Fordham University School of Law
       param[base_url] = http://ir.lawnet.fordham.edu/
-      param[journal_id] = ulj
+      param[journal_abbr] = ulj
 
       au < exists ; exists ; 1972 ; Fordham Urban Law Journal Volume 1 ; 1 ; >
       au < exists ; exists ; 1973 ; Fordham Urban Law Journal Volume 2 ; 2 ; >

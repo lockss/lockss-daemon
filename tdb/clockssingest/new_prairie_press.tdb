@@ -23,7 +23,7 @@
       plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
       implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
       param[base_url] = http://thebalticyearbook.org/journals/
-      param[journal_id] = baltic
+      param[journal_abbr] = baltic
       # no volume published in 2011
 
       au < superseded ; finished ; 2012 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 7 [superseded] ; 7 ; 2012 ; >
@@ -110,7 +110,7 @@
       plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
       implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
       param[base_url] = http://jhaponline.org/journals/
-      param[journal_id] = jhap
+      param[journal_abbr] = jhap
       # Journal moved in 2013. to https://jhaponline.org/
       # No longer published by New Prairie Press. Do not process.
 
@@ -132,7 +132,7 @@
       plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
       implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
       param[base_url] = http://jftonline.org/journals/
-      param[journal_id] = jft
+      param[journal_abbr] = jft
 
       au < finished ; finished ; 2012 ; Journal of Financial Therapy Volume 3 ; 3 ; 2012 ; >
 
@@ -170,7 +170,7 @@
       plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
       implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
       param[base_url] = http://newprairiepress.org/journals/
-      param[journal_id] = jrmh
+      param[journal_abbr] = jrmh
       
       comment[moved] = Moved to American Psychological Association
 
@@ -192,7 +192,7 @@
       plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
       implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
       param[base_url] = http://newprairiepress.org/journals/
-      param[journal_id] = CULS
+      param[journal_abbr] = CULS
 
       au < finished ; finished ; 2012 ; Kansas Library Association College and University Libraries Section Proceedings Volume 2 ; 2 ; 2012 ; >
 
@@ -229,7 +229,7 @@
       plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
       implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
       param[base_url] = http://ojrrp.org/journals/
-      param[journal_id] = ojrrp
+      param[journal_abbr] = ojrrp
 
       au < finished ; finished ; 2012 ; Online Journal of Rural Research & Policy Volume 7 ; 7 ; 2012 ; >
 
@@ -300,7 +300,7 @@
       implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
       comment[publisher] = New Prairie Press
       param[base_url] = http://newprairiepress.org/
-      param[journal_id] = advocate
+      param[journal_abbr] = advocate
 
       au < exists ; exists ; 2011 ; The Advocate Volume 19 ; 19 ; >
       au < exists ; exists ; 2012 ; The Advocate Volume 20 ; 20 ; >
@@ -325,7 +325,7 @@
       implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
       comment[publisher] = New Prairie Press
       param[base_url] = http://newprairiepress.org/
-      param[journal_id] = crossingborders
+      param[journal_abbr] = crossingborders
 
       au < exists ; exists ; 2015 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 1 ; 1 ; >
       au < exists ; exists ; 2016 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 2 ; 2 ; >
@@ -347,7 +347,7 @@
       implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
       comment[publisher] = New Prairie Press
       param[base_url] = http://newprairiepress.org/
-      param[journal_id] = edconsiderations
+      param[journal_abbr] = edconsiderations
 
       au < exists ; exists ; 1973 ; Educational Considerations Volume 1 ; 1 ; >
       au < exists ; exists ; 1974 ; Educational Considerations Volume 2 ; 2 ; >
@@ -410,7 +410,7 @@
       implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
       comment[publisher] = New Prairie Press
       param[base_url] = http://newprairiepress.org/
-      param[journal_id] = fgr
+      param[journal_abbr] = fgr
 
       au < exists ; exists ; 2016 ; Fungal Genetics Reports Volume 62 ; 62 ; >
       au < exists ; exists ; 2017 ; Fungal Genetics Reports Volume 63 ; 63 ; >
@@ -430,7 +430,7 @@
       implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
       comment[publisher] = New Prairie Press
       param[base_url] = http://newprairiepress.org/
-      param[journal_id] = hbr
+      param[journal_abbr] = hbr
 
       au < exists ; exists ; 2017 ; Human Behavior Research Volume 1 ; 1 ; >
       au < expected ; exists ; 2018 ; Human Behavior Research Volume 2 ; 2 ; >
@@ -449,7 +449,7 @@
       implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
       comment[publisher] = New Prairie Press
       param[base_url] = http://newprairiepress.org/
-      param[journal_id] = ijssw
+      param[journal_abbr] = ijssw
 
       au < exists ; exists ; 2016 ; International Journal of School Social Work Volume 1 ; 1 ; >
       au < exists ; exists ; 2017 ; International Journal of School Social Work Volume 2 ; 2 ; >
@@ -470,7 +470,7 @@
       implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
       comment[publisher] = New Prairie Press
       param[base_url] = http://newprairiepress.org/
-      param[journal_id] = jac
+      param[journal_abbr] = jac
 
       au < exists ; exists ; 1969 ; Journal of Applied Communications Volume 52 ; 52 ; >
       au < exists ; exists ; 1970 ; Journal of Applied Communications Volume 53 ; 53 ; >
@@ -537,7 +537,7 @@
       implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
       comment[publisher] = New Prairie Press
       param[base_url] = http://newprairiepress.org/
-      param[journal_id] = jhsr
+      param[journal_abbr] = jhsr
 
       au < exists ; exists ; 1998 ; Journal of Hazardous Substance Research Volume 1 ; 1 ; >
       au < exists ; exists ; 1999 ; Journal of Hazardous Substance Research Volume 2 ; 2 ; >
@@ -575,7 +575,7 @@
       implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
       comment[publisher] = New Prairie Press
       param[base_url] = http://newprairiepress.org/
-      param[journal_id] = kaesrr
+      param[journal_abbr] = kaesrr
 
       au < exists ; exists ; 2015 ; Kansas Agricultural Experiment Station Research Reports Volume 1 ; 1 ; >
       au < exists ; exists ; 2016 ; Kansas Agricultural Experiment Station Research Reports Volume 2 ; 2 ; >
@@ -596,7 +596,7 @@
       implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
       comment[publisher] = New Prairie Press
       param[base_url] = http://newprairiepress.org/
-      param[journal_id] = ksulibraries
+      param[journal_abbr] = ksulibraries
 
       au < exists ; exists ; 2015 ; Kansas State University Libraries Volume 1 ; 1 ; >
       au < exists ; exists ; 2016 ; Kansas State University Libraries Volume 2 ; 2 ; >
@@ -617,7 +617,7 @@
       implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
       comment[publisher] = New Prairie Press
       param[base_url] = http://newprairiepress.org/
-      param[journal_id] = networks
+      param[journal_abbr] = networks
 
       au < exists ; exists ; 1998 ; Networks: An Online Journal for Teacher Research Volume 1 ; 1 ; >
       au < exists ; exists ; 1999 ; Networks: An Online Journal for Teacher Research Volume 2 ; 2 ; >
@@ -655,7 +655,7 @@
       implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
       comment[publisher] = New Prairie Press
       param[base_url] = http://newprairiepress.org/
-      param[journal_id] = oz
+      param[journal_abbr] = oz
 
       au < exists ; exists ; 1979 ; Oz Volume 1 ; 1 ; >
       au < exists ; exists ; 1980 ; Oz Volume 2 ; 2 ; >
@@ -712,7 +712,7 @@
       implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
       comment[publisher] = New Prairie Press
       param[base_url] = http://newprairiepress.org/
-      param[journal_id] = piper
+      param[journal_abbr] = piper
 
       au < exists ; exists ; 2017 ; Pedagogy & (Im)Possibilities Across Education Research Volume 1 ; 1 ; >
       au < expected ; exists ; 2018 ; Pedagogy & (Im)Possibilities Across Education Research Volume 2 ; 2 ; >
@@ -731,7 +731,7 @@
       implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
       comment[publisher] = New Prairie Press
       param[base_url] = http://newprairiepress.org/
-      param[journal_id] = pjer
+      param[journal_abbr] = pjer
 
       au < exists ; exists ; 2016 ; Prairie Journal of Educational Research Volume 1 ; 1 ; >
       au < exists ; exists ; 2017 ; Prairie Journal of Educational Research Volume 2 ; 2 ; >
@@ -751,7 +751,7 @@
       implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
       comment[publisher] = New Prairie Press
       param[base_url] = http://newprairiepress.org/
-      param[journal_id] = seek
+      param[journal_abbr] = seek
 
       au < exists ; exists ; 2011 ; Seek Volume 1 ; 1 ; >
       au < exists ; exists ; 2012 ; Seek Volume 2 ; 2 ; >
@@ -777,7 +777,7 @@
       implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
       comment[publisher] = New Prairie Press
       param[base_url] = http://newprairiepress.org/
-      param[journal_id] = sttcl
+      param[journal_abbr] = sttcl
 
       au < exists ; exists ; 1976 ; Studies in 20th & 21st Century Literature Volume 1 ; 1 ; >
       au < exists ; exists ; 1977 ; Studies in 20th & 21st Century Literature Volume 2 ; 2 ; >

@@ -7,8 +7,8 @@
 
     #moved to Atypon in 2019
 
-    plugin = org.lockss.plugin.atypon.AtyponPlugin
-    param[base_url] = https://royalsociety.org/journals/
+    plugin = org.lockss.plugin.atypon.GenericAtyponPlugin
+    param[base_url] = https://royalsocietypublishing.org/
     implicit < status ; year ; name ; param[volume_name] >
     #doNotProcess = processed in Highwire
 
@@ -87,7 +87,7 @@
     au < doNotProcess ; 2015 ; Biographical Memoirs of Fellows of the Royal Society Volume 61 ; 61 >
     au < doNotProcess ; 2016 ; Biographical Memoirs of Fellows of the Royal Society Volume 62 ; 62 >
     au < doNotProcess ; 2017 ; Biographical Memoirs of Fellows of the Royal Society Volume 63 ; 63 >
-    au < doNotProcess ; 2018 ; Biographical Memoirs of Fellows of the Royal Society Volume 64 ; 64 >
+    au < exists ; 2018 ; Biographical Memoirs of Fellows of the Royal Society Volume 64 ; 64 >
     au < expected ; 2019 ; Biographical Memoirs of Fellows of the Royal Society Volume 65 ; 65 >
 
   }
@@ -116,7 +116,7 @@
     au < doNotProcess ; 2015 ; Biology Letters Volume 11 ; 11 >
     au < doNotProcess ; 2016 ; Biology Letters Volume 12 ; 12 >
     au < doNotProcess ; 2017 ; Biology Letters Volume 13 ; 13 >
-    au < doNotProcess ; 2018 ; Biology Letters Volume 14 ; 14 >
+    au < exists ; 2018 ; Biology Letters Volume 14 ; 14 >
     au < expected ; 2019 ; Biology Letters Volume 15 ; 15 >
 
   }
@@ -141,7 +141,7 @@
     au < doNotProcess ; 2015 ; Interface Focus Volume 5 ; 5 >
     au < doNotProcess ; 2016 ; Interface Focus Volume 6 ; 6 >
     au < doNotProcess ; 2017 ; Interface Focus Volume 7 ; 7 >
-    au < doNotProcess ; 2018 ; Interface Focus Volume 8 ; 8 >
+    au < exists ; 2018 ; Interface Focus Volume 8 ; 8 >
     au < expected ; 2019 ; Interface Focus Volume 9 ; 9 >
 
   }
@@ -171,7 +171,7 @@
     au < doNotProcess ; 2015 ; Journal of the Royal Society Interface Volume 12 ; 12 >
     au < doNotProcess ; 2016 ; Journal of the Royal Society Interface Volume 13 ; 13 >
     au < doNotProcess ; 2017 ; Journal of the Royal Society Interface Volume 14 ; 14 >
-    au < doNotProcess ; 2018 ; Journal of the Royal Society Interface Volume 15 ; 15 >
+    au < exists ; 2018 ; Journal of the Royal Society Interface Volume 15 ; 15 >
     au < expected ; 2019 ; Journal of the Royal Society Interface Volume 16 ; 16 >
 
   }
@@ -259,7 +259,7 @@
     au < doNotProcess ; 2015 ; Notes and Records the Royal Society Journal of the History of Science Volume 69 ; 69 >
     au < doNotProcess ; 2016 ; Notes and Records the Royal Society Journal of the History of Science Volume 70 ; 70 >
     au < doNotProcess ; 2017 ; Notes and Records the Royal Society Journal of the History of Science Volume 71 ; 71 >
-    au < doNotProcess ; 2018 ; Notes and Records the Royal Society Journal of the History of Science Volume 72 ; 72 >
+    au < exists ; 2018 ; Notes and Records the Royal Society Journal of the History of Science Volume 72 ; 72 >
     au < expected ; 2019 ; Notes and Records the Royal Society Journal of the History of Science Volume 73 ; 73 >
 
   }
@@ -282,7 +282,7 @@
     au < doNotProcess ; 2015 ; Open Biology Volume 5 ; 5 >
     au < doNotProcess ; 2016 ; Open Biology Volume 6 ; 6 >
     au < doNotProcess ; 2017 ; Open Biology Volume 7 ; 7 >
-    au < doNotProcess ; 2018 ; Open Biology Volume 8 ; 8 >
+    au < exists ; 2018 ; Open Biology Volume 8 ; 8 >
     au < expected ; 2019 ; Open Biology Volume 9 ; 9 >
 
   }
@@ -496,7 +496,7 @@
     au < doNotProcess ; 2015 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 373 ; 373 >
     au < doNotProcess ; 2016 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 374 ; 374 >
     au < doNotProcess ; 2017 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 375 ; 375 >
-    au < doNotProcess ; 2018 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 376 ; 376 >
+    au < exists ; 2018 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 376 ; 376 >
     au < expected ; 2019 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 377 ; 377 >
 
   }
@@ -707,7 +707,7 @@
     au < doNotProcess ; 2015 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 370 ; 370 >
     au < doNotProcess ; 2016 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 371 ; 371 >
     au < doNotProcess ; 2017 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 372 ; 372 >
-    au < doNotProcess ; 2018 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 373 ; 373 >
+    au < exists ; 2018 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 373 ; 373 >
     au < expected ; 2019 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 374 ; 374 >
 
   }
@@ -1311,7 +1311,7 @@
     au < doNotProcess ; 2015 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 471 ; 471 >
     au < doNotProcess ; 2016 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 472 ; 472 >
     au < doNotProcess ; 2017 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 473 ; 473 >
-    au < doNotProcess ; 2018 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 474 ; 474 >
+    au < exists ; 2018 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 474 ; 474 >
     au < expected ; 2019 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 475 ; 475 >
 
   }
@@ -1536,7 +1536,7 @@
     au < doNotProcess ; 2015 ; Proceedings of the Royal Society B: Biological Sciences Volume 282 ; 282 >
     au < doNotProcess ; 2016 ; Proceedings of the Royal Society B: Biological Sciences Volume 283 ; 283 >
     au < doNotProcess ; 2017 ; Proceedings of the Royal Society B: Biological Sciences Volume 284 ; 284 >
-    au < doNotProcess ; 2018 ; Proceedings of the Royal Society B: Biological Sciences Volume 285 ; 285 >
+    au < exists ; 2018 ; Proceedings of the Royal Society B: Biological Sciences Volume 285 ; 285 >
     au < expected ; 2019 ; Proceedings of the Royal Society B: Biological Sciences Volume 286 ; 286 >
 
   }
@@ -1643,7 +1643,7 @@
     au < doNotProcess ; 2015 ; Royal Society Open Science Volume 2 ; 2 >
     au < doNotProcess ; 2016 ; Royal Society Open Science Volume 3 ; 3 >
     au < doNotProcess ; 2017 ; Royal Society Open Science Volume 4 ; 4 >
-    au < doNotProcess ; 2018 ; Royal Society Open Science Volume 5 ; 5 >
+    au < exists ; 2018 ; Royal Society Open Science Volume 5 ; 5 >
     au < expected ; 2019 ; Royal Society Open Science Volume 6 ; 6 >
 
   }

@@ -18,7 +18,7 @@
 
       comment[publisher] = S.J. Quinney College of Law
       param[base_url] = http://dc.law.utah.edu/
-      param[journal_id] = ulr
+      param[journal_abbr] = ulr
 
       au < exists ; exists ; 2014 ; Utah Law Review Volume 2014 ; 2014 ; >
       au < exists ; exists ; 2015 ; Utah Law Review Volume 2015 ; 2015 ; >
@@ -39,7 +39,7 @@
       #Supplement. Utah Law Review (title). Utah Law Review OnLaw (AU name)
       comment[publisher] = S.J. Quinney College of Law
       param[base_url] = http://dc.law.utah.edu/
-      param[journal_id] = onlaw
+      param[journal_abbr] = onlaw
 
       au < exists ; exists ; 2014 ; Utah Law Review OnLaw Volume 2014 ; 2014 ; >
       au < exists ; exists ; 2015 ; Utah Law Review OnLaw Volume 2015 ; 2015 ; >
