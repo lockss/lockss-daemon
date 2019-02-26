@@ -8,7 +8,7 @@
     #moved to Atypon in 2019
 
     plugin = org.lockss.plugin.atypon.GenericAtyponPlugin
-    param[base_url] = https://royalsociety.org/
+    param[base_url] = https://royalsocietypublishing.org/
     implicit < status ; year ; name ; param[volume_name] >
     #doNotProcess = processed in Highwire
 
