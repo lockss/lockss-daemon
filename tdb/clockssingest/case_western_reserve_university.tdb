@@ -18,7 +18,7 @@
 
       comment[publisher] = Case Western Reserve University, Weatherhead School of Management
       param[base_url] = http://commons.case.edu/
-      param[journal_id] = emr
+      param[journal_abbr] = emr
 
       au < exists ; exists ; 2017 ; Engaged Management Review Volume 1 ; 1 ; >
       au < expected ; exists ; 2018 ; Engaged Management Review Volume 2 ; 2 ; >
