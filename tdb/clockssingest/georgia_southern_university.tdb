@@ -18,7 +18,7 @@
 
       comment[publisher] = Georgia Southern University
       param[base_url] = https://digitalcommons.georgiasouthern.edu/
-      param[journal_id] = aujh
+      param[journal_abbr] = aujh
 
       au < exists ; exists ; 2017 ; Armstrong Undergraduate Journal of History Volume 7 ; 7 ; >
       au < expected ; exists ; 2018 ; Armstrong Undergraduate Journal of History Volume 8 ; 8 ; >
@@ -29,14 +29,13 @@
   {
 
       title <
-        name = Becoming: Journal of the Georgia Middle School Association
-        #eissn = XXXX-XXXX
-        #no issn
+        name = Becoming: Journal of the Georgia Middle School Association ;
+        eissn = 2641-7715
       >
 
       comment[publisher] = Georgia Southern University
       param[base_url] = https://digitalcommons.georgiasouthern.edu/
-      param[journal_id] = becoming_journal
+      param[journal_abbr] = becoming_journal
 
       au < expected ; exists ; 2018 ; Becoming: Journal of the Georgia Middle School Association Volume 29 ; 29 ; >
       au < expected ; exists ; 2019 ; Becoming: Journal of the Georgia Middle School Association Volume 30 ; 30 ; >
@@ -52,7 +51,7 @@
 
       comment[publisher] = Georgia Southern University
       param[base_url] = https://digitalcommons.georgiasouthern.edu/
-      param[journal_id] = cimle
+      param[journal_abbr] = cimle
 
       au < expected ; exists ; 2019 ; Current Issues in Middle Level Education Volume 24 ; 24 ; >
 
@@ -67,7 +66,7 @@
 
       comment[publisher] = Georgia Southern University
       param[base_url] = https://digitalcommons.georgiasouthern.edu/
-      param[journal_id] = gerjournal
+      param[journal_abbr] = gerjournal
 
       au < exists ; exists ; 2003 ; Georgia Educational Researcher Volume 1 ; 1 ; >
       au < exists ; exists ; 2004 ; Georgia Educational Researcher Volume 2 ; 2 ; >
@@ -98,7 +97,7 @@
 
       comment[publisher] = Georgia Southern University
       param[base_url] = https://digitalcommons.georgiasouthern.edu/
-      param[journal_id] = gcpa
+      param[journal_abbr] = gcpa
 
       au < exists ; exists ; 2016 ; Georgia Journal of College Student Affairs Volume 1 ; 1 ; >
       au < exists ; exists ; 2017 ; Georgia Journal of College Student Affairs Volume 2 ; 2 ; >
@@ -116,7 +115,7 @@
 
       comment[publisher] = Georgia Southern University
       param[base_url] = https://digitalcommons.georgiasouthern.edu/
-      param[journal_id] = ij-sotl
+      param[journal_abbr] = ij-sotl
 
       au < exists ; exists ; 2007 ; International Journal for the Scholarship of Teaching & Learning Volume 1 ; 1 ; >
       au < exists ; exists ; 2008 ; International Journal for the Scholarship of Teaching & Learning Volume 2 ; 2 ; >
@@ -144,7 +143,7 @@
 
       comment[publisher] = Georgia Southern University
       param[base_url] = https://digitalcommons.georgiasouthern.edu/
-      param[journal_id] = iss
+      param[journal_abbr] = iss
 
       au < exists ; exists ; 2014 ; Irish Studies South Volume 1 ; 1 ; >
       au < exists ; exists ; 2015 ; Irish Studies South Volume 2 ; 2 ; >
@@ -164,7 +163,7 @@
 
       comment[publisher] = Georgia Southern University
       param[base_url] = https://digitalcommons.georgiasouthern.edu/
-      param[journal_id] = nyar
+      param[journal_abbr] = nyar
 
       au < exists ; exists ; 2015 ; National Youth-At-Risk Journal Volume 1 ; 1 ; >
       au < exists ; exists ; 2016 ; National Youth-At-Risk Journal Volume 2 ; 2 ; >
@@ -183,7 +182,7 @@
 
       comment[publisher] = Georgia Southern University
       param[base_url] = https://digitalcommons.georgiasouthern.edu/
-      param[journal_id] = stem_proceedings
+      param[journal_abbr] = stem_proceedings
 
       au < exists ; exists ; 2017 ; Proceedings of the Interdisciplinary STEM Teaching and Learning Conference Volume 1 ; 1 ; >
       au < expected ; exists ; 2018 ; Proceedings of the Interdisciplinary STEM Teaching and Learning Conference Volume 2 ; 2 ; >
@@ -200,7 +199,7 @@
 
       comment[publisher] = Georgia Southern University
       param[base_url] = https://digitalcommons.georgiasouthern.edu/
-      param[journal_id] = thecoastalreview
+      param[journal_abbr] = thecoastalreview
 
       au < exists ; exists ; 2007 ; The Coastal Review Volume 0 ; 0 ; >
       au < exists ; exists ; 2008 ; The Coastal Review Volume 1 ; 1 ; >
@@ -228,7 +227,7 @@
 
       comment[publisher] = Georgia Southern University
       param[base_url] = https://digitalcommons.georgiasouthern.edu/
-      param[journal_id] = jssw
+      param[journal_abbr] = jssw
 
       au < exists ; exists ; 2017 ; The Journal of Student Success in Writing Volume 1 ; 1 ; >
       au < expected ; exists ; 2018 ; The Journal of Student Success in Writing Volume 2 ; 2 ; >
@@ -245,7 +244,7 @@
 
       comment[publisher] = Georgia Southern University
       param[base_url] = https://digitalcommons.georgiasouthern.edu/
-      param[journal_id] = tag
+      param[journal_abbr] = tag
 
       au < exists ; exists ; 2014 ; Theory and Applications of Graphs Volume 0 ; 0 ; >
       au < exists ; exists ; 2015 ; Theory and Applications of Graphs Volume 1 ; 1 ; >
