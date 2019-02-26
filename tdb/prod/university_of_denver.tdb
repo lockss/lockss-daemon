@@ -1,0 +1,34 @@
+{
+
+  publisher <
+    name = University of Denver
+  >
+    plugin = org.lockss.plugin.bepress.BePressPlugin 
+    implicit < status ; year ; name ; param[volume] >
+
+  {
+  
+    title <
+      name = Collaborative Librarianship ;
+      eissn =  1943-7528 
+    >
+    
+    
+    param[base_url] = https://digitalcommons.du.edu/
+    param[journal_abbr] = collaborativelibrarianship
+
+    au < exists ; 2009 ; Collaborative Librarianship Volume 1 ; 1 >
+    au < exists ; 2010 ; Collaborative Librarianship Volume 2 ; 2 >
+    au < exists ; 2011 ; Collaborative Librarianship Volume 3 ; 3 >
+    au < exists ; 2012 ; Collaborative Librarianship Volume 4 ; 4 >
+    au < exists ; 2013 ; Collaborative Librarianship Volume 5 ; 5 >
+    au < exists ; 2014 ; Collaborative Librarianship Volume 6 ; 6 >
+    au < exists ; 2015 ; Collaborative Librarianship Volume 7 ; 7 >
+    au < exists ; 2016 ; Collaborative Librarianship Volume 8 ; 8 >
+    au < exists ; 2017 ; Collaborative Librarianship Volume 9 ; 9 >
+    au < exists ; 2018 ; Collaborative Librarianship Volume 10 ; 10 >
+    au < expected ; 2019 ; Collaborative Librarianship Volume 11 ; 11 >
+    
+  }
+
+}
