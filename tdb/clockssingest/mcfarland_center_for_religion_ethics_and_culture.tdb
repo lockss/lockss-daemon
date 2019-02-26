@@ -18,7 +18,7 @@
 
       comment[publisher] = McFarland Center for Religion Ethics and Culture
       param[base_url] = https://crossworks.holycross.edu/
-      param[journal_id] = jgc
+      param[journal_abbr] = jgc
 
       au < exists ; exists ; 2016 ; Journal of Global Catholicism Volume 1 ; 1 ; >
       au < exists ; exists ; 2017 ; Journal of Global Catholicism Volume 2 ; 2 ; >
