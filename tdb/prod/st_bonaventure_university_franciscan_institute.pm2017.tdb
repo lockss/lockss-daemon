@@ -38,16 +38,16 @@
         au < manifest ; 1961 ; Franciscan Studies Volume 21 [1961] ; 7670 >
         au < manifest ; 1962 ; Franciscan Studies Volume 22 [1962] ; 7669 >
         au < manifest ; 1963 ; Franciscan Studies Volume 23 [1963] ; 7668 >
-        au < manifest ; 1964 ; Franciscan Studies Volume 24 [1964 (not available)] ; 7667 >
-        au < manifest ; 1965 ; Franciscan Studies Volume 25 [1965 (not available)] ; 7666 >
+        au < doesNotExist ; 1964 ; Franciscan Studies Volume 24 [1964 (not available)] ; 7667 >
+        au < doesNotExist ; 1965 ; Franciscan Studies Volume 25 [1965 (not available)] ; 7666 >
         au < manifest ; 1966 ; Franciscan Studies Volume 26 [1966] ; 7662 >
         au < manifest ; 1967 ; Franciscan Studies Volume 27 [1967] ; 7661 >
         au < manifest ; 1968 ; Franciscan Studies Volume 28 [1968] ; 7660 >
         au < manifest ; 1969 ; Franciscan Studies Volume 29 [1969] ; 7659 >
         au < manifest ; 1970 ; Franciscan Studies Volume 30 [1970] ; 7658 >
-        au < manifest ; 1971 ; Franciscan Studies Volume 31 [1971 (not available)] ; 7657 >
-        au < manifest ; 1972 ; Franciscan Studies Volume 32 [1972 (not available)] ; 7656 >
-        au < manifest ; 1973 ; Franciscan Studies Volume 33 [1973 (not available)] ; 7655 >
+        au < doesNotExist ; 1971 ; Franciscan Studies Volume 31 [1971 (not available)] ; 7657 >
+        au < doesNotExist ; 1972 ; Franciscan Studies Volume 32 [1972 (not available)] ; 7656 >
+        au < doesNotExist ; 1973 ; Franciscan Studies Volume 33 [1973 (not available)] ; 7655 >
         au < manifest ; 1974 ; Franciscan Studies Volume 34 [1974] ; 7654 >
         au < manifest ; 1975 ; Franciscan Studies Volume 35 [1975] ; 7648 >
         au < manifest ; 1976 ; Franciscan Studies Volume 36 [1976] ; 7647 >
@@ -89,6 +89,8 @@
         au < released ; 2014 ; Franciscan Studies Volume 72 [2014] ; 12137 >
         au < released ; 2015 ; Franciscan Studies Volume 73 [2015] ; 12138 >
         au < released ; 2016 ; Franciscan Studies Volume 74 [2016] ; 12150 >
+        au < exists ; 2017 ; Franciscan Studies Volume 75 [2016] ; 13012 >
+        au < exists ; 2018 ; Franciscan Studies Volume 76 [2016] ; 13745 >
 
     }
 
