@@ -17,7 +17,6 @@
   # Do not include Journal of the Ramanujan Mathematical Society. 2320-3110
   # Do not include Memoires de la Société Mathématique de France. 0249-633X
   # Do not include Moscow Mathematical Journal. 1609-4514
-  # Do not include Sugaku Expositions. 0898-9583
   # Do not include Electronic Research Announcements. 1079-6762
   # Do not include Journal of Algebraic Geometry. 1056-3911
   # Do not include Quarterly of Applied Mathematics. 0033-569X. 1552-4485
@@ -594,4 +593,19 @@
 
   }
 
+  {
+  
+    title < 
+      name = Sugaku Expositions ;
+      issn = 0898-9583 ;
+      eissn = 2473-585X
+    >
+    
+    param[journal_id] = suga
+      
+    au < exists ; exists ; 2017 ; Sugaku Expositions Volume 30 ; 2017 ; >
+    au < exists ; exists ; 2018 ; Sugaku Expositions Volume 31 ; 2018 ; >
+
+  }
+    
 }
