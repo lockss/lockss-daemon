@@ -23,7 +23,7 @@
       plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
       implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
       param[base_url] = http://thebalticyearbook.org/journals/
-      param[journal_abbr] = baltic
+      param[journal_id] = baltic
       # no volume published in 2011
 
       au < superseded ; finished ; 2012 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 7 [superseded] ; 7 ; 2012 ; >
@@ -110,7 +110,7 @@
       plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
       implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
       param[base_url] = http://jhaponline.org/journals/
-      param[journal_abbr] = jhap
+      param[journal_id] = jhap
       # Journal moved in 2013. to https://jhaponline.org/
       # No longer published by New Prairie Press. Do not process.
 
@@ -132,7 +132,7 @@
       plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
       implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
       param[base_url] = http://jftonline.org/journals/
-      param[journal_abbr] = jft
+      param[journal_id] = jft
 
       au < finished ; finished ; 2012 ; Journal of Financial Therapy Volume 3 ; 3 ; 2012 ; >
 
@@ -170,7 +170,7 @@
       plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
       implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
       param[base_url] = http://newprairiepress.org/journals/
-      param[journal_abbr] = jrmh
+      param[journal_id] = jrmh
       
       comment[moved] = Moved to American Psychological Association
 
@@ -192,7 +192,7 @@
       plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
       implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
       param[base_url] = http://newprairiepress.org/journals/
-      param[journal_abbr] = CULS
+      param[journal_id] = CULS
 
       au < finished ; finished ; 2012 ; Kansas Library Association College and University Libraries Section Proceedings Volume 2 ; 2 ; 2012 ; >
 
@@ -229,7 +229,7 @@
       plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
       implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
       param[base_url] = http://ojrrp.org/journals/
-      param[journal_abbr] = ojrrp
+      param[journal_id] = ojrrp
 
       au < finished ; finished ; 2012 ; Online Journal of Rural Research & Policy Volume 7 ; 7 ; 2012 ; >
 

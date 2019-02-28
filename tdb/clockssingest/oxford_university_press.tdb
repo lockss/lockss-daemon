@@ -6350,7 +6350,7 @@
     au < frozen ; exists ; 2015 ; 2015 ; GigaScience Volume 4 [OUP] ; 4 ; >
     au < frozen ; exists ; 2016 ; 2016 ; GigaScience Volume 5 [OUP] ; 5 ; >
     au < frozen ; exists ; 2017 ; 2017 ; GigaScience Volume 6 [OUP] ; 6 ; >
-    au < ready ; exists ; 2018 ; 2018 ; GigaScience Volume 7 [OUP] ; 7 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; GigaScience Volume 7 [OUP] ; 7 ; >
 
   }
 
@@ -6467,7 +6467,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Health & Social Work Volume 40 ; 40 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Health & Social Work Volume 41 ; 41 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Health & Social Work Volume 42 ; 42 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; 2018 ; Health & Social Work Volume 43 ; 43 ; >
+    au < frozen ; exists ; 2018 ; 2018 ; Health & Social Work Volume 43 ; 43 ; >
 
   }
 
@@ -7272,7 +7272,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; IMA Journal of Numerical Analysis Volume 35 ; 35 ; >
     au < frozen ; exists ; 2016 ; 2016 ; IMA Journal of Numerical Analysis Volume 36 ; 36 ; >
     au < finished ; crawling ; 2017 ; 2017 ; IMA Journal of Numerical Analysis Volume 37 ; 37 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; 2018 ; IMA Journal of Numerical Analysis Volume 38 ; 38 ; >
+    au < frozen ; exists ; 2018 ; 2018 ; IMA Journal of Numerical Analysis Volume 38 ; 38 ; >
 
   }
 
@@ -7467,7 +7467,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Industrial and Corporate Change Volume 24 ; 24 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Industrial and Corporate Change Volume 25 ; 25 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Industrial and Corporate Change Volume 26 ; 26 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2018 ; 2018 ; Industrial and Corporate Change Volume 27 ; 27 ; >
+    au < frozen ; exists ; 2018 ; 2018 ; Industrial and Corporate Change Volume 27 ; 27 ; >
 
   }
 
@@ -7502,7 +7502,7 @@
 
     #this title was ONLY in the publisher listing
     au < frozen ; exists ; 2017 ; 2017 ; Innovation in Aging Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Innovation in Aging Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2018 ; 2018 ; Innovation in Aging Volume 2 ; 2 ; >
 
   }
 
@@ -7770,7 +7770,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Immunology Volume 27 ; 27 ; >
     au < frozen ; exists ; 2016 ; 2016 ; International Immunology Volume 28 ; 28 ; >
     au < frozen ; exists ; 2017 ; 2017 ; International Immunology Volume 29 ; 29 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; International Immunology Volume 30 ; 30 ; >
+    au < frozen ; exists ; 2018 ; 2018 ; International Immunology Volume 30 ; 30 ; >
 
   }
 
@@ -13838,7 +13838,7 @@
 
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Open Forum Infectious Diseases Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Open Forum Infectious Diseases Volume 2 ; 2 ; >
-    au < testing ; exists ; 2016 ; 2016 ; Open Forum Infectious Diseases Volume 3 ; 3 ; >
+    au < ready ; exists ; 2016 ; 2016 ; Open Forum Infectious Diseases Volume 3 ; 3 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Open Forum Infectious Diseases Volume 4 ; 4 ; >
     au < testing ; exists ; 2018 ; 2018 ; Open Forum Infectious Diseases Volume 5 ; 5 ; >
 
@@ -14188,7 +14188,7 @@
     au < manifest ; exists ; 2013 ; 2013 ; Paediatrics & Child Health Volume 18 ; 18 ; >
     au < manifest ; exists ; 2014 ; 2014 ; Paediatrics & Child Health Volume 19 ; 19 ; >
     au < manifest ; exists ; 2015 ; 2015 ; Paediatrics & Child Health Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; Paediatrics & Child Health Volume 21 ; 21 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; Paediatrics & Child Health Volume 21 ; 21 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Paediatrics & Child Health Volume 22 ; 22 ; >
     au < testing ; exists ; 2018 ; 2018 ; Paediatrics & Child Health Volume 23 ; 23 ; >
 
@@ -14220,7 +14220,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Pain Medicine Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Pain Medicine Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Pain Medicine Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; Pain Medicine Volume 17 ; 17 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; Pain Medicine Volume 17 ; 17 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Pain Medicine Volume 18 ; 18 ; >
     au < testing ; exists ; 2018 ; 2018 ; Pain Medicine Volume 19 ; 19 ; >
 
@@ -15982,7 +15982,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Screen Volume 54 ; 54 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Screen Volume 55 ; 55 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Screen Volume 56 ; 56 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; Screen Volume 57 ; 57 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; Screen Volume 57 ; 57 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Screen Volume 58 ; 58 ; >
     au < testing ; exists ; 2018 ; 2018 ; Screen Volume 59 ; 59 ; >
 
@@ -16393,7 +16393,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Social Problems Volume 60 ; 60 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Social Problems Volume 61 ; 61 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Social Problems Volume 62 ; 62 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; Social Problems Volume 63 ; 63 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; Social Problems Volume 63 ; 63 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Social Problems Volume 64 ; 64 ; >
     au < testing ; exists ; 2018 ; 2018 ; Social Problems Volume 65 ; 65 ; >
 
@@ -17526,7 +17526,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; The Chinese Journal of International Politics Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; The Chinese Journal of International Politics Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The Chinese Journal of International Politics Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; The Chinese Journal of International Politics Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; The Chinese Journal of International Politics Volume 9 ; 9 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Chinese Journal of International Politics Volume 10 ; 10 ; >
     au < testing ; exists ; 2018 ; 2018 ; The Chinese Journal of International Politics Volume 11 ; 11 ; >
 
@@ -18055,7 +18055,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; The Journal of Hindu Studies Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; The Journal of Hindu Studies Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The Journal of Hindu Studies Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; The Journal of Hindu Studies Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; The Journal of Hindu Studies Volume 9 ; 9 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Journal of Hindu Studies Volume 10 ; 10 ; >
     au < testing ; exists ; 2018 ; 2018 ; The Journal of Hindu Studies Volume 11 ; 11 ; >
 
@@ -18289,7 +18289,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 38 ; 38 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 39 ; 39 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 40 ; 40 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 41 ; 41 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 41 ; 41 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 42 ; 42 ; >
     au < testing ; exists ; 2018 ; 2018 ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 43 ; 43 ; >
 
@@ -19461,7 +19461,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; The Review of Corporate Finance Studies Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; The Review of Corporate Finance Studies Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The Review of Corporate Finance Studies Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; The Review of Corporate Finance Studies Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; The Review of Corporate Finance Studies Volume 5 ; 5 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Review of Corporate Finance Studies Volume 6 ; 6 ; >
     au < testing ; exists ; 2018 ; 2018 ; The Review of Corporate Finance Studies Volume 7 ; 7 ; >
 
@@ -20564,7 +20564,7 @@
     au < manifest ; exists ; 2013 ; 2013 ; Zoological Journal of the Linnean Society Volume 167-169 ; 167-169 ; >
     au < manifest ; exists ; 2014 ; 2014 ; Zoological Journal of the Linnean Society Volume 170-172 ; 170-172 ; >
     au < manifest ; exists ; 2015 ; 2015 ; Zoological Journal of the Linnean Society Volume 173-175 ; 173-175 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; Zoological Journal of the Linnean Society Volume 176-178 ; 176-178 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; Zoological Journal of the Linnean Society Volume 176-178 ; 176-178 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Zoological Journal of the Linnean Society Volume 179-181 ; 179-181 ; >
     au < testing ; exists ; 2018 ; 2018 ; Zoological Journal of the Linnean Society Volume 182-184 ; 182-184 ; >
 
