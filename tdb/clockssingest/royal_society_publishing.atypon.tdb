@@ -9,7 +9,7 @@
 
     #moved to Atypon in 2019
 
-    plugin = org.lockss.plugin.atypon.ClockssGenericAtyponPlugin
+    plugin = org.lockss.plugin.atypon.rsp.ClockssRoyalSocietyPublishingAtyponPlugin
     param[base_url] = https://royalsocietypublishing.org/
     implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
     #doNotProcess = processed in Highwire
@@ -89,7 +89,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Biographical Memoirs of Fellows of the Royal Society Volume 61 ; 61 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Biographical Memoirs of Fellows of the Royal Society Volume 62 ; 62 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Biographical Memoirs of Fellows of the Royal Society Volume 63 ; 63 ; >
-    au < exists ; exists ; 2018 ; Biographical Memoirs of Fellows of the Royal Society Volume 64 ; 64 ; >
+    au < manifest ; exists ; 2018 ; Biographical Memoirs of Fellows of the Royal Society Volume 64 ; 64 ; >
     au < expected ; exists ; 2019 ; Biographical Memoirs of Fellows of the Royal Society Volume 65 ; 65 ; >
 
   }

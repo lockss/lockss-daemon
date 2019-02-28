@@ -1,0 +1,55 @@
+<map>
+    <entry>
+        <string>plugin_status</string>
+        <string>Development</string>
+    </entry>
+    <entry>
+        <string>plugin_identifier</string>
+        <string>org.lockss.plugin.atypon.rsp.RoyalSocietyPublishingAtyponPlugin</string>
+    </entry>
+    <entry>
+        <string>plugin_version</string>
+        <string>1</string>
+    </entry>
+    <entry>
+        <string>plugin_feature_version_map</string>
+        <map>
+            <entry>
+                <string>Metadata</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Poll</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Substance</string>
+                <string>1</string>
+            </entry>
+        </map>
+    </entry>
+    <entry>
+        <string>plugin_name</string>
+        <string>Royal Society Publishing Atypon Plugin</string>
+    </entry>
+    <entry>
+        <string>plugin_parent</string>
+        <string>org.lockss.plugin.atypon.BaseAtyponPlugin</string>
+    </entry>
+    <entry>
+        <string>plugin_parent_version</string>
+        <string>101</string>
+    </entry>
+    <entry>
+        <string>au_name</string>
+        <string>"Royal Society Publishing Atypon Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    </entry>
+    <entry>
+        <string>text/html_filter_factory</string>
+        <string>org.lockss.plugin.atypon.rsp.RoyalSocietyPublishingHtmlHashFilterFactory</string>
+    </entry>
+    <entry>
+        <string>text/html_crawl_filter_factory</string>
+        <string>org.lockss.plugin.atypon.rsp.RoyalSocietyPublishingHtmlCrawlFilterFactory</string>
+    </entry>
+</map>

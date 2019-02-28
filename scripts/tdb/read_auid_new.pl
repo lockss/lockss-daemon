@@ -856,6 +856,7 @@ while (my $line = <>) {
            ($plugin eq "MarkAllenPlugin") ||
            ($plugin eq "MultiSciencePlugin") ||
            ($plugin eq "MassachusettsMedicalSocietyPlugin") ||
+           ($plugin eq "RoyalSocietyPublishingAtyponPlugin") ||
            ($plugin eq "RsnaJournalsPlugin") ||
            ($plugin eq "SageAtyponJournalsPlugin") ||
            ($plugin eq "SiamPlugin") ||
@@ -916,6 +917,7 @@ while (my $line = <>) {
            ($plugin eq "ClockssMultiSciencePlugin") ||
            ($plugin eq "ClockssNRCResearchPressPlugin") ||
            ($plugin eq "ClockssPracticalActionJournalsPlugin") ||
+           ($plugin eq "ClockssRoyalSocietyPublishingAtyponPlugin") ||
            ($plugin eq "ClockssSageAtyponJournalsPlugin") ||
            ($plugin eq "ClockssSEGPlugin") ||
            ($plugin eq "ClockssSiamPlugin") ||
