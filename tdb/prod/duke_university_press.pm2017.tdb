@@ -6,6 +6,7 @@
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:4
 
     {
     title <
@@ -429,6 +430,44 @@
 
     {
     title <
+      name = Journal of Korean Studies ;
+      issn = 0731-1613  ;
+      eissn = 2158-1665  ;
+      issnl = 0731-1613
+
+    >
+
+      attr[journal_id] = 515
+
+        au < testing ; 1969-1971 ; Journal of Korean Studies Volume 1 [1969-1971] ; 6784 >
+        au < testing ; 1979 ; Journal of Korean Studies Volume 1 [1979] ; 6888 >
+        au < testing ; 1980 ; Journal of Korean Studies Volume 2 [1980] ; 6748 >
+        au < testing ; 1981 ; Journal of Korean Studies Volume 3 [1981] ; 6752 >
+        au < testing ; 1982-1983 ; Journal of Korean Studies Volume 4 [1982-1983] ; 6720 >
+        au < testing ; 1984 ; Journal of Korean Studies Volume 5 [1984] ; 6751 >
+        au < testing ; 1988 ; Journal of Korean Studies Volume 6 [1988-89] ; 6777 >
+        au < testing ; 1990 ; Journal of Korean Studies Volume 7 [1990] ; 6778 >
+        au < testing ; 1992 ; Journal of Korean Studies Volume 8 [1992] ; 6779 >
+        au < testing ; 2004 ; Journal of Korean Studies Volume 9 [2004] ; 6805 >
+        au < testing ; 2005 ; Journal of Korean Studies Volume 10 [2005] ; 6806 >
+        au < testing ; 2006 ; Journal of Korean Studies Volume 11 [2006] ; 6807 >
+        au < testing ; 2007 ; Journal of Korean Studies Volume 12 [2007] ; 6895 >
+        au < testing ; 2008 ; Journal of Korean Studies Volume 13 [2008] ; 6797 >
+        au < testing ; 2009 ; Journal of Korean Studies Volume 14 [2009] ; 6750 >
+        au < released ; 2010 ; Journal of Korean Studies Volume 15 [2010] ; 6734 >
+        au < released ; 2011 ; Journal of Korean Studies Volume 16 [2011] ; 7375 >
+        au < released ; 2012 ; Journal of Korean Studies Volume 17 [2012] ; 8385 >
+        au < released ; 2013 ; Journal of Korean Studies Volume 18 [2013] ; 9169 >
+        au < released ; 2014 ; Journal of Korean Studies Volume 19 [2014] ; 10076 >
+        au < released ; 2015 ; Journal of Korean Studies Volume 20 [2015] ; 10685 >
+        au < released ; 2016 ; Journal of Korean Studies Volume 21 [2016] ; 11218 >
+        au < exists ; 2017 ; Journal of Korean Studies Volume 22 [2017] ; 12901 >
+        au < exists ; 2018 ; Journal of Korean Studies Volume 23 [2018] ; 13548 >
+
+    }
+
+    {
+    title <
       name = Journal of Medieval and Early Modern Studies ;
       issn = 1082-9636  ;
       eissn = 1527-8263  ;
@@ -444,6 +483,34 @@
         au < released ; 2002 ; Journal of Medieval and Early Modern Studies Volume 32 [2002] ; 317 >
         au < released ; 2003 ; Journal of Medieval and Early Modern Studies Volume 33 [2003] ; 814 >
         au < released ; 2004 ; Journal of Medieval and Early Modern Studies Volume 34 [2004] ; 2427 >
+
+    }
+
+    {
+    title <
+      name = Journal of Middle East Women's Studies ;
+      issn = 1552-5864  ;
+      eissn = 1558-9579  ;
+      issnl = 1552-5864
+
+    >
+
+      attr[journal_id] = 329
+
+        au < released ; 2005 ; Journal of Middle East Women's Studies Volume 1 [2005] ; 6042 >
+        au < released ; 2006 ; Journal of Middle East Women's Studies Volume 2 [2006] ; 2957 >
+        au < released ; 2007 ; Journal of Middle East Women's Studies Volume 3 [2007] ; 3224 >
+        au < released ; 2008 ; Journal of Middle East Women's Studies Volume 4 [2008] ; 3587 >
+        au < released ; 2009 ; Journal of Middle East Women's Studies Volume 5 [2009] ; 4116 >
+        au < released ; 2010 ; Journal of Middle East Women's Studies Volume 6 [2010] ; 5759 >
+        au < released ; 2011 ; Journal of Middle East Women's Studies Volume 7 [2011] ; 6712 >
+        au < released ; 2012 ; Journal of Middle East Women's Studies Volume 8 [2012] ; 7770 >
+        au < released ; 2013 ; Journal of Middle East Women's Studies Volume 9 [2013] ; 8624 >
+        au < released ; 2014 ; Journal of Middle East Women's Studies Volume 10 [2014] ; 9542 >
+        au < released ; 2015 ; Journal of Middle East Women's Studies Volume 11 [2015] ; 10505 >
+        au < released ; 2016 ; Journal of Middle East Women's Studies Volume 12 [2016] ; 11010 >
+        au < released ; 2017 ; Journal of Middle East Women's Studies Volume 13 [2017] ; 12363 >
+        au < exists ; 2018 ; Journal of Middle East Women's Studies Volume 14 [2018] ; 13352 >
 
     }
 
@@ -496,6 +563,37 @@
         au < released ; 2014 ; Mediterranean Quarterly Volume 25 [2014] ; 9895 >
         au < released ; 2015 ; Mediterranean Quarterly Volume 26 [2015] ; 10571 >
         au < released ; 2016 ; Mediterranean Quarterly Volume 27 [2016] ; 11144 >
+
+    }
+
+    {
+    title <
+      name = Meridians: feminism, race, transnationalism ;
+      issn = 1536-6936  ;
+      eissn = 1547-8424  ;
+      issnl = 1536-6936
+
+    >
+
+      attr[journal_id] = 254
+
+        au < released ; 2001 ; Meridians: feminism, race, transnationalism Volume 1 [2001] ; 6676 >
+        au < released ; 2001-2002 ; Meridians: feminism, race, transnationalism Volume 2 [2001-2002] ; 6046 >
+        au < released ; 2002-2003 ; Meridians: feminism, race, transnationalism Volume 3 [2002-2003] ; 6045 >
+        au < released ; 2003-2004 ; Meridians: feminism, race, transnationalism Volume 4 [2003-2004] ; 1742 >
+        au < released ; 2004-2005 ; Meridians: feminism, race, transnationalism Volume 5 [2004-2005] ; 2597 >
+        au < released ; 2005-2006 ; Meridians: feminism, race, transnationalism Volume 6 [2005-2006] ; 2860 >
+        au < released ; 2006-2007 ; Meridians: feminism, race, transnationalism Volume 7 [2006-2007] ; 3226 >
+        au < released ; 2007-2008 ; Meridians: feminism, race, transnationalism Volume 8 [2007-2008] ; 3732 >
+        au < released ; 2008-2009 ; Meridians: feminism, race, transnationalism Volume 9 [2008-2009] ; 4351 >
+        au < released ; 2009-2010 ; Meridians: feminism, race, transnationalism Volume 10 [2009-2010] ; 6165 >
+        au < released ; 2011-2013 ; Meridians: feminism, race, transnationalism Volume 11 [2011-2013] ; 7885 >
+        au < released ; 2014 ; Meridians: feminism, race, transnationalism Volume 12 [2014] ; 9853 >
+        au < released ; 2015-2016 ; Meridians: feminism, race, transnationalism Volume 13 [2015-2016] ; 10761 >
+        au < released ; 2016 ; Meridians: feminism, race, transnationalism Volume 14 [2016] ; 11425 >
+        au < released ; 2016-2017 ; Meridians: feminism, race, transnationalism Volume 15 [2016-2017] ; 12483 >
+        au < exists ; 2017-2018 ; Meridians: feminism, race, transnationalism Volume 16 [2017-2018] ; 13042 >
+        au < exists ; 2018-2019 ; Meridians: feminism, race, transnationalism Volume 17 [2018-2019] ; 13719 >
 
     }
 
