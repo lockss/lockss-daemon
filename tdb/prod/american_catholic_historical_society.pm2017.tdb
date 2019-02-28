@@ -6,6 +6,7 @@
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:156
 
     {
     title <
@@ -24,6 +25,8 @@
         au < released ; 2014 ; American Catholic Studies Volume 125 [2014] ; 9879 >
         au < released ; 2015 ; American Catholic Studies Volume 126 [2015] ; 10669 >
         au < released ; 2016 ; American Catholic Studies Volume 127 [2016] ; 11217 >
+        au < exists ; 2017 ; American Catholic Studies Volume 128 [2017] ; 12621 >
+        au < exists ; 2018 ; American Catholic Studies Volume 129 [2018] ; 13713 >
 
     }
 

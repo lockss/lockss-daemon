@@ -6,6 +6,7 @@
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:243
 
     {
     title <
@@ -19,6 +20,7 @@
         au < released ; 2014 ; Scottish Literary Review Volume 6 [2014] ; 10062 >
         au < released ; 2015 ; Scottish Literary Review Volume 7 [2015] ; 10630 >
         au < released ; 2016 ; Scottish Literary Review Volume 8 [2016] ; 11229 >
+        au < exists ; 2017 ; Scottish Literary Review Volume 9 [2017] ; 12663 >
 
     }
 

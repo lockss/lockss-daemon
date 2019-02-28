@@ -6,6 +6,7 @@
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:25
 
     {
     title <
@@ -35,6 +36,8 @@
         au < released ; 2015 ; Journal of American Folklore Volume 128 [2015] ; 10381 >
         au < released ; 2016 ; Journal of American Folklore Volume 129 [2016] ; 11128 >
         au < released ; 2017 ; Journal of American Folklore Volume 130 [2017] ; 12389 >
+        au < exists ; 2018 ; Journal of American Folklore Volume 131 [2018] ; 13245 >
+        au < exists ; 2019 ; Journal of American Folklore Volume 132 [2019] ; 14006 >
 
     }
 
