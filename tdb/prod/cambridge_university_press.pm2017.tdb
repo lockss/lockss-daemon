@@ -137,6 +137,67 @@
 
     {
     title <
+      name = Canadian Journal of Law and Society ;
+      issn = 0829-3201  ;
+      eissn = 1911-0227  ;
+      issnl = 0829-3201
+
+    >
+
+      attr[journal_id] = 356
+      #move from University of Toronto Press
+
+        au < manifest ; 2005 ; Canadian Journal of Law and Society Volume 20 [2005] ; 3072 >
+        au < manifest ; 2006 ; Canadian Journal of Law and Society Volume 21 [2006] ; 3143 >
+        au < manifest ; 2007 ; Canadian Journal of Law and Society Volume 22 [2007] ; 3822 >
+        au < manifest ; 2008 ; Canadian Journal of Law and Society Volume 23 [2008] ; 4141 >
+        au < manifest ; 2009 ; Canadian Journal of Law and Society Volume 24 [2009] ; 4381 >
+        au < released ; 2010 ; Canadian Journal of Law and Society Volume 25 [2010] ; 6370 >
+        au < released ; 2011 ; Canadian Journal of Law and Society Volume 26 [2011] ; 7082 >
+        au < released ; 2012 ; Canadian Journal of Law and Society Volume 27 [2012] ; 8195 >
+        au < released ; 2013 ; Canadian Journal of Law and Society Volume 28 [2013] ; 9266 >
+        au < released ; 2014 ; Canadian Journal of Law and Society Volume 29 [2014] ; 9894 >
+        au < released ; 2015 ; Canadian Journal of Law and Society Volume 30 [2015] ; 10522 >
+        au < released ; 2016 ; Canadian Journal of Law and Society Volume 31 [2016] ; 11271 >
+        au < exists ; 2017 ; Canadian Journal of Law and Society Volume 32 [2017] ; 12750 >
+        au < exists ; 2018 ; Canadian Journal of Law and Society Volume 33 [2018] ; 13534 >
+
+    }
+
+    {
+    title <
+      name = The Canadian Journal of Linguistics / La revue canadienne de linguistique ;
+      issn = 0008-4131  ;
+      eissn = 1710-1115  ;
+      issnl = 0008-4131
+
+    >
+
+      attr[journal_id] = 270
+      #move from University of Toronto Press
+
+        au < manifest ; 2003 ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 48 [2003] ; 2588 >
+        au < manifest ; 2004 ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 49 [2004] ; 2590 >
+        au < manifest ; 2005 ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 50 [2005] ; 3200 >
+        au < manifest ; 2006 ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 51 [2006] ; 3201 >
+        au < manifest ; 2007 ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 52 [2007] ; 3599 >
+        au < manifest ; 2008 ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 53 [2008] ; 3951 >
+        au < manifest ; 2009 ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 54 [2009] ; 4405 >
+        au < released ; 2010 ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 55 [2010] ; 6334 >
+        au < released ; 2011 ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 56 [2011] ; 7120 >
+        au < released ; 2012 ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 57 [2012] ; 8183 >
+        au < released ; 2013 ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 58 [2013] ; 9097 >
+        au < released ; 2014 ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 59 [2014] ; 9915 >
+        au < released ; 2015 ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 60 [2015] ; 10693 >
+        au < released ; 2016 ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 61 [2016] ; 11133 >
+        au < released ; 2017 ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 62 [2017] ; 12427 >
+        au < exists ; 2018 ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 63 [2018] ; 13432 >
+        au < exists ; 2019 ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 64 [2019] ; 13966 >
+
+    }
+
+    {
+    title <
       name = Canadian Journal on Aging / La Revue canadienne du vieillissement ;
       issn = 0714-9808  ;
       eissn = 1710-1107  ;
@@ -192,6 +253,38 @@
     
     {
     title <
+      name = Enterprise & Society ;
+      issn = 1467-2227  ;
+      eissn = 1467-2235  ;
+      issnl = 1467-2227
+
+    >
+
+      attr[journal_id] = 216
+      #move from OUP
+
+        au < manifest ; 2003 ; Enterprise & Society Volume 4 [2003] ; 895 >
+        au < manifest ; 2004 ; Enterprise & Society Volume 5 [2004] ; 2449 >
+        au < manifest ; 2005 ; Enterprise & Society Volume 6 [2005] ; 2666 >
+        au < manifest ; 2006 ; Enterprise & Society Volume 7 [2006] ; 2958 >
+        au < manifest ; 2007 ; Enterprise & Society Volume 8 [2007] ; 3334 >
+        au < manifest ; 2008 ; Enterprise & Society Volume 9 [2008] ; 3796 >
+        au < manifest ; 2009 ; Enterprise & Society Volume 10 [2009] ; 4186 >
+        au < released ; 2010 ; Enterprise & Society Volume 11 [2010] ; 5853 >
+        au < released ; 2011 ; Enterprise & Society Volume 12 [2011] ; 7403 >
+        au < released ; 2012 ; Enterprise & Society Volume 13 [2012] ; 8067 >
+        au < released ; 2013 ; Enterprise & Society Volume 14 [2013] ; 8807 >
+        au < released ; 2014 ; Enterprise & Society Volume 15 [2014] ; 9690 >
+        au < released ; 2015 ; Enterprise & Society Volume 16 [2015] ; 10774 >
+        au < released ; 2016 ; Enterprise & Society Volume 17 [2016] ; 10985 >
+        au < released ; 2017 ; Enterprise & Society Volume 18 [2017] ; 12405 >
+        au < exists ; 2018 ; Enterprise & Society Volume 19 [2018] ; 13313 >
+        au < exists ; 2019 ; Enterprise & Society Volume 20 [2019] ; 13924 >
+
+    }
+
+    {
+    title <
       name = Journal of Policy History ;
       issn = 0898-0306  ;
       eissn = 1528-4190  ;
@@ -222,6 +315,73 @@
         au < released ; 2017 ; Journal of Policy History Volume 29 [2017] ; 12254 >
         au < exists ; 2018 ; Journal of Policy History Volume 30 [2017] ; 13124 >
         au < exists ; 2019 ; Journal of Policy History Volume 31 [2017] ; 13802 >
+
+    }
+
+    {
+    title <
+      name = Social Science History ;
+      issn = 0145-5532  ;
+      eissn = 1527-8034  ;
+      issnl = 0145-5532
+
+    >
+
+      attr[journal_id] = 188
+      #move from DUP
+
+        au < released ; 1999 ; Social Science History Volume 23 [1999] ; 642 >
+        au < released ; 2000 ; Social Science History Volume 24 [2000] ; 643 >
+        au < released ; 2001 ; Social Science History Volume 25 [2001] ; 644 >
+        au < released ; 2002 ; Social Science History Volume 26 [2002] ; 645 >
+        au < released ; 2003 ; Social Science History Volume 27 [2003] ; 854 >
+        au < released ; 2004 ; Social Science History Volume 28 [2004] ; 2472 >
+        au < released ; 2005 ; Social Science History Volume 29 [2005] ; 2736 >
+        au < released ; 2006 ; Social Science History Volume 30 [2006] ; 3012 >
+        au < released ; 2007 ; Social Science History Volume 31 [2007] ; 3272 >
+        au < released ; 2008 ; Social Science History Volume 32 [2008] ; 3645 >
+        au < released ; 2009 ; Social Science History Volume 33 [2009] ; 4136 >
+        au < released ; 2010 ; Social Science History Volume 34 [2010] ; 5781 >
+        au < released ; 2011 ; Social Science History Volume 35 [2011] ; 6821 >
+        au < released ; 2012 ; Social Science History Volume 36 [2012] ; 8223 >
+        au < released ; 2013 ; Social Science History Volume 37 [2013] ; 8838 >
+        au < released ; 2014 ; Social Science History Volume 38 [2014] ; 10690 >
+        au < released ; 2015 ; Social Science History Volume 39 [2015] ; 10726 >
+        au < released ; 2016 ; Social Science History Volume 40 [2016] ; 10941 >
+        au < released ; 2017 ; Social Science History Volume 41 [2017] ; 12344 >
+        au < exists ; 2018 ; Social Science History Volume 42 [2018] ; 13166 >
+        au < exists ; 2019 ; Social Science History Volume 43 [2019] ; 13894 >
+
+    }
+
+    {
+    title <
+      name = Traditio ;
+      issn = 0362-1529 ;
+      eissn = 2166-5508 ;
+      issnl = 0362-1529
+    >
+
+      attr[journal_id] = 568
+      #move from Fordham University Press
+
+        au < released ; 2002 ; Traditio Volume 57 [2002] ; 8286 >
+        au < released ; 2003 ; Traditio Volume 58 [2003] ; 8260 >
+        au < released ; 2004 ; Traditio Volume 59 [2004] ; 8339 >
+        au < released ; 2005 ; Traditio Volume 60 [2005] ; 8330 >
+        au < released ; 2006 ; Traditio Volume 61 [2006] ; 8343 >
+        au < released ; 2007 ; Traditio Volume 62 [2007] ; 8377 >
+        au < released ; 2008 ; Traditio Volume 63 [2008] ; 8378 >
+        au < released ; 2009 ; Traditio Volume 64 [2009] ; 8347 >
+        au < released ; 2010 ; Traditio Volume 65 [2010] ; 8348 >
+        au < released ; 2011 ; Traditio Volume 66 [2011] ; 8103 >
+        au < released ; 2012 ; Traditio Volume 67 [2012] ; 9263 >
+        au < released ; 2013 ; Traditio Volume 68 [2013] ; 9782 >
+        au < released ; 2014 ; Traditio Volume 69 [2014] ; 10342 >
+        au < released ; 2015 ; Traditio Volume 70 [2015] ; 10976 >
+        au < released ; 2016 ; Traditio Volume 71 [2016] ; 12401 >
+        au < exists ; 2017 ; Traditio Volume 72 [2017] ; 13196 >
+        au < exists ; 2018 ; Traditio Volume 73 [2018] ; 13817 >
 
     }
 
