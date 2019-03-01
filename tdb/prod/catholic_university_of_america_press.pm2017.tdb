@@ -6,6 +6,28 @@
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:16
+
+    {
+    title <
+      name = Antiphon: A Journal for Liturgical Renewal ;
+      issn = 1543-9925  ;
+      eissn = 1543-9933  ;
+      issnl = 1543-9925
+
+    >
+
+      attr[journal_id] = 708
+
+        au < exists ; 2012 ; Antiphon: A Journal for Liturgical Renewal Volume 16 [2012] ; 13207 >
+        au < exists ; 2013 ; Antiphon: A Journal for Liturgical Renewal Volume 17 [2013] ; 13208 >
+        au < exists ; 2014 ; Antiphon: A Journal for Liturgical Renewal Volume 18 [2014] ; 13209 >
+        au < exists ; 2015 ; Antiphon: A Journal for Liturgical Renewal Volume 19 [2015] ; 12148 >
+        au < exists ; 2016 ; Antiphon: A Journal for Liturgical Renewal Volume 20 [2016] ; 12152 >
+        au < exists ; 2017 ; Antiphon: A Journal for Liturgical Renewal Volume 21 [2017] ; 12661 >
+        au < exists ; 2018 ; Antiphon: A Journal for Liturgical Renewal Volume 22 [2018] ; 13404 >
+
+    }
 
     {
     title <
@@ -21,8 +43,11 @@
         au < released ; 2013 ; Bulletin of Medieval Canon Law Volume 30 [2013] ; 9910 >
         au < released ; 2014 ; Bulletin of Medieval Canon Law Volume 31 [2014] ; 10834 >
         au < released ; 2015 ; Bulletin of Medieval Canon Law Volume 32 [2015] ; 11204 >
+        au < exists ; 2016 ; Bulletin of Medieval Canon Law Volume 33 [2016] ; 12557 >
+        au < exists ; 2017 ; Bulletin of Medieval Canon Law Volume 34 [2017] ; 13553 >
 
     }
+    
     {
     title <
       name = Quaestiones Disputatae ;
@@ -39,6 +64,7 @@
         au < released ; 2016-2017 ; Quaestiones Disputatae Volume 7 [2016-2017] ; 12462 >
 
     }
+
     {
     title <
       name = The Catholic Historical Review ;
@@ -73,8 +99,10 @@
         au < released ; 2015 ; The Catholic Historical Review Volume 101 [2015] ; 10427 >
         au < released ; 2016 ; The Catholic Historical Review Volume 102 [2016] ; 11170 >
         au < released ; 2017 ; The Catholic Historical Review Volume 103 [2017] ; 12486 >
+        au < exists ; 2018 ; The Catholic Historical Review Volume 104 [2018] ; 13408 >
 
     }
+
     {
     title <
       name = The Jurist: Studies in Church Law and Ministry ;
@@ -97,6 +125,7 @@
         au < released ; 2016 ; The Jurist: Studies in Church Law and Ministry Volume 76 [2016] ; 12193 >
 
     }
+
     {
     title <
       name = U.S. Catholic Historian ;
