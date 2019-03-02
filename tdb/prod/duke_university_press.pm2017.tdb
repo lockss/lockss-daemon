@@ -914,6 +914,8 @@
         au < released ; 2015 ; Small Axe Volume 19 [2015] ; 10502 >
         au < released ; 2016 ; Small Axe Volume 20 [2016] ; 10994 >
         au < released ; 2017 ; Small Axe Volume 21 [2017] ; 12492 >
+        au < exists ; 2018 ; Small Axe Volume 22 [2018] ; 13353 >
+        au < exists ; 2019 ; Small Axe Volume 23 [2019] ; 13954 >
 
     }
 
@@ -1068,6 +1070,7 @@
         au < released ; 2015 ; Tikkun Volume 30 [2015] ; 10305 >
         au < released ; 2016 ; Tikkun Volume 31 [2016] ; 10915 >
         au < released ; 2017 ; Tikkun Volume 32 [2017] ; 12339 >
+        au < exists ; 2018 ; Tikkun Volume 33 [2018] ; 13475 >
 
     }
 
@@ -1085,10 +1088,31 @@
         au < released ; 2015 ; Twentieth-Century Literature Volume 61 [2015] ; 10567 >
         au < released ; 2016 ; Twentieth-Century Literature Volume 62 [2016] ; 11150 >
         au < released ; 2017 ; Twentieth-Century Literature Volume 63 [2017] ; 12475 >
+        au < exists ; 2018 ; Twentieth-Century Literature Volume 64 [2018] ; 13474 >
 
     }
 
     {
+    title <
+      name = World Policy Journal ;
+      issn = 0740-2775  ;
+      eissn = 1936-0924  ;
+      issnl = 0740-2775
+
+    >
+
+      attr[journal_id] = 479
+      #move from World Policy Institute
+
+        au < released ; 2010 ; World Policy Journal Volume 27 [2010] ; 5942 >
+        au < released ; 2011 ; World Policy Journal Volume 28 [2011] ; 7587 >
+        au < released ; 2016-2017 ; World Policy Journal Volume 33 [2016-2017] ; 11103 >
+        au < exists ; 2017-2018 ; World Policy Journal Volume 34 [2017-2018] ; 12524 >
+        au < exists ; 2018-2019 ; World Policy Journal Volume 35 [2018-2019] ; 13354 >
+
+    }
+
+   {
     title <
       name = boundary 2 ;
       issn = 0190-3659  ;
