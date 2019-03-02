@@ -837,6 +837,31 @@
 
     {
     title <
+      name = Qui Parle: Critical Humanities and Social Sciences ;
+      issn = 1938-8020  ;
+      eissn = 1041-8385  ;
+      issnl = 1041-8385
+
+    >
+
+      attr[journal_id] = 477
+      #move from University of Nebraska Press
+
+        au < manifest ; 2009 ; Qui Parle: Critical Humanities and Social Sciences Volume 18 [2009] ; 5046 >
+        au < released ; 2010 ; Qui Parle: Critical Humanities and Social Sciences Volume 19 [2010] ; 6477 >
+        au < released ; 2011 ; Qui Parle: Critical Humanities and Social Sciences Volume 20 [2011] ; 7678 >
+        au < released ; 2012 ; Qui Parle: Critical Humanities and Social Sciences Volume 21 [2012] ; 8522 >
+        au < released ; 2013 ; Qui Parle: Critical Humanities and Social Sciences Volume 22 [2013] ; 9323 >
+        au < released ; 2014 ; Qui Parle: Critical Humanities and Social Sciences Volume 23 [2014] ; 10192 >
+        au < released ; 2015-2016 ; Qui Parle: Critical Humanities and Social Sciences Volume 24 [2015-2016] ; 10837 >
+        au < released ; 2016 ; Qui Parle: Critical Humanities and Social Sciences Volume 25 [2016] ; 12204 >
+        au < exists ; 2017 ; Qui Parle: Critical Humanities and Social Sciences Volume 26 [2017] ; 12724 >
+        au < exists ; 2018 ; Qui Parle: Critical Humanities and Social Sciences Volume 27 [2018] ; 13628 >
+
+    }
+
+    {
+    title <
       name = Radical History Review ;
       issn = 0163-6545  ;
       eissn = 1534-1453  ;
