@@ -6,6 +6,7 @@
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:2
 
     {
     title <
@@ -205,6 +206,28 @@
         au < released ; 2016 ; Mediterranean Studies Volume 24 [2016] ; 11183 >
 
     }
+
+    {
+    title <
+      name = Milton Studies ;
+      issn = 0076-8820  ;
+      eissn = 2330-796X
+    >
+
+      attr[journal_id] = 570
+      #move from Duquesne University Press
+
+        au < released ; 2012 ; Milton Studies Volume 53 [2012] ; 9352 >
+        au < released ; 2013 ; Milton Studies Volume 54 [2013] ; 9770 >
+        au < released ; 2014 ; Milton Studies Volume 55 [2014] ; 10488 >
+        au < released ; 2015 ; Milton Studies Volume 56 [2015] ; 11015 >
+        au < exists ; 2016 ; Milton Studies Volume 57 [2016] ; 12531 >
+        au < exists ; 2017 ; Milton Studies Volume 58 [2017] ; 13206 >
+        au < exists ; 2017 ; Milton Studies Volume 59 [2017] ; 13405 >
+        au < exists ; 2018 ; Milton Studies Volume 60 [2018] ; 13660 >
+
+    }
+
     {
     title <
       name = Pacific Coast Philology ;
