@@ -1056,8 +1056,8 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Mediterranean Quarterly Volume 26 ; 26 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2016 ; Mediterranean Quarterly Volume 27 ; 27 ; reingest5.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; Mediterranean Quarterly Volume 28 ; 28 ; >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2018 ; Mediterranean Quarterly Volume 29 ; 29 ; >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2019 ; Mediterranean Quarterly Volume 30 ; 30 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2018 ; Mediterranean Quarterly Volume 29 ; 29 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2019 ; Mediterranean Quarterly Volume 30 ; 30 ; >
       #stopped publishing after 2019.
 
      }
@@ -1775,7 +1775,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Tikkun Volume 30 ; 30 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2016 ; Tikkun Volume 31 ; 31 ; reingest3.clockss.org:8083 >
       au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; Tikkun Volume 32 ; 32 ; >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2018 ; Tikkun Volume 33 ; 33 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2018 ; Tikkun Volume 33 ; 33 ; >
       #stopped publishing after 2018
 
   }
