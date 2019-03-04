@@ -803,40 +803,6 @@
 
     {
     title <
-      name = positions: asia critique ;
-      issn = 1067-9847 ;
-      eissn = 1527-8271 ;
-      issnl = 1067-9847
-    >
-
-      attr[journal_id] = 162
-
-        au < doNotProcess ; 1999 ; positions: east asia cultures critique Volume 7 [1999] ; 552 >
-        au < doNotProcess ; 2000 ; positions: east asia cultures critique Volume 8 [2000] ; 553 >
-        au < doNotProcess ; 2001 ; positions: east asia cultures critique Volume 9 [2001] ; 554 >
-        au < doNotProcess ; 2002 ; positions: east asia cultures critique Volume 10 [2002] ; 555 >
-        au < doNotProcess ; 2003 ; positions: east asia cultures critique Volume 11 [2003] ; 860 >
-        au < doNotProcess ; 2004 ; positions: east asia cultures critique Volume 12 [2004] ; 2520 >
-        au < doNotProcess ; 2005 ; positions: east asia cultures critique Volume 13 [2005] ; 2815 >
-        au < doNotProcess ; 2006 ; positions: east asia cultures critique Volume 14 [2006] ; 3070 >
-        au < doNotProcess ; 2007 ; positions: east asia cultures critique Volume 15 [2007] ; 3350 >
-        au < doNotProcess ; 2008 ; positions: east asia cultures critique Volume 16 [2008] ; 3664 >
-        au < doNotProcess ; 2009 ; positions: east asia cultures critique Volume 17 [2009] ; 4223 >
-        au < doNotProcess ; 2010 ; positions: east asia cultures critique Volume 18 [2010] ; 5840 >
-        au < doNotProcess ; 2011 ; positions: east asia cultures critique Volume 19 [2011] ; 6938 >
-        au < doNotProcess ; 2012 ; positions: asia critique Volume 20 [2012] ; 8310 >
-        au < doNotProcess ; 2013 ; positions: asia critique Volume 21 [2013] ; 8840 >
-        au < doNotProcess ; 2014 ; positions: asia critique Volume 22 [2014] ; 9778 >
-        au < doNotProcess ; 2015 ; positions: asia critique Volume 23 [2015] ; 10546 >
-        au < exists ; 2016 ; positions: asia critique Volume 24 [2016] ; 11006 >
-        au < exists ; 2017 ; positions: asia critique Volume 25 [2017] ; 12379 >
-        au < exists ; 2018 ; positions: asia critique Volume 26 [2018] ; 13235 >
-        au < exists ; 2019 ; positions: asia critique Volume 27 [2019] ; 13953 >
-
-    }
-
-    {
-    title <
       name = Qui Parle: Critical Humanities and Social Sciences ;
       issn = 1938-8020  ;
       eissn = 1041-8385  ;
@@ -1154,7 +1120,7 @@
 
     {
     title <
-      name = positions: east asia cultures critique ;
+      name = positions: asia critique ;
       issn = 1067-9847  ;
       eissn = 1527-8271  ;
       issnl = 1067-9847
@@ -1176,12 +1142,14 @@
         au < released ; 2009 ; positions: east asia cultures critique Volume 17 [2009] ; 4223 >
         au < released ; 2010 ; positions: east asia cultures critique Volume 18 [2010] ; 5840 >
         au < released ; 2011 ; positions: east asia cultures critique Volume 19 [2011] ; 6938 >
-        au < released ; 2012 ; positions: east asia cultures critique Volume 20 [2012] ; 8310 >
-        au < released ; 2013 ; positions: east asia cultures critique Volume 21 [2013] ; 8840 >
-        au < released ; 2014 ; positions: east asia cultures critique Volume 22 [2014] ; 9778 >
-        au < released ; 2015 ; positions: east asia cultures critique Volume 23 [2015] ; 10546 >
-        au < released ; 2016 ; positions: east asia cultures critique Volume 24 [2016] ; 11006 >
-        au < released ; 2017 ; positions: east asia cultures critique Volume 25 [2017] ; 12379 >
+        au < released ; 2012 ; positions: asia critique Volume 20 [2012] ; 8310 >
+        au < released ; 2013 ; positions: asia critique Volume 21 [2013] ; 8840 >
+        au < released ; 2014 ; positions: asia critique Volume 22 [2014] ; 9778 >
+        au < released ; 2015 ; positions: asia critique Volume 23 [2015] ; 10546 >
+        au < released ; 2016 ; positions: asia critique Volume 24 [2016] ; 11006 >
+        au < released ; 2017 ; positions: asia critique Volume 25 [2017] ; 12379 >
+        au < exists ; 2018 ; positions: asia critique Volume 26 [2018] ; 13235 >
+        au < exists ; 2019 ; positions: asia critique Volume 27 [2019] ; 13953 >
 
     }
 
