@@ -299,7 +299,7 @@
       plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
       implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
       comment[publisher] = New Prairie Press
-      param[base_url] = http://newprairiepress.org/
+      param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = advocate
 
       au < exists ; exists ; 2011 ; The Advocate Volume 19 ; 19 ; >
@@ -324,7 +324,7 @@
       plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
       implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
       comment[publisher] = New Prairie Press
-      param[base_url] = http://newprairiepress.org/
+      param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = crossingborders
 
       au < exists ; exists ; 2015 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 1 ; 1 ; >
@@ -346,7 +346,7 @@
       plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
       implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
       comment[publisher] = New Prairie Press
-      param[base_url] = http://newprairiepress.org/
+      param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = edconsiderations
 
       au < exists ; exists ; 1973 ; Educational Considerations Volume 1 ; 1 ; >
@@ -409,7 +409,7 @@
       plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
       implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
       comment[publisher] = New Prairie Press
-      param[base_url] = http://newprairiepress.org/
+      param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = fgr
 
       au < exists ; exists ; 2016 ; Fungal Genetics Reports Volume 62 ; 62 ; >
@@ -429,7 +429,7 @@
       plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
       implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
       comment[publisher] = New Prairie Press
-      param[base_url] = http://newprairiepress.org/
+      param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = hbr
 
       au < exists ; exists ; 2017 ; Human Behavior Research Volume 1 ; 1 ; >
@@ -448,7 +448,7 @@
       plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
       implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
       comment[publisher] = New Prairie Press
-      param[base_url] = http://newprairiepress.org/
+      param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = ijssw
 
       au < exists ; exists ; 2016 ; International Journal of School Social Work Volume 1 ; 1 ; >
@@ -469,7 +469,7 @@
       plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
       implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
       comment[publisher] = New Prairie Press
-      param[base_url] = http://newprairiepress.org/
+      param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = jac
 
       au < exists ; exists ; 1969 ; Journal of Applied Communications Volume 52 ; 52 ; >
@@ -536,7 +536,7 @@
       plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
       implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
       comment[publisher] = New Prairie Press
-      param[base_url] = http://newprairiepress.org/
+      param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = jhsr
 
       au < exists ; exists ; 1998 ; Journal of Hazardous Substance Research Volume 1 ; 1 ; >
@@ -574,7 +574,7 @@
       plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
       implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
       comment[publisher] = New Prairie Press
-      param[base_url] = http://newprairiepress.org/
+      param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = kaesrr
 
       au < exists ; exists ; 2015 ; Kansas Agricultural Experiment Station Research Reports Volume 1 ; 1 ; >
@@ -595,7 +595,7 @@
       plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
       implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
       comment[publisher] = New Prairie Press
-      param[base_url] = http://newprairiepress.org/
+      param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = ksulibraries
 
       au < exists ; exists ; 2015 ; Kansas State University Libraries Volume 1 ; 1 ; >
@@ -616,7 +616,7 @@
       plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
       implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
       comment[publisher] = New Prairie Press
-      param[base_url] = http://newprairiepress.org/
+      param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = networks
 
       au < exists ; exists ; 1998 ; Networks: An Online Journal for Teacher Research Volume 1 ; 1 ; >
@@ -654,7 +654,7 @@
       plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
       implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
       comment[publisher] = New Prairie Press
-      param[base_url] = http://newprairiepress.org/
+      param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = oz
 
       au < exists ; exists ; 1979 ; Oz Volume 1 ; 1 ; >
@@ -711,7 +711,7 @@
       plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
       implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
       comment[publisher] = New Prairie Press
-      param[base_url] = http://newprairiepress.org/
+      param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = piper
 
       au < exists ; exists ; 2017 ; Pedagogy & (Im)Possibilities Across Education Research Volume 1 ; 1 ; >
@@ -730,7 +730,7 @@
       plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
       implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
       comment[publisher] = New Prairie Press
-      param[base_url] = http://newprairiepress.org/
+      param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = pjer
 
       au < exists ; exists ; 2016 ; Prairie Journal of Educational Research Volume 1 ; 1 ; >
@@ -750,7 +750,7 @@
       plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
       implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
       comment[publisher] = New Prairie Press
-      param[base_url] = http://newprairiepress.org/
+      param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = seek
 
       au < exists ; exists ; 2011 ; Seek Volume 1 ; 1 ; >
@@ -776,7 +776,7 @@
       plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
       implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
       comment[publisher] = New Prairie Press
-      param[base_url] = http://newprairiepress.org/
+      param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = sttcl
 
       au < exists ; exists ; 1976 ; Studies in 20th & 21st Century Literature Volume 1 ; 1 ; >
