@@ -94,6 +94,20 @@
 
     {
     title <
+      name = Antisemitism Studies ;
+      issn = 2474-1809 ;
+      eissn = 2474-1817
+    >
+
+      attr[journal_id] = 747
+
+        au < exists ; 2017 ; Antisemitism Studies 1 [2017] ; 13973 >
+        au < exists ; 2018 ; Antisemitism Studies 2 [2018] ; 13974 >
+
+    }
+
+    {
+    title <
       name = Black Camera ;
       issn = 1536-3155  ;
       eissn = 1947-4237 
@@ -109,27 +123,8 @@
         au < released ; 2014-2015 ; Black Camera Volume 6 [2014-2015 (The New Series)] ; 10268 >
         au < released ; 2015-2016 ; Black Camera Volume 7 [2015-2016 (The New Series)] ; 10896 >
         au < released ; 2016-2017 ; Black Camera Volume 8 [2016-2017 (The New Series)] ; 12171 >
-        au < exists ; 2017-2018 ; Black Camera Volume 8 [2017-2018 (The New Series)] ; 13111 >
-
-    }
-    
-    {
-    title <
-      name = Bridges: A Jewish Feminist Journal ;
-      issn = 1046-8358  ;
-      eissn = 1558-9552  ;
-      issnl = 1046-8358
-
-    >
-
-      attr[journal_id] = 312
-
-        au < released ; 2006 ; Bridges: A Jewish Feminist Journal Volume 11 [2006] ; 2990 >
-        au < released ; 2007 ; Bridges: A Jewish Feminist Journal Volume 12 [2007] ; 3372 >
-        au < released ; 2008 ; Bridges: A Jewish Feminist Journal Volume 13 [2008] ; 3740 >
-        au < released ; 2009 ; Bridges: A Jewish Feminist Journal Volume 14 [2009] ; 4236 >
-        au < released ; 2010 ; Bridges: A Jewish Feminist Journal Volume 15 [2010] ; 6345 >
-        au < released ; 2011 ; Bridges: A Jewish Feminist Journal Volume 16 [2011] ; 7350 >
+        au < exists ; 2017-2018 ; Black Camera Volume 9 [2017-2018 (The New Series)] ; 13111 >
+        au < exists ; 2018-2019 ; Black Camera Volume 10 [2018-2019 (The New Series)] ; 13735 >
 
     }
     
@@ -503,6 +498,24 @@
 
     {
     title <
+      name = Mande Studies ;
+      issn = 1536-5506  ;
+      eissn = 2379-5506  ;
+      issnl = 1536-5506
+
+    >
+
+      attr[journal_id] = 703
+
+        au < exists ; 2015 ; Mande Studies Volume 16-17 [2015] ; 12608 >
+        au < exists ; 2016 ; Mande Studies Volume 18 [2016] ; 12526 >
+        au < exists ; 2017 ; Mande Studies Volume 19 [2017] ; 13023 >
+        au < exists ; 2018 ; Mande Studies Volume 20 [2018] ; 13741 >
+
+    }
+
+    {
+    title <
       name = Nashim: A Journal of Jewish Women's Studies & Gender Issues ;
       issn = 0793-8934  ;
       eissn = 1565-5288  ;
@@ -695,31 +708,6 @@
 
     }
     
-    {
-    title <
-      name = Textual Cultures: Texts, Contexts, Interpretation ;
-      issn = 1559-2936  ;
-      eissn = 1933-7418  ;
-      issnl = 1559-2936
-
-    >
-
-      attr[journal_id] = 392
-      #move to Society for Textual Scholarship, publisher_id:269
-
-        au < released ; 2006 ; Textual Cultures: Texts, Contexts, Interpretation Volume 1 [2006] ; 4005 >
-        au < released ; 2007 ; Textual Cultures: Texts, Contexts, Interpretation Volume 2 [2007] ; 4004 >
-        au < released ; 2008 ; Textual Cultures: Texts, Contexts, Interpretation Volume 3 [2008] ; 3840 >
-        au < released ; 2009 ; Textual Cultures: Texts, Contexts, Interpretation Volume 4 [2009] ; 4391 >
-        au < released ; 2010 ; Textual Cultures: Texts, Contexts, Interpretation Volume 5 [2010] ; 6945 >
-        au < released ; 2011 ; Textual Cultures: Texts, Contexts, Interpretation Volume 6 [2011] ; 7588 >
-        au < released ; 2012 ; Textual Cultures: Texts, Contexts, Interpretation Volume 7 [2012] ; 8640 >
-        au < released ; 2013 ; Textual Cultures: Texts, Contexts, Interpretation Volume 8 [2013] ; 9676 >
-        au < released ; 2014-2015 ; Textual Cultures: Texts, Contexts, Interpretation Volume 9 [2014-2015] ; 10835 >
-        au < released ; 2016 ; Textual Cultures: Texts, Contexts, Interpretation Volume 10 [2016] ; 12244 >
-
-    }
-
     {
     title <
       name = The Global South ;
