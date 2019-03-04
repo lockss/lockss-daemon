@@ -41,8 +41,11 @@
         au < released ; 2014 ; American Imago Volume 71 [2014] ; 9803 >
         au < released ; 2015 ; American Imago Volume 72 [2015] ; 10509 >
         au < released ; 2016 ; American Imago Volume 73 [2016] ; 11127 >
+        au < exists ; 2017 ; American Imago Volume 74 [2017] ; 12589 >
+        au < exists ; 2018 ; American Imago Volume 75 [2018] ; 13359 >
 
     }
+
     {
     title <
       name = American Jewish History ;
@@ -72,8 +75,11 @@
         au < released ; 2015 ; American Jewish History Volume 99 [2015] ; 10285 >
         au < released ; 2016 ; American Jewish History Volume 100 [2016] ; 10894 >
         au < released ; 2017 ; American Jewish History Volume 101 [2017] ; 12269 >
+        au < exists ; 2018 ; American Jewish History Volume 102 [2018] ; 13202 >
+        au < exists ; 2019 ; American Jewish History Volume 103 [2019] ; 13882 >
 
     }
+
     {
     title <
       name = American Journal of Mathematics ;
@@ -107,6 +113,8 @@
         au < released ; 2015 ; American Journal of Mathematics Volume 137 [2015] ; 10380 >
         au < released ; 2016 ; American Journal of Mathematics Volume 138 [2016] ; 10966 >
         au < released ; 2017 ; American Journal of Mathematics Volume 139 [2017] ; 12337 >
+        au < exists ; 2018 ; American Journal of Mathematics Volume 140 [2018] ; 13151 >
+        au < exists ; 2019 ; American Journal of Mathematics Volume 141 [2019] ; 13856 >
 
     }
     {
@@ -140,7 +148,10 @@
         au < released ; 2013 ; American Journal of Philology Volume 134 [2013 (533-536)] ; 8887 >
         au < released ; 2014 ; American Journal of Philology Volume 135 [2014 (537-540)] ; 9823 >
         au < released ; 2015 ; American Journal of Philology Volume 136 [2015 (541-544)] ; 10556 >
-        au < released ; 2016 ; American Journal of Philology Volume 137 [2016  (545-548)] ; 11169 >
+        au < released ; 2016 ; American Journal of Philology Volume 137 [2016 (545-548)] ; 11169 >
+        au < exists ; 2017 ; American Journal of Philology Volume 138 [2017 (549-552)] ; 12650 >
+        au < exists ; 2018 ; American Journal of Philology Volume 139 [2018 (553-556)] ; 13292 >
+        au < exists ; 2019 ; American Journal of Philology Volume 140 [2019 (557-560)] ; 13994 >
 
     }
     {
@@ -152,7 +163,7 @@
 
     >
 
-      attr[journal_id] = 0000
+      attr[journal_id] = 13
 
         au < released ; 1996 ; American Quarterly Volume 48 [1996] ; 47 >
         au < released ; 1997 ; American Quarterly Volume 49 [1997] ; 48 >
@@ -176,6 +187,7 @@
         au < released ; 2015 ; American Quarterly Volume 67 [2015] ; 10525 >
         au < released ; 2016 ; American Quarterly Volume 68 [2016] ; 11114 >
         au < released ; 2017 ; American Quarterly Volume 69 [2017] ; 12516 >
+        au < exists ; 2018 ; American Quarterly Volume 70 [2018] ; 13342 >
 
     }
     {
@@ -211,6 +223,7 @@
         au < released ; 2015 ; Arethusa Volume 48 [2015] ; 10283 >
         au < released ; 2016 ; Arethusa Volume 49 [2016] ; 10909 >
         au < released ; 2017 ; Arethusa Volume 50 [2017] ; 12304 >
+        au < exists ; 2018 ; Arethusa Volume 51 [2018] ; 13470 >
 
     }
     {
@@ -243,8 +256,11 @@
         au < released ; 2014 ; Book History Volume 17 [2014] ; 10212 >
         au < released ; 2015 ; Book History Volume 18 [2015] ; 10807 >
         au < released ; 2016 ; Book History Volume 19 [2016] ; 12296 >
+        au < exists ; 2017 ; Book History Volume 20 [2017] ; 12993 >
+        au < exists ; 2018 ; Book History Volume 21 [2018] ; 13798 >
 
     }
+
     {
     title <
       name = Bookbird: A Journal of International Children's Literature ;
@@ -266,8 +282,11 @@
         au < released ; 2015 ; Bookbird: A Journal of International Children's Literature Volume 53 [2015] ; 10385 >
         au < released ; 2016 ; Bookbird: A Journal of International Children's Literature Volume 54 [2016] ; 10965 >
         au < released ; 2017 ; Bookbird: A Journal of International Children's Literature Volume 55 [2017] ; 12368 >
+        au < exists ; 2018 ; Bookbird: A Journal of International Children's Literature Volume 56 [2018] ; 13285 >
+        au < exists ; 2019 ; Bookbird: A Journal of International Children's Literature Volume 57 [2019] ; 13903 >
 
     }
+
     {
     title <
       name = Bulletin of the Center for Children's Books ;
@@ -291,8 +310,11 @@
         au < released ; 2014-2015 ; Bulletin of the Center for Children's Books Volume 68 [2014-2015] ; 10147 >
         au < released ; 2015-2016 ; Bulletin of the Center for Children's Books Volume 69 [2015-2016] ; 10749 >
         au < released ; 2016-2017 ; Bulletin of the Center for Children's Books Volume 70 [2016-2017] ; 11361 >
+        au < exists ; 2017-2018 ; Bulletin of the Center for Children's Books Volume 71 [2017-2018] ; 12805 >
+        au < exists ; 2018-2019 ; Bulletin of the Center for Children's Books Volume 72 [2018-2019] ; 13634 >
 
     }
+
     {
     title <
       name = Bulletin of the History of Medicine ;
@@ -302,7 +324,7 @@
 
     >
 
-      attr[journal_id] = 0000
+      attr[journal_id] = 24
 
         au < released ; 1996 ; Bulletin of the History of Medicine Volume 70 [1996] ; 86 >
         au < released ; 1997 ; Bulletin of the History of Medicine Volume 71 [1997] ; 87 >
@@ -326,23 +348,28 @@
         au < released ; 2015 ; Bulletin of the History of Medicine Volume 89 [2015] ; 10574 >
         au < released ; 2016 ; Bulletin of the History of Medicine Volume 90 [2016] ; 11111 >
         au < released ; 2017 ; Bulletin of the History of Medicine Volume 91 [2017] ; 12512 >
+        au < exists ; 2018 ; Bulletin of the History of Medicine Volume 92 [2018] ; 13429
+ >
 
     }
+
     {
     title <
       name = CEA Critic ;
       issn = 0007-8069 
     >
 
-      attr[journal_id] = 0000
+      attr[journal_id] = 593
 
         au < released ; 2013 ; CEA Critic Volume 75 [2013] ; 8885 >
         au < released ; 2014 ; CEA Critic Volume 76 [2014] ; 9801 >
         au < released ; 2015 ; CEA Critic Volume 77 [2015] ; 10526 >
         au < released ; 2016 ; CEA Critic Volume 78 [2016] ; 11276 >
         au < released ; 2017 ; CEA Critic Volume 79 [2017] ; 12514 >
+        au < exists ; 2018 ; CEA Critic Volume 80 [2018] ; 13396 >
 
     }
+
     {
     title <
       name = Callaloo ;
@@ -376,6 +403,7 @@
         au < released ; 2014 ; Callaloo Volume 37 [2014] ; 9672 >
         au < released ; 2015 ; Callaloo Volume 38 [2015] ; 10439 >
         au < released ; 2016 ; Callaloo Volume 39 [2016] ; 11193 >
+        au < exists ; 2017 ; Callaloo Volume 40 [2017] ; 13688 >
 
     }
     {
@@ -433,8 +461,11 @@
         au < released ; 2014 ; Children's Literature Volume 42 [2014] ; 9998 >
         au < released ; 2015 ; Children's Literature Volume 43 [2015] ; 10642 >
         au < released ; 2016 ; Children's Literature Volume 44 [2016] ; 11235 >
+        au < exists ; 2017 ; Children's Literature Volume 45 [2017] ; 12697 >
+        au < exists ; 2018 ; Children's Literature Volume 46 [2018] ; 13525 >
 
     }
+
     {
     title <
       name = Children's Literature Association Quarterly ;
@@ -499,6 +530,8 @@
         au < released ; 2015 ; Children's Literature Association Quarterly Volume 40 [2015] ; 10434 >
         au < released ; 2016 ; Children's Literature Association Quarterly Volume 41 [2016] ; 11008 >
         au < released ; 2017 ; Children's Literature Association Quarterly Volume 42 [2017] ; 12424 >
+        au < exists ; 2018 ; Children's Literature Association Quarterly Volume 43 [2018] ; 13246 >
+        au < exists ; 2019 ; Children's Literature Association Quarterly Volume 44 [2019] ; 13978 >
 
     }
 
@@ -531,7 +564,6 @@
 
     }
 
-
     {
     title <
       name = Comparative Technology Transfer and Society ;
@@ -552,6 +584,7 @@
         au < released ; 2009 ; Comparative Technology Transfer and Society Volume 7 [2009] ; 4359 >
 
     }
+
     {
     title <
       name = Configurations ;
@@ -588,8 +621,11 @@
         au < released ; 2015 ; Configurations Volume 23 [2015] ; 10476 >
         au < released ; 2016 ; Configurations Volume 24 [2016] ; 10970 >
         au < released ; 2017 ; Configurations Volume 25 [2017] ; 12307 >
+        au < exists ; 2018 ; Configurations Volume 26 [2018] ; 13193 >
+        au < exists ; 2019 ; Configurations Volume 27 [2019] ; 13869 >
 
     }
+
     {
     title <
       name = Dickens Quarterly ;
@@ -604,8 +640,11 @@
         au < released ; 2015 ; Dickens Quarterly Volume 32 [2015] ; 10436 >
         au < released ; 2016 ; Dickens Quarterly Volume 33 [2016] ; 11067 >
         au < released ; 2017 ; Dickens Quarterly Volume 34 [2017] ; 12461 >
+        au < exists ; 2018 ; Dickens Quarterly Volume 35 [2018] ; 13251 >
+        au < exists ; 2019 ; Dickens Quarterly Volume 36 [2019] ; 13947 >
 
     }
+
     {
     title <
       name = Digital Philology: A Journal of Medieval Cultures ;
@@ -622,8 +661,11 @@
         au < released ; 2014 ; Digital Philology: A Journal of Medieval Cultures Volume 3 [2014] ; 10097 >
         au < released ; 2015 ; Digital Philology: A Journal of Medieval Cultures Volume 4 [2015] ; 10723 >
         au < released ; 2016 ; Digital Philology: A Journal of Medieval Cultures Volume 5 [2016] ; 11233 >
+        au < exists ; 2017 ; Digital Philology: A Journal of Medieval Cultures Volume 6 [2017] ; 12726 >
+        au < exists ; 2018 ; Digital Philology: A Journal of Medieval Cultures Volume 7 [2018] ; 13618 >
 
     }
+
     {
     title <
       name = ELH ;
@@ -660,8 +702,11 @@
         au < released ; 2015 ; ELH Volume 82 [2015] ; 10455 >
         au < released ; 2016 ; ELH Volume 83 [2016] ; 11061 >
         au < released ; 2017 ; ELH Volume 84 [2017] ; 12450 >
+        au < exists ; 2018 ; ELH Volume 85 [2018] ; 13299 >
+        au < exists ; 2019 ; ELH Volume 86 [2019] ; 13985 >
 
     }
+
     {
     title <
       name = Eighteenth-Century Studies ;
@@ -694,9 +739,10 @@
         au < released ; 2013-2014 ; Eighteenth-Century Studies Volume 47 [2013-2014] ; 9324 >
         au < released ; 2014-2015 ; Eighteenth-Century Studies Volume 48 [2014-2015] ; 10197 >
         au < released ; 2015-2016 ; Eighteenth-Century Studies Volume 49 [2015-2016] ; 10792 >
-        au < released ; 2016 ; Eighteenth-Century Studies Volume 50 [2016] ; 12156 >
+        au < released ; 2016-2017 ; Eighteenth-Century Studies Volume 50 [2016-2017] ; 12156 >
 
     }
+
     {
     title <
       name = Feminist Formations ;
