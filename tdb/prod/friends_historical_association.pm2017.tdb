@@ -6,6 +6,7 @@
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:88
 
     {
     title <
@@ -123,6 +124,8 @@
         au < released ; 2014 ; Quaker History Volume 103 [2014] ; 9978 >
         au < released ; 2015 ; Quaker History Volume 104 [2015] ; 10599 >
         au < released ; 2016 ; Quaker History Volume 105 [2016] ; 11181 >
+        au < exists ; 2017 ; Quaker History Volume 106 [2017] ; 12579 >
+        au < exists ; 2018 ; Quaker History Volume 107 [2018] ; 13533 >
 
     }
 
