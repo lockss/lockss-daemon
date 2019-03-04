@@ -6,6 +6,7 @@
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:38
 
     {
     title <
@@ -36,6 +37,8 @@
         au < released ; 2014 ; Journal of Narrative Theory Volume 44 [2014] ; 10145 >
         au < released ; 2015 ; Journal of Narrative Theory Volume 45 [2015] ; 10891 >
         au < released ; 2016 ; Journal of Narrative Theory Volume 46 [2016] ; 12306 >
+        au < exists ; 2017 ; Journal of Narrative Theory Volume 47 [2017] ; 12981 >
+        au < exists ; 2018 ; Journal of Narrative Theory Volume 48 [2018] ; 13497 >
 
     }
 
