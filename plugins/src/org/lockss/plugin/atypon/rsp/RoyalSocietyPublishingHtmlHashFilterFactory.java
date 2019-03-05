@@ -7,13 +7,11 @@ import org.htmlparser.tags.BulletList;
 import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory;
-import org.lockss.util.Logger;
 
 import java.io.InputStream;
 import java.util.Vector;
 
 public class RoyalSocietyPublishingHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
-  Logger log = Logger.getLogger(RoyalSocietyPublishingHtmlHashFilterFactory.class);
 
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
