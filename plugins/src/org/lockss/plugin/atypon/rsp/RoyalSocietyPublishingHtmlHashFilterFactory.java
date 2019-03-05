@@ -7,21 +7,21 @@ import org.htmlparser.tags.BulletList;
 import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory;
-import org.lockss.plugin.atypon.aslha.AmericanSpeechLanguageHearingAssocHtmlHashFilterFactory;
 import org.lockss.util.Logger;
 
 import java.io.InputStream;
 import java.util.Vector;
 
 public class RoyalSocietyPublishingHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
-  Logger log = Logger.getLogger(AmericanSpeechLanguageHearingAssocHtmlHashFilterFactory.class);
+  Logger log = Logger.getLogger(RoyalSocietyPublishingHtmlHashFilterFactory.class);
 
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding) {
     NodeFilter[] includeNodes = new NodeFilter[] {
-            // manifest pages need to include something
+            // Parsing the manifest page and get the list of publications in standard manifest page format.
+            // Often times it is in html bullet list format
             new NodeFilter() {
               @Override
               public boolean accept(Node node) {
