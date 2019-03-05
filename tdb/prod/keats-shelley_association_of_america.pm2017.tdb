@@ -6,6 +6,7 @@
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:249
 
     {
     title <
@@ -21,6 +22,7 @@
         au < released ; 2013 ; Keats-Shelley Journal Volume 62 [2013] ; 9752 >
         au < released ; 2014 ; Keats-Shelley Journal Volume 63 [2014] ; 10635 >
         au < released ; 2015 ; Keats-Shelley Journal Volume 64 [2015] ; 11400 >
+        au < exists ; 2016 ; Keats-Shelley Journal Volume 65 [2016] ; 12978 >
 
     }
 

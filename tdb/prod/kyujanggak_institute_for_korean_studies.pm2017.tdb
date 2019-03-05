@@ -6,6 +6,7 @@
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:252
 
     {
     title <
@@ -19,6 +20,8 @@
         au < released ; 2014 ; Seoul Journal of Korean Studies Volume 27 [2014] ; 10114 >
         au < released ; 2015 ; Seoul Journal of Korean Studies Volume 28 [2015] ; 10748 >
         au < released ; 2016 ; Seoul Journal of Korean Studies Volume 29 [2016] ; 11292 >
+        au < exists ; 2017 ; Seoul Journal of Korean Studies Volume 30 [2017] ; 12770 >
+        au < exists ; 2018 ; Seoul Journal of Korean Studies Volume 31 [2018] ; 13610 >
 
     }
 
