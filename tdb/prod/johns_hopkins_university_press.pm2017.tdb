@@ -10,6 +10,30 @@
 
     {
     title <
+      name = African American Review ;
+      issn = 1062-4783  ;
+      eissn = 1945-6182  ;
+      issnl = 1062-4783
+
+    >
+
+      attr[journal_id] = 434
+      #move from Saint Louis University
+
+        au < manifest ; 2009 ; African American Review Volume 43 [2009] ; 6412 >
+        au < released ; 2011 ; African American Review Volume 44 [2011] ; 8142 >
+        au < released ; 2012 ; African American Review Volume 45 [2012] ; 8843 >
+        au < released ; 2013 ; African American Review Volume 46 [2013] ; 10030 >
+        au < released ; 2014 ; African American Review Volume 47 [2014] ; 10239 >
+        au < released ; 2015 ; African American Review Volume 48 [2015] ; 10711 >
+        au < released ; 2016 ; African American Review Volume 49 [2016] ; 11110 >
+        au < exists ; 2017 ; African American Review Volume 50 [2017] ; 12522 >
+        au < exists ; 2018 ; African American Review Volume 51 [2018] ; 13380 >
+
+    }
+
+    {
+    title <
       name = American Imago ;
       issn = 0065-860X  ;
       eissn = 1085-7931  ;
@@ -226,6 +250,105 @@
         au < exists ; 2018 ; Arethusa Volume 51 [2018] ; 13470 >
 
     }
+
+    {
+    title <
+      name = Arizona Quarterly: A Journal of American Literature, Culture, and Theory ;
+      issn = 0004-1610  ;
+      eissn = 1558-9595  ;
+      issnl = 0004-1610
+
+    >
+
+      attr[journal_id] = 311
+      #move from University of Arizona
+
+        au < manifest ; 1988 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 44 [1988] ; 7502 >
+        au < manifest ; 1989 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 45 [1989] ; 7501 >
+        au < manifest ; 1990 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 46 [1990] ; 7500 >
+        au < manifest ; 1991 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 47 [1991] ; 7499 >
+        au < manifest ; 1992 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 48 [1992] ; 7498 >
+        au < manifest ; 1993 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 49 [1993] ; 7367 >
+        au < manifest ; 1994 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 50 [1994] ; 7503 >
+        au < manifest ; 1995 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 51 [1995] ; 7504 >
+        au < manifest ; 1996 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 52 [1996] ; 7505 >
+        au < manifest ; 1997 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 53 [1997] ; 7506 >
+        au < manifest ; 1998 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 54 [1998] ; 7507 >
+        au < manifest ; 1999 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 55 [1999] ; 7493 >
+        au < manifest ; 2000 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 56 [2000] ; 7494 >
+        au < manifest ; 2001 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 57 [2001] ; 7508 >
+        au < manifest ; 2002 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 58 [2002] ; 7509 >
+        au < manifest ; 2003 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 59 [2003] ; 7495 >
+        au < manifest ; 2004 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 60 [2004] ; 7479 >
+        au < manifest ; 2005 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 61 [2005] ; 7480 >
+        au < manifest ; 2006 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 62 [2006] ; 2991 >
+        au < manifest ; 2007 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 63 [2007] ; 3288 >
+        au < manifest ; 2008 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 64 [2008] ; 3625 >
+        au < manifest ; 2009 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 65 [2009] ; 4170 >
+        au < released ; 2010 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 66 [2010] ; 5789 >
+        au < released ; 2011 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 67 [2011] ; 6900 >
+        au < released ; 2012 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 68 [2012] ; 8011 >
+        au < released ; 2013 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 69 [2013] ; 8780 >
+        au < released ; 2014 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 70 [2014] ; 9761 >
+        au < released ; 2015 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 71 [2015] ; 10454 >
+        au < released ; 2016 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 72 [2016] ; 11066 >
+        au < exists ; 2017 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 73 [2017] ; 12556 >
+        au < exists ; 2018 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 74 [2018] ; 13294 >
+        au < exists ; 2019 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 75 [2019] ; 14001 >
+
+    }
+
+    {
+    title <
+      name = ASAP/Journal ;
+      issn = 2381-4705  ;
+      eissn = 2381-4721  ;
+      issnl = 2381-4705
+
+    >
+
+      attr[journal_id] = 684
+
+        au < exists ; 2016 ; ASAP/Journal Volume 72 [2016] ; 10926 >
+        au < exists ; 2017 ; ASAP/Journal Volume 73 [2017] ; 12431 >
+        au < exists ; 2018 ; ASAP/Journal Volume 74 [2018] ; 13237 >
+
+    }
+
+    {
+    title <
+      name = Asian Perspectives ;
+      issn = 0066-8435  ;
+      eissn = 1535-8283  ;
+      issnl = 0066-8435
+
+    >
+
+      attr[journal_id] = 17
+      #move from University of Hawaii Press
+
+        au < manifest ; 2000 ; Asian Perspectives Volume 39 [2000] ; 65 >
+        au < manifest ; 2001 ; Asian Perspectives Volume 40 [2001] ; 66 >
+        au < manifest ; 2002 ; Asian Perspectives Volume 41 [2002] ; 752 >
+        au < manifest ; 2003 ; Asian Perspectives Volume 42 [2003] ; 922 >
+        au < manifest ; 2004 ; Asian Perspectives Volume 43 [2004] ; 2456 >
+        au < manifest ; 2005 ; Asian Perspectives Volume 44 [2005] ; 2821 >
+        au < manifest ; 2006 ; Asian Perspectives Volume 45 [2006] ; 2988 >
+        au < manifest ; 2007 ; Asian Perspectives Volume 46 [2007] ; 3276 >
+        au < manifest ; 2008 ; Asian Perspectives Volume 47 [2008] ; 3650 >
+        au < manifest ; 2009 ; Asian Perspectives Volume 48 [2009] ; 4255 >
+        au < released ; 2010 ; Asian Perspectives Volume 49 [2010] ; 7484 >
+        au < released ; 2011 ; Asian Perspectives Volume 50 [2011] ; 9122 >
+        au < released ; 2012 ; Asian Perspectives Volume 51 [2012] ; 9558 >
+        au < released ; 2013 ; Asian Perspectives Volume 52 [2013] ; 10167 >
+        au < released ; 2014 ; Asian Perspectives Volume 53 [2014] ; 10593 >
+        au < released ; 2015 ; Asian Perspectives Volume 54 [2015] ; 10861 >
+        au < released ; 2016 ; Asian Perspectives Volume 55 [2016] ; 12136 >
+        au < exists ; 2017 ; Asian Perspectives Volume 56 [2017] ; 12701 >
+        au < exists ; 2018 ; Asian Perspectives Volume 57 [2018] ; 13484 >
+
+    }
+
     {
     title <
       name = Book History ;
@@ -566,6 +689,39 @@
 
     {
     title <
+      name = College Literature ;
+      issn = 0093-3139  ;
+      eissn = 1542-4286  ;
+      issnl = 0093-3139
+
+    >
+
+      attr[journal_id] = 215
+      #move from West Chester University
+
+        au < manifest ; 1974-2003 ; College Literature Thirty-Year Index [1974-2003] ; 2583 >
+        au < manifest ; 2003 ; College Literature Volume 30 [2003] ; 795 >
+        au < manifest ; 2004 ; College Literature Volume 31 [2004] ; 1740 >
+        au < manifest ; 2005 ; College Literature Volume 32 [2005] ; 2628 >
+        au < manifest ; 2006 ; College Literature Volume 33 [2006] ; 2944 >
+        au < manifest ; 2007 ; College Literature Volume 34 [2007] ; 3213 >
+        au < manifest ; 2008 ; College Literature Volume 35 [2008] ; 3525 >
+        au < manifest ; 2009 ; College Literature Volume 36 [2009] ; 4143 >
+        au < released ; 2010 ; College Literature Volume 37 [2010] ; 5920 >
+        au < released ; 2011 ; College Literature Volume 38 [2011] ; 6717 >
+        au < released ; 2012 ; College Literature Volume 39 [2012] ; 7845 >
+        au < released ; 2013 ; College Literature Volume 40 [Number 1, 2013] ; 8707 >
+        au < released ; 2014 ; College Literature Volume 41 [2014] ; 9630 >
+        au < released ; 2015 ; College Literature Volume 42 [2015] ; 10326 >
+        au < released ; 2016 ; College Literature Volume 43 [2016] ; 10904 >
+        au < released ; 2017 ; College Literature Volume 44 [2017] ; 12257 >
+        au < exists ; 2018 ; College Literature Volume 45 [2018] ; 13224 >
+        au < exists ; 2019 ; College Literature Volume 46 [2019] ; 13852 >
+
+    }
+
+    {
+    title <
       name = Comparative Technology Transfer and Society ;
       issn = 1542-0132  ;
       eissn = 1543-3404  ;
@@ -623,6 +779,22 @@
         au < released ; 2017 ; Configurations Volume 25 [2017] ; 12307 >
         au < exists ; 2018 ; Configurations Volume 26 [2018] ; 13193 >
         au < exists ; 2019 ; Configurations Volume 27 [2019] ; 13869 >
+
+    }
+
+    {
+    title <
+      name = Dante Studies ;
+      issn = 2470-4261 ;
+      eissn = 2470-427X ;
+      issnl = 2470-4261
+    >
+
+      attr[journal_id] = 549
+
+        au < exists ; 2015 ; Dante Studies Volume 133 [2015] ; 10872 >
+        au < exists ; 2016 ; Dante Studies Volume 134 [2016] ; 12251 >
+        au < exists ; 2017 ; Dante Studies Volume 135 [2017] ; 13252 >
 
     }
 
@@ -740,6 +912,32 @@
         au < released ; 2014-2015 ; Eighteenth-Century Studies Volume 48 [2014-2015] ; 10197 >
         au < released ; 2015-2016 ; Eighteenth-Century Studies Volume 49 [2015-2016] ; 10792 >
         au < released ; 2016-2017 ; Eighteenth-Century Studies Volume 50 [2016-2017] ; 12156 >
+        au < exists ; 2017-2018 ; Eighteenth-Century Studies Volume 51 [2017-2018] ; 12977 >
+        au < exists ; 2018-2019 ; Eighteenth-Century Studies Volume 52 [2018-2019] ; 13720 >
+
+    }
+
+    {
+    title <
+      name = The Faulkner Journal ;
+      issn = 0884-2949  ;
+      eissn = 2640-1703  ;
+      issnl = 0884-2949
+
+    >
+
+      attr[journal_id] = 735
+
+        au < exists ; 2005-2006 ; The Faulkner Journal Volume 21 [2005-2006] ; 13767 >
+        au < exists ; 2006-2007 ; The Faulkner Journal Volume 22 [2006-2007] ; 13766 >
+        au < exists ; 2007-2008 ; The Faulkner Journal Volume 23 [2007-2008] ; 13765 >
+        au < exists ; 2008-2009 ; The Faulkner Journal Volume 24 [2008-2009] ; 13764 >
+        au < exists ; 2009-2010 ; The Faulkner Journal Volume 25 [2009-2010] ; 13763 >
+        au < exists ; 2012 ; The Faulkner Journal Volume 26 [2012] ; 13762 >
+        au < exists ; 2013 ; The Faulkner Journal Volume 27 [2013] ; 13761 >
+        au < exists ; 2014 ; The Faulkner Journal Volume 28 [2014] ; 13760 >
+        au < exists ; 2015 ; The Faulkner Journal Volume 29 [2015] ; 13759 >
+        au < exists ; 2016 ; The Faulkner Journal Volume 30 [2016] ; 13758 >
 
     }
 
@@ -772,8 +970,11 @@
         au < released ; 2014 ; Feminist Formations Volume 26 [2014] ; 9885 >
         au < released ; 2015 ; Feminist Formations Volume 27 [2015] ; 10631 >
         au < released ; 2016 ; Feminist Formations Volume 28 [2016] ; 11404 >
+        au < exists ; 2017 ; Feminist Formations Volume 29 [2017] ; 12651 >
+        au < exists ; 2018 ; Feminist Formations Volume 30 [2018] ; 13446 >
 
     }
+
     {
     title <
       name = German Studies Review ;
@@ -791,8 +992,11 @@
         au < released ; 2015 ; German Studies Review Volume 38 [2015] ; 10347 >
         au < released ; 2016 ; German Studies Review Volume 39 [2016] ; 10981 >
         au < released ; 2017 ; German Studies Review Volume 40 [2017] ; 12407 >
+        au < exists ; 2018 ; German Studies Review Volume 41 [2018] ; 13280 >
+        au < exists ; 2019 ; German Studies Review Volume 42 [2019] ; 13937 >
 
     }
+
     {
     title <
       name = Hispania ;
@@ -812,8 +1016,10 @@
         au < released ; 2015 ; Hispania Volume 98 [2015] ; 10503 >
         au < released ; 2016 ; Hispania Volume 99 [2016] ; 11043 >
         au < released ; 2017 ; Hispania Volume 100 [2017] ; 12491 >
+        au < exists ; 2018 ; Hispania Volume 101 [2018] ; 13440 >
 
     }
+
     {
     title <
       name = Historically Speaking ;
@@ -841,6 +1047,7 @@
         au < released ; 2013 ; Historically Speaking Volume 14 [2013] ; 8790 >
 
     }
+
     {
     title <
       name = Human Rights Quarterly ;
@@ -875,8 +1082,11 @@
         au < released ; 2015 ; Human Rights Quarterly Volume 37 [2015] ; 10382 >
         au < released ; 2016 ; Human Rights Quarterly Volume 38 [2016] ; 10950 >
         au < released ; 2017 ; Human Rights Quarterly Volume 39 [2017] ; 12355 >
+        au < exists ; 2018 ; Human Rights Quarterly Volume 40 [2018] ; 13216 >
+        au < exists ; 2019 ; Human Rights Quarterly Volume 41 [2019] ; 13918 >
 
     }
+
     {
     title <
       name = Journal of Asian American Studies ;
@@ -908,8 +1118,35 @@
         au < released ; 2015 ; Journal of Asian American Studies Volume 18 [2015] ; 10422 >
         au < released ; 2016 ; Journal of Asian American Studies Volume 19 [2016] ; 11059 >
         au < released ; 2017 ; Journal of Asian American Studies Volume 20 [2017] ; 12342 >
+        au < exists ; 2018 ; Journal of Asian American Studies Volume 21 [2018] ; 13219 >
 
     }
+
+    {
+
+    title <
+      name = Journal of Chinese Religions ;
+      issn = 0737-769X ;
+      eissn = 2050-8999 ;
+      issnl = 0737-769X
+       >
+
+      attr[journal_id] = 734
+
+       au < exists ; 2008 ; Journal of Chinese Religions Volume 36 [2008] [ProjectMuse] ; 13749 >
+       au < exists ; 2009 ; Journal of Chinese Religions Volume 37 [2009] [ProjectMuse] ; 13750 >
+       au < exists ; 2010 ; Journal of Chinese Religions Volume 38 [2010] [ProjectMuse] ; 13751 >
+       au < exists ; 2011 ; Journal of Chinese Religions Volume 39 [2011] [ProjectMuse] ; 13747 >
+       au < exists ; 2012 ; Journal of Chinese Religions Volume 40 [2012] [ProjectMuse] ; 13748 >
+       au < exists ; 2013 ; Journal of Chinese Religions Volume 41 [2013] [ProjectMuse] ; 13752 >
+       au < exists ; 2014 ; Journal of Chinese Religions Volume 42 [2014] [ProjectMuse] ; 13753 >
+       au < exists ; 2015 ; Journal of Chinese Religions Volume 43 [2015] [ProjectMuse] ; 13754 >
+       au < exists ; 2016 ; Journal of Chinese Religions Volume 44 [2016] [ProjectMuse] ; 13755 >
+       au < exists ; 2017 ; Journal of Chinese Religions Volume 45 [2017] [ProjectMuse] ; 13743 >
+       au < exists ; 2018 ; Journal of Chinese Religions Volume 46 [2018] [ProjectMuse] ; 13744 >
+
+    }
+
     {
     title <
       name = Journal of College Student Development ;
@@ -936,8 +1173,11 @@
         au < released ; 2015 ; Journal of College Student Development Volume 56 [2015] ; 10337 >
         au < released ; 2016 ; Journal of College Student Development Volume 57 [2016] ; 10929 >
         au < released ; 2017 ; Journal of College Student Development Volume 58 [2017] ; 12316 >
+        au < exists ; 2018 ; Journal of College Student Development Volume 59 [2018] ; 13172 >
+        au < exists ; 2019 ; Journal of College Student Development Volume 60 [2019] ; 13885 >
 
     }
+
     {
     title <
       name = Journal of Colonialism and Colonial History ;
@@ -964,8 +1204,11 @@
         au < released ; 2014 ; Journal of Colonialism and Colonial History Volume 15 [2014] ; 9872 >
         au < released ; 2015 ; Journal of Colonialism and Colonial History Volume 16 [2015] ; 10506 >
         au < released ; 2016 ; Journal of Colonialism and Colonial History Volume 17 [2016] ; 11107 >
+        au < exists ; 2017 ; Journal of Colonialism and Colonial History Volume 18 [2017] ; 12528 >
+        au < exists ; 2018 ; Journal of Colonialism and Colonial History Volume 19 [2018] ; 13372 >
 
     }
+
     {
     title <
       name = Journal of Democracy ;
@@ -1005,8 +1248,11 @@
         au < released ; 2015 ; Journal of Democracy Volume 26 [2015] ; 10294 >
         au < released ; 2016 ; Journal of Democracy Volume 27 [2016] ; 10914 >
         au < released ; 2017 ; Journal of Democracy Volume 28 [2017] ; 12286 >
+        au < exists ; 2018 ; Journal of Democracy Volume 29 [2018] ; 13146 >
+        au < exists ; 2019 ; Journal of Democracy Volume 30 [2019] ; 13842 >
 
     }
+    
     {
     title <
       name = Journal of Early Christian Studies ;
@@ -1043,8 +1289,10 @@
         au < released ; 2015 ; Journal of Early Christian Studies Volume 23 [2015] ; 10429 >
         au < released ; 2016 ; Journal of Early Christian Studies Volume 24 [2016] ; 11027 >
         au < released ; 2017 ; Journal of Early Christian Studies Volume 25 [2017] ; 12445 >
+        au < exists ; 2018 ; Journal of Early Christian Studies Volume 26 [2018] ; 13321 >
 
     }
+
     {
     title <
       name = Journal of Health Care for the Poor and Underserved ;
@@ -1084,8 +1332,11 @@
         au < released ; 2015 ; Journal of Health Care for the Poor and Underserved Volume 26 [2015] ; 10421 >
         au < released ; 2016 ; Journal of Health Care for the Poor and Underserved Volume 27 [2016] ; 10921 >
         au < released ; 2017 ; Journal of Health Care for the Poor and Underserved Volume 28 [2017] ; 12392 >
+        au < exists ; 2018 ; Journal of Health Care for the Poor and Underserved Volume 29 [2018] ; 13258 >
+        au < exists ; 2019 ; Journal of Health Care for the Poor and Underserved Volume 30 [2019] ; 13955 >
 
     }
+    
     {
     title <
       name = Journal of Late Antiquity ;
@@ -1106,8 +1357,11 @@
         au < released ; 2014 ; Journal of Late Antiquity Volume 7 [2014] ; 10194 >
         au < released ; 2015 ; Journal of Late Antiquity Volume 8 [2015] ; 10681 >
         au < released ; 2016 ; Journal of Late Antiquity Volume 9 [2016] ; 11221 >
+        au < exists ; 2017 ; Journal of Late Antiquity Volume 10 [2017] ; 12872 >
+        au < exists ; 2018 ; Journal of Late Antiquity Volume 11 [2018] ; 13684 >
 
     }
+
     {
     title <
       name = Journal of Modern Greek Studies ;
@@ -1153,8 +1407,11 @@
         au < released ; 2014 ; Journal of Modern Greek Studies Volume 32 [2014] ; 10108 >
         au < released ; 2015 ; Journal of Modern Greek Studies Volume 33 [2015] ; 10619 >
         au < released ; 2016 ; Journal of Modern Greek Studies Volume 34 [2016] ; 11145 >
+        au < exists ; 2017 ; Journal of Modern Greek Studies Volume 35 [2017] ; 12585 >
+        au < exists ; 2018 ; Journal of Modern Greek Studies Volume 36 [2018] ; 13441 >
 
     }
+    
     {
     title <
       name = Journal of Women's History ;
@@ -1195,8 +1452,10 @@
         au < released ; 2015 ; Journal of Women's History Volume 27 [2015] ; 10461 >
         au < released ; 2016 ; Journal of Women's History Volume 28 [2016] ; 11099 >
         au < released ; 2017 ; Journal of Women's History Volume 29 [2017] ; 12459 >
+        au < exists ; 2018 ; Journal of Women's History Volume 30 [2018] ; 13341 >
 
     }
+
     {
     title <
       name = Journal of the History of Philosophy ;
@@ -1263,8 +1522,11 @@
         au < released ; 2015 ; Journal of the History of Philosophy Volume 53 [2015] ; 10338 >
         au < released ; 2016 ; Journal of the History of Philosophy Volume 54 [2016] ; 10893 >
         au < released ; 2017 ; Journal of the History of Philosophy Volume 55 [2017] ; 12309 >
+        au < exists ; 2018 ; Journal of the History of Philosophy Volume 56 [2018] ; 13157 >
+        au < exists ; 2019 ; Journal of the History of Philosophy Volume 57 [2019] ; 13879 >
 
     }
+
     {
     title <
       name = Kennedy Institute of Ethics Journal ;
@@ -1302,8 +1564,11 @@
         au < released ; 2014 ; Kennedy Institute of Ethics Journal Volume 24 [2014] ; 9856 >
         au < released ; 2015 ; Kennedy Institute of Ethics Journal Volume 25 [2015] ; 10535 >
         au < released ; 2016 ; Kennedy Institute of Ethics Journal Volume 26 [2016] ; 11184 >
+        au < exists ; 2017 ; Kennedy Institute of Ethics Journal Volume 27 [2017] ; 12521 >
+        au < exists ; 2018 ; Kennedy Institute of Ethics Journal Volume 28 [2018] ; 13371 >
 
     }
+    
     {
     title <
       name = L'Esprit Créateur ;
@@ -1315,16 +1580,16 @@
 
       attr[journal_id] = 333
 
-        au < doesNotExist ; 1986 ; L'Esprit Créateur Volume 26 [1986] ; 9442 >
-        au < doesNotExist ; 1987 ; L'Esprit Créateur Volume 27 [1987] ; 9443 >
-        au < doesNotExist ; 1988 ; L'Esprit Créateur Volume 28 [1988] ; 9444 >
-        au < doesNotExist ; 1989 ; L'Esprit Créateur Volume 29 [1989] ; 9445 >
-        au < doesNotExist ; 1990 ; L'Esprit Créateur Volume 30 [1990] ; 9446 >
-        au < doesNotExist ; 1991 ; L'Esprit Créateur Volume 31 [1991] ; 9447 >
-        au < doesNotExist ; 1992 ; L'Esprit Créateur Volume 32 [1992] ; 9448 >
-        au < doesNotExist ; 1993 ; L'Esprit Créateur Volume 33 [1993] ; 9449 >
-        au < doesNotExist ; 1994 ; L'Esprit Créateur Volume 34 [1994] ; 9450 >
-        au < doesNotExist ; 1995 ; L'Esprit Créateur Volume 35 [1995] ; 9451 >
+        au < exists ; 1986 ; L'Esprit Créateur Volume 26 [1986] ; 9442 >
+        au < exists ; 1987 ; L'Esprit Créateur Volume 27 [1987] ; 9443 >
+        au < exists ; 1988 ; L'Esprit Créateur Volume 28 [1988] ; 9444 >
+        au < exists ; 1989 ; L'Esprit Créateur Volume 29 [1989] ; 9445 >
+        au < exists ; 1990 ; L'Esprit Créateur Volume 30 [1990] ; 9446 >
+        au < exists ; 1991 ; L'Esprit Créateur Volume 31 [1991] ; 9447 >
+        au < exists ; 1992 ; L'Esprit Créateur Volume 32 [1992] ; 9448 >
+        au < exists ; 1993 ; L'Esprit Créateur Volume 33 [1993] ; 9449 >
+        au < exists ; 1994 ; L'Esprit Créateur Volume 34 [1994] ; 9450 >
+        au < exists ; 1995 ; L'Esprit Créateur Volume 35 [1995] ; 9451 >
         au < released ; 1996 ; L'Esprit Créateur Volume 36 [1996] ; 4340 >
         au < released ; 1997 ; L'Esprit Créateur Volume 37 [1997] ; 4339 >
         au < released ; 1998 ; L'Esprit Créateur Volume 38 [1998] ; 4208 >
@@ -1346,8 +1611,11 @@
         au < released ; 2014 ; L'Esprit Créateur Volume 54 [2014] ; 9745 >
         au < released ; 2015 ; L'Esprit Créateur Volume 55 [2015] ; 10586 >
         au < released ; 2016 ; L'Esprit Créateur Volume 56 [2016] ; 11125 >
+        au < exists ; 2017 ; L'Esprit Créateur Volume 57 [2017] ; 12659 >
+        au < exists ; 2018 ; L'Esprit Créateur Volume 58 [2018] ; 13323 >
 
     }
+    
     {
     title <
       name = Late Imperial China ;
@@ -1396,8 +1664,11 @@
         au < released ; 2014 ; Late Imperial China Volume 35 [2014] ; 10064 >
         au < released ; 2015 ; Late Imperial China Volume 36 [2015] ; 10686 >
         au < released ; 2016 ; Late Imperial China Volume 37 [2016] ; 11268 >
+        au < exists ; 2017 ; Late Imperial China Volume 38 [2017] ; 12730 >
+        au < exists ; 2018 ; Late Imperial China Volume 39 [2018] ; 13561 >
 
     }
+
     {
     title <
       name = Leviathan ;
@@ -1428,8 +1699,10 @@
         au < released ; 2015 ; Leviathan Volume 17 [2015] ; 10583 >
         au < released ; 2016 ; Leviathan Volume 18 [2016] ; 11167 >
         au < released ; 2017 ; Leviathan Volume 19 [2017] ; 12490 >
+        au < exists ; 2018 ; Leviathan Volume 20 [2018] ; 13290 >
 
     }
+
     {
     title <
       name = Library Trends ;
@@ -1452,9 +1725,12 @@
         au < released ; 2013-2014 ; Library Trends Volume 62 [2013-2014] ; 9375 >
         au < released ; 2014-2015 ; Library Trends Volume 63 [2014-2015] ; 10201 >
         au < released ; 2015-2016 ; Library Trends Volume 64 [2015-2016] ; 10833 >
-        au < released ; 2016 ; Library Trends Volume 65 [2016] ; 11402 >
+        au < released ; 2016-2017 ; Library Trends Volume 65 [2016-2017] ; 11402 >
+        au < exists ; 2017-2018 ; Library Trends Volume 66 [2017-2018] ; 12859 >
+        au < exists ; 2018-2019 ; Library Trends Volume 67 [2018-2019] ; 13723 >
 
     }
+    
     {
     title <
       name = Literature and Medicine ;
@@ -1500,8 +1776,11 @@
         au < released ; 2014 ; Literature and Medicine Volume 32 [2014] ; 10063 >
         au < released ; 2015 ; Literature and Medicine Volume 33 [2015] ; 10678 >
         au < released ; 2016 ; Literature and Medicine Volume 34 [2016] ; 11362 >
+        au < exists ; 2017 ; Literature and Medicine Volume 35 [2017] ; 12664 >
+        au < exists ; 2018 ; Literature and Medicine Volume 36 [2018] ; 13577 >
 
     }
+    
     {
     title <
       name = MFS Modern Fiction Studies ;
@@ -1546,8 +1825,10 @@
         au < released ; 2015 ; MFS Modern Fiction Studies Volume 61 [2015] ; 10524 >
         au < released ; 2016 ; MFS Modern Fiction Studies Volume 62 [2016] ; 11115 >
         au < released ; 2017 ; MFS Modern Fiction Studies Volume 63 [2017] ; 12487 >
+        au < exists ; 2018 ; MFS Modern Fiction Studies Volume 64 [2018] ; 13345 >
 
     }
+
     {
     title <
       name = MLN ;
@@ -1583,8 +1864,10 @@
         au < released ; 2015 ; MLN Volume 130 [2015] ; 10530 >
         au < released ; 2016 ; MLN Volume 131 [2016] ; 11177 >
         au < released ; 2017 ; MLN Volume 132 [2017] ; 12495 >
+        au < exists ; 2018 ; MLN Volume 133 [2018] ; 13560 >
 
     }
+
     {
     title <
       name = Milton Quarterly ;
@@ -1602,6 +1885,7 @@
         au < released ; 2000 ; Milton Quarterly Volume 34 [2000] ; 462 >
 
     }
+    
     {
     title <
       name = Modernism/modernity ;
@@ -1637,8 +1921,11 @@
         au < released ; 2015 ; Modernism/modernity Volume 22 [2015] ; 10457 >
         au < released ; 2016 ; Modernism/modernity Volume 23 [2016] ; 10967 >
         au < released ; 2017 ; Modernism/modernity Volume 24 [2017] ; 12474 >
+        au < exists ; 2018 ; Modernism/modernity Volume 25 [2018] ; 13203 >
+        au < exists ; 2019 ; Modernism/modernity Volume 26 [2019] ; 13979 >
 
     }
+
     {
     title <
       name = NWSA Journal ;
@@ -1653,6 +1940,7 @@
         #NONE OF THIS  TITLE FOUND on PMuse volume page
 
     }
+
     {
     title <
       name = Narrative Inquiry in Bioethics ;
@@ -1670,8 +1958,11 @@
         au < released ; 2014 ; Narrative Inquiry in Bioethics Volume 4 [2014] ; 9882 >
         au < released ; 2015 ; Narrative Inquiry in Bioethics Volume 5 [2015] ; 10443 >
         au < released ; 2016 ; Narrative Inquiry in Bioethics Volume 6 [2016] ; 11267 >
+        au < exists ; 2017 ; Narrative Inquiry in Bioethics Volume 7 [2017] ; 12755 >
+        au < exists ; 2018 ; Narrative Inquiry in Bioethics Volume 8 [2018] ; 13382 >
 
     }
+
     {
     title <
       name = New Literary History ;
@@ -1706,8 +1997,10 @@
         au < released ; 2015 ; New Literary History Volume 46 [2015] ; 10626 >
         au < released ; 2016 ; New Literary History Volume 47 [2016] ; 11311 >
         au < released ; 2017 ; New Literary History Volume 48 [2017] ; 12515 >
+        au < exists ; 2018 ; New Literary History Volume 49 [2018] ; 13430 >
 
     }
+
     {
     title <
       name = Partial Answers: Journal of Literature and the History of Ideas ;
@@ -1733,8 +2026,11 @@
         au < released ; 2015 ; Partial Answers: Journal of Literature and the History of Ideas Volume 13 [2015] ; 10299 >
         au < released ; 2016 ; Partial Answers: Journal of Literature and the History of Ideas Volume 14 [2016] ; 10898 >
         au < released ; 2017 ; Partial Answers: Journal of Literature and the History of Ideas Volume 15 [2017] ; 12318 >
+        au < exists ; 2018 ; Partial Answers: Journal of Literature and the History of Ideas Volume 16 [2018] ; 13184 >
+        au < exists ; 2019 ; Partial Answers: Journal of Literature and the History of Ideas Volume 17 [2019] ; 13867 >
 
     }
+    
     {
     title <
       name = Perspectives in Biology and Medicine ;
@@ -1805,8 +2101,11 @@
         au < released ; 2014 ; Perspectives in Biology and Medicine Volume 57 [2014] ; 10207 >
         au < released ; 2015 ; Perspectives in Biology and Medicine Volume 58 [2015] ; 10848 >
         au < released ; 2016 ; Perspectives in Biology and Medicine Volume 59 [2016] ; 11344 >
+        au < exists ; 2017 ; Perspectives in Biology and Medicine Volume 60 [2017] ; 12828 >
+        au < exists ; 2018 ; Perspectives in Biology and Medicine Volume 61 [2018] ; 13505 >
 
     }
+
     {
     title <
       name = Philosophy and Literature ;
@@ -1858,6 +2157,8 @@
         au < released ; 2014 ; Philosophy and Literature Volume 38 [2014] ; 10124 >
         au < released ; 2015 ; Philosophy and Literature Volume 39 [2015] ; 10780 >
         au < released ; 2016 ; Philosophy and Literature Volume 40 [2016] ; 11358 >
+        au < exists ; 2017 ; Philosophy and Literature Volume 41 [2017] ; 12735 >
+        au < exists ; 2018 ; Philosophy and Literature Volume 42 [2018] ; 13511 >
 
     }
     
@@ -1896,6 +2197,7 @@
         au < released ; 2015 ; Philosophy, Psychiatry, & Psychology Volume 22 [2015] ; 10853 >
         au < released ; 2016 ; Philosophy, Psychiatry, & Psychology Volume 23 [2016] ; 11401 >
         au < released ; 2017 ; Philosophy, Psychiatry, & Psychology Volume 24 [2017] ; 12499 >
+        au < exists ; 2018 ; Philosophy, Psychiatry, & Psychology Volume 25 [2018] ; 13276 >
 
     }
     
@@ -1925,6 +2227,7 @@
         au < released ; 2014 ; Poe Studies Volume 47 [2014] ; 10277 >
         au < released ; 2015 ; Poe Studies Volume 48 [2015] ; 10857 >
         au < released ; 2016 ; Poe Studies Volume 49 [2016] ; 12236 >
+        au < exists ; 2017 ; Poe Studies Volume 50 [2017] ; 13110 >
 
     }
     
@@ -1963,6 +2266,8 @@
         au < released ; 2013-2014 ; Postmodern Culture Volume 24 [2013-2014] ; 10351 >
         au < released ; 2014-2015 ; Postmodern Culture Volume 25 [2014-2015] ; 10847 >
         au < released ; 2015-2016 ; Postmodern Culture Volume 26 [2015-2016] ; 11416 >
+        au < exists ; 2016-2017 ; Postmodern Culture Volume 27 [2016-2017] ; 12816 >
+        au < exists ; 2017-2018 ; Postmodern Culture Volume 28 [2017-2018] ; 13662 >
 
     }
     
@@ -1987,6 +2292,8 @@
         au < released ; 2014 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 8 [2014] ; 9966 >
         au < released ; 2015 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 9 [2015] ; 10621 >
         au < released ; 2016 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 10 [2016] ; 11080 >
+        au < exists ; 2017 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 11 [2017] ; 12703 >
+        au < exists ; 2018 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 12 [2018] ; 13331 >
 
     }
     
@@ -2024,6 +2331,7 @@
         au < released ; 2015 ; Reviews in American History Volume 43 [2015] ; 10459 >
         au < released ; 2016 ; Reviews in American History Volume 44 [2016] ; 11060 >
         au < released ; 2017 ; Reviews in American History Volume 45 [2017] ; 12446 >
+        au < exists ; 2018 ; Reviews in American History Volume 46 [2018] ; 13286 >
 
     }
     
@@ -2085,6 +2393,8 @@
         au < released ; 2014 ; SAIS Review of International Affairs Volume 34 [2014] ; 10056 >
         au < released ; 2015 ; SAIS Review of International Affairs Volume 35 [2015] ; 10636 >
         au < released ; 2016 ; SAIS Review of International Affairs Volume 36 [2016] ; 11301 >
+        au < exists ; 2017 ; SAIS Review of International Affairs Volume 37 [2017] ; 12976 >
+        au < exists ; 2018 ; SAIS Review of International Affairs Volume 38 [2018] ; 13645 >
 
     }
     
@@ -2118,6 +2428,8 @@
         au < released ; 2015 ; SEL Studies in English Literature 1500-1900 Volume 55 [2015] ; 10432 >
         au < released ; 2016 ; SEL Studies in English Literature 1500-1900 Volume 56 [2016] ; 11030 >
         au < released ; 2017 ; SEL Studies in English Literature 1500-1900 Volume 57 [2017] ; 12381 >
+        au < exists ; 2018 ; SEL Studies in English Literature 1500-1900 Volume 58 [2018] ; 13279 >
+        au < exists ; 2019 ; SEL Studies in English Literature 1500-1900 Volume 59 [2019] ; 13972 >
 
     }
     
@@ -2143,6 +2455,8 @@
         au < released ; 2015 ; Sewanee Review Volume 123 [2015] ; 10384 >
         au < released ; 2016 ; Sewanee Review Volume 124 [2016] ; 11070 >
         au < released ; 2017 ; Sewanee Review Volume 125 [2017] ; 12349 >
+        au < exists ; 2018 ; Sewanee Review Volume 126 [2018] ; 13178 >
+        au < exists ; 2019 ; Sewanee Review Volume 127 [2019] ; 13875 >
 
     }
     
@@ -2169,6 +2483,8 @@
         au < released ; 2015 ; Shakespeare Bulletin Volume 33 [2015] ; 10458 >
         au < released ; 2016 ; Shakespeare Bulletin Volume 34 [2016] ; 11088 >
         au < released ; 2017 ; Shakespeare Bulletin Volume 35 [2017] ; 12436 >
+        au < exists ; 2018 ; Shakespeare Bulletin Volume 36 [2018] ; 13327
+ >
 
     }
     
@@ -2199,6 +2515,8 @@
         au < released ; 2014 ; Shakespeare Quarterly Volume 65 [2014] ; 9909 >
         au < released ; 2015 ; Shakespeare Quarterly Volume 66 [2015] ; 10516 >
         au < released ; 2016 ; Shakespeare Quarterly Volume 67 [2016] ; 11354 >
+        au < exists ; 2017 ; Shakespeare Quarterly Volume 68 [2017] ; 12892 >
+        au < exists ; 2018 ; Shakespeare Quarterly Volume 69 [2018] ; 13592 >
 
     }
     
@@ -2248,6 +2566,8 @@
         au < released ; 2014 ; Social Research: An International Quarterly Volume 81 [2014] ; 9904 >
         au < released ; 2015 ; Social Research: An International Quarterly Volume 82 [2015] ; 10528 >
         au < released ; 2016 ; Social Research: An International Quarterly Volume 83 [2016] ; 11254 >
+        au < exists ; 2017 ; Social Research: An International Quarterly Volume 84 [2017] ; 12666 >
+        au < exists ; 2018 ; Social Research: An International Quarterly Volume 85 [2018] ; 13467 >
 
     }
     
@@ -2276,6 +2596,7 @@
         au < released ; 2015 ; South Central Review Volume 32 [2015] ; 10527 >
         au < released ; 2016 ; South Central Review Volume 33 [2016] ; 11116 >
         au < released ; 2017 ; South Central Review Volume 34 [2017] ; 12513 >
+        au < exists ; 2018 ; South Central Review Volume 35 [2018] ; 13395 >
 
     }
     
@@ -2306,6 +2627,8 @@
         au < released ; 2014 ; Spiritus: A Journal of Christian Spirituality Volume 14 [2014] ; 9936 >
         au < released ; 2015 ; Spiritus: A Journal of Christian Spirituality Volume 15 [2015] ; 10573 >
         au < released ; 2016 ; Spiritus: A Journal of Christian Spirituality Volume 16 [2016] ; 11168 >
+        au < exists ; 2017 ; Spiritus: A Journal of Christian Spirituality Volume 17 [2017] ; 12574 >
+        au < exists ; 2018 ; Spiritus: A Journal of Christian Spirituality Volume 18 [2018] ; 13581 >
 
     }
     
@@ -2361,6 +2684,8 @@
         au < released ; 2014 ; Studies in American Fiction Volume 41 [2014] ; 9937 >
         au < released ; 2015 ; Studies in American Fiction Volume 42 [2015] ; 10594 >
         au < released ; 2016 ; Studies in American Fiction Volume 43 [2016] ; 11182 >
+        au < exists ; 2017 ; Studies in American Fiction Volume 44 [2017] ; 12644 >
+        au < exists ; 2018 ; Studies in American Fiction Volume 45 [2018] ; 13559 >
 
     }
     
@@ -2402,6 +2727,7 @@
         au < released ; 2015 ; Studies in Eighteenth-Century Culture Volume 44 [2015] ; 10438 >
         au < released ; 2016 ; Studies in Eighteenth-Century Culture Volume 45 [2016] ; 11069 >
         au < released ; 2017 ; Studies in Eighteenth-Century Culture Volume 46 [2017] ; 12308 >
+        au < exists ; 2018 ; Studies in Eighteenth-Century Culture Volume 47 [2018] ; 13619 >
 
     }
     
@@ -2433,6 +2759,8 @@
         au < released ; 2014 ; TAPA Volume 144 [2014] ; 9934 >
         au < released ; 2015 ; TAPA Volume 145 [2015] ; 10600 >
         au < released ; 2016 ; TAPA Volume 146 [2016] ; 11226 >
+        au < exists ; 2017 ; TAPA Volume 147 [2017] ; 12575 >
+        au < exists ; 2018 ; TAPA Volume 148 [2018] ; 13491 >
 
     }
     
@@ -2467,6 +2795,7 @@
         au < released ; 2015 ; Technology and Culture Volume 56 [2015] ; 10397 >
         au < released ; 2016 ; Technology and Culture Volume 57 [2016] ; 11042 >
         au < released ; 2017 ; Technology and Culture Volume 58 [2017] ; 12373 >
+        au < exists ; 2018 ; Technology and Culture Volume 59 [2018] ; 13452 >
 
     }
     
@@ -2506,6 +2835,8 @@
         au < released ; 2014 ; The Emily Dickinson Journal Volume 23 [2014] ; 9906 >
         au < released ; 2015 ; The Emily Dickinson Journal Volume 24 [2015] ; 10560 >
         au < released ; 2016 ; The Emily Dickinson Journal Volume 25 [2016] ; 11227 >
+        au < exists ; 2017 ; The Emily Dickinson Journal Volume 26 [2017] ; 12645 >
+        au < exists ; 2018 ; The Emily Dickinson Journal Volume 27 [2018] ; 13486 >
 
     }
     
@@ -2558,6 +2889,8 @@
         au < released ; 2015 ; The Henry James Review Volume 36 [2015] ; 10349 >
         au < released ; 2016 ; The Henry James Review Volume 37 [2016] ; 10986 >
         au < released ; 2017 ; The Henry James Review Volume 38 [2017] ; 12400 >
+        au < exists ; 2018 ; The Henry James Review Volume 39 [2018] ; 13242 >
+        au < exists ; 2019 ; The Henry James Review Volume 40 [2019] ; 13920 >
 
     }
     
@@ -2582,6 +2915,7 @@
         au < released ; 2015 ; The Hopkins Review Volume 8 [2015 (New Series)] ; 10325 >
         au < released ; 2016 ; The Hopkins Review Volume 9 [2016 (New Series)] ; 10968 >
         au < released ; 2017 ; The Hopkins Review Volume 10 [2017 (New Series)] ; 12356 >
+        au < exists ; 2018 ; The Hopkins Review Volume 11 [2018 (New Series)] ; 13226 >
 
     }
     
@@ -2606,6 +2940,8 @@
         au < released ; 2015 ; The Journal of the History of Childhood and Youth Volume 8 [2015] ; 10336 >
         au < released ; 2016 ; The Journal of the History of Childhood and Youth Volume 9 [2016] ; 11011 >
         au < released ; 2017 ; The Journal of the History of Childhood and Youth Volume 10 [2017] ; 12321 >
+        au < exists ; 2018 ; The Journal of the History of Childhood and Youth Volume 11 [2018] ; 13167 >
+        au < exists ; 2019 ; The Journal of the History of Childhood and Youth Volume 12 [2019] ; 13864 >
 
     }
     
@@ -2659,6 +2995,8 @@
         au < released ; 2014 ; The Lion and the Unicorn Volume 38 [2014] ; 9992 >
         au < released ; 2015 ; The Lion and the Unicorn Volume 39 [2015] ; 10701 >
         au < released ; 2016 ; The Lion and the Unicorn Volume 40 [2016] ; 11260 >
+        au < exists ; 2017 ; The Lion and the Unicorn Volume 41 [2017] ; 12714 >
+        au < exists ; 2018 ; The Lion and the Unicorn Volume 42 [2018] ; 13717 >
 
     }
     
@@ -2712,7 +3050,9 @@
         au < released ; 2013-2014 ; The Review of Higher Education Volume 37 [2013-2014] ; 9322 >
         au < released ; 2014-2015 ; The Review of Higher Education Volume 38 [2014-2015] ; 10159 >
         au < released ; 2015-2016 ; The Review of Higher Education Volume 39 [2015-2016] ; 10764 >
-        au < released ; 2016 ; The Review of Higher Education Volume 40 [2016] ; 11407 >
+        au < released ; 2016-2017 ; The Review of Higher Education Volume 40 [2016-2017] ; 11407 >
+        au < exists ; 2017-2018 ; The Review of Higher Education Volume 41 [2017-2018] ; 12821 >
+        au < exists ; 2018-2019 ; The Review of Higher Education Volume 42 [2018-2019] ; 13683 >
 
     }
     
@@ -2772,6 +3112,8 @@
         au < released ; 2014 ; Theatre Journal Volume 66 [2014] ; 9857 >
         au < released ; 2015 ; Theatre Journal Volume 67 [2015] ; 10517 >
         au < released ; 2016 ; Theatre Journal Volume 68 [2016] ; 11146 >
+        au < exists ; 2017 ; Theatre Journal Volume 69 [2017] ; 12582 >
+        au < exists ; 2018 ; Theatre Journal Volume 70 [2018] ; 13439 >
 
     }
     
@@ -2812,6 +3154,8 @@
         au < released ; 2014 ; Theatre Topics Volume 24 [2014] ; 9807 >
         au < released ; 2015 ; Theatre Topics Volume 25 [2015] ; 10473 >
         au < released ; 2016 ; Theatre Topics Volume 26 [2016] ; 11102 >
+        au < exists ; 2017 ; Theatre Topics Volume 27 [2017] ; 12535 >
+        au < exists ; 2018 ; Theatre Topics Volume 28 [2018] ; 13376 >
 
     }
     
@@ -2846,6 +3190,8 @@
         au < released ; 2015 ; Theory & Event Volume 18 [2015] ; 10306 >
         au < released ; 2016 ; Theory & Event Volume 19 [2016] ; 10908 >
         au < released ; 2017 ; Theory & Event Volume 20 [2017] ; 12319 >
+        au < exists ; 2018 ; Theory & Event Volume 21 [2018] ; 13223 >
+        au < exists ; 2019 ; Theory & Event Volume 22 [2019] ; 13878 >
 
     }
     
@@ -2873,6 +3219,7 @@
         au < released ; 2015 ; Victorian Periodicals Review Volume 48 [2015] ; 10531 >
         au < released ; 2016 ; Victorian Periodicals Review Volume 49 [2016] ; 11120 >
         au < released ; 2017 ; Victorian Periodicals Review Volume 50 [2017] ; 12517 >
+        au < exists ; 2018 ; Victorian Periodicals Review Volume 51 [2018] ; 13383 >
 
     }
     
@@ -2894,6 +3241,8 @@
         au < released ; 2015 ; Wallace Stevens Journal Volume 39 [2015] ; 10460 >
         au < released ; 2016 ; Wallace Stevens Journal Volume 40 [2016] ; 10980 >
         au < released ; 2017 ; Wallace Stevens Journal Volume 41 [2017] ; 12435 >
+        au < exists ; 2018 ; Wallace Stevens Journal Volume 42 [2018] ; 13295 >
+        au < exists ; 2019 ; Wallace Stevens Journal Volume 43 [2019] ; 13998 >
 
     }
     
@@ -2931,6 +3280,8 @@
         au < released ; 2015 ; ariel: A Review of International English Literature Volume 46 [2015] ; 10715 >
         au < released ; 2016 ; ariel: A Review of International English Literature Volume 47 [2016] ; 11286 >
         au < released ; 2017 ; ariel: A Review of International English Literature Volume 48 [2017] ; 12390 >
+        au < exists ; 2018 ; ariel: A Review of International English Literature Volume 49 [2018] ; 13238 >
+        au < exists ; 2019 ; ariel: A Review of International English Literature Volume 50 [2019] ; 13910 >
 
     }
     
@@ -2964,6 +3315,8 @@
         au < released ; 2014 ; diacritics Volume 42 [2014] ; 10233 >
         au < released ; 2015 ; diacritics Volume 43 [2015] ; 10812 >
         au < released ; 2016 ; diacritics Volume 44 [2016] ; 12248 >
+        au < exists ; 2017 ; diacritics Volume 45 [2017] ; 13199 >
+        au < exists ; 2018 ; diacritics Volume 46 [2018] ; 13912 >
 
     }
     
@@ -2995,6 +3348,8 @@
         au < released ; 2015 ; portal: Libraries and the Academy Volume 15 [2015] ; 10324 >
         au < released ; 2016 ; portal: Libraries and the Academy Volume 16 [2016] ; 10969 >
         au < released ; 2017 ; portal: Libraries and the Academy Volume 17 [2017] ; 12284 >
+        au < exists ; 2018 ; portal: Libraries and the Academy Volume 18 [2018] ; 13120 >
+        au < exists ; 2019 ; portal: Libraries and the Academy Volume 19 [2019] ; 13892 >
 
     }
 
