@@ -6,30 +6,8 @@
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:5
 
-    {
-    title <
-      name = Archives of Asian Art ;
-      issn = 1944-6497  ;
-      eissn = 0066-6637  ;
-      issnl = 0066-6637
-
-    >
-
-      attr[journal_id] = 427
-
-        au < manifest ; 2008 ; Archives of Asian Art Volume 58 [2008] ; 4133 >
-        au < manifest ; 2009 ; Archives of Asian Art Volume 59 [2009] ; 4392 >
-        au < released ; 2010 ; Archives of Asian Art Volume 60 [2010] ; 6360 >
-        au < released ; 2011 ; Archives of Asian Art Volume 61 [2011] ; 7524 >
-        au < released ; 2012 ; Archives of Asian Art Volume 62 [2012] ; 8495 >
-        au < released ; 2013 ; Archives of Asian Art Volume 63 [2013] ; 9474 >
-        au < released ; 2014 ; Archives of Asian Art Volume 64 [2014] ; 10719 >
-        au < released ; 2015 ; Archives of Asian Art Volume 65 [2015] ; 11160 >
-        au < released ; 2016 ; Archives of Asian Art Volume 66 [2016] ; 11234 >
-        au < released ; 2017 ; Archives of Asian Art Volume 67 [2017] ; 12497 >
-
-    }
     {
     title <
       name = Asian Perspectives ;

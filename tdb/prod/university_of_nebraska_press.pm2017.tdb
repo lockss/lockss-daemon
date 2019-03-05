@@ -6,6 +6,7 @@
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:17
 
     {
     title <
@@ -242,6 +243,22 @@
         au < released ; 2015 ; Journal of Literature and Trauma Studies Volume 4 [2015] ; 11259 >
 
     }
+
+    {
+    title <
+      name = Journal of Magazine Media ;
+      issn = 2576-7887  ;
+      eissn = 2576-7895  ;
+      issnl = 2576-7887
+
+    >
+
+      attr[journal_id] = 739
+
+        au < exists ; 2017-2018 ; Journal of Magazine Media Volume 18 [2017-2018] ; 13911 >
+
+    }
+
     {
     title <
       name = Journal of Sports Media ;
@@ -436,27 +453,7 @@
         au < released ; 2015 ; Prairie Schooner Volume 89 [2015] ; 10750 >
 
     }
-    {
-    title <
-      name = Qui Parle: Critical Humanities and Social Sciences ;
-      issn = 1938-8020  ;
-      eissn = 1041-8385  ;
-      issnl = 1041-8385
 
-    >
-
-      attr[journal_id] = 477
-
-        au < manifest ; 2009 ; Qui Parle: Critical Humanities and Social Sciences Volume 18 [2009] ; 5046 >
-        au < released ; 2010 ; Qui Parle: Critical Humanities and Social Sciences Volume 19 [2010] ; 6477 >
-        au < released ; 2011 ; Qui Parle: Critical Humanities and Social Sciences Volume 20 [2011] ; 7678 >
-        au < released ; 2012 ; Qui Parle: Critical Humanities and Social Sciences Volume 21 [2012] ; 8522 >
-        au < released ; 2013 ; Qui Parle: Critical Humanities and Social Sciences Volume 22 [2013] ; 9323 >
-        au < released ; 2014 ; Qui Parle: Critical Humanities and Social Sciences Volume 23 [2014] ; 10192 >
-        au < released ; 2015-2016 ; Qui Parle: Critical Humanities and Social Sciences Volume 24 [2015-2016] ; 10837 >
-        au < released ; 2016 ; Qui Parle: Critical Humanities and Social Sciences Volume 25 [2016] ; 12204 >
-
-    }
     {
     title <
       name = Resilience: A Journal of the Environmental Humanities ;

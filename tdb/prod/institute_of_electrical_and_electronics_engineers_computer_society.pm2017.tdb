@@ -6,6 +6,7 @@
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:87
 
     {
     title <
@@ -27,6 +28,8 @@
         au < released ; 2014 ; IEEE Annals of the History of Computing Volume 36 [2014] ; 10274 >
         au < released ; 2015 ; IEEE Annals of the History of Computing Volume 37 [2015] ; 10510 >
         au < released ; 2016 ; IEEE Annals of the History of Computing Volume 38 [2016] ; 11045 >
+        au < exists ; 2017 ; IEEE Annals of the History of Computing Volume 39 [2017] ; 12656 >
+        au < exists ; 2018 ; IEEE Annals of the History of Computing Volume 40 [2018] ; 13601 >
 
     }
 

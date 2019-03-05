@@ -6,19 +6,37 @@
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:171
 
     {
     title <
-      name =  Al-'Arabiyya: Journal of the American Association of Teachers of Arabic ;
-      issn = 0889-8731  ;
+      name = Al-'Arabiyya: Journal of the American Association of Teachers of Arabic ;
+      issn = 0889-8731 ;
       eissn = 2375-4036 
     >
 
       attr[journal_id] = 646
 
-        au < released ; 2014 ;  Al-'Arabiyya: Journal of the American Association of Teachers of Arabic Volume 47 [2014] ; 10211 >
-        au < released ; 2015 ;  Al-'Arabiyya: Journal of the American Association of Teachers of Arabic Volume 48 [2015] ; 10806 >
-        au < released ; 2016 ;  Al-'Arabiyya: Journal of the American Association of Teachers of Arabic Volume 49 [2016] ; 12190 >
+        au < released ; 2014 ; Al-'Arabiyya: Journal of the American Association of Teachers of Arabic Volume 47 [2014] ; 10211 >
+        au < released ; 2015 ; Al-'Arabiyya: Journal of the American Association of Teachers of Arabic Volume 48 [2015] ; 10806 >
+        au < released ; 2016 ; Al-'Arabiyya: Journal of the American Association of Teachers of Arabic Volume 49 [2016] ; 12190 >
+        au < exists ; 2017 ; Al-'Arabiyya: Journal of the American Association of Teachers of Arabic Volume 50 [2017] ; 13027 >
+        au < exists ; 2018 ; Al-'Arabiyya: Journal of the American Association of Teachers of Arabic Volume 51 [2018] ; 13786 >
+
+    }
+
+    {
+    title <
+      name = Georgetown Journal of International Affairs ;
+      issn = 1526-0054 ;
+      eissn = 2471-8831
+    >
+
+      attr[journal_id] = 681
+
+        au < exists ; 2016 ; Georgetown Journal of International Affairs Volume 49 [2016] ; 11158 >
+        au < exists ; 2017 ; Georgetown Journal of International Affairs Volume 50 [2017] ; 12658 >
+        au < exists ; 2018 ; Georgetown Journal of International Affairs Volume 51 [Fall 2018] ; 13783 >
 
     }
 

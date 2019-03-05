@@ -6,6 +6,7 @@
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:95
 
     {
     title <
@@ -41,6 +42,8 @@
         au < released ; 2014 ; Goethe Yearbook Volume 21 [2014] ; 9995 >
         au < released ; 2015 ; Goethe Yearbook Volume 22 [2015] ; 10665 >
         au < released ; 2016 ; Goethe Yearbook Volume 23 [2016] ; 11230 >
+        au < exists ; 2017 ; Goethe Yearbook Volume 24 [2017] ; 12605 >
+        au < exists ; 2018 ; Goethe Yearbook Volume 25 [2018] ; 13471 >
 
     }
 

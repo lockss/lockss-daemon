@@ -6,6 +6,7 @@
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:3
 
     {
     title <
@@ -34,8 +35,11 @@
         au < released ; 2014-2015 ; Africa Today Volume 61 [2014-2015] ; 10205 >
         au < released ; 2015-2016 ; Africa Today Volume 62 [2015-2016] ; 10776 >
         au < released ; 2016-2017 ; Africa Today Volume 63 [2016-2017] ; 11403 >
+        au < exists ; 2017-2018 ; Africa Today Volume 64 [2017-2018] ; 13019 >
+        au < exists ; 2018-2019 ; Africa Today Volume 65 [2018-2019] ; 13900 >
 
     }
+
     {
     title <
       name = African Conflict & Peacebuilding Review ;
@@ -51,8 +55,11 @@
         au < released ; 2014 ; African Conflict & Peacebuilding Review Volume 4 [2014] ; 9817 >
         au < released ; 2015 ; African Conflict & Peacebuilding Review Volume 5 [2015] ; 10627 >
         au < released ; 2016 ; African Conflict & Peacebuilding Review Volume 6 [2016] ; 11209 >
+        au < exists ; 2017 ; African Conflict & Peacebuilding Review Volume 7 [2017] ; 12831 >
+        au < exists ; 2018 ; African Conflict & Peacebuilding Review Volume 8 [2018] ; 13518 >
 
     }
+
     {
     title <
       name = Aleph: Historical Studies in Science and Judaism ;
@@ -81,8 +88,24 @@
         au < released ; 2015 ; Aleph: Historical Studies in Science and Judaism Volume 15 [2015] ; 10452 >
         au < released ; 2016 ; Aleph: Historical Studies in Science and Judaism Volume 16 [2016] ; 11078 >
         au < released ; 2017 ; Aleph: Historical Studies in Science and Judaism Volume 17 [2017] ; 12505 >
+        au < exists ; 2018 ; Aleph: Historical Studies in Science and Judaism Volume 18 [2018] ; 13485 >
 
     }
+
+    {
+    title <
+      name = Antisemitism Studies ;
+      issn = 2474-1809 ;
+      eissn = 2474-1817
+    >
+
+      attr[journal_id] = 747
+
+        au < exists ; 2017 ; Antisemitism Studies 1 [2017] ; 13973 >
+        au < exists ; 2018 ; Antisemitism Studies 2 [2018] ; 13974 >
+
+    }
+
     {
     title <
       name = Black Camera ;
@@ -92,35 +115,36 @@
 
       attr[journal_id] = 468
 
-        au < released ; 2009 ; Black Camera Volume 1 [2009 (The New Series)] ; 5680 >
-        au < released ; 2010 ; Black Camera Volume 2 [2010 (The New Series)] ; 6566 >
-        au < released ; 2011 ; Black Camera Volume 3 [2011 (The New Series)] ; 7652 >
-        au < released ; 2012 ; Black Camera Volume 4 [2012 (The New Series)] ; 8496 >
-        au < released ; 2013 ; Black Camera Volume 5 [2013 (The New Series)] ; 9439 >
-        au < released ; 2014 ; Black Camera Volume 6 [2014 (The New Series)] ; 10268 >
-        au < released ; 2015 ; Black Camera Volume 7 [2015 (The New Series)] ; 10896 >
-        au < released ; 2016 ; Black Camera Volume 8 [2016 (The New Series)] ; 12171 >
+        au < released ; 2009-2010 ; Black Camera Volume 1 [2009-2010 (The New Series)] ; 5680 >
+        au < released ; 2010-2011 ; Black Camera Volume 2 [2010-2011 (The New Series)] ; 6566 >
+        au < released ; 2011-2012 ; Black Camera Volume 3 [2011-2012 (The New Series)] ; 7652 >
+        au < released ; 2012-2013 ; Black Camera Volume 4 [2012-2013 (The New Series)] ; 8496 >
+        au < released ; 2013-2014 ; Black Camera Volume 5 [2013-2014 (The New Series)] ; 9439 >
+        au < released ; 2014-2015 ; Black Camera Volume 6 [2014-2015 (The New Series)] ; 10268 >
+        au < released ; 2015-2016 ; Black Camera Volume 7 [2015-2016 (The New Series)] ; 10896 >
+        au < released ; 2016-2017 ; Black Camera Volume 8 [2016-2017 (The New Series)] ; 12171 >
+        au < exists ; 2017-2018 ; Black Camera Volume 9 [2017-2018 (The New Series)] ; 13111 >
+        au < exists ; 2018-2019 ; Black Camera Volume 10 [2018-2019 (The New Series)] ; 13735 >
 
     }
+    
     {
     title <
-      name = Bridges: A Jewish Feminist Journal ;
-      issn = 1046-8358  ;
-      eissn = 1558-9552  ;
-      issnl = 1046-8358
+      name = Chiricú Journal: Latina/o Literatures, Arts, and Cultures ;
+      issn = 0277-7223 ;
+      eissn = 2472-4521 ;
+      issnl = 0277-7223
 
     >
 
-      attr[journal_id] = 312
+      attr[journal_id] = 713
 
-        au < released ; 2006 ; Bridges: A Jewish Feminist Journal Volume 11 [2006] ; 2990 >
-        au < released ; 2007 ; Bridges: A Jewish Feminist Journal Volume 12 [2007] ; 3372 >
-        au < released ; 2008 ; Bridges: A Jewish Feminist Journal Volume 13 [2008] ; 3740 >
-        au < released ; 2009 ; Bridges: A Jewish Feminist Journal Volume 14 [2009] ; 4236 >
-        au < released ; 2010 ; Bridges: A Jewish Feminist Journal Volume 15 [2010] ; 6345 >
-        au < released ; 2011 ; Bridges: A Jewish Feminist Journal Volume 16 [2011] ; 7350 >
+        au < exists ; 2016-2017 ; Chiricú Journal: Latina/o Literatures, Arts, and Cultures Volume 1 [2016-2017] ; 12134 >
+        au < exists ; 2017-2018 ; Chiricú Journal: Latina/o Literatures, Arts, and Cultures Volume 2 [2017-2018] ; 13112 >
+        au < exists ; 2018-2019 ; Chiricú Journal: Latina/o Literatures, Arts, and Cultures Volume 3 [2018-2019] ; 13811 >
 
     }
+
     {
     title <
       name = Ethics & the Environment ;
@@ -150,8 +174,11 @@
         au < released ; 2014 ; Ethics & the Environment Volume 19 [2014] ; 10049 >
         au < released ; 2015 ; Ethics & the Environment Volume 20 [2015] ; 10671 >
         au < released ; 2016 ; Ethics & the Environment Volume 21 [2016] ; 11273 >
+        au < exists ; 2017 ; Ethics & the Environment Volume 22 [2017] ; 12686 >
+        au < exists ; 2018 ; Ethics & the Environment Volume 23 [2018] ; 13540 >
 
     }
+
     {
     title <
       name = Film History: An International Journal ;
@@ -175,8 +202,11 @@
         au < released ; 2014 ; Film History: An International Journal Volume 26 [2014] ; 9861 >
         au < released ; 2015 ; Film History: An International Journal Volume 27 [2015] ; 10595 >
         au < released ; 2016 ; Film History: An International Journal Volume 28 [2016] ; 11244 >
+        au < exists ; 2017 ; Film History: An International Journal Volume 29 [2017] ; 12716 >
+        au < exists ; 2018 ; Film History: An International Journal Volume 30 [2018] ; 13565 >
 
     }
+
     {
     title <
       name = History & Memory ;
@@ -186,7 +216,7 @@
 
     >
 
-      attr[journal_id] = 0000
+      attr[journal_id] = 71
 
         au < released ; 1998 ; History & Memory Volume 10 [1998] ; 6123 >
         au < released ; 1999 ; History & Memory Volume 11 [1999] ; 241 >
@@ -208,8 +238,10 @@
         au < released ; 2015 ; History & Memory Volume 27 [2015] ; 10493 >
         au < released ; 2016 ; History & Memory Volume 28 [2016] ; 11054 >
         au < released ; 2017 ; History & Memory Volume 29 [2017] ; 12511 >
+        au < exists ; 2018 ; History & Memory Volume 30 [2018] ; 13333 >
 
     }
+    
     {
     title <
       name = Hypatia ;
@@ -233,6 +265,7 @@
         au < released ; 2008 ; Hypatia Volume 23 [2008] ; 3528 >
 
     }
+    
     {
     title <
       name = Indiana Journal of Global Legal Studies ;
@@ -258,8 +291,30 @@
         au < released ; 2014 ; Indiana Journal of Global Legal Studies Volume 21 [2014] ; 10051 >
         au < released ; 2015 ; Indiana Journal of Global Legal Studies Volume 22 [2015] ; 10399 >
         au < released ; 2016 ; Indiana Journal of Global Legal Studies Volume 23 [2016] ; 11094 >
+        au < exists ; 2017 ; Indiana Journal of Global Legal Studies Volume 24 [2017] ; 12618 >
+        au < exists ; 2018 ; Indiana Journal of Global Legal Studies Volume 25 [2018] ; 13529 >
 
     }
+
+    {
+    title <
+      name = Indiana Theory Review ;
+      issn = 0271-8022 ;
+      eissn = 2474-7777 ;
+      issnl = 0271-8022
+
+    >
+
+      attr[journal_id] = 726
+
+        au < exists ; 2013 ; Indiana Theory Review Volume 31 [2013] ; 12838 >
+        au < exists ; 2016 ; Indiana Theory Review Volume 32 [2016] ; 12840 >
+        au < exists ; 2017 ; Indiana Theory Review Volume 33 [2017] ; 13006 >
+        au < exists ; 2017 ; Indiana Theory Review Volume 34 [2017] ; 13165 >
+        au < exists ; 2018 ; Indiana Theory Review Volume 35 [2018] ; 13942 >
+
+    }
+
     {
     title <
       name = Israel Studies ;
@@ -292,9 +347,12 @@
         au < released ; 2014 ; Israel Studies Volume 19 [2014] ; 9543 >
         au < released ; 2015 ; Israel Studies Volume 20 [2015] ; 10292 >
         au < released ; 2016 ; Israel Studies Volume 21 [2016] ; 10844 >
-        au < released ; 2016 ; Israel Studies Volume 22 [2016] ; 12215 >
+        au < released ; 2017 ; Israel Studies Volume 22 [2017] ; 12215 >
+        au < exists ; 2018 ; Israel Studies Volume 23 [2018] ; 13028 >
+        au < exists ; 2019 ; Israel Studies Volume 24 [2019] ; 13776 >
 
     }
+
     {
     title <
       name = Jewish Social Studies ;
@@ -324,8 +382,11 @@
         au < released ; 2013-2014 ; Jewish Social Studies New Series, Volume 20 [2013-2014] ; 10235 >
         au < released ; 2015-2016 ; Jewish Social Studies New Series, Volume 21 [2015-2016] ; 10840 >
         au < released ; 2016-2017 ; Jewish Social Studies New Series, Volume 22 [2016-2017] ; 12177 >
+        au < exists ; 2017-2018 ; Jewish Social Studies New Series, Volume 23 [2017-2018] ; 12897 >
+        au < exists ; 2018-2019 ; Jewish Social Studies New Series, Volume 24 [2018-2019] ; 13742 >
 
     }
+    
     {
     title <
       name = Journal of Feminist Studies in Religion ;
@@ -349,8 +410,11 @@
         au < released ; 2014 ; Journal of Feminist Studies in Religion Volume 30 [2014] ; 10058 >
         au < released ; 2015 ; Journal of Feminist Studies in Religion Volume 31 [2015] ; 10553 >
         au < released ; 2016 ; Journal of Feminist Studies in Religion Volume 32 [2016] ; 11180 >
+        au < exists ; 2017 ; Journal of Feminist Studies in Religion Volume 33 [2017] ; 12551 >
+        au < exists ; 2018 ; Journal of Feminist Studies in Religion Volume 34 [2018] ; 13392 >
 
     }
+
     {
     title <
       name = Journal of Folklore Research ;
@@ -376,34 +440,29 @@
         au < released ; 2014 ; Journal of Folklore Research Volume 51 [2014] ; 9818 >
         au < released ; 2015 ; Journal of Folklore Research Volume 52 [2015] ; 10514 >
         au < released ; 2016 ; Journal of Folklore Research Volume 53 [2016] ; 11012 >
+        au < exists ; 2017 ; Journal of Folklore Research Volume 54 [2017] ; 12580 >
+        au < exists ; 2018 ; Journal of Folklore Research Volume 55 [2018] ; 13309 >
+        au < exists ; 2019 ; Journal of Folklore Research Volume 56 [2019] ; 13993 >
 
     }
+
     {
     title <
-      name = Journal of Middle East Women's Studies ;
-      issn = 1552-5864  ;
-      eissn = 1558-9579  ;
-      issnl = 1552-5864
+      name = Journal of Islamic and Muslim Studies ;
+      issn = 2470-7066  ;
+      eissn = 2470-7074  ;
+      issnl = 2470-7066
 
     >
 
-      attr[journal_id] = 329
+      attr[journal_id] = 740
 
-        au < released ; 2005 ; Journal of Middle East Women's Studies Volume 1 [2005] ; 6042 >
-        au < released ; 2006 ; Journal of Middle East Women's Studies Volume 2 [2006] ; 2957 >
-        au < released ; 2007 ; Journal of Middle East Women's Studies Volume 3 [2007] ; 3224 >
-        au < released ; 2008 ; Journal of Middle East Women's Studies Volume 4 [2008] ; 3587 >
-        au < released ; 2009 ; Journal of Middle East Women's Studies Volume 5 [2009] ; 4116 >
-        au < released ; 2010 ; Journal of Middle East Women's Studies Volume 6 [2010] ; 5759 >
-        au < released ; 2011 ; Journal of Middle East Women's Studies Volume 7 [2011] ; 6712 >
-        au < released ; 2012 ; Journal of Middle East Women's Studies Volume 8 [2012] ; 7770 >
-        au < released ; 2013 ; Journal of Middle East Women's Studies Volume 9 [2013] ; 8624 >
-        au < released ; 2014 ; Journal of Middle East Women's Studies Volume 10 [2014] ; 9542 >
-        au < released ; 2015 ; Journal of Middle East Women's Studies Volume 11 [2015] ; 10505 >
-        au < released ; 2016 ; Journal of Middle East Women's Studies Volume 12 [2016] ; 11010 >
-        au < released ; 2017 ; Journal of Middle East Women's Studies Volume13, 2017 ; 12363 >
+        au < exists ; 2016 ; Journal of Islamic and Muslim Studies Volume 1 [2016] ; 13629 >
+        au < exists ; 2017 ; Journal of Islamic and Muslim Studies Volume 2 [2017] ; 13630 >
+        au < exists ; 2018 ; Journal of Islamic and Muslim Studies Volume 3 [2018] ; 13687 >
 
     }
+    
     {
     title <
       name = Journal of Modern Literature ;
@@ -432,36 +491,26 @@
         au < released ; 2014-2015 ; Journal of Modern Literature Volume 38 [2014-2015] ; 10293 >
         au < released ; 2015-2016 ; Journal of Modern Literature Volume 39 [2015-2016] ; 10932 >
         au < released ; 2016-2017 ; Journal of Modern Literature Volume 40 [2016-2017] ; 12243 >
+        au < exists ; 2017-2018 ; Journal of Modern Literature Volume 41 [2017-2018] ; 13123 >
+        au < exists ; 2018-2019 ; Journal of Modern Literature Volume 42 [2018-2019] ; 13830 >
 
     }
+
     {
     title <
-      name = Meridians: feminism, race, transnationalism ;
-      issn = 1536-6936  ;
-      eissn = 1547-8424  ;
-      issnl = 1536-6936
+      name = Mande Studies ;
+      issn = 1536-5506  ;
+      eissn = 2379-5506  ;
+      issnl = 1536-5506
 
     >
 
-      attr[journal_id] = 254
+      attr[journal_id] = 703
 
-        au < released ; 2001 ; Meridians: feminism, race, transnationalism Volume 1 [2001] ; 6676 >
-        au < released ; 2001-2002 ; Meridians: feminism, race, transnationalism Volume 2 [2001-2002] ; 6046 >
-        au < released ; 2002-2003 ; Meridians: feminism, race, transnationalism Volume 3 [2002-2003] ; 6045 >
-        au < released ; 2003-2004 ; Meridians: feminism, race, transnationalism Volume 4 [2003-2004] ; 1742 >
-        au < released ; 2004-2005 ; Meridians: feminism, race, transnationalism Volume 5 [2004-2005] ; 2597 >
-        au < released ; 2005-2006 ; Meridians: feminism, race, transnationalism Volume 6 [2005-2006] ; 2860 >
-        au < released ; 2006-2007 ; Meridians: feminism, race, transnationalism Volume 7 [2006-2007] ; 3226 >
-        au < released ; 2007-2008 ; Meridians: feminism, race, transnationalism Volume 8 [2007-2008] ; 3732 >
-        au < released ; 2008-2009 ; Meridians: feminism, race, transnationalism Volume 9 [2008-2009] ; 4351 >
-        au < released ; 2009-2010 ; Meridians: feminism, race, transnationalism Volume 10 [2009-2010] ; 6165 >
-        au < released ; 2011-2013 ; Meridians: feminism, race, transnationalism Volume 11 [2011-2013] ; 7885 >
-        au < released ; 2014 ; Meridians: feminism, race, transnationalism Volume 12 [2014] ; 9853 >
-        au < released ; 2015-2016 ; Meridians: feminism, race, transnationalism Volume 13 [2015-2016] ; 10761 >
-        au < released ; 2016 ; Meridians: feminism, race, transnationalism Volume 14 [2016] ; 11425 >
-        au < released ; 2016-2017 ; Meridians: feminism, race, transnationalism Volume 15 [2016-2017] ; 12483 >
-        au < exists ; 2017-2018 ; Meridians: feminism, race, transnationalism Volume 16 [2017-2018] ; 13042 >
-        au < exists ; 2018-2019 ; Meridians: feminism, race, transnationalism Volume 17 [2018-2019] ; 13719 >
+        au < exists ; 2015 ; Mande Studies Volume 16-17 [2015] ; 12608 >
+        au < exists ; 2016 ; Mande Studies Volume 18 [2016] ; 12526 >
+        au < exists ; 2017 ; Mande Studies Volume 19 [2017] ; 13023 >
+        au < exists ; 2018 ; Mande Studies Volume 20 [2018] ; 13741 >
 
     }
 
@@ -503,8 +552,12 @@
         au < released ; 2015 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 28 [Spring 5775/2015] ; 10691 >
         au < released ; 2015 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 29 [Spring 5776/2015] ; 11051 >
         au < released ; 2016 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 30 [Spring 5777/2016] ; 12206 >
+        au < exists ; 2017 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 31 [Spring-Fall 5777-78/2017] ; 12802 >
+        au < exists ; 2018 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 32 [Spring 5778/2018] ; 13539 >
+        au < exists ; 2018 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 33 [Spring 5779/2018] ; 13816 >
 
     }
+
     {
     title <
       name = Philosophy of Music Education Review ;
@@ -532,8 +585,11 @@
         au < released ; 2014 ; Philosophy of Music Education Review Volume 22 [2014] ; 9991 >
         au < released ; 2015 ; Philosophy of Music Education Review Volume 23 [2015] ; 10666 >
         au < released ; 2016 ; Philosophy of Music Education Review Volume 24 [2016] ; 11302 >
+        au < exists ; 2017 ; Philosophy of Music Education Review Volume 25 [2017] ; 12576 >
+        au < exists ; 2018 ; Philosophy of Music Education Review Volume 26 [2018] ; 13338 >
 
     }
+    
     {
     title <
       name = Prooftexts ;
@@ -561,8 +617,11 @@
         au < released ; 2013 ; Prooftexts Volume 33 [2013] ; 9790 >
         au < released ; 2014 ; Prooftexts Volume 34 [2014] ; 10655 >
         au < released ; 2015 ; Prooftexts Volume 35 [2015] ; 12141 >
+        au < exists ; 2017 ; Prooftexts Volume 36 [2017] ; 13137 >
+        au < exists ; 2018 ; Prooftexts Volume 37 [2018] ; 13899 >
 
     }
+
     {
     title <
       name = Race/Ethnicity: Multidisciplinary Global Contexts ;
@@ -579,6 +638,7 @@
         au < released ; 2011 ; Race/Ethnicity: Multidisciplinary Global Contexts Volume 5 [2011] ; 7855 >
 
     }
+    
     {
     title <
       name = Research in African Literatures ;
@@ -606,8 +666,11 @@
         au < released ; 2014 ; Research in African Literatures Volume 45 [2014] ; 9753 >
         au < released ; 2015 ; Research in African Literatures Volume 46 [2015] ; 10372 >
         au < released ; 2016 ; Research in African Literatures Volume 47 [2016] ; 11028 >
+        au < exists ; 2017 ; Research in African Literatures Volume 48 [2017] ; 12564 >
+        au < exists ; 2018 ; Research in African Literatures Volume 49 [2018] ; 13603 >
 
     }
+
     {
     title <
       name = Spectrum: A Journal on Black Men ;
@@ -623,9 +686,11 @@
         au < released ; 2013-2014 ; Spectrum: A Journal on Black Men Volume 2 [2013-2014] ; 9354 >
         au < released ; 2014-2015 ; Spectrum: A Journal on Black Men Volume 3 [2014-2015] ; 10236 >
         au < released ; 2015-2016 ; Spectrum: A Journal on Black Men Volume 4 [2015-2016] ; 11104 >
-        au < released ; 2016 ; Spectrum: A Journal on Black Men Volume 5 [2016] ; 12159 >
+        au < released ; 2016-2017 ; Spectrum: A Journal on Black Men Volume 5 [2016-2017] ; 12159 >
+        au < exists ; 2017-2018 ; Spectrum: A Journal on Black Men Volume 6 [2017-2018] ; 13044 >
 
     }
+
     {
     title <
       name = Teaching and Learning Inquiry: The ISSOTL Journal ;
@@ -642,29 +707,7 @@
         au < released ; 2015 ; Teaching and Learning Inquiry: The ISSOTL Journal Volume 3 [2015] ; 10555 >
 
     }
-    {
-    title <
-      name = Textual Cultures: Texts, Contexts, Interpretation ;
-      issn = 1559-2936  ;
-      eissn = 1933-7418  ;
-      issnl = 1559-2936
-
-    >
-
-      attr[journal_id] = 392
-
-        au < released ; 2006 ; Textual Cultures: Texts, Contexts, Interpretation Volume 1 [2006] ; 4005 >
-        au < released ; 2007 ; Textual Cultures: Texts, Contexts, Interpretation Volume 2 [2007] ; 4004 >
-        au < released ; 2008 ; Textual Cultures: Texts, Contexts, Interpretation Volume 3 [2008] ; 3840 >
-        au < released ; 2009 ; Textual Cultures: Texts, Contexts, Interpretation Volume 4 [2009] ; 4391 >
-        au < released ; 2010 ; Textual Cultures: Texts, Contexts, Interpretation Volume 5 [2010] ; 6945 >
-        au < released ; 2011 ; Textual Cultures: Texts, Contexts, Interpretation Volume 6 [2011] ; 7588 >
-        au < released ; 2012 ; Textual Cultures: Texts, Contexts, Interpretation Volume 7 [2012] ; 8640 >
-        au < released ; 2013 ; Textual Cultures: Texts, Contexts, Interpretation Volume 8 [2013] ; 9676 >
-        au < released ; 2014-2015 ; Textual Cultures: Texts, Contexts, Interpretation Volume 9 [2014-2015] ; 10835 >
-        au < released ; 2016 ; Textual Cultures: Texts, Contexts, Interpretation Volume 10 [2016] ; 12244 >
-
-    }
+    
     {
     title <
       name = The Global South ;
@@ -686,8 +729,10 @@
         au < released ; 2014 ; The Global South Volume 8 [2014] ; 10608 >
         au < released ; 2015 ; The Global South Volume 9 [2015] ; 11287 >
         au < released ; 2016 ; The Global South Volume 10 [2016] ; 12413 >
+        au < exists ; 2017 ; The Global South Volume 11 [2017] ; 13250 >
 
     }
+
     {
     title <
       name = Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy ;
@@ -711,8 +756,11 @@
         au < released ; 2014 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 50 [2014] ; 10053 >
         au < released ; 2015 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 51 [2015] ; 10705 >
         au < released ; 2016 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 52 [2016] ; 11303 >
+        au < exists ; 2017 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 53 [2017] ; 12693 >
+        au < exists ; 2018 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 54 [2018] ; 13580 >
 
     }
+
     {
     title <
       name = Transition ;
@@ -753,8 +801,13 @@
         au < released ; 2016 ; Transition Issue 120 [2016] ; 11353 >
         au < released ; 2016 ; Transition Issue 121 [2016] ; 12205 >
         au < released ; 2017 ; Transition Issue 122 [2017] ; 12498 >
+        au < exists ; 2017 ; Transition Issue 123 [2017] ; 12719 >
+        au < exists ; 2017 ; Transition Issue 124 [2017] ; 12895 >
+        au < exists ; 2017 ; Transition Issue 125 [2017] ; 13225 >
+        au < exists ; 2018 ; Transition Issue 126 [2018] ; 13657 >
 
     }
+
     {
     title <
       name = Victorian Studies ;
@@ -782,8 +835,11 @@
         au < released ; 2014-2015 ; Victorian Studies Volume 57 [2014-2015] ; 10431 >
         au < released ; 2015-2016 ; Victorian Studies Volume 58 [2015-2016] ; 11105 >
         au < released ; 2016-2017 ; Victorian Studies Volume 59 [2016-2017] ; 12444 >
+        au < exists ; 2017-2018 ; Victorian Studies Volume 60 [2017-2018] ; 13322 >
+        au < exists ; 2018-2019 ; Victorian Studies Volume 61 [2018-2019] ; 13992 >
 
     }
+
     {
     title <
       name = e-Service Journal ;
@@ -804,7 +860,7 @@
         au < released ; 2010 ; e-Service Journal Volume 7 [2010] ; 6422 >
         au < released ; 2011-2012 ; e-Service Journal Volume 8 [2011-2012] ; 8404 >
         au < released ; 2013-2014 ; e-Service Journal Volume 9 [2013-2014] ; 10080 >
-        au < released ; 2016-2017 ; e-Service Journal Volume 10 [2016-2017] ; 12468 >
+        au < released ; 2016-2018 ; e-Service Journal Volume 10 [2016-2018] ; 12468 >
 
     }
 

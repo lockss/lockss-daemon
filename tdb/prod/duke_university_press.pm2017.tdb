@@ -6,6 +6,7 @@
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:4
 
     {
     title <
@@ -35,6 +36,8 @@
         au < released ; 2012 ; American Literary Scholarship Volume 2012 ; 10173 >
         au < released ; 2013 ; American Literary Scholarship Volume 2013 ; 10786 >
         au < released ; 2014 ; American Literary Scholarship Volume 2014 ; 12107 >
+        au < exists ; 2015 ; American Literary Scholarship Volume 2015 ; 12818 >
+        au < exists ; 2016 ; American Literary Scholarship Volume 2016 ; 13679 >
 
     }
 
@@ -75,6 +78,32 @@
         au < released ; 2002 ; American Speech Volume 77 [2002] ; 64 >
         au < released ; 2003 ; American Speech Volume 78 [2003] ; 863 >
         au < released ; 2004 ; American Speech Volume 79 [2004] ; 2480 >
+
+    }
+
+    {
+    title <
+      name = Archives of Asian Art ;
+      issn = 1944-6497  ;
+      eissn = 0066-6637  ;
+      issnl = 0066-6637
+
+    >
+
+      attr[journal_id] = 427
+      #move from University of Hawaii Press
+
+        au < manifest ; 2008 ; Archives of Asian Art Volume 58 [2008] ; 4133 >
+        au < manifest ; 2009 ; Archives of Asian Art Volume 59 [2009] ; 4392 >
+        au < released ; 2010 ; Archives of Asian Art Volume 60 [2010] ; 6360 >
+        au < released ; 2011 ; Archives of Asian Art Volume 61 [2011] ; 7524 >
+        au < released ; 2012 ; Archives of Asian Art Volume 62 [2012] ; 8495 >
+        au < released ; 2013 ; Archives of Asian Art Volume 63 [2013] ; 9474 >
+        au < released ; 2014 ; Archives of Asian Art Volume 64 [2014] ; 10719 >
+        au < released ; 2015 ; Archives of Asian Art Volume 65 [2015] ; 11160 >
+        au < released ; 2016 ; Archives of Asian Art Volume 66 [2016] ; 11234 >
+        au < released ; 2017 ; Archives of Asian Art Volume 67 [2017] ; 12497 >
+        au < exists ; 2018 ; Archives of Asian Art Volume 68 [2018] ; 13473 >
 
     }
 
@@ -124,6 +153,7 @@
         au < released ; 2015 ; Common Knowledge Volume 21 [2015] ; 10304 >
         au < released ; 2016 ; Common Knowledge Volume 22 [2016] ; 10875 >
         au < released ; 2017 ; Common Knowledge Volume 23 [2017] ; 12256 >
+        au < exists ; 2018 ; Common Knowledge Volume 24 [2018] ; 13233 >
 
     }
 
@@ -155,6 +185,8 @@
         au < released ; 2014 ; Comparative Studies of South Asia, Africa and the Middle East Volume 34 [2014] ; 9993 >
         au < released ; 2015 ; Comparative Studies of South Asia, Africa and the Middle East Volume 35 [2015] ; 10613 >
         au < released ; 2016 ; Comparative Studies of South Asia, Africa and the Middle East Volume 36 [2016] ; 11162 >
+        au < exists ; 2017 ; Comparative Studies of South Asia, Africa and the Middle East Volume 37 [2017] ; 12594 >
+        au < exists ; 2018 ; Comparative Studies of South Asia, Africa and the Middle East Volume 38 [2018] ; 13546 >
 
     }
 
@@ -181,6 +213,8 @@
         au < released ; 2014 ; Cultural Politics Volume 10 [2014] ; 9926 >
         au < released ; 2015 ; Cultural Politics Volume 11 [2015] ; 10565 >
         au < released ; 2016 ; Cultural Politics Volume 12 [2016] ; 11137 >
+        au < exists ; 2017 ; Cultural Politics Volume 13 [2017] ; 12552 >
+        au < exists ; 2018 ; Cultural Politics Volume 14 [2018] ; 13476 >
 
     }
 
@@ -204,6 +238,7 @@
         au < released ; 2015 ; East Asian Science, Technology and Society: An International Journal Volume 9 [2015] ; 10477 >
         au < released ; 2016 ; East Asian Science, Technology and Society: An International Journal Volume 10 [2016] ; 11002 >
         au < released ; 2017 ; East Asian Science, Technology and Society: An International Journal Volume 11 [2017] ; 12370 >
+        au < exists ; 2018 ; East Asian Science, Technology and Society: An International Journal Volume 12 [2018] ; 13355 >
 
     }
 
@@ -240,6 +275,8 @@
         au < released ; 2015 ; Eighteenth-Century Life Volume 39 [2015] ; 10275 >
         au < released ; 2016 ; Eighteenth-Century Life Volume 40 [2016] ; 10851 >
         au < released ; 2017 ; Eighteenth-Century Life Volume 41 [2017] ; 12232 >
+        au < exists ; 2018 ; Eighteenth-Century Life Volume 42 [2018] ; 12232 >
+        au < exists ; 2019 ; Eighteenth-Century Life Volume 43 [2019] ; 12232 >
 
     }
 
@@ -330,6 +367,8 @@
         au < released ; 2015 ; GLQ: A Journal of Lesbian and Gay Studies Volume 21 [2015] ; 10332 >
         au < released ; 2016 ; GLQ: A Journal of Lesbian and Gay Studies Volume 22 [2016] ; 10856 >
         au < released ; 2017 ; GLQ: A Journal of Lesbian and Gay Studies Volume 23 [2017] ; 12270 >
+        au < exists ; 2018 ; GLQ: A Journal of Lesbian and Gay Studies Volume 24 [2018] ; 13234 >
+        au < exists ; 2019 ; GLQ: A Journal of Lesbian and Gay Studies Volume 25 [2019] ; 13821 >
 
     }
 
@@ -403,6 +442,8 @@
         au < released ; 2014 ; Journal of Chinese Literature and Culture Volume 1 [2014] ; 10279 >
         au < released ; 2015 ; Journal of Chinese Literature and Culture Volume 2 [2015] ; 10766 >
         au < released ; 2016 ; Journal of Chinese Literature and Culture Volume 3 [2016] ; 11212 >
+        au < exists ; 2017 ; Journal of Chinese Literature and Culture Volume 4 [2017] ; 12609 >
+        au < exists ; 2018 ; Journal of Chinese Literature and Culture Volume 5 [2018] ; 13547 >
 
     }
 
@@ -429,6 +470,45 @@
 
     {
     title <
+      name = Journal of Korean Studies ;
+      issn = 0731-1613  ;
+      eissn = 2158-1665  ;
+      issnl = 0731-1613
+
+    >
+
+      attr[journal_id] = 515
+      #University of Washington Center for Korea Studies
+
+        au < testing ; 1969-1971 ; Journal of Korean Studies Volume 1 [1969-1971] ; 6784 >
+        au < testing ; 1979 ; Journal of Korean Studies Volume 1 [1979] ; 6888 >
+        au < testing ; 1980 ; Journal of Korean Studies Volume 2 [1980] ; 6748 >
+        au < testing ; 1981 ; Journal of Korean Studies Volume 3 [1981] ; 6752 >
+        au < testing ; 1982-1983 ; Journal of Korean Studies Volume 4 [1982-1983] ; 6720 >
+        au < testing ; 1984 ; Journal of Korean Studies Volume 5 [1984] ; 6751 >
+        au < testing ; 1988 ; Journal of Korean Studies Volume 6 [1988-89] ; 6777 >
+        au < testing ; 1990 ; Journal of Korean Studies Volume 7 [1990] ; 6778 >
+        au < testing ; 1992 ; Journal of Korean Studies Volume 8 [1992] ; 6779 >
+        au < testing ; 2004 ; Journal of Korean Studies Volume 9 [2004] ; 6805 >
+        au < testing ; 2005 ; Journal of Korean Studies Volume 10 [2005] ; 6806 >
+        au < testing ; 2006 ; Journal of Korean Studies Volume 11 [2006] ; 6807 >
+        au < testing ; 2007 ; Journal of Korean Studies Volume 12 [2007] ; 6895 >
+        au < testing ; 2008 ; Journal of Korean Studies Volume 13 [2008] ; 6797 >
+        au < testing ; 2009 ; Journal of Korean Studies Volume 14 [2009] ; 6750 >
+        au < released ; 2010 ; Journal of Korean Studies Volume 15 [2010] ; 6734 >
+        au < released ; 2011 ; Journal of Korean Studies Volume 16 [2011] ; 7375 >
+        au < released ; 2012 ; Journal of Korean Studies Volume 17 [2012] ; 8385 >
+        au < released ; 2013 ; Journal of Korean Studies Volume 18 [2013] ; 9169 >
+        au < released ; 2014 ; Journal of Korean Studies Volume 19 [2014] ; 10076 >
+        au < released ; 2015 ; Journal of Korean Studies Volume 20 [2015] ; 10685 >
+        au < released ; 2016 ; Journal of Korean Studies Volume 21 [2016] ; 11218 >
+        au < exists ; 2017 ; Journal of Korean Studies Volume 22 [2017] ; 12901 >
+        au < exists ; 2018 ; Journal of Korean Studies Volume 23 [2018] ; 13548 >
+
+    }
+
+    {
+    title <
       name = Journal of Medieval and Early Modern Studies ;
       issn = 1082-9636  ;
       eissn = 1527-8263  ;
@@ -444,6 +524,53 @@
         au < released ; 2002 ; Journal of Medieval and Early Modern Studies Volume 32 [2002] ; 317 >
         au < released ; 2003 ; Journal of Medieval and Early Modern Studies Volume 33 [2003] ; 814 >
         au < released ; 2004 ; Journal of Medieval and Early Modern Studies Volume 34 [2004] ; 2427 >
+
+    }
+
+    {
+    title <
+      name = Journal of Middle East Women's Studies ;
+      issn = 1552-5864  ;
+      eissn = 1558-9579  ;
+      issnl = 1552-5864
+
+    >
+
+      attr[journal_id] = 329
+      #move from Indiana University Press
+
+        au < released ; 2005 ; Journal of Middle East Women's Studies Volume 1 [2005] ; 6042 >
+        au < released ; 2006 ; Journal of Middle East Women's Studies Volume 2 [2006] ; 2957 >
+        au < released ; 2007 ; Journal of Middle East Women's Studies Volume 3 [2007] ; 3224 >
+        au < released ; 2008 ; Journal of Middle East Women's Studies Volume 4 [2008] ; 3587 >
+        au < released ; 2009 ; Journal of Middle East Women's Studies Volume 5 [2009] ; 4116 >
+        au < released ; 2010 ; Journal of Middle East Women's Studies Volume 6 [2010] ; 5759 >
+        au < released ; 2011 ; Journal of Middle East Women's Studies Volume 7 [2011] ; 6712 >
+        au < released ; 2012 ; Journal of Middle East Women's Studies Volume 8 [2012] ; 7770 >
+        au < released ; 2013 ; Journal of Middle East Women's Studies Volume 9 [2013] ; 8624 >
+        au < released ; 2014 ; Journal of Middle East Women's Studies Volume 10 [2014] ; 9542 >
+        au < released ; 2015 ; Journal of Middle East Women's Studies Volume 11 [2015] ; 10505 >
+        au < released ; 2016 ; Journal of Middle East Women's Studies Volume 12 [2016] ; 11010 >
+        au < released ; 2017 ; Journal of Middle East Women's Studies Volume 13 [2017] ; 12363 >
+        au < exists ; 2018 ; Journal of Middle East Women's Studies Volume 14 [2018] ; 13352 >
+
+    }
+
+    {
+
+    title <
+      name = Labor: Studies in Working-Class History of the Americas ;
+      issn = 1547-6715 ;
+      eissn = 1558-1454 ;
+      issnl = 1547-6715
+
+    >
+
+      attr[journal_id] = 679
+
+     au < exists ; 2016 ; Labor: Studies in Working-Class History of the Americas Volume 13 [2016] ; 10956 >
+     au < exists ; 2017 ; Labor: Studies in Working-Class History of the Americas Volume 14 [2017] ; 12360 >
+     au < exists ; 2018 ; Labor: Studies in Working-Class History of the Americas Volume 15 [2018] ; 13275 >
 
     }
 
@@ -496,6 +623,40 @@
         au < released ; 2014 ; Mediterranean Quarterly Volume 25 [2014] ; 9895 >
         au < released ; 2015 ; Mediterranean Quarterly Volume 26 [2015] ; 10571 >
         au < released ; 2016 ; Mediterranean Quarterly Volume 27 [2016] ; 11144 >
+        au < exists ; 2017 ; Mediterranean Quarterly Volume 28 [2017] ; 12665 >
+        au < exists ; 2018 ; Mediterranean Quarterly Volume 29 [2018] ; 13477 >
+
+    }
+
+    {
+    title <
+      name = Meridians: feminism, race, transnationalism ;
+      issn = 1536-6936  ;
+      eissn = 1547-8424  ;
+      issnl = 1536-6936
+
+    >
+
+      attr[journal_id] = 254
+      #move from Indiana University Press
+
+        au < released ; 2001 ; Meridians: feminism, race, transnationalism Volume 1 [2001] ; 6676 >
+        au < released ; 2001-2002 ; Meridians: feminism, race, transnationalism Volume 2 [2001-2002] ; 6046 >
+        au < released ; 2002-2003 ; Meridians: feminism, race, transnationalism Volume 3 [2002-2003] ; 6045 >
+        au < released ; 2003-2004 ; Meridians: feminism, race, transnationalism Volume 4 [2003-2004] ; 1742 >
+        au < released ; 2004-2005 ; Meridians: feminism, race, transnationalism Volume 5 [2004-2005] ; 2597 >
+        au < released ; 2005-2006 ; Meridians: feminism, race, transnationalism Volume 6 [2005-2006] ; 2860 >
+        au < released ; 2006-2007 ; Meridians: feminism, race, transnationalism Volume 7 [2006-2007] ; 3226 >
+        au < released ; 2007-2008 ; Meridians: feminism, race, transnationalism Volume 8 [2007-2008] ; 3732 >
+        au < released ; 2008-2009 ; Meridians: feminism, race, transnationalism Volume 9 [2008-2009] ; 4351 >
+        au < released ; 2009-2010 ; Meridians: feminism, race, transnationalism Volume 10 [2009-2010] ; 6165 >
+        au < released ; 2011-2013 ; Meridians: feminism, race, transnationalism Volume 11 [2011-2013] ; 7885 >
+        au < released ; 2014 ; Meridians: feminism, race, transnationalism Volume 12 [2014] ; 9853 >
+        au < released ; 2015-2016 ; Meridians: feminism, race, transnationalism Volume 13 [2015-2016] ; 10761 >
+        au < released ; 2016 ; Meridians: feminism, race, transnationalism Volume 14 [2016] ; 11425 >
+        au < released ; 2016-2017 ; Meridians: feminism, race, transnationalism Volume 15 [2016-2017] ; 12483 >
+        au < exists ; 2017-2018 ; Meridians: feminism, race, transnationalism Volume 16 [2017-2018] ; 13042 >
+        au < exists ; 2018-2019 ; Meridians: feminism, race, transnationalism Volume 17 [2018-2019] ; 13719 >
 
     }
 
@@ -561,6 +722,9 @@
         au < released ; 2015 ; Nka: Journal of Contemporary African Art Number 36 [May 2015] ; 10674 >
         au < released ; 2015 ; Nka: Journal of Contemporary African Art Number 37 [November 2015] ; 10886 >
         au < released ; 2016 ; Nka: Journal of Contemporary African Art Number 38-39 [November 2016] ; 12200 >
+        au < exists ; 2017 ; Nka: Journal of Contemporary African Art Number 40 [ 2017] ; 12715 >
+        au < exists ; 2017 ; Nka: Journal of Contemporary African Art Number 41 [November 2017] ; 13139 >
+        au < exists ; 2018 ; Nka: Journal of Contemporary African Art Number 42-43 [November 2018] ; 13822 >
 
     }
 
@@ -592,6 +756,8 @@
         au < released ; 2015 ; Pedagogy Volume 15 [2015] ; 10253 >
         au < released ; 2016 ; Pedagogy Volume 16 [2016] ; 10821 >
         au < released ; 2017 ; Pedagogy Volume 17 [2017] ; 12221 >
+        au < exists ; 2018 ; Pedagogy Volume 18 [2018] ; 13140 >
+        au < exists ; 2019 ; Pedagogy Volume 19 [2019] ; 13823 >
 
     }
 
@@ -632,6 +798,31 @@
         au < released ; 2002 ; Public Culture Volume 14 [2002] ; 515 >
         au < released ; 2003 ; Public Culture Volume 15 [2003] ; 839 >
         au < released ; 2004 ; Public Culture Volume 16 [2004] ; 2467 >
+
+    }
+
+    {
+    title <
+      name = Qui Parle: Critical Humanities and Social Sciences ;
+      issn = 1938-8020  ;
+      eissn = 1041-8385  ;
+      issnl = 1041-8385
+
+    >
+
+      attr[journal_id] = 477
+      #move from University of Nebraska Press
+
+        au < manifest ; 2009 ; Qui Parle: Critical Humanities and Social Sciences Volume 18 [2009] ; 5046 >
+        au < released ; 2010 ; Qui Parle: Critical Humanities and Social Sciences Volume 19 [2010] ; 6477 >
+        au < released ; 2011 ; Qui Parle: Critical Humanities and Social Sciences Volume 20 [2011] ; 7678 >
+        au < released ; 2012 ; Qui Parle: Critical Humanities and Social Sciences Volume 21 [2012] ; 8522 >
+        au < released ; 2013 ; Qui Parle: Critical Humanities and Social Sciences Volume 22 [2013] ; 9323 >
+        au < released ; 2014 ; Qui Parle: Critical Humanities and Social Sciences Volume 23 [2014] ; 10192 >
+        au < released ; 2015-2016 ; Qui Parle: Critical Humanities and Social Sciences Volume 24 [2015-2016] ; 10837 >
+        au < released ; 2016 ; Qui Parle: Critical Humanities and Social Sciences Volume 25 [2016] ; 12204 >
+        au < exists ; 2017 ; Qui Parle: Critical Humanities and Social Sciences Volume 26 [2017] ; 12724 >
+        au < exists ; 2018 ; Qui Parle: Critical Humanities and Social Sciences Volume 27 [2018] ; 13628 >
 
     }
 
@@ -689,39 +880,8 @@
         au < released ; 2015 ; Small Axe Volume 19 [2015] ; 10502 >
         au < released ; 2016 ; Small Axe Volume 20 [2016] ; 10994 >
         au < released ; 2017 ; Small Axe Volume 21 [2017] ; 12492 >
-
-    }
-
-    {
-    title <
-      name = Social Science History ;
-      issn = 0145-5532  ;
-      eissn = 1527-8034  ;
-      issnl = 0145-5532
-
-    >
-
-      attr[journal_id] = 188
-
-        au < released ; 1999 ; Social Science History Volume 23 [1999] ; 642 >
-        au < released ; 2000 ; Social Science History Volume 24 [2000] ; 643 >
-        au < released ; 2001 ; Social Science History Volume 25 [2001] ; 644 >
-        au < released ; 2002 ; Social Science History Volume 26 [2002] ; 645 >
-        au < released ; 2003 ; Social Science History Volume 27 [2003] ; 854 >
-        au < released ; 2004 ; Social Science History Volume 28 [2004] ; 2472 >
-        au < released ; 2005 ; Social Science History Volume 29 [2005] ; 2736 >
-        au < released ; 2006 ; Social Science History Volume 30 [2006] ; 3012 >
-        au < released ; 2007 ; Social Science History Volume 31 [2007] ; 3272 >
-        au < released ; 2008 ; Social Science History Volume 32 [2008] ; 3645 >
-        au < released ; 2009 ; Social Science History Volume 33 [2009] ; 4136 >
-        au < released ; 2010 ; Social Science History Volume 34 [2010] ; 5781 >
-        au < released ; 2011 ; Social Science History Volume 35 [2011] ; 6821 >
-        au < released ; 2012 ; Social Science History Volume 36 [2012] ; 8223 >
-        au < released ; 2013 ; Social Science History Volume 37 [2013] ; 8838 >
-        au < released ; 2014 ; Social Science History Volume 38 [2014] ; 10690 >
-        au < released ; 2015 ; Social Science History Volume 39 [2015] ; 10726 >
-        au < released ; 2016 ; Social Science History Volume 40 [2016] ; 10941 >
-        au < released ; 2017 ; Social Science History Volume 41 [2017] ; 12344 >
+        au < exists ; 2018 ; Small Axe Volume 22 [2018] ; 13353 >
+        au < exists ; 2019 ; Small Axe Volume 23 [2019] ; 13954 >
 
     }
 
@@ -806,6 +966,10 @@
         au < released ; 2015 ; Minnesota Review Issue 85 [2015 (New Series)] ; 10836 >
         au < released ; 2016 ; Minnesota Review Issue 86 [2016 (New Series)] ; 11192 >
         au < released ; 2016 ; Minnesota Review Issue 87 [2016 (New Series)] ; 12133 >
+        au < exists ; 2017 ; Minnesota Review Number 88 [2017 (New Series)] ; 12562 >
+        au < exists ; 2017 ; Minnesota Review Number 89 [2017 (New Series)] ; 13025 >
+        au < exists ; 2018 ; Minnesota Review Number 90 [2018 (New Series)] ; 13550 >
+        au < exists ; 2018 ; Minnesota Review Number 91 [2018 (New Series)] ; 13788 >
 
     }
 
@@ -872,6 +1036,7 @@
         au < released ; 2015 ; Tikkun Volume 30 [2015] ; 10305 >
         au < released ; 2016 ; Tikkun Volume 31 [2016] ; 10915 >
         au < released ; 2017 ; Tikkun Volume 32 [2017] ; 12339 >
+        au < exists ; 2018 ; Tikkun Volume 33 [2018] ; 13475 >
 
     }
 
@@ -889,10 +1054,31 @@
         au < released ; 2015 ; Twentieth-Century Literature Volume 61 [2015] ; 10567 >
         au < released ; 2016 ; Twentieth-Century Literature Volume 62 [2016] ; 11150 >
         au < released ; 2017 ; Twentieth-Century Literature Volume 63 [2017] ; 12475 >
+        au < exists ; 2018 ; Twentieth-Century Literature Volume 64 [2018] ; 13474 >
 
     }
 
     {
+    title <
+      name = World Policy Journal ;
+      issn = 0740-2775  ;
+      eissn = 1936-0924  ;
+      issnl = 0740-2775
+
+    >
+
+      attr[journal_id] = 479
+      #move from World Policy Institute
+
+        au < released ; 2010 ; World Policy Journal Volume 27 [2010] ; 5942 >
+        au < released ; 2011 ; World Policy Journal Volume 28 [2011] ; 7587 >
+        au < released ; 2016-2017 ; World Policy Journal Volume 33 [2016-2017] ; 11103 >
+        au < exists ; 2017-2018 ; World Policy Journal Volume 34 [2017-2018] ; 12524 >
+        au < exists ; 2018-2019 ; World Policy Journal Volume 35 [2018-2019] ; 13354 >
+
+    }
+
+   {
     title <
       name = boundary 2 ;
       issn = 0190-3659  ;
@@ -934,7 +1120,7 @@
 
     {
     title <
-      name = positions: east asia cultures critique ;
+      name = positions: asia critique ;
       issn = 1067-9847  ;
       eissn = 1527-8271  ;
       issnl = 1067-9847
@@ -956,12 +1142,14 @@
         au < released ; 2009 ; positions: east asia cultures critique Volume 17 [2009] ; 4223 >
         au < released ; 2010 ; positions: east asia cultures critique Volume 18 [2010] ; 5840 >
         au < released ; 2011 ; positions: east asia cultures critique Volume 19 [2011] ; 6938 >
-        au < released ; 2012 ; positions: east asia cultures critique Volume 20 [2012] ; 8310 >
-        au < released ; 2013 ; positions: east asia cultures critique Volume 21 [2013] ; 8840 >
-        au < released ; 2014 ; positions: east asia cultures critique Volume 22 [2014] ; 9778 >
-        au < released ; 2015 ; positions: east asia cultures critique Volume 23 [2015] ; 10546 >
-        au < released ; 2016 ; positions: east asia cultures critique Volume 24 [2016] ; 11006 >
-        au < released ; 2017 ; positions: east asia cultures critique Volume 25 [2017] ; 12379 >
+        au < released ; 2012 ; positions: asia critique Volume 20 [2012] ; 8310 >
+        au < released ; 2013 ; positions: asia critique Volume 21 [2013] ; 8840 >
+        au < released ; 2014 ; positions: asia critique Volume 22 [2014] ; 9778 >
+        au < released ; 2015 ; positions: asia critique Volume 23 [2015] ; 10546 >
+        au < released ; 2016 ; positions: asia critique Volume 24 [2016] ; 11006 >
+        au < released ; 2017 ; positions: asia critique Volume 25 [2017] ; 12379 >
+        au < exists ; 2018 ; positions: asia critique Volume 26 [2018] ; 13235 >
+        au < exists ; 2019 ; positions: asia critique Volume 27 [2019] ; 13953 >
 
     }
 

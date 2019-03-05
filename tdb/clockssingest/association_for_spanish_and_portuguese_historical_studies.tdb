@@ -17,8 +17,8 @@
       >
 
       comment[publisher] = Association for Spanish and Portuguese Historical Studies
-      param[base_url] = http://digitalcommons.asphs.net/
-      param[journal_id] = bsphs
+      param[base_url] = https://digitalcommons.asphs.net/
+      param[journal_abbr] = bsphs
 
       au < exists ; exists ; 2011 ; Bulletin for Spanish and Portuguese Historical Studies Volume 35 ; 35 ; >
       au < exists ; exists ; 2012 ; Bulletin for Spanish and Portuguese Historical Studies Volume 36 ; 36 ; >

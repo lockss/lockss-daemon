@@ -6,6 +6,7 @@
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:305
 
     {
     title <
@@ -15,27 +16,14 @@
     >
 
       attr[journal_id] = 535
+      #move to Philosophy Documentation Center, publisher_id:305
 
         au < released ; 2011 ; Levinas Studies Volume 6 [2011] ; 9349 >
         au < released ; 2012 ; Levinas Studies Volume 7 [2012] ; 9350 >
         au < released ; 2013 ; Levinas Studies Volume 8 [2013] ; 9351 >
         au < released ; 2014 ; Levinas Studies Volume 9 [2014] ; 10486 >
         au < released ; 2015 ; Levinas Studies Volume 10 [2015] ; 12198 >
-
-    }
-    {
-    title <
-      name = Milton Studies ;
-      issn = 0076-8820  ;
-      eissn = 2330-796X 
-    >
-
-      attr[journal_id] = 570
-
-        au < released ; 2012 ; Milton Studies Volume 53 [2012] ; 9352 >
-        au < released ; 2013 ; Milton Studies Volume 54 [2013] ; 9770 >
-        au < released ; 2014 ; Milton Studies Volume 55 [2014] ; 10488 >
-        au < released ; 2015 ; Milton Studies Volume 56 [2015] ; 11015 >
+        au < exists ; 2016 ; Levinas Studies Volume 11 [2016] ; 13469 >
 
     }
 

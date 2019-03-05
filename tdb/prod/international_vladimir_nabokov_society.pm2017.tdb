@@ -6,6 +6,7 @@
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:40
 
     {
     title <
@@ -32,6 +33,7 @@
         au < released ; 2009-2011 ; Nabokov Studies Volume 12 [2009-2011] ; 9353 >
         au < released ; 2014-2015 ; Nabokov Studies Volume 13 [2014-2015] ; 10954 >
         au < released ; 2016 ; Nabokov Studies Volume 14 [2016] ; 12298 >
+        au < exists ; 2017 ; Nabokov Studies Volume 15 [2017] ; 13243 >
 
     }
 

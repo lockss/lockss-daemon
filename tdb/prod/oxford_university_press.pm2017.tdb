@@ -6,6 +6,7 @@
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:8
 
     {
     title <
@@ -53,34 +54,6 @@
         au < manifest ; 2005 ; Early Music Volume 33 [2005] ; 2745 >
         au < manifest ; 2006 ; Early Music Volume 34 [2006] ; 3004 >
         au < manifest ; 2007 ; Early Music Volume 35 [2007] ; 3327 >
-
-    }
-    {
-    title <
-      name = Enterprise & Society ;
-      issn = 1467-2227  ;
-      eissn = 1467-2235  ;
-      issnl = 1467-2227
-
-    >
-
-      attr[journal_id] = 216
-
-        au < manifest ; 2003 ; Enterprise & Society Volume 4 [2003] ; 895 >
-        au < manifest ; 2004 ; Enterprise & Society Volume 5 [2004] ; 2449 >
-        au < manifest ; 2005 ; Enterprise & Society Volume 6 [2005] ; 2666 >
-        au < manifest ; 2006 ; Enterprise & Society Volume 7 [2006] ; 2958 >
-        au < manifest ; 2007 ; Enterprise & Society Volume 8 [2007] ; 3334 >
-        au < manifest ; 2008 ; Enterprise & Society Volume 9 [2008] ; 3796 >
-        au < manifest ; 2009 ; Enterprise & Society Volume 10 [2009] ; 4186 >
-        au < released ; 2010 ; Enterprise & Society Volume 11 [2010] ; 5853 >
-        au < released ; 2011 ; Enterprise & Society Volume 12 [2011] ; 7403 >
-        au < released ; 2012 ; Enterprise & Society Volume 13 [2012] ; 8067 >
-        au < released ; 2013 ; Enterprise & Society Volume 14 [2013] ; 8807 >
-        au < released ; 2014 ; Enterprise & Society Volume 15 [2014] ; 9690 >
-        au < released ; 2015 ; Enterprise & Society Volume 16 [2015] ; 10774 >
-        au < released ; 2016 ; Enterprise & Society Volume 17 [2016] ; 10985 >
-        au < released ; 2017 ; Enterprise & Society Volume 18 [2017] ; 12405 >
 
     }
     {
@@ -233,6 +206,42 @@
         au < released ; 2016 ; Journal of the History of Medicine and Allied Sciences Volume 71 [2016] ; 10867 >
 
     }
+
+    {
+    title <
+      name = Journal of Social History ;
+      issn = 0022-4529  ;
+      eissn = 1527-1897  ;
+      issnl = 0022-4529
+
+    >
+
+      attr[journal_id] = 103
+      #move from George Mason University Press
+
+        au < released ; 1999-2000 ; Journal of Social History Volume 33 [1999-2000] ; 340 >
+        au < released ; 2000-2001 ; Journal of Social History Volume 34 [2000-2001] ; 341 >
+        au < released ; 2001-2002 ; Journal of Social History Volume 35 [2001-2002] ; 342 >
+        au < released ; 2002-2003 ; Journal of Social History Volume 36 [2002-2003] ; 343 >
+        au < released ; 2003-2004 ; Journal of Social History Volume 37 [2003-2004] ; 962 >
+        au < released ; 2004-2005 ; Journal of Social History Volume 38 [2004-2005] ; 2570 >
+        au < released ; 2005-2006 ; Journal of Social History Volume 39 [2005-2006] ; 2843 >
+        au < released ; 2006-2007 ; Journal of Social History Volume 40 [2006-2007] ; 3142 >
+        au < released ; 2007 ; Journal of Social History Volume 41 [2007] ; 3491 >
+        au < released ; 2008 ; Journal of Social History Volume 42 [2008] ; 3970 >
+        au < released ; 2009 ; Journal of Social History Volume 43 [2009] ; 5659 >
+        au < released ; 2010 ; Journal of Social History Volume 44 [2010] ; 6530 >
+        au < released ; 2011 ; Journal of Social History Volume 45 [2011] ; 7702 >
+        au < released ; 2012-2013 ; Journal of Social History Volume 46 [2012-2013] ; 8461 >
+        au < released ; 2013-2014 ; Journal of Social History Volume 47 [2013-2014] ; 9303 >
+        au < released ; 2014-2015 ; Journal of Social History Volume 48 [2014-2015] ; 10162 >
+        au < released ; 2015-2016 ; Journal of Social History Volume 49 [2015-2016] ; 10782 >
+        au < released ; 2016-2017 ; Journal of Social History Volume 50 [2016-2017] ; 11426 >
+        au < exists ; 2017-2018 ; Journal of Social History Volume 51 [2017-2018] ; 12894 >
+        au < exists ; 2018-2019 ; Journal of Social History Volume 52 [2018-2019] ; 13658 >
+
+    }
+
     {
     title <
       name = Journal of the Royal Musical Association ;
