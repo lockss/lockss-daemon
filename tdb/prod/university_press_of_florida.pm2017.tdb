@@ -1,0 +1,65 @@
+{
+  publisher <
+    name = University Press of Florida
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:227
+
+    {
+    title <
+      name = Journal of Global South Studies ;
+      issn = 2476-1397 ;
+      eissn = 2476-1419 ;
+      issnl = 2476-1397
+
+    >
+
+      attr[journal_id] = 715
+
+        au < exists ; 2015 ; Journal of Global South Studies Volume 32 [2015] ; 12313 >
+        au < exists ; 2016 ; Journal of Global South Studies Volume 33 [2016] ; 12314 >
+        au < exists ; 2017 ; Journal of Global South Studies Volume 34 [2017] ; 12768 >
+        au < exists ; 2018 ; Journal of Global South Studies Volume 35 [2018] ; 13494 >
+
+    }
+
+    {
+    title <
+      name = Rhetoric of Health & Medicine ;
+      issn = 2573-5055 ;
+      eissn = 2573-5063 ;
+      issnl = 2573-5055
+
+    >
+
+      attr[journal_id] = 741
+
+        au < exists ; 2018 ; Rhetoric of Health & Medicine Volume 1 [2018] ; 13791 >
+
+    }
+
+    {
+    title <
+      name = Subtropics ;
+      issn = 1559-0704 ;
+      eissn = 2471-4526 ;
+      issnl = 1559-0704
+
+    >
+
+      attr[journal_id] = 710
+
+        au < exists ; 2015 ; Subtropics Volume 19 [Spring/Summer 2015] ; 11418 >     
+        au < exists ; 2016 ; Subtropics Volume 20/21 [Spring/Summer 2016] ; 11419 >
+        au < exists ; 2016 ; Subtropics Volume 22 [Fall/Winter 2016] ; 12336 >
+        au < exists ; 2017 ; Subtropics Volume 23 [Spring/Summer 2017] ; 12705 >
+        au < exists ; 2017 ; Subtropics Volume 24 [Fall/Winter 2017] ; 13132 >
+        au < exists ; 2018 ; Subtropics Volume 25 [Spring/Summer 2018] ; 13542 >
+        au < exists ; 2018 ; Subtropics Volume 26 [Fall/Winter 2018] ; 13890 >
+
+    }
+
+}
