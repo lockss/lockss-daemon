@@ -6,6 +6,7 @@
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:248
 
     {
     title <
@@ -27,8 +28,15 @@
         au < released ; 2016 ; Soundings: A journal of politics and culture Volume 62 [Spring 2016] ; 11163 >
         au < released ; 2016 ; Soundings: A journal of politics and culture Volume 63 [2016] ; 11342 >
         au < released ; 2016 ; Soundings: A journal of politics and culture Volume 64 [2016-17] ; 12320 >
+        au < exists ; 2017 ; Soundings: A journal of politics and culture Volume 65 [Spring 2017] ; 12655 >
+        au < exists ; 2017 ; Soundings: A journal of politics and culture Volume 66 [Summer 2017] ; 12814 >
+        au < exists ; 2018 ; Soundings: A journal of politics and culture Volume 67 [Winter 2018] ; 13213 >
+        au < exists ; 2018 ; Soundings: A journal of politics and culture Volume 68 [Spring 2018] ; 13402 >
+        au < exists ; 2018 ; Soundings: A journal of politics and culture Volume 69 [Summer 2018] ; 13600 >
+        au < exists ; 2018 ; Soundings: A journal of politics and culture Volume 70 [Winter 2018] ; 13790 >
 
     }
+
     {
     title <
       name = new formations: a journal of culture/theory/politics ;
@@ -46,6 +54,12 @@
         au < released ; 2015 ; new formations: a journal of culture/theory/politics Volume 86 [2015] ; 10864 >
         au < released ; 2016 ; new formations: a journal of culture/theory/politics Volume 87 [2016] ; 11206 >
         au < released ; 2016 ; new formations: a journal of culture/theory/politics Volume 88 [2016] ; 11317 >
+        au < exists ; 2017 ; new formations: a journal of culture/theory/politics Volume 89-90 [2017] ; 12711 >
+        au < exists ; 2017 ; new formations: a journal of culture/theory/politics Volume 91 [2017] ; 12902 >
+        au < exists ; 2017 ; new formations: a journal of culture/theory/politics Volume 92 [2017] ; 13369 >
+        au < exists ; 2017 ; new formations: a journal of culture/theory/politics Volume 93 [2017] ; 13599 >
+        au < exists ; 2018 ; new formations: a journal of culture/theory/politics Volume 94 [2018] ; 13725 >
+        au < exists ; 2018 ; new formations: a journal of culture/theory/politics Volume 95 [2018] ; 13901 >
 
     }
 

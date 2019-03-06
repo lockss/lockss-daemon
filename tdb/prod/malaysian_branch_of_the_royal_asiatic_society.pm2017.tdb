@@ -6,6 +6,7 @@
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:126
 
     {
     title <
@@ -25,6 +26,8 @@
         au < released ; 2014 ; Journal of the Malaysian Branch of the Royal Asiatic Society Volume 87 [2014] ; 9925 >
         au < released ; 2015 ; Journal of the Malaysian Branch of the Royal Asiatic Society Volume 88 [2015] ; 10758 >
         au < released ; 2016 ; Journal of the Malaysian Branch of the Royal Asiatic Society Volume 89 [2016] ; 11285 >
+        au < exists ; 2017 ; Journal of the Malaysian Branch of the Royal Asiatic Society Volume 90 [2017] ; 12737 >
+        au < exists ; 2018 ; Journal of the Malaysian Branch of the Royal Asiatic Society Volume 91 [2018] ; 13579 >
 
     }
 
