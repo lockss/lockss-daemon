@@ -199,7 +199,7 @@ while (my $line = <>) {
                 }
                 if ($man_contents =~ m/="([^"]*)" lockss-probe="true"/si) {
                     my $pl_url = $1;
-                    printf("probe-link=%s\n",$pl_url);  #debug
+                    #printf("probe-link=%s\n",$pl_url);  #debug
                     my $req_pl = HTTP::Request->new(GET, $pl_url);
                     my $resp_pl = $ua->request($req_pl);
                     if ($resp_pl->is_success) {
@@ -257,7 +257,7 @@ while (my $line = <>) {
                     my $req_pl = HTTP::Request->new(GET, $pl_url);
                     my $resp_pl = $ua->request($req_pl);
                     if ($resp_pl->is_success) {
-                        if ($req->url ne $resp->request->uri) {
+                        if ($req_pl->url ne $resp_pl->request->uri) {
                             $result = "ProbeLinkRedirect";
                         }
                     } else {
