@@ -418,6 +418,27 @@
     }
     {
     title <
+      name = Steinbeck Review ;
+      issn = 1546-007X  ;
+      eissn = 1754-6087  ;
+      issnl = 1546-007X
+
+    >
+
+      attr[journal_id] = 377
+
+        au < released ; 2006 ; Steinbeck Review Volume 3 [2006] ; 3417 >
+        au < released ; 2007 ; Steinbeck Review Volume 4 [2007] ; 3742 >
+        au < released ; 2013 ; Steinbeck Review Volume 10 [2013] ; 9206 >
+        au < released ; 2014 ; Steinbeck Review Volume 11 [2014] ; 10050 >
+        au < released ; 2015 ; Steinbeck Review Volume 12 [2015] ; 10660 >
+        au < released ; 2016 ; Steinbeck Review Volume 13 [2016] ; 11272 >
+        au < exists ; 2017 ; Steinbeck Review Volume 14 [2017] ; 12710 >
+        au < exists ; 2018 ; Steinbeck Review Volume 15 [2018] ; 13557 >
+
+    }
+    {
+    title <
       name = Studies in American Humor ;
       issn = 0095-280X  ;
       eissn = 2333-9934  ;
