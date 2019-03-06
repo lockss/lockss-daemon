@@ -167,7 +167,9 @@ while (my $line = <>) {
   } elsif ($plugin =~ m/^(?!Clockss).+DrupalPlugin/) {
         $url = sprintf("%slockss-manifest/vol_%s_manifest.html",
             $param{base_url}, $param{volume_name});
+        printf("url=%s\n",$url);  #debug
         $man_url = uri_unescape($url);
+        printf("man_url=%s\n",$man_url);  #debug
         $base_url_short = substr(uri_unescape($param{base_url}), 0, -1);
         my $req = HTTP::Request->new(GET, $man_url);
         my $resp = $ua->request($req);
@@ -196,11 +198,12 @@ while (my $line = <>) {
                 }
                 if ($man_contents =~ m/="([^"]*)" lockss-probe="true"/si) {
                     my $pl_url = $1;
-                    printf("probe-link=%s",$pl_url);
+                    printf("probe-link=%s\n",$pl_url);  #debug
                     my $req_pl = HTTP::Request->new(GET, $pl_url);
                     my $resp_pl = $ua->request($req_pl);
+                    printf("probe-resp=%s\n",$resp_pl);  #debug
                     if ($resp_pl->is_success) {
-                        if ($req->url ne $resp->request->uri) {
+                        if ($req_pl->url ne $resp_pl->request->uri) {
                             $result = "ProbeLinkRedirect";
                         }
                     } else {
