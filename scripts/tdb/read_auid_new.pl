@@ -196,6 +196,7 @@ while (my $line = <>) {
                 }
                 if ($man_contents =~ m/="([^"]*)" lockss-probe="true"/si) {
                     my $pl_url = $1;
+                    printf("probe-link=%s",$pl_url);
                     my $req_pl = HTTP::Request->new(GET, $pl_url);
                     my $resp_pl = $ua->request($req_pl);
                     if ($resp_pl->is_success) {
