@@ -6,6 +6,7 @@
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:140
 
     {
     title <
@@ -22,6 +23,7 @@
         au < released ; 2014 ; Journal of the Midwest Modern Language Association Volume 47 [2014] ; 10725 >
         au < released ; 2015 ; Journal of the Midwest Modern Language Association Volume 48 [2015] ; 10818 >
         au < released ; 2016 ; Journal of the Midwest Modern Language Association Volume 49 [2016] ; 12453 >
+        au < exists ; 2017 ; Journal of the Midwest Modern Language Association Volume 50 [2017] ; 13571 >
 
     }
 
