@@ -6,6 +6,7 @@
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:120
 
     {
     title <
@@ -13,7 +14,6 @@
       issn = 0026-3079  ;
       eissn = 2153-6856  ;
       issnl = 0026-3079
-
     >
 
       attr[journal_id] = 460
@@ -26,6 +26,8 @@
         au < released ; 2014 ; American Studies Volume 53 [2014] ; 9985 >
         au < released ; 2015-2016 ; American Studies Volume 54 [2015-2016] ; 10584 >
         au < released ; 2016 ; American Studies Volume 55 [2016] ; 11278 >
+        au < exists ; 2017-2018 ; American Studies Volume 56 [2017-2018] ; 12823 >
+        au < exists ; 2018-2019 ; American Studies Volume 57 [2018-2019] ; 13796 >
 
     }
 
