@@ -6,6 +6,7 @@
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:31
 
     {
     title <
@@ -22,6 +23,7 @@
         au < manifest ; 2003 ; Philosophy & Public Affairs Volume 31 [2003] ; 806 >
 
     }
+
     {
     title <
       name = The Future of Children ;

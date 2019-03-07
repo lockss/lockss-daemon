@@ -6,6 +6,7 @@
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:19
 
     {
     title <
@@ -60,6 +61,22 @@
         au < released ; 2016 ; Contemporary Literature Volume 57 [2016] ; 11232 >
 
     }
+
+    {
+    title <
+      name = Constitutional Studies ;
+      issn = 2474-9427 ;
+      eissn = 2474-9419 ;
+      issnl = 2474-9427
+
+    >
+
+      attr[journal_id] = 714
+
+        au < exists ; 2016 ; Constitutional Studies Volume 1 [2016] ; 12192 >
+
+    }
+
     {
     title <
       name = Ecological Restoration ;
