@@ -10,6 +10,42 @@
 
     {
     title <
+      name = Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry ;
+      issn = 1084-1490  ;
+      eissn = 2377-9551
+    >
+
+      attr[journal_id] = 662
+      #move from Society for Renaissance and Baroque Hispanic Poetry
+
+        au < exists ; 1995 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 1 [1995] ; 12891 >
+        au < exists ; 1996 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 2 [1996] ; 12890 >
+        au < exists ; 1997 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 3 [1997] ; 12889 >
+        au < exists ; 1998 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 4 [1998] ; 12888 >
+        au < exists ; 1999 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 5 [1999] ; 12887 >
+        au < exists ; 2000 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 6 [2000] ; 12886 >
+        au < exists ; 2001 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 7 [2001] ; 12885 >
+        au < exists ; 2002 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 8 [2002] ; 12884 >
+        au < exists ; 2003 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 9 [2003] ; 12883 >
+        au < exists ; 2004 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 10 [2004] ; 12882 >
+        au < exists ; 2005 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 11 [2005] ; 12881 >
+        au < exists ; 2006 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 12 [2006] ; 12880 >
+        au < exists ; 2007 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 13 [2007] ; 12879 >
+        au < exists ; 2008 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 14 [2008] ; 12878 >
+        au < exists ; 2009 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 15 [2009] ; 12877 >
+        au < exists ; 2010 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 16 [2010] ; 12876 >
+        au < exists ; 2011 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 17 [2011] ; 12875 >
+        au < exists ; 2012-2013 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 18 [2012-2013] ; 12874 >
+        au < exists ; 2014 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 19 [2014] ; 12873 >
+        au < released ; 2015 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 20 [2015] ; 10620 >
+        au < released ; 2016 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 21 [2016] ; 11201 >
+        au < exists ; 2017 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 22 [2017] ; 12682 >
+        au < exists ; 2018 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 23 [2018] ; 13569 >
+
+    }
+
+    {
+    title <
       name = Comparative Literature Studies ;
       issn = 0010-4132  ;
       eissn = 1528-4212  ;
@@ -37,6 +73,9 @@
         au < released ; 2014 ; Comparative Literature Studies Volume 51 [2014] [Project MUSE] ; 9871 >
         au < released ; 2015 ; Comparative Literature Studies Volume 52 [2015] [Project MUSE] ; 10435 >
         au < released ; 2016 ; Comparative Literature Studies Volume 53 [2016] [Project MUSE] ; 11091 >
+        au < exists ; 2017 ; Comparative Literature Studies Volume 54 [2017] [Project MUSE] ; 12530 >
+        au < exists ; 2018 ; Comparative Literature Studies Volume 55 [2018] [Project MUSE] ; 13281 >
+        au < exists ; 2019 ; Comparative Literature Studies Volume 56 [2019] [Project MUSE] ; 13962 >
 
     }
 
@@ -56,6 +95,8 @@
         au < released ; 2015 ; Critical Philosophy of Race Volume 3 [2015] ; 10303 >
         au < released ; 2016 ; Critical Philosophy of Race Volume 4 [2016] ; 11117 >
         au < released ; 2017 ; Critical Philosophy of Race Volume 5 [2017] ; 12295 >
+        au < exists ; 2018 ; Critical Philosophy of Race Volume 6 [2018] ; 13130 >
+        au < exists ; 2019 ; Critical Philosophy of Race Volume 7 [2019] ; 13868 >
 
     }
 
@@ -70,8 +111,8 @@
 
       attr[journal_id] = 744
 
-        au < exists ; 2017 ; Critical Philosophy of Race Volume 48 [2017] ; 13727 >
-        au < exists ; 2018 ; Critical Philosophy of Race Volume 49 [2018] ; 13728 >
+        au < exists ; 2017 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 48 [2017] ; 13727 >
+        au < exists ; 2018 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 49 [2018] ; 13728 >
 
     }
 
@@ -92,6 +133,7 @@
         au < released ; 2015 ; Interdisciplinary Literary Studies Volume 17 [2015] ; 10428 >
         au < released ; 2016 ; Interdisciplinary Literary Studies Volume 18 [2016] ; 11019 >
         au < released ; 2017 ; Interdisciplinary Literary Studies Volume 19 [2017] ; 12457 >
+        au < exists ; 2018 ; Interdisciplinary Literary Studies Volume 20 [2018] ; 13262 >
 
     }
 
@@ -111,8 +153,28 @@
         au < released ; 2015 ; Journal of Africana Religions Volume 3 [2015] ; 10296 >
         au < released ; 2016 ; Journal of Africana Religions Volume 4 [2016] ; 10905 >
         au < released ; 2017 ; Journal of Africana Religions Volume 5 [2017] ; 12268 >
+        au < exists ; 2018 ; Journal of Africana Religions Volume 6 [2018] ; 13158 >
+        au < exists ; 2019 ; Journal of Africana Religions Volume 7 [2019] ; 13904 >
 
     }
+    
+    {
+    title <
+      name = Journal of Asia-Pacific Pop Culture ;
+      issn = 2380-7679 ;
+      eissn = 2380-7687  ;
+      issnl = 2380-7679
+
+    >
+
+      attr[journal_id] = 720
+
+        au < exists ; 2016 ; Journal of Asia-Pacific Pop Culture Volume 1 [2016] ; 12995 >
+        au < exists ; 2017 ; Journal of Asia-Pacific Pop Culture Volume 2 [2017] ; 12996 >
+        au < exists ; 2018 ; Journal of Asia-Pacific Pop Culture Volume 3 [2018] ; 13631 >
+
+    }
+
     {
     title <
       name = Journal of Assessment and Institutional Effectiveness ;
@@ -129,8 +191,10 @@
         au < released ; 2014 ; Journal of Assessment and Institutional Effectiveness Volume 4 [2014] ; 10269 >
         au < released ; 2015 ; Journal of Assessment and Institutional Effectiveness Volume 5 [2015] ; 10876 >
         au < released ; 2016 ; Journal of Assessment and Institutional Effectiveness Volume 6 [2016] ; 11291 >
+        au < exists ; 2017 ; Journal of Assessment and Institutional Effectiveness Volume 7 [2017] ; 13797 >
 
     }
+    
     {
     title <
       name = Journal of Eastern Mediterranean Archaeology and Heritage Studies ;
@@ -147,8 +211,10 @@
         au < released ; 2015 ; Journal of Eastern Mediterranean Archaeology and Heritage Studies Volume 3 [2015] ; 10453 >
         au < released ; 2016 ; Journal of Eastern Mediterranean Archaeology and Heritage Studies Volume 4 [2016] ; 11023 >
         au < released ; 2017 ; Journal of Eastern Mediterranean Archaeology and Heritage Studies Volume 5 [2017] ; 12433 >
+        au < exists ; 2018 ; Journal of Eastern Mediterranean Archaeology and Heritage Studies Volume 6 [2018] ; 13572 >
 
     }
+
     {
     title <
       name = The Journal of Medieval Religious Cultures ;
@@ -168,8 +234,11 @@
         au < released ; 2015 ; The Journal of Medieval Religious Cultures Volume 41 [2015] ; 10273 >
         au < released ; 2016 ; The Journal of Medieval Religious Cultures Volume 42 [2016] ; 10927 >
         au < released ; 2017 ; The Journal of Medieval Religious Cultures Volume 43 [2017] ; 12294 >
+        au < exists ; 2018 ; The Journal of Medieval Religious Cultures Volume 44 [2018] ; 13249 >
+        au < exists ; 2019 ; The Journal of Medieval Religious Cultures Volume 45 [2019] ; 13898 >
 
     }
+
     {
     title <
       name = The Journal of Modern Periodical Studies ;
@@ -187,8 +256,11 @@
         au < released ; 2013 ; The Journal of Modern Periodical Studies Volume 4 [2013] ; 9376 >
         au < released ; 2014 ; The Journal of Modern Periodical Studies Volume 5 [2014] ; 10120 >
         au < released ; 2015 ; The Journal of Modern Periodical Studies Volume 6 [2015] ; 10814 >
+        au < exists ; 2016 ; The Journal of Modern Periodical Studies Volume 7 [2016] ; 12743 >
+        au < exists ; 2017 ; The Journal of Modern Periodical Studies Volume 8 [2017] ; 13587 >
 
     }
+    
     {
     title <
       name = Journal of Moravian History ;
@@ -205,8 +277,11 @@
         au < released ; 2014 ; Journal of Moravian History Volume 14 [2014] ; 9984 >
         au < released ; 2015 ; Journal of Moravian History Volume 15 [2015] ; 10632 >
         au < released ; 2016 ; Journal of Moravian History Volume 16 [2016] ; 11178 >
+        au < exists ; 2017 ; Journal of Moravian History Volume 17 [2017] ; 12614 >
+        au < exists ; 2018 ; Journal of Moravian History Volume 18 [2018] ; 13478 >
 
     }
+
     {
     title <
       name = Mediterranean Studies ;
@@ -223,6 +298,8 @@
         au < released ; 2014 ; Mediterranean Studies Volume 22 [2014] ; 10043 >
         au < released ; 2015 ; Mediterranean Studies Volume 23 [2015] ; 10650 >
         au < released ; 2016 ; Mediterranean Studies Volume 24 [2016] ; 11183 >
+        au < exists ; 2017 ; Mediterranean Studies Volume 25 [2017] ; 12713 >
+        au < exists ; 2018 ; Mediterranean Studies Volume 26 [2018] ; 13528 >
 
     }
 
@@ -261,8 +338,11 @@
         au < released ; 2014 ; Pacific Coast Philology Volume 49 [2014] ; 9877 >
         au < released ; 2015 ; Pacific Coast Philology Volume 50 [2015] ; 10538 >
         au < released ; 2016 ; Pacific Coast Philology Volume 51 [2016] ; 11126 >
+        au < exists ; 2017 ; Pacific Coast Philology Volume 52 [2017] ; 12533 >
+        au < exists ; 2018 ; Pacific Coast Philology Volume 53 [2018] ; 13406 >
 
     }
+    
     {
     title <
       name = Pennsylvania History: A Journal of Mid-Atlantic Studies ;
@@ -282,8 +362,11 @@
         au < released ; 2015 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 82 [2015] ; 10333 >
         au < released ; 2016 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 83 [2016] ; 10900 >
         au < released ; 2017 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 84 [2017] ; 12293 >
+        au < exists ; 2018 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 85 [2018] ; 13129 >
+        au < exists ; 2019 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 86 [2019] ; 13886 >
 
     }
+    
     {
     title <
       name = Philosophy and Rhetoric ;
@@ -314,8 +397,10 @@
         au < released ; 2015 ; Philosophy and Rhetoric Volume 48 [2015] ; 10394 >
         au < released ; 2016 ; Philosophy and Rhetoric Volume 49 [2016] ; 10951 >
         au < released ; 2017 ; Philosophy and Rhetoric Volume 50 [2017] ; 12380 >
+        au < exists ; 2018 ; Philosophy and Rhetoric Volume 51 [2018] ; 13253 >
 
     }
+
     {
     title <
       name = Preternature: Critical and Historical Studies on the Preternatural ;
@@ -332,8 +417,11 @@
         au < released ; 2014 ; Preternature: Critical and Historical Studies on the Preternatural Volume 3 [2014] ; 9769 >
         au < released ; 2015 ; Preternature: Critical and Historical Studies on the Preternatural Volume 4 [2015] ; 10482 >
         au < released ; 2016 ; Preternature: Critical and Historical Studies on the Preternatural Volume 5 [2016] ; 11081 >
+        au < exists ; 2017 ; Preternature: Critical and Historical Studies on the Preternatural Volume 6 [2017] ; 12537 >
+        au < exists ; 2018 ; Preternature: Critical and Historical Studies on the Preternatural Volume 7 [2018] ; 13319 >
 
     }
+    
     {
     title <
       name = Reception: Texts, Readers, Audiences, History ;
@@ -349,8 +437,11 @@
         au < released ; 2014 ; Reception: Texts, Readers, Audiences, History Volume 6 [2014] ; 10087 >
         au < released ; 2015 ; Reception: Texts, Readers, Audiences, History Volume 7 [2015] ; 10688 >
         au < released ; 2016 ; Reception: Texts, Readers, Audiences, History Volume 8 [2016] ; 11275 >
+        au < exists ; 2017 ; Reception: Texts, Readers, Audiences, History Volume 9 [2017] ; 12745 >
+        au < exists ; 2018 ; Reception: Texts, Readers, Audiences, History Volume 10 [2018] ; 13584 >
 
     }
+
     {
     title <
       name = Resources for American Literary Study ;
@@ -367,6 +458,7 @@
         au < released ; 2001 ; Resources for American Literary Study Volume 27 [2001] ; 587 >
 
     }
+    
     {
     title <
       name = SHAW: The Journal of Bernard Shaw Studies ;
@@ -395,8 +487,11 @@
         au < released ; 2014 ; SHAW The Annual of Bernard Shaw Studies Volume 34 [2014] ; 10177 >
         au < released ; 2015 ; SHAW: The Journal of Bernard Shaw Studies Volume 35 [2015] ; 10675 >
         au < released ; 2016 ; SHAW: The Journal of Bernard Shaw Studies Volume 36 [2016] ; 11219 >
+        au < exists ; 2017 ; SHAW: The Journal of Bernard Shaw Studies Volume 37 [2017] ; 12696 >
+        au < exists ; 2018 ; SHAW: The Journal of Bernard Shaw Studies Volume 38 [2018] ; 13513 >
 
     }
+
     {
     title <
       name = Soundings: An Interdisciplinary Journal ;
@@ -414,8 +509,11 @@
         au < released ; 2015 ; Soundings: An Interdisciplinary Journal Volume 98 [2015] ; 10370 >
         au < released ; 2016 ; Soundings: An Interdisciplinary Journal Volume 99 [2016] ; 10949 >
         au < released ; 2017 ; Soundings: An Interdisciplinary Journal Volume 100 [2017] ; 12332 >
+        au < exists ; 2018 ; Soundings: An Interdisciplinary Journal Volume 101 [2018] ; 13174 >
+        au < exists ; 2019 ; Soundings: An Interdisciplinary Journal Volume 102 [2019] ; 13877 >
 
     }
+
     {
     title <
       name = Steinbeck Review ;
@@ -437,6 +535,7 @@
         au < exists ; 2018 ; Steinbeck Review Volume 15 [2018] ; 13557 >
 
     }
+    
     {
     title <
       name = Studies in American Humor ;
@@ -450,8 +549,11 @@
 
         au < released ; 2015 ; Studies in American Humor Series 4, Volume 1 [2015] ; 10559 >
         au < released ; 2016 ; Studies in American Humor Series 4, Volume 2 [2016] ; 11121 >
+        au < exists ; 2017 ; Studies in American Humor Series 4, Volume 3 [2017] ; 12593 >
+        au < exists ; 2018 ; Studies in American Humor Series 4, Volume 4 [2018] ; 13358 >
 
     }
+    
     {
     title <
       name = Studies in American Jewish Literature ;
@@ -473,8 +575,10 @@
         au < released ; 2015 ; Studies in American Jewish Literature Volume 34 [2015] ; 10484 >
         au < released ; 2016 ; Studies in American Jewish Literature Volume 35 [2016] ; 11131 >
         au < released ; 2017 ; Studies in American Jewish Literature Volume 36 [2017] ; 12451 >
+        au < exists ; 2018 ; Studies in American Jewish Literature Volume 37 [2018] ; 13300 >
 
     }
+
     {
     title <
       name = The Chaucer Review ;
@@ -505,8 +609,11 @@
         au < released ; 2015 ; The Chaucer Review Volume 50 [2015] ; 10699 >
         au < released ; 2016 ; The Chaucer Review Volume 51 [2016] ; 10911 >
         au < released ; 2017 ; The Chaucer Review Volume 52 [2017] ; 12292 >
+        au < exists ; 2018 ; The Chaucer Review Volume 53 [2018] ; 13127 >
+        au < exists ; 2019 ; The Chaucer Review Volume 54 [2019] ; 13854 >
 
     }
+
     {
     title <
       name = The Cormac McCarthy Journal ;
@@ -521,8 +628,10 @@
         au < released ; 2015 ; The Cormac McCarthy Journal Volume 13 [2015] ; 10769 >
         au < released ; 2016 ; The Cormac McCarthy Journal Volume 14 [2016] ; 11057 >
         au < released ; 2017 ; The Cormac McCarthy Journal Volume 15 [2017] ; 12478 >
+        au < exists ; 2018 ; The Cormac McCarthy Journal Volume 16 [2018] ; 13384 >
 
     }
+
     {
     title <
       name = The Edgar Allan Poe Review ;
@@ -538,8 +647,11 @@
         au < released ; 2014 ; The Edgar Allan Poe Review Volume 15 [2014] ; 9873 >
         au < released ; 2015 ; The Edgar Allan Poe Review Volume 16 [2015] ; 10604 >
         au < released ; 2016 ; The Edgar Allan Poe Review Volume 17 [2016] ; 11143 >
+        au < exists ; 2017 ; The Edgar Allan Poe Review Volume 18 [2017] ; 12554 >
+        au < exists ; 2018 ; The Edgar Allan Poe Review Volume 19 [2018] ; 13394 >
 
     }
+    
     {
     title <
       name = Eugene O'Neill Review ;
@@ -556,8 +668,11 @@
         au < released ; 2014 ; Eugene O'Neill Review Volume 35 [2014] ; 9756 >
         au < released ; 2015 ; Eugene O'Neill Review Volume 36 [2015] ; 10519 >
         au < released ; 2016 ; Eugene O'Neill Review Volume 37 [2016] ; 11003 >
+        au < exists ; 2017 ; Eugene O'Neill Review Volume 38 [2017] ; 13026 >
+        au < exists ; 2018 ; Eugene O'Neill Review Volume 39 [2018] ; 13434 >
 
     }
+
     {
     title <
       name = The F. Scott Fitzgerald Review ;
@@ -573,8 +688,11 @@
         au < released ; 2014 ; The F. Scott Fitzgerald Review Volume 12 [2014] ; 10232 >
         au < released ; 2015 ; The F. Scott Fitzgerald Review Volume 13 [2015] ; 10863 >
         au < released ; 2016 ; The F. Scott Fitzgerald Review Volume 14 [2016] ; 12222 >
+        au < exists ; 20176 ; The F. Scott Fitzgerald Review Volume 15 [2017] ; 13116 >
+        au < exists ; 20186 ; The F. Scott Fitzgerald Review Volume 16 [2018] ; 13812 >
 
     }
+
     {
     title <
       name = The Good Society ;
@@ -600,8 +718,11 @@
         au < released ; 2013 ; The Good Society Volume 22 [2013] ; 9197 >
         au < released ; 2014 ; The Good Society Volume 23 [2014] ; 10092 >
         au < released ; 2015 ; The Good Society Volume 24 [2015] ; 10765 >
+        au < exists ; 2016 ; The Good Society Volume 25 [2016] ; 12652 >
+        au < exists ; 2017 ; The Good Society Volume 26 [2017] ; 13582 >
 
     }
+
     {
     title <
       name = Journal of Ayn Rand Studies ;
@@ -616,8 +737,11 @@
         au < released ; 2014 ; Journal of Ayn Rand Studies Volume 14 [2014] ; 10085 >
         au < released ; 2015 ; Journal of Ayn Rand Studies Volume 15 [2015] ; 10697 >
         au < released ; 2016 ; Journal of Ayn Rand Studies Volume 16 [2016] ; 12218 >
+        au < exists ; 2017 ; Journal of Ayn Rand Studies Volume 17 [2017] ; 12738 >
+        au < exists ; 2018 ; Journal of Ayn Rand Studies Volume 18 [2018] ; 13625 >
 
     }
+
     {
     title <
       name = The Journal of General Education ;
@@ -647,8 +771,10 @@
         au < released ; 2014 ; The Journal of General Education Volume 63 [2014] ; 9767 >
         au < released ; 2015 ; The Journal of General Education Volume 64 [2015] ; 10441 >
         au < released ; 2016 ; The Journal of General Education Volume 65 [2016] ; 11312 >
+        au < exists ; 2017 ; The Journal of General Education Volume 66 [2017] ; 13664 >
 
     }
+
     {
     title <
       name = The Journal of Nietzsche Studies ;
@@ -685,8 +811,10 @@
         au < released ; 2015 ; The Journal of Nietzsche Studies Volume 46 [2015] ; 10534 >
         au < released ; 2016 ; The Journal of Nietzsche Studies Volume 47 [2016] ; 10993 >
         au < released ; 2017 ; The Journal of Nietzsche Studies Volume 48 [2017] ; 12456 >
+        au < exists ; 2018 ; The Journal of Nietzsche Studies Volume 49 [2018] ; 13307 >
 
     }
+
     {
     title <
       name = The Journal of Speculative Philosophy ;
@@ -717,8 +845,10 @@
         au < released ; 2015 ; The Journal of Speculative Philosophy New Series, Volume 29 [2015] ; 10330 >
         au < released ; 2016 ; The Journal of Speculative Philosophy New Series, Volume 30 [2016] ; 10979 >
         au < released ; 2017 ; The Journal of Speculative Philosophy New Series, Volume 31 [2017] ; 12343 >
+        au < exists ; 2018 ; The Journal of Speculative Philosophy New Series, Volume 32 [2018] ; 13303 >
 
     }
+
     {
     title <
       name = The Mark Twain Annual ;
@@ -734,8 +864,46 @@
         au < released ; 2014 ; The Mark Twain Annual Volume 12 [2014] ; 10215 >
         au < released ; 2015 ; The Mark Twain Annual Volume 13 [2015] ; 10815 >
         au < released ; 2016 ; The Mark Twain Annual Volume 14 [2016] ; 12146 >
+        au < exists ; 2017 ; The Mark Twain Annual Volume 15 [2017] ; 13000 >
+        au < exists ; 2018 ; The Mark Twain Annual Volume 16 [2018] ; 13672 >
 
     }
+
+    {
+    title <
+      name = Style ;
+      issn = 0039-4238 ;
+      eissn = 2374-6629 ;
+      issnl = 0039-4238
+
+    >
+
+      attr[journal_id] = 680
+
+        au < exists ; 2016 ; Style Volume 50 [2016] ; 10964 >
+        au < exists ; 2017 ; Style Volume 51 [2017] ; 12429 >
+        au < exists ; 2018 ; Style Volume 52 [2018] ; 13347 >
+
+    }
+
+    {
+    title <
+      name = Transformations: The Journal of Inclusive Scholarship and Pedagogy ;
+      issn = 1052-5017 ;
+      eissn = 2377-9578 ;
+      issnl = 1052-5017
+
+    >
+
+      attr[journal_id] = 706
+
+        au < exists ; 2014-2016 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 25 [2014-2016] ; 11413 >
+        au < exists ; 2016 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 26 [2016] ; 11421 >
+        au < exists ; 2017 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 27 [2017] ; 12844 >
+        au < exists ; 2018 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 28 [2018] ; 13800 >
+
+    }
+
     {
     title <
       name = Transportation Journal ;
@@ -753,8 +921,11 @@
         au < released ; 2015 ; Transportation Journal Volume 54 [2015] ; 10346 >
         au < released ; 2016 ; Transportation Journal Volume 55 [2016] ; 10902 >
         au < released ; 2017 ; Transportation Journal Volume 56 [2017] ; 12327 >
+        au < exists ; 2018 ; Transportation Journal Volume 57 [2018] ; 13154 >
+        au < exists ; 2019 ; Transportation Journal Volume 58 [2019] ; 13863 >
 
     }
+
     {
     title <
       name = Utopian Studies ;
@@ -773,6 +944,33 @@
         au < released ; 2014 ; Utopian Studies Volume 25 [2014] ; 9903 >
         au < released ; 2015 ; Utopian Studies Volume 26 [2015] ; 10562 >
         au < released ; 2016 ; Utopian Studies Volume 27 [2016] ; 11048 >
+        au < exists ; 2017 ; Utopian Studies Volume 28 [2017] ; 12555 >
+        au < exists ; 2018 ; Utopian Studies Volume 29 [2018] ; 13318 >
+
+    }
+
+    {
+    title <
+      name = William Carlos Williams Review ;
+      issn = 0196-6286  ;
+      eissn = 1935-0244  ;
+      issnl = 0196-6286
+
+    >
+
+      attr[journal_id] = 365
+      #move from Texas Tech University Press
+
+        au < manifest ; 2006 ; William Carlos Williams Review Volume 26 [2006] ; 3411 >
+        au < manifest ; 2007 ; William Carlos Williams Review Volume 27 [2007] ; 3598 >
+        au < manifest ; 2008 ; William Carlos Williams Review Volume 28 [2008] ; 7250 >
+        au < manifest ; 2009 ; William Carlos Williams Review Volume 29 [2009] ; 8440 >
+        au < released ; 2013 ; William Carlos Williams Review Volume 30 [2013] ; 9571 >
+        au < released ; 2014 ; William Carlos Williams Review Volume 31 [2014] ; 10166 >
+        au < released ; 2015 ; William Carlos Williams Review Volume 32 [2015] ; 12239 >
+        au < released ; 2016 ; William Carlos Williams Review Volume 33 [2016] ; 12238 >
+        au < exists ; 2017 ; William Carlos Williams Review Volume 34 [2017] ; 12699 >
+        au < exists ; 2018 ; William Carlos Williams Review Volume 35 [2018] ; 13530 >
 
     }
 
