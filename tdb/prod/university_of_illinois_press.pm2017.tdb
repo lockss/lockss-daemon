@@ -6,6 +6,7 @@
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:34
 
     {
     title <
@@ -209,6 +210,32 @@
         au < released ; 2016 ; Journal of Film and Video Volume 68 [2016] ; 11040 >
 
     }
+
+    {
+    title <
+      name = Journal of Sport History ;
+      issn = 0094-1700  ;
+      eissn = 2155-8450  ;
+      issnl = 0094-1700
+
+    >
+
+      attr[journal_id] = 474
+      #move from North American Society for Sport History
+
+        au < released ; 2010 ; Journal of Sport History Volume 37 [2010] ; 6355 >
+        au < released ; 2011 ; Journal of Sport History Volume 38 [2011] ; 7663 >
+        au < released ; 2012 ; Journal of Sport History Volume 39 [2012] ; 8459 >
+        au < released ; 2013 ; Journal of Sport History Volume 40 [2013] ; 9243 >
+        au < released ; 2014 ; Journal of Sport History Volume 41 [2014] ; 9939 >
+        au < released ; 2015 ; Journal of Sport History Volume 42 [2015] ; 10762 >
+        au < released ; 2016 ; Journal of Sport History Volume 43 [2016] ; 11237 >
+        au < released ; 2017 ; Journal of Sport History Volume 44 [2017] ; 12481 >
+        au < exists ; 2018 ; Journal of Sport History Volume 45 [2018] ; 13438 >
+        au < exists ; 2019 ; Journal of Sport History Volume 46 [2019] ; 14008 >
+
+    }
+
     {
     title <
       name = Music and the Moving Image ;
