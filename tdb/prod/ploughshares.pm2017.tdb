@@ -6,6 +6,7 @@
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:155
 
     {
     title <
@@ -20,10 +21,12 @@
 
         au < released ; 2011 ; Ploughshares Volume 37 [2011] ; 7325 >
         au < released ; 2012 ; Ploughshares Volume 38 [2012] ; 8245 >
-        au < released ; 2013 ; Ploughshares Volume 39 [2013] ; 8923 >
-        au < released ; 2014 ; Ploughshares Volume 40 [2014] ; 9859 >
-        au < released ; 2015 ; Ploughshares Volume 41 [2015] ; 10580 >
-        au < released ; 2016 ; Ploughshares Volume 42 [2016] ; 11242 >
+        au < released ; 2013-2014 ; Ploughshares Volume 39 [2013-2014] ; 8923 >
+        au < released ; 2014-2015 ; Ploughshares Volume 40 [2014-2015] ; 9859 >
+        au < released ; 2015-2016 ; Ploughshares Volume 41 [2015-2016] ; 10580 >
+        au < released ; 2016-2017 ; Ploughshares Volume 42 [2016-2017] ; 11242 >
+        au < exists ; 2017-2018 ; Ploughshares Volume 43 [2017-2018] ; 12607 >
+        au < exists ; 2018-2019 ; Ploughshares Volume 44 [2018-2019] ; 13472 >
 
     }
 
