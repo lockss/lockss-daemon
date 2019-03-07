@@ -6,6 +6,7 @@
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:100
 
     {
     title <
@@ -33,6 +34,8 @@
         au < released ; 2014 ; Eastern Africa Social Science Research Review Volume 30 [2014] ; 9679 >
         au < released ; 2015 ; Eastern Africa Social Science Research Review Volume 31 [2015] ; 10450 >
         au < released ; 2016 ; Eastern Africa Social Science Research Review Volume 32 [2016] ; 11140 >
+        au < exists ; 2017 ; Eastern Africa Social Science Research Review Volume 33 [2017] ; 12532 >
+        au < exists ; 2018 ; Eastern Africa Social Science Research Review Volume 34 [2018] ; 13602 >
 
     }
 
