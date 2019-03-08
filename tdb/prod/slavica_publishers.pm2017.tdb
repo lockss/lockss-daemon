@@ -6,6 +6,7 @@
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:28
 
     {
     title <
@@ -27,8 +28,11 @@
         au < released ; 2014 ; Journal of Slavic Linguistics Volume 22 [2014] ; 10089 >
         au < released ; 2015 ; Journal of Slavic Linguistics Volume 23 [2015] ; 10694 >
         au < released ; 2016 ; Journal of Slavic Linguistics Volume 24 [2016] ; 11335 >
+        au < exists ; 2017 ; Journal of Slavic Linguistics Volume 25 [2017] ; 12773 >
+        au < exists ; 2018 ; Journal of Slavic Linguistics Volume 26 [2018] ; 13669 >
 
     }
+
     {
     title <
       name = Kritika: Explorations in Russian and Eurasian History ;
@@ -55,11 +59,14 @@
         au < released ; 2012 ; Kritika: Explorations in Russian and Eurasian History Volume 13 [2012 (New Series)] ; 8010 >
         au < released ; 2013 ; Kritika: Explorations in Russian and Eurasian History Volume 14 [2013 (New Series)] ; 8801 >
         au < released ; 2014 ; Kritika: Explorations in Russian and Eurasian History Volume 15 [2014 (New Series)] ; 9731 >
-        au < released ; 2015 ; Kritika: Explorations in Russian and Eurasian History  Volume 16 [2015 (New Series)] ; 10386 >
+        au < released ; 2015 ; Kritika: Explorations in Russian and Eurasian History Volume 16 [2015 (New Series)] ; 10386 >
         au < released ; 2016 ; Kritika: Explorations in Russian and Eurasian History Volume 17 [2016 (New Series)] ; 11013 >
-        au < released ; 2016 ; Kritika: Explorations in Russian and Eurasian History Volume 18 [2016 (New Series)] ; 12447 >
+        au < released ; 2017 ; Kritika: Explorations in Russian and Eurasian History Volume 18 [2017 (New Series)] ; 12447 >
+        au < exists ; 2018 ; Kritika: Explorations in Russian and Eurasian History Volume 19 [2018 (New Series)] ; 13215 >
+        au < exists ; 2019 ; Kritika: Explorations in Russian and Eurasian History Volume 20 [2019 (New Series)] ; 13943 >
 
     }
+
     {
     title <
       name = Pushkin Review ;
@@ -73,8 +80,11 @@
         au < released ; 2011 ; Pushkin Review Volume 14 [2011] ; 8078 >
         au < released ; 2012 ; Pushkin Review Volume 15 [2012] ; 9271 >
         au < released ; 2013-2014 ; Pushkin Review Volume 16-17, 2013-2014 ; 10202 >
+        au < exists ; 2015-2016 ; Pushkin Review Volume 18-19, 2015-2016 ; 13326 >
+        au < exists ; 2018 ; Pushkin Review Volume 20, 2018 ; 13948 >
 
     }
+
     {
     title <
       name = Region: Regional Studies of Russia, Eastern Europe, and Central Asia ;
@@ -91,8 +101,11 @@
         au < released ; 2014 ; Region: Regional Studies of Russia, Eastern Europe, and Central Asia Volume 3 [2014] ; 9967 >
         au < released ; 2015 ; Region: Regional Studies of Russia, Eastern Europe, and Central Asia Volume 4 [2015] ; 10496 >
         au < released ; 2016 ; Region: Regional Studies of Russia, Eastern Europe, and Central Asia Volume 5 [2016] ; 11085 >
+        au < exists ; 2017 ; Region: Regional Studies of Russia, Eastern Europe, and Central Asia Volume 6 [2017] ; 12709 >
+        au < exists ; 2018 ; Region: Regional Studies of Russia, Eastern Europe, and Central Asia Volume 7 [2018] ; 13575 >
 
     }
+
     {
     title <
       name = Serbian Studies: Journal of the North American Society for Serbian Studies ;
@@ -112,6 +125,8 @@
         au < released ; 2011 ; Serbian Studies: Journal of the North American Society for Serbian Studies Volume 25 [2011] ; 9567 >
         au < released ; 2012 ; Serbian Studies: Journal of the North American Society for Serbian Studies Volume 26 [2012] ; 10773 >
         au < released ; 2013 ; Serbian Studies: Journal of the North American Society for Serbian Studies Volume 27 [2013] ; 11255 >
+        au < exists ; 2017 ; Serbian Studies: Journal of the North American Society for Serbian Studies Volume 28 [2017] ; 12744 >
+        au < exists ; 2018 ; Serbian Studies: Journal of the North American Society for Serbian Studies Volume 29 [2018] ; 13651 >
 
     }
 

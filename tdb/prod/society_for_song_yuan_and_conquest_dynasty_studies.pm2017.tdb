@@ -6,6 +6,7 @@
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:123
 
     {
     title <
@@ -25,6 +26,9 @@
         au < released ; 2012 ; Journal of Song-Yuan Studies Volume 42 [2012] ; 9360 >
         au < released ; 2013 ; Journal of Song-Yuan Studies Volume 43 [2013] ; 10490 >
         au < released ; 2014 ; Journal of Song-Yuan Studies Volume 44 [2014] ; 11026 >
+        au < exists ; 2015 ; Journal of Song-Yuan Studies Volume 45 [2015] ; 12529 >
+        au < exists ; 2016 ; Journal of Song-Yuan Studies Volume 46 [2016] ; 13330 >
+        au < exists ; 2017-2018 ; Journal of Song-Yuan Studies Volume 47 [2017-2018] ; 13865 >
 
     }
 

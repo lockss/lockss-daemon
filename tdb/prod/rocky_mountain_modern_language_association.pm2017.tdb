@@ -6,6 +6,7 @@
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:143
 
     {
     title <
@@ -18,8 +19,8 @@
 
       attr[journal_id] = 525
 
-        au < ready ; 1966 ; Rocky Mountain Review of Language and Literature Volume 20 [1966] ; 7725 >
         au < ready ; 1966 ; Rocky Mountain Review of Language and Literature Volume 19 [1966] ; 7800 >
+        au < ready ; 1966 ; Rocky Mountain Review of Language and Literature Volume 20 [1966] ; 7725 >
         au < ready ; 1967 ; Rocky Mountain Review of Language and Literature Volume 21 [1967] ; 7698 >
         au < ready ; 1968 ; Rocky Mountain Review of Language and Literature Volume 22 [1968] ; 7726 >
         au < ready ; 1969 ; Rocky Mountain Review of Language and Literature Volume 23 [1969] ; 7727 >
@@ -63,6 +64,8 @@
         au < released ; 2014 ; Rocky Mountain Review of Language and Literature Volume 68 [2014] ; 10054 >
         au < released ; 2015 ; Rocky Mountain Review of Language and Literature Volume 69 [2015] ; 10597 >
         au < released ; 2016 ; Rocky Mountain Review of Language and Literature Volume 70 [2016] ; 11306 >
+        au < exists ; 2017 ; Rocky Mountain Review of Language and Literature Volume 71 [2017] ; 12742 >
+        au < exists ; 2018 ; Rocky Mountain Review of Language and Literature Volume 72 [2018] ; 13623 >
 
     }
 
