@@ -6,6 +6,7 @@
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:163
 
     {
     title <
@@ -15,12 +16,29 @@
 
       attr[journal_id] = 608
 
-        au < released ; 2010 ; AUDEM: The International Journal of Higher Education and Democracy 2010 ; 8708 >
-        au < released ; 2011 ; AUDEM: The International Journal of Higher Education and Democracy 2011 ; 8709 >
-        au < released ; 2012 ; AUDEM: The International Journal of Higher Education and Democracy 2012 ; 8791 >
-        au < released ; 2013 ; AUDEM: The International Journal of Higher Education and Democracy 2013 ; 10213 >
+        au < released ; 2010 ; AUDEM: The International Journal of Higher Education and Democracy Volume 1 [2010] ; 8708 >
+        au < released ; 2011 ; AUDEM: The International Journal of Higher Education and Democracy Volume 2 [2011] ; 8709 >
+        au < released ; 2012 ; AUDEM: The International Journal of Higher Education and Democracy Volume 3 [2012] ; 8791 >
+        au < released ; 2013 ; AUDEM: The International Journal of Higher Education and Democracy Volume 4 [2013] ; 10213 >
 
     }
+
+    {
+    title <
+      name = Journal of Buddhist Philosophy ;
+      issn = 2374-247X ;
+      eissn = 2374-2488 ;
+      issnl = 2374-247X
+
+    >
+
+      attr[journal_id] = 702
+
+        au < exists ; 2015 ; Journal of Buddhist Philosophy Volume 1 [2015] ; 12250 >
+        au < exists ; 2016 ; Journal of Buddhist Philosophy Volume 2 [2016] ; 12503 >
+
+    }
+
     {
     title <
       name = Journal of Japanese Philosophy ;
@@ -36,8 +54,10 @@
         au < released ; 2014 ; Journal of Japanese Philosophy Volume 2 [2014] ; 10263 >
         au < released ; 2015 ; Journal of Japanese Philosophy Volume 3 [2015] ; 10843 >
         au < released ; 2016 ; Journal of Japanese Philosophy Volume 4 [2016] ; 12242 >
+        au < exists ; 2017 ; Journal of Japanese Philosophy Volume 5 [2017] ; 13627 >
 
     }
+
     {
     title <
       name = Mediaevalia ;
@@ -54,8 +74,11 @@
         au < released ; 2013 ; Mediaevalia Volume 34 [2013] ; 10178 >
         au < released ; 2014 ; Mediaevalia Volume 35 [2014] ; 10795 >
         au < released ; 2015-2016 ; Mediaevalia Volume 36/37, 2015-2016 ; 11364 >
+        au < exists ; 2017 ; Mediaevalia Volume 38, 2017 ; 13109 >
+        au < exists ; 2018 ; Mediaevalia Volume 39, 2018 ; 13734 >
 
     }
+
     {
     title <
       name = Palimpsest: A Journal on Women, Gender, and the Black International ;
@@ -72,8 +95,11 @@
         au < released ; 2014 ; Palimpsest: A Journal on Women, Gender, and the Black International Volume 3 [2014] ; 9924 >
         au < released ; 2015 ; Palimpsest: A Journal on Women, Gender, and the Black International Volume 4 [2015] ; 10612 >
         au < released ; 2016 ; Palimpsest: A Journal on Women, Gender, and the Black International Volume 5 [2016] ; 12185 >
+        au < exists ; 2017 ; Palimpsest: A Journal on Women, Gender, and the Black International Volume 6 [2017] ; 12727 >
+        au < exists ; 2018 ; Palimpsest: A Journal on Women, Gender, and the Black International Volume 7 [2018] ; 13680 >
 
     }
+    
     {
     title <
       name = philoSOPHIA ;
@@ -85,12 +111,14 @@
 
       attr[journal_id] = 581
 
-        au < released ; 2011 ; philoSOPHIA Volume 1 ; 8344 >
-        au < released ; 2012 ; philoSOPHIA Volume 2 ; 8468 >
-        au < released ; 2013 ; philoSOPHIA Volume 3 ; 9260 >
+        au < released ; 2011 ; philoSOPHIA Volume 1 [2011] ; 8344 >
+        au < released ; 2012 ; philoSOPHIA Volume 2 [2012] ; 8468 >
+        au < released ; 2013 ; philoSOPHIA Volume 3 [2013] ; 9260 >
         au < released ; 2014 ; philoSOPHIA Volume 4 [2014] ; 10093 >
         au < released ; 2015 ; philoSOPHIA Volume 5 [2015] ; 10661 >
         au < released ; 2016 ; philoSOPHIA Volume 6 [2016] ; 11343 >
+        au < exists ; 2017 ; philoSOPHIA Volume 7 [2017] ; 12687 >
+        au < exists ; 2018 ; philoSOPHIA Volume 8 [2018] ; 13504 >
 
     }
 

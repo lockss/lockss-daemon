@@ -6,6 +6,7 @@
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:181
 
     {
     title <
@@ -27,8 +28,11 @@
         au < released ; 2014 ; Alabama Review Volume 67 [2014] ; 9889 >
         au < released ; 2015 ; Alabama Review Volume 68 [2015] ; 10270 >
         au < released ; 2016 ; Alabama Review Volume 69 [2016] ; 11220 >
+        au < exists ; 2017 ; Alabama Review Volume 70 [2017] ; 12615 >
+        au < exists ; 2018 ; Alabama Review Volume 71 [2018] ; 13175 >
 
-    }
+   }
+
     {
     title <
       name = Theatre History Studies ;
@@ -48,6 +52,8 @@
         au < released ; 2014 ; Theatre History Studies Volume 33 [2014] ; 10262 >
         au < released ; 2015 ; Theatre History Studies Volume 34 [2015] ; 10869 >
         au < released ; 2016 ; Theatre History Studies Volume 35 [2016] ; 12216 >
+        au < exists ; 2017 ; Theatre History Studies Volume 36 [2017] ; 13043 >
+        au < exists ; 2018 ; Theatre History Studies Volume 37 [2018] ; 13927 >
 
     }
     {
@@ -70,6 +76,8 @@
         au < released ; 2014 ; Theatre Symposium Volume 22 [2014] ; 10200 >
         au < released ; 2015 ; Theatre Symposium Volume 23 [2015] ; 10791 >
         au < released ; 2016 ; Theatre Symposium Volume 24 [2016] ; 12374 >
+        au < exists ; 2017 ; Theatre Symposium Volume 25 [2017] ; 12994 >
+        au < exists ; 2018 ; Theatre Symposium Volume 26 [2018] ; 13691 >
 
     }
 

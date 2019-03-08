@@ -6,6 +6,7 @@
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:182
 
     {
     title <
@@ -25,6 +26,7 @@
         au < released ; 2012 ; Dublin James Joyce Journal Number 5 [2012] ; 8820 >
         au < released ; 2013-2014 ; Dublin James Joyce Journal Numbers 6-7 [2013-2014] ; 10653 >
         au < released ; 2015 ; Dublin James Joyce Journal Number 8 [2015] ; 12196 >
+        au < exists ; 2016 ; Dublin James Joyce Journal Number 9 [2016] ; 13150 >
 
     }
 
