@@ -330,6 +330,30 @@
         au < released ; 2017 ; The Pluralist Volume 12 [2017] ; 12439 >
 
     }
+
+    {
+    title <
+      name = Scandinavian Studies ;
+      issn = 0036-5637  ;
+      eissn = 2163-8195  ;
+      issnl = 0036-5637
+
+    >
+
+      attr[journal_id] = 526
+      #move from Society for the Advancement of Scandinavian Study
+
+        au < released ; 2011 ; Scandinavian Studies Volume 83 [2011] ; 7717 >
+        au < released ; 2012 ; Scandinavian Studies Volume 84 [2012] ; 8491 >
+        au < released ; 2013 ; Scandinavian Studies Volume 85 [2013] ; 9284 >
+        au < released ; 2014 ; Scandinavian Studies Volume 86 [2014] ; 9880 >
+        au < released ; 2015 ; Scandinavian Studies Volume 87 [2015] ; 10639 >
+        au < released ; 2016 ; Scandinavian Studies Volume 88 [2016] ; 11307 >
+        au < exists ; 2017 ; Scandinavian Studies Volume 89 [2017] ; 12795 >
+        au < exists ; 2018 ; Scandinavian Studies Volume 90 [2018] ; 13639 >
+
+    }
+
     {
     title <
       name = Visual Arts Research ;
