@@ -10,6 +10,38 @@
 
     {
     title <
+      name = Asian Perspectives ;
+      issn = 0066-8435  ;
+      eissn = 1535-8283  ;
+      issnl = 0066-8435
+    >
+
+      attr[journal_id] = 17
+
+        au < manifest ; 2000 ; Asian Perspectives Volume 39 [2000] ; 65 >
+        au < manifest ; 2001 ; Asian Perspectives Volume 40 [2001] ; 66 >
+        au < manifest ; 2002 ; Asian Perspectives Volume 41 [2002] ; 752 >
+        au < manifest ; 2003 ; Asian Perspectives Volume 42 [2003] ; 922 >
+        au < manifest ; 2004 ; Asian Perspectives Volume 43 [2004] ; 2456 >
+        au < manifest ; 2005 ; Asian Perspectives Volume 44 [2005] ; 2821 >
+        au < manifest ; 2006 ; Asian Perspectives Volume 45 [2006] ; 2988 >
+        au < manifest ; 2007 ; Asian Perspectives Volume 46 [2007] ; 3276 >
+        au < manifest ; 2008 ; Asian Perspectives Volume 47 [2008] ; 3650 >
+        au < manifest ; 2009 ; Asian Perspectives Volume 48 [2009] ; 4255 >
+        au < released ; 2010 ; Asian Perspectives Volume 49 [2010] ; 7484 >
+        au < released ; 2011 ; Asian Perspectives Volume 50 [2011] ; 9122 >
+        au < released ; 2012 ; Asian Perspectives Volume 51 [2012] ; 9558 >
+        au < released ; 2013 ; Asian Perspectives Volume 52 [2013] ; 10167 >
+        au < released ; 2014 ; Asian Perspectives Volume 53 [2014] ; 10593 >
+        au < released ; 2015 ; Asian Perspectives Volume 54 [2015] ; 10861 >
+        au < released ; 2016 ; Asian Perspectives Volume 55 [2016] ; 12136 >
+        au < exists ; 2017 ; Asian Perspectives Volume 56 [2017] ; 12701 >
+        au < exists ; 2018 ; Asian Perspectives Volume 57 [2018] ; 13484 >
+
+    }
+
+    {
+    title <
       name = Asian Theatre Journal ;
       issn = 0742-5457  ;
       eissn = 1527-2109  ;
@@ -118,8 +150,11 @@
         au < released ; 2014 ; Biography Volume 37 [2014] ; 10226 >
         au < released ; 2015 ; Biography Volume 38 [2015] ; 10704 >
         au < released ; 2016 ; Biography Volume 39 [2016] ; 11337 >
+        au < exists ; 2017 ; Biography Volume 40 [2017] ; 12780 >
+        au < exists ; 2018 ; Biography Volume 41 [2018] ; 13386 >
 
     }
+
     {
     title <
       name = Buddhist-Christian Studies ;
@@ -149,8 +184,11 @@
         au < released ; 2014 ; Buddhist-Christian Studies Volume 34 [2014] ; 10376 >
         au < released ; 2015 ; Buddhist-Christian Studies Volume 35 [2015] ; 10862 >
         au < released ; 2016 ; Buddhist-Christian Studies Volume 36 [2016] ; 12127 >
+        au < exists ; 2017 ; Buddhist-Christian Studies Volume 37 [2017] ; 12998 >
+        au < exists ; 2018 ; Buddhist-Christian Studies Volume 38 [2018] ; 13772 >
 
     }
+
     {
     title <
       name = China Review International ;
@@ -183,8 +221,12 @@
         au < released ; 2012 ; China Review International Volume 19 [2012] ; 9659 >
         au < released ; 2013 ; China Review International Volume 20 [2013] ; 10917 >
         au < released ; 2014 ; China Review International Volume 21 [2014] ; 11339 >
+        au < exists ; 2015 ; China Review International Volume 22 [2015] ; 12566 >
+        au < exists ; 2016 ; China Review International Volume 23 [2016] ; 13288 >
+        au < exists ; 2017 ; China Review International Volume 24 [2017] ; 13984 >
 
     }
+    
     {
     title <
       name = Cross-Currents: East Asian History and Culture Review ;
@@ -199,12 +241,55 @@
         au < released ; 2014 ; Cross-Currents: East Asian History and Culture Review Volume 3 [2014] ; 10078 >
         au < released ; 2015 ; Cross-Currents: East Asian History and Culture Review Volume 4 [2015] ; 10713 >
         au < released ; 2016 ; Cross-Currents: East Asian History and Culture Review Volume 5 [2016] ; 11253 >
+        au < exists ; 2017 ; Cross-Currents: East Asian History and Culture Review Volume 6 [2017] ; 12708 >
+        au < exists ; 2018 ; Cross-Currents: East Asian History and Culture Review Volume 7 [2018] ; 13541 >
 
     }
+
+    {
+    title <
+      name = Hawaiian Journal of History ;
+      issn = 0440-5145 ;
+      eissn = 2169-7639
+    >
+
+      attr[journal_id] = 676
+
+        au < exists ; 2015 ; Hawaiian Journal of History Volume 49 [2015] ; 10823 >
+        au < exists ; 2016 ; Hawaiian Journal of History Volume 50 [2016] ; 12153 >
+        au < exists ; 2017 ; Hawaiian Journal of History Volume 51 [2017] ; 13014 >
+        au < exists ; 2018 ; Hawaiian Journal of History Volume 52 [2018] ; 13780 >
+
+    }
+
+    {
+    title <
+      name = Journal of Daoist Studies ;
+      eissn = 1941-5524
+    >
+
+      attr[journal_id] = 711
+
+        au < exists ; 2008 ; Journal of Daoist Studies Volume 1 [2008] ;12160 >
+        au < exists ; 2009 ; Journal of Daoist Studies Volume 2 [2009] ;12161 >
+        au < exists ; 2010 ; Journal of Daoist Studies Volume 3 [2010] ;12162 >
+        au < exists ; 2011 ; Journal of Daoist Studies Volume 4 [2011] ;12163 >
+        au < exists ; 2012 ; Journal of Daoist Studies Volume 5 [2012] ;12164 >
+        au < exists ; 2013 ; Journal of Daoist Studies Volume 6 [2013] ;12165 >
+        au < exists ; 2014 ; Journal of Daoist Studies Volume 7 [2014] ;12166 >
+        au < exists ; 2015 ; Journal of Daoist Studies Volume 8 [2015] ;12167 >
+        au < exists ; 2016 ; Journal of Daoist Studies Volume 9 [2016] ;12168 >
+        au < exists ; 2017 ; Journal of Daoist Studies Volume 10 [2017] ; 12347 >
+        au < exists ; 2018 ; Journal of Daoist Studies Volume 11 [2018] ; 13220 >
+        au < exists ; 2019 ; Journal of Daoist Studies Volume 12 [2019] ; 13933 >
+
+    }
+    
     {
     title <
       name = Journal of Korean Religions ;
-      issn = 2093-7288 
+      issn = 2093-7288 ;
+      eissn = 2167-2040
     >
 
       attr[journal_id] = 557
@@ -216,8 +301,11 @@
         au < released ; 2014 ; Journal of Korean Religions Volume 5 [2014] ; 10027 >
         au < released ; 2015 ; Journal of Korean Religions Volume 6 [2015] ; 10672 >
         au < released ; 2016 ; Journal of Korean Religions Volume 7 [2016] ; 11205 >
+        au < exists ; 2017 ; Journal of Korean Religions Volume 8 [2017] ; 12677 >
+        au < exists ; 2018 ; Journal of Korean Religions Volume 9 [2018] ; 13604 >
 
     }
+
     {
     title <
       name = Journal of World History ;
@@ -250,8 +338,11 @@
         au < released ; 2014 ; Journal of World History Volume 25 [2014] ; 10111 >
         au < released ; 2015 ; Journal of World History Volume 26 [2015] ; 11038 >
         au < released ; 2016 ; Journal of World History Volume 27 [2016] ; 11308 >
+        au < exists ; 2017 ; Journal of World History Volume 28 [2017] ; 12731 >
+        au < exists ; 2018 ; Journal of World History Volume 29 [2018] ; 13263 >
 
     }
+
     {
     title <
       name = Ka Ho'oilina/The Legacy ;
@@ -270,6 +361,7 @@
         au < manifest ; 2006 ; Ka Ho'oilina/The Legacy Puke Volume 5 [2006] ; 3186 >
 
     }
+
     {
     title <
       name = Korean Studies ;
@@ -281,6 +373,7 @@
 
       attr[journal_id] = 109
 
+        #au < exists ; DDDD ; Korean Studies [Early Release Articles] ; 12443 >
         au < manifest ; 1977 ; Korean Studies Volume 1 [1977] ; 5968 >
         au < manifest ; 1978 ; Korean Studies Volume 2 [1978] ; 5967 >
         au < manifest ; 1979 ; Korean Studies Volume 3 [1979] ; 5966 >
@@ -321,9 +414,11 @@
         au < released ; 2014 ; Korean Studies Volume 38 [2014] ; 10788 >
         au < released ; 2015 ; Korean Studies Volume 39 [2015] ; 10939 >
         au < released ; 2016 ; Korean Studies Volume 40 [2016] ; 11415 >
-        #au < exists ; DDDD ; Korean Studies Early Release Articles ; 12443 >
+        au < exists ; 2017 ; Korean Studies Volume 41 [2017] ; 12775 >
+        au < exists ; 2018 ; Korean Studies Volume 42 [2018] ; 13502 >
 
     }
+
     {
     title <
       name = Manoa ;
@@ -353,8 +448,11 @@
         au < released ; 2014 ; Manoa Volume 26 [2014] ; 10095 >
         au < released ; 2015 ; Manoa Volume 27 [2015] ; 10781 >
         au < released ; 2016 ; Manoa Volume 28 [2016] ; 12249 >
+        au < exists ; 2017 ; Manoa Volume 29 [2017] ; 12824 >
+        au < exists ; 2018 ; Manoa Volume 30 [2018] ; 13676 >
 
     }
+
     {
     title <
       name = Oceanic Linguistics ;
@@ -384,8 +482,11 @@
         au < released ; 2014 ; Oceanic Linguistics Volume 53 [2014] ; 10086 >
         au < released ; 2015 ; Oceanic Linguistics Volume 54 [2015] ; 10714 >
         au < released ; 2016 ; Oceanic Linguistics Volume 55 [2016] ; 11231 >
+        au < exists ; 2017 ; Oceanic Linguistics Volume 56 [2017] ; 12704 >
+        au < exists ; 2018 ; Oceanic Linguistics Volume 57 [2018] ; 13519 >
 
     }
+
     {
     title <
       name = Pacific Science ;
@@ -414,8 +515,11 @@
         au < released ; 2015 ; Pacific Science Volume 69 [2015] ; 12130 >
         au < released ; 2016 ; Pacific Science Volume 70 [2016] ; 12131 >
         au < released ; 2017 ; Pacific Science Volume 71 [2017] ; 12299 >
+        au < exists ; 2018 ; Pacific Science Volume 72 [2018] ; 13136 >
+        au < exists ; 2019 ; Pacific Science Volume 73 [2019] ; 13870 >
 
     }
+
     {
     title <
       name = Philosophy East and West ;
@@ -427,6 +531,7 @@
 
       attr[journal_id] = 156
 
+        #au < exists ; DDDD ; Philosophy East and West [Early Release Articles] ; 12145 >
         au < manifest ; 2000 ; Philosophy East and West Volume 50 [2000] ; 521 >
         au < manifest ; 2001 ; Philosophy East and West Volume 51 [2001] ; 522 >
         au < manifest ; 2002 ; Philosophy East and West Volume 52 [2002] ; 523 >
@@ -445,9 +550,28 @@
         au < released ; 2015 ; Philosophy East and West Volume 65 [2015] ; 10331 >
         au < released ; 2016 ; Philosophy East and West Volume 66 [2016] ; 10912 >
         au < released ; 2017 ; Philosophy East and West Volume 67 [2017] ; 12253 >
-        #au < exists ; DDDD ; Philosophy East and West Early Release Articles ; 12145 >
+        au < exists ; 2018 ; Philosophy East and West Volume 68 [2018] ; 13115 >
 
     }
+
+    {
+    title <
+      name = Rapa Nui Journal ;
+      issn = 1040-1385 ;
+      eissn = 2576-5469 ;
+      issnl = 1040-1385
+
+    >
+
+      attr[journal_id] = 732
+
+        #au < exists ; DDDD ; Rapa Nui Journal [Early Release Articles] ; 13663 >
+        au < exists ; 2015 ; Rapa Nui Journal Volume 65 [2015] ; 13170 >
+        au < exists ; 2016 ; Rapa Nui Journal Volume 66 [2016] ; 13171 >
+        au < exists ; 2018 ; Rapa Nui Journal Volume 68 [2018] ; 13859 >
+
+    }
+
     {
     title <
       name = Review of Japanese Culture and Society ;
@@ -462,8 +586,10 @@
         au < released ; 2013 ; Review of Japanese Culture and Society Volume 25 [2013] ; 10188 >
         au < released ; 2014 ; Review of Japanese Culture and Society Volume 26 [2014] ; 10957 >
         au < released ; 2015 ; Review of Japanese Culture and Society Volume 27 [2015] ; 10958 >
+        au < exists ; 2016 ; Review of Japanese Culture and Society Volume 28 [2016] ; 12810 >
 
     }
+
     {
     title <
       name = The Contemporary Pacific ;
@@ -493,8 +619,34 @@
         au < released ; 2015 ; The Contemporary Pacific Volume 27 [2015] ; 10623 >
         au < released ; 2016 ; The Contemporary Pacific Volume 28 [2016] ; 10892 >
         au < released ; 2017 ; The Contemporary Pacific Volume 29 [2017] ; 12317 >
+        au < exists ; 2018 ; The Contemporary Pacific Volume 30 [2018] ; 13152 >
+        au < exists ; 2019 ; The Contemporary Pacific Volume 31 [2019] ; 13958 >
 
     }
+
+    {
+    title <
+      name = Trans-Humanities Journal ;
+      issn = 2092-6081 ;
+      eissn = 2383-9899 ;
+      issnl = 2092-6081
+
+    >
+
+      attr[journal_id] = 712
+
+        au < exists ; 2009 ; Trans-Humanities Journal Volume 1 [2009] ; 12189 >
+        au < exists ; 2010 ; Trans-Humanities Journal Volume 2 [2010] ; 12169 >
+        au < exists ; 2011 ; Trans-Humanities Journal Volume 4 [2011] ; 12170 >
+        au < exists ; 2012 ; Trans-Humanities Journal Volume 5 [2012] ; 12172 >
+        au < exists ; 2013 ; Trans-Humanities Journal Volume 6 [2013] ; 12173 >
+        au < exists ; 2014 ; Trans-Humanities Journal Volume 7 [2014] ; 12174 >
+        au < exists ; 2015 ; Trans-Humanities Journal Volume 8 [2015] ; 12175 >
+        au < exists ; 2016 ; Trans-Humanities Journal Volume 9 [2016] ; 12176 >
+        au < exists ; 2017 ; Trans-Humanities Journal Volume 10 [2017] ; 12464 >
+
+    }
+
     {
     title <
       name = U.S.-Japan Women's Journal ;
@@ -513,8 +665,12 @@
         au < released ; 2015 ; U.S.-Japan Women's Journal Number 48 [2015] ; 11086 >
         au < released ; 2016 ; U.S.-Japan Women's Journal Number 49 [2016] ; 11154 >
         au < released ; 2016 ; U.S.-Japan Women's Journal Number 50 [2016] ; 12214 >
+        au < exists ; 2017 ; U.S.-Japan Women's Journal Number 51 [2017] ; 12758 >
+        au < exists ; 2017 ; U.S.-Japan Women's Journal Number 52 [2017] ; 13239 >
+        au < exists ; 2018 ; U.S.-Japan Women's Journal Number 53 [2018] ; 13785 >
 
     }
+
     {
     title <
       name = Yearbook of the Association of Pacific Coast Geographers ;
@@ -604,6 +760,8 @@
         au < released ; 2014 ; Yearbook of the Association of Pacific Coast Geographers Volume 76 [2014] ; 10184 >
         au < released ; 2015 ; Yearbook of the Association of Pacific Coast Geographers Volume 77 [2015] ; 10757 >
         au < released ; 2016 ; Yearbook of the Association of Pacific Coast Geographers Volume 78 [2016] ; 11409 >
+        au < exists ; 2017 ; Yearbook of the Association of Pacific Coast Geographers Volume 79 [2017] ; 12829 >
+        au < exists ; 2018 ; Yearbook of the Association of Pacific Coast Geographers Volume 80 [2018] ; 13655 >
 
     }
 
