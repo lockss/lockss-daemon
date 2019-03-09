@@ -6,6 +6,7 @@
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:150
 
     {
     title <
@@ -25,6 +26,7 @@
         au < released ; 2015 ; Mosaic: a journal for the interdisciplinary study of literature Volume 48 [2015] ; 10512 >
         au < released ; 2016 ; Mosaic, an interdisciplinary critical journal Volume 49 [2016] ; 11039 >
         au < released ; 2017 ; Mosaic, an interdisciplinary critical journal Volume 50 [2017] ; 12467 >
+        au < exists ; 2018 ; Mosaic, an interdisciplinary critical journal Volume 51 [2018] ; 13306 >
 
     }
 
