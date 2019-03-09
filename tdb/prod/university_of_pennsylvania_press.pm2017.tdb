@@ -6,6 +6,7 @@
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:56
 
     {
     title <
@@ -80,6 +81,40 @@
         au < released ; 2017 ; Early American Studies: An Interdisciplinary Journal Volume 15 [2017] ; 12359 >
 
     }
+
+    {
+    title <
+      name = French Forum ;
+      issn = 0098-9355  ;
+      eissn = 1534-1836  ;
+      issnl = 0098-9355
+
+    >
+
+      attr[journal_id] = 63
+      #move from University of Nebraska Press
+
+        au < manifest ; 2001 ; French Forum Volume 26 [2001] ; 227 >
+        au < manifest ; 2002 ; French Forum Volume 27 [2002] ; 228 >
+        au < manifest ; 2003 ; French Forum Volume 28 [2003] ; 964 >
+        au < manifest ; 2004 ; French Forum Volume 29 [2004] ; 2544 >
+        au < manifest ; 2005 ; French Forum Volume 30 [2005] ; 2748 >
+        au < manifest ; 2006 ; French Forum Volume 31 [2006] ; 3123 >
+        au < manifest ; 2007 ; French Forum Volume 32 [2007] ; 3635 >
+        au < manifest ; 2008 ; French Forum Volume 33 [2008] ; 4000 >
+        au < manifest ; 2009 ; French Forum Volume 34 [2009] ; 4419 >
+        au < released ; 2010 ; French Forum Volume 35 [2010] ; 6167 >
+        au < released ; 2011 ; French Forum Volume 36 [2011] ; 7438 >
+        au < released ; 2012 ; French Forum Volume 37 [2012] ; 8503 >
+        au < released ; 2013 ; French Forum Volume 38 [2013] ; 9326 >
+        au < released ; 2014 ; French Forum Volume 39 [2014] ; 10105 >
+        au < released ; 2015 ; French Forum Volume 40 [2015] ; 10668 >
+        au < released ; 2016-2017 ; French Forum Volume 41 [2016-2017] ; 12358 >
+        au < exists ; 2017 ; French Forum Volume 42 [2017] ; 12684 >
+        au < exists ; 2018 ; French Forum Volume 43 [2018] ; 13678 >
+
+    }
+
     {
     title <
       name = Hispanic Review ;
