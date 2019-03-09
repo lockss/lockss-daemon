@@ -22,6 +22,7 @@
         au < manifest ; 2009 ; An Sionnach: A Journal of Literature, Culture, and the Arts Volume 5 [2009] ; 5662 >
 
     }
+
     {
     title <
       name = Anthropological Linguistics ;
@@ -31,7 +32,7 @@
 
     >
 
-      attr[journal_id] = 0000
+      attr[journal_id] = 436
 
         au < manifest ; 2009 ; Anthropological Linguistics Volume 51 [2009] ; 5771 >
         au < released ; 2010 ; Anthropological Linguistics Volume 52 [2010] ; 6635 >
@@ -41,8 +42,12 @@
         au < released ; 2014 ; Anthropological Linguistics Volume 56 [2014] ; 10423 >
         au < released ; 2015 ; Anthropological Linguistics Volume 57 [2015] ; 11005 >
         au < released ; 2016 ; Anthropological Linguistics Volume 58 [2016] ; 12247 >
+        au < exists ; 2017 ; Anthropological Linguistics Volume 59 [2017] ; 13134 >
+        au < expected ; 2018 ; Anthropological Linguistics Volume 60 [2018] ; 14031 >
+
 
     }
+
     {
     title <
       name = Collaborative Anthropologies ;
@@ -62,37 +67,11 @@
         au < released ; 2013 ; Collaborative Anthropologies Volume 6 [2013] ; 9673 >
         au < released ; 2014-2015 ; Collaborative Anthropologies Volume 7 [2014-2015] ; 10400 >
         au < released ; 2015-2016 ; Collaborative Anthropologies Volume 8 [2015-2016] ; 12426 >
+        au < exists ; 2016-2017 ; Collaborative Anthropologies Volume 9 [2016-2017] ; 13301 >
+        au < exists ; 2017-2018 ; Collaborative Anthropologies Volume 10 [2017-2018] ; 13813 >
 
     }
-    {
-    title <
-      name = French Forum ;
-      issn = 0098-9355  ;
-      eissn = 1534-1836  ;
-      issnl = 0098-9355
 
-    >
-
-      attr[journal_id] = 63
-
-        au < manifest ; 2001 ; French Forum Volume 26 [2001] ; 227 >
-        au < manifest ; 2002 ; French Forum Volume 27 [2002] ; 228 >
-        au < manifest ; 2003 ; French Forum Volume 28 [2003] ; 964 >
-        au < manifest ; 2004 ; French Forum Volume 29 [2004] ; 2544 >
-        au < manifest ; 2005 ; French Forum Volume 30 [2005] ; 2748 >
-        au < manifest ; 2006 ; French Forum Volume 31 [2006] ; 3123 >
-        au < manifest ; 2007 ; French Forum Volume 32 [2007] ; 3635 >
-        au < manifest ; 2008 ; French Forum Volume 33 [2008] ; 4000 >
-        au < manifest ; 2009 ; French Forum Volume 34 [2009] ; 4419 >
-        au < released ; 2010 ; French Forum Volume 35 [2010] ; 6167 >
-        au < released ; 2011 ; French Forum Volume 36 [2011] ; 7438 >
-        au < released ; 2012 ; French Forum Volume 37 [2012] ; 8503 >
-        au < released ; 2013 ; French Forum Volume 38 [2013] ; 9326 >
-        au < released ; 2014 ; French Forum Volume 39 [2014] ; 10105 >
-        au < released ; 2015 ; French Forum Volume 40 [2015] ; 10668 >
-        au < released ; 2016-2017 ; French Forum Volume 41 [2016-2017] ; 12358 >
-
-    }
     {
     title <
       name = Frontiers: A Journal of Women Studies ;
@@ -120,8 +99,11 @@
         au < released ; 2014 ; Frontiers: A Journal of Women Studies Volume 35 [2014] ; 9829 >
         au < released ; 2015 ; Frontiers: A Journal of Women Studies Volume 36 [2015] ; 10468 >
         au < released ; 2016 ; Frontiers: A Journal of Women Studies Volume 37 [2016] ; 11208 >
+        au < exists ; 2017 ; Frontiers: A Journal of Women Studies Volume 38 [2017] ; 12545 >
+        au < exists ; 2018 ; Frontiers: A Journal of Women Studies Volume 39 [2018] ; 13399 >
 
     }
+
     {
     title <
       name = Gettysburg Magazine ;
@@ -138,8 +120,12 @@
         au < released ; 2016 ; Gettysburg Magazine Number 54 [January 2016] ; 10883 >
         au < released ; 2016 ; Gettysburg Magazine Number 55 [July 2016] ; 11336 >
         au < released ; 2017 ; Gettysburg Magazine Number 56 [January 2017] ; 12414 >
+        au < exists ; 2017 ; Gettysburg Magazine Number 57 [July 2017] ; 12728 >
+        au < exists ; 2018 ; Gettysburg Magazine Number 58 [January 2018] ; 13119 >
+        au < exists ; 2018 ; Gettysburg Magazine Number 59 [July 2018] ; 13563 >
 
     }
+
     {
     title <
       name = Great Plains Quarterly ;
@@ -155,8 +141,11 @@
         au < released ; 2015 ; Great Plains Quarterly Volume 35 [2015] ; 10387 >
         au < released ; 2016 ; Great Plains Quarterly Volume 36 [2016] ; 10974 >
         au < released ; 2017 ; Great Plains Quarterly Volume 37 [2017] ; 12372 >
+        au < exists ; 2018 ; Great Plains Quarterly Volume 38 [2018] ; 13289 >
+        au < exists ; 2019 ; Great Plains Quarterly Volume 39 [2019] ; 13858 >
 
     }
+
     {
     title <
       name = Great Plains Research ;
@@ -171,6 +160,9 @@
         au < released ; 2014 ; Great Plains Research Volume 24 [Number 1, Spring 2014] ; 9810 >
         au < released ; 2015 ; Great Plains Research Volume 25 [2015] ; 10536 >
         au < released ; 2016 ; Great Plains Research Volume 26 [2016] ; 11149 >
+        au < exists ; 2017 ; Great Plains Research Volume 27 [2017] ; 12578 >
+        au < exists ; 2018 ; Great Plains Research Volume 28 [2018] ; 13381 >
+        au < exists ; 2019 ; Great Plains Research Volume 29 [2019] ; 13988 >
 
     }
 
@@ -209,6 +201,30 @@
         au < released ; 2011 ; Histories of Anthropology Annual Volume 7 [2011] ; 7823 >
 
     }
+
+    {
+    title <
+      name = Intertexts ;
+      issn = 1092-0625  ;
+      eissn = 2156-5465  ;
+      issnl = 1092-0625
+
+    >
+
+      attr[journal_id] = 428
+      #move from Texas Tech University Press
+
+        au < manifest ; 2009 ; Intertexts Volume 13 [2009] ; 6363 >
+        au < released ; 2010 ; Intertexts Volume 14 [2010] ; 6574 >
+        au < released ; 2011 ; Intertexts Volume 15 [2011] ; 7632 >
+        au < released ; 2012 ; Intertexts Volume 16 [2012] ; 8605 >
+        au < released ; 2013 ; Intertexts Volume 17 [2013] ; 9581 >
+        au < released ; 2014 ; Intertexts Volume 18 [2014] ; 10169 >
+        au < released ; 2015 ; Intertexts Volume 19 [2015] ; 11427 >
+        au < exists ; 2016 ; Intertexts Volume 20 [2016] ; 13567 >
+
+    }
+
     {
     title <
       name = Journal of Austrian Studies ;
@@ -224,8 +240,11 @@
         au < released ; 2014 ; Journal of Austrian Studies Volume 47 [2014] ; 9938 >
         au < released ; 2015 ; Journal of Austrian Studies Volume 48 [2015] ; 10566 >
         au < released ; 2016 ; Journal of Austrian Studies Volume 49 [2016] ; 12230 >
+        au < exists ; 2017 ; Journal of Austrian Studies Volume 50 [2017] ; 13328 >
+        au < exists ; 2018 ; Journal of Austrian Studies Volume 51 [2018] ; 13606 >
 
     }
+
     {
     title <
       name = Journal of Black Sexuality and Relationships ;
@@ -240,8 +259,11 @@
         au < released ; 2014 ; Journal of Black Sexuality and Relationships Volume 1 [2014] ; 10290 >
         au < released ; 2015 ; Journal of Black Sexuality and Relationships Volume 2 [2015] ; 10808 >
         au < released ; 2016 ; Journal of Black Sexuality and Relationships Volume 3 [2016] ; 12350 >
+        au < exists ; 2017 ; Journal of Black Sexuality and Relationships Volume 4 [2017] ; 13153 >
+        au < exists ; 2018 ; Journal of Black Sexuality and Relationships Volume 5 [2018] ; 13862 >
 
     }
+
     {
     title <
       name = Journal of Literature and Trauma Studies ;
@@ -257,6 +279,7 @@
         au < released ; 2013 ; Journal of Literature and Trauma Studies Volume 2 [2013] ; 10061 >
         au < released ; 2014 ; Journal of Literature and Trauma Studies Volume 3 [2014] ; 10603 >
         au < released ; 2015 ; Journal of Literature and Trauma Studies Volume 4 [2015] ; 11259 >
+        au < exists ; 2016 ; Journal of Literature and Trauma Studies Volume 5 [2016] ; 12842 >
 
     }
 
@@ -297,8 +320,11 @@
         au < released ; 2014 ; Journal of Sports Media Volume 9 [2014] ; 9935 >
         au < released ; 2015 ; Journal of Sports Media Volume 10 [2015] ; 10491 >
         au < released ; 2016 ; Journal of Sports Media Volume 11 [2016] ; 11314 >
+        au < exists ; 2017 ; Journal of Sports Media Volume 12 [2017] ; 12748 >
+        au < exists ; 2018 ; Journal of Sports Media Volume 13 [2018] ; 13574 >
 
     }
+
     {
     title <
       name = Legacy: A Journal of American Women Writers ;
@@ -327,8 +353,11 @@
         au < released ; 2014 ; Legacy: A Journal of American Women Writers Volume 31 [2014] ; 10014 >
         au < released ; 2015 ; Legacy: A Journal of American Women Writers Volume 32 [2015] ; 10622 >
         au < released ; 2016 ; Legacy: A Journal of American Women Writers Volume 33 [2016] ; 11334 >
+        au < exists ; 2017 ; Legacy: A Journal of American Women Writers Volume 34 [2017] ; 12720 >
+        au < exists ; 2018 ; Legacy: A Journal of American Women Writers Volume 35 [2018] ; 13543 >
 
     }
+
     {
     title <
       name = Middle West Review ;
@@ -341,8 +370,11 @@
         au < released ; 2014 ; Middle West Review Volume 1 [2014] ; 10291 >
         au < released ; 2015 ; Middle West Review Volume 2 [2015] ; 10803 >
         au < released ; 2016 ; Middle West Review Volume 3 [2016] ; 11422 >
+        au < exists ; 2017 ; Middle West Review Volume 4 [2017] ; 12905 >
+        au < exists ; 2018 ; Middle West Review Volume 5 [2018] ; 13716 >
 
     }
+
     {
     title <
       name = NINE: A Journal of Baseball History and Culture ;
@@ -369,8 +401,11 @@
         au < released ; 2012 ; NINE: A Journal of Baseball History and Culture Volume 21 [2012] ; 8879 >
         au < released ; 2013 ; NINE: A Journal of Baseball History and Culture Volume 22 [2013] ; 9691 >
         au < released ; 2014-2015 ; NINE: A Journal of Baseball History and Culture Volume 23 [2014-2015] ; 10663 >
+        au < exists ; 2015-2016 ; NINE: A Journal of Baseball History and Culture Volume 24 [2015-2016] ; 13047 >
+        au < exists ; 2016-2017 ; NINE: A Journal of Baseball History and Culture Volume 25 [2016-2017] ; 13770 >
 
     }
+
     {
     title <
       name = Native South ;
@@ -391,8 +426,11 @@
         au < released ; 2014 ; Native South Volume 7 [2014] ; 10099 >
         au < released ; 2015 ; Native South Volume 8 [2015] ; 10673 >
         au < released ; 2016 ; Native South Volume 9 [2016] ; 11347 >
+        au < exists ; 2017 ; Native South Volume 10 [2017] ; 12779 >
+        au < exists ; 2018 ; Native South Volume 11 [2018] ; 13611 >
 
     }
+
     {
     title <
       name = Nineteenth-Century French Studies ;
@@ -421,8 +459,11 @@
         au < released ; 2014 ; Nineteenth-Century French Studies Volume 43 [2014] ; 10189 >
         au < released ; 2015-2016 ; Nineteenth-Century French Studies Volume 44 [2015-2016] ; 10796 >
         au < released ; 2016-2017 ; Nineteenth-Century French Studies Volume 45 [2016-2017] ; 11414 >
+        au < exists ; 2017-2018 ; Nineteenth-Century French Studies Volume 46 [2017-2018] ; 12898 >
+        au < exists ; 2018-2019 ; Nineteenth-Century French Studies Volume 47 [2018-2019] ; 13659 >
 
     }
+
     {
     title <
       name = Nouvelles Études Francophones ;
@@ -441,8 +482,11 @@
         au < released ; 2014 ; Nouvelles Études Francophones Volume 29 [2014] ; 10449 >
         au < released ; 2015 ; Nouvelles Études Francophones Volume 30 [2015] ; 10763 >
         au < released ; 2016 ; Nouvelles Études Francophones Volume 31 [2016] ; 11350 >
+        au < exists ; 2017 ; Nouvelles Études Francophones Volume 32 [2017] ; 12781 >
+        au < exists ; 2018 ; Nouvelles Études Francophones Volume 33 [2018] ; 13653 >
 
     }
+
     {
     title <
       name = Prairie Schooner ;
@@ -467,14 +511,16 @@
         au < released ; 2013 ; Prairie Schooner Volume 87 [2013] ; 8870 >
         au < released ; 2014 ; Prairie Schooner Volume 88 [2014] ; 9887 >
         au < released ; 2015 ; Prairie Schooner Volume 89 [2015] ; 10750 >
+        au < exists ; 2016 ; Prairie Schooner Volume 90 [2016] ; 12797 >
+        au < exists ; 2017 ; Prairie Schooner Volume 91 [2017] ; 12798 >
+        au < exists ; 2018 ; Prairie Schooner Volume 92 [2018] ; 13616 >
 
     }
 
     {
     title <
       name = Resilience: A Journal of the Environmental Humanities ;
-      issn =   ;
-      eissn = 2330-8117  ;
+      eissn = 2330-8117 ;
       issnl = 2330-8117
 
     >
@@ -484,13 +530,17 @@
         au < released ; 2013 ; Resilience: A Journal of the Environmental Humanities Volume 1 [2013] ; 10289 >
         au < released ; 2014 ; Resilience: A Journal of the Environmental Humanities Volume 2 [2014] ; 10667 >
         au < released ; 2015-2016 ; Resilience: A Journal of the Environmental Humanities Volume 3 [2015-2016] ; 12315 >
+        au < exists ; 2016 ; Resilience: A Journal of the Environmental Humanities Volume 4 [2016] ; 12571 >
+        au < exists ; 2017 ; Resilience: A Journal of the Environmental Humanities Volume 5 [2017] ; 13177 >
+        au < exists ; 2019 ; Resilience: A Journal of the Environmental Humanities Volume 6 [2019] ; 13841 >
 
     }
+    
     {
     title <
       name = Storyworlds: A Journal of Narrative Studies ;
-      issn = 1946-2204  ;
-      eissn = 2156-7204  ;
+      issn = 1946-2204 ;
+      eissn = 2156-7204 ;
       issnl = 1946-2204
 
     >
@@ -507,6 +557,7 @@
         au < released ; 2016 ; Storyworlds: A Journal of Narrative Studies Volume 8 [2016] ; 11405 >
 
     }
+
     {
     title <
       name = Studies in American Indian Literatures ;
@@ -531,8 +582,11 @@
         au < released ; 2014 ; Studies in American Indian Literatures Volume 26 [2014] ; 9783 >
         au < released ; 2015 ; Studies in American Indian Literatures Volume 27 [2015] ; 10683 >
         au < released ; 2016 ; Studies in American Indian Literatures Volume 28 [2016] ; 11198 >
+        au < exists ; 2017 ; Studies in American Indian Literatures Volume 29 [2017] ; 12676 >
+        au < exists ; 2018 ; Studies in American Indian Literatures Volume 30 [2018] ; 13453 >
 
     }
+
     {
     title <
       name = Studies in American Naturalism ;
@@ -552,8 +606,11 @@
         au < released ; 2014 ; Studies in American Naturalism Volume 9 [2014] ; 10191 >
         au < released ; 2015 ; Studies in American Naturalism Volume 10 [2015] ; 10920 >
         au < released ; 2016 ; Studies in American Naturalism Volume 11 [2016] ; 12421 >
+        au < exists ; 2017 ; Studies in American Naturalism Volume 12 [2017] ; 13003 >
+        au < exists ; 2018 ; Studies in American Naturalism Volume 13 [2018] ; 13794 >
 
     }
+
     {
     title <
       name = The American Indian Quarterly ;
@@ -583,8 +640,11 @@
         au < released ; 2015 ; The American Indian Quarterly Volume 39 [2015] ; 10295 >
         au < released ; 2016 ; The American Indian Quarterly Volume 40 [2016] ; 10882 >
         au < released ; 2017 ; The American Indian Quarterly Volume 41 [2017] ; 12501 >
+        au < exists ; 2018 ; The American Indian Quarterly Volume 42 [2018] ; 13287 >
+        au < expected ; 2019 ; The American Indian Quarterly Volume 43 [2019] ; 14037 >
 
     }
+
     {
     title <
       name = The Undecidable Unconscious: A Journal of Deconstruction and Psychoanalysis ;
@@ -599,8 +659,10 @@
         au < released ; 2014 ; The Undecidable Unconscious: A Journal of Deconstruction and Psychoanalysis Volume 1 [2014] ; 10395 >
         au < released ; 2015 ; The Undecidable Unconscious: A Journal of Deconstruction and Psychoanalysis Volume 2 [2015] ; 10973 >
         au < released ; 2016 ; The Undecidable Unconscious: A Journal of Deconstruction and Psychoanalysis Volume 3 [2016] ; 12465 >
+        au < exists ; 2017 ; The Undecidable Unconscious: A Journal of Deconstruction and Psychoanalysis Volume 4 [2017] ; 13366 >
 
     }
+
     {
     title <
       name = Theoretical & Applied Ethics ;
@@ -616,6 +678,75 @@
         au < released ; 2014 ; Theoretical & Applied Ethics Volume 3 [2014] ; 10415 >
 
     }
+
+    {
+    title <
+      name = Western American Literature ;
+      issn = 1948-7142  ;
+      eissn = 0043-3462  ;
+      issnl = 0043-3462
+
+    >
+
+      attr[journal_id] = 418
+      #move from Western Literature Association
+
+        au < manifest ; 1966-1967 ; Western American Literature Volume 1 [1966-1967] ; 9497 >
+        au < manifest ; 1967-1968 ; Western American Literature Volume 2 [1967-1968] ; 9498 >
+        au < manifest ; 1968-1969 ; Western American Literature Volume 3 [1968-1969] ; 9499 >
+        au < manifest ; 1969-1970 ; Western American Literature Volume 4 [1969-1970] ; 9500 >
+        au < manifest ; 1970-1971 ; Western American Literature Volume 5 [1970-1971] ; 9501 >
+        au < manifest ; 1971-1972 ; Western American Literature Volume 6 [1971-1972] ; 9502 >
+        au < manifest ; 1972-1973 ; Western American Literature Volume 7 [1972-1973] ; 9503 >
+        au < manifest ; 1973-1974 ; Western American Literature Volume 8 [1973-1974] ; 9504 >
+        au < manifest ; 1974-1975 ; Western American Literature Volume 9 [1974-1975] ; 9505 >
+        au < manifest ; 1975-1976 ; Western American Literature Volume 10 [1975-1976] ; 9506 >
+        au < manifest ; 1976-1977 ; Western American Literature Volume 11 [1976-1977] ; 9507 >
+        au < manifest ; 1977-1978 ; Western American Literature Volume 12 [1977-1978] ; 9508 >
+        au < manifest ; 1978 ; Western American Literature Volume 13 [1978] ; 9509 >
+        au < manifest ; 1979-1980 ; Western American Literature Volume 14 [1979-1980] ; 9510 >
+        au < manifest ; 1980-1981 ; Western American Literature Volume 15 [1980-1981] ; 9511 >
+        au < manifest ; 1981-1982 ; Western American Literature Volume 16 [1981-1982] ; 9512 >
+        au < manifest ; 1982-1983 ; Western American Literature Volume 17 [1982-1983] ; 9513 >
+        au < manifest ; 1983-1984 ; Western American Literature Volume 18 [1983-1984] ; 9514 >
+        au < manifest ; 1984-1985 ; Western American Literature Volume 19 [1984-1985] ; 9515 >
+        au < manifest ; 1985-1986 ; Western American Literature Volume 20 [1985-1986] ; 9516 >
+        au < manifest ; 1986-1987 ; Western American Literature Volume 21 [1986-1987] ; 9518 >
+        au < manifest ; 1987-1988 ; Western American Literature Volume 22 [1987-1988] ; 9517 >
+        au < manifest ; 1988-1989 ; Western American Literature Volume 23 [1988-1989] ; 9519 >
+        au < manifest ; 1989-1990 ; Western American Literature Volume 24 [1989-1990] ; 9520 >
+        au < manifest ; 1990-1991 ; Western American Literature Volume 25 [1990-1991] ; 9521 >
+        au < manifest ; 1991-1992 ; Western American Literature Volume 26 [1991-1992] ; 9522 >
+        au < manifest ; 1992-1993 ; Western American Literature Volume 27 [1992-1993] ; 9523 >
+        au < manifest ; 1993-1994 ; Western American Literature Volume 28 [1993-1994] ; 9524 >
+        au < manifest ; 1994-1995 ; Western American Literature Volume 29 [1994-1995] ; 9525 >
+        au < manifest ; 1995-1996 ; Western American Literature Volume 30 [1995-1996] ; 9526 >
+        au < manifest ; 1996-1997 ; Western American Literature Volume 31 [1996-1997] ; 9527 >
+        au < manifest ; 1997-1998 ; Western American Literature Volume 32 [1997-1998] ; 9528 >
+        au < manifest ; 1998-1999 ; Western American Literature Volume 33 [1998-1999] ; 9529 >
+        au < manifest ; 1999-2000 ; Western American Literature Volume 34 [1999-2000] ; 9530 >
+        au < manifest ; 2000-2001 ; Western American Literature Volume 35 [2000-2001] ; 9531 >
+        au < manifest ; 2001-2002 ; Western American Literature Volume 36 [2001-2002] ; 9532 >
+        au < manifest ; 2002-2003 ; Western American Literature Volume 37 [2002-2003] ; 9533 >
+        au < manifest ; 2003-2004 ; Western American Literature Volume 38 [2003-2004] ; 9534 >
+        au < manifest ; 2004-2005 ; Western American Literature Volume 39 [2004-2005] ; 9535 >
+        au < manifest ; 2005-2006 ; Western American Literature Volume 40 [2005-2006] ; 9536 >
+        au < manifest ; 2006-2007 ; Western American Literature Volume 41 [2006-2007] ; 9537 >
+        au < manifest ; 2007-2008 ; Western American Literature Volume 42 [2007-2008] ; 9538 >
+        au < manifest ; 2008-2009 ; Western American Literature Volume 43 [2008-2009] ; 9539 >
+        au < manifest ; 2009 ; Western American Literature Volume 44 [2009] ; 4330 >
+        au < released ; 2010 ; Western American Literature Volume 45 [2010] ; 6171 >
+        au < released ; 2011 ; Western American Literature Volume 46 [2011] ; 7543 >
+        au < released ; 2012 ; Western American Literature Volume 47 [2012] ; 8387 >
+        au < released ; 2013 ; Western American Literature Volume 48 [2013] ; 9114 >
+        au < released ; 2014 ; Western American Literature Volume 49 [2014] ; 9933 >
+        au < released ; 2015 ; Western American Literature Volume 50 [2015] ; 10684 >
+        au < released ; 2016 ; Western American Literature Volume 51 [2016] ; 11281 >
+        au < exists ; 2017 ; Western American Literature Volume 52 [2017] ; 12749 >
+        au < exists ; 2018 ; Western American Literature Volume 53 [2018] ; 13536 >
+
+    }
+
     {
     title <
       name = Women and Music: A Journal of Gender and Culture ;
@@ -640,18 +771,22 @@
         au < released ; 2014 ; Women and Music: A Journal of Gender and Culture Volume 18 [2014] ; 10242 >
         au < released ; 2015 ; Women and Music: A Journal of Gender and Culture Volume 19 [2015] ; 10760 >
         au < released ; 2016 ; Women and Music: A Journal of Gender and Culture Volume 20 [2016] ; 12102 >
+        au < exists ; 2017 ; Women and Music: A Journal of Gender and Culture Volume 21 [2017] ; 12980 >
+        au < exists ; 2018 ; Women and Music: A Journal of Gender and Culture Volume 22 [2018] ; 13698 >
 
     }
+
     {
     title <
       name = Women in German Yearbook: Feminist Studies in German Literature & Culture ;
-      issn = 1058-7446  ;
-      eissn = 1940-512X  ;
+      issn = 1058-7446 ;
+      eissn = 1940-512X ;
       issnl = 1058-7446
 
     >
 
       attr[journal_id] = 403
+      #continued_by = 2578-5206
 
         au < manifest ; 1985 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 1 [1985] ; 6006 >
         au < manifest ; 1986 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 3 [1986] ; 6004 >
@@ -685,8 +820,26 @@
         au < released ; 2014 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 30 [2014] ; 10271 >
         au < released ; 2015 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 31 [2015] ; 10907 >
         au < released ; 2016 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 32 [2016] ; 12301 >
+        au < exists ; 2017 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 33 [2017] ; 13149 >
 
     }
+
+    {
+    title <
+      name = Feminist German Studies ;
+      issn = 2578-5206 ;
+      eissn = 2578-5192 ;
+      issnl = 2578-5206
+
+    >
+
+      attr[journal_id] = 403
+      #continues = 1058-7446
+
+        au < exists ; 2018 ; Feminist German Studies Volume 34 [2018] ; 13834 >
+
+    }
+
     {
     title <
       name = symploke ;
@@ -718,6 +871,8 @@
         au < released ; 2014 ; symploke Volume 22 [2014] ; 10335 >
         au < released ; 2015 ; symploke Volume 23 [2015] ; 10885 >
         au < released ; 2016 ; symploke Volume 24 [2016] ; 12287 >
+        au < exists ; 2017 ; symploke Volume 25 [2017] ; 13194 >
+        au < exists ; 2018 ; symploke Volume 26 [2018] ; 13787 >
 
     }
 

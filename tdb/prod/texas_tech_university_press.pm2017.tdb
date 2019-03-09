@@ -57,26 +57,4 @@
 
     }
 
-    {
-    title <
-      name = Intertexts ;
-      issn = 1092-0625  ;
-      eissn = 2156-5465  ;
-      issnl = 1092-0625
-
-    >
-
-      attr[journal_id] = 428
-
-        au < manifest ; 2009 ; Intertexts Volume 13 [2009] ; 6363 >
-        au < released ; 2010 ; Intertexts Volume 14 [2010] ; 6574 >
-        au < released ; 2011 ; Intertexts Volume 15 [2011] ; 7632 >
-        au < released ; 2012 ; Intertexts Volume 16 [2012] ; 8605 >
-        au < released ; 2013 ; Intertexts Volume 17 [2013] ; 9581 >
-        au < released ; 2014 ; Intertexts Volume 18 [2014] ; 10169 >
-        au < released ; 2015 ; Intertexts Volume 19 [2015] ; 11427 >
-        au < exists ; 2016 ; Intertexts Volume 20 [2016] ; 13567 >
-
-    }
-
 }
