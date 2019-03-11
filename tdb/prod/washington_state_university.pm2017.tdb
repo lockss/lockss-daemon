@@ -6,6 +6,7 @@
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:84
 
     {
     title <
@@ -32,6 +33,8 @@
         au < released ; 2014 ; ESQ: A Journal of Nineteenth-Century American Literature and Culture Volume 60 [2014] ; 9787 >
         au < released ; 2015 ; ESQ: A Journal of Nineteenth-Century American Literature and Culture Volume 61 [2015] ; 10480 >
         au < released ; 2016 ; ESQ: A Journal of Nineteenth-Century American Literature and Culture Volume 62 [2016] ; 11098 >
+        au < exists ; 2017 ; ESQ: A Journal of Nineteenth-Century American Literature and Culture Volume 63 [2017] ; 12669 >
+        au < exists ; 2018 ; ESQ: A Journal of Nineteenth-Century American Literature and Culture Volume 64 [2018] ; 13591 >
 
     }
 

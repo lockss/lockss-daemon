@@ -6,6 +6,7 @@
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:268
 
     {
     title <
@@ -22,6 +23,7 @@
         au < released ; 2015 ; Virginia Quarterly Review Volume 91 [2015] ; 10340 >
         au < released ; 2016 ; Virginia Quarterly Review Volume 92 [2016] ; 11245 >
         au < released ; 2017 ; Virginia Quarterly Review Volume 93 [2017] ; 12297 >
+        au < exists ; 2018 ; Virginia Quarterly Review Volume 94 [2018] ; 13872 >
 
     }
 
