@@ -6,6 +6,7 @@
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:211
 
     {
     title <
@@ -30,6 +31,7 @@
         au < released ; 2014-2015 ; Ecotone Volume 10 [2014-2015] ; 10216 >
         au < released ; 2015-2016 ; Ecotone Volume 11 [2015-2016] ; 10919 >
         au < released ; 2016-2017 ; Ecotone Volume 12 [2016-2017] ; 12469 >
+        au < exists ; 2017-2018 ; Ecotone Volume 13 [2017-2018] ; 13105 >
 
     }
 
