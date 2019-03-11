@@ -1,11 +1,12 @@
 {
   publisher <
-    name = University of Tennessee
+    name = University of Maryland
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:298
 
     {
     title <
@@ -17,6 +18,7 @@
     >
 
       attr[journal_id] = 415
+      #move from University of Tennessee
 
         au < manifest ; 2008 ; Restoration: Studies in English Literary Culture, 1660-1700 Volume 32 [2008] ; 3749 >
         au < manifest ; 2009 ; Restoration: Studies in English Literary Culture, 1660-1700 Volume 33 [2009] ; 4368 >
@@ -27,6 +29,8 @@
         au < released ; 2014 ; Restoration: Studies in English Literary Culture, 1660-1700 Volume 38 [2014] ; 10045 >
         au < released ; 2015 ; Restoration: Studies in English Literary Culture, 1660-1700 Volume 39 [2015] ; 10819 >
         au < released ; 2016 ; Restoration: Studies in English Literary Culture, 1660-1700 Volume 40 [2016] ; 11189 >
+        au < exists ; 2017 ; Restoration: Studies in English Literary Culture, 1660-1700 Volume 41 [2017] ; 13004 >
+        au < exists ; 2018 ; Restoration: Studies in English Literary Culture, 1660-1700 Volume 42 [2018] ; 13621 >
 
     }
 
