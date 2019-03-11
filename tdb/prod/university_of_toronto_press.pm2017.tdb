@@ -22,8 +22,28 @@
         au < released ; 2014 ; Anthropologica Volume 56 [2014] ; 9942 >
         au < released ; 2015 ; Anthropologica Volume 57 [2015] ; 10602 >
         au < released ; 2016 ; Anthropologica Volume 58 [2016] ; 11256 >
+        au < exists ; 2017 ; Anthropologica Volume 59 [2017] ; 12653 >
+        au < exists ; 2018 ; Anthropologica Volume 60 [2018] ; 13693 >
 
     }
+
+    {
+    title <
+      name = Canadian Bulletin of Medical History ;
+      issn = 0823-2105 ;
+      eissn = 2371-0179 ;
+      issnl = 0823-2105
+
+    >
+
+      attr[journal_id] = 699
+
+        au < exists ; 2016 ; Canadian Bulletin of Medical History Volume 33 [2016] ; 11424 >
+        au < exists ; 2017 ; Canadian Bulletin of Medical History Volume 34 [2017] ; 12568 >
+        au < exists ; 2018 ; Canadian Bulletin of Medical History Volume 35 [2018] ; 13524 >
+
+    }
+
     {
     title <
       name = Canadian Journal of Criminology and Criminal Justice ;
@@ -35,6 +55,7 @@
 
       attr[journal_id] = 315
 
+        #au < manifest ; DDDD ; Canadian Journal of Criminology and Criminal Justice Ahead of Print ; 12384 >
         au < manifest ; 2006 ; Canadian Journal of Criminology and Criminal Justice Volume 48 [2006] ; 3076 >
         au < manifest ; 2007 ; Canadian Journal of Criminology and Criminal Justice Volume 49 [2007] ; 3373 >
         au < manifest ; 2008 ; Canadian Journal of Criminology and Criminal Justice Volume 50 [2008] ; 3772 >
@@ -47,9 +68,10 @@
         au < released ; 2015 ; Canadian Journal of Criminology and Criminal Justice Volume 57 [2015] ; 10287 >
         au < released ; 2016 ; Canadian Journal of Criminology and Criminal Justice Volume 58 [2016] ; 11036 >
         au < released ; 2017 ; Canadian Journal of Criminology and Criminal Justice Volume 59 [2017] ; 12291 >
-        #au < manifest ; DDDD ; Canadian Journal of Criminology and Criminal Justice Ahead of Print ; 12384 >
+        au < exists ; 2018 ; Canadian Journal of Criminology and Criminal Justice Volume 60 [2018] ; 13155 >
 
     }
+
     {
     title <
       name = Canadian Journal of History ;
@@ -63,8 +85,11 @@
 
         au < released ; 2015 ; Canadian Journal of History Volume 50 [2015] ; 10557 >
         au < released ; 2016 ; Canadian Journal of History Volume 51 [2016] ; 11194 >
+        au < exists ; 2017 ; Canadian Journal of History Volume 52 [2017] ; 12527 >
+        au < exists ; 2018 ; Canadian Journal of History Volume 53 [2018] ; 13442 >
 
     }
+
     {
     title <
       name = Canadian Journal of Information and Library Science ;
@@ -83,8 +108,11 @@
         au < released ; 2014 ; Canadian Journal of Information and Library Science Volume 38 [2014] ; 10029 >
         au < released ; 2015 ; Canadian Journal of Information and Library Science Volume 39 [2015] ; 10710 >
         au < released ; 2016 ; Canadian Journal of Information and Library Science Volume 40 [2016] ; 11034 >
+        au < exists ; 2017 ; Canadian Journal of Information and Library Science Volume 41 [2017] ; 12793 >
+        au < exists ; 2018 ; Canadian Journal of Information and Library Science Volume 42 [2018] ; 13940 >
 
     }
+
     {
     title <
       name = Canadian Journal of Women and the Law ;
@@ -108,8 +136,11 @@
         au < released ; 2014 ; Canadian Journal of Women and the Law Volume 26 [2014] ; 9920 >
         au < released ; 2015 ; Canadian Journal of Women and the Law Volume 27 [2015] ; 10550 >
         au < released ; 2016 ; Canadian Journal of Women and the Law Volume 28 [2016] ; 11152 >
+        au < exists ; 2017 ; Canadian Journal of Women and the Law Volume 29 [2017] ; 12561 >
+        au < exists ; 2018 ; Canadian Journal of Women and the Law Volume 30 [2018] ; 13378 >
 
     }
+
     {
     title <
       name = Canadian Public Policy ;
@@ -121,6 +152,7 @@
 
       attr[journal_id] = 438
 
+        #au < manifest ; DDDD ; Canadian Public Policy Ahead of Print ; 12397 >
         au < manifest ; 2009 ; Canadian Public Policy Volume 35 [2009] ; 4321 >
         au < released ; 2010 ; Canadian Public Policy Volume 36 [2010] ; 6175 >
         au < released ; 2011 ; Canadian Public Policy Volume 37 [2011] ; 6997 >
@@ -130,9 +162,10 @@
         au < released ; 2015 ; Canadian Public Policy Volume 41 [2015] ; 10447 >
         au < released ; 2016 ; Canadian Public Policy Volume 42 [2016] ; 11092 >
         au < released ; 2017 ; Canadian Public Policy Volume 43 [2017] ; 12331 >
-        #au < manifest ; DDDD ; Canadian Public Policy Ahead of Print ; 12397 >
+        au < exists ; 2018 ; Canadian Public Policy Volume 44 [2018] ; 13346 >
 
     }
+
     {
     title <
       name = Canadian Review of American Studies ;
@@ -142,8 +175,42 @@
 
     >
 
-      attr[journal_id] = 0000
+      attr[journal_id] = 269
 
+        #au < manifest ; DDDD ; Canadian Review of American Studies Ahead of Print ; 12385 >
+        au < exists ; 1970 ; Canadian Review of American Studies Volume 1 [1970] ; 13100 >
+        au < exists ; 1971 ; Canadian Review of American Studies Volume 2 [1971] ; 13099 >
+        au < exists ; 1972 ; Canadian Review of American Studies Volume 3 [1972] ; 13098 >
+        au < exists ; 1973 ; Canadian Review of American Studies Volume 4 [1973] ; 13097 >
+        au < exists ; 1974 ; Canadian Review of American Studies Volume 5 [1974] ; 13096 >
+        au < exists ; 1975 ; Canadian Review of American Studies Volume 6 [1975] ; 13095 >
+        au < exists ; 1976 ; Canadian Review of American Studies Volume 7 [1976] ; 13094 >
+        au < exists ; 1977 ; Canadian Review of American Studies Volume 8 [1977] ; 13093 >
+        au < exists ; 1978 ; Canadian Review of American Studies Volume 9 [1978] ; 13092 >
+        au < exists ; 1979 ; Canadian Review of American Studies Volume 10 [1979] ; 13091 >
+        au < exists ; 1980 ; Canadian Review of American Studies Volume 11 [1980] ; 13090 >
+        au < exists ; 1981 ; Canadian Review of American Studies Volume 12 [1981] ; 13089 >
+        au < exists ; 1982 ; Canadian Review of American Studies Volume 13 [1982] ; 13088 >
+        au < exists ; 1983 ; Canadian Review of American Studies Volume 14 [1983] ; 13087 >
+        au < exists ; 1984 ; Canadian Review of American Studies Volume 15 [1984] ; 13086 >
+        au < exists ; 1985 ; Canadian Review of American Studies Volume 16 [1985] ; 13085 >
+        au < exists ; 1986 ; Canadian Review of American Studies Volume 17 [1986] ; 13084 >
+        au < exists ; 1987 ; Canadian Review of American Studies Volume 18 [1987] ; 13083 >
+        au < exists ; 1988 ; Canadian Review of American Studies Volume 19 [1988] ; 13082 >
+        au < exists ; 1989 ; Canadian Review of American Studies Volume 20 [1989] ; 13080 >
+        au < exists ; 1990 ; Canadian Review of American Studies Volume 21 [1990] ; 13079 >
+        au < exists ; 1991-1992 ; Canadian Review of American Studies Volume 22 [1991-1992] ; 13078 >
+        au < exists ; 1992-1993 ; Canadian Review of American Studies Volume 23 [1992-1993] ; 13077 >
+        au < exists ; 1994 ; Canadian Review of American Studies Volume 24 [1994] ; 13076 >
+        au < exists ; 1995 ; Canadian Review of American Studies Volume 25 [1995] ; 13075 >
+        au < exists ; 1996 ; Canadian Review of American Studies Volume 26 [1996] ; 13074 >
+        au < exists ; 1997 ; Canadian Review of American Studies Volume 27 [1997] ; 13073 >
+        au < exists ; 1998 ; Canadian Review of American Studies Volume 28 [1998] ; 13072 >
+        au < exists ; 1999 ; Canadian Review of American Studies Volume 29 [1999] ; 13071 >
+        au < exists ; 2000 ; Canadian Review of American Studies Volume 30 [2000] ; 13068 >
+        au < exists ; 2001 ; Canadian Review of American Studies Volume 31 [2001] ; 13067 >
+        au < exists ; 2002 ; Canadian Review of American Studies Volume 32 [2002] ; 13066 >
+        au < exists ; 2003 ; Canadian Review of American Studies Volume 33 [2003] ; 13050 >
         au < manifest ; 2004 ; Canadian Review of American Studies Volume 34 [2004] ; 2521 >
         au < manifest ; 2005 ; Canadian Review of American Studies Volume 35 [2005] ; 2949 >
         au < manifest ; 2006 ; Canadian Review of American Studies Volume 36 [2006] ; 3074 >
@@ -158,9 +225,10 @@
         au < released ; 2015 ; Canadian Review of American Studies Volume 45 [2015] ; 10537 >
         au < released ; 2016 ; Canadian Review of American Studies Volume 46 [2016] ; 11161 >
         au < released ; 2017 ; Canadian Review of American Studies Volume 47 [2017] ; 12502 >
-        #au < manifest ; DDDD ; Canadian Review of American Studies Ahead of Print ; 12385 >
+        au < exists ; 2018 ; Canadian Review of American Studies Volume 48 [2018] ; 13192 >
 
     }
+
     {
     title <
       name = Canadian Theatre Review ;
@@ -201,8 +269,17 @@
         au < released ; 2016 ; Canadian Theatre Review Volume 167 [Summer 2016] ; 11406 >
         au < released ; 2016 ; Canadian Theatre Review Volume 168 [Fall 2016] ; 12245 >
         au < released ; 2017 ; Canadian Theatre Review Volume 169 [Winter 2017] ; 12395 >
+        au < exists ; 2017 ; Canadian Theatre Review Volume 170 [Spring 2017] ; 12588 >
+        au < exists ; 2017 ; Canadian Theatre Review Volume 171 [Summer 2017] ; 12825 >
+        au < exists ; 2017 ; Canadian Theatre Review Volume 172 [Fall 2017] ; 13016 >
+        au < exists ; 2018 ; Canadian Theatre Review Volume 173 [Winter 2018] ; 13183 >
+        au < exists ; 2018 ; Canadian Theatre Review Volume 174 [Spring 2018] ; 13492 >
+        au < exists ; 2018 ; Canadian Theatre Review Volume 175 [Summer 2018] ; 13594 >
+        au < exists ; 2018 ; Canadian Theatre Review Volume 176 [Fall 2018] ; 13757 >
+        au < exists ; 2019 ; Canadian Theatre Review Volume 177 [Winter 2019] ; 13922 >
 
     }
+
     {
     title <
       name = Cartographica: The International Journal for Geographic Information and Geovisualization ;
@@ -217,8 +294,10 @@
         au < released ; 2015 ; Cartographica: The International Journal for Geographic Information and Geovisualization Volume 50 [2015] ; 10495 >
         au < released ; 2016 ; Cartographica: The International Journal for Geographic Information and Geovisualization Volume 51 [2016] ; 11056 >
         au < released ; 2017 ; Cartographica: The International Journal for Geographic Information and Geovisualization Volume 52 [2017] ; 12496 >
+        au < exists ; 2018 ; Cartographica: The International Journal for Geographic Information and Geovisualization Volume 53 [2018] ; 13374 >
 
     }
+
     {
     title <
       name = Diaspora: A Journal of Transnational Studies ;
@@ -249,8 +328,10 @@
         au < manifest ; 2008 ; Diaspora: A Journal of Transnational Studies Volume 17 [2008] ; 9290 >
         au < manifest ; 2009 ; Diaspora: A Journal of Transnational Studies Volume 18 [2009] ; 10417 >
         au < released ; 2010 ; Diaspora: A Journal of Transnational Studies Volume 19 [2010] ; 12208 >
+        au < exists ; 2011 ; Diaspora: A Journal of Transnational Studies Volume 20 [2011] ; 13516 >
 
     }
+
     {
     title <
       name = Eighteenth-Century Fiction ;
@@ -291,8 +372,12 @@
         au < released ; 2014 ; Eighteenth-Century Fiction Volume 27 [2014] ; 10179 >
         au < released ; 2015-2016 ; Eighteenth-Century Fiction Volume 28 [2015-2016] ; 10794 >
         au < released ; 2016 ; Eighteenth-Century Fiction Volume 29 [2016] ; 12103 >
+        au < exists ; 2017 ; Eighteenth-Century Fiction Volume 30 [2017] ; 12896 >
+        au < exists ; 2018 ; Eighteenth-Century Fiction Volume 31 [2018] ; 13685 >
+        au < doesNotExist ; 2019 ; Eighteenth-Century Fiction Volume 31 [2019] ; 13881 >
 
     }
+
     {
     title <
       name = Francophonies d'Amérique ;
@@ -308,6 +393,7 @@
         au < manifest ; 2004 ; Francophonies d'Amérique Automne 2004 Volume 18 ; 2691 >
 
     }
+
     {
     title <
       name = Genocide Studies International ;
@@ -322,8 +408,11 @@
         au < released ; 2014 ; Genocide Studies International Volume 8 [2014] ; 9791 >
         au < released ; 2015 ; Genocide Studies International Volume 9 [2015] ; 10446 >
         au < released ; 2016 ; Genocide Studies International Volume 10 [2016] ; 11071 >
+        au < exists ; 2017 ; Genocide Studies International Volume 11 [2017] ; 13107 >
+        au < exists ; 2018 ; Genocide Studies International Volume 12 [2018] ; 13585 >
 
     }
+    
     {
     title <
       name = Genocide Studies and Prevention ;
@@ -344,6 +433,7 @@
         au < released ; 2012 ; Genocide Studies and Prevention Volume 7 [2012] ; 8231 >
 
     }
+
     {
     title <
       name = Histoire sociale / Social History ;
@@ -363,8 +453,11 @@
         au < released ; 2014 ; Histoire sociale / Social History Volume 47 [2014] ; 10024 >
         au < released ; 2015 ; Histoire sociale / Social History Volume 48 [2015] ; 10664 >
         au < released ; 2016 ; Histoire sociale / Social History Volume 49 [2016] ; 11223 >
+        au < exists ; 2017 ; Histoire sociale / Social History Volume 50 [2017] ; 12734 >
+        au < exists ; 2018 ; Histoire sociale / Social History Volume 51 [2018] ; 13596 >
 
     }
+
     {
     title <
       name = IJFAB: International Journal of Feminist Approaches to Bioethics ;
@@ -383,8 +476,12 @@
         au < released ; 2014 ; IJFAB: International Journal of Feminist Approaches to Bioethics Volume 7 [2014] ; 9852 >
         au < released ; 2015 ; IJFAB: International Journal of Feminist Approaches to Bioethics Volume 8 [2015] ; 10558 >
         au < released ; 2016 ; IJFAB: International Journal of Feminist Approaches to Bioethics Volume 9 [2016] ; 11063 >
+        au < exists ; 2017 ; IJFAB: International Journal of Feminist Approaches to Bioethics Volume 10 [2017] ; 12525 >
+        au < exists ; 2018 ; IJFAB: International Journal of Feminist Approaches to Bioethics Volume 11 [2018] ; 13284 >
+        au < exists ; 2019 ; IJFAB: International Journal of Feminist Approaches to Bioethics Volume 12 [2019] ; 13987 >
 
     }
+
     {
     title <
       name = International Journal of Canadian Studies ;
@@ -403,8 +500,12 @@
         au < released ; 2015 ; International Journal of Canadian Studies Volume 51 [2015] ; 10767 >
         au < released ; 2015 ; International Journal of Canadian Studies Volume 52 [2015] ; 11047 >
         au < released ; 2016 ; International Journal of Canadian Studies Volume 53 [2016] ; 12201 >
+        au < exists ; 2016 ; International Journal of Canadian Studies Volume 54 [2016] ; 13005 >
+        au < exists ; 2017 ; International Journal of Canadian Studies Volume 55 [2017] ; 13462 >
+        au < exists ; 2017 ; International Journal of Canadian Studies Volume 56 [2017] ; 13732 >
 
     }
+
     {
     title <
       name = Journal of Religion and Popular Culture ;
@@ -419,8 +520,11 @@
         au < released ; 2014 ; Journal of Religion and Popular Culture Volume 26 [2014] ; 9831 >
         au < released ; 2015 ; Journal of Religion and Popular Culture Volume 27 [2015] ; 10542 >
         au < released ; 2016 ; Journal of Religion and Popular Culture Volume 28 [2016] ; 12105 >
+        au < exists ; 2017 ; Journal of Religion and Popular Culture Volume 29 [2017] ; 12518 >
+        au < exists ; 2018 ; Journal of Religion and Popular Culture Volume 30 [2018] ; 13435 >
 
     }
+
     {
     title <
       name = Journal of Scholarly Publishing ;
@@ -446,6 +550,8 @@
         au < released ; 2014 ; Journal of Scholarly Publishing Volume 46 [2014] ; 10185 >
         au < released ; 2015 ; Journal of Scholarly Publishing Volume 47 [2015] ; 10778 >
         au < released ; 2016 ; Journal of Scholarly Publishing Volume 48 [2016] ; 12143 >
+        au < exists ; 2017 ; Journal of Scholarly Publishing Volume 49 [2017] ; 13008 >
+        au < exists ; 2018 ; Journal of Scholarly Publishing Volume 50 [2018] ; 13730 >
 
     }
 
@@ -460,6 +566,7 @@
 
       attr[journal_id] = 302
 
+        #au < manifest ; DDDD ; Modern Drama Ahead of Print ; 12386 >
         au < manifest ; 1958 ; Modern Drama Volume 1 [1958] ; 8674 >
         au < manifest ; 1959 ; Modern Drama Volume 2 [1959] ; 8675 >
         au < manifest ; 1960 ; Modern Drama Volume 3 [1960] ; 8676 >
@@ -520,7 +627,8 @@
         au < released ; 2015 ; Modern Drama Volume 58 [2015] ; 10497 >
         au < released ; 2016 ; Modern Drama Volume 59 [2016] ; 11037 >
         au < released ; 2017 ; Modern Drama Volume 60 [2017] ; 12442 >
-        #au < manifest ; DDDD ; Modern Drama Ahead of Print ; 12386 >
+        au < exists ; 2018 ; Modern Drama Volume 61 [2018] ; 13310 >
+        au < exists ; 2019 ; Modern Drama Volume 62 [2019] ; 13981 >
 
     }
 
@@ -607,49 +715,8 @@
 
     >
 
-      attr[journal_id] = 0000
+      attr[journal_id] = 351
 
-        au < manifest ; 1965 ; Seminar: A Journal of Germanic Studies Volume 1 [1965] ; 7947 >
-        au < manifest ; 1966 ; Seminar: A Journal of Germanic Studies Volume 2 [1966] ; 7948 >
-        au < manifest ; 1967 ; Seminar: A Journal of Germanic Studies Volume 3 [1967] ; 7949 >
-        au < manifest ; 1968 ; Seminar: A Journal of Germanic Studies Volume 4 [1968] ; 7950 >
-        au < manifest ; 1969 ; Seminar: A Journal of Germanic Studies Volume 5 [1969] ; 7951 >
-        au < manifest ; 1970 ; Seminar: A Journal of Germanic Studies Volume 6 [1970] ; 7952 >
-        au < manifest ; 1971 ; Seminar: A Journal of Germanic Studies Volume 7 [1971] ; 7953 >
-        au < manifest ; 1972 ; Seminar: A Journal of Germanic Studies Volume 8 [1972] ; 7954 >
-        au < manifest ; 1973 ; Seminar: A Journal of Germanic Studies Volume 9 [1973] ; 7955 >
-        au < manifest ; 1974 ; Seminar: A Journal of Germanic Studies Volume 10 [1974] ; 7956 >
-        au < manifest ; 1975 ; Seminar: A Journal of Germanic Studies Volume 11 [1975] ; 7957 >
-        au < manifest ; 1976 ; Seminar: A Journal of Germanic Studies Volume 12 [1976] ; 7958 >
-        au < manifest ; 1977 ; Seminar: A Journal of Germanic Studies Volume 13 [1977] ; 7959 >
-        au < manifest ; 1978 ; Seminar: A Journal of Germanic Studies Volume 14 [1978] ; 7960 >
-        au < manifest ; 1979 ; Seminar: A Journal of Germanic Studies Volume 15 [1979] ; 7961 >
-        au < manifest ; 1980 ; Seminar: A Journal of Germanic Studies Volume 16 [1980] ; 7962 >
-        au < manifest ; 1981 ; Seminar: A Journal of Germanic Studies Volume 17 [1981] ; 7963 >
-        au < manifest ; 1982 ; Seminar: A Journal of Germanic Studies Volume 18 [1982] ; 7964 >
-        au < manifest ; 1983 ; Seminar: A Journal of Germanic Studies Volume 19 [1983] ; 7965 >
-        au < manifest ; 1984 ; Seminar: A Journal of Germanic Studies Volume 20 [1984] ; 7966 >
-        au < manifest ; 1985 ; Seminar: A Journal of Germanic Studies Volume 21 [1985] ; 7967 >
-        au < manifest ; 1986 ; Seminar: A Journal of Germanic Studies Volume 22 [1986] ; 7968 >
-        au < manifest ; 1987 ; Seminar: A Journal of Germanic Studies Volume 23 [1987] ; 7969 >
-        au < manifest ; 1988 ; Seminar: A Journal of Germanic Studies Volume 24 [1988] ; 7970 >
-        au < manifest ; 1989 ; Seminar: A Journal of Germanic Studies Volume 25 [1989] ; 7971 >
-        au < manifest ; 1990 ; Seminar: A Journal of Germanic Studies Volume 26 [1990] ; 7972 >
-        au < manifest ; 1991 ; Seminar: A Journal of Germanic Studies Volume 27 [1991] ; 7973 >
-        au < manifest ; 1992 ; Seminar: A Journal of Germanic Studies Volume 28 [1992] ; 7974 >
-        au < manifest ; 1993 ; Seminar: A Journal of Germanic Studies Volume 29 [1993] ; 7975 >
-        au < manifest ; 1994 ; Seminar: A Journal of Germanic Studies Volume 30 [1994] ; 7976 >
-        au < manifest ; 1995 ; Seminar: A Journal of Germanic Studies Volume 31 [1995] ; 7977 >
-        au < manifest ; 1996 ; Seminar: A Journal of Germanic Studies Volume 32 [1996] ; 7978 >
-        au < manifest ; 1997 ; Seminar: A Journal of Germanic Studies Volume 33 [1997] ; 7979 >
-        au < manifest ; 1998 ; Seminar: A Journal of Germanic Studies Volume 34 [1998] ; 7980 >
-        au < manifest ; 1999 ; Seminar: A Journal of Germanic Studies Volume 35 [1999] ; 7981 >
-        au < manifest ; 2000 ; Seminar: A Journal of Germanic Studies Volume 36 [2000] ; 7982 >
-        au < manifest ; 2001 ; Seminar: A Journal of Germanic Studies Volume 37 [2001] ; 7983 >
-        au < manifest ; 2002 ; Seminar: A Journal of Germanic Studies Volume 38 [2002] ; 7984 >
-        au < manifest ; 2003 ; Seminar: A Journal of Germanic Studies Volume 39 [2003] ; 7985 >
-        au < manifest ; 2004 ; Seminar: A Journal of Germanic Studies Volume 40 [2004] ; 7986 >
-        au < manifest ; 2005 ; Seminar: A Journal of Germanic Studies Volume 41 [2005] ; 7987 >
         au < manifest ; 2006 ; Seminar: A Journal of Germanic Studies Volume 42 [2006] ; 3073 >
         au < manifest ; 2007 ; Seminar: A Journal of Germanic Studies Volume 43 [2007] ; 3234 >
         au < manifest ; 2008 ; Seminar: A Journal of Germanic Studies Volume 44 [2008] ; 3773 >
@@ -662,8 +729,11 @@
         au < released ; 2015 ; Seminar: A Journal of Germanic Studies Volume 51 [2015] ; 10416 >
         au < released ; 2016 ; Seminar: A Journal of Germanic Studies Volume 52 [2016] ; 10963 >
         au < released ; 2017 ; Seminar: A Journal of Germanic Studies Volume 53 [2017] ; 12452 >
+        au < exists ; 2018 ; Seminar: A Journal of Germanic Studies Volume 54 [2018] ; 13255 >
+        au < exists ; 2019 ; Seminar: A Journal of Germanic Studies Volume 55 [2019] ; 13919 >
 
     }
+
     {
     title <
       name = The Canadian Historical Review ;
@@ -773,8 +843,11 @@
         au < released ; 2015 ; The Canadian Historical Review Volume 96 [2015] ; 10445 >
         au < released ; 2016 ; The Canadian Historical Review Volume 97 [2016] ; 11089 >
         au < released ; 2017 ; The Canadian Historical Review Volume 98 [2017] ; 12437 >
+        au < exists ; 2018 ; The Canadian Historical Review Volume 99 [2018] ; 13336 >
+        au < exists ; 2019 ; The Canadian Historical Review Volume 100 [2019] ; 13999 >
 
     }
+    
     {
     title <
       name = The Canadian Journal of Human Sexuality ;
@@ -786,12 +859,15 @@
 
       attr[journal_id] = 649
 
+        #au < manifest ; DDDD ; The Canadian Journal of Human Sexuality Ahead of Print ; 12354 >
         au < released ; 2014 ; The Canadian Journal of Human Sexuality Volume 23 [2014] ; 9916 >
         au < released ; 2015 ; The Canadian Journal of Human Sexuality Volume 24 [2015] ; 10532 >
         au < released ; 2016 ; The Canadian Journal of Human Sexuality Volume 25 [2016] ; 11119 >
-        #au < manifest ; DDDD ; The Canadian Journal of Human Sexuality Ahead of Print ; 12354 >
+        au < exists ; 2017 ; The Canadian Journal of Human Sexuality Volume 26 [2017] ; 12553 >
+        au < exists ; 2018 ; The Canadian Journal of Human Sexuality Volume 27 [2018] ; 13498 >
 
     }
+
     {
     title <
       name = The Canadian Journal of Sociology ;
@@ -809,6 +885,7 @@
         au < manifest ; 2007 ; The Canadian Journal of Sociology Volume 32 [2007] ; 3320 >
 
     }
+
     {
     title <
       name = The Canadian Modern Language Review / La revue canadienne des langues vivantes ;
@@ -833,8 +910,10 @@
         au < released ; 2015 ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 71 [2015] ; 10344 >
         au < released ; 2016 ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 72 [2016] ; 11035 >
         au < released ; 2017 ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 73 [2017] ; 12376 >
+        au < exists ; 2018 ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 74 [2018] ; 13293 >
 
     }
+
     {
     title <
       name = The Tocqueville Review/La revue Tocqueville ;
@@ -854,8 +933,11 @@
         au < released ; 2014 ; The Tocqueville Review/La revue Tocqueville Volume 35 [2014] ; 10117 >
         au < released ; 2015 ; The Tocqueville Review/La revue Tocqueville Volume 36 [2015] ; 10687 >
         au < released ; 2016 ; The Tocqueville Review/La revue Tocqueville Volume 37 [2016] ; 11316 >
+        au < exists ; 2017 ; The Tocqueville Review/La revue Tocqueville Volume 38 [2017] ; 12695 >
+        au < exists ; 2018 ; The Tocqueville Review/La revue Tocqueville Volume 39 [2018] ; 13521 >
 
     }
+
     {
     title <
       name = The Yearbook of Comparative Literature ;
@@ -873,8 +955,11 @@
         au < released ; 2011 ; The Yearbook of Comparative Literature Volume 57 [2011] ; 9289 >
         au < released ; 2012 ; The Yearbook of Comparative Literature Volume 58 [2012] ; 10109 >
         au < released ; 2013 ; The Yearbook of Comparative Literature Volume 59 [2013] ; 11165 >
+        au < exists ; 2014 ; The Yearbook of Comparative Literature Volume 60 [2014] ; 12732 >
+        au < exists ; 2015 ; The Yearbook of Comparative Literature Volume 61 [2015] ; 13133 >
 
     }
+    
     {
     title <
       name = Toronto Journal of Theology ;
@@ -886,15 +971,18 @@
 
       attr[journal_id] = 527
 
+        #au < manifest ; DDDD ; Toronto Journal of Theology Ahead of Print ; 12484 >
         au < released ; 2011 ; Toronto Journal of Theology Volume 27 [2011] ; 6992 >
         au < released ; 2012 ; Toronto Journal of Theology Volume 28 [2012] ; 8153 >
         au < released ; 2013 ; Toronto Journal of Theology Volume 29 [2013] ; 8943 >
         au < released ; 2014 ; Toronto Journal of Theology Volume 30 [2014] ; 10028 >
         au < released ; 2015 ; Toronto Journal of Theology Volume 31 [2015] ; 10474 >
         au < released ; 2016 ; Toronto Journal of Theology Volume 32 [2016] ; 11304 >
-        #au < manifest ; DDDD ; Toronto Journal of Theology Ahead of Print ; 12484 >
+        au < exists ; 2017 ; Toronto Journal of Theology Volume 33 [2017] ; 12660 >
+        au < exists ; 2018 ; Toronto Journal of Theology Volume 34 [2018] ; 13583 >
 
     }
+
     {
     title <
       name = University of Toronto Law Journal ;
@@ -906,6 +994,7 @@
 
       attr[journal_id] = 252
 
+        #au < manifest ; DDDD ; University of Toronto Law Journal Ahead of Print ; 12325 >
         au < manifest ; 2004 ; University of Toronto Law Journal Volume 54 [2004] ; 1777 >
         au < manifest ; 2005 ; University of Toronto Law Journal Volume 55 [2005] ; 2637 >
         au < manifest ; 2006 ; University of Toronto Law Journal Volume 56 [2006] ; 2934 >
@@ -920,9 +1009,11 @@
         au < released ; 2015 ; University of Toronto Law Journal Volume 65 [2015] ; 10489 >
         au < released ; 2016 ; University of Toronto Law Journal Volume 66 [2016] ; 10928 >
         au < released ; 2017 ; University of Toronto Law Journal Volume 67 [2017] ; 12323 >
-        #au < manifest ; DDDD ; University of Toronto Law Journal Ahead of Print ; 12325 >
+        au < exists ; 2018 ; University of Toronto Law Journal Volume 68 [2018] ; 13176 >
+        au < exists ; 2019 ; University of Toronto Law Journal Volume 69 [2019] ; 13857 >
 
     }
+
     {
     title <
       name = University of Toronto Quarterly ;
@@ -1018,6 +1109,7 @@
         au < released ; 2015 ; University of Toronto Quarterly Volume 84 [2015] ; 10523 >
         au < released ; 2016 ; University of Toronto Quarterly Volume 85 [2016] ; 10987 >
         au < released ; 2017 ; University of Toronto Quarterly Volume 86 [2017] ; 12365 >
+        au < exists ; 2018 ; University of Toronto Quarterly Volume 87 [2018] ; 13340 >
 
     }
 
