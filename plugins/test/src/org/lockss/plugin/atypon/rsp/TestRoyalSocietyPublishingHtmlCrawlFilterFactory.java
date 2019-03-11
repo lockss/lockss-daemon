@@ -1174,19 +1174,8 @@ public class TestRoyalSocietyPublishingHtmlCrawlFilterFactory extends LockssTest
               new StringInputStream(nameToHash), Constants.DEFAULT_ENCODING);
 
       try {
+
         filteredStr = StringUtil.fromInputStream(actIn);
-
-        //Write to a file for easy comparision for debugging purpose
-
-        String currentDirectory = System.getProperty("user.dir");
-        String pathname = currentDirectory +
-                "/plugins/test/src/org/lockss/plugin/atypon/rsp/generated.html";
-        if (filteredStr.length() > 0) {
-          FileUtils.writeStringToFile(new File(pathname), filteredStr, Constants.DEFAULT_ENCODING);
-        } else {
-          FileUtils.writeStringToFile(new File(pathname), "Empty", Constants.DEFAULT_ENCODING);
-        }
-
 
       } catch (IOException e) {
         e.printStackTrace();
@@ -1228,11 +1217,6 @@ public class TestRoyalSocietyPublishingHtmlCrawlFilterFactory extends LockssTest
 
       sb1.append(beforeArr[i].replaceAll("\\s+", ""));
       sb2.append(afterArr[i].replaceAll("\\s+", ""));
-
-      if (sb1.toString().equals(sb2.toString())==false) {
-        log.info("SB1=======" + sb1.toString());
-        log.info("SB2=======" + sb2.toString());
-      }
 
       assertEquals(sb2.toString(), sb2.toString());
 
