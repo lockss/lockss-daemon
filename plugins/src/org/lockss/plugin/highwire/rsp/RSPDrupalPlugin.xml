@@ -10,7 +10,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Royal Society Publishing Plugin (Legacy) </string>
+    <string>Royal Society Publishing Plugin (Legacy)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -48,6 +48,6 @@
   </entry>
    <entry>
     <string>au_name</string>
-    <string>"Royal Society Publishing Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
+    <string>"Royal Society Publishing Plugin (Legacy), Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
 </map>
