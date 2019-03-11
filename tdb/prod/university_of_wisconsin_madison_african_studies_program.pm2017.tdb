@@ -6,6 +6,7 @@
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:19
 
     {
     title <
@@ -27,6 +28,8 @@
         au < released ; 2014 ; African Economic History Volume 42 [2014] ; 10771 >
         au < released ; 2015 ; African Economic History Volume 43 [2015] ; 11007 >
         au < released ; 2016 ; African Economic History Volume 44 [2016] ; 12191 >
+        au < exists ; 2017 ; African Economic History Volume 45 [2017] ; 12718 >
+        au < exists ; 2018 ; African Economic History Volume 46 [2018] ; 13501 >
 
     }
 
