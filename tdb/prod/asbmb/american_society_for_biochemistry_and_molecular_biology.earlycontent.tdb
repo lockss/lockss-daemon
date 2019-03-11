@@ -339,8 +339,8 @@
     implicit < status ; year ; name ; param[volume_name] >
 
     au < ready ; 1959-1960 ; The Journal of Lipid Research Volume 1 ; 1 >
-    au < testing ; 1961 ; The Journal of Lipid Research Volume 2 ; 2 >
-    au < testing ; 1962 ; The Journal of Lipid Research Volume 3 ; 3 >
+    au < ready ; 1961 ; The Journal of Lipid Research Volume 2 ; 2 >
+    au < ready ; 1962 ; The Journal of Lipid Research Volume 3 ; 3 >
     au < ready ; 1963 ; The Journal of Lipid Research Volume 4 ; 4 >
     au < ready ; 1964 ; The Journal of Lipid Research Volume 5 ; 5 >
     au < released ; 1965 ; The Journal of Lipid Research Volume 6 ; 6 >

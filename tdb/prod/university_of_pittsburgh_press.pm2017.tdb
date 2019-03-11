@@ -6,6 +6,7 @@
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:49
 
     {
     title <
@@ -29,6 +30,9 @@
         au < released ; 2011 ; Cuban Studies Volume 42 [2011] ; 8454 >
         au < released ; 2015 ; Cuban Studies Volume 43 [2015] ; 10740 >
         au < released ; 2016 ; Cuban Studies Volume 44 [2016] ; 11112 >
+        au < exists ; 2017 ; Cuban Studies Volume 45 [2017] ; 12904 >
+        au < exists ; 2018 ; Cuban Studies Volume 46 [2018] ; 13401 >
+        au < exists ; 2019 ; Cuban Studies Volume 47 [2019] ; 13995 >
 
     }
 
