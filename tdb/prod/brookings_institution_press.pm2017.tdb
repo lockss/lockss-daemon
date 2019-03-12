@@ -10,6 +10,24 @@
 
     {
     title <
+      name = Behavioral Science & Policy ;
+      issn = 2379-4607 ;
+      eissn = 2379-4615 ;
+      issnl = 2379-4607
+
+    >
+
+      attr[journal_id] = 696
+
+        au < exists ; 2015 ; Behavioral Science & Policy Volume 1 [2015] ; 10913 >
+        au < exists ; 2016 ; Behavioral Science & Policy Volume 2 [2016] ; 12158 >
+        au < exists ; 2017 ; Behavioral Science & Policy Volume 3 [2017] ; 12900 >
+        au < exists ; 2018 ; Behavioral Science & Policy Volume 4 [2018] ; 13873 >
+
+    }
+
+    {
+    title <
       name = Brookings Papers on Economic Activity ;
       issn = 0007-2303  ;
       eissn = 1533-4465  ;
