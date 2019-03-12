@@ -32,9 +32,11 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.tdb;
 
+import java.io.File;
 import java.util.*;
 
 import org.apache.commons.cli.*;
+import org.apache.commons.io.FileUtils;
 
 /**
  * <p>
@@ -125,13 +127,43 @@ public class InputOption {
       AppUtil.error("--%s cannot be used with a list of input files", KEY_INPUT);
     }
     if (cmd.hasOption(KEY_INPUT)) {
-      options.put(KEY_INPUT, Arrays.asList(cmd.getOptionValue(KEY_INPUT)));
+    	/* This must be a file - check happens farther on */
+    	options.put(KEY_INPUT, Arrays.asList(cmd.getOptionValue(KEY_INPUT)));
     }
     else {
       if (args.length > 0) {
-        options.put(KEY_INPUT, Arrays.asList(args));
+        options.put(KEY_INPUT, fileListFromArgs(args));
       }
     }
+  }
+  
+  /*
+   * Loop over the given arguments - 
+   * For file arguments, just add them to the list of input arguments
+   * For directory arguments, add any ".tdb" files that live in or below that directory to the
+   * list of input arguments
+   */
+  private static List<String> fileListFromArgs(String[] argList) {
+	  List<String> retList = new ArrayList<String>();
+	  for (String oneArg : argList) {
+		  retList.addAll(fileListFromOneArg(oneArg));
+	  }
+	  return retList;
+  }
+
+  private static final String[] TDBSUFFIX = {"tdb"};  // use the suffix to filter - dot is assumed in listFiles
+
+  private static List<String> fileListFromOneArg(String oneArg) {
+	  File aFile = new File(oneArg);
+	  if (aFile.isDirectory()) {
+		  List<String> retList = new ArrayList<String>();
+		  Collection<File> tdbfiles = FileUtils.listFiles(aFile, TDBSUFFIX, true); /*recursive*/
+		  for (File tdbfile : tdbfiles) {
+			  retList.add(tdbfile.toString());
+		  }
+		  return retList;
+	  }
+	  return Arrays.asList(oneArg);
   }
 
   /**

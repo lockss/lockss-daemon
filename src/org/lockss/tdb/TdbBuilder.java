@@ -68,7 +68,7 @@ public class TdbBuilder extends TdbParserBaseListener {
    * 
    * @since 1.68
    */
-  public static final String VERSION = "[TdbBuilder:0.3.2]";
+  public static final String VERSION = "[TdbBuilder:0.3.3]";
   
   /**
    * <p>
