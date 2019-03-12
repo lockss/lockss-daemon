@@ -328,33 +328,36 @@
 
       comment[publisher] = Open Library of Humanities
 #      param[base_url] = https://traj.openlibhums.org/
+#     changed name from "Conference" to "Journal"
+#     for the conference, articles are from the previous year.
+#     nothing published in 1995.
 
-      au < exists ; exists ; 1991 ; 1 ; Theoretical Roman Archaeology Journal Volume 1991 ; 1991 ; https://traj.openlibhums.org/ ; >
-      au < exists ; exists ; 1992 ; 2 ; Theoretical Roman Archaeology Journal Volume 1992 ; 1992 ; https://traj.openlibhums.org/ ; >
-      au < manifest ; exists ; 1993 ; 3 ; Theoretical Roman Archaeology Journal Volume 1993 ; 1993 ; https://traj.openlibhums.org/ ; >
-      au < exists ; exists ; 1994 ; 4 ; Theoretical Roman Archaeology Journal Volume 1994 ; 1994 ; https://traj.openlibhums.org/ ; >
-      au < manifest ; exists ; 1995 ; 5 ; Theoretical Roman Archaeology Journal Volume 1995 ; 1995 ; https://traj.openlibhums.org/ ; >
-      au < exists ; exists ; 1996 ; 6 ; Theoretical Roman Archaeology Journal Volume 1996 ; 1996 ; https://traj.openlibhums.org/ ; >
-      au < manifest ; exists ; 1997 ; 7 ; Theoretical Roman Archaeology Journal Volume 1997 ; 1997 ; https://traj.openlibhums.org/ ; >
-      au < manifest ; exists ; 1998 ; 8 ; Theoretical Roman Archaeology Journal Volume 1998 ; 1998 ; https://traj.openlibhums.org/ ; >
-      au < manifest ; exists ; 1999 ; 9 ; Theoretical Roman Archaeology Journal Volume 1999 ; 1999 ; https://traj.openlibhums.org/ ; >
-      au < frozen ; exists ; 2000 ; 10 ; Theoretical Roman Archaeology Journal Volume 2000 ; 2000 ; https://traj.openlibhums.org/ ; >
-      au < frozen ; exists ; 2001 ; 11 ; Theoretical Roman Archaeology Journal Volume 2001 ; 2001 ; https://traj.openlibhums.org/ ; >
-      au < frozen ; exists ; 2002 ; 12 ; Theoretical Roman Archaeology Journal Volume 2002 ; 2002 ; https://traj.openlibhums.org/ ; >
-      au < frozen ; exists ; 2003 ; 13 ; Theoretical Roman Archaeology Journal Volume 2003 ; 2003 ; https://traj.openlibhums.org/ ; >
-      au < frozen ; exists ; 2004 ; 14 ; Theoretical Roman Archaeology Journal Volume 2004 ; 2004 ; https://traj.openlibhums.org/ ; >
-      au < frozen ; exists ; 2005 ; 15 ; Theoretical Roman Archaeology Journal Volume 2005 ; 2005 ; https://traj.openlibhums.org/ ; >
-      au < frozen ; exists ; 2006 ; 16 ; Theoretical Roman Archaeology Journal Volume 2006 ; 2006 ; https://traj.openlibhums.org/ ; >
-      au < frozen ; exists ; 2007 ; 17 ; Theoretical Roman Archaeology Journal Volume 2007 ; 2007 ; https://traj.openlibhums.org/ ; >
-      au < frozen ; exists ; 2008 ; 18 ; Theoretical Roman Archaeology Journal Volume 2008 ; 2008 ; https://traj.openlibhums.org/ ; >
-      au < frozen ; exists ; 2009 ; 19 ; Theoretical Roman Archaeology Journal Volume 2009 ; 2009 ; https://traj.openlibhums.org/ ; >
-      au < frozen ; exists ; 2010 ; 20 ; Theoretical Roman Archaeology Journal Volume 2010 ; 2010 ; https://traj.openlibhums.org/ ; >
-      au < frozen ; exists ; 2011 ; 21 ; Theoretical Roman Archaeology Journal Volume 2011 ; 2011 ; https://traj.openlibhums.org/ ; >
-      au < frozen ; exists ; 2012 ; 22 ; Theoretical Roman Archaeology Journal Volume 2012 ; 2012 ; https://traj.openlibhums.org/ ; >
-      au < frozen ; exists ; 2013 ; 23 ; Theoretical Roman Archaeology Journal Volume 2013 ; 2013 ; https://traj.openlibhums.org/ ; >
-      au < frozen ; exists ; 2014 ; 24 ; Theoretical Roman Archaeology Journal Volume 2014 ; 2014 ; https://traj.openlibhums.org/ ; >
-      au < frozen ; exists ; 2015 ; 25 ; Theoretical Roman Archaeology Journal Volume 2015 ; 2015 ; https://traj.openlibhums.org/ ; >
-      au < manifest ; exists ; 2016 ; 26 ; Theoretical Roman Archaeology Journal Volume 2016 ; 2016 ; https://traj.openlibhums.org/ ; >#does not exist. start url has articles from 2015.
+      au < doesNotExist ; doesNotExist ; 1991 ; 1 ; Theoretical Roman Archaeology Conference Volume 1991 ; 1991 ; https://traj.openlibhums.org/ ; >
+      au < doesNotExist ; doesNotExist ; 1992 ; 2 ; Theoretical Roman Archaeology Conference Volume 1992 ; 1992 ; https://traj.openlibhums.org/ ; >
+      au < manifest ; exists ; 1993 ; 3 ; Theoretical Roman Archaeology Conference Volume 1993 ; 1993 ; https://traj.openlibhums.org/ ; ># 1991 articles
+      au < doesNotExist ; doesNotExist ; 1994 ; 4 ; Theoretical Roman Archaeology Conference Volume 1994 ; 1994 ; https://traj.openlibhums.org/ ; >
+      au < manifest ; exists ; 1995 ; 5 ; Theoretical Roman Archaeology Conference Volume 1995 ; 1995 ; https://traj.openlibhums.org/ ; ># 1992 and 1994 articles
+      au < doesNotExist ; doesNotExist ; 1996 ; 6 ; Theoretical Roman Archaeology Conference Volume 1996 ; 1996 ; https://traj.openlibhums.org/ ; >
+      au < manifest ; exists ; 1997 ; 7 ; Theoretical Roman Archaeology Conference Volume 1997 ; 1997 ; https://traj.openlibhums.org/ ; ># 1996 articles
+      au < manifest ; exists ; 1998 ; 8 ; Theoretical Roman Archaeology Conference Volume 1998 ; 1998 ; https://traj.openlibhums.org/ ; >
+      au < manifest ; exists ; 1999 ; 9 ; Theoretical Roman Archaeology Conference Volume 1999 ; 1999 ; https://traj.openlibhums.org/ ; >
+      au < frozen ; exists ; 2000 ; 10 ; Theoretical Roman Archaeology Conference Volume 2000 ; 2000 ; https://traj.openlibhums.org/ ; >
+      au < frozen ; exists ; 2001 ; 11 ; Theoretical Roman Archaeology Conference Volume 2001 ; 2001 ; https://traj.openlibhums.org/ ; >
+      au < frozen ; exists ; 2002 ; 12 ; Theoretical Roman Archaeology Conference Volume 2002 ; 2002 ; https://traj.openlibhums.org/ ; >
+      au < frozen ; exists ; 2003 ; 13 ; Theoretical Roman Archaeology Conference Volume 2003 ; 2003 ; https://traj.openlibhums.org/ ; >
+      au < frozen ; exists ; 2004 ; 14 ; Theoretical Roman Archaeology Conference Volume 2004 ; 2004 ; https://traj.openlibhums.org/ ; >
+      au < frozen ; exists ; 2005 ; 15 ; Theoretical Roman Archaeology Conference Volume 2005 ; 2005 ; https://traj.openlibhums.org/ ; >
+      au < frozen ; exists ; 2006 ; 16 ; Theoretical Roman Archaeology Conference Volume 2006 ; 2006 ; https://traj.openlibhums.org/ ; >
+      au < frozen ; exists ; 2007 ; 17 ; Theoretical Roman Archaeology Conference Volume 2007 ; 2007 ; https://traj.openlibhums.org/ ; >
+      au < frozen ; exists ; 2008 ; 18 ; Theoretical Roman Archaeology Conference Volume 2008 ; 2008 ; https://traj.openlibhums.org/ ; >
+      au < frozen ; exists ; 2009 ; 19 ; Theoretical Roman Archaeology Conference Volume 2009 ; 2009 ; https://traj.openlibhums.org/ ; >
+      au < frozen ; exists ; 2010 ; 20 ; Theoretical Roman Archaeology Conference Volume 2010 ; 2010 ; https://traj.openlibhums.org/ ; >
+      au < frozen ; exists ; 2011 ; 21 ; Theoretical Roman Archaeology Conference Volume 2011 ; 2011 ; https://traj.openlibhums.org/ ; >
+      au < frozen ; exists ; 2012 ; 22 ; Theoretical Roman Archaeology Conference Volume 2012 ; 2012 ; https://traj.openlibhums.org/ ; >
+      au < frozen ; exists ; 2013 ; 23 ; Theoretical Roman Archaeology Conference Volume 2013 ; 2013 ; https://traj.openlibhums.org/ ; >
+      au < frozen ; exists ; 2014 ; 24 ; Theoretical Roman Archaeology Conference Volume 2014 ; 2014 ; https://traj.openlibhums.org/ ; >
+      au < frozen ; exists ; 2015 ; 25 ; Theoretical Roman Archaeology Conference Volume 2015 ; 2015 ; https://traj.openlibhums.org/ ; >
+      au < doesNotExist ; doesNotExist ; 2016 ; 26 ; Theoretical Roman Archaeology Journal Volume 2016 ; 2016 ; https://traj.openlibhums.org/ ; >
       au < doesNotExist ; doesNotExist ; 2017 ; 27 ; Theoretical Roman Archaeology Journal Volume 2017 ; 2017 ; https://traj.openlibhums.org/ ; >
       au < deepCrawl ; exists ; 2018 ; 28 ; Theoretical Roman Archaeology Journal Volume 2018 ; 2018 ; https://traj.openlibhums.org/ ; >
 
@@ -449,7 +452,14 @@
     au < doNotProcess ; doNotProcess ; 2001 ; 3 ; Scandinavian Journal of Disability Research Volume 3 ; 2001 ; https://www.sjdr.se/ ; >
     au < doesNotExist ; doesNotExist ; 2002 ; 4 ; Scandinavian Journal of Disability Research Volume 4 ; 2002 ; https://www.sjdr.se/ ; >
     au < doNotProcess ; doNotProcess ; 2003 ; 5 ; Scandinavian Journal of Disability Research Volume 5 ; 2003 ; https://www.sjdr.se/ ; >
+
+    au < exists ; exists ; 2013 ; 15 ; Scandinavian Journal of Disability Research Volume 15 ; 2013 ; https://www.sjdr.se/ ; >
+    au < exists ; exists ; 2014 ; 16 ; Scandinavian Journal of Disability Research Volume 16 ; 2014 ; https://www.sjdr.se/ ; >
+    au < exists ; exists ; 2015 ; 17 ; Scandinavian Journal of Disability Research Volume 17 ; 2015 ; https://www.sjdr.se/ ; >
+    au < exists ; exists ; 2016 ; 18 ; Scandinavian Journal of Disability Research Volume 18 ; 2016 ; https://www.sjdr.se/ ; >
+    au < exists ; exists ; 2017 ; 19 ; Scandinavian Journal of Disability Research Volume 19 ; 2017 ; https://www.sjdr.se/ ; >
     au < deepCrawl ; exists ; 2018 ; 20 ; Scandinavian Journal of Disability Research Volume 20 ; 2018 ; https://www.sjdr.se/ ; >
+    au < exists ; exists ; 2019 ; 21 ; Scandinavian Journal of Disability Research Volume 21 ; 2019 ; https://www.sjdr.se/ ; >
 
   }
 
@@ -733,7 +743,7 @@
       au < finished ; finished ; 2015 ; 1 ; Glocality: Undergraduate Academic Journal Volume 2015 ; 2015 ; http://www.glocality.eu/ ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2016 ; 2 ; Glocality: Undergraduate Academic Journal Volume 2016 ; 2016 ; http://www.glocality.eu/ ; >
       au < deepCrawl ; exists ; 2017 ; 3 ; Glocality: Undergraduate Academic Journal Volume 2017 ; 2017 ; http://www.glocality.eu/ ; >
-      au < expected ; exists ; 2018 ; 4 ; Glocality: Undergraduate Academic Journal Volume 2018 ; 2018 ; https://www.glocality.eu/ ; >
+      au < expected ; exists ; 2019 ; 4 ; Glocality: Undergraduate Academic Journal Volume 2019 ; 2019 ; https://www.glocality.eu/ ; >
 
   }
 
@@ -971,8 +981,7 @@
       au < doNotProcess ; exists ; 2014 ; 3 ; Journal of Open Archaeology Data Volume 2014 ; 2014 ; https://openarchaeologydata.metajnl.com/ ; >
       au < finished ; finished ; 2015 ; 4 ; Journal of Open Archaeology Data Volume 2015 ; 2015 ; http://openarchaeologydata.metajnl.com/ ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2016 ; 5 ; Journal of Open Archaeology Data Volume 2016 ; 2016 ; http://openarchaeologydata.metajnl.com/ ; >
-      au < exists ; exists ; 2017 ; 6 ; Journal of Open Archaeology Data Volume 2017 ; 2017 ; https://openarchaeologydata.metajnl.com/ ; >
-      au < deepCrawl ; exists ; 2018 ; 7 ; Journal of Open Archaeology Data Volume 2018 ; 2018 ; https://openarchaeologydata.metajnl.com/ ; >
+      au < deepCrawl ; exists ; 2018 ; 6 ; Journal of Open Archaeology Data Volume 2018 ; 2018 ; https://openarchaeologydata.metajnl.com/ ; >
 
   }
 
@@ -1180,7 +1189,7 @@
 #      param[base_url] = https://journalofmore.org/
 
       au < frozen ; exists ; 2016 ; 4 ; Journal of Montessori Research & Education Volume 2016 ; 2016 ; https://journalofmore.org/ ; >
-      au < expected ; exists ; 2018 ; 5 ; Journal of Montessori Research & Education Volume 2018 ; 2018 ; https://journalofmore.org/ ; >
+      au < expected ; exists ; 2019 ; 5 ; Journal of Montessori Research & Education Volume 2018 ; 2018 ; https://journalofmore.org/ ; >
 
   }
 
@@ -1253,8 +1262,7 @@
       au < doNotProcess ; exists ; 2015 ; 26 ; Papers from the Institute of Archaeology Volume 2015 ; 2015 ; https://pia-journal.co.uk/ ; >
       au < frozen ; exists ; 2016 ; 27 ; Papers from the Institute of Archaeology Volume 2016 ; 2016 ; https://pia-journal.co.uk/ ; >
       au < deepCrawl ; exists ; 2017 ; 28 ; Papers from the Institute of Archaeology Volume 2017 ; 2017 ; https://pia-journal.co.uk/ ; >
-      au < expected ; exists ; 2018 ; 29 ; Papers from the Institute of Archaeology Volume 2018 ; 2018 ; https://pia-journal.co.uk/ ; >
-
+      #moved to ucla
     }
   }
 
@@ -1287,7 +1295,7 @@
       au < doNotProcess ; exists ; 2015 ; 7 ; Present Pasts Volume 2015 ; 2015 ; https://presentpasts.info/ ; >
       au < frozen ; exists ; 2016 ; 8 ; Present Pasts Volume 2016 ; 2016 ; https://presentpasts.info/ ; >
       au < deepCrawl ; exists ; 2017 ; 9 ; Present Pasts Volume 2017 ; 2017 ; https://presentpasts.info/ ; >
-      au < expected ; exists ; 2018 ; 10 ; Present Pasts Volume 2018 ; 2018 ; https://presentpasts.info/ ; >
+      au < expected ; exists ; 2019 ; 10 ; Present Pasts Volume 2019 ; 2019 ; https://presentpasts.info/ ; >
 
     }
   }
@@ -1768,6 +1776,7 @@
 
       comment[publisher] = Utrecht University Library
 #      param[base_url] = https://www.de-zeventiende-eeuw.nl/
+#     stopped publication after 2016
 
       au < frozen ; exists ; 2012 ; 28 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2012 ; 2012 ; https://www.de-zeventiende-eeuw.nl/ ; >
       au < frozen ; exists ; 2013 ; 29 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2013 ; 2013 ; https://www.de-zeventiende-eeuw.nl/ ; >
@@ -1775,7 +1784,6 @@
       au < frozen ; exists ; 2015 ; 31 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2015 ; 2015 ; https://www.de-zeventiende-eeuw.nl/ ; >
       au < notReady ; exists ; 2016 ; 32 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2016 ; 2016 ; https://www.de-zeventiende-eeuw.nl/ ; >
       au < deepCrawl ; exists ; 2017 ; 33 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2017 ; 2017 ; https://www.de-zeventiende-eeuw.nl/ ; >
-      au < expected ; exists ; 2018 ; 34 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2018 ; 2018 ; https://www.de-zeventiende-eeuw.nl/ ; >
 
   }
 
@@ -2245,9 +2253,8 @@
       au < manifest ; exists ; 2014 ; 11 ; British and Irish Orthoptic Journal Volume 2014 ; 2014 ; https://www.bioj-online.com/ ; >
       au < manifest ; exists ; 2015 ; 12 ; British and Irish Orthoptic Journal Volume 2015 ; 2015 ; https://www.bioj-online.com/ ; >
       au < manifest ; exists ; 2016 ; 13 ; British and Irish Orthoptic Journal Volume 2016 ; 2016 ; https://www.bioj-online.com/ ; >
-      au < exists ; exists ; 2017 ; 14 ; British and Irish Orthoptic Journal Volume 2017 ; 2017 ; https://www.bioj-online.com/ ; >
-      au < manifest ; exists ; 2018 ; 15 ; British and Irish Orthoptic Journal Volume 2018 ; 2018 ; https://www.bioj-online.com/ ; >
-      au < manifest ; exists ; 2019 ; 16 ; British and Irish Orthoptic Journal Volume 2019 ; 2019 ; https://www.bioj-online.com/ ; >
+      au < manifest ; exists ; 2018 ; 14 ; British and Irish Orthoptic Journal Volume 2018 ; 2018 ; https://www.bioj-online.com/ ; >
+      au < manifest ; exists ; 2019 ; 15 ; British and Irish Orthoptic Journal Volume 2019 ; 2019 ; https://www.bioj-online.com/ ; >
 
   }
 
