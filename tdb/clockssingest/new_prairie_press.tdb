@@ -302,11 +302,11 @@
       param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = advocate
 
-      au < exists ; exists ; 2011 ; The Advocate Volume 19 ; 19 ; >
-      au < exists ; exists ; 2012 ; The Advocate Volume 20 ; 20 ; >
-      au < exists ; exists ; 2013 ; The Advocate Volume 21 ; 21 ; >
-      au < exists ; exists ; 2014 ; The Advocate Volume 22 ; 22 ; >
-      au < exists ; exists ; 2015 ; The Advocate Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2011 ; The Advocate Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2012 ; The Advocate Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2013 ; The Advocate Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2014 ; The Advocate Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2015 ; The Advocate Volume 23 ; 23 ; >
       au < exists ; exists ; 2016 ; The Advocate Volume 24 ; 24 ; >
       au < exists ; exists ; 2017 ; The Advocate Volume 25 ; 25 ; >
       au < expected ; exists ; 2018 ; The Advocate Volume 26 ; 26 ; >
@@ -327,9 +327,9 @@
       param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = crossingborders
 
-      au < exists ; exists ; 2015 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 1 ; 1 ; >
-      au < exists ; exists ; 2016 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 2 ; 2 ; >
-      au < exists ; exists ; 2017 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2015 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2016 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2017 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 3 ; 3 ; >
       au < expected ; exists ; 2018 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 4 ; 4 ; >
       au < expected ; exists ; 2019 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 5 ; 5 ; >
 
@@ -349,50 +349,50 @@
       param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = edconsiderations
 
-      au < exists ; exists ; 1973 ; Educational Considerations Volume 1 ; 1 ; >
-      au < exists ; exists ; 1974 ; Educational Considerations Volume 2 ; 2 ; >
-      au < exists ; exists ; 1975 ; Educational Considerations Volume 3 ; 3 ; >
-      au < exists ; exists ; 1976 ; Educational Considerations Volume 4 ; 4 ; >
-      au < exists ; exists ; 1977 ; Educational Considerations Volume 5 ; 5 ; >
-      au < exists ; exists ; 1978 ; Educational Considerations Volume 6 ; 6 ; >
-      au < exists ; exists ; 1979 ; Educational Considerations Volume 7 ; 7 ; >
-      au < exists ; exists ; 1980 ; Educational Considerations Volume 8 ; 8 ; >
-      au < exists ; exists ; 1981 ; Educational Considerations Volume 9 ; 9 ; >
-      au < exists ; exists ; 1982 ; Educational Considerations Volume 10 ; 10 ; >
-      au < exists ; exists ; 1983 ; Educational Considerations Volume 11 ; 11 ; >
-      au < exists ; exists ; 1984 ; Educational Considerations Volume 12 ; 12 ; >
-      au < exists ; exists ; 1985 ; Educational Considerations Volume 13 ; 13 ; >
-      au < exists ; exists ; 1986 ; Educational Considerations Volume 14 ; 14 ; >
-      au < exists ; exists ; 1987 ; Educational Considerations Volume 15 ; 15 ; >
-      au < exists ; exists ; 1988 ; Educational Considerations Volume 16 ; 16 ; >
-      au < exists ; exists ; 1989 ; Educational Considerations Volume 17 ; 17 ; >
-      au < exists ; exists ; 1990 ; Educational Considerations Volume 18 ; 18 ; >
-      au < exists ; exists ; 1991 ; Educational Considerations Volume 19 ; 19 ; >
-      au < exists ; exists ; 1992 ; Educational Considerations Volume 20 ; 20 ; >
-      au < exists ; exists ; 1993 ; Educational Considerations Volume 21 ; 21 ; >
-      au < exists ; exists ; 1994 ; Educational Considerations Volume 22 ; 22 ; >
-      au < exists ; exists ; 1995 ; Educational Considerations Volume 23 ; 23 ; >
-      au < exists ; exists ; 1996 ; Educational Considerations Volume 24 ; 24 ; >
-      au < exists ; exists ; 1997 ; Educational Considerations Volume 25 ; 25 ; >
-      au < exists ; exists ; 1998 ; Educational Considerations Volume 26 ; 26 ; >
-      au < exists ; exists ; 1999 ; Educational Considerations Volume 27 ; 27 ; >
-      au < exists ; exists ; 2000 ; Educational Considerations Volume 28 ; 28 ; >
-      au < exists ; exists ; 2001 ; Educational Considerations Volume 29 ; 29 ; >
-      au < exists ; exists ; 2002 ; Educational Considerations Volume 30 ; 30 ; >
-      au < exists ; exists ; 2003 ; Educational Considerations Volume 31 ; 31 ; >
-      au < exists ; exists ; 2004 ; Educational Considerations Volume 32 ; 32 ; >
-      au < exists ; exists ; 2005 ; Educational Considerations Volume 33 ; 33 ; >
-      au < exists ; exists ; 2006 ; Educational Considerations Volume 34 ; 34 ; >
-      au < exists ; exists ; 2007 ; Educational Considerations Volume 35 ; 35 ; >
-      au < exists ; exists ; 2008 ; Educational Considerations Volume 36 ; 36 ; >
-      au < exists ; exists ; 2009 ; Educational Considerations Volume 37 ; 37 ; >
-      au < exists ; exists ; 2010 ; Educational Considerations Volume 38 ; 38 ; >
-      au < exists ; exists ; 2011 ; Educational Considerations Volume 39 ; 39 ; >
-      au < exists ; exists ; 2012 ; Educational Considerations Volume 40 ; 40 ; >
-      au < exists ; exists ; 2013 ; Educational Considerations Volume 41 ; 41 ; >
-      au < exists ; exists ; 2014 ; Educational Considerations Volume 42 ; 42 ; >
-      au < exists ; exists ; 2015 ; Educational Considerations Volume 43 ; 43 ; >
-      au < exists ; exists ; 2016 ; Educational Considerations Volume 44 ; 44 ; >
+      au < manifest ; exists ; 1973 ; Educational Considerations Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1974 ; Educational Considerations Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1975 ; Educational Considerations Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1976 ; Educational Considerations Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1977 ; Educational Considerations Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1978 ; Educational Considerations Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1979 ; Educational Considerations Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1980 ; Educational Considerations Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1981 ; Educational Considerations Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1982 ; Educational Considerations Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1983 ; Educational Considerations Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1984 ; Educational Considerations Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1985 ; Educational Considerations Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1986 ; Educational Considerations Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1987 ; Educational Considerations Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1988 ; Educational Considerations Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1989 ; Educational Considerations Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1990 ; Educational Considerations Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1991 ; Educational Considerations Volume 19 ; 19 ; >
+      au < manifest ; exists ; 1992 ; Educational Considerations Volume 20 ; 20 ; >
+      au < manifest ; exists ; 1993 ; Educational Considerations Volume 21 ; 21 ; >
+      au < manifest ; exists ; 1994 ; Educational Considerations Volume 22 ; 22 ; >
+      au < manifest ; exists ; 1995 ; Educational Considerations Volume 23 ; 23 ; >
+      au < manifest ; exists ; 1996 ; Educational Considerations Volume 24 ; 24 ; >
+      au < manifest ; exists ; 1997 ; Educational Considerations Volume 25 ; 25 ; >
+      au < manifest ; exists ; 1998 ; Educational Considerations Volume 26 ; 26 ; >
+      au < manifest ; exists ; 1999 ; Educational Considerations Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2000 ; Educational Considerations Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2001 ; Educational Considerations Volume 29 ; 29 ; >
+      au < manifest ; exists ; 2002 ; Educational Considerations Volume 30 ; 30 ; >
+      au < manifest ; exists ; 2003 ; Educational Considerations Volume 31 ; 31 ; >
+      au < manifest ; exists ; 2004 ; Educational Considerations Volume 32 ; 32 ; >
+      au < manifest ; exists ; 2005 ; Educational Considerations Volume 33 ; 33 ; >
+      au < manifest ; exists ; 2006 ; Educational Considerations Volume 34 ; 34 ; >
+      au < manifest ; exists ; 2007 ; Educational Considerations Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2008 ; Educational Considerations Volume 36 ; 36 ; >
+      au < manifest ; exists ; 2009 ; Educational Considerations Volume 37 ; 37 ; >
+      au < manifest ; exists ; 2010 ; Educational Considerations Volume 38 ; 38 ; >
+      au < manifest ; exists ; 2011 ; Educational Considerations Volume 39 ; 39 ; >
+      au < manifest ; exists ; 2012 ; Educational Considerations Volume 40 ; 40 ; >
+      au < manifest ; exists ; 2013 ; Educational Considerations Volume 41 ; 41 ; >
+      au < manifest ; exists ; 2014 ; Educational Considerations Volume 42 ; 42 ; >
+      au < manifest ; exists ; 2015 ; Educational Considerations Volume 43 ; 43 ; >
+      au < manifest ; exists ; 2016 ; Educational Considerations Volume 44 ; 44 ; >
       au < exists ; exists ; 2017 ; Educational Considerations Volume 45 ; 45 ; >
       au < expected ; exists ; 2018 ; Educational Considerations Volume 46 ; 46 ; >
       au < expected ; exists ; 2019 ; Educational Considerations Volume 47 ; 47 ; >
@@ -412,7 +412,7 @@
       param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = fgr
 
-      au < exists ; exists ; 2016 ; Fungal Genetics Reports Volume 62 ; 62 ; >
+      au < manifest ; exists ; 2016 ; Fungal Genetics Reports Volume 62 ; 62 ; >
       au < exists ; exists ; 2017 ; Fungal Genetics Reports Volume 63 ; 63 ; >
       au < expected ; exists ; 2018 ; Fungal Genetics Reports Volume 64 ; 64 ; >
       au < expected ; exists ; 2019 ; Fungal Genetics Reports Volume 65 ; 65 ; >
@@ -432,8 +432,8 @@
       param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = hbr
 
-      au < exists ; exists ; 2017 ; Human Behavior Research Volume 1 ; 1 ; >
-      au < expected ; exists ; 2018 ; Human Behavior Research Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2017 ; Human Behavior Research Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2018 ; Human Behavior Research Volume 2 ; 2 ; >
       au < expected ; exists ; 2019 ; Human Behavior Research Volume 3 ; 3 ; >
 
   }
@@ -451,9 +451,9 @@
       param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = ijssw
 
-      au < exists ; exists ; 2016 ; International Journal of School Social Work Volume 1 ; 1 ; >
-      au < exists ; exists ; 2017 ; International Journal of School Social Work Volume 2 ; 2 ; >
-      au < expected ; exists ; 2018 ; International Journal of School Social Work Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2016 ; International Journal of School Social Work Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2017 ; International Journal of School Social Work Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2018 ; International Journal of School Social Work Volume 3 ; 3 ; >
       au < expected ; exists ; 2019 ; International Journal of School Social Work Volume 4 ; 4 ; >
 
   }
@@ -472,57 +472,57 @@
       param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = jac
 
-      au < exists ; exists ; 1969 ; Journal of Applied Communications Volume 52 ; 52 ; >
-      au < exists ; exists ; 1970 ; Journal of Applied Communications Volume 53 ; 53 ; >
-      au < exists ; exists ; 1971 ; Journal of Applied Communications Volume 54 ; 54 ; >
-      au < exists ; exists ; 1972 ; Journal of Applied Communications Volume 55 ; 55 ; >
-      au < exists ; exists ; 1973 ; Journal of Applied Communications Volume 56 ; 56 ; >
-      au < exists ; exists ; 1974 ; Journal of Applied Communications Volume 57 ; 57 ; >
-      au < exists ; exists ; 1975 ; Journal of Applied Communications Volume 58 ; 58 ; >
-      au < exists ; exists ; 1976 ; Journal of Applied Communications Volume 59 ; 59 ; >
-      au < exists ; exists ; 1977 ; Journal of Applied Communications Volume 60 ; 60 ; >
-      au < exists ; exists ; 1978 ; Journal of Applied Communications Volume 61 ; 61 ; >
-      au < exists ; exists ; 1979 ; Journal of Applied Communications Volume 62 ; 62 ; >
-      au < exists ; exists ; 1980 ; Journal of Applied Communications Volume 63 ; 63 ; >
-      au < exists ; exists ; 1981 ; Journal of Applied Communications Volume 64 ; 64 ; >
-      au < exists ; exists ; 1982 ; Journal of Applied Communications Volume 65 ; 65 ; >
-      au < exists ; exists ; 1983 ; Journal of Applied Communications Volume 66 ; 66 ; >
-      au < exists ; exists ; 1984 ; Journal of Applied Communications Volume 67 ; 67 ; >
-      au < exists ; exists ; 1985 ; Journal of Applied Communications Volume 68 ; 68 ; >
-      au < exists ; exists ; 1986 ; Journal of Applied Communications Volume 69 ; 69 ; >
-      au < exists ; exists ; 1987 ; Journal of Applied Communications Volume 70 ; 70 ; >
-      au < exists ; exists ; 1988 ; Journal of Applied Communications Volume 71 ; 71 ; >
-      au < exists ; exists ; 1989 ; Journal of Applied Communications Volume 72 ; 72 ; >
-      au < exists ; exists ; 1990 ; Journal of Applied Communications Volume 73 ; 73 ; >
-      au < exists ; exists ; 1991 ; Journal of Applied Communications Volume 74 ; 74 ; >
-      au < exists ; exists ; 1992 ; Journal of Applied Communications Volume 75 ; 75 ; >
-      au < exists ; exists ; 1993 ; Journal of Applied Communications Volume 76 ; 76 ; >
-      au < exists ; exists ; 1994 ; Journal of Applied Communications Volume 77 ; 77 ; >
-      au < exists ; exists ; 1995 ; Journal of Applied Communications Volume 78 ; 78 ; >
-      au < exists ; exists ; 1996 ; Journal of Applied Communications Volume 79 ; 79 ; >
-      au < exists ; exists ; 1997 ; Journal of Applied Communications Volume 80 ; 80 ; >
-      au < exists ; exists ; 1998 ; Journal of Applied Communications Volume 81 ; 81 ; >
-      au < exists ; exists ; 1999 ; Journal of Applied Communications Volume 82 ; 82 ; >
-      au < exists ; exists ; 2000 ; Journal of Applied Communications Volume 83 ; 83 ; >
-      au < exists ; exists ; 2001 ; Journal of Applied Communications Volume 84 ; 84 ; >
-      au < exists ; exists ; 2002 ; Journal of Applied Communications Volume 85 ; 85 ; >
-      au < exists ; exists ; 2003 ; Journal of Applied Communications Volume 86 ; 86 ; >
-      au < exists ; exists ; 2004 ; Journal of Applied Communications Volume 87 ; 87 ; >
-      au < exists ; exists ; 2005 ; Journal of Applied Communications Volume 88 ; 88 ; >
-      au < exists ; exists ; 2006 ; Journal of Applied Communications Volume 89 ; 89 ; >
-      au < exists ; exists ; 2007 ; Journal of Applied Communications Volume 90 ; 90 ; >
-      au < exists ; exists ; 2008 ; Journal of Applied Communications Volume 91 ; 91 ; >
-      au < exists ; exists ; 2009 ; Journal of Applied Communications Volume 92 ; 92 ; >
-      au < exists ; exists ; 2010 ; Journal of Applied Communications Volume 93 ; 93 ; >
-      au < exists ; exists ; 2011 ; Journal of Applied Communications Volume 94 ; 94 ; >
-      au < exists ; exists ; 2012 ; Journal of Applied Communications Volume 95 ; 95 ; >
-      au < exists ; exists ; 2013 ; Journal of Applied Communications Volume 96 ; 96 ; >
-      au < exists ; exists ; 2014 ; Journal of Applied Communications Volume 97 ; 97 ; >
-      au < exists ; exists ; 2015 ; Journal of Applied Communications Volume 98 ; 98 ; >
-      au < exists ; exists ; 2016 ; Journal of Applied Communications Volume 99 ; 99 ; >
-      au < exists ; exists ; 2017 ; Journal of Applied Communications Volume 100 ; 100 ; >
-      au < expected ; exists ; 2018 ; Journal of Applied Communications Volume 101 ; 101 ; >
-      au < expected ; exists ; 2019 ; Journal of Applied Communications Volume 102 ; 102 ; >
+      au < manifest ; exists ; 1969 ; Journal of Applied Communications Volume 52 ; 52 ; >
+      au < manifest ; exists ; 1970 ; Journal of Applied Communications Volume 53 ; 53 ; >
+      au < manifest ; exists ; 1971 ; Journal of Applied Communications Volume 54 ; 54 ; >
+      au < manifest ; exists ; 1972 ; Journal of Applied Communications Volume 55 ; 55 ; >
+      au < manifest ; exists ; 1973 ; Journal of Applied Communications Volume 56 ; 56 ; >
+      au < manifest ; exists ; 1974 ; Journal of Applied Communications Volume 57 ; 57 ; >
+      au < manifest ; exists ; 1975 ; Journal of Applied Communications Volume 58 ; 58 ; >
+      au < manifest ; exists ; 1976 ; Journal of Applied Communications Volume 59 ; 59 ; >
+      au < manifest ; exists ; 1977 ; Journal of Applied Communications Volume 60 ; 60 ; >
+      au < manifest ; exists ; 1978 ; Journal of Applied Communications Volume 61 ; 61 ; >
+      au < manifest ; exists ; 1979 ; Journal of Applied Communications Volume 62 ; 62 ; >
+      au < manifest ; exists ; 1980 ; Journal of Applied Communications Volume 63 ; 63 ; >
+      au < manifest ; exists ; 1981 ; Journal of Applied Communications Volume 64 ; 64 ; >
+      au < manifest ; exists ; 1982 ; Journal of Applied Communications Volume 65 ; 65 ; >
+      au < manifest ; exists ; 1983 ; Journal of Applied Communications Volume 66 ; 66 ; >
+      au < manifest ; exists ; 1984 ; Journal of Applied Communications Volume 67 ; 67 ; >
+      au < manifest ; exists ; 1985 ; Journal of Applied Communications Volume 68 ; 68 ; >
+      au < manifest ; exists ; 1986 ; Journal of Applied Communications Volume 69 ; 69 ; >
+      au < manifest ; exists ; 1987 ; Journal of Applied Communications Volume 70 ; 70 ; >
+      au < manifest ; exists ; 1988 ; Journal of Applied Communications Volume 71 ; 71 ; >
+      au < manifest ; exists ; 1989 ; Journal of Applied Communications Volume 72 ; 72 ; >
+      au < manifest ; exists ; 1990 ; Journal of Applied Communications Volume 73 ; 73 ; >
+      au < manifest ; exists ; 1991 ; Journal of Applied Communications Volume 74 ; 74 ; >
+      au < manifest ; exists ; 1992 ; Journal of Applied Communications Volume 75 ; 75 ; >
+      au < manifest ; exists ; 1993 ; Journal of Applied Communications Volume 76 ; 76 ; >
+      au < manifest ; exists ; 1994 ; Journal of Applied Communications Volume 77 ; 77 ; >
+      au < manifest ; exists ; 1995 ; Journal of Applied Communications Volume 78 ; 78 ; >
+      au < manifest ; exists ; 1996 ; Journal of Applied Communications Volume 79 ; 79 ; >
+      au < manifest ; exists ; 1997 ; Journal of Applied Communications Volume 80 ; 80 ; >
+      au < manifest ; exists ; 1998 ; Journal of Applied Communications Volume 81 ; 81 ; >
+      au < manifest ; exists ; 1999 ; Journal of Applied Communications Volume 82 ; 82 ; >
+      au < manifest ; exists ; 2000 ; Journal of Applied Communications Volume 83 ; 83 ; >
+      au < manifest ; exists ; 2001 ; Journal of Applied Communications Volume 84 ; 84 ; >
+      au < manifest ; exists ; 2002 ; Journal of Applied Communications Volume 85 ; 85 ; >
+      au < manifest ; exists ; 2003 ; Journal of Applied Communications Volume 86 ; 86 ; >
+      au < manifest ; exists ; 2004 ; Journal of Applied Communications Volume 87 ; 87 ; >
+      au < manifest ; exists ; 2005 ; Journal of Applied Communications Volume 88 ; 88 ; >
+      au < manifest ; exists ; 2006 ; Journal of Applied Communications Volume 89 ; 89 ; >
+      au < manifest ; exists ; 2007 ; Journal of Applied Communications Volume 90 ; 90 ; >
+      au < manifest ; exists ; 2008 ; Journal of Applied Communications Volume 91 ; 91 ; >
+      au < manifest ; exists ; 2009 ; Journal of Applied Communications Volume 92 ; 92 ; >
+      au < manifest ; exists ; 2010 ; Journal of Applied Communications Volume 93 ; 93 ; >
+      au < manifest ; exists ; 2011 ; Journal of Applied Communications Volume 94 ; 94 ; >
+      au < manifest ; exists ; 2012 ; Journal of Applied Communications Volume 95 ; 95 ; >
+      au < manifest ; exists ; 2013 ; Journal of Applied Communications Volume 96 ; 96 ; >
+      au < manifest ; exists ; 2014 ; Journal of Applied Communications Volume 97 ; 97 ; >
+      au < manifest ; exists ; 2015 ; Journal of Applied Communications Volume 98 ; 98 ; >
+      au < manifest ; exists ; 2016 ; Journal of Applied Communications Volume 99 ; 99 ; >
+      au < manifest ; exists ; 2017 ; Journal of Applied Communications Volume 100 ; 100 ; >
+      au < manifest ; exists ; 2018 ; Journal of Applied Communications Volume 101 ; 101 ; >
+      au < manifest ; exists ; 2019 ; Journal of Applied Communications Volume 102 ; 102 ; >
 
   }
 
@@ -539,13 +539,13 @@
       param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = jhsr
 
-      au < exists ; exists ; 1998 ; Journal of Hazardous Substance Research Volume 1 ; 1 ; >
-      au < exists ; exists ; 1999 ; Journal of Hazardous Substance Research Volume 2 ; 2 ; >
-      au < exists ; exists ; 2000 ; Journal of Hazardous Substance Research Volume 3 ; 3 ; >
-      au < exists ; exists ; 2001 ; Journal of Hazardous Substance Research Volume 4 ; 4 ; >
-      au < exists ; exists ; 2002 ; Journal of Hazardous Substance Research Volume 5 ; 5 ; >
-      au < exists ; exists ; 2003 ; Journal of Hazardous Substance Research Volume 6 ; 6 ; >
-      au < exists ; exists ; 2004 ; Journal of Hazardous Substance Research Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1998 ; Journal of Hazardous Substance Research Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1999 ; Journal of Hazardous Substance Research Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2000 ; Journal of Hazardous Substance Research Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2001 ; Journal of Hazardous Substance Research Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2002 ; Journal of Hazardous Substance Research Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2003 ; Journal of Hazardous Substance Research Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2004 ; Journal of Hazardous Substance Research Volume 7 ; 7 ; >
       au < exists ; exists ; 2005 ; Journal of Hazardous Substance Research Volume 8 ; 8 ; >
       au < exists ; exists ; 2006 ; Journal of Hazardous Substance Research Volume 9 ; 9 ; >
       au < exists ; exists ; 2007 ; Journal of Hazardous Substance Research Volume 10 ; 10 ; >
@@ -577,11 +577,11 @@
       param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = kaesrr
 
-      au < exists ; exists ; 2015 ; Kansas Agricultural Experiment Station Research Reports Volume 1 ; 1 ; >
-      au < exists ; exists ; 2016 ; Kansas Agricultural Experiment Station Research Reports Volume 2 ; 2 ; >
-      au < exists ; exists ; 2017 ; Kansas Agricultural Experiment Station Research Reports Volume 3 ; 3 ; >
-      au < expected ; exists ; 2018 ; Kansas Agricultural Experiment Station Research Reports Volume 4 ; 4 ; >
-      au < expected ; exists ; 2019 ; Kansas Agricultural Experiment Station Research Reports Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2015 ; Kansas Agricultural Experiment Station Research Reports Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2016 ; Kansas Agricultural Experiment Station Research Reports Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2017 ; Kansas Agricultural Experiment Station Research Reports Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2018 ; Kansas Agricultural Experiment Station Research Reports Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2019 ; Kansas Agricultural Experiment Station Research Reports Volume 5 ; 5 ; >
 
   }
 
@@ -598,11 +598,11 @@
       param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = ksulibraries
 
-      au < exists ; exists ; 2015 ; Kansas State University Libraries Volume 1 ; 1 ; >
-      au < exists ; exists ; 2016 ; Kansas State University Libraries Volume 2 ; 2 ; >
-      au < exists ; exists ; 2017 ; Kansas State University Libraries Volume 3 ; 3 ; >
-      au < expected ; exists ; 2018 ; Kansas State University Libraries Volume 4 ; 4 ; >
-      au < expected ; exists ; 2019 ; Kansas State University Libraries Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2015 ; Kansas State University Libraries Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2016 ; Kansas State University Libraries Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2017 ; Kansas State University Libraries Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2018 ; Kansas State University Libraries Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2019 ; Kansas State University Libraries Volume 5 ; 5 ; >
 
   }
 
@@ -619,27 +619,27 @@
       param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = networks
 
-      au < exists ; exists ; 1998 ; Networks: An Online Journal for Teacher Research Volume 1 ; 1 ; >
-      au < exists ; exists ; 1999 ; Networks: An Online Journal for Teacher Research Volume 2 ; 2 ; >
-      au < exists ; exists ; 2000 ; Networks: An Online Journal for Teacher Research Volume 3 ; 3 ; >
-      au < exists ; exists ; 2001 ; Networks: An Online Journal for Teacher Research Volume 4 ; 4 ; >
-      au < exists ; exists ; 2002 ; Networks: An Online Journal for Teacher Research Volume 5 ; 5 ; >
-      au < exists ; exists ; 2003 ; Networks: An Online Journal for Teacher Research Volume 6 ; 6 ; >
-      au < exists ; exists ; 2004 ; Networks: An Online Journal for Teacher Research Volume 7 ; 7 ; >
-      au < exists ; exists ; 2005 ; Networks: An Online Journal for Teacher Research Volume 8 ; 8 ; >
-      au < exists ; exists ; 2006 ; Networks: An Online Journal for Teacher Research Volume 9 ; 9 ; >
-      au < exists ; exists ; 2007 ; Networks: An Online Journal for Teacher Research Volume 10 ; 10 ; >
-      au < exists ; exists ; 2008 ; Networks: An Online Journal for Teacher Research Volume 11 ; 11 ; >
-      au < exists ; exists ; 2009 ; Networks: An Online Journal for Teacher Research Volume 12 ; 12 ; >
-      au < exists ; exists ; 2010 ; Networks: An Online Journal for Teacher Research Volume 13 ; 13 ; >
-      au < exists ; exists ; 2011 ; Networks: An Online Journal for Teacher Research Volume 14 ; 14 ; >
-      au < exists ; exists ; 2012 ; Networks: An Online Journal for Teacher Research Volume 15 ; 15 ; >
-      au < exists ; exists ; 2013 ; Networks: An Online Journal for Teacher Research Volume 16 ; 16 ; >
-      au < exists ; exists ; 2014 ; Networks: An Online Journal for Teacher Research Volume 17 ; 17 ; >
-      au < exists ; exists ; 2015 ; Networks: An Online Journal for Teacher Research Volume 18 ; 18 ; >
-      au < exists ; exists ; 2016 ; Networks: An Online Journal for Teacher Research Volume 19 ; 19 ; >
-      au < exists ; exists ; 2017 ; Networks: An Online Journal for Teacher Research Volume 20 ; 20 ; >
-      au < expected ; exists ; 2018 ; Networks: An Online Journal for Teacher Research Volume 21 ; 21 ; >
+      au < manifest ; exists ; 1998 ; Networks: An Online Journal for Teacher Research Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1999 ; Networks: An Online Journal for Teacher Research Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2000 ; Networks: An Online Journal for Teacher Research Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2001 ; Networks: An Online Journal for Teacher Research Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2002 ; Networks: An Online Journal for Teacher Research Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2003 ; Networks: An Online Journal for Teacher Research Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2004 ; Networks: An Online Journal for Teacher Research Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2005 ; Networks: An Online Journal for Teacher Research Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2006 ; Networks: An Online Journal for Teacher Research Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2007 ; Networks: An Online Journal for Teacher Research Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2008 ; Networks: An Online Journal for Teacher Research Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2009 ; Networks: An Online Journal for Teacher Research Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2010 ; Networks: An Online Journal for Teacher Research Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2011 ; Networks: An Online Journal for Teacher Research Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2012 ; Networks: An Online Journal for Teacher Research Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2013 ; Networks: An Online Journal for Teacher Research Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2014 ; Networks: An Online Journal for Teacher Research Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2015 ; Networks: An Online Journal for Teacher Research Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2016 ; Networks: An Online Journal for Teacher Research Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2017 ; Networks: An Online Journal for Teacher Research Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2018 ; Networks: An Online Journal for Teacher Research Volume 21 ; 21 ; >
       au < expected ; exists ; 2019 ; Networks: An Online Journal for Teacher Research Volume 22 ; 22 ; >
 
   }
@@ -657,46 +657,46 @@
       param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = oz
 
-      au < exists ; exists ; 1979 ; Oz Volume 1 ; 1 ; >
-      au < exists ; exists ; 1980 ; Oz Volume 2 ; 2 ; >
-      au < exists ; exists ; 1981 ; Oz Volume 3 ; 3 ; >
-      au < exists ; exists ; 1982 ; Oz Volume 4 ; 4 ; >
-      au < exists ; exists ; 1983 ; Oz Volume 5 ; 5 ; >
-      au < exists ; exists ; 1984 ; Oz Volume 6 ; 6 ; >
-      au < exists ; exists ; 1985 ; Oz Volume 7 ; 7 ; >
-      au < exists ; exists ; 1986 ; Oz Volume 8 ; 8 ; >
-      au < exists ; exists ; 1987 ; Oz Volume 9 ; 9 ; >
-      au < exists ; exists ; 1988 ; Oz Volume 10 ; 10 ; >
-      au < exists ; exists ; 1989 ; Oz Volume 11 ; 11 ; >
-      au < exists ; exists ; 1990 ; Oz Volume 12 ; 12 ; >
-      au < exists ; exists ; 1991 ; Oz Volume 13 ; 13 ; >
-      au < exists ; exists ; 1992 ; Oz Volume 14 ; 14 ; >
-      au < exists ; exists ; 1993 ; Oz Volume 15 ; 15 ; >
-      au < exists ; exists ; 1994 ; Oz Volume 16 ; 16 ; >
-      au < exists ; exists ; 1995 ; Oz Volume 17 ; 17 ; >
-      au < exists ; exists ; 1996 ; Oz Volume 18 ; 18 ; >
-      au < exists ; exists ; 1997 ; Oz Volume 19 ; 19 ; >
-      au < exists ; exists ; 1998 ; Oz Volume 20 ; 20 ; >
-      au < exists ; exists ; 1999 ; Oz Volume 21 ; 21 ; >
-      au < exists ; exists ; 2000 ; Oz Volume 22 ; 22 ; >
-      au < exists ; exists ; 2001 ; Oz Volume 23 ; 23 ; >
-      au < exists ; exists ; 2002 ; Oz Volume 24 ; 24 ; >
-      au < exists ; exists ; 2003 ; Oz Volume 25 ; 25 ; >
-      au < exists ; exists ; 2004 ; Oz Volume 26 ; 26 ; >
-      au < exists ; exists ; 2005 ; Oz Volume 27 ; 27 ; >
-      au < exists ; exists ; 2006 ; Oz Volume 28 ; 28 ; >
-      au < exists ; exists ; 2007 ; Oz Volume 29 ; 29 ; >
-      au < exists ; exists ; 2008 ; Oz Volume 30 ; 30 ; >
-      au < exists ; exists ; 2009 ; Oz Volume 31 ; 31 ; >
-      au < exists ; exists ; 2010 ; Oz Volume 32 ; 32 ; >
-      au < exists ; exists ; 2011 ; Oz Volume 33 ; 33 ; >
-      au < exists ; exists ; 2012 ; Oz Volume 34 ; 34 ; >
-      au < exists ; exists ; 2013 ; Oz Volume 35 ; 35 ; >
-      au < exists ; exists ; 2014 ; Oz Volume 36 ; 36 ; >
-      au < exists ; exists ; 2015 ; Oz Volume 37 ; 37 ; >
-      au < exists ; exists ; 2016 ; Oz Volume 38 ; 38 ; >
-      au < exists ; exists ; 2017 ; Oz Volume 39 ; 39 ; >
-      au < expected ; exists ; 2018 ; Oz Volume 40 ; 40 ; >
+      au < manifest ; exists ; 1979 ; Oz Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1980 ; Oz Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1981 ; Oz Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1982 ; Oz Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1983 ; Oz Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1984 ; Oz Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1985 ; Oz Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1986 ; Oz Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1987 ; Oz Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1988 ; Oz Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1989 ; Oz Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1990 ; Oz Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1991 ; Oz Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1992 ; Oz Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1993 ; Oz Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1994 ; Oz Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1995 ; Oz Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1996 ; Oz Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1997 ; Oz Volume 19 ; 19 ; >
+      au < manifest ; exists ; 1998 ; Oz Volume 20 ; 20 ; >
+      au < manifest ; exists ; 1999 ; Oz Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2000 ; Oz Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2001 ; Oz Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2002 ; Oz Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2003 ; Oz Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2004 ; Oz Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2005 ; Oz Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2006 ; Oz Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2007 ; Oz Volume 29 ; 29 ; >
+      au < manifest ; exists ; 2008 ; Oz Volume 30 ; 30 ; >
+      au < manifest ; exists ; 2009 ; Oz Volume 31 ; 31 ; >
+      au < manifest ; exists ; 2010 ; Oz Volume 32 ; 32 ; >
+      au < manifest ; exists ; 2011 ; Oz Volume 33 ; 33 ; >
+      au < manifest ; exists ; 2012 ; Oz Volume 34 ; 34 ; >
+      au < manifest ; exists ; 2013 ; Oz Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2014 ; Oz Volume 36 ; 36 ; >
+      au < manifest ; exists ; 2015 ; Oz Volume 37 ; 37 ; >
+      au < manifest ; exists ; 2016 ; Oz Volume 38 ; 38 ; >
+      au < manifest ; exists ; 2017 ; Oz Volume 39 ; 39 ; >
+      au < manifest ; exists ; 2018 ; Oz Volume 40 ; 40 ; >
       au < expected ; exists ; 2019 ; Oz Volume 41 ; 41 ; >
 
   }
@@ -714,7 +714,7 @@
       param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = piper
 
-      au < exists ; exists ; 2017 ; Pedagogy & (Im)Possibilities Across Education Research Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2017 ; Pedagogy & (Im)Possibilities Across Education Research Volume 1 ; 1 ; >
       au < expected ; exists ; 2018 ; Pedagogy & (Im)Possibilities Across Education Research Volume 2 ; 2 ; >
       au < expected ; exists ; 2019 ; Pedagogy & (Im)Possibilities Across Education Research Volume 3 ; 3 ; >
 
@@ -733,8 +733,8 @@
       param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = pjer
 
-      au < exists ; exists ; 2016 ; Prairie Journal of Educational Research Volume 1 ; 1 ; >
-      au < exists ; exists ; 2017 ; Prairie Journal of Educational Research Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2016 ; Prairie Journal of Educational Research Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2017 ; Prairie Journal of Educational Research Volume 2 ; 2 ; >
       au < expected ; exists ; 2018 ; Prairie Journal of Educational Research Volume 3 ; 3 ; >
       au < expected ; exists ; 2019 ; Prairie Journal of Educational Research Volume 4 ; 4 ; >
 
@@ -753,14 +753,14 @@
       param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = seek
 
-      au < exists ; exists ; 2011 ; Seek Volume 1 ; 1 ; >
-      au < exists ; exists ; 2012 ; Seek Volume 2 ; 2 ; >
-      au < exists ; exists ; 2013 ; Seek Volume 3 ; 3 ; >
-      au < exists ; exists ; 2014 ; Seek Volume 4 ; 4 ; >
-      au < exists ; exists ; 2015 ; Seek Volume 5 ; 5 ; >
-      au < exists ; exists ; 2016 ; Seek Volume 6 ; 6 ; >
-      au < exists ; exists ; 2017 ; Seek Volume 7 ; 7 ; >
-      au < expected ; exists ; 2018 ; Seek Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2011 ; Seek Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2012 ; Seek Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2013 ; Seek Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2014 ; Seek Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2015 ; Seek Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2016 ; Seek Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2017 ; Seek Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2018 ; Seek Volume 8 ; 8 ; >
       au < expected ; exists ; 2019 ; Seek Volume 9 ; 9 ; >
 
   }
@@ -779,49 +779,49 @@
       param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = sttcl
 
-      au < exists ; exists ; 1976 ; Studies in 20th & 21st Century Literature Volume 1 ; 1 ; >
-      au < exists ; exists ; 1977 ; Studies in 20th & 21st Century Literature Volume 2 ; 2 ; >
-      au < exists ; exists ; 1978 ; Studies in 20th & 21st Century Literature Volume 3 ; 3 ; >
-      au < exists ; exists ; 1979 ; Studies in 20th & 21st Century Literature Volume 4 ; 4 ; >
-      au < exists ; exists ; 1980 ; Studies in 20th & 21st Century Literature Volume 5 ; 5 ; >
-      au < exists ; exists ; 1981 ; Studies in 20th & 21st Century Literature Volume 6 ; 6 ; >
-      au < exists ; exists ; 1982 ; Studies in 20th & 21st Century Literature Volume 7 ; 7 ; >
-      au < exists ; exists ; 1983 ; Studies in 20th & 21st Century Literature Volume 8 ; 8 ; >
-      au < exists ; exists ; 1984 ; Studies in 20th & 21st Century Literature Volume 9 ; 9 ; >
-      au < exists ; exists ; 1985 ; Studies in 20th & 21st Century Literature Volume 10 ; 10 ; >
-      au < exists ; exists ; 1986 ; Studies in 20th & 21st Century Literature Volume 11 ; 11 ; >
-      au < exists ; exists ; 1987 ; Studies in 20th & 21st Century Literature Volume 12 ; 12 ; >
-      au < exists ; exists ; 1988 ; Studies in 20th & 21st Century Literature Volume 13 ; 13 ; >
-      au < exists ; exists ; 1989 ; Studies in 20th & 21st Century Literature Volume 14 ; 14 ; >
-      au < exists ; exists ; 1990 ; Studies in 20th & 21st Century Literature Volume 15 ; 15 ; >
-      au < exists ; exists ; 1991 ; Studies in 20th & 21st Century Literature Volume 16 ; 16 ; >
-      au < exists ; exists ; 1992 ; Studies in 20th & 21st Century Literature Volume 17 ; 17 ; >
-      au < exists ; exists ; 1993 ; Studies in 20th & 21st Century Literature Volume 18 ; 18 ; >
-      au < exists ; exists ; 1994 ; Studies in 20th & 21st Century Literature Volume 19 ; 19 ; >
-      au < exists ; exists ; 1995 ; Studies in 20th & 21st Century Literature Volume 20 ; 20 ; >
-      au < exists ; exists ; 1996 ; Studies in 20th & 21st Century Literature Volume 21 ; 21 ; >
-      au < exists ; exists ; 1997 ; Studies in 20th & 21st Century Literature Volume 22 ; 22 ; >
-      au < exists ; exists ; 1998 ; Studies in 20th & 21st Century Literature Volume 23 ; 23 ; >
-      au < exists ; exists ; 1999 ; Studies in 20th & 21st Century Literature Volume 24 ; 24 ; >
-      au < exists ; exists ; 2000 ; Studies in 20th & 21st Century Literature Volume 25 ; 25 ; >
-      au < exists ; exists ; 2001 ; Studies in 20th & 21st Century Literature Volume 26 ; 26 ; >
-      au < exists ; exists ; 2002 ; Studies in 20th & 21st Century Literature Volume 27 ; 27 ; >
-      au < exists ; exists ; 2003 ; Studies in 20th & 21st Century Literature Volume 28 ; 28 ; >
-      au < exists ; exists ; 2004 ; Studies in 20th & 21st Century Literature Volume 29 ; 29 ; >
-      au < exists ; exists ; 2005 ; Studies in 20th & 21st Century Literature Volume 30 ; 30 ; >
-      au < exists ; exists ; 2006 ; Studies in 20th & 21st Century Literature Volume 31 ; 31 ; >
-      au < exists ; exists ; 2007 ; Studies in 20th & 21st Century Literature Volume 32 ; 32 ; >
-      au < exists ; exists ; 2008 ; Studies in 20th & 21st Century Literature Volume 33 ; 33 ; >
-      au < exists ; exists ; 2009 ; Studies in 20th & 21st Century Literature Volume 34 ; 34 ; >
-      au < exists ; exists ; 2010 ; Studies in 20th & 21st Century Literature Volume 35 ; 35 ; >
-      au < exists ; exists ; 2011 ; Studies in 20th & 21st Century Literature Volume 36 ; 36 ; >
-      au < exists ; exists ; 2012 ; Studies in 20th & 21st Century Literature Volume 37 ; 37 ; >
-      au < exists ; exists ; 2013 ; Studies in 20th & 21st Century Literature Volume 38 ; 38 ; >
-      au < exists ; exists ; 2014 ; Studies in 20th & 21st Century Literature Volume 39 ; 39 ; >
-      au < exists ; exists ; 2015 ; Studies in 20th & 21st Century Literature Volume 40 ; 40 ; >
-      au < exists ; exists ; 2016 ; Studies in 20th & 21st Century Literature Volume 41 ; 41 ; >
-      au < exists ; exists ; 2017 ; Studies in 20th & 21st Century Literature Volume 42 ; 42 ; >
-      au < expected ; exists ; 2018 ; Studies in 20th & 21st Century Literature Volume 43 ; 43 ; >
+      au < manifest ; exists ; 1976 ; Studies in 20th & 21st Century Literature Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1977 ; Studies in 20th & 21st Century Literature Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1978 ; Studies in 20th & 21st Century Literature Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1979 ; Studies in 20th & 21st Century Literature Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1980 ; Studies in 20th & 21st Century Literature Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1981 ; Studies in 20th & 21st Century Literature Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1982 ; Studies in 20th & 21st Century Literature Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1983 ; Studies in 20th & 21st Century Literature Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1984 ; Studies in 20th & 21st Century Literature Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1985 ; Studies in 20th & 21st Century Literature Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1986 ; Studies in 20th & 21st Century Literature Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1987 ; Studies in 20th & 21st Century Literature Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1988 ; Studies in 20th & 21st Century Literature Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1989 ; Studies in 20th & 21st Century Literature Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1990 ; Studies in 20th & 21st Century Literature Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1991 ; Studies in 20th & 21st Century Literature Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1992 ; Studies in 20th & 21st Century Literature Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1993 ; Studies in 20th & 21st Century Literature Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1994 ; Studies in 20th & 21st Century Literature Volume 19 ; 19 ; >
+      au < manifest ; exists ; 1995 ; Studies in 20th & 21st Century Literature Volume 20 ; 20 ; >
+      au < manifest ; exists ; 1996 ; Studies in 20th & 21st Century Literature Volume 21 ; 21 ; >
+      au < manifest ; exists ; 1997 ; Studies in 20th & 21st Century Literature Volume 22 ; 22 ; >
+      au < manifest ; exists ; 1998 ; Studies in 20th & 21st Century Literature Volume 23 ; 23 ; >
+      au < manifest ; exists ; 1999 ; Studies in 20th & 21st Century Literature Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2000 ; Studies in 20th & 21st Century Literature Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2001 ; Studies in 20th & 21st Century Literature Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2002 ; Studies in 20th & 21st Century Literature Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2003 ; Studies in 20th & 21st Century Literature Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2004 ; Studies in 20th & 21st Century Literature Volume 29 ; 29 ; >
+      au < manifest ; exists ; 2005 ; Studies in 20th & 21st Century Literature Volume 30 ; 30 ; >
+      au < manifest ; exists ; 2006 ; Studies in 20th & 21st Century Literature Volume 31 ; 31 ; >
+      au < manifest ; exists ; 2007 ; Studies in 20th & 21st Century Literature Volume 32 ; 32 ; >
+      au < manifest ; exists ; 2008 ; Studies in 20th & 21st Century Literature Volume 33 ; 33 ; >
+      au < manifest ; exists ; 2009 ; Studies in 20th & 21st Century Literature Volume 34 ; 34 ; >
+      au < manifest ; exists ; 2010 ; Studies in 20th & 21st Century Literature Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2011 ; Studies in 20th & 21st Century Literature Volume 36 ; 36 ; >
+      au < manifest ; exists ; 2012 ; Studies in 20th & 21st Century Literature Volume 37 ; 37 ; >
+      au < manifest ; exists ; 2013 ; Studies in 20th & 21st Century Literature Volume 38 ; 38 ; >
+      au < manifest ; exists ; 2014 ; Studies in 20th & 21st Century Literature Volume 39 ; 39 ; >
+      au < manifest ; exists ; 2015 ; Studies in 20th & 21st Century Literature Volume 40 ; 40 ; >
+      au < manifest ; exists ; 2016 ; Studies in 20th & 21st Century Literature Volume 41 ; 41 ; >
+      au < manifest ; exists ; 2017 ; Studies in 20th & 21st Century Literature Volume 42 ; 42 ; >
+      au < manifest ; exists ; 2018 ; Studies in 20th & 21st Century Literature Volume 43 ; 43 ; >
       au < expected ; exists ; 2019 ; Studies in 20th & 21st Century Literature Volume 44 ; 44 ; >
 
   }

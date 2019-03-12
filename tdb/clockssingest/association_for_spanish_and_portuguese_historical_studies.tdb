@@ -20,15 +20,15 @@
       param[base_url] = https://digitalcommons.asphs.net/
       param[journal_abbr] = bsphs
 
-      au < exists ; exists ; 2011 ; Bulletin for Spanish and Portuguese Historical Studies Volume 35 ; 35 ; >
-      au < exists ; exists ; 2012 ; Bulletin for Spanish and Portuguese Historical Studies Volume 36 ; 36 ; >
-      au < exists ; exists ; 2013 ; Bulletin for Spanish and Portuguese Historical Studies Volume 37 ; 37 ; >
-      au < exists ; exists ; 2014 ; Bulletin for Spanish and Portuguese Historical Studies Volume 38 ; 38 ; >
-      au < exists ; exists ; 2015 ; Bulletin for Spanish and Portuguese Historical Studies Volume 39 ; 39 ; >
-      au < exists ; exists ; 2016 ; Bulletin for Spanish and Portuguese Historical Studies Volume 40 ; 40 ; >
-      au < exists ; exists ; 2017 ; Bulletin for Spanish and Portuguese Historical Studies Volume 41 ; 41 ; >
-      au < expected ; exists ; 2018 ; Bulletin for Spanish and Portuguese Historical Studies Volume 42 ; 42 ; >
-      au < expected ; exists ; 2019 ; Bulletin for Spanish and Portuguese Historical Studies Volume 43 ; 43 ; >
+      au < manifest ; exists ; 2011 ; Bulletin for Spanish and Portuguese Historical Studies Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2012 ; Bulletin for Spanish and Portuguese Historical Studies Volume 36 ; 36 ; >
+      au < manifest ; exists ; 2013 ; Bulletin for Spanish and Portuguese Historical Studies Volume 37 ; 37 ; >
+      au < manifest ; exists ; 2014 ; Bulletin for Spanish and Portuguese Historical Studies Volume 38 ; 38 ; >
+      au < manifest ; exists ; 2015 ; Bulletin for Spanish and Portuguese Historical Studies Volume 39 ; 39 ; >
+      au < manifest ; exists ; 2016 ; Bulletin for Spanish and Portuguese Historical Studies Volume 40 ; 40 ; >
+      au < manifest ; exists ; 2017 ; Bulletin for Spanish and Portuguese Historical Studies Volume 41 ; 41 ; >
+      au < manifest ; exists ; 2018 ; Bulletin for Spanish and Portuguese Historical Studies Volume 42 ; 42 ; >
+      au < manifest ; exists ; 2019 ; Bulletin for Spanish and Portuguese Historical Studies Volume 43 ; 43 ; >
 
   }
 

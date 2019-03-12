@@ -1669,7 +1669,7 @@
       comment[years] = Published 1972-1989
       param[journal_code] = f1
 
-      au < exists ; exists ; 1972 ; Journal of the Chemical Society, Faraday Transactions 1: Physical Chemistry in Condensed Phases Volume 68 ; 68 ; 1972 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 1972 ; Journal of the Chemical Society, Faraday Transactions 1: Physical Chemistry in Condensed Phases Volume 68 ; 68 ; 1972 ; https://pubs.rsc.org/ ; >
       au < exists ; exists ; 1973 ; Journal of the Chemical Society, Faraday Transactions 1: Physical Chemistry in Condensed Phases Volume 69 ; 69 ; 1973 ; https://pubs.rsc.org/ ; >
       au < exists ; exists ; 1974 ; Journal of the Chemical Society, Faraday Transactions 1: Physical Chemistry in Condensed Phases Volume 70 ; 70 ; 1974 ; https://pubs.rsc.org/ ; >
       au < exists ; exists ; 1975 ; Journal of the Chemical Society, Faraday Transactions 1: Physical Chemistry in Condensed Phases Volume 71 ; 71 ; 1975 ; https://pubs.rsc.org/ ; >
