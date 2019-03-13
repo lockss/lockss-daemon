@@ -1,0 +1,26 @@
+{
+  publisher <
+    name = International Association of Music Libraries, Archives and Documentation Centres
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:287
+
+    {
+    title <
+      name = Fontes Artis Musicae ;
+      issn = 0015-6191 ;
+      eissn = 2471-156X
+    >
+
+      attr[journal_id] = 688
+
+        au < exists ; 2016 ; Fontes Artis Musicae Volume 63 [2016] ; 10935 >
+        au < exists ; 2017 ; Fontes Artis Musicae Volume 64 [2017] ; 12455 >
+        au < exists ; 2018 ; Fontes Artis Musicae Volume 65 [2018] ; 13503 >
+
+    }
+
+}
