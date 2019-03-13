@@ -1,0 +1,27 @@
+{
+  publisher <
+    name = Russell Sage Foundation
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:207
+
+    {
+    title <
+      name = RSF: The Russell Sage Foundation Journal of the Social Sciences ;
+      issn = 2377-8253 ;
+      eissn = 2377-8261
+    >
+
+      attr[journal_id] = 693
+
+        au < exists ; 2015-2016 ; RSF: The Russell Sage Foundation Journal of the Social Sciences Volume 1 [2015-2016] ; 10855 >
+        au < exists ; 2016 ; RSF: The Russell Sage Foundation Journal of the Social Sciences Volume 2 [2016] ; 11097 >
+        au < exists ; 2017 ; RSF: The Russell Sage Foundation Journal of the Social Sciences Volume 3 [2017] ; 12330 >
+        au < exists ; 2018 ; RSF: The Russell Sage Foundation Journal of the Social Sciences Volume 4 [2018] ; 13168 >
+
+    }
+
+}
