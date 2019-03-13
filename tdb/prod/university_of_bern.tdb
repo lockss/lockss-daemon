@@ -82,7 +82,7 @@
       au < released ; 2016 ; 9 ; Journal of Eye Movement Research Volume 2016 ; 2016 ; >
       au < released ; 2017 ; 10 ; Journal of Eye Movement Research Volume 2017 ; 2017 ; >
       au < manifest ; 2018 ; 11 ; Journal of Eye Movement Research Volume 2018 ; 2018 ; >
-      au < exists ; 2019 ; 12 ; Journal of Eye Movement Research Volume 2019 ; 2019 ; >
+      au < manifest ; 2019 ; 12 ; Journal of Eye Movement Research Volume 2019 ; 2019 ; >
 
   }
 
@@ -98,16 +98,16 @@
       param[journal_id] = JROI
       #no volume for 2017
 
-      au < exists ; 2009 ; 1 ; Journal of Radiation Oncology Informatics Volume 2009 ; 2009 ; >
-      au < exists ; 2010 ; 2 ; Journal of Radiation Oncology Informatics Volume 2010 ; 2010 ; >
-      au < exists ; 2011 ; 3 ; Journal of Radiation Oncology Informatics Volume 2011 ; 2011 ; >
-      au < exists ; 2012 ; 4 ; Journal of Radiation Oncology Informatics Volume 2012 ; 2012 ; >
-      au < exists ; 2013 ; 5 ; Journal of Radiation Oncology Informatics Volume 2013 ; 2013 ; >
-      au < exists ; 2014 ; 6 ; Journal of Radiation Oncology Informatics Volume 2014 ; 2014 ; >
-      au < exists ; 2015 ; 7 ; Journal of Radiation Oncology Informatics Volume 2015 ; 2015 ; >
-      au < exists ; 2016 ; 8 ; Journal of Radiation Oncology Informatics Volume 2016 ; 2016 ; >
-      au < exists ; 2018 ; 9 ; Journal of Radiation Oncology Informatics Volume 2018 ; 2018 ; >
-      au < exists ; 2019 ; 10 ; Journal of Radiation Oncology Informatics Volume 2019 ; 2019 ; >
+      au < manifest ; 2009 ; 1 ; Journal of Radiation Oncology Informatics Volume 2009 ; 2009 ; >
+      au < manifest ; 2010 ; 2 ; Journal of Radiation Oncology Informatics Volume 2010 ; 2010 ; >
+      au < manifest ; 2011 ; 3 ; Journal of Radiation Oncology Informatics Volume 2011 ; 2011 ; >
+      au < manifest ; 2012 ; 4 ; Journal of Radiation Oncology Informatics Volume 2012 ; 2012 ; >
+      au < manifest ; 2013 ; 5 ; Journal of Radiation Oncology Informatics Volume 2013 ; 2013 ; >
+      au < manifest ; 2014 ; 6 ; Journal of Radiation Oncology Informatics Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 7 ; Journal of Radiation Oncology Informatics Volume 2015 ; 2015 ; >
+      au < manifest ; 2016 ; 8 ; Journal of Radiation Oncology Informatics Volume 2016 ; 2016 ; >
+      au < manifest ; 2018 ; 9 ; Journal of Radiation Oncology Informatics Volume 2018 ; 2018 ; >
+      au < manifest ; 2019 ; 10 ; Journal of Radiation Oncology Informatics Volume 2019 ; 2019 ; >
 
   }
 
@@ -139,7 +139,7 @@
       param[base_url] = https://bop.unibe.ch/
       param[journal_id] = HASBonline
 
-      au < exists ; 2017 ; 22 ; HASBonline – Hefte zur Archäologie des Mittelmeerraumes aus Bern Volume 2017 ; 2017 ; >
+      au < manifest ; 2017 ; 22 ; HASBonline – Hefte zur Archäologie des Mittelmeerraumes aus Bern Volume 2017 ; 2017 ; >
 
   }
 
@@ -154,9 +154,9 @@
       param[base_url] = https://bop.unibe.ch/
       param[journal_id] = versants
 
-      au < exists ; 2016 ; 63 ; Versants. Revista suiza de literaturas románicas Volume 2016 ; 2016 ; >
-      au < exists ; 2017 ; 64 ; Versants. Revista suiza de literaturas románicas Volume 2017 ; 2017 ; >
-      au < exists ; 2018 ; 65 ; Versants. Revista suiza de literaturas románicas Volume 2018 ; 2018 ; >
+      au < manifest ; 2016 ; 63 ; Versants. Revista suiza de literaturas románicas Volume 2016 ; 2016 ; >
+      au < manifest ; 2017 ; 64 ; Versants. Revista suiza de literaturas románicas Volume 2017 ; 2017 ; >
+      au < manifest ; 2018 ; 65 ; Versants. Revista suiza de literaturas románicas Volume 2018 ; 2018 ; >
       au < expected ; 2019 ; 66 ; Versants. Revista suiza de literaturas románicas Volume 2019 ; 2019 ; >
 
   }
