@@ -1,0 +1,27 @@
+{
+  publisher <
+    name = New Testament Society of Southern Africa
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:295
+
+    {
+    title <
+      name = Neotestamentica ;
+      issn = 0254-8356 ;
+      eissn = 2518-4628
+    >
+
+      attr[journal_id] = 707
+
+        au < exists ; 2015 ; Neotestamentica Volume 49 [2015] ; 12195 >
+        au < exists ; 2016 ; Neotestamentica Volume 50 [2016] ; 12441 >
+        au < exists ; 2017 ; Neotestamentica Volume 51 [2017] ; 13181 >
+        au < exists ; 2018 ; Neotestamentica Volume 52 [2018] ; 13617 >
+
+    }
+
+}
