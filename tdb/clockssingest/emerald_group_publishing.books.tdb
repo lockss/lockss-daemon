@@ -434,9 +434,6 @@
   >
   #param[journal_issn] = 1074-7540
   #series = aefeg
-   au < exists ; exists ; 1992 ; 9781559385145 ;  ; 9781559385145 ; Advances in Entrepreneurship, Firm Emergence and Growth Volume 1 ; https://www.emeraldinsight.com/ ;  >
-   au < exists ; exists ; 1996 ; 9781559387132 ;  ; 9781559387132 ; Advances in Entrepreneurship, Firm Emergence and Growth Volume 2 ; https://www.emeraldinsight.com/ ;  >
-   au < exists ; exists ; 1998 ; 9780762300037 ;  ; 9780762300037 ; Advances in Entrepreneurship, Firm Emergence and Growth Volume 3 ; https://www.emeraldinsight.com/ ;  >
    au < finished ; crawling ; 2001 ; 9780762303250 ;  ; 9780762303250 ; Databases for the Study of Entrepreneurship Volume 4 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2002 ; 9780762308774 ;  ; 9780762308774 ; Managing People in Entrepreneurial Organizations Volume 5 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2003 ; 9780762310524 ;  ; 9780762310524 ; Cognitive Approaches to Entrepreneurship Research Volume 6 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
@@ -2460,7 +2457,7 @@
   >
   #param[journal_issn] = 0363-0951
   #series = pppp
-   au < exists ; exists ; 2003 ; 9780125421188 ; 9781849500081 ; 9781849500081 ; Progress in Psychobiology and Physiological Psychology Volume 18 ; https://www.emeraldinsight.com/ ;  >
+   au < testing ; exists ; 2003 ; 9780125421188 ; 9781849500081 ; 9781849500081 ; Progress in Psychobiology and Physiological Psychology Volume 18 ; https://www.emeraldinsight.com/ ;  >
 
  }
 
