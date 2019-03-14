@@ -7516,7 +7516,7 @@
     param[journal_id] = isd
 
     #this title was ONLY in the publisher listing
-    au < testing ; exists ; 2017 ; 2017 ; Insect Systematics and Diversity Volume 1 ; 1 ; >
+    au < ready ; exists ; 2017 ; 2017 ; Insect Systematics and Diversity Volume 1 ; 1 ; >
     au < testing ; exists ; 2018 ; 2018 ; Insect Systematics and Diversity Volume 2 ; 2 ; >
 
   }
@@ -7657,7 +7657,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Interactive CardioVascular and Thoracic Surgery Volume 20-21 ; 20-21 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Interactive CardioVascular and Thoracic Surgery Volume 22-23 ; 22-23 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Interactive CardioVascular and Thoracic Surgery Volume 24 ; 24 ; >
-    au < testing ; exists ; 2018 ; 2018 ; Interactive CardioVascular and Thoracic Surgery Volume 25 ; 25 ; >
+    au < ready ; exists ; 2018 ; 2018 ; Interactive CardioVascular and Thoracic Surgery Volume 25 ; 25 ; >
 
   }
 
@@ -13252,7 +13252,7 @@
 
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Neuro-Oncology Practice Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Neuro-Oncology Practice Volume 2 ; 2 ; >
-    au < testing ; exists ; 2016 ; 2016 ; Neuro-Oncology Practice Volume 3 ; 3 ; >
+    au < ready ; exists ; 2016 ; 2016 ; Neuro-Oncology Practice Volume 3 ; 3 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Neuro-Oncology Practice Volume 4 ; 4 ; >
     au < testing ; exists ; 2018 ; 2018 ; Neuro-Oncology Practice Volume 5 ; 5 ; >
 
@@ -16672,7 +16672,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Sociology of Religion Volume 74 ; 74 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Sociology of Religion Volume 75 ; 75 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Sociology of Religion Volume 76 ; 76 ; >
-    au < testing ; exists ; 2016 ; 2016 ; Sociology of Religion Volume 77 ; 77 ; >
+    au < ready ; exists ; 2016 ; 2016 ; Sociology of Religion Volume 77 ; 77 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Sociology of Religion Volume 78 ; 78 ; >
     au < testing ; exists ; 2018 ; 2018 ; Sociology of Religion Volume 79 ; 79 ; >
 
@@ -20129,7 +20129,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 107 ; 107 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 108 ; 108 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 109 ; 109 ; >
-    au < testing ; exists ; 2016 ; 2016 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 110 ; 110 ; >
+    au < ready ; exists ; 2016 ; 2016 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 110 ; 110 ; >
     au < testing ; exists ; 2017 ; 2017 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 111 ; 111 ; >
     au < testing ; exists ; 2018 ; 2018 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 112 ; 112 ; >
 
