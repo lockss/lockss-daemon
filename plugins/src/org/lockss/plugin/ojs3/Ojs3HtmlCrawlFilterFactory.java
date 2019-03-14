@@ -56,9 +56,17 @@ public class Ojs3HtmlCrawlFilterFactory implements FilterFactory {
 
   
   private static final NodeFilter[] excludeNodes = new NodeFilter[] {
+		    HtmlNodeFilters.tag("header"),
+		    HtmlNodeFilters.tag("footer"),
+		    HtmlNodeFilters.tag("aside"),
+		    HtmlNodeFilters.tag("script"),
+		    HtmlNodeFilters.tag("nav"),
+		  
 	        // on the article landing page - remove the bottom stuff
 	        HtmlNodeFilters.tagWithAttribute("section","class","article-more-details"),
-	        HtmlNodeFilters.tagWithAttribute("aside","id","sidebar"),
+//	        HtmlNodeFilters.tagWithAttribute("aside","id","sidebar"),
+	        // on the article page - most read articles by this author
+	        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "articlesBySameAuthor"),
 	    };  
  
   @Override
