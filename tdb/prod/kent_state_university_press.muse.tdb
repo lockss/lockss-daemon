@@ -1,0 +1,142 @@
+{
+  publisher <
+    name = Kent State University Press
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; year ; name ; param[volume] >
+
+  {
+    title <
+      name = Civil War History ;
+      issn = 0009-8078 ;
+      eissn = 1533-6271 ;
+      issnl = 0009-8078
+    >
+
+    param[journal_dir] = civil_war_history
+    attr[journal_id] = cwh
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < doNotProcess ; 1955 ; Civil War History Volume 1 ; 1 >
+      au < doNotProcess ; 1956 ; Civil War History Volume 2 ; 2 >
+      au < doNotProcess ; 1957 ; Civil War History Volume 3 ; 3 >
+      au < doNotProcess ; 1958 ; Civil War History Volume 4 ; 4 >
+      au < doNotProcess ; 1959 ; Civil War History Volume 5 ; 5 >
+      au < doNotProcess ; 1960 ; Civil War History Volume 6 ; 6 >
+      au < doNotProcess ; 1961 ; Civil War History Volume 7 ; 7 >
+      au < doNotProcess ; 1962 ; Civil War History Volume 8 ; 8 >
+      au < doNotProcess ; 1963 ; Civil War History Volume 9 ; 9 >
+      au < doNotProcess ; 1964 ; Civil War History Volume 10 ; 10 >
+      au < doNotProcess ; 1965 ; Civil War History Volume 11 ; 11 >
+      au < doNotProcess ; 1966 ; Civil War History Volume 12 ; 12 >
+      au < doNotProcess ; 1967 ; Civil War History Volume 13 ; 13 >
+      au < doNotProcess ; 1968 ; Civil War History Volume 14 ; 14 >
+      au < doNotProcess ; 1969 ; Civil War History Volume 15 ; 15 >
+      au < doNotProcess ; 1970 ; Civil War History Volume 16 ; 16 >
+      au < doNotProcess ; 1971 ; Civil War History Volume 17 ; 17 >
+      au < doNotProcess ; 1972 ; Civil War History Volume 18 ; 18 >
+      au < doNotProcess ; 1973 ; Civil War History Volume 19 ; 19 >
+      au < doNotProcess ; 1974 ; Civil War History Volume 20 ; 20 >
+      au < doNotProcess ; 1975 ; Civil War History Volume 21 ; 21 >
+      au < doNotProcess ; 1976 ; Civil War History Volume 22 ; 22 >
+      au < doNotProcess ; 1977 ; Civil War History Volume 23 ; 23 >
+      au < doNotProcess ; 1978 ; Civil War History Volume 24 ; 24 >
+      au < doNotProcess ; 1979 ; Civil War History Volume 25 ; 25 >
+      au < doNotProcess ; 1980 ; Civil War History Volume 26 ; 26 >
+      au < doNotProcess ; 1981 ; Civil War History Volume 27 ; 27 >
+      au < doNotProcess ; 1982 ; Civil War History Volume 28 ; 28 >
+      au < doNotProcess ; 1983 ; Civil War History Volume 29 ; 29 >
+      au < doNotProcess ; 1984 ; Civil War History Volume 30 ; 30 >
+      au < doNotProcess ; 1985 ; Civil War History Volume 31 ; 31 >
+      au < doNotProcess ; 1986 ; Civil War History Volume 32 ; 32 >
+      au < doNotProcess ; 1987 ; Civil War History Volume 33 ; 33 >
+      au < doNotProcess ; 1988 ; Civil War History Volume 34 ; 34 >
+      au < doNotProcess ; 1989 ; Civil War History Volume 35 ; 35 >
+      au < doNotProcess ; 1990 ; Civil War History Volume 36 ; 36 >
+      au < doNotProcess ; 1991 ; Civil War History Volume 37 ; 37 >
+      au < doNotProcess ; 1992 ; Civil War History Volume 38 ; 38 >
+      au < doNotProcess ; 1993 ; Civil War History Volume 39 ; 39 >
+      au < doNotProcess ; 1994 ; Civil War History Volume 40 ; 40 >
+      au < doNotProcess ; 1995 ; Civil War History Volume 41 ; 41 >
+      au < doNotProcess ; 1996 ; Civil War History Volume 42 ; 42 >
+      au < doNotProcess ; 1997 ; Civil War History Volume 43 ; 43 >
+      au < doNotProcess ; 1998 ; Civil War History Volume 44 ; 44 >
+      au < doNotProcess ; 1999 ; Civil War History Volume 45 ; 45 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2000 ; Civil War History Volume 46 ; 46 >
+      au < down ; 2001 ; Civil War History Volume 47 ; 47 >
+      au < down ; 2002 ; Civil War History Volume 48 ; 48 >
+      au < down ; 2003 ; Civil War History Volume 49 ; 49 >
+      au < down ; 2004 ; Civil War History Volume 50 ; 50 >
+      au < down ; 2005 ; Civil War History Volume 51 ; 51 >
+      au < down ; 2006 ; Civil War History Volume 52 ; 52 >
+      au < down ; 2007 ; Civil War History Volume 53 ; 53 >
+      au < down ; 2008 ; Civil War History Volume 54 ; 54 >
+      au < down ; 2009 ; Civil War History Volume 55 ; 55 >
+      au < down ; 2010 ; Civil War History Volume 56 ; 56 >
+      au < down ; 2011 ; Civil War History Volume 57 ; 57 >
+      au < down ; 2012 ; Civil War History Volume 58 ; 58 >
+      au < down ; 2013 ; Civil War History Volume 59 ; 59 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2014 ; Civil War History Volume 60 ; 60 >
+      au < down ; 2015 ; Civil War History Volume 61 ; 61 >
+      au < doNotProcess ; 2016 ; Civil War History Volume 62 ; 62 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Ohio History ;
+      issn = 0030-0934 ;
+      eissn = 1934-6042 ;
+      issnl = 0030-0934
+    >
+
+    param[journal_dir] = ohio_history
+    attr[journal_id] = ohh
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2007 ; Ohio History Volume 114 ; 114 >
+      au < down ; 2008 ; Ohio History Volume 115 ; 115 >
+      au < down ; 2009 ; Ohio History Volume 116 ; 116 >
+      au < down ; 2010 ; Ohio History Volume 117 ; 117 >
+      au < down ; 2011 ; Ohio History Volume 118 ; 118 >
+      au < down ; 2012 ; Ohio History Volume 119 ; 119 >
+      au < down ; 2013 ; Ohio History Volume 120 ; 120 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2014 ; Ohio History Volume 121 ; 121 >
+      au < down ; 2015 ; Ohio History Volume 122 ; 122 >
+      au < doNotProcess ; 2016 ; Ohio History Volume 123 ; 123 >
+
+    }
+
+  }
+
+}

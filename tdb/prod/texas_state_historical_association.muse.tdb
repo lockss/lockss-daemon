@@ -1,0 +1,48 @@
+{
+  publisher <
+    name = Texas State Historical Association
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; year ; name ; param[volume] >
+
+  {
+
+    title <
+      name = Southwestern Historical Quarterly ;
+      issn = 0038-478X ;
+      eissn = 1558-9560 ;
+      issnl = 0038-478X
+    >
+
+    param[journal_dir] = southwestern_historical_quarterly
+    attr[journal_id] = swh
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2006-2007 ; Southwestern Historical Quarterly Volume 110 ; 110 >
+      au < down ; 2007-2008 ; Southwestern Historical Quarterly Volume 111 ; 111 >
+      au < down ; 2008-2009 ; Southwestern Historical Quarterly Volume 112 ; 112 >
+      au < down ; 2009-2010 ; Southwestern Historical Quarterly Volume 113 ; 113 >
+      au < down ; 2010-2011 ; Southwestern Historical Quarterly Volume 114 ; 114 >
+      au < down ; 2011-2012 ; Southwestern Historical Quarterly Volume 115 ; 115 >
+      au < down ; 2012-2013 ; Southwestern Historical Quarterly Volume 116 ; 116 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2013-2014 ; Southwestern Historical Quarterly Volume 117 ; 117 >
+      au < down ; 2014-2015 ; Southwestern Historical Quarterly Volume 118 ; 118 >
+      au < doNotProcess ; 2015-2016 ; Southwestern Historical Quarterly Volume 119 ; 119 >
+      au < doNotProcess ; 2016 ; Southwestern Historical Quarterly Volume 120 ; 120 >
+
+    }
+
+  }
+
+}

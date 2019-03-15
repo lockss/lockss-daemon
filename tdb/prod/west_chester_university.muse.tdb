@@ -1,0 +1,50 @@
+{
+
+  publisher <
+    name = West Chester University
+  >
+
+  {
+
+    title <
+      name = College Literature ;
+      issn = 0093-3139 ;
+      eissn = 1542-4286 ;
+      issnl = 0093-3139
+    >
+
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    param[journal_dir] = college_literature
+    attr[journal_id] = lit
+    implicit < status ; year ; name ; param[volume] >
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2003 ; College Literature Volume 30 ; 30 >
+      au < down ; 2004 ; College Literature Volume 31 ; 31 >
+      au < down ; 2005 ; College Literature Volume 32 ; 32 >
+      au < down ; 2006 ; College Literature Volume 33 ; 33 >
+      au < down ; 2007 ; College Literature Volume 34 ; 34 >
+      au < down ; 2008 ; College Literature Volume 35 ; 35 >
+      au < down ; 2009 ; College Literature Volume 36 ; 36 >
+      au < down ; 2010 ; College Literature Volume 37 ; 37 >
+      au < down ; 2011 ; College Literature Volume 38 ; 38 >
+      au < down ; 2012 ; College Literature Volume 39 ; 39 >
+      au < down ; 2013 ; College Literature Volume 40 ; 40 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2014 ; College Literature Volume 41 ; 2014 >
+      au < down ; 2015 ; College Literature Volume 42 ; 42 >
+
+    }
+
+  }
+
+}

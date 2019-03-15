@@ -1,0 +1,246 @@
+{
+  publisher <
+    name = Cambridge University Press
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; year ; name ; param[volume] >
+
+  {
+
+    title <
+      name = Africa: The Journal of the International African Institute ;
+      issn = 0001-9720 ;
+      eissn = 1750-0184 ;
+      issnl = 0001-9720
+    >
+
+      param[journal_dir] = africa_the_journal_of_the_international_african_institute
+      attr[journal_id] = afr
+      comment[year2005] = Bibliography only
+    
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+        au < down ; 2005 ; Africa: The Journal of the International African Institute Bibliography 2005 ; 2005 >
+        au < down ; 2006 ; Africa: The Journal of the International African Institute Bibliography 2006 ; 2006 >
+        au < down ; 2007 ; Africa: The Journal of the International African Institute Bibliography 2007 ; 2007 >
+        au < down ; 2008 ; Africa: The Journal of the International African Institute Bibliography 2008 ; 2008 >
+        au < down ; 2009 ; Africa: The Journal of the International African Institute Bibliography 2009 ; 2009 >
+
+      }
+
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+        au < doNotProcess ; 2000 ; Africa: The Journal of the International African Institute Volume 70 ; 70 >
+        au < doNotProcess ; 2001 ; Africa: The Journal of the International African Institute Volume 71 ; 71 >
+        au < doNotProcess ; 2002 ; Africa: The Journal of the International African Institute Volume 72 ; 72 >
+        au < doNotProcess ; 2003 ; Africa: The Journal of the International African Institute Volume 73 ; 73 >
+        au < doNotProcess ; 2004 ; Africa: The Journal of the International African Institute Volume 74 ; 74 >
+        au < doNotProcess ; 2005 ; Africa: The Journal of the International African Institute Volume 75 ; 75 >
+
+      }
+
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+        au < down ; 2006 ; Africa: The Journal of the International African Institute Volume 76 ; 76 >
+        au < down ; 2007 ; Africa: The Journal of the International African Institute Volume 77 ; 77 >
+        au < down ; 2008 ; Africa: The Journal of the International African Institute Volume 78 ; 78 >
+        au < down ; 2009 ; Africa: The Journal of the International African Institute Volume 79 ; 79 >
+        au < down ; 2010 ; Africa: The Journal of the International African Institute Volume 80 ; 80 >
+        au < down ; 2011 ; Africa: The Journal of the International African Institute Volume 81 ; 81 >
+        au < down ; 2012 ; Africa: The Journal of the International African Institute Volume 82 ; 82 >
+        au < down ; 2013 ; Africa: The Journal of the International African Institute Volume 83 ; 83 >
+
+      }
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+        au < down ; 2014 ; Africa: The Journal of the International African Institute Volume 84 ; 84 >
+        au < down ; 2015 ; Africa: The Journal of the International African Institute Volume 85 ; 85 >
+
+      }
+
+  }
+
+  {
+    title <
+      name = Canadian Journal on Aging / La Revue canadienne du vieillissement ;
+      issn = 0714-9808 ;
+      eissn = 1710-1107 ;
+      issnl = 0714-9808
+    >
+
+    param[journal_dir] = canadian_journal_on_aging
+    attr[journal_id] = cja
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2004 ; Canadian Journal on Aging / La Revue canadienne du vieillissement Volume 23 ; 23 >
+      au < down ; 2005 ; Canadian Journal on Aging / La Revue canadienne du vieillissement Volume 24 ; 24 >
+      au < down ; 2006 ; Canadian Journal on Aging / La Revue canadienne du vieillissement Volume 25 ; 25 >
+      au < down ; 2007 ; Canadian Journal on Aging / La Revue canadienne du vieillissement Volume 26 ; 26 >
+      au < down ; 2008 ; Canadian Journal on Aging / La Revue canadienne du vieillissement Volume 27 ; 27 >
+      au < down ; 2009 ; Canadian Journal on Aging / La Revue canadienne du vieillissement Volume 28 ; 28 >
+      au < down ; 2010 ; Canadian Journal on Aging / La Revue canadienne du vieillissement Volume 29 ; 29 >
+      au < down ; 2011 ; Canadian Journal on Aging / La Revue canadienne du vieillissement Volume 30 ; 30 >
+      au < down ; 2012 ; Canadian Journal on Aging / La Revue canadienne du vieillissement Volume 31 ; 31 >
+      au < down ; 2013 ; Canadian Journal on Aging / La Revue canadienne du vieillissement Volume 32 ; 32 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2014 ; Canadian Journal on Aging / La Revue canadienne du vieillissement Volume 33 ; 33 >
+      au < down ; 2015 ; Canadian Journal on Aging / La Revue canadienne du vieillissement Volume 34 ; 34 >
+      au < doNotProcess ; 2016 ; Canadian Journal on Aging / La Revue canadienne du vieillissement Volume 35 ; 35 >
+
+    }
+
+
+  }
+
+  {
+    title <
+      name = Journal of Policy History ;
+      issn = 0898-0306 ;
+      eissn = 1528-4190 ;
+      issnl = 0898-0306
+    >
+
+    param[journal_dir] = journal_of_policy_history
+    attr[journal_id] = jph
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 1999 ; Journal of Policy History Volume 11 ; 11 >
+      au < down ; 2000 ; Journal of Policy History Volume 12 ; 12 >
+      au < down ; 2001 ; Journal of Policy History Volume 13 ; 13 >
+      au < down ; 2002 ; Journal of Policy History Volume 14 ; 14 >
+      au < down ; 2003 ; Journal of Policy History Volume 15 ; 15 >
+      au < down ; 2004 ; Journal of Policy History Volume 16 ; 16 >
+      au < down ; 2005 ; Journal of Policy History Volume 17 ; 17 >
+      au < down ; 2006 ; Journal of Policy History Volume 18 ; 18 >
+      au < down ; 2007 ; Journal of Policy History Volume 19 ; 19 >
+      au < down ; 2008 ; Journal of Policy History Volume 20 ; 20 >
+      au < down ; 2009 ; Journal of Policy History Volume 21 ; 21 >
+      au < down ; 2010 ; Journal of Policy History Volume 22 ; 22 >
+      au < down ; 2011 ; Journal of Policy History Volume 23 ; 23 >
+      au < down ; 2012 ; Journal of Policy History Volume 24 ; 24 >
+      au < down ; 2013 ; Journal of Policy History Volume 25 ; 25 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2014 ; Journal of Policy History Volume 26 ; 26 >
+      au < down ; 2015 ; Journal of Policy History Volume 27 ; 27 >
+      au < doNotProcess ; 2016 ; Journal of Policy History Volume 28 ; 28 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = World Politics ;
+      issn = 0043-8871 ;
+      eissn = 1086-3338 ;
+      issnl = 0043-8871
+    >
+
+    param[journal_dir] = world_politics
+    attr[journal_id] = wp
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 1996 ; World Politics Volume 48 ; 48 >
+      au < down ; 1997 ; World Politics Volume 49 ; 49 >
+      au < down ; 1998 ; World Politics Volume 50 ; 50 >
+      au < down ; 1999 ; World Politics Volume 51 ; 51 >
+      au < down ; 2000 ; World Politics Volume 52 ; 52 >
+      au < down ; 2001 ; World Politics Volume 53 ; 53 >
+      au < down ; 2002 ; World Politics Volume 54 ; 54 >
+      au < down ; 2003 ; World Politics Volume 55 ; 55 >
+      au < down ; 2004 ; World Politics Volume 56 ; 56 >
+      au < down ; 2005 ; World Politics Volume 57 ; 57 >
+      au < down ; 2006 ; World Politics Volume 58 ; 58 >
+      au < down ; 2007 ; World Politics Volume 59 ; 59 >
+      au < down ; 2008 ; World Politics Volume 60 ; 60 >
+      au < down ; 2009 ; World Politics Volume 61 ; 61 >
+      au < down ; 2010 ; World Politics Volume 62 ; 62 >
+      au < down ; 2011 ; World Politics Volume 63 ; 63 >
+      au < down ; 2012 ; World Politics Volume 64 ; 64 >
+      au < down ; 2013 ; World Politics Volume 65 ; 65 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2014 ; World Politics Volume 66 ; 66 >
+      au < down ; 2015 ; World Politics Volume 67 ; 67 >
+      au < doNotProcess ; 2016 ; World Politics Volume 68 ; 68 >
+
+    }
+
+
+  }
+
+    {
+      title <
+        name = Dance Research Journal ;
+        issn = 0149-7677 ;
+        eissn = 1940-509X ;
+        issnl = 0149-7677
+      >
+
+      param[journal_dir] = dance_research_journal
+      attr[journal_id] = drj
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+        au < down ; 2008 ; Dance Research Journal Volume 40 ; 40 >
+        au < down ; 2009 ; Dance Research Journal Volume 41 ; 41 >
+        au < down ; 2010 ; Dance Research Journal Volume 42 ; 42 >
+        au < down ; 2011 ; Dance Research Journal Volume 43 ; 43 >
+        au < down ; 2012 ; Dance Research Journal Volume 44 ; 44 >
+        au < down ; 2013 ; Dance Research Journal Volume 45 ; 45 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+        au < down ; 2014 ; Dance Research Journal Volume 46 ; 46 >
+        au < down ; 2015 ; Dance Research Journal Volume 47 ; 47 >
+        au < doNotProcess ; 2016 ; Dance Research Journal Volume 48 ; 48 >
+
+    }
+
+
+    }
+
+}

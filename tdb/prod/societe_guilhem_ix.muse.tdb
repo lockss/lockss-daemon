@@ -1,0 +1,76 @@
+{
+
+  publisher <
+    name = Société Guilhem IX
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; year ; name ; param[volume] >
+
+  {
+  
+    title <
+      name = Tenso ;
+      issn = 0890-3352 ;
+      eissn = 1944-0146 ;
+      issnl = 0890-3352
+    >
+
+    param[journal_dir] = tenso
+    attr[journal_id] = ten
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < doNotProcess ; 1985-1986 ; Tenso Volume 1 ; 1 >
+      au < doNotProcess ; 1987 ; Tenso Volume 2 ; 2 >
+      au < doNotProcess ; 1987-1988 ; Tenso Volume 3 ; 3 >
+      au < doNotProcess ; 1988-1989 ; Tenso Volume 4 ; 4 >
+      au < doNotProcess ; 1989-1990 ; Tenso Volume 5 ; 5 >
+      au < doNotProcess ; 1990-1991 ; Tenso Volume 6 ; 6 >
+      au < doNotProcess ; 1991-1992 ; Tenso Volume 7 ; 7 >
+      au < doNotProcess ; 1992-1993 ; Tenso Volume 8 ; 8 >
+      au < doNotProcess ; 1993-1994 ; Tenso Volume 9 ; 9 >
+      au < doNotProcess ; 1994-1995 ; Tenso Volume 10 ; 10 >
+      au < doNotProcess ; 1995-1996 ; Tenso Volume 11 ; 11 >
+      au < doNotProcess ; 1996-1997 ; Tenso Volume 12 ; 12 >
+      au < doNotProcess ; 1997-1998 ; Tenso Volume 13 ; 13 >
+      au < doNotProcess ; 1999 ; Tenso Volume 14 ; 14 >
+      au < doNotProcess ; 2000 ; Tenso Volume 15 ; 15 >
+      au < doNotProcess ; 2001 ; Tenso Volume 16 ; 16 >
+      au < doNotProcess ; 2002 ; Tenso Volume 17 ; 17 >
+      au < doNotProcess ; 2003 ; Tenso Volume 18 ; 18 >
+      au < doNotProcess ; 2004 ; Tenso Volume 19 ; 19 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2005 ; Tenso Volume 20 ; 20 >
+      au < down ; 2006 ; Tenso Volume 21 ; 21 >
+      au < down ; 2007 ; Tenso Volume 22 ; 22 >
+      au < down ; 2008 ; Tenso Volume 23 ; 23 >
+      au < down ; 2009 ; Tenso Volume 24 ; 24 >
+      au < down ; 2010 ; Tenso Volume 25 ; 25 >
+      au < down ; 2011 ; Tenso Volume 26 ; 26 >
+      au < down ; 2012 ; Tenso Volume 27 ; 27 >
+      au < down ; 2013 ; Tenso Volume 28 ; 28 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2014 ; Tenso Volume 29 ; 29 >
+      au < down ; 2015 ; Tenso Volume 30 ; 30 >
+      au < doNotProcess ; 2016 ; Tenso Volume 31 ; 31 >
+
+    }
+
+  }
+
+}

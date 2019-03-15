@@ -1,0 +1,50 @@
+{
+  publisher <
+    name = International Vladimir Nabokov Society
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; year ; name ; param[volume] >
+
+  {
+    title <
+      name = Nabokov Studies ;
+      issn = 1080-1219 ;
+      eissn = 1548-9965 ;
+      issnl = 1080-1219
+    >
+
+    param[journal_dir] = nabokov_studies
+    attr[journal_id] = nab
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 1994 ; Nabokov Studies Volume 1 ; 1 >
+      au < down ; 1995 ; Nabokov Studies Volume 2 ; 2 >
+      au < down ; 1996 ; Nabokov Studies Volume 3 ; 3 >
+      au < down ; 1997 ; Nabokov Studies Volume 4 ; 4 >
+      au < down ; 1998-1999 ; Nabokov Studies Volume 5 ; 5 >
+      au < down ; 2000-2001 ; Nabokov Studies Volume 6 ; 6 >
+      au < down ; 2002-2003 ; Nabokov Studies Volume 7 ; 7 >
+      au < down ; 2004 ; Nabokov Studies Volume 8 ; 8 >
+      au < down ; 2005 ; Nabokov Studies Volume 9 ; 9 >
+      au < down ; 2006 ; Nabokov Studies Volume 10 ; 10 >
+      au < down ; 2007-2008 ; Nabokov Studies Volume 11 ; 11 >
+      au < down ; 2009-2011 ; Nabokov Studies Volume 12 ; 12 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < doNotProcess ; 2014-2015 ; Nabokov Studies Volume 13 ; 13 >
+      au < doNotProcess ; 2016 ; Nabokov Studies Volume 14 ; 14 >
+
+    }
+
+  }
+
+}

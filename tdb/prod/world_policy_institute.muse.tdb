@@ -1,0 +1,33 @@
+{
+  publisher <
+    name = World Policy Institute
+  >
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; year ; name ; param[volume] >
+
+  {
+
+    title <
+      name = World Policy Journal ;
+      issn = 0740-2775 ;
+      eissn = 1936-0924 ;
+      issnl = 0740-2775
+    >
+    
+    comment[stopped] = no longer contributing to Project Muse
+
+    param[journal_dir] = world_policy_journal
+    attr[journal_id] = wpj
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2010 ; World Policy Journal Volume 27 [Project MUSE] ; 27 >
+      au < down ; 2011 ; World Policy Journal Volume 28 [Project MUSE] ; 28 >
+
+    }
+
+  }
+
+}

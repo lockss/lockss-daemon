@@ -1,0 +1,58 @@
+{
+  publisher <
+    name = Washington State University
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; year ; name ; param[volume] >
+
+  {
+    title <
+      name = ESQ: A Journal of Nineteenth-Century American Literature and Culture ;
+      issn = 0093-8297 ;
+      eissn = 1935-021X ;
+      issnl = 0093-8297
+    >
+
+    param[journal_dir] = esq
+    attr[journal_id] = esq
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2003 ; ESQ: A Journal of the American Renaissance Volume 49 ; 49 >
+      au < down ; 2004 ; ESQ: A Journal of the American Renaissance Volume 50 ; 50 >
+      au < down ; 2005 ; ESQ: A Journal of the American Renaissance Volume 51 ; 51 >
+      au < down ; 2006 ; ESQ: A Journal of the American Renaissance Volume 52 ; 52 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2007 ; ESQ: A Journal of the American Renaissance Volume 53 ; 53 >
+      au < down ; 2008 ; ESQ: A Journal of the American Renaissance Volume 54 ; 54 >
+      au < down ; 2009 ; ESQ: A Journal of the American Renaissance Volume 55 ; 55 >
+      au < down ; 2010-2011 ; ESQ: A Journal of the American Renaissance Volume 56 ; 56 >
+      au < down ; 2011 ; ESQ: A Journal of the American Renaissance Volume 57 ; 57 >
+      au < down ; 2012 ; ESQ: A Journal of the American Renaissance Volume 58 ; 58 >
+      au < down ; 2013 ; ESQ: A Journal of the American Renaissance Volume 59 ; 59 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2014 ; ESQ: A Journal of the American Renaissance Volume 60 ; 60 >
+      au < down ; 2015 ; ESQ: A Journal of the American Renaissance Volume 61 ; 61 >
+
+      au < doNotProcess ; 2016 ; ESQ: A Journal of Nineteenth-Century American Literature and Culture Volume 62 ; 62 >
+
+    }
+
+  }
+
+}

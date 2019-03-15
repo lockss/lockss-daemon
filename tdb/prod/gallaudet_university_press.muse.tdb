@@ -1,0 +1,223 @@
+{
+  publisher <
+    name = Gallaudet University Press
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; year ; name ; param[volume] >
+
+  {
+    title <
+      name = American Annals of the Deaf ;
+      issn = 0002-726X ;
+      eissn = 1543-0375 ;
+      issnl = 0002-726X
+    >
+
+    param[journal_dir] = american_annals_of_the_deaf
+    attr[journal_id] = aad
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < doNotProcess ; 1980 ; American Annals of the Deaf Volume 125 ; 125 >
+      au < doNotProcess ; 1981 ; American Annals of the Deaf Volume 126 ; 126 >
+      au < doNotProcess ; 1982 ; American Annals of the Deaf Volume 127 ; 127 >
+      au < doNotProcess ; 1983 ; American Annals of the Deaf Volume 128 ; 128 >
+      au < doNotProcess ; 1984 ; American Annals of the Deaf Volume 129 ; 129 >
+      au < doNotProcess ; 1985 ; American Annals of the Deaf Volume 130 ; 130 >
+      au < doNotProcess ; 1986 ; American Annals of the Deaf Volume 131 ; 131 >
+      au < doNotProcess ; 1987 ; American Annals of the Deaf Volume 132 ; 132 >
+      au < doNotProcess ; 1988 ; American Annals of the Deaf Volume 133 ; 133 >
+      au < doNotProcess ; 1989 ; American Annals of the Deaf Volume 134 ; 134 >
+      au < doNotProcess ; 1990 ; American Annals of the Deaf Volume 135 ; 135 >
+      au < doNotProcess ; 1991 ; American Annals of the Deaf Volume 136 ; 136 >
+      au < doNotProcess ; 1992 ; American Annals of the Deaf Volume 137 ; 137 >
+      au < doNotProcess ; 1993 ; American Annals of the Deaf Volume 138 ; 138 >
+      au < doNotProcess ; 1994 ; American Annals of the Deaf Volume 139 ; 139 >
+      au < down ; 1995 ; American Annals of the Deaf Volume 140 ; 140 >
+      au < down ; 1996 ; American Annals of the Deaf Volume 141 ; 141 >
+      au < down ; 1997 ; American Annals of the Deaf Volume 142 ; 142 >
+      au < down ; 1998 ; American Annals of the Deaf Volume 143 ; 143 >
+      au < down ; 1999 ; American Annals of the Deaf Volume 144 ; 144 >
+      au < down ; 2000 ; American Annals of the Deaf Volume 145 ; 145 >
+      au < down ; 2001 ; American Annals of the Deaf Volume 146 ; 146 >
+      au < down ; 2002 ; American Annals of the Deaf Volume 147 ; 147 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2003-2004 ; American Annals of the Deaf Volume 148 ; 148 >
+      au < down ; 2004-2005 ; American Annals of the Deaf Volume 149 ; 149 >
+      au < down ; 2005-2006 ; American Annals of the Deaf Volume 150 ; 150 >
+      au < down ; 2006-2007 ; American Annals of the Deaf Volume 151 ; 151 >
+      au < down ; 2007-2008 ; American Annals of the Deaf Volume 152 ; 152 >
+      au < down ; 2008-2009 ; American Annals of the Deaf Volume 153 ; 153 >
+      au < down ; 2009-2010 ; American Annals of the Deaf Volume 154 ; 154 >
+      au < down ; 2010-2011 ; American Annals of the Deaf Volume 155 ; 155 >
+      au < down ; 2011-2012 ; American Annals of the Deaf Volume 156 ; 156 >
+      au < down ; 2012-2013 ; American Annals of the Deaf Volume 157 ; 157 >
+      au < down ; 2013-2014 ; American Annals of the Deaf Volume 158 ; 158 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2014-2015 ; American Annals of the Deaf Volume 159 ; 159 >
+      au < doNotProcess ; 2015-2016 ; American Annals of the Deaf Volume 160 ; 160 >
+      au < doNotProcess ; 2016-2017 ; American Annals of the Deaf Volume 161 ; 161 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Sign Language Studies ;
+      issn = 0302-1475 ;
+      eissn = 1533-6263 ;
+      issnl = 0302-1475
+    >
+
+    param[journal_dir] = sign_language_studies
+    attr[journal_id] = sls
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < doNotProcess ; 1972 ; Sign Language Studies [Original Series] Volume 1 ; 1001 >
+      au < doNotProcess ; 1973 ; Sign Language Studies [Original Series] Volume 2 ; 1002 >
+      au < doNotProcess ; 1973 ; Sign Language Studies [Original Series] Volume 3 ; 1003 >
+      au < doNotProcess ; 1974 ; Sign Language Studies [Original Series] Volume 4 ; 1004 >
+      au < doNotProcess ; 1974 ; Sign Language Studies [Original Series] Volume 5 ; 1005 >
+      au < doNotProcess ; 1975 ; Sign Language Studies [Original Series] Volume 6 ; 1006 >
+      au < doNotProcess ; 1975 ; Sign Language Studies [Original Series] Volume 7 ; 1007 >
+      au < doNotProcess ; 1975 ; Sign Language Studies [Original Series] Volume 8 ; 1008 >
+      au < doNotProcess ; 1975 ; Sign Language Studies [Original Series] Volume 9 ; 1009 >
+      au < doNotProcess ; 1976 ; Sign Language Studies [Original Series] Volume 10 ; 1010 >
+      au < doNotProcess ; 1976 ; Sign Language Studies [Original Series] Volume 11 ; 1011 >
+      au < doNotProcess ; 1976 ; Sign Language Studies [Original Series] Volume 12 ; 1012 >
+      au < doNotProcess ; 1976 ; Sign Language Studies [Original Series] Volume 13 ; 1013 >
+      au < doNotProcess ; 1977 ; Sign Language Studies [Original Series] Volume 14 ; 1014 >
+      au < doNotProcess ; 1977 ; Sign Language Studies [Original Series] Volume 15 ; 1015 >
+      au < doNotProcess ; 1977 ; Sign Language Studies [Original Series] Volume 16 ; 1016 >
+      au < doNotProcess ; 1977 ; Sign Language Studies [Original Series] Volume 17 ; 1017 >
+      au < doNotProcess ; 1978 ; Sign Language Studies [Original Series] Volume 18 ; 1018 >
+      au < doNotProcess ; 1978 ; Sign Language Studies [Original Series] Volume 19 ; 1019 >
+      au < doNotProcess ; 1978 ; Sign Language Studies [Original Series] Volume 20 ; 1020 >
+      au < doNotProcess ; 1978 ; Sign Language Studies [Original Series] Volume 21 ; 1021 >
+      au < doNotProcess ; 1979 ; Sign Language Studies [Original Series] Volume 22 ; 1022 >
+      au < doNotProcess ; 1979 ; Sign Language Studies [Original Series] Volume 23 ; 1023 >
+      au < doNotProcess ; 1979 ; Sign Language Studies [Original Series] Volume 24 ; 1024 >
+      au < doNotProcess ; 1979 ; Sign Language Studies [Original Series] Volume 25 ; 1025 >
+      au < doNotProcess ; 1980 ; Sign Language Studies [Original Series] Volume 26 ; 1026 >
+      au < doNotProcess ; 1980 ; Sign Language Studies [Original Series] Volume 27 ; 1027 >
+      au < doNotProcess ; 1980 ; Sign Language Studies [Original Series] Volume 28 ; 1028 >
+      au < doNotProcess ; 1980 ; Sign Language Studies [Original Series] Volume 29 ; 1029 >
+      au < doNotProcess ; 1981 ; Sign Language Studies [Original Series] Volume 30 ; 1030 >
+      au < doNotProcess ; 1981 ; Sign Language Studies [Original Series] Volume 31 ; 1031 >
+      au < doNotProcess ; 1981 ; Sign Language Studies [Original Series] Volume 32 ; 1032 >
+      au < doNotProcess ; 1981 ; Sign Language Studies [Original Series] Volume 33 ; 1033 >
+      au < doNotProcess ; 1982 ; Sign Language Studies [Original Series] Volume 34 ; 1034 >
+      au < doNotProcess ; 1982 ; Sign Language Studies [Original Series] Volume 35 ; 1035 >
+      au < doNotProcess ; 1982 ; Sign Language Studies [Original Series] Volume 36 ; 1036 >
+      au < doNotProcess ; 1982 ; Sign Language Studies [Original Series] Volume 37 ; 1037 >
+      au < doNotProcess ; 1983 ; Sign Language Studies [Original Series] Volume 38 ; 1038 >
+      au < doNotProcess ; 1983 ; Sign Language Studies [Original Series] Volume 39 ; 1039 >
+      au < doNotProcess ; 1983 ; Sign Language Studies [Original Series] Volume 40 ; 1040 >
+      au < doNotProcess ; 1983 ; Sign Language Studies [Original Series] Volume 41 ; 1041 >
+      au < doNotProcess ; 1984 ; Sign Language Studies [Original Series] Volume 42 ; 1042 >
+      au < doNotProcess ; 1984 ; Sign Language Studies [Original Series] Volume 43 ; 1043 >
+      au < doNotProcess ; 1984 ; Sign Language Studies [Original Series] Volume 44 ; 1044 >
+      au < doNotProcess ; 1984 ; Sign Language Studies [Original Series] Volume 45 ; 1045 >
+      au < doNotProcess ; 1985 ; Sign Language Studies [Original Series] Volume 46 ; 1046 >
+      au < doNotProcess ; 1985 ; Sign Language Studies [Original Series] Volume 47 ; 1047 >
+      au < doNotProcess ; 1985 ; Sign Language Studies [Original Series] Volume 48 ; 1048 >
+      au < doNotProcess ; 1985 ; Sign Language Studies [Original Series] Volume 49 ; 1049 >
+      au < doNotProcess ; 1986 ; Sign Language Studies [Original Series] Volume 50 ; 1050 >
+      au < doNotProcess ; 1986 ; Sign Language Studies [Original Series] Volume 51 ; 1051 >
+      au < doNotProcess ; 1986 ; Sign Language Studies [Original Series] Volume 52 ; 1052 >
+      au < doNotProcess ; 1986 ; Sign Language Studies [Original Series] Volume 53 ; 1053 >
+      au < doNotProcess ; 1987 ; Sign Language Studies [Original Series] Volume 54 ; 1054 >
+      au < doNotProcess ; 1987 ; Sign Language Studies [Original Series] Volume 55 ; 1055 >
+      au < doNotProcess ; 1987 ; Sign Language Studies [Original Series] Volume 56 ; 1056 >
+      au < doNotProcess ; 1987 ; Sign Language Studies [Original Series] Volume 57 ; 1057 >
+      au < doNotProcess ; 1988 ; Sign Language Studies [Original Series] Volume 58 ; 1058 >
+      au < doNotProcess ; 1988 ; Sign Language Studies [Original Series] Volume 59 ; 1059 >
+      au < doNotProcess ; 1988 ; Sign Language Studies [Original Series] Volume 60 ; 1060 >
+      au < doNotProcess ; 1988 ; Sign Language Studies [Original Series] Volume 61 ; 1061 >
+      au < doNotProcess ; 1989 ; Sign Language Studies [Original Series] Volume 62 ; 1062 >
+      au < doNotProcess ; 1989 ; Sign Language Studies [Original Series] Volume 63 ; 1063 >
+      au < doNotProcess ; 1989 ; Sign Language Studies [Original Series] Volume 64 ; 1064 >
+      au < doNotProcess ; 1989 ; Sign Language Studies [Original Series] Volume 65 ; 1065 >
+      au < doNotProcess ; 1990 ; Sign Language Studies [Original Series] Volume 66 ; 1066 >
+      au < doNotProcess ; 1990 ; Sign Language Studies [Original Series] Volume 67 ; 1067 >
+      au < doNotProcess ; 1990 ; Sign Language Studies [Original Series] Volume 68 ; 1068 >
+      au < doNotProcess ; 1990 ; Sign Language Studies [Original Series] Volume 69 ; 1069 >
+      au < doNotProcess ; 1991 ; Sign Language Studies [Original Series] Volume 70 ; 1070 >
+      au < doNotProcess ; 1991 ; Sign Language Studies [Original Series] Volume 71 ; 1071 >
+      au < doNotProcess ; 1991 ; Sign Language Studies [Original Series] Volume 72 ; 1072 >
+      au < doNotProcess ; 1991 ; Sign Language Studies [Original Series] Volume 73 ; 1073 >
+      au < doNotProcess ; 1992 ; Sign Language Studies [Original Series] Volume 74 ; 1074 >
+      au < doNotProcess ; 1992 ; Sign Language Studies [Original Series] Volume 75 ; 1075 >
+      au < doNotProcess ; 1992 ; Sign Language Studies [Original Series] Volume 76 ; 1076 >
+      au < doNotProcess ; 1992 ; Sign Language Studies [Original Series] Volume 77 ; 1077 >
+      au < doNotProcess ; 1993 ; Sign Language Studies [Original Series] Volume 78 ; 1078 >
+      au < doNotProcess ; 1993 ; Sign Language Studies [Original Series] Volume 79 ; 1079 >
+      au < doNotProcess ; 1993 ; Sign Language Studies [Original Series] Volume 80 ; 1080 >
+      au < doNotProcess ; 1993 ; Sign Language Studies [Original Series] Volume 81 ; 1081 >
+      au < doNotProcess ; 1994 ; Sign Language Studies [Original Series] Volume 82 ; 1082 >
+      au < doNotProcess ; 1994 ; Sign Language Studies [Original Series] Volume 83 ; 1083 >
+      au < doNotProcess ; 1994 ; Sign Language Studies [Original Series] Volume 84 ; 1084 >
+      au < doNotProcess ; 1994 ; Sign Language Studies [Original Series] Volume 85 ; 1085 >
+      au < doNotProcess ; 1994 ; Sign Language Studies [Original Series] Volume 86 ; 1086 >
+      au < doNotProcess ; 1995 ; Sign Language Studies [Original Series] Volume 87 ; 1087 >
+      au < doNotProcess ; 1995 ; Sign Language Studies [Original Series] Volume 88 ; 1088 >
+      au < doNotProcess ; 1995 ; Sign Language Studies [Original Series] Volume 89 ; 1089 >
+      au < doNotProcess ; 1996 ; Sign Language Studies [Original Series] Volume 90 ; 1090 >
+      au < doNotProcess ; 1996 ; Sign Language Studies [Original Series] Volume 91 ; 1091 >
+      au < doNotProcess ; 1996 ; Sign Language Studies [Original Series] Volume 92 ; 1092 >
+      au < doNotProcess ; 1996 ; Sign Language Studies [Original Series] Volume 93 ; 1093 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2000-2001 ; Sign Language Studies Volume 1 ; 1 >
+      au < down ; 2001-2002 ; Sign Language Studies Volume 2 ; 2 >
+      au < down ; 2002-2003 ; Sign Language Studies Volume 3 ; 3 >
+      au < down ; 2003-2004 ; Sign Language Studies Volume 4 ; 4 >
+      au < down ; 2004-2005 ; Sign Language Studies Volume 5 ; 5 >
+      au < down ; 2005-2006 ; Sign Language Studies Volume 6 ; 6 >
+      au < down ; 2006-2007 ; Sign Language Studies Volume 7 ; 7 >
+      au < down ; 2007-2008 ; Sign Language Studies Volume 8 ; 8 >
+      au < down ; 2008-2009 ; Sign Language Studies Volume 9 ; 9 >
+      au < down ; 2009-2010 ; Sign Language Studies Volume 10 ; 10 >
+      au < down ; 2010-2011 ; Sign Language Studies Volume 11 ; 11 >
+      au < down ; 2011-2012 ; Sign Language Studies Volume 12 ; 12 >
+      au < down ; 2012-2013 ; Sign Language Studies Volume 13 ; 13 >
+      au < down ; 2013-2014 ; Sign Language Studies Volume 14 ; 14 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2014-2015 ; Sign Language Studies Volume 15 ; 15 >
+      au < doNotProcess ; 2015-2016 ; Sign Language Studies Volume 16 ; 16 >
+
+    }
+
+  }
+
+}

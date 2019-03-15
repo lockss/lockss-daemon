@@ -1,0 +1,77 @@
+{
+  publisher <
+    name = Australian and New Zealand Association of Medieval and Early Modern Studies
+  >
+
+  implicit < status ; year ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+
+  {
+    title <
+      name = Parergon ;
+      issn = 0313-6221 ;
+      eissn = 1832-8334 ;
+      issnl = 0313-6221
+    >
+
+    param[journal_dir] = parergon
+    attr[journal_id] = pgn
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < doNotProcess ; 1983 ; Parergon Volume 1 ; 1 >
+      au < doNotProcess ; 1984 ; Parergon Volume 2 ; 2 >
+      au < doNotProcess ; 1985 ; Parergon Volume 3 ; 3 >
+      au < doNotProcess ; 1986 ; Parergon Volume 4 ; 4 >
+      au < doNotProcess ; 1987 ; Parergon Volume 5 ; 5 >
+      au < doNotProcess ; 1988 ; Parergon Volume 6 ; 6 >
+      au < doNotProcess ; 1989 ; Parergon Volume 7 ; 7 >
+      au < doNotProcess ; 1990 ; Parergon Volume 8 ; 8 >
+      au < doNotProcess ; 1991 ; Parergon Volume 9 ; 9 >
+      au < doNotProcess ; 1992 ; Parergon Volume 10 ; 10 >
+      au < doNotProcess ; 1993 ; Parergon Volume 11 ; 11 >
+      au < doNotProcess ; 1994-1995 ; Parergon Volume 12 ; 12 >
+      au < doNotProcess ; 1995-1996 ; Parergon Volume 13 ; 13 >
+      au < doNotProcess ; 1996-1997 ; Parergon Volume 14 ; 14 >
+      au < doNotProcess ; 1997-1998 ; Parergon Volume 15 ; 15 >
+      au < doNotProcess ; 1998-1999 ; Parergon Volume 16 ; 16 >
+      au < doNotProcess ; 1999-2000 ; Parergon Volume 17 ; 17 >
+      au < doNotProcess ; 2000-2001 ; Parergon Volume 18 ; 18 >
+      au < doNotProcess ; 2002 ; Parergon Volume 19 ; 19 >
+      au < doNotProcess ; 2003 ; Parergon Volume 20 ; 20 >
+      au < doNotProcess ; 2004 ; Parergon Volume 21 ; 21 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2005 ; Parergon Volume 22 ; 22 >
+      au < down ; 2006 ; Parergon Volume 23 ; 23 >
+      au < down ; 2007 ; Parergon Volume 24 ; 24 >
+      au < down ; 2008 ; Parergon Volume 25 ; 25 >
+      au < down ; 2009 ; Parergon Volume 26 ; 26 >
+      au < down ; 2010 ; Parergon Volume 27 ; 27 >
+      au < down ; 2011 ; Parergon Volume 28 ; 28 >
+      au < down ; 2012 ; Parergon Volume 29 ; 29 >
+      au < down ; 2013 ; Parergon Volume 30 ; 30 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2014 ; Parergon Volume 31 ; 31 >
+      au < down ; 2015 ; Parergon Volume 32 ; 32 >
+      au < doNotProcess ; 2016 ; Parergon Volume 33 ; 33 >
+
+    }
+
+  }
+
+}

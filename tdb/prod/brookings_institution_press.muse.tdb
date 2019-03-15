@@ -1,0 +1,251 @@
+{
+  publisher <
+    name = Brookings Institution Press
+  >
+
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+
+  {
+    title <
+      name = Brookings Papers on Economic Activity ;
+      issn = 0007-2303 ;
+      eissn = 1533-4465 ;
+      issnl = 0007-2303
+    >
+
+    param[journal_dir] = brookings_papers_on_economic_activity
+    attr[journal_id] = eca
+    implicit < status ; year ; name ; param[volume] >
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2000 ; Brookings Papers on Economic Activity 2000 ; 2000 >
+      au < down ; 2001 ; Brookings Papers on Economic Activity 2001 ; 2001 >
+      au < down ; 2002 ; Brookings Papers on Economic Activity 2002 ; 2002 >
+      au < down ; 2003 ; Brookings Papers on Economic Activity 2003 ; 2003 >
+      au < down ; 2004 ; Brookings Papers on Economic Activity 2004 ; 2004 >
+      au < down ; 2005 ; Brookings Papers on Economic Activity 2005 ; 2005 >
+      au < down ; 2006 ; Brookings Papers on Economic Activity 2006 ; 2006 >
+      au < down ; 2007 ; Brookings Papers on Economic Activity 2007 ; 2007 >
+      au < down ; 2008 ; Brookings Papers on Economic Activity 2008 ; 2008 >
+      au < down ; 2009 ; Brookings Papers on Economic Activity 2009 ; 2009 >
+      au < down ; 2010 ; Brookings Papers on Economic Activity 2010 ; 2010 >
+      au < down ; 2011 ; Brookings Papers on Economic Activity 2011 ; 2011 >
+      au < down ; 2012 ; Brookings Papers on Economic Activity 2012 ; 2012 >
+      au < down ; 2013 ; Brookings Papers on Economic Activity 2013 ; 2013 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2014 ; Brookings Papers on Economic Activity 2014 ; 2014 >
+
+      au < doNotProcess ; 2015 ; Brookings Papers on Economic Activity 2015 ; 2015 >
+      au < doNotProcess ; 2016 ; Brookings Papers on Economic Activity 2016 ; 2016 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Brookings Papers on Education Policy ;
+      issn = 1096-2719 ;
+      eissn = 1533-4457 ;
+      issnl = 1096-2719
+    >
+
+    param[journal_dir] = brookings_papers_on_education_policy
+    attr[journal_id] = pep
+    implicit < status ; year ; name ; param[volume] >
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2000 ; Brookings Papers on Education Policy 2000 ; 2000 >
+      au < down ; 2001 ; Brookings Papers on Education Policy 2001 ; 2001 >
+      au < down ; 2002 ; Brookings Papers on Education Policy 2002 ; 2002 >
+      au < down ; 2003 ; Brookings Papers on Education Policy 2003 ; 2003 >
+      au < down ; 2004 ; Brookings Papers on Education Policy 2004 ; 2004 >
+      au < down ; 2005 ; Brookings Papers on Education Policy 2005 ; 2005 >
+      au < down ; 2006 ; Brookings Papers on Education Policy 2006 ; 2006 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < doesNotExist ; 2007 ; Brookings Papers on Education Policy 2007 [to delete d1] ; 2007 >
+
+    }
+
+
+  }
+
+  {
+    title <
+      name = Brookings Trade Forum ;
+      issn = 1520-5479 ;
+      eissn = 1534-0635 ;
+      issnl = 1534-0635
+    >
+
+    param[journal_dir] = brookings_trade_forum
+    attr[journal_id] = btf
+    implicit < status ; year ; name ; param[volume] >
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2000 ; Brookings Trade Forum 2000 ; 2000 >
+      au < down ; 2001 ; Brookings Trade Forum 2001 ; 2001 >
+      au < down ; 2002 ; Brookings Trade Forum 2002 ; 2002 >
+      au < down ; 2003 ; Brookings Trade Forum 2003 ; 2003 >
+      au < down ; 2004 ; Brookings Trade Forum 2004 ; 2004 >
+      au < down ; 2005 ; Brookings Trade Forum 2005 ; 2005 >
+      au < down ; 2006 ; Brookings Trade Forum 2006 ; 2006 >
+      au < down ; 2007 ; Brookings Trade Forum 2007 ; 2007 >
+      au < down ; 2008 ; Brookings Trade Forum 2008 ; 2008 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < doesNotExist ; 2009 ; Brookings Trade Forum 2009 ; 2009 >
+
+    }
+
+
+  }
+
+  {
+    title <
+      name = Brookings-Wharton Papers on Financial Services ;
+      issn = 1098-3651 ;
+      eissn = 1533-4430 ;
+      issnl = 1098-3651
+    >
+
+    param[journal_dir] = brookings-wharton_papers_on_financial_services
+    attr[journal_id] = pfs
+    implicit < status ; year ; name ; param[volume] >
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2000 ; Brookings-Wharton Papers on Financial Services 2000 ; 2000 >
+      au < down ; 2001 ; Brookings-Wharton Papers on Financial Services 2001 ; 2001 >
+      au < down ; 2002 ; Brookings-Wharton Papers on Financial Services 2002 ; 2002 >
+      au < down ; 2003 ; Brookings-Wharton Papers on Financial Services 2003 ; 2003 >
+      au < down ; 2004 ; Brookings-Wharton Papers on Financial Services 2004 ; 2004 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < doesNotExist ; 2005 ; Brookings-Wharton Papers on Financial Services 2005 ; 2005 >
+
+    }
+
+
+  }
+
+  {
+    title <
+      name = Brookings-Wharton Papers on Urban Affairs ;
+      issn = 1528-7084 ;
+      eissn = 1533-4449 ;
+      issnl = 1528-7084
+    >
+
+    param[journal_dir] = brookings-wharton_papers_on_urban_affairs
+    attr[journal_id] = urb
+    implicit < status ; year ; name ; param[volume] >
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2000 ; Brookings-Wharton Papers on Urban Affairs 2000 ; 2000 >
+      au < down ; 2001 ; Brookings-Wharton Papers on Urban Affairs 2001 ; 2001 >
+      au < down ; 2002 ; Brookings-Wharton Papers on Urban Affairs 2002 ; 2002 >
+      au < down ; 2003 ; Brookings-Wharton Papers on Urban Affairs 2003 ; 2003 >
+      au < down ; 2004 ; Brookings-Wharton Papers on Urban Affairs 2004 ; 2004 >
+      au < down ; 2005 ; Brookings-Wharton Papers on Urban Affairs 2005 ; 2005 >
+      au < down ; 2006 ; Brookings-Wharton Papers on Urban Affairs 2006 ; 2006 >
+      au < down ; 2007 ; Brookings-Wharton Papers on Urban Affairs 2007 ; 2007 >
+      au < down ; 2008 ; Brookings-Wharton Papers on Urban Affairs 2008 ; 2008 >
+      au < down ; 2009 ; Brookings-Wharton Papers on Urban Affairs 2009 ; 2009 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < doesNotExist ; 2010 ; Brookings-Wharton Papers on Urban Affairs 2010 ; 2010 >
+
+    }
+
+
+  }
+
+  {
+    title <
+      name = Economía ;
+      issn = 1533-6239 ;
+      eissn = 1529-7470 ;
+      issnl = 1529-7470
+    >
+
+    param[journal_dir] = economia
+    attr[journal_id] = eco
+    implicit < status ; year ; name ; param[volume] >
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2000-2001 ; Economía Volume 1 ; 1 >
+      au < down ; 2001-2002 ; Economía Volume 2 ; 2 >
+      au < down ; 2002-2003 ; Economía Volume 3 ; 3 >
+      au < down ; 2003-2004 ; Economía Volume 4 ; 4 >
+      au < down ; 2004-2005 ; Economía Volume 5 ; 5 >
+      au < down ; 2005-2006 ; Economía Volume 6 ; 6 >
+      au < down ; 2006-2007 ; Economía Volume 7 ; 7 >
+      au < down ; 2007-2008 ; Economía Volume 8 ; 8 >
+      au < down ; 2008-2009 ; Economía Volume 9 ; 9 >
+      au < down ; 2009-2010 ; Economía Volume 10 ; 10 >
+      au < down ; 2010-2011 ; Economía Volume 11 ; 11 >
+      au < down ; 2011-2012 ; Economía Volume 12 ; 12 >
+      au < down ; 2012-2013 ; Economía Volume 13 ; 13 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2013-2014 ; Economía Volume 14 ; 14 >
+      au < down ; 2014-2015 ; Economía Volume 15 ; 15 >
+      au < doNotProcess ; 2015-2016 ; Economía Volume 16 ; 16 >
+      au < doNotProcess ; 2016-2017 ; Economía Volume 17 ; 17 >
+
+    }
+
+  }
+
+}

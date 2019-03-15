@@ -1,0 +1,35 @@
+{
+  publisher <
+    name = University of Miami
+  >
+
+  implicit < status ; year ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+
+  {
+    title <
+      name = Latin American Politics & Society ;
+      issn = 1531-426X ;
+      eissn = 1548-2456 ;
+      issnl = 1531-426X
+    >
+
+    param[journal_dir] = latin_american_politics_and_society
+    attr[journal_id] = lap
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2004 ; Latin American Politics & Society Volume 46 ; 46 >
+      au < down ; 2005 ; Latin American Politics & Society Volume 47 ; 47 >
+      au < down ; 2006 ; Latin American Politics & Society Volume 48 ; 48 >
+      au < down ; 2007 ; Latin American Politics & Society Volume 49 ; 49 >
+
+    }
+
+
+  }
+
+}

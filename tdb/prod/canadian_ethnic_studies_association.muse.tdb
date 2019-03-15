@@ -1,0 +1,49 @@
+{
+  publisher <
+    name = Canadian Ethnic Studies Association
+  >
+
+  implicit < status ; year ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+
+  {
+    title <
+      name = Canadian Ethnic Studies ;
+      issn = 0008-3496 ;
+      eissn = 1913-8253 ;
+      issnl = 0008-3496
+    >
+
+    param[journal_dir] = canadian_ethnic_studies
+    attr[journal_id] = ces
+    comment[doesNotExist] = manifest page of volume 42 exists, but content is not available
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2007 ; Canadian Ethnic Studies Volume 39 ; 39 >
+      au < down ; 2008 ; Canadian Ethnic Studies Volume 40 ; 40 >
+      au < down ; 2009 ; Canadian Ethnic Studies Volume 41 ; 41 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < doesNotExist ; 2010 ; Canadian Ethnic Studies Volume 42 ; 42 >
+      au < down ; 2011 ; Canadian Ethnic Studies Volume 43 ; 43 >
+      au < down ; 2012 ; Canadian Ethnic Studies Volume 44 ; 44 >
+      au < down ; 2013 ; Canadian Ethnic Studies Volume 45 ; 45 >
+      au < down ; 2014 ; Canadian Ethnic Studies Volume 46 ; 46 >
+      au < down ; 2015 ; Canadian Ethnic Studies Volume 47 ; 47 >
+
+      au < doNotProcess ; 2016 ; Canadian Ethnic Studies Volume 48 ; 48 >
+
+    }
+
+  }
+
+}

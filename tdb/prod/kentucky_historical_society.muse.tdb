@@ -1,0 +1,44 @@
+{
+  publisher <
+    name = Kentucky Historical Society
+  >
+
+  implicit < status ; year ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+
+  {
+    title <
+      name = Register of the Kentucky Historical Society ;
+      issn = 0023-0243 ;
+      eissn = 2161-0355 ;
+      issnl = 0023-0243
+    >
+
+    param[journal_dir] = register_of_the_kentucky_historical_society
+    attr[journal_id] = khs
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2010 ; Register of the Kentucky Historical Society Volume 108 ; 108 >
+      au < down ; 2011 ; Register of the Kentucky Historical Society Volume 109 ; 109 >
+      au < down ; 2012 ; Register of the Kentucky Historical Society Volume 110 ; 110 >
+      au < down ; 2013 ; Register of the Kentucky Historical Society Volume 111 ; 111 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2014 ; Register of the Kentucky Historical Society Volume 112 ; 112 >
+      au < down ; 2015 ; Register of the Kentucky Historical Society Volume 113 ; 113 >
+      au < doNotProcess ; 2016 ; Register of the Kentucky Historical Society Volume 114 ; 114 >
+
+    }
+
+  }
+  
+}

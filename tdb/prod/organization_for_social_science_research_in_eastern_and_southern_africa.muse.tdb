@@ -1,0 +1,54 @@
+{
+
+  publisher <
+    name = Organization for Social Science Research in Eastern and Southern Africa
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; year ; name ; param[volume] >
+
+  {
+  
+    title <
+      name = Eastern Africa Social Science Research Review ;
+      issn = 1027-1775 ;
+      eissn = 1684-4173 ;
+      issnl = 1027-1775
+    >
+
+    param[journal_dir] = eastern_africa_social_science_research_review
+    attr[journal_id] = eas
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2002 ; Eastern Africa Social Science Research Review Volume 18 ; 18 >
+      au < down ; 2003 ; Eastern Africa Social Science Research Review Volume 19 ; 19 >
+      au < down ; 2004 ; Eastern Africa Social Science Research Review Volume 20 ; 20 >
+      au < down ; 2005 ; Eastern Africa Social Science Research Review Volume 21 ; 21 >
+      au < down ; 2006 ; Eastern Africa Social Science Research Review Volume 22 ; 22 >
+      au < down ; 2007 ; Eastern Africa Social Science Research Review Volume 23 ; 23 >
+      au < down ; 2008 ; Eastern Africa Social Science Research Review Volume 24 ; 24 >
+      au < down ; 2009 ; Eastern Africa Social Science Research Review Volume 25 ; 25 >
+      au < down ; 2010 ; Eastern Africa Social Science Research Review Volume 26 ; 26 >
+      au < down ; 2011 ; Eastern Africa Social Science Research Review Volume 27 ; 27 >
+      au < down ; 2012 ; Eastern Africa Social Science Research Review Volume 28 ; 28 >
+      au < down ; 2013 ; Eastern Africa Social Science Research Review Volume 29 ; 29 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2014 ; Eastern Africa Social Science Research Review Volume 30 ; 30 >
+      au < down ; 2015 ; Eastern Africa Social Science Research Review Volume 31 ; 31 >
+
+      au < doNotProcess ; 2016 ; Eastern Africa Social Science Research Review Volume 32 ; 32 >
+
+    }
+
+  }
+
+}

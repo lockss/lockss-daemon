@@ -1,0 +1,56 @@
+{
+  publisher <
+    name = American Book Review
+  >
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; year ; name ; param[volume] >
+
+
+  {
+    title <
+      name = American Book Review ;
+      issn = 0149-9408 ;
+      eissn = 2153-4578 ;
+      issnl = 0149-9408
+    >
+    
+    
+    param[journal_dir] = american_book_review
+    attr[journal_id] = abr
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2005-2006 ; American Book Review Volume 27 ; 27 >
+      au < down ; 2006-2007 ; American Book Review Volume 28 ; 28 >
+      au < down ; 2007-2008 ; American Book Review Volume 29 ; 29 >
+      au < down ; 2008-2009 ; American Book Review Volume 30 ; 30 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2009-2010 ; American Book Review Volume 31 ; 31 >
+      au < down ; 2010-2011 ; American Book Review Volume 32 ; 32 >
+      au < down ; 2011-2012 ; American Book Review Volume 33 ; 33 >
+      au < down ; 2012-2013 ; American Book Review Volume 34 ; 34 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2013-2014 ; American Book Review Volume 35 ; 35 >
+      au < down ; 2014-2015 ; American Book Review Volume 36 ; 36 >
+      au < doNotProcess ; 2015-2016 ; American Book Review Volume 37 ; 37 >
+
+    }
+
+
+  }
+
+}

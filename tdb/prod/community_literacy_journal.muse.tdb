@@ -1,0 +1,42 @@
+{
+  publisher <
+    name = Community Literacy Journal
+  >
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; year ; name ; param[volume] >
+
+  param[journal_dir] = community_literacy_journal
+  attr[journal_id] = clj
+
+  {
+    title <
+      name = Community Literacy Journal ;
+      issn = 1555-9734 ;
+      eissn = 2162-6324 ;
+      issnl = 1555-9734
+    >
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2010-2011 ; Community Literacy Journal Volume 5 ; 5 >
+      au < down ; 2011-2012 ; Community Literacy Journal Volume 6 ; 6 >
+      au < down ; 2012-2013 ; Community Literacy Journal Volume 7 ; 7 >
+      au < down ; 2013-2014 ; Community Literacy Journal Volume 8 ; 8 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2014-2015 ; Community Literacy Journal Volume 9 ; 9 >
+      au < doNotProcess ; 2015-2016 ; Community Literacy Journal Volume 10 ; 10 >
+
+    }
+
+
+  }
+
+}

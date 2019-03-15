@@ -1,0 +1,117 @@
+{
+
+  publisher <
+    name = St. Bonaventure University Franciscan Institute
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; year ; name ; param[volume] >
+
+  {
+  
+    title <
+      name = Franciscan Studies ;
+      issn = 0080-5459 ;
+      eissn = 1945-9718 ;
+      issnl = 0080-5459
+    >
+
+    param[journal_dir] = franciscan_studies
+    attr[journal_id] = frc
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < doNotProcess ; 1943 ; Franciscan Studies Volume 3 ; 3 >
+      au < doNotProcess ; 1944 ; Franciscan Studies Volume 4 ; 4 >
+      au < doNotProcess ; 1945 ; Franciscan Studies Volume 5 ; 5 >
+      au < doNotProcess ; 1946 ; Franciscan Studies Volume 6 ; 6 >
+      au < doNotProcess ; 1947 ; Franciscan Studies Volume 7 ; 7 >
+      au < doNotProcess ; 1948 ; Franciscan Studies Volume 8 ; 8 >
+      au < doNotProcess ; 1949 ; Franciscan Studies Volume 9 ; 9 >
+      au < doNotProcess ; 1950 ; Franciscan Studies Volume 10 ; 10 >
+      au < doNotProcess ; 1951 ; Franciscan Studies Volume 11 ; 11 >
+      au < doNotProcess ; 1952 ; Franciscan Studies Volume 12 ; 12 >
+      au < doNotProcess ; 1953 ; Franciscan Studies Volume 13 ; 13 >
+      au < doNotProcess ; 1954 ; Franciscan Studies Volume 14 ; 14 >
+      au < doNotProcess ; 1955 ; Franciscan Studies Volume 15 ; 15 >
+      au < doNotProcess ; 1956 ; Franciscan Studies Volume 16 ; 16 >
+      au < doNotProcess ; 1957 ; Franciscan Studies Volume 17 ; 17 >
+      au < doNotProcess ; 1958 ; Franciscan Studies Volume 18 ; 18 >
+      au < doNotProcess ; 1959 ; Franciscan Studies Volume 19 ; 19 >
+      au < doNotProcess ; 1960 ; Franciscan Studies Volume 20 ; 20 >
+      au < doNotProcess ; 1961 ; Franciscan Studies Volume 21 ; 21 >
+      au < doNotProcess ; 1962 ; Franciscan Studies Volume 22 ; 22 >
+      au < doNotProcess ; 1963 ; Franciscan Studies Volume 23 ; 23 >
+      au < doNotProcess ; 1964 ; Franciscan Studies Volume 24 ; 24 >
+      au < doNotProcess ; 1965 ; Franciscan Studies Volume 25 ; 25 >
+      au < doNotProcess ; 1966 ; Franciscan Studies Volume 26 ; 26 >
+      au < doNotProcess ; 1967 ; Franciscan Studies Volume 27 ; 27 >
+      au < doNotProcess ; 1968 ; Franciscan Studies Volume 28 ; 28 >
+      au < doNotProcess ; 1969 ; Franciscan Studies Volume 29 ; 29 >
+      au < doNotProcess ; 1970 ; Franciscan Studies Volume 30 ; 30 >
+      au < doNotProcess ; 1971 ; Franciscan Studies Volume 31 ; 31 >
+      au < doNotProcess ; 1972 ; Franciscan Studies Volume 32 ; 32 >
+      au < doNotProcess ; 1973 ; Franciscan Studies Volume 33 ; 33 >
+      au < doNotProcess ; 1974 ; Franciscan Studies Volume 34 ; 34 >
+      au < doNotProcess ; 1975 ; Franciscan Studies Volume 35 ; 35 >
+      au < doNotProcess ; 1976 ; Franciscan Studies Volume 36 ; 36 >
+      au < doNotProcess ; 1977 ; Franciscan Studies Volume 37 ; 37 >
+      au < doNotProcess ; 1978 ; Franciscan Studies Volume 38 ; 38 >
+      au < doNotProcess ; 1979 ; Franciscan Studies Volume 39 ; 39 >
+      au < doNotProcess ; 1980 ; Franciscan Studies Volume 40 ; 40 >
+      au < doNotProcess ; 1981 ; Franciscan Studies Volume 41 ; 41 >
+      au < doNotProcess ; 1982 ; Franciscan Studies Volume 42 ; 42 >
+      au < doNotProcess ; 1983 ; Franciscan Studies Volume 43 ; 43 >
+      au < doNotProcess ; 1984 ; Franciscan Studies Volume 44 ; 44 >
+      au < doNotProcess ; 1985 ; Franciscan Studies Volume 45 ; 45 >
+      au < doNotProcess ; 1986 ; Franciscan Studies Volume 46 ; 46 >
+      au < doNotProcess ; 1987 ; Franciscan Studies Volume 47 ; 47 >
+      au < doNotProcess ; 1988 ; Franciscan Studies Volume 48 ; 48 >
+      au < doNotProcess ; 1989 ; Franciscan Studies Volume 49 ; 49 >
+      au < down ; 1990 ; Franciscan Studies Volume 50 ; 50 >
+      au < down ; 1991 ; Franciscan Studies Volume 51 ; 51 >
+      au < down ; 1992 ; Franciscan Studies Volume 52 ; 52 >
+      au < down ; 1993 ; Franciscan Studies Volume 53 ; 53 >
+      au < down ; 1994-1997 ; Franciscan Studies Volume 54 ; 54 >
+      au < down ; 1998 ; Franciscan Studies Volume 55 ; 55 >
+      au < down ; 1998 ; Franciscan Studies Volume 56 ; 56 >
+      au < down ; 1999 ; Franciscan Studies Volume 57 ; 57 >
+      au < down ; 2000 ; Franciscan Studies Volume 58 ; 58 >
+      au < down ; 2001 ; Franciscan Studies Volume 59 ; 59 >
+      au < down ; 2002 ; Franciscan Studies Volume 60 ; 60 >
+      au < down ; 2003 ; Franciscan Studies Volume 61 ; 61 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2004 ; Franciscan Studies Volume 62 ; 62 >
+      au < down ; 2005 ; Franciscan Studies Volume 63 ; 63 >
+      au < down ; 2006 ; Franciscan Studies Volume 64 ; 64 >
+      au < down ; 2007 ; Franciscan Studies Volume 65 ; 65 >
+      au < down ; 2008 ; Franciscan Studies Volume 66 ; 66 >
+      au < down ; 2009 ; Franciscan Studies Volume 67 ; 67 >
+      au < down ; 2010 ; Franciscan Studies Volume 68 ; 68 >
+      au < down ; 2011 ; Franciscan Studies Volume 69 ; 69 >
+      au < down ; 2012 ; Franciscan Studies Volume 70 ; 70 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2013 ; Franciscan Studies Volume 71 ; 71 >
+      au < doNotProcess ; 2014 ; Franciscan Studies Volume 72 ; 72 >
+      au < doNotProcess ; 2015 ; Franciscan Studies Volume 73 ; 73 >
+      au < doNotProcess ; 2016 ; Franciscan Studies Volume 74 ; 74 >
+
+    }
+
+  }
+
+}

@@ -1,0 +1,42 @@
+{
+  publisher <
+    name = Malaysian Branch of the Royal Asiatic Society
+  >
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; year ; name ; param[volume] >
+
+  param[journal_dir] = journal_of_the_malaysian_branch_of_the_royal_asiatic_society
+  attr[journal_id] = ras
+
+  {
+    title <
+      name = Journal of the Malaysian Branch of the Royal Asiatic Society ;
+      issn = 0128-5483 ;
+      eissn = 2180-4338 ;
+      issnl = 0128-5483
+    >
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2010 ; Journal of the Malaysian Branch of the Royal Asiatic Society Volume 83 ; 83 >
+      au < down ; 2011 ; Journal of the Malaysian Branch of the Royal Asiatic Society Volume 84 ; 84 >
+      au < down ; 2012 ; Journal of the Malaysian Branch of the Royal Asiatic Society Volume 85 ; 85 >
+      au < down ; 2013 ; Journal of the Malaysian Branch of the Royal Asiatic Society Volume 86 ; 86 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2014 ; Journal of the Malaysian Branch of the Royal Asiatic Society Volume 87 ; 87 >
+      au < down ; 2015 ; Journal of the Malaysian Branch of the Royal Asiatic Society Volume 88 ; 88 >
+      au < doNotProcess ; 2016 ; Journal of the Malaysian Branch of the Royal Asiatic Society Volume 89 ; 89 >
+
+    }
+
+  }
+
+}

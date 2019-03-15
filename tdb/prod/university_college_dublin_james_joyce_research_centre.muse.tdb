@@ -1,0 +1,42 @@
+{
+  publisher <
+    name = University College Dublin James Joyce Research Centre
+  >
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; year ; name ; param[volume] >
+
+  {
+    title <
+      name = Dublin James Joyce Journal ;
+      issn = 2009-1850 ;
+      eissn = 2009-4507 ;
+      issnl = 2009-1850
+    >
+
+    param[journal_dir] = dublin_james_joyce_journal
+    attr[journal_id] = djj
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2008 ; Dublin James Joyce Journal Volume 1 ; 1 >
+      au < down ; 2009 ; Dublin James Joyce Journal Volume 2 ; 2 >
+      au < down ; 2010 ; Dublin James Joyce Journal Volume 3 ; 3 >
+      au < down ; 2011 ; Dublin James Joyce Journal Volume 4 ; 4 >
+      au < down ; 2012 ; Dublin James Joyce Journal Volume 5 ; 5 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2013-2014 ; Dublin James Joyce Journal Volume 6-7 ; 6 >
+
+    }
+
+
+  }
+
+}

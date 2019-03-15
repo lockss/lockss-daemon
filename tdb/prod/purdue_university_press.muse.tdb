@@ -1,0 +1,314 @@
+{
+
+  publisher <
+    name = Purdue University Press ;
+    info[tester] = 5
+  >
+
+  {
+
+    title < 
+      name = Against the Grain ;
+      issn = 1043-2094 
+    >
+    
+    plugin = org.lockss.plugin.bepress.BePressPlugin
+#    param[base_url] = http://docs.lib.purdue.edu/
+    param[journal_abbr] = atg
+    implicit < status ; year ; name ; param[volume] ; param[base_url] >
+
+    au < released ; 1989 ; Against the Grain Volume 1 ; 1 ; http://docs.lib.purdue.edu/ >
+    au < released ; 1990 ; Against the Grain Volume 2 ; 2 ; http://docs.lib.purdue.edu/ >
+    au < released ; 1991 ; Against the Grain Volume 3 ; 3 ; http://docs.lib.purdue.edu/ >
+    au < released ; 1992 ; Against the Grain Volume 4 ; 4 ; http://docs.lib.purdue.edu/ >
+    au < released ; 1993 ; Against the Grain Volume 5 ; 5 ; http://docs.lib.purdue.edu/ >
+    au < released ; 1994 ; Against the Grain Volume 6 ; 6 ; http://docs.lib.purdue.edu/ >
+    au < released ; 1995 ; Against the Grain Volume 7 ; 7 ; http://docs.lib.purdue.edu/ >
+    au < released ; 1996 ; Against the Grain Volume 8 ; 8 ; http://docs.lib.purdue.edu/ >
+    au < released ; 1997 ; Against the Grain Volume 9 ; 9 ; http://docs.lib.purdue.edu/ >
+    au < released ; 1998 ; Against the Grain Volume 10 ; 10 ; http://docs.lib.purdue.edu/ >
+    au < released ; 1999 ; Against the Grain Volume 11 ; 11 ; http://docs.lib.purdue.edu/ >
+    au < released ; 2000 ; Against the Grain Volume 12 ; 12 ; http://docs.lib.purdue.edu/ >
+    au < released ; 2001 ; Against the Grain Volume 13 ; 13 ; http://docs.lib.purdue.edu/ >
+    au < released ; 2002 ; Against the Grain Volume 14 ; 14 ; http://docs.lib.purdue.edu/ >
+    au < released ; 2003 ; Against the Grain Volume 15 ; 15 ; http://docs.lib.purdue.edu/ >
+    au < released ; 2004 ; Against the Grain Volume 16 ; 16 ; http://docs.lib.purdue.edu/ >
+    au < released ; 2005 ; Against the Grain Volume 17 ; 17 ; http://docs.lib.purdue.edu/ >
+    au < released ; 2006 ; Against the Grain Volume 18 ; 18 ; http://docs.lib.purdue.edu/ >
+    au < released ; 2007 ; Against the Grain Volume 19 ; 19 ; http://docs.lib.purdue.edu/ >
+    au < released ; 2008 ; Against the Grain Volume 20 ; 20 ; http://docs.lib.purdue.edu/ >
+    au < released ; 2009 ; Against the Grain Volume 21 ; 21 ; http://docs.lib.purdue.edu/ >
+    au < released ; 2010 ; Against the Grain Volume 22 ; 22 ; http://docs.lib.purdue.edu/ >
+    au < released ; 2011 ; Against the Grain Volume 23 ; 23 ; http://docs.lib.purdue.edu/ >
+
+  }
+  
+  {
+  
+    title <
+      name = CLCWeb: Comparative Literature and Culture ;
+      eissn = 1481-4374 ;
+      issnl = 1481-4374
+    >
+
+    rights = openaccess
+    
+    {
+    
+      plugin = edu.upenn.library.plugin.clcweb.CLCWebPlugin
+      param[base_url] = http://clcwebjournal.lib.purdue.edu/
+      implicit < status ; year ; name ; param[year] ; param[volume] >
+    
+      au < down ; 1999 ; CLCWeb: Comparative Literature and Culture Volume 1 ; 1999 ; 1 >
+      au < down ; 2000 ; CLCWeb: Comparative Literature and Culture Volume 2 ; 2000 ; 2 >
+      au < down ; 2001 ; CLCWeb: Comparative Literature and Culture Volume 3 ; 2001 ; 3 >
+      au < down ; 2002 ; CLCWeb: Comparative Literature and Culture Volume 4 ; 2002 ; 4 >
+      au < down ; 2003 ; CLCWeb: Comparative Literature and Culture Volume 5 ; 2003 ; 5 >
+      au < down ; 2004 ; CLCWeb: Comparative Literature and Culture Volume 6 ; 2004 ; 6 >
+      au < down ; 2005 ; CLCWeb: Comparative Literature and Culture Volume 7 ; 2005 ; 7 >
+      au < down ; 2006 ; CLCWeb: Comparative Literature and Culture Volume 8 ; 2006 ; 8 >
+  
+    }
+    
+    {
+    
+      plugin = org.lockss.plugin.bepress.BePressPlugin
+#      param[base_url] = http://docs.lib.purdue.edu/
+      param[journal_abbr] = clcweb
+      implicit < status ; year ; name ; param[volume] ; param[base_url] >
+      
+      au < doNotProcess ; 1999 ; CLCWeb: Comparative Literature and Culture Volume 1 ; 1 ; https://docs.lib.purdue.edu/ >
+      au < doNotProcess ; 2000 ; CLCWeb: Comparative Literature and Culture Volume 2 ; 2 ; https://docs.lib.purdue.edu/ >
+      au < doNotProcess ; 2001 ; CLCWeb: Comparative Literature and Culture Volume 3 ; 3 ; https://docs.lib.purdue.edu/ >
+      au < doNotProcess ; 2002 ; CLCWeb: Comparative Literature and Culture Volume 4 ; 4 ; https://docs.lib.purdue.edu/ >
+      au < doNotProcess ; 2003 ; CLCWeb: Comparative Literature and Culture Volume 5 ; 5 ; https://docs.lib.purdue.edu/ >
+      au < doNotProcess ; 2004 ; CLCWeb: Comparative Literature and Culture Volume 6 ; 6 ; https://docs.lib.purdue.edu/ >
+      au < doNotProcess ; 2005 ; CLCWeb: Comparative Literature and Culture Volume 7 ; 7 ; https://docs.lib.purdue.edu/ >
+      au < doNotProcess ; 2006 ; CLCWeb: Comparative Literature and Culture Volume 8 ; 8 ; https://docs.lib.purdue.edu/ >
+      au < released ; 2007 ; CLCWeb: Comparative Literature and Culture Volume 9 ; 9 ; http://docs.lib.purdue.edu/ >
+      au < released ; 2008 ; CLCWeb: Comparative Literature and Culture Volume 10 ; 10 ; http://docs.lib.purdue.edu/ >
+      au < released ; 2009 ; CLCWeb: Comparative Literature and Culture Volume 11 ; 11 ; http://docs.lib.purdue.edu/ >
+      au < released ; 2010 ; CLCWeb: Comparative Literature and Culture Volume 12 ; 12 ; http://docs.lib.purdue.edu/ >
+      au < released ; 2011 ; CLCWeb: Comparative Literature and Culture Volume 13 ; 13 ; http://docs.lib.purdue.edu/ >
+      au < released ; 2012 ; CLCWeb: Comparative Literature and Culture Volume 14 ; 14 ; http://docs.lib.purdue.edu/ >
+      au < released ; 2013 ; CLCWeb: Comparative Literature and Culture Volume 15 ; 15 ; http://docs.lib.purdue.edu/ >
+      au < released ; 2014 ; CLCWeb: Comparative Literature and Culture Volume 16 ; 16 ; http://docs.lib.purdue.edu/ >
+      au < released ; 2015 ; CLCWeb: Comparative Literature and Culture Volume 17 ; 17 ; http://docs.lib.purdue.edu/ >
+      au < released ; 2016 ; CLCWeb: Comparative Literature and Culture Volume 18 ; 18 ; http://docs.lib.purdue.edu/ >
+      au < released ; 2017 ; CLCWeb: Comparative Literature and Culture Volume 19 ; 19 ; https://docs.lib.purdue.edu/ >
+      au < manifest ; 2018 ; CLCWeb: Comparative Literature and Culture Volume 20 ; 20 ; https://docs.lib.purdue.edu/ >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Data Curation Profiles Directory ;
+      issn = 2326-6651 
+    >
+
+    plugin = org.lockss.plugin.bepress.BePressPlugin
+#    param[base_url] = http://docs.lib.purdue.edu/
+    param[journal_abbr] = dcp
+    implicit < status ; year ; name ; param[volume] ; param[base_url] >
+
+    au < released ; 2009 ; Data Curation Profiles Directory Volume 1 ; 1 ; http://docs.lib.purdue.edu/ >
+    au < released ; 2010 ; Data Curation Profiles Directory Volume 2 ; 2 ; http://docs.lib.purdue.edu/ >
+    au < released ; 2011 ; Data Curation Profiles Directory Volume 3 ; 3 ; http://docs.lib.purdue.edu/ >
+    au < released ; 2012 ; Data Curation Profiles Directory Volume 4 ; 4 ; http://docs.lib.purdue.edu/ >
+    au < released ; 2013 ; Data Curation Profiles Directory Volume 5 ; 5 ; http://docs.lib.purdue.edu/ >
+
+  }
+    
+  {
+
+    title <
+      name = Education and Culture ;
+      issn = 1085-4908 ;
+      eissn = 1559-1786 ;
+      issnl = 1085-4908
+    >
+
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    param[journal_dir] = education_and_culture
+    implicit < status ; year ; name ; param[volume] >
+
+    attr[journal_id] = eac
+    
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < doNotProcess ; 1976 ; Education and Culture Volume 1 ; 1 >
+      au < doNotProcess ; 1977 ; Education and Culture Volume 2 ; 2 >
+      au < doNotProcess ; 1983 ; Education and Culture Volume 3 ; 3 >
+      au < doNotProcess ; 1984 ; Education and Culture Volume 4 ; 4 >
+      au < doNotProcess ; 1985 ; Education and Culture Volume 5 ; 5 >
+      au < doNotProcess ; 1986 ; Education and Culture Volume 6 ; 6 >
+      au < doNotProcess ; 1987 ; Education and Culture Volume 7 ; 7 >
+      au < doNotProcess ; 1988 ; Education and Culture Volume 8 ; 8 >
+      au < doNotProcess ; 1989 ; Education and Culture Volume 9 ; 9 >
+      au < doNotProcess ; 1993 ; Education and Culture Volume 10 ; 10 >
+      au < doNotProcess ; 1994 ; Education and Culture Volume 11 ; 11 >
+      au < doNotProcess ; 1995 ; Education and Culture Volume 12 ; 12 >
+      au < doNotProcess ; 1996 ; Education and Culture Volume 13 ; 13 >
+      au < doNotProcess ; 1997 ; Education and Culture Volume 14 ; 14 >
+      au < doNotProcess ; 1999 ; Education and Culture Volume 15 ; 15 >
+      au < doNotProcess ; 1999-2000 ; Education and Culture Volume 16 ; 16 >
+      au < doNotProcess ; 2001 ; Education and Culture Volume 17 ; 17 >
+      au < doNotProcess ; 2002 ; Education and Culture Volume 18 ; 18 >
+      au < doNotProcess ; 2003 ; Education and Culture Volume 19 ; 19 >
+      au < doNotProcess ; 2004 ; Education and Culture Volume 20 ; 20 >
+      au < doNotProcess ; 2005 ; Education and Culture Volume 21 ; 21 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2006 ; Education and Culture Volume 22 ; 22 >
+      au < down ; 2007 ; Education and Culture Volume 23 ; 23 >
+      au < down ; 2008 ; Education and Culture Volume 24 ; 24 >
+      au < down ; 2009 ; Education and Culture Volume 25 ; 25 >
+      au < down ; 2010 ; Education and Culture Volume 26 ; 26 >
+      au < down ; 2011 ; Education and Culture Volume 27 ; 27 >
+      au < down ; 2012 ; Education and Culture Volume 28 ; 28 >
+      au < down ; 2013 ; Education and Culture Volume 29 ; 29 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2014 ; Education and Culture Volume 30 ; 30 >
+      au < down ; 2015 ; Education and Culture Volume 31 ; 31 >
+      au < doNotProcess ; 2016 ; Education and Culture Volume 32 ; 32 >
+
+    }
+
+  }
+
+  # Interdisciplinary Journal of Problem-Based Learning (1541-5015)
+  
+  # Journal of Aviation Technology and Engineering (2159-6670)
+  
+  # Journal of Human Performance in Extreme Environments (1529-5168)
+  
+  # Journal of Pre-College Engineering Education Research (2157-9288)
+  
+  # Journal of Problem Solving (1932-6246)
+  
+  # Journal of Southeast Asian American Education and Advancement (2153-8999)
+  
+  {
+
+    title <
+      name = Philip Roth Studies ;
+      issn = 1547-3929 ;
+      eissn = 1940-5278 ;
+      issnl = 1547-3929
+    >
+
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    param[journal_dir] = philip_roth_studies
+    implicit < status ; year ; name ; param[volume] >
+
+    attr[journal_id] = prs
+    
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2005 ; Philip Roth Studies Volume 1 ; 1 >
+      au < down ; 2006 ; Philip Roth Studies Volume 2 ; 2 >
+      au < down ; 2007 ; Philip Roth Studies Volume 3 ; 3 >
+      au < down ; 2008 ; Philip Roth Studies Volume 4 ; 4 >
+      au < down ; 2009 ; Philip Roth Studies Volume 5 ; 5 >
+      au < down ; 2010 ; Philip Roth Studies Volume 6 ; 6 >
+      au < down ; 2011 ; Philip Roth Studies Volume 7 ; 7 >
+      au < down ; 2012 ; Philip Roth Studies Volume 8 ; 8 >
+      au < down ; 2013 ; Philip Roth Studies Volume 9 ; 9 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2014 ; Philip Roth Studies Volume 10 ; 10 >
+      au < down ; 2015 ; Philip Roth Studies Volume 11 ; 11 >
+      au < doNotProcess ; 2016 ; Philip Roth Studies Volume 12 ; 12 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Shofar: An Interdisciplinary Journal of Jewish Studies ;
+      issn = 0882-8539 ;
+      eissn = 1534-5165 ;
+      issnl = 0882-8539
+    >
+
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    param[journal_dir] = shofar
+    implicit < status ; year ; name ; param[volume] >
+
+    attr[journal_id] = sho
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 1990-1991 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 9 ; 9 >
+      au < down ; 1991-1992 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 10 ; 10 >
+      au < down ; 1992-1993 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 11 ; 11 >
+      au < down ; 1993-1994 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 12 ; 12 >
+      au < down ; 1994-1995 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 13 ; 13 >
+      au < down ; 1995-1996 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 14 ; 14 >
+      au < down ; 1996-1997 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 15 ; 15 >
+      au < down ; 1997-1998 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 16 ; 16 >
+      au < down ; 1998-1999 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 17 ; 17 >
+      au < down ; 1999-2000 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 18 ; 18 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2001 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 19 ; 19 >
+      au < down ; 2001-2002 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 20 ; 20 >
+      au < down ; 2002-2003 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 21 ; 21 >
+      au < down ; 2003-2004 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 22 ; 22 >
+      au < down ; 2004-2005 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 23 ; 23 >
+      au < down ; 2005-2006 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 24 ; 24 >
+      au < down ; 2006-2007 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 25 ; 25 >
+      au < down ; 2007-2008 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 26 ; 26 >
+      au < down ; 2008-2009 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 27 ; 27 >
+      au < down ; 2009-2010 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 28 ; 28 >
+      au < down ; 2010-2011 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 29 ; 29 >
+      au < down ; 2011-2012 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 30 ; 30 >
+      au < down ; 2012-2013 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 31 ; 31 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2013-2014 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 32 ; 32 >
+      au < down ; 2014 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 33 ; 33 >
+      au < doNotProcess ; 2015-2016 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 34 ; 34 >
+
+    }
+
+  }
+
+}

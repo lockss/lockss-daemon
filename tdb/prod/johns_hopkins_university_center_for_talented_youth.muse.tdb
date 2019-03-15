@@ -1,0 +1,34 @@
+{
+  publisher <
+    name = Johns Hopkins University Center for Talented Youth
+  >
+
+  implicit < status ; year ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+
+  {
+    title <
+      name = Imagine ;
+      issn = 1071-605X ;
+      eissn = 1086-3230 ;
+      issnl = 1071-605X
+      >
+    
+      param[journal_dir] = imagine 
+      attr[journal_id] = imagine
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+        au < down ; 1996-1997 ; Imagine Volume 4 ; 4 >
+        au < down ; 1997-1998 ; Imagine Volume 5 ; 5 >
+        au < down ; 1998-1999 ; Imagine Volume 6 ; 6 >
+
+    }
+
+
+  }
+
+}

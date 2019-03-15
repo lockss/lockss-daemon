@@ -1,0 +1,25 @@
+{
+  publisher <
+    name = Sungkyunkwan University, Academy of East Asian Studies
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:301
+
+    {
+    title <
+      name = Sungkyun Journal of East Asian Studies ;
+      issn = 1598-2661 ;
+      eissn = 2586-0380
+    >
+
+      attr[journal_id] = 717
+
+        au < exists ; 2017 ; Sungkyun Journal of East Asian Studies Volume 17 [2017] ; 12804 >
+        au < exists ; 2018 ; Sungkyun Journal of East Asian Studies Volume 18 [2018] ; 13507 >
+
+    }
+
+}

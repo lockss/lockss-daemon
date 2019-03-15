@@ -1,0 +1,104 @@
+{
+
+  publisher <
+    name = ELT Press
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; year ; name ; param[volume] >
+
+  {
+  
+    title <
+      name = English Literature in Transition, 1880-1920 ;
+      issn = 0013-8339 ;
+      eissn = 1559-2715 ;
+      issnl = 0013-8339
+    >
+
+    param[journal_dir] = english_literature_in_transition
+    attr[journal_id] = elt
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < doNotProcess ; 1958 ; English Literature in Transition, 1880-1920 Volume 1 ; 1 >
+      au < doNotProcess ; 1959 ; English Literature in Transition, 1880-1920 Volume 2 ; 2 >
+      au < doNotProcess ; 1960 ; English Literature in Transition, 1880-1920 Volume 3 ; 3 >
+      au < doNotProcess ; 1961 ; English Literature in Transition, 1880-1920 Volume 4 ; 4 >
+      au < doNotProcess ; 1962 ; English Literature in Transition, 1880-1920 Volume 5 ; 5 >
+      au < doNotProcess ; 1963 ; English Literature in Transition, 1880-1920 Volume 6 ; 6 >
+      au < doNotProcess ; 1964 ; English Literature in Transition, 1880-1920 Volume 7 ; 7 >
+      au < doNotProcess ; 1965 ; English Literature in Transition, 1880-1920 Volume 8 ; 8 >
+      au < doNotProcess ; 1966 ; English Literature in Transition, 1880-1920 Volume 9 ; 9 >
+      au < doNotProcess ; 1967 ; English Literature in Transition, 1880-1920 Volume 10 ; 10 >
+      au < doNotProcess ; 1968 ; English Literature in Transition, 1880-1920 Volume 11 ; 11 >
+      au < doNotProcess ; 1969 ; English Literature in Transition, 1880-1920 Volume 12 ; 12 >
+      au < doNotProcess ; 1970 ; English Literature in Transition, 1880-1920 Volume 13 ; 13 >
+      au < doNotProcess ; 1971 ; English Literature in Transition, 1880-1920 Volume 14 ; 14 >
+      au < doNotProcess ; 1972 ; English Literature in Transition, 1880-1920 Volume 15 ; 15 >
+      au < doNotProcess ; 1973 ; English Literature in Transition, 1880-1920 Volume 16 ; 16 >
+      au < doNotProcess ; 1974 ; English Literature in Transition, 1880-1920 Volume 17 ; 17 >
+      au < doNotProcess ; 1975 ; English Literature in Transition, 1880-1920 Volume 18 ; 18 >
+      au < doNotProcess ; 1976 ; English Literature in Transition, 1880-1920 Volume 19 ; 19 >
+      au < doNotProcess ; 1977 ; English Literature in Transition, 1880-1920 Volume 20 ; 20 >
+      au < doNotProcess ; 1978 ; English Literature in Transition, 1880-1920 Volume 21 ; 21 >
+      au < doNotProcess ; 1979 ; English Literature in Transition, 1880-1920 Volume 22 ; 22 >
+      au < doNotProcess ; 1980 ; English Literature in Transition, 1880-1920 Volume 23 ; 23 >
+      au < doNotProcess ; 1981 ; English Literature in Transition, 1880-1920 Volume 24 ; 24 >
+      au < doNotProcess ; 1982 ; English Literature in Transition, 1880-1920 Volume 25 ; 25 >
+      au < doNotProcess ; 1983 ; English Literature in Transition, 1880-1920 Volume 26 ; 26 >
+      au < doNotProcess ; 1984 ; English Literature in Transition, 1880-1920 Volume 27 ; 27 >
+      au < doNotProcess ; 1985 ; English Literature in Transition, 1880-1920 Volume 28 ; 28 >
+      au < doNotProcess ; 1986 ; English Literature in Transition, 1880-1920 Volume 29 ; 29 >
+      au < doNotProcess ; 1987 ; English Literature in Transition, 1880-1920 Volume 30 ; 30 >
+      au < doNotProcess ; 1988 ; English Literature in Transition, 1880-1920 Volume 31 ; 31 >
+      au < doNotProcess ; 1989 ; English Literature in Transition, 1880-1920 Volume 32 ; 32 >
+      au < doNotProcess ; 1990 ; English Literature in Transition, 1880-1920 Volume 33 ; 33 >
+      au < doNotProcess ; 1991 ; English Literature in Transition, 1880-1920 Volume 34 ; 34 >
+      au < doNotProcess ; 1992 ; English Literature in Transition, 1880-1920 Volume 35 ; 35 >
+      au < doNotProcess ; 1993 ; English Literature in Transition, 1880-1920 Volume 36 ; 36 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 1994 ; English Literature in Transition, 1880-1920 Volume 37 ; 37 >
+      au < down ; 1995 ; English Literature in Transition, 1880-1920 Volume 38 ; 38 >
+      au < down ; 1996 ; English Literature in Transition, 1880-1920 Volume 39 ; 39 >
+      au < down ; 1997 ; English Literature in Transition, 1880-1920 Volume 40 ; 40 >
+      au < down ; 1998 ; English Literature in Transition, 1880-1920 Volume 41 ; 41 >
+      au < down ; 1999 ; English Literature in Transition, 1880-1920 Volume 42 ; 42 >
+      au < down ; 2000 ; English Literature in Transition, 1880-1920 Volume 43 ; 43 >
+      au < down ; 2001 ; English Literature in Transition, 1880-1920 Volume 44 ; 44 >
+      au < down ; 2002 ; English Literature in Transition, 1880-1920 Volume 45 ; 45 >
+      au < down ; 2003 ; English Literature in Transition, 1880-1920 Volume 46 ; 46 >
+      au < down ; 2004 ; English Literature in Transition, 1880-1920 Volume 47 ; 47 >
+      au < down ; 2005 ; English Literature in Transition, 1880-1920 Volume 48 ; 48 >
+      au < down ; 2006 ; English Literature in Transition, 1880-1920 Volume 49 ; 49 >
+      au < down ; 2007 ; English Literature in Transition, 1880-1920 Volume 50 ; 50 >
+      au < down ; 2008 ; English Literature in Transition, 1880-1920 Volume 51 ; 51 >
+      au < down ; 2009 ; English Literature in Transition, 1880-1920 Volume 52 ; 52 >
+      au < down ; 2010 ; English Literature in Transition, 1880-1920 Volume 53 ; 53 >
+      au < down ; 2011 ; English Literature in Transition, 1880-1920 Volume 54 ; 54 >
+      au < down ; 2012 ; English Literature in Transition, 1880-1920 Volume 55 ; 55 >
+      au < down ; 2013 ; English Literature in Transition, 1880-1920 Volume 56 ; 56 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2014 ; English Literature in Transition, 1880-1920 Volume 57 ; 57 >
+      au < down ; 2015 ; English Literature in Transition, 1880-1920 Volume 58 ; 58 >
+      au < doNotProcess ; 2016 ; English Literature in Transition, 1880-1920 Volume 59 ; 59 >
+
+    }
+
+  }
+
+}

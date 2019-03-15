@@ -1,0 +1,172 @@
+{
+
+  publisher <
+    name = NUS Press
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; year ; name ; param[volume] >
+
+  {
+  
+    title <
+      name = Asian Bioethics Review ;
+      issn = 1793-8759 ;
+      eissn = 1793-9453 ;
+      issnl = 1793-8759
+    >
+
+    param[journal_dir] = asian_bioethics_review
+    attr[journal_id] = asb
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2008 ; Asian Bioethics Review Volume 0 ; 0 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2009 ; Asian Bioethics Review Volume 1 ; 1 >
+      au < down ; 2010 ; Asian Bioethics Review Volume 2 ; 2 >
+      au < down ; 2011 ; Asian Bioethics Review Volume 3 ; 3 >
+      au < down ; 2012 ; Asian Bioethics Review Volume 4 ; 4 >
+      au < down ; 2013 ; Asian Bioethics Review Volume 5 ; 5 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2014 ; Asian Bioethics Review Volume 6 ; 6 >
+      au < down ; 2015 ; Asian Bioethics Review Volume 7 ; 7 >
+
+      au < doNotProcess ; 2016 ; Asian Bioethics Review Volume 8 ; 8 >
+
+    }
+
+  }
+  
+  {
+  
+    title <
+      name = China: An International Journal ;
+      issn = 0219-7472 ;
+      eissn = 0219-8614 ;
+      issnl = 0219-7472
+    >
+
+    param[journal_dir] = china
+    attr[journal_id] = chn
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2003 ; China: An International Journal Volume 1 ; 1 >
+      au < down ; 2004 ; China: An International Journal Volume 2 ; 2 >
+      au < down ; 2005 ; China: An International Journal Volume 3 ; 3 >
+      au < down ; 2006 ; China: An International Journal Volume 4 ; 4 >
+      au < down ; 2007 ; China: An International Journal Volume 5 ; 5 >
+      au < down ; 2008 ; China: An International Journal Volume 6 ; 6 >
+      au < down ; 2009 ; China: An International Journal Volume 7 ; 7 >
+      au < down ; 2010 ; China: An International Journal Volume 8 ; 8 >
+      au < down ; 2011 ; China: An International Journal Volume 9 ; 9 >
+      au < down ; 2012 ; China: An International Journal Volume 10 ; 10 >
+      au < down ; 2013 ; China: An International Journal Volume 11 ; 11 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2014 ; China: An International Journal Volume 12 ; 12 >
+      au < down ; 2015 ; China: An International Journal Volume 13 ; 13 >
+
+      au < doNotProcess ; 2016 ; China: An International Journal Volume 14 ; 14 >
+
+    }
+
+  }
+
+  {
+  
+    title <
+      name = Journal of Burma Studies ;
+      issn = 1094-799X ;
+      eissn = 2010-314X ;
+      issnl = 1094-799X
+    >
+
+    param[journal_dir] = journal_of_burma_studies
+    attr[journal_id] = jbs
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 1997 ; Journal of Burma Studies Volume 1 ; 1 >
+      au < down ; 1998 ; Journal of Burma Studies Volume 2 ; 2 >
+      au < down ; 1999 ; Journal of Burma Studies Volume 3 ; 3 >
+      au < down ; 2000 ; Journal of Burma Studies Volume 4 ; 4 >
+      au < down ; 2001 ; Journal of Burma Studies Volume 5 ; 5 >
+      au < down ; 2002 ; Journal of Burma Studies Volume 6 ; 6 >
+      au < down ; 2003 ; Journal of Burma Studies Volume 7 ; 7 >
+      au < down ; 2004 ; Journal of Burma Studies Volume 8 ; 8 >
+      au < down ; 2005 ; Journal of Burma Studies Volume 9 ; 9 >
+      au < down ; 2006 ; Journal of Burma Studies Volume 10 ; 10 >
+      au < down ; 2007 ; Journal of Burma Studies Volume 11 ; 11 >
+      au < down ; 2008 ; Journal of Burma Studies Volume 12 ; 12 >
+      au < down ; 2009 ; Journal of Burma Studies Volume 13 ; 13 >
+      au < down ; 2010 ; Journal of Burma Studies Volume 14 ; 14 >
+      au < down ; 2011 ; Journal of Burma Studies Volume 15 ; 15 >
+      au < down ; 2012 ; Journal of Burma Studies Volume 16 ; 16 >
+      au < down ; 2013 ; Journal of Burma Studies Volume 17 ; 17 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2014 ; Journal of Burma Studies Volume 18 ; 18 >
+      au < down ; 2015 ; Journal of Burma Studies Volume 19 ; 19 >
+      au < doNotProcess ; 2016 ; Journal of Burma Studies Volume 20 ; 20 >
+
+    }
+
+  }
+
+  {
+  
+    title <
+      name = Journal of Chinese Overseas ;
+      issn = 1793-0391 ;
+      eissn = 1793-2548 ;
+      issnl = 1793-0391
+    >
+
+    param[journal_dir] = journal_of_chinese_overseas
+    attr[journal_id] = jco
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2005 ; Journal of Chinese Overseas Volume 1 ; 1 >
+      au < down ; 2006 ; Journal of Chinese Overseas Volume 2 ; 2 >
+      au < down ; 2007 ; Journal of Chinese Overseas Volume 3 ; 3 >
+      au < down ; 2008 ; Journal of Chinese Overseas Volume 4 ; 4 >
+
+    }
+
+
+  }
+
+}

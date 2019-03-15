@@ -1,0 +1,532 @@
+{
+
+  publisher <
+    name = University of Illinois Press
+  >
+  
+  {
+  
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    implicit < status ; year ; name ; param[volume] >
+
+    {
+      title <
+        name = American Journal of Theology & Philosophy ;
+        issn = 0194-3448 ;
+        eissn = 2156-4795 ;
+        issnl = 0194-3448 
+      >
+
+      param[journal_dir] = american_journal_of_theology_and_philosophy
+      attr[journal_id] = ajt
+
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+        au < down ; 2010 ; American Journal of Theology & Philosophy Volume 31 ; 31 >
+        au < down ; 2011 ; American Journal of Theology & Philosophy Volume 32 ; 32 >
+        au < down ; 2012 ; American Journal of Theology & Philosophy Volume 33 ; 33 >
+        au < down ; 2013 ; American Journal of Theology & Philosophy Volume 34 ; 34 >
+
+      }
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+        au < down ; 2014 ; American Journal of Theology & Philosophy Volume 35 ; 35 >
+        au < down ; 2015 ; American Journal of Theology & Philosophy Volume 36 ; 36 >
+
+        au < doNotProcess ; 2016 ; American Journal of Theology & Philosophy Volume 37 ; 37 >
+
+      }
+
+    }
+
+    {
+      title <
+        name = American Literary Realism ;
+        issn = 0002-9823 ;
+        eissn = 1940-5103 ;
+        issnl = 0002-9823 
+      >
+
+      param[journal_dir] = american_literary_realism
+      attr[journal_id] = alr
+
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+        au < down ; 2007-2008 ; American Literary Realism Volume 40 ; 40 >
+        au < down ; 2008-2009 ; American Literary Realism Volume 41 ; 41 >
+        au < down ; 2009-2010 ; American Literary Realism Volume 42 ; 42 >
+        au < down ; 2010-2011 ; American Literary Realism Volume 43 ; 43 >
+        au < down ; 2011-2012 ; American Literary Realism Volume 44 ; 44 >
+        au < down ; 2012-2013 ; American Literary Realism Volume 45 ; 45 >
+
+      }
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+        au < down ; 2013-2014 ; American Literary Realism Volume 46 ; 46 >
+        au < down ; 2014-2015 ; American Literary Realism Volume 47 ; 47 >
+        au < doNotProcess ; 2015-2016 ; American Literary Realism Volume 48 ; 48 >
+
+      }
+
+    }
+
+    {
+      title <
+        name = American Music ;
+        issn = 1945-2349 ;
+        eissn = 0734-4392 ;
+        issnl = 0734-4392
+      >
+
+      param[journal_dir] = american_music
+      attr[journal_id] = amm
+
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+        au < down ; 2009 ; American Music Volume 27 ; 27 >
+        au < down ; 2010 ; American Music Volume 28 ; 28 >
+        au < down ; 2011 ; American Music Volume 29 ; 29 >
+        au < down ; 2012 ; American Music Volume 30 ; 30 >
+        au < down ; 2013 ; American Music Volume 31 ; 31 >
+
+      }
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+        au < down ; 2014 ; American Music Volume 32 ; 32 >
+        au < down ; 2015 ; American Music Volume 33 ; 33 >
+
+        au < doNotProcess ; 2016 ; American Music Volume 34 ; 34 >
+
+      }
+
+    }
+
+    {
+      title <
+        name = Black Music Research Journal ;
+        issn = 0276-3605 ;
+        eissn = 1946-1615 ;
+        issnl = 0276-3605
+      >
+
+      param[journal_dir] = black_music_research_journal
+      attr[journal_id] = bmr
+
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+      
+        au < down ; 2010 ; Black Music Research Journal Volume 30 ; 30 >
+        au < down ; 2011 ; Black Music Research Journal Volume 31 ; 31 >
+        au < down ; 2012 ; Black Music Research Journal Volume 32 ; 32 >
+        au < down ; 2013 ; Black Music Research Journal Volume 33 ; 33 >
+
+      }
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+        au < down ; 2014 ; Black Music Research Journal Volume 34 ; 34 >
+        au < down ; 2015 ; Black Music Research Journal Volume 35 ; 35 >
+
+      }
+
+    }
+
+    {
+      title <
+        name = Black Women, Gender & Families ;
+        issn = 1944-6462 ;
+        eissn = 1935-2743 ;
+        issnl = 1935-2743
+      >
+
+      param[journal_dir] = black_women_gender_and_families
+      attr[journal_id] = bwg
+
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2009 ; Black Women, Gender & Families Volume 3 ; 3 >
+      au < down ; 2010 ; Black Women, Gender & Families Volume 4 ; 4 >
+      au < down ; 2011 ; Black Women, Gender & Families Volume 5 ; 5 >
+      au < down ; 2012 ; Black Women, Gender & Families Volume 6 ; 6 >
+
+      }
+
+    }
+
+    {
+      title <
+        name = Feminist Teacher ;
+        issn = 0882-4843 ;
+        eissn = 1934-6034 ;
+        issnl = 0882-4843
+      >
+
+      param[journal_dir] = feminist_teacher
+      attr[journal_id] = ftr
+
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+        au < down ; 2007-2008 ; Feminist Teacher Volume 18 ; 18 >
+        au < down ; 2008-2009 ; Feminist Teacher Volume 19 ; 19 >
+        au < down ; 2009-2010 ; Feminist Teacher Volume 20 ; 20 >
+        au < down ; 2010-2011 ; Feminist Teacher Volume 21 ; 21 >
+        au < down ; 2011-2012 ; Feminist Teacher Volume 22 ; 22 >
+        au < down ; 2012-2013 ; Feminist Teacher Volume 23 ; 23 >
+
+      }
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+        au < down ; 2014 ; Feminist Teacher Volume 24 ; 24 >
+
+        au < doNotProcess ; 2014-2015 ; Feminist Teacher Volume 25 ; 25 >
+        au < doNotProcess ; 2015-2016 ; Feminist Teacher Volume 26 ; 26 >
+
+      }
+ 
+    }
+
+    {
+      title <
+        name = Illinois Classical Studies ;
+        issn = 0363-1923 ;
+        eissn = 2328-5265 ;
+        issnl = 0363-1923
+      >
+
+      param[journal_dir] = illinois_classical_studies
+      attr[journal_id] = ics
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+        au < down ; 2015 ; Illinois Classical Studies Volume 40 ; 40 >
+        au < doNotProcess ; 2016 ; Illinois Classical Studies Volume 41 ; 41 >
+
+      }
+ 
+    }
+
+    {
+      title <
+        name = JEGP, Journal of English and Germanic Philology ;
+        issn = 0363-6941 ;
+        eissn = 1945-662X ;
+        issnl = 0363-6941
+      >
+
+      param[journal_dir] = journal_of_english_and_germanic_philology
+      attr[journal_id] = egp
+
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+        au < down ; 2009 ; JEGP, Journal of English and Germanic Philology Volume 108 ; 108 >
+        au < down ; 2010 ; JEGP, Journal of English and Germanic Philology Volume 109 ; 109 >
+        au < down ; 2011 ; JEGP, Journal of English and Germanic Philology Volume 110 ; 110 >
+        au < down ; 2012 ; JEGP, Journal of English and Germanic Philology Volume 111 ; 111 >
+        au < down ; 2013 ; JEGP, Journal of English and Germanic Philology Volume 112 ; 112 >
+
+      }
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+        au < down ; 2014 ; JEGP, Journal of English and Germanic Philology Volume 113 ; 113 >
+        au < down ; 2015 ; JEGP, Journal of English and Germanic Philology Volume 114 ; 114 >
+        au < doNotProcess ; 2016 ; JEGP, Journal of English and Germanic Philology Volume 115 ; 115 >
+
+      }
+
+    }
+
+    {
+      title <
+        name = The Journal of Aesthetic Education ;
+        issn = 0021-8510 ;
+        eissn = 1543-7809 ;
+        issnl = 0021-8510
+      >
+
+      param[journal_dir] = the_journal_of_aesthetic_education
+      attr[journal_id] = jae
+
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+        au < down ; 2003 ; The Journal of Aesthetic Education Volume 37 ; 37 >
+        au < down ; 2004 ; The Journal of Aesthetic Education Volume 38 ; 38 >
+        au < down ; 2005 ; The Journal of Aesthetic Education Volume 39 ; 39 >
+        au < down ; 2006 ; The Journal of Aesthetic Education Volume 40 ; 40 >
+        au < down ; 2007 ; The Journal of Aesthetic Education Volume 41 ; 41 >
+        au < down ; 2008 ; The Journal of Aesthetic Education Volume 42 ; 42 >
+        au < down ; 2009 ; The Journal of Aesthetic Education Volume 43 ; 43 >
+        au < down ; 2010 ; The Journal of Aesthetic Education Volume 44 ; 44 >
+        au < down ; 2011 ; The Journal of Aesthetic Education Volume 45 ; 45 >
+        au < down ; 2012 ; The Journal of Aesthetic Education Volume 46 ; 46 >
+        au < down ; 2013 ; The Journal of Aesthetic Education Volume 47 ; 47 >
+
+      }
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+        au < down ; 2014 ; The Journal of Aesthetic Education Volume 48 ; 48 >
+        au < down ; 2015 ; The Journal of Aesthetic Education Volume 49 ; 49 >
+        au < doNotProcess ; 2016 ; The Journal of Aesthetic Education Volume 50 ; 50 >
+
+      }
+
+    }
+
+    {
+      title <
+        name = Journal of Education Finance ;
+        issn = 0098-9495 ;
+        eissn = 1944-6470 ;
+        issnl = 0098-9495
+      >
+
+      param[journal_dir] = journal_of_education_finance
+      attr[journal_id] = jef
+
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+        au < down ; 2009 ; Journal of Education Finance Volume 35 ; 35 >
+        au < down ; 2010 ; Journal of Education Finance Volume 36 ; 36 >
+        au < down ; 2011 ; Journal of Education Finance Volume 37 ; 37 >
+        au < down ; 2012 ; Journal of Education Finance Volume 38 ; 38 >
+        au < down ; 2013 ; Journal of Education Finance Volume 39 ; 39 >
+
+      }
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+        au < down ; 2014 ; Journal of Education Finance Volume 40 ; 40 >
+        au < down ; 2015 ; Journal of Education Finance Volume 41 ; 41 >
+        au < doNotProcess ; 2016 ; Journal of Education Finance Volume 42 ; 42 >
+
+      }
+
+    }
+
+    {
+      title <
+        name = Journal of Film and Video ;
+        issn = 0742-4671 ;
+        eissn = 1934-6018 ;
+        issnl = 0742-4671
+      >
+
+      param[journal_dir] = journal_of_film_and_video
+      attr[journal_id] = jfv
+
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+        au < down ; 2008 ; Journal of Film and Video Volume 60 ; 60 >
+        au < down ; 2009 ; Journal of Film and Video Volume 61 ; 61 >
+        au < down ; 2010 ; Journal of Film and Video Volume 62 ; 62 >
+        au < down ; 2011 ; Journal of Film and Video Volume 63 ; 63 >
+        au < down ; 2012 ; Journal of Film and Video Volume 64 ; 64 >
+        au < down ; 2013 ; Journal of Film and Video Volume 65 ; 65 >
+
+      }
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+        au < down ; 2014 ; Journal of Film and Video Volume 66 ; 66 >
+        au < down ; 2015 ; Journal of Film and Video Volume 67 ; 67 >
+        au < doNotProcess ; 2016 ; Journal of Film and Video Volume 68 ; 68 >
+
+      }
+
+    }
+
+    {
+      title <
+        name = Music and the Moving Image ;
+        issn = 2167-8464 ;
+        eissn = 1940-7610 ;
+        issnl = 2167-8464
+      >
+
+      param[journal_dir] = music_and_the_moving_image
+      attr[journal_id] = mmi
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2015 ; Music and the Moving Image Volume 8 ; 8 >
+      au < doNotProcess ; 2016 ; Music and the Moving Image Volume 9 ; 9 >
+
+    }
+
+    {
+      title <
+        name = The Pluralist ;
+        issn = 1930-7365 ;
+        eissn = 1944-6489 ;
+        issnl = 1930-7365
+      >
+
+      param[journal_dir] = the_pluralist
+      attr[journal_id] = plu
+
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+        au < down ; 2009 ; The Pluralist Volume 4 ; 4 >
+        au < down ; 2010 ; The Pluralist Volume 5 ; 5 >
+        au < down ; 2011 ; The Pluralist Volume 6 ; 6 >
+        au < down ; 2012 ; The Pluralist Volume 7 ; 7 >
+        au < down ; 2013 ; The Pluralist Volume 8 ; 8 >
+
+      }
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+        au < down ; 2014 ; The Pluralist Volume 9 ; 9 >
+        au < down ; 2015 ; The Pluralist Volume 10 ; 10 >
+        au < doNotProcess ; 2016 ; The Pluralist Volume 11 ; 11 >
+
+      }
+
+    }
+    
+    {
+      title <
+        name = Radical Teacher ;
+        issn = 0191-4847 ;
+        eissn = 1941-0832 ;
+        issnl = 0191-4847
+      >
+
+      param[journal_dir] = radical_teacher
+      attr[journal_id] = rdt
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2008 ; Radical Teacher Number 81 ; 81 >
+      au < down ; 2008 ; Radical Teacher Number 82 ; 82 >
+      au < down ; 2008 ; Radical Teacher Number 83 ; 83 >
+      au < down ; 2009 ; Radical Teacher Number 84 ; 84 >
+      au < down ; 2009 ; Radical Teacher Number 85 ; 85 >
+      au < down ; 2009 ; Radical Teacher Number 86 ; 86 >
+      au < down ; 2010 ; Radical Teacher Number 87 ; 87 >
+      au < down ; 2010 ; Radical Teacher Number 88 ; 88 >
+      au < down ; 2010 ; Radical Teacher Number 89 ; 89 >
+      au < down ; 2011 ; Radical Teacher Number 90 ; 90 >
+      au < down ; 2011 ; Radical Teacher Number 91 ; 91 >
+      au < down ; 2011 ; Radical Teacher Number 92 ; 92 >
+      au < down ; 2012 ; Radical Teacher Number 93 ; 93 >
+      au < down ; 2012 ; Radical Teacher Number 94 ; 94 >
+      au < down ; 2013 ; Radical Teacher Number 95 ; 95 >
+
+    }
+
+    {
+      title <
+        name = Visual Arts Research ;
+        issn = 0736-0770 ;
+        eissn = 2151-8009 ;
+        issnl = 0736-0770 
+      >
+
+      param[journal_dir] = visual_arts_research
+      attr[journal_id] = var
+
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+        au < down ; 2010 ; Visual Arts Research Volume 36 ; 36 >
+        au < down ; 2011 ; Visual Arts Research Volume 37 ; 37 >
+        au < down ; 2012 ; Visual Arts Research Volume 38 ; 38 >
+        au < down ; 2013 ; Visual Arts Research Volume 39 ; 39 >
+
+      }
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+        au < down ; 2014 ; Visual Arts Research Volume 40 ; 40 >
+        au < down ; 2015 ; Visual Arts Research Volume 41 ; 41 >
+        au < doNotProcess ; 2016 ; Visual Arts Research Volume 42 ; 42 >
+
+      }
+
+    }
+  
+    {
+      title <
+        name = Women, Gender, and Families of Color ;
+        issn = 2326-0939 ;
+        eissn = 2326-0947 ;
+        issnl = 2326-0939 
+      >
+
+      param[journal_dir] = women_gender_and_families_of_color
+      attr[journal_id] = wgf
+
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+        au < down ; 2013 ; Women, Gender, and Families of Color Volume 1 ; 1 >
+
+      }
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+        au < down ; 2014 ; Women, Gender, and Families of Color Volume 2 ; 2 >
+        au < down ; 2015 ; Women, Gender, and Families of Color Volume 3 ; 3 >
+        au < doNotProcess ; 2016 ; Women, Gender, and Families of Color Volume 4 ; 4 >
+
+      }
+
+    }
+    
+  }
+  
+  
+}

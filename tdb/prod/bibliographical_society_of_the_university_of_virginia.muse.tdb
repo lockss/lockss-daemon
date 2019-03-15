@@ -1,0 +1,43 @@
+{
+
+  publisher <
+    name = Bibliographical Society of the University of Virginia
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; year ; name ; param[volume] >
+
+  {
+  
+    title <
+      name = Studies in Bibliography ;
+      issn = 1553-3891 ;
+      eissn = 0081-7600 ;
+      issnl = 0081-7600
+    >
+
+    param[journal_dir] = studies_in_bibliography
+    attr[journal_id] = sib
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2002 ; Studies in Bibliography Volume 55 ; 55 >
+      au < down ; 2003-2004 ; Studies in Bibliography Volume 56 ; 56 >
+      au < down ; 2005-2006 ; Studies in Bibliography Volume 57 ; 57 >
+      au < down ; 2007-2008 ; Studies in Bibliography Volume 58 ; 58 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2015 ; Studies in Bibliography Volume 59 ; 59 >
+
+    }
+
+  }
+
+}

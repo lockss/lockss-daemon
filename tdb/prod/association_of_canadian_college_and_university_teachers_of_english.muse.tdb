@@ -1,0 +1,48 @@
+{
+  publisher <
+    name = Association of Canadian College and University Teachers of English
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; year ; name ; param[volume] >
+
+  {
+    title <
+      name = ESC: English Studies in Canada ;
+      issn = 0317-0802 ;
+      eissn = 1913-4835 ;
+      issnl = 0317-0802
+    >
+
+    param[journal_dir] = esc_english_studies_in_canada
+    attr[journal_id] = esc
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2005 ; ESC: English Studies in Canada Volume 31 ; 31 >
+      au < down ; 2006 ; ESC: English Studies in Canada Volume 32 ; 32 >
+      au < down ; 2007 ; ESC: English Studies in Canada Volume 33 ; 33 >
+      au < down ; 2008 ; ESC: English Studies in Canada Volume 34 ; 34 >
+      au < down ; 2009 ; ESC: English Studies in Canada Volume 35 ; 35 >
+      au < down ; 2010 ; ESC: English Studies in Canada Volume 36 ; 36 >
+      au < down ; 2011 ; ESC: English Studies in Canada Volume 37 ; 37 >
+      au < down ; 2012 ; ESC: English Studies in Canada Volume 38 ; 38 >
+      au < down ; 2013 ; ESC: English Studies in Canada Volume 39 ; 39 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2014 ; ESC: English Studies in Canada Volume 40 ; 40 >
+      au < down ; 2015 ; ESC: English Studies in Canada Volume 41 ; 41 >
+
+    }
+
+
+  }
+
+}

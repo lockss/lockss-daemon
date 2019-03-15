@@ -1,0 +1,42 @@
+
+{
+  publisher <
+    name = Anales Galdosianos
+  >
+
+  implicit < status ; year ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+
+  {
+    title <
+      name = Anales Galdosianos ;
+      issn = 0569-9924 ;
+      issnl = 0569-9924
+    >
+
+    param[journal_dir] = anales_galdosianos
+    attr[journal_id] = ang
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2011 ; Anales Galdosianos Volume 46 ; 46 >
+      au < down ; 2012 ; Anales Galdosianos Volume 47 ; 47 >
+      au < down ; 2013 ; Anales Galdosianos Volume 48 ; 48 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2014 ; Anales Galdosianos Volume 49 ; 49 >
+      au < down ; 2015 ; Anales Galdosianos Volume 50 ; 50 >
+
+    }
+
+  }
+
+}

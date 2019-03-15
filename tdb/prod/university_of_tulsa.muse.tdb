@@ -1,0 +1,81 @@
+{
+  publisher <
+    name = University of Tulsa
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; year ; name ; param[volume] >
+
+  {
+    title <
+      name = James Joyce Quarterly ;
+      issn = 0021-4183 ;
+      eissn = 1938-6036 ;
+      issnl = 0021-4183
+    >
+
+    param[journal_dir] = james_joyce_quarterly
+    attr[journal_id] = jjq
+    
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2006-2007 ; James Joyce Quarterly Volume 44 ; 44 >
+      au < down ; 2007-2008 ; James Joyce Quarterly Volume 45 ; 45 >
+      au < down ; 2008-2009 ; James Joyce Quarterly Volume 46 ; 46 >
+      au < down ; 2009-2010 ; James Joyce Quarterly Volume 47 ; 47 >
+      au < down ; 2010 ; James Joyce Quarterly Volume 48 ; 48 >
+      au < down ; 2011 ; James Joyce Quarterly Volume 49 ; 49 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2012-2013 ; James Joyce Quarterly Volume 50 ; 50 >
+      au < doNotProcess ; 2013 ; James Joyce Quarterly Volume 51 ; 51 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Tulsa Studies in Women's Literature ;
+      issn = 0732-7730 ;
+      eissn = 1936-1645 ;
+      issnl = 0732-7730
+    >
+
+    param[journal_dir] = tulsa_studies_in_womens_literature
+    attr[journal_id] = tsw
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2007 ; Tulsa Studies in Women's Literature Volume 26 ; 26 >
+      au < down ; 2008 ; Tulsa Studies in Women's Literature Volume 27 ; 27 >
+      au < down ; 2009 ; Tulsa Studies in Women's Literature Volume 28 ; 28 >
+      au < down ; 2010 ; Tulsa Studies in Women's Literature Volume 29 ; 29 >
+      au < down ; 2011 ; Tulsa Studies in Women's Literature Volume 30 ; 30 >
+      au < down ; 2012 ; Tulsa Studies in Women's Literature Volume 31 ; 31 >
+      au < down ; 2013 ; Tulsa Studies in Women's Literature Volume 32 ; 32 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2014 ; Tulsa Studies in Women's Literature Volume 33 ; 33 >
+      au < down ; 2015 ; Tulsa Studies in Women's Literature Volume 34 ; 34 >
+      au < doNotProcess ; 2016 ; Tulsa Studies in Women's Literature Volume 35 ; 35 >
+
+    }
+
+  }
+
+}

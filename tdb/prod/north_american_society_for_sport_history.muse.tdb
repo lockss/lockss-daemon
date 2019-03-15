@@ -1,0 +1,42 @@
+{
+  publisher <
+    name = North American Society for Sport History
+  >
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; year ; name ; param[volume] >
+
+  param[journal_dir] = journal_of_sport_history
+  attr[journal_id] = sph
+
+  {
+    title <
+      name = Journal of Sport History ;
+      issn = 0094-1700 ;
+      eissn = 2155-8450 ;
+      issnl = 0094-1700
+    >
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2010 ; Journal of Sport History Volume 37 ; 37 >
+      au < down ; 2011 ; Journal of Sport History Volume 38 ; 38 >
+      au < down ; 2012 ; Journal of Sport History Volume 39 ; 39 >
+      au < down ; 2013 ; Journal of Sport History Volume 40 ; 40 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2014 ; Journal of Sport History Volume 41 ; 41 >
+      au < down ; 2015 ; Journal of Sport History Volume 42 ; 42 >
+      au < doNotProcess ; 2016 ; Journal of Sport History Volume 43 ; 43 >
+
+    }
+
+  }
+
+}

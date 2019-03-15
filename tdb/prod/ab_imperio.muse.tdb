@@ -1,0 +1,56 @@
+{
+  publisher <
+    name = Ab Imperio
+  >
+
+  implicit < status ; year ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+
+  {
+    title <
+      name = Ab Imperio ;
+      issn = 2166-4072 ;
+      eissn = 2164-9731
+    >
+
+    param[journal_dir] = ab_imperio
+    attr[journal_id] = imp
+    comment[issn] = 1072-4745 from Project Muse website is incorrect
+    
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < superseded ; 2005 ; Ab Imperio Volume 2005 [superseded] ; 2005 >
+      au < superseded ; 2006 ; Ab Imperio Volume 2006 [superseded] ; 2006 >
+      au < superseded ; 2007 ; Ab Imperio Volume 2007 [superseded] ; 2007 >
+      au < superseded ; 2008 ; Ab Imperio Volume 2008 [superseded] ; 2008 >
+      au < superseded ; 2009 ; Ab Imperio Volume 2009 [superseded] ; 2009 >
+      au < superseded ; 2010 ; Ab Imperio Volume 2010 [superseded] ; 2010 >
+      au < superseded ; 2011 ; Ab Imperio Volume 2011 [superseded] ; 2011 >
+      au < superseded ; 2012 ; Ab Imperio Volume 2012 [superseded] ; 2012 >
+      au < superseded ; 2013 ; Ab Imperio Volume 2013 [superseded] ; 2013 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < doNotProcess ; 2000 ; Ab Imperio Volume 2000 ; 2000 >
+      au < doNotProcess ; 2001 ; Ab Imperio Volume 2001 ; 2001 >
+      au < doNotProcess ; 2002 ; Ab Imperio Volume 2002 ; 2002 >
+      au < doNotProcess ; 2003 ; Ab Imperio Volume 2003 ; 2003 >
+      au < doNotProcess ; 2004 ; Ab Imperio Volume 2004 ; 2004 >
+
+      au < superseded ; 2014 ; Ab Imperio Volume 2014 [superseded] ; 2014 >
+      au < superseded ; 2015 ; Ab Imperio Volume 2015 [superseded] ; 2015 >
+
+      au < doNotProcess ; 2016 ; Ab Imperio Volume 2016 ; 2016 >
+
+    }
+
+  }
+
+}

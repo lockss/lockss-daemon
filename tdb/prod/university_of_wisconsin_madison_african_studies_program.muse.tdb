@@ -1,0 +1,45 @@
+{
+  publisher <
+    name = University of Wisconsin-Madison African Studies Program
+  >
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; year ; name ; param[volume] >
+
+  {
+
+    title <
+      name = African Economic History ;
+      issn = 0145-2258 ;
+      eissn = 2163-9108 ;
+      issnl = 0145-2258
+    >
+
+    param[journal_dir] = african_economic_history
+    attr[journal_id] = aeh
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2008 ; African Economic History Volume 36 ; 36 >
+      au < down ; 2009 ; African Economic History Volume 37 ; 37 >
+      au < down ; 2010 ; African Economic History Volume 38 ; 38 >
+      au < down ; 2011 ; African Economic History Volume 39 ; 39 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2012 ; African Economic History Volume 40 ; 40 >
+      au < down ; 2013 ; African Economic History Volume 41 ; 41 >
+      au < down ; 2014 ; African Economic History Volume 42 ; 42 >
+      au < doNotProcess ; 2015 ; African Economic History Volume 43 ; 43 >
+      au < doNotProcess ; 2016 ; African Economic History Volume 44 ; 44 >
+
+    }
+
+  }
+
+}

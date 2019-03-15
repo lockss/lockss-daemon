@@ -1,0 +1,41 @@
+{
+
+  publisher <
+    name = Washington University in St. Louis
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; year ; name ; param[volume] >
+
+  {
+  
+    title <
+      name = Revista de Estudios Hispánicos ;
+      issn = 0034-818X 
+    >
+
+    param[journal_dir] = revista_de_estudios_hispanicos
+    attr[journal_id] = rvs
+    
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2012 ; Revista de Estudios Hispánicos Volume 46 ; 46 >
+      au < down ; 2013 ; Revista de Estudios Hispánicos Volume 47 ; 47 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2014 ; Revista de Estudios Hispánicos Volume 48 ; 48 >
+      au < down ; 2015 ; Revista de Estudios Hispánicos Volume 49 ; 49 >
+      au < doNotProcess ; 2016 ; Revista de Estudios Hispánicos Volume 50 ; 50 >
+
+    }
+
+  }
+
+}

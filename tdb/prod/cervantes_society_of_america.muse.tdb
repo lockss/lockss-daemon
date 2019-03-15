@@ -1,0 +1,33 @@
+{
+  publisher <
+    name = Cervantes Society of America
+  >
+
+  implicit < status ; year ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+
+  {
+    title <
+      name = Cervantes: Bulletin of the Cervantes Society of America ;
+      issn = 0277-6995 ;
+      eissn = 1943-3840 ;
+      issnl = 0277-6995
+    >
+
+    param[journal_dir] = cervantes
+    attr[journal_id] = cer
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2014 ; Cervantes: Bulletin of the Cervantes Society of America Volume 34 ; 34 >
+      au < down ; 2015 ; Cervantes: Bulletin of the Cervantes Society of America Volume 35 ; 35 >
+      au < doNotProcess ; 2016 ; Cervantes: Bulletin of the Cervantes Society of America Volume 36 ; 36 >
+
+    }
+
+  }
+
+}

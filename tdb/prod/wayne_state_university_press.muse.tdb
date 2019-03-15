@@ -1,0 +1,332 @@
+{
+
+  publisher <
+    name = Wayne State University Press
+  >
+
+  {
+
+    title <
+      name = Criticism ;
+      issn = 0011-1589 ;
+      eissn = 1536-0342 ;
+      issnl = 0011-1589
+    >
+
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    implicit < status ; year ; name ; param[volume] >
+    param[journal_dir] = criticism
+    attr[journal_id] = crt
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2001 ; Criticism Volume 43 ; 43 >
+      au < down ; 2002 ; Criticism Volume 44 ; 44 >
+      au < down ; 2003 ; Criticism Volume 45 ; 45 >
+      au < down ; 2004 ; Criticism Volume 46 ; 46 >
+      au < down ; 2005 ; Criticism Volume 47 ; 47 >
+      au < down ; 2006 ; Criticism Volume 48 ; 48 >
+      au < down ; 2007 ; Criticism Volume 49 ; 49 >
+      au < down ; 2008 ; Criticism Volume 50 ; 50 >
+      au < down ; 2009 ; Criticism Volume 51 ; 51 >
+      au < down ; 2010 ; Criticism Volume 52 ; 52 >
+      au < down ; 2011 ; Criticism Volume 53 ; 53 >
+      au < down ; 2012 ; Criticism Volume 54 ; 54 >
+      au < down ; 2013 ; Criticism Volume 55 ; 55 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2014 ; Criticism Volume 56 ; 56 >
+      au < down ; 2015 ; Criticism Volume 57 ; 57 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Discourse ;
+      issn = 1522-5321 ;
+      eissn = 1536-1810 ;
+      issnl = 0730-1081
+    >
+
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    implicit < status ; year ; name ; param[volume] >
+    param[journal_dir] = discourse
+    attr[journal_id] = dis
+    
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2000 ; Discourse Volume 22 ; 22 >
+      au < down ; 2001 ; Discourse Volume 23 ; 23 >
+      au < down ; 2002 ; Discourse Volume 24 ; 24 >
+      au < down ; 2003 ; Discourse Volume 25 ; 25 >
+      au < down ; 2004 ; Discourse Volume 26 ; 26 >
+      au < down ; 2005 ; Discourse Volume 27 ; 27 >
+      au < down ; 2006 ; Discourse Volume 28 ; 28 >
+      au < down ; 2007 ; Discourse Volume 29 ; 29 >
+      au < down ; 2008 ; Discourse Volume 30 ; 30 >
+      au < down ; 2009 ; Discourse Volume 31 ; 31 >
+      au < down ; 2010 ; Discourse Volume 32 ; 32 >
+      au < down ; 2011 ; Discourse Volume 33 ; 33 >
+      au < down ; 2012 ; Discourse Volume 34 ; 34 >
+      au < down ; 2013 ; Discourse Volume 35 ; 35 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2014 ; Discourse Volume 36 ; 36 >
+      au < down ; 2015 ; Discourse Volume 37 ; 37 >
+
+      au < doNotProcess ; 2016 ; Discourse Volume 38 ; 38 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Framework: The Journal of Cinema and Media ;
+      issn = 0306-7661 ;
+      eissn = 1559-7989 ;
+      issnl = 0306-7661
+    >
+
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    implicit < status ; year ; name ; param[volume] >
+    param[journal_dir] = framework_the_journal_of_cinema_and_media
+    attr[journal_id] = frm
+    
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2006 ; Framework: The Journal of Cinema and Media Volume 47 ; 47 >
+      au < down ; 2007 ; Framework: The Journal of Cinema and Media Volume 48 ; 48 >
+      au < down ; 2008 ; Framework: The Journal of Cinema and Media Volume 49 ; 49 >
+      au < down ; 2009 ; Framework: The Journal of Cinema and Media Volume 50 ; 50 >
+      au < down ; 2010 ; Framework: The Journal of Cinema and Media Volume 51 ; 51 >
+      au < down ; 2011 ; Framework: The Journal of Cinema and Media Volume 52 ; 52 >
+      au < down ; 2012 ; Framework: The Journal of Cinema and Media Volume 53 ; 53 >
+      au < down ; 2013 ; Framework: The Journal of Cinema and Media Volume 54 ; 54 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2014 ; Framework: The Journal of Cinema and Media Volume 55 ; 55 >
+      au < down ; 2015 ; Framework: The Journal of Cinema and Media Volume 56 ; 56 >
+      au < doNotProcess ; 2016 ; Framework: The Journal of Cinema and Media Volume 57 ; 57 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Human Biology ;
+      issn = 0018-7143 ;
+      eissn = 1534-6617 ;
+      issnl = 0018-7143
+    >
+   
+    {
+      
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; year ; name ; param[volume] >
+      param[journal_dir] = human_biology
+      attr[journal_id] = hub
+    
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+        au < down ; 2001 ; Human Biology Volume 73 [Project MUSE] ; 73 >
+        au < down ; 2002 ; Human Biology Volume 74 [Project MUSE] ; 74 >
+        au < down ; 2003 ; Human Biology Volume 75 [Project MUSE] ; 75 >
+        au < down ; 2004 ; Human Biology Volume 76 [Project MUSE] ; 76 >
+        au < down ; 2005 ; Human Biology Volume 77 [Project MUSE] ; 77 >
+        au < down ; 2006 ; Human Biology Volume 78 [Project MUSE] ; 78 >
+        au < down ; 2007 ; Human Biology Volume 79 [Project MUSE] ; 79 >
+        au < down ; 2008 ; Human Biology Volume 80 [Project MUSE] ; 80 >
+        au < down ; 2009 ; Human Biology Volume 81 [Project MUSE] ; 81 >
+        au < down ; 2010 ; Human Biology Volume 82 [Project MUSE] ; 82 >
+        au < down ; 2011 ; Human Biology Volume 83 [Project MUSE] ; 83 >
+        au < down ; 2012 ; Human Biology Volume 84 [Project MUSE] ; 84 >
+        au < down ; 2013 ; Human Biology Volume 85 [Project MUSE] ; 85 >
+
+      }
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+        au < down ; 2014 ; Human Biology Volume 86 [Project MUSE] ; 86 >
+        au < down ; 2015 ; Human Biology Volume 87 [Project MUSE] ; 87 >
+        au < doNotProcess ; 2016 ; Human Biology Volume 88 [Project MUSE] ; 88 >
+
+      }
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = hbio
+      
+      comment[doNotProcess] = volume 85 500 error http://www.bioone.org/action/showFullPopup?doi=10.3378%2F027.085.0319&id=f01
+
+      au < down ; 2006 ; Human Biology Volume 78 [BioOne] ; 78 >
+      au < down ; 2007 ; Human Biology Volume 79 [BioOne] ; 79 >
+      au < down ; 2008 ; Human Biology Volume 80 [BioOne] ; 80 >
+      au < down ; 2009 ; Human Biology Volume 81 [BioOne] ; 81 >
+      au < down ; 2010 ; Human Biology Volume 82 [BioOne] ; 82 >
+      au < down ; 2011 ; Human Biology Volume 83 [BioOne] ; 83 >
+      au < down ; 2012 ; Human Biology Volume 84 [BioOne] ; 84 >
+      au < doNotProcess ; 2013 ; Human Biology Volume 85 [BioOne] ; 85 >
+      au < down ; 2014 ; Human Biology Volume 86 [BioOne] ; 86 >
+      au < down ; 2015 ; Human Biology Volume 87 [BioOne] ; 87 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Jewish Film & New Media: An International Journal ;
+      issn = 2169-0324 ;
+      eissn = 2169-0332 ;
+      issnl = 2169-0324
+    >
+
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    implicit < status ; year ; name ; param[volume] >
+    param[journal_dir] = jewish_film_new_media_an_international_journal
+    attr[journal_id] = jfn
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2013 ; Jewish Film & New Media: An International Journal Volume 1 ; 1 >
+      au < down ; 2014 ; Jewish Film & New Media: An International Journal Volume 2 ; 2 >
+      au < down ; 2015 ; Jewish Film & New Media: An International Journal Volume 3 ; 3 >
+      au < doNotProcess ; 2016 ; Jewish Film & New Media: An International Journal Volume 4 ; 4 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Marvels & Tales ;
+      issn = 1521-4281 ;
+      eissn = 1536-1802 ;
+      issnl = 1521-4281
+    >
+
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    implicit < status ; year ; name ; param[volume] >
+    param[journal_dir] = marvels_and_tales
+    attr[journal_id] = mat
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2001 ; Marvels & Tales Volume 15 ; 15 >
+      au < down ; 2002 ; Marvels & Tales Volume 16 ; 16 >
+      au < down ; 2003 ; Marvels & Tales Volume 17 ; 17 >
+      au < down ; 2004 ; Marvels & Tales Volume 18 ; 18 >
+      au < down ; 2005 ; Marvels & Tales Volume 19 ; 19 >
+      au < down ; 2006 ; Marvels & Tales Volume 20 ; 20 >
+      au < down ; 2007 ; Marvels & Tales Volume 21 ; 21 >
+      au < down ; 2008 ; Marvels & Tales Volume 22 ; 22 >
+      au < down ; 2009 ; Marvels & Tales Volume 23 ; 23 >
+      au < down ; 2010 ; Marvels & Tales Volume 24 ; 24 >
+      au < down ; 2011 ; Marvels & Tales Volume 25 ; 25 >
+      au < down ; 2012 ; Marvels & Tales Volume 26 ; 26 >
+      au < down ; 2013 ; Marvels & Tales Volume 27 ; 27 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2014 ; Marvels & Tales Volume 28 ; 28 >
+      au < down ; 2015 ; Marvels & Tales Volume 29 ; 29 >
+      au < doNotProcess ; 2016 ; Marvels & Tales Volume 30 ; 30 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Merrill-Palmer Quarterly ;
+      issn = 0272-930X ;
+      eissn = 1535-0266 ;
+      issnl = 0272-930X
+    >
+
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    implicit < status ; year ; name ; param[volume] >
+    param[journal_dir] = merrill-palmer_quarterly
+    attr[journal_id] = mpq
+    
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2001 ; Merrill-Palmer Quarterly Volume 47 ; 47 >
+      au < down ; 2002 ; Merrill-Palmer Quarterly Volume 48 ; 48 >
+      au < down ; 2003 ; Merrill-Palmer Quarterly Volume 49 ; 49 >
+      au < down ; 2004 ; Merrill-Palmer Quarterly Volume 50 ; 50 >
+      au < down ; 2005 ; Merrill-Palmer Quarterly Volume 51 ; 51 >
+      au < down ; 2006 ; Merrill-Palmer Quarterly Volume 52 ; 52 >
+      au < down ; 2007 ; Merrill-Palmer Quarterly Volume 53 ; 53 >
+      au < down ; 2008 ; Merrill-Palmer Quarterly Volume 54 ; 54 >
+      au < down ; 2009 ; Merrill-Palmer Quarterly Volume 55 ; 55 >
+      au < down ; 2010 ; Merrill-Palmer Quarterly Volume 56 ; 56 >
+      au < down ; 2011 ; Merrill-Palmer Quarterly Volume 57 ; 57 >
+      au < down ; 2012 ; Merrill-Palmer Quarterly Volume 58 ; 58 >
+      au < down ; 2013 ; Merrill-Palmer Quarterly Volume 59 ; 59 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2014 ; Merrill-Palmer Quarterly Volume 60 ; 60 >
+      au < down ; 2015 ; Merrill-Palmer Quarterly Volume 61 ; 61 >
+      au < doNotProcess ; 2016 ; Merrill-Palmer Quarterly Volume 62 ; 62 >
+
+    }
+
+  }
+
+}

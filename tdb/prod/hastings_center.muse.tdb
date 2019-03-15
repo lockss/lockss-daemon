@@ -1,0 +1,37 @@
+{
+  publisher <
+    name = Hastings Center
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; year ; name ; param[volume] >
+
+  {
+    title <
+      name = Hastings Center Report ;
+      issn = 0093-0334 ;
+      eissn = 1552-146X ;
+      issnl = 0093-0334
+    >
+
+    param[journal_dir] = hastings_center_report
+    attr[journal_id] = hcr
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2005 ; Hastings Center Report Volume 35 ; 35 >
+      au < down ; 2006 ; Hastings Center Report Volume 36 ; 36 >
+      au < down ; 2007 ; Hastings Center Report Volume 37 ; 37 >
+      au < down ; 2008 ; Hastings Center Report Volume 38 ; 38 >
+      au < down ; 2009 ; Hastings Center Report Volume 39 ; 39 >
+      au < down ; 2010 ; Hastings Center Report Volume 40 ; 40 >
+      au < down ; 2011 ; Hastings Center Report Volume 41 ; 41 >
+
+    }
+
+
+  }
+
+}

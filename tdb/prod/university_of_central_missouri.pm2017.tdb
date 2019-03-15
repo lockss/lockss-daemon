@@ -1,0 +1,27 @@
+{
+  publisher <
+    name = Department of English and Philosophy, University of Central Missouri
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:281
+
+    {
+    title <
+      name = Pleiades: Literature in Context ;
+      issn = 1063-3391 ;
+      eissn = 2470-1971
+    >
+
+      attr[journal_id] = 682
+
+        au < exists ; 2016 ; Pleiades: Literature in Context Volume 36 [2016] ; 10842 >
+        au < exists ; 2017 ; Pleiades: Literature in Context Volume 37 [2017] ; 12288 >
+        au < exists ; 2018 ; Pleiades: Literature in Context Volume 38 [2018] ; 13144 >
+        au < exists ; 2019 ; Pleiades: Literature in Context Volume 39 [2019] ; 13921 >
+
+    }
+
+}
