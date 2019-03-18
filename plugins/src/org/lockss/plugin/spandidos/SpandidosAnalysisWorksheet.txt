@@ -1,0 +1,39 @@
+This analysis worksheet is for the use of Splandidos platform publishers.
+We are assuming that the plugin will be a child of Splandidos.
+
+At the bottom of this file is a listing of URLS for articles at all the current Splandidos child sites.
+Use this for quick cut-and-paste access to comparison pages.
+They are grouped for sites that show similarity.
+
+This assumes the following:
+Each journal served by the plugin will have 3 parameters - base_url, journal_id & volume.
+
+------------------Start URL---------------------
+The plugin will need the params:
+base_url
+journal_id
+and
+volume_name
+
+The start_url for both types of plugins will be <base_url>/<journal_id>/archive
+
+-------------------List of Children--------------
+Oncology:
+    https://www.spandidos-publications.com/ol
+Journal of Oncology:
+    https://www.spandidos-publications.com/ijo
+Molecular <br />and Clinical <br />Oncology
+    https://www.spandidos-publications.com/mco
+Experimental and Therapeutic Medicine:
+    https://www.spandidos-publications.com/etm
+International Journal of Molecular Medicine
+    https://www.spandidos-publications.com/ijmm
+Biomedical Reports:
+    https://www.spandidos-publications.com/br
+Oncology Reports:
+    https://www.spandidos-publications.com/or
+Molecular Medicine Reports:
+    https://www.spandidos-publications.com/mmr
+World Academy of Sciences Journal:
+    https://www.spandidos-publications.com/wasj
+

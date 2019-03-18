@@ -3,8 +3,8 @@
     name = Spandidos Publications
   >
 
-  plugin = needs.plugin
-  param[base_url] = http://www.spandidos-publications.com/
+  plugin = org.lockss.plugin.spandidos.SpandidosPlugin
+  param[base_url] = https://www.spandidos-publications.com/
   implicit < status ; year ; name ; param[volume_name] >
 
   {
@@ -30,7 +30,7 @@
     au < exists ; 2016 ; Oncology Letters Volume 12 ; 12 >
     au < exists ; 2017 ; Oncology Letters Volume 13 ; 13 >
     au < exists ; 2017 ; Oncology Letters Volume 14 ; 14 >
-    au < exists ; 2018 ; Oncology Letters Volume 15 ; 15 >
+    au < manifest ; 2018 ; Oncology Letters Volume 15 ; 15 >
     au < expected ; 2018 ; Oncology Letters Volume 16 ; 16 >
 
   }
