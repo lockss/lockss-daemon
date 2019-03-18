@@ -4123,9 +4123,9 @@
     comment[jrps] = the url structure is the new version
     param[journal_issn] = 1735-5362
 
-    au < exists ; exists ; 2016 ; Research in Pharmaceutical Sciences Volume 11 ; 2016 ; 11 ; ; >
-    au < exists ; exists ; 2017 ; Research in Pharmaceutical Sciences Volume 12 ; 2017 ; 12 ; ; >
-    au < exists ; exists ; 2018 ; Research in Pharmaceutical Sciences Volume 13 ; 2018 ; 13 ; ; >
+    au < manifest ; exists ; 2016 ; Research in Pharmaceutical Sciences Volume 11 ; 2016 ; 11 ; ; >
+    au < manifest ; exists ; 2017 ; Research in Pharmaceutical Sciences Volume 12 ; 2017 ; 12 ; ; >
+    au < manifest ; exists ; 2018 ; Research in Pharmaceutical Sciences Volume 13 ; 2018 ; 13 ; ; >
 
   }
 
@@ -4675,7 +4675,7 @@
       au < finished ; crawling ; 2015 ; Archives of International Surgery Volume 5 ; 2015 ; 5 ; ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2016 ; Archives of International Surgery Volume 6 ; 2016 ; 6 ; ; >
       au < finished ; crawling ; 2017 ; Archives of International Surgery Volume 7 ; 2017 ; 7 ; ; reingest2.clockss.org:8085 >
-      au < expected ; exists ; 2018 ; Archives of International Surgery Volume 8 ; 2018 ; 8 ; ; >
+      au < manifest ; exists ; 2018 ; Archives of International Surgery Volume 8 ; 2018 ; 8 ; ; >
 
   }
 
@@ -5519,7 +5519,7 @@
       au < finished ; crawling ; 2015 ; Indian Journal of Burns Volume 23 ; 2015 ; 23 ; ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2016 ; Indian Journal of Burns Volume 24 ; 2016 ; 24 ; ; >
       au < finished ; crawling ; 2017 ; Indian Journal of Burns Volume 25 ; 2017 ; 25 ; ; reingest3.clockss.org:8083 >
-      au < expected ; exists ; 2018 ; Indian Journal of Burns Volume 26 ; 2018 ; 26 ; ; >
+      au < manifest ; exists ; 2018 ; Indian Journal of Burns Volume 26 ; 2018 ; 26 ; ; >
 
   }
 
