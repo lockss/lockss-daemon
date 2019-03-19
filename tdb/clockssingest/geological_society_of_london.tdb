@@ -762,6 +762,24 @@
   {
   
     title <
+      name = Petroleum Geology Conference Series ;
+      eissn = 2047-9921
+    >
+
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = https://pgc.lyellcollection.org/
+
+      au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 1993 ; Petroleum Geology Conference Series Volume 4 ; 4 ; >
+      au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 1999 ; Petroleum Geology Conference Series Volume 5 ; 5 ; >
+      au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 2005 ; Petroleum Geology Conference Series Volume 6 ; 6 ; >
+      au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 2010 ; Petroleum Geology Conference Series Volume 7 ; 7 ; >
+      au < gsl.ClockssGSLDrupalPlugin ; exists ; exists ; 2018 ; Petroleum Geology Conference Series Volume 8 ; 8 ; >
+
+  }
+
+  {
+  
+    title <
       name = Quarterly Journal of Engineering Geology and Hydrogeology ;
       issn = 1470-9236 ;
       eissn = 2041-4803 ;
