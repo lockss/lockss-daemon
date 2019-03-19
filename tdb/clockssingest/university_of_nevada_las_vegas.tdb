@@ -46,8 +46,8 @@
     param[journal_abbr] = jrtc
     implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
 
-    au < ready ; exists ; 2017 ; Journal of Research in Technical Careers Volume 1 ; 1 ; >
-    au < ready ; exists ; 2018 ; Journal of Research in Technical Careers Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2017 ; Journal of Research in Technical Careers Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2018 ; Journal of Research in Technical Careers Volume 2 ; 2 ; >
 
   }
 
