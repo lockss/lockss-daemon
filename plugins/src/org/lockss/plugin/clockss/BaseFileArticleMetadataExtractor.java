@@ -110,6 +110,7 @@ public class BaseFileArticleMetadataExtractor extends BaseArticleMetadataExtract
 		String year = getContentYear(cu, tdbau);
 		String publisher = getContentPublisher(cu, tdbau);
 		String provider = getContentProvider(cu,tdbau, publisher);
+		String pTitle = getPublicationTitle(cu,tdbau);
 
 
 		am.put(MetadataField.FIELD_ACCESS_URL, url);
@@ -120,6 +121,7 @@ public class BaseFileArticleMetadataExtractor extends BaseArticleMetadataExtract
 		am.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_FILE);
 		// Not explicitly necessary, would be inferred
 		am.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_FILE);
+		am.put(MetadataField.FIELD_PUBLICATION_TITLE, pTitle);
 
 		// Add a custom map to the generic am table 
 		// Allow a child to override FileType
@@ -164,6 +166,20 @@ public class BaseFileArticleMetadataExtractor extends BaseArticleMetadataExtract
 		// Get limited information from the TDB file
 		return (tdbau != null) ? tdbau.getEndYear() : null;
 	}
+	
+	/**
+	 * Return the "publication" title for the file object
+	 * By default it is the title associated with the AU in the TDB
+	 * The child plugin can override this method to set a different
+	 * way to identify the content.
+	 * @param cu
+	 * @param tdbau
+	 * @return
+	 */
+	protected String getPublicationTitle(CachedUrl cu, TdbAu tdbau) {
+		// Get limited information from the TDB file
+		return (tdbau != null) ? tdbau.getPublicationTitle() : null;
+	}	
 	
 	/**
 	 * Return the publisher associated with this content
