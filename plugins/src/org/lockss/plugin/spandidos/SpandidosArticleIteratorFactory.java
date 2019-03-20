@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.spandidos;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.regex.Pattern;
 
@@ -68,14 +69,14 @@ public class SpandidosArticleIteratorFactory
   // Article entrance
   protected static final String ROOT_TEMPLATE = "\"%s%s/%s\", base_url, journal_id, volume_name";
 
-  protected static final String PATTERN_TEMPLATE = "\"https://[^/]+/[^/]+/[^/]+/[^/]+/[^/]+(/download|\\?text=fulltext|\\?text=abstract)$\"";
 
-  public static final Pattern ABSTRACT_PATTERN = Pattern.compile("/([^/]+)?text=abstract$", Pattern.CASE_INSENSITIVE);
-  public static final Pattern PDF_PATTERN = Pattern.compile("/([^/]+)/download$", Pattern.CASE_INSENSITIVE);
-  public static final Pattern FULLTEXT_PATTERN = Pattern.compile("/([^/]+)?text=fulltext$", Pattern.CASE_INSENSITIVE);
+  protected static final String PATTERN_TEMPLATE = "\"https://[^/]+/[^/]+/[^/]+/[^/]+/[^/?]+(/download|/abstract|\\?text=fulltext|\\?text=abstract)?$\"";
 
+  public static final Pattern ABSTRACT_PATTERN = Pattern.compile("/([^/\\?]+)(/abstract|\\?text=abstract)$", Pattern.CASE_INSENSITIVE);
+  public static final Pattern PDF_PATTERN = Pattern.compile("/([^/\\?]+)/download$", Pattern.CASE_INSENSITIVE);
+  public static final Pattern FULLTEXT_PATTERN = Pattern.compile("/([^/\\?]+)\\?text=fulltext$", Pattern.CASE_INSENSITIVE);
 
-  public static final String ABSTRACT_REPLACEMENT = "/$1?text=abstract";
+  public static final String ABSTRACT_REPLACEMENT = "/$1/abstract";
   public static final String PDF_REPLACEMENT = "/$1/download";
   public static final String FULLTEXT_REPLACEMENT =  "/$1?text=fulltext";
 
@@ -89,19 +90,35 @@ public class SpandidosArticleIteratorFactory
 
     // set up Fulltext to be an aspect that will trigger an ArticleFiles
     builder.addAspect(
-            FULLTEXT_PATTERN, FULLTEXT_REPLACEMENT,
+            FULLTEXT_PATTERN,
+            FULLTEXT_REPLACEMENT,
             ArticleFiles.ROLE_FULL_TEXT_HTML,
             ArticleFiles.ROLE_ARTICLE_METADATA);
 
     // set up PDF to be an aspect that will trigger an ArticleFiles
     builder.addAspect(
-            PDF_PATTERN, PDF_REPLACEMENT,
+            PDF_PATTERN,
+            PDF_REPLACEMENT,
             ArticleFiles.ROLE_FULL_TEXT_PDF);
 
     // set up Abstract to be an aspect that will trigger an ArticleFiles
     builder.addAspect(
-            ABSTRACT_PATTERN, ABSTRACT_REPLACEMENT,
-            ArticleFiles.ROLE_ABSTRACT);
+            ABSTRACT_PATTERN,
+            ABSTRACT_REPLACEMENT,
+            ArticleFiles.ROLE_ABSTRACT,
+            ArticleFiles.ROLE_ARTICLE_METADATA);
+
+    // add metadata role from abstract, html
+    builder.setRoleFromOtherRoles(
+            ArticleFiles.ROLE_ARTICLE_METADATA,
+            Arrays.asList(ArticleFiles.ROLE_ABSTRACT, ArticleFiles.ROLE_FULL_TEXT_HTML));
+
+    // The order in which we want to define full_text_cu.
+    // First one that exists will get the job
+    builder.setFullTextFromRoles(
+            ArticleFiles.ROLE_FULL_TEXT_HTML,
+            ArticleFiles.ROLE_FULL_TEXT_PDF);
+
 
     return builder.getSubTreeArticleIterator();
   }

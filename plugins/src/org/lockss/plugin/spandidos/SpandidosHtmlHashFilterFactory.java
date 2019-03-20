@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.spandidos;
 
+import java.io.Reader;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.OrFilter;
 import org.htmlparser.filters.TagNameFilter;
@@ -40,30 +41,48 @@ import org.lockss.filter.html.HtmlNodeFilterTransform;
 import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.FilterFactory;
-
+import org.lockss.util.ReaderInputStream;
 import java.io.InputStream;
+import org.lockss.filter.FilterUtil;
+import org.lockss.filter.WhiteSpaceFilter;
+import org.lockss.filter.html.*;
 
 public class SpandidosHtmlHashFilterFactory implements FilterFactory {
 
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding) {
-    NodeFilter[] filters = new NodeFilter[] {
-      //filter out script
+    NodeFilter[] includeNodes = new NodeFilter[] {
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "content_main_home"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "content_main"),
+
+    };
+
+    NodeFilter[] excludeNodes = new NodeFilter[] {
+
+      // filter out comments
+      HtmlNodeFilters.comment(),
+      // filter out script
       new TagNameFilter("script"),
+      // header & footer
 
       //https://www.spandidos-publications.com/
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "content_journalgrid"),
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "fixed_width_twitter"),
       HtmlNodeFilters.tagWithAttributeRegex("div", "id", "widget"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "content_heading"),
       HtmlNodeFilters.tagWithAttributeRegex("div", "id", "navbar"),
 
       //https://www.spandidos-publications.com/ijo/archive
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "latestIssue"),
       HtmlNodeFilters.tagWithAttributeRegex("div", "id", "archive"),
+      HtmlNodeFilters.tagWithAttributeRegex("p", "class", "pushdown2"),
 
       //https://www.spandidos-publications.com/etm/6/6/1365?text=abstract
       HtmlNodeFilters.tagWithAttributeRegex("table", "class", "ref-list"),
+      HtmlNodeFilters.tagWithAttributeRegex("h1", "id", "titleId"),
+      HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "article_details"),
+      HtmlNodeFilters.tagWithAttributeRegex("a", "class", "moreLikeThis"),
 
       //https://www.spandidos-publications.com/ol/17/4/3625
       // Above header
@@ -77,6 +96,7 @@ public class SpandidosHtmlHashFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "content_sidebar"),
       // Content right
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "journal_information"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article_sidebar"),
 
       // Content inside
       HtmlNodeFilters.tagWithAttributeRegex("div", "id", "moreLikeThisDiv"),
@@ -93,9 +113,15 @@ public class SpandidosHtmlHashFilterFactory implements FilterFactory {
       // Footer
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "footer")
     };
-    return new HtmlFilterInputStream(in,
-                                     encoding,
-                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+
+    InputStream interStream = new HtmlFilterInputStream(in, encoding,
+            new HtmlCompoundTransform(
+                    HtmlNodeFilterTransform.include(new OrFilter(includeNodes)),
+                    HtmlNodeFilterTransform.exclude(new OrFilter(excludeNodes)) //, xformAllTags
+            ));
+
+    Reader reader = FilterUtil.getReader(interStream, encoding);
+    return new ReaderInputStream(new WhiteSpaceFilter(reader));
   }
 
 }

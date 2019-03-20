@@ -35,6 +35,7 @@ package org.lockss.plugin.spandidos;
 
 import org.apache.commons.io.IOUtils;
 import org.lockss.config.ConfigManager;
+import org.lockss.config.Configuration;
 import org.lockss.config.Tdb;
 import org.lockss.config.TdbAu;
 import org.lockss.daemon.ConfigParamDescr;
@@ -42,6 +43,7 @@ import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.atypon.BaseAtyponHtmlMetadataExtractorFactory;
+import org.lockss.plugin.atypon.rsp.TestRoyalSocietyPublishingHtmlCrawlFilterFactory;
 import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockLockssDaemon;
@@ -57,7 +59,14 @@ import java.util.List;
 
 public class TestSpandidosMetadataExtractor extends LockssTestCase {
 
-  static Logger log = Logger.getLogger("TestSpandidosMetadataExtractor");
+  private static Logger log = Logger.getLogger(TestSpandidosMetadataExtractor.class);
+
+  private static final String PLUGIN_ID = "org.lockss.plugin.spandidos.SpandidosPlugin";
+
+  private ArchivalUnit mau;
+  private String tempDirPath;
+  private MockLockssDaemon daemon;
+  private PluginManager pluginMgr;
 
   /*
   https://www.spandidos-publications.com/etm/6/6/1365
@@ -66,27 +75,17 @@ public class TestSpandidosMetadataExtractor extends LockssTestCase {
    https://www.spandidos-publications.com/etm/6/6/1365?text=fulltext
   */
 
-  private MockLockssDaemon theDaemon;
-  private ArchivalUnit bau;
-  private ArchivalUnit bau1;
-  private static String PLUGIN_NAME = "org.lockss.plugin.spandidos.BaseSpandidosPlugin";
-  static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
-  private static String BASE_URL = "https://www.test-spandidos-publications.com/";
+  private static String BASE_URL = "https://www.spandidos-publications.com/";
+  private static String JID = "ol";
+  private static String VOLUME_NAME = "6";
   
   // the metadata that should be extracted
   static String goodDate = "2013-12-01";
   static String[] goodAuthors = new String[] {"Zuo,Yun", "Song,Yu"};
   static String goodFormat = "text/HTML";
-  static String goodTitle = "Detection and analysis of the methylation status of PTCH1 gene involved in the hedgehog signaling pathway in a human gastric cancer cell line";
+  static String goodTitle = "article title";
   static String goodPublisher = "Spandidos Publications";
-  static String goodDOI = "10.3892/etm.2013.1334";
-  static String goodJID = "/xxx";
-  
-  static String goodJournal = "Journal Name";
-  static String goodStartPage = "1365";
-  static String goodEndPage = "1368";
-  static String goodVolume = "6";
-  static String goodIssue = "6";
+
 
   private static final String ABS_URL =  BASE_URL + "/jid/6/6/1234?text=abstract";
   private static final String PDF_URL =  BASE_URL + "/jid/6/6/1234/download";
@@ -94,32 +93,34 @@ public class TestSpandidosMetadataExtractor extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    setUpDiskSpace(); // you need this to have startService work properly...
-
-    theDaemon = getMockLockssDaemon();
-    theDaemon.getAlertManager();
-    theDaemon.getPluginManager().setLoadablePluginsReady(true);
-    theDaemon.setDaemonInited(true);
-    theDaemon.getPluginManager().startService();
-    theDaemon.getCrawlManager();
-
-    
-    // in this directory this is file "test_base_spandidos.tdb" but it becomes xml
-    ConfigurationUtil.addFromUrl(getResource("test_base_spandidos.xml"));
-    Tdb tdb = ConfigManager.getCurrentConfig().getTdb();
-
-    TdbAu tdbau1 = tdb.getTdbAusLikeName(goodJournal + " Volume " + goodVolume).get(0);
-    assertNotNull("Didn't find named TdbAu",tdbau1);
-    bau1 = PluginTestUtil.createAndStartAu(tdbau1);
-    assertNotNull(bau1);
-    TypedEntryMap auConfig =  bau1.getProperties();
-    assertEquals(BASE_URL, auConfig.getString(BASE_URL_KEY));
+    tempDirPath = setUpDiskSpace();
+    startMockDaemon();
+    mau = createAu();
   }
 
-  public void tearDown() throws Exception {
-    theDaemon.stopDaemon();
-    super.tearDown();
+  public void startMockDaemon() {
+    daemon = getMockLockssDaemon();
+    pluginMgr = daemon.getPluginManager();
+    pluginMgr.setLoadablePluginsReady(true);
+    daemon.setDaemonInited(true);
+    pluginMgr.startService();
+    daemon.getAlertManager();
+    daemon.getCrawlManager();
   }
+
+
+  protected ArchivalUnit createAu() throws ArchivalUnit.ConfigurationException {
+    return PluginTestUtil.createAndStartAu(PLUGIN_ID, thisAuConfig());
+  }
+
+  private Configuration thisAuConfig() {
+    Configuration conf = ConfigManager.newConfiguration();
+    conf.put("base_url", BASE_URL);
+    conf.put("journal_id", JID);
+    conf.put("volume_name", VOLUME_NAME);
+    return conf;
+  }
+
 
   String goodHtmlContent =
           "    <meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\" />\n" +
@@ -127,10 +128,10 @@ public class TestSpandidosMetadataExtractor extends LockssTestCase {
           "    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\" />    \n" +
           "    <meta name=\"citation_doi\" content=\"10.3892/etm.2013.1334\" />\n" +
           "    <meta name=\"citation_journal_title\" content=\"Experimental and Therapeutic Medicine\" />\n" +
-          "    <meta name=\"citation_title\" content=\"Detection and analysis of the methylation status of PTCH1 gene involved in the hedgehog signaling pathway in a human gastric cancer cell line\" />\n" +
-          "    <meta name=\"citation_author\" content=\"Zuo,Yun \" />    \n" +
+          "    <meta name=\"citation_title\" content=\"article title\" />\n" +
+          "    <meta name=\"citation_author\" content=\"Zuo,Yun\" />    \n" +
           "    <meta name=\"citation_author_institution\" content=\"Department of Oncology, Zhangjiagang First Hospital, Zhangjiagang, Jiangsu 215600, P.R. China\" />    \n" +
-          "    <meta name=\"citation_author\" content=\"Song,Yu \" />    \n" +
+          "    <meta name=\"citation_author\" content=\"Song,Yu\" />    \n" +
           "    <meta name=\"citation_author_institution\" content=\"Department of Oncology, Zhangjiagang First Hospital, Zhangjiagang, Jiangsu 215600, P.R. China\" />    \n" +
           "    <meta name=\"citation_publication_date\" content=\"2013-12-01\" />\n" +
           "    <meta name=\"citation_volume\" content=\"6\" />\n" +
@@ -147,16 +148,14 @@ public class TestSpandidosMetadataExtractor extends LockssTestCase {
 
   public void testExtractGoodHtmlContent() throws Exception {
 
-    List<ArticleMetadata> mdlist = setupContentForAU(bau1, ABS_URL, goodHtmlContent, true);
+    List<ArticleMetadata> mdlist = setupContentForAU(mau, ABS_URL, goodHtmlContent, true);
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
     assertEquals(goodPublisher, md.get(MetadataField.FIELD_PUBLISHER));
-    assertEquals(goodTitle, md.get(MetadataField.DC_FIELD_TITLE));
+    assertEquals(goodTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
     assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
-    assertEquals(goodFormat, md.get(MetadataField.DC_FIELD_FORMAT));
     assertEquals(Arrays.asList(goodAuthors), md.getList(MetadataField.FIELD_AUTHOR));
-    assertEquals(goodAuthors[0], md.get(MetadataField.DC_FIELD_CREATOR));
 
   }
 
@@ -171,7 +170,7 @@ public class TestSpandidosMetadataExtractor extends LockssTestCase {
 
     input = IOUtils.toInputStream(content, "utf-8");
     props = getContentHtmlProperties();
-    me = new BaseAtyponHtmlMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/html");
+    me = new SpandidosHtmlMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/html");
 
     UrlData ud = new UrlData(input, props, url);
     UrlCacher uc = au.makeUrlCacher(ud);

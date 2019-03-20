@@ -105,7 +105,7 @@
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
     <list>
-      <string>://[^/]+/(resources/(css|js|images|fontface)/[^/]*/.*\.(png|jpe?g|eot|woff|ttf|svg)$</string>
+      <string>://[^/]+/resources/(css|js|images|fontface)/[^/]*/.*\.(png|jpe?g|eot|woff|ttf|svg)$</string>
       <string>://[^/]+/ISSUE_IMAGES/</string>
       <string>://[^/]+/images/</string>
     </list>
@@ -116,7 +116,7 @@
     <string>au_url_poll_result_weight</string>
     <list>
       <string>://[^/]+/archive/, 0</string>
-      <string>://[^/]+/(resources/(css|js|images|fontface)/, 0</string>
+      <string>://[^/]+/resources/(css|js|images|fontface)/, 0</string>
       <string>://[^/]+/ISSUE_IMAGES/, 0</string>
       <string>://[^/]+/images/, 0</string>
     </list>
