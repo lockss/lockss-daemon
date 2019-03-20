@@ -5,6 +5,9 @@
 
   plugin = org.lockss.plugin.spandidos.ClockssSpandidosPlugin
   param[base_url] = https://www.spandidos-publications.com/
+
+  ###This is a developer version, please do not use for real case
+
   implicit < status; status2 ; year ; name ; param[volume_name] >
 
   {
@@ -16,15 +19,15 @@
     
     param[journal_id] = br
 
-    au < exists ; 2013 ; Biomedical Reports Volume 1 ; 1 >
-    au < exists ; 2014 ; Biomedical Reports Volume 2 ; 2 >
-    au < exists ; 2015 ; Biomedical Reports Volume 3 ; 3 >
-    au < exists ; 2016 ; Biomedical Reports Volume 4 ; 4 >
-    au < exists ; 2016 ; Biomedical Reports Volume 5 ; 5 >
-    au < exists ; 2017 ; Biomedical Reports Volume 6 ; 6 >
-    au < exists ; 2017 ; Biomedical Reports Volume 7 ; 7 >
-    au < manifest ; 2018 ; Biomedical Reports Volume 8 ; 8 >
-    au < exists ; 2018 ; Biomedical Reports Volume 9 ; 9 >
+    au < exists ; exists ; 2013 ; Biomedical Reports Volume 1 ; 1 >
+    au < exists ; exists ; 2014 ; Biomedical Reports Volume 2 ; 2 >
+    au < exists ; exists ; 2015 ; Biomedical Reports Volume 3 ; 3 >
+    au < exists ; exists ; 2016 ; Biomedical Reports Volume 4 ; 4 >
+    au < exists ; exists ; 2016 ; Biomedical Reports Volume 5 ; 5 >
+    au < exists ; exists ; 2017 ; Biomedical Reports Volume 6 ; 6 >
+    au < exists ; exists ; 2017 ; Biomedical Reports Volume 7 ; 7 >
+    au < exists ; exists ; 2018 ; Biomedical Reports Volume 8 ; 8 >
+    au < manifest ; exists ; 2018 ; Biomedical Reports Volume 9 ; 9 >
 
   }
 

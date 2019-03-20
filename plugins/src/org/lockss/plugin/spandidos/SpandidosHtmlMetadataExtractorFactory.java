@@ -47,10 +47,10 @@ public class SpandidosHtmlMetadataExtractorFactory
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
                                String contentType)
       throws PluginException {
-    return new DSpaceHtmlMetadataExtractor();
+    return new SpandidosHtmlMetadataExtractor();
   }
 
-  public static class DSpaceHtmlMetadataExtractor
+  public static class SpandidosHtmlMetadataExtractor
     extends SimpleHtmlMetaTagMetadataExtractor {
     private static MultiMap tagMap = new MultiValueMap();
     static {
