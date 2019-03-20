@@ -54,7 +54,7 @@
      -->
     <list>
       <!--allow general html related resouces to get in-->
-      <string>1,"^%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)(_v[0-9]+|\?v=[0-9.]+|\?[a-z0-9]+)?$", base_url</string>
+      <string>1,"^%s[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)(_v[0-9]+|\?v=[0-9.]+|\?[a-z0-9]+)?$", base_url</string>
       <!--https://www.spandidos-publications.com/images/table-icon.jpg-->
       <string>1,"^%simages/", base_url</string>
       <string>1,"^%sresources/(css|js|images|fontface)/", base_url</string>
@@ -108,7 +108,7 @@
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
     <list>
-      <string>*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)(_v[0-9]+|\?v=[0-9.]+|\?[a-z0-9]+)</string>
+      <string>.*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)(_v[0-9]+|\?v=[0-9.]+|\?[a-z0-9]+)</string>
       <string>://[^/]+/resources/(css|js|images|fontface)/[^/]*/.*\.(png|jpe?g|eot|woff|ttf|svg)$</string>
       <string>://[^/]+/ISSUE_IMAGES/</string>
       <string>://[^/]+/images/</string>
@@ -119,7 +119,7 @@
   <entry>
     <string>au_url_poll_result_weight</string>
     <list>
-      <string>*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)(_v[0-9]+|\?v=[0-9.]+|\?[a-z0-9]+), 0</string>
+      <string>.*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)(_v[0-9]+|\?v=[0-9.]+|\?[a-z0-9]+), 0</string>
       <string>://[^/]+/archive/, 0</string>
       <string>://[^/]+/resources/(css|js|images|fontface)/, 0</string>
       <string>://[^/]+/ISSUE_IMAGES/, 0</string>
