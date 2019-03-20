@@ -7,8 +7,10 @@
   pluginPrefix = org.lockss.plugin.highwire.
   implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
+  #move to Atypon
+
   {
-  
+
     title <
       name = CBE - Life Sciences Education ;
       eissn = 1931-7913
@@ -24,19 +26,19 @@
     au < HighWirePressPlugin ; superseded ; 2004 ; CBE - Life Sciences Education Volume 3 [superseded] ; 3 >
     au < HighWireStrVolPlugin ; down ; 2005 ; CBE - Life Sciences Education Volume 4 ; 4 >
     au < HighWirePressPlugin ; superseded ; 2005 ; CBE - Life Sciences Education Volume 4 [superseded] ; 4 >
-    au < HighWirePressH20Plugin ; released ; 2006 ; CBE - Life Sciences Education Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; released ; 2007 ; CBE - Life Sciences Education Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; released ; 2008 ; CBE - Life Sciences Education Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; released ; 2009 ; CBE - Life Sciences Education Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; released ; 2010 ; CBE - Life Sciences Education Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; released ; 2011 ; CBE - Life Sciences Education Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; released ; 2012 ; CBE - Life Sciences Education Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; released ; 2013 ; CBE - Life Sciences Education Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; released ; 2014 ; CBE - Life Sciences Education Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; released ; 2015 ; CBE - Life Sciences Education Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; released ; 2016 ; CBE - Life Sciences Education Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; released ; 2017 ; CBE - Life Sciences Education Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; expected ; 2018 ; CBE - Life Sciences Education Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; down ; 2006 ; CBE - Life Sciences Education Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; down ; 2007 ; CBE - Life Sciences Education Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; down ; 2008 ; CBE - Life Sciences Education Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; down ; 2009 ; CBE - Life Sciences Education Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; down ; 2010 ; CBE - Life Sciences Education Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; down ; 2011 ; CBE - Life Sciences Education Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; down ; 2012 ; CBE - Life Sciences Education Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; down ; 2013 ; CBE - Life Sciences Education Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; down ; 2014 ; CBE - Life Sciences Education Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; down ; 2015 ; CBE - Life Sciences Education Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; down ; 2016 ; CBE - Life Sciences Education Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; down ; 2017 ; CBE - Life Sciences Education Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2018 ; CBE - Life Sciences Education Volume 17 ; 17 >
 
   }
 
@@ -63,32 +65,31 @@
       au < HighWirePressPlugin ; superseded ; 1994 ; Molecular Biology of the Cell Volume 5 [superseded] ; 5 >
       au < HighWireStrVolPlugin ; down ; 1995 ; Molecular Biology of the Cell Volume 6 [abstracts only] ; 6 >
       au < HighWirePressPlugin ; superseded ; 1995 ; Molecular Biology of the Cell Volume 6 [superseded] ; 6 >
-
-      au < HighWirePressH20Plugin ; manifest ; 1996 ; Molecular Biology of the Cell Volume 7 [abstracts only] ; 7 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 1996 ; Molecular Biology of the Cell Volume 7 [abstracts only] ; 7 >
     }
 
-    au < HighWirePressH20Plugin ; manifest ; 1997 ; Molecular Biology of the Cell Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; manifest ; 1998 ; Molecular Biology of the Cell Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; manifest ; 1999 ; Molecular Biology of the Cell Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; manifest ; 2000 ; Molecular Biology of the Cell Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; manifest ; 2001 ; Molecular Biology of the Cell Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; manifest ; 2002 ; Molecular Biology of the Cell Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; manifest ; 2003 ; Molecular Biology of the Cell Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; manifest ; 2004 ; Molecular Biology of the Cell Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; released ; 2005 ; Molecular Biology of the Cell Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; released ; 2006 ; Molecular Biology of the Cell Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; released ; 2007 ; Molecular Biology of the Cell Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; released ; 2008 ; Molecular Biology of the Cell Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; released ; 2009 ; Molecular Biology of the Cell Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; released ; 2010 ; Molecular Biology of the Cell Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; released ; 2011 ; Molecular Biology of the Cell Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; released ; 2012 ; Molecular Biology of the Cell Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; released ; 2013 ; Molecular Biology of the Cell Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; released ; 2014 ; Molecular Biology of the Cell Volume 25 ; 25 >
-    au < HighWirePressH20Plugin ; released ; 2015 ; Molecular Biology of the Cell Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; released ; 2016 ; Molecular Biology of the Cell Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; released ; 2017 ; Molecular Biology of the Cell Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; expected ; 2018 ; Molecular Biology of the Cell Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1997 ; Molecular Biology of the Cell Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1998 ; Molecular Biology of the Cell Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1999 ; Molecular Biology of the Cell Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2000 ; Molecular Biology of the Cell Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; Molecular Biology of the Cell Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; Molecular Biology of the Cell Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2003 ; Molecular Biology of the Cell Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2004 ; Molecular Biology of the Cell Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; down ; 2005 ; Molecular Biology of the Cell Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; down ; 2006 ; Molecular Biology of the Cell Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; down ; 2007 ; Molecular Biology of the Cell Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; down ; 2008 ; Molecular Biology of the Cell Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; down ; 2009 ; Molecular Biology of the Cell Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; down ; 2010 ; Molecular Biology of the Cell Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; down ; 2011 ; Molecular Biology of the Cell Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; down ; 2012 ; Molecular Biology of the Cell Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; down ; 2013 ; Molecular Biology of the Cell Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; down ; 2014 ; Molecular Biology of the Cell Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; down ; 2015 ; Molecular Biology of the Cell Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; down ; 2016 ; Molecular Biology of the Cell Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; down ; 2017 ; Molecular Biology of the Cell Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2018 ; Molecular Biology of the Cell Volume 29 ; 29 >
 
   }
 

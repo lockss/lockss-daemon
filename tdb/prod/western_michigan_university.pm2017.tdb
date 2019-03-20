@@ -6,6 +6,7 @@
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:75
 
     {
     title <
@@ -16,7 +17,7 @@
 
     >
 
-      attr[journal_id] = 0000
+      attr[journal_id] = 358
 
         au < manifest ; 1967 ; Comparative Drama Volume 1 [1967] ; 9851 >
         au < manifest ; 1968 ; Comparative Drama Volume 2 [1968] ; 9850 >
@@ -68,6 +69,8 @@
         au < released ; 2014 ; Comparative Drama Volume 48 [2014] ; 9969 >
         au < released ; 2015 ; Comparative Drama Volume 49 [2015] ; 10680 >
         au < released ; 2016 ; Comparative Drama Volume 50 [2016] ; 11349 >
+        au < exists ; 2017 ; Comparative Drama Volume 51 [2017] ; 12672 >
+        au < exists ; 2018 ; Comparative Drama Volume 52 [2018] ; 13738 >
 
     }
 

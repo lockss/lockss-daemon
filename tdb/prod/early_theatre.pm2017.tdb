@@ -1,0 +1,26 @@
+{
+  publisher <
+    name = Early Theatre
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:286
+
+    {
+    title <
+      name = Early Theatre ;
+      issn = 1206-9078 ;
+      eissn = 2293-7609
+    >
+
+      attr[journal_id] = 687
+
+        au < exists ; 2016 ; Early Theatre Volume 19 [2016] ; 11305 > 
+        au < exists ; 2017 ; Early Theatre Volume 20 [2017] ; 12759 >
+        au < exists ; 2018 ; Early Theatre Volume 21 [2018] ; 13523 >
+
+    }
+
+}

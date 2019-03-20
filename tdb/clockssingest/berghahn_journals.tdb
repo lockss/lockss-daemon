@@ -773,7 +773,7 @@
     param[journal_id] = migration-and-society
     #param[journal_issn] = 2574-1306
 
-    au < manifest ; exists ; 2018 ; Migration and Society Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2018 ; Migration and Society Volume 1 ; 1 ; >
     au < expected ; exists ; 2019 ; Migration and Society Volume 2 ; 2 ; >
     
   }

@@ -47,7 +47,7 @@
       au < finished ; finished ; 2015 ; African Journal of Economic and Sustainable Development Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; African Journal of Economic and Sustainable Development Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2017 ; African Journal of Economic and Sustainable Development Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 2018 ; African Journal of Economic and Sustainable Development Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2018 ; African Journal of Economic and Sustainable Development Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -2516,7 +2516,7 @@
       au < finished ; finished ; 2012-2014 ; International Journal of Design Engineering Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; >
       au < finished ; crawling ; 2015-2016 ; International Journal of Design Engineering Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2017 ; International Journal of Design Engineering Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2018 ; International Journal of Design Engineering Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; > #issue 2 not online
+      au < crawling ; exists ; 2018 ; International Journal of Design Engineering Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; > #issue 2 not online
 
     }
 
@@ -6380,7 +6380,7 @@
       au < finished ; finished ; 2015 ; International Journal of Multicriteria Decision Making Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; International Journal of Multicriteria Decision Making Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; International Journal of Multicriteria Decision Making Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < manifest ; exists ; 2018 ; International Journal of Multicriteria Decision Making Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2018 ; International Journal of Multicriteria Decision Making Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -8419,7 +8419,7 @@
       au < finished ; finished ; 2015 ; International Journal of System of Systems Engineering Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; International Journal of System of Systems Engineering Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2017 ; International Journal of System of Systems Engineering Volume 8 ; 8 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < manifest ; exists ; 2018 ; International Journal of System of Systems Engineering Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2018 ; International Journal of System of Systems Engineering Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -8849,7 +8849,7 @@
       au < finished ; finished ; 2015 ; International Journal of Tourism Anthropology Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; International Journal of Tourism Anthropology Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2017 ; International Journal of Tourism Anthropology Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < manifest ; exists ; 2018 ; International Journal of Tourism Anthropology Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2018 ; International Journal of Tourism Anthropology Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -9075,7 +9075,7 @@
       au < finished ; crawling ; 2017 ; International Journal of Vehicle Design Volume 74 ; 74 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; International Journal of Vehicle Design Volume 75 ; 75 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2018 ; International Journal of Vehicle Design Volume 76 ; 76 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2018 ; International Journal of Vehicle Design Volume 77 ; 77 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2018 ; International Journal of Vehicle Design Volume 77 ; 77 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2018 ; International Journal of Vehicle Design Volume 78 ; 78 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -10184,7 +10184,7 @@
       param[journal_id] = ijric
 
       au < deepCrawl ; exists ; 2017 ; International Journal of Research, Innovation and Commercialisation Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2018 ; International Journal of Research, Innovation and Commercialisation Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; > #issue 2 not online
+      au < crawling ; exists ; 2018 ; International Journal of Research, Innovation and Commercialisation Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; > #issue 2 not online
 
   }
 

@@ -69,6 +69,7 @@ public class Ojs3HtmlHashFilterFactory implements FilterFactory {
   private static final NodeFilter[] excludeNodes = new NodeFilter[] {
 	        // on the article landing page - remove the bottom stuff
 	        HtmlNodeFilters.tagWithAttribute("section","class","article-more-details"),
+
 	    };  
  
   @Override

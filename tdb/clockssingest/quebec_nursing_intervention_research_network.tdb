@@ -20,7 +20,7 @@
       param[base_url] = https://snahp-sips.ca/
       param[journal_abbr] = journal
 
-      au < manifest ; exists ; 2018 ; Science of Nursing and Health Practices-Science infirmière et pratiques en santé (SNAHP-SIPS) Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2018 ; Science of Nursing and Health Practices-Science infirmière et pratiques en santé (SNAHP-SIPS) Volume 1 ; 1 ; >
       au < expected ; exists ; 2019 ; Science of Nursing and Health Practices-Science infirmière et pratiques en santé (SNAHP-SIPS) Volume 2 ; 2 ; >
 
   }

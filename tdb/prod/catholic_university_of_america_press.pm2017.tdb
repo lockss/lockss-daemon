@@ -47,12 +47,29 @@
         au < exists ; 2017 ; Bulletin of Medieval Canon Law Volume 34 [2017] ; 13553 >
 
     }
+
+    {
+    title <
+      name = Old Testament Abstracts ;
+      issn = 0364-8591 ;
+      eissn = 2639-2003 ;
+      issnl = 0364-8591
+
+    >
+
+      attr[journal_id] = 743
+
+        au < exists ; 2017 ; Old Testament Abstracts Volume 40 [2017] ; 13968 >
+        au < exists ; 2018 ; Old Testament Abstracts Volume 41 [2018] ; 13969 >
+        au < exists ; 2019 ; Old Testament Abstracts Volume 42 [2019] ; 13990 >
+
+    }
     
     {
     title <
       name = Quaestiones Disputatae ;
-      issn = 2150-5756  ;
-      eissn = 2374-555X  ;
+      issn = 2150-5756 ;
+      eissn = 2374-555X ;
       issnl = 2150-5756
 
     >
@@ -64,6 +81,23 @@
         au < released ; 2016-2017 ; Quaestiones Disputatae Volume 7 [2016-2017] ; 12462 >
         au < exists ; 2017-2018 ; Quaestiones Disputatae Volume 8 [2017-2018] ; 13029 >
         au < exists ; 2018-2019 ; Quaestiones Disputatae Volume 9 [2018-2019] ; 13997 >
+
+    }
+
+    {
+    title <
+      name = The Catholic Biblical Quarterly ;
+      issn = 0008-7912 ;
+      eissn = 2163-2529 ;
+      issnl = 0008-7912
+
+    >
+
+      attr[journal_id] = 742
+
+        au < exists ; 2017 ; The Catholic Biblical Quarterly Volume 79 [2017] ; 13967 >
+        au < exists ; 2018 ; The Catholic Biblical Quarterly Volume 80 [2018] ; 13986 >
+        au < exists ; 2019 ; The Catholic Biblical Quarterly Volume 81 [2019] ; 13991 >
 
     }
 

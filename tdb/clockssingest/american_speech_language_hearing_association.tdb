@@ -51,7 +51,7 @@
       au < manifest ; exists ; 2015 ; American Journal of Audiology Volume 24 ; 24 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; American Journal of Audiology Volume 25 ; 25 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; American Journal of Audiology Volume 26 ; 26 ; >
-      au < ready ; exists ; 2018 ; American Journal of Audiology Volume 27 ; 27 ; >
+      au < frozen ; exists ; 2018 ; American Journal of Audiology Volume 27 ; 27 ; >
 
   }
 
@@ -92,7 +92,7 @@
       au < manifest ; exists ; 2015 ; American Journal of Speech-Language Pathology Volume 24 ; 24 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; American Journal of Speech-Language Pathology Volume 25 ; 25 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; American Journal of Speech-Language Pathology Volume 26 ; 26 ; >
-      au < ready ; exists ; 2018 ; American Journal of Speech-Language Pathology Volume 27 ; 27 ; >
+      au < frozen ; exists ; 2018 ; American Journal of Speech-Language Pathology Volume 27 ; 27 ; >
 
   }
 
@@ -271,7 +271,7 @@
       au < manifest ; exists ; 2015 ; Journal of Speech, Language, and Hearing Research Volume 58 ; 58 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; Journal of Speech, Language, and Hearing Research Volume 59 ; 59 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; Journal of Speech, Language, and Hearing Research Volume 60 ; 60 ; >
-      au < ready ; exists ; 2018 ; Journal of Speech, Language, and Hearing Research Volume 61 ; 61 ; >
+      au < frozen ; exists ; 2018 ; Journal of Speech, Language, and Hearing Research Volume 61 ; 61 ; >
 
   }
 
@@ -334,7 +334,7 @@
       au < manifest ; exists ; 2015 ; Language, Speech, and Hearing Services in Schools Volume 46 ; 46 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; Language, Speech, and Hearing Services in Schools Volume 47 ; 47 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; Language, Speech, and Hearing Services in Schools Volume 48 ; 48 ; >
-      au < ready ; exists ; 2018 ; Language, Speech, and Hearing Services in Schools Volume 49 ; 49 ; >
+      au < frozen ; exists ; 2018 ; Language, Speech, and Hearing Services in Schools Volume 49 ; 49 ; >
 
   }
 
@@ -366,7 +366,7 @@
       au < manifest ; exists ; 2015 ; ASHA Leader Volume 20 ; 20 ; >
       au < manifest ; exists ; 2016 ; ASHA Leader Volume 21 ; 21 ; >
       au < manifest ; exists ; 2017 ; ASHA Leader Volume 22 ; 22 ; >
-      au < ready ; exists ; 2018 ; ASHA Leader Volume 23 ; 23 ; >
+      au < frozen ; exists ; 2018 ; ASHA Leader Volume 23 ; 23 ; >
   }
 
   {
@@ -381,7 +381,7 @@
 
       au < manifest ; exists ; 2016 ; Perspectives of the ASHA Special Interest Groups Volume 1 ; 1 ; >
       au < manifest ; exists ; 2017 ; Perspectives of the ASHA Special Interest Groups Volume 2 ; 2 ; >
-      au < ready ; exists ; 2018 ; Perspectives of the ASHA Special Interest Groups Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2018 ; Perspectives of the ASHA Special Interest Groups Volume 3 ; 3 ; >
   }
 
 }

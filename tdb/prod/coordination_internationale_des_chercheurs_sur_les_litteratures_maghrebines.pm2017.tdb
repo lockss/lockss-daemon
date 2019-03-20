@@ -1,0 +1,27 @@
+{
+  publisher <
+    name = Coordination Internationale des Chercheurs sur les Littératures Maghrébines
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:296
+
+    {
+    title <
+      name = Expressions maghrébines ;
+      issn = 1540-0085 ;
+      eissn = 2475-2401 
+    >
+
+      attr[journal_id] = 709
+
+        au < exists ; 2015 ; Expressions maghrébines Volume 14 [2015] ; 12606 >
+        au < exists ; 2016 ; Expressions maghrébines Volume 15 [2016] ; 12246 >
+        au < exists ; 2017 ; Expressions maghrébines Volume 16 [2017] ; 12671 >
+        au < exists ; 2018 ; Expressions maghrébines Volume 17 [2018] ; 13515 >
+
+    }
+
+}

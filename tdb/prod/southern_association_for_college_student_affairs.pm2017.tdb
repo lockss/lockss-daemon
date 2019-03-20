@@ -1,0 +1,27 @@
+{
+  publisher <
+    name = Southern Association for College Student Affairs
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:288
+
+    {
+    title <
+      name = College Student Affairs Journal ;
+      issn = 0888-210X ;
+      eissn = 2381-2338
+    >
+
+      attr[journal_id] = 689
+
+        au < exists ; 2015 ; College Student Affairs Journal Volume 33 [2015] ; 10826 >
+        au < exists ; 2016 ; College Student Affairs Journal Volume 34 [2016] ; 11075 >
+        au < exists ; 2017 ; College Student Affairs Journal Volume 35 [2017] ; 12586 >
+        au < exists ; 2018 ; College Student Affairs Journal Volume 36 [2018] ; 13391 >
+
+    }
+
+}

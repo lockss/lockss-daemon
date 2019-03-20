@@ -581,9 +581,16 @@ while (my $line = <>) {
         sleep(4);
 
 # thin child of ClockssOJS2 but with a different start_url and no permission_url        
-  } elsif ($plugin eq "ClockssJidcOJS2Plugin") {
-        $url = sprintf("%sindex.php/%s/gateway/clockss?year=%d",
-            $param{base_url}, $param{journal_id}, $param{year});
+  } elsif ($plugin eq "ClockssJidcOJS2Plugin" || $plugin eq "ClockssOjs3Plugin") {
+  	#OJS3 allows an attr to define variants for location of manifest
+   	    if ($param{base_url} =~ m/scholarworks/) {
+            $url = sprintf("%sjournals/index.php/%s/gateway/clockss?year=%d",
+                $param{base_url}, $param{journal_id}, $param{year});
+        } else {
+        	#default behavior
+            $url = sprintf("%sindex.php/%s/gateway/clockss?year=%d",
+                $param{base_url}, $param{journal_id}, $param{year});
+        }
         $man_url = uri_unescape($url);
         my $req = HTTP::Request->new(GET, $man_url);
         my $resp = $ua->request($req);
@@ -841,6 +848,7 @@ while (my $line = <>) {
            ($plugin eq "GenericAtyponPlugin") ||
            ($plugin eq "AIAAPlugin") ||
            ($plugin eq "AllenPressJournalsPlugin") ||
+           ($plugin eq "AmericanSpeechLanguageHearingAssocAtyponPlugin") ||
            ($plugin eq "AmPublicHealthAssocPlugin") ||
            ($plugin eq "AMetSocPlugin") ||
            ($plugin eq "AmPhysSocAtyponPlugin") ||
@@ -962,7 +970,6 @@ while (my $line = <>) {
   # the non-Clockss Atypon Books plugins go here
   } elsif (($plugin eq "GenericAtyponBooksPlugin") ||
            ($plugin eq "AIAABooksPlugin") ||
-           ($plugin eq "AmericanSpeechLanguageHearingAssocAtyponPlugin") ||
            ($plugin eq "EmeraldGroupBooksPlugin") ||
            ($plugin eq "EndocrineSocietyBooksPlugin") ||
            ($plugin eq "FutureScienceBooksPlugin") ||

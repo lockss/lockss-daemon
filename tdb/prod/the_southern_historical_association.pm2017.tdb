@@ -1,0 +1,27 @@
+{
+  publisher <
+    name = The Southern Historical Association
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:285
+
+    {
+    title <
+      name = Journal of Southern History ;
+      issn = 0022-4642 ;
+      eissn = 2325-6893
+    >
+
+      attr[journal_id] = 728
+
+        au < exists ; 2016 ; Journal of Southern History Volume 82 [2016] ; 11014 >
+        au < exists ; 2017 ; Journal of Southern History Volume 83 [2017] ; 12338 >
+        au < exists ; 2018 ; Journal of Southern History Volume 84 [2018] ; 13200 >
+        au < exists ; 2019 ; Journal of Southern History Volume 85 [2019] ; 13915 >
+
+    }
+
+}
