@@ -154,9 +154,9 @@
       au < frozen ; exists ; 1999 ; 978-1-56576-319-7 ; Siliciclastic Sequence Stratigraphy: Concepts and Applications Volume 7 ; sepcosil ; >
       au < frozen ; exists ; 2005 ; 978-1-56576-132-2 ; Carbonate Sedimentology and Sequence Stratigraphy Volume 8 ; sepcocar ; >
       # no substance for Outcrops Revitalized.
-      au < ingNotReady ; exists ; 2011 ; 978-1-56576-306-7 ; Outcrops Revitalized: Tools, Techniques and Applications Volume 10 ; sepcoout ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; 978-1-56576-306-7 ; Outcrops Revitalized: Tools, Techniques and Applications Volume 10 ; sepcoout ; >
       # the PDFs for the next AU is not accessible - goes to log in page
-      au < notReady ; exists ; 2013 ; 978-1-56576-281-7 ; Phanerozoic Paleoclimate: An Atlas of Lithologic Indicators of Climate Volume 11 ; sepcopha ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 978-1-56576-281-7 ; Phanerozoic Paleoclimate: An Atlas of Lithologic Indicators of Climate Volume 11 ; sepcopha ; >
 
   }
 
@@ -183,7 +183,7 @@
       au < frozen ; exists ; 1983 ; 978-1-56576-241-1 ; Platform Margin and Deep Water Carbonates Volume 12 ; sepscpla ; >
       au < frozen ; exists ; 1986 ; 978-1-56576-242-8 ; Shelf Sands and Sandstone Reservoirs Volume 13 ; sepscshe ; >
       au < frozen ; exists ; 1984 ; 978-1-56576-243-5 ; Modern and Ancient Deep-Sea Fan Sedimentation Volume 14 ; sepscmod ; >
-      au < ingNotReady ; exists ; 1984 ; 978-1-56576-244-2 ; Ichnology: The Use of Trace Fossils in Sedimentology and Stratigraphy Volume 15 ; sepscich ; >#no substance
+      au < doNotProcess ; doNotProcess ; 1984 ; 978-1-56576-244-2 ; Ichnology: The Use of Trace Fossils in Sedimentology and Stratigraphy Volume 15 ; sepscich ; >#no substance
       au < frozen ; exists ; 1985 ; 978-1-56576-245-9 ; Glacial Sedimentary Environments Volume 16 ; sepscgla ; >
       au < frozen ; exists ; 1985 ; 978-1-56576-246-6 ; Relationship of Organic Matter and Mineral Diagenesis Volume 17 ; sepscrel ; >
       au < frozen ; exists ; 1986 ; 978-1-56576-247-3 ; Paleoclimates and Economic Geology Volume 18 ; sepscpeg ; >
@@ -241,7 +241,7 @@
       au < frozen ; exists ; 1995 ; 978-1-56576-272-5 ; Turbidites and Associated Deep-Water Facies Volume 20 ; sepswtad ; >
       au < frozen ; exists ; 2001 ; 978-1-56576-273-2 ; Petroleum Plays and Systems in the National Petroleum Reserve - Alaska (NPRA) Volume 21 ; sepswpps ; >
       # the PDFs for the next AU is not accessible - goes to log in page
-      au < notReady ; exists ; 2008 ; 978-1-56576-138-4 ; Developing Models and Analogs for Isolated Carbonate Platforms: Holocene and Pleistocene Carbonates of the Caicos Platform, British West Indies Volume 22 ; sepsw022 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; 978-1-56576-138-4 ; Developing Models and Analogs for Isolated Carbonate Platforms: Holocene and Pleistocene Carbonates of the Caicos Platform, British West Indies Volume 22 ; sepsw022 ; >
 
   }
 
