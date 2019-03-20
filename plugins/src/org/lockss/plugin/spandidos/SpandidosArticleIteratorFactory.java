@@ -32,7 +32,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.spandidos;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.regex.Pattern;
@@ -55,28 +54,24 @@ public class SpandidosArticleIteratorFactory
   /*
   Article variant format
   https://www.spandidos-publications.com/etm/6/6/1365
-  https://www.spandidos-publications.com/etm/6/6/1365/download
-  https://www.spandidos-publications.com/etm/6/6/1365?text=abstract
+  and
+    https://www.spandidos-publications.com/etm/6/6/1365?text=abstract
+  or
+    https://www.spandidos-publications.com/etm/6/6/1365/abstract
   https://www.spandidos-publications.com/ol/15/1/1350?text=fulltext
-
-  group-1: https://www.spandidos-publications.com - base_url
-  group-2: etm - jid
-  group-3: 6 - volume
-  group-4: 6 - issue
-  group-5: 1365/download(1365 or 1365?text=abstract or 1365?text=fulltext) - article variant
+  https://www.spandidos-publications.com/etm/6/6/1365/download
   */
 
-  // Article entrance
+  // Limit to just journal volume items
   protected static final String ROOT_TEMPLATE = "\"%s%s/%s\", base_url, journal_id, volume_name";
-
-
+  // Match on only those patters that could be an article
   protected static final String PATTERN_TEMPLATE = "\"https://[^/]+/[^/]+/[^/]+/[^/]+/[^/?]+(/download|/abstract|\\?text=fulltext|\\?text=abstract)?$\"";
 
-  public static final Pattern ABSTRACT_PATTERN = Pattern.compile("/([^/\\?]+)/abstract$", Pattern.CASE_INSENSITIVE);
-  public static final Pattern ABSTRACT_PATTERN2 = Pattern.compile("/([^/\\?]+)\\?text=abstract$", Pattern.CASE_INSENSITIVE);
-  public static final Pattern PDF_PATTERN = Pattern.compile("/([^/\\?]+)/download$", Pattern.CASE_INSENSITIVE);
-  public static final Pattern FULLTEXT_PATTERN = Pattern.compile("/([^/\\?]+)\\?text=fulltext$", Pattern.CASE_INSENSITIVE);
-  public static final Pattern FULLTEXT_PATTERN2 = Pattern.compile("/([^/\\?]+)$", Pattern.CASE_INSENSITIVE);
+  public static final Pattern ABSTRACT_PATTERN = Pattern.compile("/([^/?]+)/abstract$", Pattern.CASE_INSENSITIVE);
+  public static final Pattern ABSTRACT_PATTERN2 = Pattern.compile("/([^/?]+)\\?text=abstract$", Pattern.CASE_INSENSITIVE);
+  public static final Pattern PDF_PATTERN = Pattern.compile("/([^/?]+)/download$", Pattern.CASE_INSENSITIVE);
+  public static final Pattern FULLTEXT_PATTERN = Pattern.compile("/([^/?]+)\\?text=fulltext$", Pattern.CASE_INSENSITIVE);
+  public static final Pattern FULLTEXT_PATTERN2 = Pattern.compile("/([^/?]+)$", Pattern.CASE_INSENSITIVE);
 
   public static final String ABSTRACT_REPLACEMENT = "/$1/abstract";
   public static final String ABSTRACT_REPLACEMENT2 = "/$1?text=abstract";
@@ -113,7 +108,7 @@ public class SpandidosArticleIteratorFactory
 
     // add metadata role from abstract, html
     builder.setRoleFromOtherRoles(
-            ArticleFiles.ROLE_ARTICLE_METADATA, ArticleFiles.ROLE_FULL_TEXT_HTML);
+            ArticleFiles.ROLE_ARTICLE_METADATA, ArticleFiles.ROLE_FULL_TEXT_HTML, ArticleFiles.ROLE_ABSTRACT);
 
     // The order in which we want to define full_text_cu.
     // First one that exists will get the job

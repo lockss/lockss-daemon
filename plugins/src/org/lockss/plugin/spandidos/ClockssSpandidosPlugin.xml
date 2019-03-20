@@ -35,4 +35,13 @@
     <string>au_permission_url</string>
     <string>"%slockss.txt", base_url</string>
   </entry>
+  <entry>
+    <string>clockss_override</string>
+    <map>
+     <entry>
+        <string>au_def_pause_time</string>
+        <long>100</long>
+     </entry>
+    </map>
+  </entry>  
 </map>
