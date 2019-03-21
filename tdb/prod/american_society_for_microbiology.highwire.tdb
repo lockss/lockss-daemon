@@ -967,17 +967,30 @@
   
     {
       title <
+        name = Genome Announcements ;
+        eissn = 2169-8287
+      >
+#      param[base_url] = https://mra.asm.org/
+       comment[continued_by]=2576-098X
+
+      au < asm.ASMDrupalPlugin ; manifest ; 2013 ; Genome Announcements Volume 1 ; 1 ; https://mra.asm.org/ >
+      au < asm.ASMDrupalPlugin ; manifest ; 2014 ; Genome Announcements Volume 2 ; 2 ; https://mra.asm.org/ >
+      au < asm.ASMDrupalPlugin ; manifest ; 2015 ; Genome Announcements Volume 3 ; 3 ; https://mra.asm.org/ >
+      au < asm.ASMDrupalPlugin ; manifest ; 2016 ; Genome Announcements Volume 4 ; 4 ; https://mra.asm.org/ >
+      au < asm.ASMDrupalPlugin ; manifest ; 2017 ; Genome Announcements Volume 5 ; 5 ; https://mra.asm.org/ >
+      au < asm.ASMDrupalPlugin ; manifest ; 2018 ; Genome Announcements Volume 6 ; 6 ; https://mra.asm.org/ >
+      #changed name and issn.
+    }
+
+    {
+      title <
         name = Microbiology Resource Announcements ;
         eissn = 2576-098X
       >
 #      param[base_url] = https://mra.asm.org/
+      comment[continues]=2169-8287
 
-      au < asm.ASMDrupalPlugin ; manifest ; 2013 ; Microbiology Resource Announcements Volume 1 ; 1 ; https://mra.asm.org/ >
-      au < asm.ASMDrupalPlugin ; manifest ; 2014 ; Microbiology Resource Announcements Volume 2 ; 2 ; https://mra.asm.org/ >
-      au < asm.ASMDrupalPlugin ; manifest ; 2015 ; Microbiology Resource Announcements Volume 3 ; 3 ; https://mra.asm.org/ >
-      au < asm.ASMDrupalPlugin ; manifest ; 2016 ; Microbiology Resource Announcements Volume 4 ; 4 ; https://mra.asm.org/ >
-      au < asm.ASMDrupalPlugin ; manifest ; 2017 ; Microbiology Resource Announcements Volume 5 ; 5 ; https://mra.asm.org/ >
-      au < asm.ASMDrupalPlugin ; manifest ; 2018 ; Microbiology Resource Announcements Volume 6 ; 6 ; https://mra.asm.org/ >
+      #starts with volume 7
       au < asm.ASMDrupalPlugin ; manifest ; 2018 ; Microbiology Resource Announcements Volume 7 ; 7 ; https://mra.asm.org/ >
 
     }
