@@ -83,7 +83,7 @@
       au < HighWirePressH20Plugin ; down ; 2016 ; Antimicrobial Agents and Chemotherapy Volume 60 ; 60 ; http://aac.asm.org/ >
       au < HighWirePressH20Plugin ; down ; 2017 ; Antimicrobial Agents and Chemotherapy Volume 61 ; 61 ; http://aac.asm.org/ >
   
-      au < asm.ASMDrupalPlugin ; manifest ; 2018 ; Antimicrobial Agents and Chemotherapy Volume 62 ; 62 ; https://aac.asm.org/ >
+      au < asm.ASMDrupalPlugin ; exists ; 2018 ; Antimicrobial Agents and Chemotherapy Volume 62 ; 62 ; https://aac.asm.org/ >
     }
   
     {
@@ -180,7 +180,7 @@
       au < HighWirePressH20Plugin ; down ; 2016 ; Applied and Environmental Microbiology Volume 82 ; 82 ; http://aem.asm.org/ >
       au < HighWirePressH20Plugin ; down ; 2017 ; Applied and Environmental Microbiology Volume 83 ; 83 ; http://aem.asm.org/ >
   
-      au < asm.ASMDrupalPlugin ; manifest ; 2018 ; Applied and Environmental Microbiology Volume 84 ; 84 ; https://aem.asm.org/ >
+      au < asm.ASMDrupalPlugin ; exists ; 2018 ; Applied and Environmental Microbiology Volume 84 ; 84 ; https://aem.asm.org/ >
     }
   
     {
@@ -216,8 +216,7 @@
       au < HighWirePressH20Plugin ; down ; 2015 ; Clinical and Vaccine Immunology Volume 22 ; 22 ; http://cvi.asm.org/ >
       au < HighWirePressH20Plugin ; down ; 2016 ; Clinical and Vaccine Immunology Volume 23 ; 23 ; http://cvi.asm.org/ >
       au < HighWirePressH20Plugin ; down ; 2017 ; Clinical and Vaccine Immunology Volume 24 ; 24 ; http://cvi.asm.org/ >
-  
-      au < HighWirePressH20Plugin ; expected ; 2018 ; Clinical and Vaccine Immunology Volume 25 ; 25 ; http://cvi.asm.org/ >
+      au < HighWirePressH20Plugin ; expected ; 2018 ; Clinical and Vaccine Immunology Volume 25 ; 25 ; https://cvi.asm.org/ >
     }
   
     {
@@ -260,7 +259,7 @@
       au < HighWirePressH20Plugin ; down ; 2016 ; Clinical Microbiology Reviews Volume 29 ; 29 ; http://cmr.asm.org/ >
       au < HighWirePressH20Plugin ; down ; 2017 ; Clinical Microbiology Reviews Volume 30 ; 30 ; http://cmr.asm.org/ >
   
-      au < asm.ASMDrupalPlugin ; manifest ; 2018 ; Clinical Microbiology Reviews Volume 31 ; 31 ; https://cmr.asm.org/ >
+      au < asm.ASMDrupalPlugin ; exists ; 2018 ; Clinical Microbiology Reviews Volume 31 ; 31 ; https://cmr.asm.org/ >
     }
   
     {
@@ -385,7 +384,7 @@
       au < HighWirePressH20Plugin ; down ; 2016 ; Infection and Immunity Volume 84 ; 84 ; http://iai.asm.org/ >
       au < HighWirePressH20Plugin ; down ; 2017 ; Infection and Immunity Volume 85 ; 85 ; http://iai.asm.org/ >
   
-      au < asm.ASMDrupalPlugin ; manifest ; 2018 ; Infection and Immunity Volume 86 ; 86 ; https://iai.asm.org/ >
+      au < asm.ASMDrupalPlugin ; exists ; 2018 ; Infection and Immunity Volume 86 ; 86 ; https://iai.asm.org/ >
     }
   
     {
@@ -597,7 +596,7 @@
       au < HighWirePressH20Plugin ; down ; 2016 ; Journal of Bacteriology Volume 198 ; 198 ; http://jb.asm.org/ >
       au < HighWirePressH20Plugin ; down ; 2017 ; Journal of Bacteriology Volume 199 ; 199 ; http://jb.asm.org/ >
   
-      au < asm.ASMDrupalPlugin ; manifest ; 2018 ; Journal of Bacteriology Volume 200 ; 200 ; https://jb.asm.org/ >
+      au < asm.ASMDrupalPlugin ; exists ; 2018 ; Journal of Bacteriology Volume 200 ; 200 ; https://jb.asm.org/ >
     }
   
     {
@@ -665,7 +664,7 @@
       au < HighWirePressH20Plugin ; down ; 2016 ; Journal of Clinical Microbiology Volume 54 ; 54 ; http://jcm.asm.org/ >
       au < HighWirePressH20Plugin ; down ; 2017 ; Journal of Clinical Microbiology Volume 55 ; 55 ; http://jcm.asm.org/ >
   
-      au < asm.ASMDrupalPlugin ; manifest ; 2018 ; Journal of Clinical Microbiology Volume 56 ; 56 ; https://jcm.asm.org/ >
+      au < asm.ASMDrupalPlugin ; exists ; 2018 ; Journal of Clinical Microbiology Volume 56 ; 56 ; https://jcm.asm.org/ >
     }
   
     {
@@ -770,7 +769,7 @@
       au < HighWirePressH20Plugin ; down ; 2016 ; Journal of Virology Volume 90 ; 90 ; http://jvi.asm.org/ >
       au < HighWirePressH20Plugin ; down ; 2017 ; Journal of Virology Volume 91 ; 91 ; http://jvi.asm.org/ >
   
-      au < asm.ASMDrupalPlugin ; manifest ; 2018 ; Journal of Virology Volume 92 ; 92 ; https://jvi.asm.org/ >
+      au < asm.ASMDrupalPlugin ; exists ; 2018 ; Journal of Virology Volume 92 ; 92 ; https://jvi.asm.org/ >
     }
 
     {
@@ -790,7 +789,7 @@
       au < HighWirePressH20Plugin ; down ; 2016 ; mBio Volume 7 ; 7 ; http://mbio.asm.org/ >
       au < HighWirePressH20Plugin ; down ; 2017 ; mBio Volume 8 ; 8 ; http://mbio.asm.org/ >
   
-      au < asm.ASMDrupalPlugin ; manifest ; 2018 ; mBio Volume 9 ; 9 ; https://mbio.asm.org/ >
+      au < asm.ASMDrupalPlugin ; exists ; 2018 ; mBio Volume 9 ; 9 ; https://mbio.asm.org/ >
     }
 
     {
@@ -884,7 +883,7 @@
       au < HighWirePressH20Plugin ; down ; 2016 ; Microbiology and Molecular Biology Reviews Volume 80 ; 80 ; http://mmbr.asm.org/ >
       au < HighWirePressH20Plugin ; down ; 2017 ; Microbiology and Molecular Biology Reviews Volume 81 ; 81 ; http://mmbr.asm.org/ >
   
-      au < asm.ASMDrupalPlugin ; manifest ; 2018 ; Microbiology and Molecular Biology Reviews Volume 82 ; 82 ; https://mmbr.asm.org/ >
+      au < asm.ASMDrupalPlugin ; exists ; 2018 ; Microbiology and Molecular Biology Reviews Volume 82 ; 82 ; https://mmbr.asm.org/ >
     }
   
     {
@@ -934,7 +933,7 @@
       au < HighWirePressH20Plugin ; down ; 2016 ; Molecular and Cellular Biology Volume 36 ; 36 ; http://mcb.asm.org/ >
       au < HighWirePressH20Plugin ; down ; 2017 ; Molecular and Cellular Biology Volume 37 ; 37 ; http://mcb.asm.org/ >
   
-      au < asm.ASMDrupalPlugin ; manifest ; 2018 ; Molecular and Cellular Biology Volume 38 ; 38 ; https://mcb.asm.org/ >
+      au < asm.ASMDrupalPlugin ; exists ; 2018 ; Molecular and Cellular Biology Volume 38 ; 38 ; https://mcb.asm.org/ >
     }
   
     {
@@ -947,7 +946,7 @@
 
       au < asm.ASMDrupalPlugin ; released ; 2016 ; mSphere Volume 1 ; 1 ; http://msphere.asm.org/ >
       au < asm.ASMDrupalPlugin ; released ; 2017 ; mSphere Volume 2 ; 2 ; http://msphere.asm.org/ >
-      au < asm.ASMDrupalPlugin ; manifest ; 2018 ; mSphere Volume 3 ; 3 ; https://msphere.asm.org/ >
+      au < asm.ASMDrupalPlugin ; exists ; 2018 ; mSphere Volume 3 ; 3 ; https://msphere.asm.org/ >
 
     }
 
@@ -961,7 +960,7 @@
 
       au < asm.ASMDrupalPlugin ; released ; 2016 ; mSystems Volume 1 ; 1 ; http://msystems.asm.org/ >
       au < asm.ASMDrupalPlugin ; released ; 2017 ; mSystems Volume 2 ; 2 ; http://msystems.asm.org/ >
-      au < asm.ASMDrupalPlugin ; manifest ; 2018 ; mSystems Volume 3 ; 3 ; https://msystems.asm.org/ >
+      au < asm.ASMDrupalPlugin ; exists ; 2018 ; mSystems Volume 3 ; 3 ; https://msystems.asm.org/ >
 
     }
   
@@ -973,12 +972,12 @@
 #      param[base_url] = https://mra.asm.org/
        comment[continued_by]=2576-098X
 
-      au < asm.ASMDrupalPlugin ; manifest ; 2013 ; Genome Announcements Volume 1 ; 1 ; https://mra.asm.org/ >
-      au < asm.ASMDrupalPlugin ; manifest ; 2014 ; Genome Announcements Volume 2 ; 2 ; https://mra.asm.org/ >
-      au < asm.ASMDrupalPlugin ; manifest ; 2015 ; Genome Announcements Volume 3 ; 3 ; https://mra.asm.org/ >
-      au < asm.ASMDrupalPlugin ; manifest ; 2016 ; Genome Announcements Volume 4 ; 4 ; https://mra.asm.org/ >
-      au < asm.ASMDrupalPlugin ; manifest ; 2017 ; Genome Announcements Volume 5 ; 5 ; https://mra.asm.org/ >
-      au < asm.ASMDrupalPlugin ; manifest ; 2018 ; Genome Announcements Volume 6 ; 6 ; https://mra.asm.org/ >
+      au < asm.ASMDrupalPlugin ; exists ; 2013 ; Genome Announcements Volume 1 ; 1 ; https://mra.asm.org/ >
+      au < asm.ASMDrupalPlugin ; exists ; 2014 ; Genome Announcements Volume 2 ; 2 ; https://mra.asm.org/ >
+      au < asm.ASMDrupalPlugin ; exists ; 2015 ; Genome Announcements Volume 3 ; 3 ; https://mra.asm.org/ >
+      au < asm.ASMDrupalPlugin ; exists ; 2016 ; Genome Announcements Volume 4 ; 4 ; https://mra.asm.org/ >
+      au < asm.ASMDrupalPlugin ; exists ; 2017 ; Genome Announcements Volume 5 ; 5 ; https://mra.asm.org/ >
+      au < asm.ASMDrupalPlugin ; exists ; 2018 ; Genome Announcements Volume 6 ; 6 ; https://mra.asm.org/ >
       #changed name and issn.
     }
 
@@ -991,7 +990,7 @@
       comment[continues]=2169-8287
 
       #starts with volume 7
-      au < asm.ASMDrupalPlugin ; manifest ; 2018 ; Microbiology Resource Announcements Volume 7 ; 7 ; https://mra.asm.org/ >
+      au < asm.ASMDrupalPlugin ; exists ; 2018 ; Microbiology Resource Announcements Volume 7 ; 7 ; https://mra.asm.org/ >
 
     }
   
