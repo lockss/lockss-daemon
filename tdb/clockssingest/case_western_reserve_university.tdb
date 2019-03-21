@@ -20,7 +20,7 @@
       param[base_url] = https://commons.case.edu/
       param[journal_abbr] = emr
 
-      au < ready ; exists ; 2017 ; Engaged Management Review Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2017 ; Engaged Management Review Volume 1 ; 1 ; >
       au < testing ; exists ; 2018 ; Engaged Management Review Volume 2 ; 2 ; >
       au < expected ; exists ; 2019 ; Engaged Management Review Volume 3 ; 3 ; >
 
