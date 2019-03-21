@@ -1804,6 +1804,22 @@
   {
 
       title <
+        name = Early Modern Low Countries ;
+        eissn = 2543-1587
+      >
+
+      comment[publisher] = Utrecht University Library
+#      param[base_url] = https://www.emlc-journal.org/
+#     refresh of De Zeventiende Eeuw
+
+      au < exists ; 2017 ; 1 ; Early Modern Low Countries Volume 2017 ; 2017 ; https://www.emlc-journal.org/ >
+      au < exists ; 2018 ; 2 ; Early Modern Low Countries Volume 2018 ; 2018 ; https://www.emlc-journal.org/ >
+
+  }
+
+  {
+
+      title <
         name = ERLACS ;
         eissn = 1879-4750
       >
