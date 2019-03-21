@@ -103,6 +103,20 @@
 
   }
 
+  {
+
+      title <
+        name = Journal of Scientific Innovation in Medicine ;
+        eissn = 2579-0153
+      >
+
+      comment[publisher] = Levy Library Press
+#      param[base_url] = https://journalofscientificinnovationinmedicine.org/
+
+      au < exists ; 2018 ; 1 ; Journal of Scientific Innovation in Medicine Volume 2018 ; 2018 ; https://journalofscientificinnovationinmedicine.org/ >
+
+  }
+
 }
 {
   publisher <
@@ -1580,6 +1594,49 @@
       au < manifest ; 2018 ; 9 ; Yearbook of Swiss Administrative Science Volume 2018 ; 2018 ; https://www.ssas-yearbook.com/ >
 
   }
+
+  {
+
+      title <
+        name = International Journal of Driving Science ;
+        eissn = 2397-1959
+      >
+
+      comment[publisher] = Ubiquity Press
+#      param[base_url] = https://www.ijds.eu/
+
+      au < exists ; 2018 ; 1 ; International Journal of Driving Science Volume 2018 ; 2018 ; https://www.ijds.eu/ >
+
+  }
+
+  {
+
+      title <
+        name = Worldwide Waste: Journal of Interdisciplinary Studies ;
+        eissn = 2399-7117
+      >
+
+      comment[publisher] = Ubiquity Press
+#      param[base_url] = https://www.worldwidewastejournal.com/
+
+      au < exists ; 2018 ; 1 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2018 ; 2018 ; https://www.worldwidewastejournal.com/ >
+
+  }
+
+  {
+
+      title <
+        name = Transactions of the International Society for Music Information Retrieval ;
+        eissn = 2514-3298
+      >
+
+      comment[publisher] = Ubiquity Press
+#      param[base_url] = https://transactions.ismir.net/
+
+      au < exists ; 2018 ; 1 ; Transactions of the International Society for Music Information Retrieval Volume 2018 ; 2018 ; https://transactions.ismir.net/ >
+
+  }
+
 }
 {
   publisher <
