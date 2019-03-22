@@ -101,7 +101,7 @@ public class CharsetUtil {
     ByteArrayOutputStream buffered = new ByteArrayOutputStream();
     byte[] buf = new byte[inferCharsetBufSize];
     in.mark(inferCharsetBufSize + 1024);
-    int len = in.read(buf);
+    int len = StreamUtil.readBytes(in, buf, buf.length);
     if (len <= 0) {
       return UTF8; // this is just a default for 0 len stream
     }
