@@ -103,6 +103,20 @@
 
   }
 
+  {
+
+      title <
+        name = Journal of Scientific Innovation in Medicine ;
+        eissn = 2579-0153
+      >
+
+      comment[publisher] = Levy Library Press
+#      param[base_url] = https://journalofscientificinnovationinmedicine.org/
+
+      au < exists ; 2018 ; 1 ; Journal of Scientific Innovation in Medicine Volume 2018 ; 2018 ; https://journalofscientificinnovationinmedicine.org/ >
+
+  }
+
 }
 {
   publisher <
@@ -426,22 +440,22 @@
     au < manifest ; 2001 ; 3 ; Scandinavian Journal of Disability Research Volume 3 ; 2001 ; https://www.sjdr.se/ >
     au < manifest ; 2002 ; 4 ; Scandinavian Journal of Disability Research Volume 4 ; 2002 ; https://www.sjdr.se/ >
     au < manifest ; 2003 ; 5 ; Scandinavian Journal of Disability Research Volume 5 ; 2003 ; https://www.sjdr.se/ >
-    au < exists ; 2004 ; 6 ; Scandinavian Journal of Disability Research Volume 6 ; 2004 ; https://www.sjdr.se/ >
-    au < exists ; 2005 ; 7 ; Scandinavian Journal of Disability Research Volume 7 ; 2005 ; https://www.sjdr.se/ >
-    au < exists ; 2006 ; 8 ; Scandinavian Journal of Disability Research Volume 8 ; 2006 ; https://www.sjdr.se/ >
-    au < exists ; 2007 ; 9 ; Scandinavian Journal of Disability Research Volume 9 ; 2007 ; https://www.sjdr.se/ >
-    au < exists ; 2008 ; 10 ; Scandinavian Journal of Disability Research Volume 10 ; 2008 ; https://www.sjdr.se/ >
-    au < exists ; 2009 ; 11 ; Scandinavian Journal of Disability Research Volume 11 ; 2009 ; https://www.sjdr.se/ >
-    au < exists ; 2010 ; 12 ; Scandinavian Journal of Disability Research Volume 12 ; 2010 ; https://www.sjdr.se/ >
-    au < exists ; 2011 ; 13 ; Scandinavian Journal of Disability Research Volume 13 ; 2011 ; https://www.sjdr.se/ >
-    au < exists ; 2012 ; 14 ; Scandinavian Journal of Disability Research Volume 14 ; 2012 ; https://www.sjdr.se/ >
-    au < exists ; 2013 ; 15 ; Scandinavian Journal of Disability Research Volume 15 ; 2013 ; https://www.sjdr.se/ >
-    au < exists ; 2014 ; 16 ; Scandinavian Journal of Disability Research Volume 16 ; 2014 ; https://www.sjdr.se/ >
-    au < exists ; 2015 ; 17 ; Scandinavian Journal of Disability Research Volume 17 ; 2015 ; https://www.sjdr.se/ >
-    au < exists ; 2016 ; 18 ; Scandinavian Journal of Disability Research Volume 18 ; 2016 ; https://www.sjdr.se/ >
-    au < exists ; 2017 ; 19 ; Scandinavian Journal of Disability Research Volume 19 ; 2017 ; https://www.sjdr.se/ >
-    au < exists ; 2018 ; 20 ; Scandinavian Journal of Disability Research Volume 20 ; 2018 ; https://www.sjdr.se/ >
-    au < exists ; 2019 ; 21 ; Scandinavian Journal of Disability Research Volume 21 ; 2019 ; https://www.sjdr.se/ >
+    au < manifest ; 2004 ; 6 ; Scandinavian Journal of Disability Research Volume 6 ; 2004 ; https://www.sjdr.se/ >
+    au < manifest ; 2005 ; 7 ; Scandinavian Journal of Disability Research Volume 7 ; 2005 ; https://www.sjdr.se/ >
+    au < manifest ; 2006 ; 8 ; Scandinavian Journal of Disability Research Volume 8 ; 2006 ; https://www.sjdr.se/ >
+    au < manifest ; 2007 ; 9 ; Scandinavian Journal of Disability Research Volume 9 ; 2007 ; https://www.sjdr.se/ >
+    au < manifest ; 2008 ; 10 ; Scandinavian Journal of Disability Research Volume 10 ; 2008 ; https://www.sjdr.se/ >
+    au < manifest ; 2009 ; 11 ; Scandinavian Journal of Disability Research Volume 11 ; 2009 ; https://www.sjdr.se/ >
+    au < manifest ; 2010 ; 12 ; Scandinavian Journal of Disability Research Volume 12 ; 2010 ; https://www.sjdr.se/ >
+    au < manifest ; 2011 ; 13 ; Scandinavian Journal of Disability Research Volume 13 ; 2011 ; https://www.sjdr.se/ >
+    au < manifest ; 2012 ; 14 ; Scandinavian Journal of Disability Research Volume 14 ; 2012 ; https://www.sjdr.se/ >
+    au < manifest ; 2013 ; 15 ; Scandinavian Journal of Disability Research Volume 15 ; 2013 ; https://www.sjdr.se/ >
+    au < manifest ; 2014 ; 16 ; Scandinavian Journal of Disability Research Volume 16 ; 2014 ; https://www.sjdr.se/ >
+    au < manifest ; 2015 ; 17 ; Scandinavian Journal of Disability Research Volume 17 ; 2015 ; https://www.sjdr.se/ >
+    au < manifest ; 2016 ; 18 ; Scandinavian Journal of Disability Research Volume 18 ; 2016 ; https://www.sjdr.se/ >
+    au < manifest ; 2017 ; 19 ; Scandinavian Journal of Disability Research Volume 19 ; 2017 ; https://www.sjdr.se/ >
+    au < manifest ; 2018 ; 20 ; Scandinavian Journal of Disability Research Volume 20 ; 2018 ; https://www.sjdr.se/ >
+    au < manifest ; 2019 ; 21 ; Scandinavian Journal of Disability Research Volume 21 ; 2019 ; https://www.sjdr.se/ >
 
   }
 
@@ -706,7 +720,7 @@
       #publisher = Ubiquity Press
 
       au < doNotProcess ; 2018 ; 1 ; Future Cities and Environment Volume 2018 ; 2018 ; https://futurecitiesandenvironment.com/ >
-      au < manifest ; 2018 ; 1 ; Future Cities and Environment Volume 2018 ; 2018 ; https://www.futurecitiesandenvironment.com/ >
+      au < exists ; 2018 ; 1 ; Future Cities and Environment Volume 2018 ; 2018 ; https://www.futurecitiesandenvironment.com/ >
 
   }
 
@@ -1443,8 +1457,8 @@
       au < released ; 2015 ; 3 ; eGEMs Volume 2015 ; 2015 ; https://egems.academyhealth.org/ >
       au < released ; 2016 ; 4 ; eGEMs Volume 2016 ; 2016 ; https://egems.academyhealth.org/ >
       au < released ; 2017 ; 5 ; eGEMs Volume 2017 ; 2017 ; https://egems.academyhealth.org/ >
-      au < ready ; 2018 ; 6 ; eGEMs Volume 2018 ; 2018 ; https://egems.academyhealth.org/ >
-      au < ready ; 2019 ; 7 ; eGEMs Volume 2019 ; 2019 ; https://egems.academyhealth.org/ >
+      au < released ; 2018 ; 6 ; eGEMs Volume 2018 ; 2018 ; https://egems.academyhealth.org/ >
+      au < released ; 2019 ; 7 ; eGEMs Volume 2019 ; 2019 ; https://egems.academyhealth.org/ >
 
   }
 
@@ -1580,6 +1594,49 @@
       au < manifest ; 2018 ; 9 ; Yearbook of Swiss Administrative Science Volume 2018 ; 2018 ; https://www.ssas-yearbook.com/ >
 
   }
+
+  {
+
+      title <
+        name = International Journal of Driving Science ;
+        eissn = 2397-1959
+      >
+
+      comment[publisher] = Ubiquity Press
+#      param[base_url] = https://www.ijds.eu/
+
+      au < exists ; 2018 ; 1 ; International Journal of Driving Science Volume 2018 ; 2018 ; https://www.ijds.eu/ >
+
+  }
+
+  {
+
+      title <
+        name = Worldwide Waste: Journal of Interdisciplinary Studies ;
+        eissn = 2399-7117
+      >
+
+      comment[publisher] = Ubiquity Press
+#      param[base_url] = https://www.worldwidewastejournal.com/
+
+      au < exists ; 2018 ; 1 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2018 ; 2018 ; https://www.worldwidewastejournal.com/ >
+
+  }
+
+  {
+
+      title <
+        name = Transactions of the International Society for Music Information Retrieval ;
+        eissn = 2514-3298
+      >
+
+      comment[publisher] = Ubiquity Press
+#      param[base_url] = https://transactions.ismir.net/
+
+      au < exists ; 2018 ; 1 ; Transactions of the International Society for Music Information Retrieval Volume 2018 ; 2018 ; https://transactions.ismir.net/ >
+
+  }
+
 }
 {
   publisher <
@@ -1798,6 +1855,22 @@
       au < released ; 2015 ; 31 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2015 ; 2015 ; https://www.de-zeventiende-eeuw.nl/ >
       au < manifest ; 2016 ; 32 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2016 ; 2016 ; https://www.de-zeventiende-eeuw.nl/ >
       au < released ; 2017 ; 33 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2017 ; 2017 ; https://www.de-zeventiende-eeuw.nl/ >
+
+  }
+
+  {
+
+      title <
+        name = Early Modern Low Countries ;
+        eissn = 2543-1587
+      >
+
+      comment[publisher] = Utrecht University Library
+#      param[base_url] = https://www.emlc-journal.org/
+#     refresh of De Zeventiende Eeuw
+
+      au < exists ; 2017 ; 1 ; Early Modern Low Countries Volume 2017 ; 2017 ; https://www.emlc-journal.org/ >
+      au < exists ; 2018 ; 2 ; Early Modern Low Countries Volume 2018 ; 2018 ; https://www.emlc-journal.org/ >
 
   }
 

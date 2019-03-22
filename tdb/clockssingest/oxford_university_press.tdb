@@ -5588,7 +5588,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Family Practice Volume 32 ; 32 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Family Practice Volume 33 ; 33 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Family Practice Volume 34 ; 34 ; reingest5.clockss.org:8082 >
-    au < ready ; exists ; 2018 ; 2018 ; Family Practice Volume 35 ; 35 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Family Practice Volume 35 ; 35 ; >
 
   }
 
@@ -5604,7 +5604,7 @@
 
     #this title was ONLY in the publisher listing
     au < finished ; crawling ; 2017 ; 2017 ; Food Quality and Safety Volume 1 ; 1 ; reingest1.clockss.org:8082 >
-    au < ready ; exists ; 2018 ; 2018 ; Food Quality and Safety Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Food Quality and Safety Volume 2 ; 2 ; >
 
   }
 
@@ -5632,7 +5632,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Foreign Policy Analysis Volume 11 ; 11 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Foreign Policy Analysis Volume 12 ; 12 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Foreign Policy Analysis Volume 13 ; 13 ; reingest2.clockss.org:8085 >
-    au < ready ; exists ; 2018 ; 2018 ; Foreign Policy Analysis Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Foreign Policy Analysis Volume 14 ; 14 ; >
 
   }
 
@@ -5867,7 +5867,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Forestry: An International Journal of Forest Research Volume 88 ; 88 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Forestry: An International Journal of Forest Research Volume 89 ; 89 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Forestry: An International Journal of Forest Research Volume 90 ; 90 ; reingest4.clockss.org:8082 >
-    au < ready ; exists ; 2018 ; 2018 ; Forestry: An International Journal of Forest Research Volume 91 ; 91 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Forestry: An International Journal of Forest Research Volume 91 ; 91 ; >
 
   }
 
@@ -6120,7 +6120,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; French Studies Bulletin Volume 36 ; 36 ; >
     au < frozen ; exists ; 2016 ; 2016 ; French Studies Bulletin Volume 37 ; 37 ; >
     au < finished ; crawling ; 2017 ; 2017 ; French Studies Bulletin Volume 38 ; 38 ; reingest3.clockss.org:8083 >
-    au < ready ; exists ; 2018 ; 2018 ; French Studies Bulletin Volume 39 ; 39 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; French Studies Bulletin Volume 39 ; 39 ; >
 
   }
 
@@ -6330,7 +6330,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; German History Volume 33 ; 33 ; >
     au < frozen ; exists ; 2016 ; 2016 ; German History Volume 34 ; 34 ; >
     au < frozen ; exists ; 2017 ; 2017 ; German History Volume 35 ; 35 ; >
-    au < ready ; exists ; 2018 ; 2018 ; German History Volume 36 ; 36 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; German History Volume 36 ; 36 ; >
 
   }
 
@@ -6410,7 +6410,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Glycobiology Volume 25 ; 25 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Glycobiology Volume 26 ; 26 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Glycobiology Volume 27 ; 27 ; >
-    au < ready ; exists ; 2018 ; 2018 ; Glycobiology Volume 28 ; 28 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Glycobiology Volume 28 ; 28 ; >
 
   }
 
@@ -6514,7 +6514,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Health Education Research Volume 30 ; 30 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Health Education Research Volume 31 ; 31 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Health Education Research Volume 32 ; 32 ; reingest5.clockss.org:8082 >
-    au < ready ; exists ; 2018 ; 2018 ; Health Education Research Volume 33 ; 33 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Health Education Research Volume 33 ; 33 ; >
 
   }
 
@@ -6814,7 +6814,7 @@
 
     #this title was ONLY in the publisher listing
     au < finished ; crawling ; 2017 ; 2017 ; Human Reproduction Open Volume 2017 ; 2017 ; reingest4.clockss.org:8082 >
-    au < ready ; exists ; 2018 ; 2018 ; Human Reproduction Open Volume 2018 ; 2018 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Human Reproduction Open Volume 2018 ; 2018 ; >
 
   }
 
@@ -7287,7 +7287,7 @@
 
     param[journal_id] = ibdjournal
 
-    au < ready ; exists ; 2018 ; 2018 ; Inflammatory Bowel Diseases Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Inflammatory Bowel Diseases Volume 1 ; 1 ; >
 
   }
 
@@ -7516,7 +7516,7 @@
     param[journal_id] = isd
 
     #this title was ONLY in the publisher listing
-    au < crawling ; exists ; 2017 ; 2017 ; Insect Systematics and Diversity Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2017 ; 2017 ; Insect Systematics and Diversity Volume 1 ; 1 ; >
     au < testing ; exists ; 2018 ; 2018 ; Insect Systematics and Diversity Volume 2 ; 2 ; >
 
   }
@@ -7726,7 +7726,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Health Volume 7 ; 7 ; >
     au < frozen ; exists ; 2016 ; 2016 ; International Health Volume 8 ; 8 ; >
     au < finished ; crawling ; 2017 ; 2017 ; International Health Volume 9 ; 9 ; reingest4.clockss.org:8082 >
-    au < ready ; exists ; 2018 ; 2018 ; International Health Volume 10 ; 10 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; International Health Volume 10 ; 10 ; >
 
   }
 
@@ -12589,7 +12589,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Mind Volume 122 ; 122 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Mind Volume 123 ; 123 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Mind Volume 124 ; 124 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; Mind Volume 125 ; 125 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; Mind Volume 125 ; 125 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Mind Volume 126 ; 126 ; >
     au < testing ; exists ; 2018 ; 2018 ; Mind Volume 127 ; 127 ; >
 
@@ -12788,7 +12788,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Monthly Notices of the Royal Astronomical Society Volume 437-445 ; 437-445 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 446-454 ; 446-454 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Monthly Notices of the Royal Astronomical Society Volume 455-463 ; 455-463 ; >
-    au < ready ; exists ; 2017 ; 2017 ; Monthly Notices of the Royal Astronomical Society Volume 464-472 ; 464-472 ; >
+    au < crawling ; exists ; 2017 ; 2017 ; Monthly Notices of the Royal Astronomical Society Volume 464-472 ; 464-472 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Monthly Notices of the Royal Astronomical Society Volume 473-482 ; 473-482 ; >
 
   }
@@ -13071,7 +13071,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Music and Letters Volume 94 ; 94 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Music and Letters Volume 95 ; 95 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Music and Letters Volume 96 ; 96 ; >
-    au < testing ; exists ; 2016 ; 2016 ; Music and Letters Volume 97 ; 97 ; >
+    au < ready ; exists ; 2016 ; 2016 ; Music and Letters Volume 97 ; 97 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Music and Letters Volume 98 ; 98 ; >
     au < testing ; exists ; 2018 ; 2018 ; Music and Letters Volume 99 ; 99 ; >
 
@@ -13359,7 +13359,7 @@
     au < manifest ; exists ; 2013 ; 2013 ; Nicotine & Tobacco Research Volume 15 ; 15 ; >
     au < manifest ; exists ; 2014 ; 2014 ; Nicotine & Tobacco Research Volume 16 ; 16 ; >
     au < manifest ; exists ; 2015 ; 2015 ; Nicotine & Tobacco Research Volume 17 ; 17 ; >
-    au < testing ; exists ; 2016 ; 2016 ; Nicotine & Tobacco Research Volume 18 ; 18 ; >
+    au < ready ; exists ; 2016 ; 2016 ; Nicotine & Tobacco Research Volume 18 ; 18 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Nicotine & Tobacco Research Volume 19 ; 19 ; >
     au < testing ; exists ; 2018 ; 2018 ; Nicotine & Tobacco Research Volume 20 ; 20 ; >
 
@@ -13838,7 +13838,7 @@
 
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Open Forum Infectious Diseases Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Open Forum Infectious Diseases Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; Open Forum Infectious Diseases Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; Open Forum Infectious Diseases Volume 3 ; 3 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Open Forum Infectious Diseases Volume 4 ; 4 ; >
     au < testing ; exists ; 2018 ; 2018 ; Open Forum Infectious Diseases Volume 5 ; 5 ; >
 
@@ -13866,7 +13866,7 @@
     au < manifest ; exists ; 2013 ; 2013 ; Operative Neurosurgery Volume 72 ; 72 ; >
     au < manifest ; exists ; 2014 ; 2014 ; Operative Neurosurgery Volume 10 ; 10 ; >
     au < manifest ; exists ; 2015 ; 2015 ; Operative Neurosurgery Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; Operative Neurosurgery Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; Operative Neurosurgery Volume 12 ; 12 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Operative Neurosurgery Volume 13 ; 13 ; >
     au < testing ; exists ; 2018 ; 2018 ; Operative Neurosurgery Volume 14 ; 14 ; >
 
@@ -14429,7 +14429,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Pathogens and Disease Volume 67-69 ; 67-69 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Pathogens and Disease Volume 70-72 ; 70-72 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Pathogens and Disease Volume 73 ; 73 ; >
-    au < ready ; exists ; 2016 ; 2016 ; Pathogens and Disease Volume 74 ; 74 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; Pathogens and Disease Volume 74 ; 74 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Pathogens and Disease Volume 75 ; 75 ; >
     au < testing ; exists ; 2018 ; 2018 ; Pathogens and Disease Volume 76 ; 76 ; >
 
@@ -14572,7 +14572,7 @@
     au < manifest ; exists ; 2013 ; 2013 ; Physical Therapy Volume 93 ; 93 ; >
     au < manifest ; exists ; 2014 ; 2014 ; Physical Therapy Volume 94 ; 94 ; >
     au < manifest ; exists ; 2015 ; 2015 ; Physical Therapy Volume 95 ; 95 ; >
-    au < ready ; exists ; 2016 ; 2016 ; Physical Therapy Volume 96 ; 96 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; Physical Therapy Volume 96 ; 96 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Physical Therapy Volume 97 ; 97 ; >
     au < testing ; exists ; 2018 ; 2018 ; Physical Therapy Volume 98 ; 98 ; >
 
@@ -14645,7 +14645,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Plant and Cell Physiology Volume 54 ; 54 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Plant and Cell Physiology Volume 55 ; 55 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Plant and Cell Physiology Volume 56 ; 56 ; >
-    au < testing ; exists ; 2016 ; 2016 ; Plant and Cell Physiology Volume 57 ; 57 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; Plant and Cell Physiology Volume 57 ; 57 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Plant and Cell Physiology Volume 58 ; 58 ; >
     au < testing ; exists ; 2018 ; 2018 ; Plant and Cell Physiology Volume 59 ; 59 ; >
 
@@ -14671,7 +14671,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Policing: A Journal of Policy and Practice Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Policing: A Journal of Policy and Practice Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Policing: A Journal of Policy and Practice Volume 9 ; 9 ; >
-    au < ready ; exists ; 2016 ; 2016 ; Policing: A Journal of Policy and Practice Volume 10 ; 10 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; Policing: A Journal of Policy and Practice Volume 10 ; 10 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Policing: A Journal of Policy and Practice Volume 11 ; 11 ; >
     au < testing ; exists ; 2018 ; 2018 ; Policing: A Journal of Policy and Practice Volume 12 ; 12 ; >
 
@@ -14805,7 +14805,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Poultry Science Volume 92 ; 92 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Poultry Science Volume 93 ; 93 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Poultry Science Volume 94 ; 94 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; Poultry Science Volume 95 ; 95 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; Poultry Science Volume 95 ; 95 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Poultry Science Volume 96 ; 96 ; >
     au < testing ; exists ; 2018 ; 2018 ; Poultry Science Volume 97 ; 97 ; >
 
@@ -14860,7 +14860,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Proceedings of the Aristotelian Society Volume 113 ; 113 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Proceedings of the Aristotelian Society Volume 114 ; 114 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Proceedings of the Aristotelian Society Volume 115 ; 115 ; >
-    au < ready ; exists ; 2016 ; 2016 ; Proceedings of the Aristotelian Society Volume 116 ; 116 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; Proceedings of the Aristotelian Society Volume 116 ; 116 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Proceedings of the Aristotelian Society Volume 117 ; 117 ; >
     au < testing ; exists ; 2018 ; 2018 ; Proceedings of the Aristotelian Society Volume 118 ; 118 ; >
 
@@ -15032,7 +15032,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2015 ; 2015 ; >
-    au < ready ; exists ; 2016 ; 2016 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2016 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2016 ; 2016 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2017 ; 2017 ; >
     au < testing ; exists ; 2018 ; 2018 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2018 ; 2018 ; >
 
@@ -15266,7 +15266,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Publications of the Astronomical Society of Japan Volume 65 ; 65 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Publications of the Astronomical Society of Japan Volume 66 ; 66 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Publications of the Astronomical Society of Japan Volume 67 ; 67 ; >
-    au < testing ; exists ; 2016 ; 2016 ; Publications of the Astronomical Society of Japan Volume 68 ; 68 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; Publications of the Astronomical Society of Japan Volume 68 ; 68 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Publications of the Astronomical Society of Japan Volume 69 ; 69 ; >
     au < testing ; exists ; 2018 ; 2018 ; Publications of the Astronomical Society of Japan Volume 70 ; 70 ; >
 
@@ -15429,7 +15429,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; QJM: An International Journal of Medicine Volume 106 ; 106 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; QJM: An International Journal of Medicine Volume 107 ; 107 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; QJM: An International Journal of Medicine Volume 108 ; 108 ; >
-    au < ready ; exists ; 2016 ; 2016 ; QJM: An International Journal of Medicine Volume 109 ; 109 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; QJM: An International Journal of Medicine Volume 109 ; 109 ; >
     au < frozen ; exists ; 2017 ; 2017 ; QJM: An International Journal of Medicine Volume 110 ; 110 ; >
     au < testing ; exists ; 2018 ; 2018 ; QJM: An International Journal of Medicine Volume 111 ; 111 ; >
 
@@ -15788,7 +15788,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Rheumatology Volume 52 ; 52 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Rheumatology Volume 53 ; 53 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Rheumatology Volume 54 ; 54 ; >
-    au < ready ; exists ; 2016 ; 2016 ; Rheumatology Volume 55 ; 55 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; Rheumatology Volume 55 ; 55 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Rheumatology Volume 56 ; 56 ; >
     au < testing ; exists ; 2018 ; 2018 ; Rheumatology Volume 57 ; 57 ; >
 
@@ -15918,7 +15918,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Science and Public Policy Volume 40 ; 40 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Science and Public Policy Volume 41 ; 41 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Science and Public Policy Volume 42 ; 42 ; >
-    au < ready ; exists ; 2016 ; 2016 ; Science and Public Policy Volume 43 ; 43 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; Science and Public Policy Volume 43 ; 43 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Science and Public Policy Volume 44 ; 44 ; >
     au < testing ; exists ; 2018 ; 2018 ; Science and Public Policy Volume 45 ; 45 ; >
 
@@ -16058,7 +16058,7 @@
     au < manifest ; exists ; 2013 ; 2013 ; Shakespeare Quarterly Volume 64 ; 64 ; >
     au < manifest ; exists ; 2014 ; 2014 ; Shakespeare Quarterly Volume 65 ; 65 ; >
     au < manifest ; exists ; 2015 ; 2015 ; Shakespeare Quarterly Volume 66 ; 66 ; >
-    au < testing ; exists ; 2016 ; 2016 ; Shakespeare Quarterly Volume 67 ; 67 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; Shakespeare Quarterly Volume 67 ; 67 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Shakespeare Quarterly Volume 68 ; 68 ; >
     au < manifest ; exists ; 2018 ; 2018 ; Shakespeare Quarterly Volume 69 ; 69 ; >
 
@@ -16140,7 +16140,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Social Cognitive and Affective Neuroscience Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Social Cognitive and Affective Neuroscience Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Social Cognitive and Affective Neuroscience Volume 10 ; 10 ; >
-    au < testing ; exists ; 2016 ; 2016 ; Social Cognitive and Affective Neuroscience Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; Social Cognitive and Affective Neuroscience Volume 11 ; 11 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Social Cognitive and Affective Neuroscience Volume 12 ; 12 ; >
     au < testing ; exists ; 2018 ; 2018 ; Social Cognitive and Affective Neuroscience Volume 13 ; 13 ; >
 
@@ -16296,7 +16296,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Social History of Medicine Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Social History of Medicine Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Social History of Medicine Volume 28 ; 28 ; >
-    au < testing ; exists ; 2016 ; 2016 ; Social History of Medicine Volume 29 ; 29 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; Social History of Medicine Volume 29 ; 29 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Social History of Medicine Volume 30 ; 30 ; >
     au < testing ; exists ; 2018 ; 2018 ; Social History of Medicine Volume 31 ; 31 ; >
 
@@ -17131,7 +17131,7 @@
 
     #this title was ONLY in the previous TDB listing - suppressing AU generation
 
-    au < ready ; exists ; 2016 ; 2016 ; The Annals of Occupational Hygiene Volume 60 ; 60 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; The Annals of Occupational Hygiene Volume 60 ; 60 ; >
 
   }
 
@@ -17212,7 +17212,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; The British Journal for the Philosophy of Science Volume 64 ; 64 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; The British Journal for the Philosophy of Science Volume 65 ; 65 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The British Journal for the Philosophy of Science Volume 66 ; 66 ; >
-    au < ready ; exists ; 2016 ; 2016 ; The British Journal for the Philosophy of Science Volume 67 ; 67 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; The British Journal for the Philosophy of Science Volume 67 ; 67 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The British Journal for the Philosophy of Science Volume 68 ; 68 ; >
     au < testing ; exists ; 2018 ; 2018 ; The British Journal for the Philosophy of Science Volume 69 ; 69 ; >
 
@@ -17748,7 +17748,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; The English Historical Review Volume 128 ; 128 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; The English Historical Review Volume 129 ; 129 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The English Historical Review Volume 130 ; 130 ; >
-    au < testing ; exists ; 2016 ; 2016 ; The English Historical Review Volume 131 ; 131 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; The English Historical Review Volume 131 ; 131 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The English Historical Review Volume 132 ; 132 ; >
     au < testing ; exists ; 2018 ; 2018 ; The English Historical Review Volume 133 ; 133 ; >
 
@@ -17820,7 +17820,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; The Gerontologist Volume 53 ; 53 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; The Gerontologist Volume 54 ; 54 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The Gerontologist Volume 55 ; 55 ; >
-    au < testing ; exists ; 2016 ; 2016 ; The Gerontologist Volume 56 ; 56 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; The Gerontologist Volume 56 ; 56 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Gerontologist Volume 57 ; 57 ; >
     au < testing ; exists ; 2018 ; 2018 ; The Gerontologist Volume 58 ; 58 ; >
 
@@ -17861,7 +17861,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; The Journal of Applied Poultry Research Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; The Journal of Applied Poultry Research Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The Journal of Applied Poultry Research Volume 24 ; 24 ; >
-    au < ready ; exists ; 2016 ; 2016 ; The Journal of Applied Poultry Research Volume 25 ; 25 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; The Journal of Applied Poultry Research Volume 25 ; 25 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Journal of Applied Poultry Research Volume 26 ; 26 ; >
     au < testing ; exists ; 2018 ; 2018 ; The Journal of Applied Poultry Research Volume 27 ; 27 ; >
 
@@ -17970,7 +17970,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; The Journal of Biochemistry Volume 153-154 ; 153-154 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; The Journal of Biochemistry Volume 155-156 ; 155-156 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The Journal of Biochemistry Volume 157-158 ; 157-158 ; >
-    au < testing ; exists ; 2016 ; 2016 ; The Journal of Biochemistry Volume 159-160 ; 159-160 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; The Journal of Biochemistry Volume 159-160 ; 159-160 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Journal of Biochemistry Volume 161-162 ; 161-162 ; >
     au < testing ; exists ; 2018 ; 2018 ; The Journal of Biochemistry Volume 163-164 ; 163-164 ; >
 
@@ -18184,7 +18184,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; The Journal of Infectious Diseases Volume 207-208 ; 207-208 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; The Journal of Infectious Diseases Volume 209-210 ; 209-210 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The Journal of Infectious Diseases Volume 211-212 ; 211-212 ; >
-    au < ready ; exists ; 2016 ; 2016 ; The Journal of Infectious Diseases Volume 213-214 ; 213-214 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; The Journal of Infectious Diseases Volume 213-214 ; 213-214 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Journal of Infectious Diseases Volume 215-216 ; 215-216 ; >
     au < testing ; exists ; 2018 ; 2018 ; The Journal of Infectious Diseases Volume 217-218 ; 217-218 ; >
 
@@ -18523,7 +18523,7 @@
     au < manifest ; exists ; 2013 ; 2013 ; The Journals of Gerontology: Series B Volume 68 ; 68 ; >
     au < manifest ; exists ; 2014 ; 2014 ; The Journals of Gerontology: Series B Volume 69-69B ; 69-69B ; >
     au < manifest ; exists ; 2015 ; 2015 ; The Journals of Gerontology: Series B Volume 70 ; 70 ; >
-    au < ready ; exists ; 2016 ; 2016 ; The Journals of Gerontology: Series B Volume 71 ; 71 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; The Journals of Gerontology: Series B Volume 71 ; 71 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Journals of Gerontology: Series B Volume 72 ; 72 ; >
     au < testing ; exists ; 2018 ; 2018 ; The Journals of Gerontology: Series B Volume 73 ; 73 ; >
 
@@ -18944,7 +18944,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; The Opera Quarterly Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; The Opera Quarterly Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The Opera Quarterly Volume 31 ; 31 ; >
-    au < testing ; exists ; 2016 ; 2016 ; The Opera Quarterly Volume 32 ; 32 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; The Opera Quarterly Volume 32 ; 32 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Opera Quarterly Volume 33 ; 33 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; The Opera Quarterly Volume 34 ; 34 ; >
 
@@ -19333,7 +19333,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; The Quarterly Journal of Mathematics Volume 64 ; 64 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; The Quarterly Journal of Mathematics Volume 65 ; 65 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The Quarterly Journal of Mathematics Volume 66 ; 66 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; The Quarterly Journal of Mathematics Volume 67 ; 67 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; The Quarterly Journal of Mathematics Volume 67 ; 67 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Quarterly Journal of Mathematics Volume 68 ; 68 ; >
     au < testing ; exists ; 2018 ; 2018 ; The Quarterly Journal of Mathematics Volume 69 ; 69 ; >
 
@@ -19805,7 +19805,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; The World Bank Research Observer Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; The World Bank Research Observer Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The World Bank Research Observer Volume 30 ; 30 ; >
-    au < ready ; exists ; 2016 ; 2016 ; The World Bank Research Observer Volume 31 ; 31 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; The World Bank Research Observer Volume 31 ; 31 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The World Bank Research Observer Volume 32 ; 32 ; >
     au < testing ; exists ; 2018 ; 2018 ; The World Bank Research Observer Volume 33 ; 33 ; >
 
@@ -19952,7 +19952,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; The Year's Work in English Studies Volume 92 ; 92 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; The Year's Work in English Studies Volume 93 ; 93 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The Year's Work in English Studies Volume 94 ; 94 ; >
-    au < testing ; exists ; 2016 ; 2016 ; The Year's Work in English Studies Volume 95 ; 95 ; >
+    au < ready ; exists ; 2016 ; 2016 ; The Year's Work in English Studies Volume 95 ; 95 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Year's Work in English Studies Volume 96 ; 96 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; The Year's Work in English Studies Volume 97 ; 97 ; >
 
@@ -20004,7 +20004,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Toxicological Sciences Volume 131-136 ; 131-136 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Toxicological Sciences Volume 137-142 ; 137-142 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Toxicological Sciences Volume 143-148 ; 143-148 ; >
-    au < testing ; exists ; 2016 ; 2016 ; Toxicological Sciences Volume 149-154 ; 149-154 ; >
+    au < ready ; exists ; 2016 ; 2016 ; Toxicological Sciences Volume 149-154 ; 149-154 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Toxicological Sciences Volume 155-160 ; 155-160 ; >
     au < testing ; exists ; 2018 ; 2018 ; Toxicological Sciences Volume 161-166 ; 161-166 ; >
 
@@ -20180,7 +20180,7 @@
     au < manifest ; exists ; 2013 ; 2013 ; Translational Behavioral Medicine Volume 3 ; 3 ; >
     au < manifest ; exists ; 2014 ; 2014 ; Translational Behavioral Medicine Volume 4 ; 4 ; >
     au < manifest ; exists ; 2015 ; 2015 ; Translational Behavioral Medicine Volume 5 ; 5 ; >
-    au < testing ; exists ; 2016 ; 2016 ; Translational Behavioral Medicine Volume 6 ; 6 ; >
+    au < ready ; exists ; 2016 ; 2016 ; Translational Behavioral Medicine Volume 6 ; 6 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Translational Behavioral Medicine Volume 7 ; 7 ; >
     au < testing ; exists ; 2018 ; 2018 ; Translational Behavioral Medicine Volume 8 ; 8 ; >
 
@@ -20370,7 +20370,7 @@
     param[journal_id] = ve
 
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Virus Evolution Volume 1 ; 1 ; >
-    au < ready ; exists ; 2016 ; 2016 ; Virus Evolution Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; Virus Evolution Volume 2 ; 2 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Virus Evolution Volume 3 ; 3 ; >
     au < testing ; exists ; 2018 ; 2018 ; Virus Evolution Volume 4 ; 4 ; >
 
@@ -20501,7 +20501,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Yearbook of European Law Volume 32 ; 32 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Yearbook of European Law Volume 33 ; 33 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Yearbook of European Law Volume 34 ; 34 ; >
-    au < testing ; exists ; 2016 ; 2016 ; Yearbook of European Law Volume 35 ; 35 ; >
+    au < ready ; exists ; 2016 ; 2016 ; Yearbook of European Law Volume 35 ; 35 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Yearbook of European Law Volume 36 ; 36 ; >
     au < manifest ; exists ; 2018 ; 2018 ; Yearbook of European Law Volume 37 ; 37 ; >
 

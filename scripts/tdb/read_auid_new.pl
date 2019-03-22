@@ -1147,15 +1147,18 @@ while (my $line = <>) {
         sleep(4);                       
 
 # use "\w+" at beginning of match to indicate something other than needs.SourcePlugin
-#File transfer plugins have 3 flavors: (Warc|Source)Plugin (base+year), DirSourcePlugin (base+dir), DeliveredSourcePlugin (base + year + dir)
+#file transfer: old style (Warc|Source)Plugin (base+year), new style SourcePlugin (base+dir), DeliveredSourcePlugin (base + year + dir)
+#the url can be built up from the available parameters
   } elsif (($plugin =~ m/\w+SourcePlugin/) || 
            ($plugin =~ m/\w+WarcPlugin/)) {
-      if ($plugin =~ m/DeliveredSourcePlugin/) {
-        $url = sprintf("%s%d/%s/", $param{base_url}, $param{year}, $param{directory});
-      } elsif ($plugin =~ m/DirSourcePlugin/) {
-        $url = sprintf("%s%s/", $param{base_url}, $param{directory});
-      } else {
-        $url = sprintf("%s%d/", $param{base_url}, $param{year});
+      $url = sprintf("%s", $param{base_url});
+      # if there is a year parameter (delivered source and original source plugins) that comes next
+      if (defined $param{year}) {
+	  $url .= "$param{year}/";
+      } 
+      # if there is a directory (delivered source in addition to year  and new directory based source plugins instead of year
+      if (defined $param{directory}) {
+	  $url .= "$param{directory}/";
       }
       $man_url = uri_unescape($url);
       my $req = HTTP::Request->new(GET, $man_url);

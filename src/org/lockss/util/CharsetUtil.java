@@ -174,7 +174,7 @@ public class CharsetUtil {
     int len = 0;
     byte[] buf = new byte[inferCharsetBufSize];
     if(inStream != null) {
-      len = inStream.read(buf);
+      len = StreamUtil.readBytes(inStream, buf, buf.length);
     }
     if (len <= 0) {
       return new InputStreamAndCharset(inStream, expectedCharset);

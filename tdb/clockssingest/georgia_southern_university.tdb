@@ -20,8 +20,8 @@
       param[base_url] = https://digitalcommons.georgiasouthern.edu/
       param[journal_abbr] = aujh
 
-      au < ready ; exists ; 2017 ; Armstrong Undergraduate Journal of History Volume 7 ; 7 ; >
-      au < ready ; exists ; 2018 ; Armstrong Undergraduate Journal of History Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2017 ; Armstrong Undergraduate Journal of History Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2018 ; Armstrong Undergraduate Journal of History Volume 8 ; 8 ; >
       au < expected ; exists ; 2019 ; Armstrong Undergraduate Journal of History Volume 9 ; 9 ; >
 
   }
@@ -37,7 +37,7 @@
       param[base_url] = https://digitalcommons.georgiasouthern.edu/
       param[journal_abbr] = becoming_journal
 
-      au < ready ; exists ; 2018 ; Becoming: Journal of the Georgia Middle School Association Volume 29 ; 29 ; >
+      au < frozen ; exists ; 2018 ; Becoming: Journal of the Georgia Middle School Association Volume 29 ; 29 ; >
       au < expected ; exists ; 2019 ; Becoming: Journal of the Georgia Middle School Association Volume 30 ; 30 ; >
 
   }
@@ -77,13 +77,13 @@
       au < manifest ; exists ; 2009 ; Georgia Educational Researcher Volume 7 ; 7 ; >
       au < manifest ; exists ; 2010 ; Georgia Educational Researcher Volume 8 ; 8 ; >
       au < manifest ; exists ; 2011 ; Georgia Educational Researcher Volume 9 ; 9 ; >
-      au < ready ; exists ; 2012 ; Georgia Educational Researcher Volume 10 ; 10 ; >
-      au < ready ; exists ; 2013 ; Georgia Educational Researcher Volume 11 ; 11 ; >
-      au < ready ; exists ; 2014 ; Georgia Educational Researcher Volume 12 ; 12 ; >
-      au < ready ; exists ; 2015 ; Georgia Educational Researcher Volume 13 ; 13 ; >
-      au < ready ; exists ; 2016 ; Georgia Educational Researcher Volume 14 ; 14 ; >
-      au < ready ; exists ; 2017 ; Georgia Educational Researcher Volume 15 ; 15 ; >
-      au < ready ; exists ; 2018 ; Georgia Educational Researcher Volume 16 ; 16 ; >
+      au < frozen ; exists ; 2012 ; Georgia Educational Researcher Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2013 ; Georgia Educational Researcher Volume 11 ; 11 ; >
+      au < frozen ; exists ; 2014 ; Georgia Educational Researcher Volume 12 ; 12 ; >
+      au < frozen ; exists ; 2015 ; Georgia Educational Researcher Volume 13 ; 13 ; >
+      au < frozen ; exists ; 2016 ; Georgia Educational Researcher Volume 14 ; 14 ; >
+      au < frozen ; exists ; 2017 ; Georgia Educational Researcher Volume 15 ; 15 ; >
+      au < frozen ; exists ; 2018 ; Georgia Educational Researcher Volume 16 ; 16 ; >
       au < expected ; exists ; 2019 ; Georgia Educational Researcher Volume 17 ; 17 ; >
 
   }
@@ -99,7 +99,7 @@
       param[base_url] = https://digitalcommons.georgiasouthern.edu/
       param[journal_abbr] = gcpa
 
-      au < ready ; exists ; 2016 ; Georgia Journal of College Student Affairs Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2016 ; Georgia Journal of College Student Affairs Volume 1 ; 1 ; >
       au < exists ; exists ; 2017 ; Georgia Journal of College Student Affairs Volume 2 ; 2 ; >
       au < expected ; exists ; 2018 ; Georgia Journal of College Student Affairs Volume 3 ; 3 ; >
       au < expected ; exists ; 2019 ; Georgia Journal of College Student Affairs Volume 4 ; 4 ; >
@@ -122,13 +122,13 @@
       au < manifest ; exists ; 2009 ; International Journal for the Scholarship of Teaching & Learning Volume 3 ; 3 ; >
       au < manifest ; exists ; 2010 ; International Journal for the Scholarship of Teaching & Learning Volume 4 ; 4 ; >
       au < manifest ; exists ; 2011 ; International Journal for the Scholarship of Teaching & Learning Volume 5 ; 5 ; >
-      au < ready ; exists ; 2012 ; International Journal for the Scholarship of Teaching & Learning Volume 6 ; 6 ; >
-      au < ready ; exists ; 2013 ; International Journal for the Scholarship of Teaching & Learning Volume 7 ; 7 ; >
-      au < ready ; exists ; 2014 ; International Journal for the Scholarship of Teaching & Learning Volume 8 ; 8 ; >
-      au < ready ; exists ; 2015 ; International Journal for the Scholarship of Teaching & Learning Volume 9 ; 9 ; >
-      au < ready ; exists ; 2016 ; International Journal for the Scholarship of Teaching & Learning Volume 10 ; 10 ; >
-      au < ready ; exists ; 2017 ; International Journal for the Scholarship of Teaching & Learning Volume 11 ; 11 ; >
-      au < ready ; exists ; 2018 ; International Journal for the Scholarship of Teaching & Learning Volume 12 ; 12 ; >
+      au < frozen ; exists ; 2012 ; International Journal for the Scholarship of Teaching & Learning Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2013 ; International Journal for the Scholarship of Teaching & Learning Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2014 ; International Journal for the Scholarship of Teaching & Learning Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2015 ; International Journal for the Scholarship of Teaching & Learning Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2016 ; International Journal for the Scholarship of Teaching & Learning Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2017 ; International Journal for the Scholarship of Teaching & Learning Volume 11 ; 11 ; >
+      au < frozen ; exists ; 2018 ; International Journal for the Scholarship of Teaching & Learning Volume 12 ; 12 ; >
       au < manifest ; exists ; 2019 ; International Journal for the Scholarship of Teaching & Learning Volume 13 ; 13 ; >
 
   }
@@ -145,7 +145,7 @@
       param[base_url] = https://digitalcommons.georgiasouthern.edu/
       param[journal_abbr] = iss
 
-      au < ready ; exists ; 2014 ; Irish Studies South Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2014 ; Irish Studies South Volume 1 ; 1 ; >
       au < exists ; exists ; 2015 ; Irish Studies South Volume 2 ; 2 ; >
       au < exists ; exists ; 2016 ; Irish Studies South Volume 3 ; 3 ; >
       au < exists ; exists ; 2017 ; Irish Studies South Volume 4 ; 4 ; >
@@ -165,9 +165,9 @@
       param[base_url] = https://digitalcommons.georgiasouthern.edu/
       param[journal_abbr] = nyar
 
-      au < ready ; exists ; 2015 ; National Youth-At-Risk Journal Volume 1 ; 1 ; >
-      au < ready ; exists ; 2016 ; National Youth-At-Risk Journal Volume 2 ; 2 ; >
-      au < ready ; exists ; 2017 ; National Youth-At-Risk Journal Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2015 ; National Youth-At-Risk Journal Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2016 ; National Youth-At-Risk Journal Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2017 ; National Youth-At-Risk Journal Volume 3 ; 3 ; >
       au < expected ; exists ; 2018 ; National Youth-At-Risk Journal Volume 4 ; 4 ; >
       au < expected ; exists ; 2019 ; National Youth-At-Risk Journal Volume 5 ; 5 ; >
 
@@ -184,8 +184,8 @@
       param[base_url] = https://digitalcommons.georgiasouthern.edu/
       param[journal_abbr] = stem_proceedings
 
-      au < ready ; exists ; 2017 ; Proceedings of the Interdisciplinary STEM Teaching and Learning Conference Volume 1 ; 1 ; >
-      au < ready ; exists ; 2018 ; Proceedings of the Interdisciplinary STEM Teaching and Learning Conference Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2017 ; Proceedings of the Interdisciplinary STEM Teaching and Learning Conference Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2018 ; Proceedings of the Interdisciplinary STEM Teaching and Learning Conference Volume 2 ; 2 ; >
       au < expected ; exists ; 2019 ; Proceedings of the Interdisciplinary STEM Teaching and Learning Conference Volume 3 ; 3 ; >
 
   }
@@ -207,11 +207,11 @@
       au < manifest ; exists ; 2010 ; The Coastal Review Volume 3 ; 3 ; >
       au < manifest ; exists ; 2011 ; The Coastal Review Volume 4 ; 4 ; >
       au < exists ; exists ; 2012 ; The Coastal Review Volume 5 ; 5 ; >
-      au < ready ; exists ; 2013 ; The Coastal Review Volume 6 ; 6 ; >
-      au < ready ; exists ; 2014 ; The Coastal Review Volume 7 ; 7 ; >
-      au < ready ; exists ; 2015 ; The Coastal Review Volume 8 ; 8 ; >
-      au < ready ; exists ; 2016 ; The Coastal Review Volume 9 ; 9 ; >
-      au < ready ; exists ; 2017 ; The Coastal Review Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2013 ; The Coastal Review Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2014 ; The Coastal Review Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2015 ; The Coastal Review Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2016 ; The Coastal Review Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2017 ; The Coastal Review Volume 10 ; 10 ; >
       au < expected ; exists ; 2018 ; The Coastal Review Volume 11 ; 11 ; >
       au < expected ; exists ; 2019 ; The Coastal Review Volume 12 ; 12 ; >
 
@@ -229,7 +229,7 @@
       param[base_url] = https://digitalcommons.georgiasouthern.edu/
       param[journal_abbr] = jssw
 
-      au < ready ; exists ; 2017 ; The Journal of Student Success in Writing Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2017 ; The Journal of Student Success in Writing Volume 1 ; 1 ; >
       au < expected ; exists ; 2018 ; The Journal of Student Success in Writing Volume 2 ; 2 ; >
       au < expected ; exists ; 2019 ; The Journal of Student Success in Writing Volume 3 ; 3 ; >
 
@@ -246,11 +246,11 @@
       param[base_url] = https://digitalcommons.georgiasouthern.edu/
       param[journal_abbr] = tag
 
-      au < ready ; exists ; 2014 ; Theory and Applications of Graphs Volume 0 ; 0 ; >
-      au < ready ; exists ; 2015 ; Theory and Applications of Graphs Volume 1 ; 1 ; >
-      au < ready ; exists ; 2016 ; Theory and Applications of Graphs Volume 2 ; 2 ; >
-      au < ready ; exists ; 2017 ; Theory and Applications of Graphs Volume 3 ; 3 ; >
-      au < ready ; exists ; 2018 ; Theory and Applications of Graphs Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2014 ; Theory and Applications of Graphs Volume 0 ; 0 ; >
+      au < frozen ; exists ; 2015 ; Theory and Applications of Graphs Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2016 ; Theory and Applications of Graphs Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2017 ; Theory and Applications of Graphs Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2018 ; Theory and Applications of Graphs Volume 4 ; 4 ; >
       au < manifest ; exists ; 2019 ; Theory and Applications of Graphs Volume 5 ; 5 ; >
 
   }
