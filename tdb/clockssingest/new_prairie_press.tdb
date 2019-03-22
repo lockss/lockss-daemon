@@ -390,7 +390,7 @@
       au < manifest ; exists ; 2011 ; Educational Considerations Volume 39 ; 39 ; >
       au < testing ; exists ; 2012 ; Educational Considerations Volume 40 ; 40 ; >
       au < testing ; exists ; 2013 ; Educational Considerations Volume 41 ; 41 ; >
-      au < crawling ; exists ; 2014 ; Educational Considerations Volume 42 ; 42 ; >
+      au < frozen ; exists ; 2014 ; Educational Considerations Volume 42 ; 42 ; >
       au < testing ; exists ; 2015 ; Educational Considerations Volume 43 ; 43 ; >
       au < testing ; exists ; 2016 ; Educational Considerations Volume 44 ; 44 ; >
       au < exists ; exists ; 2017 ; Educational Considerations Volume 45 ; 45 ; >
@@ -432,8 +432,8 @@
       param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = hbr
 
-      au < crawling ; exists ; 2017 ; Human Behavior Research Volume 1 ; 1 ; >
-      au < crawling ; exists ; 2018 ; Human Behavior Research Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2017 ; Human Behavior Research Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2018 ; Human Behavior Research Volume 2 ; 2 ; >
       au < expected ; exists ; 2019 ; Human Behavior Research Volume 3 ; 3 ; >
 
   }
@@ -453,7 +453,7 @@
 
       au < testing ; exists ; 2016 ; International Journal of School Social Work Volume 1 ; 1 ; >
       au < testing ; exists ; 2017 ; International Journal of School Social Work Volume 2 ; 2 ; >
-      au < crawling ; exists ; 2018 ; International Journal of School Social Work Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2018 ; International Journal of School Social Work Volume 3 ; 3 ; >
       au < expected ; exists ; 2019 ; International Journal of School Social Work Volume 4 ; 4 ; >
 
   }
@@ -516,12 +516,12 @@
       au < manifest ; exists ; 2010 ; Journal of Applied Communications Volume 93 ; 93 ; >
       au < manifest ; exists ; 2011 ; Journal of Applied Communications Volume 94 ; 94 ; >
       au < testing ; exists ; 2012 ; Journal of Applied Communications Volume 95 ; 95 ; >
-      au < crawling ; exists ; 2013 ; Journal of Applied Communications Volume 96 ; 96 ; >
-      au < crawling ; exists ; 2014 ; Journal of Applied Communications Volume 97 ; 97 ; >
+      au < frozen ; exists ; 2013 ; Journal of Applied Communications Volume 96 ; 96 ; >
+      au < frozen ; exists ; 2014 ; Journal of Applied Communications Volume 97 ; 97 ; >
       au < testing ; exists ; 2015 ; Journal of Applied Communications Volume 98 ; 98 ; >
       au < testing ; exists ; 2016 ; Journal of Applied Communications Volume 99 ; 99 ; >
       au < testing ; exists ; 2017 ; Journal of Applied Communications Volume 100 ; 100 ; >
-      au < crawling ; exists ; 2018 ; Journal of Applied Communications Volume 101 ; 101 ; >
+      au < frozen ; exists ; 2018 ; Journal of Applied Communications Volume 101 ; 101 ; >
       au < manifest ; exists ; 2019 ; Journal of Applied Communications Volume 102 ; 102 ; >
 
   }
@@ -580,7 +580,7 @@
       au < testing ; exists ; 2015 ; Kansas Agricultural Experiment Station Research Reports Volume 1 ; 1 ; >
       au < testing ; exists ; 2016 ; Kansas Agricultural Experiment Station Research Reports Volume 2 ; 2 ; >
       au < testing ; exists ; 2017 ; Kansas Agricultural Experiment Station Research Reports Volume 3 ; 3 ; >
-      au < crawling ; exists ; 2018 ; Kansas Agricultural Experiment Station Research Reports Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2018 ; Kansas Agricultural Experiment Station Research Reports Volume 4 ; 4 ; >
       au < manifest ; exists ; 2019 ; Kansas Agricultural Experiment Station Research Reports Volume 5 ; 5 ; >
 
   }
@@ -598,10 +598,10 @@
       param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = ksulibraries
 
-      au < crawling ; exists ; 2015 ; Kansas State University Libraries Volume 1 ; 1 ; >
-      au < crawling ; exists ; 2016 ; Kansas State University Libraries Volume 2 ; 2 ; >
-      au < crawling ; exists ; 2017 ; Kansas State University Libraries Volume 3 ; 3 ; >
-      au < crawling ; exists ; 2018 ; Kansas State University Libraries Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2015 ; Kansas State University Libraries Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2016 ; Kansas State University Libraries Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2017 ; Kansas State University Libraries Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2018 ; Kansas State University Libraries Volume 4 ; 4 ; >
       au < manifest ; exists ; 2019 ; Kansas State University Libraries Volume 5 ; 5 ; >
 
   }
@@ -634,9 +634,9 @@
       au < manifest ; exists ; 2010 ; Networks: An Online Journal for Teacher Research Volume 13 ; 13 ; >
       au < manifest ; exists ; 2011 ; Networks: An Online Journal for Teacher Research Volume 14 ; 14 ; >
       au < ready ; exists ; 2012 ; Networks: An Online Journal for Teacher Research Volume 15 ; 15 ; >
-      au < crawling ; exists ; 2013 ; Networks: An Online Journal for Teacher Research Volume 16 ; 16 ; >
+      au < frozen ; exists ; 2013 ; Networks: An Online Journal for Teacher Research Volume 16 ; 16 ; >
       au < ready ; exists ; 2014 ; Networks: An Online Journal for Teacher Research Volume 17 ; 17 ; >
-      au < crawling ; exists ; 2015 ; Networks: An Online Journal for Teacher Research Volume 18 ; 18 ; >
+      au < frozen ; exists ; 2015 ; Networks: An Online Journal for Teacher Research Volume 18 ; 18 ; >
       au < ready ; exists ; 2016 ; Networks: An Online Journal for Teacher Research Volume 19 ; 19 ; >
       au < testing ; exists ; 2017 ; Networks: An Online Journal for Teacher Research Volume 20 ; 20 ; >
       au < testing ; exists ; 2018 ; Networks: An Online Journal for Teacher Research Volume 21 ; 21 ; >
@@ -692,10 +692,10 @@
       au < manifest ; exists ; 2011 ; Oz Volume 33 ; 33 ; >
       au < ready ; exists ; 2012 ; Oz Volume 34 ; 34 ; >
       au < ready ; exists ; 2013 ; Oz Volume 35 ; 35 ; >
-      au < crawling ; exists ; 2014 ; Oz Volume 36 ; 36 ; >
+      au < frozen ; exists ; 2014 ; Oz Volume 36 ; 36 ; >
       au < testing ; exists ; 2015 ; Oz Volume 37 ; 37 ; >
       au < ready ; exists ; 2016 ; Oz Volume 38 ; 38 ; >
-      au < crawling ; exists ; 2017 ; Oz Volume 39 ; 39 ; >
+      au < frozen ; exists ; 2017 ; Oz Volume 39 ; 39 ; >
       au < ready ; exists ; 2018 ; Oz Volume 40 ; 40 ; >
       au < expected ; exists ; 2019 ; Oz Volume 41 ; 41 ; >
 
@@ -733,8 +733,8 @@
       param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = pjer
 
-      au < crawling ; exists ; 2016 ; Prairie Journal of Educational Research Volume 1 ; 1 ; >
-      au < crawling ; exists ; 2017 ; Prairie Journal of Educational Research Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2016 ; Prairie Journal of Educational Research Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2017 ; Prairie Journal of Educational Research Volume 2 ; 2 ; >
       au < expected ; exists ; 2018 ; Prairie Journal of Educational Research Volume 3 ; 3 ; >
       au < expected ; exists ; 2019 ; Prairie Journal of Educational Research Volume 4 ; 4 ; >
 
@@ -754,13 +754,13 @@
       param[journal_abbr] = seek
 
       au < manifest ; exists ; 2011 ; Seek Volume 1 ; 1 ; >
-      au < crawling ; exists ; 2012 ; Seek Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2012 ; Seek Volume 2 ; 2 ; >
       au < ready ; exists ; 2013 ; Seek Volume 3 ; 3 ; >
-      au < crawling ; exists ; 2014 ; Seek Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2014 ; Seek Volume 4 ; 4 ; >
       au < ready ; exists ; 2015 ; Seek Volume 5 ; 5 ; >
       au < ready ; exists ; 2016 ; Seek Volume 6 ; 6 ; >
       au < ready ; exists ; 2017 ; Seek Volume 7 ; 7 ; >
-      au < crawling ; exists ; 2018 ; Seek Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2018 ; Seek Volume 8 ; 8 ; >
       au < expected ; exists ; 2019 ; Seek Volume 9 ; 9 ; >
 
   }
@@ -815,9 +815,9 @@
       au < manifest ; exists ; 2009 ; Studies in 20th & 21st Century Literature Volume 34 ; 34 ; >
       au < manifest ; exists ; 2010 ; Studies in 20th & 21st Century Literature Volume 35 ; 35 ; >
       au < manifest ; exists ; 2011 ; Studies in 20th & 21st Century Literature Volume 36 ; 36 ; >
-      au < crawling ; exists ; 2012 ; Studies in 20th & 21st Century Literature Volume 37 ; 37 ; >
-      au < crawling ; exists ; 2013 ; Studies in 20th & 21st Century Literature Volume 38 ; 38 ; >
-      au < crawling ; exists ; 2014 ; Studies in 20th & 21st Century Literature Volume 39 ; 39 ; >
+      au < frozen ; exists ; 2012 ; Studies in 20th & 21st Century Literature Volume 37 ; 37 ; >
+      au < frozen ; exists ; 2013 ; Studies in 20th & 21st Century Literature Volume 38 ; 38 ; >
+      au < frozen ; exists ; 2014 ; Studies in 20th & 21st Century Literature Volume 39 ; 39 ; >
       au < testing ; exists ; 2015 ; Studies in 20th & 21st Century Literature Volume 40 ; 40 ; >
       au < ready ; exists ; 2016 ; Studies in 20th & 21st Century Literature Volume 41 ; 41 ; >
       au < ready ; exists ; 2017 ; Studies in 20th & 21st Century Literature Volume 42 ; 42 ; >
