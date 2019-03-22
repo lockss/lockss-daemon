@@ -67,17 +67,19 @@ public class SpandidosArticleIteratorFactory
   // Match on only those patters that could be an article
   protected static final String PATTERN_TEMPLATE = "\"https://[^/]+/[^/]+/[^/]+/[^/]+/[^/?]+(/download|/abstract|\\?text=fulltext|\\?text=abstract)?$\"";
 
-  public static final Pattern ABSTRACT_PATTERN = Pattern.compile("/([^/?]+)/abstract$", Pattern.CASE_INSENSITIVE);
-  public static final Pattern ABSTRACT_PATTERN2 = Pattern.compile("/([^/?]+)\\?text=abstract$", Pattern.CASE_INSENSITIVE);
-  public static final Pattern PDF_PATTERN = Pattern.compile("/([^/?]+)/download$", Pattern.CASE_INSENSITIVE);
-  public static final Pattern FULLTEXT_PATTERN = Pattern.compile("/([^/?]+)\\?text=fulltext$", Pattern.CASE_INSENSITIVE);
-  public static final Pattern FULLTEXT_PATTERN2 = Pattern.compile("/([^/?]+)$", Pattern.CASE_INSENSITIVE);
+  public static final Pattern ABSTRACT_PATTERN = Pattern.compile("/(\\d[^/?]+)/abstract$", Pattern.CASE_INSENSITIVE);
+  public static final Pattern ABSTRACT_PATTERN2 = Pattern.compile("/(\\d[^/?]+)\\?text=abstract$", Pattern.CASE_INSENSITIVE);
+  public static final Pattern PDF_PATTERN = Pattern.compile("/(\\d[^/?]+)/download$", Pattern.CASE_INSENSITIVE);
+  public static final Pattern FULLTEXT_PATTERN2 = Pattern.compile("/(\\d[^/?]+)\\?text=fulltext$", Pattern.CASE_INSENSITIVE);
+  public static final Pattern FULLTEXT_PATTERN = Pattern.compile("/(\\d[^/?]+)$", Pattern.CASE_INSENSITIVE);
 
   public static final String ABSTRACT_REPLACEMENT = "/$1/abstract";
   public static final String ABSTRACT_REPLACEMENT2 = "/$1?text=abstract";
   public static final String PDF_REPLACEMENT = "/$1/download";
-  public static final String FULLTEXT_REPLACEMENT =  "/$1?text=fulltext";
-  public static final String FULLTEXT_REPLACEMENT2 =  "/$1";
+  public static final String FULLTEXT_REPLACEMENT2 =  "/$1?text=fulltext";
+  public static final String FULLTEXT_REPLACEMENT =  "/$1";
+
+  private static final String FULL_TEXT_ALTERNATIVE = "ROLE_FULL_TEXT_ALTERNATIVE";
 
 
   @Override
@@ -89,8 +91,8 @@ public class SpandidosArticleIteratorFactory
 
     // set up Fulltext to be an aspect that will trigger an ArticleFiles
     builder.addAspect(
-            Arrays.asList(FULLTEXT_PATTERN, FULLTEXT_PATTERN2),
-            Arrays.asList(FULLTEXT_REPLACEMENT, FULLTEXT_REPLACEMENT2),
+            FULLTEXT_PATTERN,
+            FULLTEXT_REPLACEMENT,
             ArticleFiles.ROLE_FULL_TEXT_HTML,
             ArticleFiles.ROLE_ARTICLE_METADATA);
 
@@ -106,14 +108,20 @@ public class SpandidosArticleIteratorFactory
             Arrays.asList(ABSTRACT_REPLACEMENT, ABSTRACT_REPLACEMENT2),
             ArticleFiles.ROLE_ABSTRACT);
 
+
+    builder.addAspect(
+            FULLTEXT_REPLACEMENT2,
+            FULL_TEXT_ALTERNATIVE);
+
     // add metadata role from abstract, html
     builder.setRoleFromOtherRoles(
-            ArticleFiles.ROLE_ARTICLE_METADATA, ArticleFiles.ROLE_FULL_TEXT_HTML, ArticleFiles.ROLE_ABSTRACT);
+            ArticleFiles.ROLE_ARTICLE_METADATA, ArticleFiles.ROLE_FULL_TEXT_HTML, FULL_TEXT_ALTERNATIVE, ArticleFiles.ROLE_ABSTRACT);
 
     // The order in which we want to define full_text_cu.
     // First one that exists will get the job
     builder.setFullTextFromRoles(
             ArticleFiles.ROLE_FULL_TEXT_HTML,
+            FULL_TEXT_ALTERNATIVE,
             ArticleFiles.ROLE_FULL_TEXT_PDF);
 
 

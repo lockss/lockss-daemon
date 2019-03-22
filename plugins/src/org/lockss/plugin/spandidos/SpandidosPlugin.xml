@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -53,8 +53,6 @@
       https://www.spandidos-publications.com/citation/10.3892/ol.2018.8378/html
      -->
     <list>
-      <!--allow general html related resouces to get in-->
-      <string>1,"^%s[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)(_v[0-9]+|\?v=[0-9.]+|\?[a-z0-9]+)?$", base_url</string>
       <!--https://www.spandidos-publications.com/images/table-icon.jpg-->
       <string>1,"^%simages/", base_url</string>
       <string>1,"^%sresources/(css|js|images|fontface)/", base_url</string>
