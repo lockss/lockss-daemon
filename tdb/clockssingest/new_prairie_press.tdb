@@ -633,11 +633,11 @@
       au < manifest ; exists ; 2009 ; Networks: An Online Journal for Teacher Research Volume 12 ; 12 ; >
       au < manifest ; exists ; 2010 ; Networks: An Online Journal for Teacher Research Volume 13 ; 13 ; >
       au < manifest ; exists ; 2011 ; Networks: An Online Journal for Teacher Research Volume 14 ; 14 ; >
-      au < crawling ; exists ; 2012 ; Networks: An Online Journal for Teacher Research Volume 15 ; 15 ; >
+      au < frozen ; exists ; 2012 ; Networks: An Online Journal for Teacher Research Volume 15 ; 15 ; >
       au < frozen ; exists ; 2013 ; Networks: An Online Journal for Teacher Research Volume 16 ; 16 ; >
-      au < crawling ; exists ; 2014 ; Networks: An Online Journal for Teacher Research Volume 17 ; 17 ; >
+      au < frozen ; exists ; 2014 ; Networks: An Online Journal for Teacher Research Volume 17 ; 17 ; >
       au < frozen ; exists ; 2015 ; Networks: An Online Journal for Teacher Research Volume 18 ; 18 ; >
-      au < crawling ; exists ; 2016 ; Networks: An Online Journal for Teacher Research Volume 19 ; 19 ; >
+      au < frozen ; exists ; 2016 ; Networks: An Online Journal for Teacher Research Volume 19 ; 19 ; >
       au < testing ; exists ; 2017 ; Networks: An Online Journal for Teacher Research Volume 20 ; 20 ; >
       au < testing ; exists ; 2018 ; Networks: An Online Journal for Teacher Research Volume 21 ; 21 ; >
       au < expected ; exists ; 2019 ; Networks: An Online Journal for Teacher Research Volume 22 ; 22 ; >
@@ -690,13 +690,13 @@
       au < manifest ; exists ; 2009 ; Oz Volume 31 ; 31 ; >
       au < manifest ; exists ; 2010 ; Oz Volume 32 ; 32 ; >
       au < manifest ; exists ; 2011 ; Oz Volume 33 ; 33 ; >
-      au < crawling ; exists ; 2012 ; Oz Volume 34 ; 34 ; >
-      au < crawling ; exists ; 2013 ; Oz Volume 35 ; 35 ; >
+      au < frozen ; exists ; 2012 ; Oz Volume 34 ; 34 ; >
+      au < frozen ; exists ; 2013 ; Oz Volume 35 ; 35 ; >
       au < frozen ; exists ; 2014 ; Oz Volume 36 ; 36 ; >
       au < testing ; exists ; 2015 ; Oz Volume 37 ; 37 ; >
-      au < crawling ; exists ; 2016 ; Oz Volume 38 ; 38 ; >
+      au < frozen ; exists ; 2016 ; Oz Volume 38 ; 38 ; >
       au < frozen ; exists ; 2017 ; Oz Volume 39 ; 39 ; >
-      au < crawling ; exists ; 2018 ; Oz Volume 40 ; 40 ; >
+      au < frozen ; exists ; 2018 ; Oz Volume 40 ; 40 ; >
       au < expected ; exists ; 2019 ; Oz Volume 41 ; 41 ; >
 
   }
@@ -714,7 +714,7 @@
       param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = piper
 
-      au < crawling ; exists ; 2017 ; Pedagogy & (Im)Possibilities Across Education Research Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2017 ; Pedagogy & (Im)Possibilities Across Education Research Volume 1 ; 1 ; >
       au < expected ; exists ; 2018 ; Pedagogy & (Im)Possibilities Across Education Research Volume 2 ; 2 ; >
       au < expected ; exists ; 2019 ; Pedagogy & (Im)Possibilities Across Education Research Volume 3 ; 3 ; >
 
@@ -755,11 +755,11 @@
 
       au < manifest ; exists ; 2011 ; Seek Volume 1 ; 1 ; >
       au < frozen ; exists ; 2012 ; Seek Volume 2 ; 2 ; >
-      au < crawling ; exists ; 2013 ; Seek Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2013 ; Seek Volume 3 ; 3 ; >
       au < frozen ; exists ; 2014 ; Seek Volume 4 ; 4 ; >
-      au < crawling ; exists ; 2015 ; Seek Volume 5 ; 5 ; >
-      au < crawling ; exists ; 2016 ; Seek Volume 6 ; 6 ; >
-      au < crawling ; exists ; 2017 ; Seek Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2015 ; Seek Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2016 ; Seek Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2017 ; Seek Volume 7 ; 7 ; >
       au < frozen ; exists ; 2018 ; Seek Volume 8 ; 8 ; >
       au < expected ; exists ; 2019 ; Seek Volume 9 ; 9 ; >
 
@@ -819,9 +819,9 @@
       au < frozen ; exists ; 2013 ; Studies in 20th & 21st Century Literature Volume 38 ; 38 ; >
       au < frozen ; exists ; 2014 ; Studies in 20th & 21st Century Literature Volume 39 ; 39 ; >
       au < testing ; exists ; 2015 ; Studies in 20th & 21st Century Literature Volume 40 ; 40 ; >
-      au < crawling ; exists ; 2016 ; Studies in 20th & 21st Century Literature Volume 41 ; 41 ; >
-      au < crawling ; exists ; 2017 ; Studies in 20th & 21st Century Literature Volume 42 ; 42 ; >
-      au < crawling ; exists ; 2018 ; Studies in 20th & 21st Century Literature Volume 43 ; 43 ; >
+      au < frozen ; exists ; 2016 ; Studies in 20th & 21st Century Literature Volume 41 ; 41 ; >
+      au < frozen ; exists ; 2017 ; Studies in 20th & 21st Century Literature Volume 42 ; 42 ; >
+      au < frozen ; exists ; 2018 ; Studies in 20th & 21st Century Literature Volume 43 ; 43 ; >
       au < expected ; exists ; 2019 ; Studies in 20th & 21st Century Literature Volume 44 ; 44 ; >
 
   }
