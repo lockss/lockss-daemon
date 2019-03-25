@@ -8,8 +8,8 @@
   >
 
   plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-  param[base_url] = http://www.ingentaconnect.com/
-  param[api_url] = http://api.ingentaconnect.com/
+#  param[base_url] = http://www.ingentaconnect.com/
+#  param[api_url] = http://api.ingentaconnect.com/
   param[graphics_url] = http://graphics.ingentaconnect.com/
   param[publisher_id] = iuatld
   
@@ -25,6 +25,10 @@
 
     param[journal_id] = ijtld
     param[journal_issn] = 1027-3719
+
+    {
+    param[base_url] = https://www.ingentaconnect.com/
+    param[api_url] = https://api.ingentaconnect.com/
 
     au < manifest ; exists ; 1997 ; International Journal of Tuberculosis and Lung Disease Volume 1 ; 1 ; >
     au < manifest ; exists ; 1998 ; International Journal of Tuberculosis and Lung Disease Volume 2 ; 2 ; >
@@ -42,13 +46,28 @@
     au < manifest ; exists ; 2010 ; International Journal of Tuberculosis and Lung Disease Volume 14 ; 14 ; >
     au < manifest ; exists ; 2011 ; International Journal of Tuberculosis and Lung Disease Volume 15 ; 15 ; >
     au < manifest ; exists ; 2012 ; International Journal of Tuberculosis and Lung Disease Volume 16 ; 16 ; >
+
+    }
+
+    {
+    param[base_url] = http://www.ingentaconnect.com/
+    param[api_url] = http://api.ingentaconnect.com/
+
     au < finished ; finished ; 2013 ; International Journal of Tuberculosis and Lung Disease Volume 17 ; 17 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; International Journal of Tuberculosis and Lung Disease Volume 18 ; 18 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; International Journal of Tuberculosis and Lung Disease Volume 19 ; 19 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; International Journal of Tuberculosis and Lung Disease Volume 20 ; 20 ; >
+
+    }
+
+    {
+    param[base_url] = https://www.ingentaconnect.com/
+    param[api_url] = https://api.ingentaconnect.com/
+
     au < notReady ; exists ; 2017 ; International Journal of Tuberculosis and Lung Disease Volume 21 ; 21 ; > #LXQUEUE-1208
     au < manifest ; exists ; 2018 ; International Journal of Tuberculosis and Lung Disease Volume 22 ; 22 ; >
 
+    }
   }
 
   {
@@ -61,15 +80,34 @@
     param[journal_id] = pha
     param[journal_issn] = 2220-8372
 
+    {
+    param[base_url] = https://www.ingentaconnect.com/
+    param[api_url] = https://api.ingentaconnect.com/
+
     au < manifest ; exists ; 2011 ; Public Health Action Volume 1 ; 1 ; >
     au < manifest ; exists ; 2012 ; Public Health Action Volume 2 ; 2 ; >
+
+    }
+
+    {
+    param[base_url] = http://www.ingentaconnect.com/
+    param[api_url] = http://api.ingentaconnect.com/
+
     au < deepCrawl ; exists ; 2013 ; Public Health Action Volume 3 ; 3 ; >
     au < finished ; finished ; 2014 ; Public Health Action Volume 4 ; 4 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Public Health Action Volume 5 ; 5 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; Public Health Action Volume 6 ; 6 ; >
+
+    }
+
+    {
+    param[base_url] = https://www.ingentaconnect.com/
+    param[api_url] = https://api.ingentaconnect.com/
+
     au < notReady ; exists ; 2017 ; Public Health Action Volume 7 ; 7 ; > #LXQUEUE-1208
     au < manifest ; exists ; 2018 ; Public Health Action Volume 8 ; 8 ; >
 
+    }
   }
 
 }

@@ -37,6 +37,7 @@
       au < manifest ; exists ; 2011 ; Systematic Botany Volume 36 ; 36 ; >
       au < manifest ; exists ; 2012 ; Systematic Botany Volume 37 ; 37 ; >
     }
+
     {
       param[base_url] = http://www.ingentaconnect.com/
       param[api_url] = http://api.ingentaconnect.com/
@@ -47,6 +48,7 @@
       au < deepCrawl ; exists ; 2016 ; Systematic Botany Volume 41 ; 41 ; >
       au < deepCrawl ; exists ; 2017 ; Systematic Botany Volume 42 ; 42 ; >
     }
+
     {
       param[base_url] = https://www.ingentaconnect.com/
       param[api_url] = https://api.ingentaconnect.com/

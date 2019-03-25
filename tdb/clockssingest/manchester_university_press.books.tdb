@@ -7,7 +7,7 @@
     info[poller] = 8 
  >
   plugin = org.lockss.plugin.ingenta.ClockssIngentaBooksPlugin
-  param[base_url] = http://www.ingentaconnect.com/
+  #param[base_url] = http://www.ingentaconnect.com/
   param[publisher_id] = mmso
   implicit < status ; status2 ; year ; isbn ; eisbn ; param[book_isbn] ; name ; hidden[proxy] >
 
@@ -17,6 +17,10 @@
    name = Manchester Medieval Sources Online ;
    type = bookSeries
   >
+
+  {
+   param[base_url] = http://www.ingentaconnect.com/
+
    au < frozen ; exists ; 2013 ; 9781526112774 ;  ; 9781526112774 ; Ottonian Germany: The Chronicon of Thietmar of Merseburg ;  >
    au < frozen ; exists ; 2013 ; 9781526112705 ;  ; 9781526112705 ; The English Manor 1200-1500 ;  >
    au < frozen ; exists ; 2013 ; 9781526112613 ;  ; 9781526112613 ; Women in England, c.1275-1525 ;  >
@@ -51,8 +55,13 @@
    au < frozen ; exists ; 2016 ; 9781847799678 ;  ; 9781847799678 ; The Political Writings of Archbishop Wulfstan of York ;  >
    au < frozen ; exists ; 2017 ; 9781784997267 ;  ; 9781784997267 ; Heresy and inquisition in France, 1200-1300 ;  >
    au < frozen ; exists ; 2017 ; 9781784997434 ;  ; 9781784997434 ; The divorce of King Lothar and Queen Theutberga: Hincmar of Rheims's De divortio ;  >
+  }
+
+  {
+   param[base_url] = https://www.ingentaconnect.com/
    au < exists ; exists ; 2018 ; 9781526119162 ;  ; 9781526119162 ; Noble society ;  >
    au < exists ; exists ; 2018 ; 9781526135193 ;  ; 9781526135193 ; Towns in medieval England ;  >
+  }
 
  }
 

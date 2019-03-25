@@ -75,22 +75,35 @@
 
     {
     plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
+#    param[base_url] = http://www.ingentaconnect.com/
+#    param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
     param[publisher_id] = asnr
     param[journal_id] = ng 
     param[journal_issn] = 1541-6593
     implicit < status ; year ; name ; param[volume_name] >
  
+    {
+     param[base_url] = http://www.ingentaconnect.com/
+     param[api_url] = http://api.ingentaconnect.com/
+
       au < released ; 2011 ; Neurographics Volume 1 ; 1 >
       au < released ; 2012 ; Neurographics Volume 2 ; 2 >
       au < released ; 2013 ; Neurographics Volume 3 ; 3 >
       au < released ; 2014 ; Neurographics Volume 4 ; 4 >
       au < released ; 2015 ; Neurographics Volume 5 ; 5 >
       au < released ; 2016 ; Neurographics Volume 6 ; 6 >
+
+    }
+
+    {
+     param[base_url] = https://www.ingentaconnect.com/
+     param[api_url] = https://api.ingentaconnect.com/
+
       au < notReady ; 2017 ; Neurographics Volume 7 ; 7 >
       au < expected ; 2018 ; Neurographics Volume 8 ; 8 >
+
+    }
 
     }
 

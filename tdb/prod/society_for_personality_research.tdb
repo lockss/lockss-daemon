@@ -13,15 +13,18 @@
     >
 
     plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
+#    param[base_url] = http://www.ingentaconnect.com/
+#    param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
     param[publisher_id] = sbp
     param[journal_id] = sbp 
     param[journal_issn] = 0301-2212
     implicit < status ; year ; name ; param[volume_name] >
     
-    
+    {
+    param[base_url] = https://www.ingentaconnect.com/
+    param[api_url] = https://api.ingentaconnect.com/
+
     au < manifest ; 1973 ; Social Behavior and Personality Volume 1 ; 1 >
     au < manifest ; 1974 ; Social Behavior and Personality Volume 2 ; 2 >
     au < manifest ; 1975 ; Social Behavior and Personality Volume 3 ; 3 >
@@ -54,6 +57,13 @@
     au < manifest ; 2002 ; Social Behavior and Personality Volume 30 ; 30 >
     au < manifest ; 2003 ; Social Behavior and Personality Volume 31 ; 31 >
     au < manifest ; 2004 ; Social Behavior and Personality Volume 32 ; 32 >
+
+    }
+
+    {
+    param[base_url] = http://www.ingentaconnect.com/
+    param[api_url] = http://api.ingentaconnect.com/
+
     au < released ; 2005 ; Social Behavior and Personality Volume 33 ; 33 >
     au < released ; 2006 ; Social Behavior and Personality Volume 34 ; 34 >
     au < released ; 2007 ; Social Behavior and Personality Volume 35 ; 35 >
@@ -66,9 +76,17 @@
     au < released ; 2014 ; Social Behavior and Personality Volume 42 ; 42 >
     au < released ; 2015 ; Social Behavior and Personality Volume 43 ; 43 >
     au < released ; 2016 ; Social Behavior and Personality Volume 44 ; 44 >
+
+    }
+
+    {
+    param[base_url] = https://www.ingentaconnect.com/
+    param[api_url] = https://api.ingentaconnect.com/
+
     au < manifest ; 2017 ; Social Behavior and Personality Volume 45 ; 45 >
     au < manifest ; 2018 ; Social Behavior and Personality Volume 46 ; 46 >
     
+    }
   }
   
 }

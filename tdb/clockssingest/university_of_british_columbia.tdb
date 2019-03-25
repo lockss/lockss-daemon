@@ -35,6 +35,7 @@
        au < manifest ; exists ; 2007 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 80 ; 80 ; >
        au < manifest ; exists ; 2008 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 81 ; 81 ; >
     }
+
     {
       param[base_url] = http://www.ingentaconnect.com/
       param[api_url] = http://api.ingentaconnect.com/
