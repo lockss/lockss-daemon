@@ -78,7 +78,7 @@
     au < HighWirePressH20Plugin ; down ; 2014 ; Geochemistry: Exploration, Environment, Analysis Volume 14 ; 14 ; http://geea.lyellcollection.org/ >
     au < HighWirePressH20Plugin ; down ; 2015 ; Geochemistry: Exploration, Environment, Analysis Volume 15 ; 15 ; http://geea.lyellcollection.org/ >
     au < HighWirePressH20Plugin ; down ; 2016 ; Geochemistry: Exploration, Environment, Analysis Volume 16 ; 16 ; http://geea.lyellcollection.org/ >
-    au < gsl.GSLDrupalPlugin ; exists ; 2017 ; Geochemistry: Exploration, Environment, Analysis Volume 17 ; 17 ; https://geea.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; released ; 2017 ; Geochemistry: Exploration, Environment, Analysis Volume 17 ; 17 ; http://geea.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; expected ; 2018 ; Geochemistry: Exploration, Environment, Analysis Volume 18 ; 18 ; https://geea.lyellcollection.org/ >
 
   }
