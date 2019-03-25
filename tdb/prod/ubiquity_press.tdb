@@ -113,7 +113,7 @@
       comment[publisher] = Levy Library Press
 #      param[base_url] = https://journalofscientificinnovationinmedicine.org/
 
-      au < exists ; 2018 ; 1 ; Journal of Scientific Innovation in Medicine Volume 2018 ; 2018 ; https://journalofscientificinnovationinmedicine.org/ >
+      au < manifest ; 2018 ; 1 ; Journal of Scientific Innovation in Medicine Volume 2018 ; 2018 ; https://journalofscientificinnovationinmedicine.org/ >
 
   }
 
@@ -720,7 +720,7 @@
       #publisher = Ubiquity Press
 
       au < doNotProcess ; 2018 ; 1 ; Future Cities and Environment Volume 2018 ; 2018 ; https://futurecitiesandenvironment.com/ >
-      au < exists ; 2018 ; 1 ; Future Cities and Environment Volume 2018 ; 2018 ; https://www.futurecitiesandenvironment.com/ >
+      au < manifest ; 2018 ; 1 ; Future Cities and Environment Volume 2018 ; 2018 ; https://www.futurecitiesandenvironment.com/ >
 
   }
 
@@ -1605,7 +1605,7 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://www.ijds.eu/
 
-      au < exists ; 2018 ; 1 ; International Journal of Driving Science Volume 2018 ; 2018 ; https://www.ijds.eu/ >
+      au < manifest ; 2018 ; 1 ; International Journal of Driving Science Volume 2018 ; 2018 ; https://www.ijds.eu/ >
 
   }
 
@@ -1619,7 +1619,7 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://www.worldwidewastejournal.com/
 
-      au < exists ; 2018 ; 1 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2018 ; 2018 ; https://www.worldwidewastejournal.com/ >
+      au < manifest ; 2018 ; 1 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2018 ; 2018 ; https://www.worldwidewastejournal.com/ >
 
   }
 
@@ -1633,7 +1633,7 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://transactions.ismir.net/
 
-      au < exists ; 2018 ; 1 ; Transactions of the International Society for Music Information Retrieval Volume 2018 ; 2018 ; https://transactions.ismir.net/ >
+      au < manifest ; 2018 ; 1 ; Transactions of the International Society for Music Information Retrieval Volume 2018 ; 2018 ; https://transactions.ismir.net/ >
 
   }
 
@@ -1869,8 +1869,8 @@
 #      param[base_url] = https://www.emlc-journal.org/
 #     refresh of De Zeventiende Eeuw
 
-      au < exists ; 2017 ; 1 ; Early Modern Low Countries Volume 2017 ; 2017 ; https://www.emlc-journal.org/ >
-      au < exists ; 2018 ; 2 ; Early Modern Low Countries Volume 2018 ; 2018 ; https://www.emlc-journal.org/ >
+      au < manifest ; 2017 ; 1 ; Early Modern Low Countries Volume 2017 ; 2017 ; https://www.emlc-journal.org/ >
+      au < manifest ; 2018 ; 2 ; Early Modern Low Countries Volume 2018 ; 2018 ; https://www.emlc-journal.org/ >
 
   }
 
