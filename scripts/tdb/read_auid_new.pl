@@ -476,9 +476,10 @@ while (my $line = <>) {
             #printf("resp-request-uri: %s\n", $resp->request->uri);
             if ($req->url ne $resp->request->uri && ($resp->request->uri ne $man_url_d && $resp->request->uri ne $man_url_e && $resp->request->uri ne $man_url_de)) {
                 $vol_title = $resp->request->uri;
+                #$vol_title = $req_m->url . " NOT " . $resp_m->request->uri . " OR " . $req_s->url . " NOT " . $resp_s->request->uri;
                 $result = "Redirected";
             } elsif (defined($man_contents) && ($man_contents =~ m/content=\"Open Journal Systems 3\./)) {
-                $vol_title = $resp->request->uri;
+                #$vol_title = $resp->request->uri;
                 $result = "MOVED_TO_OJS3";
             } elsif (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) || ($man_contents =~ m/$oa_tag/)) && (($man_contents =~ m/\($param{year}\)/) || ($man_contents =~ m/: $param{year}/))) {
                 if ($man_contents =~ m/<title>([^<>]*)<\/title>/si) {
@@ -540,6 +541,9 @@ while (my $line = <>) {
             if ((($req_m->url ne $resp_m->request->uri) && ($req_m_alt->url ne $resp_m->request->uri)) || ($req_s->url ne $resp_s->request->uri)) {
                 $vol_title = $req_m->url . " NOT " . $resp_m->request->uri . " OR " . $req_s->url . " NOT " . $resp_s->request->uri;
                 $result = "Redirected";
+            } elsif (defined($man_contents) && ($man_contents =~ m/content=\"Open Journal Systems 3\./)) {
+                #$vol_title = $resp->request->uri;
+                $result = "MOVED_TO_OJS3";
             } elsif (defined($man_contents) && defined($start_contents) && (($man_contents =~ m/$clockss_tag/) || ($man_contents =~ m/$oa_tag/)) && (($start_contents =~ m/\($param{year}\)/) || ($start_contents =~ m/: $param{year}/))) {
                 $result = "Manifest"
             } else {
