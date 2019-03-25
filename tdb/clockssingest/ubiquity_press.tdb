@@ -125,7 +125,7 @@
       comment[publisher] = Levy Library Press
 #      param[base_url] = https://journalofscientificinnovationinmedicine.org/
 
-      au < exists ; exists ; 2018 ; 1 ; Journal of Scientific Innovation in Medicine Volume 2018 ; 2018 ; https://journalofscientificinnovationinmedicine.org/ ; >
+      au < manifest ; exists ; 2018 ; 1 ; Journal of Scientific Innovation in Medicine Volume 2018 ; 2018 ; https://journalofscientificinnovationinmedicine.org/ ; >
 
   }
 
@@ -461,20 +461,20 @@
 
       #publisher = Stockholm University Press
 
-    au < exists ; exists ; 1999 ; 1 ; Scandinavian Journal of Disability Research Volume 1 ; 1999 ; https://www.sjdr.se/ ; >
-    au < exists ; exists ; 2000 ; 2 ; Scandinavian Journal of Disability Research Volume 2 ; 2000 ; https://www.sjdr.se/ ; >
-    au < exists ; exists ; 2001 ; 3 ; Scandinavian Journal of Disability Research Volume 3 ; 2001 ; https://www.sjdr.se/ ; >
+    au < manifest ; exists ; 1999 ; 1 ; Scandinavian Journal of Disability Research Volume 1 ; 1999 ; https://www.sjdr.se/ ; >
+    au < manifest ; exists ; 2000 ; 2 ; Scandinavian Journal of Disability Research Volume 2 ; 2000 ; https://www.sjdr.se/ ; >
+    au < manifest ; exists ; 2001 ; 3 ; Scandinavian Journal of Disability Research Volume 3 ; 2001 ; https://www.sjdr.se/ ; >
     au < doesNotExist ; doesNotExist ; 2002 ; 4 ; Scandinavian Journal of Disability Research Volume 4 ; 2002 ; https://www.sjdr.se/ ; >
-    au < exists ; exists ; 2003 ; 5 ; Scandinavian Journal of Disability Research Volume 5 ; 2003 ; https://www.sjdr.se/ ; >
-    au < exists ; exists ; 2004 ; 6 ; Scandinavian Journal of Disability Research Volume 6 ; 2004 ; https://www.sjdr.se/ ; >
-    au < exists ; exists ; 2005 ; 7 ; Scandinavian Journal of Disability Research Volume 7 ; 2005 ; https://www.sjdr.se/ ; >
-    au < exists ; exists ; 2006 ; 8 ; Scandinavian Journal of Disability Research Volume 8 ; 2006 ; https://www.sjdr.se/ ; >
-    au < exists ; exists ; 2007 ; 9 ; Scandinavian Journal of Disability Research Volume 9 ; 2007 ; https://www.sjdr.se/ ; >
-    au < exists ; exists ; 2008 ; 10 ; Scandinavian Journal of Disability Research Volume 10 ; 2008 ; https://www.sjdr.se/ ; >
-    au < exists ; exists ; 2009 ; 11 ; Scandinavian Journal of Disability Research Volume 11 ; 2009 ; https://www.sjdr.se/ ; >
-    au < exists ; exists ; 2010 ; 12 ; Scandinavian Journal of Disability Research Volume 12 ; 2010 ; https://www.sjdr.se/ ; >
-    au < exists ; exists ; 2011 ; 13 ; Scandinavian Journal of Disability Research Volume 13 ; 2011 ; https://www.sjdr.se/ ; >
-    au < exists ; exists ; 2012 ; 14 ; Scandinavian Journal of Disability Research Volume 14 ; 2012 ; https://www.sjdr.se/ ; >
+    au < manifest ; exists ; 2003 ; 5 ; Scandinavian Journal of Disability Research Volume 5 ; 2003 ; https://www.sjdr.se/ ; >
+    au < manifest ; exists ; 2004 ; 6 ; Scandinavian Journal of Disability Research Volume 6 ; 2004 ; https://www.sjdr.se/ ; >
+    au < manifest ; exists ; 2005 ; 7 ; Scandinavian Journal of Disability Research Volume 7 ; 2005 ; https://www.sjdr.se/ ; >
+    au < manifest ; exists ; 2006 ; 8 ; Scandinavian Journal of Disability Research Volume 8 ; 2006 ; https://www.sjdr.se/ ; >
+    au < manifest ; exists ; 2007 ; 9 ; Scandinavian Journal of Disability Research Volume 9 ; 2007 ; https://www.sjdr.se/ ; >
+    au < manifest ; exists ; 2008 ; 10 ; Scandinavian Journal of Disability Research Volume 10 ; 2008 ; https://www.sjdr.se/ ; >
+    au < manifest ; exists ; 2009 ; 11 ; Scandinavian Journal of Disability Research Volume 11 ; 2009 ; https://www.sjdr.se/ ; >
+    au < manifest ; exists ; 2010 ; 12 ; Scandinavian Journal of Disability Research Volume 12 ; 2010 ; https://www.sjdr.se/ ; >
+    au < manifest ; exists ; 2011 ; 13 ; Scandinavian Journal of Disability Research Volume 13 ; 2011 ; https://www.sjdr.se/ ; >
+    au < manifest ; exists ; 2012 ; 14 ; Scandinavian Journal of Disability Research Volume 14 ; 2012 ; https://www.sjdr.se/ ; >
     au < manifest ; exists ; 2013 ; 15 ; Scandinavian Journal of Disability Research Volume 15 ; 2013 ; https://www.sjdr.se/ ; >
     au < manifest ; exists ; 2014 ; 16 ; Scandinavian Journal of Disability Research Volume 16 ; 2014 ; https://www.sjdr.se/ ; >
     au < manifest ; exists ; 2015 ; 17 ; Scandinavian Journal of Disability Research Volume 17 ; 2015 ; https://www.sjdr.se/ ; >
@@ -1658,7 +1658,7 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://www.ijds.eu/
 
-      au < exists ; exists ; 2018 ; 1 ; International Journal of Driving Science Volume 2018 ; 2018 ; https://www.ijds.eu/ ; >
+      au < manifest ; exists ; 2018 ; 1 ; International Journal of Driving Science Volume 2018 ; 2018 ; https://www.ijds.eu/ ; >
 
   }
 
@@ -1672,7 +1672,7 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://www.worldwidewastejournal.com/
 
-      au < exists ; exists ; 2018 ; 1 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2018 ; 2018 ; https://www.worldwidewastejournal.com/ ; >
+      au < manifest ; exists ; 2018 ; 1 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2018 ; 2018 ; https://www.worldwidewastejournal.com/ ; >
 
   }
 
