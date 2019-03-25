@@ -477,6 +477,9 @@ while (my $line = <>) {
             if ($req->url ne $resp->request->uri && ($resp->request->uri ne $man_url_d && $resp->request->uri ne $man_url_e && $resp->request->uri ne $man_url_de)) {
                 $vol_title = $resp->request->uri;
                 $result = "Redirected";
+            } elsif (defined($man_contents) && ($man_contents =~ m/content=\"Open Journal Systems 3\./)) {
+                $vol_title = $resp->request->uri;
+                $result = "MOVED_TO_OJS3";
             } elsif (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) || ($man_contents =~ m/$oa_tag/)) && (($man_contents =~ m/\($param{year}\)/) || ($man_contents =~ m/: $param{year}/))) {
                 if ($man_contents =~ m/<title>([^<>]*)<\/title>/si) {
                     $vol_title = $1;
