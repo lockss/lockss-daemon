@@ -3007,7 +3007,82 @@ while (my $line = <>) {
     }
     sleep(4);
     
-  }
+  } elsif ($plugin eq "ClockssSpandidosPlugin" || $plugin eq "SpandidosPlugin") {
+      #printf("Debug: plugin name %s\n", $plugin);
+
+      my $should_continue = 0;
+
+      # Step-1: Check permission statement
+      if ($plugin eq "ClockssSpandidosPlugin") {
+        my $perm_url_sprintf = sprintf("%slockss.txt",$param{base_url});
+        my $perm_url = uri_unescape($perm_url_sprintf );
+        #printf("Debug: perm_url is .... %s\n", $perm_url);
+        my $perm_req = HTTP::Request->new(GET, $perm_url);
+        my $perm_resp = $ua->request($perm_req);
+
+        if ($perm_resp->is_success) {
+          my $perm_contents = $perm_resp->content;
+          my $lcl_tag = ($plugin eq "ClockssSpandidosPlugin") ? $clockss_tag : $lockss_tag;
+          $lcl_tag =~ s/ /./g;
+
+          #printf("Debug:lcl_tag = %s\n", $lcl_tag);
+          #printf("Debug:perm_content = %s\n", $perm_contents);
+
+          if (defined($perm_contents) && ($perm_contents =~ m/$lcl_tag/s)) {
+            $should_continue = 1;
+          } else {
+            $result = "--NO_LOCKSS--";
+          }
+
+        } else {
+          $result = "--PERM_REQ_FAIL--";
+        }
+
+      } elsif ($plugin eq "SpandidosPlugin") {
+        $should_continue = 1;
+
+      } # End step-1 check permission statement
+
+      #Step-2: Check manifest page
+      if ($should_continue) {
+           my $url_sprintf = sprintf("%s%s/archive",$param{base_url}, $param{journal_id});
+           #printf("Debug: url is .... %s\n", $url_sprintf);
+           $man_url = uri_unescape($url_sprintf);
+           #printf("Debug: man_url is .... %s\n", $man_url);
+           my $doi = uri_unescape($param{journal_id});
+           #printf("Debug: doi is .... %s\n", $doi);
+           my $req = HTTP::Request->new(GET, $man_url);
+           my $resp = $ua->request($req);
+           if ($resp->is_success) {
+
+               my $man_contents = $resp->content;
+
+               #printf("Debug: req->url = %s, resp->uri=%s\n",  $req->url,$resp->request->uri);
+
+               #printf("Debug: content = %s\n", $man_contents);
+
+               if ($req->url ne $resp->request->uri) {
+                 $vol_title = $resp->request->uri;
+                 $result = "Redirected";
+               } elsif (defined($man_contents)) {
+
+                   if ($man_contents =~ m/<a href=".*">((Number\s+)(.*))<\/a>/gi) {
+                       $vol_title = $1
+                   }
+                   $result = "Manifest"
+               }
+             } else {
+                #printf("URL: %s\n", $man_url);
+                $result = "--REQ_FAIL--";
+            }
+        } else {
+          #printf("URL: %s\n", $man_url);
+          $result = "--REQ_FAIL--"
+        } # End step-2: check manifest page
+
+    sleep(4);
+
+  } # End Spandidos plugin check
   
   if($result eq "Plugin Unknown") {
     printf("*PLUGIN UNKNOWN*, %s, %s\n",$auid,$man_url);
