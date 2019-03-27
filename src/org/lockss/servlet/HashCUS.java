@@ -129,8 +129,8 @@ public class HashCUS extends LockssServlet {
   private static boolean isAutoDeleteHashFiles =
     DEFAULT_AUTO_DELETE_HASH_FILES;
 
-  private static final Map<String, SimpleHasher.ParamsAndResult>
-  GLOBAL_REQUESTS = new LinkedHashMap<String, SimpleHasher.ParamsAndResult>();
+  public static final Map<String, SimpleHasher.ParamsAndResult>
+    GLOBAL_REQUESTS = new LinkedHashMap<String, SimpleHasher.ParamsAndResult>();
 
   private static final NumberFormat fmt_2dec = new DecimalFormat("0.00");
 
