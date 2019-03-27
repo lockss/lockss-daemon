@@ -60,8 +60,11 @@ import org.lockss.ws.entities.LockssWebServicesFault;
 public class HasherServiceImpl implements HasherService {
   private static Logger log = Logger.getLogger(HasherServiceImpl.class);
 
+  // Share background requests with HashCUS so can use it to monitor hases
+  // submitted to WS.
   private static final Map<String, SimpleHasher.ParamsAndResult> HASH_REQUESTS =
-      new LinkedHashMap<String, SimpleHasher.ParamsAndResult>();
+    org.lockss.servlet.HashCUS.GLOBAL_REQUESTS;
+//       new LinkedHashMap<String, SimpleHasher.ParamsAndResult>();
 
   /**
    * Performs the hashing of an AU or a URL.
