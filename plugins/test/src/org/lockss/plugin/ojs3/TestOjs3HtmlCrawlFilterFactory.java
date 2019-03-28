@@ -49,8 +49,6 @@ public class TestOjs3HtmlCrawlFilterFactory extends LockssTestCase {
   private static final String footer = 
 		  "<footer class=\"footer\" role=\"contentinfo\">BLAH</footer>FOO";
 		  
-  private static final String header = 
-		  "<header class=\"navbar navbar-default\">BLAH</header>FOO";
   
   private static final String filtered = "FOO";
   
@@ -66,10 +64,6 @@ public class TestOjs3HtmlCrawlFilterFactory extends LockssTestCase {
     assertEquals(filtered, StringUtil.fromInputStream(inA));
 
     inA = fact.createFilteredInputStream(mau, new StringInputStream(aside),
-			 Constants.DEFAULT_ENCODING);
-    assertEquals(filtered, StringUtil.fromInputStream(inA));
-    
-    inA = fact.createFilteredInputStream(mau, new StringInputStream(header),
 			 Constants.DEFAULT_ENCODING);
     assertEquals(filtered, StringUtil.fromInputStream(inA));
     

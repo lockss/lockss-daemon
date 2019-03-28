@@ -56,7 +56,8 @@ public class Ojs3HtmlCrawlFilterFactory implements FilterFactory {
 
   
   private static final NodeFilter[] excludeNodes = new NodeFilter[] {
-		    HtmlNodeFilters.tag("header"),
+		  // Need the header for the download content in the pdf viewing frame
+		  //HtmlNodeFilters.tag("header"),
 		    HtmlNodeFilters.tag("footer"),
 		    HtmlNodeFilters.tag("aside"),
 		    HtmlNodeFilters.tag("script"),
