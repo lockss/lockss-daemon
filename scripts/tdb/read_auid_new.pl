@@ -3008,66 +3008,54 @@ while (my $line = <>) {
     sleep(4);
     
   } elsif ($plugin eq "ClockssSpandidosPlugin" || $plugin eq "SpandidosPlugin") {
-
-      my $should_continue = 0;
-
-      # Step-1: Check permission statement
-      if ($plugin eq "ClockssSpandidosPlugin") {
-        my $perm_url_sprintf = sprintf("%slockss.txt",$param{base_url});
-        my $perm_url = uri_unescape($perm_url_sprintf );
-
-        my $perm_req = HTTP::Request->new(GET, $perm_url);
-        my $perm_resp = $ua->request($perm_req);
-
-        if ($perm_resp->is_success) {
-          my $perm_contents = $perm_resp->content;
-          my $lcl_tag = ($plugin eq "ClockssSpandidosPlugin") ? $clockss_tag : $lockss_tag;
-          $lcl_tag =~ s/ /./g;
-
-          if (defined($perm_contents) && ($perm_contents =~ m/$lcl_tag/s)) {
-            $should_continue = 1;
-          } else {
-            $result = "--NO_LOCKSS--";
-          }
-
-        } else {
-          $result = "--PERM_REQ_FAIL--";
-        }
-
-      } elsif ($plugin eq "SpandidosPlugin") {
-        $should_continue = 1;
-
-      } # End step-1 check permission statement
-
-      #Step-2: Check manifest page
-      if ($should_continue) {
-           my $url_sprintf = sprintf("%s%s/archive",$param{base_url}, $param{journal_id});
-           $man_url = uri_unescape($url_sprintf);
-           my $doi = uri_unescape($param{journal_id});
-           my $req = HTTP::Request->new(GET, $man_url);
-           my $resp = $ua->request($req);
-           if ($resp->is_success) {
-
-               my $man_contents = $resp->content;
-
-               if ($req->url ne $resp->request->uri) {
-                 $vol_title = $resp->request->uri;
-                 $result = "Redirected";
-               } elsif (defined($man_contents)) {
-
-                   if ($man_contents =~ m/<a href=".*">((Number\s+)(.*))<\/a>/gi) {
-                       $vol_title = $1
-                   }
-                   $result = "Manifest"
-               }
-             } else {
-                #printf("URL: %s\n", $man_url);
-                $result = "--REQ_FAIL--";
-            }
-        } else {
-          #printf("URL: %s\n", $man_url);
-          $result = "--REQ_FAIL--";
-        } # End step-2: check manifest page
+      # manifest page is the entire journal archive
+      # we will confirm an appropriate volume issue 
+      my $url_sprintf = sprintf("%s%s/archive",$param{base_url}, $param{journal_id});
+      $man_url = uri_unescape($url_sprintf);
+      my $req = HTTP::Request->new(GET, $man_url);
+      my $resp = $ua->request($req);
+      if ($resp->is_success) {
+	  my $man_contents = $resp->content;
+	  if ($req->url ne $resp->request->uri) {
+	      $vol_title = $resp->request->uri;
+	      $result = "Redirected";
+	  } elsif (defined($man_contents)) {
+	      my $perm_contents = $resp->content; #same as manifest page
+	      my $lcl_tag = $lockss_tag;
+	      #for CLOCKSS permission is on lockss.txt
+	      if ($plugin eq "ClockssSpandidosPlugin") {
+		  $lcl_tag = $clockss_tag;
+		  my $perm_url_sprintf = sprintf("%slockss.txt",$param{base_url});
+		  my $perm_url = uri_unescape($perm_url_sprintf );
+		  my $perm_req = HTTP::Request->new(GET, $perm_url);
+		  my $perm_resp = $ua->request($perm_req);
+		  #if this fails, it just won't reset - which will fail to have permission - so okay
+		  if ($perm_resp->is_success) {
+		      $perm_contents = $perm_resp->content;
+		  }
+	      }
+	      $lcl_tag =~ s/ /./g;
+	      if (defined($perm_contents) && ($perm_contents =~ m/$lcl_tag/s)) {
+		  #we have a permission statement, do we have a link to <a href="/ijo/39/...." at least one issue of this volume
+		  my $vol_link = sprintf("href=.+/%s/%s/",$param{journal_id},$param{volume_name});
+		  if ($man_contents =~ m/$vol_link/gi) {
+		      $vol_title = $param{journal_id}; #default_value
+		      if ($man_contents =~ m/<title>\s*(.*)\s*<\/title>/si) {
+			  $vol_title = $1; #better value
+		      }
+		      $result = "Manifest";
+		  } else {
+		      #had a manifest page but it had no volume links
+		      $result = "--NO_URL--";
+		  }
+	      } else {
+		  $result = "--TAG_FAIL--";
+	      }
+	  }
+      } else {
+	  #printf("URL: %s\n", $man_url);
+	  $result = "--REQ_FAIL--";
+      }
 
     sleep(4);
 
