@@ -423,7 +423,7 @@
 
       param[au_oai_set] = cpe
 
-      au < exists ; exists ; 2019 ; 2019 ; Clinical Psyhology in Europe Volume 2019 ; 2019 ; https://cpe.psychopen.eu/ ; >
+      au < manifest ; exists ; 2019 ; 2019 ; Clinical Psyhology in Europe Volume 2019 ; 2019 ; https://cpe.psychopen.eu/ ; >
 
   }
 
@@ -625,11 +625,11 @@
 
       param[au_oai_set] = rio
 
-      au < exists ; exists ; 2015 ; 2015 ; Research Ideas and Outcomes Volume 2015 ; 2015 ; https://riojournal.com/ ; >
-      au < exists ; exists ; 2016 ; 2016 ; Research Ideas and Outcomes Volume 2016 ; 2016 ; https://riojournal.com/ ; >
-      au < exists ; exists ; 2017 ; 2017 ; Research Ideas and Outcomes Volume 2017 ; 2017 ; https://riojournal.com/ ; >
-      au < exists ; exists ; 2018 ; 2018 ; Research Ideas and Outcomes Volume 2018 ; 2018 ; https://riojournal.com/ ; >
-      au < expected ; exists ; 2019 ; 2019 ; Research Ideas and Outcomes Volume 2019 ; 2019 ; https://riojournal.com/ ; >
+      au < manifest ; exists ; 2015 ; 2015 ; Research Ideas and Outcomes Volume 2015 ; 2015 ; https://riojournal.com/ ; >
+      au < manifest ; exists ; 2016 ; 2016 ; Research Ideas and Outcomes Volume 2016 ; 2016 ; https://riojournal.com/ ; >
+      au < manifest ; exists ; 2017 ; 2017 ; Research Ideas and Outcomes Volume 2017 ; 2017 ; https://riojournal.com/ ; >
+      au < manifest ; exists ; 2018 ; 2018 ; Research Ideas and Outcomes Volume 2018 ; 2018 ; https://riojournal.com/ ; >
+      au < manifest ; exists ; 2019 ; 2019 ; Research Ideas and Outcomes Volume 2019 ; 2019 ; https://riojournal.com/ ; >
 
   }
 
@@ -647,7 +647,7 @@
       au < manifest ; exists ; 2016 ; 2016 ; Research results in Pharmacology Volume 2016 ; 2016 ; https://rrpharmacology.pensoft.net/ ; >
       au < manifest ; exists ; 2017 ; 2017 ; Research results in Pharmacology Volume 2017 ; 2017 ; https://rrpharmacology.pensoft.net/ ; >
       au < manifest ; exists ; 2018 ; 2018 ; Research results in Pharmacology Volume 2018 ; 2018 ; https://rrpharmacology.pensoft.net/ ; >
-      au < exists ; exists ; 2019 ; 2019 ; Research results in Pharmacology Volume 2019 ; 2019 ; https://rrpharmacology.pensoft.net/ ; >
+      au < manifest ; exists ; 2019 ; 2019 ; Research results in Pharmacology Volume 2019 ; 2019 ; https://rrpharmacology.pensoft.net/ ; >
 
   }
 
